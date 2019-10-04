@@ -49,8 +49,9 @@ def psql_comment(table,field,comment):
     c = 'comment on column '+table+'.'+field+' is \''+comment+'\';'
     return c
     
-def create_table_query(table_name,var_def_file):
-        create_query = 'DROP TABLE IF EXISTS '+table_name+'; CREATE TABLE '+table_name+' ('
+def create_table_queries(table_name,var_def_file):
+        drop_query = 'DROP TABLE IF EXISTS '+table_name+';'
+        create_query =  'CREATE TABLE '+table_name+' ('
         with open(filepath,'r') as f:
             var_def_list=[]
             comment_list=[]
@@ -67,29 +68,15 @@ def create_table_query(table_name,var_def_file):
                         print('Quoted line cannot be parsed, will not be processed: \n"'+line+'"')
         create_query = create_query + ','.join(var_def_list) + ');'
         comment_query = ' '.join(comment_list)
-        print(create_query+comment_query)
+        return(drop_query,create_query,comment_query)
 
 if __name__ == "__main__":
     [state,filepath] = check_args(sys.argv[1],sys.argv[2])
     table_name = 'absentee'
-    create_query = 'DROP TABLE IF EXISTS '+table_name+'; CREATE TABLE '+table_name+' ('
-    with open(filepath,'r') as f:
-        var_def_list=[]
-        comment_list=[]
-        for line in f.readlines():
-            if line.find('"')>0:
-                print('Line has double quote, will not be processed:\n'+line)
-            else:
-                try:
-                    [field,type,comment] = parse_line('NC',line)
-                    var_def_list.append(psql_var_def(field,type))
-                    if len(comment):
-                        comment_list.append(psql_comment(table_name,field,comment))
-                except:
-                    print('Quoted line cannot be parsed, will not be processed: \n"'+line+'"')
-    create_query = create_query + ','.join(var_def_list) + ');'
-    comment_query = ' '.join(comment_list)
-    print(create_query+comment_query)
+    [drop_query,create_query,comment_query] = create_table_queries(table_name,sys.argv[2])
+    print(drop_query)
+    print(create_query)
+    print(comment_query)
 
     
 
