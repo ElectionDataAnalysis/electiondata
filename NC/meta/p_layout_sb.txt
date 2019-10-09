@@ -1,4 +1,0 @@
-county_desc			char(20)	County description
-voter_reg_num			char(12)	
-ncid                            char(12)        NC identifier  (added: 01/23/2015)
-voter_last_name			char(30)	Last name of registered voter

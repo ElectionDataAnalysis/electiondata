@@ -41,15 +41,20 @@ def parse_line(s,line):
             comment = ''
     return(field,type,comment)
     
-def psql_var_def(field,type):
+def var_def(field,type):
     v = field+' '+type
     return v
     
-def psql_comment(table,field,comment):
-    c = 'comment on column '+table+'.'+field+' is \''+comment+'\';'
+def comment_q(table,field,comment,flavor):
+    ''' args are table name, field name, comment text and flavor (e.g., 'psql' or 'mysql')'''
+    if flavor=='psql':
+        c = 'comment on column '+table+'.'+field+' is \''+comment+'\';'
+    else:
+        print('Flavor not recognized: '+flavor)
+        sys.exit()
     return c
     
-def create_table_queries(table_name,var_def_file):
+def create_table_q(table_name,var_def_file,flavor):
         drop_query = 'DROP TABLE IF EXISTS '+table_name+';'
         create_query =  'CREATE TABLE '+table_name+' ('
         with open(filepath,'r') as f:
@@ -61,22 +66,32 @@ def create_table_queries(table_name,var_def_file):
                 else:
                     try:
                         [field,type,comment] = parse_line('NC',line)
-                        var_def_list.append(psql_var_def(field,type))
-                        if len(comment):
-                            comment_list.append(psql_comment(table_name,field,comment))
+                        if flavor == 'psql':
+                            if len(comment):
+                                comment_list.append(comment_q(table_name,field,comment,'psql'))
+                            var_def_list.append(var_def(field,type))
+                        elif flavor == 'mysql':
+                            if len(comment):
+                                comment_text = ' COMMENT "'+comment+'"'
+                            else:
+                                comment_text = ''
+                            var_def_list.append(var_def(field,type)+comment_text)
+                        else:
+                            print('Flavor not recognized: '+flavor)
+                            sys.exit()
                     except:
                         print('Quoted line cannot be parsed, will not be processed: \n"'+line+'"')
-        create_query = create_query + ','.join(var_def_list) + ');'
-        comment_query = ' '.join(comment_list)
-        return(drop_query,create_query,comment_query)
+        create_query = create_query + ','.join(var_def_list) + ');' +  ' '.join(comment_list)
+        return(drop_query,create_query)
 
 if __name__ == "__main__":
     [state,filepath] = check_args(sys.argv[1],sys.argv[2])
     table_name = 'absentee'
-    [drop_query,create_query,comment_query] = create_table_queries(table_name,sys.argv[2])
-    print(drop_query)
-    print(create_query)
-    print(comment_query)
+    for flavor in ['psql','mysql']:
+        print(flavor)
+        [drop_query,create_query] = create_table_q(table_name,sys.argv[2],flavor)
+        print(drop_query)
+        print(create_query)
 
     
 
