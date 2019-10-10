@@ -41,7 +41,7 @@ def parse_line(s,line):
             """,re.VERBOSE)
         m = p.search(line)
         field = (m.group('field')).replace(' ','_')
-        type = m.group('type')
+        type = d[m.group('type')]
         number = m.group('number')
         if number:
             type=type+(number)
