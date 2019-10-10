@@ -1,16 +1,22 @@
 #!/usr/bin/python3
 # under construction
-# Creates a table with columns specified in arg2, assuming format from state arg1.
-# argument 1: a two-letter state code
-# argument 2: (a path to) a file containing metadata from that state
+# Creates a table with columns specified in arg3 file, assuming format from state arg1.
+# arg 1: a two-letter state code
+# arg 2: table_name
+# arg 3: (a path to) a file containing metadata from that state
 
 import sys
 from pathlib import Path
 import re
 
+## define some basics
 def statelist():
     '''List of 2-char state codes that this code can deal with'''
     return ['NC']
+    
+def type_map():
+    d={'number':'INT', 'text':'varchar', 'char':'varchar'}
+    return d
 
 def check_args(s,f):
     if s not in statelist():
@@ -24,11 +30,12 @@ def check_args(s,f):
     
 def parse_line(s,line):
     if s == 'NC':
+        d=type_map()
         p= re.compile(r"""
             \A                      # start at beginning of line
             (?P<field>\S+\b)        # capture field
             \s+                     # skip all whitespace
-            (?P<type>\S+)       # capture type
+            (?P<type>\S+)       # capture type, including number in parens if there
             \s+                     # skip all whitespace
             (?P<comment>.*)        # capture remaining part of the line, not including end-of-line
             """,re.VERBOSE)
@@ -85,13 +92,11 @@ def create_table_q(table_name,var_def_file,flavor):
         return(drop_query,create_query)
 
 if __name__ == "__main__":
-    [state,filepath] = check_args(sys.argv[1],sys.argv[2])
-    table_name = 'absentee'
-    for flavor in ['psql','mysql']:
-        print(flavor)
-        [drop_query,create_query] = create_table_q(table_name,sys.argv[2],flavor)
-        print(drop_query)
-        print(create_query)
+    [state,filepath] = check_args(sys.argv[1],sys.argv[3])
+    table_name = sys.argv[2]
+    [drop_query,create_query] = create_table_q(table_name,sys.argv[3],'mysql')
+    print(drop_query)
+    print(create_query)
 
     
 
