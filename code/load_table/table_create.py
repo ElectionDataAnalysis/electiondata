@@ -32,16 +32,19 @@ def parse_line(s,line):
     if s == 'NC':
         d=type_map()
         p= re.compile(r"""
-            \A                      # start at beginning of line
-            (?P<field>\S+\b)        # capture field
-            \s+                     # skip all whitespace
-            (?P<type>\S+)       # capture type, including number in parens if there
+            (?P<field>.*\S+\b)        # capture field
+            \s\s+                    # skip all more-than-one whitespace
+            (?P<type>[a-z]+)       # capture type, including number in parens if there
+            (?P<number>\(\d+\))?
             \s+                     # skip all whitespace
             (?P<comment>.*)        # capture remaining part of the line, not including end-of-line
             """,re.VERBOSE)
         m = p.search(line)
-        field = m.group('field')
+        field = (m.group('field')).replace(' ','_')
         type = m.group('type')
+        number = m.group('number')
+        if number:
+            type=type+(number)
         try:
             comment = m.group('comment')
         except:
