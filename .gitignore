@@ -1,3 +1,4 @@
 local/
 .DS_Store
 NC/.DS_Store
+code/__pycache__
