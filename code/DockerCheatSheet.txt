@@ -1,2 +1,0 @@
-$ docker run --name postgres -e POSTGRES_PASSWORD=eat-huntsman-chemist-entrench -d postgres
-3b65255873433b3d63b06abb409dfde5ca376a18dfc1dfdc2ebc5b9ce4b973fc

@@ -2,7 +2,10 @@
 
 from flask import Flask
 import psycopg2
-
+import re
+import state
+from pathlib import Path
+import query_create as q
 
 host_name = 'db'
 user_name = 'postgres'
@@ -18,73 +21,56 @@ def establish_connection():
 def create_cursor(connection):
     # create a new cursor with the connection object.
     cur = connection.cursor()
-    get_version(cur)
     return cur
 
-def get_version(cur):
-    cur.execute('SELECT version()')
-    version = cur.fetchone()
-    print ("PostgreSQL Version : ", version)
-
-def create_tables(cur):
-    tables = ("""CREATE TABLE Agents (
-                agent_id INTEGER PRIMARY KEY,
-                first_name VARCHAR(255) NOT NULL,
-                last_name VARCHAR(255) NOT NULL,
-                country VARCHAR(255) NOT NULL,
-                salary INTEGER NOT NULL,
-                born DATE NOT NULL,
-                dept_id INTEGER NOT NULL,
-                mission_id INTEGER NOT NULL
-            )""",
-            """CREATE TABLE Mission (
-                mission_id INTEGER PRIMARY KEY,
-                mission_name VARCHAR NOT NULL,
-                location VARCHAR NOT NULL
-            )""",
-            """CREATE TABLE Department (
-                dept_id INTEGER PRIMARY KEY,
-                dept_name VARCHAR(255)
-            )""")
-
-    for table in tables:
-        cur.execute(table)
-
-def insert(cur):
-    entry = "INSERT INTO Agents VALUES{}".format("(110454, john, willis, june 14 1989, 6247, 119)")
-    cur.execute(entry)
-    #for insert multiple rows it will be cur.executemany()
+def check_args(s,f,t):
+    if not isinstance(s,state.State):
+        return('Error: '+s+' is not a known state.')
+        sys.exit()
+    mypath=Path(f)
+    if not mypath.is_file():
+        return('Error: File '+f+' does not exist.')
+        sys.exit()
+    # *** check t for whitespace
+    return (s,f,t)
 
 
-def update(cur):
-    update_entry = """UPDATE Agents SET last_name = %s WHERE agent_id = %s"""
-    cur.execute(update_entry, william, 110454)
-    no_of_rows_updated = cur.rowcount
-
-
-def query(cur):
-    result = cur.execute("SELECT first_name FROM Agent")
-    one_entry = cur.fecthone()
-    all_entries = cur.fetchall()
-    for entry in all_ertries:
-        print (entry)
-        
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    print("Connecting to db")
-    db_connection = establish_connection()
-    connection_cursor = create_cursor(db_connection)
 
-    print ("Creating Tables: ")
-    create_tables(connection_cursor)
+# define the state of NC and how to parse its metadata files
+    nc_meta_p= re.compile(r"""
+    (?P<field>.*\S+\b)        # capture field
+    \s\s+                    # skip all more-than-one whitespace
+    (?P<type>[a-z]+)       # capture type, including number in parens if there
+    (?P<number>\(\d+\))?
+    \s+                     # skip all whitespace
+    (?P<comment>.*)        # capture remaining part of the line, not including end-of-line
+    """,re.VERBOSE)
+    nc_type_map = {'number':'INT', 'text':'varchar', 'char':'varchar'}
+    nc = state.State("NC","North Carolina",nc_meta_p,nc_type_map)
 
-    db_connection.commit()
+# *** hard-code arguments for now
+    s = nc
+    f = '../local/NC/meta/mod_layout_results_pct.txt'
+    t = 'results'   # name of table
+    check_args(s,f,t)
+    
+    [drop_query,create_query] = q.create_table(t,f,'psql')
 
-    if connection_cursor is not None:
-        connection_cursor.close()
-    if db_connection is not None:
-        db_connection.close()
-    return 'Hello Beautiful World!\n'
+    
+    
+    
+   # db_connection = establish_connection()
+    #connection_cursor = create_cursor(db_connection)
+
+    #db_connection.commit()
+
+    #if connection_cursor:
+    #    connection_cursor.close()
+    #if db_connection:
+    #    db_connection.close()
+    return (";".join([drop_query,create_query]))
