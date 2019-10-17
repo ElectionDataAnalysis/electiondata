@@ -60,8 +60,7 @@ def hello():
     f = 'local_data/NC/meta/mod_layout_results_pct.txt'
     t = 'results'   # name of table
     check_args(s,f,t)
-    
- [drop_query,create_query] = q.create_table(t,f,'psql')
+    [drop_query,create_query] = q.create_table(t,f,'psql')
 
     
     
