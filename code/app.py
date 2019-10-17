@@ -5,6 +5,8 @@ import psycopg2
 import re
 import state
 from pathlib import Path
+import os
+
 import query_create as q
 
 host_name = 'db'
@@ -55,11 +57,11 @@ def hello():
 
 # *** hard-code arguments for now
     s = nc
-    f = '../local/NC/meta/mod_layout_results_pct.txt'
+    f = 'local_data/NC/meta/mod_layout_results_pct.txt'
     t = 'results'   # name of table
     check_args(s,f,t)
     
-    [drop_query,create_query] = q.create_table(t,f,'psql')
+ [drop_query,create_query] = q.create_table(t,f,'psql')
 
     
     
