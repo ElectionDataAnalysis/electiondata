@@ -1,0 +1,62 @@
+line: county				text(30)	County name
+
+var_def_list: 
+parse_line: county varchar(30) County name
+line: election date			text(10)	Election date (MM/DD/YYYY)
+
+var_def_list: county varchar(30)
+parse_line: election_date varchar(10) Election date (MM/DD/YYYY)
+line: precinct			text(12)	Precinct
+
+var_def_list: county varchar(30) election_date varchar(10)
+parse_line: precinct varchar(12) Precinct
+line: contest group id		number		Group ID of the contest (used to link contests across counties)
+
+var_def_list: county varchar(30) election_date varchar(10) precinct varchar(12)
+parse_line: contest_group_id INT Group ID of the contest (used to link contests across counties)
+line: contest type			text(1)		Type of contest
+
+var_def_list: county varchar(30) election_date varchar(10) precinct varchar(12) contest_group_id INT
+parse_line: contest_type varchar(1) Type of contest
+line: contest name			text(60)	Name of the contest
+
+var_def_list: county varchar(30) election_date varchar(10) precinct varchar(12) contest_group_id INT contest_type varchar(1)
+parse_line: contest_name varchar(60) Name of the contest
+line: choice				text(60)	Name of the choice
+
+var_def_list: county varchar(30) election_date varchar(10) precinct varchar(12) contest_group_id INT contest_type varchar(1) contest_name varchar(60)
+parse_line: choice varchar(60) Name of the choice
+line: choice party			text(3)		Party of the choice
+
+var_def_list: county varchar(30) election_date varchar(10) precinct varchar(12) contest_group_id INT contest_type varchar(1) contest_name varchar(60) choice varchar(60)
+parse_line: choice_party varchar(3) Party of the choice
+line: vote for			number		Number of votes allowed to be cast for the contest
+
+var_def_list: county varchar(30) election_date varchar(10) precinct varchar(12) contest_group_id INT contest_type varchar(1) contest_name varchar(60) choice varchar(60) choice_party varchar(3)
+parse_line: vote_for INT Number of votes allowed to be cast for the contest
+line: election day			number		Number of votes with vote method of election day
+
+var_def_list: county varchar(30) election_date varchar(10) precinct varchar(12) contest_group_id INT contest_type varchar(1) contest_name varchar(60) choice varchar(60) choice_party varchar(3) vote_for INT
+parse_line: election_day INT Number of votes with vote method of election day
+line: one stop			number		Number of votes with vote method of one-stop
+
+var_def_list: county varchar(30) election_date varchar(10) precinct varchar(12) contest_group_id INT contest_type varchar(1) contest_name varchar(60) choice varchar(60) choice_party varchar(3) vote_for INT election_day INT
+parse_line: one_stop INT Number of votes with vote method of one-stop
+line: absentee by mail		number		Number of votes with vote method of absentee by mail
+
+var_def_list: county varchar(30) election_date varchar(10) precinct varchar(12) contest_group_id INT contest_type varchar(1) contest_name varchar(60) choice varchar(60) choice_party varchar(3) vote_for INT election_day INT one_stop INT
+parse_line: absentee_by_mail INT Number of votes with vote method of absentee by mail
+line: provisional			number		Number of votes with vote method of provisional
+
+var_def_list: county varchar(30) election_date varchar(10) precinct varchar(12) contest_group_id INT contest_type varchar(1) contest_name varchar(60) choice varchar(60) choice_party varchar(3) vote_for INT election_day INT one_stop INT absentee_by_mail INT
+parse_line: provisional INT Number of votes with vote method of provisional
+line: total votes			number		Number of votes all total
+
+var_def_list: county varchar(30) election_date varchar(10) precinct varchar(12) contest_group_id INT contest_type varchar(1) contest_name varchar(60) choice varchar(60) choice_party varchar(3) vote_for INT election_day INT one_stop INT absentee_by_mail INT provisional INT
+parse_line: total_votes INT Number of votes all total
+line: real precinct			text(1)		Y/N - Y = real precinct; N = administrative precinct
+
+var_def_list: county varchar(30) election_date varchar(10) precinct varchar(12) contest_group_id INT contest_type varchar(1) contest_name varchar(60) choice varchar(60) choice_party varchar(3) vote_for INT election_day INT one_stop INT absentee_by_mail INT provisional INT total_votes INT
+parse_line: real_precinct varchar(1) Y/N - Y = real precinct; N = administrative precinct
+parse_line: county varchar(30) County name
+parse_line: county varchar(30) County name

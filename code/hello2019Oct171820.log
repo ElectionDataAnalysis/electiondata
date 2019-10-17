@@ -1,0 +1,6 @@
+county				text(30)	County name
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"county				text(30)	County name
+"

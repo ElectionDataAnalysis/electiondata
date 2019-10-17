@@ -1,0 +1,90 @@
+county				text(30)	County name
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"county				text(30)	County name
+"
+election date			text(10)	Election date (MM/DD/YYYY)
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"election date			text(10)	Election date (MM/DD/YYYY)
+"
+precinct			text(12)	Precinct
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"precinct			text(12)	Precinct
+"
+contest group id		number		Group ID of the contest (used to link contests across counties)
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"contest group id		number		Group ID of the contest (used to link contests across counties)
+"
+contest type			text(1)		Type of contest
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"contest type			text(1)		Type of contest
+"
+contest name			text(60)	Name of the contest
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"contest name			text(60)	Name of the contest
+"
+choice				text(60)	Name of the choice
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"choice				text(60)	Name of the choice
+"
+choice party			text(3)		Party of the choice
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"choice party			text(3)		Party of the choice
+"
+vote for			number		Number of votes allowed to be cast for the contest
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"vote for			number		Number of votes allowed to be cast for the contest
+"
+election day			number		Number of votes with vote method of election day
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"election day			number		Number of votes with vote method of election day
+"
+one stop			number		Number of votes with vote method of one-stop
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"one stop			number		Number of votes with vote method of one-stop
+"
+absentee by mail		number		Number of votes with vote method of absentee by mail
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"absentee by mail		number		Number of votes with vote method of absentee by mail
+"
+provisional			number		Number of votes with vote method of provisional
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"provisional			number		Number of votes with vote method of provisional
+"
+total votes			number		Number of votes all total
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"total votes			number		Number of votes all total
+"
+real precinct			text(1)		Y/N - Y = real precinct; N = administrative precinct
+
+var_def_list: 
+Quoted line cannot be parsed, will not be processed: 
+"real precinct			text(1)		Y/N - Y = real precinct; N = administrative precinct
+"

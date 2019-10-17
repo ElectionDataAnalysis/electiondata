@@ -11,7 +11,6 @@ import re
 
 ## define some basics
     
-
     
 def parse_line(s,line):
     d=s.type_map
@@ -26,6 +25,7 @@ def parse_line(s,line):
         comment = m.group('comment')
     except:
         comment = ''
+    print("parse_line: "+ " ".join([field,type,comment]))
     return(field,type,comment)
 
 def var_def(field,type):
@@ -41,18 +41,23 @@ def comment_q(table,field,comment,flavor):
         sys.exit()
     return c
     
-def create_table(table_name,var_def_file,flavor):
+def create_table(table_name,var_def_file,flavor,s):
         drop_query = 'DROP TABLE IF EXISTS '+table_name+';'
         create_query =  'CREATE TABLE '+table_name+' ('
         with open(var_def_file,'r') as f:
             var_def_list=[]
             comment_list=[]
             for line in f.readlines():
+                print('line: '+line)
+                print('var_def_list: '+" ".join(var_def_list))
                 if line.find('"')>0:
                     print('Line has double quote, will not be processed:\n'+line)
                 else:
                     try:
-                        [field,type,comment] = parse_line('NC',line)
+                        [field,type,comment] = parse_line(s,line)
+                    except:
+                        print('Quoted line cannot be parsed, will not be processed: \n"'+line+'"')
+                    try:
                         if flavor == 'psql':
                             if len(comment):
                                 comment_list.append(comment_q(table_name,field,comment,'psql'))
@@ -67,7 +72,7 @@ def create_table(table_name,var_def_file,flavor):
                             print('Flavor not recognized: '+flavor)
                             sys.exit()
                     except:
-                        print('Quoted line cannot be parsed, will not be processed: \n"'+line+'"')
+                    	print("error with "+";".join(flavor,comment,field,type))
         create_query = create_query + ','.join(var_def_list) + ');' +  ' '.join(comment_list)
         return(drop_query,create_query)
 
