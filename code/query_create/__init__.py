@@ -42,8 +42,8 @@ def comment_q(table,field,comment,flavor):
     return c
     
 def create_table(table_name,var_def_file,flavor,s):
-        drop_query = 'DROP TABLE IF EXISTS '+s.abbr+'.'+table_name+';'
-        create_query =  'CREATE TABLE '+s.abbr+'.'+table_name+' ('
+        drop_query = 'DROP TABLE IF EXISTS '+table_name+';'
+        create_query =  'CREATE TABLE '+table_name+' ('
         with open(var_def_file,'r') as f:
             var_def_list=[]
             comment_list=[]
@@ -75,6 +75,9 @@ def create_table(table_name,var_def_file,flavor,s):
                     	print("error with "+";".join(flavor,comment,field,type))
         create_query = create_query + ','.join(var_def_list) + ');' +  ' '.join(comment_list)
         return(drop_query,create_query)
+        
+def load_data(table_name,data_file,flavor,s):
+    pass    # need to write this ***
 
 if __name__ == "__main__":
     [state,filepath] = check_args(sys.argv[1],sys.argv[3])

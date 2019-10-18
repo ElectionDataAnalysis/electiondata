@@ -14,13 +14,13 @@ import os
 import query_create as q
 
 
-def establish_connection():
+def establish_connection(db_name='postgres'):
     host_name = 'db'
     user_name = 'postgres'
     password = 'notverysecure'
-    database_name = 'postgres'
+
     # the connect() function returns a new instance of connection
-    conn = psycopg2.connect(host = host_name, user = user_name, password = password, database = database_name)
+    conn = psycopg2.connect(host = host_name, user = user_name, password = password, database = db_name)
     return conn
 
 def create_cursor(connection):
@@ -51,7 +51,7 @@ def hello():
 # set global log file
     now=datetime.now()
     now_str=now.strftime('%Y%b%d%H%M')
-    logfilepath = 'hello'+now_str+'.log'
+    logfilepath = 'local_logs/hello'+now_str+'.log'
     with open(logfilepath,'a') as sys.stdout:
 
     # define the state of NC and how to parse its metadata files
@@ -64,7 +64,7 @@ def hello():
         (?P<comment>.*)        # capture remaining part of the line, not including end-of-line
         """,re.VERBOSE)
         nc_type_map = {'number':'INT', 'text':'varchar', 'char':'varchar'}
-        nc = state.State("NC","North Carolina",nc_meta_p,nc_type_map)
+        nc = state.State("NC","North Carolina",nc_meta_p,nc_type_map,"nc")
 
     # *** hard-code arguments for now
         s = nc
@@ -74,25 +74,28 @@ def hello():
         [drop_query,create_query] = q.create_table(t,f,'psql',s)
   
   
-        # connect to db
+        # connect and create db for the state
         conn = establish_connection()
         conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-
-        cur = create_cursor(conn)
+        cur = conn.cursor()
         
-        query = 'DROP DATABASE IF EXISTS '+s.abbr
+        query = 'DROP DATABASE IF EXISTS '+s.db_name
         cur.execute(query)
         report.append(query)
         
-        query = 'CREATE DATABASE '+s.abbr
+        query = 'CREATE DATABASE '+s.db_name
         cur.execute(query)
         report.append(query)
+        if cur:
+            cur.close()
+        if conn:
+            conn.close()
 
-        query = '\\c '+s.abbr
-        cur.execute(query)
-        report.append(query)
+        # connect to the state db
+        report.append('Connect to database '+s.db_name)
+        conn = establish_connection(s.db_name)
+        cur = conn.cursor()
 
-        
         cur.execute(drop_query)
         report.append(drop_query)
         cur.execute(create_query)
@@ -103,4 +106,4 @@ def hello():
             cur.close()
         if conn:
             conn.close()
-        return(" ".join(report))
+        return("<p>"+"</p><p>  ".join(report))
