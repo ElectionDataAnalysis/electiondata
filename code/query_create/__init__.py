@@ -76,8 +76,9 @@ def create_table(table_name,var_def_file,flavor,s):
         create_query = create_query + ','.join(var_def_list) + ');' +  ' '.join(comment_list)
         return(drop_query,create_query)
         
-def load_data(table_name,data_file,flavor,s):
-    pass    # need to write this ***
+def load_data(table_name,data_file,flavor,s):   # *** needs testing
+    if flavor == 'psql':
+        q = 'COPY '+table_name+' FROM '+data_file
 
 if __name__ == "__main__":
     [state,filepath] = check_args(sys.argv[1],sys.argv[3])
