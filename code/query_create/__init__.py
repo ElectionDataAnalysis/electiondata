@@ -42,8 +42,8 @@ def comment_q(table,field,comment,flavor):
     return c
     
 def create_table(table_name,var_def_file,flavor,s):
-        drop_query = 'DROP TABLE IF EXISTS '+table_name+';'
-        create_query =  'CREATE TABLE '+table_name+' ('
+        drop_query = 'DROP TABLE IF EXISTS '+s.abbr+'.'+table_name+';'
+        create_query =  'CREATE TABLE '+s.abbr+'.'+table_name+' ('
         with open(var_def_file,'r') as f:
             var_def_list=[]
             comment_list=[]
