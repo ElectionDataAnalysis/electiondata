@@ -1,1 +1,44 @@
 # results_analysis
+
+## Set-up
+
+### Docker
+Docker must be installed on your system.
+
+### .gitignore
+Folders you will need in your local repo:
+`code/local_data` holds your state-by-state data. Each state has a subfolder, e.g., `code/local_data/NC` for North Carolina. Each state subfolder has two subfolders, one for source data files (`code/local_data/NC/data`) and one for metadata files (`code/local_data/NC/meta`)
+
+`code/local_logs` will receive log files as the program runs.
+
+Other folders are optional, e.g., `local`.
+
+## How to run the app
+
+The following may need to be modified for your operating system. 
+
+### On MacOS 
+#### Start the servers
+Using Terminal, navigate to the `code` directory. Run `docker-compose up`:
+
+    `$ docker-compose up
+    Creating network "code_default" with the default driver
+    Creating code_web_1 ... done
+    Creating code_db_1  ... done
+    Attaching to code_web_1, code_db_1`
+
+This Terminal window will show messages from the web and db servers.
+
+#### Run the application
+In a web browser, navigate to `localhost:5000`
+
+#### Stop the application
+In a second Terminal window, navigate to the `code` directory. Run `docker-compose down`:
+
+    `$ docker-compose down
+    Stopping code_db_1  ... done
+    Stopping code_web_1 ... done
+    Removing code_db_1  ... done
+    Removing code_web_1 ... done
+    Removing network code_default
+    $`

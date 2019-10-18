@@ -44,6 +44,10 @@ def check_args(s,f,t):
 
 app = Flask(__name__)
 
+@app.route('/hello')
+def print_hello():
+	print('hello')
+
 @app.route('/')
 def hello():
 # initialize report

@@ -1,6 +1,5 @@
 local/
 .DS_Store
-NC/.DS_Store
 code/__pycache__
 code/local_data
 code/local_logs
