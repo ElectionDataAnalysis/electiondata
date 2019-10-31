@@ -42,3 +42,6 @@ In a second Terminal window, navigate to the `code` directory. Run `docker-compo
     Removing code_web_1 ... done
     Removing network code_default
     $`
+
+## docs folder
+The `docs` folder has documentation for local set-up of programs and packages that are likely to be useful for dev.
