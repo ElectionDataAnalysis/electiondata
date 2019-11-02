@@ -9,8 +9,8 @@ import sys
 from pathlib import Path
 import re
 
-## define some basics
-    
+
+
     
 def parse_line(s,line):
     d=s.type_map
@@ -76,16 +76,10 @@ def create_table(table_name,var_def_file,flavor,s):
         create_query = create_query + ','.join(var_def_list) + ');' +  ' '.join(comment_list)
         return(drop_query,create_query)
         
-def load_data(table_name,data_file,flavor,s):   # *** needs testing
-    if flavor == 'psql':
-        q = 'COPY '+table_name+' FROM '+data_file
+def load_data(table_name):   # *** needs testing
+    q = "COPY "+table_name+" FROM STDIN DELIMITER E'\\t' CSV HEADER"
+    return q
 
-if __name__ == "__main__":
-    [state,filepath] = check_args(sys.argv[1],sys.argv[3])
-    table_name = sys.argv[2]
-    [drop_query,create_query] = create_table(table_name,sys.argv[3],'mysql')
-    print(drop_query)
-    print(create_query)
-
+  
     
 

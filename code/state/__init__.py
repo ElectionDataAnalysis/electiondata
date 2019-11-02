@@ -1,5 +1,6 @@
 #!usr/bin/python
 import re
+import sys
 
 class State:
     def __init__(self,abbr,name,meta_parser,type_map,db_name,path_to_data):
@@ -24,5 +25,8 @@ def create_instance(abbr):
         nc_type_map = {'number':'INT', 'text':'varchar', 'char':'varchar'}
         nc_path_to_data = "local_data/NC/data"
         return State("NC","North Carolina",nc_meta_p,nc_type_map,"nc",nc_path_to_data)
+    else:
+        return('Error: "'+abbr+'" is not a state abbreviation recognized by the code.')
+        sys.exit()
 
 
