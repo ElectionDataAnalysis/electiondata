@@ -13,6 +13,7 @@ import re
 
     
 def parse_line(s,line):
+    '''parse_line takes a state and a line of (metadata) text and parses it, including changing the type in the file to the type required by psql, according to the state's type-map dictionary'''
     d=s.type_map
     p=s.meta_parser
     m = p.search(line)
@@ -77,7 +78,7 @@ def create_table(table_name,var_def_file,flavor,s):
         return(drop_query,create_query)
         
 def load_data(table_name):   # *** needs testing
-    q = "COPY "+table_name+" FROM STDIN DELIMITER E'\\t' CSV HEADER"
+    q = "COPY "+table_name+" FROM STDIN DELIMITER E'\\t' CSV HEADER"  # E'\\t' is the tab character
     return q
 
   

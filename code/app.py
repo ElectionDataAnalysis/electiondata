@@ -66,7 +66,7 @@ def build():
 
     # *** hard-code arguments for now
         s = nc
-        f = 'local_data/NC/meta/mod_layout_results_pct.txt'
+        f = 'local_data/NC/meta/mod_layout_results_pct.txt'   # this path is outside the docker container. The corresponding folder in the docker container is mapped from '/local_data' in the docker-compose.yml file.
         t = 'results'   # name of table
         check_args(s,f,t)
         [drop_query,create_query] = q.create_table(t,f,'psql',s)
@@ -98,6 +98,11 @@ def build():
         report.append(drop_query)
         cur.execute(create_query)
         report.append(create_query)
+        
+        # correct any errors from metadata
+        for query in nc.correction_query_list:
+            cur.execute(query)
+            report.append(query)
 
         conn.commit()
         # close connection
@@ -122,8 +127,16 @@ def fill():
     nc = state.create_instance('NC')
     # load the data
     load_query = q.load_data('results')
-    with open(path_to_file(nc.path_to_data,'trunc_results_pct_20181106.txt'),'r') as f:
+    # clean bad binary characters out of the file
+    
+    with open(path_to_file(nc.path_to_data,'results_pct_20181106.txt'),'rb') as fi:
+        data = fi.read()
+    with open('local_data/_tmp/clean_'+'results_pct_20181106.txt','wb') as fo:
+        fo.write(data.replace(b'\000',b''))
+        
+    with open('local_data/_tmp/clean_'+'results_pct_20181106.txt','r') as f:
         cur.copy_expert(load_query,f)
+        conn.commit()
 
     # close connection
     if cur:

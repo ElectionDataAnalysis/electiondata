@@ -8,6 +8,8 @@ services:
 # might need to choose a specific data directory via env variable
     ports:
       - 5432:5432
+    volumes:
+      - ./local_data:/data
 
   web:
     build: .
