@@ -72,6 +72,7 @@ app = Flask(__name__)
 def build():
 # initialize report
     report=[]
+    tables = ['results_pct','absentee']
 # set global log file
     now=datetime.now()
     now_str=now.strftime('%Y%b%d%H%M')
@@ -83,36 +84,38 @@ def build():
 
     # *** hard-code arguments for now
         s = nc
-        f = 'local_data/NC/meta/mod_layout_results_pct.txt'   # this path is outside the docker container.
-        t = 'results_pct'   # name of table
-        check_args(s,f,t)
-        
-    # clean the input file
-        f = cl.remove_null_bytes(f,'local_data/tmp/')
-        f = cl.extract_first_col_defs(f,'local_data/tmp/')
-        
-    # create the db for the state
+        # create the db for the state
         create_db(s)
-        [drop_query,create_query] = q.create_table(t,f,s)
-  
-  
 
     # connect to the state db
         report.append('Connect to database '+s.db_name)
         conn = establish_connection(s.db_name)
         cur = conn.cursor()
-
-        cur.execute(drop_query)
-        report.append(drop_query)
-        cur.execute(create_query)
-        report.append(create_query)
         
-    # correct any errors due to foibles of particular state
+        for table in tables:
+            f = 'local_data/NC/meta/layout_'+table+'.txt'   # this path is outside the docker container.
+            t = table   # name of table
+            check_args(s,f,t)   # checking s is redundant
+        
+        # clean the input file
+            f = cl.remove_null_bytes(f,'local_data/tmp/')
+            f = cl.extract_first_col_defs(f,'local_data/tmp/')
+
+        # create table and commit
+            [drop_query,create_query] = q.create_table(t,f,s)
+            cur.execute(drop_query)
+            report.append(drop_query)
+            cur.execute(create_query)
+            report.append(create_query)
+            conn.commit()
+
+    # correct any errors due to foibles of particular state and commit
         for query in nc.correction_query_list:
             cur.execute(query)
             report.append(query)
+            conn.commit()
 
-        conn.commit()
+        conn.commit()   # not necessary
         # close connection
         if cur:
             cur.close()

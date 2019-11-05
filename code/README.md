@@ -19,4 +19,4 @@ Defines two services: `db` (postgres to store data) and `web` (serves up web con
 ## `local_data` folder
 Contains one subfolder for each state, each containing folders `meta` and `data` where the original state metadata and state data (respectively) reside.
 
-Also contains a subfolder `_tmp` to hold temporary cleaned files for upload to db
+Also contains a subfolder `tmp` to hold temporary cleaned files for upload to db

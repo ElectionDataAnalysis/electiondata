@@ -1,4 +1,5 @@
-#!usr/bin/python
+#!usr/bin/python3
+
 import re
 import sys
 
@@ -10,13 +11,13 @@ def extract_first_col_defs(filepath,directory):
         directory.append('/')
         
     p=re.compile(r"""
-    # note:     ((?:[^\n\t]+\t+[^\n\t]+\t+[^\n\t]+\n)+) # finds packet of lines looking like column definitions. This assumes all columns have name, type and comment, none null
-    """,re.VERBOSE)
+        ((?:[^\n\t]+\t+[^\n\t]+\t+[^\n\t]+\n)+) # finds packet of lines looking like column definitions. This assumes all columns have name, type and comment, none null
+        """,re.VERBOSE)
     
-    with open(filepath,'r') as fin:
+    with open(filepath,mode='r',encoding='utf8', errors='ignore') as fin:
         data=fin.read()
     a=re.search(p,data)     # finds first instance of pattern, ignoring later
-    outpath = directory+'first_col_defs'+filename
+    outpath = directory+'first_col_defs_'+filename
     with open(outpath,'w') as fout:
         fout.write(a.group())
     return outpath
@@ -27,12 +28,9 @@ def remove_null_bytes(filepath,directory):
     # add slash to end of directory if necessary
     if directory[-1]!= '/':
         directory.append('/')
-    with open(filepath,'r') as fin:
+    with open(filepath,'rb') as fin:
         data=fin.read()
-    outpath=directory+'nn_'+filename,'w'
-    with open(outpath,'w') as fout:
+    outpath=directory+'nn_'+filename
+    with open(outpath,'wb') as fout:
         fout.write(data.replace(b'\000',b''))
     return outpath
-
-if __name__='__main__':
-    print('hello')
