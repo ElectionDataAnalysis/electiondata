@@ -85,13 +85,14 @@ def build():
         f = 'local_data/NC/meta/mod_layout_results_pct.txt'   # this path is outside the docker container.
         t = 'results_pct'   # name of table
         check_args(s,f,t)
-        # create the db for the state
+        
+    # create the db for the state
         create_db(s)
-        [drop_query,create_query] = q.create_table(t,f,'psql',s)
+        [drop_query,create_query] = q.create_table(t,f,s)
   
   
 
-        # connect to the state db
+    # connect to the state db
         report.append('Connect to database '+s.db_name)
         conn = establish_connection(s.db_name)
         cur = conn.cursor()
@@ -101,7 +102,7 @@ def build():
         cur.execute(create_query)
         report.append(create_query)
         
-        # correct any errors from metadata
+    # correct any errors due to foibles of particular state
         for query in nc.correction_query_list:
             cur.execute(query)
             report.append(query)
@@ -125,10 +126,8 @@ def fill():
     conn = establish_connection(nc.db_name)
     cur = conn.cursor()
 
-    # create the state of NC *** is it really necessary to do this in each @app.route?
-    nc = state.create_instance('NC')
     # load the data
-    load_query = q.load_data('results')
+    load_query = q.load_data('results_pct')
     # clean bad binary characters out of the file
     
     with open(path_to_file(nc.path_to_data,'results_pct_20181106.txt'),'rb') as fi:

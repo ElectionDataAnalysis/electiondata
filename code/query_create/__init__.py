@@ -32,16 +32,12 @@ def var_def(field,type):
     v = field+' '+type
     return v
     
-def comment_q(table,field,comment,flavor):
-    ''' args are table name, field name, comment text and flavor (e.g., 'psql' or 'mysql')'''
-    if flavor=='psql':
-        c = 'comment on column '+table+'.'+field+' is \''+comment+'\';'
-    else:
-        print('comment_q:Flavor not recognized: '+flavor)
-        sys.exit()
+def comment_q(table,field,comment):
+    ''' args are table name, field name, comment text'''
+    c = 'comment on column '+table+'.'+field+' is \''+comment+'\';'
     return c
     
-def create_table(table_name,var_def_file,flavor,s):
+def create_table(table_name,var_def_file,s):
         drop_query = 'DROP TABLE IF EXISTS '+table_name+';'
         create_query =  'CREATE TABLE '+table_name+' ('
         with open(var_def_file,'r') as f:
@@ -56,28 +52,24 @@ def create_table(table_name,var_def_file,flavor,s):
                     except:
                         print('create_table:Quoted line cannot be parsed, will not be processed: \n"'+line+'"')
                     try:
-                        if flavor == 'psql':
-                            if len(comment):
-                                comment_list.append(comment_q(table_name,field,comment,'psql'))
-                            var_def_list.append(var_def(field,type))
-                        elif flavor == 'mysql':
-                            if len(comment):
-                                comment_text = ' COMMENT "'+comment+'"'
-                            else:
-                                comment_text = ''
-                            var_def_list.append(var_def(field,type)+comment_text)
-                        else:
-                            print('Flavor not recognized: '+flavor)
-                            sys.exit()
+                        if len(comment):
+                            comment_list.append(comment_q(table_name,field,comment))
+                        var_def_list.append(var_def(field,type))
                     except:
-                    	print("create_table:error with "+";".join(flavor,comment,field,type))
+                    	print("create_table:error with "+";".join(comment,field,type))
         create_query = create_query + ','.join(var_def_list) + ');' +  ' '.join(comment_list)
         return(drop_query,create_query)
         
-def load_data(table_name):   # *** needs testing
+def load_data(table_name):
     q = "COPY "+table_name+" FROM STDIN DELIMITER E'\\t' CSV HEADER"  # E'\\t' is the tab character
     return q
 
   
-    
+def clean_meta_file(infile,outdir,s):
+    ''' create in outdir a metadata file based on infile, with all unnecessaries stripped, for the given state'''
+    if s.abbreviation == 'NC':
+        return("hello") # need to code this *** 
+    else:
+        return("clean_meta_file: error, state not recognized")
+        sys.exit()
 
