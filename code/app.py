@@ -12,6 +12,7 @@ from datetime import datetime
 import os
 
 import query_create as q
+import clean as cl
 
 ## define some basics
 def path_to_file(path_to_dir,filename):
@@ -85,6 +86,10 @@ def build():
         f = 'local_data/NC/meta/mod_layout_results_pct.txt'   # this path is outside the docker container.
         t = 'results_pct'   # name of table
         check_args(s,f,t)
+        
+    # clean the input file
+        f = cl.remove_null_bytes(f,'local_data/tmp/')
+        f = cl.extract_first_col_defs(f,'local_data/tmp/')
         
     # create the db for the state
         create_db(s)
