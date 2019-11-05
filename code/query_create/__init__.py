@@ -26,7 +26,6 @@ def parse_line(s,line):
         comment = m.group('comment')
     except:
         comment = ''
-    print("parse_line: "+ " ".join([field,type,comment]))
     return(field,type,comment)
 
 def var_def(field,type):
@@ -38,7 +37,7 @@ def comment_q(table,field,comment,flavor):
     if flavor=='psql':
         c = 'comment on column '+table+'.'+field+' is \''+comment+'\';'
     else:
-        print('Flavor not recognized: '+flavor)
+        print('comment_q:Flavor not recognized: '+flavor)
         sys.exit()
     return c
     
@@ -49,15 +48,13 @@ def create_table(table_name,var_def_file,flavor,s):
             var_def_list=[]
             comment_list=[]
             for line in f.readlines():
-                print('line: '+line)
-                print('var_def_list: '+" ".join(var_def_list))
                 if line.find('"')>0:
-                    print('Line has double quote, will not be processed:\n'+line)
+                    print('create_table:Line has double quote, will not be processed:\n'+line)
                 else:
                     try:
                         [field,type,comment] = parse_line(s,line)
                     except:
-                        print('Quoted line cannot be parsed, will not be processed: \n"'+line+'"')
+                        print('create_table:Quoted line cannot be parsed, will not be processed: \n"'+line+'"')
                     try:
                         if flavor == 'psql':
                             if len(comment):
@@ -73,7 +70,7 @@ def create_table(table_name,var_def_file,flavor,s):
                             print('Flavor not recognized: '+flavor)
                             sys.exit()
                     except:
-                    	print("error with "+";".join(flavor,comment,field,type))
+                    	print("create_table:error with "+";".join(flavor,comment,field,type))
         create_query = create_query + ','.join(var_def_list) + ');' +  ' '.join(comment_list)
         return(drop_query,create_query)
         

@@ -46,6 +46,22 @@ def check_args(s,f,t):
     # *** check t for whitespace
     return (s,f,t)
 
+def create_db(s):
+    # connect and create db for the state
+    conn = establish_connection()
+    conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
+    cur = conn.cursor()
+    
+    query = 'DROP DATABASE IF EXISTS '+s.db_name
+    cur.execute(query)
+
+    
+    query = 'CREATE DATABASE '+s.db_name
+    cur.execute(query)
+    if cur:
+        cur.close()
+    if conn:
+        conn.close()
 
 
 
@@ -66,28 +82,14 @@ def build():
 
     # *** hard-code arguments for now
         s = nc
-        f = 'local_data/NC/meta/mod_layout_results_pct.txt'   # this path is outside the docker container. The corresponding folder in the docker container is mapped from '/local_data' in the docker-compose.yml file.
-        t = 'results'   # name of table
+        f = 'local_data/NC/meta/mod_layout_results_pct.txt'   # this path is outside the docker container.
+        t = 'results_pct'   # name of table
         check_args(s,f,t)
+        # create the db for the state
+        create_db(s)
         [drop_query,create_query] = q.create_table(t,f,'psql',s)
   
   
-        # connect and create db for the state
-        conn = establish_connection()
-        conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-        cur = conn.cursor()
-        
-        query = 'DROP DATABASE IF EXISTS '+s.db_name
-        cur.execute(query)
-        report.append(query)
-        
-        query = 'CREATE DATABASE '+s.db_name
-        cur.execute(query)
-        report.append(query)
-        if cur:
-            cur.close()
-        if conn:
-            conn.close()
 
         # connect to the state db
         report.append('Connect to database '+s.db_name)
