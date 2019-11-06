@@ -70,9 +70,11 @@ app = Flask(__name__)
 
 @app.route('/build')
 def build():
-# initialize report
+# initialize report for logging
     report=[]
-    tables = ['results_pct','absentee']
+    tables = ['results_pct','absentee'] # varies by state ***
+    fmeta = {'results_pct':'layout_results_pct.txt','absentee':'layout_absentee.txt'}  # name of metadata file; varies by state ***
+    fdata = {'results_pct':'results_pct_20181106.txt','absentee':'absentee_20181106.csv'} # name of data file, varies by state and election ***
 # set global log file
     now=datetime.now()
     now_str=now.strftime('%Y%b%d%H%M')
@@ -93,16 +95,16 @@ def build():
         cur = conn.cursor()
         
         for table in tables:
-            f = 'local_data/NC/meta/layout_'+table+'.txt'   # this path is outside the docker container.
+            fpath = 'local_data/NC/meta/'+fmeta[table]   # this path is outside the docker container.
             t = table   # name of table
-            check_args(s,f,t)   # checking s is redundant
+            check_args(s,fpath,t)   # checking s is redundant
         
-        # clean the input file
-            f = cl.remove_null_bytes(f,'local_data/tmp/')
-            f = cl.extract_first_col_defs(f,'local_data/tmp/')
+        # clean the metadata file
+            fpath = cl.remove_null_bytes(fpath,'local_data/tmp/')
+            fpath = cl.extract_first_col_defs(fpath,'local_data/tmp/')
 
         # create table and commit
-            [drop_query,create_query] = q.create_table(t,f,s)
+            [drop_query,create_query] = q.create_table(t,fpath,s)
             cur.execute(drop_query)
             report.append(drop_query)
             cur.execute(create_query)
@@ -115,7 +117,22 @@ def build():
             report.append(query)
             conn.commit()
 
-        conn.commit()   # not necessary
+    # load data into tables
+    
+        for table in tables:
+        # clean data file
+            fpath='local_data/NC/data/'+fdata[table]
+            fpath = cl.remove_null_bytes(fpath,'local_data/tmp/')   # is this redundant with encoding='utf8', errors='ignore'?
+        # load data
+            load_query = q.load_data(table)
+            with open(fpath,mode='r',encoding='utf8',errors='ignore') as f:
+                cur.copy_expert(load_query,f)
+            conn.commit()
+            report.append('Data from file '+fpath+' loaded into table '+table)
+
+    
+    
+    
         # close connection
         if cur:
             cur.close()
@@ -133,6 +150,8 @@ def fill():
     # connect to the state db
     conn = establish_connection(nc.db_name)
     cur = conn.cursor()
+    
+
 
     # load the data
     load_query = q.load_data('results_pct')
