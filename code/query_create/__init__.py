@@ -60,8 +60,13 @@ def create_table(table_name,var_def_file,s):
         create_query = create_query + ','.join(var_def_list) + ');' +  ' '.join(comment_list)
         return(drop_query,create_query)
         
-def load_data(table_name):
-    q = "COPY "+table_name+" FROM STDIN DELIMITER E'\\t' CSV HEADER"  # E'\\t' is the tab character
+def load_data(table_name,ext):
+    if ext == 'txt':
+        delimit = " DELIMITER E'\\t' QUOTE '\"' "
+    elif ext == 'csv':
+        delimit = " DELIMITER ',' "
+    q = "COPY "+table_name+" FROM STDIN "+delimit+" CSV HEADER"
+#    q = "COPY "+table_name+" FROM STDIN DELIMITER E'\\t' CSV HEADER"  # E'\\t' is the tab character
     return q
 
   

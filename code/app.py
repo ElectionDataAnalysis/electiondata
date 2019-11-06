@@ -124,7 +124,7 @@ def build():
             fpath='local_data/NC/data/'+fdata[table]
             fpath = cl.remove_null_bytes(fpath,'local_data/tmp/')   # is this redundant with encoding='utf8', errors='ignore'?
         # load data
-            load_query = q.load_data(table)
+            load_query = q.load_data(table, fpath[-3:]) #fpath[-3:] is the 3-letter extension, csv or txt
             with open(fpath,mode='r',encoding='utf8',errors='ignore') as f:
                 cur.copy_expert(load_query,f)
             conn.commit()
@@ -154,7 +154,7 @@ def fill():
 
 
     # load the data
-    load_query = q.load_data('results_pct')
+    load_query = q.load_data('results_pct','txt')
     # clean bad binary characters out of the file
     
     with open(path_to_file(nc.path_to_data,'results_pct_20181106.txt'),'rb') as fi:
