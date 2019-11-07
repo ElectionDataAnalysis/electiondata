@@ -3,7 +3,7 @@
 import re
 import sys
 
-def extract_first_col_defs(filepath,directory):
+def extract_first_col_defs(filepath,directory,enc='utf8'):
     # get filename from the filepath
     filename = filepath.split('/')[-1]
     # add slash to end of directory if necessary
@@ -14,7 +14,7 @@ def extract_first_col_defs(filepath,directory):
         ((?:[^\n\t]+\t+[^\n\t]+\t+[^\n\t]+\n)+) # finds packet of lines looking like column definitions. This assumes all columns have name, type and comment, none null
         """,re.VERBOSE)
     
-    with open(filepath,mode='r',encoding='utf8', errors='ignore') as fin:
+    with open(filepath,mode='r',encoding=enc, errors='ignore') as fin:
         data=fin.read()
     a=re.search(p,data)     # finds first instance of pattern, ignoring later
     outpath = directory+'first_col_defs_'+filename

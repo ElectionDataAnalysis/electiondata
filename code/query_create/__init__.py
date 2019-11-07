@@ -37,10 +37,10 @@ def comment_q(table,field,comment):
     c = 'comment on column '+table+'.'+field+' is \''+comment+'\';'
     return c
     
-def create_table(table_name,var_def_file,s):
+def create_table(table_name,var_def_file,s,enc='utf8'):
         drop_query = 'DROP TABLE IF EXISTS '+table_name+';'
         create_query =  'CREATE TABLE '+table_name+' ('
-        with open(var_def_file,'r') as f:
+        with open(var_def_file,'r',encoding=enc) as f:
             var_def_list=[]
             comment_list=[]
             for line in f.readlines():

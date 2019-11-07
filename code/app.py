@@ -72,7 +72,7 @@ app = Flask(__name__)
 def build():
 # initialize report for logging
     report=[]
-    tables = ['results_pct'] # varies by state ***
+    tables = [['results_pct','utf8']] # varies by state *** name and encoding of metadata file
         # note: 'absentee' needs better data cleaning
     fmeta = {'results_pct':'layout_results_pct.txt','absentee':'layout_absentee.txt'}  # name of metadata file; varies by state ***
     fdata = {'results_pct':'results_pct_20181106.txt','absentee':'absentee_20181106.csv'} # name of data file, varies by state and election ***
@@ -96,16 +96,17 @@ def build():
         cur = conn.cursor()
         
         for table in tables:
-            fpath = 'local_data/NC/meta/'+fmeta[table]   # this path is outside the docker container.
-            t = table   # name of table
+            t = table[0]   # name of table
+            e = table[1]    # encoding
+            fpath = 'local_data/NC/meta/'+fmeta[t]   # this path is outside the docker container.
             check_args(s,fpath,t)   # checking s is redundant
         
         # clean the metadata file
-            fpath = cl.remove_null_bytes(fpath,'local_data/tmp/')
-            fpath = cl.extract_first_col_defs(fpath,'local_data/tmp/')
+#            fpath = cl.remove_null_bytes(fpath,'local_data/tmp/')
+            fpath = cl.extract_first_col_defs(fpath,'local_data/tmp/',e)
 
         # create table and commit
-            [drop_query,create_query] = q.create_table(t,fpath,s)
+            [drop_query,create_query] = q.create_table(t,fpath,s,e)
             cur.execute(drop_query)
             report.append(drop_query)
             cur.execute(create_query)
@@ -121,15 +122,16 @@ def build():
     # load data into tables
     
         for table in tables:
+            t = table[0]   # name of table
         # clean data file
-            fpath='local_data/NC/data/'+fdata[table]
+            fpath='local_data/NC/data/'+fdata[t]
             fpath = cl.remove_null_bytes(fpath,'local_data/tmp/')   # is this redundant with encoding='utf8', errors='ignore'?
         # load data
-            load_query = q.load_data(table, fpath[-3:]) #fpath[-3:] is the 3-letter extension, csv or txt
+            load_query = q.load_data(t, fpath[-3:]) #fpath[-3:] is the 3-letter extension, csv or txt
             with open(fpath,mode='r',encoding='utf8',errors='ignore') as f:
                 cur.copy_expert(load_query,f)
             conn.commit()
-            report.append('Data from file '+fpath+' loaded into table '+table)
+            report.append('Data from file '+fpath+' loaded into table '+t)
 
     
     
