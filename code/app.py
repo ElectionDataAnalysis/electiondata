@@ -72,9 +72,9 @@ app = Flask(__name__)
 def build():
 # initialize report for logging
     report=[]
-    tables = [['results_pct','utf8'],['absentee','utf8']] # varies by state *** name and encoding of metadata file
+    tables = [['results_pct','utf8']] # varies by state *** name and encoding of metadata file
         # note: 'absentee' needs better data cleaning
-    fmeta = {'results_pct':'layout_results_pct.txt','absentee':'sfs_by_hand_layout_absentee.txt'}  # name of metadata file; varies by state ***
+    fmeta = {'results_pct':'layout_results_pct.txt','absentee':'layout_absentee.txt'}  # name of metadata file; varies by state ***
     fdata = {'results_pct':'results_pct_20181106.txt','absentee':'absentee_20181106.csv'} # name of data file, varies by state and election ***
 # set global log file
     now=datetime.now()

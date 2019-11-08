@@ -49,10 +49,14 @@ def create_table(table_name,var_def_file,s,enc='utf8'):
                 else:
                     try:
                         [field,type,comment] = parse_line(s,line)
-                        if len(comment):                            comment_list.append(comment_q(table_name,field,comment))
-                        var_def_list.append(var_def(field,type))
                     except:
                         print('create_table:Quoted line cannot be parsed, will not be processed: \n"'+line+'"')
+                    try:
+                        if len(comment):
+                            comment_list.append(comment_q(table_name,field,comment))
+                        var_def_list.append(var_def(field,type))
+                    except:
+                    	print("create_table:error with "+";".join(comment,field,type))
         create_query = create_query + ','.join(var_def_list) + ');' +  ' '.join(comment_list)
         return(drop_query,create_query)
         
