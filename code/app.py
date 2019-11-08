@@ -88,7 +88,7 @@ def build():
     # *** hard-code arguments for now
         s = nc
         # create the db for the state
-        create_db(s)
+#        create_db(s)
 
     # connect to the state db
         report.append('Connect to database '+s.db_name)

@@ -15,14 +15,13 @@ class State:
     
 def create_instance(abbr):
     if abbr == 'NC':
-        nc_meta_p= re.compile(r"""
-        (?P<field>.*\S+\b)        # capture field
-        \s\s+                    # skip all more-than-one whitespace
-        (?P<type>[a-z]+)       # capture type, including number in parens if there
+        nc_meta_p=re.compile(r"""
+        (?P<field>[^\n\t]+)
+        \t+
+        (?P<type>[A-z]+)
         (?P<number>\(\d+\))?
-        \s+                     # skip all whitespace
-        (?P<comment>.*)        # capture remaining part of the line, not including end-of-line
-        """,re.VERBOSE)
+        \t+(?P<comment>[^\n\t]+)
+        \n""",re.VERBOSE)
         nc_type_map = {'number':'INT', 'text':'varchar', 'char':'varchar'}
         nc_path_to_data = "local_data/NC/data"
         nc_correction_query_list = ['ALTER TABLE results_pct ALTER COLUMN precinct SET DATA TYPE varchar(23)']  #metadata says precinct field has at most 12 characters but 'ABSENTEE BY MAIL 71-106' has 13
