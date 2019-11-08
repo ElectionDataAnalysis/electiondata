@@ -18,7 +18,7 @@ def extract_first_col_defs(filepath,directory,enc='utf8'):
         data=fin.read()
     a=re.search(p,data)     # finds first instance of pattern, ignoring later
     outpath = directory+'first_col_defs_'+filename
-    with open(outpath,'w') as fout:
+    with open(outpath,'w',encoding=enc) as fout:
         fout.write(a.group())
     return outpath
     

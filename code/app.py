@@ -72,9 +72,9 @@ app = Flask(__name__)
 def build():
 # initialize report for logging
     report=[]
-    tables = [['results_pct','utf8']] # varies by state *** name and encoding of metadata file
+    tables = [['results_pct','utf8'],['absentee','utf16']] # varies by state *** name and encoding of metadata file
         # note: 'absentee' needs better data cleaning
-    fmeta = {'results_pct':'layout_results_pct.txt','absentee':'layout_absentee.txt'}  # name of metadata file; varies by state ***
+    fmeta = {'results_pct':'layout_results_pct.txt','absentee':'sfs_by_hand_layout_absentee.txt'}  # name of metadata file; varies by state ***
     fdata = {'results_pct':'results_pct_20181106.txt','absentee':'absentee_20181106.csv'} # name of data file, varies by state and election ***
 # set global log file
     now=datetime.now()
@@ -103,6 +103,7 @@ def build():
         
         # clean the metadata file
 #            fpath = cl.remove_null_bytes(fpath,'local_data/tmp/')
+            input_to_extract = fpath    # *** diagnostic
             fpath = cl.extract_first_col_defs(fpath,'local_data/tmp/',e)
 
         # create table and commit
