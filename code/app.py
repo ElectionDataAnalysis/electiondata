@@ -4,7 +4,7 @@ from flask import Flask
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT # allows db creation, deletion
 import re
-import state
+import states_and_files as sf
 from pathlib import Path
 import sys
 
@@ -37,7 +37,7 @@ def create_cursor(connection):
     return cur
 
 def check_args(s,f,t):
-    if not isinstance(s,state.State):
+    if not isinstance(s,sf.State):
         return('Error: '+s+' is not a known state.')
         sys.exit()
     mypath=Path(f)
@@ -83,7 +83,7 @@ def build():
     with open(logfilepath,'a') as sys.stdout:
 
     # create the state of NC
-        nc = state.create_instance('NC')
+        nc = sf.create_instance('NC')
 
     # *** hard-code arguments for now
         s = nc
@@ -149,7 +149,7 @@ def build():
 def fill():
     
     # create the state of NC *** is it really necessary to do this in each @app.route?
-    nc = state.create_instance('NC')
+    nc = sf.create_instance('NC')
     
     # connect to the state db
     conn = establish_connection(nc.db_name)

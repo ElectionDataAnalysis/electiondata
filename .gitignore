@@ -5,6 +5,6 @@ code/local_data
 code/local_logs
 query_create/__pycache__
 code/query_create/__pycache__/__init__.cpython-37.pyc
-code/state/__pycache__/__init__.cpython-37.pyc
+code/states_and_files/__pycache__/__init__.cpython-37.pyc
 code/clean/__pycache__/__init__.cpython-37.pyc
 code/query_create/__pycache__/__init__.cpython-37.pyc
