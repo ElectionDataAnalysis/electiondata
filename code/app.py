@@ -72,22 +72,22 @@ app = Flask(__name__)
 def build():
 # initialize report for logging
     report=[]
-    tables = [['results_pct','utf8'],['absentee','utf16']] # varies by state *** name and encoding of metadata file
+#    tables = [['results_pct','utf8'],['absentee','utf16']] # varies by state *** name and encoding of metadata file
         # note: 'absentee' needs better data cleaning
-    fmeta = {'results_pct':'layout_results_pct.txt','absentee':'sfs_by_hand_layout_absentee.txt'}  # name of metadata file; varies by state ***
-    fdata = {'results_pct':'results_pct_20181106.txt','absentee':'absentee_20181106.csv'} # name of data file, varies by state and election ***
+#    fmeta = {'results_pct':'layout_results_pct.txt','absentee':'sfs_by_hand_layout_absentee.txt'}  # name of metadata file; varies by state ***
+#    fdata = {'results_pct':'results_pct_20181106.txt','absentee':'absentee_20181106.csv'} # name of data file, varies by state and election ***
 # set global log file
     now=datetime.now()
     now_str=now.strftime('%Y%b%d%H%M')
     logfilepath = 'local_logs/hello'+now_str+'.log'
     with open(logfilepath,'a') as sys.stdout:
 
-    # create the state of NC
-        nc = sf.create_state('NC')
+    # instantiate state of NC
+        s = sf.create_state('NC')
+    # instantiate the NC datafiles
+        datafiles = [sf.create_datafile('NC','results_pct_20181106.txt'), sf.create_datafile('NC','absentee_20181106.csv')]
 
-    # *** hard-code arguments for now
-        s = nc
-        # create the db for the state
+    # create the db for the state
         create_db(s)
 
     # connect to the state db
@@ -95,15 +95,13 @@ def build():
         conn = establish_connection(s.db_name)
         cur = conn.cursor()
         
-        for table in tables:
-            t = table[0]   # name of table
-            e = table[1]    # encoding
-            fpath = 'local_data/NC/meta/'+fmeta[t]   # this path is outside the docker container.
+        for d in datafiles:
+            t = d.table_name   # name of table
+            e = d.metafile_encoding
+            fpath = 'local_data/NC/meta/'+d.metafile_name   # this path is outside the docker container.
             check_args(s,fpath,t)   # checking s is redundant
         
         # clean the metadata file
-#            fpath = cl.remove_null_bytes(fpath,'local_data/tmp/')
-            input_to_extract = fpath    # *** diagnostic
             fpath = cl.extract_first_col_defs(fpath,'local_data/tmp/',e)
 
         # create table and commit
@@ -115,29 +113,25 @@ def build():
             conn.commit()
 
     # correct any errors due to foibles of particular state and commit
-        for query in nc.correction_query_list:
+        for query in s.correction_query_list:
             cur.execute(query)
             report.append(query)
             conn.commit()
 
     # load data into tables
-    
-        for table in tables:
-            t = table[0]   # name of table
+        for d in datafiles:
+            t = d.table_name   # name of table
         # clean data file
-            fpath='local_data/NC/data/'+fdata[t]
+            fpath='local_data/NC/data/'+d.file_name
             fpath = cl.remove_null_bytes(fpath,'local_data/tmp/')   # is this redundant with encoding='utf8', errors='ignore'?
         # load data
-            load_query = q.load_data(t, fpath[-3:]) #fpath[-3:] is the 3-letter extension, csv or txt
-            with open(fpath,mode='r',encoding='utf8',errors='ignore') as f:
+            load_query = q.load_data(t, fpath[-3:]) # fpath[-3:] is the 3-letter extension, csv or txt
+            with open(fpath,mode='r',encoding=d.encoding,errors='ignore') as f:
                 cur.copy_expert(load_query,f)
             conn.commit()
             report.append('Data from file '+fpath+' loaded into table '+t)
-
     
-    
-    
-        # close connection
+    # close connection
         if cur:
             cur.close()
         if conn:
@@ -149,10 +143,10 @@ def build():
 def fill():
     
     # create the state of NC *** is it really necessary to do this in each @app.route?
-    nc = sf.create_state('NC')
+    s = sf.create_state('NC')
     
     # connect to the state db
-    conn = establish_connection(nc.db_name)
+    conn = establish_connection(s.db_name)
     cur = conn.cursor()
     
 
@@ -161,7 +155,7 @@ def fill():
     load_query = q.load_data('results_pct','txt')
     # clean bad binary characters out of the file
     
-    with open(path_to_file(nc.path_to_data,'results_pct_20181106.txt'),'rb') as fi:
+    with open(path_to_file(s.path_to_data,'results_pct_20181106.txt'),'rb') as fi:
         data = fi.read()
     with open('local_data/_tmp/clean_'+'results_pct_20181106.txt','wb') as fo:
         fo.write(data.replace(b'\000',b''))
