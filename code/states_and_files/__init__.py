@@ -13,7 +13,7 @@ class State:
         self.correction_query_list=correction_query_list    # fix any known metadata errors
     
     
-def create_instance(abbr):
+def create_state(abbr):
     if abbr == 'NC':
         nc_meta_p=re.compile(r"""
         (?P<field>[^\n\t]+)

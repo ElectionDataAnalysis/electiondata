@@ -83,7 +83,7 @@ def build():
     with open(logfilepath,'a') as sys.stdout:
 
     # create the state of NC
-        nc = sf.create_instance('NC')
+        nc = sf.create_state('NC')
 
     # *** hard-code arguments for now
         s = nc
@@ -149,7 +149,7 @@ def build():
 def fill():
     
     # create the state of NC *** is it really necessary to do this in each @app.route?
-    nc = sf.create_instance('NC')
+    nc = sf.create_state('NC')
     
     # connect to the state db
     conn = establish_connection(nc.db_name)
