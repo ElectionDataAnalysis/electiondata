@@ -8,6 +8,7 @@
 import sys
 from pathlib import Path
 import re
+import clean as cl
 
 
 
@@ -61,14 +62,37 @@ def create_table(table_name,var_def_file,s,enc='utf8'):
         create_query = create_query + ','.join(var_def_list) + ');' +  ' '.join(comment_list)
         return(drop_query,create_query)
         
-def load_data(table_name,ext):
+def old_load_data(table_name,ext):
     if ext == 'txt':
         delimit = " DELIMITER E'\\t' QUOTE '\"' "
     elif ext == 'csv':
         delimit = " DELIMITER ',' "
     q = "COPY "+table_name+" FROM STDIN "+delimit+" CSV HEADER"
-#    q = "COPY "+table_name+" FROM STDIN DELIMITER E'\\t' CSV HEADER"  # E'\\t' is the tab character
     return q
+    
+def load_data(conn,cursor,state,datafile):
+# write raw data to db
+    ext = datafile.file_name.split('.')[-1]    # extension, determines format
+    if ext == 'txt':
+        delimit = " DELIMITER E'\\t' QUOTE '\"' "
+    elif ext == 'csv':
+        delimit = " DELIMITER ',' "
+    q = "COPY "+datafile.table_name+" FROM STDIN "+delimit+" CSV HEADER"
+    clean_file=cl.remove_null_bytes(state.path_to_data+datafile.file_name,'local_data/tmp/')
+    with open(clean_file,mode='r',encoding=datafile.encoding,errors='ignore') as f:
+        cursor.copy_expert(q,f)
+    conn.commit()
+# update values to obey convention
+    fup = []
+    for field in datafile.value_convention.keys():
+        condition = []
+        for value in datafile.value_convention[field].keys():
+            condition.append(" WHEN "+field+" = '"+value+"' THEN '"+datafile.value_convention[field][value]+"' ")
+        fup.append(field + " =  CASE "+   " ".join(condition)+" END ")
+    qu = "UPDATE "+datafile.table_name+" SET "+",".join(fup)
+    cursor.execute(qu)
+    conn.commit()
+    return
 
   
 def clean_meta_file(infile,outdir,s):

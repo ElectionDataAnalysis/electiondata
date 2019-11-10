@@ -9,7 +9,7 @@ class State:
         self.meta_parser=meta_parser
         self.type_map=type_map
         self.db_name=db_name
-        self.path_to_data=path_to_data
+        self.path_to_data=path_to_data      # should end in /
         self.correction_query_list=correction_query_list    # fix any known metadata errors
     
     
@@ -23,7 +23,7 @@ def create_state(abbr):
         \t+(?P<comment>[^\n\t]+)
         \n""",re.VERBOSE)
         nc_type_map = {'number':'INT', 'text':'varchar', 'char':'varchar'}
-        nc_path_to_data = "local_data/NC/data"
+        nc_path_to_data = "local_data/NC/data/"
         nc_correction_query_list = ['ALTER TABLE results_pct ALTER COLUMN precinct SET DATA TYPE varchar(23)']  #metadata says precinct field has at most 12 characters but 'ABSENTEE BY MAIL 71-106' has 13
         return State("NC","North Carolina",nc_meta_p,nc_type_map,"nc",nc_path_to_data,nc_correction_query_list)
     else:
@@ -65,9 +65,9 @@ def create_datafile(state_abbr,file_name):
             value_convention={}         # dictionary of dictionaries, each for a field. Key is the name of the field. For each subdictionary, key is the sourcefile's convention and value is the db convention
             ## create dictionary for contest_name
             value_convention['cong_dist_desc']={}
-        return Datafile(state_abbr,table_name, file_name, encoding, metafile, metafile_encoding, value_convention,source)
-        for n in range(1,14):
-             value_convention['cong_dist_desc']['CONGRESSIONAL DISTRICT '+str(n)]='NC_USC_'+str(n).zfill(2)+'_2018'
+            for n in range(1,14):
+                 value_convention['cong_dist_desc']['CONGRESSIONAL DISTRICT '+str(n)]='NC_USC_'+str(n).zfill(2)+'_2018'
+            return Datafile(state_abbr,table_name, file_name, encoding, metafile, metafile_encoding, value_convention,source)
         else:
             return('Error: state, file_name pair not recognized')
     else:

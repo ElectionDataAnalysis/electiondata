@@ -120,16 +120,8 @@ def build():
 
     # load data into tables
         for d in datafiles:
-            t = d.table_name   # name of table
-        # clean data file
-            fpath='local_data/NC/data/'+d.file_name
-            fpath = cl.remove_null_bytes(fpath,'local_data/tmp/')   # is this redundant with encoding='utf8', errors='ignore'?
-        # load data
-            load_query = q.load_data(t, fpath[-3:]) # fpath[-3:] is the 3-letter extension, csv or txt
-            with open(fpath,mode='r',encoding=d.encoding,errors='ignore') as f:
-                cur.copy_expert(load_query,f)
-            conn.commit()
-            report.append('Data from file '+fpath+' loaded into table '+t)
+            q.load_data(conn,cur,s,d)
+            report.append('Data from file '+d.file_name+' loaded into table '+d.table_name)
     
     # close connection
         if cur:
@@ -152,7 +144,7 @@ def fill():
 
 
     # load the data
-    load_query = q.load_data('results_pct','txt')
+    load_query = q.old_load_data('results_pct','txt')
     # clean bad binary characters out of the file
     
     with open(path_to_file(s.path_to_data,'results_pct_20181106.txt'),'rb') as fi:
