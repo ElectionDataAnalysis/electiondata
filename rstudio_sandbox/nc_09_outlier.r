@@ -36,4 +36,6 @@ plot(x=ballots_and_votes$DEM_pct.x,
                 main="DEM Pct by Ballots vs. by Votes",
                 xlim=c(0,1),
                 ylim=c(0,1))
-
+# restrict to 9th district
+bv09 <- ballots_and_votes %>% filter(cong_dist_desc == "NC_USC_09_2018")
+outlier(bv09$DEM_pct.y)
