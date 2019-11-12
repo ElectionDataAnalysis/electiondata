@@ -136,12 +136,23 @@ def analyze():
 # instantiate state of NC
     s = sf.create_state('NC')
     conn = establish_connection(s.db_name)
+    cur = conn.cursor()
 # hard code table for now *** need to modify build() to track source file, separate build() and load()
     table_name = 'results_pct'
+    contest_field = 'contest_name'
 # loop through contests (contest_name)
+    q_contest = 'SELECT DISTINCT '+contest_field+' FROM '+table_name
+    cur.execute(q_contest)
+    contest=cur.fetchall()
+    for item in contest:
     # for given contest_name, calculate DEM votes and total votes on absentee ballots
+        contest = item[0]
     # calculate DEM percentage
     # look for outlier in DEM percentage
-
+    
+    if cur:
+        cur.close()
     if conn:
         conn.close()
+        
+    return(contest)
