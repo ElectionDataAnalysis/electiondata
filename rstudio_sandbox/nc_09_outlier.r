@@ -2,6 +2,7 @@ install.packages('reshape2')
 library('RPostgreSQL')
 library('reshape2')
 library('dplyr')
+library('lazyeval')
 library('outliers')
 
 drv <- dbDriver("PostgreSQL")
