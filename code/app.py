@@ -133,4 +133,15 @@ def build():
 
 @app.route('/analyze')
 def analyze():
-    pass
+# instantiate state of NC
+    s = sf.create_state('NC')
+    conn = establish_connection(s.db_name)
+# hard code table for now *** need to modify build() to track source file, separate build() and load()
+    table_name = 'results_pct'
+# loop through contests (contest_name)
+    # for given contest_name, calculate DEM votes and total votes on absentee ballots
+    # calculate DEM percentage
+    # look for outlier in DEM percentage
+
+    if conn:
+        conn.close()
