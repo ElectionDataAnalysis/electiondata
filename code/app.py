@@ -131,35 +131,6 @@ def build():
         return("<p>"+"</p><p>  ".join(report))
 
 
-@app.route('/fill')
-def fill():
-    
-    # create the state of NC *** is it really necessary to do this in each @app.route?
-    s = sf.create_state('NC')
-    
-    # connect to the state db
-    conn = establish_connection(s.db_name)
-    cur = conn.cursor()
-    
-
-
-    # load the data
-    load_query = q.old_load_data('results_pct','txt')
-    # clean bad binary characters out of the file
-    
-    with open(path_to_file(s.path_to_data,'results_pct_20181106.txt'),'rb') as fi:
-        data = fi.read()
-    with open('local_data/_tmp/clean_'+'results_pct_20181106.txt','wb') as fo:
-        fo.write(data.replace(b'\000',b''))
-        
-    with open('local_data/_tmp/clean_'+'results_pct_20181106.txt','r') as f:
-        cur.copy_expert(load_query,f)
-        conn.commit()
-
-    # close connection
-    if cur:
-        cur.close()
-    if conn:
-        conn.close()
-    return load_query
-
+@app.route('/analyze')
+def analyze():
+    pass
