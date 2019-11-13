@@ -140,13 +140,44 @@ def analyze():
 # hard code table for now *** need to modify build() to track source file, separate build() and load()
     table_name = 'results_pct'
     contest_field = 'contest_name'
+    county_field = 'county'
+    vote_field = 'absentee_by_mail'
+    party_field = 'choice_party'
 # loop through contests (contest_name)
     q_contest = 'SELECT DISTINCT '+contest_field+' FROM '+table_name
     cur.execute(q_contest)
-    contest=cur.fetchall()
-    for item in contest:
-    # for given contest_name, calculate DEM votes and total votes on absentee ballots
+    a_contest=cur.fetchall()
+    ## diagnostic ***
+    q_diagnostic = "SELECT "+county_field+", sum(absentee_by_mail)   FROM "+table_name+" WHERE contest_name = 'NC_USC_02_2018' AND " +party_field+" ='DEM' GROUP BY "+county_field+" ORDER BY " +county_field
+    cur.execute(q_diagnostic)
+    a_diagnostic=cur.fetchall()
+
+    
+    percent_by_contest_county = {}
+    for item in a_contest[1:]:
+    # for given contest_name, calculate DEM votes and total votes on absentee ballots by county
         contest = item[0]
+        q_DEM = "SELECT "+county_field+", sum(absentee_by_mail)   FROM "+table_name+" WHERE contest_name = '"+contest+"' AND " +party_field+" ='DEM' GROUP BY "+county_field+" ORDER BY " +county_field
+        cur.execute(q_DEM)
+        v_DEM = cur.fetchall()
+        d_DEM = {}
+        for row in v_DEM:
+            d_DEM[row[0]]=row[1]
+        q_total = "SELECT "+county_field+", sum(absentee_by_mail)   FROM "+table_name+" WHERE contest_name = '"+contest+"'  GROUP BY "+county_field+" ORDER BY " +county_field
+        cur.execute(q_total)
+        v_total = cur.fetchall()
+        d_total = {}
+        for row in v_total:
+            d_total[row[0]]=row[1]
+            if row[0] not in d_DEM.keys():       # if there are no dem votes
+                d_DEM[row[0]]=0
+            
+        d_pct = {}
+        for k in d_total.keys():
+            d_pct[k]=d_DEM[k]/d_total[k]
+        percent_by_contest_county[contest]=d_pct
+        
+
     # calculate DEM percentage
     # look for outlier in DEM percentage
     
@@ -155,4 +186,4 @@ def analyze():
     if conn:
         conn.close()
         
-    return(contest)
+    return(str(percent_by_contest_county))
