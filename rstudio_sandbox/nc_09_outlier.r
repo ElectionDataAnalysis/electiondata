@@ -1,4 +1,4 @@
-install.packages('reshape2')
+install.packages('reshape2','outliers')
 library('RPostgreSQL')
 library('reshape2')
 library('dplyr')
@@ -22,6 +22,7 @@ wide_votes <- votes %>% dcast(contest_name + county ~ choice_party,sum)
 votes_party_list <- unique(votes$choice_party)
 wide_votes$total <- rowSums(wide_votes[,c(votes_party_list)])
 wide_votes$DEM_pct <- with(wide_votes,DEM/total)
+v09 <- wide_votes %>% filter(contest_name=="NC_USC_09_2018")
 
 wide_ballots <- ballots %>% dcast(cong_dist_desc + county_desc ~ voter_party_code,sum)
 ballots_party_list <- unique(ballots$voter_party_code)

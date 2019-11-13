@@ -20,3 +20,6 @@ Following tutorial at `https://ropenscilabs.github.io/r-docker-tutorial/`
 ## delete below (temporary workspace)
 
 docker run -e PASSWORD='rstudio_password' --rm -p 8787:8787 -v ~/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/rstudio_sandbox:/home/rstudio/sandbox rocker/verse
+
+
+docker run -e PASSWORD='not.secure' --rm -p 8787:8787 -v ~/gits/results_analysis/rstudio_sandbox:/home/rstudio/sandbox rocker/verse
