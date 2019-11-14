@@ -1,5 +1,13 @@
-#!usr/bin/python
+#!usr/bin/python3
 
+########## next four lines are necessary to install numpy and pandas packages for some reason...
+import os
+os.system("pip install --upgrade pip")
+os.system("pip install numpy")
+os.system("pip install pandas")
+
+import numpy as np
+import pandas as pd
 from flask import Flask
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT # allows db creation, deletion
@@ -7,9 +15,9 @@ import re
 import states_and_files as sf
 from pathlib import Path
 import sys
+# do we need numpy? If not, remove from requirements
 
 from datetime import datetime
-import os
 
 import query_create as q
 import clean as cl
@@ -133,10 +141,12 @@ def build():
 
 @app.route('/analyze')
 def analyze():
+    report=[]
 # instantiate state of NC
     s = sf.create_state('NC')
     conn = establish_connection(s.db_name)
     cur = conn.cursor()
+    
 # hard code table for now *** need to modify build() to track source file, separate build() and load()
     table_name = 'results_pct'
     contest_field = 'contest_name'
@@ -144,14 +154,20 @@ def analyze():
     vote_field = 'absentee_by_mail'
     party_field = 'choice_party'
 # loop through contests (contest_name)
-    q_contest = 'SELECT DISTINCT '+contest_field+' FROM '+table_name
+    q_contest = 'SELECT DISTINCT '+contest_field+' FROM '+table_name+' ORDER BY '+contest_field
     cur.execute(q_contest)
-    a_contest=cur.fetchall()
-    ## diagnostic ***
-    q_diagnostic = "SELECT "+county_field+", sum(absentee_by_mail)   FROM "+table_name+" WHERE contest_name = 'NC_USC_02_2018' AND " +party_field+" ='DEM' GROUP BY "+county_field+" ORDER BY " +county_field
-    cur.execute(q_diagnostic)
-    a_diagnostic=cur.fetchall()
 
+    df=pd.DataFrame(cur.fetchall(),columns=['contest'])
+    
+    report.append(str(df))
+    
+    report.append(str(df.contest))
+    for c in df.ix[1:,'contest']:
+    # for given contest_name, calculate DEM votes and total votes on absentee ballots by county
+        q_abs = "SELECT "+contest_field+", "+county_field+","+party_field+", sum("+vote_field+") FROM "+table_name+"  GROUP BY "+contest_field+", "+county_field+","+party_field+" ORDER BY "+contest_field+", "+county_field+","+party_field
+        cur.execute(q_abs)
+        df_abs_votes = pd.DataFrame(cur.fetchall(),columns=['contest','county','party','votes'])
+        
     
     percent_by_contest_county = {}
     for item in a_contest[1:]:
@@ -186,4 +202,5 @@ def analyze():
     if conn:
         conn.close()
         
-    return(str(percent_by_contest_county))
+    
+    return("<p>"+"</p><p>  ".join(report))
