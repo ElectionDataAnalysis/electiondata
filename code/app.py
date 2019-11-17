@@ -141,7 +141,7 @@ def build():
 
 @app.route('/analyze')
 def analyze():
-    report=[]
+    report=[""]
 # instantiate state of NC
     s = sf.create_state('NC')
     conn = establish_connection(s.db_name)
@@ -153,54 +153,47 @@ def analyze():
     county_field = 'county'
     vote_field = 'absentee_by_mail'
     party_field = 'choice_party'
-# loop through contests (contest_name)
-    q_contest = 'SELECT DISTINCT '+contest_field+' FROM '+table_name+' ORDER BY '+contest_field
-    cur.execute(q_contest)
+    tolerance = 2  ## number of standard deviations from the mean that we're calling outliers
+    
+    
+    q_abs = "SELECT "+contest_field+", "+county_field+","+party_field+", sum("+vote_field+") FROM "+table_name+"  GROUP BY "+contest_field+", "+county_field+","+party_field+" ORDER BY "+contest_field+", "+county_field+","+party_field
+    cur.execute(q_abs)
+    votes = pd.DataFrame(cur.fetchall(),columns=['contest','county','party','votes'])
+    contests = votes['contest'].unique().tolist()     # list of contests
 
-    df=pd.DataFrame(cur.fetchall(),columns=['contest'])
-    
-    report.append(str(df))
-    
-    report.append(str(df.contest))
-    for c in df.ix[1:,'contest']:
-    # for given contest_name, calculate DEM votes and total votes on absentee ballots by county
-        q_abs = "SELECT "+contest_field+", "+county_field+","+party_field+", sum("+vote_field+") FROM "+table_name+"  GROUP BY "+contest_field+", "+county_field+","+party_field+" ORDER BY "+contest_field+", "+county_field+","+party_field
-        cur.execute(q_abs)
-        df_abs_votes = pd.DataFrame(cur.fetchall(),columns=['contest','county','party','votes'])
-        
-    
-    percent_by_contest_county = {}
-    for item in a_contest[1:]:
-    # for given contest_name, calculate DEM votes and total votes on absentee ballots by county
-        contest = item[0]
-        q_DEM = "SELECT "+county_field+", sum(absentee_by_mail)   FROM "+table_name+" WHERE contest_name = '"+contest+"' AND " +party_field+" ='DEM' GROUP BY "+county_field+" ORDER BY " +county_field
-        cur.execute(q_DEM)
-        v_DEM = cur.fetchall()
-        d_DEM = {}
-        for row in v_DEM:
-            d_DEM[row[0]]=row[1]
-        q_total = "SELECT "+county_field+", sum(absentee_by_mail)   FROM "+table_name+" WHERE contest_name = '"+contest+"'  GROUP BY "+county_field+" ORDER BY " +county_field
-        cur.execute(q_total)
-        v_total = cur.fetchall()
-        d_total = {}
-        for row in v_total:
-            d_total[row[0]]=row[1]
-            if row[0] not in d_DEM.keys():       # if there are no dem votes
-                d_DEM[row[0]]=0
-            
-        d_pct = {}
-        for k in d_total.keys():
-            d_pct[k]=d_DEM[k]/d_total[k]
-        percent_by_contest_county[contest]=d_pct
-        
+# loop through contests
 
-    # calculate DEM percentage
-    # look for outlier in DEM percentage
+    for c in contests:
+    # for given contest_name, calculate DEM votes and total votes on absentee ballots by county
+        for c in contests:
+            if c:
+                report.append(c)
+                c_votes=votes[votes.contest==c]
+                if 'DEM' in c_votes['party'].values:
+                    table = pd.pivot_table(c_votes, values='votes', index=['county'], columns=['party'], aggfunc=np.sum).fillna(0)
+                    table['total']= table.DEM + table.REP #  + table.CST + table.LIB + table.GRE *** how to sum NaN? How to automate this list?
+                    table['pct_DEM'] = table.DEM/table.total
+                # find outliers
+                    mean = table['pct_DEM'].mean()
+                    std = table['pct_DEM'].std()
+                    outliers = table[np.absolute(table.pct_DEM-mean)> tolerance*std]
+                    report.append(str(table['pct_DEM']))
+                    if outliers.empty:
+                        report.append("No outliers more than "+str(tolerance)+" standard deviations from mean")
+                    else:
+                        report.append("Outliers are:"+str(outliers))
+                else:
+                    report.append("No DEM votes in contest "+c)
+    
+        # look for outlier in DEM percentage
     
     if cur:
         cur.close()
     if conn:
         conn.close()
-        
+
+    print(a)    # diagnostic, functions as break ***
+
     
     return("<p>"+"</p><p>  ".join(report))
+
