@@ -165,34 +165,32 @@ def analyze():
 
     for c in contests:
     # for given contest_name, calculate DEM votes and total votes on absentee ballots by county
-        for c in contests:
-            if c:
-                report.append(c)
-                c_votes=votes[votes.contest==c]
-                if 'DEM' in c_votes['party'].values:
-                    table = pd.pivot_table(c_votes, values='votes', index=['county'], columns=['party'], aggfunc=np.sum).fillna(0)
-                    table['total']= table.DEM + table.REP #  + table.CST + table.LIB + table.GRE *** how to sum NaN? How to automate this list?
-                    table['pct_DEM'] = table.DEM/table.total
-                # find outliers
-                    mean = table['pct_DEM'].mean()
-                    std = table['pct_DEM'].std()
-                    outliers = table[np.absolute(table.pct_DEM-mean)> tolerance*std]
-                    report.append(str(table['pct_DEM']))
-                    if outliers.empty:
-                        report.append("No outliers more than "+str(tolerance)+" standard deviations from mean")
-                    else:
-                        report.append("Outliers are:"+str(outliers))
+        if c:
+            report.append(c)
+            c_votes=votes[votes.contest==c]
+            if 'DEM' in c_votes['party'].values:
+                table = pd.pivot_table(c_votes, values='votes', index=['county'], columns=['party'], aggfunc=np.sum).fillna(0)
+                table['total']= table.DEM + table.REP #  + table.CST + table.LIB + table.GRE *** how to sum NaN? How to automate this list?
+                table['pct_DEM'] = table.DEM/table.total
+            # find outliers
+                mean = table['pct_DEM'].mean()
+                std = table['pct_DEM'].std()
+                outliers = table[np.absolute(table.pct_DEM-mean)> tolerance*std]
+                # report.append(str(table['pct_DEM']))
+                if outliers.empty:
+                    report.append("No outliers more than "+str(tolerance)+" standard deviations from mean")
                 else:
-                    report.append("No DEM votes in contest "+c)
-    
-        # look for outlier in DEM percentage
+                    report.append("Outliers are:"+str(outliers))
+            else:
+                report.append("No DEM votes in contest "+c)
+
+    # look for outlier in DEM percentage
     
     if cur:
         cur.close()
     if conn:
         conn.close()
 
-    print(a)    # diagnostic, functions as break ***
 
     
     return("<p>"+"</p><p>  ".join(report))
