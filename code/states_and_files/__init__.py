@@ -13,21 +13,21 @@ class State:
         self.correction_query_list=correction_query_list    # fix any known metadata errors
     
     
-def create_state(abbr):
+def create_state(abbr,path_to_parent_dir):
+    if path_to_parent_dir[-1] != '/':
+        path_to_parent_dir += '/'
+    d = {} # dictionary to hold attributes
+    for attr in ['name','schema_name','parser_string']:     # strings
+        with open(path_to_parent_dir+abbr+'/external/'+attr+'.txt') as f:
+            d[attr]=f.readline().strip()
+    for attr in ['type_map']:     # python objects
+        with open(path_to_parent_dir+abbr+'/external/'+attr+'.txt') as f:
+            d[attr]=eval(f.readline().strip())
+    path_to_data = path_to_parent_dir+abbr+'/data/'
+    meta_p=re.compile(d['parser_string'])
     if abbr == 'NC':
-        name='North Carolina'
-        schema_name='nc'
-        nc_meta_p=re.compile(r"""
-        (?P<field>[^\n\t]+)
-        \t+
-        (?P<type>[A-z]+)
-        (?P<number>\(\d+\))?
-        \t+(?P<comment>[^\n\t]+)
-        \n""",re.VERBOSE)
-        nc_type_map = {'number':'INT', 'text':'varchar', 'char':'varchar'}
-        nc_path_to_data = "local_data/NC/data/"
-        nc_correction_query_list = ['ALTER TABLE '+schema_name+'.results_pct ALTER COLUMN precinct SET DATA TYPE varchar(23)']  #metadata says precinct field has at most 12 characters but 'ABSENTEE BY MAIL 71-106' has 13
-        return State(abbr,name,nc_meta_p,nc_type_map,schema_name,nc_path_to_data,nc_correction_query_list)
+        nc_correction_query_list = ['ALTER TABLE '+d['schema_name']+'.results_pct ALTER COLUMN precinct SET DATA TYPE varchar(23)']  #metadata says precinct field has at most 12 characters but 'ABSENTEE BY MAIL 71-106' has 13
+        return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_data,nc_correction_query_list)
     else:
         return('Error: "'+abbr+'" is not a state abbreviation recognized by the code.')
         sys.exit()

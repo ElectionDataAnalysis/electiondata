@@ -6,9 +6,8 @@ CREATE SCHEMA nc_cdf;
 
 DROP TABLE IF EXISTS nc_cdf.CountItemStatus;
 CREATE TABLE nc_cdf.CountItemStatus (
-id SERIAL,
-text varchar(13),
-CONSTRAINT countitemstatus_pk PRIMARY KEY(id)
+id SERIAL PRIMARY KEY,
+text varchar(13)
 )
 ;
 
@@ -16,9 +15,8 @@ COPY nc_cdf.CountItemStatus (text) FROM '/container_root_dir/SQL/enumerations/Co
 
 DROP TABLE IF EXISTS nc_cdf.ReportingUnitType;
 CREATE TABLE nc_cdf.ReportingUnitType (
-id SERIAL,
-text varchar(20),
-CONSTRAINT ReportingUnitType_pk PRIMARY KEY(id)
+id SERIAL PRIMARY KEY,
+text varchar(20)
 )
 ;
 
@@ -26,17 +24,17 @@ COPY nc_cdf.ReportingUnitType (text) FROM '/container_root_dir/SQL/enumerations/
 
 DROP TABLE IF EXISTS nc_cdf.ReportingUnit;
 CREATE TABLE nc_cdf.ReportingUnit (
-id SERIAL,
-CONSTRAINT ReportingUnit_pk PRIMARY KEY (id)
+id SERIAL PRIMARY KEY,
+reportingunittype_id REFERENCES reportingunittype(id),
+countitemstatus_id REFERENCES countitemstatus(id)
 )
 ;
 
 DROP TABLE IF EXISTS nc_cdf.Party;
 CREATE TABLE nc_cdf.Party (
-id SERIAL,
+id SERIAL PRIMARY KEY,
 abbreviation varchar(6),
-name varchar(50),
-CONSTRAINT Party_pk PRIMARY KEY (id)
+name varchar(50)
 )
 ;
 
@@ -45,7 +43,6 @@ INSERT INTO nc_cdf.Party (abbreviation) SELECT DISTINCT BTRIM(choice_party) FROM
 
 DROP TABLE IF EXISTS nc_cdf.Contest;
 CREATE TABLE nc_cdf.Contest (
-id SERIAL,
-CONSTRAINT Contest_pk PRIMARY KEY (id)
+id SERIAL PRIMARY KEY,
 )
 ;

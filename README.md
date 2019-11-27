@@ -54,3 +54,30 @@ For example, to get a bash command line inside the postgres container image:
 
 ## docs folder
 The `docs` folder has documentation for local set-up of programs and packages that are likely to be useful for dev.
+
+# Code components
+
+## Docker files
+
+### `code/requirements.txt`
+Specifies necessary python packages that are not part of the standard python distribution
+
+### `code/docker-compose.yml`
+Defines two services: `db` (postgres to store data) and `web` (serves up web content). 
+
+### `code/Dockerfile`
+- Imports python and packages listed in `requirements.txt`
+- specifies the python file (`app.py`) defining the content served by Flask to the web browser
+- starts the web server via Flask
+
+
+
+## `code/local_data` folder
+Contains one subfolder for each state, each containing three folders:
+* `data` containing data files 
+* `meta` containing metadata files for the `data` files
+* `external` containing necessary state-specific information from sources other than the data files
+
+Also contains a subfolder `tmp` to hold temporary cleaned files for upload to db
+
+

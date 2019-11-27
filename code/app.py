@@ -91,7 +91,7 @@ def build():
     with open(logfilepath,'a') as sys.stdout:
 
     # instantiate state of NC
-        s = sf.create_state('NC')
+        s = sf.create_state('NC','local_data/')
     # instantiate the NC datafiles
         datafiles = [sf.create_datafile('NC','results_pct_20181106.txt'), sf.create_datafile('NC','absentee_20181106.csv')]
 
@@ -143,7 +143,7 @@ def build():
 def analyze():
     report=[""]
 # instantiate state of NC
-    s = sf.create_state('NC') # do we need this?
+    s = sf.create_state('NC','local_data/') # do we need this?
     conn = establish_connection()
     cur = conn.cursor()
     
