@@ -3,8 +3,8 @@
 ########## next four lines are necessary to install numpy and pandas packages for some reason...
 import os
 os.system("pip install --upgrade pip")
-os.system("pip install numpy")
 os.system("pip install pandas")
+os.system("pip install numpy")
 
 import numpy as np
 import pandas as pd

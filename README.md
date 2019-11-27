@@ -43,5 +43,14 @@ In a second Terminal window, navigate to the `code` directory. Run `docker-compo
     Removing network code_default
     $`
 
+## Getting to the container command line
+For example, to get a bash command line inside the postgres container image:
+    `MacBook-Pro-3:code Steph-Airbook$ docker container ls
+    CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+    21ba1253b28c        postgres:11         "docker-entrypoint.s…"   14 seconds ago      Up 13 seconds       0.0.0.0:5432->5432/tcp   code_db_1
+    cef03ffb9daa        code_web            "flask run"              14 seconds ago      Up 13 seconds       0.0.0.0:5000->5000/tcp   code_web_1
+    MacBook-Pro-3:code Steph-Airbook$ docker exec -i -t 21ba1253b28c /bin/bash
+`
+
 ## docs folder
 The `docs` folder has documentation for local set-up of programs and packages that are likely to be useful for dev.
