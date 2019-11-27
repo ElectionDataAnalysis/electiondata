@@ -1,6 +1,8 @@
 #!usr/bin/python3
 import re
 import sys
+import os.path
+from os import path
 
 class State:
     def __init__(self,abbr,name,meta_parser,type_map,schema_name,path_to_data,correction_query_list):
@@ -14,23 +16,32 @@ class State:
     
     
 def create_state(abbr,path_to_parent_dir):
+    string_attributes = ['name','schema_name','parser_string']
+    object_attributes = ['type_map']
+    if not os.path.isdir(path_to_parent_dir:    ### *** need criterion to see if path is good and all files exist
+        print('Error: No directory '+path_to_parent_dir)
+        return('Error: No directory '+path_to_parent_dir)
+        sys.exit()
+    for attr in string_attributes + object_attributes:
+        if not os.path.isfile(path_to_parent_dir+abbr+'/external/'+attr+'.txt'):
+            print('Error: No file '+path_to_parent_dir+abbr+'/external/'+attr+'.txt')
+            return('Error: No file '+path_to_parent_dir+abbr+'/external/'+attr+'.txt')
+            sys.exit()
+    
     if path_to_parent_dir[-1] != '/':
         path_to_parent_dir += '/'
     d = {} # dictionary to hold attributes
-    for attr in ['name','schema_name','parser_string']:     # strings
+    for attr in string_attributes:     # strings
         with open(path_to_parent_dir+abbr+'/external/'+attr+'.txt') as f:
             d[attr]=f.readline().strip()
-    for attr in ['type_map']:     # python objects
+    for attr in object_attributes:     # python objects
         with open(path_to_parent_dir+abbr+'/external/'+attr+'.txt') as f:
             d[attr]=eval(f.readline().strip())
     path_to_data = path_to_parent_dir+abbr+'/data/'
     meta_p=re.compile(d['parser_string'])
     if abbr == 'NC':
         nc_correction_query_list = ['ALTER TABLE '+d['schema_name']+'.results_pct ALTER COLUMN precinct SET DATA TYPE varchar(23)']  #metadata says precinct field has at most 12 characters but 'ABSENTEE BY MAIL 71-106' has 13
-        return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_data,nc_correction_query_list)
-    else:
-        return('Error: "'+abbr+'" is not a state abbreviation recognized by the code.')
-        sys.exit()
+    return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_data,nc_correction_query_list)
 
 
 class Datafile:
