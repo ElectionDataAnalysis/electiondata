@@ -19,6 +19,7 @@ CONSTRAINT ReportingUnitType_pk PRIMARY KEY(id)
 )
 ;
 
+COPY ReportingUnitType (text) FROM '/container_root_dir/SQL/enumerations/ReportingUnitType.txt';
 
 
 
