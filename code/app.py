@@ -93,7 +93,7 @@ def build():
     # instantiate state of NC
         s = sf.create_state('NC','local_data/')
     # instantiate the NC datafiles
-        datafiles = [sf.create_datafile('NC','results_pct_20181106.txt'), sf.create_datafile('NC','absentee_20181106.csv')]
+        datafiles = [sf.create_datafile(s,'results_pct_20181106.txt'), sf.create_datafile(s,'absentee_20181106.csv')]
 
     # create the schema for the state
         create_schema(s)
@@ -120,14 +120,13 @@ def build():
             report.append(create_query)
             conn.commit()
 
-    # correct any errors due to foibles of particular state and commit
-        for query in s.correction_query_list:
-            cur.execute(query)
-            report.append(query)
-            conn.commit()
+        # correct any errors due to foibles of particular datafile and commit
+            for query in d.correction_query_list:
+                cur.execute(query)
+                report.append(query)
+                conn.commit()
 
     # load data into tables
-        for d in datafiles:
             q.load_data(conn,cur,s,d)
             report.append('Data from file '+d.file_name+' loaded into table '+s.schema_name+'.'+d.table_name)
     
