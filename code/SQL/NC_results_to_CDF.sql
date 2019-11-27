@@ -1,34 +1,38 @@
 -- Postgresql 11
 --
+ 
+DROP SCHEMA IF EXISTS nc_cdf CASCADE;
+CREATE SCHEMA nc_cdf;
 
-DROP TABLE IF EXISTS CountItemStatus;
-CREATE TABLE CountItemStatus (
+DROP TABLE IF EXISTS nc_cdf.CountItemStatus;
+CREATE TABLE nc_cdf.CountItemStatus (
 id SERIAL,
 text varchar(13),
 CONSTRAINT countitemstatus_pk PRIMARY KEY(id)
 )
 ;
 
-COPY CountItemStatus (text) FROM '/container_root_dir/SQL/enumerations/CountItemStatus.txt';
+COPY nc_cdf.CountItemStatus (text) FROM '/container_root_dir/SQL/enumerations/CountItemStatus.txt';
 
-DROP TABLE IF EXISTS ReportingUnitType;
-CREATE TABLE ReportingUnitType (
+DROP TABLE IF EXISTS nc_cdf.ReportingUnitType;
+CREATE TABLE nc_cdf.ReportingUnitType (
 id SERIAL,
 text varchar(20),
 CONSTRAINT ReportingUnitType_pk PRIMARY KEY(id)
 )
 ;
 
-COPY ReportingUnitType (text) FROM '/container_root_dir/SQL/enumerations/ReportingUnitType.txt';
+COPY nc_cdf.ReportingUnitType (text) FROM '/container_root_dir/SQL/enumerations/ReportingUnitType.txt';
 
-DROP TABLE IF EXISTS ReportingUnit;
-CREATE TABLE ReportingUnit (
-
+DROP TABLE IF EXISTS nc_cdf.ReportingUnit;
+CREATE TABLE nc_cdf.ReportingUnit (
+id SERIAL,
+CONSTRAINT ReportingUnit_pk PRIMARY KEY (id)
 )
 ;
 
-DROP TABLE IF EXISTS Party;
-CREATE TABLE Party (
+DROP TABLE IF EXISTS nc_cdf.Party;
+CREATE TABLE nc_cdf.Party (
 id SERIAL,
 abbreviation varchar(6),
 name varchar(50),
@@ -37,4 +41,11 @@ CONSTRAINT Party_pk PRIMARY KEY (id)
 ;
 
 -- BTRIM removes both leading and trailing spaces from a string
-INSERT INTO Party (abbreviation) SELECT DISTINCT BTRIM(choice_party) FROM results_pct WHERE choice_party IS NOT NULL AND BTRIM(results_pct.choice_party) <> '';
+INSERT INTO nc_cdf.Party (abbreviation) SELECT DISTINCT BTRIM(choice_party) FROM nc.results_pct WHERE choice_party IS NOT NULL AND BTRIM(choice_party) <> '';
+
+DROP TABLE IF EXISTS nc_cdf.Contest;
+CREATE TABLE nc_cdf.Contest (
+id SERIAL,
+CONSTRAINT Contest_pk PRIMARY KEY (id)
+)
+;
