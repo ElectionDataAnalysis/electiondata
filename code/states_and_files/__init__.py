@@ -5,20 +5,21 @@ import os.path
 from os import path
 
 class State:
-    def __init__(self,abbr,name,fips,meta_parser,type_map,schema_name,path_to_data,main_reporting_unit_type):
+    def __init__(self,abbr,name,meta_parser,type_map,schema_name,path_to_data,main_reporting_unit_type,reporting_units,elections):
         self.abbr = abbr
         self.name = name
-        self.name = fips
         self.meta_parser=meta_parser
         self.type_map=type_map
         self.schema_name=schema_name
         self.path_to_data=path_to_data      # should end in /
-        self.main_reporting_unit_type=main_reporting_unit_type  # dictionary, with fips codes
+        self.main_reporting_unit_type=main_reporting_unit_type
+        self.reporting_units=reporting_units  # dictionary, with external codes
+        self.elections=elections
 
     
 def create_state(abbr,path_to_parent_dir):
-    string_attributes = ['name','schema_name','parser_string','fips','main_reporting_unit_type']
-    object_attributes = ['type_map','main_reporting_units']
+    string_attributes = ['name','schema_name','parser_string','main_reporting_unit_type']
+    object_attributes = ['type_map','reporting_units','elections']    # what consistency checks do we need? E.g., should main reporting unit names be checked to be consistent with state name?
     if not os.path.isdir(path_to_parent_dir):
         print('Error: No directory '+path_to_parent_dir)
         return('Error: No directory '+path_to_parent_dir)
@@ -40,7 +41,7 @@ def create_state(abbr,path_to_parent_dir):
             d[attr]=eval(f.readline().strip())
     path_to_data = path_to_parent_dir+abbr+'/data/'
     meta_p=re.compile(d['parser_string'])
-    return State(abbr,d['name'],d['fips'],meta_p,d['type_map'],d['schema_name'],path_to_data,d['main_reporting_units'])
+    return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_data,d['main_reporting_unit_type'],d['reporting_units'])
 
 
 class Datafile:
