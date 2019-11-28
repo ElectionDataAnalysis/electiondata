@@ -80,4 +80,5 @@ Contains one subfolder for each state, each containing three folders:
 
 Also contains a subfolder `tmp` to hold temporary cleaned files for upload to db
 
+## Naming conventions
 

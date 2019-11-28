@@ -41,7 +41,7 @@ def create_state(abbr,path_to_parent_dir):
             d[attr]=eval(f.readline().strip())
     path_to_data = path_to_parent_dir+abbr+'/data/'
     meta_p=re.compile(d['parser_string'])
-    return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_data,d['main_reporting_unit_type'],d['reporting_units'])
+    return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_data,d['main_reporting_unit_type'],d['reporting_units'],d['elections'])
 
 
 class Datafile:
