@@ -5,9 +5,10 @@ import os.path
 from os import path
 
 class State:
-    def __init__(self,abbr,name,meta_parser,type_map,schema_name,path_to_data):
+    def __init__(self,abbr,name,fips,meta_parser,type_map,schema_name,path_to_data):
         self.abbr = abbr
         self.name = name
+        self.name = fips
         self.meta_parser=meta_parser
         self.type_map=type_map
         self.schema_name=schema_name
@@ -15,7 +16,7 @@ class State:
     
     
 def create_state(abbr,path_to_parent_dir):
-    string_attributes = ['name','schema_name','parser_string']
+    string_attributes = ['name','schema_name','parser_string','fips']
     object_attributes = ['type_map']
     if not os.path.isdir(path_to_parent_dir):
         print('Error: No directory '+path_to_parent_dir)
@@ -38,7 +39,7 @@ def create_state(abbr,path_to_parent_dir):
             d[attr]=eval(f.readline().strip())
     path_to_data = path_to_parent_dir+abbr+'/data/'
     meta_p=re.compile(d['parser_string'])
-    return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_data)
+    return State(abbr,d['name'],d['fips'],meta_p,d['type_map'],d['schema_name'],path_to_data)
 
 
 class Datafile:
@@ -54,7 +55,6 @@ class Datafile:
         self.correction_query_list=correction_query_list    # fix any known metadata errors
 
 
-#         correction_query_list = ['ALTER TABLE '+d['schema_name']+'.results_pct ALTER COLUMN precinct SET DATA TYPE varchar(23)']  #metadata says precinct field has at most 12 characters but 'ABSENTEE BY MAIL 71-106' has 13
 
 def create_datafile(s,file_name):
     if s.abbr=='NC':
@@ -89,3 +89,5 @@ def create_datafile(s,file_name):
             return('Error: state, file_name pair not recognized')
     else:
         return('Error: state not recognized')
+
+
