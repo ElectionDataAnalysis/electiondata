@@ -1,0 +1,7 @@
+general
+partisan-primary-closed
+partisan-primary-open
+primary
+runoff
+special
+other

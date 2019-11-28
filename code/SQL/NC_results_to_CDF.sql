@@ -41,6 +41,26 @@ name varchar(50)
 -- BTRIM removes both leading and trailing spaces from a string
 INSERT INTO nc_cdf.Party (abbreviation) SELECT DISTINCT BTRIM(choice_party) FROM nc.results_pct WHERE choice_party IS NOT NULL AND BTRIM(choice_party) <> '';
 
+DROP TABLE IF EXISTS nc_cdf.ElectionType;
+CREATE TABLE nc_cdf.ElectionType (
+id SERIAL PRIMARY KEY,
+text varchar(20)
+)
+;
+COPY nc_cdf.ReportingUnitType (text) FROM '/container_root_dir/SQL/enumerations/ElectionType.txt';
+
+
+DROP TABLE IF EXISTS nc_cdf.Election;
+CREATE TABLE nc_cdf.Election (
+id SERIAL PRIMARY KEY,
+name varchar(50),
+enddate DATE,
+startdate DATE,
+electiontype_id REFERENCES electiontype(id),
+OtherType varchar(20)
+)
+;
+
 DROP TABLE IF EXISTS nc_cdf.Contest;
 CREATE TABLE nc_cdf.Contest (
 id SERIAL PRIMARY KEY,
