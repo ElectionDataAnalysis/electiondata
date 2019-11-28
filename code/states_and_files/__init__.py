@@ -5,7 +5,7 @@ import os.path
 from os import path
 
 class State:
-    def __init__(self,abbr,name,fips,meta_parser,type_map,schema_name,path_to_data):
+    def __init__(self,abbr,name,fips,meta_parser,type_map,schema_name,path_to_data,main_reporting_unit_type):
         self.abbr = abbr
         self.name = name
         self.name = fips
@@ -13,11 +13,12 @@ class State:
         self.type_map=type_map
         self.schema_name=schema_name
         self.path_to_data=path_to_data      # should end in /
-    
+        self.main_reporting_unit_type=main_reporting_unit_type  # dictionary, with fips codes
+
     
 def create_state(abbr,path_to_parent_dir):
-    string_attributes = ['name','schema_name','parser_string','fips']
-    object_attributes = ['type_map']
+    string_attributes = ['name','schema_name','parser_string','fips','main_reporting_unit_type']
+    object_attributes = ['type_map','main_reporting_units']
     if not os.path.isdir(path_to_parent_dir):
         print('Error: No directory '+path_to_parent_dir)
         return('Error: No directory '+path_to_parent_dir)
@@ -39,7 +40,7 @@ def create_state(abbr,path_to_parent_dir):
             d[attr]=eval(f.readline().strip())
     path_to_data = path_to_parent_dir+abbr+'/data/'
     meta_p=re.compile(d['parser_string'])
-    return State(abbr,d['name'],d['fips'],meta_p,d['type_map'],d['schema_name'],path_to_data)
+    return State(abbr,d['name'],d['fips'],meta_p,d['type_map'],d['schema_name'],path_to_data,d['main_reporting_units'])
 
 
 class Datafile:
