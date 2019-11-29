@@ -1,7 +1,10 @@
 local/
 .DS_Store
 code/__pycache__
-code/local_data
+code/local_data/NC/data
+code/local_data/NC/meta
+code/local_data/FL/data
+code/local_data/FL/meta
 code/local_logs
 query_create/__pycache__
 code/query_create/__pycache__/__init__.cpython-37.pyc

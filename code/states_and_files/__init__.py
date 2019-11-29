@@ -92,4 +92,3 @@ def create_datafile(s,file_name):
     else:
         return('Error: state not recognized')
 
-
