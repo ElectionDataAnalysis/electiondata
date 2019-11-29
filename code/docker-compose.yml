@@ -10,6 +10,7 @@ services:
       - 5432:5432
     volumes:
       - ./local_data:/data
+      - .:/container_root_dir
 
   web:
     build: .

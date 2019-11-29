@@ -39,8 +39,8 @@ def comment_q(table,field,comment):
     return c
     
 def create_table(table_name,var_def_file,s,enc='utf8'):
-        drop_query = 'DROP TABLE IF EXISTS '+table_name+';'
-        create_query =  'CREATE TABLE '+table_name+' ('
+        drop_query = 'DROP TABLE IF EXISTS '+s.schema_name+'.'+table_name+';'
+        create_query =  'CREATE TABLE '+s.schema_name+'.'+table_name+' ('
         with open(var_def_file,'r',encoding=enc) as f:
             var_def_list=[]
             comment_list=[]
@@ -55,7 +55,7 @@ def create_table(table_name,var_def_file,s,enc='utf8'):
                         [field,type,comment] = ['parse_error','parse_error','parse_error']
                     try:
                         if len(comment):
-                            comment_list.append(comment_q(table_name,field,comment))
+                            comment_list.append(comment_q(s.schema_name+'.'+table_name,field,comment))
                         var_def_list.append(var_def(field,type))
                     except:
                     	print("create_table: no comment found in "+";".join(comment,field,type))
@@ -77,7 +77,7 @@ def load_data(conn,cursor,state,datafile):
         delimit = " DELIMITER E'\\t' QUOTE '\"' "
     elif ext == 'csv':
         delimit = " DELIMITER ',' "
-    q = "COPY "+datafile.table_name+" FROM STDIN "+delimit+" CSV HEADER"
+    q = "COPY "+state.schema_name+"."+datafile.table_name+" FROM STDIN "+delimit+" CSV HEADER"
     clean_file=cl.remove_null_bytes(state.path_to_data+datafile.file_name,'local_data/tmp/')
     with open(clean_file,mode='r',encoding=datafile.encoding,errors='ignore') as f:
         cursor.copy_expert(q,f)
@@ -89,7 +89,7 @@ def load_data(conn,cursor,state,datafile):
         for value in datafile.value_convention[field].keys():
             condition.append(" WHEN "+field+" = '"+value+"' THEN '"+datafile.value_convention[field][value]+"' ")
         fup.append(field + " =  CASE "+   " ".join(condition)+" END ")
-    qu = "UPDATE "+datafile.table_name+" SET "+",".join(fup)
+    qu = "UPDATE "+state.schema_name+"."+datafile.table_name+" SET "+",".join(fup)
     cursor.execute(qu)
     conn.commit()
     return

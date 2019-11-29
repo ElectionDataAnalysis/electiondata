@@ -3,8 +3,8 @@
 ########## next four lines are necessary to install numpy and pandas packages for some reason...
 import os
 os.system("pip install --upgrade pip")
-os.system("pip install numpy")
 os.system("pip install pandas")
+os.system("pip install numpy")
 
 import numpy as np
 import pandas as pd
@@ -55,17 +55,17 @@ def check_args(s,f,t):
     # *** check t for whitespace
     return (s,f,t)
 
-def create_db(s):
-    # connect and create db for the state
+def create_schema(s):
+    # connect and create schema for the state
     conn = establish_connection()
     conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     cur = conn.cursor()
     
-    query = 'DROP DATABASE IF EXISTS '+s.db_name
+    query = 'DROP SCHEMA IF EXISTS '+s.schema_name+' CASCADE'
     cur.execute(query)
 
     
-    query = 'CREATE DATABASE '+s.db_name
+    query = 'CREATE SCHEMA '+s.schema_name
     cur.execute(query)
     if cur:
         cur.close()
@@ -91,16 +91,16 @@ def build():
     with open(logfilepath,'a') as sys.stdout:
 
     # instantiate state of NC
-        s = sf.create_state('NC')
+        s = sf.create_state('NC','local_data/')
     # instantiate the NC datafiles
-        datafiles = [sf.create_datafile('NC','results_pct_20181106.txt'), sf.create_datafile('NC','absentee_20181106.csv')]
+        datafiles = [sf.create_datafile(s,'results_pct_20181106.txt'), sf.create_datafile(s,'absentee_20181106.csv')]
 
-    # create the db for the state
-        create_db(s)
+    # create the schema for the state
+        create_schema(s)
 
-    # connect to the state db
-        report.append('Connect to database '+s.db_name)
-        conn = establish_connection(s.db_name)
+    # connect to the state schema
+        report.append('Connect to database')
+        conn = establish_connection()
         cur = conn.cursor()
         
         for d in datafiles:
@@ -120,16 +120,15 @@ def build():
             report.append(create_query)
             conn.commit()
 
-    # correct any errors due to foibles of particular state and commit
-        for query in s.correction_query_list:
-            cur.execute(query)
-            report.append(query)
-            conn.commit()
+        # correct any errors due to foibles of particular datafile and commit
+            for query in d.correction_query_list:
+                cur.execute(query)
+                report.append(query)
+                conn.commit()
 
     # load data into tables
-        for d in datafiles:
             q.load_data(conn,cur,s,d)
-            report.append('Data from file '+d.file_name+' loaded into table '+d.table_name)
+            report.append('Data from file '+d.file_name+' loaded into table '+s.schema_name+'.'+d.table_name)
     
     # close connection
         if cur:
@@ -143,8 +142,8 @@ def build():
 def analyze():
     report=[""]
 # instantiate state of NC
-    s = sf.create_state('NC')
-    conn = establish_connection(s.db_name)
+    s = sf.create_state('NC','local_data/') # do we need this?
+    conn = establish_connection()
     cur = conn.cursor()
     
 # hard code table for now *** need to modify build() to track source file, separate build() and load()
