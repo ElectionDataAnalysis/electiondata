@@ -47,31 +47,55 @@ def create_state(abbr,path_to_parent_dir):
 
 def context_to_cdf(state, conn, cur,report):
     '''Loads information from context folder for the state into the common data format'''
-    ids = []
+# reporting units
+    report.append('Entering ReportingUnit information')
     cur.execute("SELECT id FROM  cdf.identifiertype WHERE text = 'other'")
-    idtype_other_id = cur.fetchone()[0]
-    report.append('other id is '+str(idtype_other_id))
+    otherid_id = cur.fetchone()[0]
     d = state.reporting_units
     for k in d.keys():
-        # create corresponding gp_unit
-        try:
-            cur.execute('INSERT INTO cdf.gpunit (name) VALUES (%s) ON CONFLICT (name) DO UPDATE SET name= %s RETURNING id',[k,k])   # *** OK as long as there aren't too many of these. Otherwise can bloat db
-            gpunit_id=cur.fetchone()[0]
-        except:
-            report.append('query failed for key '+k)
+    # create corresponding gp_unit
+        cur.execute('INSERT INTO cdf.gpunit (name) VALUES (%s) ON CONFLICT (name) DO UPDATE SET name= %s RETURNING id',[k,k])   # *** OK as long as there aren't too many of these. Otherwise can bloat db
+        gpunit_id=cur.fetchone()[0]
         for kk in d[k]['ExternalIdentifiers']:
-            #try:
             cur.execute('SELECT id FROM cdf.identifiertype WHERE text = %s',[kk])
             a=cur.fetchone()
             if a:
                 idtype_id = a[0]
                 othertext=''
             else:
-                idtype_id=idtype_other_id
+                idtype_id=otherid_id
                 othertext=kk
             cur.execute('INSERT INTO cdf.externalidentifier (foreign_id,value,identifiertype_id,othertype) VALUES (%s,%s,%s,%s) ON CONFLICT (foreign_id,identifiertype_id,othertype) DO NOTHING',[gpunit_id,d[k]['ExternalIdentifiers'][kk],idtype_id,othertext])
-            #except:
-                #report.append('query failed with key= '+kk)
+# elections
+    report.append('Entering Election information')
+    cur.execute("SELECT id FROM  cdf.electiontype WHERE text = 'other'")
+    otherelection_id = cur.fetchone()[0]
+    d = state.elections
+    for k in d.keys():
+        if 'Type' in d[k].keys():
+            cur.execute('SELECT id FROM cdf.electiontype WHERE text = %s',[d[k]['Type'],])
+            a=cur.fetchone()
+            if a:
+                electiontype_id = a[0]
+                othertext=''
+            else:
+                electiontype_id=otherelection_id
+                othertext=d[k]['Type']
+        startdate = d[k].get('StartDate',None)
+        enddate = d[k].get('EndDate',None)
+        cur.execute('INSERT INTO cdf.election (name,enddate,startdate,electiontype_id,othertype) VALUES (%s,%s,%s,%s,%s) ON CONFLICT (name) DO UPDATE SET name= %s RETURNING id',[k,enddate,startdate,electiontype_id,othertext,k])   # *** OK as long as there aren't too many conflicts. Otherwise can bloat db
+        election_id=cur.fetchone()[0]
+        for kk in d[k]['ExternalIdentifiers']:
+            cur.execute('SELECT id FROM cdf.identifiertype WHERE text = %s',[kk,])
+            a=cur.fetchone()
+            if a:
+                idtype_id = a[0]
+                othertext=''
+            else:
+                idtype_id=otherid_id
+                othertext=kk
+            cur.execute('INSERT INTO cdf.externalidentifier (foreign_id,value,identifiertype_id,othertype) VALUES (%s,%s,%s,%s) ON CONFLICT (foreign_id,identifiertype_id,othertype) DO NOTHING',[election_id,d[k]['ExternalIdentifiers'][kk],idtype_id,othertext])
+
     return()
 
 
