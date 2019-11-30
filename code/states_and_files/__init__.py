@@ -45,11 +45,14 @@ def create_state(abbr,path_to_parent_dir):
     return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_data,d['main_reporting_unit_type'],d['reporting_units'],d['elections'])
 
 def context_to_cdf(state, conn, cur):
+    ids = []
     d = state.reporting_units
     for k in d.keys():
          # create corresponding gp_unit
         cur.execute('INSERT INTO cdf.gpunit (name) VALUES (%s)',[k])
         id = cur.fetchone()[0]
+        ids.append(id)
+    return[ids]
 
 
 

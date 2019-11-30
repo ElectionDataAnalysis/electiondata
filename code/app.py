@@ -135,6 +135,43 @@ def build():
             conn.close()
         return("<p>"+"</p><p>  ".join(report))
 
+@app.route('/cdf')
+def cdf():
+    report = []
+# instantiate state of NC
+    report.append('Create NC')
+    s = sf.create_state('NC','local_data/')
+    
+    report.append('Connect to db')
+    conn = establish_connection()
+    cur = conn.cursor()
+    
+    mypath=Path('SQL/Create_CDF_db.sql')
+    if mypath.is_file():
+        with open('SQL/Create_CDF_db.sql','r') as f:
+            queries = f.read().replace('\n','').replace('\r','').split(';')  # remove newlines from the file and split into queries
+            for query in queries:
+                try:
+                    cur.execute(query)
+                except:
+                    pass
+        report.append('Created cdf schema in db')
+    else:
+        report.append('no such file SQL/Create_CDF_db.sql')
+    conn.commit()
+
+    report.append('Put reporting_units into db')
+    ids = sf.context_to_cdf(s,conn,cur)
+    report.append('ids are '+str(ids))
+    return("<p>"+"</p><p>  ".join(report))
+
+# close connection
+    report.append('Close connection')
+    if cur:
+        cur.close()
+    if conn:
+        conn.close()
+
 
 @app.route('/analyze')
 def analyze():
