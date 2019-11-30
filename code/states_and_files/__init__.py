@@ -18,6 +18,7 @@ class State:
 
     
 def create_state(abbr,path_to_parent_dir):
+    '''abbr is the capitalized two-letter postal code for the state, district or territory'''
     string_attributes = ['name','schema_name','parser_string','main_reporting_unit_type']
     object_attributes = ['type_map','reporting_units','elections']    # what consistency checks do we need? E.g., should main reporting unit names be checked to be consistent with state name?
     if not os.path.isdir(path_to_parent_dir):
@@ -25,23 +26,31 @@ def create_state(abbr,path_to_parent_dir):
         return('Error: No directory '+path_to_parent_dir)
         sys.exit()
     for attr in string_attributes + object_attributes:
-        if not os.path.isfile(path_to_parent_dir+abbr+'/external/'+attr+'.txt'):
-            print('Error: No file '+path_to_parent_dir+abbr+'/external/'+attr+'.txt')
-            return('Error: No file '+path_to_parent_dir+abbr+'/external/'+attr+'.txt')
+        if not os.path.isfile(path_to_parent_dir+abbr+'/context/'+attr+'.txt'):
+            print('Error: No file '+path_to_parent_dir+abbr+'/context/'+attr+'.txt')
+            return('Error: No file '+path_to_parent_dir+abbr+'/context/'+attr+'.txt')
             sys.exit()
     
     if path_to_parent_dir[-1] != '/':
         path_to_parent_dir += '/'
     d = {} # dictionary to hold attributes
     for attr in string_attributes:     # strings
-        with open(path_to_parent_dir+abbr+'/external/'+attr+'.txt') as f:
+        with open(path_to_parent_dir+abbr+'/context/'+attr+'.txt') as f:
             d[attr]=f.readline().strip()
     for attr in object_attributes:     # python objects
-        with open(path_to_parent_dir+abbr+'/external/'+attr+'.txt') as f:
+        with open(path_to_parent_dir+abbr+'/context/'+attr+'.txt') as f:
             d[attr]=eval(f.readline().strip())
     path_to_data = path_to_parent_dir+abbr+'/data/'
     meta_p=re.compile(d['parser_string'])
     return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_data,d['main_reporting_unit_type'],d['reporting_units'],d['elections'])
+
+def context_to_cdf(state, conn, cur):
+    d = state.reporting_units
+    for k in d.keys():
+         # create corresponding gp_unit
+        cur.execute('INSERT INTO cdf.gpunit (name) VALUES (%s)',[k])
+        id = cur.fetchone()[0]
+
 
 
 class Datafile:

@@ -1,2 +1,0 @@
-(?P<field>[^\n\t]+)\t+(?P<type>[A-z]+)(?P<number>\(\d+\))?\t+(?P<comment>[^\n\t]+)\n
-

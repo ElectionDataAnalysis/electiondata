@@ -11,6 +11,7 @@ import pandas as pd
 from flask import Flask
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT # allows db creation, deletion
+from psycopg2 import sql
 import re
 import states_and_files as sf
 from pathlib import Path
@@ -61,12 +62,9 @@ def create_schema(s):
     conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     cur = conn.cursor()
     
-    query = 'DROP SCHEMA IF EXISTS '+s.schema_name+' CASCADE'
-    cur.execute(query)
-
+    cur.execute(sql.SQL('DROP SCHEMA IF EXISTS {} CASCADE').format(sql.Identifier(s.schema_name)))
+    cur.execute(sql.SQL('CREATE SCHEMA {}').format(sql.Identifier(s.schema_name)))
     
-    query = 'CREATE SCHEMA '+s.schema_name
-    cur.execute(query)
     if cur:
         cur.close()
     if conn:

@@ -13,6 +13,8 @@ def shorten_and_cap_county(normal):
 def add_external(dict,id_type):
     '''input is a dictionary whose keys are county names in normal form and values are dictionaries, including identifiertype-identifier pairs, and an identifiertype. Output is same dictionary, with the export1 identifiers (short name, all caps) included.'''
     for k in dict.keys():
-        dict[k]['ExternalIdentifiers'][id_type]=shorten_and_cap_county(k)
+        if dict[k]['Type'] == 'county':
+            print(k)
+            dict[k]['ExternalIdentifiers'][id_type]=shorten_and_cap_county(k)
     return(dict)
         

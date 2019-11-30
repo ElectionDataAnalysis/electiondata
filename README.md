@@ -76,7 +76,7 @@ Defines two services: `db` (postgres to store data) and `web` (serves up web con
 Contains one subfolder for each state, each containing three folders:
 * `data` containing data files 
 * `meta` containing metadata files for the `data` files
-* `external` containing necessary state-specific information from sources other than the data files
+* `context` containing necessary state-specific information from sources other than the data files
 
 Also contains a subfolder `tmp` to hold temporary cleaned files for upload to db
 

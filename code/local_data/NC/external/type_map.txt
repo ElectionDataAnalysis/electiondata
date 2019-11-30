@@ -1,2 +1,0 @@
-{'number':'INT', 'text':'varchar', 'char':'varchar'}
-
