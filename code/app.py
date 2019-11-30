@@ -138,7 +138,7 @@ def build():
 @app.route('/cdf')
 def cdf():
     report = []
-# instantiate state of NC
+    # instantiate state of NC
     report.append('Create NC')
     s = sf.create_state('NC','local_data/')
     
@@ -151,19 +151,17 @@ def cdf():
         with open('SQL/Create_CDF_db.sql','r') as f:
             queries = f.read().replace('\n','').replace('\r','').split(';')  # remove newlines from the file and split into queries
             for query in queries:
-                try:
+                if len(query) > 4:      # *** need better test: if query isn't a real query...
                     cur.execute(query)
-                except:
-                    pass
+                    report.append('executed query '+query)
         report.append('Created cdf schema in db')
     else:
         report.append('no such file SQL/Create_CDF_db.sql')
     conn.commit()
 
     report.append('Put reporting_units into db')
-    ids = sf.context_to_cdf(s,conn,cur)
-    report.append('ids are '+str(ids))
-    return("<p>"+"</p><p>  ".join(report))
+    # ids = sf.context_to_cdf(s,conn,cur)
+    # report.append('ids are '+str(ids))
 
 # close connection
     report.append('Close connection')
@@ -171,6 +169,7 @@ def cdf():
         cur.close()
     if conn:
         conn.close()
+    return("<p>"+"</p><p>  ".join(report))
 
 
 @app.route('/analyze')

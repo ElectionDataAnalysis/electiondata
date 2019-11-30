@@ -5,6 +5,9 @@ code/local_data/NC/data
 code/local_data/NC/meta
 code/local_data/FL/data
 code/local_data/FL/meta
+code/local_data/Philadelphia
+code/local_data/VA
+code/local_data/tmp
 code/local_logs
 query_create/__pycache__
 code/query_create/__pycache__/__init__.cpython-37.pyc
