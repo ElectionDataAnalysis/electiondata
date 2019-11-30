@@ -22,7 +22,8 @@ CREATE TABLE cdf.ExternalIdentifier (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
 foreign_id INTEGER, 
 value varchar(50),
-identifiertype_id INTEGER REFERENCES cdf.identifiertype(id)
+identifiertype_id INTEGER REFERENCES cdf.identifiertype(id),
+othertype varchar(30)
 );
 
 
@@ -44,6 +45,7 @@ DROP TABLE IF EXISTS cdf.ReportingUnit;
 CREATE TABLE cdf.ReportingUnit (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
 reportingunittype_id INTEGER REFERENCES cdf.reportingunittype(id),
+othertype varchar(30),
 countitemstatus_id INTEGER REFERENCES cdf.countitemstatus(id)
 );
 
@@ -71,7 +73,7 @@ name varchar(50),
 enddate DATE,
 startdate DATE,
 electiontype_id INTEGER REFERENCES cdf.electiontype(id),
-OtherType varchar(20)
+othertype varchar(30)
 )
 ;
 

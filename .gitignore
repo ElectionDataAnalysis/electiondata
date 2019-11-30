@@ -3,8 +3,7 @@ local/
 code/__pycache__
 code/local_data/NC/data
 code/local_data/NC/meta
-code/local_data/FL/data
-code/local_data/FL/meta
+code/local_data/FL
 code/local_data/Philadelphia
 code/local_data/VA
 code/local_data/tmp

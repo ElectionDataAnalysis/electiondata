@@ -44,15 +44,33 @@ def create_state(abbr,path_to_parent_dir):
     meta_p=re.compile(d['parser_string'])
     return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_data,d['main_reporting_unit_type'],d['reporting_units'],d['elections'])
 
-def context_to_cdf(state, conn, cur):
+def context_to_cdf(state, conn, cur,report):
     ids = []
+    cur.execute("SELECT id FROM  cdf.identifiertype WHERE text = 'other'")
+    idtype_other_id = cur.fetchone()[0]
+    report.append('other id is '+str(idtype_other_id))
     d = state.reporting_units
     for k in d.keys():
-         # create corresponding gp_unit
-        cur.execute('INSERT INTO cdf.gpunit (name) VALUES (%s)',[k])
-        id = cur.fetchone()[0]
-        ids.append(id)
-    return[ids]
+        # create corresponding gp_unit
+        try:
+            cur.execute('INSERT INTO cdf.gpunit (name) VALUES (%s) RETURNING id',[k])
+            gpunit_id=cur.fetchone()[0]
+        except:
+            report.append('query failed for key '+k)
+        for kk in d[k]['ExternalIdentifiers']:
+            #try:
+            cur.execute('SELECT id FROM cdf.identifiertype WHERE text = %s',[kk])
+            a=cur.fetchone()
+            if a:
+                idtype_id = a[0]
+                othertext=''
+            else:
+                idtype_id=idtype_other_id
+                othertext=kk
+            cur.execute('INSERT INTO cdf.externalidentifier (foreign_id,value,identifiertype_id,othertype) VALUES (%s,%s,%s,%s)',[gpunit_id,d[k]['ExternalIdentifiers'][kk],idtype_id,othertext])
+            #except:
+                #report.append('query failed with key= '+kk)
+    return()
 
 
 
