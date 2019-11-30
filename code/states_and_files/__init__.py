@@ -5,7 +5,7 @@ import os.path
 from os import path
 
 class State:
-    def __init__(self,abbr,name,meta_parser,type_map,schema_name,path_to_data,main_reporting_unit_type,reporting_units,elections):
+    def __init__(self,abbr,name,meta_parser,type_map,schema_name,path_to_data,main_reporting_unit_type,reporting_units,elections,parties):
         self.abbr = abbr
         self.name = name
         self.meta_parser=meta_parser
@@ -15,12 +15,13 @@ class State:
         self.main_reporting_unit_type=main_reporting_unit_type
         self.reporting_units=reporting_units  # dictionary, with external codes
         self.elections=elections
+        self.parties=parties
 
     
 def create_state(abbr,path_to_parent_dir):
     '''abbr is the capitalized two-letter postal code for the state, district or territory'''
     string_attributes = ['name','schema_name','parser_string','main_reporting_unit_type']
-    object_attributes = ['type_map','reporting_units','elections']    # what consistency checks do we need? E.g., should main reporting unit names be checked to be consistent with state name?
+    object_attributes = ['type_map','reporting_units','elections','parties']    # what consistency checks do we need? E.g., shouldn't all reporting units start with the state name?
     if not os.path.isdir(path_to_parent_dir):
         print('Error: No directory '+path_to_parent_dir)
         return('Error: No directory '+path_to_parent_dir)
@@ -42,9 +43,10 @@ def create_state(abbr,path_to_parent_dir):
             d[attr]=eval(f.readline().strip())
     path_to_data = path_to_parent_dir+abbr+'/data/'
     meta_p=re.compile(d['parser_string'])
-    return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_data,d['main_reporting_unit_type'],d['reporting_units'],d['elections'])
+    return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_data,d['main_reporting_unit_type'],d['reporting_units'],d['elections'],d['parties'])
 
 def context_to_cdf(state, conn, cur,report):
+    '''Loads information from context folder for the state into the common data format'''
     ids = []
     cur.execute("SELECT id FROM  cdf.identifiertype WHERE text = 'other'")
     idtype_other_id = cur.fetchone()[0]
@@ -53,7 +55,7 @@ def context_to_cdf(state, conn, cur,report):
     for k in d.keys():
         # create corresponding gp_unit
         try:
-            cur.execute('INSERT INTO cdf.gpunit (name) VALUES (%s) RETURNING id',[k])
+            cur.execute('INSERT INTO cdf.gpunit (name) VALUES (%s) ON CONFLICT (name) DO UPDATE SET name= %s RETURNING id',[k,k])   # *** OK as long as there aren't too many of these. Otherwise can bloat db
             gpunit_id=cur.fetchone()[0]
         except:
             report.append('query failed for key '+k)
@@ -67,7 +69,7 @@ def context_to_cdf(state, conn, cur,report):
             else:
                 idtype_id=idtype_other_id
                 othertext=kk
-            cur.execute('INSERT INTO cdf.externalidentifier (foreign_id,value,identifiertype_id,othertype) VALUES (%s,%s,%s,%s)',[gpunit_id,d[k]['ExternalIdentifiers'][kk],idtype_id,othertext])
+            cur.execute('INSERT INTO cdf.externalidentifier (foreign_id,value,identifiertype_id,othertype) VALUES (%s,%s,%s,%s) ON CONFLICT (foreign_id,identifiertype_id,othertype) DO NOTHING',[gpunit_id,d[k]['ExternalIdentifiers'][kk],idtype_id,othertext])
             #except:
                 #report.append('query failed with key= '+kk)
     return()

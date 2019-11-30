@@ -74,8 +74,8 @@ def create_schema(s):
 
 app = Flask(__name__)
 
-@app.route('/build')
-def build():
+@app.route('/raw_data')
+def raw_data():
 # initialize report for logging
     report=[]
 #    tables = [['results_pct','utf8'],['absentee','utf16']] # varies by state *** name and encoding of metadata file
