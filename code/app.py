@@ -77,7 +77,7 @@ app = Flask(__name__)
 @app.route('/raw_data')
 def raw_data():
 # initialize report for logging
-    report=[]
+    report=[str(datetime.now())]
 #    tables = [['results_pct','utf8'],['absentee','utf16']] # varies by state *** name and encoding of metadata file
         # note: 'absentee' needs better data cleaning
 #    fmeta = {'results_pct':'layout_results_pct.txt','absentee':'sfs_by_hand_layout_absentee.txt'}  # name of metadata file; varies by state ***
@@ -137,7 +137,7 @@ def raw_data():
 
 @app.route('/create_cdf')
 def create_cdf():
-    report = []
+    report=[str(datetime.now())]
     # instantiate state of NC
     report.append('Create NC')
     s = sf.create_state('NC','local_data/')
@@ -173,7 +173,7 @@ def create_cdf():
 @app.route('/reporting_units')
 def reporting_units():
 
-    report = []
+    report=[str(datetime.now())]
     # instantiate state of NC
     report.append('Create NC')
     s = sf.create_state('NC','local_data/')

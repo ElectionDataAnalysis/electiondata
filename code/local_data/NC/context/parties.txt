@@ -1,0 +1,1 @@
+{'North Carolina Constitution Party':{'ExternalIdentifiers':{'export1':'CST'}},'North Carolina Democratic Party':{'ExternalIdentifiers':{'export1':'DEM'}},'North Carolina Libertarian Party':{'ExternalIdentifiers':{'export1':'LIB'}},'North Carolina Green Party':{'ExternalIdentifiers':{'export1':'GRE'}},'North Carolina Republican Party':{'ExternalIdentifiers':{'export1':'REP'}}}
