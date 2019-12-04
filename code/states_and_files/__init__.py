@@ -11,7 +11,9 @@ class State:
         self.meta_parser=meta_parser
         self.type_map=type_map
         self.schema_name=schema_name
-        self.path_to_data=path_to_data      # should end in /
+        if path_to_data[-1] != '/':     # should end in /
+            path_to_data += '/'
+        self.path_to_data=path_to_data
         self.main_reporting_unit_type=main_reporting_unit_type
         self.reporting_units=reporting_units  # dictionary, with external codes
         self.elections=elections
@@ -118,8 +120,9 @@ def context_to_cdf(state, conn, cur,report):
 
 
 class Datafile:
-    def __init__(self,state, table_name, file_name, encoding,metafile_name,metafile_encoding,value_convention,source,correction_query_list):
+    def __init__(self,state, election, table_name, file_name, encoding,metafile_name,metafile_encoding,value_convention,source,correction_query_list):
         self.state=state
+        self.election=election
         self.table_name=table_name
         self.file_name=file_name
         self.encoding=encoding
@@ -129,9 +132,19 @@ class Datafile:
         self.source=source
         self.correction_query_list=correction_query_list    # fix any known metadata errors
 
+def create_datafile(s,election,data_file_name):
+    # check that election is compatible with state
+    if election not in s.election.keys():
+        print('No such election ('+election+') associated with state '+state.name)
+        sys.exit()
+    
+    # read datafile info from context folder *** should be more efficient
+    with open(s.path_to_data+'context/datafiles.txt','r') as f:
+        d_all = eval(f.readline().strip())
+        d = d_all[election+';'+data_file_name]
+    return(Datafile(s,election,,,data_file_name,d['data_file_encoding'],d['meta_file'],d['meta_file_encoding']]))
 
-
-def create_datafile(s,file_name):
+def old_create_datafile(s,file_name):
     if s.abbr=='NC':
         if file_name=='results_pct_20181106.txt':
             table_name='results_pct'

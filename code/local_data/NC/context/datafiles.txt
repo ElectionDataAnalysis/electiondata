@@ -1,0 +1,2 @@
+{'North Carolina General Election 2018-11-06;results_pct_20181106.txt':{'data_file_encoding':'utf8','meta_file':'layout_results_pct.txt','meta_file_encoding':'utf8'}}
+
