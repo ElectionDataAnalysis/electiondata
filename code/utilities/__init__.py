@@ -49,11 +49,13 @@ def extract_precincts(nc_pct_results_file_path):
             rep_key = 'North Carolina;'+county.capitalize()+' County;'+election+';'+precinct
             rep_unit_list.append([rep_key,'other;'+rep_key])
     return(rep_unit_list)
+    
+extract_contests(nc_pct_results_file_path)
         
-def process(nc_results_file_path,dict_file_path,outfile):
-    a = extract_precincts(nc_results_file_path)
+def process(nc_pct_results_file_path,dict_file_path,outfile):
+    a = extract_precincts(nc_pct_results_file_path)
     with open(dict_file_path,'r') as f:
-        d=eval(f.readline())
+        d=eval(f.read())
     insert_reporting_unit(d,a,'nc_export1')
     with open(outfile,'w') as f:
         f.write(str(d))
