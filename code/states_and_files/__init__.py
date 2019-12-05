@@ -76,6 +76,8 @@ def create_datafile(s,election,data_file_name):
     table_name=re.sub(r'\W+', '', election+data_file_name)
     correction_query_list = ['ALTER TABLE ' + s.schema_name + '.' + table_name + ' ' + alteration for alteration in d['alteration_list']]
     return(Datafile(s,election, table_name,data_file_name,d['data_file_encoding'],d['meta_file'], d['meta_file_encoding'],d['source_url'],d['file_date'],d['download_date'],d['note'],correction_query_list))
+    
+########################################
 
 def context_to_cdf(state, conn, cur,report):
     '''Loads information from context folder for the state into the common data format'''
