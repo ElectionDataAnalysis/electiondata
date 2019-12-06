@@ -91,7 +91,7 @@ def raw_data():
     # instantiate state of NC
         s = sf.create_state('NC','local_data/')
     # instantiate the NC datafiles
-        datafiles = [sf.old_create_datafile(s,'results_pct_20181106.txt'), sf.old_create_datafile(s,'absentee_20181106.csv')]
+        datafiles = [sf.create_datafile(s,'North Carolina General Election 2018-11-06','results_pct_20181106.txt','export1'), sf.create_datafile(s,'North Carolina General Election 2018-11-06','absentee_20181106.csv','export1')]
 
     # create the schema for the state
         create_schema(s)

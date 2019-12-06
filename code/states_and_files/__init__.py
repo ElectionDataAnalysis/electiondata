@@ -63,9 +63,10 @@ class Datafile:
         self.note=note
         self.correction_query_list=correction_query_list    # fix any known metadata errors; might be unnecessary if we are loading data via python directly into CDF rather than loading data into a raw SQL db. ***
 
-def create_datafile(s,election,data_file_name):
+def create_datafile(s,election,data_file_name,value_convention):
     # check that election is compatible with state
-    if election not in s.election.keys():
+    # *** need to code the value_convention to pull the right identifiers, maybe column names too.
+    if election not in s.elections.keys():
         print('No such election ('+election+') associated with state '+state.name)
         sys.exit()
     
@@ -75,7 +76,7 @@ def create_datafile(s,election,data_file_name):
         d = d_all[election+';'+data_file_name]
     table_name=re.sub(r'\W+', '', election+data_file_name)
     correction_query_list = ['ALTER TABLE ' + s.schema_name + '.' + table_name + ' ' + alteration for alteration in d['alteration_list']]
-    return(Datafile(s,election, table_name,data_file_name,d['data_file_encoding'],d['meta_file'], d['meta_file_encoding'],d['source_url'],d['file_date'],d['download_date'],d['note'],correction_query_list))
+    return(Datafile(s,election, table_name,data_file_name,d['data_file_encoding'],d['meta_file'], d['meta_file_encoding'],value_convention,d['source_url'],d['file_date'],d['download_date'],d['note'],correction_query_list))
     
 ########################################
 
