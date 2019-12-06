@@ -5,15 +5,15 @@ import os.path
 from os import path
 
 class State:
-    def __init__(self,abbr,name,meta_parser,type_map,schema_name,path_to_data,main_reporting_unit_type,reporting_units,elections,parties):
+    def __init__(self,abbr,name,meta_parser,type_map,schema_name,path_to_state_dir,main_reporting_unit_type,reporting_units,elections,parties):
         self.abbr = abbr
         self.name = name
         self.meta_parser=meta_parser
         self.type_map=type_map
         self.schema_name=schema_name
-        if path_to_data[-1] != '/':     # should end in /
-            path_to_data += '/'
-        self.path_to_data=path_to_data
+        if path_to_state_dir[-1] != '/':     # should end in /
+            path_to_state_dir += '/'
+        self.path_to_state_dir=path_to_state_dir
         self.main_reporting_unit_type=main_reporting_unit_type
         self.reporting_units=reporting_units  # dictionary, with external codes
         self.elections=elections
@@ -43,9 +43,9 @@ def create_state(abbr,path_to_parent_dir):
     for attr in object_attributes:     # python objects
         with open(path_to_parent_dir+abbr+'/context/'+attr+'.txt') as f:
             d[attr]=eval(f.read())
-    path_to_data = path_to_parent_dir+abbr+'/data/'
+    path_to_state_dir = path_to_parent_dir+abbr+'/'
     meta_p=re.compile(d['parser_string'])
-    return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_data,d['main_reporting_unit_type'],d['reporting_units'],d['elections'],d['parties'])
+    return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_state_dir,d['main_reporting_unit_type'],d['reporting_units'],d['elections'],d['parties'])
 
 class Datafile:
     def __init__(self,state, election, table_name, file_name, encoding,metafile_name,metafile_encoding,value_convention,source_url,file_date,download_date,note,correction_query_list):
@@ -70,7 +70,7 @@ def create_datafile(s,election,data_file_name):
         sys.exit()
     
     # read datafile info from context folder *** should be more efficient
-    with open(s.path_to_data+'context/datafiles.txt','r') as f:
+    with open(s.path_to_state_dir+'context/datafiles.txt','r') as f:
         d_all = eval(f.read())
         d = d_all[election+';'+data_file_name]
     table_name=re.sub(r'\W+', '', election+data_file_name)

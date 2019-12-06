@@ -78,7 +78,7 @@ def load_data(conn,cursor,state,datafile):
     elif ext == 'csv':
         delimit = " DELIMITER ',' "
     q = "COPY "+state.schema_name+"."+datafile.table_name+" FROM STDIN "+delimit+" CSV HEADER"
-    clean_file=cl.remove_null_bytes(state.path_to_data+datafile.file_name,'local_data/tmp/')
+    clean_file=cl.remove_null_bytes(state.path_to_state_dir+datafile.file_name,'local_data/tmp/')
     with open(clean_file,mode='r',encoding=datafile.encoding,errors='ignore') as f:
         cursor.copy_expert(q,f)
     conn.commit()

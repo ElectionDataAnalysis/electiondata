@@ -85,12 +85,12 @@ def extract_precincts(nc_pct_results_file_path):
 def insert_offices(s,d):
     ''' s is a state; d gives the number of districts for standard offices within the state, e.g., {'General Assembly;House of Representatives':120,'General Assembly;Senate':50} for North Carolina '''
     state = s.name
-    outd = {}
+    out_d = {}
     for k in d.keys():
         for i in range(d[k]):
             office_name = state + ';' + k +';District ' + str(i+1)
-            outd[office_name] = {}
-            
+            out_d[office_name] = {}
+    dict_insert(s.path_to_state_dir + 'context/offices.txt',out_d)
     
         
 def process(nc_pct_results_file_path,dict_file_path,outfile):
