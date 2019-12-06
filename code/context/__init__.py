@@ -60,9 +60,12 @@ def insert_reporting_unit(dict,reporting_unit_list,id_type):
             dict[r+' ('+  t_dict   +')'] = dict.pop(r) # rename existing key to include type (e.g., precinct)
             dict[r+' ('+  reporting_unit_type   +')'] = {'Type':t,'ExternalIdentifiers':{id_type:r}}
             
-def extract_precincts(nc_pct_results_file_path):
+def extract_precincts(s,df):
+    ''' s is a state; df is a datafile with precincts (*** currently must be in the format of the nc_pct_results file; need to read info from metafile) '''
+    if s != df.state:   # consistency check: file must belong to state
+        print('Datafile ' +df+ ' belongs to state '+df.state.name+', not to '+s.name)
     rep_unit_list=[]
-    with open(nc_pct_results_file_path,'r') as f:
+    with open(s.path_to_state_dir+'data/'+df.file_name,'r') as f:
         lines=f.readlines()
     for line in lines[1:]:
         fields = line.strip('\n\r').split('\t')
@@ -70,20 +73,20 @@ def extract_precincts(nc_pct_results_file_path):
         if real_precinct == 'Y':     # if row designated a "real precinct" in th nc file
             county = fields[0]
             precinct = fields[2]
-            rep_key = 'North Carolina;'+county.capitalize()+' County;Precinct '+precinct
+            rep_key = s.name+';'+county.capitalize()+' County;Precinct '+precinct
             rep_unit_list.append([rep_key,'precinct'])  # return key and 'Type'
         elif real_precinct == 'N':
             county = fields[0]
             election = fields[1]
             precinct = fields[2]
-            rep_key = 'North Carolina;'+county.capitalize()+' County;'+election+';'+precinct
+            rep_key = s.name+';'+county.capitalize()+' County;'+election+';'+precinct
             rep_unit_list.append([rep_key,'other;'+rep_key])
     return(rep_unit_list)
     
 
     
 def insert_offices(s,d):
-    ''' s is a state; d gives the number of districts for standard offices within the state, e.g., {'General Assembly;House of Representatives':120,'General Assembly;Senate':50} for North Carolina '''
+    ''' s is a state; d is a dictionary giving the number of districts for standard offices within the state, e.g., {'General Assembly;House of Representatives':120,'General Assembly;Senate':50} for North Carolina. Returns dictionary of offices. '''
     state = s.name
     out_d = {}
     for k in d.keys():
@@ -91,7 +94,9 @@ def insert_offices(s,d):
             office_name = state + ';' + k +';District ' + str(i+1)
             out_d[office_name] = {}
     dict_insert(s.path_to_state_dir + 'context/offices.txt',out_d)
+    return(out_d)
     
+
         
 def process(nc_pct_results_file_path,dict_file_path,outfile):
     a = extract_precincts(nc_pct_results_file_path)
