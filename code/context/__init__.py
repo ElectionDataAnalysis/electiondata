@@ -20,31 +20,31 @@ def add_externalidentifier(dict,id_type):
     return(dict)
         
 def dict_insert(dict_file_path,input_d):
-'''Insert the objects in the dictionary (input_d) into the dictionary stored in the file (at dict_file_path), updating each ExternalIdentifiers dict and any new info, throwing error if the dictionaries conflict'''
-with open(dict_file_path,'r') as f:
-    file_d = eval(f.read())
-for k in input_d.keys():
-    if k in file_d.keys():
-        for kk in input_d[k].keys():
-            if kk == 'ExternalIdentifiers':  # update external identifiers, checking for conflict
-                for kkk in input_d[k]['ExternalIdentifiers'].keys():
-                    if kkk in file_d[k]['ExternalIdentifiers'].keys():
-                        if input_d[k]['ExternalIdentifiers'][kkk] != file_d[k]['ExternalIdentifiers'][kkk]:
-                            print('Error: ExternalIdentifiers conflict on ' + kkk)
+    '''Insert the objects in the dictionary (input_d) into the dictionary stored in the file (at dict_file_path), updating each ExternalIdentifiers dict and any new info, throwing error if the dictionaries conflict'''
+    with open(dict_file_path,'r') as f:
+        file_d = eval(f.read())
+    for k in input_d.keys():
+        if k in file_d.keys():
+            for kk in input_d[k].keys():
+                if kk == 'ExternalIdentifiers':  # update external identifiers, checking for conflict
+                    for kkk in input_d[k]['ExternalIdentifiers'].keys():
+                        if kkk in file_d[k]['ExternalIdentifiers'].keys():
+                            if input_d[k]['ExternalIdentifiers'][kkk] != file_d[k]['ExternalIdentifiers'][kkk]:
+                                print('Error: ExternalIdentifiers conflict on ' + kkk)
+                                sys.exit()
+                        else:
+                             file_d[k]['ExternalIdentifiers'][kkk] = input_d[k]['ExternalIdentifiers'][kkk]
+                else:   # for properties of the item other than External Idenifiers
+                    if kk in file_d[k].keys():
+                        if input_d[k][kk] != file_d[k][kk]:
+                            print('Error: conflict on ' + kk)
                             sys.exit()
                     else:
-                         file_d[k]['ExternalIdentifiers'][kkk] = input_d[k]['ExternalIdentifiers'][kkk]
-            else:   # for properties of the item other than External Idenifiers
-                if kk in file_d[k].keys():
-                    if input_d[k][kk] != file_d[k][kk]:
-                        print('Error: conflict on ' + kk)
-                        sys.exit()
-                else:
-                    file_d[k][kk]=input_d[k][kk]
-    else:
-        file_d[k] = input_d[k]    # put input_d info into file_d
+                        file_d[k][kk]=input_d[k][kk]
+        else:
+            file_d[k] = input_d[k]    # put input_d info into file_d
     with open(dict_file_path,'w') as f:
-        f.write(str(file_d))
+            f.write(str(file_d))
     return(file_d)
 
 
