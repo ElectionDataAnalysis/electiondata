@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # under construction
-
+# utilities for extracting state context info and inserting it into the files in the context folder
+import sys
 import re
 
 def shorten_and_cap_county(normal):
@@ -18,6 +19,35 @@ def add_externalidentifier(dict,id_type):
             dict[k]['ExternalIdentifiers'][id_type]=shorten_and_cap_county(k)
     return(dict)
         
+def dict_insert(dict_file_path,input_d):
+'''Insert the objects in the dictionary (input_d) into the dictionary stored in the file (at dict_file_path), updating each ExternalIdentifiers dict and any new info, throwing error if the dictionaries conflict'''
+with open(dict_file_path,'r') as f:
+    file_d = eval(f.read())
+for k in input_d.keys():
+    if k in file_d.keys():
+        for kk in input_d[k].keys():
+            if kk == 'ExternalIdentifiers':  # update external identifiers, checking for conflict
+                for kkk in input_d[k]['ExternalIdentifiers'].keys():
+                    if kkk in file_d[k]['ExternalIdentifiers'].keys():
+                        if input_d[k]['ExternalIdentifiers'][kkk] != file_d[k]['ExternalIdentifiers'][kkk]:
+                            print('Error: ExternalIdentifiers conflict on ' + kkk)
+                            sys.exit()
+                    else:
+                         file_d[k]['ExternalIdentifiers'][kkk] = input_d[k]['ExternalIdentifiers'][kkk]
+            else:   # for properties of the item other than External Idenifiers
+                if kk in file_d[k].keys():
+                    if input_d[k][kk] != file_d[k][kk]:
+                        print('Error: conflict on ' + kk)
+                        sys.exit()
+                else:
+                    file_d[k][kk]=input_d[k][kk]
+    else:
+        file_d[k] = input_d[k]    # put input_d info into file_d
+    with open(dict_file_path,'w') as f:
+        f.write(str(file_d))
+    return(file_d)
+
+
 def insert_reporting_unit(dict,reporting_unit_list,id_type):
     '''Insert the reporting units in reporting_unit_list (list of unit, type pairs) into dict, with correct type (e.g., precinct) and recording the name of the reporting unit also as an external identifier, unless the reporting unit is already in the dict, in which case do the right thing. '''
     for r in reporting_unit_list:
@@ -50,7 +80,18 @@ def extract_precincts(nc_pct_results_file_path):
             rep_unit_list.append([rep_key,'other;'+rep_key])
     return(rep_unit_list)
     
-extract_contests(nc_pct_results_file_path)
+
+    
+def insert_offices(s,d):
+    ''' s is a state; d gives the number of districts for standard offices within the state, e.g., {'General Assembly;House of Representatives':120,'General Assembly;Senate':50} for North Carolina '''
+    state = s.name
+    outd = {}
+    for k in d.keys():
+        for i in range(d[k]):
+            office_name = state + ';' + k +';District ' + str(i+1)
+            outd[office_name] = {}
+            
+    
         
 def process(nc_pct_results_file_path,dict_file_path,outfile):
     a = extract_precincts(nc_pct_results_file_path)
