@@ -89,9 +89,10 @@ def load_data(conn,cursor,state,datafile):
         for value in datafile.value_convention[field].keys():
             condition.append(" WHEN "+field+" = '"+value+"' THEN '"+datafile.value_convention[field][value]+"' ")
         fup.append(field + " =  CASE "+   " ".join(condition)+" END ")
-    qu = "UPDATE "+state.schema_name+"."+datafile.table_name+" SET "+",".join(fup)
-    cursor.execute(qu)
-    conn.commit()
+    if len(fup) > 0:
+        qu = "UPDATE "+state.schema_name+"."+datafile.table_name+" SET "+",".join(fup)
+        cursor.execute(qu)
+        conn.commit()
     return
 
   

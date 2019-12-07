@@ -91,7 +91,7 @@ def raw_data():
     # instantiate state of NC
         s = sf.create_state('NC','local_data/')
     # instantiate the NC datafiles
-        datafiles = [sf.create_datafile(s,'North Carolina General Election 2018-11-06','results_pct_20181106.txt','export1'), sf.create_datafile(s,'North Carolina General Election 2018-11-06','absentee_20181106.csv','export1')]
+        datafiles = [sf.create_datafile(s,'North Carolina General Election 2018-11-06','results_pct_20181106.txt',{}), sf.create_datafile(s,'North Carolina General Election 2018-11-06','absentee_20181106.csv',{})]
 
     # create the schema for the state
         create_schema(s)
@@ -170,8 +170,8 @@ def create_cdf():
         conn.close()
     return("<p>"+"</p><p>  ".join(report))
 
-@app.route('/reporting_units')
-def reporting_units():
+@app.route('/load_cdf')
+def load_cdf():
 
     report=[str(datetime.now())]
     # instantiate state of NC
@@ -182,7 +182,7 @@ def reporting_units():
     conn = establish_connection()
     cur = conn.cursor()
 
-    report.append('Put reporting_units into db')
+    report.append('Load informaton from context folder')
     ids = sf.context_to_cdf(s,conn,cur,report)
     report.append('ids are '+str(ids))
 

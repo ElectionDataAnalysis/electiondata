@@ -5,7 +5,7 @@ import os.path
 from os import path
 
 class State:
-    def __init__(self,abbr,name,meta_parser,type_map,schema_name,path_to_state_dir,main_reporting_unit_type,reporting_units,elections,parties):
+    def __init__(self,abbr,name,meta_parser,type_map,schema_name,path_to_state_dir,main_reporting_unit_type,reporting_units,elections,parties,offices):
         self.abbr = abbr
         self.name = name
         self.meta_parser=meta_parser
@@ -18,12 +18,13 @@ class State:
         self.reporting_units=reporting_units  # dictionary, with external codes
         self.elections=elections
         self.parties=parties
+        self.offices=offices
 
     
 def create_state(abbr,path_to_parent_dir):
     '''abbr is the capitalized two-letter postal code for the state, district or territory'''
     string_attributes = ['name','schema_name','parser_string','main_reporting_unit_type']
-    object_attributes = ['type_map','reporting_units','elections','parties']    # what consistency checks do we need? E.g., shouldn't all reporting units start with the state name?
+    object_attributes = ['type_map','reporting_units','elections','parties','offices']    # what consistency checks do we need? E.g., shouldn't all reporting units start with the state name?
     if not os.path.isdir(path_to_parent_dir):
         print('Error: No directory '+path_to_parent_dir)
         return('Error: No directory '+path_to_parent_dir)
@@ -45,7 +46,7 @@ def create_state(abbr,path_to_parent_dir):
             d[attr]=eval(f.read())
     path_to_state_dir = path_to_parent_dir+abbr+'/'
     meta_p=re.compile(d['parser_string'])
-    return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_state_dir,d['main_reporting_unit_type'],d['reporting_units'],d['elections'],d['parties'])
+    return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_state_dir,d['main_reporting_unit_type'],d['reporting_units'],d['elections'],d['parties'],d['offices'])
 
 class Datafile:
     def __init__(self,state, election, table_name, file_name, encoding,metafile_name,metafile_encoding,value_convention,source_url,file_date,download_date,note,correction_query_list):
@@ -83,6 +84,21 @@ def build_value_convention(external_key):
     
 ########################################
 
+def external_identifiers_to_cdf(id,d,conn,cur):
+    ''' id is a primary key for an object in the database; d is a dictionary of external identifiers for that object (e.g., {'fips':'3700000000','nc_export1':'North Carolina'}); cur is a cursor on the db. The function alters the table cdf.externalidentifier appropriately. '''
+    for kk in d:
+        cur.execute('SELECT id FROM cdf.identifiertype WHERE text = %s',[kk])
+        a=cur.fetchone()
+        if a:
+            idtype_id = a[0]
+            othertext=''
+        else:
+            idtype_id=otherid_id
+            othertext=kk
+        cur.execute('INSERT INTO cdf.externalidentifier (foreign_id,value,identifiertype_id,othertype) VALUES (%s,%s,%s,%s) ON CONFLICT (foreign_id,identifiertype_id,othertype) DO NOTHING',[id,d[k]['ExternalIdentifiers'][kk],idtype_id,othertext])
+    conn.commit()
+    return
+
 def context_to_cdf(state, conn, cur,report):
     '''Loads information from context folder for the state into the common data format'''
 # reporting units
@@ -93,17 +109,10 @@ def context_to_cdf(state, conn, cur,report):
     for k in d.keys():
     # create corresponding gp_unit
         cur.execute('INSERT INTO cdf.gpunit (name) VALUES (%s) ON CONFLICT (name) DO UPDATE SET name= %s RETURNING id',[k,k])   # *** OK as long as there aren't too many of these. Otherwise can bloat db
-        gpunit_id=cur.fetchone()[0]
-        for kk in d[k]['ExternalIdentifiers']:
-            cur.execute('SELECT id FROM cdf.identifiertype WHERE text = %s',[kk])
-            a=cur.fetchone()
-            if a:
-                idtype_id = a[0]
-                othertext=''
-            else:
-                idtype_id=otherid_id
-                othertext=kk
-            cur.execute('INSERT INTO cdf.externalidentifier (foreign_id,value,identifiertype_id,othertype) VALUES (%s,%s,%s,%s) ON CONFLICT (foreign_id,identifiertype_id,othertype) DO NOTHING',[gpunit_id,d[k]['ExternalIdentifiers'][kk],idtype_id,othertext])
+        id=cur.fetchone()[0]
+        external_identifiers_to_cdf(id,d[k]['ExternalIdentifiers'],cur)
+        conn.commit()
+
 # elections
     report.append('Entering Elections information')
     cur.execute("SELECT id FROM  cdf.electiontype WHERE text = 'other'")
@@ -122,39 +131,35 @@ def context_to_cdf(state, conn, cur,report):
         startdate = d[k].get('StartDate',None)
         enddate = d[k].get('EndDate',None)
         cur.execute('INSERT INTO cdf.election (name,enddate,startdate,electiontype_id,othertype) VALUES (%s,%s,%s,%s,%s) ON CONFLICT (name) DO UPDATE SET name= %s RETURNING id',[k,enddate,startdate,electiontype_id,othertext,k])   # *** OK as long as there aren't too many conflicts. Otherwise can bloat db
-        election_id=cur.fetchone()[0]
-        for kk in d[k]['ExternalIdentifiers']:
-            cur.execute('SELECT id FROM cdf.identifiertype WHERE text = %s',[kk,])
-            a=cur.fetchone()
-            if a:
-                idtype_id = a[0]
-                othertext=''
-            else:
-                idtype_id=otherid_id
-                othertext=kk
-            cur.execute('INSERT INTO cdf.externalidentifier (foreign_id,value,identifiertype_id,othertype) VALUES (%s,%s,%s,%s) ON CONFLICT (foreign_id,identifiertype_id,othertype) DO NOTHING',[election_id,d[k]['ExternalIdentifiers'][kk],idtype_id,othertext])
+        id=cur.fetchone()[0]
+        external_identifiers_to_cdf(id,d[k]['ExternalIdentifiers'],cur)
+        conn.commit()
+
 # parties
     report.append('Entering Parties information')
     d = state.parties
     for k in d.keys():
-    # create corresponding gp_unit
         cur.execute('INSERT INTO cdf.party (name) VALUES (%s) ON CONFLICT (name) DO UPDATE SET name= %s RETURNING id',[k,k])   # *** OK as long as there aren't too many conflicts. Otherwise can bloat db
-        gpunit_id=cur.fetchone()[0]
-        for kk in d[k]['ExternalIdentifiers']:
-            cur.execute('SELECT id FROM cdf.identifiertype WHERE text = %s',[kk])
-            a=cur.fetchone()
-            if a:
-                idtype_id = a[0]
-                othertext=''
-            else:
-                idtype_id=otherid_id
-                othertext=kk
-            cur.execute('INSERT INTO cdf.externalidentifier (foreign_id,value,identifiertype_id,othertype) VALUES (%s,%s,%s,%s) ON CONFLICT (foreign_id,identifiertype_id,othertype) DO NOTHING',[gpunit_id,d[k]['ExternalIdentifiers'][kk],idtype_id,othertext])
+        id=cur.fetchone()[0]
+        external_identifiers_to_cdf(id,d[k]['ExternalIdentifiers'],cur)
 
     return()
 
+# offices
+    report.append('Entering Offices information')
+    d = state.offices
+    for k in d.keys():
+        cur.execute('INSERT INTO cdf.office (name) VALUES (%s) ON CONFLICT (name) DO UPDATE SET name= %s RETURNING id',[k,k])   # *** OK as long as there aren't too many conflicts. Otherwise can bloat db
+        id=cur.fetchone()[0]
+        external_identifiers_to_cdf(id,d[k]['ExternalIdentifiers'],cur)
+        description = d[k].get('Description',None)
+        if description:
+            cur.execute('UPDATE cdf.office SET description = CONCAT(description,";",%s) WHERE id = %s AND description != %s',[description,id,description])
+        conn.commit()
 
 
+
+######## obsolete below ***
 def old_create_datafile(s,file_name):
     if s.abbr=='NC':
         if file_name=='results_pct_20181106.txt':

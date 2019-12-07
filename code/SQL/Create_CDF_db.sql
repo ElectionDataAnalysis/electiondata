@@ -83,6 +83,14 @@ text varchar(30) UNIQUE
 );
 COPY cdf.CountItemType (text) FROM '/container_root_dir/SQL/enumerations/CountItemType.txt';
 
+DROP TABLE IF EXISTS cdf.Office;
+CREATE TABLE cdf.Office (
+id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
+name varchar(200) UNIQUE,
+description varchar(1000)
+)
+;
+
 DROP TABLE IF EXISTS cdf.Contest;
 CREATE TABLE cdf.Contest (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
