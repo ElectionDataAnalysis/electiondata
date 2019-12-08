@@ -93,7 +93,7 @@ def raw_data():
     # instantiate state of NC
         s = sf.create_state('NC','local_data/')
     # instantiate the NC datafiles
-        datafiles = [sf.create_datafile(s,'North Carolina General Election 2018-11-06','results_pct_20181106.txt',{}), sf.create_datafile(s,'North Carolina General Election 2018-11-06','absentee_20181106.csv',{})]
+        datafiles = [sf.create_datafile(s,'General Election 2018-11-06','results_pct_20181106.txt',{}), sf.create_datafile(s,'General Election 2018-11-06','absentee_20181106.csv',{})]
 
     # create the schema for the state
         create_schema(s)
@@ -113,9 +113,9 @@ def raw_data():
             fpath = cl.extract_first_col_defs(fpath,'local_data/tmp/',e)
 
         # create table and commit
-            [drop_query,create_query] = q.create_table(t,fpath,s,e)
-            cur.execute(drop_query)
-            report.append(drop_query)
+            create_query = q.create_table(t,fpath,s,e) 
+
+            cur.execute(sql.SQL('DROP TABLE IF EXISTS {}.{}').format(sql.Identifier(s.schema_name),sql.Identifier(t)))
             cur.execute(create_query)
             report.append(create_query)
             conn.commit()
@@ -136,6 +136,30 @@ def raw_data():
         if conn:
             conn.close()
         return("<p>"+"</p><p>  ".join(report))
+        
+        
+@app.route('/file_to_context')
+def file_to_context():
+# initialize report for logging
+    report=[str(datetime.now())]
+# instantiate state of NC
+    s = sf.create_state('NC','local_data/')
+# instantiate the NC pct_result datafile
+    df = sf.create_datafile(s,'General Election 2018-11-06','results_pct_20181106.txt',{})
+# instantiate the 'nc_export1' munger
+    m = sf.create_munger('local_data/mungers/nc_export1.txt')
+    
+# connect to db
+    conn = establish_connection()
+    cur = conn.cursor()
+    
+    a = sf.file_to_context(s.path_to_state_dir+'NC/data/'+df.file_name,s,df,m,conn,cur)
+    report.append(str(a))
+
+    return("<p>"+"</p><p>  ".join(report))
+    
+    
+
 
 @app.route('/create_cdf')
 def create_cdf():

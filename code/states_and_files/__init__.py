@@ -3,6 +3,8 @@ import re
 import sys
 import os.path
 from os import path
+import psycopg2
+from psycopg2 import sql
 
 ## Define classes
 
@@ -15,7 +17,7 @@ class State:
         self.schema_name=schema_name
         if path_to_state_dir[-1] != '/':     # should end in /
             path_to_state_dir += '/'
-        self.path_to_state_dir=path_to_state_dir
+        self.path_to_state_dir=path_to_state_dir    # dir contains the folder NC, doesn't include 'NC' in path.
         self.main_reporting_unit_type=main_reporting_unit_type
         self.reporting_units=reporting_units  # dictionary, with external codes
         self.elections=elections
@@ -40,23 +42,49 @@ class Datafile:
         self.correction_query_list=correction_query_list    # fix any known metadata errors; might be unnecessary if we are loading data via python directly into CDF rather than loading data into a raw SQL db. ***
 
 class Munger:
-    def __init__(self,name):
-        self.name=name
+    def __init__(self,name,election_query):
+        self.name=name      # 'nc_export1'
+        self.election_query=election_query       # 'SELECT DISTINCT election_date FROM {}.{}', must have exactly two slots for state.schema and datafile.table_name
         
+def file_to_context(file_path,s,df,m,conn,cur):
+    ''' s is a state; df is a datafile; m is a munger '''
+
+    
+# steps to extract context info from a precinct-results file and put it into the context folder ***:
+
+###### add election (and/or external id per file) to election.txt if necessary
+    cur.execute(sql.SQL(m.election_query).format(sql.Identifier(s.schema_name), sql.Identifier(df.table_name)))
+    a = cur.fetchall()
+###### add county external identifiers (per file) to reporting_units.txt if necessary
+###### add geoprecincts (and/or external ids per file) to reporting_units.txt if necessary
+###### add not-strictly-geo reporting units (and/or external ids per file) to reporting_units.txt if necessary
+###### add parties (and/or external ids per file) to parties.txt if necessary
+###### add offices (and/or external ids per file) to offices.txt if necessary
+######
+
+# steps to extract other info and put it into db
+###### create records in cdf.CandidateContest and cdf.BallotMeasureContest, with joins
+###### create records in cdf.CandidateSelection and cdf.BallotMeasureSelection, with joins
+###### create records in cdf.VoteCount, with joins
+    return(a)
+
 
 
 ## Initialize classes
+def create_munger(file_path):   # file should contain all munger info in a dictionary
+    with open(file_path,'r') as f:
+        d = eval(f.read())
+    return(Munger(d['name'],d['election_query']))
+
 def create_state(abbr,path_to_parent_dir):
     '''abbr is the capitalized two-letter postal code for the state, district or territory'''
     string_attributes = ['name','schema_name','parser_string','main_reporting_unit_type']
     object_attributes = ['type_map','reporting_units','elections','parties','offices']    # what consistency checks do we need? E.g., shouldn't all reporting units start with the state name?
     if not os.path.isdir(path_to_parent_dir):
-        print('Error: No directory '+path_to_parent_dir)
         return('Error: No directory '+path_to_parent_dir)
         sys.exit()
     for attr in string_attributes + object_attributes:
         if not os.path.isfile(path_to_parent_dir+abbr+'/context/'+attr+'.txt'):
-            print('Error: No file '+path_to_parent_dir+abbr+'/context/'+attr+'.txt')
             return('Error: No file '+path_to_parent_dir+abbr+'/context/'+attr+'.txt')
             sys.exit()
 
@@ -76,9 +104,9 @@ def create_state(abbr,path_to_parent_dir):
 def create_datafile(s,election,data_file_name,value_convention):
     # check that election is compatible with state
     # *** need to code the value_convention to pull the right identifiers, maybe column names too.
-    if election not in s.elections.keys():
-        print('No such election ('+election+') associated with state '+state.name)
-        sys.exit()
+    if s.name +' '+ election not in s.elections.keys():
+        return('No such election ('+election+') associated with state '+s.name)
+        # sys.exit()
     
     # read datafile info from context folder *** should be more efficient
     with open(s.path_to_state_dir+'context/datafiles.txt','r') as f:

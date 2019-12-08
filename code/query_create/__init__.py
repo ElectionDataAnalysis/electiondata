@@ -9,6 +9,8 @@ import sys
 from pathlib import Path
 import re
 import clean as cl
+import psycopg2
+from psycopg2 import sql
 
 def file_to_sql_statement_list(fpath):
     query_list = []
@@ -50,7 +52,6 @@ def comment_q(table,field,comment):
     return c
     
 def create_table(table_name,var_def_file,s,enc='utf8'):
-        drop_query = 'DROP TABLE IF EXISTS '+s.schema_name+'.'+table_name+';'
         create_query =  'CREATE TABLE '+s.schema_name+'.'+table_name+' ('
         with open(var_def_file,'r',encoding=enc) as f:
             var_def_list=[]
@@ -71,7 +72,7 @@ def create_table(table_name,var_def_file,s,enc='utf8'):
                     except:
                     	print("create_table: no comment found in "+";".join(comment,field,type))
         create_query = create_query + ','.join(var_def_list) + ');' +  ' '.join(comment_list)
-        return(drop_query,create_query)
+        return(create_query)
         
 def old_load_data(table_name,ext):
     if ext == 'txt':
