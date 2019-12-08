@@ -8,9 +8,10 @@
 import sys
 from pathlib import Path
 import re
-import clean as cl
 import psycopg2
 from psycopg2 import sql
+
+import clean as cl
 
 def file_to_sql_statement_list(fpath):
     query_list = []
@@ -42,57 +43,53 @@ def parse_line(s,line):
         comment = ''
     return(field,type,comment)
 
-def var_def(field,type):
-    v = field+' '+type
-    return v
-    
-def comment_q(table,field,comment):
-    ''' args are table name, field name, comment text'''
-    c = 'comment on column '+table+'.'+field+' is \''+comment+'\';'
-    return c
-    
-def create_table(table_name,var_def_file,s,enc='utf8'):
-        create_query =  'CREATE TABLE '+s.schema_name+'.'+table_name+' ('
-        with open(var_def_file,'r',encoding=enc) as f:
-            var_def_list=[]
-            comment_list=[]
-            for line in f.readlines():
-                if line.find('"')>0:
-                    print('create_table:Line has double quote, will not be processed:\n'+line)
-                else:
-                    try:
-                        [field,type,comment] = parse_line(s,line)
-                    except:
-                        print('create_table:Quoted line cannot be parsed, will not be processed: \n"'+line+'"')
-                        [field,type,comment] = ['parse_error','parse_error','parse_error']
-                    try:
-                        if len(comment):
-                            comment_list.append(comment_q(s.schema_name+'.'+table_name,field,comment))
-                        var_def_list.append(var_def(field,type))
-                    except:
-                    	print("create_table: no comment found in "+";".join(comment,field,type))
-        create_query = create_query + ','.join(var_def_list) + ');' +  ' '.join(comment_list)
-        return(create_query)
+def create_table(df):
+## clean the metadata file
+    fpath = cl.extract_first_col_defs(df.state.path_to_state_dir+'meta/'+df.metafile_name,df.state.path_to_state_dir+'tmp/',df.metafile_encoding)
+    create_query = 'CREATE TABLE {}.{} ('
+    sql_ids_create = [df.state.schema_name,df.table_name]
+    sql_ids_comment = []
+    strs_create = []
+    strs_comment = []
+    comments = []
+    var_defs = []
+    with open(fpath,'r',encoding=df.metafile_encoding) as f:
+        lines = f.readlines()
+    for line in lines:
+        if line.find('"')>0:
+            print('create_table:Line has double quote, will not be processed:\n'+line)
+        else:
+            try:
+                [field,type,comment] = parse_line(df.state,line)
+            except:
+                print('create_table:Quoted line cannot be parsed, will not be processed: \n"'+line+'"')
+                [field,type,comment] = ['parse_error','parse_error','parse_error']
+            if len(comment):
+                comments.append('comment on column {}.{}.{} is %s;')
+                sql_ids_comment += [df.state.schema_name,df.table_name,field]
+                strs_comment.append(comment)
+        ## check that type var is clean before inserting it
+            p = re.compile('^[\w\d()]+$')
+            if p.match(type):
+                var_defs.append('{} '+ type)    # not safest way to pass the type, but not sure how else to do it ***
+                sql_ids_create.append(field)
+            else:
+                var_defs.append('corrupted type')
+    create_query = create_query + ','.join(var_defs) + ');' +  ' '.join(comments)
+
+    return(create_query,strs_create+strs_comment,sql_ids_create+sql_ids_comment)
         
-def old_load_data(table_name,ext):
-    if ext == 'txt':
-        delimit = " DELIMITER E'\\t' QUOTE '\"' "
-    elif ext == 'csv':
-        delimit = " DELIMITER ',' "
-    q = "COPY "+table_name+" FROM STDIN "+delimit+" CSV HEADER"
-    return q
-    
-def load_data(conn,cursor,state,datafile):
+def load_data(conn,cursor,state,datafile):      ## does this belong in app.py? *** might not need psycopg2 here then
 # write raw data to db
     ext = datafile.file_name.split('.')[-1]    # extension, determines format
     if ext == 'txt':
         delimit = " DELIMITER E'\\t' QUOTE '\"' "
     elif ext == 'csv':
         delimit = " DELIMITER ',' "
-    q = "COPY "+state.schema_name+"."+datafile.table_name+" FROM STDIN "+delimit+" CSV HEADER"
-    clean_file=cl.remove_null_bytes(state.path_to_state_dir+'/data/'+datafile.file_name,'local_data/tmp/')
+    q = 'COPY {}.{} FROM STDIN '+delimit+' CSV HEADER'
+    clean_file=cl.remove_null_bytes(state.path_to_state_dir+'data/'+datafile.file_name,'local_data/tmp/')
     with open(clean_file,mode='r',encoding=datafile.encoding,errors='ignore') as f:
-        cursor.copy_expert(q,f)
+        cursor.copy_expert(sql.SQL(q).format(sql.Identifier(state.schema_name),sql.Identifier(datafile.table_name)),f)
     conn.commit()
 # update values to obey convention
     fup = []

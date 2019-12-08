@@ -17,7 +17,7 @@ class State:
         self.schema_name=schema_name
         if path_to_state_dir[-1] != '/':     # should end in /
             path_to_state_dir += '/'
-        self.path_to_state_dir=path_to_state_dir    # dir contains the folder NC, doesn't include 'NC' in path.
+        self.path_to_state_dir=path_to_state_dir    #  include 'NC' in path.
         self.main_reporting_unit_type=main_reporting_unit_type
         self.reporting_units=reporting_units  # dictionary, with external codes
         self.elections=elections
@@ -76,28 +76,27 @@ def create_munger(file_path):   # file should contain all munger info in a dicti
         d = eval(f.read())
     return(Munger(d['name'],d['election_query']))
 
-def create_state(abbr,path_to_parent_dir):
+def create_state(abbr,path_to_state_dir):
     '''abbr is the capitalized two-letter postal code for the state, district or territory'''
     string_attributes = ['name','schema_name','parser_string','main_reporting_unit_type']
     object_attributes = ['type_map','reporting_units','elections','parties','offices']    # what consistency checks do we need? E.g., shouldn't all reporting units start with the state name?
-    if not os.path.isdir(path_to_parent_dir):
-        return('Error: No directory '+path_to_parent_dir)
+    if path_to_state_dir[-1] != '/':
+        path_to_state_dir += '/'
+    if not os.path.isdir(path_to_state_dir):
+        return('Error: No directory '+path_to_state_dir)
         sys.exit()
     for attr in string_attributes + object_attributes:
-        if not os.path.isfile(path_to_parent_dir+abbr+'/context/'+attr+'.txt'):
-            return('Error: No file '+path_to_parent_dir+abbr+'/context/'+attr+'.txt')
+        if not os.path.isfile(path_to_state_dir+'context/'+attr+'.txt'):
+            return('Error: No file '+path_to_state_dir+'context/'+attr+'.txt')
             sys.exit()
 
-    if path_to_parent_dir[-1] != '/':
-        path_to_parent_dir += '/'
     d = {} # dictionary to hold attributes
     for attr in string_attributes:     # strings
-        with open(path_to_parent_dir+abbr+'/context/'+attr+'.txt') as f:
+        with open(path_to_state_dir+'context/'+attr+'.txt') as f:
             d[attr]=f.readline().strip()
     for attr in object_attributes:     # python objects
-        with open(path_to_parent_dir+abbr+'/context/'+attr+'.txt') as f:
+        with open(path_to_state_dir+'context/'+attr+'.txt') as f:
             d[attr]=eval(f.read())
-    path_to_state_dir = path_to_parent_dir+abbr+'/'
     meta_p=re.compile(d['parser_string'])
     return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_state_dir,d['main_reporting_unit_type'],d['reporting_units'],d['elections'],d['parties'],d['offices'])
 
@@ -113,8 +112,7 @@ def create_datafile(s,election,data_file_name,value_convention):
         d_all = eval(f.read())
         d = d_all[election+';'+data_file_name]
     table_name=re.sub(r'\W+', '', election+data_file_name)
-    correction_query_list = ['ALTER TABLE ' + s.schema_name + '.' + table_name + ' ' + alteration for alteration in d['alteration_list']]
-    return(Datafile(s,election, table_name,data_file_name,d['data_file_encoding'],d['meta_file'], d['meta_file_encoding'],value_convention,d['source_url'],d['file_date'],d['download_date'],d['note'],correction_query_list))
+    return(Datafile(s,election, table_name,data_file_name,d['data_file_encoding'],d['meta_file'], d['meta_file_encoding'],value_convention,d['source_url'],d['file_date'],d['download_date'],d['note'],d['correction_query_list']))
     
 def build_value_convention(external_key):
     ''' given an external identifier key (e.g., 'nc_export1'), return a dictionary whose keys are fields and whose values are dictionaries of field values E.g.,

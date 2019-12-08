@@ -91,7 +91,7 @@ def raw_data():
     with open(logfilepath,'a') as sys.stdout:
 
     # instantiate state of NC
-        s = sf.create_state('NC','local_data/')
+        s = sf.create_state('NC','local_data/NC')
     # instantiate the NC datafiles
         datafiles = [sf.create_datafile(s,'General Election 2018-11-06','results_pct_20181106.txt',{}), sf.create_datafile(s,'General Election 2018-11-06','absentee_20181106.csv',{})]
 
@@ -113,16 +113,17 @@ def raw_data():
             fpath = cl.extract_first_col_defs(fpath,'local_data/tmp/',e)
 
         # create table and commit
-            create_query = q.create_table(t,fpath,s,e) 
-
+ 
             cur.execute(sql.SQL('DROP TABLE IF EXISTS {}.{}').format(sql.Identifier(s.schema_name),sql.Identifier(t)))
-            cur.execute(create_query)
-            report.append(create_query)
+            [query,strs,sql_ids] = q.create_table(d)
+            format_args = [sql.Identifier(x) for x in sql_ids]
+            cur.execute(sql.SQL(query).format( *format_args ),strs)
+            diagnostic = sql.SQL(query).format( *format_args ).as_string(conn)
             conn.commit()
 
         # correct any errors due to foibles of particular datafile and commit
             for query in d.correction_query_list:
-                cur.execute(query)
+                cur.execute(sql.SQL(query).format(sql.Identifier(s.schema_name), sql.Identifier(d.table_name)))
                 report.append(query)
                 conn.commit()
 
@@ -143,7 +144,7 @@ def file_to_context():
 # initialize report for logging
     report=[str(datetime.now())]
 # instantiate state of NC
-    s = sf.create_state('NC','local_data/')
+    s = sf.create_state('NC','local_data/NC')
 # instantiate the NC pct_result datafile
     df = sf.create_datafile(s,'General Election 2018-11-06','results_pct_20181106.txt',{})
 # instantiate the 'nc_export1' munger
@@ -153,7 +154,7 @@ def file_to_context():
     conn = establish_connection()
     cur = conn.cursor()
     
-    a = sf.file_to_context(s.path_to_state_dir+'NC/data/'+df.file_name,s,df,m,conn,cur)
+    a = sf.file_to_context(s.path_to_state_dir+'data/'+df.file_name,s,df,m,conn,cur)
     report.append(str(a))
 
     return("<p>"+"</p><p>  ".join(report))
@@ -166,7 +167,7 @@ def create_cdf():
     report=[str(datetime.now())]
     # instantiate state of NC
     report.append('Create NC')
-    s = sf.create_state('NC','local_data/')
+    s = sf.create_state('NC','local_data/NC')
     
     report.append('Connect to db')
     conn = establish_connection()
@@ -200,7 +201,7 @@ def load_cdf():
     report=[str(datetime.now())]
     # instantiate state of NC
     report.append('Create NC')
-    s = sf.create_state('NC','local_data/')
+    s = sf.create_state('NC','local_data/NC')
     
     report.append('Connect to db')
     conn = establish_connection()
@@ -226,7 +227,7 @@ def load_cdf():
 def analyze():
     report=[""]
 # instantiate state of NC
-    s = sf.create_state('NC','local_data/') # do we need this?
+    s = sf.create_state('NC','local_data/NC') # do we need this?
     conn = establish_connection()
     cur = conn.cursor()
     
