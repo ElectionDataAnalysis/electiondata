@@ -69,7 +69,7 @@ def create_table(df):
                 sql_ids_comment += [df.state.schema_name,df.table_name,field]
                 strs_comment.append(comment)
         ## check that type var is clean before inserting it
-            p = re.compile('^[\w\d()]+$')
+            p = re.compile('^[\w\d()]+$')       # type should contain only alphanumerics and parentheses
             if p.match(type):
                 var_defs.append('{} '+ type)    # not safest way to pass the type, but not sure how else to do it ***
                 sql_ids_create.append(field)
@@ -83,15 +83,16 @@ def load_data(conn,cursor,state,datafile):      ## does this belong in app.py? *
 # write raw data to db
     ext = datafile.file_name.split('.')[-1]    # extension, determines format
     if ext == 'txt':
-        delimit = " DELIMITER E'\\t' QUOTE '\"' "
+        q = "COPY {}.{} FROM STDIN DELIMITER E'\\t' QUOTE '\"' CSV HEADER"
     elif ext == 'csv':
-        delimit = " DELIMITER ',' "
-    q = 'COPY {}.{} FROM STDIN '+delimit+' CSV HEADER'
+        q = "COPY {}.{} FROM STDIN DELIMITER ',' CSV HEADER"
+
+    
     clean_file=cl.remove_null_bytes(state.path_to_state_dir+'data/'+datafile.file_name,'local_data/tmp/')
     with open(clean_file,mode='r',encoding=datafile.encoding,errors='ignore') as f:
         cursor.copy_expert(sql.SQL(q).format(sql.Identifier(state.schema_name),sql.Identifier(datafile.table_name)),f)
     conn.commit()
-# update values to obey convention
+# update values to obey convention *** need to take this out, but first make sure /analysis will work
     fup = []
     for field in datafile.value_convention.keys():
         condition = []
