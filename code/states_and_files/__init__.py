@@ -80,7 +80,16 @@ def create_datafile(s,election,data_file_name,value_convention):
     return(Datafile(s,election, table_name,data_file_name,d['data_file_encoding'],d['meta_file'], d['meta_file_encoding'],value_convention,d['source_url'],d['file_date'],d['download_date'],d['note'],correction_query_list))
     
 def build_value_convention(external_key):
-    ''' given an external identifier key (e.g., 'nc_export1'), return a dictionary whose keys are fields and whose values are dictionaries of field values'''
+    ''' given an external identifier key (e.g., 'nc_export1'), return a dictionary whose keys are fields and whose values are dictionaries of field values E.g.,
+        {'nc_export1':{
+            'reportingunit':{
+                'county':'County',
+                'precinct':'CONCATENATE(county,";",precinct)'}
+            },
+        }
+        The purpose is to explicitly map the cdf.reportingunit.name to the info in the export file.
+        *** problem: for reporting units, the format depends on the type (county vs. precinct vs. vote-center, etc.), while for other things (e.g., parties) the format does not depend on the type. how to handle this discrepancy?
+        '''
     
 ########################################
 

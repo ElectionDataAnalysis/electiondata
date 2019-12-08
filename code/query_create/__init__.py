@@ -10,6 +10,17 @@ from pathlib import Path
 import re
 import clean as cl
 
+def file_to_sql_statement_list(fpath):
+    query_list = []
+    with open(fpath,'r') as f:
+        fstring = f.read()
+    p = re.compile('-- .*$',re.MULTILINE)
+    clean_string = re.sub(p,' ',fstring)            # get rid of comments
+    clean_string = re.sub('\n|\r',' ',clean_string)    # get rid of newlines
+    query_list = clean_string.split(';')
+    query_list = [q.strip() for q in query_list]    # strip leading and trailing whitespace
+    return(query_list)
+
 
 
     

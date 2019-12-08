@@ -24,6 +24,8 @@ import query_create as q
 import clean as cl
 
 ## define some basics
+
+
 def path_to_file(path_to_dir,filename):
     if path_to_dir[-1] == '/':
         out = path_to_dir
@@ -148,14 +150,12 @@ def create_cdf():
     
     mypath=Path('SQL/Create_CDF_db.sql')
     if mypath.is_file():
-        with open('SQL/Create_CDF_db.sql','r') as f:
-            queries = f.read().replace('\n','').replace('\r','').split(';')  # remove newlines from the file and split into queries
-            for query in queries:
-                try:
-                    cur.execute(query)
-                    report.append('executed query '+query)
-                except:
-                    report.append('query failed: '+query)
+        queries = q.file_to_sql_statement_list(mypath)
+        for query in queries:
+            try:
+                cur.execute(query)
+            except:
+                report.append('query failed: '+query)
         report.append('Created cdf schema in db')
     else:
         report.append('no such file SQL/Create_CDF_db.sql')
