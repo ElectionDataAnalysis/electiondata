@@ -14,8 +14,8 @@ text varchar(30) UNIQUE NOT NULL
 );
 COPY cdf.IdentifierType (text) FROM '/container_root_dir/SQL/enumerations/IdentifierType.txt';
 
-DROP TABLE IF EXISTS cdf.GPUnit;
-CREATE TABLE cdf.GPUnit (
+DROP TABLE IF EXISTS cdf.GpUnit;
+CREATE TABLE cdf.GpUnit (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
 name varchar(50) UNIQUE
 );

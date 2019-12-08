@@ -4,6 +4,8 @@ import sys
 import os.path
 from os import path
 
+## Define classes
+
 class State:
     def __init__(self,abbr,name,meta_parser,type_map,schema_name,path_to_state_dir,main_reporting_unit_type,reporting_units,elections,parties,offices):
         self.abbr = abbr
@@ -21,33 +23,6 @@ class State:
         self.offices=offices
 
     
-def create_state(abbr,path_to_parent_dir):
-    '''abbr is the capitalized two-letter postal code for the state, district or territory'''
-    string_attributes = ['name','schema_name','parser_string','main_reporting_unit_type']
-    object_attributes = ['type_map','reporting_units','elections','parties','offices']    # what consistency checks do we need? E.g., shouldn't all reporting units start with the state name?
-    if not os.path.isdir(path_to_parent_dir):
-        print('Error: No directory '+path_to_parent_dir)
-        return('Error: No directory '+path_to_parent_dir)
-        sys.exit()
-    for attr in string_attributes + object_attributes:
-        if not os.path.isfile(path_to_parent_dir+abbr+'/context/'+attr+'.txt'):
-            print('Error: No file '+path_to_parent_dir+abbr+'/context/'+attr+'.txt')
-            return('Error: No file '+path_to_parent_dir+abbr+'/context/'+attr+'.txt')
-            sys.exit()
-    
-    if path_to_parent_dir[-1] != '/':
-        path_to_parent_dir += '/'
-    d = {} # dictionary to hold attributes
-    for attr in string_attributes:     # strings
-        with open(path_to_parent_dir+abbr+'/context/'+attr+'.txt') as f:
-            d[attr]=f.readline().strip()
-    for attr in object_attributes:     # python objects
-        with open(path_to_parent_dir+abbr+'/context/'+attr+'.txt') as f:
-            d[attr]=eval(f.read())
-    path_to_state_dir = path_to_parent_dir+abbr+'/'
-    meta_p=re.compile(d['parser_string'])
-    return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_state_dir,d['main_reporting_unit_type'],d['reporting_units'],d['elections'],d['parties'],d['offices'])
-
 class Datafile:
     def __init__(self,state, election, table_name, file_name, encoding,metafile_name,metafile_encoding,value_convention,source_url,file_date,download_date,note,correction_query_list):
         self.state=state
@@ -63,6 +38,40 @@ class Datafile:
         self.download_date=download_date
         self.note=note
         self.correction_query_list=correction_query_list    # fix any known metadata errors; might be unnecessary if we are loading data via python directly into CDF rather than loading data into a raw SQL db. ***
+
+class Munger:
+    def __init__(self,name):
+        self.name=name
+        
+
+
+## Initialize classes
+def create_state(abbr,path_to_parent_dir):
+    '''abbr is the capitalized two-letter postal code for the state, district or territory'''
+    string_attributes = ['name','schema_name','parser_string','main_reporting_unit_type']
+    object_attributes = ['type_map','reporting_units','elections','parties','offices']    # what consistency checks do we need? E.g., shouldn't all reporting units start with the state name?
+    if not os.path.isdir(path_to_parent_dir):
+        print('Error: No directory '+path_to_parent_dir)
+        return('Error: No directory '+path_to_parent_dir)
+        sys.exit()
+    for attr in string_attributes + object_attributes:
+        if not os.path.isfile(path_to_parent_dir+abbr+'/context/'+attr+'.txt'):
+            print('Error: No file '+path_to_parent_dir+abbr+'/context/'+attr+'.txt')
+            return('Error: No file '+path_to_parent_dir+abbr+'/context/'+attr+'.txt')
+            sys.exit()
+
+    if path_to_parent_dir[-1] != '/':
+        path_to_parent_dir += '/'
+    d = {} # dictionary to hold attributes
+    for attr in string_attributes:     # strings
+        with open(path_to_parent_dir+abbr+'/context/'+attr+'.txt') as f:
+            d[attr]=f.readline().strip()
+    for attr in object_attributes:     # python objects
+        with open(path_to_parent_dir+abbr+'/context/'+attr+'.txt') as f:
+            d[attr]=eval(f.read())
+    path_to_state_dir = path_to_parent_dir+abbr+'/'
+    meta_p=re.compile(d['parser_string'])
+    return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_state_dir,d['main_reporting_unit_type'],d['reporting_units'],d['elections'],d['parties'],d['offices'])
 
 def create_datafile(s,election,data_file_name,value_convention):
     # check that election is compatible with state
