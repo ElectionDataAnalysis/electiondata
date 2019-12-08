@@ -4,6 +4,14 @@
 import sys
 import re
 
+# the main event: process a datafile, using info there to update the context folder for the associated state
+def update_context_per_datafile(df):
+    ''' df is an element of the Datafile class '''
+    s = df.state
+    # *** to be written
+    return()
+
+### supporting routines
 def shorten_and_cap_county(normal):
     ''' takes a county name in normal form, strips "County" from the name, and capitalizes'''
     parts=normal.split(';')
@@ -97,7 +105,7 @@ def insert_offices(s,d):
     return(out_d)
     
 
-        
+# is this still necessary?
 def process(nc_pct_results_file_path,dict_file_path,outfile):
     a = extract_precincts(nc_pct_results_file_path)
     with open(dict_file_path,'r') as f:
