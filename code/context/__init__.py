@@ -105,6 +105,8 @@ def insert_offices(s,d):
     return(out_d)
     
 
+
+
 # is this still necessary?
 def process(nc_pct_results_file_path,dict_file_path,outfile):
     a = extract_precincts(nc_pct_results_file_path)
@@ -113,3 +115,26 @@ def process(nc_pct_results_file_path,dict_file_path,outfile):
     insert_reporting_unit(d,a,'nc_export1')
     with open(outfile,'w') as f:
         f.write(str(d))
+
+
+## temporary code to fix nc_export1 reporting unit ExternalIdentifiers
+
+def fix(fp):        # fp is the path to the reporting_unit.txt file
+    with open(fp,'r') as f:
+        d= eval(f.read())
+    for k in d.keys():
+        if d[k]['Type'] == 'precinct':
+            d[k]['ExternalIdentifiers']['nc_export1']  # remove old
+            sections = k.split(';')
+            county_key = sections[1]
+            nc_export1_county = shorten_and_cap_county(k)
+            p = re.compile('^Precinct (?P<precinct>.+)$')
+            m = p.search(sections[2])
+            precinct = m.group('precinct')
+            d[k]['ExternalIdentifiers']['nc_export1'] = precinct
+    with open(fp+'.new','w') as f:
+        f.write(str(d))
+
+
+
+
