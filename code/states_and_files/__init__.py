@@ -73,6 +73,7 @@ def file_to_context(file_path,df,m,conn,cur):
         return_strings.append('For \''+m.name +'\', list of missing '+i[0]+' is: '+str(missing)+'. Add any missing '+i[0]+' to the '+i[0]+'.txt file and rerun')
 
 ###### flag reporting-units that need to be added (by hand, because contextual knowledge is necessary) to the context folder and the relevant dictionaries
+############### counties
 
     for i in [['counties',m.county_query, 'county'],['geoprecincts',m.geoprecinct_query,'precinct']]:
         cur.execute(sql.SQL(i[1]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
