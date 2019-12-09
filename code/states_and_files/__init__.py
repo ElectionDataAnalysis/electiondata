@@ -59,17 +59,17 @@ def file_to_context(file_path,df,m,conn,cur):
     return_strings = []
     for i in [[ 'elections',m.election_query, df.state.elections],['parties',m.party_query,df.state.parties,]]:
         cur.execute(sql.SQL(i[1]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
-        items_per_file = cur.fetchall()
+        items_per_df = cur.fetchall()
         ## build dict of keys with external identifiers called m.name *** where else is this used?
         munger_d = {}
         for k in i[2].keys():
             if m.name in i[2][k]['ExternalIdentifiers'].keys():
                 munger_d[k] = i[2][k]['ExternalIdentifiers'][m.name]
         missing = []
-        for e in items_per_file:
+        for e in items_per_df:
             if e[0] not in munger_d.values():
                 missing.append(e[0])
-        return_strings.append('Sample data for '+i[0]+': '+str( items_per_file[0:4]))
+        return_strings.append('Sample data for '+i[0]+': '+str( items_per_df[0:4]))
         return_strings.append('For \''+m.name +'\', list of missing '+i[0]+' is: '+str(missing)+'. Add any missing '+i[0]+' to the '+i[0]+'.txt file and rerun')
 
 ###### flag reporting-units that need to be added (by hand, because contextual knowledge is necessary) to the context folder and the relevant dictionaries
@@ -77,17 +77,17 @@ def file_to_context(file_path,df,m,conn,cur):
 
     for i in [['counties',m.county_query, 'county'],['geoprecincts',m.geoprecinct_query,'precinct']]:
         cur.execute(sql.SQL(i[1]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
-        items_per_file = cur.fetchall()
+        items_per_df = cur.fetchall()
         ## build dict of keys with external identifiers called m.name *** where else is this used?
         munger_d = {}
         for k in df.state.reporting_units.keys():
             if m.name in df.state.reporting_units[k]['ExternalIdentifiers'].keys() and df.state.reporting_units[k]['Type'] == i[2]: # for reporting units, need to check Type as well.
                 munger_d[k] = df.state.reporting_units[k]['ExternalIdentifiers'][m.name]
         missing = []
-        for e in items_per_file:
-            if e[0] not in munger_d.values():
-                missing.append(e[0])
-        return_strings.append('Sample data for '+i[0]+': '+str( items_per_file[0:4]))
+        for e in items_per_df:
+            if ';'.join(e) not in munger_d.values():
+                missing.append(';'.join(e))
+        return_strings.append('Sample data for '+i[0]+': '+str( items_per_df[0:4]))
         return_strings.append('For \''+m.name +'\', list of missing '+i[0]+' is: '+str(missing)+'. Add any missing '+i[0]+' to the reporting_units.txt file and rerun')
     return('</p><p>'.join(return_strings))
 
