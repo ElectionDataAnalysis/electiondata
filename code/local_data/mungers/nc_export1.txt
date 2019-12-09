@@ -1,0 +1,7 @@
+{'name':'nc_export1',
+'election_query':'SELECT DISTINCT Election_Date FROM {}.{}',
+'county_query':'SELECT DISTINCT County FROM {}.{}',
+'party_query':'SELECT DISTINCT Choice_Party FROM {}.{}',
+'geopreinct_query':''}
+
+}
