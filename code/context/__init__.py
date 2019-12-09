@@ -123,14 +123,15 @@ def fix(fp):        # fp is the path to the reporting_unit.txt file
     with open(fp,'r') as f:
         d= eval(f.read())
     for k in d.keys():
-        if d[k]['Type'] == 'precinct':
+        if d[k]['Type'][:6] == 'other;':
             d[k]['ExternalIdentifiers']['nc_export1']  # remove old
             sections = k.split(';')
             county_key = sections[1]
             nc_export1_county = shorten_and_cap_county(k)
-            p = re.compile('^Precinct (?P<precinct>.+)$')
-            m = p.search(sections[2])
-            precinct = m.group('precinct')
+            #p = re.compile('^Precinct (?P<precinct>.+)$')
+            #m = p.search(sections[2])
+            #precinct = m.group('precinct')
+            precinct = sections[3]
             d[k]['ExternalIdentifiers']['nc_export1'] = nc_export1_county+';'+precinct
     with open(fp+'.new','w') as f:
         f.write(str(d))

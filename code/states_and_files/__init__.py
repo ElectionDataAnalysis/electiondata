@@ -42,12 +42,13 @@ class Datafile:
         self.correction_query_list=correction_query_list    # fix any known metadata errors; might be unnecessary if we are loading data via python directly into CDF rather than loading data into a raw SQL db. ***
 
 class Munger:
-    def __init__(self,name,election_query,county_query,party_query,geoprecinct_query):
+    def __init__(self,name,election_query,county_query,party_query,geoprecinct_query,other_reporting_units_query):
         self.name=name      # 'nc_export1'
         self.election_query=election_query          #  must have exactly two slots for state.schema and datafile.table_name
         self.county_query=county_query              #  must have exactly two slots for state.schema and datafile.table_name
         self.party_query=party_query              #  must have exactly two slots for state.schema and datafile.table_name
-        self.geoprecinct_query=geoprecinct_query              #  *** need to write
+        self.geoprecinct_query=geoprecinct_query
+        self.other_reporting_units_query=other_reporting_units_query
 
         
 def file_to_context(file_path,df,m,conn,cur):
@@ -73,14 +74,15 @@ def file_to_context(file_path,df,m,conn,cur):
         return_strings.append('For \''+m.name +'\', list of missing '+i[0]+' is: '+str(missing)+'. Add any missing '+i[0]+' to the '+i[0]+'.txt file and rerun')
 
 ###### flag reporting-units that need to be added (by hand, because contextual knowledge is necessary) to the context folder and the relevant dictionaries
-############### counties
+############### counties, geoprecincts, reporting units of type 'other'
 
-    for i in [['counties',m.county_query, 'county'],['geoprecincts',m.geoprecinct_query,'precinct']]:
+    for i in [['counties',m.county_query, 'county'],['geoprecincts',m.geoprecinct_query,'precinct'],['other reporting units',m.other_reporting_units_query,'other']]:
         cur.execute(sql.SQL(i[1]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
         items_per_df = cur.fetchall()
         ## build dict of keys with external identifiers called m.name *** where else is this used?
         munger_d = {}
         for k in df.state.reporting_units.keys():
+            type = df.state.reporting_units[k]['Type'].split(';')[0]
             if m.name in df.state.reporting_units[k]['ExternalIdentifiers'].keys() and df.state.reporting_units[k]['Type'] == i[2]: # for reporting units, need to check Type as well.
                 munger_d[k] = df.state.reporting_units[k]['ExternalIdentifiers'][m.name]
         missing = []
@@ -108,7 +110,7 @@ def file_to_context(file_path,df,m,conn,cur):
 def create_munger(file_path):   # file should contain all munger info in a dictionary
     with open(file_path,'r') as f:
         d = eval(f.read())
-    return(Munger(d['name'],d['election_query'],d['county_query'],d['party_query'],d['geoprecinct_query']))
+    return(Munger(d['name'],d['election_query'],d['county_query'],d['party_query'],d['geoprecinct_query'],d['other_reporting_units_query']))
 
 def create_state(abbr,path_to_state_dir):
     '''abbr is the capitalized two-letter postal code for the state, district or territory'''

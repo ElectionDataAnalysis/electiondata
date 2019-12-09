@@ -2,5 +2,6 @@
 'election_query':'SELECT DISTINCT Election_Date FROM {}.{}',
 'county_query':'SELECT DISTINCT County FROM {}.{}',
 'party_query':'SELECT DISTINCT Choice_Party FROM {}.{}',
-'geoprecinct_query':'SELECT DISTINCT County,Precinct FROM {}.{} WHERE Real_Precinct = \'Y\''
+'geoprecinct_query':'SELECT DISTINCT County,Precinct FROM {}.{} WHERE Real_Precinct = \'Y\'',
+'other_reporting_units_query':'SELECT DISTINCT County,Precinct FROM {}.{} WHERE Real_Precinct != \'Y\''
 }
