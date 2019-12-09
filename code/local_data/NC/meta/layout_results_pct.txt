@@ -1,0 +1,132 @@
+/***********************************************************************************
+* name:     layout_results_pct.txt
+* purpose:  Information related to election day/canvass results.
+* updated:  10/19/2018
+***********************************************************************************/
+
+
+------------------------------------------------------------------------------------
+-- File layout: after July 1, 2018
+-- File format: TAB delimited
+------------------------------------------------------------------------------------
+county				text(30)	County name
+election date			text(10)	Election date (MM/DD/YYYY)
+precinct			text(12)	Precinct
+contest group id		number		Group ID of the contest (used to link contests across counties)
+contest type			text(1)		Type of contest
+contest name			text(60)	Name of the contest
+choice				text(60)	Name of the choice
+choice party			text(3)		Party of the choice
+vote for			number		Number of votes allowed to be cast for the contest
+election day			number		Number of votes with vote method of election day
+one stop			number		Number of votes with vote method of one-stop
+absentee by mail		number		Number of votes with vote method of absentee by mail
+provisional			number		Number of votes with vote method of provisional
+total votes			number		Number of votes all total
+real precinct			text(1)		Y/N - Y = real precinct; N = administrative precinct
+
+------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------
+-- File layout: between January 1, 2014 and July 1, 2018
+-- File format: TAB delimited
+------------------------------------------------------------------------------------
+county				text(30)	County name
+election date			text(10)	Election date (MM/DD/YYYY)
+precinct			text(12)	Precinct
+contest group id		number		Group ID of the contest (used to link contests across counties)
+contest type			text(1)		Type of contest
+contest name			text(60)	Name of the contest
+choice				text(60)	Name of the choice
+choice party			text(3)		Party of the choice
+vote for			number		Number of votes allowed to be cast for the contest
+election day			number		Number of votes with vote method of election day
+one stop			number		Number of votes with vote method of one-stop
+absentee by mail		number		Number of votes with vote method of absentee by mail
+provisional			number		Number of votes with vote method of provisional
+total votes			number		Number of votes all total
+
+------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------
+-- File layout: between January 1, 2010 and January 1, 2014
+-- File format: comma separated
+------------------------------------------------------------------------------------
+county_name			text(30)	County name
+precinct	
+contest_type	
+runoff_status	
+recount_status			
+contest	
+choice	
+winner_status
+party
+election day	        	number		Number of votes with vote method of election day
+one stop         		number		Number of votes with vote method of one-stop
+absentee by mail           	number		Number of votes with vote method of absentee by mail
+provisional             	number		Number of votes with vote method of provisional
+total votes			number		Number of votes all total
+district
+
+------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------
+-- File layout: between January 1, 2008 and January 1, 2010
+-- File format: comma separated
+------------------------------------------------------------------------------------
+county_name			text(30)	County name
+precinct 	
+contest_type 	
+runoff_status 	
+recount_status			
+contest	
+choice	
+winner_status
+party
+election day	        	number		Number of votes with vote method of election day
+absentee/one stop         	number		Number of votes with vote method of absentee or one-stop
+provisional             	number		Number of votes with vote method of provisional
+total votes			number		Number of votes all total
+district
+
+------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------
+-- File layout: between January 1, 2007 and January 1, 2008
+-- File format: comma separated
+------------------------------------------------------------------------------------
+county				text(60)	County name
+election_dt			text(10)	Date of the election
+precinct           		text(60)	Precinct description
+contest				text(30)	Name of the contest
+name_on_ballot			text(30)	Name of the choice
+party_cd			text(3)		Party of the candidate
+election_day_count	        number		Number of votes with vote method of election day
+absentee_count         		number		Number of votes with vote method of absentee or one-stop
+provisional_count             	number		Number of votes with vote method of provisional
+total_vote_count		number		Number of votes all total
+
+------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------
+-- File layout: before January 1, 2007
+-- File format: comma separated
+------------------------------------------------------------------------------------
+county				text(60)	County name
+election_dt			text(10)	Date of the election
+precinct_abbrv         		text(6)		Precinct label
+precinct         		text(60)        Precinct description
+contest_name			text(30)	Name of the contest
+name_on_ballot			text(30)        Name of the choice
+party_cd			text(3)		Party of the candidate
+ballot_count			number		Number of votes all total
+FTP_date			datetime	
+
+------------------------------------------------------------------------------------
+
+
