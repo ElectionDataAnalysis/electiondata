@@ -42,20 +42,33 @@ class Datafile:
         self.correction_query_list=correction_query_list    # fix any known metadata errors; might be unnecessary if we are loading data via python directly into CDF rather than loading data into a raw SQL db. ***
 
 class Munger:
-    def __init__(self,name,election_query):
+    def __init__(self,name,election_query,county_query):
         self.name=name      # 'nc_export1'
         self.election_query=election_query       # 'SELECT DISTINCT election_date FROM {}.{}', must have exactly two slots for state.schema and datafile.table_name
-        
-def file_to_context(file_path,s,df,m,conn,cur):
-    ''' s is a state; df is a datafile; m is a munger '''
+        self.county_query=county_query       # 'SELECT DISTINCT election_date FROM {}.{}', must have exactly two slots for state.schema and datafile.table_name
 
-    
+def file_to_context(file_path,df,m,conn,cur):
+    ''' df is a datafile; m is a munger; what is file_path?'''
+
 # steps to extract context info from a precinct-results file and put it into the context folder ***:
 
-###### add election (and/or external id per file) to election.txt if necessary
-    cur.execute(sql.SQL(m.election_query).format(sql.Identifier(s.schema_name), sql.Identifier(df.table_name)))
-    a = cur.fetchall()
 ###### add county external identifiers (per file) to reporting_units.txt if necessary
+
+###### flag election-identifiers that need to be added (by hand, because contextual knowledge is necessary) to the elections.txt folder and the state.elections dictionary
+    
+    cur.execute(sql.SQL(m.election_query).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
+    election_list = cur.fetchall()[0]
+    ## build dict of keys with external identifiers called m.name *** where else is this used?
+    munger_d = {}
+    for k in df.state.elections.keys():
+        if m.name in df.state.elections[k]['ExternalIdentifiers'].keys():
+            munger_d[k] = df.state.elections[k]['ExternalIdentifiers'][m.name]
+    missing_elections = []
+    for e in election_list:
+        if e not in munger_d.values():
+            missing_elections.append(e)
+    return('List of missing elections is: '+str(missing_elections)+'. Add any missing elections to the elections.txt file and rerun')   # *** collect all these instructions in one run.
+    
 ###### add geoprecincts (and/or external ids per file) to reporting_units.txt if necessary
 ###### add not-strictly-geo reporting units (and/or external ids per file) to reporting_units.txt if necessary
 ###### add parties (and/or external ids per file) to parties.txt if necessary
@@ -66,7 +79,6 @@ def file_to_context(file_path,s,df,m,conn,cur):
 ###### create records in cdf.CandidateContest and cdf.BallotMeasureContest, with joins
 ###### create records in cdf.CandidateSelection and cdf.BallotMeasureSelection, with joins
 ###### create records in cdf.VoteCount, with joins
-    return(a)
 
 
 
@@ -74,7 +86,7 @@ def file_to_context(file_path,s,df,m,conn,cur):
 def create_munger(file_path):   # file should contain all munger info in a dictionary
     with open(file_path,'r') as f:
         d = eval(f.read())
-    return(Munger(d['name'],d['election_query']))
+    return(Munger(d['name'],d['election_query'],d['county_query']))
 
 def create_state(abbr,path_to_state_dir):
     '''abbr is the capitalized two-letter postal code for the state, district or territory'''
