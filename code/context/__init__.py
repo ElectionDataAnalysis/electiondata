@@ -131,7 +131,7 @@ def fix(fp):        # fp is the path to the reporting_unit.txt file
             p = re.compile('^Precinct (?P<precinct>.+)$')
             m = p.search(sections[2])
             precinct = m.group('precinct')
-            d[k]['ExternalIdentifiers']['nc_export1'] = precinct
+            d[k]['ExternalIdentifiers']['nc_export1'] = nc_export1_county+';'+precinct
     with open(fp+'.new','w') as f:
         f.write(str(d))
 
