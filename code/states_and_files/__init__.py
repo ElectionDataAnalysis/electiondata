@@ -55,28 +55,45 @@ def file_to_context(file_path,df,m,conn,cur):
 
 # steps to extract context info from a precinct-results file and put it into the context folder ***:
 
-###### flag election-identifiers, parties that need to be added (by hand, because contextual knowledge is necessary) to the elections.txt folder and the state.elections dictionary
+###### flag elections, parties that need to be added (by hand, because contextual knowledge is necessary) to the context folder and the relevant dictionaries
     return_strings = []
-    for i in [[m.election_query, df.state.elections, 'elections'],[m.party_query,df.state.parties,'parties']]:
-        cur.execute(sql.SQL(i[0]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
+    for i in [[ 'elections',m.election_query, df.state.elections],['parties',m.party_query,df.state.parties,]]:
+        cur.execute(sql.SQL(i[1]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
         items_per_file = cur.fetchall()
         ## build dict of keys with external identifiers called m.name *** where else is this used?
         munger_d = {}
-        for k in i[1].keys():
-            if m.name in i[1][k]['ExternalIdentifiers'].keys():     # for reporting units, should we check that the type is correct? ***
-                munger_d[k] = i[1][k]['ExternalIdentifiers'][m.name]
+        for k in i[2].keys():
+            if m.name in i[2][k]['ExternalIdentifiers'].keys():
+                munger_d[k] = i[2][k]['ExternalIdentifiers'][m.name]
         missing = []
         for e in items_per_file:
             if e[0] not in munger_d.values():
                 missing.append(e[0])
-        return_strings.append('Sample data for '+i[2]+': '+str( items_per_file[0:4]))
-        return_strings.append('For \''+m.name +'\', list of missing '+i[2]+' is: '+str(missing)+'. Add any missing '+i[2]+' to the '+i[2]+'.txt file and rerun')
+        return_strings.append('Sample data for '+i[0]+': '+str( items_per_file[0:4]))
+        return_strings.append('For \''+m.name +'\', list of missing '+i[0]+' is: '+str(missing)+'. Add any missing '+i[0]+' to the '+i[0]+'.txt file and rerun')
+
+###### flag reporting-units that need to be added (by hand, because contextual knowledge is necessary) to the context folder and the relevant dictionaries
+
+    for i in [['counties',m.county_query, 'county'],['geoprecincts',m.geoprecinct_query,'precinct']]:
+        cur.execute(sql.SQL(i[1]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
+        items_per_file = cur.fetchall()
+        ## build dict of keys with external identifiers called m.name *** where else is this used?
+        munger_d = {}
+        for k in df.state.reporting_units.keys():
+            if m.name in df.state.reporting_units[k]['ExternalIdentifiers'].keys() and df.state.reporting_units[k]['Type'] == i[2]: # for reporting units, need to check Type as well.
+                munger_d[k] = df.state.reporting_units[k]['ExternalIdentifiers'][m.name]
+        missing = []
+        for e in items_per_file:
+            if e[0] not in munger_d.values():
+                missing.append(e[0])
+        return_strings.append('Sample data for '+i[0]+': '+str( items_per_file[0:4]))
+        return_strings.append('For \''+m.name +'\', list of missing '+i[0]+' is: '+str(missing)+'. Add any missing '+i[0]+' to the reporting_units.txt file and rerun')
     return('</p><p>'.join(return_strings))
-    
+
 ###### add counties (and/or external ids per file) to reporting_units.txt if necessary [m.county_query, df.state.reporting_units, '(county) reporting units'],
 ###### add geoprecincts (and/or external ids per file) to reporting_units.txt if necessary
 ###### add not-strictly-geo reporting units (and/or external ids per file) to reporting_units.txt if necessary
-###### add offices (and/or external ids per file) to offices.txt if necessary
+###### add offices (and/or external ids per file) to offices.txt, as desired *** currently must be done by hand, does not have to be comprehensive; only offices with an 'ExternalIdentifier' of m.name will be handled, all others ignored.
 ######
 
 # steps to extract other info and put it into db
@@ -90,7 +107,7 @@ def file_to_context(file_path,df,m,conn,cur):
 def create_munger(file_path):   # file should contain all munger info in a dictionary
     with open(file_path,'r') as f:
         d = eval(f.read())
-    return(Munger(d['name'],d['election_query'],d['county_query'],d['party_query']))
+    return(Munger(d['name'],d['election_query'],d['county_query'],d['party_query'],d['geoprecinct_query']))
 
 def create_state(abbr,path_to_state_dir):
     '''abbr is the capitalized two-letter postal code for the state, district or territory'''
