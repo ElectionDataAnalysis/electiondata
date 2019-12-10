@@ -42,31 +42,61 @@ class Datafile:
         self.correction_query_list=correction_query_list    # fix any known metadata errors; might be unnecessary if we are loading data via python directly into CDF rather than loading data into a raw SQL db. ***
 
 class Munger:
-    def __init__(self,name,election_query):
+    def __init__(self,name,query_from_raw):
         self.name=name      # 'nc_export1'
-        self.election_query=election_query       # 'SELECT DISTINCT election_date FROM {}.{}', must have exactly two slots for state.schema and datafile.table_name
+        self.query_from_raw= query_from_raw    # dictionary of queries of the db of raw data; each querymust have exactly two slots for state.schema and datafile.table_name
+
+
         
-def file_to_context(file_path,s,df,m,conn,cur):
-    ''' s is a state; df is a datafile; m is a munger '''
+def raw_to_context(df,m,conn,cur):
+    ''' df is a datafile; m is a munger. Routine checks context info from a precinct-results data_file against the info for the state, using the given munger as an intermediary. '''
 
-    
-# steps to extract context info from a precinct-results file and put it into the context folder ***:
+###### flag elections, parties that need to be added (by hand, because contextual knowledge is necessary) to the context folder and the relevant dictionaries
+    rs = []     #strings to return for display on web page
+    for i in [[ 'elections','election', df.state.elections],['parties','party',df.state.parties],['offices','office',df.state.offices]]:
+        cur.execute(sql.SQL(m.query_from_raw[i[1]]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
+        items_per_df = cur.fetchall()
+        ## build dict of keys with external identifiers called m.name *** where else is this used?
+        munger_d = {}
+        for k in i[2].keys():
+            if 'ExternalIdentifiers' in i[2][k].keys() and   m.name in i[2][k]['ExternalIdentifiers'].keys():
+                munger_d[k] = i[2][k]['ExternalIdentifiers'][m.name]
+        missing = []
+        for e in items_per_df:
+            if e[0] not in munger_d.values():
+                missing.append(e[0])
+        rs.append('Sample data for '+i[0]+': '+str( items_per_df[0:4]))
+        rs.append('For \''+m.name +'\', <b>list of missing '+i[0]+' is: </b>'+str(missing)+'. Add any missing '+i[0]+' to the '+i[0]+'.txt file and rerun')
 
-###### add election (and/or external id per file) to election.txt if necessary
-    cur.execute(sql.SQL(m.election_query).format(sql.Identifier(s.schema_name), sql.Identifier(df.table_name)))
-    a = cur.fetchall()
-###### add county external identifiers (per file) to reporting_units.txt if necessary
-###### add geoprecincts (and/or external ids per file) to reporting_units.txt if necessary
-###### add not-strictly-geo reporting units (and/or external ids per file) to reporting_units.txt if necessary
-###### add parties (and/or external ids per file) to parties.txt if necessary
-###### add offices (and/or external ids per file) to offices.txt if necessary
-######
+###### flag reporting-units that need to be added (by hand, because contextual knowledge is necessary) to the context folder and the relevant dictionaries
+############### counties, geoprecincts, reporting units of type 'other'
+
+    for i in [['other reporting units','other_reporting_unit','other'],['counties','county', 'county'],['geoprecincts','geoprecinct','precinct']]:
+        cur.execute(sql.SQL(m.query_from_raw[i[1]]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
+        items_per_df = cur.fetchall()
+    ## build dict of keys with external identifiers called m.name *** where else is this used?
+        munger_d = {}
+        for k in df.state.reporting_units.keys():
+            type = df.state.reporting_units[k]['Type'].split(';')[0]
+            if m.name in df.state.reporting_units[k]['ExternalIdentifiers'].keys() and type == i[2]: # for reporting units, need to check Type as well.
+                munger_d[k] = df.state.reporting_units[k]['ExternalIdentifiers'][m.name]
+        missing = []
+        for e in items_per_df:
+            if ';'.join(e) not in munger_d.values():
+
+                missing.append(';'.join(e))
+        rs.append('For \''+m.name +'\', <b>list of missing '+i[0]+' is: </b>'+str(missing)+'. Add any missing '+i[0]+' to the reporting_units.txt file and rerun')
+    return('</p><p>'.join(rs))
 
 # steps to extract other info and put it into db
+
+def raw_to_cdf(df,m,conn,cur):
+    rs = []     #strings to return for display on web page
+
+    return('</p><p>'.join(rs))
 ###### create records in cdf.CandidateContest and cdf.BallotMeasureContest, with joins
 ###### create records in cdf.CandidateSelection and cdf.BallotMeasureSelection, with joins
 ###### create records in cdf.VoteCount, with joins
-    return(a)
 
 
 
@@ -74,7 +104,7 @@ def file_to_context(file_path,s,df,m,conn,cur):
 def create_munger(file_path):   # file should contain all munger info in a dictionary
     with open(file_path,'r') as f:
         d = eval(f.read())
-    return(Munger(d['name'],d['election_query']))
+    return(Munger(d['name'],d['query_from_raw']))
 
 def create_state(abbr,path_to_state_dir):
     '''abbr is the capitalized two-letter postal code for the state, district or territory'''

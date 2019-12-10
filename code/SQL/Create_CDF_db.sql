@@ -10,23 +10,23 @@ CREATE SEQUENCE cdf.id_seq   -- helps create unique id value across all tables i
 DROP TABLE IF EXISTS cdf.IdentifierType;
 CREATE TABLE cdf.IdentifierType (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
-text varchar(30) UNIQUE NOT NULL
+txt text  UNIQUE NOT NULL
 );
-COPY cdf.IdentifierType (text) FROM '/container_root_dir/SQL/enumerations/IdentifierType.txt';
+COPY cdf.IdentifierType (txt) FROM '/container_root_dir/SQL/enumerations/IdentifierType.txt';
 
 DROP TABLE IF EXISTS cdf.GpUnit;
 CREATE TABLE cdf.GpUnit (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
-name varchar(50) UNIQUE
+name  text  UNIQUE
 );
 
 DROP TABLE IF EXISTS cdf.ExternalIdentifier;
 CREATE TABLE cdf.ExternalIdentifier (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
 foreign_id INTEGER, 
-value varchar(50)NOT NULL,
+value  text NOT NULL,
 identifiertype_id INTEGER NOT NULL REFERENCES cdf.identifiertype(id),
-othertype varchar(30),
+othertype  text ,
 UNIQUE (foreign_id,identifiertype_id,othertype)
 );
 -- check that if identifier type is "other" then othertype string is not empty or null ***
@@ -35,64 +35,64 @@ UNIQUE (foreign_id,identifiertype_id,othertype)
 DROP TABLE IF EXISTS cdf.CountItemStatus;
 CREATE TABLE cdf.CountItemStatus (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
-text varchar(13) UNIQUE NOT NULL
+txt text  UNIQUE NOT NULL
 );
-COPY cdf.CountItemStatus (text) FROM '/container_root_dir/SQL/enumerations/CountItemStatus.txt';
+COPY cdf.CountItemStatus (txt) FROM '/container_root_dir/SQL/enumerations/CountItemStatus.txt';
 
 DROP TABLE IF EXISTS cdf.ReportingUnitType;
 CREATE TABLE cdf.ReportingUnitType (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
-text varchar(30) UNIQUE NOT NULL
+txt text  UNIQUE NOT NULL
 );
-COPY cdf.ReportingUnitType (text) FROM '/container_root_dir/SQL/enumerations/ReportingUnitType.txt';
+COPY cdf.ReportingUnitType (txt) FROM '/container_root_dir/SQL/enumerations/ReportingUnitType.txt';
 
 DROP TABLE IF EXISTS cdf.ReportingUnit;
 CREATE TABLE cdf.ReportingUnit (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
 reportingunittype_id INTEGER NOT NULL REFERENCES cdf.reportingunittype(id),
-othertype varchar(30),
+othertype  text ,
 gpunit_id INTEGER NOT NULL REFERENCES cdf.gpunit(id)
 );
 
 DROP TABLE IF EXISTS cdf.Party;
 CREATE TABLE cdf.Party (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
-abbreviation varchar(6),
-name varchar(50) UNIQUE
+abbreviation  text ,
+name  text  UNIQUE
 )
 ;
 
 DROP TABLE IF EXISTS cdf.ElectionType;
 CREATE TABLE cdf.ElectionType (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
-text varchar(30) UNIQUE
+txt text  UNIQUE
 );
-COPY cdf.ElectionType (text) FROM '/container_root_dir/SQL/enumerations/ElectionType.txt';
+COPY cdf.ElectionType (txt) FROM '/container_root_dir/SQL/enumerations/ElectionType.txt';
 
 DROP TABLE IF EXISTS cdf.Election;
 CREATE TABLE cdf.Election (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
-name varchar(50) UNIQUE,
+name  text  UNIQUE,
 enddate DATE,
 startdate DATE,
 electiontype_id INTEGER REFERENCES cdf.electiontype(id),
-othertype varchar(30)
+othertype  text 
 )
 ;
 
 DROP TABLE IF EXISTS cdf.CountItemType;
 CREATE TABLE cdf.CountItemType (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
-text varchar(30) UNIQUE
+txt text  UNIQUE
 );
 
-COPY cdf.CountItemType (text) FROM '/container_root_dir/SQL/enumerations/CountItemType.txt';
+COPY cdf.CountItemType (txt) FROM '/container_root_dir/SQL/enumerations/CountItemType.txt';
 
 DROP TABLE IF EXISTS cdf.Office;
 CREATE TABLE cdf.Office (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
-name varchar(200) UNIQUE,
-description varchar(1000)
+name  text  UNIQUE,
+description  text 
 )
 ;
 
@@ -105,7 +105,7 @@ numberrunoff INTEGER,
 office_id INTEGER REFERENCES cdf.office(id),
 primaryparty_id INTEGER REFERENCES cdf.party(id),
 electiondistrict_id INTEGER NOT NULL REFERENCES cdf.reportingunit(id),
-name varchar(200)   -- *** how to fill this?
+name  text    -- *** how to fill this?
 )
 ;
 
@@ -113,7 +113,7 @@ DROP TABLE IF EXISTS cdf.BallotMeasureContest;  -- CDF requires a name ***
 CREATE TABLE cdf.BallotMeasureContest (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
 electiondistrict_id INTEGER NOT NULL REFERENCES cdf.reportingunit(id),
-name varchar(200)   -- *** how to fill this?
+name  text    -- *** how to fill this?
 )
 ;
 
@@ -121,14 +121,14 @@ name varchar(200)   -- *** how to fill this?
 DROP TABLE IF EXISTS cdf.BallotMeasureSelection;    -- note: we don't enumerate the choices, though some kind of universal yes/no is tempting ***
 CREATE TABLE cdf.BallotMeasureSelection (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
-selection varchar(10)
+selection  text 
 )
 ;
 
 DROP TABLE IF EXISTS cdf.Candidate;
 CREATE TABLE cdf.Candidate (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
-ballotname varchar(100),
+ballotname  text ,
 election_id INTEGER REFERENCES cdf.election(id),
 party_id INTEGER REFERENCES cdf.party(id)
 )
@@ -146,7 +146,7 @@ CREATE TABLE cdf.VoteCount (
 id BIGINT DEFAULT nextval('cdf.id_seq') PRIMARY KEY,
 countitemstatus_id INTEGER REFERENCES cdf.countitemstatus(id),
 countitemtype_id INTEGER REFERENCES cdf.countitemtype(id),
-othertype varchar(30)
+othertype  text 
 )
 ;
 comment on column cdf.VoteCount.countitemstatus_id is 'CDF lists CountItemStatus as a field in ReportingUnit, not in VoteCount *** seems like an error';
