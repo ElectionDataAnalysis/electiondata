@@ -154,7 +154,7 @@ def file_to_context():
     conn = establish_connection()
     cur = conn.cursor()
     
-    a = sf.file_to_context(df,m,conn,cur)
+    a = sf.raw_to_context(df,m,conn,cur)
     report.append(str(a))
 
     return("<p>"+"</p><p>  ".join(report))

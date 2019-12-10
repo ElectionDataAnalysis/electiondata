@@ -48,11 +48,11 @@ class Munger:
 
 
         
-def file_to_context(df,m,conn,cur):
+def raw_to_context(df,m,conn,cur):
     ''' df is a datafile; m is a munger. Routine checks context info from a precinct-results data_file against the info for the state, using the given munger as an intermediary. '''
 
 ###### flag elections, parties that need to be added (by hand, because contextual knowledge is necessary) to the context folder and the relevant dictionaries
-    return_strings = []
+    rs = []     #strings to return for display on web page
     for i in [[ 'elections','election', df.state.elections],['parties','party',df.state.parties],['offices','office',df.state.offices]]:
         cur.execute(sql.SQL(m.query_from_raw[i[1]]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
         items_per_df = cur.fetchall()
@@ -65,8 +65,8 @@ def file_to_context(df,m,conn,cur):
         for e in items_per_df:
             if e[0] not in munger_d.values():
                 missing.append(e[0])
-        return_strings.append('Sample data for '+i[0]+': '+str( items_per_df[0:4]))
-        return_strings.append('For \''+m.name +'\', <b>list of missing '+i[0]+' is: </b>'+str(missing)+'. Add any missing '+i[0]+' to the '+i[0]+'.txt file and rerun')
+        rs.append('Sample data for '+i[0]+': '+str( items_per_df[0:4]))
+        rs.append('For \''+m.name +'\', <b>list of missing '+i[0]+' is: </b>'+str(missing)+'. Add any missing '+i[0]+' to the '+i[0]+'.txt file and rerun')
 
 ###### flag reporting-units that need to be added (by hand, because contextual knowledge is necessary) to the context folder and the relevant dictionaries
 ############### counties, geoprecincts, reporting units of type 'other'
@@ -85,11 +85,15 @@ def file_to_context(df,m,conn,cur):
             if ';'.join(e) not in munger_d.values():
 
                 missing.append(';'.join(e))
-        return_strings.append('For \''+m.name +'\', <b>list of missing '+i[0]+' is: </b>'+str(missing)+'. Add any missing '+i[0]+' to the reporting_units.txt file and rerun')
-    return('</p><p>'.join(return_strings))
-
+        rs.append('For \''+m.name +'\', <b>list of missing '+i[0]+' is: </b>'+str(missing)+'. Add any missing '+i[0]+' to the reporting_units.txt file and rerun')
+    return('</p><p>'.join(rs))
 
 # steps to extract other info and put it into db
+
+def raw_to_cdf(df,m,conn,cur):
+    rs = []     #strings to return for display on web page
+
+    return('</p><p>'.join(rs))
 ###### create records in cdf.CandidateContest and cdf.BallotMeasureContest, with joins
 ###### create records in cdf.CandidateSelection and cdf.BallotMeasureSelection, with joins
 ###### create records in cdf.VoteCount, with joins
