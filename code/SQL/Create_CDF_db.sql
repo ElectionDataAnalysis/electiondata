@@ -4,7 +4,7 @@
 DROP SCHEMA IF EXISTS cdf CASCADE;
 CREATE SCHEMA cdf;
 
-CREATE SEQUENCE cdf.id_seq   -- helps create unique id value across all tables in schema cdf -- comment ***
+CREATE SEQUENCE cdf.id_seq   -- helps create unique id value across all tables in schema cdf 
 ;
 
 DROP TABLE IF EXISTS cdf.IdentifierType;
