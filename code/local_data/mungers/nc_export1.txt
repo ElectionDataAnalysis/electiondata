@@ -3,5 +3,6 @@
 'county_query':'SELECT DISTINCT County FROM {}.{}',
 'party_query':'SELECT DISTINCT Choice_Party FROM {}.{}',
 'geoprecinct_query':'SELECT DISTINCT County,Precinct FROM {}.{} WHERE Real_Precinct = \'Y\'',
-'other_reporting_units_query':'SELECT DISTINCT County,Precinct FROM {}.{} WHERE Real_Precinct != \'Y\''
+'other_reporting_units_query':'SELECT DISTINCT County,Precinct FROM {}.{} WHERE Real_Precinct != \'Y\'',
+'office_query':'SELECT DISTINCT Contest_Name FROM {}.{} WHERE Choice != \'Against\' AND Choice != \'For\' AND Choice != \'Yes\' AND Choice != \'No\' '
 }
