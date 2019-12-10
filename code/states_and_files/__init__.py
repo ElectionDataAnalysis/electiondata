@@ -42,14 +42,10 @@ class Datafile:
         self.correction_query_list=correction_query_list    # fix any known metadata errors; might be unnecessary if we are loading data via python directly into CDF rather than loading data into a raw SQL db. ***
 
 class Munger:
-    def __init__(self,name,election_query,county_query,party_query,geoprecinct_query,other_reporting_units_query,office_query):
+    def __init__(self,name,query_from_raw):
         self.name=name      # 'nc_export1'
-        self.election_query=election_query          #  must have exactly two slots for state.schema and datafile.table_name
-        self.county_query=county_query              #  must have exactly two slots for state.schema and datafile.table_name
-        self.party_query=party_query              #  must have exactly two slots for state.schema and datafile.table_name
-        self.geoprecinct_query=geoprecinct_query
-        self.other_reporting_units_query=other_reporting_units_query
-        self.office_query=office_query
+        self.query_from_raw= query_from_raw    # dictionary of queries of the db of raw data; each querymust have exactly two slots for state.schema and datafile.table_name
+
 
         
 def file_to_context(df,m,conn,cur):
@@ -57,8 +53,8 @@ def file_to_context(df,m,conn,cur):
 
 ###### flag elections, parties that need to be added (by hand, because contextual knowledge is necessary) to the context folder and the relevant dictionaries
     return_strings = []
-    for i in [[ 'elections',m.election_query, df.state.elections],['parties',m.party_query,df.state.parties],['offices',m.office_query,df.state.offices]]:
-        cur.execute(sql.SQL(i[1]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
+    for i in [[ 'elections','election', df.state.elections],['parties','party',df.state.parties],['offices','office',df.state.offices]]:
+        cur.execute(sql.SQL(m.query_from_raw[i[1]]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
         items_per_df = cur.fetchall()
         ## build dict of keys with external identifiers called m.name *** where else is this used?
         munger_d = {}
@@ -75,8 +71,8 @@ def file_to_context(df,m,conn,cur):
 ###### flag reporting-units that need to be added (by hand, because contextual knowledge is necessary) to the context folder and the relevant dictionaries
 ############### counties, geoprecincts, reporting units of type 'other'
 
-    for i in [['other reporting units',m.other_reporting_units_query,'other'],['counties',m.county_query, 'county'],['geoprecincts',m.geoprecinct_query,'precinct']]:
-        cur.execute(sql.SQL(i[1]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
+    for i in [['other reporting units','other_reporting_unit','other'],['counties','county', 'county'],['geoprecincts','geoprecinct','precinct']]:
+        cur.execute(sql.SQL(m.query_from_raw[i[1]]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
         items_per_df = cur.fetchall()
     ## build dict of keys with external identifiers called m.name *** where else is this used?
         munger_d = {}
@@ -104,7 +100,7 @@ def file_to_context(df,m,conn,cur):
 def create_munger(file_path):   # file should contain all munger info in a dictionary
     with open(file_path,'r') as f:
         d = eval(f.read())
-    return(Munger(d['name'],d['election_query'],d['county_query'],d['party_query'],d['geoprecinct_query'],d['other_reporting_units_query'],d['office_query']))
+    return(Munger(d['name'],d['query_from_raw']))
 
 def create_state(abbr,path_to_state_dir):
     '''abbr is the capitalized two-letter postal code for the state, district or territory'''
