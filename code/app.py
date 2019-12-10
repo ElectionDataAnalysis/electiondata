@@ -279,3 +279,23 @@ def analyze():
     
     return("<p>"+"</p><p>  ".join(report))
 
+#### diagnostic below *** can delete
+
+from munge_routines import get_upsert_id
+
+@app.route('/test')
+def gui():
+    report=[str(datetime.now())]
+    conn = establish_connection()
+    cur = conn.cursor()
+    req_var_d= {'fieldname':'name','datatype':'text','value':'North Carolina General Election 2018-11-06'}
+
+    other_var_ds = [{'fieldname':'enddate','datatype':'DATE','value':'2018-11-06'}, {'fieldname':'electiontype_id','datatype':'INTEGER','value':'40'}, {'fieldname':'othertype','datatype':'TEXT','value':''}]
+    
+    report.append(get_upsert_id('cdf','election',req_var_d,other_var_ds,conn,cur))
+    
+    if cur:
+        cur.close()
+    if conn:
+        conn.close()
+    return("<p>"+"</p><p>  ".join(report))
