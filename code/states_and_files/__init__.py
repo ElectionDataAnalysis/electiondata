@@ -48,48 +48,9 @@ class Munger:
 
 
         
-def raw_to_context(df,m,conn,cur):
-    ''' df is a datafile; m is a munger. Routine checks context info from a precinct-results data_file against the info for the state, using the given munger as an intermediary. '''
 
-###### flag elections, parties that need to be added (by hand, because contextual knowledge is necessary) to the context folder and the relevant dictionaries
-    rs = []     #strings to return for display on web page
-    for i in [[ 'elections','election', df.state.elections],['parties','party',df.state.parties],['offices','office',df.state.offices]]:
-        cur.execute(sql.SQL(m.query_from_raw[i[1]]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
-        items_per_df = cur.fetchall()
-        ## build dict of keys with external identifiers called m.name *** where else is this used?
-        munger_d = {}
-        for k in i[2].keys():
-            if 'ExternalIdentifiers' in i[2][k].keys() and   m.name in i[2][k]['ExternalIdentifiers'].keys():
-                munger_d[k] = i[2][k]['ExternalIdentifiers'][m.name]
-        missing = []
-        for e in items_per_df:
-            if e[0] not in munger_d.values():
-                missing.append(e[0])
-        rs.append('Sample data for '+i[0]+': '+str( items_per_df[0:4]))
-        rs.append('For \''+m.name +'\', <b>list of missing '+i[0]+' is: </b>'+str(missing)+'. Add any missing '+i[0]+' to the '+i[0]+'.txt file and rerun')
-
-###### flag reporting-units that need to be added (by hand, because contextual knowledge is necessary) to the context folder and the relevant dictionaries
-############### counties, geoprecincts, reporting units of type 'other'
-
-    for i in [['other reporting units','other_reporting_unit','other'],['counties','county', 'county'],['geoprecincts','geoprecinct','precinct']]:
-        cur.execute(sql.SQL(m.query_from_raw[i[1]]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
-        items_per_df = cur.fetchall()
-    ## build dict of keys with external identifiers called m.name *** where else is this used?
-        munger_d = {}
-        for k in df.state.reporting_units.keys():
-            type = df.state.reporting_units[k]['Type'].split(';')[0]
-            if m.name in df.state.reporting_units[k]['ExternalIdentifiers'].keys() and type == i[2]: # for reporting units, need to check Type as well.
-                munger_d[k] = df.state.reporting_units[k]['ExternalIdentifiers'][m.name]
-        missing = []
-        for e in items_per_df:
-            if ';'.join(e) not in munger_d.values():
-
-                missing.append(';'.join(e))
-        rs.append('For \''+m.name +'\', <b>list of missing '+i[0]+' is: </b>'+str(missing)+'. Add any missing '+i[0]+' to the reporting_units.txt file and rerun')
-    return('</p><p>'.join(rs))
-
-# steps to extract other info and put it into db
-from munge_routines 
+# steps to extract info from df and put it into db
+import munge_routines as mr
 def raw_to_cdf(df,m,conn,cur):
     rs = []     #strings to return for display on web page
 
@@ -234,37 +195,3 @@ def context_to_cdf(state, conn, cur,report):
 
 
 ######## obsolete below ***
-def old_create_datafile(s,file_name):
-    if s.abbr=='NC':
-        if file_name=='results_pct_20181106.txt':
-            table_name='results_pct'
-            encoding='utf8'
-            metafile='layout_results_pct.txt'
-            metafile_encoding='utf8'
-            source='NC State Board of Elections; file dated 11/16/2018; downloaded 10/2019 from state website *** need dates for metafile too'
-            correction_query_list =  ['ALTER TABLE '+ s.schema_name +'.'+table_name+' ALTER COLUMN precinct SET DATA TYPE varchar(23)']  #metadata says precinct field has at most 12 characters but 'ABSENTEE BY MAIL 71-106' has 13
-
-            value_convention={}         # dictionary of dictionaries, each for a field. Key is the name of the field. For each subdictionary, key is the sourcefile's convention and value is the db convention
-            ## create dictionary for contest_name
-            value_convention['contest_name']={}
-            for n in ['01','02','03','04','05','06','07','08','09','10','11','12','13']:
-                value_convention['contest_name']['US HOUSE OF REPRESENTATIVES DISTRICT '+n]='NC_USC_'+n+'_2018'
-            return Datafile(s,table_name, file_name, encoding, metafile, metafile_encoding, value_convention,source,correction_query_list)
-        elif file_name == 'absentee_20181106.csv':
-            table_name='absentee'
-            encoding='utf8'
-            metafile='sfs_by_hand_layout_absentee.txt'
-            metafile_encoding='utf16'
-            source='NC State Board of Elections; file dated 11/16/2018; downloaded 10/2019 from state website'
-            correction_query_list = []
-            value_convention={}         # dictionary of dictionaries, each for a field. Key is the name of the field. For each subdictionary, key is the sourcefile's convention and value is the db convention
-            ## create dictionary for contest_name
-            value_convention['cong_dist_desc']={}
-            for n in range(1,14):
-                 value_convention['cong_dist_desc']['CONGRESSIONAL DISTRICT '+str(n)]='NC_USC_'+str(n).zfill(2)+'_2018'
-            return Datafile(s,table_name, file_name, encoding, metafile, metafile_encoding, value_convention,source,correction_query_list)
-        else:
-            return('Error: state, file_name pair not recognized')
-    else:
-        return('Error: state not recognized')
-

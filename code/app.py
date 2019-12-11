@@ -22,6 +22,7 @@ from datetime import datetime
 
 import query_create as q
 import clean as cl
+import context
 
 ## define some basics
 
@@ -154,7 +155,7 @@ def file_to_context():
     conn = establish_connection()
     cur = conn.cursor()
     
-    a = sf.raw_to_context(df,m,conn,cur)
+    a = context.raw_to_context(df,m,conn,cur)
     report.append(str(a))
 
     return("<p>"+"</p><p>  ".join(report))
