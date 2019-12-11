@@ -89,7 +89,7 @@ def raw_to_context(df,m,conn,cur):
     return('</p><p>'.join(rs))
 
 # steps to extract other info and put it into db
-
+from munge_routines 
 def raw_to_cdf(df,m,conn,cur):
     rs = []     #strings to return for display on web page
 

@@ -7,7 +7,6 @@ from datetime import datetime
 
 
 def get_upsert_id(schema,table,req_var_d,other_var_ds,con,cur):
-    rs=['done!']            # strings for display on web page
     other_ct = len(other_var_ds)
     fnames = [req_var_d['fieldname']] + [d['fieldname'] for d in other_var_ds]
     id_slots = ['{'+str(i)+'}' for i in range(2, other_ct + 3)]
@@ -21,8 +20,20 @@ def get_upsert_id(schema,table,req_var_d,other_var_ds,con,cur):
     cur.execute(sql.SQL(q).format( *format_args ),strs)
     a = cur.fetchall()
     con.commit()
+    return(a)
 
-    return(str(a))
+def format_type_for_insert(schema,table,txt,con,cur):
+    ''' schema.table must have a "txt" field '''
+    q = 'SELECT "id" FROM {}.{} WHERE "txt" = %s'
+    sql_ids = [schema,table]
+    cur.execute(   sql.SQL(q).format( sql.Identifier(schema),sql.Identifier(table)),[txt])
+    a = cur.fetchall()
+    if a:
+        return([a[0][0],''])
+    else:
+        cur.execute(   sql.SQL(q).format( sql.Identifier(schema),sql.Identifier(table)),['other'])
+        a = cur.fetchall()
+        return([a[0][0],txt])
 
 
 

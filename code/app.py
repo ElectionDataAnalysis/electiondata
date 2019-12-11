@@ -281,7 +281,7 @@ def analyze():
 
 #### diagnostic below *** can delete
 
-from munge_routines import get_upsert_id
+from munge_routines import get_upsert_id, format_type_for_insert
 
 @app.route('/test')
 def gui():
@@ -292,8 +292,10 @@ def gui():
 
     other_var_ds = [{'fieldname':'enddate','datatype':'DATE','value':'2018-11-06'}, {'fieldname':'electiontype_id','datatype':'INTEGER','value':'40'}, {'fieldname':'othertype','datatype':'TEXT','value':''}]
     
-    report.append(get_upsert_id('cdf','election',req_var_d,other_var_ds,conn,cur))
+    # report.append(str(get_upsert_id('cdf','election',req_var_d,other_var_ds,conn,cur)))
     
+    report.append(str(format_type_for_insert('cdf','electiontype','general',conn,cur)))
+    report.append(str(format_type_for_insert('cdf','electiontype','gen',conn,cur)))
     if cur:
         cur.close()
     if conn:
