@@ -20,7 +20,7 @@ import sys
 
 from datetime import datetime
 
-import query_create as q
+import db_routines as dbr
 import clean as cl
 import context
 
@@ -116,7 +116,7 @@ def raw_data():
         # create table and commit
  
             cur.execute(sql.SQL('DROP TABLE IF EXISTS {}.{}').format(sql.Identifier(s.schema_name),sql.Identifier(t)))
-            [query,strs,sql_ids] = q.create_table(d)
+            [query,strs,sql_ids] = dbr.create_table(d)
             format_args = [sql.Identifier(x) for x in sql_ids]
             cur.execute(sql.SQL(query).format( *format_args ),strs)
             diagnostic = sql.SQL(query).format( *format_args ).as_string(conn)
@@ -129,7 +129,7 @@ def raw_data():
                 conn.commit()
 
     # load data into tables
-            q.load_data(conn,cur,s,d)
+            dbr.load_data(conn,cur,s,d)
             report.append('Data from file '+d.file_name+' loaded into table '+s.schema_name+'.'+d.table_name)
     
     # close connection
@@ -155,7 +155,15 @@ def file_to_context():
     conn = establish_connection()
     cur = conn.cursor()
     
-    a = context.raw_to_context(df,m,conn,cur)
+    [munger_d,munger_inverse_d] = context.build_munger_d(df.state,m)
+
+    # ['election', 'county', 'party', 'geoprecinct', 'other_reporting_unit', 'office']
+    #  {'geoprecinct':{'state_d':df.state.context_dictionary['reportingunit']}
+    query_d = {'election':{'state_d':df.state.context_dictionary['election']}, 'party':{'state_d':df.state.context_dictionary['party']}
+    , 'reportingunit;precinct': {'state_d':df.state.context_dictionary['reportingunit']}  #,'reportingunit;county':{'state_d':df.state.context_dictionary['reportingunit'],'plural':'counties'}, 'reportingunit;precinct':{'state_d':df.state.context_dictionary['reportingunit'],'plural':'precincts'}, 'reportingunit;other':{'state_d':df.state.context_dictionary['reportingunit'],'plural':'other reporting units'}
+    }
+    # a = 1/0   # diagnostic ***
+    a = context.raw_to_context(df,m,query_d,munger_d,conn,cur)
     report.append(str(a))
 
     return("<p>"+"</p><p>  ".join(report))
@@ -176,7 +184,7 @@ def create_cdf():
     
     mypath=Path('SQL/Create_CDF_db.sql')
     if mypath.is_file():
-        queries = q.file_to_sql_statement_list(mypath)
+        queries = dbr.file_to_sql_statement_list(mypath)
         for query in queries:
             try:
                 cur.execute(query)

@@ -10,8 +10,17 @@ from pathlib import Path
 import re
 import psycopg2
 from psycopg2 import sql
+from datetime import datetime
 
 import clean as cl
+
+# the main event: process a datafile, using info there to update the context folder for the associated state
+def raw_to_db(df,m,conn,cur,cdf_schema):
+    report = [str(datetime.now())]
+    
+    return('</p><p>'.report)
+
+
 
 def file_to_sql_statement_list(fpath):
     query_list = []
@@ -29,7 +38,7 @@ def file_to_sql_statement_list(fpath):
     
 def parse_line(s,line):
     '''parse_line takes a state and a line of (metadata) text and parses it, including changing the type in the file to the type required by psql, according to the state's type-map dictionary'''
-    d=s.type_map
+    d=s.context_dictionary['type_map']
     p=s.meta_parser
     m = p.search(line)
     field = (m.group('field')).replace(' ','_')

@@ -9,20 +9,20 @@ from psycopg2 import sql
 ## Define classes
 
 class State:
-    def __init__(self,abbr,name,meta_parser,type_map,schema_name,path_to_state_dir,main_reporting_unit_type,reporting_units,elections,parties,offices):
+    def __init__(self,abbr,name,meta_parser,schema_name,path_to_state_dir,main_reporting_unit_type,context_dictionary):        # reporting_units,elections,parties,offices):
         self.abbr = abbr
         self.name = name
         self.meta_parser=meta_parser
-        self.type_map=type_map
         self.schema_name=schema_name
         if path_to_state_dir[-1] != '/':     # should end in /
             path_to_state_dir += '/'
         self.path_to_state_dir=path_to_state_dir    #  include 'NC' in path.
-        self.main_reporting_unit_type=main_reporting_unit_type
-        self.reporting_units=reporting_units  # dictionary, with external codes
-        self.elections=elections
-        self.parties=parties
-        self.offices=offices
+        self.main_reporting_unit_type=main_reporting_unit_type  # *** is this used?
+        self.context_dictionary=context_dictionary
+        #self.reporting_units=reporting_units  # dictionary, with external codes
+        #self.elections=elections
+        #self.parties=parties
+        #self.offices=offices
 
     
 class Datafile:
@@ -70,52 +70,42 @@ def create_munger(file_path):   # file should contain all munger info in a dicti
 def create_state(abbr,path_to_state_dir):
     '''abbr is the capitalized two-letter postal code for the state, district or territory'''
     string_attributes = ['name','schema_name','parser_string','main_reporting_unit_type']
-    object_attributes = ['type_map','reporting_units','elections','parties','offices']    # what consistency checks do we need? E.g., shouldn't all reporting units start with the state name?
+    context_d_keys = ['type_map','reportingunit','election','party','office']    # what consistency checks do we need? E.g., shouldn't all reporting units start with the state name?
     if path_to_state_dir[-1] != '/':
         path_to_state_dir += '/'
     if not os.path.isdir(path_to_state_dir):
         return('Error: No directory '+path_to_state_dir)
         sys.exit()
-    for attr in string_attributes + object_attributes:
+    for attr in string_attributes + context_d_keys:
         if not os.path.isfile(path_to_state_dir+'context/'+attr+'.txt'):
             return('Error: No file '+path_to_state_dir+'context/'+attr+'.txt')
             sys.exit()
-
-    d = {} # dictionary to hold attributes
+    string_d = {} # dictionary to hold string attributes
     for attr in string_attributes:     # strings
         with open(path_to_state_dir+'context/'+attr+'.txt') as f:
-            d[attr]=f.readline().strip()
-    for attr in object_attributes:     # python objects
+            string_d[attr]=f.readline().strip()
+    meta_p=re.compile(string_d['parser_string'])
+    context_d = {}
+    for attr in context_d_keys:     # python objects
         with open(path_to_state_dir+'context/'+attr+'.txt') as f:
-            d[attr]=eval(f.read())
-    meta_p=re.compile(d['parser_string'])
-    return State(abbr,d['name'],meta_p,d['type_map'],d['schema_name'],path_to_state_dir,d['main_reporting_unit_type'],d['reporting_units'],d['elections'],d['parties'],d['offices'])
+            context_d[attr]=eval(f.read())
+    return State(abbr,string_d['name'],meta_p,string_d['schema_name'],path_to_state_dir,string_d['main_reporting_unit_type'],context_d)
 
 def create_datafile(s,election,data_file_name,value_convention):
     # check that election is compatible with state
     # *** need to code the value_convention to pull the right identifiers, maybe column names too.
-    if s.name +' '+ election not in s.elections.keys():
+    if election not in s.context_dictionary['election'].keys():
         return('No such election ('+election+') associated with state '+s.name)
         # sys.exit()
     
     # read datafile info from context folder *** should be more efficient
-    with open(s.path_to_state_dir+'context/datafiles.txt','r') as f:
+    with open(s.path_to_state_dir+'context/datafile.txt','r') as f:
         d_all = eval(f.read())
         d = d_all[election+';'+data_file_name]
     table_name=re.sub(r'\W+', '', election+data_file_name)
     return(Datafile(s,election, table_name,data_file_name,d['data_file_encoding'],d['meta_file'], d['meta_file_encoding'],value_convention,d['source_url'],d['file_date'],d['download_date'],d['note'],d['correction_query_list']))
     
-def build_value_convention(external_key):
-    ''' given an external identifier key (e.g., 'nc_export1'), return a dictionary whose keys are fields and whose values are dictionaries of field values E.g.,
-        {'nc_export1':{
-            'reportingunit':{
-                'county':'County',
-                'precinct':'CONCATENATE(county,";",precinct)'}
-            },
-        }
-        The purpose is to explicitly map the cdf.reportingunit.name to the info in the export file.
-        *** problem: for reporting units, the format depends on the type (county vs. precinct vs. vote-center, etc.), while for other things (e.g., parties) the format does not depend on the type. how to handle this discrepancy?
-        '''
+
     
 ########################################
 

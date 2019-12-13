@@ -1,10 +1,12 @@
 {'name':'nc_export1',
 'query_from_raw':{
 	'election':'SELECT DISTINCT Election_Date FROM {}.{}',
-	'county':'SELECT DISTINCT County FROM {}.{}',
+	'reportingunit;county':'SELECT DISTINCT County FROM {}.{}',
 	'party':'SELECT DISTINCT Choice_Party FROM {}.{}',
-	'geoprecinct':'SELECT DISTINCT County,Precinct FROM {}.{} WHERE Real_Precinct = \'Y\'',
-	'other_reporting_unit':'SELECT DISTINCT County,Precinct FROM {}.{} WHERE Real_Precinct != \'Y\'',
+	'reportingunit;precinct':'SELECT DISTINCT CONCAT(County,\';\',Precinct) FROM {}.{} WHERE Real_Precinct = \'Y\'',
+	'reportingunit;other':'SELECT DISTINCT CONCAT(County,\';\',Precinct FROM {}.{} WHERE Real_Precinct != \'Y\'',
 	'office':'SELECT DISTINCT Contest_Name FROM {}.{} WHERE Choice != \'Against\' AND Choice != \'For\' AND Choice != \'Yes\' AND Choice != \'No\' '
 		}
 }
+
+

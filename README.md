@@ -80,5 +80,15 @@ Contains one subfolder for each state, each containing three folders:
 
 Also contains a subfolder `tmp` to hold temporary cleaned files for upload to db
 
+### About the `context` folder
+This folder contains contextual information about a particular state. This information may be common to many datafiles; it may be related to information in the datafile but may require some contextual knowledge outside of any particular datafile. For example, the fact that the election on 2018-11-06 in North Carolina was a `general` election is contextual knowledge.
+
+- DB elements that must be loaded from the `context` file (or corresponding attribute of state or datafile) before individual records in datafile are addressed: `election`, `reportingunit` , `party`, `office` 
+- DB elements that must be loaded from each record in the datafile: `reportingunit` (type of reporting unit will need to be respected, e.g., `county` or `geoprecinct` or `other`)
+
+
+
 ## Naming conventions
 
+### Strings used as names and dictionary keys
+Each element (each election, candidate, reporting unit, etc.) has a name -- a character string used in the `name` field in the corresponding database table, and also used in the files in the `context`  folder as keys in python dictionaries containing more info about the element.

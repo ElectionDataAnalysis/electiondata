@@ -5,10 +5,52 @@ import sys
 import re
 import psycopg2
 from psycopg2 import sql
+from datetime import datetime
+
+def build_munger_d(s,m):
+    '''UNDER CONSTRUCTION given a state s and a munger m, use the state's context dictionaries to build dictionaries restricted to the given munger'''
+    munger_d = {}
+    munger_inverse_d = {}
+    for t in ['election','party','reportingunit;precinct','office']:
+        t_parts = t.split(';')
+        context_key = t_parts[0]
+        if len(t_parts) > 1:
+            type = t_parts[1]
+        else:
+            type = None
+        munger_d[t] = {}
+        for k in s.context_dictionary[context_key].keys():
+            if 'ExternalIdentifiers' in s.context_dictionary[context_key][k].keys() and   m.name in s.context_dictionary[context_key][k]['ExternalIdentifiers'].keys() and (type == None or s.context_dictionary[context_key][k]['Type'] == type):
+                    munger_d[t][k] = s.context_dictionary[context_key][k]['ExternalIdentifiers'][m.name]
+        munger_inverse_d[t] = {}
+        for k,v in munger_d[t].items():
+            if v in munger_inverse_d[t].keys():
+                return('Error: munger_d[\''+t+'\'] has duplicate keys with value '+ v)
+            munger_inverse_d[v] = k
+    return(munger_d,munger_inverse_d)
 
 
-# the main event: process a datafile, using info there to update the context folder for the associated state
-def raw_to_context(df,m,conn,cur):
+
+def raw_to_context(df,m,query_d,munger_d,conn,cur):
+    ''' UNDER CONSTRUCTION df is a datafile; m is a munger; d is a dictionary whose keys are names of tables in the common data format '''
+    ### *** error: returns counties only, not geoprecinct names
+    rs = [str(datetime.now())]
+    for k in query_d.keys():
+        cur.execute(sql.SQL(m.query_from_raw[k]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
+        items_per_df = cur.fetchall()
+        missing = []
+        for e in items_per_df:
+            if e[0] not in munger_d[k].values():
+                missing.append(e[0])
+        rs.append('Sample data for '+k+': '+str( items_per_df[0:4]))
+        rs.append('For \''+m.name +'\', <b> missing '+k+' list is: </b>'+str(missing)+'. Add any missing '+k+' to the '+k+'.txt file and rerun')
+        
+    
+    return('</p><p>'.join(rs))
+
+
+### *** defunct?
+def old_raw_to_context(df,m,conn,cur):
     ''' df is a datafile; m is a munger. Routine checks context info from a precinct-results data_file against the info for the state, using the given munger as an intermediary. '''
 
 ###### flag elections, parties that need to be added (by hand, because contextual knowledge is necessary) to the context folder and the relevant dictionaries
