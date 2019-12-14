@@ -88,28 +88,28 @@ def create_table(df):
 
     return(create_query,strs_create+strs_comment,sql_ids_create+sql_ids_comment)
         
-def load_data(conn,cursor,state,datafile):      ## does this belong in app.py? *** might not need psycopg2 here then
+def load_data(conn,cursor,state,df):      ## does this belong in app.py? *** might not need psycopg2 here then
 # write raw data to db
-    ext = datafile.file_name.split('.')[-1]    # extension, determines format
+    ext = df.file_name.split('.')[-1]    # extension, determines format
     if ext == 'txt':
         q = "COPY {}.{} FROM STDIN DELIMITER E'\\t' QUOTE '\"' CSV HEADER"
     elif ext == 'csv':
         q = "COPY {}.{} FROM STDIN DELIMITER ',' CSV HEADER"
 
     
-    clean_file=cl.remove_null_bytes(state.path_to_state_dir+'data/'+datafile.file_name,'local_data/tmp/')
-    with open(clean_file,mode='r',encoding=datafile.encoding,errors='ignore') as f:
-        cursor.copy_expert(sql.SQL(q).format(sql.Identifier(state.schema_name),sql.Identifier(datafile.table_name)),f)
+    clean_file=cl.remove_null_bytes(state.path_to_state_dir+'data/'+df.file_name,'local_data/tmp/')
+    with open(clean_file,mode='r',encoding=df.encoding,errors='ignore') as f:
+        cursor.copy_expert(sql.SQL(q).format(sql.Identifier(state.schema_name),sql.Identifier(df.table_name)),f)
     conn.commit()
 # update values to obey convention *** need to take this out, but first make sure /analysis will work
     fup = []
-    for field in datafile.value_convention.keys():
+    for field in df.value_convention.keys():
         condition = []
-        for value in datafile.value_convention[field].keys():
-            condition.append(" WHEN "+field+" = '"+value+"' THEN '"+datafile.value_convention[field][value]+"' ")
+        for value in df.value_convention[field].keys():
+            condition.append(" WHEN "+field+" = '"+value+"' THEN '"+df.value_convention[field][value]+"' ")
         fup.append(field + " =  CASE "+   " ".join(condition)+" END ")
     if len(fup) > 0:
-        qu = "UPDATE "+state.schema_name+"."+datafile.table_name+" SET "+",".join(fup)
+        qu = "UPDATE "+state.schema_name+"."+df.table_name+" SET "+",".join(fup)
         cursor.execute(qu)
         conn.commit()
     return
