@@ -6,9 +6,10 @@ import psycopg2
 from psycopg2 import sql
 
 
-def create_common_data_format_schema (con,cur,schema_name,CDF_specs_path):
+def create_common_data_format_schema (con,cur,schema_name):
     ''' schema_name example: 'cdf'; Creates schema with that name on the given db connection and cursor'''
     rs = ['create_common_data_format_schema (con,cur,'+ schema_name+')']
+    
     # create the blank schema
     cur.execute(sql.SQL('DROP SCHEMA IF EXISTS {0} CASCADE; CREATE SCHEMA {0};').format(sql.Identifier(schema_name)))
     con.commit()
@@ -18,14 +19,13 @@ def create_common_data_format_schema (con,cur,schema_name,CDF_specs_path):
     con.commit()
 
     # create enumeration tables
-    # *** this worked: enumeration_path = '/container_root_dir/CDF_schema_def_info/enumerations/'
-    enumeration_path = CDF_specs_path+'enumerations/'
+    enumeration_path = '/container_root_dir/CDF_schema_def_info/enumerations/'
     for t in ['IdentifierType','CountItemStatus','ReportingUnitType','ElectionType','CountItemType']:
         q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} (Id BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY,Txt TEXT UNIQUE NOT NULL); COPY {0}.{1} (txt) FROM %s'
         cur.execute(sql.SQL(q).format(sql.Identifier(schema_name), sql.Identifier(t)),(enumeration_path + t + '.txt',))
 
     # create all other tables, in set order because of foreign keys
-    with open(table_file_path,'r') as f:
+    with open('CDF_schema_def_info/tables.txt','r') as f:
         table_ds = eval(f.read())
     for d in table_ds:
         field_defs = ['Id BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY']

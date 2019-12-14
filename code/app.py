@@ -178,7 +178,7 @@ def create_cdf():
     conn = establish_connection()
     cur = conn.cursor()
     rs.append('Connected to database')
-    a = CDF.create_common_data_format_schema(conn,cur,'cdf2','CDF_schema_def_info')
+    a = CDF.create_common_data_format_schema(conn,cur,'cdf2')
     rs.append(str(a))
     
     if cur:
