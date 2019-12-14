@@ -4,7 +4,7 @@
                     'foreign_keys':[],
                     'enumerations':['IdentifierType'],
                     'other_element_refs':[],
-                    'constraints':['UNIQUE ("ForeignId","IdentifierType_Id","OtherIdentifierType")']},
+                    'constraints':['UNIQUE ("ForeignId", "IdentifierType_Id", "OtherIdentifierType")']},
                 {'tablename':'ReportingUnit',
                      'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'}],
                      'enumerations':['ReportingUnitType','CountItemStatus'],
@@ -12,19 +12,19 @@
                      'constraints':[]
                 },
                 {'tablename':'Party',
-                      'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'},{'fieldname':'Abbreviation','datatype':'TEXT'}],
+                      'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'}, {'fieldname':'Abbreviation','datatype':'TEXT'}],
                       'enumerations':[],
                       'other_element_refs':[],
                       'constraints':[]
                 },
                 {'tablename':'Election',
-                    'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'},{'fieldname':'EndDate','datatype':'DATE'},{'fieldname':'StartDate','datatype':'DATE'}],
+                    'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'}, {'fieldname':'EndDate','datatype':'DATE'},{'fieldname':'StartDate','datatype':'DATE'}],
                     'enumerations':['ElectionType'],
                     'other_element_refs':[],
                     'constraints':[]
                 },
                 {'tablename':'Office',
-                     'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'},{'fieldname':'Description','datatype':'TEXT'}],
+                     'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'}, {'fieldname':'Description','datatype':'TEXT'}],
                      'enumerations':[],
                      'other_element_refs':[],
                      'constraints':[]

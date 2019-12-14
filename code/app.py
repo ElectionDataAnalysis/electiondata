@@ -157,12 +157,6 @@ def file_to_context():
     
     [munger_d,munger_inverse_d] = context.build_munger_d(df.state,m)
 
-    # ['election', 'county', 'party', 'geoprecinct', 'other_reporting_unit', 'office']
-    #  {'geoprecinct':{'state_d':df.state.context_dictionary['reportingunit']}
-    #query_d = {'election':{'state_d':df.state.context_dictionary['election']}, 'party':{'state_d':df.state.context_dictionary['party']}
-   # , 'reportingunit;precinct': {'state_d':df.state.context_dictionary['reportingunit']}  #,'reportingunit;county':{'state_d':df.state.context_dictionary['reportingunit'],'plural':'counties'}, 'reportingunit;precinct':{'state_d':df.state.context_dictionary['reportingunit'],'plural':'precincts'}, 'reportingunit;other':{'state_d':df.state.context_dictionary['reportingunit'],'plural':'other reporting units'}
-    #}
-    # a = 1/0   # diagnostic ***
     a = context.raw_to_context(df,m,munger_d,conn,cur)
     report.append(str(a))
 
