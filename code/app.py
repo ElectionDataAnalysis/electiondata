@@ -167,9 +167,6 @@ def file_to_context():
     report.append(str(a))
 
     return("<p>"+"</p><p>  ".join(report))
-    
-    
-
 
 @app.route('/create_cdf')
 def create_cdf():
@@ -187,7 +184,6 @@ def create_cdf():
         conn.close()
     return("<p>"+"</p><p>  ".join(rs))
 
-
 # close connection
     report.append('Close connection')
     if cur:
@@ -198,7 +194,6 @@ def create_cdf():
 
 @app.route('/load_cdf')
 def load_cdf():
-
     report=[str(datetime.now())]
     # instantiate state of NC
     report.append('Create NC')
@@ -213,7 +208,6 @@ def load_cdf():
     report.append('ids are '+str(ids))
 
     conn.commit()
-
 
 # close connection
     report.append('Close connection')
