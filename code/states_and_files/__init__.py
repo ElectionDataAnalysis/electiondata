@@ -9,7 +9,7 @@ from psycopg2 import sql
 ## Define classes
 
 class State:
-    def __init__(self,abbr,name,meta_parser,schema_name,path_to_state_dir,main_reporting_unit_type,context_dictionary):        # reporting_units,elections,parties,offices):
+    def __init__(self,abbr,name,meta_parser,schema_name,path_to_state_dir,main_reporting_unit_type,type_map,context_dictionary):        # reporting_units,elections,parties,offices):
         self.abbr = abbr
         self.name = name
         self.meta_parser=meta_parser
@@ -18,6 +18,7 @@ class State:
             path_to_state_dir += '/'
         self.path_to_state_dir=path_to_state_dir    #  include 'NC' in path.
         self.main_reporting_unit_type=main_reporting_unit_type  # *** is this used?
+        self.type_map = type_map
         self.context_dictionary=context_dictionary
         #self.reporting_units=reporting_units  # dictionary, with external codes
         #self.elections=elections
@@ -80,6 +81,8 @@ def create_state(abbr,path_to_state_dir):
         if not os.path.isfile(path_to_state_dir+'context/'+attr+'.txt'):
             return('Error: No file '+path_to_state_dir+'context/'+attr+'.txt')
             sys.exit()
+    with open(path_to_state_dir+'context/type_map.txt') as f:
+        type_map= eval(f.read().strip())
     string_d = {} # dictionary to hold string attributes
     for attr in string_attributes:     # strings
         with open(path_to_state_dir+'context/'+attr+'.txt') as f:
@@ -89,7 +92,7 @@ def create_state(abbr,path_to_state_dir):
     for attr in context_d_keys:     # python objects
         with open(path_to_state_dir+'context/'+attr+'.txt') as f:
             context_d[attr]=eval(f.read())
-    return State(abbr,string_d['name'],meta_p,string_d['schema_name'],path_to_state_dir,string_d['main_reporting_unit_type'],context_d)
+    return State(abbr,string_d['name'],meta_p,string_d['schema_name'],path_to_state_dir,string_d['main_reporting_unit_type'],type_map,context_d)
 
 def create_datafile(s,election,data_file_name,value_convention):
     # check that election is compatible with state

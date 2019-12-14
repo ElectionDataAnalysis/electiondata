@@ -13,12 +13,21 @@ from psycopg2 import sql
 from datetime import datetime
 
 import clean as cl
+from munge_routines import get_upsert_id
 
-# the main event: process a datafile, using info there to update the context folder for the associated state
-def raw_to_db(df,m,conn,cur,cdf_schema):
-    report = [str(datetime.now())]
+# process info from state context_dictionary into db
+def context_to_db(s):
+    rs = [str(datetime.now())]
+    for k in s.context_dictionary.keys():
+        a = 1/1 ## placeholder ***
+    return('</p><p>'.join(rs))
+
+
+# the main event: process a datafile into the cdf schema
+def raw_df_to_db(df,m,conn,cur,cdf_schema):
+    rs = [str(datetime.now())]
     
-    return('</p><p>'.report)
+    return('</p><p>'.join(rs))
 
 
 
