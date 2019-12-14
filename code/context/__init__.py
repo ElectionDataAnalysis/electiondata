@@ -31,19 +31,22 @@ def build_munger_d(s,m):
 
 
 
-def raw_to_context(df,m,query_d,munger_d,conn,cur):
+def raw_to_context(df,m,munger_d,conn,cur):
     ''' UNDER CONSTRUCTION df is a datafile; m is a munger; d is a dictionary whose keys are names of tables in the common data format '''
     ### *** error: returns counties only, not geoprecinct names
     rs = [str(datetime.now())]
-    for k in query_d.keys():
-        cur.execute(sql.SQL(m.query_from_raw[k]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
-        items_per_df = cur.fetchall()
-        missing = []
-        for e in items_per_df:
-            if e[0] not in munger_d[k].values():
-                missing.append(e[0])
-        rs.append('Sample data for '+k+': '+str( items_per_df[0:4]))
-        rs.append('For \''+m.name +'\', <b> missing '+k+' list is: </b>'+str(missing)+'. Add any missing '+k+' to the '+k+'.txt file and rerun')
+    for k in df.state.context_dictionary.keys():
+        if k in m.query_from_raw.keys():
+            cur.execute(sql.SQL(m.query_from_raw[k]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
+            items_per_df = cur.fetchall()
+            missing = []
+            for e in items_per_df:
+                if e[0] is not None and e[0] not in munger_d[k].values():
+                    missing.append(e[0])
+            if len(missing)>0:
+                missing.sort()   #  and sort
+            rs.append('Sample data for '+k+': '+str( items_per_df[0:4]))
+            rs.append('For \''+m.name +'\', <b> missing '+k+' list is: </b>'+str(missing)+'. Add any missing '+k+' to the '+k+'.txt file and rerun')
         
     
     return('</p><p>'.join(rs))
