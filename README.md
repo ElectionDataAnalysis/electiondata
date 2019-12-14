@@ -72,7 +72,7 @@ Defines two services: `db` (postgres to store data) and `web` (serves up web con
 
 
 
-## `code/local_data` folder
+### `code/local_data` folder
 Contains one subfolder for each state, each containing three folders:
 * `data` containing data files 
 * `meta` containing metadata files for the `data` files
@@ -86,7 +86,9 @@ This folder contains contextual information about a particular state. This infor
 - DB elements that must be loaded from the `context` file (or corresponding attribute of state or datafile) before individual records in datafile are addressed: `election`, `reportingunit` , `party`, `office` 
 - DB elements that must be loaded from each record in the datafile: `reportingunit` (type of reporting unit will need to be respected, e.g., `county` or `geoprecinct` or `other`)
 
-
+### About the `SQL` folder:
+ - Contains folder `enumerations` with the various enumerations from the Common Data Format
+ - Contains file `tables.txt` with the python dictionary determining the tables in the postgres common data format schema.
 
 ## Naming conventions
 

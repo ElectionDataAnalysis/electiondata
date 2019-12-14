@@ -178,7 +178,8 @@ def create_cdf():
     conn = establish_connection()
     cur = conn.cursor()
     rs.append('Connected to database')
-    rs.append(str(CDF.create_common_data_format_schema(conn,cur,'cdf2')))
+    a = CDF.create_common_data_format_schema(conn,cur,'cdf2','SQL/tables.txt')
+    rs.append(str(a))
     
     if cur:
         cur.close()

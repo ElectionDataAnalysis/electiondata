@@ -6,7 +6,7 @@ import psycopg2
 from psycopg2 import sql
 
 
-def create_common_data_format_schema (con,cur,schema_name):
+def create_common_data_format_schema (con,cur,schema_name,table_file_path):
     ''' schema_name example: 'cdf'; Creates schema with that name on the given db connection and cursor'''
     rs = ['create_common_data_format_schema (con,cur,'+ schema_name+')']
     # create the blank schema
@@ -24,92 +24,8 @@ def create_common_data_format_schema (con,cur,schema_name):
         cur.execute(sql.SQL(q).format(sql.Identifier(schema_name), sql.Identifier(t)),(enumeration_path + t + '.txt',))
 
     # create all other tables, in set order because of foreign keys
-    table_ds = [{'tablename':'ExternalIdentifier',
-                    'fields':[{'fieldname':'ForeignId','datatype':'INTEGER'},
-                            {'fieldname':'Value','datatype':'TEXT NOT NULL'}],
-                    'foreign_keys':[],
-                    'enumerations':['IdentifierType'],
-                    'other_element_refs':[],
-                    'constraints':['UNIQUE ("ForeignId","IdentifierType_Id","OtherIdentifierType")']},
-                {'tablename':'ReportingUnit',
-                     'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'}],
-                     'enumerations':['ReportingUnitType','CountItemStatus'],
-                     'other_element_refs':[],
-                     'constraints':[]
-                },
-                {'tablename':'Party',
-                      'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'},{'fieldname':'Abbreviation','datatype':'TEXT'}],
-                      'enumerations':[],
-                      'other_element_refs':[],
-                      'constraints':[]
-                },
-                {'tablename':'Election',
-                    'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'},{'fieldname':'EndDate','datatype':'DATE'},{'fieldname':'StartDate','datatype':'DATE'}],
-                    'enumerations':['ElectionType'],
-                    'other_element_refs':[],
-                    'constraints':[]
-                },
-                {'tablename':'Office',
-                     'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'},{'fieldname':'Description','datatype':'TEXT'}],
-                     'enumerations':[],
-                     'other_element_refs':[],
-                     'constraints':[]
-                },
-                {'tablename':'CandidateContest', # CDF requires a name ***
-                      'fields':[{'fieldname':'Name','datatype':'TEXT'}, {'fieldname':'VotesAllowed','datatype':'INTEGER NOT NULL'}, {'fieldname':'NumberElected','datatype':'INTEGER'}, {'fieldname':'NumberRunoff','datatype':'INTEGER'}],
-                      'enumerations':[],
-                      'other_element_refs':[{'fieldname':'Office_Id','refers_to':'Office'}, {'fieldname':'PrimaryParty_Id','refers_to':'Party'}, {'fieldname':'ElectionDistrict_Id','refers_to':'ReportingUnit'}],
-                      'constraints':[]
-                },
-                {'tablename':'BallotMeasureContest', # CDF requires a name ***
-                      'fields':[{'fieldname':'Name','datatype':'TEXT'}],
-                      'enumerations':[],
-                      'other_element_refs':[{'fieldname':'ElectionDistrict_Id', 'refers_to':'ReportingUnit'}],
-                      'constraints':[]
-                },
-                {'tablename':'BallotMeasureSelection',   # note: we don't enumerate the choices, though some kind of universal yes/no is tempting ***
-                      'fields':[{'fieldname':'Selection','datatype':'TEXT'}],
-                      'enumerations':[],
-                      'other_element_refs':[],
-                      'constraints':[]
-                },
-                {'tablename':'Candidate',
-                      'fields':[{'fieldname':'BallotName','datatype':'TEXT'}],
-                      'enumerations':[],
-                      'other_element_refs':[{'fieldname':'Election_Id', 'refers_to':'Election'},{'fieldname':'Party_Id', 'refers_to':'Party'}],
-                      'constraints':[]
-                    },
-                    {'tablename':'CandidateSelection',
-                          'fields':[],
-                          'enumerations':[],
-                          'other_element_refs':[{'fieldname':'Candidate_Id', 'refers_to':'Candidate'}],
-                          'constraints':[]
-                },
-                {'tablename':'VoteCount',
-                      'fields':[],
-                      'enumerations':['CountItemType'],
-                      'other_element_refs':[],
-                      'constraints':[]
-                },
-                {'tablename':'CandidateSelection',
-                      'fields':[],
-                      'enumerations':[],
-                      'other_element_refs':[{'fieldname':'Candidate_Id', 'refers_to':'Candidate'}],
-                      'constraints':[]
-                },
-                {'tablename':'BallotMeasureContestSelectionJoin',
-                      'fields':[],
-                      'enumerations':[],
-                      'other_element_refs':[{'fieldname':'BallotMeasureContest_Id', 'refers_to':'BallotMeasureContest'}, {'fieldname':'BallotMeasureSelection_Id', 'refers_to':'BallotMeasureSelection'}],
-                      'constraints':[]
-                },
-                {'tablename':'CandidateContestSelectionJoin',
-                      'fields':[],
-                      'enumerations':[],
-                      'other_element_refs':[{'fieldname':'CandidateContest_Id', 'refers_to':'CandidateContest'}, {'fieldname':'CandidateSelection_Id', 'refers_to':'CandidateSelection'}],
-                      'constraints':[]
-            }
-    ]
+    with open(table_file_path,'r') as f:
+        table_ds = eval(f.read())
     for d in table_ds:
         field_defs = ['Id BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY']
         format_args = [schema_name,d['tablename']]
