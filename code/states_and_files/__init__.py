@@ -71,7 +71,7 @@ def create_munger(file_path):   # file should contain all munger info in a dicti
 def create_state(abbr,path_to_state_dir):
     '''abbr is the capitalized two-letter postal code for the state, district or territory'''
     string_attributes = ['name','schema_name','parser_string','main_reporting_unit_type']
-    context_d_keys = ['type_map','reportingunit','election','party','office']    # what consistency checks do we need? E.g., shouldn't all reporting units start with the state name?
+    context_d_keys = ['reportingunit','election','party','office']    # what consistency checks do we need? 
     if path_to_state_dir[-1] != '/':
         path_to_state_dir += '/'
     if not os.path.isdir(path_to_state_dir):

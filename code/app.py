@@ -310,3 +310,18 @@ def gui():
     if conn:
         conn.close()
     return("<p>"+"</p><p>  ".join(report))
+
+@app.route('/alt_create_cdf_db')
+def test():
+
+    from db_routines import Create_CDF_db as CDF
+    rs =[str(datetime.now())]
+    conn = establish_connection()
+    cur = conn.cursor()
+    CDF.create_common_data_format_schema(conn,cur,'cdf2')
+    if cur:
+        cur.close()
+    if conn:
+        conn.close()
+    return("<p>"+"</p><p>  ".join(rs))
+
