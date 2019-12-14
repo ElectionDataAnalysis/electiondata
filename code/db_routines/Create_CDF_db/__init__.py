@@ -8,7 +8,7 @@ from psycopg2 import sql
 
 def create_common_data_format_schema (con,cur,schema_name):
     ''' schema_name example: 'cdf'; Creates schema with that name on the given db connection and cursor'''
-    
+    rs = ['create_common_data_format_schema (con,cur,'+ schema_name+')']
     # create the blank schema
     cur.execute(sql.SQL('DROP SCHEMA IF EXISTS {0} CASCADE; CREATE SCHEMA {0};').format(sql.Identifier(schema_name)))
     con.commit()
@@ -136,5 +136,9 @@ def create_common_data_format_schema (con,cur,schema_name):
         format_args = [sql.Identifier(a) for a in format_args]
         cur.execute(sql.SQL(q).format(*format_args))
         con.commit()
+        rs.append('Created table '+d['tablename'])
+        
+    return('</p><p>'.join(rs))
+        
 
 

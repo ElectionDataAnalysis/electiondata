@@ -173,27 +173,18 @@ def file_to_context():
 
 @app.route('/create_cdf')
 def create_cdf():
-    report=[str(datetime.now())]
-    # instantiate state of NC
-    report.append('Create NC')
-    s = sf.create_state('NC','local_data/NC')
-    
-    report.append('Connect to db')
+    from db_routines import Create_CDF_db as CDF
+    rs =[str(datetime.now())]
     conn = establish_connection()
     cur = conn.cursor()
+    rs.append('Connected to database')
+    rs.append(str(CDF.create_common_data_format_schema(conn,cur,'cdf2')))
     
-    mypath=Path('SQL/Create_CDF_db.sql')
-    if mypath.is_file():
-        queries = dbr.file_to_sql_statement_list(mypath)
-        for query in queries:
-            try:
-                cur.execute(query)
-            except:
-                report.append('query failed: '+query)
-        report.append('Created cdf schema in db')
-    else:
-        report.append('no such file SQL/Create_CDF_db.sql')
-    conn.commit()
+    if cur:
+        cur.close()
+    if conn:
+        conn.close()
+    return("<p>"+"</p><p>  ".join(rs))
 
 
 # close connection
@@ -310,18 +301,4 @@ def gui():
     if conn:
         conn.close()
     return("<p>"+"</p><p>  ".join(report))
-
-@app.route('/alt_create_cdf_db')
-def test():
-
-    from db_routines import Create_CDF_db as CDF
-    rs =[str(datetime.now())]
-    conn = establish_connection()
-    cur = conn.cursor()
-    CDF.create_common_data_format_schema(conn,cur,'cdf2')
-    if cur:
-        cur.close()
-    if conn:
-        conn.close()
-    return("<p>"+"</p><p>  ".join(rs))
 
