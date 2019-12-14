@@ -8,10 +8,10 @@ from psycopg2 import sql
 from datetime import datetime
 
 def build_munger_d(s,m):
-    '''UNDER CONSTRUCTION given a state s and a munger m, use the state's context dictionaries to build dictionaries restricted to the given munger'''
+    '''given a state s and a munger m, use the state's context dictionaries to build dictionaries restricted to the given munger. Munger m will have a query_from_raw dictionary with keys that may be tablenames but may also be tablename-type pairs. E.g., ReportingUnit;precinct or Election.'''
     munger_d = {}
     munger_inverse_d = {}
-    for t in ['election','party','reportingunit;precinct','office']:
+    for t in m.query_from_raw.keys(): ## e.g., ['Election','Party','ReportingUnit;precinct','Office']:
         t_parts = t.split(';')
         context_key = t_parts[0]
         if len(t_parts) > 1:
@@ -19,7 +19,7 @@ def build_munger_d(s,m):
         else:
             type = None
         munger_d[t] = {}
-        for k in s.context_dictionary[context_key].keys():
+        for k in s.context_dictionary[context_key].keys():  # e.g., k = 'North Carolina;General Assembly;House of Representatives;2019-2020;District 1'
             if 'ExternalIdentifiers' in s.context_dictionary[context_key][k].keys() and   m.name in s.context_dictionary[context_key][k]['ExternalIdentifiers'].keys() and (type == None or s.context_dictionary[context_key][k]['Type'] == type):
                     munger_d[t][k] = s.context_dictionary[context_key][k]['ExternalIdentifiers'][m.name]
         munger_inverse_d[t] = {}
@@ -32,21 +32,23 @@ def build_munger_d(s,m):
 
 
 def raw_to_context(df,m,munger_d,conn,cur):
-    ''' UNDER CONSTRUCTION df is a datafile; m is a munger; d is a dictionary whose keys are names of tables in the common data format '''
-    ### *** error: returns counties only, not geoprecinct names
     rs = [str(datetime.now())]
-    for k in df.state.context_dictionary.keys():
-        if k in m.query_from_raw.keys():
-            cur.execute(sql.SQL(m.query_from_raw[k]).format(sql.Identifier(df.state.schema_name), sql.Identifier(df.table_name)))
+    for t in m.query_from_raw.keys():
+        t_parts = t.split(';')
+        context_key = t_parts[0]
+        if len(t_parts) > 1:
+            type = t_parts[1]
+        if context_key in df.state.context_dictionary.keys():   # why do we need this criterion? ***
+            cur.execute(sql.SQL( m.query_from_raw[t] ).format(sql.Identifier(df.state.schema_name),  sql.Identifier(df.table_name)))
             items_per_df = cur.fetchall()
             missing = []
             for e in items_per_df:
-                if e[0] is not None and e[0] not in munger_d[k].values():
+                if e[0] is not None and e[0] not in munger_d[t].values():
                     missing.append(e[0])
             if len(missing)>0:
                 missing.sort()   #  and sort
-            rs.append('Sample data for '+k+': '+str( items_per_df[0:4]))
-            rs.append('For \''+m.name +'\', <b> missing '+k+' list is: </b>'+str(missing)+'. Add any missing '+k+' to the '+k+'.txt file and rerun')
+            rs.append('Sample data for '+t+': '+str( items_per_df[0:4]))
+            rs.append('For \''+m.name +'\', <b> missing '+t+' list is: </b>'+str(missing)+'. Add any missing '+t+' to the '+context_key+'.txt file and rerun')
         
     
     return('</p><p>'.join(rs))

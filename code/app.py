@@ -104,10 +104,10 @@ def raw_data():
         conn = establish_connection()
         cur = conn.cursor()
         
-        for d in datafiles:
-            t = d.table_name   # name of table
-            e = d.metafile_encoding
-            fpath = 'local_data/NC/meta/'+d.metafile_name   # this path is outside the docker container.
+        for df in datafiles:
+            t = df.table_name   # name of table
+            e = df.metafile_encoding
+            fpath = 'local_data/NC/meta/'+df.metafile_name   # this path is outside the docker container.
             check_args(s,fpath,t)   # checking s is redundant
         
         # clean the metadata file
@@ -116,21 +116,21 @@ def raw_data():
         # create table and commit
  
             cur.execute(sql.SQL('DROP TABLE IF EXISTS {}.{}').format(sql.Identifier(s.schema_name),sql.Identifier(t)))
-            [query,strs,sql_ids] = dbr.create_table(d)
+            [query,strs,sql_ids] = dbr.create_table(df)
             format_args = [sql.Identifier(x) for x in sql_ids]
             cur.execute(sql.SQL(query).format( *format_args ),strs)
             diagnostic = sql.SQL(query).format( *format_args ).as_string(conn)
             conn.commit()
 
         # correct any errors due to foibles of particular datafile and commit
-            for query in d.correction_query_list:
-                cur.execute(sql.SQL(query).format(sql.Identifier(s.schema_name), sql.Identifier(d.table_name)))
+            for query in df.correction_query_list:
+                cur.execute(sql.SQL(query).format(sql.Identifier(s.schema_name), sql.Identifier(df.table_name)))
                 report.append(query)
                 conn.commit()
 
     # load data into tables
-            dbr.load_data(conn,cur,s,d)
-            report.append('Data from file '+d.file_name+' loaded into table '+s.schema_name+'.'+d.table_name)
+            dbr.load_data(conn,cur,s,df)
+            report.append('Data from file '+df.file_name+' loaded into table '+s.schema_name+'.'+df.table_name)
     
     # close connection
         if cur:

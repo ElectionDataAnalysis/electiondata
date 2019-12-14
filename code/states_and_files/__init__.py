@@ -71,7 +71,7 @@ def create_munger(file_path):   # file should contain all munger info in a dicti
 def create_state(abbr,path_to_state_dir):
     '''abbr is the capitalized two-letter postal code for the state, district or territory'''
     string_attributes = ['name','schema_name','parser_string','main_reporting_unit_type']
-    context_d_keys = ['reportingunit','election','party','office']    # what consistency checks do we need? 
+    context_d_keys = ['ReportingUnit','Election','Party','Office']    # what consistency checks do we need?
     if path_to_state_dir[-1] != '/':
         path_to_state_dir += '/'
     if not os.path.isdir(path_to_state_dir):
@@ -97,7 +97,7 @@ def create_state(abbr,path_to_state_dir):
 def create_datafile(s,election,data_file_name,value_convention):
     # check that election is compatible with state
     # *** need to code the value_convention to pull the right identifiers, maybe column names too.
-    if election not in s.context_dictionary['election'].keys():
+    if election not in s.context_dictionary['Election'].keys():
         return('No such election ('+election+') associated with state '+s.name)
         # sys.exit()
     

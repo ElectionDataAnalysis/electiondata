@@ -1,11 +1,11 @@
 {'name':'nc_export1',
 'query_from_raw':{
-	'election':'SELECT DISTINCT Election_Date FROM {}.{}',
-	'reportingunit;county':'SELECT DISTINCT County FROM {}.{}',
-	'party':'SELECT DISTINCT Choice_Party FROM {}.{}',
-	'reportingunit;precinct':'SELECT DISTINCT CONCAT(County,\';\',Precinct) FROM {}.{} WHERE Real_Precinct = \'Y\'',
-	'reportingunit;other':'SELECT DISTINCT CONCAT(County,\';\',Precinct FROM {}.{} WHERE Real_Precinct != \'Y\'',
-	'office':'SELECT DISTINCT Contest_Name FROM {}.{} WHERE Choice != \'Against\' AND Choice != \'For\' AND Choice != \'Yes\' AND Choice != \'No\' '
+	'Election':'SELECT DISTINCT Election_Date FROM {}.{}',
+	'ReportingUnit;county':'SELECT DISTINCT County FROM {}.{}',
+	'Party':'SELECT DISTINCT Choice_Party FROM {}.{}',
+	'ReportingUnit;precinct':'SELECT DISTINCT CONCAT(County,\';\',Precinct) FROM {}.{} WHERE Real_Precinct = \'Y\'',
+	'ReportingUnit;other':'SELECT DISTINCT CONCAT(County,\';\',Precinct) FROM {}.{} WHERE Real_Precinct != \'Y\'',
+	'Office':'SELECT DISTINCT Contest_Name FROM {}.{} WHERE Choice != \'Against\' AND Choice != \'For\' AND Choice != \'Yes\' AND Choice != \'No\' '
 		}
 }
 
