@@ -18,7 +18,7 @@
                       'constraints':[]
                 },
                 {'tablename':'Election',
-                    'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'}, {'fieldname':'EndDate','datatype':'DATE'},{'fieldname':'StartDate','datatype':'DATE'}],
+                    'fields':[{'fieldname':'Name', 'datatype':'TEXT UNIQUE'}, {'fieldname':'EndDate','datatype':'DATE'}, {'fieldname':'StartDate','datatype':'DATE'}],
                     'enumerations':['ElectionType'],
                     'other_element_refs':[],
                     'constraints':[]

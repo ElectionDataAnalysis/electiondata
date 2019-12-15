@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # under construction
+# db_routines/Create_CDF_db/__init__.py
 #  *** may need to add "NOT NULL" requirements per CDF
 
 import psycopg2
@@ -36,7 +37,7 @@ def create_common_data_format_schema (con,cur,schema_name):
             format_args.append( f['fieldname'])
             ctr += 1
         for e in d['enumerations']:
-            field_defs.append( '{'+str(ctr)+'} INTEGER NOT NULL REFERENCES {0}.{'+str(ctr+1)+'}(Id), {'+str(ctr+2)+'} TEXT' )
+            field_defs.append( '{'+str(ctr)+'} INTEGER REFERENCES {0}.{'+str(ctr+1)+'}(Id), {'+str(ctr+2)+'} TEXT' )
             format_args.append(e+'_Id')
             format_args.append(e)
             format_args.append('Other'+e)

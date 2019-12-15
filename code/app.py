@@ -73,14 +73,14 @@ def create_schema(s):
     if conn:
         conn.close()
 
-
+##########################################
 
 app = Flask(__name__)
 
 @app.route('/raw_data')
 def raw_data():
-# initialize report for logging
-    report=[str(datetime.now())]
+# initialize rs for logging
+    rs=[str(datetime.now())]
 #    tables = [['results_pct','utf8'],['absentee','utf16']] # varies by state *** name and encoding of metadata file
         # note: 'absentee' needs better data cleaning
 #    fmeta = {'results_pct':'layout_results_pct.txt','absentee':'sfs_by_hand_layout_absentee.txt'}  # name of metadata file; varies by state ***
@@ -100,7 +100,7 @@ def raw_data():
         create_schema(s)
 
     # connect to the state schema
-        report.append('Connect to database')
+        rs.append('Connect to database')
         conn = establish_connection()
         cur = conn.cursor()
         
@@ -125,25 +125,25 @@ def raw_data():
         # correct any errors due to foibles of particular datafile and commit
             for query in df.correction_query_list:
                 cur.execute(sql.SQL(query).format(sql.Identifier(s.schema_name), sql.Identifier(df.table_name)))
-                report.append(query)
+                rs.append(query)
                 conn.commit()
 
     # load data into tables
             dbr.load_data(conn,cur,s,df)
-            report.append('Data from file '+df.file_name+' loaded into table '+s.schema_name+'.'+df.table_name)
+            rs.append('Data from file '+df.file_name+' loaded into table '+s.schema_name+'.'+df.table_name)
     
     # close connection
         if cur:
             cur.close()
         if conn:
             conn.close()
-        return("<p>"+"</p><p>  ".join(report))
+        return("<p>"+"</p><p>  ".join(rs))
         
         
 @app.route('/file_to_context')
 def file_to_context():
 # initialize report for logging
-    report=[str(datetime.now())]
+    rs=[str(datetime.now())]
 # instantiate state of NC
     s = sf.create_state('NC','local_data/NC')
 # instantiate the NC pct_result datafile
@@ -158,9 +158,9 @@ def file_to_context():
     [munger_d,munger_inverse_d] = context.build_munger_d(df.state,m)
 
     a = context.raw_to_context(df,m,munger_d,conn,cur)
-    report.append(str(a))
+    rs.append(str(a))
 
-    return("<p>"+"</p><p>  ".join(report))
+    return("<p>"+"</p><p>  ".join(rs))
 
 @app.route('/create_cdf')
 def create_cdf():
@@ -179,42 +179,50 @@ def create_cdf():
     return("<p>"+"</p><p>  ".join(rs))
 
 # close connection
-    report.append('Close connection')
+    rs.append('Close connection')
     if cur:
         cur.close()
     if conn:
         conn.close()
-    return("<p>"+"</p><p>  ".join(report))
+    return("<p>"+"</p><p>  ".join(rs))
 
 @app.route('/load_cdf')
 def load_cdf():
-    report=[str(datetime.now())]
+    rs=[str(datetime.now())]
     # instantiate state of NC
-    report.append('Create NC')
+    rs.append('Create NC')
     s = sf.create_state('NC','local_data/NC')
     
-    report.append('Connect to db')
-    conn = establish_connection()
-    cur = conn.cursor()
+    rs.append('Connect to db')
+    con = establish_connection()
+    cur = con.cursor()
 
-    report.append('Load informaton from context folder')
-    ids = sf.context_to_cdf(s,conn,cur,report)
-    report.append('ids are '+str(ids))
-
-    conn.commit()
+    rs.append('Load informaton from context dictionary')
+    #ids = sf.context_to_cdf(s,conn,cur,rs)  # *** find better code, maybe in context module?
+    #rs.append('ids are '+str(ids))
+    context_to_db_d = context.context_to_cdf(s,'cdf2',con,cur)
+    
+    # diagnostics to print
+    for k in context_to_db_d.keys():
+        rs.append('Sample '+k)
+        if context_to_db_d[k]:
+            rs.append('Sample '+k +': ' str( list(context_to_db_d[k].items())[0] )  )
+        else:
+            rs.append('No '+k)
+    con.commit()
 
 # close connection
-    report.append('Close connection')
+    rs.append('Close connection')
     if cur:
         cur.close()
-    if conn:
-        conn.close()
-    return("<p>"+"</p><p>  ".join(report))
+    if con:
+        con.close()
+    return("<p>"+"</p><p>  ".join(rs))
 
 
 @app.route('/analyze')
 def analyze():
-    report=[""]
+    rs=[""]
 # instantiate state of NC
     s = sf.create_state('NC','local_data/NC') # do we need this?
     conn = establish_connection()
@@ -239,7 +247,7 @@ def analyze():
     for c in contests:
     # for given contest_name, calculate DEM votes and total votes on absentee ballots by county
         if c:
-            report.append(c)
+            rs.append(c)
             c_votes=votes[votes.contest==c]
             if 'DEM' in c_votes['party'].values:
                 table = pd.pivot_table(c_votes, values='votes', index=['county'], columns=['party'], aggfunc=np.sum).fillna(0)
@@ -251,11 +259,11 @@ def analyze():
                 outliers = table[np.absolute(table.pct_DEM-mean)> tolerance*std]
                 # report.append(str(table['pct_DEM']))
                 if outliers.empty:
-                    report.append("No outliers more than "+str(tolerance)+" standard deviations from mean")
+                    rs.append("No outliers more than "+str(tolerance)+" standard deviations from mean")
                 else:
-                    report.append("Outliers are:"+str(outliers))
+                    rs.append("Outliers are:"+str(outliers))
             else:
-                report.append("No DEM votes in contest "+c)
+                rs.append("No DEM votes in contest "+c)
 
     # look for outlier in DEM percentage
     
@@ -266,7 +274,7 @@ def analyze():
 
 
     
-    return("<p>"+"</p><p>  ".join(report))
+    return("<p>"+"</p><p>  ".join(rs))
 
 #### diagnostic below *** can delete
 
@@ -274,20 +282,20 @@ from munge_routines import get_upsert_id, format_type_for_insert
 
 @app.route('/test')
 def gui():
-    report=[str(datetime.now())]
+    rs=[str(datetime.now())]
     conn = establish_connection()
     cur = conn.cursor()
     req_var_d= {'fieldname':'name','datatype':'text','value':'North Carolina General Election 2018-11-06'}
 
     other_var_ds = [{'fieldname':'enddate','datatype':'DATE','value':'2018-11-06'}, {'fieldname':'electiontype_id','datatype':'INTEGER','value':'40'}, {'fieldname':'othertype','datatype':'TEXT','value':''}]
     
-    # report.append(str(get_upsert_id('cdf','election',req_var_d,other_var_ds,conn,cur)))
+    # rs.append(str(get_upsert_id('cdf','election',req_var_d,other_var_ds,conn,cur)))
     
-    report.append(str(format_type_for_insert('cdf','electiontype','general',conn,cur)))
-    report.append(str(format_type_for_insert('cdf','electiontype','gen',conn,cur)))
+    rs.append(str(format_type_for_insert('cdf','electiontype','general',conn,cur)))
+    rs.append(str(format_type_for_insert('cdf','electiontype','gen',conn,cur)))
     if cur:
         cur.close()
     if conn:
         conn.close()
-    return("<p>"+"</p><p>  ".join(report))
+    return("<p>"+"</p><p>  ".join(rs))
 

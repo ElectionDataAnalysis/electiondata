@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# context/__init__.py
 # under construction
 # utilities for extracting state context info and inserting it into the files in the context folder
 import sys
@@ -6,6 +7,30 @@ import re
 import psycopg2
 from psycopg2 import sql
 from datetime import datetime
+from munge_routines import get_upsert_id
+
+def context_to_cdf(s,schema,con,cur):
+    ''' UNDER CONSTRUCTION: should take the info from the context_dictionary for the state s and insert it into the db. Returns a dictionary mapping context_dictionary keys to the database keys '''
+    rs = [str(datetime.now())]
+    out_d = {}
+    with open('CDF_schema_def_info/tables.txt','r') as f:
+        table_ds = eval(f.read())
+    for d in table_ds:      # iterating over tables in the common data format schema
+        t = d['tablename']
+        out_d[t] = {}
+        if t in s.context_dictionary.keys():
+            for name_key in s.context_dictionary[t]:   # e.g., name_key = 'North Carolina;Alamance County'
+                req_var_d = {'fieldname':'Name', 'datatype':'TEXT','value':name_key}
+                other_var_ds = []
+                for f in d['fields']:
+                    if f['fieldname'] != 'Name' and f['fieldname'] in s.context_dictionary[t][name_key].keys():
+                        f['value'] = s.context_dictionary[t][name_key][ f['fieldname'] ]
+                        other_var_ds.append(f)
+                ## insert the record into the db *** define req_var_d and other_var_ds from table_ds
+                out_d[t][name_key]=get_upsert_id(schema,t,req_var_d,other_var_ds,con,cur)
+    # return('</p><p>'.join(rs))
+    return(out_d)
+
 
 def build_munger_d(s,m):
     '''given a state s and a munger m, use the state's context dictionaries to build dictionaries restricted to the given munger. Munger m will have a query_from_raw dictionary with keys that may be tablenames but may also be tablename-type pairs. E.g., ReportingUnit;precinct or Election.'''
@@ -33,6 +58,7 @@ def build_munger_d(s,m):
 
 def raw_to_context(df,m,munger_d,conn,cur):
     rs = [str(datetime.now())]
+    rs.append('\'Missing\' below means \'Existing in the datafile, but missing from the munger dictionary, created from the state\'s context_dictionary, which was created from files in the context folder.')
     for t in m.query_from_raw.keys():
         t_parts = t.split(';')
         context_key = t_parts[0]
