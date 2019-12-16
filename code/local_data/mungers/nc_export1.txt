@@ -6,7 +6,8 @@
 	'ReportingUnit;precinct':'SELECT DISTINCT CONCAT(County,\';\',Precinct) FROM {}.{} WHERE Real_Precinct = \'Y\'',
 	'ReportingUnit;other':'SELECT DISTINCT CONCAT(County,\';\',Precinct) FROM {}.{} WHERE Real_Precinct != \'Y\'',
 	'Office':'SELECT DISTINCT Contest_Name FROM {}.{} WHERE Choice != \'Against\' AND Choice != \'For\' AND Choice != \'Yes\' AND Choice != \'No\' '
-		}
+		},
+'record_query':{}
 }
 
 

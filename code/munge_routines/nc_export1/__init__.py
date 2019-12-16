@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # under construction
+#/munge_routines/nc_export1/__init__.py
 
 import re
 
@@ -37,8 +38,26 @@ def add_ei(office_d):
     return(office_d)
             
         
+
+### load CandidateContest data from df to cdf; this should eventually be written in a munger-agnostic way, and also extended to all appropriate tables ***
+import psycopg2
+from psycopg2 import sql
+
+def raw_to_cdf(df,schema,con,cur,d):        #e.g., d = {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
+    q = 'SELECT DISTINCT contest_name, vote_for FROM {}.{}'
+    cur.execute(sql.SQL(q).format(sql.Identifier(schema),sql.Identifier(df.table_name)))
+    contests = cur.fetchall()
+    for c in contests:
+        contest_name = c[0]
+        if contest_name in d['Office'].keys():
+            vote_for = c[1]
+            office_id = d['Office'][contest_name]
+            election_district = s.context_dictionary['Office']['ElectionDistrict']
+            ## should be able to upsert contest now....
+            b = 1/0 # ***
         
-    
+    return('Contest name is '+contest_name+'; vote for '+str(vote_for))
+
     
 
 

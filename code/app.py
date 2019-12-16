@@ -189,7 +189,7 @@ def create_cdf():
 @app.route('/load_cdf')
 def load_cdf():
     rs=[str(datetime.now())]
-    # instantiate state of NC, munger and datafile
+    # instantiate state of NC, munger
     rs.append('Create NC')
     s = sf.create_state('NC','local_data/NC')
     rs.append('Create munger')
@@ -205,9 +205,6 @@ def load_cdf():
     context_to_db_d = context.context_to_cdf(s,'cdf2',con,cur)  # {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
     con.commit()
     
-    ## load records into External Identifier table
-    rs.append('NOT YET CODED: Load records into ExternalIdentifier table')
-    ## *** to do
 
     ## load data from state raw schema
     rs.append('NOT YET CODED: Load info from records in schema '+s.schema_name+' into CDF schema')
@@ -284,20 +281,26 @@ from munge_routines import get_upsert_id, format_type_for_insert
 
 @app.route('/test')
 def gui():
+    from munge_routines import nc_export1
     rs=[str(datetime.now())]
-    conn = establish_connection()
-    cur = conn.cursor()
-    req_var_d= {'fieldname':'name','datatype':'text','value':'North Carolina General Election 2018-11-06'}
+    con = establish_connection()
+    cur = con.cursor()
+    # instantiate state of NC
+    s = sf.create_state('NC','local_data/NC')
+    # instantiate the 'nc_export1' munger
+    m = sf.create_munger('local_data/mungers/nc_export1.txt')
+        # instantiate the NC pct_result datafile
+    df = sf.create_datafile(s,'General Election 2018-11-06','results_pct_20181106.txt',m)
 
-    other_var_ds = [{'fieldname':'enddate','datatype':'DATE','value':'2018-11-06'}, {'fieldname':'electiontype_id','datatype':'INTEGER','value':'40'}, {'fieldname':'othertype','datatype':'TEXT','value':''}]
-    
-    # rs.append(str(get_upsert_id('cdf','election',req_var_d,other_var_ds,conn,cur)))
-    
-    rs.append(str(format_type_for_insert('cdf','electiontype','general',conn,cur)))
-    rs.append(str(format_type_for_insert('cdf','electiontype','gen',conn,cur)))
+    context_to_db_d = context.context_to_cdf(s,'cdf2',con,cur)  # {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
+    con.commit()
+
+    rs.append(nc_export1.raw_to_cdf(df,s.schema_name,con,cur,context_to_db_d))
+
+
     if cur:
         cur.close()
-    if conn:
-        conn.close()
+    if con:
+        con.close()
     return("<p>"+"</p><p>  ".join(rs))
 

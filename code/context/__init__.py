@@ -18,6 +18,8 @@ def context_to_cdf(s,schema,con,cur):
     for d in table_ds:      # iterating over tables in the common data format schema
         t = d['tablename']      # e.g., t = 'ReportingUnit'
         out_d[t] = {}
+        
+    ## load info into the tables corresponding directly to the context_dictionary keys
         if t in s.context_dictionary.keys():
             for name_key in s.context_dictionary[t]:   # e.g., name_key = 'North Carolina;Alamance County'
                 req_var_d = {'fieldname':'Name', 'datatype':'TEXT','value':name_key}
@@ -36,14 +38,13 @@ def context_to_cdf(s,schema,con,cur):
                 ## insert the record into the db *** define req_var_d and other_var_ds from table_ds
                 upsert_id = get_upsert_id(schema,t,req_var_d,other_var_ds,con,cur)[0]
                 out_d[t][name_key] = upsert_id
+                
+            ## load data into the ExternalIdentifier table
                 for external_id_key in           s.context_dictionary[t][name_key]['ExternalIdentifiers'].keys():   # e.g., 'fips'
                     ## insert into ExternalIdentifier table
                     [id,other_txt] = format_type_for_insert(schema,'IdentifierType', external_id_key, con,cur)
                     q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s)'
                     cur.execute(sql.SQL(q).format(sql.Identifier(schema)), [upsert_id, s.context_dictionary[t][name_key]['ExternalIdentifiers'][external_id_key],id,other_txt ])
-                    # b = 1/0 #***
-
-    # return('</p><p>'.join(rs))
     return(out_d)
 
 
@@ -185,8 +186,9 @@ def insert_offices(s,d):
     for k in d.keys():
         for i in range(d[k]):
             office_name = state + ';' + k +';District ' + str(i+1)
-            out_d[office_name] = {}
-    dict_insert(s.path_to_state_dir + 'context/offices.txt',out_d)
+            out_d[office_name] = {'ElectionDistrict':office_name}
+    out_d['North Carolina;US Congress;Senate']={'ElectionDistrict':'North Carolina'}
+    dict_insert(s.path_to_state_dir + 'context/Office.txt',out_d)
     return(out_d)
     
 
