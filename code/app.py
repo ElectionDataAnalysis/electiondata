@@ -189,27 +189,29 @@ def create_cdf():
 @app.route('/load_cdf')
 def load_cdf():
     rs=[str(datetime.now())]
-    # instantiate state of NC
+    # instantiate state of NC, munger and datafile
     rs.append('Create NC')
     s = sf.create_state('NC','local_data/NC')
+    rs.append('Create munger')
+    m = sf.create_munger('local_data/mungers/nc_export1.txt')
     
     rs.append('Connect to db')
     con = establish_connection()
     cur = con.cursor()
 
-    rs.append('Load informaton from context dictionary')
+    rs.append('Load information from context dictionary for '+s.name)
     #ids = sf.context_to_cdf(s,conn,cur,rs)  # *** find better code, maybe in context module?
     #rs.append('ids are '+str(ids))
-    context_to_db_d = context.context_to_cdf(s,'cdf2',con,cur)
-    
-    # diagnostics to print
-    for t in context_to_db_d.keys():
-        rs.append('Sample '+t)
-        if context_to_db_d[t]:
-            rs.append('Sample '+t +': ' +str( list(context_to_db_d[t].items())[0] )  )
-        else:
-            rs.append('No '+t+' from context_dictionary')
+    context_to_db_d = context.context_to_cdf(s,'cdf2',con,cur)  # {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
     con.commit()
+    
+    ## load records into External Identifier table
+    rs.append('NOT YET CODED: Load records into ExternalIdentifier table')
+    ## *** to do
+
+    ## load data from state raw schema
+    rs.append('NOT YET CODED: Load info from records in schema '+s.schema_name+' into CDF schema')
+    ## *** to do
 
 # close connection
     rs.append('Close connection')

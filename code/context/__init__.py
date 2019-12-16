@@ -34,8 +34,15 @@ def context_to_cdf(s,schema,con,cur):
                         other_txt_d = {'fieldname':'Other'+e,'datatype':'TEXT','value':other_txt}
                         other_var_ds.append(other_txt_d)
                 ## insert the record into the db *** define req_var_d and other_var_ds from table_ds
-                out_d[t][name_key]=get_upsert_id(schema,t,req_var_d,other_var_ds,con,cur)[0]
-                
+                upsert_id = get_upsert_id(schema,t,req_var_d,other_var_ds,con,cur)[0]
+                out_d[t][name_key] = upsert_id
+                for external_id_key in           s.context_dictionary[t][name_key]['ExternalIdentifiers'].keys():   # e.g., 'fips'
+                    ## insert into ExternalIdentifier table
+                    [id,other_txt] = format_type_for_insert(schema,'IdentifierType', external_id_key, con,cur)
+                    q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s)'
+                    cur.execute(sql.SQL(q).format(sql.Identifier(schema)), [upsert_id, s.context_dictionary[t][name_key]['ExternalIdentifiers'][external_id_key],id,other_txt ])
+                    # b = 1/0 #***
+
     # return('</p><p>'.join(rs))
     return(out_d)
 

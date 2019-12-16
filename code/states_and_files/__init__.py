@@ -27,7 +27,7 @@ class State:
 
     
 class Datafile:
-    def __init__(self,state, election, table_name, file_name, encoding,metafile_name,metafile_encoding,value_convention,source_url,file_date,download_date,note,correction_query_list):
+    def __init__(self,state, election, table_name, file_name, encoding,metafile_name,metafile_encoding,munger,source_url,file_date,download_date,note,correction_query_list):
         self.state=state
         self.election=election
         self.table_name=table_name
@@ -35,7 +35,7 @@ class Datafile:
         self.encoding=encoding
         self.metafile_name=metafile_name
         self.metafile_encoding=metafile_encoding
-        self.value_convention=value_convention
+        self.munger=munger
         self.source_url=source_url
         self.file_date=file_date
         self.download_date=download_date
@@ -94,9 +94,9 @@ def create_state(abbr,path_to_state_dir):
             context_d[attr]=eval(f.read())
     return State(abbr,string_d['name'],meta_p,string_d['schema_name'],path_to_state_dir,string_d['main_reporting_unit_type'],type_map,context_d)
 
-def create_datafile(s,election,data_file_name,value_convention):
+def create_datafile(s,election,data_file_name,munger):
     # check that election is compatible with state
-    # *** need to code the value_convention to pull the right identifiers, maybe column names too.
+    
     if election not in s.context_dictionary['Election'].keys():
         return('No such election ('+election+') associated with state '+s.name)
         # sys.exit()
@@ -106,7 +106,7 @@ def create_datafile(s,election,data_file_name,value_convention):
         d_all = eval(f.read())
         d = d_all[election+';'+data_file_name]
     table_name=re.sub(r'\W+', '', election+data_file_name)
-    return(Datafile(s,election, table_name,data_file_name,d['data_file_encoding'],d['meta_file'], d['meta_file_encoding'],value_convention,d['source_url'],d['file_date'],d['download_date'],d['note'],d['correction_query_list']))
+    return(Datafile(s,election, table_name,data_file_name,d['data_file_encoding'],d['meta_file'], d['meta_file_encoding'],munger,d['source_url'],d['file_date'],d['download_date'],d['note'],d['correction_query_list']))
     
 
     
