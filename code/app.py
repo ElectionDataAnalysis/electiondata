@@ -203,12 +203,12 @@ def load_cdf():
     context_to_db_d = context.context_to_cdf(s,'cdf2',con,cur)
     
     # diagnostics to print
-    for k in context_to_db_d.keys():
-        rs.append('Sample '+k)
-        if context_to_db_d[k]:
-            rs.append('Sample '+k +': ' str( list(context_to_db_d[k].items())[0] )  )
+    for t in context_to_db_d.keys():
+        rs.append('Sample '+t)
+        if context_to_db_d[t]:
+            rs.append('Sample '+t +': ' +str( list(context_to_db_d[t].items())[0] )  )
         else:
-            rs.append('No '+k)
+            rs.append('No '+t+' from context_dictionary')
     con.commit()
 
 # close connection
