@@ -6,28 +6,28 @@
                     'other_element_refs':[],
                     'constraints':['UNIQUE ("ForeignId", "IdentifierType_Id", "OtherIdentifierType")']},
                 {'tablename':'ReportingUnit',
-                     'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'}],
+                     'fields':[{'fieldname':'Name','datatype':'TEXT'}],
                      'enumerations':['ReportingUnitType','CountItemStatus'],
                      'other_element_refs':[],
-                     'constraints':[]
+                     'constraints':['UNIQUE ("Name")']
                 },
                 {'tablename':'Party',
-                      'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'}, {'fieldname':'Abbreviation','datatype':'TEXT'}],
+                      'fields':[{'fieldname':'Name','datatype':'TEXT'}, {'fieldname':'Abbreviation','datatype':'TEXT'}],
                       'enumerations':[],
                       'other_element_refs':[],
-                      'constraints':[]
+                      'constraints':['UNIQUE ("Name")']
                 },
                 {'tablename':'Election',
-                    'fields':[{'fieldname':'Name', 'datatype':'TEXT UNIQUE'}, {'fieldname':'EndDate','datatype':'DATE'}, {'fieldname':'StartDate','datatype':'DATE'}],
+                    'fields':[{'fieldname':'Name', 'datatype':'TEXT'}, {'fieldname':'EndDate','datatype':'DATE'}, {'fieldname':'StartDate','datatype':'DATE'}],
                     'enumerations':['ElectionType'],
                     'other_element_refs':[],
-                    'constraints':[]
+                    'constraints':['UNIQUE ("Name")']
                 },
                 {'tablename':'Office',
-                     'fields':[{'fieldname':'Name','datatype':'TEXT UNIQUE'}, {'fieldname':'Description','datatype':'TEXT'}],
+                     'fields':[{'fieldname':'Name','datatype':'TEXT'}, {'fieldname':'Description','datatype':'TEXT'}],
                      'enumerations':[],
                      'other_element_refs':[],
-                     'constraints':[]
+                     'constraints':['UNIQUE ("Name")']
                 },
                 {'tablename':'CandidateContest', # CDF requires a name ***
                       'fields':[{'fieldname':'Name','datatype':'TEXT'}, {'fieldname':'VotesAllowed','datatype':'INTEGER NOT NULL'}, {'fieldname':'NumberElected','datatype':'INTEGER'}, {'fieldname':'NumberRunoff','datatype':'INTEGER'}],
