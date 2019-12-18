@@ -22,14 +22,14 @@ def create_common_data_format_schema (con,cur,schema_name):
     # create enumeration tables
     enumeration_path = '/container_root_dir/CDF_schema_def_info/enumerations/'
     for t in ['IdentifierType','CountItemStatus','ReportingUnitType','ElectionType','CountItemType']:
-        q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} (Id BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY,Txt TEXT UNIQUE NOT NULL); COPY {0}.{1} (txt) FROM %s'
+        q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} ("Id" BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY,Txt TEXT UNIQUE NOT NULL); COPY {0}.{1} (txt) FROM %s'
         cur.execute(sql.SQL(q).format(sql.Identifier(schema_name), sql.Identifier(t)),(enumeration_path + t + '.txt',))
 
     # create all other tables, in set order because of foreign keys
     with open('CDF_schema_def_info/tables.txt','r') as f:
         table_ds = eval(f.read())
     for d in table_ds:
-        field_defs = ['Id BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY']
+        field_defs = ['"Id" BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY']
         format_args = [schema_name,d['tablename']]
         ctr = 2     # counter to track sql.Identifiers
         for f in d['fields']:
@@ -37,13 +37,13 @@ def create_common_data_format_schema (con,cur,schema_name):
             format_args.append( f['fieldname'])
             ctr += 1
         for e in d['enumerations']:
-            field_defs.append( '{'+str(ctr)+'} INTEGER REFERENCES {0}.{'+str(ctr+1)+'}(Id), {'+str(ctr+2)+'} TEXT' )
+            field_defs.append( '{'+str(ctr)+'} INTEGER REFERENCES {0}.{'+str(ctr+1)+'}("Id"), {'+str(ctr+2)+'} TEXT' )
             format_args.append(e+'_Id')
             format_args.append(e)
             format_args.append('Other'+e)
             ctr += 3
         for other in d['other_element_refs']:
-            field_defs.append('{'+str(ctr)+'} INTEGER REFERENCES {0}.{'+str(ctr+1)+'}(Id)')
+            field_defs.append('{'+str(ctr)+'} INTEGER REFERENCES {0}.{'+str(ctr+1)+'}("Id")')
             format_args.append(other['fieldname'])
             format_args.append(other['refers_to'])
             ctr += 2

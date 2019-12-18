@@ -40,11 +40,12 @@ def context_to_cdf(s,schema,con,cur):
                 out_d[t][name_key] = upsert_id
                 
             ## load data into the ExternalIdentifier table
-                for external_id_key in           s.context_dictionary[t][name_key]['ExternalIdentifiers'].keys():   # e.g., 'fips'
-                    ## insert into ExternalIdentifier table
-                    [id,other_txt] = format_type_for_insert(schema,'IdentifierType', external_id_key, con,cur)
-                    q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s)'
-                    cur.execute(sql.SQL(q).format(sql.Identifier(schema)), [upsert_id, s.context_dictionary[t][name_key]['ExternalIdentifiers'][external_id_key],id,other_txt ])
+                if 'ExternalIdentifiers' in s.context_dictionary[t][name_key].keys():
+                    for external_id_key in s.context_dictionary[t][name_key]['ExternalIdentifiers'].keys():   # e.g., 'fips'
+                        ## insert into ExternalIdentifier table
+                        [id,other_txt] = format_type_for_insert(schema,'IdentifierType', external_id_key, con,cur)
+                        q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s) ON CONFLICT DO NOTHING'   # will this cause errors to go unnoticed? ***
+                        cur.execute(sql.SQL(q).format(sql.Identifier(schema)), [upsert_id, s.context_dictionary[t][name_key]['ExternalIdentifiers'][external_id_key],id,other_txt ])
     return(out_d)
 
 
@@ -54,14 +55,14 @@ def build_munger_d(s,m):
     munger_inverse_d = {}
     for t in m.query_from_raw.keys(): ## e.g., ['Election','Party','ReportingUnit;precinct','Office']:
         t_parts = t.split(';')
-        context_key = t_parts[0]
+        context_key = t_parts[0]            # e.g., 'ReportingUnit', or 'Election'
         if len(t_parts) > 1:
-            type = t_parts[1]
+            type = t_parts[1]               # e.g., 'precinct' or None
         else:
             type = None
         munger_d[t] = {}
         for k in s.context_dictionary[context_key].keys():  # e.g., k = 'North Carolina;General Assembly;House of Representatives;2019-2020;District 1'
-            if 'ExternalIdentifiers' in s.context_dictionary[context_key][k].keys() and   m.name in s.context_dictionary[context_key][k]['ExternalIdentifiers'].keys() and (type == None or s.context_dictionary[context_key][k]['Type'] == type):
+            if 'ExternalIdentifiers' in s.context_dictionary[context_key][k].keys() and   m.name in s.context_dictionary[context_key][k]['ExternalIdentifiers'].keys() and (type == None or s.context_dictionary[context_key][k][context_key+'Type'] == type):
                     munger_d[t][k] = s.context_dictionary[context_key][k]['ExternalIdentifiers'][m.name]
         munger_inverse_d[t] = {}
         for k,v in munger_d[t].items():

@@ -295,7 +295,7 @@ def gui():
     context_to_db_d = context.context_to_cdf(s,'cdf2',con,cur)  # {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
     con.commit()
 
-    rs.append(nc_export1.raw_to_cdf(df,s.schema_name,con,cur,context_to_db_d))
+    rs.append(nc_export1.raw_to_cdf(df,'cdf2',con,cur,context_to_db_d))
 
 
     if cur:

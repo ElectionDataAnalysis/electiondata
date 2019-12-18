@@ -33,19 +33,19 @@
                       'fields':[{'fieldname':'Name','datatype':'TEXT'}, {'fieldname':'VotesAllowed','datatype':'INTEGER NOT NULL'}, {'fieldname':'NumberElected','datatype':'INTEGER'}, {'fieldname':'NumberRunoff','datatype':'INTEGER'}],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'Office_Id','refers_to':'Office'}, {'fieldname':'PrimaryParty_Id','refers_to':'Party'}, {'fieldname':'ElectionDistrict_Id','refers_to':'ReportingUnit'}],
-                      'constraints':[]
+                      'constraints':['UNIQUE ("Name")']
                 },
                 {'tablename':'BallotMeasureContest', # CDF requires a name ***
                       'fields':[{'fieldname':'Name','datatype':'TEXT'}],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'ElectionDistrict_Id', 'refers_to':'ReportingUnit'}],
-                      'constraints':[]
+                      'constraints':['UNIQUE ("Name")']
                 },
                 {'tablename':'BallotMeasureSelection',   # note: we don't enumerate the choices, though some kind of universal yes/no is tempting ***
                       'fields':[{'fieldname':'Selection','datatype':'TEXT'}],
                       'enumerations':[],
                       'other_element_refs':[],
-                      'constraints':[]
+                      'constraints':['UNIQUE ("Selection")']
                 },
                 {'tablename':'Candidate',
                       'fields':[{'fieldname':'BallotName','datatype':'TEXT'}],
