@@ -57,31 +57,57 @@ def raw_to_cdf(df,cdf_schema,con,cur,d):        #e.g., d = {'ReportingUnit':{'No
         return( 'No type \'other\' in table '+cdf_schema+'.IdentifierType')
     ###########################
 
-    q = 'SELECT DISTINCT contest_name, vote_for FROM {}.{}'
+    q = 'SELECT DISTINCT contest_name, vote_for, choice, choice_party FROM {}.{}'
     cur.execute(sql.SQL(q).format(sql.Identifier(df.state.schema_name),sql.Identifier(df.table_name)))
-    contests = cur.fetchall()
-    rs.append('Sample contests '+str(contests))
+    contest_choice_pairs = cur.fetchall()
     
-    #for c in contests[:10]:
-    for c in contests:
-        contest_name = c[0]
-        q = 'SELECT f."Id", f."Name" FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}."Office" AS f ON e."ForeignId" = f."Id" WHERE e."IdentifierType_Id" = %s AND e."Value" =  %s AND e."OtherIdentifierType" = \'nc_export1\';'
-        cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema)),[id_type_other_id,contest_name])
-        a = cur.fetchall()
-        rs.append(str(a))
-        if a:
-            [office_id,office_name] = a[0]
-            rs.append(str(office_name))
-        #if office_name is not None:
-            vote_for = c[1]
-            req_d = {'fieldname':'Name', 'datatype':'TEXT','value':office_name}     # name the ReportingUnit for the election district after the office_name
-            other_ds = [{'fieldname':'ReportingUnitType_Id', 'datatype':'INTEGER','value':30}] # *** fix hard-coding of 30
-            election_district_id = get_upsert_id(cdf_schema,'ReportingUnit',req_d,[],con,cur)[0]
-            req_d = {'fieldname':'Name', 'datatype':'TEXT','value':contest_name}
-            other_ds = [{'fieldname':'VotesAllowed', 'datatype':'INTEGER','value':vote_for},{'fieldname':'Office_Id', 'datatype':'INTEGER','value':office_id},{'fieldname':'ElectionDistrict_Id', 'datatype':'INTEGER','value':election_district_id}]
-            contest_id = get_upsert_id(cdf_schema, 'CandidateContest',req_d,other_ds,con,cur)
-            rs.append('Inserted contest' + contest_name)
-            # if contest_name == 'BEAUFORT SOIL AND WATER CONSERVATION DISTRICT SUPERVISOR': b =1/0 *** diagnostic
+    ### create dictionaries for more efficient parsing
+    name_d = {}
+    choice_d = {}
+    name_choice_d = {}
+    for [n,vf,ch,ch_p] in contest_choice_pairs:
+        name_d[n]=vf
+        choice_d[ch]=ch_p
+        if n in name_choice_d.keys():
+            name_choice_d[n].append(ch)
+        else:
+            name_choice_d[n] = [ch]
+    ########
+    
+    for name in name_d.keys():     # loop over contests
+        ## if contest is a ballot question (all choices are ballot measure selections)
+        if all(x in ['Against','For','Yes','No'] for x in name_choice_d[name]):       ## *** store list of ballot measure selections with other enumerations? *** handle error if different yes/no text used?
+            req_d = {'fieldname':'Name', 'datatype':'TEXT','value':name}    ## *** munger info: value of required fields for each table
+            other_ds = []           ## *** munger info: value of other fields for each table
+            contest_id = get_upsert_id(cdf_schema, 'BallotMeasureContest',req_d,other_ds,con,cur)
+            rs.append('Inserted Ballot Measure Contest '+name)
+            ### insert BallotMeasureSelections and Join into cdf
+            for ch in name_choice_d[name]:
+                req_d = {'fieldname':'Selection', 'datatype':'TEXT','value':ch}
+                other_ds =  {}
+                selection_id = get_upsert_id(cdf_schema, 'BallotMeasureSelection',req_d,other_ds,con,cur)
+                
+                ### *** TO DO: insert join into BallotMeasureContestSelectionJoin table.
+        
+            
+        else:
+            ## find the corresponding office (internal db name)
+            q = 'SELECT f."Id", f."Name" FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}."Office" AS f ON e."ForeignId" = f."Id" WHERE e."IdentifierType_Id" = %s AND e."Value" =  %s AND e."OtherIdentifierType" = \'nc_export1\';'
+            cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema)),[id_type_other_id,name])
+            a = cur.fetchall()
+            rs.append(str(a))
+            if a:
+                [office_id,office_name] = a[0]
+                rs.append(str(office_name))
+            #if office_name is not None -- this will entirely skip offices not listed in the state's context_dictionary!
+                req_d = {'fieldname':'Name', 'datatype':'TEXT','value':office_name}     # name the ReportingUnit for the election district after the office_name
+                other_ds = [{'fieldname':'ReportingUnitType_Id', 'datatype':'INTEGER','value':30}] # *** fix hard-coding of 30
+                election_district_id = get_upsert_id(cdf_schema,'ReportingUnit',req_d,[],con,cur)[0]
+                req_d = {'fieldname':'Name', 'datatype':'TEXT','value':name}
+                other_ds = [{'fieldname':'VotesAllowed', 'datatype':'INTEGER','value':vote_for},{'fieldname':'Office_Id', 'datatype':'INTEGER','value':office_id},{'fieldname':'ElectionDistrict_Id', 'datatype':'INTEGER','value':election_district_id}]
+                contest_id = get_upsert_id(cdf_schema, 'CandidateContest',req_d,other_ds,con,cur)
+                rs.append('Inserted candidate contest ' + name)
+        
         
     return('</p><p>'.join(rs))
 

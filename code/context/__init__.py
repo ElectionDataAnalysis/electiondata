@@ -10,7 +10,7 @@ from datetime import datetime
 from munge_routines import get_upsert_id, format_type_for_insert
 
 def context_to_cdf(s,schema,con,cur):
-    ''' UNDER CONSTRUCTION: should take the info from the context_dictionary for the state s and insert it into the db. Returns a dictionary mapping context_dictionary keys to the database keys '''
+    ''' Takes the info from the context_dictionary for the state s and inserts it into the db. Returns a dictionary mapping context_dictionary keys to the database keys '''
     rs = [str(datetime.now())]
     out_d = {}
     with open('CDF_schema_def_info/tables.txt','r') as f:
@@ -93,6 +93,7 @@ def build_munger_d(s,m):
 
 
 def raw_to_context(df,m,munger_d,conn,cur):
+    ''' Purely diagnostic -- reports what items in the datafile are missing from the context_dictionary (e.g., offices we don't wish to analyze)'''
     rs = [str(datetime.now())]
     rs.append('\'Missing\' below means \'Existing in the datafile, but missing from the munger dictionary, created from the state\'s context_dictionary, which was created from files in the context folder.')
     for t in m.query_from_raw.keys():
