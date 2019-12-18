@@ -128,17 +128,6 @@ def load_data(conn,cursor,state,df):      ## does this belong in app.py? *** mig
     with open(clean_file,mode='r',encoding=df.encoding,errors='ignore') as f:
         cursor.copy_expert(sql.SQL(q).format(sql.Identifier(state.schema_name),sql.Identifier(df.table_name)),f)
     conn.commit()
-# update values to obey convention *** need to take this out, but first make sure /analysis will work
-    fup = []
-    for field in df.value_convention.keys():
-        condition = []
-        for value in df.value_convention[field].keys():
-            condition.append(" WHEN "+field+" = '"+value+"' THEN '"+df.value_convention[field][value]+"' ")
-        fup.append(field + " =  CASE "+   " ".join(condition)+" END ")
-    if len(fup) > 0:
-        qu = "UPDATE "+state.schema_name+"."+df.table_name+" SET "+",".join(fup)
-        cursor.execute(qu)
-        conn.commit()
     return
 
   

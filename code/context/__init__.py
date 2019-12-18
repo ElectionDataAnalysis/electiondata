@@ -15,6 +15,8 @@ def context_to_cdf(s,schema,con,cur):
     out_d = {}
     with open('CDF_schema_def_info/tables.txt','r') as f:
         table_ds = eval(f.read())
+        
+
     for d in table_ds:      # iterating over tables in the common data format schema
         t = d['tablename']      # e.g., t = 'ReportingUnit'
         out_d[t] = {}
@@ -39,6 +41,7 @@ def context_to_cdf(s,schema,con,cur):
                 upsert_id = get_upsert_id(schema,t,req_var_d,other_var_ds,con,cur)[0]
                 out_d[t][name_key] = upsert_id
                 
+                
             ## load data into the ExternalIdentifier table
                 if 'ExternalIdentifiers' in s.context_dictionary[t][name_key].keys():
                     for external_id_key in s.context_dictionary[t][name_key]['ExternalIdentifiers'].keys():   # e.g., 'fips'
@@ -46,6 +49,22 @@ def context_to_cdf(s,schema,con,cur):
                         [id,other_txt] = format_type_for_insert(schema,'IdentifierType', external_id_key, con,cur)
                         q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s) ON CONFLICT DO NOTHING'   # will this cause errors to go unnoticed? ***
                         cur.execute(sql.SQL(q).format(sql.Identifier(schema)), [upsert_id, s.context_dictionary[t][name_key]['ExternalIdentifiers'][external_id_key],id,other_txt ])
+        if t == 'Office':
+            ## need to process 'Office' after 'ReportingUnit', as Offices may create ReportingUnits as election districts *** check for this
+
+            for name_key in s.context_dictionary[t]:
+                req_var_d = {'fieldname':'Name', 'datatype':'TEXT','value':s.context_dictionary['Office'][name_key]['ElectionDistrict']}
+                other_var_ds = []
+                if 'ElectionDistrictType' in s.context_dictionary['Office'][name_key].keys():
+                    [id,other_txt] = format_type_for_insert(schema,'ReportingUnitType', s.context_dictionary['Office'][name_key]['ElectionDistrictType'], con,cur)
+                    id_d = { 'fieldname':'ReportingUnitType_Id','datatype':'','value':id}
+                    other_var_ds.append(id_d)
+                    other_txt_d = {'fieldname':'OtherReportingUnitType','datatype':'TEXT','value':other_txt}
+                    other_var_ds.append(other_txt_d)
+                ## insert the record into the db
+                upsert_id = get_upsert_id(schema,'ReportingUnit',req_var_d,other_var_ds,con,cur)[0]
+                out_d['ReportingUnit'][name_key] = upsert_id
+
     return(out_d)
 
 

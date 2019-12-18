@@ -46,6 +46,7 @@ from psycopg2 import sql
 
 def raw_to_cdf(df,cdf_schema,con,cur,d):        #e.g., d = {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
     rs = ['raw_to_cdf:']
+    
     ## get id for IdentifierType 'other'    *** inefficient to do this repeatedly
     q = 'SELECT "Id" FROM {}."IdentifierType" WHERE txt = \'other\' '
     cur.execute(   sql.SQL(q).format( sql.Identifier(cdf_schema)))
@@ -54,6 +55,7 @@ def raw_to_cdf(df,cdf_schema,con,cur,d):        #e.g., d = {'ReportingUnit':{'No
         id_type_other_id = a[0][0]
     else:
         return( 'No type \'other\' in table '+cdf_schema+'.IdentifierType')
+    ###########################
 
     q = 'SELECT DISTINCT contest_name, vote_for FROM {}.{}'
     cur.execute(sql.SQL(q).format(sql.Identifier(df.state.schema_name),sql.Identifier(df.table_name)))
