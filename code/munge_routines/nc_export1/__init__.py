@@ -3,7 +3,7 @@
 #/munge_routines/nc_export1/__init__.py
 
 import re
-from munge_routines import get_upsert_id, format_type_for_insert
+from munge_routines import get_upsert_id, format_type_for_insert, id_and_name_from_external
 
 ## create external identifier / nc_export1 pairs of offices dictionary
 
@@ -100,6 +100,7 @@ def raw_to_cdf(df,cdf_schema,con,cur,d):        #e.g., d = {'ReportingUnit':{'No
         
             
         else:
+            [office_id,office_name] = id_and_name_from_external (cdf_schema,'Office',name,id_type_other_id,'nc_export1',con,cur)
             ## find the corresponding office (internal db name)
             q = 'SELECT f."Id", f."Name" FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}."Office" AS f ON e."ForeignId" = f."Id" WHERE e."IdentifierType_Id" = %s AND e."Value" =  %s AND e."OtherIdentifierType" = \'nc_export1\';'
             cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema)),[id_type_other_id,name])
