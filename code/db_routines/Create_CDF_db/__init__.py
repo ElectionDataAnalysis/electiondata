@@ -47,14 +47,16 @@ def create_common_data_format_schema (con,cur,schema_name):
             format_args.append(other['fieldname'])
             format_args.append(other['refers_to'])
             ctr += 2
-        for c in d['constraints']:
-            field_defs.append(c)
-            # no input necessary, so ctr does not advance.
+        for f_list in d['unique_constraints']:
+            field_defs.append('UNIQUE ('+ ','.join([ '{' + str(ctr + f_list.index(f) ) + '}' for f in f_list]) +')')
+            format_args += f_list
+            ctr += len(f_list)
         for fname in d['not_null_fields']:
             field_defs.append('CHECK ({'+str(ctr)+'} IS NOT NULL)')
             format_args.append(fname)
             ctr += 1
-            
+    
+    # 'UNIQUE ("ForeignId", "IdentifierType_Id", "OtherIdentifierType")'
             
         q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} (' + ','.join(field_defs) +');'
         format_args = [sql.Identifier(a) for a in format_args]
