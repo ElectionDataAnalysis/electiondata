@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# db_routines/__init__.py
 # under construction
 # Creates a table with columns specified in arg3 file, assuming format from state arg1.
 # arg 1: a two-letter state code
@@ -30,14 +31,14 @@ def context_to_cdf(s,con,cur):
         rs.append('WARNING: '+s.name+' was not in cdf.reportingunit, had to be inserted.')
     for k in ['election']:   # e.g., k ='election'
         for kk in s.context_dictionary[k].keys():   # e.g., kk='General Election 2018-11-06'
-            req_var_d= {'fieldname':'name','datatype':'text','value':kk}
+            req_var_ds= [{'fieldname':'name','datatype':'text','value':kk}]
             other_var_ds = []
             ## list other fields in table
             for kkk in s.context_dictionary[k][kk].keys():  # e.g., kkk='Type'
                 other_var_ds.append(  {'fieldname':kkk.lower(),'datatype':cdf_field_datatype_d[kkk.lower()],'value':s.context_dictionary[k][kk][kkk]})
         
 
-            get_upsert_id(s.schema,k,req_var_d,other_var_ds,con,cur)
+            get_upsert_id(s.schema,k,req_var_ds,other_var_ds,con,cur)
     return('</p><p>'.join(rs))
 
 

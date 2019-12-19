@@ -24,7 +24,7 @@ def context_to_cdf(s,schema,con,cur):
     ## load info into the tables corresponding directly to the context_dictionary keys
         if t in s.context_dictionary.keys():
             for name_key in s.context_dictionary[t]:   # e.g., name_key = 'North Carolina;Alamance County'
-                req_var_d = {'fieldname':'Name', 'datatype':'TEXT','value':name_key}
+                req_var_ds = [{'fieldname':'Name', 'datatype':'TEXT','value':name_key}]
                 other_var_ds = []
                 for f in d['fields']:
                     if f['fieldname'] != 'Name' and f['fieldname'] in s.context_dictionary[t][name_key].keys():
@@ -38,7 +38,7 @@ def context_to_cdf(s,schema,con,cur):
                         other_txt_d = {'fieldname':'Other'+e,'datatype':'TEXT','value':other_txt}
                         other_var_ds.append(other_txt_d)
                 ## insert the record into the db *** define req_var_d and other_var_ds from table_ds
-                upsert_id = get_upsert_id(schema,t,req_var_d,other_var_ds,con,cur)[0]
+                upsert_id = get_upsert_id(schema,t,req_var_ds,other_var_ds,con,cur)[0]
                 out_d[t][name_key] = upsert_id
                 
                 
@@ -53,7 +53,7 @@ def context_to_cdf(s,schema,con,cur):
             ## need to process 'Office' after 'ReportingUnit', as Offices may create ReportingUnits as election districts *** check for this
 
             for name_key in s.context_dictionary[t]:
-                req_var_d = {'fieldname':'Name', 'datatype':'TEXT','value':s.context_dictionary['Office'][name_key]['ElectionDistrict']}
+                req_var_ds = [{'fieldname':'Name', 'datatype':'TEXT','value':s.context_dictionary['Office'][name_key]['ElectionDistrict']}]
                 other_var_ds = []
                 if 'ElectionDistrictType' in s.context_dictionary['Office'][name_key].keys():
                     [id,other_txt] = format_type_for_insert(schema,'ReportingUnitType', s.context_dictionary['Office'][name_key]['ElectionDistrictType'], con,cur)
@@ -62,7 +62,7 @@ def context_to_cdf(s,schema,con,cur):
                     other_txt_d = {'fieldname':'OtherReportingUnitType','datatype':'TEXT','value':other_txt}
                     other_var_ds.append(other_txt_d)
                 ## insert the record into the db
-                upsert_id = get_upsert_id(schema,'ReportingUnit',req_var_d,other_var_ds,con,cur)[0]
+                upsert_id = get_upsert_id(schema,'ReportingUnit',req_var_ds,other_var_ds,con,cur)[0]
                 out_d['ReportingUnit'][name_key] = upsert_id
 
     return(out_d)
