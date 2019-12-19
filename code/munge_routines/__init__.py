@@ -7,6 +7,16 @@ from psycopg2 import sql
 from datetime import datetime
 
 
+def name_and_id_from_external(cdf_schema,table_name,external_name,identifiertype_id,otheridentifiertype,con,cur):
+    ## find the internal db name and id from external identifier
+            
+    q = 'SELECT f."Id", f."Name" FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}.{1} AS f ON e."ForeignId" = f."Id" WHERE e."IdentifierType_Id" = %s AND e."Value" =  %s AND (e."OtherIdentifierType" = %s OR e."OtherIdentifierType" IS NULL OR e."OtherIdentifierType" = \'\'  );'       # *** ( ... OR ... OR ...) condition is kludge to protect from inconsistencies in OtherIdentifierType text when the IdentifierType is *not* other
+    cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema),sql.Identifier(table_name)),[identifiertype_id,otheridentifiertype])
+    a = cur.fetchall()
+    rs.append(str(a))
+    return
+
+
 def get_upsert_id(schema,table,conflict_var_ds,other_var_ds,con,cur):
     ''' each rvd in conflict_var_ds and each ovd in other_var_ds should have keys "fieldname","datatype" and "value".
     Returns a triple (id_number,req_var,status), where status is "inserted" or "selected" to indicate whether record existed already in the db or not.'''
@@ -18,9 +28,9 @@ def get_upsert_id(schema,table,conflict_var_ds,other_var_ds,con,cur):
     
     ## *** kludge: need to omit datatype for INTEGER, not sure why. ***
     for rvd in conflict_var_ds:
-        if rvd['datatype'] == 'INTEGER': rvd['datatype'] = ''
+        if rvd['datatype'] == 'INTEGER' or rvd['datatype']== 'INT': rvd['datatype'] = ''
     for ovd in other_var_ds:
-        if ovd['datatype'] == 'INTEGER': ovd['datatype'] = ''
+        if ovd['datatype'] == 'INTEGER' or ovd['datatype']== 'INT': ovd['datatype'] = ''
     ## end of kludge ***
     
     vars = [rvd['datatype'] + ' %s' for rvd in conflict_var_ds]+[ovd['datatype'] + ' %s'   for ovd in other_var_ds]
@@ -37,7 +47,7 @@ def get_upsert_id(schema,table,conflict_var_ds,other_var_ds,con,cur):
     return(a)
 
 def format_type_for_insert(schema,table,txt,con,cur):
-    ''' schema.table must have a "txt" field. This function creates a (type_id, othertype_text) pair; for types in the enumeration, returns (type_id for the given txt, ""), while for other types returns (type_id for "other",txt)  '''
+    ''' schema.table must have a "txt" field. This function returns a (type_id, othertype_text) pair; for types in the enumeration, returns (type_id for the given txt, ""), while for other types returns (type_id for "other",txt)  '''
     q = 'SELECT "Id" FROM {}.{} WHERE txt = %s'
     sql_ids = [schema,table]
     cur.execute(   sql.SQL(q).format( sql.Identifier(schema),sql.Identifier(table)),[txt])

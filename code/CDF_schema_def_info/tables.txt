@@ -60,17 +60,10 @@
                       'fields':[{'fieldname':'BallotName','datatype':'TEXT'}],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'Election_Id', 'refers_to':'Election'},{'fieldname':'Party_Id', 'refers_to':'Party'}],
-                      'unique_constraints':[],
+                      'unique_constraints':[['BallotName','Election_Id','Party_Id']],
 			'not_null_fields':['BallotName']
                     },
-                    {'tablename':'CandidateSelection',
-                          'fields':[],
-                          'enumerations':[],
-                          'other_element_refs':[{'fieldname':'Candidate_Id', 'refers_to':'Candidate'}],
-                          'unique_constraints':[], 
-		     	'not_null_fields':[]
-                },
-                {'tablename':'VoteCount',
+                 {'tablename':'VoteCount',
                       'fields':[{'fieldname':'Count','datatype':'NUMERIC'}],
                       'enumerations':['CountItemType'],
                       'other_element_refs':[],
@@ -81,7 +74,7 @@
                       'fields':[],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'Candidate_Id', 'refers_to':'Candidate'}],
-                      'unique_constraints':[], 
+                      'unique_constraints':[['Candidate_Id']], 
 		     'not_null_fields':[]
                 },
                 {'tablename':'BallotMeasureContestSelectionJoin',
