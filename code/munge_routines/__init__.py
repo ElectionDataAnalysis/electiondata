@@ -19,9 +19,50 @@ def id_and_name_from_external (cdf_schema,table_name,external_name,identifiertyp
         return(None,None)
 
 
+def upsert(schema,table,table_d,value_d,con,cur):
+    ''' tables_d is a dict of table descriptions; value_d gives the values for the fields in the table (.e.g., value_d['Name'] = 'North Carolina;Alamance County'); return the upserted record. E.g., tables_d[table] = {'tablename':'ReportingUnit', 'fields':[{'fieldname':'Name','datatype':'TEXT'}],'enumerations':['ReportingUnitType','CountItemStatus'],'other_element_refs':[], 'unique_constraints':[['Name']],
+    'not_null_fields':['ReportingUnitType_Id']
+       } '''
+    
+    f_names = [dd['fieldname'] for dd in table_d['fields']] + [e+'_Id' for e in table_d['enumerations']] + ['Other'+e for e in table_d['enumerations']] + [dd['fieldname'] for dd in table_d['other_element_refs']]
+    
+    ### set value to none for any fields missing from the value_d parameter
+    for n in f_names:
+        if n not in value_d.keys():
+            value_d[n] = None
+    f_vals = [ value_d[n] for n in f_names]
+    f_val_slot_list = [ dd['datatype']+' %s' for dd in table_d['fields'] ] + [ 'INT %s' for e in  table_d['enumerations']] + ['TEXT %s' for e in table_d['enumerations']]+ ['INT %s' for dd in table_d['other_element_refs']]
+
+    cf_names = set().union(  *table_d['unique_constraints'])#  *** might need to make this a list
+    f_id_slot_list = ['{'+str(i+2)+'}' for i in range(len(f_names))]
+    f_id_slots = ','.join( f_id_slot_list)
+    cf_id_slots = ','.join( ['{'+str(i+2+len(f_names))+'}' for i in range(len(cf_names))] )
+    f_val_slots = ','.join(f_val_slot_list)
+    f_val_slots = f_val_slots.replace('INTEGER','').replace('INT','') ## *** kludge: postgres needs us to omit datatype for INTEGER, INT, not sure why. ***
+    
+    val_return_list = ['c.'+i for i in f_id_slot_list]
+    
+    q = 'WITH input_rows('+f_id_slots+') AS (VALUES ('+f_val_slots+') ), ins AS (INSERT INTO {0}.{1} ('+f_id_slots+') SELECT * FROM input_rows ON CONFLICT ('+cf_id_slots+') DO NOTHING RETURNING "Id", '+f_id_slots+') SELECT "Id", ' + f_id_slots+', \'inserted\' AS source FROM ins UNION  ALL SELECT c."Id", '+  ','.join(val_return_list)  +',\'selected\' AS source FROM input_rows JOIN {0}.{1} AS c USING ('+ f_id_slots+');'
+    
+    
+    sql_ids = [schema,table,*f_names,*cf_names]
+    format_args = [sql.Identifier(x) for x in sql_ids]
+    strs = f_vals
+    cur.execute(sql.SQL(q).format( *format_args ),strs)
+    a =  cur.fetchall()
+    con.commit()
+    if len(a) == 0:
+        return("Error: nothing selected or inserted")
+    elif len(a) == 1:
+        return(list(a[0]))
+    else:
+        return("Error: multiple records found")
+        
+
+
+
 def get_upsert_id(schema,table,conflict_var_ds,other_var_ds,con,cur):
-    ''' each rvd in conflict_var_ds and each ovd in other_var_ds should have keys "fieldname","datatype" and "value".
-    Returns a triple (id_number,req_var,status), where status is "inserted" or "selected" to indicate whether record existed already in the db or not.'''
+    ''' each rvd in conflict_var_ds and each ovd in other_var_ds should have keys "fieldname","datatype" and "value". Returns a triple (id_number,req_var,status), where status is "inserted" or "selected" to indicate whether record existed already in the db or not.'''
     fnames = [d['fieldname'] for d in conflict_var_ds] + [d['fieldname'] for d in other_var_ds]
     r_id_slots = ['{'+str(i)+'}' for i in range(2, len (conflict_var_ds) + 2)]
     o_id_slots = ['{'+str(i)+'}' for i in range (2 + len(conflict_var_ds), 2 + len(conflict_var_ds)+ len(other_var_ds))]

@@ -1,7 +1,6 @@
 [{'tablename':'ExternalIdentifier',
                     'fields':[{'fieldname':'ForeignId','datatype':'INTEGER'},
                             {'fieldname':'Value','datatype':'TEXT'}],
-                    'foreign_keys':[],
                     'enumerations':['IdentifierType'],
                     'other_element_refs':[],
                     'unique_constraints':[['ForeignId', 'IdentifierType_Id', 'OtherIdentifierType']], 	

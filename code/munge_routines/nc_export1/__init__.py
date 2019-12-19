@@ -3,7 +3,7 @@
 #/munge_routines/nc_export1/__init__.py
 
 import re
-from munge_routines import get_upsert_id, format_type_for_insert, id_and_name_from_external
+from munge_routines import get_upsert_id, format_type_for_insert, id_and_name_from_external, upsert
 
 ## create external identifier / nc_export1 pairs of offices dictionary
 
@@ -40,20 +40,26 @@ def add_ei(office_d):
             
         
 
-### load CandidateContest, BallotMeasureContest, Selection & Join data from df to cdf; this should eventually be written in a munger-agnostic way, and also extended to all appropriate tables ***
+### load data from df to cdf; this should eventually be written in a munger-agnostic way, and also extended to all appropriate tables ***
 import psycopg2
 from psycopg2 import sql
 
 def raw_to_cdf(df,cdf_schema,con,cur,d):        #e.g., d = {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
     rs = ['raw_to_cdf:']
     
-    ## upsert election, get id *** note: election should already exist, so this is inefficient
-    [electiontype_id,otherelectiontype] = format_type_for_insert(cdf_schema,'ElectionType',df.state.context_dictionary['Election'][df.election]['ElectionType'],con,cur)
-    conflict_ds = [{'fieldname':'Name','datatype':'TEXT','value':df.election}]
-    other_ds = [{'fieldname':'StartDate','datatype':'DATE','value':df.state.context_dictionary['Election'][df.election]['StartDate']},{'fieldname':'EndDate','datatype':'DATE','value':df.state.context_dictionary['Election'][df.election]['EndDate']},{'fieldname':'ElectionType_Id','datatype':'INT','value':electiontype_id},{'fieldname':'OtherElectionType','datatype':'TEXT','value':otherelectiontype}]
-    election_id = get_upsert_id(cdf_schema,'Election',conflict_ds,other_ds,con,cur)[0]
+    with open('CDF_schema_def_info/tables.txt','r') as f:
+        table_ds = eval(f.read())
+    tables_d = {}
+    for ddd in table_ds:
+        tables_d[ddd.pop('tablename')] = ddd
+
     
-    ## get id for IdentifierType 'other'    *** inefficient to do this repeatedly
+    ## upsert election, get id
+    [electiontype_id,otherelectiontype] = format_type_for_insert(cdf_schema,'ElectionType',df.state.context_dictionary['Election'][df.election]['ElectionType'],con,cur)
+    value_d = {'Name':df.election,'EndDate':df.state.context_dictionary['Election'][df.election]['EndDate'], 'StartDate':df.state.context_dictionary['Election'][df.election]['StartDate'], 'OtherElectionType':otherelectiontype,'ElectionType_Id':electiontype_id}
+    election_id = upsert(cdf_schema,'Election',tables_d['Election'],value_d,con,cur)[0]
+
+    ###### get id for IdentifierType 'other'    *** inefficiency: no need to repeat for each datafile
     q = 'SELECT "Id" FROM {}."IdentifierType" WHERE txt = \'other\' '
     cur.execute(   sql.SQL(q).format( sql.Identifier(cdf_schema)))
     a = cur.fetchall()
