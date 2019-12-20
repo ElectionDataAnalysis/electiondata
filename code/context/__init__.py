@@ -7,7 +7,7 @@ import re
 import psycopg2
 from psycopg2 import sql
 from datetime import datetime
-from munge_routines import get_upsert_id, format_type_for_insert
+from munge_routines import upsert, format_type_for_insert, get_upsert_id
 
 def context_to_cdf(s,schema,con,cur):
     ''' Takes the info from the context_dictionary for the state s and inserts it into the db. Returns a dictionary mapping context_dictionary keys to the database keys '''
@@ -24,21 +24,21 @@ def context_to_cdf(s,schema,con,cur):
     ## load info into the tables corresponding directly to the context_dictionary keys
         if t in s.context_dictionary.keys():
             for name_key in s.context_dictionary[t]:   # e.g., name_key = 'North Carolina;Alamance County'
-                req_var_ds = [{'fieldname':'Name', 'datatype':'TEXT','value':name_key}]
-                other_var_ds = []
+                ## insert the record into the db *** define req_var_d and other_var_ds from table_ds
+                
+                value_d = {'Name':name_key}
                 for f in d['fields']:
-                    if f['fieldname'] != 'Name' and f['fieldname'] in s.context_dictionary[t][name_key].keys():
-                        f['value'] = s.context_dictionary[t][name_key][ f['fieldname'] ]
-                        other_var_ds.append(f)
+                    if f['fieldname'] in s.context_dictionary[t][name_key].keys():
+                        value_d[f['fieldname']] = s.context_dictionary[t][name_key][ f['fieldname'] ]
                 for e in d['enumerations']:
                     if e in s.context_dictionary[t][name_key].keys():
                         [id,other_txt] = format_type_for_insert(schema,e, s.context_dictionary[t][name_key][e], con,cur)
-                        id_d = { 'fieldname':e+'_Id','datatype':'','value':id}
-                        other_var_ds.append(id_d)
-                        other_txt_d = {'fieldname':'Other'+e,'datatype':'TEXT','value':other_txt}
-                        other_var_ds.append(other_txt_d)
-                ## insert the record into the db *** define req_var_d and other_var_ds from table_ds
-                upsert_id = get_upsert_id(schema,t,req_var_ds,other_var_ds,con,cur)[0]
+                        value_d[e+'_Id'] = id
+                        value_d['Other'+e] = other_txt
+                        
+                    
+                upsert_id = upsert(schema,t,d,value_d,con,cur)[0]
+                
                 out_d[t][name_key] = upsert_id
                 
                 

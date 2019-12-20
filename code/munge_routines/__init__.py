@@ -24,14 +24,22 @@ def upsert(schema,table,table_d,value_d,con,cur):
     'not_null_fields':['ReportingUnitType_Id']
        } '''
     
-    f_names = [dd['fieldname'] for dd in table_d['fields']] + [e+'_Id' for e in table_d['enumerations']] + ['Other'+e for e in table_d['enumerations']] + [dd['fieldname'] for dd in table_d['other_element_refs']]
+    f_nt = [  [ dd['fieldname'],dd['datatype']+' %s'] for  dd in table_d['fields']] + [ [e+'_Id','INT %s'] for e in table_d['enumerations']]+ [['Other'+e,'TEXT %s'] for e in table_d['enumerations']]+ [[dd['fieldname'],'INT %s'] for dd in table_d['other_element_refs']]    # name-type pairs for each field
     
-    ### set value to none for any fields missing from the value_d parameter
-    for n in f_names:
-        if n not in value_d.keys():
-            value_d[n] = None
+    ### remove any fields missing from the value_d parameter
+    good_f_nt = [x for x in f_nt if x[0] in value_d.keys()]
+    
+    
+    #f_names = [dd['fieldname'] for dd in table_d['fields']] + [e+'_Id' for e in table_d['enumerations']] + ['Other'+e for e in table_d['enumerations']] + [dd['fieldname'] for dd in table_d['other_element_refs']]
+    
+    ### error-check that fields in value_d are all in the table, and that no essentials are missing ***
+    
+    
+    #f_names = list (set(f_name_type_pairs[][0]).intersection(value_d.keys()))   # *** do we need list?
+    f_names = [good_f_nt[x][0] for x in range(len(good_f_nt))]
+    f_val_slot_list = [good_f_nt[x][1] for x in range(len(good_f_nt))]
     f_vals = [ value_d[n] for n in f_names]
-    f_val_slot_list = [ dd['datatype']+' %s' for dd in table_d['fields'] ] + [ 'INT %s' for e in  table_d['enumerations']] + ['TEXT %s' for e in table_d['enumerations']]+ ['INT %s' for dd in table_d['other_element_refs']]
+    #f_val_slot_list = [ dd['datatype']+' %s' for dd in table_d['fields'] ] + [ 'INT %s' for e in  table_d['enumerations']] + ['TEXT %s' for e in table_d['enumerations']]+ ['INT %s' for dd in table_d['other_element_refs']]
 
     cf_names = set().union(  *table_d['unique_constraints'])#  *** might need to make this a list
     f_id_slot_list = ['{'+str(i+2)+'}' for i in range(len(f_names))]
@@ -52,10 +60,12 @@ def upsert(schema,table,table_d,value_d,con,cur):
     a =  cur.fetchall()
     con.commit()
     if len(a) == 0:
+        bb = 1/0 # ***
         return("Error: nothing selected or inserted")
     elif len(a) == 1:
         return(list(a[0]))
     else:
+        bb = 1/0    # ***
         return("Error: multiple records found")
         
 

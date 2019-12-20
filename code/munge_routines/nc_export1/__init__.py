@@ -3,7 +3,7 @@
 #/munge_routines/nc_export1/__init__.py
 
 import re
-from munge_routines import get_upsert_id, format_type_for_insert, id_and_name_from_external, upsert
+from munge_routines import format_type_for_insert, id_and_name_from_external, upsert
 
 ## create external identifier / nc_export1 pairs of offices dictionary
 
@@ -44,7 +44,7 @@ def add_ei(office_d):
 import psycopg2
 from psycopg2 import sql
 
-def raw_to_cdf(df,cdf_schema,con,cur,d):        #e.g., d = {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
+def raw_to_cdf(df,cdf_schema,con,cur):        #e.g., d = {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
     rs = ['raw_to_cdf:']
     
     with open('CDF_schema_def_info/tables.txt','r') as f:
@@ -58,6 +58,12 @@ def raw_to_cdf(df,cdf_schema,con,cur,d):        #e.g., d = {'ReportingUnit':{'No
     [electiontype_id,otherelectiontype] = format_type_for_insert(cdf_schema,'ElectionType',df.state.context_dictionary['Election'][df.election]['ElectionType'],con,cur)
     value_d = {'Name':df.election,'EndDate':df.state.context_dictionary['Election'][df.election]['EndDate'], 'StartDate':df.state.context_dictionary['Election'][df.election]['StartDate'], 'OtherElectionType':otherelectiontype,'ElectionType_Id':electiontype_id}
     election_id = upsert(cdf_schema,'Election',tables_d['Election'],value_d,con,cur)[0]
+    
+    ## upsert state, get id (default Reporting Unit for ballot questions)   *** inefficiency: no need to repeat for each state
+    t = 'ReportingUnit'
+    [reportingunittype_id,otherreportingunittype] = format_type_for_insert(cdf_schema,'ReportingUnitType','state',con,cur)
+    value_d = {'Name':df.state.name,'ReportingUnitType_Id':reportingunittype_id,'OtherReportingUnitType':otherreportingunittype}
+    reportingunit_id_state = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
 
     ###### get id for IdentifierType 'other'    *** inefficiency: no need to repeat for each datafile
     q = 'SELECT "Id" FROM {}."IdentifierType" WHERE txt = \'other\' '
@@ -68,7 +74,8 @@ def raw_to_cdf(df,cdf_schema,con,cur,d):        #e.g., d = {'ReportingUnit':{'No
     else:
         return( 'No type \'other\' in table '+cdf_schema+'.IdentifierType')
     ###########################
-
+    
+    ###### get rows from raw table
     q = 'SELECT DISTINCT contest_name, vote_for, choice, choice_party FROM {}.{}'
     cur.execute(sql.SQL(q).format(sql.Identifier(df.state.schema_name),sql.Identifier(df.table_name)))
     contest_choice_pairs = cur.fetchall()
@@ -89,20 +96,20 @@ def raw_to_cdf(df,cdf_schema,con,cur,d):        #e.g., d = {'ReportingUnit':{'No
     for name in name_d.keys():     # loop over contests
         ## if contest is a ballot question (all choices are ballot measure selections)
         if all(x in ['Against','For','Yes','No'] for x in name_choice_d[name]):       ## *** store list of ballot measure selections with other enumerations? *** handle error if different yes/no text used?
-            conflict_ds = [{'fieldname':'Name', 'datatype':'TEXT','value':name}]    ## *** munger info: value of conflict fields for each table
-            other_ds = []           ## *** munger info: value of other fields for each table
-            contest_id = get_upsert_id(cdf_schema, 'BallotMeasureContest',conflict_ds,other_ds,con,cur)[0]
+            t = 'BallotMeasureContest'
+            value_d = {'Name':name}
+            contest_id = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
             rs.append('Inserted Ballot Measure Contest '+name)
             
             ### insert BallotMeasureSelections and Join into cdf
             for ch in name_choice_d[name]:
-                conflict_ds = [{'fieldname':'Selection', 'datatype':'TEXT','value':ch}]
-                other_ds =  []
-                selection_id = get_upsert_id(cdf_schema, 'BallotMeasureSelection',conflict_ds,other_ds,con,cur)[0]
+                t = 'BallotMeasureSelection'
+                value_d = {'Selection':ch}
+                ballotmeasureselection_id = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
                 
-                conflict_ds = [{'fieldname':'BallotMeasureContest_Id','datatype':'INT','value':contest_id},{'fieldname':'BallotMeasureSelection_Id','datatype':'INT','value':selection_id}]
-                other_ds = []
-                get_upsert_id(cdf_schema, 'BallotMeasureContestSelectionJoin',conflict_ds,other_ds,con,cur)[0]
+                t = 'BallotMeasureContestSelectionJoin'
+                value_d = {'BallotMeasureContest_Id':contest_id,'BallotMeasureSelection_Id':ballotmeasureselection_id}
+                upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
         
             
         else:
@@ -118,29 +125,30 @@ def raw_to_cdf(df,cdf_schema,con,cur,d):        #e.g., d = {'ReportingUnit':{'No
             else:
                 [office_id,office_name] = a[0]
                 rs.append(str(office_name))
-                req_ds = [{'fieldname':'Name', 'datatype':'TEXT','value':office_name}]     # name the ReportingUnit for the election district after the office_name # *** fix hard-coding of 30 -- how to find ReportingUnitType_Id from the name of the office?
-                ### *** try:   df.state.context_dictionary['Office'][office_name]['ElectionDistrictType'] to get ReportingUnitType; then find (id,txt) pair
-                [id,txt]= format_type_for_insert(cdf_schema,'ReportingUnitType',df.state.context_dictionary['Office'][office_name]['ElectionDistrictType'] ,con,cur)
-                other_ds = [{'fieldname':'ReportingUnitType_Id', 'datatype':'INTEGER','value':id},{'fieldname':'OtherReportingUnitType', 'datatype':'TEXT','value':txt}]
-                election_district_id = get_upsert_id(cdf_schema,'ReportingUnit',req_ds,other_ds,con,cur)[0]
-                req_ds = [{'fieldname':'Name', 'datatype':'TEXT','value':name}]
-                other_ds = [{'fieldname':'VotesAllowed', 'datatype':'INTEGER','value':name_d[name]},{'fieldname':'Office_Id', 'datatype':'INTEGER','value':office_id},{'fieldname':'ElectionDistrict_Id', 'datatype':'INTEGER','value':election_district_id}]
-                contest_id = get_upsert_id(cdf_schema, 'CandidateContest',req_ds,other_ds,con,cur)[0]
+                
+                t = 'ReportingUnit'
+                [id,txt]= format_type_for_insert (cdf_schema,'ReportingUnitType',df.state.context_dictionary['Office'][office_name]['ElectionDistrictType'] ,con,cur)
+                value_d = {'Name':office_name,'ReportingUnitType_Id':id,'OtherReportingUnitType':txt}
+                election_district_id = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
+                
+                t = 'CandidateContest'
+                value_d = {'Name':name,'VotesAllowed':name_d[name],'Office_Id':office_id,'ElectionDistrict_Id':election_district_id}
+                contest_id = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
                 rs.append('Inserted candidate contest ' + name)
                 
                 ### insert CandidateSelections and Join into cdf
                 for ch in name_choice_d[name]:
+                    t = 'Candidate'
+                    value_d = {'BallotName':ch,'Election_Id':election_id,'Party_Id':6465}  # *** need to get actual Party_Id
+                    cand_id = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
                     
-                    conflict_ds = [{'fieldname':'BallotName', 'datatype':'TEXT','value':ch},{'fieldname':'Election_Id', 'datatype':'INT','value':election_id},{'fieldname':'Party_Id', 'datatype':'INT','value':6465}]  # *** need to get actual Party_Id
-                    other_ds = []
-                    cand_id = get_upsert_id(cdf_schema,'Candidate',conflict_ds,other_ds,con,cur)[0]
-                    conflict_ds = [{'fieldname':'Candidate_Id', 'datatype':'INT','value':cand_id}]
-                    other_ds =  []
-                    selection_id = get_upsert_id(cdf_schema, 'CandidateSelection',conflict_ds,other_ds,con,cur)[0]
+                    t = 'CandidateSelection'
+                    value_d = {'Candidate_Id':cand_id}
+                    selection_id = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
                     
-                    conflict_ds = [{'fieldname':'CandidateContest_Id','datatype':'INT','value':contest_id},{'fieldname':'CandidateSelection_Id','datatype':'INT','value':selection_id}]
-                    other_ds = []
-                    get_upsert_id(cdf_schema, 'CandidateContestSelectionJoin',conflict_ds,other_ds,con,cur)
+                    t ='CandidateContestSelectionJoin'
+                    value_d = {'CandidateContest_Id':contest_id,'CandidateSelection_Id':selection_id}
+                    upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
 
         
     return('</p><p>'.join(rs))
