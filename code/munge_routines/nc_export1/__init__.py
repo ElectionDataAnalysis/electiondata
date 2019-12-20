@@ -44,7 +44,10 @@ def add_ei(office_d):
 import psycopg2
 from psycopg2 import sql
 
-def raw_to_cdf(df,cdf_schema,con,cur):        #e.g., d = {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
+def raw_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):        #e.g., d = {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
+    ''' optional arguments:
+            state_id and id_type_other_id: 0 values flag that none was supplied
+    '''
     rs = ['raw_to_cdf:']
     
     with open('CDF_schema_def_info/tables.txt','r') as f:
@@ -59,20 +62,22 @@ def raw_to_cdf(df,cdf_schema,con,cur):        #e.g., d = {'ReportingUnit':{'Nort
     value_d = {'Name':df.election,'EndDate':df.state.context_dictionary['Election'][df.election]['EndDate'], 'StartDate':df.state.context_dictionary['Election'][df.election]['StartDate'], 'OtherElectionType':otherelectiontype,'ElectionType_Id':electiontype_id}
     election_id = upsert(cdf_schema,'Election',tables_d['Election'],value_d,con,cur)[0]
     
-    ## upsert state, get id (default Reporting Unit for ballot questions)   *** inefficiency: no need to repeat for each state
-    t = 'ReportingUnit'
-    [reportingunittype_id,otherreportingunittype] = format_type_for_insert(cdf_schema,'ReportingUnitType','state',con,cur)
-    value_d = {'Name':df.state.name,'ReportingUnitType_Id':reportingunittype_id,'OtherReportingUnitType':otherreportingunittype}
-    reportingunit_id_state = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
+    ## upsert state, get id (default Reporting Unit for ballot questions)
+    if state_id == 0:
+        t = 'ReportingUnit'
+        [reportingunittype_id,otherreportingunittype] = format_type_for_insert(cdf_schema,'ReportingUnitType','state',con,cur)
+        value_d = {'Name':df.state.name,'ReportingUnitType_Id':reportingunittype_id,'OtherReportingUnitType':otherreportingunittype}
+        state_id = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
 
     ###### get id for IdentifierType 'other'    *** inefficiency: no need to repeat for each datafile
-    q = 'SELECT "Id" FROM {}."IdentifierType" WHERE txt = \'other\' '
-    cur.execute(   sql.SQL(q).format( sql.Identifier(cdf_schema)))
-    a = cur.fetchall()
-    if a:
-        id_type_other_id = a[0][0]
-    else:
-        return( 'No type \'other\' in table '+cdf_schema+'.IdentifierType')
+    if id_type_other_id == 0:
+        q = 'SELECT "Id" FROM {}."IdentifierType" WHERE txt = \'other\' '
+        cur.execute(   sql.SQL(q).format( sql.Identifier(cdf_schema)))
+        a = cur.fetchall()
+        if a:
+            id_type_other_id = a[0][0]
+        else:
+            bbb = 1/0 # ***
     ###########################
     
     ###### get rows from raw table
