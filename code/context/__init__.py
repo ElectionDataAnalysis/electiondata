@@ -7,7 +7,7 @@ import re
 import psycopg2
 from psycopg2 import sql
 from datetime import datetime
-from munge_routines import upsert, format_type_for_insert, get_upsert_id
+from munge_routines import upsert, format_type_for_insert
 
 def context_to_cdf(s,schema,con,cur):
     ''' Takes the info from the context_dictionary for the state s and inserts it into the db. Returns a dictionary mapping context_dictionary keys to the database keys '''
@@ -53,17 +53,17 @@ def context_to_cdf(s,schema,con,cur):
             ## need to process 'Office' after 'ReportingUnit', as Offices may create ReportingUnits as election districts *** check for this
 
             for name_key in s.context_dictionary[t]:
-                req_var_ds = [{'fieldname':'Name', 'datatype':'TEXT','value':s.context_dictionary['Office'][name_key]['ElectionDistrict']}]
-                other_var_ds = []
+                
+                tt = 'ReportingUnit'
                 if 'ElectionDistrictType' in s.context_dictionary['Office'][name_key].keys():
                     [id,other_txt] = format_type_for_insert(schema,'ReportingUnitType', s.context_dictionary['Office'][name_key]['ElectionDistrictType'], con,cur)
-                    id_d = { 'fieldname':'ReportingUnitType_Id','datatype':'','value':id}
-                    other_var_ds.append(id_d)
-                    other_txt_d = {'fieldname':'OtherReportingUnitType','datatype':'TEXT','value':other_txt}
-                    other_var_ds.append(other_txt_d)
-                ## insert the record into the db
-                upsert_id = get_upsert_id(schema,'ReportingUnit',req_var_ds,other_var_ds,con,cur)[0]
-                out_d['ReportingUnit'][name_key] = upsert_id
+                else:
+                    bb = 1/0 # ***
+                value_d = {'Name':s.context_dictionary['Office'][name_key]['ElectionDistrict'],'ReportingUnitType_Id':id,'OtherReportingUnitType':other_txt}
+                dd = next( x for x in table_ds if x['tablename']=='ReportingUnit' )
+                upsert_id = upsert(schema,tt,dd,value_d,con,cur)[0]
+            
+            
 
     return(out_d)
 
