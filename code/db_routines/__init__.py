@@ -14,39 +14,11 @@ from psycopg2 import sql
 from datetime import datetime
 
 import clean as cl
-from munge_routines import get_upsert_id
 
 
     
 
-# process info from state context_dictionary into db
-# *** UNDER CONSTRUCTION
-def context_to_cdf(s,con,cur):
-    rs = [str(datetime.now())]
-    cdf_field_datatype_d= {'type':'TEXT','enddate':'DATE','startdate':'DATE'}  # *** build this programmatically from CDF schema def file?
-    state_rvd = {'fieldname':'name','datatype':'text','value':s.name}
-    state_ovds = []
-    [status,state_id] = get_upsert_id(s.schema_name,'reportingunit',state_rvd)
-    if status == 'inserted':
-        rs.append('WARNING: '+s.name+' was not in cdf.reportingunit, had to be inserted.')
-    for k in ['election']:   # e.g., k ='election'
-        for kk in s.context_dictionary[k].keys():   # e.g., kk='General Election 2018-11-06'
-            req_var_ds= [{'fieldname':'name','datatype':'text','value':kk}]
-            other_var_ds = []
-            ## list other fields in table
-            for kkk in s.context_dictionary[k][kk].keys():  # e.g., kkk='Type'
-                other_var_ds.append(  {'fieldname':kkk.lower(),'datatype':cdf_field_datatype_d[kkk.lower()],'value':s.context_dictionary[k][kk][kkk]})
-        
 
-            get_upsert_id(s.schema,k,req_var_ds,other_var_ds,con,cur)
-    return('</p><p>'.join(rs))
-
-
-# the main event: process a datafile into the cdf schema
-def raw_df_to_db(df,m,conn,cur,cdf_schema):
-    rs = [str(datetime.now())]
-    
-    return('</p><p>'.join(rs))
 
 
 
