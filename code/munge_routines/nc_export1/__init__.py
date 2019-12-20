@@ -4,6 +4,9 @@
 
 import re
 from munge_routines import format_type_for_insert, id_and_name_from_external, upsert
+import psycopg2
+from psycopg2 import sql
+
 
 ## create external identifier / nc_export1 pairs of offices dictionary
 
@@ -38,16 +41,96 @@ def add_ei(office_d):
             office_d[k]['ExternalIdentifiers']['nc_export1'] = ext_id
     return(office_d)
             
-        
+def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
+    """ attempt to create munger-agnostic raw-to-cdf script; for now, nc_export1 stuff is hard-coded *** """
+    rs = ['raw_to_cdf:']
 
-### load data from df to cdf; this should eventually be written in a munger-agnostic way, and also extended to all appropriate tables ***
-import psycopg2
-from psycopg2 import sql
+    with open('CDF_schema_def_info/tables.txt', 'r') as f:
+        table_ds = eval(f.read())
+    tables_d = {}
+    for ddd in table_ds:
+        tables_d[ddd.pop('tablename')] = ddd
+
+            ## upsert election, get id
+        [electiontype_id, otherelectiontype] = format_type_for_insert(cdf_schema, 'ElectionType',
+                                                                      df.state.context_dictionary['Election'][
+                                                                          df.election]['ElectionType'], con, cur)
+    value_d = {'Name': df.election, 'EndDate': df.state.context_dictionary['Election'][df.election]['EndDate'],
+               'StartDate': df.state.context_dictionary['Election'][df.election]['StartDate'],
+               'OtherElectionType': otherelectiontype, 'ElectionType_Id': electiontype_id}
+    election_id = upsert(cdf_schema, 'Election', tables_d['Election'], value_d, con, cur)[0]
+
+    ## upsert state, get id (default Reporting Unit for ballot questions)
+    if state_id == 0:
+        t = 'ReportingUnit'
+        [reportingunittype_id, otherreportingunittype] = format_type_for_insert(cdf_schema, 'ReportingUnitType',
+                                                                                'state', con, cur)
+    value_d = {'Name': df.state.name, 'ReportingUnitType_Id': reportingunittype_id,
+               'OtherReportingUnitType': otherreportingunittype}
+    state_id = upsert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
+
+    ###### get id for IdentifierType 'other'
+    if id_type_other_id == 0:
+        q = 'SELECT "Id" FROM {}."IdentifierType" WHERE txt = \'other\' '
+    cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema)))
+    a = cur.fetchall()
+    if a:
+        id_type_other_id = a[0][0]
+    else:
+        bbb = 1 / 0  # ***
+    ###########################
+
+    ###### get rows from raw table
+    raw_cols = ['county', 'election_date', 'precinct', 'contest_name', 'vote_for', 'choice', 'choice_party', 'vote_for',
+                'election_day', 'one_stop', 'absentee_by_mail', 'provisional', 'total_votes',
+                'real_precinct']  # *** depends on munger
+
+    raw_col_slots = ['{' + str(i + 2) + '}' for i in range(len(raw_cols))]
+
+    q = 'SELECT DISTINCT ' + ','.join(raw_col_slots) + ' FROM {0}.{1}'
+    sql_ids = [df.state.schema_name, df.table_name] + raw_cols
+    format_args = [sql.Identifier(x) for x in sql_ids]
+    cur.execute(sql.SQL(q).format(*format_args))
+    rows = cur.fetchall()
+
+    # create dictionaries for processing
+    nc_export1_d = {'ReportingUnit': [
+        {'ExternalIdentifier': county,
+         'Enumerations':{'ReportingUnitType': 'county'},
+         'Condition': TRUE},
+        {'ExternalIdentifier': county + ';' + precinct,
+         'Enumerations':{'ReportingUnitType': 'precinct'},
+         'Condition': 'real_precinct == \'Y\''},
+        {'ExternalIdentifier': county + ';' + precinct,
+         'Enumerations':{'ReportingUnitType': 'other;unknown'},
+         'Condition': 'real_precinct != \'Y\'},
+                        {'ExternalIdentifier': contest_name,
+                         'ReportingUnitType': 'other;unknown',
+                         'Condition': 'choice not in (\'Yes\',\'No\',\'For\',\'Against\')'}
+                        ]}}     # munger-dependent ***
+    for row in rows:
+        exec ('['+ ','.join(raw_cols) +'] = row' )  # load data into variables named per raw_cols
+        for t in nc_export1_d.keys():       # e.g., t = 'ReportingUnit'
+            for item in nc_export1_d[t]:    # e.g. item = {'ExternalIdentifier': county,
+                                            # 'Enumerations':{'ReportingUnitType': 'county'},'Conditions': []}
+                if eval(nc_export_d[t][item]['Condition']):
+                    # get internal db id
+                    [cdf_id,cdf_name] = id_and_name_from_external(cdf_schema, t, eval(nc_export1_d[t]['ExternalIdentifier']), id_type_other_id, 'nc_export1', con, cur)
+                    if [cdf_id,cdf_name] == [None,None]:    # if no such is found in db, insert it!
+                        # create dict to hold enumerations
+                        enum_id = {}
+                        enum_txt = {}
+                        for e in nc_export1_d[t][item]['Enumerations'].keys():  # e.g. e = 'ReportingUnitType'
+                            [enum_id[e],enum_txt[e]] = format_type_for_insert(cdf_schema,e, nc_export1_d[t][item]['Enumerations'][e],con,cur)
+
+
+
 
 def raw_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):        #e.g., d = {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
-    ''' optional arguments:
+    """ load data from df to cdf; this should eventually be written in a munger-agnostic way, and also extended to all appropriate tables ***
+    optional arguments:
             state_id and id_type_other_id: 0 values flag that none was supplied
-    '''
+    """
     rs = ['raw_to_cdf:']
     
     with open('CDF_schema_def_info/tables.txt','r') as f:
@@ -72,7 +155,7 @@ def raw_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):        
     ###### get id for IdentifierType 'other'
     if id_type_other_id == 0:
         q = 'SELECT "Id" FROM {}."IdentifierType" WHERE txt = \'other\' '
-        cur.execute(   sql.SQL(q).format( sql.Identifier(cdf_schema)))
+        cur.execute(sql.SQL(q).format( sql.Identifier(cdf_schema)))
         a = cur.fetchall()
         if a:
             id_type_other_id = a[0][0]
@@ -98,8 +181,8 @@ def raw_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):        
     
     
     for row in rows:
-        exec ('['+ ','.join(raw_cols) +'] = row' )
-        bbb = 1/0 # ***
+        exec ('['+ ','.join(raw_cols) +'] = row' )  # load data into variables named per raw_cols
+
         name_d[n] = vf
         choice_d[ch]=ch_p
         if n in name_choice_d.keys():
