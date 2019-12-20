@@ -69,7 +69,7 @@ def raw_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):        
         value_d = {'Name':df.state.name,'ReportingUnitType_Id':reportingunittype_id,'OtherReportingUnitType':otherreportingunittype}
         state_id = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
 
-    ###### get id for IdentifierType 'other'    *** inefficiency: no need to repeat for each datafile
+    ###### get id for IdentifierType 'other'
     if id_type_other_id == 0:
         q = 'SELECT "Id" FROM {}."IdentifierType" WHERE txt = \'other\' '
         cur.execute(   sql.SQL(q).format( sql.Identifier(cdf_schema)))
@@ -81,16 +81,26 @@ def raw_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):        
     ###########################
     
     ###### get rows from raw table
-    q = 'SELECT DISTINCT contest_name, vote_for, choice, choice_party FROM {}.{}'
-    cur.execute(sql.SQL(q).format(sql.Identifier(df.state.schema_name),sql.Identifier(df.table_name)))
-    contest_choice_pairs = cur.fetchall()
+    raw_cols = ['county', 'election_date','precinct', 'contest_name', 'vote_for', 'choice', 'choice_party', 'vote_for','election_day', 'one_stop', 'absentee_by_mail', 'provisional', 'total_votes','real_precinct']    # *** depends on munger
+    
+    raw_col_slots = ['{'+ str(i+2)+'}' for i in range(len(raw_cols))]
+    
+    q = 'SELECT DISTINCT '+ ','.join(raw_col_slots) + ' FROM {0}.{1}'
+    sql_ids = [df.state.schema_name,df.table_name] + raw_cols
+    format_args = [sql.Identifier(x) for x in sql_ids]
+    cur.execute(sql.SQL(q).format( *format_args))
+    rows = cur.fetchall()
     
     ### create dictionaries for more efficient processing
     name_d = {}
     choice_d = {}
     name_choice_d = {}
-    for [n,vf,ch,ch_p] in contest_choice_pairs:
-        name_d[n]=vf
+    
+    
+    for row in rows:
+        exec ('['+ ','.join(raw_cols) +'] = row' )
+        bbb = 1/0 # ***
+        name_d[n] = vf
         choice_d[ch]=ch_p
         if n in name_choice_d.keys():
             name_choice_d[n].append(ch)
