@@ -293,6 +293,7 @@ def gui():
         # instantiate the NC pct_result datafile
     df = sf.create_datafile(s,'General Election 2018-11-06','results_pct_20181106.txt',m)
 
+    nc_export1.rtcdf(df,'cdf2',con,cur)
     #context_to_db_d = context.context_to_cdf(s,'cdf2',con,cur)  # {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
     #con.commit()
        

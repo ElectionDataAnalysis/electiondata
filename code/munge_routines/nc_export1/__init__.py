@@ -94,36 +94,35 @@ def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
     rows = cur.fetchall()
 
     # create dictionaries for processing
-    nc_export1_d = {'ReportingUnit': [
-        {'ExternalIdentifier': county,
-         'Enumerations':{'ReportingUnitType': 'county'},
-         'Condition': TRUE},
-        {'ExternalIdentifier': county + ';' + precinct,
+
+    nc_export1_d = {'ReportingUnit': [        ## note: conditions should be mutually exclusive
+        {'ExternalIdentifier': 'county + \';\' + precinct',
          'Enumerations':{'ReportingUnitType': 'precinct'},
          'Condition': 'real_precinct == \'Y\''},
-        {'ExternalIdentifier': county + ';' + precinct,
+        {'ExternalIdentifier': 'county + \';\' + precinct',
          'Enumerations':{'ReportingUnitType': 'other;unknown'},
-         'Condition': 'real_precinct != \'Y\'},
-                        {'ExternalIdentifier': contest_name,
-                         'ReportingUnitType': 'other;unknown',
-                         'Condition': 'choice not in (\'Yes\',\'No\',\'For\',\'Against\')'}
-                        ]}}     # munger-dependent ***
+         'Condition': 'real_precinct != \'Y\''}
+        ]}     # munger-dependent ***
     for row in rows:
         exec ('['+ ','.join(raw_cols) +'] = row' )  # load data into variables named per raw_cols
+        if county == 'CARTERET':
+            bbb = 1/0 # ***
+        ids_d = {'state':state_id,'election':election_id}  # to hold ids of found items for later reference
         for t in nc_export1_d.keys():       # e.g., t = 'ReportingUnit'
             for item in nc_export1_d[t]:    # e.g. item = {'ExternalIdentifier': county,
                                             # 'Enumerations':{'ReportingUnitType': 'county'},'Conditions': []}
-                if eval(nc_export_d[t][item]['Condition']):
+                if eval(nc_export1_d[t][item]['Condition']):
                     # get internal db id
-                    [cdf_id,cdf_name] = id_and_name_from_external(cdf_schema, t, eval(nc_export1_d[t]['ExternalIdentifier']), id_type_other_id, 'nc_export1', con, cur)
+                    [cdf_id,cdf_name] = id_and_name_from_external(cdf_schema, t, eval(nc_export1_d[t]['ExternalIdentifier']), id_type_other_id, 'nc_export1', con, cur)     # cdf_name may be unnecessary ***
                     if [cdf_id,cdf_name] == [None,None]:    # if no such is found in db, insert it!
-                        # create dict to hold enumerations
-                        enum_id = {}
-                        enum_txt = {}
+                        cdf_name = eval(nc_export1_d[t][item]['ExternalIdentifier'])
+                        value_d = {'Name': cdf_name}    # *** some tables (e.g., BallotMeasureSelection) don't have Names ***
                         for e in nc_export1_d[t][item]['Enumerations'].keys():  # e.g. e = 'ReportingUnitType'
-                            [enum_id[e],enum_txt[e]] = format_type_for_insert(cdf_schema,e, nc_export1_d[t][item]['Enumerations'][e],con,cur)
-
-
+                            [value_d[e+'Id'],value_d['Other'+e]] = format_type_for_insert(cdf_schema,e, nc_export1_d[t][item]['Enumerations'][e],con,cur)
+                        # *** 'other_element_refs': [{'fieldname': 'ElectionDistrict_Id', 'refers_to': 'ReportingUnit'}]
+                        cdf_id = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
+                ids_d[t+'Id'] = cdf_id
+    return str(ids_d)
 
 
 def raw_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):        #e.g., d = {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
