@@ -81,14 +81,15 @@ def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
     ###########################
 
     ###### get rows from raw table
-    raw_cols = ['county', 'election_date', 'precinct', 'contest_name', 'vote_for', 'choice', 'choice_party', 'vote_for',
-                'election_day', 'one_stop', 'absentee_by_mail', 'provisional', 'total_votes',
-                'real_precinct']  # *** depends on munger
+    raw_cols = [['county','TEXT'], ['election_date','DATE'], ['precinct','TEXT'], ['contest_name','TEXT'],
+                ['vote_for','INT'], ['choice','TEXT'], ['choice_party','TEXT'], ['vote_for','INT'],
+                ['election_day','INT'], ['one_stop','INT'], ['absentee_by_mail','INT'], ['provisional','INT'],
+                ['total_votes','INT'], ['real_precinct','TEXT']]  # *** depends on munger
 
     raw_col_slots = ['{' + str(i + 2) + '}' for i in range(len(raw_cols))]
 
     q = 'SELECT DISTINCT ' + ','.join(raw_col_slots) + ' FROM {0}.{1}'
-    sql_ids = [df.state.schema_name, df.table_name] + raw_cols
+    sql_ids = [df.state.schema_name, df.table_name] + [x[0] for x in raw_cols]
     format_args = [sql.Identifier(x) for x in sql_ids]
     cur.execute(sql.SQL(q).format(*format_args))
     rows = cur.fetchall()
@@ -102,26 +103,47 @@ def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
         {'ExternalIdentifier': 'county + \';\' + precinct',
          'Enumerations':{'ReportingUnitType': 'other;unknown'},
          'Condition': 'real_precinct != \'Y\''}
-        ]}     # munger-dependent ***
+    ],
+    'Party':[
+        {'ExternalIdentifier':'choice_party',
+        'Enumerations':{},
+        'Condition':'True'}
+    ],
+    'Election':[
+        {'ExternalIdentifier':'election_date',
+         'Enumerations':{}, # only list enumerations that require knowledge outside the file. E.g., omit 'ElectionType':'general'
+        'Condition':'1'}
+    ],
+    'Office':[
+        {'ExternalIdentifier':'contest_name',
+        'Enumerations':{},
+        'Condition':'1'}
+    ]
+    }     # munger-dependent ***
     for row in rows:
-        exec ('['+ ','.join(raw_cols) +'] = row' )  # load data into variables named per raw_cols
-        if county == 'CARTERET':
-            bbb = 1/0 # ***
-        ids_d = {'state':state_id,'election':election_id}  # to hold ids of found items for later reference
+        raw_values_d = {}
+        for i in range(len(raw_cols)):
+            if not row[i]:   # if db query returned None
+                exec(raw_cols[i][0] + ' = None')
+            elif raw_cols[i][1] == 'INT':
+                exec(raw_cols[i][0] + ' = ' + str(row[i]) )
+            else:   # *** DATE and TEXT handled identically
+                exec( raw_cols[i][0] + ' = "'+ row[i] +'"')
+        ids_d = {'state':state_id,'Election_Id':election_id}  # to hold ids of found items for later reference
         for t in nc_export1_d.keys():       # e.g., t = 'ReportingUnit'
             for item in nc_export1_d[t]:    # e.g. item = {'ExternalIdentifier': county,
                                             # 'Enumerations':{'ReportingUnitType': 'county'},'Conditions': []}
-                if eval(nc_export1_d[t][item]['Condition']):
+                if eval(item['Condition']):
                     # get internal db id
-                    [cdf_id,cdf_name] = id_and_name_from_external(cdf_schema, t, eval(nc_export1_d[t]['ExternalIdentifier']), id_type_other_id, 'nc_export1', con, cur)     # cdf_name may be unnecessary ***
+                    [cdf_id,cdf_name] = id_and_name_from_external(cdf_schema, t, eval(item['ExternalIdentifier']), id_type_other_id, 'nc_export1', con, cur)     # cdf_name may be unnecessary ***
                     if [cdf_id,cdf_name] == [None,None]:    # if no such is found in db, insert it!
-                        cdf_name = eval(nc_export1_d[t][item]['ExternalIdentifier'])
+                        cdf_name = eval(item['ExternalIdentifier'])
                         value_d = {'Name': cdf_name}    # *** some tables (e.g., BallotMeasureSelection) don't have Names ***
-                        for e in nc_export1_d[t][item]['Enumerations'].keys():  # e.g. e = 'ReportingUnitType'
-                            [value_d[e+'Id'],value_d['Other'+e]] = format_type_for_insert(cdf_schema,e, nc_export1_d[t][item]['Enumerations'][e],con,cur)
+                        for e in item['Enumerations'].keys():  # e.g. e = 'ReportingUnitType'
+                            [value_d[e+'Id'],value_d['Other'+e]] = format_type_for_insert(cdf_schema,e, item['Enumerations'][e],con,cur)
                         # *** 'other_element_refs': [{'fieldname': 'ElectionDistrict_Id', 'refers_to': 'ReportingUnit'}]
                         cdf_id = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
-                ids_d[t+'Id'] = cdf_id
+                ids_d[t+'_Id'] = cdf_id
     return str(ids_d)
 
 

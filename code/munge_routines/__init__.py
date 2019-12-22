@@ -41,7 +41,7 @@ def upsert(schema,table,table_d,value_d,con,cur):
     f_vals = [ value_d[n] for n in f_names]
     #f_val_slot_list = [ dd['datatype']+' %s' for dd in table_d['fields'] ] + [ 'INT %s' for e in  table_d['enumerations']] + ['TEXT %s' for e in table_d['enumerations']]+ ['INT %s' for dd in table_d['other_element_refs']]
 
-    cf_names = set().union(  *table_d['unique_constraints'])#  *** might need to make this a list
+    cf_names = list(set().union(  *table_d['unique_constraints'])) #  *** might need to make this a list
     f_id_slot_list = ['{'+str(i+2)+'}' for i in range(len(f_names))]
     f_id_slots = ','.join( f_id_slot_list)
     cf_id_slots = ','.join( ['{'+str(i+2+len(f_names))+'}' for i in range(len(cf_names))] )
@@ -53,7 +53,7 @@ def upsert(schema,table,table_d,value_d,con,cur):
     q = 'WITH input_rows('+f_id_slots+') AS (VALUES ('+f_val_slots+') ), ins AS (INSERT INTO {0}.{1} ('+f_id_slots+') SELECT * FROM input_rows ON CONFLICT ('+cf_id_slots+') DO NOTHING RETURNING "Id", '+f_id_slots+') SELECT "Id", ' + f_id_slots+', \'inserted\' AS source FROM ins UNION  ALL SELECT c."Id", '+  ','.join(val_return_list)  +',\'selected\' AS source FROM input_rows JOIN {0}.{1} AS c USING ('+ f_id_slots+');'
     
     
-    sql_ids = [schema,table,*f_names,*cf_names]
+    sql_ids = [schema,table]   +f_names + cf_names
     format_args = [sql.Identifier(x) for x in sql_ids]
     strs = f_vals
     cur.execute(sql.SQL(q).format( *format_args ),strs)

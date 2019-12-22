@@ -1,26 +1,24 @@
 #!usr/bin/python3
+import sys, os
+import os.path
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '.'))
 
-### next four lines are necessary to install numpy and pandas packages for some reason...
-import os
-os.system("pip install --upgrade pip")
-os.system("pip install pandas")
-os.system("pip install numpy")
 
-import numpy as np
-import pandas as pd
-from flask import Flask
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT # allows db creation, deletion
 from psycopg2 import sql
 import re
+
+import db_routines as dbr
 import states_and_files as sf
 from pathlib import Path
 import sys
-# do we need numpy? If not, remove from requirements
 
 from datetime import datetime
 
-import db_routines as dbr
 import clean as cl
 import context
 
@@ -35,7 +33,7 @@ def path_to_file(path_to_dir,filename):
     return(out+filename)
 
 def establish_connection(db_name='postgres'):
-    host_name = 'db'
+    host_name = 'localhost'
     user_name = 'postgres'
     password = 'notverysecure'
 
@@ -73,11 +71,6 @@ def create_schema(s):
     if conn:
         conn.close()
 
-##########################################
-
-app = Flask(__name__)
-
-@app.route('/raw_data')
 def raw_data():
 # initialize rs for logging
     rs=[str(datetime.now())]
@@ -140,7 +133,6 @@ def raw_data():
         return("<p>"+"</p><p>  ".join(rs))
         
         
-@app.route('/file_to_context')
 def file_to_context():
 # initialize report for logging
     rs=[str(datetime.now())]
@@ -162,7 +154,6 @@ def file_to_context():
 
     return("<p>"+"</p><p>  ".join(rs))
 
-@app.route('/create_cdf')
 def create_cdf():
     from db_routines import Create_CDF_db as CDF
     rs =[str(datetime.now())]
@@ -186,7 +177,6 @@ def create_cdf():
         conn.close()
     return("<p>"+"</p><p>  ".join(rs))
 
-@app.route('/load_cdf')
 def load_cdf():
     rs=[str(datetime.now())]
     # instantiate state of NC, munger
@@ -219,67 +209,11 @@ def load_cdf():
     return("<p>"+"</p><p>  ".join(rs))
 
 
-@app.route('/analyze')
-def analyze():
-    rs=[""]
-# instantiate state of NC
-    s = sf.create_state('NC','local_data/NC') # do we need this?
-    conn = establish_connection()
-    cur = conn.cursor()
-    
-# hard code table for now *** need to modify build() to track source file, separate build() and load()
-    table_name = 'results_pct'
-    contest_field = 'contest_name'
-    county_field = 'county'
-    vote_field = 'absentee_by_mail'
-    party_field = 'choice_party'
-    tolerance = 2  ## number of standard deviations from the mean that we're calling outliers
-    
-    
-    q_abs = "SELECT "+contest_field+", "+county_field+","+party_field+", sum("+vote_field+") FROM "+table_name+"  GROUP BY "+contest_field+", "+county_field+","+party_field+" ORDER BY "+contest_field+", "+county_field+","+party_field
-    cur.execute(q_abs)
-    votes = pd.DataFrame(cur.fetchall(),columns=['contest','county','party','votes'])
-    contests = votes['contest'].unique().tolist()     # list of contests
-
-# loop through contests
-
-    for c in contests:
-    # for given contest_name, calculate DEM votes and total votes on absentee ballots by county
-        if c:
-            rs.append(c)
-            c_votes=votes[votes.contest==c]
-            if 'DEM' in c_votes['party'].values:
-                table = pd.pivot_table(c_votes, values='votes', index=['county'], columns=['party'], aggfunc=np.sum).fillna(0)
-                table['total']= table.DEM + table.REP #  + table.CST + table.LIB + table.GRE *** how to sum NaN? How to automate this list?
-                table['pct_DEM'] = table.DEM/table.total
-            # find outliers
-                mean = table['pct_DEM'].mean()
-                std = table['pct_DEM'].std()
-                outliers = table[np.absolute(table.pct_DEM-mean)> tolerance*std]
-                # report.append(str(table['pct_DEM']))
-                if outliers.empty:
-                    rs.append("No outliers more than "+str(tolerance)+" standard deviations from mean")
-                else:
-                    rs.append("Outliers are:"+str(outliers))
-            else:
-                rs.append("No DEM votes in contest "+c)
-
-    # look for outlier in DEM percentage
-    
-    if cur:
-        cur.close()
-    if conn:
-        conn.close()
-
-
-    
-    return("<p>"+"</p><p>  ".join(rs))
 
 #### diagnostic below *** can delete
 
 from munge_routines import  format_type_for_insert
 
-@app.route('/test')
 def gui():
     from munge_routines import nc_export1
     from munge_routines import upsert
