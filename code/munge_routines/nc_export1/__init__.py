@@ -96,32 +96,48 @@ def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
 
     # create dictionaries for processing
 
-    nc_export1_d = {'ReportingUnit': [        ## note: conditions should be mutually exclusive
+    nc_export1_d = {'Office':[
+        {'ExternalIdentifier':'contest_name',
+        'Enumerations':{},
+         'OtherFields':{},
+        'Condition':'True'}
+    ],
+    'ReportingUnit': [        ## note: conditions should be mutually exclusive
         {'ExternalIdentifier': 'county + \';\' + precinct',
          'Enumerations':{'ReportingUnitType': 'precinct'},
          'Condition': 'real_precinct == \'Y\''},
         {'ExternalIdentifier': 'county + \';\' + precinct',
          'Enumerations':{'ReportingUnitType': 'other;unknown'},
+         'OtherFields':{},
          'Condition': 'real_precinct != \'Y\''}
     ],
     'Party':[
         {'ExternalIdentifier':'choice_party',
         'Enumerations':{},
-        'Condition':'True'}
+         'OtherFields': {},
+         'Condition':'True'}
     ],
     'Election':[
         {'ExternalIdentifier':'election_date',
          'Enumerations':{}, # only list enumerations that require knowledge outside the file. E.g., omit 'ElectionType':'general'
-        'Condition':'1'}
+         'OtherFields': {},
+         'Condition':'True'}
     ],
-    'Office':[
+
+    'CandidateContest':[
         {'ExternalIdentifier':'contest_name',
         'Enumerations':{},
-        'Condition':'1'}
+         'OtherFields':{'VotesAllowed':'vote_for','Office_Id':'ids_d["Office_Id"]'},    # don't include fields defined from external context, such as the ElectionDistrict_Id
+        'Condition':'choice not in [\'Yes\',\'No\',\'For\',\'Against\' ]'}
+    ],
+    'BallotMeasureContest':[
+        {'ExternalIdentifier':'contest_name',
+         'Enumerations':{},
+         'OtherFields':{'ElectionDistrict_Id':'ids_d["ReportingUnit_Id"]'},
+        'Condition':'choice in [\'Yes\',\'No\',\'For\',\'Against\' ]'}
     ]
     }     # munger-dependent ***
     for row in rows:
-        raw_values_d = {}
         for i in range(len(raw_cols)):
             if not row[i]:   # if db query returned None
                 exec(raw_cols[i][0] + ' = None')
@@ -129,21 +145,40 @@ def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
                 exec(raw_cols[i][0] + ' = ' + str(row[i]) )
             else:   # *** DATE and TEXT handled identically
                 exec( raw_cols[i][0] + ' = "'+ row[i] +'"')
-        ids_d = {'state':state_id,'Election_Id':election_id}  # to hold ids of found items for later reference
-        for t in nc_export1_d.keys():       # e.g., t = 'ReportingUnit'
-            for item in nc_export1_d[t]:    # e.g. item = {'ExternalIdentifier': county,
-                                            # 'Enumerations':{'ReportingUnitType': 'county'},'Conditions': []}
-                if eval(item['Condition']):
-                    # get internal db id
-                    [cdf_id,cdf_name] = id_and_name_from_external(cdf_schema, t, eval(item['ExternalIdentifier']), id_type_other_id, 'nc_export1', con, cur)     # cdf_name may be unnecessary ***
-                    if [cdf_id,cdf_name] == [None,None]:    # if no such is found in db, insert it!
-                        cdf_name = eval(item['ExternalIdentifier'])
-                        value_d = {'Name': cdf_name}    # *** some tables (e.g., BallotMeasureSelection) don't have Names ***
-                        for e in item['Enumerations'].keys():  # e.g. e = 'ReportingUnitType'
-                            [value_d[e+'Id'],value_d['Other'+e]] = format_type_for_insert(cdf_schema,e, item['Enumerations'][e],con,cur)
-                        # *** 'other_element_refs': [{'fieldname': 'ElectionDistrict_Id', 'refers_to': 'ReportingUnit'}]
-                        cdf_id = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
-                ids_d[t+'_Id'] = cdf_id
+
+        # if Office is not in the df.state.context_dictionary we'll need to skip this row
+        office_name = eval(nc_export1_d['Office'][0]['ExternalIdentifier'])
+        q = 'SELECT f."Id", f."Name" FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}."Office" AS f ON e."ForeignId" = f."Id" WHERE e."IdentifierType_Id" = %s AND e."Value" =  %s AND e."OtherIdentifierType" = \'nc_export1\';'
+        cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema)), [id_type_other_id, office_name])
+        a = cur.fetchall()
+        if not a: # if Office is not already associated to the munger in the db (from state's context_dictionary, for example)
+            pass
+        # otherwise: find Id for ReportingUnit for contest via context_dictionary['Office']
+        else:
+            ed_name = df.state.context_dictionary['Office'][a[0][1]]['ElectionDistrict']
+            q = 'SELECT "Id" FROM {0}."ReportingUnit" WHERE "Name" = %s'
+            cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema)),[ed_name,])
+            b = cur.fetchall()
+
+            ids_d = {'state':state_id,'Election_Id':election_id,'contest_reporting_unit_id':b[0][0]}  # to hold ids of found items for later reference
+            for t in nc_export1_d.keys():       # e.g., t = 'ReportingUnit'
+                for item in nc_export1_d[t]:    # e.g. item = {'ExternalIdentifier': county,
+                                                # 'Enumerations':{'ReportingUnitType': 'county'},'Conditions': []}
+                    if eval(item['ExternalIdentifier']) and eval(item['Condition']):
+                        # get internal db id
+                        [cdf_id,cdf_name] = id_and_name_from_external(cdf_schema, t, eval(item['ExternalIdentifier']), id_type_other_id, 'nc_export1', con, cur)     # cdf_name may be unnecessary ***
+                        if [cdf_id,cdf_name] == [None,None]:    # if no such is found in db, insert it!
+                            cdf_name = eval(item['ExternalIdentifier'])
+                            value_d = {'Name': cdf_name}    # *** some tables (e.g., BallotMeasureSelection) don't have Names ***
+                            for e in item['Enumerations'].keys():  # e.g. e = 'ReportingUnitType'
+                                [value_d[e+'Id'],value_d['Other'+e]] = format_type_for_insert(cdf_schema,e, item['Enumerations'][e],con,cur)
+                            # *** 'other_element_refs': [{'fieldname': 'ElectionDistrict_Id', 'refers_to': 'ReportingUnit'}]
+                            for f in item['OtherFields'].keys():
+                                value_d[f] = eval(item['OtherFields'][f])
+                            if t == 'CandidateContest':     # need to get ElectionDistrict_Id from contextual knowledge
+                                value_d['ElectionDistrict_Id'] = ids_d['contest_reporting_unit_id']
+                            cdf_id = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
+                    ids_d[t+'_Id'] = cdf_id
     return str(ids_d)
 
 

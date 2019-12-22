@@ -73,7 +73,7 @@ def create_schema(s):
 
 def raw_data():
 # initialize rs for logging
-    rs=[str(datetime.now())]
+    print(str(datetime.now()))
 #    tables = [['results_pct','utf8'],['absentee','utf16']] # varies by state *** name and encoding of metadata file
         # note: 'absentee' needs better data cleaning
 #    fmeta = {'results_pct':'layout_results_pct.txt','absentee':'sfs_by_hand_layout_absentee.txt'}  # name of metadata file; varies by state ***
@@ -118,7 +118,7 @@ def raw_data():
         # correct any errors due to foibles of particular datafile and commit
             for query in df.correction_query_list:
                 cur.execute(sql.SQL(query).format(sql.Identifier(s.schema_name), sql.Identifier(df.table_name)))
-                rs.append(query)
+                print(query)
                 conn.commit()
 
     # load data into tables
