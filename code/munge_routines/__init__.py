@@ -7,11 +7,11 @@ from psycopg2 import sql
 from datetime import datetime
 
 
-def id_and_name_from_external (cdf_schema,table_name,external_name,identifiertype_id,otheridentifiertype,con,cur):
+def id_and_name_from_external (cdf_schema,table,external_name,identifiertype_id,otheridentifiertype,con,cur,internal_name_field='Name'):
     ## find the internal db name and id from external identifier
             
-    q = 'SELECT f."Id", f."Name" FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}.{1} AS f ON e."ForeignId" = f."Id" WHERE e."Value" =  %s AND e."IdentifierType_Id" = %s AND (e."OtherIdentifierType" = %s OR e."OtherIdentifierType" IS NULL OR e."OtherIdentifierType" = \'\'  );'       # *** ( ... OR ... OR ...) condition is kludge to protect from inconsistencies in OtherIdentifierType text when the IdentifierType is *not* other
-    cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema),sql.Identifier(table_name)),[external_name,identifiertype_id,otheridentifiertype])
+    q = 'SELECT f."Id", f.{2} FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}.{1} AS f ON e."ForeignId" = f."Id" WHERE e."Value" =  %s AND e."IdentifierType_Id" = %s AND (e."OtherIdentifierType" = %s OR e."OtherIdentifierType" IS NULL OR e."OtherIdentifierType" = \'\'  );'       # *** ( ... OR ... OR ...) condition is kludge to protect from inconsistencies in OtherIdentifierType text when the IdentifierType is *not* other
+    cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema),sql.Identifier(table),sql.Identifier(internal_name_field)),[external_name,identifiertype_id,otheridentifiertype])
     a = cur.fetchall()
     if a:
         return (a[0])

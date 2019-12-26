@@ -228,16 +228,20 @@ def gui():
     print('Creating CDF schema')
     CDF.create_common_data_format_schema(con, cur, 'cdf2')
     # load state context info into cdf schema
-    print('Loading state context info into CDF schema')
+    print('Loading state context info into CDF schema') # *** takes a long time; why?
     context.context_to_cdf(s,'cdf2',con,cur)
     con.commit()
-
+    print('Creating munger instance')
     m = sf.create_munger('local_data/mungers/nc_export1.txt')
     # instantiate the NC pct_result datafile
+
+    print('Creating datafile instance')
     df = sf.create_datafile(s,'General Election 2018-11-06','results_pct_20181106.txt',m)
 
     # load data from df to CDF schema (assumes already loaded to schema s.schema_name)
+    print('Loading data from df to CDF schema')
     nc_export1.rtcdf(df,'cdf2',con,cur)
+    print('Done!')
 
 
 
