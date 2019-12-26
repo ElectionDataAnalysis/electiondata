@@ -21,6 +21,8 @@ from datetime import datetime
 
 import clean as cl
 import context
+from db_routines import Create_CDF_db as CDF
+
 
 ## define some basics
 
@@ -38,12 +40,12 @@ def establish_connection(db_name='postgres'):
     password = 'notverysecure'
 
     # the connect() function returns a new instance of connection
-    conn = psycopg2.connect(host = host_name, user = user_name, password = password, database = db_name)
-    return conn
+    con = psycopg2.connect(host = host_name, user = user_name, password = password, database = db_name)
+    return con
 
-def create_cursor(connection):
+def create_cursor(con):
     # create a new cursor with the connection object.
-    cur = connection.cursor()
+    cur = con.cursor()
     return cur
 
 def check_args(s,f,t):
@@ -59,17 +61,17 @@ def check_args(s,f,t):
 
 def create_schema(s):
     # connect and create schema for the state
-    conn = establish_connection()
-    conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-    cur = conn.cursor()
+    con = establish_connection()
+    con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
+    cur = con.cursor()
     
     cur.execute(sql.SQL('DROP SCHEMA IF EXISTS {} CASCADE').format(sql.Identifier(s.schema_name)))
     cur.execute(sql.SQL('CREATE SCHEMA {}').format(sql.Identifier(s.schema_name)))
     
     if cur:
         cur.close()
-    if conn:
-        conn.close()
+    if con:
+        con.close()
 
 def raw_data():
 # initialize rs for logging
@@ -94,8 +96,8 @@ def raw_data():
 
     # connect to the state schema
         rs.append('Connect to database')
-        conn = establish_connection()
-        cur = conn.cursor()
+        con = establish_conection()
+        cur = con.cursor()
         
         for df in datafiles:
             t = df.table_name   # name of table
@@ -112,24 +114,24 @@ def raw_data():
             [query,strs,sql_ids] = dbr.create_table(df)
             format_args = [sql.Identifier(x) for x in sql_ids]
             cur.execute(sql.SQL(query).format( *format_args ),strs)
-            diagnostic = sql.SQL(query).format( *format_args ).as_string(conn)
-            conn.commit()
+            diagnostic = sql.SQL(query).format( *format_args ).as_string(con)
+            con.commit()
 
         # correct any errors due to foibles of particular datafile and commit
             for query in df.correction_query_list:
                 cur.execute(sql.SQL(query).format(sql.Identifier(s.schema_name), sql.Identifier(df.table_name)))
                 print(query)
-                conn.commit()
+                con.commit()
 
     # load data into tables
-            dbr.load_data(conn,cur,s,df)
+            dbr.load_data(con,cur,s,df)
             rs.append('Data from file '+df.file_name+' loaded into table '+s.schema_name+'.'+df.table_name)
     
     # close connection
         if cur:
             cur.close()
-        if conn:
-            conn.close()
+        if con:
+            con.close()
         return("<p>"+"</p><p>  ".join(rs))
         
         
@@ -144,12 +146,12 @@ def file_to_context():
     m = sf.create_munger('local_data/mungers/nc_export1.txt')
     
 # connect to db
-    conn = establish_connection()
-    cur = conn.cursor()
+    con = establish_connection()
+    cur = con.cursor()
     
     [munger_d,munger_inverse_d] = context.build_munger_d(df.state,m)
 
-    a = context.raw_to_context(df,m,munger_d,conn,cur)
+    a = context.raw_to_context(df,m,munger_d,con,cur)
     rs.append(str(a))
 
     return("<p>"+"</p><p>  ".join(rs))
@@ -157,24 +159,24 @@ def file_to_context():
 def create_cdf():
     from db_routines import Create_CDF_db as CDF
     rs =[str(datetime.now())]
-    conn = establish_connection()
-    cur = conn.cursor()
+    con = establish_connection()
+    cur = con.cursor()
     rs.append('Connected to database')
-    a = CDF.create_common_data_format_schema(conn,cur,'cdf2')
+    a = CDF.create_common_data_format_schema(con,cur,'cdf2')
     rs.append(str(a))
     
     if cur:
         cur.close()
-    if conn:
-        conn.close()
+    if con:
+        con.close()
     return("<p>"+"</p><p>  ".join(rs))
 
 # close connection
     rs.append('Close connection')
     if cur:
         cur.close()
-    if conn:
-        conn.close()
+    if con:
+        con.close()
     return("<p>"+"</p><p>  ".join(rs))
 
 def load_cdf():
@@ -190,8 +192,6 @@ def load_cdf():
     cur = con.cursor()
 
     rs.append('Load information from context dictionary for '+s.name)
-    #ids = sf.context_to_cdf(s,conn,cur,rs)  # *** find better code, maybe in context module?
-    #rs.append('ids are '+str(ids))
     context_to_db_d = context.context_to_cdf(s,'cdf2',con,cur)  # {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
     con.commit()
     
@@ -223,15 +223,22 @@ def gui():
     # instantiate state of NC
     s = sf.create_state('NC','local_data/NC')
     # instantiate the 'nc_export1' munger
+
+    # create cdf schema
+    print('Creating CDF schema')
+    CDF.create_common_data_format_schema(con, cur, 'cdf2')
+    # load state context info into cdf schema
+    print('Loading state context info into CDF schema')
+    context.context_to_cdf(s,'cdf2',con,cur)
+    con.commit()
+
     m = sf.create_munger('local_data/mungers/nc_export1.txt')
-        # instantiate the NC pct_result datafile
+    # instantiate the NC pct_result datafile
     df = sf.create_datafile(s,'General Election 2018-11-06','results_pct_20181106.txt',m)
 
+    # load data from df to CDF schema (assumes already loaded to schema s.schema_name)
     nc_export1.rtcdf(df,'cdf2',con,cur)
-    #context_to_db_d = context.context_to_cdf(s,'cdf2',con,cur)  # {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
-    #con.commit()
-       
-    rs.append(nc_export1.raw_to_cdf(df,'cdf2',con,cur))
+
 
 
     if cur:

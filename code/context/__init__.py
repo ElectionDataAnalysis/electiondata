@@ -25,8 +25,10 @@ def context_to_cdf(s,schema,con,cur):
         if t in s.context_dictionary.keys():
             for name_key in s.context_dictionary[t]:   # e.g., name_key = 'North Carolina;Alamance County'
                 ## insert the record into the db *** define req_var_d and other_var_ds from table_ds
-                
-                value_d = {'Name':name_key}
+                if t == 'BallotMeasureSelection':
+                    value_d = {'Selection':name_key}
+                else:
+                    value_d = {'Name':name_key}
                 for f in d['fields']:
                     if f['fieldname'] in s.context_dictionary[t][name_key].keys():
                         value_d[f['fieldname']] = s.context_dictionary[t][name_key][ f['fieldname'] ]

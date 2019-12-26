@@ -82,6 +82,7 @@ def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
         bbb = 1 / 0  # ***
     ###########################
 
+
     ###### get rows from raw table
     raw_cols = [['county','TEXT'], ['election_date','DATE'], ['precinct','TEXT'], ['contest_type','TEXT'],['contest_name','TEXT'],
                 ['vote_for','INT'], ['choice','TEXT'], ['choice_party','TEXT'], ['vote_for','INT'],
@@ -154,7 +155,7 @@ def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
 
         # Ballot Measures and Candidate Contests are processed differently:
         cond = 'choice in [\'Yes\',\'No\',\'For\',\'Against\']'
-        if eval(cond) :
+        if eval(cond) :     # if a Ballot Measure
             cond = 'contest_type == \'C\''
             if eval(cond):
                 # find ReportingUnitId associated to county (not reporting unit associated to df row)
@@ -166,7 +167,9 @@ def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
             else:
                 ids_d['contest_reporting_unit_id'] = state_id
 
-        else:
+            # fill BallotMeasureContestSelectionJoin ***
+
+        else:       # if not a Ballot Measure (i.e., if a Candidate Contest
             # if Office is not in the df.state.context_dictionary we'll need to skip this row
             office_name = eval(nc_export1_d['Office'][0]['ExternalIdentifier'])
             q = 'SELECT f."Id", f."Name" FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}."Office" AS f ON e."ForeignId" = f."Id" WHERE e."IdentifierType_Id" = %s AND e."Value" =  %s AND e."OtherIdentifierType" = \'nc_export1\';'
@@ -182,6 +185,8 @@ def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
             cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema)),[ed_name,])
             b = cur.fetchall()
             ids_d['contest_reporting_unit_id'] = b[0][0]
+
+            # get Id for Candidate, get CandidateSelection Id, create record in CandidateContestSelectionJoin ***
 
 
         for t in nc_export1_d.keys():       # e.g., t = 'ReportingUnit'
@@ -202,6 +207,7 @@ def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
                             value_d['ElectionDistrict_Id'] = ids_d['contest_reporting_unit_id']
                         cdf_id = upsert(cdf_schema,t,tables_d[t],value_d,con,cur)[0]
                 ids_d[t+'_Id'] = cdf_id
+        ## *** Enter vote counts
     return str(ids_d)
 
 
