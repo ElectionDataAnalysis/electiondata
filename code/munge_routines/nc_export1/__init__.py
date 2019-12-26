@@ -97,7 +97,7 @@ def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
     cur.execute(sql.SQL(q).format(*format_args))
     rows = cur.fetchall()
 
-    # create dictionaries for processing
+    # create dictionaries for processing data from rows. Not all CDF elements are included. E.g., 'Election' element is not filled from df rows, but from df.election
 
     nc_export1_d = {'Office':[
         {'ExternalIdentifier':'contest_name',
@@ -123,13 +123,7 @@ def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
         'Enumerations':{},
          'OtherFields': {},
          'Condition':'True'}
- #   ],
-#    'Election':[
- #       {'ExternalIdentifier':'election_date',
-#         'Enumerations':{}, # only list enumerations that require knowledge outside the file. E.g., omit 'ElectionType':'general'
-#         'OtherFields': {},
-#         'Condition':'True'}
-    ],     # Exclude election, as that info is obtained from the the datafile.
+    ],
 
     'CandidateContest':[
         {'ExternalIdentifier':'contest_name',
@@ -170,12 +164,11 @@ def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
             # fill BallotMeasureContestSelectionJoin ***
 
         else:       # if not a Ballot Measure (i.e., if a Candidate Contest
-            # if Office is not in the df.state.context_dictionary we'll need to skip this row
             office_name = eval(nc_export1_d['Office'][0]['ExternalIdentifier'])
             q = 'SELECT f."Id", f."Name" FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}."Office" AS f ON e."ForeignId" = f."Id" WHERE e."IdentifierType_Id" = %s AND e."Value" =  %s AND e."OtherIdentifierType" = \'nc_export1\';'
             cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema)), [id_type_other_id, office_name])
             a = cur.fetchall()
-            if not a: # if Office is not already associated to the munger in the db (from state's context_dictionary, for example)
+            if not a: # if Office is not already associated to the munger in the db (from state's context_dictionary, for example), skip this row
                continue
 
             # otherwise: find Id for ReportingUnit for contest via context_dictionary['Office']
@@ -190,17 +183,16 @@ def rtcdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
 
         # Process all elements into cdf
         for t in nc_export1_d.keys():       # e.g., t = 'ReportingUnit'
-            for item in nc_export1_d[t]:    # e.g. item = {'ExternalIdentifier': county,
-                                            # 'Enumerations':{'ReportingUnitType': 'county'},'Conditions': []}
+            for item in nc_export1_d[t]:    # for each case (most elts have only one, but ReportingUnit has more) e.g. item = {'ExternalIdentifier': county,
+                                            # 'Enumerations':{'ReportingUnitType': 'county'}}
                 if eval(item['ExternalIdentifier']) and eval(item['Condition']):
-                    # get internal db id
+                    # get internal db name and id from the info in the df row
                     [cdf_id,cdf_name] = id_and_name_from_external(cdf_schema, t, eval(item['ExternalIdentifier']), id_type_other_id, 'nc_export1', con, cur,item['InternalNameField'])     # cdf_name may be unnecessary ***
                     if [cdf_id,cdf_name] == [None,None]:    # if no such is found in db, insert it!
                         cdf_name = eval(item['ExternalIdentifier'])
                         value_d = {item['InternalNameField']: cdf_name}    # usually 'Name' but not always
                         for e in item['Enumerations'].keys():  # e.g. e = 'ReportingUnitType'
                             [value_d[e+'Id'],value_d['Other'+e]] = format_type_for_insert(cdf_schema,e, item['Enumerations'][e],con,cur)
-                        # *** 'other_element_refs': [{'fieldname': 'ElectionDistrict_Id', 'refers_to': 'ReportingUnit'}]
                         for f in item['OtherFields'].keys():
                             value_d[f] = eval(item['OtherFields'][f])
                         if t == 'CandidateContest' or t == 'BallotMeasureContest':     # need to get ElectionDistrict_Id from contextual knowledge
