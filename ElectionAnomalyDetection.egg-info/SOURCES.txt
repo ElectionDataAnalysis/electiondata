@@ -1,0 +1,6 @@
+README.md
+setup.py
+ElectionAnomalyDetection.egg-info/PKG-INFO
+ElectionAnomalyDetection.egg-info/SOURCES.txt
+ElectionAnomalyDetection.egg-info/dependency_links.txt
+ElectionAnomalyDetection.egg-info/top_level.txt
