@@ -69,11 +69,18 @@
                       'unique_constraints':[], 
 		     'not_null_fields':['Count']
                 },
+                {'tablename':'SelectionReportingUnitVoteCountJoin',
+                      'fields':[{'fieldname':'Selection_Id','datatype':'INTEGER'}],
+                      'enumerations':[],
+                      'other_element_refs':[{'fieldname':'Election_Id', 'refers_to':'Election'},{'fieldname':'ReportingUnit_Id', 'refers_to':'ReportingUnit'},{'fieldname':'VoteCount_Id', 'refers_to':'VoteCount'}],
+                      'unique_constraints':[],
+		     'not_null_fields':['Selection_Id','Election_Id','ReportingUnit_Id','VoteCount_Id']
+                },
                 {'tablename':'CandidateSelection',
                       'fields':[],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'Candidate_Id', 'refers_to':'Candidate'}],
-                      'unique_constraints':[['Candidate_Id']], 
+                      'unique_constraints':[['Candidate_Id']],
 		     'not_null_fields':[]
                 },
                 {'tablename':'ElectionContestJoin',

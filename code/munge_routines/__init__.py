@@ -19,13 +19,13 @@ def id_and_name_from_external (cdf_schema,table,external_name,identifiertype_id,
         return(None,None)
 
 
-def upsert(schema,table,table_d,value_d,con,cur):
+def upsert(schema,table,table_d,value_d,con,cur,mode='no_dupes'):
     ''' tables_d is a dict of table descriptions; value_d gives the values for the fields in the table (.e.g., value_d['Name'] = 'North Carolina;Alamance County'); return the upserted record. E.g., tables_d[table] = {'tablename':'ReportingUnit', 'fields':[{'fieldname':'Name','datatype':'TEXT'}],'enumerations':['ReportingUnitType','CountItemStatus'],'other_element_refs':[], 'unique_constraints':[['Name']],
     'not_null_fields':['ReportingUnitType_Id']
+    modes with consequences: 'dupes_ok'
        } '''
     
     f_nt = [  [ dd['fieldname'],dd['datatype']+' %s'] for  dd in table_d['fields']] + [ [e+'_Id','INT %s'] for e in table_d['enumerations']]+ [['Other'+e,'TEXT %s'] for e in table_d['enumerations']]+ [[dd['fieldname'],'INT %s'] for dd in table_d['other_element_refs']]    # name-type pairs for each field
-    
     ### remove any fields missing from the value_d parameter
     good_f_nt = [x for x in f_nt if x[0] in value_d.keys()]
     
@@ -66,7 +66,7 @@ def upsert(schema,table,table_d,value_d,con,cur):
     if len(a) == 0:
         bb = 1/0 # ***
         return("Error: nothing selected or inserted")
-    elif len(a) == 1:
+    elif len(a) == 1 or mode == 'dupes_ok':
         return(list(a[0]))
     else:
         bb = 1/0    # ***

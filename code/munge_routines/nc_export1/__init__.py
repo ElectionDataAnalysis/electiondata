@@ -211,14 +211,15 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
         selection = eval(nc_export1_d['BallotMeasureSelection'][0]['ExternalIdentifier'])
         # *** cond = nc_export1_d['BallotMeasureSelection']['ExternalIdentifier'] +' in ballot_measure_selections.keys()'
         if selection in ballot_measure_selections.keys() :     # if selection is a Ballot Measure selection, assume contest is a Ballot Measure
-           # fill BallotMeasureContest
+            ids_d['selection_id'] = ballot_measure_selections[selection]
+            # fill BallotMeasureContest
             value_d = {'Name':eval(nc_export1_d['BallotMeasureContest'][0]['ExternalIdentifier']),'ElectionDistrict_Id':state_id}  # all ballot measures are assumed to be state-level ***
             ids_d['contest_id'] = upsert(cdf_schema, 'BallotMeasureContest', tables_d['BallotMeasureContest'], value_d, con, cur)[0]
             # fill ElectionContestJoin
             value_d = {'Election_Id':election_id,'Contest_Id':ids_d['contest_id']}
             upsert(cdf_schema,'ElectionContestJoin', tables_d['ElectionContestJoin'], value_d, con, cur)
             # fill BallotMeasureContestSelectionJoin ***
-            value_d = {'BallotMeasureContest_Id':ids_d['contest_id'],'BallotMeasureSelection_Id':ballot_measure_selections[selection]}
+            value_d = {'BallotMeasureContest_Id':ids_d['contest_id'],'BallotMeasureSelection_Id':ids_d['selection_id']}
             upsert(cdf_schema, 'BallotMeasureContestSelectionJoin', tables_d['BallotMeasureContestSelectionJoin'], value_d, con, cur)
 
         else:       # if not a Ballot Measure (i.e., if a Candidate Contest)
@@ -251,10 +252,10 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
 
             # insert into CandidateSelection
             value_d = {'Candidate_Id':ids_d['Candidate_Id']}
-            ids_d['CandidateSelection_Id'] = upsert(cdf_schema,'CandidateSelection',tables_d['CandidateSelection'],value_d,con,cur)[0]
+            ids_d['selection_id'] = upsert(cdf_schema,'CandidateSelection',tables_d['CandidateSelection'],value_d,con,cur)[0]
 
             # create record in CandidateContestSelectionJoin
-            value_d = {'CandidateContest_Id':ids_d['contest_id'],'CandidateSelection_Id': ids_d['CandidateSelection_Id']}
+            value_d = {'CandidateContest_Id':ids_d['contest_id'],'CandidateSelection_Id': ids_d['selection_id']}
             upsert(cdf_schema, 'CandidateContestSelectionJoin', tables_d['CandidateContestSelectionJoin'], value_d, con, cur)
 
 
@@ -265,9 +266,11 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
 
         for ct,dic in nc_export1_counts_d.items():
             value_d = {'Count':eval(ct),'ReportingUnit_Id':ids_d['ReportingUnit_Id'],'CountItemType_Id': dic['CountItemType_Id'],'OtherCountItemType':dic['OtherCountItemType']}
-            # need to insert, not upsert! ***
-            upsert(cdf_schema, 'VoteCount', tables_d['VoteCount'], value_d, con, cur)
+            # *** dupes are a problem only when contest & reporting unit are specified.
+            ids_d['VoteCount_Id']=upsert(cdf_schema, 'VoteCount', tables_d['VoteCount'], value_d, con, cur,'dupes_ok')[0]
 
+            # fill SelectionReportingUnitVoteCountJoin
+            value_d = {'Selection_Id':ids_d['selection_id'],'Election_Id':ids_d['Election_Id'],'ReportingUnit_Id':ids_d['ReportingUnit_Id'],'VoteCount_Id':ids_d['VoteCount_Id']}
 
         con.commit()
         print(row)
