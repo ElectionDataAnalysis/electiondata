@@ -89,6 +89,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -320,10 +321,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="320" y="127" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1577390048459" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1577415975137">
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1577478369241">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1577415975137" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1577478369241" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1576878366930">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -372,10 +373,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1577414865900" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1577415981400">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1577478373547">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1577415981400" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1577478373547" />
     <state width="700" height="418" key="XDebugger.FullValuePopup" timestamp="1577415106095">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
