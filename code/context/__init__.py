@@ -7,14 +7,16 @@ import re
 import psycopg2
 from psycopg2 import sql
 from datetime import datetime
-from munge_routines import get_upsert_id, format_type_for_insert
+from munge_routines import upsert, format_type_for_insert
 
 def context_to_cdf(s,schema,con,cur):
-    ''' UNDER CONSTRUCTION: should take the info from the context_dictionary for the state s and insert it into the db. Returns a dictionary mapping context_dictionary keys to the database keys '''
+    ''' Takes the info from the context_dictionary for the state s and inserts it into the db. Returns a dictionary mapping context_dictionary keys to the database keys '''
     rs = [str(datetime.now())]
     out_d = {}
     with open('CDF_schema_def_info/tables.txt','r') as f:
         table_ds = eval(f.read())
+        
+
     for d in table_ds:      # iterating over tables in the common data format schema
         t = d['tablename']      # e.g., t = 'ReportingUnit'
         out_d[t] = {}
@@ -22,22 +24,25 @@ def context_to_cdf(s,schema,con,cur):
     ## load info into the tables corresponding directly to the context_dictionary keys
         if t in s.context_dictionary.keys():
             for name_key in s.context_dictionary[t]:   # e.g., name_key = 'North Carolina;Alamance County'
-                req_var_d = {'fieldname':'Name', 'datatype':'TEXT','value':name_key}
-                other_var_ds = []
+                ## insert the record into the db *** define req_var_d and other_var_ds from table_ds
+                if t == 'BallotMeasureSelection':
+                    value_d = {'Selection':name_key}
+                else:
+                    value_d = {'Name':name_key}
                 for f in d['fields']:
-                    if f['fieldname'] != 'Name' and f['fieldname'] in s.context_dictionary[t][name_key].keys():
-                        f['value'] = s.context_dictionary[t][name_key][ f['fieldname'] ]
-                        other_var_ds.append(f)
+                    if f['fieldname'] in s.context_dictionary[t][name_key].keys():
+                        value_d[f['fieldname']] = s.context_dictionary[t][name_key][ f['fieldname'] ]
                 for e in d['enumerations']:
                     if e in s.context_dictionary[t][name_key].keys():
                         [id,other_txt] = format_type_for_insert(schema,e, s.context_dictionary[t][name_key][e], con,cur)
-                        id_d = { 'fieldname':e+'_Id','datatype':'','value':id}
-                        other_var_ds.append(id_d)
-                        other_txt_d = {'fieldname':'Other'+e,'datatype':'TEXT','value':other_txt}
-                        other_var_ds.append(other_txt_d)
-                ## insert the record into the db *** define req_var_d and other_var_ds from table_ds
-                upsert_id = get_upsert_id(schema,t,req_var_d,other_var_ds,con,cur)[0]
+                        value_d[e+'_Id'] = id
+                        value_d['Other'+e] = other_txt
+                        
+                    
+                upsert_id = upsert(schema,t,d,value_d,con,cur)[0]
+                
                 out_d[t][name_key] = upsert_id
+                
                 
             ## load data into the ExternalIdentifier table
                 if 'ExternalIdentifiers' in s.context_dictionary[t][name_key].keys():
@@ -46,6 +51,22 @@ def context_to_cdf(s,schema,con,cur):
                         [id,other_txt] = format_type_for_insert(schema,'IdentifierType', external_id_key, con,cur)
                         q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s) ON CONFLICT DO NOTHING'   # will this cause errors to go unnoticed? ***
                         cur.execute(sql.SQL(q).format(sql.Identifier(schema)), [upsert_id, s.context_dictionary[t][name_key]['ExternalIdentifiers'][external_id_key],id,other_txt ])
+        if t == 'Office':
+            ## need to process 'Office' after 'ReportingUnit', as Offices may create ReportingUnits as election districts *** check for this
+
+            for name_key in s.context_dictionary[t]:
+                
+                tt = 'ReportingUnit'
+                if 'ElectionDistrictType' in s.context_dictionary['Office'][name_key].keys():
+                    [id,other_txt] = format_type_for_insert(schema,'ReportingUnitType', s.context_dictionary['Office'][name_key]['ElectionDistrictType'], con,cur)
+                else:
+                    bb = 1/0 # ***
+                value_d = {'Name':s.context_dictionary['Office'][name_key]['ElectionDistrict'],'ReportingUnitType_Id':id,'OtherReportingUnitType':other_txt}
+                dd = next( x for x in table_ds if x['tablename']=='ReportingUnit' )
+                upsert_id = upsert(schema,tt,dd,value_d,con,cur)[0]
+            
+            
+
     return(out_d)
 
 
@@ -74,6 +95,7 @@ def build_munger_d(s,m):
 
 
 def raw_to_context(df,m,munger_d,conn,cur):
+    ''' Purely diagnostic -- reports what items in the datafile are missing from the context_dictionary (e.g., offices we don't wish to analyze)'''
     rs = [str(datetime.now())]
     rs.append('\'Missing\' below means \'Existing in the datafile, but missing from the munger dictionary, created from the state\'s context_dictionary, which was created from files in the context folder.')
     for t in m.query_from_raw.keys():

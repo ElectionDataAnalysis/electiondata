@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be6a7995-5b42-42c1-a8ae-95254a80b4f3" name="Default Changelist" comment="Added files from dummy state XX">
+    <list default="true" id="be6a7995-5b42-42c1-a8ae-95254a80b4f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/NC/context/BallotMeasureSelection.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/context/BallotMeasureSelection.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/context/Election.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/context/Office.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/context/Party.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/context/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/context/ReportingUnit.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/context/aaa_state_and_county_fips.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/context/datafile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/context/main_reporting_unit_type.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/context/name.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/context/parser_string.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/context/remark.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/context/schema_name.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/context/type_map.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/data/mini.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/code/local_data/XX/meta/layout_absentee.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/code/local_data/XX/meta/layout_results_pct.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/code/local_data/XX/meta/mod_layout_results_pct.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/code/local_data/XX/meta/sfs_by_hand_layout_absentee.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/old_docker_README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/app.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/munge_routines/nc_export1/tablemap.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/CDF_schema_def_info/tables.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/CDF_schema_def_info/tables.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/context/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/context/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/db_routines/Create_CDF_db/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/db_routines/Create_CDF_db/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/db_routines/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/db_routines/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/local_data/NC/context/office.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/local_data/NC/context/office.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/munge_routines/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/munge_routines/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/munge_routines/nc_export1/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/munge_routines/nc_export1/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/states_and_files/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/states_and_files/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,55 +53,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="cdf2: schema" type="983ebcf7:PgImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="cdf2: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="xx: schema" type="983ebcf7:PgImplModel$Schema" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="Git.Settings">
@@ -95,11 +73,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/code/local_data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/code/local_data/XX" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/code/local_data/XX" />
       <recent name="$PROJECT_DIR$/code/local_data" />
       <recent name="$PROJECT_DIR$/code/local_data/NC/context" />
       <recent name="$PROJECT_DIR$/code" />
@@ -114,9 +93,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -163,22 +142,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:postgres@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:postgres@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@34faa19a" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:postgres@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@5d3ba390" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -202,6 +166,7 @@
       <workItem from="1577382267805" duration="6198000" />
       <workItem from="1577389516772" duration="11562000" />
       <workItem from="1577402510092" duration="12973000" />
+      <workItem from="1577478265468" duration="1133000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit in PyCharm">
       <created>1576871088931</created>
@@ -294,7 +259,21 @@
       <option name="project" value="LOCAL" />
       <updated>1577415975372</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="restore command_line_app.py">
+      <created>1577478369556</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1577478369556</updated>
+    </task>
+    <task id="LOCAL-00015" summary="restore command_line_app.py">
+      <created>1577478429543</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1577478429543</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,17 +293,22 @@
     <MESSAGE value="Start to fill VoteCount table" />
     <MESSAGE value="Fill VoteCount and associated Join tables" />
     <MESSAGE value="Added files from dummy state XX" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added files from dummy state XX" />
+    <MESSAGE value="restore command_line_app.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="restore command_line_app.py" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="127" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577390048459">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="320" y="127" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1577390048459" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1577478369241">
+    <state x="449" y="68" key="#command_line_app" timestamp="1577478663512">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1577478369241" />
+    <state x="449" y="68" key="#command_line_app/0.23.1440.877@0.23.1440.877" timestamp="1577478663512" />
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1577478429355">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1577478429355" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1576878366930">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -333,54 +317,66 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="0" y="59" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1577415966805" />
-    <state width="1358" height="217" key="GridCell.Tab.0.bottom" timestamp="1577416496595">
+    <state width="1358" height="240" key="GridCell.Tab.0.bottom" timestamp="1577478988453">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="217" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1577416496595" />
-    <state width="1358" height="217" key="GridCell.Tab.0.center" timestamp="1577416496594">
+    <state width="1358" height="240" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1577478988453" />
+    <state width="1358" height="240" key="GridCell.Tab.0.center" timestamp="1577478988450">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="217" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1577416496594" />
-    <state width="1358" height="217" key="GridCell.Tab.0.left" timestamp="1577416496594">
+    <state width="1358" height="240" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1577478988450" />
+    <state width="1358" height="240" key="GridCell.Tab.0.left" timestamp="1577478988449">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="217" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1577416496594" />
-    <state width="1358" height="217" key="GridCell.Tab.0.right" timestamp="1577416496594">
+    <state width="1358" height="240" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1577478988449" />
+    <state width="1358" height="240" key="GridCell.Tab.0.right" timestamp="1577478988451">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="217" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1577416496594" />
-    <state width="1358" height="240" key="GridCell.Tab.1.bottom" timestamp="1577416496592">
+    <state width="1358" height="240" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1577478988451" />
+    <state width="1358" height="240" key="GridCell.Tab.1.bottom" timestamp="1577478989359">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="240" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1577416496592" />
-    <state width="1358" height="240" key="GridCell.Tab.1.center" timestamp="1577416496591">
+    <state width="1358" height="240" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1577478989359" />
+    <state width="1358" height="240" key="GridCell.Tab.1.center" timestamp="1577478989358">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="240" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1577416496591" />
-    <state width="1358" height="240" key="GridCell.Tab.1.left" timestamp="1577416496591">
+    <state width="1358" height="240" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1577478989358" />
+    <state width="1358" height="240" key="GridCell.Tab.1.left" timestamp="1577478989358">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="240" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1577416496591" />
-    <state width="1358" height="240" key="GridCell.Tab.1.right" timestamp="1577416496591">
+    <state width="1358" height="240" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1577478989358" />
+    <state width="1358" height="240" key="GridCell.Tab.1.right" timestamp="1577478989359">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="240" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1577416496591" />
+    <state width="1358" height="240" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1577478989359" />
     <state width="234" height="457" key="HiddenNamespacesPopup" timestamp="1577404933430">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="234" height="457" key="HiddenNamespacesPopup/0.23.1440.877@0.23.1440.877" timestamp="1577404933430" />
+    <state x="453" y="170" key="MultipleFileMergeDialog" timestamp="1577478542818">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="453" y="170" key="MultipleFileMergeDialog/0.23.1440.877@0.23.1440.877" timestamp="1577478542818" />
+    <state x="374" y="175" key="RollbackChangesDialog" timestamp="1577479412304">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="374" y="175" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1577479412304" />
     <state x="229" y="100" key="SettingsEditor" timestamp="1577414865900">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1577414865900" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1577478373547">
+    <state x="140" y="129" width="1200" height="637" key="ShowDiffWithBranchDialog" timestamp="1577478664789">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1577478373547" />
-    <state width="700" height="418" key="XDebugger.FullValuePopup" timestamp="1577415106095">
+    <state x="140" y="129" width="1200" height="637" key="ShowDiffWithBranchDialog/0.23.1440.877@0.23.1440.877" timestamp="1577478664789" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1577478436311">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="700" height="418" key="XDebugger.FullValuePopup/0.23.1440.877@0.23.1440.877" timestamp="1577415106095" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1577478436311" />
+    <state width="700" height="418" key="XDebugger.FullValuePopup" timestamp="1577479034971">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="700" height="418" key="XDebugger.FullValuePopup/0.23.1440.877@0.23.1440.877" timestamp="1577479034971" />
     <state x="482" y="222" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1577025416883">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -397,6 +393,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="272" y="204" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.877@0.23.1440.877" timestamp="1577063376041" />
+    <state x="360" y="245" key="git4idea.merge.GitMergeDialog" timestamp="1577479453541">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="360" y="245" key="git4idea.merge.GitMergeDialog/0.23.1440.877@0.23.1440.877" timestamp="1577479453541" />
+    <state x="393" y="318" key="git4idea.rebase.GitRebaseDialog" timestamp="1577479361160">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="393" y="318" key="git4idea.rebase.GitRebaseDialog/0.23.1440.877@0.23.1440.877" timestamp="1577479361160" />
     <state x="385" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1577415876345">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -419,7 +423,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/results_analysis$command_line_app.coverage" NAME="command_line_app Coverage Results" MODIFIED="1577415277436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/results_analysis$command_line_app.coverage" NAME="command_line_app Coverage Results" MODIFIED="1577478988280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
     <SUITE FILE_PATH="coverage/results_analysis$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1576981756557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
   </component>
 </project>

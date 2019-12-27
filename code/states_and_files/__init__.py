@@ -20,10 +20,6 @@ class State:
         self.main_reporting_unit_type=main_reporting_unit_type  # *** is this used?
         self.type_map = type_map
         self.context_dictionary=context_dictionary
-        #self.reporting_units=reporting_units  # dictionary, with external codes
-        #self.elections=elections
-        #self.parties=parties
-        #self.offices=offices
 
     
 class Datafile:
@@ -48,19 +44,6 @@ class Munger:
         self.query_from_raw= query_from_raw    # dictionary of queries of the db of raw data; each querymust have exactly two slots for state.schema and datafile.table_name
 
 
-        
-
-# steps to extract info from df and put it into db
-import munge_routines as mr
-def raw_to_cdf(df,m,conn,cur):
-    rs = []     #strings to return for display on web page
-
-    return('</p><p>'.join(rs))
-###### create records in cdf.CandidateContest and cdf.BallotMeasureContest, with joins
-###### create records in cdf.CandidateSelection and cdf.BallotMeasureSelection, with joins
-###### create records in cdf.VoteCount, with joins
-
-
 
 ## Initialize classes
 def create_munger(file_path):   # file should contain all munger info in a dictionary
@@ -71,7 +54,7 @@ def create_munger(file_path):   # file should contain all munger info in a dicti
 def create_state(abbr,path_to_state_dir):
     '''abbr is the capitalized two-letter postal code for the state, district or territory'''
     string_attributes = ['name','schema_name','parser_string','main_reporting_unit_type']
-    context_d_keys = ['ReportingUnit','Election','Party','Office']    # what consistency checks do we need?
+    context_d_keys = ['ReportingUnit','Election','Party','Office','BallotMeasureSelection']    # what consistency checks do we need?
     if path_to_state_dir[-1] != '/':
         path_to_state_dir += '/'
     if not os.path.isdir(path_to_state_dir):
@@ -113,7 +96,7 @@ def create_datafile(s,election,data_file_name,munger):
 ########################################
 
 def external_identifiers_to_cdf(id,d,conn,cur):
-    ''' id is a primary key for an object in the database; d is a dictionary of external identifiers for that object (e.g., {'fips':'3700000000','nc_export1':'North Carolina'}); cur is a cursor on the db. The function alters the table cdf.externalidentifier appropriately. '''
+    """ id is a primary key for an object in the database; d is a dictionary of external identifiers for that object (e.g., {'fips':'3700000000','nc_export1':'North Carolina'}); cur is a cursor on the db. The function alters the table cdf.externalidentifier appropriately. """
     for kk in d:
         cur.execute('SELECT id FROM cdf.identifiertype WHERE text = %s',[kk])
         a=cur.fetchone()

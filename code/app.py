@@ -1,6 +1,6 @@
 #!usr/bin/python3
 
-########## next four lines are necessary to install numpy and pandas packages for some reason...
+### next four lines are necessary to install numpy and pandas packages for some reason...
 import os
 os.system("pip install --upgrade pip")
 os.system("pip install pandas")
@@ -277,11 +277,12 @@ def analyze():
 
 #### diagnostic below *** can delete
 
-from munge_routines import get_upsert_id, format_type_for_insert
+from munge_routines import  format_type_for_insert
 
 @app.route('/test')
 def gui():
     from munge_routines import nc_export1
+    from munge_routines import upsert
     rs=[str(datetime.now())]
     con = establish_connection()
     cur = con.cursor()
@@ -292,10 +293,11 @@ def gui():
         # instantiate the NC pct_result datafile
     df = sf.create_datafile(s,'General Election 2018-11-06','results_pct_20181106.txt',m)
 
-    context_to_db_d = context.context_to_cdf(s,'cdf2',con,cur)  # {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
-    con.commit()
-
-    rs.append(nc_export1.raw_to_cdf(df,'cdf2',con,cur,context_to_db_d))
+    nc_export1.raw_records_to_cdf(df,'cdf2',con,cur)
+    #context_to_db_d = context.context_to_cdf(s,'cdf2',con,cur)  # {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
+    #con.commit()
+       
+    rs.append(nc_export1.raw_to_cdf(df,'cdf2',con,cur))
 
 
     if cur:
@@ -304,3 +306,5 @@ def gui():
         con.close()
     return("<p>"+"</p><p>  ".join(rs))
 
+if __name__ == '__main__':
+    gui()
