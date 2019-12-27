@@ -73,66 +73,53 @@ def create_schema(s):
     if con:
         con.close()
 
-def raw_data():
-# initialize rs for logging
-    print(str(datetime.now()))
-#    tables = [['results_pct','utf8'],['absentee','utf16']] # varies by state *** name and encoding of metadata file
-        # note: 'absentee' needs better data cleaning
-#    fmeta = {'results_pct':'layout_results_pct.txt','absentee':'sfs_by_hand_layout_absentee.txt'}  # name of metadata file; varies by state ***
-#    fdata = {'results_pct':'results_pct_20181106.txt','absentee':'absentee_20181106.csv'} # name of data file, varies by state and election ***
-# set global log file
-    now=datetime.now()
-    now_str=now.strftime('%Y%b%d%H%M')
-    logfilepath = 'local_logs/hello'+now_str+'.log'
-    with open(logfilepath,'a') as sys.stdout:
+def raw_data(s,datafileinfo):
+    """ datafileinfo is a list of eleciton-file pairs, e.g., [['General Election 2018-11-06','results_pct_20181106.txt']]
+    """
 
-    # instantiate state of NC
-        s = sf.create_state('NC','local_data/NC')
-    # instantiate the NC datafiles
-        datafiles = [sf.create_datafile(s,'General Election 2018-11-06','results_pct_20181106.txt',{}), sf.create_datafile(s,'General Election 2018-11-06','absentee_20181106.csv',{})]
+   # instantiate the datafiles
+    datafiles = [ sf.create_datafile(s,*x,{}) for x in datafileinfo]
 
     # create the schema for the state
-        create_schema(s)
+    create_schema(s)
 
     # connect to the state schema
-        rs.append('Connect to database')
-        con = establish_conection()
-        cur = con.cursor()
-        
-        for df in datafiles:
-            t = df.table_name   # name of table
-            e = df.metafile_encoding
-            fpath = 'local_data/NC/meta/'+df.metafile_name   # this path is outside the docker container.
-            check_args(s,fpath,t)   # checking s is redundant
-        
+    print('Connect to database')
+    con = establish_connection()
+    cur = con.cursor()
+
+    for df in datafiles:
+        t = df.table_name   # name of table
+        e = df.metafile_encoding
+        fpath = s.path_to_state_dir + 'meta/'+df.metafile_name   # this path is outside the docker container.
+        check_args(s,fpath,t)   # checking s is redundant
+
         # clean the metadata file
-            fpath = cl.extract_first_col_defs(fpath,'local_data/tmp/',e)
+        fpath = cl.extract_first_col_defs(fpath,'local_data/tmp/',e)
 
         # create table and commit
- 
-            cur.execute(sql.SQL('DROP TABLE IF EXISTS {}.{}').format(sql.Identifier(s.schema_name),sql.Identifier(t)))
-            [query,strs,sql_ids] = dbr.create_table(df)
-            format_args = [sql.Identifier(x) for x in sql_ids]
-            cur.execute(sql.SQL(query).format( *format_args ),strs)
-            diagnostic = sql.SQL(query).format( *format_args ).as_string(con)
-            con.commit()
+
+        cur.execute(sql.SQL('DROP TABLE IF EXISTS {}.{}').format(sql.Identifier(s.schema_name),sql.Identifier(t)))
+        [query,strs,sql_ids] = dbr.create_table(df)
+        format_args = [sql.Identifier(x) for x in sql_ids]
+        cur.execute(sql.SQL(query).format( *format_args ),strs)
+        con.commit()
 
         # correct any errors due to foibles of particular datafile and commit
-            for query in df.correction_query_list:
-                cur.execute(sql.SQL(query).format(sql.Identifier(s.schema_name), sql.Identifier(df.table_name)))
-                print(query)
-                con.commit()
+        for query in df.correction_query_list:
+            cur.execute(sql.SQL(query).format(sql.Identifier(s.schema_name), sql.Identifier(df.table_name)))
+            print(query)
+            con.commit()
 
     # load data into tables
-            dbr.load_data(con,cur,s,df)
-            rs.append('Data from file '+df.file_name+' loaded into table '+s.schema_name+'.'+df.table_name)
-    
+        dbr.load_data(con,cur,s,df)
+
     # close connection
-        if cur:
-            cur.close()
-        if con:
-            con.close()
-        return("<p>"+"</p><p>  ".join(rs))
+    if cur:
+        cur.close()
+    if con:
+        con.close()
+    return
         
         
 def file_to_context():
@@ -217,7 +204,6 @@ from munge_routines import  format_type_for_insert
 def gui():
     from munge_routines import nc_export1
     from munge_routines import upsert
-    rs=[str(datetime.now())]
     con = establish_connection()
     cur = con.cursor()
     # instantiate state of NC
@@ -240,7 +226,7 @@ def gui():
 
     # load data from df to CDF schema (assumes already loaded to schema s.schema_name)
     print('Loading data from df to CDF schema')
-    nc_export1.rtcdf(df,'cdf2',con,cur)
+    nc_export1.raw_records_to_cdf(df,'cdf2',con,cur)
     print('Done!')
 
 
@@ -252,4 +238,32 @@ def gui():
     return("<p>"+"</p><p>  ".join(rs))
 
 if __name__ == '__main__':
-    gui()
+
+    s = sf.create_state('XX','local_data/XX/')
+    raw_data(s, [['General Election 2018-11-06', 'mini.txt']])
+
+    from munge_routines import nc_export1
+    from munge_routines import upsert
+
+    con = establish_connection()
+    cur = con.cursor()
+    # instantiate state of XX
+    print('Creating munger instance')
+    m = sf.create_munger('local_data/mungers/nc_export1.txt')
+    # instantiate the NC pct_result datafile
+
+    # create cdf schema
+    print('Creating CDF schema')
+    CDF.create_common_data_format_schema(con, cur, 'cdf2')
+    # load state context info into cdf schema
+    print('Loading state context info into CDF schema') # *** takes a long time; why?
+    context.context_to_cdf(s,'cdf2',con,cur)
+    con.commit()
+
+    print('Creating datafile instance')
+    df = sf.create_datafile(s,'General Election 2018-11-06','mini.txt',m)
+
+    # load data from df to CDF schema (assumes already loaded to schema s.schema_name)
+    print('Loading data from df to CDF schema')
+    nc_export1.raw_records_to_cdf(df,'cdf2',con,cur)
+    print('Done!')

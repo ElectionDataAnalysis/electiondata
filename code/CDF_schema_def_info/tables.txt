@@ -63,9 +63,9 @@
 			'not_null_fields':['BallotName']
                     },
                  {'tablename':'VoteCount',
-                      'fields':[{'fieldname':'Count','datatype':'NUMERIC'}],
+                      'fields':[{'fieldname':'Count','datatype':'INTEGER'}],
                       'enumerations':['CountItemType'],
-                      'other_element_refs':[],
+                      'other_element_refs':[{'fieldname':'ReportingUnit_Id','refers_to':'ReportingUnit'}],
                       'unique_constraints':[], 
 		     'not_null_fields':['Count']
                 },
@@ -75,6 +75,13 @@
                       'other_element_refs':[{'fieldname':'Candidate_Id', 'refers_to':'Candidate'}],
                       'unique_constraints':[['Candidate_Id']], 
 		     'not_null_fields':[]
+                },
+                {'tablename':'ElectionContestJoin',
+                      'fields':[{'fieldname':'Contest_Id','datatype':'INTEGER'}],
+                      'enumerations':[],
+                      'other_element_refs':[{'fieldname':'Election_Id', 'refers_to':'Election'}],
+                      'unique_constraints':[['Contest_Id','Election_Id']],
+		     'not_null_fields':['Contest_Id','Election_Id']
                 },
                 {'tablename':'BallotMeasureContestSelectionJoin',
                       'fields':[],
