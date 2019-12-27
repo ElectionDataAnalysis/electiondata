@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="be6a7995-5b42-42c1-a8ae-95254a80b4f3" name="Default Changelist" comment="Added files from dummy state XX">
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/meta/layout_absentee.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/meta/layout_results_pct.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/meta/mod_layout_results_pct.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/local_data/XX/meta/sfs_by_hand_layout_absentee.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/old_docker_README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/db_routines/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/db_routines/__init__.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="cdf2: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="cdf2: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="xx: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1VGDuhvTZIQPb19fhUCfTYEgHaf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/code/local_data" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/code/local_data" />
+      <recent name="$PROJECT_DIR$/code/local_data/NC/context" />
+      <recent name="$PROJECT_DIR$/code" />
+      <recent name="$PROJECT_DIR$/code/munge_routines/nc_export1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.command_line_app">
+    <configuration name="command_line_app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="results_analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/command_line_app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="results_analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.command_line_app" />
+        <item itemvalue="Python.scratch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:postgres@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:postgres@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@34faa19a" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:postgres@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@5d3ba390" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be6a7995-5b42-42c1-a8ae-95254a80b4f3" name="Default Changelist" comment="" />
+      <created>1576870762192</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576870762192</updated>
+      <workItem from="1576870764867" duration="14651000" />
+      <workItem from="1576977059722" duration="23770000" />
+      <workItem from="1577042090358" duration="5008000" />
+      <workItem from="1577059514650" duration="5074000" />
+      <workItem from="1577382267805" duration="6198000" />
+      <workItem from="1577389516772" duration="11562000" />
+      <workItem from="1577402510092" duration="12973000" />
+    </task>
+    <task id="LOCAL-00001" summary="Test commit in PyCharm">
+      <created>1576871088931</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576871088931</updated>
+    </task>
+    <task id="LOCAL-00002" summary="In progress: create munger-agnostic version of raw_to_cdf">
+      <created>1576880510886</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576880510886</updated>
+    </task>
+    <task id="LOCAL-00003" summary="In progress: still! create munger-agnostic version of raw_to_cdf">
+      <created>1576891370001</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576891370001</updated>
+    </task>
+    <task id="LOCAL-00004" summary="In progress: rtcdf runs on reference-free tables">
+      <created>1577027977871</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577027977871</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add more tables">
+      <created>1577038135096</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577038135096</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Insert CandidateContest and BallotMeasureContests with correct ElectionDistrict_Id">
+      <created>1577046221040</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1577046221040</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Plan next steps">
+      <created>1577328883942</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1577328883942</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Insert all contests without runtime error">
+      <created>1577387365648</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1577387365648</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Cleanup">
+      <created>1577387979648</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1577387979648</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Start to fill VoteCount table">
+      <created>1577413072943</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1577413072943</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fill VoteCount and associated Join tables">
+      <created>1577415790306</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1577415790306</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added files from dummy state XX">
+      <created>1577415950394</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1577415950394</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added files from dummy state XX">
+      <created>1577415975372</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1577415975372</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
+    <MESSAGE value="Test commit in PyCharm" />
+    <MESSAGE value="In progress: create munger-agnostic version of raw_to_cdf" />
+    <MESSAGE value="In progress: still! create munger-agnostic version of raw_to_cdf" />
+    <MESSAGE value="In progress: rtcdf runs on reference-free tables" />
+    <MESSAGE value="Add more tables" />
+    <MESSAGE value="Insert CandidateContest and BallotMeasureContests with correct ElectionDistrict_Id" />
+    <MESSAGE value="Plan next steps" />
+    <MESSAGE value="Insert all contests without runtime error" />
+    <MESSAGE value="Cleanup" />
+    <MESSAGE value="Start to fill VoteCount table" />
+    <MESSAGE value="Fill VoteCount and associated Join tables" />
+    <MESSAGE value="Added files from dummy state XX" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added files from dummy state XX" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="127" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577390048459">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="127" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1577390048459" />
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1577415975137">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1577415975137" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1576878366930">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="254" height="195" key="DatabaseViewActions_Filter/0.23.1440.877@0.23.1440.877" timestamp="1576878366930" />
+    <state x="0" y="59" key="DiffContextDialog" timestamp="1577415966805">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="0" y="59" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1577415966805" />
+    <state width="1358" height="217" key="GridCell.Tab.0.bottom" timestamp="1577416496595">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1358" height="217" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1577416496595" />
+    <state width="1358" height="217" key="GridCell.Tab.0.center" timestamp="1577416496594">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1358" height="217" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1577416496594" />
+    <state width="1358" height="217" key="GridCell.Tab.0.left" timestamp="1577416496594">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1358" height="217" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1577416496594" />
+    <state width="1358" height="217" key="GridCell.Tab.0.right" timestamp="1577416496594">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1358" height="217" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1577416496594" />
+    <state width="1358" height="240" key="GridCell.Tab.1.bottom" timestamp="1577416496592">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1358" height="240" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1577416496592" />
+    <state width="1358" height="240" key="GridCell.Tab.1.center" timestamp="1577416496591">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1358" height="240" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1577416496591" />
+    <state width="1358" height="240" key="GridCell.Tab.1.left" timestamp="1577416496591">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1358" height="240" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1577416496591" />
+    <state width="1358" height="240" key="GridCell.Tab.1.right" timestamp="1577416496591">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1358" height="240" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1577416496591" />
+    <state width="234" height="457" key="HiddenNamespacesPopup" timestamp="1577404933430">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="234" height="457" key="HiddenNamespacesPopup/0.23.1440.877@0.23.1440.877" timestamp="1577404933430" />
+    <state x="229" y="100" key="SettingsEditor" timestamp="1577414865900">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1577414865900" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1577415981400">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1577415981400" />
+    <state width="700" height="418" key="XDebugger.FullValuePopup" timestamp="1577415106095">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="700" height="418" key="XDebugger.FullValuePopup/0.23.1440.877@0.23.1440.877" timestamp="1577415106095" />
+    <state x="482" y="222" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1577025416883">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="482" y="222" key="com.intellij.database.run.ParametersPanel.Standalone/0.23.1440.877@0.23.1440.877" timestamp="1577025416883" />
+    <state x="398" y="173" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1577043724279">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="398" y="173" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.23.1440.877@0.23.1440.877" timestamp="1577043724279" />
+    <state x="399" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1577402536437">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="399" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1577402536437" />
+    <state x="272" y="204" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1577063376041">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="272" y="204" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.877@0.23.1440.877" timestamp="1577063376041" />
+    <state x="385" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1577415876345">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1577415876345" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="contest_name" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/results_analysis$command_line_app.coverage" NAME="command_line_app Coverage Results" MODIFIED="1577415277436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/results_analysis$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1576981756557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+  </component>
+</project>
