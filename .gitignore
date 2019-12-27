@@ -15,3 +15,5 @@ code/query_create/__pycache__/__init__.cpython-37.pyc
 code/db_routines/__pycache__/__init__.cpython-37.pyc
 code/munge_routines/__pycache__/__init__.cpython-37.pyc
 code/context/__pycache__/__init__.cpython-37.pyc
+.idea/workspace.xml
+.idea/usage.statistics.xml
