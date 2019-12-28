@@ -1,0 +1,12 @@
+absentee
+absentee-fwab
+absentee-in-person
+absentee-mail
+early
+election-day
+provisional
+seats
+total
+uocava
+write-in
+other

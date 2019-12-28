@@ -2,7 +2,7 @@
 # db_routines/__init__.py
 # under construction
 # Creates a table with columns specified in arg3 file, assuming format from state arg1.
-# arg 1: a two-letter state code
+# arg 1: a two-letter state election_anomaly
 # arg 2: table_name
 # arg 3: (a path to) a file containing metadata from that state
 
@@ -107,7 +107,7 @@ def load_data(conn,cursor,state,df):      ## does this belong in app.py? *** mig
 def clean_meta_file(infile,outdir,s):       ## update or remove ***
     ''' create in outdir a metadata file based on infile, with all unnecessaries stripped, for the given state'''
     if s.abbreviation == 'NC':
-        return("hello") # need to code this *** 
+        return("hello") # need to election_anomaly this ***
     else:
         return("clean_meta_file: error, state not recognized")
         sys.exit()

@@ -52,7 +52,7 @@ def create_munger(file_path):   # file should contain all munger info in a dicti
     return(Munger(d['name'],d['query_from_raw']))
 
 def create_state(abbr,path_to_state_dir):
-    '''abbr is the capitalized two-letter postal code for the state, district or territory'''
+    '''abbr is the capitalized two-letter postal election_anomaly for the state, district or territory'''
     string_attributes = ['name','schema_name','parser_string','main_reporting_unit_type']
     context_d_keys = ['ReportingUnit','Election','Party','Office','BallotMeasureSelection']    # what consistency checks do we need?
     if path_to_state_dir[-1] != '/':

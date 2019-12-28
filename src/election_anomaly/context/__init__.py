@@ -227,7 +227,7 @@ def process(nc_pct_results_file_path,dict_file_path,outfile):
         f.write(str(d))
 
 
-## temporary code to fix nc_export1 reporting unit ExternalIdentifiers
+## temporary election_anomaly to fix nc_export1 reporting unit ExternalIdentifiers
 
 def fix(fp):        # fp is the path to the reporting_unit.txt file
     with open(fp,'r') as f:

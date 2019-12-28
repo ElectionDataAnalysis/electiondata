@@ -200,7 +200,7 @@ def load_cdf():
     cur = con.cursor()
 
     rs.append('Load information from context dictionary for '+s.name)
-    #ids = sf.context_to_cdf(s,conn,cur,rs)  # *** find better code, maybe in context module?
+    #ids = sf.context_to_cdf(s,conn,cur,rs)  # *** find better election_anomaly, maybe in context module?
     #rs.append('ids are '+str(ids))
     context_to_db_d = context.context_to_cdf(s,'cdf2',con,cur)  # {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
     con.commit()
@@ -227,7 +227,7 @@ def analyze():
     conn = establish_connection()
     cur = conn.cursor()
     
-# hard code table for now *** need to modify build() to track source file, separate build() and load()
+# hard election_anomaly table for now *** need to modify build() to track source file, separate build() and load()
     table_name = 'results_pct'
     contest_field = 'contest_name'
     county_field = 'county'
