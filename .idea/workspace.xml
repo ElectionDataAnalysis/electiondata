@@ -1,70 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be6a7995-5b42-42c1-a8ae-95254a80b4f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="be6a7995-5b42-42c1-a8ae-95254a80b4f3" name="Default Changelist" comment="run python3 setup.py sdist">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/.dockerignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/CDF_schema_def_info/enumerations/CountItemStatus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/CDF_schema_def_info/enumerations/CountItemStatus.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/CDF_schema_def_info/enumerations/CountItemType.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/CDF_schema_def_info/enumerations/CountItemType.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/CDF_schema_def_info/enumerations/ElectionType.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/CDF_schema_def_info/enumerations/ElectionType.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/CDF_schema_def_info/enumerations/IdentifierType.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/CDF_schema_def_info/enumerations/IdentifierType.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/CDF_schema_def_info/enumerations/ReportingUnitType.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/CDF_schema_def_info/enumerations/ReportingUnitType.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/CDF_schema_def_info/tables.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/CDF_schema_def_info/tables.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/clean/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/clean/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/command_line_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/context/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/context/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/db_routines/Create_CDF_db/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/db_routines/Create_CDF_db/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/db_routines/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/db_routines/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/context/BallotMeasureSelection.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/context/BallotMeasureSelection.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/context/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/context/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/context/aaa_state_and_county_fips.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/context/aaa_state_and_county_fips.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/context/datafile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/context/datafile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/context/election.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/context/election.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/context/main_reporting_unit_type.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/context/main_reporting_unit_type.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/context/name.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/context/name.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/context/office.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/context/office.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/context/parser_string.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/context/parser_string.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/context/party.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/context/party.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/context/remark.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/context/remark.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/context/reportingunit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/context/reportingunit.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/context/schema_name.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/context/schema_name.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/context/type_map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/context/type_map.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/meta/layout_absentee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/meta/layout_absentee.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/meta/layout_results_pct.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/meta/layout_results_pct.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/meta/mod_layout_results_pct.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/meta/mod_layout_results_pct.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/meta/sfs_by_hand_layout_absentee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/meta/sfs_by_hand_layout_absentee.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/tmp/first_col_defs_layout_results_pct.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/meta/mod_layout_results_pct.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/NC/tmp/first_col_defs_sfs_by_hand_layout_absentee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/tmp/first_col_defs_sfs_by_hand_layout_absentee.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/context/BallotMeasureSelection.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/context/BallotMeasureSelection.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/context/Election.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/context/Election.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/context/Office.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/context/Office.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/context/Party.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/context/Party.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/context/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/context/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/context/ReportingUnit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/context/ReportingUnit.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/context/aaa_state_and_county_fips.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/context/aaa_state_and_county_fips.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/context/datafile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/context/datafile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/context/main_reporting_unit_type.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/context/main_reporting_unit_type.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/context/name.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/context/name.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/context/parser_string.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/context/parser_string.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/context/remark.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/context/remark.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/context/schema_name.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/context/schema_name.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/context/type_map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/context/type_map.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/data/mini.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/data/mini.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/meta/layout_absentee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/meta/layout_absentee.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/meta/layout_results_pct.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/meta/layout_results_pct.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/meta/mod_layout_results_pct.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/tmp/first_col_defs_layout_results_pct.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/meta/sfs_by_hand_layout_absentee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/XX/meta/sfs_by_hand_layout_absentee.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/XX/tmp/first_col_defs_layout_results_pct.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/NC/tmp/first_col_defs_layout_results_pct.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/local_data/mungers/nc_export1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/local_data/mungers/nc_export1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/munge_routines/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/munge_routines/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/munge_routines/nc_export1/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/munge_routines/nc_export1/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/munge_routines/nc_export1/tablemap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/munge_routines/nc_export1/tablemap.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/states_and_files/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/election_anomaly/states_and_files/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElectionAnomalyDetection.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ElectionAnomalyDetection.egg-info/SOURCES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElectionAnomalyDetection.egg-info/top_level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ElectionAnomalyDetection.egg-info/top_level.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/ElectionAnomalyDetection-0.1.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dist/ElectionAnomalyDetection-0.1.tar.gz" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -365,7 +306,21 @@
       <option name="project" value="LOCAL" />
       <updated>1577496338017</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="rename code to election_anomaly">
+      <created>1577496543826</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1577496543826</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add empty __init__.py to src file, not sure why (appeared in pycharm refactor)">
+      <created>1577496629251</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1577496629251</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +355,9 @@
     <MESSAGE value="Revert &quot;add src directory&quot;&#10;&#10;This reverts commit 1177d56372a1af4e7e272a1e04b116ea9c729c02." />
     <MESSAGE value="add src directory in the right place" />
     <MESSAGE value="move code into src folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="move code into src folder" />
+    <MESSAGE value="rename code to election_anomaly" />
+    <MESSAGE value="add empty __init__.py to src file, not sure why (appeared in pycharm refactor)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add empty __init__.py to src file, not sure why (appeared in pycharm refactor)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="127" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577482343411">
@@ -411,18 +368,18 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="449" y="68" key="#command_line_app/0.23.1440.877@0.23.1440.877" timestamp="1577478663512" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1577496543575">
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1577496996550">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1577496543575" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1577496996550" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1576878366930">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.23.1440.877@0.23.1440.877" timestamp="1576878366930" />
-    <state x="0" y="59" key="DiffContextDialog" timestamp="1577415966805">
+    <state x="0" y="59" width="1152" height="701" key="DiffContextDialog" timestamp="1577496896558">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="0" y="59" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1577415966805" />
+    <state x="0" y="59" width="1152" height="701" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1577496896558" />
     <state width="930" height="212" key="GridCell.Tab.0.bottom" timestamp="1577482425474">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
