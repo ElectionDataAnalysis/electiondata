@@ -74,7 +74,7 @@ def create_schema(s):
         con.close()
 
 def raw_data(df,con,cur):
-    """ Loads the raw data from the df into the schema for the associated state
+    """ Loads the raw data from the df into the schema for the associated state *** needs work, including redesign of df class
     """
 
     s = df.state
@@ -123,14 +123,15 @@ def file_to_context(s,df,m,con,cur):
     print(str(a))
     return
 
-def load_cdf(s,schema_name,con,cur):
+def load_cdf(s,cdf_schema_name,con,cur):
     print('Load information from context dictionary for '+s.name)
-    context_to_db_d = context.context_to_cdf(s,schema_name,con,cur)  # {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
+    context_to_db_d = context.context_to_cdf(s,cdf_schema_name,con,cur)  # {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
     con.commit()
 
-    ## load data from state raw schema
-    print('NOT YET CODED: Load info from records in schema '+s.schema_name+' into CDF schema')
-    ## *** to do
+    # load data from df's table in state's schema to CDF schema. Note: data from df must already be loaded into df's state's raw-data schema.
+    print('Loading data from df to CDF schema')
+    nc_export1.raw_records_to_cdf(df,cdf_schema_name,con,cur)
+    print('Done!')
     return
 
 
@@ -139,7 +140,7 @@ def load_cdf(s,schema_name,con,cur):
 
 from munge_routines import  format_type_for_insert
 
-def gui(state_abbr,path_to_state_dir,cdf_schema_name,munger_path,df_election,df_name):
+def full_process(state_abbr,path_to_state_dir,cdf_schema_name,munger_path,df_election,df_name):
     """ state_abbr: e.g., 'NC'. path_to_state_dir: e.g., 'local_data/NC'
     munger_path: e.g., 'local_data/mungers/nc_export1.txt'
     df_election: e.g. 'General Election 2018-11-06','results_pct_20181106.txt',
