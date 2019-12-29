@@ -8,14 +8,13 @@ import psycopg2
 from psycopg2 import sql
 
 class State:
-    def __init__(self,abbr,name,schema_name,path_to_state_dir,main_reporting_unit_type,context_dictionary):        # reporting_units,elections,parties,offices):
+    def __init__(self,abbr,name,schema_name,path_to_state_dir,context_dictionary):        # reporting_units,elections,parties,offices):
         self.abbr = abbr
         self.name = name
         self.schema_name=schema_name
         if path_to_state_dir[-1] != '/':     # should end in /
             path_to_state_dir += '/'
         self.path_to_state_dir=path_to_state_dir    #  include 'NC' in path.
-        self.main_reporting_unit_type=main_reporting_unit_type  # *** is this used?
         self.context_dictionary=context_dictionary
 
 class Munger:
@@ -34,13 +33,15 @@ class FileFromState:
         self.note=note
 
 class Metafile(FileFromState):
-    def __init__(self,metadata_extraction_parser,type_map,meta_parser):
-        self.column_metadata_extraction_parser=metadata_extraction_parser      # regex for extracting the meaningful rows and ignoring other rows
-        self.type_map = type_map
-        self.meta_parser=meta_parser
+    def __init__(self,state,file_name,encoding,source_url,file_date,download_date,note,column_block_parser,type_map,line_parser):
+        FileFromState.__init__(self,state,file_name,encoding,source_url,file_date,download_date,note)
+        self.column_block_parser=column_block_parser      # regex for extracting the meaningful rows and ignoring other rows
+        self.type_map = type_map    # maps field types from metafile to postgresql field types
+        self.line_parser=line_parser
 
 class Datafile(FileFromState):
-    def __init__(self,election, table_name, munger,correction_query_list,metafile,column_metadata):
+    def __init__(self,state,file_name,encoding,source_url,file_date,download_date,note,election, table_name, munger,correction_query_list,metafile,column_metadata=[]):
+        FileFromState.__init__(self,state,file_name,encoding,source_url,file_date,download_date,note)
         self.election=election
         self.table_name=table_name
         self.munger=munger
@@ -48,70 +49,21 @@ class Datafile(FileFromState):
         self.metafile=metafile
         self.column_metadata=column_metadata    # list of triples [column_name, postgres datatype, text description]. Order should match order of columns in original file
 
-    def update_column_metadata_from_metafile(self):
-        """ under construction
-        """
-        if self.column_metadata:
-            print('Warning: overwriting existing column_metadata:\n'+ str(self.column_metadata))
-        column_metadata_block = extract_column_metadata_block(self.metafile) #  list
-        self.column_metadata = []
-        for col_line in column_metadata_block:
-            self.column_metadata.append(parse_line(self.metafile,col_line))
-        return
+def extract_column_metadata_block(mf):
+    """ mf is a metafile; """
+    p = re.compile(mf.column_block_parser)
 
-## Initialize classes # *** fix to reflect changes in class definitions
-def create_munger(file_path):   # file should contain all munger info in a dictionary
-    with open(file_path,'r') as f:
-        d = eval(f.read())
-    return(Munger(d['name'],d['query_from_raw']))
+    metadata_file_text = cl.get_text_from_file(mf.state.path_to_state_dir + 'meta/' + mf.file_name,
+                                               self.metafile.encoding)
 
-def create_state(abbr,path_to_state_dir):
-    '''abbr is the capitalized two-letter postal election_anomaly for the state, district or territory'''
-    string_attributes = ['name','schema_name','parser_string','main_reporting_unit_type']
-    context_d_keys = ['ReportingUnit','Election','Party','Office','BallotMeasureSelection']    # what consistency checks do we need?
-    if path_to_state_dir[-1] != '/':
-        path_to_state_dir += '/'
-    if not os.path.isdir(path_to_state_dir):
-        return('Error: No directory '+path_to_state_dir)
-        sys.exit()
-    for attr in string_attributes + context_d_keys:
-        if not os.path.isfile(path_to_state_dir+'context/'+attr+'.txt'):
-            return('Error: No file '+path_to_state_dir+'context/'+attr+'.txt')
-            sys.exit()
-    with open(path_to_state_dir+'context/type_map.txt') as f:
-        type_map= eval(f.read().strip())
-    string_d = {} # dictionary to hold string attributes
-    for attr in string_attributes:     # strings
-        with open(path_to_state_dir+'context/'+attr+'.txt') as f:
-            string_d[attr]=f.readline().strip()
-    meta_p=re.compile(string_d['parser_string'])
-    context_d = {}
-    for attr in context_d_keys:     # python objects
-        with open(path_to_state_dir+'context/'+attr+'.txt') as f:
-            context_d[attr]=eval(f.read())
-    return State(abbr,string_d['name'],meta_p,string_d['schema_name'],path_to_state_dir,string_d['main_reporting_unit_type'],type_map,context_d)
+    a = re.search(p, metadata_file_text)  # finds first instance of pattern, ignoring later
+    column_metadata_block = a.group().split('\n')
+    return column_metadata_block    # list of lines, each describing a column
 
-def create_datafile(s,election,data_file_name,munger):
-    # check that election is compatible with state
-    
-    if election not in s.context_dictionary['Election'].keys():
-        return('No such election ('+election+') associated with state '+s.name)
-        # sys.exit()
-    
-    # read datafile info from context folder *** should be more efficient
-    with open(s.path_to_state_dir+'context/datafile.txt','r') as f:
-        d_all = eval(f.read())
-        d = d_all[election+';'+data_file_name]
-    table_name=re.sub(r'\W+', '', election+data_file_name)
-    return(Datafile(s,election, table_name,data_file_name,d['data_file_encoding'],d['meta_file'], d['meta_file_encoding'],munger,d['source_url'],d['file_date'],d['download_date'],d['note'],d['correction_query_list']))
-    
-
-    
-########################################
 def parse_line(mf,line):
-    '''parse_line takes a state and a line of (metadata) text and parses it, including changing the type in the file to the type required by psql, according to the state's type-map dictionary'''
+    '''parse_line takes a metafile and a line of (metadata) text and parses it, including changing the type in the file to the type required by psql, according to the metafile's type-map dictionary'''
     d=mf.type_map
-    p=mf.meta_parser
+    p=mf.line_parser
     m = p.search(line)
     field = (m.group('field')).replace(' ','_')
     type = d[m.group('type')]
@@ -124,17 +76,74 @@ def parse_line(mf,line):
         comment = ''
     return([field,type,comment])
 
-def extract_column_metadata_block(mf):
-    """ mf is a metafile; """
-    p = re.compile(mf.column_metadata_extraction_parser)
 
-    metadata_file_text = cl.get_text_from_file(mf.state.path_to_state_dir + 'meta/' + mf.file_name,
-                                               self.metafile.encoding)
+## Initialize classes # *** fix to reflect changes in class definitions
+def create_munger(file_path):   # file should contain all munger info in a dictionary
+    with open(file_path,'r') as f:
+        d = eval(f.read())
+    return(Munger(d['name'],d['query_from_raw']))
 
-    a = re.search(p, metadata_file_text)  # finds first instance of pattern, ignoring later
-    column_metadata_block = a.group().split('\n')
-    return column_metadata_block    # list of lines, each describing a column
+def create_state(abbr,path_to_state_dir):
+    '''abbr is the capitalized two-letter postal election_anomaly for the state, district or territory'''
+    string_attributes = ['name','schema_name']
+    context_d_keys = ['ReportingUnit','Election','Party','Office','BallotMeasureSelection']    # what consistency checks do we need?
+    if path_to_state_dir[-1] != '/':
+        path_to_state_dir += '/'
+    if not os.path.isdir(path_to_state_dir):
+        return('Error: No directory '+path_to_state_dir)
+        sys.exit()
+    for attr in string_attributes + context_d_keys:
+        if not os.path.isfile(path_to_state_dir+'context/'+attr+'.txt'):
+            return('Error: No file '+path_to_state_dir+'context/'+attr+'.txt')
+            sys.exit()
+    string_d = {} # dictionary to hold string attributes
+    for attr in string_attributes:     # strings
+        with open(path_to_state_dir+'context/'+attr+'.txt') as f:
+            string_d[attr]=f.readline().strip()
+    context_d = {}
+    for attr in context_d_keys:     # python objects
+        with open(path_to_state_dir+'context/'+attr+'.txt') as f:
+            context_d[attr]=eval(f.read())
+    return State(abbr,string_d['name'],string_d['schema_name'],path_to_state_dir,context_d)
 
+def create_metafile(s,name):
+    # meta_parser = re.compile(string_d['parser_string'])
+
+    # read metafile info from context folder
+    with open(s.path_to_state_dir+'context/metafile.txt','r') as f:
+        d_all = eval(f.read())
+        d = d_all[name]
+
+    return Metafile(s,name,d['encoding'],d['source_url'],d['file_date'],d['download_date'],d['note'],d['column_block_parser'],d['type_map'],d['line_parser'])
+
+
+def create_datafile(s,election,data_file_name,mf,munger):
+    """ given state s, metafile mf, munger, plus strings for election and filename, create datafile object.
+    """
+    # check election is in the state's context dictionary
+    if not in_context_dictionary(s,'Election',election):
+        print('No such election ('+election+') defined for state '+s.name)
+        return False
+    
+    # read datafile info from context folder
+    with open(s.path_to_state_dir+'context/datafile.txt','r') as f:
+        d_all = eval(f.read())
+        d = d_all[election+';'+data_file_name]
+
+    # create tablename for the raw data
+    table_name=re.sub(r'\W+', '', election+data_file_name)
+
+    # create column metadata
+    col_block = extract_column_metadata_block(mf)
+    column_metadata = []
+    for line in col_block:
+        column_metadata.append(parse_line(mf,line))
+
+    return Datafile(s,data_file_name,d['encoding'],d['source_url'],d['file_date'],d['download_date'],d['note'],election,table_name, munger,d['correction_query_list'],metafile,column_metadata)
+
+
+    
+########################################
 
 def external_identifiers_to_cdf(id,d,conn,cur):
     """ id is a primary key for an object in the database; d is a dictionary of external identifiers for that object (e.g., {'fips':'3700000000','nc_export1':'North Carolina'}); cur is a cursor on the db. The function alters the table cdf.externalidentifier appropriately. """
@@ -209,6 +218,10 @@ def context_to_cdf(state, conn, cur,report):
             cur.execute('UPDATE cdf.office SET description = CONCAT(description,";",%s) WHERE id = %s AND description != %s',[description,id,description])
         conn.commit()
 
-
+def in_context_dictionary(state,context_item,value):
+    if value in state.context_dictionary[context_item].keys():
+        return True
+    else:
+        return False
 
 ######## obsolete below ***

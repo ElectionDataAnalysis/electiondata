@@ -16,10 +16,11 @@ from datetime import datetime
 import clean as cl
 
 
-    
-
-
-
+def query(q,sql_ids,strs,con,cur):
+    format_args = [sql.Identifier(a) for a in sql_ids]
+    cur.execute(sql.SQL(q).format(*format_args),strs)
+    con.commit()
+    return cur.fetchall()
 
 
 def file_to_sql_statement_list(fpath):
@@ -37,7 +38,7 @@ def file_to_sql_statement_list(fpath):
 
     
 
-def create_table(df):
+def create_table(df):   # *** modularize and use df.column_metadata
 ## clean the metadata file
     fpath = cl.extract_first_col_defs(df.state.path_to_state_dir+'meta/'+df.metafile_name,df.state.path_to_state_dir+'tmp/',df.metafile_encoding)
     create_query = 'CREATE TABLE {}.{} ('
@@ -50,7 +51,7 @@ def create_table(df):
     with open(fpath,'r',encoding=df.metafile_encoding) as f:
         lines = f.readlines()
     for line in lines:
-        if line.find('"')>0:
+        if line.find('"')>0:        # *** move to parse_line function
             print('create_table:Line has double quote, will not be processed:\n'+line)
         else:
             try:
