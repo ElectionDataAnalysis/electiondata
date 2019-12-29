@@ -3,6 +3,12 @@
 import re
 import sys
 
+def get_text_from_file(fpath,encoding='utf8'):
+    with open(fpath, mode='r',
+              encoding=encoding, errors='ignore') as fin:
+        data = fin.read()
+        return data
+
 def extract_first_col_defs(filepath,directory,enc='utf8'):
     # get filename from the filepath
     filename = filepath.split('/')[-1]

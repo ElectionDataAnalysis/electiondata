@@ -2,50 +2,64 @@
 import re
 import sys
 import os.path
+import clean as cl
 from os import path
 import psycopg2
 from psycopg2 import sql
 
-## Define classes
-
 class State:
-    def __init__(self,abbr,name,meta_parser,schema_name,path_to_state_dir,main_reporting_unit_type,type_map,context_dictionary):        # reporting_units,elections,parties,offices):
+    def __init__(self,abbr,name,schema_name,path_to_state_dir,main_reporting_unit_type,context_dictionary):        # reporting_units,elections,parties,offices):
         self.abbr = abbr
         self.name = name
-        self.meta_parser=meta_parser
         self.schema_name=schema_name
         if path_to_state_dir[-1] != '/':     # should end in /
             path_to_state_dir += '/'
         self.path_to_state_dir=path_to_state_dir    #  include 'NC' in path.
         self.main_reporting_unit_type=main_reporting_unit_type  # *** is this used?
-        self.type_map = type_map
         self.context_dictionary=context_dictionary
-
-    
-class Datafile:
-    def __init__(self,state, election, table_name, file_name, encoding,metafile_name,metafile_encoding,munger,source_url,file_date,download_date,note,correction_query_list):
-        self.state=state
-        self.election=election
-        self.table_name=table_name
-        self.file_name=file_name
-        self.encoding=encoding
-        self.metafile_name=metafile_name
-        self.metafile_encoding=metafile_encoding
-        self.munger=munger
-        self.source_url=source_url
-        self.file_date=file_date
-        self.download_date=download_date
-        self.note=note
-        self.correction_query_list=correction_query_list    # fix any known metadata errors; might be unnecessary if we are loading data via python directly into CDF rather than loading data into a raw SQL db. ***
 
 class Munger:
     def __init__(self,name,query_from_raw):
         self.name=name      # 'nc_export1'
         self.query_from_raw= query_from_raw    # dictionary of queries of the db of raw data; each querymust have exactly two slots for state.schema and datafile.table_name
 
+class FileFromState:
+    def __init__(self,state,file_name,encoding,source_url,file_date,download_date,note):
+        self.state=state
+        self.file_name=file_name
+        self.encoding=encoding
+        self.source_url=source_url
+        self.file_date=file_date
+        self.download_date=download_date
+        self.note=note
 
+class Metafile(FileFromState):
+    def __init__(self,metadata_extraction_parser,type_map,meta_parser):
+        self.column_metadata_extraction_parser=metadata_extraction_parser      # regex for extracting the meaningful rows and ignoring other rows
+        self.type_map = type_map
+        self.meta_parser=meta_parser
 
-## Initialize classes
+class Datafile(FileFromState):
+    def __init__(self,election, table_name, munger,correction_query_list,metafile,column_metadata):
+        self.election=election
+        self.table_name=table_name
+        self.munger=munger
+        self.correction_query_list=correction_query_list    # fix any known metadata errors; might be unnecessary if we are loading data via python directly into CDF rather than loading data into a raw SQL db. ***
+        self.metafile=metafile
+        self.column_metadata=column_metadata    # list of triples [column_name, postgres datatype, text description]. Order should match order of columns in original file
+
+    def update_column_metadata_from_metafile(self):
+        """ under construction
+        """
+        if self.column_metadata:
+            print('Warning: overwriting existing column_metadata:\n'+ str(self.column_metadata))
+        column_metadata_block = extract_column_metadata_block(self.metafile) #  list
+        self.column_metadata = []
+        for col_line in column_metadata_block:
+            self.column_metadata.append(parse_line(self.metafile,col_line))
+        return
+
+## Initialize classes # *** fix to reflect changes in class definitions
 def create_munger(file_path):   # file should contain all munger info in a dictionary
     with open(file_path,'r') as f:
         d = eval(f.read())
@@ -94,6 +108,33 @@ def create_datafile(s,election,data_file_name,munger):
 
     
 ########################################
+def parse_line(mf,line):
+    '''parse_line takes a state and a line of (metadata) text and parses it, including changing the type in the file to the type required by psql, according to the state's type-map dictionary'''
+    d=mf.type_map
+    p=mf.meta_parser
+    m = p.search(line)
+    field = (m.group('field')).replace(' ','_')
+    type = d[m.group('type')]
+    number = m.group('number')
+    if number:
+        type=type+(number)
+    try:
+        comment = m.group('comment')
+    except:
+        comment = ''
+    return([field,type,comment])
+
+def extract_column_metadata_block(mf):
+    """ mf is a metafile; """
+    p = re.compile(mf.column_metadata_extraction_parser)
+
+    metadata_file_text = cl.get_text_from_file(mf.state.path_to_state_dir + 'meta/' + mf.file_name,
+                                               self.metafile.encoding)
+
+    a = re.search(p, metadata_file_text)  # finds first instance of pattern, ignoring later
+    column_metadata_block = a.group().split('\n')
+    return column_metadata_block    # list of lines, each describing a column
+
 
 def external_identifiers_to_cdf(id,d,conn,cur):
     """ id is a primary key for an object in the database; d is a dictionary of external identifiers for that object (e.g., {'fips':'3700000000','nc_export1':'North Carolina'}); cur is a cursor on the db. The function alters the table cdf.externalidentifier appropriately. """

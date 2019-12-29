@@ -23,7 +23,6 @@ import clean as cl
 
 
 def file_to_sql_statement_list(fpath):
-    query_list = []
     with open(fpath,'r') as f:
         fstring = f.read()
     p = re.compile('-- .*$',re.MULTILINE)
@@ -35,22 +34,8 @@ def file_to_sql_statement_list(fpath):
 
 
 
+
     
-def parse_line(s,line):
-    '''parse_line takes a state and a line of (metadata) text and parses it, including changing the type in the file to the type required by psql, according to the state's type-map dictionary'''
-    d=s.type_map
-    p=s.meta_parser
-    m = p.search(line)
-    field = (m.group('field')).replace(' ','_')
-    type = d[m.group('type')]
-    number = m.group('number')
-    if number:
-        type=type+(number)
-    try:
-        comment = m.group('comment')
-    except:
-        comment = ''
-    return(field,type,comment)
 
 def create_table(df):
 ## clean the metadata file
