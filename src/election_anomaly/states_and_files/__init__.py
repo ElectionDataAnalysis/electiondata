@@ -53,8 +53,7 @@ def extract_column_metadata_block(mf):
     """ mf is a metafile; """
     p = re.compile(mf.column_block_parser)
 
-    metadata_file_text = cl.get_text_from_file(mf.state.path_to_state_dir + 'meta/' + mf.file_name,
-                                               self.metafile.encoding)
+    metadata_file_text = cl.get_text_from_file(mf.state.path_to_state_dir + 'meta/' + mf.file_name,mf.encoding)
 
     a = re.search(p, metadata_file_text)  # finds first instance of pattern, ignoring later
     column_metadata_block = a.group().split('\n')

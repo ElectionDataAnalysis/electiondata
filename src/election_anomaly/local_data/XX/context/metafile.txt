@@ -1,0 +1,11 @@
+{'layout_results_pct.txt':
+	{'encoding':'utf8',
+	'source_url':'https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/layout_results_pct.txt',
+	'file_date':'2018-10-19',
+	'download_date':'2019-10-15',
+	'note':'',
+	'column_block_parser':r'((?:[^\n\t]+\t+[^\n\t]+\t+[^\n\t]+\n)+)',
+	'type_map':{'number':'INT', 'text':'varchar', 'char':'varchar'},
+	'line_parser':r'(?P<field>[^\n\t]+)\t+(?P<type>[A-z]+)(?P<number>\(\d+\))?\t+(?P<comment>[^\n\t]+)\n'
+	}
+}

@@ -64,7 +64,7 @@ def create_schema(s):
     con = establish_connection()
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     cur = con.cursor()
-    
+
     cur.execute(sql.SQL('DROP SCHEMA IF EXISTS {} CASCADE').format(sql.Identifier(s.schema_name)))
     cur.execute(sql.SQL('CREATE SCHEMA {}').format(sql.Identifier(s.schema_name)))
     
@@ -116,7 +116,6 @@ def raw_data(df,con,cur):
         
 def file_to_context(s,df,m,con,cur):
     """ s is a state, df is a datafile, m is a munger """
-    print(str(datetime.now())
 
     [munger_d,munger_inverse_d] = context.build_munger_d(df.state,m)
     a = context.raw_to_context(df,m,munger_d,con,cur)
@@ -192,6 +191,8 @@ if __name__ == '__main__':
     con = establish_connection()
     cur = con.cursor()
     # instantiate state of XX
+
+    s = sf.create_state('XX','local_data/XX')
     print('Creating munger instance')
     m = sf.create_munger('local_data/mungers/nc_export1.txt')
     # instantiate the NC pct_result datafile
@@ -204,8 +205,11 @@ if __name__ == '__main__':
     context.context_to_cdf(s,'cdf2',con,cur)
     con.commit()
 
+    print('Creating metafile instance')
+    mf = sf.create_metafile(s,'layout_results_pct.txt')
+
     print('Creating datafile instance')
-    df = sf.create_datafile(s,'General Election 2018-11-06','mini.txt',m)
+    df = sf.create_datafile(s,'General Election 2018-11-06','mini.txt',mf,m)
 
     # load data from df to CDF schema (assumes already loaded to schema s.schema_name)
     print('Loading data from df to CDF schema')
