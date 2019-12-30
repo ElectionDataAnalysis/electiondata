@@ -258,19 +258,15 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
             value_d = {'CandidateContest_Id':ids_d['contest_id'],'CandidateSelection_Id': ids_d['selection_id']}
             upsert(cdf_schema, 'CandidateContestSelectionJoin', tables_d['CandidateContestSelectionJoin'], value_d, con, cur)
 
-
-        ## *** Enter vote counts
-        #      nc_export1_counts = {'election_day': {'CountItemType': 'election-day'}, 'one_stop': {'CountItemType': 'early'},
-        #               'absentee_by_mail': {'CountItemType': 'absentee-mail'}, 'provisional': {'CountItemType': 'provisional'},
-        #               'total_votes': {'CountItemType': 'total'}}
-
+        # process vote counts in row
         for ct,dic in nc_export1_counts_d.items():
             value_d = {'Count':eval(ct),'ReportingUnit_Id':ids_d['ReportingUnit_Id'],'CountItemType_Id': dic['CountItemType_Id'],'OtherCountItemType':dic['OtherCountItemType']}
-            # *** dupes are a problem only when contest & reporting unit are specified.
+            # TODO dupes are a problem only when contest & reporting unit are specified.
             ids_d['VoteCount_Id']=upsert(cdf_schema, 'VoteCount', tables_d['VoteCount'], value_d, con, cur,'dupes_ok')[0]
 
             # fill SelectionReportingUnitVoteCountJoin
             value_d = {'Selection_Id':ids_d['selection_id'],'Election_Id':ids_d['Election_Id'],'ReportingUnit_Id':ids_d['ReportingUnit_Id'],'VoteCount_Id':ids_d['VoteCount_Id']}
+            upsert(cdf_schema, 'SelectionReportingUnitVoteCountJoin', tables_d['SelectionReportingUnitVoteCountJoin'], value_d, con, cur)
 
         con.commit()
     return str(ids_d)
