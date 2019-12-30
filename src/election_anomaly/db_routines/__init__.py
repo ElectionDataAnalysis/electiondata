@@ -11,11 +11,12 @@ import re
 from psycopg2 import sql
 from configparser import ConfigParser
 
+
 import clean as cl
 
 
 
-def config(filename='database.ini', section='postgresql'):
+def config(filename='local_data/database.ini', section='postgresql'):
     # create a parser
     parser = ConfigParser()
     # read config file
@@ -37,7 +38,10 @@ def query(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
     cur.execute(sql.SQL(q).format(*format_args),strs)
     con.commit()
-    return cur.fetchall()
+    if cur.pgresult_ptr:    # TODO is this the right attribute?
+        return cur.fetchall()
+    else:
+        return None
 
 
 def file_to_sql_statement_list(fpath):
@@ -50,7 +54,17 @@ def file_to_sql_statement_list(fpath):
     query_list = [q.strip() for q in query_list]    # strip leading and trailing whitespace
     return query_list
 
+def fill_enum_table(schema,table,filepath,con,cur):
+    """takes lines of text from file and inserts each line into the txt field of the enumeration table"""
 
+    with open(filepath, 'r') as f:
+        entries = f.read().splitlines()
+    for entry in entries:
+        q = 'INSERT INTO {0}.{1} ("txt") VALUES (%s)'
+        sql_ids = [schema,table]
+        strs = [entry,]
+        query(q,sql_ids,strs,con,cur)
+    return
 
 
     

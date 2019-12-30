@@ -35,12 +35,8 @@ def path_to_file(path_to_dir,filename):
     return(out+filename)
 
 def establish_connection(db_name='postgres'):
-    host_name = 'localhost'
-    user_name = 'postgres'
-    password = 'notverysecure'
-
-    # the connect() function returns a new instance of connection
-    con = psycopg2.connect(host = host_name, user = user_name, password = password, database = db_name)
+    params = dbr.config()
+    con = psycopg2.connect(**params)
     return con
 
 def create_cursor(con):
@@ -56,7 +52,8 @@ def create_schema(s):
 
     cur.execute(sql.SQL('DROP SCHEMA IF EXISTS {} CASCADE').format(sql.Identifier(s.schema_name)))
     cur.execute(sql.SQL('CREATE SCHEMA {}').format(sql.Identifier(s.schema_name)))
-    
+
+    con.commit()
     if cur:
         cur.close()
     if con:

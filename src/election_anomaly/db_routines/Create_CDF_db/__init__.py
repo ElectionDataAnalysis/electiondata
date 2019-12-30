@@ -5,6 +5,7 @@
 
 import psycopg2
 from psycopg2 import sql
+import db_routines as dbr
 
 
 def create_common_data_format_schema (con,cur,schema_name):
@@ -20,10 +21,12 @@ def create_common_data_format_schema (con,cur,schema_name):
     con.commit()
 
     # create and fill enumeration tables
-    enumeration_path = '/container_root_dir/CDF_schema_def_info/enumerations/'
+    enumeration_path = 'CDF_schema_def_info/enumerations/'
     for t in ['IdentifierType','CountItemStatus','ReportingUnitType','ElectionType','CountItemType']:
-        q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} ("Id" BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY,Txt TEXT UNIQUE NOT NULL); COPY {0}.{1} (txt) FROM %s'
-        cur.execute(sql.SQL(q).format(sql.Identifier(schema_name), sql.Identifier(t)),(enumeration_path + t + '.txt',))
+        q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} ("Id" BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY,Txt TEXT UNIQUE NOT NULL); '
+        dbr.query(q,[schema_name,t],[],con,cur)
+        dbr.fill_enum_table(schema_name,t,enumeration_path + t + '.txt',con,cur)
+    #    cur.execute(sql.SQL(q).format(sql.Identifier(schema_name), sql.Identifier(t)),(enumeration_path + t + '.txt',))
 
     # create all other tables, in set order because of foreign keys
     with open('CDF_schema_def_info/tables.txt','r') as f:
