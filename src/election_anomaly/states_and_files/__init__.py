@@ -3,9 +3,6 @@ import re
 import sys
 import os.path
 import clean as cl
-from os import path
-import psycopg2
-from psycopg2 import sql
 
 class State:
     def __init__(self,abbr,name,schema_name,path_to_state_dir,context_dictionary):        # reporting_units,elections,parties,offices):
@@ -75,8 +72,6 @@ def parse_line(mf,line):    # TODO flag unparsable lines
         comment = ''
     return([field,type,comment])
 
-
-## Initialize classes # *** fix to reflect changes in class definitions
 def create_munger(file_path):   # file should contain all munger info in a dictionary
     with open(file_path,'r') as f:
         d = eval(f.read())

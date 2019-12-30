@@ -132,15 +132,14 @@ def full_process(state_abbr,path_to_state_dir,cdf_schema_name,munger_path,df_ele
 
     print('Instantiating the state of '+state_abbr)
     s = sf.create_state(state_abbr,path_to_state_dir)
-    # create_schema(s)
+    create_schema(s)
 
-    # create cdf schema
-    # print('Creating CDF schema '+cdf_schema_name)
-    # CDF.create_common_data_format_schema(con, cur, cdf_schema_name)
+    print('Creating CDF schema '+cdf_schema_name)
+    CDF.create_common_data_format_schema(con, cur, cdf_schema_name)
 
-    #print('Loading state context info into CDF schema '+cdf_schema_name) # *** takes a long time; why?
-    #context.context_to_cdf(s,cdf_schema_name,con,cur)
-    #con.commit()
+    print('Loading state context info into CDF schema '+cdf_schema_name) # *** takes a long time; why?
+    context.context_to_cdf(s,cdf_schema_name,con,cur)
+    con.commit()
 
     print('Creating munger instance from '+munger_path)
     m = sf.create_munger(munger_path)
@@ -175,7 +174,6 @@ if __name__ == '__main__':
     create_schema(s)
     print('Creating munger instance')
     m = sf.create_munger('local_data/mungers/nc_export1.txt')
-    # instantiate the NC pct_result datafile
 
     con = establish_connection()
     cur = con.cursor()
