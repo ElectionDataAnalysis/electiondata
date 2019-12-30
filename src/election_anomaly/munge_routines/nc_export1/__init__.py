@@ -273,7 +273,6 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
             value_d = {'Selection_Id':ids_d['selection_id'],'Election_Id':ids_d['Election_Id'],'ReportingUnit_Id':ids_d['ReportingUnit_Id'],'VoteCount_Id':ids_d['VoteCount_Id']}
 
         con.commit()
-        print(row)
     return str(ids_d)
 
 def element_to_cdf (cdf_schema,t,munger_d,ids_d,id_type_other_id,con,cur):

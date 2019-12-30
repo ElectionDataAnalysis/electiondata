@@ -59,7 +59,7 @@ def extract_column_metadata_block(mf):
     column_metadata_block = a.group().split('\n')
     return column_metadata_block    # list of lines, each describing a column
 
-def parse_line(mf,line):
+def parse_line(mf,line):    # TODO flag unparsable lines
     '''parse_line takes a metafile and a line of (metadata) text and parses it, including changing the type in the file to the type required by psql, according to the metafile's type-map dictionary'''
     d=mf.type_map
     p=mf.line_parser
@@ -113,7 +113,11 @@ def create_metafile(s,name):
         d_all = eval(f.read())
         d = d_all[name]
 
-    return Metafile(s,name,d['encoding'],d['source_url'],d['file_date'],d['download_date'],d['note'],d['column_block_parser'],d['type_map'],d['line_parser'])
+    # get parser objects from regex strings
+    column_block_parser = re.compile(d['column_block_parser_string'])
+    line_parser = re.compile(d['line_parser_string'])
+
+    return Metafile(s,name,d['encoding'],d['source_url'],d['file_date'],d['download_date'],d['note'],column_block_parser,d['type_map'],line_parser)
 
 
 def create_datafile(s,election,data_file_name,mf,munger):
@@ -136,9 +140,13 @@ def create_datafile(s,election,data_file_name,mf,munger):
     col_block = extract_column_metadata_block(mf)
     column_metadata = []
     for line in col_block:
-        column_metadata.append(parse_line(mf,line))
-
-    return Datafile(s,data_file_name,d['encoding'],d['source_url'],d['file_date'],d['download_date'],d['note'],election,table_name, munger,d['correction_query_list'],metafile,column_metadata)
+        if line.find('"') > 0:
+            print('create_table:Line has double quote, will not be processed:\n' + line)
+        elif not re.search(r'\t',line):
+            print('line has no tabs, will not be processed:\n' + line)
+        else:
+            column_metadata.append(parse_line(mf,line))
+    return Datafile(s,data_file_name,d['encoding'],d['source_url'],d['file_date'],d['download_date'],d['note'],election,table_name, munger,d['correction_query_list'],mf,column_metadata)
 
 
     

@@ -48,17 +48,6 @@ def create_cursor(con):
     cur = con.cursor()
     return cur
 
-def check_args(s,f,t):
-    if not isinstance(s,sf.State):
-        return('Error: '+s+' is not a known state.')
-        sys.exit()
-    mypath=Path(f)
-    if not mypath.is_file():
-        return('Error: File '+f+' does not exist.')
-        sys.exit()
-    # *** check t for whitespace
-    return (s,f,t)
-
 def create_schema(s):
     # connect and create schema for the state
     con = establish_connection()
@@ -82,12 +71,9 @@ def raw_data(df,con,cur):
     create_schema(s)
 
     t = df.table_name   # name of table
-    e = df.metafile_encoding
-    fpath = s.path_to_state_dir + 'meta/'+df.metafile_name
-    check_args(s,fpath,t)   # checking s is redundant ***
+    e = df.metafile.encoding
+    fpath = s.path_to_state_dir + 'meta/'+df.metafile.file_name
 
-    # clean the metadata file
-    fpath = cl.extract_first_col_defs(fpath,'local_data/tmp/',e)
 
     # create table and commit
 
@@ -103,14 +89,8 @@ def raw_data(df,con,cur):
         print(query)
         con.commit()
 
-# load data into tables
+    # load data into tables
     dbr.load_data(con,cur,s,df)
-
-    # close connection
-    if cur:
-        cur.close()
-    if con:
-        con.close()
     return
 
         
@@ -152,14 +132,15 @@ def full_process(state_abbr,path_to_state_dir,cdf_schema_name,munger_path,df_ele
 
     print('Instantiating the state of '+state_abbr)
     s = sf.create_state(state_abbr,path_to_state_dir)
+    # create_schema(s)
 
     # create cdf schema
-    print('Creating CDF schema '+cdf_schema_name)
-    CDF.create_common_data_format_schema(con, cur, cdf_schema_name)
+    # print('Creating CDF schema '+cdf_schema_name)
+    # CDF.create_common_data_format_schema(con, cur, cdf_schema_name)
 
-    print('Loading state context info into CDF schema '+cdf_schema_name) # *** takes a long time; why?
-    context.context_to_cdf(s,cdf_schema_name,con,cur)
-    con.commit()
+    #print('Loading state context info into CDF schema '+cdf_schema_name) # *** takes a long time; why?
+    #context.context_to_cdf(s,cdf_schema_name,con,cur)
+    #con.commit()
 
     print('Creating munger instance from '+munger_path)
     m = sf.create_munger(munger_path)
@@ -169,7 +150,7 @@ def full_process(state_abbr,path_to_state_dir,cdf_schema_name,munger_path,df_ele
     df = sf.create_datafile(s,df_election,df_name,m)
 
     print('Load raw data from datafile ' + df_name + ' into schema '+s.schema_name)
-    raw_data(s, df)
+    raw_data(df,con,cur)
 
     # load data from df to CDF schema (assumes already loaded to schema s.schema_name)
     print('Loading data from df to CDF schema '+cdf_schema_name)
@@ -188,14 +169,18 @@ if __name__ == '__main__':
 
     from munge_routines import nc_export1
 
-    con = establish_connection()
-    cur = con.cursor()
     # instantiate state of XX
 
     s = sf.create_state('XX','local_data/XX')
+    create_schema(s)
     print('Creating munger instance')
     m = sf.create_munger('local_data/mungers/nc_export1.txt')
     # instantiate the NC pct_result datafile
+
+    con = establish_connection()
+    cur = con.cursor()
+
+
 
     # create cdf schema
     print('Creating CDF schema')
@@ -211,7 +196,11 @@ if __name__ == '__main__':
     print('Creating datafile instance')
     df = sf.create_datafile(s,'General Election 2018-11-06','mini.txt',mf,m)
 
-    # load data from df to CDF schema (assumes already loaded to schema s.schema_name)
+    print('Load raw data from '+df.file_name)
+    raw_data(df,con,cur)
+
+
+    # load data from state's raw data schema to CDF schema
     print('Loading data from df to CDF schema')
     nc_export1.raw_records_to_cdf(df,'cdf2',con,cur)
     print('Done!')

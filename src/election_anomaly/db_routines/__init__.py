@@ -31,7 +31,7 @@ def file_to_sql_statement_list(fpath):
     clean_string = re.sub('\n|\r',' ',clean_string)    # get rid of newlines
     query_list = clean_string.split(';')
     query_list = [q.strip() for q in query_list]    # strip leading and trailing whitespace
-    return(query_list)
+    return query_list
 
 
 
@@ -40,7 +40,6 @@ def file_to_sql_statement_list(fpath):
 
 def create_table(df):   # *** modularize and use df.column_metadata
 ## clean the metadata file
-    fpath = cl.extract_first_col_defs(df.state.path_to_state_dir+'meta/'+df.metafile_name,df.state.path_to_state_dir+'tmp/',df.metafile_encoding)
     create_query = 'CREATE TABLE {}.{} ('
     sql_ids_create = [df.state.schema_name,df.table_name]
     sql_ids_comment = []
@@ -48,31 +47,22 @@ def create_table(df):   # *** modularize and use df.column_metadata
     strs_comment = []
     comments = []
     var_defs = []
-    with open(fpath,'r',encoding=df.metafile_encoding) as f:
-        lines = f.readlines()
-    for line in lines:
-        if line.find('"')>0:        # *** move to parse_line function
-            print('create_table:Line has double quote, will not be processed:\n'+line)
+    for [field,type,comment] in df.column_metadata:
+        if len(comment):
+            comments.append('comment on column {}.{}.{} is %s;')
+            sql_ids_comment += [df.state.schema_name,df.table_name,field]
+            strs_comment.append(comment)
+    ## check that type var is clean before inserting it
+        p = re.compile('^[\w\d()]+$')       # type should contain only alphanumerics and parentheses
+        if p.match(type):
+            var_defs.append('{} '+ type)    # not safest way to pass the type, but not sure how else to do it ***
+            sql_ids_create.append(field)
         else:
-            try:
-                [field,type,comment] = parse_line(df.state,line)
-            except:
-                print('create_table:Quoted line cannot be parsed, will not be processed: \n"'+line+'"')
-                [field,type,comment] = ['parse_error','parse_error','parse_error']
-            if len(comment):
-                comments.append('comment on column {}.{}.{} is %s;')
-                sql_ids_comment += [df.state.schema_name,df.table_name,field]
-                strs_comment.append(comment)
-        ## check that type var is clean before inserting it
-            p = re.compile('^[\w\d()]+$')       # type should contain only alphanumerics and parentheses
-            if p.match(type):
-                var_defs.append('{} '+ type)    # not safest way to pass the type, but not sure how else to do it ***
-                sql_ids_create.append(field)
-            else:
-                var_defs.append('corrupted type')
+            print('Corrupted type: '+type)
+            var_defs.append('corrupted type')
     create_query = create_query + ','.join(var_defs) + ');' +  ' '.join(comments)
 
-    return(create_query,strs_create+strs_comment,sql_ids_create+sql_ids_comment)
+    return create_query, strs_create + strs_comment, sql_ids_create + sql_ids_comment
         
 def load_data(conn,cursor,state,df):      ## does this belong in app.py? *** might not need psycopg2 here then
 # write raw data to db
@@ -93,8 +83,8 @@ def load_data(conn,cursor,state,df):      ## does this belong in app.py? *** mig
 def clean_meta_file(infile,outdir,s):       ## update or remove ***
     ''' create in outdir a metadata file based on infile, with all unnecessaries stripped, for the given state'''
     if s.abbreviation == 'NC':
-        return("hello") # need to election_anomaly this ***
+        return "hello"  # need to election_anomaly this ***
     else:
-        return("clean_meta_file: error, state not recognized")
+        return "clean_meta_file: error, state not recognized"
         sys.exit()
 

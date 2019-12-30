@@ -4,8 +4,19 @@
 	'file_date':'2018-10-19',
 	'download_date':'2019-10-15',
 	'note':'',
-	'column_block_parser':r'((?:[^\n\t]+\t+[^\n\t]+\t+[^\n\t]+\n)+)',
+	'column_block_parser_string':r'((?:[^\n\t]+\t+[^\n\t]+\t+[^\n\t]+\n)+)',
 	'type_map':{'number':'INT', 'text':'varchar', 'char':'varchar'},
-	'line_parser':r'(?P<field>[^\n\t]+)\t+(?P<type>[A-z]+)(?P<number>\(\d+\))?\t+(?P<comment>[^\n\t]+)\n'
+	'line_parser_string':r'(?P<field>[^\n\t]+)\t+(?P<type>[A-z]+)(?P<number>\(\d+\))?\t+(?P<comment>[^\n\t]+)'
+	},
+	'sfs_by_hand_layout_absentee.txt':{
+	'encoding':'utf16',
+	'source_url':'https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/layout_absentee.txt',
+	'file_date':'2017-12-13',
+	'download_date':'2019-10-15',
+	'note':'Original file layout_absentee.txt had some spaces where tabs should be, looked like it had been altered by hand. Stephanie Singer altered it by hand to put the tabs back in.',
+	'column_block_parser_string':r'((?:[^\n\t]+\t+[^\n\t]+\t+[^\n\t]+\n)+)',
+	'type_map':{'number':'INT', 'text':'varchar', 'char':'varchar'},
+	'line_parser_string':r'(?P<field>[^\n\t]+)\t+(?P<type>[A-z]+)(?P<number>\(\d+\))?\t+(?P<comment>[^\n\t]+)'
 	}
+
 }
