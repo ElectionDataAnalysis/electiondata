@@ -10,18 +10,11 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '.'))
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT # allows db creation, deletion
 from psycopg2 import sql
-import re
 
 import db_routines as dbr
-import states_and_files as sf
-from pathlib import Path
-import sys
-
-from datetime import datetime
-
-import clean as cl
-import context
 from db_routines import Create_CDF_db as CDF
+import states_and_files as sf
+import context
 
 
 ## define some basics
@@ -46,18 +39,19 @@ def create_cursor(con):
 
 def create_schema(s):
     # connect and create schema for the state
+    # TODO double check that user wants to drop the existing schema.
     con = establish_connection()
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     cur = con.cursor()
 
-    cur.execute(sql.SQL('DROP SCHEMA IF EXISTS {} CASCADE').format(sql.Identifier(s.schema_name)))
-    cur.execute(sql.SQL('CREATE SCHEMA {}').format(sql.Identifier(s.schema_name)))
+    dbr.query('DROP SCHEMA IF EXISTS {} CASCADE',[s.schema_name],[],con,cur)
+    dbr.query('CREATE SCHEMA {}',[s.schema_name],[],con,cur)
 
-    con.commit()
     if cur:
         cur.close()
     if con:
         con.close()
+    return
 
 def raw_data(df,con,cur):
     """ Loads the raw data from the df into the schema for the associated state *** needs work, including redesign of df class
@@ -74,16 +68,14 @@ def raw_data(df,con,cur):
 
     # create table and commit
 
-    cur.execute(sql.SQL('DROP TABLE IF EXISTS {}.{}').format(sql.Identifier(s.schema_name),sql.Identifier(t)))
-    [query,strs,sql_ids] = dbr.create_table(df)
-    format_args = [sql.Identifier(x) for x in sql_ids]
-    cur.execute(sql.SQL(query).format( *format_args ),strs)
-    con.commit()
+    dbr.query('DROP TABLE IF EXISTS {}.{}',[s.schema_name,t],[],con,cur)
+    [q,strs,sql_ids] = dbr.create_table(df)
+    dbr.query(q,sql_ids,strs,con,cur)
 
     # correct any errors due to foibles of particular datafile and commit
-    for query in df.correction_query_list:
-        cur.execute(sql.SQL(query).format(sql.Identifier(s.schema_name), sql.Identifier(df.table_name)))
-        print(query)
+    for q in df.correction_query_list:
+        dbr.query(q,[s.schema_name,df.table_name],[],con,cur)
+        print(q)
         con.commit()
 
     # load data into tables

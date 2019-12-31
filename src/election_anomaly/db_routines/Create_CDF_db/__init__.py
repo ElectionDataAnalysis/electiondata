@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 # under construction
 # db_routines/Create_CDF_db/__init__.py
-#  *** may need to add "NOT NULL" requirements per CDF
+# TODO may need to add "NOT NULL" requirements per CDF
 
-import psycopg2
 from psycopg2 import sql
 import db_routines as dbr
 
@@ -13,12 +12,10 @@ def create_common_data_format_schema (con,cur,schema_name):
     rs = ['create_common_data_format_schema (con,cur,'+ schema_name+')']
     
     # create the blank schema
-    cur.execute(sql.SQL('DROP SCHEMA IF EXISTS {0} CASCADE; CREATE SCHEMA {0};').format(sql.Identifier(schema_name)))
-    con.commit()
-    
+    dbr.query('DROP SCHEMA IF EXISTS {0} CASCADE; CREATE SCHEMA {0}',[schema_name],[],con,cur)
+
     # create a sequence for unique id values across all tables
-    cur.execute(sql.SQL('CREATE SEQUENCE {}.id_seq;').format(sql.Identifier(schema_name)))
-    con.commit()
+    dbr.query('CREATE SEQUENCE {}.id_seq;',[schema_name],[],con,cur)
 
     # create and fill enumeration tables
     enumeration_path = 'CDF_schema_def_info/enumerations/'
@@ -26,7 +23,6 @@ def create_common_data_format_schema (con,cur,schema_name):
         q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} ("Id" BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY,Txt TEXT UNIQUE NOT NULL); '
         dbr.query(q,[schema_name,t],[],con,cur)
         dbr.fill_enum_table(schema_name,t,enumeration_path + t + '.txt',con,cur)
-    #    cur.execute(sql.SQL(q).format(sql.Identifier(schema_name), sql.Identifier(t)),(enumeration_path + t + '.txt',))
 
     # create all other tables, in set order because of foreign keys
     with open('CDF_schema_def_info/tables.txt','r') as f:
@@ -62,9 +58,7 @@ def create_common_data_format_schema (con,cur,schema_name):
     # 'UNIQUE ("ForeignId", "IdentifierType_Id", "OtherIdentifierType")'
             
         q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} (' + ','.join(field_defs) +');'
-        format_args = [sql.Identifier(a) for a in format_args]
-        cur.execute(sql.SQL(q).format(*format_args))
-        con.commit()
+        dbr.query(q,format_args,[],con,cur)
         rs.append('Created table '+d['tablename'])
         
     return('</p><p>'.join(rs))

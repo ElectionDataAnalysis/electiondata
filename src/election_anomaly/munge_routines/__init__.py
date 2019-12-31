@@ -2,17 +2,13 @@
 # munge_routines/__init__.py
 # under construction
 
-import psycopg2
-from psycopg2 import sql
-from datetime import datetime
-
+import db_routines as dbr
 
 def id_and_name_from_external (cdf_schema,table,external_name,identifiertype_id,otheridentifiertype,con,cur,internal_name_field='Name'):
     ## find the internal db name and id from external identifier
             
     q = 'SELECT f."Id", f.{2} FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}.{1} AS f ON e."ForeignId" = f."Id" WHERE e."Value" =  %s AND e."IdentifierType_Id" = %s AND (e."OtherIdentifierType" = %s OR e."OtherIdentifierType" IS NULL OR e."OtherIdentifierType" = \'\'  );'       # *** ( ... OR ... OR ...) condition is kludge to protect from inconsistencies in OtherIdentifierType text when the IdentifierType is *not* other
-    cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema),sql.Identifier(table),sql.Identifier(internal_name_field)),[external_name,identifiertype_id,otheridentifiertype])
-    a = cur.fetchall()
+    a = dbr.query(q,[cdf_schema,table,internal_name_field],[external_name,identifiertype_id,otheridentifiertype],con,cur)
     if a:
         return (a[0])
     else:
@@ -58,11 +54,8 @@ def upsert(schema,table,table_d,value_d,con,cur,mode='no_dupes'):
     
     
     sql_ids = [schema,table]   +f_names + cf_names
-    format_args = [sql.Identifier(x) for x in sql_ids]
     strs = f_vals
-    cur.execute(sql.SQL(q).format( *format_args ),strs)
-    a =  cur.fetchall()
-    con.commit()
+    a = dbr.query(q,sql_ids,strs,con,cur)
     if len(a) == 0:
         bb = 1/0 # ***
         return("Error: nothing selected or inserted")
@@ -80,14 +73,11 @@ def upsert(schema,table,table_d,value_d,con,cur,mode='no_dupes'):
 def format_type_for_insert(schema,table,txt,con,cur):
     ''' schema.table must have a "txt" field. This function returns a (type_id, othertype_text) pair; for types in the enumeration, returns (type_id for the given txt, ""), while for other types returns (type_id for "other",txt)  '''
     q = 'SELECT "Id" FROM {}.{} WHERE txt = %s'
-    sql_ids = [schema,table]
-    cur.execute(   sql.SQL(q).format( sql.Identifier(schema),sql.Identifier(table)),[txt,])
-    a = cur.fetchall()
+    a = dbr.query(q,[schema,table],[txt,],con,cur)
     if a:
         return([a[0][0],''])
     else:
-        cur.execute(   sql.SQL(q).format( sql.Identifier(schema),sql.Identifier(table)),['other',])
-        a = cur.fetchall()
+        a = dbr.query(q,[schema,table],['other',],con,cur)
         return([a[0][0],txt])
 
 

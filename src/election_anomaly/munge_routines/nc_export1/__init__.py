@@ -3,8 +3,8 @@
 #/munge_routines/nc_export1/__init__.py
 
 import re
+import db_routines as dbr
 from munge_routines import format_type_for_insert, id_and_name_from_external, upsert
-import psycopg2
 from psycopg2 import sql
 
 
@@ -45,9 +45,7 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
     """ attempt to create munger-agnostic raw-to-cdf script; for now, nc_export1 stuff is hard-coded *** """
 
     # get BallotMeasureSelection dict (Selection:Id) from cdf schema
-    q = 'SELECT "Selection", "Id" FROM {0}."BallotMeasureSelection"'
-    cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema)))
-    a = cur.fetchall()
+    a = dbr.query('SELECT "Selection", "Id" FROM {0}."BallotMeasureSelection"',[cdf_schema],[],con,cur)
     ballot_measure_selections = dict(a)
 
     with open('CDF_schema_def_info/tables.txt', 'r') as f:
@@ -76,15 +74,14 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
 
     ids_d = {'state': state_id, 'Election_Id': election_id}  # to hold ids of found items for later reference
 
-    ###### get id for IdentifierType 'other'
+    # get id for IdentifierType 'other'
     if id_type_other_id == 0:
         q = 'SELECT "Id" FROM {}."IdentifierType" WHERE txt = \'other\' '
-    cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema)))
-    a = cur.fetchall()
+    a = dbr.query(q,[cdf_schema],[],con,cur)
     if a:
         id_type_other_id = a[0][0]
     else:
-        bbb = 1 / 0  # ***
+        bbb = 1 / 0  # TODO
     ###########################
 
 
@@ -96,9 +93,7 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
     raw_col_slots = ['{' + str(i + 2) + '}' for i in range(len(nc_export1_raw_cols))]
     q = 'SELECT DISTINCT ' + ','.join(raw_col_slots) + ' FROM {0}.{1}'
     sql_ids = [df.state.schema_name, df.table_name] + [x[0] for x in nc_export1_raw_cols]
-    format_args = [sql.Identifier(x) for x in sql_ids]
-    cur.execute(sql.SQL(q).format(*format_args))
-    rows = cur.fetchall()
+    rows = dbr.query(q,sql_ids,[],con,cur)
 
     # create dictionaries for processing data from rows. Not all CDF elements are included. E.g., 'Election' element is not filled from df rows, but from df.election
 
@@ -225,8 +220,7 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
         else:       # if not a Ballot Measure (i.e., if a Candidate Contest)
             office_name = eval(nc_export1_d['Office'][0]['ExternalIdentifier'])
             q = 'SELECT f."Id", f."Name" FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}."Office" AS f ON e."ForeignId" = f."Id" WHERE e."IdentifierType_Id" = %s AND e."Value" =  %s AND e."OtherIdentifierType" = \'nc_export1\';'
-            cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema)), [id_type_other_id, office_name])
-            a = cur.fetchall()
+            a = dbr.query(q,[cdf_schema],[id_type_other_id, office_name],con,cur)
             if not a: # if Office is not already associated to the munger in the db (from state's context_dictionary, for example), skip this row
                continue
             ids_d['Office_Id'] = a[0][0]
@@ -235,9 +229,7 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
             # find reporting unit associated to contest (not reporting unit associated to df row)
             election_district_name = df.state.context_dictionary['Office'][a[0][1]]['ElectionDistrict']
             q = 'SELECT "Id" FROM {0}."ReportingUnit" WHERE "Name" = %s'
-            cur.execute(sql.SQL(q).format(sql.Identifier(cdf_schema)),[election_district_name,])
-            b = cur.fetchall()
-            # ids_d['contest_reporting_unit_id'] = b[0][0]  ***
+            b = dbr.query(q,[cdf_schema],[election_district_name,],con,cur)
             election_district_id = b[0][0]
 
             # insert into CandidateContest table

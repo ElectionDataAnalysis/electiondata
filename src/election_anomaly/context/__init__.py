@@ -4,7 +4,6 @@
 # utilities for extracting state context info and inserting it into the files in the context folder
 import sys
 import re
-import psycopg2
 from psycopg2 import sql
 from datetime import datetime
 from munge_routines import upsert, format_type_for_insert
@@ -49,7 +48,7 @@ def context_to_cdf(s,schema,con,cur):
                             ## insert into ExternalIdentifier table
                             [id,other_txt] = format_type_for_insert(schema,'IdentifierType', external_id_key, con,cur)
                             q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s) ON CONFLICT DO NOTHING'   # will this cause errors to go unnoticed? ***
-                            cur.execute(sql.SQL(q).format(sql.Identifier(schema)), [upsert_id, s.context_dictionary[t][name_key]['ExternalIdentifiers'][external_id_key],id,other_txt ])
+                            dbr.query(q,[schema],[upsert_id, s.context_dictionary[t][name_key]['ExternalIdentifiers'][external_id_key],id,other_txt],con,cur)
             if t == 'Office':
                 ## need to process 'Office' after 'ReportingUnit', as Offices may create ReportingUnits as election districts *** check for this
 
@@ -71,7 +70,10 @@ def context_to_cdf(s,schema,con,cur):
 
 
 def build_munger_d(s,m):
-    '''given a state s and a munger m, use the state's context dictionaries to build dictionaries restricted to the given munger. Munger m will have a query_from_raw dictionary with keys that may be tablenames but may also be tablename-type pairs. E.g., ReportingUnit;precinct or Election.'''
+    """given a state s and a munger m,
+    use the state's context dictionaries to build dictionaries restricted to the given munger.
+    Munger m will have a query_from_raw dictionary with keys that may be tablenames
+    but may also be tablename-type pairs. E.g., ReportingUnit;precinct or Election."""
     munger_d = {}
     munger_inverse_d = {}
     for t in m.query_from_raw.keys(): ## e.g., ['Election','Party','ReportingUnit;precinct','Office']:
@@ -92,8 +94,6 @@ def build_munger_d(s,m):
             munger_inverse_d[v] = k
     return(munger_d,munger_inverse_d)
 
-
-
 def raw_to_context(df,m,munger_d,conn,cur):
     ''' Purely diagnostic -- reports what items in the datafile are missing from the context_dictionary (e.g., offices we don't wish to analyze)'''
     rs = [str(datetime.now())]
@@ -104,8 +104,7 @@ def raw_to_context(df,m,munger_d,conn,cur):
         if len(t_parts) > 1:
             type = t_parts[1]
         if context_key in df.state.context_dictionary.keys():   # why do we need this criterion? ***
-            cur.execute(sql.SQL( m.query_from_raw[t] ).format(sql.Identifier(df.state.schema_name),  sql.Identifier(df.table_name)))
-            items_per_df = cur.fetchall()
+            items_per_df = dbr.query(m.query_from_raw[t],[df.state.schema_name,df.table_name],[],con,cur)
             missing = []
             for e in items_per_df:
                 if e[0] is not None and e[0] not in munger_d[t].values():
@@ -114,9 +113,7 @@ def raw_to_context(df,m,munger_d,conn,cur):
                 missing.sort()   #  and sort
             rs.append('Sample data for '+t+': '+str( items_per_df[0:4]))
             rs.append('For \''+m.name +'\', <b> missing '+t+' list is: </b>'+str(missing)+'. Add any missing '+t+' to the '+context_key+'.txt file and rerun')
-        
-    
-    return('</p><p>'.join(rs))
+    return
 
 
 
