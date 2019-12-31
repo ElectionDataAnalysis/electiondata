@@ -4,9 +4,9 @@
 # utilities for extracting state context info and inserting it into the files in the context folder
 import sys
 import re
-from psycopg2 import sql
 from datetime import datetime
 from munge_routines import upsert, format_type_for_insert
+import db_routines as dbr
 
 def context_to_cdf(s,schema,con,cur):
     ''' Takes the info from the context_dictionary for the state s and inserts it into the db. Returns a dictionary mapping context_dictionary keys to the database keys '''

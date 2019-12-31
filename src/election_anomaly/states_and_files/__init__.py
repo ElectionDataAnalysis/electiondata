@@ -114,7 +114,6 @@ def create_metafile(s,name):
 
     return Metafile(s,name,d['encoding'],d['source_url'],d['file_date'],d['download_date'],d['note'],column_block_parser,d['type_map'],line_parser)
 
-
 def create_datafile(s,election,data_file_name,mf,munger):
     """ given state s, metafile mf, munger, plus strings for election and filename, create datafile object.
     """
@@ -143,87 +142,9 @@ def create_datafile(s,election,data_file_name,mf,munger):
             column_metadata.append(parse_line(mf,line))
     return Datafile(s,data_file_name,d['encoding'],d['source_url'],d['file_date'],d['download_date'],d['note'],election,table_name, munger,d['correction_query_list'],mf,column_metadata)
 
-
-    
-########################################
-
-def external_identifiers_to_cdf(id,d,conn,cur):
-    """ id is a primary key for an object in the database; d is a dictionary of external identifiers for that object (e.g., {'fips':'3700000000','nc_export1':'North Carolina'}); cur is a cursor on the db. The function alters the table cdf.externalidentifier appropriately. """
-    for kk in d:
-        cur.execute('SELECT id FROM cdf.identifiertype WHERE text = %s',[kk])
-        a=cur.fetchone()
-        if a:
-            idtype_id = a[0]
-            othertext=''
-        else:
-            idtype_id=otherid_id
-            othertext=kk
-        cur.execute('INSERT INTO cdf.externalidentifier (foreign_id,value,identifiertype_id,othertype) VALUES (%s,%s,%s,%s) ON CONFLICT (foreign_id,identifiertype_id,othertype) DO NOTHING',[id,d[k]['ExternalIdentifiers'][kk],idtype_id,othertext])
-    conn.commit()
-    return
-
-def context_to_cdf(state, conn, cur,report):
-    '''Loads information from context folder for the state into the common data format'''
-# reporting units
-    report.append('Entering ReportingUnit information')
-    cur.execute("SELECT id FROM  cdf.identifiertype WHERE text = 'other'")
-    otherid_id = cur.fetchone()[0]
-    d = state.reporting_units
-    for k in d.keys():
-    # create corresponding gp_unit
-        cur.execute('INSERT INTO cdf.gpunit (name) VALUES (%s) ON CONFLICT (name) DO UPDATE SET name= %s RETURNING id',[k,k])   # *** OK as long as there aren't too many of these. Otherwise can bloat db
-        id=cur.fetchone()[0]
-        external_identifiers_to_cdf(id,d[k]['ExternalIdentifiers'],cur)
-        conn.commit()
-
-# elections
-    report.append('Entering Elections information')
-    cur.execute("SELECT id FROM  cdf.electiontype WHERE text = 'other'")
-    otherelection_id = cur.fetchone()[0]
-    d = state.elections
-    for k in d.keys():
-        if 'Type' in d[k].keys():
-            cur.execute('SELECT id FROM cdf.electiontype WHERE text = %s',[d[k]['Type'],])
-            a=cur.fetchone()
-            if a:
-                electiontype_id = a[0]
-                othertext=''
-            else:
-                electiontype_id=otherelection_id
-                othertext=d[k]['Type']
-        startdate = d[k].get('StartDate',None)
-        enddate = d[k].get('EndDate',None)
-        cur.execute('INSERT INTO cdf.election (name,enddate,startdate,electiontype_id,othertype) VALUES (%s,%s,%s,%s,%s) ON CONFLICT (name) DO UPDATE SET name= %s RETURNING id',[k,enddate,startdate,electiontype_id,othertext,k])   # *** OK as long as there aren't too many conflicts. Otherwise can bloat db
-        id=cur.fetchone()[0]
-        external_identifiers_to_cdf(id,d[k]['ExternalIdentifiers'],cur)
-        conn.commit()
-
-# parties
-    report.append('Entering Parties information')
-    d = state.parties
-    for k in d.keys():
-        cur.execute('INSERT INTO cdf.party (name) VALUES (%s) ON CONFLICT (name) DO UPDATE SET name= %s RETURNING id',[k,k])   # *** OK as long as there aren't too many conflicts. Otherwise can bloat db
-        id=cur.fetchone()[0]
-        external_identifiers_to_cdf(id,d[k]['ExternalIdentifiers'],cur)
-
-    return()
-
-# offices
-    report.append('Entering Offices information')
-    d = state.offices
-    for k in d.keys():
-        cur.execute('INSERT INTO cdf.office (name) VALUES (%s) ON CONFLICT (name) DO UPDATE SET name= %s RETURNING id',[k,k])   # *** OK as long as there aren't too many conflicts. Otherwise can bloat db
-        id=cur.fetchone()[0]
-        external_identifiers_to_cdf(id,d[k]['ExternalIdentifiers'],cur)
-        description = d[k].get('Description',None)
-        if description:
-            cur.execute('UPDATE cdf.office SET description = CONCAT(description,";",%s) WHERE id = %s AND description != %s',[description,id,description])
-        conn.commit()
-
 def in_context_dictionary(state,context_item,value):
     if value in state.context_dictionary[context_item].keys():
         return True
     else:
         return False
 
-######## obsolete below ***
