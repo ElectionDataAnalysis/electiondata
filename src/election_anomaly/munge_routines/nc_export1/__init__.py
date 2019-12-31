@@ -43,38 +43,7 @@ def add_ei(office_d):
             
 def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
     """ attempt to create munger-agnostic raw-to-cdf script; for now, nc_export1 stuff is hard-coded *** """
-
-    # get BallotMeasureSelection dict (Selection:Id) from cdf schema
-    a = dbr.query('SELECT "Selection", "Id" FROM {0}."BallotMeasureSelection"',[cdf_schema],[],con,cur)
-    ballot_measure_selections = dict(a)
-
-    with open('CDF_schema_def_info/tables.txt', 'r') as f:
-        table_ds = eval(f.read())
-    tables_d = {}
-    for ddd in table_ds:
-        tables_d[ddd.pop('tablename')] = ddd
-
-        ## upsert election, get id
-        [electiontype_id, otherelectiontype] = format_type_for_insert(cdf_schema, 'ElectionType',
-                                                                      df.state.context_dictionary['Election'][
-                                                                          df.election]['ElectionType'], con, cur)
-    value_d = {'Name': df.election, 'EndDate': df.state.context_dictionary['Election'][df.election]['EndDate'],
-               'StartDate': df.state.context_dictionary['Election'][df.election]['StartDate'],
-               'OtherElectionType': otherelectiontype, 'ElectionType_Id': electiontype_id}
-    election_id = upsert(cdf_schema, 'Election', tables_d['Election'], value_d, con, cur)[0]
-
-    ## upsert state, get id (default Reporting Unit for ballot questions)
-    if state_id == 0:
-        t = 'ReportingUnit'
-        [reportingunittype_id, otherreportingunittype] = format_type_for_insert(cdf_schema, 'ReportingUnitType',
-                                                                                'state', con, cur)
-    value_d = {'Name': df.state.name, 'ReportingUnitType_Id': reportingunittype_id,
-               'OtherReportingUnitType': otherreportingunittype}
-    state_id = upsert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
-
-    ids_d = {'state': state_id, 'Election_Id': election_id}  # to hold ids of found items for later reference
-
-    # get id for IdentifierType 'other'
+    # get id for IdentifierType 'other' if it was not passed as parameter
     if id_type_other_id == 0:
         q = 'SELECT "Id" FROM {}."IdentifierType" WHERE txt = \'other\' '
     a = dbr.query(q,[cdf_schema],[],con,cur)
@@ -82,14 +51,43 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
         id_type_other_id = a[0][0]
     else:
         bbb = 1 / 0  # TODO
-    ###########################
+    with open('CDF_schema_def_info/tables.txt', 'r') as f:
+        table_ds = eval(f.read())
+    tables_d = {}
+    for ddd in table_ds:
+        tables_d[ddd.pop('tablename')] = ddd
+
+    ## upsert election, get id
+    [electiontype_id, otherelectiontype] = format_type_for_insert(cdf_schema, 'ElectionType',
+                                                                  df.state.context_dictionary['Election'][
+                                                                      df.election]['ElectionType'], con, cur)
+    value_d = {'Name': df.election, 'EndDate': df.state.context_dictionary['Election'][df.election]['EndDate'],
+               'StartDate': df.state.context_dictionary['Election'][df.election]['StartDate'],
+               'OtherElectionType': otherelectiontype, 'ElectionType_Id': electiontype_id}
+    election_id = upsert(cdf_schema, 'Election', tables_d['Election'], value_d, con, cur)[0]
+
+    # if state_id is not passed as parameter, upsert state, get id (default Reporting Unit for ballot questions)
+    if state_id == 0:
+        t = 'ReportingUnit'
+        [reportingunittype_id, otherreportingunittype] = format_type_for_insert(cdf_schema, 'ReportingUnitType',
+                                                                                'state', con, cur)
+        value_d = {'Name': df.state.name, 'ReportingUnitType_Id': reportingunittype_id,
+                   'OtherReportingUnitType': otherreportingunittype}
+        state_id = upsert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
+
+    # store state_id and election_id for later use
+    ids_d = {'state': state_id, 'Election_Id': election_id}  # to hold ids of found items for later reference
+
+    # get BallotMeasureSelection dict (Selection:Id) from cdf schema
+    a = dbr.query('SELECT "Selection", "Id" FROM {0}."BallotMeasureSelection"',[cdf_schema],[],con,cur)
+    ballot_measure_selections = dict(a)
 
 
     # get rows from raw table
     nc_export1_raw_cols = [['county','TEXT'], ['election_date','DATE'], ['precinct','TEXT'], ['contest_type','TEXT'],['contest_name','TEXT'],
                 ['vote_for','INT'], ['choice','TEXT'], ['choice_party','TEXT'], ['vote_for','INT'],
                 ['election_day','INT'], ['one_stop','INT'], ['absentee_by_mail','INT'], ['provisional','INT'],
-                ['total_votes','INT'], ['real_precinct','TEXT']]  # *** depends on munger
+                ['total_votes','INT'], ['real_precinct','TEXT']]  # TODO depends on munger
     raw_col_slots = ['{' + str(i + 2) + '}' for i in range(len(nc_export1_raw_cols))]
     q = 'SELECT DISTINCT ' + ','.join(raw_col_slots) + ' FROM {0}.{1}'
     sql_ids = [df.state.schema_name, df.table_name] + [x[0] for x in nc_export1_raw_cols]
@@ -99,15 +97,12 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
 
     nc_export1_counts_d = {'election_day': {'CountItemType': 'election-day'}, 'one_stop': {'CountItemType': 'early'},
               'absentee_by_mail': {'CountItemType': 'absentee-mail'}, 'provisional': {'CountItemType': 'provisional'},
-              'total_votes': {'CountItemType': 'total'}}
+              'total_votes': {'CountItemType': 'total'}}    # TODO depends on munger
     # look up id,type pairs for each kind of count, add info to counts dictionary
     for ct,dic in nc_export1_counts_d.items():
         text = dic['CountItemType']
         [dic['CountItemType_Id'], dic['OtherCountItemType']] = format_type_for_insert(cdf_schema, 'CountItemType',
                                                                   text, con, cur)
-
-
-
     nc_export1_d = {'Office':[
         {'ExternalIdentifier':'contest_name',
         'InternalNameField':'Name',
@@ -119,6 +114,7 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
         {'ExternalIdentifier': 'county + \';\' + precinct',
          'InternalNameField': 'Name',
          'Enumerations':{'ReportingUnitType': 'precinct'},
+         'OtherFields':{},
          'Condition': 'real_precinct == \'Y\''},
         {'ExternalIdentifier': 'county + \';\' + precinct',
          'InternalNameField': 'Name',
@@ -166,32 +162,33 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
     }     # munger-dependent ***
 
     for row in rows:
-        row_d = {}
         for i in range(len(nc_export1_raw_cols)):
             if row[i]!= 0 and not row[i]:   # if db query returned None     # awkward ***
-                exec(nc_export1_raw_cols[i][0] + ' = None')
+                exec(nc_export1_raw_cols[i][0] + ' = "" ')
             elif nc_export1_raw_cols[i][1] == 'INT':
                 exec(nc_export1_raw_cols[i][0] + ' = ' + str(row[i]) )
             else:   # *** DATE and TEXT handled identically
                 exec(nc_export1_raw_cols[i][0] + ' = "'+ row[i] +'"')
 
-
-        # Process all straight-forward elements into cdf
+        # Process all straight-forward elements into cdf and capture id in ids_d
         for t in ['ReportingUnit', 'Party']:  # *** list is munger-dependent
-            for item in nc_export1_d[t]:  # for each case (most elts have only one, but ReportingUnit has more) e.g. item = {'ExternalIdentifier': county,
-                # 'Enumerations':{'ReportingUnitType': 'county'}}
-                if eval(item['ExternalIdentifier']) and eval(item['Condition']):
-                    # get internal db name and id from the info in the df row
+            for item in nc_export1_d[t]:  # for each case (most elts have only one case, but ReportingUnit has more) e.g. item = {'ExternalIdentifier': county,
+                # 'Enumerations':{'ReportingUnitType': 'county'}}.
+                # Cases must be mutually exclusive and exhaustive
+                # following if must allow '' as a value (e.g., because Party can be the empty string), but not None or []
+                if (eval(item['ExternalIdentifier']) == ''  or eval(item['ExternalIdentifier']))  and eval(item['Condition']):
+                    # get internal db name and id for ExternalIdentifier from the info in the df row ...
                     [cdf_id, cdf_name] = id_and_name_from_external(cdf_schema, t,
                                                                    eval(item['ExternalIdentifier']),
                                                                    id_type_other_id, 'nc_export1', con, cur,
                                                                    item[
                                                                        'InternalNameField'])  # cdf_name may be unnecessary ***
-                    if [cdf_id, cdf_name] == [None, None]:  # if no such is found in db, insert it!
+                    # ... or if no such is found in db, insert it!
+                    if [cdf_id, cdf_name] == [None, None]:
                         cdf_name = eval(item['ExternalIdentifier'])
                         value_d = {item['InternalNameField']: cdf_name}  # usually 'Name' but not always
                         for e in item['Enumerations'].keys():  # e.g. e = 'ReportingUnitType'
-                            [value_d[e + 'Id'], value_d['Other' + e]] = format_type_for_insert(cdf_schema, e,
+                            [value_d[e + '_Id'], value_d['Other' + e]] = format_type_for_insert(cdf_schema, e,
                                                                                                item[
                                                                                                    'Enumerations'][
                                                                                                    e], con, cur)
@@ -200,9 +197,9 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
                         if t == 'CandidateContest' or t == 'BallotMeasureContest':  # need to get ElectionDistrict_Id from contextual knowledge
                             value_d['ElectionDistrict_Id'] = ids_d['contest_reporting_unit_id']
                         cdf_id = upsert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
-                ids_d[t + '_Id'] = cdf_id
+            ids_d[t + '_Id'] = cdf_id
 
-        # process Ballot Measures and Candidate Contests into CDF (depends on values in row):
+        # process Ballot Measures and Candidate Contests into CDF and capture ids into ids_d (depends on values in row):
         selection = eval(nc_export1_d['BallotMeasureSelection'][0]['ExternalIdentifier'])
         # *** cond = nc_export1_d['BallotMeasureSelection']['ExternalIdentifier'] +' in ballot_measure_selections.keys()'
         if selection in ballot_measure_selections.keys() :     # if selection is a Ballot Measure selection, assume contest is a Ballot Measure

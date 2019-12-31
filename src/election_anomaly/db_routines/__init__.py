@@ -56,12 +56,14 @@ def create_schema(name):
             print('Dropping existing schema '+name+' and creating new, empty version')
             query('DROP SCHEMA IF EXISTS {} CASCADE',[name],[],con,cur)
             new_schema_created = True
+            con.commit()
         else:
             print('Using existing schema '+name)
             new_schema_created = False
     else:
         query('CREATE SCHEMA {}',[name],[],con,cur)
         new_schema_created = True
+        con.commit()
     if cur:
         cur.close()
     if con:

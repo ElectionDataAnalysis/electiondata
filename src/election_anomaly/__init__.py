@@ -17,6 +17,7 @@ def raw_data(df,con,cur):
     """ Loads the raw data from the df into the schema for the associated state
     Schema for the state should already exist
     """
+
     s = df.state
 
     t = df.table_name   # name of table

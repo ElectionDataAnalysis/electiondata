@@ -9,8 +9,7 @@ import db_routines as dbr
 
 def create_common_data_format_schema (con,cur,schema_name):
     """ schema_name example: 'cdf'; Creates schema with that name on the given db connection and cursor"""
-    rs = ['create_common_data_format_schema (con,cur,'+ schema_name+')']
-    
+
     # create the blank schema
     new_schema_created = dbr.create_schema(schema_name)
     if new_schema_created:
@@ -59,8 +58,6 @@ def create_common_data_format_schema (con,cur,schema_name):
                 
             q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} (' + ','.join(field_defs) +');'
             dbr.query(q,format_args,[],con,cur)
-            rs.append('Created table '+d['tablename'])
-        
     return
 
 
