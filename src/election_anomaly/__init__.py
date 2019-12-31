@@ -39,7 +39,7 @@ def create_cursor(con):
 
 def create_schema(s):
     # connect and create schema for the state
-    # TODO double check that user wants to drop the existing schema.
+    # TODO double check that user wants to drop the existing schema. SELECT schema_name FROM information_schema.schemata WHERE schema_name = 'name';
     con = establish_connection()
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     cur = con.cursor()
@@ -158,23 +158,27 @@ if __name__ == '__main__':
     from munge_routines import nc_export1
 
     # instantiate state of XX
-
-    s = sf.create_state('XX','local_data/XX')
+    abbr = input('Enter two-character abbreviation for your state/district/territory\n')
+    print('Creating state/district/territory and its raw data schema')
+    s = sf.create_state(abbr,'local_data/'+abbr)
     create_schema(s)
-    print('Creating munger instance')
-    m = sf.create_munger('local_data/mungers/nc_export1.txt')
+
+    # instantiate munger
+    munger_name = input('Enter name of munger\n')
+    munger_path = 'local_data/mungers/'+munger_name+'.txt'
+    print('Creating munger instance from '+munger_path)
+    m = sf.create_munger(munger_path)
 
     con = establish_connection()
     cur = con.cursor()
 
-
-
     # create cdf schema
-    print('Creating CDF schema')
-    CDF.create_common_data_format_schema(con, cur, 'cdf2')
+    cdf_schema=input('Enter name of CDF schema\n')
+    print('Creating CDF schema '+ cdf_schema)
+    CDF.create_common_data_format_schema(con, cur, cdf_schema)
     # load state context info into cdf schema
     print('Loading state context info into CDF schema') # *** takes a long time; why?
-    context.context_to_cdf(s,'cdf2',con,cur)
+    context.context_to_cdf(s,cdf_schema,con,cur)
     con.commit()
 
     print('Creating metafile instance')
@@ -188,6 +192,6 @@ if __name__ == '__main__':
 
 
     # load data from state's raw data schema to CDF schema
-    print('Loading data from df to CDF schema')
-    nc_export1.raw_records_to_cdf(df,'cdf2',con,cur)
+    print('Loading data from df table in schema '+ s.schema_name+ ' to CDF schema '+cdf_schema)
+    nc_export1.raw_records_to_cdf(df,cdf_schema,con,cur)
     print('Done!')

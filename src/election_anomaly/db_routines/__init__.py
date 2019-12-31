@@ -38,7 +38,7 @@ def query(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
     cur.execute(sql.SQL(q).format(*format_args),strs)
     con.commit()
-    if cur.pgresult_ptr:    # TODO is this the right attribute?
+    if cur.description:
         return cur.fetchall()
     else:
         return None

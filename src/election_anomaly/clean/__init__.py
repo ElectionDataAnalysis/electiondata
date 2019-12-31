@@ -3,7 +3,6 @@
 # TODO  create tmp directory programmatically
 
 import re
-import sys
 
 def get_text_from_file(fpath,encoding='utf8'):
     with open(fpath, mode='r',
