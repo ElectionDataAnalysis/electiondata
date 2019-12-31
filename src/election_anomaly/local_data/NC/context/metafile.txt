@@ -4,8 +4,8 @@
 	'file_date':'2018-10-19',
 	'download_date':'2019-10-15',
 	'note':'',
-	'column_block_parser':r'((?:[^\n\t]+\t+[^\n\t]+\t+[^\n\t]+\n)+)',
+	'column_block_parser_string':r'((?:[^\n\t]+\t+[^\n\t]+\t+[^\n\t]+\n)+)',
 	'type_map':{'number':'INT', 'text':'varchar', 'char':'varchar'},
-	'line_parser':r'(?P<field>[^\n\t]+)\t+(?P<type>[A-z]+)(?P<number>\(\d+\))?\t+(?P<comment>[^\n\t]+)\n'
+	'line_parser_string':r'(?P<field>[^\n\t]+)\t+(?P<type>[A-z]+)(?P<number>\(\d+\))?\t+(?P<comment>[^\n\t]+)'
 	}
 }

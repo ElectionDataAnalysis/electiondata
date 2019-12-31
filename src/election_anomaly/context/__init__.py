@@ -9,8 +9,8 @@ from munge_routines import upsert, format_type_for_insert
 import db_routines as dbr
 
 def context_to_cdf(s,schema,con,cur):
-    ''' Takes the info from the context_dictionary for the state s and inserts it into the db. Returns a dictionary mapping context_dictionary keys to the database keys '''
-    rs = [str(datetime.now())]
+    """Takes the info from the context_dictionary for the state s and inserts it into the db.
+    Returns a dictionary mapping context_dictionary keys to the database keys """
     out_d = {}
     with open('CDF_schema_def_info/tables.txt','r') as f:
         table_ds = eval(f.read())
@@ -18,6 +18,7 @@ def context_to_cdf(s,schema,con,cur):
 
     for d in table_ds:      # iterating over tables in the common data format schema
         t = d['tablename']      # e.g., t = 'ReportingUnit'
+        print('\tProcessing '+t+'s')
         out_d[t] = {}
         
     ## load info into the tables corresponding directly to the context_dictionary keys
@@ -65,7 +66,7 @@ def context_to_cdf(s,schema,con,cur):
                     upsert(schema,tt,dd,value_d,con,cur)[0]
 
             
-
+    con.commit()
     return(out_d)
 
 

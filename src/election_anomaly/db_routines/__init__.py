@@ -1,20 +1,19 @@
 #!/usr/bin/python3
 # db_routines/__init__.py
-# under construction
-# Creates a table with columns specified in arg3 file, assuming format from state arg1.
-# arg 1: a two-letter state election_anomaly
-# arg 2: table_name
-# arg 3: (a path to) a file containing metadata from that state
 
 import sys
 import re
+import psycopg2
+from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT # allows db creation, deletion
 from psycopg2 import sql
 from configparser import ConfigParser
 
-
 import clean as cl
 
-
+def establish_connection(db_name='postgres'):
+    params = config()
+    con = psycopg2.connect(**params)
+    return con
 
 def config(filename='local_data/database.ini', section='postgresql'):
     # create a parser
@@ -43,6 +42,31 @@ def query(q,sql_ids,strs,con,cur):
     else:
         return None
 
+def create_schema(name):
+    # connect and create schema for the state
+    con = establish_connection()
+    con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
+    cur = con.cursor()
+
+    # does schema already exist?
+    schema_exists = query('SELECT schema_name FROM information_schema.schemata WHERE schema_name = %s ',[],[name,],con,cur)
+    if schema_exists:
+        drop_existing = input('Schema '+name+ ' already exists. Any data in the schema will be lost if you delete and recreate. \nDelete and recreate? (y/n)?\n')
+        if drop_existing == 'y':
+            print('Dropping existing schema '+name+' and creating new, empty version')
+            query('DROP SCHEMA IF EXISTS {} CASCADE',[name],[],con,cur)
+            new_schema_created = True
+        else:
+            print('Using existing schema '+name)
+            new_schema_created = False
+    else:
+        query('CREATE SCHEMA {}',[name],[],con,cur)
+        new_schema_created = True
+    if cur:
+        cur.close()
+    if con:
+        con.close()
+    return new_schema_created
 
 def file_to_sql_statement_list(fpath):
     with open(fpath,'r') as f:
@@ -65,9 +89,6 @@ def fill_enum_table(schema,table,filepath,con,cur):
         strs = [entry,]
         query(q,sql_ids,strs,con,cur)
     return
-
-
-    
 
 def create_table(df):   # *** modularize and use df.column_metadata
 ## clean the metadata file
