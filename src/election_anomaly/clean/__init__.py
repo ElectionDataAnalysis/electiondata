@@ -1,5 +1,7 @@
 #!usr/bin/python3
 
+# TODO  create tmp directory programmatically
+
 import re
 import sys
 
