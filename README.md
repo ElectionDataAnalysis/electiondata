@@ -1,6 +1,7 @@
 # results_analysis
-Documentation under construction
+_Documentation under construction_
 
+General note: the word 'state' includes also the District of Columbia and the five major US territories: Puerto Rico, American Samoa, the US Virgin Islands, the Northern Mariana Islands and Guam.
 ## Set-up
 ### Database
 You will need access to a postgresql database. Your login credentilals should be in `src/election_anomaly/local_data/database.ini`. Contents of that file should be:
@@ -18,16 +19,45 @@ Folders you will need in your local repo:
 `src/election_anomaly/local_data` holds your state-by-state data. Each state needs its own directory, e.g., `src/election_anomaly/local_data/NC` for North Carolina. Each state directory has three subfolders:
   * `data` for datafiles from the state
   * `meta` for metadata files from the state
-  * `context` for information about the state that cannot be read from the contents of the data and metadata files
-    * `BallotMeasureSelection.txt` 
-
-
+  * `context` for information about the state that cannot be read from the contents of the data and metadata files:
+    * `name.txt` the name of the state, e.g., 'North Carolina'
+    * `BallotMeasureSelection.txt` Python set, e.g., {'For','Against','Yes','No'}
+    * `remark.txt` String containing any notable information about the state and its data
+    * `datafile.txt` Python dictionary of datafiles, with attributes:
+      * `'encoding'`
+      * `'source_url'`
+      * `'file_date'`
+      * `'download_date'`
+      * `'note'`
+      * `'correction_query_list'` a list of any corrections needed in response to metadata errors
+    * `Election.txt` Python dictionary of elections, with attributes:
+      * `'ElectionType'`
+      * `'ReportingUnit'`
+      * `'StartDate'`
+      * `'EndDate'`
+      * `'ExternalIdentifiers'`
+    * `metafile.txt` Python dictionary of metafiles, with attributes:
+      * `'encoding'`
+      * `'source_url'`
+      * `'file_date'`
+      * `'download_date'`
+      * `'note'`
+      * `'column_block_parser_string'` Python regex to identify the block of lines in the metafile holding the relevant column definitions
+      * `'line_parser_string` Python regex to identify the column name, data type and column description within one line of the metafile
+      * `'type_map'` Python dictionary whose keys are datatype names from the file and whose values are datatype names for postgresql
+    * `Office.txt` Python dictionary of office names with attributes. Note that when datafiles are processed, lines relevant to offices **not** listed here will not be loaded into the common data format schema.
+      * `'ElectionDistrict'`
+      * `'ElectionDistrictType'` e.g., 'state-house' or 'congressional', following conventions in `CDF_schema_def_info/enumerations/ReportingUnitType.txt`
+      * `'ExternalIdentifiers'`
+    * `ReportingUnit.txt` Python dictionary of reporting units (usually geographical precincts, counties, etc., but could also be individual machines, adminstrative precincts, etc.), with attributes:
+      * `'ReportingUnitType'`
+      * `'ExternalIdentifiers'`
+     * `Party.txt` Python dictionary of political parties, with attributes:
+      * `'ExternalIdentifiers'`
+      
+### About ExternalIdentifiers
+(TODO)
 ## How to run the app
-
-`
-
-## docs folder
-The `docs` folder has documentation for local set-up of programs and packages that are likely to be useful for dev.
 
 # Code components
 
