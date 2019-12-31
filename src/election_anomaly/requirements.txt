@@ -1,4 +1,0 @@
-psycopg2
-flask
-numpy
-scipy

@@ -95,7 +95,7 @@ def create_table(df):   # *** modularize and use df.column_metadata
 
     return create_query, strs_create + strs_comment, sql_ids_create + sql_ids_comment
         
-def load_data(conn,cursor,state,df):      ## does this belong in app.py? *** might not need psycopg2 here then
+def load_data(conn,cursor,state,df):
 # write raw data to db
     ext = df.file_name.split('.')[-1]    # extension, determines format
     if ext == 'txt':
