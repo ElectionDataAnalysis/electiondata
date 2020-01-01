@@ -4,72 +4,63 @@
                     'enumerations':['IdentifierType'],
                     'other_element_refs':[],
                     'unique_constraints':[['ForeignId', 'IdentifierType_Id', 'OtherIdentifierType']], 	
-		'not_null_fields':['Value','ForeignId','IdentifierType_Id'],
-		'indices':[['Value','IdentifierType_Id','OtherIdentifierType']]
+		'not_null_fields':['Value','ForeignId','IdentifierType_Id']
 		},
                 {'tablename':'ReportingUnit',
                      'fields':[{'fieldname':'Name','datatype':'TEXT'}],
                      'enumerations':['ReportingUnitType','CountItemStatus'],
                      'other_element_refs':[],
                      'unique_constraints':[['Name']], 
-		     'not_null_fields':['ReportingUnitType_Id'],
-		     'indices':[['Name']]
+		     'not_null_fields':['ReportingUnitType_Id']
                 },
                 {'tablename':'Party',
                       'fields':[{'fieldname':'Name','datatype':'TEXT'}, {'fieldname':'Abbreviation','datatype':'TEXT'}],
                       'enumerations':[],
                       'other_element_refs':[],
                       'unique_constraints':[['Name']], 
-		     'not_null_fields':['Name'],
-		     'indices':[['Name']]
+		     'not_null_fields':['Name']
                 },
                 {'tablename':'Election',
                     'fields':[{'fieldname':'Name', 'datatype':'TEXT'}, {'fieldname':'EndDate','datatype':'DATE'}, {'fieldname':'StartDate','datatype':'DATE'}],
                     'enumerations':['ElectionType'],
                     'other_element_refs':[],
                     'unique_constraints':[['Name']], 
-		     'not_null_fields':['Name','StartDate','EndDate','ElectionType_Id'],
-		     'indices':[['Name']]
+		     'not_null_fields':['Name','StartDate','EndDate','ElectionType_Id']
                 },
                 {'tablename':'Office',
                      'fields':[{'fieldname':'Name','datatype':'TEXT'}, {'fieldname':'Description','datatype':'TEXT'}],
                      'enumerations':[],
                      'other_element_refs':[],
                      'unique_constraints':[['Name']], 
-		     'not_null_fields':['Name'],
-		     'indices':[['Name']]
+		     'not_null_fields':['Name']
                 },
                 {'tablename':'CandidateContest', 
                       'fields':[{'fieldname':'Name','datatype':'TEXT'}, {'fieldname':'VotesAllowed','datatype':'INTEGER'}, {'fieldname':'NumberElected','datatype':'INTEGER'}, {'fieldname':'NumberRunoff','datatype':'INTEGER'}],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'Office_Id','refers_to':'Office'}, {'fieldname':'PrimaryParty_Id','refers_to':'Party'}, {'fieldname':'ElectionDistrict_Id','refers_to':'ReportingUnit'}],
                       'unique_constraints':[['Name']], 
-		     'not_null_fields':['Name','VotesAllowed'],
-		     'indices':[['Name']]
+		     'not_null_fields':['Name','VotesAllowed']
                 },
                 {'tablename':'BallotMeasureContest', 
                       'fields':[{'fieldname':'Name','datatype':'TEXT'}],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'ElectionDistrict_Id', 'refers_to':'ReportingUnit'}],
                       'unique_constraints':[['Name']], 
-		     'not_null_fields':['Name'],
-		     'indices':[['Name']]
+		     'not_null_fields':['Name']
                 },
                 {'tablename':'BallotMeasureSelection',   # note: we don't enumerate the choices, though some kind of universal yes/no is tempting ***
                       'fields':[{'fieldname':'Selection','datatype':'TEXT'}],
                       'enumerations':[],
                       'other_element_refs':[],
                       'unique_constraints':[['Selection']], 
-		     'not_null_fields':['Selection'],
-		     'indices':[['Selection']]
+		     'not_null_fields':['Selection']
                 },
                 {'tablename':'Candidate',
                       'fields':[{'fieldname':'BallotName','datatype':'TEXT'}],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'Election_Id', 'refers_to':'Election'},{'fieldname':'Party_Id', 'refers_to':'Party'}],
                       'unique_constraints':[['BallotName','Election_Id','Party_Id']],
-			'not_null_fields':['BallotName'],
-		     'indices':[['BallotName']]
+			'not_null_fields':['BallotName']
                     },
                  {'tablename':'VoteCount',
                       'fields':[{'fieldname':'Count','datatype':'INTEGER'}],

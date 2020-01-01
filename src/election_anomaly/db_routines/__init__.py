@@ -53,8 +53,9 @@ def create_schema(name):
     if schema_exists:
         drop_existing = input('Schema '+name+ ' already exists. Any data in the schema will be lost if you delete and recreate. \nDelete and recreate? (y/n)?\n')
         if drop_existing == 'y':
-            print('Dropping existing schema '+name+' and creating new, empty version')
+            print('Dropping existing schema '+name)
             query('DROP SCHEMA IF EXISTS {} CASCADE',[name],[],con,cur)
+            print(' \tand creating new, empty version')
             query('CREATE SCHEMA {}', [name], [], con, cur)
             new_schema_created = True
             con.commit()

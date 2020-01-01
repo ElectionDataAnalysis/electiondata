@@ -53,11 +53,12 @@ def create_common_data_format_schema (con,cur,schema_name):
                 field_defs.append('CHECK ({'+str(ctr)+'} IS NOT NULL)')
                 format_args.append(fname)
                 ctr += 1
-        
-        # 'UNIQUE ("ForeignId", "IdentifierType_Id", "OtherIdentifierType")'
-                
+
             q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} (' + ','.join(field_defs) +');'
             dbr.query(q,format_args,[],con,cur)
+
+    q = 'CREATE UNIQUE INDEX "Name_index" ON {0}."ReportingUnit" ("Name")'
+    dbr.query(q,[schema_name],[],con,cur)
     return
 
 
