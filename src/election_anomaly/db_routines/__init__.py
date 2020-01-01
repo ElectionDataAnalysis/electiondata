@@ -10,8 +10,9 @@ from configparser import ConfigParser
 
 import clean as cl
 
-def establish_connection(db_name='postgres'):
-    params = config()
+db_ini = 'local_data/database.ini'
+def establish_connection(paramfile = db_ini,db_name='postgres'):
+    params = config(paramfile)
     con = psycopg2.connect(**params)
     return con
 
@@ -42,9 +43,9 @@ def query(q,sql_ids,strs,con,cur):
     else:
         return None
 
-def create_schema(name):
+def create_schema(name,db_ini_path=None):
     # connect and create schema for the state
-    con = establish_connection()
+    con = establish_connection(db_ini_path)
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     cur = con.cursor()
 
@@ -55,6 +56,7 @@ def create_schema(name):
         if drop_existing == 'y':
             print('Dropping existing schema '+name+' and creating new, empty version')
             query('DROP SCHEMA IF EXISTS {} CASCADE',[name],[],con,cur)
+            query('CREATE SCHEMA {}', [name], [], con, cur)
             new_schema_created = True
             con.commit()
         else:
@@ -142,3 +144,5 @@ def clean_meta_file(infile,outdir,s):       ## update or remove ***
         return "clean_meta_file: error, state not recognized"
         sys.exit()
 
+if __name__ == '__main__':
+    a = create_schema('cdf_nc','../local_data/database.ini')
