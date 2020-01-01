@@ -101,16 +101,15 @@ def full_process(state_abbr,path_to_state_dir,cdf_schema_name,munger_path,df_ele
 
 if __name__ == '__main__':
 
-    # from munge_routines import nc_export1
-    # instantiate state of XX
     abbr = input('Enter two-character abbreviation for your state/district/territory\n')
     cdf_schema=input('Enter name of CDF schema\n')
 
+    default = 'nc_export1'
+    munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
+
+
     s = sf.create_state(abbr,'local_data/'+abbr)
 
-    # instantiate munger
-
-    munger_name = input('Enter name of desired munger\n')
     munger_path = 'local_data/mungers/'+munger_name+'.txt'
     exec('from munge_routines import '+munger_name+ ' as mu')
 
