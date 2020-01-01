@@ -45,7 +45,7 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
     """ attempt to create munger-agnostic raw-to-cdf script; for now, nc_export1 stuff is hard-coded *** """
     # get id for IdentifierType 'other' if it was not passed as parameter
     if id_type_other_id == 0:
-        q = 'SELECT "Id" FROM {}."IdentifierType" WHERE txt = \'other\' '
+        q = 'SELECT "Id" FROM {}."IdentifierType" WHERE "Txt" = \'other\' '
     a = dbr.query(q,[cdf_schema],[],con,cur)
     if a:
         id_type_other_id = a[0][0]

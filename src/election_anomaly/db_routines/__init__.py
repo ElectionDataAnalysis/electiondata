@@ -32,6 +32,9 @@ def config(filename='local_data/database.ini', section='postgresql'):
 
     return db
 
+def query_as_string(q,sql_ids,strs,con,cur):
+    format_args = [sql.Identifier(a) for a in sql_ids]
+    return cur.mogrify(sql.SQL(q).format(*format_args),strs)
 
 def query(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
@@ -88,7 +91,7 @@ def fill_enum_table(schema,table,filepath,con,cur):
     with open(filepath, 'r') as f:
         entries = f.read().splitlines()
     for entry in entries:
-        q = 'INSERT INTO {0}.{1} ("txt") VALUES (%s)'
+        q = 'INSERT INTO {0}.{1} ("Txt") VALUES (%s)'
         sql_ids = [schema,table]
         strs = [entry,]
         query(q,sql_ids,strs,con,cur)

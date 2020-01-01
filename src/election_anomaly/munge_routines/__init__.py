@@ -71,8 +71,8 @@ def upsert(schema,table,table_d,value_d,con,cur,mode='no_dupes'):
 
 
 def format_type_for_insert(schema,table,txt,con,cur):
-    ''' schema.table must have a "txt" field. This function returns a (type_id, othertype_text) pair; for types in the enumeration, returns (type_id for the given txt, ""), while for other types returns (type_id for "other",txt)  '''
-    q = 'SELECT "Id" FROM {}.{} WHERE txt = %s'
+    ''' schema.table must have a "Txt" field. This function returns a (type_id, othertype_text) pair; for types in the enumeration, returns (type_id for the given txt, ""), while for other types returns (type_id for "other",txt)  '''
+    q = 'SELECT "Id" FROM {}.{} WHERE "Txt" = %s'
     a = dbr.query(q,[schema,table],[txt,],con,cur)
     if a:
         return([a[0][0],''])

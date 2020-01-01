@@ -17,16 +17,21 @@ def create_common_data_format_schema (con,cur,schema_name):
         dbr.query('CREATE SEQUENCE {}.id_seq;',[schema_name],[],con,cur) # TODO: hangs on recreate. Fix!
     
         # create and fill enumeration tables
+        print('\tCreating enumeration tables')
         enumeration_path = 'CDF_schema_def_info/enumerations/'
         for t in ['IdentifierType','CountItemStatus','ReportingUnitType','ElectionType','CountItemType']:
-            q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} ("Id" BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY,Txt TEXT UNIQUE NOT NULL); '
-            dbr.query(q,[schema_name,t],[],con,cur)
-            dbr.fill_enum_table(schema_name,t,enumeration_path + t + '.txt',con,cur)
+            q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} ("Id" BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY,"Txt" TEXT UNIQUE NOT NULL); '
+            dbr.query(q,[schema_name,t],[],con,cur) # note: UNIQUE in query automatically creates index.
+
+            dbr.fill_enum_table(schema_name,t,enumeration_path + t + '.txt',con,cur) # TODO document purpose or remove
+
     
         # create all other tables, in set order because of foreign keys
+        print('\tCreating other tables, from CDF_schema_def_info/tables.txt')
         with open('CDF_schema_def_info/tables.txt','r') as f:
             table_ds = eval(f.read())
         for d in table_ds:
+            print('Processing table '+ d['tablename'])
             field_defs = ['"Id" BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY']
             format_args = [schema_name,d['tablename']]
             ctr = 2     # counter to track sql.Identifiers
@@ -45,10 +50,6 @@ def create_common_data_format_schema (con,cur,schema_name):
                 format_args.append(other['fieldname'])
                 format_args.append(other['refers_to'])
                 ctr += 2
-            for f_list in d['unique_constraints']:
-                field_defs.append('UNIQUE ('+ ','.join([ '{' + str(ctr + f_list.index(f) ) + '}' for f in f_list]) +')')
-                format_args += f_list
-                ctr += len(f_list)
             for fname in d['not_null_fields']:
                 field_defs.append('CHECK ({'+str(ctr)+'} IS NOT NULL)')
                 format_args.append(fname)
@@ -57,8 +58,13 @@ def create_common_data_format_schema (con,cur,schema_name):
             q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} (' + ','.join(field_defs) +');'
             dbr.query(q,format_args,[],con,cur)
 
-    q = 'CREATE UNIQUE INDEX "Name_index" ON {0}."ReportingUnit" ("Name")'
-    dbr.query(q,[schema_name],[],con,cur)
+            # create unique indices
+            for f_list in d['unique_constraints']:
+                print('\tCreating index on '+str(f_list))
+                constraint_name = d['tablename']+'__'+'_'.join(f_list) + '_index'
+                [f_slots,f_sql_ids] = zip(*[ ['{'+str(index)+'}',value] for index,value in enumerate(f_list,3)])
+                q = 'CREATE UNIQUE INDEX {2} ON {0}.{1} ('+','.join(f_slots)+')'
+                dbr.query(q,[schema_name,d['tablename'],constraint_name]+list(f_sql_ids),[],con,cur)
     return
 
 
