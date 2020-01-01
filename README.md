@@ -77,3 +77,8 @@ Each state directory has three subfolders:
 
 ### Strings used as names and dictionary keys
 Each element (each election, candidate, reporting unit, etc.) has a name -- a character string used in the `name` field in the corresponding database table, and also used in the files in the `context`  folder as keys in python dictionaries containing more info about the element.
+
+For ReportingUnits, the naming convention is to list as much of the composing information as possible in the name of the element, using `;` as a separator. E.g., 
+ * `'North Carolina'` -- the state of NC
+ * `'North Carolina;Alamance County'` -- Alamance County, which is contained in North Carolina
+ * `'North Carolina;Alamance County;Precinct 12W'` -- Precinct 12W in Alamance County

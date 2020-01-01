@@ -5,7 +5,7 @@
 import sys
 import re
 from datetime import datetime
-from munge_routines import upsert, format_type_for_insert
+from munge_routines import upsert, format_type_for_insert, composing_from_reporting_unit_name
 import db_routines as dbr
 
 def context_to_cdf(s,schema,con,cur):
@@ -50,6 +50,10 @@ def context_to_cdf(s,schema,con,cur):
                             [id,other_txt] = format_type_for_insert(schema,'IdentifierType', external_id_key, con,cur)
                             q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s) ON CONFLICT DO NOTHING'   # will this cause errors to go unnoticed? ***
                             dbr.query(q,[schema],[upsert_id, s.context_dictionary[t][name_key]['ExternalIdentifiers'][external_id_key],id,other_txt],con,cur)
+                # for ReportingUnits, deduce and enter composing unit joins
+                if t == 'ReportingUnit':
+                    composing_from_reporting_unit_name(con,cur,schema,name_key,upsert_id)
+
             if t == 'Office':
                 ## need to process 'Office' after 'ReportingUnit', as Offices may create ReportingUnits as election districts *** check for this
 

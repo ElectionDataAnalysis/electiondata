@@ -4,7 +4,8 @@
 
 import re
 import db_routines as dbr
-from munge_routines import format_type_for_insert, id_and_name_from_external, upsert
+from munge_routines import format_type_for_insert, id_and_name_from_external, upsert,composing_from_reporting_unit_name
+
 from psycopg2 import sql
 
 
@@ -197,6 +198,10 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
                         if t == 'CandidateContest' or t == 'BallotMeasureContest':  # need to get ElectionDistrict_Id from contextual knowledge
                             value_d['ElectionDistrict_Id'] = ids_d['contest_reporting_unit_id']
                         cdf_id = upsert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
+
+                        # if newly inserted item is a ReportingUnit, insert all ComposingReportingUnit joins that can be deduced from the internal db name of the ReportingUnit
+                        if t == 'ReportingUnit':
+                            composing_from_reporting_unit_name(con,cur,cdf_schema,cdf_name,cdf_id)
             ids_d[t + '_Id'] = cdf_id
 
         # process Ballot Measures and Candidate Contests into CDF and capture ids into ids_d (depends on values in row):

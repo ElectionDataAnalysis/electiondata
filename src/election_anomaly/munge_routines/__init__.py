@@ -65,13 +65,34 @@ def upsert(schema,table,table_d,value_d,con,cur,mode='no_dupes'):
         bb = 1/0    # ***
         return("Error: multiple records found")
         
+def composing_from_reporting_unit_name(con,cur,cdf_schema,name,id=0):
+    # insert all ComposingReportingUnit joins that can be deduced from the internal db name of the ReportingUnit
+    # Use the ; convention to identify all parents
 
-
-
-
+    ru_d = {'fields':[{'fieldname':'Name','datatype':'TEXT'}],
+                     'enumerations':['ReportingUnitType','CountItemStatus'],
+                     'other_element_refs':[],
+                     'unique_constraints':[['Name']],
+		     'not_null_fields':['ReportingUnitType_Id']} # TODO avoid hard-coding this in various places
+    cruj_d = {'fields':[],
+                      'enumerations':[],
+                      'other_element_refs':[{'fieldname':'ParentReportingUnit_Id', 'refers_to':'ReportingUnit'}, {'fieldname':'ChildReportingUnit_Id', 'refers_to':'ReportingUnit'}],
+                      'unique_constraints':[['ParentReportingUnit_Id','ChildReportingUnit_Id']],
+		     'not_null_fields':['ParentReportingUnit_Id','ChildReportingUnit_Id']} # TODO avoid hard-coding this in various places
+    # if no id is passed, find id corresponding to name
+    if id ==0:
+        id = upsert(cdf_schema,'ReportingUnit', ru_d, {'Name': name}, con, cur)
+    chain = name.split(';')
+    for i in range(len(chain) - 1):
+        parent = ';'.join(chain[0:i])
+        parent_id = upsert(cdf_schema, 'ReportingUnit', ru_d, {'Name': parent}, con, cur)
+        upsert(cdf_schema, 'ComposingReportingUnitJoin', cruj_d,
+               {'ParentReportingUnit_Id': parent_id, 'ChildReportingUnit_Id': id}, con, cur)
 
 def format_type_for_insert(schema,table,txt,con,cur):
-    ''' schema.table must have a "Txt" field. This function returns a (type_id, othertype_text) pair; for types in the enumeration, returns (type_id for the given txt, ""), while for other types returns (type_id for "other",txt)  '''
+    """schema.table must have a "txt" field.
+    This function returns a (type_id, othertype_text) pair; for types in the enumeration, returns (type_id for the given txt, ""),
+    while for other types returns (type_id for "other",txt) """
     q = 'SELECT "Id" FROM {}.{} WHERE "Txt" = %s'
     a = dbr.query(q,[schema,table],[txt,],con,cur)
     if a:
