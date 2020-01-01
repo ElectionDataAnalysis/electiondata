@@ -100,9 +100,11 @@ def full_process(state_abbr,path_to_state_dir,cdf_schema_name,munger_path,df_ele
     return("<p>"+"</p><p>  ".join(rs))
 
 if __name__ == '__main__':
+    default = 'NC'
+    abbr = input('Enter two-character abbreviation for your state/district/territory (default is '+default+')\n') or default
 
-    abbr = input('Enter two-character abbreviation for your state/district/territory\n')
-    cdf_schema=input('Enter name of CDF schema\n')
+    default = 'cdf_nc'
+    cdf_schema=input('Enter name of CDF schema (default is '+default+')\n') or default
 
     default = 'nc_export1'
     munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
