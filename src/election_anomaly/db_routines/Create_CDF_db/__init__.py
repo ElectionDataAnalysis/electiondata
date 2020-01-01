@@ -14,7 +14,7 @@ def create_common_data_format_schema (con,cur,schema_name):
     new_schema_created = dbr.create_schema(schema_name)
     if new_schema_created:
         # create a sequence for unique id values across all tables
-        dbr.query('CREATE SEQUENCE {}.id_seq;',[schema_name],[],con,cur)
+        dbr.query('CREATE SEQUENCE {}.id_seq;',[schema_name],[],con,cur) # TODO: hangs on recreate. Fix!
     
         # create and fill enumeration tables
         enumeration_path = 'CDF_schema_def_info/enumerations/'

@@ -104,12 +104,9 @@ if __name__ == '__main__':
     # from munge_routines import nc_export1
     # instantiate state of XX
     abbr = input('Enter two-character abbreviation for your state/district/territory\n')
+    cdf_schema=input('Enter name of CDF schema\n')
+
     s = sf.create_state(abbr,'local_data/'+abbr)
-
-
-    dbr.create_schema(s.schema_name)
-    con = dbr.establish_connection()
-    cur = con.cursor()
 
     # instantiate munger
 
@@ -117,12 +114,17 @@ if __name__ == '__main__':
     munger_path = 'local_data/mungers/'+munger_name+'.txt'
     exec('from munge_routines import '+munger_name+ ' as mu')
 
+
+    dbr.create_schema(s.schema_name)
+    con = dbr.establish_connection()
+    cur = con.cursor()
+
+
     print('Creating munger instance from '+munger_path)
     m = sf.create_munger(munger_path)
 
 
     # create cdf schema
-    cdf_schema=input('Enter name of CDF schema\n')
     print('Creating CDF schema '+ cdf_schema)
     CDF.create_common_data_format_schema(con, cur, cdf_schema)
 
