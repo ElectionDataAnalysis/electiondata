@@ -4,14 +4,13 @@
 import sys
 import re
 import psycopg2
-from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT # allows db creation, deletion
+from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
 from configparser import ConfigParser
 
 import clean as cl
 
-db_ini = 'local_data/database.ini'
-def establish_connection(paramfile = db_ini,db_name='postgres'):
+def establish_connection(paramfile = 'local_data/database.ini',db_name='postgres'):
     params = config(paramfile)
     con = psycopg2.connect(**params)
     return con
@@ -43,9 +42,9 @@ def query(q,sql_ids,strs,con,cur):
     else:
         return None
 
-def create_schema(name,db_ini_path=None):
+def create_schema(name):
     # connect and create schema for the state
-    con = establish_connection(db_ini_path)
+    con = establish_connection()
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     cur = con.cursor()
 
