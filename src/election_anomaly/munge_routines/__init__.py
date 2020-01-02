@@ -15,7 +15,8 @@ def id_and_name_from_external (cdf_schema,table,external_name,identifiertype_id,
         return(None,None)
 
 
-def select_or_insert(schema, table, table_d, value_d, con, cur, mode='no_dupes'):
+
+def id_from_select_or_insert(schema, table, table_d, value_d, con, cur, mode='no_dupes'):
     ''' tables_d is a dict of table descriptions; value_d gives the values for the fields in the table (.e.g., value_d['Name'] = 'North Carolina;Alamance County'); return the upserted record. E.g., tables_d[table] = {'tablename':'ReportingUnit', 'fields':[{'fieldname':'Name','datatype':'TEXT'}],'enumerations':['ReportingUnitType','CountItemStatus'],'other_element_refs':[], 'unique_constraints':[['Name']],
     'not_null_fields':['ReportingUnitType_Id']
     modes with consequences: 'dupes_ok'
@@ -81,13 +82,13 @@ def composing_from_reporting_unit_name(con,cur,cdf_schema,name,id=0):
 		     'not_null_fields':['ParentReportingUnit_Id','ChildReportingUnit_Id']} # TODO avoid hard-coding this in various places
     # if no id is passed, find id corresponding to name
     if id ==0:
-        id = select_or_insert(cdf_schema, 'ReportingUnit', ru_d, {'Name': name}, con, cur)
+        id = id_from_select_or_insert(cdf_schema, 'ReportingUnit', ru_d, {'Name': name}, con, cur)
     chain = name.split(';')
     for i in range(len(chain) - 1):
         parent = ';'.join(chain[0:i])
-        parent_id = select_or_insert(cdf_schema, 'ReportingUnit', ru_d, {'Name': parent}, con, cur)
-        select_or_insert(cdf_schema, 'ComposingReportingUnitJoin', cruj_d,
-                         {'ParentReportingUnit_Id': parent_id, 'ChildReportingUnit_Id': id}, con, cur)
+        parent_id = id_from_select_or_insert(cdf_schema, 'ReportingUnit', ru_d, {'Name': parent}, con, cur)
+        id_from_select_or_insert(cdf_schema, 'ComposingReportingUnitJoin', cruj_d,
+                                 {'ParentReportingUnit_Id': parent_id, 'ChildReportingUnit_Id': id}, con, cur)
 
 def format_type_for_insert(schema,table,txt,con,cur):
     """schema.table must have a "txt" field.

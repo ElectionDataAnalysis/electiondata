@@ -61,7 +61,7 @@ def full_process(state_abbr,path_to_state_dir,cdf_schema_name,munger_path,df_ele
     df_name: e.g. 'General Election 2018-11-06','results_pct_20181106.txt'
     *** need df_election to be a key in the state's Election.txt file. """
     from munge_routines import nc_export1
-    from munge_routines import select_or_insert
+    from munge_routines import id_from_select_or_insert
     con = establish_connection()
     cur = con.cursor()
 
