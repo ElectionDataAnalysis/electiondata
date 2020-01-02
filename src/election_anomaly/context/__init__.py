@@ -28,7 +28,11 @@ def context_to_cdf(s,schema,con,cur):
                     value_d = {'Selection': bms}
                     upsert(schema, t, d, value_d, con, cur)
             else:
-                for name_key in s.context_dictionary[t]:   # e.g., name_key = 'North Carolina;Alamance County'
+                nk_list =  list(s.context_dictionary[t])
+                for name_key in nk_list:   # e.g., name_key = 'North Carolina;Alamance County'
+                    # track progress
+                    if nk_list.index(name_key) % 100 == 0:   # for every hundredth item
+                        print('\t\tProcessing '+ name_key+', item number '+str(nk_list.index(name_key)))
                     ## insert the record into the db
                     value_d = {'Name':name_key}
                     for f in d['fields']:
