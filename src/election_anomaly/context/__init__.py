@@ -13,11 +13,11 @@ def context_to_cdf(s,schema,con,cur):
     Returns a dictionary mapping context_dictionary keys to the database keys """
     out_d = {}
     with open('CDF_schema_def_info/tables.txt','r') as f:
-        table_ds = eval(f.read())
+        table_def_list = eval(f.read())
         
 
-    for d in table_ds:      # iterating over tables in the common data format schema
-        t = d['tablename']      # e.g., t = 'ReportingUnit'
+    for table_def in table_def_list:      # iterating over tables in the common data format schema
+        t = table_def[0]      # e.g., t = 'ReportingUnit'
         print('\tProcessing '+t+'s')
         out_d[t] = {}
         
@@ -26,7 +26,7 @@ def context_to_cdf(s,schema,con,cur):
             if t == 'BallotMeasureSelection':   # note: s.context_dictionary['BallotMeasureSelection'] is a set not a dict
                 for bms in s.context_dictionary['BallotMeasureSelection']:
                     value_d = {'Selection': bms}
-                    id_from_select_or_insert(schema, t, d, value_d, con, cur)
+                    id_from_select_or_insert(schema, t, table_def[1], value_d, con, cur) # table_def[1] is a dict e.g. {'fields':[],....
             else:
                 nk_list =  list(s.context_dictionary[t])
                 for name_key in nk_list:   # e.g., name_key = 'North Carolina;Alamance County'
@@ -35,15 +35,15 @@ def context_to_cdf(s,schema,con,cur):
                         print('\t\tProcessing '+ name_key+', item number '+str(nk_list.index(name_key)))
                     ## insert the record into the db
                     value_d = {'Name':name_key}
-                    for f in d['fields']:
+                    for f in table_def[1]['fields']:
                         if f['fieldname'] in s.context_dictionary[t][name_key].keys():
                             value_d[f['fieldname']] = s.context_dictionary[t][name_key][ f['fieldname'] ]
-                    for e in d['enumerations']:
+                    for e in table_def[1]['enumerations']:
                         if e in s.context_dictionary[t][name_key].keys():
                             [id,other_txt] = format_type_for_insert(schema,e, s.context_dictionary[t][name_key][e], con,cur)
                             value_d[e+'_Id'] = id
                             value_d['Other'+e] = other_txt
-                    upsert_id = id_from_select_or_insert(schema, t, d, value_d, con, cur)[0]
+                    upsert_id = id_from_select_or_insert(schema, t, table_def[1], value_d, con, cur)[0]
 
                     out_d[t][name_key] = upsert_id
 

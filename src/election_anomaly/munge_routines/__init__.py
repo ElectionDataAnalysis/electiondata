@@ -17,10 +17,10 @@ def id_and_name_from_external (cdf_schema,table,external_name,identifiertype_id,
 
 
 def id_from_select_or_insert(schema, table, table_d, value_d, con, cur, mode='no_dupes'):
-    ''' tables_d is a dict of table descriptions; value_d gives the values for the fields in the table (.e.g., value_d['Name'] = 'North Carolina;Alamance County'); return the upserted record. E.g., tables_d[table] = {'tablename':'ReportingUnit', 'fields':[{'fieldname':'Name','datatype':'TEXT'}],'enumerations':['ReportingUnitType','CountItemStatus'],'other_element_refs':[], 'unique_constraints':[['Name']],
+    """ tables_d is a dict of table descriptions; value_d gives the values for the fields in the table (.e.g., value_d['Name'] = 'North Carolina;Alamance County'); return the upserted record. E.g., tables_d[table] = {'tablename':'ReportingUnit', 'fields':[{'fieldname':'Name','datatype':'TEXT'}],'enumerations':['ReportingUnitType','CountItemStatus'],'other_element_refs':[], 'unique_constraints':[['Name']],
     'not_null_fields':['ReportingUnitType_Id']
     modes with consequences: 'dupes_ok'
-       } '''
+       } """
     
     f_nt = [  [ dd['fieldname'],dd['datatype']+' %s'] for  dd in table_d['fields']] + [ [e+'_Id','INT %s'] for e in table_d['enumerations']]+ [['Other'+e,'TEXT %s'] for e in table_d['enumerations']]+ [[dd['fieldname'],'INT %s'] for dd in table_d['other_element_refs']]    # name-type pairs for each field
     ### remove any fields missing from the value_d parameter
