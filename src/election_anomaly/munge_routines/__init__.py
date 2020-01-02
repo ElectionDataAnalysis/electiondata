@@ -162,7 +162,7 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
 
 
     # get rows from raw table
-    munger_raw_cols = mu.raw_cols
+    munger_raw_cols = mu.content_dictionary['raw_cols']
     raw_col_slots = ['{' + str(i + 2) + '}' for i in range(len(munger_raw_cols))]
     q = 'SELECT DISTINCT ' + ','.join(raw_col_slots) + ' FROM {0}.{1}'
     sql_ids = [df.state.schema_name, df.table_name] + [x[0] for x in munger_raw_cols]
@@ -170,13 +170,13 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
 
     # create dictionaries for processing data from rows. Not all CDF elements are included. E.g., 'Election' element is not filled from df rows, but from df.election
 
-    munger_counts_d = mu.counts_dictionary
+    munger_counts_d = mu.content_dictionary['counts_dictionary']
     # look up id,type pairs for each kind of count, add info to counts dictionary
     for ct,dic in munger_counts_d.items():
         text = dic['CountItemType']
         [dic['CountItemType_Id'], dic['OtherCountItemType']] = format_type_for_insert(cdf_schema, 'CountItemType',
                                                                   text, con, cur)
-    munger_fields_d = mu.fields_dictionary
+    munger_fields_d = mu.content_dictionary['fields_dictionary']
 
     for row in rows:
         for i in range(len(munger_raw_cols)):

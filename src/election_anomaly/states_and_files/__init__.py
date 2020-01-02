@@ -15,9 +15,9 @@ class State:
         self.context_dictionary=context_dictionary
 
 class Munger:
-    def __init__(self,name,query_from_raw):
+    def __init__(self,name,content_dictionary):
         self.name=name      # 'nc_export1'
-        self.query_from_raw= query_from_raw    # dictionary of queries of the db of raw data; each querymust have exactly two slots for state.schema and datafile.table_name
+        self.content_dictionary= content_dictionary    # dictionary of queries of the db of raw data; each querymust have exactly two slots for state.schema and datafile.table_name
 
 class FileFromState:
     def __init__(self,state,file_name,encoding,source_url,file_date,download_date,note):
@@ -75,7 +75,7 @@ def parse_line(mf,line):    # TODO flag unparsable lines
 def create_munger(file_path):   # file should contain all munger info in a dictionary
     with open(file_path,'r') as f:
         d = eval(f.read())
-    return(Munger(d['name'],d['query_from_raw']))
+    return(Munger(d['name'],d['content_dictionary']))
 
 def create_state(abbr,path_to_state_dir):
     '''abbr is the capitalized two-letter postal election_anomaly for the state, district or territory'''

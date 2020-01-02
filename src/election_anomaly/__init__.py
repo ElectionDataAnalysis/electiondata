@@ -9,6 +9,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '.'))
 
 
 import db_routines as dbr
+import munge_routines as mr
 from db_routines import Create_CDF_db as CDF
 import states_and_files as sf
 import context
@@ -113,7 +114,9 @@ if __name__ == '__main__':
     s = sf.create_state(abbr,'local_data/'+abbr)
 
     munger_path = 'local_data/mungers/'+munger_name+'.txt'
-    exec('from munge_routines import '+munger_name+ ' as mu')
+#    exec('from munge_routines import '+munger_name+ ' as mu')
+    print('Creating munger instance from '+munger_path)
+    m = sf.create_munger(munger_path)
 
 
     dbr.create_schema(s.schema_name)
@@ -121,8 +124,6 @@ if __name__ == '__main__':
     cur = con.cursor()
 
 
-    print('Creating munger instance from '+munger_path)
-    m = sf.create_munger(munger_path)
 
 
     # create cdf schema
@@ -148,5 +149,5 @@ if __name__ == '__main__':
 
 
     print('Loading data from df table\n\tin schema '+ s.schema_name+ '\n\tto CDF schema '+cdf_schema+'\n\tusing munger '+munger_name)
-    mu.raw_records_to_cdf(df,cdf_schema,con,cur)
+    mr.raw_records_to_cdf(df,m,cdf_schema,con,cur)
     print('Done!')
