@@ -1,13 +1,76 @@
 {'name':'nc_export1',
-'query_from_raw':{
-	'Election':'SELECT DISTINCT Election_Date FROM {}.{}',
+'query_from_raw': # TODO: is this used?
+	{'Election':'SELECT DISTINCT Election_Date FROM {}.{}',
 	'ReportingUnit;county':'SELECT DISTINCT County FROM {}.{}',
 	'Party':'SELECT DISTINCT Choice_Party FROM {}.{}',
 	'ReportingUnit;precinct':'SELECT DISTINCT CONCAT(County,\';\',Precinct) FROM {}.{} WHERE Real_Precinct = \'Y\'',
 	'ReportingUnit;other':'SELECT DISTINCT CONCAT(County,\';\',Precinct) FROM {}.{} WHERE Real_Precinct != \'Y\'',
 	'Office':'SELECT DISTINCT Contest_Name FROM {}.{} WHERE Choice != \'Against\' AND Choice != \'For\' AND Choice != \'Yes\' AND Choice != \'No\' '
 		},
-'record_query':{}
+	raw_cols :[['county','TEXT'], ['election_date','DATE'], ['precinct','TEXT'], ['contest_type','TEXT'],['contest_name','TEXT'],
+                ['vote_for','INT'], ['choice','TEXT'], ['choice_party','TEXT'], ['vote_for','INT'],
+                ['election_day','INT'], ['one_stop','INT'], ['absentee_by_mail','INT'], ['provisional','INT'],
+                ['total_votes','INT'], ['real_precinct','TEXT']],
+    'counts_dictionary':{'election_day': {'CountItemType': 'election-day'}, 'one_stop': {'CountItemType': 'early'},
+              'absentee_by_mail': {'CountItemType': 'absentee-mail'}, 'provisional': {'CountItemType': 'provisional'},
+              'total_votes': {'CountItemType': 'total'}},
+    'fields_dictionary':{'Office':[
+        {'ExternalIdentifier':'contest_name',
+        'InternalNameField':'Name',
+        'Enumerations':{},
+         'OtherFields':{},
+        'Condition':'True'}
+    ],
+    'ReportingUnit': [        ## note: conditions should be mutually exclusive
+        {'ExternalIdentifier': 'county + \';\' + precinct',
+         'InternalNameField': 'Name',
+         'Enumerations':{'ReportingUnitType': 'precinct'},
+         'OtherFields':{},
+         'Condition': 'real_precinct == \'Y\''},
+        {'ExternalIdentifier': 'county + \';\' + precinct',
+         'InternalNameField': 'Name',
+         'Enumerations':{'ReportingUnitType': 'other;unknown'},
+         'OtherFields':{},
+         'Condition': 'real_precinct != \'Y\''}
+    ],
+    'Party':[
+        {'ExternalIdentifier':'choice_party',
+        'InternalNameField':'Name',
+        'Enumerations':{},
+         'OtherFields': {},
+         'Condition':'True'}
+    ],
+        'Candidate': [
+            {'ExternalIdentifier': 'choice',
+             'InternalNameField': 'Name',
+             'Enumerations': {},
+             'OtherFields': { 'Party_Id': 'ids_d["Party_Id"]'},
+             # don't include fields defined from external context, such as the ElectionDistrict_Id
+             'Condition': 'choice not in ballot_measure_selections.keys()'}
+        ],
+
+        'CandidateContest':[
+        {'ExternalIdentifier':'contest_name',
+        'InternalNameField':'Name',
+        'Enumerations':{},
+         'OtherFields':{'VotesAllowed':'vote_for','Office_Id':'ids_d["Office_Id"]'},    # don't include fields defined from external context, such as the ElectionDistrict_Id
+        'Condition':'choice not in ballot_measure_selections.keys()'}
+    ],
+    'BallotMeasureContest':[
+        {'ExternalIdentifier':'contest_name',
+         'InternalNameField': 'Name',
+         'Enumerations':{},
+         'OtherFields':{'ElectionDistrict_Id':'ids_d["state"]'},
+        'Condition':'choice in ballot_measure_selections.keys()'}    # Because towns are split between counties, default all ballot measure contests to state
+    ],
+    'BallotMeasureSelection':[
+        {'ExternalIdentifier':'choice',
+        'InternalNameField':'Selection',
+        'Enumerations':{},
+        'OtherFields':{},
+         'Condition':'choice in [\'Yes\',\'No\',\'For\',\'Against\']'}
+    ]
+    }
 }
 
 

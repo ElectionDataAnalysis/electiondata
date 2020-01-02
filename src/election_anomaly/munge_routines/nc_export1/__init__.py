@@ -6,13 +6,8 @@ import re
 import db_routines as dbr
 from munge_routines import format_type_for_insert, id_and_name_from_external, id_from_select_or_insert,composing_from_reporting_unit_name
 
-from psycopg2 import sql
-
-
-## create external identifier / nc_export1 pairs of offices dictionary
-
 def office_key(state_name,contest_name,term_string):
-    
+    """create external identifier / nc_export1 pairs of offices dictionary"""
     p_congressional = re.compile('^US HOUSE OF REPRESENTATIVES DISTRICT (?P<district>[\d])+$')
     m = p_congressional.search(contest_name)
     if m:
@@ -20,11 +15,9 @@ def office_key(state_name,contest_name,term_string):
     
     else:
         return('no match')
-    
-
-## given key, add external identifier to dictionary for certain offices
 
 def add_ei(office_d):
+    """given key, add external identifier to dictionary for certain offices"""
     parse_d = {'General Assembly;House of Representatives':{'name':'NC HOUSE OF REPRESENTATIVES DISTRICT ','district_number_parser':re.compile(';District (?P<district_number>\d+)'),'digits':3},
             'General Assembly;Senate':{'name':'NC STATE SENATE DISTRICT ','district_number_parser':re.compile(';District (?P<district_number>\d+)'),'digits':2},
              'US Congress;House of Representatives':{'name':'US HOUSE OF REPRESENTATIVES DISTRICT ','district_number_parser':re.compile(';District (?P<district_number>\d+)'),'digits':2}}

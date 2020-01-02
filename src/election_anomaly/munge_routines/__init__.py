@@ -116,5 +116,169 @@ def format_type_for_insert(schema,table,txt,con,cur):
         a = dbr.query(q,[schema,table],['other',],con,cur)
         return([a[0][0],txt])
 
+def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
+    """ attempt to create munger-agnostic raw-to-cdf script; ***
+    df is datafile, mu is munger """
+    # get id for IdentifierType 'other' if it was not passed as parameter
+    if id_type_other_id == 0:
+        q = 'SELECT "Id" FROM {}."IdentifierType" WHERE "Txt" = \'other\' '
+    a = dbr.query(q,[cdf_schema],[],con,cur)
+    if a:
+        id_type_other_id = a[0][0]
+    else:
+        bbb = 1 / 0  # TODO
+    with open('CDF_schema_def_info/tables.txt', 'r') as f:
+        table_def_list = eval(f.read())
+    tables_d = {}
+#    for ddd in table_ds:
+    for table_def in table_def_list:
+        tables_d[table_def[0]] = table_def[1]
+#        tables_d[ddd.pop('tablename')] = ddd
+
+    # get id for  election
+    [electiontype_id, otherelectiontype] = format_type_for_insert(cdf_schema, 'ElectionType',
+                                                                  df.state.context_dictionary['Election'][
+                                                                      df.election]['ElectionType'], con, cur)
+    value_d = {'Name': df.election, 'EndDate': df.state.context_dictionary['Election'][df.election]['EndDate'],
+               'StartDate': df.state.context_dictionary['Election'][df.election]['StartDate'],
+               'OtherElectionType': otherelectiontype, 'ElectionType_Id': electiontype_id}
+    election_id = id_from_select_or_insert(cdf_schema, 'Election', tables_d['Election'], value_d, con, cur)[0]
+
+    # if state_id is not passed as parameter, select-or-insert state, get id (default Reporting Unit for ballot questions)
+    if state_id == 0:
+        t = 'ReportingUnit'
+        [reportingunittype_id, otherreportingunittype] = format_type_for_insert(cdf_schema, 'ReportingUnitType',
+                                                                                'state', con, cur)
+        value_d = {'Name': df.state.name, 'ReportingUnitType_Id': reportingunittype_id,
+                   'OtherReportingUnitType': otherreportingunittype}
+        state_id = id_from_select_or_insert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
+
+    # store state_id and election_id for later use
+    ids_d = {'state': state_id, 'Election_Id': election_id}  # to hold ids of found items for later reference
+
+    # get BallotMeasureSelection dict (Selection:Id) from cdf schema
+    a = dbr.query('SELECT "Selection", "Id" FROM {0}."BallotMeasureSelection"',[cdf_schema],[],con,cur)
+    ballot_measure_selections = dict(a)
+
+
+    # get rows from raw table
+    munger_raw_cols = mu.raw_cols
+    raw_col_slots = ['{' + str(i + 2) + '}' for i in range(len(munger_raw_cols))]
+    q = 'SELECT DISTINCT ' + ','.join(raw_col_slots) + ' FROM {0}.{1}'
+    sql_ids = [df.state.schema_name, df.table_name] + [x[0] for x in munger_raw_cols]
+    rows = dbr.query(q,sql_ids,[],con,cur)
+
+    # create dictionaries for processing data from rows. Not all CDF elements are included. E.g., 'Election' element is not filled from df rows, but from df.election
+
+    munger_counts_d = mu.counts_dictionary
+    # look up id,type pairs for each kind of count, add info to counts dictionary
+    for ct,dic in munger_counts_d.items():
+        text = dic['CountItemType']
+        [dic['CountItemType_Id'], dic['OtherCountItemType']] = format_type_for_insert(cdf_schema, 'CountItemType',
+                                                                  text, con, cur)
+    munger_fields_d = mu.fields_dictionary
+
+    for row in rows:
+        for i in range(len(munger_raw_cols)):
+            if row[i]!= 0 and not row[i]:   # if db query returned None     # awkward ***
+                exec(munger_raw_cols[i][0] + ' = "" ')
+            elif munger_raw_cols[i][1] == 'INT':
+                exec(munger_raw_cols[i][0] + ' = ' + str(row[i]) )
+            else:   # *** DATE and TEXT handled identically
+                exec(munger_raw_cols[i][0] + ' = "'+ row[i] +'"')
+
+        # Process all straight-forward elements into cdf and capture id in ids_d
+        for t in ['ReportingUnit', 'Party']:  # TODO list is munger-dependent
+            for item in munger_fields_d[t]:  # for each case (most elts have only one case, but ReportingUnit has more) e.g. item = {'ExternalIdentifier': county,
+                # 'Enumerations':{'ReportingUnitType': 'county'}}.
+                # Cases must be mutually exclusive and exhaustive
+                # following if must allow '' as a value (e.g., because Party can be the empty string), but not None or []
+                if (eval(item['ExternalIdentifier']) == ''  or eval(item['ExternalIdentifier']))  and eval(item['Condition']):
+                    # get internal db name and id for ExternalIdentifier from the info in the df row ...
+                    [cdf_id, cdf_name] = id_and_name_from_external(cdf_schema, t,
+                                                                   eval(item['ExternalIdentifier']),
+                                                                   id_type_other_id, 'nc_export1', con, cur,
+                                                                   item[
+                                                                       'InternalNameField'])  # cdf_name may be unnecessary ***
+                    # ... or if no such is found in db, insert it!
+                    if [cdf_id, cdf_name] == [None, None]:
+                        cdf_name = eval(item['ExternalIdentifier'])
+                        value_d = {item['InternalNameField']: cdf_name}  # usually 'Name' but not always
+                        for e in item['Enumerations'].keys():  # e.g. e = 'ReportingUnitType'
+                            [value_d[e + '_Id'], value_d['Other' + e]] = format_type_for_insert(cdf_schema, e,
+                                                                                               item[
+                                                                                                   'Enumerations'][
+                                                                                                   e], con, cur)
+                        for f in item['OtherFields'].keys():
+                            value_d[f] = eval(item['OtherFields'][f])
+                        if t == 'CandidateContest' or t == 'BallotMeasureContest':  # need to get ElectionDistrict_Id from contextual knowledge
+                            value_d['ElectionDistrict_Id'] = ids_d['contest_reporting_unit_id']
+                        cdf_id = id_from_select_or_insert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
+
+                        # if newly inserted item is a ReportingUnit, insert all ComposingReportingUnit joins that can be deduced from the internal db name of the ReportingUnit
+                        if t == 'ReportingUnit':
+                            composing_from_reporting_unit_name(con,cur,cdf_schema,cdf_name,cdf_id)
+            ids_d[t + '_Id'] = cdf_id
+
+        # process Ballot Measures and Candidate Contests into CDF and capture ids into ids_d (depends on values in row):
+        selection = eval(munger_fields_d['BallotMeasureSelection'][0]['ExternalIdentifier'])
+        # *** cond = munger_fields_d['BallotMeasureSelection']['ExternalIdentifier'] +' in ballot_measure_selections.keys()'
+        if selection in ballot_measure_selections.keys() :     # if selection is a Ballot Measure selection, assume contest is a Ballot Measure
+            ids_d['selection_id'] = ballot_measure_selections[selection]
+            # fill BallotMeasureContest
+            value_d = {'Name':eval(munger_fields_d['BallotMeasureContest'][0]['ExternalIdentifier']),'ElectionDistrict_Id':state_id}  # all ballot measures are assumed to be state-level ***
+            ids_d['contest_id'] = id_from_select_or_insert(cdf_schema, 'BallotMeasureContest', tables_d['BallotMeasureContest'], value_d, con, cur)[0]
+            # fill ElectionContestJoin
+            value_d = {'Election_Id':election_id,'Contest_Id':ids_d['contest_id']}
+            id_from_select_or_insert(cdf_schema, 'ElectionContestJoin', tables_d['ElectionContestJoin'], value_d, con, cur)
+            # fill BallotMeasureContestSelectionJoin ***
+            value_d = {'BallotMeasureContest_Id':ids_d['contest_id'],'BallotMeasureSelection_Id':ids_d['selection_id']}
+            id_from_select_or_insert(cdf_schema, 'BallotMeasureContestSelectionJoin', tables_d['BallotMeasureContestSelectionJoin'], value_d, con, cur)
+
+        else:       # if not a Ballot Measure (i.e., if a Candidate Contest)
+            office_name = eval(munger_fields_d['Office'][0]['ExternalIdentifier'])
+            q = 'SELECT f."Id", f."Name" FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}."Office" AS f ON e."ForeignId" = f."Id" WHERE e."IdentifierType_Id" = %s AND e."Value" =  %s AND e."OtherIdentifierType" = \'nc_export1\';'
+            a = dbr.query(q,[cdf_schema],[id_type_other_id, office_name],con,cur)
+            if not a: # if Office is not already associated to the munger in the db (from state's context_dictionary, for example), skip this row
+               continue
+            ids_d['Office_Id'] = a[0][0]
+
+            # Find Id for ReportingUnit for contest via context_dictionary['Office']
+            # find reporting unit associated to contest (not reporting unit associated to df row)
+            election_district_name = df.state.context_dictionary['Office'][a[0][1]]['ElectionDistrict']
+            q = 'SELECT "Id" FROM {0}."ReportingUnit" WHERE "Name" = %s'
+            b = dbr.query(q,[cdf_schema],[election_district_name,],con,cur)
+            election_district_id = b[0][0]
+
+            # insert into CandidateContest table
+            votes_allowed = eval(munger_fields_d['CandidateContest'][0]['OtherFields']['VotesAllowed']) # TODO munger-dependent, misses other fields e.g. NumberElected
+            value_d = {'Name':election_district_name,'ElectionDistrict_Id':election_district_id,'Office_Id':ids_d['Office_Id'],'VotesAllowed':votes_allowed}
+            ids_d['contest_id'] = id_from_select_or_insert(cdf_schema, 'CandidateContest', tables_d['CandidateContest'], value_d, con, cur)[0]
+
+            # insert into Candidate table
+            ballot_name = eval(munger_fields_d['Candidate'][0]['ExternalIdentifier'])
+            value_d = {'BallotName':ballot_name,'Election_Id':election_id,'Party_Id':ids_d['Party_Id']}
+            ids_d['Candidate_Id'] = id_from_select_or_insert(cdf_schema, 'Candidate', tables_d['Candidate'], value_d, con, cur)[0]
+
+            # insert into CandidateSelection
+            value_d = {'Candidate_Id':ids_d['Candidate_Id']}
+            ids_d['selection_id'] = id_from_select_or_insert(cdf_schema, 'CandidateSelection', tables_d['CandidateSelection'], value_d, con, cur)[0]
+
+            # create record in CandidateContestSelectionJoin
+            value_d = {'CandidateContest_Id':ids_d['contest_id'],'CandidateSelection_Id': ids_d['selection_id']}
+            id_from_select_or_insert(cdf_schema, 'CandidateContestSelectionJoin', tables_d['CandidateContestSelectionJoin'], value_d, con, cur)
+
+        # process vote counts in row
+        for ct,dic in munger_counts_d.items():
+            value_d = {'Count':eval(ct),'ReportingUnit_Id':ids_d['ReportingUnit_Id'],'CountItemType_Id': dic['CountItemType_Id'],'OtherCountItemType':dic['OtherCountItemType']}
+            # TODO dupes are a problem only when contest & reporting unit are specified.
+            ids_d['VoteCount_Id']=id_from_select_or_insert(cdf_schema, 'VoteCount', tables_d['VoteCount'], value_d, con, cur, 'dupes_ok')[0]
+
+            # fill SelectionReportingUnitVoteCountJoin
+            value_d = {'Selection_Id':ids_d['selection_id'],'Election_Id':ids_d['Election_Id'],'ReportingUnit_Id':ids_d['ReportingUnit_Id'],'VoteCount_Id':ids_d['VoteCount_Id']}
+            id_from_select_or_insert(cdf_schema, 'SelectionReportingUnitVoteCountJoin', tables_d['SelectionReportingUnitVoteCountJoin'], value_d, con, cur)
+
+        con.commit()
+    return str(ids_d)
 
 
