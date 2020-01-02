@@ -31,8 +31,8 @@ def context_to_cdf(s,schema,con,cur):
                 nk_list =  list(s.context_dictionary[t])
                 for name_key in nk_list:   # e.g., name_key = 'North Carolina;Alamance County'
                     # track progress
-                    if nk_list.index(name_key) % 100 == 0:   # for every hundredth item
-                        print('\t\tProcessing '+ name_key+', item number '+str(nk_list.index(name_key)))
+                    if nk_list.index(name_key) % 500 == 0:   # for every five-hundredth item
+                        print('\t\tProcessing item number '+str(nk_list.index(name_key))+': '+ name_key+', )
                     ## insert the record into the db
                     value_d = {'Name':name_key}
                     for f in table_def[1]['fields']:

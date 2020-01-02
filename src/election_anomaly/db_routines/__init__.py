@@ -34,7 +34,7 @@ def config(filename='local_data/database.ini', section='postgresql'):
 
 def query_as_string(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
-    return cur.mogrify(sql.SQL(q).format(*format_args),strs)
+    return cur.mogrify(sql.SQL(q).format(*format_args),strs).decode("utf-8")
 
 def query(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
