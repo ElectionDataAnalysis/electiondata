@@ -5,7 +5,7 @@
 import sys
 import re
 from datetime import datetime
-from munge_routines import upsert, format_type_for_insert, composing_from_reporting_unit_name
+from munge_routines import select_or_insert, format_type_for_insert, composing_from_reporting_unit_name
 import db_routines as dbr
 
 def context_to_cdf(s,schema,con,cur):
@@ -26,7 +26,7 @@ def context_to_cdf(s,schema,con,cur):
             if t == 'BallotMeasureSelection':   # note: s.context_dictionary['BallotMeasureSelection'] is a set not a dict
                 for bms in s.context_dictionary['BallotMeasureSelection']:
                     value_d = {'Selection': bms}
-                    upsert(schema, t, d, value_d, con, cur)
+                    select_or_insert(schema, t, d, value_d, con, cur)
             else:
                 nk_list =  list(s.context_dictionary[t])
                 for name_key in nk_list:   # e.g., name_key = 'North Carolina;Alamance County'
@@ -43,7 +43,7 @@ def context_to_cdf(s,schema,con,cur):
                             [id,other_txt] = format_type_for_insert(schema,e, s.context_dictionary[t][name_key][e], con,cur)
                             value_d[e+'_Id'] = id
                             value_d['Other'+e] = other_txt
-                    upsert_id = upsert(schema,t,d,value_d,con,cur)[0]
+                    upsert_id = select_or_insert(schema, t, d, value_d, con, cur)[0]
 
                     out_d[t][name_key] = upsert_id
 
@@ -71,7 +71,7 @@ def context_to_cdf(s,schema,con,cur):
                         bb = 1/0 # ***
                     value_d = {'Name':s.context_dictionary['Office'][name_key]['ElectionDistrict'],'ReportingUnitType_Id':id,'OtherReportingUnitType':other_txt}
                     dd = next( x for x in table_ds if x['tablename']=='ReportingUnit' )
-                    upsert(schema,tt,dd,value_d,con,cur)[0]
+                    select_or_insert(schema, tt, dd, value_d, con, cur)[0]
 
             
     con.commit()

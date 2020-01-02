@@ -4,7 +4,7 @@
 
 import re
 import db_routines as dbr
-from munge_routines import format_type_for_insert, id_and_name_from_external, upsert,composing_from_reporting_unit_name
+from munge_routines import format_type_for_insert, id_and_name_from_external, select_or_insert,composing_from_reporting_unit_name
 
 from psycopg2 import sql
 
@@ -65,7 +65,7 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
     value_d = {'Name': df.election, 'EndDate': df.state.context_dictionary['Election'][df.election]['EndDate'],
                'StartDate': df.state.context_dictionary['Election'][df.election]['StartDate'],
                'OtherElectionType': otherelectiontype, 'ElectionType_Id': electiontype_id}
-    election_id = upsert(cdf_schema, 'Election', tables_d['Election'], value_d, con, cur)[0]
+    election_id = select_or_insert(cdf_schema, 'Election', tables_d['Election'], value_d, con, cur)[0]
 
     # if state_id is not passed as parameter, upsert state, get id (default Reporting Unit for ballot questions)
     if state_id == 0:
@@ -74,7 +74,7 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
                                                                                 'state', con, cur)
         value_d = {'Name': df.state.name, 'ReportingUnitType_Id': reportingunittype_id,
                    'OtherReportingUnitType': otherreportingunittype}
-        state_id = upsert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
+        state_id = select_or_insert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
 
     # store state_id and election_id for later use
     ids_d = {'state': state_id, 'Election_Id': election_id}  # to hold ids of found items for later reference
@@ -197,7 +197,7 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
                             value_d[f] = eval(item['OtherFields'][f])
                         if t == 'CandidateContest' or t == 'BallotMeasureContest':  # need to get ElectionDistrict_Id from contextual knowledge
                             value_d['ElectionDistrict_Id'] = ids_d['contest_reporting_unit_id']
-                        cdf_id = upsert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
+                        cdf_id = select_or_insert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
 
                         # if newly inserted item is a ReportingUnit, insert all ComposingReportingUnit joins that can be deduced from the internal db name of the ReportingUnit
                         if t == 'ReportingUnit':
@@ -211,13 +211,13 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
             ids_d['selection_id'] = ballot_measure_selections[selection]
             # fill BallotMeasureContest
             value_d = {'Name':eval(nc_export1_d['BallotMeasureContest'][0]['ExternalIdentifier']),'ElectionDistrict_Id':state_id}  # all ballot measures are assumed to be state-level ***
-            ids_d['contest_id'] = upsert(cdf_schema, 'BallotMeasureContest', tables_d['BallotMeasureContest'], value_d, con, cur)[0]
+            ids_d['contest_id'] = select_or_insert(cdf_schema, 'BallotMeasureContest', tables_d['BallotMeasureContest'], value_d, con, cur)[0]
             # fill ElectionContestJoin
             value_d = {'Election_Id':election_id,'Contest_Id':ids_d['contest_id']}
-            upsert(cdf_schema,'ElectionContestJoin', tables_d['ElectionContestJoin'], value_d, con, cur)
+            select_or_insert(cdf_schema, 'ElectionContestJoin', tables_d['ElectionContestJoin'], value_d, con, cur)
             # fill BallotMeasureContestSelectionJoin ***
             value_d = {'BallotMeasureContest_Id':ids_d['contest_id'],'BallotMeasureSelection_Id':ids_d['selection_id']}
-            upsert(cdf_schema, 'BallotMeasureContestSelectionJoin', tables_d['BallotMeasureContestSelectionJoin'], value_d, con, cur)
+            select_or_insert(cdf_schema, 'BallotMeasureContestSelectionJoin', tables_d['BallotMeasureContestSelectionJoin'], value_d, con, cur)
 
         else:       # if not a Ballot Measure (i.e., if a Candidate Contest)
             office_name = eval(nc_export1_d['Office'][0]['ExternalIdentifier'])
@@ -237,30 +237,30 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
             # insert into CandidateContest table
             votes_allowed = eval(nc_export1_d['CandidateContest'][0]['OtherFields']['VotesAllowed']) # *** munger-dependent, misses other fields e.g. NumberElected
             value_d = {'Name':election_district_name,'ElectionDistrict_Id':election_district_id,'Office_Id':ids_d['Office_Id'],'VotesAllowed':votes_allowed}
-            ids_d['contest_id'] = upsert(cdf_schema,'CandidateContest',tables_d['CandidateContest'],value_d,con,cur)[0]
+            ids_d['contest_id'] = select_or_insert(cdf_schema, 'CandidateContest', tables_d['CandidateContest'], value_d, con, cur)[0]
 
             # insert into Candidate table
             ballot_name = eval(nc_export1_d['Candidate'][0]['ExternalIdentifier'])
             value_d = {'BallotName':ballot_name,'Election_Id':election_id,'Party_Id':ids_d['Party_Id']}
-            ids_d['Candidate_Id'] = upsert(cdf_schema,'Candidate',tables_d['Candidate'],value_d,con,cur)[0]
+            ids_d['Candidate_Id'] = select_or_insert(cdf_schema, 'Candidate', tables_d['Candidate'], value_d, con, cur)[0]
 
             # insert into CandidateSelection
             value_d = {'Candidate_Id':ids_d['Candidate_Id']}
-            ids_d['selection_id'] = upsert(cdf_schema,'CandidateSelection',tables_d['CandidateSelection'],value_d,con,cur)[0]
+            ids_d['selection_id'] = select_or_insert(cdf_schema, 'CandidateSelection', tables_d['CandidateSelection'], value_d, con, cur)[0]
 
             # create record in CandidateContestSelectionJoin
             value_d = {'CandidateContest_Id':ids_d['contest_id'],'CandidateSelection_Id': ids_d['selection_id']}
-            upsert(cdf_schema, 'CandidateContestSelectionJoin', tables_d['CandidateContestSelectionJoin'], value_d, con, cur)
+            select_or_insert(cdf_schema, 'CandidateContestSelectionJoin', tables_d['CandidateContestSelectionJoin'], value_d, con, cur)
 
         # process vote counts in row
         for ct,dic in nc_export1_counts_d.items():
             value_d = {'Count':eval(ct),'ReportingUnit_Id':ids_d['ReportingUnit_Id'],'CountItemType_Id': dic['CountItemType_Id'],'OtherCountItemType':dic['OtherCountItemType']}
             # TODO dupes are a problem only when contest & reporting unit are specified.
-            ids_d['VoteCount_Id']=upsert(cdf_schema, 'VoteCount', tables_d['VoteCount'], value_d, con, cur,'dupes_ok')[0]
+            ids_d['VoteCount_Id']=select_or_insert(cdf_schema, 'VoteCount', tables_d['VoteCount'], value_d, con, cur, 'dupes_ok')[0]
 
             # fill SelectionReportingUnitVoteCountJoin
             value_d = {'Selection_Id':ids_d['selection_id'],'Election_Id':ids_d['Election_Id'],'ReportingUnit_Id':ids_d['ReportingUnit_Id'],'VoteCount_Id':ids_d['VoteCount_Id']}
-            upsert(cdf_schema, 'SelectionReportingUnitVoteCountJoin', tables_d['SelectionReportingUnitVoteCountJoin'], value_d, con, cur)
+            select_or_insert(cdf_schema, 'SelectionReportingUnitVoteCountJoin', tables_d['SelectionReportingUnitVoteCountJoin'], value_d, con, cur)
 
         con.commit()
     return str(ids_d)
@@ -288,7 +288,7 @@ def element_to_cdf (cdf_schema,t,munger_d,ids_d,id_type_other_id,con,cur):
                     value_d[f] = eval(item['OtherFields'][f])
                 if t == 'CandidateContest' or t == 'BallotMeasureContest':  # need to get ElectionDistrict_Id from contextual knowledge
                     value_d['ElectionDistrict_Id'] = ids_d['contest_reporting_unit_id']
-                cdf_id = upsert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
+                cdf_id = select_or_insert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
         ids_d[t + '_Id'] = cdf_id
         return(ids_d)
 
