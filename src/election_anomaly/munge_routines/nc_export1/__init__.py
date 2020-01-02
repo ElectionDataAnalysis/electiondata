@@ -53,10 +53,12 @@ def raw_records_to_cdf(df,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
     else:
         bbb = 1 / 0  # TODO
     with open('CDF_schema_def_info/tables.txt', 'r') as f:
-        table_ds = eval(f.read())
+        table_def_list = eval(f.read())
     tables_d = {}
-    for ddd in table_ds:
-        tables_d[ddd.pop('tablename')] = ddd
+#    for ddd in table_ds:
+    for table_def in table_def_list:
+        tables_d[table_def[0]] = table_def[1]
+#        tables_d[ddd.pop('tablename')] = ddd
 
     ## upsert election, get id
     [electiontype_id, otherelectiontype] = format_type_for_insert(cdf_schema, 'ElectionType',

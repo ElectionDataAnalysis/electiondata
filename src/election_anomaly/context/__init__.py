@@ -32,7 +32,7 @@ def context_to_cdf(s,schema,con,cur):
                 for name_key in nk_list:   # e.g., name_key = 'North Carolina;Alamance County'
                     # track progress
                     if nk_list.index(name_key) % 500 == 0:   # for every five-hundredth item
-                        print('\t\tProcessing item number '+str(nk_list.index(name_key))+': '+ name_key+', )
+                        print('\t\tProcessing item number '+str(nk_list.index(name_key))+': '+ name_key)
                     ## insert the record into the db
                     value_d = {'Name':name_key}
                     for f in table_def[1]['fields']:
@@ -54,9 +54,10 @@ def context_to_cdf(s,schema,con,cur):
                             [id,other_txt] = format_type_for_insert(schema,'IdentifierType', external_id_key, con,cur)
                             q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s) ON CONFLICT DO NOTHING'   # will this cause errors to go unnoticed? ***
                             dbr.query(q,[schema],[upsert_id, s.context_dictionary[t][name_key]['ExternalIdentifiers'][external_id_key],id,other_txt],con,cur)
-                # for ReportingUnits, deduce and enter composing unit joins
-                if t == 'ReportingUnit':
-                    composing_from_reporting_unit_name(con,cur,schema,name_key,upsert_id)
+
+                    # for ReportingUnits, deduce and enter composing unit joins
+                    if t == 'ReportingUnit':
+                        composing_from_reporting_unit_name(con,cur,schema,name_key,upsert_id)
 
             if t == 'Office':
                 ## need to process 'Office' after 'ReportingUnit', as Offices may create ReportingUnits as election districts *** check for this
@@ -70,7 +71,7 @@ def context_to_cdf(s,schema,con,cur):
                         print('Office '+ name_key +' has no associated ElectionDistrictType')
                         bb = 1/0 # ***
                     value_d = {'Name':s.context_dictionary['Office'][name_key]['ElectionDistrict'],'ReportingUnitType_Id':id,'OtherReportingUnitType':other_txt}
-                    dd = next( x for x in table_ds if x['tablename']=='ReportingUnit' )
+                    dd = next( x[1] for x in table_def_list if x[0]=='ReportingUnit' )
                     id_from_select_or_insert(schema, tt, dd, value_d, con, cur)[0]
 
             

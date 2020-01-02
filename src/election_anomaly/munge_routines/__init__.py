@@ -52,7 +52,7 @@ def id_from_select_only(schema, table, table_d, value_d, con, cur, mode='no_dupe
     sql_ids = [schema,table]   +f_names + cf_names
     strs = f_vals
     a = dbr.query(q,sql_ids,strs,con,cur)
-    if len(a) != 0: # if nothing returned
+    if len(a) == 0: # if nothing returned
         report_error('No record found for this query:\n\t'+dbr.query_as_string(q,sql_ids,strs,con,cur))
         return 0
     elif len(a) >1 and mode == 'no_dupes':
