@@ -110,6 +110,9 @@ if __name__ == '__main__':
     default = 'nc_export1'
     munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
 
+    default = 'results_pct_20181106.txt'
+    df_name = input('Enter name of datafile (default is '+default+')\n') or default
+
 
     s = sf.create_state(abbr,'../local_data/'+abbr)
 
@@ -140,7 +143,7 @@ if __name__ == '__main__':
     mf = sf.create_metafile(s,'layout_results_pct.txt')
 
     print('Creating datafile instance')
-    df = sf.create_datafile(s,'General Election 2018-11-06','results_pct_20181106.txt',mf,m)
+    df = sf.create_datafile(s,'General Election 2018-11-06',df_name,mf,m)
 
     need_to_load_data = input('Load raw data from '+df.file_name+' into schema '+s.schema_name+' (y/n)?')
     if need_to_load_data == 'y':
