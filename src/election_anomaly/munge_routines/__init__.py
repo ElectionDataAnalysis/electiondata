@@ -294,9 +294,9 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
             # TODO dupes are a problem only when contest & reporting unit are specified.
             ids_d['VoteCount_Id']=id_from_select_or_insert(cdf_schema, 'VoteCount', tables_d['VoteCount'], value_d, con, cur, 'dupes_ok')[0]
 
-            # fill SelectionReportingUnitVoteCountJoin
-            value_d = {'Selection_Id':ids_d['selection_id'],'Contest_Id':ids_d['contest_id'],'Election_Id':ids_d['Election_Id'],'ReportingUnit_Id':ids_d['ReportingUnit_Id'],'VoteCount_Id':ids_d['VoteCount_Id']}
-            id_from_select_or_insert(cdf_schema, 'SelectionReportingUnitVoteCountJoin', tables_d['SelectionReportingUnitVoteCountJoin'], value_d, con, cur)
+            # fill SelectionElectionContestVoteCountJoin
+            value_d = {'Selection_Id':ids_d['selection_id'],'Contest_Id':ids_d['contest_id'],'Election_Id':ids_d['Election_Id'],'VoteCount_Id':ids_d['VoteCount_Id']}
+            id_from_select_or_insert(cdf_schema, 'SelectionElectionContestVoteCountJoin', tables_d['SelectionElectionContestVoteCountJoin'], value_d, con, cur)
 
         con.commit()
     return str(ids_d)
