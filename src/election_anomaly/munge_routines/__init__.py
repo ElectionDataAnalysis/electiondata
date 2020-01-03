@@ -248,9 +248,6 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
             # fill BallotMeasureContest
             value_d = {'Name':eval(munger_fields_d['BallotMeasureContest'][0]['ExternalIdentifier']),'ElectionDistrict_Id':state_id}  # all ballot measures are assumed to be state-level ***
             ids_d['contest_id'] = id_from_select_or_insert(cdf_schema, 'BallotMeasureContest', tables_d['BallotMeasureContest'], value_d, con, cur)[0]
-            # fill ElectionContestJoin
-            value_d = {'Election_Id':election_id,'Contest_Id':ids_d['contest_id']}
-            id_from_select_or_insert(cdf_schema, 'ElectionContestJoin', tables_d['ElectionContestJoin'], value_d, con, cur)
             # fill BallotMeasureContestSelectionJoin ***
             value_d = {'BallotMeasureContest_Id':ids_d['contest_id'],'BallotMeasureSelection_Id':ids_d['selection_id']}
             id_from_select_or_insert(cdf_schema, 'BallotMeasureContestSelectionJoin', tables_d['BallotMeasureContestSelectionJoin'], value_d, con, cur)
@@ -287,6 +284,10 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
             # create record in CandidateContestSelectionJoin
             value_d = {'CandidateContest_Id':ids_d['contest_id'],'CandidateSelection_Id': ids_d['selection_id']}
             id_from_select_or_insert(cdf_schema, 'CandidateContestSelectionJoin', tables_d['CandidateContestSelectionJoin'], value_d, con, cur)
+
+        # fill ElectionContestJoin
+        value_d = {'Election_Id': election_id, 'Contest_Id': ids_d['contest_id']}
+        id_from_select_or_insert(cdf_schema, 'ElectionContestJoin', tables_d['ElectionContestJoin'], value_d, con, cur)
 
         # process vote counts in row
         for ct,dic in munger_counts_d.items():
