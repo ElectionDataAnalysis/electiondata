@@ -1,11 +1,11 @@
 local/
 .DS_Store
 src/election_anomaly/__pycache__
-src/election_anomaly/local_data/NC/data
-src/election_anomaly/local_data/FL
-src/election_anomaly/local_data/Philadelphia
-src/election_anomaly/local_data/VA
-src/election_anomaly/local_data/tmp
+src/local_data/NC/data
+src/local_data/FL
+src/local_data/Philadelphia
+src/local_data/VA
+src/local_data/tmp
 src/election_anomaly/local_logs/*
 query_create/__pycache__
 src/election_anomaly/query_create/__pycache__/__init__.cpython-37.pyc
@@ -16,4 +16,4 @@ src/election_anomaly/db_routines/__pycache__/__init__.cpython-37.pyc
 src/election_anomaly/munge_routines/__pycache__/__init__.cpython-37.pyc
 src/election_anomaly/context/__pycache__/__init__.cpython-37.pyc
 .idea
-src/election_anomaly/local_data/database.ini
+src/local_data/database.ini

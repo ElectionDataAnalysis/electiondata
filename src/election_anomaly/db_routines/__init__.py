@@ -10,12 +10,12 @@ from configparser import ConfigParser
 
 import clean as cl
 
-def establish_connection(paramfile = 'local_data/database.ini',db_name='postgres'):
+def establish_connection(paramfile = '../local_data/database.ini',db_name='postgres'):
     params = config(paramfile)
     con = psycopg2.connect(**params)
     return con
 
-def config(filename='local_data/database.ini', section='postgresql'):
+def config(filename='../local_data/database.ini', section='postgresql'):
     # create a parser
     parser = ConfigParser()
     # read config file
@@ -132,7 +132,7 @@ def load_data(conn,cursor,state,df):
         q = "COPY {}.{} FROM STDIN DELIMITER ',' CSV HEADER"
 
     
-    clean_file=cl.remove_null_bytes(state.path_to_state_dir+'data/'+df.file_name,'local_data/tmp/')
+    clean_file=cl.remove_null_bytes(state.path_to_state_dir+'data/'+df.file_name,'../local_data/tmp/')
     with open(clean_file,mode='r',encoding=df.encoding,errors='ignore') as f:
         cursor.copy_expert(sql.SQL(q).format(sql.Identifier(state.schema_name),sql.Identifier(df.table_name)),f)
     conn.commit()
@@ -148,4 +148,4 @@ def clean_meta_file(infile,outdir,s):       ## update or remove ***
         sys.exit()
 
 if __name__ == '__main__':
-    a = create_schema('cdf_nc','../local_data/database.ini')
+    a = create_schema('cdf_nc','../../local_data/database.ini')

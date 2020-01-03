@@ -56,8 +56,8 @@ def load_cdf(s,cdf_schema_name,con,cur):
     return
 
 def full_process(state_abbr,path_to_state_dir,cdf_schema_name,munger_path,df_election,df_name):
-    """ state_abbr: e.g., 'NC'. path_to_state_dir: e.g., 'local_data/NC'
-    munger_path: e.g., 'local_data/mungers/nc_export1.txt'
+    """ state_abbr: e.g., 'NC'. path_to_state_dir: e.g., '../local_data/NC'
+    munger_path: e.g., '../local_data/mungers/nc_export1.txt'
     df_election: e.g. 'General Election 2018-11-06','results_pct_20181106.txt',
     df_name: e.g. 'General Election 2018-11-06','results_pct_20181106.txt'
     *** need df_election to be a key in the state's Election.txt file. """
@@ -111,9 +111,9 @@ if __name__ == '__main__':
     munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
 
 
-    s = sf.create_state(abbr,'local_data/'+abbr)
+    s = sf.create_state(abbr,'../local_data/'+abbr)
 
-    munger_path = 'local_data/mungers/'+munger_name+'.txt'
+    munger_path = '../local_data/mungers/'+munger_name+'.txt'
 #    exec('from munge_routines import '+munger_name+ ' as mu')
     print('Creating munger instance from '+munger_path)
     m = sf.create_munger(munger_path)
