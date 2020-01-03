@@ -8,7 +8,7 @@ The app is controlled by the Python3 module src.election_anomaly
 
 ## Environment
 ### Database
-You will need access to a postgresql database. Your login credentilals should be in `src/election_anomaly/local_data/database.ini`. Contents of that file should be:
+You will need access to a postgresql database. Your login credentilals should be in `src/local_data/database.ini`. Contents of that file should be:
 
 ```[postgresql]
 host=<url for your postgresql server>
@@ -26,9 +26,9 @@ CREATE TABLE misspellings.corrections (id SERIAL PRIMARY KEY, bad TEXT UNIQUE NO
 
 ### .gitignore
 Folders you will need in your local repo:
-`src/election_anomaly/local_data` holds your state-by-state data. 
- * Each state needs its own directory, e.g., `src/election_anomaly/local_data/NC` for North Carolina. 
- * There should also be a directory `local_data/tmp` here to hold temporary files created during processing 
+`src/local_data` holds your state-by-state data. 
+ * Each state needs its own directory, e.g., `src/local_data/NC` for North Carolina. 
+ * There should also be a directory `src/local_data/tmp` here to hold temporary files created during processing 
 
 Each state directory has three subfolders:
   * `data` for datafiles from the state
