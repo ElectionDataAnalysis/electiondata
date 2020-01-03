@@ -56,14 +56,22 @@ def extract_column_metadata_block(mf):
     column_metadata_block = a.group().split('\n')
     return column_metadata_block    # list of lines, each describing a column
 
-def parse_line(mf,line):    # TODO flag unparsable lines
+def parse_line(mf,line):
     '''parse_line takes a metafile and a line of (metadata) text and parses it, including changing the type in the file to the type required by psql, according to the metafile's type-map dictionary'''
     d=mf.type_map
     p=mf.line_parser
     m = p.search(line)
-    field = (m.group('field')).replace(' ','_')
-    type = d[m.group('type')]
-    number = m.group('number')
+    try:
+        field = (m.group('field')).replace(' ','_')
+        type = d[m.group('type')]
+        number = m.group('number')
+    except:
+        field = 'line not parsable'
+        type = 'line not parsable'
+        comment = 'line not parsable'
+        print('Line not parsable: \n'+ line)
+        return ([field, type, comment])
+
     if number:
         type=type+(number)
     try:

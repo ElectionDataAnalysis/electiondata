@@ -88,3 +88,6 @@ For ReportingUnits, the naming convention is to list as much of the composing in
  * `'North Carolina'` -- the state of NC
  * `'North Carolina;Alamance County'` -- Alamance County, which is contained in North Carolina
  * `'North Carolina;Alamance County;Precinct 12W'` -- Precinct 12W in Alamance County
+
+# Conventions
+Reporting units that are not physical geographical precincts (such as an administrative precinct containing absentee ballot counts from one county) are classified as Reporting Type `precinct` if they should be part of any roll-up involving all precincts in a jurisdiction (e.g., if the absentee ballot counts are not included in any other Reporting Units of Type `precinct` in the county).

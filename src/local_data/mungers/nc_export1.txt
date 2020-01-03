@@ -1,12 +1,5 @@
 {'name':'nc_export1','content_dictionary':
-{'query_from_raw': # TODO: is this used?
-	{'Election':'SELECT DISTINCT Election_Date FROM {}.{}',
-	'ReportingUnit;county':'SELECT DISTINCT County FROM {}.{}',
-	'Party':'SELECT DISTINCT Choice_Party FROM {}.{}',
-	'ReportingUnit;precinct':'SELECT DISTINCT CONCAT(County,\';\',Precinct) FROM {}.{} WHERE Real_Precinct = \'Y\'',
-	'ReportingUnit;other':'SELECT DISTINCT CONCAT(County,\';\',Precinct) FROM {}.{} WHERE Real_Precinct != \'Y\'',
-	'Office':'SELECT DISTINCT Contest_Name FROM {}.{} WHERE Choice != \'Against\' AND Choice != \'For\' AND Choice != \'Yes\' AND Choice != \'No\' '
-		},
+{
 	'raw_cols' :[['county','TEXT'], ['election_date','DATE'], ['precinct','TEXT'], ['contest_type','TEXT'],['contest_name','TEXT'],
                 ['vote_for','INT'], ['choice','TEXT'], ['choice_party','TEXT'], ['vote_for','INT'],
                 ['election_day','INT'], ['one_stop','INT'], ['absentee_by_mail','INT'], ['provisional','INT'],

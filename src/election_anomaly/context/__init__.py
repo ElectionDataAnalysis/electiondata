@@ -81,12 +81,12 @@ def context_to_cdf(s,schema,con,cur):
 
 def build_munger_d(s,m):
     """given a state s and a munger m,
-    use the state's context dictionaries to build dictionaries restricted to the given munger.
-    Munger m will have a query_from_raw dictionary with keys that may be tablenames
-    but may also be tablename-type pairs. E.g., ReportingUnit;precinct or Election."""
+    use the state's context dictionaries to build some dictionaries restricted to the given munger.
+    """
     munger_d = {}
     munger_inverse_d = {}
-    for t in m.query_from_raw.keys(): ## e.g., ['Election','Party','ReportingUnit;precinct','Office']:
+    key_list = ['Election','Party','ReportingUnit;precinct','Office']   # TODO should this be different for different mungers?
+    for t in key_list:
         t_parts = t.split(';')
         context_key = t_parts[0]            # e.g., 'ReportingUnit', or 'Election'
         if len(t_parts) > 1:
@@ -106,15 +106,14 @@ def build_munger_d(s,m):
 
 def raw_to_context(df,m,munger_d,conn,cur):
     ''' Purely diagnostic -- reports what items in the datafile are missing from the context_dictionary (e.g., offices we don't wish to analyze)'''
-    rs = [str(datetime.now())]
-    rs.append('\'Missing\' below means \'Existing in the datafile, but missing from the munger dictionary, created from the state\'s context_dictionary, which was created from files in the context folder.')
+    print('\'Missing\' below means \'Existing in the datafile, but missing from the munger dictionary, created from the state\'s context_dictionary, which was created from files in the context folder.')
     for t in m.query_from_raw.keys():
         t_parts = t.split(';')
         context_key = t_parts[0]
         if len(t_parts) > 1:
             type = t_parts[1]
         if context_key in df.state.context_dictionary.keys():   # why do we need this criterion? ***
-            items_per_df = dbr.query(m.query_from_raw[t],[df.state.schema_name,df.table_name],[],con,cur)
+            items_per_df = dbr.query(m.query_from_raw[t],[df.state.schema_name,df.table_name],[],con,cur) # TODO revise now that query_from_raw no longer works
             missing = []
             for e in items_per_df:
                 if e[0] is not None and e[0] not in munger_d[t].values():

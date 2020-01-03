@@ -62,7 +62,7 @@ def id_from_select_only(schema, table, table_d, value_d, con, cur, mode='no_dupe
     strs = f_vals
     a = dbr.query(q,sql_ids,strs,con,cur)
     if len(a) == 0: # if nothing returned
-        # TODO check misspellings.corrections table and try again. Set check_spelling = False
+        # check misspellings.corrections table and try again. Set check_spelling = False
         if check_spelling:
             try:
                 corrected_value_d = spellcheck(con,cur,value_d)
@@ -135,7 +135,7 @@ def format_type_for_insert(schema,table,txt,con,cur):
         return([a[0][0],txt])
 
 def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 0):
-    """ attempt to create munger-agnostic raw-to-cdf script; ***
+    """ munger-agnostic raw-to-cdf script; ***
     df is datafile, mu is munger """
     # get id for IdentifierType 'other' if it was not passed as parameter
     if id_type_other_id == 0:
@@ -144,7 +144,9 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
     if a:
         id_type_other_id = a[0][0]
     else:
-        bbb = 1 / 0  # TODO
+        error_str = 'No Id found for IdentifierType \'other\'; fix IdentifierType table and rerun.'
+        print(error_str)
+        return error_str
     with open('CDF_schema_def_info/tables.txt', 'r') as f:
         table_def_list = eval(f.read())
     tables_d = {}
@@ -206,7 +208,7 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
                 exec(munger_raw_cols[i][0] + ' = "'+ row[i] +'"')
 
         # Process all straight-forward elements into cdf and capture id in ids_d
-        for t in ['ReportingUnit', 'Party']:  # TODO list is munger-dependent
+        for t in ['ReportingUnit', 'Party']:  # TODO list may be munger-dependent
             for item in munger_fields_d[t]:  # for each case (most elts have only one case, but ReportingUnit has more) e.g. item = {'ExternalIdentifier': county,
                 # 'Enumerations':{'ReportingUnitType': 'county'}}.
                 # Cases must be mutually exclusive and exhaustive
@@ -269,7 +271,7 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
             election_district_id = b[0][0]
 
             # insert into CandidateContest table
-            votes_allowed = eval(munger_fields_d['CandidateContest'][0]['OtherFields']['VotesAllowed']) # TODO munger-dependent, misses other fields e.g. NumberElected
+            votes_allowed = eval(munger_fields_d['CandidateContest'][0]['OtherFields']['VotesAllowed']) # TODO  misses other fields e.g. NumberElected
             value_d = {'Name':election_district_name,'ElectionDistrict_Id':election_district_id,'Office_Id':ids_d['Office_Id'],'VotesAllowed':votes_allowed}
             ids_d['contest_id'] = id_from_select_or_insert(cdf_schema, 'CandidateContest', tables_d['CandidateContest'], value_d, con, cur)[0]
 
@@ -293,7 +295,7 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
             ids_d['VoteCount_Id']=id_from_select_or_insert(cdf_schema, 'VoteCount', tables_d['VoteCount'], value_d, con, cur, 'dupes_ok')[0]
 
             # fill SelectionReportingUnitVoteCountJoin
-            value_d = {'Selection_Id':ids_d['selection_id'],'Election_Id':ids_d['Election_Id'],'ReportingUnit_Id':ids_d['ReportingUnit_Id'],'VoteCount_Id':ids_d['VoteCount_Id']}
+            value_d = {'Selection_Id':ids_d['selection_id'],'Contest_Id':ids_d['contest_id'],'Election_Id':ids_d['Election_Id'],'ReportingUnit_Id':ids_d['ReportingUnit_Id'],'VoteCount_Id':ids_d['VoteCount_Id']}
             id_from_select_or_insert(cdf_schema, 'SelectionReportingUnitVoteCountJoin', tables_d['SelectionReportingUnitVoteCountJoin'], value_d, con, cur)
 
         con.commit()

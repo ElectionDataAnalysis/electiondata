@@ -55,50 +55,6 @@ def load_cdf(s,cdf_schema_name,con,cur):
     print('Done!')
     return
 
-def full_process(state_abbr,path_to_state_dir,cdf_schema_name,munger_path,df_election,df_name):
-    """ state_abbr: e.g., 'NC'. path_to_state_dir: e.g., '../local_data/NC'
-    munger_path: e.g., '../local_data/mungers/nc_export1.txt'
-    df_election: e.g. 'General Election 2018-11-06','results_pct_20181106.txt',
-    df_name: e.g. 'General Election 2018-11-06','results_pct_20181106.txt'
-    *** need df_election to be a key in the state's Election.txt file. """
-    from munge_routines import nc_export1
-    from munge_routines import id_from_select_or_insert
-    con = establish_connection()
-    cur = con.cursor()
-
-    print('Instantiating the state of '+state_abbr)
-    s = sf.create_state(state_abbr,path_to_state_dir)
-    create_schema(s)
-
-    print('Creating CDF schema '+cdf_schema_name)
-    CDF.create_common_data_format_schema(con, cur, cdf_schema_name)
-
-    print('Loading state context info into CDF schema '+cdf_schema_name) # *** takes a long time; why?
-    context.context_to_cdf(s,cdf_schema_name,con,cur)
-    con.commit()
-
-    print('Creating munger instance from '+munger_path)
-    m = sf.create_munger(munger_path)
-    # instantiate the NC pct_result datafile
-
-    print('Creating datafile instance')
-    df = sf.create_datafile(s,df_election,df_name,m)
-
-    print('Load raw data from datafile ' + df_name + ' into schema '+s.schema_name)
-    raw_data(df,con,cur)
-
-    # load data from df to CDF schema (assumes already loaded to schema s.schema_name)
-    print('Loading data from df to CDF schema '+cdf_schema_name)
-    nc_export1.raw_records_to_cdf(df,cdf_schema_name,con,cur)
-    print('Done!')
-
-
-
-    if cur:
-        cur.close()
-    if con:
-        con.close()
-    return("<p>"+"</p><p>  ".join(rs))
 
 if __name__ == '__main__':
     default = 'NC'
