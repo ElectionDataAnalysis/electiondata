@@ -6,6 +6,14 @@ import db_routines as dbr
 def report_error(error_string):
     print('Munge error: '+error_string)
 
+def spellcheck(con,cur,value_d):
+    corrected_value_d = {}
+    for key,value in value_d.items():
+        q = 'SELECT good FROM misspellings.corrections WHERE bad = %s'
+        strs = [value,]
+        corrected_value_d[key] = dbr.query(q,[],strs,con,cur)[0][0]
+    return corrected_value_d
+
 def id_and_name_from_external (cdf_schema,table,external_name,identifiertype_id,otheridentifiertype,con,cur,internal_name_field='Name'):
     ## find the internal db name and id from external identifier
             
@@ -44,17 +52,27 @@ def id_query_components(table_d,value_d):
     val_return_list = ['c.' + i for i in f_id_slot_list]
     return [f_id_slots,f_val_slots,cf_query_string,val_return_list,f_names,cf_names,f_vals]
 
-def id_from_select_only(schema, table, table_d, value_d, con, cur, mode='no_dupes'):
-    """Returns the Id of the record in table with given value_d.
+def id_from_select_only(schema, table, table_d, value_d, con, cur, mode='no_dupes',check_spelling = True):
+    """Returns the Id of the record in table with values given in the dictionary value_d.
     On error (nothing found, or more than one found) returns 0"""
+
     [f_id_slots,f_val_slots,cf_query_string,val_return_list,f_names,cf_names,f_vals] = id_query_components(table_d,value_d)
     q = 'SELECT "Id" FROM {0}.{1} WHERE ('+ f_id_slots+') = ('+f_val_slots+')'
     sql_ids = [schema,table]   +f_names + cf_names
     strs = f_vals
     a = dbr.query(q,sql_ids,strs,con,cur)
     if len(a) == 0: # if nothing returned
-        report_error('No record found for this query:\n\t'+dbr.query_as_string(q,sql_ids,strs,con,cur))
-        return 0
+        # TODO check misspellings.corrections table and try again. Set check_spelling = False
+        if check_spelling:
+            try:
+                corrected_value_d = spellcheck(con,cur,value_d)
+                return id_from_select_only(schema, table, table_d, corrected_value_d, con, cur, mode, False)
+            except:
+                report_error('No record found for this query:\n\t' + dbr.query_as_string(q, sql_ids, strs, con, cur))
+                return 0
+        else:
+            report_error('No record found for this query:\n\t'+dbr.query_as_string(q,sql_ids,strs,con,cur))
+            return 0
     elif len(a) >1 and mode == 'no_dupes':
         report_error('More than one record found for this query:\n\t'+dbr.query_as_string(a,sql_ids,strs,con,cur))
         return 0
@@ -199,7 +217,7 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
                                                                    eval(item['ExternalIdentifier']),
                                                                    id_type_other_id, 'nc_export1', con, cur,
                                                                    item[
-                                                                       'InternalNameField'])  # cdf_name may be unnecessary ***
+                                                                       'InternalNameField'])
                     # ... or if no such is found in db, insert it!
                     if [cdf_id, cdf_name] == [None, None]:
                         cdf_name = eval(item['ExternalIdentifier'])
