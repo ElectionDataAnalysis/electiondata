@@ -32,6 +32,17 @@ def config(filename='../local_data/database.ini', section='postgresql'):
 
     return db
 
+def read_field_value(con,cur,schema,tup):
+    """ need to write function to take a tuple of (table, id, field)
+    and return the corresponding field value read from the db.
+    """
+    (table,id,field) = tup
+    q = 'SELECT {2} FROM {0}.{1} WHERE "Id" = %s'
+    sql_ids = [schema,table,field]
+    strs = (id,)
+    a = query(q,sql_ids,strs,con,cur)[0]
+    return a[0]
+
 def query_as_string(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
     return cur.mogrify(sql.SQL(q).format(*format_args),strs).decode("utf-8")

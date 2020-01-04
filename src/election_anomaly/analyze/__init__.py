@@ -2,6 +2,7 @@
 
 import db_routines as dbr
 
+
 def roll_up (con,cur,schema,Election_Id,ReportingUnit_Id,ReportingUnitType_Id,CountItemType_Id):
     # TODO may fail if ReportingTypeUnit is other*
 
@@ -36,14 +37,29 @@ def roll_up (con,cur,schema,Election_Id,ReportingUnit_Id,ReportingUnitType_Id,Co
     sql_ids = [schema]
     strs = [Election_Id,ReportingUnit_Id,CountItemType_Id,ReportingUnitType_Id]
     a = dbr.query(q,sql_ids,strs,con,cur)
-    b = [list(x) for  x in list(a)]
-    return b # TODO return list of data rows: contest, choice, list of vote sums by vote_count_type
+    return a # TODO return list of data rows: contest, choice, list of vote sums by vote_count_type
 
 
 if __name__ == '__main__':
+    schema = 'cdf_xx'
     con = dbr.establish_connection(paramfile='../../local_data/database.ini')
     cur = con.cursor()
 
-    a = roll_up(con,cur,'cdf_xx',223,61,25,53)
+    a = roll_up(con,cur,schema,223,61,25,53)
 
     print (a)
+    b = [ (x[0],
+           dbr.read_field_value(con,cur,schema,('CandidateContest',x[1],'Name')),
+           dbr.read_field_value(con, cur, schema, ('Candidate',
+                        dbr.read_field_value(con,cur,schema,('CandidateSelection',x[2],'Candidate_Id')), 'BallotName'))
+           )
+          for x in a]
+    print (b)
+
+        #,
+#                        dbr.read_field_value('Candidate',
+ #                                               dbr.read_field_value('CandidateSelection',
+ #                                               x[2],'Candidate_Id'),
+#                                                'BallotName')]
+ #                                              for x in a]
+
