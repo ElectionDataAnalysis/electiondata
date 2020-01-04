@@ -48,7 +48,7 @@ Each state directory has three subfolders:
       * `'correction_query_list'` a list of any corrections needed in response to metadata errors
     * `Election.txt` Python dictionary of elections, with attributes:
       * `'ElectionType'`
-      * `'ReportingUnit'`
+      * `'ReportingUnit'` Parent Reporting Units (e.g., 'North Carolina' must precede children (e.g., 'North Carolina;Alamance County'))
       * `'StartDate'`
       * `'EndDate'`
       * `'ExternalIdentifiers'`

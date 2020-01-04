@@ -5,6 +5,13 @@
 	'download_date':'2019-10-15',
 	'note':'','correction_query_list':['ALTER TABLE {}.{} ALTER COLUMN  precinct SET DATA TYPE varchar(30)']
 	},
+	'General Election 2018-11-06;alamance.txt':
+	{'encoding':'utf8',
+	'source_url':'for testing only',
+	'file_date':'2019-12-26',
+	'download_date':'2019-10-15',
+	'note':'','correction_query_list':['ALTER TABLE {}.{} ALTER COLUMN  precinct SET DATA TYPE varchar(30)']
+	},
 'General Election 2018-11-06;absentee_20181106.csv':
 	{'encoding':'utf8',
 	'source_url':'https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2018_11_06/absentee_20181106.zip',

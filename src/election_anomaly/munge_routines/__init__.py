@@ -190,7 +190,7 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
 
     # create dictionaries for processing data from rows. Not all CDF elements are included. E.g., 'Election' element is not filled from df rows, but from df.election
 
-    munger_counts_d = mu.content_dictionary['counts_dictionary']
+    munger_counts_d = mu.content_dictionary['counts_dictionary'] # TODO is this used?
     # look up id,type pairs for each kind of count, add info to counts dictionary
     for ct,dic in munger_counts_d.items():
         text = dic['CountItemType']
@@ -199,6 +199,10 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
     munger_fields_d = mu.content_dictionary['fields_dictionary']
 
     for row in rows:
+        # track progress
+        if rows.index(row) % 5000 == 0:  # for every five-thousandth row
+            print('\t\tProcessing item number ' + str(rows.index(row)) + ': ' + str(row))
+
         for i in range(len(munger_raw_cols)):
             if row[i]!= 0 and not row[i]:   # if db query returned None     # awkward ***
                 exec(munger_raw_cols[i][0] + ' = "" ')

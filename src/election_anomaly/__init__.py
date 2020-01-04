@@ -57,16 +57,16 @@ def load_cdf(s,cdf_schema_name,con,cur):
 
 
 if __name__ == '__main__':
-    default = 'NC'
+    default = 'XX'
     abbr = input('Enter two-character abbreviation for your state/district/territory (default is '+default+')\n') or default
 
-    default = 'cdf_nc'
+    default = 'cdf_xx'
     cdf_schema=input('Enter name of CDF schema (default is '+default+')\n') or default
 
     default = 'nc_export1'
     munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
 
-    default = 'results_pct_20181106.txt'
+    default = 'alamance.txt'
     df_name = input('Enter name of datafile (default is '+default+')\n') or default
 
 
