@@ -107,9 +107,12 @@
                 ['CandidateContestSelectionJoin',
                       {'fields':[],
                       'enumerations':[],
-                      'other_element_refs':[{'fieldname':'CandidateContest_Id', 'refers_to':'CandidateContest'}, {'fieldname':'CandidateSelection_Id', 'refers_to':'CandidateSelection'}],
-                      'unique_constraints':[['CandidateContest_Id','CandidateSelection_Id']], 
-		     'not_null_fields':['CandidateContest_Id','CandidateSelection_Id']
+                      'other_element_refs':[
+                      {'fieldname':'CandidateContest_Id', 'refers_to':'CandidateContest'},
+                      {'fieldname':'CandidateSelection_Id', 'refers_to':'CandidateSelection'},
+                      {'fieldname':'Election_Id', 'refers_to':'Election'}],
+                      'unique_constraints':[['CandidateContest_Id','CandidateSelection_Id','Election_Id']],
+		     'not_null_fields':['CandidateContest_Id','CandidateSelection_Id','Election_Id']
             }
     ]
 ]

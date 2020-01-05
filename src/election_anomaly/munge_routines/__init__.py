@@ -116,7 +116,7 @@ def composing_from_reporting_unit_name(con,cur,cdf_schema,name,id=0):
     if id == 0:
         id = id_from_select_or_insert(cdf_schema, 'ReportingUnit', ru_d, {'Name': name}, con, cur)
     chain = name.split(';')
-    for i in range(1,len(chain)):
+    for i in range(1,len(chain)+1):
         parent = ';'.join(chain[0:i])
         parent_id = id_from_select_only(cdf_schema, 'ReportingUnit', ru_d, {'Name': parent}, con, cur)
         id_from_select_or_insert(cdf_schema, 'ComposingReportingUnitJoin', cruj_d,
@@ -286,7 +286,9 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
             ids_d['selection_id'] = id_from_select_or_insert(cdf_schema, 'CandidateSelection', tables_d['CandidateSelection'], value_d, con, cur)[0]
 
             # create record in CandidateContestSelectionJoin
-            value_d = {'CandidateContest_Id':ids_d['contest_id'],'CandidateSelection_Id': ids_d['selection_id']}
+            value_d = {'CandidateContest_Id':ids_d['contest_id'],
+                       'CandidateSelection_Id': ids_d['selection_id'],
+                       'Election_Id':election_id}
             id_from_select_or_insert(cdf_schema, 'CandidateContestSelectionJoin', tables_d['CandidateContestSelectionJoin'], value_d, con, cur)
 
         # fill ElectionContestJoin
