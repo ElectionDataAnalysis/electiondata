@@ -1,9 +1,11 @@
 #!usr/bin/python3
 
 import numpy as np
+np.set_printoptions(precision=1)
 import analyze as an
 import pandas as pd
 import db_routines as dbr
+
 
 def counts_from_selection_list(con, cur, schema, selection_list,
                                 ReportingUnit_Id,Election_Id, Contest_Id, CountItem_Type_Id):
@@ -36,14 +38,23 @@ def counts_from_selection_list(con, cur, schema, selection_list,
 
     return ct_list
 
-def zscore(con,cur, schema,Election_Id,CandidateContest_Id,ReportingUnit_Id,childReportingUnitType_Id,CountItem_Type_Id):
+def zscore(con,cur, schema,Election_Id,CandidateContest_Id,ReportingUnit_Id,childReportingUnitType_Id,CountItem_Type_Id,mode = 'pct'):
     """Given an election, contest, (larger) reporting unit,
         type of reporting unit for subdivision, and count type,
+        and mode ('pct' for percentages; 'votes' for raw totals of vote numbers
     return list of reporting units with a z-score (of the count vector) for each reporting unit """
     # TODO z-score seems an unnatural measure for our case, as the distribution of sums of distances is presumably not gaussian.
     candidate_selection_id_list, cts_by_ru_d = count_tuples(con,cur, schema,Election_Id,CandidateContest_Id,ReportingUnit_Id,childReportingUnitType_Id,CountItem_Type_Id)
-    zscore_li = an.euclidean_zscore([ct[1] for ct in cts_by_ru_d])
-    ru_list = [x[0] for x in cts_by_ru_d] # list of reporting units
+
+    ru_list = [ ct[0] for ct in cts_by_ru_d if sum (ct[1]) != 0] # list of reporting units
+    if mode == 'votes':
+        vector_list = [ct[1] for ct in cts_by_ru_d]
+    elif mode == 'pct':
+        vector_list = [ [y / sum(ct[1]) for y in ct[1]] for ct in cts_by_ru_d  if sum(ct[1]) != 0]
+
+    print('zscore(): vector_list is: ')
+    print (np.array(vector_list))
+    zscore_li = an.euclidean_zscore(vector_list)
     return  ru_list ,zscore_li
 
 def count_tuples(con,cur, schema,Election_Id,CandidateContest_Id,ReportingUnit_Id,childReportingUnitType_Id,CountItem_Type_Id):
@@ -113,13 +124,18 @@ def candidate_contest_roll_up (con,cur,schema,Election_Id,ReportingUnit_Id,Repor
 
 def get_outlier_ru(con,cur,schema,
                 Election_Id,CandidateContest_Id,ReportingUnit_Id,childReportingUnitType_Id,
-                     CountItemType_Id):
+                     CountItemType_Id,mode = 'pct'):
     ru_list, zscore_list = zscore(con,cur,schema,
                 Election_Id,CandidateContest_Id,ReportingUnit_Id,childReportingUnitType_Id,
-                     CountItemType_Id)
-    max_index = zscore_list.index(max(zscore_list))
+                     CountItemType_Id,'pct')
+    max_zscore = max(zscore_list)
+    max_index = zscore_list.index(max_zscore)
     outlier_reporting_unit = dbr.read_field_value(con,cur,schema,('ReportingUnit',ru_list[max_index],'Name'))
-    return outlier_reporting_unit
+    print('Zscore list is: \n' + str(np.array(zscore_list)))
+    print('Outlier is: '+outlier_reporting_unit)
+    print('Zscore of outlier is: ')
+    print(max_zscore)
+    return outlier_reporting_unit, max_zscore
 
 
 if __name__ == '__main__':
@@ -136,11 +152,11 @@ if __name__ == '__main__':
         CandidateContest_Id = 922
     elif scenario == 'nc':
         schema = 'cdf_nc'
-        Election_Id = 12681
+        Election_Id = 15834
         ReportingUnit_Id = 59
         childReportingUnitType_Id = 19  # county
         CountItemType_Id = 50   # absentee-mail
-        CandidateContest_Id = 13257
+        CandidateContest_Id = 16410
 
     a = candidate_contest_roll_up(con,cur,schema,
                 Election_Id,ReportingUnit_Id,childReportingUnitType_Id,CountItemType_Id)
@@ -148,14 +164,19 @@ if __name__ == '__main__':
 
     csi_list,d = count_tuples(con,cur,schema,
                 Election_Id,CandidateContest_Id,ReportingUnit_Id,childReportingUnitType_Id,
-                     CountItemType_Id)
-    print('csi_list:')
-    print (csi_list)
-    print ('d')
-    print(d)
+                   CountItemType_Id)
+#    print('csi_list:')
+#    print (csi_list)
+    print ('nonzero in d')
 
-    #df = pd.DataFrame(data=d,index=csi_list)
-    #print (df)
+    a1 = np.array([ y for y in d if y[1] != [0,0,0]])
+    print(a1)
+
+    a = np.array( [( y[0],dbr.read_field_value(con,cur,schema,('ReportingUnit',y[0],'Name'))) for y in d if y[1] != [0,0,0]])
+
+    print(a)
+
+
 
     print(get_outlier_ru(con,cur,schema,
                 Election_Id,CandidateContest_Id,ReportingUnit_Id,childReportingUnitType_Id,
