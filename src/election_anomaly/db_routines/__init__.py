@@ -6,6 +6,7 @@ import re
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
+import sqlalchemy
 from configparser import ConfigParser
 
 import clean as cl
@@ -14,6 +15,23 @@ def establish_connection(paramfile = '../local_data/database.ini',db_name='postg
     params = config(paramfile)
     con = psycopg2.connect(**params)
     return con
+
+def sql_alchemy_connect(paramfile = '../local_data/database.ini',db_name='postgres'):
+    """Returns a connection and a metadata object"""
+
+    params = config(paramfile)
+    # We connect with the help of the PostgreSQL URL
+    # postgresql://federer:grandestslam@localhost:5432/tennis
+    url = 'postgresql://{user}:{password}@{host}:{port}/{database}'
+    url = url.format(**params)
+
+    # The return value of create_engine() is our connection object
+    con = sqlalchemy.create_engine(url, client_encoding='utf8')
+
+    # We then bind the connection to MetaData()
+    meta = sqlalchemy.MetaData(bind=con, reflect=True)
+
+    return con, meta
 
 def config(filename='../local_data/database.ini', section='postgresql'):
     # create a parser
@@ -46,6 +64,10 @@ def read_field_value(con,cur,schema,tup):
 def query_as_string(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
     return cur.mogrify(sql.SQL(q).format(*format_args),strs).decode("utf-8")
+
+def dataframe_query(q,sql_ids,strs,con,cur):
+    # TODO
+    return
 
 def query(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
@@ -159,4 +181,12 @@ def clean_meta_file(infile,outdir,s):       ## update or remove ***
         sys.exit()
 
 if __name__ == '__main__':
-    a = create_schema('cdf_nc','../../local_data/database.ini')
+    import pandas as pd
+    con, meta = sql_alchemy_connect(paramfile='../../local_data/database.ini')
+    election = pd.read_sql_table("Election",
+                      con=con,
+                      schema='cdf_nc',
+                      index_col='Id',
+                      coerce_float=True,
+                      columns=['Name','EndDate'])
+    print('Done')

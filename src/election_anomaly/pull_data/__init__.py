@@ -1,6 +1,8 @@
 #!usr/bin/python3
 
 import numpy as np
+import matplotlib.pyplot as plt
+
 np.set_printoptions(precision=1)
 import analyze as an
 import pandas as pd
@@ -8,7 +10,7 @@ import db_routines as dbr
 
 
 def counts_from_selection_list(con, cur, schema, selection_list,
-                                ReportingUnit_Id,Election_Id, Contest_Id, CountItem_Type_Id):
+                                ReportingUnit_Id,Election_Id, Contest_Id, CountItemType_Id):
     """Given a list of Selection_Ids -- think list of candidates -- and a ReportingUnit_Id,
     along with election, contest, countitem type,
     return ordered list (tuple?) of corresponding counts rolled up from precincts"""
@@ -137,6 +139,11 @@ def get_outlier_ru(con,cur,schema,
     print(max_zscore)
     return outlier_reporting_unit, max_zscore
 
+def bar_chart_by_county(con,cur,schema,Election_Id,Contest_Id,CountItemType_Id,mode = 'pct'):
+    # TODO
+    #%% create dataframe indexed by county, column for votes or pcts (depending on mode)
+    data =
+    return
 
 if __name__ == '__main__':
     con = dbr.establish_connection(paramfile='../../local_data/database.ini')
@@ -183,3 +190,34 @@ if __name__ == '__main__':
                      CountItemType_Id))
 
 
+    #%% try bar chart
+
+    # data to plot
+    n_groups = 4
+    means_frank = (5, 55, 40, 65)
+    means_guido = (85, 62, 54, 20)
+
+    # create plot
+    fig, ax = plt.subplots()
+    index = np.arange(n_groups)
+    bar_width = 0.35
+    opacity = 0.8
+
+    rects1 = plt.bar(index, means_frank, bar_width,
+                     alpha=opacity,
+                     color='b',
+                     label='Frank')
+
+    rects2 = plt.bar(index + bar_width, means_guido, bar_width,
+                     alpha=opacity,
+                     color='g',
+                     label='Guido')
+
+    plt.xlabel('Person')
+    plt.ylabel('Scores')
+    plt.title('Scores by person')
+    plt.xticks(index + bar_width, ('A', 'B', 'C', 'D'))
+    plt.legend()
+
+    plt.tight_layout()
+    plt.show()
