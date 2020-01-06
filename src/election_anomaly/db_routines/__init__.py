@@ -6,8 +6,9 @@ import re
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
-import sqlalchemy
+import sqlalchemy as db
 from configparser import ConfigParser
+import pandas as pd
 
 import clean as cl
 
@@ -26,10 +27,10 @@ def sql_alchemy_connect(paramfile = '../local_data/database.ini',db_name='postgr
     url = url.format(**params)
 
     # The return value of create_engine() is our connection object
-    con = sqlalchemy.create_engine(url, client_encoding='utf8')
+    con = db.create_engine(url, client_encoding='utf8')
 
     # We then bind the connection to MetaData()
-    meta = sqlalchemy.MetaData(bind=con, reflect=True)
+    meta = db.MetaData(bind=con, reflect=True)
 
     return con, meta
 
@@ -60,6 +61,44 @@ def read_field_value(con,cur,schema,tup):
     strs = (id,)
     a = query(q,sql_ids,strs,con,cur)[0]
     return a[0]
+
+def read_single_value_from_id(con,meta,schema,table,field,id):
+    """Takes an engine connection con return the corresponding field value
+    read from the record with the given id from the given table of the given schema.
+    """
+    t = db.Table(table,meta,autoload=True, autoload_with=con,schema=schema)
+    q = db.select([eval('t.columns.'+field)]).where(t.columns.Id == id)
+    ResultProxy = con.execute(q)
+    ResultSet = ResultProxy.fetchall()
+    if ResultSet:
+        return ResultSet[0][0]
+    else:
+        print('No record in '+schema+'.'+table+' with Id '+str(id))
+        return
+
+def read_all_value_from_id(con,meta,schema,table,field):
+    """Takes an engine connection con return an {id:field_value} dictionary
+    read from the given table of the given schema.
+    """
+    t = db.Table(table,meta,autoload=True, autoload_with=con,schema=schema)
+    q = db.select([ t.columns.Id,eval('t.columns.'+ field)])
+    ResultProxy = con.execute(q)
+    ResultSet = ResultProxy.fetchall()
+    return dict(ResultSet)
+
+def read_some_value_from_id(con,meta,schema,table,field,id_list):
+    """Takes an engine connection con return an {id:field_value} dictionary
+    read from the given table of the given schema.
+    """
+    t = db.Table(table,meta,autoload=True, autoload_with=con,schema=schema)
+    print (id_list)
+    id_df = pd.DataFrame(id_list)
+    id_list_clean = [x[0] for x in id_df.to_records(column_dtypes={0:db.INTEGER},index=False)]
+    q = db.select([ t.columns.Id,eval('t.columns.'+ field)]).where(t.columns.Id.in_(id_list_clean))
+    ResultProxy = con.execute(q)
+    ResultSet = ResultProxy.fetchall()
+    return dict(ResultSet)
+
 
 def query_as_string(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
@@ -181,12 +220,11 @@ def clean_meta_file(infile,outdir,s):       ## update or remove ***
         sys.exit()
 
 if __name__ == '__main__':
-    import pandas as pd
     con, meta = sql_alchemy_connect(paramfile='../../local_data/database.ini')
-    election = pd.read_sql_table("Election",
-                      con=con,
-                      schema='cdf_nc',
-                      index_col='Id',
-                      coerce_float=True,
-                      columns=['Name','EndDate'])
+    schema = 'cdf_nc'
+    table = 'ReportingUnit'
+    field = 'Name'
+    id = 50
+    a = read_single_value_from_id(con,meta,schema,table,field,id)
+    d = read_all_value_from_id(con,meta,schema,'ReportingUnitType','Txt')
     print('Done')
