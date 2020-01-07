@@ -65,6 +65,14 @@ def rollup_count(con,schema,Election_Id,Contest_Id,ReportingUnitType_Id): # TODO
     df = pd.read_sql_query(sql=q, con = con,params=params)
     return df   # TODO use sqlalchemy instead
 
+def contest_id_to_name(con,meta,schema,contest_id):
+    contest_name = dbr.read_single_value_from_id(con,
+                                meta, schema, 'CandidateContest', 'Name', contest_id)
+    if not contest_name:
+        contest_name = dbr.read_single_value_from_id(con,
+                                                     meta, schema, 'BallotMeasureContest', 'Name', contest_id)
+    return contest_name
+
 def id_values_to_name(con,meta,schema,df):
     """Input is a df is a dataframe with some columns that are labeled with db id fields, e.g., 'Selection_Id'
     Return a df where id values in all these columns have been replaced by the corresponding name
@@ -164,22 +172,21 @@ def create_and_stash_rollup(con,cdf_schema,Election_Id,CandidateContest_Id,child
     stash(state,named_df,filename,description)
     return
 
-def bar_charts(rollup):
+def bar_charts(rollup,contest_name=''):
     CountItemType_list = rollup['CountItemType'].unique()
     for type in CountItemType_list:
         type_df = rollup[rollup['CountItemType']== type]
         type_pivot = type_df.pivot_table(index='ReportingUnit',columns='Selection',values='Count')
         type_pivot.plot.bar()
-        plt.title(type+' (vote totals)')
+        plt.title(contest_name+'\n'+type+' (vote totals)')
 
         type_pct_pivot = create_pct_df(type_pivot)
         type_pct_pivot.plot.bar()
-        plt.title(type+' (percentages)')
-
-
+        plt.title(contest_name+'\n'+type+' (vote totals)')
     plt.show()
+    return
 
-def dropoff_anomaly_score(rollup1,rollup2):
+def dropoff_anomaly_score(rollup_list):
     """given two of contest roll-ups by same ReportingUnitType, find any anomalies
     in the margin between votes cast in the two contests
     among the set of ReportingUnits of given type
@@ -189,17 +196,22 @@ def dropoff_anomaly_score(rollup1,rollup2):
 
     #%% create dframe with totals over selections from the two rollup dframess
     # then create corresponding percentage-diff dframe (series)
-    # TODO
+    cf = df.copy()  # to avoid altering the df object passed to the function
+    col_list = list(cf.columns)
+    cf["sum"] = rollup.sum(axis=1)
+    bf = cf.loc[:, col_list].div(cf["sum"], axis=0)
 
     #%% find outlier in percentage-diff series
+    # TODO
 
     #%% if outlier is 'anomalous enough', make scatter plot for the two rollups
+    # TODO
     return
 
 if __name__ == '__main__':
 #    scenario = input('Enter xx or nc\n')
     scenario = 'nc'
-    use_stash = 1
+    use_stash = 0
     if scenario == 'xx':
         s = sf.create_state('XX','../../local_data/XX/')
         schema = 'cdf_xx'
@@ -207,7 +219,7 @@ if __name__ == '__main__':
         ReportingUnit_Id = 62
         childReportingUnitType_Id = 25
         CountItemType = 'election-day'
-        CandidateContest_Id = 922
+        CandidateContest_Id_list = [922]
         filename = 'eday.txt'
         description = 'election-day'
     elif scenario == 'nc':
@@ -217,17 +229,26 @@ if __name__ == '__main__':
         ReportingUnit_Id = 59
         childReportingUnitType_Id = 19  # county
         CountItemType = 'absentee-mail'
-        CandidateContest_Id = 16410
+        CandidateContest_Id_list = [16410,16573,19980]
         filename = 'absentee.txt'
         description = 'absentee'
 
     if not use_stash:
         con, meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
-        create_and_stash_rollup(con,schema,Election_Id,CandidateContest_Id,childReportingUnitType_Id,s,filename,description)
+        contest_name_d = {}
+        for CandidateContest_Id in CandidateContest_Id_list:
+            create_and_stash_rollup(con,schema,Election_Id,CandidateContest_Id,
+                                    childReportingUnitType_Id,s,str(CandidateContest_Id)+filename,description+' Contest '+str(CandidateContest_Id))
+            contest_name_d[CandidateContest_Id] = contest_id_to_name(con,meta,schema,CandidateContest_Id)
+#%% start with stashed data
+    rollup_d = {}
+    for CandidateContest_Id in CandidateContest_Id_list:
+        rollup_d[CandidateContest_Id] = unstash(s,str(CandidateContest_Id)+filename)
+        contest_name = contest_name_d.get(CandidateContest_Id)
+        bar_charts(rollup_d[CandidateContest_Id],contest_name)
 
-    #%% start with stashed data
-    rollup = unstash(s,filename)
-    bar_charts(rollup)
+    if con:
+        con.dispose()
 
 
     print('Done')
