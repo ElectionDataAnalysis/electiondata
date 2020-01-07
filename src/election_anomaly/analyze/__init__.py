@@ -1,6 +1,5 @@
 #!usr/bin/python3
 
-
 import numpy as np
 from scipy import stats as stats
 import scipy.spatial.distance as dist
@@ -180,6 +179,22 @@ def bar_charts(rollup):
 
     plt.show()
 
+def dropoff_anomaly_score(rollup1,rollup2):
+    """given two of contest roll-ups by same ReportingUnitType, find any anomalies
+    in the margin between votes cast in the two contests
+    among the set of ReportingUnits of given type
+    """ # TODO what if districts aren't same for both contests?
+    # enforce(?) that list of rus must be the same for both rollups.
+    # TODO
+
+    #%% create dframe with totals over selections from the two rollup dframess
+    # then create corresponding percentage-diff dframe (series)
+    # TODO
+
+    #%% find outlier in percentage-diff series
+
+    #%% if outlier is 'anomalous enough', make scatter plot for the two rollups
+    return
 
 if __name__ == '__main__':
 #    scenario = input('Enter xx or nc\n')
