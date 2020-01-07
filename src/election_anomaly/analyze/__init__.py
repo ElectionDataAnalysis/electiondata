@@ -7,6 +7,8 @@ import scipy.spatial.distance as dist
 import pandas as pd
 import matplotlib.pyplot as plt
 import db_routines as dbr
+import os
+import states_and_files as sf
 
 def count_by_selection_and_precinct(con,schema,Election_Id): # TODO rename more precisely
     q = """SELECT
@@ -75,11 +77,20 @@ def id_values_to_name(con,meta,schema,df):
             table_name = col[:-3]
             id_list = list(eval('cf.'+col+'.unique()'))
             if table_name == 'Selection': # ballot question or candidate contest
-                id_to_name_d = {**dbr.read_some_value_from_id(con,
-                                meta, schema,'CandidateSelection','Candidate_Id',id_list),
+                sel_cand_id_d = dbr.read_some_value_from_id(con,
+                                meta, schema,'CandidateSelection','Candidate_Id',id_list)
+                cand_id_list = list(sel_cand_id_d.values())
+                cand_id_to_bname_d = dbr.read_some_value_from_id(con,
+                                meta, schema,'Candidate','BallotName',cand_id_list)
+                sel_to_bname_d = {k:cand_id_to_bname_d.get(sel_cand_id_d.get(k)) for k in sel_cand_id_d.keys() } # TODO error handling
+                id_to_name_d = {**sel_to_bname_d,
                                 **dbr.read_some_value_from_id(con,
                                 meta, schema, 'BallotMeasureSelection','Selection', id_list)
                                 }
+            elif table_name == 'ReportingUnit': # use only last part of ReportingUnit.Name
+                id_to_long_name_d = dbr.read_some_value_from_id(con,
+                                            meta, schema, table_name, 'Name', id_list)
+                id_to_name_d = { k: v.split(';')[-1] for k,v in id_to_long_name_d.items()}
             elif table_name[-4:] == 'Type':
                 id_to_name_d = dbr.read_some_value_from_id(con,
                                             meta, schema, table_name, 'Txt', id_list)
@@ -88,7 +99,6 @@ def id_values_to_name(con,meta,schema,df):
                                             meta, schema, table_name, 'Name', id_list)
             cf[table_name] = cf[col].map(id_to_name_d)
             cf=cf.drop(col,axis=1)
-    # TODO
     return cf
 
 def create_pct_df(df):
@@ -113,47 +123,96 @@ def euclidean_zscore(li):
     returns a list of the z-scores of the vectors -- each relative to the ensemble"""
     return list(stats.zscore([sum([dist.euclidean(x,y) for x in li]) for y in li]))
 
+def stash(state,dframe,filename,description):
+    """Put the dataframe dframe into a file in the state's tmp directory
+    and add the filename, description pair to the state's stored_dataframe.dict file.
+    Return the path to the file"""
+    if not os.path.isdir(state.path_to_state_dir+'tmp/'):
+        # create the directory
+        os.mkdir(state.path_to_state_dir+'tmp/')
+    #%% write the new or updated dictionary to the stored_dataframe.dict file
+    dpath = state.path_to_state_dir+'tmp/stored_dataframe.dict'
+    if os.path.isfile(dpath):
+        with open(dpath,'r') as f:
+            d = eval(f.read())
+    else:
+        d = {}
+    d[filename]=description
+    with open(dpath,'w')  as f:
+        f.write(str(d))
+
+    #%% write the dataframe to the file
+    fpath = state.path_to_state_dir+'tmp/'+filename
+    dframe.to_pickle(fpath)
+    return
+
+def unstash(state,filename):
+    """Retrieve a dataframe stashed in a file"""
+    fpath = state.path_to_state_dir+'tmp/'+filename
+    try:
+        if not os.path.isfile(fpath):
+            raise ValueError('No such file: '+fpath)
+        df = pd.read_pickle(state.path_to_state_dir+'tmp/'+filename)
+        return df
+    except ValueError as ve:
+        print(ve)
+        return
+
+def create_and_stash_rollup(con,cdf_schema,Election_Id,CandidateContest_Id,childReportingUnitType_Id,state,filename,description):
+    df = rollup_count(con,cdf_schema,Election_Id,CandidateContest_Id,childReportingUnitType_Id)
+
+    named_df = id_values_to_name(con,meta,cdf_schema,df)
+    stash(state,named_df,filename,description)
+    return
+
+def bar_charts(rollup):
+    CountItemType_list = rollup['CountItemType'].unique()
+    for type in CountItemType_list:
+        type_df = rollup[rollup['CountItemType']== type]
+        type_pivot = type_df.pivot_table(index='ReportingUnit',columns='Selection',values='Count')
+        type_pivot.plot.bar()
+        plt.title(type+' (vote totals)')
+
+        type_pct_pivot = create_pct_df(type_pivot)
+        type_pct_pivot.plot.bar()
+        plt.title(type+' (percentages)')
+
+
+    plt.show()
+
+
 if __name__ == '__main__':
 #    scenario = input('Enter xx or nc\n')
     scenario = 'nc'
+    use_stash = 1
     if scenario == 'xx':
+        s = sf.create_state('XX','../../local_data/XX/')
         schema = 'cdf_xx'
         Election_Id = 262
         ReportingUnit_Id = 62
         childReportingUnitType_Id = 25
-        CountItemType_Id = 52
+        CountItemType = 'election-day'
         CandidateContest_Id = 922
+        filename = 'eday.txt'
+        description = 'election-day'
     elif scenario == 'nc':
         schema = 'cdf_nc'
+        s = sf.create_state('NC','../../local_data/NC/')
         Election_Id = 15834
         ReportingUnit_Id = 59
         childReportingUnitType_Id = 19  # county
-        CountItemType_Id = 50   # absentee-mail
+        CountItemType = 'absentee-mail'
         CandidateContest_Id = 16410
+        filename = 'absentee.txt'
+        description = 'absentee'
 
+    if not use_stash:
+        con, meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
+        create_and_stash_rollup(con,schema,Election_Id,CandidateContest_Id,childReportingUnitType_Id,s,filename,description)
 
-    con, meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
+    #%% start with stashed data
+    rollup = unstash(s,filename)
+    bar_charts(rollup)
 
-#    df = precinct_count(con, schema,  Election_Id,CandidateContest_Id)
-    df_county = rollup_count(con,schema,Election_Id,CandidateContest_Id,19)
-
-    named_df_county = id_values_to_name(con,meta,schema,df_county)
-
-#    df_county_pivot = pd.pivot_table(df_county,index=['County_Id','Selection_Id'],values = 'Count',
-#                                     aggfunc= np.sum)
-
-    abs = df_county[df_county['CountItemType_Id']== CountItemType_Id]
-    abs_pivot2 = abs.pivot_table(index='ReportingUnit_Id',columns='Selection_Id',values='Count',aggfunc=np.sum)
-    abs_pivot1 = abs.pivot_table(index='ReportingUnit_Id',columns='Selection_Id',values='Count')
-    abs_pivot1.plot.bar()
-
-    abs_pct_pivot = create_pct_df(abs_pivot1)
-    abs_pct_pivot.plot.bar()
-
-    plt.show()
-
-
-
-    plt.show()
 
     print('Done')
