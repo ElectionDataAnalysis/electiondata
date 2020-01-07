@@ -1,6 +1,6 @@
 #!usr/bin/python3
 
-import numpy as np
+import pickle
 from scipy import stats as stats
 import scipy.spatial.distance as dist
 import pandas as pd
@@ -8,6 +8,35 @@ import matplotlib.pyplot as plt
 import db_routines as dbr
 import os
 import states_and_files as sf
+
+class ContestRollup:
+    def __init__(self,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,ElectionName,ContestName,childReportingUnitType,
+                 contest_type,pickle_file_path):
+        self.cdf_schema=cdf_schema
+        self.Election_Id=Election_Id
+        self.Contest_Id=Contest_Id
+        self.childReportingUnitType_Id=childReportingUnitType_Id
+        self.ElectionName=ElectionName
+        self.ContestName=ContestName
+        self.childReportingUnitType=childReportingUnitType
+        self.contest_type=contest_type # either BallotMeasure or Candidate
+        self.pickle_file_path=pickle_file_path
+
+def create_contest_rollup(con,meta,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,contest_type,pickle_file_path):
+    assert isinstance(cdf_schema,str) ,'cdf_schema must be a string'
+    assert isinstance(Election_Id,int), 'Election_Id must be an integer'
+    assert isinstance(Contest_Id,int), 'Contest_Id must be an integer'
+    assert isinstance(childReportingUnitType_Id,int), 'childReportingUnitType_Id must be an integer'
+    assert contest_type == 'BallotMeasure' or contest_type == 'Candidate', 'contest_type must be either \'BallotMeasure\' or \'Candidate\''
+    pickle_dir = '/'.join (pickle_file_path.split('/')[:-1])
+    assert os.path.isdir('/'.join (pickle_dir)) , 'No such directory: '+pickle_dir+'\nCurrent directory is: '+os.getcwd()
+
+    ElectionName = dbr.read_single_value_from_id(con,meta,cdf_schema,'Election','Name',Election_Id)
+    ContestName = dbr.read_single_value_from_id(con,meta,cdf_schema,contest_type+'Contest','Name',Contest_Id)
+    childReportingUnitType = dbr.read_single_value_from_id(con,meta,cdf_scheam,'ReportingUnitType',childReportingUnitType_Id)
+
+    return ContestRollup(cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,ElectionName,ContestName,childReportingUnitType,
+                 contest_type,pickle_file_path)
 
 def count_by_selection_and_precinct(con,schema,Election_Id): # TODO rename more precisely
     q = """SELECT
@@ -166,10 +195,15 @@ def unstash(state,filename):
         return
 
 def create_and_stash_rollup(con,cdf_schema,Election_Id,CandidateContest_Id,childReportingUnitType_Id,state,filename,description):
+    """
+    Stashes two different rollups -- one by id and one by name.
+    """
     df = rollup_count(con,cdf_schema,Election_Id,CandidateContest_Id,childReportingUnitType_Id)
+    stash(state,df,'id_'+filename,description)
+
 
     named_df = id_values_to_name(con,meta,cdf_schema,df)
-    stash(state,named_df,filename,description)
+    stash(state,named_df,'name_'+filename,description)
     return
 
 def bar_charts(rollup,contest_name=''):
@@ -186,20 +220,15 @@ def bar_charts(rollup,contest_name=''):
     plt.show()
     return
 
-def dropoff_anomaly_score(rollup_list):
-    """given two of contest roll-ups by same ReportingUnitType, find any anomalies
+def dropoff_anomaly_score(id_rollup_list):
+    """given list of contest roll-up dataframes, find any anomalies
     in the margin between votes cast in the two contests
-    among the set of ReportingUnits of given type
-    """ # TODO what if districts aren't same for both contests?
-    # enforce(?) that list of rus must be the same for both rollups.
-    # TODO
-
-    #%% create dframe with totals over selections from the two rollup dframess
+    among the set of ReportingUnits of given type.
+    Only ReportingUnits shared by both contests are considered
+    """
+    #%% create dframe with totals over selections and vote types from the two rollup dframess
+    for df in id_rollup_list:
     # then create corresponding percentage-diff dframe (series)
-    cf = df.copy()  # to avoid altering the df object passed to the function
-    col_list = list(cf.columns)
-    cf["sum"] = rollup.sum(axis=1)
-    bf = cf.loc[:, col_list].div(cf["sum"], axis=0)
 
     #%% find outlier in percentage-diff series
     # TODO
@@ -243,7 +272,7 @@ if __name__ == '__main__':
 #%% start with stashed data
     rollup_d = {}
     for CandidateContest_Id in CandidateContest_Id_list:
-        rollup_d[CandidateContest_Id] = unstash(s,str(CandidateContest_Id)+filename)
+        rollup_d[CandidateContest_Id] = unstash(s,'name_'+str(CandidateContest_Id)+filename)
         contest_name = contest_name_d.get(CandidateContest_Id)
         bar_charts(rollup_d[CandidateContest_Id],contest_name)
 
