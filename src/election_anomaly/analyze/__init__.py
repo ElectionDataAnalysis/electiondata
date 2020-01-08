@@ -1,6 +1,6 @@
 #!usr/bin/python3
 
-import pickle
+
 from scipy import stats as stats
 import scipy.spatial.distance as dist
 import pandas as pd
@@ -39,8 +39,6 @@ class ContestRollup:
         self.childReportingUnitType=childReportingUnitType
         self.contest_type=contest_type # either BallotMeasure or Candidate
         self.pickle_file_path=pickle_dir
-
-
 
 def create_contest_rollup(con,meta,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,contest_type,pickle_dir):
     assert isinstance(cdf_schema,str) ,'cdf_schema must be a string'
@@ -131,14 +129,6 @@ def rollup_count(con,schema,Election_Id,Contest_Id,ReportingUnitType_Id): # TODO
     df = pd.read_sql_query(sql=q, con = con,params=params)
     return df   # TODO use sqlalchemy instead
 
-def contest_id_to_name(con,meta,schema,contest_id):
-    contest_name = dbr.read_single_value_from_id(con,
-                                meta, schema, 'CandidateContest', 'Name', contest_id)
-    if not contest_name:
-        contest_name = dbr.read_single_value_from_id(con,
-                                                     meta, schema, 'BallotMeasureContest', 'Name', contest_id)
-    return contest_name
-
 def id_values_to_name(con,meta,schema,df):
     """Input is a df is a dataframe with some columns that are labeled with db id fields, e.g., 'Selection_Id'
     Return a df where id values in all these columns have been replaced by the corresponding name
@@ -176,6 +166,7 @@ def id_values_to_name(con,meta,schema,df):
 
 def create_pct_df(df):
     """ df is a pandas dataframe """
+    assert isinstance(df,pd.DataFrame), 'Argument must be dataframe'
     #%%
     cf = df.copy()  # to avoid altering the df object passed to the function
     col_list = list(cf.columns)
@@ -196,35 +187,22 @@ def euclidean_zscore(li):
     returns a list of the z-scores of the vectors -- each relative to the ensemble"""
     return list(stats.zscore([sum([dist.euclidean(x,y) for x in li]) for y in li]))
 
-def bar_charts(rollup,contest_name=''):
-    CountItemType_list = rollup['CountItemType'].unique()
-    for type in CountItemType_list:
-        type_df = rollup[rollup['CountItemType']== type]
-        type_pivot = type_df.pivot_table(index='ReportingUnit',columns='Selection',values='Count')
-        type_pivot.plot.bar()
-        plt.title(contest_name+'\n'+type+' (vote totals)')
-
-        type_pct_pivot = create_pct_df(type_pivot)
-        type_pct_pivot.plot.bar()
-        plt.title(contest_name+'\n'+type+' (vote totals)')
-    plt.show()
-    return
-
-def dropoff_anomaly_score(cru1,cru2):
-    """given two ContestRollups, find any anomalies
-    in the margin between votes cast in the two contests
+def dropoff_anomaly_score(left_dframe,right_dframe,left_value_column = 'sum',right_value_column='sum',on = 'ReportingUnit'):
+    """given two named dataframes indexed by ReportingUnit, find any anomalies
+    in the margin between the specified columns (default is 'sum')
     among the set of ReportingUnits of given type.
     Only ReportingUnits shared by both contests are considered
     """
-    #%% create dframe with totals over selections and vote types from the two rollup dframess
-    # then create corresponding percentage-diff dframe (series)
-
+#    assert isinstance(left_dframe,pd.DataFrame) and isinstance(right_dframe,DataFrame), 'Certain argument(s) are not DataFrames'
+    assert left_value_column in left_dframe.columns, 'Missing column: '+ left_value_column
+    assert right_value_column in right_dframe.columns, 'Missing column: '+ right_value_column
+    combined = left_dframe[['ReportingUnit','CountItemType',left_value_column]].merge(right_dframe[['ReportingUnit','CountItemType',right_value_column]],how = 'inner',left_on = on,right_on=on)
     #%% find outlier in percentage-diff series
     # TODO
 
     #%% if outlier is 'anomalous enough', make scatter plot for the two rollups
     # TODO
-    return
+    return combined
 
 if __name__ == '__main__':
 #    scenario = input('Enter xx or nc\n')
@@ -261,6 +239,11 @@ if __name__ == '__main__':
             rollup = create_contest_rollup(con, meta, cdf_schema, Election_Id, Contest_Id, childReportingUnitType_Id,
                                       'Candidate', pickle_file_dir)
             ContestRollup_dict[Contest_Id] = rollup
+    [d1,d2,d3] =ContestRollup_dict[16410].dataframe_by_name, ContestRollup_dict[16573].dataframe_by_name,ContestRollup_dict[19980].dataframe_by_name
+    a = dropoff_anomaly_score(ContestRollup_dict[16573].dataframe_by_name,
+                              ContestRollup_dict[19980].dataframe_by_name,
+                              left_value_column='Count', right_value_column='Count',
+                              on = ['ReportingUnit','CountItemType'])
 
     for cru in ContestRollup_dict.values():
         cru.BarCharts()
