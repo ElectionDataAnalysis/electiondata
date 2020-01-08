@@ -10,8 +10,26 @@ import os
 import states_and_files as sf
 
 class ContestRollup:
-    def __init__(self,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,ElectionName,ContestName,childReportingUnitType,
-                 contest_type,pickle_file_path):
+
+    def BarCharts(self):
+        rollup = self.dataframe_by_name
+        CountItemType_list = rollup['CountItemType'].unique()
+        for type in CountItemType_list:
+            type_df = rollup[rollup['CountItemType'] == type]
+            type_pivot = type_df.pivot_table(index='ReportingUnit', columns='Selection', values='Count')
+            type_pivot.plot.bar()
+            plt.title(self.ContestName + '\n' + type + ' (vote totals)')
+
+            type_pct_pivot = create_pct_df(type_pivot)
+            type_pct_pivot.plot.bar()
+            plt.title(self.ContestName + '\n' + type + ' (vote totals)')
+        plt.show()
+        return
+
+    def __init__(self,dataframe_by_id,dataframe_by_name,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,ElectionName,ContestName,childReportingUnitType,
+                 contest_type,pickle_dir):
+        self.dataframe_by_id=dataframe_by_id
+        self.dataframe_by_name=dataframe_by_name
         self.cdf_schema=cdf_schema
         self.Election_Id=Election_Id
         self.Contest_Id=Contest_Id
@@ -20,23 +38,42 @@ class ContestRollup:
         self.ContestName=ContestName
         self.childReportingUnitType=childReportingUnitType
         self.contest_type=contest_type # either BallotMeasure or Candidate
-        self.pickle_file_path=pickle_file_path
+        self.pickle_file_path=pickle_dir
 
-def create_contest_rollup(con,meta,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,contest_type,pickle_file_path):
+
+
+def create_contest_rollup(con,meta,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,contest_type,pickle_dir):
     assert isinstance(cdf_schema,str) ,'cdf_schema must be a string'
     assert isinstance(Election_Id,int), 'Election_Id must be an integer'
     assert isinstance(Contest_Id,int), 'Contest_Id must be an integer'
     assert isinstance(childReportingUnitType_Id,int), 'childReportingUnitType_Id must be an integer'
     assert contest_type == 'BallotMeasure' or contest_type == 'Candidate', 'contest_type must be either \'BallotMeasure\' or \'Candidate\''
-    pickle_dir = '/'.join (pickle_file_path.split('/')[:-1])
-    assert os.path.isdir('/'.join (pickle_dir)) , 'No such directory: '+pickle_dir+'\nCurrent directory is: '+os.getcwd()
+    assert os.path.isdir(pickle_dir) , 'No such directory: '+pickle_dir+'\nCurrent directory is: '+os.getcwd()
+    if not pickle_dir[-1] == '/': pickle_dir += '/' # ensure directory ends with slash
 
     ElectionName = dbr.read_single_value_from_id(con,meta,cdf_schema,'Election','Name',Election_Id)
     ContestName = dbr.read_single_value_from_id(con,meta,cdf_schema,contest_type+'Contest','Name',Contest_Id)
-    childReportingUnitType = dbr.read_single_value_from_id(con,meta,cdf_scheam,'ReportingUnitType',childReportingUnitType_Id)
+    childReportingUnitType = dbr.read_single_value_from_id(con,meta,cdf_schema,'ReportingUnitType','Txt',childReportingUnitType_Id)
 
-    return ContestRollup(cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,ElectionName,ContestName,childReportingUnitType,
-                 contest_type,pickle_file_path)
+    
+    f_by_id = pickle_dir + cdf_schema + 'eid' + str(Election_Id) + 'ccid' + str(Contest_Id) + 'crut' + str(
+        childReportingUnitType_Id) + '_by_id'
+    if os.path.exists(f_by_id):
+        dataframe_by_id = pd.read_pickle(f_by_id)
+    else:
+        dataframe_by_id = rollup_count(con, cdf_schema, Election_Id, Contest_Id, childReportingUnitType_Id)
+        dataframe_by_id.to_pickle(f_by_id)
+
+    f_by_name = pickle_dir + cdf_schema + 'eid' + str(Election_Id) + 'ccid' + str(Contest_Id) + 'crut' + str(
+        childReportingUnitType_Id) + '_by_name'
+    if os.path.exists(f_by_name):
+        dataframe_by_name = pd.read_pickle(f_by_name)
+    else:
+        dataframe_by_name = id_values_to_name(con,meta,cdf_schema,dataframe_by_id)
+        dataframe_by_name.to_pickle(f_by_name)
+
+    return ContestRollup(dataframe_by_id,dataframe_by_name,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,ElectionName,ContestName,childReportingUnitType,
+                 contest_type,pickle_dir)
 
 def count_by_selection_and_precinct(con,schema,Election_Id): # TODO rename more precisely
     q = """SELECT
@@ -159,53 +196,6 @@ def euclidean_zscore(li):
     returns a list of the z-scores of the vectors -- each relative to the ensemble"""
     return list(stats.zscore([sum([dist.euclidean(x,y) for x in li]) for y in li]))
 
-def stash(state,dframe,filename,description):
-    """Put the dataframe dframe into a file in the state's tmp directory
-    and add the filename, description pair to the state's stored_dataframe.dict file.
-    Return the path to the file"""
-    if not os.path.isdir(state.path_to_state_dir+'tmp/'):
-        # create the directory
-        os.mkdir(state.path_to_state_dir+'tmp/')
-    #%% write the new or updated dictionary to the stored_dataframe.dict file
-    dpath = state.path_to_state_dir+'tmp/stored_dataframe.dict'
-    if os.path.isfile(dpath):
-        with open(dpath,'r') as f:
-            d = eval(f.read())
-    else:
-        d = {}
-    d[filename]=description
-    with open(dpath,'w')  as f:
-        f.write(str(d))
-
-    #%% write the dataframe to the file
-    fpath = state.path_to_state_dir+'tmp/'+filename
-    dframe.to_pickle(fpath)
-    return
-
-def unstash(state,filename):
-    """Retrieve a dataframe stashed in a file"""
-    fpath = state.path_to_state_dir+'tmp/'+filename
-    try:
-        if not os.path.isfile(fpath):
-            raise ValueError('No such file: '+fpath)
-        df = pd.read_pickle(state.path_to_state_dir+'tmp/'+filename)
-        return df
-    except ValueError as ve:
-        print(ve)
-        return
-
-def create_and_stash_rollup(con,cdf_schema,Election_Id,CandidateContest_Id,childReportingUnitType_Id,state,filename,description):
-    """
-    Stashes two different rollups -- one by id and one by name.
-    """
-    df = rollup_count(con,cdf_schema,Election_Id,CandidateContest_Id,childReportingUnitType_Id)
-    stash(state,df,'id_'+filename,description)
-
-
-    named_df = id_values_to_name(con,meta,cdf_schema,df)
-    stash(state,named_df,'name_'+filename,description)
-    return
-
 def bar_charts(rollup,contest_name=''):
     CountItemType_list = rollup['CountItemType'].unique()
     for type in CountItemType_list:
@@ -220,14 +210,13 @@ def bar_charts(rollup,contest_name=''):
     plt.show()
     return
 
-def dropoff_anomaly_score(id_rollup_list):
-    """given list of contest roll-up dataframes, find any anomalies
+def dropoff_anomaly_score(cru1,cru2):
+    """given two ContestRollups, find any anomalies
     in the margin between votes cast in the two contests
     among the set of ReportingUnits of given type.
     Only ReportingUnits shared by both contests are considered
     """
     #%% create dframe with totals over selections and vote types from the two rollup dframess
-    for df in id_rollup_list:
     # then create corresponding percentage-diff dframe (series)
 
     #%% find outlier in percentage-diff series
@@ -241,9 +230,11 @@ if __name__ == '__main__':
 #    scenario = input('Enter xx or nc\n')
     scenario = 'nc'
     use_stash = 0
+    use_existing_rollups = 0
+    pickle_file_dir = '../../local_data/tmp/'
     if scenario == 'xx':
         s = sf.create_state('XX','../../local_data/XX/')
-        schema = 'cdf_xx'
+        cdf_schema = 'cdf_xx'
         Election_Id = 262
         ReportingUnit_Id = 62
         childReportingUnitType_Id = 25
@@ -252,7 +243,7 @@ if __name__ == '__main__':
         filename = 'eday.txt'
         description = 'election-day'
     elif scenario == 'nc':
-        schema = 'cdf_nc'
+        cdf_schema = 'cdf_nc'
         s = sf.create_state('NC','../../local_data/NC/')
         Election_Id = 15834
         ReportingUnit_Id = 59
@@ -262,19 +253,17 @@ if __name__ == '__main__':
         filename = 'absentee.txt'
         description = 'absentee'
 
-    if not use_stash:
+    ContestRollup_dict = {}
+    if not use_existing_rollups:
         con, meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
-        contest_name_d = {}
-        for CandidateContest_Id in CandidateContest_Id_list:
-            create_and_stash_rollup(con,schema,Election_Id,CandidateContest_Id,
-                                    childReportingUnitType_Id,s,str(CandidateContest_Id)+filename,description+' Contest '+str(CandidateContest_Id))
-            contest_name_d[CandidateContest_Id] = contest_id_to_name(con,meta,schema,CandidateContest_Id)
-#%% start with stashed data
-    rollup_d = {}
-    for CandidateContest_Id in CandidateContest_Id_list:
-        rollup_d[CandidateContest_Id] = unstash(s,'name_'+str(CandidateContest_Id)+filename)
-        contest_name = contest_name_d.get(CandidateContest_Id)
-        bar_charts(rollup_d[CandidateContest_Id],contest_name)
+        # create and pickle
+        for Contest_Id in CandidateContest_Id_list:
+            rollup = create_contest_rollup(con, meta, cdf_schema, Election_Id, Contest_Id, childReportingUnitType_Id,
+                                      'Candidate', pickle_file_dir)
+            ContestRollup_dict[Contest_Id] = rollup
+
+    for cru in ContestRollup_dict.values():
+        cru.BarCharts()
 
     if con:
         con.dispose()
