@@ -221,7 +221,7 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
                     # get internal db name and id for ExternalIdentifier from the info in the df row ...
                     [cdf_id, cdf_name] = id_and_name_from_external(cdf_schema, t,
                                                                    eval(item['ExternalIdentifier']),
-                                                                   id_type_other_id, 'nc_export1', con, cur,
+                                                                   id_type_other_id, mu.name, con, cur,
                                                                    item[
                                                                        'InternalNameField'])
                     # ... or if no such is found in db, insert it!
@@ -258,8 +258,8 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
 
         else:       # if not a Ballot Measure (i.e., if a Candidate Contest)
             office_name = eval(munger_fields_d['Office'][0]['ExternalIdentifier'])
-            q = 'SELECT f."Id", f."Name" FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}."Office" AS f ON e."ForeignId" = f."Id" WHERE e."IdentifierType_Id" = %s AND e."Value" =  %s AND e."OtherIdentifierType" = \'nc_export1\';'
-            a = dbr.query(q,[cdf_schema],[id_type_other_id, office_name],con,cur)
+            q = 'SELECT f."Id", f."Name" FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}."Office" AS f ON e."ForeignId" = f."Id" WHERE e."IdentifierType_Id" = %s AND e."Value" =  %s AND e."OtherIdentifierType" = %s;'
+            a = dbr.query(q,[cdf_schema],[id_type_other_id, office_name,mu.name],con,cur)
             if not a: # if Office is not already associated to the munger in the db (from state's context_dictionary, for example), skip this row
                continue
             ids_d['Office_Id'] = a[0][0]
