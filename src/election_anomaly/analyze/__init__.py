@@ -3,6 +3,7 @@
 
 from scipy import stats as stats
 import scipy.spatial.distance as dist
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import db_routines as dbr
@@ -11,6 +12,20 @@ import states_and_files as sf
 
 class ContestRollup:
 
+    def percentages(self,pivot_index=['ReportingUnit','CountItemType']):
+
+
+        af = self.dataframe_by_name.copy()
+        pivot_columns = ['ReportingUnit','CountItemType','Selection']
+        for x in pivot_index: pivot_columns.remove(x) # TODO improve
+        cf = af.pivot_table(index = pivot_index,columns=pivot_columns,values='Count',aggfunc=np.sum)
+#        cf['sum'] = cf.sum(axis=1)
+        bf = cf.div(cf["total"], axis=0)
+
+        # TODO
+        return bf
+
+    @staticmethod
     def BarCharts(self):
         rollup = self.dataframe_by_name
         CountItemType_list = rollup['CountItemType'].unique()
@@ -239,6 +254,8 @@ if __name__ == '__main__':
             rollup = create_contest_rollup(con, meta, cdf_schema, Election_Id, Contest_Id, childReportingUnitType_Id,
                                       'Candidate', pickle_file_dir)
             ContestRollup_dict[Contest_Id] = rollup
+            pct = rollup.percentages(pivot_index=['ReportingUnit','Selection'])
+            pct2 = rollup.percentages(pivot_index=['ReportingUnit'])
     [d1,d2,d3] =ContestRollup_dict[16410].dataframe_by_name, ContestRollup_dict[16573].dataframe_by_name,ContestRollup_dict[19980].dataframe_by_name
     a = dropoff_anomaly_score(ContestRollup_dict[16573].dataframe_by_name,
                               ContestRollup_dict[19980].dataframe_by_name,
