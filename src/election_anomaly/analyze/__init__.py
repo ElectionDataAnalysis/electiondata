@@ -12,14 +12,36 @@ import states_and_files as sf
 
 class ContestRollup:
 
-    def percentages(self,pivot_index=['ReportingUnit','CountItemType']):
+    def dropoff_vote_count(self,contest_rollup):
+        # TODO
+        return
 
+    def pivot(self,pivot_index,filter=[]):
+        af = self.dataframe_by_name.copy()
+        label_columns = ['ReportingUnit','CountItemType','Selection']
 
+        for col,val in filter:
+            assert col in label_columns
+            af = af[af[col] == val]
+            label_columns.remove(col)
+        for col in pivot_index: label_columns.remove(col) # TODO improve
+        cf = af.pivot_table(index = pivot_index,columns=label_columns,values='Count',aggfunc=np.sum)
+
+        return cf
+
+    def percentages(self,pivot_index=['ReportingUnit','CountItemType'],filter=[]):
         af = self.dataframe_by_name.copy()
         pivot_columns = ['ReportingUnit','CountItemType','Selection']
-        for x in pivot_index: pivot_columns.remove(x) # TODO improve
+
+        for col,val in filter:
+            assert col in ('ReportingUnit','Selection','CountItemType')
+            af = af[af[col] == val]
+            pivot_columns.remove(col)
+        for col in pivot_index: pivot_columns.remove(col) # TODO improve
         cf = af.pivot_table(index = pivot_index,columns=pivot_columns,values='Count',aggfunc=np.sum)
-#        cf['sum'] = cf.sum(axis=1)
+        if 'total' not in cf.columns:   # TODO understand why this was necessary and whether it's OK
+            cf['total'] = cf.sum(axis=1)
+
         bf = cf.div(cf["total"], axis=0)
 
         # TODO
@@ -35,7 +57,7 @@ class ContestRollup:
             type_pivot.plot.bar()
             plt.title(self.ContestName + '\n' + type + ' (vote totals)')
 
-            type_pct_pivot = create_pct_df(type_pivot)
+            type_pct_pivot = pct_dframe(type_pivot)
             type_pct_pivot.plot.bar()
             plt.title(self.ContestName + '\n' + type + ' (vote totals)')
         plt.show()
@@ -179,7 +201,7 @@ def id_values_to_name(con,meta,schema,df):
             cf=cf.drop(col,axis=1)
     return cf
 
-def create_pct_df(df):
+def pct_dframe(df):
     """ df is a pandas dataframe """
     assert isinstance(df,pd.DataFrame), 'Argument must be dataframe'
     #%%
@@ -202,22 +224,29 @@ def euclidean_zscore(li):
     returns a list of the z-scores of the vectors -- each relative to the ensemble"""
     return list(stats.zscore([sum([dist.euclidean(x,y) for x in li]) for y in li]))
 
-def dropoff_anomaly_score(left_dframe,right_dframe,left_value_column = 'sum',right_value_column='sum',on = 'ReportingUnit'):
+def anomaly_score(left_dframe, right_dframe, left_value_column ='sum', right_value_column='sum', on ='ReportingUnit', title=''):
     """given two named dataframes indexed by ReportingUnit, find any anomalies
     in the margin between the specified columns (default is 'sum')
     among the set of ReportingUnits of given type.
     Only ReportingUnits shared by both contests are considered
     """
 #    assert isinstance(left_dframe,pd.DataFrame) and isinstance(right_dframe,DataFrame), 'Certain argument(s) are not DataFrames'
-    assert left_value_column in left_dframe.columns, 'Missing column: '+ left_value_column
-    assert right_value_column in right_dframe.columns, 'Missing column: '+ right_value_column
-    combined = left_dframe[['ReportingUnit','CountItemType',left_value_column]].merge(right_dframe[['ReportingUnit','CountItemType',right_value_column]],how = 'inner',left_on = on,right_on=on)
-    #%% find outlier in percentage-diff series
-    # TODO
+    assert left_value_column in left_dframe.columns, 'Missing column on left: '+ left_value_column
+    assert right_value_column in right_dframe.columns, 'Missing column on right: '+ right_value_column
+    c = left_dframe[['ReportingUnit','CountItemType',left_value_column]].merge(right_dframe[['ReportingUnit','CountItemType',right_value_column]],how = 'inner',left_on = on,right_on=on)
+    if c.empty:
+        return 0
+    else:
+        c['diff'] = c[left_value_column+'_x'] - c[right_value_column+'_y']
+        #%% find diff outlier
+        zscores = stats.zscore(c['diff'])
+        anomaly_score = max(zscores)
+        if anomaly_score > 2:   # TODO remove hard-coding of 2
+            c.plot.scatter(left_value_column+'_x',right_value_column+'_y',s=zscores*20)
+            plt.title(title)
+            plt.show()
+        return anomaly_score
 
-    #%% if outlier is 'anomalous enough', make scatter plot for the two rollups
-    # TODO
-    return combined
 
 if __name__ == '__main__':
 #    scenario = input('Enter xx or nc\n')
@@ -254,13 +283,22 @@ if __name__ == '__main__':
             rollup = create_contest_rollup(con, meta, cdf_schema, Election_Id, Contest_Id, childReportingUnitType_Id,
                                       'Candidate', pickle_file_dir)
             ContestRollup_dict[Contest_Id] = rollup
-            pct = rollup.percentages(pivot_index=['ReportingUnit','Selection'])
-            pct2 = rollup.percentages(pivot_index=['ReportingUnit'])
+
     [d1,d2,d3] =ContestRollup_dict[16410].dataframe_by_name, ContestRollup_dict[16573].dataframe_by_name,ContestRollup_dict[19980].dataframe_by_name
-    a = dropoff_anomaly_score(ContestRollup_dict[16573].dataframe_by_name,
-                              ContestRollup_dict[19980].dataframe_by_name,
-                              left_value_column='Count', right_value_column='Count',
-                              on = ['ReportingUnit','CountItemType'])
+    a = anomaly_score(ContestRollup_dict[16573].dataframe_by_name,
+                      ContestRollup_dict[19980].dataframe_by_name,
+                      left_value_column='Count', right_value_column='Count',
+                      on = ['ReportingUnit','CountItemType'], title='values')
+    anomalies = []
+    for i in [16410,16573,19980]:
+        for j in [16410,16573,19980]:
+            if i < j:
+                anomalies.append([i, j, anomaly_score(ContestRollup_dict[i].dataframe_by_name,
+                                                      ContestRollup_dict[j].dataframe_by_name,
+                                                      left_value_column='Count', right_value_column='Count',
+                                                      on = ['ReportingUnit','CountItemType'], title='values')])
+    print (anomalies)
+
 
     for cru in ContestRollup_dict.values():
         cru.BarCharts()
