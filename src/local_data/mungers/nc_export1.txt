@@ -13,57 +13,57 @@
         'Enumerations':{},
          'OtherFields':{},
         'Condition':'True'}
-    ],
-    'ReportingUnit': [        ## note: conditions should be mutually exclusive
-        {'ExternalIdentifier': 'county + \';\' + precinct',
-         'InternalNameField': 'Name',
-         'Enumerations':{'ReportingUnitType': 'precinct'},
-         'OtherFields':{},
-         'Condition': 'real_precinct == \'Y\''},
-        {'ExternalIdentifier': 'county + \';\' + precinct',
-         'InternalNameField': 'Name',
-         'Enumerations':{'ReportingUnitType': 'other;unknown'},
-         'OtherFields':{},
-         'Condition': 'real_precinct != \'Y\''}
-    ],
-    'Party':[
-        {'ExternalIdentifier':'choice_party',
-        'InternalNameField':'Name',
-        'Enumerations':{},
-         'OtherFields': {},
-         'Condition':'True'}
-    ],
-        'Candidate': [
-            {'ExternalIdentifier': 'choice',
+            ],
+        'ReportingUnit': [        ## note: conditions should be mutually exclusive
+            {'ExternalIdentifier': 'county + \';\' + precinct',
              'InternalNameField': 'Name',
-             'Enumerations': {},
-             'OtherFields': { 'Party_Id': 'ids_d["Party_Id"]'},
-             # don't include fields defined from external context, such as the ElectionDistrict_Id
-             'Condition': 'choice not in ballot_measure_selections.keys()'}
-        ],
+             'Enumerations':{'ReportingUnitType': 'precinct'},
+             'OtherFields':{},
+             'Condition': 'real_precinct == \'Y\''},
+            {'ExternalIdentifier': 'county + \';\' + precinct',
+             'InternalNameField': 'Name',
+             'Enumerations':{'ReportingUnitType': 'other;unknown'},
+             'OtherFields':{},
+             'Condition': 'real_precinct != \'Y\''}
+            ],
+        'Party':[
+            {'ExternalIdentifier':'choice_party',
+            'InternalNameField':'Name',
+            'Enumerations':{},
+             'OtherFields': {},
+             'Condition':'True'}
+            ],
+            'Candidate': [
+                {'ExternalIdentifier': 'choice',
+                 'InternalNameField': 'Name',
+                 'Enumerations': {},
+                 'OtherFields': { 'Party_Id': 'ids_d["Party_Id"]'},
+                 # don't include fields defined from external context, such as the ElectionDistrict_Id
+                 'Condition': 'choice not in ballot_measure_selections.keys()'}
+                ],
 
-        'CandidateContest':[
-        {'ExternalIdentifier':'contest_name',
-        'InternalNameField':'Name',
-        'Enumerations':{},
-         'OtherFields':{'VotesAllowed':'vote_for','Office_Id':'ids_d["Office_Id"]'},    # don't include fields defined from external context, such as the ElectionDistrict_Id
-        'Condition':'choice not in ballot_measure_selections.keys()'}
-    ],
-    'BallotMeasureContest':[
-        {'ExternalIdentifier':'contest_name',
-         'InternalNameField': 'Name',
-         'Enumerations':{},
-         'OtherFields':{'ElectionDistrict_Id':'ids_d["state"]'},
-        'Condition':'choice in ballot_measure_selections.keys()'}    # Because towns are split between counties, default all ballot measure contests to state
-    ],
-    'BallotMeasureSelection':[
-        {'ExternalIdentifier':'choice',
-        'InternalNameField':'Selection',
-        'Enumerations':{},
-        'OtherFields':{},
-         'Condition':'choice in [\'Yes\',\'No\',\'For\',\'Against\']'}
-    ]
-    }}
+            'CandidateContest':[
+            {'ExternalIdentifier':'contest_name',
+            'InternalNameField':'Name',
+            'Enumerations':{},
+             'OtherFields':{'VotesAllowed':'vote_for','Office_Id':'ids_d["Office_Id"]'},    # don't include fields defined from external context, such as the ElectionDistrict_Id
+            'Condition':'choice not in ballot_measure_selections.keys()'}
+            ],
+        'BallotMeasureContest':[
+            {'ExternalIdentifier':'contest_name',
+             'InternalNameField': 'Name',
+             'Enumerations':{},
+             'OtherFields':{'ElectionDistrict_Id':'ids_d["state"]'},
+            'Condition':'choice in ballot_measure_selections.keys()'}    # Because towns are split between counties, default all ballot measure contests to state
+            ],
+        'BallotMeasureSelection':[
+            {'ExternalIdentifier':'choice',
+            'InternalNameField':'Selection',
+            'Enumerations':{},
+            'OtherFields':{},
+             'Condition':'choice in [\'Yes\',\'No\',\'For\',\'Against\']'}
+            ]
+        }}
 }
 
 
