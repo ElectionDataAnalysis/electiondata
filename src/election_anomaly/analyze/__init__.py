@@ -76,6 +76,12 @@ class ContestRollup:
         self.contest_type=contest_type # either BallotMeasure or Candidate
         self.pickle_file_path=pickle_dir
 
+class ContestDataFrame(pd.DataFrame):
+    def __init__(self,Election_ID,Contest_Id,data=None, index=None, columns=['ReportingUnit','Selection','CountItemType','Count'], dtype=None, copy=False):
+        pd.Dataframe.__init__(self,data, index, columns, dtype, copy)
+        self.Election_ID=Election_ID
+        self.Contest_Id=Contest_Id
+
 def create_contest_rollup(con,meta,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,contest_type,pickle_dir):
     assert isinstance(cdf_schema,str) ,'cdf_schema must be a string'
     assert isinstance(Election_Id,int), 'Election_Id must be an integer'
