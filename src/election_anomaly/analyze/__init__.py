@@ -47,7 +47,6 @@ class ContestRollup:
         # TODO
         return bf
 
-    @staticmethod
     def BarCharts(self):
         rollup = self.dataframe_by_name
         CountItemType_list = rollup['CountItemType'].unique()
@@ -247,6 +246,10 @@ def anomaly_score(left_dframe, right_dframe, left_value_column ='sum', right_val
             plt.show()
         return anomaly_score
 
+def dframe_to_zscore(dframe,index,cols):
+    # TODO
+    index_list = list(dframe,index)
+    return
 
 if __name__ == '__main__':
 #    scenario = input('Enter xx or nc\n')
