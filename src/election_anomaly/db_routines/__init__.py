@@ -17,7 +17,7 @@ def establish_connection(paramfile = '../local_data/database.ini',db_name='postg
     con = psycopg2.connect(**params)
     return con
 
-def sql_alchemy_connect(paramfile = '../local_data/database.ini',db_name='postgres'):
+def sql_alchemy_connect(schema,paramfile = '../local_data/database.ini',db_name='postgres'):
     """Returns a connection and a metadata object"""
 
     params = config(paramfile)
@@ -27,14 +27,17 @@ def sql_alchemy_connect(paramfile = '../local_data/database.ini',db_name='postgr
     url = url.format(**params)
 
     # The return value of create_engine() is our connection object
-    con = db.create_engine(url, client_encoding='utf8')
+    engine = db.create_engine(url, client_encoding='utf8')
 
     # We then bind the connection to MetaData()
-    meta = db.MetaData(bind=con, reflect=True)
+    meta = db.MetaData(bind=engine, reflect=True,schema=schema)
 
-    return con, meta
+    return engine, meta
 
 def config(filename='../local_data/database.ini', section='postgresql'):
+    """
+    Creates the parameter dictionary needed to log into our db
+    """
     # create a parser
     parser = ConfigParser()
     # read config file
@@ -48,7 +51,6 @@ def config(filename='../local_data/database.ini', section='postgresql'):
             db[param[0]] = param[1]
     else:
         raise Exception('Section {0} not found in the {1} file'.format(section, filename))
-
     return db
 
 def read_field_value(con,cur,schema,tup):
@@ -101,7 +103,7 @@ def read_some_value_from_id(con,meta,schema,table,field,id_list):
 
 def contest_ids_from_election_id(con,meta,schema,Election_Id):
     t = db.Table('ElectionContestJoin',meta,autoload=True, autoload_with=con,schema=schema)
-    q = db.select([t.columns.Contest_Id).filter_by(Election_Id = Election_Id)
+    q = db.select([t.columns.Contest_Id]).filter(t.columns.Election_Id == Election_Id)
     ResultProxy = con.execute(q)
     ResultSet = ResultProxy.fetchall()
     return list(ResultSet)
@@ -223,8 +225,8 @@ def clean_meta_file(infile,outdir,s):       ## update or remove ***
         sys.exit()
 
 if __name__ == '__main__':
-    con, meta = sql_alchemy_connect(paramfile='../../local_data/database.ini')
     schema = 'cdf_nc'
+    con, meta = sql_alchemy_connect(schema=schema,paramfile='../../local_data/database.ini')
     table = 'ReportingUnit'
     field = 'Name'
     id = 50

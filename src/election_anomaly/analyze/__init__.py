@@ -15,44 +15,64 @@ class Election:
         assert isinstance(by_ReportingUnitType_Id, int), 'by_ReportingUnitType_Id must be an integer'
         assert isinstance(atomic_ReportingUnitType_Id, int), 'atomicReportingUnitType_Id must be an integer'
 
-        con, meta = dbr.sql_alchemy_connect(paramfile=paramfile)
+        con, meta = dbr.sql_alchemy_connect(schema=self.schema,paramfile=paramfile)
 
-        self.rollup_dframe = pd.read_sql_query(q,con) # TODO write query, q must be a sqlalchemy 'selectable' or text
+        q = """SELECT
+            secvcj."Contest_Id", cruj."ParentReportingUnit_Id" AS "ReportingUnit_Id",  secvcj."Selection_Id", vc."CountItemType_Id", COALESCE(sum(vc."Count"),0) AS "Count"
+         FROM
+             {0}."SelectionElectionContestVoteCountJoin" secvcj 
+             LEFT JOIN {0}."VoteCount" vc ON secvcj."VoteCount_Id" = vc."Id"
+             LEFT JOIN {0}."ComposingReportingUnitJoin" cruj ON vc."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
+             LEFT JOIN {0}."ReportingUnit" ru_c ON ru_c."Id" = cruj."ChildReportingUnit_Id"
+             LEFT JOIN {0}."ReportingUnit" ru_p ON ru_p."Id" = cruj."ParentReportingUnit_Id"
 
+         WHERE
+             secvcj."Election_Id" = %(Election_Id)s
+             AND ru_c."ReportingUnitType_Id" = %(roll_up_fromReportingUnitType_Id)s
+             AND ru_p."ReportingUnitType_Id" = %(roll_up_toReportingUnitType_Id)s
+         GROUP BY secvcj."Contest_Id", cruj."ParentReportingUnit_Id",  secvcj."Selection_Id", vc."CountItemType_Id"
+         """.format(self.schema)
+        params = {'Election_Id': self.Election_Id,
+                  'roll_up_toReportingUnitType_Id': by_ReportingUnitType_Id,
+                  'roll_up_fromReportingUnitType_Id': atomic_ReportingUnitType_Id}
+        self.rollup_dframe = pd.read_sql_query(sql=q, con=con, params=params)
         if con:
             con.dispose()
-
-        return dframe
-
+        # TODO pickle the dframe
+        return self.rollup_dframe
 
     def anomaly_scores(self): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
-        for contest_id in self.contest_id_list:
+        contest_id_list = self.rollup_dframe.contest_id.unique()
+        for contest_id in contest_id_list:
+            a=1 # TODO placeholder
+            #%% create dframe for just that contest
+            #%% use self.anomaly_dframe to determine the for loops
+        return
 
-
-    def __init__(self,schema,Election_Id,rollup_dframe,anomaly_dframe):
-        self.schema.schema
+    def __init__(self, cdf_schema, Election_Id, rollup_dframe, anomaly_dframe):
+        self.schema=cdf_schema
         self.Election_Id=Election_Id
         self.rollup_dframe=rollup_dframe
         self.anomaly_dframe=anomaly_dframe
 
-def create_election(schema,Election_Id,pickle_dir,anomaly_dframe,paramfile = '../../local_data/database.ini'):
+def create_election(cdf_schema,Election_Id,pickle_dir='../../local_data/tmp/',paramfile = '../../local_data/database.ini'):
     assert isinstance(cdf_schema, str), 'cdf_schema must be a string'
     assert isinstance(Election_Id, int), 'Election_Id must be an integer'
     assert os.path.isfile(paramfile), 'No such file: '+paramfile+'\n\tCurrent directory is: ' + os.getcwd()
     assert os.path.isdir(pickle_dir), 'No such directory: ' + pickle_dir + '\nCurrent directory is: ' + os.getcwd()
     if not pickle_dir[-1] == '/': pickle_dir += '/'  # ensure directory ends with slash
 
-    e = Election(schema,Election_Id,contest_rollup_dframe = None, anomaly_dframe = None)
+    e = Election(cdf_schema,Election_Id,rollup_dframe = None, anomaly_dframe = None)
 
-    #%% get the roll-up dframe from the db
-    e.pull_rollup_from_db() # TODO
+    #%% get the roll-up dframe from the db, or from pickle
+    e.pull_rollup_from_db(19,25) # TODO fixx hard-coding of 19 (county) and 25 (precinct)
 
     #%% initialize the anomaly dataframe
-    anomaly_dframe = pd.DataFrame(data=None,index=None,
+    e.anomaly_dframe = pd.DataFrame(data=None,index=None,
                         columns=['Contest_Id','column_field','filter_field','filter_value','anomaly_algorithm','anomaly_value'])
 
     #%% clean up
-   return Election(schema=schema,Election_Id=Election_Id,contest_id_list=contest_id_list,anomaly_dframe=anomaly_dframe)
+    return e
 
 class ContestRollup:
     def dropoff_vote_count(self,contest_rollup):
@@ -347,6 +367,8 @@ def pframe_to_zscore(pframe):
     return euclidean_zscore(row_vectors)
 
 if __name__ == '__main__':
+    dframe= create_election('cdf_nc',15834)
+
 #    scenario = input('Enter xx or nc\n')
     scenario = 'nc'
     use_stash = 0
@@ -381,7 +403,7 @@ if __name__ == '__main__':
 
 
 
-    con, meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
+    con, meta = dbr.sql_alchemy_connect(schema=cdf_schema,paramfile='../../local_data/database.ini')
     # create and pickle if not existing already
     for Contest_Id in CandidateContest_Id_list:
         if not use_existing_rollups:
@@ -417,8 +439,8 @@ if __name__ == '__main__':
     print (anomalies)
 
 
-    for cru in ContestRollup_dict.values():
-        cru.BarCharts()
+#    for cru in ContestRollup_dict.values():
+#        cru.BarCharts()
 
     if con:
         con.dispose()

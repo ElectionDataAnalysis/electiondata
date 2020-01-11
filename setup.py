@@ -5,6 +5,6 @@ setup(
     packages=find_packages(),
     url="https://github.com/sfsinger19103/results_analysis",
     author="Stephanie Singer",
-    author_email="sfsinger@campaignscientific.com",
+    author_email="sfsinger@campaignscientific.com", install_requires=['sqlalchemy', 'pandas']
 
 )
