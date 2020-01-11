@@ -11,17 +11,47 @@ import os
 import states_and_files as sf
 
 class Election:
-    def get_contest_ids(self):
+    def get_contest_ids(self,con,meta):
         list = dbr.contest_ids_from_election_id(con,meta,self.schema,self.Election_Id)
         return(list)
 
-    def __init__(self,schema,Election_Id):
+    def pull_contest_rollups(self):
+        con, meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
+        contest_id_list = self.get_contest_ids(con,meta)
+        for contest_id in contest_id_list:
+
+    def anomaly_scores(self): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
+        for contest_id in self.contest_id_list:
+
+
+    def __init__(self,schema,Election_Id,contest_id_list,contest_rollup_dframe,anomaly_dframe):
         self.schema.schema
         self.Election_Id=Election_Id
+        self.contest_id_list=contest_id_list
+        self.contest_rollup_dframe=contest_rollup_dframe
+        self.anomaly_dframe=anomaly_dframe
 
+def create_election(schema,Election_Id,pickle_dir,anomaly_dframe,paramfile = '../../local_data/database.ini'):
+    assert os.path.isfile(paramfile), 'No such file: '+paramfile+'\n\tCurrent directory is: ' + os.getcwd()
+    con, meta = dbr.sql_alchemy_connect(paramfile=paramfile)
+    # TODO assertions for schema and Election_Id
+    e = Election(schema,Election_Id,contest_id_list = None,contest_rollup_dframe = None, anomaly_dframe = None)
+
+    #%% get the list of contests
+    # TODO if we get election rollup dataframe all at once we won't need the contest_id_list
+    e.contest_list = e.get_contest_ids(con,meta)
+
+    #%% initialize the anomaly dataframe
+    anomaly_dframe = pd.DataFrame(data=None,index=None,
+                        columns=['Contest_Id','column_field','filter_field','filter_value','anomaly_algorithm','anomaly_value'])
+
+    #%% clean up
+    # TODO use sqlalchemy more natively
+    if con:
+        con.dispose()
+    return Election(schema=schema,Election_Id=Election_Id,contest_id_list=contest_id_list,anomaly_dframe=anomaly_dframe)
 
 class ContestRollup:
-
     def dropoff_vote_count(self,contest_rollup):
         # TODO
         return
