@@ -10,20 +10,33 @@ import db_routines as dbr
 import os
 import states_and_files as sf
 
+class Election:
+    def get_contest_ids(self):
+        list = dbr.contest_ids_from_election_id(con,meta,self.schema,self.Election_Id)
+        return(list)
+
+    def __init__(self,schema,Election_Id):
+        self.schema.schema
+        self.Election_Id=Election_Id
+
+
 class ContestRollup:
 
     def dropoff_vote_count(self,contest_rollup):
         # TODO
         return
 
-    def raw_pivot(self, col_field='Selection', filter=[]):
+    def pivot(self, col_field='Selection', filter=[],mode='raw'):
         """
         gives a pivot of a contest roll-up
         where rows are filtered by the field-conditions in filter,
         columns are labeled by values of the col_field
-        where rows are labeled by an index made up of all remaining fields
+        where rows are labeled by an index made up of all remaining fields.
+        mode == 'raw' gives raw vote totals; mode == 'pct' give percentages
         """
+        assert mode == 'raw' or mode == 'pct', 'mode not recognized: '+mode
         af = self.dataframe_by_name.copy()
+
         label_columns = ['ReportingUnit', 'CountItemType', 'Selection']
         for col, val in filter:
             assert col in label_columns
@@ -31,6 +44,12 @@ class ContestRollup:
             label_columns.remove(col)
         label_columns.remove(col_field)
         cf = af.pivot_table(index=label_columns, columns=[col_field], values='Count', aggfunc=np.sum)
+
+        if mode == 'pct':
+            if 'total' not in cf.columns:  # TODO understand why this was necessary and whether it's OK
+                cf['total'] = cf.sum(axis=1)
+            cf = cf[cf.total != 0]
+            cf = cf.div(cf["total"], axis=0)
         return cf
 
     def plot_pivot(self,col_field='Selection',filter=[]):
@@ -38,7 +57,7 @@ class ContestRollup:
         if filter:
             title_string += '\n'+filter[1]   # TODO dict is more natural, with filter[0] is column and filter[1] is value
 
-        type_pivot= self.raw_pivot(col_field, [filter])
+        type_pivot= self.pivot(col_field, [filter])
         type_pivot.plot.bar()
         plt.title(title_string+'\nVote Totals')
 
@@ -84,12 +103,16 @@ class ContestRollup:
         dframe = self.dataframe_by_name
         filter_list = [  ['CountItemType',x] for x in dframe.CountItemType.unique() ] + [  ['ReportingUnit',x] for x in dframe.ReportingUnit.unique() ]
 
-
-        score_list = []
+        raw_score_list = []
+        pct_score_list = []
         for cv in filter_list:
-            pframe = self.raw_pivot(col_field='Selection', filter=[cv])
-            score_list.append( max(pframe_to_zscore(pframe)))
-        return filter_list,score_list
+            pframe = self.pivot(col_field='Selection', filter=[cv])
+            raw_score_list.append( max(pframe_to_zscore(pframe)))
+
+            pctframe = self.pivot(col_field='Selection', filter=[cv],mode = 'pct')
+            pct_score_list.append(max(pframe_to_zscore(pctframe)))
+
+        return filter_list,raw_score_list,pct_score_list
 
     def __init__(self,dataframe_by_id,dataframe_by_name,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,ElectionName,ContestName,childReportingUnitType,
                  contest_type,pickle_dir):
@@ -194,10 +217,12 @@ def rollup_count(con, schema, Election_Id, Contest_Id, roll_up_toReportingUnitTy
         secvcj."Election_Id" = %(Election_Id)s
         AND secvcj."Contest_Id" = %(Contest_Id)s
         AND ru_c."ReportingUnitType_Id" = %(roll_up_fromReportingUnitType_Id)s
-        AND ru_p."ReportingUnitType_Id" = %(ReportingUnitType_Id)s
+        AND ru_p."ReportingUnitType_Id" = %(roll_up_toReportingUnitType_Id)s
     GROUP BY cruj."ParentReportingUnit_Id",  secvcj."Selection_Id", vc."CountItemType_Id"
     """.format(schema)
-    params = {'Election_Id': Election_Id,'Contest_Id':Contest_Id,'ReportingUnitType_Id':roll_up_toReportingUnitType_Id}
+    params = {'Election_Id': Election_Id,'Contest_Id':Contest_Id,
+              'roll_up_toReportingUnitType_Id':roll_up_toReportingUnitType_Id,
+              'roll_up_fromReportingUnitType_Id':roll_up_fromReportingUnitType_Id}
     dframe = pd.read_sql_query(sql=q, con = con,params=params)
     return dframe
 
@@ -293,6 +318,8 @@ if __name__ == '__main__':
     scenario = 'nc'
     use_stash = 0
     use_existing_rollups = 0
+
+    number_of_charts = 1
     pickle_file_dir = '../../local_data/tmp/'
     if scenario == 'xx':
         s = sf.create_state('XX','../../local_data/XX/')
@@ -318,17 +345,26 @@ if __name__ == '__main__':
         description = 'absentee'
 
     ContestRollup_dict = {}
-    if not use_existing_rollups:
-        con, meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
-        # create and pickle
-        for Contest_Id in CandidateContest_Id_list:
-            rollup = create_contest_rollup(con, meta, cdf_schema, Election_Id, Contest_Id, childReportingUnitType_Id,atomic_ReportingUnitType_Id,
-                                      'Candidate', pickle_file_dir)
-            ContestRollup_dict[Contest_Id] = rollup
-            filter_list,scores = rollup.anomaly_scores() # TODO this calculates pivots; if we calculate them again in the plotting routine, that's inefficient.
-            top_three = sorted(zip(scores,filter_list), reverse=True)[:3]
-            for score,filter in top_three:
+
+
+
+    con, meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
+    # create and pickle if not existing already
+    for Contest_Id in CandidateContest_Id_list:
+        if not use_existing_rollups:
+            for f in [pickle_file_dir + cdf_schema + 'eid' + str(Election_Id) + 'ccid' + str(Contest_Id) + 'crut' +str(childReportingUnitType_Id) + '_by_id', pickle_file_dir + cdf_schema + 'eid' + str(Election_Id) + 'ccid' + str(Contest_Id) + 'crut' + str(childReportingUnitType_Id) + '_by_name']:
+                if os.path.isfile(f):
+                    os.remove(f)
+
+        rollup = create_contest_rollup(con, meta, cdf_schema, Election_Id, Contest_Id, childReportingUnitType_Id,atomic_ReportingUnitType_Id,
+                                  'Candidate', pickle_file_dir)
+        ContestRollup_dict[Contest_Id] = rollup
+        filter_list,vote_scores,pct_scores = rollup.anomaly_scores() # TODO this calculates pivots; if we calculate them again in the plotting routine, that's inefficient.
+        top_vote_charts = sorted(zip(vote_scores,filter_list), reverse=True)[:number_of_charts]
+        top_pct_charts = sorted(zip(pct_scores,filter_list), reverse=True)[:number_of_charts]
+        for filter in set(tuple(x[1]) for x in top_vote_charts + top_pct_charts) :
                 rollup.plot_pivot(filter=filter)
+
 
     [d1,d2,d3] =ContestRollup_dict[16410].dataframe_by_name, ContestRollup_dict[16573].dataframe_by_name,ContestRollup_dict[19980].dataframe_by_name
     a = diff_anomaly_score(ContestRollup_dict[16573].dataframe_by_name,

@@ -99,14 +99,17 @@ def read_some_value_from_id(con,meta,schema,table,field,id_list):
     ResultSet = ResultProxy.fetchall()
     return dict(ResultSet)
 
+def contest_ids_from_election_id(con,meta,schema,Election_Id):
+    t = db.Table('ElectionContestJoin',meta,autoload=True, autoload_with=con,schema=schema)
+    q = db.select([t.columns.Contest_Id).filter_by(Election_Id = Election_Id)
+    ResultProxy = con.execute(q)
+    ResultSet = ResultProxy.fetchall()
+    return list(ResultSet)
+
 
 def query_as_string(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
     return cur.mogrify(sql.SQL(q).format(*format_args),strs).decode("utf-8")
-
-def dataframe_query(q,sql_ids,strs,con,cur):
-    # TODO
-    return
 
 def query(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
