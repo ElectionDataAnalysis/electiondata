@@ -16,18 +16,36 @@ class ContestRollup:
         # TODO
         return
 
-    def pivot(self,pivot_index,filter=[]):
+    def raw_pivot(self, col_field='Selection', filter=[]):
+        """
+        gives a pivot of a contest roll-up
+        where rows are filtered by the field-conditions in filter,
+        columns are labeled by values of the col_field
+        where rows are labeled by an index made up of all remaining fields
+        """
         af = self.dataframe_by_name.copy()
-        label_columns = ['ReportingUnit','CountItemType','Selection']
-
-        for col,val in filter:
+        label_columns = ['ReportingUnit', 'CountItemType', 'Selection']
+        for col, val in filter:
             assert col in label_columns
             af = af[af[col] == val]
             label_columns.remove(col)
-        for col in pivot_index: label_columns.remove(col) # TODO improve
-        cf = af.pivot_table(index = pivot_index,columns=label_columns,values='Count',aggfunc=np.sum)
-
+        label_columns.remove(col_field)
+        cf = af.pivot_table(index=label_columns, columns=[col_field], values='Count', aggfunc=np.sum)
         return cf
+
+    def plot_pivot(self,col_field='Selection',filter=[]):
+        title_string = self.ContestName
+        if filter:
+            title_string += '\n'+filter[1]   # TODO dict is more natural, with filter[0] is column and filter[1] is value
+
+        type_pivot= self.raw_pivot(col_field, [filter])
+        type_pivot.plot.bar()
+        plt.title(title_string+'\nVote Totals')
+
+        type_pct_pivot = pct_dframe(type_pivot)
+        type_pct_pivot.plot.bar()
+        plt.title(title_string+'\nVote Percentages')
+        plt.show()
 
     def percentages(self,pivot_index=['ReportingUnit','CountItemType'],filter=[]):
         af = self.dataframe_by_name.copy()
@@ -58,9 +76,20 @@ class ContestRollup:
 
             type_pct_pivot = pct_dframe(type_pivot)
             type_pct_pivot.plot.bar()
-            plt.title(self.ContestName + '\n' + type + ' (vote totals)')
+            plt.title(self.ContestName + '\n' + type + ' (vote percentages)')
         plt.show()
         return
+
+    def anomaly_scores(self):
+        dframe = self.dataframe_by_name
+        filter_list = [  ['CountItemType',x] for x in dframe.CountItemType.unique() ] + [  ['ReportingUnit',x] for x in dframe.ReportingUnit.unique() ]
+
+
+        score_list = []
+        for cv in filter_list:
+            pframe = self.raw_pivot(col_field='Selection', filter=[cv])
+            score_list.append( max(pframe_to_zscore(pframe)))
+        return filter_list,score_list
 
     def __init__(self,dataframe_by_id,dataframe_by_name,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,ElectionName,ContestName,childReportingUnitType,
                  contest_type,pickle_dir):
@@ -82,38 +111,39 @@ class ContestDataFrame(pd.DataFrame):
         self.Election_ID=Election_ID
         self.Contest_Id=Contest_Id
 
-def create_contest_rollup(con,meta,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,contest_type,pickle_dir):
+
+def create_contest_rollup(con, meta, cdf_schema, Election_Id, Contest_Id, by_ReportingUnitType_Id, atomic_ReportingUnitType_Id,contest_type, pickle_dir):
     assert isinstance(cdf_schema,str) ,'cdf_schema must be a string'
     assert isinstance(Election_Id,int), 'Election_Id must be an integer'
     assert isinstance(Contest_Id,int), 'Contest_Id must be an integer'
-    assert isinstance(childReportingUnitType_Id,int), 'childReportingUnitType_Id must be an integer'
+    assert isinstance(by_ReportingUnitType_Id, int), 'childReportingUnitType_Id must be an integer'
     assert contest_type == 'BallotMeasure' or contest_type == 'Candidate', 'contest_type must be either \'BallotMeasure\' or \'Candidate\''
     assert os.path.isdir(pickle_dir) , 'No such directory: '+pickle_dir+'\nCurrent directory is: '+os.getcwd()
     if not pickle_dir[-1] == '/': pickle_dir += '/' # ensure directory ends with slash
 
     ElectionName = dbr.read_single_value_from_id(con,meta,cdf_schema,'Election','Name',Election_Id)
     ContestName = dbr.read_single_value_from_id(con,meta,cdf_schema,contest_type+'Contest','Name',Contest_Id)
-    childReportingUnitType = dbr.read_single_value_from_id(con,meta,cdf_schema,'ReportingUnitType','Txt',childReportingUnitType_Id)
+    childReportingUnitType = dbr.read_single_value_from_id(con, meta, cdf_schema,'ReportingUnitType','Txt', by_ReportingUnitType_Id)
 
     
     f_by_id = pickle_dir + cdf_schema + 'eid' + str(Election_Id) + 'ccid' + str(Contest_Id) + 'crut' + str(
-        childReportingUnitType_Id) + '_by_id'
+        by_ReportingUnitType_Id) + '_by_id'
     if os.path.exists(f_by_id):
         dataframe_by_id = pd.read_pickle(f_by_id)
     else:
-        dataframe_by_id = rollup_count(con, cdf_schema, Election_Id, Contest_Id, childReportingUnitType_Id)
+        dataframe_by_id = rollup_count(con, cdf_schema, Election_Id, Contest_Id, by_ReportingUnitType_Id,atomic_ReportingUnitType_Id)
         dataframe_by_id.to_pickle(f_by_id)
 
     f_by_name = pickle_dir + cdf_schema + 'eid' + str(Election_Id) + 'ccid' + str(Contest_Id) + 'crut' + str(
-        childReportingUnitType_Id) + '_by_name'
+        by_ReportingUnitType_Id) + '_by_name'
     if os.path.exists(f_by_name):
         dataframe_by_name = pd.read_pickle(f_by_name)
     else:
         dataframe_by_name = id_values_to_name(con,meta,cdf_schema,dataframe_by_id)
         dataframe_by_name.to_pickle(f_by_name)
 
-    return ContestRollup(dataframe_by_id,dataframe_by_name,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,ElectionName,ContestName,childReportingUnitType,
-                 contest_type,pickle_dir)
+    return ContestRollup(dataframe_by_id, dataframe_by_name, cdf_schema, Election_Id, Contest_Id, by_ReportingUnitType_Id, ElectionName, ContestName, childReportingUnitType,
+                         contest_type, pickle_dir)
 
 def count_by_selection_and_precinct(con,schema,Election_Id): # TODO rename more precisely
     q = """SELECT
@@ -150,7 +180,7 @@ def precinct_count(con,schema,Election_Id,Contest_Id): # TODO remove hard-coded 
     df = pd.read_sql_query(sql=q, con = con,params=params)
     return df
 
-def rollup_count(con,schema,Election_Id,Contest_Id,ReportingUnitType_Id): # TODO remove hard-coded precinct ReportingUnitType_Id (25)
+def rollup_count(con, schema, Election_Id, Contest_Id, roll_up_toReportingUnitType_Id,roll_up_fromReportingUnitType_Id):
     q = """SELECT
        cruj."ParentReportingUnit_Id" AS "ReportingUnit_Id",  secvcj."Selection_Id", vc."CountItemType_Id", COALESCE(sum(vc."Count"),0) AS "Count"
     FROM
@@ -163,13 +193,13 @@ def rollup_count(con,schema,Election_Id,Contest_Id,ReportingUnitType_Id): # TODO
     WHERE
         secvcj."Election_Id" = %(Election_Id)s
         AND secvcj."Contest_Id" = %(Contest_Id)s
-        AND ru_c."ReportingUnitType_Id" = 25
+        AND ru_c."ReportingUnitType_Id" = %(roll_up_fromReportingUnitType_Id)s
         AND ru_p."ReportingUnitType_Id" = %(ReportingUnitType_Id)s
     GROUP BY cruj."ParentReportingUnit_Id",  secvcj."Selection_Id", vc."CountItemType_Id"
     """.format(schema)
-    params = {'Election_Id': Election_Id,'Contest_Id':Contest_Id,'ReportingUnitType_Id':ReportingUnitType_Id}
-    df = pd.read_sql_query(sql=q, con = con,params=params)
-    return df   # TODO use sqlalchemy instead
+    params = {'Election_Id': Election_Id,'Contest_Id':Contest_Id,'ReportingUnitType_Id':roll_up_toReportingUnitType_Id}
+    dframe = pd.read_sql_query(sql=q, con = con,params=params)
+    return dframe
 
 def id_values_to_name(con,meta,schema,df):
     """Input is a df is a dataframe with some columns that are labeled with db id fields, e.g., 'Selection_Id'
@@ -229,7 +259,7 @@ def euclidean_zscore(li):
     returns a list of the z-scores of the vectors -- each relative to the ensemble"""
     return list(stats.zscore([sum([dist.euclidean(x,y) for x in li]) for y in li]))
 
-def anomaly_score(left_dframe, right_dframe, left_value_column ='sum', right_value_column='sum', on ='ReportingUnit', title=''):
+def diff_anomaly_score(left_dframe, right_dframe, left_value_column ='sum', right_value_column='sum', on ='ReportingUnit', title=''):
     """given two named dataframes indexed by ReportingUnit, find any anomalies
     in the margin between the specified columns (default is 'sum')
     among the set of ReportingUnits of given type.
@@ -247,15 +277,16 @@ def anomaly_score(left_dframe, right_dframe, left_value_column ='sum', right_val
         zscores = stats.zscore(c['diff'])
         anomaly_score = max(zscores)
         if anomaly_score > 2:   # TODO remove hard-coding of 2
-            c.plot.scatter(left_value_column+'_x',right_value_column+'_y',s=zscores*20)
-            plt.title(title)
-            plt.show()
+            print('Anomaly found')
+            # ('Anomaly found comparing:\n\t'+left_dframe+','+left_value_column+'\n\t'+right_dframe+','+right_value_column)
         return anomaly_score
 
-def dframe_to_zscore(dframe,index,cols):
-    # TODO
-    index_list = list(dframe,index)
-    return
+def pframe_to_zscore(pframe):
+    """ for a pivoted dataframe, calculate z-score """
+
+    # TODO check that all rows are numerical vectors, with all other info in the index
+    row_vectors = [list(pframe.iloc[x, :]) for x in range(len(pframe))]   # TODO there's gotta be a better way to get the list of row vectors, no?
+    return euclidean_zscore(row_vectors)
 
 if __name__ == '__main__':
 #    scenario = input('Enter xx or nc\n')
@@ -268,6 +299,7 @@ if __name__ == '__main__':
         cdf_schema = 'cdf_xx'
         Election_Id = 262
         ReportingUnit_Id = 62
+        atomic_ReportingUnitType_Id = 25 # precinct
         childReportingUnitType_Id = 25
         CountItemType = 'election-day'
         CandidateContest_Id_list = [922]
@@ -278,6 +310,7 @@ if __name__ == '__main__':
         s = sf.create_state('NC','../../local_data/NC/')
         Election_Id = 15834
         ReportingUnit_Id = 59
+        atomic_ReportingUnitType_Id = 25 # precinct
         childReportingUnitType_Id = 19  # county
         CountItemType = 'absentee-mail'
         CandidateContest_Id_list = [16410,16573,19980]
@@ -289,23 +322,29 @@ if __name__ == '__main__':
         con, meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
         # create and pickle
         for Contest_Id in CandidateContest_Id_list:
-            rollup = create_contest_rollup(con, meta, cdf_schema, Election_Id, Contest_Id, childReportingUnitType_Id,
+            rollup = create_contest_rollup(con, meta, cdf_schema, Election_Id, Contest_Id, childReportingUnitType_Id,atomic_ReportingUnitType_Id,
                                       'Candidate', pickle_file_dir)
             ContestRollup_dict[Contest_Id] = rollup
+            filter_list,scores = rollup.anomaly_scores() # TODO this calculates pivots; if we calculate them again in the plotting routine, that's inefficient.
+            top_three = sorted(zip(scores,filter_list), reverse=True)[:3]
+            for score,filter in top_three:
+                rollup.plot_pivot(filter=filter)
 
     [d1,d2,d3] =ContestRollup_dict[16410].dataframe_by_name, ContestRollup_dict[16573].dataframe_by_name,ContestRollup_dict[19980].dataframe_by_name
-    a = anomaly_score(ContestRollup_dict[16573].dataframe_by_name,
-                      ContestRollup_dict[19980].dataframe_by_name,
-                      left_value_column='Count', right_value_column='Count',
-                      on = ['ReportingUnit','CountItemType'], title='values')
+    a = diff_anomaly_score(ContestRollup_dict[16573].dataframe_by_name,
+                           ContestRollup_dict[19980].dataframe_by_name,
+                           left_value_column='Count', right_value_column='Count',
+                           on = ['ReportingUnit','CountItemType'], title='values')
+
+
     anomalies = []
     for i in [16410,16573,19980]:
         for j in [16410,16573,19980]:
             if i < j:
-                anomalies.append([i, j, anomaly_score(ContestRollup_dict[i].dataframe_by_name,
-                                                      ContestRollup_dict[j].dataframe_by_name,
-                                                      left_value_column='Count', right_value_column='Count',
-                                                      on = ['ReportingUnit','CountItemType'], title='values')])
+                anomalies.append([i, j, diff_anomaly_score(ContestRollup_dict[i].dataframe_by_name,
+                                                           ContestRollup_dict[j].dataframe_by_name,
+                                                           left_value_column='Count', right_value_column='Count',
+                                                           on = ['ReportingUnit','CountItemType'], title='values')])
     print (anomalies)
 
 
