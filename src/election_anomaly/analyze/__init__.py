@@ -11,45 +11,48 @@ import os
 import states_and_files as sf
 
 class Election:
-    def get_contest_ids(self,con,meta):
-        list = dbr.contest_ids_from_election_id(con,meta,self.schema,self.Election_Id)
-        return(list)
+    def pull_rollup_from_db(self,by_ReportingUnitType_Id,atomic_ReportingUnitType_Id,paramfile='../../local_data/database.ini'):
+        assert isinstance(by_ReportingUnitType_Id, int), 'by_ReportingUnitType_Id must be an integer'
+        assert isinstance(atomic_ReportingUnitType_Id, int), 'atomicReportingUnitType_Id must be an integer'
 
-    def pull_contest_rollups(self):
-        con, meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
-        contest_id_list = self.get_contest_ids(con,meta)
-        for contest_id in contest_id_list:
+        con, meta = dbr.sql_alchemy_connect(paramfile=paramfile)
+
+        self.rollup_dframe = pd.read_sql_query(q,con) # TODO write query, q must be a sqlalchemy 'selectable' or text
+
+        if con:
+            con.dispose()
+
+        return dframe
+
 
     def anomaly_scores(self): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
         for contest_id in self.contest_id_list:
 
 
-    def __init__(self,schema,Election_Id,contest_id_list,contest_rollup_dframe,anomaly_dframe):
+    def __init__(self,schema,Election_Id,rollup_dframe,anomaly_dframe):
         self.schema.schema
         self.Election_Id=Election_Id
-        self.contest_id_list=contest_id_list
-        self.contest_rollup_dframe=contest_rollup_dframe
+        self.rollup_dframe=rollup_dframe
         self.anomaly_dframe=anomaly_dframe
 
 def create_election(schema,Election_Id,pickle_dir,anomaly_dframe,paramfile = '../../local_data/database.ini'):
+    assert isinstance(cdf_schema, str), 'cdf_schema must be a string'
+    assert isinstance(Election_Id, int), 'Election_Id must be an integer'
     assert os.path.isfile(paramfile), 'No such file: '+paramfile+'\n\tCurrent directory is: ' + os.getcwd()
-    con, meta = dbr.sql_alchemy_connect(paramfile=paramfile)
-    # TODO assertions for schema and Election_Id
-    e = Election(schema,Election_Id,contest_id_list = None,contest_rollup_dframe = None, anomaly_dframe = None)
+    assert os.path.isdir(pickle_dir), 'No such directory: ' + pickle_dir + '\nCurrent directory is: ' + os.getcwd()
+    if not pickle_dir[-1] == '/': pickle_dir += '/'  # ensure directory ends with slash
 
-    #%% get the list of contests
-    # TODO if we get election rollup dataframe all at once we won't need the contest_id_list
-    e.contest_list = e.get_contest_ids(con,meta)
+    e = Election(schema,Election_Id,contest_rollup_dframe = None, anomaly_dframe = None)
+
+    #%% get the roll-up dframe from the db
+    e.pull_rollup_from_db() # TODO
 
     #%% initialize the anomaly dataframe
     anomaly_dframe = pd.DataFrame(data=None,index=None,
                         columns=['Contest_Id','column_field','filter_field','filter_value','anomaly_algorithm','anomaly_value'])
 
     #%% clean up
-    # TODO use sqlalchemy more natively
-    if con:
-        con.dispose()
-    return Election(schema=schema,Election_Id=Election_Id,contest_id_list=contest_id_list,anomaly_dframe=anomaly_dframe)
+   return Election(schema=schema,Election_Id=Election_Id,contest_id_list=contest_id_list,anomaly_dframe=anomaly_dframe)
 
 class ContestRollup:
     def dropoff_vote_count(self,contest_rollup):
