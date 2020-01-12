@@ -42,25 +42,39 @@ class Election(object): # TODO check that object is necessary (apparently for pi
         self.rollup_dframe = pd.read_sql_query(sql=q, con=con, params=params)
         if con:
             con.dispose()
-        # TODO pickle the dframe
         return self.rollup_dframe
 
-    def anomaly_scores(self): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
-        contest_id_list = self.rollup_dframe.contest_id.unique()
+    def anomaly_scores(self,con,meta,schema): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
+        contest_id_list = self.rollup_dframe.Contest_Id.unique()
         for contest_id in contest_id_list:
-            dframe = self.rollup_dframe[self.rollup_dframe.Contest_Id == contest_id]
-            c_dframe = ContestDataFrame(self.Election_Id,contest_id,dframe.data,dframe.index,dframe.columns)
-            # TODO
-            #%% create dframe for just that contest
-            #%% use self.rollup_dframe to determine the for loops
+            anomaly_list = []
+            cr = create_contest_rollup_from_election(con,meta,self, contest_id)
+            print('Calculating anomalies for '+cr.ContestName)
+            for column_field in ['ReportingUnit','CountItemType','Selection']:
+                print('\tColumn field is '+column_field)
+                temp_list = ['ReportingUnit','CountItemType','Selection']
+                temp_list.remove(column_field)
+                for filter_field in temp_list:
+                    print('\t\tfilter field is '+filter_field)
+                    for filter_value in cr.dataframe_by_name[filter_field].unique():
+                        # print('\t\t\tfilter value is '+filter_value)
+                        z_score_totals, z_score_pcts = cr.euclidean_z_score(column_field, [[filter_field,filter_value]])
+                        anomaly_list.append([contest_id,column_field,filter_field,filter_value,'euclidean z-score',
+                                             max(z_score_totals), max(z_score_pcts)])
+            print('Appending to anomaly_dframe: (showing first three elements only)\n'+str(anomaly_list[:2]))
+            self.anomaly_dframe = self.anomaly_dframe.append(anomaly_list) # less efficient to update anomaly_dframe contest-by-contest, but better for debug
         return
 
-    def __init__(self, cdf_schema, Election_Id, rollup_dframe, anomaly_dframe,pickle_dir):
-        self.schema=cdf_schema
+    def __init__(self, cdf_schema, Election_Id, rollup_dframe, anomaly_dframe,roll_up_to_ReportingUnitType,roll_up_to_ReportingUnitType_Id,atomic_ReportingUnitType,atomic_ReportingUnitType_Id,pickle_dir):
+        self.cdf_schema=cdf_schema
         self.Election_Id=Election_Id
         self.rollup_dframe=rollup_dframe
         self.anomaly_dframe=anomaly_dframe
         self.pickle_dir=pickle_dir
+        self.roll_up_to_ReportingUnitType=roll_up_to_ReportingUnitType
+        self.roll_up_to_ReportingUnitType_Id=roll_up_to_ReportingUnitType_Id
+        self.atomic_ReportingUnitType=atomic_ReportingUnitType
+        self.atomic_ReportingUnitType_Id=atomic_ReportingUnitType_Id
 
 def create_election(cdf_schema,Election_Id,roll_up_to_ReportingUnitType='county',atomic_ReportingUnitType='precinct',pickle_dir='../../local_data/tmp/',paramfile = '../../local_data/database.ini'):
     if not pickle_dir[-1] == '/': pickle_dir += '/'  # ensure directory ends with slash
@@ -69,9 +83,13 @@ def create_election(cdf_schema,Election_Id,roll_up_to_ReportingUnitType='county'
     assert isinstance(Election_Id, int), 'Election_Id must be an integer'
     assert os.path.isfile(paramfile), 'No such file: '+paramfile+'\n\tCurrent directory is: ' + os.getcwd()
 
-    con,meta = dbr.sql_alchemy_connect(cdf_schema,paramfile
-                                       )
-    e = Election(cdf_schema,Election_Id,pickle_dir = pickle_dir,rollup_dframe = None, anomaly_dframe = None)
+    con,meta = dbr.sql_alchemy_connect(cdf_schema,paramfile)
+    roll_up_to_Id = dbr.read_id_from_enum(con, meta, cdf_schema, 'ReportingUnitType', roll_up_to_ReportingUnitType)
+    roll_up_from_Id = dbr.read_id_from_enum(con, meta, cdf_schema, 'ReportingUnitType', atomic_ReportingUnitType)
+
+    e = Election(cdf_schema,Election_Id,pickle_dir = pickle_dir,rollup_dframe = None, anomaly_dframe = None,
+                 roll_up_to_ReportingUnitType=roll_up_to_ReportingUnitType,roll_up_to_ReportingUnitType_Id=roll_up_to_Id,
+                 atomic_ReportingUnitType=atomic_ReportingUnitType,atomic_ReportingUnitType_Id=roll_up_from_Id)
 
     #%% rollup dataframe
     ElectionName = dbr.read_single_value_from_id(con,meta,cdf_schema,'Election','Name',Election_Id).replace(' ','')
@@ -83,8 +101,6 @@ def create_election(cdf_schema,Election_Id,roll_up_to_ReportingUnitType='county'
         e.rollup_dframe = pd.read_pickle(rollup_filepath)
     # if rollup not already pickled, create and pickle it
     else:
-        roll_up_from_Id = dbr.read_id_from_enum(con,meta,cdf_schema,'ReportingUnitType',atomic_ReportingUnitType)
-        roll_up_to_Id = dbr.read_id_from_enum(con,meta,cdf_schema,'ReportingUnitType',roll_up_to_ReportingUnitType)
         e.pull_rollup_from_db(roll_up_to_Id,roll_up_from_Id)
         e.rollup_dframe.to_pickle(rollup_filepath)
 
@@ -97,7 +113,8 @@ def create_election(cdf_schema,Election_Id,roll_up_to_ReportingUnitType='county'
     # if rollup not already pickled, create and pickle it
     else:
         e.anomaly_dframe = pd.DataFrame(data=None,index=None,
-                            columns=['Contest_Id','column_field','filter_field','filter_value','anomaly_algorithm','anomaly_value'])
+                            columns=['Contest_Id','column_field','filter_field','filter_value','anomaly_algorithm',
+                                     'anomaly_value_totals','anomaly_values_pcts'])
     if con:
         con.dispose()
     return e
@@ -180,6 +197,11 @@ class ContestRollup:
         plt.show()
         return
 
+    def euclidean_z_score(self,column_field,filter_field_value_pair_list):
+        z_score_totals = pframe_to_zscore(self.pivot(col_field=column_field, filter=filter_field_value_pair_list))
+        z_score_pcts =  pframe_to_zscore(self.pivot(col_field=column_field, filter=filter_field_value_pair_list,mode = 'pct'))
+        return z_score_totals, z_score_pcts
+
     def anomaly_scores(self):
         dframe = self.dataframe_by_name
         filter_list = [  ['CountItemType',x] for x in dframe.CountItemType.unique() ] + [  ['ReportingUnit',x] for x in dframe.ReportingUnit.unique() ]
@@ -195,8 +217,9 @@ class ContestRollup:
 
         return filter_list,raw_score_list,pct_score_list
 
-    def __init__(self,dataframe_by_id,dataframe_by_name,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,ElectionName,ContestName,childReportingUnitType,
-                 contest_type,pickle_dir):
+    def __init__(self,dataframe_by_id,dataframe_by_name,cdf_schema,Election_Id,Contest_Id,childReportingUnitType_Id,
+                 ElectionName,ContestName,childReportingUnitType,
+                 contest_type,pickle_dir=None):
         self.dataframe_by_id=dataframe_by_id
         self.dataframe_by_name=dataframe_by_name
         self.cdf_schema=cdf_schema
@@ -210,11 +233,26 @@ class ContestRollup:
         self.pickle_file_path=pickle_dir
 
 class ContestDataFrame(pd.DataFrame):
-    def __init__(self,Election_ID,Contest_Id,data=None, index=None, columns=['ReportingUnit','Selection','CountItemType','Count'], dtype=None, copy=False):
+    def __init__(self,Election_ID,Contest_Id,data=None, index=None, columns=['ReportingUnit_Id','Selection_ID','CountItemType_Id','Count'], dtype=None, copy=False):
         pd.Dataframe.__init__(self,data, index, columns, dtype, copy)
         self.Election_ID=Election_ID
         self.Contest_Id=Contest_Id
 
+def create_contest_rollup_from_election(con,meta,e, Contest_Id):   # TODO get rid of con/meta/schema here by making names part of the Election def?
+    assert isinstance(e,Election),'election must be an instance of the Election class'
+    # assert isinstance(Contest_Id,int), 'Contest_Id must be an integer' # TODO why did this fail?
+    ElectionName = dbr.read_single_value_from_id(con, meta, e.cdf_schema,'Election','Name', e.Election_Id)
+    contest_type = dbr.contest_type_from_contest_id(con,meta,e.cdf_schema,Contest_Id) # Candidate or BallotMeasure
+    contesttable = contest_type + 'Contest'
+    ContestName = dbr.read_single_value_from_id(con,meta,e.cdf_schema,contesttable,'Name',Contest_Id) # TODO candidte or ballotmeasure
+
+    dataframe_by_id = e.rollup_dframe[e.rollup_dframe.Contest_Id == Contest_Id].drop('Contest_Id',axis=1)
+    dataframe_by_name = id_values_to_name(con, meta, e.cdf_schema, dataframe_by_id)
+    by_ReportingUnitType = e.roll_up_to_ReportingUnitType
+    by_ReportingUnitType_Id = e.roll_up_to_ReportingUnitType_Id
+    return ContestRollup(dataframe_by_id, dataframe_by_name, e.cdf_schema, e.Election_Id, Contest_Id,
+                         by_ReportingUnitType_Id, ElectionName, ContestName, by_ReportingUnitType,
+                         contest_type, None)
 
 def create_contest_rollup(con, meta, cdf_schema, Election_Id, Contest_Id, by_ReportingUnitType_Id, atomic_ReportingUnitType_Id,contest_type, pickle_dir):
     assert isinstance(cdf_schema,str) ,'cdf_schema must be a string'
@@ -328,6 +366,10 @@ def id_values_to_name(con,meta,schema,df):
                                 **dbr.read_some_value_from_id(con,
                                 meta, schema, 'BallotMeasureSelection','Selection', id_list)
                                 }
+            elif table_name == 'Contest': # ballot question or candidate contest
+                cand_contest_id_to_name_d = dbr.read_some_value_from_id(con,meta,schema,'CandidateContest','Name',id_list)
+                ballot_measure_contest_id_to_name_d = dbr.read_some_value_from_id(con,meta,schema,'BallotMeasureContest','Name',id_list)
+                id_to_name_d = {**cand_contest_id_to_name_d,**ballot_measure_contest_id_to_name_d}
             elif table_name == 'ReportingUnit': # use only last part of ReportingUnit.Name
                 id_to_long_name_d = dbr.read_some_value_from_id(con,
                                             meta, schema, table_name, 'Name', id_list)
@@ -363,7 +405,13 @@ def vector_list_to_scalar_list(li):
 def euclidean_zscore(li):
     """Take a list of vectors -- all in the same R^k,
     returns a list of the z-scores of the vectors -- each relative to the ensemble"""
-    return list(stats.zscore([sum([dist.euclidean(x,y) for x in li]) for y in li]))
+    distance_list = [sum([dist.euclidean(item,y) for y in li]) for item in li]
+    if len(set(distance_list)) == 1:
+        # if all distances are the same, which yields z-score nan values
+
+        return [0]*len(li)
+    else:
+        return list(stats.zscore(distance_list))
 
 def diff_anomaly_score(left_dframe, right_dframe, left_value_column ='sum', right_value_column='sum', on ='ReportingUnit', title=''):
     """given two named dataframes indexed by ReportingUnit, find any anomalies
@@ -389,13 +437,22 @@ def diff_anomaly_score(left_dframe, right_dframe, left_value_column ='sum', righ
 
 def pframe_to_zscore(pframe):
     """ for a pivoted dataframe, calculate z-score """
-
-    # TODO check that all rows are numerical vectors, with all other info in the index
-    row_vectors = [list(pframe.iloc[x, :]) for x in range(len(pframe))]   # TODO there's gotta be a better way to get the list of row vectors, no?
-    return euclidean_zscore(row_vectors)
+    if pframe.empty:
+        print('Empty dataframe assigned score list of [0]')
+        return [0]
+    else:
+        # TODO check that all rows are numerical vectors, with all other info in the index
+        row_vectors = [list(pframe.iloc[x, :]) for x in range(len(pframe))]   # TODO there's gotta be a better way to get the list of row vectors, no?
+        return euclidean_zscore(row_vectors)
 
 if __name__ == '__main__':
     nc_2018 = create_election('cdf_nc',15834)
+    schema = 'cdf_nc'
+    con,meta = dbr.sql_alchemy_connect(schema,paramfile = '../../local_data/database.ini')
+    nc_2018.anomaly_scores(con,meta,schema)
+
+    if con:
+        con.dispose()
 
 #    scenario = input('Enter xx or nc\n')
     scenario = 'nc'

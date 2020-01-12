@@ -69,7 +69,7 @@ def read_single_value_from_id(con,meta,schema,table,field,id):
     read from the record with the given id from the given table of the given schema.
     """
     t = db.Table(table,meta,autoload=True, autoload_with=con,schema=schema)
-    q = db.select([eval('t.columns.'+field)]).where(t.columns.Id == id)
+    q = db.select([eval('t.columns.'+field)]).where(t.columns.Id == str(id))
     ResultProxy = con.execute(q)
     ResultSet = ResultProxy.fetchall()
     if ResultSet:
@@ -93,20 +93,43 @@ def read_some_value_from_id(con,meta,schema,table,field,id_list):
     read from the given table of the given schema.
     """
     t = db.Table(table,meta,autoload=True, autoload_with=con,schema=schema)
-    print (id_list)
-    id_df = pd.DataFrame(id_list)
-    id_list_clean = [x[0] for x in id_df.to_records(column_dtypes={0:db.INTEGER},index=False)]
-    q = db.select([ t.columns.Id,eval('t.columns.'+ field)]).where(t.columns.Id.in_(id_list_clean))
-    ResultProxy = con.execute(q)
-    ResultSet = ResultProxy.fetchall()
-    return dict(ResultSet)
+    if id_list:
+        id_df = pd.DataFrame(id_list)
+        id_list_clean = [x[0] for x in id_df.to_records(column_dtypes={0:db.INTEGER},index=False)]
+        q = db.select([ t.columns.Id,eval('t.columns.'+ field)]).where(t.columns.Id.in_(id_list_clean))
+        ResultProxy = con.execute(q)
+        ResultSet = ResultProxy.fetchall()
+        return dict(ResultSet)
+    else:
+        return {}
 
 def contest_ids_from_election_id(con,meta,schema,Election_Id):
     """ given an election id, return list of all contest ids """
+    #%%
     t = db.Table('ElectionContestJoin',meta,autoload=True, autoload_with=con,schema=schema)
     q = db.select([t.columns.Contest_Id]).where(t.columns.Election_Id == Election_Id)
     ResultProxy = con.execute(q)
     ResultSet = ResultProxy.fetchall()
+    return [x[0] for x in ResultSet]
+
+def contest_type_from_contest_id(con,meta,schema,Contest_Id):
+    """ given an contest id, return CandidateContest or BallotMeasureContest """
+    t = db.Table('BallotMeasureContest',meta,autoload=True, autoload_with=con,schema=schema)
+    q = db.select([t.columns.Id]).where(t.columns.Id == str(Contest_Id))
+    ResultProxy = con.execute(q)
+    ResultSet = ResultProxy.first()
+    if ResultSet is None:
+        t = db.Table('CandidateContest', meta, autoload=True, autoload_with=con, schema=schema)
+        q = db.select([t.columns.Id]).where(t.columns.Id == str(Contest_Id))
+        ResultProxy = con.execute(q)
+        ResultSet = ResultProxy.first()
+        if ResultSet is None:
+            return
+        else:
+            return "Candidate"
+    else:
+        return "BallotMeasure"
+
     return [x[0] for x in ResultSet]
 
 def read_id_from_enum(con,meta,schema,table,txt):
