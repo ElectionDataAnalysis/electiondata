@@ -102,12 +102,27 @@ def read_some_value_from_id(con,meta,schema,table,field,id_list):
     return dict(ResultSet)
 
 def contest_ids_from_election_id(con,meta,schema,Election_Id):
+    """ given an election id, return list of all contest ids """
     t = db.Table('ElectionContestJoin',meta,autoload=True, autoload_with=con,schema=schema)
-    q = db.select([t.columns.Contest_Id]).filter(t.columns.Election_Id == Election_Id)
+    q = db.select([t.columns.Contest_Id]).where(t.columns.Election_Id == Election_Id)
     ResultProxy = con.execute(q)
     ResultSet = ResultProxy.fetchall()
-    return list(ResultSet)
+    return [x[0] for x in ResultSet]
 
+def read_id_from_enum(con,meta,schema,table,txt):
+    """ given the Txt value of an enumeration table entry, return the corresponding Id"""
+    t = db.Table(table,meta,autoload=True, autoload_with=con,schema=schema)
+    # TODO assert that table is an enumeration?
+    q = db.select([t.columns.Id]).where(t.columns.Txt == txt)
+    ResultProxy = con.execute(q)
+    ResultSet = ResultProxy.fetchall()
+    if ResultSet:
+        return ResultSet[0][0]
+    else:
+        print('No record in '+schema+'.'+table+' with Txt '+txt)
+        return
+
+    return
 
 def query_as_string(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]

@@ -9,8 +9,12 @@ import matplotlib.pyplot as plt
 import db_routines as dbr
 import os
 import states_and_files as sf
+try:
+    import cPickle as pickle
+except:
+    import pickle
 
-class Election:
+class Election(object): # TODO check that object is necessary (apparently for pickling)
     def pull_rollup_from_db(self, by_ReportingUnitType_Id, atomic_ReportingUnitType_Id, db_paramfile='../../local_data/database.ini'):
         assert isinstance(by_ReportingUnitType_Id, int), 'by_ReportingUnitType_Id must be an integer'
         assert isinstance(atomic_ReportingUnitType_Id, int), 'atomicReportingUnitType_Id must be an integer'
@@ -44,34 +48,58 @@ class Election:
     def anomaly_scores(self): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
         contest_id_list = self.rollup_dframe.contest_id.unique()
         for contest_id in contest_id_list:
-            a=1 # TODO placeholder
+            dframe = self.rollup_dframe[self.rollup_dframe.Contest_Id == contest_id]
+            c_dframe = ContestDataFrame(self.Election_Id,contest_id,dframe.data,dframe.index,dframe.columns)
+            # TODO
             #%% create dframe for just that contest
-            #%% use self.anomaly_dframe to determine the for loops
+            #%% use self.rollup_dframe to determine the for loops
         return
 
-    def __init__(self, cdf_schema, Election_Id, rollup_dframe, anomaly_dframe):
+    def __init__(self, cdf_schema, Election_Id, rollup_dframe, anomaly_dframe,pickle_dir):
         self.schema=cdf_schema
         self.Election_Id=Election_Id
         self.rollup_dframe=rollup_dframe
         self.anomaly_dframe=anomaly_dframe
+        self.pickle_dir=pickle_dir
 
-def create_election(cdf_schema,Election_Id,pickle_dir='../../local_data/tmp/',paramfile = '../../local_data/database.ini'):
+def create_election(cdf_schema,Election_Id,roll_up_to_ReportingUnitType='county',atomic_ReportingUnitType='precinct',pickle_dir='../../local_data/tmp/',paramfile = '../../local_data/database.ini'):
+    if not pickle_dir[-1] == '/': pickle_dir += '/'  # ensure directory ends with slash
+    assert os.path.isdir(pickle_dir), 'No such directory: ' + pickle_dir + '\nCurrent directory is: ' + os.getcwd()
     assert isinstance(cdf_schema, str), 'cdf_schema must be a string'
     assert isinstance(Election_Id, int), 'Election_Id must be an integer'
     assert os.path.isfile(paramfile), 'No such file: '+paramfile+'\n\tCurrent directory is: ' + os.getcwd()
-    assert os.path.isdir(pickle_dir), 'No such directory: ' + pickle_dir + '\nCurrent directory is: ' + os.getcwd()
-    if not pickle_dir[-1] == '/': pickle_dir += '/'  # ensure directory ends with slash
 
-    e = Election(cdf_schema,Election_Id,rollup_dframe = None, anomaly_dframe = None)
+    con,meta = dbr.sql_alchemy_connect(cdf_schema,paramfile
+                                       )
+    e = Election(cdf_schema,Election_Id,pickle_dir = pickle_dir,rollup_dframe = None, anomaly_dframe = None)
+
+    #%% rollup dataframe
+    ElectionName = dbr.read_single_value_from_id(con,meta,cdf_schema,'Election','Name',Election_Id).replace(' ','')
+    rollup_filepath = pickle_dir+ElectionName+'_rollup_to'+roll_up_to_ReportingUnitType  # TODO better filename db id could be bad identifier.
 
     #%% get the roll-up dframe from the db, or from pickle
-    e.pull_rollup_from_db(19,25) # TODO fixx hard-coding of 19 (county) and 25 (precinct)
+    # if rollup already pickled into pickle_dir
+    if os.path.isfile(rollup_filepath):
+        e.rollup_dframe = pd.read_pickle(rollup_filepath)
+    # if rollup not already pickled, create and pickle it
+    else:
+        roll_up_from_Id = dbr.read_id_from_enum(con,meta,cdf_schema,'ReportingUnitType',atomic_ReportingUnitType)
+        roll_up_to_Id = dbr.read_id_from_enum(con,meta,cdf_schema,'ReportingUnitType',roll_up_to_ReportingUnitType)
+        e.pull_rollup_from_db(roll_up_to_Id,roll_up_from_Id)
+        e.rollup_dframe.to_pickle(rollup_filepath)
 
-    #%% initialize the anomaly dataframe
-    e.anomaly_dframe = pd.DataFrame(data=None,index=None,
-                        columns=['Contest_Id','column_field','filter_field','filter_value','anomaly_algorithm','anomaly_value'])
 
-    #%% clean up
+    #%% anomaly dataframe
+    anomaly_filepath = pickle_dir+ElectionName+'_anomalies'
+    # if anomaly dataframe already pickled
+    if os.path.isfile(anomaly_filepath):
+        e.anomaly_dframe = pd.read_pickle(anomaly_filepath)
+    # if rollup not already pickled, create and pickle it
+    else:
+        e.anomaly_dframe = pd.DataFrame(data=None,index=None,
+                            columns=['Contest_Id','column_field','filter_field','filter_value','anomaly_algorithm','anomaly_value'])
+    if con:
+        con.dispose()
     return e
 
 class ContestRollup:
