@@ -11,11 +11,11 @@ import os
 import states_and_files as sf
 
 class Election:
-    def pull_rollup_from_db(self,by_ReportingUnitType_Id,atomic_ReportingUnitType_Id,paramfile='../../local_data/database.ini'):
+    def pull_rollup_from_db(self, by_ReportingUnitType_Id, atomic_ReportingUnitType_Id, db_paramfile='../../local_data/database.ini'):
         assert isinstance(by_ReportingUnitType_Id, int), 'by_ReportingUnitType_Id must be an integer'
         assert isinstance(atomic_ReportingUnitType_Id, int), 'atomicReportingUnitType_Id must be an integer'
 
-        con, meta = dbr.sql_alchemy_connect(schema=self.schema,paramfile=paramfile)
+        con, meta = dbr.sql_alchemy_connect(schema=self.schema, paramfile=db_paramfile)
 
         q = """SELECT
             secvcj."Contest_Id", cruj."ParentReportingUnit_Id" AS "ReportingUnit_Id",  secvcj."Selection_Id", vc."CountItemType_Id", COALESCE(sum(vc."Count"),0) AS "Count"
@@ -367,7 +367,7 @@ def pframe_to_zscore(pframe):
     return euclidean_zscore(row_vectors)
 
 if __name__ == '__main__':
-    dframe= create_election('cdf_nc',15834)
+    nc_2018 = create_election('cdf_nc',15834)
 
 #    scenario = input('Enter xx or nc\n')
     scenario = 'nc'
