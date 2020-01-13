@@ -73,7 +73,6 @@ if __name__ == '__main__':
     s = sf.create_state(abbr,'../local_data/'+abbr)
 
     munger_path = '../local_data/mungers/'+munger_name+'.txt'
-#    exec('from munge_routines import '+munger_name+ ' as mu')
     print('Creating munger instance from '+munger_path)
     m = sf.create_munger(munger_path)
 

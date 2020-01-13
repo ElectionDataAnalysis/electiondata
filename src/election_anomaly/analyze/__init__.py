@@ -51,17 +51,17 @@ class Election(object): # TODO check that object is necessary (apparently for pi
             cr = create_contest_rollup_from_election(con,meta,self, contest_id)
             print('Calculating anomalies for '+cr.ContestName)
             for column_field in ['ReportingUnit','CountItemType','Selection']:
-                print('\tColumn field is '+column_field)
+                #print('\tColumn field is '+column_field)
                 temp_list = ['ReportingUnit','CountItemType','Selection']
                 temp_list.remove(column_field)
                 for filter_field in temp_list:
-                    print('\t\tfilter field is '+filter_field)
+                    #print('\t\tfilter field is '+filter_field)
                     for filter_value in cr.dataframe_by_name[filter_field].unique():
                         # print('\t\t\tfilter value is '+filter_value)
                         z_score_totals, z_score_pcts = cr.euclidean_z_score(column_field, [[filter_field,filter_value]])
-                        anomaly_list.append([contest_id,column_field,filter_field,filter_value,'euclidean z-score',
-                                             max(z_score_totals), max(z_score_pcts)])
-            print('Appending to anomaly_dframe: (showing first three elements only)\n'+str(anomaly_list[:2]))
+                        anomaly_list.append(pd.Series([cr.ContestName,column_field,filter_field,filter_value,'euclidean z-score',
+                                             max(z_score_totals), max(z_score_pcts)],index=self.anomaly_dframe.columns))
+            print('Appending contest anomalies to anomaly_dframe: (showing first three elements only)\n'+str(anomaly_list[:2]))
             self.anomaly_dframe = self.anomaly_dframe.append(anomaly_list) # less efficient to update anomaly_dframe contest-by-contest, but better for debug
         return
 
@@ -113,7 +113,7 @@ def create_election(cdf_schema,Election_Id,roll_up_to_ReportingUnitType='county'
     # if rollup not already pickled, create and pickle it
     else:
         e.anomaly_dframe = pd.DataFrame(data=None,index=None,
-                            columns=['Contest_Id','column_field','filter_field','filter_value','anomaly_algorithm',
+                            columns=['ContestName','column_field','filter_field','filter_value','anomaly_algorithm',
                                      'anomaly_value_totals','anomaly_values_pcts'])
     if con:
         con.dispose()
@@ -453,6 +453,8 @@ if __name__ == '__main__':
 
     if con:
         con.dispose()
+    anomaly_picklepath = nc_2018.pickle_dir+'nc_2018_anomalies'
+    nc_2018.anomaly_dframe.to_pickle(anomaly_picklepath)
 
 #    scenario = input('Enter xx or nc\n')
     scenario = 'nc'
