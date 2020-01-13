@@ -1,5 +1,4 @@
 #!usr/bin/python3
-import sys, os
 import os.path
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
@@ -13,6 +12,8 @@ import munge_routines as mr
 from db_routines import Create_CDF_db as CDF
 import states_and_files as sf
 import context
+import analyze as an
+import os
 
 def raw_data(df,con,cur):
     """ Loads the raw data from the df into the schema for the associated state
@@ -36,76 +37,97 @@ def raw_data(df,con,cur):
     dbr.load_data(con,cur,s,df)
     return
 
-def file_to_context(s,df,m,con,cur):
-    """ s is a state, df is a datafile, m is a munger """
-
-    [munger_d,munger_inverse_d] = context.build_munger_d(df.state,m)
-    a = context.raw_to_context(df,m,munger_d,con,cur)
-    print(str(a))
-    return
-
-def load_cdf(s,cdf_schema_name,con,cur):
-    print('Load information from context dictionary for '+s.name)
-    context_to_db_d = context.context_to_cdf(s,cdf_schema_name,con,cur)  # {'ReportingUnit':{'North Carolina':59, 'North Carolina;Alamance County':61} ... }
-    con.commit()
-
-    # load data from df's table in state's schema to CDF schema. Note: data from df must already be loaded into df's state's raw-data schema.
-    print('Loading data from df to CDF schema')
-    nc_export1.raw_records_to_cdf(df,cdf_schema_name,con,cur)
-    print('Done!')
-    return
-
-
 if __name__ == '__main__':
-    default = 'XX'
-    abbr = input('Enter two-character abbreviation for your state/district/territory (default is '+default+')\n') or default
 
-    default = 'cdf_xx'
-    cdf_schema=input('Enter name of CDF schema (default is '+default+')\n') or default
+    to_cdf = input('Load and process election data into a common-data-format database (y/n)?\n')
+    if to_cdf == 'y':
+        default = 'XX'
+        abbr = input('Enter two-character abbreviation for your state/district/territory (default is '+default+')\n') or default
 
-    default = 'nc_export1'
-    munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
+        default = 'cdf_xx'
+        cdf_schema=input('Enter name of CDF schema (default is '+default+')\n') or default
 
-    default = 'alamance.txt'
-    df_name = input('Enter name of datafile (default is '+default+')\n') or default
+        default = 'nc_export1'
+        munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
 
-
-    s = sf.create_state(abbr,'../local_data/'+abbr)
-
-    munger_path = '../local_data/mungers/'+munger_name+'.txt'
-    print('Creating munger instance from '+munger_path)
-    m = sf.create_munger(munger_path)
+        default = 'alamance.txt'
+        df_name = input('Enter name of datafile (default is '+default+')\n') or default
 
 
-    dbr.create_schema(s.schema_name)
-    con = dbr.establish_connection()
-    cur = con.cursor()
+        s = sf.create_state(abbr,'../local_data/'+abbr)
+
+        munger_path = '../local_data/mungers/'+munger_name+'.txt'
+        print('Creating munger instance from '+munger_path)
+        m = sf.create_munger(munger_path)
 
 
+        dbr.create_schema(s.schema_name)
+        con = dbr.establish_connection()
+        cur = con.cursor()
+
+        #%% create cdf schema
+        print('Creating CDF schema '+ cdf_schema)
+        CDF.create_common_data_format_schema(con, cur, cdf_schema)
+
+        # load state context info into cdf schema
+        need_to_load_data = input('Load context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
+        if need_to_load_data == 'y':
+            print('Loading state context info into CDF schema') # *** takes a long time; why?
+            context.context_to_cdf(s,cdf_schema,con,cur)
+
+        print('Creating metafile instance')
+        mf = sf.create_metafile(s,'layout_results_pct.txt')
+
+        print('Creating datafile instance')
+        df = sf.create_datafile(s,'General Election 2018-11-06',df_name,mf,m)
+
+        need_to_load_data = input('Load raw data from '+df.file_name+' into schema '+s.schema_name+' (y/n)?')
+        if need_to_load_data == 'y':
+            print('Load raw data from '+df.file_name)
+            raw_data(df,con,cur)
 
 
-    # create cdf schema
-    print('Creating CDF schema '+ cdf_schema)
-    CDF.create_common_data_format_schema(con, cur, cdf_schema)
+        print('Loading data from df table\n\tin schema '+ s.schema_name+ '\n\tto CDF schema '+cdf_schema+'\n\tusing munger '+munger_name)
+        mr.raw_records_to_cdf(df,m,cdf_schema,con,cur)
+        print('Done!')
 
-    # load state context info into cdf schema
-    need_to_load_data = input('Load context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
-    if need_to_load_data == 'y':
-        print('Loading state context info into CDF schema') # *** takes a long time; why?
-        context.context_to_cdf(s,cdf_schema,con,cur)
+    find_anomalies = input('Find anomalies in an election (y/n)?\n')
+    if find_anomalies == 'y':
+        default = 'cdf_nc'
+        cdf_schema = input('Enter name of cdf schema (default is '+default+')\n') or default
 
-    print('Creating metafile instance')
-    mf = sf.create_metafile(s,'layout_results_pct.txt')
+        default = '../local_data/database.ini'
+        paramfile = input('Enter path to database parameter file (default is '+default+')\n') or default
 
-    print('Creating datafile instance')
-    df = sf.create_datafile(s,'General Election 2018-11-06',df_name,mf,m)
+        eng, meta, Session = dbr.sql_alchemy_connect(cdf_schema, paramfile)
+        session = Session()
 
-    need_to_load_data = input('Load raw data from '+df.file_name+' into schema '+s.schema_name+' (y/n)?')
-    if need_to_load_data == 'y':
-        print('Load raw data from '+df.file_name)
-        raw_data(df,con,cur)
+        election_dframe = dbr.election_list(session,meta,cdf_schema)
+        print('Available elections in schema '+cdf_schema)
+        for index,row in election_dframe.iterrows():
+            print(row['Name']+' (Id is '+str(row['Id'])+')')
+
+        election_id = int(input('Enter Id of the election you wish to analyze\n'))
+        election_short_name = input('Enter short name for the election (alphanumeric with underscore, no spaces)\n')
+
+        default = 'precinct'
+        atomic_ru_type = input('Enter the \'atomic\' Reporting Unit Type on which you wish to base your rolled-up counts (default is '+default+')\n') or default
+
+        default = 'county'
+        roll_up_to_ru_type = input('Enter the (larger) Reporting Unit Type whose counts you want to analyze (default is '+default+')\n') or default
+
+        default = '../local_data/pickles/'+election_short_name+'/'
+        pickle_dir = input('Enter the directory for storing pickled dataframes (default is '+default+')\n') or default
+
+        try:
+            assert os.path.isdir(pickle_dir)
+        except AssertionError as e:
+            print(e)
+            dummy = input('Create the directory and hit enter to continue.')
+
+        e = an.create_election(cdf_schema,election_id,roll_up_to_ru_type,atomic_ru_type,pickle_dir,paramfile)
+        e.anomaly_scores(eng,meta,cdf_schema)
 
 
-    print('Loading data from df table\n\tin schema '+ s.schema_name+ '\n\tto CDF schema '+cdf_schema+'\n\tusing munger '+munger_name)
-    mr.raw_records_to_cdf(df,m,cdf_schema,con,cur)
-    print('Done!')
+        if eng:
+            eng.dispose()

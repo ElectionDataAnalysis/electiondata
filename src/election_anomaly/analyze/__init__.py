@@ -19,7 +19,7 @@ class Election(object): # TODO check that object is necessary (apparently for pi
         assert isinstance(by_ReportingUnitType_Id, int), 'by_ReportingUnitType_Id must be an integer'
         assert isinstance(atomic_ReportingUnitType_Id, int), 'atomicReportingUnitType_Id must be an integer'
 
-        con, meta = dbr.sql_alchemy_connect(schema=self.schema, paramfile=db_paramfile)
+        con, meta , Session = dbr.sql_alchemy_connect(schema=self.cdf_schema)
 
         q = """SELECT
             secvcj."Contest_Id", cruj."ParentReportingUnit_Id" AS "ReportingUnit_Id",  secvcj."Selection_Id", vc."CountItemType_Id", COALESCE(sum(vc."Count"),0) AS "Count"
@@ -35,7 +35,7 @@ class Election(object): # TODO check that object is necessary (apparently for pi
              AND ru_c."ReportingUnitType_Id" = %(roll_up_fromReportingUnitType_Id)s
              AND ru_p."ReportingUnitType_Id" = %(roll_up_toReportingUnitType_Id)s
          GROUP BY secvcj."Contest_Id", cruj."ParentReportingUnit_Id",  secvcj."Selection_Id", vc."CountItemType_Id"
-         """.format(self.schema)
+         """.format(self.cdf_schema)
         params = {'Election_Id': self.Election_Id,
                   'roll_up_toReportingUnitType_Id': by_ReportingUnitType_Id,
                   'roll_up_fromReportingUnitType_Id': atomic_ReportingUnitType_Id}
@@ -45,24 +45,30 @@ class Election(object): # TODO check that object is necessary (apparently for pi
         return self.rollup_dframe
 
     def anomaly_scores(self,con,meta,schema): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
-        contest_id_list = self.rollup_dframe.Contest_Id.unique()
-        for contest_id in contest_id_list:
-            anomaly_list = []
-            cr = create_contest_rollup_from_election(con,meta,self, contest_id)
-            print('Calculating anomalies for '+cr.ContestName)
-            for column_field in ['ReportingUnit','CountItemType','Selection']:
-                #print('\tColumn field is '+column_field)
-                temp_list = ['ReportingUnit','CountItemType','Selection']
-                temp_list.remove(column_field)
-                for filter_field in temp_list:
-                    #print('\t\tfilter field is '+filter_field)
-                    for filter_value in cr.dataframe_by_name[filter_field].unique():
-                        # print('\t\t\tfilter value is '+filter_value)
-                        z_score_totals, z_score_pcts = cr.euclidean_z_score(column_field, [[filter_field,filter_value]])
-                        anomaly_list.append(pd.Series([cr.ContestName,column_field,filter_field,filter_value,'euclidean z-score',
-                                             max(z_score_totals), max(z_score_pcts)],index=self.anomaly_dframe.columns))
-            print('Appending contest anomalies to anomaly_dframe: (showing first three elements only)\n'+str(anomaly_list[:2]))
-            self.anomaly_dframe = self.anomaly_dframe.append(anomaly_list) # less efficient to update anomaly_dframe contest-by-contest, but better for debug
+        pickle_path = self.pickle_dir+'anomaly_rollup'
+        if os.path.isfile(pickle_path):
+            print('Anomaly dataframe will not be calculated, but will be read from file:\n\t'+pickle_path)
+            print('To calculate anomaly dataframe anew, move or rename the file.')
+            self.anomaly_dframe = pd.read_pickle(pickle_path)
+
+        else:
+            contest_id_list = self.rollup_dframe.Contest_Id.unique()
+            for contest_id in contest_id_list:
+                anomaly_list = []
+                cr = create_contest_rollup_from_election(con,meta,self, contest_id)
+                print('Calculating anomalies for '+cr.ContestName)
+                for column_field in ['ReportingUnit','CountItemType','Selection']:
+                    #print('\tColumn field is '+column_field)
+                    temp_list = ['ReportingUnit','CountItemType','Selection']
+                    temp_list.remove(column_field)
+                    for filter_field in temp_list:
+                        #print('\t\tfilter field is '+filter_field)
+                        for filter_value in cr.dataframe_by_name[filter_field].unique():
+                            # print('\t\t\tfilter value is '+filter_value)
+                            z_score_totals, z_score_pcts = cr.euclidean_z_score(column_field, [[filter_field,filter_value]])
+                            anomaly_list.append(pd.Series([cr.ContestName,column_field,filter_field,filter_value,'euclidean z-score',
+                                                 max(z_score_totals), max(z_score_pcts)],index=self.anomaly_dframe.columns))
+                self.anomaly_dframe = self.anomaly_dframe.append(anomaly_list) # less efficient to update anomaly_dframe contest-by-contest, but better for debug
         return
 
     def __init__(self, cdf_schema, Election_Id, rollup_dframe, anomaly_dframe,roll_up_to_ReportingUnitType,roll_up_to_ReportingUnitType_Id,atomic_ReportingUnitType,atomic_ReportingUnitType_Id,pickle_dir):
@@ -83,29 +89,33 @@ def create_election(cdf_schema,Election_Id,roll_up_to_ReportingUnitType='county'
     assert isinstance(Election_Id, int), 'Election_Id must be an integer'
     assert os.path.isfile(paramfile), 'No such file: '+paramfile+'\n\tCurrent directory is: ' + os.getcwd()
 
-    con,meta = dbr.sql_alchemy_connect(cdf_schema,paramfile)
+    con,meta,Session = dbr.sql_alchemy_connect(cdf_schema,paramfile)
     roll_up_to_Id = dbr.read_id_from_enum(con, meta, cdf_schema, 'ReportingUnitType', roll_up_to_ReportingUnitType)
     roll_up_from_Id = dbr.read_id_from_enum(con, meta, cdf_schema, 'ReportingUnitType', atomic_ReportingUnitType)
 
+    print('Creating basic Election object')
     e = Election(cdf_schema,Election_Id,pickle_dir = pickle_dir,rollup_dframe = None, anomaly_dframe = None,
                  roll_up_to_ReportingUnitType=roll_up_to_ReportingUnitType,roll_up_to_ReportingUnitType_Id=roll_up_to_Id,
                  atomic_ReportingUnitType=atomic_ReportingUnitType,atomic_ReportingUnitType_Id=roll_up_from_Id)
 
     #%% rollup dataframe
+    print('Getting rolled-up data for all contests')
     ElectionName = dbr.read_single_value_from_id(con,meta,cdf_schema,'Election','Name',Election_Id).replace(' ','')
-    rollup_filepath = pickle_dir+ElectionName+'_rollup_to'+roll_up_to_ReportingUnitType  # TODO better filename db id could be bad identifier.
+    rollup_filepath = pickle_dir+'rollup_to_'+roll_up_to_ReportingUnitType
 
     #%% get the roll-up dframe from the db, or from pickle
     # if rollup already pickled into pickle_dir
     if os.path.isfile(rollup_filepath):
         e.rollup_dframe = pd.read_pickle(rollup_filepath)
+        print('Rollup by '+ roll_up_to_ReportingUnitType +' will not be calculated, but will be read from file:\n\t' + rollup_filepath)
+        print('To calculate rollup dataframe anew, move or rename the file.')
     # if rollup not already pickled, create and pickle it
     else:
         e.pull_rollup_from_db(roll_up_to_Id,roll_up_from_Id)
         e.rollup_dframe.to_pickle(rollup_filepath)
 
-
     #%% anomaly dataframe
+    print('Getting anomaly scores for all contests')
     anomaly_filepath = pickle_dir+ElectionName+'_anomalies'
     # if anomaly dataframe already pickled
     if os.path.isfile(anomaly_filepath):
@@ -448,7 +458,7 @@ def pframe_to_zscore(pframe):
 if __name__ == '__main__':
     nc_2018 = create_election('cdf_nc',15834)
     schema = 'cdf_nc'
-    con,meta = dbr.sql_alchemy_connect(schema,paramfile = '../../local_data/database.ini')
+    con,meta, Session = dbr.sql_alchemy_connect(schema,paramfile = '../../local_data/database.ini')
     nc_2018.anomaly_scores(con,meta,schema)
 
     if con:
@@ -490,7 +500,7 @@ if __name__ == '__main__':
 
 
 
-    con, meta = dbr.sql_alchemy_connect(schema=cdf_schema,paramfile='../../local_data/database.ini')
+    con, meta, Session = dbr.sql_alchemy_connect(schema=cdf_schema,paramfile='../../local_data/database.ini')
     # create and pickle if not existing already
     for Contest_Id in CandidateContest_Id_list:
         if not use_existing_rollups:

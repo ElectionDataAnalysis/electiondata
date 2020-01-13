@@ -7,6 +7,7 @@ import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
 import sqlalchemy as db
+from sqlalchemy.orm import sessionmaker
 from configparser import ConfigParser
 import pandas as pd
 
@@ -18,7 +19,7 @@ def establish_connection(paramfile = '../local_data/database.ini',db_name='postg
     return con
 
 def sql_alchemy_connect(schema,paramfile = '../local_data/database.ini',db_name='postgres'):
-    """Returns a connection and a metadata object"""
+    """Returns an engine and a metadata object"""
 
     params = config(paramfile)
     # We connect with the help of the PostgreSQL URL
@@ -26,13 +27,18 @@ def sql_alchemy_connect(schema,paramfile = '../local_data/database.ini',db_name=
     url = 'postgresql://{user}:{password}@{host}:{port}/{database}'
     url = url.format(**params)
 
+
     # The return value of create_engine() is our connection object
     engine = db.create_engine(url, client_encoding='utf8')
+
+    # TODO I think this creates a persistent Session() class I can use throughout.
+    Session = sessionmaker(bind=engine)
 
     # We then bind the connection to MetaData()
     meta = db.MetaData(bind=engine, reflect=True,schema=schema)
 
-    return engine, meta
+    return engine, meta, Session
+
 
 def config(filename='../local_data/database.ini', section='postgresql'):
     """
@@ -102,6 +108,15 @@ def read_some_value_from_id(con,meta,schema,table,field,id_list):
         return dict(ResultSet)
     else:
         return {}
+
+def election_list(session,meta,cdf_schema):
+    #t = db.Table('Election',meta,autoload=True, autoload_with=session,schema=cdf_schema)
+    # q = db.select([t.columns.Id,t.columns.Name])
+    Election = meta.tables[cdf_schema+'.Election']
+    result_list = [[instance.Id,instance.Name] for instance in session.query(Election)]
+    result_dframe = pd.DataFrame(result_list,columns=['Id','Name'])
+    return result_dframe
+
 
 def contest_ids_from_election_id(con,meta,schema,Election_Id):
     """ given an election id, return list of all contest ids """
@@ -264,7 +279,7 @@ def clean_meta_file(infile,outdir,s):       ## update or remove ***
 
 if __name__ == '__main__':
     schema = 'cdf_nc'
-    con, meta = sql_alchemy_connect(schema=schema,paramfile='../../local_data/database.ini')
+    con, meta ,Session = sql_alchemy_connect(schema=schema,paramfile='../../local_data/database.ini')
     table = 'ReportingUnit'
     field = 'Name'
     id = 50
