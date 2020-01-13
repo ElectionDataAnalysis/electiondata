@@ -1,0 +1,9 @@
+{'General Election 2019-11-05;results_pct_20181106.txt':
+	{'encoding':'utf8',
+	'source_url':'http://philadelphiavotes.com/files/raw-data/2019_general.csv',
+	'file_date':'',
+	'download_date':'2020-01-01'
+	,'note':'url was hidden, reached via a dropdown on https://www.philadelphiavotes.com/en/resources-a-data/ballot-box-app','correction_query_list':[]
+	}
+}
+

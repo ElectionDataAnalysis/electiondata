@@ -4,6 +4,7 @@ src/election_anomaly/__pycache__
 src/local_data/NC/data
 src/local_data/FL
 src/local_data/Philadelphia
+src/local_data/PH/data
 src/local_data/VA
 src/local_data/tmp
 query_create/__pycache__

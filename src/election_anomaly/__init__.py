@@ -129,5 +129,4 @@ if __name__ == '__main__':
         e.anomaly_scores(eng,meta,cdf_schema)
 
 
-        if eng:
-            eng.dispose()
+

@@ -69,6 +69,7 @@ class Election(object): # TODO check that object is necessary (apparently for pi
                             anomaly_list.append(pd.Series([cr.ContestName,column_field,filter_field,filter_value,'euclidean z-score',
                                                  max(z_score_totals), max(z_score_pcts)],index=self.anomaly_dframe.columns))
                 self.anomaly_dframe = self.anomaly_dframe.append(anomaly_list) # less efficient to update anomaly_dframe contest-by-contest, but better for debug
+        self.anomaly_dframe.to_pickle(pickle_path)
         return
 
     def __init__(self, cdf_schema, Election_Id, rollup_dframe, anomaly_dframe,roll_up_to_ReportingUnitType,roll_up_to_ReportingUnitType_Id,atomic_ReportingUnitType,atomic_ReportingUnitType_Id,pickle_dir):

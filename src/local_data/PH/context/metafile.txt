@@ -1,0 +1,11 @@
+{'philly_results_layout_by_sfs.txt':
+	{'encoding':'utf8',
+	'source_url':'',
+	'file_date':'2020-01-13',
+	'download_date':'',
+	'note':'created by hand by Stephanie Singer',
+	'column_block_parser_string':r'((?:[^\n\t]+\t+[^\n\t]+\t+[^\n\t]+\n)+)',
+	'type_map':{'TEXT':'varchar'},
+	'line_parser_string':r'(?P<field>[^\n\t]+)\t+(?P<type>[A-z]+)(?P<number>\(\d+\))?\t+(?P<comment>[^\n\t]+)'
+	}
+}

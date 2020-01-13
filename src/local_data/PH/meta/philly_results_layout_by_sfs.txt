@@ -1,0 +1,7 @@
+WARD    INT Philadelphia City Ward
+DIVISION    INT Philadelphia Electoral Division (within ward)
+VOTE TYPE   TEXT    A for Absentee, M for machine (aka regular polling place), P for provisional
+CATEGORY    TEXT    Name of contest
+SELECTION   TEXT    Selection
+PARTY   TEXT    Political party
+VOTE COUNT  TEXT    Number of votes received
