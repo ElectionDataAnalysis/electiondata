@@ -1,7 +1,14 @@
 # results_analysis
 _Documentation under construction_
 
-General note: the word 'state' includes also the District of Columbia and the five major US territories: Puerto Rico, American Samoa, the US Virgin Islands, the Northern Mariana Islands and Guam.
+#Funding
+Funding provided October 2019 - September 2020 by the National Science Foundation, Award #1936809, "EAGER: Data Science for Election Verification" 
+
+#License
+See [LICENSE.md](./LICENSE.md)
+
+#General note
+ The word 'state' includes also the District of Columbia and the five major US territories: Puerto Rico, American Samoa, the US Virgin Islands, the Northern Mariana Islands and Guam.
 
 ## How to run the app
 The app is controlled by the Python3 module src.election_anomaly
