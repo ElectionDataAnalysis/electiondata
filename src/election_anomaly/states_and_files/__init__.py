@@ -3,6 +3,7 @@ import re
 import sys
 import os.path
 import clean as cl
+import pandas as pd
 
 class State:
     def __init__(self,abbr,name,schema_name,path_to_state_dir,context_dictionary):        # reporting_units,elections,parties,offices):
@@ -85,6 +86,42 @@ def create_munger(file_path):   # file should contain all munger info in a dicti
         d = eval(f.read())
     return(Munger(d['name'],d['content_dictionary']))
 
+def tab_sep_to_dict(s,fpath,k):
+    full_fpath = fpath+k+'.txt'
+ #   with open(full_fpath,'r') as f:
+
+    lines = pd.read_csv(full_fpath)
+
+    #%% BallotMeasureSelection.txt
+    if k == 'BallotMeasureSelection':
+        v = set(lines.Selection.values)
+    else:
+        v = None
+    return v
+
+def create_state_old(abbr,path_to_state_dir):
+    '''abbr is the capitalized two-letter postal election_anomaly for the state, district or territory'''
+    string_attributes = ['name','schema_name']
+    context_d_keys = ['ReportingUnit','Election','Party','Office','BallotMeasureSelection']    # what consistency checks do we need?
+    if path_to_state_dir[-1] != '/':
+        path_to_state_dir += '/'
+    if not os.path.isdir(path_to_state_dir):
+        return('Error: No directory '+path_to_state_dir)
+        sys.exit()
+    for attr in string_attributes + context_d_keys:
+        if not os.path.isfile(path_to_state_dir+'context/'+attr+'.txt'):
+            return('Error: No file '+path_to_state_dir+'context/'+attr+'.txt')
+            sys.exit()
+    string_d = {} # dictionary to hold string attributes
+    for attr in string_attributes:     # strings
+        with open(path_to_state_dir+'context/'+attr+'.txt') as f:
+            string_d[attr]=f.readline().strip()
+    context_d = {}
+    for attr in context_d_keys:     # python objects
+        with open(path_to_state_dir+'context/'+attr+'.txt') as f:
+            context_d[attr]=eval(f.read())
+    return State(abbr,string_d['name'],string_d['schema_name'],path_to_state_dir,context_d)
+
 def create_state(abbr,path_to_state_dir):
     '''abbr is the capitalized two-letter postal election_anomaly for the state, district or territory'''
     string_attributes = ['name','schema_name']
@@ -156,3 +193,9 @@ def in_context_dictionary(state,context_item,value):
     else:
         return False
 
+if __name__ == '__main__':
+    s = create_state('NC','../../local_data/NC/')
+    fpath = '../../local_data/NC/context_new/'
+    tab_sep_to_dict(s,fpath,'BallotMeasureSelection')
+
+    print('Done')
