@@ -72,6 +72,29 @@ class Election(object): # TODO check that object is necessary (apparently for pi
         self.anomaly_dframe.to_pickle(pickle_path)
         return
 
+    def worst_bar_for_each_contest(self,con,meta,anomaly_min=0):
+        if self.anomaly_dframe.empty:
+            print('anomaly dataframe is empty')
+            return
+        else:
+            for contest_id in self.rollup_dframe.Contest_Id.unique():
+                cr = create_contest_rollup_from_election(con,meta,self, contest_id)
+                contestname = cr.ContestName
+                df = self.anomaly_dframe[self.anomaly_dframe.ContestName == contestname]
+                max_pct_anomaly = df.anomaly_values_pcts.max()
+                max_tot_anomaly = df.anomaly_value_totals.max()
+                if max_pct_anomaly > anomaly_min:
+                # find and plot worst bar charts from anomaly_dframe
+                    for index,row in df.iterrows():
+                        if row['anomaly_values_pcts'] == max_pct_anomaly:
+                            plot_pivot(contestname, cr.dataframe_by_name, col_field=row['column_field'], filter=[row['filter_field'],row['filter_value']],mode='pct')
+                if max_tot_anomaly > anomaly_min:
+                    for index,row in df.iterrows():
+                        if row['anomaly_value_totals']  == max_tot_anomaly:
+                            plot_pivot(contestname,cr.dataframe_by_name,col_field=row['column_field'],filter=[row['filter_field'],row['filter_value']],mode='raw')
+
+            return
+
     def __init__(self, cdf_schema, Election_Id, rollup_dframe, anomaly_dframe,roll_up_to_ReportingUnitType,roll_up_to_ReportingUnitType_Id,atomic_ReportingUnitType,atomic_ReportingUnitType_Id,pickle_dir):
         self.cdf_schema=cdf_schema
         self.Election_Id=Election_Id
@@ -143,37 +166,11 @@ class ContestRollup:
         where rows are labeled by an index made up of all remaining fields.
         mode == 'raw' gives raw vote totals; mode == 'pct' give percentages
         """
-        assert mode == 'raw' or mode == 'pct', 'mode not recognized: '+mode
-        af = self.dataframe_by_name.copy()
-
-        label_columns = ['ReportingUnit', 'CountItemType', 'Selection']
-        for col, val in filter:
-            assert col in label_columns
-            af = af[af[col] == val]
-            label_columns.remove(col)
-        label_columns.remove(col_field)
-        cf = af.pivot_table(index=label_columns, columns=[col_field], values='Count', aggfunc=np.sum)
-
-        if mode == 'pct':
-            if 'total' not in cf.columns:  # TODO understand why this was necessary and whether it's OK
-                cf['total'] = cf.sum(axis=1)
-            cf = cf[cf.total != 0]
-            cf = cf.div(cf["total"], axis=0)
-        return cf
+        return pivot(self.dataframe_by_name,col_field,filter)
 
     def plot_pivot(self,col_field='Selection',filter=[]):
-        title_string = self.ContestName
-        if filter:
-            title_string += '\n'+filter[1]   # TODO dict is more natural, with filter[0] is column and filter[1] is value
-
-        type_pivot= self.pivot(col_field, [filter])
-        type_pivot.plot.bar()
-        plt.title(title_string+'\nVote Totals')
-
-        type_pct_pivot = pct_dframe(type_pivot)
-        type_pct_pivot.plot.bar()
-        plt.title(title_string+'\nVote Percentages')
-        plt.show()
+        plot_pivot(self.ContestName,self.dataframe_by_name,col_field,filter)
+        return
 
     def percentages(self,pivot_index=['ReportingUnit','CountItemType'],filter=[]):
         af = self.dataframe_by_name.copy()
@@ -248,6 +245,49 @@ class ContestDataFrame(pd.DataFrame):
         pd.Dataframe.__init__(self,data, index, columns, dtype, copy)
         self.Election_ID=Election_ID
         self.Contest_Id=Contest_Id
+
+def plot_pivot(contestname,dataframe_by_name,col_field='Selection',filter=[],mode='raw'):
+    title_string = contestname
+    if filter:
+        title_string += '\n'+filter[1]   # TODO dict is more natural, with filter[0] is column and filter[1] is value
+
+    type_pivot= pivot(dataframe_by_name,col_field, [filter],mode)
+    try:    # TODO get exact criteria for skipping
+        type_pivot.plot.bar()
+        plt.title(title_string+'\nVote Totals')
+        type_pct_pivot = pct_dframe(type_pivot)
+        type_pct_pivot.plot.bar()
+        plt.title(title_string+'\nVote Percentages')
+        plt.show()
+    except:
+        a =1 # TODO placeholder
+
+
+def pivot(dataframe_by_name, col_field='Selection', filter=[],mode='raw'):
+    """
+    gives a pivot of a contest dataframe by name
+    where rows are filtered by the field-conditions in filter,
+    columns are labeled by values of the col_field
+    where rows are labeled by an index made up of all remaining fields.
+    mode == 'raw' gives raw vote totals; mode == 'pct' give percentages
+    """
+    assert mode == 'raw' or mode == 'pct', 'mode not recognized: '+mode
+    af = dataframe_by_name.copy()
+
+    label_columns = ['ReportingUnit', 'CountItemType', 'Selection']
+    for col, val in filter:
+        assert col in label_columns
+        af = af[af[col] == val]
+        label_columns.remove(col)
+    label_columns.remove(col_field)
+    cf = af.pivot_table(index=label_columns, columns=[col_field], values='Count', aggfunc=np.sum)
+    if mode == 'pct':
+        if 'total' not in cf.columns:  # TODO understand why this was necessary and whether it's OK
+            cf['total'] = cf.sum(axis=1)
+        cf = cf[cf.total != 0]
+        cf = cf.div(cf["total"], axis=0)
+    return cf
+
 
 def create_contest_rollup_from_election(con,meta,e, Contest_Id):   # TODO get rid of con/meta/schema here by making names part of the Election def?
     assert isinstance(e,Election),'election must be an instance of the Election class'

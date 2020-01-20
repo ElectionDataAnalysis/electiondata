@@ -107,8 +107,12 @@ if __name__ == '__main__':
         for index,row in election_dframe.iterrows():
             print(row['Name']+' (Id is '+str(row['Id'])+')')
 
-        election_id = int(input('Enter Id of the election you wish to analyze\n'))
-        election_short_name = input('Enter short name for the election (alphanumeric with underscore, no spaces)\n')
+        default = '15834'
+        election_id = input('Enter Id of the election you wish to analyze (default is '+default+')\n') or default
+        election_id = int(election_id)
+
+        default = 'nc_2018'
+        election_short_name = input('Enter short name for the election (alphanumeric with underscore, no spaces -- default is '+default+')\n') or default
 
         default = 'precinct'
         atomic_ru_type = input('Enter the \'atomic\' Reporting Unit Type on which you wish to base your rolled-up counts (default is '+default+')\n') or default
@@ -127,6 +131,9 @@ if __name__ == '__main__':
 
         e = an.create_election(cdf_schema,election_id,roll_up_to_ru_type,atomic_ru_type,pickle_dir,paramfile)
         e.anomaly_scores(eng,meta,cdf_schema)
+        #%%
+        e.worst_bar_for_each_contest(eng,meta,2)
 
+    print('Done!')
 
 
