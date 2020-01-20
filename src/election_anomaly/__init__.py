@@ -41,16 +41,16 @@ if __name__ == '__main__':
 
     to_cdf = input('Load and process election data into a common-data-format database (y/n)?\n')
     if to_cdf == 'y':
-        default = 'XX'
+        default = 'NC'
         abbr = input('Enter two-character abbreviation for your state/district/territory (default is '+default+')\n') or default
 
-        default = 'cdf_xx'
+        default = 'cdf_nc_test'
         cdf_schema=input('Enter name of CDF schema (default is '+default+')\n') or default
 
         default = 'nc_export1'
         munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
 
-        default = 'alamance.txt'
+        default = 'results_pct_20181106.txt'
         df_name = input('Enter name of datafile (default is '+default+')\n') or default
 
 

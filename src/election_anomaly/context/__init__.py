@@ -31,7 +31,8 @@ def context_to_cdf(s,schema,con,cur):
                 nk_list =  list(s.context_dictionary[t])
                 for name_key in nk_list:   # e.g., name_key = 'North Carolina;Alamance County'
                     # track progress
-                    if nk_list.index(name_key) % 500 == 0:   # for every five-hundredth item
+                    # if nk_list.index(name_key) % 500 == 0:   # for every five-hundredth item
+                    if nk_list.index(name_key) % 1 == 0:   # for every  item
                         print('\t\tProcessing item number '+str(nk_list.index(name_key))+': '+ name_key)
                     ## insert the record into the db
                     value_d = {'Name':name_key}
@@ -47,7 +48,7 @@ def context_to_cdf(s,schema,con,cur):
 
                     out_d[t][name_key] = upsert_id
 
-                    # load data into the ExternalIdentifier table
+                    # load data into the ExternalIdentifier table # TODO change this
                     if 'ExternalIdentifiers' in s.context_dictionary[t][name_key].keys():
                         for external_id_key in s.context_dictionary[t][name_key]['ExternalIdentifiers'].keys():   # e.g., 'fips'
                             ## insert into ExternalIdentifier table

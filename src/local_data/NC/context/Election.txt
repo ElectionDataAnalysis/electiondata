@@ -1,6 +1,2 @@
-Name    ElectionType    ReportingUnit   StartDate   EndDate
-General Election 2018-11-06 general North Carolina  2018-11-06  2018-11-06
-
-
-
-':{'ElectionType':'general','ReportingUnit':'North Carolina','StartDate':'2018-11-06','EndDate':'2018-11-06','ExternalIdentifiers':{'nc_export1':'11/06/2018'}}}
+Name,ElectionType,ReportingUnit,StartDate,EndDate
+General Election 2018-11-06,general,North Carolina,2018-11-06,2018-11-06

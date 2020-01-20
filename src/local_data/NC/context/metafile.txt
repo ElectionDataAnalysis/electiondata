@@ -1,2 +1,2 @@
-name	column_block_parser_string	download_date	encoding	file_date	line_parser_string	note	source_url	type_map
-layout_results_pct.txt	((?:[^\n\t]+\t+[^\n\t]+\t+[^\n\t]+\n)+)	2019-10-15	utf8	2018-10-19	(?P<field>[^\n\t]+)\t+(?P<type>[A-z]+)(?P<number>\(\d+\))?\t+(?P<comment>[^\n\t]+)		https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/layout_results_pct.txt	{'number': 'INT', 'text': 'varchar', 'char': 'varchar'}
+name,column_block_parser_string,download_date,encoding,file_date,line_parser_string,note,source_url,type_map
+layout_results_pct.txt,((?:[^\n\t]+\t+[^\n\t]+\t+[^\n\t]+\n)+),2019-10-15,utf8,2018-10-19,(?P<field>[^\n\t]+)\t+(?P<type>[A-z]+)(?P<number>\(\d+\))?\t+(?P<comment>[^\n\t]+),,https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/layout_results_pct.txt,"{'number': 'INT', 'text': 'varchar', 'char': 'varchar'}"

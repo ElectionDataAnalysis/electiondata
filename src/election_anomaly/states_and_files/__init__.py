@@ -141,21 +141,47 @@ def create_state(abbr,path_to_state_dir):
             string_d[attr]=f.readline().strip()
     context_d = {}
     for attr in context_d_keys:     # python objects
-        with open(path_to_state_dir+'context/'+attr+'.txt') as f:
-            context_d[attr]=eval(f.read())
+        if attr == 'BallotMeasureSelection':
+            index_column = 'Selection'
+        else:
+            index_column = 'Name'
+        dframe = pd.read_csv(path_to_state_dir+'context/'+attr+'.txt')
+        context_d[attr] = dframe_to_dict(dframe,index_column = index_column)
+
+        # with open(path_to_state_dir+'context/'+attr+'.txt') as f:
+            # context_d[attr]=eval(f.read())
     return State(abbr,string_d['name'],string_d['schema_name'],path_to_state_dir,context_d)
+
+def dframe_to_dict(dframe,index_column = 'Name'):
+    col_list = list(dframe.columns)
+    col_list.remove(index_column)
+    out_d = {}
+    for index, row in dframe.iterrows():
+        row_d = {}
+        for c in col_list:
+            row_d[c] = row[c]
+        out_d[row[index_column]] = row_d
+    return out_d
 
 def create_metafile(s,name):
     # meta_parser = re.compile(string_d['parser_string'])
 
     # read metafile info from context folder
-    with open(s.path_to_state_dir+'context/metafile.txt','r') as f:
-        d_all = eval(f.read())
-        d = d_all[name]
+    dframe = pd.read_csv(s.path_to_state_dir+'context/metafile.txt',)
+    d_all = dframe_to_dict(dframe,'name')
+    d = d_all[name]
+#    with open(s.path_to_state_dir+'context/metafile.txt','r') as f:
+
+#        d_all = eval(f.read())
+#        d = d_all[name]
 
     # get parser objects from regex strings
     column_block_parser = re.compile(d['column_block_parser_string'])
     line_parser = re.compile(d['line_parser_string'])
+
+    #%% fix problem with double-quotes around type map in csv file # TODO kludge
+    if isinstance(d['type_map'],str):
+        d['type_map'] = eval (d['type_map'])
 
     return Metafile(s,name,d['encoding'],d['source_url'],d['file_date'],d['download_date'],d['note'],column_block_parser,d['type_map'],line_parser)
 
@@ -168,9 +194,12 @@ def create_datafile(s,election,data_file_name,mf,munger):
         return False
     
     # read datafile info from context folder
-    with open(s.path_to_state_dir+'context/datafile.txt','r') as f:
-        d_all = eval(f.read())
-        d = d_all[election+';'+data_file_name]
+#    with open(s.path_to_state_dir+'context/datafile.txt','r') as f:
+#        d_all = eval(f.read())
+#        d = d_all[election+';'+data_file_name]
+    dframe = pd.read_csv(s.path_to_state_dir+'context/datafile.txt')
+    d_all = dframe_to_dict(dframe,index_column='name')
+    d = d_all[election+';'+data_file_name]
 
     # create tablename for the raw data
     table_name=re.sub(r'\W+', '', election+data_file_name)

@@ -1,4 +1,4 @@
-,ReportingUnitType
+Name,ReportingUnitType
 North Carolina,state
 North Carolina;Alamance County,county
 North Carolina;Alexander County,county
