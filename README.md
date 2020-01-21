@@ -44,39 +44,42 @@ Each state directory has three subfolders:
 
     * `name.txt` the name of the state, e.g., 'North Carolina'
     * `schema_name.txt` the name of the schema to hold the state's raw data
-    * `BallotMeasureSelection.txt` Python set, e.g., `{'For','Against','Yes','No'}`
+    * `BallotMeasureSelection.txt` Header is `Selection`; one row for each possible selection, e.g., `Yes` or `No` or `For` or `Against`. 
     * `remark.txt` String containing any notable information about the state and its data
-    * `datafile.txt` Python dictionary of datafiles, with attributes:
-      * `'encoding'`
-      * `'source_url'`
-      * `'file_date'`
-      * `'download_date'`
-      * `'note'`
-      * `'correction_query_list'` a list of any corrections needed in response to metadata errors
-    * `Election.txt` Python dictionary of elections, with attributes:
-      * `'ElectionType'`
-      * `'ReportingUnit'` Parent Reporting Units (e.g., 'North Carolina' must precede children (e.g., 'North Carolina;Alamance County'))
-      * `'StartDate'`
-      * `'EndDate'`
-      * `'ExternalIdentifiers'`
-    * `metafile.txt` Python dictionary of metafiles, with attributes:
-      * `'encoding'`
-      * `'source_url'`
-      * `'file_date'`
-      * `'download_date'`
-      * `'note'`
-      * `'column_block_parser_string'` Python regex to identify the block of lines in the metafile holding the relevant column definitions
-      * `'line_parser_string` Python regex to identify the column name, data type and column description within one line of the metafile
-      * `'type_map'` Python dictionary whose keys are datatype names from the file and whose values are datatype names for postgresql
-    * `Office.txt` Python dictionary of office names with attributes. Note that when datafiles are processed, lines relevant to offices **not** listed here will not be loaded into the common data format schema.
-      * `'ElectionDistrict'`
-      * `'ElectionDistrictType'` e.g., 'state-house' or 'congressional', following conventions in `CDF_schema_def_info/enumerations/ReportingUnitType.txt`
-      * `'ExternalIdentifiers'`
-    * `ReportingUnit.txt` Python dictionary of reporting units (usually geographical precincts, counties, etc., but could also be individual machines, adminstrative precincts, etc.), with attributes:
-      * `'ReportingUnitType'`
-      * `'ExternalIdentifiers'`
-     * `Party.txt` Python dictionary of political parties, with attributes:
-      * `'ExternalIdentifiers'`
+    * `datafile.txt` Tab-separated list of datafiles, with attributes:
+      * `name`
+      * `encoding`
+      * `source_url`
+      * `file_date`
+      * `download_date`
+      * `note`
+      * `correction_query_list` a list of any corrections needed in response to metadata errors
+    * `Election.txt` Tab-separated list of elections. Columns are:
+      * `Name`
+      * `ElectionType`
+      * `ReportingUnit` Parent Reporting Units (e.g., 'North Carolina' must precede children (e.g., 'North Carolina;Alamance County'))
+      * `StartDate`
+      * `EndDate`
+    * `metafile.txt` Tab-separated list of metafiles. Columns are:
+      * `name`
+      * `encoding`
+      * `source_url`
+      * `file_date`
+      * `download_date`
+      * `note`
+      * `column_block_parser_string` Python regex to identify the block of lines in the metafile holding the relevant column definitions
+      * `line_parser_string` Python regex to identify the column name, data type and column description within one line of the metafile
+      * `type_map` Python dictionary whose keys are datatype names from the file and whose values are datatype names for postgresql
+    * `Office.txt` Tab-separated list of office names. Note that when datafiles are processed, lines relevant to offices **not** listed here will not be loaded into the common data format schema. Columns are:
+      * `Name`
+      * `ElectionDistrict`
+      * `ElectionDistrictType` e.g., 'state-house' or 'congressional', following conventions in `CDF_schema_def_info/enumerations/ReportingUnitType.txt`
+    * `ReportingUnit.txt` Tab-separated list of reporting units (usually geographical precincts, counties, etc., but could also be individual machines, adminstrative precincts, etc.). Columns are:
+      * `Name`
+      * `ReportingUnitType`
+     * `Party.txt` List of political parties, one per line. One column:
+       * `Name`
+
       
 ### About ExternalIdentifiers
 (TODO)
@@ -92,9 +95,9 @@ Each state directory has three subfolders:
 Each element (each election, candidate, reporting unit, etc.) has a name -- a character string used in the `name` field in the corresponding database table, and also used in the files in the `context`  folder as keys in python dictionaries containing more info about the element.
 
 For ReportingUnits, the naming convention is to list as much of the composing information as possible in the name of the element, using `;` as a separator. E.g., 
- * `'North Carolina'` -- the state of NC
- * `'North Carolina;Alamance County'` -- Alamance County, which is contained in North Carolina
- * `'North Carolina;Alamance County;Precinct 12W'` -- Precinct 12W in Alamance County
+ * `North Carolina` -- the state of NC
+ * `North Carolina;Alamance County` -- Alamance County, which is contained in North Carolina
+ * `North Carolina;Alamance County;Precinct 12W` -- Precinct 12W in Alamance County
 
 # Conventions
 Reporting units that are not physical geographical precincts (such as an administrative precinct containing absentee ballot counts from one county) are classified as Reporting Type `precinct` if they should be part of any roll-up involving all precincts in a jurisdiction (e.g., if the absentee ballot counts are not included in any other Reporting Units of Type `precinct` in the county).

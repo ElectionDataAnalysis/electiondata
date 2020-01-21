@@ -157,9 +157,8 @@ def create_metafile(s,name):
     column_block_parser = re.compile(d['column_block_parser_string'])
     line_parser = re.compile(d['line_parser_string'])
 
-    #%% fix problem with double-quotes around type map in csv file # TODO kludge
-    if isinstance(d['type_map'],str):
-        d['type_map'] = eval (d['type_map'])
+    #%% convert string (read from tab-separated file) to a dictionary
+    d['type_map'] = eval (d['type_map'])
 
     return Metafile(s,name,d['encoding'],d['source_url'],d['file_date'],d['download_date'],d['note'],column_block_parser,d['type_map'],line_parser)
 
@@ -178,6 +177,9 @@ def create_datafile(s,election,data_file_name,mf,munger):
     dframe = pd.read_csv(s.path_to_state_dir+'context/datafile.txt',sep='\t')
     d_all = dframe_to_dict(dframe,index_column='name')
     d = d_all[election+';'+data_file_name]
+
+    #%% convert string (read from tab-separated file) to list
+    d['correction_query_list'] = eval(d['correction_query_list'])
 
     # create tablename for the raw data
     table_name=re.sub(r'\W+', '', election+data_file_name)
