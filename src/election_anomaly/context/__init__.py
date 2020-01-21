@@ -4,7 +4,6 @@
 # utilities for extracting state context info and inserting it into the files in the context folder
 import sys
 import re
-from datetime import datetime
 from munge_routines import id_from_select_or_insert, format_type_for_insert, composing_from_reporting_unit_name
 import db_routines as dbr
 
