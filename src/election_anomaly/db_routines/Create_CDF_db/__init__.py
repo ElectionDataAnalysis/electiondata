@@ -3,9 +3,7 @@
 # db_routines/Create_CDF_db/__init__.py
 # TODO may need to add "NOT NULL" requirements per CDF
 
-from psycopg2 import sql
 import db_routines as dbr
-
 
 def create_common_data_format_schema (con,cur,schema_name):
     """ schema_name example: 'cdf'; Creates schema with that name on the given db connection and cursor"""
@@ -66,6 +64,4 @@ def create_common_data_format_schema (con,cur,schema_name):
                 q = 'CREATE UNIQUE INDEX {2} ON {0}.{1} ('+','.join(f_slots)+')'
                 dbr.query(q,[schema_name,table_def[0],constraint_name]+list(f_sql_ids),[],con,cur)
     return
-
-
 

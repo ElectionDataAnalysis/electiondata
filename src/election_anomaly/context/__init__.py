@@ -7,7 +7,7 @@ import re
 from munge_routines import id_from_select_or_insert, format_type_for_insert, composing_from_reporting_unit_name
 import db_routines as dbr
 
-def context_to_cdf(s,schema,con,cur):
+def context_to_cdf(session,meta,s,schema,con,cur):
     """Takes the info from the context_dictionary for the state s and inserts it into the db.
     Returns a dictionary mapping context_dictionary keys to the database keys """
     out_d = {}
@@ -27,7 +27,7 @@ def context_to_cdf(s,schema,con,cur):
             if t == 'BallotMeasureSelection':   # note: s.context_dictionary['BallotMeasureSelection'] is a set not a dict
                 for bms in s.context_dictionary['BallotMeasureSelection']:
                     value_d = {'Selection': bms}
-                    id_from_select_or_insert(schema, t, table_def[1], value_d, con, cur) # table_def[1] is a dict e.g. {'fields':[],....
+                    id_from_select_or_insert(session,meta,schema, t, table_def[1], value_d, con, cur) # table_def[1] is a dict e.g. {'fields':[],....
             else:
                 nk_list =  list(s.context_dictionary[t])
                 for name_key in nk_list:   # e.g., name_key = 'North Carolina;Alamance County'
@@ -44,7 +44,7 @@ def context_to_cdf(s,schema,con,cur):
                             [id,other_txt] = format_type_for_insert(schema,e, s.context_dictionary[t][name_key][e], con,cur)
                             value_d[e+'_Id'] = id
                             value_d['Other'+e] = other_txt
-                    upsert_id = id_from_select_or_insert(schema, t, table_def[1], value_d, con, cur)[0]
+                    upsert_id = id_from_select_or_insert(session,meta,schema, t, table_def[1], value_d, con, cur)[0]
 
                     out_d[t][name_key] = upsert_id
 
@@ -70,7 +70,7 @@ def context_to_cdf(s,schema,con,cur):
 
                     value_d = {'Name':s.context_dictionary['Office'][name_key]['ElectionDistrict'],'ReportingUnitType_Id':id,'OtherReportingUnitType':other_txt}
                     dd = next( x[1] for x in table_def_list if x[0]=='ReportingUnit' )
-                    upsert_id = id_from_select_or_insert(schema, tt, dd, value_d, con, cur)[0]
+                    upsert_id = id_from_select_or_insert(session,meta,schema, tt, dd, value_d, con, cur)[0]
 
                     external_identifiers_to_cdf(con, cur, schema, s.external_identifier_dframe, t, name_key, upsert_id)
     con.commit()

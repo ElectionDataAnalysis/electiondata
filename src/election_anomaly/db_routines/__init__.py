@@ -18,7 +18,7 @@ def establish_connection(paramfile = '../local_data/database.ini',db_name='postg
     con = psycopg2.connect(**params)
     return con
 
-def sql_alchemy_connect(schema,paramfile = '../local_data/database.ini',db_name='postgres'):
+def sql_alchemy_connect(schema=None,paramfile = '../local_data/database.ini',db_name='postgres'):
     """Returns an engine and a metadata object"""
 
     params = config(paramfile)
@@ -31,14 +31,11 @@ def sql_alchemy_connect(schema,paramfile = '../local_data/database.ini',db_name=
     # The return value of create_engine() is our connection object
     engine = db.create_engine(url, client_encoding='utf8')
 
-    # TODO I think this creates a persistent Session() class I can use throughout.
-    Session = sessionmaker(bind=engine)
 
     # We then bind the connection to MetaData()
     meta = db.MetaData(bind=engine, reflect=True,schema=schema)
 
-    return engine, meta, Session
-
+    return engine, meta
 
 def config(filename='../local_data/database.ini', section='postgresql'):
     """
@@ -117,7 +114,6 @@ def election_list(session,meta,cdf_schema):
     result_dframe = pd.DataFrame(result_list,columns=['Id','Name'])
     return result_dframe
 
-
 def contest_ids_from_election_id(con,meta,schema,Election_Id):
     """ given an election id, return list of all contest ids """
     #%%
@@ -174,6 +170,10 @@ def query(q,sql_ids,strs,con,cur):
         return cur.fetchall()
     else:
         return None
+
+def query_SQLALCHEMY(session,q):
+    # TODO
+    return
 
 def create_schema(name):
     # connect and create schema for the state

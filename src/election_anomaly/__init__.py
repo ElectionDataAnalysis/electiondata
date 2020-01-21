@@ -15,6 +15,27 @@ import context
 import analyze as an
 import os
 
+import sqlalchemy
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import event
+from sqlalchemy.schema import CreateSchema
+
+def create_schema(session,name):
+    if eng.dialect.has_schema(eng, name):
+        recreate = input('WARNING: schema ' + name + ' already exists; erase and recreate (y/n)?\n')
+        if recreate == 'y':
+            session.bind.engine.execute(sqlalchemy.schema.DropSchema(name))
+            session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
+            print('New schema created: ' + name)
+        else:
+            print('Schema preserved: '+ name)
+    else:
+        session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
+        print('New schema created: ' + name)
+    session.commit()
+    return
+
+
 def raw_data(df,con,cur):
     """ Loads the raw data from the df into the schema for the associated state
     Schema for the state should already exist
@@ -39,6 +60,8 @@ def raw_data(df,con,cur):
 
 if __name__ == '__main__':
 
+
+
     to_cdf = input('Load and process election data into a common-data-format database (y/n)?\n')
     if to_cdf == 'y':
         default = 'NC'
@@ -60,20 +83,23 @@ if __name__ == '__main__':
         print('Creating munger instance from '+munger_path)
         m = sf.create_munger(munger_path)
 
+        # %% Initiate db engine and create session
+        eng, meta = dbr.sql_alchemy_connect()
+        Session = sessionmaker(bind=eng)
+        session = Session()
 
-        dbr.create_schema(s.schema_name)
-        con = dbr.establish_connection()
-        cur = con.cursor()
+        #%% create schema for state
+        create_schema(session,s.schema_name)
 
         #%% create cdf schema
         print('Creating CDF schema '+ cdf_schema)
-        CDF.create_common_data_format_schema(con, cur, cdf_schema)
+        create_schema(session,cdf_schema)
 
         # load state context info into cdf schema
         need_to_load_data = input('Load context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
         if need_to_load_data == 'y':
             print('Loading state context info into CDF schema') # *** takes a long time; why?
-            context.context_to_cdf(s,cdf_schema,con,cur)
+            context.context_to_cdf(session,meta,s,cdf_schema,con,cur)
 
         print('Creating metafile instance')
         mf = sf.create_metafile(s,'layout_results_pct.txt')

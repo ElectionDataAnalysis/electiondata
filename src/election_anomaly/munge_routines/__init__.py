@@ -79,14 +79,17 @@ def id_from_select_only(schema, table, table_d, value_d, con, cur, mode='no_dupe
     else:
         return a[0]
 
-def id_from_select_or_insert(schema, table, table_d, value_d, con, cur, mode='no_dupes'):
-    """ tables_d is a dict of table descriptions; value_d gives the values for the fields in the table (.e.g., value_d['Name'] = 'North Carolina;Alamance County'); return the upserted record. E.g., tables_d[table] = {'tablename':'ReportingUnit', 'fields':[{'fieldname':'Name','datatype':'TEXT'}],'enumerations':['ReportingUnitType','CountItemStatus'],'other_element_refs':[], 'unique_constraints':[['Name']],
+def id_from_select_or_insert(session,meta,schema, table, table_d, value_d, con, cur, mode='no_dupes'):
+    """ tables_d is a dict of table descriptions; value_d gives the values for the fields in the table
+    (.e.g., value_d['Name'] = 'North Carolina;Alamance County'); return the upserted record.
+    E.g., tables_d[table] = {'tablename':'ReportingUnit', 'fields':[{'fieldname':'Name','datatype':'TEXT'}],
+    'enumerations':['ReportingUnitType','CountItemStatus'],'other_element_refs':[], 'unique_constraints':[['Name']],
     'not_null_fields':['ReportingUnitType_Id']
     modes with consequences: 'dupes_ok'
        } """
     [f_id_slots,f_val_slots,cf_query_string,val_return_list,f_names,cf_names,f_vals] = id_query_components(table_d,value_d)
     q = 'WITH input_rows ('+f_id_slots+') AS (VALUES ('+f_val_slots+') ), ins AS (INSERT INTO {0}.{1} ('+f_id_slots+') SELECT * FROM input_rows '+ cf_query_string +' RETURNING "Id", '+f_id_slots+') SELECT "Id", ' + f_id_slots+', \'inserted\' AS source FROM ins UNION  ALL SELECT c."Id", '+  ','.join(val_return_list)  +',\'selected\' AS source FROM input_rows JOIN {0}.{1} AS c USING ('+ f_id_slots+');'
-    sql_ids = [schema,table]   +f_names + cf_names
+    sql_ids = [schema,table] + f_names + cf_names
     strs = f_vals
     a = dbr.query(q,sql_ids,strs,con,cur)
     if len(a) == 0:
@@ -114,12 +117,12 @@ def composing_from_reporting_unit_name(con,cur,cdf_schema,name,id=0):
 		     'not_null_fields':['ParentReportingUnit_Id','ChildReportingUnit_Id']} # TODO avoid hard-coding this in various places
     # if no id is passed, find id corresponding to name
     if id == 0:
-        id = id_from_select_or_insert(cdf_schema, 'ReportingUnit', ru_d, {'Name': name}, con, cur)
+        id = id_from_select_or_insert(session,meta,cdf_schema, 'ReportingUnit', ru_d, {'Name': name}, con, cur)
     chain = name.split(';')
     for i in range(1,len(chain)+1):
         parent = ';'.join(chain[0:i])
         parent_id = id_from_select_only(cdf_schema, 'ReportingUnit', ru_d, {'Name': parent}, con, cur)
-        id_from_select_or_insert(cdf_schema, 'ComposingReportingUnitJoin', cruj_d,
+        id_from_select_or_insert(session,meta,cdf_schema, 'ComposingReportingUnitJoin', cruj_d,
                                  {'ParentReportingUnit_Id': parent_id, 'ChildReportingUnit_Id': id}, con, cur)
 
 def format_type_for_insert(schema,table,txt,con,cur):
@@ -162,7 +165,7 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
     value_d = {'Name': df.election, 'EndDate': df.state.context_dictionary['Election'][df.election]['EndDate'],
                'StartDate': df.state.context_dictionary['Election'][df.election]['StartDate'],
                'OtherElectionType': otherelectiontype, 'ElectionType_Id': electiontype_id}
-    election_id = id_from_select_or_insert(cdf_schema, 'Election', tables_d['Election'], value_d, con, cur)[0]
+    election_id = id_from_select_or_insert(session,meta,cdf_schema, 'Election', tables_d['Election'], value_d, con, cur)[0]
 
     # if state_id is not passed as parameter, select-or-insert state, get id (default Reporting Unit for ballot questions)
     if state_id == 0:
@@ -171,7 +174,7 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
                                                                                 'state', con, cur)
         value_d = {'Name': df.state.name, 'ReportingUnitType_Id': reportingunittype_id,
                    'OtherReportingUnitType': otherreportingunittype}
-        state_id = id_from_select_or_insert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
+        state_id = id_from_select_or_insert(session,meta,cdf_schema, t, tables_d[t], value_d, con, cur)[0]
 
     # store state_id and election_id for later use
     ids_d = {'state': state_id, 'Election_Id': election_id}  # to hold ids of found items for later reference
@@ -237,7 +240,7 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
                             value_d[f] = eval(item['OtherFields'][f])
                         if t == 'CandidateContest' or t == 'BallotMeasureContest':  # need to get ElectionDistrict_Id from contextual knowledge
                             value_d['ElectionDistrict_Id'] = ids_d['contest_reporting_unit_id']
-                        cdf_id = id_from_select_or_insert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
+                        cdf_id = id_from_select_or_insert(session,meta,cdf_schema, t, tables_d[t], value_d, con, cur)[0]
 
                         # if newly inserted item is a ReportingUnit, insert all ComposingReportingUnit joins that can be deduced from the internal db name of the ReportingUnit
                         if t == 'ReportingUnit':
@@ -251,10 +254,10 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
             ids_d['selection_id'] = ballot_measure_selections[selection]
             # fill BallotMeasureContest
             value_d = {'Name':eval(munger_fields_d['BallotMeasureContest'][0]['ExternalIdentifier']),'ElectionDistrict_Id':state_id}  # all ballot measures are assumed to be state-level ***
-            ids_d['contest_id'] = id_from_select_or_insert(cdf_schema, 'BallotMeasureContest', tables_d['BallotMeasureContest'], value_d, con, cur)[0]
+            ids_d['contest_id'] = id_from_select_or_insert(session,meta,cdf_schema, 'BallotMeasureContest', tables_d['BallotMeasureContest'], value_d, con, cur)[0]
             # fill BallotMeasureContestSelectionJoin ***
             value_d = {'BallotMeasureContest_Id':ids_d['contest_id'],'BallotMeasureSelection_Id':ids_d['selection_id']}
-            id_from_select_or_insert(cdf_schema, 'BallotMeasureContestSelectionJoin', tables_d['BallotMeasureContestSelectionJoin'], value_d, con, cur)
+            id_from_select_or_insert(session,meta,cdf_schema, 'BallotMeasureContestSelectionJoin', tables_d['BallotMeasureContestSelectionJoin'], value_d, con, cur)
 
         else:       # if not a Ballot Measure (i.e., if a Candidate Contest)
             office_name = eval(munger_fields_d['Office'][0]['ExternalIdentifier'])
@@ -274,36 +277,36 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
             # insert into CandidateContest table
             votes_allowed = eval(munger_fields_d['CandidateContest'][0]['OtherFields']['VotesAllowed']) # TODO  misses other fields e.g. NumberElected
             value_d = {'Name':election_district_name,'ElectionDistrict_Id':election_district_id,'Office_Id':ids_d['Office_Id'],'VotesAllowed':votes_allowed}
-            ids_d['contest_id'] = id_from_select_or_insert(cdf_schema, 'CandidateContest', tables_d['CandidateContest'], value_d, con, cur)[0]
+            ids_d['contest_id'] = id_from_select_or_insert(session,meta,cdf_schema, 'CandidateContest', tables_d['CandidateContest'], value_d, con, cur)[0]
 
             # insert into Candidate table
             ballot_name = eval(munger_fields_d['Candidate'][0]['ExternalIdentifier'])
             value_d = {'BallotName':ballot_name,'Election_Id':election_id,'Party_Id':ids_d['Party_Id']}
-            ids_d['Candidate_Id'] = id_from_select_or_insert(cdf_schema, 'Candidate', tables_d['Candidate'], value_d, con, cur)[0]
+            ids_d['Candidate_Id'] = id_from_select_or_insert(session,meta,cdf_schema, 'Candidate', tables_d['Candidate'], value_d, con, cur)[0]
 
             # insert into CandidateSelection
             value_d = {'Candidate_Id':ids_d['Candidate_Id']}
-            ids_d['selection_id'] = id_from_select_or_insert(cdf_schema, 'CandidateSelection', tables_d['CandidateSelection'], value_d, con, cur)[0]
+            ids_d['selection_id'] = id_from_select_or_insert(session,meta,cdf_schema, 'CandidateSelection', tables_d['CandidateSelection'], value_d, con, cur)[0]
 
             # create record in CandidateContestSelectionJoin
             value_d = {'CandidateContest_Id':ids_d['contest_id'],
                        'CandidateSelection_Id': ids_d['selection_id'],
                        'Election_Id':election_id}
-            id_from_select_or_insert(cdf_schema, 'CandidateContestSelectionJoin', tables_d['CandidateContestSelectionJoin'], value_d, con, cur)
+            id_from_select_or_insert(session,meta,cdf_schema, 'CandidateContestSelectionJoin', tables_d['CandidateContestSelectionJoin'], value_d, con, cur)
 
         # fill ElectionContestJoin
         value_d = {'Election_Id': election_id, 'Contest_Id': ids_d['contest_id']}
-        id_from_select_or_insert(cdf_schema, 'ElectionContestJoin', tables_d['ElectionContestJoin'], value_d, con, cur)
+        id_from_select_or_insert(session,meta,cdf_schema, 'ElectionContestJoin', tables_d['ElectionContestJoin'], value_d, con, cur)
 
         # process vote counts in row
         for ct,dic in munger_counts_d.items():
             value_d = {'Count':eval(ct),'ReportingUnit_Id':ids_d['ReportingUnit_Id'],'CountItemType_Id': dic['CountItemType_Id'],'OtherCountItemType':dic['OtherCountItemType']}
             # TODO dupes are a problem only when contest & reporting unit are specified.
-            ids_d['VoteCount_Id']=id_from_select_or_insert(cdf_schema, 'VoteCount', tables_d['VoteCount'], value_d, con, cur, 'dupes_ok')[0]
+            ids_d['VoteCount_Id']=id_from_select_or_insert(session,meta,cdf_schema, 'VoteCount', tables_d['VoteCount'], value_d, con, cur, 'dupes_ok')[0]
 
             # fill SelectionElectionContestVoteCountJoin
             value_d = {'Selection_Id':ids_d['selection_id'],'Contest_Id':ids_d['contest_id'],'Election_Id':ids_d['Election_Id'],'VoteCount_Id':ids_d['VoteCount_Id']}
-            id_from_select_or_insert(cdf_schema, 'SelectionElectionContestVoteCountJoin', tables_d['SelectionElectionContestVoteCountJoin'], value_d, con, cur)
+            id_from_select_or_insert(session,meta,cdf_schema, 'SelectionElectionContestVoteCountJoin', tables_d['SelectionElectionContestVoteCountJoin'], value_d, con, cur)
 
         con.commit()
     return str(ids_d)
