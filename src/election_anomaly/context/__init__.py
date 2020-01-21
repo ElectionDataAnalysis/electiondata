@@ -18,11 +18,13 @@ def context_to_cdf(s,schema,con,cur):
 
     for table_def in table_def_list:      # iterating over tables in the common data format schema
         t = table_def[0]      # e.g., t = 'ReportingUnit'
-        print('\tProcessing '+t+'s')
         out_d[t] = {}
-        
-    ## load info into the tables corresponding directly to the context_dictionary keys
+
+        ## load info into the tables corresponding directly to the context_dictionary keys
         if t in s.context_dictionary.keys():
+            print('\tProcessing ' + t + 's')
+
+
             if t == 'BallotMeasureSelection':   # note: s.context_dictionary['BallotMeasureSelection'] is a set not a dict
                 for bms in s.context_dictionary['BallotMeasureSelection']:
                     value_d = {'Selection': bms}
@@ -31,8 +33,7 @@ def context_to_cdf(s,schema,con,cur):
                 nk_list =  list(s.context_dictionary[t])
                 for name_key in nk_list:   # e.g., name_key = 'North Carolina;Alamance County'
                     # track progress
-                    # if nk_list.index(name_key) % 500 == 0:   # for every five-hundredth item
-                    if nk_list.index(name_key) % 1 == 0:   # for every  item
+                    if nk_list.index(name_key) % 500 == 0:   # for every five-hundredth item
                         print('\t\tProcessing item number '+str(nk_list.index(name_key))+': '+ name_key)
                     ## insert the record into the db
                     value_d = {'Name':name_key}
@@ -48,13 +49,9 @@ def context_to_cdf(s,schema,con,cur):
 
                     out_d[t][name_key] = upsert_id
 
-                    # load data into the ExternalIdentifier table # TODO change this
-                    if 'ExternalIdentifiers' in s.context_dictionary[t][name_key].keys():
-                        for external_id_key in s.context_dictionary[t][name_key]['ExternalIdentifiers'].keys():   # e.g., 'fips'
-                            ## insert into ExternalIdentifier table
-                            [id,other_txt] = format_type_for_insert(schema,'IdentifierType', external_id_key, con,cur)
-                            q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s) ON CONFLICT DO NOTHING'   # will this cause errors to go unnoticed? ***
-                            dbr.query(q,[schema],[upsert_id, s.context_dictionary[t][name_key]['ExternalIdentifiers'][external_id_key],id,other_txt],con,cur)
+                    external_identifiers_to_cdf(con, cur, schema, s.external_identifier_dframe, t, name_key, upsert_id)
+
+
 
                     # for ReportingUnits, deduce and enter composing unit joins
                     if t == 'ReportingUnit':
@@ -64,20 +61,33 @@ def context_to_cdf(s,schema,con,cur):
                 ## need to process 'Office' after 'ReportingUnit', as Offices may create ReportingUnits as election districts *** check for this
 
                 for name_key in s.context_dictionary[t]:
-
+                    #%% Check that there is an ElectionDistrictType for the office
                     tt = 'ReportingUnit'
                     if 'ElectionDistrictType' in s.context_dictionary['Office'][name_key].keys():
                         [id,other_txt] = format_type_for_insert(schema,'ReportingUnitType', s.context_dictionary['Office'][name_key]['ElectionDistrictType'], con,cur)
                     else:
                         print('Office '+ name_key +' has no associated ElectionDistrictType')
-                        bb = 1/0 # ***
+                        bb = 1/0 # TODO
+
                     value_d = {'Name':s.context_dictionary['Office'][name_key]['ElectionDistrict'],'ReportingUnitType_Id':id,'OtherReportingUnitType':other_txt}
                     dd = next( x[1] for x in table_def_list if x[0]=='ReportingUnit' )
-                    id_from_select_or_insert(schema, tt, dd, value_d, con, cur)[0]
+                    upsert_id = id_from_select_or_insert(schema, tt, dd, value_d, con, cur)[0]
 
-            
+                    external_identifiers_to_cdf(con, cur, schema, s.external_identifier_dframe, t, name_key, upsert_id)
     con.commit()
     return(out_d)
+
+def external_identifiers_to_cdf (con,cur,schema,ext_id_dframe,table,name,cdf_id):
+    """ext_id_dframe is a dataframe of external Ids with columns Table,Name,ExternalIdentifierType,ExternalIdentifierValue
+    table is a table of the cdf (e.g., ReportingUnit)
+    name is the name of the entry (e.g., North Carolina;Alamance County) -- the canonical name for the cdf db
+    cdf_id is the id of the named item in the cdf db
+    """
+    little_dframe = ext_id_dframe[(ext_id_dframe.Table == table) & (ext_id_dframe.Name == name)] # this should pick the single row with the right name
+    for index, row in little_dframe.iterrows():
+        [id, other_txt] = format_type_for_insert(schema, 'IdentifierType', row['ExternalIdentifierType'], con, cur)
+        q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s) ON CONFLICT DO NOTHING'  # will this cause errors to go unnoticed? ***
+        dbr.query(q, [schema], [cdf_id, row['ExternalIdentifierValue'], id, other_txt], con, cur)
 
 
 def build_munger_d(s,m):

@@ -6,7 +6,7 @@ import clean as cl
 import pandas as pd
 
 class State:
-    def __init__(self,abbr,name,schema_name,path_to_state_dir,context_dictionary):        # reporting_units,elections,parties,offices):
+    def __init__(self,abbr,name,schema_name,path_to_state_dir,context_dictionary,external_identifier_dframe):        # reporting_units,elections,parties,offices):
         self.abbr = abbr
         self.name = name
         self.schema_name=schema_name
@@ -14,6 +14,7 @@ class State:
             path_to_state_dir += '/'
         self.path_to_state_dir=path_to_state_dir    #  include 'NC' in path.
         self.context_dictionary=context_dictionary
+        self.external_identifier_dframe=external_identifier_dframe
 
 class Munger:
     def __init__(self,name,content_dictionary):
@@ -99,29 +100,6 @@ def tab_sep_to_dict(s,fpath,k):
         v = None
     return v
 
-def create_state_old(abbr,path_to_state_dir):
-    '''abbr is the capitalized two-letter postal election_anomaly for the state, district or territory'''
-    string_attributes = ['name','schema_name']
-    context_d_keys = ['ReportingUnit','Election','Party','Office','BallotMeasureSelection']    # what consistency checks do we need?
-    if path_to_state_dir[-1] != '/':
-        path_to_state_dir += '/'
-    if not os.path.isdir(path_to_state_dir):
-        return('Error: No directory '+path_to_state_dir)
-        sys.exit()
-    for attr in string_attributes + context_d_keys:
-        if not os.path.isfile(path_to_state_dir+'context/'+attr+'.txt'):
-            return('Error: No file '+path_to_state_dir+'context/'+attr+'.txt')
-            sys.exit()
-    string_d = {} # dictionary to hold string attributes
-    for attr in string_attributes:     # strings
-        with open(path_to_state_dir+'context/'+attr+'.txt') as f:
-            string_d[attr]=f.readline().strip()
-    context_d = {}
-    for attr in context_d_keys:     # python objects
-        with open(path_to_state_dir+'context/'+attr+'.txt') as f:
-            context_d[attr]=eval(f.read())
-    return State(abbr,string_d['name'],string_d['schema_name'],path_to_state_dir,context_d)
-
 def create_state(abbr,path_to_state_dir):
     '''abbr is the capitalized two-letter postal election_anomaly for the state, district or territory'''
     string_attributes = ['name','schema_name']
@@ -145,12 +123,12 @@ def create_state(abbr,path_to_state_dir):
             index_column = 'Selection'
         else:
             index_column = 'Name'
-        dframe = pd.read_csv(path_to_state_dir+'context/'+attr+'.txt')
+        dframe = pd.read_csv(path_to_state_dir+'context/'+attr+'.txt',sep = '\t')
         context_d[attr] = dframe_to_dict(dframe,index_column = index_column)
 
-        # with open(path_to_state_dir+'context/'+attr+'.txt') as f:
-            # context_d[attr]=eval(f.read())
-    return State(abbr,string_d['name'],string_d['schema_name'],path_to_state_dir,context_d)
+    #%% get external identifier info from context into state dictionary
+    external_identifier_dframe = pd.read_csv(path_to_state_dir+'context/ExternalIdentifier.txt',sep='\t')
+    return State(abbr,string_d['name'],string_d['schema_name'],path_to_state_dir,context_d,external_identifier_dframe)
 
 def dframe_to_dict(dframe,index_column = 'Name'):
     col_list = list(dframe.columns)
@@ -167,7 +145,7 @@ def create_metafile(s,name):
     # meta_parser = re.compile(string_d['parser_string'])
 
     # read metafile info from context folder
-    dframe = pd.read_csv(s.path_to_state_dir+'context/metafile.txt',)
+    dframe = pd.read_csv(s.path_to_state_dir+'context/metafile.txt',sep='\t')
     d_all = dframe_to_dict(dframe,'name')
     d = d_all[name]
 #    with open(s.path_to_state_dir+'context/metafile.txt','r') as f:
@@ -197,7 +175,7 @@ def create_datafile(s,election,data_file_name,mf,munger):
 #    with open(s.path_to_state_dir+'context/datafile.txt','r') as f:
 #        d_all = eval(f.read())
 #        d = d_all[election+';'+data_file_name]
-    dframe = pd.read_csv(s.path_to_state_dir+'context/datafile.txt')
+    dframe = pd.read_csv(s.path_to_state_dir+'context/datafile.txt',sep='\t')
     d_all = dframe_to_dict(dframe,index_column='name')
     d = d_all[election+';'+data_file_name]
 
