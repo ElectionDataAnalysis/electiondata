@@ -125,10 +125,12 @@ def composing_from_reporting_unit_name(con,cur,cdf_schema,name,id=0):
         id_from_select_or_insert(session,meta,cdf_schema, 'ComposingReportingUnitJoin', cruj_d,
                                  {'ParentReportingUnit_Id': parent_id, 'ChildReportingUnit_Id': id}, con, cur)
 
-def format_type_for_insert(schema,table,txt,con,cur):
-    """schema.table must have a "txt" field.
+def format_type_for_insert(session,meta,schema,table,txt,con,cur):
+    """schema.table must have an "Id" field and a "Txt" field.
     This function returns a (type_id, othertype_text) pair; for types in the enumeration, returns (type_id for the given txt, ""),
     while for other types returns (type_id for "other",txt) """
+    s = session.query(table)
+    result = session.execute(s)
     q = 'SELECT "Id" FROM {}.{} WHERE "Txt" = %s'
     a = dbr.query(q,[schema,table],[txt,],con,cur)
     if a:

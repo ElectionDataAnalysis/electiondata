@@ -7,7 +7,7 @@ import re
 from munge_routines import id_from_select_or_insert, format_type_for_insert, composing_from_reporting_unit_name
 import db_routines as dbr
 
-def context_to_cdf(session,meta,s,schema,con,cur):
+def context_to_cdf(session,meta,s,schema):
     """Takes the info from the context_dictionary for the state s and inserts it into the db.
     Returns a dictionary mapping context_dictionary keys to the database keys """
     out_d = {}

@@ -24,7 +24,7 @@ def create_schema(session,name):
     if eng.dialect.has_schema(eng, name):
         recreate = input('WARNING: schema ' + name + ' already exists; erase and recreate (y/n)?\n')
         if recreate == 'y':
-            session.bind.engine.execute(sqlalchemy.schema.DropSchema(name))
+            session.bind.engine.execute(sqlalchemy.schema.DropSchema(name,cascade=True))
             session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
             print('New schema created: ' + name)
         else:
@@ -99,7 +99,7 @@ if __name__ == '__main__':
         need_to_load_data = input('Load context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
         if need_to_load_data == 'y':
             print('Loading state context info into CDF schema') # *** takes a long time; why?
-            context.context_to_cdf(session,meta,s,cdf_schema,con,cur)
+            context.context_to_cdf(session,meta,s,cdf_schema)
 
         print('Creating metafile instance')
         mf = sf.create_metafile(s,'layout_results_pct.txt')
