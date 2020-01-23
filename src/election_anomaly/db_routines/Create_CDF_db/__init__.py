@@ -6,6 +6,7 @@
 import db_routines as dbr
 import sqlalchemy
 from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey
+from sqlalchemy.engine import reflection
 from sqlalchemy.orm import sessionmaker
 
 def create_schema(session,name):
@@ -15,18 +16,24 @@ def create_schema(session,name):
             session.bind.engine.execute(sqlalchemy.schema.DropSchema(name,cascade=True))
             session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
             print('New schema created: ' + name)
+            new_schema_created = True
         else:
             print('Schema preserved: '+ name)
+            new_schema_created = False
+            insp = reflection.Inspector.from_engine(eng)
     else:
         session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
         print('New schema created: ' + name)
+        new_schema_created = True
     session.commit()
-    return
+    return new_schema_created
 
 
 def create_common_data_format_schema_SQLALCHEMY(session,schema,dirpath='CDF_schema_def_info/'):
-    """ schema example: 'cdf'; Creates cdf tables in the given schema""" # TODO assert schema exists and is empty
-    metadata = MetaData(bind=session.bind)
+    """ schema example: 'cdf'; Creates cdf tables in the given schema"""
+    create_schema(session,schema)
+    eng = session.bind
+    metadata = MetaData(bind=eng)
 
     #%% create the single sequence for all db ids
     id_seq = sqlalchemy.Sequence('id_seq', metadata=metadata,schema=schema)
@@ -53,7 +60,11 @@ def create_common_data_format_schema_SQLALCHEMY(session,schema,dirpath='CDF_sche
     with open(fpath, 'r') as f:
         table_def_list = eval(f.read())
     for table_def in table_def_list:
-        print('\t'+ table_def[0])
+        name = table_def[0]
+        field_d = table_def[1]
+        print('\t'+ name)
+        col_string_list = ['Column(\''+ f['fieldname'] + '\',' + f['datatype'] + ')' for f in field_d['fields']] + ['Column(\'' + e + '_Id\',ForeignKey(\'' + schema + '.' + e + '.Id\')),Column(\'Other' + e + '\',String)' for e in field_d['enumerations']] + ['Column(\'' + oer['fieldname'] + '\',ForeignKey(\'' + schema + '.' + oer['refers_to'] + '.Id\'))' for oer in field_d['other_element_refs']] + ['CheckConstraint(\'' + nnf + ' IS NOT NULL\',name = \'' + nnf + '_not_null\' )' for nnf in field_d['not_null_fields']]
+        table_creation_string = 'Table(\''+ name + '\',metadata,Column(\'Id\',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),' + ','.join(col_string_list)
 
 
 
