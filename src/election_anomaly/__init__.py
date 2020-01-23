@@ -93,7 +93,8 @@ if __name__ == '__main__':
         #%% create cdf schema
         print('Creating CDF schema '+ cdf_schema)
 
-        metadata = CDF.create_common_data_format_schema_SQLALCHEMY(session,cdf_schema)
+        enumeration_tables = CDF.enum_table_list()
+        metadata = CDF.create_common_data_format_schema(session, cdf_schema, enumeration_tables)
 
         # load state context info into cdf schema
         need_to_load_data = input('Load context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')

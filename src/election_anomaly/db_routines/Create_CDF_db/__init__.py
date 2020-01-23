@@ -5,12 +5,14 @@
 
 import db_routines as dbr
 import sqlalchemy
-from sqlalchemy import Table, Column, Integer, String, Date, MetaData, ForeignKey, CheckConstraint, UniqueConstraint
+from sqlalchemy import Table, Column, Integer, String, Date, MetaData, ForeignKey, CheckConstraint, UniqueConstraint,engine
+# NB: imports above are used within string argument to exec()
 from sqlalchemy.engine import reflection
 from sqlalchemy.orm import sessionmaker
 import os
 
-def create_schema(session,name):
+def create_schema(session,name):    # TODO move to db_routines
+    eng = session.bind
     if eng.dialect.has_schema(eng, name):
         recreate = input('WARNING: schema ' + name + ' already exists; erase and recreate (y/n)?\n')
         if recreate == 'y':
@@ -36,9 +38,10 @@ def create_schema(session,name):
     session.commit()
     return new_schema_created
 
-
-def create_common_data_format_schema_SQLALCHEMY(session,schema,dirpath='CDF_schema_def_info/'):
-    """ schema example: 'cdf'; Creates cdf tables in the given schema"""
+def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF_schema_def_info/'):
+    """ schema example: 'cdf'; Creates cdf tables in the given schema
+    e_table_list is a list of enumeration tables for the CDF, e.g., ['ReportingUnitType','CountItemType', ... ]
+    """
     create_schema(session,schema)
     eng = session.bind
     metadata = MetaData(bind=eng,schema=schema)
@@ -48,10 +51,8 @@ def create_common_data_format_schema_SQLALCHEMY(session,schema,dirpath='CDF_sche
 
     #%% create enumeration tables and push to db
     print('Creating enumeration tables')
-    table_list = ['IdentifierType', 'CountItemStatus', 'ReportingUnitType', 'ElectionType', 'CountItemType'] # TODO this list should not be hard-coded
-    for t in table_list:
+    for t in e_table_list:
         print('\t'+t)
-        #exec(t + '= Table(\'' + t + '\',metadata, Column(\'Id\',Integer, id_seq,server_default=id_seq.next_value(),primary_key=True), Column(\'Txt\',String),schema = \'' + schema + '\')')
         exec('Table(\'' + t + '\',metadata, Column(\'Id\',Integer, id_seq,server_default=id_seq.next_value(),primary_key=True), Column(\'Txt\',String),schema = \'' + schema + '\')')
     metadata.create_all()
 
@@ -70,97 +71,42 @@ def create_common_data_format_schema_SQLALCHEMY(session,schema,dirpath='CDF_sche
         metadata.create_all()
     return metadata
 
-def fill_cdf_enum_tables(session,meta,dirpath = 'CDF_schema_def_info/'):
+# TODO should we somewhere check consistency of enumeration_table_list and the files in enumerations/ ? Is the file enumeration_table_list ever used?
+def enum_table_list(dirpath= 'CDF_schema_def_info/'):
+    if not dirpath[-1] == '/': dirpath += '\''
+    file_list = os.listdir(dirpath + 'enumerations/')
+    for f in file_list:
+        assert f[-4:] == '.txt', 'File name in ' + dirpath + 'enumerations/ not in expected form: ' + f
+    enum_table_list = [f[:-4] for f in file_list]
+    list_file = dirpath + 'enumeration_table_list'
+    if os.path.isfile(list_file): os.remove(list_file)
+    with open(list_file,'a') as out_f:
+        for t in enum_table_list: out_f.write(t)
+    return enum_table_list
+
+def fill_cdf_enum_tables(session,meta,e_table_list,dirpath= 'CDF_schema_def_info/'):
     """takes lines of text from file and inserts each line into the txt field of the enumeration table"""
-    if not dirpath[-1] == '/':
-        dirpath += '/'
-    print('Filling enumeration tables:')
-    for tfile in os.listdir(dirpath + 'enumerations/'):
-        fpath = dirpath + 'enumerations/' + tfile
-        table = meta.tables[meta.schema + '.' + tfile[:-4]]
+    if not dirpath[-1] == '/': dirpath += '\''
+    for f in e_table_list:
+        table = meta.tables[meta.schema + '.' + f]
         print(table.key)
-        with open(fpath, 'r') as f:
+        with open(dirpath + 'enumerations/' + f + '.txt', 'r') as f:
             entries = f.read().splitlines()
         for entry in entries:
             ins = table.insert().values(Txt=entry)
             session.execute(ins)
     session.commit()
-    # TODO
-    return
-
-def list_enum_tables(dirpath = 'CDF_schema_def_info/'):
-    enum_files = os.listdir(dirpath+'enumerations/')
-    enum_tables = [ x[:-4] for x in enum_files]
-    return enum_tables
-
-def create_common_data_format_schema (con,cur,schema_name):
-    """ schema_name example: 'cdf'; Creates schema with that name on the given db connection and cursor"""
-
-    # create the blank schema
-    new_schema_created = dbr.create_schema(schema_name)
-    if new_schema_created:
-        # create a sequence for unique id values across all tables
-        dbr.query('CREATE SEQUENCE {}.id_seq;',[schema_name],[],con,cur)
-    
-        # create and fill enumeration tables
-        print('\tCreating enumeration tables')
-        enumeration_path = 'CDF_schema_def_info/enumerations/'
-        for t in ['IdentifierType','CountItemStatus','ReportingUnitType','ElectionType','CountItemType']:
-            q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} ("Id" BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY,"Txt" TEXT UNIQUE NOT NULL); '
-            dbr.query(q,[schema_name,t],[],con,cur) # note: UNIQUE in query automatically creates index.
-
-            dbr.fill_enum_table(schema_name,t,enumeration_path + t + '.txt',con,cur) # TODO document purpose or remove
-
-    
-        # create all other tables, in set order because of foreign keys
-        print('\tCreating other tables, from CDF_schema_def_info/tables.txt')
-        with open('CDF_schema_def_info/tables.txt','r') as f:
-            table_def_list = eval(f.read())
-        for table_def in table_def_list:
-            print('Processing table '+ table_def[0])
-            field_defs = ['"Id" BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY']
-            format_args = [schema_name,table_def[0]]
-            ctr = 2     # counter to track sql.Identifiers
-            for f in table_def[1]['fields']:
-                field_defs.append( '{'+str(ctr)+'} ' + f['datatype'] )
-                format_args.append( f['fieldname'])
-                ctr += 1
-            for e in table_def[1]['enumerations']:
-                field_defs.append( '{'+str(ctr)+'} INTEGER REFERENCES {0}.{'+str(ctr+1)+'}("Id"), {'+str(ctr+2)+'} TEXT' )
-                format_args.append(e+'_Id')
-                format_args.append(e)
-                format_args.append('Other'+e)
-                ctr += 3
-            for other in table_def[1]['other_element_refs']:
-                field_defs.append('{'+str(ctr)+'} INTEGER REFERENCES {0}.{'+str(ctr+1)+'}("Id")')
-                format_args.append(other['fieldname'])
-                format_args.append(other['refers_to'])
-                ctr += 2
-            for fname in table_def[1]['not_null_fields']:
-                field_defs.append('CHECK ({'+str(ctr)+'} IS NOT NULL)')
-                format_args.append(fname)
-                ctr += 1
-
-            q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} (' + ','.join(field_defs) +');'
-            dbr.query(q,format_args,[],con,cur)
-
-            # create unique indices
-            for f_list in table_def[1]['unique_constraints']:
-                print('\tCreating index on '+str(f_list))
-                constraint_name = table_def[0]+'__'+'_'.join(f_list) + '_index'
-                [f_slots,f_sql_ids] = zip(*[ ['{'+str(index)+'}',value] for index,value in enumerate(f_list,3)])
-                q = 'CREATE UNIQUE INDEX {2} ON {0}.{1} ('+','.join(f_slots)+')'
-                dbr.query(q,[schema_name,table_def[0],constraint_name]+list(f_sql_ids),[],con,cur)
     return
 
 if __name__ == '__main__':
-
     eng,meta = dbr.sql_alchemy_connect(paramfile='../../../local_data/database.ini')
     Session = sessionmaker(bind=eng)
     session = Session()
 
     schema='test'
-    metadata = create_common_data_format_schema_SQLALCHEMY(session, schema,dirpath = '../../CDF_schema_def_info/')
-    fill_cdf_enum_tables(session,metadata,dirpath='../../CDF_schema_def_info/')
+    e_table_list = enum_table_list(dirpath = '../../CDF_schema_def_info/')
+    metadata = create_common_data_format_schema(session, schema, e_table_list, dirpath ='../../CDF_schema_def_info/')
+    fill_cdf_enum_tables(session,metadata,e_table_list,dirpath='../../CDF_schema_def_info/')
     print ('Done!')
 
+    eng.dispose()
