@@ -83,7 +83,7 @@ if __name__ == '__main__':
         m = sf.create_munger(munger_path)
 
         # %% Initiate db engine and create session
-        eng, meta = dbr.sql_alchemy_connect()
+        eng, meta = dbr.sql_alchemy_connect()   # TODO this meta won't be used; remove
         Session = sessionmaker(bind=eng)
         session = Session()
 
@@ -92,13 +92,14 @@ if __name__ == '__main__':
 
         #%% create cdf schema
         print('Creating CDF schema '+ cdf_schema)
-        create_schema(session,cdf_schema)
+
+        metadata = CDF.create_common_data_format_schema_SQLALCHEMY(session,cdf_schema)
 
         # load state context info into cdf schema
         need_to_load_data = input('Load context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
         if need_to_load_data == 'y':
             print('Loading state context info into CDF schema') # *** takes a long time; why?
-            context.context_to_cdf(session,meta,s,cdf_schema)
+            context.context_to_cdf(session,metadata,s,cdf_schema)
 
         print('Creating metafile instance')
         mf = sf.create_metafile(s,'layout_results_pct.txt')

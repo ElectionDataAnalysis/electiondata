@@ -5,9 +5,10 @@
 
 import db_routines as dbr
 import sqlalchemy
-from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey
+from sqlalchemy import Table, Column, Integer, String, Date, MetaData, ForeignKey, CheckConstraint, UniqueConstraint
 from sqlalchemy.engine import reflection
 from sqlalchemy.orm import sessionmaker
+import os
 
 def create_schema(session,name):
     if eng.dialect.has_schema(eng, name):
@@ -21,6 +22,13 @@ def create_schema(session,name):
             print('Schema preserved: '+ name)
             new_schema_created = False
             insp = reflection.Inspector.from_engine(eng)
+            tablenames = insp.get_table_names(schema=name)
+            viewnames = insp.get_view_names(schema=name)
+            if tablenames:
+                print('WARNING: Some tables exist: \n\t'+'\n\t'.join([name + '.' + t for t in tablenames]))
+            if viewnames:
+                print('WARNING: Some views exist: \n\t' + '\n\t'.join([name + '.' + t for t in viewnames]))
+
     else:
         session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
         print('New schema created: ' + name)
@@ -33,7 +41,7 @@ def create_common_data_format_schema_SQLALCHEMY(session,schema,dirpath='CDF_sche
     """ schema example: 'cdf'; Creates cdf tables in the given schema"""
     create_schema(session,schema)
     eng = session.bind
-    metadata = MetaData(bind=eng)
+    metadata = MetaData(bind=eng,schema=schema)
 
     #%% create the single sequence for all db ids
     id_seq = sqlalchemy.Sequence('id_seq', metadata=metadata,schema=schema)
@@ -49,13 +57,6 @@ def create_common_data_format_schema_SQLALCHEMY(session,schema,dirpath='CDF_sche
 
     #%% create all other tables, in set order because of foreign keys
     fpath = dirpath + 'tables.txt'
-    Table('ExternalIdentifier',metadata,
-          Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
-          Column('ForeignId',Integer),
-          Column('Value',String),
-          Column('IdentifierType_Id',ForeignKey('test.IdentifierType.Id')),
-          Column('OtherIdentifierType',String),schema=schema
-          )
     print('Creating other tables, from ' + fpath + ':')
     with open(fpath, 'r') as f:
         table_def_list = eval(f.read())
@@ -63,22 +64,21 @@ def create_common_data_format_schema_SQLALCHEMY(session,schema,dirpath='CDF_sche
         name = table_def[0]
         field_d = table_def[1]
         print('\t'+ name)
-        col_string_list = ['Column(\''+ f['fieldname'] + '\',' + f['datatype'] + ')' for f in field_d['fields']] + ['Column(\'' + e + '_Id\',ForeignKey(\'' + schema + '.' + e + '.Id\')),Column(\'Other' + e + '\',String)' for e in field_d['enumerations']] + ['Column(\'' + oer['fieldname'] + '\',ForeignKey(\'' + schema + '.' + oer['refers_to'] + '.Id\'))' for oer in field_d['other_element_refs']] + ['CheckConstraint(\'' + nnf + ' IS NOT NULL\',name = \'' + nnf + '_not_null\' )' for nnf in field_d['not_null_fields']]
-        table_creation_string = 'Table(\''+ name + '\',metadata,Column(\'Id\',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),' + ','.join(col_string_list)
-
-
-
-    #%% push all db items defined in metadata to the db
-    metadata.create_all()
+        col_string_list = ['Column(\''+ f['fieldname'] + '\',' + f['datatype'] + ')' for f in field_d['fields']] + ['Column(\'' + e + '_Id\',ForeignKey(\'' + schema + '.' + e + '.Id\')),Column(\'Other' + e + '\',String)' for e in field_d['enumerations']] + ['Column(\'' + oer['fieldname'] + '\',ForeignKey(\'' + schema + '.' + oer['refers_to'] + '.Id\'))' for oer in field_d['other_element_refs']] + ['CheckConstraint(\'"' + nnf + '" IS NOT NULL\',name = \'' + field_d['short_name'] + '_' + nnf + '_not_null\' )' for nnf in field_d['not_null_fields']] + ['UniqueConstraint(' + ','.join(['\'' + x +'\'' for x in uc]) + ',name=\'' + field_d['short_name'] + '_ux' + str(field_d['unique_constraints'].index(uc)) + '\')' for uc in field_d['unique_constraints']]
+        table_creation_string = 'Table(\''+ name + '\',metadata,Column(\'Id\',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),' + ','.join(col_string_list) + ', schema=\'' + schema + '\')'
+        exec(table_creation_string)
+        metadata.create_all()
     return metadata
 
-def fill_cdf_enum_tables(session,meta,dirpath = 'CDF_schema_def_info/enumerations/'):
+def fill_cdf_enum_tables(session,meta,dirpath = 'CDF_schema_def_info/'):
     """takes lines of text from file and inserts each line into the txt field of the enumeration table"""
+    if not dirpath[-1] == '/':
+        dirpath += '/'
     print('Filling enumeration tables:')
-    for t in meta.tables:
-        print('\t'+ t.split('.')[1])
-        fpath = dirpath + t.split('.')[1] + '.txt'
-        table = meta.tables[t]
+    for tfile in os.listdir(dirpath + 'enumerations/'):
+        fpath = dirpath + 'enumerations/' + tfile
+        table = meta.tables[meta.schema + '.' + tfile[:-4]]
+        print(table.key)
         with open(fpath, 'r') as f:
             entries = f.read().splitlines()
         for entry in entries:
@@ -88,6 +88,10 @@ def fill_cdf_enum_tables(session,meta,dirpath = 'CDF_schema_def_info/enumeration
     # TODO
     return
 
+def list_enum_tables(dirpath = 'CDF_schema_def_info/'):
+    enum_files = os.listdir(dirpath+'enumerations/')
+    enum_tables = [ x[:-4] for x in enum_files]
+    return enum_tables
 
 def create_common_data_format_schema (con,cur,schema_name):
     """ schema_name example: 'cdf'; Creates schema with that name on the given db connection and cursor"""
@@ -156,8 +160,7 @@ if __name__ == '__main__':
     session = Session()
 
     schema='test'
-    create_schema(session,schema)
     metadata = create_common_data_format_schema_SQLALCHEMY(session, schema,dirpath = '../../CDF_schema_def_info/')
-    fill_cdf_enum_tables(session,metadata,dirpath='../../CDF_schema_def_info/enumerations/')
+    fill_cdf_enum_tables(session,metadata,dirpath='../../CDF_schema_def_info/')
     print ('Done!')
 
