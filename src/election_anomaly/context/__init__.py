@@ -9,12 +9,11 @@ import db_routines as dbr
 
 def context_to_cdf(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_def_info/'):
     """Takes the info from the context_dictionary for the state s and inserts it into the db.
-    Returns a dictionary mapping context_dictionary keys to the database keys """
+    Returns a dictionary mapping context_dictionary keys to the database keys """ # TODO is the dictionary necessary?
     out_d = {}
     if not cdf_def_dirpath[-1] == '/': cdf_def_dirpath += '/'
     with open(cdf_def_dirpath+'tables.txt','r') as f:
         table_def_list = eval(f.read())
-        
 
     for table_def in table_def_list:      # iterating over tables in the common data format schema
         t = table_def[0]      # e.g., t = 'ReportingUnit'
@@ -48,10 +47,7 @@ def context_to_cdf(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_def_info/
                     upsert_id = id_from_select_or_insert(session,meta.tables[schema + '.' + t], value_d)
 
                     out_d[t][name_key] = upsert_id
-
-                    external_identifiers_to_cdf(con, cur, schema, s.external_identifier_dframe, t, name_key, upsert_id)
-
-
+                    external_identifiers_to_cdf(session,meta,schema,s.external_identifier_dframe,meta.tables[schema + '.' + t],name_key,upsert_id)
 
                     # for ReportingUnits, deduce and enter composing unit joins
                     if t == 'ReportingUnit':
@@ -73,21 +69,28 @@ def context_to_cdf(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_def_info/
                     dd = next( x[1] for x in table_def_list if x[0]=='ReportingUnit' )
                     upsert_id = id_from_select_or_insert(session,meta.tables[schema + '.' + t], value_d)
 
-                    external_identifiers_to_cdf(con, cur, schema, s.external_identifier_dframe, t, name_key, upsert_id)
-    con.commit()
+                    external_identifiers_to_cdf(session,meta,schema,s.external_identifier_dframe,meta.tables[schema + '.' + t],name_key,upsert_id)
+    session.commit() #  TODO necessary?
     return(out_d)
 
-def external_identifiers_to_cdf (con,cur,schema,ext_id_dframe,table,name,cdf_id):
-    """ext_id_dframe is a dataframe of external Ids with columns Table,Name,ExternalIdentifierType,ExternalIdentifierValue
+def external_identifiers_to_cdf(session,meta,schema,ext_id_dframe,t,name,cdf_id):
+    """Insert the external identifiers associated to the item with cdf_id into the CDF schema, .
+    ext_id_dframe is a dataframe of external Ids with columns Table,Name,ExternalIdentifierType,ExternalIdentifierValue
     table is a table of the cdf (e.g., ReportingUnit)
     name is the name of the entry (e.g., North Carolina;Alamance County) -- the canonical name for the cdf db
     cdf_id is the id of the named item in the cdf db
     """
-    little_dframe = ext_id_dframe[(ext_id_dframe.Table == table) & (ext_id_dframe.Name == name)] # this should pick the single row with the right name
+    little_dframe = ext_id_dframe[(ext_id_dframe.Table == t.fullname) & (ext_id_dframe.Name == name)] # this should pick the single row with the right name
     for index, row in little_dframe.iterrows():
-        [id, other_txt] = format_type_for_insert(schema, 'IdentifierType', row['ExternalIdentifierType'], con, cur)
-        q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s) ON CONFLICT DO NOTHING'  # will this cause errors to go unnoticed? ***
-        dbr.query(q, [schema], [cdf_id, row['ExternalIdentifierValue'], id, other_txt], con, cur)
+        [id,other_txt] = format_type_for_insert(session,meta.tables[schema + '.IdentifierType'],row['ExternalIdentifierType'])
+        # [id,other_txt] = format_type_for_insert(schema, 'IdentifierType', row['ExternalIdentifierType']) # TODO remove
+        value_d = {'ForeignId':cdf_id,'Value':row['ExternalIdentifierValue'],'IdentifierType_Id':id,'OtherIdentifierType':other_txt}
+        ins = t.insert().values(value_d)
+        session.execute(ins)
+        #q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s) ON CONFLICT DO NOTHING'  # will this cause errors to go unnoticed? ***
+        #dbr.query(q, [schema], [cdf_id, row['ExternalIdentifierValue'], id, other_txt], con, cur)
+    session.commit()
+    return
 
 
 def build_munger_d(s,m):
