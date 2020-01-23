@@ -7,11 +7,12 @@ import re
 from munge_routines import id_from_select_or_insert, format_type_for_insert, composing_from_reporting_unit_name
 import db_routines as dbr
 
-def context_to_cdf(session,meta,s,schema):
+def context_to_cdf(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_def_info/'):
     """Takes the info from the context_dictionary for the state s and inserts it into the db.
     Returns a dictionary mapping context_dictionary keys to the database keys """
     out_d = {}
-    with open('CDF_schema_def_info/tables.txt','r') as f:
+    if not cdf_def_dirpath[-1] == '/': cdf_def_dirpath += '/'
+    with open(cdf_def_dirpath+'tables.txt','r') as f:
         table_def_list = eval(f.read())
         
 
@@ -27,7 +28,7 @@ def context_to_cdf(session,meta,s,schema):
             if t == 'BallotMeasureSelection':   # note: s.context_dictionary['BallotMeasureSelection'] is a set not a dict
                 for bms in s.context_dictionary['BallotMeasureSelection']:
                     value_d = {'Selection': bms}
-                    id_from_select_or_insert(session,meta,schema, t, table_def[1], value_d, con, cur) # table_def[1] is a dict e.g. {'fields':[],....
+                    id_from_select_or_insert(session,meta.tables[schema + '.' + t],  value_d)
             else:
                 nk_list =  list(s.context_dictionary[t])
                 for name_key in nk_list:   # e.g., name_key = 'North Carolina;Alamance County'
@@ -41,10 +42,10 @@ def context_to_cdf(session,meta,s,schema):
                             value_d[f['fieldname']] = s.context_dictionary[t][name_key][ f['fieldname'] ]
                     for e in table_def[1]['enumerations']:
                         if e in s.context_dictionary[t][name_key].keys():
-                            [id,other_txt] = format_type_for_insert(schema,e, s.context_dictionary[t][name_key][e], con,cur)
+                            [id,other_txt] = format_type_for_insert(session,meta.tables[schema + '.' + e],s.context_dictionary[t][name_key][e])
                             value_d[e+'_Id'] = id
                             value_d['Other'+e] = other_txt
-                    upsert_id = id_from_select_or_insert(session,meta,schema, t, table_def[1], value_d, con, cur)[0]
+                    upsert_id = id_from_select_or_insert(session,meta.tables[schema + '.' + t], value_d)
 
                     out_d[t][name_key] = upsert_id
 
@@ -70,7 +71,7 @@ def context_to_cdf(session,meta,s,schema):
 
                     value_d = {'Name':s.context_dictionary['Office'][name_key]['ElectionDistrict'],'ReportingUnitType_Id':id,'OtherReportingUnitType':other_txt}
                     dd = next( x[1] for x in table_def_list if x[0]=='ReportingUnit' )
-                    upsert_id = id_from_select_or_insert(session,meta,schema, tt, dd, value_d, con, cur)[0]
+                    upsert_id = id_from_select_or_insert(session,meta.tables[schema + '.' + t], value_d)
 
                     external_identifiers_to_cdf(con, cur, schema, s.external_identifier_dframe, t, name_key, upsert_id)
     con.commit()
@@ -262,6 +263,19 @@ def fix(fp):        # fp is the path to the reporting_unit.txt file
     with open(fp+'.new','w') as f:
         f.write(str(d))
 
+if __name__ == '__main__':
+    from sqlalchemy.orm import sessionmaker
+    import states_and_files as sf
 
+    schema='test'
+    eng,meta = dbr.sql_alchemy_connect(schema=schema,paramfile='../../local_data/database.ini')
+    Session = sessionmaker(bind=eng)
+    session = Session()
+
+    s = sf.create_state('NC','../../local_data/NC/')
+
+
+    context_to_cdf(session,meta,s,schema,cdf_def_dirpath='../CDF_schema_def_info/')
+    print('Done!')
 
 

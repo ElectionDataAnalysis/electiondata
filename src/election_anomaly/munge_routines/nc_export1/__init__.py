@@ -58,7 +58,7 @@ def element_to_cdf (cdf_schema,t,munger_d,ids_d,id_type_other_id,con,cur):
                     value_d[f] = eval(item['OtherFields'][f])
                 if t == 'CandidateContest' or t == 'BallotMeasureContest':  # need to get ElectionDistrict_Id from contextual knowledge
                     value_d['ElectionDistrict_Id'] = ids_d['contest_reporting_unit_id']
-                cdf_id = id_from_select_or_insert(cdf_schema, t, tables_d[t], value_d, con, cur)[0]
+                cdf_id = id_from_select_or_insert(session,meta.tables[cdf_schema + '.' + t],  value_d)
         ids_d[t + '_Id'] = cdf_id
         return(ids_d)
 

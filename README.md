@@ -17,7 +17,8 @@ The app is controlled by the Python3 module src.election_anomaly
 ### Database
 You will need access to a postgresql database. Your login credentilals should be in `src/local_data/database.ini`. Contents of that file should be:
 
-```[postgresql]
+```
+[postgresql]
 host=<url for your postgresql server>
 port=<port for your postgresql server>
 database=<name of your election data database>
