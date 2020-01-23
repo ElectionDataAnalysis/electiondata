@@ -4,10 +4,12 @@
 import sys
 import re
 import psycopg2
+import sqlalchemy
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
 import sqlalchemy as db
 from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey
+from sqlalchemy.engine import reflection
 from sqlalchemy.orm import sessionmaker
 from configparser import ConfigParser
 import pandas as pd
@@ -176,36 +178,6 @@ def query_SQLALCHEMY(session,q):
     # TODO
     return
 
-def create_schema(name):
-    # connect and create schema for the state
-    con = establish_connection()
-    con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-    cur = con.cursor()
-
-    # does schema already exist?
-    schema_exists = query('SELECT schema_name FROM information_schema.schemata WHERE schema_name = %s ',[],[name,],con,cur)
-    if schema_exists:
-        drop_existing = input('Schema '+name+ ' already exists. Any data in the schema will be lost if you delete and recreate. \nDelete and recreate? (y/n)?\n')
-        if drop_existing == 'y':
-            print('Dropping existing schema '+name)
-            query('DROP SCHEMA IF EXISTS {} CASCADE',[name],[],con,cur)
-            print(' \tand creating new, empty version')
-            query('CREATE SCHEMA {}', [name], [], con, cur)
-            new_schema_created = True
-            con.commit()
-        else:
-            print('Using existing schema '+name)
-            new_schema_created = False
-    else:
-        query('CREATE SCHEMA {}',[name],[],con,cur)
-        new_schema_created = True
-        con.commit()
-    if cur:
-        cur.close()
-    if con:
-        con.close()
-    return new_schema_created
-
 def file_to_sql_statement_list(fpath):
     with open(fpath,'r') as f:
         fstring = f.read()
@@ -287,3 +259,31 @@ if __name__ == '__main__':
     a = read_single_value_from_id(con,meta,schema,table,field,id)
     d = read_all_value_from_id(con,meta,schema,'ReportingUnitType','Txt')
     print('Done')
+
+
+def create_schema(session,name):    # TODO move to db_routines
+    eng = session.bind
+    if eng.dialect.has_schema(eng, name):
+        recreate = input('WARNING: schema ' + name + ' already exists; erase and recreate (y/n)?\n')
+        if recreate == 'y':
+            session.bind.engine.execute(sqlalchemy.schema.DropSchema(name,cascade=True))
+            session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
+            print('New schema created: ' + name)
+            new_schema_created = True
+        else:
+            print('Schema preserved: '+ name)
+            new_schema_created = False
+            insp = reflection.Inspector.from_engine(eng)
+            tablenames = insp.get_table_names(schema=name)
+            viewnames = insp.get_view_names(schema=name)
+            if tablenames:
+                print('WARNING: Some tables exist: \n\t'+'\n\t'.join([name + '.' + t for t in tablenames]))
+            if viewnames:
+                print('WARNING: Some views exist: \n\t' + '\n\t'.join([name + '.' + t for t in viewnames]))
+
+    else:
+        session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
+        print('New schema created: ' + name)
+        new_schema_created = True
+    session.commit()
+    return new_schema_created

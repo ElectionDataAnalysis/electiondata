@@ -3,6 +3,9 @@
 # under construction
 
 import db_routines as dbr
+import sqlalchemy as sqla
+from sqlalchemy import select
+
 def report_error(error_string):
     print('Munge error: '+error_string)
 
@@ -125,17 +128,15 @@ def composing_from_reporting_unit_name(con,cur,cdf_schema,name,id=0):
         id_from_select_or_insert(session,meta,cdf_schema, 'ComposingReportingUnitJoin', cruj_d,
                                  {'ParentReportingUnit_Id': parent_id, 'ChildReportingUnit_Id': id}, con, cur)
 
-def format_type_for_insert(session,meta,schema,table,txt,con,cur):
-    """schema.table must have an "Id" field and a "Txt" field.
+def format_type_for_insert(session,e_table,txt,con,cur):
+    """This is designed for enumeration tables. e_table is a metadata object, and must have an "Id" field and a "Txt" field.
     This function returns a (type_id, othertype_text) pair; for types in the enumeration, returns (type_id for the given txt, ""),
     while for other types returns (type_id for "other",txt) """
-    s = session.query(table)
-    result = session.execute(s)
-    q = 'SELECT "Id" FROM {}.{} WHERE "Txt" = %s'
-    a = dbr.query(q,[schema,table],[txt,],con,cur)
-    if a:
-        return([a[0][0],''])
-    else:
+    s = select([e_table.c.Id]).where(e_table.c.Txt == txt)
+    ResultProxy = session.execute(s)
+    if ResultProxy.row_count == 1:
+        return([ResultProxy.fetchone()[0],''])
+    elif ResultProxy.row_count == 0:
         a = dbr.query(q,[schema,table],['other',],con,cur)
         return([a[0][0],txt])
 
@@ -313,4 +314,19 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
         con.commit()
     return str(ids_d)
 
+if __name__ == '__main__':
+    import db_routines.Create_CDF_db as CDF
+    from sqlalchemy.orm import sessionmaker
+
+    eng,meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
+    Session = sessionmaker(bind=eng)
+    session = Session()
+
+    schema='test'
+    e_table_list = CDF.enum_table_list(dirpath = '../CDF_schema_def_info/')
+    metadata = CDF.create_common_data_format_schema(session, schema, e_table_list, dirpath ='../CDF_schema_def_info/')
+    for e in e_table_list:
+        b = format_type_for_insert(session,metadata.tables[schema+'.'+e],'general',None,None)
+
+    print('Done!')
 

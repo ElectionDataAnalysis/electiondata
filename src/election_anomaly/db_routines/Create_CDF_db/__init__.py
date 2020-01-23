@@ -5,44 +5,18 @@
 
 import db_routines as dbr
 import sqlalchemy
-from sqlalchemy import Table, Column, Integer, String, Date, MetaData, ForeignKey, CheckConstraint, UniqueConstraint,engine
+from db_routines import create_schema
+from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,Date,ForeignKey
 # NB: imports above are used within string argument to exec()
-from sqlalchemy.engine import reflection
 from sqlalchemy.orm import sessionmaker
 import os
 
-def create_schema(session,name):    # TODO move to db_routines
-    eng = session.bind
-    if eng.dialect.has_schema(eng, name):
-        recreate = input('WARNING: schema ' + name + ' already exists; erase and recreate (y/n)?\n')
-        if recreate == 'y':
-            session.bind.engine.execute(sqlalchemy.schema.DropSchema(name,cascade=True))
-            session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
-            print('New schema created: ' + name)
-            new_schema_created = True
-        else:
-            print('Schema preserved: '+ name)
-            new_schema_created = False
-            insp = reflection.Inspector.from_engine(eng)
-            tablenames = insp.get_table_names(schema=name)
-            viewnames = insp.get_view_names(schema=name)
-            if tablenames:
-                print('WARNING: Some tables exist: \n\t'+'\n\t'.join([name + '.' + t for t in tablenames]))
-            if viewnames:
-                print('WARNING: Some views exist: \n\t' + '\n\t'.join([name + '.' + t for t in viewnames]))
-
-    else:
-        session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
-        print('New schema created: ' + name)
-        new_schema_created = True
-    session.commit()
-    return new_schema_created
 
 def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF_schema_def_info/'):
     """ schema example: 'cdf'; Creates cdf tables in the given schema
     e_table_list is a list of enumeration tables for the CDF, e.g., ['ReportingUnitType','CountItemType', ... ]
     """
-    create_schema(session,schema)
+    create_schema(session, schema)
     eng = session.bind
     metadata = MetaData(bind=eng,schema=schema)
 

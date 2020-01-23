@@ -88,7 +88,7 @@ if __name__ == '__main__':
         session = Session()
 
         #%% create schema for state
-        create_schema(session,s.schema_name)
+        dbr.create_schema(session,s.schema_name)
 
         #%% create cdf schema
         print('Creating CDF schema '+ cdf_schema)
