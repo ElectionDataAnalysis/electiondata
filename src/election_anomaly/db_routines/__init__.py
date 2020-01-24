@@ -200,8 +200,10 @@ def fill_enum_table(schema,table,filepath,con,cur):
         query(q,sql_ids,strs,con,cur)
     return
 
-def create_table(df):   # *** modularize and use df.column_metadata
+def create_table(df):   # TODO *** modularize and use df.column_metadata
 ## clean the metadata file
+    """ df is a Datafile instance. Create a table that can hold the raw data in the datafile.
+    """
     create_query = 'CREATE TABLE {}.{} ('
     sql_ids_create = [df.state.schema_name,df.table_name]
     sql_ids_comment = []
@@ -250,8 +252,6 @@ def clean_meta_file(infile,outdir,s):       ## update or remove ***
         return "clean_meta_file: error, state not recognized"
         sys.exit()
 
-
-
 def create_schema(session,name):    # TODO move to db_routines
     eng = session.bind
     if eng.dialect.has_schema(eng, name):
@@ -280,11 +280,42 @@ def create_schema(session,name):    # TODO move to db_routines
     return new_schema_created
 
 if __name__ == '__main__':
-    schema = 'cdf_nc'
-    con, meta ,Session = sql_alchemy_connect(schema=schema,paramfile='../../local_data/database.ini')
-    table = 'ReportingUnit'
-    field = 'Name'
-    id = 50
-    a = read_single_value_from_id(con,meta,schema,table,field,id)
-    d = read_all_value_from_id(con,meta,schema,'ReportingUnitType','Txt')
+    import states_and_files as sf
+    import db_routines as dbr
+
+    # %% Initiate db engine and create session
+    eng, meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
+    Session = sessionmaker(bind=eng)
+    session = Session()
+
+
+    abbr = 'NC'
+    df_name = 'results_pct_20181106.txt'
+
+    print('Creating state')
+    s = sf.create_state(abbr, '../../local_data/' + abbr)
+
+    print('Creating schema')
+    create_schema(session,s.schema_name)
+    print('Creating metafile instance')
+    mf = sf.create_metafile(s, 'layout_results_pct.txt')
+
+    munger_name = 'nc_export1'
+    munger_path = '../../local_data/mungers/' + munger_name + '.txt'
+    print('Creating munger instance from ' + munger_path)
+    m = sf.create_munger(munger_path)
+
+    print('Creating datafile instance')
+    df = sf.create_datafile(s, 'General Election 2018-11-06', df_name, mf, m)
+
+    #%% simplify df.column_metadata for testing
+    df.column_metadata = [['county',String,None],['some_int',Integer,None]]
+
+    sqla_column_list = [Column(col[0],col[1]) for col in df.column_metadata]
+    raw_table = Table(df.table_name,meta,*sqla_column_list,schema=s.schema_name)
+
+    meta.create_all()
+
+
+    qq, strs, sql_ids = create_table(df)
     print('Done')

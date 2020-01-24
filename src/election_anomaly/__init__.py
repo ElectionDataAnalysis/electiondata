@@ -35,18 +35,20 @@ def create_schema(session,name):
     session.commit()
     return
 
-def raw_data(df,con,cur):
-    """ Loads the raw data from the df into the schema for the associated state
+def raw_data(session,meta,df,con,cur):
+    """ Loads the raw data from the datafile df into the schema for the associated state
     Schema for the state should already exist
     """
-
     s = df.state
+    t = s.schema_name + '.' + df.table_name   # name of table, including schema
 
-    t = df.table_name   # name of table
+    #%% drop table in case it already exists
+    meta.tables[t].drop()
+
     # create table
-    dbr.query('DROP TABLE IF EXISTS {}.{}',[s.schema_name,t],[],con,cur)
+    #dbr.query('DROP TABLE IF EXISTS {}.{}',[s.schema_name,t],[],con,cur)
     [q,strs,sql_ids] = dbr.create_table(df)
-    dbr.query(q,sql_ids,strs,con,cur)
+    #dbr.query(q,sql_ids,strs,con,cur)
 
     # correct any errors due to foibles of particular datafile and commit
     for q in df.correction_query_list:
