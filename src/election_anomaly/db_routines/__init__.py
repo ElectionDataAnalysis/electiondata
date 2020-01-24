@@ -250,15 +250,6 @@ def clean_meta_file(infile,outdir,s):       ## update or remove ***
         return "clean_meta_file: error, state not recognized"
         sys.exit()
 
-if __name__ == '__main__':
-    schema = 'cdf_nc'
-    con, meta ,Session = sql_alchemy_connect(schema=schema,paramfile='../../local_data/database.ini')
-    table = 'ReportingUnit'
-    field = 'Name'
-    id = 50
-    a = read_single_value_from_id(con,meta,schema,table,field,id)
-    d = read_all_value_from_id(con,meta,schema,'ReportingUnitType','Txt')
-    print('Done')
 
 
 def create_schema(session,name):    # TODO move to db_routines
@@ -287,3 +278,13 @@ def create_schema(session,name):    # TODO move to db_routines
         new_schema_created = True
     session.commit()
     return new_schema_created
+
+if __name__ == '__main__':
+    schema = 'cdf_nc'
+    con, meta ,Session = sql_alchemy_connect(schema=schema,paramfile='../../local_data/database.ini')
+    table = 'ReportingUnit'
+    field = 'Name'
+    id = 50
+    a = read_single_value_from_id(con,meta,schema,table,field,id)
+    d = read_all_value_from_id(con,meta,schema,'ReportingUnitType','Txt')
+    print('Done')

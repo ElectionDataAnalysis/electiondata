@@ -51,7 +51,7 @@ def context_to_cdf(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_def_info/
 
                     # for ReportingUnits, deduce and enter composing unit joins
                     if t == 'ReportingUnit':
-                        composing_from_reporting_unit_name(con,cur,schema,name_key,upsert_id)
+                        composing_from_reporting_unit_name(session,meta,schema,name_key,upsert_id)
 
             if t == 'Office':
                 ## need to process 'Office' after 'ReportingUnit', as Offices may create ReportingUnits as election districts *** check for this
@@ -60,7 +60,7 @@ def context_to_cdf(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_def_info/
                     #%% Check that there is an ElectionDistrictType for the office
                     tt = 'ReportingUnit'
                     if 'ElectionDistrictType' in s.context_dictionary['Office'][name_key].keys():
-                        [id,other_txt] = format_type_for_insert(schema,'ReportingUnitType', s.context_dictionary['Office'][name_key]['ElectionDistrictType'], con,cur)
+                        [id,other_txt] = format_type_for_insert(session,'ReportingUnitType', s.context_dictionary['Office'][name_key]['ElectionDistrictType'])
                     else:
                         print('Office '+ name_key +' has no associated ElectionDistrictType')
                         bb = 1/0 # TODO

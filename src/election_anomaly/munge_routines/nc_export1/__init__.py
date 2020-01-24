@@ -50,10 +50,10 @@ def element_to_cdf (cdf_schema,t,munger_d,ids_d,id_type_other_id,con,cur):
                 cdf_name = eval(item['ExternalIdentifier'])
                 value_d = {item['InternalNameField']: cdf_name}  # usually 'Name' but not always
                 for e in item['Enumerations'].keys():  # e.g. e = 'ReportingUnitType'
-                    [value_d[e + 'Id'], value_d['Other' + e]] = format_type_for_insert(cdf_schema, e,
+                    [value_d[e + 'Id'], value_d['Other' + e]] = format_type_for_insert(session, e,
                                                                                        item[
                                                                                            'Enumerations'][
-                                                                                           e], con, cur)
+                                                                                           e])
                 for f in item['OtherFields'].keys():
                     value_d[f] = eval(item['OtherFields'][f])
                 if t == 'CandidateContest' or t == 'BallotMeasureContest':  # need to get ElectionDistrict_Id from contextual knowledge

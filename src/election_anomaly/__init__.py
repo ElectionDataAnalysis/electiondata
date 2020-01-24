@@ -96,6 +96,10 @@ if __name__ == '__main__':
         enumeration_tables = CDF.enum_table_list()
         metadata = CDF.create_common_data_format_schema(session, cdf_schema, enumeration_tables)
 
+        #%% fill enumeration tables
+        print('\tFilling enumeration tables')
+        CDF.fill_cdf_enum_tables(session,metadata,enumeration_tables)
+
         # load state context info into cdf schema
         need_to_load_data = input('Load context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
         if need_to_load_data == 'y':

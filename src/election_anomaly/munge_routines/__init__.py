@@ -3,18 +3,21 @@
 # under construction
 
 import db_routines as dbr
-import sqlalchemy as sqla
+import sqlalchemy as db
 from sqlalchemy import select
 
 def report_error(error_string):
     print('Munge error: '+error_string)
 
-def spellcheck(con,cur,value_d):
+def spellcheck(session,value_d):
     corrected_value_d = {}
+    spell_meta = db.MetaData(bind=session.bind, reflect=True, schema='misspellings')
     for key,value in value_d.items():
-        q = 'SELECT good FROM misspellings.corrections WHERE bad = %s'
-        strs = [value,]
-        corrected_value_d[key] = dbr.query(q,[],strs,con,cur)[0][0]
+        cor = spell_meta.tables['misspellings.corrections']
+        q = session.query(cor.c.good).filter(cor.c.bad == value)
+        # q = spell_meta.tables['misspellings.corrections'].select(c.good).where(c.bad == value)
+        rp = session.execute(q)
+        corrected_value_d[key] = rp.fetchone()[0]
     return corrected_value_d
 
 def id_and_name_from_external (cdf_schema,table,external_name,identifiertype_id,otheridentifiertype,con,cur,internal_name_field='Name'):
@@ -55,32 +58,31 @@ def id_query_components(table_d,value_d):
     val_return_list = ['c.' + i for i in f_id_slot_list]
     return [f_id_slots,f_val_slots,cf_query_string,val_return_list,f_names,cf_names,f_vals]
 
-def id_from_select_only(schema, table, table_d, value_d, con, cur, mode='no_dupes',check_spelling = True):
+def id_from_select_only(session,t,value_d, mode='no_dupes',check_spelling = True):
     """Returns the Id of the record in table with values given in the dictionary value_d.
     On error (nothing found, or more than one found) returns 0"""
 
-    [f_id_slots,f_val_slots,cf_query_string,val_return_list,f_names,cf_names,f_vals] = id_query_components(table_d,value_d)
-    q = 'SELECT "Id" FROM {0}.{1} WHERE ('+ f_id_slots+') = ('+f_val_slots+')'
-    sql_ids = [schema,table]   +f_names + cf_names
-    strs = f_vals
-    a = dbr.query(q,sql_ids,strs,con,cur)
-    if len(a) == 0: # if nothing returned
-        # check misspellings.corrections table and try again. Set check_spelling = False
+    q = session.query(t).filter_by(**value_d)
+    rp = session.execute(q)
+
+    if rp.rowcount == 0: # if nothing returned
+        # check misspellings.corrections table and try again. Set check_spelling = False to avoid needless repeats
         if check_spelling:
             try:
-                corrected_value_d = spellcheck(con,cur,value_d)
-                return id_from_select_only(schema, table, table_d, corrected_value_d, con, cur, mode, False)
+                corrected_value_d = spellcheck(session,value_d)
+                print('Spelling correction was made:\n\toriginal: '+str(value_d) + '\n\tcorrection: ' + str(corrected_value_d))
+                return id_from_select_only(session,t, corrected_value_d, mode, check_spelling=False)
             except:
-                report_error('No record found for this query:\n\t' + dbr.query_as_string(q, sql_ids, strs, con, cur))
+                report_error('No record found for this query:\n\t' + str(q))
                 return 0
         else:
-            report_error('No record found for this query:\n\t'+dbr.query_as_string(q,sql_ids,strs,con,cur))
+            report_error('No record found for this query:\n\t'+str(q))
             return 0
-    elif len(a) >1 and mode == 'no_dupes':
+    elif rp.rowcount >1 and mode == 'no_dupes':
         report_error('More than one record found for this query:\n\t'+dbr.query_as_string(a,sql_ids,strs,con,cur))
         return 0
     else:
-        return a[0]
+        return rp.fetchone()[0]
 
 def id_from_select_or_insert(session,t, value_d, mode='no_dupes'):
     """ t is a table from the metadata; value_d gives the values for the fields in the table
@@ -91,24 +93,18 @@ def id_from_select_or_insert(session,t, value_d, mode='no_dupes'):
     modes with consequences: 'dupes_ok'
        } """
 
-    # s = select([t.c.Id]).where(t.c.k == v for k,v in value_d.items())
-    #rp = session.execute(s)
-
     s = session.query(t).filter_by(**value_d)
     rp = session.execute(s)
     if rp.rowcount == 0:
-        print('inserting')
         ins = t.insert().values(**value_d)
-        session.execute(ins)
+        rp2 = session.execute(ins)
+        id = rp2.inserted_primary_key[0]
         session.commit()
-        id = session.bind.inserted_primary_key
     else:
-        print('selecting')
         id = rp.fetchone()[0]
-    print(id)
     return(id)
 
-def composing_from_reporting_unit_name(con,cur,cdf_schema,name,id=0):
+def composing_from_reporting_unit_name(session,meta,cdf_schema,name,id=0):
     # insert all ComposingReportingUnit joins that can be deduced from the internal db name of the ReportingUnit
     # Use the ; convention to identify all parents
 
@@ -124,13 +120,14 @@ def composing_from_reporting_unit_name(con,cur,cdf_schema,name,id=0):
 		     'not_null_fields':['ParentReportingUnit_Id','ChildReportingUnit_Id']} # TODO avoid hard-coding this in various places
     # if no id is passed, find id corresponding to name
     if id == 0:
-        id = id_from_select_or_insert(session,meta.tables[cdf_schema + '.ReportingUnit'], {'Name': name})
+        id = id_from_select_or_insert(session,meta,meta.tables[cdf_schema + '.ReportingUnit'], {'Name': name})
     chain = name.split(';')
     for i in range(1,len(chain)+1):
         parent = ';'.join(chain[0:i])
-        parent_id = id_from_select_only(cdf_schema, 'ReportingUnit', ru_d, {'Name': parent}, con, cur)
+        parent_id = id_from_select_only(session, meta.tables[cdf_schema+ '.ReportingUnit'], {'Name': parent})
         id_from_select_or_insert(session,meta.tables[cdf_schema + '.ComposingReportingUnitJoin'],
                                  {'ParentReportingUnit_Id': parent_id, 'ChildReportingUnit_Id': id})
+    return
 
 def format_type_for_insert(session,e_table,txt):
     """This is designed for enumeration tables. e_table is a metadata object, and must have an "Id" field and a "Txt" field.
@@ -168,9 +165,9 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
 #        tables_d[ddd.pop('tablename')] = ddd
 
     # get id for  election
-    [electiontype_id, otherelectiontype] = format_type_for_insert(cdf_schema, 'ElectionType',
+    [electiontype_id, otherelectiontype] = format_type_for_insert(session, 'ElectionType',
                                                                   df.state.context_dictionary['Election'][
-                                                                      df.election]['ElectionType'], con, cur)
+                                                                      df.election]['ElectionType'])
     value_d = {'Name': df.election, 'EndDate': df.state.context_dictionary['Election'][df.election]['EndDate'],
                'StartDate': df.state.context_dictionary['Election'][df.election]['StartDate'],
                'OtherElectionType': otherelectiontype, 'ElectionType_Id': electiontype_id}
@@ -179,8 +176,8 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
     # if state_id is not passed as parameter, select-or-insert state, get id (default Reporting Unit for ballot questions)
     if state_id == 0:
         t = 'ReportingUnit'
-        [reportingunittype_id, otherreportingunittype] = format_type_for_insert(cdf_schema, 'ReportingUnitType',
-                                                                                'state', con, cur)
+        [reportingunittype_id, otherreportingunittype] = format_type_for_insert(session, 'ReportingUnitType',
+                                                                                'state')
         value_d = {'Name': df.state.name, 'ReportingUnitType_Id': reportingunittype_id,
                    'OtherReportingUnitType': otherreportingunittype}
         state_id = id_from_select_or_insert(session,meta.tables[cdf_schema + '.'+ t], value_d)
@@ -206,8 +203,8 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
     # look up id,type pairs for each kind of count, add info to counts dictionary
     for ct,dic in munger_counts_d.items():
         text = dic['CountItemType']
-        [dic['CountItemType_Id'], dic['OtherCountItemType']] = format_type_for_insert(cdf_schema, 'CountItemType',
-                                                                  text, con, cur)
+        [dic['CountItemType_Id'], dic['OtherCountItemType']] = format_type_for_insert(session, 'CountItemType',
+                                                                  text)
     munger_fields_d = mu.content_dictionary['fields_dictionary']
 
     for row in rows:
@@ -241,10 +238,10 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
                         cdf_name = eval(item['ExternalIdentifier'])
                         value_d = {item['InternalNameField']: cdf_name}  # usually 'Name' but not always
                         for e in item['Enumerations'].keys():  # e.g. e = 'ReportingUnitType'
-                            [value_d[e + '_Id'], value_d['Other' + e]] = format_type_for_insert(cdf_schema, e,
+                            [value_d[e + '_Id'], value_d['Other' + e]] = format_type_for_insert(session, e,
                                                                                                item[
                                                                                                    'Enumerations'][
-                                                                                                   e], con, cur)
+                                                                                                   e])
                         for f in item['OtherFields'].keys():
                             value_d[f] = eval(item['OtherFields'][f])
                         if t == 'CandidateContest' or t == 'BallotMeasureContest':  # need to get ElectionDistrict_Id from contextual knowledge
@@ -324,18 +321,15 @@ if __name__ == '__main__':
     import db_routines.Create_CDF_db as CDF
     from sqlalchemy.orm import sessionmaker
 
-    eng,meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
+    schema='test'
+    eng,meta = dbr.sql_alchemy_connect(schema=schema,paramfile='../../local_data/database.ini')
     Session = sessionmaker(bind=eng)
     session = Session()
 
     schema='test'
-    e_table_list = CDF.enum_table_list(dirpath = '../CDF_schema_def_info/')
-    metadata = CDF.create_common_data_format_schema(session, schema, e_table_list, dirpath ='../CDF_schema_def_info/')
-    for e in e_table_list:
-        print (e)
-        if e != 'CountItemStatus':
-            b = format_type_for_insert(session,metadata.tables[schema+'.'+e],'general')
-            print (b)
+    parent = 'North Carolina;Mcdowell County'
+    new_id = id_from_select_only(session, meta.tables[schema+ '.ReportingUnit'], {'Name': parent})
 
+    a = spellcheck(session,meta,{'Name': 'North Carolina;Mcdowell County'})
     print('Done!')
 
