@@ -5,6 +5,7 @@
 import db_routines as dbr
 import sqlalchemy as db
 from sqlalchemy import select
+from sqlalchemy.sql import column
 
 def report_error(error_string):
     print('Munge error: '+error_string)
@@ -15,20 +16,27 @@ def spellcheck(session,value_d):
     for key,value in value_d.items():
         cor = spell_meta.tables['misspellings.corrections']
         q = session.query(cor.c.good).filter(cor.c.bad == value)
-        # q = spell_meta.tables['misspellings.corrections'].select(c.good).where(c.bad == value)
         rp = session.execute(q)
         corrected_value_d[key] = rp.fetchone()[0]
     return corrected_value_d
 
-def id_and_name_from_external (cdf_schema,table,external_name,identifiertype_id,otheridentifiertype,con,cur,internal_name_field='Name'):
+def id_and_name_from_external(session,cdf_schema,t,external_name,identifiertype_id,otheridentifiertype,internal_name_field='Name'):
     ## find the internal db name and id from external identifier
-            
-    q = 'SELECT f."Id", f.{2} FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}.{1} AS f ON e."ForeignId" = f."Id" WHERE e."Value" =  %s AND e."IdentifierType_Id" = %s AND (e."OtherIdentifierType" = %s OR e."OtherIdentifierType" IS NULL OR e."OtherIdentifierType" = \'\'  );'       # *** ( ... OR ... OR ...) condition is kludge to protect from inconsistencies in OtherIdentifierType text when the IdentifierType is *not* other
-    a = dbr.query(q,[cdf_schema,table,internal_name_field],[external_name,identifiertype_id,otheridentifiertype],con,cur)
-    if a:
-        return (a[0])
+
+    ei_t = meta.tables[cdf_schema + '.ExternalIdentifier']
+    q = ei_t.join(t,ei_t.c.ForeignId == t.c.Id).select([t.c.Id,column(internal_name_field)]).where(db.and_(ei_t.c.Value == external_name,ei_t.c.IdentifierType_Id == identifiertype_id,db.or_(ei_t.c.OtherIdentifierType == otheridentifiertype,ei_t.c.OtherIdentifierType == None)))
+    rp = session.execute(q)
+    if rp.rowcount > 0:
+        return rp.fetchone()[0]
     else:
         return(None,None)
+            
+    #qq = 'SELECT f."Id", f.{2} FROM {0}."ExternalIdentifier" AS e LEFT JOIN {0}.{1} AS f ON e."ForeignId" = f."Id" WHERE e."Value" =  %s AND e."IdentifierType_Id" = %s AND (e."OtherIdentifierType" = %s OR e."OtherIdentifierType" IS NULL OR e."OtherIdentifierType" = \'\'  );'       # *** ( ... OR ... OR ...) condition is kludge to protect from inconsistencies in OtherIdentifierType text when the IdentifierType is *not* other
+    #a = dbr.query(qq,[cdf_schema,table,internal_name_field],[external_name,identifiertype_id,otheridentifiertype],con,cur)
+    #if a:
+        #return (a[0])
+    #else:
+        #return(None,None)
 
 def id_query_components(table_d,value_d):
     f_nt = [[dd['fieldname'], dd['datatype'] + ' %s'] for dd in table_d['fields']] + [[e + '_Id', 'INT %s'] for e in
@@ -70,7 +78,6 @@ def id_from_select_only(session,t,value_d, mode='no_dupes',check_spelling = True
         if check_spelling:
             try:
                 corrected_value_d = spellcheck(session,value_d)
-                print('Spelling correction was made:\n\toriginal: '+str(value_d) + '\n\tcorrection: ' + str(corrected_value_d))
                 return id_from_select_only(session,t, corrected_value_d, mode, check_spelling=False)
             except:
                 report_error('No record found for this query:\n\t' + str(q))
@@ -228,11 +235,9 @@ def raw_records_to_cdf(df,mu,cdf_schema,con,cur,state_id = 0,id_type_other_id = 
                 # following if must allow '' as a value (e.g., because Party can be the empty string), but not None or []
                 if (eval(item['ExternalIdentifier']) == ''  or eval(item['ExternalIdentifier']))  and eval(item['Condition']):
                     # get internal db name and id for ExternalIdentifier from the info in the df row ...
-                    [cdf_id, cdf_name] = id_and_name_from_external(cdf_schema, t,
+                    [cdf_id, cdf_name] = id_and_name_from_external(session,cdf_schema, t,
                                                                    eval(item['ExternalIdentifier']),
-                                                                   id_type_other_id, mu.name, con, cur,
-                                                                   item[
-                                                                       'InternalNameField'])
+                                                                   id_type_other_id, mu.name, item['InternalNameField'])
                     # ... or if no such is found in db, insert it!
                     if [cdf_id, cdf_name] == [None, None]:
                         cdf_name = eval(item['ExternalIdentifier'])

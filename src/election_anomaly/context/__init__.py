@@ -44,32 +44,33 @@ def context_to_cdf(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_def_info/
                             [id,other_txt] = format_type_for_insert(session,meta.tables[schema + '.' + e],s.context_dictionary[t][name_key][e])
                             value_d[e+'_Id'] = id
                             value_d['Other'+e] = other_txt
-                    upsert_id = id_from_select_or_insert(session,meta.tables[schema + '.' + t], value_d)
+                    ru_id = id_from_select_or_insert(session,meta.tables[schema + '.' + t], value_d)
 
-                    out_d[t][name_key] = upsert_id
-                    external_identifiers_to_cdf(session,meta,schema,s.external_identifier_dframe,meta.tables[schema + '.' + t],name_key,upsert_id)
+                    out_d[t][name_key] = ru_id
+                    external_identifiers_to_cdf(session,meta,schema,s.external_identifier_dframe,meta.tables[schema + '.' + t],name_key,ru_id)
 
                     # for ReportingUnits, deduce and enter composing unit joins
                     if t == 'ReportingUnit':
-                        composing_from_reporting_unit_name(session,meta,schema,name_key,upsert_id)
+                        composing_from_reporting_unit_name(session,meta,schema,name_key,ru_id)
 
             if t == 'Office':
                 ## need to process 'Office' after 'ReportingUnit', as Offices may create ReportingUnits as election districts *** check for this
-
+                #%% insert corresponding ReportingUnit, if it doesn't already exist.
                 for name_key in s.context_dictionary[t]:
                     #%% Check that there is an ElectionDistrictType for the office
                     tt = 'ReportingUnit'
                     if 'ElectionDistrictType' in s.context_dictionary['Office'][name_key].keys():
-                        [id,other_txt] = format_type_for_insert(session,'ReportingUnitType', s.context_dictionary['Office'][name_key]['ElectionDistrictType'])
+                        [id,other_txt] = format_type_for_insert(session,meta.tables[schema + '.ReportingUnitType'], s.context_dictionary['Office'][name_key]['ElectionDistrictType'])
                     else:
                         print('Office '+ name_key +' has no associated ElectionDistrictType')
                         bb = 1/0 # TODO
 
+                    #%% Get id for ReportingUnit for the office and enter any associated external identifiers into CDF schema
+                    # TODO what if ReportingUnit and/or external identifiers are already there?
                     value_d = {'Name':s.context_dictionary['Office'][name_key]['ElectionDistrict'],'ReportingUnitType_Id':id,'OtherReportingUnitType':other_txt}
-                    dd = next( x[1] for x in table_def_list if x[0]=='ReportingUnit' )
-                    upsert_id = id_from_select_or_insert(session,meta.tables[schema + '.' + t], value_d)
+                    ru_id = id_from_select_or_insert(session,meta.tables[schema + '.ReportingUnit'], value_d)
 
-                    external_identifiers_to_cdf(session,meta,schema,s.external_identifier_dframe,meta.tables[schema + '.' + t],name_key,upsert_id)
+                    external_identifiers_to_cdf(session,meta,schema,s.external_identifier_dframe,meta.tables[schema + '.ReportingUnit'],name_key,ru_id)
     session.commit() #  TODO necessary?
     return(out_d)
 

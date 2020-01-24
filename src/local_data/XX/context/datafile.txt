@@ -1,3 +1,7 @@
+name	encoding	source_url	file_date	download_date	note	correction_query_list
+General Election 2018-11-06;results_pct_20181106.txt	utf8	https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2018_11_06/results_pct_20181106.zip	2018-11-16	2019-10-15		['ALTER TABLE {}.{} ALTER COLUMN precinct SET DATA TYPE varchar(30)']
+General Election 2018-11-06;absentee_20181106.csv	utf8	https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2018_11_06/absentee_20181106.zip	2018-11-16	2019-10-15		[]
+
 {'General Election 2018-11-06;mini.txt':
 	{'encoding':'utf8',
 	'source_url':'for testing only',
