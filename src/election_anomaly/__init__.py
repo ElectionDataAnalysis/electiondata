@@ -74,9 +74,6 @@ def raw_data(session,meta,df):
     return
 
 if __name__ == '__main__':
-
-
-
     to_cdf = input('Load and process election data into a common-data-format database (y/n)?\n')
     if to_cdf == 'y':
         default = 'XX'
@@ -141,7 +138,7 @@ if __name__ == '__main__':
             raw_data_dframe.to_sql(df.table_name,con=session.bind,schema=s.schema_name,index=False)
             session.commit()
         print('Loading data from df table\n\tin schema '+ s.schema_name+ '\n\tto CDF schema '+cdf_schema+'\n\tusing munger '+munger_name)
-        mr.raw_records_to_cdf(df,m,cdf_schema,con,cur)
+        mr.raw_records_to_cdf(session,meta_cdf_schema,df,m,cdf_schema)
         print('Done!')
 
     find_anomalies = input('Find anomalies in an election (y/n)?\n')

@@ -146,12 +146,12 @@ def contest_type_from_contest_id(con,meta,schema,Contest_Id):
 
     return [x[0] for x in ResultSet]
 
-def read_id_from_enum(con,meta,schema,table,txt):
+def read_id_from_enum(session,meta,schema,table,txt):
     """ given the Txt value of an enumeration table entry, return the corresponding Id"""
-    t = db.Table(table,meta,autoload=True, autoload_with=con,schema=schema)
+    t = db.Table(table, meta, autoload=True, autoload_with=session.bind, schema=schema)
     # TODO assert that table is an enumeration?
     q = db.select([t.columns.Id]).where(t.columns.Txt == txt)
-    ResultProxy = con.execute(q)
+    ResultProxy = session.execute(q)
     ResultSet = ResultProxy.fetchall()
     if ResultSet:
         return ResultSet[0][0]
@@ -159,7 +159,6 @@ def read_id_from_enum(con,meta,schema,table,txt):
         print('No record in '+schema+'.'+table+' with Txt '+txt)
         return
 
-    return
 
 def query_as_string(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
