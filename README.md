@@ -51,6 +51,7 @@ Each state directory has three subfolders:
       * `name`
       * `encoding`
       * `source_url`
+      * `delimiter`
       * `file_date`
       * `download_date`
       * `note`
@@ -70,7 +71,7 @@ Each state directory has three subfolders:
       * `note`
       * `column_block_parser_string` Python regex to identify the block of lines in the metafile holding the relevant column definitions
       * `line_parser_string` Python regex to identify the column name, data type and column description within one line of the metafile
-      * `type_map` Python dictionary whose keys are datatype names from the file and whose values are datatype names for postgresql
+      * `type_map` Python dictionary whose keys are datatype names from the file and whose values are datatype names used in the standard python package `sqlalchemy`
     * `Office.txt` Tab-separated list of office names. Note that when datafiles are processed, lines relevant to offices **not** listed here will not be loaded into the common data format schema. Columns are:
       * `Name`
       * `ElectionDistrict`

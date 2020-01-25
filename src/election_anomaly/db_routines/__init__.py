@@ -228,19 +228,20 @@ def create_table(df):   # TODO *** modularize and use df.column_metadata
 
     return create_query, strs_create + strs_comment, sql_ids_create + sql_ids_comment
         
-def load_data(conn,cursor,state,df):
+def load_raw_data(session, meta, schema,df):
 # write raw data to db
     ext = df.file_name.split('.')[-1]    # extension, determines format
     if ext == 'txt':
-        q = "COPY {}.{} FROM STDIN DELIMITER E'\\t' QUOTE '\"' CSV HEADER"
+        delimiter = '\t'
     elif ext == 'csv':
-        q = "COPY {}.{} FROM STDIN DELIMITER ',' CSV HEADER"
+        delimiter = ','
+    clean_file=cl.remove_null_bytes(df.state.path_to_state_dir+'data/'+df.file_name,'../local_data/tmp/')
 
-    
-    clean_file=cl.remove_null_bytes(state.path_to_state_dir+'data/'+df.file_name,'../local_data/tmp/')
-    with open(clean_file,mode='r',encoding=df.encoding,errors='ignore') as f:
-        cursor.copy_expert(sql.SQL(q).format(sql.Identifier(state.schema_name),sql.Identifier(df.table_name)),f)
-    conn.commit()
+    raw_data = pd.read_csv(clean_file, sep=delimiter,  converters={0: lambda s: str(s)})
+
+    raw_data.to_sql(schema + '.' + df.table_name,con=session.bind,if_exists='append',index=False)
+
+    session.commit()
     return
 
   

@@ -4,6 +4,7 @@ import sys
 import os.path
 import clean as cl
 import pandas as pd
+from sqlalchemy import Integer,Date,String
 
 class State:
     def __init__(self,abbr,name,schema_name,path_to_state_dir,context_dictionary,external_identifier_dframe):        # reporting_units,elections,parties,offices):
@@ -39,12 +40,13 @@ class Metafile(FileFromState):
         self.line_parser=line_parser
 
 class Datafile(FileFromState):
-    def __init__(self,state,file_name,encoding,source_url,file_date,download_date,note,election, table_name, munger,correction_query_list,metafile,column_metadata=[]):
+    def __init__(self, state, file_name, encoding, source_url, file_date, download_date, note, separator, election, table_name, munger, type_correction_list, metafile, column_metadata=[]):
         FileFromState.__init__(self,state,file_name,encoding,source_url,file_date,download_date,note)
+        self.separator=separator
         self.election=election
         self.table_name=table_name
         self.munger=munger
-        self.correction_query_list=correction_query_list    # fix any known metadata errors; might be unnecessary if we are loading data via python directly into CDF rather than loading data into a raw SQL db. ***
+        self.type_correction_list=type_correction_list    # fix any known metadata errors; might be unnecessary if we are loading data via python directly into CDF rather than loading data into a raw SQL db. ***
         self.metafile=metafile
         self.column_metadata=column_metadata    # list of triples [column_name, postgres datatype, text description]. Order should match order of columns in original file
 
@@ -59,28 +61,29 @@ def extract_column_metadata_block(mf):
     return column_metadata_block    # list of lines, each describing a column
 
 def parse_line(mf,line):
-    '''parse_line takes a metafile and a line of (metadata) text and parses it, including changing the type in the file to the type required by psql, according to the metafile's type-map dictionary'''
+    '''parse_line takes a metafile and a line of (metadata) text and parses it,
+    including changing the type in the file to the type required by sqlalchemy,
+    according to the metafile's type-map dictionary'''
     d=mf.type_map
     p=mf.line_parser
     m = p.search(line)
     try:
         field = (m.group('field')).replace(' ','_')
-        type = d[m.group('type')]
-        number = m.group('number')
+        typ = d[m.group('type')]
+        if m.group('number'):
+            number = int(m.group('number'))
+            typ = typ(number)
     except:
-        field = 'line not parsable'
-        type = 'line not parsable'
-        comment = 'line not parsable'
-        print('Line not parsable: \n'+ line)
-        return ([field, type, comment])
+        field = None
+        typ = None
+        comment = None
+        return [field, typ, comment]
 
-    if number:
-        type=type+(number)
     try:
         comment = m.group('comment')
     except:
         comment = ''
-    return([field,type,comment])
+    return [field,typ,comment]
 
 def create_munger(file_path):   # file should contain all munger info in a dictionary
     with open(file_path,'r') as f:
@@ -179,12 +182,12 @@ def create_datafile(s,election,data_file_name,mf,munger):
     d = d_all[election+';'+data_file_name]
 
     #%% convert string (read from tab-separated file) to list
-    d['correction_query_list'] = eval(d['correction_query_list'])
+    d['type_correction_list'] = eval(d['type_correction_list'])
 
     # create tablename for the raw data
     table_name=re.sub(r'\W+', '', election+data_file_name)
 
-    # create column metadata
+    #%% create column metadata
     col_block = extract_column_metadata_block(mf)
     column_metadata = []
     for line in col_block:
@@ -193,8 +196,12 @@ def create_datafile(s,election,data_file_name,mf,munger):
         elif not re.search(r'\t',line):
             print('line has no tabs, will not be processed:\n' + line)
         else:
-            column_metadata.append(parse_line(mf,line))
-    return Datafile(s,data_file_name,d['encoding'],d['source_url'],d['file_date'],d['download_date'],d['note'],election,table_name, munger,d['correction_query_list'],mf,column_metadata)
+            pl = parse_line(mf,line)
+            if pl == [None,None,None]:
+                print('line not parsable, will not be processed:\n' + line)
+            else:
+                column_metadata.append(pl)
+    return Datafile(s,data_file_name,d['encoding'],d['source_url'],d['file_date'],d['download_date'],d['note'],d['separator'],election,table_name, munger,d['type_correction_list'],mf,column_metadata)
 
 def in_context_dictionary(state,context_item,value):
     if value in state.context_dictionary[context_item].keys():
