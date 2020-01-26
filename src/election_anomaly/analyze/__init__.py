@@ -62,9 +62,9 @@ class Election(object): # TODO check that object is necessary (apparently for pi
                     temp_list = ['ReportingUnit','CountItemType','Selection']
                     temp_list.remove(column_field)
                     for filter_field in temp_list:
-                        #print('\t\tfilter field is '+filter_field)
+                        #print('\cdf_table\tfilter field is '+filter_field)
                         for filter_value in cr.dataframe_by_name[filter_field].unique():
-                            # print('\t\t\tfilter value is '+filter_value)
+                            # print('\cdf_table\cdf_table\tfilter value is '+filter_value)
                             z_score_totals, z_score_pcts = cr.euclidean_z_score(column_field, [[filter_field,filter_value]])
                             anomaly_list.append(pd.Series([cr.ContestName,column_field,filter_field,filter_value,'euclidean z-score',
                                                  max(z_score_totals), max(z_score_pcts)],index=self.anomaly_dframe.columns))
@@ -483,7 +483,7 @@ def diff_anomaly_score(left_dframe, right_dframe, left_value_column ='sum', righ
         anomaly_score = max(zscores)
         if anomaly_score > 2:   # TODO remove hard-coding of 2
             print('Anomaly found')
-            # ('Anomaly found comparing:\n\t'+left_dframe+','+left_value_column+'\n\t'+right_dframe+','+right_value_column)
+            # ('Anomaly found comparing:\n\cdf_table'+left_dframe+','+left_value_column+'\n\cdf_table'+right_dframe+','+right_value_column)
         return anomaly_score
 
 def pframe_to_zscore(pframe):

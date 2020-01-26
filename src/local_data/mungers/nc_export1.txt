@@ -8,28 +8,28 @@
               'Absentee by Mail': {'CountItemType': 'absentee-mail'}, 'Provisional': {'CountItemType': 'provisional'},
               'Total Votes': {'CountItemType': 'total'}},
     'fields_dictionary':{'Office':[
-        {'ExternalIdentifier': 'Contest Name',
+        {'ExternalIdentifier': 'row["Contest Name"]',
         'InternalNameField':'Name',
         'Enumerations':{},
          'OtherFields':{},
         'Condition':'True'}
             ],
         'ReportingUnit': [        ## note: conditions should be mutually exclusive
-            {'ExternalIdentifier': 'County + \';\' + Precinct',
+            {'ExternalIdentifier': 'row["County"] + \';\' + row["Precinct"]',
              'InternalNameField': 'Name',
              'Enumerations':{'ReportingUnitType': 'precinct'},
              'OtherFields':{},
              'Condition': 'True'},
             ],
         'Party':[
-            {'ExternalIdentifier':'Choice Party',
+            {'ExternalIdentifier':'row["Choice Party"]',
             'InternalNameField':'Name',
             'Enumerations':{},
              'OtherFields': {},
              'Condition':'True'}
             ],
             'Candidate': [
-                {'ExternalIdentifier': 'Choice',
+                {'ExternalIdentifier': 'row["Choice"]',
                  'InternalNameField': 'Name',
                  'Enumerations': {},
                  'OtherFields': { 'Party_Id': 'ids_d["Party_Id"]'},
@@ -38,21 +38,21 @@
                 ],
 
             'CandidateContest':[
-            {'ExternalIdentifier': 'Contest Name',
+            {'ExternalIdentifier': 'row["Contest Name"',
             'InternalNameField':'Name',
             'Enumerations':{},
              'OtherFields':{'VotesAllowed':'Vote_For','Office_Id':'ids_d["Office_Id"]'},    # don't include fields defined from external context, such as the ElectionDistrict_Id
             'Condition':'choice not in ballot_measure_selections.keys()'}
             ],
         'BallotMeasureContest':[
-            {'ExternalIdentifier': 'Contest Name',
+            {'ExternalIdentifier': 'row["Contest Name"]',
              'InternalNameField': 'Name',
              'Enumerations':{},
              'OtherFields':{'ElectionDistrict_Id':'ids_d["state"]'},
             'Condition':'choice in ballot_measure_selections.keys()'}    # Because towns are split between counties, default all ballot measure contests to state
             ],
         'BallotMeasureSelection':[
-            {'ExternalIdentifier':'Choice',
+            {'ExternalIdentifier':'row["Choice"]',
             'InternalNameField':'Selection',
             'Enumerations':{},
             'OtherFields':{},

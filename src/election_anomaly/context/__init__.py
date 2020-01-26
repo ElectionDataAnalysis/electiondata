@@ -16,7 +16,7 @@ def context_to_cdf(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_def_info/
         table_def_list = eval(f.read())
 
     for table_def in table_def_list:      # iterating over tables in the common data format schema
-        t = table_def[0]      # e.g., t = 'ReportingUnit'
+        t = table_def[0]      # e.g., cdf_table = 'ReportingUnit'
         out_d[t] = {}
 
         ## load info into the tables corresponding directly to the context_dictionary keys
@@ -55,7 +55,7 @@ def context_to_cdf(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_def_info/
 
             if t == 'Office':
                 ## need to process 'Office' after 'ReportingUnit', as Offices may create ReportingUnits as election districts *** check for this
-                #%% insert corresponding ReportingUnit, if it doesn't already exist.
+                #%% insert corresponding ReportingUnit, if it doesn'cdf_table already exist.
                 for name_key in s.context_dictionary[t]:
                     #%% Check that there is an ElectionDistrictType for the office
                     tt = 'ReportingUnit'
@@ -121,7 +121,7 @@ def build_munger_d(s,m):
     return(munger_d,munger_inverse_d)
 
 def raw_to_context(df,m,munger_d,conn,cur):
-    ''' Purely diagnostic -- reports what items in the datafile are missing from the context_dictionary (e.g., offices we don't wish to analyze)'''
+    ''' Purely diagnostic -- reports what items in the datafile are missing from the context_dictionary (e.g., offices we don'cdf_table wish to analyze)'''
     print('\'Missing\' below means \'Existing in the datafile, but missing from the munger dictionary, created from the state\'s context_dictionary, which was created from files in the context folder.')
     for t in m.query_from_raw.keys():
         t_parts = t.split(';')

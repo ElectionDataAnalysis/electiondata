@@ -74,7 +74,8 @@ def raw_data(session,meta,df):
     return
 
 if __name__ == '__main__':
-    to_cdf = input('Load and process election data into a common-data-format database (y/n)?\n')
+    #to_cdf = input('Load and process election data into a common-data-format database (y/n)?\n')
+    to_cdf = 'y'
     if to_cdf == 'y':
         default = 'XX'
         abbr = input('Enter two-character abbreviation for your state/district/territory (default is '+default+')\n') or default
@@ -102,7 +103,7 @@ if __name__ == '__main__':
         session = Session()
 
         #%% create schema for state
-        dbr.create_schema(session,s.schema_name)
+        #dbr.create_schema(session,s.schema_name)
 
         #%% create cdf schema
         print('Creating CDF schema '+ cdf_schema)
@@ -110,13 +111,14 @@ if __name__ == '__main__':
         enumeration_tables = CDF.enum_table_list()
         meta_cdf_schema = CDF.create_common_data_format_schema(session, cdf_schema, enumeration_tables)
 
-        #%% fill enumeration tables
-        print('\tFilling enumeration tables')
-        CDF.fill_cdf_enum_tables(session, meta_cdf_schema, enumeration_tables)
-
         # load state context info into cdf schema
-        need_to_load_data = input('Load context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
+        # need_to_load_data = input('Load enumeration & context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
+        need_to_load_data = 'y'
         if need_to_load_data == 'y':
+            # %% fill enumeration tables
+            print('\tFilling enumeration tables')
+            CDF.fill_cdf_enum_tables(session, meta_cdf_schema, enumeration_tables)
+
             print('Loading state context info into CDF schema') # *** takes a long time; why?
             context.context_to_cdf(session, meta_cdf_schema, s, cdf_schema)
 
@@ -126,7 +128,8 @@ if __name__ == '__main__':
         print('Creating datafile instance')
         df = sf.create_datafile(s,'General Election 2018-11-06',df_name,mf,m)
 
-        need_to_load_data = input('Load raw data from '+df.file_name+' into schema '+s.schema_name+' (y/n)?\n')
+        need_to_load_data = 'n'
+        #need_to_load_data = input('Load raw data from '+df.file_name+' into schema '+s.schema_name+' (y/n)?\n')
         if need_to_load_data == 'y':
             print('Load raw data from '+df.file_name)
             if df.separator == 'tab': delimiter = '\t'
