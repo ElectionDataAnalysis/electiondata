@@ -243,7 +243,6 @@ def load_raw_data(session, meta, schema,df):
     session.commit()
     return
 
-  
 def clean_meta_file(infile,outdir,s):       ## update or remove ***
     ''' create in outdir a metadata file based on infile, with all unnecessaries stripped, for the given state'''
     if s.abbreviation == 'NC':

@@ -1,6 +1,6 @@
 {'name':'nc_export1','content_dictionary':
 {
-	'raw_cols' :[['County',String], ['Election Date',Date], ['Precinct',String], [ 'Contest Type',String],[ 'Contest Name',String],
+	'raw_cols' :[['County',String], ['Election Date',Date], ['Precinct',String], ['Contest Group ID',Integer],['Contest Type',String],[ 'Contest Name',String],
                  ['Choice',String], ['Choice Party',String], ['Vote For',Integer],
                 ['Election Day',Integer], ['One Stop',Integer], ['Absentee by Mail',Integer], ['Provisional',Integer],
                 ['Total Votes',Integer], ['Real Precinct',String]],
@@ -15,16 +15,11 @@
         'Condition':'True'}
             ],
         'ReportingUnit': [        ## note: conditions should be mutually exclusive
-            {'ExternalIdentifier': 'County + \';\' + precinct',
+            {'ExternalIdentifier': 'County + \';\' + Precinct',
              'InternalNameField': 'Name',
              'Enumerations':{'ReportingUnitType': 'precinct'},
              'OtherFields':{},
-             'Condition': 'Real Precinct == \'Y\''},
-            {'ExternalIdentifier': 'County + \';\' + precinct',
-             'InternalNameField': 'Name',
-             'Enumerations':{'ReportingUnitType': 'other;unknown'},
-             'OtherFields':{},
-             'Condition': 'Real Precinct != \'Y\''}
+             'Condition': 'True'},
             ],
         'Party':[
             {'ExternalIdentifier':'Choice Party',

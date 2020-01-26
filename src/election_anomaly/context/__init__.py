@@ -81,12 +81,13 @@ def external_identifiers_to_cdf(session,meta,schema,ext_id_dframe,t,name,cdf_id)
     name is the name of the entry (e.g., North Carolina;Alamance County) -- the canonical name for the cdf db
     cdf_id is the id of the named item in the cdf db
     """
-    little_dframe = ext_id_dframe[(ext_id_dframe.Table == t.fullname) & (ext_id_dframe.Name == name)] # this should pick the single row with the right name
+    little_dframe = ext_id_dframe[(ext_id_dframe.Table == t.name) & (ext_id_dframe.Name == name)] # this should pick the single row with the right name
     for index, row in little_dframe.iterrows():
         [id,other_txt] = format_type_for_insert(session,meta.tables[schema + '.IdentifierType'],row['ExternalIdentifierType'])
         # [id,other_txt] = format_type_for_insert(schema, 'IdentifierType', row['ExternalIdentifierType']) # TODO remove
         value_d = {'ForeignId':cdf_id,'Value':row['ExternalIdentifierValue'],'IdentifierType_Id':id,'OtherIdentifierType':other_txt}
-        ins = t.insert().values(value_d)
+        ei_t = meta.tables[schema + '.ExternalIdentifier']
+        ins = ei_t.insert().values(value_d)
         session.execute(ins)
         #q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s) ON CONFLICT DO NOTHING'  # will this cause errors to go unnoticed? ***
         #dbr.query(q, [schema], [cdf_id, row['ExternalIdentifierValue'], id, other_txt], con, cur)
