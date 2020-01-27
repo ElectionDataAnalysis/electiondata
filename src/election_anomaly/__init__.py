@@ -120,7 +120,7 @@ if __name__ == '__main__':
             CDF.fill_cdf_enum_tables(session, meta_cdf_schema, cdf_schema,enumeration_tables)
 
             print('Loading state context info into CDF schema') # *** takes a long time; why?
-            context.context_to_cdf(session, meta_cdf_schema, s, cdf_schema)
+            context.context_to_cdf_PANDAS(session, meta_cdf_schema, s, cdf_schema)
 
         print('Creating metafile instance')
         mf = sf.create_metafile(s,'layout_results_pct.txt')

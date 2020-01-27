@@ -8,78 +8,10 @@ from munge_routines import id_from_select_or_insert, format_type_for_insert, com
 import db_routines as dbr
 import pandas as pd
 
-def context_to_cdf(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_def_info/'):
-    """Takes the info from the context_dictionary for the state s and inserts it into the db.
-    Returns a dictionary mapping context_dictionary keys to the database keys """ # TODO is the dictionary necessary?
-    out_d = {}
-    if not cdf_def_dirpath[-1] == '/': cdf_def_dirpath += '/'
-    with open(cdf_def_dirpath+'tables.txt','r') as f:
-        table_def_list = eval(f.read())
-
-    for table_def in table_def_list:      # iterating over tables in the common data format schema
-        t = table_def[0]      # e.g., cdf_table = 'ReportingUnit'
-        out_d[t] = {}
-
-        ## load info into the tables corresponding directly to the context_dictionary keys
-        if t in s.context_dictionary.keys():
-            print('\tProcessing ' + t + 's')
-
-
-            if t == 'BallotMeasureSelection':   # note: s.context_dictionary['BallotMeasureSelection'] is a set not a dict
-                for bms in s.context_dictionary['BallotMeasureSelection']:
-                    value_d = {'Selection': bms}
-                    id_from_select_or_insert(session,meta.tables[schema + '.' + t],  value_d)
-            else:
-                nk_list =  list(s.context_dictionary[t])
-                for name_key in nk_list:   # e.g., name_key = 'North Carolina;Alamance County'
-                    # track progress
-                    if nk_list.index(name_key) % 500 == 0:   # for every five-hundredth item
-                        print('\t\tProcessing item number '+str(nk_list.index(name_key))+': '+ name_key)
-                    ## insert the record into the db
-                    value_d = {'Name':name_key}
-                    for f in table_def[1]['fields']:
-                        if f['fieldname'] in s.context_dictionary[t][name_key].keys():
-                            value_d[f['fieldname']] = s.context_dictionary[t][name_key][ f['fieldname'] ]
-                    for e in table_def[1]['enumerations']:
-                        if e in s.context_dictionary[t][name_key].keys():
-                            [id,other_txt] = format_type_for_insert(session,meta.tables[schema + '.' + e],s.context_dictionary[t][name_key][e])
-                            value_d[e+'_Id'] = id
-                            value_d['Other'+e] = other_txt
-                    ru_id = id_from_select_or_insert(session,meta.tables[schema + '.' + t], value_d)
-
-                    out_d[t][name_key] = ru_id
-                    external_identifiers_to_cdf(session,meta,schema,s.external_identifier_dframe,meta.tables[schema + '.' + t],name_key,ru_id)
-
-                    # for ReportingUnits, deduce and enter composing unit joins
-                    if t == 'ReportingUnit':
-                        composing_from_reporting_unit_name(session,meta,schema,name_key,ru_id)
-
-            if t == 'Office':
-                ## need to process 'Office' after 'ReportingUnit', as Offices may create ReportingUnits as election districts *** check for this
-                #%% insert corresponding ReportingUnit, if it doesn'cdf_table already exist.
-                for name_key in s.context_dictionary[t]:
-                    #%% Check that there is an ElectionDistrictType for the office
-                    tt = 'ReportingUnit'
-                    if 'ElectionDistrictType' in s.context_dictionary['Office'][name_key].keys():
-                        [id,other_txt] = format_type_for_insert(session,meta.tables[schema + '.ReportingUnitType'], s.context_dictionary['Office'][name_key]['ElectionDistrictType'])
-                    else:
-                        print('Office '+ name_key +' has no associated ElectionDistrictType')
-                        bb = 1/0 # TODO
-
-                    #%% Get id for ReportingUnit for the office and enter any associated external identifiers into CDF schema
-                    # TODO what if ReportingUnit and/or external identifiers are already there?
-                    value_d = {'Name':s.context_dictionary['Office'][name_key]['ElectionDistrict'],'ReportingUnitType_Id':id,'OtherReportingUnitType':other_txt}
-                    ru_id = id_from_select_or_insert(session,meta.tables[schema + '.ReportingUnit'], value_d)
-
-                    external_identifiers_to_cdf(session,meta,schema,s.external_identifier_dframe,meta.tables[schema + '.ReportingUnit'],name_key,ru_id)
-    session.commit() #  TODO necessary?
-    return(out_d)
-
 def context_to_cdf_PANDAS(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_def_info/'):
     """Takes the info from the text files in the state's context files and inserts it into the db.
     Assumes enumeration tables are already filled.
     """
-
     # TODO Outline
     context_cdframe = {}    # dictionary of dataframes from context info
     enum_dframe = {}        # dict of dataframes of enumerations, taken from db
@@ -97,12 +29,12 @@ def context_to_cdf_PANDAS(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_de
 
         t = table_def[0]      # e.g., cdf_table = 'ReportingUnit'
 
-        # for each table # TODO which tables?
-        if t in s.context_dictionary.keys() and t != 'ExternalIdentifier':
+        # for each table # TODO which tables? s.context_dictionary.keys() doesn't include Candidate and other tables filled from datafile, not from context.
+        if t in s.context_dictionary.keys(): # excludes 'ExternalIdentifier', as well as tables filled from datafile but not from context, such as Candidate
             print('\tProcessing ' + t + 's')
             # create DataFrame with enough info to define db table eventually
             if t == 'BallotMeasureSelection':   # note: s.context_dictionary['BallotMeasureSelection'] is a set not a dict
-                BallotMeasureSelection_cdframe = pd.DataFrame(list(s.context_dictionary['BallotMeasureSelection']),columns=['Selection'])
+                context_cdframe['BallotMeasureSelection'] = pd.DataFrame(list(s.context_dictionary['BallotMeasureSelection']),columns=['Selection'])
             else:
                 context_cdframe[t] = pd.read_csv(s.path_to_state_dir + 'context/'+ t + '.txt',sep = '\t')
                 for e in table_def[1]['enumerations']:  # e.g., e = "ReportingUnitType"
@@ -138,16 +70,17 @@ def context_to_cdf_PANDAS(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_de
                     cdf_ReportingUnit_dframe = pd.read_sql_table('ReportingUnit',session.bind,schema)
                     new_ru = []
                     for index, row in context_cdframe['Office'].iterrows():   # TODO more pyhonic/pandic way?
-                        if row['ElectionDistrict'] not in cdf_ReportingUnit_dframe.index:
+                        if row['ElectionDistrict'] not in list(cdf_ReportingUnit_dframe['Name']):
                             new_ru.append ( pd.Series({'Name':row['ElectionDistrict'],'ReportingUnitType_Id':enum_id_d['ReportingUnitType'][row['ElectionDistrictType']],'OtherReportingUnitType':enum_othertype_d['ReportingUnitType'][row['ElectionDistrictType']]}))
                     # %% commit any new ReportingUnits into the db
                     new_ru_dframe = pd.DataFrame(new_ru)
+                    # TODO: need to remove rows that already exist in the db
                     new_ru_dframe.to_sql('ReportingUnit', session.bind, schema=schema, if_exists='append', index=False)
                     session.commit()
 
         #%% commit table to db
         # TODO ## define dframe_for_cdf_db[t]. If we use context_cdframe with right cols added, will old columns be ignored? No.
-        if  t != 'ExternalIdentifier':
+        if t in s.context_dictionary.keys():
             df_to_db = context_cdframe[t].copy()
             for c in context_cdframe[t].columns:
                 if c not in meta.tables[schema + '.' + t].columns:
@@ -161,27 +94,6 @@ def context_to_cdf_PANDAS(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_de
             pass
 
     return
-
-def external_identifiers_to_cdf(session,meta,schema,ext_id_dframe,t,name,cdf_id):
-    """Insert the external identifiers associated to the item with cdf_id into the CDF schema, .
-    ext_id_dframe is a dataframe of external Ids with columns Table,Name,ExternalIdentifierType,ExternalIdentifierValue
-    table is a table of the cdf (e.g., ReportingUnit)
-    name is the name of the entry (e.g., North Carolina;Alamance County) -- the canonical name for the cdf db
-    cdf_id is the id of the named item in the cdf db
-    """
-    little_dframe = ext_id_dframe[(ext_id_dframe.Table == t.name) & (ext_id_dframe.Name == name)] # this should pick the single row with the right name
-    for index, row in little_dframe.iterrows():
-        [id,other_txt] = format_type_for_insert(session,meta.tables[schema + '.IdentifierType'],row['ExternalIdentifierType'])
-        # [id,other_txt] = format_type_for_insert(schema, 'IdentifierType', row['ExternalIdentifierType']) # TODO remove
-        value_d = {'ForeignId':cdf_id,'Value':row['ExternalIdentifierValue'],'IdentifierType_Id':id,'OtherIdentifierType':other_txt}
-        ei_t = meta.tables[schema + '.ExternalIdentifier']
-        ins = ei_t.insert().values(value_d)
-        session.execute(ins)
-        #q = 'INSERT INTO {}."ExternalIdentifier" ("ForeignId","Value","IdentifierType_Id","OtherIdentifierType") VALUES (%s,%s,%s,%s) ON CONFLICT DO NOTHING'  # will this cause errors to go unnoticed? ***
-        #dbr.query(q, [schema], [cdf_id, row['ExternalIdentifierValue'], id, other_txt], con, cur)
-    session.commit()
-    return
-
 
 def build_munger_d(s,m):
     """given a state s and a munger m,
