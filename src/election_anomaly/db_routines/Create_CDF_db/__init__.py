@@ -10,6 +10,7 @@ from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,
 # NB: imports above are used within string argument to exec()
 from sqlalchemy.orm import sessionmaker
 import os
+import pandas as pd
 
 
 def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF_schema_def_info/'):
@@ -58,17 +59,12 @@ def enum_table_list(dirpath= 'CDF_schema_def_info/'):
         for t in enum_table_list: out_f.write(t)
     return enum_table_list
 
-def fill_cdf_enum_tables(session,meta,e_table_list,dirpath= 'CDF_schema_def_info/'):
+def fill_cdf_enum_tables(session,meta,schema,e_table_list=['ReportingUnitType','IdentifierType','ElectionType','CountItemStatusCountItemType'],dirpath= 'CDF_schema_def_info/'):
     """takes lines of text from file and inserts each line into the txt field of the enumeration table"""
     if not dirpath[-1] == '/': dirpath += '\''
     for f in e_table_list:
-        table = meta.tables[meta.schema + '.' + f]
-        print(table.key)
-        with open(dirpath + 'enumerations/' + f + '.txt', 'r') as f:
-            entries = f.read().splitlines()
-        for entry in entries:
-            ins = table.insert().values(Txt=entry)
-            session.execute(ins)
+        dframe = pd.read_csv(dirpath + 'enumerations/' + f + '.txt',header=None,names = ['Txt'])
+        dframe.to_sql(f,session.bind,schema=schema,if_exists='append',index=False)
     session.commit()
     return
 
@@ -80,7 +76,7 @@ if __name__ == '__main__':
     schema='test'
     e_table_list = enum_table_list(dirpath = '../../CDF_schema_def_info/')
     metadata = create_common_data_format_schema(session, schema, e_table_list, dirpath ='../../CDF_schema_def_info/')
-    fill_cdf_enum_tables(session,metadata,e_table_list,dirpath='../../CDF_schema_def_info/')
+    fill_cdf_enum_tables(session,metadata,schema,e_table_list,dirpath='../../CDF_schema_def_info/')
     print ('Done!')
 
     eng.dispose()

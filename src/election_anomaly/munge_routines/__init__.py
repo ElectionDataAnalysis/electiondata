@@ -21,19 +21,6 @@ def spellcheck(session,value_d):
         corrected_value_d[key] = rp.fetchone()[0]
     return corrected_value_d
 
-def id_and_name_from_external(session,cdf_schema,meta,t,external_name,identifiertype_id,otheridentifiertype,internal_name_field='Name'):
-    ## find the internal db name and id from external identifier
-
-    ei_t = meta.tables[cdf_schema + '.ExternalIdentifier']
-    j = ei_t.join(t,ei_t.c.ForeignId == t.c.Id)
-    #q = select([cdf_table.c.Id,cdf_table.c[internal_name_field]]).select_from(j).where(db.and_(ei_t.c.Value == external_name,ei_t.c.IdentifierType_Id == identifiertype_id,db.or_(ei_t.c.OtherIdentifierType == otheridentifiertype,ei_t.c.OtherIdentifierType == None)))
-    q = select([t.c.Id,t.c[internal_name_field]]).select_from(j).where(db.and_(ei_t.c.Value == external_name,ei_t.c.IdentifierType_Id == identifiertype_id,ei_t.c.OtherIdentifierType == otheridentifiertype))
-    rp = session.execute(q)
-    if rp.rowcount > 0:
-        return rp.fetchone()
-    else:
-        return(None,None)
-            
 def id_and_name_from_external_PANDAS(ei_dframe, t_dframe, external_name, identifiertype_id, otheridentifiertype, internal_name_field='Name'):
     ## find the internal db name and id from external identifier
 
@@ -47,34 +34,6 @@ def id_and_name_from_external_PANDAS(ei_dframe, t_dframe, external_name, identif
         raise Exception('\n\t'.join['Unexpected duplicates found for','external_name: '+external_name, 'identifiertype_id: '+str(identifiertype_id),'otheridentifiertype: '+otheridentifiertype])
     else:
         return None, None
-
-def id_query_components(table_d,value_d):
-    f_nt = [[dd['fieldname'], dd['datatype'] + ' %s'] for dd in table_d['fields']] + [[e + '_Id', 'INT %s'] for e in
-                                                                                      table_d['enumerations']] + [
-               ['Other' + e, 'TEXT %s'] for e in table_d['enumerations']] + [[dd['fieldname'], 'INT %s'] for dd in
-                                                                             table_d[
-                                                                                 'other_element_refs']]  # name-type pairs for each field
-    # remove any fields missing from the value_d parameter
-    good_f_nt = [x for x in f_nt if x[0] in value_d.keys()]
-
-    f_names = [good_f_nt[x][0] for x in range(len(good_f_nt))]
-    f_val_slot_list = [good_f_nt[x][1] for x in range(len(good_f_nt))]
-    f_vals = [value_d[n] for n in f_names]
-
-    cf_names = list(set().union(*table_d['unique_constraints']))
-    f_id_slot_list = ['{' + str(i + 2) + '}' for i in range(len(f_names))]
-    f_id_slots = ','.join(f_id_slot_list)
-    if cf_names:
-        cf_id_slots = ','.join(['{' + str(i + 2 + len(f_names)) + '}' for i in range(len(cf_names))])
-        cf_query_string = ' ON CONFLICT (' + cf_id_slots + ') DO NOTHING '
-    else:
-        cf_query_string = ''
-    f_val_slots = ','.join(f_val_slot_list)
-    f_val_slots = f_val_slots.replace('INTEGER', '').replace('INT',
-                                                             '')  # TODO kludge: postgres needs us to omit datatype for INTEGER, INT, not sure why. ***
-
-    val_return_list = ['c.' + i for i in f_id_slot_list]
-    return [f_id_slots,f_val_slots,cf_query_string,val_return_list,f_names,cf_names,f_vals]
 
 def id_from_select_only(session,t,value_d, mode='no_dupes',check_spelling = True):
     """Returns the Id of the record in table with values given in the dictionary value_d.
@@ -239,7 +198,7 @@ def format_type_for_insert_PANDAS(dframe,txt,id_type_other_id):
     id_list = dframe.index[dframe['Txt'] == txt].to_list()
     if len(id_list) == 1:   # TODO prevent multiple fillings of *Type tables, which yield rowcounts > 1
         return([id_list[0],''])
-    elif ResultProxy.rowcount == 0:
+    elif len(id_list) == 0:
         return[id_type_other_id,txt]
     else:
          raise Exception('Dataframe has duplicate rows with value ' + txt + ' in Txt column')

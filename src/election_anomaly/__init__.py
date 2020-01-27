@@ -117,7 +117,7 @@ if __name__ == '__main__':
         if need_to_load_data == 'y':
             # %% fill enumeration tables
             print('\tFilling enumeration tables')
-            CDF.fill_cdf_enum_tables(session, meta_cdf_schema, enumeration_tables)
+            CDF.fill_cdf_enum_tables(session, meta_cdf_schema, cdf_schema,enumeration_tables)
 
             print('Loading state context info into CDF schema') # *** takes a long time; why?
             context.context_to_cdf(session, meta_cdf_schema, s, cdf_schema)
