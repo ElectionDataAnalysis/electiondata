@@ -251,10 +251,13 @@ def clean_meta_file(infile,outdir,s):       ## update or remove ***
         return "clean_meta_file: error, state not recognized"
         sys.exit()
 
-def create_schema(session,name):    # TODO move to db_routines
+def create_schema(session,name,delete_existing=False):    # TODO move to db_routines
     eng = session.bind
     if eng.dialect.has_schema(eng, name):
-        recreate = input('WARNING: schema ' + name + ' already exists; erase and recreate (y/n)?\n')
+        if delete_existing:
+            recreate = 'y'
+        else:
+            recreate = input('WARNING: schema ' + name + ' already exists; erase and recreate (y/n)?\n')
         if recreate == 'y':
             session.bind.engine.execute(sqlalchemy.schema.DropSchema(name,cascade=True))
             session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))

@@ -4,20 +4,55 @@
 # utilities for extracting state context info and inserting it into the files in the context folder
 import sys
 import re
-from munge_routines import id_from_select_or_insert, format_type_for_insert, composing_from_reporting_unit_name, format_type_for_insert_PANDAS, id_from_select_or_insert_PANDAS
+from munge_routines import id_from_select_or_insert, format_type_for_insert, composing_from_reporting_unit_name, format_type_for_insert_PANDAS, id_from_select_or_insert_PANDAS, id_from_select_only_PANDAS
 import db_routines as dbr
 import pandas as pd
 
-def context_to_cdf_PANDAS(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_def_info/'):
+def table_and_name_to_foreign_id(dict,row):
+    """
+    row must be a Series object, and must have entries Table and Name.
+    dict must be a dictionary of dataframes, keyed by table name.
+    """
+    id = id_from_select_only_PANDAS(dict[row['Table']], {'Name': row['Name']})
+    if id == 0:
+        raise Exception('No entry found for \n\tTable: '+ row['Table']+'\n\tName: '+row['Name'])
+    else:
+        return id
+
+def ei_id_and_othertype(df,row,other_id):
+    """
+    row must be a Series object, and must have entry 'ExternalIdentifierType'
+    df must be a dataframe with columns Id and Txt
+    other_id must be the Id for the dataframe entry Txt = 'other'
+    """
+
+    return format_type_for_insert_PANDAS(df,row['ExternalIdentifierType'],other_id)
+
+def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath = 'CDF_schema_def_info/'):
     """Takes the info from the text files in the state's context files and inserts it into the db.
     Assumes enumeration tables are already filled.
     """
     # TODO Outline
     context_cdframe = {}    # dictionary of dataframes from context info
+
+    #%% create and fill enum dframes and associated dictionaries
     enum_dframe = {}        # dict of dataframes of enumerations, taken from db
     other_id = {}       # dict of the Id for 'other' in the various enumeration tables
     enum_id_d = {}  # maps raw Type string to an Id
     enum_othertype_d = {}  # maps raw Type string to an othertype string
+    for e in enum_table_list:
+        enum_id_d[e] = {}  # maps raw Type string to an Id
+        enum_othertype_d[e] = {}  # maps raw Type string to an othertype string
+
+        # %% pull enumeration table into a DataFrame
+        enum_dframe[e] = pd.read_sql_table(e, session.bind, schema=schema, index_col='Id')
+        # %% find the id for 'other', if it exists
+        try:
+            other_id[e] = enum_dframe[e].index[enum_dframe[e]['Txt'] == 'other'].to_list()[0]
+        except:  # CountItemStatus has no "other" field
+            other_id[e] = None  # TODO how does this flow through?
+        # %% create and (partially) fill the id/othertype dictionaries
+
     dframe_for_cdf_db = {}
     # TODO ## context to dataframes
     if not cdf_def_dirpath[-1] == '/': cdf_def_dirpath += '/'
@@ -35,29 +70,24 @@ def context_to_cdf_PANDAS(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_de
             # create DataFrame with enough info to define db table eventually
             if t == 'BallotMeasureSelection':   # note: s.context_dictionary['BallotMeasureSelection'] is a set not a dict
                 context_cdframe['BallotMeasureSelection'] = pd.DataFrame(list(s.context_dictionary['BallotMeasureSelection']),columns=['Selection'])
+                # %% commit table to db
+                dframe_to_sql(context_cdframe[t], session, meta, schema, t)
+                # TODO Then need to deal with composing reporting units.
+
             else:
                 context_cdframe[t] = pd.read_csv(s.path_to_state_dir + 'context/'+ t + '.txt',sep = '\t')
                 for e in table_def[1]['enumerations']:  # e.g., e = "ReportingUnitType"
-                    if e not in enum_dframe.keys():
-                        enum_id_d[e] = {}  # maps raw Type string to an Id
-                        enum_othertype_d[e] = {}  # maps raw Type string to an othertype string
-
-                        #%% pull enumeration table into a DataFrame
-                        enum_dframe[e] = pd.read_sql_table(e,session.bind,schema=schema,index_col='Id')
-                        #%% find the id for 'other', if it exists
-                        try:
-                            other_id[e] = enum_dframe[e].index[enum_dframe[e]['Txt'] == 'other'].to_list()[0]
-                        except:     # CountItemStatus has no "other" field
-                            other_id[e] = None # TODO how does this flow through?
-                        #%% create and (partially) fill the id/othertype dictionaries
-
-                    #%% for every instance of the enumeration in the current table (e.g., 'Office'), store corresponding id & othertype in dictionaries
+                    #%% for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
                     if e in context_cdframe[t].columns: # some enumerations (e.g., CountItemStatus for t = ReportingUnit) are not available from context.
                         for v in context_cdframe[t][e].unique(): # e.g., v = 'county' or v = 'precinct'
                             enum_id_d[e][v],enum_othertype_d[e][v] = format_type_for_insert_PANDAS(enum_dframe[e],v,other_id[e])
                         #%% create new id, othertype columns
                         context_cdframe[t][e+'_Id'] = context_cdframe[t][e].map(enum_id_d[e])
                         context_cdframe[t]['Other'+e] = context_cdframe[t][e].map(enum_othertype_d[e])
+
+                # %% commit table to db
+                dframe_to_sql(context_cdframe[t], session, meta, schema, t)
+                # TODO Then need to deal with composing reporting units.
 
                 if t == 'Office':
                     #%% Check that all ElectionDistrictTypes are recognized
@@ -79,31 +109,48 @@ def context_to_cdf_PANDAS(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_de
                     session.commit()
 
 
-        #%% commit table to db
-        # TODO ## define dframe_for_cdf_db[t]. If we use context_cdframe with right cols added, will old columns be ignored? No.
-        if t in s.context_dictionary.keys():
-            dframe_to_sql(context_cdframe[t],session,meta,schema,t)
-            # Then need to deal with composing reporting units.
 
     #%% fill ExternalIdentifier table
+    print('Fill ExternalIdentifier table')
+    # get table from context directory with the tab-separated definitions of external identifiers
     context_cdframe['ExternalIdentifier'] = pd.read_csv(s.path_to_state_dir + 'context/ExternalIdentifier.txt',sep = '\t')
-    ei = context_cdframe['ExternalIdentifier']   # for legibility
-    ei['ForeignId'] = id_from_select_or_insert_PANDAS(context_cdframe[ei['Table']],{'Name':ei['Name']})
-    ei['Value'] = ei['ExternalIdentifierValue']
-    ei['IdentifierType_Id'],ei['OtherIdentifierType'] = format_type_for_insert_PANDAS('IdentifierType',ei['ExternalIdentifierValue',other_id['IdentifierType']])
-    dframe_to_sql(ei,session,meta,schema,'ExternalIdentifier')
+    ei_df = context_cdframe['ExternalIdentifier']   # for legibility
+
+    # pull corresponding tables from the cdf db
+    cdf = {}
+    for t in ei_df['Table'].unique():
+        cdf[t] = pd.read_sql_table(t,session.bind,schema,'Id')
+
+    # add columns to dframe to match columns in CDF db
+    ei_df['ForeignId'] = ei_df.apply(lambda row: table_and_name_to_foreign_id(cdf,row),axis=1)
+    ei_df['Value'] = ei_df['ExternalIdentifierValue']
+    ### apply(lambda ...) returns a column of 2-elt lists, so need to unpack.
+    ei_df['id_othertype_pairs']= ei_df.apply(lambda row: ei_id_and_othertype(enum_dframe['IdentifierType'],row,other_id['IdentifierType']),axis=1)
+
+    ei_df['IdentifierType_Id'] = ei_df.apply(lambda row: row['id_othertype_pairs'][0],axis=1)
+    ei_df['OtherIdentifierType'] = ei_df.apply(lambda row: row['id_othertype_pairs'][1],axis=1)
+
+    # insert appropriate dataframe columns into ExternalIdentifier table in the CDF db
+    dframe_to_sql(ei_df,session,meta,schema,'ExternalIdentifier')
+    session.commit()
 
     # TODO composing reporting units
+    #%% return
     return
 
 def dframe_to_sql(dframe,session,meta,schema,table):
+    """
+    Given a dframe and a cdf db table name, clean the dframe
+    (i.e., drop any columns that are not in the table)
+    Return the cleaned dframe.
+    """
     df_to_db = dframe.copy()
     for c in dframe.columns:
         if c not in meta.tables[schema + '.' + table].columns:
             df_to_db = df_to_db.drop(c, axis=1)
-    df_to_db.to_sql(t, session.bind, schema=schema, if_exists='append', index=False)
+    df_to_db.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
     session.commit()
-    return
+    return df_to_db
 
 
 def build_munger_d(s,m):
@@ -282,6 +329,7 @@ def fix(fp):        # fp is the path to the reporting_unit.txt file
 if __name__ == '__main__':
     from sqlalchemy.orm import sessionmaker
     import states_and_files as sf
+    import db_routines.Create_CDF_db as CDF
 
     schema='test'
     eng,meta = dbr.sql_alchemy_connect(schema=schema,paramfile='../../local_data/database.ini')
@@ -289,8 +337,8 @@ if __name__ == '__main__':
     session = Session()
 
     s = sf.create_state('NC','../../local_data/NC/')
-
-    context_to_cdf_PANDAS(session,meta,s,schema,cdf_def_dirpath='../CDF_schema_def_info/')
+    enumeration_table_list = CDF.enum_table_list(dirpath='../CDF_schema_def_info/')
+    context_to_cdf_PANDAS(session,meta,s,schema,enumeration_table_list,cdf_def_dirpath='../CDF_schema_def_info/')
     print('Done!')
 
 

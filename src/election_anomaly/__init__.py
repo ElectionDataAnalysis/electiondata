@@ -23,22 +23,6 @@ from alembic.migration import MigrationContext
 from alembic.operations import Operations
 import pandas as pd
 
-
-def create_schema(session,name):
-    if eng.dialect.has_schema(eng, name):
-        recreate = input('WARNING: schema ' + name + ' already exists; erase and recreate (y/n)?\n')
-        if recreate == 'y':
-            session.bind.engine.execute(db.schema.DropSchema(name,cascade=True))
-            session.bind.engine.execute(db.schema.CreateSchema(name))
-            print('New schema created: ' + name)
-        else:
-            print('Schema preserved: '+ name)
-    else:
-        session.bind.engine.execute(db.schema.CreateSchema(name))
-        print('New schema created: ' + name)
-    session.commit()
-    return
-
 def raw_data(session,meta,df):
     """ Loads the raw data from the datafile df into the schema for the associated state
     Schema for the state should already exist
@@ -109,7 +93,7 @@ if __name__ == '__main__':
         print('Creating CDF schema '+ cdf_schema)
 
         enumeration_tables = CDF.enum_table_list()
-        meta_cdf_schema = CDF.create_common_data_format_schema(session, cdf_schema, enumeration_tables)
+        meta_cdf_schema = CDF.create_common_data_format_schema(session, cdf_schema, enumeration_tables,delete_existing=True)
 
         # load state context info into cdf schema
         # need_to_load_data = input('Load enumeration & context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
@@ -120,7 +104,7 @@ if __name__ == '__main__':
             CDF.fill_cdf_enum_tables(session, meta_cdf_schema, cdf_schema,enumeration_tables)
 
             print('Loading state context info into CDF schema') # *** takes a long time; why?
-            context.context_to_cdf_PANDAS(session, meta_cdf_schema, s, cdf_schema)
+            context.context_to_cdf_PANDAS(session, meta_cdf_schema, s, cdf_schema,enumeration_tables)
 
         print('Creating metafile instance')
         mf = sf.create_metafile(s,'layout_results_pct.txt')

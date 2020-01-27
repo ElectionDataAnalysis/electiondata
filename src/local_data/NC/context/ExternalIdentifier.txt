@@ -1,187 +1,187 @@
 Table	Name	ExternalIdentifierType	ExternalIdentifierValue
-Office	North Carolina;General Assembly;House of Representatives;District 1	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 001
-Office	North Carolina;General Assembly;House of Representatives;District 2	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 002
-Office	North Carolina;General Assembly;House of Representatives;District 3	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 003
-Office	North Carolina;General Assembly;House of Representatives;District 4	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 004
-Office	North Carolina;General Assembly;House of Representatives;District 5	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 005
-Office	North Carolina;General Assembly;House of Representatives;District 6	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 006
-Office	North Carolina;General Assembly;House of Representatives;District 7	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 007
-Office	North Carolina;General Assembly;House of Representatives;District 8	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 008
-Office	North Carolina;General Assembly;House of Representatives;District 9	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 009
-Office	North Carolina;General Assembly;House of Representatives;District 10	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 010
-Office	North Carolina;General Assembly;House of Representatives;District 11	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 011
-Office	North Carolina;General Assembly;House of Representatives;District 12	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 012
-Office	North Carolina;General Assembly;House of Representatives;District 13	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 013
-Office	North Carolina;General Assembly;House of Representatives;District 14	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 014
-Office	North Carolina;General Assembly;House of Representatives;District 15	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 015
-Office	North Carolina;General Assembly;House of Representatives;District 16	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 016
-Office	North Carolina;General Assembly;House of Representatives;District 17	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 017
-Office	North Carolina;General Assembly;House of Representatives;District 18	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 018
-Office	North Carolina;General Assembly;House of Representatives;District 19	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 019
-Office	North Carolina;General Assembly;House of Representatives;District 20	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 020
-Office	North Carolina;General Assembly;House of Representatives;District 21	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 021
-Office	North Carolina;General Assembly;House of Representatives;District 22	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 022
-Office	North Carolina;General Assembly;House of Representatives;District 23	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 023
-Office	North Carolina;General Assembly;House of Representatives;District 24	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 024
-Office	North Carolina;General Assembly;House of Representatives;District 25	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 025
-Office	North Carolina;General Assembly;House of Representatives;District 26	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 026
-Office	North Carolina;General Assembly;House of Representatives;District 27	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 027
-Office	North Carolina;General Assembly;House of Representatives;District 28	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 028
-Office	North Carolina;General Assembly;House of Representatives;District 29	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 029
-Office	North Carolina;General Assembly;House of Representatives;District 30	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 030
-Office	North Carolina;General Assembly;House of Representatives;District 31	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 031
-Office	North Carolina;General Assembly;House of Representatives;District 32	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 032
-Office	North Carolina;General Assembly;House of Representatives;District 33	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 033
-Office	North Carolina;General Assembly;House of Representatives;District 34	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 034
-Office	North Carolina;General Assembly;House of Representatives;District 35	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 035
-Office	North Carolina;General Assembly;House of Representatives;District 36	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 036
-Office	North Carolina;General Assembly;House of Representatives;District 37	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 037
-Office	North Carolina;General Assembly;House of Representatives;District 38	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 038
-Office	North Carolina;General Assembly;House of Representatives;District 39	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 039
-Office	North Carolina;General Assembly;House of Representatives;District 40	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 040
-Office	North Carolina;General Assembly;House of Representatives;District 41	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 041
-Office	North Carolina;General Assembly;House of Representatives;District 42	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 042
-Office	North Carolina;General Assembly;House of Representatives;District 43	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 043
-Office	North Carolina;General Assembly;House of Representatives;District 44	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 044
-Office	North Carolina;General Assembly;House of Representatives;District 45	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 045
-Office	North Carolina;General Assembly;House of Representatives;District 46	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 046
-Office	North Carolina;General Assembly;House of Representatives;District 47	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 047
-Office	North Carolina;General Assembly;House of Representatives;District 48	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 048
-Office	North Carolina;General Assembly;House of Representatives;District 49	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 049
-Office	North Carolina;General Assembly;House of Representatives;District 50	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 050
-Office	North Carolina;General Assembly;House of Representatives;District 51	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 051
-Office	North Carolina;General Assembly;House of Representatives;District 52	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 052
-Office	North Carolina;General Assembly;House of Representatives;District 53	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 053
-Office	North Carolina;General Assembly;House of Representatives;District 54	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 054
-Office	North Carolina;General Assembly;House of Representatives;District 55	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 055
-Office	North Carolina;General Assembly;House of Representatives;District 56	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 056
-Office	North Carolina;General Assembly;House of Representatives;District 57	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 057
-Office	North Carolina;General Assembly;House of Representatives;District 58	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 058
-Office	North Carolina;General Assembly;House of Representatives;District 59	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 059
-Office	North Carolina;General Assembly;House of Representatives;District 60	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 060
-Office	North Carolina;General Assembly;House of Representatives;District 61	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 061
-Office	North Carolina;General Assembly;House of Representatives;District 62	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 062
-Office	North Carolina;General Assembly;House of Representatives;District 63	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 063
-Office	North Carolina;General Assembly;House of Representatives;District 64	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 064
-Office	North Carolina;General Assembly;House of Representatives;District 65	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 065
-Office	North Carolina;General Assembly;House of Representatives;District 66	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 066
-Office	North Carolina;General Assembly;House of Representatives;District 67	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 067
-Office	North Carolina;General Assembly;House of Representatives;District 68	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 068
-Office	North Carolina;General Assembly;House of Representatives;District 69	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 069
-Office	North Carolina;General Assembly;House of Representatives;District 70	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 070
-Office	North Carolina;General Assembly;House of Representatives;District 71	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 071
-Office	North Carolina;General Assembly;House of Representatives;District 72	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 072
-Office	North Carolina;General Assembly;House of Representatives;District 73	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 073
-Office	North Carolina;General Assembly;House of Representatives;District 74	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 074
-Office	North Carolina;General Assembly;House of Representatives;District 75	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 075
-Office	North Carolina;General Assembly;House of Representatives;District 76	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 076
-Office	North Carolina;General Assembly;House of Representatives;District 77	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 077
-Office	North Carolina;General Assembly;House of Representatives;District 78	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 078
-Office	North Carolina;General Assembly;House of Representatives;District 79	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 079
-Office	North Carolina;General Assembly;House of Representatives;District 80	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 080
-Office	North Carolina;General Assembly;House of Representatives;District 81	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 081
-Office	North Carolina;General Assembly;House of Representatives;District 82	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 082
-Office	North Carolina;General Assembly;House of Representatives;District 83	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 083
-Office	North Carolina;General Assembly;House of Representatives;District 84	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 084
-Office	North Carolina;General Assembly;House of Representatives;District 85	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 085
-Office	North Carolina;General Assembly;House of Representatives;District 86	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 086
-Office	North Carolina;General Assembly;House of Representatives;District 87	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 087
-Office	North Carolina;General Assembly;House of Representatives;District 88	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 088
-Office	North Carolina;General Assembly;House of Representatives;District 89	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 089
-Office	North Carolina;General Assembly;House of Representatives;District 90	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 090
-Office	North Carolina;General Assembly;House of Representatives;District 91	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 091
-Office	North Carolina;General Assembly;House of Representatives;District 92	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 092
-Office	North Carolina;General Assembly;House of Representatives;District 93	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 093
-Office	North Carolina;General Assembly;House of Representatives;District 94	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 094
-Office	North Carolina;General Assembly;House of Representatives;District 95	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 095
-Office	North Carolina;General Assembly;House of Representatives;District 96	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 096
-Office	North Carolina;General Assembly;House of Representatives;District 97	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 097
-Office	North Carolina;General Assembly;House of Representatives;District 98	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 098
-Office	North Carolina;General Assembly;House of Representatives;District 99	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 099
-Office	North Carolina;General Assembly;House of Representatives;District 100	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 100
-Office	North Carolina;General Assembly;House of Representatives;District 101	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 101
-Office	North Carolina;General Assembly;House of Representatives;District 102	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 102
-Office	North Carolina;General Assembly;House of Representatives;District 103	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 103
-Office	North Carolina;General Assembly;House of Representatives;District 104	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 104
-Office	North Carolina;General Assembly;House of Representatives;District 105	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 105
-Office	North Carolina;General Assembly;House of Representatives;District 106	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 106
-Office	North Carolina;General Assembly;House of Representatives;District 107	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 107
-Office	North Carolina;General Assembly;House of Representatives;District 108	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 108
-Office	North Carolina;General Assembly;House of Representatives;District 109	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 109
-Office	North Carolina;General Assembly;House of Representatives;District 110	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 110
-Office	North Carolina;General Assembly;House of Representatives;District 111	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 111
-Office	North Carolina;General Assembly;House of Representatives;District 112	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 112
-Office	North Carolina;General Assembly;House of Representatives;District 113	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 113
-Office	North Carolina;General Assembly;House of Representatives;District 114	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 114
-Office	North Carolina;General Assembly;House of Representatives;District 115	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 115
-Office	North Carolina;General Assembly;House of Representatives;District 116	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 116
-Office	North Carolina;General Assembly;House of Representatives;District 117	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 117
-Office	North Carolina;General Assembly;House of Representatives;District 118	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 118
-Office	North Carolina;General Assembly;House of Representatives;District 119	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 119
-Office	North Carolina;General Assembly;House of Representatives;District 120	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 120
-Office	North Carolina;General Assembly;Senate;District 1	nc_export1	NC STATE SENATE DISTRICT 01
-Office	North Carolina;General Assembly;Senate;District 2	nc_export1	NC STATE SENATE DISTRICT 02
-Office	North Carolina;General Assembly;Senate;District 3	nc_export1	NC STATE SENATE DISTRICT 03
-Office	North Carolina;General Assembly;Senate;District 4	nc_export1	NC STATE SENATE DISTRICT 04
-Office	North Carolina;General Assembly;Senate;District 5	nc_export1	NC STATE SENATE DISTRICT 05
-Office	North Carolina;General Assembly;Senate;District 6	nc_export1	NC STATE SENATE DISTRICT 06
-Office	North Carolina;General Assembly;Senate;District 7	nc_export1	NC STATE SENATE DISTRICT 07
-Office	North Carolina;General Assembly;Senate;District 8	nc_export1	NC STATE SENATE DISTRICT 08
-Office	North Carolina;General Assembly;Senate;District 9	nc_export1	NC STATE SENATE DISTRICT 09
-Office	North Carolina;General Assembly;Senate;District 10	nc_export1	NC STATE SENATE DISTRICT 10
-Office	North Carolina;General Assembly;Senate;District 11	nc_export1	NC STATE SENATE DISTRICT 11
-Office	North Carolina;General Assembly;Senate;District 12	nc_export1	NC STATE SENATE DISTRICT 12
-Office	North Carolina;General Assembly;Senate;District 13	nc_export1	NC STATE SENATE DISTRICT 13
-Office	North Carolina;General Assembly;Senate;District 14	nc_export1	NC STATE SENATE DISTRICT 14
-Office	North Carolina;General Assembly;Senate;District 15	nc_export1	NC STATE SENATE DISTRICT 15
-Office	North Carolina;General Assembly;Senate;District 16	nc_export1	NC STATE SENATE DISTRICT 16
-Office	North Carolina;General Assembly;Senate;District 17	nc_export1	NC STATE SENATE DISTRICT 17
-Office	North Carolina;General Assembly;Senate;District 18	nc_export1	NC STATE SENATE DISTRICT 18
-Office	North Carolina;General Assembly;Senate;District 19	nc_export1	NC STATE SENATE DISTRICT 19
-Office	North Carolina;General Assembly;Senate;District 20	nc_export1	NC STATE SENATE DISTRICT 20
-Office	North Carolina;General Assembly;Senate;District 21	nc_export1	NC STATE SENATE DISTRICT 21
-Office	North Carolina;General Assembly;Senate;District 22	nc_export1	NC STATE SENATE DISTRICT 22
-Office	North Carolina;General Assembly;Senate;District 23	nc_export1	NC STATE SENATE DISTRICT 23
-Office	North Carolina;General Assembly;Senate;District 24	nc_export1	NC STATE SENATE DISTRICT 24
-Office	North Carolina;General Assembly;Senate;District 25	nc_export1	NC STATE SENATE DISTRICT 25
-Office	North Carolina;General Assembly;Senate;District 26	nc_export1	NC STATE SENATE DISTRICT 26
-Office	North Carolina;General Assembly;Senate;District 27	nc_export1	NC STATE SENATE DISTRICT 27
-Office	North Carolina;General Assembly;Senate;District 28	nc_export1	NC STATE SENATE DISTRICT 28
-Office	North Carolina;General Assembly;Senate;District 29	nc_export1	NC STATE SENATE DISTRICT 29
-Office	North Carolina;General Assembly;Senate;District 30	nc_export1	NC STATE SENATE DISTRICT 30
-Office	North Carolina;General Assembly;Senate;District 31	nc_export1	NC STATE SENATE DISTRICT 31
-Office	North Carolina;General Assembly;Senate;District 32	nc_export1	NC STATE SENATE DISTRICT 32
-Office	North Carolina;General Assembly;Senate;District 33	nc_export1	NC STATE SENATE DISTRICT 33
-Office	North Carolina;General Assembly;Senate;District 34	nc_export1	NC STATE SENATE DISTRICT 34
-Office	North Carolina;General Assembly;Senate;District 35	nc_export1	NC STATE SENATE DISTRICT 35
-Office	North Carolina;General Assembly;Senate;District 36	nc_export1	NC STATE SENATE DISTRICT 36
-Office	North Carolina;General Assembly;Senate;District 37	nc_export1	NC STATE SENATE DISTRICT 37
-Office	North Carolina;General Assembly;Senate;District 38	nc_export1	NC STATE SENATE DISTRICT 38
-Office	North Carolina;General Assembly;Senate;District 39	nc_export1	NC STATE SENATE DISTRICT 39
-Office	North Carolina;General Assembly;Senate;District 40	nc_export1	NC STATE SENATE DISTRICT 40
-Office	North Carolina;General Assembly;Senate;District 41	nc_export1	NC STATE SENATE DISTRICT 41
-Office	North Carolina;General Assembly;Senate;District 42	nc_export1	NC STATE SENATE DISTRICT 42
-Office	North Carolina;General Assembly;Senate;District 43	nc_export1	NC STATE SENATE DISTRICT 43
-Office	North Carolina;General Assembly;Senate;District 44	nc_export1	NC STATE SENATE DISTRICT 44
-Office	North Carolina;General Assembly;Senate;District 45	nc_export1	NC STATE SENATE DISTRICT 45
-Office	North Carolina;General Assembly;Senate;District 46	nc_export1	NC STATE SENATE DISTRICT 46
-Office	North Carolina;General Assembly;Senate;District 47	nc_export1	NC STATE SENATE DISTRICT 47
-Office	North Carolina;General Assembly;Senate;District 48	nc_export1	NC STATE SENATE DISTRICT 48
-Office	North Carolina;General Assembly;Senate;District 49	nc_export1	NC STATE SENATE DISTRICT 49
-Office	North Carolina;General Assembly;Senate;District 50	nc_export1	NC STATE SENATE DISTRICT 50
-Office	North Carolina;US Congress;House of Representatives;District 1	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 01
-Office	North Carolina;US Congress;House of Representatives;District 2	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 02
-Office	North Carolina;US Congress;House of Representatives;District 3	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 03
-Office	North Carolina;US Congress;House of Representatives;District 4	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 04
-Office	North Carolina;US Congress;House of Representatives;District 5	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 05
-Office	North Carolina;US Congress;House of Representatives;District 6	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 06
-Office	North Carolina;US Congress;House of Representatives;District 7	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 07
-Office	North Carolina;US Congress;House of Representatives;District 8	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 08
-Office	North Carolina;US Congress;House of Representatives;District 9	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 09
-Office	North Carolina;US Congress;House of Representatives;District 10	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 10
-Office	North Carolina;US Congress;House of Representatives;District 11	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 11
-Office	North Carolina;US Congress;House of Representatives;District 12	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 12
-Office	North Carolina;US Congress;House of Representatives;District 13	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 13
+Office	North Carolina;General Assembly House of Representatives District 1	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 001
+Office	North Carolina;General Assembly House of Representatives District 2	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 002
+Office	North Carolina;General Assembly House of Representatives District 3	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 003
+Office	North Carolina;General Assembly House of Representatives District 4	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 004
+Office	North Carolina;General Assembly House of Representatives District 5	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 005
+Office	North Carolina;General Assembly House of Representatives District 6	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 006
+Office	North Carolina;General Assembly House of Representatives District 7	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 007
+Office	North Carolina;General Assembly House of Representatives District 8	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 008
+Office	North Carolina;General Assembly House of Representatives District 9	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 009
+Office	North Carolina;General Assembly House of Representatives District 10	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 010
+Office	North Carolina;General Assembly House of Representatives District 11	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 011
+Office	North Carolina;General Assembly House of Representatives District 12	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 012
+Office	North Carolina;General Assembly House of Representatives District 13	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 013
+Office	North Carolina;General Assembly House of Representatives District 14	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 014
+Office	North Carolina;General Assembly House of Representatives District 15	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 015
+Office	North Carolina;General Assembly House of Representatives District 16	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 016
+Office	North Carolina;General Assembly House of Representatives District 17	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 017
+Office	North Carolina;General Assembly House of Representatives District 18	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 018
+Office	North Carolina;General Assembly House of Representatives District 19	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 019
+Office	North Carolina;General Assembly House of Representatives District 20	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 020
+Office	North Carolina;General Assembly House of Representatives District 21	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 021
+Office	North Carolina;General Assembly House of Representatives District 22	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 022
+Office	North Carolina;General Assembly House of Representatives District 23	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 023
+Office	North Carolina;General Assembly House of Representatives District 24	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 024
+Office	North Carolina;General Assembly House of Representatives District 25	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 025
+Office	North Carolina;General Assembly House of Representatives District 26	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 026
+Office	North Carolina;General Assembly House of Representatives District 27	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 027
+Office	North Carolina;General Assembly House of Representatives District 28	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 028
+Office	North Carolina;General Assembly House of Representatives District 29	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 029
+Office	North Carolina;General Assembly House of Representatives District 30	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 030
+Office	North Carolina;General Assembly House of Representatives District 31	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 031
+Office	North Carolina;General Assembly House of Representatives District 32	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 032
+Office	North Carolina;General Assembly House of Representatives District 33	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 033
+Office	North Carolina;General Assembly House of Representatives District 34	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 034
+Office	North Carolina;General Assembly House of Representatives District 35	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 035
+Office	North Carolina;General Assembly House of Representatives District 36	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 036
+Office	North Carolina;General Assembly House of Representatives District 37	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 037
+Office	North Carolina;General Assembly House of Representatives District 38	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 038
+Office	North Carolina;General Assembly House of Representatives District 39	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 039
+Office	North Carolina;General Assembly House of Representatives District 40	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 040
+Office	North Carolina;General Assembly House of Representatives District 41	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 041
+Office	North Carolina;General Assembly House of Representatives District 42	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 042
+Office	North Carolina;General Assembly House of Representatives District 43	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 043
+Office	North Carolina;General Assembly House of Representatives District 44	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 044
+Office	North Carolina;General Assembly House of Representatives District 45	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 045
+Office	North Carolina;General Assembly House of Representatives District 46	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 046
+Office	North Carolina;General Assembly House of Representatives District 47	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 047
+Office	North Carolina;General Assembly House of Representatives District 48	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 048
+Office	North Carolina;General Assembly House of Representatives District 49	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 049
+Office	North Carolina;General Assembly House of Representatives District 50	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 050
+Office	North Carolina;General Assembly House of Representatives District 51	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 051
+Office	North Carolina;General Assembly House of Representatives District 52	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 052
+Office	North Carolina;General Assembly House of Representatives District 53	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 053
+Office	North Carolina;General Assembly House of Representatives District 54	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 054
+Office	North Carolina;General Assembly House of Representatives District 55	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 055
+Office	North Carolina;General Assembly House of Representatives District 56	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 056
+Office	North Carolina;General Assembly House of Representatives District 57	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 057
+Office	North Carolina;General Assembly House of Representatives District 58	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 058
+Office	North Carolina;General Assembly House of Representatives District 59	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 059
+Office	North Carolina;General Assembly House of Representatives District 60	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 060
+Office	North Carolina;General Assembly House of Representatives District 61	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 061
+Office	North Carolina;General Assembly House of Representatives District 62	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 062
+Office	North Carolina;General Assembly House of Representatives District 63	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 063
+Office	North Carolina;General Assembly House of Representatives District 64	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 064
+Office	North Carolina;General Assembly House of Representatives District 65	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 065
+Office	North Carolina;General Assembly House of Representatives District 66	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 066
+Office	North Carolina;General Assembly House of Representatives District 67	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 067
+Office	North Carolina;General Assembly House of Representatives District 68	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 068
+Office	North Carolina;General Assembly House of Representatives District 69	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 069
+Office	North Carolina;General Assembly House of Representatives District 70	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 070
+Office	North Carolina;General Assembly House of Representatives District 71	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 071
+Office	North Carolina;General Assembly House of Representatives District 72	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 072
+Office	North Carolina;General Assembly House of Representatives District 73	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 073
+Office	North Carolina;General Assembly House of Representatives District 74	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 074
+Office	North Carolina;General Assembly House of Representatives District 75	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 075
+Office	North Carolina;General Assembly House of Representatives District 76	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 076
+Office	North Carolina;General Assembly House of Representatives District 77	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 077
+Office	North Carolina;General Assembly House of Representatives District 78	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 078
+Office	North Carolina;General Assembly House of Representatives District 79	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 079
+Office	North Carolina;General Assembly House of Representatives District 80	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 080
+Office	North Carolina;General Assembly House of Representatives District 81	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 081
+Office	North Carolina;General Assembly House of Representatives District 82	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 082
+Office	North Carolina;General Assembly House of Representatives District 83	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 083
+Office	North Carolina;General Assembly House of Representatives District 84	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 084
+Office	North Carolina;General Assembly House of Representatives District 85	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 085
+Office	North Carolina;General Assembly House of Representatives District 86	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 086
+Office	North Carolina;General Assembly House of Representatives District 87	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 087
+Office	North Carolina;General Assembly House of Representatives District 88	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 088
+Office	North Carolina;General Assembly House of Representatives District 89	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 089
+Office	North Carolina;General Assembly House of Representatives District 90	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 090
+Office	North Carolina;General Assembly House of Representatives District 91	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 091
+Office	North Carolina;General Assembly House of Representatives District 92	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 092
+Office	North Carolina;General Assembly House of Representatives District 93	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 093
+Office	North Carolina;General Assembly House of Representatives District 94	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 094
+Office	North Carolina;General Assembly House of Representatives District 95	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 095
+Office	North Carolina;General Assembly House of Representatives District 96	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 096
+Office	North Carolina;General Assembly House of Representatives District 97	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 097
+Office	North Carolina;General Assembly House of Representatives District 98	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 098
+Office	North Carolina;General Assembly House of Representatives District 99	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 099
+Office	North Carolina;General Assembly House of Representatives District 100	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 100
+Office	North Carolina;General Assembly House of Representatives District 101	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 101
+Office	North Carolina;General Assembly House of Representatives District 102	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 102
+Office	North Carolina;General Assembly House of Representatives District 103	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 103
+Office	North Carolina;General Assembly House of Representatives District 104	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 104
+Office	North Carolina;General Assembly House of Representatives District 105	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 105
+Office	North Carolina;General Assembly House of Representatives District 106	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 106
+Office	North Carolina;General Assembly House of Representatives District 107	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 107
+Office	North Carolina;General Assembly House of Representatives District 108	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 108
+Office	North Carolina;General Assembly House of Representatives District 109	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 109
+Office	North Carolina;General Assembly House of Representatives District 110	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 110
+Office	North Carolina;General Assembly House of Representatives District 111	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 111
+Office	North Carolina;General Assembly House of Representatives District 112	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 112
+Office	North Carolina;General Assembly House of Representatives District 113	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 113
+Office	North Carolina;General Assembly House of Representatives District 114	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 114
+Office	North Carolina;General Assembly House of Representatives District 115	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 115
+Office	North Carolina;General Assembly House of Representatives District 116	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 116
+Office	North Carolina;General Assembly House of Representatives District 117	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 117
+Office	North Carolina;General Assembly House of Representatives District 118	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 118
+Office	North Carolina;General Assembly House of Representatives District 119	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 119
+Office	North Carolina;General Assembly House of Representatives District 120	nc_export1	NC HOUSE OF REPRESENTATIVES DISTRICT 120
+Office	North Carolina;General Assembly Senate District 1	nc_export1	NC STATE SENATE DISTRICT 01
+Office	North Carolina;General Assembly Senate District 2	nc_export1	NC STATE SENATE DISTRICT 02
+Office	North Carolina;General Assembly Senate District 3	nc_export1	NC STATE SENATE DISTRICT 03
+Office	North Carolina;General Assembly Senate District 4	nc_export1	NC STATE SENATE DISTRICT 04
+Office	North Carolina;General Assembly Senate District 5	nc_export1	NC STATE SENATE DISTRICT 05
+Office	North Carolina;General Assembly Senate District 6	nc_export1	NC STATE SENATE DISTRICT 06
+Office	North Carolina;General Assembly Senate District 7	nc_export1	NC STATE SENATE DISTRICT 07
+Office	North Carolina;General Assembly Senate District 8	nc_export1	NC STATE SENATE DISTRICT 08
+Office	North Carolina;General Assembly Senate District 9	nc_export1	NC STATE SENATE DISTRICT 09
+Office	North Carolina;General Assembly Senate District 10	nc_export1	NC STATE SENATE DISTRICT 10
+Office	North Carolina;General Assembly Senate District 11	nc_export1	NC STATE SENATE DISTRICT 11
+Office	North Carolina;General Assembly Senate District 12	nc_export1	NC STATE SENATE DISTRICT 12
+Office	North Carolina;General Assembly Senate District 13	nc_export1	NC STATE SENATE DISTRICT 13
+Office	North Carolina;General Assembly Senate District 14	nc_export1	NC STATE SENATE DISTRICT 14
+Office	North Carolina;General Assembly Senate District 15	nc_export1	NC STATE SENATE DISTRICT 15
+Office	North Carolina;General Assembly Senate District 16	nc_export1	NC STATE SENATE DISTRICT 16
+Office	North Carolina;General Assembly Senate District 17	nc_export1	NC STATE SENATE DISTRICT 17
+Office	North Carolina;General Assembly Senate District 18	nc_export1	NC STATE SENATE DISTRICT 18
+Office	North Carolina;General Assembly Senate District 19	nc_export1	NC STATE SENATE DISTRICT 19
+Office	North Carolina;General Assembly Senate District 20	nc_export1	NC STATE SENATE DISTRICT 20
+Office	North Carolina;General Assembly Senate District 21	nc_export1	NC STATE SENATE DISTRICT 21
+Office	North Carolina;General Assembly Senate District 22	nc_export1	NC STATE SENATE DISTRICT 22
+Office	North Carolina;General Assembly Senate District 23	nc_export1	NC STATE SENATE DISTRICT 23
+Office	North Carolina;General Assembly Senate District 24	nc_export1	NC STATE SENATE DISTRICT 24
+Office	North Carolina;General Assembly Senate District 25	nc_export1	NC STATE SENATE DISTRICT 25
+Office	North Carolina;General Assembly Senate District 26	nc_export1	NC STATE SENATE DISTRICT 26
+Office	North Carolina;General Assembly Senate District 27	nc_export1	NC STATE SENATE DISTRICT 27
+Office	North Carolina;General Assembly Senate District 28	nc_export1	NC STATE SENATE DISTRICT 28
+Office	North Carolina;General Assembly Senate District 29	nc_export1	NC STATE SENATE DISTRICT 29
+Office	North Carolina;General Assembly Senate District 30	nc_export1	NC STATE SENATE DISTRICT 30
+Office	North Carolina;General Assembly Senate District 31	nc_export1	NC STATE SENATE DISTRICT 31
+Office	North Carolina;General Assembly Senate District 32	nc_export1	NC STATE SENATE DISTRICT 32
+Office	North Carolina;General Assembly Senate District 33	nc_export1	NC STATE SENATE DISTRICT 33
+Office	North Carolina;General Assembly Senate District 34	nc_export1	NC STATE SENATE DISTRICT 34
+Office	North Carolina;General Assembly Senate District 35	nc_export1	NC STATE SENATE DISTRICT 35
+Office	North Carolina;General Assembly Senate District 36	nc_export1	NC STATE SENATE DISTRICT 36
+Office	North Carolina;General Assembly Senate District 37	nc_export1	NC STATE SENATE DISTRICT 37
+Office	North Carolina;General Assembly Senate District 38	nc_export1	NC STATE SENATE DISTRICT 38
+Office	North Carolina;General Assembly Senate District 39	nc_export1	NC STATE SENATE DISTRICT 39
+Office	North Carolina;General Assembly Senate District 40	nc_export1	NC STATE SENATE DISTRICT 40
+Office	North Carolina;General Assembly Senate District 41	nc_export1	NC STATE SENATE DISTRICT 41
+Office	North Carolina;General Assembly Senate District 42	nc_export1	NC STATE SENATE DISTRICT 42
+Office	North Carolina;General Assembly Senate District 43	nc_export1	NC STATE SENATE DISTRICT 43
+Office	North Carolina;General Assembly Senate District 44	nc_export1	NC STATE SENATE DISTRICT 44
+Office	North Carolina;General Assembly Senate District 45	nc_export1	NC STATE SENATE DISTRICT 45
+Office	North Carolina;General Assembly Senate District 46	nc_export1	NC STATE SENATE DISTRICT 46
+Office	North Carolina;General Assembly Senate District 47	nc_export1	NC STATE SENATE DISTRICT 47
+Office	North Carolina;General Assembly Senate District 48	nc_export1	NC STATE SENATE DISTRICT 48
+Office	North Carolina;General Assembly Senate District 49	nc_export1	NC STATE SENATE DISTRICT 49
+Office	North Carolina;General Assembly Senate District 50	nc_export1	NC STATE SENATE DISTRICT 50
+Office	North Carolina;US Congress House of Representatives District 1	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 01
+Office	North Carolina;US Congress House of Representatives District 2	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 02
+Office	North Carolina;US Congress House of Representatives District 3	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 03
+Office	North Carolina;US Congress House of Representatives District 4	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 04
+Office	North Carolina;US Congress House of Representatives District 5	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 05
+Office	North Carolina;US Congress House of Representatives District 6	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 06
+Office	North Carolina;US Congress House of Representatives District 7	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 07
+Office	North Carolina;US Congress House of Representatives District 8	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 08
+Office	North Carolina;US Congress House of Representatives District 9	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 09
+Office	North Carolina;US Congress House of Representatives District 10	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 10
+Office	North Carolina;US Congress House of Representatives District 11	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 11
+Office	North Carolina;US Congress House of Representatives District 12	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 12
+Office	North Carolina;US Congress House of Representatives District 13	nc_export1	US HOUSE OF REPRESENTATIVES DISTRICT 13
 Party	North Carolina Constitution Party	nc_export1	CST
 Party	North Carolina Democratic Party	nc_export1	DEM
 Party	North Carolina Libertarian Party	nc_export1	LIB

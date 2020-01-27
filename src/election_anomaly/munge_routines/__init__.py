@@ -77,7 +77,7 @@ def id_from_select_only_PANDAS(dframe,value_d, mode='no_dupes',check_spelling = 
                 return 0
         else:
             return 0
-    elif rp.rowcount >1 and mode == 'no_dupes':
+    elif filtered_dframe.shape[0] >1 and mode == 'no_dupes':
         raise Exception('More than one record found for these values:\n\t'+str(value_d))
     else:
         return filtered_dframe.index.to_list()[0]
@@ -191,7 +191,7 @@ def format_type_for_insert(session,e_table,txt):
 
 def format_type_for_insert_PANDAS(dframe,txt,id_type_other_id):
     """This is designed for enumeration dframes, which must have an "Id" field and a "Txt" field.
-    id_type_other_id is the id for 'other' IdentifierType
+    other_id is the id for 'other' IdentifierType
     This function returns a (type_id, othertype_text) pair; for types in the enumeration, returns (type_id for the given txt, ""),
     while for other types returns (type_id for "other",txt) """
     # TODO check that dframe columns are 'Id' and 'Txt'
