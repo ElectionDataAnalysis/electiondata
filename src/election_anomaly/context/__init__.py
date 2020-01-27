@@ -4,7 +4,7 @@
 # utilities for extracting state context info and inserting it into the files in the context folder
 import sys
 import re
-from munge_routines import id_from_select_or_insert, format_type_for_insert, composing_from_reporting_unit_name, format_type_for_insert_PANDAS
+from munge_routines import id_from_select_or_insert, format_type_for_insert, composing_from_reporting_unit_name, format_type_for_insert_PANDAS, id_from_select_or_insert_PANDAS
 import db_routines as dbr
 import pandas as pd
 
@@ -78,22 +78,33 @@ def context_to_cdf_PANDAS(session,meta,s,schema,cdf_def_dirpath = 'CDF_schema_de
                     new_ru_dframe.to_sql('ReportingUnit', session.bind, schema=schema, if_exists='append', index=False)
                     session.commit()
 
+
         #%% commit table to db
         # TODO ## define dframe_for_cdf_db[t]. If we use context_cdframe with right cols added, will old columns be ignored? No.
         if t in s.context_dictionary.keys():
-            df_to_db = context_cdframe[t].copy()
-            for c in context_cdframe[t].columns:
-                if c not in meta.tables[schema + '.' + t].columns:
-                    df_to_db = df_to_db.drop(c,axis = 1)
-            df_to_db.to_sql(t,session.bind, schema=schema, if_exists='append', index=False)
-            session.commit()
-            # Then need to deal with external identifiers, composing reporting units.
+            dframe_to_sql(context_cdframe[t],session,meta,schema,t)
+            # Then need to deal with composing reporting units.
 
-        if t == 'ExternalIdentifier':
-            # TODO
-            pass
+    #%% fill ExternalIdentifier table
+    context_cdframe['ExternalIdentifier'] = pd.read_csv(s.path_to_state_dir + 'context/ExternalIdentifier.txt',sep = '\t')
+    ei = context_cdframe['ExternalIdentifier']   # for legibility
+    ei['ForeignId'] = id_from_select_or_insert_PANDAS(context_cdframe[ei['Table']],{'Name':ei['Name']})
+    ei['Value'] = ei['ExternalIdentifierValue']
+    ei['IdentifierType_Id'],ei['OtherIdentifierType'] = format_type_for_insert_PANDAS('IdentifierType',ei['ExternalIdentifierValue',other_id['IdentifierType']])
+    dframe_to_sql(ei,session,meta,schema,'ExternalIdentifier')
 
+    # TODO composing reporting units
     return
+
+def dframe_to_sql(dframe,session,meta,schema,table):
+    df_to_db = dframe.copy()
+    for c in dframe.columns:
+        if c not in meta.tables[schema + '.' + table].columns:
+            df_to_db = df_to_db.drop(c, axis=1)
+    df_to_db.to_sql(t, session.bind, schema=schema, if_exists='append', index=False)
+    session.commit()
+    return
+
 
 def build_munger_d(s,m):
     """given a state s and a munger m,
