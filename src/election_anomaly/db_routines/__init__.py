@@ -75,7 +75,7 @@ def read_single_value_from_id(con,meta,schema,table,field,id):
     read from the record with the given id from the given table of the given schema.
     """
     t = db.Table(table,meta,autoload=True, autoload_with=con,schema=schema)
-    q = db.select([eval('cdf_table.columns.'+field)]).where(t.columns.Id == str(id))
+    q = db.select([eval(t+'.columns.'+field)]).where(t.columns.Id == str(id))
     ResultProxy = con.execute(q)
     ResultSet = ResultProxy.fetchall()
     if ResultSet:

@@ -58,20 +58,24 @@ def raw_data(session,meta,df):
     return
 
 if __name__ == '__main__':
-    #to_cdf = input('Load and process election data into a common-data-format database (y/n)?\n')
-    to_cdf = 'y'
+    # %% Initiate db engine and create session
+    eng, meta_generic = dbr.sql_alchemy_connect()
+    Session = sessionmaker(bind=eng)
+    session = Session()
+
+    to_cdf = input('Load and process election data into a common-data-format database (y/n)?\n')
     if to_cdf == 'y':
-        default = 'XX'
+        default = 'NC'
         abbr = input('Enter two-character abbreviation for your state/district/territory (default is '+default+')\n') or default
 
-        default = 'cdf_xx_test'
+        default = 'cdf_nc_test'
         cdf_schema=input('Enter name of CDF schema (default is '+default+')\n') or default
 
         default = 'nc_export1'
         munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
 
-        # default = 'results_pct_20181106.txt'
-        default = 'alamance.txt'
+        default = 'results_pct_20181106.txt'
+        #default = 'alamance.txt'
         df_name = input('Enter name of datafile (default is '+default+')\n') or default
 
 
@@ -130,13 +134,13 @@ if __name__ == '__main__':
 
     find_anomalies = input('Find anomalies in an election (y/n)?\n')
     if find_anomalies == 'y':
-        default = 'cdf_nc'
+        default = 'cdf_nc_test'
         cdf_schema = input('Enter name of cdf schema (default is '+default+')\n') or default
 
         default = '../local_data/database.ini'
         paramfile = input('Enter path to database parameter file (default is '+default+')\n') or default
 
-        eng, meta_generic, Session = dbr.sql_alchemy_connect(cdf_schema, paramfile)
+        eng, meta_generic = dbr.sql_alchemy_connect(cdf_schema, paramfile)
         session = Session()
 
         election_dframe = dbr.election_list(session, meta_generic, cdf_schema)
@@ -144,11 +148,11 @@ if __name__ == '__main__':
         for index,row in election_dframe.iterrows():
             print(row['Name']+' (Id is '+str(row['Id'])+')')
 
-        default = '15834'
+        default = '3218'
         election_id = input('Enter Id of the election you wish to analyze (default is '+default+')\n') or default
         election_id = int(election_id)
 
-        default = 'nc_2018'
+        default = 'nc_2018_test'
         election_short_name = input('Enter short name for the election (alphanumeric with underscore, no spaces -- default is '+default+')\n') or default
 
         default = 'precinct'
@@ -166,7 +170,7 @@ if __name__ == '__main__':
             print(e)
             dummy = input('Create the directory and hit enter to continue.')
 
-        e = an.create_election(cdf_schema,election_id,roll_up_to_ru_type,atomic_ru_type,pickle_dir,paramfile)
+        e = an.create_election(session,meta_generic,cdf_schema,election_id,roll_up_to_ru_type,atomic_ru_type,pickle_dir,paramfile)
         e.anomaly_scores(eng, meta_generic, cdf_schema)
         #%%
         e.worst_bar_for_each_contest(eng, meta_generic, 2)

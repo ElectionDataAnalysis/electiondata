@@ -106,16 +106,16 @@ class Election(object): # TODO check that object is necessary (apparently for pi
         self.atomic_ReportingUnitType=atomic_ReportingUnitType
         self.atomic_ReportingUnitType_Id=atomic_ReportingUnitType_Id
 
-def create_election(cdf_schema,Election_Id,roll_up_to_ReportingUnitType='county',atomic_ReportingUnitType='precinct',pickle_dir='../../local_data/tmp/',paramfile = '../../local_data/database.ini'):
+def create_election(session,meta,cdf_schema,Election_Id,roll_up_to_ReportingUnitType='county',atomic_ReportingUnitType='precinct',pickle_dir='../../local_data/tmp/',paramfile = '../../local_data/database.ini'):
     if not pickle_dir[-1] == '/': pickle_dir += '/'  # ensure directory ends with slash
     assert os.path.isdir(pickle_dir), 'No such directory: ' + pickle_dir + '\nCurrent directory is: ' + os.getcwd()
     assert isinstance(cdf_schema, str), 'cdf_schema must be a string'
     assert isinstance(Election_Id, int), 'Election_Id must be an integer'
     assert os.path.isfile(paramfile), 'No such file: '+paramfile+'\n\tCurrent directory is: ' + os.getcwd()
 
-    con,meta,Session = dbr.sql_alchemy_connect(cdf_schema,paramfile)
-    roll_up_to_Id = dbr.read_id_from_enum(con, meta, cdf_schema, 'ReportingUnitType', roll_up_to_ReportingUnitType)
-    roll_up_from_Id = dbr.read_id_from_enum(con, meta, cdf_schema, 'ReportingUnitType', atomic_ReportingUnitType)
+    # TODO pass session variable?
+    roll_up_to_Id = dbr.read_id_from_enum(session, meta, cdf_schema, 'ReportingUnitType', roll_up_to_ReportingUnitType)
+    roll_up_from_Id = dbr.read_id_from_enum(session, meta, cdf_schema, 'ReportingUnitType', atomic_ReportingUnitType)
 
     print('Creating basic Election object')
     e = Election(cdf_schema,Election_Id,pickle_dir = pickle_dir,rollup_dframe = None, anomaly_dframe = None,
@@ -124,7 +124,7 @@ def create_election(cdf_schema,Election_Id,roll_up_to_ReportingUnitType='county'
 
     #%% rollup dataframe
     print('Getting rolled-up data for all contests')
-    ElectionName = dbr.read_single_value_from_id(con,meta,cdf_schema,'Election','Name',Election_Id).replace(' ','')
+    ElectionName = dbr.read_single_value_from_id(session.bind,meta,cdf_schema,'Election','Name',Election_Id).replace(' ','')
     rollup_filepath = pickle_dir+'rollup_to_'+roll_up_to_ReportingUnitType
 
     #%% get the roll-up dframe from the db, or from pickle
@@ -497,9 +497,10 @@ def pframe_to_zscore(pframe):
         return euclidean_zscore(row_vectors)
 
 if __name__ == '__main__':
-    nc_2018 = create_election('cdf_nc',15834)
+    con, meta = dbr.sql_alchemy_connect(schema, paramfile='../../local_data/database.ini')
+
+    nc_2018 = create_election(session,meta,'cdf_nc',15834)
     schema = 'cdf_nc'
-    con,meta, Session = dbr.sql_alchemy_connect(schema,paramfile = '../../local_data/database.ini')
     nc_2018.anomaly_scores(con,meta,schema)
 
     if con:
