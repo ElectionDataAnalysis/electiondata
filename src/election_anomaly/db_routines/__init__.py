@@ -70,13 +70,14 @@ def read_field_value(con,cur,schema,tup):
     a = query(q,sql_ids,strs,con,cur)[0]
     return a[0]
 
-def read_single_value_from_id(con,meta,schema,table,field,id):
+def read_single_value_from_id(session,meta,schema,table,field,id):
     """Takes an engine connection con return the corresponding field value
     read from the record with the given id from the given table of the given schema.
     """
-    t = db.Table(table,meta,autoload=True, autoload_with=con,schema=schema)
-    q = db.select([eval(t+'.columns.'+field)]).where(t.columns.Id == str(id))
-    ResultProxy = con.execute(q)
+    t = db.Table(table,meta,autoload=True, autoload_with=session.bind,schema=schema)
+    q = session.query(eval('t.c.'+field)).filter(t.c.Id == id)
+#    q = db.select([eval(t+'.columns.'+field)]).where(t.columns.Id == str(id))
+    ResultProxy = session.execute(q)
     ResultSet = ResultProxy.fetchall()
     if ResultSet:
         return ResultSet[0][0]

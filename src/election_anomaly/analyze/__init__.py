@@ -19,7 +19,7 @@ class Election(object): # TODO check that object is necessary (apparently for pi
         assert isinstance(by_ReportingUnitType_Id, int), 'by_ReportingUnitType_Id must be an integer'
         assert isinstance(atomic_ReportingUnitType_Id, int), 'atomicReportingUnitType_Id must be an integer'
 
-        con, meta , Session = dbr.sql_alchemy_connect(schema=self.cdf_schema)
+        con, meta = dbr.sql_alchemy_connect(schema=self.cdf_schema)
 
         q = """SELECT
             secvcj."Contest_Id", cruj."ParentReportingUnit_Id" AS "ReportingUnit_Id",  secvcj."Selection_Id", vc."CountItemType_Id", COALESCE(sum(vc."Count"),0) AS "Count"
@@ -124,7 +124,7 @@ def create_election(session,meta,cdf_schema,Election_Id,roll_up_to_ReportingUnit
 
     #%% rollup dataframe
     print('Getting rolled-up data for all contests')
-    ElectionName = dbr.read_single_value_from_id(session.bind,meta,cdf_schema,'Election','Name',Election_Id).replace(' ','')
+    ElectionName = dbr.read_single_value_from_id(session,meta,cdf_schema,'Election','Name',Election_Id).replace(' ','')
     rollup_filepath = pickle_dir+'rollup_to_'+roll_up_to_ReportingUnitType
 
     #%% get the roll-up dframe from the db, or from pickle
@@ -289,23 +289,23 @@ def pivot(dataframe_by_name, col_field='Selection', filter=[],mode='raw'):
     return cf
 
 
-def create_contest_rollup_from_election(con,meta,e, Contest_Id):   # TODO get rid of con/meta/schema here by making names part of the Election def?
+def create_contest_rollup_from_election(session,meta,e,Contest_Id):   # TODO get rid of con/meta/schema here by making names part of the Election def?
     assert isinstance(e,Election),'election must be an instance of the Election class'
     # assert isinstance(Contest_Id,int), 'Contest_Id must be an integer' # TODO why did this fail?
-    ElectionName = dbr.read_single_value_from_id(con, meta, e.cdf_schema,'Election','Name', e.Election_Id)
-    contest_type = dbr.contest_type_from_contest_id(con,meta,e.cdf_schema,Contest_Id) # Candidate or BallotMeasure
+    ElectionName = dbr.read_single_value_from_id(session, meta, e.cdf_schema,'Election','Name', e.Election_Id)
+    contest_type = dbr.contest_type_from_contest_id(session.bind,meta,e.cdf_schema,Contest_Id) # Candidate or BallotMeasure
     contesttable = contest_type + 'Contest'
-    ContestName = dbr.read_single_value_from_id(con,meta,e.cdf_schema,contesttable,'Name',Contest_Id) # TODO candidte or ballotmeasure
+    ContestName = dbr.read_single_value_from_id(session,meta,e.cdf_schema,contesttable,'Name',Contest_Id) # TODO candidte or ballotmeasure
 
     dataframe_by_id = e.rollup_dframe[e.rollup_dframe.Contest_Id == Contest_Id].drop('Contest_Id',axis=1)
-    dataframe_by_name = id_values_to_name(con, meta, e.cdf_schema, dataframe_by_id)
+    dataframe_by_name = id_values_to_name(session.bind, meta, e.cdf_schema, dataframe_by_id)
     by_ReportingUnitType = e.roll_up_to_ReportingUnitType
     by_ReportingUnitType_Id = e.roll_up_to_ReportingUnitType_Id
     return ContestRollup(dataframe_by_id, dataframe_by_name, e.cdf_schema, e.Election_Id, Contest_Id,
                          by_ReportingUnitType_Id, ElectionName, ContestName, by_ReportingUnitType,
                          contest_type, None)
 
-def create_contest_rollup(con, meta, cdf_schema, Election_Id, Contest_Id, by_ReportingUnitType_Id, atomic_ReportingUnitType_Id,contest_type, pickle_dir):
+def create_contest_rollup(session, meta, cdf_schema, Election_Id, Contest_Id, by_ReportingUnitType_Id, atomic_ReportingUnitType_Id,contest_type, pickle_dir):
     assert isinstance(cdf_schema,str) ,'cdf_schema must be a string'
     assert isinstance(Election_Id,int), 'Election_Id must be an integer'
     assert isinstance(Contest_Id,int), 'Contest_Id must be an integer'
@@ -314,9 +314,9 @@ def create_contest_rollup(con, meta, cdf_schema, Election_Id, Contest_Id, by_Rep
     assert os.path.isdir(pickle_dir) , 'No such directory: '+pickle_dir+'\nCurrent directory is: '+os.getcwd()
     if not pickle_dir[-1] == '/': pickle_dir += '/' # ensure directory ends with slash
 
-    ElectionName = dbr.read_single_value_from_id(con,meta,cdf_schema,'Election','Name',Election_Id)
-    ContestName = dbr.read_single_value_from_id(con,meta,cdf_schema,contest_type+'Contest','Name',Contest_Id)
-    childReportingUnitType = dbr.read_single_value_from_id(con, meta, cdf_schema,'ReportingUnitType','Txt', by_ReportingUnitType_Id)
+    ElectionName = dbr.read_single_value_from_id(session,meta,cdf_schema,'Election','Name',Election_Id)
+    ContestName = dbr.read_single_value_from_id(session,meta,cdf_schema,contest_type+'Contest','Name',Contest_Id)
+    childReportingUnitType = dbr.read_single_value_from_id(session, meta, cdf_schema,'ReportingUnitType','Txt', by_ReportingUnitType_Id)
 
     
     f_by_id = pickle_dir + cdf_schema + 'eid' + str(Election_Id) + 'ccid' + str(Contest_Id) + 'crut' + str(
@@ -324,7 +324,7 @@ def create_contest_rollup(con, meta, cdf_schema, Election_Id, Contest_Id, by_Rep
     if os.path.exists(f_by_id):
         dataframe_by_id = pd.read_pickle(f_by_id)
     else:
-        dataframe_by_id = rollup_count(con, cdf_schema, Election_Id, Contest_Id, by_ReportingUnitType_Id,atomic_ReportingUnitType_Id)
+        dataframe_by_id = rollup_count(session.bind, cdf_schema, Election_Id, Contest_Id, by_ReportingUnitType_Id,atomic_ReportingUnitType_Id)
         dataframe_by_id.to_pickle(f_by_id)
 
     f_by_name = pickle_dir + cdf_schema + 'eid' + str(Election_Id) + 'ccid' + str(Contest_Id) + 'crut' + str(
@@ -332,7 +332,7 @@ def create_contest_rollup(con, meta, cdf_schema, Election_Id, Contest_Id, by_Rep
     if os.path.exists(f_by_name):
         dataframe_by_name = pd.read_pickle(f_by_name)
     else:
-        dataframe_by_name = id_values_to_name(con,meta,cdf_schema,dataframe_by_id)
+        dataframe_by_name = id_values_to_name(session.bind,meta,cdf_schema,dataframe_by_id)
         dataframe_by_name.to_pickle(f_by_name)
 
     return ContestRollup(dataframe_by_id, dataframe_by_name, cdf_schema, Election_Id, Contest_Id, by_ReportingUnitType_Id, ElectionName, ContestName, childReportingUnitType,
