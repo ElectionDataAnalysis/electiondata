@@ -151,27 +151,20 @@ def composing_from_reporting_unit_name(session,meta,cdf_schema,name,id=0):
     return
 
 def composing_from_reporting_unit_name_PANDAS(ru_dframe,cruj_dframe,name,id=0):
-    # insert all ComposingReportingUnit joins that can be deduced from the internal db name of the ReportingUnit
+    """inserts all ComposingReportingUnit joins that can be deduced from the internal db name of the ReportingUnit
+    into the ComposingReportingUnitJoin dataframe; returns bigger dataframe.
     # Use the ; convention to identify all parents
+    """
 
-    ru_d = {'fields':[{'fieldname':'Name','datatype':'TEXT'}],
-                     'enumerations':['ReportingUnitType','CountItemStatus'],
-                     'other_element_refs':[],
-                     'unique_constraints':[['Name']],
-		     'not_null_fields':['ReportingUnitType_Id']} # TODO avoid hard-coding this in various places
-    cruj_d = {'fields':[],
-                      'enumerations':[],
-                      'other_element_refs':[{'fieldname':'ParentReportingUnit_Id', 'refers_to':'ReportingUnit'}, {'fieldname':'ChildReportingUnit_Id', 'refers_to':'ReportingUnit'}],
-                      'unique_constraints':[['ParentReportingUnit_Id','ChildReportingUnit_Id']],
-		     'not_null_fields':['ParentReportingUnit_Id','ChildReportingUnit_Id']} # TODO avoid hard-coding this in various places
-    # if no id is passed, find id corresponding to name
     if id == 0:
-        id, ru_dframe = id_from_select_or_insert_PANDAS(ru_dframe, {'Name': name})
+        child_id, ru_dframe = id_from_select_or_insert_PANDAS(ru_dframe, {'Name': name}) # TODO does function actually change ru_dframe? Why?
+    else: child_id = id
     chain = name.split(';')
-    for i in range(1,len(chain)+1):
-        parent = ';'.join(chain[0:i])
-        parent_id = id_from_select_only_PANDAS(ru_dframe, {'Name': parent})
-        id, cruj_dframe = id_from_select_or_insert_PANDAS(cruj_dframe, {'ParentReportingUnit_Id': parent_id, 'ChildReportingUnit_Id': id})
+    if len(chain) > 1:
+        for i in range(1,len(chain)):
+            parent = ';'.join(chain[0:i])
+            parent_id = id_from_select_only_PANDAS(ru_dframe, {'Name': parent})
+            unused_id, cruj_dframe = id_from_select_or_insert_PANDAS(cruj_dframe, {'ParentReportingUnit_Id': parent_id, 'ChildReportingUnit_Id': child_id})
     return cruj_dframe
 
 def format_type_for_insert(session,e_table,txt):
@@ -218,6 +211,7 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
     Election_dframe = pd.read_sql_table('Election', session.bind, cdf_schema, index_col='Id')
     ReportingUnit_dframe = pd.read_sql_table('ReportingUnit', session.bind, cdf_schema, index_col='Id')
     Party_dframe = pd.read_sql_table('Party', session.bind, cdf_schema, index_col='Id')
+    Office_dframe = pd.read_sql_table('Office', session.bind, cdf_schema, index_col='Id')
     CandidateContest_dframe = pd.read_sql_table('CandidateContest', session.bind, cdf_schema, index_col='Id')
     Candidate_dframe = pd.read_sql_table('Candidate', session.bind, cdf_schema, index_col='Id')
     CandidateSelection_dframe = pd.read_sql_table('CandidateSelection', session.bind, cdf_schema, index_col='Id')
@@ -330,15 +324,16 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
         else:       # if not a Ballot Measure (i.e., if a Candidate Contest)
             raw_office_name = eval(munger_fields_d['Office'][0]['ExternalIdentifier'])
 
-            a = id_from_select_only_PANDAS(ExternalIdentifier_dframe,{'IdentifierType_Id':id_type_other_id,'Value':raw_office_name,'OtherIdentifierType':mu.name})
+            ei_id = id_from_select_only_PANDAS(ExternalIdentifier_dframe,{'IdentifierType_Id':id_type_other_id,'Value':raw_office_name,'OtherIdentifierType':mu.name})
 
-            if not a: # if Office is not already associated to the munger in the db (from state's context_dictionary, for example), skip this row
+            if ei_id == 0: # if Office is not already associated to the munger in the db (from state's context_dictionary, for example), skip this row
                continue
-            ids_d['Office_Id'] = a[0][0]
+            ids_d['Office_Id'] = ExternalIdentifier_dframe['ForeignId'].loc[ei_id]
+            office_name = Office_dframe['Name'].loc[ids_d['Office_Id']]
 
             # Find Id for ReportingUnit for contest via context_dictionary['Office']
             # find reporting unit associated to contest (not reporting unit associated to df row)
-            election_district_name = df.state.context_dictionary['Office'][a[0][1]]['ElectionDistrict']
+            election_district_name = df.state.context_dictionary['Office'][office_name]['ElectionDistrict']
             election_district_id = id_from_select_only_PANDAS(ReportingUnit_dframe,{'Name':election_district_name})
 
             # insert into CandidateContest table

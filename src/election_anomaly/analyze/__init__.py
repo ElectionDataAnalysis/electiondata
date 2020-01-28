@@ -149,8 +149,6 @@ def create_election(session,meta,cdf_schema,Election_Id,roll_up_to_ReportingUnit
         e.anomaly_dframe = pd.DataFrame(data=None,index=None,
                             columns=['ContestName','column_field','filter_field','filter_value','anomaly_algorithm',
                                      'anomaly_value_totals','anomaly_values_pcts'])
-    if con:
-        con.dispose()
     return e
 
 class ContestRollup:

@@ -17,7 +17,7 @@ import os
 
 import sqlalchemy as db
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import event, Column, Table, String, Integer, Date
+from sqlalchemy import event, Column, Table, String, Integer, Date, MetaData
 from sqlalchemy.schema import CreateSchema
 from alembic.migration import MigrationContext
 from alembic.operations import Operations
@@ -63,27 +63,21 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=eng)
     session = Session()
 
-    to_cdf = input('Load and process election data into a common-data-format database (y/n)?\n')
-    if to_cdf == 'y':
-        default = 'NC'
-        abbr = input('Enter two-character abbreviation for your state/district/territory (default is '+default+')\n') or default
+    default = 'NC'
+    abbr = input(
+        'Enter two-character abbreviation for your state/district/territory (default is ' + default + ')\n'
+                ) or default
+    s = sf.create_state(abbr, '../local_data/' + abbr)
 
+    default = 'cdf_nc_test'
+    cdf_schema = input(
+        'Enter name of CDF schema (default is ' + default + ')\n'
+                ) or default
+
+    context_to_cdf = input('Load and process context data into a common-data-format database (y/n)?\n')
+    if context_to_cdf == 'y':
         default = 'cdf_nc_test'
         cdf_schema=input('Enter name of CDF schema (default is '+default+')\n') or default
-
-        default = 'nc_export1'
-        munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
-
-        default = 'results_pct_20181106.txt'
-        #default = 'alamance.txt'
-        df_name = input('Enter name of datafile (default is '+default+')\n') or default
-
-
-        s = sf.create_state(abbr,'../local_data/'+abbr)
-
-        munger_path = '../local_data/mungers/'+munger_name+'.txt'
-        print('Creating munger instance from '+munger_path)
-        m = sf.create_munger(munger_path)
 
         # %% Initiate db engine and create session
         eng, meta_generic = dbr.sql_alchemy_connect()
@@ -110,27 +104,49 @@ if __name__ == '__main__':
             print('Loading state context info into CDF schema') # *** takes a long time; why?
             context.context_to_cdf_PANDAS(session, meta_cdf_schema, s, cdf_schema,enumeration_tables)
 
+
+    # need_to_load_data = 'y'
+    need_to_load_data = input('Load raw data (y/n)?\n')
+    if need_to_load_data == 'y':
+        default = 'nc_export1'
+        munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
+
+        munger_path = '../local_data/mungers/'+munger_name+'.txt'
+        print('Creating munger instance from '+munger_path)
+        m = sf.create_munger(munger_path)
+
+        default = 'results_pct_20181106.txt'
+        #default = 'alamance.txt'
+        df_name = input('Enter name of datafile (default is '+default+')\n') or default
+
         print('Creating metafile instance')
         mf = sf.create_metafile(s,'layout_results_pct.txt')
 
         print('Creating datafile instance')
-        df = sf.create_datafile(s,'General Election 2018-11-06',df_name,mf,m)
-
-        need_to_load_data = 'n'
-        #need_to_load_data = input('Load raw data from '+df.file_name+' into schema '+s.schema_name+' (y/n)?\n')
-        if need_to_load_data == 'y':
-            print('Load raw data from '+df.file_name)
-            if df.separator == 'tab': delimiter = '\t'
-            elif df.separator == 'comma': delimiter = ','
-            else:
-                print('Separator in file unknown, assumed to be tab')
-                delimiter = '\t'
-            raw_data_dframe = pd.read_csv(s.path_to_state_dir+'data/' + df.file_name,sep=delimiter)
-            raw_data_dframe.to_sql(df.table_name,con=session.bind,schema=s.schema_name,index=False)
+        df = sf.create_datafile(s, 'General Election 2018-11-06', df_name, mf, m)
+        print('Load raw data from '+df.file_name)
+        if df.separator == 'tab': delimiter = '\t'
+        elif df.separator == 'comma': delimiter = ','
+        else:
+            print('Separator in file unknown, assumed to be tab')
+            delimiter = '\t'
+        raw_data_dframe = pd.read_csv(s.path_to_state_dir+'data/' + df.file_name,sep=delimiter)
+        try:
+            raw_data_dframe.to_sql(df.table_name,con=session.bind,schema=s.schema_name,index=False,if_exists='fail')
             session.commit()
+        except:
+            replace = input('Table already exists in database. Replace (y/n)?\n')
+            if replace == 'y':
+                raw_data_dframe.to_sql(df.table_name, con=session.bind, schema=s.schema_name, index=False,if_exists='replace')
+                session.commit()
+            else:
+                print('Continuing with existing file')
+
+
         print('Loading data from df table\n\tin schema '+ s.schema_name+ '\n\tto CDF schema '+cdf_schema+'\n\tusing munger '+munger_name)
+        meta_cdf_schema = MetaData(bind=eng, schema=cdf_schema) # TODO remove duplicate defs of this var
         mr.raw_records_to_cdf(session,meta_cdf_schema,df,m,cdf_schema)
-        print('Done!')
+        print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
 
     find_anomalies = input('Find anomalies in an election (y/n)?\n')
     if find_anomalies == 'y':
@@ -170,11 +186,10 @@ if __name__ == '__main__':
             print(e)
             dummy = input('Create the directory and hit enter to continue.')
 
-        e = an.create_election(session,meta_generic,cdf_schema,election_id,roll_up_to_ru_type,atomic_ru_type,pickle_dir,paramfile)
+        e = an.create_election(session, meta_generic, cdf_schema, election_id, roll_up_to_ru_type,
+                               atomic_ru_type, pickle_dir, paramfile)
         e.anomaly_scores(eng, meta_generic, cdf_schema)
         #%%
         e.worst_bar_for_each_contest(eng, meta_generic, 2)
 
     print('Done!')
-
-

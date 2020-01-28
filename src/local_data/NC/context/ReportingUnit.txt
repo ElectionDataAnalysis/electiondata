@@ -1731,23 +1731,23 @@ North Carolina;Lincoln County;OS WEST	precinct
 North Carolina;Lincoln County;Precinct PC22	precinct
 North Carolina;Lincoln County;Precinct AS25	precinct
 North Carolina;Lincoln County;Precinct LI14	precinct
-North Carolina;Mcdowell County;Precinct CCREEK	precinct
-North Carolina;Mcdowell County;Precinct N.COVE	precinct
-North Carolina;Mcdowell County;Precinct MAR 4	precinct
-North Carolina;Mcdowell County;Precinct HIGGIN	precinct
-North Carolina;Mcdowell County;Precinct DYSART	precinct
-North Carolina;Mcdowell County;Precinct FORT 2	precinct
-North Carolina;Mcdowell County;Precinct MAR 2	precinct
-North Carolina;Mcdowell County;Precinct MAR 3	precinct
-North Carolina;Mcdowell County;Precinct WEST M	precinct
-North Carolina;Mcdowell County;Precinct M.COVE	precinct
-North Carolina;Mcdowell County;Precinct MAR 5	precinct
-North Carolina;Mcdowell County;Precinct FORT 1	precinct
-North Carolina;Mcdowell County;Precinct NEBO	precinct
-North Carolina;Mcdowell County;Precinct T.COVE	precinct
-North Carolina;Mcdowell County;Precinct PLEASA	precinct
-North Carolina;Mcdowell County;Precinct MAR 1	precinct
-North Carolina;Mcdowell County;Precinct GLENWD	precinct
+North Carolina;McDowell County;Precinct CCREEK	precinct
+North Carolina;McDowell County;Precinct N.COVE	precinct
+North Carolina;McDowell County;Precinct MAR 4	precinct
+North Carolina;McDowell County;Precinct HIGGIN	precinct
+North Carolina;McDowell County;Precinct DYSART	precinct
+North Carolina;McDowell County;Precinct FORT 2	precinct
+North Carolina;McDowell County;Precinct MAR 2	precinct
+North Carolina;McDowell County;Precinct MAR 3	precinct
+North Carolina;McDowell County;Precinct WEST M	precinct
+North Carolina;McDowell County;Precinct M.COVE	precinct
+North Carolina;McDowell County;Precinct MAR 5	precinct
+North Carolina;McDowell County;Precinct FORT 1	precinct
+North Carolina;McDowell County;Precinct NEBO	precinct
+North Carolina;McDowell County;Precinct T.COVE	precinct
+North Carolina;McDowell County;Precinct PLEASA	precinct
+North Carolina;McDowell County;Precinct MAR 1	precinct
+North Carolina;McDowell County;Precinct GLENWD	precinct
 North Carolina;Mecklenburg County;Precinct 050	precinct
 North Carolina;Mecklenburg County;Precinct 107.1	precinct
 North Carolina;Mecklenburg County;Precinct 208	precinct
@@ -1966,56 +1966,56 @@ North Carolina;Montgomery County;Precinct ROC	precinct
 North Carolina;Montgomery County;Precinct CAN	precinct
 North Carolina;Montgomery County;Precinct BIS	precinct
 North Carolina;Montgomery County;Precinct STA	precinct
-North Carolina;New hanover County;Precinct W27	precinct
-North Carolina;New hanover County;Precinct CF06	precinct
-North Carolina;New hanover County;Precinct CF05	precinct
-North Carolina;New hanover County;Precinct FP08	precinct
-North Carolina;New hanover County;Precinct W17	precinct
-North Carolina;New hanover County;Precinct FP04	precinct
-North Carolina;New hanover County;Precinct W29	precinct
-North Carolina;New hanover County;Precinct W26	precinct
-North Carolina;New hanover County;OS GVT PAPER	precinct
-North Carolina;New hanover County;Precinct H05	precinct
-North Carolina;New hanover County;Precinct W31	precinct
-North Carolina;New hanover County;PROVISIONAL	precinct
-North Carolina;New hanover County;Precinct H11	precinct
-North Carolina;New hanover County;Precinct FP07	precinct
-North Carolina;New hanover County;Precinct W13	precinct
-North Carolina;New hanover County;Precinct W16	precinct
-North Carolina;New hanover County;Precinct W12	precinct
-North Carolina;New hanover County;OS CFCC PAPER	precinct
-North Carolina;New hanover County;Precinct CF01	precinct
-North Carolina;New hanover County;Precinct CF02	precinct
-North Carolina;New hanover County;Precinct FP06	precinct
-North Carolina;New hanover County;Precinct H03	precinct
-North Carolina;New hanover County;Precinct H04	precinct
-North Carolina;New hanover County;OS CAB PAPER	precinct
-North Carolina;New hanover County;Precinct WB	precinct
-North Carolina;New hanover County;Precinct M03	precinct
-North Carolina;New hanover County;Precinct W18	precinct
-North Carolina;New hanover County;Precinct W15	precinct
-North Carolina;New hanover County;Precinct W30	precinct
-North Carolina;New hanover County;ABSENTEE MAIL	precinct
-North Carolina;New hanover County;Precinct M06	precinct
-North Carolina;New hanover County;Precinct H02	precinct
-North Carolina;New hanover County;Precinct H01	precinct
-North Carolina;New hanover County;Precinct W28	precinct
-North Carolina;New hanover County;Precinct W25	precinct
-North Carolina;New hanover County;Precinct H10	precinct
-North Carolina;New hanover County;Precinct H13	precinct
-North Carolina;New hanover County;Precinct H06	precinct
-North Carolina;New hanover County;OS NLB PAPER	precinct
-North Carolina;New hanover County;Precinct W03	precinct
-North Carolina;New hanover County;OS SRC PAPER	precinct
-North Carolina;New hanover County;Precinct W08	precinct
-North Carolina;New hanover County;Precinct W21	precinct
-North Carolina;New hanover County;Precinct W24	precinct
-North Carolina;New hanover County;Precinct M02	precinct
-North Carolina;New hanover County;Precinct M07	precinct
-North Carolina;New hanover County;Precinct M04	precinct
-North Carolina;New hanover County;Precinct H12	precinct
-North Carolina;New hanover County;Precinct H08	precinct
-North Carolina;New hanover County;Precinct FP03	precinct
+North Carolina;New Hanover County;Precinct W27	precinct
+North Carolina;New Hanover County;Precinct CF06	precinct
+North Carolina;New Hanover County;Precinct CF05	precinct
+North Carolina;New Hanover County;Precinct FP08	precinct
+North Carolina;New Hanover County;Precinct W17	precinct
+North Carolina;New Hanover County;Precinct FP04	precinct
+North Carolina;New Hanover County;Precinct W29	precinct
+North Carolina;New Hanover County;Precinct W26	precinct
+North Carolina;New Hanover County;OS GVT PAPER	precinct
+North Carolina;New Hanover County;Precinct H05	precinct
+North Carolina;New Hanover County;Precinct W31	precinct
+North Carolina;New Hanover County;PROVISIONAL	precinct
+North Carolina;New Hanover County;Precinct H11	precinct
+North Carolina;New Hanover County;Precinct FP07	precinct
+North Carolina;New Hanover County;Precinct W13	precinct
+North Carolina;New Hanover County;Precinct W16	precinct
+North Carolina;New Hanover County;Precinct W12	precinct
+North Carolina;New Hanover County;OS CFCC PAPER	precinct
+North Carolina;New Hanover County;Precinct CF01	precinct
+North Carolina;New Hanover County;Precinct CF02	precinct
+North Carolina;New Hanover County;Precinct FP06	precinct
+North Carolina;New Hanover County;Precinct H03	precinct
+North Carolina;New Hanover County;Precinct H04	precinct
+North Carolina;New Hanover County;OS CAB PAPER	precinct
+North Carolina;New Hanover County;Precinct WB	precinct
+North Carolina;New Hanover County;Precinct M03	precinct
+North Carolina;New Hanover County;Precinct W18	precinct
+North Carolina;New Hanover County;Precinct W15	precinct
+North Carolina;New Hanover County;Precinct W30	precinct
+North Carolina;New Hanover County;ABSENTEE MAIL	precinct
+North Carolina;New Hanover County;Precinct M06	precinct
+North Carolina;New Hanover County;Precinct H02	precinct
+North Carolina;New Hanover County;Precinct H01	precinct
+North Carolina;New Hanover County;Precinct W28	precinct
+North Carolina;New Hanover County;Precinct W25	precinct
+North Carolina;New Hanover County;Precinct H10	precinct
+North Carolina;New Hanover County;Precinct H13	precinct
+North Carolina;New Hanover County;Precinct H06	precinct
+North Carolina;New Hanover County;OS NLB PAPER	precinct
+North Carolina;New Hanover County;Precinct W03	precinct
+North Carolina;New Hanover County;OS SRC PAPER	precinct
+North Carolina;New Hanover County;Precinct W08	precinct
+North Carolina;New Hanover County;Precinct W21	precinct
+North Carolina;New Hanover County;Precinct W24	precinct
+North Carolina;New Hanover County;Precinct M02	precinct
+North Carolina;New Hanover County;Precinct M07	precinct
+North Carolina;New Hanover County;Precinct M04	precinct
+North Carolina;New Hanover County;Precinct H12	precinct
+North Carolina;New Hanover County;Precinct H08	precinct
+North Carolina;New Hanover County;Precinct FP03	precinct
 North Carolina;Northampton County;Precinct CONWAY	precinct
 North Carolina;Northampton County;Precinct JACKSO	precinct
 North Carolina;Northampton County;OFFICE ONE STOP	precinct

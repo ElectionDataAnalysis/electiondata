@@ -2020,23 +2020,23 @@ ReportingUnit	North Carolina;Lincoln County;OS WEST	nc_export1	LINCOLN;OS WEST
 ReportingUnit	North Carolina;Lincoln County;Precinct PC22	nc_export1	LINCOLN;PC22
 ReportingUnit	North Carolina;Lincoln County;Precinct AS25	nc_export1	LINCOLN;AS25
 ReportingUnit	North Carolina;Lincoln County;Precinct LI14	nc_export1	LINCOLN;LI14
-ReportingUnit	North Carolina;Mcdowell County;Precinct CCREEK	nc_export1	MCDOWELL;CCREEK
-ReportingUnit	North Carolina;Mcdowell County;Precinct N.COVE	nc_export1	MCDOWELL;N.COVE
-ReportingUnit	North Carolina;Mcdowell County;Precinct MAR 4	nc_export1	MCDOWELL;MAR 4
-ReportingUnit	North Carolina;Mcdowell County;Precinct HIGGIN	nc_export1	MCDOWELL;HIGGIN
-ReportingUnit	North Carolina;Mcdowell County;Precinct DYSART	nc_export1	MCDOWELL;DYSART
-ReportingUnit	North Carolina;Mcdowell County;Precinct FORT 2	nc_export1	MCDOWELL;FORT 2
-ReportingUnit	North Carolina;Mcdowell County;Precinct MAR 2	nc_export1	MCDOWELL;MAR 2
-ReportingUnit	North Carolina;Mcdowell County;Precinct MAR 3	nc_export1	MCDOWELL;MAR 3
-ReportingUnit	North Carolina;Mcdowell County;Precinct WEST M	nc_export1	MCDOWELL;WEST M
-ReportingUnit	North Carolina;Mcdowell County;Precinct M.COVE	nc_export1	MCDOWELL;M.COVE
-ReportingUnit	North Carolina;Mcdowell County;Precinct MAR 5	nc_export1	MCDOWELL;MAR 5
-ReportingUnit	North Carolina;Mcdowell County;Precinct FORT 1	nc_export1	MCDOWELL;FORT 1
-ReportingUnit	North Carolina;Mcdowell County;Precinct NEBO	nc_export1	MCDOWELL;NEBO
-ReportingUnit	North Carolina;Mcdowell County;Precinct T.COVE	nc_export1	MCDOWELL;T.COVE
-ReportingUnit	North Carolina;Mcdowell County;Precinct PLEASA	nc_export1	MCDOWELL;PLEASA
-ReportingUnit	North Carolina;Mcdowell County;Precinct MAR 1	nc_export1	MCDOWELL;MAR 1
-ReportingUnit	North Carolina;Mcdowell County;Precinct GLENWD	nc_export1	MCDOWELL;GLENWD
+ReportingUnit	North Carolina;McDowell County;Precinct CCREEK	nc_export1	MCDOWELL;CCREEK
+ReportingUnit	North Carolina;McDowell County;Precinct N.COVE	nc_export1	MCDOWELL;N.COVE
+ReportingUnit	North Carolina;McDowell County;Precinct MAR 4	nc_export1	MCDOWELL;MAR 4
+ReportingUnit	North Carolina;McDowell County;Precinct HIGGIN	nc_export1	MCDOWELL;HIGGIN
+ReportingUnit	North Carolina;McDowell County;Precinct DYSART	nc_export1	MCDOWELL;DYSART
+ReportingUnit	North Carolina;McDowell County;Precinct FORT 2	nc_export1	MCDOWELL;FORT 2
+ReportingUnit	North Carolina;McDowell County;Precinct MAR 2	nc_export1	MCDOWELL;MAR 2
+ReportingUnit	North Carolina;McDowell County;Precinct MAR 3	nc_export1	MCDOWELL;MAR 3
+ReportingUnit	North Carolina;McDowell County;Precinct WEST M	nc_export1	MCDOWELL;WEST M
+ReportingUnit	North Carolina;McDowell County;Precinct M.COVE	nc_export1	MCDOWELL;M.COVE
+ReportingUnit	North Carolina;McDowell County;Precinct MAR 5	nc_export1	MCDOWELL;MAR 5
+ReportingUnit	North Carolina;McDowell County;Precinct FORT 1	nc_export1	MCDOWELL;FORT 1
+ReportingUnit	North Carolina;McDowell County;Precinct NEBO	nc_export1	MCDOWELL;NEBO
+ReportingUnit	North Carolina;McDowell County;Precinct T.COVE	nc_export1	MCDOWELL;T.COVE
+ReportingUnit	North Carolina;McDowell County;Precinct PLEASA	nc_export1	MCDOWELL;PLEASA
+ReportingUnit	North Carolina;McDowell County;Precinct MAR 1	nc_export1	MCDOWELL;MAR 1
+ReportingUnit	North Carolina;McDowell County;Precinct GLENWD	nc_export1	MCDOWELL;GLENWD
 ReportingUnit	North Carolina;Mecklenburg County;Precinct 050	nc_export1	MECKLENBURG;050
 ReportingUnit	North Carolina;Mecklenburg County;Precinct 107.1	nc_export1	MECKLENBURG;107.1
 ReportingUnit	North Carolina;Mecklenburg County;Precinct 208	nc_export1	MECKLENBURG;208
@@ -2255,56 +2255,56 @@ ReportingUnit	North Carolina;Montgomery County;Precinct ROC	nc_export1	MONTGOMER
 ReportingUnit	North Carolina;Montgomery County;Precinct CAN	nc_export1	MONTGOMERY;CAN
 ReportingUnit	North Carolina;Montgomery County;Precinct BIS	nc_export1	MONTGOMERY;BIS
 ReportingUnit	North Carolina;Montgomery County;Precinct STA	nc_export1	MONTGOMERY;STA
-ReportingUnit	North Carolina;New hanover County;Precinct W27	nc_export1	NEW HANOVER;W27
-ReportingUnit	North Carolina;New hanover County;Precinct CF06	nc_export1	NEW HANOVER;CF06
-ReportingUnit	North Carolina;New hanover County;Precinct CF05	nc_export1	NEW HANOVER;CF05
-ReportingUnit	North Carolina;New hanover County;Precinct FP08	nc_export1	NEW HANOVER;FP08
-ReportingUnit	North Carolina;New hanover County;Precinct W17	nc_export1	NEW HANOVER;W17
-ReportingUnit	North Carolina;New hanover County;Precinct FP04	nc_export1	NEW HANOVER;FP04
-ReportingUnit	North Carolina;New hanover County;Precinct W29	nc_export1	NEW HANOVER;W29
-ReportingUnit	North Carolina;New hanover County;Precinct W26	nc_export1	NEW HANOVER;W26
-ReportingUnit	North Carolina;New hanover County;OS GVT PAPER	nc_export1	NEW HANOVER;OS GVT PAPER
-ReportingUnit	North Carolina;New hanover County;Precinct H05	nc_export1	NEW HANOVER;H05
-ReportingUnit	North Carolina;New hanover County;Precinct W31	nc_export1	NEW HANOVER;W31
-ReportingUnit	North Carolina;New hanover County;PROVISIONAL	nc_export1	NEW HANOVER;PROVISIONAL
-ReportingUnit	North Carolina;New hanover County;Precinct H11	nc_export1	NEW HANOVER;H11
-ReportingUnit	North Carolina;New hanover County;Precinct FP07	nc_export1	NEW HANOVER;FP07
-ReportingUnit	North Carolina;New hanover County;Precinct W13	nc_export1	NEW HANOVER;W13
-ReportingUnit	North Carolina;New hanover County;Precinct W16	nc_export1	NEW HANOVER;W16
-ReportingUnit	North Carolina;New hanover County;Precinct W12	nc_export1	NEW HANOVER;W12
-ReportingUnit	North Carolina;New hanover County;OS CFCC PAPER	nc_export1	NEW HANOVER;OS CFCC PAPER
-ReportingUnit	North Carolina;New hanover County;Precinct CF01	nc_export1	NEW HANOVER;CF01
-ReportingUnit	North Carolina;New hanover County;Precinct CF02	nc_export1	NEW HANOVER;CF02
-ReportingUnit	North Carolina;New hanover County;Precinct FP06	nc_export1	NEW HANOVER;FP06
-ReportingUnit	North Carolina;New hanover County;Precinct H03	nc_export1	NEW HANOVER;H03
-ReportingUnit	North Carolina;New hanover County;Precinct H04	nc_export1	NEW HANOVER;H04
-ReportingUnit	North Carolina;New hanover County;OS CAB PAPER	nc_export1	NEW HANOVER;OS CAB PAPER
-ReportingUnit	North Carolina;New hanover County;Precinct WB	nc_export1	NEW HANOVER;WB
-ReportingUnit	North Carolina;New hanover County;Precinct M03	nc_export1	NEW HANOVER;M03
-ReportingUnit	North Carolina;New hanover County;Precinct W18	nc_export1	NEW HANOVER;W18
-ReportingUnit	North Carolina;New hanover County;Precinct W15	nc_export1	NEW HANOVER;W15
-ReportingUnit	North Carolina;New hanover County;Precinct W30	nc_export1	NEW HANOVER;W30
-ReportingUnit	North Carolina;New hanover County;ABSENTEE MAIL	nc_export1	NEW HANOVER;ABSENTEE MAIL
-ReportingUnit	North Carolina;New hanover County;Precinct M06	nc_export1	NEW HANOVER;M06
-ReportingUnit	North Carolina;New hanover County;Precinct H02	nc_export1	NEW HANOVER;H02
-ReportingUnit	North Carolina;New hanover County;Precinct H01	nc_export1	NEW HANOVER;H01
-ReportingUnit	North Carolina;New hanover County;Precinct W28	nc_export1	NEW HANOVER;W28
-ReportingUnit	North Carolina;New hanover County;Precinct W25	nc_export1	NEW HANOVER;W25
-ReportingUnit	North Carolina;New hanover County;Precinct H10	nc_export1	NEW HANOVER;H10
-ReportingUnit	North Carolina;New hanover County;Precinct H13	nc_export1	NEW HANOVER;H13
-ReportingUnit	North Carolina;New hanover County;Precinct H06	nc_export1	NEW HANOVER;H06
-ReportingUnit	North Carolina;New hanover County;OS NLB PAPER	nc_export1	NEW HANOVER;OS NLB PAPER
-ReportingUnit	North Carolina;New hanover County;Precinct W03	nc_export1	NEW HANOVER;W03
-ReportingUnit	North Carolina;New hanover County;OS SRC PAPER	nc_export1	NEW HANOVER;OS SRC PAPER
-ReportingUnit	North Carolina;New hanover County;Precinct W08	nc_export1	NEW HANOVER;W08
-ReportingUnit	North Carolina;New hanover County;Precinct W21	nc_export1	NEW HANOVER;W21
-ReportingUnit	North Carolina;New hanover County;Precinct W24	nc_export1	NEW HANOVER;W24
-ReportingUnit	North Carolina;New hanover County;Precinct M02	nc_export1	NEW HANOVER;M02
-ReportingUnit	North Carolina;New hanover County;Precinct M07	nc_export1	NEW HANOVER;M07
-ReportingUnit	North Carolina;New hanover County;Precinct M04	nc_export1	NEW HANOVER;M04
-ReportingUnit	North Carolina;New hanover County;Precinct H12	nc_export1	NEW HANOVER;H12
-ReportingUnit	North Carolina;New hanover County;Precinct H08	nc_export1	NEW HANOVER;H08
-ReportingUnit	North Carolina;New hanover County;Precinct FP03	nc_export1	NEW HANOVER;FP03
+ReportingUnit	North Carolina;New Hanover County;Precinct W27	nc_export1	NEW HANOVER;W27
+ReportingUnit	North Carolina;New Hanover County;Precinct CF06	nc_export1	NEW HANOVER;CF06
+ReportingUnit	North Carolina;New Hanover County;Precinct CF05	nc_export1	NEW HANOVER;CF05
+ReportingUnit	North Carolina;New Hanover County;Precinct FP08	nc_export1	NEW HANOVER;FP08
+ReportingUnit	North Carolina;New Hanover County;Precinct W17	nc_export1	NEW HANOVER;W17
+ReportingUnit	North Carolina;New Hanover County;Precinct FP04	nc_export1	NEW HANOVER;FP04
+ReportingUnit	North Carolina;New Hanover County;Precinct W29	nc_export1	NEW HANOVER;W29
+ReportingUnit	North Carolina;New Hanover County;Precinct W26	nc_export1	NEW HANOVER;W26
+ReportingUnit	North Carolina;New Hanover County;OS GVT PAPER	nc_export1	NEW HANOVER;OS GVT PAPER
+ReportingUnit	North Carolina;New Hanover County;Precinct H05	nc_export1	NEW HANOVER;H05
+ReportingUnit	North Carolina;New Hanover County;Precinct W31	nc_export1	NEW HANOVER;W31
+ReportingUnit	North Carolina;New Hanover County;PROVISIONAL	nc_export1	NEW HANOVER;PROVISIONAL
+ReportingUnit	North Carolina;New Hanover County;Precinct H11	nc_export1	NEW HANOVER;H11
+ReportingUnit	North Carolina;New Hanover County;Precinct FP07	nc_export1	NEW HANOVER;FP07
+ReportingUnit	North Carolina;New Hanover County;Precinct W13	nc_export1	NEW HANOVER;W13
+ReportingUnit	North Carolina;New Hanover County;Precinct W16	nc_export1	NEW HANOVER;W16
+ReportingUnit	North Carolina;New Hanover County;Precinct W12	nc_export1	NEW HANOVER;W12
+ReportingUnit	North Carolina;New Hanover County;OS CFCC PAPER	nc_export1	NEW HANOVER;OS CFCC PAPER
+ReportingUnit	North Carolina;New Hanover County;Precinct CF01	nc_export1	NEW HANOVER;CF01
+ReportingUnit	North Carolina;New Hanover County;Precinct CF02	nc_export1	NEW HANOVER;CF02
+ReportingUnit	North Carolina;New Hanover County;Precinct FP06	nc_export1	NEW HANOVER;FP06
+ReportingUnit	North Carolina;New Hanover County;Precinct H03	nc_export1	NEW HANOVER;H03
+ReportingUnit	North Carolina;New Hanover County;Precinct H04	nc_export1	NEW HANOVER;H04
+ReportingUnit	North Carolina;New Hanover County;OS CAB PAPER	nc_export1	NEW HANOVER;OS CAB PAPER
+ReportingUnit	North Carolina;New Hanover County;Precinct WB	nc_export1	NEW HANOVER;WB
+ReportingUnit	North Carolina;New Hanover County;Precinct M03	nc_export1	NEW HANOVER;M03
+ReportingUnit	North Carolina;New Hanover County;Precinct W18	nc_export1	NEW HANOVER;W18
+ReportingUnit	North Carolina;New Hanover County;Precinct W15	nc_export1	NEW HANOVER;W15
+ReportingUnit	North Carolina;New Hanover County;Precinct W30	nc_export1	NEW HANOVER;W30
+ReportingUnit	North Carolina;New Hanover County;ABSENTEE MAIL	nc_export1	NEW HANOVER;ABSENTEE MAIL
+ReportingUnit	North Carolina;New Hanover County;Precinct M06	nc_export1	NEW HANOVER;M06
+ReportingUnit	North Carolina;New Hanover County;Precinct H02	nc_export1	NEW HANOVER;H02
+ReportingUnit	North Carolina;New Hanover County;Precinct H01	nc_export1	NEW HANOVER;H01
+ReportingUnit	North Carolina;New Hanover County;Precinct W28	nc_export1	NEW HANOVER;W28
+ReportingUnit	North Carolina;New Hanover County;Precinct W25	nc_export1	NEW HANOVER;W25
+ReportingUnit	North Carolina;New Hanover County;Precinct H10	nc_export1	NEW HANOVER;H10
+ReportingUnit	North Carolina;New Hanover County;Precinct H13	nc_export1	NEW HANOVER;H13
+ReportingUnit	North Carolina;New Hanover County;Precinct H06	nc_export1	NEW HANOVER;H06
+ReportingUnit	North Carolina;New Hanover County;OS NLB PAPER	nc_export1	NEW HANOVER;OS NLB PAPER
+ReportingUnit	North Carolina;New Hanover County;Precinct W03	nc_export1	NEW HANOVER;W03
+ReportingUnit	North Carolina;New Hanover County;OS SRC PAPER	nc_export1	NEW HANOVER;OS SRC PAPER
+ReportingUnit	North Carolina;New Hanover County;Precinct W08	nc_export1	NEW HANOVER;W08
+ReportingUnit	North Carolina;New Hanover County;Precinct W21	nc_export1	NEW HANOVER;W21
+ReportingUnit	North Carolina;New Hanover County;Precinct W24	nc_export1	NEW HANOVER;W24
+ReportingUnit	North Carolina;New Hanover County;Precinct M02	nc_export1	NEW HANOVER;M02
+ReportingUnit	North Carolina;New Hanover County;Precinct M07	nc_export1	NEW HANOVER;M07
+ReportingUnit	North Carolina;New Hanover County;Precinct M04	nc_export1	NEW HANOVER;M04
+ReportingUnit	North Carolina;New Hanover County;Precinct H12	nc_export1	NEW HANOVER;H12
+ReportingUnit	North Carolina;New Hanover County;Precinct H08	nc_export1	NEW HANOVER;H08
+ReportingUnit	North Carolina;New Hanover County;Precinct FP03	nc_export1	NEW HANOVER;FP03
 ReportingUnit	North Carolina;Northampton County;Precinct CONWAY	nc_export1	NORTHAMPTON;CONWAY
 ReportingUnit	North Carolina;Northampton County;Precinct JACKSO	nc_export1	NORTHAMPTON;JACKSO
 ReportingUnit	North Carolina;Northampton County;OFFICE ONE STOP	nc_export1	NORTHAMPTON;OFFICE ONE STOP

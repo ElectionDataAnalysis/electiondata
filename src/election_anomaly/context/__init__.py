@@ -4,9 +4,10 @@
 # utilities for extracting state context info and inserting it into the files in the context folder
 import sys
 import re
-from munge_routines import id_from_select_or_insert, format_type_for_insert, composing_from_reporting_unit_name, format_type_for_insert_PANDAS, id_from_select_or_insert_PANDAS, id_from_select_only_PANDAS
+from munge_routines import spellcheck, format_type_for_insert_PANDAS, id_from_select_or_insert_PANDAS, id_from_select_only_PANDAS, composing_from_reporting_unit_name_PANDAS
 import db_routines as dbr
 import pandas as pd
+import time
 
 def table_and_name_to_foreign_id(dict,row):
     """
@@ -112,6 +113,7 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
 
     #%% fill ExternalIdentifier table
     print('Fill ExternalIdentifier table')
+    # TODO why does this step take so long?
     # get table from context directory with the tab-separated definitions of external identifiers
     context_cdframe['ExternalIdentifier'] = pd.read_csv(s.path_to_state_dir + 'context/ExternalIdentifier.txt',sep = '\t')
     ei_df = context_cdframe['ExternalIdentifier']   # for legibility
@@ -134,7 +136,22 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
     dframe_to_sql(ei_df,session,meta,schema,'ExternalIdentifier')
     session.commit()
 
-    # TODO composing reporting units
+    #%% fill composing reporting units join table
+    print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
+    # TODO why does this take so long?
+    cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin', session.bind, schema,index_col='Id')
+    cdf['ReportingUnit'] = pd.read_sql_table('ReportingUnit', session.bind, schema,index_col='Id')
+
+    # correct any misspellings in the 'ReportingUnit' dataframe # TODO remove
+    spellcheck_dframe = pd.read_sql_table('corrections',session.bind,schema='misspellings',index_col='id')
+    spellcheck_dict = dict(spellcheck_dframe.to_dict('split')['data'])
+    cdf['ReportingUnit']['Name'] = cdf['ReportingUnit'].replace('Name',spellcheck_dict)
+    #time.sleep(5)  # TODO will time help avoid cruj_dframe=None problem?
+
+    for index,row in cdf['ReportingUnit'].iterrows():
+        cruj_dframe = composing_from_reporting_unit_name_PANDAS(cdf['ReportingUnit'],cruj_dframe,row['Name'],index)
+    dframe_to_sql(cruj_dframe,session,meta,schema,'ComposingReportingUnitJoin')
+    session.commit()
     #%% return
     return
 
