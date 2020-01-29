@@ -79,10 +79,6 @@ if __name__ == '__main__':
         default = 'cdf_nc_test'
         cdf_schema=input('Enter name of CDF schema (default is '+default+')\n') or default
 
-        # %% Initiate db engine and create session
-        eng, meta_generic = dbr.sql_alchemy_connect()
-        Session = sessionmaker(bind=eng)
-        session = Session()
 
         #%% create schema for state
         #dbr.create_schema(session,s.schema_name)
@@ -92,7 +88,7 @@ if __name__ == '__main__':
 
         enumeration_tables = CDF.enum_table_list()
         meta_cdf_schema = CDF.create_common_data_format_schema(session, cdf_schema, enumeration_tables,delete_existing=True)
-
+        session.commit()
         # load state context info into cdf schema
         # need_to_load_data = input('Load enumeration & context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
         need_to_load_context_data = 'y'
@@ -103,6 +99,7 @@ if __name__ == '__main__':
 
             print('Loading state context info into CDF schema') # *** takes a long time; why?
             context.context_to_cdf_PANDAS(session, meta_cdf_schema, s, cdf_schema,enumeration_tables)
+            session.commit()
 
 
     # need_to_load_data = 'y'
@@ -133,12 +130,12 @@ if __name__ == '__main__':
         raw_data_dframe = pd.read_csv(s.path_to_state_dir+'data/' + df.file_name,sep=delimiter)
         try:
             raw_data_dframe.to_sql(df.table_name,con=session.bind,schema=s.schema_name,index=False,if_exists='fail')
-            session.commit()
+            session.flush()
         except:
             replace = input('Raw data table ' +df.table_name + ' already exists in database. Replace (y/n)?\n')
             if replace == 'y':
                 raw_data_dframe.to_sql(df.table_name, con=session.bind, schema=s.schema_name, index=False,if_exists='replace')
-                session.commit()
+                session.flush()
             else:
                 print('Continuing with existing file')
 
@@ -146,6 +143,7 @@ if __name__ == '__main__':
         print('Loading data from df table\n\tin schema '+ s.schema_name+ '\n\tto CDF schema '+cdf_schema+'\n\tusing munger '+munger_name)
         meta_cdf_schema = MetaData(bind=eng, schema=cdf_schema) # TODO remove duplicate defs of this var
         mr.raw_records_to_cdf(session,meta_cdf_schema,df,m,cdf_schema)
+        session.commit()
         print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
 
     find_anomalies = input('Find anomalies in an election (y/n)?\n')

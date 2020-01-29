@@ -42,8 +42,12 @@ def id_from_select_only_PANDAS(dframe,value_d, mode='no_dupes',dframe_Id_is_inde
     """Returns the Id of the record in table with values given in the dictionary value_d.
     On error (nothing found, or more than one found) returns 0"""
 
-    # filter the dframe by the value_d conditions
-    filtered_dframe = dframe.loc[(dframe[list(value_d)] == pd.Series(value_d)).all(axis=1)]
+    # filter the dframe by the relevant value_d conditions
+    cdf_value_d = {}
+    for k,v in value_d.items():
+        if k in dframe.columns:
+            cdf_value_d[k] = v
+    filtered_dframe = dframe.loc[(dframe[list(cdf_value_d)] == pd.Series(cdf_value_d)).all(axis=1)]
 
     if filtered_dframe.shape[0] == 0: # if no rows meet value_d criteria
         # check misspellings.corrections table and try again. Set check_spelling = False to avoid needless repeats
@@ -74,8 +78,15 @@ def id_from_select_or_insert_PANDAS(dframe, value_d, mode='no_dupes',dframe_Id_i
     'not_null_fields':['ReportingUnitType_Id']
     modes with consequences: 'dupes_ok'
        } """
+    # filter the dframe by the relevant value_d conditions # TODO This code repeats
+    cdf_value_d = {}
+    for k,v in value_d.items():
+        if k in dframe.columns:
+            cdf_value_d[k] = v
+    filtered_dframe = dframe.loc[(dframe[list(cdf_value_d)] == pd.Series(cdf_value_d)).all(axis=1)]
+
     # filter the dframe by the value_d conditions
-    filtered_dframe = dframe.loc[(dframe[list(value_d)] == pd.Series(value_d)).all(axis=1)]
+    filtered_dframe = dframe.loc[(dframe[list(cdf_value_d)] == pd.Series(cdf_value_d)).all(axis=1)]
 
     if mode == 'no_dupes' and filtered_dframe.shape[0] > 1:
         raise Exception('Duplicate values found for ' + str(value_d))
@@ -121,21 +132,24 @@ def format_type_for_insert_PANDAS(dframe,txt,id_type_other_id,t_dframe_Id_is_ind
     else:
          raise Exception('Dataframe has duplicate rows with value ' + txt + ' in Txt column')
 
-def commit_cdf_table_from_raw(session,row,cdf_schema,mu,t,foreign_key_d = {},id_type_other_id=0,index_col='Id'):
+def fill_cdf_table_from_raw(session, row, cdf_schema, mu, t, ei_dframe, foreign_key_d = {}, filters=[], id_type_other_id=0, index_col='Id'):
     """
     t is name of table in cdf
     mu is munger
-    `row` is a dataframe of the raw data file
+    `row` is a dataframe of the raw data file; debugger may not recognize its use, hidden in eval()
     NB: the name `row` is essential and appears in def of munger as of 1/2020
     """
     # get munger info
     munger_fields_d = mu.content_dictionary['fields_dictionary']
 
-    # get external identifier info
-    ExternalIdentifier_dframe = pd.read_sql_table('ExternalIdentifier', session.bind, cdf_schema, index_col='Id')
-
     ei_dict = {} # to hold internal_name - internal_id pairs
     ids_d = foreign_key_d  # note: name `ids_d` is used in definition of munger, so can't be changed.
+
+    # filter the row dataframe
+    for f in filters:
+        row = row[eval(f)]
+        print('\tFilter: '+f)
+
     t_dframe = pd.read_sql_table(t, session.bind, cdf_schema, index_col=index_col)
     for item in munger_fields_d[t]:  # there should be only one of these
         # loop through unique values in the raw file
@@ -145,7 +159,7 @@ def commit_cdf_table_from_raw(session,row,cdf_schema,mu,t,foreign_key_d = {},id_
             if external_name and external_name.strip() != '':   # treat only items with content
                 # print('\t\tProcessing '+external_name)
                 # get internal db name and id for ExternalIdentifier
-                [cdf_id, cdf_name] = id_and_name_from_external_PANDAS(ExternalIdentifier_dframe, t_dframe, external_name, id_type_other_id, mu.name, item['InternalNameField']) # TODO note new flag t_dframe_Id_is_index for id_and_name_from_external
+                [cdf_id, cdf_name] = id_and_name_from_external_PANDAS(ei_dframe, t_dframe, external_name, id_type_other_id, mu.name, item['InternalNameField']) # TODO note new flag t_dframe_Id_is_index for id_and_name_from_external
                 # ... or if no such is found in db, insert it!
                 if [cdf_id, cdf_name] == [None, None]:
                     if external_name:
@@ -185,23 +199,32 @@ def bulk_elements_to_cdf(session, mu, cdf_schema, row, election_id, id_type_othe
     cdf_d = {}  # dataframe for each table
     ei_d = {}   # external-internal name dictionary for each table
 
-    # process Party -- unnecessary since Party is from context
-    #cdf_d['Party'], ei_d['Party'] = commit_cdf_table_from_raw(session,row,cdf_schema,mu,'Party',id_type_other_id=id_type_other_id)
+    # get external identifier info
+    cdf_d['ExternalIdentifier'] = pd.read_sql_table('ExternalIdentifier', session.bind, cdf_schema, index_col='Id')
+
     cdf_d['Party'] = pd.read_sql_table('Party',session.bind,cdf_schema,index_col='Id')
 
+    party_ids = cdf_d['Party'].index.to_list()
     #  process Candidate
     # TODO currently creates multiple records for each candidate, one for each party. BUG
-    for index, party_row in cdf_d['Party'].iterrows():
-        foreign_key_d = {'Election_Id':election_id,'Party_Id':ei_d['Party'][party_row['Name']]}
-        cdf_d['Candidate'], ei_d['Candidate'] = commit_cdf_table_from_raw(session, row, cdf_schema, mu,'Candidate', foreign_key_d=foreign_key_d, id_type_other_id=id_type_other_id)
+    cdf_ei = cdf_d['ExternalIdentifier']  # for legibility
+    for party_id in party_ids:
+        foreign_key_d = {'Election_Id':election_id,'Party_Id':party_id}
+        raw_filters = [' row["Choice Party"] == "' + cdf_ei[cdf_ei['ForeignId'] == party_id]['Value'].to_list()[0] + '"']
+        cdf_d['Candidate'], ei_d['Candidate'] = fill_cdf_table_from_raw(session, row, cdf_schema, mu, 'Candidate', cdf_d['ExternalIdentifier'], foreign_key_d=foreign_key_d, filters=raw_filters, id_type_other_id=id_type_other_id)
 
     # process CandidateSelection
     cdf_d['CandidateSelection'] = pd.DataFrame(cdf_d['Candidate'].index.values, columns=['Candidate_Id'])
-    cdf_d['CandidateSelection'] = dbr.dframe_to_sql(cdf_d['CandidateSelection'], session, cdf_schema, 'CandidateSelection',id_type_other_id=id_type_other_id)
+    cdf_d['CandidateSelection'] = dbr.dframe_to_sql(cdf_d['CandidateSelection'], session, cdf_schema, 'CandidateSelection')
+
+    # get BallotMeasureSelections to distinguish between BallotMeasure- and Candidate-Contests
+    cdf_d['BallotMeasureSelection'] = pd.read_sql_table('BallotMeasureSelection',session.bind,cdf_schema,index_col='Id')
+    bm_selections = cdf_d['BallotMeasureSelection']['Selection'].to_list()
 
     # process BallotMeasureContest
-    foreign_key_d = {'ElectionDistrict_Id':state_id}
-    cdf_d['BallotMeasureContest'], ei_d['BallotMeasureContest'] = commit_cdf_table_from_raw(session, row, cdf_schema, mu, 'BallotMeasureContest',foreign_key_d=foreign_key_d,id_type_other_id=id_type_other_id)
+    foreign_key_d = {'state':state_id}
+    raw_filters=[" | ".join(["(row['Choice'] == '" + i + "')" for i in bm_selections])]
+    cdf_d['BallotMeasureContest'], ei_d['BallotMeasureContest'] = fill_cdf_table_from_raw(session, row, cdf_schema, mu, 'BallotMeasureContest', cdf_d['ExternalIdentifier'], filters=raw_filters, foreign_key_d=foreign_key_d, id_type_other_id=id_type_other_id)
 
     return cdf_d, id_type_other_id
 
@@ -283,7 +306,10 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
     # TODO is the above used?
     #%% read raw data rows from db
     raw_rows = pd.read_sql_table(df.table_name,session.bind,schema=df.state.schema_name)
-    #%% process Party, Candidate and CandidateSelection tables
+
+    #%% bulk tables
+
+
     cdf_dframe, unused = bulk_elements_to_cdf(session, mu, cdf_schema, raw_rows, election_id, id_type_other_id,ids_d['state'])
 
 
@@ -397,13 +423,13 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
             for dframe in dframe_list:
                 dbr.dframe_to_sql(eval(dframe + "_dframe"), session, cdf_schema, dframe)
                 # exec(dframe + "_dframe.to_sql('" + dframe + "', session.bind, schema=cdf_schema, if_exists='append')")
-            session.commit()
+            session.flush()
 
     #%% upload all dataframes to the cdf db
-    for dframe in dframe_list: # TODO this isn't quite right, might create dupes in db
+    for dframe in dframe_list:
         dbr.dframe_to_sql(eval(dframe + "_dframe"),session,cdf_schema,dframe)
         # exec(dframe + "_dframe.to_sql('" + dframe + "', session.bind, schema=cdf_schema, if_exists='append')")
-    session.commit()
+    session.flush()
     return str(ids_d)
 
 if __name__ == '__main__':

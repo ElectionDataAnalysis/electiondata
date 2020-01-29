@@ -93,23 +93,34 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
                 # TODO Then need to deal with composing reporting units.
 
                 if t == 'Office':
-                    #%% Check that all ElectionDistrictTypes are recognized
+                    # Check that all ElectionDistrictTypes are recognized
                     for edt in context_cdframe['Office']['ElectionDistrictType'].unique():
                         enum_id_d['ReportingUnitType'][edt], enum_othertype_d['ReportingUnitType'][edt] = format_type_for_insert_PANDAS(enum_dframe['ReportingUnitType'], edt, other_id['ReportingUnitType'])
                         if [enum_id_d['ReportingUnitType'][edt], enum_othertype_d['ReportingUnitType'][edt]] == [None,None]:
                             raise Exception('Office table has unrecognized ElectionDistrictType: ' + edt)
 
-                    #%% insert corresponding ReportingUnits, that don't already exist in db ReportingUnit table.
+                    # insert corresponding ReportingUnits, that don't already exist in db ReportingUnit table.
                     cdf_ReportingUnit_dframe = pd.read_sql_table('ReportingUnit',session.bind,schema)
                     new_ru = []
-                    for index, row in context_cdframe['Office'].iterrows():   # TODO more pyhonic/pandic way?
-                        if row['ElectionDistrict'] not in list(cdf_ReportingUnit_dframe['Name']):
-                            new_ru.append ( pd.Series({'Name':row['ElectionDistrict'],'ReportingUnitType_Id':enum_id_d['ReportingUnitType'][row['ElectionDistrictType']],'OtherReportingUnitType':enum_othertype_d['ReportingUnitType'][row['ElectionDistrictType']]}))
-                    # %% commit any new ReportingUnits into the db
+                    for index, context_row in context_cdframe['Office'].iterrows():   # TODO more pyhonic/pandic way?
+                        if context_row['ElectionDistrict'] not in list(cdf_ReportingUnit_dframe['Name']):
+                            new_ru.append ( pd.Series({'Name':context_row['ElectionDistrict'],'ReportingUnitType_Id':enum_id_d['ReportingUnitType'][context_row['ElectionDistrictType']],'OtherReportingUnitType':enum_othertype_d['ReportingUnitType'][context_row['ElectionDistrictType']]}))
+                    # send any new ReportingUnits into the db
                     new_ru_dframe = pd.DataFrame(new_ru)
-                    # TODO: need to remove rows that already exist in the db
-                    new_ru_dframe.to_sql('ReportingUnit', session.bind, schema=schema, if_exists='append', index=False)
-                    session.commit()
+                    cdf_ReportingUnit_dframe = dframe_to_sql(new_ru_dframe,session,schema,'ReportingUnit')
+
+                    # create corresponding CandidateContest records, if they don't already exist
+                    # TODO include VotesAllowed, NumberElected and NumberRunoff fields, probably from context
+                    cdf_CandidateContest_dframe = pd.read_sql_table('CandidateContest', session.bind, schema)
+                    new_cc = []
+                    for index, context_row in context_cdframe['Office'].iterrows():
+                        if context_row['ElectionDistrict'] not in cdf_CandidateContest_dframe['Name'].to_list():
+                            ru_id = id_from_select_only_PANDAS(cdf_ReportingUnit_dframe,{'Name':context_row['ElectionDistrict']})
+                            new_cc.append(pd.Series({'Name':context_row['ElectionDistrict'], 'Office_Id':context_row['Id'], 'ElectionDistrict_Id':ru_id}))
+                    # send any new CandidateContests to the db
+                    new_cc_dframe = pd.DataFrame(new_cc)
+                    cdf_CandidateContest_dframe = dframe_to_sql(new_cc_dframe,session,schema,'CandidateContest')
+                    session.flush()
 
 
 
@@ -136,7 +147,7 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
 
     # insert appropriate dataframe columns into ExternalIdentifier table in the CDF db
     dframe_to_sql(ei_df, session, schema, 'ExternalIdentifier')
-    session.commit()
+    session.flush()
 
     #%% fill composing reporting units join table
     print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
@@ -150,10 +161,10 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
     cdf['ReportingUnit']['Name'] = cdf['ReportingUnit'].replace('Name',spellcheck_dict)
     #time.sleep(5)  # TODO will time help avoid cruj_dframe=None problem?
 
-    for index,row in cdf['ReportingUnit'].iterrows():
-        cruj_dframe = composing_from_reporting_unit_name_PANDAS(cdf['ReportingUnit'],cruj_dframe,row['Name'],index)
+    for index,context_row in cdf['ReportingUnit'].iterrows():
+        cruj_dframe = composing_from_reporting_unit_name_PANDAS(cdf['ReportingUnit'],cruj_dframe,context_row['Name'],index)
     dframe_to_sql(cruj_dframe, session, schema, 'ComposingReportingUnitJoin')
-    session.commit()
+    session.flush()
     #%% return
     return
 

@@ -241,7 +241,7 @@ def load_raw_data(session, meta, schema,df):
 
     raw_data.to_sql(schema + '.' + df.table_name,con=session.bind,if_exists='append',index=False)
 
-    session.commit()
+    session.flush()
     return
 
 def clean_meta_file(infile,outdir,s):       ## update or remove ***
@@ -279,7 +279,7 @@ def create_schema(session,name,delete_existing=False):    # TODO move to db_rout
         session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
         print('New schema created: ' + name)
         new_schema_created = True
-    session.commit()
+    session.flush()
     return new_schema_created
 
 if __name__ == '__main__':
@@ -349,6 +349,6 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id'):
     # note: two copies of target ensures none of the original rows will be appended.
 
     appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
-    session.commit()
+    session.flush()
     up_to_date_dframe = pd.concat([target,appendable],sort=False).drop_duplicates(keep='first')
     return up_to_date_dframe

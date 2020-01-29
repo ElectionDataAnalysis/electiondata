@@ -44,6 +44,7 @@ def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF
         table_creation_string = 'Table(\''+ name + '\',metadata,Column(\'Id\',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),' + ','.join(col_string_list) + ', schema=\'' + schema + '\')'
         exec(table_creation_string)
         metadata.create_all()
+        session.flush()
     return metadata
 
 # TODO should we somewhere check consistency of enumeration_table_list and the files in enumerations/ ? Is the file enumeration_table_list ever used?
@@ -65,7 +66,7 @@ def fill_cdf_enum_tables(session,meta,schema,e_table_list=['ReportingUnitType','
     for f in e_table_list:
         dframe = pd.read_csv(dirpath + 'enumerations/' + f + '.txt',header=None,names = ['Txt'])
         dframe.to_sql(f,session.bind,schema=schema,if_exists='append',index=False)
-    session.commit()
+    session.flush()
     return
 
 if __name__ == '__main__':
