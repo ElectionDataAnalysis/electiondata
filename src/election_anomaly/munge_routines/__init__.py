@@ -128,10 +128,10 @@ def commit_cdf_table_from_raw(session,row,cdf_schema,mu,t,foreign_key_d = {},id_
     `row` is a dataframe of the raw data file
     NB: the name `row` is essential and appears in def of munger as of 1/2020
     """
-    #%% get munger info
+    # get munger info
     munger_fields_d = mu.content_dictionary['fields_dictionary']
 
-    #%% get external identifier info
+    # get external identifier info
     ExternalIdentifier_dframe = pd.read_sql_table('ExternalIdentifier', session.bind, cdf_schema, index_col='Id')
 
     ei_dict = {} # to hold internal_name - internal_id pairs
@@ -140,66 +140,68 @@ def commit_cdf_table_from_raw(session,row,cdf_schema,mu,t,foreign_key_d = {},id_
     for item in munger_fields_d[t]:  # there should be only one of these
         # loop through unique values in the raw file
         raw_column = eval(item['ExternalIdentifier'])
+        print('\tFor table '+t+', '+ str(len(raw_column.unique())) + ' items to process')
         for external_name in raw_column.unique():
-            print('\tProcessing '+external_name)
-            # get internal db name and id for ExternalIdentifier
-            [cdf_id, cdf_name] = id_and_name_from_external_PANDAS(ExternalIdentifier_dframe, t_dframe, external_name, id_type_other_id, mu.name, item['InternalNameField']) # TODO note new flag t_dframe_Id_is_index for id_and_name_from_external
-            # ... or if no such is found in db, insert it!
-            if [cdf_id, cdf_name] == [None, None]:
-                if external_name:
-                    cdf_name = external_name.strip()
-                if cdf_name == '' or cdf_name is None:  # if external name has only whitespace or is null, we're going to ignore it.
-                    continue
-                value_d ={**{item['InternalNameField']: cdf_name},**foreign_key_d}
-                for e in item['Enumerations'].keys():
-                    [value_d[e + '_Id'], value_d['Other' + e]] = format_type_for_insert_PANDAS(t_dframe,item['Enumerations'][e])
-                    # TODO note new flag t_dframe_Id_is_index for format_type_for_insert_PANDAS
-                    # format_type_for_insert(session,meta.tables[meta.schema + '.' + e], item['Enumerations'][e])
-                for f in item['OtherFields'].keys():
-                    value_d[f] = eval(item['OtherFields'][f])
-                cdf_id = id_from_select_only_PANDAS(t_dframe,value_d) # TODO note new flag t_dframe_Id_is_index for id_from_select_only_PANDAS
-                if cdf_id == 0:  # if nothing found
-                    # TODO must insert. But with what Id?  What is we pull 'Id' as a plain column to t_dframe?
-                    cdf_id, t_dframe = id_from_select_or_insert_PANDAS(t_dframe, value_d)
-            if cdf_name is not None:
-                ei_dict[cdf_name] = cdf_id
-    # %% commit table to the db
+            if external_name and external_name.strip() != '':   # treat only items with content
+                # print('\t\tProcessing '+external_name)
+                # get internal db name and id for ExternalIdentifier
+                [cdf_id, cdf_name] = id_and_name_from_external_PANDAS(ExternalIdentifier_dframe, t_dframe, external_name, id_type_other_id, mu.name, item['InternalNameField']) # TODO note new flag t_dframe_Id_is_index for id_and_name_from_external
+                # ... or if no such is found in db, insert it!
+                if [cdf_id, cdf_name] == [None, None]:
+                    if external_name:
+                        cdf_name = external_name.strip()
+                    value_d ={**{item['InternalNameField']: cdf_name},**foreign_key_d}
+                    for e in item['Enumerations'].keys():
+                        [value_d[e + '_Id'], value_d['Other' + e]] = format_type_for_insert_PANDAS(t_dframe,item['Enumerations'][e])
+                        # TODO note new flag t_dframe_Id_is_index for format_type_for_insert_PANDAS
+                        # format_type_for_insert(session,meta.tables[meta.schema + '.' + e], item['Enumerations'][e])
+                    for f in item['OtherFields'].keys():
+                        value_d[f] = eval(item['OtherFields'][f])
+                    cdf_id = id_from_select_only_PANDAS(t_dframe,value_d) # TODO note new flag t_dframe_Id_is_index for id_from_select_only_PANDAS
+                    if cdf_id == 0:  # if nothing found
+                        # TODO must insert. But with what Id?  What is we pull 'Id' as a plain column to t_dframe?
+                        cdf_id, t_dframe = id_from_select_or_insert_PANDAS(t_dframe, value_d)
+                if cdf_name is not None:
+                    ei_dict[cdf_name] = cdf_id
+        # % commit table to the db
     t_dframe = dbr.dframe_to_sql(t_dframe,session,cdf_schema,t)
-    print('Table loaded to database: '+cdf_schema+'.'+t)
+    print('\tTable loaded to database: '+cdf_schema+'.'+t)
 
     #%% pull the table back from the db, to get Ids right.
     t_dframe = pd.read_sql_table(t,session.bind,cdf_schema,index_col=index_col)
     return t_dframe, ei_dict
 
-def party_candidate_candidateselection(session, mu, cdf_schema, row, election_id,id_type_other_id=0):
+def bulk_elements_to_cdf(session, mu, cdf_schema, row, election_id, id_type_other_id,state_id):
     """
-    Create these three tables, which are repetitive,
-    don't come from context (hence not BallotMeasureSelection)
+    Create tables, which are repetitive,
+    don't come from context (hence not BallotMeasureSelection, Party)
     and whose db Ids are needed for other insertions.
     `row` is a dataframe of the raw data file
     NB: the name `row` is essential and appears in def of munger as of 1/2020
     """
-    #%% get id for IdentifierType 'other' if it was not passed as parameter
-    if id_type_other_id == 0:
-        IdentifierType_dframe = pd.read_sql_table('IdentifierType', session.bind, cdf_schema, index_col='Id')
-        id_type_other_id = IdentifierType_dframe.index[IdentifierType_dframe['Txt'] == 'other'].to_list()[0]
-        if not id_type_other_id:
-            raise Exception('No Id found for IdentifierType \'other\'; fix IdentifierType table and rerun.')
+    assert int(id_type_other_id) and id_type_other_id != 0,'id_type_other_id must be a nonzero integer'
+    assert int(state_id) and state_id !=0, 'state_id must be a nonzero integer'
 
     cdf_d = {}  # dataframe for each table
     ei_d = {}   # external-internal name dictionary for each table
 
-    #%% process Party
-    cdf_d['Party'], ei_d['Party'] = commit_cdf_table_from_raw(session,row,cdf_schema,mu,'Party',id_type_other_id=id_type_other_id)
+    # process Party -- unnecessary since Party is from context
+    #cdf_d['Party'], ei_d['Party'] = commit_cdf_table_from_raw(session,row,cdf_schema,mu,'Party',id_type_other_id=id_type_other_id)
+    cdf_d['Party'] = pd.read_sql_table('Party',session.bind,cdf_schema,index_col='Id')
 
-    #%% process Candidate
+    #  process Candidate
+    # TODO currently creates multiple records for each candidate, one for each party. BUG
     for index, party_row in cdf_d['Party'].iterrows():
         foreign_key_d = {'Election_Id':election_id,'Party_Id':ei_d['Party'][party_row['Name']]}
         cdf_d['Candidate'], ei_d['Candidate'] = commit_cdf_table_from_raw(session, row, cdf_schema, mu,'Candidate', foreign_key_d=foreign_key_d, id_type_other_id=id_type_other_id)
 
-    #%% process CandidateSelection
+    # process CandidateSelection
     cdf_d['CandidateSelection'] = pd.DataFrame(cdf_d['Candidate'].index.values, columns=['Candidate_Id'])
-    cdf_d['CandidateSelection'] = dbr.dframe_to_sql(cdf_d['CandidateSelection'], session, cdf_schema, 'CandidateSelection')
+    cdf_d['CandidateSelection'] = dbr.dframe_to_sql(cdf_d['CandidateSelection'], session, cdf_schema, 'CandidateSelection',id_type_other_id=id_type_other_id)
+
+    # process BallotMeasureContest
+    foreign_key_d = {'ElectionDistrict_Id':state_id}
+    cdf_d['BallotMeasureContest'], ei_d['BallotMeasureContest'] = commit_cdf_table_from_raw(session, row, cdf_schema, mu, 'BallotMeasureContest',foreign_key_d=foreign_key_d,id_type_other_id=id_type_other_id)
 
     return cdf_d, id_type_other_id
 
@@ -252,14 +254,14 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
     for table_def in table_def_list:
         tables_d[table_def[0]] = table_def[1]
 
-    #%% get id for  election
+    # get id for  election
     [electiontype_id, otherelectiontype] = format_type_for_insert_PANDAS(ElectionType_dframe,df.state.context_dictionary['Election'][df.election]['ElectionType'],id_type_other_id)
     value_d = {'Name': df.election, 'EndDate': df.state.context_dictionary['Election'][df.election]['EndDate'],
                'StartDate': df.state.context_dictionary['Election'][df.election]['StartDate'],
                'OtherElectionType': otherelectiontype, 'ElectionType_Id': electiontype_id}
     election_id, Election_dframe = id_from_select_or_insert_PANDAS(Election_dframe, value_d)
 
-    #%% if state_id is not passed as parameter, select-or-insert state, get id (default Reporting Unit for ballot questions)
+    # if state_id is not passed as parameter, select-or-insert state, get id (default Reporting Unit for ballot questions)
     if state_id == 0:
         [reportingunittype_id, otherreportingunittype] = format_type_for_insert_PANDAS(ReportingUnitType_dframe, 'state',id_type_other_id)
         value_d = {'Name': df.state.name, 'ReportingUnitType_Id': reportingunittype_id,
@@ -282,7 +284,7 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
     #%% read raw data rows from db
     raw_rows = pd.read_sql_table(df.table_name,session.bind,schema=df.state.schema_name)
     #%% process Party, Candidate and CandidateSelection tables
-    cdf_dframe, unused = party_candidate_candidateselection(session, mu, cdf_schema, raw_rows, election_id,id_type_other_id=id_type_other_id)
+    cdf_dframe, unused = bulk_elements_to_cdf(session, mu, cdf_schema, raw_rows, election_id, id_type_other_id,ids_d['state'])
 
 
     #%% process raw data row by row
