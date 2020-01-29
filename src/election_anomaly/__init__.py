@@ -95,8 +95,8 @@ if __name__ == '__main__':
 
         # load state context info into cdf schema
         # need_to_load_data = input('Load enumeration & context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
-        need_to_load_data = 'y'
-        if need_to_load_data == 'y':
+        need_to_load_context_data = 'y'
+        if need_to_load_context_data == 'y':
             # %% fill enumeration tables
             print('\tFilling enumeration tables')
             CDF.fill_cdf_enum_tables(session, meta_cdf_schema, cdf_schema,enumeration_tables)
@@ -135,7 +135,7 @@ if __name__ == '__main__':
             raw_data_dframe.to_sql(df.table_name,con=session.bind,schema=s.schema_name,index=False,if_exists='fail')
             session.commit()
         except:
-            replace = input('Table already exists in database. Replace (y/n)?\n')
+            replace = input('Raw data table ' +df.table_name + ' already exists in database. Replace (y/n)?\n')
             if replace == 'y':
                 raw_data_dframe.to_sql(df.table_name, con=session.bind, schema=s.schema_name, index=False,if_exists='replace')
                 session.commit()

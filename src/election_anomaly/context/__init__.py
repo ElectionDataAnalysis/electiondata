@@ -4,10 +4,12 @@
 # utilities for extracting state context info and inserting it into the files in the context folder
 import sys
 import re
-from munge_routines import spellcheck, format_type_for_insert_PANDAS, id_from_select_or_insert_PANDAS, id_from_select_only_PANDAS, composing_from_reporting_unit_name_PANDAS
+
+from db_routines import dframe_to_sql
+from munge_routines import format_type_for_insert_PANDAS, id_from_select_only_PANDAS, composing_from_reporting_unit_name_PANDAS
 import db_routines as dbr
 import pandas as pd
-import time
+
 
 def table_and_name_to_foreign_id(dict,row):
     """
@@ -72,7 +74,7 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
             if t == 'BallotMeasureSelection':   # note: s.context_dictionary['BallotMeasureSelection'] is a set not a dict
                 context_cdframe['BallotMeasureSelection'] = pd.DataFrame(list(s.context_dictionary['BallotMeasureSelection']),columns=['Selection'])
                 # %% commit table to db
-                dframe_to_sql(context_cdframe[t], session, meta, schema, t)
+                dframe_to_sql(context_cdframe[t], session, schema, t)
                 # TODO Then need to deal with composing reporting units.
 
             else:
@@ -87,7 +89,7 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
                         context_cdframe[t]['Other'+e] = context_cdframe[t][e].map(enum_othertype_d[e])
 
                 # %% commit table to db
-                dframe_to_sql(context_cdframe[t], session, meta, schema, t)
+                dframe_to_sql(context_cdframe[t], session, schema, t)
                 # TODO Then need to deal with composing reporting units.
 
                 if t == 'Office':
@@ -133,7 +135,7 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
     ei_df['OtherIdentifierType'] = ei_df.apply(lambda row: row['id_othertype_pairs'][1],axis=1)
 
     # insert appropriate dataframe columns into ExternalIdentifier table in the CDF db
-    dframe_to_sql(ei_df,session,meta,schema,'ExternalIdentifier')
+    dframe_to_sql(ei_df, session, schema, 'ExternalIdentifier')
     session.commit()
 
     #%% fill composing reporting units join table
@@ -150,24 +152,10 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
 
     for index,row in cdf['ReportingUnit'].iterrows():
         cruj_dframe = composing_from_reporting_unit_name_PANDAS(cdf['ReportingUnit'],cruj_dframe,row['Name'],index)
-    dframe_to_sql(cruj_dframe,session,meta,schema,'ComposingReportingUnitJoin')
+    dframe_to_sql(cruj_dframe, session, schema, 'ComposingReportingUnitJoin')
     session.commit()
     #%% return
     return
-
-def dframe_to_sql(dframe,session,meta,schema,table):
-    """
-    Given a dframe and a cdf db table name, clean the dframe
-    (i.e., drop any columns that are not in the table)
-    Return the cleaned dframe.
-    """
-    df_to_db = dframe.copy()
-    for c in dframe.columns:
-        if c not in meta.tables[schema + '.' + table].columns:
-            df_to_db = df_to_db.drop(c, axis=1)
-    df_to_db.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
-    session.commit()
-    return df_to_db
 
 
 def build_munger_d(s,m):
@@ -352,6 +340,10 @@ if __name__ == '__main__':
     eng,meta = dbr.sql_alchemy_connect(schema=schema,paramfile='../../local_data/database.ini')
     Session = sessionmaker(bind=eng)
     session = Session()
+
+    data = {'Foo':[1,2,3,2,1],'Selection_Id':[42,43,44,44,46],'Id':[2,3,4,5,6]}
+    test_dframe = pd.DataFrame(data=data)
+    new = dframe_to_sql(test_dframe, session, schema, 'SelectionElectionContestVoteCountJoin', index_col='Id')
 
     s = sf.create_state('NC','../../local_data/NC/')
     enumeration_table_list = CDF.enum_table_list(dirpath='../CDF_schema_def_info/')

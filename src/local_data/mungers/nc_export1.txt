@@ -30,7 +30,7 @@
             ],
             'Candidate': [
                 {'ExternalIdentifier': 'row["Choice"]',
-                 'InternalNameField': 'Name',
+                 'InternalNameField': 'BallotName',
                  'Enumerations': {},
                  'OtherFields': { 'Party_Id': 'ids_d["Party_Id"]'},
                  # don't include fields defined from external context, such as the ElectionDistrict_Id
@@ -38,10 +38,10 @@
                 ],
 
             'CandidateContest':[
-            {'ExternalIdentifier': 'row["Contest Name"',
+            {'ExternalIdentifier': 'row["Contest Name"]',
             'InternalNameField':'Name',
             'Enumerations':{},
-             'OtherFields':{'VotesAllowed':'Vote_For','Office_Id':'ids_d["Office_Id"]'},    # don't include fields defined from external context, such as the ElectionDistrict_Id
+             'OtherFields':{'VotesAllowed':'row["Vote For"]','Office_Id':'ids_d["Office_Id"]'},    # don't include fields defined from external context, such as the ElectionDistrict_Id
             'Condition':'choice not in ballot_measure_selections.keys()'}
             ],
         'BallotMeasureContest':[

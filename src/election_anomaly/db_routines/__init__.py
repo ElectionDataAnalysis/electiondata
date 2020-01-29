@@ -322,3 +322,33 @@ if __name__ == '__main__':
 
     qq, strs, sql_ids = create_table(df)
     print('Done')
+
+
+def dframe_to_sql(dframe,session,schema,table,index_col='Id'):
+    """
+    Given a dframe and an existing cdf db table name, clean the dframe
+    (i.e., drop any columns that are not in the table, add null columns to match any missing columns)
+    append records any new records to the corresponding table in the db (and commit!)
+    Return the updated dframe, including all rows from the db and all from the dframe.
+    """
+
+    #%% pull copy of existing table
+    target = pd.read_sql_table(table,session.bind,schema=schema,index_col=index_col)
+    df_to_db = dframe.copy()
+
+    #%% remove columns that don't exist in target table
+    for c in dframe.columns:
+        if c not in target.columns:
+            df_to_db = df_to_db.drop(c, axis=1)
+    #%% add columns that exist in target table but are mission from original dframe
+    for c in target.columns:
+        if c not in dframe.columns:
+            df_to_db[c] = None
+
+    appendable = pd.concat([target,target,df_to_db],sort=False).drop_duplicates(keep=False)
+    # note: two copies of target ensures none of the original rows will be appended.
+
+    appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
+    session.commit()
+    up_to_date_dframe = pd.concat([target,appendable],sort=False).drop_duplicates(keep='first')
+    return up_to_date_dframe

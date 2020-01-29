@@ -71,7 +71,7 @@ def parse_line(mf,line):
         field = (m.group('field')).replace(' ','_')
         typ = d[m.group('type')]
         if m.group('number'):
-            number = int(m.group('number'))
+            number = int(m.group('number')[1:-1])
             typ = typ(number)
     except:
         field = None
