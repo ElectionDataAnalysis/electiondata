@@ -348,7 +348,12 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id'):
     appendable = pd.concat([target,target,df_to_db],sort=False).drop_duplicates(keep=False)
     # note: two copies of target ensures none of the original rows will be appended.
 
+    # drop the Id column # TODO inefficient? Why not drop it before? Might even add it above, only to be dropped?
+    if 'Id' in appendable.columns:
+        appendable = appendable.drop('Id',axis=1)
+
     appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
+    up_to_date_dframe = pd.read_sql_table(table,session.bind,schema=schema)
     session.flush()
-    up_to_date_dframe = pd.concat([target,appendable],sort=False).drop_duplicates(keep='first')
+    # up_to_date_dframe = pd.concat([target,appendable],sort=False).drop_duplicates(keep='first')
     return up_to_date_dframe

@@ -37,6 +37,7 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
     """
     # TODO Outline
     context_cdframe = {}    # dictionary of dataframes from context info
+    cdf_d = {}  # dict of dframes for CDF db tables
 
     #%% create and fill enum dframes and associated dictionaries
     enum_dframe = {}        # dict of dataframes of enumerations, taken from db
@@ -56,7 +57,6 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
             other_id[e] = None  # TODO how does this flow through?
         # %% create and (partially) fill the id/othertype dictionaries
 
-    dframe_for_cdf_db = {}
     # TODO ## context to dataframes
     if not cdf_def_dirpath[-1] == '/': cdf_def_dirpath += '/'
     with open(cdf_def_dirpath+'tables.txt','r') as f:
@@ -100,26 +100,33 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
                             raise Exception('Office table has unrecognized ElectionDistrictType: ' + edt)
 
                     # insert corresponding ReportingUnits, that don't already exist in db ReportingUnit table.
-                    cdf_ReportingUnit_dframe = pd.read_sql_table('ReportingUnit',session.bind,schema)
+                    cdf_d['ReportingUnit'] = pd.read_sql_table('ReportingUnit',session.bind,schema,index_col=None)
+                    # note: db Id column is *not* the index for the dataframe cdf_d['ReportingUnit'].
                     new_ru = []
                     for index, context_row in context_cdframe['Office'].iterrows():   # TODO more pyhonic/pandic way?
-                        if context_row['ElectionDistrict'] not in list(cdf_ReportingUnit_dframe['Name']):
+                        if context_row['ElectionDistrict'] not in list(cdf_d['ReportingUnit']['Name']):
                             new_ru.append ( pd.Series({'Name':context_row['ElectionDistrict'],'ReportingUnitType_Id':enum_id_d['ReportingUnitType'][context_row['ElectionDistrictType']],'OtherReportingUnitType':enum_othertype_d['ReportingUnitType'][context_row['ElectionDistrictType']]}))
                     # send any new ReportingUnits into the db
                     new_ru_dframe = pd.DataFrame(new_ru)
-                    cdf_ReportingUnit_dframe = dframe_to_sql(new_ru_dframe,session,schema,'ReportingUnit')
+                    cdf_d['ReportingUnit'] = dframe_to_sql(new_ru_dframe,session,schema,'ReportingUnit',index_col=None)
 
                     # create corresponding CandidateContest records, if they don't already exist
                     # TODO include VotesAllowed, NumberElected and NumberRunoff fields, probably from context
-                    cdf_CandidateContest_dframe = pd.read_sql_table('CandidateContest', session.bind, schema)
+                    print('WARNING: Note assumption that VotesAllowed = 1 for all contests!!!!')
+                    # TODO MAJOR FAULTY ASSUMPTION: assuming VotesAllowed = 1
+
+                    cdf_d['CandidateContest'] = pd.read_sql_table('CandidateContest', session.bind, schema,index_col=None)
+                    cdf_d['Office'] = pd.read_sql_table('Office', session.bind, schema,index_col=None)
                     new_cc = []
                     for index, context_row in context_cdframe['Office'].iterrows():
-                        if context_row['ElectionDistrict'] not in cdf_CandidateContest_dframe['Name'].to_list():
-                            ru_id = id_from_select_only_PANDAS(cdf_ReportingUnit_dframe,{'Name':context_row['ElectionDistrict']})
-                            new_cc.append(pd.Series({'Name':context_row['ElectionDistrict'], 'Office_Id':context_row['Id'], 'ElectionDistrict_Id':ru_id}))
+                        if context_row['ElectionDistrict'] not in cdf_d['CandidateContest']['Name'].to_list():
+                            ru_id = id_from_select_only_PANDAS(cdf_d['ReportingUnit'],{'Name':context_row['ElectionDistrict']},dframe_Id_is_index=False)
+                            office_id = id_from_select_only_PANDAS(cdf_d['Office'],{'Name':context_row['Name']},dframe_Id_is_index=False)
+                            new_cc.append(pd.Series({'Name':context_row['ElectionDistrict'], 'Office_Id':office_id, 'ElectionDistrict_Id':ru_id,'VotesAllowed':1}))
+                            # TODO MAJOR FAULTY ASSUMPTION: assuming VotesAllowed = 1
                     # send any new CandidateContests to the db
                     new_cc_dframe = pd.DataFrame(new_cc)
-                    cdf_CandidateContest_dframe = dframe_to_sql(new_cc_dframe,session,schema,'CandidateContest')
+                    cdf_d['CandidateContest'] = dframe_to_sql(new_cc_dframe,session,schema,'CandidateContest')
                     session.flush()
 
 
