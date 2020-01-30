@@ -67,7 +67,7 @@ def id_from_select_only_PANDAS(dframe,value_d, mode='no_dupes',dframe_Id_is_inde
         else:
             return filtered_dframe['Id'].to_list()[0]
 
-def id_from_select_or_insert_PANDAS(dframe, value_d, mode='no_dupes',dframe_Id_is_index=True):
+def id_from_select_or_insert_PANDAS(dframe, value_d, session, schema, db_table_name,mode='no_dupes',dframe_Id_is_index=True):
     """  value_d gives the values for the fields in the dataframe.
     If there is a corresponding record in the table, return the id
     If there is no corresponding record, insert one and return the id.
@@ -83,7 +83,6 @@ def id_from_select_or_insert_PANDAS(dframe, value_d, mode='no_dupes',dframe_Id_i
     for k,v in value_d.items():
         if k in dframe.columns:
             cdf_value_d[k] = v
-    filtered_dframe = dframe.loc[(dframe[list(cdf_value_d)] == pd.Series(cdf_value_d)).all(axis=1)]
 
     # filter the dframe by the value_d conditions
     filtered_dframe = dframe.loc[(dframe[list(cdf_value_d)] == pd.Series(cdf_value_d)).all(axis=1)]
@@ -92,27 +91,32 @@ def id_from_select_or_insert_PANDAS(dframe, value_d, mode='no_dupes',dframe_Id_i
         raise Exception('Duplicate values found for ' + str(value_d))
     if filtered_dframe.shape[0] == 0:   # insert row if it's not already there
         filtered_dframe = filtered_dframe.append(value_d, ignore_index=True)
-        dframe = dframe.append(value_d, ignore_index=True)
+        dbr.dframe_to_sql(filtered_dframe, session, schema, db_table_name)
+        if dframe_Id_is_index:
+            index_col = 'Id'
+        else:
+            index_col = None
+        dframe = pd.read_sql_table(db_table_name,session.bind,schema=cdf_schema,index_col=index_col) # TODO what about index?
+        id = id_from_select_only_PANDAS(dframe,value_d,db_table_name,mode,dframe_Id_is_index)
 
-    assert filtered_dframe.shape[0] == 1, 'filtered dataframe does not have exactly one row'
-    id = filtered_dframe.index.to_list()[0]
+    assert filtered_dframe.shape[0] == 1, 'filtered dataframe should have exactly one row'
     return id, dframe
 
-def composing_from_reporting_unit_name_PANDAS(ru_dframe,cruj_dframe,name,id=0):
+def composing_from_reporting_unit_name_PANDAS(session,schema,ru_dframe,cruj_dframe,name,id=0):
     """inserts all ComposingReportingUnit joins that can be deduced from the internal db name of the ReportingUnit
     into the ComposingReportingUnitJoin dataframe; returns bigger dataframe.
     # Use the ; convention to identify all parents
     """
 
     if id == 0:
-        child_id, ru_dframe = id_from_select_or_insert_PANDAS(ru_dframe, {'Name': name}) # TODO does function actually change ru_dframe? Why?
+        child_id, ru_dframe = id_from_select_or_insert_PANDAS(ru_dframe, {'Name': name},session,schema,'ReportingUnit') # TODO does function actually change ru_dframe? Why?
     else: child_id = id
     chain = name.split(';')
     if len(chain) > 1:
         for i in range(1,len(chain)):
             parent = ';'.join(chain[0:i])
             parent_id = id_from_select_only_PANDAS(ru_dframe, {'Name': parent})
-            unused_id, cruj_dframe = id_from_select_or_insert_PANDAS(cruj_dframe, {'ParentReportingUnit_Id': parent_id, 'ChildReportingUnit_Id': child_id})
+            unused_id, cruj_dframe = id_from_select_or_insert_PANDAS(cruj_dframe, {'ParentReportingUnit_Id': parent_id, 'ChildReportingUnit_Id': child_id},session,schema,'ComposingReportingUnitJoin')
     return cruj_dframe
 
 def format_type_for_insert_PANDAS(dframe,txt,id_type_other_id,t_dframe_Id_is_index=True):
@@ -174,7 +178,7 @@ def fill_cdf_table_from_raw(session, row, cdf_schema, mu, t, ei_dframe, foreign_
                     cdf_id = id_from_select_only_PANDAS(t_dframe,value_d) # TODO note new flag t_dframe_Id_is_index for id_from_select_only_PANDAS
                     if cdf_id == 0:  # if nothing found
                         # TODO must insert. But with what Id?  What is we pull 'Id' as a plain column to t_dframe?
-                        cdf_id, t_dframe = id_from_select_or_insert_PANDAS(t_dframe, value_d)
+                        cdf_id, t_dframe = id_from_select_or_insert_PANDAS(t_dframe, value_d,session,cdf_schema,t)
                 if cdf_name is not None:
                     ei_dict[cdf_name] = cdf_id
         # % commit table to the db
@@ -273,11 +277,11 @@ def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,
         # process Candidate and BallotMeasure elements
         if ballot_measure_raw_row: # row info is for a Ballot Measure
             selection = eval(mu.content_dictionary['fields_dictionary']['BallotMeasureSelection'][0]['ExternalIdentifier'])
-            ids_d['selection_id'] = cdf_d['BallotMeasureSelection'].loc[selection]['Id']
+            ids_d['selection_id'] = cdf_d['BallotMeasureSelection'][cdf_d['BallotMeasureSelection']['Selection'] == selection].index.to_list()[0]
             ids_d['contest_id'] = id_from_select_only_PANDAS(cdf_d['BallotMeasureContest'],{'Name':eval(mu.content_dictionary['fields_dictionary']['BallotMeasureContest'][0]['ExternalIdentifier'])})
         # fill BallotMeasureContestSelectionJoin
             value_d = {'BallotMeasureContest_Id': ids_d['contest_id'], 'BallotMeasureSelection_Id': ids_d['selection_id']}
-            join_id,cdf_d['BallotMeasureContestSelectionJoin'] = id_from_select_or_insert_PANDAS(cdf_d['BallotMeasureContestSelectionJoin'],value_d)
+            join_id,cdf_d['BallotMeasureContestSelectionJoin'] = id_from_select_or_insert_PANDAS(cdf_d['BallotMeasureContestSelectionJoin'],value_d,session,cdf_schema,'BallotMeasureContestSelectionJoin')
         else:   # if Candidate row
             ballot_name = eval(mu.content_dictionary['fields_dictionary']['Candidate'][0]['ExternalIdentifier'])
             ids_d['Candidate'] = id_from_select_only_PANDAS(cdf_d['Candidate'],{'BallotName':ballot_name})
@@ -285,22 +289,22 @@ def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,
 
         # fill CandidateContestSelectionJoin
             value_d = {'CandidateContest_Id': ids_d['contest_id'], 'CandidateSelection_Id': ids_d['selection_id'],'Election_Id':election_id}
-            join_id,cdf_d['CandidateContestSelectionJoin'] = id_from_select_or_insert_PANDAS(cdf_d['CandidateContestSelectionJoin'], value_d)
+            join_id,cdf_d['CandidateContestSelectionJoin'] = id_from_select_or_insert_PANDAS(cdf_d['CandidateContestSelectionJoin'], value_d, session, cdf_schema, 'CandidateContestSelectionJoin')
 
         # fill ElectionContestJoin
         # TODO doesn't need to be row-by-row, can be done in bulk.
         value_d = {'Election_Id': election_id, 'Contest_Id': ids_d['contest_id']}
-        join_id, cdf_d['ElectionContestJoin'] = id_from_select_or_insert_PANDAS(cdf_d['ElectionContestJoin'], value_d)
+        join_id, cdf_d['ElectionContestJoin'] = id_from_select_or_insert_PANDAS(cdf_d['ElectionContestJoin'], value_d, session, cdf_schema,'ElectionContestJoin')
 
         for ct,dic in mu.content_dictionary['counts_dictionary'].items():
         # fill VoteCount
             value_d = {'Count':row[ct],'ReportingUnit_Id':ids_d['ReportingUnit'],'CountItemType_Id': dic['CountItemType_Id'],'OtherCountItemType':dic['OtherCountItemType']}
             # TODO dupes are a problem only when contest & reporting unit are specified.
-            ids_d['VoteCount'], cdf_d['VoteCount'] =id_from_select_or_insert_PANDAS(cdf_d['VoteCount'], value_d,  'dupes_ok')
+            ids_d['VoteCount'], cdf_d['VoteCount'] =id_from_select_or_insert_PANDAS(cdf_d['VoteCount'], value_d, session, cdf_schema, 'VoteCount',  'dupes_ok')
 
         # fill SelectionElectionContestVoteCountJoin
             value_d = {'Selection_Id':ids_d['selection_id'],'Contest_Id':ids_d['contest_id'],'Election_Id':election_id,'VoteCount_Id':ids_d['VoteCount']}
-            join_id, cdf_d['SelectionElectionContestVoteCountJoin'] = id_from_select_or_insert_PANDAS(cdf_d['SelectionElectionContestVoteCountJoin'],  value_d)
+            join_id, cdf_d['SelectionElectionContestVoteCountJoin'] = id_from_select_or_insert_PANDAS(cdf_d['SelectionElectionContestVoteCountJoin'],  value_d, session, cdf_schema,'SelectionElectionContestVoteCountJoin')
         if index % frequency_of_report == 0:
             print('\t\tPushing to db ')
             for t in ['BallotMeasureContestSelectionJoin', 'CandidateContestSelectionJoin', 'ElectionContestJoin',
@@ -369,14 +373,14 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
     value_d = {'Name': df.election, 'EndDate': df.state.context_dictionary['Election'][df.election]['EndDate'],
                'StartDate': df.state.context_dictionary['Election'][df.election]['StartDate'],
                'OtherElectionType': otherelectiontype, 'ElectionType_Id': electiontype_id}
-    election_id, Election_dframe = id_from_select_or_insert_PANDAS(cdf_d['Election'], value_d)
+    election_id, Election_dframe = id_from_select_or_insert_PANDAS(cdf_d['Election'], value_d,session,cdf_schema,'Election')
 
     # if state_id is not passed as parameter, select-or-insert state, get id (default Reporting Unit for ballot questions)
     if state_id == 0:
         [reportingunittype_id, otherreportingunittype] = format_type_for_insert_PANDAS(cdf_d['ReportingUnitType'], 'state',id_type_other_id)
         value_d = {'Name': df.state.name, 'ReportingUnitType_Id': reportingunittype_id,
                    'OtherReportingUnitType': otherreportingunittype}
-        state_id, cdf_d['ReportingUnit'] = id_from_select_or_insert_PANDAS(cdf_d['ReportingUnit'], value_d)
+        state_id, cdf_d['ReportingUnit'] = id_from_select_or_insert_PANDAS(cdf_d['ReportingUnit'], value_d, session, cdf_schema,'ReportingUnit')
 
     # store state_id and election_id for later use
     ids_d = {'state': state_id, 'Election_Id': election_id}  # to hold ids of found items for later reference
@@ -430,7 +434,7 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
                                 value_d[f] = eval(item['OtherFields'][f])
                             if t == 'CandidateContest' or t == 'BallotMeasureContest':  # need to get ElectionDistrict_Id from contextual knowledge
                                 value_d['ElectionDistrict_Id'] = ids_d['contest_reporting_unit_id']
-                            exec('cdf_id,' + t + '_dframe  = id_from_select_or_insert_PANDAS(' + t+'_dframe,  value_d)')
+                            exec('cdf_id,' + t + '_dframe  = id_from_select_or_insert_PANDAS(' + t+'_dframe,  value_d)', session, cdf_schema,t)
 
                         # if newly inserted item is a ReportingUnit, insert all ComposingReportingUnit joins that can be deduced from the internal db name of the ReportingUnit
                         if t == 'ReportingUnit':
@@ -448,10 +452,10 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
             ids_d['selection_id'] = cdf_d['BallotMeasureSelection'].loc[selection]['Id']
             # fill BallotMeasureContest
             value_d = {'Name':eval(munger_fields_d['BallotMeasureContest'][0]['ExternalIdentifier']),'ElectionDistrict_Id':state_id}  # all ballot measures are assumed to be state-level ***
-            ids_d['contest_id'], BallotMeasureContest_dframe = id_from_select_or_insert_PANDAS(BallotMeasureContest_dframe,  value_d)
+            ids_d['contest_id'], BallotMeasureContest_dframe = id_from_select_or_insert_PANDAS(BallotMeasureContest_dframe,  value_d,session,cdf_schema,'BallotMeasureContest')
             # fill BallotMeasureContestSelectionJoin ***
             value_d = {'BallotMeasureContest_Id':ids_d['contest_id'],'BallotMeasureSelection_Id':ids_d['selection_id']}
-            join_id,BallotMeasureContestSelectionJoin_dframe = id_from_select_or_insert_PANDAS(BallotMeasureContestSelectionJoin_dframe, value_d)
+            join_id,BallotMeasureContestSelectionJoin_dframe = id_from_select_or_insert_PANDAS(BallotMeasureContestSelectionJoin_dframe, value_d, session, cdf_schema, 'BallotMeasureContestSelectionJoin')
 
         else:       # if not a Ballot Measure (i.e., if a Candidate Contest)
             raw_office_name = eval(munger_fields_d['Office'][0]['ExternalIdentifier'])
@@ -471,29 +475,29 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
             # insert into CandidateContest table
             votes_allowed = eval(munger_fields_d['CandidateContest'][0]['OtherFields']['VotesAllowed']) # TODO  misses other fields e.g. NumberElected
             value_d = {'Name':election_district_name,'ElectionDistrict_Id':election_district_id,'Office_Id':ids_d['Office_Id'],'VotesAllowed':votes_allowed}
-            ids_d['contest_id'], CandidateContest_dframe= id_from_select_or_insert_PANDAS(CandidateContest_dframe, value_d)
+            ids_d['contest_id'], CandidateContest_dframe= id_from_select_or_insert_PANDAS(CandidateContest_dframe, value_d,session, cdf_schema, 'CandidateContest')
 
             # insert into Candidate table
             ballot_name = eval(munger_fields_d['Candidate'][0]['ExternalIdentifier'])
             value_d = {'BallotName':ballot_name,'Election_Id':election_id,'Party_Id':ids_d['Party_Id']}
-            ids_d['Candidate_Id'], Candidate_dframe = id_from_select_or_insert_PANDAS(Candidate_dframe, value_d)
+            ids_d['Candidate_Id'], Candidate_dframe = id_from_select_or_insert_PANDAS(Candidate_dframe, value_d, session, cdf_schema,'Candidate')
 
             # insert into CandidateSelection
             value_d = {'Candidate_Id':ids_d['Candidate_Id']}
-            ids_d['selection_id'], CandidateSelection_dframe = id_from_select_or_insert_PANDAS(CandidateSelection_dframe, value_d)
+            ids_d['selection_id'], CandidateSelection_dframe = id_from_select_or_insert_PANDAS(CandidateSelection_dframe, value_d,session,cdf_schema,'CandidateSelection')
 
             # create record in CandidateContestSelectionJoin
             value_d = {'CandidateContest_Id':ids_d['contest_id'],
                        'CandidateSelection_Id': ids_d['selection_id'],
                        'Election_Id':election_id}
-            join_id, CandidateContestSelectionJoin_dframe = id_from_select_or_insert_PANDAS(CandidateContestSelectionJoin_dframe, value_d)
+            join_id, CandidateContestSelectionJoin_dframe = id_from_select_or_insert_PANDAS(CandidateContestSelectionJoin_dframe, value_d, session, cdf_schema, 'CandidateContestSelectionJoin')
 
 
 
 
         # fill ElectionContestJoin
         value_d = {'Election_Id': election_id, 'Contest_Id': ids_d['contest_id']}
-        join_id,ElectionContestJoin_dframe = id_from_select_or_insert_PANDAS(ElectionContestJoin_dframe, value_d)
+        join_id,ElectionContestJoin_dframe = id_from_select_or_insert_PANDAS(ElectionContestJoin_dframe, value_d,session, cdf_schema,'ElectionContestJoin')
         if index % frequency_of_report == 0:
             print('\t\t\tselection, contest and election-contest-join items entered')
 
@@ -501,11 +505,11 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
         for ct,dic in munger_counts_d.items():
             value_d = {'Count':row[ct],'ReportingUnit_Id':ids_d['ReportingUnit_Id'],'CountItemType_Id': dic['CountItemType_Id'],'OtherCountItemType':dic['OtherCountItemType']}
             # TODO dupes are a problem only when contest & reporting unit are specified.
-            ids_d['VoteCount_Id'], VoteCount_dframe =id_from_select_or_insert_PANDAS(VoteCount_dframe, value_d,  'dupes_ok')
+            ids_d['VoteCount_Id'], VoteCount_dframe =id_from_select_or_insert_PANDAS(VoteCount_dframe, value_d, session, cdf_schema, 'VoteCount', mode='dupes_ok')
 
             # fill SelectionElectionContestVoteCountJoin
             value_d = {'Selection_Id':ids_d['selection_id'],'Contest_Id':ids_d['contest_id'],'Election_Id':ids_d['Election_Id'],'VoteCount_Id':ids_d['VoteCount_Id']}
-            join_id,SelectionElectionContestVoteCountJoin_dframe = id_from_select_or_insert_PANDAS(SelectionElectionContestVoteCountJoin_dframe,  value_d)
+            join_id,SelectionElectionContestVoteCountJoin_dframe = id_from_select_or_insert_PANDAS(SelectionElectionContestVoteCountJoin_dframe,  value_d, session, cdf_schema, 'SelectionElectionContestJoin')
 
         if index % frequency_of_report == 0:
             for dframe in dframe_list:
