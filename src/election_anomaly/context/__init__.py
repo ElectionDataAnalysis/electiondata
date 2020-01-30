@@ -159,18 +159,18 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
     #%% fill composing reporting units join table
     print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
     # TODO why does this take so long?
-    cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin', session.bind, schema,index_col='Id')
+    cdf_d['ComposingReportingUnitJoin'] = pd.read_sql_table('ComposingReportingUnitJoin', session.bind, schema,index_col='Id')
     cdf['ReportingUnit'] = pd.read_sql_table('ReportingUnit', session.bind, schema,index_col='Id')
 
     # correct any misspellings in the 'ReportingUnit' dataframe # TODO remove
     spellcheck_dframe = pd.read_sql_table('corrections',session.bind,schema='misspellings',index_col='id')
     spellcheck_dict = dict(spellcheck_dframe.to_dict('split')['data'])
     cdf['ReportingUnit']['Name'] = cdf['ReportingUnit'].replace('Name',spellcheck_dict)
-    #time.sleep(5)  # TODO will time help avoid cruj_dframe=None problem?
+    #time.sleep(5)  # TODO will time help avoid cdf_d['ComposingReportingUnitJoin']=None problem?
 
     for index,context_row in cdf['ReportingUnit'].iterrows():
-        cruj_dframe = composing_from_reporting_unit_name_PANDAS(cdf['ReportingUnit'],cruj_dframe,context_row['Name'],index)
-    dframe_to_sql(cruj_dframe, session, schema, 'ComposingReportingUnitJoin')
+        cdf_d['ComposingReportingUnitJoin'] = composing_from_reporting_unit_name_PANDAS(session, schema, cdf['ReportingUnit'],cdf_d['ComposingReportingUnitJoin'],context_row['Name'],index)
+    dframe_to_sql(cdf_d['ComposingReportingUnitJoin'], session, schema, 'ComposingReportingUnitJoin')
     session.flush()
     #%% return
     return
@@ -201,8 +201,8 @@ def build_munger_d(s,m):
             munger_inverse_d[v] = k
     return(munger_d,munger_inverse_d)
 
-def raw_to_context(df,m,munger_d,conn,cur):
-    ''' Purely diagnostic -- reports what items in the datafile are missing from the context_dictionary (e.g., offices we don'cdf_table wish to analyze)'''
+def raw_to_context(df,m,munger_d,con,cur):
+    ''' Purely diagnostic -- reports what items in the datafile are missing from the context_dictionary (e.g., offices we don't wish to analyze)'''
     print('\'Missing\' below means \'Existing in the datafile, but missing from the munger dictionary, created from the state\'s context_dictionary, which was created from files in the context folder.')
     for t in m.query_from_raw.keys():
         t_parts = t.split(';')
@@ -217,8 +217,8 @@ def raw_to_context(df,m,munger_d,conn,cur):
                     missing.append(e[0])
             if len(missing)>0:
                 missing.sort()   #  and sort
-            rs.append('Sample data for '+t+': '+str( items_per_df[0:4]))
-            rs.append('For \''+m.name +'\', <b> missing '+t+' list is: </b>'+str(missing)+'. Add any missing '+t+' to the '+context_key+'.txt file and rerun')
+            print('Sample data for '+t+': '+str( items_per_df[0:4]))
+            print('For \''+m.name +'\', <b> missing '+t+' list is: </b>'+str(missing)+'. Add any missing '+t+' to the '+context_key+'.txt file and rerun')
     return
 
 
@@ -278,7 +278,7 @@ def insert_reporting_unit(dict,reporting_unit_list,id_type):
         elif dict[k]['Type'] != t: # if reporting type is in the dictionary, but has different 'Type'
             t_dict = dict[k]['Type']
             dict[r+' ('+  t_dict   +')'] = dict.pop(r) # rename existing key to include type (e.g., precinct)
-            dict[r+' ('+  reporting_unit_type   +')'] = {'Type':t,'ExternalIdentifiers':{id_type:r}}
+            dict[r+' ('+  t   +')'] = {'Type':t,'ExternalIdentifiers':{id_type:r}}
             
 def extract_precincts(s,df):
     ''' s is a state; df is a datafile with precincts (*** currently must be in the format of the nc_pct_results file; need to read info from metafile) '''
@@ -317,38 +317,6 @@ def insert_offices(s,d):
     dict_insert(s.path_to_state_dir + 'context/Office.txt',out_d)
     return(out_d)
     
-
-
-
-# is this still necessary?
-def process(nc_pct_results_file_path,dict_file_path,outfile):
-    a = extract_precincts(nc_pct_results_file_path)
-    with open(dict_file_path,'r') as f:
-        d=eval(f.read())
-    insert_reporting_unit(d,a,'nc_export1')
-    with open(outfile,'w') as f:
-        f.write(str(d))
-
-
-## temporary election_anomaly to fix nc_export1 reporting unit ExternalIdentifiers
-
-def fix(fp):        # fp is the path to the reporting_unit.txt file
-    with open(fp,'r') as f:
-        d= eval(f.read())
-    for k in d.keys():
-        if d[k]['Type'][:6] == 'other;':
-            d[k]['ExternalIdentifiers']['nc_export1']  # remove old
-            sections = k.split(';')
-            county_key = sections[1]
-            nc_export1_county = shorten_and_cap_county(k)
-            #p = re.compile('^Precinct (?P<precinct>.+)$')
-            #m = p.search(sections[2])
-            #precinct = m.group('precinct')
-            precinct = sections[3]
-            d[k]['ExternalIdentifiers']['nc_export1'] = nc_export1_county+';'+precinct
-    with open(fp+'.new','w') as f:
-        f.write(str(d))
-
 if __name__ == '__main__':
     from sqlalchemy.orm import sessionmaker
     import states_and_files as sf
