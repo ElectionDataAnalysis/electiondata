@@ -69,16 +69,15 @@ def id_from_select_only_PANDAS(dframe,value_d, mode='no_dupes',dframe_Id_is_inde
 
 def id_from_select_or_insert_PANDAS(dframe, value_d, session, schema, db_table_name,mode='no_dupes',dframe_Id_is_index=True):
     """  value_d gives the values for the fields in the dataframe.
-    If there is a corresponding record in the table, return the id
-    If there is no corresponding record, insert one and return the id.
-    # TODO what id? If dataframe has not been committed to the db, how do we ensure uniqueness of the assigned id?
+    If there is a corresponding record in the table, return the id (and the original dframe)
+    If there is no corresponding record, insert one into the db and return the id and the updated dframe.
     (.e.g., value_d['Name'] = 'North Carolina;Alamance County');
     E.g., tables_d[table] = {'tablename':'ReportingUnit', 'fields':[{'fieldname':'Name','datatype':'TEXT'}],
     'enumerations':['ReportingUnitType','CountItemStatus'],'other_element_refs':[], 'unique_constraints':[['Name']],
     'not_null_fields':['ReportingUnitType_Id']
     modes with consequences: 'dupes_ok'
        } """
-    # filter the dframe by the relevant value_d conditions # TODO This code repeats
+    # filter the cdf_value_d by the relevant value_d conditions # TODO This code repeats
     cdf_value_d = {}
     for k,v in value_d.items():
         if k in dframe.columns:
@@ -87,16 +86,16 @@ def id_from_select_or_insert_PANDAS(dframe, value_d, session, schema, db_table_n
     # filter the dframe by the value_d conditions
     filtered_dframe = dframe.loc[(dframe[list(cdf_value_d)] == pd.Series(cdf_value_d)).all(axis=1)]
 
-    if mode == 'no_dupes' and filtered_dframe.shape[0] > 1:
+    if mode == 'no_dupes' and filtered_dframe.shape[0] > 1: # if there are dupes (and we care)
         raise Exception('Duplicate values found for ' + str(value_d))
-    if filtered_dframe.shape[0] == 0:   # insert row if it's not already there
+    if filtered_dframe.shape[0] == 0:   # if no such row found
         filtered_dframe = filtered_dframe.append(value_d, ignore_index=True)
         dbr.dframe_to_sql(filtered_dframe, session, schema, db_table_name)
         if dframe_Id_is_index:
             index_col = 'Id'
         else:
             index_col = None
-        dframe = pd.read_sql_table(db_table_name,session.bind,schema=schema,index_col=index_col) # TODO what about index?
+        dframe = pd.read_sql_table(db_table_name,session.bind,schema=schema,index_col=index_col)
         id = id_from_select_only_PANDAS(dframe,value_d,db_table_name,mode,dframe_Id_is_index)
     else:
         id = id_from_select_only_PANDAS(dframe,value_d,mode,dframe_Id_is_index)
@@ -110,7 +109,7 @@ def composing_from_reporting_unit_name_PANDAS(session,schema,ru_dframe,cruj_dfra
     """
 
     if id == 0:
-        child_id, ru_dframe = id_from_select_or_insert_PANDAS(ru_dframe, {'Name': name},session,schema,'ReportingUnit') # TODO does function actually change ru_dframe? Why?
+        child_id, ru_dframe = id_from_select_or_insert_PANDAS(ru_dframe, {'Name': name},session,schema,'ReportingUnit')
     else: child_id = id
     chain = name.split(';')
     if len(chain) > 1:
@@ -126,9 +125,11 @@ def format_type_for_insert_PANDAS(dframe,txt,id_type_other_id,t_dframe_Id_is_ind
     This function returns a (type_id, othertype_text) pair; for types in the enumeration, returns (type_id for the given txt, ""),
     while for other types returns (type_id for "other",txt) """
     # TODO check that dframe columns are 'Id' and 'Txt'
+    assert 'Txt' in dframe.columns, 'dframe must have a Txt column'
     if t_dframe_Id_is_index:
         id_list = dframe.index[dframe['Txt'] == txt].to_list()
     else:
+        assert 'Id' in dframe.columns, 'When flag t_dframe_Id_is_index is false, there must be an Id column in dframe'
         id_list = dframe[dframe['Txt'] == txt].to_list()
     if len(id_list) == 1:   # TODO prevent multiple fillings of *Type tables, which yield rowcounts > 1
         return([id_list[0],''])
@@ -319,19 +320,6 @@ def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,
 def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_id = 0,cdf_table_filepath='CDF_schema_def_info/tables.txt'):
     """ munger-agnostic raw-to-cdf script; ***
     df is datafile, mu is munger """
-    # TODO why did the dframe creation loop fail?
-    #for tbl in ['ElectionType','CountItemType','ReportingUnitType','Election','ReportingUnit','Party','CandidateContest','Candidate','CandidateSelection','BallotMeasureContestSelectionJoin','ElectionContestJoin','ExternalIdentifier','BallotMeasureSelection']:
-        #dframe_creation_string = tbl+'_dframe = pd.read_sql_table(\'' + tbl + '\',session.bind, cdf_schema, index_col=\'Id\')'
-        #exec(dframe_creation_string)
-        #print (dframe_creation_string)
-    dframe_list = ['ElectionType', 'CountItemType', 'ReportingUnitType', 'ReportingUnit', 'Party', 'Election',
-                           'Office',
-                           'CandidateContest', 'BallotMeasureContest',
-                           'BallotMeasureSelection','Candidate', 'CandidateSelection', 'VoteCount',
-                           'SelectionElectionContestVoteCountJoin', 'BallotMeasureContestSelectionJoin',
-                           'ElectionContestJoin',
-                           'CandidateContestSelectionJoin', 'ComposingReportingUnitJoin', 'ExternalIdentifier']
-
     cdf_d = {}  # to hold various dataframes from cdf db tables
 
 
@@ -393,17 +381,20 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
 
     process_ballot_measures = input('Process ballot measures (y/n)?\n')
     if process_ballot_measures == 'y':
+        print('\tFiltering for desired rows of raw file')
         selection_list = list(cdf_d['BallotMeasureSelection']['Selection'].unique())
         ballot_measure_rows = raw_rows.apply(lambda row: is_ballot_measure(row,selection_list,mu))
+        print('\tStart row-by-row processing')
         row_by_row_elements_to_cdf(session, mu, cdf_schema, ballot_measure_rows, cdf_d, election_id, id_type_other_id)
 
 
-    process_candidate_contests = input('Process candidate contests (y/n)?\n')
-    # TODO this won't work until CandidateContest table has entries in ExternalIdentifier.
+    process_candidate_contests = input('Process candidate contests [whose offices are listed in Office.txt] (y/n)?\n')
     if process_candidate_contests == 'y':
-        cdf_contest_list = list(cdf_d['CandidateContest'].index.unique())
-        raw_contest_list = cdf_d['ExternalIdentifier'][cdf_d['ExternalIdentifier']['ForeignId'].isin(cdf_contest_list)]
-        cc_rows = raw_rows.apply(lambda row: is_contest_in_list(row,raw_contest_list,mu),axis=1)
+        print('\tFiltering for desired rows of raw file')
+        cdf_office_list = list(cdf_d['Office'].index.unique())
+        raw_office_list = cdf_d['ExternalIdentifier'][cdf_d['ExternalIdentifier']['ForeignId'].isin(cdf_office_list)]['Value'].to_list()
+        cc_rows = raw_rows.apply(lambda row: is_office_in_list(row, raw_office_list, mu), axis=1)
+        print('\tStart row-by-row processing')
         row_by_row_elements_to_cdf(session,mu,cdf_schema,cc_rows,cdf_d,election_id,id_type_other_id)
 
     return str(ids_d)
@@ -419,8 +410,8 @@ def is_ballot_measure(row,selection_list,mu):
     is_bm_row = eval(bm_filter)
     return is_bm_row
 
-def is_contest_in_list(row,raw_contest_list,mu):
-    cc_filter = " | ".join(["(row['Contest Name'] == '" + i + "')" for i in raw_contest_list]) # TODO munger-dependent
+def is_office_in_list(row, raw_office_list, mu):
+    cc_filter = " | ".join(["(row['Contest Name'] == '" + i + "')" for i in raw_office_list]) # TODO munger-dependent
     is_c_in_l = eval(cc_filter)
     return is_c_in_l
 
