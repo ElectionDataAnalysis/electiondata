@@ -21,7 +21,7 @@ def spellcheck(session,value_d):
         corrected_value_d[key] = rp.fetchone()[0]
     return corrected_value_d
 
-def id_and_name_from_external_PANDAS(ei_dframe, t_dframe, external_name, identifiertype_id, otheridentifiertype, internal_name_field='Name',t_dframe_Id_is_index=True):
+def id_and_name_from_external_PANDAS(ei_dframe, t_dframe,  external_name, identifiertype_id, otheridentifiertype, internal_name_field='Name',t_dframe_Id_is_index=True):
     ## find the internal db name and id from external identifier
 
     ei_value_d = {'Value':external_name,'IdentifierType_Id':identifiertype_id,'OtherIdentifierType':otheridentifiertype}
@@ -34,7 +34,7 @@ def id_and_name_from_external_PANDAS(ei_dframe, t_dframe, external_name, identif
             name = t_dframe[t_dframe['Id'] == table_id][internal_name_field].tolist()[0]
         return table_id, name
     elif ei_filtered.shape[0] > 1:
-        raise Exception('\n\t'.join['Unexpected duplicates found for','external_name: '+external_name, 'identifiertype_id: '+str(identifiertype_id),'otheridentifiertype: '+otheridentifiertype])
+        raise Exception('Unexpected duplicates found')
     else:
         return None, None
 

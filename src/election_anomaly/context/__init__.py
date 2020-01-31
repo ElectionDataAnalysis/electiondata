@@ -4,6 +4,7 @@
 # utilities for extracting state context info and inserting it into the files in the context folder
 import sys
 import re
+import os
 
 from db_routines import dframe_to_sql
 from munge_routines import format_type_for_insert_PANDAS, id_from_select_only_PANDAS, composing_from_reporting_unit_name_PANDAS
@@ -31,6 +32,8 @@ def ei_id_and_othertype(df,row,other_id):
 
     return format_type_for_insert_PANDAS(df,row['ExternalIdentifierType'],other_id)
 
+
+
 def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath = 'CDF_schema_def_info/'):
     """Takes the info from the text files in the state's context files and inserts it into the db.
     Assumes enumeration tables are already filled.
@@ -56,6 +59,7 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
             other_id[e] = None  # TODO how does this flow through?
         # %% create and (partially) fill the id/othertype dictionaries
 
+    # pull list of tables in CDF
     if not cdf_def_dirpath[-1] == '/': cdf_def_dirpath += '/'
     with open(cdf_def_dirpath+'tables.txt','r') as f:
         table_def_list = eval(f.read())
@@ -65,9 +69,15 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
 
         t = table_def[0]      # e.g., cdf_table = 'ReportingUnit'
 
-        # for each table # TODO which tables? s.context_dictionary.keys() doesn't include Candidate and other tables filled from datafile, not from context.
+        # for each table # Note:s.context_dictionary.keys() doesn't include Candidate and other tables filled from datafile, not from context.
+
+        # fill BallotMeasureSelection dframe, table, pickle
+
+
         if t in s.context_dictionary.keys(): # excludes 'ExternalIdentifier', as well as tables filled from datafile but not from context, such as Candidate
             print('\tProcessing ' + t + 's')
+            # TODO read dataframe for t from pickle if available
+
             # create DataFrame with enough info to define db table eventually
             if t == 'BallotMeasureSelection':   # note: s.context_dictionary['BallotMeasureSelection'] is a set not a dict
                 context_cdframe['BallotMeasureSelection'] = pd.DataFrame(list(s.context_dictionary['BallotMeasureSelection']),columns=['Selection'])
@@ -152,24 +162,27 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
     dframe_to_sql(ei_df, session, schema, 'ExternalIdentifier')
     session.flush()
 
-    #%% fill composing reporting units join table
-    print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
-    # TODO why does this take so long?
-    cdf_d['ComposingReportingUnitJoin'] = pd.read_sql_table('ComposingReportingUnitJoin', session.bind, schema,index_col='Id')
-    cdf['ReportingUnit'] = pd.read_sql_table('ReportingUnit', session.bind, schema,index_col='Id')
+    cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,schema,cdf_d,pickle_dir=s.path_to_state_dir+'pickles/')
 
-    # correct any misspellings in the 'ReportingUnit' dataframe # TODO remove
-    spellcheck_dframe = pd.read_sql_table('corrections',session.bind,schema='misspellings',index_col='id')
-    spellcheck_dict = dict(spellcheck_dframe.to_dict('split')['data'])
-    cdf['ReportingUnit']['Name'] = cdf['ReportingUnit'].replace('Name',spellcheck_dict)
-    #time.sleep(5)  # TODO will time help avoid cdf_d['ComposingReportingUnitJoin']=None problem?
-
-    for index,context_row in cdf['ReportingUnit'].iterrows():
-        cdf_d['ComposingReportingUnitJoin'] = composing_from_reporting_unit_name_PANDAS(session, schema, cdf['ReportingUnit'],cdf_d['ComposingReportingUnitJoin'],context_row['Name'],index)
-    dframe_to_sql(cdf_d['ComposingReportingUnitJoin'], session, schema, 'ComposingReportingUnitJoin')
-    session.flush()
-    #%% return
     return
+
+def fill_composing_reporting_unit_join(session,schema,cdf_d,pickle_dir='../local_data/pickles/'):
+    if os.path.isfile(pickle_dir + 'ComposingReportingUnitJoin'):
+        print('Filling ComposingReportingUnitJoin table from pickle in ' + pickle_dir)
+        cruj_dframe = pd.read_pickle(pickle_dir + 'ComposingReportingUnitJoin')
+    else:
+        print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
+        # TODO why does this take so long?
+        cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin', session.bind, schema,index_col='Id')
+        ru_dframe = pd.read_sql_table('ReportingUnit', session.bind, schema,index_col='Id')
+        for index,context_row in ru_dframe.iterrows():
+            cruj_dframe = composing_from_reporting_unit_name_PANDAS(session, schema, ru_dframe,cruj_dframe,context_row['Name'],index)
+        cruj_dframe.to_pickle(pickle_dir + 'ComposingReportingUnitJoin')
+
+    dframe_to_sql(cruj_dframe, session, schema, 'ComposingReportingUnitJoin')
+    session.flush()
+    return cruj_dframe
+
 
 
 def build_munger_d(s,m):

@@ -23,6 +23,12 @@ from alembic.migration import MigrationContext
 from alembic.operations import Operations
 import pandas as pd
 
+try:
+    import cPickle as pickle
+except:
+    import pickle
+
+
 def raw_data(session,meta,df):
     """ Loads the raw data from the datafile df into the schema for the associated state
     Schema for the state should already exist
@@ -93,6 +99,7 @@ if __name__ == '__main__':
         # need_to_load_data = input('Load enumeration & context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
         need_to_load_context_data = 'y'
         if need_to_load_context_data == 'y':
+
             # %% fill enumeration tables
             print('\tFilling enumeration tables')
             CDF.fill_cdf_enum_tables(session, meta_cdf_schema, cdf_schema,enumeration_tables)
