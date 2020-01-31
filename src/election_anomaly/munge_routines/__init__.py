@@ -11,16 +11,6 @@ import pandas as pd
 def report_error(error_string):
     print('Munge error: '+error_string)
 
-def spellcheck(session,value_d):
-    corrected_value_d = {}
-    spell_meta = db.MetaData(bind=session.bind, reflect=True, schema='misspellings')
-    for key,value in value_d.items():
-        cor = spell_meta.tables['misspellings.corrections']
-        q = session.query(cor.c.good).filter(cor.c.bad == value)
-        rp = session.execute(q)
-        corrected_value_d[key] = rp.fetchone()[0]
-    return corrected_value_d
-
 def id_and_name_from_external_PANDAS(ei_dframe, t_dframe,  external_name, identifiertype_id, otheridentifiertype, internal_name_field='Name',t_dframe_Id_is_index=True):
     ## find the internal db name and id from external identifier
 
@@ -38,7 +28,7 @@ def id_and_name_from_external_PANDAS(ei_dframe, t_dframe,  external_name, identi
     else:
         return None, None
 
-def id_from_select_only_PANDAS(dframe,value_d, mode='no_dupes',dframe_Id_is_index=True,check_spelling = True):
+def id_from_select_only_PANDAS(dframe,value_d, mode='no_dupes',dframe_Id_is_index=True):
     """Returns the Id of the record in table with values given in the dictionary value_d.
     On error (nothing found, or more than one found) returns 0"""
 
@@ -50,15 +40,7 @@ def id_from_select_only_PANDAS(dframe,value_d, mode='no_dupes',dframe_Id_is_inde
     filtered_dframe = dframe.loc[(dframe[list(cdf_value_d)] == pd.Series(cdf_value_d)).all(axis=1)]
 
     if filtered_dframe.shape[0] == 0: # if no rows meet value_d criteria
-        # check misspellings.corrections table and try again. Set check_spelling = False to avoid needless repeats
-        if check_spelling:
-            try:
-                corrected_value_d = spellcheck(session,value_d)
-                return id_from_select_only_PANDAS(dframe, corrected_value_d, mode, check_spelling=False)
-            except:
-                return 0
-        else:
-            return 0
+        return 0
     elif filtered_dframe.shape[0] >1 and mode == 'no_dupes':
         raise Exception('More than one record found for these values:\n\t'+str(value_d))
     else:

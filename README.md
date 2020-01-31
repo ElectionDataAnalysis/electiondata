@@ -26,11 +26,6 @@ user=<your user name>
 password=<your password>
 ```
 
-Your database should have a schema `misspellings` and table `corrections` to hold corrections of misspellings. You can create this with postgresql code:
-```angular2
-CREATE SCHEMA misspellings
-CREATE TABLE misspellings.corrections (id SERIAL PRIMARY KEY, bad TEXT UNIQUE NOT NULL, good TEXT NOT NULL)
-```
 
 ### .gitignore
 Folders you will need in your local repo:
