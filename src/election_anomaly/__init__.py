@@ -112,7 +112,7 @@ if __name__ == '__main__':
         print('Creating munger instance from '+munger_path)
         m = sf.create_munger(munger_path)
 
-        default = 'results_pct_20181106.txt'
+        default = 'filtered_results_pct_20181106.txt'
         #default = 'alamance.txt'
         df_name = input('Enter name of datafile (default is '+default+')\n') or default
 

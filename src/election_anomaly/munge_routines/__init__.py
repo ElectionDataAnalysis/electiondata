@@ -234,19 +234,15 @@ def bulk_elements_to_cdf(session, mu, cdf_schema, row, election_id, id_type_othe
 
     return cdf_d, id_type_other_id
 
-def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,id_type_other_id):
+def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,id_type_other_id,contest_type='Candidate'):
     """
     mu is a munger. cdf_d is a dictionary of dataframes
+    contest type must be either 'Candidate' or 'BallotMeasure'. Can't treat both at once.
     """
 
     ids_d = {}
     name_d = {}
 
-    # cdf_d['Office'] = pd.read_sql_table('Office',session.bind,schema=cdf_schema,index_col='Id')
-    # cdf_d['BallotMeasureSelection'] = pd.read_sql_table('Office',session.bind,schema=cdf_schema,index_col='Id')
-
-    # get BallotMeasureSelections to distinguish between BallotMeasure- and Candidate-Contests
-    # cdf_d['BallotMeasureSelection'] = pd.read_sql_table('BallotMeasureSelection',session.bind,cdf_schema,index_col='Id') # TODO check that this dframe is passed in cdf_d parameter
 
 
     for index, row in raw_rows.iterrows():
@@ -255,13 +251,7 @@ def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,
         if index % frequency_of_report == 0:
             print('\t\tProcessing row ' + str(index) + ':\n' + str(row))
 
-        # if row corresponds to a CandidateContest for an Office that is not being tracked, skip it.
-        if eval(bm_filter):    # if row is a BallotMeasure row
-            ballot_measure_raw_row = True
-        else:
-            ballot_measure_raw_row = False
-
-        if not ballot_measure_raw_row:
+        if not contest_type == 'Candidate':
             ids_d['Office'] = id_from_select_only_PANDAS(cdf_d['Office'],{'Name':eval(mu.content_dictionary['fields_dictionary']['Office'][0]['ExternalIdentifier'])})
             if ids_d['Office'] == 0: # skip rows for which office was not explicitly listed in context folder
                 continue
@@ -274,14 +264,14 @@ def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,
                 ids_d[t],name_d[t] = id_and_name_from_external_PANDAS(cdf_d['ExternalIdentifier'], cdf_d[t], eval(item['ExternalIdentifier']),id_type_other_id,mu.name,item['InternalNameField'])
 
         # process Candidate and BallotMeasure elements
-        if ballot_measure_raw_row: # row info is for a Ballot Measure
+        if contest_type == 'BallotMeasure':
             selection = eval(mu.content_dictionary['fields_dictionary']['BallotMeasureSelection'][0]['ExternalIdentifier'])
             ids_d['selection_id'] = cdf_d['BallotMeasureSelection'][cdf_d['BallotMeasureSelection']['Selection'] == selection].index.to_list()[0]
             ids_d['contest_id'] = id_from_select_only_PANDAS(cdf_d['BallotMeasureContest'],{'Name':eval(mu.content_dictionary['fields_dictionary']['BallotMeasureContest'][0]['ExternalIdentifier'])})
         # fill BallotMeasureContestSelectionJoin
             value_d = {'BallotMeasureContest_Id': ids_d['contest_id'], 'BallotMeasureSelection_Id': ids_d['selection_id']}
             join_id,cdf_d['BallotMeasureContestSelectionJoin'] = id_from_select_or_insert_PANDAS(cdf_d['BallotMeasureContestSelectionJoin'],value_d,session,cdf_schema,'BallotMeasureContestSelectionJoin')
-        else:   # if Candidate row
+        else:
             ballot_name = eval(mu.content_dictionary['fields_dictionary']['Candidate'][0]['ExternalIdentifier'])
             ids_d['Candidate'] = id_from_select_only_PANDAS(cdf_d['Candidate'],{'BallotName':ballot_name})
             ids_d['selection_id'] = id_from_select_only_PANDAS(cdf_d['CandidateSelection'],{'Candidate_Id':ids_d['Candidate']})
@@ -385,7 +375,7 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
         selection_list = list(cdf_d['BallotMeasureSelection']['Selection'].unique())
         ballot_measure_rows = raw_rows.apply(lambda row: is_ballot_measure(row,selection_list,mu))
         print('\tStart row-by-row processing')
-        row_by_row_elements_to_cdf(session, mu, cdf_schema, ballot_measure_rows, cdf_d, election_id, id_type_other_id)
+        row_by_row_elements_to_cdf(session, mu, cdf_schema, ballot_measure_rows, cdf_d, election_id, id_type_other_id,contest_type='BallotMeasure')
 
 
     process_candidate_contests = input('Process candidate contests [whose offices are listed in Office.txt] (y/n)?\n')
@@ -396,7 +386,7 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
         bool_rows = raw_rows.apply(lambda row: is_office_in_list(row, raw_office_list, mu), axis=1)
         cc_rows = raw_rows.loc[bool_rows]
         print('\tStart row-by-row processing')
-        row_by_row_elements_to_cdf(session,mu,cdf_schema,cc_rows,cdf_d,election_id,id_type_other_id)
+        row_by_row_elements_to_cdf(session,mu,cdf_schema,cc_rows,cdf_d,election_id,id_type_other_id,contest_type='Candidate')
 
     return str(ids_d)
 
