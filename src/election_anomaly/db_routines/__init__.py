@@ -150,7 +150,7 @@ def contest_type_from_contest_id(con,meta,schema,Contest_Id):
 def read_id_from_enum(session,meta,schema,table,txt):
     """ given the Txt value of an enumeration table entry, return the corresponding Id"""
     t = db.Table(table, meta, autoload=True, autoload_with=session.bind, schema=schema)
-    # TODO assert that table is an enumeration?
+    assert 'Txt' in t.columns and 'Id' in t.columns, 'Id and Txt must both be columns of the table ' + table
     q = db.select([t.columns.Id]).where(t.columns.Txt == txt)
     ResultProxy = session.execute(q)
     ResultSet = ResultProxy.fetchall()
@@ -173,10 +173,6 @@ def query(q,sql_ids,strs,con,cur):
         return cur.fetchall()
     else:
         return None
-
-def query_SQLALCHEMY(session,q):
-    # TODO
-    return
 
 def file_to_sql_statement_list(fpath):
     with open(fpath,'r') as f:

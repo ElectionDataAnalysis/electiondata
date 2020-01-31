@@ -35,7 +35,6 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
     """Takes the info from the text files in the state's context files and inserts it into the db.
     Assumes enumeration tables are already filled.
     """
-    # TODO Outline
     context_cdframe = {}    # dictionary of dataframes from context info
     cdf_d = {}  # dict of dframes for CDF db tables
 
@@ -57,7 +56,6 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
             other_id[e] = None  # TODO how does this flow through?
         # %% create and (partially) fill the id/othertype dictionaries
 
-    # TODO ## context to dataframes
     if not cdf_def_dirpath[-1] == '/': cdf_def_dirpath += '/'
     with open(cdf_def_dirpath+'tables.txt','r') as f:
         table_def_list = eval(f.read())

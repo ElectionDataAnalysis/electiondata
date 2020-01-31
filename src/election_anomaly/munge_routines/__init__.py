@@ -393,7 +393,8 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
         print('\tFiltering for desired rows of raw file')
         cdf_office_list = list(cdf_d['Office'].index.unique())
         raw_office_list = cdf_d['ExternalIdentifier'][cdf_d['ExternalIdentifier']['ForeignId'].isin(cdf_office_list)]['Value'].to_list()
-        cc_rows = raw_rows.apply(lambda row: is_office_in_list(row, raw_office_list, mu), axis=1)
+        bool_rows = raw_rows.apply(lambda row: is_office_in_list(row, raw_office_list, mu), axis=1)
+        cc_rows = raw_rows.loc[bool_rows]
         print('\tStart row-by-row processing')
         row_by_row_elements_to_cdf(session,mu,cdf_schema,cc_rows,cdf_d,election_id,id_type_other_id)
 
