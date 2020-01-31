@@ -99,7 +99,7 @@ def id_from_select_or_insert_PANDAS(dframe, value_d, session, schema, db_table_n
         dframe = pd.read_sql_table(db_table_name,session.bind,schema=schema,index_col=index_col) # TODO what about index?
         id = id_from_select_only_PANDAS(dframe,value_d,db_table_name,mode,dframe_Id_is_index)
     else:
-        id = id_from_select_only_PANDAS(dframe,value_d,session,schema,db_table_name,mode,dframe_Id_is_index)
+        id = id_from_select_only_PANDAS(dframe,value_d,mode,dframe_Id_is_index)
     assert filtered_dframe.shape[0] == 1, 'filtered dataframe should have exactly one row'
     return id, dframe
 
@@ -241,15 +241,12 @@ def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,
     ids_d = {}
     name_d = {}
 
-    cdf_d['Office'] = pd.read_sql_table('Office',session.bind,schema=cdf_schema,index_col='Id')
-    cdf_d['BallotMeasureSelection'] = pd.read_sql_table('Office',session.bind,schema=cdf_schema,index_col='Id')
+    # cdf_d['Office'] = pd.read_sql_table('Office',session.bind,schema=cdf_schema,index_col='Id')
+    # cdf_d['BallotMeasureSelection'] = pd.read_sql_table('Office',session.bind,schema=cdf_schema,index_col='Id')
 
     # get BallotMeasureSelections to distinguish between BallotMeasure- and Candidate-Contests
-    cdf_d['BallotMeasureSelection'] = pd.read_sql_table('BallotMeasureSelection',session.bind,cdf_schema,index_col='Id')
-    bm_selections = cdf_d['BallotMeasureSelection']['Selection'].to_list()
-    bm_filter = " | ".join(["(row['Choice'] == '" + i + "')" for i in bm_selections]) # TODO munger-dependent
+    # cdf_d['BallotMeasureSelection'] = pd.read_sql_table('BallotMeasureSelection',session.bind,cdf_schema,index_col='Id') # TODO check that this dframe is passed in cdf_d parameter
 
-    # TODO strip out any rows corresponding to untracked offices before looping
 
     for index, row in raw_rows.iterrows():
         # track progress
@@ -334,40 +331,27 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
                            'SelectionElectionContestVoteCountJoin', 'BallotMeasureContestSelectionJoin',
                            'ElectionContestJoin',
                            'CandidateContestSelectionJoin', 'ComposingReportingUnitJoin', 'ExternalIdentifier']
-    #%% define dataframes
-    cdf_d = {}
-    cdf_d['ElectionType'] = pd.read_sql_table('ElectionType', session.bind, cdf_schema, index_col='Id')
-    cdf_d['CountItemType'] = pd.read_sql_table('CountItemType', session.bind, cdf_schema, index_col='Id')
-    cdf_d['ReportingUnitType'] = pd.read_sql_table('ReportingUnitType', session.bind, cdf_schema, index_col='Id')
-    cdf_d['Election'] = pd.read_sql_table('Election', session.bind, cdf_schema, index_col='Id')
-    cdf_d['ReportingUnit'] = pd.read_sql_table('ReportingUnit', session.bind, cdf_schema, index_col='Id')
-    cdf_d['Party'] = pd.read_sql_table('Party', session.bind, cdf_schema, index_col='Id')
-    cdf_d['Office'] = pd.read_sql_table('Office', session.bind, cdf_schema, index_col='Id')
-    cdf_d['CandidateContest'] = pd.read_sql_table('CandidateContest', session.bind, cdf_schema, index_col='Id')
-    cdf_d['Candidate'] = pd.read_sql_table('Candidate', session.bind, cdf_schema, index_col='Id')
-    cdf_d['CandidateSelection'] = pd.read_sql_table('CandidateSelection', session.bind, cdf_schema, index_col='Id')
-    cdf_d['BallotMeasureContest'] = pd.read_sql_table('BallotMeasureContest', session.bind, cdf_schema, index_col='Id')
-    cdf_d['VoteCount'] = pd.read_sql_table('VoteCount', session.bind, cdf_schema, index_col='Id')
-    cdf_d['SelectionElectionContestVoteCountJoin'] = pd.read_sql_table('SelectionElectionContestVoteCountJoin', session.bind, cdf_schema, index_col='Id')
-    cdf_d['BallotMeasureContestSelectionJoin'] = pd.read_sql_table('BallotMeasureContestSelectionJoin', session.bind, cdf_schema, index_col='Id')
-    cdf_d['ElectionContestJoin'] = pd.read_sql_table('ElectionContestJoin', session.bind, cdf_schema, index_col='Id')
-    cdf_d['CandidateContestSelectionJoin'] = pd.read_sql_table('CandidateContestSelectionJoin', session.bind, cdf_schema, index_col='Id')
-    cdf_d['ComposingReportingUnitJoin'] = pd.read_sql_table('ComposingReportingUnitJoin', session.bind, cdf_schema, index_col='Id')
-    cdf_d['ExternalIdentifier'] = pd.read_sql_table('ExternalIdentifier', session.bind, cdf_schema, index_col='Id')
-    cdf_d['BallotMeasureSelection'] = pd.read_sql_table('BallotMeasureSelection', session.bind, schema=cdf_schema,
-                                                      index_col='Selection')
 
-    #%% get id for IdentifierType 'other' if it was not passed as parameter
+    cdf_d = {}  # to hold various dataframes from cdf db tables
+
+
+    # get id for IdentifierType 'other' if it was not passed as parameter
     if id_type_other_id == 0:
-        IdentifierType_dframe = pd.read_sql_table('IdentifierType', session.bind, cdf_schema, index_col='Id')
-        id_type_other_id = IdentifierType_dframe.index[IdentifierType_dframe['Txt'] == 'other'].to_list()[0]
+        cdf_d['IdentifierType'] = pd.read_sql_table('IdentifierType', session.bind, cdf_schema, index_col='Id')
+        id_type_other_id = cdf_d['IdentifierType'].index[cdf_d['IdentifierType']['Txt'] == 'other'].to_list()[0]
         if not id_type_other_id:
             raise Exception('No Id found for IdentifierType \'other\'; fix IdentifierType table and rerun.')
+
     with open(cdf_table_filepath, 'r') as f:
         table_def_list = eval(f.read())
     tables_d = {}
     for table_def in table_def_list:
         tables_d[table_def[0]] = table_def[1]
+
+    # get dataframes needed before bulk processing
+    for t in ['ElectionType', 'Election','ReportingUnitType','ReportingUnit','CountItemType']:
+        cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema, index_col='Id')
+
 
     # get id for  election
     [electiontype_id, otherelectiontype] = format_type_for_insert_PANDAS(cdf_d['ElectionType'],df.state.context_dictionary['Election'][df.election]['ElectionType'],id_type_other_id)
@@ -403,9 +387,42 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
     if bulk_items_already_loaded != 'y':
         bulk_elements_to_cdf(session, mu, cdf_schema, raw_rows, election_id, id_type_other_id,ids_d['state'])
 
-    row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,id_type_other_id)
+    # get all dataframes needed for processing row-by-row
+    for t in ['Party', 'Office','CandidateContest','Candidate','CandidateSelection','BallotMeasureContest','VoteCount','SelectionElectionContestVoteCountJoin','BallotMeasureContestSelectionJoin','ElectionContestJoin','CandidateContestSelectionJoin','ComposingReportingUnitJoin','ExternalIdentifier','BallotMeasureSelection']:
+        cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema, index_col='Id')
+
+    process_ballot_measures = input('Process ballot measures (y/n)?\n')
+    if process_ballot_measures == 'y':
+        selection_list = list(cdf_d['BallotMeasureSelection']['Selection'].unique())
+        ballot_measure_rows = raw_rows.apply(lambda row: is_ballot_measure(row,selection_list,mu))
+        row_by_row_elements_to_cdf(session, mu, cdf_schema, ballot_measure_rows, cdf_d, election_id, id_type_other_id)
+
+
+    process_candidate_contests = input('Process candidate contests (y/n)?\n')
+    # TODO this won't work until CandidateContest table has entries in ExternalIdentifier.
+    if process_candidate_contests == 'y':
+        cdf_contest_list = list(cdf_d['CandidateContest'].index.unique())
+        raw_contest_list = cdf_d['ExternalIdentifier'][cdf_d['ExternalIdentifier']['ForeignId'].isin(cdf_contest_list)]
+        cc_rows = raw_rows.apply(lambda row: is_contest_in_list(row,raw_contest_list,mu),axis=1)
+        row_by_row_elements_to_cdf(session,mu,cdf_schema,cc_rows,cdf_d,election_id,id_type_other_id)
 
     return str(ids_d)
+
+def is_ballot_measure(row,selection_list,mu):
+    """
+    row is a pd.Series; cdf is a dictionary of dataframes,
+    one of which must be 'BallotMeasureSelection' with index Id
+    another  of which must be 'ExternalIdentifier'
+    mu is a munger # TODO fix description
+    """
+    bm_filter = " | ".join(["(row['Choice'] == '" + i + "')" for i in selection_list])  # TODO munger-dependent
+    is_bm_row = eval(bm_filter)
+    return is_bm_row
+
+def is_contest_in_list(row,raw_contest_list,mu):
+    cc_filter = " | ".join(["(row['Contest Name'] == '" + i + "')" for i in raw_contest_list]) # TODO munger-dependent
+    is_c_in_l = eval(cc_filter)
+    return is_c_in_l
 
 if __name__ == '__main__':
     import db_routines.Create_CDF_db as CDF
@@ -428,6 +445,7 @@ if __name__ == '__main__':
 
     print('Creating datafile instance')
     df = sf.create_datafile(s, 'General Election 2018-11-06', 'alamance.txt', mf, mu)
+
 
     raw_records_to_cdf(session,meta,df,mu,cdf_schema,0,0,'../CDF_schema_def_info/tables.txt')
     print('Done!')

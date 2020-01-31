@@ -75,7 +75,6 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
                 context_cdframe['BallotMeasureSelection'] = pd.DataFrame(list(s.context_dictionary['BallotMeasureSelection']),columns=['Selection'])
                 # %% commit table to db
                 dframe_to_sql(context_cdframe[t], session, schema, t)
-                # TODO Then need to deal with composing reporting units.
 
             else:
                 context_cdframe[t] = pd.read_csv(s.path_to_state_dir + 'context/'+ t + '.txt',sep = '\t')
@@ -90,7 +89,6 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
 
                 # %% commit table to db
                 dframe_to_sql(context_cdframe[t], session, schema, t)
-                # TODO Then need to deal with composing reporting units.
 
                 if t == 'Office':
                     # Check that all ElectionDistrictTypes are recognized
@@ -128,7 +126,7 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
                     new_cc_dframe = pd.DataFrame(new_cc)
                     cdf_d['CandidateContest'] = dframe_to_sql(new_cc_dframe,session,schema,'CandidateContest')
                     session.flush()
-
+    # TODO need to fill CandidateContest table
 
 
     #%% fill ExternalIdentifier table
