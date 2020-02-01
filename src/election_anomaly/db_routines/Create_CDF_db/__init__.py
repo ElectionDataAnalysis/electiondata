@@ -3,69 +3,81 @@
 # db_routines/Create_CDF_db/__init__.py
 # TODO may need to add "NOT NULL" requirements per CDF
 
-from psycopg2 import sql
 import db_routines as dbr
+import sqlalchemy
+from db_routines import create_schema
+from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,Date,ForeignKey
+# NB: imports above are used within string argument to exec()
+from sqlalchemy.orm import sessionmaker
+import os
+import pandas as pd
 
 
-def create_common_data_format_schema (con,cur,schema_name):
-    """ schema_name example: 'cdf'; Creates schema with that name on the given db connection and cursor"""
+def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF_schema_def_info/',delete_existing=False):
+    """ schema example: 'cdf'; Creates cdf tables in the given schema
+    e_table_list is a list of enumeration tables for the CDF, e.g., ['ReportingUnitType','CountItemType', ... ]
+    """
+    create_schema(session, schema,delete_existing)
+    eng = session.bind
+    metadata = MetaData(bind=eng,schema=schema)
 
-    # create the blank schema
-    new_schema_created = dbr.create_schema(schema_name)
-    if new_schema_created:
-        # create a sequence for unique id values across all tables
-        dbr.query('CREATE SEQUENCE {}.id_seq;',[schema_name],[],con,cur)
-    
-        # create and fill enumeration tables
-        print('\tCreating enumeration tables')
-        enumeration_path = 'CDF_schema_def_info/enumerations/'
-        for t in ['IdentifierType','CountItemStatus','ReportingUnitType','ElectionType','CountItemType']:
-            q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} ("Id" BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY,"Txt" TEXT UNIQUE NOT NULL); '
-            dbr.query(q,[schema_name,t],[],con,cur) # note: UNIQUE in query automatically creates index.
+    #%% create the single sequence for all db ids
+    id_seq = sqlalchemy.Sequence('id_seq', metadata=metadata,schema=schema)
 
-            dbr.fill_enum_table(schema_name,t,enumeration_path + t + '.txt',con,cur) # TODO document purpose or remove
+    #%% create enumeration tables and push to db
+    print('Creating enumeration tables')
+    for t in e_table_list:
+        print('\t'+t)
+        exec('Table(\'' + t + '\',metadata, Column(\'Id\',Integer, id_seq,server_default=id_seq.next_value(),primary_key=True), Column(\'Txt\',String),schema = \'' + schema + '\')')
+    metadata.create_all()
 
-    
-        # create all other tables, in set order because of foreign keys
-        print('\tCreating other tables, from CDF_schema_def_info/tables.txt')
-        with open('CDF_schema_def_info/tables.txt','r') as f:
-            table_def_list = eval(f.read())
-        for table_def in table_def_list:
-            print('Processing table '+ table_def[0])
-            field_defs = ['"Id" BIGINT DEFAULT nextval(\'{0}.id_seq\') PRIMARY KEY']
-            format_args = [schema_name,table_def[0]]
-            ctr = 2     # counter to track sql.Identifiers
-            for f in table_def[1]['fields']:
-                field_defs.append( '{'+str(ctr)+'} ' + f['datatype'] )
-                format_args.append( f['fieldname'])
-                ctr += 1
-            for e in table_def[1]['enumerations']:
-                field_defs.append( '{'+str(ctr)+'} INTEGER REFERENCES {0}.{'+str(ctr+1)+'}("Id"), {'+str(ctr+2)+'} TEXT' )
-                format_args.append(e+'_Id')
-                format_args.append(e)
-                format_args.append('Other'+e)
-                ctr += 3
-            for other in table_def[1]['other_element_refs']:
-                field_defs.append('{'+str(ctr)+'} INTEGER REFERENCES {0}.{'+str(ctr+1)+'}("Id")')
-                format_args.append(other['fieldname'])
-                format_args.append(other['refers_to'])
-                ctr += 2
-            for fname in table_def[1]['not_null_fields']:
-                field_defs.append('CHECK ({'+str(ctr)+'} IS NOT NULL)')
-                format_args.append(fname)
-                ctr += 1
+    #%% create all other tables, in set order because of foreign keys
+    fpath = dirpath + 'tables.txt'
+    print('Creating other tables, from ' + fpath + ':')
+    with open(fpath, 'r') as f:
+        table_def_list = eval(f.read())
+    for table_def in table_def_list:
+        name = table_def[0]
+        field_d = table_def[1]
+        print('\t'+ name)
+        col_string_list = ['Column(\''+ f['fieldname'] + '\',' + f['datatype'] + ')' for f in field_d['fields']] + ['Column(\'' + e + '_Id\',ForeignKey(\'' + schema + '.' + e + '.Id\')),Column(\'Other' + e + '\',String)' for e in field_d['enumerations']] + ['Column(\'' + oer['fieldname'] + '\',ForeignKey(\'' + schema + '.' + oer['refers_to'] + '.Id\'))' for oer in field_d['other_element_refs']] + ['CheckConstraint(\'"' + nnf + '" IS NOT NULL\',name = \'' + field_d['short_name'] + '_' + nnf + '_not_null\' )' for nnf in field_d['not_null_fields']] + ['UniqueConstraint(' + ','.join(['\'' + x +'\'' for x in uc]) + ',name=\'' + field_d['short_name'] + '_ux' + str(field_d['unique_constraints'].index(uc)) + '\')' for uc in field_d['unique_constraints']]
+        table_creation_string = 'Table(\''+ name + '\',metadata,Column(\'Id\',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),' + ','.join(col_string_list) + ', schema=\'' + schema + '\')'
+        exec(table_creation_string)
+        metadata.create_all()
+        session.flush()
+    return metadata
 
-            q = 'DROP TABLE IF EXISTS {0}.{1}; CREATE TABLE {0}.{1} (' + ','.join(field_defs) +');'
-            dbr.query(q,format_args,[],con,cur)
+# TODO should we somewhere check consistency of enumeration_table_list and the files in enumerations/ ? Is the file enumeration_table_list ever used?
+def enum_table_list(dirpath= 'CDF_schema_def_info/'):
+    if not dirpath[-1] == '/': dirpath += '\''
+    file_list = os.listdir(dirpath + 'enumerations/')
+    for f in file_list:
+        assert f[-4:] == '.txt', 'File name in ' + dirpath + 'enumerations/ not in expected form: ' + f
+    enum_table_list = [f[:-4] for f in file_list]
+    list_file = dirpath + 'enumeration_table_list'
+    if os.path.isfile(list_file): os.remove(list_file)
+    with open(list_file,'a') as out_f:
+        for t in enum_table_list: out_f.write(t)
+    return enum_table_list
 
-            # create unique indices
-            for f_list in table_def[1]['unique_constraints']:
-                print('\tCreating index on '+str(f_list))
-                constraint_name = table_def[0]+'__'+'_'.join(f_list) + '_index'
-                [f_slots,f_sql_ids] = zip(*[ ['{'+str(index)+'}',value] for index,value in enumerate(f_list,3)])
-                q = 'CREATE UNIQUE INDEX {2} ON {0}.{1} ('+','.join(f_slots)+')'
-                dbr.query(q,[schema_name,table_def[0],constraint_name]+list(f_sql_ids),[],con,cur)
+def fill_cdf_enum_tables(session,meta,schema,e_table_list=['ReportingUnitType','IdentifierType','ElectionType','CountItemStatusCountItemType'],dirpath= 'CDF_schema_def_info/'):
+    """takes lines of text from file and inserts each line into the txt field of the enumeration table"""
+    if not dirpath[-1] == '/': dirpath += '\''
+    for f in e_table_list:
+        dframe = pd.read_csv(dirpath + 'enumerations/' + f + '.txt',header=None,names = ['Txt'])
+        dframe.to_sql(f,session.bind,schema=schema,if_exists='append',index=False)
+    session.flush()
     return
 
+if __name__ == '__main__':
+    eng,meta = dbr.sql_alchemy_connect(paramfile='../../../local_data/database.ini')
+    Session = sessionmaker(bind=eng)
+    session = Session()
 
+    schema='test'
+    e_table_list = enum_table_list(dirpath = '../../CDF_schema_def_info/')
+    metadata = create_common_data_format_schema(session, schema, e_table_list, dirpath ='../../CDF_schema_def_info/')
+    fill_cdf_enum_tables(session,metadata,schema,e_table_list,dirpath='../../CDF_schema_def_info/')
+    print ('Done!')
 
+    eng.dispose()

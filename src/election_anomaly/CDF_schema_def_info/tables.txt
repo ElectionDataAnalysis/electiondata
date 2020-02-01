@@ -1,108 +1,123 @@
 [['ExternalIdentifier',
-                    {'fields':[{'fieldname':'ForeignId','datatype':'INTEGER'},
-                            {'fieldname':'Value','datatype':'TEXT'}],
+                    {'fields':[{'fieldname':'ForeignId','datatype':'Integer'},
+                            {'fieldname':'Value','datatype':'String'}],
                     'enumerations':['IdentifierType'],
                     'other_element_refs':[],
                     'unique_constraints':[['ForeignId', 'IdentifierType_Id', 'OtherIdentifierType']], 	
-		'not_null_fields':['Value','ForeignId','IdentifierType_Id']
+		'not_null_fields':['Value','ForeignId','IdentifierType_Id'],
+		            'short_name':'ei'
 		}],
                 ['ReportingUnit',
-                     {'fields':[{'fieldname':'Name','datatype':'TEXT'}],
+                     {'fields':[{'fieldname':'Name','datatype':'String'}],
                      'enumerations':['ReportingUnitType','CountItemStatus'],
                      'other_element_refs':[],
                      'unique_constraints':[['Name']], 
-		     'not_null_fields':['ReportingUnitType_Id']
+		     'not_null_fields':['ReportingUnitType_Id'],
+		            'short_name':'ru'
                 }],
                 ['Party',
-                      {'fields':[{'fieldname':'Name','datatype':'TEXT'}, {'fieldname':'Abbreviation','datatype':'TEXT'}],
+                      {'fields':[{'fieldname':'Name','datatype':'String'}, {'fieldname':'Abbreviation','datatype':'String'}],
                       'enumerations':[],
                       'other_element_refs':[],
                       'unique_constraints':[['Name']], 
-		     'not_null_fields':['Name']
+		     'not_null_fields':['Name'],
+		            'short_name':'party'
                 }],
                 ['Election',
-                    {'fields':[{'fieldname':'Name', 'datatype':'TEXT'}, {'fieldname':'EndDate','datatype':'DATE'}, {'fieldname':'StartDate','datatype':'DATE'}],
+                    {'fields':[{'fieldname':'Name', 'datatype':'String'}, {'fieldname':'EndDate','datatype':'Date'}, {'fieldname':'StartDate','datatype':'Date'}],
                     'enumerations':['ElectionType'],
                     'other_element_refs':[],
                     'unique_constraints':[['Name']], 
-		     'not_null_fields':['Name','StartDate','EndDate','ElectionType_Id']
+		     'not_null_fields':['Name','StartDate','EndDate','ElectionType_Id'],
+		            'short_name':'elec'
                 }],
                 ['Office',
-                     {'fields':[{'fieldname':'Name','datatype':'TEXT'}, {'fieldname':'Description','datatype':'TEXT'}],
+                     {'fields':[{'fieldname':'Name','datatype':'String'}, {'fieldname':'Description','datatype':'String'}],
                      'enumerations':[],
                      'other_element_refs':[],
                      'unique_constraints':[['Name']], 
-		     'not_null_fields':['Name']
+		     'not_null_fields':['Name'],
+		            'short_name':'off'
                 }],
                 ['CandidateContest', 
-                      {'fields':[{'fieldname':'Name','datatype':'TEXT'}, {'fieldname':'VotesAllowed','datatype':'INTEGER'}, {'fieldname':'NumberElected','datatype':'INTEGER'}, {'fieldname':'NumberRunoff','datatype':'INTEGER'}],
+                      {'fields':[{'fieldname':'Name','datatype':'String'}, {'fieldname':'VotesAllowed','datatype':'Integer'}, {'fieldname':'NumberElected','datatype':'Integer'}, {'fieldname':'NumberRunoff','datatype':'Integer'}],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'Office_Id','refers_to':'Office'}, {'fieldname':'PrimaryParty_Id','refers_to':'Party'}, {'fieldname':'ElectionDistrict_Id','refers_to':'ReportingUnit'}],
                       'unique_constraints':[['Name']], 
-		     'not_null_fields':['Name','VotesAllowed']
+		     'not_null_fields':['Name','VotesAllowed'],
+		            'short_name':'candcon'
                 }],
                 ['BallotMeasureContest', 
-                      {'fields':[{'fieldname':'Name','datatype':'TEXT'}],
+                      {'fields':[{'fieldname':'Name','datatype':'String'}],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'ElectionDistrict_Id', 'refers_to':'ReportingUnit'}],
                       'unique_constraints':[['Name']], 
-		     'not_null_fields':['Name']
+		     'not_null_fields':['Name'],
+		            'short_name':'bmcon'
                 }],
                 ['BallotMeasureSelection',   # note: we don't enumerate the choices, though some kind of universal yes/no is tempting ***
-                      {'fields':[{'fieldname':'Selection','datatype':'TEXT'}],
+                      {'fields':[{'fieldname':'Selection','datatype':'String'}],
                       'enumerations':[],
                       'other_element_refs':[],
                       'unique_constraints':[['Selection']], 
-		     'not_null_fields':['Selection']
-                }],
+		     'not_null_fields':['Selection'],
+ 		            'short_name':'bmsel'
+               }],
                 ['Candidate',
-                      {'fields':[{'fieldname':'BallotName','datatype':'TEXT'}],
+                      {'fields':[{'fieldname':'BallotName','datatype':'String'}],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'Election_Id', 'refers_to':'Election'},{'fieldname':'Party_Id', 'refers_to':'Party'}],
                       'unique_constraints':[['BallotName','Election_Id','Party_Id']],
-			'not_null_fields':['BallotName']
+			'not_null_fields':['BallotName'],
+		            'short_name':'can'
                     }],
                  ['VoteCount',
-                      {'fields':[{'fieldname':'Count','datatype':'INTEGER'}],
+                      {'fields':[{'fieldname':'Count','datatype':'Integer'}],
                       'enumerations':['CountItemType'],
                       'other_element_refs':[{'fieldname':'ReportingUnit_Id','refers_to':'ReportingUnit'}],
                       'unique_constraints':[], 
-		     'not_null_fields':['Count']
+		     'not_null_fields':['Count'],
+		            'short_name':'vc'
                 }],
                 ['SelectionElectionContestVoteCountJoin',
-                      {'fields':[{'fieldname':'Selection_Id','datatype':'INTEGER'},{'fieldname':'Contest_Id','datatype':'INTEGER'}],
+                      {'fields':[{'fieldname':'Selection_Id','datatype':'Integer'},{'fieldname':'Contest_Id','datatype':'Integer'}],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'Election_Id', 'refers_to':'Election'},{'fieldname':'VoteCount_Id', 'refers_to':'VoteCount'}],
                       'unique_constraints':[],
-		     'not_null_fields':['Selection_Id','Election_Id','VoteCount_Id']
+		     'not_null_fields':['Selection_Id','Election_Id','VoteCount_Id'],
+		            'short_name':'secvcj'
                 }],
                 ['CandidateSelection',
                       {'fields':[],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'Candidate_Id', 'refers_to':'Candidate'}],
                       'unique_constraints':[['Candidate_Id']],
-		     'not_null_fields':[]
+		     'not_null_fields':[],
+		            'short_name':'candsel'
                 }],
                 ['ElectionContestJoin',
-                      {'fields':[{'fieldname':'Contest_Id','datatype':'INTEGER'}],
+                      {'fields':[{'fieldname':'Contest_Id','datatype':'Integer'}],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'Election_Id', 'refers_to':'Election'}],
                       'unique_constraints':[['Contest_Id','Election_Id']],
-		     'not_null_fields':['Contest_Id','Election_Id']
+		     'not_null_fields':['Contest_Id','Election_Id'],
+		            'short_name':'ecj'
                 }],
                 ['ComposingReportingUnitJoin',
                       {'fields':[],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'ParentReportingUnit_Id', 'refers_to':'ReportingUnit'}, {'fieldname':'ChildReportingUnit_Id', 'refers_to':'ReportingUnit'}],
                       'unique_constraints':[['ParentReportingUnit_Id','ChildReportingUnit_Id']],
-		     'not_null_fields':['ParentReportingUnit_Id','ChildReportingUnit_Id']
+		     'not_null_fields':['ParentReportingUnit_Id','ChildReportingUnit_Id'],
+		            'short_name':'cruj'
                 }],
                 ['BallotMeasureContestSelectionJoin',
                       {'fields':[],
                       'enumerations':[],
                       'other_element_refs':[{'fieldname':'BallotMeasureContest_Id', 'refers_to':'BallotMeasureContest'}, {'fieldname':'BallotMeasureSelection_Id', 'refers_to':'BallotMeasureSelection'}],
                       'unique_constraints':[['BallotMeasureContest_Id','BallotMeasureSelection_Id']],
-		     'not_null_fields':['BallotMeasureContest_Id','BallotMeasureSelection_Id']
+		     'not_null_fields':['BallotMeasureContest_Id','BallotMeasureSelection_Id'],
+		            'short_name':'bmcsj'
                 }],
                 ['CandidateContestSelectionJoin',
                       {'fields':[],
@@ -112,7 +127,8 @@
                       {'fieldname':'CandidateSelection_Id', 'refers_to':'CandidateSelection'},
                       {'fieldname':'Election_Id', 'refers_to':'Election'}],
                       'unique_constraints':[['CandidateContest_Id','CandidateSelection_Id','Election_Id']],
-		     'not_null_fields':['CandidateContest_Id','CandidateSelection_Id','Election_Id']
+		     'not_null_fields':['CandidateContest_Id','CandidateSelection_Id','Election_Id'],
+		            'short_name':'ccsj'
             }
     ]
 ]

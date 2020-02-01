@@ -1,1 +1,40 @@
-{'North Carolina': {'ReportingUnitType': 'state', 'ExternalIdentifiers': {'fips': '3700000000'}},'North Carolina;Alamance County': {'ReportingUnitType': 'county', 'ExternalIdentifiers': {'fips': '3700100000', 'nc_export1': 'ALAMANCE'}}, 'North Carolina;Alamance County;Precinct 064': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;064'}}, 'North Carolina;Alamance County;Precinct 03N': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;03N'}}, 'North Carolina;Alamance County;Precinct 03S': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;03S'}}, 'North Carolina;Alamance County;Precinct 04': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;04'}}, 'North Carolina;Alamance County;Precinct 035': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;035'}}, 'North Carolina;Alamance County;Precinct 07': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;07'}}, 'North Carolina;Alamance County;Precinct 09S': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;09S'}}, 'North Carolina;Alamance County;Precinct 12S': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;12S'}}, 'North Carolina;Alamance County;Precinct 03N2': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;03N2'}}, 'North Carolina;Alamance County;Precinct 03W': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;03W'}}, 'North Carolina;Alamance County;Precinct 01': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;01'}}, 'North Carolina;Alamance County;Precinct 103': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;103'}}, 'North Carolina;Alamance County;Precinct 1210': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;1210'}}, 'North Carolina;Alamance County;Precinct 063': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;063'}}, 'North Carolina;Alamance County;Precinct 127': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;127'}}, 'North Carolina;Alamance County;Precinct 125': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;125'}}, 'North Carolina;Alamance County;Precinct 10S': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;10S'}}, 'North Carolina;Alamance County;Precinct 06N': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;06N'}}, 'North Carolina;Alamance County;Precinct 06S': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;06S'}}, 'North Carolina;Alamance County;Precinct 11': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;11'}}, 'North Carolina;Alamance County;Precinct 06W': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;06W'}}, 'North Carolina;Alamance County;Precinct 08S': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;08S'}}, 'North Carolina;Alamance County;Precinct 08N': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;08N'}}, 'North Carolina;Alamance County;Precinct 02': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;02'}}, 'North Carolina;Alamance County;Precinct 05': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;05'}}, 'North Carolina;Alamance County;Precinct 10N': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;10N'}}, 'North Carolina;Alamance County;Precinct 06E': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;06E'}}, 'North Carolina;Alamance County;Precinct 12W': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;12W'}}, 'North Carolina;Alamance County;Precinct 13': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;13'}}, 'North Carolina;Alamance County;Precinct 128': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;128'}}, 'North Carolina;Alamance County;Precinct 09N': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;09N'}}, 'North Carolina;Alamance County;Precinct 03C': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;03C'}}, 'North Carolina;Alamance County;Precinct 126': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;126'}}, 'North Carolina;Alamance County;Precinct 129': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;129'}}, 'North Carolina;Alamance County;Precinct 124': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;124'}}, 'North Carolina;Alamance County;Precinct 12E': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;12E'}}, 'North Carolina;Alamance County;Precinct 12N': {'ReportingUnitType': 'precinct', 'ExternalIdentifiers': {'nc_export1': 'ALAMANCE;12N'}}}
+Name	ReportingUnitType
+North Carolina	state
+North Carolina;Alamance County	county
+North Carolina;Alamance County;Precinct 064	precinct
+North Carolina;Alamance County;Precinct 03N	precinct
+North Carolina;Alamance County;Precinct 03S	precinct
+North Carolina;Alamance County;Precinct 04	precinct
+North Carolina;Alamance County;Precinct 035	precinct
+North Carolina;Alamance County;Precinct 07	precinct
+North Carolina;Alamance County;Precinct 09S	precinct
+North Carolina;Alamance County;Precinct 12S	precinct
+North Carolina;Alamance County;Precinct 03N2	precinct
+North Carolina;Alamance County;Precinct 03W	precinct
+North Carolina;Alamance County;Precinct 01	precinct
+North Carolina;Alamance County;Precinct 103	precinct
+North Carolina;Alamance County;Precinct 1210	precinct
+North Carolina;Alamance County;Precinct 063	precinct
+North Carolina;Alamance County;Precinct 127	precinct
+North Carolina;Alamance County;Precinct 125	precinct
+North Carolina;Alamance County;Precinct 10S	precinct
+North Carolina;Alamance County;Precinct 06N	precinct
+North Carolina;Alamance County;Precinct 06S	precinct
+North Carolina;Alamance County;Precinct 11	precinct
+North Carolina;Alamance County;Precinct 06W	precinct
+North Carolina;Alamance County;Precinct 08S	precinct
+North Carolina;Alamance County;Precinct 08N	precinct
+North Carolina;Alamance County;Precinct 02	precinct
+North Carolina;Alamance County;Precinct 05	precinct
+North Carolina;Alamance County;Precinct 10N	precinct
+North Carolina;Alamance County;Precinct 06E	precinct
+North Carolina;Alamance County;Precinct 12W	precinct
+North Carolina;Alamance County;Precinct 13	precinct
+North Carolina;Alamance County;Precinct 128	precinct
+North Carolina;Alamance County;Precinct 09N	precinct
+North Carolina;Alamance County;Precinct 03C	precinct
+North Carolina;Alamance County;Precinct 126	precinct
+North Carolina;Alamance County;Precinct 129	precinct
+North Carolina;Alamance County;Precinct 124	precinct
+North Carolina;Alamance County;Precinct 12E	precinct
+North Carolina;Alamance County;Precinct 12N	precinct

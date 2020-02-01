@@ -17,7 +17,8 @@ The app is controlled by the Python3 module src.election_anomaly
 ### Database
 You will need access to a postgresql database. Your login credentilals should be in `src/local_data/database.ini`. Contents of that file should be:
 
-```[postgresql]
+```
+[postgresql]
 host=<url for your postgresql server>
 port=<port for your postgresql server>
 database=<name of your election data database>
@@ -25,11 +26,6 @@ user=<your user name>
 password=<your password>
 ```
 
-Your database should have a schema `misspellings` and table `corrections` to hold corrections of misspellings. You can create this with postgresql code:
-```angular2
-CREATE SCHEMA misspellings
-CREATE TABLE misspellings.corrections (id SERIAL PRIMARY KEY, bad TEXT UNIQUE NOT NULL, good TEXT NOT NULL)
-```
 
 ### .gitignore
 Folders you will need in your local repo:
@@ -50,6 +46,7 @@ Each state directory has three subfolders:
       * `name`
       * `encoding`
       * `source_url`
+      * `delimiter`
       * `file_date`
       * `download_date`
       * `note`
@@ -69,7 +66,7 @@ Each state directory has three subfolders:
       * `note`
       * `column_block_parser_string` Python regex to identify the block of lines in the metafile holding the relevant column definitions
       * `line_parser_string` Python regex to identify the column name, data type and column description within one line of the metafile
-      * `type_map` Python dictionary whose keys are datatype names from the file and whose values are datatype names for postgresql
+      * `type_map` Python dictionary whose keys are datatype names from the file and whose values are datatype names used in the standard python package `sqlalchemy`
     * `Office.txt` Tab-separated list of office names. Note that when datafiles are processed, lines relevant to offices **not** listed here will not be loaded into the common data format schema. Columns are:
       * `Name`
       * `ElectionDistrict`

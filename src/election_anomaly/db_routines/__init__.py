@@ -4,9 +4,12 @@
 import sys
 import re
 import psycopg2
+import sqlalchemy
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
 import sqlalchemy as db
+from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey
+from sqlalchemy.engine import reflection
 from sqlalchemy.orm import sessionmaker
 from configparser import ConfigParser
 import pandas as pd
@@ -18,7 +21,7 @@ def establish_connection(paramfile = '../local_data/database.ini',db_name='postg
     con = psycopg2.connect(**params)
     return con
 
-def sql_alchemy_connect(schema,paramfile = '../local_data/database.ini',db_name='postgres'):
+def sql_alchemy_connect(schema=None,paramfile = '../local_data/database.ini',db_name='postgres'):
     """Returns an engine and a metadata object"""
 
     params = config(paramfile)
@@ -31,14 +34,11 @@ def sql_alchemy_connect(schema,paramfile = '../local_data/database.ini',db_name=
     # The return value of create_engine() is our connection object
     engine = db.create_engine(url, client_encoding='utf8')
 
-    # TODO I think this creates a persistent Session() class I can use throughout.
-    Session = sessionmaker(bind=engine)
 
     # We then bind the connection to MetaData()
     meta = db.MetaData(bind=engine, reflect=True,schema=schema)
 
-    return engine, meta, Session
-
+    return engine, meta
 
 def config(filename='../local_data/database.ini', section='postgresql'):
     """
@@ -70,13 +70,14 @@ def read_field_value(con,cur,schema,tup):
     a = query(q,sql_ids,strs,con,cur)[0]
     return a[0]
 
-def read_single_value_from_id(con,meta,schema,table,field,id):
-    """Takes an engine connection con return the corresponding field value
+def read_single_value_from_id(session,meta,schema,table,field,id):
+    """Takes an db session, a table and an id returns the corresponding field value
     read from the record with the given id from the given table of the given schema.
     """
-    t = db.Table(table,meta,autoload=True, autoload_with=con,schema=schema)
-    q = db.select([eval('t.columns.'+field)]).where(t.columns.Id == str(id))
-    ResultProxy = con.execute(q)
+    t = db.Table(table,meta,autoload=True, autoload_with=session.bind,schema=schema)
+    q = session.query(eval('t.c.'+field)).filter(t.c.Id == id)
+#    q = db.select([eval(t+'.columns.'+field)]).where(t.columns.Id == str(id))
+    ResultProxy = session.execute(q)
     ResultSet = ResultProxy.fetchall()
     if ResultSet:
         return ResultSet[0][0]
@@ -89,7 +90,7 @@ def read_all_value_from_id(con,meta,schema,table,field):
     read from the given table of the given schema.
     """
     t = db.Table(table,meta,autoload=True, autoload_with=con,schema=schema)
-    q = db.select([ t.columns.Id,eval('t.columns.'+ field)])
+    q = db.select([ t.columns.Id,eval('cdf_table.columns.'+ field)])
     ResultProxy = con.execute(q)
     ResultSet = ResultProxy.fetchall()
     return dict(ResultSet)
@@ -110,13 +111,12 @@ def read_some_value_from_id(con,meta,schema,table,field,id_list):
         return {}
 
 def election_list(session,meta,cdf_schema):
-    #t = db.Table('Election',meta,autoload=True, autoload_with=session,schema=cdf_schema)
-    # q = db.select([t.columns.Id,t.columns.Name])
+    #cdf_table = db.Table('Election',meta,autoload=True, autoload_with=session,schema=cdf_schema)
+    # q = db.select([cdf_table.columns.Id,cdf_table.columns.Name])
     Election = meta.tables[cdf_schema+'.Election']
     result_list = [[instance.Id,instance.Name] for instance in session.query(Election)]
     result_dframe = pd.DataFrame(result_list,columns=['Id','Name'])
     return result_dframe
-
 
 def contest_ids_from_election_id(con,meta,schema,Election_Id):
     """ given an election id, return list of all contest ids """
@@ -147,12 +147,12 @@ def contest_type_from_contest_id(con,meta,schema,Contest_Id):
 
     return [x[0] for x in ResultSet]
 
-def read_id_from_enum(con,meta,schema,table,txt):
+def read_id_from_enum(session,meta,schema,table,txt):
     """ given the Txt value of an enumeration table entry, return the corresponding Id"""
-    t = db.Table(table,meta,autoload=True, autoload_with=con,schema=schema)
-    # TODO assert that table is an enumeration?
+    t = db.Table(table, meta, autoload=True, autoload_with=session.bind, schema=schema)
+    assert 'Txt' in t.columns and 'Id' in t.columns, 'Id and Txt must both be columns of the table ' + table
     q = db.select([t.columns.Id]).where(t.columns.Txt == txt)
-    ResultProxy = con.execute(q)
+    ResultProxy = session.execute(q)
     ResultSet = ResultProxy.fetchall()
     if ResultSet:
         return ResultSet[0][0]
@@ -160,7 +160,6 @@ def read_id_from_enum(con,meta,schema,table,txt):
         print('No record in '+schema+'.'+table+' with Txt '+txt)
         return
 
-    return
 
 def query_as_string(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
@@ -174,36 +173,6 @@ def query(q,sql_ids,strs,con,cur):
         return cur.fetchall()
     else:
         return None
-
-def create_schema(name):
-    # connect and create schema for the state
-    con = establish_connection()
-    con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-    cur = con.cursor()
-
-    # does schema already exist?
-    schema_exists = query('SELECT schema_name FROM information_schema.schemata WHERE schema_name = %s ',[],[name,],con,cur)
-    if schema_exists:
-        drop_existing = input('Schema '+name+ ' already exists. Any data in the schema will be lost if you delete and recreate. \nDelete and recreate? (y/n)?\n')
-        if drop_existing == 'y':
-            print('Dropping existing schema '+name)
-            query('DROP SCHEMA IF EXISTS {} CASCADE',[name],[],con,cur)
-            print(' \tand creating new, empty version')
-            query('CREATE SCHEMA {}', [name], [], con, cur)
-            new_schema_created = True
-            con.commit()
-        else:
-            print('Using existing schema '+name)
-            new_schema_created = False
-    else:
-        query('CREATE SCHEMA {}',[name],[],con,cur)
-        new_schema_created = True
-        con.commit()
-    if cur:
-        cur.close()
-    if con:
-        con.close()
-    return new_schema_created
 
 def file_to_sql_statement_list(fpath):
     with open(fpath,'r') as f:
@@ -227,8 +196,10 @@ def fill_enum_table(schema,table,filepath,con,cur):
         query(q,sql_ids,strs,con,cur)
     return
 
-def create_table(df):   # *** modularize and use df.column_metadata
+def create_table(df):   # TODO *** modularize and use df.column_metadata
 ## clean the metadata file
+    """ df is a Datafile instance. Create a table that can hold the raw data in the datafile.
+    """
     create_query = 'CREATE TABLE {}.{} ('
     sql_ids_create = [df.state.schema_name,df.table_name]
     sql_ids_comment = []
@@ -253,22 +224,22 @@ def create_table(df):   # *** modularize and use df.column_metadata
 
     return create_query, strs_create + strs_comment, sql_ids_create + sql_ids_comment
         
-def load_data(conn,cursor,state,df):
+def load_raw_data(session, meta, schema,df):
 # write raw data to db
     ext = df.file_name.split('.')[-1]    # extension, determines format
     if ext == 'txt':
-        q = "COPY {}.{} FROM STDIN DELIMITER E'\\t' QUOTE '\"' CSV HEADER"
+        delimiter = '\t'
     elif ext == 'csv':
-        q = "COPY {}.{} FROM STDIN DELIMITER ',' CSV HEADER"
+        delimiter = ','
+    clean_file=cl.remove_null_bytes(df.state.path_to_state_dir+'data/'+df.file_name,'../local_data/tmp/')
 
-    
-    clean_file=cl.remove_null_bytes(state.path_to_state_dir+'data/'+df.file_name,'../local_data/tmp/')
-    with open(clean_file,mode='r',encoding=df.encoding,errors='ignore') as f:
-        cursor.copy_expert(sql.SQL(q).format(sql.Identifier(state.schema_name),sql.Identifier(df.table_name)),f)
-    conn.commit()
+    raw_data = pd.read_csv(clean_file, sep=delimiter,  converters={0: lambda s: str(s)})
+
+    raw_data.to_sql(schema + '.' + df.table_name,con=session.bind,if_exists='append',index=False)
+
+    session.flush()
     return
 
-  
 def clean_meta_file(infile,outdir,s):       ## update or remove ***
     ''' create in outdir a metadata file based on infile, with all unnecessaries stripped, for the given state'''
     if s.abbreviation == 'NC':
@@ -277,12 +248,108 @@ def clean_meta_file(infile,outdir,s):       ## update or remove ***
         return "clean_meta_file: error, state not recognized"
         sys.exit()
 
+def create_schema(session,name,delete_existing=False):    # TODO move to db_routines
+    eng = session.bind
+    if eng.dialect.has_schema(eng, name):
+        if delete_existing:
+            recreate = 'y'
+        else:
+            recreate = input('WARNING: schema ' + name + ' already exists; erase and recreate (y/n)?\n')
+        if recreate == 'y':
+            session.bind.engine.execute(sqlalchemy.schema.DropSchema(name,cascade=True))
+            session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
+            print('New schema created: ' + name)
+            new_schema_created = True
+        else:
+            print('Schema preserved: '+ name)
+            new_schema_created = False
+            insp = reflection.Inspector.from_engine(eng)
+            tablenames = insp.get_table_names(schema=name)
+            viewnames = insp.get_view_names(schema=name)
+            if tablenames:
+                print('WARNING: Some tables exist: \n\t'+'\n\t'.join([name + '.' + t for t in tablenames]))
+            if viewnames:
+                print('WARNING: Some views exist: \n\t' + '\n\t'.join([name + '.' + t for t in viewnames]))
+
+    else:
+        session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
+        print('New schema created: ' + name)
+        new_schema_created = True
+    session.flush()
+    return new_schema_created
+
 if __name__ == '__main__':
-    schema = 'cdf_nc'
-    con, meta ,Session = sql_alchemy_connect(schema=schema,paramfile='../../local_data/database.ini')
-    table = 'ReportingUnit'
-    field = 'Name'
-    id = 50
-    a = read_single_value_from_id(con,meta,schema,table,field,id)
-    d = read_all_value_from_id(con,meta,schema,'ReportingUnitType','Txt')
+    import states_and_files as sf
+    import db_routines as dbr
+
+    # %% Initiate db engine and create session
+    eng, meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
+    Session = sessionmaker(bind=eng)
+    session = Session()
+
+
+    abbr = 'NC'
+    df_name = 'results_pct_20181106.txt'
+
+    print('Creating state')
+    s = sf.create_state(abbr, '../../local_data/' + abbr)
+
+    print('Creating schema')
+    create_schema(session,s.schema_name)
+    print('Creating metafile instance')
+    mf = sf.create_metafile(s, 'layout_results_pct.txt')
+
+    munger_name = 'nc_export1'
+    munger_path = '../../local_data/mungers/' + munger_name + '.txt'
+    print('Creating munger instance from ' + munger_path)
+    m = sf.create_munger(munger_path)
+
+    print('Creating datafile instance')
+    df = sf.create_datafile(s, 'General Election 2018-11-06', df_name, mf, m)
+
+    #%% simplify df.column_metadata for testing
+    df.column_metadata = [['county',String,None],['some_int',Integer,None]]
+
+    sqla_column_list = [Column(col[0],col[1]) for col in df.column_metadata]
+    raw_table = Table(df.table_name,meta,*sqla_column_list,schema=s.schema_name)
+
+    meta.create_all()
+
+
+    qq, strs, sql_ids = create_table(df)
     print('Done')
+
+
+def dframe_to_sql(dframe,session,schema,table,index_col='Id'):
+    """
+    Given a dframe and an existing cdf db table name, clean the dframe
+    (i.e., drop any columns that are not in the table, add null columns to match any missing columns)
+    append records any new records to the corresponding table in the db (and commit!)
+    Return the updated dframe, including all rows from the db and all from the dframe.
+    """
+
+    #%% pull copy of existing table
+    target = pd.read_sql_table(table,session.bind,schema=schema,index_col=index_col)
+    df_to_db = dframe.copy()
+
+    #%% remove columns that don't exist in target table
+    for c in dframe.columns:
+        if c not in target.columns:
+            df_to_db = df_to_db.drop(c, axis=1)
+    #%% add columns that exist in target table but are mission from original dframe
+    for c in target.columns:
+        if c not in dframe.columns:
+            df_to_db[c] = None
+
+    appendable = pd.concat([target,target,df_to_db],sort=False).drop_duplicates(keep=False)
+    # note: two copies of target ensures none of the original rows will be appended.
+
+    # drop the Id column # TODO inefficient? Why not drop it before? Might even add it above, only to be dropped?
+    if 'Id' in appendable.columns:
+        appendable = appendable.drop('Id',axis=1)
+
+    appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
+    up_to_date_dframe = pd.read_sql_table(table,session.bind,schema=schema)
+    session.flush()
+    # up_to_date_dframe = pd.concat([target,appendable],sort=False).drop_duplicates(keep='first')
+    return up_to_date_dframe

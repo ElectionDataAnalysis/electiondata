@@ -1,3 +1,5 @@
-{'Yes','No','For','Against'}
-
-
+Selection
+Yes
+No
+For
+Against
