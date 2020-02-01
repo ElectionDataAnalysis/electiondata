@@ -195,6 +195,7 @@ if __name__ == '__main__':
                                atomic_ru_type, pickle_dir, paramfile)
         e.anomaly_scores(session, meta_generic, cdf_schema)
         #%%
+        # TODO remove bars for total votes from by-candidate charts
         e.worst_bar_for_each_contest(session, meta_generic, 2)
 
     print('Done!')
