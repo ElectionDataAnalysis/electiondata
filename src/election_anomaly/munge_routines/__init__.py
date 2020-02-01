@@ -78,9 +78,9 @@ def id_from_select_or_insert_PANDAS(dframe, value_d, session, schema, db_table_n
         else:
             index_col = None
         dframe = pd.read_sql_table(db_table_name,session.bind,schema=schema,index_col=index_col)
-        id = id_from_select_only_PANDAS(dframe,value_d,db_table_name,mode,dframe_Id_is_index)
+        id = id_from_select_only_PANDAS(dframe,value_d,mode=mode,dframe_Id_is_index= dframe_Id_is_index)
     else:
-        id = id_from_select_only_PANDAS(dframe,value_d,mode,dframe_Id_is_index)
+        id = id_from_select_only_PANDAS(dframe,value_d,mode=mode,dframe_Id_is_index= dframe_Id_is_index)
     assert filtered_dframe.shape[0] == 1, 'filtered dataframe should have exactly one row'
     return id, dframe
 
@@ -89,10 +89,10 @@ def composing_from_reporting_unit_name_PANDAS(session,schema,ru_dframe,cruj_dfra
     into the ComposingReportingUnitJoin dataframe; returns bigger dataframe.
     # Use the ; convention to identify all parents
     """
-
     if id == 0:
         child_id, ru_dframe = id_from_select_or_insert_PANDAS(ru_dframe, {'Name': name},session,schema,'ReportingUnit')
-    else: child_id = id
+    else:
+        child_id = id
     chain = name.split(';')
     if len(chain) > 1:
         for i in range(1,len(chain)):
@@ -225,16 +225,15 @@ def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,
     ids_d = {}
     name_d = {}
 
-
-
     for index, row in raw_rows.iterrows():
         # track progress
         frequency_of_report = 500
         if index % frequency_of_report == 0:
             print('\t\tProcessing row ' + str(index) + ':\n' + str(row))
 
-        if not contest_type == 'Candidate':
-            ids_d['Office'] = id_from_select_only_PANDAS(cdf_d['Office'],{'Name':eval(mu.content_dictionary['fields_dictionary']['Office'][0]['ExternalIdentifier'])})
+        if contest_type == 'Candidate':
+            external_office_name = eval(mu.content_dictionary['fields_dictionary']['Office'][0]['ExternalIdentifier'])
+            ids_d['Office'],internal_office_name = id_and_name_from_external_PANDAS(cdf_d['ExternalIdentifier'],cdf_d['Office'], external_office_name,id_type_other_id,mu.name)
             if ids_d['Office'] == 0: # skip rows for which office was not explicitly listed in context folder
                 continue
             ids_d['contest_id'] = id_from_select_only_PANDAS(cdf_d['CandidateContest'], {'Office_Id': ids_d['Office']})
@@ -244,8 +243,9 @@ def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,
             # TODO error handling? What if id not found?
             for item in mu.content_dictionary['fields_dictionary'][t]:
                 ids_d[t],name_d[t] = id_and_name_from_external_PANDAS(cdf_d['ExternalIdentifier'], cdf_d[t], eval(item['ExternalIdentifier']),id_type_other_id,mu.name,item['InternalNameField'])
+                diagnostic=1
 
-        # process Candidate and BallotMeasure elements
+        # process Candidate and BallotMeasure e62lements
         if contest_type == 'BallotMeasure':
             selection = eval(mu.content_dictionary['fields_dictionary']['BallotMeasureSelection'][0]['ExternalIdentifier'])
             ids_d['selection_id'] = cdf_d['BallotMeasureSelection'][cdf_d['BallotMeasureSelection']['Selection'] == selection].index.to_list()[0]
@@ -365,7 +365,8 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
         print('\tFiltering for desired rows of raw file')
         cdf_office_list = list(cdf_d['Office'].index.unique())
         raw_office_list = cdf_d['ExternalIdentifier'][cdf_d['ExternalIdentifier']['ForeignId'].isin(cdf_office_list)]['Value'].to_list()
-        bool_rows = raw_rows.apply(lambda row: is_office_in_list(row, raw_office_list, mu), axis=1)
+        bool_rows = raw_rows['Contest Name'].isin(raw_office_list)    # TODO munger dependent, will need dataframe to have name from munger (as of 1/2020, 'row')
+        # bool_rows = raw_rows.apply(lambda row: is_office_in_list(row, raw_office_list, mu), axis=1)
         cc_rows = raw_rows.loc[bool_rows]
         print('\tStart row-by-row processing')
         row_by_row_elements_to_cdf(session,mu,cdf_schema,cc_rows,cdf_d,election_id,id_type_other_id,contest_type='Candidate')
@@ -384,6 +385,7 @@ def is_ballot_measure(row,selection_list,mu):
     return is_bm_row
 
 def is_office_in_list(row, raw_office_list, mu):
+    row['Contest Name'].isin(raw_office_list)
     cc_filter = " | ".join(["(row['Contest Name'] == '" + i + "')" for i in raw_office_list]) # TODO munger-dependent
     is_c_in_l = eval(cc_filter)
     return is_c_in_l

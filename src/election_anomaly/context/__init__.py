@@ -137,12 +137,22 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
     # TODO need to fill CandidateContest table
 
 
+
+    cdf_d['ExternalIdentifier'] = fill_externalIdentifier_table(session,schema,enum_dframe,other_id['IdentifierType'],s.path_to_state_dir + 'context/ExternalIdentifier.txt')
+
+    # Fill the ComposingReportingUnitJoin table
+    cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,schema,cdf_d,pickle_dir=s.path_to_state_dir+'pickles/') # TODO put pickle directory info into README.md
+    return
+
+def fill_externalIdentifier_table(session,schema,enum_dframe,id_other_id_type,fpath):
+    """
+    fpath is a path to the tab-separated context file holding the external identifier info
+    """
     #%% fill ExternalIdentifier table
     print('Fill ExternalIdentifier table')
     # TODO why does this step take so long?
     # get table from context directory with the tab-separated definitions of external identifiers
-    context_cdframe['ExternalIdentifier'] = pd.read_csv(s.path_to_state_dir + 'context/ExternalIdentifier.txt',sep = '\t')
-    ei_df = context_cdframe['ExternalIdentifier']   # for legibility
+    ei_df = pd.read_csv(fpath,sep = '\t')
 
     # pull corresponding tables from the cdf db
     cdf = {}
@@ -150,10 +160,11 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
         cdf[t] = pd.read_sql_table(t,session.bind,schema,'Id')
 
     # add columns to dframe to match columns in CDF db
+
     ei_df['ForeignId'] = ei_df.apply(lambda row: table_and_name_to_foreign_id(cdf,row),axis=1)
     ei_df['Value'] = ei_df['ExternalIdentifierValue']
     ### apply(lambda ...) returns a column of 2-elt lists, so need to unpack.
-    ei_df['id_othertype_pairs']= ei_df.apply(lambda row: ei_id_and_othertype(enum_dframe['IdentifierType'],row,other_id['IdentifierType']),axis=1)
+    ei_df['id_othertype_pairs']= ei_df.apply(lambda row: ei_id_and_othertype(enum_dframe['IdentifierType'],row,id_other_id_type),axis=1)
 
     ei_df['IdentifierType_Id'] = ei_df.apply(lambda row: row['id_othertype_pairs'][0],axis=1)
     ei_df['OtherIdentifierType'] = ei_df.apply(lambda row: row['id_othertype_pairs'][1],axis=1)
@@ -161,10 +172,7 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
     # insert appropriate dataframe columns into ExternalIdentifier table in the CDF db
     dframe_to_sql(ei_df, session, schema, 'ExternalIdentifier')
     session.flush()
-
-    cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,schema,cdf_d,pickle_dir=s.path_to_state_dir+'pickles/')
-
-    return
+    return ei_df
 
 def fill_composing_reporting_unit_join(session,schema,cdf_d,pickle_dir='../local_data/pickles/'):
     if os.path.isfile(pickle_dir + 'ComposingReportingUnitJoin'):
@@ -173,8 +181,13 @@ def fill_composing_reporting_unit_join(session,schema,cdf_d,pickle_dir='../local
     else:
         print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
         # TODO why does this take so long?
+
+        # TODO speedup plan: 1. pull ru table; 2. check that all component rus are in the RU table; 3. don't make calls to db except for push at end
         cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin', session.bind, schema,index_col='Id')
         ru_dframe = pd.read_sql_table('ReportingUnit', session.bind, schema,index_col='Id')
+
+        # check that all components of all Reporting Units are themselves ReportingUnits
+
         for index,context_row in ru_dframe.iterrows():
             cruj_dframe = composing_from_reporting_unit_name_PANDAS(session, schema, ru_dframe,cruj_dframe,context_row['Name'],index)
         cruj_dframe.to_pickle(pickle_dir + 'ComposingReportingUnitJoin')
