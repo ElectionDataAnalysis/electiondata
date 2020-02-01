@@ -71,7 +71,7 @@ def read_field_value(con,cur,schema,tup):
     return a[0]
 
 def read_single_value_from_id(session,meta,schema,table,field,id):
-    """Takes an engine connection con return the corresponding field value
+    """Takes an db session, a table and an id returns the corresponding field value
     read from the record with the given id from the given table of the given schema.
     """
     t = db.Table(table,meta,autoload=True, autoload_with=session.bind,schema=schema)
@@ -103,7 +103,7 @@ def read_some_value_from_id(con,meta,schema,table,field,id_list):
     if id_list:
         id_df = pd.DataFrame(id_list)
         id_list_clean = [x[0] for x in id_df.to_records(column_dtypes={0:db.INTEGER},index=False)]
-        q = db.select([ t.columns.Id,eval('cdf_table.columns.'+ field)]).where(t.columns.Id.in_(id_list_clean))
+        q = db.select([ t.columns.Id,eval('t.columns.'+ field)]).where(t.columns.Id.in_(id_list_clean))
         ResultProxy = con.execute(q)
         ResultSet = ResultProxy.fetchall()
         return dict(ResultSet)

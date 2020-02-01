@@ -72,13 +72,13 @@ class Election(object): # TODO check that object is necessary (apparently for pi
         self.anomaly_dframe.to_pickle(pickle_path)
         return
 
-    def worst_bar_for_each_contest(self,con,meta,anomaly_min=0):
+    def worst_bar_for_each_contest(self,session,meta,anomaly_min=0):
         if self.anomaly_dframe.empty:
             print('anomaly dataframe is empty')
             return
         else:
             for contest_id in self.rollup_dframe.Contest_Id.unique():
-                cr = create_contest_rollup_from_election(con,meta,self, contest_id)
+                cr = create_contest_rollup_from_election(session,meta,self, contest_id)
                 contestname = cr.ContestName
                 df = self.anomaly_dframe[self.anomaly_dframe.ContestName == contestname]
                 max_pct_anomaly = df.anomaly_values_pcts.max()
@@ -289,7 +289,9 @@ def pivot(dataframe_by_name, col_field='Selection', filter=[],mode='raw'):
 
 def create_contest_rollup_from_election(session,meta,e,Contest_Id):   # TODO get rid of con/meta/schema here by making names part of the Election def?
     assert isinstance(e,Election),'election must be an instance of the Election class'
-    # assert isinstance(Contest_Id,int), 'Contest_Id must be an integer' # TODO why did this fail?
+    if not isinstance(Contest_Id,int):
+        print('WARNING: Contest_Id was not int, had to be converted') # TODO why
+        Contest_Id = int(Contest_Id)
     ElectionName = dbr.read_single_value_from_id(session, meta, e.cdf_schema,'Election','Name', e.Election_Id)
     contest_type = dbr.contest_type_from_contest_id(session.bind,meta,e.cdf_schema,Contest_Id) # Candidate or BallotMeasure
     contesttable = contest_type + 'Contest'

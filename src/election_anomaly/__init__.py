@@ -195,6 +195,6 @@ if __name__ == '__main__':
                                atomic_ru_type, pickle_dir, paramfile)
         e.anomaly_scores(session, meta_generic, cdf_schema)
         #%%
-        e.worst_bar_for_each_contest(eng, meta_generic, 2)
+        e.worst_bar_for_each_contest(session, meta_generic, 2)
 
     print('Done!')
