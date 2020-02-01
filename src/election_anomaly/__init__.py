@@ -193,7 +193,7 @@ if __name__ == '__main__':
 
         e = an.create_election(session, meta_generic, cdf_schema, election_id, roll_up_to_ru_type,
                                atomic_ru_type, pickle_dir, paramfile)
-        e.anomaly_scores(eng, meta_generic, cdf_schema)
+        e.anomaly_scores(session, meta_generic, cdf_schema)
         #%%
         e.worst_bar_for_each_contest(eng, meta_generic, 2)
 

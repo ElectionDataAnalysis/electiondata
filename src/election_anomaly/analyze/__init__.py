@@ -44,7 +44,7 @@ class Election(object): # TODO check that object is necessary (apparently for pi
             con.dispose()
         return self.rollup_dframe
 
-    def anomaly_scores(self,con,meta,schema): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
+    def anomaly_scores(self, session, meta, schema): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
         pickle_path = self.pickle_dir+'anomaly_rollup'
         if os.path.isfile(pickle_path):
             print('Anomaly dataframe will not be calculated, but will be read from file:\n\t'+pickle_path)
@@ -55,7 +55,7 @@ class Election(object): # TODO check that object is necessary (apparently for pi
             contest_id_list = self.rollup_dframe.Contest_Id.unique()
             for contest_id in contest_id_list:
                 anomaly_list = []
-                cr = create_contest_rollup_from_election(con,meta,self, contest_id)
+                cr = create_contest_rollup_from_election(session, meta, self, contest_id)
                 print('Calculating anomalies for '+cr.ContestName)
                 for column_field in ['ReportingUnit','CountItemType','Selection']:
                     #print('\tColumn field is '+column_field)
