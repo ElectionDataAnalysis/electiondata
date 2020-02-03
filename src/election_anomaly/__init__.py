@@ -82,9 +82,6 @@ if __name__ == '__main__':
 
     context_to_cdf = input('Load and process context data into a common-data-format database (y/n)?\n')
     if context_to_cdf == 'y':
-        default = 'cdf_nc_test'
-        cdf_schema=input('Enter name of CDF schema (default is '+default+')\n') or default
-
 
         #%% create schema for state
         #dbr.create_schema(session,s.schema_name)

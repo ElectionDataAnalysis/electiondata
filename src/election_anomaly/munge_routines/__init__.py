@@ -3,10 +3,9 @@
 # under construction
 
 import db_routines as dbr
-import sqlalchemy as db
-from sqlalchemy import select, Integer, String, Date
-from sqlalchemy.sql import column
 import pandas as pd
+import PySimpleGUI as sg
+
 
 def report_error(error_string):
     print('Munge error: '+error_string)
@@ -232,8 +231,11 @@ def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,
     ids_d = {}
     name_d = {}
 
+
+    window.close()
     for index, row in raw_rows.iterrows():
         # track progress
+        sg.one_line_progress_meter('row-by-row progress', index + 1, raw_rows.shape[1], 'key')
         frequency_of_report = 500
         if index % frequency_of_report == 0:
             print('\t\tProcessing row ' + str(index) + ':\n' + str(row))
