@@ -192,25 +192,26 @@ def bulk_elements_to_cdf(session, mu, cdf_schema, row, election_id, id_type_othe
 
     cdf_d['Party'] = pd.read_sql_table('Party',session.bind,cdf_schema,index_col='Id')
 
-    # TODO process contests, get contest Id for each unique contest [in nc_export1 terms]
-    cdf_d['Office'] = pd.read_sql_table('Office',session.bind,cdf_schema,index_col='Id')
-    cdf_d['CandidateContest'] = pd.read_sql_table('CandidateContest',session.bind,cdf_schema,index_col='Id')
-    office_raw_name_list = row['Contest Name'].unique().to_list  # munger dependent
-    o_i = {}
-    for o_r_n in office_raw_name_list:
-        cdf_office_id = ei_d[(ei_d['Table'] == 'Office') & (ei_d['OtherIdentifierType'] == mu.name) & (ei_d['Value'] == o_r_n)]['ForeignId'].to_list()[0]
-        cdf_office_name = cdf_d['Office'][cdf_d['Office']['Id'] == cdf_office_id]['Name']
+    # get BallotMeasureSelections to distinguish between BallotMeasure- and Candidate-Contests
+    cdf_d['BallotMeasureSelection'] = pd.read_sql_table('BallotMeasureSelection',session.bind,cdf_schema,index_col='Id')
+    bm_selections = cdf_d['BallotMeasureSelection']['Selection'].to_list()
 
-        # TODO get votes allwoed, number elected and number run-off, etc. to put into CandidateContest table. But how???
+    # process BallotMeasureContest
+    foreign_key_d = {'state':state_id}
+    raw_filters=[" | ".join(["(row['Choice'] == '" + i + "')" for i in bm_selections])] # TODO munger-dependent
+    cdf_d['BallotMeasureContest'], ei_d['BallotMeasureContest'] = fill_cdf_table_from_raw(session, row, cdf_schema, mu, 'BallotMeasureContest', cdf_d['ExternalIdentifier'], filters=raw_filters, foreign_key_d=foreign_key_d, id_type_other_id=id_type_other_id)
 
-    # TODO enter contest in the External Identifiers table
-
-
-
-    # TODO load Contest-Election join table
+    # load Contest-Election join table
+    ecj_list = []
+    for contest_type in ['Candidate','BallotMeasure']:
+        cdf_d[contest_type + 'Contest'] = pd.read_sql_table(contest_type + 'Contest',session.bind,cdf_schema,index_col='Id')
+        for idx in cdf_d[contest_type + 'Contest'].index:
+            ecj_list.append([idx,election_id])
+    ecj_df = pd.DataFrame(ecj_list,columns=['Contest_Id','Election_Id'])
+    cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,cdf_schema,'ElectionContestJoin')
 
     #  process Candidates
-    party_ids = cdf_d['Party'].index.to_list()
+    party_ids = cdf_d['Party'].index
     for party_id in party_ids:
         foreign_key_d = {'Election_Id':election_id,'Party_Id':party_id}
         raw_filters = [' row["Choice Party"] == "' + cdf_ei[cdf_ei['ForeignId'] == party_id]['Value'].to_list()[0] + '"']   # TODO filter first, group by candidate, then pass to fill_cdf function
@@ -222,15 +223,6 @@ def bulk_elements_to_cdf(session, mu, cdf_schema, row, election_id, id_type_othe
     cdf_d['CandidateSelection'] = dbr.dframe_to_sql(cdf_d['CandidateSelection'], session, cdf_schema, 'CandidateSelection')
 
     # TODO load CandidateContest-CandidateSelection join table
-
-    # get BallotMeasureSelections to distinguish between BallotMeasure- and Candidate-Contests
-    cdf_d['BallotMeasureSelection'] = pd.read_sql_table('BallotMeasureSelection',session.bind,cdf_schema,index_col='Id')
-    bm_selections = cdf_d['BallotMeasureSelection']['Selection'].to_list()
-
-    # process BallotMeasureContest
-    foreign_key_d = {'state':state_id}
-    raw_filters=[" | ".join(["(row['Choice'] == '" + i + "')" for i in bm_selections])] # TODO munger-dependent
-    cdf_d['BallotMeasureContest'], ei_d['BallotMeasureContest'] = fill_cdf_table_from_raw(session, row, cdf_schema, mu, 'BallotMeasureContest', cdf_d['ExternalIdentifier'], filters=raw_filters, foreign_key_d=foreign_key_d, id_type_other_id=id_type_other_id)
 
     # TODO load BallotMeasureContest-Selection join table
 
@@ -265,7 +257,6 @@ def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,
             # TODO error handling? What if id not found?
             for item in mu.content_dictionary['fields_dictionary'][t]:
                 ids_d[t],name_d[t] = id_and_name_from_external_PANDAS(cdf_d['ExternalIdentifier'], cdf_d[t], eval(item['ExternalIdentifier']),id_type_other_id,mu.name,item['InternalNameField'])
-                diagnostic=1    # TODO remove
 
         # process Candidate and BallotMeasure elements
         if contest_type == 'BallotMeasure':

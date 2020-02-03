@@ -69,20 +69,17 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
 
         t = table_def[0]      # e.g., cdf_table = 'ReportingUnit'
 
-        # for each table # Note:s.context_dictionary.keys() doesn't include Candidate and other tables filled from datafile, not from context.
-
-        # fill BallotMeasureSelection dframe, table, pickle
 
 
         if t in s.context_dictionary.keys(): # excludes 'ExternalIdentifier', as well as tables filled from datafile but not from context, such as Candidate
             print('\tProcessing ' + t + 's')
             # TODO read dataframe for t from pickle if available
 
-            # create DataFrame with enough info to define db table eventually
+            # create DataFrames of relevant context information
             if t == 'BallotMeasureSelection':   # note: s.context_dictionary['BallotMeasureSelection'] is a set not a dict
                 context_cdframe['BallotMeasureSelection'] = pd.DataFrame(list(s.context_dictionary['BallotMeasureSelection']),columns=['Selection'])
                 # %% commit table to db
-                dframe_to_sql(context_cdframe[t], session, schema, t)
+                cdf_d[t] = dframe_to_sql(context_cdframe[t], session, schema, t)
 
             else:
                 context_cdframe[t] = pd.read_csv(s.path_to_state_dir + 'context/'+ t + '.txt',sep = '\t')
@@ -95,8 +92,8 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
                         context_cdframe[t][e+'_Id'] = context_cdframe[t][e].map(enum_id_d[e])
                         context_cdframe[t]['Other'+e] = context_cdframe[t][e].map(enum_othertype_d[e])
 
-                # %% commit table to db
-                dframe_to_sql(context_cdframe[t], session, schema, t)
+                # %% commit info in context_cdframe to corresponding cdf table to db
+                cdf_d[t] = dframe_to_sql(context_cdframe[t], session, schema, t)
 
                 if t == 'Office':
                     # Check that all ElectionDistrictTypes are recognized
@@ -117,36 +114,33 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
                     cdf_d['ReportingUnit'] = dframe_to_sql(new_ru_dframe,session,schema,'ReportingUnit',index_col=None)
 
                     # create corresponding CandidateContest records, if they don't already exist
-                    # TODO include VotesAllowed, NumberElected and NumberRunoff fields, probably from context
-                    print('WARNING: Note assumption that VotesAllowed = 1 for all contests!!!!')
-                    # TODO MAJOR FAULTY ASSUMPTION: assuming VotesAllowed = 1
+                    cc_data = context_cdframe['Office'].merge(cdf_d['Office'],left_on='Name',right_on='Name').merge(cdf_d['ReportingUnit'],left_on='Name',right_on='Name',suffixes=['','_ru'])
+                    # restrict to the columns we need, and set order
+                    cc_data = cc_data[['Name','VotesAllowed','NumberElected','NumberRunoff','Id','Id_ru']]
+                    # rename columns as necesssary
+                    cc_data.columns = ['Name', 'VotesAllowed', 'NumberElected', 'NumberRunoff', 'Office_Id', 'ElectionDistrict_Id']
+                    # insert values for 'PrimaryParty_Id' column
+                    # TODO for primaries this needs to be menaingful, not just None
+                    cc_data['PrimaryParty_Id'] = [None]*cc_data.shape[0]
+                    cdf_d['CandidateContest'] = dframe_to_sql(cc_data,session,schema,'CandidateContest')
 
-                    cdf_d['CandidateContest'] = pd.read_sql_table('CandidateContest', session.bind, schema,index_col=None)
-                    cdf_d['Office'] = pd.read_sql_table('Office', session.bind, schema,index_col=None)
-                    new_cc = []
-                    for index, context_row in context_cdframe['Office'].iterrows():
-                        if context_row['ElectionDistrict'] not in cdf_d['CandidateContest']['Name'].to_list():
-                            ru_id = id_from_select_only_PANDAS(cdf_d['ReportingUnit'],{'Name':context_row['ElectionDistrict']},dframe_Id_is_index=False)
-                            office_id = id_from_select_only_PANDAS(cdf_d['Office'],{'Name':context_row['Name']},dframe_Id_is_index=False)
-                            new_cc.append(pd.Series({'Name':context_row['ElectionDistrict'], 'Office_Id':office_id, 'ElectionDistrict_Id':ru_id,'VotesAllowed':1}))
-                            # TODO MAJOR FAULTY ASSUMPTION: assuming VotesAllowed = 1
-                    # send any new CandidateContests to the db
-                    new_cc_dframe = pd.DataFrame(new_cc)
-                    cdf_d['CandidateContest'] = dframe_to_sql(new_cc_dframe,session,schema,'CandidateContest')
-                    session.flush()
-    # TODO need to fill CandidateContest table
-
-
+    # load external identifiers from context
 
     cdf_d['ExternalIdentifier'] = fill_externalIdentifier_table(session,schema,enum_dframe,other_id['IdentifierType'],s.path_to_state_dir + 'context/ExternalIdentifier.txt')
+    # load CandidateContest external ids into cdf_d['ExternalIdentifier'] too
+    ei_df = cdf_d['Office'].merge(cdf_d['ExternalIdentifier'],left_on='Id',right_on='ForeignId',suffixes=['_office','ei']).merge(cdf_d['CandidateContest'],left_on='Id',right_on='Office_Id',suffixes=['','_cc'])[['Id_cc','Value','IdentifierType_Id','OtherIdentifierType']]
+    ei_df.columns = ['ForeignId','Value','IdentifierType_Id','OtherIdentifierType']
+    cdf_d['ExternalIdentifier'] = dframe_to_sql(ei_df,session,schema,'ExternalIdentifier')
 
     # Fill the ComposingReportingUnitJoin table
     cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,schema,cdf_d,pickle_dir=s.path_to_state_dir+'pickles/') # TODO put pickle directory info into README.md
+    session.flush()
     return
 
 def fill_externalIdentifier_table(session,schema,enum_dframe,id_other_id_type,fpath):
     """
     fpath is a path to the tab-separated context file holding the external identifier info
+
     """
     #%% fill ExternalIdentifier table
     print('Fill ExternalIdentifier table')
