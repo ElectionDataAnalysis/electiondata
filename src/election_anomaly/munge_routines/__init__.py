@@ -192,7 +192,21 @@ def bulk_elements_to_cdf(session, mu, cdf_schema, row, election_id, id_type_othe
 
     cdf_d['Party'] = pd.read_sql_table('Party',session.bind,cdf_schema,index_col='Id')
 
-    # TODO process contests, get contest Id for each unique "Contest Name" [in nc_export1 terms]
+    # TODO process contests, get contest Id for each unique contest [in nc_export1 terms]
+    cdf_d['Office'] = pd.read_sql_table('Office',session.bind,cdf_schema,index_col='Id')
+    cdf_d['CandidateContest'] = pd.read_sql_table('CandidateContest',session.bind,cdf_schema,index_col='Id')
+    office_raw_name_list = row['Contest Name'].unique().to_list  # munger dependent
+    o_i = {}
+    for o_r_n in office_raw_name_list:
+        cdf_office_id = ei_d[(ei_d['Table'] == 'Office') & (ei_d['OtherIdentifierType'] == mu.name) & (ei_d['Value'] == o_r_n)]['ForeignId'].to_list()[0]
+        cdf_office_name = cdf_d['Office'][cdf_d['Office']['Id'] == cdf_office_id]['Name']
+
+        # TODO get votes allwoed, number elected and number run-off, etc. to put into CandidateContest table. But how???
+
+    # TODO enter contest in the External Identifiers table
+
+
+
     # TODO load Contest-Election join table
 
     #  process Candidates
