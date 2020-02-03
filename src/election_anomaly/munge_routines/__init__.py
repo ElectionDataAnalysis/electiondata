@@ -232,7 +232,6 @@ def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,
     name_d = {}
 
 
-    window.close()
     for index, row in raw_rows.iterrows():
         # track progress
         sg.one_line_progress_meter('row-by-row progress', index + 1, raw_rows.shape[1], 'key')
