@@ -210,12 +210,20 @@ def bulk_elements_to_cdf(session, mu, cdf_schema, row, election_id, id_type_othe
     ecj_df = pd.DataFrame(ecj_list,columns=['Contest_Id','Election_Id'])
     cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,cdf_schema,'ElectionContestJoin')
 
-    #  process Candidates
-    party_ids = cdf_d['Party'].index
-    for party_id in party_ids:
-        foreign_key_d = {'Election_Id':election_id,'Party_Id':party_id}
-        raw_filters = [' row["Choice Party"] == "' + cdf_ei[cdf_ei['ForeignId'] == party_id]['Value'].to_list()[0] + '"']   # TODO filter first, group by candidate, then pass to fill_cdf function
-        cdf_d['Candidate'], ei_d['Candidate'] = fill_cdf_table_from_raw(session, row, cdf_schema, mu, 'Candidate', cdf_d['ExternalIdentifier'], foreign_key_d=foreign_key_d, filters=raw_filters, id_type_other_id=id_type_other_id)
+    #  process Candidates and CandidateContestSelectionJoin, looping through party-contest pairs
+    party_ext_name = row['Choice Party']    # TODO munger-dependent
+    contest_ext_name = row['Contest Name']  # TODO munger-dependent
+    candidate_ext_name = row['Choice']  # TODO munger-dependent
+
+    # TODO make frame of unique triples; then merge ids; then load to cdf db.
+    pair_df = pd.concat([party_ext_name,contest_ext_name],axis=1).drop_duplicates()
+    pair_df.columns = ['Party','CandidateContest']
+    for index, pair in pair_df:
+        filtered_row = row[(row['Choice Party'] == pair['Party']) & (row['Contest Name'] == pair['CandidateContest'])]
+        party_id = cdf_d['ExternalIdentifier'][(cdf_d['ExternalIdentifier']['Table'] == 'Party') & (cdf_d['ExternalIdentifier']['Value'] == pair['Party'])]['ForeignId'].to_list()[0]
+        foreign_key_d = {'Party_Id':party_id,'Election_Id':election_id}
+# TODO filter first, group by candidate, then pass to fill_cdf function
+        cdf_d['Candidate'], ei_d['Candidate'] = fill_cdf_table_from_raw(session, filtered_row, cdf_schema, mu, 'Candidate', cdf_d['ExternalIdentifier'], foreign_key_d=foreign_key_d, filters=[], id_type_other_id=id_type_other_id)
 
 
     # process CandidateSelection
@@ -237,7 +245,7 @@ def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,
     ids_d = {}
     name_d = {}
 
-
+    # TODO merge with externalidentifier table before going row by row
     for index, row in raw_rows.iterrows():
         # track progress
         sg.one_line_progress_meter('row-by-row progress', index + 1, raw_rows.shape[0], 'key')
