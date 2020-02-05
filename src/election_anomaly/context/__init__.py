@@ -83,6 +83,10 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
 
             else:
                 context_cdframe[t] = pd.read_csv(s.path_to_state_dir + 'context/'+ t + '.txt',sep = '\t')
+                # save to state schema
+                context_cdframe[t].to_sql(t, session.bind, schema=s.schema_name,
+                             if_exists='replace')  # TODO better option than replacement?
+
                 for e in table_def[1]['enumerations']:  # e.g., e = "ReportingUnitType"
                     #%% for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
                     if e in context_cdframe[t].columns: # some enumerations (e.g., CountItemStatus for t = ReportingUnit) are not available from context.
@@ -126,7 +130,7 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
 
     # load external identifiers from context
 
-    cdf_d['ExternalIdentifier'] = fill_externalIdentifier_table(session,schema,enum_dframe,other_id['IdentifierType'],s.path_to_state_dir + 'context/ExternalIdentifier.txt')
+    cdf_d['ExternalIdentifier'] = fill_externalIdentifier_table(session,schema,s.schema_name,enum_dframe,other_id['IdentifierType'],s.path_to_state_dir + 'context/ExternalIdentifier.txt')
     # load CandidateContest external ids into cdf_d['ExternalIdentifier'] too
     ei_df = cdf_d['Office'].merge(cdf_d['ExternalIdentifier'],left_on='Id',right_on='ForeignId',suffixes=['_office','ei']).merge(cdf_d['CandidateContest'],left_on='Id',right_on='Office_Id',suffixes=['','_cc'])[['Id_cc','Value','IdentifierType_Id','OtherIdentifierType']]
     ei_df.columns = ['ForeignId','Value','IdentifierType_Id','OtherIdentifierType']
@@ -137,9 +141,10 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
     session.flush()
     return
 
-def fill_externalIdentifier_table(session,schema,enum_dframe,id_other_id_type,fpath):
+def fill_externalIdentifier_table(session,schema,context_schema,enum_dframe,id_other_id_type,fpath):
     """
     fpath is a path to the tab-separated context file holding the external identifier info
+    s is the state
 
     """
     #%% fill ExternalIdentifier table
@@ -147,6 +152,10 @@ def fill_externalIdentifier_table(session,schema,enum_dframe,id_other_id_type,fp
     # TODO why does this step take so long?
     # get table from context directory with the tab-separated definitions of external identifiers
     ei_df = pd.read_csv(fpath,sep = '\t')
+
+    # load context table into state schema for later reference
+    # dframe_to_sql(ei_df,session,s.schema_name,'ExternalIdentifierContext')
+    ei_df.to_sql('ExternalIdentifierContext',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
 
     # pull corresponding tables from the cdf db
     cdf = {}

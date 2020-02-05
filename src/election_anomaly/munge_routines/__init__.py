@@ -172,7 +172,129 @@ def fill_cdf_table_from_raw(session, row, cdf_schema, mu, t, ei_dframe, foreign_
     t_dframe = pd.read_sql_table(t,session.bind,cdf_schema,index_col=index_col)
     return t_dframe, ei_dict
 
-def bulk_elements_to_cdf(session, mu, cdf_schema, row, election_id, id_type_other_id,state_id):
+def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id_type_other_id,state_id):
+    """
+    NOTE: Tables from context assumed to exist already in db
+    (e.g., BallotMeasureSelection, Party, ExternalIdentifier, ComposingReportingUnitJoin, Election, ReportingUnit etc.)
+    Create tables, which are repetitive,
+    and don't come from context
+    and whose db Ids are needed for other insertions.
+    `row` is a dataframe of the raw data file
+    Assumes table 'ExternalIdentifierContext' in the context schema
+    """
+
+    # NB: the name `row` in the code is essential and appears in def of munger as of 1/2020
+    cdf_d = {}  # dataframe for each table
+    for t in ['ExternalIdentifier','Party','BallotMeasureSelection','ReportingUnit','Office']:
+        cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema)   # note: keep 'Id as df column (not index) so we have access in merges below.
+    context_ei = pd.read_sql_table('ExternalIdentifierContext',session.bind,context_schema)
+
+
+    row['ReportingUnit_external'] = row['County'] + ';' + row['Precinct']   # TODO munger dependent
+    munge = {}
+    munge['Office'] = "row['Contest Name']"  # TODO munger dependent
+    munge['Party'] = "row['Choice Party']"  # TODO munger dependent
+    munge['Candidate'] = "row['Choice']"  # TODO munger dependent
+    munge['ReportingUnit'] = "row['County'] + ';' + row['Precinct']" # TODO munger dependent
+
+    # TODO split row into a df for ballot measures and a df for contests
+    bm_selections = cdf_d['BallotMeasureSelection']['Selection'].to_list()
+    munge['BallotMeasureSelection'] = "row['Choice']"
+
+    bm_row = row[eval(munge['BallotMeasureSelection']).isin(bm_selections)]
+    cc_row = row[~(eval(munge['BallotMeasureSelection']).isin(bm_selections))]
+
+    row_copy = row.copy()
+
+# Process rows with ballot measures and selections
+    munge['BallotMeasureContest'] = "row['Contest Name']"   # TODO munger dependent
+    print('WARNING: all ballot measure contests assumed to have the whole state as their district')
+    row = bm_row
+
+    for munge_key in ['BallotMeasureContest','BallotMeasureSelection']:
+        row[munge_key] = eval(munge[munge_key])
+    bm_df = row[row['BallotMeasureSelection'].isin(bm_selections)][['BallotMeasureContest', 'BallotMeasureSelection']].drop_duplicates()
+    bm_df.columns = ['Name', 'Selection']  # internal db name for ballot measure contest matches name in file
+    bm_df['ElectionDistrict_Id'] = [state_id] * bm_df.shape[0]  # append column for ElectionDistrict Id
+
+    # Load BallotMeasureContest table
+    cdf_d['BallotMeasureContest'] = dbr.dframe_to_sql(bm_df[['Name', 'ElectionDistrict_Id']].drop_duplicates(), session,
+                                                      cdf_schema, 'BallotMeasureContest')
+
+    # Load BallotMeasureContestSelection table
+    # to make sure all added columns get labeled well, make sure 'Name' and 'Id' are existing columns
+    if 'Name' not in bm_df.columns:
+        bm_df['Name'] = [None]*bm_df.shape[0]
+    if 'Id' not in bm_df.columns:
+        bm_df['Id']  = [None]*bm_df.shape[0]
+
+    bm_df = bm_df.merge(cdf_d['BallotMeasureSelection'],left_on='Selection',right_on='Selection',suffixes=['','_Selection'])
+    bm_df = bm_df.merge(cdf_d['BallotMeasureContest'],left_on='Name',right_on='Name',suffixes=['','_Contest'])
+    bmcsj_df  = bm_df.drop(labels=['Name','Selection','ElectionDistrict_Id','Id','ElectionDistrict_Id_Contest'],axis=1)
+    bmcsj_df.rename(columns={'Id_Selection':'Selection_Id','Id_Contest':'Contest_Id'},inplace=True)
+    cdf_d['BallotMeasureContestSelectionJoin'] = dbr.dframe_to_sql(bmcsj_df,session,cdf_schema,'BallotMeasureContestSelectionJoin')
+
+    # Load ElectionContestJoin table (for ballot measures)
+    ecj_df = cdf_d['BallotMeasureContest'].copy()
+    ecj_df['Election_Id'] = [election_id] * ecj_df.shape[0]
+    ecj_df.rename(columns={'Id': 'Contest_Id'}, inplace=True)
+    cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,cdf_schema,'ElectionContestJoin')
+
+# process rows with candidate contests
+    row = cc_row
+    # to make sure all added columns get labeled well, make sure 'Name' and 'Id' are existing columns
+    if 'Name' not in row.columns:
+        row['Name'] = [None]*row.shape[0]
+    if 'Id' not in row.columns:
+        row['Id']  = [None]*row.shape[0]
+
+    # create columns with good internal labels
+    for munge_key in ['Office','Party','ReportingUnit','Candidate']:
+        row[munge_key] = eval(munge[munge_key])
+    # append columns with info from context tables of cdf db
+    for t in ['Office','Party','ReportingUnit']:    # Office first is most efficient, as it filters out rows for offices not listed in Office.txt
+        filtered_ei = context_ei[(context_ei['Table'] == t) & (context_ei['ExternalIdentifierType'] == mu.name)][['Name','ExternalIdentifierValue']]
+        filtered_ei.columns = [t+'_Name','ExternalIdentifierValue']
+        row = row.merge(filtered_ei,left_on=t,right_on='ExternalIdentifierValue',suffixes=['','_'+t]).drop(labels=['ExternalIdentifierValue'],axis=1)
+        row = row.merge(cdf_d[t],left_on=t+'_Name',right_on='Name',suffixes=['','_'+t])
+
+    # load Candidate table
+    row['Candidate'] = eval(munge['Candidate'])
+    c_df = row[['Candidate','Id_Party']].copy().drop_duplicates()
+    c_df.rename(columns={'Candidate':'BallotName','Id_Party':'Party_Id'},inplace=True)
+    c_df['Election_Id'] = [election_id] * c_df.shape[0]
+    cdf_d['Candidate'] = dbr.dframe_to_sql(c_df,session,cdf_schema,'Candidate')
+
+    # load CandidateSelection
+    cs_df = cdf_d['Candidate'].copy()
+    cs_df.rename(columns={'Id':'Candidate_Id'},inplace=True)
+    cdf_d['CandidateSelection'] = dbr.dframe_to_sql(cs_df,session,cdf_schema,'CandidateSelection')
+
+    # load CandidateContest
+    office_context_df = pd.read_sql_table('Office',session.bind,schema=context_schema)
+    cc_df = office_context_df.merge(row[['Name_Office','Id_Office']],left_on='Name',right_on='Name_Office',suffixes=['','_row'])[['Name','VotesAllowed','NumberElected','NumberRunoff','Id_Office','ElectionDistrict']].merge(cdf_d['ReportingUnit'],left_on='ElectionDistrict',right_on='Name',suffixes=['','_ReportingUnit'])
+    cc_df.rename(columns={'Id_Office':'Office_Id','Id_ReportingUnit':'ElectionDistrict_Id'},inplace=True)
+    cdf_d['CandidateContest'] = dbr.dframe_to_sql(cc_df,session,cdf_schema,'CandidateContest')
+
+    # load ElectionContestJoin for Candidate Contests
+    ecj_df = cdf_d['CandidateContest'].copy()
+    ecj_df['Election_Id'] = [election_id] * ecj_df.shape[0]
+    ecj_df.rename(columns={'Id': 'Contest_Id'}, inplace=True)
+    cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,cdf_schema,'ElectionContestJoin')
+
+    #  load CandidateContestSelectionJoin
+    ccsj_df = row[['Candidate','Id_Office']].copy().drop_duplicates().\
+        merge(cdf_d['CandidateContest'], left_on='Id_Office', right_on='Office_Id',suffixes=['','_CandidateContest']).\
+        merge(cdf_d['Candidate'],left_on='Candidate',right_on='BallotName',suffixes=['','_Candidate']).\
+        merge(cdf_d['CandidateSelection'],left_on='Id_Candidate',right_on='Candidate_Id',suffixes=['','_CandidateSelection'])
+    ccsj_df.rename(columns={'Id_CandidateSelection':'CandidateSelection_Id','Id':'CandidateContest_Id'},inplace=True)
+    # ccsj_df['Election_Id'] = [election_id] * ccsj_df.shape[0]
+    cdf_d['CandidateContestSelectionJoin'] = dbr.dframe_to_sql(ccsj_df,session,cdf_schema,'CandidateContestSelectionJoin')
+
+    session.flush()
+    return
+
+def bulk_elements_to_cdf_OLD(session, mu, cdf_schema, row, election_id, id_type_other_id,state_id):
     """
     Create tables, which are repetitive,
     don't come from context (hence not BallotMeasureSelection, Party)
@@ -196,7 +318,7 @@ def bulk_elements_to_cdf(session, mu, cdf_schema, row, election_id, id_type_othe
     cdf_d['BallotMeasureSelection'] = pd.read_sql_table('BallotMeasureSelection',session.bind,cdf_schema,index_col='Id')
     bm_selections = cdf_d['BallotMeasureSelection']['Selection'].to_list()
 
-    # process BallotMeasureContest
+    # load BallotMeasureContest
     foreign_key_d = {'state':state_id}
     raw_filters=[" | ".join(["(row['Choice'] == '" + i + "')" for i in bm_selections])] # TODO munger-dependent
     cdf_d['BallotMeasureContest'], ei_d['BallotMeasureContest'] = fill_cdf_table_from_raw(session, row, cdf_schema, mu, 'BallotMeasureContest', cdf_d['ExternalIdentifier'], filters=raw_filters, foreign_key_d=foreign_key_d, id_type_other_id=id_type_other_id)
@@ -216,11 +338,11 @@ def bulk_elements_to_cdf(session, mu, cdf_schema, row, election_id, id_type_othe
     candidate_ext_name = row['Choice']  # TODO munger-dependent
 
     # TODO make frame of unique triples; then merge ids; then load to cdf db.
-    pair_df = pd.concat([party_ext_name,contest_ext_name],axis=1).drop_duplicates()
-    pair_df.columns = ['Party','CandidateContest']
-    for index, pair in pair_df:
-        filtered_row = row[(row['Choice Party'] == pair['Party']) & (row['Contest Name'] == pair['CandidateContest'])]
-        party_id = cdf_d['ExternalIdentifier'][(cdf_d['ExternalIdentifier']['Table'] == 'Party') & (cdf_d['ExternalIdentifier']['Value'] == pair['Party'])]['ForeignId'].to_list()[0]
+    triple_df = pd.concat([party_ext_name,contest_ext_name,candidate_ext_name],axis=1).drop_duplicates()
+    triple_df.columns = ['Party','CandidateContest','Candidate']
+    for index, triple in triple_df:
+        filtered_row = row[(row['Choice Party'] == triple['Party']) & (row['Contest Name'] == triple['CandidateContest'])]
+        party_id = cdf_d['ExternalIdentifier'][(cdf_d['ExternalIdentifier']['Table'] == 'Party') & (cdf_d['ExternalIdentifier']['Value'] == triple['Party'])  ]['ForeignId'].to_list()[0]
         foreign_key_d = {'Party_Id':party_id,'Election_Id':election_id}
 # TODO filter first, group by candidate, then pass to fill_cdf function
         cdf_d['Candidate'], ei_d['Candidate'] = fill_cdf_table_from_raw(session, filtered_row, cdf_schema, mu, 'Candidate', cdf_d['ExternalIdentifier'], foreign_key_d=foreign_key_d, filters=[], id_type_other_id=id_type_other_id)
@@ -310,7 +432,7 @@ def row_by_row_elements_to_cdf(session,mu,cdf_schema,raw_rows,cdf_d,election_id,
     session.flush()
     return
 
-def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_id = 0,cdf_table_filepath='CDF_schema_def_info/tables.txt'):
+def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,state_id = 0,id_type_other_id = 0,cdf_table_filepath='CDF_schema_def_info/tables.txt'):
     """ munger-agnostic raw-to-cdf script; ***
     df is datafile, mu is munger """
     cdf_d = {}  # to hold various dataframes from cdf db tables
@@ -366,7 +488,7 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,state_id = 0,id_type_other_
 
     bulk_items_already_loaded = input('Are bulk items (Candidate, etc.) already loaded (y/n)?\n')
     if bulk_items_already_loaded != 'y':
-        bulk_elements_to_cdf(session, mu, cdf_schema, raw_rows, election_id, id_type_other_id,ids_d['state'])
+        bulk_elements_to_cdf(session, mu,raw_rows, cdf_schema, context_schema, election_id, id_type_other_id,ids_d['state'])
 
     # get all dataframes needed for processing row-by-row
     for t in ['Party', 'Office','CandidateContest','Candidate','CandidateSelection','BallotMeasureContest','VoteCount','SelectionElectionContestVoteCountJoin','BallotMeasureContestSelectionJoin','ElectionContestJoin','CandidateContestSelectionJoin','ComposingReportingUnitJoin','ExternalIdentifier','BallotMeasureSelection']:
@@ -409,12 +531,12 @@ if __name__ == '__main__':
     import states_and_files as sf
     from sqlalchemy.orm import sessionmaker
 
-    cdf_schema='cdf_xx_test'
+    cdf_schema='cdf_nc_test2'
     eng,meta = dbr.sql_alchemy_connect(schema=cdf_schema,paramfile='../../local_data/database.ini')
     Session = sessionmaker(bind=eng)
     session = Session()
 
-    s = sf.create_state('XX', '../../local_data/XX')
+    s = sf.create_state('NC', '../../local_data/NC')
 
     munger_path = '../../local_data/mungers/nc_export1.txt'
     print('Creating munger instance from ' + munger_path)
@@ -424,9 +546,16 @@ if __name__ == '__main__':
     mf = sf.create_metafile(s, 'layout_results_pct.txt')
 
     print('Creating datafile instance')
-    df = sf.create_datafile(s, 'General Election 2018-11-06', 'alamance.txt', mf, mu)
+    df = sf.create_datafile(s, 'General Election 2018-11-06', 'filtered_results_pct_20181106.txt', mf, mu)
+
+    row = pd.read_sql_table('GeneralElection20181106filtered_results_pct_20181106txt',session.bind,s.schema_name)
+
+    election_id = 3218
+    id_type_other_id = 35
+    state_id = 59
+    bulk_elements_to_cdf(session, mu, row, cdf_schema, s.schema_name, election_id, id_type_other_id, state_id)
 
 
-    raw_records_to_cdf(session,meta,df,mu,cdf_schema,0,0,'../CDF_schema_def_info/tables.txt')
+    raw_records_to_cdf(session,meta,df,mu,cdf_schema,s.schema_name,0,0,'../CDF_schema_def_info/tables.txt')
     print('Done!')
 
