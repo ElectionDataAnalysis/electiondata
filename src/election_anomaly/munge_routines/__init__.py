@@ -279,7 +279,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
     session.execute('ALTER TABLE ' + cdf_schema + '."VoteCount" ADD COLUMN "Election_Id" INTEGER, ADD COLUMN "Contest_Id" INTEGER,  ADD COLUMN "Selection_Id" INTEGER') # TODO don't use string concat!!
     session.flush()
     # dbr.add_int_columns(con,cdf_schema,'VoteCount',['Election_Id','Contest_Id','Selection_Id'])
-    print('Upoad to VoteCount')
+    print('Upload to VoteCount')
     vote_counts_fat = dbr.dframe_to_sql(vote_counts,session,cdf_schema,'VoteCount')
     vote_counts_fat.rename(columns={'Id':'VoteCount_Id'},inplace=True)
     session.flush()
@@ -292,9 +292,6 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
 
 
     cdf_d['VoteCounts'] = dbr.dframe_to_sql(vote_counts,session,cdf_schema,'VoteCount')
-    # vote_counts = vote_counts.merge(cdf_d['VoteCounts'],left_on='')
-    # vote_counts.rename({'Id':'VoteCount_Id'},inplace=True)
-    # dbr.dframe_to_sql(vote_counts,session,cdf_schema,'SelectionElectionContestVoteCountJoin')
 
 # process rows with candidate contests
     row = cc_row
@@ -347,6 +344,8 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
     # ccsj_df['Election_Id'] = [election_id] * ccsj_df.shape[0]
     cdf_d['CandidateContestSelectionJoin'] = dbr.dframe_to_sql(ccsj_df,session,cdf_schema,'CandidateContestSelectionJoin')
 
+    # TODO load candidate counts
+    print('WARNING: Candidate counts not loaded!')
     session.flush()
     return
 
@@ -542,32 +541,9 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,state_id = 0
     #%% read raw data rows from db
     raw_rows = pd.read_sql_table(df.table_name,session.bind,schema=df.state.schema_name)
 
-    bulk_items_already_loaded = input('Are bulk items (Candidate, etc.) already loaded (y/n)?\n')
-    if bulk_items_already_loaded != 'y':
-        bulk_elements_to_cdf(session, mu,raw_rows, cdf_schema, context_schema, election_id, id_type_other_id,ids_d['state'])
-
-    # get all dataframes needed for processing row-by-row
-    for t in ['Party', 'Office','CandidateContest','Candidate','CandidateSelection','BallotMeasureContest','VoteCount','SelectionElectionContestVoteCountJoin','BallotMeasureContestSelectionJoin','ElectionContestJoin','CandidateContestSelectionJoin','ComposingReportingUnitJoin','ExternalIdentifier','BallotMeasureSelection']:
-        cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema, index_col='Id')
-
-    process_ballot_measures = input('Process ballot measures (y/n)?\n')
-    if process_ballot_measures == 'y':
-        print('\tFiltering for desired rows of raw file')
-        selection_list = list(cdf_d['BallotMeasureSelection']['Selection'].unique())
-        ballot_measure_rows = raw_rows['Choice'].isin(selection_list) # TODO Munger-dependent
-        print('\tStart row-by-row processing')
-        row_by_row_elements_to_cdf(session, mu, cdf_schema, ballot_measure_rows, cdf_d, election_id, id_type_other_id,contest_type='BallotMeasure')
-
-
-    process_candidate_contests = input('Process candidate contests [whose offices are listed in Office.txt] (y/n)?\n')
-    if process_candidate_contests == 'y':
-        print('\tFiltering for desired rows of raw file')
-        cdf_office_list = list(cdf_d['Office'].index.unique())
-        raw_office_list = cdf_d['ExternalIdentifier'][cdf_d['ExternalIdentifier']['ForeignId'].isin(cdf_office_list)]['Value'].to_list()
-        bool_rows = raw_rows['Contest Name'].isin(raw_office_list)    # TODO munger dependent, will need dataframe to have name from munger (as of 1/2020, 'row')
-        cc_rows = raw_rows.loc[bool_rows]
-        print('\tStart row-by-row processing')
-        row_by_row_elements_to_cdf(session,mu,cdf_schema,cc_rows,cdf_d,election_id,id_type_other_id,contest_type='Candidate')
+    # bulk_items_already_loaded = input('Are bulk items (Candidate, etc.) already loaded (y/n)?\n')
+    # if bulk_items_already_loaded != 'y':
+    bulk_elements_to_cdf(session, mu,raw_rows, cdf_schema, context_schema, election_id, id_type_other_id,ids_d['state'])
 
     return str(ids_d)
 

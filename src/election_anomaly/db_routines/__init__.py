@@ -305,12 +305,15 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True):
     append records any new records to the corresponding table in the db (and commit!)
     Return the updated dframe, including all rows from the db and all from the dframe.
     """
-
+    print('dframe_to_sql, table = '+table)
     #%% pull copy of existing table
+    print('\tdframe_to_sql: pull table from db')
+
     target = pd.read_sql_table(table,session.bind,schema=schema,index_col=index_col)
     df_to_db = dframe.copy()
 
     #%% remove columns that don't exist in target table
+    print('\tdframe_to_sql: remove/add columns to match target table')
     for c in dframe.columns:
         if c not in target.columns:
             df_to_db = df_to_db.drop(c, axis=1)

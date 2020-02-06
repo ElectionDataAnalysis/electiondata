@@ -75,7 +75,7 @@ if __name__ == '__main__':
                 ) or default
     s = sf.create_state(abbr, '../local_data/' + abbr)
 
-    default = 'cdf_nc_test'
+    default = 'cdf_nc1'
     cdf_schema = input(
         'Enter name of CDF schema (default is ' + default + ')\n'
                 ) or default
@@ -116,7 +116,8 @@ if __name__ == '__main__':
         print('Creating munger instance from '+munger_path)
         m = sf.create_munger(munger_path)
 
-        default = 'filtered_results_pct_20181106.txt'
+        # default = 'filtered_results_pct_20181106.txt'
+        default = 'filtered_yancey2018.txt'
         #default = 'alamance.txt'
         df_name = input('Enter name of datafile (default is '+default+')\n') or default
 
@@ -150,6 +151,10 @@ if __name__ == '__main__':
         session.commit()
         print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
 
+        eng.dispose()
+
+
+def find_anomalies():
     find_anomalies = input('Find anomalies in an election (y/n)?\n')
     if find_anomalies == 'y':
         default = 'cdf_nc_test'
