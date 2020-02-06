@@ -160,6 +160,26 @@ def read_id_from_enum(session,meta,schema,table,txt):
         print('No record in '+schema+'.'+table+' with Txt '+txt)
         return
 
+def add_int_columns(con,schema,table,columns):
+    """
+    Adds columns to the db table. col_type_pairs, e.g. [['Selection_Id',Integer],['Election_Id',Integer]]
+    """
+    cur  = con.cursor()
+    for column in columns:
+        q = 'ALTER TABLE {0}.{1} ADD COLUMN {2} Integer'
+        sql_ids= [ sql.Identifier(x) for x in [schema,table,column]]
+        cur.execute(sql.SQL(q).format(*sql_ids))
+        con.commit()
+    if cur:
+        cur.close()
+    return
+
+def drop_columns(con,schema,table,columns):
+    """
+    Drops columns from the db table.
+    """
+    # TODO
+    return
 
 def query_as_string(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
@@ -278,49 +298,7 @@ def create_schema(session,name,delete_existing=False):    # TODO move to db_rout
     session.flush()
     return new_schema_created
 
-if __name__ == '__main__':
-    import states_and_files as sf
-    import db_routines as dbr
-
-    # %% Initiate db engine and create session
-    eng, meta = dbr.sql_alchemy_connect(paramfile='../../local_data/database.ini')
-    Session = sessionmaker(bind=eng)
-    session = Session()
-
-
-    abbr = 'NC'
-    df_name = 'results_pct_20181106.txt'
-
-    print('Creating state')
-    s = sf.create_state(abbr, '../../local_data/' + abbr)
-
-    print('Creating schema')
-    create_schema(session,s.schema_name)
-    print('Creating metafile instance')
-    mf = sf.create_metafile(s, 'layout_results_pct.txt')
-
-    munger_name = 'nc_export1'
-    munger_path = '../../local_data/mungers/' + munger_name + '.txt'
-    print('Creating munger instance from ' + munger_path)
-    m = sf.create_munger(munger_path)
-
-    print('Creating datafile instance')
-    df = sf.create_datafile(s, 'General Election 2018-11-06', df_name, mf, m)
-
-    #%% simplify df.column_metadata for testing
-    df.column_metadata = [['county',String,None],['some_int',Integer,None]]
-
-    sqla_column_list = [Column(col[0],col[1]) for col in df.column_metadata]
-    raw_table = Table(df.table_name,meta,*sqla_column_list,schema=s.schema_name)
-
-    meta.create_all()
-
-
-    qq, strs, sql_ids = create_table(df)
-    print('Done')
-
-
-def dframe_to_sql(dframe,session,schema,table,index_col='Id'):
+def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True):
     """
     Given a dframe and an existing cdf db table name, clean the dframe
     (i.e., drop any columns that are not in the table, add null columns to match any missing columns)
@@ -336,11 +314,11 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id'):
     for c in dframe.columns:
         if c not in target.columns:
             df_to_db = df_to_db.drop(c, axis=1)
-    #%% add columns that exist in target table but are mission from original dframe
+    # add columns that exist in target table but are mission from original dframe
     for c in target.columns:
         if c not in dframe.columns:
-            df_to_db[c] = None
-
+            df_to_db[c] = None  # TODO why doesn't this throw an error? Column is not equal to a scalar...
+    print('\tdframe_to_sql: dropping duplicates')
     appendable = pd.concat([target,target,df_to_db],sort=False).drop_duplicates(keep=False)
     # note: two copies of target ensures none of the original rows will be appended.
 
@@ -348,8 +326,25 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id'):
     if 'Id' in appendable.columns:
         appendable = appendable.drop('Id',axis=1)
 
+    print('\tdframe_to_sql: uploading')
     appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
+    print('\tdframe_to_sql: pulling table from db')
     up_to_date_dframe = pd.read_sql_table(table,session.bind,schema=schema)
-    session.flush()
-    # up_to_date_dframe = pd.concat([target,appendable],sort=False).drop_duplicates(keep='first')
+    if flush:
+        session.flush()
     return up_to_date_dframe
+
+if __name__ == '__main__':
+    import states_and_files as sf
+    import db_routines as dbr
+
+    # %% Initiate connection
+    con = establish_connection(paramfile='../../local_data/database.ini', db_name='postgres')
+
+    schema='cdf_nc_test2'
+    table = 'VoteCount'
+    columns = ['Selection_Id','Election_Id']
+    add_int_columns(con, schema, table, columns)
+
+    print('Done')
+
