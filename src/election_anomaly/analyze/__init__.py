@@ -294,6 +294,7 @@ def pivot(dataframe_by_name, col_field='Selection', filter=[],mode='raw'):
             cf['total'] = cf.sum(axis=1)
         cf = cf[cf.total != 0]
         cf = cf.div(cf["total"], axis=0)
+        cf=cf.drop(labels=['total'],axis=1)
     return cf
 
 
