@@ -44,7 +44,7 @@ class Election(object): # TODO check that object is necessary (apparently for pi
             con.dispose()
         return self.rollup_dframe
 
-    def anomaly_scores(self, session, meta, schema): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
+    def anomaly_scores(self, session, meta, schema,contest_id_list=[]): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
         pickle_path = self.pickle_dir+'anomaly_rollup'
         if os.path.isfile(pickle_path):
             print('Anomaly dataframe will not be calculated, but will be read from file:\n\t'+pickle_path)
@@ -52,7 +52,8 @@ class Election(object): # TODO check that object is necessary (apparently for pi
             self.anomaly_dframe = pd.read_pickle(pickle_path)
 
         else:
-            contest_id_list = self.rollup_dframe.Contest_Id.unique()
+            if contest_id_list == []:
+                contest_id_list = self.rollup_dframe.Contest_Id.unique()
             for contest_id in contest_id_list:
                 anomaly_list = []
                 cr = create_contest_rollup_from_election(session, meta, self, contest_id)
@@ -72,26 +73,31 @@ class Election(object): # TODO check that object is necessary (apparently for pi
         self.anomaly_dframe.to_pickle(pickle_path)
         return
 
-    def worst_bar_for_each_contest(self,session,meta,anomaly_min=0):
+    def worst_bar_for_each_contest(self,session,meta,anomaly_min=0,contest_id_list=[]):
         if self.anomaly_dframe.empty:
             print('anomaly dataframe is empty')
             return
         else:
-            for contest_id in self.rollup_dframe.Contest_Id.unique():
+            if contest_id_list==[]:
+                contest_id_list = self.rollup_dframe.Contest_Id.unique()
+            for contest_id in contest_id_list:
                 cr = create_contest_rollup_from_election(session,meta,self, contest_id)
                 contestname = cr.ContestName
                 df = self.anomaly_dframe[self.anomaly_dframe.ContestName == contestname]
                 max_pct_anomaly = df.anomaly_values_pcts.max()
                 max_tot_anomaly = df.anomaly_value_totals.max()
+
+                # don't plot total vote counts
+                df_to_plot= cr.dataframe_by_name[cr.dataframe_by_name['CountItemType'] != 'total']
                 if max_pct_anomaly > anomaly_min:
-                # find and plot worst bar charts from anomaly_dframe
+                    # find and plot worst bar charts from anomaly_dframe
                     for index,row in df.iterrows():
                         if row['anomaly_values_pcts'] == max_pct_anomaly:
-                            plot_pivot(contestname, cr.dataframe_by_name, col_field=row['column_field'], filter=[row['filter_field'],row['filter_value']],mode='pct')
+                            plot_pivot(contestname, df_to_plot, col_field=row['column_field'], filter=[row['filter_field'],row['filter_value']],mode='pct')
                 if max_tot_anomaly > anomaly_min:
                     for index,row in df.iterrows():
                         if row['anomaly_value_totals']  == max_tot_anomaly:
-                            plot_pivot(contestname,cr.dataframe_by_name,col_field=row['column_field'],filter=[row['filter_field'],row['filter_value']],mode='raw')
+                            plot_pivot(contestname,df_to_plot,col_field=row['column_field'],filter=[row['filter_field'],row['filter_value']],mode='raw')
 
             return
 
@@ -250,12 +256,16 @@ def plot_pivot(contestname,dataframe_by_name,col_field='Selection',filter=[],mod
         title_string += '\n'+filter[1]   # TODO dict is more natural, with filter[0] is column and filter[1] is value
 
     type_pivot= pivot(dataframe_by_name,col_field, [filter],mode)
+
+    # don't plot the total created by the pivoting
+    if 'total' in type_pivot.columns:
+        type_pivot.drop(labels=['total'],axis=1)
     try:    # TODO get exact criteria for skipping
         type_pivot.plot.bar()
-        plt.title(title_string+'\nVote Totals')
+        plt.title(title_string+'\nVotes by '+col_field)
         type_pct_pivot = pct_dframe(type_pivot)
         type_pct_pivot.plot.bar()
-        plt.title(title_string+'\nVote Percentages')
+        plt.title(title_string+'\nVote Percentages by ' + col_field)
         plt.show()
     except:
         a =1 # TODO placeholder
@@ -290,7 +300,6 @@ def pivot(dataframe_by_name, col_field='Selection', filter=[],mode='raw'):
 def create_contest_rollup_from_election(session,meta,e,Contest_Id):   # TODO get rid of con/meta/schema here by making names part of the Election def?
     assert isinstance(e,Election),'election must be an instance of the Election class'
     if not isinstance(Contest_Id,int):
-        print('WARNING: Contest_Id was not int, had to be converted') # TODO why
         Contest_Id = int(Contest_Id)
     ElectionName = dbr.read_single_value_from_id(session, meta, e.cdf_schema,'Election','Name', e.Election_Id)
     contest_type = dbr.contest_type_from_contest_id(session.bind,meta,e.cdf_schema,Contest_Id) # Candidate or BallotMeasure

@@ -28,7 +28,7 @@ try:
 except:
     import pickle
 
-def find_anomalies(cdf_schema):
+def find_anomalies(cdf_schema,contest_id_list=[]):
     find_anomalies = input('Find anomalies in an election (y/n)?\n')
     if find_anomalies == 'y':
         # default = 'cdf_nc_test'
@@ -69,7 +69,7 @@ def find_anomalies(cdf_schema):
 
         e = an.create_election(session, meta_generic, cdf_schema, election_id, roll_up_to_ru_type,
                                atomic_ru_type, pickle_dir, paramfile)
-        e.anomaly_scores(session, meta_generic, cdf_schema)
+        e.anomaly_scores(session, meta_generic, cdf_schema,contest_id_list=contest_id_list)
         #%%
         # TODO remove bars for total votes from by-candidate charts
         e.worst_bar_for_each_contest(session, meta_generic, 2)
@@ -199,8 +199,8 @@ if __name__ == '__main__':
         session.commit()
         print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
 
-        find_anomalies(cdf_schema)
+    find_anomalies(cdf_schema)
 
-        eng.dispose()
+    eng.dispose()
 
 
