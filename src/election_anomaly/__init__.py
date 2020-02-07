@@ -28,6 +28,53 @@ try:
 except:
     import pickle
 
+def find_anomalies(cdf_schema):
+    find_anomalies = input('Find anomalies in an election (y/n)?\n')
+    if find_anomalies == 'y':
+        # default = 'cdf_nc_test'
+        # cdf_schema = input('Enter name of cdf schema (default is '+default+')\n') or default
+
+        default = '../local_data/database.ini'
+        paramfile = input('Enter path to database parameter file (default is '+default+')\n') or default
+
+        eng, meta_generic = dbr.sql_alchemy_connect(cdf_schema, paramfile)
+        session = Session()
+
+        election_dframe = dbr.election_list(session, meta_generic, cdf_schema)
+        print('Available elections in schema '+cdf_schema)
+        for index,row in election_dframe.iterrows():
+            print(row['Name']+' (Id is '+str(row['Id'])+')')
+
+        default = '3218'
+        election_id = input('Enter Id of the election you wish to analyze (default is '+default+')\n') or default
+        election_id = int(election_id)
+
+        default = 'nc_2018_test'
+        election_short_name = input('Enter short name for the election (alphanumeric with underscore, no spaces -- default is '+default+')\n') or default
+
+        default = 'precinct'
+        atomic_ru_type = input('Enter the \'atomic\' Reporting Unit Type on which you wish to base your rolled-up counts (default is '+default+')\n') or default
+
+        default = 'county'
+        roll_up_to_ru_type = input('Enter the (larger) Reporting Unit Type whose counts you want to analyze (default is '+default+')\n') or default
+
+        default = '../local_data/pickles/'+election_short_name+'/'
+        pickle_dir = input('Enter the directory for storing pickled dataframes (default is '+default+')\n') or default
+
+        try:
+            assert os.path.isdir(pickle_dir)
+        except AssertionError as e:
+            print(e)
+            dummy = input('Create the directory and hit enter to continue.')
+
+        e = an.create_election(session, meta_generic, cdf_schema, election_id, roll_up_to_ru_type,
+                               atomic_ru_type, pickle_dir, paramfile)
+        e.anomaly_scores(session, meta_generic, cdf_schema)
+        #%%
+        # TODO remove bars for total votes from by-candidate charts
+        e.worst_bar_for_each_contest(session, meta_generic, 2)
+
+    print('Done!')
 
 def raw_data(session,meta,df):
     """ Loads the raw data from the datafile df into the schema for the associated state
@@ -117,7 +164,8 @@ if __name__ == '__main__':
         m = sf.create_munger(munger_path)
 
         # default = 'filtered_results_pct_20181106.txt'
-        default = 'filtered_yancey2018.txt'
+        default = 'results_pct_20181106.txt'
+        # default = 'filtered_yancey2018.txt'
         #default = 'alamance.txt'
         df_name = input('Enter name of datafile (default is '+default+')\n') or default
 
@@ -151,53 +199,8 @@ if __name__ == '__main__':
         session.commit()
         print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
 
+        find_anomalies(cdf_schema)
+
         eng.dispose()
 
 
-def find_anomalies():
-    find_anomalies = input('Find anomalies in an election (y/n)?\n')
-    if find_anomalies == 'y':
-        default = 'cdf_nc_test'
-        cdf_schema = input('Enter name of cdf schema (default is '+default+')\n') or default
-
-        default = '../local_data/database.ini'
-        paramfile = input('Enter path to database parameter file (default is '+default+')\n') or default
-
-        eng, meta_generic = dbr.sql_alchemy_connect(cdf_schema, paramfile)
-        session = Session()
-
-        election_dframe = dbr.election_list(session, meta_generic, cdf_schema)
-        print('Available elections in schema '+cdf_schema)
-        for index,row in election_dframe.iterrows():
-            print(row['Name']+' (Id is '+str(row['Id'])+')')
-
-        default = '3218'
-        election_id = input('Enter Id of the election you wish to analyze (default is '+default+')\n') or default
-        election_id = int(election_id)
-
-        default = 'nc_2018_test'
-        election_short_name = input('Enter short name for the election (alphanumeric with underscore, no spaces -- default is '+default+')\n') or default
-
-        default = 'precinct'
-        atomic_ru_type = input('Enter the \'atomic\' Reporting Unit Type on which you wish to base your rolled-up counts (default is '+default+')\n') or default
-
-        default = 'county'
-        roll_up_to_ru_type = input('Enter the (larger) Reporting Unit Type whose counts you want to analyze (default is '+default+')\n') or default
-
-        default = '../local_data/pickles/'+election_short_name+'/'
-        pickle_dir = input('Enter the directory for storing pickled dataframes (default is '+default+')\n') or default
-
-        try:
-            assert os.path.isdir(pickle_dir)
-        except AssertionError as e:
-            print(e)
-            dummy = input('Create the directory and hit enter to continue.')
-
-        e = an.create_election(session, meta_generic, cdf_schema, election_id, roll_up_to_ru_type,
-                               atomic_ru_type, pickle_dir, paramfile)
-        e.anomaly_scores(session, meta_generic, cdf_schema)
-        #%%
-        # TODO remove bars for total votes from by-candidate charts
-        e.worst_bar_for_each_contest(session, meta_generic, 2)
-
-    print('Done!')
