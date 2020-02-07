@@ -85,16 +85,6 @@ def read_single_value_from_id(session,meta,schema,table,field,id):
         print('No record in '+schema+'.'+table+' with Id '+str(id))
         return
 
-def read_all_value_from_id(con,meta,schema,table,field):
-    """Takes an engine connection con return an {id:field_value} dictionary
-    read from the given table of the given schema.
-    """
-    t = db.Table(table,meta,autoload=True, autoload_with=con,schema=schema)
-    q = db.select([ t.columns.Id,eval('cdf_table.columns.'+ field)])
-    ResultProxy = con.execute(q)
-    ResultSet = ResultProxy.fetchall()
-    return dict(ResultSet)
-
 def read_some_value_from_id(con,meta,schema,table,field,id_list):
     """Takes an engine connection con return an {id:field_value} dictionary
     read from the given table of the given schema.
@@ -117,15 +107,6 @@ def election_list(session,meta,cdf_schema):
     result_list = [[instance.Id,instance.Name] for instance in session.query(Election)]
     result_dframe = pd.DataFrame(result_list,columns=['Id','Name'])
     return result_dframe
-
-def contest_ids_from_election_id(con,meta,schema,Election_Id):
-    """ given an election id, return list of all contest ids """
-    #%%
-    t = db.Table('ElectionContestJoin',meta,autoload=True, autoload_with=con,schema=schema)
-    q = db.select([t.columns.Contest_Id]).where(t.columns.Election_Id == Election_Id)
-    ResultProxy = con.execute(q)
-    ResultSet = ResultProxy.fetchall()
-    return [x[0] for x in ResultSet]
 
 def contest_type_from_contest_id(con,meta,schema,Contest_Id):
     """ given an contest id, return CandidateContest or BallotMeasureContest """

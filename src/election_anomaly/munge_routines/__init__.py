@@ -7,26 +7,6 @@ import pandas as pd
 import time
 
 
-def report_error(error_string):
-    print('Munge error: '+error_string)
-
-def id_and_name_from_external_PANDAS(ei_dframe, t_dframe,  external_name, identifiertype_id, otheridentifiertype, internal_name_field='Name',t_dframe_Id_is_index=True):
-    ## find the internal db name and id from external identifier
-
-    ei_value_d = {'Value':external_name,'IdentifierType_Id':identifiertype_id,'OtherIdentifierType':otheridentifiertype}
-    ei_filtered = ei_dframe.loc[(ei_dframe[list(ei_value_d)] == pd.Series(ei_value_d)).all(axis=1)]
-    if ei_filtered.shape[0] == 1:
-        table_id = ei_filtered['ForeignId'].to_list()[0]
-        if t_dframe_Id_is_index:
-            name = t_dframe.loc[table_id][internal_name_field]
-        else:
-            name = t_dframe[t_dframe['Id'] == table_id][internal_name_field].tolist()[0]
-        return table_id, name
-    elif ei_filtered.shape[0] > 1:
-        raise Exception('Unexpected duplicates found')
-    else:
-        return None, None
-
 def id_from_select_only_PANDAS(dframe,value_d, mode='no_dupes',dframe_Id_is_index=True):
     """Returns the Id of the record in table with values given in the dictionary value_d.
     On error (nothing found, or more than one found) returns 0"""
@@ -118,59 +98,6 @@ def format_type_for_insert_PANDAS(dframe,txt,id_type_other_id,t_dframe_Id_is_ind
         return[id_type_other_id,txt]
     else:
          raise Exception('Dataframe has duplicate rows with value ' + txt + ' in Txt column')
-
-def fill_cdf_table_from_raw(session, row, cdf_schema, mu, t, ei_dframe, foreign_key_d = {}, filters=[], id_type_other_id=0, index_col='Id'):
-    """
-    t is name of table in cdf
-    mu is munger
-    `row` is a dataframe of the raw data file; debugger may not recognize its use, hidden in eval()
-    NB: the name `row` is essential and appears in def of munger as of 1/2020
-    """
-    # get munger info
-    munger_fields_d = mu.content_dictionary['fields_dictionary']
-
-    ei_dict = {} # to hold internal_name - internal_id pairs
-    ids_d = foreign_key_d  # note: name `ids_d` is used in definition of munger, so can't be changed.
-
-    # filter the row dataframe
-    for f in filters:
-        row = row[eval(f)]
-        print('\tFilter: '+f)
-
-    t_dframe = pd.read_sql_table(t, session.bind, cdf_schema, index_col=index_col)
-    for item in munger_fields_d[t]:  # there should be only one of these
-        # loop through unique values in the raw file
-        raw_column = eval(item['ExternalIdentifier'])
-        print('\tFor table '+t+', '+ str(len(raw_column.unique())) + ' items to process')
-        for external_name in raw_column.unique():
-            if external_name and external_name.strip() != '':   # treat only items with content
-                # print('\t\tProcessing '+external_name)
-                # get internal db name and id for ExternalIdentifier
-                [cdf_id, cdf_name] = id_and_name_from_external_PANDAS(ei_dframe, t_dframe, external_name, id_type_other_id, mu.name, item['InternalNameField']) # TODO note new flag t_dframe_Id_is_index for id_and_name_from_external
-                # ... or if no such is found in db, insert it!
-                if [cdf_id, cdf_name] == [None, None]:
-                    if external_name:
-                        cdf_name = external_name.strip()
-                    value_d ={**{item['InternalNameField']: cdf_name},**foreign_key_d}
-                    for e in item['Enumerations'].keys():
-                        [value_d[e + '_Id'], value_d['Other' + e]] = format_type_for_insert_PANDAS(t_dframe,item['Enumerations'][e])
-                        # TODO note new flag t_dframe_Id_is_index for format_type_for_insert_PANDAS
-                        # format_type_for_insert(session,meta.tables[meta.schema + '.' + e], item['Enumerations'][e])
-                    for f in item['OtherFields'].keys():
-                        value_d[f] = eval(item['OtherFields'][f])
-                    cdf_id = id_from_select_only_PANDAS(t_dframe,value_d) # TODO note new flag t_dframe_Id_is_index for id_from_select_only_PANDAS
-                    if cdf_id == 0:  # if nothing found
-                        # TODO must insert. But with what Id?  What is we pull 'Id' as a plain column to t_dframe?
-                        cdf_id, t_dframe = id_from_select_or_insert_PANDAS(t_dframe, value_d,session,cdf_schema,t)
-                if cdf_name is not None:
-                    ei_dict[cdf_name] = cdf_id
-        # % commit table to the db
-    t_dframe = dbr.dframe_to_sql(t_dframe,session,cdf_schema,t)
-    print('\tTable loaded to database: '+cdf_schema+'.'+t)
-
-    #%% pull the table back from the db, to get Ids right.
-    t_dframe = pd.read_sql_table(t,session.bind,cdf_schema,index_col=index_col)
-    return t_dframe, ei_dict
 
 def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id_type_other_id,state_id):
     """
@@ -409,17 +336,7 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,state_id = 0
     # store state_id and election_id for later use
     ids_d = {'state': state_id, 'Election_Id': election_id}  # to hold ids of found items for later reference
 
-    munger_raw_cols = mu.content_dictionary['raw_cols'] # TODO is this used?
-    # create dictionaries for processing data from rows. Not all CDF elements are included. E.g., 'Election' element is not filled from df rows, but from df.election
-
-    munger_counts_d = mu.content_dictionary['counts_dictionary'] # TODO is this used?
-    # look up id,type pairs for each kind of count, add info to counts dictionary
-    for ct,dic in munger_counts_d.items():
-        text = dic['CountItemType']
-        [dic['CountItemType_Id'], dic['OtherCountItemType']] = format_type_for_insert_PANDAS(cdf_d['CountItemType'], text,id_type_other_id)
-    munger_fields_d = mu.content_dictionary['fields_dictionary']
-    # TODO is the above used?
-    #%% read raw data rows from db
+    # read raw data rows from db
     raw_rows = pd.read_sql_table(df.table_name,session.bind,schema=df.state.schema_name)
 
     # bulk_items_already_loaded = input('Are bulk items (Candidate, etc.) already loaded (y/n)?\n')
@@ -427,17 +344,6 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,state_id = 0
     bulk_elements_to_cdf(session, mu,raw_rows, cdf_schema, context_schema, election_id, id_type_other_id,ids_d['state'])
 
     return str(ids_d)
-
-def is_ballot_measure(row,selection_list,mu):
-    """
-    row is a pd.Series; cdf is a dictionary of dataframes,
-    one of which must be 'BallotMeasureSelection' with index Id
-    another  of which must be 'ExternalIdentifier'
-    mu is a munger # TODO fix description
-    """
-    bm_filter = " | ".join(["(row['Choice'] == '" + i + "')" for i in selection_list])  # TODO munger-dependent
-    is_bm_row = eval(bm_filter)
-    return is_bm_row
 
 if __name__ == '__main__':
     import db_routines.Create_CDF_db as CDF
