@@ -190,21 +190,19 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
     context_ei = pd.read_sql_table('ExternalIdentifierContext',session.bind,context_schema)
     context_ei = context_ei[ (context_ei['ExternalIdentifierType']== mu.name)]  # limit to our munger
 
-    row_copy = row.copy() # TODO delete
-
-
     munge = {}
-    munge['Office'] = "row['Contest Name']"  # TODO munger dependent
-    munge['Party'] = "row['Choice Party']"  # TODO munger dependent
-    munge['Candidate'] = "row['Choice']"  # TODO munger dependent
-    munge['ReportingUnit'] = "row['County'] + ';' + row['Precinct']" # TODO munger dependent
+    for t in ['Office','Party','Candidate','ReportingUnit','BallotMeasureContest']:
+        munge[t] = mu.content_dictionary['fields_dictionary'][t][0]['ExternalIdentifier']
+    # munge['Office'] = "row['Contest Name']"  # TODO munger dependent
+    # munge['Party'] = "row['Choice Party']"  # TODO munger dependent
+    # munge['Candidate'] = "row['Choice']"  # TODO munger dependent
+    # munge['ReportingUnit'] = "row['County'] + ';' + row['Precinct']" # TODO munger dependent
 
     # add columns for ids needed later
     row['Election_Id'] = [election_id] * row.shape[0]
     row['ReportingUnit_external'] = eval(munge['ReportingUnit'])
 
     cdf_d['ReportingUnit'] = pd.read_sql_table('ReportingUnit',session.bind,cdf_schema)
-    # TODO ru_id
     row = row.merge(context_ei[context_ei['Table']=='ReportingUnit'],left_on='ReportingUnit_external',right_on='ExternalIdentifierValue',suffixes=['','_ReportingUnit']).drop(['ExternalIdentifierValue','Table'],axis=1)
     row.rename(columns={'Name':'ReportingUnit'},inplace=True)
     row = row.merge(cdf_d['ReportingUnit'],left_on='ReportingUnit',right_on='Name',suffixes=['','_ReportingUnit']).drop('Name',axis=1)
@@ -224,7 +222,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
     cc_row = row[~(eval(munge['BallotMeasureSelection']).isin(bm_selections))]
 
 # Process rows with ballot measures and selections
-    munge['BallotMeasureContest'] = "row['Contest Name']"   # TODO munger dependent
+    # munge['BallotMeasureContest'] = "row['Contest Name']"   # TODO munger dependent
     print('WARNING: all ballot measure contests assumed to have the whole state as their district')
     row = bm_row
 
