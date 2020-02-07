@@ -288,13 +288,11 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True):
     """
     print('dframe_to_sql, table = '+table)
     #%% pull copy of existing table
-    print('\tdframe_to_sql: pull table from db')
 
     target = pd.read_sql_table(table,session.bind,schema=schema,index_col=index_col)
     df_to_db = dframe.copy()
 
     #%% remove columns that don't exist in target table
-    print('\tdframe_to_sql: remove/add columns to match target table')
     for c in dframe.columns:
         if c not in target.columns:
             df_to_db = df_to_db.drop(c, axis=1)
@@ -302,7 +300,6 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True):
     for c in target.columns:
         if c not in dframe.columns:
             df_to_db[c] = None  # TODO why doesn't this throw an error? Column is not equal to a scalar...
-    print('\tdframe_to_sql: dropping duplicates')
     appendable = pd.concat([target,target,df_to_db],sort=False).drop_duplicates(keep=False)
     # note: two copies of target ensures none of the original rows will be appended.
 
@@ -310,9 +307,7 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True):
     if 'Id' in appendable.columns:
         appendable = appendable.drop('Id',axis=1)
 
-    print('\tdframe_to_sql: uploading')
     appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
-    print('\tdframe_to_sql: pulling table from db')
     up_to_date_dframe = pd.read_sql_table(table,session.bind,schema=schema)
     if flush:
         session.flush()
