@@ -56,7 +56,7 @@ class Election(object): # TODO check that object is necessary (apparently for pi
             for contest_id in contest_id_list:
                 anomaly_list = []
                 cr = create_contest_rollup_from_election(session, meta, self, contest_id)
-                print('Calculating anomalies for '+cr.ContestName)
+                print('Calculating anomalies for '+cr.ContestName) # TODO allow skipping of ballot measures
                 for column_field in ['ReportingUnit','CountItemType','Selection']:
                     #print('\tColumn field is '+column_field)
                     temp_list = ['ReportingUnit','CountItemType','Selection']

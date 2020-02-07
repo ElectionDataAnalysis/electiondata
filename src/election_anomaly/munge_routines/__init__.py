@@ -4,9 +4,7 @@
 
 import db_routines as dbr
 import pandas as pd
-import PySimpleGUI as sg
-import sqlalchemy as db
-
+import time
 
 
 def report_error(error_string):
@@ -332,7 +330,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
     ccsj_df = row[['CandidateContest_Id','CandidateSelection_Id','Election_Id']].drop_duplicates()
     cdf_d['CandidateContestSelectionJoin'] = dbr.dframe_to_sql(ccsj_df,session,cdf_schema,'CandidateContestSelectionJoin')
 
-    # TODO load candidate counts
+    # load candidate counts
     # create dframe of Candidate Contest vote counts (with join info) for ballot measures
     print('Create vote_counts dframe for Candidate Contests')
     cc_vote_counts = row.drop(['County','Election Date','Precinct','Contest Group ID','Contest Type','Contest Name','Choice','Choice Party','Vote For','Real Precinct','ReportingUnit_external','ReportingUnit','index','ExternalIdentifierType','ReportingUnitType_Id','OtherReportingUnitType','CountItemStatus_Id','OtherCountItemStatus','Name', 'ElectionDistrict_Id'],axis=1)
@@ -354,12 +352,18 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
     session.commit()
     #dbr.add_int_columns(con,cdf_schema,'VoteCount',['Election_Id','Contest_Id','Selection_Id'])
     print('Upload to VoteCount')
+    start = time.time()
     vote_counts_fat = dbr.dframe_to_sql(vote_counts,session,cdf_schema,'VoteCount')
     vote_counts_fat.rename(columns={'Id':'VoteCount_Id'},inplace=True)
     session.commit()
+    end = time.time()
+    print('\tSeconds required to upload VoteCount: '+ str(end - start))
     print('Upload to SelectionElectionContestVoteCountJoin')
+    start = time.time()
 
     cdf_d['SelectionElectionContestVoteCountJoin'] = dbr.dframe_to_sql(vote_counts_fat,session,cdf_schema,'SelectionElectionContestVoteCountJoin')
+    end = time.time()
+    print('\tSeconds required to upload SelectionElectionContestVoteCountJoin: '+ str(end - start))
     print('Drop columns from cdf table')
     session.execute('ALTER TABLE ' + cdf_schema + '."VoteCount" DROP COLUMN "Contest_Id", DROP COLUMN "Selection_Id"') # TODO don't use string concat!!
     session.commit()
