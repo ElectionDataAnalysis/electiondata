@@ -6,7 +6,6 @@ import db_routines as dbr
 import pandas as pd
 import time
 
-
 def id_from_select_only_PANDAS(dframe,value_d, mode='no_dupes',dframe_Id_is_index=True):
     """Returns the Id of the record in table with values given in the dictionary value_d.
     On error (nothing found, or more than one found) returns 0"""
@@ -38,7 +37,7 @@ def id_from_select_or_insert_PANDAS(dframe, value_d, session, schema, db_table_n
     'not_null_fields':['ReportingUnitType_Id']
     modes with consequences: 'dupes_ok'
        } """
-    # filter the cdf_value_d by the relevant value_d conditions # TODO This code repeats
+    # filter the cdf_value_d by the relevant value_d conditions #
     cdf_value_d = {}
     for k,v in value_d.items():
         if k in dframe.columns:
@@ -85,14 +84,14 @@ def format_type_for_insert_PANDAS(dframe,txt,id_type_other_id,t_dframe_Id_is_ind
     other_id is the id for 'other' IdentifierType
     This function returns a (type_id, othertype_text) pair; for types in the enumeration, returns (type_id for the given txt, ""),
     while for other types returns (type_id for "other",txt) """
-    # TODO check that dframe columns are 'Id' and 'Txt'
+    # check that dframe columns are 'Id' and 'Txt'
     assert 'Txt' in dframe.columns, 'dframe must have a Txt column'
     if t_dframe_Id_is_index:
         id_list = dframe.index[dframe['Txt'] == txt].to_list()
     else:
         assert 'Id' in dframe.columns, 'When flag t_dframe_Id_is_index is false, there must be an Id column in dframe'
         id_list = dframe[dframe['Txt'] == txt].to_list()
-    if len(id_list) == 1:   # TODO prevent multiple fillings of *Type tables, which yield rowcounts > 1
+    if len(id_list) == 1:
         return([id_list[0],''])
     elif len(id_list) == 0:
         return[id_type_other_id,txt]
@@ -120,10 +119,6 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
     munge = {}
     for t in ['Office','Party','Candidate','ReportingUnit','BallotMeasureContest']:
         munge[t] = mu.content_dictionary['fields_dictionary'][t][0]['ExternalIdentifier']
-    # munge['Office'] = "row['Contest Name']"  # TODO munger dependent
-    # munge['Party'] = "row['Choice Party']"  # TODO munger dependent
-    # munge['Candidate'] = "row['Choice']"  # TODO munger dependent
-    # munge['ReportingUnit'] = "row['County'] + ';' + row['Precinct']" # TODO munger dependent
 
     # add columns for ids needed later
     row['Election_Id'] = [election_id] * row.shape[0]
@@ -156,7 +151,6 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
 
     if process_ballot_measures:
         # Process rows with ballot measures and selections
-        # munge['BallotMeasureContest'] = "row['Contest Name']"   # TODO munger dependent
         print('WARNING: all ballot measure contests assumed to have the whole state as their district')
         row = bm_row
 
@@ -179,7 +173,6 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
         row.rename(columns={'Id_Contest':'Contest_Id'},inplace=True)
 
         # Load BallotMeasureContestSelectionJoin table
-        # TODO why was it empty?
         # to make sure all added columns get labeled well, make sure 'Name' and 'Id' are existing columns
         if 'Name' not in bm_df.columns:
             bm_df['Name'] = [None]*bm_df.shape[0]

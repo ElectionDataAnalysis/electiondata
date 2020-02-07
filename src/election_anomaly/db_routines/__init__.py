@@ -13,6 +13,7 @@ from sqlalchemy.engine import reflection
 from sqlalchemy.orm import sessionmaker
 from configparser import ConfigParser
 import pandas as pd
+import time
 
 import clean as cl
 
@@ -287,6 +288,7 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True):
     Return the updated dframe, including all rows from the db and all from the dframe.
     """
     print('dframe_to_sql, table = '+table)
+    stime=time.time()
     #%% pull copy of existing table
 
     target = pd.read_sql_table(table,session.bind,schema=schema,index_col=index_col)
@@ -311,6 +313,8 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True):
     up_to_date_dframe = pd.read_sql_table(table,session.bind,schema=schema)
     if flush:
         session.flush()
+    etime=time.time()
+    print('\tTime elapsed: '+ str(etime-stime))
     return up_to_date_dframe
 
 if __name__ == '__main__':
