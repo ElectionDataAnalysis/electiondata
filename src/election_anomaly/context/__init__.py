@@ -130,7 +130,7 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
 
     # load external identifiers from context
 
-    cdf_d['ExternalIdentifier'] = fill_externalIdentifier_table(session,schema,s.schema_name,enum_dframe,other_id['IdentifierType'],s.path_to_state_dir + 'context/ExternalIdentifier.txt')
+    cdf_d['ExternalIdentifier'] = fill_externalIdentifier_table(session,schema,s.schema_name,enum_dframe,other_id['IdentifierType'],s.path_to_state_dir + 'context/ExternalIdentifier.txt',pickle_dir=s.path_to_state_dir+'pickles/')
     # load CandidateContest external ids into cdf_d['ExternalIdentifier'] too
     ei_df = cdf_d['Office'].merge(cdf_d['ExternalIdentifier'],left_on='Id',right_on='ForeignId',suffixes=['_office','ei']).merge(cdf_d['CandidateContest'],left_on='Id',right_on='Office_Id',suffixes=['','_cc'])[['Id_cc','Value','IdentifierType_Id','OtherIdentifierType']]
     ei_df.columns = ['ForeignId','Value','IdentifierType_Id','OtherIdentifierType']
@@ -141,36 +141,41 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
     session.flush()
     return
 
-def fill_externalIdentifier_table(session,schema,context_schema,enum_dframe,id_other_id_type,fpath):
+def fill_externalIdentifier_table(session,schema,context_schema,enum_dframe,id_other_id_type,fpath,pickle_dir='.'):
     """
     fpath is a path to the tab-separated context file holding the external identifier info
     s is the state
 
     """
-    #%% fill ExternalIdentifier table
-    print('Fill ExternalIdentifier table')
-    # TODO why does this step take so long?
-    # get table from context directory with the tab-separated definitions of external identifiers
-    ei_df = pd.read_csv(fpath,sep = '\t')
+    if os.path.isfile(pickle_dir + 'ExternalIdentifier'):
+        print('Filling ExternalIdentifier table from pickle in ' + pickle_dir)
+        ei_df = pd.read_pickle(pickle_dir + 'ExternalIdentifier')
+    else:
 
-    # load context table into state schema for later reference
-    # dframe_to_sql(ei_df,session,s.schema_name,'ExternalIdentifierContext')
-    ei_df.to_sql('ExternalIdentifierContext',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
+        print('Fill ExternalIdentifier table')
+        # TODO why does this step take so long?
+        # get table from context directory with the tab-separated definitions of external identifiers
+        ei_df = pd.read_csv(fpath,sep = '\t')
 
-    # pull corresponding tables from the cdf db
-    cdf = {}
-    for t in ei_df['Table'].unique():
-        cdf[t] = pd.read_sql_table(t,session.bind,schema,'Id')
+        # load context table into state schema for later reference
+        # dframe_to_sql(ei_df,session,s.schema_name,'ExternalIdentifierContext')
+        ei_df.to_sql('ExternalIdentifierContext',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
 
-    # add columns to dframe to match columns in CDF db
+        # pull corresponding tables from the cdf db
+        cdf = {}
+        for t in ei_df['Table'].unique():
+            cdf[t] = pd.read_sql_table(t,session.bind,schema,'Id')
 
-    ei_df['ForeignId'] = ei_df.apply(lambda row: table_and_name_to_foreign_id(cdf,row),axis=1)
-    ei_df['Value'] = ei_df['ExternalIdentifierValue']
-    ### apply(lambda ...) returns a column of 2-elt lists, so need to unpack.
-    ei_df['id_othertype_pairs']= ei_df.apply(lambda row: ei_id_and_othertype(enum_dframe['IdentifierType'],row,id_other_id_type),axis=1)
+        # add columns to dframe to match columns in CDF db
 
-    ei_df['IdentifierType_Id'] = ei_df.apply(lambda row: row['id_othertype_pairs'][0],axis=1)
-    ei_df['OtherIdentifierType'] = ei_df.apply(lambda row: row['id_othertype_pairs'][1],axis=1)
+        ei_df['ForeignId'] = ei_df.apply(lambda row: table_and_name_to_foreign_id(cdf,row),axis=1)
+        ei_df['Value'] = ei_df['ExternalIdentifierValue']
+        ### apply(lambda ...) returns a column of 2-elt lists, so need to unpack.
+        ei_df['id_othertype_pairs']= ei_df.apply(lambda row: ei_id_and_othertype(enum_dframe['IdentifierType'],row,id_other_id_type),axis=1)
+
+        ei_df['IdentifierType_Id'] = ei_df.apply(lambda row: row['id_othertype_pairs'][0],axis=1)
+        ei_df['OtherIdentifierType'] = ei_df.apply(lambda row: row['id_othertype_pairs'][1],axis=1)
+        ei_df.to_pickle(pickle_dir + 'ExternalIdentifier')
 
     # insert appropriate dataframe columns into ExternalIdentifier table in the CDF db
     dframe_to_sql(ei_df, session, schema, 'ExternalIdentifier')

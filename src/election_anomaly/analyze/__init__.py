@@ -261,11 +261,13 @@ def plot_pivot(contestname,dataframe_by_name,col_field='Selection',filter=[],mod
     if 'total' in type_pivot.columns:
         type_pivot.drop(labels=['total'],axis=1)
     try:    # TODO get exact criteria for skipping
-        type_pivot.plot.bar()
-        plt.title(title_string+'\nVotes by '+col_field)
-        type_pct_pivot = pct_dframe(type_pivot)
-        type_pct_pivot.plot.bar()
-        plt.title(title_string+'\nVote Percentages by ' + col_field)
+        if mode == 'raw':
+            type_pivot.plot.bar()
+            plt.title(title_string+'\nVotes by '+col_field)
+        if mode == 'pct':
+            type_pct_pivot = pct_dframe(type_pivot)
+            type_pct_pivot.plot.bar()
+            plt.title(title_string+'\nVote Percentages by ' + col_field)
         plt.show()
     except:
         a =1 # TODO placeholder

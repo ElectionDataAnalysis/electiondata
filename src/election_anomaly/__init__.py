@@ -28,6 +28,18 @@ try:
 except:
     import pickle
 
+def choose_by_id(session,meta,cdf_schema,table,default=0):
+    election_dframe = dbr.table_list(session,meta,cdf_schema,table)
+    print('Available '+table+'s in schema ' + cdf_schema)
+    if election_dframe.shape[0] == 0:
+        raise Exception('No records in '+ table)
+
+    for index,row in election_dframe.iterrows():
+        print(row['Name'] + ' (Id is ' + str(row['Id']) + ')')
+
+    id = input('Enter Id of the item you wish to analyze \n\t(default is '+str(default)+')\n') or default
+    return  int(id)
+
 def find_anomalies(cdf_schema,contest_id_list=[]):
     find_anomalies = input('Find anomalies in an election (y/n)?\n')
     if find_anomalies == 'y':
@@ -40,7 +52,7 @@ def find_anomalies(cdf_schema,contest_id_list=[]):
         eng, meta_generic = dbr.sql_alchemy_connect(cdf_schema, paramfile)
         session = Session()
 
-        election_dframe = dbr.election_list(session, meta_generic, cdf_schema)
+        election_dframe = dbr.table_list(session, meta_generic, cdf_schema,'Election')
         print('Available elections in schema '+cdf_schema)
         for index,row in election_dframe.iterrows():
             print(row['Name']+' (Id is '+str(row['Id'])+')')
@@ -72,7 +84,7 @@ def find_anomalies(cdf_schema,contest_id_list=[]):
         e.anomaly_scores(session, meta_generic, cdf_schema,contest_id_list=contest_id_list)
         #%%
         # TODO remove bars for total votes from by-candidate charts
-        e.worst_bar_for_each_contest(session, meta_generic, 2)
+        e.worst_bar_for_each_contest(session, meta_generic, 2,contest_id_list=contest_id_list)
 
     print('Done!')
 
@@ -129,16 +141,13 @@ if __name__ == '__main__':
 
     context_to_cdf = input('Load and process context data into a common-data-format database (y/n)?\n')
     if context_to_cdf == 'y':
-
-        #%% create schema for state
-        #dbr.create_schema(session,s.schema_name)
-
-        #%% create cdf schema
-        print('Creating CDF schema '+ cdf_schema)
-
+        # create cdf schema
+        print('Creating CDF schema ' + cdf_schema)
         enumeration_tables = CDF.enum_table_list()
-        meta_cdf_schema = CDF.create_common_data_format_schema(session, cdf_schema, enumeration_tables,delete_existing=True)
+        meta_cdf_schema = CDF.create_common_data_format_schema(session,cdf_schema,enumeration_tables,
+                                                               delete_existing=True)
         session.commit()
+
         # load state context info into cdf schema
         # need_to_load_data = input('Load enumeration & context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
         need_to_load_context_data = 'y'
@@ -151,7 +160,8 @@ if __name__ == '__main__':
             print('Loading state context info into CDF schema') # *** takes a long time; why?
             context.context_to_cdf_PANDAS(session, meta_cdf_schema, s, cdf_schema,enumeration_tables)
             session.commit()
-
+    else:
+        meta_cdf_schema = MetaData(bind=session.bind,schema=cdf_schema)
 
     # need_to_load_data = 'y'
     need_to_load_data = input('Load raw data (y/n)?\n')
@@ -194,12 +204,17 @@ if __name__ == '__main__':
 
 
         print('Loading data from df table\n\tin schema '+ s.schema_name+ '\n\tto CDF schema '+cdf_schema+'\n\tusing munger '+munger_name)
-        meta_cdf_schema = MetaData(bind=eng, schema=cdf_schema) # TODO remove duplicate defs of this var
+        # meta_cdf_schema = MetaData(bind=eng, schema=cdf_schema) # TODO remove duplicate defs of this var
         mr.raw_records_to_cdf(session,meta_cdf_schema,df,m,cdf_schema,s.schema_name)
         session.commit()
         print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
 
-    find_anomalies(cdf_schema)
+
+    contest_id = choose_by_id(session,meta_cdf_schema,cdf_schema,'CandidateContest')
+    if contest_id == 0: contest_id_list=[]
+    else: contest_id_list = [contest_id] # TODO move inside find_anomalies function
+
+    find_anomalies(cdf_schema,contest_id_list=contest_id_list)
 
     eng.dispose()
 
