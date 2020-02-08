@@ -116,9 +116,15 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
     context_ei = pd.read_sql_table('ExternalIdentifierContext',session.bind,context_schema)
     context_ei = context_ei[ (context_ei['ExternalIdentifierType']== mu.name)]  # limit to our munger
 
-    munge = {}
-    for t in ['Office','Party','Candidate','ReportingUnit','BallotMeasureContest']:
-        munge[t] = mu.content_dictionary['fields_dictionary'][t][0]['ExternalIdentifier']
+    # get vote count column mapping for our munger
+    fpath = '../mungers/'+mu.name + '/'  # TODO make path an attribute of the munger
+    vc_col_d = pd.read_csv(fpath + 'count_columns.txt',sep='\t',index_col='RawName').to_dict()['CountItemType']
+    munge = pd.read_csv(fpath + 'cdf_tables.txt',sep='\t',index_col='CDFTable').to_dict()['ExternalIdentifier']
+
+
+    #munge = {}
+    #for t in ['Office','Party','Candidate','ReportingUnit','BallotMeasureContest']:
+        #munge[t] = mu.content_dictionary['fields_dictionary'][t][0]['ExternalIdentifier']
 
     # add columns for ids needed later
     row['Election_Id'] = [election_id] * row.shape[0]
@@ -194,7 +200,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
         # create dframe of vote counts (with join info) for ballot measures
         print('Create vote_counts dframe')
         bm_vote_counts = row.drop(['County','Election Date','Precinct','Contest Group ID','Contest Type','Contest Name','Choice','Choice Party','Vote For','Real Precinct','ReportingUnit_external','ReportingUnit','index','ExternalIdentifierType','ReportingUnitType_Id','OtherReportingUnitType','CountItemStatus_Id','OtherCountItemStatus','BallotMeasureContest','Name','BallotMeasureSelection','Selection', 'ElectionDistrict_Id'],axis=1)
-        vc_col_d = {k:v['CountItemType'] for k,v in mu.content_dictionary['counts_dictionary'].items()}
+        # vc_col_d = {k:v['CountItemType'] for k,v in mu.content_dictionary['counts_dictionary'].items()}
         bm_vote_counts.rename(columns=vc_col_d,inplace=True)
         print('Reshape')
         bm_vote_counts=bm_vote_counts.melt(id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],value_vars=['election-day', 'early', 'absentee-mail', 'provisional', 'total'],var_name='CountItemType',value_name='Count')
@@ -290,7 +296,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
     end = time.time()
     print('\tSeconds required to upload SelectionElectionContestVoteCountJoin: '+ str(end - start))
     print('Drop columns from cdf table')
-    session.execute('ALTER TABLE ' + cdf_schema + '."VoteCount" DROP COLUMN "Contest_Id", DROP COLUMN "Selection_Id"') # TODO don't use string concat!!
+    session.execute('ALTER TABLE ' + cdf_schema + '."VoteCount" DROP COLUMN "Contest_Id", DROP COLUMN "Selection_Id", DROP COLUMN "Election_Id"') # TODO don't use string concat!!
     session.commit()
 
     return

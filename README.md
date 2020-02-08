@@ -77,7 +77,25 @@ Each state directory has three subfolders:
      * `Party.txt` List of political parties, one per line. One column:
        * `Name`
 
-      
+### About mungers
+Files from different sources require different processing assumptions. We call each set of assumptions a "munger"
+
+The folder `src/mungers` holds a directory for each munger. Each munger directory needs the following component files:
+ * `name_txt` One line, with name of munger
+ * `raw_columns.txt` List of columns in source file. Columns are:
+    * `Name` name of the column in the source file
+    * `Datatype` datatype of the column in the source file
+ * `count_columns.txt` List of columns in source file corresponding to vote counts
+    * `RawName` Name of the count column in the source file
+    * `CountItemType` Type of count, according to the Common Data Format (e.g., 'absentee' or 'election-day')
+ * `cdf_tables.txt` One line for each main table in the Common Data Format. Specifies how to read the values for that table from the source file.
+    * `CDFTable` Name of the Common Data Format table (e.g., 'ReportingUnit')
+    * `ExternalIdentifier` Recipe for creating the external identifier from the source file. `row` is used in the code to refer to a row of the source file.
+    * `InternalFieldName` Usually 'Name', this is the column in the Common Data Format table that names the item.
+    * `Enumerations` Recipes for specifying any enumerated values
+    * `OtherFields` Recipes for specifying any other fields. `ids_d` is used in the code to refer to internal Common Data Format primary keys.
+
+
 ### About ExternalIdentifiers
 (TODO)
 

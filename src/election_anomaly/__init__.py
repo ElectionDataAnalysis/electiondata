@@ -159,7 +159,7 @@ if __name__ == '__main__':
         default = 'nc_export1'
         munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
 
-        munger_path = '../local_data/mungers/'+munger_name+'.txt'
+        munger_path = '../mungers/'+munger_name+'/'
         print('Creating munger instance from '+munger_path)
         m = sf.create_munger(munger_path)
 

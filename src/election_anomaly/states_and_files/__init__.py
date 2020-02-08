@@ -18,9 +18,9 @@ class State:
         self.external_identifier_dframe=external_identifier_dframe
 
 class Munger:
-    def __init__(self,name,content_dictionary):
+    def __init__(self,name,path_to_munger_dir):
         self.name=name      # 'nc_export1'
-        self.content_dictionary= content_dictionary    # dictionary of queries of the db of raw data; each querymust have exactly two slots for state.schema and datafile.table_name
+        self.path_to_munger_dir=path_to_munger_dir
 
 class FileFromState:
     def __init__(self,state,file_name,encoding,source_url,file_date,download_date,note):
@@ -85,10 +85,12 @@ def parse_line(mf,line):
         comment = ''
     return [field,typ,comment]
 
-def create_munger(file_path):   # file should contain all munger info in a dictionary
-    with open(file_path,'r') as f:
-        d = eval(f.read())
-    return(Munger(d['name'],d['content_dictionary']))
+def create_munger(dir_path):   # director should contain all munger info in tab-separated txt files
+    assert os.path.isdir(dir_path), 'Not a directory: '+dir_path
+    assert os.path.isfile(dir_path + 'cdf_tables.txt') and os.path.isfile(dir_path + 'count_columns.txt') and os.path.isfile(dir_path + 'name.txt') and os.path.isfile(dir_path + 'raw_columns.txt'), 'Directory '+dir_path+ ' must contain files cdf_tables.txt, count_columns.txt, name.txt and raw_columns.txt'
+    with open(dir_path + 'name.txt') as f:
+        name = f.readline()
+    return(Munger(name,dir_path))
 
 def tab_sep_to_dict(s,fpath,k):
     full_fpath = fpath+k+'.txt'
