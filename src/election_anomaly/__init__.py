@@ -204,7 +204,6 @@ if __name__ == '__main__':
 
 
         print('Loading data from df table\n\tin schema '+ s.schema_name+ '\n\tto CDF schema '+cdf_schema+'\n\tusing munger '+munger_name)
-        # meta_cdf_schema = MetaData(bind=eng, schema=cdf_schema) # TODO remove duplicate defs of this var
         mr.raw_records_to_cdf(session,meta_cdf_schema,df,m,cdf_schema,s.schema_name)
         session.commit()
         print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
