@@ -121,7 +121,7 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
                     # restrict to the columns we need, and set order
                     cc_data = cc_data[['Name','VotesAllowed','NumberElected','NumberRunoff','Id','Id_ru','IsPartisan']]
                     # rename columns as necesssary
-                    cc_data.columns = ['Name', 'VotesAllowed', 'NumberElected', 'NumberRunoff', 'Office_Id', 'ElectionDistrict_Id','IsPartisan']
+                    cc_data.rename(columns={'Id_ru':'ElectionDistrict_Id','Id':'Office_Id'},inplace=True)
                     # insert values for 'PrimaryParty_Id' column
                     cc_data['PrimaryParty_Id'] = [None]*cc_data.shape[0]
                     cc_d_gen = cc_data.copy()

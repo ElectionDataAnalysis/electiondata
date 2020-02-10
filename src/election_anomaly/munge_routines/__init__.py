@@ -111,7 +111,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
 
     # NB: the name `row` in the code is essential and appears in def of munger as of 1/2020
     cdf_d = {}  # dataframe for each table
-    for t in ['ExternalIdentifier','Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType']:
+    for t in ['ExternalIdentifier','Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType','CandidateContest']:
         cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema)   # note: keep 'Id as df column (not index) so we have access in merges below.
     context_ei = pd.read_sql_table('ExternalIdentifierContext',session.bind,context_schema)
     context_ei = context_ei[ (context_ei['ExternalIdentifierType']== mu.name)]  # limit to our munger
@@ -234,12 +234,6 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
         cs_df.rename(columns={'Id':'Candidate_Id'},inplace=True)
         cdf_d['CandidateSelection'] = dbr.dframe_to_sql(cs_df,session,cdf_schema,'CandidateSelection')
 
-        # load CandidateContest
-        office_context_df = pd.read_sql_table('Office',session.bind,schema=context_schema)
-        cc_df = office_context_df.merge(row[['Name_Office','Id_Office']],left_on='Name',right_on='Name_Office',suffixes=['','_row'])[['Name','VotesAllowed','NumberElected','NumberRunoff','Id_Office','ElectionDistrict']].merge(cdf_d['ReportingUnit'],left_on='ElectionDistrict',right_on='Name',suffixes=['','_ReportingUnit'])
-        cc_df.rename(columns={'Id_Office':'Office_Id','Id':'ElectionDistrict_Id'},inplace=True)
-        cdf_d['CandidateContest'] = dbr.dframe_to_sql(cc_df,session,cdf_schema,'CandidateContest')
-
         # drop some columns we won't need any more
         row.drop(
             ['County','Election Date','Precinct','Contest Group ID','Contest Type','Contest Name','Choice','Choice Party',
@@ -325,7 +319,7 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,state_id = 0
         tables_d[table_def[0]] = table_def[1]
 
     # get dataframes needed before bulk processing
-    for t in ['ElectionType', 'Election','ReportingUnitType','ReportingUnit','CountItemType']:
+    for t in ['ElectionType', 'Election','ReportingUnitType','ReportingUnit']:
         cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema, index_col='Id')
 
 
