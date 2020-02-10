@@ -149,27 +149,6 @@ def read_id_from_enum(session,meta,schema,table,txt):
         print('No record in '+schema+'.'+table+' with Txt '+txt)
         return
 
-def add_int_columns(con,schema,table,columns):
-    """
-    Adds columns to the db table. col_type_pairs, e.g. [['Selection_Id',Integer],['Election_Id',Integer]]
-    """
-    cur  = con.cursor()
-    for column in columns:
-        q = 'ALTER TABLE {0}.{1} ADD COLUMN {2} Integer'
-        sql_ids= [ sql.Identifier(x) for x in [schema,table,column]]
-        cur.execute(sql.SQL(q).format(*sql_ids))
-        con.commit()
-    if cur:
-        cur.close()
-    return
-
-def drop_columns(con,schema,table,columns):
-    """
-    Drops columns from the db table.
-    """
-    # TODO
-    return
-
 def query_as_string(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
     return cur.mogrify(sql.SQL(q).format(*format_args),strs).decode("utf-8")
@@ -272,7 +251,7 @@ def clean_meta_file(infile,outdir,s):       ## update or remove ***
         return "clean_meta_file: error, state not recognized"
         sys.exit()
 
-def create_schema(session,name,delete_existing=False):    # TODO move to db_routines
+def create_schema(session,name,delete_existing=False):
     eng = session.bind
     if eng.dialect.has_schema(eng, name):
         if delete_existing:
