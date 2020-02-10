@@ -2,6 +2,7 @@
 # under construction
 # db_routines/Create_CDF_db/__init__.py
 # TODO may need to add "NOT NULL" requirements per CDF
+# TODO add OfficeContestJoin table (e.g., Presidential contest has two offices)
 
 import db_routines as dbr
 import sqlalchemy

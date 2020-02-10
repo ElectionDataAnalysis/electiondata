@@ -32,8 +32,6 @@ def ei_id_and_othertype(df,row,other_id):
 
     return format_type_for_insert_PANDAS(df,row['ExternalIdentifierType'],other_id)
 
-
-
 def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath = 'CDF_schema_def_info/'):
     """Takes the info from the text files in the state's context files and inserts it into the db.
     Assumes enumeration tables are already filled.
@@ -66,6 +64,7 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
 
     for table_def in table_def_list:      # iterating over tables in the common data format schema, need 'Office' after 'ReportingUnit'
         ## need to process 'Office' after 'ReportingUnit', as Offices may create ReportingUnits as election districts *** check for this
+        ## need to process 'Office' after 'Party' so that primary contests will be entered
 
         t = table_def[0]      # e.g., cdf_table = 'ReportingUnit'
 
@@ -117,16 +116,24 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
                     new_ru_dframe = pd.DataFrame(new_ru)
                     cdf_d['ReportingUnit'] = dframe_to_sql(new_ru_dframe,session,schema,'ReportingUnit',index_col=None)
 
-                    # create corresponding CandidateContest records, if they don't already exist
+                    # create corresponding CandidateContest records for general election contests (and insert in cdf db if they don't already exist)
                     cc_data = context_cdframe['Office'].merge(cdf_d['Office'],left_on='Name',right_on='Name').merge(cdf_d['ReportingUnit'],left_on='Name',right_on='Name',suffixes=['','_ru'])
                     # restrict to the columns we need, and set order
                     cc_data = cc_data[['Name','VotesAllowed','NumberElected','NumberRunoff','Id','Id_ru']]
                     # rename columns as necesssary
                     cc_data.columns = ['Name', 'VotesAllowed', 'NumberElected', 'NumberRunoff', 'Office_Id', 'ElectionDistrict_Id']
                     # insert values for 'PrimaryParty_Id' column
-                    # TODO for primaries this needs to be menaingful, not just None
                     cc_data['PrimaryParty_Id'] = [None]*cc_data.shape[0]
+                    for party_id in cdf_d['Party'].index.to_list():
+                        pcc = cc_data[cc_data['IsPartisan']]    # non-partisan contests don't have party primaries, so omit them.
+                        pcc['PrimaryParty_Id'] = [party_id]*pcc.shape[0]
+                        cc_data = pd.concat([cc_data,pcc])
+
+
                     cdf_d['CandidateContest'] = dframe_to_sql(cc_data,session,schema,'CandidateContest')
+
+                    # create corresponding CandidateContest records for primary contests (and insert in cdf db if they don't already exist)
+
 
     # load external identifiers from context
 
@@ -203,54 +210,6 @@ def fill_composing_reporting_unit_join(session,schema,cdf_d,pickle_dir='../local
     dframe_to_sql(cruj_dframe, session, schema, 'ComposingReportingUnitJoin')
     session.flush()
     return cruj_dframe
-
-
-
-def build_munger_d(s,m):
-    """given a state s and a munger m,
-    use the state's context dictionaries to build some dictionaries restricted to the given munger.
-    """
-    munger_d = {}
-    munger_inverse_d = {}
-    key_list = ['Election','Party','ReportingUnit;precinct','Office']   # TODO should this be different for different mungers?
-    for t in key_list:
-        t_parts = t.split(';')
-        context_key = t_parts[0]            # e.g., 'ReportingUnit', or 'Election'
-        if len(t_parts) > 1:
-            type = t_parts[1]               # e.g., 'precinct' or None
-        else:
-            type = None
-        munger_d[t] = {}
-        for k in s.context_dictionary[context_key].keys():  # e.g., k = 'North Carolina;General Assembly;House of Representatives;2019-2020;District 1'
-            if 'ExternalIdentifiers' in s.context_dictionary[context_key][k].keys() and   m.name in s.context_dictionary[context_key][k]['ExternalIdentifiers'].keys() and (type == None or s.context_dictionary[context_key][k][context_key+'Type'] == type):
-                    munger_d[t][k] = s.context_dictionary[context_key][k]['ExternalIdentifiers'][m.name]
-        munger_inverse_d[t] = {}
-        for k,v in munger_d[t].items():
-            if v in munger_inverse_d[t].keys():
-                return('Error: munger_d[\''+t+'\'] has duplicate keys with value '+ v)
-            munger_inverse_d[v] = k
-    return(munger_d,munger_inverse_d)
-
-def raw_to_context(df,m,munger_d,con,cur):
-    ''' Purely diagnostic -- reports what items in the datafile are missing from the context_dictionary (e.g., offices we don't wish to analyze)'''
-    print('\'Missing\' below means \'Existing in the datafile, but missing from the munger dictionary, created from the state\'s context_dictionary, which was created from files in the context folder.')
-    for t in m.query_from_raw.keys():
-        t_parts = t.split(';')
-        context_key = t_parts[0]
-        if len(t_parts) > 1:
-            type = t_parts[1]
-        if context_key in df.state.context_dictionary.keys():   # why do we need this criterion? ***
-            items_per_df = dbr.query(m.query_from_raw[t],[df.state.schema_name,df.table_name],[],con,cur) # TODO revise now that query_from_raw no longer works
-            missing = []
-            for e in items_per_df:
-                if e[0] is not None and e[0] not in munger_d[t].values():
-                    missing.append(e[0])
-            if len(missing)>0:
-                missing.sort()   #  and sort
-            print('Sample data for '+t+': '+str( items_per_df[0:4]))
-            print('For \''+m.name +'\', <b> missing '+t+' list is: </b>'+str(missing)+'. Add any missing '+t+' to the '+context_key+'.txt file and rerun')
-    return
-
 
 
 ### supporting routines
