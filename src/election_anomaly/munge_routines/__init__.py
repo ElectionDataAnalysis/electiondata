@@ -280,8 +280,10 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
     # To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
     # add SelectionElectionContestJoin columns to VoteCount
     print('Add columns to cdf table')
-    session.execute('ALTER TABLE ' + cdf_schema + '."VoteCount" ADD COLUMN "Election_Id" INTEGER, ADD COLUMN "Contest_Id" INTEGER,  ADD COLUMN "Selection_Id" INTEGER') # TODO don't use string concat!!
-    session.commit()
+    q = 'ALTER TABLE {0}."VoteCount" ADD COLUMN "Election_Id" INTEGER, ADD COLUMN "Contest_Id" INTEGER,  ADD COLUMN "Selection_Id" INTEGER'
+    sql_ids=[cdf_schema]
+    strs = []
+    dbr.raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
     print('Upload to VoteCount')
     start = time.time()
     vote_counts_fat = dbr.dframe_to_sql(vote_counts,session,cdf_schema,'VoteCount')
@@ -296,8 +298,10 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
     end = time.time()
     print('\tSeconds required to upload SelectionElectionContestVoteCountJoin: '+ str(end - start))
     print('Drop columns from cdf table')
-    session.execute('ALTER TABLE ' + cdf_schema + '."VoteCount" DROP COLUMN "Contest_Id", DROP COLUMN "Selection_Id", DROP COLUMN "Election_Id"') # TODO don't use string concat!!
-    session.commit()
+    q = 'ALTER TABLE {0}."VoteCount" DROP COLUMN "Election_Id" INTEGER, DROP COLUMN "Contest_Id" INTEGER,  DROP COLUMN "Selection_Id" INTEGER'
+    sql_ids=[cdf_schema]
+    strs = []
+    dbr.raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
 
     return
 

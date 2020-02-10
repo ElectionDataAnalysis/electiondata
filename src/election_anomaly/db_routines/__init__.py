@@ -183,6 +183,21 @@ def query(q,sql_ids,strs,con,cur):
     else:
         return None
 
+def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
+    connection = session.bind.connect()
+    con = connection.connection
+    cur = con.cursor()
+    format_args = [sql.Identifier(a) for a in sql_ids]
+    cur.execute(sql.SQL(q).format(*format_args),strs)
+    con.commit()
+    if cur.description:
+        return_item = cur.fetchall()
+    else:
+        return_item = None
+    cur.close()
+    con.close()
+    return return_item
+
 def file_to_sql_statement_list(fpath):
     with open(fpath,'r') as f:
         fstring = f.read()
