@@ -119,14 +119,16 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
                     # create corresponding CandidateContest records for general election contests (and insert in cdf db if they don't already exist)
                     cc_data = context_cdframe['Office'].merge(cdf_d['Office'],left_on='Name',right_on='Name').merge(cdf_d['ReportingUnit'],left_on='Name',right_on='Name',suffixes=['','_ru'])
                     # restrict to the columns we need, and set order
-                    cc_data = cc_data[['Name','VotesAllowed','NumberElected','NumberRunoff','Id','Id_ru']]
+                    cc_data = cc_data[['Name','VotesAllowed','NumberElected','NumberRunoff','Id','Id_ru','IsPartisan']]
                     # rename columns as necesssary
-                    cc_data.columns = ['Name', 'VotesAllowed', 'NumberElected', 'NumberRunoff', 'Office_Id', 'ElectionDistrict_Id']
+                    cc_data.columns = ['Name', 'VotesAllowed', 'NumberElected', 'NumberRunoff', 'Office_Id', 'ElectionDistrict_Id','IsPartisan']
                     # insert values for 'PrimaryParty_Id' column
                     cc_data['PrimaryParty_Id'] = [None]*cc_data.shape[0]
-                    for party_id in cdf_d['Party'].index.to_list():
-                        pcc = cc_data[cc_data['IsPartisan']]    # non-partisan contests don't have party primaries, so omit them.
-                        pcc['PrimaryParty_Id'] = [party_id]*pcc.shape[0]
+                    cc_d_gen = cc_data.copy()
+                    for party_id in cdf_d['Party']['Id'].to_list():
+                        pcc = cc_d_gen[cc_d_gen['IsPartisan']]    # non-partisan contests don't have party primaries, so omit them.
+                        pcc['PrimaryParty_Id'] = party_id
+                        pcc['Name'] = pcc['Name'] + ' Primary;' + cdf_d['Party'][cdf_d['Party']['Id'] == party_id].iloc[0]['Name']
                         cc_data = pd.concat([cc_data,pcc])
 
 
