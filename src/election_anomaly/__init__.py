@@ -202,7 +202,7 @@ if __name__ == '__main__':
 
 
         print('Loading data from df table\n\tin schema '+ s.schema_name+ '\n\tto CDF schema '+cdf_schema+'\n\tusing munger '+munger_name)
-        mr.raw_records_to_cdf(session,meta_cdf_schema,df,m,cdf_schema,s.schema_name)
+        mr.raw_records_to_cdf(session,meta_cdf_schema,df,m,cdf_schema,s.schema_name,election_type)
         session.commit()
         print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
 

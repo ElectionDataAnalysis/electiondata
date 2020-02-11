@@ -98,7 +98,7 @@ def format_type_for_insert_PANDAS(dframe,txt,id_type_other_id,t_dframe_Id_is_ind
     else:
          raise Exception('Dataframe has duplicate rows with value ' + txt + ' in Txt column')
 
-def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id_type_other_id,state_id):
+def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,election_type,state_id):
     """
     NOTE: Tables from context assumed to exist already in db
     (e.g., BallotMeasureSelection, Party, ExternalIdentifier, ComposingReportingUnitJoin, Election, ReportingUnit etc.)
@@ -303,7 +303,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
 
     return
 
-def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,state_id = 0,id_type_other_id = 0,cdf_table_filepath='CDF_schema_def_info/tables.txt'):
+def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,election_type,state_id = 0,id_type_other_id = 0,cdf_table_filepath='CDF_schema_def_info/tables.txt'):
     """ munger-agnostic raw-to-cdf script; ***
     df is datafile, mu is munger """
     cdf_d = {}  # to hold various dataframes from cdf db tables
@@ -349,7 +349,7 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,state_id = 0
 
     # bulk_items_already_loaded = input('Are bulk items (Candidate, etc.) already loaded (y/n)?\n')
     # if bulk_items_already_loaded != 'y':
-    bulk_elements_to_cdf(session, mu,raw_rows, cdf_schema, context_schema, election_id, id_type_other_id,ids_d['state'])
+    bulk_elements_to_cdf(session, mu,raw_rows, cdf_schema, context_schema, election_id, election_type,ids_d['state'])
 
     return str(ids_d)
 
@@ -379,7 +379,8 @@ if __name__ == '__main__':
     election_id = 3218
     id_type_other_id = 35
     state_id = 59
-    bulk_elements_to_cdf(session, mu, row, cdf_schema, s.schema_name, election_id, id_type_other_id, state_id)
+    election_type='general'
+    bulk_elements_to_cdf(session, mu, row, cdf_schema, s.schema_name, election_id, election_type, state_id)
 
 
     raw_records_to_cdf(session,meta,df,mu,cdf_schema,s.schema_name,0,0,'../CDF_schema_def_info/tables.txt')

@@ -174,42 +174,44 @@ def fill_externalIdentifier_table(session,schema,context_schema,enum_dframe,id_o
         filtered_ei = {}
         for t in ei_df['Table'].unique():
             cdf[t] = pd.read_sql_table(t,session.bind,schema,index_col=None)
+            # TODO drop unnecessary columns
+            col_list = cdf[t].columns.to_list()
+            col_list.remove('Name')
+            col_list.remove('Id')
+            cdf[t] = cdf[t].drop(col_list,axis=1)
+
             ei_filt = ei_df[ei_df['Table']==t]   # filter out rows for the given table
-            # join Table on Foreign Id
-            ei_filt = ei_filt.merge(cdf[t],left_on='ForeignId',right_on='Id')
-            # TODO join IdentifierType columns
-            id_type_list = cdf['IdentifierType']['Txt'].unique().to_list()
+            # join Table on name to get ForeignId
+            ei_filt = ei_filt.merge(cdf[t],left_on='Name',right_on='Name')
+            ei_filt.rename(columns={'Id':'ForeignId'},inplace=True)
+            # join IdentifierType columns
+            id_type_list = cdf['IdentifierType']['Txt'].unique()
             # two cases: idtype in list, or idtype other
             listed = ei_filt[ei_filt['ExternalIdentifierType'].isin(id_type_list)]
             other = ei_filt[~ei_filt['ExternalIdentifierType'].isin(id_type_list)]
 
             # join info for listed
             listed = listed.merge(cdf['IdentifierType'],left_on='ExternalIdentifierType',right_on='Txt')
-            listed.rename(columns={'Id':'IdentifierType_Id'},inplace=True)
+            listed.rename(columns={'Id':'IdentifierType_Id','ExternalIdentifierValue':'Value'},inplace=True)
             listed['OtherIdentifierType'] = [None]*listed.shape[0]
 
             # join info for other
             other['IdentifierType_Id'] = [id_other_id_type]*other.shape[0]
-            other.rename(columns={'ExternalIdentifierType':'OtherIdentifierType'})
+            other.rename(columns={'ExternalIdentifierType':'OtherIdentifierType','ExternalIdentifierValue':'Value'},inplace=True)
 
-            # TODO concat listed and other
-
-        # add columns to ei_dframe to match columns in CDF db
-        # TODO use .merge(), etc., not .apply(), and take care of primaries
+            # TODO check that the columns are right and ready for insertion into ExternalIdentifier
 
 
-        ei_df['ForeignId'] = ei_df.apply(lambda row: table_and_name_to_foreign_id(cdf,row),axis=1) # TODO make this work for primaries, where office name is not the same as the contest name
-        ei_df['Value'] = ei_df['ExternalIdentifierValue']
-        ### apply(lambda ...) returns a column of 2-elt lists, so need to unpack.
-        ei_df['id_othertype_pairs']= ei_df.apply(lambda row: ei_id_and_othertype(enum_dframe['IdentifierType'],row,id_other_id_type),axis=1)
+            filtered_ei[t] = pd.concat([other,listed])
 
-        ei_df['IdentifierType_Id'] = ei_df.apply(lambda row: row['id_othertype_pairs'][0],axis=1)
-        ei_df['OtherIdentifierType'] = ei_df.apply(lambda row: row['id_othertype_pairs'][1],axis=1)
-        ei_df.to_pickle(pickle_dir + 'ExternalIdentifier')
+        # TODO check that primaries work properly
+        ei_df = pd.concat([filtered_ei[t] for t in ei_df['Table'].unique()])
 
     # insert appropriate dataframe columns into ExternalIdentifier table in the CDF db
     dframe_to_sql(ei_df, session, schema, 'ExternalIdentifier')
     session.flush()
+    if not os.path.isfile(pickle_dir + 'ExternalIdentifier'):
+        ei_df.to_pickle(pickle_dir + 'ExternalIdentifier')
     return ei_df
 
 def fill_composing_reporting_unit_join(session,schema,cdf_d,pickle_dir='../local_data/pickles/'):
