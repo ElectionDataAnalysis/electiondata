@@ -1,0 +1,2 @@
+Name	ElectionType	ReportingUnit	StartDate	EndDate
+General Election 2018-11-06	general	Maryland	2018-11-06	2018-11-06

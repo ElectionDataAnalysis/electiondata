@@ -1,0 +1,55 @@
+{'name':'md_export1','content_dictionary':
+{
+	'raw_cols' :[['County','INT'], ['Election District','INT'], ['Election Precinct','INT'],
+                ['Cong','INT'],['Legs','TEXT'],['Candidate Name','TEXT'], ['Party','TEXT'], ['Office Name','TEXT'], ['Office District','TEXT'],['Winner','TEXT'], ['Write-In','TEXT'], ['Election Night Votes For','INT'], ['Election Night Votes Against','INT']],
+    'counts_dictionary':{'Election Night Votes For': {'CountItemType': 'total'}},
+    'fields_dictionary':{
+        'Office':[
+            {'ExternalIdentifier':'Office Name' + \';\' + 'Office District',
+            'InternalNameField':'Name',
+            'Enumerations':{},
+            'OtherFields':{},
+            'Condition':'True'}
+        ],
+        'ReportingUnit': [ 
+            {'ExternalIdentifier': 'County' + \';\' + 'Election District + \';\' + ''Election Precinct',
+             'InternalNameField': 'Name',
+             'Enumerations':{},
+             'OtherFields':{},
+             'Condition':'True'}
+            ],
+        'Party':[
+            {'ExternalIdentifier':'Party',
+            'InternalNameField':'Name',
+            'Enumerations':{},
+             'OtherFields': {},
+             'Condition':'True'}
+            ],
+        'Candidate': [
+            {'ExternalIdentifier': 'Candidate Name',
+            'InternalNameField': 'Name',
+            'Enumerations': {},
+            'OtherFields': {},
+            # don't include fields defined from external context, such as the ElectionDistrict_Id
+            'Condition':'True'}
+            ],
+
+        'CandidateContest':[
+        {'ExternalIdentifier':'Office Name',
+        'InternalNameField':'Name',
+        'Enumerations':{},
+        'OtherFields':{},    # don't include fields defined from external context, such as the ElectionDistrict_Id
+        'Condition':'True'}
+        ],
+        'BallotMeasureContest':[
+            {'ExternalIdentifier':'Office Name',
+             'InternalNameField': 'Name',
+             'Enumerations':{},
+             'OtherFields':{},
+            'Condition':'True'}
+            ],
+        }
+    }
+}
+
+
