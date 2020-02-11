@@ -176,9 +176,6 @@ def create_datafile(s,election,data_file_name,mf,munger):
         return False
     
     # read datafile info from context folder
-#    with open(s.path_to_state_dir+'context/datafile.txt','r') as f:
-#        d_all = eval(f.read())
-#        d = d_all[election+';'+data_file_name]
     dframe = pd.read_csv(s.path_to_state_dir+'context/datafile.txt',sep='\t')
     d_all = dframe_to_dict(dframe,index_column='name')
     d = d_all[election+';'+data_file_name]

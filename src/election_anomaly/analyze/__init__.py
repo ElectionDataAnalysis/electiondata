@@ -57,7 +57,7 @@ class Election(object): # TODO check that object is necessary (apparently for pi
             for contest_id in contest_id_list:
                 anomaly_list = []
                 cr = create_contest_rollup_from_election(session, meta, self, contest_id)
-                print('Calculating anomalies for '+cr.ContestName) # TODO allow skipping of ballot measures
+                print('Calculating anomalies for '+cr.ContestName)
                 for column_field in ['ReportingUnit','CountItemType','Selection']:
                     #print('\tColumn field is '+column_field)
                     temp_list = ['ReportingUnit','CountItemType','Selection']
@@ -69,7 +69,10 @@ class Election(object): # TODO check that object is necessary (apparently for pi
                             z_score_totals, z_score_pcts = cr.euclidean_z_score(column_field, [[filter_field,filter_value]])
                             anomaly_list.append(pd.Series([cr.ContestName,column_field,filter_field,filter_value,'euclidean z-score',
                                                  max(z_score_totals), max(z_score_pcts)],index=self.anomaly_dframe.columns))
-                self.anomaly_dframe = self.anomaly_dframe.append(anomaly_list) # less efficient to update anomaly_dframe contest-by-contest, but better for debug
+                if anomaly_list:
+                    self.anomaly_dframe = self.anomaly_dframe.append(anomaly_list) # less efficient to update anomaly_dframe contest-by-contest, but better for debug
+                else:
+                    print('No anomalies found for contest with Id ' + str(contest_id))
         self.anomaly_dframe.to_pickle(pickle_path)
         return
 

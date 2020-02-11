@@ -7,7 +7,7 @@ import re
 import os
 
 from db_routines import dframe_to_sql
-from munge_routines import format_type_for_insert_PANDAS, id_from_select_only_PANDAS, composing_from_reporting_unit_name_PANDAS
+from munge_routines import format_type_for_insert_PANDAS, id_from_select_only_PANDAS
 import db_routines as dbr
 import pandas as pd
 
@@ -31,8 +31,6 @@ def ei_id_and_othertype(df,row,other_id):
     """
 
     return format_type_for_insert_PANDAS(df,row['ExternalIdentifierType'],other_id)
-
-
 
 def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath = 'CDF_schema_def_info/'):
     """Takes the info from the text files in the state's context files and inserts it into the db.
@@ -66,6 +64,7 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
 
     for table_def in table_def_list:      # iterating over tables in the common data format schema, need 'Office' after 'ReportingUnit'
         ## need to process 'Office' after 'ReportingUnit', as Offices may create ReportingUnits as election districts *** check for this
+        ## need to process 'Office' after 'Party' so that primary contests will be entered
 
         t = table_def[0]      # e.g., cdf_table = 'ReportingUnit'
 
@@ -117,16 +116,26 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
                     new_ru_dframe = pd.DataFrame(new_ru)
                     cdf_d['ReportingUnit'] = dframe_to_sql(new_ru_dframe,session,schema,'ReportingUnit',index_col=None)
 
-                    # create corresponding CandidateContest records, if they don't already exist
+                    # create corresponding CandidateContest records for general election contests (and insert in cdf db if they don't already exist)
                     cc_data = context_cdframe['Office'].merge(cdf_d['Office'],left_on='Name',right_on='Name').merge(cdf_d['ReportingUnit'],left_on='Name',right_on='Name',suffixes=['','_ru'])
                     # restrict to the columns we need, and set order
-                    cc_data = cc_data[['Name','VotesAllowed','NumberElected','NumberRunoff','Id','Id_ru']]
+                    cc_data = cc_data[['Name','VotesAllowed','NumberElected','NumberRunoff','Id','Id_ru','IsPartisan']]
                     # rename columns as necesssary
-                    cc_data.columns = ['Name', 'VotesAllowed', 'NumberElected', 'NumberRunoff', 'Office_Id', 'ElectionDistrict_Id']
+                    cc_data.rename(columns={'Id_ru':'ElectionDistrict_Id','Id':'Office_Id'},inplace=True)
                     # insert values for 'PrimaryParty_Id' column
-                    # TODO for primaries this needs to be menaingful, not just None
                     cc_data['PrimaryParty_Id'] = [None]*cc_data.shape[0]
+                    cc_d_gen = cc_data.copy()
+                    for party_id in cdf_d['Party']['Id'].to_list():
+                        pcc = cc_d_gen[cc_d_gen['IsPartisan']]    # non-partisan contests don't have party primaries, so omit them.
+                        pcc['PrimaryParty_Id'] = party_id
+                        pcc['Name'] = pcc['Name'] + ' Primary;' + cdf_d['Party'][cdf_d['Party']['Id'] == party_id].iloc[0]['Name']
+                        cc_data = pd.concat([cc_data,pcc])
+
+
                     cdf_d['CandidateContest'] = dframe_to_sql(cc_data,session,schema,'CandidateContest')
+
+                    # create corresponding CandidateContest records for primary contests (and insert in cdf db if they don't already exist)
+
 
     # load external identifiers from context
 
@@ -137,7 +146,8 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
     cdf_d['ExternalIdentifier'] = dframe_to_sql(ei_df,session,schema,'ExternalIdentifier')
 
     # Fill the ComposingReportingUnitJoin table
-    cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,schema,cdf_d,pickle_dir=s.path_to_state_dir+'pickles/') # TODO put pickle directory info into README.md
+    cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,schema,pickle_dir=s.path_to_state_dir+'pickles/')
+    # TODO put pickle directory info into README.md
     session.flush()
     return
 
@@ -145,113 +155,94 @@ def fill_externalIdentifier_table(session,schema,context_schema,enum_dframe,id_o
     """
     fpath is a path to the tab-separated context file holding the external identifier info
     s is the state
-
     """
     if os.path.isfile(pickle_dir + 'ExternalIdentifier'):
         print('Filling ExternalIdentifier table from pickle in ' + pickle_dir)
         ei_df = pd.read_pickle(pickle_dir + 'ExternalIdentifier')
     else:
-
         print('Fill ExternalIdentifier table')
         # TODO why does this step take so long?
         # get table from context directory with the tab-separated definitions of external identifiers
         ei_df = pd.read_csv(fpath,sep = '\t')
 
-        # load context table into state schema for later reference
+        # load context table into state schema for later reference # TODO where is this used?
         # dframe_to_sql(ei_df,session,s.schema_name,'ExternalIdentifierContext')
         ei_df.to_sql('ExternalIdentifierContext',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
 
         # pull corresponding tables from the cdf db
         cdf = {}
+        cdf['IdentifierType'] = pd.read_sql_table('IdentifierType',session.bind,schema,index_col=None)
+        filtered_ei = {}
         for t in ei_df['Table'].unique():
-            cdf[t] = pd.read_sql_table(t,session.bind,schema,'Id')
+            cdf[t] = pd.read_sql_table(t,session.bind,schema,index_col=None)
+            # TODO drop unnecessary columns
+            col_list = cdf[t].columns.to_list()
+            col_list.remove('Name')
+            col_list.remove('Id')
+            cdf[t] = cdf[t].drop(col_list,axis=1)
 
-        # add columns to dframe to match columns in CDF db
+            ei_filt = ei_df[ei_df['Table']==t]   # filter out rows for the given table
+            # join Table on name to get ForeignId
+            ei_filt = ei_filt.merge(cdf[t],left_on='Name',right_on='Name')
+            ei_filt.rename(columns={'Id':'ForeignId'},inplace=True)
+            # join IdentifierType columns
+            id_type_list = cdf['IdentifierType']['Txt'].unique()
+            # two cases: idtype in list, or idtype other
+            listed = ei_filt[ei_filt['ExternalIdentifierType'].isin(id_type_list)]
+            other = ei_filt[~ei_filt['ExternalIdentifierType'].isin(id_type_list)]
 
-        ei_df['ForeignId'] = ei_df.apply(lambda row: table_and_name_to_foreign_id(cdf,row),axis=1)
-        ei_df['Value'] = ei_df['ExternalIdentifierValue']
-        ### apply(lambda ...) returns a column of 2-elt lists, so need to unpack.
-        ei_df['id_othertype_pairs']= ei_df.apply(lambda row: ei_id_and_othertype(enum_dframe['IdentifierType'],row,id_other_id_type),axis=1)
+            # join info for listed
+            listed = listed.merge(cdf['IdentifierType'],left_on='ExternalIdentifierType',right_on='Txt')
+            listed.rename(columns={'Id':'IdentifierType_Id','ExternalIdentifierValue':'Value'},inplace=True)
+            listed['OtherIdentifierType'] = [None]*listed.shape[0]
 
-        ei_df['IdentifierType_Id'] = ei_df.apply(lambda row: row['id_othertype_pairs'][0],axis=1)
-        ei_df['OtherIdentifierType'] = ei_df.apply(lambda row: row['id_othertype_pairs'][1],axis=1)
-        ei_df.to_pickle(pickle_dir + 'ExternalIdentifier')
+            # join info for other
+            other['IdentifierType_Id'] = [id_other_id_type]*other.shape[0]
+            other.rename(columns={'ExternalIdentifierType':'OtherIdentifierType','ExternalIdentifierValue':'Value'},inplace=True)
+
+            # TODO check that the columns are right and ready for insertion into ExternalIdentifier
+
+
+            filtered_ei[t] = pd.concat([other,listed])
+
+        # TODO check that primaries work properly
+        ei_df = pd.concat([filtered_ei[t] for t in ei_df['Table'].unique()])
 
     # insert appropriate dataframe columns into ExternalIdentifier table in the CDF db
     dframe_to_sql(ei_df, session, schema, 'ExternalIdentifier')
     session.flush()
+    if not os.path.isfile(pickle_dir + 'ExternalIdentifier'):
+        ei_df.to_pickle(pickle_dir + 'ExternalIdentifier')
     return ei_df
 
-def fill_composing_reporting_unit_join(session,schema,cdf_d,pickle_dir='../local_data/pickles/'):
+def fill_composing_reporting_unit_join(session,schema,pickle_dir='../local_data/pickles/'):
     if os.path.isfile(pickle_dir + 'ComposingReportingUnitJoin'):
         print('Filling ComposingReportingUnitJoin table from pickle in ' + pickle_dir)
         cruj_dframe = pd.read_pickle(pickle_dir + 'ComposingReportingUnitJoin')
     else:
         print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
-        # TODO why does this take so long?
-
-        # TODO speedup plan: 1. pull ru table; 2. check that all component rus are in the RU table; 3. don't make calls to db except for push at end
-        cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin', session.bind, schema,index_col='Id')
-        ru_dframe = pd.read_sql_table('ReportingUnit', session.bind, schema,index_col='Id')
-
+        ru_dframe = pd.read_sql_table('ReportingUnit', session.bind, schema,index_col=None)
+        ru_dframe['split'] = ru_dframe['Name'].apply(lambda x: x.split(';'))
+        ru_dframe['length'] = ru_dframe['split'].apply(len)
+        ru_static=ru_dframe.copy()
+        cruj_dframe_list = []
+        for i in range(ru_dframe['length'].max()-1):
         # check that all components of all Reporting Units are themselves ReportingUnits
+            # get name of ith ancestor
+            ru_dframe = ru_static.copy()
+            ru_dframe['ancestor_'+str(i)] = ru_static['split'].apply(lambda x: ';'.join(x[:-i-1]))
+            # get ru Id of ith ancestor
+            drop_list = ru_dframe.columns.to_list()
+            ru_dframe = ru_dframe.merge(ru_dframe,left_on='Name',right_on='ancestor_'+str(i),suffixes=['_'+str(i),''])
+            drop_list.remove('Id')
+            cruj_dframe_list.append(ru_dframe[['Id','Id'+'_'+str(i)]].rename(columns={'Id':'ChildReportingUnit_Id','Id'+'_'+str(i):'ParentReportingUnit_Id'}))
 
-        for index,context_row in ru_dframe.iterrows():
-            cruj_dframe = composing_from_reporting_unit_name_PANDAS(session, schema, ru_dframe,cruj_dframe,context_row['Name'],index)
+        cruj_dframe = pd.concat(cruj_dframe_list)
         cruj_dframe.to_pickle(pickle_dir + 'ComposingReportingUnitJoin')
 
-    dframe_to_sql(cruj_dframe, session, schema, 'ComposingReportingUnitJoin')
+    cruj_dframe = dframe_to_sql(cruj_dframe, session, schema, 'ComposingReportingUnitJoin')
     session.flush()
     return cruj_dframe
-
-
-
-def build_munger_d(s,m):
-    """given a state s and a munger m,
-    use the state's context dictionaries to build some dictionaries restricted to the given munger.
-    """
-    munger_d = {}
-    munger_inverse_d = {}
-    key_list = ['Election','Party','ReportingUnit;precinct','Office']   # TODO should this be different for different mungers?
-    for t in key_list:
-        t_parts = t.split(';')
-        context_key = t_parts[0]            # e.g., 'ReportingUnit', or 'Election'
-        if len(t_parts) > 1:
-            type = t_parts[1]               # e.g., 'precinct' or None
-        else:
-            type = None
-        munger_d[t] = {}
-        for k in s.context_dictionary[context_key].keys():  # e.g., k = 'North Carolina;General Assembly;House of Representatives;2019-2020;District 1'
-            if 'ExternalIdentifiers' in s.context_dictionary[context_key][k].keys() and   m.name in s.context_dictionary[context_key][k]['ExternalIdentifiers'].keys() and (type == None or s.context_dictionary[context_key][k][context_key+'Type'] == type):
-                    munger_d[t][k] = s.context_dictionary[context_key][k]['ExternalIdentifiers'][m.name]
-        munger_inverse_d[t] = {}
-        for k,v in munger_d[t].items():
-            if v in munger_inverse_d[t].keys():
-                return('Error: munger_d[\''+t+'\'] has duplicate keys with value '+ v)
-            munger_inverse_d[v] = k
-    return(munger_d,munger_inverse_d)
-
-def raw_to_context(df,m,munger_d,con,cur):
-    ''' Purely diagnostic -- reports what items in the datafile are missing from the context_dictionary (e.g., offices we don't wish to analyze)'''
-    print('\'Missing\' below means \'Existing in the datafile, but missing from the munger dictionary, created from the state\'s context_dictionary, which was created from files in the context folder.')
-    for t in m.query_from_raw.keys():
-        t_parts = t.split(';')
-        context_key = t_parts[0]
-        if len(t_parts) > 1:
-            type = t_parts[1]
-        if context_key in df.state.context_dictionary.keys():   # why do we need this criterion? ***
-            items_per_df = dbr.query(m.query_from_raw[t],[df.state.schema_name,df.table_name],[],con,cur) # TODO revise now that query_from_raw no longer works
-            missing = []
-            for e in items_per_df:
-                if e[0] is not None and e[0] not in munger_d[t].values():
-                    missing.append(e[0])
-            if len(missing)>0:
-                missing.sort()   #  and sort
-            print('Sample data for '+t+': '+str( items_per_df[0:4]))
-            print('For \''+m.name +'\', <b> missing '+t+' list is: </b>'+str(missing)+'. Add any missing '+t+' to the '+context_key+'.txt file and rerun')
-    return
-
-
 
 ### supporting routines
 def shorten_and_cap_county(normal):

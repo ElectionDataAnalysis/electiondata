@@ -62,23 +62,6 @@ def id_from_select_or_insert_PANDAS(dframe, value_d, session, schema, db_table_n
     assert filtered_dframe.shape[0] == 1, 'filtered dataframe should have exactly one row'
     return id, dframe
 
-def composing_from_reporting_unit_name_PANDAS(session,schema,ru_dframe,cruj_dframe,name,id=0):
-    """inserts all ComposingReportingUnit joins that can be deduced from the internal db name of the ReportingUnit
-    into the ComposingReportingUnitJoin dataframe; returns bigger dataframe.
-    # Use the ; convention to identify all parents
-    """
-    if id == 0:
-        child_id, ru_dframe = id_from_select_or_insert_PANDAS(ru_dframe, {'Name': name},session,schema,'ReportingUnit')
-    else:
-        child_id = id
-    chain = name.split(';')
-    if len(chain) > 1:
-        for i in range(1,len(chain)):
-            parent = ';'.join(chain[0:i])
-            parent_id = id_from_select_only_PANDAS(ru_dframe, {'Name': parent})
-            unused_id, cruj_dframe = id_from_select_or_insert_PANDAS(cruj_dframe, {'ParentReportingUnit_Id': parent_id, 'ChildReportingUnit_Id': child_id},session,schema,'ComposingReportingUnitJoin')
-    return cruj_dframe
-
 def format_type_for_insert_PANDAS(dframe,txt,id_type_other_id,t_dframe_Id_is_index=True):
     """This is designed for enumeration dframes, which must have an "Id" field and a "Txt" field.
     other_id is the id for 'other' IdentifierType
@@ -98,7 +81,7 @@ def format_type_for_insert_PANDAS(dframe,txt,id_type_other_id,t_dframe_Id_is_ind
     else:
          raise Exception('Dataframe has duplicate rows with value ' + txt + ' in Txt column')
 
-def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id_type_other_id,state_id):
+def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,election_type,state_id):
     """
     NOTE: Tables from context assumed to exist already in db
     (e.g., BallotMeasureSelection, Party, ExternalIdentifier, ComposingReportingUnitJoin, Election, ReportingUnit etc.)
@@ -111,7 +94,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
 
     # NB: the name `row` in the code is essential and appears in def of munger as of 1/2020
     cdf_d = {}  # dataframe for each table
-    for t in ['ExternalIdentifier','Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType']:
+    for t in ['ExternalIdentifier','Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType','CandidateContest']:
         cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema)   # note: keep 'Id as df column (not index) so we have access in merges below.
     context_ei = pd.read_sql_table('ExternalIdentifierContext',session.bind,context_schema)
     context_ei = context_ei[ (context_ei['ExternalIdentifierType']== mu.name)]  # limit to our munger
@@ -120,11 +103,6 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
     fpath = mu.path_to_munger_dir
     vc_col_d = pd.read_csv(fpath + 'count_columns.txt',sep='\t',index_col='RawName').to_dict()['CountItemType']
     munge = pd.read_csv(fpath + 'cdf_tables.txt',sep='\t',index_col='CDFTable').to_dict()['ExternalIdentifier']
-
-
-    #munge = {}
-    #for t in ['Office','Party','Candidate','ReportingUnit','BallotMeasureContest']:
-        #munge[t] = mu.content_dictionary['fields_dictionary'][t][0]['ExternalIdentifier']
 
     # add columns for ids needed later
     row['Election_Id'] = [election_id] * row.shape[0]
@@ -217,6 +195,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
         for munge_key in ['Office','Party','ReportingUnit','Candidate']:
             row[munge_key] = eval(munge[munge_key])
         # append columns with info from context tables of cdf db
+        # TODO for primary elections, need to add party to the name of the office.
         for t in ['Office','Party','ReportingUnit']:    # Office first is most efficient, as it filters out rows for offices not listed in Office.txt
             filtered_ei = context_ei[(context_ei['Table'] == t) & (context_ei['ExternalIdentifierType'] == mu.name)][['Name','ExternalIdentifierValue']]
             filtered_ei.columns = [t+'_Name','ExternalIdentifierValue']
@@ -234,12 +213,6 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
         cs_df.rename(columns={'Id':'Candidate_Id'},inplace=True)
         cdf_d['CandidateSelection'] = dbr.dframe_to_sql(cs_df,session,cdf_schema,'CandidateSelection')
 
-        # load CandidateContest
-        office_context_df = pd.read_sql_table('Office',session.bind,schema=context_schema)
-        cc_df = office_context_df.merge(row[['Name_Office','Id_Office']],left_on='Name',right_on='Name_Office',suffixes=['','_row'])[['Name','VotesAllowed','NumberElected','NumberRunoff','Id_Office','ElectionDistrict']].merge(cdf_d['ReportingUnit'],left_on='ElectionDistrict',right_on='Name',suffixes=['','_ReportingUnit'])
-        cc_df.rename(columns={'Id_Office':'Office_Id','Id':'ElectionDistrict_Id'},inplace=True)
-        cdf_d['CandidateContest'] = dbr.dframe_to_sql(cc_df,session,cdf_schema,'CandidateContest')
-
         # drop some columns we won't need any more
         row.drop(
             ['County','Election Date','Precinct','Contest Group ID','Contest Type','Contest Name','Choice','Choice Party',
@@ -250,8 +223,16 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
         row.rename(columns={'Id_Candidate':'Candidate_Id'},inplace=True)
         row = row.merge(cdf_d['CandidateSelection'],left_on='Candidate_Id',right_on='Candidate_Id',suffixes=['','_Selection'])
         row.rename(columns={'Id_Selection':'CandidateSelection_Id'},inplace=True)
-        row = row.merge(cdf_d['CandidateContest'],left_on='Office_Name',right_on='Name',suffixes=['','_Contest'])
-        row.rename(columns={'Id_Contest':'CandidateContest_Id'},inplace=True)
+
+        # for general elections (not primaries)
+        if election_type == 'general':  # TODO pass election_type to this function
+            row = row.merge(cdf_d['CandidateContest'],left_on='Office_Name',right_on='Name',suffixes=['','_Contest'])
+            row.rename(columns={'Id_Contest':'CandidateContest_Id'},inplace=True)
+        elif election_type == 'primary':
+            # TODO
+            pass
+        else:
+            raise Exception('Election type not recognized by the code: ' + election_type) # TODO add all election types
 
         # load ElectionContestJoin for Candidate Contests
         ecj_df = row[['CandidateContest_Id','Election_Id']].drop_duplicates()
@@ -298,14 +279,14 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
     end = time.time()
     print('\tSeconds required to upload SelectionElectionContestVoteCountJoin: '+ str(end - start))
     print('Drop columns from cdf table')
-    q = 'ALTER TABLE {0}."VoteCount" DROP COLUMN "Election_Id", DROP COLUMN "Contest_Id",  DROP COLUMN "Selection_Id" '
+    q = 'ALTER TABLE {0}."VoteCount" DROP COLUMN "Election_Id", DROP COLUMN "Contest_Id" ,  DROP COLUMN "Selection_Id" '
     sql_ids=[cdf_schema]
     strs = []
     dbr.raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
 
     return
 
-def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,state_id = 0,id_type_other_id = 0,cdf_table_filepath='CDF_schema_def_info/tables.txt'):
+def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,election_type,state_id = 0,id_type_other_id = 0,cdf_table_filepath='CDF_schema_def_info/tables.txt'):
     """ munger-agnostic raw-to-cdf script; ***
     df is datafile, mu is munger """
     cdf_d = {}  # to hold various dataframes from cdf db tables
@@ -325,7 +306,7 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,state_id = 0
         tables_d[table_def[0]] = table_def[1]
 
     # get dataframes needed before bulk processing
-    for t in ['ElectionType', 'Election','ReportingUnitType','ReportingUnit','CountItemType']:
+    for t in ['ElectionType', 'Election','ReportingUnitType','ReportingUnit']:
         cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema, index_col='Id')
 
 
@@ -351,7 +332,7 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,state_id = 0
 
     # bulk_items_already_loaded = input('Are bulk items (Candidate, etc.) already loaded (y/n)?\n')
     # if bulk_items_already_loaded != 'y':
-    bulk_elements_to_cdf(session, mu,raw_rows, cdf_schema, context_schema, election_id, id_type_other_id,ids_d['state'])
+    bulk_elements_to_cdf(session, mu,raw_rows, cdf_schema, context_schema, election_id, election_type,ids_d['state'])
 
     return str(ids_d)
 
@@ -381,7 +362,8 @@ if __name__ == '__main__':
     election_id = 3218
     id_type_other_id = 35
     state_id = 59
-    bulk_elements_to_cdf(session, mu, row, cdf_schema, s.schema_name, election_id, id_type_other_id, state_id)
+    election_type='general'
+    bulk_elements_to_cdf(session, mu, row, cdf_schema, s.schema_name, election_id, election_type, state_id)
 
 
     raw_records_to_cdf(session,meta,df,mu,cdf_schema,s.schema_name,0,0,'../CDF_schema_def_info/tables.txt')

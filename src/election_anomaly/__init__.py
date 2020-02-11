@@ -40,7 +40,26 @@ def choose_by_id(session,meta,cdf_schema,table,default=0):
     id = input('Enter Id of the item you wish to analyze \n\t(default is '+str(default)+')\n') or default
     return  int(id)
 
-def find_anomalies(cdf_schema,contest_id_list=[]):
+def get_election_id(session,meta,cdf_schema):
+    e_table_list = dbr.table_list(session,meta,cdf_schema,'Election')
+    e_df = pd.read_sql_table('Election',session.bind,schema=cdf_schema)
+    e_type_df = pd.read_sql_table('ElectionType',session.bind,schema=cdf_schema)
+    print('Available elections in schema ' + cdf_schema+':')
+    for index,row in e_table_list.iterrows():
+        print(row['Name'] + ' (Id is ' + str(row['Id']) + ')')
+
+    default = '3219'
+    election_id = input('Enter Id of the election you wish to analyze (default is ' + default + ')\n') or default
+    election_id = int(election_id)
+
+    e_df = e_df.merge(e_type_df,left_on='ElectionType_Id',right_on='Id',suffixes=['_election','_type'])
+
+    election_type = e_df[e_df['Id_election'] == election_id].iloc[0]['Txt']
+    election_name = e_df[e_df['Id_election'] == election_id].iloc[0]['Name']
+    return election_id,election_type,election_name
+
+
+def find_anomalies(cdf_schema,election_id,contest_id_list=[]):
     find_anomalies = input('Find anomalies in an election (y/n)?\n')
     if find_anomalies == 'y':
         # default = 'cdf_nc_test'
@@ -52,16 +71,7 @@ def find_anomalies(cdf_schema,contest_id_list=[]):
         eng, meta_generic = dbr.sql_alchemy_connect(cdf_schema, paramfile)
         session = Session()
 
-        election_dframe = dbr.table_list(session, meta_generic, cdf_schema,'Election')
-        print('Available elections in schema '+cdf_schema)
-        for index,row in election_dframe.iterrows():
-            print(row['Name']+' (Id is '+str(row['Id'])+')')
-
-        default = '3218'
-        election_id = input('Enter Id of the election you wish to analyze (default is '+default+')\n') or default
-        election_id = int(election_id)
-
-        default = 'nc_2018_test'
+        default = 'nc_2018_primary'
         election_short_name = input('Enter short name for the election (alphanumeric with underscore, no spaces -- default is '+default+')\n') or default
 
         default = 'precinct'
@@ -162,6 +172,9 @@ if __name__ == '__main__':
     else:
         meta_cdf_schema = MetaData(bind=session.bind,schema=cdf_schema)
 
+    election_id, election_type, election_name = get_election_id(session,meta_generic,cdf_schema)
+
+
     # need_to_load_data = 'y'
     need_to_load_data = input('Load raw data (y/n)?\n')
     if need_to_load_data == 'y':
@@ -182,7 +195,7 @@ if __name__ == '__main__':
         mf = sf.create_metafile(s,'layout_results_pct.txt')
 
         print('Creating datafile instance')
-        df = sf.create_datafile(s, 'General Election 2018-11-06', df_name, mf, m)
+        df = sf.create_datafile(s, election_name, df_name, mf, m)
         print('Load raw data from '+df.file_name)
         if df.separator == 'tab': delimiter = '\t'
         elif df.separator == 'comma': delimiter = ','
@@ -203,7 +216,7 @@ if __name__ == '__main__':
 
 
         print('Loading data from df table\n\tin schema '+ s.schema_name+ '\n\tto CDF schema '+cdf_schema+'\n\tusing munger '+munger_name)
-        mr.raw_records_to_cdf(session,meta_cdf_schema,df,m,cdf_schema,s.schema_name)
+        mr.raw_records_to_cdf(session,meta_cdf_schema,df,m,cdf_schema,s.schema_name,election_type)
         session.commit()
         print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
 
@@ -212,7 +225,7 @@ if __name__ == '__main__':
     if contest_id == 0: contest_id_list=[]
     else: contest_id_list = [contest_id] # TODO move inside find_anomalies function
 
-    find_anomalies(cdf_schema,contest_id_list=contest_id_list)
+    find_anomalies(cdf_schema,election_id,contest_id_list=contest_id_list)
 
     eng.dispose()
     print('Done!')
