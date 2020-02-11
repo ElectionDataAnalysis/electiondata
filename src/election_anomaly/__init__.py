@@ -84,7 +84,8 @@ def find_anomalies(cdf_schema,contest_id_list=[]):
         e.anomaly_scores(session, meta_generic, cdf_schema,contest_id_list=contest_id_list)
         e.worst_bar_for_each_contest(session, meta_generic, 2,contest_id_list=contest_id_list)
 
-    print('Done!')
+    print('Anomalies found')
+    return
 
 def raw_data(session,meta,df):
     """ Loads the raw data from the datafile df into the schema for the associated state
@@ -214,5 +215,7 @@ if __name__ == '__main__':
     find_anomalies(cdf_schema,contest_id_list=contest_id_list)
 
     eng.dispose()
+    print('Done!')
+    exit()
 
 

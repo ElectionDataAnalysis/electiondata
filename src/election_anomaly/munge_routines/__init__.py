@@ -298,7 +298,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,id
     end = time.time()
     print('\tSeconds required to upload SelectionElectionContestVoteCountJoin: '+ str(end - start))
     print('Drop columns from cdf table')
-    q = 'ALTER TABLE {0}."VoteCount" DROP COLUMN "Election_Id" INTEGER, DROP COLUMN "Contest_Id" INTEGER,  DROP COLUMN "Selection_Id" INTEGER'
+    q = 'ALTER TABLE {0}."VoteCount" DROP COLUMN "Election_Id", DROP COLUMN "Contest_Id",  DROP COLUMN "Selection_Id" '
     sql_ids=[cdf_schema]
     strs = []
     dbr.raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
