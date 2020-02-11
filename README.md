@@ -67,7 +67,7 @@ Each state directory has three subfolders:
       * `column_block_parser_string` Python regex to identify the block of lines in the metafile holding the relevant column definitions
       * `line_parser_string` Python regex to identify the column name, data type and column description within one line of the metafile
       * `type_map` Python dictionary whose keys are datatype names from the file and whose values are datatype names used in the standard python package `sqlalchemy`
-    * `Office.txt` Tab-separated list of office names. Note that when datafiles are processed, lines relevant to offices **not** listed here will not be loaded into the common data format schema. Columns are:
+    * `Office.txt` Tab-separated list of office names. Note that when datafiles are processed, lines relevant to offices **not** listed here will not be loaded into the common data format schema. Note that party nominees for office contests are treated as offices; i.e., 'US Senate primary; Republican Party' is an Office. Columns are:
       * `Name`
       * `ElectionDistrict`
       * `ElectionDistrictType` e.g., 'state-house' or 'congressional', following conventions in `CDF_schema_def_info/enumerations/ReportingUnitType.txt`

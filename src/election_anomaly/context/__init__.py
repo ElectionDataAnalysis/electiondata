@@ -164,14 +164,35 @@ def fill_externalIdentifier_table(session,schema,context_schema,enum_dframe,id_o
         # get table from context directory with the tab-separated definitions of external identifiers
         ei_df = pd.read_csv(fpath,sep = '\t')
 
-        # load context table into state schema for later reference
+        # load context table into state schema for later reference # TODO where is this used?
         # dframe_to_sql(ei_df,session,s.schema_name,'ExternalIdentifierContext')
         ei_df.to_sql('ExternalIdentifierContext',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
 
         # pull corresponding tables from the cdf db
         cdf = {}
+        cdf['IdentifierType'] = pd.read_sql_table('IdentifierType',session.bind,schema,index_col=None)
+        filtered_ei = {}
         for t in ei_df['Table'].unique():
-            cdf[t] = pd.read_sql_table(t,session.bind,schema,'Id')
+            cdf[t] = pd.read_sql_table(t,session.bind,schema,index_col=None)
+            ei_filt = ei_df[ei_df['Table']==t]   # filter out rows for the given table
+            # join Table on Foreign Id
+            ei_filt = ei_filt.merge(cdf[t],left_on='ForeignId',right_on='Id')
+            # TODO join IdentifierType columns
+            id_type_list = cdf['IdentifierType']['Txt'].unique().to_list()
+            # two cases: idtype in list, or idtype other
+            listed = ei_filt[ei_filt['ExternalIdentifierType'].isin(id_type_list)]
+            other = ei_filt[~ei_filt['ExternalIdentifierType'].isin(id_type_list)]
+
+            # join info for listed
+            listed = listed.merge(cdf['IdentifierType'],left_on='ExternalIdentifierType',right_on='Txt')
+            listed.rename(columns={'Id':'IdentifierType_Id'},inplace=True)
+            listed['OtherIdentifierType'] = [None]*listed.shape[0]
+
+            # join info for other
+            other['IdentifierType_Id'] = [id_other_id_type]*other.shape[0]
+            other.rename(columns={'ExternalIdentifierType':'OtherIdentifierType'})
+
+            # TODO concat listed and other
 
         # add columns to ei_dframe to match columns in CDF db
         # TODO use .merge(), etc., not .apply(), and take care of primaries
