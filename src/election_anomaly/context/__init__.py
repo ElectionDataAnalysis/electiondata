@@ -7,7 +7,7 @@ import re
 import os
 
 from db_routines import dframe_to_sql
-from munge_routines import format_type_for_insert_PANDAS, id_from_select_only_PANDAS, composing_from_reporting_unit_name_PANDAS
+from munge_routines import format_type_for_insert_PANDAS, id_from_select_only_PANDAS
 import db_routines as dbr
 import pandas as pd
 
@@ -146,7 +146,8 @@ def context_to_cdf_PANDAS(session,meta,s,schema,enum_table_list,cdf_def_dirpath 
     cdf_d['ExternalIdentifier'] = dframe_to_sql(ei_df,session,schema,'ExternalIdentifier')
 
     # Fill the ComposingReportingUnitJoin table
-    cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,schema,cdf_d,pickle_dir=s.path_to_state_dir+'pickles/') # TODO put pickle directory info into README.md
+    cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,schema,pickle_dir=s.path_to_state_dir+'pickles/')
+    # TODO put pickle directory info into README.md
     session.flush()
     return
 
@@ -214,28 +215,34 @@ def fill_externalIdentifier_table(session,schema,context_schema,enum_dframe,id_o
         ei_df.to_pickle(pickle_dir + 'ExternalIdentifier')
     return ei_df
 
-def fill_composing_reporting_unit_join(session,schema,cdf_d,pickle_dir='../local_data/pickles/'):
+def fill_composing_reporting_unit_join(session,schema,pickle_dir='../local_data/pickles/'):
     if os.path.isfile(pickle_dir + 'ComposingReportingUnitJoin'):
         print('Filling ComposingReportingUnitJoin table from pickle in ' + pickle_dir)
         cruj_dframe = pd.read_pickle(pickle_dir + 'ComposingReportingUnitJoin')
     else:
         print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
-        # TODO why does this take so long?
-
-        # TODO speedup plan: 1. pull ru table; 2. check that all component rus are in the RU table; 3. don't make calls to db except for push at end
-        cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin', session.bind, schema,index_col='Id')
-        ru_dframe = pd.read_sql_table('ReportingUnit', session.bind, schema,index_col='Id')
-
+        ru_dframe = pd.read_sql_table('ReportingUnit', session.bind, schema,index_col=None)
+        ru_dframe['split'] = ru_dframe['Name'].apply(lambda x: x.split(';'))
+        ru_dframe['length'] = ru_dframe['split'].apply(len)
+        ru_static=ru_dframe.copy()
+        cruj_dframe_list = []
+        for i in range(ru_dframe['length'].max()-1):
         # check that all components of all Reporting Units are themselves ReportingUnits
+            # get name of ith ancestor
+            ru_dframe = ru_static.copy()
+            ru_dframe['ancestor_'+str(i)] = ru_static['split'].apply(lambda x: ';'.join(x[:-i-1]))
+            # get ru Id of ith ancestor
+            drop_list = ru_dframe.columns.to_list()
+            ru_dframe = ru_dframe.merge(ru_dframe,left_on='Name',right_on='ancestor_'+str(i),suffixes=['_'+str(i),''])
+            drop_list.remove('Id')
+            cruj_dframe_list.append(ru_dframe[['Id','Id'+'_'+str(i)]].rename(columns={'Id':'ChildReportingUnit_Id','Id'+'_'+str(i):'ParentReportingUnit_Id'}))
 
-        for index,context_row in ru_dframe.iterrows():
-            cruj_dframe = composing_from_reporting_unit_name_PANDAS(session, schema, ru_dframe,cruj_dframe,context_row['Name'],index)
+        cruj_dframe = pd.concat(cruj_dframe_list)
         cruj_dframe.to_pickle(pickle_dir + 'ComposingReportingUnitJoin')
 
-    dframe_to_sql(cruj_dframe, session, schema, 'ComposingReportingUnitJoin')
+    cruj_dframe = dframe_to_sql(cruj_dframe, session, schema, 'ComposingReportingUnitJoin')
     session.flush()
     return cruj_dframe
-
 
 ### supporting routines
 def shorten_and_cap_county(normal):

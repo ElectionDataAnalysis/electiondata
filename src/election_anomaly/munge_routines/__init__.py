@@ -62,23 +62,6 @@ def id_from_select_or_insert_PANDAS(dframe, value_d, session, schema, db_table_n
     assert filtered_dframe.shape[0] == 1, 'filtered dataframe should have exactly one row'
     return id, dframe
 
-def composing_from_reporting_unit_name_PANDAS(session,schema,ru_dframe,cruj_dframe,name,id=0):
-    """inserts all ComposingReportingUnit joins that can be deduced from the internal db name of the ReportingUnit
-    into the ComposingReportingUnitJoin dataframe; returns bigger dataframe.
-    # Use the ; convention to identify all parents
-    """
-    if id == 0:
-        child_id, ru_dframe = id_from_select_or_insert_PANDAS(ru_dframe, {'Name': name},session,schema,'ReportingUnit')
-    else:
-        child_id = id
-    chain = name.split(';')
-    if len(chain) > 1:
-        for i in range(1,len(chain)):
-            parent = ';'.join(chain[0:i])
-            parent_id = id_from_select_only_PANDAS(ru_dframe, {'Name': parent})
-            unused_id, cruj_dframe = id_from_select_or_insert_PANDAS(cruj_dframe, {'ParentReportingUnit_Id': parent_id, 'ChildReportingUnit_Id': child_id},session,schema,'ComposingReportingUnitJoin')
-    return cruj_dframe
-
 def format_type_for_insert_PANDAS(dframe,txt,id_type_other_id,t_dframe_Id_is_index=True):
     """This is designed for enumeration dframes, which must have an "Id" field and a "Txt" field.
     other_id is the id for 'other' IdentifierType
