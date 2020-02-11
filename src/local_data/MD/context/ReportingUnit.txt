@@ -1,0 +1,2377 @@
+Name	ReportingUnitType
+Maryland	state
+Maryland;Allegany County	county
+Maryland;Anne Arundel County	county
+Maryland;Baltimore City	county
+Maryland;Baltimore County	county
+Maryland;Calvert County	county
+Maryland;Caroline County	county
+Maryland;Carroll County	county
+Maryland;Cecil County	county
+Maryland;Charles County	county
+Maryland;Dorchester County	county
+Maryland;Frederick County	county
+Maryland;Garrett County	county
+Maryland;Harford County	county
+Maryland;Howard County	county
+Maryland;Kent County	county
+Maryland;Montgomery County	county
+Maryland;Prince George's County	county
+Maryland;Queen Anne's County	county
+Maryland;St. Mary's County	county
+Maryland;Somerset County	county
+Maryland;Talbot County	county
+Maryland;Washington County	county
+Maryland;Wicomico County	county
+Maryland;Worcester County	county
+Maryland;Allegany County;Election District 1	election district
+Maryland;Allegany County;Election District 2	election district
+Maryland;Allegany County;Election District 3	election district
+Maryland;Allegany County;Election District 4	election district
+Maryland;Allegany County;Election District 5	election district
+Maryland;Allegany County;Election District 6	election district
+Maryland;Allegany County;Election District 7	election district
+Maryland;Allegany County;Election District 8	election district
+Maryland;Allegany County;Election District 9	election district
+Maryland;Allegany County;Election District 10	election district
+Maryland;Allegany County;Election District 11	election district
+Maryland;Allegany County;Election District 12	election district
+Maryland;Allegany County;Election District 13	election district
+Maryland;Allegany County;Election District 14	election district
+Maryland;Allegany County;Election District 16	election district
+Maryland;Allegany County;Election District 18	election district
+Maryland;Allegany County;Election District 20	election district
+Maryland;Allegany County;Election District 21	election district
+Maryland;Allegany County;Election District 22	election district
+Maryland;Allegany County;Election District 23	election district
+Maryland;Allegany County;Election District 24	election district
+Maryland;Allegany County;Election District 26	election district
+Maryland;Allegany County;Election District 29	election district
+Maryland;Allegany County;Election District 31	election district
+Maryland;Allegany County;Election District 34	election district
+Maryland;Anne Arundel County;Election District 1	election district
+Maryland;Anne Arundel County;Election District 2	election district
+Maryland;Anne Arundel County;Election District 3	election district
+Maryland;Anne Arundel County;Election District 4	election district
+Maryland;Anne Arundel County;Election District 5	election district
+Maryland;Anne Arundel County;Election District 6	election district
+Maryland;Anne Arundel County;Election District 7	election district
+Maryland;Baltimore City;Election District 1	election district
+Maryland;Baltimore City;Election District 2	election district
+Maryland;Baltimore City;Election District 3	election district
+Maryland;Baltimore City;Election District 4	election district
+Maryland;Baltimore City;Election District 5	election district
+Maryland;Baltimore City;Election District 6	election district
+Maryland;Baltimore City;Election District 7	election district
+Maryland;Baltimore City;Election District 8	election district
+Maryland;Baltimore City;Election District 9	election district
+Maryland;Baltimore City;Election District 10	election district
+Maryland;Baltimore City;Election District 11	election district
+Maryland;Baltimore City;Election District 12	election district
+Maryland;Baltimore City;Election District 13	election district
+Maryland;Baltimore City;Election District 14	election district
+Maryland;Baltimore City;Election District 15	election district
+Maryland;Baltimore City;Election District 16	election district
+Maryland;Baltimore City;Election District 17	election district
+Maryland;Baltimore City;Election District 18	election district
+Maryland;Baltimore City;Election District 19	election district
+Maryland;Baltimore City;Election District 20	election district
+Maryland;Baltimore City;Election District 21	election district
+Maryland;Baltimore City;Election District 22	election district
+Maryland;Baltimore City;Election District 23	election district
+Maryland;Baltimore City;Election District 24	election district
+Maryland;Baltimore City;Election District 25	election district
+Maryland;Baltimore City;Election District 26	election district
+Maryland;Baltimore City;Election District 27	election district
+Maryland;Baltimore City;Election District 28	election district
+Maryland;Baltimore County;Election District 1	election district
+Maryland;Baltimore County;Election District 2	election district
+Maryland;Baltimore County;Election District 3	election district
+Maryland;Baltimore County;Election District 4	election district
+Maryland;Baltimore County;Election District 5	election district
+Maryland;Baltimore County;Election District 6	election district
+Maryland;Baltimore County;Election District 7	election district
+Maryland;Baltimore County;Election District 8	election district
+Maryland;Baltimore County;Election District 9	election district
+Maryland;Baltimore County;Election District 10	election district
+Maryland;Baltimore County;Election District 11	election district
+Maryland;Baltimore County;Election District 12	election district
+Maryland;Baltimore County;Election District 13	election district
+Maryland;Baltimore County;Election District 14	election district
+Maryland;Baltimore County;Election District 15	election district
+Maryland;Calvert County;Election District 1	election district
+Maryland;Calvert County;Election District 2	election district
+Maryland;Calvert County;Election District 3	election district
+Maryland;Caroline County;Election District 1	election district
+Maryland;Caroline County;Election District 2	election district
+Maryland;Caroline County;Election District 3	election district
+Maryland;Caroline County;Election District 4	election district
+Maryland;Caroline County;Election District 5	election district
+Maryland;Caroline County;Election District 6	election district
+Maryland;Caroline County;Election District 7	election district
+Maryland;Caroline County;Election District 8	election district
+Maryland;Carroll County;Election District 1	election district
+Maryland;Carroll County;Election District 2	election district
+Maryland;Carroll County;Election District 3	election district
+Maryland;Carroll County;Election District 4	election district
+Maryland;Carroll County;Election District 5	election district
+Maryland;Carroll County;Election District 6	election district
+Maryland;Carroll County;Election District 7	election district
+Maryland;Carroll County;Election District 8	election district
+Maryland;Carroll County;Election District 9	election district
+Maryland;Carroll County;Election District 10	election district
+Maryland;Carroll County;Election District 11	election district
+Maryland;Carroll County;Election District 12	election district
+Maryland;Carroll County;Election District 13	election district
+Maryland;Carroll County;Election District 14	election district
+Maryland;Cecil County;Election District 1	election district
+Maryland;Cecil County;Election District 2	election district
+Maryland;Cecil County;Election District 3	election district
+Maryland;Cecil County;Election District 4	election district
+Maryland;Cecil County;Election District 5	election district
+Maryland;Cecil County;Election District 6	election district
+Maryland;Cecil County;Election District 7	election district
+Maryland;Cecil County;Election District 8	election district
+Maryland;Cecil County;Election District 9	election district
+Maryland;Charles County;Election District 1	election district
+Maryland;Charles County;Election District 2	election district
+Maryland;Charles County;Election District 3	election district
+Maryland;Charles County;Election District 4	election district
+Maryland;Charles County;Election District 5	election district
+Maryland;Charles County;Election District 6	election district
+Maryland;Charles County;Election District 7	election district
+Maryland;Charles County;Election District 8	election district
+Maryland;Charles County;Election District 9	election district
+Maryland;Charles County;Election District 10	election district
+Maryland;Dorchester County;Election District 1	election district
+Maryland;Dorchester County;Election District 2	election district
+Maryland;Dorchester County;Election District 3	election district
+Maryland;Dorchester County;Election District 4	election district
+Maryland;Dorchester County;Election District 5	election district
+Maryland;Dorchester County;Election District 6	election district
+Maryland;Dorchester County;Election District 7	election district
+Maryland;Dorchester County;Election District 8	election district
+Maryland;Dorchester County;Election District 9	election district
+Maryland;Dorchester County;Election District 10	election district
+Maryland;Dorchester County;Election District 11	election district
+Maryland;Dorchester County;Election District 12	election district
+Maryland;Dorchester County;Election District 13	election district
+Maryland;Dorchester County;Election District 14	election district
+Maryland;Dorchester County;Election District 15	election district
+Maryland;Dorchester County;Election District 16	election district
+Maryland;Dorchester County;Election District 17	election district
+Maryland;Dorchester County;Election District 18	election district
+Maryland;Frederick County;Election District 1	election district
+Maryland;Frederick County;Election District 2	election district
+Maryland;Frederick County;Election District 3	election district
+Maryland;Frederick County;Election District 4	election district
+Maryland;Frederick County;Election District 5	election district
+Maryland;Frederick County;Election District 6	election district
+Maryland;Frederick County;Election District 7	election district
+Maryland;Frederick County;Election District 8	election district
+Maryland;Frederick County;Election District 9	election district
+Maryland;Frederick County;Election District 10	election district
+Maryland;Frederick County;Election District 11	election district
+Maryland;Frederick County;Election District 12	election district
+Maryland;Frederick County;Election District 13	election district
+Maryland;Frederick County;Election District 14	election district
+Maryland;Frederick County;Election District 15	election district
+Maryland;Frederick County;Election District 16	election district
+Maryland;Frederick County;Election District 17	election district
+Maryland;Frederick County;Election District 18	election district
+Maryland;Frederick County;Election District 19	election district
+Maryland;Frederick County;Election District 20	election district
+Maryland;Frederick County;Election District 21	election district
+Maryland;Frederick County;Election District 22	election district
+Maryland;Frederick County;Election District 23	election district
+Maryland;Frederick County;Election District 24	election district
+Maryland;Frederick County;Election District 25	election district
+Maryland;Frederick County;Election District 26	election district
+Maryland;Garrett County;Election District 1	election district
+Maryland;Garrett County;Election District 2	election district
+Maryland;Garrett County;Election District 3	election district
+Maryland;Garrett County;Election District 4	election district
+Maryland;Garrett County;Election District 5	election district
+Maryland;Garrett County;Election District 6	election district
+Maryland;Garrett County;Election District 7	election district
+Maryland;Garrett County;Election District 8	election district
+Maryland;Garrett County;Election District 9	election district
+Maryland;Garrett County;Election District 10	election district
+Maryland;Garrett County;Election District 11	election district
+Maryland;Garrett County;Election District 12	election district
+Maryland;Garrett County;Election District 13	election district
+Maryland;Garrett County;Election District 14	election district
+Maryland;Garrett County;Election District 15	election district
+Maryland;Garrett County;Election District 16	election district
+Maryland;Harford County;Election District 1	election district
+Maryland;Harford County;Election District 2	election district
+Maryland;Harford County;Election District 3	election district
+Maryland;Harford County;Election District 4	election district
+Maryland;Harford County;Election District 5	election district
+Maryland;Harford County;Election District 6	election district
+Maryland;Howard County;Election District 1	election district
+Maryland;Howard County;Election District 2	election district
+Maryland;Howard County;Election District 3	election district
+Maryland;Howard County;Election District 4	election district
+Maryland;Howard County;Election District 5	election district
+Maryland;Howard County;Election District 6	election district
+Maryland;Kent County;Election District 1	election district
+Maryland;Kent County;Election District 2	election district
+Maryland;Kent County;Election District 3	election district
+Maryland;Kent County;Election District 4	election district
+Maryland;Kent County;Election District 5	election district
+Maryland;Kent County;Election District 6	election district
+Maryland;Kent County;Election District 7	election district
+Maryland;Montgomery County;Election District 1	election district
+Maryland;Montgomery County;Election District 2	election district
+Maryland;Montgomery County;Election District 3	election district
+Maryland;Montgomery County;Election District 4	election district
+Maryland;Montgomery County;Election District 5	election district
+Maryland;Montgomery County;Election District 6	election district
+Maryland;Montgomery County;Election District 7	election district
+Maryland;Montgomery County;Election District 8	election district
+Maryland;Montgomery County;Election District 9	election district
+Maryland;Montgomery County;Election District 10	election district
+Maryland;Montgomery County;Election District 11	election district
+Maryland;Montgomery County;Election District 12	election district
+Maryland;Montgomery County;Election District 13	election district
+Maryland;Prince George's County;Election District 1	election district
+Maryland;Prince George's County;Election District 2	election district
+Maryland;Prince George's County;Election District 3	election district
+Maryland;Prince George's County;Election District 4	election district
+Maryland;Prince George's County;Election District 5	election district
+Maryland;Prince George's County;Election District 6	election district
+Maryland;Prince George's County;Election District 7	election district
+Maryland;Prince George's County;Election District 8	election district
+Maryland;Prince George's County;Election District 9	election district
+Maryland;Prince George's County;Election District 10	election district
+Maryland;Prince George's County;Election District 11	election district
+Maryland;Prince George's County;Election District 12	election district
+Maryland;Prince George's County;Election District 13	election district
+Maryland;Prince George's County;Election District 14	election district
+Maryland;Prince George's County;Election District 15	election district
+Maryland;Prince George's County;Election District 16	election district
+Maryland;Prince George's County;Election District 17	election district
+Maryland;Prince George's County;Election District 18	election district
+Maryland;Prince George's County;Election District 19	election district
+Maryland;Prince George's County;Election District 20	election district
+Maryland;Prince George's County;Election District 21	election district
+Maryland;Queen Anne's County;Election District 1	election district
+Maryland;Queen Anne's County;Election District 2	election district
+Maryland;Queen Anne's County;Election District 3	election district
+Maryland;Queen Anne's County;Election District 4	election district
+Maryland;Queen Anne's County;Election District 5	election district
+Maryland;Queen Anne's County;Election District 6	election district
+Maryland;Queen Anne's County;Election District 7	election district
+Maryland;St. Mary's County;Election District 1	election district
+Maryland;St. Mary's County;Election District 2	election district
+Maryland;St. Mary's County;Election District 3	election district
+Maryland;St. Mary's County;Election District 4	election district
+Maryland;St. Mary's County;Election District 5	election district
+Maryland;St. Mary's County;Election District 6	election district
+Maryland;St. Mary's County;Election District 7	election district
+Maryland;St. Mary's County;Election District 8	election district
+Maryland;St. Mary's County;Election District 9	election district
+Maryland;Somerset County;Election District 1	election district
+Maryland;Somerset County;Election District 2	election district
+Maryland;Somerset County;Election District 3	election district
+Maryland;Somerset County;Election District 4	election district
+Maryland;Somerset County;Election District 5	election district
+Maryland;Somerset County;Election District 6	election district
+Maryland;Somerset County;Election District 7	election district
+Maryland;Somerset County;Election District 8	election district
+Maryland;Somerset County;Election District 9	election district
+Maryland;Somerset County;Election District 10	election district
+Maryland;Somerset County;Election District 11	election district
+Maryland;Somerset County;Election District 12	election district
+Maryland;Somerset County;Election District 13	election district
+Maryland;Somerset County;Election District 14	election district
+Maryland;Somerset County;Election District 15	election district
+Maryland;Talbot County;Election District 1	election district
+Maryland;Talbot County;Election District 2	election district
+Maryland;Talbot County;Election District 3	election district
+Maryland;Talbot County;Election District 4	election district
+Maryland;Talbot County;Election District 5	election district
+Maryland;Washington County;Election District 1	election district
+Maryland;Washington County;Election District 2	election district
+Maryland;Washington County;Election District 3	election district
+Maryland;Washington County;Election District 4	election district
+Maryland;Washington County;Election District 5	election district
+Maryland;Washington County;Election District 6	election district
+Maryland;Washington County;Election District 7	election district
+Maryland;Washington County;Election District 8	election district
+Maryland;Washington County;Election District 9	election district
+Maryland;Washington County;Election District 10	election district
+Maryland;Washington County;Election District 11	election district
+Maryland;Washington County;Election District 12	election district
+Maryland;Washington County;Election District 13	election district
+Maryland;Washington County;Election District 14	election district
+Maryland;Washington County;Election District 15	election district
+Maryland;Washington County;Election District 16	election district
+Maryland;Washington County;Election District 17	election district
+Maryland;Washington County;Election District 18	election district
+Maryland;Washington County;Election District 19	election district
+Maryland;Washington County;Election District 20	election district
+Maryland;Washington County;Election District 21	election district
+Maryland;Washington County;Election District 22	election district
+Maryland;Washington County;Election District 23	election district
+Maryland;Washington County;Election District 24	election district
+Maryland;Washington County;Election District 25	election district
+Maryland;Washington County;Election District 26	election district
+Maryland;Washington County;Election District 27	election district
+Maryland;Wicomico County;Election District 1	election district
+Maryland;Wicomico County;Election District 2	election district
+Maryland;Wicomico County;Election District 4	election district
+Maryland;Wicomico County;Election District 5	election district
+Maryland;Wicomico County;Election District 6	election district
+Maryland;Wicomico County;Election District 7	election district
+Maryland;Wicomico County;Election District 8	election district
+Maryland;Wicomico County;Election District 9	election district
+Maryland;Wicomico County;Election District 10	election district
+Maryland;Wicomico County;Election District 11	election district
+Maryland;Wicomico County;Election District 13	election district
+Maryland;Wicomico County;Election District 14	election district
+Maryland;Wicomico County;Election District 15	election district
+Maryland;Wicomico County;Election District 16	election district
+Maryland;Wicomico County;Election District 17	election district
+Maryland;Worcester County;Election District 1	election district
+Maryland;Worcester County;Election District 2	election district
+Maryland;Worcester County;Election District 3	election district
+Maryland;Worcester County;Election District 4	election district
+Maryland;Worcester County;Election District 5	election district
+Maryland;Worcester County;Election District 6	election district
+Maryland;Worcester County;Election District 7	election district
+Maryland;Allegany County;Election District 1:Precinct 0	precinct
+Maryland;Allegany County;Election District 2:Precinct 0	precinct
+Maryland;Allegany County;Election District 3:Precinct 0	precinct
+Maryland;Allegany County;Election District 4:Precinct 2	precinct
+Maryland;Allegany County;Election District 4:Precinct 3	precinct
+Maryland;Allegany County;Election District 4:Precinct 4	precinct
+Maryland;Allegany County;Election District 4:Precinct 5	precinct
+Maryland;Allegany County;Election District 4:Precinct 8	precinct
+Maryland;Allegany County;Election District 5:Precinct 4	precinct
+Maryland;Allegany County;Election District 5:Precinct 6	precinct
+Maryland;Allegany County;Election District 6:Precinct 1	precinct
+Maryland;Allegany County;Election District 6:Precinct 3	precinct
+Maryland;Allegany County;Election District 6:Precinct 5	precinct
+Maryland;Allegany County;Election District 6:Precinct 6	precinct
+Maryland;Allegany County;Election District 7:Precinct 1	precinct
+Maryland;Allegany County;Election District 7:Precinct 2	precinct
+Maryland;Allegany County;Election District 8:Precinct 0	precinct
+Maryland;Allegany County;Election District 9:Precinct 0	precinct
+Maryland;Allegany County;Election District 10:Precinct 0	precinct
+Maryland;Allegany County;Election District 11:Precinct 0	precinct
+Maryland;Allegany County;Election District 12:Precinct 0	precinct
+Maryland;Allegany County;Election District 13:Precinct 0	precinct
+Maryland;Allegany County;Election District 14:Precinct 0	precinct
+Maryland;Allegany County;Election District 16:Precinct 0	precinct
+Maryland;Allegany County;Election District 18:Precinct 0	precinct
+Maryland;Allegany County;Election District 20:Precinct 0	precinct
+Maryland;Allegany County;Election District 21:Precinct 0	precinct
+Maryland;Allegany County;Election District 22:Precinct 1	precinct
+Maryland;Allegany County;Election District 22:Precinct 2	precinct
+Maryland;Allegany County;Election District 23:Precinct 0	precinct
+Maryland;Allegany County;Election District 24:Precinct 0	precinct
+Maryland;Allegany County;Election District 26:Precinct 0	precinct
+Maryland;Allegany County;Election District 29:Precinct 1	precinct
+Maryland;Allegany County;Election District 29:Precinct 2	precinct
+Maryland;Allegany County;Election District 29:Precinct 3	precinct
+Maryland;Allegany County;Election District 31:Precinct 0	precinct
+Maryland;Allegany County;Election District 34:Precinct 0	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 1	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 2	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 3	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 4	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 5	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 6	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 7	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 8	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 9	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 10	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 11	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 12	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 13	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 14	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 15	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 16	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 17	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 18	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 19	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 20	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 21	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 22	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 23	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 24	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 25	precinct
+Maryland;Anne Arundel County;Election District 1:Precinct 26	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 1	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 2	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 3	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 4	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 5	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 6	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 7	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 8	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 9	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 10	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 11	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 12	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 13	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 14	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 15	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 16	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 17	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 18	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 19	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 20	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 21	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 22	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 23	precinct
+Maryland;Anne Arundel County;Election District 2:Precinct 24	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 1	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 2	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 3	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 4	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 5	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 6	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 7	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 8	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 9	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 10	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 11	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 12	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 13	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 14	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 15	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 16	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 17	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 18	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 19	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 20	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 21	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 22	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 23	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 24	precinct
+Maryland;Anne Arundel County;Election District 3:Precinct 25	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 1	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 2	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 3	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 4	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 5	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 6	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 7	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 8	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 9	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 10	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 11	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 12	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 13	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 14	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 15	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 16	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 17	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 18	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 19	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 20	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 21	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 22	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 23	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 24	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 25	precinct
+Maryland;Anne Arundel County;Election District 4:Precinct 26	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 1	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 2	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 3	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 4	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 5	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 6	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 7	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 8	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 9	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 10	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 11	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 12	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 13	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 14	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 15	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 16	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 17	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 18	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 19	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 20	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 21	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 22	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 23	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 24	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 25	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 26	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 27	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 28	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 29	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 30	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 31	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 32	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 33	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 34	precinct
+Maryland;Anne Arundel County;Election District 5:Precinct 35	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 1	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 2	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 3	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 4	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 5	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 6	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 7	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 8	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 9	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 10	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 11	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 12	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 13	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 14	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 15	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 16	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 17	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 18	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 19	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 20	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 21	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 22	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 23	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 24	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 25	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 26	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 27	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 28	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 29	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 30	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 31	precinct
+Maryland;Anne Arundel County;Election District 6:Precinct 32	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 1	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 2	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 3	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 4	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 5	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 6	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 7	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 8	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 9	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 10	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 11	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 12	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 13	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 14	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 15	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 16	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 17	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 18	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 19	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 20	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 21	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 22	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 23	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 24	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 25	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 26	precinct
+Maryland;Anne Arundel County;Election District 7:Precinct 27	precinct
+Maryland;Baltimore City;Election District 1:Precinct 1	precinct
+Maryland;Baltimore City;Election District 1:Precinct 2	precinct
+Maryland;Baltimore City;Election District 1:Precinct 3	precinct
+Maryland;Baltimore City;Election District 1:Precinct 4	precinct
+Maryland;Baltimore City;Election District 1:Precinct 5	precinct
+Maryland;Baltimore City;Election District 2:Precinct 1	precinct
+Maryland;Baltimore City;Election District 2:Precinct 2	precinct
+Maryland;Baltimore City;Election District 2:Precinct 3	precinct
+Maryland;Baltimore City;Election District 3:Precinct 1	precinct
+Maryland;Baltimore City;Election District 3:Precinct 2	precinct
+Maryland;Baltimore City;Election District 3:Precinct 3	precinct
+Maryland;Baltimore City;Election District 4:Precinct 1	precinct
+Maryland;Baltimore City;Election District 4:Precinct 2	precinct
+Maryland;Baltimore City;Election District 4:Precinct 3	precinct
+Maryland;Baltimore City;Election District 5:Precinct 1	precinct
+Maryland;Baltimore City;Election District 5:Precinct 2	precinct
+Maryland;Baltimore City;Election District 6:Precinct 1	precinct
+Maryland;Baltimore City;Election District 6:Precinct 2	precinct
+Maryland;Baltimore City;Election District 6:Precinct 3	precinct
+Maryland;Baltimore City;Election District 6:Precinct 4	precinct
+Maryland;Baltimore City;Election District 6:Precinct 5	precinct
+Maryland;Baltimore City;Election District 7:Precinct 1	precinct
+Maryland;Baltimore City;Election District 7:Precinct 2	precinct
+Maryland;Baltimore City;Election District 7:Precinct 3	precinct
+Maryland;Baltimore City;Election District 7:Precinct 4	precinct
+Maryland;Baltimore City;Election District 8:Precinct 1	precinct
+Maryland;Baltimore City;Election District 8:Precinct 2	precinct
+Maryland;Baltimore City;Election District 8:Precinct 3	precinct
+Maryland;Baltimore City;Election District 8:Precinct 4	precinct
+Maryland;Baltimore City;Election District 8:Precinct 5	precinct
+Maryland;Baltimore City;Election District 8:Precinct 6	precinct
+Maryland;Baltimore City;Election District 8:Precinct 7	precinct
+Maryland;Baltimore City;Election District 8:Precinct 8	precinct
+Maryland;Baltimore City;Election District 8:Precinct 9	precinct
+Maryland;Baltimore City;Election District 8:Precinct 10	precinct
+Maryland;Baltimore City;Election District 8:Precinct 11	precinct
+Maryland;Baltimore City;Election District 9:Precinct 1	precinct
+Maryland;Baltimore City;Election District 9:Precinct 2	precinct
+Maryland;Baltimore City;Election District 9:Precinct 3	precinct
+Maryland;Baltimore City;Election District 9:Precinct 4	precinct
+Maryland;Baltimore City;Election District 9:Precinct 5	precinct
+Maryland;Baltimore City;Election District 9:Precinct 6	precinct
+Maryland;Baltimore City;Election District 9:Precinct 7	precinct
+Maryland;Baltimore City;Election District 9:Precinct 8	precinct
+Maryland;Baltimore City;Election District 9:Precinct 9	precinct
+Maryland;Baltimore City;Election District 9:Precinct 10	precinct
+Maryland;Baltimore City;Election District 9:Precinct 11	precinct
+Maryland;Baltimore City;Election District 9:Precinct 12	precinct
+Maryland;Baltimore City;Election District 9:Precinct 13	precinct
+Maryland;Baltimore City;Election District 9:Precinct 14	precinct
+Maryland;Baltimore City;Election District 9:Precinct 15	precinct
+Maryland;Baltimore City;Election District 10:Precinct 1	precinct
+Maryland;Baltimore City;Election District 10:Precinct 2	precinct
+Maryland;Baltimore City;Election District 10:Precinct 3	precinct
+Maryland;Baltimore City;Election District 10:Precinct 4	precinct
+Maryland;Baltimore City;Election District 11:Precinct 1	precinct
+Maryland;Baltimore City;Election District 11:Precinct 2	precinct
+Maryland;Baltimore City;Election District 11:Precinct 3	precinct
+Maryland;Baltimore City;Election District 11:Precinct 4	precinct
+Maryland;Baltimore City;Election District 11:Precinct 5	precinct
+Maryland;Baltimore City;Election District 11:Precinct 6	precinct
+Maryland;Baltimore City;Election District 11:Precinct 7	precinct
+Maryland;Baltimore City;Election District 12:Precinct 1	precinct
+Maryland;Baltimore City;Election District 12:Precinct 2	precinct
+Maryland;Baltimore City;Election District 12:Precinct 3	precinct
+Maryland;Baltimore City;Election District 12:Precinct 4	precinct
+Maryland;Baltimore City;Election District 12:Precinct 5	precinct
+Maryland;Baltimore City;Election District 12:Precinct 6	precinct
+Maryland;Baltimore City;Election District 12:Precinct 7	precinct
+Maryland;Baltimore City;Election District 12:Precinct 8	precinct
+Maryland;Baltimore City;Election District 12:Precinct 9	precinct
+Maryland;Baltimore City;Election District 12:Precinct 10	precinct
+Maryland;Baltimore City;Election District 12:Precinct 11	precinct
+Maryland;Baltimore City;Election District 12:Precinct 12	precinct
+Maryland;Baltimore City;Election District 12:Precinct 13	precinct
+Maryland;Baltimore City;Election District 13:Precinct 1	precinct
+Maryland;Baltimore City;Election District 13:Precinct 2	precinct
+Maryland;Baltimore City;Election District 13:Precinct 3	precinct
+Maryland;Baltimore City;Election District 13:Precinct 4	precinct
+Maryland;Baltimore City;Election District 13:Precinct 5	precinct
+Maryland;Baltimore City;Election District 13:Precinct 6	precinct
+Maryland;Baltimore City;Election District 13:Precinct 7	precinct
+Maryland;Baltimore City;Election District 13:Precinct 8	precinct
+Maryland;Baltimore City;Election District 13:Precinct 9	precinct
+Maryland;Baltimore City;Election District 13:Precinct 10	precinct
+Maryland;Baltimore City;Election District 13:Precinct 11	precinct
+Maryland;Baltimore City;Election District 13:Precinct 12	precinct
+Maryland;Baltimore City;Election District 13:Precinct 13	precinct
+Maryland;Baltimore City;Election District 14:Precinct 1	precinct
+Maryland;Baltimore City;Election District 14:Precinct 2	precinct
+Maryland;Baltimore City;Election District 14:Precinct 3	precinct
+Maryland;Baltimore City;Election District 14:Precinct 4	precinct
+Maryland;Baltimore City;Election District 14:Precinct 5	precinct
+Maryland;Baltimore City;Election District 15:Precinct 1	precinct
+Maryland;Baltimore City;Election District 15:Precinct 2	precinct
+Maryland;Baltimore City;Election District 15:Precinct 3	precinct
+Maryland;Baltimore City;Election District 15:Precinct 4	precinct
+Maryland;Baltimore City;Election District 15:Precinct 5	precinct
+Maryland;Baltimore City;Election District 15:Precinct 6	precinct
+Maryland;Baltimore City;Election District 15:Precinct 7	precinct
+Maryland;Baltimore City;Election District 15:Precinct 8	precinct
+Maryland;Baltimore City;Election District 15:Precinct 9	precinct
+Maryland;Baltimore City;Election District 15:Precinct 10	precinct
+Maryland;Baltimore City;Election District 15:Precinct 11	precinct
+Maryland;Baltimore City;Election District 15:Precinct 12	precinct
+Maryland;Baltimore City;Election District 15:Precinct 13	precinct
+Maryland;Baltimore City;Election District 15:Precinct 14	precinct
+Maryland;Baltimore City;Election District 15:Precinct 15	precinct
+Maryland;Baltimore City;Election District 15:Precinct 16	precinct
+Maryland;Baltimore City;Election District 15:Precinct 17	precinct
+Maryland;Baltimore City;Election District 15:Precinct 18	precinct
+Maryland;Baltimore City;Election District 15:Precinct 19	precinct
+Maryland;Baltimore City;Election District 15:Precinct 20	precinct
+Maryland;Baltimore City;Election District 15:Precinct 21	precinct
+Maryland;Baltimore City;Election District 15:Precinct 22	precinct
+Maryland;Baltimore City;Election District 15:Precinct 23	precinct
+Maryland;Baltimore City;Election District 15:Precinct 24	precinct
+Maryland;Baltimore City;Election District 15:Precinct 25	precinct
+Maryland;Baltimore City;Election District 16:Precinct 1	precinct
+Maryland;Baltimore City;Election District 16:Precinct 2	precinct
+Maryland;Baltimore City;Election District 16:Precinct 3	precinct
+Maryland;Baltimore City;Election District 16:Precinct 4	precinct
+Maryland;Baltimore City;Election District 16:Precinct 5	precinct
+Maryland;Baltimore City;Election District 16:Precinct 6	precinct
+Maryland;Baltimore City;Election District 16:Precinct 7	precinct
+Maryland;Baltimore City;Election District 16:Precinct 8	precinct
+Maryland;Baltimore City;Election District 16:Precinct 9	precinct
+Maryland;Baltimore City;Election District 16:Precinct 10	precinct
+Maryland;Baltimore City;Election District 16:Precinct 11	precinct
+Maryland;Baltimore City;Election District 16:Precinct 12	precinct
+Maryland;Baltimore City;Election District 16:Precinct 13	precinct
+Maryland;Baltimore City;Election District 16:Precinct 14	precinct
+Maryland;Baltimore City;Election District 17:Precinct 1	precinct
+Maryland;Baltimore City;Election District 17:Precinct 2	precinct
+Maryland;Baltimore City;Election District 18:Precinct 1	precinct
+Maryland;Baltimore City;Election District 18:Precinct 2	precinct
+Maryland;Baltimore City;Election District 19:Precinct 1	precinct
+Maryland;Baltimore City;Election District 19:Precinct 2	precinct
+Maryland;Baltimore City;Election District 19:Precinct 3	precinct
+Maryland;Baltimore City;Election District 20:Precinct 1	precinct
+Maryland;Baltimore City;Election District 20:Precinct 2	precinct
+Maryland;Baltimore City;Election District 20:Precinct 3	precinct
+Maryland;Baltimore City;Election District 20:Precinct 4	precinct
+Maryland;Baltimore City;Election District 20:Precinct 5	precinct
+Maryland;Baltimore City;Election District 20:Precinct 6	precinct
+Maryland;Baltimore City;Election District 20:Precinct 7	precinct
+Maryland;Baltimore City;Election District 20:Precinct 8	precinct
+Maryland;Baltimore City;Election District 20:Precinct 9	precinct
+Maryland;Baltimore City;Election District 20:Precinct 10	precinct
+Maryland;Baltimore City;Election District 20:Precinct 11	precinct
+Maryland;Baltimore City;Election District 20:Precinct 12	precinct
+Maryland;Baltimore City;Election District 21:Precinct 1	precinct
+Maryland;Baltimore City;Election District 21:Precinct 2	precinct
+Maryland;Baltimore City;Election District 21:Precinct 3	precinct
+Maryland;Baltimore City;Election District 21:Precinct 4	precinct
+Maryland;Baltimore City;Election District 21:Precinct 5	precinct
+Maryland;Baltimore City;Election District 22:Precinct 1	precinct
+Maryland;Baltimore City;Election District 22:Precinct 2	precinct
+Maryland;Baltimore City;Election District 23:Precinct 1	precinct
+Maryland;Baltimore City;Election District 23:Precinct 2	precinct
+Maryland;Baltimore City;Election District 23:Precinct 3	precinct
+Maryland;Baltimore City;Election District 24:Precinct 1	precinct
+Maryland;Baltimore City;Election District 24:Precinct 2	precinct
+Maryland;Baltimore City;Election District 24:Precinct 3	precinct
+Maryland;Baltimore City;Election District 24:Precinct 4	precinct
+Maryland;Baltimore City;Election District 24:Precinct 5	precinct
+Maryland;Baltimore City;Election District 25:Precinct 1	precinct
+Maryland;Baltimore City;Election District 25:Precinct 2	precinct
+Maryland;Baltimore City;Election District 25:Precinct 3	precinct
+Maryland;Baltimore City;Election District 25:Precinct 4	precinct
+Maryland;Baltimore City;Election District 25:Precinct 5	precinct
+Maryland;Baltimore City;Election District 25:Precinct 6	precinct
+Maryland;Baltimore City;Election District 25:Precinct 7	precinct
+Maryland;Baltimore City;Election District 25:Precinct 8	precinct
+Maryland;Baltimore City;Election District 25:Precinct 9	precinct
+Maryland;Baltimore City;Election District 25:Precinct 10	precinct
+Maryland;Baltimore City;Election District 25:Precinct 11	precinct
+Maryland;Baltimore City;Election District 25:Precinct 12	precinct
+Maryland;Baltimore City;Election District 25:Precinct 13	precinct
+Maryland;Baltimore City;Election District 25:Precinct 14	precinct
+Maryland;Baltimore City;Election District 25:Precinct 15	precinct
+Maryland;Baltimore City;Election District 25:Precinct 16	precinct
+Maryland;Baltimore City;Election District 25:Precinct 17	precinct
+Maryland;Baltimore City;Election District 25:Precinct 18	precinct
+Maryland;Baltimore City;Election District 26:Precinct 1	precinct
+Maryland;Baltimore City;Election District 26:Precinct 2	precinct
+Maryland;Baltimore City;Election District 26:Precinct 3	precinct
+Maryland;Baltimore City;Election District 26:Precinct 4	precinct
+Maryland;Baltimore City;Election District 26:Precinct 5	precinct
+Maryland;Baltimore City;Election District 26:Precinct 6	precinct
+Maryland;Baltimore City;Election District 26:Precinct 7	precinct
+Maryland;Baltimore City;Election District 26:Precinct 8	precinct
+Maryland;Baltimore City;Election District 26:Precinct 9	precinct
+Maryland;Baltimore City;Election District 26:Precinct 10	precinct
+Maryland;Baltimore City;Election District 26:Precinct 11	precinct
+Maryland;Baltimore City;Election District 26:Precinct 12	precinct
+Maryland;Baltimore City;Election District 26:Precinct 13	precinct
+Maryland;Baltimore City;Election District 26:Precinct 14	precinct
+Maryland;Baltimore City;Election District 26:Precinct 15	precinct
+Maryland;Baltimore City;Election District 26:Precinct 16	precinct
+Maryland;Baltimore City;Election District 26:Precinct 17	precinct
+Maryland;Baltimore City;Election District 26:Precinct 18	precinct
+Maryland;Baltimore City;Election District 26:Precinct 19	precinct
+Maryland;Baltimore City;Election District 26:Precinct 20	precinct
+Maryland;Baltimore City;Election District 26:Precinct 21	precinct
+Maryland;Baltimore City;Election District 26:Precinct 22	precinct
+Maryland;Baltimore City;Election District 26:Precinct 23	precinct
+Maryland;Baltimore City;Election District 26:Precinct 24	precinct
+Maryland;Baltimore City;Election District 26:Precinct 25	precinct
+Maryland;Baltimore City;Election District 26:Precinct 26	precinct
+Maryland;Baltimore City;Election District 26:Precinct 27	precinct
+Maryland;Baltimore City;Election District 26:Precinct 28	precinct
+Maryland;Baltimore City;Election District 26:Precinct 29	precinct
+Maryland;Baltimore City;Election District 26:Precinct 30	precinct
+Maryland;Baltimore City;Election District 26:Precinct 31	precinct
+Maryland;Baltimore City;Election District 26:Precinct 32	precinct
+Maryland;Baltimore City;Election District 26:Precinct 33	precinct
+Maryland;Baltimore City;Election District 27:Precinct 1	precinct
+Maryland;Baltimore City;Election District 27:Precinct 2	precinct
+Maryland;Baltimore City;Election District 27:Precinct 3	precinct
+Maryland;Baltimore City;Election District 27:Precinct 4	precinct
+Maryland;Baltimore City;Election District 27:Precinct 5	precinct
+Maryland;Baltimore City;Election District 27:Precinct 6	precinct
+Maryland;Baltimore City;Election District 27:Precinct 7	precinct
+Maryland;Baltimore City;Election District 27:Precinct 8	precinct
+Maryland;Baltimore City;Election District 27:Precinct 9	precinct
+Maryland;Baltimore City;Election District 27:Precinct 10	precinct
+Maryland;Baltimore City;Election District 27:Precinct 11	precinct
+Maryland;Baltimore City;Election District 27:Precinct 12	precinct
+Maryland;Baltimore City;Election District 27:Precinct 13	precinct
+Maryland;Baltimore City;Election District 27:Precinct 14	precinct
+Maryland;Baltimore City;Election District 27:Precinct 15	precinct
+Maryland;Baltimore City;Election District 27:Precinct 16	precinct
+Maryland;Baltimore City;Election District 27:Precinct 17	precinct
+Maryland;Baltimore City;Election District 27:Precinct 18	precinct
+Maryland;Baltimore City;Election District 27:Precinct 19	precinct
+Maryland;Baltimore City;Election District 27:Precinct 20	precinct
+Maryland;Baltimore City;Election District 27:Precinct 21	precinct
+Maryland;Baltimore City;Election District 27:Precinct 22	precinct
+Maryland;Baltimore City;Election District 27:Precinct 23	precinct
+Maryland;Baltimore City;Election District 27:Precinct 24	precinct
+Maryland;Baltimore City;Election District 27:Precinct 25	precinct
+Maryland;Baltimore City;Election District 27:Precinct 26	precinct
+Maryland;Baltimore City;Election District 27:Precinct 27	precinct
+Maryland;Baltimore City;Election District 27:Precinct 28	precinct
+Maryland;Baltimore City;Election District 27:Precinct 29	precinct
+Maryland;Baltimore City;Election District 27:Precinct 30	precinct
+Maryland;Baltimore City;Election District 27:Precinct 31	precinct
+Maryland;Baltimore City;Election District 27:Precinct 32	precinct
+Maryland;Baltimore City;Election District 27:Precinct 33	precinct
+Maryland;Baltimore City;Election District 27:Precinct 34	precinct
+Maryland;Baltimore City;Election District 27:Precinct 35	precinct
+Maryland;Baltimore City;Election District 27:Precinct 36	precinct
+Maryland;Baltimore City;Election District 27:Precinct 37	precinct
+Maryland;Baltimore City;Election District 27:Precinct 38	precinct
+Maryland;Baltimore City;Election District 27:Precinct 39	precinct
+Maryland;Baltimore City;Election District 27:Precinct 40	precinct
+Maryland;Baltimore City;Election District 27:Precinct 41	precinct
+Maryland;Baltimore City;Election District 27:Precinct 42	precinct
+Maryland;Baltimore City;Election District 27:Precinct 43	precinct
+Maryland;Baltimore City;Election District 27:Precinct 44	precinct
+Maryland;Baltimore City;Election District 27:Precinct 45	precinct
+Maryland;Baltimore City;Election District 27:Precinct 46	precinct
+Maryland;Baltimore City;Election District 27:Precinct 47	precinct
+Maryland;Baltimore City;Election District 27:Precinct 48	precinct
+Maryland;Baltimore City;Election District 27:Precinct 49	precinct
+Maryland;Baltimore City;Election District 27:Precinct 50	precinct
+Maryland;Baltimore City;Election District 27:Precinct 51	precinct
+Maryland;Baltimore City;Election District 27:Precinct 52	precinct
+Maryland;Baltimore City;Election District 27:Precinct 53	precinct
+Maryland;Baltimore City;Election District 27:Precinct 54	precinct
+Maryland;Baltimore City;Election District 27:Precinct 55	precinct
+Maryland;Baltimore City;Election District 27:Precinct 56	precinct
+Maryland;Baltimore City;Election District 27:Precinct 57	precinct
+Maryland;Baltimore City;Election District 27:Precinct 58	precinct
+Maryland;Baltimore City;Election District 27:Precinct 59	precinct
+Maryland;Baltimore City;Election District 27:Precinct 60	precinct
+Maryland;Baltimore City;Election District 27:Precinct 61	precinct
+Maryland;Baltimore City;Election District 27:Precinct 62	precinct
+Maryland;Baltimore City;Election District 27:Precinct 63	precinct
+Maryland;Baltimore City;Election District 27:Precinct 64	precinct
+Maryland;Baltimore City;Election District 27:Precinct 65	precinct
+Maryland;Baltimore City;Election District 27:Precinct 66	precinct
+Maryland;Baltimore City;Election District 27:Precinct 67	precinct
+Maryland;Baltimore City;Election District 28:Precinct 1	precinct
+Maryland;Baltimore City;Election District 28:Precinct 2	precinct
+Maryland;Baltimore City;Election District 28:Precinct 3	precinct
+Maryland;Baltimore City;Election District 28:Precinct 4	precinct
+Maryland;Baltimore City;Election District 28:Precinct 5	precinct
+Maryland;Baltimore City;Election District 28:Precinct 6	precinct
+Maryland;Baltimore City;Election District 28:Precinct 7	precinct
+Maryland;Baltimore City;Election District 28:Precinct 8	precinct
+Maryland;Baltimore City;Election District 28:Precinct 9	precinct
+Maryland;Baltimore City;Election District 28:Precinct 10	precinct
+Maryland;Baltimore City;Election District 28:Precinct 11	precinct
+Maryland;Baltimore City;Election District 28:Precinct 12	precinct
+Maryland;Baltimore City;Election District 28:Precinct 13	precinct
+Maryland;Baltimore City;Election District 28:Precinct 14	precinct
+Maryland;Baltimore City;Election District 28:Precinct 15	precinct
+Maryland;Baltimore County;Election District 1:Precinct 1	precinct
+Maryland;Baltimore County;Election District 1:Precinct 2	precinct
+Maryland;Baltimore County;Election District 1:Precinct 3	precinct
+Maryland;Baltimore County;Election District 1:Precinct 4	precinct
+Maryland;Baltimore County;Election District 1:Precinct 5	precinct
+Maryland;Baltimore County;Election District 1:Precinct 6	precinct
+Maryland;Baltimore County;Election District 1:Precinct 7	precinct
+Maryland;Baltimore County;Election District 1:Precinct 8	precinct
+Maryland;Baltimore County;Election District 1:Precinct 9	precinct
+Maryland;Baltimore County;Election District 1:Precinct 10	precinct
+Maryland;Baltimore County;Election District 1:Precinct 11	precinct
+Maryland;Baltimore County;Election District 1:Precinct 12	precinct
+Maryland;Baltimore County;Election District 1:Precinct 13	precinct
+Maryland;Baltimore County;Election District 1:Precinct 14	precinct
+Maryland;Baltimore County;Election District 1:Precinct 15	precinct
+Maryland;Baltimore County;Election District 1:Precinct 16	precinct
+Maryland;Baltimore County;Election District 1:Precinct 17	precinct
+Maryland;Baltimore County;Election District 2:Precinct 1	precinct
+Maryland;Baltimore County;Election District 2:Precinct 2	precinct
+Maryland;Baltimore County;Election District 2:Precinct 3	precinct
+Maryland;Baltimore County;Election District 2:Precinct 4	precinct
+Maryland;Baltimore County;Election District 2:Precinct 5	precinct
+Maryland;Baltimore County;Election District 2:Precinct 6	precinct
+Maryland;Baltimore County;Election District 2:Precinct 7	precinct
+Maryland;Baltimore County;Election District 2:Precinct 8	precinct
+Maryland;Baltimore County;Election District 2:Precinct 9	precinct
+Maryland;Baltimore County;Election District 2:Precinct 10	precinct
+Maryland;Baltimore County;Election District 2:Precinct 11	precinct
+Maryland;Baltimore County;Election District 2:Precinct 12	precinct
+Maryland;Baltimore County;Election District 2:Precinct 13	precinct
+Maryland;Baltimore County;Election District 2:Precinct 14	precinct
+Maryland;Baltimore County;Election District 2:Precinct 15	precinct
+Maryland;Baltimore County;Election District 2:Precinct 16	precinct
+Maryland;Baltimore County;Election District 2:Precinct 17	precinct
+Maryland;Baltimore County;Election District 2:Precinct 18	precinct
+Maryland;Baltimore County;Election District 2:Precinct 19	precinct
+Maryland;Baltimore County;Election District 2:Precinct 20	precinct
+Maryland;Baltimore County;Election District 2:Precinct 21	precinct
+Maryland;Baltimore County;Election District 2:Precinct 22	precinct
+Maryland;Baltimore County;Election District 2:Precinct 23	precinct
+Maryland;Baltimore County;Election District 2:Precinct 24	precinct
+Maryland;Baltimore County;Election District 2:Precinct 25	precinct
+Maryland;Baltimore County;Election District 2:Precinct 26	precinct
+Maryland;Baltimore County;Election District 2:Precinct 27	precinct
+Maryland;Baltimore County;Election District 2:Precinct 28	precinct
+Maryland;Baltimore County;Election District 2:Precinct 29	precinct
+Maryland;Baltimore County;Election District 2:Precinct 30	precinct
+Maryland;Baltimore County;Election District 2:Precinct 31	precinct
+Maryland;Baltimore County;Election District 3:Precinct 1	precinct
+Maryland;Baltimore County;Election District 3:Precinct 2	precinct
+Maryland;Baltimore County;Election District 3:Precinct 3	precinct
+Maryland;Baltimore County;Election District 3:Precinct 4	precinct
+Maryland;Baltimore County;Election District 3:Precinct 5	precinct
+Maryland;Baltimore County;Election District 3:Precinct 6	precinct
+Maryland;Baltimore County;Election District 3:Precinct 7	precinct
+Maryland;Baltimore County;Election District 3:Precinct 8	precinct
+Maryland;Baltimore County;Election District 3:Precinct 9	precinct
+Maryland;Baltimore County;Election District 3:Precinct 10	precinct
+Maryland;Baltimore County;Election District 3:Precinct 11	precinct
+Maryland;Baltimore County;Election District 3:Precinct 12	precinct
+Maryland;Baltimore County;Election District 3:Precinct 13	precinct
+Maryland;Baltimore County;Election District 3:Precinct 14	precinct
+Maryland;Baltimore County;Election District 4:Precinct 1	precinct
+Maryland;Baltimore County;Election District 4:Precinct 2	precinct
+Maryland;Baltimore County;Election District 4:Precinct 3	precinct
+Maryland;Baltimore County;Election District 4:Precinct 4	precinct
+Maryland;Baltimore County;Election District 4:Precinct 5	precinct
+Maryland;Baltimore County;Election District 4:Precinct 6	precinct
+Maryland;Baltimore County;Election District 4:Precinct 7	precinct
+Maryland;Baltimore County;Election District 4:Precinct 8	precinct
+Maryland;Baltimore County;Election District 4:Precinct 9	precinct
+Maryland;Baltimore County;Election District 4:Precinct 10	precinct
+Maryland;Baltimore County;Election District 4:Precinct 11	precinct
+Maryland;Baltimore County;Election District 4:Precinct 12	precinct
+Maryland;Baltimore County;Election District 4:Precinct 13	precinct
+Maryland;Baltimore County;Election District 4:Precinct 14	precinct
+Maryland;Baltimore County;Election District 4:Precinct 15	precinct
+Maryland;Baltimore County;Election District 5:Precinct 1	precinct
+Maryland;Baltimore County;Election District 5:Precinct 2	precinct
+Maryland;Baltimore County;Election District 6:Precinct 1	precinct
+Maryland;Baltimore County;Election District 6:Precinct 2	precinct
+Maryland;Baltimore County;Election District 7:Precinct 1	precinct
+Maryland;Baltimore County;Election District 7:Precinct 2	precinct
+Maryland;Baltimore County;Election District 7:Precinct 3	precinct
+Maryland;Baltimore County;Election District 8:Precinct 1	precinct
+Maryland;Baltimore County;Election District 8:Precinct 2	precinct
+Maryland;Baltimore County;Election District 8:Precinct 3	precinct
+Maryland;Baltimore County;Election District 8:Precinct 4	precinct
+Maryland;Baltimore County;Election District 8:Precinct 5	precinct
+Maryland;Baltimore County;Election District 8:Precinct 6	precinct
+Maryland;Baltimore County;Election District 8:Precinct 7	precinct
+Maryland;Baltimore County;Election District 8:Precinct 8	precinct
+Maryland;Baltimore County;Election District 8:Precinct 9	precinct
+Maryland;Baltimore County;Election District 8:Precinct 10	precinct
+Maryland;Baltimore County;Election District 8:Precinct 11	precinct
+Maryland;Baltimore County;Election District 8:Precinct 12	precinct
+Maryland;Baltimore County;Election District 8:Precinct 13	precinct
+Maryland;Baltimore County;Election District 8:Precinct 14	precinct
+Maryland;Baltimore County;Election District 8:Precinct 15	precinct
+Maryland;Baltimore County;Election District 8:Precinct 16	precinct
+Maryland;Baltimore County;Election District 8:Precinct 17	precinct
+Maryland;Baltimore County;Election District 8:Precinct 18	precinct
+Maryland;Baltimore County;Election District 8:Precinct 19	precinct
+Maryland;Baltimore County;Election District 8:Precinct 20	precinct
+Maryland;Baltimore County;Election District 8:Precinct 21	precinct
+Maryland;Baltimore County;Election District 8:Precinct 22	precinct
+Maryland;Baltimore County;Election District 8:Precinct 23	precinct
+Maryland;Baltimore County;Election District 8:Precinct 24	precinct
+Maryland;Baltimore County;Election District 8:Precinct 25	precinct
+Maryland;Baltimore County;Election District 8:Precinct 26	precinct
+Maryland;Baltimore County;Election District 8:Precinct 27	precinct
+Maryland;Baltimore County;Election District 8:Precinct 28	precinct
+Maryland;Baltimore County;Election District 9:Precinct 1	precinct
+Maryland;Baltimore County;Election District 9:Precinct 2	precinct
+Maryland;Baltimore County;Election District 9:Precinct 3	precinct
+Maryland;Baltimore County;Election District 9:Precinct 4	precinct
+Maryland;Baltimore County;Election District 9:Precinct 5	precinct
+Maryland;Baltimore County;Election District 9:Precinct 6	precinct
+Maryland;Baltimore County;Election District 9:Precinct 7	precinct
+Maryland;Baltimore County;Election District 9:Precinct 8	precinct
+Maryland;Baltimore County;Election District 9:Precinct 9	precinct
+Maryland;Baltimore County;Election District 9:Precinct 10	precinct
+Maryland;Baltimore County;Election District 9:Precinct 11	precinct
+Maryland;Baltimore County;Election District 9:Precinct 12	precinct
+Maryland;Baltimore County;Election District 9:Precinct 13	precinct
+Maryland;Baltimore County;Election District 9:Precinct 14	precinct
+Maryland;Baltimore County;Election District 9:Precinct 15	precinct
+Maryland;Baltimore County;Election District 9:Precinct 16	precinct
+Maryland;Baltimore County;Election District 9:Precinct 17	precinct
+Maryland;Baltimore County;Election District 9:Precinct 18	precinct
+Maryland;Baltimore County;Election District 9:Precinct 19	precinct
+Maryland;Baltimore County;Election District 9:Precinct 20	precinct
+Maryland;Baltimore County;Election District 9:Precinct 21	precinct
+Maryland;Baltimore County;Election District 9:Precinct 22	precinct
+Maryland;Baltimore County;Election District 9:Precinct 23	precinct
+Maryland;Baltimore County;Election District 9:Precinct 24	precinct
+Maryland;Baltimore County;Election District 9:Precinct 25	precinct
+Maryland;Baltimore County;Election District 9:Precinct 26	precinct
+Maryland;Baltimore County;Election District 9:Precinct 27	precinct
+Maryland;Baltimore County;Election District 9:Precinct 28	precinct
+Maryland;Baltimore County;Election District 9:Precinct 29	precinct
+Maryland;Baltimore County;Election District 10:Precinct 1	precinct
+Maryland;Baltimore County;Election District 10:Precinct 2	precinct
+Maryland;Baltimore County;Election District 10:Precinct 3	precinct
+Maryland;Baltimore County;Election District 10:Precinct 4	precinct
+Maryland;Baltimore County;Election District 10:Precinct 5	precinct
+Maryland;Baltimore County;Election District 10:Precinct 6	precinct
+Maryland;Baltimore County;Election District 10:Precinct 7	precinct
+Maryland;Baltimore County;Election District 11:Precinct 1	precinct
+Maryland;Baltimore County;Election District 11:Precinct 2	precinct
+Maryland;Baltimore County;Election District 11:Precinct 3	precinct
+Maryland;Baltimore County;Election District 11:Precinct 4	precinct
+Maryland;Baltimore County;Election District 11:Precinct 5	precinct
+Maryland;Baltimore County;Election District 11:Precinct 6	precinct
+Maryland;Baltimore County;Election District 11:Precinct 7	precinct
+Maryland;Baltimore County;Election District 11:Precinct 8	precinct
+Maryland;Baltimore County;Election District 11:Precinct 9	precinct
+Maryland;Baltimore County;Election District 11:Precinct 10	precinct
+Maryland;Baltimore County;Election District 11:Precinct 11	precinct
+Maryland;Baltimore County;Election District 11:Precinct 12	precinct
+Maryland;Baltimore County;Election District 11:Precinct 13	precinct
+Maryland;Baltimore County;Election District 11:Precinct 14	precinct
+Maryland;Baltimore County;Election District 11:Precinct 15	precinct
+Maryland;Baltimore County;Election District 11:Precinct 16	precinct
+Maryland;Baltimore County;Election District 11:Precinct 17	precinct
+Maryland;Baltimore County;Election District 11:Precinct 18	precinct
+Maryland;Baltimore County;Election District 11:Precinct 19	precinct
+Maryland;Baltimore County;Election District 11:Precinct 20	precinct
+Maryland;Baltimore County;Election District 11:Precinct 21	precinct
+Maryland;Baltimore County;Election District 11:Precinct 22	precinct
+Maryland;Baltimore County;Election District 11:Precinct 23	precinct
+Maryland;Baltimore County;Election District 11:Precinct 24	precinct
+Maryland;Baltimore County;Election District 11:Precinct 26	precinct
+Maryland;Baltimore County;Election District 11:Precinct 27	precinct
+Maryland;Baltimore County;Election District 12:Precinct 1	precinct
+Maryland;Baltimore County;Election District 12:Precinct 2	precinct
+Maryland;Baltimore County;Election District 12:Precinct 3	precinct
+Maryland;Baltimore County;Election District 12:Precinct 4	precinct
+Maryland;Baltimore County;Election District 12:Precinct 5	precinct
+Maryland;Baltimore County;Election District 12:Precinct 6	precinct
+Maryland;Baltimore County;Election District 12:Precinct 7	precinct
+Maryland;Baltimore County;Election District 12:Precinct 8	precinct
+Maryland;Baltimore County;Election District 12:Precinct 9	precinct
+Maryland;Baltimore County;Election District 12:Precinct 10	precinct
+Maryland;Baltimore County;Election District 12:Precinct 11	precinct
+Maryland;Baltimore County;Election District 12:Precinct 12	precinct
+Maryland;Baltimore County;Election District 12:Precinct 13	precinct
+Maryland;Baltimore County;Election District 13:Precinct 1	precinct
+Maryland;Baltimore County;Election District 13:Precinct 2	precinct
+Maryland;Baltimore County;Election District 13:Precinct 3	precinct
+Maryland;Baltimore County;Election District 13:Precinct 4	precinct
+Maryland;Baltimore County;Election District 13:Precinct 5	precinct
+Maryland;Baltimore County;Election District 13:Precinct 6	precinct
+Maryland;Baltimore County;Election District 13:Precinct 7	precinct
+Maryland;Baltimore County;Election District 13:Precinct 8	precinct
+Maryland;Baltimore County;Election District 13:Precinct 9	precinct
+Maryland;Baltimore County;Election District 14:Precinct 1	precinct
+Maryland;Baltimore County;Election District 14:Precinct 2	precinct
+Maryland;Baltimore County;Election District 14:Precinct 3	precinct
+Maryland;Baltimore County;Election District 14:Precinct 4	precinct
+Maryland;Baltimore County;Election District 14:Precinct 5	precinct
+Maryland;Baltimore County;Election District 14:Precinct 6	precinct
+Maryland;Baltimore County;Election District 14:Precinct 7	precinct
+Maryland;Baltimore County;Election District 14:Precinct 8	precinct
+Maryland;Baltimore County;Election District 14:Precinct 9	precinct
+Maryland;Baltimore County;Election District 14:Precinct 10	precinct
+Maryland;Baltimore County;Election District 14:Precinct 11	precinct
+Maryland;Baltimore County;Election District 14:Precinct 12	precinct
+Maryland;Baltimore County;Election District 14:Precinct 13	precinct
+Maryland;Baltimore County;Election District 14:Precinct 14	precinct
+Maryland;Baltimore County;Election District 15:Precinct 1	precinct
+Maryland;Baltimore County;Election District 15:Precinct 2	precinct
+Maryland;Baltimore County;Election District 15:Precinct 3	precinct
+Maryland;Baltimore County;Election District 15:Precinct 4	precinct
+Maryland;Baltimore County;Election District 15:Precinct 5	precinct
+Maryland;Baltimore County;Election District 15:Precinct 6	precinct
+Maryland;Baltimore County;Election District 15:Precinct 7	precinct
+Maryland;Baltimore County;Election District 15:Precinct 8	precinct
+Maryland;Baltimore County;Election District 15:Precinct 9	precinct
+Maryland;Baltimore County;Election District 15:Precinct 10	precinct
+Maryland;Baltimore County;Election District 15:Precinct 11	precinct
+Maryland;Baltimore County;Election District 15:Precinct 12	precinct
+Maryland;Baltimore County;Election District 15:Precinct 13	precinct
+Maryland;Baltimore County;Election District 15:Precinct 14	precinct
+Maryland;Baltimore County;Election District 15:Precinct 15	precinct
+Maryland;Baltimore County;Election District 15:Precinct 16	precinct
+Maryland;Baltimore County;Election District 15:Precinct 17	precinct
+Maryland;Baltimore County;Election District 15:Precinct 18	precinct
+Maryland;Baltimore County;Election District 15:Precinct 19	precinct
+Maryland;Baltimore County;Election District 15:Precinct 20	precinct
+Maryland;Baltimore County;Election District 15:Precinct 21	precinct
+Maryland;Baltimore County;Election District 15:Precinct 22	precinct
+Maryland;Baltimore County;Election District 15:Precinct 23	precinct
+Maryland;Baltimore County;Election District 15:Precinct 24	precinct
+Maryland;Baltimore County;Election District 15:Precinct 25	precinct
+Maryland;Baltimore County;Election District 15:Precinct 26	precinct
+Maryland;Calvert County;Election District 1:Precinct 1	precinct
+Maryland;Calvert County;Election District 1:Precinct 2	precinct
+Maryland;Calvert County;Election District 1:Precinct 3	precinct
+Maryland;Calvert County;Election District 1:Precinct 4	precinct
+Maryland;Calvert County;Election District 1:Precinct 5	precinct
+Maryland;Calvert County;Election District 1:Precinct 6	precinct
+Maryland;Calvert County;Election District 1:Precinct 7	precinct
+Maryland;Calvert County;Election District 2:Precinct 1	precinct
+Maryland;Calvert County;Election District 2:Precinct 2	precinct
+Maryland;Calvert County;Election District 2:Precinct 3	precinct
+Maryland;Calvert County;Election District 2:Precinct 4	precinct
+Maryland;Calvert County;Election District 2:Precinct 5	precinct
+Maryland;Calvert County;Election District 2:Precinct 6	precinct
+Maryland;Calvert County;Election District 2:Precinct 7	precinct
+Maryland;Calvert County;Election District 2:Precinct 8	precinct
+Maryland;Calvert County;Election District 3:Precinct 1	precinct
+Maryland;Calvert County;Election District 3:Precinct 2	precinct
+Maryland;Calvert County;Election District 3:Precinct 3	precinct
+Maryland;Calvert County;Election District 3:Precinct 4	precinct
+Maryland;Calvert County;Election District 3:Precinct 5	precinct
+Maryland;Calvert County;Election District 3:Precinct 6	precinct
+Maryland;Calvert County;Election District 3:Precinct 7	precinct
+Maryland;Calvert County;Election District 3:Precinct 8	precinct
+Maryland;Caroline County;Election District 1:Precinct 1	precinct
+Maryland;Caroline County;Election District 2:Precinct 1	precinct
+Maryland;Caroline County;Election District 3:Precinct 1	precinct
+Maryland;Caroline County;Election District 4:Precinct 1	precinct
+Maryland;Caroline County;Election District 5:Precinct 1	precinct
+Maryland;Caroline County;Election District 6:Precinct 1	precinct
+Maryland;Caroline County;Election District 7:Precinct 1	precinct
+Maryland;Caroline County;Election District 8:Precinct 1	precinct
+Maryland;Carroll County;Election District 1:Precinct 1	precinct
+Maryland;Carroll County;Election District 1:Precinct 2	precinct
+Maryland;Carroll County;Election District 2:Precinct 1	precinct
+Maryland;Carroll County;Election District 2:Precinct 2	precinct
+Maryland;Carroll County;Election District 3:Precinct 1	precinct
+Maryland;Carroll County;Election District 4:Precinct 1	precinct
+Maryland;Carroll County;Election District 4:Precinct 2	precinct
+Maryland;Carroll County;Election District 4:Precinct 3	precinct
+Maryland;Carroll County;Election District 5:Precinct 1	precinct
+Maryland;Carroll County;Election District 5:Precinct 2	precinct
+Maryland;Carroll County;Election District 5:Precinct 3	precinct
+Maryland;Carroll County;Election District 5:Precinct 4	precinct
+Maryland;Carroll County;Election District 5:Precinct 5	precinct
+Maryland;Carroll County;Election District 5:Precinct 6	precinct
+Maryland;Carroll County;Election District 6:Precinct 1	precinct
+Maryland;Carroll County;Election District 6:Precinct 2	precinct
+Maryland;Carroll County;Election District 7:Precinct 1	precinct
+Maryland;Carroll County;Election District 7:Precinct 2	precinct
+Maryland;Carroll County;Election District 7:Precinct 3	precinct
+Maryland;Carroll County;Election District 7:Precinct 4	precinct
+Maryland;Carroll County;Election District 7:Precinct 5	precinct
+Maryland;Carroll County;Election District 7:Precinct 6	precinct
+Maryland;Carroll County;Election District 7:Precinct 7	precinct
+Maryland;Carroll County;Election District 7:Precinct 8	precinct
+Maryland;Carroll County;Election District 8:Precinct 1	precinct
+Maryland;Carroll County;Election District 8:Precinct 2	precinct
+Maryland;Carroll County;Election District 8:Precinct 3	precinct
+Maryland;Carroll County;Election District 9:Precinct 1	precinct
+Maryland;Carroll County;Election District 9:Precinct 2	precinct
+Maryland;Carroll County;Election District 10:Precinct 1	precinct
+Maryland;Carroll County;Election District 11:Precinct 1	precinct
+Maryland;Carroll County;Election District 12:Precinct 1	precinct
+Maryland;Carroll County;Election District 13:Precinct 1	precinct
+Maryland;Carroll County;Election District 14:Precinct 1	precinct
+Maryland;Carroll County;Election District 14:Precinct 2	precinct
+Maryland;Carroll County;Election District 14:Precinct 3	precinct
+Maryland;Cecil County;Election District 1:Precinct 1	precinct
+Maryland;Cecil County;Election District 2:Precinct 1	precinct
+Maryland;Cecil County;Election District 2:Precinct 2	precinct
+Maryland;Cecil County;Election District 3:Precinct 1	precinct
+Maryland;Cecil County;Election District 3:Precinct 2	precinct
+Maryland;Cecil County;Election District 3:Precinct 3	precinct
+Maryland;Cecil County;Election District 3:Precinct 4	precinct
+Maryland;Cecil County;Election District 3:Precinct 5	precinct
+Maryland;Cecil County;Election District 3:Precinct 6	precinct
+Maryland;Cecil County;Election District 3:Precinct 7	precinct
+Maryland;Cecil County;Election District 4:Precinct 1	precinct
+Maryland;Cecil County;Election District 4:Precinct 2	precinct
+Maryland;Cecil County;Election District 5:Precinct 1	precinct
+Maryland;Cecil County;Election District 5:Precinct 2	precinct
+Maryland;Cecil County;Election District 5:Precinct 3	precinct
+Maryland;Cecil County;Election District 5:Precinct 4	precinct
+Maryland;Cecil County;Election District 5:Precinct 5	precinct
+Maryland;Cecil County;Election District 5:Precinct 6	precinct
+Maryland;Cecil County;Election District 6:Precinct 1	precinct
+Maryland;Cecil County;Election District 6:Precinct 2	precinct
+Maryland;Cecil County;Election District 6:Precinct 3	precinct
+Maryland;Cecil County;Election District 7:Precinct 1	precinct
+Maryland;Cecil County;Election District 7:Precinct 2	precinct
+Maryland;Cecil County;Election District 7:Precinct 3	precinct
+Maryland;Cecil County;Election District 7:Precinct 4	precinct
+Maryland;Cecil County;Election District 8:Precinct 1	precinct
+Maryland;Cecil County;Election District 9:Precinct 1	precinct
+Maryland;Cecil County;Election District 9:Precinct 2	precinct
+Maryland;Charles County;Election District 1:Precinct 1	precinct
+Maryland;Charles County;Election District 1:Precinct 2	precinct
+Maryland;Charles County;Election District 1:Precinct 3	precinct
+Maryland;Charles County;Election District 1:Precinct 4	precinct
+Maryland;Charles County;Election District 2:Precinct 1	precinct
+Maryland;Charles County;Election District 3:Precinct 1	precinct
+Maryland;Charles County;Election District 4:Precinct 1	precinct
+Maryland;Charles County;Election District 4:Precinct 2	precinct
+Maryland;Charles County;Election District 5:Precinct 1	precinct
+Maryland;Charles County;Election District 6:Precinct 1	precinct
+Maryland;Charles County;Election District 6:Precinct 2	precinct
+Maryland;Charles County;Election District 6:Precinct 3	precinct
+Maryland;Charles County;Election District 6:Precinct 4	precinct
+Maryland;Charles County;Election District 6:Precinct 5	precinct
+Maryland;Charles County;Election District 6:Precinct 6	precinct
+Maryland;Charles County;Election District 6:Precinct 7	precinct
+Maryland;Charles County;Election District 6:Precinct 8	precinct
+Maryland;Charles County;Election District 6:Precinct 9	precinct
+Maryland;Charles County;Election District 6:Precinct 10	precinct
+Maryland;Charles County;Election District 6:Precinct 11	precinct
+Maryland;Charles County;Election District 6:Precinct 12	precinct
+Maryland;Charles County;Election District 6:Precinct 13	precinct
+Maryland;Charles County;Election District 6:Precinct 14	precinct
+Maryland;Charles County;Election District 6:Precinct 15	precinct
+Maryland;Charles County;Election District 6:Precinct 16	precinct
+Maryland;Charles County;Election District 6:Precinct 17	precinct
+Maryland;Charles County;Election District 6:Precinct 18	precinct
+Maryland;Charles County;Election District 6:Precinct 19	precinct
+Maryland;Charles County;Election District 6:Precinct 20	precinct
+Maryland;Charles County;Election District 6:Precinct 21	precinct
+Maryland;Charles County;Election District 6:Precinct 22	precinct
+Maryland;Charles County;Election District 7:Precinct 1	precinct
+Maryland;Charles County;Election District 7:Precinct 2	precinct
+Maryland;Charles County;Election District 7:Precinct 3	precinct
+Maryland;Charles County;Election District 7:Precinct 4	precinct
+Maryland;Charles County;Election District 8:Precinct 1	precinct
+Maryland;Charles County;Election District 8:Precinct 2	precinct
+Maryland;Charles County;Election District 8:Precinct 3	precinct
+Maryland;Charles County;Election District 8:Precinct 4	precinct
+Maryland;Charles County;Election District 8:Precinct 5	precinct
+Maryland;Charles County;Election District 9:Precinct 1	precinct
+Maryland;Charles County;Election District 9:Precinct 2	precinct
+Maryland;Charles County;Election District 10:Precinct 1	precinct
+Maryland;Dorchester County;Election District 1:Precinct 1	precinct
+Maryland;Dorchester County;Election District 2:Precinct 1	precinct
+Maryland;Dorchester County;Election District 2:Precinct 2	precinct
+Maryland;Dorchester County;Election District 2:Precinct 3	precinct
+Maryland;Dorchester County;Election District 2:Precinct 4	precinct
+Maryland;Dorchester County;Election District 3:Precinct 1	precinct
+Maryland;Dorchester County;Election District 3:Precinct 2	precinct
+Maryland;Dorchester County;Election District 4:Precinct 1	precinct
+Maryland;Dorchester County;Election District 5:Precinct 1	precinct
+Maryland;Dorchester County;Election District 6:Precinct 1	precinct
+Maryland;Dorchester County;Election District 7:Precinct 1	precinct
+Maryland;Dorchester County;Election District 7:Precinct 2	precinct
+Maryland;Dorchester County;Election District 7:Precinct 3	precinct
+Maryland;Dorchester County;Election District 7:Precinct 4	precinct
+Maryland;Dorchester County;Election District 7:Precinct 5	precinct
+Maryland;Dorchester County;Election District 7:Precinct 6	precinct
+Maryland;Dorchester County;Election District 7:Precinct 7	precinct
+Maryland;Dorchester County;Election District 7:Precinct 8	precinct
+Maryland;Dorchester County;Election District 7:Precinct 9	precinct
+Maryland;Dorchester County;Election District 7:Precinct 10	precinct
+Maryland;Dorchester County;Election District 7:Precinct 11	precinct
+Maryland;Dorchester County;Election District 8:Precinct 1	precinct
+Maryland;Dorchester County;Election District 9:Precinct 1	precinct
+Maryland;Dorchester County;Election District 10:Precinct 1	precinct
+Maryland;Dorchester County;Election District 11:Precinct 1	precinct
+Maryland;Dorchester County;Election District 12:Precinct 1	precinct
+Maryland;Dorchester County;Election District 12:Precinct 2	precinct
+Maryland;Dorchester County;Election District 13:Precinct 1	precinct
+Maryland;Dorchester County;Election District 13:Precinct 2	precinct
+Maryland;Dorchester County;Election District 14:Precinct 1	precinct
+Maryland;Dorchester County;Election District 14:Precinct 2	precinct
+Maryland;Dorchester County;Election District 14:Precinct 3	precinct
+Maryland;Dorchester County;Election District 14:Precinct 4	precinct
+Maryland;Dorchester County;Election District 15:Precinct 1	precinct
+Maryland;Dorchester County;Election District 15:Precinct 2	precinct
+Maryland;Dorchester County;Election District 15:Precinct 3	precinct
+Maryland;Dorchester County;Election District 16:Precinct 1	precinct
+Maryland;Dorchester County;Election District 17:Precinct 1	precinct
+Maryland;Dorchester County;Election District 17:Precinct 2	precinct
+Maryland;Dorchester County;Election District 18:Precinct 1	precinct
+Maryland;Frederick County;Election District 1:Precinct 1	precinct
+Maryland;Frederick County;Election District 1:Precinct 2	precinct
+Maryland;Frederick County;Election District 1:Precinct 3	precinct
+Maryland;Frederick County;Election District 2:Precinct 1	precinct
+Maryland;Frederick County;Election District 2:Precinct 2	precinct
+Maryland;Frederick County;Election District 2:Precinct 3	precinct
+Maryland;Frederick County;Election District 2:Precinct 4	precinct
+Maryland;Frederick County;Election District 2:Precinct 5	precinct
+Maryland;Frederick County;Election District 2:Precinct 6	precinct
+Maryland;Frederick County;Election District 2:Precinct 7	precinct
+Maryland;Frederick County;Election District 2:Precinct 8	precinct
+Maryland;Frederick County;Election District 2:Precinct 10	precinct
+Maryland;Frederick County;Election District 2:Precinct 11	precinct
+Maryland;Frederick County;Election District 2:Precinct 13	precinct
+Maryland;Frederick County;Election District 2:Precinct 14	precinct
+Maryland;Frederick County;Election District 2:Precinct 15	precinct
+Maryland;Frederick County;Election District 2:Precinct 16	precinct
+Maryland;Frederick County;Election District 2:Precinct 17	precinct
+Maryland;Frederick County;Election District 2:Precinct 18	precinct
+Maryland;Frederick County;Election District 3:Precinct 1	precinct
+Maryland;Frederick County;Election District 3:Precinct 2	precinct
+Maryland;Frederick County;Election District 3:Precinct 3	precinct
+Maryland;Frederick County;Election District 4:Precinct 1	precinct
+Maryland;Frederick County;Election District 5:Precinct 1	precinct
+Maryland;Frederick County;Election District 6:Precinct 1	precinct
+Maryland;Frederick County;Election District 7:Precinct 1	precinct
+Maryland;Frederick County;Election District 7:Precinct 2	precinct
+Maryland;Frederick County;Election District 7:Precinct 3	precinct
+Maryland;Frederick County;Election District 7:Precinct 4	precinct
+Maryland;Frederick County;Election District 7:Precinct 5	precinct
+Maryland;Frederick County;Election District 7:Precinct 6	precinct
+Maryland;Frederick County;Election District 7:Precinct 7	precinct
+Maryland;Frederick County;Election District 8:Precinct 1	precinct
+Maryland;Frederick County;Election District 9:Precinct 1	precinct
+Maryland;Frederick County;Election District 9:Precinct 2	precinct
+Maryland;Frederick County;Election District 9:Precinct 3	precinct
+Maryland;Frederick County;Election District 9:Precinct 4	precinct
+Maryland;Frederick County;Election District 9:Precinct 5	precinct
+Maryland;Frederick County;Election District 9:Precinct 6	precinct
+Maryland;Frederick County;Election District 9:Precinct 7	precinct
+Maryland;Frederick County;Election District 9:Precinct 8	precinct
+Maryland;Frederick County;Election District 9:Precinct 9	precinct
+Maryland;Frederick County;Election District 10:Precinct 1	precinct
+Maryland;Frederick County;Election District 11:Precinct 1	precinct
+Maryland;Frederick County;Election District 12:Precinct 1	precinct
+Maryland;Frederick County;Election District 12:Precinct 2	precinct
+Maryland;Frederick County;Election District 13:Precinct 1	precinct
+Maryland;Frederick County;Election District 13:Precinct 2	precinct
+Maryland;Frederick County;Election District 13:Precinct 3	precinct
+Maryland;Frederick County;Election District 14:Precinct 1	precinct
+Maryland;Frederick County;Election District 14:Precinct 2	precinct
+Maryland;Frederick County;Election District 15:Precinct 1	precinct
+Maryland;Frederick County;Election District 15:Precinct 2	precinct
+Maryland;Frederick County;Election District 16:Precinct 1	precinct
+Maryland;Frederick County;Election District 17:Precinct 1	precinct
+Maryland;Frederick County;Election District 18:Precinct 1	precinct
+Maryland;Frederick County;Election District 18:Precinct 2	precinct
+Maryland;Frederick County;Election District 18:Precinct 3	precinct
+Maryland;Frederick County;Election District 19:Precinct 1	precinct
+Maryland;Frederick County;Election District 20:Precinct 1	precinct
+Maryland;Frederick County;Election District 20:Precinct 2	precinct
+Maryland;Frederick County;Election District 21:Precinct 1	precinct
+Maryland;Frederick County;Election District 21:Precinct 2	precinct
+Maryland;Frederick County;Election District 21:Precinct 3	precinct
+Maryland;Frederick County;Election District 21:Precinct 4	precinct
+Maryland;Frederick County;Election District 21:Precinct 5	precinct
+Maryland;Frederick County;Election District 21:Precinct 6	precinct
+Maryland;Frederick County;Election District 21:Precinct 7	precinct
+Maryland;Frederick County;Election District 21:Precinct 8	precinct
+Maryland;Frederick County;Election District 22:Precinct 1	precinct
+Maryland;Frederick County;Election District 22:Precinct 2	precinct
+Maryland;Frederick County;Election District 23:Precinct 1	precinct
+Maryland;Frederick County;Election District 23:Precinct 2	precinct
+Maryland;Frederick County;Election District 23:Precinct 3	precinct
+Maryland;Frederick County;Election District 23:Precinct 4	precinct
+Maryland;Frederick County;Election District 24:Precinct 1	precinct
+Maryland;Frederick County;Election District 24:Precinct 2	precinct
+Maryland;Frederick County;Election District 24:Precinct 3	precinct
+Maryland;Frederick County;Election District 24:Precinct 4	precinct
+Maryland;Frederick County;Election District 24:Precinct 5	precinct
+Maryland;Frederick County;Election District 24:Precinct 6	precinct
+Maryland;Frederick County;Election District 25:Precinct 1	precinct
+Maryland;Frederick County;Election District 26:Precinct 1	precinct
+Maryland;Frederick County;Election District 26:Precinct 2	precinct
+Maryland;Garrett County;Election District 1:Precinct 0	precinct
+Maryland;Garrett County;Election District 2:Precinct 0	precinct
+Maryland;Garrett County;Election District 3:Precinct 1	precinct
+Maryland;Garrett County;Election District 3:Precinct 2	precinct
+Maryland;Garrett County;Election District 4:Precinct 0	precinct
+Maryland;Garrett County;Election District 5:Precinct 0	precinct
+Maryland;Garrett County;Election District 6:Precinct 0	precinct
+Maryland;Garrett County;Election District 7:Precinct 0	precinct
+Maryland;Garrett County;Election District 8:Precinct 1	precinct
+Maryland;Garrett County;Election District 8:Precinct 2	precinct
+Maryland;Garrett County;Election District 9:Precinct 0	precinct
+Maryland;Garrett County;Election District 10:Precinct 0	precinct
+Maryland;Garrett County;Election District 11:Precinct 0	precinct
+Maryland;Garrett County;Election District 12:Precinct 0	precinct
+Maryland;Garrett County;Election District 13:Precinct 0	precinct
+Maryland;Garrett County;Election District 14:Precinct 1	precinct
+Maryland;Garrett County;Election District 14:Precinct 2	precinct
+Maryland;Garrett County;Election District 15:Precinct 0	precinct
+Maryland;Garrett County;Election District 16:Precinct 0	precinct
+Maryland;Harford County;Election District 1:Precinct 1	precinct
+Maryland;Harford County;Election District 1:Precinct 2	precinct
+Maryland;Harford County;Election District 1:Precinct 3	precinct
+Maryland;Harford County;Election District 1:Precinct 4	precinct
+Maryland;Harford County;Election District 1:Precinct 5	precinct
+Maryland;Harford County;Election District 1:Precinct 6	precinct
+Maryland;Harford County;Election District 1:Precinct 7	precinct
+Maryland;Harford County;Election District 1:Precinct 8	precinct
+Maryland;Harford County;Election District 1:Precinct 9	precinct
+Maryland;Harford County;Election District 1:Precinct 10	precinct
+Maryland;Harford County;Election District 1:Precinct 11	precinct
+Maryland;Harford County;Election District 1:Precinct 12	precinct
+Maryland;Harford County;Election District 1:Precinct 13	precinct
+Maryland;Harford County;Election District 1:Precinct 14	precinct
+Maryland;Harford County;Election District 1:Precinct 15	precinct
+Maryland;Harford County;Election District 1:Precinct 16	precinct
+Maryland;Harford County;Election District 1:Precinct 17	precinct
+Maryland;Harford County;Election District 1:Precinct 18	precinct
+Maryland;Harford County;Election District 1:Precinct 19	precinct
+Maryland;Harford County;Election District 1:Precinct 20	precinct
+Maryland;Harford County;Election District 1:Precinct 21	precinct
+Maryland;Harford County;Election District 1:Precinct 22	precinct
+Maryland;Harford County;Election District 1:Precinct 23	precinct
+Maryland;Harford County;Election District 1:Precinct 24	precinct
+Maryland;Harford County;Election District 1:Precinct 25	precinct
+Maryland;Harford County;Election District 1:Precinct 26	precinct
+Maryland;Harford County;Election District 1:Precinct 27	precinct
+Maryland;Harford County;Election District 1:Precinct 41	precinct
+Maryland;Harford County;Election District 1:Precinct 45	precinct
+Maryland;Harford County;Election District 2:Precinct 1	precinct
+Maryland;Harford County;Election District 2:Precinct 2	precinct
+Maryland;Harford County;Election District 2:Precinct 3	precinct
+Maryland;Harford County;Election District 2:Precinct 4	precinct
+Maryland;Harford County;Election District 2:Precinct 5	precinct
+Maryland;Harford County;Election District 2:Precinct 6	precinct
+Maryland;Harford County;Election District 2:Precinct 7	precinct
+Maryland;Harford County;Election District 2:Precinct 10	precinct
+Maryland;Harford County;Election District 2:Precinct 11	precinct
+Maryland;Harford County;Election District 2:Precinct 14	precinct
+Maryland;Harford County;Election District 2:Precinct 15	precinct
+Maryland;Harford County;Election District 2:Precinct 19	precinct
+Maryland;Harford County;Election District 2:Precinct 20	precinct
+Maryland;Harford County;Election District 2:Precinct 21	precinct
+Maryland;Harford County;Election District 2:Precinct 22	precinct
+Maryland;Harford County;Election District 3:Precinct 2	precinct
+Maryland;Harford County;Election District 3:Precinct 3	precinct
+Maryland;Harford County;Election District 3:Precinct 4	precinct
+Maryland;Harford County;Election District 3:Precinct 5	precinct
+Maryland;Harford County;Election District 3:Precinct 6	precinct
+Maryland;Harford County;Election District 3:Precinct 7	precinct
+Maryland;Harford County;Election District 3:Precinct 8	precinct
+Maryland;Harford County;Election District 3:Precinct 9	precinct
+Maryland;Harford County;Election District 3:Precinct 10	precinct
+Maryland;Harford County;Election District 3:Precinct 11	precinct
+Maryland;Harford County;Election District 3:Precinct 12	precinct
+Maryland;Harford County;Election District 3:Precinct 13	precinct
+Maryland;Harford County;Election District 3:Precinct 14	precinct
+Maryland;Harford County;Election District 3:Precinct 15	precinct
+Maryland;Harford County;Election District 3:Precinct 16	precinct
+Maryland;Harford County;Election District 3:Precinct 17	precinct
+Maryland;Harford County;Election District 3:Precinct 18	precinct
+Maryland;Harford County;Election District 3:Precinct 19	precinct
+Maryland;Harford County;Election District 3:Precinct 20	precinct
+Maryland;Harford County;Election District 3:Precinct 21	precinct
+Maryland;Harford County;Election District 3:Precinct 22	precinct
+Maryland;Harford County;Election District 3:Precinct 23	precinct
+Maryland;Harford County;Election District 3:Precinct 24	precinct
+Maryland;Harford County;Election District 3:Precinct 25	precinct
+Maryland;Harford County;Election District 3:Precinct 26	precinct
+Maryland;Harford County;Election District 3:Precinct 27	precinct
+Maryland;Harford County;Election District 4:Precinct 1	precinct
+Maryland;Harford County;Election District 4:Precinct 2	precinct
+Maryland;Harford County;Election District 4:Precinct 3	precinct
+Maryland;Harford County;Election District 4:Precinct 4	precinct
+Maryland;Harford County;Election District 4:Precinct 5	precinct
+Maryland;Harford County;Election District 4:Precinct 6	precinct
+Maryland;Harford County;Election District 4:Precinct 7	precinct
+Maryland;Harford County;Election District 4:Precinct 8	precinct
+Maryland;Harford County;Election District 5:Precinct 1	precinct
+Maryland;Harford County;Election District 5:Precinct 2	precinct
+Maryland;Harford County;Election District 5:Precinct 3	precinct
+Maryland;Harford County;Election District 5:Precinct 4	precinct
+Maryland;Harford County;Election District 6:Precinct 1	precinct
+Maryland;Harford County;Election District 6:Precinct 2	precinct
+Maryland;Harford County;Election District 6:Precinct 3	precinct
+Maryland;Harford County;Election District 6:Precinct 4	precinct
+Maryland;Harford County;Election District 6:Precinct 5	precinct
+Maryland;Harford County;Election District 6:Precinct 6	precinct
+Maryland;Harford County;Election District 6:Precinct 7	precinct
+Maryland;Howard County;Election District 1:Precinct 1	precinct
+Maryland;Howard County;Election District 1:Precinct 2	precinct
+Maryland;Howard County;Election District 1:Precinct 3	precinct
+Maryland;Howard County;Election District 1:Precinct 4	precinct
+Maryland;Howard County;Election District 1:Precinct 5	precinct
+Maryland;Howard County;Election District 1:Precinct 6	precinct
+Maryland;Howard County;Election District 1:Precinct 7	precinct
+Maryland;Howard County;Election District 1:Precinct 8	precinct
+Maryland;Howard County;Election District 1:Precinct 9	precinct
+Maryland;Howard County;Election District 1:Precinct 10	precinct
+Maryland;Howard County;Election District 1:Precinct 11	precinct
+Maryland;Howard County;Election District 1:Precinct 12	precinct
+Maryland;Howard County;Election District 1:Precinct 13	precinct
+Maryland;Howard County;Election District 1:Precinct 14	precinct
+Maryland;Howard County;Election District 1:Precinct 15	precinct
+Maryland;Howard County;Election District 1:Precinct 16	precinct
+Maryland;Howard County;Election District 1:Precinct 17	precinct
+Maryland;Howard County;Election District 1:Precinct 18	precinct
+Maryland;Howard County;Election District 1:Precinct 19	precinct
+Maryland;Howard County;Election District 1:Precinct 20	precinct
+Maryland;Howard County;Election District 1:Precinct 21	precinct
+Maryland;Howard County;Election District 2:Precinct 1	precinct
+Maryland;Howard County;Election District 2:Precinct 2	precinct
+Maryland;Howard County;Election District 2:Precinct 3	precinct
+Maryland;Howard County;Election District 2:Precinct 4	precinct
+Maryland;Howard County;Election District 2:Precinct 5	precinct
+Maryland;Howard County;Election District 2:Precinct 6	precinct
+Maryland;Howard County;Election District 2:Precinct 7	precinct
+Maryland;Howard County;Election District 2:Precinct 8	precinct
+Maryland;Howard County;Election District 2:Precinct 9	precinct
+Maryland;Howard County;Election District 2:Precinct 10	precinct
+Maryland;Howard County;Election District 2:Precinct 11	precinct
+Maryland;Howard County;Election District 2:Precinct 12	precinct
+Maryland;Howard County;Election District 2:Precinct 13	precinct
+Maryland;Howard County;Election District 2:Precinct 14	precinct
+Maryland;Howard County;Election District 2:Precinct 15	precinct
+Maryland;Howard County;Election District 2:Precinct 16	precinct
+Maryland;Howard County;Election District 2:Precinct 17	precinct
+Maryland;Howard County;Election District 2:Precinct 18	precinct
+Maryland;Howard County;Election District 2:Precinct 19	precinct
+Maryland;Howard County;Election District 2:Precinct 20	precinct
+Maryland;Howard County;Election District 2:Precinct 21	precinct
+Maryland;Howard County;Election District 2:Precinct 22	precinct
+Maryland;Howard County;Election District 2:Precinct 23	precinct
+Maryland;Howard County;Election District 2:Precinct 24	precinct
+Maryland;Howard County;Election District 2:Precinct 25	precinct
+Maryland;Howard County;Election District 2:Precinct 26	precinct
+Maryland;Howard County;Election District 3:Precinct 1	precinct
+Maryland;Howard County;Election District 3:Precinct 2	precinct
+Maryland;Howard County;Election District 3:Precinct 3	precinct
+Maryland;Howard County;Election District 3:Precinct 4	precinct
+Maryland;Howard County;Election District 3:Precinct 5	precinct
+Maryland;Howard County;Election District 3:Precinct 6	precinct
+Maryland;Howard County;Election District 4:Precinct 1	precinct
+Maryland;Howard County;Election District 4:Precinct 2	precinct
+Maryland;Howard County;Election District 4:Precinct 3	precinct
+Maryland;Howard County;Election District 4:Precinct 4	precinct
+Maryland;Howard County;Election District 4:Precinct 5	precinct
+Maryland;Howard County;Election District 4:Precinct 6	precinct
+Maryland;Howard County;Election District 5:Precinct 1	precinct
+Maryland;Howard County;Election District 5:Precinct 2	precinct
+Maryland;Howard County;Election District 5:Precinct 3	precinct
+Maryland;Howard County;Election District 5:Precinct 4	precinct
+Maryland;Howard County;Election District 5:Precinct 5	precinct
+Maryland;Howard County;Election District 5:Precinct 6	precinct
+Maryland;Howard County;Election District 5:Precinct 7	precinct
+Maryland;Howard County;Election District 5:Precinct 8	precinct
+Maryland;Howard County;Election District 5:Precinct 9	precinct
+Maryland;Howard County;Election District 5:Precinct 10	precinct
+Maryland;Howard County;Election District 5:Precinct 11	precinct
+Maryland;Howard County;Election District 5:Precinct 12	precinct
+Maryland;Howard County;Election District 5:Precinct 13	precinct
+Maryland;Howard County;Election District 5:Precinct 14	precinct
+Maryland;Howard County;Election District 5:Precinct 15	precinct
+Maryland;Howard County;Election District 5:Precinct 16	precinct
+Maryland;Howard County;Election District 5:Precinct 17	precinct
+Maryland;Howard County;Election District 5:Precinct 18	precinct
+Maryland;Howard County;Election District 5:Precinct 19	precinct
+Maryland;Howard County;Election District 5:Precinct 20	precinct
+Maryland;Howard County;Election District 5:Precinct 21	precinct
+Maryland;Howard County;Election District 5:Precinct 22	precinct
+Maryland;Howard County;Election District 5:Precinct 23	precinct
+Maryland;Howard County;Election District 5:Precinct 24	precinct
+Maryland;Howard County;Election District 6:Precinct 1	precinct
+Maryland;Howard County;Election District 6:Precinct 2	precinct
+Maryland;Howard County;Election District 6:Precinct 3	precinct
+Maryland;Howard County;Election District 6:Precinct 4	precinct
+Maryland;Howard County;Election District 6:Precinct 5	precinct
+Maryland;Howard County;Election District 6:Precinct 6	precinct
+Maryland;Howard County;Election District 6:Precinct 7	precinct
+Maryland;Howard County;Election District 6:Precinct 8	precinct
+Maryland;Howard County;Election District 6:Precinct 9	precinct
+Maryland;Howard County;Election District 6:Precinct 10	precinct
+Maryland;Howard County;Election District 6:Precinct 11	precinct
+Maryland;Howard County;Election District 6:Precinct 12	precinct
+Maryland;Howard County;Election District 6:Precinct 13	precinct
+Maryland;Howard County;Election District 6:Precinct 14	precinct
+Maryland;Howard County;Election District 6:Precinct 15	precinct
+Maryland;Howard County;Election District 6:Precinct 16	precinct
+Maryland;Howard County;Election District 6:Precinct 17	precinct
+Maryland;Howard County;Election District 6:Precinct 18	precinct
+Maryland;Howard County;Election District 6:Precinct 19	precinct
+Maryland;Howard County;Election District 6:Precinct 20	precinct
+Maryland;Howard County;Election District 6:Precinct 21	precinct
+Maryland;Howard County;Election District 6:Precinct 22	precinct
+Maryland;Howard County;Election District 6:Precinct 23	precinct
+Maryland;Howard County;Election District 6:Precinct 24	precinct
+Maryland;Howard County;Election District 6:Precinct 25	precinct
+Maryland;Howard County;Election District 6:Precinct 26	precinct
+Maryland;Howard County;Election District 6:Precinct 27	precinct
+Maryland;Howard County;Election District 6:Precinct 28	precinct
+Maryland;Howard County;Election District 6:Precinct 29	precinct
+Maryland;Howard County;Election District 6:Precinct 30	precinct
+Maryland;Howard County;Election District 6:Precinct 31	precinct
+Maryland;Howard County;Election District 6:Precinct 32	precinct
+Maryland;Howard County;Election District 6:Precinct 33	precinct
+Maryland;Howard County;Election District 6:Precinct 34	precinct
+Maryland;Howard County;Election District 6:Precinct 35	precinct
+Maryland;Kent County;Election District 1:Precinct 1	precinct
+Maryland;Kent County;Election District 1:Precinct 2	precinct
+Maryland;Kent County;Election District 2:Precinct 1	precinct
+Maryland;Kent County;Election District 3:Precinct 1	precinct
+Maryland;Kent County;Election District 3:Precinct 2	precinct
+Maryland;Kent County;Election District 4:Precinct 1	precinct
+Maryland;Kent County;Election District 4:Precinct 2	precinct
+Maryland;Kent County;Election District 5:Precinct 1	precinct
+Maryland;Kent County;Election District 6:Precinct 1	precinct
+Maryland;Kent County;Election District 7:Precinct 1	precinct
+Maryland;Montgomery County;Election District 1:Precinct 1	precinct
+Maryland;Montgomery County;Election District 1:Precinct 2	precinct
+Maryland;Montgomery County;Election District 1:Precinct 3	precinct
+Maryland;Montgomery County;Election District 1:Precinct 4	precinct
+Maryland;Montgomery County;Election District 1:Precinct 5	precinct
+Maryland;Montgomery County;Election District 1:Precinct 6	precinct
+Maryland;Montgomery County;Election District 1:Precinct 7	precinct
+Maryland;Montgomery County;Election District 2:Precinct 1	precinct
+Maryland;Montgomery County;Election District 2:Precinct 2	precinct
+Maryland;Montgomery County;Election District 2:Precinct 3	precinct
+Maryland;Montgomery County;Election District 2:Precinct 4	precinct
+Maryland;Montgomery County;Election District 2:Precinct 5	precinct
+Maryland;Montgomery County;Election District 2:Precinct 6	precinct
+Maryland;Montgomery County;Election District 2:Precinct 7	precinct
+Maryland;Montgomery County;Election District 2:Precinct 8	precinct
+Maryland;Montgomery County;Election District 2:Precinct 9	precinct
+Maryland;Montgomery County;Election District 2:Precinct 10	precinct
+Maryland;Montgomery County;Election District 2:Precinct 11	precinct
+Maryland;Montgomery County;Election District 3:Precinct 1	precinct
+Maryland;Montgomery County;Election District 3:Precinct 2	precinct
+Maryland;Montgomery County;Election District 4:Precinct 1	precinct
+Maryland;Montgomery County;Election District 4:Precinct 2	precinct
+Maryland;Montgomery County;Election District 4:Precinct 3	precinct
+Maryland;Montgomery County;Election District 4:Precinct 4	precinct
+Maryland;Montgomery County;Election District 4:Precinct 5	precinct
+Maryland;Montgomery County;Election District 4:Precinct 6	precinct
+Maryland;Montgomery County;Election District 4:Precinct 7	precinct
+Maryland;Montgomery County;Election District 4:Precinct 8	precinct
+Maryland;Montgomery County;Election District 4:Precinct 9	precinct
+Maryland;Montgomery County;Election District 4:Precinct 10	precinct
+Maryland;Montgomery County;Election District 4:Precinct 11	precinct
+Maryland;Montgomery County;Election District 4:Precinct 12	precinct
+Maryland;Montgomery County;Election District 4:Precinct 13	precinct
+Maryland;Montgomery County;Election District 4:Precinct 14	precinct
+Maryland;Montgomery County;Election District 4:Precinct 15	precinct
+Maryland;Montgomery County;Election District 4:Precinct 16	precinct
+Maryland;Montgomery County;Election District 4:Precinct 17	precinct
+Maryland;Montgomery County;Election District 4:Precinct 18	precinct
+Maryland;Montgomery County;Election District 4:Precinct 19	precinct
+Maryland;Montgomery County;Election District 4:Precinct 20	precinct
+Maryland;Montgomery County;Election District 4:Precinct 21	precinct
+Maryland;Montgomery County;Election District 4:Precinct 23	precinct
+Maryland;Montgomery County;Election District 4:Precinct 24	precinct
+Maryland;Montgomery County;Election District 4:Precinct 25	precinct
+Maryland;Montgomery County;Election District 4:Precinct 26	precinct
+Maryland;Montgomery County;Election District 4:Precinct 27	precinct
+Maryland;Montgomery County;Election District 4:Precinct 28	precinct
+Maryland;Montgomery County;Election District 4:Precinct 29	precinct
+Maryland;Montgomery County;Election District 4:Precinct 30	precinct
+Maryland;Montgomery County;Election District 4:Precinct 31	precinct
+Maryland;Montgomery County;Election District 4:Precinct 32	precinct
+Maryland;Montgomery County;Election District 4:Precinct 33	precinct
+Maryland;Montgomery County;Election District 4:Precinct 34	precinct
+Maryland;Montgomery County;Election District 4:Precinct 35	precinct
+Maryland;Montgomery County;Election District 4:Precinct 36	precinct
+Maryland;Montgomery County;Election District 4:Precinct 37	precinct
+Maryland;Montgomery County;Election District 4:Precinct 38	precinct
+Maryland;Montgomery County;Election District 4:Precinct 40	precinct
+Maryland;Montgomery County;Election District 4:Precinct 41	precinct
+Maryland;Montgomery County;Election District 4:Precinct 42	precinct
+Maryland;Montgomery County;Election District 4:Precinct 43	precinct
+Maryland;Montgomery County;Election District 5:Precinct 1	precinct
+Maryland;Montgomery County;Election District 5:Precinct 2	precinct
+Maryland;Montgomery County;Election District 5:Precinct 3	precinct
+Maryland;Montgomery County;Election District 5:Precinct 4	precinct
+Maryland;Montgomery County;Election District 5:Precinct 5	precinct
+Maryland;Montgomery County;Election District 5:Precinct 6	precinct
+Maryland;Montgomery County;Election District 5:Precinct 8	precinct
+Maryland;Montgomery County;Election District 5:Precinct 9	precinct
+Maryland;Montgomery County;Election District 5:Precinct 10	precinct
+Maryland;Montgomery County;Election District 5:Precinct 11	precinct
+Maryland;Montgomery County;Election District 5:Precinct 12	precinct
+Maryland;Montgomery County;Election District 5:Precinct 13	precinct
+Maryland;Montgomery County;Election District 5:Precinct 14	precinct
+Maryland;Montgomery County;Election District 5:Precinct 15	precinct
+Maryland;Montgomery County;Election District 5:Precinct 16	precinct
+Maryland;Montgomery County;Election District 5:Precinct 17	precinct
+Maryland;Montgomery County;Election District 5:Precinct 18	precinct
+Maryland;Montgomery County;Election District 5:Precinct 19	precinct
+Maryland;Montgomery County;Election District 5:Precinct 21	precinct
+Maryland;Montgomery County;Election District 5:Precinct 22	precinct
+Maryland;Montgomery County;Election District 5:Precinct 23	precinct
+Maryland;Montgomery County;Election District 6:Precinct 1	precinct
+Maryland;Montgomery County;Election District 6:Precinct 2	precinct
+Maryland;Montgomery County;Election District 6:Precinct 3	precinct
+Maryland;Montgomery County;Election District 6:Precinct 4	precinct
+Maryland;Montgomery County;Election District 6:Precinct 5	precinct
+Maryland;Montgomery County;Election District 6:Precinct 6	precinct
+Maryland;Montgomery County;Election District 6:Precinct 7	precinct
+Maryland;Montgomery County;Election District 6:Precinct 8	precinct
+Maryland;Montgomery County;Election District 6:Precinct 9	precinct
+Maryland;Montgomery County;Election District 6:Precinct 10	precinct
+Maryland;Montgomery County;Election District 6:Precinct 11	precinct
+Maryland;Montgomery County;Election District 6:Precinct 13	precinct
+Maryland;Montgomery County;Election District 6:Precinct 14	precinct
+Maryland;Montgomery County;Election District 6:Precinct 15	precinct
+Maryland;Montgomery County;Election District 6:Precinct 16	precinct
+Maryland;Montgomery County;Election District 7:Precinct 1	precinct
+Maryland;Montgomery County;Election District 7:Precinct 2	precinct
+Maryland;Montgomery County;Election District 7:Precinct 3	precinct
+Maryland;Montgomery County;Election District 7:Precinct 4	precinct
+Maryland;Montgomery County;Election District 7:Precinct 5	precinct
+Maryland;Montgomery County;Election District 7:Precinct 6	precinct
+Maryland;Montgomery County;Election District 7:Precinct 7	precinct
+Maryland;Montgomery County;Election District 7:Precinct 8	precinct
+Maryland;Montgomery County;Election District 7:Precinct 9	precinct
+Maryland;Montgomery County;Election District 7:Precinct 10	precinct
+Maryland;Montgomery County;Election District 7:Precinct 11	precinct
+Maryland;Montgomery County;Election District 7:Precinct 12	precinct
+Maryland;Montgomery County;Election District 7:Precinct 13	precinct
+Maryland;Montgomery County;Election District 7:Precinct 15	precinct
+Maryland;Montgomery County;Election District 7:Precinct 16	precinct
+Maryland;Montgomery County;Election District 7:Precinct 18	precinct
+Maryland;Montgomery County;Election District 7:Precinct 19	precinct
+Maryland;Montgomery County;Election District 7:Precinct 20	precinct
+Maryland;Montgomery County;Election District 7:Precinct 21	precinct
+Maryland;Montgomery County;Election District 7:Precinct 22	precinct
+Maryland;Montgomery County;Election District 7:Precinct 23	precinct
+Maryland;Montgomery County;Election District 7:Precinct 24	precinct
+Maryland;Montgomery County;Election District 7:Precinct 25	precinct
+Maryland;Montgomery County;Election District 7:Precinct 26	precinct
+Maryland;Montgomery County;Election District 7:Precinct 27	precinct
+Maryland;Montgomery County;Election District 7:Precinct 28	precinct
+Maryland;Montgomery County;Election District 7:Precinct 31	precinct
+Maryland;Montgomery County;Election District 7:Precinct 32	precinct
+Maryland;Montgomery County;Election District 8:Precinct 1	precinct
+Maryland;Montgomery County;Election District 8:Precinct 2	precinct
+Maryland;Montgomery County;Election District 8:Precinct 3	precinct
+Maryland;Montgomery County;Election District 8:Precinct 4	precinct
+Maryland;Montgomery County;Election District 8:Precinct 5	precinct
+Maryland;Montgomery County;Election District 8:Precinct 6	precinct
+Maryland;Montgomery County;Election District 8:Precinct 7	precinct
+Maryland;Montgomery County;Election District 8:Precinct 8	precinct
+Maryland;Montgomery County;Election District 8:Precinct 9	precinct
+Maryland;Montgomery County;Election District 8:Precinct 10	precinct
+Maryland;Montgomery County;Election District 8:Precinct 11	precinct
+Maryland;Montgomery County;Election District 8:Precinct 12	precinct
+Maryland;Montgomery County;Election District 8:Precinct 14	precinct
+Maryland;Montgomery County;Election District 8:Precinct 15	precinct
+Maryland;Montgomery County;Election District 9:Precinct 1	precinct
+Maryland;Montgomery County;Election District 9:Precinct 2	precinct
+Maryland;Montgomery County;Election District 9:Precinct 3	precinct
+Maryland;Montgomery County;Election District 9:Precinct 4	precinct
+Maryland;Montgomery County;Election District 9:Precinct 5	precinct
+Maryland;Montgomery County;Election District 9:Precinct 6	precinct
+Maryland;Montgomery County;Election District 9:Precinct 7	precinct
+Maryland;Montgomery County;Election District 9:Precinct 8	precinct
+Maryland;Montgomery County;Election District 9:Precinct 9	precinct
+Maryland;Montgomery County;Election District 9:Precinct 10	precinct
+Maryland;Montgomery County;Election District 9:Precinct 11	precinct
+Maryland;Montgomery County;Election District 9:Precinct 12	precinct
+Maryland;Montgomery County;Election District 9:Precinct 13	precinct
+Maryland;Montgomery County;Election District 9:Precinct 14	precinct
+Maryland;Montgomery County;Election District 9:Precinct 15	precinct
+Maryland;Montgomery County;Election District 9:Precinct 16	precinct
+Maryland;Montgomery County;Election District 9:Precinct 18	precinct
+Maryland;Montgomery County;Election District 9:Precinct 20	precinct
+Maryland;Montgomery County;Election District 9:Precinct 21	precinct
+Maryland;Montgomery County;Election District 9:Precinct 22	precinct
+Maryland;Montgomery County;Election District 9:Precinct 24	precinct
+Maryland;Montgomery County;Election District 9:Precinct 25	precinct
+Maryland;Montgomery County;Election District 9:Precinct 26	precinct
+Maryland;Montgomery County;Election District 9:Precinct 27	precinct
+Maryland;Montgomery County;Election District 9:Precinct 28	precinct
+Maryland;Montgomery County;Election District 9:Precinct 29	precinct
+Maryland;Montgomery County;Election District 9:Precinct 30	precinct
+Maryland;Montgomery County;Election District 9:Precinct 31	precinct
+Maryland;Montgomery County;Election District 9:Precinct 32	precinct
+Maryland;Montgomery County;Election District 9:Precinct 33	precinct
+Maryland;Montgomery County;Election District 9:Precinct 34	precinct
+Maryland;Montgomery County;Election District 9:Precinct 35	precinct
+Maryland;Montgomery County;Election District 9:Precinct 36	precinct
+Maryland;Montgomery County;Election District 9:Precinct 37	precinct
+Maryland;Montgomery County;Election District 9:Precinct 38	precinct
+Maryland;Montgomery County;Election District 9:Precinct 39	precinct
+Maryland;Montgomery County;Election District 9:Precinct 40	precinct
+Maryland;Montgomery County;Election District 9:Precinct 41	precinct
+Maryland;Montgomery County;Election District 10:Precinct 1	precinct
+Maryland;Montgomery County;Election District 10:Precinct 2	precinct
+Maryland;Montgomery County;Election District 10:Precinct 3	precinct
+Maryland;Montgomery County;Election District 10:Precinct 4	precinct
+Maryland;Montgomery County;Election District 10:Precinct 5	precinct
+Maryland;Montgomery County;Election District 10:Precinct 6	precinct
+Maryland;Montgomery County;Election District 10:Precinct 7	precinct
+Maryland;Montgomery County;Election District 10:Precinct 9	precinct
+Maryland;Montgomery County;Election District 10:Precinct 10	precinct
+Maryland;Montgomery County;Election District 10:Precinct 11	precinct
+Maryland;Montgomery County;Election District 10:Precinct 12	precinct
+Maryland;Montgomery County;Election District 10:Precinct 13	precinct
+Maryland;Montgomery County;Election District 11:Precinct 0	precinct
+Maryland;Montgomery County;Election District 12:Precinct 1	precinct
+Maryland;Montgomery County;Election District 12:Precinct 2	precinct
+Maryland;Montgomery County;Election District 12:Precinct 3	precinct
+Maryland;Montgomery County;Election District 12:Precinct 4	precinct
+Maryland;Montgomery County;Election District 12:Precinct 5	precinct
+Maryland;Montgomery County;Election District 13:Precinct 1	precinct
+Maryland;Montgomery County;Election District 13:Precinct 2	precinct
+Maryland;Montgomery County;Election District 13:Precinct 3	precinct
+Maryland;Montgomery County;Election District 13:Precinct 4	precinct
+Maryland;Montgomery County;Election District 13:Precinct 5	precinct
+Maryland;Montgomery County;Election District 13:Precinct 6	precinct
+Maryland;Montgomery County;Election District 13:Precinct 7	precinct
+Maryland;Montgomery County;Election District 13:Precinct 8	precinct
+Maryland;Montgomery County;Election District 13:Precinct 10	precinct
+Maryland;Montgomery County;Election District 13:Precinct 11	precinct
+Maryland;Montgomery County;Election District 13:Precinct 13	precinct
+Maryland;Montgomery County;Election District 13:Precinct 14	precinct
+Maryland;Montgomery County;Election District 13:Precinct 15	precinct
+Maryland;Montgomery County;Election District 13:Precinct 16	precinct
+Maryland;Montgomery County;Election District 13:Precinct 18	precinct
+Maryland;Montgomery County;Election District 13:Precinct 19	precinct
+Maryland;Montgomery County;Election District 13:Precinct 20	precinct
+Maryland;Montgomery County;Election District 13:Precinct 21	precinct
+Maryland;Montgomery County;Election District 13:Precinct 22	precinct
+Maryland;Montgomery County;Election District 13:Precinct 23	precinct
+Maryland;Montgomery County;Election District 13:Precinct 24	precinct
+Maryland;Montgomery County;Election District 13:Precinct 25	precinct
+Maryland;Montgomery County;Election District 13:Precinct 27	precinct
+Maryland;Montgomery County;Election District 13:Precinct 28	precinct
+Maryland;Montgomery County;Election District 13:Precinct 29	precinct
+Maryland;Montgomery County;Election District 13:Precinct 30	precinct
+Maryland;Montgomery County;Election District 13:Precinct 31	precinct
+Maryland;Montgomery County;Election District 13:Precinct 32	precinct
+Maryland;Montgomery County;Election District 13:Precinct 33	precinct
+Maryland;Montgomery County;Election District 13:Precinct 34	precinct
+Maryland;Montgomery County;Election District 13:Precinct 35	precinct
+Maryland;Montgomery County;Election District 13:Precinct 36	precinct
+Maryland;Montgomery County;Election District 13:Precinct 37	precinct
+Maryland;Montgomery County;Election District 13:Precinct 38	precinct
+Maryland;Montgomery County;Election District 13:Precinct 39	precinct
+Maryland;Montgomery County;Election District 13:Precinct 40	precinct
+Maryland;Montgomery County;Election District 13:Precinct 42	precinct
+Maryland;Montgomery County;Election District 13:Precinct 43	precinct
+Maryland;Montgomery County;Election District 13:Precinct 44	precinct
+Maryland;Montgomery County;Election District 13:Precinct 45	precinct
+Maryland;Montgomery County;Election District 13:Precinct 46	precinct
+Maryland;Montgomery County;Election District 13:Precinct 47	precinct
+Maryland;Montgomery County;Election District 13:Precinct 49	precinct
+Maryland;Montgomery County;Election District 13:Precinct 50	precinct
+Maryland;Montgomery County;Election District 13:Precinct 51	precinct
+Maryland;Montgomery County;Election District 13:Precinct 52	precinct
+Maryland;Montgomery County;Election District 13:Precinct 53	precinct
+Maryland;Montgomery County;Election District 13:Precinct 54	precinct
+Maryland;Montgomery County;Election District 13:Precinct 55	precinct
+Maryland;Montgomery County;Election District 13:Precinct 56	precinct
+Maryland;Montgomery County;Election District 13:Precinct 57	precinct
+Maryland;Montgomery County;Election District 13:Precinct 58	precinct
+Maryland;Montgomery County;Election District 13:Precinct 59	precinct
+Maryland;Montgomery County;Election District 13:Precinct 60	precinct
+Maryland;Montgomery County;Election District 13:Precinct 61	precinct
+Maryland;Montgomery County;Election District 13:Precinct 63	precinct
+Maryland;Montgomery County;Election District 13:Precinct 64	precinct
+Maryland;Montgomery County;Election District 13:Precinct 65	precinct
+Maryland;Montgomery County;Election District 13:Precinct 67	precinct
+Maryland;Montgomery County;Election District 13:Precinct 68	precinct
+Maryland;Montgomery County;Election District 13:Precinct 69	precinct
+Maryland;Montgomery County;Election District 13:Precinct 70	precinct
+Maryland;Montgomery County;Election District 13:Precinct 71	precinct
+Maryland;Prince George's County;Election District 1:Precinct 1	precinct
+Maryland;Prince George's County;Election District 1:Precinct 2	precinct
+Maryland;Prince George's County;Election District 1:Precinct 3	precinct
+Maryland;Prince George's County;Election District 1:Precinct 4	precinct
+Maryland;Prince George's County;Election District 1:Precinct 5	precinct
+Maryland;Prince George's County;Election District 1:Precinct 6	precinct
+Maryland;Prince George's County;Election District 1:Precinct 7	precinct
+Maryland;Prince George's County;Election District 1:Precinct 8	precinct
+Maryland;Prince George's County;Election District 2:Precinct 1	precinct
+Maryland;Prince George's County;Election District 2:Precinct 2	precinct
+Maryland;Prince George's County;Election District 2:Precinct 3	precinct
+Maryland;Prince George's County;Election District 2:Precinct 4	precinct
+Maryland;Prince George's County;Election District 2:Precinct 5	precinct
+Maryland;Prince George's County;Election District 2:Precinct 6	precinct
+Maryland;Prince George's County;Election District 2:Precinct 7	precinct
+Maryland;Prince George's County;Election District 2:Precinct 8	precinct
+Maryland;Prince George's County;Election District 2:Precinct 9	precinct
+Maryland;Prince George's County;Election District 2:Precinct 10	precinct
+Maryland;Prince George's County;Election District 2:Precinct 96	precinct
+Maryland;Prince George's County;Election District 2:Precinct 97	precinct
+Maryland;Prince George's County;Election District 2:Precinct 98	precinct
+Maryland;Prince George's County;Election District 2:Precinct 99	precinct
+Maryland;Prince George's County;Election District 3:Precinct 1	precinct
+Maryland;Prince George's County;Election District 3:Precinct 2	precinct
+Maryland;Prince George's County;Election District 3:Precinct 3	precinct
+Maryland;Prince George's County;Election District 3:Precinct 4	precinct
+Maryland;Prince George's County;Election District 3:Precinct 5	precinct
+Maryland;Prince George's County;Election District 3:Precinct 6	precinct
+Maryland;Prince George's County;Election District 3:Precinct 7	precinct
+Maryland;Prince George's County;Election District 3:Precinct 8	precinct
+Maryland;Prince George's County;Election District 4:Precinct 1	precinct
+Maryland;Prince George's County;Election District 5:Precinct 1	precinct
+Maryland;Prince George's County;Election District 5:Precinct 2	precinct
+Maryland;Prince George's County;Election District 5:Precinct 3	precinct
+Maryland;Prince George's County;Election District 5:Precinct 4	precinct
+Maryland;Prince George's County;Election District 5:Precinct 5	precinct
+Maryland;Prince George's County;Election District 5:Precinct 6	precinct
+Maryland;Prince George's County;Election District 5:Precinct 7	precinct
+Maryland;Prince George's County;Election District 5:Precinct 8	precinct
+Maryland;Prince George's County;Election District 5:Precinct 9	precinct
+Maryland;Prince George's County;Election District 5:Precinct 10	precinct
+Maryland;Prince George's County;Election District 5:Precinct 11	precinct
+Maryland;Prince George's County;Election District 5:Precinct 12	precinct
+Maryland;Prince George's County;Election District 6:Precinct 1	precinct
+Maryland;Prince George's County;Election District 6:Precinct 2	precinct
+Maryland;Prince George's County;Election District 6:Precinct 3	precinct
+Maryland;Prince George's County;Election District 6:Precinct 4	precinct
+Maryland;Prince George's County;Election District 6:Precinct 5	precinct
+Maryland;Prince George's County;Election District 6:Precinct 6	precinct
+Maryland;Prince George's County;Election District 6:Precinct 7	precinct
+Maryland;Prince George's County;Election District 6:Precinct 8	precinct
+Maryland;Prince George's County;Election District 6:Precinct 9	precinct
+Maryland;Prince George's County;Election District 6:Precinct 10	precinct
+Maryland;Prince George's County;Election District 6:Precinct 11	precinct
+Maryland;Prince George's County;Election District 6:Precinct 12	precinct
+Maryland;Prince George's County;Election District 6:Precinct 13	precinct
+Maryland;Prince George's County;Election District 6:Precinct 14	precinct
+Maryland;Prince George's County;Election District 6:Precinct 15	precinct
+Maryland;Prince George's County;Election District 6:Precinct 16	precinct
+Maryland;Prince George's County;Election District 6:Precinct 17	precinct
+Maryland;Prince George's County;Election District 6:Precinct 18	precinct
+Maryland;Prince George's County;Election District 6:Precinct 19	precinct
+Maryland;Prince George's County;Election District 6:Precinct 20	precinct
+Maryland;Prince George's County;Election District 6:Precinct 21	precinct
+Maryland;Prince George's County;Election District 6:Precinct 22	precinct
+Maryland;Prince George's County;Election District 6:Precinct 23	precinct
+Maryland;Prince George's County;Election District 6:Precinct 24	precinct
+Maryland;Prince George's County;Election District 6:Precinct 25	precinct
+Maryland;Prince George's County;Election District 6:Precinct 26	precinct
+Maryland;Prince George's County;Election District 6:Precinct 27	precinct
+Maryland;Prince George's County;Election District 6:Precinct 28	precinct
+Maryland;Prince George's County;Election District 6:Precinct 29	precinct
+Maryland;Prince George's County;Election District 6:Precinct 97	precinct
+Maryland;Prince George's County;Election District 6:Precinct 98	precinct
+Maryland;Prince George's County;Election District 6:Precinct 99	precinct
+Maryland;Prince George's County;Election District 7:Precinct 1	precinct
+Maryland;Prince George's County;Election District 7:Precinct 2	precinct
+Maryland;Prince George's County;Election District 7:Precinct 3	precinct
+Maryland;Prince George's County;Election District 7:Precinct 4	precinct
+Maryland;Prince George's County;Election District 7:Precinct 5	precinct
+Maryland;Prince George's County;Election District 7:Precinct 6	precinct
+Maryland;Prince George's County;Election District 7:Precinct 7	precinct
+Maryland;Prince George's County;Election District 7:Precinct 8	precinct
+Maryland;Prince George's County;Election District 7:Precinct 9	precinct
+Maryland;Prince George's County;Election District 7:Precinct 10	precinct
+Maryland;Prince George's County;Election District 7:Precinct 11	precinct
+Maryland;Prince George's County;Election District 7:Precinct 12	precinct
+Maryland;Prince George's County;Election District 7:Precinct 13	precinct
+Maryland;Prince George's County;Election District 7:Precinct 14	precinct
+Maryland;Prince George's County;Election District 7:Precinct 15	precinct
+Maryland;Prince George's County;Election District 7:Precinct 16	precinct
+Maryland;Prince George's County;Election District 7:Precinct 17	precinct
+Maryland;Prince George's County;Election District 7:Precinct 18	precinct
+Maryland;Prince George's County;Election District 7:Precinct 19	precinct
+Maryland;Prince George's County;Election District 7:Precinct 20	precinct
+Maryland;Prince George's County;Election District 7:Precinct 21	precinct
+Maryland;Prince George's County;Election District 7:Precinct 22	precinct
+Maryland;Prince George's County;Election District 7:Precinct 23	precinct
+Maryland;Prince George's County;Election District 7:Precinct 24	precinct
+Maryland;Prince George's County;Election District 7:Precinct 99	precinct
+Maryland;Prince George's County;Election District 8:Precinct 1	precinct
+Maryland;Prince George's County;Election District 9:Precinct 1	precinct
+Maryland;Prince George's County;Election District 9:Precinct 2	precinct
+Maryland;Prince George's County;Election District 9:Precinct 3	precinct
+Maryland;Prince George's County;Election District 9:Precinct 4	precinct
+Maryland;Prince George's County;Election District 9:Precinct 5	precinct
+Maryland;Prince George's County;Election District 9:Precinct 6	precinct
+Maryland;Prince George's County;Election District 9:Precinct 7	precinct
+Maryland;Prince George's County;Election District 9:Precinct 8	precinct
+Maryland;Prince George's County;Election District 9:Precinct 9	precinct
+Maryland;Prince George's County;Election District 9:Precinct 10	precinct
+Maryland;Prince George's County;Election District 9:Precinct 11	precinct
+Maryland;Prince George's County;Election District 9:Precinct 12	precinct
+Maryland;Prince George's County;Election District 9:Precinct 13	precinct
+Maryland;Prince George's County;Election District 9:Precinct 14	precinct
+Maryland;Prince George's County;Election District 9:Precinct 15	precinct
+Maryland;Prince George's County;Election District 9:Precinct 99	precinct
+Maryland;Prince George's County;Election District 10:Precinct 1	precinct
+Maryland;Prince George's County;Election District 10:Precinct 2	precinct
+Maryland;Prince George's County;Election District 10:Precinct 3	precinct
+Maryland;Prince George's County;Election District 10:Precinct 4	precinct
+Maryland;Prince George's County;Election District 10:Precinct 5	precinct
+Maryland;Prince George's County;Election District 10:Precinct 6	precinct
+Maryland;Prince George's County;Election District 10:Precinct 7	precinct
+Maryland;Prince George's County;Election District 10:Precinct 8	precinct
+Maryland;Prince George's County;Election District 10:Precinct 9	precinct
+Maryland;Prince George's County;Election District 10:Precinct 10	precinct
+Maryland;Prince George's County;Election District 10:Precinct 11	precinct
+Maryland;Prince George's County;Election District 10:Precinct 12	precinct
+Maryland;Prince George's County;Election District 10:Precinct 13	precinct
+Maryland;Prince George's County;Election District 10:Precinct 14	precinct
+Maryland;Prince George's County;Election District 11:Precinct 1	precinct
+Maryland;Prince George's County;Election District 11:Precinct 2	precinct
+Maryland;Prince George's County;Election District 11:Precinct 3	precinct
+Maryland;Prince George's County;Election District 11:Precinct 4	precinct
+Maryland;Prince George's County;Election District 11:Precinct 5	precinct
+Maryland;Prince George's County;Election District 12:Precinct 1	precinct
+Maryland;Prince George's County;Election District 12:Precinct 2	precinct
+Maryland;Prince George's County;Election District 12:Precinct 3	precinct
+Maryland;Prince George's County;Election District 12:Precinct 4	precinct
+Maryland;Prince George's County;Election District 12:Precinct 5	precinct
+Maryland;Prince George's County;Election District 12:Precinct 6	precinct
+Maryland;Prince George's County;Election District 12:Precinct 7	precinct
+Maryland;Prince George's County;Election District 12:Precinct 8	precinct
+Maryland;Prince George's County;Election District 12:Precinct 9	precinct
+Maryland;Prince George's County;Election District 12:Precinct 10	precinct
+Maryland;Prince George's County;Election District 12:Precinct 11	precinct
+Maryland;Prince George's County;Election District 12:Precinct 12	precinct
+Maryland;Prince George's County;Election District 12:Precinct 13	precinct
+Maryland;Prince George's County;Election District 12:Precinct 14	precinct
+Maryland;Prince George's County;Election District 12:Precinct 15	precinct
+Maryland;Prince George's County;Election District 12:Precinct 16	precinct
+Maryland;Prince George's County;Election District 12:Precinct 17	precinct
+Maryland;Prince George's County;Election District 12:Precinct 18	precinct
+Maryland;Prince George's County;Election District 13:Precinct 1	precinct
+Maryland;Prince George's County;Election District 13:Precinct 2	precinct
+Maryland;Prince George's County;Election District 13:Precinct 3	precinct
+Maryland;Prince George's County;Election District 13:Precinct 4	precinct
+Maryland;Prince George's County;Election District 13:Precinct 5	precinct
+Maryland;Prince George's County;Election District 13:Precinct 6	precinct
+Maryland;Prince George's County;Election District 13:Precinct 7	precinct
+Maryland;Prince George's County;Election District 13:Precinct 8	precinct
+Maryland;Prince George's County;Election District 13:Precinct 9	precinct
+Maryland;Prince George's County;Election District 13:Precinct 10	precinct
+Maryland;Prince George's County;Election District 13:Precinct 11	precinct
+Maryland;Prince George's County;Election District 13:Precinct 12	precinct
+Maryland;Prince George's County;Election District 13:Precinct 13	precinct
+Maryland;Prince George's County;Election District 13:Precinct 14	precinct
+Maryland;Prince George's County;Election District 13:Precinct 15	precinct
+Maryland;Prince George's County;Election District 13:Precinct 16	precinct
+Maryland;Prince George's County;Election District 13:Precinct 17	precinct
+Maryland;Prince George's County;Election District 13:Precinct 18	precinct
+Maryland;Prince George's County;Election District 13:Precinct 19	precinct
+Maryland;Prince George's County;Election District 13:Precinct 20	precinct
+Maryland;Prince George's County;Election District 13:Precinct 21	precinct
+Maryland;Prince George's County;Election District 13:Precinct 22	precinct
+Maryland;Prince George's County;Election District 13:Precinct 23	precinct
+Maryland;Prince George's County;Election District 13:Precinct 24	precinct
+Maryland;Prince George's County;Election District 13:Precinct 25	precinct
+Maryland;Prince George's County;Election District 13:Precinct 99	precinct
+Maryland;Prince George's County;Election District 14:Precinct 1	precinct
+Maryland;Prince George's County;Election District 14:Precinct 2	precinct
+Maryland;Prince George's County;Election District 14:Precinct 3	precinct
+Maryland;Prince George's County;Election District 14:Precinct 4	precinct
+Maryland;Prince George's County;Election District 14:Precinct 5	precinct
+Maryland;Prince George's County;Election District 14:Precinct 6	precinct
+Maryland;Prince George's County;Election District 14:Precinct 7	precinct
+Maryland;Prince George's County;Election District 14:Precinct 8	precinct
+Maryland;Prince George's County;Election District 14:Precinct 9	precinct
+Maryland;Prince George's County;Election District 14:Precinct 10	precinct
+Maryland;Prince George's County;Election District 14:Precinct 11	precinct
+Maryland;Prince George's County;Election District 14:Precinct 12	precinct
+Maryland;Prince George's County;Election District 14:Precinct 13	precinct
+Maryland;Prince George's County;Election District 14:Precinct 14	precinct
+Maryland;Prince George's County;Election District 14:Precinct 15	precinct
+Maryland;Prince George's County;Election District 14:Precinct 16	precinct
+Maryland;Prince George's County;Election District 14:Precinct 17	precinct
+Maryland;Prince George's County;Election District 14:Precinct 99	precinct
+Maryland;Prince George's County;Election District 15:Precinct 1	precinct
+Maryland;Prince George's County;Election District 15:Precinct 2	precinct
+Maryland;Prince George's County;Election District 15:Precinct 3	precinct
+Maryland;Prince George's County;Election District 15:Precinct 4	precinct
+Maryland;Prince George's County;Election District 15:Precinct 5	precinct
+Maryland;Prince George's County;Election District 15:Precinct 6	precinct
+Maryland;Prince George's County;Election District 16:Precinct 1	precinct
+Maryland;Prince George's County;Election District 16:Precinct 2	precinct
+Maryland;Prince George's County;Election District 16:Precinct 3	precinct
+Maryland;Prince George's County;Election District 16:Precinct 4	precinct
+Maryland;Prince George's County;Election District 16:Precinct 5	precinct
+Maryland;Prince George's County;Election District 16:Precinct 98	precinct
+Maryland;Prince George's County;Election District 16:Precinct 99	precinct
+Maryland;Prince George's County;Election District 17:Precinct 1	precinct
+Maryland;Prince George's County;Election District 17:Precinct 2	precinct
+Maryland;Prince George's County;Election District 17:Precinct 3	precinct
+Maryland;Prince George's County;Election District 17:Precinct 4	precinct
+Maryland;Prince George's County;Election District 17:Precinct 5	precinct
+Maryland;Prince George's County;Election District 17:Precinct 6	precinct
+Maryland;Prince George's County;Election District 17:Precinct 7	precinct
+Maryland;Prince George's County;Election District 17:Precinct 8	precinct
+Maryland;Prince George's County;Election District 17:Precinct 9	precinct
+Maryland;Prince George's County;Election District 17:Precinct 10	precinct
+Maryland;Prince George's County;Election District 17:Precinct 11	precinct
+Maryland;Prince George's County;Election District 17:Precinct 12	precinct
+Maryland;Prince George's County;Election District 17:Precinct 13	precinct
+Maryland;Prince George's County;Election District 17:Precinct 14	precinct
+Maryland;Prince George's County;Election District 17:Precinct 15	precinct
+Maryland;Prince George's County;Election District 18:Precinct 1	precinct
+Maryland;Prince George's County;Election District 18:Precinct 2	precinct
+Maryland;Prince George's County;Election District 18:Precinct 3	precinct
+Maryland;Prince George's County;Election District 18:Precinct 4	precinct
+Maryland;Prince George's County;Election District 18:Precinct 5	precinct
+Maryland;Prince George's County;Election District 18:Precinct 6	precinct
+Maryland;Prince George's County;Election District 18:Precinct 7	precinct
+Maryland;Prince George's County;Election District 18:Precinct 8	precinct
+Maryland;Prince George's County;Election District 18:Precinct 9	precinct
+Maryland;Prince George's County;Election District 18:Precinct 10	precinct
+Maryland;Prince George's County;Election District 18:Precinct 11	precinct
+Maryland;Prince George's County;Election District 18:Precinct 12	precinct
+Maryland;Prince George's County;Election District 18:Precinct 13	precinct
+Maryland;Prince George's County;Election District 18:Precinct 14	precinct
+Maryland;Prince George's County;Election District 18:Precinct 15	precinct
+Maryland;Prince George's County;Election District 18:Precinct 16	precinct
+Maryland;Prince George's County;Election District 18:Precinct 99	precinct
+Maryland;Prince George's County;Election District 19:Precinct 1	precinct
+Maryland;Prince George's County;Election District 19:Precinct 2	precinct
+Maryland;Prince George's County;Election District 19:Precinct 3	precinct
+Maryland;Prince George's County;Election District 19:Precinct 4	precinct
+Maryland;Prince George's County;Election District 19:Precinct 5	precinct
+Maryland;Prince George's County;Election District 19:Precinct 98	precinct
+Maryland;Prince George's County;Election District 19:Precinct 99	precinct
+Maryland;Prince George's County;Election District 20:Precinct 1	precinct
+Maryland;Prince George's County;Election District 20:Precinct 2	precinct
+Maryland;Prince George's County;Election District 20:Precinct 3	precinct
+Maryland;Prince George's County;Election District 20:Precinct 4	precinct
+Maryland;Prince George's County;Election District 20:Precinct 5	precinct
+Maryland;Prince George's County;Election District 20:Precinct 6	precinct
+Maryland;Prince George's County;Election District 20:Precinct 7	precinct
+Maryland;Prince George's County;Election District 20:Precinct 8	precinct
+Maryland;Prince George's County;Election District 20:Precinct 9	precinct
+Maryland;Prince George's County;Election District 20:Precinct 10	precinct
+Maryland;Prince George's County;Election District 20:Precinct 11	precinct
+Maryland;Prince George's County;Election District 20:Precinct 12	precinct
+Maryland;Prince George's County;Election District 20:Precinct 13	precinct
+Maryland;Prince George's County;Election District 20:Precinct 14	precinct
+Maryland;Prince George's County;Election District 20:Precinct 15	precinct
+Maryland;Prince George's County;Election District 20:Precinct 16	precinct
+Maryland;Prince George's County;Election District 20:Precinct 17	precinct
+Maryland;Prince George's County;Election District 20:Precinct 18	precinct
+Maryland;Prince George's County;Election District 20:Precinct 19	precinct
+Maryland;Prince George's County;Election District 20:Precinct 20	precinct
+Maryland;Prince George's County;Election District 20:Precinct 21	precinct
+Maryland;Prince George's County;Election District 20:Precinct 97	precinct
+Maryland;Prince George's County;Election District 20:Precinct 98	precinct
+Maryland;Prince George's County;Election District 20:Precinct 99	precinct
+Maryland;Prince George's County;Election District 21:Precinct 1	precinct
+Maryland;Prince George's County;Election District 21:Precinct 2	precinct
+Maryland;Prince George's County;Election District 21:Precinct 3	precinct
+Maryland;Prince George's County;Election District 21:Precinct 4	precinct
+Maryland;Prince George's County;Election District 21:Precinct 5	precinct
+Maryland;Prince George's County;Election District 21:Precinct 6	precinct
+Maryland;Prince George's County;Election District 21:Precinct 7	precinct
+Maryland;Prince George's County;Election District 21:Precinct 8	precinct
+Maryland;Prince George's County;Election District 21:Precinct 9	precinct
+Maryland;Prince George's County;Election District 21:Precinct 10	precinct
+Maryland;Prince George's County;Election District 21:Precinct 11	precinct
+Maryland;Prince George's County;Election District 21:Precinct 12	precinct
+Maryland;Prince George's County;Election District 21:Precinct 13	precinct
+Maryland;Prince George's County;Election District 21:Precinct 14	precinct
+Maryland;Prince George's County;Election District 21:Precinct 15	precinct
+Maryland;Prince George's County;Election District 21:Precinct 16	precinct
+Maryland;Prince George's County;Election District 21:Precinct 17	precinct
+Maryland;Prince George's County;Election District 21:Precinct 18	precinct
+Maryland;Prince George's County;Election District 21:Precinct 19	precinct
+Maryland;Prince George's County;Election District 21:Precinct 91	precinct
+Maryland;Prince George's County;Election District 21:Precinct 92	precinct
+Maryland;Prince George's County;Election District 21:Precinct 93	precinct
+Maryland;Prince George's County;Election District 21:Precinct 94	precinct
+Maryland;Prince George's County;Election District 21:Precinct 95	precinct
+Maryland;Prince George's County;Election District 21:Precinct 96	precinct
+Maryland;Prince George's County;Election District 21:Precinct 97	precinct
+Maryland;Prince George's County;Election District 21:Precinct 98	precinct
+Maryland;Prince George's County;Election District 21:Precinct 99	precinct
+Maryland;Queen Anne's County;Election District 1:Precinct 1	precinct
+Maryland;Queen Anne's County;Election District 2:Precinct 1	precinct
+Maryland;Queen Anne's County;Election District 3:Precinct 2	precinct
+Maryland;Queen Anne's County;Election District 4:Precinct 1	precinct
+Maryland;Queen Anne's County;Election District 4:Precinct 2	precinct
+Maryland;Queen Anne's County;Election District 4:Precinct 3	precinct
+Maryland;Queen Anne's County;Election District 4:Precinct 6	precinct
+Maryland;Queen Anne's County;Election District 5:Precinct 1	precinct
+Maryland;Queen Anne's County;Election District 5:Precinct 2	precinct
+Maryland;Queen Anne's County;Election District 6:Precinct 1	precinct
+Maryland;Queen Anne's County;Election District 7:Precinct 1	precinct
+Maryland;St. Mary's County;Election District 1:Precinct 1	precinct
+Maryland;St. Mary's County;Election District 1:Precinct 2	precinct
+Maryland;St. Mary's County;Election District 2:Precinct 1	precinct
+Maryland;St. Mary's County;Election District 2:Precinct 2	precinct
+Maryland;St. Mary's County;Election District 2:Precinct 3	precinct
+Maryland;St. Mary's County;Election District 2:Precinct 4	precinct
+Maryland;St. Mary's County;Election District 3:Precinct 1	precinct
+Maryland;St. Mary's County;Election District 3:Precinct 2	precinct
+Maryland;St. Mary's County;Election District 3:Precinct 3	precinct
+Maryland;St. Mary's County;Election District 3:Precinct 4	precinct
+Maryland;St. Mary's County;Election District 3:Precinct 5	precinct
+Maryland;St. Mary's County;Election District 3:Precinct 6	precinct
+Maryland;St. Mary's County;Election District 4:Precinct 1	precinct
+Maryland;St. Mary's County;Election District 4:Precinct 2	precinct
+Maryland;St. Mary's County;Election District 4:Precinct 3	precinct
+Maryland;St. Mary's County;Election District 5:Precinct 1	precinct
+Maryland;St. Mary's County;Election District 5:Precinct 2	precinct
+Maryland;St. Mary's County;Election District 5:Precinct 3	precinct
+Maryland;St. Mary's County;Election District 6:Precinct 1	precinct
+Maryland;St. Mary's County;Election District 6:Precinct 2	precinct
+Maryland;St. Mary's County;Election District 6:Precinct 3	precinct
+Maryland;St. Mary's County;Election District 6:Precinct 4	precinct
+Maryland;St. Mary's County;Election District 7:Precinct 1	precinct
+Maryland;St. Mary's County;Election District 8:Precinct 1	precinct
+Maryland;St. Mary's County;Election District 8:Precinct 2	precinct
+Maryland;St. Mary's County;Election District 8:Precinct 3	precinct
+Maryland;St. Mary's County;Election District 8:Precinct 4	precinct
+Maryland;St. Mary's County;Election District 8:Precinct 5	precinct
+Maryland;St. Mary's County;Election District 8:Precinct 6	precinct
+Maryland;St. Mary's County;Election District 8:Precinct 7	precinct
+Maryland;St. Mary's County;Election District 8:Precinct 8	precinct
+Maryland;St. Mary's County;Election District 8:Precinct 9	precinct
+Maryland;St. Mary's County;Election District 8:Precinct 10	precinct
+Maryland;St. Mary's County;Election District 8:Precinct 11	precinct
+Maryland;St. Mary's County;Election District 8:Precinct 12	precinct
+Maryland;St. Mary's County;Election District 9:Precinct 1	precinct
+Maryland;Somerset County;Election District 1:Precinct 1	precinct
+Maryland;Somerset County;Election District 1:Precinct 2	precinct
+Maryland;Somerset County;Election District 1:Precinct 3	precinct
+Maryland;Somerset County;Election District 2:Precinct 1	precinct
+Maryland;Somerset County;Election District 3:Precinct 1	precinct
+Maryland;Somerset County;Election District 4:Precinct 1	precinct
+Maryland;Somerset County;Election District 5:Precinct 1	precinct
+Maryland;Somerset County;Election District 6:Precinct 1	precinct
+Maryland;Somerset County;Election District 7:Precinct 1	precinct
+Maryland;Somerset County;Election District 8:Precinct 1	precinct
+Maryland;Somerset County;Election District 8:Precinct 2	precinct
+Maryland;Somerset County;Election District 9:Precinct 1	precinct
+Maryland;Somerset County;Election District 10:Precinct 1	precinct
+Maryland;Somerset County;Election District 10:Precinct 2	precinct
+Maryland;Somerset County;Election District 11:Precinct 1	precinct
+Maryland;Somerset County;Election District 12:Precinct 1	precinct
+Maryland;Somerset County;Election District 13:Precinct 1	precinct
+Maryland;Somerset County;Election District 13:Precinct 2	precinct
+Maryland;Somerset County;Election District 13:Precinct 3	precinct
+Maryland;Somerset County;Election District 14:Precinct 1	precinct
+Maryland;Somerset County;Election District 15:Precinct 1	precinct
+Maryland;Somerset County;Election District 15:Precinct 2	precinct
+Maryland;Somerset County;Election District 15:Precinct 3	precinct
+Maryland;Talbot County;Election District 1:Precinct 1	precinct
+Maryland;Talbot County;Election District 1:Precinct 2	precinct
+Maryland;Talbot County;Election District 1:Precinct 3	precinct
+Maryland;Talbot County;Election District 1:Precinct 5	precinct
+Maryland;Talbot County;Election District 2:Precinct 1	precinct
+Maryland;Talbot County;Election District 2:Precinct 2	precinct
+Maryland;Talbot County;Election District 2:Precinct 3	precinct
+Maryland;Talbot County;Election District 3:Precinct 1	precinct
+Maryland;Talbot County;Election District 3:Precinct 3	precinct
+Maryland;Talbot County;Election District 4:Precinct 1	precinct
+Maryland;Talbot County;Election District 5:Precinct 1	precinct
+Maryland;Talbot County;Election District 5:Precinct 2	precinct
+Maryland;Washington County;Election District 1:Precinct 0	precinct
+Maryland;Washington County;Election District 2:Precinct 0	precinct
+Maryland;Washington County;Election District 3:Precinct 1	precinct
+Maryland;Washington County;Election District 3:Precinct 2	precinct
+Maryland;Washington County;Election District 3:Precinct 3	precinct
+Maryland;Washington County;Election District 3:Precinct 4	precinct
+Maryland;Washington County;Election District 3:Precinct 5	precinct
+Maryland;Washington County;Election District 4:Precinct 0	precinct
+Maryland;Washington County;Election District 5:Precinct 0	precinct
+Maryland;Washington County;Election District 6:Precinct 1	precinct
+Maryland;Washington County;Election District 6:Precinct 2	precinct
+Maryland;Washington County;Election District 7:Precinct 1	precinct
+Maryland;Washington County;Election District 7:Precinct 2	precinct
+Maryland;Washington County;Election District 8:Precinct 0	precinct
+Maryland;Washington County;Election District 9:Precinct 0	precinct
+Maryland;Washington County;Election District 10:Precinct 1	precinct
+Maryland;Washington County;Election District 10:Precinct 2	precinct
+Maryland;Washington County;Election District 10:Precinct 3	precinct
+Maryland;Washington County;Election District 10:Precinct 4	precinct
+Maryland;Washington County;Election District 10:Precinct 5	precinct
+Maryland;Washington County;Election District 11:Precinct 1	precinct
+Maryland;Washington County;Election District 11:Precinct 2	precinct
+Maryland;Washington County;Election District 12:Precinct 0	precinct
+Maryland;Washington County;Election District 13:Precinct 1	precinct
+Maryland;Washington County;Election District 13:Precinct 2	precinct
+Maryland;Washington County;Election District 14:Precinct 1	precinct
+Maryland;Washington County;Election District 14:Precinct 2	precinct
+Maryland;Washington County;Election District 15:Precinct 0	precinct
+Maryland;Washington County;Election District 16:Precinct 0	precinct
+Maryland;Washington County;Election District 17:Precinct 1	precinct
+Maryland;Washington County;Election District 18:Precinct 1	precinct
+Maryland;Washington County;Election District 18:Precinct 2	precinct
+Maryland;Washington County;Election District 18:Precinct 3	precinct
+Maryland;Washington County;Election District 18:Precinct 4	precinct
+Maryland;Washington County;Election District 19:Precinct 0	precinct
+Maryland;Washington County;Election District 20:Precinct 0	precinct
+Maryland;Washington County;Election District 21:Precinct 1	precinct
+Maryland;Washington County;Election District 21:Precinct 2	precinct
+Maryland;Washington County;Election District 21:Precinct 3	precinct
+Maryland;Washington County;Election District 22:Precinct 1	precinct
+Maryland;Washington County;Election District 22:Precinct 2	precinct
+Maryland;Washington County;Election District 23:Precinct 0	precinct
+Maryland;Washington County;Election District 24:Precinct 1	precinct
+Maryland;Washington County;Election District 25:Precinct 1	precinct
+Maryland;Washington County;Election District 25:Precinct 2	precinct
+Maryland;Washington County;Election District 25:Precinct 3	precinct
+Maryland;Washington County;Election District 25:Precinct 4	precinct
+Maryland;Washington County;Election District 26:Precinct 1	precinct
+Maryland;Washington County;Election District 26:Precinct 2	precinct
+Maryland;Washington County;Election District 26:Precinct 3	precinct
+Maryland;Washington County;Election District 26:Precinct 4	precinct
+Maryland;Washington County;Election District 27:Precinct 1	precinct
+Maryland;Washington County;Election District 27:Precinct 2	precinct
+Maryland;Wicomico County;Election District 1:Precinct 1	precinct
+Maryland;Wicomico County;Election District 1:Precinct 2	precinct
+Maryland;Wicomico County;Election District 1:Precinct 3	precinct
+Maryland;Wicomico County;Election District 2:Precinct 1	precinct
+Maryland;Wicomico County;Election District 4:Precinct 1	precinct
+Maryland;Wicomico County;Election District 4:Precinct 2	precinct
+Maryland;Wicomico County;Election District 4:Precinct 3	precinct
+Maryland;Wicomico County;Election District 5:Precinct 1	precinct
+Maryland;Wicomico County;Election District 5:Precinct 2	precinct
+Maryland;Wicomico County;Election District 5:Precinct 3	precinct
+Maryland;Wicomico County;Election District 5:Precinct 4	precinct
+Maryland;Wicomico County;Election District 5:Precinct 5	precinct
+Maryland;Wicomico County;Election District 5:Precinct 6	precinct
+Maryland;Wicomico County;Election District 5:Precinct 7	precinct
+Maryland;Wicomico County;Election District 5:Precinct 8	precinct
+Maryland;Wicomico County;Election District 5:Precinct 9	precinct
+Maryland;Wicomico County;Election District 6:Precinct 1	precinct
+Maryland;Wicomico County;Election District 7:Precinct 1	precinct
+Maryland;Wicomico County;Election District 8:Precinct 1	precinct
+Maryland;Wicomico County;Election District 8:Precinct 2	precinct
+Maryland;Wicomico County;Election District 8:Precinct 3	precinct
+Maryland;Wicomico County;Election District 8:Precinct 4	precinct
+Maryland;Wicomico County;Election District 8:Precinct 5	precinct
+Maryland;Wicomico County;Election District 9:Precinct 1	precinct
+Maryland;Wicomico County;Election District 9:Precinct 2	precinct
+Maryland;Wicomico County;Election District 9:Precinct 3	precinct
+Maryland;Wicomico County;Election District 9:Precinct 4	precinct
+Maryland;Wicomico County;Election District 9:Precinct 5	precinct
+Maryland;Wicomico County;Election District 9:Precinct 6	precinct
+Maryland;Wicomico County;Election District 9:Precinct 7	precinct
+Maryland;Wicomico County;Election District 9:Precinct 8	precinct
+Maryland;Wicomico County;Election District 10:Precinct 1	precinct
+Maryland;Wicomico County;Election District 10:Precinct 2	precinct
+Maryland;Wicomico County;Election District 10:Precinct 3	precinct
+Maryland;Wicomico County;Election District 11:Precinct 1	precinct
+Maryland;Wicomico County;Election District 11:Precinct 2	precinct
+Maryland;Wicomico County;Election District 11:Precinct 3	precinct
+Maryland;Wicomico County;Election District 11:Precinct 4	precinct
+Maryland;Wicomico County;Election District 13:Precinct 1	precinct
+Maryland;Wicomico County;Election District 13:Precinct 2	precinct
+Maryland;Wicomico County;Election District 13:Precinct 3	precinct
+Maryland;Wicomico County;Election District 13:Precinct 4	precinct
+Maryland;Wicomico County;Election District 14:Precinct 1	precinct
+Maryland;Wicomico County;Election District 14:Precinct 2	precinct
+Maryland;Wicomico County;Election District 15:Precinct 1	precinct
+Maryland;Wicomico County;Election District 15:Precinct 2	precinct
+Maryland;Wicomico County;Election District 15:Precinct 3	precinct
+Maryland;Wicomico County;Election District 16:Precinct 1	precinct
+Maryland;Wicomico County;Election District 16:Precinct 2	precinct
+Maryland;Wicomico County;Election District 16:Precinct 3	precinct
+Maryland;Wicomico County;Election District 16:Precinct 4	precinct
+Maryland;Wicomico County;Election District 16:Precinct 5	precinct
+Maryland;Wicomico County;Election District 16:Precinct 6	precinct
+Maryland;Wicomico County;Election District 17:Precinct 1	precinct
+Maryland;Worcester County;Election District 1:Precinct 1	precinct
+Maryland;Worcester County;Election District 1:Precinct 2	precinct
+Maryland;Worcester County;Election District 2:Precinct 1	precinct
+Maryland;Worcester County;Election District 2:Precinct 2	precinct
+Maryland;Worcester County;Election District 2:Precinct 3	precinct
+Maryland;Worcester County;Election District 2:Precinct 4	precinct
+Maryland;Worcester County;Election District 2:Precinct 5	precinct
+Maryland;Worcester County;Election District 3:Precinct 1	precinct
+Maryland;Worcester County;Election District 3:Precinct 2	precinct
+Maryland;Worcester County;Election District 3:Precinct 3	precinct
+Maryland;Worcester County;Election District 4:Precinct 1	precinct
+Maryland;Worcester County;Election District 4:Precinct 2	precinct
+Maryland;Worcester County;Election District 4:Precinct 3	precinct
+Maryland;Worcester County;Election District 4:Precinct 4	precinct
+Maryland;Worcester County;Election District 5:Precinct 1	precinct
+Maryland;Worcester County;Election District 5:Precinct 2	precinct
+Maryland;Worcester County;Election District 6:Precinct 1	precinct
+Maryland;Worcester County;Election District 6:Precinct 2	precinct
+Maryland;Worcester County;Election District 6:Precinct 3	precinct
+Maryland;Worcester County;Election District 7:Precinct 1	precinct

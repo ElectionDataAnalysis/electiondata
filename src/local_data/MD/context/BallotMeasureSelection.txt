@@ -1,0 +1,5 @@
+Selection
+Yes
+No
+For
+Against
