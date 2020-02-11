@@ -154,13 +154,11 @@ def fill_externalIdentifier_table(session,schema,context_schema,enum_dframe,id_o
     """
     fpath is a path to the tab-separated context file holding the external identifier info
     s is the state
-
     """
     if os.path.isfile(pickle_dir + 'ExternalIdentifier'):
         print('Filling ExternalIdentifier table from pickle in ' + pickle_dir)
         ei_df = pd.read_pickle(pickle_dir + 'ExternalIdentifier')
     else:
-
         print('Fill ExternalIdentifier table')
         # TODO why does this step take so long?
         # get table from context directory with the tab-separated definitions of external identifiers
@@ -175,9 +173,11 @@ def fill_externalIdentifier_table(session,schema,context_schema,enum_dframe,id_o
         for t in ei_df['Table'].unique():
             cdf[t] = pd.read_sql_table(t,session.bind,schema,'Id')
 
-        # add columns to dframe to match columns in CDF db
+        # add columns to ei_dframe to match columns in CDF db
+        # TODO use .merge(), etc., not .apply(), and take care of primaries
 
-        ei_df['ForeignId'] = ei_df.apply(lambda row: table_and_name_to_foreign_id(cdf,row),axis=1)
+
+        ei_df['ForeignId'] = ei_df.apply(lambda row: table_and_name_to_foreign_id(cdf,row),axis=1) # TODO make this work for primaries, where office name is not the same as the contest name
         ei_df['Value'] = ei_df['ExternalIdentifierValue']
         ### apply(lambda ...) returns a column of 2-elt lists, so need to unpack.
         ei_df['id_othertype_pairs']= ei_df.apply(lambda row: ei_id_and_othertype(enum_dframe['IdentifierType'],row,id_other_id_type),axis=1)
