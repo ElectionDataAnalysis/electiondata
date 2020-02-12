@@ -113,6 +113,7 @@ def table_list(session,meta,cdf_schema,table):
     table_alchemy_item = Table(table,meta,autoload=True,autoload_with=session.bind,schema=cdf_schema)
     result_list = [[instance.Id,instance.Name] for instance in session.query(table_alchemy_item)]
     result_dframe = pd.DataFrame(result_list,columns=['Id','Name'])
+    result_dframe.sort_values('Name',inplace=True)
     return result_dframe
 
 def contest_type_from_contest_id(con,meta,schema,Contest_Id):

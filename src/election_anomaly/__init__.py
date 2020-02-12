@@ -28,13 +28,20 @@ try:
 except:
     import pickle
 
-def choose_by_id(session,meta,cdf_schema,table,table_foreign_id,filter=[],default=0):
+def choose_by_id(session,meta,cdf_schema,table,filter=[],default=0):
+    """
+    Gives the user a list of items and invites user to choose one by entering its Id.
+    `table` is the table of items; `filter` is a list of dictionaries,
+    each describing a filter to be applied, with keys "FilterTable", "FilterField", "FilterValue" and "ForeignIdField"
+    default is the default Id to be chosen if user enters nothing.
+    """
 
     t_dframe = dbr.table_list(session,meta,cdf_schema,table)
 
     for f in filter:
+        assert 'FilterTable' in f.keys and 'FilterField' in f.keys and 'FilterValue' in f.keys and 'ForeignIdField' in f.keys, 'Each filter must have four keys: "FilterTable", "FilterField", "FilterValue" and "ForeignIdField"'
         f_table = pd.read_sql_table(f['FilterTable'],session.bind,schema=cdf_schema)
-        t_dframe = t_dframe.merge(f_table,left_on='Id',right_on=table_foreign_id,suffixes=['','_filter'])
+        t_dframe = t_dframe.merge(f_table,left_on='Id',right_on=f['ForeignIdField'],suffixes=['','_filter'])
         t_dframe = t_dframe[t_dframe[f['FilterField']] == f['FilterValue']]
     if t_dframe.shape[0] == 0:
         raise Exception('No corresponding records in '+ table)
@@ -227,7 +234,7 @@ if __name__ == '__main__':
         print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
 
 
-    contest_id = choose_by_id(session,meta_cdf_schema,cdf_schema,'CandidateContest','Contest_Id',filter=[{'FilterTable':'ElectionContestJoin','FilterField':'Election_Id','FilterValue':election_id}]
+    contest_id = choose_by_id(session,meta_cdf_schema,cdf_schema,'CandidateContest',filter=[{'FilterTable':'ElectionContestJoin','FilterField':'Election_Id','FilterValue':election_id,'ForeignIdField':'Contest_Id'}]
 )
     if contest_id == 0: contest_id_list=[]
     else: contest_id_list = [contest_id] # TODO move inside find_anomalies function
