@@ -3,4 +3,4 @@ General Election 2018-11-06;results_pct_20181106.txt	utf8	tab	https://s3.amazona
 General Election 2018-11-06;filtered_results_pct_20181106.txt	utf8	tab	https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2018_11_06/results_pct_20181106.zip	2018-11-16	2019-10-15		[{'column':'precinct','type_':String(30)}]
 General Election 2018-11-06;absentee_20181106.csv	utf8	tab	https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2018_11_06/absentee_20181106.zip	2018-11-16	2019-10-15		[]
 General Election 2018-11-06;filtered_yancey2018.txt	utf8	tab	https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2018_11_06/results_pct_20181106.zip	2018-11-16	2019-10-15	filtered, contains Yancey County only, for limited contests	[{'column':'precinct','type_':String(30)}]
-Primary Election 2018-05-08;results_pct_20180508.txt	utf8	tab	https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2018_05_08/results_pct_20180508.zip	2018-05-18	2020-02-11	[{'column':'precinct','type_':String(30)}]
+Primary Election 2018-05-08;results_pct_20180508.txt	utf8	tab	https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2018_05_08/results_pct_20180508.zip	2018-05-18	2020-02-11		[{'column':'precinct','type_':String(30)}]

@@ -177,7 +177,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
 
         # create dframe of vote counts (with join info) for ballot measures
         print('Create vote_counts dframe')
-        bm_vote_counts = row.drop(['County','Election Date','Precinct','Contest Group ID','Contest Type','Contest Name','Choice','Choice Party','Vote For','Real Precinct','ReportingUnit_external','ReportingUnit','index','ExternalIdentifierType','ReportingUnitType_Id','OtherReportingUnitType','CountItemStatus_Id','OtherCountItemStatus','BallotMeasureContest','Name','BallotMeasureSelection','Selection', 'ElectionDistrict_Id'],axis=1)
+        bm_vote_counts = row.drop(set(['County','Election Date','Precinct','Contest Group ID','Contest Type','Contest Name','Choice','Choice Party','Vote For','Real Precinct','ReportingUnit_external','ReportingUnit','index','ExternalIdentifierType','ReportingUnitType_Id','OtherReportingUnitType','CountItemStatus_Id','OtherCountItemStatus','BallotMeasureContest','Name','BallotMeasureSelection','Selection', 'ElectionDistrict_Id']).intersection(row.columns.to_list()),axis=1)
         # vc_col_d = {k:v['CountItemType'] for k,v in mu.content_dictionary['counts_dictionary'].items()}
         bm_vote_counts.rename(columns=vc_col_d,inplace=True)
         print('Reshape')
@@ -196,6 +196,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
             row[munge_key] = eval(munge[munge_key])
         # append columns with info from context tables of cdf db
         # TODO for primary elections, need to add party to the name of the office.
+        # loop through tables with external identifiers
         for t in ['Office','Party','ReportingUnit']:    # Office first is most efficient, as it filters out rows for offices not listed in Office.txt
             filtered_ei = context_ei[(context_ei['Table'] == t) & (context_ei['ExternalIdentifierType'] == mu.name)][['Name','ExternalIdentifierValue']]
             filtered_ei.columns = [t+'_Name','ExternalIdentifierValue']
@@ -214,9 +215,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
         cdf_d['CandidateSelection'] = dbr.dframe_to_sql(cs_df,session,cdf_schema,'CandidateSelection')
 
         # drop some columns we won't need any more
-        row.drop(
-            ['County','Election Date','Precinct','Contest Group ID','Contest Type','Contest Name','Choice','Choice Party',
-             'Vote For','Real Precinct','ReportingUnit_external','ReportingUnit','index','ExternalIdentifierType'],axis=1)
+        row.drop(set(['County','Election Date','Precinct','Contest Group ID','Contest Type','Contest Name','Choice','Choice Party','Vote For','Real Precinct','ReportingUnit_external','ReportingUnit','index','ExternalIdentifierType']).intersection(row.columns.to_list()),axis=1)
 
         # add Candidate & Contest ids needed later
         row = row.merge(cdf_d['Candidate'],left_on='Candidate',right_on='BallotName',suffixes=['','_Candidate'])
@@ -229,6 +228,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
             row = row.merge(cdf_d['CandidateContest'],left_on='Office_Name',right_on='Name',suffixes=['','_Contest'])
             row.rename(columns={'Id_Contest':'CandidateContest_Id'},inplace=True)
         elif election_type == 'primary':
+            row = row.merge(cdf_d['CandidateContest'],left_on='Office_Name',right_on='Name',suffixes=['','_Contest'])
             # TODO
             pass
         else:
@@ -246,7 +246,8 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
         # load candidate counts
         # create dframe of Candidate Contest vote counts (with join info) for ballot measures
         print('Create vote_counts dframe for Candidate Contests')
-        cc_vote_counts = row.drop(['County','Election Date','Precinct','Contest Group ID','Contest Type','Contest Name','Choice','Choice Party','Vote For','Real Precinct','ReportingUnit_external','ReportingUnit','index','ExternalIdentifierType','ReportingUnitType_Id','OtherReportingUnitType','CountItemStatus_Id','OtherCountItemStatus','Name', 'ElectionDistrict_Id'],axis=1)
+        # TODO list of cols to be dropped is munger-dependent
+        cc_vote_counts = row.drop(set(['County','Election Date','Precinct','Contest Group ID','Contest Type','Contest Name','Choice','Choice Party','Vote For','Real Precinct','ReportingUnit_external','ReportingUnit','index','ExternalIdentifierType','ReportingUnitType_Id','OtherReportingUnitType','CountItemStatus_Id','OtherCountItemStatus','Name', 'ElectionDistrict_Id']).intersection(row.columns.to_list()),axis=1)
         cc_vote_counts.rename(columns=vc_col_d,inplace=True)
         print('Reshape')
         cc_vote_counts.rename(columns={'CandidateContest_Id':'Contest_Id','CandidateSelection_Id':'Selection_Id'},inplace=True)
@@ -337,35 +338,7 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,election_typ
     return str(ids_d)
 
 if __name__ == '__main__':
-    import db_routines.Create_CDF_db as CDF
-    import states_and_files as sf
-    from sqlalchemy.orm import sessionmaker
 
-    cdf_schema='cdf_nc_test2'
-    eng,meta = dbr.sql_alchemy_connect(schema=cdf_schema,paramfile='../../local_data/database.ini')
-    Session = sessionmaker(bind=eng)
-    session = Session()
-
-    s = sf.create_state('NC', '../../local_data/NC')
-
-    munger_path = '../../local_data/mungers/nc_export1.txt'
-    print('Creating munger instance from ' + munger_path)
-    mu = sf.create_munger(munger_path)
-
-    print('Creating metafile instance')
-    mf = sf.create_metafile(s, 'layout_results_pct.txt')
-
-    print('Creating datafile instance')
-    df = sf.create_datafile(s, 'General Election 2018-11-06', 'filtered_yancey2018.txt', mf, mu)
-    row = pd.read_sql_table('GeneralElection20181106filtered_results_pct_20181106txt',session.bind,s.schema_name)
-
-    election_id = 3218
-    id_type_other_id = 35
-    state_id = 59
-    election_type='general'
-    bulk_elements_to_cdf(session, mu, row, cdf_schema, s.schema_name, election_id, election_type, state_id)
-
-
-    raw_records_to_cdf(session,meta,df,mu,cdf_schema,s.schema_name,0,0,'../CDF_schema_def_info/tables.txt')
     print('Done!')
+    exit()
 

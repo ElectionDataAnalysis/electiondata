@@ -13,4 +13,3 @@ One Stop	Integer
 Absentee by Mail	Integer
 Provisional	Integer
 Total Votes	Integer
-Real Precinct	String

@@ -28,13 +28,20 @@ try:
 except:
     import pickle
 
-def choose_by_id(session,meta,cdf_schema,table,default=0):
-    election_dframe = dbr.table_list(session,meta,cdf_schema,table)
-    print('Available '+table+'s in schema ' + cdf_schema)
-    if election_dframe.shape[0] == 0:
-        raise Exception('No records in '+ table)
+def choose_by_id(session,meta,cdf_schema,table,filter=[],default=0):
 
-    for index,row in election_dframe.iterrows():
+    t_dframe = dbr.table_list(session,meta,cdf_schema,table)
+
+    for f in filter:
+        f_table = pd.read_sql_table(f['FilterTable'],session.bind,schema=cdf_schema)
+        t_dframe = t_dframe.merge(f_table,left_on='Id',right_on=table+'_Id')
+        t_dframe = t_dframe[t_dframe[f['FilterField']] == f['FilterValue']]
+    if t_dframe.shape[0] == 0:
+        raise Exception('No corresponding records in '+ table)
+
+    print('Available '+table+'s in schema ' + cdf_schema)
+
+    for index,row in t_dframe.iterrows():
         print(row['Name'] + ' (Id is ' + str(row['Id']) + ')')
 
     id = input('Enter Id of the item you wish to analyze \n\t(default is '+str(default)+')\n') or default
@@ -221,7 +228,8 @@ if __name__ == '__main__':
         print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
 
 
-    contest_id = choose_by_id(session,meta_cdf_schema,cdf_schema,'CandidateContest')
+    contest_id = choose_by_id(session,meta_cdf_schema,cdf_schema,'CandidateContest',filter=[{'FilterTable':'ElectionContestJoin','FilterField':'Election_Id','FilterValue':election_id}]
+)
     if contest_id == 0: contest_id_list=[]
     else: contest_id_list = [contest_id] # TODO move inside find_anomalies function
 
