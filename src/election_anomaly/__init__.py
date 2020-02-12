@@ -28,13 +28,13 @@ try:
 except:
     import pickle
 
-def choose_by_id(session,meta,cdf_schema,table,filter=[],default=0):
+def choose_by_id(session,meta,cdf_schema,table,table_foreign_id,filter=[],default=0):
 
     t_dframe = dbr.table_list(session,meta,cdf_schema,table)
 
     for f in filter:
         f_table = pd.read_sql_table(f['FilterTable'],session.bind,schema=cdf_schema)
-        t_dframe = t_dframe.merge(f_table,left_on='Id',right_on=table+'_Id')
+        t_dframe = t_dframe.merge(f_table,left_on='Id',right_on=table_foreign_id,suffixes=['','_filter'])
         t_dframe = t_dframe[t_dframe[f['FilterField']] == f['FilterValue']]
     if t_dframe.shape[0] == 0:
         raise Exception('No corresponding records in '+ table)
@@ -131,7 +131,6 @@ def raw_data(session,meta,df):
         r = dict(d)
         del r['column']
         op.alter_column(df.table_name,d['column'],schema=s.schema_name,**r)
-        # alter_column(table_name, column_name, nullable=None, server_default=False, name=None, type_=None, schema=None, autoincrement=None, comment=False, existing_comment=None, existing_type=None, existing_server_default=None, existing_nullable=None, existing_autoincrement=None)
         print('\tCorrection to table definition necessary:\n\t\t'+df.table_name+';'+str(d))
 
     # load raw data into tables
@@ -185,7 +184,7 @@ if __name__ == '__main__':
     # need_to_load_data = 'y'
     need_to_load_data = input('Load raw data (y/n)?\n')
     if need_to_load_data == 'y':
-        default = 'nc_export1'
+        default = 'nc_primary'
         munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
 
         munger_path = '../mungers/'+munger_name+'/'
@@ -193,7 +192,7 @@ if __name__ == '__main__':
         m = sf.create_munger(munger_path)
 
         # default = 'filtered_results_pct_20181106.txt'
-        default = 'results_pct_20181106.txt'
+        default = 'results_pct_20180508.txt'
         # default = 'filtered_yancey2018.txt'
         #default = 'alamance.txt'
         df_name = input('Enter name of datafile (default is '+default+')\n') or default
@@ -228,7 +227,7 @@ if __name__ == '__main__':
         print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
 
 
-    contest_id = choose_by_id(session,meta_cdf_schema,cdf_schema,'CandidateContest',filter=[{'FilterTable':'ElectionContestJoin','FilterField':'Election_Id','FilterValue':election_id}]
+    contest_id = choose_by_id(session,meta_cdf_schema,cdf_schema,'CandidateContest','Contest_Id',filter=[{'FilterTable':'ElectionContestJoin','FilterField':'Election_Id','FilterValue':election_id}]
 )
     if contest_id == 0: contest_id_list=[]
     else: contest_id_list = [contest_id] # TODO move inside find_anomalies function

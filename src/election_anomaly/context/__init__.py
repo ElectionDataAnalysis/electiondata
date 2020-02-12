@@ -156,7 +156,8 @@ def fill_externalIdentifier_table(session,schema,context_schema,enum_dframe,id_o
     fpath is a path to the tab-separated context file holding the external identifier info
     s is the state
     """
-    if os.path.isfile(pickle_dir + 'ExternalIdentifier'):
+    disable_pickle = True   # TODO remove this
+    if not disable_pickle and os.path.isfile(pickle_dir + 'ExternalIdentifier'):
         print('Filling ExternalIdentifier table from pickle in ' + pickle_dir)
         ei_df = pd.read_pickle(pickle_dir + 'ExternalIdentifier')
     else:
@@ -211,12 +212,13 @@ def fill_externalIdentifier_table(session,schema,context_schema,enum_dframe,id_o
     # insert appropriate dataframe columns into ExternalIdentifier table in the CDF db
     dframe_to_sql(ei_df, session, schema, 'ExternalIdentifier')
     session.flush()
-    if not os.path.isfile(pickle_dir + 'ExternalIdentifier'):
+    if not disable_pickle and not os.path.isfile(pickle_dir + 'ExternalIdentifier'):
         ei_df.to_pickle(pickle_dir + 'ExternalIdentifier')
     return ei_df
 
 def fill_composing_reporting_unit_join(session,schema,pickle_dir='../local_data/pickles/'):
-    if os.path.isfile(pickle_dir + 'ComposingReportingUnitJoin'):
+    disable_pickle = True   # TODO remove this
+    if not disable_pickle and os.path.isfile(pickle_dir + 'ComposingReportingUnitJoin'):
         print('Filling ComposingReportingUnitJoin table from pickle in ' + pickle_dir)
         cruj_dframe = pd.read_pickle(pickle_dir + 'ComposingReportingUnitJoin')
     else:
@@ -238,7 +240,8 @@ def fill_composing_reporting_unit_join(session,schema,pickle_dir='../local_data/
             cruj_dframe_list.append(ru_dframe[['Id','Id'+'_'+str(i)]].rename(columns={'Id':'ChildReportingUnit_Id','Id'+'_'+str(i):'ParentReportingUnit_Id'}))
 
         cruj_dframe = pd.concat(cruj_dframe_list)
-        cruj_dframe.to_pickle(pickle_dir + 'ComposingReportingUnitJoin')
+        if not disable_pickle:
+            cruj_dframe.to_pickle(pickle_dir + 'ComposingReportingUnitJoin')
 
     cruj_dframe = dframe_to_sql(cruj_dframe, session, schema, 'ComposingReportingUnitJoin')
     session.flush()

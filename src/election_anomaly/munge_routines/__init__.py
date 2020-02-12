@@ -133,7 +133,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
     vote_count_dframe_list = []
 
 
-    if process_ballot_measures:
+    if process_ballot_measures == 'y':
         # Process rows with ballot measures and selections
         print('WARNING: all ballot measure contests assumed to have the whole state as their district')
         row = bm_row
@@ -187,17 +187,21 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
         bm_vote_counts.rename(columns={'Id':'CountItemType_Id'},inplace=True)
         vote_count_dframe_list.append(bm_vote_counts)
 
-    if process_candidate_contests:
+    if process_candidate_contests == 'y':
         # process rows with candidate contests
         row = cc_row
 
         # create columns with good internal labels
-        for munge_key in ['Office','Party','ReportingUnit','Candidate']:
+        for munge_key in ['Office','Party','ReportingUnit','Candidate','CandidateContest']:
             row[munge_key] = eval(munge[munge_key])
         # append columns with info from context tables of cdf db
-        # TODO for primary elections, need to add party to the name of the office.
         # loop through tables with external identifiers
-        for t in ['Office','Party','ReportingUnit']:    # Office first is most efficient, as it filters out rows for offices not listed in Office.txt
+        # TODO do we need Office here, now that we have CandidateContest in the munger and ExternalIdentifier.txt?
+        if election_type == 'general':
+            t_list = ['Office','Party','ReportingUnit'] # Office first is most efficient, as it filters out rows for offices not listed in Office.txt
+        elif election_type == 'primary':
+            t_list = ['CandidateContest','Party','ReportingUnit']
+        for t in t_list:
             filtered_ei = context_ei[(context_ei['Table'] == t) & (context_ei['ExternalIdentifierType'] == mu.name)][['Name','ExternalIdentifierValue']]
             filtered_ei.columns = [t+'_Name','ExternalIdentifierValue']
             row = row.merge(filtered_ei,left_on=t,right_on='ExternalIdentifierValue',suffixes=['','_'+t]).drop(labels=['ExternalIdentifierValue'],axis=1)
@@ -223,14 +227,17 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
         row = row.merge(cdf_d['CandidateSelection'],left_on='Candidate_Id',right_on='Candidate_Id',suffixes=['','_Selection'])
         row.rename(columns={'Id_Selection':'CandidateSelection_Id'},inplace=True)
 
-        # for general elections (not primaries)
-        if election_type == 'general':  # TODO pass election_type to this function
+        # CandidateContest entries depend on the election type.
+        if election_type == 'general':
+            # CandidateContest is derived from the Office
             row = row.merge(cdf_d['CandidateContest'],left_on='Office_Name',right_on='Name',suffixes=['','_Contest'])
             row.rename(columns={'Id_Contest':'CandidateContest_Id'},inplace=True)
         elif election_type == 'primary':
-            row = row.merge(cdf_d['CandidateContest'],left_on='Office_Name',right_on='Name',suffixes=['','_Contest'])
-            # TODO
-            pass
+            # CandidateContest is derived directly from CandidateContest
+            row = row.merge(cdf_d['CandidateContest'],left_on='CandidateContest_Name',right_on='Name',suffixes=['','_Contest'])
+            row.rename(columns={'Id_Contest':'CandidateContest_Id'},inplace=True)
+
+            # load contests into CandidateContest table
         else:
             raise Exception('Election type not recognized by the code: ' + election_type) # TODO add all election types
 
