@@ -1,11 +1,10 @@
 #!usr/bin/python3
 import os.path
 import sys
+
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '.'))
-
-
 
 import db_routines as dbr
 import munge_routines as mr
@@ -13,12 +12,9 @@ from db_routines import Create_CDF_db as CDF
 import states_and_files as sf
 import context
 import analyze as an
-import os
 
-import sqlalchemy as db
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import event, Column, Table, String, Integer, Date, MetaData
-from sqlalchemy.schema import CreateSchema
+from sqlalchemy import Column, Table,MetaData
 from alembic.migration import MigrationContext
 from alembic.operations import Operations
 import pandas as pd
@@ -28,88 +24,6 @@ try:
 except:
     import pickle
 
-def choose_by_id(session,meta,cdf_schema,table,filter=[],default=0):
-    """
-    Gives the user a list of items and invites user to choose one by entering its Id.
-    `table` is the table of items; `filter` is a list of dictionaries,
-    each describing a filter to be applied, with keys "FilterTable", "FilterField", "FilterValue" and "ForeignIdField"
-    default is the default Id to be chosen if user enters nothing.
-    """
-
-    t_dframe = dbr.table_list(session,meta,cdf_schema,table)
-
-    for f in filter:
-        assert 'FilterTable' in f.keys and 'FilterField' in f.keys and 'FilterValue' in f.keys and 'ForeignIdField' in f.keys, 'Each filter must have four keys: "FilterTable", "FilterField", "FilterValue" and "ForeignIdField"'
-        f_table = pd.read_sql_table(f['FilterTable'],session.bind,schema=cdf_schema)
-        t_dframe = t_dframe.merge(f_table,left_on='Id',right_on=f['ForeignIdField'],suffixes=['','_filter'])
-        t_dframe = t_dframe[t_dframe[f['FilterField']] == f['FilterValue']]
-    if t_dframe.shape[0] == 0:
-        raise Exception('No corresponding records in '+ table)
-
-    print('Available '+table+'s in schema ' + cdf_schema)
-
-    for index,row in t_dframe.iterrows():
-        print(row['Name'] + ' (Id is ' + str(row['Id']) + ')')
-
-    id = input('Enter Id of the item you wish to analyze \n\t(default is '+str(default)+')\n') or default
-    return  int(id)
-
-def get_election_id(session,meta,cdf_schema):
-    e_table_list = dbr.table_list(session,meta,cdf_schema,'Election')
-    e_df = pd.read_sql_table('Election',session.bind,schema=cdf_schema)
-    e_type_df = pd.read_sql_table('ElectionType',session.bind,schema=cdf_schema)
-    print('Available elections in schema ' + cdf_schema+':')
-    for index,row in e_table_list.iterrows():
-        print(row['Name'] + ' (Id is ' + str(row['Id']) + ')')
-
-    default = '3219'
-    election_id = input('Enter Id of the election you wish to analyze (default is ' + default + ')\n') or default
-    election_id = int(election_id)
-
-    e_df = e_df.merge(e_type_df,left_on='ElectionType_Id',right_on='Id',suffixes=['_election','_type'])
-
-    election_type = e_df[e_df['Id_election'] == election_id].iloc[0]['Txt']
-    election_name = e_df[e_df['Id_election'] == election_id].iloc[0]['Name']
-    return election_id,election_type,election_name
-
-
-def find_anomalies(cdf_schema,election_id,contest_id_list=[]):
-    find_anomalies = input('Find anomalies in an election (y/n)?\n')
-    if find_anomalies == 'y':
-        # default = 'cdf_nc_test'
-        # cdf_schema = input('Enter name of cdf schema (default is '+default+')\n') or default
-
-        default = '../local_data/database.ini'
-        paramfile = input('Enter path to database parameter file (default is '+default+')\n') or default
-
-        eng, meta_generic = dbr.sql_alchemy_connect(cdf_schema, paramfile)
-        session = Session()
-
-        default = 'nc_2018_primary'
-        election_short_name = input('Enter short name for the election (alphanumeric with underscore, no spaces -- default is '+default+')\n') or default
-
-        default = 'precinct'
-        atomic_ru_type = input('Enter the \'atomic\' Reporting Unit Type on which you wish to base your rolled-up counts (default is '+default+')\n') or default
-
-        default = 'county'
-        roll_up_to_ru_type = input('Enter the (larger) Reporting Unit Type whose counts you want to analyze (default is '+default+')\n') or default
-
-        default = '../local_data/pickles/'+election_short_name+'/'
-        pickle_dir = input('Enter the directory for storing pickled dataframes (default is '+default+')\n') or default
-
-        try:
-            assert os.path.isdir(pickle_dir)
-        except AssertionError as e:
-            print(e)
-            dummy = input('Create the directory and hit enter to continue.')
-
-        e = an.create_election(session, meta_generic, cdf_schema, election_id, roll_up_to_ru_type,
-                               atomic_ru_type, pickle_dir, paramfile)
-        e.anomaly_scores(session, meta_generic, cdf_schema,contest_id_list=contest_id_list)
-        e.worst_bar_for_each_contest(session, meta_generic, 2,contest_id_list=contest_id_list)
-
-    print('Anomalies found')
-    return
 
 def raw_data(session,meta,df):
     """ Loads the raw data from the datafile df into the schema for the associated state
@@ -123,15 +37,12 @@ def raw_data(session,meta,df):
         meta.tables[t].drop()
 
 
-    #%% create table
-    #col_list = []
-    #for [field, type, comment] in df.column_metadata:
-     #   col_list.append(db.Column(field,type,comment=comment))
+    # create table
     col_list = [Column(field,typ,comment=comment) for [field, typ, comment] in df.column_metadata]
     Table(df.table_name,meta,*col_list,schema=s.schema_name)
     meta.create_all()
 
-    #%% correct any type errors in metafile (e.g., some values in file are longer than the metafile thinks possible)
+    #%% correct any type errors in metafile (e.g., some values in file are longer than the metafile thinks possible) # TODO use raw sql query from dbr
     ctx = MigrationContext.configure(eng)
     op = Operations(ctx)
     for d in df.type_correction_list:
@@ -185,8 +96,7 @@ if __name__ == '__main__':
     else:
         meta_cdf_schema = MetaData(bind=session.bind,schema=cdf_schema)
 
-    election_id, election_type, election_name = get_election_id(session,meta_generic,cdf_schema)
-
+    election_id, election_type, election_name = an.get_election_id_type_name(session,meta_generic,cdf_schema,default=3219)
 
     # need_to_load_data = 'y'
     need_to_load_data = input('Load raw data (y/n)?\n')
@@ -227,19 +137,25 @@ if __name__ == '__main__':
             else:
                 print('Continuing with existing file')
 
-
         print('Loading data from df table\n\tin schema '+ s.schema_name+ '\n\tto CDF schema '+cdf_schema+'\n\tusing munger '+munger_name)
         mr.raw_records_to_cdf(session,meta_cdf_schema,df,m,cdf_schema,s.schema_name,election_type)
         session.commit()
         print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
 
+    e = an.get_anomaly_scores(session,meta_cdf_schema,cdf_schema,election_id,election_name)
 
-    contest_id = choose_by_id(session,meta_cdf_schema,cdf_schema,'CandidateContest',filter=[{'FilterTable':'ElectionContestJoin','FilterField':'Election_Id','FilterValue':election_id,'ForeignIdField':'Contest_Id'}]
-)
-    if contest_id == 0: contest_id_list=[]
-    else: contest_id_list = [contest_id] # TODO move inside find_anomalies function
+    default = 3
+    n = input('Draw how many most-anomalous plots?\n') or default
+    n = int(n)
 
-    find_anomalies(cdf_schema,election_id,contest_id_list=contest_id_list)
+    e.draw_most_anomalous(session,meta_cdf_schema,n=n,mode='pct')
+    e.draw_most_anomalous(session,meta_cdf_schema,n=n,mode='raw')
+
+    draw_all = input('Plot worst bar chart for all contests? (y/n)?\n')
+    if draw_all == 'y':
+        e.worst_bar_for_each_contest(session,meta_generic)
+
+    e.worst_bar_for_selected_contests(session,meta_generic)
 
     eng.dispose()
     print('Done!')

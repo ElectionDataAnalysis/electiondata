@@ -1,5 +1,5 @@
 #!usr/bin/python3
-
+import os.path
 
 from scipy import stats as stats
 import scipy.spatial.distance as dist
@@ -9,12 +9,25 @@ import matplotlib.pyplot as plt
 import db_routines as dbr
 import os
 import states_and_files as sf
+
+
 try:
     import cPickle as pickle
 except:
     import pickle
 
 class Election(object): # TODO check that object is necessary (apparently for pickling)
+    def most_anomalous(self,n=3,mode='pct'):
+        """ returns a list of the n most anomalous contests for the election
+        mode is 'pct' or 'raw'
+        """
+        assert mode == 'pct' or mode == 'raw','\'pct\' and \'raw\' are the only recognized modes'
+        adf = self.anomaly_dframe
+        col = 'anomaly_value_'+mode
+
+        most_anomalous = adf.nlargest(n,col,keep='all')
+        return most_anomalous
+    
     def pull_rollup_from_db(self, by_ReportingUnitType_Id, atomic_ReportingUnitType_Id, db_paramfile='../../local_data/database.ini'):
         assert isinstance(by_ReportingUnitType_Id, int), 'by_ReportingUnitType_Id must be an integer'
         assert isinstance(atomic_ReportingUnitType_Id, int), 'atomicReportingUnitType_Id must be an integer'
@@ -44,7 +57,7 @@ class Election(object): # TODO check that object is necessary (apparently for pi
             con.dispose()
         return self.rollup_dframe
 
-    def anomaly_scores(self, session, meta, schema,contest_id_list=[]): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
+    def anomaly_scores(self, session, meta): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
         pickle_path = self.pickle_dir+'anomaly_rollup'
         if os.path.isfile(pickle_path):
             print('Anomaly dataframe will not be calculated, but will be read from file:\n\t'+pickle_path)
@@ -52,8 +65,7 @@ class Election(object): # TODO check that object is necessary (apparently for pi
             self.anomaly_dframe = pd.read_pickle(pickle_path)
 
         else:
-            if contest_id_list == []:
-                contest_id_list = self.rollup_dframe.Contest_Id.unique()
+            contest_id_list = self.rollup_dframe.Contest_Id.unique()
             for contest_id in contest_id_list:
                 anomaly_list = []
                 cr = create_contest_rollup_from_election(session, meta, self, contest_id)
@@ -67,16 +79,41 @@ class Election(object): # TODO check that object is necessary (apparently for pi
                         for filter_value in cr.dataframe_by_name[filter_field].unique():
                             # print('\cdf_table\cdf_table\tfilter value is '+filter_value)
                             z_score_totals, z_score_pcts = cr.euclidean_z_score(column_field, [[filter_field,filter_value]])
-                            anomaly_list.append(pd.Series([cr.ContestName,column_field,filter_field,filter_value,'euclidean z-score',
+                            anomaly_list.append(pd.Series([contest_id,cr.ContestName,column_field,filter_field,filter_value,'euclidean z-score',
                                                  max(z_score_totals), max(z_score_pcts)],index=self.anomaly_dframe.columns))
                 if anomaly_list:
                     self.anomaly_dframe = self.anomaly_dframe.append(anomaly_list) # less efficient to update anomaly_dframe contest-by-contest, but better for debug
                 else:
                     print('No anomalies found for contest with Id ' + str(contest_id))
         self.anomaly_dframe.to_pickle(pickle_path)
+        print('Anomalies calculated, stored in a pickled DataFrame at '+pickle_path)
         return
 
-    def worst_bar_for_each_contest(self,session,meta,anomaly_min=0,contest_id_list=[]):
+    def draw_most_anomalous(self,session,meta,n=3,mode='pct'):
+        """ plot the 3 (or n) most anomalous bar charts for the election"""
+        print('Most anomalous contests by votes '+mode+':')
+        for index,row in self.most_anomalous(n,mode).iterrows():
+            print('\t' + row['ContestName'])
+            print('\tby ' + row['column_field'])
+            print('\t' + row['filter_value'] + ' only')
+            print('\tAnomaly value ' + row['anomaly_algorithm'] + ': ' + str(row['anomaly_value_pct']) + '\n')
+            cr = create_contest_rollup_from_election(session,meta,self,row['ContestId'])
+
+            plot_pivot(row['ContestName'],cr.dataframe_by_name,col_field=row['column_field'],
+                          filter=[row['filter_field'],row['filter_value']],
+                          mode=mode)
+
+    def worst_bar_for_selected_contests(self,session,meta_gen,anomaly_min=0):
+        dont_stop = input('Create worst bar charts for a single contest (y/n)?')
+        while dont_stop == 'y':
+            contest_id = choose_by_id(session,meta_gen,e.cdf_schema,'Contest')
+            #     contest_id = an.choose_by_id(session,meta_cdf_schema,cdf_schema,'CandidateContest',filter=[{'FilterTable':'ElectionContestJoin','FilterField':'Election_Id','FilterValue':election_id,'ForeignIdField':'Contest_Id'}]
+            #                               )
+            worst_bar_for_each_contest(self,session,meta_gen,anomaly_min=anomaly_min,contest_id_list=[contest_id])
+            dont_stop = input('Create worst bar charts for another contest (y/n)?')
+        return
+
+    def worst_bar_for_each_contest(self,session,meta_gen,anomaly_min=0,contest_id_list=[]):
         if self.anomaly_dframe.empty:
             print('anomaly dataframe is empty')
             return
@@ -84,22 +121,22 @@ class Election(object): # TODO check that object is necessary (apparently for pi
             if contest_id_list==[]:
                 contest_id_list = self.rollup_dframe.Contest_Id.unique()
             for contest_id in contest_id_list:
-                cr = create_contest_rollup_from_election(session,meta,self, contest_id)
+                cr = create_contest_rollup_from_election(session,meta_gen,self,contest_id)
                 contestname = cr.ContestName
                 df = self.anomaly_dframe[self.anomaly_dframe.ContestName == contestname]
-                max_pct_anomaly = df.anomaly_values_pcts.max()
-                max_tot_anomaly = df.anomaly_value_totals.max()
+                max_pct_anomaly = df.anomaly_value_pct.max()
+                max_tot_anomaly = df.anomaly_value_raw.max()
 
                 # don't plot total vote counts
                 df_to_plot= cr.dataframe_by_name[cr.dataframe_by_name['CountItemType'] != 'total']
                 if max_pct_anomaly > anomaly_min:
                     # find and plot worst bar charts from anomaly_dframe
                     for index,row in df.iterrows():
-                        if row['anomaly_values_pcts'] == max_pct_anomaly:
+                        if row['anomaly_value_pct'] == max_pct_anomaly:
                             plot_pivot(contestname, df_to_plot, col_field=row['column_field'], filter=[row['filter_field'],row['filter_value']],mode='pct')
                 if max_tot_anomaly > anomaly_min:
                     for index,row in df.iterrows():
-                        if row['anomaly_value_totals']  == max_tot_anomaly:
+                        if row['anomaly_value_raw']  == max_tot_anomaly:
                             plot_pivot(contestname,df_to_plot,col_field=row['column_field'],filter=[row['filter_field'],row['filter_value']],mode='raw')
 
             return
@@ -156,8 +193,8 @@ def create_election(session,meta,cdf_schema,Election_Id,roll_up_to_ReportingUnit
     # if rollup not already pickled, create and pickle it
     else:
         e.anomaly_dframe = pd.DataFrame(data=None,index=None,
-                            columns=['ContestName','column_field','filter_field','filter_value','anomaly_algorithm',
-                                     'anomaly_value_totals','anomaly_values_pcts'])
+                            columns=['ContestId','ContestName','column_field','filter_field','filter_value','anomaly_algorithm',
+                                     'anomaly_value_raw','anomaly_value_pct'])
     return e
 
 class ContestRollup:
@@ -266,14 +303,14 @@ def plot_pivot(contestname,dataframe_by_name,col_field='Selection',filter=[],mod
     try:    # TODO get exact criteria for skipping
         if mode == 'raw':
             type_pivot.plot.bar()
-            plt.title(title_string+'\nVotes by '+col_field)
+            plt.title(title_string+'\nVotes by '+type_pivot.index.name)
         if mode == 'pct':
             type_pct_pivot = pct_dframe(type_pivot)
             type_pct_pivot.plot.bar()
-            plt.title(title_string+'\nVote Percentages by ' + col_field)
+            plt.title(title_string+'\nVote Percentages by ' + type_pct_pivot.index.name)
         plt.show()
     except:
-        a =1 # TODO placeholder
+        print('Plotting failed')
 
 
 def pivot(dataframe_by_name, col_field='Selection', filter=[],mode='raw'):
@@ -301,7 +338,6 @@ def pivot(dataframe_by_name, col_field='Selection', filter=[],mode='raw'):
         cf = cf.div(cf["total"], axis=0)
         cf=cf.drop(labels=['total'],axis=1)
     return cf
-
 
 def create_contest_rollup_from_election(session,meta,e,Contest_Id):   # TODO get rid of con/meta/schema here by making names part of the Election def?
     assert isinstance(e,Election),'election must be an instance of the Election class'
@@ -511,12 +547,80 @@ def pframe_to_zscore(pframe):
         row_vectors = [list(pframe.iloc[x, :]) for x in range(len(pframe))]   # TODO there's gotta be a better way to get the list of row vectors, no?
         return euclidean_zscore(row_vectors)
 
+def choose_by_id(session,meta,cdf_schema,table,filter=[],default=0):
+    """
+    Gives the user a list of items and invites user to choose one by entering its Id.
+    `table` is the table of items; `filter` is a list of dictionaries,
+    each describing a filter to be applied, with keys "FilterTable", "FilterField", "FilterValue" and "ForeignIdField"
+    default is the default Id to be chosen if user enters nothing.
+    """
+    t_dframe = dbr.table_list(session,meta,cdf_schema,table)
+
+    for f in filter:
+        assert 'FilterTable' in f.keys() and 'FilterField' in f.keys() and 'FilterValue' in f.keys() and 'ForeignIdField' in f.keys(),'Each filter must have four keys: "FilterTable", "FilterField", "FilterValue" and "ForeignIdField"'
+        f_table = pd.read_sql_table(f['FilterTable'],session.bind,schema=cdf_schema)
+        t_dframe = t_dframe.merge(f_table,left_on='Id',right_on=f['ForeignIdField'],suffixes=['','_filter'])
+        t_dframe = t_dframe[t_dframe[f['FilterField']] == f['FilterValue']]
+    if t_dframe.shape[0] == 0:
+        raise Exception('No corresponding records in ' + table)
+
+    print('Available ' + table + 's:')
+    for index,row in t_dframe.iterrows():
+        print(row['Name'] + ' (Id is ' + str(row['Id']) + ')')
+
+    id = input('Enter Id of desired item \n\t(default is ' + str(default) + ')\n') or default
+    # TODO add error-checking on user input
+    return int(id)
+
+def get_election_id_type_name(session,meta,cdf_schema,default=0):
+    election_id = choose_by_id(session,meta,cdf_schema,'Election',filter=[],default=default)
+
+    e_df = pd.read_sql_table('Election',session.bind,schema=cdf_schema)
+    e_type_df = pd.read_sql_table('ElectionType',session.bind,schema=cdf_schema)
+    e_df = e_df.merge(e_type_df,left_on='ElectionType_Id',right_on='Id',suffixes=['_election','_type'])
+
+    election_type = e_df[e_df['Id_election'] == election_id].iloc[0]['Txt']
+    election_name = e_df[e_df['Id_election'] == election_id].iloc[0]['Name']
+    return election_id,election_type,election_name
+
+def get_anomaly_scores(session,meta,cdf_schema,election_id,election_name):
+    """
+    Creates an election object and finds anomaly scores for each contest in that election
+    """
+    find_anomalies = input('Find anomalies for '+ election_name+ ' (y/n)?\n')
+    if find_anomalies == 'y':
+        default = '../local_data/database.ini'
+        paramfile = input('Enter path to database parameter file (default is ' + default + ')\n') or default
+
+
+        election_short_name = 'election_'+str(election_id)
+
+        default = 'precinct'
+        atomic_ru_type = input(
+            'Enter the \'atomic\' Reporting Unit Type on which you wish to base your rolled-up counts (default is ' + default + ')\n') or default
+
+        default = 'county'
+        roll_up_to_ru_type = input(
+            'Enter the (larger) Reporting Unit Type whose counts you want to analyze (default is ' + default + ')\n') or default
+
+        default = '../local_data/pickles/' + election_short_name + '/'
+        pickle_dir = input(
+            'Enter the directory for storing pickled dataframes (default is ' + default + ')\nNB: if this directory doesn\'t exist, create it now before reponding!') or default
+        assert os.path.isdir(pickle_dir), 'Non-existent directory: ' + pickle_dir
+
+        e = create_election(session,meta,cdf_schema,election_id,roll_up_to_ru_type,
+                               atomic_ru_type,pickle_dir,paramfile)
+        e.anomaly_scores(session,meta)
+
+        print('Anomaly scores calculated')
+    return e
+
 if __name__ == '__main__':
     con, meta = dbr.sql_alchemy_connect(schema, paramfile='../../local_data/database.ini')
 
     nc_2018 = create_election(session,meta,'cdf_nc',15834)
     schema = 'cdf_nc'
-    nc_2018.anomaly_scores(con,meta,schema)
+    nc_2018.anomaly_scores(con,meta)
 
     if con:
         con.dispose()
@@ -601,3 +705,5 @@ if __name__ == '__main__':
 
 
     print('Done')
+
+
