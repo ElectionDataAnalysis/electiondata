@@ -85,8 +85,8 @@ class Election(object): # TODO check that object is necessary (apparently for pi
                     self.anomaly_dframe = self.anomaly_dframe.append(anomaly_list) # less efficient to update anomaly_dframe contest-by-contest, but better for debug
                 else:
                     print('No anomalies found for contest with Id ' + str(contest_id))
-        self.anomaly_dframe.to_pickle(pickle_path)
-        print('Anomalies calculated, stored in a pickled DataFrame at '+pickle_path)
+            self.anomaly_dframe.to_pickle(pickle_path)
+            print('Anomalies calculated, stored in a pickled DataFrame at '+pickle_path)
         return
 
     def draw_most_anomalous(self,session,meta,n=3,mode='pct'):

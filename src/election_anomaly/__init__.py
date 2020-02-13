@@ -67,7 +67,7 @@ if __name__ == '__main__':
                 ) or default
     s = sf.create_state(abbr, '../local_data/' + abbr)
 
-    default = 'cdf_nc1'
+    default = 'cdf_nc2018p'
     cdf_schema = input(
         'Enter name of CDF schema (default is ' + default + ')\n'
                 ) or default

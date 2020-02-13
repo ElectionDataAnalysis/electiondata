@@ -198,13 +198,14 @@ def fill_externalIdentifier_table(session,schema,context_schema,enum_dframe,id_o
             listed['OtherIdentifierType'] = [None]*listed.shape[0]
 
             # join info for other
-            other['IdentifierType_Id'] = [id_other_id_type]*other.shape[0]
+            other['IdentifierType_Id'] = [id_other_id_type]*other.shape[0] # TODO A value is trying to be set on a copy of a slice from a DataFrame. Try using .loc[row_indexer,col_indexer] = value instead
+
             other.rename(columns={'ExternalIdentifierType':'OtherIdentifierType','ExternalIdentifierValue':'Value'},inplace=True)
 
             # TODO check that the columns are right and ready for insertion into ExternalIdentifier
 
 
-            filtered_ei[t] = pd.concat([other,listed])
+            filtered_ei[t] = pd.concat([other,listed],sort=False)
 
         # TODO check that primaries work properly
         ei_df = pd.concat([filtered_ei[t] for t in ei_df['Table'].unique()])
