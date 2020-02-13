@@ -104,13 +104,13 @@ class Election(object): # TODO check that object is necessary (apparently for pi
                           mode=mode)
 
     def worst_bar_for_selected_contests(self,session,meta_gen,anomaly_min=0,contest_type='Candidate'):
-        dont_stop = input('Create worst bar charts for a single contest (y/n)?')
+        dont_stop = input('Create worst bar charts for a single contest (y/n)?\n')
         while dont_stop == 'y':
             contest_id = choose_by_id(session,meta_gen,self.cdf_schema,contest_type+'Contest',filter=[{"FilterTable":'ElectionContestJoin', "FilterField":'Election_Id', "FilterValue":self.Election_Id , "ForeignIdField":'Contest_Id'}])
             #     contest_id = an.choose_by_id(session,meta_cdf_schema,cdf_schema,'CandidateContest',filter=[{'FilterTable':'ElectionContestJoin','FilterField':'Election_Id','FilterValue':election_id,'ForeignIdField':'Contest_Id'}]
             #                               )
             self.worst_bar_for_each_contest(session,meta_gen,anomaly_min=anomaly_min,contest_id_list=[contest_id])
-            dont_stop = input('Create worst bar charts for another contest (y/n)?')
+            dont_stop = input('Create worst bar charts for another contest (y/n)?\n')
         return
 
     def worst_bar_for_each_contest(self,session,meta_gen,anomaly_min=0,contest_id_list=[]):
