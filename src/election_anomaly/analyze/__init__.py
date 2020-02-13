@@ -103,13 +103,13 @@ class Election(object): # TODO check that object is necessary (apparently for pi
                           filter=[row['filter_field'],row['filter_value']],
                           mode=mode)
 
-    def worst_bar_for_selected_contests(self,session,meta_gen,anomaly_min=0):
+    def worst_bar_for_selected_contests(self,session,meta_gen,anomaly_min=0,contest_type='Candidate'):
         dont_stop = input('Create worst bar charts for a single contest (y/n)?')
         while dont_stop == 'y':
-            contest_id = choose_by_id(session,meta_gen,e.cdf_schema,'Contest')
+            contest_id = choose_by_id(session,meta_gen,self.cdf_schema,contest_type+'Contest',filter=[{"FilterTable":'ElectionContestJoin', "FilterField":'Election_Id', "FilterValue":self.Election_Id , "ForeignIdField":'Contest_Id'}])
             #     contest_id = an.choose_by_id(session,meta_cdf_schema,cdf_schema,'CandidateContest',filter=[{'FilterTable':'ElectionContestJoin','FilterField':'Election_Id','FilterValue':election_id,'ForeignIdField':'Contest_Id'}]
             #                               )
-            worst_bar_for_each_contest(self,session,meta_gen,anomaly_min=anomaly_min,contest_id_list=[contest_id])
+            self.worst_bar_for_each_contest(session,meta_gen,anomaly_min=anomaly_min,contest_id_list=[contest_id])
             dont_stop = input('Create worst bar charts for another contest (y/n)?')
         return
 
@@ -133,10 +133,22 @@ class Election(object): # TODO check that object is necessary (apparently for pi
                     # find and plot worst bar charts from anomaly_dframe
                     for index,row in df.iterrows():
                         if row['anomaly_value_pct'] == max_pct_anomaly:
+                            print('\t' + row['ContestName'])
+                            print('\tby ' + row['column_field'])
+                            print('\t' + row['filter_value'] + ' only')
+                            print('\tAnomaly value ' + row['anomaly_algorithm'] + ': ' + str(
+                                row['anomaly_value_pct']) + '\n')
+
                             plot_pivot(contestname, df_to_plot, col_field=row['column_field'], filter=[row['filter_field'],row['filter_value']],mode='pct')
                 if max_tot_anomaly > anomaly_min:
                     for index,row in df.iterrows():
                         if row['anomaly_value_raw']  == max_tot_anomaly:
+                            print('\t' + row['ContestName'])
+                            print('\tby ' + row['column_field'])
+                            print('\t' + row['filter_value'] + ' only')
+                            print('\tAnomaly value ' + row['anomaly_algorithm'] + ': ' + str(
+                                row['anomaly_value_pct']) + '\n')
+
                             plot_pivot(contestname,df_to_plot,col_field=row['column_field'],filter=[row['filter_field'],row['filter_value']],mode='raw')
 
             return
