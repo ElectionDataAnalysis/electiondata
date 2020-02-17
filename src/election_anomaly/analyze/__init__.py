@@ -625,7 +625,9 @@ def get_anomaly_scores(session,meta,cdf_schema,election_id,election_name):
         e.anomaly_scores(session,meta)
 
         print('Anomaly scores calculated')
-    return e
+        return e
+    else
+        return None
 
 if __name__ == '__main__':
     con, meta = dbr.sql_alchemy_connect(schema, paramfile='../../local_data/database.ini')
