@@ -123,7 +123,11 @@ if __name__ == '__main__':
 
             munger_path = '../mungers/'+munger_name+'/'
             print('Creating munger instance from '+munger_path)
-            m = sf.Munger(munger_path)
+            mu = sf.Munger(munger_path)
+
+            for datafile in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/'+mu.name+'/'):
+                # TODO process datafile
+                pass
 
 
         print('Loading state context info into CDF schema') # *** takes a long time; why?
@@ -136,12 +140,6 @@ if __name__ == '__main__':
     election_id, election_type, election_name = an.get_election_id_type_name(session,meta_generic,cdf_schema,default=3219)
 
 
-
-        # default = 'filtered_results_pct_20181106.txt'
-        default = 'results_pct_20180508.txt'
-        # default = 'filtered_yancey2018.txt'
-        #default = 'alamance.txt'
-        df_name = input('Enter name of datafile (default is '+default+')\n') or default
 
         print('Creating metafile instance')
         mf = sf.create_metafile(s,'layout_results_pct.txt')
