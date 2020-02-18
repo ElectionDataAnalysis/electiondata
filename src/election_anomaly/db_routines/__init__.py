@@ -17,12 +17,18 @@ import pandas as pd
 import clean as cl
 
 def create_database(con,cur,db_name):
-    q = "CREATE DATABASE {0}"
-    sql_ids = [db_name]
-    con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-    out1 = query(q,sql_ids,[],con,cur)
-    print(out1)  # TODO diagnostic
-    return out1
+    sure = input('If the db exists, it will be deleted and data will be lost. Are you absolutely sure (y/n)?\n')
+    if sure == 'y':
+        con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
+        q = "DROP DATABASE IF EXISTS {0}"
+        sql_ids = [db_name]
+        out1 = query(q,sql_ids,[],con,cur)
+        print(out1)
+
+        q = "CREATE DATABASE {0}"
+        out2 = query(q,sql_ids,[],con,cur)
+        print(out2)  # TODO diagnostic
+    return out1,out2
 
 def create_raw_schema(con,cur,schema):
     q = "CREATE SCHEMA {0}"
@@ -44,8 +50,7 @@ def sql_alchemy_connect(schema=None,paramfile = '../local_data/database.ini',db_
     params = config(paramfile)
     if db_name != 'postgres': params['dbname'] = db_name
     # We connect with the help of the PostgreSQL URL
-    # postgresql://federer:grandestslam@localhost:5432/tennis
-    url = 'postgresql://{user}:{password}@{host}:{port}/{database}'
+    url = 'postgresql://{user}:{password}@{host}:{port}/{dbname}'
     url = url.format(**params)
 
 

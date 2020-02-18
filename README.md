@@ -36,7 +36,7 @@ Folders you will need in your local repo:
 Each state directory has three subfolders:
   * `data` for datafiles from the state
   * `meta` for metadata files from the state
-  * `context` for information about the state that cannot be read from the contents of the data and metadata files. This information may be common to many datafiles; it may be related to information in the datafile but may require some contextual knowledge outside of any particular datafile. For example, the fact that the election on 2018-11-06 in North Carolina was a `general` election is contextual knowledge.
+  * `context` for information about the state that cannot be read from the contents of the data and metadata files. This information may be common to many datafiles; it may be related to information in the datafile but may require some contextual knowledge outside of any particular datafile. For example, the fact that the election on 2018-11-06 in North Carolina was a `general` election is contextual knowledge. Each file in the `context` directory should have a single header row.
 
     * `name.txt` the name of the state, e.g., 'North Carolina'
     * `schema_name.txt` the name of the schema to hold the state's raw data
@@ -107,7 +107,7 @@ The folder `src/mungers` holds a directory for each munger. Each munger director
 
 
 ### Strings used as names and dictionary keys
-Each element (each election, candidate, reporting unit, etc.) has a name -- a character string used in the `name` field in the corresponding database table, and also used in the files in the `context`  folder as keys in python dictionaries containing more info about the element.
+Each element (each election, candidate, reporting unit, etc.) has a name -- a character string used in the `name` field in the corresponding database table, and also used in the files in the `context`  folder as keys in python dictionaries containing more info about the element. 
 
 For ReportingUnits, the naming convention is to list as much of the composing information as possible in the name of the element, using `;` as a separator. E.g., 
  * `North Carolina` -- the state of NC

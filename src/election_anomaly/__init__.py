@@ -63,12 +63,12 @@ if __name__ == '__main__':
         'Enter short name (only alphanumeric and underscore, no spaces) for your state/district/territory (default is ' + default + ')\n'
     ) or default
     s = sf.State(abbr,'../local_data/')
-        create_db = input('Make database and schemas for '+abbr+' (y/n)?\n')
+    create_db = input('Make database and schemas for '+abbr+' (y/n)?\n')
     if create_db == 'y':
         s.create_db_and_schemas()
 
     # initialize main session for connecting to db
-    eng, meta_generic = dbr.sql_alchemy_connect(s.short_name)
+    eng, meta_generic = dbr.sql_alchemy_connect(db_name=s.short_name)
     Session = sessionmaker(bind=eng)
     session = Session()
 
@@ -79,10 +79,16 @@ if __name__ == '__main__':
         meta_cdf_schema = CDF.create_common_data_format_schema(session,'cdf',enumeration_tables,delete_existing=True)
         session.commit()
 
-        # load context schema
+        # load data into context schema
         print('Loading context data from '+s.short_name+'/context directory into `context` schema in database '+s.short_name)
+        # for file in context folder, create table in context schema.
+        context = {}
+        for f in os.listdir(s.path_to_state_dir+'/context/'):
+            if f[0] == '.': continue
+            table_name = f.split('.')[0]
 
-
+            context[table_name] = pd.read_csv(s.path_to_state_dir+'/context/'+f,sep='\t')
+            context[table_name].to_sql(table_name,session.bind,'context',if_exists='fail')
 
         # load state context info into cdf schema
         # need_to_load_data = input('Load enumeration & context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
