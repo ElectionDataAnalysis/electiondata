@@ -10,7 +10,7 @@ import db_routines as dbr
 import munge_routines as mr
 from db_routines import Create_CDF_db as CDF
 import states_and_files as sf
-import context
+import context as ct
 import analyze as an
 
 from sqlalchemy.orm import sessionmaker
@@ -96,6 +96,10 @@ if __name__ == '__main__':
         # %% fill enumeration tables
         print('\tFilling enumeration tables')
         CDF.fill_cdf_enum_tables(session,meta_cdf,'cdf',enumeration_tables)
+        print('Loading state context info into CDF schema') # *** takes a long time; why?
+        ct.context_schema_to_cdf(session,s,enumeration_tables)
+        session.commit()
+
 
     need_to_load_data = input('Load raw data (y/n)?\n')
     if need_to_load_data == 'y':
@@ -136,10 +140,6 @@ if __name__ == '__main__':
             assert e.name+';'+datafile in datafiles['name'],'Datafile not recognized in the table context.datafile: '+datafile
 
 
-        print('Loading state context info into CDF schema') # *** takes a long time; why?
-        # TODO -- or maybe this will be obsolete?
-        context.context_to_cdf_PANDAS(session,meta_cdf,s,cdf_schema,enumeration_tables)
-        session.commit()
     else:
         meta_cdf = MetaData(bind=session.bind,schema='cdf')
 
