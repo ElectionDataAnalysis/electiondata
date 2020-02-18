@@ -133,12 +133,18 @@ if __name__ == '__main__':
         print('Creating munger instance from '+munger_path)
         mu = sf.Munger(munger_path)
 
-        datafiles = pd.read_sql_table('datafile',session.bind,schema='context',index_col='index')
+        dfs = pd.read_sql_table('datafile',session.bind,schema='context',index_col='index')
         for datafile in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/'+mu.name+'/'):
-            # TODO process datafile
             # check datafile is listed in datafiles
-            assert e.name+';'+datafile in datafiles['name'],'Datafile not recognized in the table context.datafile: '+datafile
-
+            assert e.name +';' + datafile in dfs['name'].to_list(),'Datafile not recognized in the table context.datafile: ' + datafile
+            df_info = dfs[dfs['name'] == e.name + ';' + datafile].iloc[0]
+            if df_info['separator'] == 'tab':
+                delimiter = '\t'
+            elif df_info['separator'] == 'comma':
+                delimiter = ','
+            raw_data_dframe = pd.read_csv(s.path_to_state_dir + 'data/' +election_name+'/'+munger_name+'/'+ datafile,sep=delimiter)
+            print('Loading data into cdf schema from file: '+datafile)
+            mr.raw_dframe_to_cdf(session,raw_data_dframe,s, mu,'cdf','context',e)
 
     else:
         meta_cdf = MetaData(bind=session.bind,schema='cdf')
@@ -170,8 +176,7 @@ if __name__ == '__main__':
             else:
                 print('Continuing with existing file')
 
-        print('Loading data from df table\n\tin schema '+ s.schema_name+ '\n\tto CDF schema '+cdf_schema+'\n\tusing munger '+munger_name)
-        mr.raw_records_to_cdf(session,meta_cdf,df,m,cdf_schema,s.schema_name,election_type)
+        # mr.raw_records_to_cdf(session,meta_cdf,df,m,cdf_schema,s.schema_name,election_type)
         session.commit()
         print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
 

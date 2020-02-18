@@ -5,6 +5,7 @@
 import db_routines as dbr
 import pandas as pd
 import time
+import analyze as an
 
 def id_from_select_only_PANDAS(dframe,value_d, mode='no_dupes',dframe_Id_is_index=True):
     """Returns the Id of the record in table with values given in the dictionary value_d.
@@ -294,9 +295,11 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
 
     return
 
-def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,election_type,state_id = 0,id_type_other_id = 0,cdf_table_filepath='CDF_schema_def_info/tables.txt'):
+def raw_dframe_to_cdf(session,raw_rows,s,mu,cdf_schema,context_schema,e,state_id = 0,id_type_other_id = 0,cdf_table_filepath='CDF_schema_def_info/tables.txt'):
     """ munger-agnostic raw-to-cdf script; ***
-    df is datafile, mu is munger """
+    dframe is dataframe, mu is munger """
+
+    assert isinstance(e,an.Election),'Argument should be an Election instance'
     cdf_d = {}  # to hold various dataframes from cdf db tables
 
 
@@ -318,29 +321,20 @@ def raw_records_to_cdf(session,meta,df,mu,cdf_schema,context_schema,election_typ
         cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema, index_col='Id')
 
 
-    # get id for  election
-    [electiontype_id, otherelectiontype] = format_type_for_insert_PANDAS(cdf_d['ElectionType'],df.state.context_dictionary['Election'][df.election]['ElectionType'],id_type_other_id)
-    value_d = {'Name': df.election, 'EndDate': df.state.context_dictionary['Election'][df.election]['EndDate'],
-               'StartDate': df.state.context_dictionary['Election'][df.election]['StartDate'],
-               'OtherElectionType': otherelectiontype, 'ElectionType_Id': electiontype_id}
-    election_id, cdf_d['Election'] = id_from_select_or_insert_PANDAS(cdf_d['Election'], value_d,session,cdf_schema,'Election')
+    election_id = e.Election_Id
 
     # if state_id is not passed as parameter, select-or-insert state, get id (default Reporting Unit for ballot questions)
     if state_id == 0:
+        # TODO get state as only ReportingUnit of type 'state' 'district' or 'territory'
         [reportingunittype_id, otherreportingunittype] = format_type_for_insert_PANDAS(cdf_d['ReportingUnitType'], 'state',id_type_other_id)
         value_d = {'Name': df.state.name, 'ReportingUnitType_Id': reportingunittype_id,
                    'OtherReportingUnitType': otherreportingunittype}
         state_id, cdf_d['ReportingUnit'] = id_from_select_or_insert_PANDAS(cdf_d['ReportingUnit'], value_d, session, cdf_schema,'ReportingUnit')
 
     # store state_id and election_id for later use
-    ids_d = {'state': state_id, 'Election_Id': election_id}  # to hold ids of found items for later reference
+    ids_d = {'state': state_id, 'Election_Id': e.Election_Id}  # to hold ids of found items for later reference
 
-    # read raw data rows from db
-    raw_rows = pd.read_sql_table(df.table_name,session.bind,schema=df.state.schema_name)
-
-    # bulk_items_already_loaded = input('Are bulk items (Candidate, etc.) already loaded (y/n)?\n')
-    # if bulk_items_already_loaded != 'y':
-    bulk_elements_to_cdf(session, mu,raw_rows, cdf_schema, context_schema, election_id, election_type,ids_d['state'])
+    bulk_elements_to_cdf(session, mu,raw_rows, cdf_schema, context_schema, e.Election_Id, e.ElectionType,ids_d['state'])
 
     return str(ids_d)
 
