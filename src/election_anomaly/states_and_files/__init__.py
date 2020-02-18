@@ -4,18 +4,45 @@ import sys
 import os.path
 import clean as cl
 import pandas as pd
-from sqlalchemy import Integer,Date,String
-
+import db_routines as dbr
+from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 class State:
-    def __init__(self,abbr,name,schema_name,path_to_state_dir,context_dictionary,external_identifier_dframe):        # reporting_units,elections,parties,offices):
-        self.abbr = abbr
-        self.name = name
-        self.schema_name=schema_name
-        if path_to_state_dir[-1] != '/':     # should end in /
-            path_to_state_dir += '/'
-        self.path_to_state_dir=path_to_state_dir    #  include 'NC' in path.
-        self.context_dictionary=context_dictionary
-        self.external_identifier_dframe=external_identifier_dframe
+    def create_db_and_schemas(self):
+        # create db
+        con = dbr.establish_connection()
+        cur = con.cursor()
+        dbr.create_database(con,cur,self.short_name)
+        cur.close()
+        con.close()
+        # connect to  and create the three schemas
+        con = dbr.establish_connection(db_name=self.short_name)
+        cur = con.cursor()
+        q = "CREATE SCHEMA raw;"
+        dbr.query(q,[],[],con,cur)
+        q = "CREATE SCHEMA context;"
+        dbr.query(q,[],[],con,cur)
+        q = "CREATE SCHEMA cdf;"
+        dbr.query(q,[],[],con,cur)
+        cur.close()
+        con.close()
+        return
+
+    def __init__(self,short_name,path_to_parent_dir):        # reporting_units,elections,parties,offices):
+        """ short_name is the name of the directory containing the state info, including data,
+         and is used other places as well.
+         path_to_parent_dir is the parent directory of dir_name
+        """
+        self.short_name = short_name
+        if path_to_parent_dir[-1] != '/':     # should end in /
+            path_to_parent_dir += '/'
+        self.path_to_state_dir= path_to_parent_dir + short_name+'/'
+        assert os.path.isdir(self.path_to_state_dir), 'Error: No directory '+ self.path_to_state_dir
+        assert os.path.isdir(self.path_to_state_dir+'context/'), 'Error: No directory '+ self.path_to_state_dir+'context/'
+        # Check that context directory is missing no files
+        context_file_list = ['BallotMeasureSelection.txt','datafile.txt','Election.txt','ExternalIdentifier.txt','metafile.txt','name.txt','Office.txt','remark.txt','ReportingUnit.txt'] # TODO remove schema_name.txt and alter README.txt
+        file_missing_list = [f for f in context_file_list if not os.path.isfile(self.path_to_state_dir+'context/'+f)]
+        assert file_missing_list == [], 'Error: Missing files in '+ self.path_to_state_dir+'context/'+f +':\n'+ str(file_missing_list)
+
 
 class Munger:
     def __init__(self,name,path_to_munger_dir):
@@ -104,36 +131,6 @@ def tab_sep_to_dict(s,fpath,k):
     else:
         v = None
     return v
-
-def create_state(abbr,path_to_state_dir):
-    '''abbr is the capitalized two-letter postal election_anomaly for the state, district or territory'''
-    string_attributes = ['name','schema_name']
-    context_d_keys = ['ReportingUnit','Election','Party','Office','BallotMeasureSelection']    # what consistency checks do we need?
-    if path_to_state_dir[-1] != '/':
-        path_to_state_dir += '/'
-    if not os.path.isdir(path_to_state_dir):
-        return('Error: No directory '+path_to_state_dir)
-        sys.exit()
-    for attr in string_attributes + context_d_keys:
-        if not os.path.isfile(path_to_state_dir+'context/'+attr+'.txt'):
-            return('Error: No file '+path_to_state_dir+'context/'+attr+'.txt')
-            sys.exit()
-    string_d = {} # dictionary to hold string attributes
-    for attr in string_attributes:     # strings
-        with open(path_to_state_dir+'context/'+attr+'.txt') as f:
-            string_d[attr]=f.readline().strip()
-    context_d = {}
-    for attr in context_d_keys:     # python objects
-        if attr == 'BallotMeasureSelection':
-            index_column = 'Selection'
-        else:
-            index_column = 'Name'
-        dframe = pd.read_csv(path_to_state_dir+'context/'+attr+'.txt',sep = '\t')
-        context_d[attr] = dframe_to_dict(dframe,index_column = index_column)
-
-    #%% get external identifier info from context into state dictionary
-    external_identifier_dframe = pd.read_csv(path_to_state_dir+'context/ExternalIdentifier.txt',sep='\t')
-    return State(abbr,string_d['name'],string_d['schema_name'],path_to_state_dir,context_d,external_identifier_dframe)
 
 def dframe_to_dict(dframe,index_column = 'Name'):
     col_list = list(dframe.columns)

@@ -13,12 +13,28 @@ from sqlalchemy.engine import reflection
 from sqlalchemy.orm import sessionmaker
 from configparser import ConfigParser
 import pandas as pd
-import time
 
 import clean as cl
 
+def create_database(con,cur,db_name):
+    q = "CREATE DATABASE {0}"
+    sql_ids = [db_name]
+    con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
+    out1 = query(q,sql_ids,[],con,cur)
+    print(out1)  # TODO diagnostic
+    return out1
+
+def create_raw_schema(con,cur,schema):
+    q = "CREATE SCHEMA {0}"
+    sql_ids = [schema]
+    con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
+    out1 = query(q,sql_ids,[],con,cur)
+    return out1
+
+
 def establish_connection(paramfile = '../local_data/database.ini',db_name='postgres'):
     params = config(paramfile)
+    if db_name != 'postgres': params['dbname']=db_name
     con = psycopg2.connect(**params)
     return con
 
@@ -26,6 +42,7 @@ def sql_alchemy_connect(schema=None,paramfile = '../local_data/database.ini',db_
     """Returns an engine and a metadata object"""
 
     params = config(paramfile)
+    if db_name != 'postgres': params['dbname'] = db_name
     # We connect with the help of the PostgreSQL URL
     # postgresql://federer:grandestslam@localhost:5432/tennis
     url = 'postgresql://{user}:{password}@{host}:{port}/{database}'
@@ -153,7 +170,7 @@ def query_as_string(q,sql_ids,strs,con,cur):
     format_args = [sql.Identifier(a) for a in sql_ids]
     return cur.mogrify(sql.SQL(q).format(*format_args),strs).decode("utf-8")
 
-def query(q,sql_ids,strs,con,cur):
+def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to create db and schemas
     format_args = [sql.Identifier(a) for a in sql_ids]
     cur.execute(sql.SQL(q).format(*format_args),strs)
     con.commit()
@@ -266,7 +283,7 @@ def create_schema(session,name,delete_existing=False):
         else:
             print('Schema preserved: '+ name)
             new_schema_created = False
-            insp = reflection.Inspector.from_engine(eng)
+            insp = reflection.Inspector.from_engine(eng)    # TODO got warning about deprecation of reflection.
             tablenames = insp.get_table_names(schema=name)
             viewnames = insp.get_view_names(schema=name)
             if tablenames:

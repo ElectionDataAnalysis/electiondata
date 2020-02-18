@@ -21,7 +21,7 @@ You will need access to a postgresql database. Your login credentilals should be
 [postgresql]
 host=<url for your postgresql server>
 port=<port for your postgresql server>
-database=<name of your election data database>
+dbname=<name of your election data database>
 user=<your user name>
 password=<your password>
 ```

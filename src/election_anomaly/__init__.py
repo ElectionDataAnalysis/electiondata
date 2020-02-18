@@ -56,30 +56,33 @@ def raw_data(session,meta,df):
     return
 
 if __name__ == '__main__':
-    # %% Initiate db engine and create session
-    eng, meta_generic = dbr.sql_alchemy_connect()
+    # initialize state and create database for it (if not already exists)
+    # TODO error handling: what if db already exists?
+    default = 'NC'
+    abbr = input(
+        'Enter short name (only alphanumeric and underscore, no spaces) for your state/district/territory (default is ' + default + ')\n'
+    ) or default
+    s = sf.State(abbr,'../local_data/')
+        create_db = input('Make database and schemas for '+abbr+' (y/n)?\n')
+    if create_db == 'y':
+        s.create_db_and_schemas()
+
+    # initialize main session for connecting to db
+    eng, meta_generic = dbr.sql_alchemy_connect(s.short_name)
     Session = sessionmaker(bind=eng)
     session = Session()
 
-    default = 'NC'
-    abbr = input(
-        'Enter two-character abbreviation for your state/district/territory (default is ' + default + ')\n'
-                ) or default
-    s = sf.create_state(abbr, '../local_data/' + abbr)
-
-    default = 'cdf_nc2018p'
-    cdf_schema = input(
-        'Enter name of CDF schema (default is ' + default + ')\n'
-                ) or default
-
-    context_to_cdf = input('Load and process context data into a common-data-format database (y/n)?\n')
-    if context_to_cdf == 'y':
-        # create cdf schema
-        print('Creating CDF schema ' + cdf_schema)
+    if create_db == 'y':
+        # create build tables in cdf schema
+        print('Creating common data format tables in schema `cdf` in database '+s.short_name)
         enumeration_tables = CDF.enum_table_list()
-        meta_cdf_schema = CDF.create_common_data_format_schema(session,cdf_schema,enumeration_tables,
-                                                               delete_existing=True)
+        meta_cdf_schema = CDF.create_common_data_format_schema(session,'cdf',enumeration_tables,delete_existing=True)
         session.commit()
+
+        # load context schema
+        print('Loading context data from '+s.short_name+'/context directory into `context` schema in database '+s.short_name)
+
+
 
         # load state context info into cdf schema
         # need_to_load_data = input('Load enumeration & context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
@@ -146,10 +149,13 @@ if __name__ == '__main__':
 
     default = 3
     n = input('Draw how many most-anomalous plots?\n') or default
-    n = int(n)
+    try:
+        n = int(n)
+        e.draw_most_anomalous(session,meta_cdf_schema,n=n,mode='pct')
+        e.draw_most_anomalous(session,meta_cdf_schema,n=n,mode='raw')
 
-    e.draw_most_anomalous(session,meta_cdf_schema,n=n,mode='pct')
-    e.draw_most_anomalous(session,meta_cdf_schema,n=n,mode='raw')
+    except:
+        print('Input was not an integer; skipping most-anomalous plots')
 
     draw_all = input('Plot worst bar chart for all contests? (y/n)?\n')
     if draw_all == 'y':
