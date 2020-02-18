@@ -80,6 +80,7 @@ if __name__ == '__main__':
         session.commit()
 
         # load data into context schema
+        # TODO make it possible to update the context schema
         print('Loading context data from '+s.short_name+'/context directory into `context` schema in database '+s.short_name)
         # for file in context folder, create table in context schema.
         context = {}
@@ -90,20 +91,18 @@ if __name__ == '__main__':
             context[table_name] = pd.read_csv(s.path_to_state_dir+'/context/'+f,sep='\t')
             context[table_name].to_sql(table_name,session.bind,'context',if_exists='fail')
 
-        # load state context info into cdf schema
-        # need_to_load_data = input('Load enumeration & context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
-        need_to_load_context_data = 'y'
-        if need_to_load_context_data == 'y':
+        # %% fill enumeration tables
+        print('\tFilling enumeration tables')
+        CDF.fill_cdf_enum_tables(session, meta_cdf_schema, cdf_schema,enumeration_tables)
 
-            # %% fill enumeration tables
-            print('\tFilling enumeration tables')
-            CDF.fill_cdf_enum_tables(session, meta_cdf_schema, cdf_schema,enumeration_tables)
 
-            print('Loading state context info into CDF schema') # *** takes a long time; why?
-            context.context_to_cdf_PANDAS(session, meta_cdf_schema, s, cdf_schema,enumeration_tables)
-            session.commit()
+
+        print('Loading state context info into CDF schema') # *** takes a long time; why?
+        # TODO -- or maybe this will be obsolete?
+        context.context_to_cdf_PANDAS(session, meta_cdf_schema, s, cdf_schema,enumeration_tables)
+        session.commit()
     else:
-        meta_cdf_schema = MetaData(bind=session.bind,schema=cdf_schema)
+        meta_cdf_schema = MetaData(bind=session.bind,schema='cdf'')
 
     election_id, election_type, election_name = an.get_election_id_type_name(session,meta_generic,cdf_schema,default=3219)
 

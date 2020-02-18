@@ -1,3 +1,3 @@
-Name	ElectionType	ReportingUnit	StartDate	EndDate
-General Election 2018-11-06	general	North Carolina	2018-11-06	2018-11-06
-Primary Election 2018-05-08	primary	North Carolina	2018-05-08	2018-05-08
+Name	ElectionType	Short_Name	ReportingUnit	StartDate	EndDate
+General Election 2018-11-06	general	2018g	North Carolina	2018-11-06	2018-11-06
+Primary Election 2018-05-08	primary	2018p	North Carolina	2018-05-08	2018-05-08
