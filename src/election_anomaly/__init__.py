@@ -55,6 +55,7 @@ def raw_data(session,meta,df):
     dbr.load_raw_data(session, meta,s.schema_name, df)
     return
 
+# TODO will need routines to add new munger externalidentifiers to an existing cdf db; will need routines to add new reportingunits to an existing cdf db.
 if __name__ == '__main__':
     # initialize state and create database for it (if not already exists)
     # TODO error handling: what if db already exists?
@@ -62,6 +63,7 @@ if __name__ == '__main__':
     abbr = input(
         'Enter short name (only alphanumeric and underscore, no spaces) for your state/district/territory (default is ' + default + ')\n'
     ) or default
+    print('Creating instance of State for '+abbr)
     s = sf.State(abbr,'../local_data/')
     create_db = input('Make database and schemas for '+abbr+' (y/n)?\n')
     if create_db == 'y':
@@ -95,39 +97,43 @@ if __name__ == '__main__':
         print('\tFilling enumeration tables')
         CDF.fill_cdf_enum_tables(session,meta_cdf,'cdf',enumeration_tables)
 
-        need_to_load_data = input('Load raw data (y/n)?\n')
-        if need_to_load_data == 'y':
-            # user picks election
-            election_list = [f for f in os.listdir(s.path_to_state_dir + 'data/') if os.path.isdir(s.path_to_state_dir + 'data/'+f)]
-            assert election_list != [], 'No elections available for in directory '+s.short_name
-            default = election_list[0]
-            need_election = True
-            while need_election:
-                print('Available elections are:')
-                for e in election_list: print(e)
-                election_name = input('Enter short name of election (default is ' + default + ')\n') or default
-                if election_name in election_list: need_election = False
-                else: print('Election not available; try again.')
+    need_to_load_data = input('Load raw data (y/n)?\n')
+    if need_to_load_data == 'y':
+        # user picks election
+        election_list = [f for f in os.listdir(s.path_to_state_dir + 'data/') if os.path.isdir(s.path_to_state_dir + 'data/'+f)]
+        assert election_list != [], 'No elections available for in directory '+s.short_name
+        default = election_list[0]
+        need_election = True
+        while need_election:
+            print('Available elections are:')
+            for e in election_list: print(e)
+            election_name = input('Enter short name of election (default is ' + default + ')\n') or default
+            if election_name in election_list: need_election = False
+            else: print('Election not available; try again.')
+        print('Creating Election instance for '+election_name)
+        e = an.Election(session,s,election_name)
 
-            # user picks munger
-            munger_list = [f for f in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/') if os.path.isdir(s.path_to_state_dir + 'data/'+election_name+'/'+f)]
-            assert munger_list != [], 'No mungers available for in directory '+s.short_name +'/'+election_name
-            default = munger_list[0]
-            need_munger = True
-            while need_munger:
-                print('Available mungers are:')
-                for e in munger_list: print(e)
-                munger_name = input('Enter short name of munger (default is ' + default + ')\n') or default
-                if munger_name in munger_list: need_munger = False
-                else: print('Election not available; try again.')
+        # user picks munger
+        munger_list = [f for f in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/') if os.path.isdir(s.path_to_state_dir + 'data/'+election_name+'/'+f)]
+        assert munger_list != [], 'No mungers available for in directory '+s.short_name +'/'+election_name
+        default = munger_list[0]
+        need_munger = True
+        while need_munger:
+            print('Available mungers are:')
+            for m in munger_list: print(m)
+            munger_name = input('Enter short name of munger (default is ' + default + ')\n') or default
+            if munger_name in munger_list: need_munger = False
+            else: print('No such munger; try again.')
 
-            munger_path = '../mungers/'+munger_name+'/'
-            print('Creating munger instance from '+munger_path)
-            mu = sf.Munger(munger_path)
+        munger_path = '../mungers/'+munger_name+'/'
+        print('Creating munger instance from '+munger_path)
+        mu = sf.Munger(munger_path)
 
-            for datafile in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/'+mu.name+'/'):
-                # TODO process datafile
-                pass
+        datafiles = pd.read_sql_table('datafile',session.bind,schema='context',index_col='index')
+        for datafile in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/'+mu.name+'/'):
+            # TODO process datafile
+            # check datafile is listed in datafiles
+            assert e.name+';'+datafile in datafiles['name'],'Datafile not recognized in the table context.datafile: '+datafile
 
 
         print('Loading state context info into CDF schema') # *** takes a long time; why?
@@ -137,7 +143,7 @@ if __name__ == '__main__':
     else:
         meta_cdf = MetaData(bind=session.bind,schema='cdf')
 
-    election_id, election_type, election_name = an.get_election_id_type_name(session,meta_generic,cdf_schema,default=3219)
+        # election_id, election_type, election_name = an.get_election_id_type_name(session,meta_generic,cdf_schema,default=3219)
 
 
 

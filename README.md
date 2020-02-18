@@ -37,7 +37,7 @@ Folders you will need in your local repo:
 Each state directory has three subfolders.
 
 ### `data`
-Holds datafiles from the state. Each election has a subfolder (whose name must be the `Short_Name` for that election per the `context/Election.txt` file). Each election subfolder has subfolders named for the munger appropriate for the contained files.
+Holds datafiles from the state. Each election has a subfolder (whose name must be the `ShortName` for that election per the `context/Election.txt` file). Each election subfolder has subfolders named for the munger appropriate for the contained files.
   
 ### `meta` holds metadata files for the state
 
@@ -60,7 +60,7 @@ This information may be common to many datafiles; it may be related to informati
     * `Election.txt` Tab-separated list of elections. Columns are:
       * `Name`
       * `ElectionType`
-      * `Short_Name`    Name that will be used for directories, etc.
+      * `ShortName`    Name that will be used for directories, etc.
       * `ReportingUnit` Parent Reporting Units (e.g., 'North Carolina' must precede children (e.g., 'North Carolina;Alamance County'))
       * `StartDate`
       * `EndDate`

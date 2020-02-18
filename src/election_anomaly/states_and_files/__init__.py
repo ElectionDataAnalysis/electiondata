@@ -43,16 +43,15 @@ class State:
         file_missing_list = [f for f in context_file_list if not os.path.isfile(self.path_to_state_dir+'context/'+f)]
         assert file_missing_list == [], 'Error: Missing files in '+ self.path_to_state_dir+'context/'+f +':\n'+ str(file_missing_list)
 
-
 class Munger:
     def __init__(self,dir_path):
         assert os.path.isdir(dir_path),'Not a directory: ' + dir_path
         assert os.path.isfile(dir_path + 'cdf_tables.txt') and os.path.isfile(
             dir_path + 'count_columns.txt') and os.path.isfile(dir_path + 'raw_columns.txt'),\
             'Directory ' + dir_path + ' must contain files cdf_tables.txt, count_columns.txt and raw_columns.txt'
-        self.path_to_munger_dir=path_to_munger_dir
-        self.name=path_to_munger_dir.split('/')[-1]    # 'nc_export1'
-
+        if dir_path[-1] != '/': dir_path += '/' # make sure path ends in a slash
+        self.path_to_munger_dir=dir_path
+        self.name=dir_path.split('/')[-2]    # 'nc_export1'
 
 class FileFromState:
     def __init__(self,state,file_name,encoding,source_url,file_date,download_date,note):
@@ -116,8 +115,6 @@ def parse_line(mf,line):
     except:
         comment = ''
     return [field,typ,comment]
-
-def create_munger(dir_path):   # director should contain all munger info in tab-separated txt files
 
 def tab_sep_to_dict(s,fpath,k):
     full_fpath = fpath+k+'.txt'

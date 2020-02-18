@@ -9,8 +9,6 @@ import matplotlib.pyplot as plt
 import db_routines as dbr
 import os
 import states_and_files as sf
-
-
 try:
     import cPickle as pickle
 except:
@@ -153,16 +151,38 @@ class Election(object): # TODO check that object is necessary (apparently for pi
 
             return
 
-    def __init__(self, cdf_schema, Election_Id, rollup_dframe, anomaly_dframe,roll_up_to_ReportingUnitType,roll_up_to_ReportingUnitType_Id,atomic_ReportingUnitType,atomic_ReportingUnitType_Id,pickle_dir):
-        self.cdf_schema=cdf_schema
-        self.Election_Id=Election_Id
-        self.rollup_dframe=rollup_dframe
-        self.anomaly_dframe=anomaly_dframe
-        self.pickle_dir=pickle_dir
-        self.roll_up_to_ReportingUnitType=roll_up_to_ReportingUnitType
-        self.roll_up_to_ReportingUnitType_Id=roll_up_to_ReportingUnitType_Id
-        self.atomic_ReportingUnitType=atomic_ReportingUnitType
-        self.atomic_ReportingUnitType_Id=atomic_ReportingUnitType_Id
+    def __init__(self, session,s,short_name):
+        assert isinstance(s,sf.State)
+        context_el = pd.read_sql_table('Election',session.bind,schema='context',index_col='index',parse_dates=['StartDate','EndDate'])
+        el = context_el[context_el['ShortName'] == short_name].iloc[0]
+        self.name=el['Name']
+        # perhaps election is already in the cdf schema
+        try:
+            cdf_el = pd.read_sql_table('Election',session.bind,schema='cdf')
+            eldf = cdf_el[cdf_el['Name']== self.name]
+            assert not eldf.empty, 'Election does not have a record in the cdf schema yet'
+            self.Election_Id=eldf.iloc[0]['Id']
+        except:
+            cdf_etypes = pd.read_sql_table('ElectionType',session.bind,schema='cdf')
+            try:
+                ty = cdf_etypes[cdf_etypes['Txt']== el['ElectionType']]
+                assert not ty.empty
+                et_id = ty.iloc[0]['Id']
+                et_other = ''
+            except:
+                ty = cdf_etypes[cdf_etypes['Txt']== 'other']
+                et_id = ty.iloc[0]['Id']
+                et_other = el['ElectionType']
+            el_d = {'Name':self.name,'EndDate':el['EndDate'],'StartDate':el['StartDate'],'ElectionType_Id':et_id,'OtherElectionType':et_other}
+            row_as_dframe = pd.DataFrame(pd.Series(el_d)).transpose()
+            row_as_dframe.ElectionType_Id = row_as_dframe.ElectionType_Id.astype('int32')
+            el_dframe = dbr.dframe_to_sql(row_as_dframe,session,'cdf','Election',index_col=None)
+            self.Election_Id=el_dframe[el_dframe['Name']==self.name].iloc[0]['Id']
+        self.pickle_dir=s.path_to_state_dir + 'pickles/' + short_name
+        #self.rollup_dframe=None # will be obtained when analysis is done
+        #self.anomaly_dframe=None # will be obtained when analysis is done
+        # TODO rollups and anomalies depend on atomic and roll_up_to ReportingTypes
+        # TODO put roll_up_to_ReportingUnitType def and atomic_ReportingUnitType in appropriate place (where?)
 
 def create_election(session,meta,cdf_schema,Election_Id,roll_up_to_ReportingUnitType='county',atomic_ReportingUnitType='precinct',pickle_dir='../../local_data/tmp/',paramfile = '../../local_data/database.ini'):
     if not pickle_dir[-1] == '/': pickle_dir += '/'  # ensure directory ends with slash
