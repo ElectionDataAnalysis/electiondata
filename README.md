@@ -88,7 +88,6 @@ This information may be common to many datafiles; it may be related to informati
 Files from different sources require different processing assumptions. We call each set of assumptions a "munger"
 
 The folder `src/mungers` holds a directory for each munger. Each munger directory needs the following component files:
- * `name_txt` One line, with name of munger
  * `raw_columns.txt` List of columns in source file. Columns are:
     * `Name` name of the column in the source file
     * `Datatype` datatype of the column in the source file

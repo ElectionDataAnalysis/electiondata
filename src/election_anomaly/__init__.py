@@ -76,10 +76,10 @@ if __name__ == '__main__':
         # create build tables in cdf schema
         print('Creating common data format tables in schema `cdf` in database '+s.short_name)
         enumeration_tables = CDF.enum_table_list()
-        meta_cdf_schema = CDF.create_common_data_format_schema(session,'cdf',enumeration_tables,delete_existing=True)
+        meta_cdf = CDF.create_common_data_format_schema(session,'cdf',enumeration_tables,delete_existing=True)
         session.commit()
 
-        # load data into context schema
+        # load data from context directory into context schema
         # TODO make it possible to update the context schema
         print('Loading context data from '+s.short_name+'/context directory into `context` schema in database '+s.short_name)
         # for file in context folder, create table in context schema.
@@ -93,28 +93,49 @@ if __name__ == '__main__':
 
         # %% fill enumeration tables
         print('\tFilling enumeration tables')
-        CDF.fill_cdf_enum_tables(session, meta_cdf_schema, cdf_schema,enumeration_tables)
+        CDF.fill_cdf_enum_tables(session,meta_cdf,'cdf',enumeration_tables)
 
+        need_to_load_data = input('Load raw data (y/n)?\n')
+        if need_to_load_data == 'y':
+            # user picks election
+            election_list = [f for f in os.listdir(s.path_to_state_dir + 'data/') if os.path.isdir(s.path_to_state_dir + 'data/'+f)]
+            assert election_list != [], 'No elections available for in directory '+s.short_name
+            default = election_list[0]
+            need_election = True
+            while need_election:
+                print('Available elections are:')
+                for e in election_list: print(e)
+                election_name = input('Enter short name of election (default is ' + default + ')\n') or default
+                if election_name in election_list: need_election = False
+                else: print('Election not available; try again.')
+
+            # user picks munger
+            munger_list = [f for f in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/') if os.path.isdir(s.path_to_state_dir + 'data/'+election_name+'/'+f)]
+            assert munger_list != [], 'No mungers available for in directory '+s.short_name +'/'+election_name
+            default = munger_list[0]
+            need_munger = True
+            while need_munger:
+                print('Available mungers are:')
+                for e in munger_list: print(e)
+                munger_name = input('Enter short name of munger (default is ' + default + ')\n') or default
+                if munger_name in munger_list: need_munger = False
+                else: print('Election not available; try again.')
+
+            munger_path = '../mungers/'+munger_name+'/'
+            print('Creating munger instance from '+munger_path)
+            m = sf.Munger(munger_path)
 
 
         print('Loading state context info into CDF schema') # *** takes a long time; why?
         # TODO -- or maybe this will be obsolete?
-        context.context_to_cdf_PANDAS(session, meta_cdf_schema, s, cdf_schema,enumeration_tables)
+        context.context_to_cdf_PANDAS(session,meta_cdf,s,cdf_schema,enumeration_tables)
         session.commit()
     else:
-        meta_cdf_schema = MetaData(bind=session.bind,schema='cdf'')
+        meta_cdf = MetaData(bind=session.bind,schema='cdf')
 
     election_id, election_type, election_name = an.get_election_id_type_name(session,meta_generic,cdf_schema,default=3219)
 
-    # need_to_load_data = 'y'
-    need_to_load_data = input('Load raw data (y/n)?\n')
-    if need_to_load_data == 'y':
-        default = 'nc_primary'
-        munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
 
-        munger_path = '../mungers/'+munger_name+'/'
-        print('Creating munger instance from '+munger_path)
-        m = sf.create_munger(munger_path)
 
         # default = 'filtered_results_pct_20181106.txt'
         default = 'results_pct_20180508.txt'
@@ -146,18 +167,18 @@ if __name__ == '__main__':
                 print('Continuing with existing file')
 
         print('Loading data from df table\n\tin schema '+ s.schema_name+ '\n\tto CDF schema '+cdf_schema+'\n\tusing munger '+munger_name)
-        mr.raw_records_to_cdf(session,meta_cdf_schema,df,m,cdf_schema,s.schema_name,election_type)
+        mr.raw_records_to_cdf(session,meta_cdf,df,m,cdf_schema,s.schema_name,election_type)
         session.commit()
         print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
 
-    e = an.get_anomaly_scores(session,meta_cdf_schema,cdf_schema,election_id,election_name)
+    e = an.get_anomaly_scores(session,meta_cdf,cdf_schema,election_id,election_name)
 
     default = 3
     n = input('Draw how many most-anomalous plots?\n') or default
     try:
         n = int(n)
-        e.draw_most_anomalous(session,meta_cdf_schema,n=n,mode='pct')
-        e.draw_most_anomalous(session,meta_cdf_schema,n=n,mode='raw')
+        e.draw_most_anomalous(session,meta_cdf,n=n,mode='pct')
+        e.draw_most_anomalous(session,meta_cdf,n=n,mode='raw')
 
     except:
         print('Input was not an integer; skipping most-anomalous plots')
