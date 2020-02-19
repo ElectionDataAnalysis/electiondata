@@ -325,13 +325,10 @@ def raw_dframe_to_cdf(session,raw_rows,s,mu,cdf_schema,context_schema,e,state_id
 
     # if state_id is not passed as parameter, select-or-insert state, get id (default Reporting Unit for ballot questions)
     if state_id == 0:
-        # TODO get state as only ReportingUnit of type 'state' 'district' or 'territory'
-        [reportingunittype_id, otherreportingunittype] = format_type_for_insert_PANDAS(cdf_d['ReportingUnitType'], 'state',id_type_other_id)
-        value_d = {'Name': df.state.name, 'ReportingUnitType_Id': reportingunittype_id,
-                   'OtherReportingUnitType': otherreportingunittype}
-        state_id, cdf_d['ReportingUnit'] = id_from_select_or_insert_PANDAS(cdf_d['ReportingUnit'], value_d, session, cdf_schema,'ReportingUnit')
+        state_type_id = cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt']=='state'].index.values[0]
+        state_id = cdf_d['ReportingUnit'][cdf_d['ReportingUnit']['ReportingUnitType_Id']==state_type_id].index.values[0]
 
-    # store state_id and election_id for later use
+    # store state_id and election_id to be returned by this function
     ids_d = {'state': state_id, 'Election_Id': e.Election_Id}  # to hold ids of found items for later reference
 
     bulk_elements_to_cdf(session, mu,raw_rows, cdf_schema, context_schema, e.Election_Id, e.ElectionType,ids_d['state'])
