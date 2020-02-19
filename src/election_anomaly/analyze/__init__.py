@@ -31,7 +31,7 @@ class AnomalyDataFrame(object):
                 default = 'county'
                 self.roll_up_to_ru_type = input('Enter the (larger) Reporting Unit Type whose counts you want to analyze (default is ' + default + ')\n') or default
 
-            rollup_dframe = e.pull_rollup_from_db_by_types(self.roll_up_to_ru_type,atomic_ru_type=atomic_ru_type)
+            rollup_dframe,contest_type_d = e.pull_rollup_from_db_by_types(self.roll_up_to_ru_type,atomic_ru_type=atomic_ru_type)
             self.dframe=pd.DataFrame(data=None,index=None,
                                 columns=['ContestId','ContestName','column_field','filter_field','filter_value','anomaly_algorithm',
                                          'anomaly_value_raw','anomaly_value_pct'])
@@ -99,10 +99,16 @@ class Election(object): # TODO check that object is necessary (apparently for pi
 
     def pull_rollup_from_db_by_types(self, roll_up_to_ru_type, atomic_ru_type='precinct', db_paramfile='../../local_data/database.ini'):
 
-        # TODO create and return id-to-contest-type dict for this election.
 
         con, meta = dbr.sql_alchemy_connect(schema='cdf',paramfile=db_paramfile,db_name=self.state.short_name)
         ru_types = pd.read_sql_table('ReportingUnitType',con,schema='cdf',index_col=None)
+        # TODO create and return id-to-contest-type dict for this election.
+        contest_type={}
+        bmc_ids = pd.read_sql_table('BallotMeasureContest',con,schema='cdf',index_col=None)['Id'].unique()
+        for i in bmc_ids: contest_type[i] = 'BallotMeasure'
+        cc_ids = pd.read_sql_table('CandidateContest',con,schema='cdf',index_col=None)['Id'].unique()
+        for i in cc_ids: contest_type[i] = 'Candidate'
+
         roll_up_to_ru_type_id = ru_types[ru_types['Txt']==roll_up_to_ru_type].iloc[0]['Id']
         atomic_ru_type_id = ru_types[ru_types['Txt']==atomic_ru_type].iloc[0]['Id']
 
@@ -127,7 +133,7 @@ class Election(object): # TODO check that object is necessary (apparently for pi
         rollup_dframe = pd.read_sql_query(sql=q, con=con, params=params)
         if con:
             con.dispose()
-        return rollup_dframe
+        return rollup_dframe, contest_type
 
     def anomaly_scores(self, session, meta): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
         pickle_path = self.pickle_dir+'anomaly_rollup'
