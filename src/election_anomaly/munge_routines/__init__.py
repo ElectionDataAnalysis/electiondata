@@ -177,13 +177,10 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
         cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,cdf_schema,'ElectionContestJoin')
 
         # create dframe of vote counts (with join info) for ballot measures
-        print('Create vote_counts dframe')
         bm_vote_counts = row.drop(set(['County','Election Date','Precinct','Contest Group ID','Contest Type','Contest Name','Choice','Choice Party','Vote For','Real Precinct','ReportingUnit_external','ReportingUnit','index','ExternalIdentifierType','ReportingUnitType_Id','OtherReportingUnitType','CountItemStatus_Id','OtherCountItemStatus','BallotMeasureContest','Name','BallotMeasureSelection','Selection', 'ElectionDistrict_Id']).intersection(row.columns.to_list()),axis=1)
         # vc_col_d = {k:v['CountItemType'] for k,v in mu.content_dictionary['counts_dictionary'].items()}
         bm_vote_counts.rename(columns=vc_col_d,inplace=True)
-        print('Reshape')
         bm_vote_counts=bm_vote_counts.melt(id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],value_vars=['election-day', 'early', 'absentee-mail', 'provisional', 'total'],var_name='CountItemType',value_name='Count')
-        print('Merge CountItemType')
         bm_vote_counts = bm_vote_counts.merge(cdf_d['CountItemType'],left_on='CountItemType',right_on='Txt')
         bm_vote_counts.rename(columns={'Id':'CountItemType_Id'},inplace=True)
         vote_count_dframe_list.append(bm_vote_counts)
@@ -253,14 +250,11 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
 
         # load candidate counts
         # create dframe of Candidate Contest vote counts (with join info) for ballot measures
-        print('Create vote_counts dframe for Candidate Contests')
         # TODO list of cols to be dropped is munger-dependent
         cc_vote_counts = row.drop(set(['County','Election Date','Precinct','Contest Group ID','Contest Type','Contest Name','Choice','Choice Party','Vote For','Real Precinct','ReportingUnit_external','ReportingUnit','index','ExternalIdentifierType','ReportingUnitType_Id','OtherReportingUnitType','CountItemStatus_Id','OtherCountItemStatus','Name', 'ElectionDistrict_Id']).intersection(row.columns.to_list()),axis=1)
         cc_vote_counts.rename(columns=vc_col_d,inplace=True)
-        print('Reshape')
         cc_vote_counts.rename(columns={'CandidateContest_Id':'Contest_Id','CandidateSelection_Id':'Selection_Id'},inplace=True)
         cc_vote_counts=cc_vote_counts.melt(id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],value_vars=['election-day', 'early', 'absentee-mail', 'provisional', 'total'],var_name='CountItemType',value_name='Count')
-        print('Merge CountItemType')
         cc_vote_counts = cc_vote_counts.merge(cdf_d['CountItemType'],left_on='CountItemType',right_on='Txt')
         cc_vote_counts.rename(columns={'Id':'CountItemType_Id'},inplace=True)
         vote_count_dframe_list.append(cc_vote_counts)
