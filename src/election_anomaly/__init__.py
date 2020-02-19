@@ -146,40 +146,7 @@ if __name__ == '__main__':
             print('Loading data into cdf schema from file: '+datafile)
             mr.raw_dframe_to_cdf(session,raw_data_dframe,s, mu,'cdf','context',e)
 
-    else:
-        meta_cdf = MetaData(bind=session.bind,schema='cdf')
-
-        # election_id, election_type, election_name = an.get_election_id_type_name(session,meta_generic,cdf_schema,default=3219)
-
-
-
-        print('Creating metafile instance')
-        mf = sf.create_metafile(s,'layout_results_pct.txt')
-
-        print('Creating datafile instance')
-        df = sf.create_datafile(s, election_name, df_name, mf, m)
-        print('Load raw data from '+df.file_name)
-        if df.separator == 'tab': delimiter = '\t'
-        elif df.separator == 'comma': delimiter = ','
-        else:
-            print('Separator in file unknown, assumed to be tab')
-            delimiter = '\t'
-        raw_data_dframe = pd.read_csv(s.path_to_state_dir+'data/' + df.file_name,sep=delimiter)
-        try:
-            raw_data_dframe.to_sql(df.table_name,con=session.bind,schema=s.schema_name,index=False,if_exists='fail')
-            session.flush()
-        except:
-            replace = input('Raw data table ' +df.table_name + ' already exists in database. Replace (y/n)?\n')
-            if replace == 'y':
-                raw_data_dframe.to_sql(df.table_name, con=session.bind, schema=s.schema_name, index=False,if_exists='replace')
-                session.flush()
-            else:
-                print('Continuing with existing file')
-
-        # mr.raw_records_to_cdf(session,meta_cdf,df,m,cdf_schema,s.schema_name,election_type)
-        session.commit()
-        print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
-
+    adf = an.AnomalyDataFrame(session,e,atomic_ru_type='precinct',roll_up_to_ru_type='county')
     e = an.get_anomaly_scores(session,meta_cdf,cdf_schema,election_id,election_name)
 
     default = 3

@@ -8,11 +8,53 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import db_routines as dbr
 import os
+import pathlib
 import states_and_files as sf
 try:
     import cPickle as pickle
 except:
     import pickle
+
+class AnomalyDataFrame(object):
+    def __init__(self,session,election,atomic_ru_type,roll_up_to_ru_type):
+        assert isinstance(election,Election),'One argument must be an instance of the Election class'
+        pickle_path = e.pickle_dir+'anomalies_by_'+self.roll_up_to_ru_type
+        if os.path.isfile(pickle_path):
+            print('Anomalies will not be calculated, but will be read from existing file:\n\t'+pickle_path)
+            self=pd.read_pickle(pickle_path)
+        else:
+            self.election=election  # the election we're analyzing
+
+            if roll_up_to_ru_type:
+                self.roll_up_to_ru_type=roll_up_to_ru_type
+            else:    # TODO error handling
+                default = 'county'
+                self.roll_up_to_ru_type = input('Enter the (larger) Reporting Unit Type whose counts you want to analyze (default is ' + default + ')\n') or default
+
+            rollup_dframe = e.pull_rollup_from_db_by_types(self.roll_up_to_ru_type,atomic_ru_type=atomic_ru_type)
+            self.dframe=pd.DataFrame(data=None,index=None,
+                                columns=['ContestId','ContestName','column_field','filter_field','filter_value','anomaly_algorithm',
+                                         'anomaly_value_raw','anomaly_value_pct'])
+            # TODO revise below (was just pasted)
+            contest_id_list = rollup_dframe.Contest_Id.unique()
+            for contest_id in contest_id_list:
+                anomaly_list = []
+                cr = create_contest_rollup_from_election(session, meta, election, contest_id)
+                print('Calculating anomalies for '+cr.ContestName)
+                for column_field in ['ReportingUnit','CountItemType','Selection']:
+                    temp_list = ['ReportingUnit','CountItemType','Selection']
+                    temp_list.remove(column_field)
+                    for filter_field in temp_list:
+                        for filter_value in cr.dataframe_by_name[filter_field].unique():
+                            z_score_totals, z_score_pcts = cr.euclidean_z_score(column_field, [[filter_field,filter_value]])
+                            anomaly_list.append(pd.Series([contest_id,cr.ContestName,column_field,filter_field,filter_value,'euclidean z-score',
+                                                 max(z_score_totals), max(z_score_pcts)],index=self.dframe.columns))
+                if anomaly_list:
+                    self.dframe = self.dframe.append(anomaly_list) # less efficient to update anomaly_dframe contest-by-contest, but better for debug
+                else:
+                    print('No anomalies found for contest with Id ' + str(contest_id))
+            self.to_pickle(pickle_path)
+            print('AnomalyDataFrame calculated, stored in a pickled DataFrame at '+pickle_path)
 
 class Election(object): # TODO check that object is necessary (apparently for pickling)
     def most_anomalous(self,n=3,mode='pct'):
@@ -54,6 +96,38 @@ class Election(object): # TODO check that object is necessary (apparently for pi
         if con:
             con.dispose()
         return self.rollup_dframe
+
+    def pull_rollup_from_db_by_types(self, roll_up_to_ru_type, atomic_ru_type='precinct', db_paramfile='../../local_data/database.ini'):
+
+        # TODO create and return id-to-contest-type dict for this election.
+
+        con, meta = dbr.sql_alchemy_connect(schema='cdf',paramfile=db_paramfile,db_name=self.state.short_name)
+        ru_types = pd.read_sql_table('ReportingUnitType',con,schema='cdf',index_col=None)
+        roll_up_to_ru_type_id = ru_types[ru_types['Txt']==roll_up_to_ru_type].iloc[0]['Id']
+        atomic_ru_type_id = ru_types[ru_types['Txt']==atomic_ru_type].iloc[0]['Id']
+
+        q = """SELECT
+            secvcj."Contest_Id", cruj."ParentReportingUnit_Id" AS "ReportingUnit_Id",  secvcj."Selection_Id", vc."CountItemType_Id", COALESCE(sum(vc."Count"),0) AS "Count"
+         FROM
+             {0}."SelectionElectionContestVoteCountJoin" secvcj 
+             LEFT JOIN {0}."VoteCount" vc ON secvcj."VoteCount_Id" = vc."Id"
+             LEFT JOIN {0}."ComposingReportingUnitJoin" cruj ON vc."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
+             LEFT JOIN {0}."ReportingUnit" ru_c ON ru_c."Id" = cruj."ChildReportingUnit_Id"
+             LEFT JOIN {0}."ReportingUnit" ru_p ON ru_p."Id" = cruj."ParentReportingUnit_Id"
+
+         WHERE
+             secvcj."Election_Id" = %(Election_Id)s
+             AND ru_c."ReportingUnitType_Id" = %(roll_up_fromReportingUnitType_Id)s
+             AND ru_p."ReportingUnitType_Id" = %(roll_up_toReportingUnitType_Id)s
+         GROUP BY secvcj."Contest_Id", cruj."ParentReportingUnit_Id",  secvcj."Selection_Id", vc."CountItemType_Id"
+         """.format('cdf')
+        params = {'Election_Id': self.Election_Id,
+                  'roll_up_toReportingUnitType_Id': roll_up_to_ru_type_id,
+                  'roll_up_fromReportingUnitType_Id': atomic_ru_type_id}
+        rollup_dframe = pd.read_sql_query(sql=q, con=con, params=params)
+        if con:
+            con.dispose()
+        return rollup_dframe
 
     def anomaly_scores(self, session, meta): # TODO pass anomaly algorithm and name as parameters. Here euclidean z-score
         pickle_path = self.pickle_dir+'anomaly_rollup'
@@ -151,11 +225,13 @@ class Election(object): # TODO check that object is necessary (apparently for pi
 
             return
 
-    def __init__(self, session,s,short_name):
+    def __init__(self, session,state,short_name):
         assert isinstance(s,sf.State)
+        self.short_name=short_name
         context_el = pd.read_sql_table('Election',session.bind,schema='context',index_col='index',parse_dates=['StartDate','EndDate'])
         el = context_el[context_el['ShortName'] == short_name].iloc[0]
         self.name=el['Name']
+        self.state=state
         self.ElectionType=el['ElectionType']
         # perhaps election is already in the cdf schema
         try:
@@ -187,6 +263,7 @@ class Election(object): # TODO check that object is necessary (apparently for pi
         # TODO rollups and anomalies depend on atomic and roll_up_to ReportingTypes
         # TODO put roll_up_to_ReportingUnitType def and atomic_ReportingUnitType in appropriate place (where?)
 
+# TODO obsolete, delete
 def create_election(session,meta,cdf_schema,Election_Id,roll_up_to_ReportingUnitType='county',atomic_ReportingUnitType='precinct',pickle_dir='../../local_data/tmp/',paramfile = '../../local_data/database.ini'):
     if not pickle_dir[-1] == '/': pickle_dir += '/'  # ensure directory ends with slash
     assert os.path.isdir(pickle_dir), 'No such directory: ' + pickle_dir + '\nCurrent directory is: ' + os.getcwd()
@@ -378,17 +455,16 @@ def create_contest_rollup_from_election(session,meta,e,Contest_Id):   # TODO get
     assert isinstance(e,Election),'election must be an instance of the Election class'
     if not isinstance(Contest_Id,int):
         Contest_Id = int(Contest_Id)
-    ElectionName = dbr.read_single_value_from_id(session, meta, e.cdf_schema,'Election','Name', e.Election_Id)
-    contest_type = dbr.contest_type_from_contest_id(session.bind,meta,e.cdf_schema,Contest_Id) # Candidate or BallotMeasure
+    contest_type = dbr.contest_type_from_contest_id(session.bind,meta,'cdf',Contest_Id) # Candidate or BallotMeasure
     contesttable = contest_type + 'Contest'
-    ContestName = dbr.read_single_value_from_id(session,meta,e.cdf_schema,contesttable,'Name',Contest_Id) # TODO candidte or ballotmeasure
+    ContestName = dbr.read_single_value_from_id(session,meta,'cdf',contesttable,'Name',Contest_Id)
 
     dataframe_by_id = e.rollup_dframe[e.rollup_dframe.Contest_Id == Contest_Id].drop('Contest_Id',axis=1)
-    dataframe_by_name = id_values_to_name(session.bind, meta, e.cdf_schema, dataframe_by_id)
+    dataframe_by_name = id_values_to_name(session.bind, meta, 'cdf', dataframe_by_id)
     by_ReportingUnitType = e.roll_up_to_ReportingUnitType
     by_ReportingUnitType_Id = e.roll_up_to_ReportingUnitType_Id
-    return ContestRollup(dataframe_by_id, dataframe_by_name, e.cdf_schema, e.Election_Id, Contest_Id,
-                         by_ReportingUnitType_Id, ElectionName, ContestName, by_ReportingUnitType,
+    return ContestRollup(dataframe_by_id, dataframe_by_name, 'cdf', e.Election_Id, Contest_Id,
+                         by_ReportingUnitType_Id,e.name,  ContestName, by_ReportingUnitType,
                          contest_type, None)
 
 def create_contest_rollup(session, meta, cdf_schema, Election_Id, Contest_Id, by_ReportingUnitType_Id, atomic_ReportingUnitType_Id,contest_type, pickle_dir):
@@ -618,7 +694,7 @@ def get_election_id_type_name(session,meta,cdf_schema,default=0):
     election_name = e_df[e_df['Id_election'] == election_id].iloc[0]['Name']
     return election_id,election_type,election_name
 
-def get_anomaly_scores(session,meta,cdf_schema,election_id,election_name):
+def get_anomaly_scores_OLD(session,meta,cdf_schema,election_id,election_name):
     """
     Creates an election object and finds anomaly scores for each contest in that election
     """
@@ -645,6 +721,37 @@ def get_anomaly_scores(session,meta,cdf_schema,election_id,election_name):
 
         e = create_election(session,meta,cdf_schema,election_id,roll_up_to_ru_type,
                                atomic_ru_type,pickle_dir,paramfile)
+        e.anomaly_scores(session,meta)
+
+        print('Anomaly scores calculated')
+        return e
+    else:
+        return None
+
+def get_anomaly_scores(session,e,atomic_ru_type=None,roll_up_to_ru_type=None):
+    """
+    Finds anomaly scores for each contest in the election e,
+    rolling up from 'atomic' reporting units to 'roll_up_to' reporting units
+    """
+    find_anomalies = input('Find anomalies for '+ e.name + ' (y/n)?\n')
+    if find_anomalies == 'y':
+        default = '../local_data/database.ini'
+        paramfile = input('Enter path to database parameter file (default is ' + default + ')\n') or default
+
+        if not atomic_ru_type:
+            default = 'precinct'
+            atomic_ru_type = input(
+                'Enter the \'atomic\' Reporting Unit Type on which you wish to base your rolled-up counts (default is ' + default + ')\n') or default
+
+        if not roll_up_to_ru_type:
+            default = 'county'
+            roll_up_to_ru_type = input(
+                'Enter the (larger) Reporting Unit Type whose counts you want to analyze (default is ' + default + ')\n') or default
+
+        # TODO what's the purpose of this?
+        pickle_dir = e.state.path_to_state_dir+'pickles'+ e.short_name + '/'
+        pathlib.path.mkdir(pickle_dir,parents=True,exist_ok=True)
+
         e.anomaly_scores(session,meta)
 
         print('Anomaly scores calculated')
