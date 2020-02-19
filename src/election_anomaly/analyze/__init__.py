@@ -626,7 +626,7 @@ def get_anomaly_scores(session,meta,cdf_schema,election_id,election_name):
 
         print('Anomaly scores calculated')
         return e
-    else
+    else:
         return None
 
 if __name__ == '__main__':
