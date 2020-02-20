@@ -100,23 +100,23 @@ if __name__ == '__main__':
         ct.context_schema_to_cdf(session,s,enumeration_tables)
         session.commit()
 
+    # user picks election
+    election_list = [f for f in os.listdir(s.path_to_state_dir + 'data/') if os.path.isdir(s.path_to_state_dir + 'data/'+f)]
+    assert election_list != [], 'No elections available for in directory '+s.short_name
+    default = election_list[0]
+    need_election = True
+    while need_election:
+        print('Available elections are:')
+        for e in election_list: print(e)
+        election_name = input('Enter short name of election (default is ' + default + ')\n') or default
+        if election_name in election_list: need_election = False
+        else: print('Election not available; try again.')
+    print('Creating Election instance for '+election_name)
+    e = an.Election(session,s,election_name)
+
 
     need_to_load_data = input('Load raw data (y/n)?\n')
     if need_to_load_data == 'y':
-        # user picks election
-        election_list = [f for f in os.listdir(s.path_to_state_dir + 'data/') if os.path.isdir(s.path_to_state_dir + 'data/'+f)]
-        assert election_list != [], 'No elections available for in directory '+s.short_name
-        default = election_list[0]
-        need_election = True
-        while need_election:
-            print('Available elections are:')
-            for e in election_list: print(e)
-            election_name = input('Enter short name of election (default is ' + default + ')\n') or default
-            if election_name in election_list: need_election = False
-            else: print('Election not available; try again.')
-        print('Creating Election instance for '+election_name)
-        e = an.Election(session,s,election_name)
-
         # user picks munger
         munger_list = [f for f in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/') if os.path.isdir(s.path_to_state_dir + 'data/'+election_name+'/'+f)]
         assert munger_list != [], 'No mungers available for in directory '+s.short_name +'/'+election_name
@@ -146,24 +146,27 @@ if __name__ == '__main__':
             print('Loading data into cdf schema from file: '+datafile)
             mr.raw_dframe_to_cdf(session,raw_data_dframe,s, mu,'cdf','context',e)
 
-    adf = an.AnomalyDataFrame(session,e,atomic_ru_type='precinct',roll_up_to_ru_type='county')
-    e = an.get_anomaly_scores(session,meta_cdf,cdf_schema,election_id,election_name)
+    need_to_analyze = input('Analyze (y/n)?\n')
+    if need_to_analyze == 'y':
+        rollup = e.pull_rollup_from_db_by_types('county',atomic_ru_type='precinct')
+        adf = an.AnomalyDataFrame(session,meta_generic,e,rollup)
+        e = an.get_anomaly_scores(session,meta_cdf,'cdf',election_id,election_name)
 
-    default = 3
-    n = input('Draw how many most-anomalous plots?\n') or default
-    try:
-        n = int(n)
-        e.draw_most_anomalous(session,meta_cdf,n=n,mode='pct')
-        e.draw_most_anomalous(session,meta_cdf,n=n,mode='raw')
+        default = 3
+        n = input('Draw how many most-anomalous plots?\n') or default
+        try:
+            n = int(n)
+            e.draw_most_anomalous(session,meta_cdf,n=n,mode='pct')
+            e.draw_most_anomalous(session,meta_cdf,n=n,mode='raw')
 
-    except:
-        print('Input was not an integer; skipping most-anomalous plots')
+        except:
+            print('Input was not an integer; skipping most-anomalous plots')
 
-    draw_all = input('Plot worst bar chart for all contests? (y/n)?\n')
-    if draw_all == 'y':
-        e.worst_bar_for_each_contest(session,meta_generic)
+        draw_all = input('Plot worst bar chart for all contests? (y/n)?\n')
+        if draw_all == 'y':
+            e.worst_bar_for_each_contest(session,meta_generic)
 
-    e.worst_bar_for_selected_contests(session,meta_generic)
+        e.worst_bar_for_selected_contests(session,meta_generic)
 
     eng.dispose()
     print('Done!')

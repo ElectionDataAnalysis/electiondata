@@ -34,7 +34,6 @@ def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF
 
     #%% create all other tables, in set order because of foreign keys
     fpath = dirpath + 'tables.txt'
-    print('Creating other tables, from ' + fpath + ':')
     with open(fpath, 'r') as f:
         table_def_list = eval(f.read())
     for table_def in table_def_list:

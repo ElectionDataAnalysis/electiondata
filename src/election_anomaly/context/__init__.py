@@ -69,7 +69,6 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
     # process other tables; need Office after ReportingUnit and after Party
     for t in ['ReportingUnit','Party','Office','Election']:
         table_def = next(x for x in table_def_list if x[0] == t)
-        print('\tProcessing ' + t + 's')
         # create DataFrames of relevant context information
         context_cdframe[t] = pd.read_sql_table(t,session.bind,schema='context',index_col='index')
 
@@ -146,16 +145,14 @@ def fill_externalIdentifier_table(session,schema,context_schema,id_other_id_type
     """
     disable_pickle = True   # TODO remove this
     if not disable_pickle and os.path.isfile(pickle_dir + 'ExternalIdentifier'):
-        print('Filling ExternalIdentifier table from pickle in ' + pickle_dir)
+        print('Pulling ExternalIdentifier table from pickle in ' + pickle_dir)
         ei_df = pd.read_pickle(pickle_dir + 'ExternalIdentifier')
     else:
-        print('Fill ExternalIdentifier table')
+        print('Pulling ExternalIdentifier table from context folder')
         # TODO why does this step take so long?
         # get table from context directory with the tab-separated definitions of external identifiers
         ei_df = pd.read_csv(fpath,sep = '\t')
 
-        # load context table into state schema for later reference # TODO where is this used?
-        # dframe_to_sql(ei_df,session,s.schema_name,'ExternalIdentifierContext')
         ei_df.to_sql('ExternalIdentifierContext',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
 
         # pull corresponding tables from the cdf db
@@ -199,6 +196,7 @@ def fill_externalIdentifier_table(session,schema,context_schema,id_other_id_type
         ei_df = pd.concat([filtered_ei[t] for t in ei_df['Table'].unique()])
 
     # insert appropriate dataframe columns into ExternalIdentifier table in the CDF db
+    print('Inserting into ExternalIdentifier table in schema '+schema)
     dframe_to_sql(ei_df, session, schema, 'ExternalIdentifier')
     session.flush()
     if not disable_pickle and not os.path.isfile(pickle_dir + 'ExternalIdentifier'):
