@@ -152,10 +152,12 @@ if __name__ == '__main__':
         pickle_path = e.pickle_dir+'_anomalies_by_'+electionrollup.roll_up_to_ru_type+'_from_'+electionrollup.atomic_ru_type
         if os.path.isfile(pickle_path):
             print('Anomalies will not be calculated, but will be read from existing file:\n\t'+pickle_path)
-            anomalies=pd.read_pickle(pickle_path)
+            with open(pickle_path,'rb') as f:
+                anomalies=pickle.load(f)
         else:
             anomalies = an.AnomalyDataFrame(electionrollup)
-            anomalies.to_pickle(pickle_path)
+            with open(pickle_path,'wb') as f:
+                pickle.dump(anomalies,f)
             print('AnomalyDataFrame calculated, stored as pickle at '+pickle_path)
 
         anomalies.worst_bar_for_selected_contests()
