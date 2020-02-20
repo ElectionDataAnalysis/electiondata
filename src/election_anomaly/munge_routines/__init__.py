@@ -274,13 +274,13 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
     vote_counts_fat.rename(columns={'Id':'VoteCount_Id'},inplace=True)
     session.commit()
     end = time.time()
-    print('\tSeconds required to upload VoteCount: '+ str(end - start))
+    print('\tSeconds required to upload VoteCount: '+ str(round(end - start)))
     print('Upload to SelectionElectionContestVoteCountJoin')
     start = time.time()
 
     cdf_d['SelectionElectionContestVoteCountJoin'] = dbr.dframe_to_sql(vote_counts_fat,session,cdf_schema,'SelectionElectionContestVoteCountJoin')
     end = time.time()
-    print('\tSeconds required to upload SelectionElectionContestVoteCountJoin: '+ str(end - start))
+    print('\tSeconds required to upload SelectionElectionContestVoteCountJoin: '+ str(round(end - start)))
     print('Drop columns from cdf table')
     q = 'ALTER TABLE {0}."VoteCount" DROP COLUMN "Election_Id", DROP COLUMN "Contest_Id" ,  DROP COLUMN "Selection_Id" '
     sql_ids=[cdf_schema]

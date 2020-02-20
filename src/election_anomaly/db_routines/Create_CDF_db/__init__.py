@@ -28,7 +28,6 @@ def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF
     #%% create enumeration tables and push to db
     print('Creating enumeration tables')
     for t in e_table_list:
-        print('\t'+t)
         exec('Table(\'' + t + '\',metadata, Column(\'Id\',Integer, id_seq,server_default=id_seq.next_value(),primary_key=True), Column(\'Txt\',String),schema = \'' + schema + '\')')
     metadata.create_all()
 
@@ -39,7 +38,6 @@ def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF
     for table_def in table_def_list:
         name = table_def[0]
         field_d = table_def[1]
-        print('\t'+ name)
         col_string_list = ['Column(\''+ f['fieldname'] + '\',' + f['datatype'] + ')' for f in field_d['fields']] + ['Column(\'' + e + '_Id\',ForeignKey(\'' + schema + '.' + e + '.Id\')),Column(\'Other' + e + '\',String)' for e in field_d['enumerations']] + ['Column(\'' + oer['fieldname'] + '\',ForeignKey(\'' + schema + '.' + oer['refers_to'] + '.Id\'))' for oer in field_d['other_element_refs']] + ['CheckConstraint(\'"' + nnf + '" IS NOT NULL\',name = \'' + field_d['short_name'] + '_' + nnf + '_not_null\' )' for nnf in field_d['not_null_fields']] + ['UniqueConstraint(' + ','.join(['\'' + x +'\'' for x in uc]) + ',name=\'' + field_d['short_name'] + '_ux' + str(field_d['unique_constraints'].index(uc)) + '\')' for uc in field_d['unique_constraints']]
         table_creation_string = 'Table(\''+ name + '\',metadata,Column(\'Id\',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),' + ','.join(col_string_list) + ', schema=\'' + schema + '\')'
         exec(table_creation_string)

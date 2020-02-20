@@ -148,9 +148,8 @@ if __name__ == '__main__':
 
     need_to_analyze = input('Analyze (y/n)?\n')
     if need_to_analyze == 'y':
-        rollup = e.pull_rollup_from_db_by_types('county',atomic_ru_type='precinct')
-        adf = an.AnomalyDataFrame(session,meta_generic,e,rollup)
-        e = an.get_anomaly_scores(session,meta_cdf,'cdf',election_id,election_name)
+        electionrollup = an.ContestRollup(e,'county','precinct')
+        anomalies = an.AnomalyDataFrame(electionrollup)
 
         default = 3
         n = input('Draw how many most-anomalous plots?\n') or default
@@ -160,7 +159,7 @@ if __name__ == '__main__':
             e.draw_most_anomalous(session,meta_cdf,n=n,mode='raw')
 
         except:
-            print('Input was not an integer; skipping most-anomalous plots')
+            print('ERROR (Input was not an integer?); skipping most-anomalous plots')
 
         draw_all = input('Plot worst bar chart for all contests? (y/n)?\n')
         if draw_all == 'y':
