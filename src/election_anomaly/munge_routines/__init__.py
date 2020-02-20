@@ -263,7 +263,6 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
 
     # To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
     # add SelectionElectionContestJoin columns to VoteCount
-    print('Add columns to cdf table')
     q = 'ALTER TABLE {0}."VoteCount" ADD COLUMN "Election_Id" INTEGER, ADD COLUMN "Contest_Id" INTEGER,  ADD COLUMN "Selection_Id" INTEGER'
     sql_ids=[cdf_schema]
     strs = []

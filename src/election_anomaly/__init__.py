@@ -149,14 +149,22 @@ if __name__ == '__main__':
     need_to_analyze = input('Analyze (y/n)?\n')
     if need_to_analyze == 'y':
         electionrollup = an.ContestRollup(e,'county','precinct')
-        anomalies = an.AnomalyDataFrame(electionrollup)
+        pickle_path = e.pickle_dir+'_anomalies_by_'+electionrollup.roll_up_to_ru_type+'_from_'+electionrollup.atomic_ru_type
+        if os.path.isfile(pickle_path):
+            print('Anomalies will not be calculated, but will be read from existing file:\n\t'+pickle_path)
+            anomalies=pd.read_pickle(pickle_path)
+        else:
+            anomalies = an.AnomalyDataFrame(electionrollup)
+            anomalies.to_pickle(pickle_path)
+            print('AnomalyDataFrame calculated, stored as pickle at '+pickle_path)
 
+        anomalies.worst_bar_for_selected_contests()
         default = 3
         n = input('Draw how many most-anomalous plots?\n') or default
         try:
             n = int(n)
-            e.draw_most_anomalous(session,meta_cdf,n=n,mode='pct')
-            e.draw_most_anomalous(session,meta_cdf,n=n,mode='raw')
+            anomalies.draw_most_anomalous(3,'pct')
+            anomalies.draw_most_anomalous(3,'raw')
 
         except:
             print('ERROR (Input was not an integer?); skipping most-anomalous plots')
@@ -165,7 +173,6 @@ if __name__ == '__main__':
         if draw_all == 'y':
             e.worst_bar_for_each_contest(session,meta_generic)
 
-        e.worst_bar_for_selected_contests(session,meta_generic)
 
     eng.dispose()
     print('Done!')
