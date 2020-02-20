@@ -243,6 +243,13 @@ class ContestRollup:
             new_list = contest_name_list
         return ContestRollup(self.election,self.roll_up_to_ru_type,self.atomic_ru_type,contest_name_list=new_list)
 
+    def restrict_by_contest_name_NEW(self,contest_name_list):
+        # TODO test: does this change the original adf?
+        new_adf = self
+        if self.contest_name_list:
+            new_adf.dframe = self.dframe[self.dframe['ContestName'].isin(contest_name_list)]
+        return new_adf
+
     def __init__(self,election,roll_up_to_ru_type,atomic_ru_type,contest_name_list = None):
         self.election=election
         self.atomic_ru_type=atomic_ru_type
