@@ -143,8 +143,7 @@ def fill_externalIdentifier_table(session,schema,context_schema,id_other_id_type
     fpath is a path to the tab-separated context file holding the external identifier info
     s is the state
     """
-    disable_pickle = True   # TODO remove this
-    if not disable_pickle and os.path.isfile(pickle_dir + 'ExternalIdentifier'):
+    if os.path.isfile(pickle_dir + 'ExternalIdentifier'):
         print('Pulling ExternalIdentifier table from pickle in ' + pickle_dir)
         ei_df = pd.read_pickle(pickle_dir + 'ExternalIdentifier')
     else:
@@ -183,23 +182,19 @@ def fill_externalIdentifier_table(session,schema,context_schema,id_other_id_type
             listed['OtherIdentifierType'] = [None]*listed.shape[0]
 
             # join info for other
-            other['IdentifierType_Id'] = [id_other_id_type]*other.shape[0] # TODO A value is trying to be set on a copy of a slice from a DataFrame. Try using .loc[row_indexer,col_indexer] = value instead
+            other.loc[:,'IdentifierType_Id'] = id_other_id_type # TODO A value is trying to be set on a copy of a slice from a DataFrame. Try using .loc[row_indexer,col_indexer] = value instead
 
             other.rename(columns={'ExternalIdentifierType':'OtherIdentifierType','ExternalIdentifierValue':'Value'},inplace=True)
 
-            # TODO check that the columns are right and ready for insertion into ExternalIdentifier
-
-
             filtered_ei[t] = pd.concat([other,listed],sort=False)
 
-        # TODO check that primaries work properly
         ei_df = pd.concat([filtered_ei[t] for t in ei_df['Table'].unique()])
 
     # insert appropriate dataframe columns into ExternalIdentifier table in the CDF db
     print('Inserting into ExternalIdentifier table in schema '+schema)
     dframe_to_sql(ei_df, session, schema, 'ExternalIdentifier')
     session.flush()
-    if not disable_pickle and not os.path.isfile(pickle_dir + 'ExternalIdentifier'):
+    if not os.path.isfile(pickle_dir + 'ExternalIdentifier'):
         ei_df.to_pickle(pickle_dir + 'ExternalIdentifier')
     return ei_df
 

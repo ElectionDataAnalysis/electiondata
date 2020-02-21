@@ -16,7 +16,6 @@ except:
 
 class AnomalyDataFrame(object):
     def worst_bar_for_selected_contests(self,anomaly_min=0,contest_type='Candidate'):
-        # TODO revise for AnomalyDataFrame
         dont_stop = input('Create worst bar charts for a single contest (y/n)?\n')
 
         while dont_stop == 'y':
@@ -107,7 +106,7 @@ class AnomalyDataFrame(object):
             else:
                 print('No anomalies found for contest ' + contest_name)
 
-class Election(object): # TODO check that object is necessary (apparently for pickling)
+class Election(object):
     def pull_rollup_from_db_by_types(self, roll_up_to_ru_type, atomic_ru_type='precinct', contest_name_list=None,db_paramfile='../local_data/database.ini'):
 
         con, meta = dbr.sql_alchemy_connect(schema='cdf',paramfile=db_paramfile,db_name=self.state.short_name)
@@ -205,10 +204,6 @@ class Election(object): # TODO check that object is necessary (apparently for pi
         self.OtherElectionType=eldf.iloc[0]['OtherElectionType']
 
         self.pickle_dir=state.path_to_state_dir + 'pickles/' + short_name
-        #self.rollup_dframe=None # will be obtained when analysis is done
-        #self.anomaly_dframe=None # will be obtained when analysis is done
-        # TODO rollups and anomalies depend on atomic and roll_up_to ReportingTypes
-        # TODO put roll_up_to_ReportingUnitType def and atomic_ReportingUnitType in appropriate place (where?)
 
 class ContestRollup:
     """Holds roll-up of one or more contests (from same election)"""
@@ -309,7 +304,7 @@ def pivot(dataframe_by_name, col_field='Selection', filter=[],mode='raw'):
     label_columns.remove(col_field)
     cf = af.pivot_table(index=label_columns, columns=[col_field], values='Count', aggfunc=np.sum)
     if mode == 'pct':
-        if 'total' not in cf.columns:  # TODO understand why this was necessary and whether it's OK
+        if 'total' not in cf.columns:
             cf['total'] = cf.sum(axis=1)
         cf = cf[cf.total != 0]
         cf = cf.div(cf["total"], axis=0)
@@ -337,7 +332,7 @@ def euclidean_zscore(li):
     else:
         return list(stats.zscore(distance_list))
 
-def diff_anomaly_score(left_dframe, right_dframe, left_value_column ='sum', right_value_column='sum', on ='ReportingUnit', title=''):
+def diff_anomaly_score(left_dframe, right_dframe, left_value_column ='sum', right_value_column='sum', on ='ReportingUnit', anomaly_score_min=2):
     """given two named dataframes indexed by ReportingUnit, find any anomalies
     in the margin between the specified columns (default is 'sum')
     among the set of ReportingUnits of given type.
@@ -354,7 +349,7 @@ def diff_anomaly_score(left_dframe, right_dframe, left_value_column ='sum', righ
         #%% find diff outlier
         zscores = stats.zscore(c['diff'])
         anomaly_score = max(zscores)
-        if anomaly_score > 2:   # TODO remove hard-coding of 2
+        if anomaly_score > anomaly_score_min:
             print('Anomaly found')
             # ('Anomaly found comparing:\n\cdf_table'+left_dframe+','+left_value_column+'\n\cdf_table'+right_dframe+','+right_value_column)
         return anomaly_score
@@ -372,7 +367,7 @@ def numframe_to_zscore(pframe,tolerance = 0.05):
         max_frame= frame[frame['ezs'] > max_ezs-abs(max_ezs)*tolerance] # empty if max_ezs==0
         look_at_list = list(max_frame.index.values)
         score_list = list(frame['ezs'])
-        # TODO check that all rows are numerical vectors, with all other info in the index
+        # TODO assert that all rows are numerical vectors, with all other info in the index
         return score_list,max_ezs, look_at_list
 
 def choose_by_name(name_list,default=0):
@@ -409,37 +404,6 @@ def anomaly_list(contest_name,c,aframe_columnlist=['ContestName','column_field',
                                max_z['raw'],look_at['raw'],max_z['pct'],look_at['pct']],index=aframe_columnlist))
 
     return anomaly_list
-
-def get_anomaly_scores(session,e,atomic_ru_type=None,roll_up_to_ru_type=None):
-    """
-    Finds anomaly scores for each contest in the election e,
-    rolling up from 'atomic' reporting units to 'roll_up_to' reporting units
-    """
-    find_anomalies = input('Find anomalies for '+ e.name + ' (y/n)?\n')
-    if find_anomalies == 'y':
-        default = '../local_data/database.ini'
-        paramfile = input('Enter path to database parameter file (default is ' + default + ')\n') or default
-
-        if not atomic_ru_type:
-            default = 'precinct'
-            atomic_ru_type = input(
-                'Enter the \'atomic\' Reporting Unit Type on which you wish to base your rolled-up counts (default is ' + default + ')\n') or default
-
-        if not roll_up_to_ru_type:
-            default = 'county'
-            roll_up_to_ru_type = input(
-                'Enter the (larger) Reporting Unit Type whose counts you want to analyze (default is ' + default + ')\n') or default
-
-        # TODO what's the purpose of this?
-        pickle_dir = e.state.path_to_state_dir+'pickles'+ e.short_name + '/'
-        pathlib.path.mkdir(pickle_dir,parents=True,exist_ok=True)
-
-        e.anomaly_scores(session,meta)
-
-        print('Anomaly scores calculated')
-        return e
-    else:
-        return None
 
 if __name__ == '__main__':
 
