@@ -27,7 +27,7 @@ if __name__ == '__main__':
     # TODO error handling: what if db already exists?
     default = 'NC'
     abbr = input(
-        'Enter short name (only alphanumeric and underscore, no spaces) for your state/district/territory (default is ' + default + ')\n'
+        'Enter short name for your state/district/territory (only alphanumeric and underscore, no spaces, default is ' + default + ')\n'
     ) or default
     print('Creating instance of State for '+abbr)
     s = sf.State(abbr,'../local_data/')
@@ -111,6 +111,11 @@ if __name__ == '__main__':
             raw_data_dframe = pd.read_csv(s.path_to_state_dir + 'data/' +election_name+'/'+munger_name+'/'+ datafile,sep=delimiter)
             print('Loading data into cdf schema from file: '+datafile)
             mr.raw_dframe_to_cdf(session,raw_data_dframe,s, mu,'cdf','context',e)
+
+    get_top_results = input('Get top-level results (y/n)?\n')
+    if get_top_results == 'y':
+        top=e.top_results()
+        print (top)
 
     need_to_analyze = input('Analyze (y/n)?\n')
     if need_to_analyze == 'y':

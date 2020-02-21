@@ -146,6 +146,7 @@ def fill_externalIdentifier_table(session,schema,context_schema,id_other_id_type
     if os.path.isfile(pickle_dir + 'ExternalIdentifier'):
         print('Pulling ExternalIdentifier table from pickle in ' + pickle_dir)
         ei_df = pd.read_pickle(pickle_dir + 'ExternalIdentifier')
+        ei_df.to_sql('ExternalIdentifierContext',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
     else:
         print('Pulling ExternalIdentifier table from context folder')
         # TODO why does this step take so long?

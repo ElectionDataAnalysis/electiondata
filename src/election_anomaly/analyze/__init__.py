@@ -171,6 +171,11 @@ class Election(object):
             con.dispose()
         return rollup_dframe
 
+    def top_results(self):
+        top_rollup=self.pull_rollup_from_db_by_types('state')
+        top_rollup=top_rollup.drop(['Contest_Id','ReportingUnit_Id','Selection_Id','CountItemType_Id','contest_type'],axis=1)
+        return top_rollup.groupby(['Contest','Selection']).sum()
+
     def __init__(self, session,state,short_name):
         assert isinstance(state,sf.State)
         self.short_name=short_name
