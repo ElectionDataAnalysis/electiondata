@@ -93,24 +93,18 @@ class AnomalyDataFrame(object):
         assert isinstance(rollup,ContestRollup),'One argument must be an instance of the Election class'
         self.contestrollup=rollup  # the contest rollup we're analyzing
 
+        aframe_columnlist=['ContestName','column_field','filter_field','filter_value','anomaly_algorithm',
+                                     'anomaly_value_raw','raw_look_at','anomaly_value_pct','pct_look_at']
         self.dframe=pd.DataFrame(data=None,index=None,
-                            columns=['ContestName','column_field','filter_field','filter_value','anomaly_algorithm',
-                                     'anomaly_value_raw','anomaly_value_pct'])
+                            columns=aframe_columnlist)
         for contest_name in rollup.contest_name_list:
-            anomaly_list = []
             c = rollup.restrict_by_contest_name([contest_name])
-            print('Calculating anomalies for '+contest_name)
-
-            for column_field in ['ReportingUnit','CountItemType','Selection']:
-                temp_list = ['ReportingUnit','CountItemType','Selection']
-                temp_list.remove(column_field)
-                for filter_field in temp_list:
-                    for filter_value in c.dframe[filter_field].unique():
-                        z_score_totals, z_score_pcts = c.euclidean_z_score(column_field, [[filter_field,filter_value]])
-                        anomaly_list.append(pd.Series([contest_name,column_field,filter_field,filter_value,'euclidean z-score',
-                                             max(z_score_totals), max(z_score_pcts)],index=self.dframe.columns))
-            if anomaly_list:
-                self.dframe = self.dframe.append(anomaly_list) # less efficient to update anomaly_dframe contest-by-contest, but better for debug
+            try:
+                a_list = anomaly_list(contest_name,c,aframe_columnlist=aframe_columnlist)
+            except:
+                a_list=[]
+            if a_list:
+                self.dframe = self.dframe.append(a_list) # less efficient to update anomaly_dframe contest-by-contest, but better for debug
             else:
                 print('No anomalies found for contest ' + contest_name)
 
@@ -219,21 +213,35 @@ class Election(object): # TODO check that object is necessary (apparently for pi
 
 class ContestRollup:
     """Holds roll-up of one or more contests (from same election)"""
-    def pivot(self, col_field='Selection', filter=[],mode='raw'):
+
+
+    def pivot(self, col_field='Selection', filter=[],mode='raw',drop_column=[]):
         """
         gives a pivot of a contest roll-up
         where rows are filtered by the field-conditions in filter,
         columns are labeled by values of the col_field
         where rows are labeled by an index made up of all remaining fields.
         mode == 'raw' gives raw vote totals; mode == 'pct' give percentages
+        Any columns in the drop_column list are dropped before pivoting
         """
-        return pivot(self.dframe,col_field,filter,mode)
+        pivot_frame = pivot(self.dframe,col_field,filter,mode)
 
-    def euclidean_z_score(self,column_field,filter_field_value_pair_list):
+        for c in drop_column:
+            if c in pivot_frame.columns:
+                pivot_frame = pivot_frame.drop(c,axis=1)
+
+        return pivot_frame
+
+    def euclidean_z_score(self,column_field,filter_field_value_pair_list,mode_list=['raw','pct']):
+        """Returns two vectors of z-scores"""
         assert len(self.contest_name_list) == 1, 'ContestRollup does not have exactly one contest'
-        z_score_totals = pframe_to_zscore(self.pivot(col_field=column_field, filter=filter_field_value_pair_list))
-        z_score_pcts =  pframe_to_zscore(self.pivot(col_field=column_field, filter=filter_field_value_pair_list,mode = 'pct'))
-        return z_score_totals, z_score_pcts
+        z_score = {}
+        look_at = {}
+        max_z = {}
+        for mode in mode_list:
+
+            z_score[mode],max_z[mode],look_at[mode] =  numframe_to_zscore(self.pivot(col_field=column_field,filter=filter_field_value_pair_list,mode =mode,drop_column=['total']))
+        return max_z,look_at
 
     def restrict_by_contest_name(self,contest_name_list):
         # TODO should be more efficient, just filter self.dframe.
@@ -258,6 +266,7 @@ class ContestRollup:
         if not contest_name_list:
             contest_name_list = list(self.dframe['Contest'].unique())
         self.contest_name_list=contest_name_list
+        self.contest_name_list.sort()
 
 def plot_pivot(contestname,dataframe_by_name,col_field='Selection',filter=[],mode='raw'):
     title_string = contestname
@@ -289,6 +298,7 @@ def pivot(dataframe_by_name, col_field='Selection', filter=[],mode='raw'):
     columns are labeled by values of the col_field
     where rows are labeled by an index made up of all remaining fields.
     mode == 'raw' gives raw vote totals; mode == 'pct' give percentages
+    Any columns in the drop_column list are dropped before pivoting
     """
     assert mode == 'raw' or mode == 'pct', 'mode not recognized: '+mode
     af = dataframe_by_name.copy()
@@ -406,40 +416,21 @@ def diff_anomaly_score(left_dframe, right_dframe, left_value_column ='sum', righ
             # ('Anomaly found comparing:\n\cdf_table'+left_dframe+','+left_value_column+'\n\cdf_table'+right_dframe+','+right_value_column)
         return anomaly_score
 
-def pframe_to_zscore(pframe):
-    """ for a pivoted dataframe, calculate z-score """
+def numframe_to_zscore(pframe,tolerance = 0.05):
+    """ for a dataframe whose values are all numerical, calculate list of z-scores for the rows of the dataframe """
     if pframe.empty:
         print('Empty dataframe assigned score list of [0]')
         return [0]
     else:
+        frame=pframe.copy()
+        frame['vector'] = frame.apply(lambda x: x.tolist(),axis=1)
+        frame['ezs']=euclidean_zscore(frame['vector'].tolist())
+        max_ezs=frame['ezs'].max()
+        max_frame= frame[frame['ezs'] > max_ezs-abs(max_ezs)*tolerance] # empty if max_ezs==0
+        look_at_list = list(max_frame.index.values)
+        score_list = list(frame['ezs'])
         # TODO check that all rows are numerical vectors, with all other info in the index
-        row_vectors = [list(pframe.iloc[x, :]) for x in range(len(pframe))]   # TODO there's gotta be a better way to get the list of row vectors, no?
-        return euclidean_zscore(row_vectors)
-
-def choose_by_id(session,meta,cdf_schema,table,filter=[],default=0):
-    """
-    Gives the user a list of items and invites user to choose one by entering its Id.
-    `table` is the table of items; `filter` is a list of dictionaries,
-    each describing a filter to be applied, with keys "FilterTable", "FilterField", "FilterValue" and "ForeignIdField"
-    default is the default Id to be chosen if user enters nothing.
-    """
-    t_dframe = dbr.table_list(session,meta,cdf_schema,table)
-
-    for f in filter:
-        assert 'FilterTable' in f.keys() and 'FilterField' in f.keys() and 'FilterValue' in f.keys() and 'ForeignIdField' in f.keys(),'Each filter must have four keys: "FilterTable", "FilterField", "FilterValue" and "ForeignIdField"'
-        f_table = pd.read_sql_table(f['FilterTable'],session.bind,schema=cdf_schema)
-        t_dframe = t_dframe.merge(f_table,left_on='Id',right_on=f['ForeignIdField'],suffixes=['','_filter'])
-        t_dframe = t_dframe[t_dframe[f['FilterField']] == f['FilterValue']]
-    if t_dframe.shape[0] == 0:
-        raise Exception('No corresponding records in ' + table)
-
-    print('Available ' + table + 's:')
-    for index,row in t_dframe.iterrows():
-        print(row['Name'] + ' (Id is ' + str(row['Id']) + ')')
-
-    id = input('Enter Id of desired item \n\t(default is ' + str(default) + ')\n') or default
-    # TODO add error-checking on user input
-    return int(id)
+        return score_list,max_ezs, look_at_list
 
 def choose_by_name(name_list,default=0):
     """
@@ -456,52 +447,25 @@ def choose_by_name(name_list,default=0):
     default=0
     id = input('Enter Id of desired item \n\t(default is ' + str(default) + ')\n') or default
     # TODO add error-checking on user input
-    return name_list[id]
+    return name_list[int(id)]
 
-def get_election_id_type_name(session,meta,cdf_schema,default=0):
-    election_id = choose_by_id(session,meta,cdf_schema,'Election',filter=[],default=default)
+def anomaly_list(contest_name,c,aframe_columnlist=['ContestName','column_field','filter_field','filter_value','anomaly_algorithm',
+                                     'anomaly_value_raw','raw_look_at','anomaly_value_pct','pct_look_at']):
+    anomaly_list = []
+    print('Calculating anomalies for ' + contest_name)
 
-    e_df = pd.read_sql_table('Election',session.bind,schema=cdf_schema)
-    e_type_df = pd.read_sql_table('ElectionType',session.bind,schema=cdf_schema)
-    e_df = e_df.merge(e_type_df,left_on='ElectionType_Id',right_on='Id',suffixes=['_election','_type'])
+    for column_field in ['ReportingUnit','CountItemType','Selection']:
+        temp_list = ['ReportingUnit','CountItemType','Selection']
+        temp_list.remove(column_field)
+        for filter_field in temp_list:
+            for filter_value in c.dframe[filter_field].unique():
+                max_z,look_at = c.euclidean_z_score(column_field,[[filter_field,filter_value]],
+                                                    mode_list=['raw','pct'])
+                anomaly_list.append(
+                    pd.Series([contest_name,column_field,filter_field,filter_value,'euclidean z-score',
+                               max_z['raw'],look_at['raw'],max_z['pct'],look_at['pct']],index=aframe_columnlist))
 
-    election_type = e_df[e_df['Id_election'] == election_id].iloc[0]['Txt']
-    election_name = e_df[e_df['Id_election'] == election_id].iloc[0]['Name']
-    return election_id,election_type,election_name
-
-def get_anomaly_scores_OLD(session,meta,cdf_schema,election_id,election_name):
-    """
-    Creates an election object and finds anomaly scores for each contest in that election
-    """
-    find_anomalies = input('Find anomalies for '+ election_name+ ' (y/n)?\n')
-    if find_anomalies == 'y':
-        default = '../local_data/database.ini'
-        paramfile = input('Enter path to database parameter file (default is ' + default + ')\n') or default
-
-
-        election_short_name = 'election_'+str(election_id)
-
-        default = 'precinct'
-        atomic_ru_type = input(
-            'Enter the \'atomic\' Reporting Unit Type on which you wish to base your rolled-up counts (default is ' + default + ')\n') or default
-
-        default = 'county'
-        roll_up_to_ru_type = input(
-            'Enter the (larger) Reporting Unit Type whose counts you want to analyze (default is ' + default + ')\n') or default
-
-        default = '../local_data/pickles/' + election_short_name + '/'
-        pickle_dir = input(
-            'Enter the directory for storing pickled dataframes (default is ' + default + ')\nNB: if this directory doesn\'t exist, create it now before reponding!') or default
-        assert os.path.isdir(pickle_dir), 'Non-existent directory: ' + pickle_dir
-
-        e = create_election(session,meta,cdf_schema,election_id,roll_up_to_ru_type,
-                               atomic_ru_type,pickle_dir,paramfile)
-        e.anomaly_scores(session,meta)
-
-        print('Anomaly scores calculated')
-        return e
-    else:
-        return None
+    return anomaly_list
 
 def get_anomaly_scores(session,e,atomic_ru_type=None,roll_up_to_ru_type=None):
     """

@@ -24,37 +24,6 @@ try:
 except:
     import pickle
 
-
-def raw_data(session,meta,df):
-    """ Loads the raw data from the datafile df into the schema for the associated state
-    Schema for the state should already exist
-    """
-    s = df.state
-    t = s.schema_name + '.' + df.table_name   # name of table, including schema
-
-    #%% drop table in case it already exists
-    if t in meta.tables.keys():
-        meta.tables[t].drop()
-
-
-    # create table
-    col_list = [Column(field,typ,comment=comment) for [field, typ, comment] in df.column_metadata]
-    Table(df.table_name,meta,*col_list,schema=s.schema_name)
-    meta.create_all()
-
-    #%% correct any type errors in metafile (e.g., some values in file are longer than the metafile thinks possible) # TODO use raw sql query from dbr
-    ctx = MigrationContext.configure(eng)
-    op = Operations(ctx)
-    for d in df.type_correction_list:
-        r = dict(d)
-        del r['column']
-        op.alter_column(df.table_name,d['column'],schema=s.schema_name,**r)
-        print('\tCorrection to table definition necessary:\n\t\t'+df.table_name+';'+str(d))
-
-    # load raw data into tables
-    dbr.load_raw_data(session, meta,s.schema_name, df)
-    return
-
 # TODO will need routines to add new munger externalidentifiers to an existing cdf db; will need routines to add new reportingunits to an existing cdf db.
 if __name__ == '__main__':
     # initialize state and create database for it (if not already exists)
@@ -149,31 +118,47 @@ if __name__ == '__main__':
     need_to_analyze = input('Analyze (y/n)?\n')
     if need_to_analyze == 'y':
         electionrollup = an.ContestRollup(e,'county','precinct')
-        pickle_path = e.pickle_dir+'_anomalies_by_'+electionrollup.roll_up_to_ru_type+'_from_'+electionrollup.atomic_ru_type
-        if os.path.isfile(pickle_path):
-            print('Anomalies will not be calculated, but will be read from existing file:\n\t'+pickle_path)
-            with open(pickle_path,'rb') as f:
-                anomalies=pickle.load(f)
-        else:
-            anomalies = an.AnomalyDataFrame(electionrollup)
-            with open(pickle_path,'wb') as f:
-                pickle.dump(anomalies,f)
-            print('AnomalyDataFrame calculated, stored as pickle at '+pickle_path)
 
-        anomalies.worst_bar_for_selected_contests()
-        default = 3
-        n = input('Draw how many most-anomalous plots?\n') or default
-        try:
-            n = int(n)
-            anomalies.draw_most_anomalous(3,'pct')
-            anomalies.draw_most_anomalous(3,'raw')
+        just_one_contest = input('Get anomaly list for just one contest? (y/n)\n')
+        while just_one_contest == 'y':
+            for x in electionrollup.contest_name_list: print(x)
+            contest_name = input('Enter contest name\n')
+            try:
+                anomaly_list = an.anomaly_list(contest_name,electionrollup.restrict_by_contest_name([contest_name]))
+                a_dframe = pd.DataFrame(anomaly_list)
+                print(a_dframe)
+            except:
+                print('Error')
+            just_one_contest = input('Get anomaly list for another contest? (y/n)\n')
 
-        except:
-            print('ERROR (Input was not an integer?); skipping most-anomalous plots')
+        all_contests = input('Analyze all contests? (y/n)\n')
+        if all_contests == 'y':
 
-        draw_all = input('Plot worst bar chart for all contests? (y/n)?\n')
-        if draw_all == 'y':
-            e.worst_bar_for_each_contest(session,meta_generic)
+            pickle_path = e.pickle_dir+'_anomalies_by_'+electionrollup.roll_up_to_ru_type+'_from_'+electionrollup.atomic_ru_type
+            if os.path.isfile(pickle_path):
+                print('Anomalies will not be calculated, but will be read from existing file:\n\t'+pickle_path)
+                with open(pickle_path,'rb') as f:
+                    anomalies=pickle.load(f)
+            else:
+                anomalies = an.AnomalyDataFrame(electionrollup)
+                with open(pickle_path,'wb') as f:
+                    pickle.dump(anomalies,f)
+                print('AnomalyDataFrame calculated, stored as pickle at '+pickle_path)
+
+            anomalies.worst_bar_for_selected_contests()
+            default = 3
+            n = input('Draw how many most-anomalous plots?\n') or default
+            try:
+                n = int(n)
+                anomalies.draw_most_anomalous(3,'pct')
+                anomalies.draw_most_anomalous(3,'raw')
+
+            except:
+                print('ERROR (Input was not an integer?); skipping most-anomalous plots')
+
+            draw_all = input('Plot worst bar chart for all contests? (y/n)?\n')
+            if draw_all == 'y':
+                e.worst_bar_for_each_contest(session,meta_generic)
 
 
     eng.dispose()

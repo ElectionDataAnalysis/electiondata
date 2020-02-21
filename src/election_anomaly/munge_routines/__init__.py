@@ -251,16 +251,18 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
         # load candidate counts
         # create dframe of Candidate Contest vote counts (with join info) for ballot measures
         # TODO list of cols to be dropped is munger-dependent
+        # TODO check that every merge for row creates suffix as appropriate so no coincidently named columns are dropped
         cc_vote_counts = row.drop(set(['County','Election Date','Precinct','Contest Group ID','Contest Type','Contest Name','Choice','Choice Party','Vote For','Real Precinct','ReportingUnit_external','ReportingUnit','index','ExternalIdentifierType','ReportingUnitType_Id','OtherReportingUnitType','CountItemStatus_Id','OtherCountItemStatus','Name', 'ElectionDistrict_Id']).intersection(row.columns.to_list()),axis=1)
         cc_vote_counts.rename(columns=vc_col_d,inplace=True)
         cc_vote_counts.rename(columns={'CandidateContest_Id':'Contest_Id','CandidateSelection_Id':'Selection_Id'},inplace=True)
         cc_vote_counts=cc_vote_counts.melt(id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],value_vars=['election-day', 'early', 'absentee-mail', 'provisional', 'total'],var_name='CountItemType',value_name='Count')
-        cc_vote_counts = cc_vote_counts.merge(cdf_d['CountItemType'],left_on='CountItemType',right_on='Txt')
+        cc_vote_counts = cc_vote_counts.merge(cdf_d['CountItemType'],left_on='CountItemType',right_on='Txt')    # TODO loses rows of 'other' types
         cc_vote_counts.rename(columns={'Id':'CountItemType_Id'},inplace=True)
         vote_count_dframe_list.append(cc_vote_counts)
 
     vote_counts = pd.concat(vote_count_dframe_list)
-
+    # TODO put OhterCountItemType into vote_counts
+    vote_counts = vote_counts.drop(['Txt','CountItemType'],axis=1)
     # To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
     # add SelectionElectionContestJoin columns to VoteCount
     q = 'ALTER TABLE {0}."VoteCount" ADD COLUMN "Election_Id" INTEGER, ADD COLUMN "Contest_Id" INTEGER,  ADD COLUMN "Selection_Id" INTEGER'
@@ -269,7 +271,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
     dbr.raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
     print('Upload to VoteCount')
     start = time.time()
-    vote_counts_fat = dbr.dframe_to_sql(vote_counts,session,cdf_schema,'VoteCount')
+    vote_counts_fat = dbr.dframe_to_sql(vote_counts,session,cdf_schema,'VoteCount',raw_to_votecount=True)
     vote_counts_fat.rename(columns={'Id':'VoteCount_Id'},inplace=True)
     session.commit()
     end = time.time()

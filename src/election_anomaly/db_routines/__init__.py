@@ -303,7 +303,7 @@ def create_schema(session,name,delete_existing=False):
     session.flush()
     return new_schema_created
 
-def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True):
+def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_votecount=False):
     """
     Given a dframe and an existing cdf db table name, clean the dframe
     (i.e., drop any columns that are not in the table, add null columns to match any missing columns)
@@ -313,6 +313,15 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True):
     # pull copy of existing table
 
     target = pd.read_sql_table(table,session.bind,schema=schema,index_col=index_col)
+    # VoteCount table gets added columns during raw data upload, needs special treatment
+    if raw_to_votecount:
+        # TODO join with SECVCJ, should this be right join? What if a VC_Id has multiple entries in secvcj?
+        secvcj = pd.read_sql_table('SelectionElectionContestVoteCountJoin',session.bind,schema=schema,index_col=None)
+        target0=target.copy() # TODO diagnostic
+        target1=target.drop(['Election_Id','Contest_Id','Selection_Id'],axis=1)
+        target2=target1.merge(secvcj,left_on='Id',right_on='VoteCount_Id')
+        target=target2.drop(['Id','VoteCount_Id'],axis=1)
+        # target.rename(columns={'VoteCount_Id':'Id'},inplace=True)
     df_to_db = dframe.copy()
 
     # remove columns that don't exist in target table
@@ -332,6 +341,9 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True):
 
     appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
     up_to_date_dframe = pd.read_sql_table(table,session.bind,schema=schema)
+    if raw_to_votecount:
+        # need to drop rows that were read originally from target -- these will have null Election_Id
+        up_to_date_dframe=up_to_date_dframe[up_to_date_dframe['Election_Id'].notnull()]
     if flush:
         session.flush()
     return up_to_date_dframe
