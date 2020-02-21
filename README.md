@@ -1,10 +1,10 @@
-# results_analysis
+# election_anomaly
 _Documentation under construction_
 
-#Funding
+# Funding
 Funding provided October 2019 - September 2020 by the National Science Foundation, Award #1936809, "EAGER: Data Science for Election Verification" 
 
-#License
+# License
 See [LICENSE.md](./LICENSE.md)
 
 #General note
