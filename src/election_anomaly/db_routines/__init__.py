@@ -17,11 +17,9 @@ def create_database(con,cur,db_name):
         q = "DROP DATABASE IF EXISTS {0}"
         sql_ids = [db_name]
         out1 = query(q,sql_ids,[],con,cur)
-        print(out1)
 
         q = "CREATE DATABASE {0}"
         out2 = query(q,sql_ids,[],con,cur)
-        print(out2)  # TODO diagnostic
     return out1,out2
 
 def create_raw_schema(con,cur,schema):
@@ -144,11 +142,9 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     if raw_to_votecount:
         # TODO join with SECVCJ, should this be right join? What if a VC_Id has multiple entries in secvcj?
         secvcj = pd.read_sql_table('SelectionElectionContestVoteCountJoin',session.bind,schema=schema,index_col=None)
-        target0=target.copy() # TODO diagnostic
-        target1=target.drop(['Election_Id','Contest_Id','Selection_Id'],axis=1)
-        target2=target1.merge(secvcj,left_on='Id',right_on='VoteCount_Id')
-        target=target2.drop(['Id','VoteCount_Id'],axis=1)
-        # target.rename(columns={'VoteCount_Id':'Id'},inplace=True)
+        target=target.drop(['Election_Id','Contest_Id','Selection_Id'],axis=1)
+        target=target.merge(secvcj,left_on='Id',right_on='VoteCount_Id')
+        target=target.drop(['Id','VoteCount_Id'],axis=1)
     df_to_db = dframe.copy()
 
     # remove columns that don't exist in target table
