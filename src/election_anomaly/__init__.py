@@ -14,9 +14,6 @@ import context as ct
 import analyze as an
 
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import Column, Table,MetaData
-from alembic.migration import MigrationContext
-from alembic.operations import Operations
 import pandas as pd
 
 try:

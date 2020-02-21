@@ -221,58 +221,6 @@ def fill_enum_table(schema,table,filepath,con,cur):
         query(q,sql_ids,strs,con,cur)
     return
 
-def create_table(df):   # TODO *** modularize and use df.column_metadata
-## clean the metadata file
-    """ df is a Datafile instance. Create a table that can hold the raw data in the datafile.
-    """
-    create_query = 'CREATE TABLE {}.{} ('
-    sql_ids_create = [df.state.schema_name,df.table_name]
-    sql_ids_comment = []
-    strs_create = []
-    strs_comment = []
-    comments = []
-    var_defs = []
-    for [field,type,comment] in df.column_metadata:
-        if len(comment):
-            comments.append('comment on column {}.{}.{} is %s;')
-            sql_ids_comment += [df.state.schema_name,df.table_name,field]
-            strs_comment.append(comment)
-    ## check that type var is clean before inserting it
-        p = re.compile('^[\w\d()]+$')       # type should contain only alphanumerics and parentheses
-        if p.match(type):
-            var_defs.append('{} '+ type)    # not safest way to pass the type, but not sure how else to do it ***
-            sql_ids_create.append(field)
-        else:
-            print('Corrupted type: '+type)
-            var_defs.append('corrupted type')
-    create_query = create_query + ','.join(var_defs) + ');' +  ' '.join(comments)
-
-    return create_query, strs_create + strs_comment, sql_ids_create + sql_ids_comment
-        
-def load_raw_data(session, meta, schema,df):
-# write raw data to db
-    ext = df.file_name.split('.')[-1]    # extension, determines format
-    if ext == 'txt':
-        delimiter = '\t'
-    elif ext == 'csv':
-        delimiter = ','
-    clean_file=cl.remove_null_bytes(df.state.path_to_state_dir+'data/'+df.file_name,'../local_data/tmp/')
-
-    raw_data = pd.read_csv(clean_file, sep=delimiter,  converters={0: lambda s: str(s)})
-
-    raw_data.to_sql(schema + '.' + df.table_name,con=session.bind,if_exists='append',index=False)
-
-    session.flush()
-    return
-
-def clean_meta_file(infile,outdir,s):       ## update or remove ***
-    ''' create in outdir a metadata file based on infile, with all unnecessaries stripped, for the given state'''
-    if s.abbreviation == 'NC':
-        return "hello"  # need to election_anomaly this ***
-    else:
-        return "clean_meta_file: error, state not recognized"
-        sys.exit()
-
 def create_schema(session,name,delete_existing=False):
     eng = session.bind
     if eng.dialect.has_schema(eng, name):
