@@ -318,61 +318,6 @@ def pivot(dataframe_by_name, col_field='Selection', filter=[],mode='raw'):
         cf=cf.drop(labels=['total'],axis=1)
     return cf
 
-def create_contest_rollup_from_election_rollup(session,meta,e,Contest_Id,contest_type,ContestName):   # TODO get rid of con/meta/schema here by making names part of the Election def?
-    """
-    contest_type is 'BallotMeasure' or 'Candidate'
-    """
-    assert isinstance(e,Election),'election must be an instance of the Election class'
-    if not isinstance(Contest_Id,int):
-        Contest_Id = int(Contest_Id)
-
-    dataframe_by_id = e.rollup_dframe[e.rollup_dframe.Contest_Id == Contest_Id].drop('Contest_Id',axis=1)
-    dataframe_by_name = id_values_to_name(session.bind, meta, 'cdf', dataframe_by_id)
-    by_ReportingUnitType = e.roll_up_to_ReportingUnitType
-    by_ReportingUnitType_Id = e.roll_up_to_ReportingUnitType_Id
-    return ContestRollup(dataframe_by_id, dataframe_by_name, 'cdf', e.Election_Id, Contest_Id,
-                         by_ReportingUnitType_Id,e.name,  ContestName, by_ReportingUnitType,
-                         contest_type, None)
-
-def id_values_to_name(con,meta,schema,df):
-    """Input is a df is a dataframe with some columns that are labeled with db id fields, e.g., 'Selection_Id'
-    Return a df where id values in all these columns have been replaced by the corresponding name
-    (per the given db schema at con)
-    """ # TODO check all table names handled correctly
-    cf = df.copy()
-    for col in cf.columns:
-        if col[-3:] == '_Id':
-            table_name = col[:-3]
-            id_list = list(eval('cf.'+col+'.unique()'))
-            if table_name == 'Selection': # ballot question or candidate contest
-                sel_cand_id_d = dbr.read_some_value_from_id(con,
-                                meta, schema,'CandidateSelection','Candidate_Id',id_list)
-                cand_id_list = list(sel_cand_id_d.values())
-                cand_id_to_bname_d = dbr.read_some_value_from_id(con,
-                                meta, schema,'Candidate','BallotName',cand_id_list)
-                sel_to_bname_d = {k:cand_id_to_bname_d.get(sel_cand_id_d.get(k)) for k in sel_cand_id_d.keys() } # TODO error handling
-                id_to_name_d = {**sel_to_bname_d,
-                                **dbr.read_some_value_from_id(con,
-                                meta, schema, 'BallotMeasureSelection','Selection', id_list)
-                                }
-            elif table_name == 'Contest': # ballot question or candidate contest
-                cand_contest_id_to_name_d = dbr.read_some_value_from_id(con,meta,schema,'CandidateContest','Name',id_list)
-                ballot_measure_contest_id_to_name_d = dbr.read_some_value_from_id(con,meta,schema,'BallotMeasureContest','Name',id_list)
-                id_to_name_d = {**cand_contest_id_to_name_d,**ballot_measure_contest_id_to_name_d}
-            elif table_name == 'ReportingUnit': # use only last part of ReportingUnit.Name
-                id_to_long_name_d = dbr.read_some_value_from_id(con,
-                                            meta, schema, table_name, 'Name', id_list)
-                id_to_name_d = { k: v.split(';')[-1] for k,v in id_to_long_name_d.items()}
-            elif table_name[-4:] == 'Type':
-                id_to_name_d = dbr.read_some_value_from_id(con,
-                                            meta, schema, table_name, 'Txt', id_list)
-            else:
-                id_to_name_d = dbr.read_some_value_from_id(con,
-                                            meta, schema, table_name, 'Name', id_list)
-            cf[table_name] = cf[col].map(id_to_name_d)
-            cf=cf.drop(col,axis=1)
-    return cf
-
 def pct_dframe(df):
     """ df is a pandas dataframe """
     assert isinstance(df,pd.DataFrame), 'Argument must be dataframe'
