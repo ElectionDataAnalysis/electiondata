@@ -6,6 +6,7 @@ import db_routines as dbr
 import pandas as pd
 import time
 import analyze as an
+import re
 
 def id_from_select_only_PANDAS(dframe,value_d, mode='no_dupes',dframe_Id_is_index=True):
     """Returns the Id of the record in table with values given in the dictionary value_d.
@@ -106,7 +107,20 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
     munge = pd.read_csv(fpath + 'cdf_tables.txt',sep='\t',index_col='CDFTable').to_dict()['ExternalIdentifier']
 
     # add columns for ids needed later
-    row['Election_Id'] = [election_id] * row.shape[0]
+    row.loc[:,'Election_Id'] = election_id
+    p = re.compile('(?P<text>[^<>]*)<(?P<field>[^<>]+)>')   # pattern to find text,field pairs
+    q = re.compile('(?<=>)[^<]*$')                          # pattern to find text following last pair
+    text_field_list = re.findall(p,munge['ReportingUnit'])
+    last_text = re.findall(q,munge['ReportingUnit'])
+    #text_list = [x[0] for x in text_field_list] + last_text
+    #field_list = [row[x[1]] for x in text_field_list]
+    # TODO change other  munge-eval lines to this
+    row.loc[:,'ReportingUnit_external'] = last_text[0]
+    text_field_list.reverse()
+    for t,f in text_field_list:
+        row.loc[:,'ReportingUnit_external'] = t+row.loc[:,f]+row.loc[:,"ReportingUnit_external"]
+
+
     row['ReportingUnit_external'] = eval(munge['ReportingUnit'])
 
     cdf_d['ReportingUnit'] = pd.read_sql_table('ReportingUnit',session.bind,cdf_schema)
