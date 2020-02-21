@@ -1,20 +1,14 @@
 #!/usr/bin/python3
 # db_routines/__init__.py
 
-import sys
-import re
 import psycopg2
 import sqlalchemy
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
 import sqlalchemy as db
-from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey
 from sqlalchemy.engine import reflection
-from sqlalchemy.orm import sessionmaker
 from configparser import ConfigParser
 import pandas as pd
-
-import clean as cl
 
 def create_database(con,cur,db_name):
     sure = input('If the db exists, it will be deleted and data will be lost. Are you absolutely sure (y/n)?\n')
@@ -182,16 +176,6 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     return up_to_date_dframe
 
 if __name__ == '__main__':
-    import states_and_files as sf
-    import db_routines as dbr
-
-    # %% Initiate connection
-    con = establish_connection(paramfile='../../local_data/database.ini', db_name='postgres')
-
-    schema='cdf_nc_test2'
-    table = 'VoteCount'
-    columns = ['Selection_Id','Election_Id']
-    add_int_columns(con, schema, table, columns)
 
     print('Done')
 

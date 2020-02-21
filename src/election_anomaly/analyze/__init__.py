@@ -7,7 +7,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import db_routines as dbr
-import os
 import pathlib
 import states_and_files as sf
 try:
@@ -213,7 +212,6 @@ class Election(object): # TODO check that object is necessary (apparently for pi
 
 class ContestRollup:
     """Holds roll-up of one or more contests (from same election)"""
-
 
     def pivot(self, col_field='Selection', filter=[],mode='raw',drop_column=[]):
         """
@@ -444,12 +442,6 @@ def get_anomaly_scores(session,e,atomic_ru_type=None,roll_up_to_ru_type=None):
         return None
 
 if __name__ == '__main__':
-    con, meta = dbr.sql_alchemy_connect(schema, paramfile='../../local_data/database.ini')
-
-
-    if con:
-        con.dispose()
-
 
     print('Done')
 
