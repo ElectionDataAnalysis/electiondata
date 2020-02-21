@@ -1,8 +1,8 @@
 CDFTable	ExternalIdentifier	InternalFieldName	Enumerations	OtherFields
-Office	row["Contest Name"]	Name	{}	{}
+Office	<Contest Name>	Name	{}	{}
 ReportingUnit	<County>;<Precinct>	Name	{'ReportingUnitType': 'precinct'}	{}
-Party	row["Choice Party"]	Name	{}	{}
-Candidate	row["Choice"]	BallotName	{}	{'Party_Id': 'ids_d["Party_Id"]'}
-CandidateContest	row["Contest Name"]	Name	{}	{'VotesAllowed':'row["Vote For"]','Office_Id':'ids_d["Office_Id"]'}
-BallotMeasureContest	row["Contest Name"]	Name	{}	{'ElectionDistrict_Id':'ids_d["state"]'}        
-BallotMeasureSelection	row["Choice"]	Selection	{}	{}
+Party	<Choice Party>	Name	{}	{}
+Candidate	<Choice>	BallotName	{}	{'Party_Id': 'ids_d["Party_Id"]'}
+CandidateContest	<Contest Name>	Name	{}	{'VotesAllowed':'row["Vote For"]','Office_Id':'ids_d["Office_Id"]'}
+BallotMeasureContest	<Contest Name>	Name	{}	{'ElectionDistrict_Id':'ids_d["state"]'}
+BallotMeasureSelection	<Choice>	Selection	{}	{}

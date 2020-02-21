@@ -1,9 +1,5 @@
 #!usr/bin/python3
-import re
-import sys
 import os.path
-import clean as cl
-import pandas as pd
 import db_routines as dbr
 class State:
     def create_db_and_schemas(self):

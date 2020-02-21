@@ -110,7 +110,7 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
             # rename columns as necesssary
             cc_data.rename(columns={'Id_ru':'ElectionDistrict_Id','Id':'Office_Id'},inplace=True)
             # insert values for 'PrimaryParty_Id' column
-            cc_data['PrimaryParty_Id'] = [None]*cc_data.shape[0]
+            cc_data.loc[:,'PrimaryParty_Id'] = None
             cc_d_gen = cc_data.copy()
             for party_id in cdf_d['Party']['Id'].to_list():
                 pcc = cc_d_gen[cc_d_gen['IsPartisan']]    # non-partisan contests don't have party primaries, so omit them.
@@ -179,7 +179,7 @@ def fill_externalIdentifier_table(session,schema,context_schema,id_other_id_type
             # join info for listed
             listed = listed.merge(cdf['IdentifierType'],left_on='ExternalIdentifierType',right_on='Txt')
             listed.rename(columns={'Id':'IdentifierType_Id','ExternalIdentifierValue':'Value'},inplace=True)
-            listed['OtherIdentifierType'] = [None]*listed.shape[0]
+            listed.loc[:,'OtherIdentifierType'] = None
 
             # join info for other
             other.loc[:,'IdentifierType_Id'] = id_other_id_type

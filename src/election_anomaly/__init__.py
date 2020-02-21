@@ -62,7 +62,7 @@ if __name__ == '__main__':
         # %% fill enumeration tables
         print('\tFilling enumeration tables')
         CDF.fill_cdf_enum_tables(session,meta_cdf,'cdf',enumeration_tables)
-        print('Loading state context info into CDF schema') # *** takes a long time; why?
+        print('Loading state context info into CDF schema')
         ct.context_schema_to_cdf(session,s,enumeration_tables)
         session.commit()
 
