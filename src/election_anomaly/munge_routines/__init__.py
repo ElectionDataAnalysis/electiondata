@@ -86,20 +86,23 @@ def format_type_for_insert_PANDAS(dframe,txt,id_type_other_id,t_dframe_Id_is_ind
 def add_munged_column(row_df,munge_dictionary,munge_key,new_col_name):
     """Alters dataframe <row_df> (in place), adding or redefining <new_col_name>
     via the string corresponding to <munge_key>, per <munge_dictionary>"""
-    p = re.compile('(?P<text>[^<>]*)<(?P<field>[^<>]+)>')   # pattern to find text,field pairs
-    q = re.compile('(?<=>)[^<]*$')                          # pattern to find text following last pair
-    text_field_list = re.findall(p,munge_dictionary[munge_key])
-    last_text = re.findall(q,munge_dictionary[munge_key])
-
-    if last_text:
-        row_df.loc[:,new_col_name] = last_text[0]
+    if row_df.empty:
+        return
     else:
-        row_df.loc[:,new_col_name] = ''
+        p = re.compile('(?P<text>[^<>]*)<(?P<field>[^<>]+)>')   # pattern to find text,field pairs
+        q = re.compile('(?<=>)[^<]*$')                          # pattern to find text following last pair
+        text_field_list = re.findall(p,munge_dictionary[munge_key])
+        last_text = re.findall(q,munge_dictionary[munge_key])
 
-    text_field_list.reverse()
-    for t,f in text_field_list:
-        row_df.loc[:,new_col_name] = t+row_df.loc[:,f]+row_df.loc[:,new_col_name]
-    return
+        if last_text:
+            row_df.loc[:,new_col_name] = last_text[0]
+        else:
+            row_df.loc[:,new_col_name] = ''
+
+        text_field_list.reverse()
+        for t,f in text_field_list:
+            row_df.loc[:,new_col_name] = t+row_df.loc[:,f]+row_df.loc[:,new_col_name]
+        return
 
 def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,election_type,state_id):
     """
@@ -124,12 +127,6 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
     vc_col_d = pd.read_csv(fpath + 'count_columns.txt',sep='\t',index_col='RawName').to_dict()['CountItemType']
     munge = pd.read_csv(fpath + 'cdf_tables.txt',sep='\t',index_col='CDFTable').to_dict()['ExternalIdentifier']
 
-    # to make sure all added columns get labeled well, make sure 'Name' and 'Id' are existing columns
-    if 'Name' not in row.columns:
-        row.loc[:,'Name'] = None
-    if 'Id' not in row.columns:
-        row.loc[:,'Id'] = None
-
     # add columns corresponding to cdf fields
     row.loc[:,'Election_Id'] = election_id
     # TODO what about Office? In NC primary, office comes from a substring of Contest Name. How to treat substrings?
@@ -139,17 +136,23 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
         add_munged_column(row,munge,c,c)
     # NOTE: this will put, e.g., candidate names into the BallotMeasureSelection column; beware!
     # some columns will need to be interpreted via  ExternalIdentifier tables
+
     for c in ['CandidateContest','Candidate','Party','ReportingUnit']:
         add_munged_column(row,munge,c,c+'_external')
         row = row.merge(context_ei[context_ei['Table']==c],left_on= c+'_external',right_on='ExternalIdentifierValue',suffixes=['','_'+c]).drop(['ExternalIdentifierValue','Table'],axis=1)
-        row.rename(columns={'Name':'ReportingUnit'},inplace=True)
+        row.rename(columns={'Name':c},inplace=True)
+        row = row.merge(cdf_d[c],left_on=c,right_on='Name',
+                        suffixes=['','_'+c]).drop('Name',axis=1)
+        row.rename(columns={'Id':c+'_Id'},inplace=True)
 
-    row = row.merge(context_ei[context_ei['Table']=='ReportingUnit'],left_on='ReportingUnit_external',right_on='ExternalIdentifierValue',suffixes=['','_ReportingUnit']).drop(['ExternalIdentifierValue','Table'],axis=1)
-    row.rename(columns={'Name':'ReportingUnit'},inplace=True)
-    row = row.merge(cdf_d['ReportingUnit'],left_on='ReportingUnit',right_on='Name',suffixes=['','_ReportingUnit']).drop('Name',axis=1)
-    row.rename(columns={'Id':'ReportingUnit_Id'},inplace=True)
+    # to make sure all added columns get labeled well, make sure 'Name' and 'Id' are existing columns
+    if 'Name' not in row.columns:
+        row.loc[:,'Name'] = None
+    if 'Id' not in row.columns:
+        row.loc[:,'Id'] = None
 
     # split row into a df for ballot measures and a df for contests
+    # TODO make this split *before* merging EIs for contests
     bm_selections = cdf_d['BallotMeasureSelection']['Selection'].to_list()
 
     bm_row = row[row['BallotMeasureSelection'].isin(bm_selections)]
@@ -180,11 +183,6 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
         bm_row.rename(columns={'Id_Contest':'Contest_Id'},inplace=True)
 
         # Load BallotMeasureContestSelectionJoin table
-        # to make sure all added columns get labeled well, make sure 'Name' and 'Id' are existing columns
-        if 'Name' not in bm_df.columns:
-            bm_df.loc[:'Name'] = None
-        if 'Id' not in bm_df.columns:
-            bm_df.loc[:,'Id'] = None
 
         bm_df = bm_df.merge(cdf_d['BallotMeasureSelection'],left_on='Selection',right_on='Selection',suffixes=['','_Selection'])
         bm_df = bm_df.merge(cdf_d['BallotMeasureContest'],left_on='Name',right_on='Name',suffixes=['','_Contest'])
