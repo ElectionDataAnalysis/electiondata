@@ -175,7 +175,13 @@ class Election(object):
         top_rollup=self.pull_rollup_from_db_by_types('state')
         top_rollup=top_rollup[top_rollup['CountItemType']!='total']
         top_rollup=top_rollup.drop(['Contest_Id','ReportingUnit_Id','Selection_Id','CountItemType_Id','contest_type'],axis=1)
-        return top_rollup.groupby(['Contest','Selection']).sum()
+        output = top_rollup.groupby(['Contest','Selection']).sum()
+        outpath=self.state.path_to_state_dir+'output/'
+        if os.path.isdir(outpath):
+            output.to_csv(outpath+self.short_name+'_top_results.txt',sep='\t')
+        else:
+            print('Cannot print; output directory does not exist: '+outpath)
+        return output
 
     def __init__(self, session,state,short_name):
         assert isinstance(state,sf.State)

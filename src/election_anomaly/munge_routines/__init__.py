@@ -90,8 +90,12 @@ def add_munged_column(row_df,munge_dictionary,munge_key,new_col_name):
     q = re.compile('(?<=>)[^<]*$')                          # pattern to find text following last pair
     text_field_list = re.findall(p,munge_dictionary[munge_key])
     last_text = re.findall(q,munge_dictionary[munge_key])
-    # TODO change other  munge-eval lines to this
-    row_df.loc[:,new_col_name] = last_text[0]
+
+    if last_text:
+        row_df.loc[:,new_col_name] = last_text[0]
+    else:
+        row_df.loc[:,new_col_name] = ''
+
     text_field_list.reverse()
     for t,f in text_field_list:
         row_df.loc[:,new_col_name] = t+row_df.loc[:,f]+row_df.loc[:,new_col_name]
@@ -120,25 +124,30 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
     vc_col_d = pd.read_csv(fpath + 'count_columns.txt',sep='\t',index_col='RawName').to_dict()['CountItemType']
     munge = pd.read_csv(fpath + 'cdf_tables.txt',sep='\t',index_col='CDFTable').to_dict()['ExternalIdentifier']
 
-    # add columns for ids needed later
-    add_munged_column(row,munge,'ReportingUnit','ReportingUnit_external')
-    for c in ['BallotMeasureSelection','BallotMeasureContest','CandidateContest','Candidate']:
-        add_munged_column(row,munge,c,c)
-    # NOTE: this will put, e.g., candidate names into the BallotMeasureSelection column; beware!
-
-    row.loc[:,'Election_Id'] = election_id
-
-    cdf_d['ReportingUnit'] = pd.read_sql_table('ReportingUnit',session.bind,cdf_schema)
-    row = row.merge(context_ei[context_ei['Table']=='ReportingUnit'],left_on='ReportingUnit_external',right_on='ExternalIdentifierValue',suffixes=['','_ReportingUnit']).drop(['ExternalIdentifierValue','Table'],axis=1)
-    row.rename(columns={'Name':'ReportingUnit'},inplace=True)
-    row = row.merge(cdf_d['ReportingUnit'],left_on='ReportingUnit',right_on='Name',suffixes=['','_ReportingUnit']).drop('Name',axis=1)
-    row.rename(columns={'Id':'ReportingUnit_Id'},inplace=True)
-
     # to make sure all added columns get labeled well, make sure 'Name' and 'Id' are existing columns
     if 'Name' not in row.columns:
         row.loc[:,'Name'] = None
     if 'Id' not in row.columns:
         row.loc[:,'Id'] = None
+
+    # add columns corresponding to cdf fields
+    row.loc[:,'Election_Id'] = election_id
+    # TODO what about Office? In NC primary, office comes from a substring of Contest Name. How to treat substrings?
+
+    # some columns are their own internal names (no external identifier map needed)
+    for c in ['BallotMeasureSelection','BallotMeasureContest']:
+        add_munged_column(row,munge,c,c)
+    # NOTE: this will put, e.g., candidate names into the BallotMeasureSelection column; beware!
+    # some columns will need to be interpreted via  ExternalIdentifier tables
+    for c in ['CandidateContest','Candidate','Party','ReportingUnit']:
+        add_munged_column(row,munge,c,c+'_external')
+        row = row.merge(context_ei[context_ei['Table']==c],left_on= c+'_external',right_on='ExternalIdentifierValue',suffixes=['','_'+c]).drop(['ExternalIdentifierValue','Table'],axis=1)
+        row.rename(columns={'Name':'ReportingUnit'},inplace=True)
+
+    row = row.merge(context_ei[context_ei['Table']=='ReportingUnit'],left_on='ReportingUnit_external',right_on='ExternalIdentifierValue',suffixes=['','_ReportingUnit']).drop(['ExternalIdentifierValue','Table'],axis=1)
+    row.rename(columns={'Name':'ReportingUnit'},inplace=True)
+    row = row.merge(cdf_d['ReportingUnit'],left_on='ReportingUnit',right_on='Name',suffixes=['','_ReportingUnit']).drop('Name',axis=1)
+    row.rename(columns={'Id':'ReportingUnit_Id'},inplace=True)
 
     # split row into a df for ballot measures and a df for contests
     bm_selections = cdf_d['BallotMeasureSelection']['Selection'].to_list()
@@ -190,6 +199,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
         cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,cdf_schema,'ElectionContestJoin')
 
         # create dframe of vote counts (with join info) for ballot measures
+        # TODO  munger-dependent
         bm_vote_counts = bm_row.drop(set(['County','Election Date','Precinct','Contest Group ID','Contest Type','Contest Name','Choice','Choice Party','Vote For','Real Precinct','ReportingUnit_external','ReportingUnit','index','ExternalIdentifierType','ReportingUnitType_Id','OtherReportingUnitType','CountItemStatus_Id','OtherCountItemStatus','BallotMeasureContest','Name','BallotMeasureSelection','Selection', 'ElectionDistrict_Id']).intersection(bm_row.columns.to_list()),axis=1)
         # vc_col_d = {k:v['CountItemType'] for k,v in mu.content_dictionary['counts_dictionary'].items()}
         bm_vote_counts.rename(columns=vc_col_d,inplace=True)
@@ -336,12 +346,9 @@ def raw_dframe_to_cdf(session,raw_rows,s,mu,cdf_schema,context_schema,e,state_id
         state_type_id = cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt']=='state'].index.values[0]
         state_id = cdf_d['ReportingUnit'][cdf_d['ReportingUnit']['ReportingUnitType_Id']==state_type_id].index.values[0]
 
-    # store state_id and election_id to be returned by this function
-    ids_d = {'state': state_id, 'Election_Id': e.Election_Id}  # to hold ids of found items for later reference
+    bulk_elements_to_cdf(session, mu,raw_rows, cdf_schema, context_schema, e.Election_Id, e.ElectionType,state_id)
 
-    bulk_elements_to_cdf(session, mu,raw_rows, cdf_schema, context_schema, e.Election_Id, e.ElectionType,ids_d['state'])
-
-    return str(ids_d)
+    return
 
 if __name__ == '__main__':
 
