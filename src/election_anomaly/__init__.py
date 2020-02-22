@@ -10,13 +10,10 @@ import db_routines as dbr
 import munge_routines as mr
 from db_routines import Create_CDF_db as CDF
 import states_and_files as sf
-import context
+import context as ct
 import analyze as an
 
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import Column, Table,MetaData
-from alembic.migration import MigrationContext
-from alembic.operations import Operations
 import pandas as pd
 
 try:
@@ -24,138 +21,147 @@ try:
 except:
     import pickle
 
-
-def raw_data(session,meta,df):
-    """ Loads the raw data from the datafile df into the schema for the associated state
-    Schema for the state should already exist
-    """
-    s = df.state
-    t = s.schema_name + '.' + df.table_name   # name of table, including schema
-
-    #%% drop table in case it already exists
-    if t in meta.tables.keys():
-        meta.tables[t].drop()
-
-
-    # create table
-    col_list = [Column(field,typ,comment=comment) for [field, typ, comment] in df.column_metadata]
-    Table(df.table_name,meta,*col_list,schema=s.schema_name)
-    meta.create_all()
-
-    #%% correct any type errors in metafile (e.g., some values in file are longer than the metafile thinks possible) # TODO use raw sql query from dbr
-    ctx = MigrationContext.configure(eng)
-    op = Operations(ctx)
-    for d in df.type_correction_list:
-        r = dict(d)
-        del r['column']
-        op.alter_column(df.table_name,d['column'],schema=s.schema_name,**r)
-        print('\tCorrection to table definition necessary:\n\t\t'+df.table_name+';'+str(d))
-
-    # load raw data into tables
-    dbr.load_raw_data(session, meta,s.schema_name, df)
-    return
-
+# TODO will need routines to add new munger externalidentifiers to an existing cdf db; will need routines to add new reportingunits to an existing cdf db.
 if __name__ == '__main__':
-    # %% Initiate db engine and create session
-    eng, meta_generic = dbr.sql_alchemy_connect()
+    # initialize state and create database for it (if not already exists)
+    # TODO error handling: what if db already exists?
+    default = 'NC'
+    abbr = input(
+        'Enter short name for your state/district/territory (only alphanumeric and underscore, no spaces, default is ' + default + ')\n'
+    ) or default
+    print('Creating instance of State for '+abbr)
+    s = sf.State(abbr,'../local_data/')
+    create_db = input('Make database and schemas for '+abbr+' (y/n)?\n')
+    if create_db == 'y':
+        s.create_db_and_schemas()
+
+    # initialize main session for connecting to db
+    eng, meta_generic = dbr.sql_alchemy_connect(db_name=s.short_name)
     Session = sessionmaker(bind=eng)
     session = Session()
 
-    default = 'NC'
-    abbr = input(
-        'Enter two-character abbreviation for your state/district/territory (default is ' + default + ')\n'
-                ) or default
-    s = sf.create_state(abbr, '../local_data/' + abbr)
-
-    default = 'cdf_nc2018p'
-    cdf_schema = input(
-        'Enter name of CDF schema (default is ' + default + ')\n'
-                ) or default
-
-    context_to_cdf = input('Load and process context data into a common-data-format database (y/n)?\n')
-    if context_to_cdf == 'y':
-        # create cdf schema
-        print('Creating CDF schema ' + cdf_schema)
+    if create_db == 'y':
+        # create build tables in cdf schema
+        print('Creating common data format tables in schema `cdf` in database '+s.short_name)
         enumeration_tables = CDF.enum_table_list()
-        meta_cdf_schema = CDF.create_common_data_format_schema(session,cdf_schema,enumeration_tables,
-                                                               delete_existing=True)
+        meta_cdf = CDF.create_common_data_format_schema(session,'cdf',enumeration_tables,delete_existing=True)
         session.commit()
 
-        # load state context info into cdf schema
-        # need_to_load_data = input('Load enumeration & context data for '+abbr+' into schema '+cdf_schema+' (y/n)?')
-        need_to_load_context_data = 'y'
-        if need_to_load_context_data == 'y':
+        # load data from context directory into context schema
+        # TODO make it possible to update the context schema
+        print('Loading context data from '+s.short_name+'/context directory into `context` schema in database '+s.short_name)
+        # for file in context folder, create table in context schema.
+        context = {}
+        for f in os.listdir(s.path_to_state_dir+'/context/'):
+            if f[0] == '.': continue
+            table_name = f.split('.')[0]
 
-            # %% fill enumeration tables
-            print('\tFilling enumeration tables')
-            CDF.fill_cdf_enum_tables(session, meta_cdf_schema, cdf_schema,enumeration_tables)
+            context[table_name] = pd.read_csv(s.path_to_state_dir+'/context/'+f,sep='\t')
+            context[table_name].to_sql(table_name,session.bind,'context',if_exists='fail')
 
-            print('Loading state context info into CDF schema') # *** takes a long time; why?
-            context.context_to_cdf_PANDAS(session, meta_cdf_schema, s, cdf_schema,enumeration_tables)
-            session.commit()
-    else:
-        meta_cdf_schema = MetaData(bind=session.bind,schema=cdf_schema)
+        # %% fill enumeration tables
+        print('\tFilling enumeration tables')
+        CDF.fill_cdf_enum_tables(session,meta_cdf,'cdf',enumeration_tables)
+        print('Loading state context info into CDF schema')
+        ct.context_schema_to_cdf(session,s,enumeration_tables)
+        session.commit()
 
-    election_id, election_type, election_name = an.get_election_id_type_name(session,meta_generic,cdf_schema,default=3219)
+    # user picks election
+    election_list = [f for f in os.listdir(s.path_to_state_dir + 'data/') if os.path.isdir(s.path_to_state_dir + 'data/'+f)]
+    assert election_list != [], 'No elections available for in directory '+s.short_name
+    default = election_list[0]
+    need_election = True
+    while need_election:
+        print('Available elections are:')
+        for e in election_list: print(e)
+        election_name = input('Enter short name of election (default is ' + default + ')\n') or default
+        if election_name in election_list: need_election = False
+        else: print('Election not available; try again.')
+    print('Creating Election instance for '+election_name)
+    e = an.Election(session,s,election_name)
 
-    # need_to_load_data = 'y'
+
     need_to_load_data = input('Load raw data (y/n)?\n')
     if need_to_load_data == 'y':
-        default = 'nc_primary'
-        munger_name = input('Enter name of desired munger (default is '+default+')\n') or default
+        # user picks munger
+        munger_list = [f for f in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/') if os.path.isdir(s.path_to_state_dir + 'data/'+election_name+'/'+f)]
+        assert munger_list != [], 'No mungers available for in directory '+s.short_name +'/'+election_name
+        default = munger_list[0]
+        need_munger = True
+        while need_munger:
+            print('Available mungers are:')
+            for m in munger_list: print(m)
+            munger_name = input('Enter short name of munger (default is ' + default + ')\n') or default
+            if munger_name in munger_list: need_munger = False
+            else: print('No such munger; try again.')
 
         munger_path = '../mungers/'+munger_name+'/'
         print('Creating munger instance from '+munger_path)
-        m = sf.create_munger(munger_path)
+        mu = sf.Munger(munger_path)
 
-        # default = 'filtered_results_pct_20181106.txt'
-        default = 'results_pct_20180508.txt'
-        # default = 'filtered_yancey2018.txt'
-        #default = 'alamance.txt'
-        df_name = input('Enter name of datafile (default is '+default+')\n') or default
+        dfs = pd.read_sql_table('datafile',session.bind,schema='context',index_col='index')
+        for datafile in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/'+mu.name+'/'):
+            # check datafile is listed in datafiles
+            assert e.name +';' + datafile in dfs['name'].to_list(),'Datafile not recognized in the table context.datafile: ' + datafile
+            df_info = dfs[dfs['name'] == e.name + ';' + datafile].iloc[0]
+            if df_info['separator'] == 'tab':
+                delimiter = '\t'
+            elif df_info['separator'] == 'comma':
+                delimiter = ','
+            raw_data_dframe = pd.read_csv(s.path_to_state_dir + 'data/' +election_name+'/'+munger_name+'/'+ datafile,sep=delimiter)
+            print('Loading data into cdf schema from file: '+datafile)
+            mr.raw_dframe_to_cdf(session,raw_data_dframe,s, mu,'cdf','context',e)
 
-        print('Creating metafile instance')
-        mf = sf.create_metafile(s,'layout_results_pct.txt')
+    get_top_results = input('Get top-level results (y/n)?\n')
+    if get_top_results == 'y':
+        top=e.top_results()
+        print (top)
 
-        print('Creating datafile instance')
-        df = sf.create_datafile(s, election_name, df_name, mf, m)
-        print('Load raw data from '+df.file_name)
-        if df.separator == 'tab': delimiter = '\t'
-        elif df.separator == 'comma': delimiter = ','
-        else:
-            print('Separator in file unknown, assumed to be tab')
-            delimiter = '\t'
-        raw_data_dframe = pd.read_csv(s.path_to_state_dir+'data/' + df.file_name,sep=delimiter)
-        try:
-            raw_data_dframe.to_sql(df.table_name,con=session.bind,schema=s.schema_name,index=False,if_exists='fail')
-            session.flush()
-        except:
-            replace = input('Raw data table ' +df.table_name + ' already exists in database. Replace (y/n)?\n')
-            if replace == 'y':
-                raw_data_dframe.to_sql(df.table_name, con=session.bind, schema=s.schema_name, index=False,if_exists='replace')
-                session.flush()
+    need_to_analyze = input('Analyze (y/n)?\n')
+    if need_to_analyze == 'y':
+        electionrollup = an.ContestRollup(e,'county','precinct')
+
+        just_one_contest = input('Get anomaly list for just one contest? (y/n)\n')
+        while just_one_contest == 'y':
+            for x in electionrollup.contest_name_list: print(x)
+            contest_name = input('Enter contest name\n')
+            try:
+                anomaly_list = an.anomaly_list(contest_name,electionrollup.restrict_by_contest_name([contest_name]))
+                a_dframe = pd.DataFrame(anomaly_list)
+                print(a_dframe)
+            except:
+                print('Error')
+            just_one_contest = input('Get anomaly list for another contest? (y/n)\n')
+
+        all_contests = input('Analyze all contests? (y/n)\n')
+        if all_contests == 'y':
+
+            pickle_path = e.pickle_dir+'_anomalies_by_'+electionrollup.roll_up_to_ru_type+'_from_'+electionrollup.atomic_ru_type
+            if os.path.isfile(pickle_path):
+                print('Anomalies will not be calculated, but will be read from existing file:\n\t'+pickle_path)
+                with open(pickle_path,'rb') as f:
+                    anomalies=pickle.load(f)
             else:
-                print('Continuing with existing file')
+                anomalies = an.AnomalyDataFrame(electionrollup)
+                with open(pickle_path,'wb') as f:
+                    pickle.dump(anomalies,f)
+                print('AnomalyDataFrame calculated, stored as pickle at '+pickle_path)
 
-        print('Loading data from df table\n\tin schema '+ s.schema_name+ '\n\tto CDF schema '+cdf_schema+'\n\tusing munger '+munger_name)
-        mr.raw_records_to_cdf(session,meta_cdf_schema,df,m,cdf_schema,s.schema_name,election_type)
-        session.commit()
-        print('Done loading raw records from '+ df_name+ ' into schema ' + cdf_schema +'.')
+            anomalies.worst_bar_for_selected_contests()
+            default = 3
+            n = input('Draw how many most-anomalous plots?\n') or default
+            try:
+                n = int(n)
+                anomalies.draw_most_anomalous(3,'pct')
+                anomalies.draw_most_anomalous(3,'raw')
 
-    e = an.get_anomaly_scores(session,meta_cdf_schema,cdf_schema,election_id,election_name)
+            except:
+                print('ERROR (Input was not an integer?); skipping most-anomalous plots')
 
-    default = 3
-    n = input('Draw how many most-anomalous plots?\n') or default
-    n = int(n)
+            draw_all = input('Plot worst bar chart for all contests? (y/n)?\n')
+            if draw_all == 'y':
+                e.worst_bar_for_each_contest(session,meta_generic)
 
-    e.draw_most_anomalous(session,meta_cdf_schema,n=n,mode='pct')
-    e.draw_most_anomalous(session,meta_cdf_schema,n=n,mode='raw')
-
-    draw_all = input('Plot worst bar chart for all contests? (y/n)?\n')
-    if draw_all == 'y':
-        e.worst_bar_for_each_contest(session,meta_generic)
-
-    e.worst_bar_for_selected_contests(session,meta_generic)
 
     eng.dispose()
     print('Done!')
