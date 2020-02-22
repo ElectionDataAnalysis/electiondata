@@ -180,8 +180,8 @@ def fill_externalIdentifier_table(session,schema,context_schema,id_other_id_type
             # join info for listed
             listed = listed.merge(cdf['IdentifierType'],left_on='ExternalIdentifierType',right_on='Txt')
             listed.rename(columns={'Id':'IdentifierType_Id','ExternalIdentifierValue':'Value'},inplace=True)
-            listed.loc[:,'OtherIdentifierType'] = None
-
+            if not listed.empty:
+                listed.loc[:,'OtherIdentifierType'] = None
             # join info for other
             other.loc[:,'IdentifierType_Id'] = id_other_id_type
             other.rename(columns={'ExternalIdentifierType':'OtherIdentifierType','ExternalIdentifierValue':'Value'},inplace=True)

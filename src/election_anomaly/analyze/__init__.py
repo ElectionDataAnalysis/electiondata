@@ -173,6 +173,7 @@ class Election(object):
 
     def top_results(self):
         top_rollup=self.pull_rollup_from_db_by_types('state')
+        top_rollup=top_rollup[top_rollup['CountItemType']!='total']
         top_rollup=top_rollup.drop(['Contest_Id','ReportingUnit_Id','Selection_Id','CountItemType_Id','contest_type'],axis=1)
         return top_rollup.groupby(['Contest','Selection']).sum()
 

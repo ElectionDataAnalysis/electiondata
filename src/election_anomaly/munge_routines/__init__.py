@@ -143,9 +143,6 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
     # split row into a df for ballot measures and a df for contests
     bm_selections = cdf_d['BallotMeasureSelection']['Selection'].to_list()
 
-    # TODO
-    #bm_row = row[row['BallotMeasureSelection'].isin(bm_selections)]]
-    #cc_row = row[~(eval(munge['BallotMeasureSelection']).isin(bm_selections))]
     bm_row = row[row['BallotMeasureSelection'].isin(bm_selections)]
     cc_row = row[~row['BallotMeasureSelection'].isin(bm_selections)]
 
@@ -165,8 +162,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
         bm_df.loc[:,'ElectionDistrict_Id'] = state_id  # append column for ElectionDistrict Id
 
         # Load BallotMeasureContest table
-        cdf_d['BallotMeasureContest'] = dbr.dframe_to_sql(bm_df[['Name', 'ElectionDistrict_Id']].drop_duplicates(), session,
-                                                          cdf_schema, 'BallotMeasureContest')
+        cdf_d['BallotMeasureContest'] = dbr.dframe_to_sql(bm_df[['Name', 'ElectionDistrict_Id']].drop_duplicates(), session,cdf_schema, 'BallotMeasureContest')
 
         # add Ballot Measure ids needed later
         bm_row = bm_row.merge(cdf_d['BallotMeasureSelection'],left_on='BallotMeasureSelection',right_on='Selection',suffixes=['','_Selection'])
@@ -179,11 +175,11 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
         if 'Name' not in bm_df.columns:
             bm_df.loc[:'Name'] = None
         if 'Id' not in bm_df.columns:
-            bm_df.loc[:,'Id']  = None
+            bm_df.loc[:,'Id'] = None
 
         bm_df = bm_df.merge(cdf_d['BallotMeasureSelection'],left_on='Selection',right_on='Selection',suffixes=['','_Selection'])
         bm_df = bm_df.merge(cdf_d['BallotMeasureContest'],left_on='Name',right_on='Name',suffixes=['','_Contest'])
-        bmcsj_df  = bm_df.drop(labels=['Name','Selection','ElectionDistrict_Id','Id','ElectionDistrict_Id_Contest'],axis=1)
+        bmcsj_df = bm_df.drop(labels=['Name','Selection','ElectionDistrict_Id','Id','ElectionDistrict_Id_Contest'],axis=1)
         bmcsj_df.rename(columns={'Id_Selection':'BallotMeasureSelection_Id','Id_Contest':'BallotMeasureContest_Id'},inplace=True)
         cdf_d['BallotMeasureContestSelectionJoin'] = dbr.dframe_to_sql(bmcsj_df,session,cdf_schema,'BallotMeasureContestSelectionJoin')
 
@@ -200,7 +196,8 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
         bm_vote_counts=bm_vote_counts.melt(id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],value_vars=['election-day', 'early', 'absentee-mail', 'provisional', 'total'],var_name='CountItemType',value_name='Count')
         bm_vote_counts = bm_vote_counts.merge(cdf_d['CountItemType'],left_on='CountItemType',right_on='Txt')
         bm_vote_counts.rename(columns={'Id':'CountItemType_Id'},inplace=True)
-        vote_count_dframe_list.append(bm_vote_counts)
+        if not bm_vote_counts.empty:
+            vote_count_dframe_list.append(bm_vote_counts)
 
     if process_candidate_contests == 'y':
         # process rows with candidate contests
