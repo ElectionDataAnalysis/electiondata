@@ -89,6 +89,7 @@ def add_munged_column(row_df,munge_dictionary,munge_key,new_col_name):
     if row_df.empty:
         return
     else:
+        # use regex to turn value string in munge dictionary into the corresponding commands (e.g., decode '<County>;<Precinct>'
         p = re.compile('(?P<text>[^<>]*)<(?P<field>[^<>]+)>')   # pattern to find text,field pairs
         q = re.compile('(?<=>)[^<]*$')                          # pattern to find text following last pair
         text_field_list = re.findall(p,munge_dictionary[munge_key])
@@ -112,14 +113,14 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
     and don't come from context
     and whose db Ids are needed for other insertions.
     `row` is a dataframe of the raw data file
-    Assumes table 'ExternalIdentifierContext' in the context schema
+    Assumes table 'ExternalIdentifier' in the context schema
     """
 
     # NB: the name `row` in the code is essential and appears in def of munger as of 1/2020
     cdf_d = {}  # dataframe for each table
     for t in ['ExternalIdentifier','Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType','CandidateContest']:
         cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema)   # note: keep 'Id as df column (not index) so we have access in merges below.
-    context_ei = pd.read_sql_table('ExternalIdentifierContext',session.bind,context_schema)
+    context_ei = pd.read_sql_table('ExternalIdentifier',session.bind,context_schema)
     context_ei = context_ei[ (context_ei['ExternalIdentifierType']== mu.name)]  # limit to our munger
 
     # get vote count column mapping for our munger
@@ -131,32 +132,45 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
     row.loc[:,'Election_Id'] = election_id
     # TODO what about Office? In NC primary, office comes from a substring of Contest Name. How to treat substrings?
 
+    for c in ['Party','ReportingUnit']:
+    # TODO check that merge works for all columns, esp. Party. What if no party matches?
+        add_munged_column(row,munge,c,c+'_external')
+        row = row.merge(context_ei[context_ei['Table']==c],how='left',left_on= c+'_external',right_on='ExternalIdentifierValue',suffixes=['','_'+c]).drop(['ExternalIdentifierValue','Table'],axis=1)
+        row.rename(columns={'Name':c},inplace=True)
+        row = row.merge(cdf_d[c],left_on=c,right_on='Name',
+                        suffixes=['','_'+c]).drop('Name',axis=1)
+        row.rename(columns={'Id':c+'_Id'},inplace=True)
+
     # some columns are their own internal names (no external identifier map needed)
     for c in ['BallotMeasureSelection','BallotMeasureContest']:
         add_munged_column(row,munge,c,c)
     # NOTE: this will put, e.g., candidate names into the BallotMeasureSelection column; beware!
     # some columns will need to be interpreted via  ExternalIdentifier tables
 
-    for c in ['CandidateContest','Candidate','Party','ReportingUnit']:
-        add_munged_column(row,munge,c,c+'_external')
-        row = row.merge(context_ei[context_ei['Table']==c],left_on= c+'_external',right_on='ExternalIdentifierValue',suffixes=['','_'+c]).drop(['ExternalIdentifierValue','Table'],axis=1)
-        row.rename(columns={'Name':c},inplace=True)
-        row = row.merge(cdf_d[c],left_on=c,right_on='Name',
+    # split row into a df for ballot measures and a df for contests
+    bm_selections = cdf_d['BallotMeasureSelection']['Selection'].to_list()
+
+    bm_row = row[row['BallotMeasureSelection'].isin(bm_selections)]
+    cc_row = row[~row['BallotMeasureSelection'].isin(bm_selections)]
+
+    # TODO use above split *before* merging EIs for contests
+
+
+    for c in ['CandidateContest','Candidate',]:
+    # TODO check that merge works for all columns, esp. Party. What if no party matches?
+        add_munged_column(cc_row,munge,c,c+'_external')
+        cc_row = cc_row.merge(context_ei[context_ei['Table']==c],how='left',left_on= c+'_external',right_on='ExternalIdentifierValue',suffixes=['','_'+c]).drop(['ExternalIdentifierValue','Table'],axis=1)
+        cc_row.rename(columns={'Name':c},inplace=True)
+        cc_row = cc_row.merge(cdf_d[c],left_on=c,right_on='Name',
                         suffixes=['','_'+c]).drop('Name',axis=1)
-        row.rename(columns={'Id':c+'_Id'},inplace=True)
+        cc_row.rename(columns={'Id':c+'_Id'},inplace=True)
+
 
     # to make sure all added columns get labeled well, make sure 'Name' and 'Id' are existing columns
     if 'Name' not in row.columns:
         row.loc[:,'Name'] = None
     if 'Id' not in row.columns:
         row.loc[:,'Id'] = None
-
-    # split row into a df for ballot measures and a df for contests
-    # TODO make this split *before* merging EIs for contests
-    bm_selections = cdf_d['BallotMeasureSelection']['Selection'].to_list()
-
-    bm_row = row[row['BallotMeasureSelection'].isin(bm_selections)]
-    cc_row = row[~row['BallotMeasureSelection'].isin(bm_selections)]
 
     process_ballot_measures = input('Process Ballot Measures (y/n)?\n')
     process_candidate_contests = input('Process Candidate Contests (y/n)?\n')
