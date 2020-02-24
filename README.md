@@ -96,7 +96,7 @@ The folder `src/mungers` holds a directory for each munger. Each munger director
     * `CountItemType` Type of count, according to the Common Data Format (e.g., 'absentee' or 'election-day')
  * `cdf_tables.txt` One line for each main table in the Common Data Format. Specifies how to read the values for that table from the source file.
     * `CDFTable` Name of the Common Data Format table (e.g., 'ReportingUnit')
-    * `ExternalIdentifier` Recipe for creating the external identifier from the source file. `row` is used in the code to refer to a row of the source file.
+    * `ExternalIdentifier` Recipe for creating the external identifier from the source file. 
     * `InternalFieldName` Usually 'Name', this is the column in the Common Data Format table that names the item.
     * `Enumerations` Recipes for specifying any enumerated values
     * `OtherFields` Recipes for specifying any other fields. `ids_d` is used in the code to refer to internal Common Data Format primary keys.
@@ -104,6 +104,7 @@ The folder `src/mungers` holds a directory for each munger. Each munger director
 
 ### About ExternalIdentifiers
 (TODO)
+Need Office and  CandidateContest separately for each munger. 
 
 # Code components
 

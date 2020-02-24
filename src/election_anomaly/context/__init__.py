@@ -8,21 +8,9 @@ import os
 
 from db_routines import dframe_to_sql
 import munge_routines as mr
-from munge_routines import format_type_for_insert_PANDAS, id_from_select_only_PANDAS
 import db_routines as dbr
 import pandas as pd
 
-
-def table_and_name_to_foreign_id(dict,row):
-    """
-    row must be a Series object, and must have entries Table and Name.
-    dict must be a dictionary of dataframes, keyed by table name.
-    """
-    id = id_from_select_only_PANDAS(dict[row['Table']], {'Name': row['Name']})
-    if id == 0:
-        raise Exception('No entry found for \n\tTable: '+ row['Table']+'\n\tName: '+row['Name'])
-    else:
-        return id
 
 def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schema_def_info/'):
     """Takes the info from the tables in the state's context schema and inserts anything new into the cdf schema.
@@ -82,7 +70,7 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
             new_ru = mr.enum_col_to_id_othertext(new_ru,'ReportingUnitType',enum_dframe['ReportingUnitType'])
             cdf_d['ReportingUnit'] = dframe_to_sql(new_ru,session,'cdf','ReportingUnit',index_col=None)
 
-            # create corresponding CandidateContest records for general election contests (and insert in cdf db if they don't already exist)
+            # create corresponding CandidateContest records for general and primary election contests (and insert in cdf db if they don't already exist)
             cc_data = context_cdframe['Office'].merge(cdf_d['Office'],left_on='Name',right_on='Name').merge(cdf_d['ReportingUnit'],left_on='Name',right_on='Name',suffixes=['','_ru'])
             # restrict to the columns we need, and set order
             cc_data = cc_data[['Name','VotesAllowed','NumberElected','NumberRunoff','Id','Id_ru','IsPartisan']]
@@ -98,19 +86,14 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
                 cc_data = pd.concat([cc_data,pcc])
 
 
+
             cdf_d['CandidateContest'] = dframe_to_sql(cc_data,session,'cdf','CandidateContest')
 
             # create corresponding CandidateContest records for primary contests (and insert in cdf db if they don't already exist)
 
 
     # load external identifiers from context
-
-    other_id = enum_dframe['IdentifierType'][enum_dframe['IdentifierType']['Txt']=='other'].iloc[0]['Id']
-    cdf_d['ExternalIdentifier'] = fill_externalIdentifier_table(session,'cdf','context',other_id,s.path_to_state_dir + 'context/ExternalIdentifier.txt',pickle_dir=s.path_to_state_dir+'pickles/')
-    # load CandidateContest external ids into cdf_d['ExternalIdentifier'] too
-    ei_df = cdf_d['Office'].merge(cdf_d['ExternalIdentifier'],left_on='Id',right_on='ForeignId',suffixes=['_office','ei']).merge(cdf_d['CandidateContest'],left_on='Id',right_on='Office_Id',suffixes=['','_cc'])[['Id_cc','Value','IdentifierType_Id','OtherIdentifierType']]
-    ei_df.columns = ['ForeignId','Value','IdentifierType_Id','OtherIdentifierType']
-    cdf_d['ExternalIdentifier'] = dframe_to_sql(ei_df,session,'cdf','ExternalIdentifier')
+    cdf_d['ExternalIdentifier'] = fill_externalIdentifier_table(session,'cdf','context',s.path_to_state_dir + 'context/ExternalIdentifier.txt')
 
     # Fill the ComposingReportingUnitJoin table
     cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,'cdf',pickle_dir=s.path_to_state_dir+'pickles/')
@@ -118,63 +101,45 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
     session.flush()
     return
 
-def fill_externalIdentifier_table(session,schema,context_schema,id_other_id_type,fpath,pickle_dir='.'):
+def fill_externalIdentifier_table(session,cdf_schema,context_schema,fpath):
     """
     fpath is a path to the tab-separated context file holding the external identifier info
     s is the state
     """
-    if os.path.isfile(pickle_dir + 'ExternalIdentifier'):
-        print('Pulling ExternalIdentifier table from pickle in ' + pickle_dir)
-        ei_df = pd.read_pickle(pickle_dir + 'ExternalIdentifier')
-        ei_df.to_sql('ExternalIdentifier',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
-    else:
-        print('Pulling ExternalIdentifier table from context folder')
-        # get table from context directory with the tab-separated definitions of external identifiers
-        ei_df = pd.read_csv(fpath,sep = '\t')
+    # TODO are all offices/contests getting into cdf.ExternalIdentifier?
+    print('Pulling ExternalIdentifier table from context folder')
+    # get table from context directory with the tab-separated definitions of external identifiers
+    ei_df = pd.read_csv(fpath,sep = '\t')
 
-        ei_df.to_sql('ExternalIdentifier',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
+    print('Writing to ExternalIdentifier table in context_schema')
+    ei_df.to_sql('ExternalIdentifier',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
 
-        # pull corresponding tables from the cdf db
-        cdf = {}
-        cdf['IdentifierType'] = pd.read_sql_table('IdentifierType',session.bind,schema,index_col=None)
-        filtered_ei = {}
-        for t in ei_df['Table'].unique():
-            cdf[t] = pd.read_sql_table(t,session.bind,schema,index_col=None)
-            # TODO drop unnecessary columns
-            col_list = cdf[t].columns.to_list()
-            col_list.remove('Name')
-            col_list.remove('Id')
-            cdf[t] = cdf[t].drop(col_list,axis=1)
+    cdf = {}
+    cdf['IdentifierType'] = pd.read_sql_table('IdentifierType',session.bind,cdf_schema,index_col=None)
+    filtered_ei = {}
 
-            ei_filt = ei_df[ei_df['Table']==t]   # filter out rows for the given table
-            # join Table on name to get ForeignId
-            ei_filt = ei_filt.merge(cdf[t],left_on='Name',right_on='Name')
-            ei_filt.rename(columns={'Id':'ForeignId'},inplace=True)
-            # join IdentifierType columns
-            id_type_list = cdf['IdentifierType']['Txt'].unique()
-            # two cases: idtype in list, or idtype other
-            listed = ei_filt[ei_filt['ExternalIdentifierType'].isin(id_type_list)]
-            other = ei_filt[~ei_filt['ExternalIdentifierType'].isin(id_type_list)]
+    # pull from the cdf db any tables with external identifiers
+    for t in ei_df['Table'].unique():
+        cdf[t] = pd.read_sql_table(t,session.bind,cdf_schema,index_col=None)
+        # drop all but Name and Id columns
+        cdf[t] = cdf[t][['Name','Id']]
 
-            # join info for listed
-            listed = listed.merge(cdf['IdentifierType'],left_on='ExternalIdentifierType',right_on='Txt')
-            listed.rename(columns={'Id':'IdentifierType_Id','ExternalIdentifierValue':'Value'},inplace=True)
-            if not listed.empty:
-                listed.loc[:,'OtherIdentifierType'] = None
-            # join info for other
-            other.loc[:,'IdentifierType_Id'] = id_other_id_type
-            other.rename(columns={'ExternalIdentifierType':'OtherIdentifierType','ExternalIdentifierValue':'Value'},inplace=True)
+        # manipulate temporary dataframe ei_filt into form for insertion to cdf.ExternalIdentifier
+        ei_filt = ei_df[ei_df['Table']==t]   # filter out rows for the given table
+        # join Table on name to get ForeignId
+        ei_filt = ei_filt.merge(cdf[t],left_on='Name',right_on='Name')
+        ei_filt.rename(columns={'Id':'ForeignId','ExternalIdentifierValue':'Value','ExternalIdentifierType':'IdentifierType'},inplace=True)
+        # join IdentifierType columns
+        ei_filt = mr.enum_col_to_id_othertext(ei_filt,'IdentifierType',cdf['IdentifierType'])
 
-            filtered_ei[t] = pd.concat([other,listed],sort=False)
+        filtered_ei[t] = ei_filt
 
-        ei_df = pd.concat([filtered_ei[t] for t in ei_df['Table'].unique()])
+    ei_df = pd.concat([filtered_ei[t] for t in ei_df['Table'].unique()])
 
     # insert appropriate dataframe columns into ExternalIdentifier table in the CDF db
-    print('Inserting into ExternalIdentifier table in schema '+schema)
-    dframe_to_sql(ei_df, session, schema, 'ExternalIdentifier')
+    print('Inserting into ExternalIdentifier table in schema ' + cdf_schema)
+    dframe_to_sql(ei_df,session,cdf_schema,'ExternalIdentifier')
     session.flush()
-    if not os.path.isfile(pickle_dir + 'ExternalIdentifier'):
-        ei_df.to_pickle(pickle_dir + 'ExternalIdentifier')
     return ei_df
 
 def fill_composing_reporting_unit_join(session,schema,pickle_dir='../local_data/pickles/'):

@@ -8,81 +8,6 @@ import time
 import analyze as an
 import re
 
-def id_from_select_only_PANDAS(dframe,value_d, mode='no_dupes',dframe_Id_is_index=True):
-    """Returns the Id of the record in table with values given in the dictionary value_d.
-    On error (nothing found, or more than one found) returns 0"""
-
-    # filter the dframe by the relevant value_d conditions
-    cdf_value_d = {}
-    for k,v in value_d.items():
-        if k in dframe.columns:
-            cdf_value_d[k] = v
-    filtered_dframe = dframe.loc[(dframe[list(cdf_value_d)] == pd.Series(cdf_value_d)).all(axis=1)]
-
-    if filtered_dframe.shape[0] == 0: # if no rows meet value_d criteria
-        return 0
-    elif filtered_dframe.shape[0] >1 and mode == 'no_dupes':
-        raise Exception('More than one record found for these values:\n\t'+str(value_d))
-    else:
-        if dframe_Id_is_index:
-            return filtered_dframe.index.to_list()[0]
-        else:
-            return filtered_dframe['Id'].to_list()[0]
-
-def id_from_select_or_insert_PANDAS(dframe, value_d, session, schema, db_table_name,mode='no_dupes',dframe_Id_is_index=True):
-    """  value_d gives the values for the fields in the dataframe.
-    If there is a corresponding record in the table, return the id (and the original dframe)
-    If there is no corresponding record, insert one into the db and return the id and the updated dframe.
-    (.e.g., value_d['Name'] = 'North Carolina;Alamance County');
-    E.g., tables_d[table] = {'tablename':'ReportingUnit', 'fields':[{'fieldname':'Name','datatype':'TEXT'}],
-    'enumerations':['ReportingUnitType','CountItemStatus'],'other_element_refs':[], 'unique_constraints':[['Name']],
-    'not_null_fields':['ReportingUnitType_Id']
-    modes with consequences: 'dupes_ok'
-       } """
-    # filter the cdf_value_d by the relevant value_d conditions #
-    cdf_value_d = {}
-    for k,v in value_d.items():
-        if k in dframe.columns:
-            cdf_value_d[k] = v
-
-    # filter the dframe by the value_d conditions
-    filtered_dframe = dframe.loc[(dframe[list(cdf_value_d)] == pd.Series(cdf_value_d)).all(axis=1)]
-
-    if mode == 'no_dupes' and filtered_dframe.shape[0] > 1: # if there are dupes (and we care)
-        raise Exception('Duplicate values found for ' + str(value_d))
-    if filtered_dframe.shape[0] == 0:   # if no such row found
-        filtered_dframe = filtered_dframe.append(value_d, ignore_index=True)
-        dbr.dframe_to_sql(filtered_dframe, session, schema, db_table_name)
-        if dframe_Id_is_index:
-            index_col = 'Id'
-        else:
-            index_col = None
-        dframe = pd.read_sql_table(db_table_name,session.bind,schema=schema,index_col=index_col)
-        id = id_from_select_only_PANDAS(dframe,value_d,mode=mode,dframe_Id_is_index= dframe_Id_is_index)
-    else:
-        id = id_from_select_only_PANDAS(dframe,value_d,mode=mode,dframe_Id_is_index= dframe_Id_is_index)
-    assert filtered_dframe.shape[0] == 1, 'filtered dataframe should have exactly one row'
-    return id, dframe
-
-def format_type_for_insert_PANDAS(dframe,txt,id_type_other_id,t_dframe_Id_is_index=True):
-    """This is designed for enumeration dframes, which must have an "Id" field and a "Txt" field.
-    other_id is the id for 'other' IdentifierType
-    This function returns a (type_id, othertype_text) pair; for types in the enumeration, returns (type_id for the given txt, ""),
-    while for other types returns (type_id for "other",txt) """
-    # check that dframe columns are 'Id' and 'Txt'
-    assert 'Txt' in dframe.columns, 'dframe must have a Txt column'
-    if t_dframe_Id_is_index:
-        id_list = dframe.index[dframe['Txt'] == txt].to_list()
-    else:
-        assert 'Id' in dframe.columns, 'When flag t_dframe_Id_is_index is false, there must be an Id column in dframe'
-        id_list = dframe[dframe['Txt'] == txt].to_list()
-    if len(id_list) == 1:
-        return([id_list[0],''])
-    elif len(id_list) == 0:
-        return[id_type_other_id,txt]
-    else:
-         raise Exception('Dataframe has duplicate rows with value ' + txt + ' in Txt column')
-
 def add_munged_column(row_df,munge_dictionary,munge_key,new_col_name):
     """Alters dataframe <row_df> (in place), adding or redefining <new_col_name>
     via the string corresponding to <munge_key>, per <munge_dictionary>"""
@@ -103,15 +28,25 @@ def add_munged_column(row_df,munge_dictionary,munge_key,new_col_name):
         text_field_list.reverse()
         for t,f in text_field_list:
             row_df.loc[:,new_col_name] = t+row_df.loc[:,f]+row_df.loc[:,new_col_name]
+
         return
 
-def get_internal_ids(row_df,ctxt_ei_df,table_df,table_name,internal_name_column):
+def get_internal_ids_from_context(row_df,ctxt_ei_df,table_df,table_name,internal_name_column,drop_unmatched=False):
     """replace columns in <df> with external identifier values by columns with internal names
     Note: this requires using the ExternalIdentifier table from the context schema, which has the info about which table the element is in. """
-    row_df = row_df.merge(ctxt_ei_df[ctxt_ei_df['Table'] == table_name],how='left',left_on=table_name + '_external',right_on='ExternalIdentifierValue',suffixes=['','_' + table_name]).drop(['ExternalIdentifierValue','Table'],axis=1)
-    row_df.rename(columns={'Name':table_name},inplace=True)
-    row_df = row_df.merge(table_df,how='left',left_on=table_name,right_on=internal_name_column,suffixes=['','_' + table_name]).drop(internal_name_column,axis=1)
-    row_df.rename(columns={'Id':table_name + '_Id'},inplace=True)
+    if drop_unmatched:
+        how='inner'
+    else:
+        how='left'
+    row_df = row_df.merge(ctxt_ei_df[ctxt_ei_df['Table'] == table_name],how=how,left_on=table_name + '_external',right_on='ExternalIdentifierValue',suffixes=['','_' + table_name]).drop(['ExternalIdentifierValue','Table','ExternalIdentifierType','index',table_name+'_external'],axis=1)
+    if 'Name_'+table_name in row_df.columns:
+        row_df.rename(columns={'Name_'+table_name:table_name},inplace=True)
+    else:
+        row_df.rename(columns={'Name':table_name},inplace=True)
+    row_df = row_df.merge(table_df[['Id',internal_name_column]],how='left',left_on=table_name,right_on=internal_name_column,suffixes=['','_' + table_name])
+    row_df=row_df.drop([internal_name_column],axis=1)
+    row_df.rename(columns={'Id':table_name + '_Id','Name':table_name},inplace=True)
+
     return row_df
 
 def enum_col_to_id_othertext(df,type_col,enum_df):
@@ -172,10 +107,10 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
     # add columns corresponding to cdf fields
     row.loc[:,'Election_Id'] = election_id
 
-    for t in ['Party','ReportingUnit','CandidateContest']:  # tables that were filled from context
+    for t in ['Party','ReportingUnit']:  # tables that were filled from context
         #  merge works for all columns, even if, say, Party is null, because of how='left' (left join) in add_munged_column function
         add_munged_column(row,munge,t,t+'_external')
-        row=get_internal_ids(row,context_ei,cdf_d[t],t,"Name")
+        row=get_internal_ids_from_context(row,context_ei,cdf_d[t],t,"Name")
 
     # some columns are their own internal names (no external identifier map needed)
     for t in ['BallotMeasureSelection','BallotMeasureContest']:
@@ -194,6 +129,7 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
 
     bm_row = row[row['BallotMeasureSelection'].isin(bm_selections)]
     cc_row = row[~row['BallotMeasureSelection'].isin(bm_selections)]
+    cc_row=cc_row.drop(['BallotMeasureSelection','BallotMeasureContest'],axis=1) # not necessary but cleaner for debugging
 
     process_ballot_measures = input('Process Ballot Measures (y/n)?\n')
     process_candidate_contests = input('Process Candidate Contests (y/n)?\n')
@@ -241,6 +177,12 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
     if process_candidate_contests == 'y':
         # process rows with candidate contests
 
+
+        # Find CandidateContest_external and CandidateContest_Id and omit rows with contests not  given in CandidateContest table (filled from context)
+        add_munged_column(cc_row,munge,'CandidateContest','CandidateContest_external')
+        cc_row=get_internal_ids_from_context(cc_row,context_ei,cdf_d['CandidateContest'],'CandidateContest','Name',drop_unmatched=True)
+        cc_row.rename(columns={'CandidateContest_Id':'Contest_Id'},inplace=True)
+
         # load Candidate table
         add_munged_column(cc_row,munge,'Candidate','BallotName')
         candidate_df = cc_row[['BallotName','Party_Id','Election_Id']].copy().drop_duplicates()
@@ -258,14 +200,8 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
         cc_row = cc_row.merge(cs_df,left_on='BallotName',right_on='BallotName',suffixes=['','_Candidate'])
         cc_row.rename(columns={'Id_Candidate':'Candidate_Id'},inplace=True)
         cc_row = cc_row.merge(cdf_d['CandidateSelection'],left_on='Candidate_Id',right_on='Candidate_Id',suffixes=['','_Selection'])
-        cc_row.rename(columns={'Id_Selection':'CandidateSelection_Id'},inplace=True)
+        cc_row.rename(columns={'Id_Selection':'Selection_Id'},inplace=True)
 
-        # Find CandidateContest_Id
-        # TODO  change munge key to 'CandidateContest'
-        add_munged_column(cc_row,munge,'Office','CandidateContest')
-        cc_row = cc_row.merge(cdf_d['CandidateContest'],left_on='CandidateContest',right_on='Name',
-                              suffixes=['','_Contest'])
-        cc_row.rename(columns={'Id_Contest':'Contest_Id'},inplace=True)
 
         # Office depends on the election type and the CandidateContest.
         if election_type == 'general':
@@ -285,12 +221,11 @@ def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,el
         cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,cdf_schema,'ElectionContestJoin')
 
         #  load CandidateContestSelectionJoin
-        ccsj_df = cc_row[['Contest_Id','CandidateSelection_Id','Election_Id']].drop_duplicates()
+        ccsj_df = cc_row[['Contest_Id','Selection_Id','Election_Id']].drop_duplicates()
         cdf_d['CandidateContestSelectionJoin'] = dbr.dframe_to_sql(ccsj_df,session,cdf_schema,'CandidateContestSelectionJoin')
 
         # load candidate counts
         # TODO check that every merge for row creates suffix as appropriate so no coincidently named columns are dropped
-        cc_row.rename(columns={'CandidateSelection_Id':'Selection_Id'},inplace=True)
         cc_vote_counts = cc_row[col_list]
         cc_vote_counts=cc_vote_counts.melt(id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],value_vars=['election-day', 'early', 'absentee-mail', 'provisional', 'total'],var_name='CountItemType',value_name='Count')
         cc_vote_counts = cc_vote_counts.merge(cdf_d['CountItemType'],left_on='CountItemType',right_on='Txt')    # TODO loses rows of 'other' types
