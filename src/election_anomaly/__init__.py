@@ -2,6 +2,8 @@
 import os.path
 import sys
 
+import munge_routines
+
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '.'))
@@ -63,7 +65,7 @@ if __name__ == '__main__':
         print('\tFilling enumeration tables')
         CDF.fill_cdf_enum_tables(session,meta_cdf,'cdf',enumeration_tables)
         print('Loading state context info into CDF schema')
-        ct.context_schema_to_cdf(session,s,enumeration_tables)
+        munge_routines.context_schema_to_cdf(session,s,enumeration_tables)
         session.commit()
 
     # user picks election

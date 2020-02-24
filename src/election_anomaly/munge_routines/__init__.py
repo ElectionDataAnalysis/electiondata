@@ -8,6 +8,10 @@ import time
 import analyze as an
 import re
 
+from context import fill_externalIdentifier_table,fill_composing_reporting_unit_join
+from db_routines import dframe_to_sql
+
+
 def add_munged_column(row_df,munge_dictionary,munge_key,new_col_name):
     """Alters dataframe <row_df> (in place), adding or redefining <new_col_name>
     via the string corresponding to <munge_key>, per <munge_dictionary>"""
@@ -92,7 +96,7 @@ def enum_col_to_id_othertext(df,type_col,enum_df):
             df.rename(columns={c*3:c},inplace=True)
     return df
 
-def bulk_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,election_type,state_id):
+def raw_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,election_type,state_id):
     """
     NOTE: Tables from context assumed to exist already in db
     (e.g., BallotMeasureSelection, Party, ExternalIdentifier, ComposingReportingUnitJoin, Election, ReportingUnit etc.)
@@ -281,6 +285,13 @@ def raw_dframe_to_cdf(session,raw_rows,s,mu,cdf_schema,context_schema,e,state_id
     assert isinstance(e,an.Election),'Argument should be an Election instance'
     cdf_d = {}  # to hold various dataframes from cdf db tables
 
+    # add to context.ExternalIdentifier table for this munger
+    # TODO will have to rename context schema to reflect munger info
+    mei_path=mu.path_to_munger_dir+'ExternalIdentifier.txt'
+    if not os.path.isfile(mei_path):
+        print('No ExternalIdentifier.txt file found in munger directory, will proceed without it')
+    else:
+        fill_externalIdentifier_table(session,cdf_schema,context_schema,mei_path)
 
     # get id for IdentifierType 'other' if it was not passed as parameter
     if id_type_other_id == 0:
@@ -296,18 +307,16 @@ def raw_dframe_to_cdf(session,raw_rows,s,mu,cdf_schema,context_schema,e,state_id
         tables_d[table_def[0]] = table_def[1]
 
     # get dataframes needed before bulk processing
+    # TODO obsolete?
     for t in ['ElectionType', 'Election','ReportingUnitType','ReportingUnit']:
         cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema, index_col='Id')
 
-
-    election_id = e.Election_Id
-
-    # if state_id is not passed as parameter, select-or-insert state, get id (default Reporting Unit for ballot questions)
+    # if state_id is not passed as parameter, get id (default Reporting Unit for ballot questions)
     if state_id == 0:
         state_type_id = cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt']=='state'].index.values[0]
         state_id = cdf_d['ReportingUnit'][cdf_d['ReportingUnit']['ReportingUnitType_Id']==state_type_id].index.values[0]
 
-    bulk_elements_to_cdf(session, mu,raw_rows, cdf_schema, context_schema, e.Election_Id, e.ElectionType,state_id)
+    raw_elements_to_cdf(session,mu,raw_rows,cdf_schema,context_schema,e.Election_Id,e.ElectionType,state_id)
 
     return
 
@@ -316,3 +325,92 @@ if __name__ == '__main__':
     print('Done!')
     exit()
 
+
+def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schema_def_info/'):
+    """Takes the info from the tables in the state's context schema and inserts anything new into the cdf schema.
+    Assumes enumeration tables are already filled.
+    """
+    # TODO assumes number elected is same for primary and general for same office, but that's not always true
+    context_cdframe = {}    # dictionary of dataframes from context info
+    cdf_d = {}  # dict of dframes for CDF db tables
+
+    # create and fill enum dframes and associated dictionaries
+    enum_dframe = {}        # dict of dataframes of enumerations, taken from db
+    enum_id_d = {}  # maps raw Type string to an Id
+    enum_othertype_d = {}  # maps raw Type string to an othertype string
+    for e in enum_table_list:
+        enum_id_d[e] = {}  # maps raw Type string to an Id
+        enum_othertype_d[e] = {}  # maps raw Type string to an othertype string
+
+        # pull enumeration table into a DataFrame
+        # enum_dframe[e] = pd.read_sql_table(e, session.bind, schema='cdf', index_col='Id')
+        enum_dframe[e] = pd.read_sql_table(e, session.bind, schema='cdf', index_col=None)
+    # process BallotMeasureSelections into cdf schema
+    q = 'INSERT INTO cdf."BallotMeasureSelection" ("Selection") (SELECT DISTINCT "Selection" FROM context."BallotMeasureSelection")'
+    dbr.raw_query_via_SQLALCHEMY(session,q,[],[])
+
+    # pull list of tables in CDF
+    if not cdf_def_dirpath[-1] == '/': cdf_def_dirpath += '/'
+    with open(cdf_def_dirpath+'tables.txt','r') as f:
+        table_def_list = eval(f.read())
+
+    # process other tables; need Office after ReportingUnit and after Party
+    for t in ['ReportingUnit','Party','Office','Election']:
+        table_def = next(x for x in table_def_list if x[0] == t)
+        # create DataFrames of relevant context information
+        context_cdframe[t] = pd.read_sql_table(t,session.bind,schema='context',index_col='index')
+
+        for e in table_def[1]['enumerations']:  # e.g., e = "ReportingUnitType"
+            # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
+            if e in context_cdframe[t].columns: # some enumerations (e.g., CountItemStatus for t = ReportingUnit) are not available from context.
+                context_cdframe[t] = mr.enum_col_to_id_othertext(context_cdframe[t],e,enum_dframe[e])
+        #  commit info in context_cdframe to corresponding cdf table to db
+        cdf_d[t] = dframe_to_sql(context_cdframe[t], session, 'cdf', t)
+
+        if t == 'Office':
+            # Check that all ElectionDistrictTypes are recognized
+            # TODO can this be more efficient, using dframes directly rather than format_type_for_insert?
+            for edt in context_cdframe['Office']['ElectionDistrictType'].unique():
+                assert edt in list(enum_dframe['ReportingUnitType']['Txt'])
+
+            # insert corresponding ReportingUnits (the ones that don't already exist in cdf ReportingUnit table).
+            cdf_d['ReportingUnit'] = pd.read_sql_table('ReportingUnit',session.bind,'cdf',index_col=None)
+            # note: cdf Id column is *not* the index for the dataframe cdf_d['ReportingUnit'].
+
+            new_ru = context_cdframe['Office'].drop(['Name'],axis=1)
+            ru_list = list(cdf_d['ReportingUnit']['Name'].unique())
+            new_ru = new_ru[~new_ru['ElectionDistrict'].isin(ru_list)]
+            new_ru = new_ru.rename(columns={'ElectionDistrict':'Name','ElectionDistrictType':'ReportingUnitType'})
+            new_ru = mr.enum_col_to_id_othertext(new_ru,'ReportingUnitType',enum_dframe['ReportingUnitType'])
+            cdf_d['ReportingUnit'] = dframe_to_sql(new_ru,session,'cdf','ReportingUnit',index_col=None)
+
+            # create corresponding CandidateContest records for general and primary election contests (and insert in cdf db if they don't already exist)
+            cc_data = context_cdframe['Office'].merge(cdf_d['Office'],left_on='Name',right_on='Name').merge(cdf_d['ReportingUnit'],left_on='Name',right_on='Name',suffixes=['','_ru'])
+            # restrict to the columns we need, and set order
+            cc_data = cc_data[['Name','VotesAllowed','NumberElected','NumberRunoff','Id','Id_ru','IsPartisan']]
+            # rename columns as necesssary
+            cc_data.rename(columns={'Id_ru':'ElectionDistrict_Id','Id':'Office_Id'},inplace=True)
+            # insert values for 'PrimaryParty_Id' column
+            cc_data.loc[:,'PrimaryParty_Id'] = None
+            cc_d_gen = cc_data.copy()
+            for party_id in cdf_d['Party']['Id'].to_list():
+                pcc = cc_d_gen[cc_d_gen['IsPartisan']]    # non-partisan contests don't have party primaries, so omit them.
+                pcc['PrimaryParty_Id'] = party_id
+                pcc['Name'] = pcc['Name'] + ' Primary;' + cdf_d['Party'][cdf_d['Party']['Id'] == party_id].iloc[0]['Name']
+                cc_data = pd.concat([cc_data,pcc])
+
+
+
+            cdf_d['CandidateContest'] = dframe_to_sql(cc_data,session,'cdf','CandidateContest')
+
+            # create corresponding CandidateContest records for primary contests (and insert in cdf db if they don't already exist)
+
+
+    # load external identifiers from context
+    cdf_d['ExternalIdentifier'] = fill_externalIdentifier_table(session,'cdf','context',s.path_to_state_dir + 'context/ExternalIdentifier.txt')
+
+    # Fill the ComposingReportingUnitJoin table
+    cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,'cdf',pickle_dir=s.path_to_state_dir+'pickles/')
+    # TODO put pickle directory info into README.md; or better yet, create nesting table in context schema
+    session.flush()
+    return
