@@ -7,6 +7,7 @@ import re
 import os
 
 from db_routines import dframe_to_sql
+import munge_routines as mr
 from munge_routines import format_type_for_insert_PANDAS, id_from_select_only_PANDAS
 import db_routines as dbr
 import pandas as pd
@@ -23,15 +24,6 @@ def table_and_name_to_foreign_id(dict,row):
     else:
         return id
 
-def ei_id_and_othertype(df,row,other_id):
-    """
-    row must be a Series object, and must have entry 'ExternalIdentifierType'
-    df must be a dataframe with columns Id and Txt
-    other_id must be the Id for the dataframe entry Txt = 'other'
-    """
-
-    return format_type_for_insert_PANDAS(df,row['ExternalIdentifierType'],other_id)
-
 def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schema_def_info/'):
     """Takes the info from the tables in the state's context schema and inserts anything new into the cdf schema.
     Assumes enumeration tables are already filled.
@@ -42,7 +34,6 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
 
     # create and fill enum dframes and associated dictionaries
     enum_dframe = {}        # dict of dataframes of enumerations, taken from db
-    other_id = {}       # dict of the Id for 'other' in the various enumeration tables
     enum_id_d = {}  # maps raw Type string to an Id
     enum_othertype_d = {}  # maps raw Type string to an othertype string
     for e in enum_table_list:
@@ -50,13 +41,8 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
         enum_othertype_d[e] = {}  # maps raw Type string to an othertype string
 
         # pull enumeration table into a DataFrame
-        enum_dframe[e] = pd.read_sql_table(e, session.bind, schema='cdf', index_col='Id')
-        # find the id for 'other', if it exists
-        try:
-            other_id[e] = enum_dframe[e].index[enum_dframe[e]['Txt'] == 'other'].to_list()[0]
-        except:  # CountItemStatus has no "other" field
-            other_id[e] = None  # TODO how does this flow through?
-
+        # enum_dframe[e] = pd.read_sql_table(e, session.bind, schema='cdf', index_col='Id')
+        enum_dframe[e] = pd.read_sql_table(e, session.bind, schema='cdf', index_col=None)
     # process BallotMeasureSelections into cdf schema
     q = 'INSERT INTO cdf."BallotMeasureSelection" ("Selection") (SELECT DISTINCT "Selection" FROM context."BallotMeasureSelection")'
     dbr.raw_query_via_SQLALCHEMY(session,q,[],[])
@@ -75,12 +61,7 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
         for e in table_def[1]['enumerations']:  # e.g., e = "ReportingUnitType"
             # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
             if e in context_cdframe[t].columns: # some enumerations (e.g., CountItemStatus for t = ReportingUnit) are not available from context.
-                for v in context_cdframe[t][e].unique(): # e.g., v = 'county' or v = 'precinct'
-                    enum_id_d[e][v],enum_othertype_d[e][v] = format_type_for_insert_PANDAS(enum_dframe[e],v,other_id[e])
-                #%% create new id, othertype columns
-                context_cdframe[t][e+'_Id'] = context_cdframe[t][e].map(enum_id_d[e])
-                context_cdframe[t]['Other'+e] = context_cdframe[t][e].map(enum_othertype_d[e])
-
+                context_cdframe[t] = mr.enum_col_to_id_othertext(context_cdframe[t],e,enum_dframe[e])
         #  commit info in context_cdframe to corresponding cdf table to db
         cdf_d[t] = dframe_to_sql(context_cdframe[t], session, 'cdf', t)
 
@@ -88,20 +69,18 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
             # Check that all ElectionDistrictTypes are recognized
             # TODO can this be more efficient, using dframes directly rather than format_type_for_insert?
             for edt in context_cdframe['Office']['ElectionDistrictType'].unique():
-                enum_id_d['ReportingUnitType'][edt], enum_othertype_d['ReportingUnitType'][edt] = format_type_for_insert_PANDAS(enum_dframe['ReportingUnitType'], edt, other_id['ReportingUnitType'])
-                if [enum_id_d['ReportingUnitType'][edt], enum_othertype_d['ReportingUnitType'][edt]] == [None,None]:
-                    raise Exception('Office table has unrecognized ElectionDistrictType: ' + edt)
+                assert edt in list(enum_dframe['ReportingUnitType']['Txt'])
 
-            # insert corresponding ReportingUnits, that don't already exist in cdf ReportingUnit table.
+            # insert corresponding ReportingUnits (the ones that don't already exist in cdf ReportingUnit table).
             cdf_d['ReportingUnit'] = pd.read_sql_table('ReportingUnit',session.bind,'cdf',index_col=None)
             # note: cdf Id column is *not* the index for the dataframe cdf_d['ReportingUnit'].
-            new_ru = []
-            for index, context_row in context_cdframe['Office'].iterrows():   # TODO more pyhonic/pandic way?
-                if context_row['ElectionDistrict'] not in list(cdf_d['ReportingUnit']['Name']):
-                    new_ru.append ( pd.Series({'Name':context_row['ElectionDistrict'],'ReportingUnitType_Id':enum_id_d['ReportingUnitType'][context_row['ElectionDistrictType']],'OtherReportingUnitType':enum_othertype_d['ReportingUnitType'][context_row['ElectionDistrictType']]}))
-            # send any new ReportingUnits into the db
-            new_ru_dframe = pd.DataFrame(new_ru)
-            cdf_d['ReportingUnit'] = dframe_to_sql(new_ru_dframe,session,'cdf','ReportingUnit',index_col=None)
+
+            new_ru = context_cdframe['Office'].drop(['Name'],axis=1)
+            ru_list = list(cdf_d['ReportingUnit']['Name'].unique())
+            new_ru = new_ru[~new_ru['ElectionDistrict'].isin(ru_list)]
+            new_ru = new_ru.rename(columns={'ElectionDistrict':'Name','ElectionDistrictType':'ReportingUnitType'})
+            new_ru = mr.enum_col_to_id_othertext(new_ru,'ReportingUnitType',enum_dframe['ReportingUnitType'])
+            cdf_d['ReportingUnit'] = dframe_to_sql(new_ru,session,'cdf','ReportingUnit',index_col=None)
 
             # create corresponding CandidateContest records for general election contests (and insert in cdf db if they don't already exist)
             cc_data = context_cdframe['Office'].merge(cdf_d['Office'],left_on='Name',right_on='Name').merge(cdf_d['ReportingUnit'],left_on='Name',right_on='Name',suffixes=['','_ru'])
@@ -126,7 +105,8 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
 
     # load external identifiers from context
 
-    cdf_d['ExternalIdentifier'] = fill_externalIdentifier_table(session,'cdf','context',other_id['IdentifierType'],s.path_to_state_dir + 'context/ExternalIdentifier.txt',pickle_dir=s.path_to_state_dir+'pickles/')
+    other_id = enum_dframe['IdentifierType'][enum_dframe['IdentifierType']['Txt']=='other'].iloc[0]['Id']
+    cdf_d['ExternalIdentifier'] = fill_externalIdentifier_table(session,'cdf','context',other_id,s.path_to_state_dir + 'context/ExternalIdentifier.txt',pickle_dir=s.path_to_state_dir+'pickles/')
     # load CandidateContest external ids into cdf_d['ExternalIdentifier'] too
     ei_df = cdf_d['Office'].merge(cdf_d['ExternalIdentifier'],left_on='Id',right_on='ForeignId',suffixes=['_office','ei']).merge(cdf_d['CandidateContest'],left_on='Id',right_on='Office_Id',suffixes=['','_cc'])[['Id_cc','Value','IdentifierType_Id','OtherIdentifierType']]
     ei_df.columns = ['ForeignId','Value','IdentifierType_Id','OtherIdentifierType']
@@ -149,7 +129,6 @@ def fill_externalIdentifier_table(session,schema,context_schema,id_other_id_type
         ei_df.to_sql('ExternalIdentifier',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
     else:
         print('Pulling ExternalIdentifier table from context folder')
-        # TODO why does this step take so long?
         # get table from context directory with the tab-separated definitions of external identifiers
         ei_df = pd.read_csv(fpath,sep = '\t')
 
