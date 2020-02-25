@@ -12,24 +12,26 @@ import db_routines as dbr
 import pandas as pd
 
 
-def fill_externalIdentifier_table(session,cdf_schema,context_schema,fpath):
+def fill_externalIdentifier_table(session,cdf_schema,context_schema,mu):
     """
-    fpath is a path to the tab-separated context file holding the external identifier info
-    s is the state
+    mu is a munger
     """
-    # TODO are all offices/contests getting into cdf.ExternalIdentifier?
-    print('Pulling ExternalIdentifier table from context folder')
-    # get table from context directory with the tab-separated definitions of external identifiers
+    # get table from munger directory with the tab-separated definitions of external identifiers
+    fpath=mu.path_to_munger_dir+'ExternalIdentifier.txt'
+    print('Pulling ExternalIdentifier table from {}'.format(fpath))
     ei_df = pd.read_csv(fpath,sep = '\t')
 
     print('Writing to ExternalIdentifier table in context_schema')
     ei_df.to_sql('ExternalIdentifier',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
 
     cdf = {}
-    cdf['IdentifierType'] = pd.read_sql_table('IdentifierType',session.bind,cdf_schema,index_col=None)
     filtered_ei = {}
 
-    # pull from the cdf db any tables with external identifiers
+    # pull from the cdf the enumeration of ExternalIdentifier types
+    # TODO necessary? we just need the other_id
+    cdf['IdentifierType'] = pd.read_sql_table('IdentifierType',session.bind,cdf_schema,index_col=None)
+
+    # pull from the cdf db any tables whose entries have external identifiers
     for t in ei_df['Table'].unique():
         cdf[t] = pd.read_sql_table(t,session.bind,cdf_schema,index_col=None)
         # drop all but Name and Id columns
@@ -38,8 +40,9 @@ def fill_externalIdentifier_table(session,cdf_schema,context_schema,fpath):
         # manipulate temporary dataframe ei_filt into form for insertion to cdf.ExternalIdentifier
         ei_filt = ei_df[ei_df['Table']==t]   # filter out rows for the given table
         # join Table on name to get ForeignId
-        ei_filt = ei_filt.merge(cdf[t],left_on='Name',right_on='Name')
+        ei_filt = ei_filt.merge(cdf[t],left_on='Name',right_on='Name') # TODO 'Name' on right won't be found in BalLotMeasureSelection or Candidate table
         ei_filt.rename(columns={'Id':'ForeignId','ExternalIdentifierValue':'Value','ExternalIdentifierType':'IdentifierType'},inplace=True)
+
         # join IdentifierType columns
         ei_filt = mr.enum_col_to_id_othertext(ei_filt,'IdentifierType',cdf['IdentifierType'])
 
@@ -50,6 +53,7 @@ def fill_externalIdentifier_table(session,cdf_schema,context_schema,fpath):
     # insert appropriate dataframe columns into ExternalIdentifier table in the CDF db
     print('Inserting into ExternalIdentifier table in schema ' + cdf_schema)
     dframe_to_sql(ei_df,session,cdf_schema,'ExternalIdentifier')
+
     session.flush()
     return ei_df
 

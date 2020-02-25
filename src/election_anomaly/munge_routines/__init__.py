@@ -300,11 +300,7 @@ def raw_dframe_to_cdf(session,raw_rows,s,mu,cdf_schema,context_schema,e,state_id
 
     # add to context.ExternalIdentifier table for this munger
     # TODO rename context schema to reflect munger info
-    mei_path=mu.path_to_munger_dir+'ExternalIdentifier.txt'
-    if not os.path.isfile(mei_path):
-        print('No ExternalIdentifier.txt file found in munger directory, will proceed without it')
-    else:
-        fill_externalIdentifier_table(session,cdf_schema,context_schema,mei_path)
+    fill_externalIdentifier_table(session,cdf_schema,context_schema,mu)
 
     # get id for IdentifierType 'other' if it was not passed as parameter
     if id_type_other_id == 0:
@@ -418,9 +414,6 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
 
             # create corresponding CandidateContest records for primary contests (and insert in cdf db if they don't already exist)
 
-
-    # load external identifiers from context
-    cdf_d['ExternalIdentifier'] = fill_externalIdentifier_table(session,'cdf','context',s.path_to_state_dir + 'context/ExternalIdentifier.txt')
 
     # Fill the ComposingReportingUnitJoin table
     cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,'cdf',pickle_dir=s.path_to_state_dir+'pickles/')
