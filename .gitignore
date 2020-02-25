@@ -17,3 +17,4 @@ src/election_anomaly/context/__pycache__/__init__.cpython-37.pyc
 .idea
 src/local_data/database.ini
 temp
+/venv/
