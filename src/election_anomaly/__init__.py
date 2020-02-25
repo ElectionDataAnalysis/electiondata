@@ -12,7 +12,6 @@ import db_routines as dbr
 import munge_routines as mr
 from db_routines import Create_CDF_db as CDF
 import states_and_files as sf
-import context as ct
 import analyze as an
 
 from sqlalchemy.orm import sessionmaker
@@ -26,14 +25,13 @@ except:
 # TODO will need routines to add new munger externalidentifiers to an existing cdf db; will need routines to add new reportingunits to an existing cdf db.
 if __name__ == '__main__':
     # initialize state and create database for it (if not already exists)
-    # TODO error handling: what if db already exists?
     default = 'NC'
     abbr = input(
         'Enter short name for your state/district/territory (only alphanumeric and underscore, no spaces, default is ' + default + ')\n'
     ) or default
-    print('Creating instance of State for '+abbr)
+    print('Creating instance of State for {}'.format(abbr))
     s = sf.State(abbr,'../local_data/')
-    create_db = input('Make database and schemas for '+abbr+' (y/n)?\n')
+    create_db = input('Make database and schemas for {} (y/n)?\n'.format(abbr))
     if create_db == 'y':
         s.create_db_and_schemas()
 
@@ -44,14 +42,14 @@ if __name__ == '__main__':
 
     if create_db == 'y':
         # create build tables in cdf schema
-        print('Creating common data format tables in schema `cdf` in database '+s.short_name)
+        print('Creating common data format tables in schema `cdf` in database {}'.format(s.short_name))
         enumeration_tables = CDF.enum_table_list()
         meta_cdf = CDF.create_common_data_format_schema(session,'cdf',enumeration_tables,delete_existing=True)
         session.commit()
 
         # load data from context directory into context schema
         # TODO make it possible to update the context schema
-        print('Loading context data from '+s.short_name+'/context directory into `context` schema in database '+s.short_name)
+        print('Loading context data from {0}/context directory into `context` schema in database {0}'.format(s.short_name))
         # for file in context folder, create table in context schema.
         context = {}
         for f in os.listdir(s.path_to_state_dir+'/context/'):
@@ -70,16 +68,16 @@ if __name__ == '__main__':
 
     # user picks election
     election_list = [f for f in os.listdir(s.path_to_state_dir + 'data/') if os.path.isdir(s.path_to_state_dir + 'data/'+f)]
-    assert election_list != [], 'No elections available for in directory '+s.short_name
+    assert election_list != [], 'No elections available for in directory {}'.format(s.short_name)
     default = election_list[0]
     need_election = True
     while need_election:
         print('Available elections are:')
         for e in election_list: print(e)
-        election_name = input('Enter short name of election (default is ' + default + ')\n') or default
+        election_name = input('Enter short name of election (default is {})\n'.format(default)) or default
         if election_name in election_list: need_election = False
         else: print('Election not available; try again.')
-    print('Creating Election instance for '+election_name)
+    print('Creating Election instance for {}'.format(election_name))
     e = an.Election(session,s,election_name)
 
 
@@ -87,31 +85,31 @@ if __name__ == '__main__':
     if need_to_load_data == 'y':
         # user picks munger
         munger_list = [f for f in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/') if os.path.isdir(s.path_to_state_dir + 'data/'+election_name+'/'+f)]
-        assert munger_list != [], 'No mungers available for in directory '+s.short_name +'/'+election_name
+        assert munger_list != [], 'No mungers available for in directory {}'.format(s.short_name +'/'+election_name)
         default = munger_list[0]
         need_munger = True
         while need_munger:
             print('Available mungers are:')
             for m in munger_list: print(m)
-            munger_name = input('Enter short name of munger (default is ' + default + ')\n') or default
+            munger_name = input('Enter short name of munger (default is {})\n'.format(default)) or default
             if munger_name in munger_list: need_munger = False
             else: print('No such munger; try again.')
 
         munger_path = '../mungers/'+munger_name+'/'
-        print('Creating munger instance from '+munger_path)
+        print('Creating munger instance from {}'.format(munger_path))
         mu = sf.Munger(munger_path)
 
         dfs = pd.read_sql_table('datafile',session.bind,schema='context',index_col='index')
         for datafile in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/'+mu.name+'/'):
             # check datafile is listed in datafiles
-            assert e.name +';' + datafile in dfs['name'].to_list(),'Datafile not recognized in the table context.datafile: ' + datafile
+            assert e.name +';' + datafile in dfs['name'].to_list(),'Datafile not recognized in the table context.datafile: {}'.format(datafile)
             df_info = dfs[dfs['name'] == e.name + ';' + datafile].iloc[0]
             if df_info['separator'] == 'tab':
                 delimiter = '\t'
             elif df_info['separator'] == 'comma':
                 delimiter = ','
             raw_data_dframe = pd.read_csv(s.path_to_state_dir + 'data/' +election_name+'/'+munger_name+'/'+ datafile,sep=delimiter)
-            print('Loading data into cdf schema from file: '+datafile)
+            print('Loading data into cdf schema from file: {}'.format(datafile))
             mr.raw_dframe_to_cdf(session,raw_data_dframe,s, mu,'cdf','context',e)
 
     get_top_results = input('Get top-level results (y/n)?\n')
@@ -145,18 +143,18 @@ if __name__ == '__main__':
 
             pickle_path = e.pickle_dir+'_anomalies_by_'+electionrollup.roll_up_to_ru_type+'_from_'+electionrollup.atomic_ru_type
             if os.path.isfile(pickle_path):
-                print('Anomalies will not be calculated, but will be read from existing file:\n\t'+pickle_path)
+                print('Anomalies will not be calculated, but will be read from existing file {}:\n\t'.format(pickle_path))
                 with open(pickle_path,'rb') as f:
                     anomalies=pickle.load(f)
             else:
                 anomalies = an.AnomalyDataFrame(electionrollup)
                 with open(pickle_path,'wb') as f:
                     pickle.dump(anomalies,f)
-                print('AnomalyDataFrame calculated, stored as pickle at '+pickle_path)
+                print('AnomalyDataFrame calculated, stored as pickle at '.format(pickle_path))
 
             anomalies.worst_bar_for_selected_contests()
             default = 3
-            n = input('Draw how many most-anomalous plots?\n') or default
+            n = input('Draw how many most-anomalous plots (default is {})?\n'.format(default)) or default
             try:
                 n = int(n)
                 anomalies.draw_most_anomalous(3,'pct')

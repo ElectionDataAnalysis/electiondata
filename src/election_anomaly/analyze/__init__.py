@@ -7,7 +7,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import db_routines as dbr
-import pathlib
 import states_and_files as sf
 try:
     import cPickle as pickle
@@ -180,11 +179,11 @@ class Election(object):
         elif mode=='by_vote_type':
             output = rollup.groupby(['Contest','Selection','CountItemType']).sum()
 
-        outpath=self.state.path_to_state_dir+'output/'
+        outpath='{}output/'.format(self.state.path_to_state_dir)
         if os.path.isdir(outpath):
-            output.to_csv(outpath+self.short_name+'_'+mode+'_results.txt',sep='\t')
+            output.to_csv('{0}{1}_{2}_results.txt'.format(outpath,self.short_name,mode),sep='\t')
         else:
-            print('Cannot print; output directory does not exist: '+outpath)
+            print('Cannot print; directory {} does not exist'.format(outpath))
         return output
 
     def __init__(self, session,state,short_name):
@@ -397,16 +396,18 @@ def choose_by_name(name_list,default=0):
     print('Available items:')
     name_list.sort()
     for name in name_list:
-        print(str(name_list.index(name))+'\t'+name)
+        print('{0}\t{1}'.format(name_list.index(name),name))
     default=0
-    id = input('Enter Id of desired item \n\t(default is ' + str(default) + ')\n') or default
+    id = input('Enter Id of desired item \n\t(default is {})\n'.format(default)) or default
     # TODO add error-checking on user input
     return name_list[int(id)]
 
-def anomaly_list(contest_name,c,aframe_columnlist=['ContestName','column_field','filter_field','filter_value','anomaly_algorithm',
-                                     'anomaly_value_raw','raw_look_at','anomaly_value_pct','pct_look_at']):
+def anomaly_list(contest_name, c, aframe_columnlist=None):
+    if aframe_columnlist is None:
+        aframe_columnlist = ['ContestName', 'column_field', 'filter_field', 'filter_value', 'anomaly_algorithm',
+                             'anomaly_value_raw', 'raw_look_at', 'anomaly_value_pct', 'pct_look_at']
     anomaly_list = []
-    print('Calculating anomalies for ' + contest_name)
+    print('Calculating anomalies for {}'.format(contest_name))
 
     for column_field in ['ReportingUnit','CountItemType','Selection']:
         temp_list = ['ReportingUnit','CountItemType','Selection']
@@ -424,5 +425,3 @@ def anomaly_list(contest_name,c,aframe_columnlist=['ContestName','column_field',
 if __name__ == '__main__':
 
     print('Done')
-
-

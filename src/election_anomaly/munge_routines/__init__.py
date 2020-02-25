@@ -276,13 +276,13 @@ def raw_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,ele
     vote_counts_fat.rename(columns={'Id':'VoteCount_Id'},inplace=True)
     session.commit()
     end = time.time()
-    print('\tSeconds required to upload VoteCount: '+ str(round(end - start)))
+    print('\tSeconds required to upload VoteCount: {}'.format(round(end - start)))
     print('Upload to SelectionElectionContestVoteCountJoin')
     start = time.time()
 
     cdf_d['SelectionElectionContestVoteCountJoin'] = dbr.dframe_to_sql(vote_counts_fat,session,cdf_schema,'SelectionElectionContestVoteCountJoin')
     end = time.time()
-    print('\tSeconds required to upload SelectionElectionContestVoteCountJoin: '+ str(round(end - start)))
+    print('\tSeconds required to upload SelectionElectionContestVoteCountJoin: {}'.format(round(end - start)))
     print('Drop columns from cdf table')
     q = 'ALTER TABLE {0}."VoteCount" DROP COLUMN "Election_Id", DROP COLUMN "Contest_Id" ,  DROP COLUMN "Selection_Id" '
     sql_ids=[cdf_schema]
@@ -328,11 +328,6 @@ def raw_dframe_to_cdf(session,raw_rows,s,mu,cdf_schema,context_schema,e,state_id
     raw_elements_to_cdf(session,mu,raw_rows,cdf_schema,context_schema,e.Election_Id,e.ElectionType,state_id)
 
     return
-
-if __name__ == '__main__':
-
-    print('Done!')
-    exit()
 
 
 def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schema_def_info/'):
@@ -420,3 +415,9 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
     # TODO put pickle directory info into README.md; or better yet, create nesting table in context schema
     session.flush()
     return
+
+if __name__ == '__main__':
+
+    print('Done!')
+    exit()
+

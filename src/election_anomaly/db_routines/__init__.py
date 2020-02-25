@@ -104,26 +104,26 @@ def create_schema(session,name,delete_existing=False):
         if delete_existing:
             recreate = 'y'
         else:
-            recreate = input('WARNING: schema ' + name + ' already exists; erase and recreate (y/n)?\n')
+            recreate = input('WARNING: schema {} already exists; erase and recreate (y/n)?\n'.format(name))
         if recreate == 'y':
             session.bind.engine.execute(sqlalchemy.schema.DropSchema(name,cascade=True))
             session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
-            print('New schema created: ' + name)
+            print('New schema \'{}\' created: '.format(name))
             new_schema_created = True
         else:
-            print('Schema preserved: '+ name)
+            print('Schema \'{}\' preserved'.format(name))
             new_schema_created = False
             insp = reflection.Inspector.from_engine(eng)    # TODO got warning about deprecation of reflection.
             tablenames = insp.get_table_names(schema=name)
             viewnames = insp.get_view_names(schema=name)
             if tablenames:
-                print('WARNING: Some tables exist: \n\t'+'\n\t'.join([name + '.' + t for t in tablenames]))
+                print('WARNING: Some tables exist: \n\t{}'.format('\n\t'.join([name + '.' + t for t in tablenames])))
             if viewnames:
-                print('WARNING: Some views exist: \n\t' + '\n\t'.join([name + '.' + t for t in viewnames]))
+                print('WARNING: Some views exist: \n\t{}'.format('\n\t'.join([name + '.' + t for t in viewnames])))
 
     else:
         session.bind.engine.execute(sqlalchemy.schema.CreateSchema(name))
-        print('New schema created: ' + name)
+        print('New schema \'{}\' created.'.format(name))
         new_schema_created = True
     session.flush()
     return new_schema_created
