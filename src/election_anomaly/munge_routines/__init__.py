@@ -53,7 +53,7 @@ def get_internal_ids_from_context(row_df,ctxt_ei_df,table_df,table_name,internal
     if unmatched.size>0:
         unmatched_path=unmatched_dir+'unmatched_'+table_name+'.txt'
         np.savetxt(unmatched_path,unmatched,fmt="%s")
-        print('Some elements unmatched, saved to {}'.format(unmatched_path))
+        print('Some elements unmatched, saved to {}.\nPut these in both the munger ExternalIdentifier.txt and in the {}.txt file in the context directory'.format(unmatched_path,table_name))
         # TODO redo all dynamic print statements
 
     row_df = row_df.drop(['ExternalIdentifierValue','Table','ExternalIdentifierType','index',table_name+'_external'],axis=1)
