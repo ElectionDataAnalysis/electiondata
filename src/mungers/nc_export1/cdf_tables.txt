@@ -1,8 +1,8 @@
-CDFTable	ExternalIdentifier	InternalFieldName	Enumerations	OtherFields
-Office	<Contest Name>	Name	{}	{}
-ReportingUnit	<County>;<Precinct>	Name	{'ReportingUnitType': 'precinct'}	{}
-Party	<Choice Party>	Name	{}	{}
-Candidate	<Choice>	BallotName	{}	{'Party_Id': 'ids_d["Party_Id"]'}
-CandidateContest	<Contest Name>	Name	{}	{'VotesAllowed':'row["Vote For"]','Office_Id':'ids_d["Office_Id"]'}
-BallotMeasureContest	<Contest Name>	Name	{}	{'ElectionDistrict_Id':'ids_d["state"]'}
-BallotMeasureSelection	<Choice>	Selection	{}	{}
+CDFTable	ExternalIdentifier	InternalFieldName	Enumerations
+Office	<Contest Name>	Name	{}
+ReportingUnit	<County>;<Precinct>	Name	{'ReportingUnitType': 'precinct'}
+Party	<Choice Party>	Name	{}
+Candidate	<Choice>	BallotName	{}
+CandidateContest	<Contest Name>	Name	{}
+BallotMeasureContest	<Contest Name>	Name	{}
+BallotMeasureSelection	<Choice>	Selection	{}
