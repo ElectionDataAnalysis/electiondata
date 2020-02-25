@@ -4439,3 +4439,155 @@ Office	North Carolina;US Congress House of Representatives District 10	nc_primar
 Office	North Carolina;US Congress House of Representatives District 11	nc_primary	US HOUSE OF REPRESENTATIVES DISTRICT 11
 Office	North Carolina;US Congress House of Representatives District 12	nc_primary	US HOUSE OF REPRESENTATIVES DISTRICT 12
 Office	North Carolina;US Congress House of Representatives District 13	nc_primary	US HOUSE OF REPRESENTATIVES DISTRICT 13
+ReportingUnit	North Carolina;Alleghany County;ABSENTEE MAIL	nc_primary	ALLEGHANY;ABSENTEE MAIL
+ReportingUnit	North Carolina;Alleghany County;ONE STOP	nc_primary	ALLEGHANY;ONE STOP
+ReportingUnit	North Carolina;Alleghany County;PROVISIONAL	nc_primary	ALLEGHANY;PROVISIONAL
+ReportingUnit	North Carolina;Buncombe County;AVML	nc_primary	BUNCOMBE;AVML
+ReportingUnit	North Carolina;Buncombe County;BMBL	nc_primary	BUNCOMBE;BMBL
+ReportingUnit	North Carolina;Buncombe County;ECBL	nc_primary	BUNCOMBE;ECBL
+ReportingUnit	North Carolina;Buncombe County;NABL	nc_primary	BUNCOMBE;NABL
+ReportingUnit	North Carolina;Buncombe County;SBBL	nc_primary	BUNCOMBE;SBBL
+ReportingUnit	North Carolina;Buncombe County;WABL	nc_primary	BUNCOMBE;WABL
+ReportingUnit	North Carolina;Buncombe County;WVTH	nc_primary	BUNCOMBE;WVTH
+ReportingUnit	North Carolina;Buncombe County;WGSC	nc_primary	BUNCOMBE;WGSC
+ReportingUnit	North Carolina;Burke County;OS SR CENTER PAPER	nc_primary	BURKE;OS SR CENTER PAPER
+ReportingUnit	North Carolina;Columbus County;BOLT-OS	nc_primary	COLUMBUS;BOLT-OS
+ReportingUnit	North Carolina;Columbus County;CHAD-OS	nc_primary	COLUMBUS;CHAD-OS
+ReportingUnit	North Carolina;Columbus County;ECOL-OS	nc_primary	COLUMBUS;ECOL-OS
+ReportingUnit	North Carolina;Columbus County;FBLUFF-OS	nc_primary	COLUMBUS;FBLUFF-OS
+ReportingUnit	North Carolina;Columbus County;LOBBY OS	nc_primary	COLUMBUS;LOBBY OS
+ReportingUnit	North Carolina;Columbus County;ABSENTEE	nc_primary	COLUMBUS;ABSENTEE
+ReportingUnit	North Carolina;Columbus County;TCITY-OS	nc_primary	COLUMBUS;TCITY-OS
+ReportingUnit	North Carolina;Columbus County;PROVISIONAL	nc_primary	COLUMBUS;PROVISIONAL
+ReportingUnit	North Carolina;Gaston County;ABSENTEE	nc_primary	GASTON;ABSENTEE
+ReportingUnit	North Carolina;Gaston County;BOE DALLAS	nc_primary	GASTON;BOE DALLAS
+ReportingUnit	North Carolina;Gaston County;PROVISIONAL	nc_primary	GASTON;PROVISIONAL
+ReportingUnit	North Carolina;Gaston County;TRANSFER	nc_primary	GASTON;TRANSFER
+ReportingUnit	North Carolina;Gaston County;BOE MOUNT HOLLY	nc_primary	GASTON;BOE MOUNT HOLLY
+ReportingUnit	North Carolina;Gaston County;OS BOE OFFICE	nc_primary	GASTON;OS BOE OFFICE
+ReportingUnit	North Carolina;Guilford County;CURBSIDE	nc_primary	GUILFORD;CURBSIDE
+ReportingUnit	North Carolina;Guilford County;ABSENTEE BY MAIL	nc_primary	GUILFORD;ABSENTEE BY MAIL
+ReportingUnit	North Carolina;Halifax County;OS ENFIELD	nc_primary	HALIFAX;OS ENFIELD
+ReportingUnit	North Carolina;Halifax County;OS HALIFAX	nc_primary	HALIFAX;OS HALIFAX
+ReportingUnit	North Carolina;Halifax County;OS SCOTLAND NECK	nc_primary	HALIFAX;OS SCOTLAND NECK
+ReportingUnit	North Carolina;Halifax County;OS WELDON	nc_primary	HALIFAX;OS WELDON
+ReportingUnit	North Carolina;Johnston County;OS SMITHFIELD	nc_primary	JOHNSTON;OS SMITHFIELD
+ReportingUnit	North Carolina;Johnston County;OS CLEVELAND	nc_primary	JOHNSTON;OS CLEVELAND
+ReportingUnit	North Carolina;Johnston County;OS CLAYTON	nc_primary	JOHNSTON;OS CLAYTON
+ReportingUnit	North Carolina;Mecklenburg County;ABSENTEE BY MAIL	nc_primary	MECKLENBURG;ABSENTEE BY MAIL
+ReportingUnit	North Carolina;Mecklenburg County;CURBSIDE	nc_primary	MECKLENBURG;CURBSIDE
+ReportingUnit	North Carolina;Mecklenburg County;PROVISIONAL	nc_primary	MECKLENBURG;PROVISIONAL
+ReportingUnit	North Carolina;Forsyth County;OS LEW	nc_primary	FORSYTH;OS LEW
+ReportingUnit	North Carolina;Forsyth County;OS KVFW	nc_primary	FORSYTH;OS KVFW
+ReportingUnit	North Carolina;Forsyth County;OS RURL	nc_primary	FORSYTH;OS RURL
+ReportingUnit	North Carolina;Forsyth County;OS LOB	nc_primary	FORSYTH;OS LOB
+ReportingUnit	North Carolina;Forsyth County;OS SOUT	nc_primary	FORSYTH;OS SOUT
+ReportingUnit	North Carolina;Guilford County;PROVISIONAL	nc_primary	GUILFORD;PROVISIONAL
+ReportingUnit	North Carolina;Chatham County;ABS MAIL	nc_primary	CHATHAM;ABS MAIL
+ReportingUnit	North Carolina;Dare County;OS PITTS	nc_primary	DARE;OS PITTS
+ReportingUnit	North Carolina;Cumberland County;ONE STOP A	nc_primary	CUMBERLAND;ONE STOP A
+ReportingUnit	North Carolina;Cumberland County;ONE STOP B	nc_primary	CUMBERLAND;ONE STOP B
+ReportingUnit	North Carolina;Cumberland County;ONE STOP C	nc_primary	CUMBERLAND;ONE STOP C
+ReportingUnit	North Carolina;Cumberland County;ONE STOP D	nc_primary	CUMBERLAND;ONE STOP D
+ReportingUnit	North Carolina;Cumberland County;ONE STOP E	nc_primary	CUMBERLAND;ONE STOP E
+ReportingUnit	North Carolina;Cumberland County;ONE STOP J	nc_primary	CUMBERLAND;ONE STOP J
+ReportingUnit	North Carolina;Cumberland County;PROVISIONAL	nc_primary	CUMBERLAND;PROVISIONAL
+ReportingUnit	North Carolina;Cumberland County;TRANSFER	nc_primary	CUMBERLAND;TRANSFER
+ReportingUnit	North Carolina;Cumberland County;ABSENTEE	nc_primary	CUMBERLAND;ABSENTEE
+ReportingUnit	North Carolina;Currituck County;ABSENTEE	nc_primary	CURRITUCK;ABSENTEE
+ReportingUnit	North Carolina;Bladen County;OS EAST ARCADIA	nc_primary	BLADEN;OS EAST ARCADIA
+ReportingUnit	North Carolina;Bladen County;OS LIBRARY	nc_primary	BLADEN;OS LIBRARY
+ReportingUnit	North Carolina;Bladen County;OS DUBLIN	nc_primary	BLADEN;OS DUBLIN
+ReportingUnit	North Carolina;Bladen County;OS BLADENBORO	nc_primary	BLADEN;OS BLADENBORO
+ReportingUnit	North Carolina;Bladen County;MAIL ABSENTEE	nc_primary	BLADEN;MAIL ABSENTEE
+ReportingUnit	North Carolina;Caswell County;ABSENTEE BY MAIL	nc_primary	CASWELL;ABSENTEE BY MAIL
+ReportingUnit	North Carolina;Hertford County;ABSENTEE	nc_primary	HERTFORD;ABSENTEE
+ReportingUnit	North Carolina;Hertford County;ONE STOP	nc_primary	HERTFORD;ONE STOP
+ReportingUnit	North Carolina;Hertford County;PROVISIONAL	nc_primary	HERTFORD;PROVISIONAL
+ReportingUnit	North Carolina;Hyde County;ABSENTEE MAIL	nc_primary	HYDE;ABSENTEE MAIL
+ReportingUnit	North Carolina;Hyde County;ONE STOP BOE	nc_primary	HYDE;ONE STOP BOE
+ReportingUnit	North Carolina;Hyde County;ONE STOP OCK	nc_primary	HYDE;ONE STOP OCK
+ReportingUnit	North Carolina;Hyde County;PROVISIONAL	nc_primary	HYDE;PROVISIONAL
+ReportingUnit	North Carolina;Hyde County;TRANSFER	nc_primary	HYDE;TRANSFER
+ReportingUnit	North Carolina;Mcdowell County;ABSENTEE MAIL	nc_primary	MCDOWELL;ABSENTEE MAIL
+ReportingUnit	North Carolina;Mcdowell County;OS LOWER LEVEL SR CENTER	nc_primary	MCDOWELL;OS LOWER LEVEL SR CENTER
+ReportingUnit	North Carolina;Mcdowell County;PROVISIONAL	nc_primary	MCDOWELL;PROVISIONAL
+ReportingUnit	North Carolina;Bertie County;ABSENTEE	nc_primary	BERTIE;ABSENTEE
+ReportingUnit	North Carolina;Bertie County;OS-LOB	nc_primary	BERTIE;OS-LOB
+ReportingUnit	North Carolina;Bertie County;OS-POW	nc_primary	BERTIE;OS-POW
+ReportingUnit	North Carolina;Cabarrus County;ONE STOP	nc_primary	CABARRUS;ONE STOP
+ReportingUnit	North Carolina;Caldwell County;ONE STOP GRANITE FALLS	nc_primary	CALDWELL;ONE STOP GRANITE FALLS
+ReportingUnit	North Carolina;Caldwell County;ONE STOP LENOIR	nc_primary	CALDWELL;ONE STOP LENOIR
+ReportingUnit	North Carolina;Henderson County;BOEOS	nc_primary	HENDERSON;BOEOS
+ReportingUnit	North Carolina;Macon County;ABSENTEE MAIL	nc_primary	MACON;ABSENTEE MAIL
+ReportingUnit	North Carolina;Macon County;ONE STOP BOE	nc_primary	MACON;ONE STOP BOE
+ReportingUnit	North Carolina;Macon County;ONE STOP HOS	nc_primary	MACON;ONE STOP HOS
+ReportingUnit	North Carolina;Durham County;OS DBOE	nc_primary	DURHAM;OS DBOE
+ReportingUnit	North Carolina;Durham County;OS EAST	nc_primary	DURHAM;OS EAST
+ReportingUnit	North Carolina;Durham County;OS NORTH	nc_primary	DURHAM;OS NORTH
+ReportingUnit	North Carolina;Durham County;OS SOUTH	nc_primary	DURHAM;OS SOUTH
+ReportingUnit	North Carolina;Gates County;ABSENTEE	nc_primary	GATES;ABSENTEE
+ReportingUnit	North Carolina;Gates County;ONE STOP	nc_primary	GATES;ONE STOP
+ReportingUnit	North Carolina;Gates County;PROVISIONAL	nc_primary	GATES;PROVISIONAL
+ReportingUnit	North Carolina;Gates County;ONE STOP BOE	nc_primary	GATES;ONE STOP BOE
+ReportingUnit	North Carolina;Lincoln County;ABSENTEE	nc_primary	LINCOLN;ABSENTEE
+ReportingUnit	North Carolina;Lincoln County;TRANSFER	nc_primary	LINCOLN;TRANSFER
+ReportingUnit	North Carolina;Duplin County;TRANSFER	nc_primary	DUPLIN;TRANSFER
+ReportingUnit	North Carolina;Harnett County;OS ANDERSON	nc_primary	HARNETT;OS ANDERSON
+ReportingUnit	North Carolina;Harnett County;OS ANGIER	nc_primary	HARNETT;OS ANGIER
+ReportingUnit	North Carolina;Nash County;MT PLEASANT OS	nc_primary	NASH;MT PLEASANT OS
+ReportingUnit	North Carolina;New Hanover County;OS CAB	nc_primary	NEW HANOVER;OS CAB
+ReportingUnit	North Carolina;New Hanover County;OS CFCC	nc_primary	NEW HANOVER;OS CFCC
+ReportingUnit	North Carolina;New Hanover County;OS GVT	nc_primary	NEW HANOVER;OS GVT
+ReportingUnit	North Carolina;New Hanover County;OS NLB	nc_primary	NEW HANOVER;OS NLB
+ReportingUnit	North Carolina;New Hanover County;OS SRC	nc_primary	NEW HANOVER;OS SRC
+ReportingUnit	North Carolina;Pitt County;OS AYDEN	nc_primary	PITT;OS AYDEN
+ReportingUnit	North Carolina;Pitt County;OS FARMVILLE	nc_primary	PITT;OS FARMVILLE
+ReportingUnit	North Carolina;Wake County;ABSEN	nc_primary	WAKE;ABSEN
+ReportingUnit	North Carolina;Wake County;OSCA	nc_primary	WAKE;OSCA
+ReportingUnit	North Carolina;Wake County;OSCH	nc_primary	WAKE;OSCH
+ReportingUnit	North Carolina;Wake County;OSHS	nc_primary	WAKE;OSHS
+ReportingUnit	North Carolina;Wake County;OSLL	nc_primary	WAKE;OSLL
+ReportingUnit	North Carolina;Wake County;OSLOB	nc_primary	WAKE;OSLOB
+ReportingUnit	North Carolina;Wake County;OSNR	nc_primary	WAKE;OSNR
+ReportingUnit	North Carolina;Wake County;PROVI	nc_primary	WAKE;PROVI
+ReportingUnit	North Carolina;Wake County;TRANS	nc_primary	WAKE;TRANS
+ReportingUnit	North Carolina;Moore County;ONE STOP	nc_primary	MOORE;ONE STOP
+ReportingUnit	North Carolina;Perquimans County;CURBSIDE	nc_primary	PERQUIMANS;CURBSIDE
+ReportingUnit	North Carolina;Robeson County;OS REDS	nc_primary	ROBESON;OS REDS
+ReportingUnit	North Carolina;Robeson County;OS PEM	nc_primary	ROBESON;OS PEM
+ReportingUnit	North Carolina;Robeson County;OS MX	nc_primary	ROBESON;OS MX
+ReportingUnit	North Carolina;Robeson County;OS ML	nc_primary	ROBESON;OS ML
+ReportingUnit	North Carolina;Robeson County;PROVISONAL	nc_primary	ROBESON;PROVISONAL
+ReportingUnit	North Carolina;Robeson County;OS STP	nc_primary	ROBESON;OS STP
+ReportingUnit	North Carolina;Robeson County;OS FAIR	nc_primary	ROBESON;OS FAIR
+ReportingUnit	North Carolina;Robeson County;OS LOB	nc_primary	ROBESON;OS LOB
+ReportingUnit	North Carolina;Robeson County;ABSENTEE	nc_primary	ROBESON;ABSENTEE
+ReportingUnit	North Carolina;Pasquotank County;ABSENTEE	nc_primary	PASQUOTANK;ABSENTEE
+ReportingUnit	North Carolina;Pasquotank County;ONE STOP	nc_primary	PASQUOTANK;ONE STOP
+ReportingUnit	North Carolina;Pasquotank County;PROVISIONAL	nc_primary	PASQUOTANK;PROVISIONAL
+ReportingUnit	North Carolina;Pasquotank County;TRANSFER	nc_primary	PASQUOTANK;TRANSFER
+ReportingUnit	North Carolina;Wilson County;ABSENTEE	nc_primary	WILSON;ABSENTEE
+ReportingUnit	North Carolina;Wilson County;PROVISIONAL	nc_primary	WILSON;PROVISIONAL
+ReportingUnit	North Carolina;Wilson County;ONE STOP	nc_primary	WILSON;ONE STOP
+ReportingUnit	North Carolina;Orange County;OS SEYMOUR	nc_primary	ORANGE;OS SEYMOUR
+ReportingUnit	North Carolina;Orange County;OS EFLAND	nc_primary	ORANGE;OS EFLAND
+ReportingUnit	North Carolina;Orange County;OS CHPL OF CROSS	nc_primary	ORANGE;OS CHPL OF CROSS
+ReportingUnit	North Carolina;Orange County;OS CARB TWN HALL	nc_primary	ORANGE;OS CARB TWN HALL
+ReportingUnit	North Carolina;Orange County;OS BOE	nc_primary	ORANGE;OS BOE
+ReportingUnit	North Carolina;Orange County;ABSENTEE BY MAIL	nc_primary	ORANGE;ABSENTEE BY MAIL
+ReportingUnit	North Carolina;Wayne County;ONE STOP	nc_primary	WAYNE;ONE STOP
+ReportingUnit	North Carolina;Northampton County;ONE STOP RICH SQUARE	nc_primary	NORTHAMPTON;ONE STOP RICH SQUARE
+ReportingUnit	North Carolina;Richmond County;ABSENTEE	nc_primary	RICHMOND;ABSENTEE
+ReportingUnit	North Carolina;Scotland County;PROVISIONAL	nc_primary	SCOTLAND;PROVISIONAL
+ReportingUnit	North Carolina;Washington County;ABSENTEE MAIL	nc_primary	WASHINGTON;ABSENTEE MAIL
+ReportingUnit	North Carolina;Northampton County;ONE STOP GASTON	nc_primary	NORTHAMPTON;ONE STOP GASTON
+ReportingUnit	North Carolina;Northampton County;ONE STOP OFFICE	nc_primary	NORTHAMPTON;ONE STOP OFFICE
+ReportingUnit	North Carolina;Northampton County;ABSENTEE MAIL	nc_primary	NORTHAMPTON;ABSENTEE MAIL
+ReportingUnit	North Carolina;Union County;OS WCC	nc_primary	UNION;OS WCC
+ReportingUnit	North Carolina;Union County;OS WCHA	nc_primary	UNION;OS WCHA
+ReportingUnit	North Carolina;Union County;OS WSCH	nc_primary	UNION;OS WSCH
+ReportingUnit	North Carolina;Union County;OS HBR	nc_primary	UNION;OS HBR
+ReportingUnit	North Carolina;Union County;OS LOBB	nc_primary	UNION;OS LOBB
+ReportingUnit	North Carolina;Union County;OS MSP	nc_primary	UNION;OS MSP
+ReportingUnit	North Carolina;Union County;OS STAL	nc_primary	UNION;OS STAL

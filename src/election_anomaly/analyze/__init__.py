@@ -171,14 +171,18 @@ class Election(object):
             con.dispose()
         return rollup_dframe
 
-    def top_results(self):
-        top_rollup=self.pull_rollup_from_db_by_types('state')
-        top_rollup=top_rollup[top_rollup['CountItemType']!='total']
-        top_rollup=top_rollup.drop(['Contest_Id','ReportingUnit_Id','Selection_Id','CountItemType_Id','contest_type'],axis=1)
-        output = top_rollup.groupby(['Contest','Selection']).sum()
+    def summarize_results(self,mode='top'):
+        rollup=self.pull_rollup_from_db_by_types('state')
+        rollup=rollup.drop(['Contest_Id','ReportingUnit_Id','Selection_Id','CountItemType_Id','contest_type'],axis=1)
+        if mode=='top':
+            rollup=rollup[rollup['CountItemType']!='total']
+            output = rollup.groupby(['Contest','Selection']).sum()
+        elif mode=='by_vote_type':
+            output = rollup.groupby(['Contest','Selection','CountItemType']).sum()
+
         outpath=self.state.path_to_state_dir+'output/'
         if os.path.isdir(outpath):
-            output.to_csv(outpath+self.short_name+'_top_results.txt',sep='\t')
+            output.to_csv(outpath+self.short_name+'_'+mode+'_results.txt',sep='\t')
         else:
             print('Cannot print; output directory does not exist: '+outpath)
         return output
