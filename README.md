@@ -40,6 +40,7 @@ Each state directory has three subfolders.
 Holds datafiles from the state. Each election has a subfolder (whose name must be the `ShortName` for that election per the `context/Election.txt` file). Each election subfolder has subfolders named for the munger appropriate for the contained files.
   
 ### `meta` holds metadata files for the state
+[NB: *** no longer necessary probably]
 
 ###`context` for information about the state that cannot be read from the contents of the data and metadata files. 
 This information may be common to many datafiles; it may be related to information in the datafile but may require some contextual knowledge outside of any particular datafile. For example, the fact that the election on 2018-11-06 in North Carolina was a `general` election is contextual knowledge. Each file in the `context` directory should have a single header row.
@@ -88,6 +89,7 @@ This information may be common to many datafiles; it may be related to informati
 Files from different sources require different processing assumptions. We call each set of assumptions a "munger"
 
 The folder `src/mungers` holds a directory for each munger. Each munger directory needs the following component files:
+ * 'ExternalIdentifiers.txt' [*** explain]
  * `raw_columns.txt` List of columns in source file. Columns are:
     * `Name` name of the column in the source file
     * `Datatype` datatype of the column in the source file
