@@ -54,7 +54,6 @@ def get_internal_ids_from_context(row_df,ctxt_ei_df,table_df,table_name,internal
         unmatched_path=unmatched_dir+'unmatched_'+table_name+'.txt'
         np.savetxt(unmatched_path,unmatched,fmt="%s")
         print('Some elements unmatched, saved to {}.\nPut these in both the munger ExternalIdentifier.txt and in the {}.txt file in the context directory'.format(unmatched_path,table_name))
-        # TODO redo all dynamic print statements
 
     row_df = row_df.drop(['ExternalIdentifierValue','Table','ExternalIdentifierType','index',table_name+'_external'],axis=1)
 
@@ -241,7 +240,6 @@ def raw_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,ele
         elif election_type == 'primary':
             # Office name is derived from CandidateContest name
             cc_row['Office'] = cc_row['CandidateContest'].str.split(' Primary;').iloc[0][0]
-            # TODO check that this works for primaries
         else:
             raise Exception('Election type not recognized by the code: ' + election_type) # TODO add all election types
         cc_row.merge(cdf_d['Office'],left_on='Office',right_on='Name',suffixes=['','_Office'])
@@ -316,8 +314,7 @@ def raw_dframe_to_cdf(session,raw_rows,s,mu,cdf_schema,context_schema,e,state_id
         tables_d[table_def[0]] = table_def[1]
 
     # get dataframes needed before bulk processing
-    # TODO obsolete?
-    for t in ['ElectionType', 'Election','ReportingUnitType','ReportingUnit']:
+    for t in ['ReportingUnitType','ReportingUnit']:
         cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema, index_col='Id')
 
     # if state_id is not passed as parameter, get id (default Reporting Unit for ballot questions)
@@ -373,7 +370,6 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
 
         if t == 'Office':
             # Check that all ElectionDistrictTypes are recognized
-            # TODO can this be more efficient, using dframes directly rather than format_type_for_insert?
             for edt in context_cdframe['Office']['ElectionDistrictType'].unique():
                 assert edt in list(enum_dframe['ReportingUnitType']['Txt'])
 
