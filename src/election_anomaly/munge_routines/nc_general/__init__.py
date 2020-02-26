@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 # under construction
-#/munge_routines/nc_export1/__init__.py
+#/munge_routines/nc_general/__init__.py
 
 import re
 
 def office_key(state_name,contest_name,term_string):
-    """create external identifier / nc_export1 pairs of offices dictionary"""
+    """create external identifier / nc_general pairs of offices dictionary"""
     p_congressional = re.compile('^US HOUSE OF REPRESENTATIVES DISTRICT (?P<district>[\d])+$')
     m = p_congressional.search(contest_name)
     if m:
@@ -30,7 +30,7 @@ def add_ei(office_d):
         if found:
             if 'ExternalIdentifiers' not in office_d[k].keys():
                 office_d[k]['ExternalIdentifiers'] = {}
-            office_d[k]['ExternalIdentifiers']['nc_export1'] = ext_id
+            office_d[k]['ExternalIdentifiers']['nc_general'] = ext_id
     return(office_d)
 
 

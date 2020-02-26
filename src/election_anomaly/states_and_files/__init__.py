@@ -46,5 +46,5 @@ class Munger:
             'Directory ' + dir_path + ' must contain files cdf_tables.txt, count_columns.txt and raw_columns.txt'
         if dir_path[-1] != '/': dir_path += '/' # make sure path ends in a slash
         self.path_to_munger_dir=dir_path
-        self.name=dir_path.split('/')[-2]    # 'nc_export1'
+        self.name=dir_path.split('/')[-2]    # 'nc_general'
 
