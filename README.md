@@ -45,19 +45,8 @@ Holds datafiles from the state. Each election has a subfolder (whose name must b
 ###`context` for information about the state that cannot be read from the contents of the data and metadata files. 
 This information may be common to many datafiles; it may be related to information in the datafile but may require some contextual knowledge outside of any particular datafile. For example, the fact that the election on 2018-11-06 in North Carolina was a `general` election is contextual knowledge. Each file in the `context` directory should have a single header row.
 
-    * `name.txt` the name of the state, e.g., 'North Carolina'
-    * `schema_name.txt` the name of the schema to hold the state's raw data
     * `BallotMeasureSelection.txt` Header is `Selection`; one row for each possible selection, e.g., `Yes` or `No` or `For` or `Against`. 
     * `remark.txt` String containing any notable information about the state and its data
-    * `datafile.txt` Tab-separated list of datafiles, with attributes:
-      * `name`
-      * `encoding`
-      * `source_url`
-      * `delimiter`
-      * `file_date`
-      * `download_date`
-      * `note`
-      * `correction_query_list` a list of any corrections needed in response to metadata errors
     * `Election.txt` Tab-separated list of elections. Columns are:
       * `Name`
       * `ElectionType`
@@ -65,16 +54,6 @@ This information may be common to many datafiles; it may be related to informati
       * `ReportingUnit` Parent Reporting Units (e.g., 'North Carolina' must precede children (e.g., 'North Carolina;Alamance County'))
       * `StartDate`
       * `EndDate`
-    * `metafile.txt` Tab-separated list of metafiles. Columns are:
-      * `name`
-      * `encoding`
-      * `source_url`
-      * `file_date`
-      * `download_date`
-      * `note`
-      * `column_block_parser_string` Python regex to identify the block of lines in the metafile holding the relevant column definitions
-      * `line_parser_string` Python regex to identify the column name, data type and column description within one line of the metafile
-      * `type_map` Python dictionary whose keys are datatype names from the file and whose values are datatype names used in the standard python package `sqlalchemy`
     * `Office.txt` Tab-separated list of office names. Note that when datafiles are processed, lines relevant to offices **not** listed here will not be loaded into the common data format schema. Note that party nominees for office contests are treated as offices; i.e., 'US Senate primary; Republican Party' is an Office. Columns are:
       * `Name`
       * `ElectionDistrict`
