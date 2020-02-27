@@ -28,7 +28,6 @@ def fill_externalIdentifier_table(session,cdf_schema,context_schema,mu):
     filtered_ei = {}
 
     # pull from the cdf the enumeration of ExternalIdentifier types
-    # TODO necessary? we just need the other_id
     cdf['IdentifierType'] = pd.read_sql_table('IdentifierType',session.bind,cdf_schema,index_col=None)
 
     # pull from the cdf db any tables whose entries have external identifiers
@@ -58,32 +57,24 @@ def fill_externalIdentifier_table(session,cdf_schema,context_schema,mu):
     return ei_df
 
 def fill_composing_reporting_unit_join(session,schema,pickle_dir='../local_data/pickles/'):
-    disable_pickle = True   # TODO remove this
-    if not disable_pickle and os.path.isfile(pickle_dir + 'ComposingReportingUnitJoin'):
-        print('Filling ComposingReportingUnitJoin table from pickle in ' + pickle_dir)
-        cruj_dframe = pd.read_pickle(pickle_dir + 'ComposingReportingUnitJoin')
-    else:
-        print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
-        ru_dframe = pd.read_sql_table('ReportingUnit', session.bind, schema,index_col=None)
-        ru_dframe['split'] = ru_dframe['Name'].apply(lambda x: x.split(';'))
-        ru_dframe['length'] = ru_dframe['split'].apply(len)
-        ru_static=ru_dframe.copy()
-        cruj_dframe_list = []
-        for i in range(ru_dframe['length'].max()-1):
-        # check that all components of all Reporting Units are themselves ReportingUnits
-            # get name of ith ancestor
-            ru_dframe = ru_static.copy()
-            ru_dframe['ancestor_'+str(i)] = ru_static['split'].apply(lambda x: ';'.join(x[:-i-1]))
-            # get ru Id of ith ancestor
-            drop_list = ru_dframe.columns.to_list()
-            ru_dframe = ru_dframe.merge(ru_dframe,left_on='Name',right_on='ancestor_'+str(i),suffixes=['_'+str(i),''])
-            drop_list.remove('Id')
-            cruj_dframe_list.append(ru_dframe[['Id','Id'+'_'+str(i)]].rename(columns={'Id':'ChildReportingUnit_Id','Id'+'_'+str(i):'ParentReportingUnit_Id'}))
+    print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
+    ru_dframe = pd.read_sql_table('ReportingUnit', session.bind, schema,index_col=None)
+    ru_dframe['split'] = ru_dframe['Name'].apply(lambda x: x.split(';'))
+    ru_dframe['length'] = ru_dframe['split'].apply(len)
+    ru_static=ru_dframe.copy()
+    cruj_dframe_list = []
+    for i in range(ru_dframe['length'].max()-1):
+    # check that all components of all Reporting Units are themselves ReportingUnits
+        # get name of ith ancestor
+        ru_dframe = ru_static.copy()
+        ru_dframe['ancestor_'+str(i)] = ru_static['split'].apply(lambda x: ';'.join(x[:-i-1]))
+        # get ru Id of ith ancestor
+        drop_list = ru_dframe.columns.to_list()
+        ru_dframe = ru_dframe.merge(ru_dframe,left_on='Name',right_on='ancestor_'+str(i),suffixes=['_'+str(i),''])
+        drop_list.remove('Id')
+        cruj_dframe_list.append(ru_dframe[['Id','Id'+'_'+str(i)]].rename(columns={'Id':'ChildReportingUnit_Id','Id'+'_'+str(i):'ParentReportingUnit_Id'}))
 
-        cruj_dframe = pd.concat(cruj_dframe_list)
-        if not disable_pickle:
-            cruj_dframe.to_pickle(pickle_dir + 'ComposingReportingUnitJoin')
-
+    cruj_dframe = pd.concat(cruj_dframe_list)
     cruj_dframe = dframe_to_sql(cruj_dframe, session, schema, 'ComposingReportingUnitJoin')
     session.flush()
     return cruj_dframe

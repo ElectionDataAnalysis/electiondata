@@ -34,7 +34,7 @@ class State:
         assert os.path.isdir(self.path_to_state_dir), 'Error: No directory '+ self.path_to_state_dir
         assert os.path.isdir(self.path_to_state_dir+'context/'), 'Error: No directory '+ self.path_to_state_dir+'context/'
         # Check that context directory is missing no files
-        context_file_list = ['BallotMeasureSelection.txt','datafile.txt','Election.txt','ExternalIdentifier.txt','metafile.txt','name.txt','Office.txt','remark.txt','ReportingUnit.txt'] # TODO remove schema_name.txt and alter README.txt
+        context_file_list = ['BallotMeasureSelection.txt','Election.txt','ExternalIdentifier.txt','Office.txt','remark.txt','ReportingUnit.txt']
         file_missing_list = [f for f in context_file_list if not os.path.isfile(self.path_to_state_dir+'context/'+f)]
         assert file_missing_list == [], 'Error: Missing files in '+ self.path_to_state_dir+'context/'+f +':\n'+ str(file_missing_list)
 
@@ -46,5 +46,5 @@ class Munger:
             'Directory ' + dir_path + ' must contain files cdf_tables.txt, count_columns.txt and raw_columns.txt'
         if dir_path[-1] != '/': dir_path += '/' # make sure path ends in a slash
         self.path_to_munger_dir=dir_path
-        self.name=dir_path.split('/')[-2]    # 'nc_export1'
+        self.name=dir_path.split('/')[-2]    # 'nc_general'
 
