@@ -2,6 +2,7 @@ local/
 .DS_Store
 src/election_anomaly/__pycache__
 src/local_data/NC/data
+src/local_data/NC/output
 src/local_data/MD/data
 src/local_data/FL/data
 src/local_data/Philadelphia
