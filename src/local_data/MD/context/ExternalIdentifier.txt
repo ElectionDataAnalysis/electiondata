@@ -1,63 +1,63 @@
 Table	Name	ExternalIdentifierType	ExternalIdentifierValue
-Office	Maryland;Representative in Congress 1	md_export1	Representative in Congress 1
-Office	Maryland;Representative in Congress 2	md_export1	Representative in Congress 2
-Office	Maryland;Representative in Congress 3	md_export1	Representative in Congress 3
-Office	Maryland;Representative in Congress 4	md_export1	Representative in Congress 4
-Office	Maryland;Representative in Congress 5	md_export1	Representative in Congress 5
-Office	Maryland;Representative in Congress 6	md_export1	Representative in Congress 6
-Office	Maryland;Representative in Congress 7	md_export1	Representative in Congress 7
-Office	Maryland;Representative in Congress 8	md_export1	Representative in Congress 8
-Office	Maryland;Governor / Lt. Governor 	md_export1	Governor / Lt. Governor 
-Office	Maryland;State's Attorney        	md_export1	State's Attorney        
-Office	Maryland;Treasurer               	md_export1	Treasurer               
-Office	Maryland;U.S. Senator            	md_export1	U.S. Senator            
-Office	Maryland;State Senator           1	md_export1	State Senator           1
-Office	Maryland;State Senator           10	md_export1	State Senator           10
-Office	Maryland;State Senator           11	md_export1	State Senator           11
-Office	Maryland;State Senator           12	md_export1	State Senator           12
-Office	Maryland;State Senator           13	md_export1	State Senator           13
-Office	Maryland;State Senator           14	md_export1	State Senator           14
-Office	Maryland;State Senator           15	md_export1	State Senator           15
-Office	Maryland;State Senator           16	md_export1	State Senator           16
-Office	Maryland;State Senator           17	md_export1	State Senator           17
-Office	Maryland;State Senator           18	md_export1	State Senator           18
-Office	Maryland;State Senator           19	md_export1	State Senator           19
-Office	Maryland;State Senator           2	md_export1	State Senator           2
-Office	Maryland;State Senator           20	md_export1	State Senator           20
-Office	Maryland;State Senator           21	md_export1	State Senator           21
-Office	Maryland;State Senator           22	md_export1	State Senator           22
-Office	Maryland;State Senator           23	md_export1	State Senator           23
-Office	Maryland;State Senator           24	md_export1	State Senator           24
-Office	Maryland;State Senator           25	md_export1	State Senator           25
-Office	Maryland;State Senator           26	md_export1	State Senator           26
-Office	Maryland;State Senator           27	md_export1	State Senator           27
-Office	Maryland;State Senator           28	md_export1	State Senator           28
-Office	Maryland;State Senator           29	md_export1	State Senator           29
-Office	Maryland;State Senator           3	md_export1	State Senator           3
-Office	Maryland;State Senator           30	md_export1	State Senator           30
-Office	Maryland;State Senator           31	md_export1	State Senator           31
-Office	Maryland;State Senator           32	md_export1	State Senator           32
-Office	Maryland;State Senator           33	md_export1	State Senator           33
-Office	Maryland;State Senator           34	md_export1	State Senator           34
-Office	Maryland;State Senator           35	md_export1	State Senator           35
-Office	Maryland;State Senator           36	md_export1	State Senator           36
-Office	Maryland;State Senator           37	md_export1	State Senator           37
-Office	Maryland;State Senator           38	md_export1	State Senator           38
-Office	Maryland;State Senator           39	md_export1	State Senator           39
-Office	Maryland;State Senator           4	md_export1	State Senator           4
-Office	Maryland;State Senator           40	md_export1	State Senator           40
-Office	Maryland;State Senator           41	md_export1	State Senator           41
-Office	Maryland;State Senator           42	md_export1	State Senator           42
-Office	Maryland;State Senator           43	md_export1	State Senator           43
-Office	Maryland;State Senator           44	md_export1	State Senator           44
-Office	Maryland;State Senator           45	md_export1	State Senator           45
-Office	Maryland;State Senator           46	md_export1	State Senator           46
-Office	Maryland;State Senator           47	md_export1	State Senator           47
-Office	Maryland;State Senator           5	md_export1	State Senator           5
-Office	Maryland;State Senator           6	md_export1	State Senator           6
-Office	Maryland;State Senator           7	md_export1	State Senator           7
-Office	Maryland;State Senator           8	md_export1	State Senator           8
-Office	Maryland;State Senator           9	md_export1	State Senator           9
+Office	Maryland;Representative in Congress 1	md_general	Representative in Congress 1
+Office	Maryland;Representative in Congress 2	md_general	Representative in Congress 2
+Office	Maryland;Representative in Congress 3	md_general	Representative in Congress 3
+Office	Maryland;Representative in Congress 4	md_general	Representative in Congress 4
+Office	Maryland;Representative in Congress 5	md_general	Representative in Congress 5
+Office	Maryland;Representative in Congress 6	md_general	Representative in Congress 6
+Office	Maryland;Representative in Congress 7	md_general	Representative in Congress 7
+Office	Maryland;Representative in Congress 8	md_general	Representative in Congress 8
+Office	Maryland;Governor / Lt. Governor 	md_general	Governor / Lt. Governor 
+Office	Maryland;State's Attorney        	md_general	State's Attorney        
+Office	Maryland;Treasurer               	md_general	Treasurer               
+Office	Maryland;U.S. Senator            	md_general	U.S. Senator            
+Office	Maryland;State Senator           1	md_general	State Senator           1
+Office	Maryland;State Senator           10	md_general	State Senator           10
+Office	Maryland;State Senator           11	md_general	State Senator           11
+Office	Maryland;State Senator           12	md_general	State Senator           12
+Office	Maryland;State Senator           13	md_general	State Senator           13
+Office	Maryland;State Senator           14	md_general	State Senator           14
+Office	Maryland;State Senator           15	md_general	State Senator           15
+Office	Maryland;State Senator           16	md_general	State Senator           16
+Office	Maryland;State Senator           17	md_general	State Senator           17
+Office	Maryland;State Senator           18	md_general	State Senator           18
+Office	Maryland;State Senator           19	md_general	State Senator           19
+Office	Maryland;State Senator           2	md_general	State Senator           2
+Office	Maryland;State Senator           20	md_general	State Senator           20
+Office	Maryland;State Senator           21	md_general	State Senator           21
+Office	Maryland;State Senator           22	md_general	State Senator           22
+Office	Maryland;State Senator           23	md_general	State Senator           23
+Office	Maryland;State Senator           24	md_general	State Senator           24
+Office	Maryland;State Senator           25	md_general	State Senator           25
+Office	Maryland;State Senator           26	md_general	State Senator           26
+Office	Maryland;State Senator           27	md_general	State Senator           27
+Office	Maryland;State Senator           28	md_general	State Senator           28
+Office	Maryland;State Senator           29	md_general	State Senator           29
+Office	Maryland;State Senator           3	md_general	State Senator           3
+Office	Maryland;State Senator           30	md_general	State Senator           30
+Office	Maryland;State Senator           31	md_general	State Senator           31
+Office	Maryland;State Senator           32	md_general	State Senator           32
+Office	Maryland;State Senator           33	md_general	State Senator           33
+Office	Maryland;State Senator           34	md_general	State Senator           34
+Office	Maryland;State Senator           35	md_general	State Senator           35
+Office	Maryland;State Senator           36	md_general	State Senator           36
+Office	Maryland;State Senator           37	md_general	State Senator           37
+Office	Maryland;State Senator           38	md_general	State Senator           38
+Office	Maryland;State Senator           39	md_general	State Senator           39
+Office	Maryland;State Senator           4	md_general	State Senator           4
+Office	Maryland;State Senator           40	md_general	State Senator           40
+Office	Maryland;State Senator           41	md_general	State Senator           41
+Office	Maryland;State Senator           42	md_general	State Senator           42
+Office	Maryland;State Senator           43	md_general	State Senator           43
+Office	Maryland;State Senator           44	md_general	State Senator           44
+Office	Maryland;State Senator           45	md_general	State Senator           45
+Office	Maryland;State Senator           46	md_general	State Senator           46
+Office	Maryland;State Senator           47	md_general	State Senator           47
+Office	Maryland;State Senator           5	md_general	State Senator           5
+Office	Maryland;State Senator           6	md_general	State Senator           6
+Office	Maryland;State Senator           7	md_general	State Senator           7
+Office	Maryland;State Senator           8	md_general	State Senator           8
+Office	Maryland;State Senator           9	md_general	State Senator           9
 ReportingUnit	Maryland;Allegany County	nc_export1	1
 ReportingUnit	Maryland;Anne Arundel County	nc_export1	2
 ReportingUnit	Maryland;Baltimore City	nc_export1	3
