@@ -85,7 +85,7 @@ if __name__ == '__main__':
     if need_to_load_data == 'y':
         # user picks munger
         munger_list = [f for f in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/') if os.path.isdir(s.path_to_state_dir + 'data/'+election_name+'/'+f)]
-        assert munger_list != [], 'No mungers available for in directory {}'.format(s.short_name +'/'+election_name)
+        assert munger_list != [], 'No mungers available for in directory {}/{}'.format(s.short_name,election_name)
         default = munger_list[0]
         need_munger = True
         while need_munger:
