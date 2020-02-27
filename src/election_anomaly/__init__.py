@@ -67,8 +67,8 @@ if __name__ == '__main__':
         session.commit()
 
     # user picks election
-    election_list = [f for f in os.listdir(s.path_to_state_dir + 'data/') if os.path.isdir(s.path_to_state_dir + 'data/'+f)]
-    assert election_list != [], 'No elections available for in directory {}'.format(s.short_name)
+    election_list = [f for f in os.listdir('{}data/'.format(s.path_to_state_dir)) if os.path.isdir(s.path_to_state_dir + 'data/'+f)]
+    assert election_list != [], 'No elections available for {} in directory {}/data'.format(s.short_name,s.path_to_state_dir)
     default = election_list[0]
     need_election = True
     while need_election:

@@ -1,0 +1,237 @@
+Contest	Selection	Count
+Bald Head Island Beach Improvement Bonds	No	22
+Bald Head Island Beach Improvement Bonds	Yes	69
+Maysville Fire Tax Election	Against	21
+North Carolina;General Assembly House of Representatives District 1 Primary;North Carolina Republican Party	Candice Hunter	1611
+North Carolina;General Assembly House of Representatives District 1 Primary;North Carolina Republican Party	Edward C. Goodwin	3974
+North Carolina;General Assembly House of Representatives District 101 Primary;North Carolina Democratic Party	Carolyn Logan	5150
+North Carolina;General Assembly House of Representatives District 101 Primary;North Carolina Democratic Party	Chance Harris	742
+North Carolina;General Assembly House of Representatives District 101 Primary;North Carolina Democratic Party	Lucille Puckett	1463
+North Carolina;General Assembly House of Representatives District 101 Primary;North Carolina Democratic Party	Mr. Gregory J. Miller	372
+North Carolina;General Assembly House of Representatives District 102 Primary;North Carolina Democratic Party	Becky Carney	8732
+North Carolina;General Assembly House of Representatives District 102 Primary;North Carolina Democratic Party	Josh Jarrett	1008
+North Carolina;General Assembly House of Representatives District 105 Primary;North Carolina Democratic Party	Ayoub Ouederni	940
+North Carolina;General Assembly House of Representatives District 105 Primary;North Carolina Democratic Party	Wesley Harris	4488
+North Carolina;General Assembly House of Representatives District 106 Primary;North Carolina Democratic Party	Blanche Penn	505
+North Carolina;General Assembly House of Representatives District 106 Primary;North Carolina Democratic Party	Carla Cunningham	8072
+North Carolina;General Assembly House of Representatives District 11 Primary;North Carolina Democratic Party	Allison Dahle	9034
+North Carolina;General Assembly House of Representatives District 11 Primary;North Carolina Democratic Party	Duane Hall	1746
+North Carolina;General Assembly House of Representatives District 11 Primary;North Carolina Democratic Party	Heather Metour	328
+North Carolina;General Assembly House of Representatives District 11 Primary;North Carolina Republican Party	Shawn Michael Hamilton	456
+North Carolina;General Assembly House of Representatives District 11 Primary;North Carolina Republican Party	Tyler Brooks	1672
+North Carolina;General Assembly House of Representatives District 110 Primary;North Carolina Republican Party	Charlene High	1265
+North Carolina;General Assembly House of Representatives District 110 Primary;North Carolina Republican Party	Kelly E. Hastings	4076
+North Carolina;General Assembly House of Representatives District 115 Primary;North Carolina Republican Party	Amy Evans	2150
+North Carolina;General Assembly House of Representatives District 115 Primary;North Carolina Republican Party	Nathan West	991
+North Carolina;General Assembly House of Representatives District 13 Primary;North Carolina Republican Party	Blake Beadle	1863
+North Carolina;General Assembly House of Representatives District 13 Primary;North Carolina Republican Party	Patricia (Pat) McElraft	11492
+North Carolina;General Assembly House of Representatives District 14 Primary;North Carolina Republican Party	George G. Cleveland	4244
+North Carolina;General Assembly House of Representatives District 14 Primary;North Carolina Republican Party	Joseph R. McLaughlin	1917
+North Carolina;General Assembly House of Representatives District 17 Primary;North Carolina Republican Party	Frank Iler	6330
+North Carolina;General Assembly House of Representatives District 17 Primary;North Carolina Republican Party	Patricia (Pat) Sykes	2015
+North Carolina;General Assembly House of Representatives District 19 Primary;North Carolina Republican Party	Hunter Ford	818
+North Carolina;General Assembly House of Representatives District 19 Primary;North Carolina Republican Party	Ted Davis, Jr.	3410
+North Carolina;General Assembly House of Representatives District 2 Primary;North Carolina Democratic Party	Darryl D. Moss	7316
+North Carolina;General Assembly House of Representatives District 2 Primary;North Carolina Democratic Party	Dora P. Bullock	1516
+North Carolina;General Assembly House of Representatives District 2 Primary;North Carolina Republican Party	Jim McIlroy	341
+North Carolina;General Assembly House of Representatives District 2 Primary;North Carolina Republican Party	Larry Yarborough	3038
+North Carolina;General Assembly House of Representatives District 20 Primary;North Carolina Democratic Party	Gary K. Shipman	1999
+North Carolina;General Assembly House of Representatives District 20 Primary;North Carolina Democratic Party	John Bauer	326
+North Carolina;General Assembly House of Representatives District 20 Primary;North Carolina Democratic Party	Leslie Cohen	4210
+North Carolina;General Assembly House of Representatives District 21 Primary;North Carolina Democratic Party	Eugene Pearsall	1331
+North Carolina;General Assembly House of Representatives District 21 Primary;North Carolina Democratic Party	Raymond Smith	3022
+North Carolina;General Assembly House of Representatives District 22 Primary;North Carolina Democratic Party	Lawrence A. Aycock	2195
+North Carolina;General Assembly House of Representatives District 22 Primary;North Carolina Democratic Party	Martin (Tony) Denning	5716
+North Carolina;General Assembly House of Representatives District 27 Primary;North Carolina Democratic Party	Franklin D. Williams, Jr.	5716
+North Carolina;General Assembly House of Representatives District 27 Primary;North Carolina Democratic Party	Michael H. Wray	14638
+North Carolina;General Assembly House of Representatives District 3 Primary;North Carolina Democratic Party	Barbara Lee	4902
+North Carolina;General Assembly House of Representatives District 3 Primary;North Carolina Democratic Party	Charles Dudley	1172
+North Carolina;General Assembly House of Representatives District 3 Primary;North Carolina Republican Party	Eric Queen	2201
+North Carolina;General Assembly House of Representatives District 3 Primary;North Carolina Republican Party	Michael Speciale	5894
+North Carolina;General Assembly House of Representatives District 33 Primary;North Carolina Democratic Party	Antoine Marshall	1442
+North Carolina;General Assembly House of Representatives District 33 Primary;North Carolina Democratic Party	Rosa U. Gill	7028
+North Carolina;General Assembly House of Representatives District 33 Primary;North Carolina Democratic Party	Shirley E. Hicks	879
+North Carolina;General Assembly House of Representatives District 35 Primary;North Carolina Democratic Party	Adam B. Wright	881
+North Carolina;General Assembly House of Representatives District 35 Primary;North Carolina Democratic Party	Terence Everitt	7852
+North Carolina;General Assembly House of Representatives District 35 Primary;North Carolina Republican Party	Chris Malone	3302
+North Carolina;General Assembly House of Representatives District 35 Primary;North Carolina Republican Party	Isaac Burke	1396
+North Carolina;General Assembly House of Representatives District 4 Primary;North Carolina Democratic Party	Da'Quan Marcell Love	4902
+North Carolina;General Assembly House of Representatives District 4 Primary;North Carolina Democratic Party	William Vann	1811
+North Carolina;General Assembly House of Representatives District 4 Primary;North Carolina Republican Party	Jimmy Dixon	5530
+North Carolina;General Assembly House of Representatives District 4 Primary;North Carolina Republican Party	Nathan Ray Riggs	541
+North Carolina;General Assembly House of Representatives District 43 Primary;North Carolina Democratic Party	Elmer Floyd	7774
+North Carolina;General Assembly House of Representatives District 43 Primary;North Carolina Democratic Party	Prince Christian	133
+North Carolina;General Assembly House of Representatives District 43 Primary;North Carolina Democratic Party	Theresa Gale	891
+North Carolina;General Assembly House of Representatives District 44 Primary;North Carolina Republican Party	Linda Devore	3062
+North Carolina;General Assembly House of Representatives District 44 Primary;North Carolina Republican Party	Patrick Petsche	758
+North Carolina;General Assembly House of Representatives District 47 Primary;North Carolina Republican Party	Jarrod Lowery	1144
+North Carolina;General Assembly House of Representatives District 47 Primary;North Carolina Republican Party	Tom Norton	384
+North Carolina;General Assembly House of Representatives District 48 Primary;North Carolina Republican Party	John W. Imbaratto	447
+North Carolina;General Assembly House of Representatives District 48 Primary;North Carolina Republican Party	Russell Walker	1648
+North Carolina;General Assembly House of Representatives District 52 Primary;North Carolina Republican Party	Jamie Boles	12234
+North Carolina;General Assembly House of Representatives District 52 Primary;North Carolina Republican Party	Ken Byrd	4015
+North Carolina;General Assembly House of Representatives District 53 Primary;North Carolina Democratic Party	Alan Longman	467
+North Carolina;General Assembly House of Representatives District 53 Primary;North Carolina Democratic Party	Richard Chapman	3280
+North Carolina;General Assembly House of Representatives District 58 Primary;North Carolina Democratic Party	Amos Quick	8300
+North Carolina;General Assembly House of Representatives District 58 Primary;North Carolina Democratic Party	Katelyn (Kate) Flippen	1027
+North Carolina;General Assembly House of Representatives District 59 Primary;North Carolina Republican Party	Jon Hardister	5384
+North Carolina;General Assembly House of Representatives District 59 Primary;North Carolina Republican Party	Karen C. Albright	206
+North Carolina;General Assembly House of Representatives District 59 Primary;North Carolina Republican Party	Mark McDaniel	1013
+North Carolina;General Assembly House of Representatives District 6 Primary;North Carolina Republican Party	Beverly Boswell	3208
+North Carolina;General Assembly House of Representatives District 6 Primary;North Carolina Republican Party	Bobby Hanig	7242
+North Carolina;General Assembly House of Representatives District 64 Primary;North Carolina Democratic Party	Cathy Von Hassel-Davies	1137
+North Carolina;General Assembly House of Representatives District 64 Primary;North Carolina Democratic Party	Elliott Lynch	2000
+North Carolina;General Assembly House of Representatives District 65 Primary;North Carolina Democratic Party	Michael H. (Mike) Lee	2788
+North Carolina;General Assembly House of Representatives District 65 Primary;North Carolina Democratic Party	Wally White	1351
+North Carolina;General Assembly House of Representatives District 67 Primary;North Carolina Republican Party	Justin P. Burr	3874
+North Carolina;General Assembly House of Representatives District 67 Primary;North Carolina Republican Party	Wayne Sasser	9900
+North Carolina;General Assembly House of Representatives District 7 Primary;North Carolina Republican Party	Glen Bradley	920
+North Carolina;General Assembly House of Representatives District 7 Primary;North Carolina Republican Party	Lisa Stone Barnes	4406
+North Carolina;General Assembly House of Representatives District 79 Primary;North Carolina Democratic Party	Bryson Kiel Jones	1450
+North Carolina;General Assembly House of Representatives District 79 Primary;North Carolina Democratic Party	Jerry E. Langley	6642
+North Carolina;General Assembly House of Representatives District 79 Primary;North Carolina Republican Party	Jim Chesnutt	1174
+North Carolina;General Assembly House of Representatives District 79 Primary;North Carolina Republican Party	Keith Kidwell	8352
+North Carolina;General Assembly House of Representatives District 8 Primary;North Carolina Democratic Party	Ernest T. Reeves	799
+North Carolina;General Assembly House of Representatives District 8 Primary;North Carolina Democratic Party	Kandie D. Smith	5582
+North Carolina;General Assembly House of Representatives District 8 Primary;North Carolina Democratic Party	Mildred Atkinson Council	1988
+North Carolina;General Assembly House of Representatives District 80 Primary;North Carolina Republican Party	Roger Younts	3098
+North Carolina;General Assembly House of Representatives District 80 Primary;North Carolina Republican Party	Steve Jarvis	12742
+North Carolina;General Assembly House of Representatives District 81 Primary;North Carolina Republican Party	Eric S. Osborne	2835
+North Carolina;General Assembly House of Representatives District 81 Primary;North Carolina Republican Party	Larry W. Potts	15394
+North Carolina;General Assembly House of Representatives District 83 Primary;North Carolina Democratic Party	Earle Schecter	325
+North Carolina;General Assembly House of Representatives District 83 Primary;North Carolina Democratic Party	Gail Young	2096
+North Carolina;General Assembly House of Representatives District 83 Primary;North Carolina Democratic Party	Senah Andrews	1024
+North Carolina;General Assembly House of Representatives District 83 Primary;North Carolina Republican Party	Larry G. Pittman	5192
+North Carolina;General Assembly House of Representatives District 83 Primary;North Carolina Republican Party	Michael Anderson	1485
+North Carolina;General Assembly House of Representatives District 86 Primary;North Carolina Democratic Party	Robert Griner	400
+North Carolina;General Assembly House of Representatives District 86 Primary;North Carolina Democratic Party	Tim Barnsback	2636
+North Carolina;General Assembly House of Representatives District 88 Primary;North Carolina Republican Party	Benton Blaine	264
+North Carolina;General Assembly House of Representatives District 88 Primary;North Carolina Republican Party	Ty Turner	866
+North Carolina;General Assembly House of Representatives District 90 Primary;North Carolina Republican Party	Allen Poindexter	4078
+North Carolina;General Assembly House of Representatives District 90 Primary;North Carolina Republican Party	Sarah Stevens	8120
+North Carolina;General Assembly House of Representatives District 93 Primary;North Carolina Republican Party	Jonathan C. Jordan	9124
+North Carolina;General Assembly House of Representatives District 93 Primary;North Carolina Republican Party	Robert Block	1245
+North Carolina;General Assembly House of Representatives District 96 Primary;North Carolina Republican Party	Jay Adams	12026
+North Carolina;General Assembly House of Representatives District 96 Primary;North Carolina Republican Party	Taylor G. Huffman	2615
+North Carolina;General Assembly House of Representatives District 97 Primary;North Carolina Republican Party	Jason R. Saine	13854
+North Carolina;General Assembly House of Representatives District 97 Primary;North Carolina Republican Party	Nic Haag	1412
+North Carolina;General Assembly House of Representatives District 98 Primary;North Carolina Democratic Party	Branden Rosenlieb	351
+North Carolina;General Assembly House of Representatives District 98 Primary;North Carolina Democratic Party	Christy Clark	6550
+North Carolina;General Assembly House of Representatives District 99 Primary;North Carolina Democratic Party	Jackson Pethtal	180
+North Carolina;General Assembly House of Representatives District 99 Primary;North Carolina Democratic Party	Nasif Majeed	6020
+North Carolina;General Assembly House of Representatives District 99 Primary;North Carolina Democratic Party	Priscilla (PJ) Johnson	1187
+North Carolina;General Assembly House of Representatives District 99 Primary;North Carolina Democratic Party	Rodney W. Moore	879
+North Carolina;General Assembly Senate District 1 Primary;North Carolina Republican Party	Bob Steinburg	13560
+North Carolina;General Assembly Senate District 1 Primary;North Carolina Republican Party	Clark Twiddy	4902
+North Carolina;General Assembly Senate District 13 Primary;North Carolina Democratic Party	Bobbie Jacobs-Ghaffar	6588
+North Carolina;General Assembly Senate District 13 Primary;North Carolina Democratic Party	John Campbell	29606
+North Carolina;General Assembly Senate District 16 Primary;North Carolina Democratic Party	Luis Toledo	6890
+North Carolina;General Assembly Senate District 16 Primary;North Carolina Democratic Party	Wiley Nickel	17170
+North Carolina;General Assembly Senate District 19 Primary;North Carolina Democratic Party	Clarence E. Donaldson	3142
+North Carolina;General Assembly Senate District 19 Primary;North Carolina Democratic Party	Kirk DeViere	10514
+North Carolina;General Assembly Senate District 2 Primary;North Carolina Democratic Party	Dorothea D. White	3871
+North Carolina;General Assembly Senate District 2 Primary;North Carolina Democratic Party	Ginger Garner	7888
+North Carolina;General Assembly Senate District 2 Primary;North Carolina Republican Party	Lisa Oakley	3510
+North Carolina;General Assembly Senate District 2 Primary;North Carolina Republican Party	Norman Sanderson	22586
+North Carolina;General Assembly Senate District 21 Primary;North Carolina Democratic Party	Ben Clark	12982
+North Carolina;General Assembly Senate District 21 Primary;North Carolina Democratic Party	Naveed Aziz	5177
+North Carolina;General Assembly Senate District 25 Primary;North Carolina Republican Party	Michelle Lexo	5701
+North Carolina;General Assembly Senate District 25 Primary;North Carolina Republican Party	Tom McInnis	17822
+North Carolina;General Assembly Senate District 29 Primary;North Carolina Republican Party	Eddie Gallimore	23516
+North Carolina;General Assembly Senate District 29 Primary;North Carolina Republican Party	Sam Watford	9438
+North Carolina;General Assembly Senate District 31 Primary;North Carolina Republican Party	Dan Barrett	6204
+North Carolina;General Assembly Senate District 31 Primary;North Carolina Republican Party	Joyce Krawiec	12872
+North Carolina;General Assembly Senate District 31 Primary;North Carolina Republican Party	Peter Antinozzi	593
+North Carolina;General Assembly Senate District 33 Primary;North Carolina Republican Party	Bill Sorenson	5602
+North Carolina;General Assembly Senate District 33 Primary;North Carolina Republican Party	Carl Ford	16836
+North Carolina;General Assembly Senate District 34 Primary;North Carolina Democratic Party	Beniah McMiller	2966
+North Carolina;General Assembly Senate District 34 Primary;North Carolina Democratic Party	Lisaney Kong	658
+North Carolina;General Assembly Senate District 34 Primary;North Carolina Democratic Party	William Stinson	2542
+North Carolina;General Assembly Senate District 34 Primary;North Carolina Republican Party	A. J. Daoud	1519
+North Carolina;General Assembly Senate District 34 Primary;North Carolina Republican Party	Robert (Bob) Rucho	3636
+North Carolina;General Assembly Senate District 34 Primary;North Carolina Republican Party	Vickie Sawyer	9600
+North Carolina;General Assembly Senate District 34 Primary;North Carolina Republican Party	William (Bill) Howell	996
+North Carolina;General Assembly Senate District 38 Primary;North Carolina Democratic Party	Joel Ford	5408
+North Carolina;General Assembly Senate District 38 Primary;North Carolina Democratic Party	Mujtaba A. Mohammed	13798
+North Carolina;General Assembly Senate District 38 Primary;North Carolina Democratic Party	Roderick Davis	631
+North Carolina;General Assembly Senate District 38 Primary;North Carolina Democratic Party	Tim Wallis	346
+North Carolina;General Assembly Senate District 39 Primary;North Carolina Democratic Party	Ann Harlan	5222
+North Carolina;General Assembly Senate District 39 Primary;North Carolina Democratic Party	Chad Stachowicz	10478
+North Carolina;General Assembly Senate District 39 Primary;North Carolina Republican Party	Beth Monaghan	3537
+North Carolina;General Assembly Senate District 39 Primary;North Carolina Republican Party	Dan Bishop	17556
+North Carolina;General Assembly Senate District 42 Primary;North Carolina Republican Party	Andy Wells	18036
+North Carolina;General Assembly Senate District 42 Primary;North Carolina Republican Party	Dustin Long	1241
+North Carolina;General Assembly Senate District 42 Primary;North Carolina Republican Party	Mark Hollo	6506
+North Carolina;General Assembly Senate District 42 Primary;North Carolina Republican Party	Ryan Huffman	2236
+North Carolina;General Assembly Senate District 44 Primary;North Carolina Republican Party	David L. Curtis	4554
+North Carolina;General Assembly Senate District 44 Primary;North Carolina Republican Party	Martin Oakes	2370
+North Carolina;General Assembly Senate District 44 Primary;North Carolina Republican Party	Ted Alexander	11046
+North Carolina;General Assembly Senate District 45 Primary;North Carolina Republican Party	Deanna Ballard	16806
+North Carolina;General Assembly Senate District 45 Primary;North Carolina Republican Party	Shirley Blackburn Randleman	7276
+North Carolina;General Assembly Senate District 47 Primary;North Carolina Democratic Party	Cheryl D. Swofford	2473
+North Carolina;General Assembly Senate District 47 Primary;North Carolina Democratic Party	Christopher H. Rumfelt	1141
+North Carolina;General Assembly Senate District 47 Primary;North Carolina Democratic Party	David Wheeler	8544
+North Carolina;General Assembly Senate District 5 Primary;North Carolina Democratic Party	Don Davis	22022
+North Carolina;General Assembly Senate District 5 Primary;North Carolina Democratic Party	Lonnie Carraway	3224
+North Carolina;General Assembly Senate District 5 Primary;North Carolina Republican Party	Kimberly Robb	8378
+North Carolina;General Assembly Senate District 5 Primary;North Carolina Republican Party	Tony Moore	3875
+North Carolina;General Assembly Senate District 8 Primary;North Carolina Libertarian Party	Anthony H. Mascolo	106
+North Carolina;General Assembly Senate District 8 Primary;North Carolina Libertarian Party	Randolph W. (Randy) Crow	38
+North Carolina;US Congress House of Representatives District 10 Primary;North Carolina Republican Party	Albert Lee Wiley, Jr.	616
+North Carolina;US Congress House of Representatives District 10 Primary;North Carolina Republican Party	Gina Collias	6664
+North Carolina;US Congress House of Representatives District 10 Primary;North Carolina Republican Party	Ira Roberts	1701
+North Carolina;US Congress House of Representatives District 10 Primary;North Carolina Republican Party	Jeff Gregory	3724
+North Carolina;US Congress House of Representatives District 10 Primary;North Carolina Republican Party	Patrick McHenry	68346
+North Carolina;US Congress House of Representatives District 10 Primary;North Carolina Republican Party	Seth Blankenship	1443
+North Carolina;US Congress House of Representatives District 11 Primary;North Carolina Democratic Party	D. Scott Donaldson	9402
+North Carolina;US Congress House of Representatives District 11 Primary;North Carolina Democratic Party	Phillip G. Price	26998
+North Carolina;US Congress House of Representatives District 11 Primary;North Carolina Democratic Party	Steve Woodsmall	10356
+North Carolina;US Congress House of Representatives District 11 Primary;North Carolina Republican Party	Chuck Archerd	5639
+North Carolina;US Congress House of Representatives District 11 Primary;North Carolina Republican Party	Mark Meadows	71330
+North Carolina;US Congress House of Representatives District 12 Primary;North Carolina Democratic Party	Alma Adams	77698
+North Carolina;US Congress House of Representatives District 12 Primary;North Carolina Democratic Party	Gabe Ortiz	1959
+North Carolina;US Congress House of Representatives District 12 Primary;North Carolina Democratic Party	Keith Young	2549
+North Carolina;US Congress House of Representatives District 12 Primary;North Carolina Democratic Party	Patrick Register	2074
+North Carolina;US Congress House of Representatives District 12 Primary;North Carolina Republican Party	Carl Persson	1885
+North Carolina;US Congress House of Representatives District 12 Primary;North Carolina Republican Party	Paul Bonham	2349
+North Carolina;US Congress House of Representatives District 12 Primary;North Carolina Republican Party	Paul Wright	6442
+North Carolina;US Congress House of Representatives District 13 Primary;North Carolina Democratic Party	Adam Coker	8324
+North Carolina;US Congress House of Representatives District 13 Primary;North Carolina Democratic Party	Kathy Manning	39108
+North Carolina;US Congress House of Representatives District 2 Primary;North Carolina Democratic Party	Ken Romley	10742
+North Carolina;US Congress House of Representatives District 2 Primary;North Carolina Democratic Party	Linda Coleman	37300
+North Carolina;US Congress House of Representatives District 2 Primary;North Carolina Democratic Party	Wendy Ella May	3895
+North Carolina;US Congress House of Representatives District 2 Primary;North Carolina Republican Party	Allen Chesser	5612
+North Carolina;US Congress House of Representatives District 2 Primary;North Carolina Republican Party	George Holding	35958
+North Carolina;US Congress House of Representatives District 3 Primary;North Carolina Republican Party	Phil Law	14341
+North Carolina;US Congress House of Representatives District 3 Primary;North Carolina Republican Party	Scott Dacey	13420
+North Carolina;US Congress House of Representatives District 3 Primary;North Carolina Republican Party	Walter B. Jones	41914
+North Carolina;US Congress House of Representatives District 4 Primary;North Carolina Democratic Party	David Price	104406
+North Carolina;US Congress House of Representatives District 4 Primary;North Carolina Democratic Party	Michelle Laws	11120
+North Carolina;US Congress House of Representatives District 4 Primary;North Carolina Democratic Party	Richard L. Watkins	4391
+North Carolina;US Congress House of Representatives District 4 Primary;North Carolina Libertarian Party	Barbara Howe	1056
+North Carolina;US Congress House of Representatives District 4 Primary;North Carolina Libertarian Party	Scerry Perry Whitlock	159
+North Carolina;US Congress House of Representatives District 5 Primary;North Carolina Democratic Party	DD Adams	31018
+North Carolina;US Congress House of Representatives District 5 Primary;North Carolina Democratic Party	Jenny Marshall	12987
+North Carolina;US Congress House of Representatives District 5 Primary;North Carolina Republican Party	Cortland J. Meader, Jr.	2063
+North Carolina;US Congress House of Representatives District 5 Primary;North Carolina Republican Party	Dillon Gentry	5703
+North Carolina;US Congress House of Representatives District 5 Primary;North Carolina Republican Party	Virginia Foxx	65308
+North Carolina;US Congress House of Representatives District 6 Primary;North Carolina Democratic Party	Gerald Wong	7719
+North Carolina;US Congress House of Representatives District 6 Primary;North Carolina Democratic Party	Ryan Watts	52144
+North Carolina;US Congress House of Representatives District 7 Primary;North Carolina Democratic Party	Grayson Parker	10587
+North Carolina;US Congress House of Representatives District 7 Primary;North Carolina Democratic Party	Kyle Horton	42988
+North Carolina;US Congress House of Representatives District 8 Primary;North Carolina Democratic Party	Frank McNeill	32024
+North Carolina;US Congress House of Representatives District 8 Primary;North Carolina Democratic Party	Marc Tiegel	5992
+North Carolina;US Congress House of Representatives District 8 Primary;North Carolina Democratic Party	Scott Huffman	6574
+North Carolina;US Congress House of Representatives District 9 Primary;North Carolina Democratic Party	Christian Cano	7922
+North Carolina;US Congress House of Representatives District 9 Primary;North Carolina Democratic Party	Dan McCready	76196
+North Carolina;US Congress House of Representatives District 9 Primary;North Carolina Republican Party	Clarence W. Goins, Jr.	1867
+North Carolina;US Congress House of Representatives District 9 Primary;North Carolina Republican Party	Mark Harris	34604
+North Carolina;US Congress House of Representatives District 9 Primary;North Carolina Republican Party	Robert Pittenger	16474
+One Quarter Cent Sales Tax	Against	18432
+One Quarter Cent Sales Tax	For	17305
+One Quarter Cent Sales Tax	No	1514
+One Quarter Cent Sales Tax	Yes	910
+Rockingham County Sales and Use Tax	Against	4296
+Rockingham County Sales and Use Tax	For	5344
+School Bonds	No	4318
+School Bonds	Yes	9673
