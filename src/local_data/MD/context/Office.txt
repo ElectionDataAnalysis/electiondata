@@ -1,12 +1,12 @@
 Name	ElectionDistrict	ElectionDistrictType	VotesAllowed	NumberElected	NumberRunoff	IsPartisan
-Maryland;Representative in Congress 1	Maryland;Representative in Congress 1	congressional 	1	1	0	TRUE
-Maryland;Representative in Congress 2	Maryland;Representative in Congress 2	congressional 	1	1	0	TRUE
-Maryland;Representative in Congress 3	Maryland;Representative in Congress 3	congressional 	1	1	0	TRUE
-Maryland;Representative in Congress 4	Maryland;Representative in Congress 4	congressional 	1	1	0	TRUE
-Maryland;Representative in Congress 5	Maryland;Representative in Congress 5	congressional 	1	1	0	TRUE
-Maryland;Representative in Congress 6	Maryland;Representative in Congress 6	congressional 	1	1	0	TRUE
-Maryland;Representative in Congress 7	Maryland;Representative in Congress 7	congressional 	1	1	0	TRUE
-Maryland;Representative in Congress 8	Maryland;Representative in Congress 8	congressional 	1	1	0	TRUE
+Maryland;Representative in Congress 1	Maryland;Representative in Congress 1	congressional	1	1	0	TRUE
+Maryland;Representative in Congress 2	Maryland;Representative in Congress 2	congressional	1	1	0	TRUE
+Maryland;Representative in Congress 3	Maryland;Representative in Congress 3	congressional	1	1	0	TRUE
+Maryland;Representative in Congress 4	Maryland;Representative in Congress 4	congressional	1	1	0	TRUE
+Maryland;Representative in Congress 5	Maryland;Representative in Congress 5	congressional	1	1	0	TRUE
+Maryland;Representative in Congress 6	Maryland;Representative in Congress 6	congressional	1	1	0	TRUE
+Maryland;Representative in Congress 7	Maryland;Representative in Congress 7	congressional	1	1	0	TRUE
+Maryland;Representative in Congress 8	Maryland;Representative in Congress 8	congressional	1	1	0	TRUE
 Maryland;Governor / Lt. Governor 	Maryland	state	1	1	0	TRUE
 Maryland;State's Attorney        	Maryland 	state	1	1	0	TRUE
 Maryland;Treasurer               	Maryland      	state	1	1	0	TRUE
