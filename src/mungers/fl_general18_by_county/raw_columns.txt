@@ -1,0 +1,16 @@
+Name	Datatype
+County	String
+Election Date	Date
+Precinct	String
+Contest Group ID	Integer
+Contest Type	String
+Contest Name	String
+Choice	String
+Choice Party	String
+Vote For	Integer
+Election Day	Integer
+One Stop	Integer
+Absentee by Mail	Integer
+Provisional	Integer
+Total Votes	Integer
+Real Precinct	String

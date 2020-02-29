@@ -1,0 +1,8 @@
+CDFTable	ExternalIdentifier	InternalFieldName	Enumerations
+Office	<Contest Name>	Name	{}
+ReportingUnit	<County>;<Precinct>	Name	{'ReportingUnitType': 'precinct'}
+Party	<Choice Party>	Name	{}
+Candidate	<Choice>	BallotName	{}
+CandidateContest	<Contest Name>	Name	{}
+BallotMeasureContest	<Contest Name>	Name	{}
+BallotMeasureSelection	<Choice>	Selection	{}
