@@ -2439,4 +2439,4 @@ Party 	Maryland Green Party	md_general	GRN
 Party 	Maryland Republican Party	md_general	REP
 Party 	Maryland BOT	md_general	BOT
 Party 	Maryland UNF	md_general	UNF
-Election	General Election 2018-11-06	md_general	11/6/18
+Election	General Election 2018-11-06	md_general	11/6/2018

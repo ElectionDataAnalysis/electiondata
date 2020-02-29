@@ -1,0 +1,7 @@
+CDFTable	ExternalIdentifier	InternalFieldName	Enumerations	OtherFields
+Office	<Office Name>;<Office District>	Name	{}	{}
+ReportingUnit	<County>.apply(str);<Election District>.apply(str);<Election Precinct>.apply(str)	Name	{}	{}
+Party	<Party>	Name	{}	{}
+Candidate	<Candidate Name>	Name	{}	{}
+CandidateContest	<Office Name>	Name	{}	{}
+BallotMeasureContest	<Office Name>	Name	{}	{}
