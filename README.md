@@ -46,6 +46,15 @@ Holds datafiles from the state. Each election has a subfolder (whose name must b
 This information may be common to many datafiles; it may be related to information in the datafile but may require some contextual knowledge outside of any particular datafile. For example, the fact that the election on 2018-11-06 in North Carolina was a `general` election is contextual knowledge. Each file in the `context` directory should have a single header row.
 
     * `BallotMeasureSelection.txt` Header is `Selection`; one row for each possible selection, e.g., `Yes` or `No` or `For` or `Against`. 
+    * `datafile.txt` describes all datafiles for the state. Columns are:
+      * `name`	
+      * `encoding`	
+      * `separator` ('comma' or 'tab')
+      * `source_url`
+      * `file_date` date given for the file at the source
+      * `download_date`	
+      * `note`	
+
     * `remark.txt` String containing any notable information about the state and its data
     * `Election.txt` Tab-separated list of elections. Columns are:
       * `Name`
