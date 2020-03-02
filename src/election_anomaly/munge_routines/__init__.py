@@ -2,6 +2,9 @@
 # munge_routines/__init__.py
 # under construction
 
+# TODO How to handle FL candidate names? Candidate might or might not have middle name. FL munger gives candidate without middle name two spaces
+# TODO e.g. 'Stephanie  Singer' or 'Stephanie Frank Singer'.
+
 import db_routines as dbr
 import pandas as pd
 import numpy as np
