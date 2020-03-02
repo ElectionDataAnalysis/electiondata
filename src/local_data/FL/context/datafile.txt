@@ -1,0 +1,2 @@
+name	encoding	separator	source_url	file_date	download_date	note	type_correction_list
+General Election 2018-11-06;11062018Election.txt		tab	https://results.elections.myflorida.com/downloadresults.asp?ElectionDate=11/6/2018&DATAMODE=		2020-02-20
