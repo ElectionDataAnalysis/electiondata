@@ -18,10 +18,10 @@ def fill_externalIdentifier_table(session,cdf_schema,context_schema,mu):
     """
     # get table from munger directory with the tab-separated definitions of external identifiers
     fpath=mu.path_to_munger_dir+'ExternalIdentifier.txt'
-    print('Pulling ExternalIdentifier table from {}'.format(fpath))
+    print('Pulling munger\'s ExternalIdentifier table from {}'.format(fpath))
     ei_df = pd.read_csv(fpath,sep = '\t')
+    ei_df.loc[:,'ExternalIdentifierType'] = mu.name
 
-    print('Writing to ExternalIdentifier table in context_schema')
     ei_df.to_sql('ExternalIdentifier',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
 
     cdf = {}

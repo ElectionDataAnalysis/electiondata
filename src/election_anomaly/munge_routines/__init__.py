@@ -61,7 +61,7 @@ def get_internal_ids_from_context(row_df,ctxt_ei_df,table_df,table_name,internal
     row_df = row_df.drop(['ExternalIdentifierValue','Table','ExternalIdentifierType','index',table_name+'_external'],axis=1)
 
     # ensure that there is a column in row_df called by the table_name
-    # containng the internal name of the element
+    # containing the internal name of the element
     if 'Name_'+table_name+'_ei' in row_df.columns:
         row_df.rename(columns={'Name_'+table_name+'_ei':table_name},inplace=True)
     else:
