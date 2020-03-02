@@ -12,8 +12,6 @@ class State:
         # connect to  and create the three schemas
         con = dbr.establish_connection(db_name=self.short_name)
         cur = con.cursor()
-        q = "CREATE SCHEMA raw;"
-        dbr.query(q,[],[],con,cur)
         q = "CREATE SCHEMA context;"
         dbr.query(q,[],[],con,cur)
         q = "CREATE SCHEMA cdf;"
