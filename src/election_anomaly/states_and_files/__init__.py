@@ -41,9 +41,9 @@ class State:
 class Munger:
     def __init__(self,dir_path):
         assert os.path.isdir(dir_path),'Not a directory: ' + dir_path
-        assert os.path.isfile(dir_path + 'cdf_tables.txt') and os.path.isfile(
+        assert os.path.isfile(dir_path + 'cdf_tables.txt') and os.path.isfile(dir_path + 'atomic_reporting_unit_type.txt') and os.path.isfile(
             dir_path + 'count_columns.txt') and os.path.isfile(dir_path + 'raw_columns.txt'),\
-            'Directory ' + dir_path + ' must contain files cdf_tables.txt, count_columns.txt and raw_columns.txt'
+            'Directory {} must contain files atomic_reporting_unit_type.txt, cdf_tables.txt, count_columns.txt and raw_columns.txt'.format(dir_path)
         if dir_path[-1] != '/': dir_path += '/' # make sure path ends in a slash
         self.path_to_munger_dir=dir_path
         self.name=dir_path.split('/')[-2]    # 'nc_general'
