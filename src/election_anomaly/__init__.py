@@ -124,7 +124,7 @@ if __name__ == '__main__':
 
     need_to_analyze = input('Analyze (y/n)?\n')
     if need_to_analyze == 'y':
-        electionrollup = an.ContestRollup(e,'county','precinct')
+        electionrollup = an.ContestRollup(e,'county',mu.atomic_reporting_unit_type)
 
         just_one_contest = input('Get anomaly list for just one contest? (y/n)\n')
         while just_one_contest == 'y':

@@ -77,7 +77,8 @@ This information may be common to many datafiles; it may be related to informati
 Files from different sources require different processing assumptions. We call each set of assumptions a "munger"
 
 The folder `src/mungers` holds a directory for each munger. Each munger directory needs the following component files:
- * 'ExternalIdentifiers.txt' [*** explain]
+ * `ExternalIdentifiers.txt` [*** explain]
+ * `atomic_reporting_unit_type.txt` contains one line, holding the type of the basic ("atomic") reporting unit type of the datafile. If the datafile rows correspond to precincts, then 'precinct'. If each row represents information for an entire county, then 'county'. Note that in either case there may be "administrative precincts" to handle, e.g., absentee ballots. Because the program sums over all appropriate elements of the given 'atomic' type, it is important that each vote is counted in one and only one atomic reporting unit.
  * `raw_columns.txt` List of columns in source file. Columns are:
     * `Name` name of the column in the source file
     * `Datatype` datatype of the column in the source file
