@@ -2433,10 +2433,10 @@ ReportingUnit	Maryland;Worcester County;Election District 6:Precinct 1	md_genera
 ReportingUnit	Maryland;Worcester County;Election District 6:Precinct 2	md_general	24;6;2
 ReportingUnit	Maryland;Worcester County;Election District 6:Precinct 3	md_general	24;6;3
 ReportingUnit	Maryland;Worcester County;Election District 7:Precinct 1	md_general	24;7;1
-Party 	Maryland Democratic Party	md_general	DEM
-Party 	Maryland Libertarian Party	md_general	LIB
-Party 	Maryland Green Party	md_general	GRN
-Party 	Maryland Republican Party	md_general	REP
-Party 	Maryland BOT	md_general	BOT
-Party 	Maryland UNF	md_general	UNF
+Party	Maryland Democratic Party	md_general	DEM
+Party	Maryland Libertarian Party	md_general	LIB
+Party	Maryland Green Party	md_general	GRN
+Party	Maryland Republican Party	md_general	REP
+Party	Maryland BOT	md_general	BOT
+Party	Maryland UNF	md_general	UNF
 Election	General Election 2018-11-06	md_general	11/6/2018

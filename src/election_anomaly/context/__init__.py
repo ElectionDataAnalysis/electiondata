@@ -199,5 +199,3 @@ if __name__ == '__main__':
     s = sf.create_state('NC','../../local_data/NC/')
     enumeration_table_list = CDF.enum_table_list(dirpath='../CDF_schema_def_info/')
     print('Done!')
-
-

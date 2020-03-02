@@ -5,7 +5,7 @@ Election Precinct	Integer
 Cong	Integer
 Legs	String
 Candidate Name	String
-Party	String
+Partyx	String
 Office Name	String
 Office District	String
 Winner	String
