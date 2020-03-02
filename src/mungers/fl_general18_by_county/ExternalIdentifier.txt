@@ -171,19 +171,35 @@ Office	Florida;General Assembly Senate District 47	NC STATE SENATE DISTRICT 47
 Office	Florida;General Assembly Senate District 48	NC STATE SENATE DISTRICT 48
 Office	Florida;General Assembly Senate District 49	NC STATE SENATE DISTRICT 49
 Office	Florida;General Assembly Senate District 50	NC STATE SENATE DISTRICT 50
-Office	Florida;US Congress House of Representatives District 1	US HOUSE OF REPRESENTATIVES DISTRICT 01
-Office	Florida;US Congress House of Representatives District 2	US HOUSE OF REPRESENTATIVES DISTRICT 02
-Office	Florida;US Congress House of Representatives District 3	US HOUSE OF REPRESENTATIVES DISTRICT 03
-Office	Florida;US Congress House of Representatives District 4	US HOUSE OF REPRESENTATIVES DISTRICT 04
-Office	Florida;US Congress House of Representatives District 5	US HOUSE OF REPRESENTATIVES DISTRICT 05
-Office	Florida;US Congress House of Representatives District 6	US HOUSE OF REPRESENTATIVES DISTRICT 06
-Office	Florida;US Congress House of Representatives District 7	US HOUSE OF REPRESENTATIVES DISTRICT 07
-Office	Florida;US Congress House of Representatives District 8	US HOUSE OF REPRESENTATIVES DISTRICT 08
-Office	Florida;US Congress House of Representatives District 9	US HOUSE OF REPRESENTATIVES DISTRICT 09
-Office	Florida;US Congress House of Representatives District 10	US HOUSE OF REPRESENTATIVES DISTRICT 10
-Office	Florida;US Congress House of Representatives District 11	US HOUSE OF REPRESENTATIVES DISTRICT 11
-Office	Florida;US Congress House of Representatives District 12	US HOUSE OF REPRESENTATIVES DISTRICT 12
-Office	Florida;US Congress House of Representatives District 13	US HOUSE OF REPRESENTATIVES DISTRICT 13
+Office	Florida;US Congress House of Representatives District 1	United States Representative Juris1num 01 Juris2num
+Office	Florida;US Congress House of Representatives District 2	United States Representative Juris1num 02 Juris2num
+Office	Florida;US Congress House of Representatives District 3	United States Representative Juris1num 03 Juris2num
+Office	Florida;US Congress House of Representatives District 4	United States Representative Juris1num 04 Juris2num
+Office	Florida;US Congress House of Representatives District 5	United States Representative Juris1num 05 Juris2num
+Office	Florida;US Congress House of Representatives District 6	United States Representative Juris1num 06 Juris2num
+Office	Florida;US Congress House of Representatives District 7	United States Representative Juris1num 07 Juris2num
+Office	Florida;US Congress House of Representatives District 8	United States Representative Juris1num 08 Juris2num
+Office	Florida;US Congress House of Representatives District 9	United States Representative Juris1num 09 Juris2num
+Office	Florida;US Congress House of Representatives District 10	United States Representative Juris1num 10 Juris2num
+Office	Florida;US Congress House of Representatives District 11	United States Representative Juris1num 11 Juris2num
+Office	Florida;US Congress House of Representatives District 12	United States Representative Juris1num 12 Juris2num
+Office	Florida;US Congress House of Representatives District 13	United States Representative Juris1num 13 Juris2num
+Office	Florida;US Congress House of Representatives District 14	United States Representative Juris1num 14 Juris2num
+Office	Florida;US Congress House of Representatives District 15	United States Representative Juris1num 15 Juris2num
+Office	Florida;US Congress House of Representatives District 16	United States Representative Juris1num 16 Juris2num
+Office	Florida;US Congress House of Representatives District 17	United States Representative Juris1num 17 Juris2num
+Office	Florida;US Congress House of Representatives District 18	United States Representative Juris1num 18 Juris2num
+Office	Florida;US Congress House of Representatives District 19	United States Representative Juris1num 19 Juris2num
+Office	Florida;US Congress House of Representatives District 20	United States Representative Juris1num 20 Juris2num
+Office	Florida;US Congress House of Representatives District 21	United States Representative Juris1num 21 Juris2num
+Office	Florida;US Congress House of Representatives District 22	United States Representative Juris1num 22 Juris2num
+Office	Florida;US Congress House of Representatives District 23	United States Representative Juris1num 23 Juris2num
+Office	Florida;US Congress House of Representatives District 24	United States Representative Juris1num 24 Juris2num
+Office	Florida;US Congress House of Representatives District 25	United States Representative Juris1num 25 Juris2num
+Office	Florida;US Congress House of Representatives District 26	United States Representative Juris1num 26 Juris2num
+Office	Florida;US Congress House of Representatives District 27	United States Representative Juris1num 27 Juris2num
+Office	Florida;Governor	Governor Juris1num Juris2num
+
 Party	North Carolina Constitution Party	CST
 Party	North Carolina Democratic Party	DEM
 Party	North Carolina Libertarian Party	LIB
@@ -3511,17 +3527,17 @@ CandidateContest	Florida;General Assembly Senate District 47	NC STATE SENATE DIS
 CandidateContest	Florida;General Assembly Senate District 48	NC STATE SENATE DISTRICT 48
 CandidateContest	Florida;General Assembly Senate District 49	NC STATE SENATE DISTRICT 49
 CandidateContest	Florida;General Assembly Senate District 50	NC STATE SENATE DISTRICT 50
-CandidateContest	Florida;US Congress House of Representatives District 1	US HOUSE OF REPRESENTATIVES DISTRICT 01
-CandidateContest	Florida;US Congress House of Representatives District 2	US HOUSE OF REPRESENTATIVES DISTRICT 02
-CandidateContest	Florida;US Congress House of Representatives District 3	US HOUSE OF REPRESENTATIVES DISTRICT 03
-CandidateContest	Florida;US Congress House of Representatives District 4	US HOUSE OF REPRESENTATIVES DISTRICT 04
-CandidateContest	Florida;US Congress House of Representatives District 5	US HOUSE OF REPRESENTATIVES DISTRICT 05
-CandidateContest	Florida;US Congress House of Representatives District 6	US HOUSE OF REPRESENTATIVES DISTRICT 06
-CandidateContest	Florida;US Congress House of Representatives District 7	US HOUSE OF REPRESENTATIVES DISTRICT 07
-CandidateContest	Florida;US Congress House of Representatives District 8	US HOUSE OF REPRESENTATIVES DISTRICT 08
-CandidateContest	Florida;US Congress House of Representatives District 9	US HOUSE OF REPRESENTATIVES DISTRICT 09
-CandidateContest	Florida;US Congress House of Representatives District 10	US HOUSE OF REPRESENTATIVES DISTRICT 10
-CandidateContest	Florida;US Congress House of Representatives District 11	US HOUSE OF REPRESENTATIVES DISTRICT 11
-CandidateContest	Florida;US Congress House of Representatives District 12	US HOUSE OF REPRESENTATIVES DISTRICT 12
-CandidateContest	Florida;US Congress House of Representatives District 13	US HOUSE OF REPRESENTATIVES DISTRICT 13
+CandidateContest	Florida;US Congress House of Representatives District 1	United States Representative Juris1num 01
+CandidateContest	Florida;US Congress House of Representatives District 2	United States Representative Juris1num 02
+CandidateContest	Florida;US Congress House of Representatives District 3	United States Representative Juris1num 03
+CandidateContest	Florida;US Congress House of Representatives District 4	United States Representative Juris1num 04
+CandidateContest	Florida;US Congress House of Representatives District 5	United States Representative Juris1num 05
+CandidateContest	Florida;US Congress House of Representatives District 6	United States Representative Juris1num 06
+CandidateContest	Florida;US Congress House of Representatives District 7	United States Representative Juris1num 07
+CandidateContest	Florida;US Congress House of Representatives District 8	United States Representative Juris1num 08
+CandidateContest	Florida;US Congress House of Representatives District 9	United States Representative Juris1num 09
+CandidateContest	Florida;US Congress House of Representatives District 10	United States Representative Juris1num 10
+CandidateContest	Florida;US Congress House of Representatives District 11	United States Representative Juris1num 11
+CandidateContest	Florida;US Congress House of Representatives District 12	United States Representative Juris1num 12
+CandidateContest	Florida;US Congress House of Representatives District 13	United States Representative Juris1num 13
 United States Senator	United States Senator	United States Senator
