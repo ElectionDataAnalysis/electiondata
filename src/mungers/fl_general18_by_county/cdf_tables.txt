@@ -5,4 +5,4 @@ Party	<PartyName	Name
 Candidate	<CanNameFirst> <CanNameMiddle> <CanNameLast>	BallotName
 CandidateContest	<OfficeDesc> Juris1num <Juris1num> Juris2num <Juris2num>	Name
 BallotMeasureContest	<OfficeDesc>	Name
-BallotMeasureSelection	<Choice>	Selection
+BallotMeasureSelection	<CanNameLast>	Selection
