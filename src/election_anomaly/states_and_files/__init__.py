@@ -64,6 +64,10 @@ class Munger:
         if self.ballot_measure_style == 'yes_and_no_are_candidates':
             with open('{}ballot_measure_selections.txt'.format(dir_path),'r') as f:
                 self.ballot_measure_selection_list = [x.strip() for x in f.readlines()]
+            cdft=pd.read_csv('{}cdf_tables.txt'.format(dir_path),sep='\t')
+            bms_str=cdft[cdft.CDFTable=='BallotMeasureSelection'].iloc[0]['ExternalIdentifier']
+            # note: bms_str will start and end with <>
+            self.ballot_measure_selection_col = bms_str[1:-1]
         else:
             self.ballot_measure_selection_list=None # TODO is that necessary?
 

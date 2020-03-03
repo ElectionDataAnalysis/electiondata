@@ -4,8 +4,8 @@ One Stop	early	Candidate	None
 Absentee by Mail	absentee-mail	Candidate	None
 Provisional	provisional	Candidate	None
 Total Votes	total	Candidate	None
-Election Day	election-day	BallotMeasure	in Candidate column
-One Stop	early	BallotMeasure	in Candidate column
-Absentee by Mail	absentee-mail	BallotMeasure	in Candidate column
-Provisional	provisional	BallotMeasure	in Candidate column
-Total Votes	total	BallotMeasure	in Candidate column
+Election Day	election-day	BallotMeasure	<Choice>
+One Stop	early	BallotMeasure	<Choice>
+Absentee by Mail<Choice>	absentee-mail	BallotMeasure	<Choice>
+Provisional	provisional	BallotMeasure	<Choice>
+Total Votes	total	BallotMeasure	<Choice>
