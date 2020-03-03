@@ -16,6 +16,7 @@ import analyze as an
 
 from sqlalchemy.orm import sessionmaker
 import pandas as pd
+import numpy as np
 
 try:
     import cPickle as pickle
@@ -99,6 +100,11 @@ if __name__ == '__main__':
         print('Creating munger instance from {}'.format(munger_path))
         mu = sf.Munger(munger_path)
 
+        col_df = pd.read_csv('{}/raw_columns.txt'.format(munger_path),sep='\t')
+        type_map_d = {'string':str,'integer':int}
+        type_d = dict(np.array(col_df))
+        pytype_d = {k: type_map_d.get(v) for k, v in type_d.items()}
+
         dfs = pd.read_sql_table('datafile',session.bind,schema='context',index_col='index')
         for datafile in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/'+mu.name+'/'):
             # check datafile is listed in datafiles
@@ -108,7 +114,7 @@ if __name__ == '__main__':
                 delimiter = '\t'
             elif df_info['separator'] == 'comma':
                 delimiter = ','
-            raw_data_dframe = pd.read_csv(s.path_to_state_dir + 'data/' +election_name+'/'+munger_name+'/'+ datafile,sep=delimiter)
+            raw_data_dframe = pd.read_csv(s.path_to_state_dir + 'data/' +election_name+'/'+munger_name+'/'+ datafile,sep=delimiter,dtype=pytype_d) # TODO make this behave!
             print('Loading data into cdf schema from file: {}'.format(datafile))
             mr.raw_dframe_to_cdf(session,raw_data_dframe,s, mu,'cdf','context',e)
 

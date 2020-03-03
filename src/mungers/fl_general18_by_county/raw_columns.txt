@@ -1,0 +1,16 @@
+name	type
+ElectionDate	string
+PartyCode	string
+PartyName	string
+RaceCode	string
+OfficeDesc	string
+CountyCode	string
+CountyName	string
+Juris1num	integer
+Juris2num	integer
+Precincts	integer
+PrecinctsReporting	integer
+CanNameLast	string
+CanNameFirst	string
+CanNameMiddle	string
+CanVotes	integer

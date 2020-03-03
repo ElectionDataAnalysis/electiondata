@@ -37,6 +37,7 @@ def add_munged_column(row_df,munge_dictionary,munge_key,new_col_name):
         text_field_list.reverse()
         for t,f in text_field_list:
             row_df.loc[:,new_col_name] = t+row_df.loc[:,f]+row_df.loc[:,new_col_name]
+            # TODO ensure rhs is all strings. Best to do this on data load (for all but vote-count cols or row_df when it is first loaded.
         return row_df
 
 def get_internal_ids_from_context(row_df,ctxt_ei_df,table_df,table_name,internal_name_column,unmatched_dir,drop_unmatched=False):
@@ -135,6 +136,7 @@ def raw_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,ele
     col_list = list(vc_col_d.values()) + ['Election_Id','ReportingUnit_Id',
                                           'ReportingUnitType_Id', 'OtherReportingUnitType', 'CountItemStatus_Id',
                                           'OtherCountItemStatus','Selection_Id','Contest_Id']    # is ElectionDistrict_Id necessary?
+    vote_type_list=list({v for k,v in vc_col_d.items()})
     munge = pd.read_csv(fpath + 'cdf_tables.txt',sep='\t',index_col='CDFTable').to_dict()['ExternalIdentifier']
 
     row.rename(columns=vc_col_d,inplace=True)  # standardize vote-count column names
@@ -202,7 +204,7 @@ def raw_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,ele
 
         # create dframe of vote counts (with join info) for ballot measures
         bm_vote_counts = bm_row[col_list]
-        bm_vote_counts=bm_vote_counts.melt(id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],value_vars=['election-day', 'early', 'absentee-mail', 'provisional', 'total'],var_name='CountItemType',value_name='Count')
+        bm_vote_counts=bm_vote_counts.melt(id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],value_vars=vote_type_list,var_name='CountItemType',value_name='Count')
         bm_vote_counts=enum_col_to_id_othertext(bm_vote_counts,'CountItemType',cdf_d['CountItemType'])
         if not bm_vote_counts.empty:
             vote_count_dframe_list.append(bm_vote_counts)
@@ -258,7 +260,7 @@ def raw_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,ele
 
         # load candidate counts
         cc_vote_counts = cc_row[col_list]
-        cc_vote_counts=cc_vote_counts.melt(id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],value_vars=['election-day', 'early', 'absentee-mail', 'provisional', 'total'],var_name='CountItemType',value_name='Count')
+        cc_vote_counts=cc_vote_counts.melt(id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],value_vars=vote_type_list,var_name='CountItemType',value_name='Count')
         cc_vote_counts=enum_col_to_id_othertext(cc_vote_counts,'CountItemType',cdf_d['CountItemType'])
         vote_count_dframe_list.append(cc_vote_counts)
 
