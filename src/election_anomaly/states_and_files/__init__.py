@@ -51,22 +51,21 @@ class Munger:
         bms=pd.read_csv('{}ballot_measure_style.txt'.format(dir_path),sep='\t')
         assert 'short_name' in bms.columns, 'ballot_measure_style.txt does not have required column \'short_name\''
         assert 'truth' in bms.columns, 'ballot_measure_style.txt does not have required column \'truth\''
-        self.ballot_measure_style=bms[bms['truth']]['short_name'][0]    # TODO error handling. This takes first line  marked "True"
+        self.ballot_measure_style=bms[bms['truth']]['short_name'].iloc[0]    # TODO error handling. This takes first line  marked "True"
 
         # determine whether the file has columns for counts by vote types, or just totals
-        # TODO make count_columns the munger attribute? Move calcs elsewhere?
         count_columns=pd.read_csv('{}count_columns.txt'.format(dir_path),sep='\t')
-        self.count_columns=count_columns    # TODO is this used?
+        self.count_columns=count_columns
         if list(count_columns['CountItemType'].unique()) == ['total']:
             self.totals_only=True
         else:
             self.totals_only=False
 
-        if self.ballot_measure_style == 'yes_and_no_are_columns':
-            yes_col = 'place_holder'   # TODO
-        elif self.ballot_measure_style == 'yes_and_no_are_candidates':
+        if self.ballot_measure_style == 'yes_and_no_are_candidates':
             with open('{}ballot_measure_selections.txt'.format(dir_path),'r') as f:
                 self.ballot_measure_selection_list = [x.strip() for x in f.readlines()]
+        else:
+            self.ballot_measure_selection_list=None # TODO is that necessary?
 
 
         self.name=dir_path.split('/')[-2]    # 'nc_general'

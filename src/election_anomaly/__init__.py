@@ -113,10 +113,13 @@ if __name__ == '__main__':
         type_d = dict(np.array(col_df))
         pytype_d = {k: type_map_d.get(v) for k, v in type_d.items()}
 
-        dfs = pd.read_sql_table('datafile',session.bind,schema='context',index_col='index')
+        # dfs = pd.read_sql_table('datafile',session.bind,schema='context',index_col='index')
+        dfs=pd.read_csv('{}context/datafile.txt'.format(s.path_to_state_dir),sep='\t')
         for datafile in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/'+mu.name+'/'):
             # check datafile is listed in datafiles
-            assert e.name +';' + datafile in dfs['name'].to_list(),'Datafile not recognized in the table context.datafile: {}'.format(datafile)
+            if '{};{}'.format(e.name,datafile) not in dfs['name'].to_list():
+                print('WARNING: Datafile {};{} not recognized in the table context.datafile: , will not be processed.'.format(e.name,datafile))
+                continue
             df_info = dfs[dfs['name'] == e.name + ';' + datafile].iloc[0]
             if df_info['separator'] == 'tab':
                 delimiter = '\t'

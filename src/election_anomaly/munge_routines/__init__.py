@@ -50,8 +50,8 @@ def contest_type_split(row,mu):
         # if any CountItemType has numbers in both yes and no bm columns, assume not a candidate contest
         for cit in bm_count_cols.CountItemType.unique():
             # each count item
-            yes_col= bm_count_cols[(bm_count_cols.CountItemType==cit) & (bm_count_cols.BallotMeasureSelect=='Yes')].iloc[0].RawName
-            no_col= bm_count_cols[(bm_count_cols.CountItemType==cit) & (bm_count_cols.BallotMeasureSelect=='No')].iloc[0].RawName
+            yes_col= bm_count_cols[(bm_count_cols.CountItemType==cit) & (bm_count_cols.BallotMeasureSelection=='Yes')].iloc[0].RawName
+            no_col= bm_count_cols[(bm_count_cols.CountItemType==cit) & (bm_count_cols.BallotMeasureSelection=='No')].iloc[0].RawName
             cc_row=cc_row[ ~(cc_row[yes_col].isdigit()  & cc_row[no_col].isdigit())]
         bm_row = row[~row.index.isin(cc_row.index)]
     else:
