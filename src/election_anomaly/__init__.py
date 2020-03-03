@@ -138,7 +138,7 @@ if __name__ == '__main__':
                 raw_data_dframe[c]=raw_data_dframe[c].astype(pytype_d[c])
 
             print('Loading data into cdf schema from file: {}'.format(datafile))
-            mr.raw_dframe_to_cdf(session,raw_data_dframe,s, mu,'cdf','context',e)
+            mr.raw_dframe_to_cdf(session,raw_data_dframe, mu,'cdf','context',e)
 
     try:    # if mu is not already defined
         mu
