@@ -33,10 +33,10 @@ class State:
         assert os.path.isdir(self.path_to_state_dir), 'Error: No directory '+ self.path_to_state_dir
         assert os.path.isdir(self.path_to_state_dir+'context/'), 'Error: No directory '+ self.path_to_state_dir+'context/'
         # Check that context directory is missing no files
-        context_file_list = ['BallotMeasureSelection.txt','Election.txt','Office.txt','remark.txt','ReportingUnit.txt']
+        context_file_list = ['Election.txt','Office.txt','remark.txt','ReportingUnit.txt']
         file_missing_list = [f for f in context_file_list if not os.path.isfile(self.path_to_state_dir+'context/'+f)]
-        assert file_missing_list == [], 'Error: Missing files in '+ self.path_to_state_dir+'context/'+f +':\n'+ str(file_missing_list)
-
+        assert file_missing_list == [], 'Error: Missing files in '+ self.path_to_state_dir+'context/:\n'+ str(file_missing_list)
+        # TODO format string above '...'.format()
 class Munger:
     def __init__(self,dir_path):
         assert os.path.isdir(dir_path),'Not a directory: ' + dir_path
@@ -46,11 +46,29 @@ class Munger:
 
         if dir_path[-1] != '/': dir_path += '/' # make sure path ends in a slash
         self.path_to_munger_dir=dir_path
+
+        # determine how to treat ballot measures (ballot_measure_style)
+        bms=pd.read_csv('{}ballot_measure_style.txt'.format(dir_path),sep='\t')
+        assert 'short_name' in bms.columns, 'ballot_measure_style.txt does not have required column \'short_name\''
+        assert 'truth' in bms.columns, 'ballot_measure_style.txt does not have required column \'truth\''
+        self.ballot_measure_style=bms[bms['truth']]['short_name'][0]    # TODO error handling. This takes first line  marked "True"
+
+        # determine whether the file has columns for counts by vote types, or just totals
+        # TODO make count_columns the munger attribute? Move calcs elsewhere?
         count_columns=pd.read_csv('{}count_columns.txt'.format(dir_path),sep='\t')
+        self.count_columns=count_columns    # TODO is this used?
         if list(count_columns['CountItemType'].unique()) == ['total']:
             self.totals_only=True
         else:
             self.totals_only=False
+
+        if self.ballot_measure_style == 'yes_and_no_are_columns':
+            yes_col = 'place_holder'   # TODO
+        elif self.ballot_measure_style == 'yes_and_no_are_candidates':
+            with open('{}ballot_measure_selections.txt'.format(dir_path),'r') as f:
+                self.ballot_measure_selection_list = [x.strip() for x in f.readlines()]
+
+
         self.name=dir_path.split('/')[-2]    # 'nc_general'
         with open('{}atomic_reporting_unit_type.txt'.format(dir_path),'r') as f:
             self.atomic_reporting_unit_type = f.readline()

@@ -3,7 +3,7 @@
                             {'fieldname':'Value','datatype':'String'}],
                     'enumerations':['IdentifierType'],
                     'other_element_refs':[],
-                    'unique_constraints':[['ForeignId', 'IdentifierType_Id', 'OtherIdentifierType']], 	
+                    'unique_constraints':[],
 		'not_null_fields':['Value','ForeignId','IdentifierType_Id'],
 		            'short_name':'ei'
 		}],
@@ -55,14 +55,6 @@
 		     'not_null_fields':['Name'],
 		            'short_name':'bmcon'
                 }],
-                ['BallotMeasureSelection',   # note: we don't enumerate the choices, though some kind of universal yes/no is tempting ***
-                      {'fields':[{'fieldname':'Selection','datatype':'String'}],
-                      'enumerations':[],
-                      'other_element_refs':[],
-                      'unique_constraints':[['Selection']], 
-		     'not_null_fields':['Selection'],
- 		            'short_name':'bmsel'
-               }],
                 ['Candidate',
                       {'fields':[{'fieldname':'BallotName','datatype':'String'}],
                       'enumerations':[],

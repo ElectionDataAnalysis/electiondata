@@ -5,4 +5,4 @@ Party	<Partyx>	Name
 Candidate	<Candidate Name>	Name
 CandidateContest	<Office Name>	Name
 BallotMeasureContest	<Office Name>	Name
-BallotMeasureSelection		Selection
+BallotMeasureSelection	None	Selection

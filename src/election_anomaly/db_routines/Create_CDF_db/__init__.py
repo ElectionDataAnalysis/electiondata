@@ -28,7 +28,11 @@ def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF
     #%% create enumeration tables and push to db
     print('Creating enumeration tables')
     for t in e_table_list:
-        exec('Table(\'' + t + '\',metadata, Column(\'Id\',Integer, id_seq,server_default=id_seq.next_value(),primary_key=True), Column(\'Txt\',String),schema = \'' + schema + '\')')
+        if t=='BallotMeasureSelection':
+            txt_col='Selection'
+        else:
+            txt_col='Txt'
+        exec('Table(\'{}\',metadata, Column(\'Id\',Integer, id_seq,server_default=id_seq.next_value(),primary_key=True), Column(\'{}\',String),schema = \'{}\')'.format(t,txt_col,schema))
     metadata.create_all()
 
     #%% create all other tables, in set order because of foreign keys
@@ -52,17 +56,17 @@ def enum_table_list(dirpath= 'CDF_schema_def_info/'):
     for f in file_list:
         assert f[-4:] == '.txt', 'File name in ' + dirpath + 'enumerations/ not in expected form: ' + f
     enum_table_list = [f[:-4] for f in file_list]
-    list_file = dirpath + 'enumeration_table_list'
-    if os.path.isfile(list_file): os.remove(list_file)
-    with open(list_file,'a') as out_f:
-        for t in enum_table_list: out_f.write(t)
     return enum_table_list
 
 def fill_cdf_enum_tables(session,meta,schema,e_table_list=['ReportingUnitType','IdentifierType','ElectionType','CountItemStatusCountItemType'],dirpath= 'CDF_schema_def_info/'):
     """takes lines of text from file and inserts each line into the txt field of the enumeration table"""
     if not dirpath[-1] == '/': dirpath += '\''
     for f in e_table_list:
-        dframe = pd.read_csv(dirpath + 'enumerations/' + f + '.txt',header=None,names = ['Txt'])
+        if f == 'BallotMeasureSelection':
+            txt_col='Selection'
+        else:
+            txt_col='Txt'
+        dframe = pd.read_csv('{}enumerations/{}.txt'.format(dirpath,f),header=None,names = [txt_col])
         dframe.to_sql(f,session.bind,schema=schema,if_exists='append',index=False)
     session.flush()
     return

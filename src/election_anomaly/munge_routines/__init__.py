@@ -37,8 +37,26 @@ def add_munged_column(row_df,munge_dictionary,munge_key,new_col_name):
         text_field_list.reverse()
         for t,f in text_field_list:
             row_df.loc[:,new_col_name] = t+row_df.loc[:,f]+row_df.loc[:,new_col_name]
-            # TODO ensure rhs is all strings. Best to do this on data load (for all but vote-count cols or row_df when it is first loaded.
         return row_df
+
+def contest_type_split(row,mu):
+    if mu.ballot_measure_style=='yes_and_no_are_candidates':
+        bm_row = row[row['BallotMeasureSelection'].isin(mu.ballot_measure_selection_list)]
+        cc_row = row[~row['BallotMeasureSelection'].isin(mu.ballot_measure_selection_list)]
+    elif mu.ballot_measure_style == 'yes_and_no_are_columns':
+        bm_count_cols=mu.count_columns[mu.count_columns.ContestType=='BallotMeasure']
+        cc_row=row.copy()
+        # TODO check that all CountItemTypes have either 2 or 0 columns for ballot measures
+        # if any CountItemType has numbers in both yes and no bm columns, assume not a candidate contest
+        for cit in bm_count_cols.CountItemType.unique():
+            # each count item
+            yes_col= bm_count_cols[(bm_count_cols.CountItemType==cit) & (bm_count_cols.BallotMeasureSelect=='Yes')].iloc[0].RawName
+            no_col= bm_count_cols[(bm_count_cols.CountItemType==cit) & (bm_count_cols.BallotMeasureSelect=='No')].iloc[0].RawName
+            cc_row=cc_row[ ~(cc_row[yes_col].isdigit()  & cc_row[no_col].isdigit())]
+        bm_row = row[~row.index.isin(cc_row.index)]
+    else:
+        raise Exception('Ballot measure style {} not recognized'.format(mu.ballot_measure_style))
+    return bm_row, cc_row
 
 def get_internal_ids_from_context(row_df,ctxt_ei_df,table_df,table_name,internal_name_column,unmatched_dir,drop_unmatched=False):
     """replace columns in <df> with external identifier values by columns with internal names
@@ -132,7 +150,7 @@ def raw_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,ele
 
     # get vote count column mapping for our munger
     fpath = mu.path_to_munger_dir
-    vc_col_d = pd.read_csv(fpath + 'count_columns.txt',sep='\t',index_col='RawName').to_dict()['CountItemType']
+    vc_col_d = pd.read_csv('{}count_columns.txt'.format(fpath),sep='\t',index_col='RawName').to_dict()['CountItemType'] # TODO use munger attribute dataframe count_columns
     col_list = list(vc_col_d.values()) + ['Election_Id','ReportingUnit_Id',
                                           'ReportingUnitType_Id', 'OtherReportingUnitType', 'CountItemStatus_Id',
                                           'OtherCountItemStatus','Selection_Id','Contest_Id']    # is ElectionDistrict_Id necessary?
@@ -165,10 +183,8 @@ def raw_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,ele
 
 
     # split row into a df for ballot measures and a df for contests
-    bm_selections = cdf_d['BallotMeasureSelection']['Selection'].to_list()
+    bm_row,cc_row = contest_type_split(row,mu)
 
-    bm_row = row[row['BallotMeasureSelection'].isin(bm_selections)]
-    cc_row = row[~row['BallotMeasureSelection'].isin(bm_selections)]
     cc_row=cc_row.drop(['BallotMeasureSelection','BallotMeasureContest'],axis=1) # not necessary but cleaner for debugging
 
     if bm_row.empty:
@@ -358,10 +374,6 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
         # pull enumeration table into a DataFrame
         # enum_dframe[e] = pd.read_sql_table(e, session.bind, schema='cdf', index_col='Id')
         enum_dframe[e] = pd.read_sql_table(e, session.bind, schema='cdf', index_col=None)
-    # process BallotMeasureSelections into cdf schema
-    q = 'INSERT INTO cdf."BallotMeasureSelection" ("Selection") (SELECT DISTINCT "Selection" FROM context."BallotMeasureSelection")'
-    dbr.raw_query_via_SQLALCHEMY(session,q,[],[])
-
     # pull list of tables in CDF
     if not cdf_def_dirpath[-1] == '/': cdf_def_dirpath += '/'
     with open(cdf_def_dirpath+'tables.txt','r') as f:
