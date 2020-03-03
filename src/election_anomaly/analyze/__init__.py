@@ -170,11 +170,12 @@ class Election(object):
             con.dispose()
         return rollup_dframe
 
-    def summarize_results(self,atomic_ru_type='precinct',mode='top'):
+    def summarize_results(self,atomic_ru_type='precinct',mode='top',skip_total_column=True):
         rollup=self.pull_rollup_from_db_by_types('state',atomic_ru_type=atomic_ru_type)
         rollup=rollup.drop(['Contest_Id','ReportingUnit_Id','Selection_Id','CountItemType_Id','contest_type'],axis=1)
         if mode=='top':
-            rollup=rollup[rollup['CountItemType']!='total']
+            if skip_total_column:
+                rollup=rollup[rollup['CountItemType']!='total']
             output = rollup.groupby(['Contest','Selection']).sum()
         elif mode=='by_vote_type':
             output = rollup.groupby(['Contest','Selection','CountItemType']).sum()

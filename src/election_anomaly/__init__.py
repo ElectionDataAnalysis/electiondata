@@ -145,12 +145,12 @@ if __name__ == '__main__':
 
     get_top_results = input('Get top-level results (y/n)?\n')
     if get_top_results == 'y':
-        top=e.summarize_results(atomic_ru_type=mu.atomic_reporting_unit_type)
+        top=e.summarize_results(atomic_ru_type=mu.atomic_reporting_unit_type,skip_total_column= not mu.totals_only)
         print (top)
 
     get_results_by_vctype = input('Get results by vote type (y/n)?\n')
     if get_results_by_vctype == 'y':
-        result=e.summarize_results(atomic_ru_type=mu.atomic_reporting_unit_type,mode='by_vote_type')
+        result=e.summarize_results(atomic_ru_type=mu.atomic_reporting_unit_type,mode='by_vote_type',skip_total_column=~mu.totals_only)
         print (result)
 
     need_to_analyze = input('Analyze (y/n)?\n')

@@ -1,6 +1,7 @@
 #!usr/bin/python3
 import os.path
 import db_routines as dbr
+import pandas as pd
 class State:
     def create_db_and_schemas(self):
         # create db
@@ -42,8 +43,14 @@ class Munger:
         assert os.path.isfile(dir_path + 'cdf_tables.txt') and os.path.isfile(dir_path + 'atomic_reporting_unit_type.txt') and os.path.isfile(
             dir_path + 'count_columns.txt') ,\
             'Directory {} must contain files atomic_reporting_unit_type.txt, cdf_tables.txt, count_columns.txt'.format(dir_path)
+
         if dir_path[-1] != '/': dir_path += '/' # make sure path ends in a slash
         self.path_to_munger_dir=dir_path
+        count_columns=pd.read_csv('{}count_columns.txt'.format(dir_path),sep='\t')
+        if list(count_columns['CountItemType'].unique()) == ['total']:
+            self.totals_only=True
+        else:
+            self.totals_only=False
         self.name=dir_path.split('/')[-2]    # 'nc_general'
         with open('{}atomic_reporting_unit_type.txt'.format(dir_path),'r') as f:
             self.atomic_reporting_unit_type = f.readline()
