@@ -6,8 +6,8 @@ RaceCode	string
 OfficeDesc	string
 CountyCode	string
 CountyName	string
-Juris1num	integer
-Juris2num	integer
+Juris1num	string
+Juris2num	string
 Precincts	integer
 PrecinctsReporting	integer
 CanNameLast	string

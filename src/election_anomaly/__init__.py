@@ -114,7 +114,12 @@ if __name__ == '__main__':
                 delimiter = '\t'
             elif df_info['separator'] == 'comma':
                 delimiter = ','
-            raw_data_dframe = pd.read_csv(s.path_to_state_dir + 'data/' +election_name+'/'+munger_name+'/'+ datafile,sep=delimiter,dtype=pytype_d) # TODO make this behave!
+            raw_data_dframe = pd.read_csv(s.path_to_state_dir + 'data/' +election_name+'/'+munger_name+'/'+ datafile,sep=delimiter) # TODO make this behave (need right datatypes)!
+            for c in raw_data_dframe.columns:
+                if pytype_d[c] == int:
+                    raw_data_dframe[c]=raw_data_dframe[c].fillna(0)
+                raw_data_dframe[c]=raw_data_dframe[c].astype(pytype_d[c])
+
             print('Loading data into cdf schema from file: {}'.format(datafile))
             mr.raw_dframe_to_cdf(session,raw_data_dframe,s, mu,'cdf','context',e)
 

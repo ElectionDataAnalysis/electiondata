@@ -168,7 +168,13 @@ def raw_elements_to_cdf(session,mu,row,cdf_schema,context_schema,election_id,ele
     bm_selections = cdf_d['BallotMeasureSelection']['Selection'].to_list()
 
     bm_row = row[row['BallotMeasureSelection'].isin(bm_selections)]
+    if bm_row.empty:
+        print('No ballot measures to process')
+        process_ballot_measures = 'empty'
     cc_row = row[~row['BallotMeasureSelection'].isin(bm_selections)]
+    if cc_row.empty:
+        print('No candidate contests to process')
+        process_candidate_contest='empty'
     cc_row=cc_row.drop(['BallotMeasureSelection','BallotMeasureContest'],axis=1) # not necessary but cleaner for debugging
 
     process_ballot_measures = input('Process Ballot Measures (y/n)?\n')
