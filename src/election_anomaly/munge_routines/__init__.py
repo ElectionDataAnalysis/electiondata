@@ -146,7 +146,8 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,context_schema,el
     for t in ['ExternalIdentifier','Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType','CandidateContest']:
         cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema)   # note: keep 'Id as df column (not index) so we have access in merges below.
     context_ei = pd.read_sql_table('ExternalIdentifier',session.bind,context_schema)
-    context_ei = context_ei[ (context_ei['ExternalIdentifierType']== mu.name)]  # limit to our munger
+    context_ei = context_ei[(context_ei['ExternalIdentifierType']== mu.name)]  # limit to our munger
+    # TODO rename context_ei to munger_ei and read directly from munger directory
 
     # get vote count column mapping for our munger
     # TODO may differ by contest_type
