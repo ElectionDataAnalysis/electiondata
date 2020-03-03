@@ -118,6 +118,8 @@ if __name__ == '__main__':
             for c in raw_data_dframe.columns:
                 if pytype_d[c] == int:
                     raw_data_dframe[c]=raw_data_dframe[c].fillna(0)
+                elif pytype_d[c] == str:
+                    raw_data_dframe[c]=raw_data_dframe[c].fillna('')
                 raw_data_dframe[c]=raw_data_dframe[c].astype(pytype_d[c])
 
             print('Loading data into cdf schema from file: {}'.format(datafile))

@@ -190,7 +190,7 @@ Office	Florida;US Congress House of Representatives District 24	United States Re
 Office	Florida;US Congress House of Representatives District 25	United States Representative Juris1num 25 Juris2num
 Office	Florida;US Congress House of Representatives District 26	United States Representative Juris1num 26 Juris2num
 Office	Florida;US Congress House of Representatives District 27	United States Representative Juris1num 27 Juris2num
-Office	Florida;US Congress Senate	United States Senator Juris1num Juris2num
+Office	Florida;US Congress Senate	United States Senator Juris1num  Juris2num
 Party	Florida Republican Party	Republican
 Party	Florida Democratic Party	Democrat
 Party	Florida (No Party Affiliation)	No Party Affiliation
