@@ -23,6 +23,27 @@ try:
 except:
     import pickle
 
+def user_picks_munger(dir_path):
+    munger_list = [f for f in os.listdir(dir_path) if
+                   os.path.isdir(dir_path + f)]
+    assert munger_list != [],'No mungers available for in directory {}/{}'.format(s.short_name,election_name)
+    default = munger_list[0]
+    need_munger = True
+    while need_munger:
+        print('Available mungers are:')
+        for m in munger_list: print(m)
+        munger_name = input('Enter short name of munger (default is {})\n'.format(default)) or default
+        if munger_name in munger_list:
+            need_munger = False
+        else:
+            print('No such munger; try again.')
+
+    munger_path = '../mungers/' + munger_name + '/'
+    print('Creating munger instance from {}'.format(munger_path))
+    mu = sf.Munger(munger_path)
+
+    return mu,munger_path
+
 # TODO will need routines to add new munger externalidentifiers to an existing cdf db; will need routines to add new reportingunits to an existing cdf db.
 if __name__ == '__main__':
     # initialize state and create database for it (if not already exists)
@@ -85,20 +106,7 @@ if __name__ == '__main__':
     need_to_load_data = input('Load raw data (y/n)?\n')
     if need_to_load_data == 'y':
         # user picks munger
-        munger_list = [f for f in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/') if os.path.isdir(s.path_to_state_dir + 'data/'+election_name+'/'+f)]
-        assert munger_list != [], 'No mungers available for in directory {}/{}'.format(s.short_name,election_name)
-        default = munger_list[0]
-        need_munger = True
-        while need_munger:
-            print('Available mungers are:')
-            for m in munger_list: print(m)
-            munger_name = input('Enter short name of munger (default is {})\n'.format(default)) or default
-            if munger_name in munger_list: need_munger = False
-            else: print('No such munger; try again.')
-
-        munger_path = '../mungers/'+munger_name+'/'
-        print('Creating munger instance from {}'.format(munger_path))
-        mu = sf.Munger(munger_path)
+        mu,munger_path = user_picks_munger('{}data/{}/'.format(s.path_to_state_dir,election_name))
 
         col_df = pd.read_csv('{}/raw_columns.txt'.format(munger_path),sep='\t')
         type_map_d = {'string':str,'integer':int}
@@ -114,7 +122,11 @@ if __name__ == '__main__':
                 delimiter = '\t'
             elif df_info['separator'] == 'comma':
                 delimiter = ','
-            raw_data_dframe = pd.read_csv(s.path_to_state_dir + 'data/' +election_name+'/'+munger_name+'/'+ datafile,sep=delimiter) # TODO make this behave (need right datatypes)!
+            else:
+                print('Separator {} not recognized, tab will be assumed'.format(df_info['separator']))
+                delimiter = '\t'
+            raw_data_dframe = pd.read_csv(s.path_to_state_dir + 'data/' +election_name+'/'+munger_name+'/'+ datafile,sep=delimiter,dtype=str)
+            # interpret all as strings
             for c in raw_data_dframe.columns:
                 if pytype_d[c] == int:
                     raw_data_dframe[c]=raw_data_dframe[c].fillna(0)
@@ -125,14 +137,20 @@ if __name__ == '__main__':
             print('Loading data into cdf schema from file: {}'.format(datafile))
             mr.raw_dframe_to_cdf(session,raw_data_dframe,s, mu,'cdf','context',e)
 
+    try:    # if mu is not already defined
+        mu
+    except:
+        mu,munger_path = user_picks_munger('{}data/{}/'.format(s.path_to_state_dir,election_name))
+
+
     get_top_results = input('Get top-level results (y/n)?\n')
     if get_top_results == 'y':
-        top=e.summarize_results()
+        top=e.summarize_results(atomic_ru_type=mu.atomic_reporting_unit_type)
         print (top)
 
     get_results_by_vctype = input('Get results by vote type (y/n)?\n')
     if get_results_by_vctype == 'y':
-        result=e.summarize_results(mode='by_vote_type')
+        result=e.summarize_results(atomic_ru_type=mu.atomic_reporting_unit_type,mode='by_vote_type')
         print (result)
 
     need_to_analyze = input('Analyze (y/n)?\n')

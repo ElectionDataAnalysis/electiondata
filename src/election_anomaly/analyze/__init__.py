@@ -170,8 +170,8 @@ class Election(object):
             con.dispose()
         return rollup_dframe
 
-    def summarize_results(self,mode='top'):
-        rollup=self.pull_rollup_from_db_by_types('state')
+    def summarize_results(self,atomic_ru_type='precinct',mode='top'):
+        rollup=self.pull_rollup_from_db_by_types('state',atomic_ru_type=atomic_ru_type)
         rollup=rollup.drop(['Contest_Id','ReportingUnit_Id','Selection_Id','CountItemType_Id','contest_type'],axis=1)
         if mode=='top':
             rollup=rollup[rollup['CountItemType']!='total']
