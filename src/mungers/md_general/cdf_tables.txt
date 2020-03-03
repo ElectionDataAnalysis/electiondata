@@ -1,7 +1,8 @@
-CDFTable	ExternalIdentifier	InternalFieldName	Enumerations	OtherFields
-Office	<Office Name>;<Office District>	Name	{}	{}
-ReportingUnit	<County>;<Election District>;<Election Precinct>	Name	{}	{}
-Party	<Partyx>	Name	{}	{}
-Candidate	<Candidate Name>	Name	{}	{}
-CandidateContest	<Office Name>	Name	{}	{}
-BallotMeasureContest	<Office Name>	Name	{}	{}
+CDFTable	ExternalIdentifier	InternalFieldName
+Office	<Office Name>;<Office District>	Name
+ReportingUnit	<County>;<Election District>;<Election Precinct>	Name
+Party	<Partyx>	Name
+Candidate	<Candidate Name>	Name
+CandidateContest	<Office Name>	Name
+BallotMeasureContest	<Office Name>	Name
+BallotMeasureSelection		Selection

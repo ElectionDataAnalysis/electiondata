@@ -125,7 +125,7 @@ if __name__ == '__main__':
             else:
                 print('Separator {} not recognized, tab will be assumed'.format(df_info['separator']))
                 delimiter = '\t'
-            raw_data_dframe = pd.read_csv(s.path_to_state_dir + 'data/' +election_name+'/'+munger_name+'/'+ datafile,sep=delimiter,dtype=str)
+            raw_data_dframe = pd.read_csv('{}data/{}/{}/{}'.format(s.path_to_state_dir,election_name,mu.name,datafile),sep=delimiter,dtype=str)
             # interpret all as strings
             for c in raw_data_dframe.columns:
                 if pytype_d[c] == int:
