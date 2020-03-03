@@ -1,8 +1,8 @@
 Table	Name	ExternalIdentifierValue
-Office	Florida;Governor	Governor Juris1num Juris2num 
-Office	Florida;Attorney General	Attorney General Juris1num Juris2num 
-Office	Florida;Chief Financial Officer	Chief Financial Officer Juris1num Juris2num 
-Office	Florida;Commissioner of Agriculture	Commissioner of Agriculture Juris1num Juris2num 
+Office	Florida;Governor	Governor Juris1num  Juris2num
+Office	Florida;Attorney General	Attorney General Juris1num  Juris2num
+Office	Florida;Chief Financial Officer	Chief Financial Officer Juris1num  Juris2num
+Office	Florida;Commissioner of Agriculture	Commissioner of Agriculture Juris1num  Juris2num
 Office	Florida;General Assembly House of Representatives District 1	State Representative Juris1num 001 Juris2num 
 Office	Florida;General Assembly House of Representatives District 2	State Representative Juris1num 002 Juris2num 
 Office	Florida;General Assembly House of Representatives District 3	State Representative Juris1num 003 Juris2num 
