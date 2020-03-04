@@ -1,0 +1,2 @@
+RawName	CountItemType
+Election Night Votes For	total

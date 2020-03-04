@@ -23,3 +23,6 @@ src/election_anomaly/context/__pycache__/__init__.cpython-37.pyc
 src/local_data/database.ini
 temp
 /venv/
+src/election_anomaly/analyze/__pycache__/__init__.cpython-37.pyc
+src/election_anomaly/db_routines/Create_CDF_db/__pycache__/__init__.cpython-37.pyc
+

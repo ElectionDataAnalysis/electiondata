@@ -1,2 +1,2 @@
 RawName	CountItemType
-Election Night Votes For	total
+Election Night Votes For	election-day

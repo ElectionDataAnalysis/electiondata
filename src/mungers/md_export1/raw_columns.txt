@@ -1,0 +1,15 @@
+Name	Datatype
+County	Integer
+Election District	Integer
+Election Precinct	Integer
+Cong	Integer
+Legs	String
+Candidate Name	String
+Party	String
+Office Name	String
+Office District	String
+Winner	String
+Write-In	String
+Election Night Votes For	Integer
+Election Night Votes Against	Integer
+
