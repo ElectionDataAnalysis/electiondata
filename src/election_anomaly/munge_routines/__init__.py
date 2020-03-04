@@ -180,7 +180,8 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
             new_rows={}
             bm_contests = row['BallotMeasureContest'].drop_duplicates()
             for sel in ['Yes','No']:    # internal BallotMeasureSelection options
-                bmc[sel]=pd.concat([bm_contests,pd.Series([sel] * len(bm_contests),name='BallotMeasureSelection')],axis=1)
+                #bmc[sel]=pd.concat([bm_contests,pd.Series([sel] * len(bm_contests),name='BallotMeasureSelection')],axis=1,ignore_index=True)
+                bmc[sel]=pd.DataFrame(zip(bm_contests,[sel] * len(bm_contests)),columns=['BallotMeasureContest','BallotMeasureSelection'])
                 new_rows[sel]=row.copy()
                 # add column for selection
                 new_rows[sel].loc[:,'BallotMeasureSelection'] = sel
