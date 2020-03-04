@@ -41,13 +41,29 @@ class Munger:
     def __init__(self,dir_path):
         assert os.path.isdir(dir_path),'Not a directory: ' + dir_path
         assert os.path.isfile(dir_path + 'cdf_tables.txt') and os.path.isfile(dir_path + 'atomic_reporting_unit_type.txt') and os.path.isfile(
-            dir_path + 'count_columns.txt') ,\
+            dir_path + 'count_columns.txt') , \
             'Directory {} must contain files atomic_reporting_unit_type.txt, cdf_tables.txt, count_columns.txt'.format(dir_path)
+        self.name=dir_path.split('/')[-2]    # 'nc_general'
 
-        # TODO if raw file has an element as a column name, munger needs to assign new name to that column and
-        # TODO alter the def of the munger accordingly
-        if dir_path[-1] != '/': dir_path += '/' # make sure path ends in a slash
+        if dir_path[-1] != '/':
+            dir_path += '/' # make sure path ends in a slash
         self.path_to_munger_dir=dir_path
+
+
+        # define dictionary to change any column names that match internal CDF names
+        with open('CDF_schema_def_info/tables.txt','r') as f:
+            table_list = eval(f.read())
+        col_d = dict([[x[0],'{}_{}'.format(x[0],self.name)] for x in table_list])
+        self.rename_column_dictionary=col_d
+
+        # read raw columns from file (renaming if necessary)
+        self.raw_columns = pd.read_csv('{}raw_columns.txt'.format(dir_path),sep='\t').replace({'name':col_d})
+
+        # read cdf tables and rename in ExternalIdentifiers col if necessary
+        cdft=pd.read_csv('{}cdf_tables.txt'.format(dir_path),sep='\t')
+        for k in col_d.keys():
+            cdft['ExternalIdentifier'] = cdft['ExternalIdentifier'].str.replace('\<{}\>'.format(k),'<{}>'.format(col_d[k]))
+        self.cdf_tables = cdft
 
         # determine how to treat ballot measures (ballot_measure_style)
         bms=pd.read_csv('{}ballot_measure_style.txt'.format(dir_path),sep='\t')
@@ -56,7 +72,7 @@ class Munger:
         self.ballot_measure_style=bms[bms['truth']]['short_name'].iloc[0]    # TODO error handling. This takes first line  marked "True"
 
         # determine whether the file has columns for counts by vote types, or just totals
-        count_columns=pd.read_csv('{}count_columns.txt'.format(dir_path),sep='\t')
+        count_columns=pd.read_csv('{}count_columns.txt'.format(dir_path),sep='\t').replace({'RawName':col_d})
         self.count_columns=count_columns
         if list(count_columns['CountItemType'].unique()) == ['total']:
             self.totals_only=True
@@ -65,16 +81,15 @@ class Munger:
 
         if self.ballot_measure_style == 'yes_and_no_are_candidates':
             with open('{}ballot_measure_selections.txt'.format(dir_path),'r') as f:
-                self.ballot_measure_selection_list = [x.strip() for x in f.readlines()]
-            cdft=pd.read_csv('{}cdf_tables.txt'.format(dir_path),sep='\t')
+                selection_list=f.readlines()
+            self.ballot_measure_selection_list = [x.strip() for x in selection_list]
+
+
             bms_str=cdft[cdft.CDFTable=='BallotMeasureSelection'].iloc[0]['ExternalIdentifier']
             # note: bms_str will start and end with <>
             self.ballot_measure_selection_col = bms_str[1:-1]
         else:
             self.ballot_measure_selection_list=None # TODO is that necessary?
 
-
-        self.name=dir_path.split('/')[-2]    # 'nc_general'
         with open('{}atomic_reporting_unit_type.txt'.format(dir_path),'r') as f:
             self.atomic_reporting_unit_type = f.readline()
-

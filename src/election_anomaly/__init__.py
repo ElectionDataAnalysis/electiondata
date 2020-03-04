@@ -108,9 +108,8 @@ if __name__ == '__main__':
         # user picks munger
         mu,munger_path = user_picks_munger('{}data/{}/'.format(s.path_to_state_dir,election_name))
 
-        col_df = pd.read_csv('{}/raw_columns.txt'.format(munger_path),sep='\t')
         type_map_d = {'string':str,'integer':int}
-        type_d = dict(np.array(col_df))
+        type_d = dict(np.array(mu.raw_columns))
         pytype_d = {k: type_map_d.get(v) for k, v in type_d.items()}
 
         # dfs = pd.read_sql_table('datafile',session.bind,schema='context',index_col='index')
@@ -133,6 +132,8 @@ if __name__ == '__main__':
             # interpret all as strings (dtype=str above)
             # strip whitespace from each entry
             raw_data_dframe=raw_data_dframe.apply(lambda x:x.str.strip())
+            raw_data_dframe.rename(columns=mu.rename_column_dictionary,inplace=True)
+            # TODO change column names as necessary mu.rename_column_dictionary
 
             for c in raw_data_dframe.columns:
                 #if pytype_d[c] == int: # TODO

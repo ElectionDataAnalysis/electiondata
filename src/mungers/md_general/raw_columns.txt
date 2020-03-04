@@ -5,7 +5,7 @@ Election Precinct	string
 Cong	string
 Legs	string
 Candidate Name	string
-Partyx	string
+Party	string
 Office Name	string
 Office District	string
 Winner	string
