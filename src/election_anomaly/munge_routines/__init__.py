@@ -130,35 +130,32 @@ def enum_col_to_id_othertext(df,type_col,enum_df):
             df.rename(columns={c*3:c},inplace=True)
     return df
 
-def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,context_schema,election_id,election_type,state_id):
+def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,election_type,state_id):
     """
     NOTE: Tables from context assumed to exist already in db
-    (e.g., BallotMeasureSelection, Party, ExternalIdentifier, ComposingReportingUnitJoin, Election, ReportingUnit etc.)
-    Create tables, which are repetitive,
-    and don't come from context
-    and whose db Ids are needed for other insertions.
-    `row` is a dataframe of the raw data file
-    Assumes table 'ExternalIdentifier' in the context schema
+    (e.g., Party, ComposingReportingUnitJoin, Election, ReportingUnit etc.)
     """
     # TODO some of this could be done once for both BallotMeasure and Candidate contests. Rearrange for efficiency?
     assert contest_type in ['BallotMeasure','Candidate'], 'Contest type {} not recognized'.format(contest_type)
+
+    # TODO if contest_type=='BallotMeasure', create separate rows for 'Yes' and 'No'
+
+    
     cdf_d = {}  # dataframe for each table
-    for t in ['ExternalIdentifier','Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType','CandidateContest']:
+    for t in ['Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType','CandidateContest']:
         cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema)   # note: keep 'Id as df column (not index) so we have access in merges below.
-    context_ei = pd.read_sql_table('ExternalIdentifier',session.bind,context_schema)
-    context_ei = context_ei[(context_ei['ExternalIdentifierType']== mu.name)]  # limit to our munger
-    # TODO rename context_ei to munger_ei and read directly from munger directory
+    munger_ei = pd.read_csv('{}ExternalIdentifier.txt'.format(mu.path_to_munger_dir),sep='\t')
 
     # get vote count column mapping for our munger
-    # TODO may differ by contest_type
     fpath = mu.path_to_munger_dir
-    vc_col_d = pd.read_csv('{}count_columns.txt'.format(fpath),sep='\t',index_col='RawName').to_dict()['CountItemType'] # TODO use munger attribute dataframe count_columns
+    vc_col_d = {x['RawName']:x['CountItemType'] for i,x in mu.count_columns[mu.count_columns.ContestType==contest_type][['RawName','CountItemType']].iterrows()}
     col_list = list(vc_col_d.values()) + ['Election_Id','ReportingUnit_Id',
                                           'ReportingUnitType_Id', 'OtherReportingUnitType', 'CountItemStatus_Id',
                                           'OtherCountItemStatus','Selection_Id','Contest_Id']    # is ElectionDistrict_Id necessary?
     vote_type_list=list({v for k,v in vc_col_d.items()})
     munge = pd.read_csv(fpath + 'cdf_tables.txt',sep='\t',index_col='CDFTable').to_dict()['ExternalIdentifier']
 
+    # TODO renaming needs to happen later, after ballot measure rows have been split if bmselection is by column.
     row.rename(columns=vc_col_d,inplace=True)  # standardize vote-count column names
 
     # add columns corresponding to cdf fields
@@ -174,7 +171,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,context_schema,el
     for t in ['Party','ReportingUnit']:  # tables that were filled from context
         #  merge works for all columns, even if, say, Party is null, because of how='left' (left join) in add_munged_column function
         add_munged_column(row,munge,t,t+'_external')
-        row=get_internal_ids_from_context(row,context_ei,cdf_d[t],t,"Name",mu.path_to_munger_dir)
+        row=get_internal_ids_from_context(row,munger_ei,cdf_d[t],t,"Name",mu.path_to_munger_dir)
         row=add_non_id_cols_from_id(row,cdf_d[t],t)
 
     # some columns are their own internal names (no external identifier map needed)
@@ -184,8 +181,6 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,context_schema,el
     # some columns will need to be interpreted via  ExternalIdentifier tables
 
     if contest_type=='BallotMeasure':
-        # Process rows with ballot measures and selections
-
         bm_contest_selection = row[['BallotMeasureContest','BallotMeasureSelection']].drop_duplicates()
         bm_contest_selection.columns = ['Name','Selection']  # internal db name for ballot measure contest matches name in file
         bm_contest_selection.loc[:,'ElectionDistrict_Id'] = state_id  # append column for ElectionDistrict Id
@@ -222,7 +217,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,context_schema,el
         # process rows with candidate contests
         # Find CandidateContest_external and CandidateContest_Id and omit rows with contests not  given in CandidateContest table (filled from context)
         add_munged_column(row,munge,'CandidateContest','CandidateContest_external')
-        cc_row=get_internal_ids_from_context(row,context_ei,cdf_d['CandidateContest'],'CandidateContest','Name',mu.path_to_munger_dir,drop_unmatched=True)
+        cc_row=get_internal_ids_from_context(row,munger_ei,cdf_d['CandidateContest'],'CandidateContest','Name',mu.path_to_munger_dir,drop_unmatched=True)
         cc_row.rename(columns={'CandidateContest_Id':'Contest_Id'},inplace=True)
 
         # load Candidate table
@@ -335,18 +330,14 @@ def raw_dframe_to_cdf(session,raw_rows,mu,cdf_schema,context_schema,e,state_id =
     else:
         process_ballot_measures = input('Process Ballot Measures (y/n)?\n')
     if process_ballot_measures == 'y':
-        raw_elements_to_cdf(session,mu,bm_row,'BallotMeasure',cdf_schema,context_schema,e.Election_Id,e.ElectionType,state_id)
+        raw_elements_to_cdf(session,mu,bm_row,'BallotMeasure',cdf_schema,e.Election_Id,e.ElectionType,state_id)
     if cc_row.empty:
         print('No candidate contests to process')
         process_candidate_contests='empty'
     else:
         process_candidate_contests = input('Process Candidate Contests (y/n)?\n')
     if process_candidate_contests=='y':
-        raw_elements_to_cdf(session,mu,cc_row,'Candidate',cdf_schema,context_schema,e.Election_Id,e.ElectionType,state_id)
-
-
-
-
+        raw_elements_to_cdf(session,mu,cc_row,'Candidate',cdf_schema,e.Election_Id,e.ElectionType,state_id)
 
     return
 

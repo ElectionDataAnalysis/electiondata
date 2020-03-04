@@ -6,6 +6,6 @@ Provisional	provisional	Candidate	None
 Total Votes	total	Candidate	None
 Election Day	election-day	BallotMeasure	<Choice>
 One Stop	early	BallotMeasure	<Choice>
-Absentee by Mail<Choice>	absentee-mail	BallotMeasure	<Choice>
+Absentee by Mail	absentee-mail	BallotMeasure	<Choice>
 Provisional	provisional	BallotMeasure	<Choice>
 Total Votes	total	BallotMeasure	<Choice>
