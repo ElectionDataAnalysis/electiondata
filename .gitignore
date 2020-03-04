@@ -5,6 +5,7 @@ src/local_data/NC/data
 src/local_data/NC/output
 src/local_data/NC/tmp
 src/local_data/NC/output
+src/local_data/MD/data
 src/local_data/FL/data
 src/local_data/FL/output
 src/local_data/FL/data/2018g/fl_general18_by_county/11062018Election.txt
