@@ -32,14 +32,20 @@ def fill_externalIdentifier_table(session,cdf_schema,context_schema,mu):
 
     # pull from the cdf db any tables whose entries have external identifiers
     for t in ei_df['Table'].unique():
+        if t == 'BallotMeasureSelection':
+            name_col='Selection'
+        elif t=='Candidate':
+            name_col='BallotName'
+        else:
+            name_col='Name'
         cdf[t] = pd.read_sql_table(t,session.bind,cdf_schema,index_col=None)
         # drop all but Name and Id columns
-        cdf[t] = cdf[t][['Name','Id']]
+        cdf[t] = cdf[t][[name_col,'Id']]
 
         # manipulate temporary dataframe ei_filt into form for insertion to cdf.ExternalIdentifier
         ei_filt = ei_df[ei_df['Table']==t]   # filter out rows for the given table
         # join Table on name to get ForeignId
-        ei_filt = ei_filt.merge(cdf[t],left_on='Name',right_on='Name') # TODO 'Name' on right won't be found in BalLotMeasureSelection or Candidate table
+        ei_filt = ei_filt.merge(cdf[t],left_on='Name',right_on=name_col)
         ei_filt.rename(columns={'Id':'ForeignId','ExternalIdentifierValue':'Value','ExternalIdentifierType':'IdentifierType'},inplace=True)
 
         # join IdentifierType columns
@@ -47,7 +53,7 @@ def fill_externalIdentifier_table(session,cdf_schema,context_schema,mu):
 
         filtered_ei[t] = ei_filt
 
-    ei_df = pd.concat([filtered_ei[t] for t in ei_df['Table'].unique()])
+    ei_df = pd.concat([filtered_ei[t] for t in ei_df['Table'].unique()],sort=False)
 
     # insert appropriate dataframe columns into ExternalIdentifier table in the CDF db
     print('Inserting into ExternalIdentifier table in schema ' + cdf_schema)

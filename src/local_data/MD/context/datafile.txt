@@ -1,3 +1,4 @@
 name	encoding	separator	source_url	file_date	download_date	note	type_correction_list
-General Election 2018-11-06;All_By_Precinct_2018_General.csv	utf8	tab	https://elections.maryland.gov/elections/2018/election_data/All_By_Precinct_2018_General.csv	2018-11-16	2020-01-28		[]
+General Election 2018-11-06;All_By_Precinct_2018_General.csv	iso-8859-1	comma	https://elections.maryland.gov/elections/2018/election_data/All_By_Precinct_2018_General.csv	2018-11-16	2020-01-28		[]
 General Election 2018-11-06;All_By_Precinct_2018_General_ROC2.txt	utf8	tab	https://elections.maryland.gov/elections/2018/election_data/All_By_Precinct_2018_General.csv	2018-11-16	2020-01-28		[]
+General Election 2018-11-06;All_By_Precinct_2018_General_modforballotquestions.txt	utf8	tab	hand-made	2020-03-03	None	has fake ballot question	General Election 2018-11-06;All_By_Precinct_2018_General_modforballotquestions.txt

@@ -1,2 +1,3 @@
-RawName	CountItemType
-CanVotes	total
+RawName	CountItemType	ContestType	BallotMeasureSelection
+CanVotes	total	Candidate	None
+CanVotes	total	BallotMeasure	in Candidate column

@@ -3524,3 +3524,7 @@ CandidateContest	North Carolina;US Congress House of Representatives District 10
 CandidateContest	North Carolina;US Congress House of Representatives District 11	US HOUSE OF REPRESENTATIVES DISTRICT 11
 CandidateContest	North Carolina;US Congress House of Representatives District 12	US HOUSE OF REPRESENTATIVES DISTRICT 12
 CandidateContest	North Carolina;US Congress House of Representatives District 13	US HOUSE OF REPRESENTATIVES DISTRICT 13
+BallotMeasureSelection	Yes	Yes
+BallotMeasureSelection	Yes	For
+BallotMeasureSelection	No	No
+BallotMeasureSelection	No	Against

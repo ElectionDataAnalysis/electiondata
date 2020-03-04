@@ -1,8 +1,8 @@
 CDFTable	ExternalIdentifier	InternalFieldName
 Office	<Office Name>;<Office District>	Name
 ReportingUnit	<County>;<Election District>;<Election Precinct>	Name
-Party	<Partyx>	Name
+Party	<Party>	Name
 Candidate	<Candidate Name>	Name
-CandidateContest	<Office Name>	Name
+CandidateContest	<Office Name> District <Office District>	Name
 BallotMeasureContest	<Office Name>	Name
-BallotMeasureSelection		Selection
+BallotMeasureSelection	None	Selection

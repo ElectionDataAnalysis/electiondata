@@ -1,63 +1,63 @@
 Table	Name	ExternalIdentifierType	ExternalIdentifierValue
-Office	Maryland;Representative in Congress 1	md_general	Representative in Congress 1
-Office	Maryland;Representative in Congress 2	md_general	Representative in Congress 2
-Office	Maryland;Representative in Congress 3	md_general	Representative in Congress 3
-Office	Maryland;Representative in Congress 4	md_general	Representative in Congress 4
-Office	Maryland;Representative in Congress 5	md_general	Representative in Congress 5
-Office	Maryland;Representative in Congress 6	md_general	Representative in Congress 6
-Office	Maryland;Representative in Congress 7	md_general	Representative in Congress 7
-Office	Maryland;Representative in Congress 8	md_general	Representative in Congress 8
+Office	Maryland;US Congress House of Representatives District 1	md_general	Representative in Congress District 1
+Office	Maryland;US Congress House of Representatives District 2	md_general	Representative in Congress District 2
+Office	Maryland;US Congress House of Representatives District 3	md_general	Representative in Congress District 3
+Office	Maryland;US Congress House of Representatives District 4	md_general	Representative in Congress District 4
+Office	Maryland;US Congress House of Representatives District 5	md_general	Representative in Congress District 5
+Office	Maryland;US Congress House of Representatives District 6	md_general	Representative in Congress District 6
+Office	Maryland;US Congress House of Representatives District 7	md_general	Representative in Congress District 7
+Office	Maryland;US Congress House of Representatives District 8	md_general	Representative in Congress District 8
 Office	Maryland;Governor / Lt. Governor 	md_general	Governor / Lt. Governor 
 Office	Maryland;State's Attorney        	md_general	State's Attorney        
 Office	Maryland;Treasurer               	md_general	Treasurer               
-Office	Maryland;U.S. Senator            	md_general	U.S. Senator            
-Office	Maryland;State Senator           1	md_general	State Senator           1
-Office	Maryland;State Senator           10	md_general	State Senator           10
-Office	Maryland;State Senator           11	md_general	State Senator           11
-Office	Maryland;State Senator           12	md_general	State Senator           12
-Office	Maryland;State Senator           13	md_general	State Senator           13
-Office	Maryland;State Senator           14	md_general	State Senator           14
-Office	Maryland;State Senator           15	md_general	State Senator           15
-Office	Maryland;State Senator           16	md_general	State Senator           16
-Office	Maryland;State Senator           17	md_general	State Senator           17
-Office	Maryland;State Senator           18	md_general	State Senator           18
-Office	Maryland;State Senator           19	md_general	State Senator           19
-Office	Maryland;State Senator           2	md_general	State Senator           2
-Office	Maryland;State Senator           20	md_general	State Senator           20
-Office	Maryland;State Senator           21	md_general	State Senator           21
-Office	Maryland;State Senator           22	md_general	State Senator           22
-Office	Maryland;State Senator           23	md_general	State Senator           23
-Office	Maryland;State Senator           24	md_general	State Senator           24
-Office	Maryland;State Senator           25	md_general	State Senator           25
-Office	Maryland;State Senator           26	md_general	State Senator           26
-Office	Maryland;State Senator           27	md_general	State Senator           27
-Office	Maryland;State Senator           28	md_general	State Senator           28
-Office	Maryland;State Senator           29	md_general	State Senator           29
-Office	Maryland;State Senator           3	md_general	State Senator           3
-Office	Maryland;State Senator           30	md_general	State Senator           30
-Office	Maryland;State Senator           31	md_general	State Senator           31
-Office	Maryland;State Senator           32	md_general	State Senator           32
-Office	Maryland;State Senator           33	md_general	State Senator           33
-Office	Maryland;State Senator           34	md_general	State Senator           34
-Office	Maryland;State Senator           35	md_general	State Senator           35
-Office	Maryland;State Senator           36	md_general	State Senator           36
-Office	Maryland;State Senator           37	md_general	State Senator           37
-Office	Maryland;State Senator           38	md_general	State Senator           38
-Office	Maryland;State Senator           39	md_general	State Senator           39
-Office	Maryland;State Senator           4	md_general	State Senator           4
-Office	Maryland;State Senator           40	md_general	State Senator           40
-Office	Maryland;State Senator           41	md_general	State Senator           41
-Office	Maryland;State Senator           42	md_general	State Senator           42
-Office	Maryland;State Senator           43	md_general	State Senator           43
-Office	Maryland;State Senator           44	md_general	State Senator           44
-Office	Maryland;State Senator           45	md_general	State Senator           45
-Office	Maryland;State Senator           46	md_general	State Senator           46
-Office	Maryland;State Senator           47	md_general	State Senator           47
-Office	Maryland;State Senator           5	md_general	State Senator           5
-Office	Maryland;State Senator           6	md_general	State Senator           6
-Office	Maryland;State Senator           7	md_general	State Senator           7
-Office	Maryland;State Senator           8	md_general	State Senator           8
-Office	Maryland;State Senator           9	md_general	State Senator           9
+Office	Maryland;US Congress Senate            	md_general	U.S. Senator            
+Office	Maryland;State Legislature Senate District 1	md_general	State Senator District 1
+Office	Maryland;State Legislature Senate District 10	md_general	State Senator District 10
+Office	Maryland;State Legislature Senate District 11	md_general	State Senator District 11
+Office	Maryland;State Legislature Senate District 12	md_general	State Senator District 12
+Office	Maryland;State Legislature Senate District 13	md_general	State Senator District 13
+Office	Maryland;State Legislature Senate District 14	md_general	State Senator District 14
+Office	Maryland;State Legislature Senate District 15	md_general	State Senator District 15
+Office	Maryland;State Legislature Senate District 16	md_general	State Senator District 16
+Office	Maryland;State Legislature Senate District 17	md_general	State Senator District 17
+Office	Maryland;State Legislature Senate District 18	md_general	State Senator District 18
+Office	Maryland;State Legislature Senate District 19	md_general	State Senator District 19
+Office	Maryland;State Legislature Senate District 2	md_general	State Senator District 2
+Office	Maryland;State Legislature Senate District 20	md_general	State Senator District 20
+Office	Maryland;State Legislature Senate District 21	md_general	State Senator District 21
+Office	Maryland;State Legislature Senate District 22	md_general	State Senator District 22
+Office	Maryland;State Legislature Senate District 23	md_general	State Senator District 23
+Office	Maryland;State Legislature Senate District 24	md_general	State Senator District 24
+Office	Maryland;State Legislature Senate District 25	md_general	State Senator District 25
+Office	Maryland;State Legislature Senate District 26	md_general	State Senator District 26
+Office	Maryland;State Legislature Senate District 27	md_general	State Senator District 27
+Office	Maryland;State Legislature Senate District 28	md_general	State Senator District 28
+Office	Maryland;State Legislature Senate District 29	md_general	State Senator District 29
+Office	Maryland;State Legislature Senate District 3	md_general	State Senator District 3
+Office	Maryland;State Legislature Senate District 30	md_general	State Senator District 30
+Office	Maryland;State Legislature Senate District 31	md_general	State Senator District 31
+Office	Maryland;State Legislature Senate District 32	md_general	State Senator District 32
+Office	Maryland;State Legislature Senate District 33	md_general	State Senator District 33
+Office	Maryland;State Legislature Senate District 34	md_general	State Senator District 34
+Office	Maryland;State Legislature Senate District 35	md_general	State Senator District 35
+Office	Maryland;State Legislature Senate District 36	md_general	State Senator District 36
+Office	Maryland;State Legislature Senate District 37	md_general	State Senator District 37
+Office	Maryland;State Legislature Senate District 38	md_general	State Senator District 38
+Office	Maryland;State Legislature Senate District 39	md_general	State Senator District 39
+Office	Maryland;State Legislature Senate District 4	md_general	State Senator District 4
+Office	Maryland;State Legislature Senate District 40	md_general	State Senator District 40
+Office	Maryland;State Legislature Senate District 41	md_general	State Senator District 41
+Office	Maryland;State Legislature Senate District 42	md_general	State Senator District 42
+Office	Maryland;State Legislature Senate District 43	md_general	State Senator District 43
+Office	Maryland;State Legislature Senate District 44	md_general	State Senator District 44
+Office	Maryland;State Legislature Senate District 45	md_general	State Senator District 45
+Office	Maryland;State Legislature Senate District 46	md_general	State Senator District 46
+Office	Maryland;State Legislature Senate District 47	md_general	State Senator District 47
+Office	Maryland;State Legislature Senate District 5	md_general	State Senator District 5
+Office	Maryland;State Legislature Senate District 6	md_general	State Senator District 6
+Office	Maryland;State Legislature Senate District 7	md_general	State Senator District 7
+Office	Maryland;State Legislature Senate District 8	md_general	State Senator District 8
+Office	Maryland;State Legislature Senate District 9	md_general	State Senator District 9
 ReportingUnit	Maryland;Allegany County	md_general	1
 ReportingUnit	Maryland;Anne Arundel County	md_general	2
 ReportingUnit	Maryland;Baltimore City	md_general	3
@@ -2440,3 +2440,62 @@ Party	Maryland Republican Party	md_general	REP
 Party	Maryland BOT	md_general	BOT
 Party	Maryland UNF	md_general	UNF
 Election	General Election 2018-11-06	md_general	11/6/2018
+CandidateContest	Maryland;US Congress House of Representatives District 1	md_general	Representative in Congress District 1
+CandidateContest	Maryland;US Congress House of Representatives District 2	md_general	Representative in Congress District 2
+CandidateContest	Maryland;US Congress House of Representatives District 3	md_general	Representative in Congress District 3
+CandidateContest	Maryland;US Congress House of Representatives District 4	md_general	Representative in Congress District 4
+CandidateContest	Maryland;US Congress House of Representatives District 5	md_general	Representative in Congress District 5
+CandidateContest	Maryland;US Congress House of Representatives District 6	md_general	Representative in Congress District 6
+CandidateContest	Maryland;US Congress House of Representatives District 7	md_general	Representative in Congress District 7
+CandidateContest	Maryland;US Congress House of Representatives District 8	md_general	Representative in Congress District 8
+CandidateContest	Maryland;Governor / Lt. Governor 	md_general	Governor / Lt. Governor
+CandidateContest	Maryland;State's Attorney        	md_general	State's Attorney
+CandidateContest	Maryland;Treasurer               	md_general	Treasurer
+CandidateContest	Maryland;US Congress Senate            	md_general	U.S. Senator
+CandidateContest	Maryland;State Legislature Senate District 1	md_general	State Senator District 1
+CandidateContest	Maryland;State Legislature Senate District 10	md_general	State Senator District 10
+CandidateContest	Maryland;State Legislature Senate District 11	md_general	State Senator District 11
+CandidateContest	Maryland;State Legislature Senate District 12	md_general	State Senator District 12
+CandidateContest	Maryland;State Legislature Senate District 13	md_general	State Senator District 13
+CandidateContest	Maryland;State Legislature Senate District 14	md_general	State Senator District 14
+CandidateContest	Maryland;State Legislature Senate District 15	md_general	State Senator District 15
+CandidateContest	Maryland;State Legislature Senate District 16	md_general	State Senator District 16
+CandidateContest	Maryland;State Legislature Senate District 17	md_general	State Senator District 17
+CandidateContest	Maryland;State Legislature Senate District 18	md_general	State Senator District 18
+CandidateContest	Maryland;State Legislature Senate District 19	md_general	State Senator District 19
+CandidateContest	Maryland;State Legislature Senate District 2	md_general	State Senator District 2
+CandidateContest	Maryland;State Legislature Senate District 20	md_general	State Senator District 20
+CandidateContest	Maryland;State Legislature Senate District 21	md_general	State Senator District 21
+CandidateContest	Maryland;State Legislature Senate District 22	md_general	State Senator District 22
+CandidateContest	Maryland;State Legislature Senate District 23	md_general	State Senator District 23
+CandidateContest	Maryland;State Legislature Senate District 24	md_general	State Senator District 24
+CandidateContest	Maryland;State Legislature Senate District 25	md_general	State Senator District 25
+CandidateContest	Maryland;State Legislature Senate District 26	md_general	State Senator District 26
+CandidateContest	Maryland;State Legislature Senate District 27	md_general	State Senator District 27
+CandidateContest	Maryland;State Legislature Senate District 28	md_general	State Senator District 28
+CandidateContest	Maryland;State Legislature Senate District 29	md_general	State Senator District 29
+CandidateContest	Maryland;State Legislature Senate District 3	md_general	State Senator District 3
+CandidateContest	Maryland;State Legislature Senate District 30	md_general	State Senator District 30
+CandidateContest	Maryland;State Legislature Senate District 31	md_general	State Senator District 31
+CandidateContest	Maryland;State Legislature Senate District 32	md_general	State Senator District 32
+CandidateContest	Maryland;State Legislature Senate District 33	md_general	State Senator District 33
+CandidateContest	Maryland;State Legislature Senate District 34	md_general	State Senator District 34
+CandidateContest	Maryland;State Legislature Senate District 35	md_general	State Senator District 35
+CandidateContest	Maryland;State Legislature Senate District 36	md_general	State Senator District 36
+CandidateContest	Maryland;State Legislature Senate District 37	md_general	State Senator District 37
+CandidateContest	Maryland;State Legislature Senate District 38	md_general	State Senator District 38
+CandidateContest	Maryland;State Legislature Senate District 39	md_general	State Senator District 39
+CandidateContest	Maryland;State Legislature Senate District 4	md_general	State Senator District 4
+CandidateContest	Maryland;State Legislature Senate District 40	md_general	State Senator District 40
+CandidateContest	Maryland;State Legislature Senate District 41	md_general	State Senator District 41
+CandidateContest	Maryland;State Legislature Senate District 42	md_general	State Senator District 42
+CandidateContest	Maryland;State Legislature Senate District 43	md_general	State Senator District 43
+CandidateContest	Maryland;State Legislature Senate District 44	md_general	State Senator District 44
+CandidateContest	Maryland;State Legislature Senate District 45	md_general	State Senator District 45
+CandidateContest	Maryland;State Legislature Senate District 46	md_general	State Senator District 46
+CandidateContest	Maryland;State Legislature Senate District 47	md_general	State Senator District 47
+CandidateContest	Maryland;State Legislature Senate District 5	md_general	State Senator District 5
+CandidateContest	Maryland;State Legislature Senate District 6	md_general	State Senator District 6
+CandidateContest	Maryland;State Legislature Senate District 7	md_general	State Senator District 7
+CandidateContest	Maryland;State Legislature Senate District 8	md_general	State Senator District 8
+CandidateContest	Maryland;State Legislature Senate District 9	md_general	State Senator District 9
