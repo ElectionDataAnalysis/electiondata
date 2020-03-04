@@ -120,7 +120,8 @@ if __name__ == '__main__':
             if '{};{}'.format(e.name,datafile) not in dfs['name'].to_list():
                 print('WARNING: Datafile {};{} not recognized in the table context.datafile: , will not be processed.'.format(e.name,datafile))
                 continue
-            df_info = dfs[dfs['name'] == e.name + ';' + datafile].iloc[0]
+            df_info = dfs[dfs['name'] == '{};{}'.format(e.name,datafile)].iloc[0]
+            encoding=df_info['encoding']
             if df_info['separator'] == 'tab':
                 delimiter = '\t'
             elif df_info['separator'] == 'comma':
@@ -128,14 +129,17 @@ if __name__ == '__main__':
             else:
                 print('Separator {} not recognized, tab will be assumed'.format(df_info['separator']))
                 delimiter = '\t'
-            raw_data_dframe = pd.read_csv('{}data/{}/{}/{}'.format(s.path_to_state_dir,election_name,mu.name,datafile),sep=delimiter,dtype=str)
-            # interpret all as strings
+            raw_data_dframe = pd.read_csv('{}data/{}/{}/{}'.format(s.path_to_state_dir,election_name,mu.name,datafile),sep=delimiter,dtype=str,encoding=encoding)
+            # interpret all as strings (dtype=str above)
+            # strip whitespace from each entry
+            raw_data_dframe=raw_data_dframe.apply(lambda x:x.str.strip())
+
             for c in raw_data_dframe.columns:
-                if pytype_d[c] == int:
-                    raw_data_dframe[c]=raw_data_dframe[c].fillna(0)
-                elif pytype_d[c] == str:
-                    raw_data_dframe[c]=raw_data_dframe[c].fillna('')
-                raw_data_dframe[c]=raw_data_dframe[c].astype(pytype_d[c])
+                #if pytype_d[c] == int: # TODO
+                    #raw_data_dframe[c]=raw_data_dframe[c].fillna(0)
+                #if pytype_d[c] == str:
+                raw_data_dframe[c]=raw_data_dframe[c].fillna('')  # TODO can we do all of the dataframe at once, not col by col?
+                #raw_data_dframe[c]=raw_data_dframe[c].astype(pytype_d[c])
 
             print('Loading data into cdf schema from file: {}'.format(datafile))
             mr.raw_dframe_to_cdf(session,raw_data_dframe, mu,'cdf','context',e)

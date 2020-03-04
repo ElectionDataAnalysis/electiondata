@@ -44,6 +44,8 @@ class Munger:
             dir_path + 'count_columns.txt') ,\
             'Directory {} must contain files atomic_reporting_unit_type.txt, cdf_tables.txt, count_columns.txt'.format(dir_path)
 
+        # TODO if raw file has an element as a column name, munger needs to assign new name to that column and
+        # TODO alter the def of the munger accordingly
         if dir_path[-1] != '/': dir_path += '/' # make sure path ends in a slash
         self.path_to_munger_dir=dir_path
 
