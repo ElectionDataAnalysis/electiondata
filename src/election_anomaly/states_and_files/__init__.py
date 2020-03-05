@@ -42,6 +42,7 @@ class Munger:
     def check_new_datafile(self,f):
         """f is a results datafile; this routine should add what's necessary to the munger to treat the datafile,
         keeping backwards compatibility and exiting gracefully if datafile needs different munger"""
+        # TODO check that columns of f are all in raw_columns.txt
         # TODO
         return
 

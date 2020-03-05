@@ -1,4 +1,4 @@
-CDFTable	ExternalIdentifier	InternalFieldName
+CDF_Element	ExternalIdentifier	InternalFieldName
 Office	<Contest Name>	Name
 ReportingUnit	<County>;<Precinct>	Name
 Party	<Choice Party>	Name

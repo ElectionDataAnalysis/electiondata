@@ -1,4 +1,4 @@
-CDFTable	ExternalIdentifier	InternalFieldName
+CDF_Element	ExternalIdentifier	InternalFieldName
 Office	<OfficeDesc> Juris1num <Juris1num> Juris2num <Juris2num>	Name
 ReportingUnit	<CountyName>	Name
 Party	<PartyName	Name
