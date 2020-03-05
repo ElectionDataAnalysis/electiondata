@@ -1,4 +1,4 @@
-CDFTable	ExternalIdentifier	InternalFieldName	Enumerations
+CDF_Element	ExternalIdentifier	InternalFieldName	Enumerations
 ReportingUnit	<County>;<Precinct>	Name	{'ReportingUnitType': 'precinct'}
 Party	<Choice Party>	Name	{}
 Candidate	<Choice>	BallotName	{}

@@ -151,7 +151,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
                                           'ReportingUnitType_Id', 'OtherReportingUnitType', 'CountItemStatus_Id',
                                           'OtherCountItemStatus','Selection_Id','Contest_Id']    # is ElectionDistrict_Id necessary?
     vote_type_list=list({v for k,v in vc_col_d.items()})
-    munge = mu.cdf_tables.set_index('CDFTable').to_dict()['ExternalIdentifier']
+    munge = mu.cdf_tables.set_index('CDF_Element').to_dict()['ExternalIdentifier']
 
     # add columns corresponding to cdf fields
     # election id
