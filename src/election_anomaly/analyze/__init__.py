@@ -191,6 +191,7 @@ class Election(object):
         assert isinstance(state,sf.State)
         self.short_name=short_name
         context_el = pd.read_sql_table('Election',session.bind,schema='context',index_col='index',parse_dates=['StartDate','EndDate'])
+        # TODO add new record to context.Election for this election
         el = context_el[context_el['ShortName'] == short_name].iloc[0]
         self.name=el['Name']
         self.state=state

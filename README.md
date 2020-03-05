@@ -114,3 +114,13 @@ For ReportingUnits, the naming convention is to list as much of the composing in
 
 # Conventions
 Reporting units that are not physical geographical precincts (such as an administrative precinct containing absentee ballot counts from one county) are classified as Reporting Type `precinct` if they should be part of any roll-up involving all precincts in a jurisdiction (e.g., if the absentee ballot counts are not included in any other Reporting Units of Type `precinct` in the county).
+
+# Data Import Process
+## New state
+## New munger
+## New datafile
+Even if the munger is essentially unchanged, each new datafile may have new ReportingUnits or Parties. ***
+
+A new datafile may have new names for existing elements (such as Reporting Units or Offices) ***
+
+More rarely, a new datafile may have new Offices and CandidateContests.
