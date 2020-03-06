@@ -43,6 +43,9 @@ class Munger:
         """f is a results datafile; this routine should add what's necessary to the munger to treat the datafile,
         keeping backwards compatibility and exiting gracefully if datafile needs different munger"""
         # TODO check that columns of f are all in raw_columns.txt
+        cols=self.raw_columns.name
+        assert set(f.columns).issubset(cols), \
+            'An datafile column in {} is missing from {} (listed in raw_columns.txt)'.format(f.columns,list(cols))
         # TODO
         return
 
@@ -98,7 +101,7 @@ class Munger:
         self.raw_columns = pd.read_csv('{}raw_columns.txt'.format(dir_path),sep='\t').replace({'name':col_d})
 
         # read cdf tables and rename in ExternalIdentifiers col if necessary
-        cdft=pd.read_csv('{}cdf_tables.txt'.format(dir_path),sep='\t',index_col='cdf_element')  # note index
+        cdft = pd.read_csv('{}cdf_tables.txt'.format(dir_path),sep='\t',index_col='cdf_element')  # note index
         for k in col_d.keys():
             cdft['raw_identifier_formula'] = cdft['raw_identifier_formula'].str.replace('\<{}\>'.format(k),'<{}>'.format(col_d[k]))
         self.cdf_tables = cdft
@@ -131,3 +134,6 @@ class Munger:
 
         with open('{}atomic_reporting_unit_type.txt'.format(dir_path),'r') as f:
             self.atomic_reporting_unit_type = f.readline()
+
+if __name__ == '__main__':
+        mu = Munger('../../local')
