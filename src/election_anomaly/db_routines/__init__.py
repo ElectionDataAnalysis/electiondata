@@ -20,7 +20,9 @@ def create_database(con,cur,db_name):
 
         q = "CREATE DATABASE {0}"
         out2 = query(q,sql_ids,[],con,cur)
-    return out1,out2
+        return out1,out2
+    else:
+        return None,None
 
 def create_raw_schema(con,cur,schema):
     q = "CREATE SCHEMA {0}"

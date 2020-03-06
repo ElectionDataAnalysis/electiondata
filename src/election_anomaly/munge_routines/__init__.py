@@ -213,9 +213,11 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
         # Load BallotMeasureContestSelectionJoin table to cdf schema
         bmcsj_df = bm_row[['Contest_Id','Selection_Id']].drop_duplicates()
+        bmcsj_df.rename(columns={'Contest_Id':'BallotMeasureContest_Id','Selection_Id':'BallotMeasureSelection_Id'},inplace=True)
         cdf_d['BallotMeasureContestSelectionJoin'] = dbr.dframe_to_sql(bmcsj_df,session,cdf_schema,'BallotMeasureContestSelectionJoin')
 
         # Load ElectionContestJoin table (for ballot measures)
+        # TODO are we pulling ballot measure contests from other elections and assigning them to current election?
         ecj_df = cdf_d['BallotMeasureContest'].copy()
         ecj_df.loc[:,'Election_Id'] = election_id
         ecj_df.rename(columns={'Id': 'Contest_Id'}, inplace=True)
@@ -267,7 +269,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
         else:
             raise Exception('Election type not recognized by the code: ' + election_type) # TODO add all election types
         cc_row.merge(cdf_d['Office'],left_on='Office',right_on='Name',suffixes=['','_Office'])
-        cc_row.rename(columns={'Id_Office':'Office_Id'})
+        cc_row.rename(columns={'Id_Office':'Office_Id'},inplace=True)
 
         # load ElectionContestJoin for Candidate Contests
         ecj_df = cc_row[['Contest_Id','Election_Id']].drop_duplicates()
@@ -275,6 +277,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
         #  load CandidateContestSelectionJoin
         ccsj_df = cc_row[['Contest_Id','Selection_Id','Election_Id']].drop_duplicates()
+        ccsj_df.rename(columns={'Contest_Id':'CandidateContest_Id','Selection_Id':'CandidateSelection_Id'},inplace=True)
         cdf_d['CandidateContestSelectionJoin'] = dbr.dframe_to_sql(ccsj_df,session,cdf_schema,'CandidateContestSelectionJoin')
 
         # load candidate counts
