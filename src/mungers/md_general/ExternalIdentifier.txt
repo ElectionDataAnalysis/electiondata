@@ -1,4 +1,4 @@
-Table	Name	ExternalIdentifierType	ExternalIdentifierValue
+Table	Name	ExternalIdentifierType	ExternalIdentifierValue	column5
 Office	Maryland;US Congress House of Representatives District 1	md_general	Representative in Congress District 1
 Office	Maryland;US Congress House of Representatives District 2	md_general	Representative in Congress District 2
 Office	Maryland;US Congress House of Representatives District 3	md_general	Representative in Congress District 3
@@ -7,10 +7,10 @@ Office	Maryland;US Congress House of Representatives District 5	md_general	Repre
 Office	Maryland;US Congress House of Representatives District 6	md_general	Representative in Congress District 6
 Office	Maryland;US Congress House of Representatives District 7	md_general	Representative in Congress District 7
 Office	Maryland;US Congress House of Representatives District 8	md_general	Representative in Congress District 8
-Office	Maryland;Governor / Lt. Governor 	md_general	Governor / Lt. Governor 
-Office	Maryland;State's Attorney        	md_general	State's Attorney        
-Office	Maryland;Treasurer               	md_general	Treasurer               
-Office	Maryland;US Congress Senate            	md_general	U.S. Senator            
+Office	Maryland;Governor / Lt. Governor 	md_general	Governor / Lt. Governor
+Office	Maryland;State's Attorney        	md_general	State's Attorney
+Office	Maryland;Treasurer               	md_general	Treasurer
+Office	Maryland;US Congress Senate            	md_general	U.S. Senator
 Office	Maryland;State Legislature Senate District 1	md_general	State Senator District 1
 Office	Maryland;State Legislature Senate District 10	md_general	State Senator District 10
 Office	Maryland;State Legislature Senate District 11	md_general	State Senator District 11
