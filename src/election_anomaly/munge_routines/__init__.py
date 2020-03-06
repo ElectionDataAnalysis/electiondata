@@ -16,7 +16,6 @@ import os
 from context import fill_externalIdentifier_table,fill_composing_reporting_unit_join
 from db_routines import dframe_to_sql
 
-
 def add_munged_column(row_df,mu,cdf_element,new_col_name):
     """Alters dataframe <row_df> (in place), adding or redefining <new_col_name>
     via the string corresponding to <cdf_element>, per <munge_dictionary>"""
@@ -26,8 +25,8 @@ def add_munged_column(row_df,mu,cdf_element,new_col_name):
         # use regex to turn value string in munge dictionary into the corresponding commands (e.g., decode '<County>;<Precinct>'
         p = re.compile('(?P<text>[^<>]*)<(?P<field>[^<>]+)>')   # pattern to find text,field pairs
         q = re.compile('(?<=>)[^<]*$')                          # pattern to find text following last pair
-        text_field_list = re.findall(p,mu.cdf_tables.loc[cdf_element,'ExternalIdentifier'])
-        last_text = re.findall(q,mu.cdf_tables.loc[cdf_element,'ExternalIdentifier'])
+        text_field_list = re.findall(p,mu.cdf_tables.loc[cdf_element,'raw_identifier'])
+        last_text = re.findall(q,mu.cdf_tables.loc[cdf_element,'raw_identifier'])
 
         if last_text:
             row_df.loc[:,new_col_name] = last_text[0]
@@ -58,44 +57,45 @@ def contest_type_split(row,mu):
         raise Exception('Ballot measure style {} not recognized'.format(mu.ballot_measure_style))
     return bm_row.copy(), cc_row.copy()
 
-def get_internal_ids_from_context(row_df,ctxt_ei_df,table_df,table_name,internal_name_column,unmatched_dir,drop_unmatched=False):
-    """replace columns in <df> with external identifier values by columns with internal names
-    Note: this requires using the ExternalIdentifier table from the context schema, which has the info about which table the element is in. """
+def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False):
+    """replace columns in <df> with raw_identifier values by columns with internal names
+    """
     assert os.path.isdir(unmatched_dir), 'Argument {} is not a directory'.format(unmatched_dir)
     if drop_unmatched:
         how='inner'
     else:
         how='left'
-    # join the 'Name' from the ExternalIdentifier table -- this is the internal name field,
-    # no matter what name the corresponding field has in the internal element table
-    row_df = row_df.merge(ctxt_ei_df[ctxt_ei_df['Table'] == table_name],how=how,left_on=table_name + '_external',right_on='ExternalIdentifierValue',suffixes=['','_' + table_name+'_ei'])
+    # join the 'Name' from the raw_identifier table -- this is the internal name field value,
+    # no matter what the name field name is in the internal element table (e.g. 'Name', 'BallotName' or 'Selection')
+    row_df = row_df.merge(mu.raw_identifiers[mu.raw_identifiers['CDF_Element'] == element],how=how,left_on=element + '_external',right_on='raw_identifier_value',suffixes=['','_' + element + '_ei'])
 
     # save any unmatched elements (if drop_unmatched=False)
-    unmatched = row_df[row_df['ExternalIdentifierValue'].isnull()].loc[:,table_name+'_external'].unique()
+    # TODO move these warnings to the method on Munger() that pre-checks the munger.
+    unmatched = row_df[row_df['raw_identifier_value'].isnull()].loc[:,element + '_external'].unique()
     if unmatched.size>0:
-        unmatched_path=unmatched_dir+'unmatched_'+table_name+'.txt'
+        unmatched_path= unmatched_dir +'unmatched_' + element + '.txt'
         np.savetxt(unmatched_path,unmatched,fmt="%s")
-        print('WARNING: Some elements unmatched, saved to {}.\nIF THESE ELEMENTS ARE NECESSARY, USER MUST put them in both the munger ExternalIdentifier.txt and in the {}.txt file in the context directory'.format(unmatched_path,table_name))
+        print('WARNING: Some instances of {1} unmatched, saved to {0}.\nIF THESE ELEMENTS ARE NECESSARY, USER MUST put them in both the munger raw_identifiers.txt and in the {1}.txt file in the context directory'.format(unmatched_path,element))
 
-    row_df = row_df.drop(['ExternalIdentifierValue','Table',table_name+'_external'],axis=1)
+    row_df = row_df.drop(['raw_identifier_value','CDF_Element',element + '_external'],axis=1)
 
-    # ensure that there is a column in row_df called by the table_name
+    # ensure that there is a column in row_df called by the element
     # containing the internal name of the element
-    if 'Name_'+table_name+'_ei' in row_df.columns:
-        row_df.rename(columns={'Name_'+table_name+'_ei':table_name},inplace=True)
+    if 'Name_'+element+ '_ei' in row_df.columns:
+        row_df.rename(columns={'Name_' + element + '_ei':element},inplace=True)
     else:
-        row_df.rename(columns={'Name':table_name},inplace=True)
+        row_df.rename(columns={'Name':element},inplace=True)
 
     # join the element table Id and name columns.
     # This will create two columns with the internal name field,
-    # whose names will be table_name (from above)
+    # whose names will be element (from above)
     # and either internal_name_column or internal_name_column_table_name
-    row_df = row_df.merge(table_df[['Id',internal_name_column]],how='left',left_on=table_name,right_on=internal_name_column,suffixes=['','_' + table_name])
-    if internal_name_column+'_' + table_name in row_df.columns:
-        row_df=row_df.drop(internal_name_column+'_' + table_name,axis=1)
+    row_df = row_df.merge(table_df[['Id',internal_name_column]],how='left',left_on=element,right_on=internal_name_column,suffixes=['','_' + element])
+    if internal_name_column+'_' + element in row_df.columns:
+        row_df=row_df.drop(internal_name_column +'_' + element,axis=1)
     else:
         row_df=row_df.drop([internal_name_column],axis=1)
-    row_df.rename(columns={'Id_'+table_name:table_name + '_Id'},inplace=True)
+    row_df.rename(columns={'Id_' + element:element + '_Id'},inplace=True)
     return row_df
 
 def add_non_id_cols_from_id(row_df,cdf_table,table_name):
@@ -142,16 +142,13 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
     cdf_d = {}  # dataframe for each table
     for t in ['Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType','CandidateContest']:
         cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema)   # note: keep 'Id as df column (not index) so we have access in merges below.
-    munger_ei = pd.read_csv('{}ExternalIdentifier.txt'.format(mu.path_to_munger_dir),sep='\t')
 
     # get vote count column mapping for our munger
-    fpath = mu.path_to_munger_dir
     vc_col_d = {x['RawName']:x['CountItemType'] for i,x in mu.count_columns[mu.count_columns.ContestType==contest_type][['RawName','CountItemType']].iterrows()}
     col_list = list(vc_col_d.values()) + ['Election_Id','ReportingUnit_Id',
                                           'ReportingUnitType_Id', 'OtherReportingUnitType', 'CountItemStatus_Id',
                                           'OtherCountItemStatus','Selection_Id','Contest_Id']    # is ElectionDistrict_Id necessary?
     vote_type_list=list({v for k,v in vc_col_d.items()})
-    munge = mu.cdf_tables.to_dict()['ExternalIdentifier']
 
     # add columns corresponding to cdf fields
     # election id
@@ -166,7 +163,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
     for t in ['Party','ReportingUnit']:  # tables that were filled from context
         #  merge works for all columns, even if, say, Party is null, because of how='left' (left join) in add_munged_column function
         add_munged_column(row,mu,t,t+'_external')
-        row=get_internal_ids_from_context(row,munger_ei,cdf_d[t],t,"Name",mu.path_to_munger_dir)
+        row=get_internal_ids(row,mu,cdf_d[t],t,"Name",mu.path_to_munger_dir)
         row=add_non_id_cols_from_id(row,cdf_d[t],t)
 
     vote_count_dframe_list=[] # TODO remove; don't need to concatenate if bmcs and ccs are handled separately
@@ -233,7 +230,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
         # process rows with candidate contests
         # Find CandidateContest_external and CandidateContest_Id and omit rows with contests not  given in CandidateContest table (filled from context)
         add_munged_column(row,mu,'CandidateContest','CandidateContest_external')
-        cc_row=get_internal_ids_from_context(row,munger_ei,cdf_d['CandidateContest'],'CandidateContest','Name',mu.path_to_munger_dir,drop_unmatched=True)
+        cc_row=get_internal_ids(row,mu,cdf_d['CandidateContest'],'CandidateContest','Name',mu.path_to_munger_dir,drop_unmatched=True)
         cc_row.rename(columns={'CandidateContest_Id':'Contest_Id'},inplace=True)
 
         # load Candidate table
@@ -319,8 +316,6 @@ def raw_dframe_to_cdf(session,raw_rows,mu,cdf_schema,context_schema,e,state_id =
     assert isinstance(e,an.Election),'Argument should be an Election instance'
     cdf_d = {}  # to hold various dataframes from cdf db tables
 
-    # add to context.ExternalIdentifier table for this munger
-    # TODO rename context schema to reflect munger info
     fill_externalIdentifier_table(session,cdf_schema,context_schema,mu)
 
     # get id for IdentifierType 'other' if it was not passed as parameter

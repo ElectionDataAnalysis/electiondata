@@ -49,12 +49,22 @@ class Munger:
     def find_unmatched(self,f,element):
         """find any instances of <element> referenced in <f> but not interpretable by <self>"""
 
-        # munge the given element
-        self.cdf_tables[self.cdf_tables.CDF_element==element]
+        # get list of columns of <f> needed to determine the ExternalIdentifier for <element>
+        p='\<([^\>]+)\>'
+        col_list=re.findall(p,self.cdf_tables.loc[element,'raw_identifier'])
+
+        # create dataframe of unique instances of <element>
+        f_elts=f[col_list].drop_duplicates()
+
+        # munge the given element into a new column of f_elts
+        add_munged_column(f_elts,self,element,element)
+
+        # identify instances that are not matched in the munger's ExternalIdentifier table
+
 
 
         # save any unmatched elements (if drop_unmatched=False)
-        unmatched = row_df[row_df['ExternalIdentifierValue'].isnull()].loc[:,table_name + '_external'].unique()
+        unmatched = row_df[row_df['raw_identifier_value'].isnull()].loc[:,table_name + '_external'].unique()
         if unmatched.size > 0:
             unmatched_path = unmatched_dir + 'unmatched_' + table_name + '.txt'
             np.savetxt(unmatched_path,unmatched,fmt="%s")
@@ -75,6 +85,8 @@ class Munger:
             dir_path += '/' # make sure path ends in a slash
         self.path_to_munger_dir=dir_path
 
+        # read raw_identifiers file into a table
+        self.raw_identifiers=pd.read_csv('{}raw_identifiers.txt'.format(dir_path),sep='\t') # note no natural index column
 
         # define dictionary to change any column names that match internal CDF names
         with open('CDF_schema_def_info/tables.txt','r') as f:
@@ -88,7 +100,7 @@ class Munger:
         # read cdf tables and rename in ExternalIdentifiers col if necessary
         cdft=pd.read_csv('{}cdf_tables.txt'.format(dir_path),sep='\t',index_col='CDF_Element')  # note index
         for k in col_d.keys():
-            cdft['ExternalIdentifier'] = cdft['ExternalIdentifier'].str.replace('\<{}\>'.format(k),'<{}>'.format(col_d[k]))
+            cdft['raw_identifier'] = cdft['raw_identifier'].str.replace('\<{}\>'.format(k),'<{}>'.format(col_d[k]))
         self.cdf_tables = cdft
 
         # determine how to treat ballot measures (ballot_measure_style)
@@ -111,7 +123,7 @@ class Munger:
             self.ballot_measure_selection_list = [x.strip() for x in selection_list]
 
 
-            bms_str=cdft.loc['BallotMeasureSelection','ExternalIdentifier']
+            bms_str=cdft.loc['BallotMeasureSelection','raw_identifier']
             # note: bms_str will start and end with <>
             self.ballot_measure_selection_col = bms_str[1:-1]
         else:

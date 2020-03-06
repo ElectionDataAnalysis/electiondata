@@ -19,10 +19,9 @@ def fill_externalIdentifier_table(session,cdf_schema,context_schema,mu):
     # get table from munger directory with the tab-separated definitions of external identifiers
     fpath=mu.path_to_munger_dir+'ExternalIdentifier.txt'
     print('Pulling munger\'s ExternalIdentifier table from {}'.format(fpath))
-    ei_df = pd.read_csv(fpath,sep = '\t')
-    ei_df.loc[:,'ExternalIdentifierType'] = mu.name
+    mu.raw_identifiers.loc[:,'ExternalIdentifierType'] = mu.name
 
-    ei_df.to_sql('ExternalIdentifier',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
+    mu.raw_identifiers.to_sql('ExternalIdentifier',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
 
     cdf = {}
     filtered_ei = {}
@@ -31,7 +30,7 @@ def fill_externalIdentifier_table(session,cdf_schema,context_schema,mu):
     cdf['IdentifierType'] = pd.read_sql_table('IdentifierType',session.bind,cdf_schema,index_col=None)
 
     # pull from the cdf db any tables whose entries have external identifiers
-    for t in ei_df['Table'].unique():
+    for t in mu.raw_identifiers['CDF_Element'].unique():
         if t == 'BallotMeasureSelection':
             name_col='Selection'
         elif t=='Candidate':
@@ -43,23 +42,17 @@ def fill_externalIdentifier_table(session,cdf_schema,context_schema,mu):
         cdf[t] = cdf[t][[name_col,'Id']]
 
         # manipulate temporary dataframe ei_filt into form for insertion to cdf.ExternalIdentifier
-        ei_filt = ei_df[ei_df['Table']==t]   # filter out rows for the given table
+        ei_filt = mu.raw_identifiers[mu.raw_identifiers['CDF_Element']==t]   # filter out rows for the given table
         # join Table on name to get ForeignId
         ei_filt = ei_filt.merge(cdf[t],left_on='Name',right_on=name_col)
-        ei_filt.rename(columns={'Id':'ForeignId','ExternalIdentifierValue':'Value','ExternalIdentifierType':'IdentifierType'},inplace=True)
+        ei_filt.rename(columns={'Id':'ForeignId','raw_identifier_value':'Value','ExternalIdentifierType':'IdentifierType'},inplace=True)
 
         # join IdentifierType columns
         ei_filt = mr.enum_col_to_id_othertext(ei_filt,'IdentifierType',cdf['IdentifierType'])
 
         filtered_ei[t] = ei_filt
 
-    ei_df = pd.concat([filtered_ei[t] for t in ei_df['Table'].unique()],sort=False)
-
-    # insert appropriate dataframe columns into ExternalIdentifier table in the CDF db
-    print('Inserting into ExternalIdentifier table in schema ' + cdf_schema)
-    dframe_to_sql(ei_df,session,cdf_schema,'ExternalIdentifier')
-
-    session.flush()
+    ei_df = pd.concat([filtered_ei[t] for t in mu.raw_identifiers['CDF_Element'].unique()],sort=False)
     return ei_df
 
 def fill_composing_reporting_unit_join(session,schema,pickle_dir='../local_data/pickles/'):
