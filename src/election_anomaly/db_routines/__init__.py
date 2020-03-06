@@ -148,6 +148,11 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
         target=target.merge(secvcj,left_on='Id',right_on='VoteCount_Id')
         target=target.drop(['Id','VoteCount_Id'],axis=1)
     df_to_db = dframe.copy()
+    # TODO how to avoid int-string comparison failures?
+    if 'Count' in df_to_db.columns:
+        df_to_db.loc[:,'Count']=df_to_db['Count'].astype('int64')
+    #df_to_db=df_to_db.astype(str)
+    #target=target.astype(str)
 
     # remove columns that don't exist in target table
     for c in dframe.columns:
