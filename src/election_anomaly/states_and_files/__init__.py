@@ -47,7 +47,10 @@ class Munger:
         return
 
     def find_unmatched(self,f,element):
-        """find any instances of <element> referenced in f but not interpretable by <self>"""
+        """find any instances of <element> referenced in <f> but not interpretable by <self>"""
+
+        # munge the given element
+        self.cdf_tables[self.cdf_tables.CDF_element==element]
 
 
         # save any unmatched elements (if drop_unmatched=False)
@@ -83,7 +86,7 @@ class Munger:
         self.raw_columns = pd.read_csv('{}raw_columns.txt'.format(dir_path),sep='\t').replace({'name':col_d})
 
         # read cdf tables and rename in ExternalIdentifiers col if necessary
-        cdft=pd.read_csv('{}cdf_tables.txt'.format(dir_path),sep='\t')
+        cdft=pd.read_csv('{}cdf_tables.txt'.format(dir_path),sep='\t',index_col='CDF_Element')  # note index
         for k in col_d.keys():
             cdft['ExternalIdentifier'] = cdft['ExternalIdentifier'].str.replace('\<{}\>'.format(k),'<{}>'.format(col_d[k]))
         self.cdf_tables = cdft
@@ -108,7 +111,7 @@ class Munger:
             self.ballot_measure_selection_list = [x.strip() for x in selection_list]
 
 
-            bms_str=cdft[cdft.CDF_Element=='BallotMeasureSelection'].iloc[0]['ExternalIdentifier']
+            bms_str=cdft.loc['BallotMeasureSelection','ExternalIdentifier']
             # note: bms_str will start and end with <>
             self.ballot_measure_selection_col = bms_str[1:-1]
         else:
