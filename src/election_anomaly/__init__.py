@@ -113,7 +113,8 @@ if __name__ == '__main__':
         pytype_d = {k: type_map_d.get(v) for k, v in type_d.items()}
 
         # dfs = pd.read_sql_table('datafile',session.bind,schema='context',index_col='index')
-        dfs=pd.read_csv('{}context/datafile.txt'.format(s.path_to_state_dir),sep='\t')
+        # note: some fields are empty strings and will be read as nan by read_csv
+        dfs=pd.read_csv('{}context/datafile.txt'.format(s.path_to_state_dir),sep='\t').fillna('')
         for datafile in os.listdir(s.path_to_state_dir + 'data/'+election_name+'/'+mu.name+'/'):
             # check datafile is listed in datafiles
             if '{};{}'.format(e.name,datafile) not in dfs['name'].to_list():
@@ -121,6 +122,8 @@ if __name__ == '__main__':
                 continue
             df_info = dfs[dfs['name'] == '{};{}'.format(e.name,datafile)].iloc[0]
             encoding=df_info['encoding']
+            if not encoding:
+                encoding = 'utf-8'  # TODO document default encoding
             if df_info['separator'] == 'tab':
                 delimiter = '\t'
             elif df_info['separator'] == 'comma':
