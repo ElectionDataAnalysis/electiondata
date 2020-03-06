@@ -56,7 +56,7 @@ def contest_type_split(row,mu):
         bm_row = row[~row.index.isin(cc_row.index)]
     else:
         raise Exception('Ballot measure style {} not recognized'.format(mu.ballot_measure_style))
-    return bm_row, cc_row
+    return bm_row.copy(), cc_row.copy()
 
 def get_internal_ids_from_context(row_df,ctxt_ei_df,table_df,table_name,internal_name_column,unmatched_dir,drop_unmatched=False):
     """replace columns in <df> with external identifier values by columns with internal names
