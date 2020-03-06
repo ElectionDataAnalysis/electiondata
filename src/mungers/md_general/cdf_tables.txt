@@ -1,4 +1,4 @@
-cdf_element	raw_identifier
+cdf_element	raw_identifier_formula
 Office	<Office Name>;<Office District>
 ReportingUnit	<County>;<Election District>;<Election Precinct>
 Party	<Party>
