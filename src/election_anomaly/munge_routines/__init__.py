@@ -309,21 +309,12 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
     return
 
-def raw_dframe_to_cdf(session,raw_rows,mu,cdf_schema,context_schema,e,state_id = 0,id_type_other_id = 0,cdf_table_filepath='CDF_schema_def_info/tables.txt'):
+def raw_dframe_to_cdf(session,raw_rows,mu,cdf_schema,e,state_id = 0,cdf_table_filepath='CDF_schema_def_info/tables.txt'):
     """ munger-agnostic raw-to-cdf script; ***
     dframe is dataframe, mu is munger """
 
     assert isinstance(e,an.Election),'Argument should be an Election instance'
     cdf_d = {}  # to hold various dataframes from cdf db tables
-
-    fill_externalIdentifier_table(session,cdf_schema,context_schema,mu)
-
-    # get id for IdentifierType 'other' if it was not passed as parameter
-    if id_type_other_id == 0:
-        cdf_d['IdentifierType'] = pd.read_sql_table('IdentifierType', session.bind, cdf_schema, index_col='Id')
-        id_type_other_id = cdf_d['IdentifierType'].index[cdf_d['IdentifierType']['Txt'] == 'other'].to_list()[0]
-        if not id_type_other_id:
-            raise Exception('No Id found for IdentifierType \'other\'; fix IdentifierType table and rerun.')
 
     # if state_id is not passed as parameter, get id (default Reporting Unit for ballot questions)
     for t in ['ReportingUnitType','ReportingUnit']:
