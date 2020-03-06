@@ -164,6 +164,10 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     if 'Id' in appendable.columns:
         appendable = appendable.drop('Id',axis=1)
 
+    # TODO in line below appendable has copies of existing vote counts, but wiht new id's,
+    #  causing duplicates in VoteCount table [copies of existing vote counts with existing ids
+    #  have been dropped] These came from df_to_db, where they differ from corresponding rows
+    # in target, but how?
     appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
     up_to_date_dframe = pd.read_sql_table(table,session.bind,schema=schema)
     if raw_to_votecount:
