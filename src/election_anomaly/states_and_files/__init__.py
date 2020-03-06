@@ -51,7 +51,7 @@ class Munger:
 
         # get list of columns of <f> needed to determine the ExternalIdentifier for <element>
         p='\<([^\>]+)\>'
-        col_list=re.findall(p,self.cdf_tables.loc[element,'raw_identifier'])
+        col_list=re.findall(p,self.cdf_tables.loc[element,'raw_identifier_formula'])
 
         # create dataframe of unique instances of <element>
         f_elts=f[col_list].drop_duplicates()
@@ -100,7 +100,7 @@ class Munger:
         # read cdf tables and rename in ExternalIdentifiers col if necessary
         cdft=pd.read_csv('{}cdf_tables.txt'.format(dir_path),sep='\t',index_col='cdf_element')  # note index
         for k in col_d.keys():
-            cdft['raw_identifier'] = cdft['raw_identifier'].str.replace('\<{}\>'.format(k),'<{}>'.format(col_d[k]))
+            cdft['raw_identifier_formula'] = cdft['raw_identifier_formula'].str.replace('\<{}\>'.format(k),'<{}>'.format(col_d[k]))
         self.cdf_tables = cdft
 
         # determine how to treat ballot measures (ballot_measure_style)
@@ -123,7 +123,7 @@ class Munger:
             self.ballot_measure_selection_list = [x.strip() for x in selection_list]
 
 
-            bms_str=cdft.loc['BallotMeasureSelection','raw_identifier']
+            bms_str=cdft.loc['BallotMeasureSelection','raw_identifier_formula']
             # note: bms_str will start and end with <>
             self.ballot_measure_selection_col = bms_str[1:-1]
         else:

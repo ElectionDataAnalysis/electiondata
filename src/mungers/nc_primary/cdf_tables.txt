@@ -1,7 +1,7 @@
-CDF_Element	ExternalIdentifier	InternalFieldName	Enumerations
-ReportingUnit	<County>;<Precinct>	Name	{'ReportingUnitType': 'precinct'}
-Party	<Choice Party>	Name	{}
-Candidate	<Choice>	BallotName	{}
-CandidateContest	<Contest Name>	Name	{}
-BallotMeasureContest	<Contest Name>	Name	{}
-BallotMeasureSelection	<Choice>	Selection	{}
+cdf_element	raw_identifier
+ReportingUnit	<County>;<Precinct>
+Party	<Choice Party>
+Candidate	<Choice>
+CandidateContest	<Contest Name>
+BallotMeasureContest	<Contest Name>
+BallotMeasureSelection	<Choice>

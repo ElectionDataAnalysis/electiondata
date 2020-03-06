@@ -26,8 +26,8 @@ def add_munged_column(row_df,mu,cdf_element,new_col_name):
         # use regex to turn value string in munge dictionary into the corresponding commands (e.g., decode '<County>;<Precinct>'
         p = re.compile('(?P<text>[^<>]*)<(?P<field>[^<>]+)>')   # pattern to find text,field pairs
         q = re.compile('(?<=>)[^<]*$')                          # pattern to find text following last pair
-        text_field_list = re.findall(p,mu.cdf_tables.loc[cdf_element,'raw_identifier'])
-        last_text = re.findall(q,mu.cdf_tables.loc[cdf_element,'raw_identifier'])
+        text_field_list = re.findall(p,mu.cdf_tables.loc[cdf_element,'raw_identifier_formula'])
+        last_text = re.findall(q,mu.cdf_tables.loc[cdf_element,'raw_identifier_formula'])
 
         if last_text:
             row_df.loc[:,new_col_name] = last_text[0]

@@ -1,8 +1,8 @@
-CDF_Element	ExternalIdentifier	InternalFieldName
-Office	<Contest Name>	Name
-ReportingUnit	<County>;<Precinct>	Name
-Party	<Choice Party>	Name
+cdf_element	raw_identifier
+Office	<Contest Name>
+ReportingUnit	<County>;<Precinct>
+Party	<Choice Party>
 Candidate	<Choice>	BallotName
-CandidateContest	<Contest Name>	Name
-BallotMeasureContest	<Contest Name>	Name
-BallotMeasureSelection	<Choice>	Selection
+CandidateContest	<Contest Name>
+BallotMeasureContest	<Contest Name>
+BallotMeasureSelection	<Choice>
