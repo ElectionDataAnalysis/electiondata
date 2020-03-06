@@ -20,7 +20,9 @@ def create_database(con,cur,db_name):
 
         q = "CREATE DATABASE {0}"
         out2 = query(q,sql_ids,[],con,cur)
-    return out1,out2
+        return out1,out2
+    else:
+        return None,None
 
 def create_raw_schema(con,cur,schema):
     q = "CREATE SCHEMA {0}"
@@ -146,6 +148,11 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
         target=target.merge(secvcj,left_on='Id',right_on='VoteCount_Id')
         target=target.drop(['Id','VoteCount_Id'],axis=1)
     df_to_db = dframe.copy()
+    # TODO how to avoid int-string comparison failures?
+    if 'Count' in df_to_db.columns:
+        df_to_db.loc[:,'Count']=df_to_db['Count'].astype('int64')
+    #df_to_db=df_to_db.astype(str)
+    #target=target.astype(str)
 
     # remove columns that don't exist in target table
     for c in dframe.columns:
@@ -162,6 +169,10 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     if 'Id' in appendable.columns:
         appendable = appendable.drop('Id',axis=1)
 
+    # TODO in line below appendable has copies of existing vote counts, but wiht new id's,
+    #  causing duplicates in VoteCount table [copies of existing vote counts with existing ids
+    #  have been dropped] These came from df_to_db, where they differ from corresponding rows
+    # in target, but how?
     appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
     up_to_date_dframe = pd.read_sql_table(table,session.bind,schema=schema)
     if raw_to_votecount:

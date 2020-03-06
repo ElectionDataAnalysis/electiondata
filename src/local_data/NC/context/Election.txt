@@ -1,3 +1,4 @@
 Name	ElectionType	ShortName	ReportingUnit	StartDate	EndDate
 General Election 2018-11-06	general	2018g	North Carolina	2018-11-06	2018-11-06
 Primary Election 2018-05-08	primary	2018p	North Carolina	2018-05-08	2018-05-08
+Primary Election 2020-03-03_asof_20200305	primary	2020p_asof_20200305	North Carolina	2020-03-03	2020-03-03

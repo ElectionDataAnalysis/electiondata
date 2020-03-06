@@ -1,8 +1,8 @@
-CDFTable	ExternalIdentifier	InternalFieldName
-Office	<OfficeDesc> Juris1num <Juris1num> Juris2num <Juris2num>	Name
-ReportingUnit	<CountyName>	Name
-Party	<PartyName	Name
-Candidate	<CanNameFirst> <CanNameMiddle> <CanNameLast>	BallotName
-CandidateContest	<OfficeDesc> Juris1num <Juris1num> Juris2num <Juris2num>	Name
-BallotMeasureContest	<OfficeDesc>	Name
-BallotMeasureSelection	<CanNameLast>	Selection
+cdf_element	raw_identifier_formula
+Office	<OfficeDesc> Juris1num <Juris1num> Juris2num <Juris2num>
+ReportingUnit	<CountyName>
+Party	<PartyName>
+Candidate	<CanNameFirst> <CanNameMiddle> <CanNameLast>
+CandidateContest	<OfficeDesc> Juris1num <Juris1num> Juris2num <Juris2num>
+BallotMeasureContest	<OfficeDesc>
+BallotMeasureSelection	<CanNameLast>

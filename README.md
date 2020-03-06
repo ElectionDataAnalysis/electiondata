@@ -86,7 +86,7 @@ The folder `src/mungers` holds a directory for each munger. Each munger director
     * `RawName` Name of the count column in the source file
     * `CountItemType` Type of count, according to the Common Data Format (e.g., 'absentee' or 'election-day')
  * `cdf_tables.txt` One line for each main table in the Common Data Format. Specifies how to read the values for that table from the source file.
-    * `CDFTable` Name of the Common Data Format table (e.g., 'ReportingUnit')
+    * `CDF_Element` Name of the Common Data Format table/element (e.g., 'ReportingUnit')
     * `ExternalIdentifier` Recipe for creating the external identifier from the source file. 
     * `InternalFieldName` Usually 'Name', this is the column in the Common Data Format table that names the item.
     * `Enumerations` Recipes for specifying any enumerated values
@@ -114,3 +114,14 @@ For ReportingUnits, the naming convention is to list as much of the composing in
 
 # Conventions
 Reporting units that are not physical geographical precincts (such as an administrative precinct containing absentee ballot counts from one county) are classified as Reporting Type `precinct` if they should be part of any roll-up involving all precincts in a jurisdiction (e.g., if the absentee ballot counts are not included in any other Reporting Units of Type `precinct` in the county).
+
+# Data Import Process
+## New state
+## New munger
+A new datafile may have a new column (e.g., for a new vote type), in which case a new munger is needed
+## New datafile
+Even if the munger is essentially unchanged, each new datafile may have new ReportingUnits or Parties. ***
+
+A new datafile may have new names for existing elements (such as Reporting Units or Offices) ***
+
+More rarely, a new datafile may have new Offices and CandidateContests.

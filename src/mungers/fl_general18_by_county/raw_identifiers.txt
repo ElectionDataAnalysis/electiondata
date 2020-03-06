@@ -1,4 +1,4 @@
-Table	Name	ExternalIdentifierValue
+cdf_element	cdf_internal_name	raw_identifier_value
 Office	Florida;Governor	Governor Juris1num  Juris2num
 Office	Florida;Attorney General	Attorney General Juris1num  Juris2num
 Office	Florida;Chief Financial Officer	Chief Financial Officer Juris1num  Juris2num
@@ -448,3 +448,5 @@ ReportingUnit	Florida;Volusia County	Volusia
 ReportingUnit	Florida;Wakulla County	Wakulla
 ReportingUnit	Florida;Walton County	Walton
 ReportingUnit	Florida;Washington County	Washington
+BallotMeasureSelection	Yes	Yes
+BallotMeasureSelection	No	No

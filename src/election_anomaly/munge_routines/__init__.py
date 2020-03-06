@@ -13,21 +13,21 @@ import analyze as an
 import re
 import os
 
-from context import fill_externalIdentifier_table,fill_composing_reporting_unit_join
+from context import fill_composing_reporting_unit_join
 from db_routines import dframe_to_sql
 
 
-def add_munged_column(row_df,munge_dictionary,munge_key,new_col_name):
+def add_munged_column(row_df,mu,cdf_element,new_col_name):
     """Alters dataframe <row_df> (in place), adding or redefining <new_col_name>
-    via the string corresponding to <munge_key>, per <munge_dictionary>"""
+    via the string corresponding to <cdf_element>, per <munge_dictionary>"""
     if row_df.empty:
         return row_df
     else:
         # use regex to turn value string in munge dictionary into the corresponding commands (e.g., decode '<County>;<Precinct>'
         p = re.compile('(?P<text>[^<>]*)<(?P<field>[^<>]+)>')   # pattern to find text,field pairs
         q = re.compile('(?<=>)[^<]*$')                          # pattern to find text following last pair
-        text_field_list = re.findall(p,munge_dictionary[munge_key])
-        last_text = re.findall(q,munge_dictionary[munge_key])
+        text_field_list = re.findall(p,mu.cdf_tables.loc[cdf_element,'raw_identifier_formula'])
+        last_text = re.findall(q,mu.cdf_tables.loc[cdf_element,'raw_identifier_formula'])
 
         if last_text:
             row_df.loc[:,new_col_name] = last_text[0]
@@ -38,6 +38,7 @@ def add_munged_column(row_df,munge_dictionary,munge_key,new_col_name):
         for t,f in text_field_list:
             row_df.loc[:,new_col_name] = t+row_df.loc[:,f]+row_df.loc[:,new_col_name]
         return row_df
+
 
 def contest_type_split(row,mu):
     if mu.ballot_measure_style=='yes_and_no_are_candidates':
@@ -56,46 +57,48 @@ def contest_type_split(row,mu):
         bm_row = row[~row.index.isin(cc_row.index)]
     else:
         raise Exception('Ballot measure style {} not recognized'.format(mu.ballot_measure_style))
-    return bm_row, cc_row
+    return bm_row.copy(), cc_row.copy()
 
-def get_internal_ids_from_context(row_df,ctxt_ei_df,table_df,table_name,internal_name_column,unmatched_dir,drop_unmatched=False):
-    """replace columns in <df> with external identifier values by columns with internal names
-    Note: this requires using the ExternalIdentifier table from the context schema, which has the info about which table the element is in. """
+
+def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False):
+    """replace columns in <df> with raw_identifier values by columns with internal names
+    """
     assert os.path.isdir(unmatched_dir), 'Argument {} is not a directory'.format(unmatched_dir)
     if drop_unmatched:
         how='inner'
     else:
         how='left'
-    # join the 'Name' from the ExternalIdentifier table -- this is the internal name field,
-    # no matter what name the corresponding field has in the internal element table
-    row_df = row_df.merge(ctxt_ei_df[ctxt_ei_df['Table'] == table_name],how=how,left_on=table_name + '_external',right_on='ExternalIdentifierValue',suffixes=['','_' + table_name+'_ei'])
+    # join the 'cdf_internal_name' from the raw_identifier table -- this is the internal name field value,
+    # no matter what the name field name is in the internal element table (e.g. 'Name', 'BallotName' or 'Selection')
+    row_df = row_df.merge(mu.raw_identifiers[mu.raw_identifiers['cdf_element'] == element],how=how,left_on=element + '_external',right_on='raw_identifier_value',suffixes=['','_' + element + '_ei'])
 
     # save any unmatched elements (if drop_unmatched=False)
-    unmatched = row_df[row_df['ExternalIdentifierValue'].isnull()].loc[:,table_name+'_external'].unique()
+    # TODO move these warnings to the method on Munger() that pre-checks the munger.
+    unmatched = row_df[row_df['raw_identifier_value'].isnull()].loc[:,element + '_external'].unique()
     if unmatched.size>0:
-        unmatched_path=unmatched_dir+'unmatched_'+table_name+'.txt'
+        unmatched_path= unmatched_dir +'unmatched_' + element + '.txt'
         np.savetxt(unmatched_path,unmatched,fmt="%s")
-        print('WARNING: Some elements unmatched, saved to {}.\nIF THESE ELEMENTS ARE NECESSARY, USER MUST put them in both the munger ExternalIdentifier.txt and in the {}.txt file in the context directory'.format(unmatched_path,table_name))
+        print('WARNING: Some instances of {1} unmatched, saved to {0}.\nIF THESE ELEMENTS ARE NECESSARY, USER MUST put them in both the munger raw_identifiers.txt and in the {1}.txt file in the context directory'.format(unmatched_path,element))
 
-    row_df = row_df.drop(['ExternalIdentifierValue','Table',table_name+'_external'],axis=1)
+    row_df = row_df.drop(['raw_identifier_value','cdf_element',element + '_external'],axis=1)
 
-    # ensure that there is a column in row_df called by the table_name
+    # ensure that there is a column in row_df called by the element
     # containing the internal name of the element
-    if 'Name_'+table_name+'_ei' in row_df.columns:
-        row_df.rename(columns={'Name_'+table_name+'_ei':table_name},inplace=True)
+    if 'Name_'+element+ '_ei' in row_df.columns:
+        row_df.rename(columns={'Name_' + element + '_ei':element},inplace=True)
     else:
-        row_df.rename(columns={'Name':table_name},inplace=True)
+        row_df.rename(columns={'cdf_internal_name':element},inplace=True)
 
     # join the element table Id and name columns.
     # This will create two columns with the internal name field,
-    # whose names will be table_name (from above)
+    # whose names will be element (from above)
     # and either internal_name_column or internal_name_column_table_name
-    row_df = row_df.merge(table_df[['Id',internal_name_column]],how='left',left_on=table_name,right_on=internal_name_column,suffixes=['','_' + table_name])
-    if internal_name_column+'_' + table_name in row_df.columns:
-        row_df=row_df.drop(internal_name_column+'_' + table_name,axis=1)
+    row_df = row_df.merge(table_df[['Id',internal_name_column]],how='left',left_on=element,right_on=internal_name_column,suffixes=['','_' + element])
+    if internal_name_column+'_' + element in row_df.columns:
+        row_df=row_df.drop(internal_name_column +'_' + element,axis=1)
     else:
         row_df=row_df.drop([internal_name_column],axis=1)
-    row_df.rename(columns={'Id_'+table_name:table_name + '_Id'},inplace=True)
+    row_df.rename(columns={'Id_' + element:element + '_Id'},inplace=True)
     return row_df
 
 def add_non_id_cols_from_id(row_df,cdf_table,table_name):
@@ -142,16 +145,14 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
     cdf_d = {}  # dataframe for each table
     for t in ['Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType','CandidateContest']:
         cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema)   # note: keep 'Id as df column (not index) so we have access in merges below.
-    munger_ei = pd.read_csv('{}ExternalIdentifier.txt'.format(mu.path_to_munger_dir),sep='\t')
+
 
     # get vote count column mapping for our munger
-    fpath = mu.path_to_munger_dir
     vc_col_d = {x['RawName']:x['CountItemType'] for i,x in mu.count_columns[mu.count_columns.ContestType==contest_type][['RawName','CountItemType']].iterrows()}
     col_list = list(vc_col_d.values()) + ['Election_Id','ReportingUnit_Id',
                                           'ReportingUnitType_Id', 'OtherReportingUnitType', 'CountItemStatus_Id',
                                           'OtherCountItemStatus','Selection_Id','Contest_Id']    # is ElectionDistrict_Id necessary?
     vote_type_list=list({v for k,v in vc_col_d.items()})
-    munge = mu.cdf_tables.set_index('CDFTable').to_dict()['ExternalIdentifier']
 
     # add columns corresponding to cdf fields
     # election id
@@ -165,14 +166,14 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
     for t in ['Party','ReportingUnit']:  # tables that were filled from context
         #  merge works for all columns, even if, say, Party is null, because of how='left' (left join) in add_munged_column function
-        add_munged_column(row,munge,t,t+'_external')
-        row=get_internal_ids_from_context(row,munger_ei,cdf_d[t],t,"Name",mu.path_to_munger_dir)
+        add_munged_column(row,mu,t,t+'_external')
+        row=get_internal_ids(row,mu,cdf_d[t],t,"Name",mu.path_to_munger_dir)
         row=add_non_id_cols_from_id(row,cdf_d[t],t)
 
     vote_count_dframe_list=[] # TODO remove; don't need to concatenate if bmcs and ccs are handled separately
 
     if contest_type=='BallotMeasure':
-        add_munged_column(row,munge,'BallotMeasureContest','BallotMeasureContest')
+        add_munged_column(row,mu,'BallotMeasureContest','BallotMeasureContest')
 
         # create DataFrame bm_contest_selections of contest-selection-id tuples
         if mu.ballot_measure_style == 'yes_and_no_are_columns':
@@ -180,7 +181,6 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
             new_rows={}
             bm_contests = row['BallotMeasureContest'].drop_duplicates()
             for sel in ['Yes','No']:    # internal BallotMeasureSelection options
-                #bmc[sel]=pd.concat([bm_contests,pd.Series([sel] * len(bm_contests),name='BallotMeasureSelection')],axis=1,ignore_index=True)
                 bmc[sel]=pd.DataFrame(zip(bm_contests,[sel] * len(bm_contests)),columns=['BallotMeasureContest','BallotMeasureSelection'])
                 new_rows[sel]=row.copy()
                 # add column for selection
@@ -193,12 +193,13 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
             bm_contest_selection = pd.concat([bmc[k] for k in bmc.keys()])
 
         elif mu.ballot_measure_style == 'yes_and_no_are_candidates':
-            add_munged_column(row,munge,'BallotMeasureSelection','BallotMeasureSelection')
+            add_munged_column(row,mu,'BallotMeasureSelection','BallotMeasureSelection')
             bm_contest_selection = row[['BallotMeasureContest','BallotMeasureSelection']].drop_duplicates()
             row.rename(columns=vc_col_d,inplace=True)  # standardize vote-count column names
         else:
             raise Exception('Ballot measure style \'{}\' not recognized'.format(mu.ballot_measure_style))
-        bm_contest_selection.columns = ['Name','Selection']  # internal db name for ballot measure contest matches name in file
+        bm_contest_selection.columns = ['Name','Selection']
+        # internal db name for ballot measure contest matches name in file
         bm_contest_selection.loc[:,'ElectionDistrict_Id'] = state_id  # append column for ElectionDistrict Id
         print('WARNING: all ballot measure contests assumed to have the whole state as their district')
 
@@ -213,9 +214,11 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
         # Load BallotMeasureContestSelectionJoin table to cdf schema
         bmcsj_df = bm_row[['Contest_Id','Selection_Id']].drop_duplicates()
+        bmcsj_df.rename(columns={'Contest_Id':'BallotMeasureContest_Id','Selection_Id':'BallotMeasureSelection_Id'},inplace=True)
         cdf_d['BallotMeasureContestSelectionJoin'] = dbr.dframe_to_sql(bmcsj_df,session,cdf_schema,'BallotMeasureContestSelectionJoin')
 
         # Load ElectionContestJoin table (for ballot measures)
+        # TODO are we pulling ballot measure contests from other elections and assigning them to current election?
         ecj_df = cdf_d['BallotMeasureContest'].copy()
         ecj_df.loc[:,'Election_Id'] = election_id
         ecj_df.rename(columns={'Id': 'Contest_Id'}, inplace=True)
@@ -231,13 +234,14 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
     if contest_type=='Candidate':
         # process rows with candidate contests
-        # Find CandidateContest_external and CandidateContest_Id and omit rows with contests not  given in CandidateContest table (filled from context)
-        add_munged_column(row,munge,'CandidateContest','CandidateContest_external')
-        cc_row=get_internal_ids_from_context(row,munger_ei,cdf_d['CandidateContest'],'CandidateContest','Name',mu.path_to_munger_dir,drop_unmatched=True)
+        # Find CandidateContest_external and CandidateContest_Id
+        # and omit rows with contests not  given in CandidateContest table (filled from context)
+        add_munged_column(row,mu,'CandidateContest','CandidateContest_external')
+        cc_row=get_internal_ids(row,mu,cdf_d['CandidateContest'],'CandidateContest','Name',mu.path_to_munger_dir,drop_unmatched=True)
         cc_row.rename(columns={'CandidateContest_Id':'Contest_Id'},inplace=True)
 
         # load Candidate table
-        add_munged_column(cc_row,munge,'Candidate','BallotName')
+        add_munged_column(cc_row,mu,'Candidate','BallotName')
         candidate_df = cc_row[['BallotName','Party_Id','Election_Id']].copy().drop_duplicates()
         candidate_df = candidate_df[candidate_df['BallotName'].notnull()]
         # TODO add  other notnull criteria
@@ -266,7 +270,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
         else:
             raise Exception('Election type not recognized by the code: ' + election_type) # TODO add all election types
         cc_row.merge(cdf_d['Office'],left_on='Office',right_on='Name',suffixes=['','_Office'])
-        cc_row.rename(columns={'Id_Office':'Office_Id'})
+        cc_row.rename(columns={'Id_Office':'Office_Id'},inplace=True)
 
         # load ElectionContestJoin for Candidate Contests
         ecj_df = cc_row[['Contest_Id','Election_Id']].drop_duplicates()
@@ -274,6 +278,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
         #  load CandidateContestSelectionJoin
         ccsj_df = cc_row[['Contest_Id','Selection_Id','Election_Id']].drop_duplicates()
+        ccsj_df.rename(columns={'Contest_Id':'CandidateContest_Id','Selection_Id':'CandidateSelection_Id'},inplace=True)
         cdf_d['CandidateContestSelectionJoin'] = dbr.dframe_to_sql(ccsj_df,session,cdf_schema,'CandidateContestSelectionJoin')
 
         # load candidate counts
@@ -305,37 +310,28 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
     end = time.time()
     print('\tSeconds required to upload SelectionElectionContestVoteCountJoin: {}'.format(round(end - start)))
     print('Drop columns from cdf table')
-    q = 'ALTER TABLE {0}."VoteCount" DROP COLUMN "Election_Id", DROP COLUMN "Contest_Id" ,  DROP COLUMN "Selection_Id" '
+    q = 'ALTER TABLE {0}."VoteCount" DROP COLUMN "Election_Id",' \
+        ' DROP COLUMN "Contest_Id" ,  DROP COLUMN "Selection_Id" '
     sql_ids=[cdf_schema]
     strs = []
     dbr.raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
 
     return
 
-def raw_dframe_to_cdf(session,raw_rows,mu,cdf_schema,context_schema,e,state_id = 0,id_type_other_id = 0,cdf_table_filepath='CDF_schema_def_info/tables.txt'):
+
+def raw_dframe_to_cdf(session,raw_rows,mu,cdf_schema,e,state_id = 0):
     """ munger-agnostic raw-to-cdf script; ***
     dframe is dataframe, mu is munger """
 
     assert isinstance(e,an.Election),'Argument should be an Election instance'
     cdf_d = {}  # to hold various dataframes from cdf db tables
 
-    # add to context.ExternalIdentifier table for this munger
-    # TODO rename context schema to reflect munger info
-    fill_externalIdentifier_table(session,cdf_schema,context_schema,mu)
-
-    # get id for IdentifierType 'other' if it was not passed as parameter
-    if id_type_other_id == 0:
-        cdf_d['IdentifierType'] = pd.read_sql_table('IdentifierType', session.bind, cdf_schema, index_col='Id')
-        id_type_other_id = cdf_d['IdentifierType'].index[cdf_d['IdentifierType']['Txt'] == 'other'].to_list()[0]
-        if not id_type_other_id:
-            raise Exception('No Id found for IdentifierType \'other\'; fix IdentifierType table and rerun.')
-
     # if state_id is not passed as parameter, get id (default Reporting Unit for ballot questions)
     for t in ['ReportingUnitType','ReportingUnit']:
         cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema, index_col='Id')
     if state_id == 0:
-        state_type_id = cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt']=='state'].index.values[0]
-        state_id = cdf_d['ReportingUnit'][cdf_d['ReportingUnit']['ReportingUnitType_Id']==state_type_id].index.values[0]
+        state_type_id = cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt'] == 'state'].index.values[0]
+        state_id = cdf_d['ReportingUnit'][cdf_d['ReportingUnit']['ReportingUnitType_Id'] == state_type_id].index.values[0]
 
     # split raw_rows into a df for ballot measures and a df for contests
     bm_row,cc_row = contest_type_split(raw_rows,mu)
@@ -426,16 +422,11 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
                 pcc['Name'] = pcc['Name'] + ' Primary;' + cdf_d['Party'][cdf_d['Party']['Id'] == party_id].iloc[0]['Name']
                 cc_data = pd.concat([cc_data,pcc])
 
-
-
             cdf_d['CandidateContest'] = dframe_to_sql(cc_data,session,'cdf','CandidateContest')
 
-            # create corresponding CandidateContest records for primary contests (and insert in cdf db if they don't already exist)
-
-
+    # TODO update CRUJ when munger is updated?
     # Fill the ComposingReportingUnitJoin table
-    cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,'cdf',pickle_dir=s.path_to_state_dir+'pickles/')
-    # TODO put pickle directory info into README.md; or better yet, create nesting table in context schema
+    cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,'cdf')
     session.flush()
     return
 
