@@ -1,4 +1,4 @@
-CDF_Element	raw_identifier	InternalFieldName
+cdf_element	raw_identifier	InternalFieldName
 Office	<OfficeDesc> Juris1num <Juris1num> Juris2num <Juris2num>	Name
 ReportingUnit	<CountyName>	Name
 Party	<PartyName>	Name

@@ -12,49 +12,6 @@ import db_routines as dbr
 import pandas as pd
 
 
-def fill_externalIdentifier_table(session,cdf_schema,context_schema,mu):
-    """
-    mu is a munger
-    """
-    # get table from munger directory with the tab-separated definitions of external identifiers
-    fpath=mu.path_to_munger_dir+'ExternalIdentifier.txt'
-    print('Pulling munger\'s ExternalIdentifier table from {}'.format(fpath))
-    mu.raw_identifiers.loc[:,'ExternalIdentifierType'] = mu.name
-
-    mu.raw_identifiers.to_sql('ExternalIdentifier',session.bind,schema=context_schema,if_exists='replace') # TODO better option than replacement?
-
-    cdf = {}
-    filtered_ei = {}
-
-    # pull from the cdf the enumeration of ExternalIdentifier types
-    cdf['IdentifierType'] = pd.read_sql_table('IdentifierType',session.bind,cdf_schema,index_col=None)
-
-    # pull from the cdf db any tables whose entries have external identifiers
-    for t in mu.raw_identifiers['CDF_Element'].unique():
-        if t == 'BallotMeasureSelection':
-            name_col='Selection'
-        elif t=='Candidate':
-            name_col='BallotName'
-        else:
-            name_col='Name'
-        cdf[t] = pd.read_sql_table(t,session.bind,cdf_schema,index_col=None)
-        # drop all but Name and Id columns
-        cdf[t] = cdf[t][[name_col,'Id']]
-
-        # manipulate temporary dataframe ei_filt into form for insertion to cdf.ExternalIdentifier
-        ei_filt = mu.raw_identifiers[mu.raw_identifiers['CDF_Element']==t]   # filter out rows for the given table
-        # join Table on name to get ForeignId
-        ei_filt = ei_filt.merge(cdf[t],left_on='Name',right_on=name_col)
-        ei_filt.rename(columns={'Id':'ForeignId','raw_identifier_value':'Value','ExternalIdentifierType':'IdentifierType'},inplace=True)
-
-        # join IdentifierType columns
-        ei_filt = mr.enum_col_to_id_othertext(ei_filt,'IdentifierType',cdf['IdentifierType'])
-
-        filtered_ei[t] = ei_filt
-
-    ei_df = pd.concat([filtered_ei[t] for t in mu.raw_identifiers['CDF_Element'].unique()],sort=False)
-    return ei_df
-
 def fill_composing_reporting_unit_join(session,schema,pickle_dir='../local_data/pickles/'):
     print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
     ru_dframe = pd.read_sql_table('ReportingUnit', session.bind, schema,index_col=None)

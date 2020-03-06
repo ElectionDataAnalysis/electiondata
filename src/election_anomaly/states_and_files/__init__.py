@@ -98,7 +98,7 @@ class Munger:
         self.raw_columns = pd.read_csv('{}raw_columns.txt'.format(dir_path),sep='\t').replace({'name':col_d})
 
         # read cdf tables and rename in ExternalIdentifiers col if necessary
-        cdft=pd.read_csv('{}cdf_tables.txt'.format(dir_path),sep='\t',index_col='CDF_Element')  # note index
+        cdft=pd.read_csv('{}cdf_tables.txt'.format(dir_path),sep='\t',index_col='cdf_element')  # note index
         for k in col_d.keys():
             cdft['raw_identifier'] = cdft['raw_identifier'].str.replace('\<{}\>'.format(k),'<{}>'.format(col_d[k]))
         self.cdf_tables = cdft

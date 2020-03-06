@@ -13,8 +13,9 @@ import analyze as an
 import re
 import os
 
-from context import fill_externalIdentifier_table,fill_composing_reporting_unit_join
+from context import fill_composing_reporting_unit_join
 from db_routines import dframe_to_sql
+
 
 def add_munged_column(row_df,mu,cdf_element,new_col_name):
     """Alters dataframe <row_df> (in place), adding or redefining <new_col_name>
@@ -38,6 +39,7 @@ def add_munged_column(row_df,mu,cdf_element,new_col_name):
             row_df.loc[:,new_col_name] = t+row_df.loc[:,f]+row_df.loc[:,new_col_name]
         return row_df
 
+
 def contest_type_split(row,mu):
     if mu.ballot_measure_style=='yes_and_no_are_candidates':
         bm_row = row[row[mu.ballot_measure_selection_col].isin(mu.ballot_measure_selection_list)]
@@ -57,6 +59,7 @@ def contest_type_split(row,mu):
         raise Exception('Ballot measure style {} not recognized'.format(mu.ballot_measure_style))
     return bm_row.copy(), cc_row.copy()
 
+
 def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False):
     """replace columns in <df> with raw_identifier values by columns with internal names
     """
@@ -65,9 +68,9 @@ def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_d
         how='inner'
     else:
         how='left'
-    # join the 'Name' from the raw_identifier table -- this is the internal name field value,
+    # join the 'cdf_internal_name' from the raw_identifier table -- this is the internal name field value,
     # no matter what the name field name is in the internal element table (e.g. 'Name', 'BallotName' or 'Selection')
-    row_df = row_df.merge(mu.raw_identifiers[mu.raw_identifiers['CDF_Element'] == element],how=how,left_on=element + '_external',right_on='raw_identifier_value',suffixes=['','_' + element + '_ei'])
+    row_df = row_df.merge(mu.raw_identifiers[mu.raw_identifiers['cdf_element'] == element],how=how,left_on=element + '_external',right_on='raw_identifier_value',suffixes=['','_' + element + '_ei'])
 
     # save any unmatched elements (if drop_unmatched=False)
     # TODO move these warnings to the method on Munger() that pre-checks the munger.
@@ -77,14 +80,14 @@ def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_d
         np.savetxt(unmatched_path,unmatched,fmt="%s")
         print('WARNING: Some instances of {1} unmatched, saved to {0}.\nIF THESE ELEMENTS ARE NECESSARY, USER MUST put them in both the munger raw_identifiers.txt and in the {1}.txt file in the context directory'.format(unmatched_path,element))
 
-    row_df = row_df.drop(['raw_identifier_value','CDF_Element',element + '_external'],axis=1)
+    row_df = row_df.drop(['raw_identifier_value','cdf_element',element + '_external'],axis=1)
 
     # ensure that there is a column in row_df called by the element
     # containing the internal name of the element
     if 'Name_'+element+ '_ei' in row_df.columns:
         row_df.rename(columns={'Name_' + element + '_ei':element},inplace=True)
     else:
-        row_df.rename(columns={'Name':element},inplace=True)
+        row_df.rename(columns={'cdf_internal_name':element},inplace=True)
 
     # join the element table Id and name columns.
     # This will create two columns with the internal name field,
@@ -177,7 +180,6 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
             new_rows={}
             bm_contests = row['BallotMeasureContest'].drop_duplicates()
             for sel in ['Yes','No']:    # internal BallotMeasureSelection options
-                #bmc[sel]=pd.concat([bm_contests,pd.Series([sel] * len(bm_contests),name='BallotMeasureSelection')],axis=1,ignore_index=True)
                 bmc[sel]=pd.DataFrame(zip(bm_contests,[sel] * len(bm_contests)),columns=['BallotMeasureContest','BallotMeasureSelection'])
                 new_rows[sel]=row.copy()
                 # add column for selection
@@ -195,7 +197,8 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
             row.rename(columns=vc_col_d,inplace=True)  # standardize vote-count column names
         else:
             raise Exception('Ballot measure style \'{}\' not recognized'.format(mu.ballot_measure_style))
-        bm_contest_selection.columns = ['Name','Selection']  # internal db name for ballot measure contest matches name in file
+        bm_contest_selection.columns = ['Name','Selection']
+        # internal db name for ballot measure contest matches name in file
         bm_contest_selection.loc[:,'ElectionDistrict_Id'] = state_id  # append column for ElectionDistrict Id
         print('WARNING: all ballot measure contests assumed to have the whole state as their district')
 
@@ -228,7 +231,8 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
     if contest_type=='Candidate':
         # process rows with candidate contests
-        # Find CandidateContest_external and CandidateContest_Id and omit rows with contests not  given in CandidateContest table (filled from context)
+        # Find CandidateContest_external and CandidateContest_Id
+        # and omit rows with contests not  given in CandidateContest table (filled from context)
         add_munged_column(row,mu,'CandidateContest','CandidateContest_external')
         cc_row=get_internal_ids(row,mu,cdf_d['CandidateContest'],'CandidateContest','Name',mu.path_to_munger_dir,drop_unmatched=True)
         cc_row.rename(columns={'CandidateContest_Id':'Contest_Id'},inplace=True)
@@ -302,14 +306,16 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
     end = time.time()
     print('\tSeconds required to upload SelectionElectionContestVoteCountJoin: {}'.format(round(end - start)))
     print('Drop columns from cdf table')
-    q = 'ALTER TABLE {0}."VoteCount" DROP COLUMN "Election_Id", DROP COLUMN "Contest_Id" ,  DROP COLUMN "Selection_Id" '
+    q = 'ALTER TABLE {0}."VoteCount" DROP COLUMN "Election_Id",' \
+        ' DROP COLUMN "Contest_Id" ,  DROP COLUMN "Selection_Id" '
     sql_ids=[cdf_schema]
     strs = []
     dbr.raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
 
     return
 
-def raw_dframe_to_cdf(session,raw_rows,mu,cdf_schema,e,state_id = 0,cdf_table_filepath='CDF_schema_def_info/tables.txt'):
+
+def raw_dframe_to_cdf(session,raw_rows,mu,cdf_schema,e,state_id = 0):
     """ munger-agnostic raw-to-cdf script; ***
     dframe is dataframe, mu is munger """
 
@@ -320,8 +326,8 @@ def raw_dframe_to_cdf(session,raw_rows,mu,cdf_schema,e,state_id = 0,cdf_table_fi
     for t in ['ReportingUnitType','ReportingUnit']:
         cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema, index_col='Id')
     if state_id == 0:
-        state_type_id = cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt']=='state'].index.values[0]
-        state_id = cdf_d['ReportingUnit'][cdf_d['ReportingUnit']['ReportingUnitType_Id']==state_type_id].index.values[0]
+        state_type_id = cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt'] == 'state'].index.values[0]
+        state_id = cdf_d['ReportingUnit'][cdf_d['ReportingUnit']['ReportingUnitType_Id'] == state_type_id].index.values[0]
 
     # split raw_rows into a df for ballot measures and a df for contests
     bm_row,cc_row = contest_type_split(raw_rows,mu)
@@ -412,16 +418,11 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
                 pcc['Name'] = pcc['Name'] + ' Primary;' + cdf_d['Party'][cdf_d['Party']['Id'] == party_id].iloc[0]['Name']
                 cc_data = pd.concat([cc_data,pcc])
 
-
-
             cdf_d['CandidateContest'] = dframe_to_sql(cc_data,session,'cdf','CandidateContest')
 
-            # create corresponding CandidateContest records for primary contests (and insert in cdf db if they don't already exist)
-
-
+    # TODO update CRUJ when munger is updated?
     # Fill the ComposingReportingUnitJoin table
-    cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,'cdf',pickle_dir=s.path_to_state_dir+'pickles/')
-    # TODO put pickle directory info into README.md; or better yet, create nesting table in context schema
+    cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,'cdf')
     session.flush()
     return
 

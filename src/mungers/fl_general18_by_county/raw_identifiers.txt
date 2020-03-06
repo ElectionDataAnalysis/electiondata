@@ -1,4 +1,4 @@
-CDF_Element	Name	raw_identifier_value
+cdf_element	cdf_internal_name	raw_identifier_value
 Office	Florida;Governor	Governor Juris1num  Juris2num
 Office	Florida;Attorney General	Attorney General Juris1num  Juris2num
 Office	Florida;Chief Financial Officer	Chief Financial Officer Juris1num  Juris2num
