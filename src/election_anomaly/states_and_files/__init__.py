@@ -64,10 +64,13 @@ class Munger:
         f_elts=f[col_list].drop_duplicates()
 
         # munge the given element into a new column of f_elts
-        mr.add_munged_column(f_elts,self,element,element)
+        mr.add_munged_column(f_elts,self,element,'{}_raw'.format(element))
 
         # identify instances that are not matched in the munger's raw_identifier table
-        f_elts = f_elts.merge(self.raw_identifiers,left_on=element,right_on='cdf_element',how='left')
+        # limit to just the given element
+        ri = self.raw_identifiers[self.raw_identifiers.cdf_element==element]
+
+        f_elts = f_elts.merge(ri,left_on='{}_raw'.format(element),right_on='raw_identifier_value',how='left')
         unmatched = f_elts[f_elts.cdf_internal_name.isnull()]
         unmatched = unmatched.drop(['cdf_element','cdf_internal_name','raw_identifier_value'],axis=1)
         if unmatched.shape[0] > 0:
@@ -76,7 +79,7 @@ class Munger:
             print(
                 'WARNING: Some elements unmatched, saved to {}.\nIF THESE ELEMENTS ARE NECESSARY, USER MUST put them in both the munger raw_identifiers.txt and in the {}.txt file in the context directory'.format(
                     unmatched_path,element))
-            unmatched=unmatched.sort_value('ReportingUnit')
+            unmatched=unmatched.sort_values('{}_raw'.format(element))
         return unmatched
 
     def __init__(self,dir_path,cdf_schema_def_dir='CDF_schema_def_info/'):
