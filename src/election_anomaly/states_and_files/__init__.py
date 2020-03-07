@@ -2,6 +2,10 @@
 import os.path
 import db_routines as dbr
 import pandas as pd
+import numpy as np
+import re
+import munge_routines as mr
+
 class State:
     def create_db_and_schemas(self):
         # create db
@@ -45,7 +49,7 @@ class Munger:
         # TODO check that columns of f are all in raw_columns.txt
         cols=self.raw_columns.name
         assert set(f.columns).issubset(cols), \
-            'An datafile column in {} is missing from {} (listed in raw_columns.txt)'.format(f.columns,list(cols))
+            'ERROR: Munger cannot handle the datafile. A column in {} is missing from {} (listed in raw_columns.txt).'.format(f.columns,list(cols))
         # TODO
         return
 
@@ -60,26 +64,25 @@ class Munger:
         f_elts=f[col_list].drop_duplicates()
 
         # munge the given element into a new column of f_elts
-        add_munged_column(f_elts,self,element,element)
+        mr.add_munged_column(f_elts,self,element,element)
 
-        # identify instances that are not matched in the munger's ExternalIdentifier table
-
-
-
-        # save any unmatched elements (if drop_unmatched=False)
-        unmatched = row_df[row_df['raw_identifier_value'].isnull()].loc[:,table_name + '_external'].unique()
-        if unmatched.size > 0:
-            unmatched_path = unmatched_dir + 'unmatched_' + table_name + '.txt'
+        # identify instances that are not matched in the munger's raw_identifier table
+        f_elts = f_elts.merge(self.raw_identifiers,left_on=element,right_on='cdf_element',how='left')
+        unmatched = f_elts[f_elts.cdf_internal_name.isnull()]
+        unmatched = unmatched.drop(['cdf_element','cdf_internal_name','raw_identifier_value'],axis=1)
+        if unmatched.shape[0] > 0:
+            unmatched_path = '{}unmatched_{}.txt'.format(self.path_to_munger_dir,element)
             np.savetxt(unmatched_path,unmatched,fmt="%s")
             print(
-                'WARNING: Some elements unmatched, saved to {}.\nIF THESE ELEMENTS ARE NECESSARY, USER MUST put them in both the munger ExternalIdentifier.txt and in the {}.txt file in the context directory'.format(
-                    unmatched_path,table_name))
-        # TODO
-        # return
+                'WARNING: Some elements unmatched, saved to {}.\nIF THESE ELEMENTS ARE NECESSARY, USER MUST put them in both the munger raw_identifiers.txt and in the {}.txt file in the context directory'.format(
+                    unmatched_path,element))
+            unmatched=unmatched.sort_value('ReportingUnit')
+        return unmatched
 
-    def __init__(self,dir_path):
-        assert os.path.isdir(dir_path),'Not a directory: ' + dir_path
-        assert os.path.isfile(dir_path + 'cdf_tables.txt') and os.path.isfile(dir_path + 'atomic_reporting_unit_type.txt') and os.path.isfile(
+    def __init__(self,dir_path,cdf_schema_def_dir='CDF_schema_def_info/'):
+        assert os.path.isdir(dir_path),'Not a directory: {}'.format(dir_path)
+        # TODO loop through a list for easy adjustment
+        assert os.path.isfile('{}cdf_tables.txt'.format(dir_path)) and os.path.isfile(dir_path + 'atomic_reporting_unit_type.txt') and os.path.isfile(
             dir_path + 'count_columns.txt') , \
             'Directory {} must contain files atomic_reporting_unit_type.txt, cdf_tables.txt, count_columns.txt'.format(dir_path)
         self.name=dir_path.split('/')[-2]    # 'nc_general'
@@ -92,7 +95,7 @@ class Munger:
         self.raw_identifiers=pd.read_csv('{}raw_identifiers.txt'.format(dir_path),sep='\t') # note no natural index column
 
         # define dictionary to change any column names that match internal CDF names
-        with open('CDF_schema_def_info/tables.txt','r') as f:
+        with open('{}tables.txt'.format(cdf_schema_def_dir),'r') as f:
             table_list = eval(f.read())
         col_d = dict([[x[0],'{}_{}'.format(x[0],self.name)] for x in table_list])
         self.rename_column_dictionary=col_d
@@ -136,4 +139,8 @@ class Munger:
             self.atomic_reporting_unit_type = f.readline()
 
 if __name__ == '__main__':
-        mu = Munger('../../local')
+        mu = Munger('../../mungers/nc_primary/',cdf_schema_def_dir='../CDF_schema_def_info/')
+        f = pd.read_csv('../../local_data/NC/data/2020p_asof_20200305/nc_primary/results_pct_20200303.txt',sep='\t')
+        unmatched = mu.find_unmatched(f,'ReportingUnit')
+
+        print('Done (states_and_files)!')
