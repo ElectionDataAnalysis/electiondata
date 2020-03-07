@@ -50,36 +50,57 @@ class Munger:
         cols=self.raw_columns.name
         assert set(f.columns).issubset(cols), \
             'ERROR: Munger cannot handle the datafile. A column in {} is missing from {} (listed in raw_columns.txt).'.format(f.columns,list(cols))
+        for element in ['ReportingUnit','Party','CandidateContest','Election']:
+            # get list of columns of <f> needed to determine the raw_identifier for <element>
+            p = '\<([^\>]+)\>'
+            col_list = re.findall(p,self.cdf_tables.loc[element,'raw_identifier_formula'])
+
+            # create dataframe of unique instances of <element>
+            f_elts = f[col_list].drop_duplicates()
+
+            # munge the given element into a new column of f_elts
+            mr.add_munged_column(f_elts,self,element,'raw_identifier_value')
+
+            unmatched = mu.find_unmatched(f_elts,element)
+            while unmatched.shape[0] > 0:
+                # add blank column to be filled in
+                unmatched.loc[:,'cdf_internal_name'] = ''
+                unmatched_path = '{}unmatched_{}.txt'.format(self.path_to_munger_dir,element)
+                unmatched.to_csv(unmatched_path,sep='\t',index=None)
+                print('ACTION REQUIRED: fill the cdf_internal_name column in the file {}.'.format(unmatched_path,element))
+                input('Enter any key when work is complete.\n')
+                new_f_elts = pd.read_csv(unmatched_path,sep='\t')
+                self.add_to_raw_identifiers(new_f_elts)
+                unmatched = mu.find_unmatched(new_f_elts,element)
         # TODO
         return
 
-    def find_unmatched(self,f,element):
-        """find any instances of <element> referenced in <f> but not interpretable by <self>"""
+    def add_to_raw_identifiers(self,f):
+        """Adds rows in <f> to the raw_identifiers.txt file and to the attribute <self>.raw_identifiers"""
+        for col in mu.raw_identifiers.columns:
+            assert col in f.columns, 'Column {} is not found in the dataframe'.format(col)
+        f = f[mu.raw_identifiers.columns]   # restrict to columns needed, and in the right order
 
-        # get list of columns of <f> needed to determine the ExternalIdentifier for <element>
-        p='\<([^\>]+)\>'
-        col_list=re.findall(p,self.cdf_tables.loc[element,'raw_identifier_formula'])
+        # add rows to <self>.raw_identifiers
+        self.raw_identifiers = pd.concat([self.raw_identifiers,f]).drop_duplicates()
+        # update the external munger file
+        self.raw_identifiers.to_csv('{}raw_identifiers.txt'.format(self.path_to_munger_dir),sep='\t',index=False)
+        # TODO update the appropriate context file too!
+        return
 
-        # create dataframe of unique instances of <element>
-        f_elts=f[col_list].drop_duplicates()
-
-        # munge the given element into a new column of f_elts
-        mr.add_munged_column(f_elts,self,element,'{}_raw'.format(element))
+    def find_unmatched(self,f_elts,element):
+        """find any instances of <element> in <f_elts> but not interpretable by <self>"""
 
         # identify instances that are not matched in the munger's raw_identifier table
         # limit to just the given element
         ri = self.raw_identifiers[self.raw_identifiers.cdf_element==element]
 
-        f_elts = f_elts.merge(ri,left_on='{}_raw'.format(element),right_on='raw_identifier_value',how='left')
+        # TODO prevent index column from getting into f_elts at next line
+        f_elts = f_elts.merge(ri,on='raw_identifier_value',how='left',suffixes=['','_ri'])
         unmatched = f_elts[f_elts.cdf_internal_name.isnull()]
-        unmatched = unmatched.drop(['cdf_element','cdf_internal_name','raw_identifier_value'],axis=1)
-        if unmatched.shape[0] > 0:
-            unmatched_path = '{}unmatched_{}.txt'.format(self.path_to_munger_dir,element)
-            np.savetxt(unmatched_path,unmatched,fmt="%s")
-            print(
-                'WARNING: Some elements unmatched, saved to {}.\nIF THESE ELEMENTS ARE NECESSARY, USER MUST put them in both the munger raw_identifiers.txt and in the {}.txt file in the context directory'.format(
-                    unmatched_path,element))
-            unmatched=unmatched.sort_values('{}_raw'.format(element))
+        unmatched = unmatched.drop(['cdf_internal_name'],axis=1)
+        unmatched=unmatched.sort_values('raw_identifier_value')
+        # unmatched.rename(columns={'{}_raw'.format(element):'raw_identifier_value'},inplace=True)
         return unmatched
 
     def __init__(self,dir_path,cdf_schema_def_dir='CDF_schema_def_info/'):
@@ -144,6 +165,7 @@ class Munger:
 if __name__ == '__main__':
         mu = Munger('../../mungers/nc_primary/',cdf_schema_def_dir='../CDF_schema_def_info/')
         f = pd.read_csv('../../local_data/NC/data/2020p_asof_20200305/nc_primary/results_pct_20200303.txt',sep='\t')
-        unmatched = mu.find_unmatched(f,'ReportingUnit')
+        mu.check_new_datafile(f)
+        #unmatched = mu.find_unmatched(f,'ReportingUnit')
 
         print('Done (states_and_files)!')
