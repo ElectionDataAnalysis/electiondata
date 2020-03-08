@@ -52,7 +52,10 @@ if __name__ == '__main__':
         'Enter short name for your state/district/territory (only alphanumeric and underscore, no spaces, default is ' + default + ')\n'
     ) or default
     print('Creating instance of State for {}'.format(abbr))
-    s = sf.State(abbr,'../local_data/')
+    # get absolute path to local_data directory
+    current_dir=os.getcwd()
+    path_to_src_dir=current_dir.split('/election_anomaly')[0]
+    s = sf.State(abbr,'{}/local_data/'.format(path_to_src_dir))
     create_db = input('Make database and schemas for {} (y/n)?\n'.format(abbr))
     if create_db == 'y':
         s.create_db_and_schemas()
@@ -139,14 +142,10 @@ if __name__ == '__main__':
             # TODO change column names as necessary mu.rename_column_dictionary
 
             for c in raw_data_dframe.columns:
-                #if pytype_d[c] == int: # TODO
-                    #raw_data_dframe[c]=raw_data_dframe[c].fillna(0)
-                #if pytype_d[c] == str:
                 raw_data_dframe[c]=raw_data_dframe[c].fillna('')  # TODO can we do all of the dataframe at once, not col by col?
-                #raw_data_dframe[c]=raw_data_dframe[c].astype(pytype_d[c])
 
             print('Loading data into cdf schema from file: {}'.format(datafile))
-            mr.raw_dframe_to_cdf(session,raw_data_dframe, mu,'cdf',e)
+            mr.raw_dframe_to_cdf(session,raw_data_dframe, mu,e)
 
     try:    # if mu is not already defined
         mu
