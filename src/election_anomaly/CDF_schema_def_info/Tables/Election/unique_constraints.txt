@@ -1,0 +1,5 @@
+unique_constraint
+Name
+StartDate
+EndDate
+ElectionType_Id
