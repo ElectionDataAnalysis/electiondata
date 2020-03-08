@@ -6,6 +6,7 @@ import numpy as np
 import re
 import munge_routines as mr
 
+
 class State:
     def create_db_and_schemas(self):
         # create db
@@ -23,6 +24,24 @@ class State:
         dbr.query(q,[],[],con,cur)
         cur.close()
         con.close()
+        return
+
+    def add_to_context_dir(self,element,f):
+        """Add the data in the dataframe <f> to the file corresponding to <element> in the <state>'s folder"""
+        # TODO
+        try:
+            elts = pd.read_csv('{}{}.txt'.format(self.path_to_state_dir,element))
+        except:
+            print('Could not read data from file {}{}.txt'.format(self.path_to_state_dir,element))
+            return
+        for col in elts.columns:
+            if not col in f.columns:
+                print('WARNING: Column {} not found, will be added with no data.'.format(col))
+                print('Be sure all necessary data is added before processing the file')
+                f.loc[:,col] = ''
+        # pull and order necessary columns from <f>
+        f_new =  pd.concat([f[[elts.columns]],elts])
+        f_new.to_csv('{}{}.txt'.format(self.path_to_state_dir,element),sep='\t',index=False)
         return
 
     def __init__(self,short_name,path_to_parent_dir):        # reporting_units,elections,parties,offices):
@@ -43,14 +62,18 @@ class State:
         # TODO format string above '...'.format()
 class Munger:
 
-    def check_new_datafile(self,f):
+    def check_new_datafile(self,f,state):
         """f is a results datafile; this routine should add what's necessary to the munger to treat the datafile,
         keeping backwards compatibility and exiting gracefully if datafile needs different munger"""
-        # TODO check that columns of f are all in raw_columns.txt
+        # TODO have user confirm that all ReportingUnits in f are of the type <self>.atomic_reporting_unit_type
+        check_ru_type=input('WARNING: All ReportingUnits in this file will be munged as type \'()\'. Proceed anyway (y/n)?\n')
+        if check_ru_type != 'y':
+            print('Datafile will not be processed.')
+            return
         cols=self.raw_columns.name
         assert set(f.columns).issubset(cols), \
             'ERROR: Munger cannot handle the datafile. A column in {} is missing from {} (listed in raw_columns.txt).'.format(f.columns,list(cols))
-        for element in ['ReportingUnit','Party','CandidateContest','Election']:
+        for element in ['ReportingUnit','Party','Office','CandidateContest','Election']:
             # get list of columns of <f> needed to determine the raw_identifier for <element>
             p = '\<([^\>]+)\>'
             col_list = re.findall(p,self.cdf_tables.loc[element,'raw_identifier_formula'])
@@ -61,16 +84,40 @@ class Munger:
             # munge the given element into a new column of f_elts
             mr.add_munged_column(f_elts,self,element,'raw_identifier_value')
 
+            # get any unmatched lines of f_elts
             unmatched = mu.find_unmatched(f_elts,element)
+
+            # if some elements are unmatched:
             while unmatched.shape[0] > 0:
                 # add blank column to be filled in
                 unmatched.loc[:,'cdf_internal_name'] = ''
                 unmatched_path = '{}unmatched_{}.txt'.format(self.path_to_munger_dir,element)
+
+                # write unmatched lines to file and invite user to edit
                 unmatched.to_csv(unmatched_path,sep='\t',index=None)
                 print('ACTION REQUIRED: fill the cdf_internal_name column in the file {}.'.format(unmatched_path,element))
                 input('Enter any key when work is complete.\n')
+
+                # read user-edited file
                 new_f_elts = pd.read_csv(unmatched_path,sep='\t')
+
+                # restrict to matched lines
+                new_f_elts=new_f_elts[new_f_elts['cdf_internal_name'].notnull()]
+
+                # add cdf_element column
+                new_f_elts.loc[:,'cdf_element'] = element
+
+                print(new_f_elts.shape) # TODO diagnostic
+
+                # add to raw_identifiers
                 self.add_to_raw_identifiers(new_f_elts)
+
+                # add to state's context directory
+                # TODO what form should f have?
+                f.rename(columns={'cdf_internal_name':'Name'},inplace=True)
+                state.add_to_context_dir(element,f)
+
+                # see if anything remains to be matched
                 unmatched = mu.find_unmatched(new_f_elts,element)
         # TODO
         return
@@ -79,14 +126,12 @@ class Munger:
         """Adds rows in <f> to the raw_identifiers.txt file and to the attribute <self>.raw_identifiers"""
         for col in mu.raw_identifiers.columns:
             assert col in f.columns, 'Column {} is not found in the dataframe'.format(col)
-        f = f[mu.raw_identifiers.columns]   # restrict to columns needed, and in the right order
-
+        # restrict to columns needed, and in the right order
+        f = f[mu.raw_identifiers.columns]
         # add rows to <self>.raw_identifiers
         self.raw_identifiers = pd.concat([self.raw_identifiers,f]).drop_duplicates()
         # update the external munger file
         self.raw_identifiers.to_csv('{}raw_identifiers.txt'.format(self.path_to_munger_dir),sep='\t',index=False)
-        # TODO update the appropriate context file too!
-        return
 
     def find_unmatched(self,f_elts,element):
         """find any instances of <element> in <f_elts> but not interpretable by <self>"""
@@ -163,9 +208,10 @@ class Munger:
             self.atomic_reporting_unit_type = f.readline()
 
 if __name__ == '__main__':
+        s = State('NC','../../local_data/')
         mu = Munger('../../mungers/nc_primary/',cdf_schema_def_dir='../CDF_schema_def_info/')
         f = pd.read_csv('../../local_data/NC/data/2020p_asof_20200305/nc_primary/results_pct_20200303.txt',sep='\t')
-        mu.check_new_datafile(f)
+        mu.check_new_datafile(f,s)
         #unmatched = mu.find_unmatched(f,'ReportingUnit')
 
         print('Done (states_and_files)!')

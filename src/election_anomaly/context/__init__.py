@@ -12,7 +12,7 @@ import db_routines as dbr
 import pandas as pd
 
 
-def fill_composing_reporting_unit_join(session,schema,pickle_dir='../local_data/pickles/'):
+def fill_composing_reporting_unit_join(session,schema):
     print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
     ru_dframe = pd.read_sql_table('ReportingUnit', session.bind, schema,index_col=None)
     ru_dframe['split'] = ru_dframe['Name'].apply(lambda x: x.split(';'))
@@ -78,7 +78,6 @@ def dict_insert(dict_file_path,input_d):
     with open(dict_file_path,'w') as f:
             f.write(str(file_d))
     return(file_d)
-
 
 def insert_reporting_unit(dict,reporting_unit_list,id_type):
     '''Insert the reporting units in reporting_unit_list (list of unit, type pairs) into dict, with correct type (e.g., precinct) and recording the name of the reporting unit also as an external identifier, unless the reporting unit is already in the dict, in which case do the right thing. '''
