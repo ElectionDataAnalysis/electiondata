@@ -16,20 +16,20 @@ import os
 from db_routines import dframe_to_sql
 
 
-def load_from_file_into_cdf(session,s,t,table_def,enum_dframe,cdf_d):
+def load_context_dframe_into_cdf(session,source_df,element,table_def,enum_dframe,cdf_d):
     """<enum_dframe> is a dictionary of dataframes
-    <table_def> carries info about the table <t>"""
-    # create DataFrames of relevant context information
-    source_df = pd.read_csv('{}context/{}.txt'.format(s.path_to_state_dir,t),sep='\t')
+    <table_def> carries info about the table <t>.
+    source_df is in the same format as the corresponding file in context/<element>.txt"""
+    # TODO check that source_df has the right format
 
     for e in table_def[1]['enumerations']:  # e.g., e = "ReportingUnitType"
         # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
         if e in source_df.columns:  # some enumerations (e.g., CountItemStatus for t = ReportingUnit) are not available from context.
             source_df = enum_col_to_id_othertext(source_df,e,enum_dframe[e])
     #  commit info in context_cdframe to corresponding cdf table to db
-    cdf_d[t] = dframe_to_sql(source_df,session,'cdf',t)
+    cdf_d[element] = dframe_to_sql(source_df,session,'cdf',element)
 
-    if t == 'Office':
+    if element == 'Office':
         # Check that all ElectionDistrictTypes are recognized
         for edt in source_df['ElectionDistrictType'].unique():
             assert edt in list(enum_dframe['ReportingUnitType']['Txt'])
@@ -62,7 +62,7 @@ def load_from_file_into_cdf(session,s,t,table_def,enum_dframe,cdf_d):
             cc_data = pd.concat([cc_data,pcc])
 
         cdf_d['CandidateContest'] = dframe_to_sql(cc_data,session,'cdf','CandidateContest')
-
+    # TODO necessary to return cdf_d? Don't all cdf_d[t]'s get pulled afresh anyway?
     return cdf_d
 
 
@@ -436,7 +436,9 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
     for t in ['ReportingUnit','Party','Office','Election']:
         table_def = next(x for x in table_def_list if x[0] == t)
 
-        cdf_d = load_from_file_into_cdf(session,s,t,table_def,enum_dframe,cdf_d)
+        # create DataFrames of relevant context information
+        source_df = pd.read_csv('{}context/{}.txt'.format(s.path_to_state_dir,t),sep='\t')
+        cdf_d = load_context_dframe_into_cdf(session,source_df,t,table_def,enum_dframe,cdf_d)
 
     # TODO update CRUJ when munger is updated?
     # Fill the ComposingReportingUnitJoin table
