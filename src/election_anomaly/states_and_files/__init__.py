@@ -41,6 +41,9 @@ class State:
         # pull and order necessary columns from <f>
         f_new =  pd.concat([f[[elts.columns]],elts])
         f_new.to_csv('{}{}.txt'.format(self.path_to_state_dir,element),sep='\t',index=False)
+
+        # TODO insert into cdf.<element>, using mr.load_context_dframe_into_cdf
+
         return
 
     def __init__(self,short_name,path_to_parent_dir):        # reporting_units,elections,parties,offices):
@@ -121,9 +124,12 @@ class Munger:
                     f.rename(columns={'cdf_internal_name':'Name'},inplace=True)
                     state.add_to_context_dir(element,new_f_elts)
 
-                if element == 'ReportingUnit':
-                    # insert as necessary into ComposingReportingUnitJoin table
+                # add to the cdf.<element> table
+                # TODO create source_df in right format
+                mr.load_context_dframe_into_cdf(session,source_df,element,table_def,enum_dframe,cdf_d)
 
+                if element == 'ReportingUnit':
+                   # insert as necessary into ComposingReportingUnitJoin table
                     new_f_elts['Name']=new_f_elts['cdf_internal_name']
                     dbr.cruj_insert(state,new_f_elts)
 
