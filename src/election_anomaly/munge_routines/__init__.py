@@ -78,8 +78,7 @@ def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_d
     if unmatched.size > 0:
         unmatched_path = '{}unmatched_{}.txt'.format(unmatched_dir,element)
         np.savetxt(unmatched_path,unmatched,fmt="%s")
-        print('WARNING: Some instances of {1} unmatched, saved to {0}. Examples:')
-        print(unmatched.iloc[:3,:])
+        print('WARNING: Some instances of {1} unmatched, saved to {0}.'.format(unmatched_path,element))
         print('IF THESE ELEMENTS ARE NECESSARY, USER MUST put them in both the munger raw_identifiers.txt and in the {1}.txt file in the context directory'.format(unmatched_path,element))
 
     row_df = row_df.drop(['raw_identifier_value','cdf_element',element + '_external'],axis=1)
