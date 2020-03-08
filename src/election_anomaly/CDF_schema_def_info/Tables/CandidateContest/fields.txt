@@ -1,0 +1,5 @@
+fieldname	datatype
+Name	String
+VotesAllowed	Integer
+NumberElected	Integer
+NumberRunoff	Integer

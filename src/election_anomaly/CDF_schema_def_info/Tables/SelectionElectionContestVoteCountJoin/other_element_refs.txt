@@ -1,0 +1,3 @@
+fieldname	refers_to
+Election_Id	Election
+VoteCount_Id	VoteCount

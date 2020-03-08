@@ -1,0 +1,3 @@
+not_null_fields
+BallotMeasureContest_Id
+BallotMeasureSelection_Id
