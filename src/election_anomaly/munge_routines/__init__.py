@@ -13,7 +13,6 @@ import analyze as an
 import re
 import os
 
-from context import fill_composing_reporting_unit_join
 from db_routines import dframe_to_sql
 
 
@@ -102,10 +101,12 @@ def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_d
     row_df.rename(columns={'Id_' + element:element + '_Id'},inplace=True)
     return row_df
 
+
 def add_non_id_cols_from_id(row_df,cdf_table,table_name):
     row_df=row_df.merge(cdf_table,left_on=table_name+'_Id',right_on='Id',how='left',suffixes=['','_'+table_name])
     row_df=row_df.drop('Id_'+table_name,axis=1)
     return row_df
+
 
 def enum_col_to_id_othertext(df,type_col,enum_df):
     """Returns a copy of dataframe <df>, replacing a <type> column (e.g., 'CountItemType') with
@@ -133,6 +134,7 @@ def enum_col_to_id_othertext(df,type_col,enum_df):
             # avoid restore name renaming the column in the main dataframe
             df.rename(columns={c*3:c},inplace=True)
     return df
+
 
 def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,election_type,state_id):
     """
@@ -427,9 +429,10 @@ def context_schema_to_cdf(session,s,enum_table_list,cdf_def_dirpath = 'CDF_schem
 
     # TODO update CRUJ when munger is updated?
     # Fill the ComposingReportingUnitJoin table
-    cdf_d['ComposingReportingUnitJoin'] = fill_composing_reporting_unit_join(session,'cdf')
+    cdf_d['ComposingReportingUnitJoin'] = dbr.fill_composing_reporting_unit_join(session,'cdf')
     session.flush()
     return
+
 
 if __name__ == '__main__':
 

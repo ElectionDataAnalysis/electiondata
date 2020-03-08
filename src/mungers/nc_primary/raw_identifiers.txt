@@ -4591,4 +4591,3 @@ ReportingUnit	North Carolina;Union County;OS HBR	UNION;OS HBR
 ReportingUnit	North Carolina;Union County;OS LOBB	UNION;OS LOBB
 ReportingUnit	North Carolina;Union County;OS MSP	UNION;OS MSP
 ReportingUnit	North Carolina;Union County;OS STAL	UNION;OS STAL
-	North Carolina;Alamance County;ABSENTEE	ALAMANCE;ABSENTEE

@@ -6,9 +6,11 @@ import sqlalchemy
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
 import sqlalchemy as db
+from sqlalchemy.orm import sessionmaker
 from sqlalchemy.engine import reflection
 from configparser import ConfigParser
 import pandas as pd
+
 
 def create_database(con,cur,db_name):
     sure = input('If the db exists, it will be deleted and data will be lost. Are you absolutely sure (y/n)?\n')
@@ -24,12 +26,53 @@ def create_database(con,cur,db_name):
     else:
         return None,None
 
+
 def create_raw_schema(con,cur,schema):
     q = "CREATE SCHEMA {0}"
     sql_ids = [schema]
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     out1 = query(q,sql_ids,[],con,cur)
     return out1
+
+def fill_composing_reporting_unit_join(session):
+	print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
+	ru_dframe = pd.read_sql_table('ReportingUnit',session.bind,'cdf',index_col=None)
+	cruj_dframe = append_to_composing_reporting_unit_join(session,ru_dframe)
+	return cruj_dframe
+
+def append_to_composing_reporting_unit_join(session,ru_dframe):
+	ru_dframe['split'] = ru_dframe['Name'].apply(lambda x:x.split(';'))
+	ru_dframe['length'] = ru_dframe['split'].apply(len)
+	ru_static = ru_dframe.copy()
+	cruj_dframe_list = []
+	for i in range(ru_dframe['length'].max() - 1):
+		# check that all components of all Reporting Units are themselves ReportingUnits
+		# get name of ith ancestor
+		ru_dframe = ru_static.copy()
+		ru_dframe['ancestor_' + str(i)] = ru_static['split'].apply(lambda x:';'.join(x[:-i - 1]))
+		# get ru Id of ith ancestor
+		drop_list = ru_dframe.columns.to_list()
+		ru_dframe = ru_dframe.merge(ru_dframe,left_on='Name',right_on='ancestor_' + str(i),suffixes=['_' + str(i),''])
+		drop_list.remove('Id')
+		cruj_dframe_list.append(ru_dframe[['Id','Id' + '_' + str(i)]].rename(
+			columns={'Id':'ChildReportingUnit_Id','Id' + '_' + str(i):'ParentReportingUnit_Id'}))
+
+	cruj_dframe = pd.concat(cruj_dframe_list)
+	cruj_dframe = dframe_to_sql(cruj_dframe,session,'cdf','ComposingReportingUnitJoin')
+	session.flush()
+	return cruj_dframe
+
+
+def cruj_insert(f):
+    """<f> is a dataframe with info in the form of the context/ReportingUnits.txt file.
+    Calculate the nesting relationships and insert into cdf.ComposingReportingUnitJoin"""
+    # initialize main session for connecting to db
+    eng, meta_generic = sql_alchemy_connect(db_name=s.short_name)
+    Session = sessionmaker(bind=eng)
+    session = Session()
+    append_to_composing_reporting_unit_join(session,f)
+    eng.dispose()
+    return
 
 
 def establish_connection(paramfile = '../local_data/database.ini',db_name='postgres'):
