@@ -1,0 +1,3 @@
+fieldname	refers_to
+BallotMeasureContest_Id	BallotMeasureContest
+BallotMeasureSelection_Id	BallotMeasureSelection

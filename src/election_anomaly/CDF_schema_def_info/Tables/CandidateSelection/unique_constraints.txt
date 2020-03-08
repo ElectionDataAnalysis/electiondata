@@ -1,2 +1,2 @@
 unique_constraint
-Name
+Candidate_Id

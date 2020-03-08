@@ -1,0 +1,4 @@
+fieldname	refers_to
+Office_Id	Office
+PrimaryParty_Id	Party
+ElectionDistrict_Id	ReportingUnit
