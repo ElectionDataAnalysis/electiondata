@@ -117,8 +117,8 @@
                       'other_element_refs':[
                       {'fieldname':'CandidateContest_Id', 'refers_to':'CandidateContest'},
                       {'fieldname':'CandidateSelection_Id', 'refers_to':'CandidateSelection'}],
-                      'unique_constraints':[['CandidateContest_Id','CandidateSelection_Id','Election_Id']],
-		     'not_null_fields':['CandidateContest_Id','CandidateSelection_Id','Election_Id'],
+                      'unique_constraints':[['CandidateContest_Id','CandidateSelection_Id']],
+		     'not_null_fields':['CandidateContest_Id','CandidateSelection_Id'],
 		            'short_name':'ccsj'
             }
     ]

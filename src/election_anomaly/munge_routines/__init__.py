@@ -330,7 +330,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
         cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,cdf_schema,'ElectionContestJoin')
 
         #  load CandidateContestSelectionJoin
-        ccsj_df = cc_row[['Contest_Id','Selection_Id','Election_Id']].drop_duplicates()
+        ccsj_df = cc_row[['Contest_Id','Selection_Id']].drop_duplicates()
         ccsj_df.rename(columns={'Contest_Id':'CandidateContest_Id','Selection_Id':'CandidateSelection_Id'},inplace=True)
         cdf_d['CandidateContestSelectionJoin'] = dbr.dframe_to_sql(ccsj_df,session,cdf_schema,'CandidateContestSelectionJoin')
 
