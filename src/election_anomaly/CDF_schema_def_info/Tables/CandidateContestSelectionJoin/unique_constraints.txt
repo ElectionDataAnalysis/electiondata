@@ -1,2 +1,2 @@
 unique_constraint
-BallotMeasureContest_Id,BallotMeasureSelection_Id
+CandidateContest_Id,CandidateSelection_Id
