@@ -10,6 +10,8 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.engine import reflection
 from configparser import ConfigParser
 import pandas as pd
+import os
+
 
 
 def create_database(con,cur,db_name):
@@ -63,7 +65,7 @@ def append_to_composing_reporting_unit_join(session,ru_dframe):
 	return cruj_dframe
 
 
-def cruj_insert(f):
+def cruj_insert(s,f):
     """<f> is a dataframe with info in the form of the context/ReportingUnits.txt file.
     Calculate the nesting relationships and insert into cdf.ComposingReportingUnitJoin"""
     # initialize main session for connecting to db
@@ -73,6 +75,13 @@ def cruj_insert(f):
     append_to_composing_reporting_unit_join(session,f)
     eng.dispose()
     return
+
+
+def get_path_to_db_paramfile():
+    current_dir=os.getcwd()
+    path_to_src = current_dir.split('/election_anomaly/')[0]
+    fpath='{}/local_data/database.ini'.format(path_to_src)
+    return fpath
 
 
 def establish_connection(paramfile = '../local_data/database.ini',db_name='postgres'):
@@ -107,7 +116,10 @@ def config(filename='../local_data/database.ini', section='postgresql'):
     # create a parser
     parser = ConfigParser()
     # read config file
-    parser.read(filename)
+    try:
+        parser.read(filename)
+    except: # if <filename> doesn't exist, look in a canonical place
+        parser.read(get_path_to_db_paramfile())
 
     # get section, default to postgresql
     db = {}

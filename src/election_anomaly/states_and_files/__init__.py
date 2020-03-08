@@ -31,7 +31,7 @@ class State:
         try:
             elts = pd.read_csv('{}{}.txt'.format(self.path_to_state_dir,element))
         except:
-            print('Could not read data from file {}{}.txt'.format(self.path_to_state_dir,element))
+            print('Could not read data from file {}context/{}.txt'.format(self.path_to_state_dir,element))
             return
         for col in elts.columns:
             if not col in f.columns:
@@ -73,7 +73,9 @@ class Munger:
         cols=self.raw_columns.name
         assert set(f.columns).issubset(cols), \
             'ERROR: Munger cannot handle the datafile. A column in {} is missing from {} (listed in raw_columns.txt).'.format(f.columns,list(cols))
-        for element in ['ReportingUnit','Party','Office','CandidateContest','Election']:
+        # note: we don't look for new offices. Must put desired offices into Office.txt in any case
+        # TODO where will user be notified of untreated offices?
+        for element in ['ReportingUnit','Party','CandidateContest','Election']:
             print('Examining instances of {}'.format(element))
             # get list of columns of <f> needed to determine the raw_identifier for <element>
             p = '\<([^\>]+)\>'
@@ -121,8 +123,9 @@ class Munger:
 
                 if element == 'ReportingUnit':
                     # insert as necessary into ComposingReportingUnitJoin table
-                    # TODO what form should new_f_elts have?
-                    dbr.cruj_insert(new_f_elts)
+
+                    new_f_elts['Name']=new_f_elts['cdf_internal_name']
+                    dbr.cruj_insert(state,new_f_elts)
 
                 # see if anything remains to be matched
                 unmatched = mu.find_unmatched(new_f_elts,element)
