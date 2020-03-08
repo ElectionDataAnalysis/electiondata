@@ -218,9 +218,12 @@ class Munger:
             self.atomic_reporting_unit_type = f.readline()
 
 if __name__ == '__main__':
-        s = State('NC','../../local_data/')
-        mu = Munger('../../mungers/nc_primary/',cdf_schema_def_dir='../CDF_schema_def_info/')
-        f = pd.read_csv('../../local_data/NC/data/2020p_asof_20200305/nc_primary/results_pct_20200303.txt',sep='\t')
-        mu.check_new_datafile(f,s)
+    # get absolute path to local_data directory
+    current_dir=os.getcwd()
+    path_to_src_dir=current_dir.split('/election_anomaly/')[0]
+    s = State('NC','{}/local_data/'.format(path_to_src_dir))
+    mu = Munger('../../mungers/nc_primary/',cdf_schema_def_dir='../CDF_schema_def_info/')
+    f = pd.read_csv('../../local_data/NC/data/2020p_asof_20200305/nc_primary/results_pct_20200303.txt',sep='\t')
+    mu.check_new_datafile(f,s)
 
-        print('Done (states_and_files)!')
+    print('Done (states_and_files)!')

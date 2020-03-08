@@ -190,8 +190,7 @@ class Election(object):
     def __init__(self, session,state,short_name):
         assert isinstance(state,sf.State)
         self.short_name=short_name
-        context_el = pd.read_sql_table('Election',session.bind,schema='context',index_col='index',parse_dates=['StartDate','EndDate'])
-        # TODO add new record to context.Election for this election
+        context_el = pd.read_csv('{}context/Election.txt'.format(state.path_to_state_dir),sep='\t')
         el = context_el[context_el['short_name'] == short_name].iloc[0]
         self.name=el['Name']
         self.state=state
@@ -219,8 +218,6 @@ class Election(object):
         self.Election_Id=int(eldf[eldf['Name']==self.name].iloc[0]['Id'])
         self.ElectionType_Id=eldf.iloc[0]['ElectionType_Id']
         self.OtherElectionType=eldf.iloc[0]['OtherElectionType']
-
-        self.pickle_dir=state.path_to_state_dir + 'pickles/' + short_name
 
 class ContestRollup:
     """Holds roll-up of one or more contests (from same election)"""

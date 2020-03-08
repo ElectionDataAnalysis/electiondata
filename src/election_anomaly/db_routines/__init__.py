@@ -13,7 +13,6 @@ import pandas as pd
 import os
 
 
-
 def create_database(con,cur,db_name):
     sure = input('If the db exists, it will be deleted and data will be lost. Are you absolutely sure (y/n)?\n')
     if sure == 'y':
@@ -36,33 +35,43 @@ def create_raw_schema(con,cur,schema):
     out1 = query(q,sql_ids,[],con,cur)
     return out1
 
+
 def fill_composing_reporting_unit_join(session):
-	print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
-	ru_dframe = pd.read_sql_table('ReportingUnit',session.bind,'cdf',index_col=None)
-	cruj_dframe = append_to_composing_reporting_unit_join(session,ru_dframe)
-	return cruj_dframe
+    print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
+    ru_dframe = pd.read_sql_table('ReportingUnit',session.bind,'cdf',index_col=None)
+    cruj_dframe = append_to_composing_reporting_unit_join(session,ru_dframe)
+    return cruj_dframe
 
-def append_to_composing_reporting_unit_join(session,ru_dframe):
-	ru_dframe['split'] = ru_dframe['Name'].apply(lambda x:x.split(';'))
-	ru_dframe['length'] = ru_dframe['split'].apply(len)
-	ru_static = ru_dframe.copy()
-	cruj_dframe_list = []
-	for i in range(ru_dframe['length'].max() - 1):
-		# check that all components of all Reporting Units are themselves ReportingUnits
-		# get name of ith ancestor
-		ru_dframe = ru_static.copy()
-		ru_dframe['ancestor_' + str(i)] = ru_static['split'].apply(lambda x:';'.join(x[:-i - 1]))
-		# get ru Id of ith ancestor
-		drop_list = ru_dframe.columns.to_list()
-		ru_dframe = ru_dframe.merge(ru_dframe,left_on='Name',right_on='ancestor_' + str(i),suffixes=['_' + str(i),''])
-		drop_list.remove('Id')
-		cruj_dframe_list.append(ru_dframe[['Id','Id' + '_' + str(i)]].rename(
-			columns={'Id':'ChildReportingUnit_Id','Id' + '_' + str(i):'ParentReportingUnit_Id'}))
 
-	cruj_dframe = pd.concat(cruj_dframe_list)
-	cruj_dframe = dframe_to_sql(cruj_dframe,session,'cdf','ComposingReportingUnitJoin')
-	session.flush()
-	return cruj_dframe
+def append_to_composing_reporting_unit_join(session,ru):
+    """<ru> is a dframe of reporting units, with cdf internal name in column 'Name'.
+    cdf internal name indicates nesting via semicolons"""
+    ru['split'] = ru['Name'].apply(lambda x:x.split(';'))
+    ru['length'] = ru['split'].apply(len)
+    
+    # pull cdf.ReportingUnit to get ids matched to names
+    ru_cdf = pd.read_sql_table('ReportingUnit',session.bind,'cdf',index_col=None)
+    ru_static = ru.copy()
+    # get Id of the child reporting unit, if it's not already there
+    if 'Id' not in ru.columns:
+        ru_static = ru_static.merge(ru_cdf[['Name','Id']],on='Name',how='left')
+    cruj_dframe_list = []
+    for i in range(ru['length'].max() - 1):
+        # check that all components of all Reporting Units are themselves ReportingUnits
+        ru_for_cruj = ru_static.copy()  # start fresh, without detritus from previous i
+
+        # get name of ith ancestor
+        ru_for_cruj['ancestor_{}'.format(i)] = ru_static['split'].apply(lambda x:';'.join(x[:-i - 1]))
+        # get Id of ith ancestor
+        ru_for_cruj = ru_for_cruj.merge(ru_cdf,left_on='ancestor_{}'.format(i),right_on='Name',
+                                        suffixes=['','_' + str(i)])
+        cruj_dframe_list.append(ru_for_cruj[['Id','Id_{}'.format(i)]].rename(
+            columns={'Id':'ChildReportingUnit_Id','Id_{}'.format(i):'ParentReportingUnit_Id'}))
+
+    cruj_dframe = pd.concat(cruj_dframe_list)
+    cruj_dframe = dframe_to_sql(cruj_dframe,session,'cdf','ComposingReportingUnitJoin')
+    session.flush()
+    return cruj_dframe
 
 
 def cruj_insert(s,f):
@@ -78,7 +87,7 @@ def cruj_insert(s,f):
 
 
 def get_path_to_db_paramfile():
-    current_dir=os.getcwd()
+    current_dir = os.getcwd()
     path_to_src = current_dir.split('/election_anomaly/')[0]
     fpath='{}/local_data/database.ini'.format(path_to_src)
     return fpath
@@ -89,6 +98,7 @@ def establish_connection(paramfile = '../local_data/database.ini',db_name='postg
     if db_name != 'postgres': params['dbname']=db_name
     con = psycopg2.connect(**params)
     return con
+
 
 def sql_alchemy_connect(schema=None,paramfile = '../local_data/database.ini',db_name='postgres'):
     """Returns an engine and a metadata object"""
@@ -109,6 +119,7 @@ def sql_alchemy_connect(schema=None,paramfile = '../local_data/database.ini',db_
 
     return engine, meta
 
+
 def config(filename='../local_data/database.ini', section='postgresql'):
     """
     Creates the parameter dictionary needed to log into our db
@@ -116,10 +127,10 @@ def config(filename='../local_data/database.ini', section='postgresql'):
     # create a parser
     parser = ConfigParser()
     # read config file
-    try:
-        parser.read(filename)
-    except: # if <filename> doesn't exist, look in a canonical place
-        parser.read(get_path_to_db_paramfile())
+
+    if not os.path.isfile(filename): # if <filename> doesn't exist, look in a canonical place
+        filename=get_path_to_db_paramfile()
+    parser.read(filename)
 
     # get section, default to postgresql
     db = {}
@@ -131,6 +142,7 @@ def config(filename='../local_data/database.ini', section='postgresql'):
         raise Exception('Section {0} not found in the {1} file'.format(section, filename))
     return db
 
+
 def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to create db and schemas
     format_args = [sql.Identifier(a) for a in sql_ids]
     cur.execute(sql.SQL(q).format(*format_args),strs)
@@ -139,6 +151,7 @@ def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to crea
         return cur.fetchall()
     else:
         return None
+
 
 def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
     connection = session.bind.connect()
@@ -154,6 +167,7 @@ def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
     cur.close()
     con.close()
     return return_item
+
 
 def create_schema(session,name,delete_existing=False):
     eng = session.bind
@@ -184,6 +198,7 @@ def create_schema(session,name,delete_existing=False):
         new_schema_created = True
     session.flush()
     return new_schema_created
+
 
 def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_votecount=False):
     """
@@ -236,6 +251,7 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     if flush:
         session.flush()
     return up_to_date_dframe
+
 
 if __name__ == '__main__':
 
