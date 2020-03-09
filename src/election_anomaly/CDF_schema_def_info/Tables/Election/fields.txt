@@ -1,3 +1,4 @@
 fieldname	datatype
 Name	String
-Abbreviation	String
+EndDate	Date
+StartDate	Date
