@@ -77,6 +77,7 @@ def append_to_composing_reporting_unit_join(session,ru):
 def cruj_insert(s,f):
     """<f> is a dataframe with info in the form of the context/ReportingUnits.txt file.
     Calculate the nesting relationships and insert into cdf.ComposingReportingUnitJoin"""
+    # TODO handle different CountItemStatus
     # initialize main session for connecting to db
     eng, meta_generic = sql_alchemy_connect(db_name=s.short_name)
     Session = sessionmaker(bind=eng)

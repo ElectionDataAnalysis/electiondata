@@ -1,4 +1,216 @@
 Name	ReportingUnitType
+North Carolina;Alamance County;ABSENTEE	precinct
+North Carolina;Alamance County;ONE STOP 1	precinct
+North Carolina;Alamance County;ONE STOP 2	precinct
+North Carolina;Alamance County;ONE STOP 3	precinct
+North Carolina;Alamance County;PROVISIONAL	precinct
+North Carolina;Alleghany County;ABSENTEE	precinct
+North Carolina;Anson County;WADES	precinct
+North Carolina;Ashe County;ABSENTEE	precinct
+North Carolina;Ashe County;CURBSIDE	precinct
+North Carolina;Avery County;ABSENTEE	precinct
+North Carolina;Bertie County;ONE STOP LOB	precinct
+North Carolina;Bertie County;ONE STOP POW	precinct
+North Carolina;Bladen County;BLADEN BOE	precinct
+North Carolina;Bladen County;BLDBORO SPAULD MON	precinct
+North Carolina;Bladen County;E ARC TWN HALL	precinct
+North Carolina;Bladen County;TRANSFER	precinct
+North Carolina;Brunswick County;04B2	precinct
+North Carolina;Buncombe County;ONESTOP-AVML	precinct
+North Carolina;Buncombe County;ONESTOP-BMBL	precinct
+North Carolina;Buncombe County;ONESTOP-COXE	precinct
+North Carolina;Buncombe County;ONESTOP-ECBL	precinct
+North Carolina;Buncombe County;ONESTOP-FVBL	precinct
+North Carolina;Buncombe County;ONESTOP-LCBL	precinct
+North Carolina;Buncombe County;ONESTOP-NABL	precinct
+North Carolina;Buncombe County;ONESTOP-SBBL	precinct
+North Carolina;Buncombe County;ONESTOP-WABL	precinct
+North Carolina;Buncombe County;ONESTOP-WVTH	precinct
+North Carolina;Cabarrus County;01-11	precinct
+North Carolina;Cabarrus County;04-11	precinct
+North Carolina;Cabarrus County;04-12	precinct
+North Carolina;Cabarrus County;04-13	precinct
+North Carolina;Cabarrus County;12-13	precinct
+North Carolina;Caldwell County;ABSENTEE	precinct
+North Carolina;Caldwell County;ONE STOP GFR	precinct
+North Carolina;Caldwell County;ONE STOP RC	precinct
+North Carolina;Carteret County;OTBEG	precinct
+North Carolina;Columbus County;CHADBOURN OS	precinct
+North Carolina;Columbus County;E COLUMBUS OS	precinct
+North Carolina;Columbus County;TABOR CITY OS	precinct
+North Carolina;Craven County;CFB8	precinct
+North Carolina;Craven County;CLR4	precinct
+North Carolina;Craven County;DFB9	precinct
+North Carolina;Craven County;N3N5	precinct
+North Carolina;Craven County;TE13	precinct
+North Carolina;Craven County;VE14	precinct
+North Carolina;Cumberland County;OS A	precinct
+North Carolina;Cumberland County;OS B	precinct
+North Carolina;Cumberland County;OS C	precinct
+North Carolina;Cumberland County;OS D	precinct
+North Carolina;Cumberland County;OS E	precinct
+North Carolina;Cumberland County;OS G	precinct
+North Carolina;Cumberland County;OS J	precinct
+North Carolina;Cumberland County;SL78-3	precinct
+North Carolina;Dare County;OS FESSENDEN ANNEX	precinct
+North Carolina;Davidson County;OS ARCADIA COMM BLDG	precinct
+North Carolina;Davidson County;OS BOE	precinct
+North Carolina;Davidson County;OS DENTON LIBRARY	precinct
+North Carolina;Davidson County;OS MIDWAY FIRE DEPT	precinct
+North Carolina;Davidson County;OS TLIB	precinct
+North Carolina;Davie County;ONE STOP	precinct
+North Carolina;Davie County;TRANSFER	precinct
+North Carolina;Duplin County;ABSENTEE	precinct
+North Carolina;Durham County;OS CJRC	precinct
+North Carolina;Durham County;OS DTN	precinct
+North Carolina;Durham County;OS ERU	precinct
+North Carolina;Edgecombe County;ABSENTEE	precinct
+North Carolina;Edgecombe County;ONE STOP PINETOPS 3	precinct
+North Carolina;Edgecombe County;ONE STOP ROCKY MOUNT 2	precinct
+North Carolina;Edgecombe County;ONE STOP TARBORO 1	precinct
+North Carolina;Forsyth County;ONE-STOP	precinct
+North Carolina;Gaston County;BOE OFFICE	precinct
+North Carolina;Gaston County;DALLAS	precinct
+North Carolina;Gaston County;LIBRARY	precinct
+North Carolina;Gaston County;MOUNT HOLLY	precinct
+North Carolina;Gates County;BLAN GROVE EMP CTR	precinct
+North Carolina;Gates County;GATES BOE	precinct
+North Carolina;Gates County;GATES RURITAN CLUB	precinct
+North Carolina;Guilford County;ABSENTEE	precinct
+North Carolina;Guilford County;ONE-STOP	precinct
+North Carolina;Halifax County;ONE STOP HALIFAX	precinct
+North Carolina;Halifax County;ONE STOP LITTLETON	precinct
+North Carolina;Halifax County;ONE STOP SCOTLAND NECK	precinct
+North Carolina;Halifax County;ONE STOP WELDON	precinct
+North Carolina;Harnett County;ONE STOP ERWIN	precinct
+North Carolina;Harnett County;ONE STOP LOBBY	precinct
+North Carolina;Harnett County;ONE STOP WESTERN	precinct
+North Carolina;Haywood County;ONE STOP CLY	precinct
+North Carolina;Haywood County;ONE STOP LIB	precinct
+North Carolina;Haywood County;ONE STOP SRC	precinct
+North Carolina;Haywood County;TRANSFER	precinct
+North Carolina;Henderson County;OS ETOWAH	precinct
+North Carolina;Henderson County;OS FLAT ROCK	precinct
+North Carolina;Henderson County;OS FLETCHER	precinct
+North Carolina;Henderson County;OS LOBBY	precinct
+North Carolina;Hertford County;OS MURFREE CENT	precinct
+North Carolina;Hertford County;OS OFFICE	precinct
+North Carolina;Hyde County;ABSENTEE	precinct
+North Carolina;Jackson County;ABSENTEE	precinct
+North Carolina;Jackson County;OS CAS	precinct
+North Carolina;Jackson County;OS CUL	precinct
+North Carolina;Jackson County;OS GYM	precinct
+North Carolina;Jackson County;OS OFF	precinct
+North Carolina;Jackson County;OS WCU	precinct
+North Carolina;Jackson County;SDC	precinct
+North Carolina;Jackson County;TRANSFER	precinct
+North Carolina;Johnston County;ARCHER LODGE OS	precinct
+North Carolina;Johnston County;CLAYTON OS	precinct
+North Carolina;Johnston County;PROVIDENCE OS	precinct
+North Carolina;Johnston County;SMITHFIELD OS	precinct
+North Carolina;Jones County;ABSENTEE	precinct
+North Carolina;Lee County;ABSENTEE	precinct
+North Carolina;Lenoir County;ABSENTEE	precinct
+North Carolina;Lenoir County;ONE STOP	precinct
+North Carolina;Mcdowell County;ABSENTEE	precinct
+North Carolina;Mcdowell County;ONE STOP	precinct
+North Carolina;Moore County;ONE STOP AG	precinct
+North Carolina;Moore County;ONE STOP PFD	precinct
+North Carolina;Nash County;OS MOUNT PLEASANT	precinct
+North Carolina;Nash County;OS NASHVILLE	precinct
+North Carolina;Nash County;OS ROCKY MOUNT	precinct
+North Carolina;New Hanover County;ABSENTEE	precinct
+North Carolina;New Hanover County;OS PVL	precinct
+North Carolina;Northampton County;ABSENTEE	precinct
+North Carolina;Northampton County;COMIPE	precinct
+North Carolina;Northampton County;GAPL	precinct
+North Carolina;Northampton County;JARE	precinct
+North Carolina;Northampton County;ONE STOP BOE	precinct
+North Carolina;Northampton County;WOPO	precinct
+North Carolina;Orange County;CF1	precinct
+North Carolina;Orange County;EA1	precinct
+North Carolina;Orange County;HE	precinct
+North Carolina;Orange County;OS CARRBORO	precinct
+North Carolina;Orange County;OS COTC	precinct
+North Carolina;Orange County;OS UM	precinct
+North Carolina;Orange County;RE	precinct
+North Carolina;Orange County;UNC	precinct
+North Carolina;Orange County;WW1	precinct
+North Carolina;Pamlico County;ABSENTEE	precinct
+North Carolina;Pamlico County;ONE STOP	precinct
+North Carolina;Perquimans County;ONE STOP	precinct
+North Carolina;Perquimans County;TRANSFER	precinct
+North Carolina;Pitt County;ABSENTEE	precinct
+North Carolina;Pitt County;ONE STOP AG CENTER	precinct
+North Carolina;Pitt County;ONE STOP COMMUNITY SCH	precinct
+North Carolina;Pitt County;ONE STOP COUNTY OFFICE	precinct
+North Carolina;Pitt County;ONE STOP ECU	precinct
+North Carolina;Pitt County;ONE STOP WINTERVILLE	precinct
+North Carolina;Polk County;ONE STOP	precinct
+North Carolina;Polk County;TRANSFER	precinct
+North Carolina;Robeson County;FAIR	precinct
+North Carolina;Robeson County;LOB	precinct
+North Carolina;Robeson County;MX	precinct
+North Carolina;Robeson County;PEM	precinct
+North Carolina;Robeson County;PROVISIONAL	precinct
+North Carolina;Robeson County;REDS	precinct
+North Carolina;Robeson County;STP	precinct
+North Carolina;Robeson County;TRANSFER	precinct
+North Carolina;Sampson County;ABSENTEE	precinct
+North Carolina;Sampson County;ONE STOP	precinct
+North Carolina;Scotland County;01-16	precinct
+North Carolina;Scotland County;02-25	precinct
+North Carolina;Scotland County;05-10	precinct
+North Carolina;Scotland County;06-89	precinct
+North Carolina;Stanly County;0212	precinct
+North Carolina;Stanly County;OS LOC	precinct
+North Carolina;Stokes County;0506	precinct
+North Carolina;Stokes County;1618	precinct
+North Carolina;Stokes County;1819	precinct
+North Carolina;Stokes County;ABSENTEE	precinct
+North Carolina;Surry County;29	precinct
+North Carolina;Surry County;30	precinct
+North Carolina;Surry County;31	precinct
+North Carolina;Surry County;32	precinct
+North Carolina;Surry County;ONE STOP	precinct
+North Carolina;Surry County;TRANSFER	precinct
+North Carolina;Swain County;ABSENTEE	precinct
+North Carolina;Swain County;ONE STOP	precinct
+North Carolina;Swain County;PROVISIONAL	precinct
+North Carolina;Swain County;TRANSFER	precinct
+North Carolina;Transylvania County;ABSENTEE	precinct
+North Carolina;Transylvania County;ONE STOP	precinct
+North Carolina;Transylvania County;PROVISIONAL	precinct
+North Carolina;Transylvania County;TRANSFER	precinct
+North Carolina;Wake County;17-12	precinct
+North Carolina;Wake County;17-13	precinct
+North Carolina;Wake County;19-20	precinct
+North Carolina;Wake County;19-21	precinct
+North Carolina;Wake County;OSAV	precinct
+North Carolina;Wake County;OSCS	precinct
+North Carolina;Wake County;OSFV	precinct
+North Carolina;Wake County;OSKD	precinct
+North Carolina;Wake County;OSME	precinct
+North Carolina;Wake County;OSOP	precinct
+North Carolina;Wake County;OSRB	precinct
+North Carolina;Wake County;OSTA	precinct
+North Carolina;Watauga County;ONE STOP ADMIN	precinct
+North Carolina;Watauga County;ONE STOP ASU	precinct
+North Carolina;Watauga County;ONE STOP BLOWING ROCK	precinct
+North Carolina;Watauga County;ONE STOP DEEP GAP	precinct
+North Carolina;Watauga County;ONE STOP FOSCOE	precinct
+North Carolina;Watauga County;ONE STOP MEAT CAMP	precinct
+North Carolina;Watauga County;ONE STOP WWCC	precinct
+North Carolina;Wayne County;1920	precinct
+North Carolina;Wayne County;2530	precinct
+North Carolina;Wayne County;ABSENTEE	precinct
+North Carolina;Wayne County;OS LIB	precinct
+North Carolina;Wayne County;OS MTO	precinct
+North Carolina;Wayne County;OS PHL	precinct
+North Carolina;Wilkes County;113A	precinct
+North Carolina;Wilkes County;ABSENTEE	precinct
+North Carolina;Wilkes County;ONE STOP	precinct
+North Carolina;Yadkin County;ABSENTEE	precinct
 North Carolina	state
 North Carolina;Alamance County	county
 North Carolina;Alexander County	county
