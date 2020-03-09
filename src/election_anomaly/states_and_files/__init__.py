@@ -179,9 +179,8 @@ class Munger:
         self.raw_identifiers=pd.read_csv('{}raw_identifiers.txt'.format(dir_path),sep='\t') # note no natural index column
 
         # define dictionary to change any column names that match internal CDF names
-        with open('{}tables.txt'.format(cdf_schema_def_dir),'r') as f:
-            table_list = eval(f.read())
-        col_d = dict([[x[0],'{}_{}'.format(x[0],self.name)] for x in table_list])
+        col_d = {t:'{}_{}'.format(t,self.name)
+                 for t in os.listdir('{}Tables'.format(cdf_schema_def_dir))}
         self.rename_column_dictionary=col_d
 
         # read raw columns from file (renaming if necessary)
