@@ -39,8 +39,11 @@ def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF
     fpath = '{}tables.txt'.format(dirpath)
     with open(fpath, 'r') as f:
         table_def_list = eval(f.read())
-    new_table_name_list= os.listdir('{}Tables'.format(dirpath))
-    new_table_name_list = []    # TODO diag
+
+    new_table_name_list = ['ExternalIdentifier', 'ReportingUnit', 'Party', 'Election', 'Office', 'CandidateContest', 'BallotMeasureContest', 'Candidate', 'VoteCount', 'SelectionElectionContestVoteCountJoin', 'CandidateSelection', 'ElectionContestJoin', 'ComposingReportingUnitJoin', 'BallotMeasureContestSelectionJoin', 'CandidateContestSelectionJoin']
+
+    assert set(new_table_name_list) == set(os.listdir('{}Tables'.format(dirpath))), 'Set of tables to create does not match set of tables in {}Tables directory'.format(dirpath)
+
     for element in new_table_name_list:
         with open('{}Tables/{}/short_name.txt'.format(dirpath,element),'r') as f:
             short_name=f.read().strip()
@@ -51,30 +54,22 @@ def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF
         for f in flist: # TODO picks up short_name too, unnecessary
             df[f] =  pd.read_csv('{}Tables/{}/{}.txt'.format(dirpath,element,f),sep='\t')
 
-        field_col_list = [Column(r['fieldname'],eval(r['datatype'])) for i,r in df[fields].iterrows()]
+        field_col_list = [Column(r['fieldname'],eval(r['datatype'])) for i,r in df['fields'].iterrows()]
         null_constraint_list = [CheckConstraint('"{}" IS NOT NULL'.format(r['not_null_fields']),name='{}_{}_not_null'.format(short_name,r['not_null_fields'])) for i,r in df['not_null_fields'].iterrows()]
         other_elt_list = [Column(r['fieldname'],ForeignKey('cdf.{}.Id'.format(r['refers_to']))) for i,r in df['other_element_refs'].iterrows()]
+        # unique constraints
+        df['unique_constraints']['arg_list'] = df['unique_constraints']['unique_constraint'].str.split(',')
+        unique_constraint_list = [UniqueConstraint( * r['arg_list'],name='{}_ux{}'.format(short_name,i)) for i,r in df['unique_constraints'].iterrows()]
+
+        enum_id_list =  [Column('{}_Id'.format(r['enumeration']),ForeignKey('cdf.{}.Id'.format(r['enumeration']))) for i,r in df['enumerations'].iterrows()]
+        enum_other_list = [Column('Other{}'.format(r['enumeration']),String) for i,r in df['enumerations'].iterrows()]
         Table(element,metadata,
           Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
-              * field_col_list, * null_constraint_list, * other_elt_list)   # TODO unique_constraints, enumerations
+              * field_col_list, * enum_id_list, * enum_other_list,
+              * other_elt_list, * null_constraint_list, * unique_constraint_list,schema='cdf')
 
-        metadata.create_all()
-
-    for table_def in table_def_list:
-        name = table_def[0]
-        field_d = table_def[1]
-        col_string_list = ['Column(\''+ f['fieldname'] + '\',' + f['datatype'] + ')' for f in field_d['fields']] + \
-                          ['Column(\'' + e + '_Id\',ForeignKey(\'' + schema + '.' + e + '.Id\')),Column(\'Other' + e + '\',String)' for e in field_d['enumerations']] + \
-                          ['Column(\'' + oer['fieldname'] + '\',ForeignKey(\'' + schema + '.' + oer['refers_to'] + '.Id\'))' for oer in field_d['other_element_refs']] + \
-                          ['CheckConstraint(\'"' + nnf + '" IS NOT NULL\',name = \'' + field_d['short_name'] + '_' + nnf + '_not_null\' )' for nnf in field_d['not_null_fields']] + \
-                          ['UniqueConstraint(' + ','.join(['\'' + x +'\'' for x in uc]) + ',name=\'' + field_d['short_name'] + '_ux' + str(field_d['unique_constraints'].index(uc)) + '\')' for uc in field_d['unique_constraints']]
-        table_creation_string = 'Table(\'{}\',metadata,Column(\'Id\',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),{}, schema=\'{}\')'.format(name,','.join(col_string_list),schema)
-
-        exec(table_creation_string)
-
-
-        metadata.create_all()
-        session.flush()
+    metadata.create_all()
+    session.flush()
     return metadata
 
 # TODO should we somewhere check consistency of enumeration_table_list and the files in enumerations/ ? Is the file enumeration_table_list ever used?

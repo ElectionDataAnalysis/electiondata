@@ -67,7 +67,6 @@ class Munger:
     def check_new_datafile(self,f,state):
         """f is a results datafile; this routine should add what's necessary to the munger to treat the datafile,
         keeping backwards compatibility and exiting gracefully if datafile needs different munger"""
-        # TODO have user confirm that all ReportingUnits in f are of the type <self>.atomic_reporting_unit_type
         print('WARNING: All ReportingUnits in this file will be munged as type \'{}\'. '.format(self.atomic_reporting_unit_type))
         check_ru_type=input('\tIf other behavior is desired, create or use another munger.\n\tProceed with munger {} (y/n)?\n'.format(self.name))
         if check_ru_type != 'y':
