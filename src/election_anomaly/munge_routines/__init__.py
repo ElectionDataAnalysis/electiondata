@@ -17,10 +17,11 @@ from db_routines import dframe_to_sql
 
 
 def load_context_dframe_into_cdf(session,source_df,element,CDF_schema_def_dir='CDF_schema_def_info/'):
-    """<enum_dframe> is a dictionary of dataframes
-    <table_def> carries info about the cdf table corresponding to <element>.
-    source_df is in the same format as the corresponding file in context/<element>.txt"""
+    """source_df should have all info needed for insertion into cdf:
+    for enumerations, the value of the enumeration (e.g., 'precinct')
+    for other fields, the value of the field (e.g., 'North Carolina;Alamance County'"""
     # TODO check that source_df has the right format
+    # TODO check that ReportingUnit.CountItemStatus_Id and ReportingUnit.OtherCountItemStatus are done right.
 
     enums = pd.read_csv('{}Tables/{}/enumerations.txt'.format(CDF_schema_def_dir,element))
     # get all relevant enumeration tables

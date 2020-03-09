@@ -4,7 +4,11 @@ import db_routines as dbr
 import pandas as pd
 import re
 import munge_routines as mr
+from sqlalchemy.orm import sessionmaker
+import user_interface as ui
 
+# TODO: ReportingUnit cdf_table has CountItemStatus field, so particular precincts, counties, etc.,
+#  aren't really "ReportingUnits" but rather "ReportingUnits without specified CountItemStatus". Hm.
 
 class State:
     def create_db_and_schemas(self):
@@ -26,10 +30,13 @@ class State:
         return
 
     def add_to_context_dir(self,element,f):
-        """Add the data in the dataframe <f> to the file corresponding to <element> in the <state>'s folder"""
+        """Add the data in the dataframe <f> to the file corresponding
+        to <element> in the <state>'s context folder.
+        <f> must have all columns matching the columns in context/<element>.
+        OK for <f> to have extra columns"""
         # TODO
         try:
-            elts = pd.read_csv('{}{}.txt'.format(self.path_to_state_dir,element))
+            elts = pd.read_csv('{}context/{}.txt'.format(self.path_to_state_dir,element),sep='\t')
         except:
             print('Could not read data from file {}context/{}.txt'.format(self.path_to_state_dir,element))
             return
@@ -39,8 +46,8 @@ class State:
                 print('Be sure all necessary data is added before processing the file')
                 f.loc[:,col] = ''
         # pull and order necessary columns from <f>
-        f_new =  pd.concat([f[[elts.columns]],elts])
-        f_new.to_csv('{}{}.txt'.format(self.path_to_state_dir,element),sep='\t',index=False)
+        f_new =  pd.concat([f[elts.columns],elts])
+        f_new.to_csv('{}context/{}.txt'.format(self.path_to_state_dir,element),sep='\t',index=False)
 
         # TODO insert into cdf.<element>, using mr.load_context_dframe_into_cdf
 
@@ -64,7 +71,7 @@ class State:
         # TODO format string above '...'.format()
 class Munger:
 
-    def check_new_datafile(self,f,state):
+    def check_new_datafile(self,f,state,session):
         """f is a results datafile; this routine should add what's necessary to the munger to treat the datafile,
         keeping backwards compatibility and exiting gracefully if datafile needs different munger"""
         print('WARNING: All ReportingUnits in this file will be munged as type \'{}\'. '.format(self.atomic_reporting_unit_type))
@@ -77,7 +84,16 @@ class Munger:
             'ERROR: Munger cannot handle the datafile. A column in {} is missing from {} (listed in raw_columns.txt).'.format(f.columns,list(cols))
         # note: we don't look for new offices. Must put desired offices into Office.txt in any case
         # TODO where will user be notified of untreated offices?
-        for element in ['ReportingUnit','Party','CandidateContest','Election']:
+        # TODO ask user for CountItemStatus for datafile (field in ReportingUnit table)
+        cis_df = pd.read_sql_table('CountItemStatus',session.bind,schema='cdf',index_col='Id')
+        cis_id = ui.pick_one(cis_df)
+        cis = cis_df.loc[cis_id,'Txt']  # TODO inefficient, since we'll recover id later
+
+        # TODO need to treat CandidateContest separately -- distinguish new from BallotMeasure
+        # TODO also, maybe what we really want to identify is any new Office.
+        # TODO should user have option to ignore Offices?
+        for element in ['ReportingUnit','Party','Election']:
+            # TODO: Duplicates in the unmatched.txt file (e.g., due to nans or blanks) end up as dupes in <element>.txt. Fix!
             print('Examining instances of {}'.format(element))
             # get list of columns of <f> needed to determine the raw_identifier for <element>
             p = '\<([^\>]+)\>'
@@ -96,6 +112,8 @@ class Munger:
             while unmatched.shape[0] > 0:
                 # add blank column to be filled in
                 unmatched.loc[:,'cdf_internal_name'] = ''
+                # add cdf_element column
+                unmatched.loc[:,'cdf_element']=element
                 unmatched_path = '{}unmatched_{}.txt'.format(self.path_to_munger_dir,element)
 
                 # write unmatched lines to file and invite user to edit
@@ -106,28 +124,28 @@ class Munger:
                 # read user-edited file
                 new_f_elts = pd.read_csv(unmatched_path,sep='\t')
 
-                # restrict to matched lines
+                # restrict to lines with an internal name
                 new_f_elts=new_f_elts[new_f_elts['cdf_internal_name'].notnull()]
 
-                # add cdf_element column
-                new_f_elts.loc[:,'cdf_element'] = element
 
-                # add to raw_identifiers
+                # add to raw_identifiers (both attribute of <self> and also the file in the munger directory)
                 self.add_to_raw_identifiers(new_f_elts)
 
                 if element != 'CandidateContest':
                     # add to state's context directory
                     # TODO what form should new_f_elts have?
-                    f.rename(columns={'cdf_internal_name':'Name'},inplace=True)
+                    if element == 'ReportingUnit':
+                        new_f_elts.loc[:,'ReportingUnitType'] = self.atomic_reporting_unit_type
+                        new_f_elts.loc[:,'CountItemStatus'] = cis # TODO don't need this until it's uploaded to db
+
+                    new_f_elts.rename(columns={'cdf_internal_name':'Name'},inplace=True)
                     state.add_to_context_dir(element,new_f_elts)
 
                 # add to the cdf.<element> table
-                # TODO create source_df in right format
-                mr.load_context_dframe_into_cdf(session,source_df,element)
+                mr.load_context_dframe_into_cdf(session,new_f_elts,element,CDF_schema_def_dir='../CDF_schema_def_info/')
 
                 if element == 'ReportingUnit':
                    # insert as necessary into ComposingReportingUnitJoin table
-                    new_f_elts['Name']=new_f_elts['cdf_internal_name']
                     dbr.cruj_insert(state,new_f_elts)
 
                 # see if anything remains to be matched
@@ -161,9 +179,9 @@ class Munger:
         # unmatched.rename(columns={'{}_raw'.format(element):'raw_identifier_value'},inplace=True)
         return unmatched
 
-    def __init__(self,dir_path,cdf_schema_def_dir='CDF_schema_def_info/'):
+    def __init__(self,dir_path,cdf_schema_def_dir='../CDF_schema_def_info/'):
         assert os.path.isdir(dir_path),'Not a directory: {}'.format(dir_path)
-        for f in ['cdf_tables.txt','atomic_reporting_unit_type.txt','count_columns.txt']""
+        for f in ['cdf_tables.txt','atomic_reporting_unit_type.txt','count_columns.txt']:
             assert os.path.isfile('{}{}'.format(dir_path,f)),'Directory {} does not contain file {}'.format(dir_path,f)
         self.name=dir_path.split('/')[-2]    # 'nc_general'
 
@@ -224,6 +242,12 @@ if __name__ == '__main__':
     s = State('NC','{}/local_data/'.format(path_to_src_dir))
     mu = Munger('../../mungers/nc_primary/',cdf_schema_def_dir='../CDF_schema_def_info/')
     f = pd.read_csv('../../local_data/NC/data/2020p_asof_20200305/nc_primary/results_pct_20200303.txt',sep='\t')
-    mu.check_new_datafile(f,s)
+
+    # initialize main session for connecting to db
+    eng, meta_generic = dbr.sql_alchemy_connect(db_name=s.short_name)
+    Session = sessionmaker(bind=eng)
+    session = Session()
+
+    mu.check_new_datafile(f,s,session)
 
     print('Done (states_and_files)!')
