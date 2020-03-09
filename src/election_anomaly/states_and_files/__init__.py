@@ -125,7 +125,7 @@ class Munger:
 
                 # add to the cdf.<element> table
                 # TODO create source_df in right format
-                mr.load_context_dframe_into_cdf(session,source_df,element,table_def,enum_dframe,cdf_d)
+                mr.load_context_dframe_into_cdf(session,source_df,element)
 
                 if element == 'ReportingUnit':
                    # insert as necessary into ComposingReportingUnitJoin table

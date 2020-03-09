@@ -35,16 +35,15 @@ def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF
         exec('Table(\'{}\',metadata, Column(\'Id\',Integer, id_seq,server_default=id_seq.next_value(),primary_key=True), Column(\'{}\',String),schema = \'{}\')'.format(t,txt_col,schema))
     metadata.create_all()
 
-    #%% create all other tables, in set order because of foreign keys
-    fpath = '{}tables.txt'.format(dirpath)
-    with open(fpath, 'r') as f:
-        table_def_list = eval(f.read())
+    # create all other tables, in set order because of foreign keys
+    table_list = ['ExternalIdentifier', 'ReportingUnit', 'Party', 'Election', 'Office', 'CandidateContest',
+                  'BallotMeasureContest', 'Candidate', 'VoteCount', 'SelectionElectionContestVoteCountJoin',
+                  'CandidateSelection', 'ElectionContestJoin', 'ComposingReportingUnitJoin',
+                  'BallotMeasureContestSelectionJoin', 'CandidateContestSelectionJoin']
 
-    new_table_name_list = ['ExternalIdentifier', 'ReportingUnit', 'Party', 'Election', 'Office', 'CandidateContest', 'BallotMeasureContest', 'Candidate', 'VoteCount', 'SelectionElectionContestVoteCountJoin', 'CandidateSelection', 'ElectionContestJoin', 'ComposingReportingUnitJoin', 'BallotMeasureContestSelectionJoin', 'CandidateContestSelectionJoin']
+    assert set(table_list) == set(os.listdir('{}Tables'.format(dirpath))), 'Set of tables to create does not match set of tables in {}Tables directory'.format(dirpath)
 
-    assert set(new_table_name_list) == set(os.listdir('{}Tables'.format(dirpath))), 'Set of tables to create does not match set of tables in {}Tables directory'.format(dirpath)
-
-    for element in new_table_name_list:
+    for element in table_list:
         with open('{}Tables/{}/short_name.txt'.format(dirpath,element),'r') as f:
             short_name=f.read().strip()
 
