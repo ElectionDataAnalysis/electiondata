@@ -5,4 +5,3 @@ Candidate	<Choice>
 CandidateContest	<Contest Name>
 BallotMeasureContest	<Contest Name>
 BallotMeasureSelection	<Choice>
-
