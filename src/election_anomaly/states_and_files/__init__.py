@@ -112,8 +112,6 @@ class Munger:
                 # add cdf_element column
                 new_f_elts.loc[:,'cdf_element'] = element
 
-                print(new_f_elts.shape) # TODO diagnostic
-
                 # add to raw_identifiers
                 self.add_to_raw_identifiers(new_f_elts)
 
@@ -165,10 +163,8 @@ class Munger:
 
     def __init__(self,dir_path,cdf_schema_def_dir='CDF_schema_def_info/'):
         assert os.path.isdir(dir_path),'Not a directory: {}'.format(dir_path)
-        # TODO loop through a list for easy adjustment
-        assert os.path.isfile('{}cdf_tables.txt'.format(dir_path)) and os.path.isfile(dir_path + 'atomic_reporting_unit_type.txt') and os.path.isfile(
-            dir_path + 'count_columns.txt') , \
-            'Directory {} must contain files atomic_reporting_unit_type.txt, cdf_tables.txt, count_columns.txt'.format(dir_path)
+        for f in ['cdf_tables.txt','atomic_reporting_unit_type.txt','count_columns.txt']""
+            assert os.path.isfile('{}{}'.format(dir_path,f)),'Directory {} does not contain file {}'.format(dir_path,f)
         self.name=dir_path.split('/')[-2]    # 'nc_general'
 
         if dir_path[-1] != '/':

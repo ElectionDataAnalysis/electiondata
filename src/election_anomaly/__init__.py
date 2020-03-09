@@ -44,7 +44,8 @@ def user_picks_munger(dir_path):
 
     return mu,munger_path
 
-# TODO will need routines to add new munger externalidentifiers to an existing cdf db; will need routines to add new reportingunits to an existing cdf db.
+# TODO will need routines to add new munger externalidentifiers to an existing cdf db;
+#  will need routines to add new reportingunits to an existing cdf db.
 if __name__ == '__main__':
     # initialize state and create database for it (if not already exists)
     default = 'NC'
