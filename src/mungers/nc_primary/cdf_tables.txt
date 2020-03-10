@@ -1,4 +1,4 @@
-cdf_element	raw_identifier
+cdf_element	raw_identifier_formula
 ReportingUnit	<County>;<Precinct>
 Party	<Choice Party>
 Candidate	<Choice>
