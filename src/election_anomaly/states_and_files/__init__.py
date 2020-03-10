@@ -74,6 +74,7 @@ class Munger:
     def check_new_datafile(self,f,state,session):
         """f is a results datafile; this routine should add what's necessary to the munger to treat the datafile,
         keeping backwards compatibility and exiting gracefully if datafile needs different munger"""
+
         print('WARNING: All ReportingUnits in this file will be munged as type \'{}\'. '.format(self.atomic_reporting_unit_type))
         check_ru_type=input('\tIf other behavior is desired, create or use another munger.\n\tProceed with munger {} (y/n)?\n'.format(self.name))
         if check_ru_type != 'y':
@@ -92,7 +93,8 @@ class Munger:
         # TODO need to treat CandidateContest separately -- distinguish new from BallotMeasure
         # TODO also, maybe what we really want to identify is any new Office.
         # TODO should user have option to ignore Offices?
-        for element in ['ReportingUnit','Party','Election']:
+        # TODO how to handle Election?
+        for element in ['ReportingUnit','Party']:
             # TODO: Duplicates in the unmatched.txt file (e.g., due to nans or blanks) end up as dupes in <element>.txt. Fix!
             print('Examining instances of {}'.format(element))
             # get list of columns of <f> needed to determine the raw_identifier for <element>
