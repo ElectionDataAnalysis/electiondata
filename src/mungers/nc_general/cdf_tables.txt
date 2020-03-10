@@ -1,8 +1,8 @@
-cdf_element	raw_identifier
+cdf_element	raw_identifier_formula
 Office	<Contest Name>
 ReportingUnit	<County>;<Precinct>
 Party	<Choice Party>
-Candidate	<Choice>	BallotName
+Candidate	<Choice>
 CandidateContest	<Contest Name>
 BallotMeasureContest	<Contest Name>
 BallotMeasureSelection	<Choice>
