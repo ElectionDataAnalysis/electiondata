@@ -102,7 +102,7 @@ def create_state(parent_path):
 		else:
 			print(f'Directory {sd_path} created')
 
-
+	# TODO put required files into the context directory
 	ss = sf.State(state_name,state_path)
 	return ss
 
@@ -127,8 +127,6 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile):
 	schema = pick_schema(db_paramfile)
 
 	state = pick_state()
-	if state == None:
-		state = create_state()
 
 	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile)
 	Session = sessionmaker(bind=eng)
