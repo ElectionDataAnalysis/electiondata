@@ -1,5 +1,0 @@
-Selection
-Yes
-No
-Yes for Approval
-No for Rejection
