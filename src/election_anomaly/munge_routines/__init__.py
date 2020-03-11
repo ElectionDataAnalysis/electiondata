@@ -240,13 +240,15 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
             new_rows={}
             bm_contests = row['BallotMeasureContest'].drop_duplicates()
             for sel in ['Yes','No']:    # internal BallotMeasureSelection options
-                bmc[sel]=pd.DataFrame(zip(bm_contests,[sel] * len(bm_contests)),columns=['BallotMeasureContest','BallotMeasureSelection'])
+                bmc[sel]=pd.DataFrame(zip(bm_contests,[sel] * len(bm_contests)),
+                                      columns=['BallotMeasureContest','BallotMeasureSelection'])
                 new_rows[sel]=row.copy()
                 # add column for selection
                 new_rows[sel].loc[:,'BallotMeasureSelection'] = sel
                 # melt vote counts into appropriately titled columns
                 for vt in vote_type_list:
-                    raw_name = mu.count_columns[(mu.count_columns.BallotMeasureSelection==sel) & (mu.count_columns.CountItemType==vt)].iloc[0]['RawName']
+                    raw_name = mu.count_columns[(mu.count_columns.BallotMeasureSelection==sel) &
+                                                (mu.count_columns.CountItemType==vt)].iloc[0]['RawName']
                     new_rows[sel].loc[:,vt]=row[raw_name]
             row = pd.concat([new_rows[k] for k in new_rows.keys()])
             bm_contest_selection = pd.concat([bmc[k] for k in bmc.keys()])
@@ -263,18 +265,23 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
         print('WARNING: all ballot measure contests assumed to have the whole state as their district')
 
         # Load BallotMeasureContest table to cdf schema
-        cdf_d['BallotMeasureContest'] = dbr.dframe_to_sql(bm_contest_selection[['Name','ElectionDistrict_Id']].drop_duplicates(),session,cdf_schema,'BallotMeasureContest')
+        cdf_d['BallotMeasureContest'] = dbr.dframe_to_sql(bm_contest_selection[['Name','ElectionDistrict_Id']]
+                                                          .drop_duplicates(),session,cdf_schema,'BallotMeasureContest')
 
         # add BallotMeasure-related ids needed later
-        bm_row = row.merge(cdf_d['BallotMeasureSelection'],left_on='BallotMeasureSelection',right_on='Selection',suffixes=['','_Selection'])
+        bm_row = row.merge(cdf_d['BallotMeasureSelection'],left_on='BallotMeasureSelection',
+                           right_on='Selection',suffixes=['','_Selection'])
         bm_row.rename(columns={'Id_Selection':'Selection_Id'},inplace=True)
-        bm_row = bm_row.merge(cdf_d['BallotMeasureContest'],left_on='BallotMeasureContest',right_on='Name',suffixes=['','_Contest'])
+        bm_row = bm_row.merge(cdf_d['BallotMeasureContest'],left_on='BallotMeasureContest',
+                              right_on='Name',suffixes=['','_Contest'])
         bm_row.rename(columns={'Id_Contest':'Contest_Id'},inplace=True)
 
         # Load BallotMeasureContestSelectionJoin table to cdf schema
         bmcsj_df = bm_row[['Contest_Id','Selection_Id']].drop_duplicates()
-        bmcsj_df.rename(columns={'Contest_Id':'BallotMeasureContest_Id','Selection_Id':'BallotMeasureSelection_Id'},inplace=True)
-        cdf_d['BallotMeasureContestSelectionJoin'] = dbr.dframe_to_sql(bmcsj_df,session,cdf_schema,'BallotMeasureContestSelectionJoin')
+        bmcsj_df.rename(columns={'Contest_Id':'BallotMeasureContest_Id','Selection_Id':'BallotMeasureSelection_Id'},
+                        inplace=True)
+        cdf_d['BallotMeasureContestSelectionJoin'] = dbr.dframe_to_sql(bmcsj_df,session,cdf_schema,
+                                                                       'BallotMeasureContestSelectionJoin')
 
         # Load ElectionContestJoin table (for ballot measures)
         # TODO are we pulling ballot measure contests from other elections and assigning them to current election?
