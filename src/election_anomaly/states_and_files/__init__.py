@@ -194,7 +194,7 @@ class Munger:
         # unmatched.rename(columns={'{}_raw'.format(element):'raw_identifier_value'},inplace=True)
         return unmatched
 
-    def __init__(self,dir_path,cdf_schema_def_dir='../CDF_schema_def_info/'):
+    def __init__(self,dir_path,cdf_schema_def_dir='CDF_schema_def_info/'):
         assert os.path.isdir(dir_path),'Not a directory: {}'.format(dir_path)
         for ff in ['cdf_tables.txt','atomic_reporting_unit_type.txt','count_columns.txt']:
             assert os.path.isfile('{}{}'.format(dir_path,ff)),\
@@ -211,7 +211,7 @@ class Munger:
 
         # define dictionary to change any column names that match internal CDF names
         col_d = {t:'{}_{}'.format(t,self.name)
-                 for t in os.listdir('{}Tables'.format(cdf_schema_def_dir))}
+                 for t in os.listdir(f'{cdf_schema_def_dir}Tables')}
         self.rename_column_dictionary=col_d
 
         # read raw columns from file (renaming if necessary)
