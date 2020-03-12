@@ -7,7 +7,7 @@ import states_and_files as sf
 
 
 def pick_one(df,return_col,item='row'):
-	"""Returns index of item chosen by user"""
+	"""Returns index and <return_col> value of item chosen by user"""
 	# TODO check that index entries are positive ints (and handle error)
 	print(df)
 	index_name = df.index.name or 'row number'
@@ -62,25 +62,26 @@ def pick_election(session,schema):
 	return election
 
 
-def pick_state(path_to_states='../local_data/'):
+def pick_state(con,path_to_states='../local_data/'):
 	"""Returns a State object"""
 	if path_to_states[-1] != '/': path_to_states += '/'
 	state_df = pd.DataFrame(os.listdir(path_to_states),columns='State')
 	state_idx,state_name = pick_one(state_df,'State', item='state')
 	if state_idx != None:
-		# initialize the state
+		# If state was chosen, initialize the state
 		spath = f'{path_to_states}{state_name}'
 		ss = sf.State(state_name,spath)
 	else:
-		ss = create_state(path_to_states)
-	# TODO if no state chosen, return None
+		# if no state chosen, create state
+		ss = create_state(con,path_to_states)
 	return ss
 
 
-def create_state(parent_path):
+def create_state(con,parent_path):
 	"""walk user through state creation, return State object"""
 	# TODO
-	state_name = input('Enter a short name (alphanumeric only, no spaces) for your state (e.g., \'NC\')')
+	state_name = input('Enter a short name (alphanumeric only, no spaces) for your state '
+					   '(e.g., \'NC\')')
 	# TODO check alphanumeric only
 	state_path = f'{parent_path}{state_name}/'
 
@@ -103,8 +104,45 @@ def create_state(parent_path):
 			print(f'Directory {sd_path} created')
 
 	# TODO put required files into the context directory
+	# TODO ReportingUnit.txt
+	fill_reportingunit_file(con,f'{state_path}context/ReportingUnit.txt')
+	# TODO Office.txt
+	# TODO Party.txt
+	# TODO remark
+
+	# initialize state
 	ss = sf.State(state_name,state_path)
 	return ss
+
+
+def fill_reportingunit_file(con,schema,ru_fp,template_file_path,sep='\t'):
+	template = pd.read_csv(template_file_path,sep=sep,header=0,dtype=str)
+	ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
+	other_ru_idx = ru_type[ru_type.Txt == 'other'].index.to_list()[0]
+	# TODO create file if it doesn't exist
+	if not os.path.isfile(ru_fp):
+		# create file with just header row
+		template.iloc[0:0].to_csv(ru_fp)
+	in_progress = 'y'
+	while in_progress == 'y':
+		# TODO check format of file
+		ru = pd.read_csv(ru_fp,sep=sep,header=0,type=str)
+		if ru.columns != template.columns:
+			print(f'WARNING: {ru_fp} is not in the correct format.')		# TODO refine error msg?
+			input('Please correct the file and hit return to continue.')
+		else:
+			# TODO report contents of file
+			print(f'Current contents of {ru_df}:\n{ru}')
+			# TODO invite input
+			idx,type = pick_one(ru_type,'Txt',item='ReportingUnit Type')
+			if type == 'other':
+				type = input('Type the name to assign to the ReportingUnit Type (alphanumeric, underscore or hyphen only):')
+				# TODO error-check
+
+
+			#
+			in_progress = input(f'Would you like to add more rows to {ru_fp} (y/n)?')
+	return
 
 
 def pick_munger(path_to_munger_dir='../mungers/',column_list=None):
@@ -126,11 +164,12 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile):
 
 	schema = pick_schema(db_paramfile)
 
-	state = pick_state()
 
 	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile)
 	Session = sessionmaker(bind=eng)
 	new_df_session = Session()
+
+	state = pick_state(new_df_session.bind,schema)
 
 	election = pick_election(new_df_session,schema)
 

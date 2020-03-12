@@ -67,7 +67,7 @@ class State:
         assert os.path.isdir(self.path_to_state_dir), 'Error: No directory ' + self.path_to_state_dir
         assert os.path.isdir(self.path_to_state_dir+'context/'), \
             'Error: No directory ' + self.path_to_state_dir+'context/'
-        # Check that context directory is missing no files
+        # Check that context directory is missing no essential files
         context_file_list = ['Election.txt','Office.txt','remark.txt','ReportingUnit.txt']
         file_missing_list = [ff for ff in context_file_list
                              if not os.path.isfile(f'{self.path_to_state_dir}context/{ff}')]
