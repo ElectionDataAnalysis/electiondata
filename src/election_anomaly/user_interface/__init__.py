@@ -1,5 +1,6 @@
 #!usr/bin/python3
 import db_routines as dbr
+import db_routines.Create_CDF_db as db_cdf
 import pandas as pd
 from sqlalchemy.orm import sessionmaker
 import os
@@ -33,8 +34,11 @@ def pick_schema(paramfile):
 	print(f'Connection established to database {con.info.dbname}')
 	cur = con.cursor()
 	db_df = pd.DataFrame(dbr.query('SELECT datname FROM pg_database',[],[],con,cur))
-
 	db_idx,desired_db = pick_one(db_df,0,item='database')
+
+	if desired_db == None:
+		desired_db = input('Enter name for new database (alphanumeric only):')
+		dbr.create_database(con,cur,db_desired_db)
 	if desired_db != con.info.dbname:
 		cur.close()
 		con.close()
@@ -44,25 +48,26 @@ def pick_schema(paramfile):
 	schema_df = pd.DataFrame(dbr.query('SELECT schema_name FROM information_schema.schemata',[],[],con,cur))
 	schema_idx,schema = pick_one(schema_df,0,item='schema')
 
-	# TODO show user list of schemas existing in db
-	# TODO if new, create new schema with all the necessary cdf tables
-	# TODO if old, check that schema has right format
+	if schema = None:
+		desired_schema = input('Enter name for new schema (alphanumeric only):')
+		dbr.create_raw_schema(con,cur,desired_schema)
 	# clean up
 	if cur:
 		cur.close()
 	if con:
 		con.close()
-	return schema
+	return desired_db, desired_schema
 
 
 def pick_election(session,schema):
 	# TODO read elections from schema.Election table
 	# user picks existing or enters info for new
 	# if election is new, enter its info into schema.Election
+	election = None	# TODO remove
 	return election
 
 
-def pick_state(con,path_to_states='../local_data/'):
+def pick_state(con,schema,path_to_states='../local_data/'):
 	"""Returns a State object"""
 	if path_to_states[-1] != '/': path_to_states += '/'
 	state_df = pd.DataFrame(os.listdir(path_to_states),columns='State')
@@ -73,11 +78,11 @@ def pick_state(con,path_to_states='../local_data/'):
 		ss = sf.State(state_name,spath)
 	else:
 		# if no state chosen, create state
-		ss = create_state(con,path_to_states)
+		ss = create_state(con,schema,path_to_states)
 	return ss
 
 
-def create_state(con,parent_path):
+def create_state(con,schema,parent_path):
 	"""walk user through state creation, return State object"""
 	# TODO
 	state_name = input('Enter a short name (alphanumeric only, no spaces) for your state '
@@ -105,7 +110,8 @@ def create_state(con,parent_path):
 
 	# TODO put required files into the context directory
 	# TODO ReportingUnit.txt
-	fill_reportingunit_file(con,f'{state_path}context/ReportingUnit.txt')
+	fill_reportingunit_file(con,schema,f'{state_path}context/ReportingUnit.txt',
+							f'{parent_path}context_templates/ReportingUnit.txt')
 	# TODO Office.txt
 	# TODO Party.txt
 	# TODO remark
@@ -118,7 +124,7 @@ def create_state(con,parent_path):
 def fill_reportingunit_file(con,schema,ru_fp,template_file_path,sep='\t'):
 	template = pd.read_csv(template_file_path,sep=sep,header=0,dtype=str)
 	ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
-	standard_type_set = setru[ru.Txt != 'other']['Txt'])
+	standard_type_set = set(ru[ru.Txt != 'other']['Txt'])
 	other_ru_idx = ru_type[ru_type.Txt == 'other'].index.to_list()[0]
 	# TODO create file if it doesn't exist
 	if not os.path.isfile(ru_fp):
@@ -163,12 +169,15 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile):
 	Assumes cdf db exists already"""
 	# connect to postgres to create schema if necessary
 
-	schema = pick_schema(db_paramfile)
+	db_name,schema = pick_schema(db_paramfile)
 
 
-	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile)
+	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name,schema=schema)
 	Session = sessionmaker(bind=eng)
 	new_df_session = Session()
+
+	# TODO check whether db_name.schema has correct cdf format; if so, don't recreate
+	db_cdf.create_common_data_format_schema(new_df_session,schema,e_table_list,dirpath='CDF_schema_def_info/',delete_existing=False
 
 	state = pick_state(new_df_session.bind,schema)
 

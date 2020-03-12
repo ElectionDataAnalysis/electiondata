@@ -32,7 +32,8 @@ def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF
             txt_col='Selection'
         else:
             txt_col='Txt'
-        exec('Table(\'{}\',metadata, Column(\'Id\',Integer, id_seq,server_default=id_seq.next_value(),primary_key=True), Column(\'{}\',String),schema = \'{}\')'.format(t,txt_col,schema))
+        exec('Table(\'{}\',metadata, Column(\'Id\',Integer, id_seq,server_default=id_seq.next_value(),'
+             'primary_key=True), Column(\'{}\',String),schema = \'{}\')'.format(t,txt_col,schema))
     metadata.create_all()
 
     # create all other tables, in set order because of foreign keys
@@ -74,7 +75,7 @@ def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF
 # TODO should we somewhere check consistency of enumeration_table_list and the files in enumerations/ ? Is the file enumeration_table_list ever used?
 def enum_table_list(dirpath= 'CDF_schema_def_info/'):
     if not dirpath[-1] == '/': dirpath += '\''
-    file_list = os.listdir(dirpath + 'enumerations/')
+    file_list = os.listdir(f'{dirpath}enumerations/')
     for f in file_list:
         assert f[-4:] == '.txt', 'File name in ' + dirpath + 'enumerations/ not in expected form: ' + f
     enum_table_list = [f[:-4] for f in file_list]
