@@ -118,6 +118,7 @@ def create_state(con,parent_path):
 def fill_reportingunit_file(con,schema,ru_fp,template_file_path,sep='\t'):
 	template = pd.read_csv(template_file_path,sep=sep,header=0,dtype=str)
 	ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
+	standard_type_set = setru[ru.Txt != 'other']['Txt'])
 	other_ru_idx = ru_type[ru_type.Txt == 'other'].index.to_list()[0]
 	# TODO create file if it doesn't exist
 	if not os.path.isfile(ru_fp):
@@ -131,17 +132,17 @@ def fill_reportingunit_file(con,schema,ru_fp,template_file_path,sep='\t'):
 			print(f'WARNING: {ru_fp} is not in the correct format.')		# TODO refine error msg?
 			input('Please correct the file and hit return to continue.')
 		else:
-			# TODO report contents of file
+			# report contents of file
 			print(f'Current contents of {ru_df}:\n{ru}')
+			if not set(ru_df.ReportingUnitType).issubset(standard_type_set):
+				print('\tNote non-standard ReportingUnitTypes:')
+				for rut in set(ru_df.ReportingUnitType):
+					if rut not in standard_type_set: print(rut)
+
 			# TODO invite input
-			idx,type = pick_one(ru_type,'Txt',item='ReportingUnit Type')
-			if type == 'other':
-				type = input('Type the name to assign to the ReportingUnit Type (alphanumeric, underscore or hyphen only):')
-				# TODO error-check
-
-
-			#
-			in_progress = input(f'Would you like to add more rows to {ru_fp} (y/n)?')
+			in_progress = input(f'Would you like to alter {ru_fp} (y/n)?')
+			if in_progress == 'y':
+				input('Make alterations, then hit return to continue')
 	return
 
 
