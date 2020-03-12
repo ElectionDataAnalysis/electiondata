@@ -11,25 +11,23 @@ def pick_one(df,return_col,item='row'):
 	"""Returns index and <return_col> value of item chosen by user"""
 	# TODO check that index entries are positive ints (and handle error)
 	print(df)
-	index_name = df.index.name or 'row number'
-	choice_str = input(f'Enter the {index_name} of the desired {item} '
-						   f'(or nothing if none is correct):\n')
-	if choice_str == '':
-		return None,None
-	else:
-		choice = -1	# not in df.index
-		while choice not in df.index:
-			choice_str = input(f'Entry must be in {index_name} column. Please try again.\n')
+	choice = max(df.index) + 1  # guaranteed not to be in df.index at start
+
+	while choice not in df.index:
+		choice_str = input(f'Enter the number of the desired {item} (or nothing if none is correct):\n')
+		if choice_str == '':
+			return None,None
+		else:
 			try:
 				choice = int(choice_str)
+				if choice not in df.index:
+					print(f'Entry must in the leftmost column. Please try again.')
 			except ValueError:
-				choice_str = input(f'You must enter a number (or nothing), then hit return.\n')
+				print(f'You must enter a number (or nothing), then hit return. Please try again.')
+	return choice, df.loc[choice,return_col]
 
-		return choice, df.loc[choice,return_col]
 
-
-def pick_schema(paramfile):
-	# TODO tell user to choose desired db via paramfile
+def pick_database(paramfile):
 	con = dbr.establish_connection(paramfile=paramfile)  # TODO error handling for paramfile
 	print(f'Connection established to database {con.info.dbname}')
 	cur = con.cursor()
@@ -38,25 +36,19 @@ def pick_schema(paramfile):
 
 	if desired_db == None:
 		desired_db = input('Enter name for new database (alphanumeric only):')
-		dbr.create_database(con,cur,db_desired_db)
+		dbr.create_database(con,cur,desired_db)
 	if desired_db != con.info.dbname:
 		cur.close()
 		con.close()
 		con = dbr.establish_connection(paramfile,db_name=desired_db)
 		cur = con.cursor()
 
-	schema_df = pd.DataFrame(dbr.query('SELECT schema_name FROM information_schema.schemata',[],[],con,cur))
-	schema_idx,schema = pick_one(schema_df,0,item='schema')
-
-	if schema = None:
-		desired_schema = input('Enter name for new schema (alphanumeric only):')
-		dbr.create_raw_schema(con,cur,desired_schema)
 	# clean up
 	if cur:
 		cur.close()
 	if con:
 		con.close()
-	return desired_db, desired_schema
+	return desired_db
 
 
 def pick_election(session,schema):
@@ -124,7 +116,7 @@ def create_state(con,schema,parent_path):
 def fill_reportingunit_file(con,schema,ru_fp,template_file_path,sep='\t'):
 	template = pd.read_csv(template_file_path,sep=sep,header=0,dtype=str)
 	ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
-	standard_type_set = set(ru[ru.Txt != 'other']['Txt'])
+	standard_type_set = set(ru_type[ru_type.Txt != 'other']['Txt'])
 	other_ru_idx = ru_type[ru_type.Txt == 'other'].index.to_list()[0]
 	# TODO create file if it doesn't exist
 	if not os.path.isfile(ru_fp):
@@ -139,10 +131,10 @@ def fill_reportingunit_file(con,schema,ru_fp,template_file_path,sep='\t'):
 			input('Please correct the file and hit return to continue.')
 		else:
 			# report contents of file
-			print(f'Current contents of {ru_df}:\n{ru}')
-			if not set(ru_df.ReportingUnitType).issubset(standard_type_set):
+			print(f'Current contents of {ru_fp}:\n{ru}')
+			if not set(ru.ReportingUnitType).issubset(standard_type_set):
 				print('\tNote non-standard ReportingUnitTypes:')
-				for rut in set(ru_df.ReportingUnitType):
+				for rut in set(ru.ReportingUnitType):
 					if rut not in standard_type_set: print(rut)
 
 			# TODO invite input
@@ -155,11 +147,14 @@ def fill_reportingunit_file(con,schema,ru_fp,template_file_path,sep='\t'):
 def pick_munger(path_to_munger_dir='../mungers/',column_list=None):
 	# TODO if <column_list>, offer only mungers wtih that <column_list>
 	# TODO if no munger chosen, return None
+	munger = None # TODO temp
 	return munger
 
 
 def create_munger(column_list=None):
 	# TODO walk user through munger creation
+	#
+	munger = None # TODO temp
 	return munger
 
 
@@ -169,19 +164,18 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile):
 	Assumes cdf db exists already"""
 	# connect to postgres to create schema if necessary
 
-	db_name,schema = pick_schema(db_paramfile)
+	db_name = pick_database(db_paramfile)
 
-
-	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name,schema=schema)
+	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
 	Session = sessionmaker(bind=eng)
 	new_df_session = Session()
 
-	# TODO check whether db_name.schema has correct cdf format; if so, don't recreate
-	db_cdf.create_common_data_format_schema(new_df_session,schema,dirpath='CDF_schema_def_info/',delete_existing=False
+	# TODO check whether db_namehas correct cdf format; if so, don't recreate
+	db_cdf.create_common_data_format_tables(new_df_session,None,dirpath='CDF_schema_def_info/',delete_existing=False)
 
-	state = pick_state(new_df_session.bind,schema)
+	state = pick_state(new_df_session.bind,None)
 
-	election = pick_election(new_df_session,schema)
+	election = pick_election(new_df_session,None)
 
 	raw = pd.read_csv(raw_file,sep=raw_file_sep)
 	column_list = raw.columns
