@@ -14,11 +14,12 @@ import os
 import pandas as pd
 
 
-def create_common_data_format_schema(session, schema,  dirpath='CDF_schema_def_info/',delete_existing=False):
+def create_common_data_format_tables(session,schema,dirpath='CDF_schema_def_info/',delete_existing=False):
     """ schema example: 'cdf'; Creates cdf tables in the given schema
     e_table_list is a list of enumeration tables for the CDF, e.g., ['ReportingUnitType','CountItemType', ... ]
     """
-    create_schema(session, schema,delete_existing)
+    if schema:
+        create_schema(session, schema,delete_existing)
     eng = session.bind
     metadata = MetaData(bind=eng,schema=schema)
 
@@ -101,7 +102,7 @@ if __name__ == '__main__':
     session = Session()
 
     schema='test'
-    metadata = create_common_data_format_schema(session, schema,  dirpath ='../../CDF_schema_def_info/')
+    metadata = create_common_data_format_tables(session,schema,dirpath ='../../CDF_schema_def_info/')
     fill_cdf_enum_tables(session,metadata,schema,e_table_list,dirpath='../../CDF_schema_def_info/')
     print ('Done!')
 

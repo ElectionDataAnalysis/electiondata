@@ -70,7 +70,7 @@ if __name__ == '__main__':
         # create build tables in cdf schema
         print('Creating common data format tables in schema `cdf` in database {}'.format(s.short_name))
 
-        meta_cdf = CDF.create_common_data_format_schema(session,'cdf',delete_existing=True)
+        meta_cdf = CDF.create_common_data_format_tables(session,'cdf',delete_existing=True)
         session.commit()
 
         # load data from context directory into context schema
