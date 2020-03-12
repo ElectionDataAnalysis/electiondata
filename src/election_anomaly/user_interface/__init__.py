@@ -177,7 +177,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile):
 	new_df_session = Session()
 
 	# TODO check whether db_name.schema has correct cdf format; if so, don't recreate
-	db_cdf.create_common_data_format_schema(new_df_session,schema,e_table_list,dirpath='CDF_schema_def_info/',delete_existing=False
+	db_cdf.create_common_data_format_schema(new_df_session,schema,dirpath='CDF_schema_def_info/',delete_existing=False
 
 	state = pick_state(new_df_session.bind,schema)
 

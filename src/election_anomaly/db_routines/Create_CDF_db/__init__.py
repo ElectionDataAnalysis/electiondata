@@ -14,7 +14,7 @@ import os
 import pandas as pd
 
 
-def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF_schema_def_info/',delete_existing=False):
+def create_common_data_format_schema(session, schema,  dirpath='CDF_schema_def_info/',delete_existing=False):
     """ schema example: 'cdf'; Creates cdf tables in the given schema
     e_table_list is a list of enumeration tables for the CDF, e.g., ['ReportingUnitType','CountItemType', ... ]
     """
@@ -22,11 +22,12 @@ def create_common_data_format_schema(session, schema, e_table_list, dirpath='CDF
     eng = session.bind
     metadata = MetaData(bind=eng,schema=schema)
 
-    #%% create the single sequence for all db ids
+    # create the single sequence for all db ids
     id_seq = sqlalchemy.Sequence('id_seq', metadata=metadata,schema=schema)
 
-    #%% create enumeration tables and push to db
+    # create enumeration tables and push to db
     print('Creating enumeration tables')
+    e_table_list = enum_table_list()
     for t in e_table_list:
         if t=='BallotMeasureSelection':
             txt_col='Selection'
@@ -100,8 +101,7 @@ if __name__ == '__main__':
     session = Session()
 
     schema='test'
-    e_table_list = enum_table_list(dirpath = '../../CDF_schema_def_info/')
-    metadata = create_common_data_format_schema(session, schema, e_table_list, dirpath ='../../CDF_schema_def_info/')
+    metadata = create_common_data_format_schema(session, schema,  dirpath ='../../CDF_schema_def_info/')
     fill_cdf_enum_tables(session,metadata,schema,e_table_list,dirpath='../../CDF_schema_def_info/')
     print ('Done!')
 
