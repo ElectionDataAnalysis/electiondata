@@ -61,7 +61,7 @@ def contest_type_split(row,mu):
 
 
 def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False):
-    """replace columns in <df> with raw_identifier values by columns with internal names
+    """replace columns in <row_df> with raw_identifier values by columns with internal names
     """
     assert os.path.isdir(unmatched_dir), 'Argument {} is not a directory'.format(unmatched_dir)
     if drop_unmatched:
@@ -193,7 +193,8 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
             bm_contest_selection = pd.concat([bmc[k] for k in bmc.keys()])
 
         elif mu.ballot_measure_style == 'yes_and_no_are_candidates':
-            add_munged_column(row,mu,'BallotMeasureSelection','BallotMeasureSelection')
+            add_munged_column(row,mu,'BallotMeasureSelection','BallotMeasureSelection_external')
+            row = get_internal_ids(row,mu,cdf_d['BallotMeasureSelection'],'BallotMeasureSelection','Selection',mu.path_to_munger_dir)
             bm_contest_selection = row[['BallotMeasureContest','BallotMeasureSelection']].drop_duplicates()
             row.rename(columns=vc_col_d,inplace=True)  # standardize vote-count column names
         else:
