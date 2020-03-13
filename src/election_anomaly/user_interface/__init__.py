@@ -34,14 +34,27 @@ def pick_database(paramfile):
 	db_df = pd.DataFrame(dbr.query('SELECT datname FROM pg_database',[],[],con,cur))
 	db_idx,desired_db = pick_one(db_df,0,item='database')
 
-	if desired_db == None:
-		desired_db = input('Enter name for new database (alphanumeric only):')
+	if db_idx == None:	# if we're going to need a brand new db
+
+		desired_db = input('Enter name for new database (alphanumeric only):\n')
 		dbr.create_database(con,cur,desired_db)
+
 	if desired_db != con.info.dbname:
 		cur.close()
 		con.close()
 		con = dbr.establish_connection(paramfile,db_name=desired_db)
 		cur = con.cursor()
+
+	if db_idx == None: 	# if our db is brand new
+		eng,meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=desired_db)
+		Session = sessionmaker(bind=eng)
+		pick_db_session = Session()
+
+		db_cdf.create_common_data_format_tables(pick_db_session,None,
+												dirpath=os.path.join(
+													project_root,'election_anomaly/CDF_schema_def_info/'),
+												delete_existing=False)
+		db_cdf.fill_cdf_enum_tables(pick_db_session,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
 
 	# clean up
 	if cur:
@@ -62,25 +75,15 @@ def pick_election(session,schema):
 def pick_state(con,schema,path_to_states='../local_data/'):
 	"""Returns a State object"""
 	if path_to_states[-1] != '/': path_to_states += '/'
-	state_df = pd.DataFrame(os.listdir(path_to_states),columns='State')
+	state_df = pd.DataFrame(os.listdir(path_to_states),columns=['State'])
 	state_idx,state_name = pick_one(state_df,'State', item='state')
-	if state_idx != None:
-		# If state was chosen, initialize the state
-		spath = f'{path_to_states}{state_name}'
-		ss = sf.State(state_name,spath)
-	else:
-		# if no state chosen, create state
-		ss = create_state(con,schema,path_to_states)
-	return ss
 
 
-def create_state(con,schema,parent_path):
-	"""walk user through state creation, return State object"""
-	# TODO
-	state_name = input('Enter a short name (alphanumeric only, no spaces) for your state '
-					   '(e.g., \'NC\')')
-	# TODO check alphanumeric only
-	state_path = f'{parent_path}{state_name}/'
+	if state_idx == None:
+		# user chooses state short_name
+		state_name = input('Enter a short name (alphanumeric only, no spaces) for your state '
+						   '(e.g., \'NC\')\n')
+	state_path = os.path.join(path_to_states,state_name)
 
 	# create state directory
 	try:
@@ -90,9 +93,10 @@ def create_state(con,schema,parent_path):
 	else:
 		print(f'Directory {state_path} created')
 
+	# create subdirectories
 	subdir_list = ['context','data','output']
 	for sd in subdir_list:
-		sd_path = f'{state_path}{sd}'
+		sd_path = os.path.join(state_path,sd)
 		try:
 			os.mkdir(sd_path)
 		except FileExistsError:
@@ -100,48 +104,66 @@ def create_state(con,schema,parent_path):
 		else:
 			print(f'Directory {sd_path} created')
 
-	# TODO put required files into the context directory
-	# TODO ReportingUnit.txt
-	fill_reportingunit_file(con,schema,f'{state_path}context/ReportingUnit.txt',
-							f'{parent_path}context_templates/ReportingUnit.txt')
-	# TODO Office.txt
+	# TODO ensure context directory has what it needs
+	ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
+	standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
+
+	# TODO pull necessary enumeration from db: ReportingUnitType
+	fill_context_file(os.path.join(state_path,'context'),
+					  os.path.join(path_to_states,'context_templates'),
+						'ReportingUnit',standard_ru_types,'ReportingUnitType')
+	# TODO Office.txt -- get rid of ElectionDistrictType in Office.txt, will pull from ReportingUnit
+		# TODO check that each Office's ReportingUnit is in the ReportingUnit file.
 	# TODO Party.txt
 	# TODO remark
+	# initialize the state
+	ss = sf.State(state_name,path_to_states)
+	return ss
+
+
+def create_state(con,schema,parent_path):
+	"""walk user through state creation, return State object"""
+	# TODO
+
+	# TODO check alphanumeric only
+
 
 	# initialize state
 	ss = sf.State(state_name,state_path)
 	return ss
 
 
-def fill_reportingunit_file(con,schema,ru_fp,template_file_path,sep='\t'):
+def fill_context_file(context_path,template_dir_path,element,test_list,test_field,sep='\t'):
+	template_file_path = os.path.join(template_dir_path,f'{element}.txt')
 	template = pd.read_csv(template_file_path,sep=sep,header=0,dtype=str)
-	ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
-	standard_type_set = set(ru_type[ru_type.Txt != 'other']['Txt'])
-	other_ru_idx = ru_type[ru_type.Txt == 'other'].index.to_list()[0]
-	# TODO create file if it doesn't exist
-	if not os.path.isfile(ru_fp):
+	context_file = os.path.join(context_path,f'{element}.txt')
+	if not os.path.isfile(context_file):
 		# create file with just header row
-		template.iloc[0:0].to_csv(ru_fp)
+		template.iloc[0:0].to_csv(context_file,index=None,sep=sep)
 	in_progress = 'y'
 	while in_progress == 'y':
-		# TODO check format of file
-		ru = pd.read_csv(ru_fp,sep=sep,header=0,type=str)
-		if ru.columns != template.columns:
-			print(f'WARNING: {ru_fp} is not in the correct format.')		# TODO refine error msg?
-			input('Please correct the file and hit return to continue.')
+		# check format of file
+		context_df = pd.read_csv(context_file,sep=sep,header=0,dtype=str)
+		if not context_df.columns.to_list() == template.columns.to_list():
+			print(f'WARNING: {context_file} is not in the correct format.')		# TODO refine error msg?
+			input('Please correct the file and hit return to continue.\n')
 		else:
 			# report contents of file
-			print(f'Current contents of {ru_fp}:\n{ru}')
-			if not set(ru.ReportingUnitType).issubset(standard_type_set):
-				print('\tNote non-standard ReportingUnitTypes:')
-				for rut in set(ru.ReportingUnitType):
-					if rut not in standard_type_set: print(rut)
+			print(f'\nCurrent contents of {context_file}:\n{context_df}')
 
-			# TODO invite input
-			in_progress = input(f'Would you like to alter {ru_fp} (y/n)?')
+			# check enum conditions
+			if not set(context_df[test_field]).issubset(test_list):
+				print(f'\tNote non-standard {test_field}s:')
+				for rut in set(context_df.ReportingUnitType):
+					if rut not in test_list: print(f'\t\t{rut}')
+				print(f'\tUse standard {test_field}s where appropriate:')
+				print(f'\t\t{",".join(test_list)}')
+
+			# invite input
+			in_progress = input(f'Would you like to alter {context_file} (y/n)?\n')
 			if in_progress == 'y':
 				input('Make alterations, then hit return to continue')
-	return
+	return context_df
 
 
 def pick_munger(path_to_munger_dir='../mungers/',column_list=None):
@@ -170,10 +192,8 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile):
 	Session = sessionmaker(bind=eng)
 	new_df_session = Session()
 
-	# TODO check whether db_namehas correct cdf format; if so, don't recreate
-	db_cdf.create_common_data_format_tables(new_df_session,None,dirpath='CDF_schema_def_info/',delete_existing=False)
 
-	state = pick_state(new_df_session.bind,None)
+	state = pick_state(new_df_session.bind,None,path_to_states=os.path.join(project_root,'local_data'))
 
 	election = pick_election(new_df_session,None)
 
@@ -196,8 +216,9 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile):
 	return
 
 if __name__ == '__main__':
-	raw_file = '../../local_data/NC/data/2018g/nc_general/results_pct_20181106.txt'
+	project_root = os.getcwd().split('election_anomaly')[0]
+	raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
 	raw_file_sep = '\t'
-	db_paramfile = '../../local_data/database.ini'
+	db_paramfile = os.path.join(project_root,'local_data/database.ini')
 	new_datafile(raw_file, raw_file_sep, db_paramfile)
 	print('Done! (user_interface)')
