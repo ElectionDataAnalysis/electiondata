@@ -50,8 +50,8 @@ if __name__ == '__main__':
     # initialize state and create database for it (if not already exists)
     default = 'NC'
     abbr = input(
-        'Enter short name for your state/district/territory (only alphanumeric and underscore, no spaces, default is ' + default + ')\n'
-    ) or default
+        'Enter short name for your state/district/territory (only alphanumeric and underscore, no spaces, '
+        'default is ' + default + ')\n') or default
     print('Creating instance of State for {}'.format(abbr))
     # get absolute path to local_data directory
     current_dir=os.getcwd()
@@ -87,8 +87,9 @@ if __name__ == '__main__':
 
         # %% fill enumeration tables
         print('\tFilling enumeration tables')
-        CDF.fill_cdf_enum_tables(session,'cdf')
+        enumeration_tables = CDF.fill_cdf_enum_tables(session,'cdf')
         print('Loading state context info into CDF schema')
+
         munge_routines.context_schema_to_cdf(session,s,enumeration_tables)
         session.commit()
 

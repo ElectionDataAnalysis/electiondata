@@ -103,7 +103,7 @@ def fill_cdf_enum_tables(session,schema,dirpath= 'CDF_schema_def_info/'):
         dframe = pd.read_csv('{}enumerations/{}.txt'.format(dirpath,f),header=None,names = [txt_col])
         dframe.to_sql(f,session.bind,schema=schema,if_exists='append',index=False)
     session.flush()
-    return
+    return e_table_list
 
 if __name__ == '__main__':
     eng,meta = dbr.sql_alchemy_connect(paramfile='../../../local_data/database.ini')
