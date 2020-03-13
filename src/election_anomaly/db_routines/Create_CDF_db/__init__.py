@@ -16,10 +16,15 @@ import pandas as pd
 
 def create_common_data_format_tables(session,schema,dirpath='CDF_schema_def_info/',delete_existing=False):
     """ schema example: 'cdf'; Creates cdf tables in the given schema
+    (or directly in the db if schema == None)
     e_table_list is a list of enumeration tables for the CDF, e.g., ['ReportingUnitType','CountItemType', ... ]
+    Does *not* fill enumeration tables.
     """
     if schema:
         create_schema(session, schema,delete_existing)
+        schema_string = f'{schema}.'    # TODO remove when schemas are all gone
+    else:
+        schema_string = ''   # TODO remove when schemas are all gone
     eng = session.bind
     metadata = MetaData(bind=eng,schema=schema)
 
@@ -28,14 +33,14 @@ def create_common_data_format_tables(session,schema,dirpath='CDF_schema_def_info
 
     # create enumeration tables and push to db
     print('Creating enumeration tables')
-    e_table_list = enum_table_list()
+    e_table_list = enum_table_list(dirpath)
     for t in e_table_list:
         if t=='BallotMeasureSelection':
             txt_col='Selection'
         else:
             txt_col='Txt'
-        exec('Table(\'{}\',metadata, Column(\'Id\',Integer, id_seq,server_default=id_seq.next_value(),'
-             'primary_key=True), Column(\'{}\',String),schema = \'{}\')'.format(t,txt_col,schema))
+        Table(t,metadata,Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
+              Column(txt_col,String),schema=schema)
     metadata.create_all()
 
     # create all other tables, in set order because of foreign keys
@@ -44,7 +49,8 @@ def create_common_data_format_tables(session,schema,dirpath='CDF_schema_def_info
                   'CandidateSelection', 'ElectionContestJoin', 'ComposingReportingUnitJoin',
                   'BallotMeasureContestSelectionJoin', 'CandidateContestSelectionJoin']
 
-    assert set(table_list) == set(os.listdir('{}Tables'.format(dirpath))), 'Set of tables to create does not match set of tables in {}Tables directory'.format(dirpath)
+    assert set(table_list) == set(os.listdir('{}Tables'.format(dirpath))), \
+        f'Set of tables to create does not match set of tables in {dirpath}Tables directory'
 
     for element in table_list:
         with open('{}Tables/{}/short_name.txt'.format(dirpath,element),'r') as f:
@@ -58,17 +64,19 @@ def create_common_data_format_tables(session,schema,dirpath='CDF_schema_def_info
 
         field_col_list = [Column(r['fieldname'],eval(r['datatype'])) for i,r in df['fields'].iterrows()]
         null_constraint_list = [CheckConstraint('"{}" IS NOT NULL'.format(r['not_null_fields']),name='{}_{}_not_null'.format(short_name,r['not_null_fields'])) for i,r in df['not_null_fields'].iterrows()]
-        other_elt_list = [Column(r['fieldname'],ForeignKey('cdf.{}.Id'.format(r['refers_to']))) for i,r in df['other_element_refs'].iterrows()]
+        other_elt_list = [Column(r['fieldname'],ForeignKey(f'{schema_string}{r["refers_to"]}.Id'))
+            for i,r in df['other_element_refs'].iterrows()]
         # unique constraints
         df['unique_constraints']['arg_list'] = df['unique_constraints']['unique_constraint'].str.split(',')
         unique_constraint_list = [UniqueConstraint( * r['arg_list'],name='{}_ux{}'.format(short_name,i)) for i,r in df['unique_constraints'].iterrows()]
 
-        enum_id_list =  [Column('{}_Id'.format(r['enumeration']),ForeignKey('cdf.{}.Id'.format(r['enumeration']))) for i,r in df['enumerations'].iterrows()]
+        enum_id_list = [Column('{}_Id'.format(r['enumeration']),ForeignKey(f'{schema_string}{r["enumeration"]}.Id'))
+                         for i,r in df['enumerations'].iterrows()]
         enum_other_list = [Column('Other{}'.format(r['enumeration']),String) for i,r in df['enumerations'].iterrows()]
         Table(element,metadata,
           Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
               * field_col_list, * enum_id_list, * enum_other_list,
-              * other_elt_list, * null_constraint_list, * unique_constraint_list,schema='cdf')
+              * other_elt_list, * null_constraint_list, * unique_constraint_list,schema=schema)
 
     metadata.create_all()
     session.flush()
@@ -83,9 +91,10 @@ def enum_table_list(dirpath= 'CDF_schema_def_info/'):
     enum_table_list = [f[:-4] for f in file_list]
     return enum_table_list
 
-def fill_cdf_enum_tables(session,meta,schema,e_table_list=['ReportingUnitType','IdentifierType','ElectionType','CountItemStatusCountItemType'],dirpath= 'CDF_schema_def_info/'):
+def fill_cdf_enum_tables(session,schema,dirpath= 'CDF_schema_def_info/'):
     """takes lines of text from file and inserts each line into the txt field of the enumeration table"""
     if not dirpath[-1] == '/': dirpath += '\''
+    e_table_list = enum_table_list(dirpath)
     for f in e_table_list:
         if f == 'BallotMeasureSelection':
             txt_col='Selection'
@@ -103,7 +112,7 @@ if __name__ == '__main__':
 
     schema='test'
     metadata = create_common_data_format_tables(session,schema,dirpath ='../../CDF_schema_def_info/')
-    fill_cdf_enum_tables(session,metadata,schema,e_table_list,dirpath='../../CDF_schema_def_info/')
+    fill_cdf_enum_tables(session,schema,dirpath='../../CDF_schema_def_info/')
     print ('Done!')
 
     eng.dispose()
