@@ -105,14 +105,18 @@ def pick_state(con,schema,path_to_states='../local_data/'):
 			print(f'Directory {sd_path} created')
 
 	# TODO ensure context directory has what it needs
-	ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
-	standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
 
 	# TODO pull necessary enumeration from db: ReportingUnitType
-	fill_context_file(os.path.join(state_path,'context'),
+	ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
+	standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
+	ru = fill_context_file(os.path.join(state_path,'context'),
 					  os.path.join(path_to_states,'context_templates'),
 						'ReportingUnit',standard_ru_types,'ReportingUnitType')
 	# TODO Office.txt -- get rid of ElectionDistrictType in Office.txt, will pull from ReportingUnit
+	ru_list = ru['Name'].to_list()
+	fill_context_file(os.path.join(state_path,'context'),
+					  os.path.join(path_to_states,'context_templates'),
+						'Office',ru_list,'ElectionDistrict',test_required=True,test_element='ReportingUnit')
 		# TODO check that each Office's ReportingUnit is in the ReportingUnit file.
 	# TODO Party.txt
 	# TODO remark
@@ -133,7 +137,9 @@ def create_state(con,schema,parent_path):
 	return ss
 
 
-def fill_context_file(context_path,template_dir_path,element,test_list,test_field,sep='\t'):
+def fill_context_file(context_path,template_dir_path,element,test_list,test_field,reportingunittype_list=None,sep='\t'):
+	if element == 'Office':
+		assert reportingunittype_list, 'When processing Offices, need to pass non-empty reportingunittype_list'
 	template_file_path = os.path.join(template_dir_path,f'{element}.txt')
 	template = pd.read_csv(template_file_path,sep=sep,header=0,dtype=str)
 	context_file = os.path.join(context_path,f'{element}.txt')
@@ -145,19 +151,34 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 		# check format of file
 		context_df = pd.read_csv(context_file,sep=sep,header=0,dtype=str)
 		if not context_df.columns.to_list() == template.columns.to_list():
-			print(f'WARNING: {context_file} is not in the correct format.')		# TODO refine error msg?
+			print(f'WARNING: {element}.txt is not in the correct format.')		# TODO refine error msg?
 			input('Please correct the file and hit return to continue.\n')
 		else:
 			# report contents of file
 			print(f'\nCurrent contents of {context_file}:\n{context_df}')
 
-			# check enum conditions
-			if not set(context_df[test_field]).issubset(test_list):
-				print(f'\tNote non-standard {test_field}s:')
-				for rut in set(context_df.ReportingUnitType):
-					if rut not in test_list: print(f'\t\t{rut}')
-				print(f'\tUse standard {test_field}s where appropriate:')
-				print(f'\t\t{",".join(test_list)}')
+			# check test conditions
+			if element == 'Office':	# need to reload from ReportingUnit.txt
+				test_list = pd.read_csv(os.path.join(context_path,'ReportingUnit.txt'),
+									sep=sep,header=0,dtype=str)['Name'].to_list()
+			bad_set = {x for x in context_df[test_field] if x not in new_test_list}
+			if len(bad_set) > 0:	# if test condition fails
+				if element == 'Office':		# Office.ElectionDistrict must be in ReportingUnit.Name
+					print(f'The ElectionDistrict for each Office must be listed in ReportingUnit.txt.\n'
+						  f'Here are the {test_field}s in Office.txt that fail this condition:\n')
+					print(f'{",".join(bad_set)})')
+					print(f'To solve the problem, you must either alter the Name column in ReportingUnit.txt '
+						  f'to add/correct the missing items,'
+						  f'or remove/correct the {test_field} column in the offending row of Office.txt ')
+					edit_test_element = input(f'Would you like to edit ReportingUnit.txt (y/n)?\n')
+					if edit_test_element:
+						fill_context_file(context_path,template_dir_path,'ReportingUnit',standard_ru_types,'ReportingUnitType')
+				else:
+					print(f'\tStandard {test_field}s are not required, but you probably want to use them when you can.'
+						  f'\n\tYour file has non-standard {test_field}s:')
+					for rut in bad_set: print(f'\t\t{rut}')
+					print(f'\tStandard {test_field}s are:')
+					print(f'\t\t{",".join(test_list)}')
 
 			# invite input
 			in_progress = input(f'Would you like to alter {context_file} (y/n)?\n')
