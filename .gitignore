@@ -4,6 +4,12 @@ src/election_anomaly/__pycache__
 src/local_data/NC/data
 src/local_data/NC/output
 src/local_data/NC/tmp
+src/local_data/MI/data
+src/local_data/MI/output
+src/mungers/nc_general/unmatched_Party.txt
+src/mungers/mi_general/unmatched_ReportingUnit.txt
+src/mungers/mi_general/unmatched_Party.txt
+src/local_data/MI/tmp
 src/local_data/MD/data
 src/local_data/MD/output
 src/local_data/FL/data
