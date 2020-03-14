@@ -66,8 +66,11 @@ class State:
             f'Error: Missing files in {os.path.join(self.path_to_state_dir,"context")}:\n{file_missing_list}'
 
 
-
 class Munger:
+    def raw_cols_match(self,df):
+        cols = self.raw_columns.name
+        return set(df.columns).issubset(cols)
+
     def check_new_results_dataset(self,df,state,sess,contest_type):
         """<df> is a results dataframe of a single <contest_type>;
         this routine should add what's necessary to the munger to treat the dataframe,
@@ -79,11 +82,10 @@ class Munger:
         if check_ru_type != 'y':
             print('Datafile will not be processed.')
             return
-        cols = self.raw_columns.name
-        assert set(df.columns).issubset(cols), \
-            f"""A column in {df.columns} is missing from {list(cols)} (listed in raw_columns.txt)."""
+        assert self.raw_cols_match(df), \
+            f"""A column in {df.columns} is missing from raw_columns.txt."""
         if contest_type == 'Contest':
-
+            pass    # TODO check for unlisted Offices, give user chance to modify Office.txt
         # note: we don't look for new offices. Must put desired offices into Office.txt in any case
         # TODO where will user be notified of untreated offices?
         # TODO ask for CountItemStatus for datafile (not used yet, as NIST CDF currently attaches it to ReportingUnit, yuck)

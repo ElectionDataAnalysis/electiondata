@@ -140,16 +140,22 @@ def pick_state(con,schema,path_to_states='local_data/',state_name=None):
 	ss = sf.State(state_name,path_to_states)
 	return ss
 
+def create_file_from_template(template_file,new_file,sep='\t'):
+	"""For tab-separated files (or others, using <sep>); does not replace existing file
+	but creates <new_file> with the proper header row
+	taking the headers from the <template_file>"""
+	template = pd.read_csv(template_file,sep=sep,header=0,dtype=str)
+	if not os.path.isfile(new_file):
+		# create file with just header row
+		template.iloc[0:0].to_csv(new_file,index=None,sep=sep)
+	return
 
 def fill_context_file(context_path,template_dir_path,element,test_list,test_field,reportingunittype_list=None,sep='\t'):
 	if element == 'Office':
 		assert reportingunittype_list, 'When processing Offices, need to pass non-empty reportingunittype_list'
-	template_file_path = os.path.join(template_dir_path,f'{element}.txt')
-	template = pd.read_csv(template_file_path,sep=sep,header=0,dtype=str)
 	context_file = os.path.join(context_path,f'{element}.txt')
-	if not os.path.isfile(context_file):
-		# create file with just header row
-		template.iloc[0:0].to_csv(context_file,index=None,sep=sep)
+	template = os.path.join(template_dir_path,f'{element}.txt')
+	create_file_from_template(template,context_file,sep=sep)
 	in_progress = 'y'
 	while in_progress == 'y':
 		# TODO check for dupes
@@ -202,12 +208,14 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 	return context_df
 
 
-def pick_munger(munger_dir='../mungers/',column_list=None):
+def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_munger_templates'):
 	choice_list = os.listdir(munger_dir)
 	for choice in os.listdir(munger_dir):
 		p = os.path.join(munger_dir,choice)
 		if not os.path.isdir(p):	# remove non-directories from list
 			choice_list.remove(choice)
+		elif not os.path.isfile(os.path.join(p,'raw_columns.txt')):
+			pass  # list any munger that doesn't have raw_columns.txt file yet
 		else:
 			# remove from list if columns don't match
 			raw_columns = pd.read_csv(os.path.join(p,'raw_columns.txt'),header=0,dtype=str,sep='\t')
@@ -229,11 +237,26 @@ def pick_munger(munger_dir='../mungers/',column_list=None):
 	else:
 		print(f'Directory {munger_path} created')
 
+	for ff in ['raw_columns.txt','count_columns.txt','cdf_tables.txt','raw_identifiers.txt']:
+		create_file_from_template(os.path.join(os.path.join(munger_dir,ff),
+											   os.path.join(template_dir,ff)))
 	# TODO create/correct raw_columns.txt
-	# TODO create/correct ballot_measure_style.txt
+
+	# create/correct ballot_measure_style.txt
+	bms_idx,bms = pick_one(pd.read_csv(os.path.join(munger_dir,'ballot_measure_style_options.txt'),sep='\t'),
+						   'short_name',item='ballot measure style',required=True)
+	with open(os.path.join(munger_path,'ballot_measure_style.txt'),'w') as f:
+		f.write(bms)
+
 	# TODO create/correct ballot_measure_selections.txt
 	# TODO create/correct count_columns.txt
-	# TODO create/correct atomic_reporting_unit_type.txt
+
+	# create/correct atomic_reporting_unit_type.txt
+	arut_idx,arut = pick_one(pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id'),'Txt',
+									item='\'atomic\' reporting unit type for results file',required=True)
+	with open(os.path.join(munger_path,'atomic_reporting_unit.txt'),'w') as f:
+		f.write(arut)
+
 	# TODO create/correct cdf_tables.txt
 	# TODO create/correct raw_identifiers.txt
 
@@ -280,7 +303,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 
 	raw = pd.read_csv(raw_file,sep=raw_file_sep)
 	column_list = raw.columns.to_list()
-	munger = pick_munger(column_list=column_list,munger_dir=os.path.join(project_root,'mungers'))
+	munger = pick_munger(new_df_session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'))
 
 	bmc_results,cc_results = mr.contest_type_split(raw,munger)
 	contest_type_df = pd.DataFrame([
