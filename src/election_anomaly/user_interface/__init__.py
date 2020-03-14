@@ -3,6 +3,7 @@ import db_routines as dbr
 import db_routines.Create_CDF_db as db_cdf
 import munge_routines as mr
 import pandas as pd
+import numpy as np
 from sqlalchemy.orm import sessionmaker
 import os
 import states_and_files as sf
@@ -32,13 +33,14 @@ def pick_one(df,return_col,item='row',required=False):
 					print(f'Enter an option from the leftmost column. Please try again.')
 			except ValueError:
 				print(f'You must enter a number {req_str}, then hit return. Please try again.')
+	print(f'Chosen {item} is {df.loc[choice,return_col]}\n\n')
 	return choice, df.loc[choice,return_col]
 
 
 def pick_database(paramfile,state_name=None):
 	if state_name:
 		print(f'WARNING: will use db {state_name} '
-			  f'and state directory {state_name}, both of which are assumed to exist.')
+			  f'and state directory {state_name}, both of which are assumed to exist.\n\n')
 		return state_name
 	con = dbr.establish_connection(paramfile=paramfile)  # TODO error handling for paramfile
 	print(f'Connection established to database {con.info.dbname}')
@@ -209,6 +211,7 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 
 
 def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_munger_templates'):
+	"""pick (or create) a munger """
 	choice_list = os.listdir(munger_dir)
 	for choice in os.listdir(munger_dir):
 		p = os.path.join(munger_dir,choice)
@@ -238,24 +241,58 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_mu
 		print(f'Directory {munger_path} created')
 
 	for ff in ['raw_columns.txt','count_columns.txt','cdf_tables.txt','raw_identifiers.txt']:
-		create_file_from_template(os.path.join(os.path.join(munger_dir,ff),
-											   os.path.join(template_dir,ff)))
-	# TODO create/correct raw_columns.txt
+		create_file_from_template(os.path.join(template_dir,ff),
+											   os.path.join(munger_path,ff))
+	# write column_list to raw_columns.txt
+	if column_list:
+		# np.savetxt(os.path.join(munger_path,ff),np.asarray([[x] for x in column_list]),header='name')
+		pd.DataFrame(np.asarray([[x] for x in column_list]),columns=['name']).to_csv(
+			os.path.join(munger_path,'raw_columns.txt'),sep='\t',index=False)
+	else:
+		input(f"""The file raw_columns.txt should have one row for each column 
+			in the raw datafile to be processed with the munger {munger_name}. 
+			The columns must be listed in the order in which they appear in the raw datafile'
+			Check the file and correct as necessary. Then hit return to continue.\n""")
 
-	# create/correct ballot_measure_style.txt
-	bms_idx,bms = pick_one(pd.read_csv(os.path.join(munger_dir,'ballot_measure_style_options.txt'),sep='\t'),
-						   'short_name',item='ballot measure style',required=True)
-	with open(os.path.join(munger_path,'ballot_measure_style.txt'),'w') as f:
-		f.write(bms)
+	# create ballot_measure_style.txt
+	bmso_df = pd.read_csv(os.path.join(munger_dir,'ballot_measure_style_options.txt'),sep='\t')
+	try:
+		with open(os.path.join(munger_path,'ballot_measure_style.txt'),'r') as f:
+			bms=f.read()
+		assert bms in bmso_df['short_name']
+		change = input(f'Ballot measure style is {bms}. Do you need to change it (y/n)?')
+	except AssertionError:
+		print('Ballot measure style not recognized. Please pick a new one.')
+		change = 'y'
+	except FileNotFoundError:
+		change = 'y'
+	if change == 'y':
+		bms_idx,bms = pick_one(bmso_df,'short_name',item='ballot measure style',required=True)
+		with open(os.path.join(munger_path,'ballot_measure_style.txt'),'w') as f:
+			f.write(bms)
 
-	# TODO create/correct ballot_measure_selections.txt
-	# TODO create/correct count_columns.txt
+	# create/correct count_columns.txt
+		print(f"""The file count_columns.txt should have one row for each vote-count column  
+			in the raw datafile to be processed with the munger {munger_name}. 
+			Each row should have the RawName of the column and the CountItemType. 
+			Standard CountItemTypes are not required, but are recommended:""")
+		cit = pd.read_sql_table('CountItemType',sess.bind)
+		print(cit['Txt'].to_list())
+		input('Check the file and correct as necessary.  Then hit return to continue.\n')
+		# TODO check file against standard CountItemTypes?
+	# create atomic_reporting_unit_type.txt
 
-	# create/correct atomic_reporting_unit_type.txt
-	arut_idx,arut = pick_one(pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id'),'Txt',
-									item='\'atomic\' reporting unit type for results file',required=True)
-	with open(os.path.join(munger_path,'atomic_reporting_unit.txt'),'w') as f:
-		f.write(arut)
+	rut_df = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
+	try:
+		with open(os.path.join(munger_path,'atomic_reporting_unit_type.txt'),'r') as f:
+			arut=f.read()
+		change = input(f'Atomic ReportingUnit type is {arut}. Do you need to change it (y/n)?')
+	except FileNotFoundError:
+		change = 'y'
+	if change == 'y':
+		arut_idx,arut = pick_one(rut_df,'Txt',item='\'atomic\' reporting unit type for results file',required=True)
+		with open(os.path.join(munger_path,'atomic_reporting_unit.txt'),'w') as f:
+			f.write(arut)
 
 	# TODO create/correct cdf_tables.txt
 	# TODO create/correct raw_identifiers.txt
@@ -286,6 +323,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 	state = pick_state(new_df_session.bind,None,
 					   path_to_states=os.path.join(project_root,'local_data'),state_name=state_name)
 
+	print('Specify the election:')
 	election_idx, election = pick_one(pd.read_sql_table('Election',new_df_session.bind,index_col='Id'),'Name','election')
 	if election_idx is None:
 		# create record in Election table
@@ -303,7 +341,9 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 
 	raw = pd.read_csv(raw_file,sep=raw_file_sep)
 	column_list = raw.columns.to_list()
-	munger = pick_munger(new_df_session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'))
+	print('Specify the munger:')
+	munger = pick_munger(new_df_session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
+						 template_dir=os.path.join(project_root,'mungers/zzz_munger_templates'))
 
 	bmc_results,cc_results = mr.contest_type_split(raw,munger)
 	contest_type_df = pd.DataFrame([

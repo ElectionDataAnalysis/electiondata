@@ -82,6 +82,15 @@ class Munger:
         if check_ru_type != 'y':
             print('Datafile will not be processed.')
             return
+
+        print(f'WARNING: This munger assumes ballot measure style {self.ballot_measure_style}.')
+        # TODO add description of ballot measure style option
+        print('\tIf other behavior is desired, create or use another munger.')
+        check_ru_type = input('\tProceed with munger {} (y/n)?\n'.format(self.name))
+        if check_ru_type != 'y':
+            print('Datafile will not be processed.')
+            return
+
         assert self.raw_cols_match(df), \
             f"""A column in {df.columns} is missing from raw_columns.txt."""
         if contest_type == 'Contest':
@@ -188,7 +197,7 @@ class Munger:
 
     def __init__(self,dir_path,cdf_schema_def_dir='CDF_schema_def_info/'):
         assert os.path.isdir(dir_path),f'{dir_path} is not a directory'
-        for ff in ['cdf_tables.txt','atomic_reporting_unit_type.txt','count_columns.txt']:
+        for ff in ['cdf_tables.txt','atomic_reporting_unit.txt','count_columns.txt']:
             assert os.path.isfile(os.path.join(dir_path,ff)),\
                 f'Directory {dir_path} does not contain file {ff}'
         self.name=dir_path.split('/')[-1]    # e.g., 'nc_general'
