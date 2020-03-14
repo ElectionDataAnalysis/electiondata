@@ -195,44 +195,44 @@ class Munger:
         return unmatched
 
     def __init__(self,dir_path,cdf_schema_def_dir='CDF_schema_def_info/'):
-        assert os.path.isdir(dir_path),'Not a directory: {}'.format(dir_path)
+        assert os.path.isdir(dir_path),f'{dir_path} is not a directory'
         for ff in ['cdf_tables.txt','atomic_reporting_unit_type.txt','count_columns.txt']:
-            assert os.path.isfile('{}{}'.format(dir_path,ff)),\
+            assert os.path.isfile(os.path.join(dir_path,ff)),\
                 f'Directory {dir_path} does not contain file {ff}'
         self.name=dir_path.split('/')[-2]    # 'nc_general'
 
-        if dir_path[-1] != '/':
+        if dir_path[-1] != '/': # TODO use os.path.join everywhere to get rid of this
             dir_path += '/'  # make sure path ends in a slash
         self.path_to_munger_dir=dir_path
 
         # read raw_identifiers file into a table
         # note no natural index column
-        self.raw_identifiers=pd.read_csv('{}raw_identifiers.txt'.format(dir_path),sep='\t')
+        self.raw_identifiers=pd.read_csv(os.path.join(dir_path,'raw_identifiers.txt'),sep='\t')
 
         # define dictionary to change any column names that match internal CDF names
-        col_d = {t:'{}_{}'.format(t,self.name)
-                 for t in os.listdir(f'{cdf_schema_def_dir}Tables')}
+        col_d = {t:f'{t}_{self.name}'
+                 for t in os.listdir(os.path.join(cdf_schema_def_dir,'Tables'))}
         self.rename_column_dictionary=col_d
 
         # read raw columns from file (renaming if necessary)
-        self.raw_columns = pd.read_csv('{}raw_columns.txt'.format(dir_path),sep='\t').replace({'name':col_d})
+        self.raw_columns = pd.read_csv(os.path.join(dir_path,'raw_columns.txt'),sep='\t').replace({'name':col_d})
 
         # read cdf tables and rename in ExternalIdentifiers col if necessary
-        cdft = pd.read_csv('{}cdf_tables.txt'.format(dir_path),sep='\t',index_col='cdf_element')  # note index
+        cdft = pd.read_csv(os.path.join(dir_path,'cdf_tables.txt'),sep='\t',index_col='cdf_element')  # note index
         for k in col_d.keys():
             cdft['raw_identifier_formula'] = cdft['raw_identifier_formula'].str.replace(
                 '\<{}\>'.format(k),'<{}>'.format(col_d[k]))
         self.cdf_tables = cdft
 
         # determine how to treat ballot measures (ballot_measure_style)
-        bms=pd.read_csv('{}ballot_measure_style.txt'.format(dir_path),sep='\t')
+        bms=pd.read_csv(os.path.join(dir_path,'ballot_measure_style.txt'),sep='\t')
         assert 'short_name' in bms.columns, 'ballot_measure_style.txt does not have required column \'short_name\''
         assert 'truth' in bms.columns, 'ballot_measure_style.txt does not have required column \'truth\''
         self.ballot_measure_style=bms[bms['truth']]['short_name'].iloc[0]
         # TODO error handling. This takes first line  marked "True"
 
         # determine whether the file has columns for counts by vote types, or just totals
-        count_columns=pd.read_csv('{}count_columns.txt'.format(dir_path),sep='\t').replace({'RawName':col_d})
+        count_columns=pd.read_csv(os.path.join(dir_path,'count_columns.txt)'),sep='\t').replace({'RawName':col_d})
         self.count_columns=count_columns
         if list(count_columns['CountItemType'].unique()) == ['total']:
             self.totals_only=True
@@ -240,7 +240,7 @@ class Munger:
             self.totals_only=False
 
         if self.ballot_measure_style == 'yes_and_no_are_candidates':
-            with open('{}ballot_measure_selections.txt'.format(dir_path),'r') as ff:
+            with open(os.path.join(dir_path,'ballot_measure_selections.txt'),'r') as ff:
                 selection_list = ff.readlines()
             self.ballot_measure_selection_list = [x.strip() for x in selection_list]
 
@@ -250,7 +250,7 @@ class Munger:
         else:
             self.ballot_measure_selection_list=None  # TODO is that necessary?
 
-        with open('{}atomic_reporting_unit_type.txt'.format(dir_path),'r') as ff:
+        with open(os.path.join(dir_path,'atomic_reporting_unit_type.txt'),'r') as ff:
             self.atomic_reporting_unit_type = ff.readline()
 
 

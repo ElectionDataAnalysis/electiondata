@@ -229,7 +229,8 @@ def pick_munger(munger_dir='../mungers/',column_list=None):
 	# TODO create/correct cdf_tables.txt
 	# TODO create/correct raw_identifiers.txt
 
-	return munger_name
+	munger = sf.Munger(munger_path)
+	return munger
 
 
 def create_munger(column_list=None):
