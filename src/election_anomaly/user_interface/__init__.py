@@ -109,7 +109,7 @@ def pick_state(con,schema,path_to_states='../local_data/'):
 
 	# ensure context directory has what it needs
 	context_file_list = ['Office.txt','Party.txt','ReportingUnit.txt','remark.txt']
-	if not all([os.path.join(state_path,'context',x) for x in context_file_list]):
+	if not all([os.path.isfile(os.path.join(state_path,'context',x)) for x in context_file_list]):
 		# pull necessary enumeration from db: ReportingUnitType
 		ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
 		standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
