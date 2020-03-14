@@ -116,7 +116,6 @@ def pick_state(con,schema,path_to_states='../local_data/'):
 		ru = fill_context_file(os.path.join(state_path,'context'),
 						  os.path.join(path_to_states,'context_templates'),
 							'ReportingUnit',standard_ru_types,'ReportingUnitType')
-		# TODO Office.txt -- get rid of ElectionDistrictType in Office.txt, will pull from ReportingUnit
 		ru_list = ru['Name'].to_list()
 		fill_context_file(os.path.join(state_path,'context'),
 						  os.path.join(path_to_states,'context_templates'),
