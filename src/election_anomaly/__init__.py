@@ -59,7 +59,7 @@ if __name__ == '__main__':
     s = sf.State(abbr,'{}/local_data/'.format(path_to_src_dir))
     create_db = input('Make database and schemas for {} (y/n)?\n'.format(abbr))
     if create_db == 'y':
-        s.create_db_and_schemas()
+        s.create_db()
 
     # initialize main session for connecting to db
     eng, meta_generic = dbr.sql_alchemy_connect(db_name=s.short_name)

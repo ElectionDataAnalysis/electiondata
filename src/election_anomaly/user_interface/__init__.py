@@ -34,7 +34,11 @@ def pick_one(df,return_col,item='row',required=False):
 	return choice, df.loc[choice,return_col]
 
 
-def pick_database(paramfile):
+def pick_database(paramfile,state_name=None):
+	if state_name:
+		print(f'WARNING: will use db {state_name} '
+			  f'and state directory {state_name}, both of which are assumed to exist.')
+		return state_name
 	con = dbr.establish_connection(paramfile=paramfile)  # TODO error handling for paramfile
 	print(f'Connection established to database {con.info.dbname}')
 	cur = con.cursor()
@@ -71,62 +75,65 @@ def pick_database(paramfile):
 	return desired_db
 
 
-def pick_state(con,schema,path_to_states='../local_data/'):
-	"""Returns a State object"""
-	choice_list = [x for x in os.listdir(path_to_states) if os.path.isdir(os.path.join(path_to_states,x))]
-	state_df = pd.DataFrame(choice_list,columns=['State'])
-	state_idx,state_name = pick_one(state_df,'State', item='state')
+def pick_state(con,schema,path_to_states='local_data/',state_name=None):
+	"""Returns a State object.
+	If <state_name> is given, this just initializes based on info
+	in the folder with that name; """
+	if state_name is None:
+		choice_list = [x for x in os.listdir(path_to_states) if os.path.isdir(os.path.join(path_to_states,x))]
+		state_df = pd.DataFrame(choice_list,columns=['State'])
+		state_idx,state_name = pick_one(state_df,'State', item='state')
 
-	if state_idx is None:
-		# user chooses state short_name
-		state_name = input('Enter a short name (alphanumeric only, no spaces) for your state '
-						   '(e.g., \'NC\')\n')
-	state_path = os.path.join(path_to_states,state_name)
+		if state_idx is None:
+			# user chooses state short_name
+			state_name = input('Enter a short name (alphanumeric only, no spaces) for your state '
+							   '(e.g., \'NC\')\n')
+		state_path = os.path.join(path_to_states,state_name)
 
-	# create state directory
-	try:
-		os.mkdir(state_path)
-	except FileExistsError:
-		print(f'Directory {state_path} already exists, will be preserved')
-	else:
-		print(f'Directory {state_path} created')
-
-	# create subdirectories
-	subdir_list = ['context','data','output']
-	for sd in subdir_list:
-		sd_path = os.path.join(state_path,sd)
+		# create state directory
 		try:
-			os.mkdir(sd_path)
+			os.mkdir(state_path)
 		except FileExistsError:
-			print(f'Directory {sd_path} already exists, will be preserved')
+			print(f'Directory {state_path} already exists, will be preserved')
 		else:
-			print(f'Directory {sd_path} created')
+			print(f'Directory {state_path} created')
 
-	# ensure context directory has what it needs
-	context_file_list = ['Office.txt','Party.txt','ReportingUnit.txt','remark.txt']
-	if not all([os.path.isfile(os.path.join(state_path,'context',x)) for x in context_file_list]):
-		# pull necessary enumeration from db: ReportingUnitType
-		ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
-		standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
-		ru = fill_context_file(os.path.join(state_path,'context'),
-						  os.path.join(path_to_states,'context_templates'),
-							'ReportingUnit',standard_ru_types,'ReportingUnitType')
-		ru_list = ru['Name'].to_list()
-		fill_context_file(os.path.join(state_path,'context'),
-						  os.path.join(path_to_states,'context_templates'),
-							'Office',ru_list,'ElectionDistrict',reportingunittype_list=standard_ru_types)
-		# Party.txt
-		fill_context_file(os.path.join(state_path,'context'),
-						  os.path.join(path_to_states,'context_templates'),
-							'Party',None,None)
-		# TODO remark
-		remark_path = os.path.join(state_path,'context','remark.txt')
-		open(remark_path,'a').close()	# creates file if it doesn't exist already
-		with open(remark_path,'r') as f:
-			remark = f.read()
-		print(f'Current contents of remark.txt is:\n{remark}\n')
-		input(f'Please add or correct anything that user should know about the state {state_name}.'
-					f'Then hit return to continue.')
+		# create subdirectories
+		subdir_list = ['context','data','output']
+		for sd in subdir_list:
+			sd_path = os.path.join(state_path,sd)
+			try:
+				os.mkdir(sd_path)
+			except FileExistsError:
+				print(f'Directory {sd_path} already exists, will be preserved')
+			else:
+				print(f'Directory {sd_path} created')
+
+		# ensure context directory has what it needs
+		context_file_list = ['Office.txt','Party.txt','ReportingUnit.txt','remark.txt']
+		if not all([os.path.isfile(os.path.join(state_path,'context',x)) for x in context_file_list]):
+			# pull necessary enumeration from db: ReportingUnitType
+			ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
+			standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
+			ru = fill_context_file(os.path.join(state_path,'context'),
+							  os.path.join(path_to_states,'context_templates'),
+								'ReportingUnit',standard_ru_types,'ReportingUnitType')
+			ru_list = ru['Name'].to_list()
+			fill_context_file(os.path.join(state_path,'context'),
+							  os.path.join(path_to_states,'context_templates'),
+								'Office',ru_list,'ElectionDistrict',reportingunittype_list=standard_ru_types)
+			# Party.txt
+			fill_context_file(os.path.join(state_path,'context'),
+							  os.path.join(path_to_states,'context_templates'),
+								'Party',None,None)
+			# TODO remark
+			remark_path = os.path.join(state_path,'context','remark.txt')
+			open(remark_path,'a').close()	# creates file if it doesn't exist already
+			with open(remark_path,'r') as f:
+				remark = f.read()
+			print(f'Current contents of remark.txt is:\n{remark}\n')
+			input(f'Please add or correct anything that user should know about the state {state_name}.'
+						f'Then hit return to continue.')
 
 	# initialize the state
 	ss = sf.State(state_name,path_to_states)
@@ -229,7 +236,7 @@ def pick_munger(munger_dir='../mungers/',column_list=None):
 	# TODO create/correct cdf_tables.txt
 	# TODO create/correct raw_identifiers.txt
 
-	munger = sf.Munger(munger_path)
+	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(project_root,'election_anomaly/CDF_schema_def_info'))
 	return munger
 
 
@@ -240,19 +247,20 @@ def create_munger(column_list=None):
 	return munger
 
 
-def new_datafile(raw_file,raw_file_sep,db_paramfile):
+def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
 	# connect to postgres to create schema if necessary
 
-	db_name = pick_database(db_paramfile)
+	db_name = pick_database(db_paramfile,state_name=state_name)
 
 	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
 	Session = sessionmaker(bind=eng)
 	new_df_session = Session()
 
-	state = pick_state(new_df_session.bind,None,path_to_states=os.path.join(project_root,'local_data'))
+	state = pick_state(new_df_session.bind,None,
+					path_to_states=os.path.join(project_root,'local_data'),state_name=state_name)
 
 	election_idx, election = pick_one(pd.read_sql_table('Election',new_df_session.bind,index_col='Id'),'Name','election')
 	if election_idx is None:
@@ -273,12 +281,9 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile):
 	column_list = raw.columns.to_list()
 	munger = pick_munger(column_list=column_list,munger_dir=os.path.join(project_root,'mungers'))
 
-	if munger == None:
-		munger = create_munger(column_list=column_list)
-
 	# TODO once munger is chosen, walk user through steps to make sure munger
 	# TODO can handle datafile
-	munger.check_new_datafile(raw_file,state,new_df_session)
+	munger.check_new_datafile(raw,state,new_df_session)
 
 	contest_type_df = pd.DataFrame([
 		['Candidate'], ['Ballot Measure'], ['Both Candidate and Ballot Measure']
@@ -289,8 +294,12 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile):
 
 if __name__ == '__main__':
 	project_root = os.getcwd().split('election_anomaly')[0]
+
+	state_name = 'NC_test2'
+	# state_name = None
 	raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
 	raw_file_sep = '\t'
 	db_paramfile = os.path.join(project_root,'local_data/database.ini')
-	new_datafile(raw_file, raw_file_sep, db_paramfile)
+
+	new_datafile(raw_file, raw_file_sep, db_paramfile,project_root,state_name=state_name)
 	print('Done! (user_interface)')

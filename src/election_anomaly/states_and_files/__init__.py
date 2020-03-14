@@ -12,20 +12,11 @@ import user_interface as ui
 
 
 class State:
-    def create_db_and_schemas(self):
+    def create_db(self):
         # create db
         con = dbr.establish_connection()
         cur = con.cursor()
         dbr.create_database(con,cur,self.short_name)
-        cur.close()
-        con.close()
-        # connect to  and create the three schemas
-        con = dbr.establish_connection(db_name=self.short_name)
-        cur = con.cursor()
-        q = "CREATE SCHEMA context;"
-        dbr.query(q,[],[],con,cur)
-        q = "CREATE SCHEMA cdf;"
-        dbr.query(q,[],[],con,cur)
         cur.close()
         con.close()
         return
@@ -91,12 +82,12 @@ class Munger:
             return
         cols = self.raw_columns.name
         assert set(df.columns).issubset(cols), \
-            """ERROR: Munger cannot handle the datafile. 
-            A column in {} is missing from {} (listed in raw_columns.txt).""".format(df.columns,list(cols))
+            f"""ERROR: Munger cannot handle the datafile. 
+            A column in {df.columns} is missing from {list(cols)} (listed in raw_columns.txt)."""
         # note: we don't look for new offices. Must put desired offices into Office.txt in any case
         # TODO where will user be notified of untreated offices?
         # TODO ask user for CountItemStatus for datafile (field in ReportingUnit table)
-        cis_df = pd.read_sql_table('CountItemStatus',sess.bind,schema='cdf',index_col='Id')
+        cis_df = pd.read_sql_table('CountItemStatus',sess.bind,index_col='Id')
         cis_id = ui.pick_one(cis_df)
         cis = cis_df.loc[cis_id,'Txt']  # TODO inefficient, since we'll recover id later
 
@@ -199,7 +190,7 @@ class Munger:
         for ff in ['cdf_tables.txt','atomic_reporting_unit_type.txt','count_columns.txt']:
             assert os.path.isfile(os.path.join(dir_path,ff)),\
                 f'Directory {dir_path} does not contain file {ff}'
-        self.name=dir_path.split('/')[-2]    # 'nc_general'
+        self.name=dir_path.split('/')[-1]    # e.g., 'nc_general'
 
         if dir_path[-1] != '/': # TODO use os.path.join everywhere to get rid of this
             dir_path += '/'  # make sure path ends in a slash
@@ -232,7 +223,7 @@ class Munger:
         # TODO error handling. This takes first line  marked "True"
 
         # determine whether the file has columns for counts by vote types, or just totals
-        count_columns=pd.read_csv(os.path.join(dir_path,'count_columns.txt)'),sep='\t').replace({'RawName':col_d})
+        count_columns=pd.read_csv(os.path.join(dir_path,'count_columns.txt'),sep='\t').replace({'RawName':col_d})
         self.count_columns=count_columns
         if list(count_columns['CountItemType'].unique()) == ['total']:
             self.totals_only=True
@@ -258,7 +249,8 @@ if __name__ == '__main__':
     # get absolute path to local_data directory
     current_dir=os.getcwd()
     path_to_src_dir=current_dir.split('/election_anomaly/')[0]
-    s = State('NC','{}/local_data/'.format(path_to_src_dir))
+
+    s = State('NC',f'{path_to_src_dir}/local_data/')
     mu = Munger('../../mungers/nc_primary/',cdf_schema_def_dir='../CDF_schema_def_info/')
     f = pd.read_csv('../../local_data/NC/data/2020p_asof_20200305/nc_primary/results_pct_20200303.txt',sep='\t')
 
