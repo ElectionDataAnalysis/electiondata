@@ -68,13 +68,12 @@ class State:
 
 
 class Munger:
+    def check_new_results_dataset(self,df,state,sess,contest_type):
+        """<df> is a results dataframe of a single <contest_type>;
+        this routine should add what's necessary to the munger to treat the dataframe,
+        keeping backwards compatibility and exiting gracefully if dataframe needs different munger."""
 
-    def check_new_datafile(self,df,state,sess):
-        """df is a results datafile; this routine should add what's necessary to the munger to treat the datafile,
-        keeping backwards compatibility and exiting gracefully if datafile needs different munger"""
-
-        print('WARNING: All ReportingUnits in this file will be munged as type \'{}\'. '.format(
-            self.atomic_reporting_unit_type))
+        print(f'WARNING: All ReportingUnits in this file will be munged as type \'{self.atomic_reporting_unit_type}\'.')
         print('\tIf other behavior is desired, create or use another munger.')
         check_ru_type = input('\tProceed with munger {} (y/n)?\n'.format(self.name))
         if check_ru_type != 'y':
@@ -82,14 +81,14 @@ class Munger:
             return
         cols = self.raw_columns.name
         assert set(df.columns).issubset(cols), \
-            f"""ERROR: Munger cannot handle the datafile. 
-            A column in {df.columns} is missing from {list(cols)} (listed in raw_columns.txt)."""
+            f"""A column in {df.columns} is missing from {list(cols)} (listed in raw_columns.txt)."""
+        if contest_type == 'Contest':
+
         # note: we don't look for new offices. Must put desired offices into Office.txt in any case
         # TODO where will user be notified of untreated offices?
-        # TODO ask user for CountItemStatus for datafile (field in ReportingUnit table)
+        # TODO ask for CountItemStatus for datafile (not used yet, as NIST CDF currently attaches it to ReportingUnit, yuck)
         cis_df = pd.read_sql_table('CountItemStatus',sess.bind,index_col='Id')
-        cis_id = ui.pick_one(cis_df)
-        cis = cis_df.loc[cis_id,'Txt']  # TODO inefficient, since we'll recover id later
+        cis_id,cis = ui.pick_one(cis_df,'Txt',item='status',required=True)
 
         # TODO need to treat CandidateContest separately -- distinguish new from BallotMeasure
         # TODO also, maybe what we really want to identify is any new Office.
@@ -259,6 +258,6 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=eng)
     session = Session()
 
-    mu.check_new_datafile(f,s,session)
+    mu.check_new_results_dataset(f,s,session)
 
     print('Done (states_and_files)!')

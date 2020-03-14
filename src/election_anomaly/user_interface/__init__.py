@@ -1,6 +1,7 @@
 #!usr/bin/python3
 import db_routines as dbr
 import db_routines.Create_CDF_db as db_cdf
+import munge_routines as mr
 import pandas as pd
 from sqlalchemy.orm import sessionmaker
 import os
@@ -260,7 +261,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 	new_df_session = Session()
 
 	state = pick_state(new_df_session.bind,None,
-					path_to_states=os.path.join(project_root,'local_data'),state_name=state_name)
+					   path_to_states=os.path.join(project_root,'local_data'),state_name=state_name)
 
 	election_idx, election = pick_one(pd.read_sql_table('Election',new_df_session.bind,index_col='Id'),'Name','election')
 	if election_idx is None:
@@ -274,21 +275,23 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 			otherelectiontype = ''
 		elections_df = dbr.dframe_to_sql(pd.DataFrame({'Name':election_name,'EndDate':
 			input('Enter the end date of the election, a.k.a. \'Election Day\' (YYYY-MM-DD)\n'),'StartDate':
-			input('Enter the start date of the election (YYYY-MM-DD)\n'),'ElectionType_Id':
-			electiontype_idx,'OtherElectionType':otherelectiontype},index= [-1]),new_df_session,None,'Election')
+														   input('Enter the start date of the election (YYYY-MM-DD)\n'),'ElectionType_Id':
+														   electiontype_idx,'OtherElectionType':otherelectiontype},index= [-1]),new_df_session,None,'Election')
 
 	raw = pd.read_csv(raw_file,sep=raw_file_sep)
 	column_list = raw.columns.to_list()
 	munger = pick_munger(column_list=column_list,munger_dir=os.path.join(project_root,'mungers'))
 
-	# TODO once munger is chosen, walk user through steps to make sure munger
-	# TODO can handle datafile
-	munger.check_new_datafile(raw,state,new_df_session)
-
+	bmc_results,cc_results = mr.contest_type_split(raw,munger)
 	contest_type_df = pd.DataFrame([
 		['Candidate'], ['Ballot Measure'], ['Both Candidate and Ballot Measure']
 	], columns=['Contest Type'])
-	contest_type_list = pick_one(contest_type_df, item='contest type')
+	contest_type = pick_one(contest_type_df, item='contest type')
+
+	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
+		munger.check_new_results_dataset(cc_results,state,new_df_session,'Candidate')
+	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
+		munger.check_new_results_dataset(cc_results,state,new_df_session,'BallotMeasure')
 
 	return
 
