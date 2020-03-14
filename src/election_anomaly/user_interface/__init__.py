@@ -10,6 +10,9 @@ import states_and_files as sf
 def pick_one(df,return_col,item='row'):
 	"""Returns index and <return_col> value of item chosen by user"""
 	# TODO check that index entries are positive ints (and handle error)
+	if df.empty:
+		print(f'DataFrame is empty\n{df}')
+		return None, None
 	print(df)
 	choice = max(df.index) + 1  # guaranteed not to be in df.index at start
 
@@ -66,6 +69,7 @@ def pick_database(paramfile):
 
 def pick_election(session,schema):
 	# TODO read elections from schema.Election table
+	elections = pd.read_sql_table()
 	# user picks existing or enters info for new
 	# if election is new, enter its info into schema.Election
 	election = None	# TODO remove
@@ -74,8 +78,8 @@ def pick_election(session,schema):
 
 def pick_state(con,schema,path_to_states='../local_data/'):
 	"""Returns a State object"""
-	if path_to_states[-1] != '/': path_to_states += '/'
-	state_df = pd.DataFrame(os.listdir(path_to_states),columns=['State'])
+	choice_list = [x for x in os.listdir(path_to_states) if os.path.isdir(os.path.join(path_to_states,x))]
+	state_df = pd.DataFrame(choice_list,columns=['State'])
 	state_idx,state_name = pick_one(state_df,'State', item='state')
 
 	if state_idx is None:
@@ -104,44 +108,33 @@ def pick_state(con,schema,path_to_states='../local_data/'):
 			print(f'Directory {sd_path} created')
 
 	# ensure context directory has what it needs
-
-	# pull necessary enumeration from db: ReportingUnitType
-	ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
-	standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
-	ru = fill_context_file(os.path.join(state_path,'context'),
-					  os.path.join(path_to_states,'context_templates'),
-						'ReportingUnit',standard_ru_types,'ReportingUnitType')
-	# TODO Office.txt -- get rid of ElectionDistrictType in Office.txt, will pull from ReportingUnit
-	ru_list = ru['Name'].to_list()
-	fill_context_file(os.path.join(state_path,'context'),
-					  os.path.join(path_to_states,'context_templates'),
-						'Office',ru_list,'ElectionDistrict',reportingunittype_list=standard_ru_types)
-	# Party.txt
-	fill_context_file(os.path.join(state_path,'context'),
-					  os.path.join(path_to_states,'context_templates'),
-						'Party',None,None)
-	# TODO remark
-	remark_path = os.path.join(state_path,'context','remark.txt')
-	open(remark_path,'a').close()	# creates file if it doesn't exist already
-	with open(remark_path,'r') as f:
-		remark = f.read()
-	print(f'Current contents of remark.txt is:\n{remark}\n'
-		  f'Please add or correct anything that user should know about the state {state_name}.')
+	context_file_list = ['Office.txt','Party.txt','ReportingUnit.txt','remark.txt']
+	if not all([os.path.join(state_path,'context',x) for x in context_file_list]):
+		# pull necessary enumeration from db: ReportingUnitType
+		ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
+		standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
+		ru = fill_context_file(os.path.join(state_path,'context'),
+						  os.path.join(path_to_states,'context_templates'),
+							'ReportingUnit',standard_ru_types,'ReportingUnitType')
+		# TODO Office.txt -- get rid of ElectionDistrictType in Office.txt, will pull from ReportingUnit
+		ru_list = ru['Name'].to_list()
+		fill_context_file(os.path.join(state_path,'context'),
+						  os.path.join(path_to_states,'context_templates'),
+							'Office',ru_list,'ElectionDistrict',reportingunittype_list=standard_ru_types)
+		# Party.txt
+		fill_context_file(os.path.join(state_path,'context'),
+						  os.path.join(path_to_states,'context_templates'),
+							'Party',None,None)
+		# TODO remark
+		remark_path = os.path.join(state_path,'context','remark.txt')
+		open(remark_path,'a').close()	# creates file if it doesn't exist already
+		with open(remark_path,'r') as f:
+			remark = f.read()
+		print(f'Current contents of remark.txt is:\n{remark}\n'
+			  f'Please add or correct anything that user should know about the state {state_name}.')
 
 	# initialize the state
 	ss = sf.State(state_name,path_to_states)
-	return ss
-
-
-def create_state(con,schema,parent_path):
-	"""walk user through state creation, return State object"""
-	# TODO
-	# TODO check alphanumeric only
-	return
-
-
-	# initialize state
-	ss = sf.State(state_name,state_path)
 	return ss
 
 
@@ -164,7 +157,7 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 			input('Please correct the file and hit return to continue.\n')
 		else:
 			# report contents of file
-			print(f'\nCurrent contents of {context_file}:\n{context_df}')
+			print(f'\nCurrent contents of {element}.txt:\n{context_df}')
 
 			# check test conditions
 			if test_list is not None:
@@ -191,17 +184,48 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 						print(f'\t\t{",".join(test_list)}')
 
 			# invite input
-			in_progress = input(f'Would you like to alter {context_file} (y/n)?\n')
+			in_progress = input(f'Would you like to alter {element}.txt (y/n)?\n')
 			if in_progress == 'y':
 				input('Make alterations, then hit return to continue')
 	return context_df
 
 
-def pick_munger(path_to_munger_dir='../mungers/',column_list=None):
-	# TODO if <column_list>, offer only mungers wtih that <column_list>
-	# TODO if no munger chosen, return None
-	munger = None # TODO temp
-	return munger
+def pick_munger(munger_dir='../mungers/',column_list=None):
+	choice_list = os.listdir(munger_dir)
+	for choice in os.listdir(munger_dir):
+		p = os.path.join(munger_dir,choice)
+		if not os.path.isdir(p):	# remove non-directories from list
+			choice_list.remove(choice)
+		else:
+			# remove from list if columns don't match
+			raw_columns = pd.read_csv(os.path.join(p,'raw_columns.txt'),header=0,dtype=str,sep='\t')
+			if raw_columns.name.to_list() != column_list:
+				choice_list.remove(choice)
+
+	munger_df = pd.DataFrame(choice_list,columns=['Munger'])
+	munger_idx,munger_name = pick_one(munger_df,'Munger', item='munger')
+	if munger_idx is None:
+		# user chooses state munger
+		munger_name = input('Enter a short name (alphanumeric only, no spaces) for your munger'
+						   '(e.g., \'nc_primary18\')\n')
+	munger_path = os.path.join(munger_dir,munger_name)
+	# create munger directory
+	try:
+		os.mkdir(munger_path)
+	except FileExistsError:
+		print(f'Directory {munger_path} already exists, will be preserved')
+	else:
+		print(f'Directory {munger_path} created')
+
+	# TODO create/correct raw_columns.txt
+	# TODO create/correct ballot_measure_style.txt
+	# TODO create/correct ballot_measure_selections.txt
+	# TODO create/correct count_columns.txt
+	# TODO create/correct atomic_reporting_unit_type.txt
+	# TODO create/correct cdf_tables.txt
+	# TODO create/correct raw_identifiers.txt
+
+	return munger_name
 
 
 def create_munger(column_list=None):
@@ -223,14 +247,26 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile):
 	Session = sessionmaker(bind=eng)
 	new_df_session = Session()
 
-
 	state = pick_state(new_df_session.bind,None,path_to_states=os.path.join(project_root,'local_data'))
 
-	election = pick_election(new_df_session,None)
+	election_idx, election = pick_one(pd.read_sql_table('Election',new_df_session.bind,index_col='Id'),'Name','election')
+	if election_idx is None:
+		# create record in Election table
+		election_name = input('Enter a unique short name for election\n') # TODO error check
+		electiontype_idx,electiontype = \
+			pick_one(pd.read_sql_table('ElectionType',new_df_session.bind,index_col='Id'),'Txt','election type')
+		if electiontype == 'other':
+			otherelectiontype = input('Enter the election type:\n')	# TODO assert type is not in standard list, not ''
+		else:
+			otherelectiontype = ''
+		elections_df = dbr.dframe_to_sql(pd.DataFrame({'Name':election_name,'EndDate':
+			input('Enter the end date of the election, a.k.a. \'Election Day\' (YYYY-MM-DD)\n'),'StartDate':
+			input('Enter the start date of the election (YYYY-MM-DD)\n'),'ElectionType_Id':
+			electiontype_idx,'OtherElectionType':otherelectiontype},index= [-1]),new_df_session,None,'Election')
 
 	raw = pd.read_csv(raw_file,sep=raw_file_sep)
-	column_list = raw.columns
-	munger = pick_munger(column_list=column_list)
+	column_list = raw.columns.to_list()
+	munger = pick_munger(column_list=column_list,munger_dir=os.path.join(project_root,'mungers'))
 
 	if munger == None:
 		munger = create_munger(column_list=column_list)

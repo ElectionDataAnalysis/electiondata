@@ -71,9 +71,9 @@ class State:
         context_file_list = ['Office.txt','remark.txt','ReportingUnit.txt']
         file_missing_list = [ff for ff in context_file_list
                              if not os.path.isfile(f'{self.path_to_state_dir}context/{ff}')]
-        assert file_missing_list == [], 'Error: Missing files in ' + \
-                                        self.path_to_state_dir+'context/:\n' + str(file_missing_list)
-        # TODO format string above '...'.format()
+        assert file_missing_list == [], \
+            f'Error: Missing files in {os.path.join(self.path_to_state_dir,"context")}:\n{file_missing_list}'
+
 
 
 class Munger:

@@ -1,0 +1,3 @@
+Name	ElectionDistrict	VotesAllowed	NumberElected	NumberRunoff	IsPartisan
+US Senate	North Carolina	1	1	0	True
+US Congress District 9	NC 9th Congressional District	1	1	0	True
