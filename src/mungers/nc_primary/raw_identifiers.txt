@@ -4805,3 +4805,7 @@ ReportingUnit	North Carolina;Wilkes County;ONE STOP	WILKES;ONE STOP
 ReportingUnit	North Carolina;Yadkin County;ABSENTEE	YADKIN;ABSENTEE
 Party	Party is blank	 
 Party	Party is blank	
+BallotMeasureSelection	Yes	Yes
+BallotMeasureSelection	Yes	For
+BallotMeasureSelection	No	No
+BallotMeasureSelection	No	Against

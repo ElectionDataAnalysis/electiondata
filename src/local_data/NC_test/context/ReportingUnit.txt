@@ -2,5 +2,6 @@ Name	ReportingUnitType
 North Carolina	state
 North Carolina;Alamance County	county
 North Carolina;Mecklenberg County	county
-North Carolina;Mecklenberg County;ABSENTEE	precint
+North Carolina;Mecklenberg County;ABSENTEE	precinct
+NC 9th Congressional District	congressional
 

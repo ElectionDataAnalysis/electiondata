@@ -78,8 +78,7 @@ def pick_state(con,schema,path_to_states='../local_data/'):
 	state_df = pd.DataFrame(os.listdir(path_to_states),columns=['State'])
 	state_idx,state_name = pick_one(state_df,'State', item='state')
 
-
-	if state_idx == None:
+	if state_idx is None:
 		# user chooses state short_name
 		state_name = input('Enter a short name (alphanumeric only, no spaces) for your state '
 						   '(e.g., \'NC\')\n')
@@ -104,9 +103,9 @@ def pick_state(con,schema,path_to_states='../local_data/'):
 		else:
 			print(f'Directory {sd_path} created')
 
-	# TODO ensure context directory has what it needs
+	# ensure context directory has what it needs
 
-	# TODO pull necessary enumeration from db: ReportingUnitType
+	# pull necessary enumeration from db: ReportingUnitType
 	ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
 	standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
 	ru = fill_context_file(os.path.join(state_path,'context'),
@@ -116,10 +115,19 @@ def pick_state(con,schema,path_to_states='../local_data/'):
 	ru_list = ru['Name'].to_list()
 	fill_context_file(os.path.join(state_path,'context'),
 					  os.path.join(path_to_states,'context_templates'),
-						'Office',ru_list,'ElectionDistrict',test_required=True,test_element='ReportingUnit')
-		# TODO check that each Office's ReportingUnit is in the ReportingUnit file.
-	# TODO Party.txt
+						'Office',ru_list,'ElectionDistrict',reportingunittype_list=standard_ru_types)
+	# Party.txt
+	fill_context_file(os.path.join(state_path,'context'),
+					  os.path.join(path_to_states,'context_templates'),
+						'Party',None,None)
 	# TODO remark
+	remark_path = os.path.join(state_path,'context','remark.txt')
+	open(remark_path,'a').close()	# creates file if it doesn't exist already
+	with open(remark_path,'r') as f:
+		remark = f.read()
+	print(f'Current contents of remark.txt is:\n{remark}\n'
+		  f'Please add or correct anything that user should know about the state {state_name}.')
+
 	# initialize the state
 	ss = sf.State(state_name,path_to_states)
 	return ss
@@ -128,8 +136,8 @@ def pick_state(con,schema,path_to_states='../local_data/'):
 def create_state(con,schema,parent_path):
 	"""walk user through state creation, return State object"""
 	# TODO
-
 	# TODO check alphanumeric only
+	return
 
 
 	# initialize state
@@ -148,6 +156,7 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 		template.iloc[0:0].to_csv(context_file,index=None,sep=sep)
 	in_progress = 'y'
 	while in_progress == 'y':
+		# TODO check for dupes
 		# check format of file
 		context_df = pd.read_csv(context_file,sep=sep,header=0,dtype=str)
 		if not context_df.columns.to_list() == template.columns.to_list():
@@ -158,27 +167,28 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 			print(f'\nCurrent contents of {context_file}:\n{context_df}')
 
 			# check test conditions
-			if element == 'Office':	# need to reload from ReportingUnit.txt
-				test_list = pd.read_csv(os.path.join(context_path,'ReportingUnit.txt'),
-									sep=sep,header=0,dtype=str)['Name'].to_list()
-			bad_set = {x for x in context_df[test_field] if x not in new_test_list}
-			if len(bad_set) > 0:	# if test condition fails
-				if element == 'Office':		# Office.ElectionDistrict must be in ReportingUnit.Name
-					print(f'The ElectionDistrict for each Office must be listed in ReportingUnit.txt.\n'
-						  f'Here are the {test_field}s in Office.txt that fail this condition:\n')
-					print(f'{",".join(bad_set)})')
-					print(f'To solve the problem, you must either alter the Name column in ReportingUnit.txt '
-						  f'to add/correct the missing items,'
-						  f'or remove/correct the {test_field} column in the offending row of Office.txt ')
-					edit_test_element = input(f'Would you like to edit ReportingUnit.txt (y/n)?\n')
-					if edit_test_element:
-						fill_context_file(context_path,template_dir_path,'ReportingUnit',standard_ru_types,'ReportingUnitType')
-				else:
-					print(f'\tStandard {test_field}s are not required, but you probably want to use them when you can.'
-						  f'\n\tYour file has non-standard {test_field}s:')
-					for rut in bad_set: print(f'\t\t{rut}')
-					print(f'\tStandard {test_field}s are:')
-					print(f'\t\t{",".join(test_list)}')
+			if test_list is not None:
+				if element == 'Office':	# need to reload from ReportingUnit.txt
+					test_list = pd.read_csv(os.path.join(context_path,'ReportingUnit.txt'),
+										sep=sep,header=0,dtype=str)['Name'].to_list()
+				bad_set = {x for x in context_df[test_field] if x not in test_list}
+				if len(bad_set) > 0:	# if test condition fails
+					if element == 'Office':		# Office.ElectionDistrict must be in ReportingUnit.Name
+						print(f'The ElectionDistrict for each Office must be listed in ReportingUnit.txt.\n'
+							  f'Here are the {test_field}s in Office.txt that fail this condition:\n')
+						print(f'{",".join(bad_set)}')
+						print(f'To solve the problem, you must either alter the Name column in ReportingUnit.txt '
+							  f'to add/correct the missing items,'
+							  f'or remove/correct the {test_field} column in the offending row of Office.txt ')
+						edit_test_element = input(f'Would you like to edit ReportingUnit.txt (y/n)?\n')
+						if edit_test_element:
+							fill_context_file(context_path,template_dir_path,'ReportingUnit',reportingunittype_list,'ReportingUnitType')
+					else:
+						print(f'\tStandard {test_field}s are not required, but you probably want to use them when you can.'
+							  f'\n\tYour file has non-standard {test_field}s:')
+						for rut in bad_set: print(f'\t\t{rut}')
+						print(f'\tStandard {test_field}s are:')
+						print(f'\t\t{",".join(test_list)}')
 
 			# invite input
 			in_progress = input(f'Would you like to alter {context_file} (y/n)?\n')
