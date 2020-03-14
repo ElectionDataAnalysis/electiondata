@@ -294,11 +294,32 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_mu
 		with open(os.path.join(munger_path,'atomic_reporting_unit.txt'),'w') as f:
 			f.write(arut)
 
-	# TODO create/correct cdf_tables.txt
+	# fill cdf_tables.txt
+	correct_cdf_tables_file(os.path.join(munger_path,'cdf_tables.txt'),bms)
 	# TODO create/correct raw_identifiers.txt
 
 	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(project_root,'election_anomaly/CDF_schema_def_info'))
 	return munger
+
+
+def correct_cdf_tables_file(file_path,ballot_measure_style):
+	elt_list = ['Office','ReportingUnit','Party','Candidate','CandidateContest',
+					'BallotMeasureContest']
+	out_lines = []
+	if ballot_measure_style == 'yes_and_no_are_candidates':
+		elt_list.append('BallotMeasureSelection')
+	for element in ['Office','ReportingUnit','Party','Candidate','CandidateContest',
+					'BallotMeasureContest','BallotMeasureSelection']:
+		print(f'''Enter your formulas for reading the common-data-format elements from each row
+				of the results file. Put raw column names in brackets (<>).
+				For example if the raw file has columns \'County\' and \'Precinct\',
+				the formula for ReportingUnit might be \'<County>;<Precinct>\'.''')
+		formula = input(f'Formula for {element}:\n')
+		# TODO error check formula against raw_columns.txt and count_columns.txt
+		out_lines.append(f'{element}\t{formula}')
+	with open(file_path,'a') as f:
+		f.write('\n'.join(out_lines))
+	return
 
 
 def create_munger(column_list=None):

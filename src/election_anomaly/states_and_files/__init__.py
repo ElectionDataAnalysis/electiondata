@@ -226,11 +226,8 @@ class Munger:
         self.cdf_tables = cdft
 
         # determine how to treat ballot measures (ballot_measure_style)
-        bms=pd.read_csv(os.path.join(dir_path,'ballot_measure_style.txt'),sep='\t')
-        assert 'short_name' in bms.columns, 'ballot_measure_style.txt does not have required column \'short_name\''
-        assert 'truth' in bms.columns, 'ballot_measure_style.txt does not have required column \'truth\''
-        self.ballot_measure_style=bms[bms['truth']]['short_name'].iloc[0]
-        # TODO error handling. This takes first line  marked "True"
+        with open(os.path.join(dir_path,'ballot_measure_style.txt'),'r') as f:
+            self.ballot_measure_style=f.read().strip()
 
         # determine whether the file has columns for counts by vote types, or just totals
         count_columns=pd.read_csv(os.path.join(dir_path,'count_columns.txt'),sep='\t').replace({'RawName':col_d})
@@ -241,6 +238,7 @@ class Munger:
             self.totals_only=False
 
         if self.ballot_measure_style == 'yes_and_no_are_candidates':
+            # TODO read ballot_measure_selection_list from raw_identifiers.txt
             with open(os.path.join(dir_path,'ballot_measure_selections.txt'),'r') as ff:
                 selection_list = ff.readlines()
             self.ballot_measure_selection_list = [x.strip() for x in selection_list]
