@@ -88,6 +88,7 @@ if __name__ == '__main__':
         # %% fill enumeration tables
         print('\tFilling enumeration tables')
         enumeration_tables = CDF.fill_cdf_enum_tables(session,'cdf')
+        CDF.fill_cdf_enum_tables(session,'cdf')
         print('Loading state context info into CDF schema')
 
         munge_routines.context_schema_to_cdf(session,s,enumeration_tables)
