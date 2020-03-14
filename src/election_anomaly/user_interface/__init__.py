@@ -5,28 +5,32 @@ import pandas as pd
 from sqlalchemy.orm import sessionmaker
 import os
 import states_and_files as sf
+import random
 
 
-def pick_one(df,return_col,item='row'):
+def pick_one(df,return_col,item='row',required=False):
 	"""Returns index and <return_col> value of item chosen by user"""
 	# TODO check that index entries are positive ints (and handle error)
 	if df.empty:
-		print(f'DataFrame is empty\n{df}')
 		return None, None
 	print(df)
 	choice = max(df.index) + 1  # guaranteed not to be in df.index at start
 
 	while choice not in df.index:
-		choice_str = input(f'Enter the number of the desired {item} (or nothing if none is correct):\n')
-		if choice_str == '':
+		if not required:
+			req_str=' (or nothing, if your choice is not on the list)'
+		else:
+			req_str=''
+		choice_str = input(f'Enter the number of the desired {item}{req_str}:\n')
+		if choice_str == '' and not required:
 			return None,None
 		else:
 			try:
 				choice = int(choice_str)
 				if choice not in df.index:
-					print(f'Entry must in the leftmost column. Please try again.')
+					print(f'Enter an option from the leftmost column. Please try again.')
 			except ValueError:
-				print(f'You must enter a number (or nothing), then hit return. Please try again.')
+				print(f'You must enter a number {req_str}, then hit return. Please try again.')
 	return choice, df.loc[choice,return_col]
 
 
@@ -65,15 +69,6 @@ def pick_database(paramfile):
 	if con:
 		con.close()
 	return desired_db
-
-
-def pick_election(session,schema):
-	# TODO read elections from schema.Election table
-	elections = pd.read_sql_table()
-	# user picks existing or enters info for new
-	# if election is new, enter its info into schema.Election
-	election = None	# TODO remove
-	return election
 
 
 def pick_state(con,schema,path_to_states='../local_data/'):
@@ -129,8 +124,9 @@ def pick_state(con,schema,path_to_states='../local_data/'):
 		open(remark_path,'a').close()	# creates file if it doesn't exist already
 		with open(remark_path,'r') as f:
 			remark = f.read()
-		print(f'Current contents of remark.txt is:\n{remark}\n'
-			  f'Please add or correct anything that user should know about the state {state_name}.')
+		print(f'Current contents of remark.txt is:\n{remark}\n')
+		input(f'Please add or correct anything that user should know about the state {state_name}.'
+					f'Then hit return to continue.')
 
 	# initialize the state
 	ss = sf.State(state_name,path_to_states)
@@ -167,8 +163,15 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 				if len(bad_set) > 0:	# if test condition fails
 					if element == 'Office':		# Office.ElectionDistrict must be in ReportingUnit.Name
 						print(f'The ElectionDistrict for each Office must be listed in ReportingUnit.txt.\n'
-							  f'Here are the {test_field}s in Office.txt that fail this condition:\n')
-						print(f'{",".join(bad_set)}')
+							  f'There are {len(bad_set)} {test_field}s that fail this condition:')
+						if len(bad_set) < 11:
+							show_list = bad_set
+						else:
+							print('(sample)')
+							show_list = random.sample(bad_set,10)
+							show_list.sort()
+						for r in show_list:
+							print(r)
 						print(f'To solve the problem, you must either alter the Name column in ReportingUnit.txt '
 							  f'to add/correct the missing items,'
 							  f'or remove/correct the {test_field} column in the offending row of Office.txt ')
@@ -186,6 +189,8 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 			in_progress = input(f'Would you like to alter {element}.txt (y/n)?\n')
 			if in_progress == 'y':
 				input('Make alterations, then hit return to continue')
+			else:
+				print(f'{element}.txt looks good!')
 	return context_df
 
 
@@ -251,7 +256,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile):
 	election_idx, election = pick_one(pd.read_sql_table('Election',new_df_session.bind,index_col='Id'),'Name','election')
 	if election_idx is None:
 		# create record in Election table
-		election_name = input('Enter a unique short name for election\n') # TODO error check
+		election_name = input('Enter a unique short name for the election for your datafile\n') # TODO error check
 		electiontype_idx,electiontype = \
 			pick_one(pd.read_sql_table('ElectionType',new_df_session.bind,index_col='Id'),'Txt','election type')
 		if electiontype == 'other':
