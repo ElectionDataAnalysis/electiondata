@@ -94,7 +94,7 @@ def add_munged_column(row_df,mu,cdf_element,new_col_name):
             row_df.loc[:,new_col_name] = t+row_df.loc[:,f]+row_df.loc[:,new_col_name]
         return row_df
 
-
+# TODO bug: NC gets Bertie County ballot measures classified as candidate contests in munger routines
 def contest_type_split(row,mu):
     if mu.ballot_measure_style=='yes_and_no_are_candidates':
         bm_row = row[row[mu.ballot_measure_selection_col].isin(mu.ballot_measure_selection_list)]

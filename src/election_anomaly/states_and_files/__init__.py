@@ -72,30 +72,38 @@ class Munger:
 
         mr.add_munged_column(results,self,'Office','Office_external')
         results_offices = results['Office_external'].unique()
-        offices_ext = results_offices.to_list()
+        offices_ext = list(results_offices)
 
         mu_offices = self.raw_identifiers[self.raw_identifiers.cdf_element=='Office']
-        offices_mixed = results_offices.merge(mu_offices,how='left',
-                                                  left_on='Office_external',right_on='raw_identifer_value')
+        offices_mixed = pd.DataFrame(results_offices,columns=['Office_external']).merge(mu_offices,how='left',
+                                                                                        left_on='Office_external',right_on='raw_identifier_value')
 
         # are there offices in results file that cannot be munged?
-        not_munged = offices_mixed[offices_mixed.raw_identifier_value.isnull()].to_list()
+        not_munged = offices_mixed[offices_mixed.raw_identifier_value.isnull()].loc[:,'Office_external'].to_list()
         if len(not_munged) > 0:
             print(f'Some offices in the results file cannot be interpreted by the munger {self.name}.')
-            ui.show_sample(not_munged,'offices in datafile','cannot be munged')
+            ui.show_sample(not_munged,'offices in datafile','cannot be munged',label='unmunged')
             add_to_munger = input('Would you like to add some/all of these to the munger (y/n)?\n')
             if add_to_munger == 'y':
-                input(f'Edit the file {munger.name}/raw_identifiers.txt. Then hit return to continue.\n')
+                input(f'Edit the file {self.name}/raw_identifiers.txt. Add a line for each office you want to add,\n'
+                      f'including a name to be used internally in the Common Data Format database Name field.\n'
+                      f'Then edit the file {state}/context/Office.txt, adding a line for each new office.\n'
+                      f'You may need to do some contextual research to fill all the fields in Office.txt')
+
+                input('Then hit return to continue.\n')
 
         db_office_df = pd.read_sql_table('Office',sess.bind)
-        db_offices = db_office_df['Name'].unique().to_list()
+        db_offices = list(db_office_df['Name'].unique())
+        # TODO allow user to stash offices not of interest in a munger file
 
 
-        # are there offices recognized by raw_identifers but not in db?
-        bad_set = {x for x in results_offices if x not in db_offices}
+        # are there offices recognized by munger but not in db?
+        munged_offices = offices_mixed[offices_mixed.raw_identifier_value.notnull()].loc[:,'Office_external'].to_list()
+        bad_set = {x for x in results_offices if x not in munged_offices}
+
         if len(bad_set) > 0:
             print('Results for offices missing from database will not be processed.')
-            ui.show_sample(bad_set,'offices in datafile','are not in the database')
+            ui.show_sample(bad_set,'offices in datafile','are not in the database',label='not_in_db')
             add_to_db = input('Would you like to add some/all of these to the database (y/n)?\n')
             if add_to_db == 'y':
                 context_template_path = os.path.join(
@@ -104,8 +112,8 @@ class Munger:
                 standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
 
                 ru = ui.fill_context_file(os.path.join(state.path_to_state_dir,'context'),
-                                       context_template_path,
-                                       'ReportingUnit',standard_ru_types,'ReportingUnitType')
+                                          context_template_path,
+                                          'ReportingUnit',standard_ru_types,'ReportingUnitType')
                 ru_list = ru['Name'].to_list()
                 ui.fill_context_file(os.path.join(state.path_to_state_dir,'context'),context_template_path,
                                      'Office',ru_list,'ElectionDistrict',
@@ -139,7 +147,7 @@ class Munger:
         assert self.raw_cols_match(results), \
             f"""A column in {results.columns} is missing from raw_columns.txt."""
 
-        if contest_type == 'Contest':
+        if contest_type == 'Candidate':
             offices_finalized = False
             while not offices_finalized:
                 self.office_check(results,state,sess)

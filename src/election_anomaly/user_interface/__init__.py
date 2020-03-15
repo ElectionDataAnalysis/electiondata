@@ -37,8 +37,8 @@ def pick_one(df,return_col,item='row',required=False):
 	return choice, df.loc[choice,return_col]
 
 
-def show_sample(st,items,condition):
-	print(f'There are {len(str)} {items} that {condition}:')
+def show_sample(st,items,condition,label='shown'):
+	print(f'There are {len(st)} {items} that {condition}:')
 	if len(st) < 11:
 		show_list = st
 	else:
@@ -47,6 +47,19 @@ def show_sample(st,items,condition):
 		show_list.sort()
 	for r in show_list:
 		print(r)
+	if len(st) > 10:
+		export_all = input(f'Export all {len(st)} {items} that {condition}? If so, enter directory for export\n'
+						   f'(Current directory is {os.getcwd()})\n')
+		if os.path.isdir(export_all):
+			with open(os.path.join(export_all,f'{label}_{items}.txt'),'a') as f:
+				f.write('\n'.join(st))
+		elif export_all != '':
+			print(f'Directory {export_all} does not exist.')
+		show_all = input(f'Show all {len(st)} {items} that {condition} (y/n)?\n')
+		if show_all == 'y':
+			st.sort()
+			for r in st:
+				print(r)
 	return
 
 
@@ -247,64 +260,67 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_mu
 	else:
 		print(f'Directory {munger_path} created')
 
-	for ff in ['raw_columns.txt','count_columns.txt','cdf_tables.txt','raw_identifiers.txt']:
-		create_file_from_template(os.path.join(template_dir,ff),
-											   os.path.join(munger_path,ff))
-	# write column_list to raw_columns.txt
-	if column_list:
-		# np.savetxt(os.path.join(munger_path,ff),np.asarray([[x] for x in column_list]),header='name')
-		pd.DataFrame(np.asarray([[x] for x in column_list]),columns=['name']).to_csv(
-			os.path.join(munger_path,'raw_columns.txt'),sep='\t',index=False)
-	else:
-		input(f"""The file raw_columns.txt should have one row for each column 
-			in the raw datafile to be processed with the munger {munger_name}. 
-			The columns must be listed in the order in which they appear in the raw datafile'
-			Check the file and correct as necessary. Then hit return to continue.\n""")
+	file_list = ['raw_columns.txt','count_columns.txt','cdf_tables.txt','raw_identifiers.txt']
+	if not all([os.path.isfile(os.path.join(munger_path,x)) for x in file_list]):
+		for ff in file_list:
+			create_file_from_template(os.path.join(template_dir,ff),
+												   os.path.join(munger_path,ff))
+		# write column_list to raw_columns.txt
+		if column_list:
+			# np.savetxt(os.path.join(munger_path,ff),np.asarray([[x] for x in column_list]),header='name')
+			pd.DataFrame(np.asarray([[x] for x in column_list]),columns=['name']).to_csv(
+				os.path.join(munger_path,'raw_columns.txt'),sep='\t',index=False)
+		else:
+			input(f"""The file raw_columns.txt should have one row for each column 
+				in the raw datafile to be processed with the munger {munger_name}. 
+				The columns must be listed in the order in which they appear in the raw datafile'
+				Check the file and correct as necessary. Then hit return to continue.\n""")
 
-	# create ballot_measure_style.txt
-	bmso_df = pd.read_csv(os.path.join(munger_dir,'ballot_measure_style_options.txt'),sep='\t')
-	try:
-		with open(os.path.join(munger_path,'ballot_measure_style.txt'),'r') as f:
-			bms=f.read()
-		assert bms in bmso_df['short_name'].to_list()
-		change = input(f'Ballot measure style is {bms}. Do you need to change it (y/n)?\n')
-	except AssertionError:
-		print('Ballot measure style not recognized. Please pick a new one.')
-		change = 'y'
-	except FileNotFoundError:
-		change = 'y'
-	if change == 'y':
-		bms_idx,bms = pick_one(bmso_df,'short_name',item='ballot measure style',required=True)
-		with open(os.path.join(munger_path,'ballot_measure_style.txt'),'w') as f:
-			f.write(bms)
+		# create ballot_measure_style.txt
+		bmso_df = pd.read_csv(os.path.join(munger_dir,'ballot_measure_style_options.txt'),sep='\t')
+		try:
+			with open(os.path.join(munger_path,'ballot_measure_style.txt'),'r') as f:
+				bms=f.read()
+			assert bms in bmso_df['short_name'].to_list()
+			change = input(f'Ballot measure style is {bms}. Do you need to change it (y/n)?\n')
+		except AssertionError:
+			print('Ballot measure style not recognized. Please pick a new one.')
+			change = 'y'
+		except FileNotFoundError:
+			change = 'y'
+		if change == 'y':
+			bms_idx,bms = pick_one(bmso_df,'short_name',item='ballot measure style',required=True)
+			with open(os.path.join(munger_path,'ballot_measure_style.txt'),'w') as f:
+				f.write(bms)
 
-	# create/correct count_columns.txt
-		print(f"""The file count_columns.txt should have one row for each vote-count column  
-			in the raw datafile to be processed with the munger {munger_name}. 
-			Each row should have the RawName of the column and the CountItemType. 
-			Standard CountItemTypes are not required, but are recommended:""")
-		cit = pd.read_sql_table('CountItemType',sess.bind)
-		print(cit['Txt'].to_list())
-		input('Check the file and correct as necessary.  Then hit return to continue.\n')
-		# TODO check file against standard CountItemTypes?
+		# create/correct count_columns.txt
+			print(f"""The file count_columns.txt should have one row for each vote-count column  
+				in the raw datafile to be processed with the munger {munger_name}. 
+				Each row should have the RawName of the column and the CountItemType. 
+				Standard CountItemTypes are not required, but are recommended:""")
+			cit = pd.read_sql_table('CountItemType',sess.bind)
+			print(cit['Txt'].to_list())
+			input('Check the file and correct as necessary.  Then hit return to continue.\n')
+			# TODO check file against standard CountItemTypes?
 
-	# create atomic_reporting_unit_type.txt
-	rut_df = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
-	try:
-		with open(os.path.join(munger_path,'atomic_reporting_unit_type.txt'),'r') as f:
-			arut=f.read()
-		change = input(f'Atomic ReportingUnit type is {arut}. Do you need to change it (y/n)?\n')
-	except FileNotFoundError:
-		change = 'y'
-	if change == 'y':
-		arut_idx,arut = pick_one(rut_df,'Txt',item='\'atomic\' reporting unit type for results file',required=True)
-		with open(os.path.join(munger_path,'atomic_reporting_unit.txt'),'w') as f:
-			f.write(arut)
+		# create atomic_reporting_unit_type.txt
+		rut_df = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
+		try:
+			with open(os.path.join(munger_path,'atomic_reporting_unit_type.txt'),'r') as f:
+				arut=f.read()
+			change = input(f'Atomic ReportingUnit type is {arut}. Do you need to change it (y/n)?\n')
+		except FileNotFoundError:
+			change = 'y'
+		if change == 'y':
+			arut_idx,arut = pick_one(rut_df,'Txt',item='\'atomic\' reporting unit type for results file',required=True)
+			with open(os.path.join(munger_path,'atomic_reporting_unit.txt'),'w') as f:
+				f.write(arut)
 
-	# fill cdf_tables.txt
-	prepare_cdf_tables_file(munger_path,bms)
+		# prepare cdf_tables.txt
+		prepare_cdf_tables_file(munger_path,bms)
 
-	prepare_raw_identifiers_file(munger_path,bms)
+		# prepare raw_identifiers.txt
+		prepare_raw_identifiers_file(munger_path,bms)
 
 	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(project_root,'election_anomaly/CDF_schema_def_info'))
 	return munger
@@ -386,6 +402,8 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 	munger = pick_munger(new_df_session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
 						 template_dir=os.path.join(project_root,'mungers/zzz_munger_templates'))
 	print(f'Munger {munger.name} has been chosen and prepared.\n')
+
+	# TODO present munger.ballot_measure_selections and give user chance to correct it.
 
 	print('What types of contests would you like to analyze from the datafile?')
 	bmc_results,cc_results = mr.contest_type_split(raw,munger)

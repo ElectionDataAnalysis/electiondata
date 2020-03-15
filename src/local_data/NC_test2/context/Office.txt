@@ -183,3 +183,5 @@ North Carolina;US Congress House of Representatives District 11	North Carolina;U
 North Carolina;US Congress House of Representatives District 12	North Carolina;US Congress House of Representatives District 12	1	1	0	True
 North Carolina;US Congress House of Representatives District 13	North Carolina;US Congress House of Representatives District 13	1	1	0	True
 North Carolina;US Congress;Senate	North Carolina	1	1	0	True
+North Carolina; Bertie County;Board of Commissioners District 3	North Carolina;Bertie County	1	1	0	True
+North Carolina;District Court Judge District 22B Seat 2	North Carolina;Judicial District 22B	1	1	0	True

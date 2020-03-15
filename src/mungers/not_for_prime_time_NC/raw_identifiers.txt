@@ -3524,3 +3524,6 @@ CandidateContest	North Carolina;US Congress House of Representatives District 13
 BallotMeasureSelection	Yes	Yes
 BallotMeasureSelection	No	No
 BallotMeasureSelection	No	Against
+Office	North Carolina; Bertie County;Board of Commissioners District 3	BERTIE COUNTY BOARD OF COMMISSIONERS DISTRICT 3
+Office	North Carolina;District Court Judge District 22B Seat 2	NC DISTRICT COURT JUDGE DISTRICT 22B SEAT 2
+BallotMeasureSelection	Yes	For
