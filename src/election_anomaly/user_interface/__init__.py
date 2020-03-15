@@ -37,6 +37,19 @@ def pick_one(df,return_col,item='row',required=False):
 	return choice, df.loc[choice,return_col]
 
 
+def show_sample(st,items,condition):
+	print(f'There are {len(str)} {items} that {condition}:')
+	if len(st) < 11:
+		show_list = st
+	else:
+		print('(sample)')
+		show_list = random.sample(st,10)
+		show_list.sort()
+	for r in show_list:
+		print(r)
+	return
+
+
 def pick_database(paramfile,state_name=None):
 	if state_name:
 		print(f'WARNING: will use db {state_name} '
@@ -142,6 +155,7 @@ def pick_state(con,schema,path_to_states='local_data/',state_name=None):
 	ss = sf.State(state_name,path_to_states)
 	return ss
 
+
 def create_file_from_template(template_file,new_file,sep='\t'):
 	"""For tab-separated files (or others, using <sep>); does not replace existing file
 	but creates <new_file> with the proper header row
@@ -151,6 +165,7 @@ def create_file_from_template(template_file,new_file,sep='\t'):
 		# create file with just header row
 		template.iloc[0:0].to_csv(new_file,index=None,sep=sep)
 	return
+
 
 def fill_context_file(context_path,template_dir_path,element,test_list,test_field,reportingunittype_list=None,sep='\t'):
 	if element == 'Office':
@@ -178,16 +193,8 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 				bad_set = {x for x in context_df[test_field] if x not in test_list}
 				if len(bad_set) > 0:	# if test condition fails
 					if element == 'Office':		# Office.ElectionDistrict must be in ReportingUnit.Name
-						print(f'The ElectionDistrict for each Office must be listed in ReportingUnit.txt.\n'
-							  f'There are {len(bad_set)} {test_field}s that fail this condition:')
-						if len(bad_set) < 11:
-							show_list = bad_set
-						else:
-							print('(sample)')
-							show_list = random.sample(bad_set,10)
-							show_list.sort()
-						for r in show_list:
-							print(r)
+						print(f'The ElectionDistrict for each Office must be listed in ReportingUnit.txt.\n')
+						show_sample(bad_set,f'{test_field}s','fail this condition')
 						print(f'To solve the problem, you must either alter the Name column in ReportingUnit.txt '
 							  f'to add/correct the missing items,'
 							  f'or remove/correct the {test_field} column in the offending row of Office.txt ')
@@ -259,8 +266,8 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_mu
 	try:
 		with open(os.path.join(munger_path,'ballot_measure_style.txt'),'r') as f:
 			bms=f.read()
-		assert bms in bmso_df['short_name']
-		change = input(f'Ballot measure style is {bms}. Do you need to change it (y/n)?')
+		assert bms in bmso_df['short_name'].to_list()
+		change = input(f'Ballot measure style is {bms}. Do you need to change it (y/n)?\n')
 	except AssertionError:
 		print('Ballot measure style not recognized. Please pick a new one.')
 		change = 'y'
@@ -280,13 +287,13 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_mu
 		print(cit['Txt'].to_list())
 		input('Check the file and correct as necessary.  Then hit return to continue.\n')
 		# TODO check file against standard CountItemTypes?
-	# create atomic_reporting_unit_type.txt
 
+	# create atomic_reporting_unit_type.txt
 	rut_df = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
 	try:
 		with open(os.path.join(munger_path,'atomic_reporting_unit_type.txt'),'r') as f:
 			arut=f.read()
-		change = input(f'Atomic ReportingUnit type is {arut}. Do you need to change it (y/n)?')
+		change = input(f'Atomic ReportingUnit type is {arut}. Do you need to change it (y/n)?\n')
 	except FileNotFoundError:
 		change = 'y'
 	if change == 'y':
@@ -295,30 +302,43 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_mu
 			f.write(arut)
 
 	# fill cdf_tables.txt
-	correct_cdf_tables_file(os.path.join(munger_path,'cdf_tables.txt'),bms)
-	# TODO create/correct raw_identifiers.txt
+	prepare_cdf_tables_file(munger_path,bms)
+
+	prepare_raw_identifiers_file(munger_path,bms)
 
 	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(project_root,'election_anomaly/CDF_schema_def_info'))
 	return munger
 
 
-def correct_cdf_tables_file(file_path,ballot_measure_style):
-	elt_list = ['Office','ReportingUnit','Party','Candidate','CandidateContest',
-					'BallotMeasureContest']
-	out_lines = []
+def prepare_raw_identifiers_file(dir_path,ballot_measure_style):
 	if ballot_measure_style == 'yes_and_no_are_candidates':
-		elt_list.append('BallotMeasureSelection')
-	for element in ['Office','ReportingUnit','Party','Candidate','CandidateContest',
-					'BallotMeasureContest','BallotMeasureSelection']:
-		print(f'''Enter your formulas for reading the common-data-format elements from each row
-				of the results file. Put raw column names in brackets (<>).
-				For example if the raw file has columns \'County\' and \'Precinct\',
-				the formula for ReportingUnit might be \'<County>;<Precinct>\'.''')
-		formula = input(f'Formula for {element}:\n')
-		# TODO error check formula against raw_columns.txt and count_columns.txt
-		out_lines.append(f'{element}\t{formula}')
-	with open(file_path,'a') as f:
-		f.write('\n'.join(out_lines))
+		print('\nMake sure to list all raw ballot measure selections, with cdf_internal_name \'Yes\' or \'No\'')
+	input('Prepare raw_identifiers.txt and hit return to continue.')
+	# TODO add guidance
+	return
+
+
+def prepare_cdf_tables_file(dir_path,ballot_measure_style):
+	guided = input(f'Would you like guidance in preparing the cdf_tables.txt file (y/n)?\n')
+	if guided != 'y':
+		input('Prepare cdf_tables.txt and hit return to continue.')
+	else:
+		elt_list = ['Office','ReportingUnit','Party','Candidate','CandidateContest',
+						'BallotMeasureContest']
+		out_lines = []
+		if ballot_measure_style == 'yes_and_no_are_candidates':
+			elt_list.append('BallotMeasureSelection')
+		for element in ['Office','ReportingUnit','Party','Candidate','CandidateContest',
+						'BallotMeasureContest','BallotMeasureSelection']:
+			print(f'''Enter your formulas for reading the common-data-format elements from each row
+					of the results file. Put raw column names in brackets (<>).
+					For example if the raw file has columns \'County\' and \'Precinct\',
+					the formula for ReportingUnit might be \'<County>;<Precinct>\'.''')
+			formula = input(f'Formula for {element}:\n')
+			# TODO error check formula against raw_columns.txt and count_columns.txt in <dir_path>
+			out_lines.append(f'{element}\t{formula}')
+		with open(os.path.join(dir_path,'cdf_tables.txt'),'a') as f:
+			f.write('\n'.join(out_lines))
 	return
 
 
@@ -365,18 +385,19 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 	print('Specify the munger:')
 	munger = pick_munger(new_df_session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
 						 template_dir=os.path.join(project_root,'mungers/zzz_munger_templates'))
+	print(f'Munger {munger.name} has been chosen and prepared.\n')
 
+	print('What types of contests would you like to analyze from the datafile?')
 	bmc_results,cc_results = mr.contest_type_split(raw,munger)
 	contest_type_df = pd.DataFrame([
 		['Candidate'], ['Ballot Measure'], ['Both Candidate and Ballot Measure']
 	], columns=['Contest Type'])
-	contest_type = pick_one(contest_type_df, item='contest type')
+	contest_type_idx, contest_type = pick_one(contest_type_df,'Contest Type', item='contest type',required=True)
 
 	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
 		munger.check_new_results_dataset(cc_results,state,new_df_session,'Candidate')
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
 		munger.check_new_results_dataset(cc_results,state,new_df_session,'BallotMeasure')
-
 	return
 
 if __name__ == '__main__':

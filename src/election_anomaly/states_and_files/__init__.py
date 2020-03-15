@@ -67,6 +67,40 @@ class State:
 
 
 class Munger:
+    def office_check(self,results,state,sess):
+        # TODO are any offices in <results> missing from db?
+        #  If so, give user option to add them
+
+        mr.add_munged_column(results,self,'Office','Office_external')
+        results_offices = results['Office_external'].unique()
+        offices_ext = results_offices.to_list()
+
+        mu_offices = self.raw_identifiers[self.raw_identifiers.cdf_element=='Office']
+        offices_mixed = results_offices.merge(mu_offices,how='left',
+                                                  left_on='Office_external',right_on='raw_identifer_value')
+        not_munged = offices_mixed[offices_mixed.raw_identifier_value.isnull()].to_list()
+        if len(not_munged) > 0:
+            print(f'Some offices in the results file cannot be interpreted by the munger {self.name}.')
+            ui.show_sample(not_munged,'offices in datafile','cannot be munged')
+
+        db_office_df = pd.read_sql_table('Office',sess.bind)
+        db_offices = db_office_df['Name'].unique(),to_list()
+
+        # TODO are there offices not recognized by raw_identifiers?
+
+        # are there offices recognized by raw_identifers but not in db?
+        bad_set = {x for x in results_offices if x not in db_offices}
+        if len(bad_set) > 0:
+            print('Results for offices missing from database will not be processed.')
+            ui.show_sample(bad_set,'offices in datafile','are not in the database')
+            add_to_db = input('Would you like to add some/all of these to the database (y/n)?\n')
+            if add_to_db == 'y':
+
+        # TODO
+        # TODO give user option to add new Offices to the state context file?
+        return
+
+
     def raw_cols_match(self,df):
         cols = self.raw_columns.name
         return set(df.columns).issubset(cols)
@@ -83,16 +117,9 @@ class Munger:
             print('Datafile will not be processed.')
             return
 
-        print(f'WARNING: This munger assumes ballot measure style {self.ballot_measure_style}.')
-        # TODO add description of ballot measure style option
-        print('\tIf other behavior is desired, create or use another munger.')
-        check_ru_type = input('\tProceed with munger {} (y/n)?\n'.format(self.name))
-        if check_ru_type != 'y':
-            print('Datafile will not be processed.')
-            return
-
         assert self.raw_cols_match(df), \
             f"""A column in {df.columns} is missing from raw_columns.txt."""
+
         if contest_type == 'Contest':
             pass    # TODO check for unlisted Offices, give user chance to modify Office.txt
         # note: we don't look for new offices. Must put desired offices into Office.txt in any case
@@ -166,6 +193,15 @@ class Munger:
                 # see if anything remains to be matched
                 unmatched = mu.find_unmatched(new_df_elts,element)
         # TODO
+        if contest_type == 'BallotMeasure':
+            print(f'WARNING: This munger assumes ballot measure style {self.ballot_measure_style}.')
+            # TODO add description of ballot measure style option
+            print('\tIf other behavior is desired, create or use another munger.')
+            check_bms = input('\tProceed with munger {} (y/n)?\n'.format(self.name))
+            if check_bms != 'y':
+                print('Datafile will not be processed.')
+                return
+
         return
 
     def add_to_raw_identifiers(self,df):
@@ -197,7 +233,7 @@ class Munger:
 
     def __init__(self,dir_path,cdf_schema_def_dir='CDF_schema_def_info/'):
         assert os.path.isdir(dir_path),f'{dir_path} is not a directory'
-        for ff in ['cdf_tables.txt','atomic_reporting_unit.txt','count_columns.txt']:
+        for ff in ['cdf_tables.txt','atomic_reporting_unit_type.txt','count_columns.txt']:
             assert os.path.isfile(os.path.join(dir_path,ff)),\
                 f'Directory {dir_path} does not contain file {ff}'
         self.name=dir_path.split('/')[-1]    # e.g., 'nc_general'
@@ -239,9 +275,11 @@ class Munger:
 
         if self.ballot_measure_style == 'yes_and_no_are_candidates':
             # TODO read ballot_measure_selection_list from raw_identifiers.txt
-            with open(os.path.join(dir_path,'ballot_measure_selections.txt'),'r') as ff:
-                selection_list = ff.readlines()
-            self.ballot_measure_selection_list = [x.strip() for x in selection_list]
+            ri_df = pd.read_csv(os.path.join(dir_path,'raw_identifiers.txt'),sep='\t')
+            self.ballot_measure_selection_list = ri_df[ri_df.cdf_element=='BallotMeasureSelection'].loc[:,'raw_identifier_value'].to_list()
+            #with open(os.path.join(dir_path,'ballot_measure_selections.txt'),'r') as ff:
+                #selection_list = ff.readlines()
+            #self.ballot_measure_selection_list = [x.strip() for x in selection_list]
 
             bms_str=cdft.loc['BallotMeasureSelection','raw_identifier_formula']
             # note: bms_str will start and end with <>
