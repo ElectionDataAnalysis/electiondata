@@ -68,8 +68,7 @@ class State:
 
 class Munger:
     def office_check(self,results,state,sess):
-        # TODO are any offices in <results> missing from db?
-        #  If so, give user option to add them
+        # TODO bug: didn't catch missing items in NC_test2 raw_identifiers
 
         mr.add_munged_column(results,self,'Office','Office_external')
         results_offices = results['Office_external'].unique()
@@ -78,15 +77,19 @@ class Munger:
         mu_offices = self.raw_identifiers[self.raw_identifiers.cdf_element=='Office']
         offices_mixed = results_offices.merge(mu_offices,how='left',
                                                   left_on='Office_external',right_on='raw_identifer_value')
+
+        # are there offices in results file that cannot be munged?
         not_munged = offices_mixed[offices_mixed.raw_identifier_value.isnull()].to_list()
         if len(not_munged) > 0:
             print(f'Some offices in the results file cannot be interpreted by the munger {self.name}.')
             ui.show_sample(not_munged,'offices in datafile','cannot be munged')
+            add_to_munger = input('Would you like to add some/all of these to the munger (y/n)?\n')
+            if add_to_munger == 'y':
+                input(f'Edit the file {munger.name}/raw_identifiers.txt. Then hit return to continue.\n')
 
         db_office_df = pd.read_sql_table('Office',sess.bind)
-        db_offices = db_office_df['Name'].unique(),to_list()
+        db_offices = db_office_df['Name'].unique().to_list()
 
-        # TODO are there offices not recognized by raw_identifiers?
 
         # are there offices recognized by raw_identifers but not in db?
         bad_set = {x for x in results_offices if x not in db_offices}
@@ -95,18 +98,34 @@ class Munger:
             ui.show_sample(bad_set,'offices in datafile','are not in the database')
             add_to_db = input('Would you like to add some/all of these to the database (y/n)?\n')
             if add_to_db == 'y':
+                context_template_path = os.path.join(
+                    os.path.abspath(os.path.join(state.path_to_state_dir, os.pardir)),'context_templates')
+                ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
+                standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
 
-        # TODO
-        # TODO give user option to add new Offices to the state context file?
+                ru = ui.fill_context_file(os.path.join(state.path_to_state_dir,'context'),
+                                       context_template_path,
+                                       'ReportingUnit',standard_ru_types,'ReportingUnitType')
+                ru_list = ru['Name'].to_list()
+                ui.fill_context_file(os.path.join(state.path_to_state_dir,'context'),context_template_path,
+                                     'Office',ru_list,'ElectionDistrict',
+                                     reportingunittype_list=standard_ru_types)
+        # load new RUs and Offices to db
+        # TODO will we need Party for primaries? If not here, then for CandidateContest somewhere
+        for element in ['ReportingUnit','Office']:
+            source_df = pd.read_csv(f'{state.path_to_state_dir}context/{element}.txt',sep='\t')
+            mr.load_context_dframe_into_cdf(sess,source_df,element)
+
+        # update munger with any new raw_identifiers
+        self.raw_identifiers=pd.read_csv(os.path.join(self.path_to_munger_dir,'raw_identifiers.txt'),sep='\t')
         return
-
 
     def raw_cols_match(self,df):
         cols = self.raw_columns.name
         return set(df.columns).issubset(cols)
 
-    def check_new_results_dataset(self,df,state,sess,contest_type):
-        """<df> is a results dataframe of a single <contest_type>;
+    def check_new_results_dataset(self,results,state,sess,contest_type):
+        """<results> is a results dataframe of a single <contest_type>;
         this routine should add what's necessary to the munger to treat the dataframe,
         keeping backwards compatibility and exiting gracefully if dataframe needs different munger."""
 
@@ -117,31 +136,28 @@ class Munger:
             print('Datafile will not be processed.')
             return
 
-        assert self.raw_cols_match(df), \
-            f"""A column in {df.columns} is missing from raw_columns.txt."""
+        assert self.raw_cols_match(results), \
+            f"""A column in {results.columns} is missing from raw_columns.txt."""
 
         if contest_type == 'Contest':
-            pass    # TODO check for unlisted Offices, give user chance to modify Office.txt
-        # note: we don't look for new offices. Must put desired offices into Office.txt in any case
-        # TODO where will user be notified of untreated offices?
+            offices_finalized = False
+            while not offices_finalized:
+                self.office_check(results,state,sess)
+
         # TODO ask for CountItemStatus for datafile (not used yet, as NIST CDF currently attaches it to ReportingUnit, yuck)
         cis_df = pd.read_sql_table('CountItemStatus',sess.bind,index_col='Id')
         cis_id,cis = ui.pick_one(cis_df,'Txt',item='status',required=True)
 
-        # TODO need to treat CandidateContest separately -- distinguish new from BallotMeasure
-        # TODO also, maybe what we really want to identify is any new Office.
-        # TODO should user have option to ignore Offices?
         # TODO how to handle Election?
         for element in ['ReportingUnit','Party']:
-            # TODO: Duplicates in the unmatched.txt file (e.g., due to nans or blanks)
-            #  end up as dupes in <element>.txt. Fix!
+            # TODO: Rework, using fill_context_table
             print('Examining instances of {}'.format(element))
             # get list of columns of <f> needed to determine the raw_identifier for <element>
             p = '\<([^\>]+)\>'
             col_list = re.findall(p,self.cdf_tables.loc[element,'raw_identifier_formula'])
 
             # create dataframe of unique instances of <element>
-            df_elts = df[col_list].drop_duplicates()
+            df_elts = results[col_list].drop_duplicates()
 
             # munge the given element into a new column of f_elts
             mr.add_munged_column(df_elts,self,element,'raw_identifier_value')

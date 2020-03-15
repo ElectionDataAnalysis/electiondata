@@ -444,8 +444,8 @@ def context_schema_to_cdf(session,s,enum_table_list):
     # process other tables; need Office after ReportingUnit and after Party
     for t in ['ReportingUnit','Party','Office','Election']:
 
-        # create DataFrames of relevant context information
-        source_df = pd.read_csv('{}context/{}.txt'.format(s.path_to_state_dir,t),sep='\t')
+        # create DataFrames of relevant context information and load to cdf
+        source_df = pd.read_csv(f'{s.path_to_state_dir}context/{t}.txt',sep='\t')
         load_context_dframe_into_cdf(session,source_df,t)
 
     # TODO update CRUJ when munger is updated?

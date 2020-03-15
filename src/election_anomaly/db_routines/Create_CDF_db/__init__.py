@@ -82,6 +82,7 @@ def create_common_data_format_tables(session,schema,dirpath='CDF_schema_def_info
     session.flush()
     return metadata
 
+
 # TODO should we somewhere check consistency of enumeration_table_list and the files in enumerations/ ? Is the file enumeration_table_list ever used?
 def enum_table_list(dirpath= 'CDF_schema_def_info/'):
     if not dirpath[-1] == '/': dirpath += '\''
@@ -90,6 +91,7 @@ def enum_table_list(dirpath= 'CDF_schema_def_info/'):
         assert f[-4:] == '.txt', 'File name in ' + dirpath + 'enumerations/ not in expected form: ' + f
     enum_table_list = [f[:-4] for f in file_list]
     return enum_table_list
+
 
 def fill_cdf_enum_tables(session,schema,dirpath= 'CDF_schema_def_info/'):
     """takes lines of text from file and inserts each line into the txt field of the enumeration table"""
@@ -104,6 +106,7 @@ def fill_cdf_enum_tables(session,schema,dirpath= 'CDF_schema_def_info/'):
         dframe.to_sql(f,session.bind,schema=schema,if_exists='append',index=False)
     session.flush()
     return e_table_list
+
 
 if __name__ == '__main__':
     eng,meta = dbr.sql_alchemy_connect(paramfile='../../../local_data/database.ini')
