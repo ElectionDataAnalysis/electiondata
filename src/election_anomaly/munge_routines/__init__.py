@@ -19,9 +19,10 @@ from db_routines import dframe_to_sql
 def load_context_dframe_into_cdf(session,source_df,element,CDF_schema_def_dir='CDF_schema_def_info/'):
     """source_df should have all info needed for insertion into cdf:
     for enumerations, the value of the enumeration (e.g., 'precinct')
-    for other fields, the value of the field (e.g., 'North Carolina;Alamance County'"""
+    for other fields, the value of the field (e.g., 'North Carolina;Alamance County')"""
     # TODO check that source_df has the right format
     # TODO check that ReportingUnit.CountItemStatus_Id and ReportingUnit.OtherCountItemStatus are done right.
+    # TODO check that this can be used to update the db as well as initialize it
 
     enums = pd.read_csv('{}Tables/{}/enumerations.txt'.format(CDF_schema_def_dir,element))
     # get all relevant enumeration tables
@@ -38,6 +39,7 @@ def load_context_dframe_into_cdf(session,source_df,element,CDF_schema_def_dir='C
         # Check that all ElectionDistrictTypes are recognized
         for edt in source_df['ElectionDistrictType'].unique():
             assert edt in list(cdf_rut['Txt'])
+            # TODO allow recovery from this problem
 
         # insert corresponding ReportingUnits (the ones that don't already exist in cdf ReportingUnit table).
         cdf_ru = pd.read_sql_table('ReportingUnit',session.bind,'cdf',index_col=None)

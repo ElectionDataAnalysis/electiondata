@@ -37,7 +37,8 @@ def pick_one(df,return_col,item='row',required=False):
 	return choice, df.loc[choice,return_col]
 
 
-def show_sample(st,items,condition,label='shown',dir=None):
+def show_sample(st,items,condition,outfile='shown_items.txt',dir=None):
+	st = list(st)
 	st.sort()
 	print(f'There are {len(st)} {items} that {condition}:')
 	if len(st) < 11:
@@ -48,18 +49,20 @@ def show_sample(st,items,condition,label='shown',dir=None):
 		show_list.sort()
 	for r in show_list:
 		print(r)
-	show_all = input(f'Show all {len(st)} {items} that {condition} (y/n)?\n')
 	if len(st) > 10:
+		show_all = input(f'Show all {len(st)} {items} that {condition} (y/n)?\n')
 		if show_all == 'y':
 			for r in st:
 				print(f'\t{r}')
 	if dir is None:
 		dir = input(f'Export all {len(st)} {items} that {condition}? If so, enter directory for export\n'
 					f'(Current directory is {os.getcwd()})\n')
-	if os.path.isdir(dir):
-		with open(os.path.join(dir,f'{label}_{items}.txt'),'a') as f:
-			f.write('\n'.join(st))
-		print(f'{items} exported to {os.path.join(dir,f"{label}_{items}.txt")}')
+	elif os.path.isdir(dir):
+		export = input(f'Export all {len(st)} {items} that {condition} to {outfile} (y/n)?\n')
+		if export == 'y':
+			with open(os.path.join(dir,outfile),'a') as f:
+				f.write('\n'.join(st))
+			print(f'{items} exported to {os.path.join(dir,outfile)}')
 	elif dir != '':
 		print(f'Directory {dir} does not exist.')
 
@@ -380,8 +383,14 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 	Session = sessionmaker(bind=eng)
 	new_df_session = Session()
 
+
+
 	state = pick_state(new_df_session.bind,None,
 					   path_to_states=os.path.join(project_root,'local_data'),state_name=state_name)
+
+	# update db from state context file
+
+
 
 	print('Specify the election:')
 	election_idx, election = pick_one(pd.read_sql_table('Election',new_df_session.bind,index_col='Id'),'Name','election')
@@ -416,9 +425,9 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 	contest_type_idx, contest_type = pick_one(contest_type_df,'Contest Type', item='contest type',required=True)
 
 	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
-		munger.check_new_results_dataset(cc_results,state,new_df_session,'Candidate')
+		munger.check_new_results_dataset(cc_results,state,new_df_session,'Candidate',project_root=project_root)
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
-		munger.check_new_results_dataset(cc_results,state,new_df_session,'BallotMeasure')
+		munger.check_new_results_dataset(cc_results,state,new_df_session,'BallotMeasure',project_root=project_root)
 	return
 
 if __name__ == '__main__':
