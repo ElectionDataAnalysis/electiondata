@@ -82,7 +82,7 @@ class Munger:
         not_munged = offices_mixed[offices_mixed.raw_identifier_value.isnull()].loc[:,'Office_external'].to_list()
         if len(not_munged) > 0:
             print(f'Some offices in the results file cannot be interpreted by the munger {self.name}.')
-            ui.show_sample(not_munged,'offices in datafile','cannot be munged',label='unmunged')
+            ui.show_sample(not_munged,'offices in datafile','cannot be munged',label='unmunged',dir=os.path.join(self.path_to_munger_dir))
             add_to_munger = input('Would you like to add some/all of these to the munger (y/n)?\n')
             if add_to_munger == 'y':
                 print(f'Edit the file {self.name}/raw_identifiers.txt. Add a line for each office you want to add,\n'
@@ -94,7 +94,6 @@ class Munger:
 
         db_office_df = pd.read_sql_table('Office',sess.bind)
         db_offices = list(db_office_df['Name'].unique())
-        # TODO allow user to stash offices not of interest in a munger file
 
 
         # are there offices recognized by munger but not in db?
@@ -103,7 +102,7 @@ class Munger:
 
         if len(bad_set) > 0:
             print('Results for offices missing from database will not be processed.')
-            ui.show_sample(bad_set,'offices in datafile','are not in the database',label='not_in_db')
+            ui.show_sample(bad_set,'munged offices','are not in the database',label='not_in_db',dir=os.path.join(self.path_to_munger_dir))
             add_to_db = input('Would you like to add some/all of these to the database (y/n)?\n')
             if add_to_db == 'y':
                 context_template_path = os.path.join(

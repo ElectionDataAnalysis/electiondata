@@ -37,7 +37,8 @@ def pick_one(df,return_col,item='row',required=False):
 	return choice, df.loc[choice,return_col]
 
 
-def show_sample(st,items,condition,label='shown'):
+def show_sample(st,items,condition,label='shown',dir=None):
+	st.sort()
 	print(f'There are {len(st)} {items} that {condition}:')
 	if len(st) < 11:
 		show_list = st
@@ -47,19 +48,21 @@ def show_sample(st,items,condition,label='shown'):
 		show_list.sort()
 	for r in show_list:
 		print(r)
+	show_all = input(f'Show all {len(st)} {items} that {condition} (y/n)?\n')
 	if len(st) > 10:
-		export_all = input(f'Export all {len(st)} {items} that {condition}? If so, enter directory for export\n'
-						   f'(Current directory is {os.getcwd()})\n')
-		if os.path.isdir(export_all):
-			with open(os.path.join(export_all,f'{label}_{items}.txt'),'a') as f:
-				f.write('\n'.join(st))
-		elif export_all != '':
-			print(f'Directory {export_all} does not exist.')
-		show_all = input(f'Show all {len(st)} {items} that {condition} (y/n)?\n')
 		if show_all == 'y':
-			st.sort()
 			for r in st:
-				print(r)
+				print(f'\t{r}')
+	if dir is None:
+		dir = input(f'Export all {len(st)} {items} that {condition}? If so, enter directory for export\n'
+					f'(Current directory is {os.getcwd()})\n')
+	if os.path.isdir(dir):
+		with open(os.path.join(dir,f'{label}_{items}.txt'),'a') as f:
+			f.write('\n'.join(st))
+		print(f'{items} exported to {os.path.join(dir,f"{label}_{items}.txt")}')
+	elif dir != '':
+		print(f'Directory {dir} does not exist.')
+
 	return
 
 
