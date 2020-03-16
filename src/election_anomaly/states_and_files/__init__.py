@@ -68,7 +68,11 @@ class State:
 
 class Munger:
     def office_check(self,results,state,sess,project_path='.'):
-        # TODO bug: didn't catch missing items in NC_test2 raw_identifiers
+        print(f'Updating database with info from {state.short_name}/context/Offices.txt\n'
+              f'and ReportingUnits.txt.')
+        mr.load_context_dframe_into_cdf(sess,pd.read_csv(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t'),'ReportingUnit',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
+        mr.load_context_dframe_into_cdf(sess,pd.read_csv(os.path.join(state.path_to_state_dir,'context/Party.txt'),sep='\t'),'Party',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
+        mr.load_context_dframe_into_cdf(sess,pd.read_csv(os.path.join(state.path_to_state_dir,'context/Office.txt'),sep='\t'),'Office',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
 
         mr.add_munged_column(results,self,'Office','Office_external')
         results_offices = results['Office_external'].unique()
@@ -105,10 +109,8 @@ class Munger:
 
         # add all offices from context/Office.txt to db
         # TODO load CandidateContest as well, which depends on Party and Office
-        db_office_df = dbr.dframe_to_sql(pd.read_csv(os.path.join(state.path_to_state_dir,'context/Office.txt'),sep='\t'),
-                          sess,None,'Office')
 
-        # db_office_df = pd.read_sql_table('Office',sess.bind)
+        db_office_df = pd.read_sql_table('Office',sess.bind)
         db_offices = list(db_office_df['Name'].unique())
 
         # are there offices recognized by munger but not in db?
@@ -170,9 +172,11 @@ class Munger:
         assert self.raw_cols_match(results), \
             f"""A column in {results.columns} is missing from raw_columns.txt."""
 
-        print(f'Updating database with info from {state.short_name}/context/ directory.')
+
+
 
         if contest_type == 'Candidate':
+            # TODO party_check(), must happen before office_check (bc of primary CandidateContests)
             offices_finalized = False
             while not offices_finalized:
                 self.office_check(results,state,sess,project_path=project_root)

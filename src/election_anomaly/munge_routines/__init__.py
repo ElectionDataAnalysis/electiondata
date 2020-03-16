@@ -24,7 +24,7 @@ def load_context_dframe_into_cdf(session,source_df,element,CDF_schema_def_dir='C
     # TODO check that ReportingUnit.CountItemStatus_Id and ReportingUnit.OtherCountItemStatus are done right.
     # TODO check that this can be used to update the db as well as initialize it
 
-    enums = pd.read_csv('{}Tables/{}/enumerations.txt'.format(CDF_schema_def_dir,element))
+    enums = pd.read_csv(os.path.join(CDF_schema_def_dir,'Tables',element,'enumerations.txt'),sep='\t')
     # get all relevant enumeration tables
     for e in enums['enumeration']:  # e.g., e = "ReportingUnitType"
         cdf_e = pd.read_sql_table(e,session.bind,schema='cdf')
@@ -113,14 +113,14 @@ def contest_type_split(row,mu):
             cc_row=cc_row[~((cc_row[yes_col]!='') & (cc_row[no_col]!=''))]
         bm_row = row[~row.index.isin(cc_row.index)]
     else:
-        raise Exception('Ballot measure style {} not recognized'.format(mu.ballot_measure_style))
+        raise Exception(f'Ballot measure style {mu.ballot_measure_style} not recognized')
     return bm_row.copy(), cc_row.copy()
 
 
 def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False):
     """replace columns in <row_df> with raw_identifier values by columns with internal names
     """
-    assert os.path.isdir(unmatched_dir), 'Argument {} is not a directory'.format(unmatched_dir)
+    assert os.path.isdir(unmatched_dir), f'Argument {unmatched_dir} is not a directory'
     if drop_unmatched:
         how='inner'
     else:
@@ -133,9 +133,9 @@ def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_d
     # TODO move these warnings to the method on Munger() that pre-checks the munger.
     unmatched = row_df[row_df['raw_identifier_value'].isnull()].loc[:,element + '_external'].unique()
     if unmatched.size > 0:
-        unmatched_path = '{}unmatched_{}.txt'.format(unmatched_dir,element)
+        unmatched_path = os.path.join(unmatched_dir,f'unmatched_{element}.txt')
         np.savetxt(unmatched_path,unmatched,fmt="%s")
-        print('WARNING: Some instances of {1} unmatched, saved to {0}.'.format(unmatched_path,element))
+        print(f'WARNING: Some instances of {element} unmatched, saved to {unmatched_path}.')
         print('IF THESE ELEMENTS ARE NECESSARY, USER MUST put them in both the munger raw_identifiers.txt and in the {1}.txt file in the context directory'.format(unmatched_path,element))
 
     row_df = row_df.drop(['raw_identifier_value','cdf_element',element + '_external'],axis=1)
@@ -143,7 +143,7 @@ def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_d
     # ensure that there is a column in row_df called by the element
     # containing the internal name of the element
     if 'Name_'+element+ '_ei' in row_df.columns:
-        row_df.rename(columns={'Name_' + element + '_ei':element},inplace=True)
+        row_df.rename(columns={f'Name_{element}_ei':element},inplace=True)
     else:
         row_df.rename(columns={'cdf_internal_name':element},inplace=True)
 
@@ -156,7 +156,7 @@ def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_d
         row_df=row_df.drop(internal_name_column +'_' + element,axis=1)
     else:
         row_df=row_df.drop([internal_name_column],axis=1)
-    row_df.rename(columns={'Id_' + element:element + '_Id'},inplace=True)
+    row_df.rename(columns={f'Id_{element}':f'{element}_Id'},inplace=True)
     return row_df
 
 
@@ -178,14 +178,14 @@ def enum_col_to_id_othertext(df,type_col,enum_df):
             assert c*3 not in df.colums, 'Column name '+c*3+' conflicts with variable used in code'
             df.rename(columns={c:c*3},inplace=True)
     df = df.merge(enum_df,how='left',left_on=type_col,right_on='Txt')
-    df.rename(columns={'Id':type_col+'_Id'},inplace=True)
-    df.loc[:,'Other'+type_col]=''
+    df.rename(columns={'Id':f'{type_col}_Id'},inplace=True)
+    df.loc[:,f'Other{type_col}']=''
 
     other_id_df = enum_df[enum_df['Txt']=='other']
     if not other_id_df.empty:
         other_id = other_id_df.iloc[0]['Id']
-        df[type_col+'_Id'] = df[type_col+'_Id'].fillna(other_id)
-        df.loc[df[type_col+'_Id'] == other_id,'Other'+type_col] = df.loc[df[type_col+'_Id'] == other_id,type_col]
+        df[f'{type_col}_Id'] = df[f'{type_col}_Id'].fillna(other_id)
+        df.loc[df[f'{type_col}_Id'] == other_id,'Other'+type_col] = df.loc[df[f'{type_col}_Id'] == other_id,type_col]
     df = df.drop(['Txt',type_col],axis=1)
     for c in ['Id','Txt']:
         if c*3 in df.columns:
@@ -200,7 +200,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
     (e.g., Party, ComposingReportingUnitJoin, Election, ReportingUnit etc.)
     """
     # TODO some of this could be done once for both BallotMeasure and Candidate contests. Rearrange for efficiency?
-    assert contest_type in ['BallotMeasure','Candidate'], 'Contest type {} not recognized'.format(contest_type)
+    assert contest_type in ['BallotMeasure','Candidate'], f'Contest type {contest_type} not recognized'
 
 
     cdf_d = {}  # dataframe for each table
@@ -261,7 +261,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
             bm_contest_selection = row[['BallotMeasureContest','BallotMeasureSelection']].drop_duplicates()
             row.rename(columns=vc_col_d,inplace=True)  # standardize vote-count column names
         else:
-            raise Exception('Ballot measure style \'{}\' not recognized'.format(mu.ballot_measure_style))
+            raise Exception(f'Ballot measure style \'{mu.ballot_measure_style}\' not recognized')
         bm_contest_selection.columns = ['Name','Selection']
         # internal db name for ballot measure contest matches name in file
         bm_contest_selection.loc[:,'ElectionDistrict_Id'] = state_id  # append column for ElectionDistrict Id
@@ -371,13 +371,13 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
     vote_counts_fat.rename(columns={'Id':'VoteCount_Id'},inplace=True)
     session.commit()
     end = time.time()
-    print('\tSeconds required to upload VoteCount: {}'.format(round(end - start)))
+    print(f'\tSeconds required to upload VoteCount: {round(end - start)}')
     print('Upload to SelectionElectionContestVoteCountJoin')
     start = time.time()
 
     cdf_d['SelectionElectionContestVoteCountJoin'] = dbr.dframe_to_sql(vote_counts_fat,session,cdf_schema,'SelectionElectionContestVoteCountJoin')
     end = time.time()
-    print('\tSeconds required to upload SelectionElectionContestVoteCountJoin: {}'.format(round(end - start)))
+    print(f'\tSeconds required to upload SelectionElectionContestVoteCountJoin: {round(end - start)}')
     print('Drop columns from cdf table')
     q = 'ALTER TABLE {0}."VoteCount" DROP COLUMN "Election_Id",' \
         ' DROP COLUMN "Contest_Id" ,  DROP COLUMN "Selection_Id" '
