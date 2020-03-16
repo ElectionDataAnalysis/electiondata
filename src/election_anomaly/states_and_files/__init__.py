@@ -85,10 +85,10 @@ class Munger:
             ui.show_sample(not_munged,'offices in datafile','cannot be munged',label='unmunged')
             add_to_munger = input('Would you like to add some/all of these to the munger (y/n)?\n')
             if add_to_munger == 'y':
-                input(f'Edit the file {self.name}/raw_identifiers.txt. Add a line for each office you want to add,\n'
+                print(f'Edit the file {self.name}/raw_identifiers.txt. Add a line for each office you want to add,\n'
                       f'including a name to be used internally in the Common Data Format database Name field.\n'
                       f'Then edit the file {state}/context/Office.txt, adding a line for each new office.\n'
-                      f'You may need to do some contextual research to fill all the fields in Office.txt')
+                      f'You may need to do some contextual research to fill all the fields in Office.txt\n')
 
                 input('Then hit return to continue.\n')
 
