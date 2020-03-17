@@ -7,9 +7,6 @@ import munge_routines as mr
 from sqlalchemy.orm import sessionmaker
 import user_interface as ui
 
-# TODO: ReportingUnit cdf_table has CountItemStatus field, so particular precincts, counties, etc.,
-#  aren't really "ReportingUnits" but rather "ReportingUnits without specified CountItemStatus". Hm.
-
 
 class State:
     def create_db(self):
@@ -70,8 +67,8 @@ class Munger:
     def office_check(self,results,state,sess,project_path='.'):
         print(f'Updating database with info from {state.short_name}/context/Offices.txt\n'
               f'and ReportingUnits.txt.')
-        mr.load_context_dframe_into_cdf(sess,pd.read_csv(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t'),'ReportingUnit',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
-        mr.load_context_dframe_into_cdf(sess,pd.read_csv(os.path.join(state.path_to_state_dir,'context/Party.txt'),sep='\t'),'Party',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
+        mr.load_context_dframe_into_cdf(sess,state,pd.read_csv(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t'),'ReportingUnit',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
+        mr.load_context_dframe_into_cdf(sess,state,pd.read_csv(os.path.join(state.path_to_state_dir,'context/Party.txt'),sep='\t'),'Party',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
         mr.load_context_dframe_into_cdf(sess,pd.read_csv(os.path.join(state.path_to_state_dir,'context/Office.txt'),sep='\t'),'Office',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
 
         mr.add_munged_column(results,self,'Office','Office_external')
@@ -147,7 +144,7 @@ class Munger:
         # TODO will we need Party for primaries? If not here, then for CandidateContest somewhere
         for element in ['ReportingUnit','Office']:
             source_df = pd.read_csv(f'{state.path_to_state_dir}context/{element}.txt',sep='\t')
-            mr.load_context_dframe_into_cdf(sess,source_df,element,CDF_schema_def_dir=os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
+            mr.load_context_dframe_into_cdf(sess,state,source_df,element,CDF_schema_def_dir=os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
 
         # update munger with any new raw_identifiers
         self.raw_identifiers=pd.read_csv(os.path.join(self.path_to_munger_dir,'raw_identifiers.txt'),sep='\t')
@@ -183,9 +180,6 @@ class Munger:
                 fin = input(f'Are the offices finalized (y/n)?')
                 if fin == 'y': offices_finalized = True
 
-        # TODO ask for CountItemStatus for datafile (not used yet, as NIST CDF currently attaches it to ReportingUnit, yuck)
-        cis_df = pd.read_sql_table('CountItemStatus',sess.bind,index_col='Id')
-        cis_id,cis = ui.pick_one(cis_df,'Txt',item='status',required=True)
 
         for element in ['ReportingUnit','Party']:
             # TODO: Rework, using fill_context_table
@@ -229,16 +223,17 @@ class Munger:
 
                 if element != 'CandidateContest':
                     # add to state's context directory
-                    # TODO what form should new_f_elts have?
                     if element == 'ReportingUnit':
                         new_df_elts.loc[:,'ReportingUnitType'] = self.atomic_reporting_unit_type
-                        new_df_elts.loc[:,'CountItemStatus'] = cis  # TODO don't need this until it's uploaded to db
+                        # new_df_elts.loc[:,'CountItemStatus'] = cis
+                        # TODO we are ignoring CountItemStatus field
+                        #  of ReportingUnit (for now at least)
 
                     new_df_elts.rename(columns={'cdf_internal_name':'Name'},inplace=True)
                     state.add_to_context_dir(element,new_df_elts)
 
                 # add to the cdf.<element> table
-                mr.load_context_dframe_into_cdf(sess,new_df_elts,element,CDF_schema_def_dir='../CDF_schema_def_info/')
+                mr.load_context_dframe_into_cdf(sess,state,new_df_elts,element,CDF_schema_def_dir='../CDF_schema_def_info/')
 
                 if element == 'ReportingUnit':
                     # insert as necessary into ComposingReportingUnitJoin table

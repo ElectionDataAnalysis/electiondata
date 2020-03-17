@@ -6,6 +6,7 @@
 # TODO e.g. 'Stephanie  Singer' or 'Stephanie Frank Singer'.
 
 import db_routines as dbr
+import user_interface as ui
 import pandas as pd
 import numpy as np
 import time
@@ -16,39 +17,63 @@ import os
 from db_routines import dframe_to_sql
 
 
-def load_context_dframe_into_cdf(session,source_df,element,CDF_schema_def_dir='CDF_schema_def_info/'):
-    """source_df should have all info needed for insertion into cdf:
+def load_context_dframe_into_cdf(session,state,source_df,element,
+                                 CDF_schema_def_dir='CDF_schema_def_info/'):
+    """<source_df> should have all info needed for insertion into cdf:
     for enumerations, the value of the enumeration (e.g., 'precinct')
-    for other fields, the value of the field (e.g., 'North Carolina;Alamance County')"""
+    for other fields, the value of the field (e.g., 'North Carolina;Alamance County').
+"""
     # TODO check that source_df has the right format
-    # TODO check that ReportingUnit.CountItemStatus_Id and ReportingUnit.OtherCountItemStatus are done right.
     # TODO check that this can be used to update the db as well as initialize it
 
-    enums = pd.read_csv(os.path.join(CDF_schema_def_dir,'Tables',element,'enumerations.txt'),sep='\t')
-    # get all relevant enumeration tables
-    for e in enums['enumeration']:  # e.g., e = "ReportingUnitType"
-        cdf_e = pd.read_sql_table(e,session.bind)
-        # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
-        if e in source_df.columns:  # some enumerations (e.g., CountItemStatus for t = ReportingUnit) are not available from context.
+    enum_file = os.path.join(CDF_schema_def_dir,'Tables',element,'enumerations.txt')
+    if os.path.isfile(enum_file):  # (if not, there are no enums for this element)
+        enums = pd.read_csv(os.path.join(CDF_schema_def_dir,'Tables',element,'enumerations.txt'),sep='\t')
+        # get all relevant enumeration tables
+        for e in enums['enumeration']:  # e.g., e = "ReportingUnitType"
+            cdf_e = pd.read_sql_table(e,session.bind)
+            # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
+            if e in source_df.columns:
+                source_df = enum_col_to_id_othertext(source_df,e,cdf_e)
+        if False and element == 'ReportingUnit': # TODO skipping for now,
+            # TODO since we can't assign an ReportingUnit as ElectionDistrict to Office
+            #  (unless Office has a CountItemStatus; can't be right!)
+            # TODO note CountItemStatus is weirdly assigned to ReportingUnit in NIST CDF.
+            #  Note also that CountItemStatus is not required, and a single RU can have many CountItemStatuses
+
+            cis_df = pd.read_sql_table('CountItemStatus',session.bind,index_col='Id')
+            cis_id,cis = ui.pick_one(cis_df,'Txt',item='status',required=True)
+
+            cdf_e = pd.read_sql_table('CountItemStatus',session.bind)
+            source_df.loc[:,e] = cis
             source_df = enum_col_to_id_othertext(source_df,e,cdf_e)
     #  commit info in source_df to corresponding cdf table to db
     cdf_element = dframe_to_sql(source_df,session,None,element)
 
     if element == 'Office':
-        cdf_rut = pd.read_sql_table('ReportingUnitType',session.bind)
         # TODO: where are ElectionDistrictTypes used from Office.txt?
         #  Need to check somewhere that ElectionDistrict is recognized as a RU
 
-        # insert corresponding ReportingUnits (the ones that don't already exist in cdf ReportingUnit table).
+        # find any ElectionDistricts that are not in the cdf ReportingUnit table.
         cdf_ru = pd.read_sql_table('ReportingUnit',session.bind,None,index_col=None)
         # note: cdf Id column is *not* the index for the dataframe cdf_d['ReportingUnit'].
 
-        new_ru = source_df.drop(['Name'],axis=1)
+        office_ed = source_df.drop(['Name'],axis=1)
         ru_list = list(cdf_ru['Name'].unique())
-        new_ru = new_ru[~new_ru['ElectionDistrict'].isin(ru_list)]
-        new_ru = new_ru.rename(columns={'ElectionDistrict':'Name','ElectionDistrictType':'ReportingUnitType'})
-        new_ru = enum_col_to_id_othertext(new_ru,'ReportingUnitType',cdf_rut)
-        cdf_ru = dframe_to_sql(new_ru,session,None,'ReportingUnit',index_col=None)
+        new_ru = office_ed[~office_ed['ElectionDistrict'].isin(ru_list)]
+        ui.show_sample(list(new_ru),'election districts for offices',
+                       condition='are not in the ReportingUnit table of the common data format',
+                       outfile='missing_reportingunits.txt',
+                       dir=os.path.join(state.path_to_state_dir,'output'))
+        #new_ru = new_ru.rename(columns={'ElectionDistrict':'Name'})
+        #new_ru = enum_col_to_id_othertext(new_ru,'ReportingUnitType',cdf_rut)
+        # update context/ReportingUnit.txt,
+        cdf_rut = pd.read_sql_table('ReportingUnitType',session.bind)
+        rut_list = list(cdf_rut['Txt'])
+        ru = ui.fill_context_file(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),os.path.join(
+                    os.path.abspath(os.path.join(state.path_to_state_dir, os.pardir)),'context_templates'),'ReportingUnit',rut_list,'ReportingUnitType')
+        #  then upload to db
+        cdf_ru = dframe_to_sql(ru,session,None,'ReportingUnit',index_col=None)
 
         # create corresponding CandidateContest records for general and primary election contests (and insert in cdf db if they don't already exist)
         cc_data = source_df.merge(cdf_element,left_on='Name',right_on='Name').merge(
@@ -208,9 +233,11 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
     # get vote count column mapping for our munger
     vc_col_d = {x['RawName']:x['CountItemType'] for i,x in mu.count_columns[mu.count_columns.ContestType==contest_type][['RawName','CountItemType']].iterrows()}
+
     col_list = list(vc_col_d.values()) + ['Election_Id','ReportingUnit_Id',
-                                          'ReportingUnitType_Id', 'OtherReportingUnitType', 'CountItemStatus_Id',
-                                          'OtherCountItemStatus','Selection_Id','Contest_Id']    # is ElectionDistrict_Id necessary?
+                                          'ReportingUnitType_Id', 'OtherReportingUnitType',
+                                          'Selection_Id','Contest_Id']
+                                    # TODO do we need CountItemStatus_Id or OtherCountItemStatus in col_list?
     vote_type_list=list({v for k,v in vc_col_d.items()})
 
     # add columns corresponding to cdf fields
@@ -446,7 +473,7 @@ def context_schema_to_cdf(session,s,enum_table_list):
 
         # create DataFrames of relevant context information and load to cdf
         source_df = pd.read_csv(f'{s.path_to_state_dir}context/{t}.txt',sep='\t')
-        load_context_dframe_into_cdf(session,source_df,t)
+        load_context_dframe_into_cdf(session,s,source_df,t)
 
     # TODO update CRUJ when munger is updated?
     # Fill the ComposingReportingUnitJoin table

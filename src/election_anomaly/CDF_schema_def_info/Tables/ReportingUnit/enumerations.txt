@@ -1,3 +1,2 @@
 enumeration
 ReportingUnitType
-CountItemStatus
