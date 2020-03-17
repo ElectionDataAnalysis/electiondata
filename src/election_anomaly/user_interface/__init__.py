@@ -178,6 +178,11 @@ def pick_state(con,schema,path_to_states='local_data/',state_name=None):
 	return ss
 
 
+def find_dupes(df):
+	dupes= df[df.duplicated()].drop_duplicates(keep='first')
+	return dupes
+
+
 def create_file_from_template(template_file,new_file,sep='\t'):
 	"""For tab-separated files (or others, using <sep>); does not replace existing file
 	but creates <new_file> with the proper header row
@@ -197,12 +202,18 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 	create_file_from_template(template_file,context_path,sep=sep)
 	in_progress = 'y'
 	while in_progress == 'y':
-		# TODO check for dupes
 		# check format of file
 		context_df = pd.read_csv(context_path,sep=sep,header=0,dtype=str)
 		if not context_df.columns.to_list() == template.columns.to_list():
 			print(f'WARNING: {element}.txt is not in the correct format.')		# TODO refine error msg?
 			input('Please correct the file and hit return to continue.\n')
+
+		# check for dupes
+		dupes = find_dupes(context_df.Name)
+		if dupes.shape[0] >0:
+			print(f'File {context_path}\n has duplicates in the Name column.')
+			show_sample(dupes,'names','appear on more than one line')
+			input(f'Please correct and hit return to continue.\n')
 		else:
 			# report contents of file
 			print(f'\nCurrent contents of {element}.txt:\n{context_df}')
@@ -416,6 +427,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 	print(f'Munger {munger.name} has been chosen and prepared.\n')
 
 	# TODO present munger.ballot_measure_selections and give user chance to correct it.
+	munger.check_ballot_measure_selections()
 
 	print('What types of contests would you like to analyze from the datafile?')
 	bmc_results,cc_results = mr.contest_type_split(raw,munger)
