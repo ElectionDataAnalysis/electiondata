@@ -22,7 +22,7 @@ class State:
         """create/update corresponding CandidateContest records for general and primary election contests
         (and insert in cdf db if they don't already exist)"""
         # TODO need to run this only when/if Offices change
-        context_office = pd.read_csv(os.path.join(self.path_to_state_dir,'context/Office.txt'))
+        context_office = pd.read_csv(os.path.join(self.path_to_state_dir,'context/Office.txt'),sep='\t')
         cdf_office = pd.read_sql_table('Office',session.bind,index_col=None)
         cdf_ru = pd.read_sql_table('ReportingUnit',session.bind,index_col=None)
 
@@ -53,8 +53,8 @@ class State:
 
     def check_election_districts(self):
         """Looks in context file to check that every ElectionDistrict in Office.txt is listed in ReportingUnit.txt"""
-        ed = list(pd.read_csv(os.path.join(self.path_to_state_dir,'context/Office.txt'),sep='\t',header=0).loc[:'ElectionDistrict'])
-        ru = list(pd.read_csv(os.path.join(self.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t').loc[:'Name'])
+        ed = pd.read_csv(os.path.join(self.path_to_state_dir,'context/Office.txt'),sep='\t',header=0).loc[:,'ElectionDistrict'].to_list()
+        ru = list(pd.read_csv(os.path.join(self.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t').loc[:,'Name'])
         missing = [x for x in ed if x not in ru]
         if len(missing) == 0:
             all_ok = True
