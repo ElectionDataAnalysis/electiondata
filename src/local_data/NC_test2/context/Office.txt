@@ -1,5 +1,4 @@
 Name	ElectionDistrict	VotesAllowed	NumberElected	NumberRunoff	IsPartisan
-North Carolina;General Assembly House of Representatives District 1	North Carolina;General Assembly House of Representatives District 1	1	1	0	True
 North Carolina;General Assembly House of Representatives District 2	North Carolina;General Assembly House of Representatives District 2	1	1	0	True
 North Carolina;General Assembly House of Representatives District 3	North Carolina;General Assembly House of Representatives District 3	1	1	0	True
 North Carolina;General Assembly House of Representatives District 4	North Carolina;General Assembly House of Representatives District 4	1	1	0	True

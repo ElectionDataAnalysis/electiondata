@@ -18,6 +18,58 @@ class State:
         con.close()
         return
 
+    def prepare_candidatecontests(self,session):
+        """create/update corresponding CandidateContest records for general and primary election contests
+        (and insert in cdf db if they don't already exist)"""
+        # TODO need to run this only when/if Offices change
+        context_office = pd.read_csv(os.path.join(self.path_to_state_dir,'context/Office.txt'))
+        cdf_office = pd.read_sql_table('Office',session.bind,index_col=None)
+        cdf_ru = pd.read_sql_table('ReportingUnit',session.bind,index_col=None)
+
+        # create dataframe of general election candidatecontests (cc) with right data
+        cc = cdf_office.merge(
+            context_office,left_on='Name',right_on='Name',suffixes=['','_context']
+        ).merge(
+            cdf_ru,left_on='ElectionDistrict',right_on='Name',suffixes=['_office','_ru']
+        )
+        # restrict to columns we need and set order
+        cc = cc[['Name','VotesAllowed','NumberElected','NumberRunoff','Id','Id_ru','IsPartisan']]
+        # ensure names of columns are correct
+        cc.rename(columns={'Id_ru':'ElectionDistrict_Id','Id':'Office_Id'},inplace=True)
+        # insert values for 'PrimaryParty_Id' column
+        cc.loc[:,'PrimaryParty_Id'] = None
+        # save current for general election contests
+        cc_gen = cc_data.copy()
+
+        cdf_p = pd.read_sql_table('Party',session.bind,None,index_col=None)
+        for party_id in cdf_p['Id'].to_list():
+            cc_primary = cc_gen[cc_gen['IsPartisan']]  # non-partisan contests don't have party primaries, so omit them.
+            cc_primary['PrimaryParty_Id'] = party_id
+            cc_primary['Name'] = cc_primary['Name'] + ' Primary;' + cdf_p[cdf_p['Id'] == party_id].iloc[0]['Name']
+            cc_all = pd.concat([cc_gen,cc_primary])
+
+        dframe_to_sql(cc_all,session,None,'CandidateContest')
+        return cc_all
+
+    def check_election_districts(self):
+        """Looks in context file to check that every ElectionDistrict in Office.txt is listed in ReportingUnit.txt"""
+        ed = list(pd.read_csv(os.path.join(self.path_to_state_dir,'context/Office.txt'),sep='\t').loc[:'ElectionDistrict'])
+        ru = list(pd.read_csv(os.path.join(self.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t').loc[:'Name'])
+        missing = [x for x in ed if x not in ru]
+        if len(missing) == 0:
+            all_ok = True
+            print('Congratulations! Every ElectionDistrict is a ReportingUnit')
+        else:
+            all_ok = False
+            print('Every ElectionDistrict must be a ReportingUnit. This is not optional!!')
+            ui.show_sample(missing,'ElectionDistricts','not yet ReportingUnits',
+                           outfile='electiondistricts_missing_from_reportingunits.txt',dir=self.path_to_state_dir)
+            input('Please make corrections to Office.txt or additions to ReportingUnit.txt to resolve the problem.\n'
+                  'Then his return to continue.'
+                  f'(Directory is {os.path.join(self.path_to_state_dir,"context")}')
+            self.check_election_districts()
+        return all_ok
+
     def add_to_context_dir(self,element,df):
         """Add the data in the dataframe <f> to the file corresponding
         to <element> in the <state>'s context folder.
@@ -90,102 +142,105 @@ class Munger:
                   f'in {self.name}/raw_identifiers.txt')
         return
 
-    def check_party(self,results,state,sess,project_path='.'):
-        print(f'Updating database with info from {state.short_name}/context/Party.txt.\n')
-        mr.load_context_dframe_into_cdf(sess,state,pd.read_csv(os.path.join(state.path_to_state_dir,'context/Party.txt'),sep='\t'),'Party',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
-        # TODO
-        return
-
     def check_candidatecontest(self,results,state,sess,project_path='.'):
         # TODO
         return
 
-    def check_office(self,results,state,sess,project_path='.'):
-        print(f'Updating database with info from {state.short_name}/context/Offices.txt\n'
-              f'and ReportingUnits.txt.')
-        mr.load_context_dframe_into_cdf(sess,state,pd.read_csv(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t'),'ReportingUnit',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
-        mr.load_context_dframe_into_cdf(sess,state,pd.read_csv(os.path.join(state.path_to_state_dir,'context/Office.txt'),sep='\t'),'Office',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
+    def prepare_context_and_db(self,element,results,state,sess,project_path='.'):
+        """Loads info from context/<element>.txt into db; checks results file <element>s against munger;
+        then checks munger against db. Throughout, guides user to make corrections in context/<element>.txt;
+        finally loads final context/<element>.txt into db. Note that this will only add records to db, never remove. """
+        print(f'Updating database with info from {state.short_name}/context/{element}.txt.\n')
+        no_dupes = False
+        while no_dupes == False:
+            source_file = os.path.join(state.path_to_state_dir,f'context/{element}.txt')
+            source_df = pd.read_csv(source_file,sep='\t')
 
-        mr.add_munged_column(results,self,'Office','Office_external')
-        results_offices = results['Office_external'].unique()
+            dupes,source_df = ui.find_dupes(source_df)
+            if not dupes.empty:
+                input(f'WARNING: {state.short_name}/context/{element}.txt has duplicates.\n'
+                      f'Edit the file to remove the duplication, then hit return to continue')
+            else:
+                no_dupes = True
 
-        mu_offices = self.raw_identifiers[self.raw_identifiers.cdf_element=='Office']
-        offices_mixed = pd.DataFrame(results_offices,
-                                     columns=['Office_external']).merge(mu_offices,how='left',left_on='Office_external',right_on='raw_identifier_value')
+        mr.load_context_dframe_into_cdf(sess,state,source_df,element,
+                                        os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
 
-        # are there offices in results file that cannot be munged?
-        not_identified = offices_mixed[offices_mixed.raw_identifier_value.isnull()].loc[:,'Office_external'].to_list()
-        # and are not in unmunged_offices.txt?
+        mr.add_munged_column(results,self,element,f'{element}_external')
+        results_elements = results[f'{element}_external'].unique()
+
+        mu_elements = self.raw_identifiers[self.raw_identifiers.cdf_element==element]
+        elements_mixed = pd.DataFrame(
+            results_elements,columns=[f'{element}_external']).merge(
+            mu_elements,how='left',left_on=f'{element}_external',right_on='raw_identifier_value'
+            ).fillna('')
+
+
+        # are there elements in results file that cannot be munged?
+        not_identified = elements_mixed[elements_mixed.raw_identifier_value.isnull()].loc[:,
+                         f'{element}_external'].to_list()
+        # and are not in unmunged_{element}s.txt?
         try:
-            with open(os.path.join(self.path_to_munger_dir,'unmunged_offices_in_datafile.txt'),'r') as f:
-                unmunged_offices_in_datafile = [x.strip() for x in f.readlines()]
-                not_munged = [x for x in not_identified if x not in unmunged_offices_in_datafile]
+            with open(os.path.join(self.path_to_munger_dir,f'unmunged_{element}s_in_datafile.txt'),'r') as f:
+                unmunged_elements_in_datafile = [x.strip() for x in f.readlines()]
+                not_munged = [x for x in not_identified if x not in unmunged_elements_in_datafile]
         except FileNotFoundError:
             not_munged = not_identified
 
         if len(not_munged) > 0:
-            print(f'Some offices in the results file cannot be interpreted by the munger {self.name}.')
-            print(f'Note: offices listed in unmunged_offices.txt are interpreted as \'to be ignored\'.')
-            outfile = 'unmunged_offices.txt'
-            ui.show_sample(not_munged,'offices in datafile','cannot be munged',outfile=outfile,dir=os.path.join(self.path_to_munger_dir))
+            print(f'Some {element}s in the results file cannot be interpreted by the munger {self.name}.')
+            print(f'Note: {element}s listed in unmunged_{element}s.txt are interpreted as \'to be ignored\'.')
+            outfile = f'unmunged_{element}s.txt'
+            ui.show_sample(not_munged,f'{element}s in datafile','cannot be munged',outfile=outfile,dir=os.path.join(self.path_to_munger_dir))
             add_to_munger = input('Would you like to add some/all of these to the munger (y/n)?\n')
             if add_to_munger == 'y':
-                input(f'For each office you want to add to the munger:\n'
+                input(f'For each {element} you want to add to the munger:\n'
                     f'\tCut the corresponding line in {self.name}/{outfile} '
                     f'\tAdd a corresponding line the file {self.name}/raw_identifiers.txt, \n'
                     f'\tincluding creating a name to be used internally in the Common Data Format database Name field.\n'
-                    f'\tThen edit the file {state.short_name}/context/Office.txt, adding a line for each new office.\n\n'
+                    f'\tThen edit the file {state.short_name}/context/{element}.txt, adding a line for each new {element}.\n\n'
                     f'\tMake sure the internal cdf name is exactly the same in both files.\n'
-                    f'\tYou may need to do some contextual research to fill all the fields in Office.txt\n\n'
+                    f'\tYou may need to do some contextual research to fill all the fields in {element}.txt\n\n'
                     f'Then hit return to continue.\n')
 
-        # add all reporting units and offices from context/ to db
-        for element in ['ReportingUnit','Office']:
-            source_df = pd.read_csv(f'{state.path_to_state_dir}context/{element}.txt',sep='\t')
-            mr.load_context_dframe_into_cdf(sess,state,source_df,element,CDF_schema_def_dir=os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
+        # add all elements from context/ to db
+        source_df = pd.read_csv(f'{state.path_to_state_dir}context/{element}.txt',sep='\t')
+        mr.load_context_dframe_into_cdf(sess,
+                                        state,source_df,element,
+                                        CDF_schema_def_dir=os.path.join(project_path,
+                                                                        'election_anomaly/CDF_schema_def_info'))
 
 
-        db_office_df = pd.read_sql_table('Office',sess.bind)
-        db_offices = list(db_office_df['Name'].unique())
+        db_element_df = pd.read_sql_table(element,sess.bind)
+        db_elements = list(db_element_df['Name'].unique())
 
-        # are there offices recognized by munger but not in db?
-        munged_offices = offices_mixed[offices_mixed.raw_identifier_value.notnull()].loc[:,'cdf_internal_name'].to_list()
-        bad_set = {x for x in munged_offices if x not in db_offices}
+        # are there elements recognized by munger but not in db?
+        munged_elements = elements_mixed[elements_mixed.raw_identifier_value.notnull()].loc[:,'cdf_internal_name'].to_list()
+        munged_elements = munged_elements.remove('')  # remove any empty strings (e.g., from lines with no Party)
+        if munged_elements:
+            bad_set = {x for x in munged_elements if x not in db_elements}
+        else:
+            bad_set = {}
 
         if len(bad_set) > 0:
-            print('Election results for munged offices missing from database will not be processed.')
-            outfile = 'offices_munged_but_not_in_db.txt'
-            ui.show_sample(bad_set,'munged offices','are in raw_identifiers.txt but not in the database',outfile=outfile,dir=os.path.join(self.path_to_munger_dir))
+            print(f'Election results for munged {element}s missing from database will not be processed.')
+            outfile = f'{element}s_munged_but_not_in_db.txt'
+            ui.show_sample(bad_set,f'munged elements','are in raw_identifiers.txt but not in the database',
+                           outfile=outfile,dir=os.path.join(self.path_to_munger_dir))
             add_to_db = input('Would you like to add some/all of these to the database (y/n)?\n')
             if add_to_db == 'y':
-                input(f'For each office you want to add to the database:\n'
+                input(f'For each {element} you want to add to the database:\n'
                         f'\tCut the corresponding line in {self.name}/{outfile}.\n'
-                        f'\tAdd a line the file {state.short_name}/context/Offices.txt.\n'
-                        f'\tCopy the internal cdf name for the office from {self.name}/raw_identifiers.txt'
-                        f' and paste it into {state.short_name}/context/Offices.txt.\n'
-                        f'\tYou may need to do some contextual research to fill the other fields in Office.txt\n\n'
+                        f'\tAdd a line the file {state.short_name}/context/{element}.txt.\n'
+                        f'\tCopy the internal cdf name from {self.name}/raw_identifiers.txt'
+                        f' and paste it into {state.short_name}/context/{element}.txt.\n'
+                        f'\tYou may need to do some contextual research to fill the other fields in {element}.txt\n\n'
                         f'Then hit return to continue.\n')
-
-                context_template_path = os.path.join(
-                    os.path.abspath(os.path.join(state.path_to_state_dir, os.pardir)),'context_templates')
-                ru_type = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
-                standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
-
-                ru = ui.fill_context_file(os.path.join(state.path_to_state_dir,'context'),
-                                          context_template_path,
-                                          'ReportingUnit',standard_ru_types,'ReportingUnitType')
-                ru_list = ru['Name'].to_list()
-                ui.fill_context_file(os.path.join(state.path_to_state_dir,'context'),context_template_path,
-                                     'Office',ru_list,'ElectionDistrict',
-                                     reportingunittype_list=standard_ru_types)
-        # load new RUs and Offices to db
-        # TODO will we need Party for primaries? If not here, then for CandidateContest somewhere
-        for element in ['ReportingUnit','Office']:
-            source_df = pd.read_csv(f'{state.path_to_state_dir}context/{element}.txt',sep='\t')
-            mr.load_context_dframe_into_cdf(sess,state,source_df,element,CDF_schema_def_dir=os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
-
-        # update munger with any new raw_identifiers
-        self.raw_identifiers=pd.read_csv(os.path.join(self.path_to_munger_dir,'raw_identifiers.txt'),sep='\t')
+        source_df = pd.read_csv(f'{state.path_to_state_dir}context/{element}.txt',sep='\t')
+        mr.load_context_dframe_into_cdf(sess,
+                                        state,source_df,element,
+                                        CDF_schema_def_dir=os.path.join(project_path,
+                                                                        'election_anomaly/CDF_schema_def_info'))
         return
 
     def raw_cols_match(self,df):
@@ -208,15 +263,23 @@ class Munger:
             f"""A column in {results.columns} is missing from raw_columns.txt."""
 
         if contest_type == 'Candidate':
-            # TODO party_check(), must happen before check_office (bc of primary CandidateContests)
-            offices_finalized = False
-            while not offices_finalized:
-                self.check_office(results,state,sess,project_path=project_root)
-                fin = input(f'Are the offices and reporting units finalized (y/n)?\n')
-                if fin == 'y': offices_finalized = True
-        # TODO check that all offices have associated CandidateContests in db for general (etc.?) elections
-        # TODO check that all partisan offices have associated party primary CandidateContests in db
-
+            # check Party in context & db, updating if necessary (prereq to checking CandidateContests)
+            for element in ['Party','Office','ReportingUnit']:
+                finalized = False
+                while not finalized:
+                    self.prepare_context_and_db(element,results,state,sess,project_path=project_root)
+                    if element == 'ReportingUnit':
+                        eds_ok = False
+                        while not eds_ok:
+                            eds_ok = state.check_election_districts()
+                            if not eds_ok:
+                                # recheck Office and ReportingUnit
+                                self.prepare_context_and_db('Office',results,state,sess,project_path=project_root)
+                                self.prepare_context_and_db('ReportingUnit',results,state,sess,project_path=project_root)
+                    fin = input(f'Are the {element}s finalized (y/n)?\n')
+                    if fin == 'y':
+                        finalized = True
+        state.prepare_candidatecontests(sess)
 
         if contest_type == 'BallotMeasure':
             print(f'WARNING: This munger assumes ballot measure style {self.ballot_measure_style}.')
