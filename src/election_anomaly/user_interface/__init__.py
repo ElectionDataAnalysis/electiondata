@@ -38,9 +38,12 @@ def pick_one(df,return_col,item='row',required=False):
 
 
 def show_sample(st,items,condition,outfile='shown_items.txt',dir=None):
+	print(f'There are {len(st)} {items} that {condition}:')
+	if len(st) == 0:
+		return
 	st = list(st)
 	st.sort()
-	print(f'There are {len(st)} {items} that {condition}:')
+
 	if len(st) < 11:
 		show_list = st
 	else:
@@ -189,14 +192,14 @@ def create_file_from_template(template_file,new_file,sep='\t'):
 def fill_context_file(context_path,template_dir_path,element,test_list,test_field,reportingunittype_list=None,sep='\t'):
 	if element == 'Office':
 		assert reportingunittype_list, 'When processing Offices, need to pass non-empty reportingunittype_list'
-	context_file = os.path.join(context_path,f'{element}.txt')
-	template = os.path.join(template_dir_path,f'{element}.txt')
-	create_file_from_template(template,context_file,sep=sep)
+	template_file = os.path.join(template_dir_path,f'{element}.txt')
+	template = pd.read_csv(template_file,sep='\t')
+	create_file_from_template(template_file,context_path,sep=sep)
 	in_progress = 'y'
 	while in_progress == 'y':
 		# TODO check for dupes
 		# check format of file
-		context_df = pd.read_csv(context_file,sep=sep,header=0,dtype=str)
+		context_df = pd.read_csv(context_path,sep=sep,header=0,dtype=str)
 		if not context_df.columns.to_list() == template.columns.to_list():
 			print(f'WARNING: {element}.txt is not in the correct format.')		# TODO refine error msg?
 			input('Please correct the file and hit return to continue.\n')
@@ -207,10 +210,13 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 			# check test conditions
 			if test_list is not None:
 				if element == 'Office':	# need to reload from ReportingUnit.txt
-					test_list = pd.read_csv(os.path.join(context_path,'ReportingUnit.txt'),
+					test_list = pd.read_csv(context_path,
 										sep=sep,header=0,dtype=str)['Name'].to_list()
 				bad_set = {x for x in context_df[test_field] if x not in test_list}
-				if len(bad_set) > 0:	# if test condition fails
+				if len(bad_set) == 0:
+					print(f'Congratulations! All {element}s look good!')
+					in_progress = 'n'
+				else:  # if test condition fails
 					if element == 'Office':		# Office.ElectionDistrict must be in ReportingUnit.Name
 						print(f'The ElectionDistrict for each Office must be listed in ReportingUnit.txt.\n')
 						show_sample(bad_set,f'{test_field}s','fail this condition')
@@ -227,12 +233,10 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 						print(f'\tStandard {test_field}s are:')
 						print(f'\t\t{",".join(test_list)}')
 
-			# invite input
-			in_progress = input(f'Would you like to alter {element}.txt (y/n)?\n')
-			if in_progress == 'y':
-				input('Make alterations, then hit return to continue')
-			else:
-				print(f'{element}.txt looks good!')
+					# invite input
+					in_progress = input(f'Would you like to alter {element}.txt (y/n)?\n')
+					if in_progress == 'y':
+						input('Make alterations, then hit return to continue')
 	return context_df
 
 
@@ -383,14 +387,10 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 	Session = sessionmaker(bind=eng)
 	new_df_session = Session()
 
-
-
 	state = pick_state(new_df_session.bind,None,
 					   path_to_states=os.path.join(project_root,'local_data'),state_name=state_name)
 
 	# update db from state context file
-
-
 
 	print('Specify the election:')
 	election_idx, election = pick_one(pd.read_sql_table('Election',new_df_session.bind,index_col='Id'),'Name','election')
@@ -428,13 +428,16 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 		munger.check_new_results_dataset(cc_results,state,new_df_session,'Candidate',project_root=project_root)
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
 		munger.check_new_results_dataset(cc_results,state,new_df_session,'BallotMeasure',project_root=project_root)
+
+	# TODO process new results dataset(s)
+
 	return
 
 if __name__ == '__main__':
 	project_root = os.getcwd().split('election_anomaly')[0]
 
-	state_name = 'NC_test2'
-	# state_name = None
+	#state_name = 'NC_test2'
+	state_name = None
 	raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
 	raw_file_sep = '\t'
 	db_paramfile = os.path.join(project_root,'local_data/database.ini')

@@ -61,7 +61,7 @@ def load_context_dframe_into_cdf(session,state,source_df,element,
         office_ed = source_df.drop(['Name'],axis=1)
         ru_list = list(cdf_ru['Name'].unique())
         new_ru = office_ed[~office_ed['ElectionDistrict'].isin(ru_list)]
-        ui.show_sample(list(new_ru),'election districts for offices',
+        ui.show_sample(list(new_ru.ElectionDistrict),'office election districts',
                        condition='are not in the ReportingUnit table of the common data format',
                        outfile='missing_reportingunits.txt',
                        dir=os.path.join(state.path_to_state_dir,'output'))
@@ -73,7 +73,8 @@ def load_context_dframe_into_cdf(session,state,source_df,element,
         ru = ui.fill_context_file(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),os.path.join(
                     os.path.abspath(os.path.join(state.path_to_state_dir, os.pardir)),'context_templates'),'ReportingUnit',rut_list,'ReportingUnitType')
         #  then upload to db
-        cdf_ru = dframe_to_sql(ru,session,None,'ReportingUnit',index_col=None)
+        ru = enum_col_to_id_othertext(ru,'ReportingUnitType',cdf_rut)
+        cdf_ru = dframe_to_sql(ru,session,None,'ReportingUnit')
 
         # create corresponding CandidateContest records for general and primary election contests (and insert in cdf db if they don't already exist)
         cc_data = source_df.merge(cdf_element,left_on='Name',right_on='Name').merge(

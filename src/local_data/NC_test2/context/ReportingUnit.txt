@@ -3699,3 +3699,4 @@ North Carolina;US Congress House of Representatives District 10	congressional
 North Carolina;US Congress House of Representatives District 11	congressional
 North Carolina;US Congress House of Representatives District 12	congressional
 North Carolina;US Congress House of Representatives District 13	congressional
+North Carolina;Judicial District 22B	judicial

@@ -69,7 +69,7 @@ class Munger:
               f'and ReportingUnits.txt.')
         mr.load_context_dframe_into_cdf(sess,state,pd.read_csv(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t'),'ReportingUnit',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
         mr.load_context_dframe_into_cdf(sess,state,pd.read_csv(os.path.join(state.path_to_state_dir,'context/Party.txt'),sep='\t'),'Party',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
-        mr.load_context_dframe_into_cdf(sess,pd.read_csv(os.path.join(state.path_to_state_dir,'context/Office.txt'),sep='\t'),'Office',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
+        mr.load_context_dframe_into_cdf(sess,state,pd.read_csv(os.path.join(state.path_to_state_dir,'context/Office.txt'),sep='\t'),'Office',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
 
         mr.add_munged_column(results,self,'Office','Office_external')
         results_offices = results['Office_external'].unique()
@@ -104,14 +104,18 @@ class Munger:
                     f'\tYou may need to do some contextual research to fill all the fields in Office.txt\n\n'
                     f'Then hit return to continue.\n')
 
-        # add all offices from context/Office.txt to db
+        # add all reporting units and offices from context/ to db
+        for element in ['ReportingUnit','Office']:
+            source_df = pd.read_csv(f'{state.path_to_state_dir}context/{element}.txt',sep='\t')
+            mr.load_context_dframe_into_cdf(sess,state,source_df,element,CDF_schema_def_dir=os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
+
         # TODO load CandidateContest as well, which depends on Party and Office
 
         db_office_df = pd.read_sql_table('Office',sess.bind)
         db_offices = list(db_office_df['Name'].unique())
 
         # are there offices recognized by munger but not in db?
-        munged_offices = offices_mixed[offices_mixed.raw_identifier_value.notnull()].loc[:,'Office_external'].to_list()
+        munged_offices = offices_mixed[offices_mixed.raw_identifier_value.notnull()].loc[:,'cdf_internal_name'].to_list()
         bad_set = {x for x in munged_offices if x not in db_offices}
 
         if len(bad_set) > 0:
@@ -169,79 +173,17 @@ class Munger:
         assert self.raw_cols_match(results), \
             f"""A column in {results.columns} is missing from raw_columns.txt."""
 
-
-
-
         if contest_type == 'Candidate':
             # TODO party_check(), must happen before office_check (bc of primary CandidateContests)
             offices_finalized = False
             while not offices_finalized:
                 self.office_check(results,state,sess,project_path=project_root)
-                fin = input(f'Are the offices finalized (y/n)?')
+                fin = input(f'Are the offices and reporting units finalized (y/n)?\n')
                 if fin == 'y': offices_finalized = True
+        # TODO check that all offices have associated CandidateContests in db for general (etc.?) elections
+        # TODO check that all partisan offices have associated party primary CandidateContests in db
 
 
-        for element in ['ReportingUnit','Party']:
-            # TODO: Rework, using fill_context_table
-            print('Examining instances of {}'.format(element))
-            # get list of columns of <f> needed to determine the raw_identifier for <element>
-            p = '\<([^\>]+)\>'
-            col_list = re.findall(p,self.cdf_tables.loc[element,'raw_identifier_formula'])
-
-            # create dataframe of unique instances of <element>
-            df_elts = results[col_list].drop_duplicates()
-
-            # munge the given element into a new column of f_elts
-            mr.add_munged_column(df_elts,self,element,'raw_identifier_value')
-
-            # get any unmatched lines of f_elts
-            unmatched = mu.find_unmatched(df_elts,element)
-
-            # if some elements are unmatched:
-            while unmatched.shape[0] > 0:
-                # add blank column to be filled in
-                unmatched.loc[:,'cdf_internal_name'] = ''
-                # add cdf_element column
-                unmatched.loc[:,'cdf_element'] = element
-                unmatched_path = '{}unmatched_{}.txt'\
-                    .format(self.path_to_munger_dir,element)
-
-                # write unmatched lines to file and invite user to edit
-                unmatched.to_csv(unmatched_path,sep='\t',index=None)
-                print('\tACTION REQUIRED: fill the cdf_internal_name column in the file {}.'
-                      .format(unmatched_path,element))
-                input('\tEnter any key when work is complete.\n')
-
-                # read user-edited file
-                new_df_elts = pd.read_csv(unmatched_path,sep='\t')
-
-                # restrict to lines with an internal name
-                new_df_elts=new_df_elts[new_df_elts['cdf_internal_name'].notnull()]
-
-                # add to raw_identifiers (both attribute of <self> and also the file in the munger directory)
-                self.add_to_raw_identifiers(new_df_elts)
-
-                if element != 'CandidateContest':
-                    # add to state's context directory
-                    if element == 'ReportingUnit':
-                        new_df_elts.loc[:,'ReportingUnitType'] = self.atomic_reporting_unit_type
-                        # new_df_elts.loc[:,'CountItemStatus'] = cis
-                        # TODO we are ignoring CountItemStatus field
-                        #  of ReportingUnit (for now at least)
-
-                    new_df_elts.rename(columns={'cdf_internal_name':'Name'},inplace=True)
-                    state.add_to_context_dir(element,new_df_elts)
-
-                # add to the cdf.<element> table
-                mr.load_context_dframe_into_cdf(sess,state,new_df_elts,element,CDF_schema_def_dir='../CDF_schema_def_info/')
-
-                if element == 'ReportingUnit':
-                    # insert as necessary into ComposingReportingUnitJoin table
-                    dbr.cruj_insert(state,new_df_elts)
-
-                # see if anything remains to be matched
-                unmatched = mu.find_unmatched(new_df_elts,element)
-        # TODO
         if contest_type == 'BallotMeasure':
             print(f'WARNING: This munger assumes ballot measure style {self.ballot_measure_style}.')
             # TODO add description of ballot measure style option
