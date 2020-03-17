@@ -448,8 +448,8 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 if __name__ == '__main__':
 	project_root = os.getcwd().split('election_anomaly')[0]
 
-	#state_name = 'NC_test2'
-	state_name = None
+	state_name = 'NC_test2'
+	# state_name = None
 	raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
 	raw_file_sep = '\t'
 	db_paramfile = os.path.join(project_root,'local_data/database.ini')

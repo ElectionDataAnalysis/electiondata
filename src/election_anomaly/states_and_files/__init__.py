@@ -64,19 +64,54 @@ class State:
 
 
 class Munger:
-    def office_check(self,results,state,sess,project_path='.'):
+    def check_ballot_measure_selections(self):
+        print(f'Ballot Measure Selections for the munger {self.name} are:\n'
+              f'{", ".join(self.ballot_measure_selection_list)}')
+        needs_warning = False
+        correct = input('Is this correct (y/n)?\n')
+        while correct != 'y':
+            needs_warning = True
+            add_or_remove = input('Enter \'a\' to add and \'r\' to remove.\n')
+            if add_or_remove == 'a':
+                new = input(f'Enter a missing selection\n')
+                if new != '':
+                    self.ballot_measure_selection_list.append(new)
+            elif add_or_remove == 'r' :
+                idx, val = ui.pick_one(pd.DataFrame([[x] for x in self.ballot_measure_selection_list],columns=['Selection']),'Selection',item='Selection')
+                if idx is not None:
+                    self.ballot_measure_selection_list.remove(val)
+            else:
+                print('Answer not valid. Please enter \'a\' or \'r\'.')
+            print(f'Ballot Measure Selections for the munger {self.name} are:\n'
+                  f'{", ".join(self.ballot_measure_selection_list)}')
+            correct = input('Is this correct (y/n)?\n')
+        if needs_warning:
+            print(f'To make this change permanent, edit the BallotMeasureSelection lines '
+                  f'in {self.name}/raw_identifiers.txt')
+        return
+
+    def check_party(self,results,state,sess,project_path='.'):
+        print(f'Updating database with info from {state.short_name}/context/Party.txt.\n')
+        mr.load_context_dframe_into_cdf(sess,state,pd.read_csv(os.path.join(state.path_to_state_dir,'context/Party.txt'),sep='\t'),'Party',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
+        # TODO
+        return
+
+    def check_candidatecontest(self,results,state,sess,project_path='.'):
+        # TODO
+        return
+
+    def check_office(self,results,state,sess,project_path='.'):
         print(f'Updating database with info from {state.short_name}/context/Offices.txt\n'
               f'and ReportingUnits.txt.')
         mr.load_context_dframe_into_cdf(sess,state,pd.read_csv(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t'),'ReportingUnit',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
-        mr.load_context_dframe_into_cdf(sess,state,pd.read_csv(os.path.join(state.path_to_state_dir,'context/Party.txt'),sep='\t'),'Party',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
         mr.load_context_dframe_into_cdf(sess,state,pd.read_csv(os.path.join(state.path_to_state_dir,'context/Office.txt'),sep='\t'),'Office',os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
 
         mr.add_munged_column(results,self,'Office','Office_external')
         results_offices = results['Office_external'].unique()
 
         mu_offices = self.raw_identifiers[self.raw_identifiers.cdf_element=='Office']
-        offices_mixed = pd.DataFrame(results_offices,columns=['Office_external']).merge(mu_offices,how='left',
-                                                                                        left_on='Office_external',right_on='raw_identifier_value')
+        offices_mixed = pd.DataFrame(results_offices,
+                                     columns=['Office_external']).merge(mu_offices,how='left',left_on='Office_external',right_on='raw_identifier_value')
 
         # are there offices in results file that cannot be munged?
         not_identified = offices_mixed[offices_mixed.raw_identifier_value.isnull()].loc[:,'Office_external'].to_list()
@@ -109,7 +144,6 @@ class Munger:
             source_df = pd.read_csv(f'{state.path_to_state_dir}context/{element}.txt',sep='\t')
             mr.load_context_dframe_into_cdf(sess,state,source_df,element,CDF_schema_def_dir=os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
 
-        # TODO load CandidateContest as well, which depends on Party and Office
 
         db_office_df = pd.read_sql_table('Office',sess.bind)
         db_offices = list(db_office_df['Name'].unique())
@@ -174,10 +208,10 @@ class Munger:
             f"""A column in {results.columns} is missing from raw_columns.txt."""
 
         if contest_type == 'Candidate':
-            # TODO party_check(), must happen before office_check (bc of primary CandidateContests)
+            # TODO party_check(), must happen before check_office (bc of primary CandidateContests)
             offices_finalized = False
             while not offices_finalized:
-                self.office_check(results,state,sess,project_path=project_root)
+                self.check_office(results,state,sess,project_path=project_root)
                 fin = input(f'Are the offices and reporting units finalized (y/n)?\n')
                 if fin == 'y': offices_finalized = True
         # TODO check that all offices have associated CandidateContests in db for general (etc.?) elections
