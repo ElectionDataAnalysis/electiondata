@@ -1,0 +1,2 @@
+Name	ElectionType	ShortName	ReportingUnit	StartDate	EndDate
+General Election 2018-11-06	general	2018g	Michigan	2018-11-06	2018-11-06

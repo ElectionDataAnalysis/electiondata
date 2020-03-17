@@ -1,9 +1,16 @@
+*.pyc
 local/
 .DS_Store
 src/election_anomaly/__pycache__
 src/local_data/NC/data
 src/local_data/NC/output
 src/local_data/NC/tmp
+src/local_data/MI/data
+src/local_data/MI/output
+src/mungers/nc_general/unmatched_Party.txt
+src/mungers/mi_general/unmatched_ReportingUnit.txt
+src/mungers/mi_general/unmatched_Party.txt
+src/local_data/MI/tmp
 src/local_data/MD/data
 src/local_data/MD/output
 src/local_data/FL/data
@@ -20,6 +27,7 @@ src/election_anomaly/query_create/__pycache__/__init__.cpython-37.pyc
 src/election_anomaly/db_routines/__pycache__/__init__.cpython-37.pyc
 src/election_anomaly/munge_routines/__pycache__/__init__.cpython-37.pyc
 src/election_anomaly/context/__pycache__/__init__.cpython-37.pyc
+src/election_anomaly/munge_routines/__pycache__/__init__.cpython-38.pyc
 .idea
 src/local_data/database.ini
 temp
