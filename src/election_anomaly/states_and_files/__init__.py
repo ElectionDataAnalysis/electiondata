@@ -53,7 +53,7 @@ class State:
 
     def check_election_districts(self):
         """Looks in context file to check that every ElectionDistrict in Office.txt is listed in ReportingUnit.txt"""
-        ed = list(pd.read_csv(os.path.join(self.path_to_state_dir,'context/Office.txt'),sep='\t').loc[:'ElectionDistrict'])
+        ed = list(pd.read_csv(os.path.join(self.path_to_state_dir,'context/Office.txt'),sep='\t',header=0).loc[:'ElectionDistrict'])
         ru = list(pd.read_csv(os.path.join(self.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t').loc[:'Name'])
         missing = [x for x in ed if x not in ru]
         if len(missing) == 0:
@@ -62,7 +62,7 @@ class State:
         else:
             all_ok = False
             print('Every ElectionDistrict must be a ReportingUnit. This is not optional!!')
-            ui.show_sample(missing,'ElectionDistricts','not yet ReportingUnits',
+            ui.show_sample(missing,'ElectionDistricts','are not yet ReportingUnits',
                            outfile='electiondistricts_missing_from_reportingunits.txt',dir=self.path_to_state_dir)
             input('Please make corrections to Office.txt or additions to ReportingUnit.txt to resolve the problem.\n'
                   'Then his return to continue.'
@@ -150,6 +150,7 @@ class Munger:
         """Loads info from context/<element>.txt into db; checks results file <element>s against munger;
         then checks munger against db. Throughout, guides user to make corrections in context/<element>.txt;
         finally loads final context/<element>.txt into db. Note that this will only add records to db, never remove. """
+        # TODO why do ReportingUnits get checked twice somehow?
         print(f'Updating database with info from {state.short_name}/context/{element}.txt.\n')
         no_dupes = False
         while no_dupes == False:
@@ -210,13 +211,13 @@ class Munger:
                                         CDF_schema_def_dir=os.path.join(project_path,
                                                                         'election_anomaly/CDF_schema_def_info'))
 
-
         db_element_df = pd.read_sql_table(element,sess.bind)
         db_elements = list(db_element_df['Name'].unique())
 
         # are there elements recognized by munger but not in db?
         munged_elements = elements_mixed[elements_mixed.raw_identifier_value.notnull()].loc[:,'cdf_internal_name'].to_list()
-        munged_elements = munged_elements.remove('')  # remove any empty strings (e.g., from lines with no Party)
+        if '' in munged_elements:
+            munged_elements = munged_elements.remove('')  # remove any empty strings (e.g., from lines with no Party)
         if munged_elements:
             bad_set = {x for x in munged_elements if x not in db_elements}
         else:
