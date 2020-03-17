@@ -1,3 +1,4 @@
+*.pyc
 local/
 .DS_Store
 src/election_anomaly/__pycache__
