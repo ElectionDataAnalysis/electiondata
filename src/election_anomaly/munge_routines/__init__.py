@@ -56,6 +56,12 @@ def load_context_dframe_into_cdf(session,state,source_df1,element,
     cdf_element = dframe_to_sql(source_df,session,None,element)
 
     if element == 'Office':
+        # upload ReportingUnits from context/ReportingUnit.txt to db
+        ru = pd.read_csv(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t')
+        cdf_rut = pd.read_sql_table('ReportingUnitType',session.bind)
+        ru = enum_col_to_id_othertext(ru,'ReportingUnitType',cdf_rut)
+        cdf_ru = dframe_to_sql(ru,session,None,'ReportingUnit')
+
         eds_ok = False
         while not eds_ok:
             # find any ElectionDistricts that are not in the cdf ReportingUnit table.
@@ -72,17 +78,16 @@ def load_context_dframe_into_cdf(session,state,source_df1,element,
                                outfile='missing_reportingunits.txt',
                                dir=os.path.join(state.path_to_state_dir,'output'))
                 input(f'Please add any missing Election Districts to context/ReportingUnit.txt and hit return to continue.\n')
+                rut_list = list(cdf_rut['Txt'])
+                ru = ui.fill_context_file(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),os.path.join(
+                            os.path.abspath(os.path.join(
+                                state.path_to_state_dir, os.pardir)),'context_templates'),
+                                          'ReportingUnit',rut_list,'ReportingUnitType')
+                #  then upload to db
+                ru = enum_col_to_id_othertext(ru,'ReportingUnitType',cdf_rut)
+                cdf_ru = dframe_to_sql(ru,session,None,'ReportingUnit')
             else:
                 eds_ok = True
-            cdf_rut = pd.read_sql_table('ReportingUnitType',session.bind)
-            rut_list = list(cdf_rut['Txt'])
-            ru = ui.fill_context_file(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),os.path.join(
-                        os.path.abspath(os.path.join(
-                            state.path_to_state_dir, os.pardir)),'context_templates'),
-                                      'ReportingUnit',rut_list,'ReportingUnitType')
-            #  then upload to db
-            ru = enum_col_to_id_othertext(ru,'ReportingUnitType',cdf_rut)
-            cdf_ru = dframe_to_sql(ru,session,None,'ReportingUnit')
 
     return
 

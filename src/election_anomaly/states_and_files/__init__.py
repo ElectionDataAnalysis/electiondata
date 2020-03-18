@@ -33,22 +33,22 @@ class State:
             cdf_ru,left_on='ElectionDistrict',right_on='Name',suffixes=['_office','_ru']
         )
         # restrict to columns we need and set order
-        cc = cc[['Name','VotesAllowed','NumberElected','NumberRunoff','Id','Id_ru','IsPartisan']]
-        # ensure names of columns are correct
-        cc.rename(columns={'Id_ru':'ElectionDistrict_Id','Id':'Office_Id'},inplace=True)
+        cc = cc[['Name_office','VotesAllowed','NumberElected','NumberRunoff','Id_office','Id_ru','IsPartisan']]
+        # ensure names of columns are correct (note we name contest after office)
+        cc.rename(columns={'Id_ru':'ElectionDistrict_Id','Id_office':'Office_Id','Name_office':'Name'},inplace=True)
         # insert values for 'PrimaryParty_Id' column
         cc.loc[:,'PrimaryParty_Id'] = None
-        # save current for general election contests
-        cc_gen = cc_data.copy()
+        # save cc with just general elections (as basis for defining party primary contests); cc_all will accumulate all party primaries too
+        cc_all = cc.copy()
 
         cdf_p = pd.read_sql_table('Party',session.bind,None,index_col=None)
         for party_id in cdf_p['Id'].to_list():
-            cc_primary = cc_gen[cc_gen['IsPartisan']]  # non-partisan contests don't have party primaries, so omit them.
+            cc_primary = cc[cc['IsPartisan']]  # non-partisan contests don't have party primaries, so omit them.
             cc_primary['PrimaryParty_Id'] = party_id
             cc_primary['Name'] = cc_primary['Name'] + ' Primary;' + cdf_p[cdf_p['Id'] == party_id].iloc[0]['Name']
-            cc_all = pd.concat([cc_gen,cc_primary])
+            cc_all = pd.concat([cc_all,cc_primary])
 
-        dframe_to_sql(cc_all,session,None,'CandidateContest')
+        mr.dframe_to_sql(cc_all,session,None,'CandidateContest')
         return cc_all
 
     def check_election_districts(self):
