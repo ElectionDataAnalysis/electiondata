@@ -73,9 +73,12 @@ def show_sample(st,items,condition,outfile='shown_items.txt',dir=None):
 
 
 def pick_database(paramfile,state_name=None):
+	"""Establishes connection to db with name <state_name>,
+	or creates a new cdf_db with that name.
+	In any case, returns the name of the DB."""
 	if state_name:
-		print(f'WARNING: will use db {state_name} '
-			  f'and state directory {state_name}, both of which are assumed to exist.\n\n')
+		print(f'WARNING: will use db {state_name}, assumed to exist.')
+		# TODO check that db actually exists and recover if not.
 		return state_name
 	con = dbr.establish_connection(paramfile=paramfile)  # TODO error handling for paramfile
 	print(f'Connection established to database {con.info.dbname}')
@@ -172,7 +175,8 @@ def pick_state(con,schema,path_to_states='local_data/',state_name=None):
 			print(f'Current contents of remark.txt is:\n{remark}\n')
 			input(f'Please add or correct anything that user should know about the state {state_name}.'
 						f'Then hit return to continue.')
-
+	else:
+		print(f'Directory {state_name} is assumed to exist and have the required contents.')
 	# initialize the state
 	ss = sf.State(state_name,path_to_states)
 	return ss

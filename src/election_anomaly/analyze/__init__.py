@@ -5,6 +5,8 @@ from scipy import stats as stats
 import scipy.spatial.distance as dist
 import numpy as np
 import pandas as pd
+from sqlalchemy.orm import sessionmaker
+
 import matplotlib.pyplot as plt
 import db_routines as dbr
 import states_and_files as sf
@@ -107,9 +109,7 @@ class AnomalyDataFrame(object):
                 print('No anomalies found for contest ' + contest_name)
 
 class Election(object):
-    def pull_rollup_from_db_by_types(
-            self, roll_up_to_ru_type, 
-            atomic_ru_type='precinct', 
+    def pull_rollup_from_db_by_types(self, roll_up_to_ru_type, atomic_ru_type='precinct',
             contest_name_list=None,
             db_paramfile='../local_data/database.ini'):
 
@@ -191,7 +191,7 @@ class Election(object):
 
         outpath = os.path.join(self.state.path_to_state_dir,'output')
         if os.path.isdir(outpath):
-            output.to_csv(os.path.join(outpath,f'self.short_name}_{mode}_results.txt'),sep='\t')
+            output.to_csv(os.path.join(outpath,f'{self.short_name}_{mode}_results.txt'),sep='\t')
         else:
             print(f'Cannot export; directory {outpath} does not exist')
         return output
@@ -199,7 +199,7 @@ class Election(object):
     def __init__(self, session,state):
         # TODO: redo for no schema 'cdf' and no context/Election.txt file
         assert isinstance(state,sf.State)
-        cdf_el = pd.read_sql_table('Election',session.bind)
+        cdf_el = pd.read_sql_table('Election',session.bind,index_col='Id')
         election_idx,electiontype = ui.get_or_create_election_in_db(session)
 
         self.short_name = cdf_el.loc[election_idx,'Name']
@@ -415,5 +415,25 @@ def anomaly_list(contest_name, c, aframe_columnlist=None):
     return anomaly_list
 
 if __name__ == '__main__':
+    project_root = os.getcwd().split('election_anomaly')[0]
+    paramfile = os.path.join(project_root,'local_data/database.ini')
+    state_name = 'NC_test2'
+    # state_name = None
 
+    db_name = ui.pick_database(paramfile,state_name=state_name)
+
+
+    # initialize main session for connecting to db
+    eng, meta_generic = dbr.sql_alchemy_connect(db_name=state_name)
+    Session = sessionmaker(bind=eng)
+    analysis_session = Session()
+
+    state = ui.pick_state(analysis_session.bind,None,
+        path_to_states=os.path.join(project_root,'local_data'),
+        state_name=state_name)
+    e = Election(analysis_session,state)
+
+    e.summarize_results()
+
+    eng.dispose()
     print('Done')
