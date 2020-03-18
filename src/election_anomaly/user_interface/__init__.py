@@ -411,13 +411,12 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 	print('Specify the election:')
 	election_df = pd.read_sql_table('Election',new_df_session.bind,index_col='Id')
 	election_idx, election = pick_one(election_df,'Name','election')
+	electiontype_df = pd.read_sql_table('ElectionType',new_df_session.bind,index_col='Id')
 	if election_idx is None:
 		# create record in Election table
 		election_name = input('Enter a unique short name for the election for your datafile\n') # TODO error check
-		electiontype_df = pd.read_sql_table('ElectionType',new_df_session.bind,index_col='Id')
 		electiontype_idx,electiontype = \
 			pick_one(electiontype_df,'Txt','election type',required=True)
-		# TODO redundant, done in mr.raw_elements_to_cdf, but more efficient to do it here.
 		if electiontype == 'other':
 			std_electiontype_list = list(electiontype_df['Txt'].remove('other'))
 			otherelectiontype = input('Enter the election type:\n')
@@ -428,12 +427,16 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 			otherelectiontype = ''
 		elections_df = dbr.dframe_to_sql(pd.DataFrame({'Name':election_name,'EndDate':
 			input('Enter the end date of the election, a.k.a. \'Election Day\' (YYYY-MM-DD)\n'),'StartDate':
-			input('Enter the start date of the election (YYYY-MM-DD)\n'),'ElectionType_Id':
-			electiontype_idx,'OtherElectionType':otherelectiontype},index= [-1]),new_df_session,None,'Election')
+														   input('Enter the start date of the election (YYYY-MM-DD)\n'),'ElectionType_Id':
+													   # TODO check format of date entry
+														   electiontype_idx,'OtherElectionType':otherelectiontype},index= [-1]),new_df_session,None,'Election')
 	else:
-		electiontype_idx = election_df.loc[election_idx,'ElectionType_Id']
-		otherelectiontype = election_df.loc[election_idx,'OtherElectionType']
-
+		et_row = election_df.loc[:,['ElectionType_Id','OtherElectionType']].merge(
+			electiontype_df,left_on='ElectionType_Id',right_index=True)
+		if et_row.loc[election_idx,'OtherElectionType'] != '':
+			electiontype = et_row.loc[election_idx,'OtherElectionType']
+		else:
+			electiontype = et_row.loc[election_idx,'Txt']
 	raw = pd.read_csv(raw_file,sep=raw_file_sep)
 	column_list = raw.columns.to_list()
 	print('Specify the munger:')
@@ -457,9 +460,9 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 
 	# TODO process new results dataset(s)
 	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf(new_df_session,munger,cc_results,'Candidate',None,election_idx,electiontype,state_idx)
+		mr.raw_elements_to_cdf(new_df_session,munger,cc_results,'Candidate',None,electiontype,state_idx)
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf(new_df_session,munger,bmc_results,'BallotMeasure',None,election_idx,electiontype,state_idx)
+		mr.raw_elements_to_cdf(new_df_session,munger,bmc_results,'BallotMeasure',None,electiontype,state_idx)
 	return
 
 if __name__ == '__main__':

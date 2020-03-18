@@ -277,7 +277,8 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
         elif mu.ballot_measure_style == 'yes_and_no_are_candidates':
             add_munged_column(row,mu,'BallotMeasureSelection','BallotMeasureSelection_external')
-            row = get_internal_ids(row,mu,cdf_d['BallotMeasureSelection'],'BallotMeasureSelection','Selection',mu.path_to_munger_dir)
+            row = get_internal_ids(
+                row,mu,cdf_d['BallotMeasureSelection'],'BallotMeasureSelection','Selection',mu.path_to_munger_dir)
             bm_contest_selection = row[['BallotMeasureContest','BallotMeasureSelection']].drop_duplicates()
             row.rename(columns=vc_col_d,inplace=True)  # standardize vote-count column names
         else:
@@ -316,7 +317,9 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
         # create dframe of vote counts (with join info) for ballot measures
         bm_vote_counts = bm_row[col_list]
 
-        bm_vote_counts=bm_vote_counts.melt(id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],value_vars=vote_type_list,var_name='CountItemType',value_name='Count')
+        bm_vote_counts=bm_vote_counts.melt(
+            id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],
+            value_vars=vote_type_list,var_name='CountItemType',value_name='Count')
         bm_vote_counts=enum_col_to_id_othertext(bm_vote_counts,'CountItemType',cdf_d['CountItemType'])
         if not bm_vote_counts.empty:
             vote_count_dframe_list.append(bm_vote_counts)

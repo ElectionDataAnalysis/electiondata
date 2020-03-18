@@ -58,7 +58,7 @@ class State:
         missing = [x for x in ed if x not in ru]
         if len(missing) == 0:
             all_ok = True
-            print('Congratulations! Every ElectionDistrict is a ReportingUnit')
+            print('Congratulations! Every ElectionDistrict is a ReportingUnit!\n')
         else:
             all_ok = False
             print('Every ElectionDistrict must be a ReportingUnit. This is not optional!!')
@@ -253,7 +253,8 @@ class Munger:
         this routine should add what's necessary to the munger to treat the dataframe,
         keeping backwards compatibility and exiting gracefully if dataframe needs different munger."""
 
-        print(f'WARNING: All ReportingUnits in this file will be munged as type \'{self.atomic_reporting_unit_type}\'.')
+        print(f'WARNING: All ReportingUnits in this file will be munged as type\n'
+                            f'\t\t \'{self.atomic_reporting_unit_type}\'.')
         print('\tIf other behavior is desired, create or use another munger.')
         check_ru_type = input('\tProceed with munger {} (y/n)?\n'.format(self.name))
         if check_ru_type != 'y':
