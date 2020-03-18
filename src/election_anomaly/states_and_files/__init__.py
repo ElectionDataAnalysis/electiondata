@@ -142,6 +142,17 @@ class Munger:
                   f'in {self.name}/raw_identifiers.txt')
         return
 
+    def check_atomic_ru_type(self):
+        print(f'WARNING: All ReportingUnits in this file will be munged as type\n'
+              f'\t\t \'{self.atomic_reporting_unit_type}\'.')
+        print('\tIf other behavior is desired, create or use another munger.')
+        check_ru_type = input('\tProceed with munger {} (y/n)?\n'.format(self.name))
+        if check_ru_type != 'y':
+            print('Datafile will not be processed.')
+            raise Exception('Munger assumes basic reporting unit different from datafile.')
+        else:
+            return
+
     def check_candidatecontest(self,results,state,sess,project_path='.'):
         # TODO
         return
@@ -246,20 +257,17 @@ class Munger:
 
     def raw_cols_match(self,df):
         cols = self.raw_columns.name
-        return set(df.columns).issubset(cols)
+        if set(cols).issubset(df.columns):
+            return True
+        else:
+            missing = [x for x in set(cols) if x not in df.columns]
+            print(f'Missing columns are {missing}')
+            return False
 
     def check_new_results_dataset(self,results,state,sess,contest_type,project_root='.'):
         """<results> is a results dataframe of a single <contest_type>;
         this routine should add what's necessary to the munger to treat the dataframe,
         keeping backwards compatibility and exiting gracefully if dataframe needs different munger."""
-
-        print(f'WARNING: All ReportingUnits in this file will be munged as type\n'
-                            f'\t\t \'{self.atomic_reporting_unit_type}\'.')
-        print('\tIf other behavior is desired, create or use another munger.')
-        check_ru_type = input('\tProceed with munger {} (y/n)?\n'.format(self.name))
-        if check_ru_type != 'y':
-            print('Datafile will not be processed.')
-            return
 
         assert self.raw_cols_match(results), \
             f"""A column in {results.columns} is missing from raw_columns.txt."""

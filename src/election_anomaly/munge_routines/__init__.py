@@ -147,14 +147,8 @@ def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_d
     # no matter what the name field name is in the internal element table (e.g. 'Name', 'BallotName' or 'Selection')
     row_df = row_df.merge(mu.raw_identifiers[mu.raw_identifiers['cdf_element'] == element],how=how,left_on=element + '_external',right_on='raw_identifier_value',suffixes=['','_' + element + '_ei'])
 
-    # save any unmatched elements (if drop_unmatched=False)
-    # TODO move these warnings to the method on Munger() that pre-checks the munger.
-    unmatched = row_df[row_df['raw_identifier_value'].isnull()].loc[:,element + '_external'].unique()
-    if unmatched.size > 0:
-        unmatched_path = os.path.join(unmatched_dir,f'unmatched_{element}.txt')
-        np.savetxt(unmatched_path,unmatched,fmt="%s")
-        print(f'WARNING: Some instances of {element} unmatched, saved to {unmatched_path}.')
-        print('IF THESE ELEMENTS ARE NECESSARY, USER MUST put them in both the munger raw_identifiers.txt and in the {1}.txt file in the context directory'.format(unmatched_path,element))
+    # Note: unmatched elements get nan in fields from raw_identifiers table
+    # TODO how do these nans flow through?
 
     row_df = row_df.drop(['raw_identifier_value','cdf_element',element + '_external'],axis=1)
 
@@ -222,17 +216,27 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
 
     cdf_d = {}  # dataframe for each table
-    for t in ['Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType','CandidateContest']:
-        cdf_d[t] = pd.read_sql_table(t, session.bind, cdf_schema)   # note: keep 'Id as df column (not index) so we have access in merges below.
+    for element in ['Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType','CandidateContest']:
+        cdf_d[element] = pd.read_sql_table(element, session.bind, cdf_schema)   # note: keep 'Id as df column (not index) so we have access in merges below.
 
 
     # get vote count column mapping for our munger
-    vc_col_d = {x['RawName']:x['CountItemType'] for i,x in mu.count_columns[mu.count_columns.ContestType==contest_type][['RawName','CountItemType']].iterrows()}
+    # Note: need both cases even if contest_type=='Candidate. File count_columns.txt looks different.
+    if mu.ballot_measure_style == 'yes_and_no_are_candidates':
+        vc_col_d = {x['RawName']:x['CountItemType'] for i,x in mu.count_columns.iterrows()}
+    elif mu.ballot_measure_style == 'yes_and_no_are_columns':
+        # TODO make sure munger-testing and munger-creation routines get the right extra columns in to count_columns.txt
+        # TODO test on MD
+        vc_col_d = {
+            x['RawName']:x['CountItemType'] for i,x in mu.count_columns[
+                mu.count_columns.ContestType == contest_type][['RawName','CountItemType']].iterrows()}
+    else:
+        raise Exception(f'Ballot measure style {mu.ballot_measure_style} not recognized.')
 
     col_list = list(vc_col_d.values()) + ['Election_Id','ReportingUnit_Id',
                                           'ReportingUnitType_Id', 'OtherReportingUnitType',
                                           'Selection_Id','Contest_Id']
-                                    # TODO do we need CountItemStatus_Id or OtherCountItemStatus in col_list?
+                                    # TODO feature: do we need CountItemStatus_Id or OtherCountItemStatus in col_list?
     vote_type_list=list({v for k,v in vc_col_d.items()})
 
     # add columns corresponding to cdf fields
@@ -245,11 +249,10 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
     if 'Id' not in row.columns:
         row.loc[:,'Id'] = None
 
-    for t in ['Party','ReportingUnit']:  # tables that were filled from context
+    for element in ['Party','ReportingUnit']:  # tables that were filled from context
         #  merge works for all columns, even if, say, Party is null, because of how='left' (left join) in add_munged_column function
-        add_munged_column(row,mu,t,t+'_external')
-        row=get_internal_ids(row,mu,cdf_d[t],t,"Name",mu.path_to_munger_dir)
-        row=add_non_id_cols_from_id(row,cdf_d[t],t)
+        row=get_internal_ids(row,mu,cdf_d[element],element,"Name",mu.path_to_munger_dir)
+        row=add_non_id_cols_from_id(row,cdf_d[element],element)
 
     vote_count_dframe_list=[] # TODO remove; don't need to concatenate if bmcs and ccs are handled separately
 
@@ -321,8 +324,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
             id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],
             value_vars=vote_type_list,var_name='CountItemType',value_name='Count')
         bm_vote_counts=enum_col_to_id_othertext(bm_vote_counts,'CountItemType',cdf_d['CountItemType'])
-        if not bm_vote_counts.empty:
-            vote_count_dframe_list.append(bm_vote_counts)
+        vote_counts = bm_vote_counts
 
     if contest_type=='Candidate':
         # process rows with candidate contests
@@ -378,9 +380,9 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
         cc_vote_counts = cc_row[col_list]
         cc_vote_counts=cc_vote_counts.melt(id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],value_vars=vote_type_list,var_name='CountItemType',value_name='Count')
         cc_vote_counts=enum_col_to_id_othertext(cc_vote_counts,'CountItemType',cdf_d['CountItemType'])
-        vote_count_dframe_list.append(cc_vote_counts)
+        vote_counts = cc_vote_counts
 
-    vote_counts = pd.concat(vote_count_dframe_list)
+    # TODO do we need to check whether vote_counts is empty?
 
     # To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
     # add SelectionElectionContestJoin columns to VoteCount

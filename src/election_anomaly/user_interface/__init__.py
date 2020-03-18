@@ -263,6 +263,8 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_mu
 		munger_name = input('Enter a short name (alphanumeric only, no spaces) for your munger'
 						   '(e.g., \'nc_primary18\')\n')
 	munger_path = os.path.join(munger_dir,munger_name)
+
+
 	# create munger directory
 	try:
 		os.mkdir(munger_path)
@@ -403,6 +405,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 		new_df_session.bind,None,
 		path_to_states=os.path.join(project_root,'local_data'),
 		state_name=state_short_name)
+	# TODO finalize ReportingUnits once for both kinds of files?
 
 	state_idx, state_internal_db_name = pick_state_from_db(new_df_session)
 	# TODO feature: write routine to deduce BallotMeasureContest district from the data?!?
@@ -446,12 +449,21 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 
 	munger.check_ballot_measure_selections()
 
-	print('What types of contests would you like to analyze from the datafile?')
+	munger.check_atomic_ru_type()
+
 	bmc_results,cc_results = mr.contest_type_split(raw,munger)
-	contest_type_df = pd.DataFrame([
-		['Candidate'], ['Ballot Measure'], ['Both Candidate and Ballot Measure']
-	], columns=['Contest Type'])
-	contest_type_idx, contest_type = pick_one(contest_type_df,'Contest Type', item='contest type',required=True)
+	if bmc_results.empty:
+		print('Datafile has only Candidate Contests, and no Ballot Measure Contests')
+		contest_type_df = ['Candidate']
+	elif cc_results.empty:
+		print('Datafile has only Ballot Measure Contests, andno Candidate Contests')
+		contest_type_df = ['Ballot Measure']
+	else:
+		print('What types of contests would you like to analyze from the datafile?')
+		contest_type_df = pd.DataFrame([
+			['Candidate'], ['Ballot Measure'], ['Both Candidate and Ballot Measure']
+		], columns=['Contest Type'])
+		contest_type_idx, contest_type = pick_one(contest_type_df,'Contest Type', item='contest type',required=True)
 
 	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
 		munger.check_new_results_dataset(cc_results,state,new_df_session,'Candidate',project_root=project_root)
@@ -460,9 +472,9 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 
 	# TODO process new results dataset(s)
 	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf(new_df_session,munger,cc_results,'Candidate',None,electiontype,state_idx)
+		mr.raw_elements_to_cdf(new_df_session,munger,cc_results,'Candidate',None,election_idx,electiontype,state_idx)
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf(new_df_session,munger,bmc_results,'BallotMeasure',None,electiontype,state_idx)
+		mr.raw_elements_to_cdf(new_df_session,munger,bmc_results,'BallotMeasure',None,election_idx,electiontype,state_idx)
 	return
 
 if __name__ == '__main__':
