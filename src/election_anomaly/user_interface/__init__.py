@@ -390,24 +390,30 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 
 	state = pick_state(new_df_session.bind,None,
 					   path_to_states=os.path.join(project_root,'local_data'),state_name=state_name)
-
+	# TODO get state_idx from db for BallotMeasureContest district
+	# TODO write routine to deduce BallotMeasureContest district from the data?!?
 	# update db from state context file
 
 	print('Specify the election:')
-	election_idx, election = pick_one(pd.read_sql_table('Election',new_df_session.bind,index_col='Id'),'Name','election')
+	election_df = pd.read_sql_table('Election',new_df_session.bind,index_col='Id')
+	election_idx, election = pick_one(election_df,'Name','election')
 	if election_idx is None:
 		# create record in Election table
 		election_name = input('Enter a unique short name for the election for your datafile\n') # TODO error check
 		electiontype_idx,electiontype = \
 			pick_one(pd.read_sql_table('ElectionType',new_df_session.bind,index_col='Id'),'Txt','election type')
+		# TODO redundant, done in mr.raw_elements_to_cdf, but more efficient to do it here.
 		if electiontype == 'other':
 			otherelectiontype = input('Enter the election type:\n')	# TODO assert type is not in standard list, not ''
 		else:
 			otherelectiontype = ''
 		elections_df = dbr.dframe_to_sql(pd.DataFrame({'Name':election_name,'EndDate':
 			input('Enter the end date of the election, a.k.a. \'Election Day\' (YYYY-MM-DD)\n'),'StartDate':
-														   input('Enter the start date of the election (YYYY-MM-DD)\n'),'ElectionType_Id':
-														   electiontype_idx,'OtherElectionType':otherelectiontype},index= [-1]),new_df_session,None,'Election')
+			input('Enter the start date of the election (YYYY-MM-DD)\n'),'ElectionType_Id':
+			electiontype_idx,'OtherElectionType':otherelectiontype},index= [-1]),new_df_session,None,'Election')
+	else:
+		electiontype_idx = election_df.loc[election_idx,'ElectionType_Id']
+		otherelectiontype = election_df.loc[election_idx,'OtherElectionType']
 
 	raw = pd.read_csv(raw_file,sep=raw_file_sep)
 	column_list = raw.columns.to_list()
@@ -416,7 +422,6 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 						 template_dir=os.path.join(project_root,'mungers/zzz_munger_templates'))
 	print(f'Munger {munger.name} has been chosen and prepared.\n')
 
-	# TODO present munger.ballot_measure_selections and give user chance to correct it.
 	munger.check_ballot_measure_selections()
 
 	print('What types of contests would you like to analyze from the datafile?')
@@ -432,7 +437,10 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 		munger.check_new_results_dataset(cc_results,state,new_df_session,'BallotMeasure',project_root=project_root)
 
 	# TODO process new results dataset(s)
-
+	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
+		mr.raw_elements_to_cdf(new_df_session,munger,cc_results,'Candidate',None,election_idx,electiontype,state_idx)
+	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
+		mr.raw_elements_to_cdf(new_df_session,munger,bmc_results,'BallotMeasure',None,election_idx,electiontype,state_idx)
 	return
 
 if __name__ == '__main__':

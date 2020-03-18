@@ -79,10 +79,10 @@ def load_context_dframe_into_cdf(session,state,source_df1,element,
                                dir=os.path.join(state.path_to_state_dir,'output'))
                 input(f'Please add any missing Election Districts to context/ReportingUnit.txt and hit return to continue.\n')
                 rut_list = list(cdf_rut['Txt'])
-                ru = ui.fill_context_file(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),os.path.join(
-                            os.path.abspath(os.path.join(
-                                state.path_to_state_dir, os.pardir)),'context_templates'),
-                                          'ReportingUnit',rut_list,'ReportingUnitType')
+                ru = ui.fill_context_file(
+                    os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),
+                    os.path.join(os.path.abspath(os.path.join(state.path_to_state_dir, os.pardir)),'context_templates'),
+                    'ReportingUnit',rut_list,'ReportingUnitType')
                 #  then upload to db
                 ru = enum_col_to_id_othertext(ru,'ReportingUnitType',cdf_rut)
                 cdf_ru = dframe_to_sql(ru,session,None,'ReportingUnit')
@@ -90,8 +90,6 @@ def load_context_dframe_into_cdf(session,state,source_df1,element,
                 eds_ok = True
 
     return
-
-
 
 
 def add_munged_column(row_df,mu,cdf_element,new_col_name):
@@ -116,7 +114,7 @@ def add_munged_column(row_df,mu,cdf_element,new_col_name):
             row_df.loc[:,new_col_name] = t+row_df.loc[:,f]+row_df.loc[:,new_col_name]
         return row_df
 
-# TODO bug: NC gets Bertie County ballot measures classified as candidate contests in munger routines
+
 def contest_type_split(row,mu):
     if mu.ballot_measure_style=='yes_and_no_are_candidates':
         bm_row = row[row[mu.ballot_measure_selection_col].isin(mu.ballot_measure_selection_list)]

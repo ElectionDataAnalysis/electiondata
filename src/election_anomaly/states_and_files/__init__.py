@@ -264,7 +264,7 @@ class Munger:
             f"""A column in {results.columns} is missing from raw_columns.txt."""
 
         if contest_type == 'Candidate':
-            # check Party in context & db, updating if necessary (prereq to checking CandidateContests)
+            # check Party, Office, ReportingUnit in context & db, updating if necessary (prereq to checking CandidateContests)
             for element in ['Party','Office','ReportingUnit']:
                 finalized = False
                 while not finalized:
@@ -280,17 +280,17 @@ class Munger:
                     fin = input(f'Are the {element}s finalized (y/n)?\n')
                     if fin == 'y':
                         finalized = True
-        state.prepare_candidatecontests(sess)
+            # After Party and Office are finalized, prepare CandidateContest
+            state.prepare_candidatecontests(sess)
 
         if contest_type == 'BallotMeasure':
-            print(f'WARNING: This munger assumes ballot measure style {self.ballot_measure_style}.')
-            # TODO add description of ballot measure style option
+            # check that munger processes ballot measure contests appropriately.
+            print(f'WARNING: This munger assumes ballot measure style {self.ballot_measure_style_description}.\n')
             print('\tIf other behavior is desired, create or use another munger.')
-            check_bms = input('\tProceed with munger {} (y/n)?\n'.format(self.name))
+            check_bms = input(f'\tProceed with munger {self.name} (y/n)?\n')
             if check_bms != 'y':
                 print('Datafile will not be processed.')
                 return
-
         return
 
     def add_to_raw_identifiers(self,df):
@@ -321,6 +321,7 @@ class Munger:
         return unmatched
 
     def __init__(self,dir_path,cdf_schema_def_dir='CDF_schema_def_info/'):
+        """<dir_path> is the directory for the munger."""
         assert os.path.isdir(dir_path),f'{dir_path} is not a directory'
         for ff in ['cdf_tables.txt','atomic_reporting_unit_type.txt','count_columns.txt']:
             assert os.path.isfile(os.path.join(dir_path,ff)),\
@@ -353,6 +354,10 @@ class Munger:
         # determine how to treat ballot measures (ballot_measure_style)
         with open(os.path.join(dir_path,'ballot_measure_style.txt'),'r') as f:
             self.ballot_measure_style=f.read().strip()
+        # get description of that ballot_measure_style
+        bms = pd.read_csv(os.path.join(os.path.abspath(os.path.join(dir_path,os.pardir)),
+                                       'ballot_measure_style_options.txt'),sep='\t')
+        self.ballot_measure_style_description = bms[bms.short_name == self.ballot_measure_style].loc[0,'description']
 
         # determine whether the file has columns for counts by vote types, or just totals
         count_columns=pd.read_csv(os.path.join(dir_path,'count_columns.txt'),sep='\t').replace({'RawName':col_d})
@@ -385,9 +390,9 @@ if __name__ == '__main__':
     current_dir=os.getcwd()
     path_to_src_dir=current_dir.split('/election_anomaly/')[0]
 
-    s = State('NC',f'{path_to_src_dir}/local_data/')
-    mu = Munger('../../mungers/nc_primary/',cdf_schema_def_dir='../CDF_schema_def_info/')
-    f = pd.read_csv('../../local_data/NC/data/2020p_asof_20200305/nc_primary/results_pct_20200303.txt',sep='\t')
+    s = State('NC_test2',f'{path_to_src_dir}/local_data/')
+    mu = Munger('../../mungers/not_for_prime_time_NC/',cdf_schema_def_dir='../CDF_schema_def_info/')
+    f = pd.read_csv('../../local_data/NC/data/2018g/nc_general',sep='\t')
 
     # initialize main session for connecting to db
     eng, meta_generic = dbr.sql_alchemy_connect(db_name=s.short_name)
