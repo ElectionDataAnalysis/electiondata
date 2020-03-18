@@ -115,7 +115,7 @@ def pick_database(paramfile,state_name=None):
 
 def pick_state(con,schema,path_to_states='local_data/',state_name=None):
 	"""Returns a State object.
-	If <state_name> is given, this just initializes based on info
+	If <state_short_name> is given, this just initializes based on info
 	in the folder with that name; """
 	if state_name is None:
 		choice_list = [x for x in os.listdir(path_to_states) if os.path.isdir(os.path.join(path_to_states,x))]
@@ -376,22 +376,36 @@ def create_munger(column_list=None):
 	return munger
 
 
-def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=None):
+def pick_state_from_db(sess):
+	ru = pd.read_sql_table('ReportingUnit',sess.bind,index_col='Id')
+	rut = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
+	assert rut[rut.Txt=='state'].shape[0] == 1, '\'ReportingUnitType\' table does not have exactly one \'state\' entry'
+	state_type_id = rut[rut.Txt=='state'].first_valid_index()
+	states = ru[ru.ReportingUnitType_Id==state_type_id]
+	state_idx, state_internal_db_name = pick_one(states,'Name','state')
+	return state_idx, state_internal_db_name
+
+
+
+def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short_name=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
-	# connect to postgres to create schema if necessary
 
-	db_name = pick_database(db_paramfile,state_name=state_name)
+	# TODO feature: make db table to track the sources of the data in the db, and routines to fill & update it
+	db_name = pick_database(db_paramfile,state_name=state_short_name)
 
 	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
 	Session = sessionmaker(bind=eng)
 	new_df_session = Session()
 
-	state = pick_state(new_df_session.bind,None,
-					   path_to_states=os.path.join(project_root,'local_data'),state_name=state_name)
-	# TODO get state_idx from db for BallotMeasureContest district
-	# TODO write routine to deduce BallotMeasureContest district from the data?!?
+	state = pick_state(
+		new_df_session.bind,None,
+		path_to_states=os.path.join(project_root,'local_data'),
+		state_name=state_short_name)
+
+	state_idx, state_internal_db_name = pick_state_from_db(new_df_session)
+	# TODO feature: write routine to deduce BallotMeasureContest district from the data?!?
 	# update db from state context file
 
 	print('Specify the election:')
@@ -400,11 +414,16 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 	if election_idx is None:
 		# create record in Election table
 		election_name = input('Enter a unique short name for the election for your datafile\n') # TODO error check
+		electiontype_df = pd.read_sql_table('ElectionType',new_df_session.bind,index_col='Id')
 		electiontype_idx,electiontype = \
-			pick_one(pd.read_sql_table('ElectionType',new_df_session.bind,index_col='Id'),'Txt','election type')
+			pick_one(electiontype_df,'Txt','election type',required=True)
 		# TODO redundant, done in mr.raw_elements_to_cdf, but more efficient to do it here.
 		if electiontype == 'other':
-			otherelectiontype = input('Enter the election type:\n')	# TODO assert type is not in standard list, not ''
+			std_electiontype_list = list(electiontype_df['Txt'].remove('other'))
+			otherelectiontype = input('Enter the election type:\n')
+			if otherelectiontype in std_electiontype_list:
+				electiontype_idx = electiontype_df[electiontype_df.Txt==otherelectiontype].first_valid_index()
+				otherelectiontype = ''
 		else:
 			otherelectiontype = ''
 		elections_df = dbr.dframe_to_sql(pd.DataFrame({'Name':election_name,'EndDate':
@@ -446,11 +465,11 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_name=
 if __name__ == '__main__':
 	project_root = os.getcwd().split('election_anomaly')[0]
 
-	state_name = 'NC_test2'
-	# state_name = None
+	state_short_name = 'NC_test2'
+	# state_short_name = None
 	raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
 	raw_file_sep = '\t'
 	db_paramfile = os.path.join(project_root,'local_data/database.ini')
 
-	new_datafile(raw_file, raw_file_sep, db_paramfile,project_root,state_name=state_name)
+	new_datafile(raw_file,raw_file_sep,db_paramfile,project_root,state_short_name=state_short_name)
 	print('Done! (user_interface)')
