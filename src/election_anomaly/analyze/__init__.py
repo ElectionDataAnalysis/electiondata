@@ -107,15 +107,21 @@ class AnomalyDataFrame(object):
                 print('No anomalies found for contest ' + contest_name)
 
 class Election(object):
-    def pull_rollup_from_db_by_types(self, roll_up_to_ru_type, atomic_ru_type='precinct', contest_name_list=None,db_paramfile='../local_data/database.ini'):
+    def pull_rollup_from_db_by_types(
+            self, roll_up_to_ru_type, 
+            atomic_ru_type='precinct', 
+            contest_name_list=None,
+            db_paramfile='../local_data/database.ini'):
 
-        con, meta = dbr.sql_alchemy_connect(schema='cdf',paramfile=db_paramfile,db_name=self.state.short_name)
+        eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=self.state.short_name)
 
         # Get necessary tables from cdf schema
         cdf_d={}
-        for t in ['ReportingUnitType','CandidateContest','BallotMeasureContest','BallotMeasureSelection','CandidateSelection','Candidate','CountItemType','ReportingUnit']:
-            cdf_d[t]=pd.read_sql_table(t,con,schema='cdf',index_col=None)
-        candidate_name_by_selection_id = cdf_d['CandidateSelection'].merge(cdf_d['Candidate'],left_on='Candidate_Id',right_on='Id',suffixes=['','Candidate'])
+        for element in ['ReportingUnitType','CandidateContest','BallotMeasureContest','BallotMeasureSelection',
+                        'CandidateSelection','Candidate','CountItemType','ReportingUnit']:
+            cdf_d[element]=pd.read_sql_table(element,eng,index_col=None)
+        candidate_name_by_selection_id = cdf_d['CandidateSelection'].merge(
+            cdf_d['Candidate'],left_on='Candidate_Id',right_on='Id',suffixes=['','Candidate'])
 
         # create and return id-to-contest-type dict for this election.
         contest_type = {}
@@ -134,41 +140,43 @@ class Election(object):
             selection_name[r['Id']] = r['BallotName']
 
 
-        roll_up_to_ru_type_id = int(cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt']==roll_up_to_ru_type].iloc[0]['Id'])
-        atomic_ru_type_id = int(cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt']==atomic_ru_type].iloc[0]['Id'])
+        roll_up_to_ru_type_id = int(
+            cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt']==roll_up_to_ru_type].iloc[0]['Id'])
+        atomic_ru_type_id = int(
+            cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt']==atomic_ru_type].iloc[0]['Id'])
 
         q = """SELECT
             secvcj."Contest_Id", cruj."ParentReportingUnit_Id" AS "ReportingUnit_Id",  secvcj."Selection_Id", vc."CountItemType_Id", COALESCE(sum(vc."Count"),0) AS "Count"
          FROM
-             {0}."SelectionElectionContestVoteCountJoin" secvcj 
-             LEFT JOIN {0}."VoteCount" vc ON secvcj."VoteCount_Id" = vc."Id"
-             LEFT JOIN {0}."ComposingReportingUnitJoin" cruj ON vc."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
-             LEFT JOIN {0}."ReportingUnit" ru_c ON ru_c."Id" = cruj."ChildReportingUnit_Id"
-             LEFT JOIN {0}."ReportingUnit" ru_p ON ru_p."Id" = cruj."ParentReportingUnit_Id"
+             "SelectionElectionContestVoteCountJoin" secvcj 
+             LEFT JOIN "VoteCount" vc ON secvcj."VoteCount_Id" = vc."Id"
+             LEFT JOIN "ComposingReportingUnitJoin" cruj ON vc."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
+             LEFT JOIN "ReportingUnit" ru_c ON ru_c."Id" = cruj."ChildReportingUnit_Id"
+             LEFT JOIN "ReportingUnit" ru_p ON ru_p."Id" = cruj."ParentReportingUnit_Id"
 
          WHERE
              secvcj."Election_Id" = %(Election_Id)s
              AND ru_c."ReportingUnitType_Id" = %(roll_up_fromReportingUnitType_Id)s
              AND ru_p."ReportingUnitType_Id" = %(roll_up_toReportingUnitType_Id)s
          GROUP BY secvcj."Contest_Id", cruj."ParentReportingUnit_Id",  secvcj."Selection_Id", vc."CountItemType_Id"
-         """.format('cdf')
+         """
         params = {'Election_Id': self.Election_Id,
                   'roll_up_toReportingUnitType_Id': roll_up_to_ru_type_id,
                   'roll_up_fromReportingUnitType_Id': atomic_ru_type_id}
-        rollup_dframe = pd.read_sql_query(sql=q, con=con, params=params)
+        rollup_dframe = pd.read_sql_query(sql=q, con=eng, params=params)
         # add columns to rollup dframe
         rollup_dframe['contest_type'] = rollup_dframe['Contest_Id'].map(contest_type)
         rollup_dframe['Contest'] = rollup_dframe['Contest_Id'].map(contest_name)
         rollup_dframe['Selection'] = rollup_dframe['Selection_Id'].map(selection_name)
-        for t in ['CountItemType','ReportingUnit']:
-            rollup_dframe = rollup_dframe.merge(cdf_d[t],left_on=t+'_Id',right_on='Id')
-        rollup_dframe=rollup_dframe[['Contest_Id','ReportingUnit_Id','Selection_Id','CountItemType_Id','Contest','Name','Selection','Txt','Count','contest_type']]
+        for element in ['CountItemType','ReportingUnit']:
+            rollup_dframe = rollup_dframe.merge(cdf_d[element],left_on=element+'_Id',right_on='Id')
+        rollup_dframe=rollup_dframe[['Contest_Id','ReportingUnit_Id','Selection_Id','CountItemType_Id','Contest',
+                                     'Name','Selection','Txt','Count','contest_type']]
         rollup_dframe.rename(columns={'Txt':'CountItemType','Name':'ReportingUnit'},inplace=True)
         if contest_name_list:
             rollup_dframe=rollup_dframe[rollup_dframe['Contest'].isin(contest_name_list)]
-
-        if con:
-            con.dispose()
+        if eng:
+            eng.dispose()
         return rollup_dframe
 
     def summarize_results(self,atomic_ru_type='precinct',mode='top',skip_total_column=True):
@@ -181,17 +189,17 @@ class Election(object):
         elif mode=='by_vote_type':
             output = rollup.groupby(['Contest','Selection','CountItemType']).sum()
 
-        outpath='{}output/'.format(self.state.path_to_state_dir)
+        outpath = os.path.join(self.state.path_to_state_dir,'output')
         if os.path.isdir(outpath):
-            output.to_csv('{0}{1}_{2}_results.txt'.format(outpath,self.short_name,mode),sep='\t')
+            output.to_csv(os.path.join(outpath,f'self.short_name}_{mode}_results.txt'),sep='\t')
         else:
-            print('Cannot print; directory {} does not exist'.format(outpath))
+            print(f'Cannot export; directory {outpath} does not exist')
         return output
 
-    def __init__(self, session,state,short_name):
+    def __init__(self, session,state):
         # TODO: redo for no schema 'cdf' and no context/Election.txt file
         assert isinstance(state,sf.State)
-        cdf_el = pd.read_sql_table('Election',session.bind,schema='cdf')
+        cdf_el = pd.read_sql_table('Election',session.bind)
         election_idx,electiontype = ui.get_or_create_election_in_db(session)
 
         self.short_name = cdf_el.loc[election_idx,'Name']
