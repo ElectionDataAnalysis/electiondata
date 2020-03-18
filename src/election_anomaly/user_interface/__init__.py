@@ -262,9 +262,17 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_mu
 		# user chooses state munger
 		munger_name = input('Enter a short name (alphanumeric only, no spaces) for your munger'
 						   '(e.g., \'nc_primary18\')\n')
+	need_to_check_munger = input(f'Check compatibility of munger {munger_name} (y/n)?\n')
+	if need_to_check_munger == 'y':
+		check_munger(sess,munger_name,munger_dir,template_dir,column_list)
+
 	munger_path = os.path.join(munger_dir,munger_name)
+	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(project_root,'election_anomaly/CDF_schema_def_info'))
+	return munger
 
 
+def check_munger(sess,munger_name,munger_dir,template_dir,column_list):
+	munger_path = os.path.join(munger_dir,munger_name)
 	# create munger directory
 	try:
 		os.mkdir(munger_path)
@@ -276,8 +284,7 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_mu
 	file_list = ['raw_columns.txt','count_columns.txt','cdf_tables.txt','raw_identifiers.txt']
 	if not all([os.path.isfile(os.path.join(munger_path,x)) for x in file_list]):
 		for ff in file_list:
-			create_file_from_template(os.path.join(template_dir,ff),
-												   os.path.join(munger_path,ff))
+			create_file_from_template(os.path.join(template_dir,ff),os.path.join(munger_path,ff))
 		# write column_list to raw_columns.txt
 		if column_list:
 			# np.savetxt(os.path.join(munger_path,ff),np.asarray([[x] for x in column_list]),header='name')
@@ -335,8 +342,7 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_mu
 		# prepare raw_identifiers.txt
 		prepare_raw_identifiers_file(munger_path,bms)
 
-	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(project_root,'election_anomaly/CDF_schema_def_info'))
-	return munger
+	return
 
 
 def prepare_raw_identifiers_file(dir_path,ballot_measure_style):
@@ -447,8 +453,8 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 						 template_dir=os.path.join(project_root,'mungers/zzz_munger_templates'))
 	print(f'Munger {munger.name} has been chosen and prepared.\n')
 
-	munger.check_ballot_measure_selections()
 
+	munger.check_ballot_measure_selections()
 	munger.check_atomic_ru_type()
 
 	bmc_results,cc_results = mr.contest_type_split(raw,munger)
@@ -472,9 +478,9 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 
 	# TODO process new results dataset(s)
 	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf(new_df_session,munger,cc_results,'Candidate',None,election_idx,electiontype,state_idx)
+		mr.raw_elements_to_cdf(new_df_session,munger,cc_results,'Candidate',election_idx,electiontype,state_idx)
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf(new_df_session,munger,bmc_results,'BallotMeasure',None,election_idx,electiontype,state_idx)
+		mr.raw_elements_to_cdf(new_df_session,munger,bmc_results,'BallotMeasure',election_idx,electiontype,state_idx)
 	return
 
 if __name__ == '__main__':

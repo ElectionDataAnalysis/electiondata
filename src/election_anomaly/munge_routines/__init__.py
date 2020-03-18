@@ -206,7 +206,7 @@ def enum_col_to_id_othertext(df,type_col,enum_df):
     return df
 
 
-def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,election_type,state_id):
+def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,state_id):
     """
     NOTE: Tables from context assumed to exist already in db
     (e.g., Party, ComposingReportingUnitJoin, Election, ReportingUnit etc.)
@@ -217,7 +217,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
     cdf_d = {}  # dataframe for each table
     for element in ['Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType','CandidateContest']:
-        cdf_d[element] = pd.read_sql_table(element, session.bind, cdf_schema)   # note: keep 'Id as df column (not index) so we have access in merges below.
+        cdf_d[element] = pd.read_sql_table(element, session.bind)   # note: keep 'Id as df column (not index) so we have access in merges below.
 
 
     # get vote count column mapping for our munger
@@ -293,7 +293,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
         # Load BallotMeasureContest table to cdf schema
         cdf_d['BallotMeasureContest'] = dbr.dframe_to_sql(bm_contest_selection[['Name','ElectionDistrict_Id']]
-                                                          .drop_duplicates(),session,cdf_schema,'BallotMeasureContest')
+                                                          .drop_duplicates(),session,None'BallotMeasureContest')
 
         # add BallotMeasure-related ids needed later
         bm_row = row.merge(cdf_d['BallotMeasureSelection'],left_on='BallotMeasureSelection',
@@ -307,7 +307,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
         bmcsj_df = bm_row[['Contest_Id','Selection_Id']].drop_duplicates()
         bmcsj_df.rename(columns={'Contest_Id':'BallotMeasureContest_Id','Selection_Id':'BallotMeasureSelection_Id'},
                         inplace=True)
-        cdf_d['BallotMeasureContestSelectionJoin'] = dbr.dframe_to_sql(bmcsj_df,session,cdf_schema,
+        cdf_d['BallotMeasureContestSelectionJoin'] = dbr.dframe_to_sql(bmcsj_df,session,None,
                                                                        'BallotMeasureContestSelectionJoin')
 
         # Load ElectionContestJoin table (for ballot measures)
@@ -315,7 +315,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
         ecj_df = cdf_d['BallotMeasureContest'].copy()
         ecj_df.loc[:,'Election_Id'] = election_id
         ecj_df.rename(columns={'Id': 'Contest_Id'}, inplace=True)
-        cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,cdf_schema,'ElectionContestJoin')
+        cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,None,'ElectionContestJoin')
 
         # create dframe of vote counts (with join info) for ballot measures
         bm_vote_counts = bm_row[col_list]
@@ -339,12 +339,12 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
         candidate_df = cc_row[['BallotName','Party_Id','Election_Id']].copy().drop_duplicates()
         candidate_df = candidate_df[candidate_df['BallotName'].notnull()]
         # TODO add  other notnull criteria
-        cdf_d['Candidate'] = dbr.dframe_to_sql(candidate_df,session,cdf_schema,'Candidate')
+        cdf_d['Candidate'] = dbr.dframe_to_sql(candidate_df,session,None,'Candidate')
 
         # load CandidateSelection
         cs_df = cdf_d['Candidate'].copy()
         cs_df.rename(columns={'Id':'Candidate_Id'},inplace=True)
-        cdf_d['CandidateSelection'] = dbr.dframe_to_sql(cs_df,session,cdf_schema,'CandidateSelection')
+        cdf_d['CandidateSelection'] = dbr.dframe_to_sql(cs_df,session,None,'CandidateSelection')
 
 
         # add Candidate ids needed later
@@ -368,12 +368,12 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
         # load ElectionContestJoin for Candidate Contests
         ecj_df = cc_row[['Contest_Id','Election_Id']].drop_duplicates()
-        cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,cdf_schema,'ElectionContestJoin')
+        cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,None,'ElectionContestJoin')
 
         #  load CandidateContestSelectionJoin
         ccsj_df = cc_row[['Contest_Id','Selection_Id']].drop_duplicates()
         ccsj_df.rename(columns={'Contest_Id':'CandidateContest_Id','Selection_Id':'CandidateSelection_Id'},inplace=True)
-        cdf_d['CandidateContestSelectionJoin'] = dbr.dframe_to_sql(ccsj_df,session,cdf_schema,'CandidateContestSelectionJoin')
+        cdf_d['CandidateContestSelectionJoin'] = dbr.dframe_to_sql(ccsj_df,session,None,'CandidateContestSelectionJoin')
 
         # load candidate counts
         cc_row.rename(columns=vc_col_d,inplace=True)  # standardize vote-count column names
@@ -386,13 +386,13 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
 
     # To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
     # add SelectionElectionContestJoin columns to VoteCount
-    q = 'ALTER TABLE {0}."VoteCount" ADD COLUMN "Election_Id" INTEGER, ADD COLUMN "Contest_Id" INTEGER,  ADD COLUMN "Selection_Id" INTEGER'
-    sql_ids=[cdf_schema]
+    q = 'ALTER TABLE "VoteCount" ADD COLUMN "Election_Id" INTEGER, ADD COLUMN "Contest_Id" INTEGER,  ADD COLUMN "Selection_Id" INTEGER'
+    sql_ids=[]
     strs = []
     dbr.raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
     print('Upload to VoteCount')
     start = time.time()
-    vote_counts_fat = dbr.dframe_to_sql(vote_counts,session,cdf_schema,'VoteCount',raw_to_votecount=True)
+    vote_counts_fat = dbr.dframe_to_sql(vote_counts,session,None'VoteCount',raw_to_votecount=True)
     vote_counts_fat.rename(columns={'Id':'VoteCount_Id'},inplace=True)
     session.commit()
     end = time.time()
@@ -400,13 +400,13 @@ def raw_elements_to_cdf(session,mu,row,contest_type,cdf_schema,election_id,elect
     print('Upload to SelectionElectionContestVoteCountJoin')
     start = time.time()
 
-    cdf_d['SelectionElectionContestVoteCountJoin'] = dbr.dframe_to_sql(vote_counts_fat,session,cdf_schema,'SelectionElectionContestVoteCountJoin')
+    cdf_d['SelectionElectionContestVoteCountJoin'] = dbr.dframe_to_sql(vote_counts_fat,session,None'SelectionElectionContestVoteCountJoin')
     end = time.time()
     print(f'\tSeconds required to upload SelectionElectionContestVoteCountJoin: {round(end - start)}')
     print('Drop columns from cdf table')
-    q = 'ALTER TABLE {0}."VoteCount" DROP COLUMN "Election_Id",' \
+    q = 'ALTER TABLE "VoteCount" DROP COLUMN "Election_Id",' \
         ' DROP COLUMN "Contest_Id" ,  DROP COLUMN "Selection_Id" '
-    sql_ids=[cdf_schema]
+    sql_ids=[]
     strs = []
     dbr.raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
 
@@ -436,14 +436,14 @@ def raw_dframe_to_cdf(session,raw_rows,mu,e,state_id = 0):
     else:
         process_ballot_measures = input('Process Ballot Measures (y/n)?\n')
     if process_ballot_measures == 'y':
-        raw_elements_to_cdf(session,mu,bm_row,'BallotMeasure',None,e.Election_Id,e.ElectionType,state_id)
+        raw_elements_to_cdf(session,mu,bm_row,'BallotMeasure',e.Election_Id,e.ElectionType,state_id)
     if cc_row.empty:
         print('No candidate contests to process')
         process_candidate_contests='empty'
     else:
         process_candidate_contests = input('Process Candidate Contests (y/n)?\n')
     if process_candidate_contests=='y':
-        raw_elements_to_cdf(session,mu,cc_row,'Candidate',None,e.Election_Id,e.ElectionType,state_id)
+        raw_elements_to_cdf(session,mu,cc_row,'Candidate',e.Election_Id,e.ElectionType,state_id)
 
     return
 
