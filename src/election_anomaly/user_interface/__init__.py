@@ -394,6 +394,45 @@ def pick_state_from_db(sess):
 	return state_idx, state_internal_db_name
 
 
+def get_or_create_election_in_db(sess):
+	"""Get id and electiontype from database, creating record first if necessary"""
+	print('Specify the election:')
+	election_df = pd.read_sql_table('Election',sess.bind,index_col='Id')
+	election_idx, election = pick_one(election_df,'Name','election')
+	electiontype_df = pd.read_sql_table('ElectionType',sess.bind,index_col='Id')
+	if election_idx is None:
+		election_idx, electiontype = create_election_in_db(sess,electiontype_df)
+	else:
+		et_row = election_df.loc[:,['ElectionType_Id','OtherElectionType']].merge(
+			electiontype_df,left_on='ElectionType_Id',right_index=True)
+		if et_row.loc[election_idx,'OtherElectionType'] != '':
+			electiontype = et_row.loc[election_idx,'OtherElectionType']
+		else:
+			electiontype = et_row.loc[election_idx,'Txt']
+	return election_idx,electiontype
+
+def create_election_in_db(sess,electiontype_df):
+	"""create record in Election table in database"""
+	election_name = input('Enter a unique short name for the election for your datafile\n')  # TODO error check
+	electiontype_idx,electiontype = pick_one(electiontype_df,'Txt','election type',required=True)
+	if electiontype == 'other':
+		std_electiontype_list = list(electiontype_df['Txt'].remove('other'))
+		otherelectiontype = input('Enter the election type:\n')
+		if otherelectiontype in std_electiontype_list:
+			electiontype_idx = electiontype_df[electiontype_df.Txt == otherelectiontype].first_valid_index()
+			otherelectiontype = ''
+	else:
+		otherelectiontype = ''
+	election_df = dbr.dframe_to_sql(
+		 # TODO check format of date entries
+		pd.DataFrame(
+			{'Name':election_name,'EndDate':input(
+				'Enter the end date of the election, a.k.a. \'Election Day\' (YYYY-MM-DD)\n'),'StartDate':input(
+				'Enter the start date of the election (YYYY-MM-DD)\n'),'ElectionType_Id':electiontype_idx,
+				'OtherElectionType':otherelectiontype},index=[-1]),sess,None,'Election')
+	election_idx = election_df[election_df.Name==election_name].first_valid_index()
+	return election_idx, electiontype
+
 
 def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short_name=None):
 	"""Guide user through process of uploading data in <raw_file>
@@ -417,35 +456,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 	# TODO feature: write routine to deduce BallotMeasureContest district from the data?!?
 	# update db from state context file
 
-	print('Specify the election:')
-	election_df = pd.read_sql_table('Election',new_df_session.bind,index_col='Id')
-	election_idx, election = pick_one(election_df,'Name','election')
-	electiontype_df = pd.read_sql_table('ElectionType',new_df_session.bind,index_col='Id')
-	if election_idx is None:
-		# create record in Election table
-		election_name = input('Enter a unique short name for the election for your datafile\n') # TODO error check
-		electiontype_idx,electiontype = \
-			pick_one(electiontype_df,'Txt','election type',required=True)
-		if electiontype == 'other':
-			std_electiontype_list = list(electiontype_df['Txt'].remove('other'))
-			otherelectiontype = input('Enter the election type:\n')
-			if otherelectiontype in std_electiontype_list:
-				electiontype_idx = electiontype_df[electiontype_df.Txt==otherelectiontype].first_valid_index()
-				otherelectiontype = ''
-		else:
-			otherelectiontype = ''
-		elections_df = dbr.dframe_to_sql(pd.DataFrame({'Name':election_name,'EndDate':
-			input('Enter the end date of the election, a.k.a. \'Election Day\' (YYYY-MM-DD)\n'),'StartDate':
-														   input('Enter the start date of the election (YYYY-MM-DD)\n'),'ElectionType_Id':
-													   # TODO check format of date entry
-														   electiontype_idx,'OtherElectionType':otherelectiontype},index= [-1]),new_df_session,None,'Election')
-	else:
-		et_row = election_df.loc[:,['ElectionType_Id','OtherElectionType']].merge(
-			electiontype_df,left_on='ElectionType_Id',right_index=True)
-		if et_row.loc[election_idx,'OtherElectionType'] != '':
-			electiontype = et_row.loc[election_idx,'OtherElectionType']
-		else:
-			electiontype = et_row.loc[election_idx,'Txt']
+	election_idx, electiontype = get_or_create_election_in_db(new_df_sesssion)
 	raw = pd.read_csv(raw_file,sep=raw_file_sep)
 	column_list = raw.columns.to_list()
 	print('Specify the munger:')

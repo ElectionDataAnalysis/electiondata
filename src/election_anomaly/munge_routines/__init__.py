@@ -293,7 +293,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
 
         # Load BallotMeasureContest table to cdf schema
         cdf_d['BallotMeasureContest'] = dbr.dframe_to_sql(bm_contest_selection[['Name','ElectionDistrict_Id']]
-                                                          .drop_duplicates(),session,None'BallotMeasureContest')
+                                                          .drop_duplicates(),session,None,'BallotMeasureContest')
 
         # add BallotMeasure-related ids needed later
         bm_row = row.merge(cdf_d['BallotMeasureSelection'],left_on='BallotMeasureSelection',
@@ -392,7 +392,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
     dbr.raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
     print('Upload to VoteCount')
     start = time.time()
-    vote_counts_fat = dbr.dframe_to_sql(vote_counts,session,None'VoteCount',raw_to_votecount=True)
+    vote_counts_fat = dbr.dframe_to_sql(vote_counts,session,None,'VoteCount',raw_to_votecount=True)
     vote_counts_fat.rename(columns={'Id':'VoteCount_Id'},inplace=True)
     session.commit()
     end = time.time()
@@ -400,7 +400,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
     print('Upload to SelectionElectionContestVoteCountJoin')
     start = time.time()
 
-    cdf_d['SelectionElectionContestVoteCountJoin'] = dbr.dframe_to_sql(vote_counts_fat,session,None'SelectionElectionContestVoteCountJoin')
+    cdf_d['SelectionElectionContestVoteCountJoin'] = dbr.dframe_to_sql(vote_counts_fat,session,None,'SelectionElectionContestVoteCountJoin')
     end = time.time()
     print(f'\tSeconds required to upload SelectionElectionContestVoteCountJoin: {round(end - start)}')
     print('Drop columns from cdf table')

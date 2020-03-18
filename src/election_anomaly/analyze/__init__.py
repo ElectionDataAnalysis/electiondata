@@ -8,6 +8,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import db_routines as dbr
 import states_and_files as sf
+import user_interface as ui
 try:
     import cPickle as pickle
 except:
@@ -188,36 +189,20 @@ class Election(object):
         return output
 
     def __init__(self, session,state,short_name):
+        # TODO: redo for no schema 'cdf' and no context/Election.txt file
         assert isinstance(state,sf.State)
-        self.short_name=short_name
-        context_el = pd.read_csv('{}context/Election.txt'.format(state.path_to_state_dir),sep='\t')
-        el = context_el[context_el['short_name'] == short_name].iloc[0]
-        self.name=el['Name']
-        self.state=state
-        self.ElectionType=el['ElectionType']
-        # perhaps election is already in the cdf schema
-        try:
-            cdf_el = pd.read_sql_table('Election',session.bind,schema='cdf')
-            eldf = cdf_el[cdf_el['Name']== self.name]
-            assert not eldf.empty, 'Election does not have a record in the cdf schema yet'
-        except:
-            cdf_etypes = pd.read_sql_table('ElectionType',session.bind,schema='cdf')
-            try:
-                ty = cdf_etypes[cdf_etypes['Txt']== el['ElectionType']]
-                assert not ty.empty
-                et_id = ty.iloc[0]['Id']
-                et_other = ''
-            except:
-                ty = cdf_etypes[cdf_etypes['Txt']== 'other']
-                et_id = ty.iloc[0]['Id']
-                et_other = el['ElectionType']
-            el_d = {'Name':self.name,'EndDate':el['EndDate'],'StartDate':el['StartDate'],'ElectionType_Id':et_id,'OtherElectionType':et_other}
-            row_as_dframe = pd.DataFrame(pd.Series(el_d)).transpose()
-            row_as_dframe.ElectionType_Id = row_as_dframe.ElectionType_Id.astype('int32')
-            eldf = dbr.dframe_to_sql(row_as_dframe,session,'cdf','Election',index_col=None)
-        self.Election_Id=int(eldf[eldf['Name']==self.name].iloc[0]['Id'])
-        self.ElectionType_Id=eldf.iloc[0]['ElectionType_Id']
-        self.OtherElectionType=eldf.iloc[0]['OtherElectionType']
+        cdf_el = pd.read_sql_table('Election',session.bind,schema='cdf')
+        election_idx,electiontype = ui.get_or_create_election_in_db(session)
+
+        self.short_name = cdf_el.loc[election_idx,'Name']
+        # context_el = pd.read_csv('{}context/Election.txt'.format(state.path_to_state_dir),sep='\t')
+        # el = context_el[context_el['short_name'] == short_name].iloc[0]
+        self.name = self.short_name   # TODO merge name and short_name
+        self.state=state    # TODO feature: generalize to other ReportingUnits?
+        self.ElectionType = electiontype
+        self.Election_Id = election_idx
+        self.ElectionType_Id = cdf_el.loc[election_idx,'ElectionType_Id']
+        self.OtherElectionType = cdf_el.loc[election_idx,'OtherElectionType']
 
 class ContestRollup:
     """Holds roll-up of one or more contests (from same election)"""
