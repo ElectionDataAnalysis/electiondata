@@ -356,9 +356,11 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
 
 
         # add Candidate ids needed later
-        cc_row = cc_row.merge(cs_df,left_on='BallotName',right_on='BallotName',suffixes=['','_Candidate'])
+        cc_row = cc_row.merge(cs_df,left_on='BallotName',right_on='BallotName',
+                              suffixes=['','_Candidate'])
         cc_row.rename(columns={'Id_Candidate':'Candidate_Id'},inplace=True)
-        cc_row = cc_row.merge(cdf_d['CandidateSelection'],left_on='Candidate_Id',right_on='Candidate_Id',suffixes=['','_Selection'])
+        cc_row = cc_row.merge(cdf_d['CandidateSelection'],left_on='Candidate_Id',
+                              right_on='Candidate_Id',suffixes=['','_Selection'])
         cc_row.rename(columns={'Id_Selection':'Selection_Id'},inplace=True)
 
 
@@ -370,7 +372,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
             # Office name is derived from CandidateContest name
             cc_row['Office'] = cc_row['CandidateContest'].str.split(' Primary;').iloc[0][0]
         else:
-            raise Exception('Election type not recognized by the code: ' + election_type) # TODO add all election types
+            raise Exception(f'Election type {election_type} not recognized by the code') # TODO add all election types
         cc_row.merge(cdf_d['Office'],left_on='Office',right_on='Name',suffixes=['','_Office'])
         cc_row.rename(columns={'Id_Office':'Office_Id'},inplace=True)
 

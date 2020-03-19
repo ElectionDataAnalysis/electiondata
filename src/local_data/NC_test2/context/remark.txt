@@ -1,1 +1,0 @@
-This is a version of NC for testing the program. Don't rely on it!

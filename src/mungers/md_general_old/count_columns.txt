@@ -1,0 +1,4 @@
+RawName	CountItemType	ContestType	BallotMeasureSelection
+Election Night Votes	election-day	Candidate	None
+Election Night Votes	election-day	BallotMeasure	Yes
+Election Night Votes Against	election-day	BallotMeasure	No

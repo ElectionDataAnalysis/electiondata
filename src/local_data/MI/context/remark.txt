@@ -1,2 +1,0 @@
-Remark
-Unlike NC and MD, results in  Michigen is distributed over multiple files. Party column not present in votes.txt

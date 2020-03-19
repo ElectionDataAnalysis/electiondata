@@ -1,0 +1,7 @@
+Contest	Selection	CountItemType	Count
+90;1	No	election-day	1836156
+90;1	Yes	election-day	2327290
+90;2	No	election-day	1573353
+90;2	Yes	election-day	2491082
+90;3	No	election-day	1355771
+90;3	Yes	election-day	2743792

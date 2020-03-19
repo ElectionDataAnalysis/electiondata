@@ -197,14 +197,11 @@ class Election(object):
         return output
 
     def __init__(self, session,state):
-        # TODO: redo for no schema 'cdf' and no context/Election.txt file
         assert isinstance(state,sf.State)
         cdf_el = pd.read_sql_table('Election',session.bind,index_col='Id')
         election_idx,electiontype = ui.get_or_create_election_in_db(session)
 
         self.short_name = cdf_el.loc[election_idx,'Name']
-        # context_el = pd.read_csv('{}context/Election.txt'.format(state.path_to_state_dir),sep='\t')
-        # el = context_el[context_el['short_name'] == short_name].iloc[0]
         self.name = self.short_name   # TODO merge name and short_name
         self.state=state    # TODO feature: generalize to other ReportingUnits?
         self.ElectionType = electiontype
@@ -388,9 +385,9 @@ def choose_by_name(name_list,default=0):
     print('Available items:')
     name_list.sort()
     for name in name_list:
-        print('{0}\t{1}'.format(name_list.index(name),name))
+        print(f'{name_list.index(name)}\t{name}')
     default=0
-    id = input('Enter Id of desired item \n\t(default is {})\n'.format(default)) or default
+    id = input(f'Enter Id of desired item \n\t(default is {default})\n' or default
     # TODO add error-checking on user input
     return name_list[int(id)]
 
@@ -399,7 +396,7 @@ def anomaly_list(contest_name, c, aframe_columnlist=None):
         aframe_columnlist = ['ContestName', 'column_field', 'filter_field', 'filter_value', 'anomaly_algorithm',
                              'anomaly_value_raw', 'raw_look_at', 'anomaly_value_pct', 'pct_look_at']
     anomaly_list = []
-    print('Calculating anomalies for {}'.format(contest_name))
+    print(f'Calculating anomalies for {contest_name}')
 
     for column_field in ['ReportingUnit','CountItemType','Selection']:
         temp_list = ['ReportingUnit','CountItemType','Selection']
@@ -434,6 +431,7 @@ if __name__ == '__main__':
     e = Election(analysis_session,state)
 
     e.summarize_results()
+
 
     eng.dispose()
     print('Done')

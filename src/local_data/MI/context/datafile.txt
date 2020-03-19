@@ -1,2 +1,0 @@
-name	encoding	separator	source_url	file_date	download_date	note
-General Election 2018-11-06;2018vote.txt	utf8	tab	https://mielections.us/election/results/2018GEN_CENR.html	2018-11-16	2020-03-01

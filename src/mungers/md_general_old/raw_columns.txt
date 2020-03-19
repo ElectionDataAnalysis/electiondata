@@ -1,0 +1,15 @@
+name	type
+County	string
+Election District	string
+Election Precinct	string
+Cong	string
+Legs	string
+Candidate Name	string
+Party	string
+Office Name	string
+Office District	string
+Winner	string
+Write-In?	string
+Election Night Votes	integer
+Election Night Votes Against	integer
+

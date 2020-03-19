@@ -1,3 +1,0 @@
-RawName	CountItemType	ContestType	BallotMeasureSelection
-Precinct #Votes	election-day	Candidate	None
-Precinct #Votes	election-day	BallotMeasure	<Candidate ID#>
