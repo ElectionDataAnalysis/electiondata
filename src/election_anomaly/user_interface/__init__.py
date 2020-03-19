@@ -98,7 +98,7 @@ def pick_database(paramfile,state_name=None):
 		cur = con.cursor()
 
 	if db_idx == None: 	# if our db is brand new
-		eng,meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=desired_db)
+		eng,meta = dbr.sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
 		Session = sessionmaker(bind=eng)
 		pick_db_session = Session()
 
@@ -206,18 +206,27 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 	each <element.test_field> is in <test_list>."""
 	template_file = os.path.join(template_dir_path,f'{element}.txt')
 	template = pd.read_csv(template_file,sep='\t')
-	create_file_from_template(template_file,context_path,sep=sep)
+	context_file = os.path.join(context_path,f'{element}.txt')
+	create_file_from_template(template_file,context_file,sep=sep)
 	in_progress = 'y'
 	while in_progress == 'y':
 		# check format of file
-		context_df = pd.read_csv(context_path,sep=sep,header=0,dtype=str)
+		context_df = pd.read_csv(context_file,sep=sep,header=0,dtype=str)
+		dupes,deduped = find_dupes(context_df.Name)
 		if not context_df.columns.to_list() == template.columns.to_list():
 			print(f'WARNING: {element}.txt is not in the correct format.')		# TODO refine error msg?
 			input('Please correct the file and hit return to continue.\n')
 
+		# check for empty
+		elif context_df.empty:
+			empty_ok = input(f'File context/{element}.txt has no data. Is that correct (y/n)?\n')
+			if empty_ok == 'y':
+				in_progress = 'n'
+			else:
+				input(f'Please fill file context/{element}.txt, then hit return to continue.\n')
+
 		# check for dupes
-		dupes,deduped = find_dupes(context_df.Name)
-		if dupes.shape[0] >0:
+		elif dupes.shape[0] >0:
 			print(f'File {context_path}\n has duplicates in the Name column.')
 			show_sample(dupes,'names','appear on more than one line')
 			input(f'Please correct and hit return to continue.\n')
@@ -235,6 +244,8 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 					print(f'\tStandard {test_field}s are not required, but you probably want to use them when you can.'
 						  f'\n\tYour file has non-standard {test_field}s:')
 					for rut in bad_set: print(f'\t\t{rut}')
+					# TODO bug: this prints out long long list of ElectionDistricts,
+					# TODO then suggests altering only Office.txt. Should be more graceful.
 					print(f'\tStandard {test_field}s are:')
 					print(f'\t\t{",".join(test_list)}')
 
@@ -497,16 +508,16 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
 		mr.raw_elements_to_cdf(new_df_session,munger,bmc_results,'BallotMeasure',election_idx,electiontype,state_idx)
 	eng.dispose()
-	return
+	return state, munger
 
 if __name__ == '__main__':
 	project_root = os.getcwd().split('election_anomaly')[0]
 
-	#state_short_name = 'NC_test2'
+	#state_short_name = 'NC'
 	state_short_name = None
 	raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
 	raw_file_sep = '\t'
 	db_paramfile = os.path.join(project_root,'local_data/database.ini')
 
-	new_datafile(raw_file,raw_file_sep,db_paramfile,project_root,state_short_name=state_short_name)
+	state, munger = new_datafile(raw_file,raw_file_sep,db_paramfile,project_root,state_short_name=state_short_name)
 	print('Done! (user_interface)')

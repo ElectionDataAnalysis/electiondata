@@ -374,7 +374,7 @@ def numframe_to_zscore(pframe,tolerance = 0.05):
         # TODO assert that all rows are numerical vectors, with all other info in the index
         return score_list,max_ezs, look_at_list
 
-def choose_by_name(name_list,default=0):
+def choose_by_name(name_list):
     """
     Gives the user a list of items and invites user to choose one by entering its Id.
     `table` is the table of items; `filter` is a list of dictionaries,
@@ -387,7 +387,7 @@ def choose_by_name(name_list,default=0):
     for name in name_list:
         print(f'{name_list.index(name)}\t{name}')
     default=0
-    id = input(f'Enter Id of desired item \n\t(default is {default})\n' or default
+    id = input(f'Enter Id of desired item \n\t(default is {default})\n') or default
     # TODO add error-checking on user input
     return name_list[int(id)]
 
@@ -419,7 +419,6 @@ if __name__ == '__main__':
 
     db_name = ui.pick_database(paramfile,state_name=state_name)
 
-
     # initialize main session for connecting to db
     eng, meta_generic = dbr.sql_alchemy_connect(db_name=state_name)
     Session = sessionmaker(bind=eng)
@@ -431,7 +430,6 @@ if __name__ == '__main__':
     e = Election(analysis_session,state)
 
     e.summarize_results()
-
 
     eng.dispose()
     print('Done')
