@@ -120,7 +120,7 @@ class Munger:
         print(f'Ballot Measure Selections for the munger {self.name} are:\n'
               f'{", ".join(self.ballot_measure_selection_list)}')
         needs_warning = False
-        correct = input('Is this correct (y/n)?\n')
+        correct = input('Is this consistent with your datafile (y/n)?\n')
         while correct != 'y':
             needs_warning = True
             add_or_remove = input('Enter \'a\' to add and \'r\' to remove.\n')
@@ -136,20 +136,19 @@ class Munger:
                 print('Answer not valid. Please enter \'a\' or \'r\'.')
             print(f'Ballot Measure Selections for the munger {self.name} are:\n'
                   f'{", ".join(self.ballot_measure_selection_list)}')
-            correct = input('Is this correct (y/n)?\n')
+            correct = input('Is this consistent with your datafile (y/n)?\n')
         if needs_warning:
             print(f'To make this change permanent, edit the BallotMeasureSelection lines '
                   f'in {self.name}/raw_identifiers.txt')
         return
 
     def check_atomic_ru_type(self):
-        print(f'WARNING: All ReportingUnits in this file will be munged as type\n'
-              f'\t\t \'{self.atomic_reporting_unit_type}\'.')
-        print('\tIf other behavior is desired, create or use another munger.')
+        print(f'This munger classifies each line of the datafile as type \'{self.atomic_reporting_unit_type}\'.')
+        print('\tIf this is not appropriate for the datafile, create or use another munger.')
         check_ru_type = input('\tProceed with munger {} (y/n)?\n'.format(self.name))
         if check_ru_type != 'y':
             print('Datafile will not be processed.')
-            raise Exception('Munger assumes basic reporting unit different from datafile.')
+            raise Exception('Munger would assign wrong ReportingUnitType to datafile.')
         else:
             return
 
@@ -161,6 +160,7 @@ class Munger:
         """Loads info from context/<element>.txt into db; checks results file <element>s against munger;
         then checks munger against db. Throughout, guides user to make corrections in context/<element>.txt;
         finally loads final context/<element>.txt into db. Note that this will only add records to db, never remove. """
+        # TODO when ReportingUnits are added, add to CRUJ table
         # TODO why do ReportingUnits get checked twice somehow?
         print(f'Updating database with info from {state.short_name}/context/{element}.txt.\n')
         no_dupes = False

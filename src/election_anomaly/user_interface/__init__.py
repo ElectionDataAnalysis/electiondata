@@ -460,7 +460,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 	# TODO feature: write routine to deduce BallotMeasureContest district from the data?!?
 	# update db from state context file
 
-	election_idx, electiontype = get_or_create_election_in_db(new_df_sesssion)
+	election_idx, electiontype = get_or_create_election_in_db(new_df_session)
 	raw = pd.read_csv(raw_file,sep=raw_file_sep)
 	column_list = raw.columns.to_list()
 	print('Specify the munger:')
@@ -501,8 +501,8 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 if __name__ == '__main__':
 	project_root = os.getcwd().split('election_anomaly')[0]
 
-	state_short_name = 'NC_test2'
-	# state_short_name = None
+	#state_short_name = 'NC_test2'
+	state_short_name = None
 	raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
 	raw_file_sep = '\t'
 	db_paramfile = os.path.join(project_root,'local_data/database.ini')

@@ -25,6 +25,7 @@ def load_context_dframe_into_cdf(session,state,source_df1,element,
 """
     # TODO check that source_df has the right format
     # TODO check that this can be used to update the db as well as initialize it
+    # TODO check that CRUJ gets filled whenever a ReportingUnitis added
 
     # dedupe source_df
     dupes,source_df = ui.find_dupes(source_df1)
@@ -52,9 +53,9 @@ def load_context_dframe_into_cdf(session,state,source_df1,element,
             cdf_e = pd.read_sql_table('CountItemStatus',session.bind)
             source_df.loc[:,e] = cis
             source_df = enum_col_to_id_othertext(source_df,e,cdf_e)
+
     #  commit info in source_df to corresponding cdf table to db
     cdf_element = dframe_to_sql(source_df,session,None,element)
-
     if element == 'Office':
         # upload ReportingUnits from context/ReportingUnit.txt to db
         ru = pd.read_csv(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t')

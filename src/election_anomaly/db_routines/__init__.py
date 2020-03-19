@@ -45,12 +45,14 @@ def fill_composing_reporting_unit_join(session):
 
 def append_to_composing_reporting_unit_join(session,ru):
     """<ru> is a dframe of reporting units, with cdf internal name in column 'Name'.
-    cdf internal name indicates nesting via semicolons"""
+    cdf internal name indicates nesting via semicolons.
+    This routine calculates the nesting relationships from the Names and uploads to db.
+    Returns the *all* CRUJ data from the db."""
     ru['split'] = ru['Name'].apply(lambda x:x.split(';'))
     ru['length'] = ru['split'].apply(len)
     
-    # pull cdf.ReportingUnit to get ids matched to names
-    ru_cdf = pd.read_sql_table('ReportingUnit',session.bind,'cdf',index_col=None)
+    # pull ReportingUnit to get ids matched to names
+    ru_cdf = pd.read_sql_table('ReportingUnit',session.bind,index_col=None)
     ru_static = ru.copy()
     # get Id of the child reporting unit, if it's not already there
     if 'Id' not in ru.columns:
@@ -69,22 +71,9 @@ def append_to_composing_reporting_unit_join(session,ru):
             columns={'Id':'ChildReportingUnit_Id','Id_{}'.format(i):'ParentReportingUnit_Id'}))
 
     cruj_dframe = pd.concat(cruj_dframe_list)
-    cruj_dframe = dframe_to_sql(cruj_dframe,session,'cdf','ComposingReportingUnitJoin')
+    cruj_dframe = dframe_to_sql(cruj_dframe,session,None,'ComposingReportingUnitJoin')
     session.flush()
     return cruj_dframe
-
-
-def cruj_insert(s,f):
-    """<f> is a dataframe with info in the form of the context/ReportingUnits.txt file.
-    Calculate the nesting relationships and insert into cdf.ComposingReportingUnitJoin"""
-    # TODO handle different CountItemStatus
-    # initialize main session for connecting to db
-    eng, meta_generic = sql_alchemy_connect(db_name=s.short_name)
-    Session = sessionmaker(bind=eng)
-    session = Session()
-    append_to_composing_reporting_unit_join(session,f)
-    eng.dispose()
-    return
 
 
 def get_path_to_db_paramfile():
@@ -209,6 +198,7 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     Return the updated dframe, including all rows from the db and all from the dframe.
     """
     # pull copy of existing table
+    # TODO if <table> is 'ReportingUnit', fill CRUJ as well.
 
     target = pd.read_sql_table(table,session.bind,schema=schema,index_col=index_col)
     # VoteCount table gets added columns during raw data upload, needs special treatment
@@ -229,7 +219,7 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     for c in dframe.columns:
         if c not in target.columns:
             df_to_db = df_to_db.drop(c, axis=1)
-    # add columns that exist in target table but are mission from original dframe
+    # add columns that exist in target table but are missing from original dframe
     for c in target.columns:
         if c not in dframe.columns:
             df_to_db[c] = None  # TODO why doesn't this throw an error? Column is not equal to a scalar...
@@ -245,6 +235,8 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     #  have been dropped] These came from df_to_db, where they differ from corresponding rows
     # in target, but how?
     appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
+    if table == 'ReportingUnit' and not appendable.empty:
+        append_to_composing_reporting_unit_join(session,appendable)
     up_to_date_dframe = pd.read_sql_table(table,session.bind,schema=schema)
     if raw_to_votecount:
         # need to drop rows that were read originally from target -- these will have null Election_Id
