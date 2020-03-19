@@ -1,0 +1,2 @@
+fieldname	datatype
+Contest_Id	Integer

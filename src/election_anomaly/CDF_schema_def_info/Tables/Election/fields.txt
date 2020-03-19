@@ -1,0 +1,4 @@
+fieldname	datatype
+Name	String
+EndDate	Date
+StartDate	Date

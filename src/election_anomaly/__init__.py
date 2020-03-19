@@ -44,18 +44,22 @@ def user_picks_munger(dir_path):
 
     return mu,munger_path
 
-# TODO will need routines to add new munger externalidentifiers to an existing cdf db; will need routines to add new reportingunits to an existing cdf db.
+# TODO will need routines to add new munger externalidentifiers to an existing cdf db;
+#  will need routines to add new reportingunits to an existing cdf db.
 if __name__ == '__main__':
     # initialize state and create database for it (if not already exists)
     default = 'NC'
     abbr = input(
-        'Enter short name for your state/district/territory (only alphanumeric and underscore, no spaces, default is ' + default + ')\n'
-    ) or default
+        'Enter short name for your state/district/territory (only alphanumeric and underscore, no spaces, '
+        'default is ' + default + ')\n') or default
     print('Creating instance of State for {}'.format(abbr))
-    s = sf.State(abbr,'../local_data/')
+    # get absolute path to local_data directory
+    current_dir=os.getcwd()
+    path_to_src_dir=current_dir.split('/election_anomaly')[0]
+    s = sf.State(abbr,'{}/local_data/'.format(path_to_src_dir))
     create_db = input('Make database and schemas for {} (y/n)?\n'.format(abbr))
     if create_db == 'y':
-        s.create_db_and_schemas()
+        s.create_db()
 
     # initialize main session for connecting to db
     eng, meta_generic = dbr.sql_alchemy_connect(db_name=s.short_name)
@@ -65,8 +69,8 @@ if __name__ == '__main__':
     if create_db == 'y':
         # create build tables in cdf schema
         print('Creating common data format tables in schema `cdf` in database {}'.format(s.short_name))
-        enumeration_tables = CDF.enum_table_list()
-        meta_cdf = CDF.create_common_data_format_schema(session,'cdf',enumeration_tables,delete_existing=True)
+
+        meta_cdf = CDF.create_common_data_format_tables(session,'cdf',delete_existing=True)
         session.commit()
 
         # load data from context directory into context schema
@@ -83,7 +87,8 @@ if __name__ == '__main__':
 
         # %% fill enumeration tables
         print('\tFilling enumeration tables')
-        CDF.fill_cdf_enum_tables(session,meta_cdf,'cdf',enumeration_tables)
+        enumeration_tables = CDF.fill_cdf_enum_tables(session,'cdf')
+        CDF.fill_cdf_enum_tables(session,'cdf')
         print('Loading state context info into CDF schema')
         munge_routines.context_schema_to_cdf(session,s,enumeration_tables)
         session.commit()
@@ -139,14 +144,10 @@ if __name__ == '__main__':
             # TODO change column names as necessary mu.rename_column_dictionary
 
             for c in raw_data_dframe.columns:
-                #if pytype_d[c] == int: # TODO
-                    #raw_data_dframe[c]=raw_data_dframe[c].fillna(0)
-                #if pytype_d[c] == str:
                 raw_data_dframe[c]=raw_data_dframe[c].fillna('')  # TODO can we do all of the dataframe at once, not col by col?
-                #raw_data_dframe[c]=raw_data_dframe[c].astype(pytype_d[c])
 
             print('Loading data into cdf schema from file: {}'.format(datafile))
-            mr.raw_dframe_to_cdf(session,raw_data_dframe, mu,'cdf',e)
+            mr.raw_dframe_to_cdf(session,raw_data_dframe, mu,e)
 
     try:    # if mu is not already defined
         mu

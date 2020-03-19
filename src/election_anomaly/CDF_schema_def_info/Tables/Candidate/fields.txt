@@ -1,0 +1,2 @@
+fieldname	datatype
+BallotName	String

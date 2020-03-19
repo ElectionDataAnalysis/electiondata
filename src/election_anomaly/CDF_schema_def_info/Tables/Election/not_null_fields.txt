@@ -1,0 +1,5 @@
+not_null_fields
+Name
+StartDate
+EndDate
+ElectionType_Id

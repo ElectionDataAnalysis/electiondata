@@ -6,9 +6,12 @@ import sqlalchemy
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
 import sqlalchemy as db
+from sqlalchemy.orm import sessionmaker
 from sqlalchemy.engine import reflection
 from configparser import ConfigParser
 import pandas as pd
+import os
+
 
 def create_database(con,cur,db_name):
     sure = input('If the db exists, it will be deleted and data will be lost. Are you absolutely sure (y/n)?\n')
@@ -24,6 +27,7 @@ def create_database(con,cur,db_name):
     else:
         return None,None
 
+
 def create_raw_schema(con,cur,schema):
     q = "CREATE SCHEMA {0}"
     sql_ids = [schema]
@@ -32,11 +36,59 @@ def create_raw_schema(con,cur,schema):
     return out1
 
 
+def fill_composing_reporting_unit_join(session):
+    print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
+    ru_dframe = pd.read_sql_table('ReportingUnit',session.bind,'cdf',index_col=None)
+    cruj_dframe = append_to_composing_reporting_unit_join(session,ru_dframe)
+    return cruj_dframe
+
+
+def append_to_composing_reporting_unit_join(session,ru):
+    """<ru> is a dframe of reporting units, with cdf internal name in column 'Name'.
+    cdf internal name indicates nesting via semicolons.
+    This routine calculates the nesting relationships from the Names and uploads to db.
+    Returns the *all* CRUJ data from the db."""
+    ru['split'] = ru['Name'].apply(lambda x:x.split(';'))
+    ru['length'] = ru['split'].apply(len)
+    
+    # pull ReportingUnit to get ids matched to names
+    ru_cdf = pd.read_sql_table('ReportingUnit',session.bind,index_col=None)
+    ru_static = ru.copy()
+    # get Id of the child reporting unit, if it's not already there
+    if 'Id' not in ru.columns:
+        ru_static = ru_static.merge(ru_cdf[['Name','Id']],on='Name',how='left')
+    cruj_dframe_list = []
+    for i in range(ru['length'].max() - 1):
+        # check that all components of all Reporting Units are themselves ReportingUnits
+        ru_for_cruj = ru_static.copy()  # start fresh, without detritus from previous i
+
+        # get name of ith ancestor
+        ru_for_cruj['ancestor_{}'.format(i)] = ru_static['split'].apply(lambda x:';'.join(x[:-i - 1]))
+        # get Id of ith ancestor
+        ru_for_cruj = ru_for_cruj.merge(ru_cdf,left_on='ancestor_{}'.format(i),right_on='Name',
+                                        suffixes=['','_' + str(i)])
+        cruj_dframe_list.append(ru_for_cruj[['Id','Id_{}'.format(i)]].rename(
+            columns={'Id':'ChildReportingUnit_Id','Id_{}'.format(i):'ParentReportingUnit_Id'}))
+
+    cruj_dframe = pd.concat(cruj_dframe_list)
+    cruj_dframe = dframe_to_sql(cruj_dframe,session,None,'ComposingReportingUnitJoin')
+    session.flush()
+    return cruj_dframe
+
+
+def get_path_to_db_paramfile():
+    current_dir = os.getcwd()
+    path_to_src = current_dir.split('/election_anomaly/')[0]
+    fpath='{}/local_data/database.ini'.format(path_to_src)
+    return fpath
+
+
 def establish_connection(paramfile = '../local_data/database.ini',db_name='postgres'):
     params = config(paramfile)
     if db_name != 'postgres': params['dbname']=db_name
     con = psycopg2.connect(**params)
     return con
+
 
 def sql_alchemy_connect(schema=None,paramfile = '../local_data/database.ini',db_name='postgres'):
     """Returns an engine and a metadata object"""
@@ -57,6 +109,7 @@ def sql_alchemy_connect(schema=None,paramfile = '../local_data/database.ini',db_
 
     return engine, meta
 
+
 def config(filename='../local_data/database.ini', section='postgresql'):
     """
     Creates the parameter dictionary needed to log into our db
@@ -64,6 +117,9 @@ def config(filename='../local_data/database.ini', section='postgresql'):
     # create a parser
     parser = ConfigParser()
     # read config file
+
+    if not os.path.isfile(filename): # if <filename> doesn't exist, look in a canonical place
+        filename=get_path_to_db_paramfile()
     parser.read(filename)
 
     # get section, default to postgresql
@@ -76,6 +132,7 @@ def config(filename='../local_data/database.ini', section='postgresql'):
         raise Exception('Section {0} not found in the {1} file'.format(section, filename))
     return db
 
+
 def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to create db and schemas
     format_args = [sql.Identifier(a) for a in sql_ids]
     cur.execute(sql.SQL(q).format(*format_args),strs)
@@ -84,6 +141,7 @@ def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to crea
         return cur.fetchall()
     else:
         return None
+
 
 def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
     connection = session.bind.connect()
@@ -99,6 +157,7 @@ def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
     cur.close()
     con.close()
     return return_item
+
 
 def create_schema(session,name,delete_existing=False):
     eng = session.bind
@@ -130,6 +189,7 @@ def create_schema(session,name,delete_existing=False):
     session.flush()
     return new_schema_created
 
+
 def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_votecount=False):
     """
     Given a dframe and an existing cdf db table name, clean the dframe
@@ -138,6 +198,7 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     Return the updated dframe, including all rows from the db and all from the dframe.
     """
     # pull copy of existing table
+    # TODO if <table> is 'ReportingUnit', fill CRUJ as well.
 
     target = pd.read_sql_table(table,session.bind,schema=schema,index_col=index_col)
     # VoteCount table gets added columns during raw data upload, needs special treatment
@@ -158,7 +219,7 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     for c in dframe.columns:
         if c not in target.columns:
             df_to_db = df_to_db.drop(c, axis=1)
-    # add columns that exist in target table but are mission from original dframe
+    # add columns that exist in target table but are missing from original dframe
     for c in target.columns:
         if c not in dframe.columns:
             df_to_db[c] = None  # TODO why doesn't this throw an error? Column is not equal to a scalar...
@@ -174,6 +235,8 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     #  have been dropped] These came from df_to_db, where they differ from corresponding rows
     # in target, but how?
     appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
+    if table == 'ReportingUnit' and not appendable.empty:
+        append_to_composing_reporting_unit_join(session,appendable)
     up_to_date_dframe = pd.read_sql_table(table,session.bind,schema=schema)
     if raw_to_votecount:
         # need to drop rows that were read originally from target -- these will have null Election_Id
@@ -181,6 +244,7 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     if flush:
         session.flush()
     return up_to_date_dframe
+
 
 if __name__ == '__main__':
 
