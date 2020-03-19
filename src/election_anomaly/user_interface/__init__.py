@@ -6,6 +6,7 @@ import pandas as pd
 import numpy as np
 from sqlalchemy.orm import sessionmaker
 import os
+import re
 import states_and_files as sf
 import random
 
@@ -189,6 +190,47 @@ def find_dupes(df):
 	return dupes, deduped
 
 
+def format_check_formula(formula,fields):
+	"""
+	Checks all strings encased in angle brackets in <formula>
+	Returns list of such strings missing from <field_list>
+	"""
+	p=re.compile('<(?P<field>[^<>]+)>')
+	m = p.findall(formula)
+	missing = [x for x in m if x not in fields]
+	return missing
+
+
+def confirm_or_correct_cdf_table_file(cdf_table_file):
+	"""
+	Checks that <cdf_table_file> has the right columns and contest;
+	if not, guides user to correcting
+	"""
+	element_list = [
+		'Office','ReportingUnit','Party','Candidate','CandidateContest',
+		'BallotMeasureContest','BallotMeasureSelection']
+	cdft_df = pd.read_csv(cdf_table_file,sep='\t',index_col='cdf_element')  # note index
+
+	# check column headings
+	while cdft_df.columns != ['cdf_element','raw_identifier_formula']:
+		input(f'The file {cdf_table_file} should tab-separated with two columns\n'
+			  f'labeled \'cdf_element\' and \'raw_identifier_formula\'.\n'
+			  f'Correct the file as necessary and hit return to continue')
+		cdft_df = pd.read_csv(cdf_table_file,sep='\t',index_col='cdf_element')  # note index
+
+	# check for missing rows
+	missing_elements = [x for x in element_list if x not in cdft_df.cdf_element.to_list()]
+	while missing_elements:
+		input(f'Rows are missing from {cdf_table_file}:\n'
+			  f'{",".join(missing_elements)}\n'
+			  f'Add them and hit return to continue')
+		cdft_df = pd.read_csv(cdf_table_file,sep='\t',index_col='cdf_element')  # note index
+		missing_elements = [x for x in element_list if x not in cdft_df.cdf_element.to_list()]
+
+	# TODO check that formulas refer to existing columns of raw file
+	return cdft_df
+
+
 def confirm_or_correct_ballot_measure_style(options_file,bms_file,sep='\t'):
 	bmso_df = pd.read_csv(options_file,sep=sep)
 	try:
@@ -331,7 +373,7 @@ def check_munger(sess,munger_name,munger_dir,template_dir,column_list):
 				Check the file and correct as necessary. Then hit return to continue.\n""")
 
 		# create ballot_measure_style.txt
-		confirm_or_correct_ballot_measure_style(
+		bms,bms_description = confirm_or_correct_ballot_measure_style(
 			os.path.join(munger_dir,'ballot_measure_style_options.txt'),
 				os.path.join(munger_path,'ballot_measure_style.txt'))
 
