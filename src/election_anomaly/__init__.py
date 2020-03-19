@@ -25,6 +25,9 @@ except:
     import pickle
 
 if __name__ == '__main__':
+    print('WARNING: Sorry, lots of bugs at the moment. Don\'t waste your time! -- Stephanie')
+    exit()
+
     project_root = os.getcwd().split('election_anomaly')[0]
     # state_short_name = 'NC'
     state_short_name = None

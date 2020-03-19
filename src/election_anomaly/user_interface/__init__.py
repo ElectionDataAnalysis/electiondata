@@ -511,6 +511,10 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 	return state, munger
 
 if __name__ == '__main__':
+
+	print('WARNING: Sorry, lots of bugs at the moment. Don\'t waste your time! -- Stephanie')
+	exit()
+
 	project_root = os.getcwd().split('election_anomaly')[0]
 
 	#state_short_name = 'NC'
@@ -521,3 +525,4 @@ if __name__ == '__main__':
 
 	state, munger = new_datafile(raw_file,raw_file_sep,db_paramfile,project_root,state_short_name=state_short_name)
 	print('Done! (user_interface)')
+	exit()
