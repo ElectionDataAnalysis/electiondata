@@ -162,7 +162,7 @@ def pick_state(con,schema,path_to_states='local_data/',state_name=None):
 			ru_list = ru['Name'].to_list()
 			fill_context_file(os.path.join(state_path,'context'),
 							  os.path.join(path_to_states,'context_templates'),
-								'Office',ru_list,'ElectionDistrict') # TODO check that each ED is a RU
+								'Office',None,None)  # note check that ElectionDistricts are RUs happens below
 			# Party.txt
 			fill_context_file(os.path.join(state_path,'context'),
 							  os.path.join(path_to_states,'context_templates'),
@@ -173,12 +173,13 @@ def pick_state(con,schema,path_to_states='local_data/',state_name=None):
 			with open(remark_path,'r') as f:
 				remark = f.read()
 			print(f'Current contents of remark.txt is:\n{remark}\n')
-			input(f'Please add or correct anything that user should know about the state {state_name}.'
+			input(f'In the file context/remark.txt, add or correct anything that user should know about the state {state_name}.\n'
 						f'Then hit return to continue.')
 	else:
 		print(f'Directory {state_name} is assumed to exist and have the required contents.')
 	# initialize the state
 	ss = sf.State(state_name,path_to_states)
+	ss.check_election_districts()
 	return ss
 
 
@@ -235,7 +236,9 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 			print(f'\nCurrent contents of {element}.txt:\n{context_df}')
 
 			# check test conditions
-			if test_list is not None:
+			if test_list is None:
+				in_progress = 'n'
+			else:
 				bad_set = {x for x in context_df[test_field] if x not in test_list}
 				if len(bad_set) == 0:
 					print(f'Congratulations! Contents of context/{element}.txt look good!')
@@ -426,6 +429,7 @@ def get_or_create_election_in_db(sess):
 			electiontype = et_row.loc[election_idx,'Txt']
 	return election_idx,electiontype
 
+
 def create_election_in_db(sess,electiontype_df):
 	"""create record in Election table in database"""
 	election_name = input('Enter a unique short name for the election\n')  # TODO error check
@@ -510,16 +514,18 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 	eng.dispose()
 	return state, munger
 
+
 if __name__ == '__main__':
 
 	print('WARNING: Sorry, lots of bugs at the moment. Don\'t waste your time! -- Stephanie')
-	exit()
+	# exit()
 
 	project_root = os.getcwd().split('election_anomaly')[0]
 
 	#state_short_name = 'NC'
 	state_short_name = None
-	raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
+	#raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
+	raw_file = os.path.join(project_root,'local_data/FL/data/11062018Election.txt')
 	raw_file_sep = '\t'
 	db_paramfile = os.path.join(project_root,'local_data/database.ini')
 

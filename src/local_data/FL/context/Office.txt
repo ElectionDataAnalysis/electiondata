@@ -1,8 +1,8 @@
 Name	ElectionDistrict	VotesAllowed	NumberElected	NumberRunoff	IsPartisan
-Florida;Governor	Florida;Governor	1	1	0	True
-Florida;Attorney General	Florida;Attorney General	1	1	0	True
-Florida;Chief Financial Officer	Florida;Chief Financial Officer	1	1	0	True
-Florida;Commissioner of Agriculture	Florida;Commissioner of Agriculture	1	1	0	True
+Florida;Governor	Florida	1	1	0	True
+Florida;Attorney General	Florida	1	1	0	True
+Florida;Chief Financial Officer	Florida	1	1	0	True
+Florida;Commissioner of Agriculture	Florida	1	1	0	True
 Florida;General Assembly House of Representatives District 1	Florida;General Assembly House of Representatives District 1	1	1	0	True
 Florida;General Assembly House of Representatives District 2	Florida;General Assembly House of Representatives District 2	1	1	0	True
 Florida;General Assembly House of Representatives District 3	Florida;General Assembly House of Representatives District 3	1	1	0	True
@@ -190,4 +190,4 @@ Florida;US Congress House of Representatives District 24	Florida;US Congress Hou
 Florida;US Congress House of Representatives District 25	Florida;US Congress House of Representatives District 25	1	1	0	True
 Florida;US Congress House of Representatives District 26	Florida;US Congress House of Representatives District 26	1	1	0	True
 Florida;US Congress House of Representatives District 27	Florida;US Congress House of Representatives District 27	1	1	0	True
-Florida;US Congress Senate	Florida;US Congress Senate	1	1	0	True
+Florida;US Congress Senate	Florida	1	1	0	True
