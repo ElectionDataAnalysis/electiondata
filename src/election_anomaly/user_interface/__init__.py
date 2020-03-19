@@ -189,6 +189,22 @@ def find_dupes(df):
 	return dupes, deduped
 
 
+def confirm_or_correct_ballot_measure_style(options_file,bms_file,sep='\t'):
+	bmso_df = pd.read_csv(options_file,sep=sep)
+	try:
+		with open(bms_file,'r') as f:
+			bms = f.read()
+	except FileNotFoundError:
+		bms = None
+	if bms not in bmso_df['short_name'].to_list():
+		print('Ballot measure style not recognized. Please pick a new one.')
+		bms_idx,bms = pick_one(bmso_df,'short_name',item='ballot measure style',required=True)
+		with open(bms_file,'w') as f:
+			f.write(bms)
+	bms_description = bmso_df[bmso_df.short_name==bms].loc[0,'description']
+	return bms, bms_description
+
+
 def create_file_from_template(template_file,new_file,sep='\t'):
 	"""For tab-separated files (or others, using <sep>); does not replace existing file
 	but creates <new_file> with the proper header row
@@ -315,31 +331,19 @@ def check_munger(sess,munger_name,munger_dir,template_dir,column_list):
 				Check the file and correct as necessary. Then hit return to continue.\n""")
 
 		# create ballot_measure_style.txt
-		bmso_df = pd.read_csv(os.path.join(munger_dir,'ballot_measure_style_options.txt'),sep='\t')
-		try:
-			with open(os.path.join(munger_path,'ballot_measure_style.txt'),'r') as f:
-				bms=f.read()
-			assert bms in bmso_df['short_name'].to_list()
-			change = input(f'Ballot measure style is {bms}. Do you need to change it (y/n)?\n')
-		except AssertionError:
-			print('Ballot measure style not recognized. Please pick a new one.')
-			change = 'y'
-		except FileNotFoundError:
-			change = 'y'
-		if change == 'y':
-			bms_idx,bms = pick_one(bmso_df,'short_name',item='ballot measure style',required=True)
-			with open(os.path.join(munger_path,'ballot_measure_style.txt'),'w') as f:
-				f.write(bms)
+		confirm_or_correct_ballot_measure_style(
+			os.path.join(munger_dir,'ballot_measure_style_options.txt'),
+				os.path.join(munger_path,'ballot_measure_style.txt'))
 
 		# create/correct count_columns.txt
-			print(f"""The file count_columns.txt should have one row for each vote-count column  
-				in the raw datafile to be processed with the munger {munger_name}. 
-				Each row should have the RawName of the column and the CountItemType. 
-				Standard CountItemTypes are not required, but are recommended:""")
-			cit = pd.read_sql_table('CountItemType',sess.bind)
-			print(cit['Txt'].to_list())
-			input('Check the file and correct as necessary.  Then hit return to continue.\n')
-			# TODO check file against standard CountItemTypes?
+		print(f"""The file count_columns.txt should have one row for each vote-count column  
+			in the raw datafile to be processed with the munger {munger_name}. 
+			Each row should have the RawName of the column and the CountItemType. 
+			Standard CountItemTypes are not required, but are recommended:""")
+		cit = pd.read_sql_table('CountItemType',sess.bind)
+		print(cit['Txt'].to_list())
+		input('Check the file and correct as necessary.  Then hit return to continue.\n')
+		# TODO check file against standard CountItemTypes?
 
 		# create atomic_reporting_unit_type.txt
 		rut_df = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')

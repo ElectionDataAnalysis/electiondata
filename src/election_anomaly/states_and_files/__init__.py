@@ -338,8 +338,8 @@ class Munger:
         """<dir_path> is the directory for the munger."""
         assert os.path.isdir(dir_path),f'{dir_path} is not a directory'
         for ff in ['cdf_tables.txt','atomic_reporting_unit_type.txt','count_columns.txt']:
-            assert os.path.isfile(os.path.join(dir_path,ff)),\
-                f'Directory {dir_path} does not contain file {ff}'
+            if not os.path.isfile(os.path.join(dir_path,ff)):
+                input(f'Directory {dir_path} does not contain file {ff}. Please create it and hit return to continue')
         self.name=dir_path.split('/')[-1]    # e.g., 'nc_general'
 
         if dir_path[-1] != '/': # TODO use os.path.join everywhere to get rid of this
@@ -359,19 +359,19 @@ class Munger:
         self.raw_columns = pd.read_csv(os.path.join(dir_path,'raw_columns.txt'),sep='\t').replace({'name':col_d})
 
         # read cdf tables and rename in ExternalIdentifiers col if necessary
-        cdft = pd.read_csv(os.path.join(dir_path,'cdf_tables.txt'),sep='\t',index_col='cdf_element')  # note index
+        cdft = pd.read_csv(
+            os.path.join(dir_path,'cdf_tables.txt'),sep='\t',index_col='cdf_element')  # note index
         for k in col_d.keys():
             cdft['raw_identifier_formula'] = cdft['raw_identifier_formula'].str.replace(
                 '\<{}\>'.format(k),'<{}>'.format(col_d[k]))
         self.cdf_tables = cdft
 
-        # determine how to treat ballot measures (ballot_measure_style)
-        with open(os.path.join(dir_path,'ballot_measure_style.txt'),'r') as f:
-            self.ballot_measure_style=f.read().strip()
-        # get description of that ballot_measure_style
-        bms = pd.read_csv(os.path.join(os.path.abspath(os.path.join(dir_path,os.pardir)),
-                                       'ballot_measure_style_options.txt'),sep='\t')
-        self.ballot_measure_style_description = bms[bms.short_name == self.ballot_measure_style].loc[0,'description']
+        # determine how to treat ballot measures (ballot_measure_style) and its description
+        bms_file = os.path.join(dir_path,'ballot_measure_style.txt')
+        bmso_file=os.path.join(os.path.abspath(os.path.join(dir_path,os.pardir)),
+                                       'ballot_measure_style_options.txt')
+        self.ballot_measure_style,self.ballot_measure_style_description = ui.confirm_or_correct_ballot_measure_style(
+            bmso_file,bms_file)
 
         # determine whether the file has columns for counts by vote types, or just totals
         count_columns=pd.read_csv(os.path.join(dir_path,'count_columns.txt'),sep='\t').replace({'RawName':col_d})
