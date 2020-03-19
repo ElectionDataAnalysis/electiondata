@@ -434,7 +434,7 @@ def create_election_in_db(sess,electiontype_df):
 				'Enter the end date of the election, a.k.a. \'Election Day\' (YYYY-MM-DD)\n'),'StartDate':input(
 				'Enter the start date of the election (YYYY-MM-DD)\n'),'ElectionType_Id':electiontype_idx,
 				'OtherElectionType':otherelectiontype},index=[-1]),sess,None,'Election')
-	election_idx = election_df[election_df.Name==election_name].first_valid_index()
+	election_idx = election_df[election_df.Name==election_name].iloc[0]['Id']
 	return election_idx, electiontype
 
 

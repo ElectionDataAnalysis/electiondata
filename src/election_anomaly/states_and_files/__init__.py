@@ -301,7 +301,7 @@ class Munger:
             self.finalize_element('ReportingUnit',results,state,sess,project_root)
             # TODO feature: prevent finalizing RUs twice if both contest_types are treated
             # check that munger processes ballot measure contests appropriately.
-            print(f'This munger assumes that {self.ballot_measure_style_description}.\n')
+            print(f'This munger assumes that {self.ballot_measure_style_description}.')
             check_bms = input(f'\tIs this appropriate for the datafile (y/n)?\n')
             if check_bms != 'y':
                 raise Exception('Datafile will not be processed. Use a different munger and try again.')
