@@ -417,7 +417,7 @@ def get_or_create_election_in_db(sess):
 
 def create_election_in_db(sess,electiontype_df):
 	"""create record in Election table in database"""
-	election_name = input('Enter a unique short name for the election for your datafile\n')  # TODO error check
+	election_name = input('Enter a unique short name for the election\n')  # TODO error check
 	electiontype_idx,electiontype = pick_one(electiontype_df,'Txt','election type',required=True)
 	if electiontype == 'other':
 		std_electiontype_list = list(electiontype_df['Txt'].remove('other'))
@@ -496,6 +496,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 		mr.raw_elements_to_cdf(new_df_session,munger,cc_results,'Candidate',election_idx,electiontype,state_idx)
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
 		mr.raw_elements_to_cdf(new_df_session,munger,bmc_results,'BallotMeasure',election_idx,electiontype,state_idx)
+	eng.dispose()
 	return
 
 if __name__ == '__main__':

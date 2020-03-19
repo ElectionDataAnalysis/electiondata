@@ -116,6 +116,25 @@ class State:
 
 
 class Munger:
+    def finalize_element(self,element,results,state,sess,project_root):
+        finalized = False
+        while not finalized:
+            self.prepare_context_and_db(element,results,state,sess,project_path=project_root)
+            if element == 'ReportingUnit':
+                eds_ok = False
+                while not eds_ok:
+                    eds_ok = state.check_election_districts()
+                    if not eds_ok:
+                        # recheck Office and ReportingUnit
+                        self.prepare_context_and_db(
+                            'Office',results,state,sess,project_path=project_root)
+                        self.prepare_context_and_db(
+                            'ReportingUnit',results,state,sess,project_path=project_root)
+            fin = input(f'Are the {element}s finalized (y/n)?\n')
+            if fin == 'y':
+                finalized = True
+        return
+
     def check_ballot_measure_selections(self):
         print(f'Ballot Measure Selections for the munger {self.name} are:\n'
               f'{", ".join(self.ballot_measure_selection_list)}')
@@ -144,11 +163,10 @@ class Munger:
 
     def check_atomic_ru_type(self):
         print(f'This munger classifies each line of the datafile as type \'{self.atomic_reporting_unit_type}\'.')
-        print('\tIf this is not appropriate for the datafile, create or use another munger.')
-        check_ru_type = input('\tProceed with munger {} (y/n)?\n'.format(self.name))
+        check_ru_type = input('\tIs this appropriate for the datafile (y/n)?\n')
         if check_ru_type != 'y':
             print('Datafile will not be processed.')
-            raise Exception('Munger would assign wrong ReportingUnitType to datafile.')
+            raise Exception('Munger would assign wrong ReportingUnitType to datafile. Use a different munger.')
         else:
             return
 
@@ -275,31 +293,18 @@ class Munger:
         if contest_type == 'Candidate':
             # check Party, Office, ReportingUnit in context & db, updating if necessary (prereq to checking CandidateContests)
             for element in ['Party','Office','ReportingUnit']:
-                finalized = False
-                while not finalized:
-                    self.prepare_context_and_db(element,results,state,sess,project_path=project_root)
-                    if element == 'ReportingUnit':
-                        eds_ok = False
-                        while not eds_ok:
-                            eds_ok = state.check_election_districts()
-                            if not eds_ok:
-                                # recheck Office and ReportingUnit
-                                self.prepare_context_and_db('Office',results,state,sess,project_path=project_root)
-                                self.prepare_context_and_db('ReportingUnit',results,state,sess,project_path=project_root)
-                    fin = input(f'Are the {element}s finalized (y/n)?\n')
-                    if fin == 'y':
-                        finalized = True
+                self.finalize_element(element,results,state,sess,project_root)
             # After Party and Office are finalized, prepare CandidateContest
             state.prepare_candidatecontests(sess)
 
         if contest_type == 'BallotMeasure':
+            self.finalize_element('ReportingUnit',results,state,sess,project_root)
+            # TODO feature: prevent finalizing RUs twice if both contest_types are treated
             # check that munger processes ballot measure contests appropriately.
-            print(f'WARNING: This munger assumes ballot measure style {self.ballot_measure_style_description}.\n')
-            print('\tIf other behavior is desired, create or use another munger.')
-            check_bms = input(f'\tProceed with munger {self.name} (y/n)?\n')
+            print(f'This munger assumes that {self.ballot_measure_style_description}.\n')
+            check_bms = input(f'\tIs this appropriate for the datafile (y/n)?\n')
             if check_bms != 'y':
-                print('Datafile will not be processed.')
-                return
+                raise Exception('Datafile will not be processed. Use a different munger and try again.')
         return
 
     def add_to_raw_identifiers(self,df):

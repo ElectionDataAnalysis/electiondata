@@ -146,7 +146,13 @@ def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_d
         how='left'
     # join the 'cdf_internal_name' from the raw_identifier table -- this is the internal name field value,
     # no matter what the name field name is in the internal element table (e.g. 'Name', 'BallotName' or 'Selection')
-    row_df = row_df.merge(mu.raw_identifiers[mu.raw_identifiers['cdf_element'] == element],how=how,left_on=element + '_external',right_on='raw_identifier_value',suffixes=['','_' + element + '_ei'])
+    if f'{element}_external' not in row_df.columns:
+        row_df = add_munged_column(row_df,mu,element,f'{element}_external')
+    row_df = row_df.merge(
+        mu.raw_identifiers[mu.raw_identifiers['cdf_element'] == element],
+        how=how,
+        left_on=f'{element}_external',
+        right_on='raw_identifier_value',suffixes=['','_' + element + '_ei'])
 
     # Note: unmatched elements get nan in fields from raw_identifiers table
     # TODO how do these nans flow through?
@@ -250,12 +256,13 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
     if 'Id' not in row.columns:
         row.loc[:,'Id'] = None
 
-    for element in ['Party','ReportingUnit']:  # tables that were filled from context
+    element_list = ['ReportingUnit']
+    if contest_type == 'Candidate':
+        element_list.append('Party')
+    for element in element_list:
         #  merge works for all columns, even if, say, Party is null, because of how='left' (left join) in add_munged_column function
         row=get_internal_ids(row,mu,cdf_d[element],element,"Name",mu.path_to_munger_dir)
         row=add_non_id_cols_from_id(row,cdf_d[element],element)
-
-    vote_count_dframe_list=[] # TODO remove; don't need to concatenate if bmcs and ccs are handled separately
 
     if contest_type=='BallotMeasure':
         add_munged_column(row,mu,'BallotMeasureContest','BallotMeasureContest')
@@ -327,7 +334,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
         bm_vote_counts=enum_col_to_id_othertext(bm_vote_counts,'CountItemType',cdf_d['CountItemType'])
         vote_counts = bm_vote_counts
 
-    if contest_type=='Candidate':
+    elif contest_type=='Candidate':
         # process rows with candidate contests
         # Find CandidateContest_external and CandidateContest_Id
         # and omit rows with contests not  given in CandidateContest table (filled from context)
@@ -383,6 +390,8 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
         cc_vote_counts=enum_col_to_id_othertext(cc_vote_counts,'CountItemType',cdf_d['CountItemType'])
         vote_counts = cc_vote_counts
 
+    else:
+        raise Exception(f'Contest type {contest_type} not recognized.')
     # TODO do we need to check whether vote_counts is empty?
 
     # To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
