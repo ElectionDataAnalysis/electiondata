@@ -22,7 +22,13 @@ class State:
         """create/update corresponding CandidateContest records for general and primary election contests
         (and insert in cdf db if they don't already exist)"""
         # TODO need to run this only when/if Offices change
-        context_office = pd.read_csv(os.path.join(self.path_to_state_dir,'context/Office.txt'),sep='\t')
+
+        office_file = os.path.join(
+            self.path_to_state_dir,'context/Office.txt')
+        co_kwargs = {'sep':'\t'}
+        context_office = pd.read_csv(office_file,**co_kwargs)
+        ui.resolve_nulls(context_office,office_file,kwargs=co_kwargs)
+
         cdf_office = pd.read_sql_table('Office',session.bind,index_col=None)
         cdf_ru = pd.read_sql_table('ReportingUnit',session.bind,index_col=None)
 
@@ -44,8 +50,9 @@ class State:
         cdf_p = pd.read_sql_table('Party',session.bind,None,index_col=None)
         for party_id in cdf_p['Id'].to_list():
             cc_primary = cc[cc['IsPartisan']]  # non-partisan contests don't have party primaries, so omit them.
-            cc_primary['PrimaryParty_Id'] = party_id
-            cc_primary['Name'] = cc_primary['Name'] + ' Primary;' + cdf_p[cdf_p['Id'] == party_id].iloc[0]['Name']
+            cc_primary.loc[:,'PrimaryParty_Id'] = party_id
+            cc_primary.loc[:,'Name'] =  cc_primary['Name'] + ' Primary;' + cdf_p[cdf_p['Id'] == party_id].iloc[0]['Name']
+            # TODO can we use f'' here?
             cc_all = pd.concat([cc_all,cc_primary])
 
         mr.dframe_to_sql(cc_all,session,None,'CandidateContest')
@@ -138,7 +145,6 @@ class Munger:
             else:
                 input('Make your changes, then hit return to continue.')
         return
-    # TODO once Offices are finalized in raw_identifiers, check that corresponding CandidateContests are in that file.
 
     def check_ballot_measure_selections(self):
         if len(self.ballot_measure_selection_list) == 0:
@@ -346,7 +352,7 @@ class Munger:
             # check Party, Office, ReportingUnit in context & db, updating if necessary (prereq to checking CandidateContests)
             for element in ['Party','Office','ReportingUnit']:
                 self.finalize_element(element,results,state,sess,project_root)
-            # After Party and Office are finalized, prepare CandidateContest
+            # After Party and Office are finalized, prepare CandidateContest and check against munger
             state.prepare_candidatecontests(sess)
             self.check_candidatecontest(results,state,sess,project_path=project_root)
 

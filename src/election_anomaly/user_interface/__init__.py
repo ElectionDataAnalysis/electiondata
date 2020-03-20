@@ -38,6 +38,16 @@ def pick_one(df,return_col,item='row',required=False):
 	return choice, df.loc[choice,return_col]
 
 
+def resolve_nulls(df,source_file,col_list=None,kwargs={}):
+	working_df = df.copy()
+	if col_list:
+		working_df = working_df[col_list]
+	while df.isna().any().any():
+		input(f'There are nulls. Edit {source_file} to remove any nulls or blanks, then hit return to continue.\n')
+		df = pd.read_csv(source_file,**kwargs)
+	return
+
+
 def show_sample(st,items,condition,outfile='shown_items.txt',dir=None):
 	print(f'There are {len(st)} {items} that {condition}:')
 	if len(st) == 0:
@@ -585,8 +595,8 @@ if __name__ == '__main__':
 
 	project_root = os.getcwd().split('election_anomaly')[0]
 
-	state_short_name = 'FL'
-	#state_short_name = None
+	#state_short_name = 'FL'
+	state_short_name = None
 	#raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
 	raw_file = os.path.join(project_root,'local_data/FL/data/11062018Election.txt')
 	raw_file_sep = '\t'

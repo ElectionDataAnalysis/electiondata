@@ -57,7 +57,9 @@ def load_context_dframe_into_cdf(session,state,source_df1,element,
     #  commit info in source_df to corresponding cdf table to db
     cdf_element = dframe_to_sql(source_df,session,None,element)
     if element == 'Office':
-        # upload ReportingUnits from context/ReportingUnit.txt to db
+        # upload ReportingUnits from context/ReportingUnit.txt to db and upload corresponding CandidateContests too
+
+        # ReportingUnits
         ru = pd.read_csv(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t')
         cdf_rut = pd.read_sql_table('ReportingUnitType',session.bind)
         ru = enum_col_to_id_othertext(ru,'ReportingUnitType',cdf_rut)
@@ -74,22 +76,24 @@ def load_context_dframe_into_cdf(session,state,source_df1,element,
             new_ru = office_ed[~office_ed['ElectionDistrict'].isin(ru_list)]
 
             if not new_ru.empty:
-                ui.show_sample(list(new_ru.ElectionDistrict),'office election districts',
+                ui.show_sample(list(new_ru.ElectionDistrict.unique()),'office election districts',
                                condition='are not in the ReportingUnit table of the common data format',
                                outfile='missing_reportingunits.txt',
                                dir=os.path.join(state.path_to_state_dir,'output'))
                 input(f'Please add any missing Election Districts to context/ReportingUnit.txt and hit return to continue.\n')
                 rut_list = list(cdf_rut['Txt'])
                 ru = ui.fill_context_file(
-                    os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),
+                    os.path.join(state.path_to_state_dir,'context'),
                     os.path.join(os.path.abspath(os.path.join(state.path_to_state_dir, os.pardir)),'context_templates'),
                     'ReportingUnit',rut_list,'ReportingUnitType')
                 #  then upload to db
                 ru = enum_col_to_id_othertext(ru,'ReportingUnitType',cdf_rut)
                 cdf_ru = dframe_to_sql(ru,session,None,'ReportingUnit')
+                ru_list = list(cdf_ru['Name'].unique())
             else:
                 eds_ok = True
-
+        # CandidateContests
+        state.prepare_candidatecontests(session)
     return
 
 
@@ -389,6 +393,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
         # load candidate counts
         cc_row.rename(columns=vc_col_d,inplace=True)  # standardize vote-count column names
         cc_vote_counts = cc_row[col_list]
+        # TODO for Florida, why is there no 'Count' column for Candidate contest_type?
         cc_vote_counts=cc_vote_counts.melt(id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],value_vars=vote_type_list,var_name='CountItemType',value_name='Count')
         cc_vote_counts=enum_col_to_id_othertext(cc_vote_counts,'CountItemType',cdf_d['CountItemType'])
         vote_counts = cc_vote_counts

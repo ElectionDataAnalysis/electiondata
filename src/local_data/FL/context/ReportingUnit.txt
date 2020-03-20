@@ -1,31 +1,5 @@
 Name	ReportingUnitType
-Florida;US Congress House of Representatives District 1	congressional
-Florida;US Congress House of Representatives District 10	congressional
-Florida;US Congress House of Representatives District 11	congressional
-Florida;US Congress House of Representatives District 12	congressional
-Florida;US Congress House of Representatives District 13	congressional
-Florida;US Congress House of Representatives District 14	congressional
-Florida;US Congress House of Representatives District 15	congressional
-Florida;US Congress House of Representatives District 16	congressional
-Florida;US Congress House of Representatives District 17	congressional
-Florida;US Congress House of Representatives District 18	congressional
-Florida;US Congress House of Representatives District 19	congressional
-Florida;US Congress House of Representatives District 2	congressional
-Florida;US Congress House of Representatives District 20	congressional
-Florida;US Congress House of Representatives District 21	congressional
-Florida;US Congress House of Representatives District 22	congressional
-Florida;US Congress House of Representatives District 23	congressional
-Florida;US Congress House of Representatives District 24	congressional
-Florida;US Congress House of Representatives District 25	congressional
-Florida;US Congress House of Representatives District 26	congressional
-Florida;US Congress House of Representatives District 27	congressional
-Florida;US Congress House of Representatives District 3	congressional
-Florida;US Congress House of Representatives District 4	congressional
-Florida;US Congress House of Representatives District 5	congressional
-Florida;US Congress House of Representatives District 6	congressional
-Florida;US Congress House of Representatives District 7	congressional
-Florida;US Congress House of Representatives District 8	congressional
-Florida;US Congress House of Representatives District 9	congressional
+Florida	state
 Florida;Alachua County	county
 Florida;Baker County	county
 Florida;Bay County	county
@@ -45,55 +19,6 @@ Florida;Escambia County	county
 Florida;Flagler County	county
 Florida;Franklin County	county
 Florida;Gadsden County	county
-Florida;Gilchrist County	county
-Florida;Glades County	county
-Florida;Gulf County	county
-Florida;Hamilton County	county
-Florida;Hardee County	county
-Florida;Hendry County	county
-Florida;Hernando County	county
-Florida;Highlands County	county
-Florida;Hillsborough County	county
-Florida;Holmes County	county
-Florida;Indian River County	county
-Florida;Jackson County	county
-Florida;Jefferson County	county
-Florida;Lafayette County	county
-Florida;Lake County	county
-Florida;Lee County	county
-Florida;Leon County	county
-Florida;Levy County	county
-Florida;Liberty County	county
-Florida;Madison County	county
-Florida;Manatee County	county
-Florida;Marion County	county
-Florida;Martin County	county
-Florida;Miami-Dade County	county
-Florida;Monroe County	county
-Florida;Nassau County	county
-Florida;Okaloosa County	county
-Florida;Okeechobee County	county
-Florida;Orange County	county
-Florida;Osceola County	county
-Florida;Palm Beach County	county
-Florida;Pasco County	county
-Florida;Pinellas County	county
-Florida;Polk County	county
-Florida;Putnam County	county
-Florida;Santa Rosa County	county
-Florida;Sarasota County	county
-Florida;Seminole County	county
-Florida;St. Johns County	county
-Florida;St. Lucie County	county
-Florida;Sumter County	county
-Florida;Suwannee County	county
-Florida;Taylor County	county
-Florida;Union County	county
-Florida;Volusia County	county
-Florida;Wakulla County	county
-Florida;Walton County	county
-Florida;Washington County	county
-Florida	state
 Florida;General Assembly House of Representatives District 1	state-house
 Florida;General Assembly House of Representatives District 10	state-house
 Florida;General Assembly House of Representatives District 100	state-house
@@ -264,12 +189,93 @@ Florida;General Assembly Senate District 6	state-senate
 Florida;General Assembly Senate District 7	state-senate
 Florida;General Assembly Senate District 8	state-senate
 Florida;General Assembly Senate District 9	state-senate
+Florida;Gilchrist County	county
+Florida;Glades County	county
+Florida;Gulf County	county
+Florida;Hamilton County	county
+Florida;Hardee County	county
+Florida;Hendry County	county
+Florida;Hernando County	county
+Florida;Highlands County	county
+Florida;Hillsborough County	county
+Florida;Holmes County	county
+Florida;Indian River County	county
+Florida;Jackson County	county
+Florida;Jefferson County	county
 Florida;Judicial Circuit 11	judicial
+Florida;Judicial Circuit 15	judicial
 Florida;Judicial Circuit 17	judicial
-Florida;Judicial Circuit 17	judicial
+Florida;Judicial Circuit 19	judicial
+Florida;Judicial Circuit 2	judicial
 Florida;Judicial Circuit 20	judicial
+Florida;Judicial Circuit 41	judicial
 Florida;Judicial Circuit 6	judicial
 Florida;Judicial Circuit 8	judicial
+Florida;Lafayette County	county
+Florida;Lake County	county
+Florida;Lee County	county
 Florida;Lehigh Acres Municipal Services Improvement District	special
+Florida;Leon County	county
+Florida;Levy County	county
+Florida;Liberty County	county
+Florida;Madison County	county
+Florida;Manatee County	county
+Florida;Marion County	county
+Florida;Martin County	county
+Florida;Miami-Dade County	county
+Florida;Monroe County	county
+Florida;Nassau County	county
+Florida;Okaloosa County	county
+Florida;Okeechobee County	county
+Florida;Orange County	county
+Florida;Osceola County	county
+Florida;Palm Beach County	county
+Florida;Pasco County	county
+Florida;Pinellas County	county
+Florida;Polk County	county
+Florida;Putnam County	county
+Florida;Santa Rosa County	county
+Florida;Sarasota County	county
 Florida;Sebastian Inlet Tax District	special
+Florida;Seminole County	county
+Florida;St. Johns County	county
+Florida;St. Lucie County	county
+Florida;Sumter County	county
+Florida;Suwannee County	county
+Florida;Taylor County	county
 Florida;Tolomato Community Development District	special
+Florida;Union County	county
+Florida;US Congress House of Representatives District 1	congressional
+Florida;US Congress House of Representatives District 10	congressional
+Florida;US Congress House of Representatives District 11	congressional
+Florida;US Congress House of Representatives District 12	congressional
+Florida;US Congress House of Representatives District 13	congressional
+Florida;US Congress House of Representatives District 14	congressional
+Florida;US Congress House of Representatives District 15	congressional
+Florida;US Congress House of Representatives District 16	congressional
+Florida;US Congress House of Representatives District 17	congressional
+Florida;US Congress House of Representatives District 18	congressional
+Florida;US Congress House of Representatives District 19	congressional
+Florida;US Congress House of Representatives District 2	congressional
+Florida;US Congress House of Representatives District 20	congressional
+Florida;US Congress House of Representatives District 21	congressional
+Florida;US Congress House of Representatives District 22	congressional
+Florida;US Congress House of Representatives District 23	congressional
+Florida;US Congress House of Representatives District 24	congressional
+Florida;US Congress House of Representatives District 25	congressional
+Florida;US Congress House of Representatives District 26	congressional
+Florida;US Congress House of Representatives District 27	congressional
+Florida;US Congress House of Representatives District 3	congressional
+Florida;US Congress House of Representatives District 4	congressional
+Florida;US Congress House of Representatives District 5	congressional
+Florida;US Congress House of Representatives District 6	congressional
+Florida;US Congress House of Representatives District 7	congressional
+Florida;US Congress House of Representatives District 8	congressional
+Florida;US Congress House of Representatives District 9	congressional
+Florida;Volusia County	county
+Florida;Wakulla County	county
+Florida;Walton County	county
+Florida;Washington County	county
+Florida;Judicial Circuit 10	judicial
+Florida;Judicial Circuit 13	judicial
+Florida;Judicial Circuit 7	judicial
