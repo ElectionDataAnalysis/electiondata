@@ -127,6 +127,15 @@ def pick_database(paramfile,state_name=None):
 	return desired_db
 
 
+def check_count_columns(df,file):
+	"""Checks that <df> is a proper count_columns dataframe;
+	If not, guides user to correct <file> and then upload its
+	contents to a proper count_columns dataframe, which it returns"""
+	# TODO
+	return count_columns
+	df
+
+
 def pick_state(con,schema,path_to_states='local_data/',state_name=None):
 	"""Returns a State object.
 	If <state_short_name> is given, this just initializes based on info

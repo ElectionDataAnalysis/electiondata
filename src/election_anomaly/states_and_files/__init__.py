@@ -434,20 +434,18 @@ class Munger:
             bmso_file,bms_file)
 
         # determine whether the file has columns for counts by vote types, or just totals
-        count_columns=pd.read_csv(os.path.join(dir_path,'count_columns.txt'),sep='\t').replace({'RawName':col_d})
-        self.count_columns=count_columns
-        if list(count_columns['CountItemType'].unique()) == ['total']:
+
+        count_columns_file = os.path.join(dir_path,'count_columns.txt')
+        count_columns_df=pd.read_csv(count_columns_file,sep='\t').replace({'RawName':col_d})
+        self.count_columns = ui.check_count_columns(count_columns_df,count_columns_file)
+        if list(self.count_columns['CountItemType'].unique()) == ['total']:
             self.totals_only=True
         else:
             self.totals_only=False
 
         if self.ballot_measure_style == 'yes_and_no_are_candidates':
-            # TODO read ballot_measure_selection_list from raw_identifiers.txt
             ri_df = pd.read_csv(os.path.join(dir_path,'raw_identifiers.txt'),sep='\t')
             self.ballot_measure_selection_list = ri_df[ri_df.cdf_element=='BallotMeasureSelection'].loc[:,'raw_identifier_value'].to_list()
-            #with open(os.path.join(dir_path,'ballot_measure_selections.txt'),'r') as ff:
-                #selection_list = ff.readlines()
-            #self.ballot_measure_selection_list = [x.strip() for x in selection_list]
 
             bms_str=cdft.loc['BallotMeasureSelection','raw_identifier_formula']
             # note: bms_str will start and end with <>
