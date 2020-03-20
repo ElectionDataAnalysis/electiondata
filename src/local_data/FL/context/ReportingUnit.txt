@@ -1,5 +1,31 @@
 Name	ReportingUnitType
-Florida	state
+Florida;US Congress House of Representatives District 1	congressional
+Florida;US Congress House of Representatives District 10	congressional
+Florida;US Congress House of Representatives District 11	congressional
+Florida;US Congress House of Representatives District 12	congressional
+Florida;US Congress House of Representatives District 13	congressional
+Florida;US Congress House of Representatives District 14	congressional
+Florida;US Congress House of Representatives District 15	congressional
+Florida;US Congress House of Representatives District 16	congressional
+Florida;US Congress House of Representatives District 17	congressional
+Florida;US Congress House of Representatives District 18	congressional
+Florida;US Congress House of Representatives District 19	congressional
+Florida;US Congress House of Representatives District 2	congressional
+Florida;US Congress House of Representatives District 20	congressional
+Florida;US Congress House of Representatives District 21	congressional
+Florida;US Congress House of Representatives District 22	congressional
+Florida;US Congress House of Representatives District 23	congressional
+Florida;US Congress House of Representatives District 24	congressional
+Florida;US Congress House of Representatives District 25	congressional
+Florida;US Congress House of Representatives District 26	congressional
+Florida;US Congress House of Representatives District 27	congressional
+Florida;US Congress House of Representatives District 3	congressional
+Florida;US Congress House of Representatives District 4	congressional
+Florida;US Congress House of Representatives District 5	congressional
+Florida;US Congress House of Representatives District 6	congressional
+Florida;US Congress House of Representatives District 7	congressional
+Florida;US Congress House of Representatives District 8	congressional
+Florida;US Congress House of Representatives District 9	congressional
 Florida;Alachua County	county
 Florida;Baker County	county
 Florida;Bay County	county
@@ -67,6 +93,7 @@ Florida;Volusia County	county
 Florida;Wakulla County	county
 Florida;Walton County	county
 Florida;Washington County	county
+Florida	state
 Florida;General Assembly House of Representatives District 1	state-house
 Florida;General Assembly House of Representatives District 10	state-house
 Florida;General Assembly House of Representatives District 100	state-house
@@ -222,35 +249,27 @@ Florida;General Assembly Senate District 38	state-senate
 Florida;General Assembly Senate District 39	state-senate
 Florida;General Assembly Senate District 4	state-senate
 Florida;General Assembly Senate District 40	state-senate
+Florida;General Assembly Senate District 41	state-senate
+Florida;General Assembly Senate District 42	state-senate
+Florida;General Assembly Senate District 43	state-senate
+Florida;General Assembly Senate District 44	state-senate
+Florida;General Assembly Senate District 45	state-senate
+Florida;General Assembly Senate District 46	state-senate
+Florida;General Assembly Senate District 47	state-senate
+Florida;General Assembly Senate District 48	state-senate
+Florida;General Assembly Senate District 49	state-senate
 Florida;General Assembly Senate District 5	state-senate
+Florida;General Assembly Senate District 50	state-senate
 Florida;General Assembly Senate District 6	state-senate
 Florida;General Assembly Senate District 7	state-senate
 Florida;General Assembly Senate District 8	state-senate
 Florida;General Assembly Senate District 9	state-senate
-Florida;US Congress House of Representatives District 1	congressional
-Florida;US Congress House of Representatives District 10	congressional
-Florida;US Congress House of Representatives District 11	congressional
-Florida;US Congress House of Representatives District 12	congressional
-Florida;US Congress House of Representatives District 13	congressional
-Florida;US Congress House of Representatives District 14	congressional
-Florida;US Congress House of Representatives District 15	congressional
-Florida;US Congress House of Representatives District 16	congressional
-Florida;US Congress House of Representatives District 17	congressional
-Florida;US Congress House of Representatives District 18	congressional
-Florida;US Congress House of Representatives District 19	congressional
-Florida;US Congress House of Representatives District 2	congressional
-Florida;US Congress House of Representatives District 20	congressional
-Florida;US Congress House of Representatives District 21	congressional
-Florida;US Congress House of Representatives District 22	congressional
-Florida;US Congress House of Representatives District 23	congressional
-Florida;US Congress House of Representatives District 24	congressional
-Florida;US Congress House of Representatives District 25	congressional
-Florida;US Congress House of Representatives District 26	congressional
-Florida;US Congress House of Representatives District 27	congressional
-Florida;US Congress House of Representatives District 3	congressional
-Florida;US Congress House of Representatives District 4	congressional
-Florida;US Congress House of Representatives District 5	congressional
-Florida;US Congress House of Representatives District 6	congressional
-Florida;US Congress House of Representatives District 7	congressional
-Florida;US Congress House of Representatives District 8	congressional
-Florida;US Congress House of Representatives District 9	congressional
+Florida;Judicial Circuit 11	judicial
+Florida;Judicial Circuit 17	judicial
+Florida;Judicial Circuit 17	judicial
+Florida;Judicial Circuit 20	judicial
+Florida;Judicial Circuit 6	judicial
+Florida;Judicial Circuit 8	judicial
+Florida;Lehigh Acres Municipal Services Improvement District	special
+Florida;Sebastian Inlet Tax District	special
+Florida;Tolomato Community Development District	special

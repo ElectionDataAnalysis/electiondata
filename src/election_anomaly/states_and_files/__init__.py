@@ -117,6 +117,8 @@ class State:
 
 class Munger:
     def finalize_element(self,element,results,state,sess,project_root):
+        """Guides user to make any necessary or desired changes in context/<element>.txt
+        and makes corresponding changes to db"""
         finalized = False
         while not finalized:
             self.prepare_context_and_db(element,results,state,sess,project_path=project_root)
@@ -130,10 +132,13 @@ class Munger:
                             'Office',results,state,sess,project_path=project_root)
                         self.prepare_context_and_db(
                             'ReportingUnit',results,state,sess,project_path=project_root)
-            fin = input(f'Are the {element}s finalized (y/n)?\n')
+            fin = input(f'Is the file context/{element}.txt finalized to your satisfaction (y/n)?\n')
             if fin == 'y':
                 finalized = True
+            else:
+                input('Make your changes, then hit return to continue.')
         return
+    # TODO once Offices are finalized in raw_identifiers, check that corresponding CandidateContests are in that file.
 
     def check_ballot_measure_selections(self):
         if len(self.ballot_measure_selection_list) == 0:
@@ -184,9 +189,9 @@ class Munger:
 
         ri_df = pd.read_csv(ri,sep='\t')
         raw_from_results = set(mr.add_munged_column(
-            results,self,'CandidateContest','CandidateContest_external')[['CandidateContest_external']])
+            results,self,'CandidateContest','CandidateContest_external')['CandidateContest_external'])
         raw_from_ri = set(ri_df[ri_df.cdf_element == 'CandidateContest'].loc[:,'raw_identifier_value'])
-        missing_from_ri = {x for x in raw_from_results if x not in raw_from_ri}
+        missing_from_ri = [x for x in raw_from_results if x not in raw_from_ri]
 
         while missing_from_ri:
             print(f'Contests in the raw results with no corresponding CandidateContest line '
@@ -201,13 +206,13 @@ class Munger:
                 input(f'Add any desired contests to {self.name}/raw_identifiers.txt and hit return to continue')
                 ri_df = pd.read_csv(ri,sep='\t')
                 raw_from_ri = set(ri_df[ri_df.cdf_element == 'CandidateContest'].loc[:,'raw_identifier_value'])
-                missing_from_ri = {x for x in raw_from_results if x not in raw_from_ri}
+                missing_from_ri = [x for x in raw_from_results if x not in raw_from_ri]
             else:
                 missing_from_ri = []
 
         cdf_from_ri = set(ri_df[ri_df.cdf_element == 'CandidateContest'].loc[:,'cdf_internal_name'])
         cdf_df = pd.read_sql_table('CandidateContest',sess.bind)
-        cdf_from_db = set(cdf_df[['Name']])
+        cdf_from_db = set(cdf_df['Name'])
         missing_from_db = {x for x in cdf_from_ri if x not in cdf_from_db}
         while missing_from_db:
             print(f'Some munged candidate contests in the datafile are missing from the database.\n')
@@ -218,7 +223,7 @@ class Munger:
             self.prepare_context_and_db('Office',results,state,sess,project_path=project_path)
             cdf_df = pd.read_sql_table('CandidateContest',sess.bind)
 
-            cdf_from_db = set(cdf_df[['Name']])
+            cdf_from_db = set(cdf_df['Name'])
             missing_from_db = {x for x in cdf_from_ri if x not in cdf_from_db}
         return
 

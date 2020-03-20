@@ -163,6 +163,16 @@ Florida;General Assembly Senate District 37	Florida;General Assembly Senate Dist
 Florida;General Assembly Senate District 38	Florida;General Assembly Senate District 38	1	1	0	True
 Florida;General Assembly Senate District 39	Florida;General Assembly Senate District 39	1	1	0	True
 Florida;General Assembly Senate District 40	Florida;General Assembly Senate District 40	1	1	0	True
+Florida;General Assembly Senate District 41	Florida;General Assembly Senate District 41	1	1	0	True
+Florida;General Assembly Senate District 42	Florida;General Assembly Senate District 42	1	1	0	True
+Florida;General Assembly Senate District 43	Florida;General Assembly Senate District 43	1	1	0	True
+Florida;General Assembly Senate District 44	Florida;General Assembly Senate District 44	1	1	0	True
+Florida;General Assembly Senate District 45	Florida;General Assembly Senate District 45	1	1	0	True
+Florida;General Assembly Senate District 46	Florida;General Assembly Senate District 46	1	1	0	True
+Florida;General Assembly Senate District 47	Florida;General Assembly Senate District 47	1	1	0	True
+Florida;General Assembly Senate District 48	Florida;General Assembly Senate District 48	1	1	0	True
+Florida;General Assembly Senate District 49	Florida;General Assembly Senate District 49	1	1	0	True
+Florida;General Assembly Senate District 50	Florida;General Assembly Senate District 50	1	1	0	True
 Florida;US Congress House of Representatives District 1	Florida;US Congress House of Representatives District 1	1	1	0	True
 Florida;US Congress House of Representatives District 2	Florida;US Congress House of Representatives District 2	1	1	0	True
 Florida;US Congress House of Representatives District 3	Florida;US Congress House of Representatives District 3	1	1	0	True
@@ -191,3 +201,13 @@ Florida;US Congress House of Representatives District 25	Florida;US Congress Hou
 Florida;US Congress House of Representatives District 26	Florida;US Congress House of Representatives District 26	1	1	0	True
 Florida;US Congress House of Representatives District 27	Florida;US Congress House of Representatives District 27	1	1	0	True
 Florida;US Congress Senate	Florida	1	1	0	True
+Florida;Circuit Judge Circuit 11 Group 14	Florida;Judicial Circuit 11	1	1	0	False
+Florida;Circuit Judge Circuit 17 Group 38	Florida;Judicial Circuit 17	1	1	0	False
+Florida;Circuit Judge Circuit 17 Group 46	Florida;Judicial Circuit 17	1	1	0	False
+Florida;Circuit Judge Circuit 6 Group 4	Florida;Judicial Circuit 6	1	1	0	False
+Florida;Circuit Judge Circuit 8 Group 8	Florida;Judicial Circuit 8	1	1	0	False
+Florida;Lehigh Acres Municipal Services Improvement District Seat 4	Florida;Lehigh Acres Municipal Services Improvement District	1	1	0	False
+Florida;Sebastian Inlet Tax District Seat 5	Florida;Sebastian Inlet Tax District	1	1	0	False
+Florida;State Attorney Circuit 20	Florida;Judicial Circuit 20	1	1	0	True
+Florida;Tolomato Community Development District Seat 4	Florida;Tolomato Community Development District	1	1	0	False
+Florida;Tolomato Community Development District Seat 5	Florida;Tolomato Community Development District	1	1	0	False

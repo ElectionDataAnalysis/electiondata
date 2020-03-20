@@ -544,7 +544,8 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 	print('Specify the munger:')
 	munger = pick_munger(new_df_session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
 						 template_dir=os.path.join(project_root,'mungers/zzz_munger_templates'))
-	print(f'Munger {munger.name} has been chosen and prepared.\n')
+	print(f'Munger {munger.name} has been chosen and prepared.\n'
+		  f'Next we check compatibility of the munger with the datafile.')
 
 	munger.check_ballot_measure_selections()
 	munger.check_atomic_ru_type()
@@ -579,7 +580,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 
 if __name__ == '__main__':
 
-	print('WARNING: Sorry, lots of bugs at the moment. Don\'t waste your time! -- Stephanie')
+	#print('WARNING: Sorry, lots of bugs at the moment. Don\'t waste your time! -- Stephanie')
 	# exit()
 
 	project_root = os.getcwd().split('election_anomaly')[0]
