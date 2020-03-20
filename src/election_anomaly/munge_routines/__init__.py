@@ -154,7 +154,7 @@ def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_d
         left_on=f'{element}_external',
         right_on='raw_identifier_value',suffixes=['','_' + element + '_ei'])
 
-    # Note: unmatched elements get nan in fields from raw_identifiers table
+    # Note: if how = left, unmatched elements get nan in fields from raw_identifiers table
     # TODO how do these nans flow through?
 
     row_df = row_df.drop(['raw_identifier_value','cdf_element',element + '_external'],axis=1)
@@ -339,7 +339,8 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
         # Find CandidateContest_external and CandidateContest_Id
         # and omit rows with contests not  given in CandidateContest table (filled from context)
         add_munged_column(row,mu,'CandidateContest','CandidateContest_external')
-        cc_row=get_internal_ids(row,mu,cdf_d['CandidateContest'],'CandidateContest','Name',mu.path_to_munger_dir,drop_unmatched=True)
+        cc_row=get_internal_ids(
+            row,mu,cdf_d['CandidateContest'],'CandidateContest','Name',mu.path_to_munger_dir,drop_unmatched=True)
         cc_row.rename(columns={'CandidateContest_Id':'Contest_Id'},inplace=True)
 
         # load Candidate table

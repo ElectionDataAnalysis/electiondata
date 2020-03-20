@@ -176,13 +176,56 @@ class Munger:
 
     def check_candidatecontest(self,results,state,sess,project_path='.'):
         # TODO
+        """report raw contests in <results> missing from raw_identifiers.txt
+        and report cdf_internal names of contests in <results>-join-raw_identifiers
+        that are missing from db, guiding user to fix if desired
+        """
+        ri = os.path.join(self.path_to_munger_dir,'raw_identifiers.txt')
+
+        ri_df = pd.read_csv(ri,sep='\t')
+        raw_from_results = set(mr.add_munged_column(
+            results,self,'CandidateContest','CandidateContest_external')[['CandidateContest_external']])
+        raw_from_ri = set(ri_df[ri_df.cdf_element == 'CandidateContest'].loc[:,'raw_identifier_value'])
+        missing_from_ri = {x for x in raw_from_results if x not in raw_from_ri}
+
+        while missing_from_ri:
+            print(f'Contests in the raw results with no corresponding CandidateContest line '
+                  f'in {self.name}/raw_identifiers.txt will be ignored,\n'
+                  f'and no results for these contests will be loaded into the database.')
+            ui.show_sample(
+                missing_from_ri,'contests in the raw results',
+                f'have no corresponding CandidateContest line in {self.name}/raw_identifiers.txt',
+                outfile='contests_missing_from_munger.txt')
+            add_contests = input(f'Would you like to add any CandidateContests to {self.name}/raw_identifiers.txt (y/n)?\n')
+            if add_contests == 'y':
+                input(f'Add any desired contests to {self.name}/raw_identifiers.txt and hit return to continue')
+                ri_df = pd.read_csv(ri,sep='\t')
+                raw_from_ri = set(ri_df[ri_df.cdf_element == 'CandidateContest'].loc[:,'raw_identifier_value'])
+                missing_from_ri = {x for x in raw_from_results if x not in raw_from_ri}
+            else:
+                missing_from_ri = []
+
+        cdf_from_ri = set(ri_df[ri_df.cdf_element == 'CandidateContest'].loc[:,'cdf_internal_name'])
+        cdf_df = pd.read_sql_table('CandidateContest',sess.bind)
+        cdf_from_db = set(cdf_df[['Name']])
+        missing_from_db = {x for x in cdf_from_ri if x not in cdf_from_db}
+        while missing_from_db:
+            print(f'Some munged candidate contests in the datafile are missing from the database.\n')
+            ui.show_sample(missing_from_db,'munged candidate contests','are missing from the database',
+                           outfile='missing_ccs.txt')
+            input(f'Add the office corresponding to each missing contest to {state.short_name}/context/Office.txt.\n'
+                  f'This may require some research about the office. When ready, hit enter to continue.')
+            self.prepare_context_and_db('Office',results,state,sess,project_path=project_path)
+            cdf_df = pd.read_sql_table('CandidateContest',sess.bind)
+
+            cdf_from_db = set(cdf_df[['Name']])
+            missing_from_db = {x for x in cdf_from_ri if x not in cdf_from_db}
         return
 
     def prepare_context_and_db(self,element,results,state,sess,project_path='.'):
         """Loads info from context/<element>.txt into db; checks results file <element>s against munger;
         then checks munger against db. Throughout, guides user to make corrections in context/<element>.txt;
         finally loads final context/<element>.txt into db. Note that this will only add records to db, never remove. """
-        # TODO when ReportingUnits are added, add to CRUJ table
         # TODO why do ReportingUnits get checked twice somehow?
         print(f'Updating database with info from {state.short_name}/context/{element}.txt.\n')
         no_dupes = False
@@ -300,6 +343,7 @@ class Munger:
                 self.finalize_element(element,results,state,sess,project_root)
             # After Party and Office are finalized, prepare CandidateContest
             state.prepare_candidatecontests(sess)
+            self.check_candidatecontest(results,state,sess,project_path=project_root)
 
         if contest_type == 'BallotMeasure':
             self.finalize_element('ReportingUnit',results,state,sess,project_root)

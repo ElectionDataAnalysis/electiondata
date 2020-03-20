@@ -538,13 +538,13 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 	# update db from state context file
 
 	election_idx, electiontype = get_or_create_election_in_db(new_df_session)
-	raw = pd.read_csv(raw_file,sep=raw_file_sep)
+	# read file in as dataframe of strings, replacing any nulls with the empty string
+	raw = pd.read_csv(raw_file,sep=raw_file_sep,dtype=str).fillna('')
 	column_list = raw.columns.to_list()
 	print('Specify the munger:')
 	munger = pick_munger(new_df_session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
 						 template_dir=os.path.join(project_root,'mungers/zzz_munger_templates'))
 	print(f'Munger {munger.name} has been chosen and prepared.\n')
-
 
 	munger.check_ballot_measure_selections()
 	munger.check_atomic_ru_type()
