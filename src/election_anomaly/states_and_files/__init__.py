@@ -136,13 +136,17 @@ class Munger:
         return
 
     def check_ballot_measure_selections(self):
-        print(f'Ballot Measure Selections for the munger {self.name} are:\n'
+        if len(self.ballot_measure_selection_list) == 0:
+            print(f'There are no Ballot Measure Selections for the munger {self.name}.\n'
+                  f'No ballot measure contests will be processed by this munger.')
+        else:
+            print(f'Ballot Measure Selections for the munger {self.name} are:\n'
               f'{", ".join(self.ballot_measure_selection_list)}')
         needs_warning = False
         correct = input('Is this consistent with your datafile (y/n)?\n')
         while correct != 'y':
             needs_warning = True
-            add_or_remove = input('Enter \'a\' to add and \'r\' to remove.\n')
+            add_or_remove = input('Enter \'a\' to add and \'r\' to remove Ballot Measure Selections.\n')
             if add_or_remove == 'a':
                 new = input(f'Enter a missing selection\n')
                 if new != '':
@@ -360,7 +364,7 @@ class Munger:
 
         # read cdf tables and rename in ExternalIdentifiers col if necessary
         cdf_table_file = os.path.join(dir_path,'cdf_tables.txt')
-        cdft = ui.confirm_or_correct_cdf_table_file(cdf_table_file)
+        cdft = ui.confirm_or_correct_cdf_table_file(cdf_table_file,self.raw_columns.name.to_list()).set_index('cdf_element')
         # change names for raw columns whose names match cdf elements
         for k in col_d.keys():
             cdft['raw_identifier_formula'] = cdft['raw_identifier_formula'].str.replace(

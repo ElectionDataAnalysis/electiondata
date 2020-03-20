@@ -201,7 +201,7 @@ def format_check_formula(formula,fields):
 	return missing
 
 
-def confirm_or_correct_cdf_table_file(cdf_table_file):
+def confirm_or_correct_cdf_table_file(cdf_table_file,raw_cols):
 	"""
 	Checks that <cdf_table_file> has the right columns and contest;
 	if not, guides user to correcting
@@ -209,14 +209,14 @@ def confirm_or_correct_cdf_table_file(cdf_table_file):
 	element_list = [
 		'Office','ReportingUnit','Party','Candidate','CandidateContest',
 		'BallotMeasureContest','BallotMeasureSelection']
-	cdft_df = pd.read_csv(cdf_table_file,sep='\t',index_col='cdf_element')  # note index
+	cdft_df = pd.read_csv(cdf_table_file,sep='\t')  # note index
 
 	# check column headings
-	while cdft_df.columns != ['cdf_element','raw_identifier_formula']:
+	while len(cdft_df.columns) != 2 or cdft_df.columns.to_list() != ['cdf_element','raw_identifier_formula']:
 		input(f'The file {cdf_table_file} should tab-separated with two columns\n'
 			  f'labeled \'cdf_element\' and \'raw_identifier_formula\'.\n'
 			  f'Correct the file as necessary and hit return to continue')
-		cdft_df = pd.read_csv(cdf_table_file,sep='\t',index_col='cdf_element')  # note index
+		cdft_df = pd.read_csv(cdf_table_file,sep='\t')  # note index
 
 	# check for missing rows
 	missing_elements = [x for x in element_list if x not in cdft_df.cdf_element.to_list()]
@@ -224,10 +224,26 @@ def confirm_or_correct_cdf_table_file(cdf_table_file):
 		input(f'Rows are missing from {cdf_table_file}:\n'
 			  f'{",".join(missing_elements)}\n'
 			  f'Add them and hit return to continue')
-		cdft_df = pd.read_csv(cdf_table_file,sep='\t',index_col='cdf_element')  # note index
+		cdft_df = pd.read_csv(cdf_table_file,sep='\t')  # note index
 		missing_elements = [x for x in element_list if x not in cdft_df.cdf_element.to_list()]
 
-	# TODO check that formulas refer to existing columns of raw file
+	# check that formulas refer to existing columns of raw file
+	bad_formulas = [1]
+	while bad_formulas:
+		bad_formulas = []
+		misspellings = set()
+		for idx,row in cdft_df.iterrows():
+			new_misspellings = format_check_formula(row['raw_identifier_formula'],raw_cols)
+			if new_misspellings:
+				misspellings = misspellings.union(new_misspellings)
+				bad_formulas.append(row.cdf_element)
+		if misspellings:
+			print(f'Some formula parts are not recognized as raw column labels:\n'
+				  f'{",".join([f"<{m}>" for m in misspellings])}')
+		if bad_formulas:
+			print(f'Problems in formulas for {",".join(bad_formulas)}')
+			input(f'Fix the file {cdf_table_file}\n and hit return to continue.\n')
+		cdft_df = pd.read_csv(cdf_table_file,sep='\t')  # note index
 	return cdft_df
 
 
@@ -568,8 +584,8 @@ if __name__ == '__main__':
 
 	project_root = os.getcwd().split('election_anomaly')[0]
 
-	#state_short_name = 'NC'
-	state_short_name = None
+	state_short_name = 'FL'
+	#state_short_name = None
 	#raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
 	raw_file = os.path.join(project_root,'local_data/FL/data/11062018Election.txt')
 	raw_file_sep = '\t'
