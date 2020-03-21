@@ -376,7 +376,7 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 	return context_df
 
 
-def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_munger_templates'):
+def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_munger_templates',root='.'):
 	"""pick (or create) a munger """
 	choice_list = os.listdir(munger_dir)
 	for choice in os.listdir(munger_dir):
@@ -402,7 +402,7 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_mu
 		check_munger(sess,munger_name,munger_dir,template_dir,column_list)
 
 	munger_path = os.path.join(munger_dir,munger_name)
-	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(project_root,'election_anomaly/CDF_schema_def_info'))
+	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(root,'election_anomaly/CDF_schema_def_info'))
 	return munger
 
 
@@ -586,7 +586,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 	column_list = raw.columns.to_list()
 	print('Specify the munger:')
 	munger = pick_munger(new_df_session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
-						 template_dir=os.path.join(project_root,'mungers/zzz_munger_templates'))
+						 template_dir=os.path.join(project_root,'mungers/zzz_munger_templates'),root=project_root)
 	print(f'Munger {munger.name} has been chosen and prepared.\n'
 		  f'Next we check compatibility of the munger with the datafile.')
 
