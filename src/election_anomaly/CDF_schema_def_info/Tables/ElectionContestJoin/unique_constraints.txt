@@ -1,0 +1,2 @@
+unique_constraint
+Contest_Id,Election_Id

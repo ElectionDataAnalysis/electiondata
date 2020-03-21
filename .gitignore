@@ -2,6 +2,10 @@
 local/
 .DS_Store
 src/election_anomaly/__pycache__
+src/local_data/MD_old
+src/local_data/MI_old
+src/local_data/NC_old
+src/local_data/PH
 src/local_data/NC/data
 src/local_data/NC/output
 src/local_data/NC/tmp

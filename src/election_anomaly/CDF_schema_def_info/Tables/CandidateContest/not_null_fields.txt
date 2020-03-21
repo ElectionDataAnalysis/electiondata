@@ -1,0 +1,3 @@
+not_null_fields
+Name
+VotesAllowed

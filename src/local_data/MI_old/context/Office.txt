@@ -1,0 +1,164 @@
+Name	ElectionDistrict	ElectionDistrictType	VotesAllowed	NumberElected	NumberRunoff	IsPartisan
+Michigan;General Assembly House of Representatives District 1	Michigan;General Assembly House of Representatives District 1	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 2	Michigan;General Assembly House of Representatives District 2	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 3	Michigan;General Assembly House of Representatives District 3	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 4	Michigan;General Assembly House of Representatives District 4	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 5	Michigan;General Assembly House of Representatives District 5	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 6	Michigan;General Assembly House of Representatives District 6	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 7	Michigan;General Assembly House of Representatives District 7	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 8	Michigan;General Assembly House of Representatives District 8	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 9	Michigan;General Assembly House of Representatives District 9	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 10	Michigan;General Assembly House of Representatives District 10	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 11	Michigan;General Assembly House of Representatives District 11	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 12	Michigan;General Assembly House of Representatives District 12	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 13	Michigan;General Assembly House of Representatives District 13	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 14	Michigan;General Assembly House of Representatives District 14	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 15	Michigan;General Assembly House of Representatives District 15	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 16	Michigan;General Assembly House of Representatives District 16	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 17	Michigan;General Assembly House of Representatives District 17	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 18	Michigan;General Assembly House of Representatives District 18	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 19	Michigan;General Assembly House of Representatives District 19	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 20	Michigan;General Assembly House of Representatives District 20	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 21	Michigan;General Assembly House of Representatives District 21	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 22	Michigan;General Assembly House of Representatives District 22	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 23	Michigan;General Assembly House of Representatives District 23	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 24	Michigan;General Assembly House of Representatives District 24	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 25	Michigan;General Assembly House of Representatives District 25	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 26	Michigan;General Assembly House of Representatives District 26	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 27	Michigan;General Assembly House of Representatives District 27	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 28	Michigan;General Assembly House of Representatives District 28	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 29	Michigan;General Assembly House of Representatives District 29	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 30	Michigan;General Assembly House of Representatives District 30	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 31	Michigan;General Assembly House of Representatives District 31	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 32	Michigan;General Assembly House of Representatives District 32	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 33	Michigan;General Assembly House of Representatives District 33	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 34	Michigan;General Assembly House of Representatives District 34	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 35	Michigan;General Assembly House of Representatives District 35	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 36	Michigan;General Assembly House of Representatives District 36	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 37	Michigan;General Assembly House of Representatives District 37	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 38	Michigan;General Assembly House of Representatives District 38	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 39	Michigan;General Assembly House of Representatives District 39	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 40	Michigan;General Assembly House of Representatives District 40	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 41	Michigan;General Assembly House of Representatives District 41	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 42	Michigan;General Assembly House of Representatives District 42	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 43	Michigan;General Assembly House of Representatives District 43	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 44	Michigan;General Assembly House of Representatives District 44	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 45	Michigan;General Assembly House of Representatives District 45	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 46	Michigan;General Assembly House of Representatives District 46	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 47	Michigan;General Assembly House of Representatives District 47	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 48	Michigan;General Assembly House of Representatives District 48	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 49	Michigan;General Assembly House of Representatives District 49	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 50	Michigan;General Assembly House of Representatives District 50	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 51	Michigan;General Assembly House of Representatives District 51	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 52	Michigan;General Assembly House of Representatives District 52	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 53	Michigan;General Assembly House of Representatives District 53	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 54	Michigan;General Assembly House of Representatives District 54	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 55	Michigan;General Assembly House of Representatives District 55	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 56	Michigan;General Assembly House of Representatives District 56	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 57	Michigan;General Assembly House of Representatives District 57	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 58	Michigan;General Assembly House of Representatives District 58	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 59	Michigan;General Assembly House of Representatives District 59	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 60	Michigan;General Assembly House of Representatives District 60	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 61	Michigan;General Assembly House of Representatives District 61	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 62	Michigan;General Assembly House of Representatives District 62	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 63	Michigan;General Assembly House of Representatives District 63	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 64	Michigan;General Assembly House of Representatives District 64	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 65	Michigan;General Assembly House of Representatives District 65	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 66	Michigan;General Assembly House of Representatives District 66	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 67	Michigan;General Assembly House of Representatives District 67	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 68	Michigan;General Assembly House of Representatives District 68	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 69	Michigan;General Assembly House of Representatives District 69	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 70	Michigan;General Assembly House of Representatives District 70	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 71	Michigan;General Assembly House of Representatives District 71	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 72	Michigan;General Assembly House of Representatives District 72	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 73	Michigan;General Assembly House of Representatives District 73	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 74	Michigan;General Assembly House of Representatives District 74	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 75	Michigan;General Assembly House of Representatives District 75	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 76	Michigan;General Assembly House of Representatives District 76	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 77	Michigan;General Assembly House of Representatives District 77	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 78	Michigan;General Assembly House of Representatives District 78	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 79	Michigan;General Assembly House of Representatives District 79	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 80	Michigan;General Assembly House of Representatives District 80	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 81	Michigan;General Assembly House of Representatives District 81	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 82	Michigan;General Assembly House of Representatives District 82	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 83	Michigan;General Assembly House of Representatives District 83	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 84	Michigan;General Assembly House of Representatives District 84	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 85	Michigan;General Assembly House of Representatives District 85	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 86	Michigan;General Assembly House of Representatives District 86	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 87	Michigan;General Assembly House of Representatives District 87	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 88	Michigan;General Assembly House of Representatives District 88	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 89	Michigan;General Assembly House of Representatives District 89	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 90	Michigan;General Assembly House of Representatives District 90	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 91	Michigan;General Assembly House of Representatives District 91	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 92	Michigan;General Assembly House of Representatives District 92	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 93	Michigan;General Assembly House of Representatives District 93	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 94	Michigan;General Assembly House of Representatives District 94	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 95	Michigan;General Assembly House of Representatives District 95	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 96	Michigan;General Assembly House of Representatives District 96	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 97	Michigan;General Assembly House of Representatives District 97	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 98	Michigan;General Assembly House of Representatives District 98	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 99	Michigan;General Assembly House of Representatives District 99	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 100	Michigan;General Assembly House of Representatives District 100	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 101	Michigan;General Assembly House of Representatives District 101	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 102	Michigan;General Assembly House of Representatives District 102	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 103	Michigan;General Assembly House of Representatives District 103	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 104	Michigan;General Assembly House of Representatives District 104	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 105	Michigan;General Assembly House of Representatives District 105	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 106	Michigan;General Assembly House of Representatives District 106	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 107	Michigan;General Assembly House of Representatives District 107	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 108	Michigan;General Assembly House of Representatives District 108	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 109	Michigan;General Assembly House of Representatives District 109	state-house	1	1	0	TRUE
+Michigan;General Assembly House of Representatives District 110	Michigan;General Assembly House of Representatives District 110	state-house	1	1	0	TRUE
+Michigan;General Assembly Senate District 1	Michigan;General Assembly Senate District 1	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 2	Michigan;General Assembly Senate District 2	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 3	Michigan;General Assembly Senate District 3	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 4	Michigan;General Assembly Senate District 4	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 5	Michigan;General Assembly Senate District 5	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 6	Michigan;General Assembly Senate District 6	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 7	Michigan;General Assembly Senate District 7	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 8	Michigan;General Assembly Senate District 8	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 9	Michigan;General Assembly Senate District 9	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 10	Michigan;General Assembly Senate District 10	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 11	Michigan;General Assembly Senate District 11	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 12	Michigan;General Assembly Senate District 12	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 13	Michigan;General Assembly Senate District 13	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 14	Michigan;General Assembly Senate District 14	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 15	Michigan;General Assembly Senate District 15	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 16	Michigan;General Assembly Senate District 16	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 17	Michigan;General Assembly Senate District 17	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 18	Michigan;General Assembly Senate District 18	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 19	Michigan;General Assembly Senate District 19	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 20	Michigan;General Assembly Senate District 20	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 21	Michigan;General Assembly Senate District 21	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 22	Michigan;General Assembly Senate District 22	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 23	Michigan;General Assembly Senate District 23	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 24	Michigan;General Assembly Senate District 24	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 25	Michigan;General Assembly Senate District 25	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 26	Michigan;General Assembly Senate District 26	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 27	Michigan;General Assembly Senate District 27	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 28	Michigan;General Assembly Senate District 28	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 29	Michigan;General Assembly Senate District 29	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 30	Michigan;General Assembly Senate District 30	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 31	Michigan;General Assembly Senate District 31	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 32	Michigan;General Assembly Senate District 32	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 33	Michigan;General Assembly Senate District 33	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 34	Michigan;General Assembly Senate District 34	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 35	Michigan;General Assembly Senate District 35	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 36	Michigan;General Assembly Senate District 36	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 37	Michigan;General Assembly Senate District 37	state-senate	1	1	0	TRUE
+Michigan;General Assembly Senate District 38	Michigan;General Assembly Senate District 38	state-senate	1	1	0	TRUE
+Michigan;US Congress House of Representatives District 1	Michigan;US Congress House of Representatives District 1	congressional	1	1	0	TRUE
+Michigan;US Congress House of Representatives District 2	Michigan;US Congress House of Representatives District 2	congressional	1	1	0	TRUE
+Michigan;US Congress House of Representatives District 3	Michigan;US Congress House of Representatives District 3	congressional	1	1	0	TRUE
+Michigan;US Congress House of Representatives District 4	Michigan;US Congress House of Representatives District 4	congressional	1	1	0	TRUE
+Michigan;US Congress House of Representatives District 5	Michigan;US Congress House of Representatives District 5	congressional	1	1	0	TRUE
+Michigan;US Congress House of Representatives District 6	Michigan;US Congress House of Representatives District 6	congressional	1	1	0	TRUE
+Michigan;US Congress House of Representatives District 7	Michigan;US Congress House of Representatives District 7	congressional	1	1	0	TRUE
+Michigan;US Congress House of Representatives District 8	Michigan;US Congress House of Representatives District 8	congressional	1	1	0	TRUE
+Michigan;US Congress House of Representatives District 9	Michigan;US Congress House of Representatives District 9	congressional	1	1	0	TRUE
+Michigan;US Congress House of Representatives District 10	Michigan;US Congress House of Representatives District 10	congressional	1	1	0	TRUE
+Michigan;US Congress House of Representatives District 11	Michigan;US Congress House of Representatives District 11	congressional	1	1	0	TRUE
+Michigan;US Congress House of Representatives District 12	Michigan;US Congress House of Representatives District 12	congressional	1	1	0	TRUE
+Michigan;US Congress House of Representatives District 13	Michigan;US Congress House of Representatives District 13	congressional	1	1	0	TRUE
+Michigan;US Congress House of Representatives District 14	Michigan;US Congress House of Representatives District 14	congressional	1	1	0	TRUE
+Michigan;US Congress;Senate	Michigan	state	1	1	0	TRUE

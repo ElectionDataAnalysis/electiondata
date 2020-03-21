@@ -2375,3 +2375,59 @@ Maryland;Worcester County;Election District 6:Precinct 1	precinct
 Maryland;Worcester County;Election District 6:Precinct 2	precinct
 Maryland;Worcester County;Election District 6:Precinct 3	precinct
 Maryland;Worcester County;Election District 7:Precinct 1	precinct
+Maryland;State Legislature Senate District 1	state-senate
+Maryland;State Legislature Senate District 10	state-senate
+Maryland;State Legislature Senate District 11	state-senate
+Maryland;State Legislature Senate District 12	state-senate
+Maryland;State Legislature Senate District 13	state-senate
+Maryland;State Legislature Senate District 14	state-senate
+Maryland;State Legislature Senate District 15	state-senate
+Maryland;State Legislature Senate District 16	state-senate
+Maryland;State Legislature Senate District 17	state-senate
+Maryland;State Legislature Senate District 18	state-senate
+Maryland;State Legislature Senate District 19	state-senate
+Maryland;State Legislature Senate District 2	state-senate
+Maryland;State Legislature Senate District 20	state-senate
+Maryland;State Legislature Senate District 21	state-senate
+Maryland;State Legislature Senate District 22	state-senate
+Maryland;State Legislature Senate District 23	state-senate
+Maryland;State Legislature Senate District 24	state-senate
+Maryland;State Legislature Senate District 25	state-senate
+Maryland;State Legislature Senate District 26	state-senate
+Maryland;State Legislature Senate District 27	state-senate
+Maryland;State Legislature Senate District 28	state-senate
+Maryland;State Legislature Senate District 29	state-senate
+Maryland;State Legislature Senate District 3	state-senate
+Maryland;State Legislature Senate District 30	state-senate
+Maryland;State Legislature Senate District 31	state-senate
+Maryland;State Legislature Senate District 32	state-senate
+Maryland;State Legislature Senate District 33	state-senate
+Maryland;State Legislature Senate District 34	state-senate
+Maryland;State Legislature Senate District 35	state-senate
+Maryland;State Legislature Senate District 36	state-senate
+Maryland;State Legislature Senate District 37	state-senate
+Maryland;State Legislature Senate District 38	state-senate
+Maryland;State Legislature Senate District 39	state-senate
+Maryland;State Legislature Senate District 4	state-senate
+Maryland;State Legislature Senate District 40	state-senate
+Maryland;State Legislature Senate District 41	state-senate
+Maryland;State Legislature Senate District 42	state-senate
+Maryland;State Legislature Senate District 43	state-senate
+Maryland;State Legislature Senate District 44	state-senate
+Maryland;State Legislature Senate District 45	state-senate
+Maryland;State Legislature Senate District 46	state-senate
+Maryland;State Legislature Senate District 47	state-senate
+Maryland;State Legislature Senate District 5	state-senate
+Maryland;State Legislature Senate District 6	state-senate
+Maryland;State Legislature Senate District 7	state-senate
+Maryland;State Legislature Senate District 8	state-senate
+Maryland;State Legislature Senate District 9	state-senate
+Maryland;US Congress House of Representatives District 1	congressonal
+Maryland;US Congress House of Representatives District 2	congressonal
+Maryland;US Congress House of Representatives District 3	congressonal
+Maryland;US Congress House of Representatives District 4	congressonal
+Maryland;US Congress House of Representatives District 5	congressonal
+Maryland;US Congress House of Representatives District 6	congressonal
+Maryland;US Congress House of Representatives District 7	congressonal
+Maryland;US Congress House of Representatives District 8	congressonal
+	

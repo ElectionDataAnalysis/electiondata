@@ -1,0 +1,3 @@
+short_name	description
+yes_and_no_are_candidates	ballot measure selections (e.g., "Yes" and "No") are listed as candidates in the datafile
+yes_and_no_are_columns	there are separate columns (in the same record) for "yes" and "no" votes
