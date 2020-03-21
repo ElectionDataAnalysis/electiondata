@@ -631,7 +631,8 @@ if __name__ == '__main__':
 	#state_short_name = 'FL'
 	state_short_name = None
 	#raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
-	raw_file = os.path.join(project_root,'local_data/FL/data/11062018Election.txt')
+	# raw_file = os.path.join(project_root,'local_data/FL/data/11062018Election.txt')
+	raw_file = os.path.join(project_root,'local_data/MD_old/data/2018g/md_general/All_By_Precinct_2018_General.csv')
 	raw_file_sep = '\t'
 	db_paramfile = os.path.join(project_root,'local_data/database.ini')
 

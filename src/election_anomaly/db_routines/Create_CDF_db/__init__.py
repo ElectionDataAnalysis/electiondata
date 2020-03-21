@@ -58,13 +58,13 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',dele
 
         field_col_list = [Column(r['fieldname'],eval(r['datatype'])) for i,r in df['fields'].iterrows()]
         null_constraint_list = [CheckConstraint('"{}" IS NOT NULL'.format(r['not_null_fields']),name='{}_{}_not_null'.format(short_name,r['not_null_fields'])) for i,r in df['not_null_fields'].iterrows()]
-        other_elt_list = [Column(r['fieldname'],ForeignKey(f'{schema_string}{r["refers_to"]}.Id'))
+        other_elt_list = [Column(r['fieldname'],ForeignKey(f'{r["refers_to"]}.Id'))
             for i,r in df['other_element_refs'].iterrows()]
         # unique constraints
         df['unique_constraints']['arg_list'] = df['unique_constraints']['unique_constraint'].str.split(',')
         unique_constraint_list = [UniqueConstraint( * r['arg_list'],name='{}_ux{}'.format(short_name,i)) for i,r in df['unique_constraints'].iterrows()]
 
-        enum_id_list = [Column('{}_Id'.format(r['enumeration']),ForeignKey(f'{schema_string}{r["enumeration"]}.Id'))
+        enum_id_list = [Column('{}_Id'.format(r['enumeration']),ForeignKey(f'{r["enumeration"]}.Id'))
                          for i,r in df['enumerations'].iterrows()]
         enum_other_list = [Column('Other{}'.format(r['enumeration']),String) for i,r in df['enumerations'].iterrows()]
         Table(element,metadata,
