@@ -280,7 +280,7 @@ class Munger:
             print(f'Some {element}s in the results file cannot be interpreted by the munger {self.name}.')
             print(f'Note: {element}s listed in unmunged_{element}s.txt are interpreted as \'to be ignored\'.')
             outfile = f'unmunged_{element}s.txt'
-            ui.show_sample(not_munged,f'{element}s in datafile','cannot be munged',outfile=outfile,dir=os.path.join(self.path_to_munger_dir))
+            ui.show_sample(not_munged,f'{element}s in datafile','cannot be munged',outfile=outfile,dir=self.path_to_munger_dir)
             add_to_munger = input('Would you like to add some/all of these to the munger (y/n)?\n')
             if add_to_munger == 'y':
                 input(f'For each {element} you want to add to the munger:\n'
@@ -315,7 +315,7 @@ class Munger:
             print(f'Election results for munged {element}s missing from database will not be processed.')
             outfile = f'{element}s_munged_but_not_in_db.txt'
             ui.show_sample(bad_set,f'munged elements','are in raw_identifiers.txt but not in the database',
-                           outfile=outfile,dir=os.path.join(self.path_to_munger_dir))
+                           outfile=outfile,dir=self.path_to_munger_dir)
             add_to_db = input('Would you like to add some/all of these to the database (y/n)?\n')
             if add_to_db == 'y':
                 input(f'For each {element} you want to add to the database:\n'
@@ -402,8 +402,6 @@ class Munger:
                 input(f'Directory {dir_path} does not contain file {ff}. Please create it and hit return to continue')
         self.name=dir_path.split('/')[-1]    # e.g., 'nc_general'
 
-        if dir_path[-1] != '/': # TODO use os.path.join everywhere to get rid of this
-            dir_path += '/'  # make sure path ends in a slash
         self.path_to_munger_dir=dir_path
 
         # read raw_identifiers file into a table

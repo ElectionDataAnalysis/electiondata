@@ -2,9 +2,6 @@
 # munge_routines/__init__.py
 # under construction
 
-# TODO How to handle FL candidate names? Candidate might or might not have middle name. FL munger gives candidate without middle name two spaces
-# TODO e.g. 'Stephanie  Singer' or 'Stephanie Frank Singer'.
-
 import db_routines as dbr
 import user_interface as ui
 import pandas as pd
@@ -25,7 +22,6 @@ def load_context_dframe_into_cdf(session,state,source_df1,element,
 """
     # TODO check that source_df has the right format
     # TODO check that this can be used to update the db as well as initialize it
-    # TODO check that CRUJ gets filled whenever a ReportingUnitis added
 
     # dedupe source_df
     dupes,source_df = ui.find_dupes(source_df1)

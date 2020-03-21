@@ -167,18 +167,16 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     Return the updated dframe, including all rows from the db and all from the dframe.
     """
     # pull copy of existing table
-    # TODO if <table> is 'ReportingUnit', fill CRUJ as well.
-
     target = pd.read_sql_table(table,session.bind,schema=schema,index_col=index_col)
     # VoteCount table gets added columns during raw data upload, needs special treatment
     if raw_to_votecount:
-        # TODO join with SECVCJ, should this be right join? What if a VC_Id has multiple entries in secvcj?
+        # join with SECVCJ
         secvcj = pd.read_sql_table('SelectionElectionContestVoteCountJoin',session.bind,schema=schema,index_col=None)
+        # drop columns that don't belong, but were temporarily created in order to get VoteCount_Id correctly into SECVCJ
         target=target.drop(['Election_Id','Contest_Id','Selection_Id'],axis=1)
         target=target.merge(secvcj,left_on='Id',right_on='VoteCount_Id')
         target=target.drop(['Id','VoteCount_Id'],axis=1)
     df_to_db = dframe.copy()
-    # TODO how to avoid int-string comparison failures?
     if 'Count' in df_to_db.columns:
         df_to_db.loc[:,'Count']=df_to_db['Count'].astype('int64')
     #df_to_db=df_to_db.astype(str)
@@ -191,19 +189,15 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     # add columns that exist in target table but are missing from original dframe
     for c in target.columns:
         if c not in dframe.columns:
-            df_to_db[c] = None  # TODO why doesn't this throw an error? Column is not equal to a scalar...
+            df_to_db[c] = None
     appendable = pd.concat([target,target,df_to_db],sort=False).drop_duplicates(keep=False)
     # note: two copies of target ensures none of the original rows will be appended.
 
-    # drop the Id column # TODO inefficient? Why not drop it before? Might even add it above, only to be dropped?
+    # drop the Id column
     if 'Id' in appendable.columns:
         appendable = appendable.drop('Id',axis=1)
 
-    # TODO in line below appendable has copies of existing vote counts, but wiht new id's,
-    #  causing duplicates in VoteCount table [copies of existing vote counts with existing ids
-    #  have been dropped] These came from df_to_db, where they differ from corresponding rows
-    # in target, but how?
-    appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
+   appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
     if table == 'ReportingUnit' and not appendable.empty:
         append_to_composing_reporting_unit_join(session,appendable)
     up_to_date_dframe = pd.read_sql_table(table,session.bind,schema=schema)
