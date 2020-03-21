@@ -1,60 +1,60 @@
-Name	ElectionDistrict	ElectionDistrictType	VotesAllowed	NumberElected	NumberRunoff	IsPartisan
-Maryland;US Congress House of Representatives District 1	Maryland;US Congress House of Representatives District 1	congressional	1	1	0	TRUE
-Maryland;US Congress House of Representatives District 2	Maryland;US Congress House of Representatives District 2	congressional	1	1	0	TRUE
-Maryland;US Congress House of Representatives District 3	Maryland;US Congress House of Representatives District 3	congressional	1	1	0	TRUE
-Maryland;US Congress House of Representatives District 4	Maryland;US Congress House of Representatives District 4	congressional	1	1	0	TRUE
-Maryland;US Congress House of Representatives District 5	Maryland;US Congress House of Representatives District 5	congressional	1	1	0	TRUE
-Maryland;US Congress House of Representatives District 6	Maryland;US Congress House of Representatives District 6	congressional	1	1	0	TRUE
-Maryland;US Congress House of Representatives District 7	Maryland;US Congress House of Representatives District 7	congressional	1	1	0	TRUE
-Maryland;US Congress House of Representatives District 8	Maryland;US Congress House of Representatives District 8	congressional	1	1	0	TRUE
-Maryland;Governor / Lt. Governor 	Maryland	state	1	1	0	TRUE
-Maryland;State's Attorney        	Maryland 	state	1	1	0	TRUE
-Maryland;Treasurer               	Maryland      	state	1	1	0	TRUE
-Maryland;US Congress Senate            	Maryland;US Congress Senate            	state	1	1	0	TRUE
-Maryland;State Legislature Senate District 1	Maryland;State Legislature Senate District 1	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 10	Maryland;State Legislature Senate District 10	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 11	Maryland;State Legislature Senate District 11	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 12	Maryland;State Legislature Senate District 12	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 13	Maryland;State Legislature Senate District 13	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 14	Maryland;State Legislature Senate District 14	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 15	Maryland;State Legislature Senate District 15	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 16	Maryland;State Legislature Senate District 16	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 17	Maryland;State Legislature Senate District 17	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 18	Maryland;State Legislature Senate District 18	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 19	Maryland;State Legislature Senate District 19	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 2	Maryland;State Legislature Senate District 2	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 20	Maryland;State Legislature Senate District 20	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 21	Maryland;State Legislature Senate District 21	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 22	Maryland;State Legislature Senate District 22	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 23	Maryland;State Legislature Senate District 23	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 24	Maryland;State Legislature Senate District 24	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 25	Maryland;State Legislature Senate District 25	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 26	Maryland;State Legislature Senate District 26	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 27	Maryland;State Legislature Senate District 27	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 28	Maryland;State Legislature Senate District 28	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 29	Maryland;State Legislature Senate District 29	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 3	Maryland;State Legislature Senate District 3	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 30	Maryland;State Legislature Senate District 30	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 31	Maryland;State Legislature Senate District 31	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 32	Maryland;State Legislature Senate District 32	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 33	Maryland;State Legislature Senate District 33	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 34	Maryland;State Legislature Senate District 34	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 35	Maryland;State Legislature Senate District 35	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 36	Maryland;State Legislature Senate District 36	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 37	Maryland;State Legislature Senate District 37	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 38	Maryland;State Legislature Senate District 38	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 39	Maryland;State Legislature Senate District 39	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 4	Maryland;State Legislature Senate District 4	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 40	Maryland;State Legislature Senate District 40	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 41	Maryland;State Legislature Senate District 41	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 42	Maryland;State Legislature Senate District 42	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 43	Maryland;State Legislature Senate District 43	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 44	Maryland;State Legislature Senate District 44	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 45	Maryland;State Legislature Senate District 45	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 46	Maryland;State Legislature Senate District 46	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 47	Maryland;State Legislature Senate District 47	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 5	Maryland;State Legislature Senate District 5	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 6	Maryland;State Legislature Senate District 6	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 7	Maryland;State Legislature Senate District 7	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 8	Maryland;State Legislature Senate District 8	state-senate	1	1	0	TRUE
-Maryland;State Legislature Senate District 9	Maryland;State Legislature Senate District 9	state-senate	1	1	0	TRUE
+Name	ElectionDistrict	VotesAllowed	NumberElected	NumberRunoff	IsPartisan
+Maryland;US Congress House of Representatives District 1	Maryland;US Congress House of Representatives District 1	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 2	Maryland;US Congress House of Representatives District 2	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 3	Maryland;US Congress House of Representatives District 3	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 4	Maryland;US Congress House of Representatives District 4	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 5	Maryland;US Congress House of Representatives District 5	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 6	Maryland;US Congress House of Representatives District 6	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 7	Maryland;US Congress House of Representatives District 7	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 8	Maryland;US Congress House of Representatives District 8	1	1	0	TRUE
+Maryland;Governor / Lt. Governor 	Maryland	1	1	0	TRUE
+Maryland;State's Attorney        	Maryland 	1	1	0	TRUE
+Maryland;Treasurer               	Maryland      	1	1	0	TRUE
+Maryland;US Congress Senate            	Maryland;US Congress Senate            	1	1	0	TRUE
+Maryland;State Legislature Senate District 1	Maryland;State Legislature Senate District 1	1	1	0	TRUE
+Maryland;State Legislature Senate District 10	Maryland;State Legislature Senate District 10	1	1	0	TRUE
+Maryland;State Legislature Senate District 11	Maryland;State Legislature Senate District 11	1	1	0	TRUE
+Maryland;State Legislature Senate District 12	Maryland;State Legislature Senate District 12	1	1	0	TRUE
+Maryland;State Legislature Senate District 13	Maryland;State Legislature Senate District 13	1	1	0	TRUE
+Maryland;State Legislature Senate District 14	Maryland;State Legislature Senate District 14	1	1	0	TRUE
+Maryland;State Legislature Senate District 15	Maryland;State Legislature Senate District 15	1	1	0	TRUE
+Maryland;State Legislature Senate District 16	Maryland;State Legislature Senate District 16	1	1	0	TRUE
+Maryland;State Legislature Senate District 17	Maryland;State Legislature Senate District 17	1	1	0	TRUE
+Maryland;State Legislature Senate District 18	Maryland;State Legislature Senate District 18	1	1	0	TRUE
+Maryland;State Legislature Senate District 19	Maryland;State Legislature Senate District 19	1	1	0	TRUE
+Maryland;State Legislature Senate District 2	Maryland;State Legislature Senate District 2	1	1	0	TRUE
+Maryland;State Legislature Senate District 20	Maryland;State Legislature Senate District 20	1	1	0	TRUE
+Maryland;State Legislature Senate District 21	Maryland;State Legislature Senate District 21	1	1	0	TRUE
+Maryland;State Legislature Senate District 22	Maryland;State Legislature Senate District 22	1	1	0	TRUE
+Maryland;State Legislature Senate District 23	Maryland;State Legislature Senate District 23	1	1	0	TRUE
+Maryland;State Legislature Senate District 24	Maryland;State Legislature Senate District 24	1	1	0	TRUE
+Maryland;State Legislature Senate District 25	Maryland;State Legislature Senate District 25	1	1	0	TRUE
+Maryland;State Legislature Senate District 26	Maryland;State Legislature Senate District 26	1	1	0	TRUE
+Maryland;State Legislature Senate District 27	Maryland;State Legislature Senate District 27	1	1	0	TRUE
+Maryland;State Legislature Senate District 28	Maryland;State Legislature Senate District 28	1	1	0	TRUE
+Maryland;State Legislature Senate District 29	Maryland;State Legislature Senate District 29	1	1	0	TRUE
+Maryland;State Legislature Senate District 3	Maryland;State Legislature Senate District 3	1	1	0	TRUE
+Maryland;State Legislature Senate District 30	Maryland;State Legislature Senate District 30	1	1	0	TRUE
+Maryland;State Legislature Senate District 31	Maryland;State Legislature Senate District 31	1	1	0	TRUE
+Maryland;State Legislature Senate District 32	Maryland;State Legislature Senate District 32	1	1	0	TRUE
+Maryland;State Legislature Senate District 33	Maryland;State Legislature Senate District 33	1	1	0	TRUE
+Maryland;State Legislature Senate District 34	Maryland;State Legislature Senate District 34	1	1	0	TRUE
+Maryland;State Legislature Senate District 35	Maryland;State Legislature Senate District 35	1	1	0	TRUE
+Maryland;State Legislature Senate District 36	Maryland;State Legislature Senate District 36	1	1	0	TRUE
+Maryland;State Legislature Senate District 37	Maryland;State Legislature Senate District 37	1	1	0	TRUE
+Maryland;State Legislature Senate District 38	Maryland;State Legislature Senate District 38	1	1	0	TRUE
+Maryland;State Legislature Senate District 39	Maryland;State Legislature Senate District 39	1	1	0	TRUE
+Maryland;State Legislature Senate District 4	Maryland;State Legislature Senate District 4	1	1	0	TRUE
+Maryland;State Legislature Senate District 40	Maryland;State Legislature Senate District 40	1	1	0	TRUE
+Maryland;State Legislature Senate District 41	Maryland;State Legislature Senate District 41	1	1	0	TRUE
+Maryland;State Legislature Senate District 42	Maryland;State Legislature Senate District 42	1	1	0	TRUE
+Maryland;State Legislature Senate District 43	Maryland;State Legislature Senate District 43	1	1	0	TRUE
+Maryland;State Legislature Senate District 44	Maryland;State Legislature Senate District 44	1	1	0	TRUE
+Maryland;State Legislature Senate District 45	Maryland;State Legislature Senate District 45	1	1	0	TRUE
+Maryland;State Legislature Senate District 46	Maryland;State Legislature Senate District 46	1	1	0	TRUE
+Maryland;State Legislature Senate District 47	Maryland;State Legislature Senate District 47	1	1	0	TRUE
+Maryland;State Legislature Senate District 5	Maryland;State Legislature Senate District 5	1	1	0	TRUE
+Maryland;State Legislature Senate District 6	Maryland;State Legislature Senate District 6	1	1	0	TRUE
+Maryland;State Legislature Senate District 7	Maryland;State Legislature Senate District 7	1	1	0	TRUE
+Maryland;State Legislature Senate District 8	Maryland;State Legislature Senate District 8	1	1	0	TRUE
+Maryland;State Legislature Senate District 9	Maryland;State Legislature Senate District 9	1	1	0	TRUE
