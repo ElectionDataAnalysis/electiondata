@@ -49,7 +49,7 @@ class State:
 
         cdf_p = pd.read_sql_table('Party',session.bind,None,index_col=None)
         for party_id in cdf_p['Id'].to_list():
-            cc_primary = cc[cc['IsPartisan']]  # non-partisan contests don't have party primaries, so omit them.
+            cc_primary = cc[cc['IsPartisan']].copy()  # non-partisan contests don't have party primaries, so omit them.
             cc_primary.loc[:,'PrimaryParty_Id'] = party_id
             cc_primary.loc[:,'Name'] =  cc_primary['Name'] + ' Primary;' + cdf_p[cdf_p['Id'] == party_id].iloc[0]['Name']
             # TODO can we use f'' here?
