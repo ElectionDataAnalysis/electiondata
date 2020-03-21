@@ -197,7 +197,7 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     if 'Id' in appendable.columns:
         appendable = appendable.drop('Id',axis=1)
 
-   appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
+    appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
     if table == 'ReportingUnit' and not appendable.empty:
         append_to_composing_reporting_unit_join(session,appendable)
     up_to_date_dframe = pd.read_sql_table(table,session.bind,schema=schema)
