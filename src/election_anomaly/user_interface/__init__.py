@@ -135,7 +135,7 @@ def check_count_columns(df,file,mungerdir,CDF_schema_def_dir):
 	# get count types from CDF_schema_def_dir and raw cols from munger directory once at beginning
 	with open(os.path.join(CDF_schema_def_dir,'enumerations/CountItemType.txt'),'r') as f:
 		type_list = f.read().split('\n')
-	with open(mungerdir,'r') as f:
+	with open(os.path.join(mungerdir,'raw_columns.txt'),'r') as f:
 		raw_col_list = f.read().split('\n')[1:]
 	ok = 'unknown'
 	while not ok == 'y':
@@ -150,7 +150,7 @@ def check_count_columns(df,file,mungerdir,CDF_schema_def_dir):
 		elif df.RawName.all() not in raw_col_list:
 			for idx,row in df.iterrows():
 				if row.RawName not in raw_col_list:
-					print(f'RawName \'{row.RawName}\' is not recognized on line {idx+2}.')
+					print(f'Column name \'{row.RawName}\' on line {idx+2} does not appear in the datafile.')
 		else:
 			ok = 'y'
 			print(f'{file} has correct form')

@@ -178,7 +178,8 @@ class Munger:
 
     def check_atomic_ru_type(self):
         print(f'This munger classifies each line of the datafile as type \'{self.atomic_reporting_unit_type}\'.')
-        check_ru_type = input('\tIs this appropriate for the datafile (y/n)?\n')
+        check_ru_type = input(
+            f'\tIs it OK to treat every line of the datafile as \'{self.atomic_reporting_unit_type}\'(y/n)?\n')
         if check_ru_type != 'y':
             print('Datafile will not be processed.')
             raise Exception('Munger would assign wrong ReportingUnitType to datafile. Use a different munger.')
@@ -438,7 +439,7 @@ class Munger:
         count_columns_file = os.path.join(dir_path,'count_columns.txt')
         count_columns_df=pd.read_csv(count_columns_file,sep='\t').replace({'RawName':col_d})
         self.count_columns = ui.check_count_columns(
-            count_columns_df,count_columns_file,self.name,cdf_schema_def_dir)
+            count_columns_df,count_columns_file,self.path_to_munger_dir,cdf_schema_def_dir)
         if list(self.count_columns['CountItemType'].unique()) == ['total']:
             self.totals_only=True
         else:
