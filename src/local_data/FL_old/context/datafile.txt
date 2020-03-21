@@ -1,3 +1,0 @@
-name	encoding	separator	source_url	file_date	download_date	note	type_correction_list
-General Election 2018-11-06;11062018Election.txt		tab	https://results.elections.myflorida.com/downloadresults.asp?ElectionDate=11/6/2018&DATAMODE=		2020-02-20
-General Election 2018-11-06;ALA_PctResults20181106.txt		tab https://dos.myflorida.com/elections/data-statistics/elections-data/precinct-level-election-results/	2019-01-01	2020-03-06	one of many files, one for each county

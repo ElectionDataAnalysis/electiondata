@@ -1,2 +1,0 @@
-Name	ElectionType	ReportingUnit	StartDate	EndDate
-General Election 2018-11-06	general	North Carolina	2018-11-06	2018-11-06

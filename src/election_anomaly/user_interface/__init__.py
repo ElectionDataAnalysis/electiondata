@@ -113,10 +113,9 @@ def pick_database(paramfile,state_name=None):
 		Session = sessionmaker(bind=eng)
 		pick_db_session = Session()
 
-		db_cdf.create_common_data_format_tables(pick_db_session,None,
-												dirpath=os.path.join(
-													project_root,'election_anomaly/CDF_schema_def_info/'),
-												delete_existing=False)
+		db_cdf.create_common_data_format_tables(
+			pick_db_session,dirpath=os.path.join(
+				project_root,'election_anomaly/CDF_schema_def_info/'),delete_existing=False)
 		db_cdf.fill_cdf_enum_tables(pick_db_session,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
 
 	# clean up

@@ -1,0 +1,16 @@
+name
+ElectionDate
+PartyCode
+PartyName
+RaceCode
+OfficeDesc
+CountyCode
+CountyName
+Juris1num
+Juris2num
+Precincts
+PrecinctsReporting
+CanNameLast
+CanNameFirst
+CanNameMiddle
+CanVotes

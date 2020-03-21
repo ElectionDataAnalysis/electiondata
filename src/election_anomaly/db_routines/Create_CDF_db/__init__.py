@@ -6,7 +6,6 @@
 
 import db_routines as dbr
 import sqlalchemy
-from db_routines import create_schema
 from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,Date,ForeignKey
 # NB: imports above are used within string argument to exec()
 from sqlalchemy.orm import sessionmaker
@@ -14,22 +13,17 @@ import os
 import pandas as pd
 
 
-def create_common_data_format_tables(session,schema,dirpath='CDF_schema_def_info/',delete_existing=False):
+def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',delete_existing=False):
     """ schema example: 'cdf'; Creates cdf tables in the given schema
     (or directly in the db if schema == None)
     e_table_list is a list of enumeration tables for the CDF, e.g., ['ReportingUnitType','CountItemType', ... ]
     Does *not* fill enumeration tables.
     """
-    if schema:
-        create_schema(session, schema,delete_existing)
-        schema_string = f'{schema}.'    # TODO remove when schemas are all gone
-    else:
-        schema_string = ''   # TODO remove when schemas are all gone
     eng = session.bind
-    metadata = MetaData(bind=eng,schema=schema)
+    metadata = MetaData(bind=eng)
 
     # create the single sequence for all db ids
-    id_seq = sqlalchemy.Sequence('id_seq', metadata=metadata,schema=schema)
+    id_seq = sqlalchemy.Sequence('id_seq', metadata=metadata)
 
     # create enumeration tables and push to db
     print('Creating enumeration tables')
@@ -40,7 +34,7 @@ def create_common_data_format_tables(session,schema,dirpath='CDF_schema_def_info
         else:
             txt_col='Txt'
         Table(t,metadata,Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
-              Column(txt_col,String),schema=schema)
+              Column(txt_col,String))
     metadata.create_all()
 
     # create all other tables, in set order because of foreign keys
@@ -76,7 +70,7 @@ def create_common_data_format_tables(session,schema,dirpath='CDF_schema_def_info
         Table(element,metadata,
           Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
               * field_col_list, * enum_id_list, * enum_other_list,
-              * other_elt_list, * null_constraint_list, * unique_constraint_list,schema=schema)
+              * other_elt_list, * null_constraint_list, * unique_constraint_list)
 
     metadata.create_all()
     session.flush()
@@ -107,15 +101,3 @@ def fill_cdf_enum_tables(session,schema,dirpath= 'CDF_schema_def_info/'):
     session.flush()
     return e_table_list
 
-
-if __name__ == '__main__':
-    eng,meta = dbr.sql_alchemy_connect(paramfile='../../../local_data/database.ini')
-    Session = sessionmaker(bind=eng)
-    session = Session()
-
-    schema='test'
-    metadata = create_common_data_format_tables(session,schema,dirpath ='../../CDF_schema_def_info/')
-    fill_cdf_enum_tables(session,schema,dirpath='../../CDF_schema_def_info/')
-    print ('Done!')
-
-    eng.dispose()
