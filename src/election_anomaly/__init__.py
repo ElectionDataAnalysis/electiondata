@@ -25,13 +25,13 @@ except:
     import pickle
 
 if __name__ == '__main__':
-    print('WARNING: Sorry, lots of bugs at the moment. Don\'t waste your time! -- Stephanie')
+    # print('WARNING: Sorry, lots of bugs at the moment. Don\'t waste your time! -- Stephanie')
     # exit()
 
     project_root = os.getcwd().split('election_anomaly')[0]
     # state_short_name = 'NC'
     state_short_name = None
-    raw_file = os.path.join(project_root,'local_data/FL/data/11062018Election.txt')
+    raw_file = os.path.join(project_root,'local_data/FL/data/11062018Election.txt') # TODO note hard-coded
     raw_file_sep = '\t'
     db_paramfile = os.path.join(project_root,'local_data/database.ini')
 
