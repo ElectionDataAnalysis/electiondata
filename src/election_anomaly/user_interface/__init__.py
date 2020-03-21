@@ -127,13 +127,37 @@ def pick_database(paramfile,state_name=None):
 	return desired_db
 
 
-def check_count_columns(df,file):
+def check_count_columns(df,file,mungerdir,CDF_schema_def_dir):
 	"""Checks that <df> is a proper count_columns dataframe;
 	If not, guides user to correct <file> and then upload its
 	contents to a proper count_columns dataframe, which it returns"""
-	# TODO
-	return count_columns
-	df
+
+	# get count types from CDF_schema_def_dir and raw cols from munger directory once at beginning
+	with open(os.path.join(CDF_schema_def_dir,'enumerations/CountItemType.txt'),'r') as f:
+		type_list = f.read().split('\n')
+	with open(mungerdir,'r') as f:
+		raw_col_list = f.read().split('\n')[1:]
+	ok = 'unknown'
+	while not ok == 'y':
+		if df.empty:
+			print(f'No count columns found. Make sure there is at least one entry in {file}.\n')
+		elif len(df.columns) != 2 or df.columns.to_list() != ['RawName','CountItemType']:
+			print(f'Column headers must be [\'RawName\',\'CountItemType\']\n')
+		elif df.CountItemType.all() not in type_list:
+			for idx,row in df.iterrows():
+				if row.CountItemType not in type_list:
+					print(f'CountItemType \'{row.CountItemType}\' is not recognized on line {idx+2}.')
+		elif df.RawName.all() not in raw_col_list:
+			for idx,row in df.iterrows():
+				if row.RawName not in raw_col_list:
+					print(f'RawName \'{row.RawName}\' is not recognized on line {idx+2}.')
+		else:
+			ok = 'y'
+			print(f'{file} has correct form')
+		if ok != 'y':
+			input(f'Correct the file {file}\nand hit return to continue.\n')
+		df = pd.read_csv(file,sep='\t')
+	return df
 
 
 def pick_state(con,schema,path_to_states='local_data/',state_name=None):

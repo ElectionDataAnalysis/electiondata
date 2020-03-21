@@ -154,7 +154,7 @@ class Munger:
             print(f'Ballot Measure Selections for the munger {self.name} are:\n'
               f'{", ".join(self.ballot_measure_selection_list)}')
         needs_warning = False
-        correct = input('Is this consistent with your datafile (y/n)?\n')
+        correct = input('Does this list include every ballot measure selecton name in your datafile (y/n)?\n')
         while correct != 'y':
             needs_warning = True
             add_or_remove = input('Enter \'a\' to add and \'r\' to remove Ballot Measure Selections.\n')
@@ -437,7 +437,8 @@ class Munger:
 
         count_columns_file = os.path.join(dir_path,'count_columns.txt')
         count_columns_df=pd.read_csv(count_columns_file,sep='\t').replace({'RawName':col_d})
-        self.count_columns = ui.check_count_columns(count_columns_df,count_columns_file)
+        self.count_columns = ui.check_count_columns(
+            count_columns_df,count_columns_file,self.name,cdf_schema_def_dir)
         if list(self.count_columns['CountItemType'].unique()) == ['total']:
             self.totals_only=True
         else:
