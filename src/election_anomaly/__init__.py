@@ -9,15 +9,11 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '.'))
 
 import db_routines as dbr
-import munge_routines as mr
-from db_routines import Create_CDF_db as CDF
 import user_interface as ui
-import states_and_files as sf
 import analyze as an
 
 from sqlalchemy.orm import sessionmaker
 import pandas as pd
-import numpy as np
 
 try:
     import cPickle as pickle
@@ -25,15 +21,15 @@ except:
     import pickle
 
 if __name__ == '__main__':
-    print('WARNING: Sorry, lots of bugs at the moment. Don\'t waste your time! -- Stephanie')
+    # print('WARNING: Sorry, lots of bugs at the moment. Don\'t waste your time! -- Stephanie')
     # exit()
 
     project_root = os.getcwd().split('election_anomaly')[0]
     # state_short_name = 'NC'
     state_short_name = None
-    raw_file = os.path.join(project_root,'local_data/FL/data/11062018Election.txt')
+    raw_file = os.path.join(project_root,'jurisdictions/FL/data/11062018Election.txt')
     raw_file_sep = '\t'
-    db_paramfile = os.path.join(project_root,'local_data/database.ini')
+    db_paramfile = os.path.join(project_root,'jurisdictions/database.ini')
 
     s,mu = ui.new_datafile(raw_file,raw_file_sep,db_paramfile,project_root,state_short_name=state_short_name)
 

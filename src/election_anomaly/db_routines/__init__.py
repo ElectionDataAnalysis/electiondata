@@ -79,18 +79,18 @@ def append_to_composing_reporting_unit_join(session,ru):
 def get_path_to_db_paramfile():
     current_dir = os.getcwd()
     path_to_src = current_dir.split('/election_anomaly/')[0]
-    fpath='{}/local_data/database.ini'.format(path_to_src)
+    fpath='{}/jurisdictions/database.ini'.format(path_to_src)
     return fpath
 
 
-def establish_connection(paramfile = '../local_data/database.ini',db_name='postgres'):
+def establish_connection(paramfile = '../jurisdictions/database.ini',db_name='postgres'):
     params = config(paramfile)
     if db_name != 'postgres': params['dbname']=db_name
     con = psycopg2.connect(**params)
     return con
 
 
-def sql_alchemy_connect(schema=None,paramfile = '../local_data/database.ini',db_name='postgres'):
+def sql_alchemy_connect(schema=None,paramfile = '../jurisdictions/database.ini',db_name='postgres'):
     """Returns an engine and a metadata object"""
 
     params = config(paramfile)
@@ -110,7 +110,7 @@ def sql_alchemy_connect(schema=None,paramfile = '../local_data/database.ini',db_
     return engine, meta
 
 
-def config(filename='../local_data/database.ini', section='postgresql'):
+def config(filename='../jurisdictions/database.ini', section='postgresql'):
     """
     Creates the parameter dictionary needed to log into our db
     """

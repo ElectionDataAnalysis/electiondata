@@ -458,13 +458,13 @@ class Munger:
 
 
 if __name__ == '__main__':
-    # get absolute path to local_data directory
+    # get absolute path to jurisdictions directory
     current_dir=os.getcwd()
     path_to_src_dir=current_dir.split('/election_anomaly/')[0]
 
-    s = State('NC_test2',f'{path_to_src_dir}/local_data/')
+    s = State('NC_test2',f'{path_to_src_dir}/jurisdictions/')
     mu = Munger('../../mungers/not_for_prime_time_NC/',cdf_schema_def_dir='../CDF_schema_def_info/')
-    f = pd.read_csv('../../local_data/NC/data/2018g/nc_general',sep='\t')
+    f = pd.read_csv('../../jurisdictions/NC/data/2018g/nc_general',sep='\t')
 
     # initialize main session for connecting to db
     eng, meta_generic = dbr.sql_alchemy_connect(db_name=s.short_name)

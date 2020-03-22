@@ -114,7 +114,7 @@ if __name__ == '__main__':
 	import db_routines.Create_CDF_db as CDF
 
 	schema = 'test'
-	eng,meta = dbr.sql_alchemy_connect(schema=schema,paramfile='../../local_data/database.ini')
+	eng,meta = dbr.sql_alchemy_connect(schema=schema,paramfile='../../jurisdictions/database.ini')
 	Session = sessionmaker(bind=eng)
 	session = Session()
 
@@ -122,6 +122,6 @@ if __name__ == '__main__':
 	test_dframe = pd.DataFrame(data=data)
 	new = dframe_to_sql(test_dframe,session,schema,'SelectionElectionContestVoteCountJoin',index_col='Id')
 
-	s = sf.create_state('NC','../../local_data/NC/')
+	s = sf.create_state('NC','../../jurisdictions/NC/')
 	enumeration_table_list = CDF.enum_table_list(dirpath='../CDF_schema_def_info/')
 	print('Done!')

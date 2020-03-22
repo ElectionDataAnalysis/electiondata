@@ -111,7 +111,7 @@ class AnomalyDataFrame(object):
 class Election(object):
     def pull_rollup_from_db_by_types(self, roll_up_to_ru_type, atomic_ru_type='precinct',
             contest_name_list=None,
-            db_paramfile='../local_data/database.ini'):
+            db_paramfile='../jurisdictions/database.ini'):
 
         eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=self.state.short_name)
 
@@ -413,7 +413,7 @@ def anomaly_list(contest_name, c, aframe_columnlist=None):
 
 if __name__ == '__main__':
     project_root = os.getcwd().split('election_anomaly')[0]
-    paramfile = os.path.join(project_root,'local_data/database.ini')
+    paramfile = os.path.join(project_root,'jurisdictions/database.ini')
     state_name = 'NC_test2'
     # state_name = None
 
@@ -425,7 +425,7 @@ if __name__ == '__main__':
     analysis_session = Session()
 
     state = ui.pick_state(analysis_session.bind,None,
-        path_to_states=os.path.join(project_root,'local_data'),
+        path_to_states=os.path.join(project_root,'jurisdictions'),
         state_name=state_name)
     e = Election(analysis_session,state)
 

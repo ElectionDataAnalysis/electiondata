@@ -10,6 +10,36 @@ import os
 import re
 import states_and_files as sf
 import random
+import easygui as eg
+import tkinter as tk
+from tkinter import filedialog
+
+def find_datafile_tk(r,project_root):
+	r.filename = filedialog.askopenfilename(
+		initialdir=projec_root,title="Select election results datafile",
+		filetypes=(("text files","*.txt"),("csv files","*.csv"),("all files","*.*")))
+	print(f'r.filename is {r.filename}')
+	return(r.filename)
+
+
+
+def get_project_root():
+	p_root = os.getcwd().split('election_anomaly')[0]
+	confirmed = False
+	subdir_list = ['election_anomaly','jurisdictions','mungers']
+	while not confirmed:
+		missing = [x for x in subdir_list if x not in os.listdir(p_root)]
+		print(f'Suggested project root directory is {p_root}')
+		if missing:
+			print(f'The suggested directory does not contain required subdirectories {",".join(missing)}')
+			new_pr = input(f'Designate a different project root (y/n)?\n')
+			if new_pr == 'y':
+				p_root = input(f'Enter absolute path of project root.\n')
+			else:
+				input('Add required subdirectories and hit return to continue.\n')
+		elif input('Is this the correct project root (y/n)?\n') == 'y':
+			confirmed = True
+	return p_root
 
 
 def pick_one(df,return_col,item='row',required=False):
@@ -160,7 +190,7 @@ def check_count_columns(df,file,mungerdir,CDF_schema_def_dir):
 	return df
 
 
-def pick_state(con,schema,path_to_states='local_data/',state_name=None):
+def pick_state(con,schema,path_to_states='jurisdictions/',state_name=None):
 	"""Returns a State object.
 	If <state_short_name> is given, this just initializes based on info
 	in the folder with that name; """
@@ -376,7 +406,7 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 	return context_df
 
 
-def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_munger_templates',root='.'):
+def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='munger_templates',root='.'):
 	"""pick (or create) a munger """
 	choice_list = os.listdir(munger_dir)
 	for choice in os.listdir(munger_dir):
@@ -572,7 +602,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 
 	state = pick_state(
 		new_df_session.bind,None,
-		path_to_states=os.path.join(project_root,'local_data'),
+		path_to_states=os.path.join(project_root,'jurisdictions'),
 		state_name=state_short_name)
 	# TODO finalize ReportingUnits once for both kinds of files?
 
@@ -586,7 +616,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 	column_list = raw.columns.to_list()
 	print('Specify the munger:')
 	munger = pick_munger(new_df_session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
-						 template_dir=os.path.join(project_root,'mungers/zzz_munger_templates'),root=project_root)
+						 template_dir=os.path.join(project_root,'mungers/munger_templates'),root=project_root)
 	print(f'Munger {munger.name} has been chosen and prepared.\n'
 		  f'Next we check compatibility of the munger with the datafile.')
 
@@ -622,19 +652,19 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 
 
 if __name__ == '__main__':
+	project_root = get_project_root()
 
-	#print('WARNING: Sorry, lots of bugs at the moment. Don\'t waste your time! -- Stephanie')
-	# exit()
-
-	project_root = os.getcwd().split('election_anomaly')[0]
+	# initialize root widget for tkinter
+	tk_root = tk.Tk()
+	raw_file = find_datafile_tk(tk_root,project_root)
 
 	#state_short_name = 'FL'
 	state_short_name = None
-	#raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
-	# raw_file = os.path.join(project_root,'local_data/FL/data/11062018Election.txt')
-	raw_file = os.path.join(project_root,'local_data/MD_old/data/2018g/md_general/All_By_Precinct_2018_General.csv')
+	#raw_file = os.path.join(project_root,'jurisdictions/NC/data/2018g/nc_general/results_pct_20181106.txt')
+	# raw_file = os.path.join(project_root,'jurisdictions/FL/data/11062018Election.txt')
+	# raw_file = os.path.join(project_root,'jurisdictions/MD_old/data/2018g/md_general/All_By_Precinct_2018_General.csv')
 	raw_file_sep = '\t'
-	db_paramfile = os.path.join(project_root,'local_data/database.ini')
+	db_paramfile = os.path.join(project_root,'jurisdictions/database.ini')
 
 	state, munger = new_datafile(raw_file,raw_file_sep,db_paramfile,project_root,state_short_name=state_short_name)
 	print('Done! (user_interface)')
