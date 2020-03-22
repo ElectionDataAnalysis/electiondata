@@ -426,7 +426,7 @@ if __name__ == '__main__':
 
     state = ui.pick_state(analysis_session.bind,None,
         path_to_states=os.path.join(project_root,'jurisdictions'),
-        state_name=state_name)
+        db_name=state_name)
     e = Election(analysis_session,state)
 
     e.summarize_results()

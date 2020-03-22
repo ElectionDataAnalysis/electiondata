@@ -14,13 +14,24 @@ import easygui as eg
 import tkinter as tk
 from tkinter import filedialog
 
-def find_datafile_tk(r,project_root):
+def find_datafile(r,project_root):
+	print('Use system window to pick your datafile.')
 	r.filename = filedialog.askopenfilename(
 		initialdir=project_root,title="Select election results datafile",
 		filetypes=(("text files","*.txt"),("csv files","*.csv"),("all files","*.*")))
-	print(f'r.filename is {r.filename}')
+	print(f'The datafile you chose is:\n\t'
+		  f'{r.filename}')
 	return(r.filename)
 
+
+def pick_paramfile(r,project_root):
+	print('Use system window to pick the parameter file for your postgreSQL database.')
+	r.filename = filedialog.askopenfilename(
+		initialdir=project_root,title="Select database initialization file",
+		filetypes=(("db initialization","*.ini"),("all files","*.*")))
+	print(f'The parameter file you chose is:\n\t'
+		  f'{r.filename}')
+	return r.filename
 
 
 def get_project_root():
@@ -29,7 +40,7 @@ def get_project_root():
 	subdir_list = ['election_anomaly','jurisdictions','mungers']
 	while not confirmed:
 		missing = [x for x in subdir_list if x not in os.listdir(p_root)]
-		print(f'Suggested project root directory is {p_root}')
+		print(f'\nSuggested project root directory is:\n\t{p_root}')
 		if missing:
 			print(f'The suggested directory does not contain required subdirectories {",".join(missing)}')
 			new_pr = input(f'Designate a different project root (y/n)?\n')
@@ -114,14 +125,14 @@ def show_sample(st,items,condition,outfile='shown_items.txt',dir=None):
 	return
 
 
-def pick_database(paramfile,state_name=None):
-	"""Establishes connection to db with name <state_name>,
+def pick_database(paramfile,db_name=None):
+	"""Establishes connection to db with name <db_name>,
 	or creates a new cdf_db with that name.
 	In any case, returns the name of the DB."""
-	if state_name:
-		print(f'WARNING: will use db {state_name}, assumed to exist.')
+	if db_name:
+		print(f'WARNING: will use db {db_name}, assumed to exist.')
 		# TODO check that db actually exists and recover if not.
-		return state_name
+		return db_name
 	con = dbr.establish_connection(paramfile=paramfile)  # TODO error handling for paramfile
 	print(f'Connection established to database {con.info.dbname}')
 	cur = con.cursor()
@@ -589,13 +600,11 @@ def create_election_in_db(sess,electiontype_df):
 	return election_idx, electiontype
 
 
-def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short_name=None,encoding='utf-8'):
+def new_datafile(raw_file,raw_file_sep,db_paramfile,db_name,project_root='.',state_short_name=None,encoding='utf-8'):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
 
-	# TODO feature: make db table to track the sources of the data in the db, and routines to fill & update it
-	db_name = pick_database(db_paramfile,state_name=state_short_name)
 
 	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
 	Session = sessionmaker(bind=eng)
@@ -653,13 +662,28 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 
 
 if __name__ == '__main__':
+
+	print('\nReady to load some election result data?\n'
+		  'This program will walk you through the process of creating or checking\n'
+		  'an automatic munger that will load your data into a database in the '
+		  'NIST common data format.')
+
+	# TODO nav to database.ini file
+
 	project_root = get_project_root()
 
 	# initialize root widget for tkinter
 	tk_root = tk.Tk()
 
+	# get paramfile for db
+	db_paramfile = pick_paramfile(tk_root,project_root)
+
+	# TODO feature: make db table to track the sources of the data in the db, and routines to fill & update it
+	db_name = pick_database(db_paramfile)
+
+
 	# get datafile & info
-	raw_file = find_datafile_tk(tk_root,project_root)
+	raw_file = find_datafile(tk_root,project_root)
 
 
 	idx, rfs = pick_one(pd.DataFrame(['tab','comma'],columns=['separator']),'separator',item='separator in datafile')
@@ -675,6 +699,6 @@ if __name__ == '__main__':
 	db_paramfile = os.path.join(project_root,'jurisdictions/database.ini')
 
 	state, munger = new_datafile(
-		raw_file,raw_file_sep,db_paramfile,project_root,state_short_name=state_short_name,encoding=encoding)
+		raw_file,raw_file_sep,db_paramfile,db_name,project_root,state_short_name=state_short_name,encoding=encoding)
 	print('Done! (user_interface)')
 	exit()

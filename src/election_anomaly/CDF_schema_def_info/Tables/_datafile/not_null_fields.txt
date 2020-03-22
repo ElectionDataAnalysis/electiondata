@@ -1,0 +1,4 @@
+not_null_fields
+short_name
+file_name
+separator

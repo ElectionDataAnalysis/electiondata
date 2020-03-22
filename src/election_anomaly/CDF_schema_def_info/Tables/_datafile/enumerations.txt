@@ -1,0 +1,2 @@
+enumeration
+_datafile_separator
