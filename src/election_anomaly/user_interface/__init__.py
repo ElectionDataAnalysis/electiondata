@@ -332,7 +332,7 @@ def confirm_or_correct_ballot_measure_style(options_file,bms_file,sep='\t'):
 		bms_idx,bms = pick_one(bmso_df,'short_name',item='ballot measure style',required=True)
 		with open(bms_file,'w') as f:
 			f.write(bms)
-	bms_description = bmso_df[bmso_df.short_name==bms].loc[0,'description']
+	bms_description = bmso_df[bmso_df.short_name==bms]['description'].iloc[0]
 	return bms, bms_description
 
 
