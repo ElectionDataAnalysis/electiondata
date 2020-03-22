@@ -16,7 +16,7 @@ from tkinter import filedialog
 
 def find_datafile_tk(r,project_root):
 	r.filename = filedialog.askopenfilename(
-		initialdir=projec_root,title="Select election results datafile",
+		initialdir=project_root,title="Select election results datafile",
 		filetypes=(("text files","*.txt"),("csv files","*.csv"),("all files","*.*")))
 	print(f'r.filename is {r.filename}')
 	return(r.filename)
@@ -406,7 +406,7 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 	return context_df
 
 
-def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='munger_templates',root='.'):
+def pick_munger(sess,munger_dir='mungers/',column_list=None,root='.'):
 	"""pick (or create) a munger """
 	choice_list = os.listdir(munger_dir)
 	for choice in os.listdir(munger_dir):
@@ -429,6 +429,7 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='munger
 						   '(e.g., \'nc_primary18\')\n')
 	need_to_check_munger = input(f'Check compatibility of munger {munger_name} (y/n)?\n')
 	if need_to_check_munger == 'y':
+		template_dir = os.path.join(root,'templates/munger_templates')
 		check_munger(sess,munger_name,munger_dir,template_dir,column_list)
 
 	munger_path = os.path.join(munger_dir,munger_name)
@@ -588,7 +589,7 @@ def create_election_in_db(sess,electiontype_df):
 	return election_idx, electiontype
 
 
-def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short_name=None):
+def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short_name=None,encoding='utf-8'):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
@@ -612,11 +613,11 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 
 	election_idx, electiontype = get_or_create_election_in_db(new_df_session)
 	# read file in as dataframe of strings, replacing any nulls with the empty string
-	raw = pd.read_csv(raw_file,sep=raw_file_sep,dtype=str).fillna('')
+	raw = pd.read_csv(raw_file,sep=raw_file_sep,dtype=str,encoding=encoding).fillna('')
 	column_list = raw.columns.to_list()
 	print('Specify the munger:')
-	munger = pick_munger(new_df_session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
-						 template_dir=os.path.join(project_root,'mungers/munger_templates'),root=project_root)
+	munger = pick_munger(
+		new_df_session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),root=project_root)
 	print(f'Munger {munger.name} has been chosen and prepared.\n'
 		  f'Next we check compatibility of the munger with the datafile.')
 
@@ -656,16 +657,24 @@ if __name__ == '__main__':
 
 	# initialize root widget for tkinter
 	tk_root = tk.Tk()
+
+	# get datafile & info
 	raw_file = find_datafile_tk(tk_root,project_root)
+
+
+	idx, rfs = pick_one(pd.DataFrame(['tab','comma'],columns=['separator']),'separator',item='separator in datafile')
+	if rfs == 'tab': raw_file_separator = '\t'
+	elif rfs == 'comma': raw_file_separator = ','
+	else: raw_file_separator = input(f'Enter separator used in the datafile\n')
+
+	encoding = input(f'Input datafile encoding (default is \'utf-8\')\n') or 'utf-8'
 
 	#state_short_name = 'FL'
 	state_short_name = None
-	#raw_file = os.path.join(project_root,'jurisdictions/NC/data/2018g/nc_general/results_pct_20181106.txt')
-	# raw_file = os.path.join(project_root,'jurisdictions/FL/data/11062018Election.txt')
-	# raw_file = os.path.join(project_root,'jurisdictions/MD_old/data/2018g/md_general/All_By_Precinct_2018_General.csv')
 	raw_file_sep = '\t'
 	db_paramfile = os.path.join(project_root,'jurisdictions/database.ini')
 
-	state, munger = new_datafile(raw_file,raw_file_sep,db_paramfile,project_root,state_short_name=state_short_name)
+	state, munger = new_datafile(
+		raw_file,raw_file_sep,db_paramfile,project_root,state_short_name=state_short_name,encoding=encoding)
 	print('Done! (user_interface)')
 	exit()
