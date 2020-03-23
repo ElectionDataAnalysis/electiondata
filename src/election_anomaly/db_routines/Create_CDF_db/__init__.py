@@ -41,7 +41,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',dele
     table_list = ['ExternalIdentifier', 'ReportingUnit', 'Party', 'Election', 'Office', 'CandidateContest',
                   'BallotMeasureContest', 'Candidate', 'VoteCount', 'SelectionElectionContestVoteCountJoin',
                   'CandidateSelection', 'ElectionContestJoin', 'ComposingReportingUnitJoin',
-                  'BallotMeasureContestSelectionJoin', 'CandidateContestSelectionJoin']
+                  'BallotMeasureContestSelectionJoin', 'CandidateContestSelectionJoin','_datafile']
 
     assert set(table_list) == set(os.listdir('{}Tables'.format(dirpath))), \
         f'Set of tables to create does not match set of tables in {dirpath}Tables directory'

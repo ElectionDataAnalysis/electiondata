@@ -8,24 +8,25 @@ import numpy as np
 from sqlalchemy.orm import sessionmaker
 import os
 import re
+import datetime
 import states_and_files as sf
 import random
-import easygui as eg
 import tkinter as tk
 from tkinter import filedialog
 
 def find_datafile(r,project_root):
-	print('Use system window to pick your datafile.')
+	print('Use pop-up window to pick your datafile.')
 	r.filename = filedialog.askopenfilename(
 		initialdir=project_root,title="Select election results datafile",
 		filetypes=(("text files","*.txt"),("csv files","*.csv"),("all files","*.*")))
 	print(f'The datafile you chose is:\n\t'
 		  f'{r.filename}')
+
 	return(r.filename)
 
 
 def pick_paramfile(r,project_root):
-	print('Use system window to pick the parameter file for your postgreSQL database.')
+	print('Use pop-up window to pick the parameter file for your postgreSQL database.')
 	r.filename = filedialog.askopenfilename(
 		initialdir=project_root,title="Select database initialization file",
 		filetypes=(("db initialization","*.ini"),("all files","*.*")))
@@ -152,6 +153,7 @@ def pick_database(paramfile,db_name=None):
 
 	if db_idx == None: 	# if our db is brand new
 		eng,meta = dbr.sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
+		# TODO remove second arg from sql_alchemy_connect?
 		Session = sessionmaker(bind=eng)
 		pick_db_session = Session()
 
@@ -566,7 +568,9 @@ def get_or_create_election_in_db(sess):
 	election_idx, election = pick_one(election_df,'Name','election')
 	electiontype_df = pd.read_sql_table('ElectionType',sess.bind,index_col='Id')
 	if election_idx is None:
-		election_idx, electiontype = create_election_in_db(sess,electiontype_df)
+		# election_idx, electiontype = create_election_in_db(sess,electiontype_df)
+		# TODO diag:
+		election_idx, electiontype = create_record_in_db(sess,project_root,'Election')
 	else:
 		et_row = election_df.loc[:,['ElectionType_Id','OtherElectionType']].merge(
 			electiontype_df,left_on='ElectionType_Id',right_index=True)
@@ -577,56 +581,82 @@ def get_or_create_election_in_db(sess):
 	return election_idx,electiontype
 
 
-def create_election_in_db(sess,electiontype_df):
-	"""create record in Election table in database"""
-	election_name = input('Enter a unique short name for the election\n')  # TODO error check
-	electiontype_idx,electiontype = pick_one(electiontype_df,'Txt','election type',required=True)
-	if electiontype == 'other':
-		std_electiontype_list = list(electiontype_df['Txt'].remove('other'))
-		otherelectiontype = input('Enter the election type:\n')
-		if otherelectiontype in std_electiontype_list:
-			electiontype_idx = electiontype_df[electiontype_df.Txt == otherelectiontype].first_valid_index()
-			otherelectiontype = ''
-	else:
-		otherelectiontype = ''
-	election_df = dbr.dframe_to_sql(
-		 # TODO check format of date entries
-		pd.DataFrame(
-			{'Name':election_name,'EndDate':input(
-				'Enter the end date of the election, a.k.a. \'Election Day\' (YYYY-MM-DD)\n'),'StartDate':input(
-				'Enter the start date of the election (YYYY-MM-DD)\n'),'ElectionType_Id':electiontype_idx,
-				'OtherElectionType':otherelectiontype},index=[-1]),sess,None,'Election')
-	election_idx = election_df[election_df.Name==election_name].iloc[0]['Id']
-	return election_idx, electiontype
+def create_record_in_db(sess,root_dir,table,name_field='Name'):
+	"""create record in <table> table in database from user input
+	<enums is a dict of enumeration dataframes"""
+	d = {}
+	df = {}
+	enum_val = {}
+	for f in ['fields','enumerations','other_element_refs']:
+		df[f] = pd.read_csv(
+			os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/Tables',table,f'{f}.txt'),
+			sep='\t')
+
+	for idx,row in df['fields'].iterrows():
+		d[row["fieldname"]] = enter_and_check_datatype(f'Enter the {row["fieldname"]}.',row['datatype'])
+
+	for idx, row in df['enumerations'].iterrows():
+		enum_df = pd.read_sql_table(row['enumeration'],sess.bind,index_col='Id')
+		d[f'{row["enumeration"]}_Id'], enum_txt = pick_one(enum_df,'Txt',row['enumeration'],required=True)
+		if enum_txt == 'other':
+			std_enum_list = list(enum_df['Txt'].remove('other'))
+			d[f'Other{row["enumeration"]}'] = input('Enter the election type:\n')
+			if d[f'Other{row["enumeration"]}'] in std_enum_list:
+				d[f'{row["enumeration"]}_Id'] = enum_df[enum_df.Txt == d[f'Other{row["enumeration"]}']].first_valid_index()
+				d[f'Other{row["enumeration"]}'] = ''
+		else:
+			d[f'Other{row["enumeration"]}'] = ''
+		enum_val[row["enumeration"]] = enum_txt
+
+	table_df = dbr.dframe_to_sql(pd.DataFrame(d,index=[-1]),sess,None,table)
+	table_idx = table_df[table_df[name_field]==d[name_field]].iloc[0]['Id']
+	return table_idx, enum_val
 
 
-def new_datafile(raw_file,raw_file_sep,db_paramfile,db_name,project_root='.',state_short_name=None,encoding='utf-8'):
+def enter_and_check_datatype(question,datatype):
+	"""Datatype is typically 'Integer', 'String' or 'Date' """
+	answer = input(f'{question}\n')
+	good = False
+	while not good:
+		if datatype == 'Date':
+			try:
+				datetime.datetime.strptime(answer, '%Y-%m-%d').date()
+				good = True
+			except ValueError:
+				answer = input('You need to enter a date in the form \'2018-11-06\'. Try again.\n')
+		elif datatype == 'Integer':
+			try:
+				int(answer)
+				good = True
+			except ValueError:
+				answer = input('You need to enter an integer. Try again.')
+		else:
+			good = True
+	return answer
+
+
+def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name=None,encoding='utf-8'):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
 
-
-	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
-	Session = sessionmaker(bind=eng)
-	new_df_session = Session()
-
 	state = pick_state(
-		new_df_session.bind,None,
+		session.bind,None,
 		path_to_states=os.path.join(project_root,'jurisdictions'),
 		state_name=state_short_name)
 	# TODO finalize ReportingUnits once for both kinds of files?
 
-	state_idx, state_internal_db_name = pick_state_from_db(new_df_session)
+	state_idx, state_internal_db_name = pick_state_from_db(session)
 	# TODO feature: write routine to deduce BallotMeasureContest district from the data?!?
 	# update db from state context file
 
-	election_idx, electiontype = get_or_create_election_in_db(new_df_session)
+	election_idx, electiontype = get_or_create_election_in_db(session)
 	# read file in as dataframe of strings, replacing any nulls with the empty string
 	raw = pd.read_csv(raw_file,sep=raw_file_sep,dtype=str,encoding=encoding).fillna('')
 	column_list = raw.columns.to_list()
 	print('Specify the munger:')
 	munger = pick_munger(
-		new_df_session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),root=project_root)
+		session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),root=project_root)
 	print(f'Munger {munger.name} has been chosen and prepared.\n'
 		  f'Next we check compatibility of the munger with the datafile.')
 
@@ -648,16 +678,15 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,db_name,project_root='.',sta
 		contest_type_idx, contest_type = pick_one(contest_type_df,'Contest Type', item='contest type',required=True)
 
 	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
-		munger.check_new_results_dataset(cc_results,state,new_df_session,'Candidate',project_root=project_root)
+		munger.check_new_results_dataset(cc_results,state,session,'Candidate',project_root=project_root)
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
-		munger.check_new_results_dataset(cc_results,state,new_df_session,'BallotMeasure',project_root=project_root)
+		munger.check_new_results_dataset(cc_results,state,session,'BallotMeasure',project_root=project_root)
 
 	# TODO process new results dataset(s)
 	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf(new_df_session,munger,cc_results,'Candidate',election_idx,electiontype,state_idx)
+		mr.raw_elements_to_cdf(session,munger,cc_results,'Candidate',election_idx,electiontype,state_idx)
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf(new_df_session,munger,bmc_results,'BallotMeasure',election_idx,electiontype,state_idx)
-	eng.dispose()
+		mr.raw_elements_to_cdf(session,munger,bmc_results,'BallotMeasure',election_idx,electiontype,state_idx)
 	return state, munger
 
 
@@ -668,19 +697,16 @@ if __name__ == '__main__':
 		  'an automatic munger that will load your data into a database in the '
 		  'NIST common data format.')
 
-	# TODO nav to database.ini file
-
 	project_root = get_project_root()
 
 	# initialize root widget for tkinter
 	tk_root = tk.Tk()
 
-	# get paramfile for db
+	# pick db to use
 	db_paramfile = pick_paramfile(tk_root,project_root)
-
-	# TODO feature: make db table to track the sources of the data in the db, and routines to fill & update it
 	db_name = pick_database(db_paramfile)
 
+	# TODO feature:  routines to fill & update _datafile table in db
 
 	# get datafile & info
 	raw_file = find_datafile(tk_root,project_root)
@@ -698,7 +724,16 @@ if __name__ == '__main__':
 	raw_file_sep = '\t'
 	db_paramfile = os.path.join(project_root,'jurisdictions/database.ini')
 
+
+	# load new datafile
+	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
+	Session = sessionmaker(bind=eng)
+	new_df_session = Session()
+
+
 	state, munger = new_datafile(
-		raw_file,raw_file_sep,db_paramfile,db_name,project_root,state_short_name=state_short_name,encoding=encoding)
+		raw_file,raw_file_sep,new_df_session,state_short_name=state_short_name,encoding=encoding,project_root=project_root)
+
+	eng.dispose()
 	print('Done! (user_interface)')
 	exit()

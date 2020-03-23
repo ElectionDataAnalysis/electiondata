@@ -31,12 +31,13 @@ if __name__ == '__main__':
     raw_file_sep = '\t'
     db_paramfile = os.path.join(project_root,'jurisdictions/database.ini')
 
-    s,mu = ui.new_datafile(raw_file,raw_file_sep,db_paramfile,project_root,state_short_name=state_short_name)
 
     # initialize main session for connecting to db for analysis
     eng, meta_generic = dbr.sql_alchemy_connect(db_name=s.short_name)
     Session = sessionmaker(bind=eng)
     analysis_session = Session()
+
+    s,mu = ui.new_datafile(raw_file,raw_file_sep,analysis_session,project_root,state_short_name=state_short_name)
 
     e = an.Election(analysis_session,s)
 
