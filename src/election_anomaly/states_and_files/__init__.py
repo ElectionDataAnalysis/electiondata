@@ -399,7 +399,8 @@ class Munger:
         assert os.path.isdir(dir_path),f'{dir_path} is not a directory'
         for ff in ['cdf_tables.txt','atomic_reporting_unit_type.txt','count_columns.txt']:
             if not os.path.isfile(os.path.join(dir_path,ff)):
-                input(f'Directory {dir_path} does not contain file {ff}. Please create it and hit return to continue')
+                input(f'Directory \n\t{dir_path}\ndoes not contain file {ff}.\n'
+                      f'Please create the file and hit return to continue')
         self.name=dir_path.split('/')[-1]    # e.g., 'nc_general'
 
         self.path_to_munger_dir=dir_path

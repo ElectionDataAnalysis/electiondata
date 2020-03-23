@@ -14,15 +14,16 @@ import random
 import tkinter as tk
 from tkinter import filedialog
 
-def find_datafile(r,project_root):
+
+def find_datafile(r,project_root,sess):
 	print('Use pop-up window to pick your datafile.')
 	r.filename = filedialog.askopenfilename(
 		initialdir=project_root,title="Select election results datafile",
 		filetypes=(("text files","*.txt"),("csv files","*.csv"),("all files","*.*")))
-	print(f'The datafile you chose is:\n\t'
-		  f'{r.filename}')
-
-	return(r.filename)
+	print(f'The datafile you chose is:\n\t{r.filename}')
+	# TODO if datafile is already in db, don't create new record, but read from existing
+	datafile_record_d, datafile_enumeration_name_d = create_record_in_db(sess,project_root,'_datafile','short_name')
+	return datafile_record_d, datafile_enumeration_name_d, r.filename
 
 
 def pick_paramfile(r,project_root):
@@ -568,9 +569,9 @@ def get_or_create_election_in_db(sess):
 	election_idx, election = pick_one(election_df,'Name','election')
 	electiontype_df = pd.read_sql_table('ElectionType',sess.bind,index_col='Id')
 	if election_idx is None:
-		# election_idx, electiontype = create_election_in_db(sess,electiontype_df)
-		# TODO diag:
-		election_idx, electiontype = create_record_in_db(sess,project_root,'Election')
+		election_record_d, election_enum_d = create_record_in_db(sess,project_root,'Election')
+		election_idx = election_record_d['Id']
+		elecitontype = election_enum_d['ElectionType']
 	else:
 		et_row = election_df.loc[:,['ElectionType_Id','OtherElectionType']].merge(
 			electiontype_df,left_on='ElectionType_Id',right_index=True)
@@ -610,7 +611,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name'):
 
 	table_df = dbr.dframe_to_sql(pd.DataFrame(d,index=[-1]),sess,None,table)
 	table_idx = table_df[table_df[name_field]==d[name_field]].iloc[0]['Id']
-	return table_idx, enum_val
+	return dict(table_df.loc[0]), enum_val
 
 
 def enter_and_check_datatype(question,datatype):
@@ -706,33 +707,29 @@ if __name__ == '__main__':
 	db_paramfile = pick_paramfile(tk_root,project_root)
 	db_name = pick_database(db_paramfile)
 
-	# TODO feature:  routines to fill & update _datafile table in db
-
-	# get datafile & info
-	raw_file = find_datafile(tk_root,project_root)
-
-
-	idx, rfs = pick_one(pd.DataFrame(['tab','comma'],columns=['separator']),'separator',item='separator in datafile')
-	if rfs == 'tab': raw_file_separator = '\t'
-	elif rfs == 'comma': raw_file_separator = ','
-	else: raw_file_separator = input(f'Enter separator used in the datafile\n')
-
-	encoding = input(f'Input datafile encoding (default is \'utf-8\')\n') or 'utf-8'
-
-	#state_short_name = 'FL'
-	state_short_name = None
-	raw_file_sep = '\t'
-	db_paramfile = os.path.join(project_root,'jurisdictions/database.ini')
-
-
-	# load new datafile
+	# connect to db
 	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
 	Session = sessionmaker(bind=eng)
 	new_df_session = Session()
 
+	# get datafile & info
+	dfile_d, enum_d, raw_file = find_datafile(tk_root,project_root,new_df_session)
+	# TODO store \t and , directly?
+	if enum_d['_datafile_separator'] == 'tab':
+		sep = '\t'
+	elif enum_d['_datafile_separator'] == 'comma':
+		sep = ','
+	else:
+		raise Exception(f'separator {enum_d["_datafile_separator"]} not recognized')
+
+
+	#state_short_name = 'FL'
+	state_short_name = None
+
+	# load new datafile
 
 	state, munger = new_datafile(
-		raw_file,raw_file_sep,new_df_session,state_short_name=state_short_name,encoding=encoding,project_root=project_root)
+		raw_file,sep,new_df_session,state_short_name=state_short_name,encoding=dfile_d['encoding'],project_root=project_root)
 
 	eng.dispose()
 	print('Done! (user_interface)')
