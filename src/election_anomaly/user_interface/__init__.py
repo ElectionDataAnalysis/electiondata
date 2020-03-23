@@ -7,6 +7,7 @@ import pandas as pd
 import numpy as np
 from sqlalchemy.orm import sessionmaker
 import os
+import ntpath
 import re
 import datetime
 import states_and_files as sf
@@ -22,7 +23,9 @@ def find_datafile(r,project_root,sess):
 		filetypes=(("text files","*.txt"),("csv files","*.csv"),("all files","*.*")))
 	print(f'The datafile you chose is:\n\t{r.filename}')
 	# TODO if datafile is already in db, don't create new record, but read from existing
-	datafile_record_d, datafile_enumeration_name_d = create_record_in_db(sess,project_root,'_datafile','short_name')
+	filename = ntpath.basename(r.filename)
+	datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
+		sess,project_root,'_datafile','short_name',known_info_d={'file_name':filename})
 	return datafile_record_d, datafile_enumeration_name_d, r.filename
 
 
@@ -582,9 +585,11 @@ def get_or_create_election_in_db(sess):
 	return election_idx,electiontype
 
 
-def create_record_in_db(sess,root_dir,table,name_field='Name'):
+def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 	"""create record in <table> table in database from user input
 	<enums is a dict of enumeration dataframes"""
+
+	print(f'Enter information to be entered in the corresponding record in the {table} table in the database.')
 	d = {}
 	df = {}
 	enum_val = {}
@@ -594,7 +599,10 @@ def create_record_in_db(sess,root_dir,table,name_field='Name'):
 			sep='\t')
 
 	for idx,row in df['fields'].iterrows():
-		d[row["fieldname"]] = enter_and_check_datatype(f'Enter the {row["fieldname"]}.',row['datatype'])
+		if row["fieldname"] in known_info_d.keys():
+			d[row["fieldname"]] = known_info_d[row["fieldname"]]
+		else:
+			d[row["fieldname"]] = enter_and_check_datatype(f'Enter the {row["fieldname"]}.',row['datatype'])
 
 	for idx, row in df['enumerations'].iterrows():
 		enum_df = pd.read_sql_table(row['enumeration'],sess.bind,index_col='Id')
