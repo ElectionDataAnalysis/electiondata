@@ -5,6 +5,7 @@ import db_routines.Create_CDF_db as db_cdf
 import munge_routines as mr
 import pandas as pd
 import numpy as np
+import csv
 from sqlalchemy.orm import sessionmaker
 import os
 import ntpath
@@ -329,11 +330,14 @@ def confirm_or_correct_cdf_table_file(cdf_table_file,raw_cols):
 				misspellings = misspellings.union(new_misspellings)
 				bad_formulas.append(row.cdf_element)
 		if misspellings:
+			# TODO if raw file has col name matching an element, that name is changed in raw_cols but not in formulas in cdf_tables.txt
 			print(f'Some formula parts are not recognized as raw column labels:\n'
-				  f'{",".join([f"<{m}>" for m in misspellings])}')
+				  f'{",".join([f"<{m}>" for m in misspellings])}\n\n'
+				  f'Raw columns are: {",".join(raw_cols)}\n')
+
 		if bad_formulas:
-			print(f'Problems in formulas for {",".join(bad_formulas)}')
-			input(f'Fix the file {cdf_table_file}\n and hit return to continue.\n')
+			print(f'Unusable formulas for {",".join(bad_formulas)}.\n')
+			input(f'Fix the cdf_tables.txt file (or possibly the raw_columns.txt file)\n and hit return to continue.\n')
 		cdft_df = pd.read_csv(cdf_table_file,sep='\t')  # note index
 	return cdft_df
 
@@ -662,7 +666,7 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 
 	election_idx, electiontype = get_or_create_election_in_db(session)
 	# read file in as dataframe of strings, replacing any nulls with the empty string
-	raw = pd.read_csv(raw_file,sep=raw_file_sep,dtype=str,encoding=encoding).fillna('')
+	raw = pd.read_csv(raw_file,sep=raw_file_sep,dtype=str,encoding=encoding,quoting=csv.QUOTE_MINIMAL).fillna('')
 	column_list = raw.columns.to_list()
 	print('Specify the munger:')
 	munger = pick_munger(
