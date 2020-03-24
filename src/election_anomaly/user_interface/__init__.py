@@ -296,7 +296,7 @@ def format_check_formula(formula,fields):
 def confirm_or_correct_cdf_table_file(cdf_table_file,raw_cols):
 	"""
 	Checks that <cdf_table_file> has the right columns and contest;
-	if not, guides user to correcting
+	if not, guides user to correcting.
 	"""
 	element_list = [
 		'Office','ReportingUnit','Party','Candidate','CandidateContest',
@@ -330,14 +330,14 @@ def confirm_or_correct_cdf_table_file(cdf_table_file,raw_cols):
 				misspellings = misspellings.union(new_misspellings)
 				bad_formulas.append(row.cdf_element)
 		if misspellings:
-			# TODO if raw file has col name matching an element, that name is changed in raw_cols but not in formulas in cdf_tables.txt
 			print(f'Some formula parts are not recognized as raw column labels:\n'
 				  f'{",".join([f"<{m}>" for m in misspellings])}\n\n'
 				  f'Raw columns are: {",".join(raw_cols)}\n')
 
 		if bad_formulas:
 			print(f'Unusable formulas for {",".join(bad_formulas)}.\n')
-			input(f'Fix the cdf_tables.txt file (or possibly the raw_columns.txt file)\n and hit return to continue.\n')
+			input(f'Fix the cdf_tables.txt file \n and hit return to continue.\n')
+			# TODO check raw_columns.txt somewhere else, or let this routine check it & pick up alterations
 		cdft_df = pd.read_csv(cdf_table_file,sep='\t')  # note index
 	return cdft_df
 

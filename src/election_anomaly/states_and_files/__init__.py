@@ -415,11 +415,12 @@ class Munger:
         self.rename_column_dictionary=col_d
 
         # read raw columns from file (renaming if necessary)
-        self.raw_columns = pd.read_csv(os.path.join(dir_path,'raw_columns.txt'),sep='\t').replace({'name':col_d})
+        undoctored_raw_columns = pd.read_csv(os.path.join(dir_path,'raw_columns.txt'),sep='\t')
+        self.raw_columns = undoctored_raw_columns.replace({'name':col_d})
 
         # read cdf tables and rename in ExternalIdentifiers col if necessary
         cdf_table_file = os.path.join(dir_path,'cdf_tables.txt')
-        cdft = ui.confirm_or_correct_cdf_table_file(cdf_table_file,self.raw_columns.name.to_list()).set_index('cdf_element')
+        cdft = ui.confirm_or_correct_cdf_table_file(cdf_table_file,undoctored_raw_columns.name.to_list()).set_index('cdf_element')
         # change names for raw columns whose names match cdf elements
         for k in col_d.keys():
             cdft['raw_identifier_formula'] = cdft['raw_identifier_formula'].str.replace(
