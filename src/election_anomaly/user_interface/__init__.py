@@ -26,6 +26,7 @@ def find_datafile(r,project_root,sess):
 	filename = ntpath.basename(r.filename)
 	datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
 		sess,project_root,'_datafile','short_name',known_info_d={'file_name':filename})
+	# TODO typing url into debug window opens the webpage; want it to just act like a string
 	return datafile_record_d, datafile_enumeration_name_d, r.filename
 
 
