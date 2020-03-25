@@ -10,6 +10,7 @@ import os
 import re
 import states_and_files as sf
 import random
+from pathlib import Path
 
 
 def pick_one(df,return_col,item='row',required=False):
@@ -116,8 +117,8 @@ def pick_database(paramfile,state_name=None):
 
 		db_cdf.create_common_data_format_tables(
 			pick_db_session,dirpath=os.path.join(
-				project_root,'election_anomaly/CDF_schema_def_info/'),delete_existing=False)
-		db_cdf.fill_cdf_enum_tables(pick_db_session,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
+				project_root,'election_anomaly','CDF_schema_def_info'),delete_existing=False)
+		db_cdf.fill_cdf_enum_tables(pick_db_session,None,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
 
 	# clean up
 	if cur:
@@ -626,15 +627,18 @@ if __name__ == '__main__':
 	#print('WARNING: Sorry, lots of bugs at the moment. Don\'t waste your time! -- Stephanie')
 	# exit()
 
-	project_root = os.getcwd().split('election_anomaly')[0]
+	#project_root = os.getcwd().split('election_anomaly')[0]
+	project_root = Path(__file__).parents[2]
+
+
 
 	#state_short_name = 'FL'
 	state_short_name = None
 	#raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
 	# raw_file = os.path.join(project_root,'local_data/FL/data/11062018Election.txt')
-	raw_file = os.path.join(project_root,'local_data/MD_old/data/2018g/md_general/All_By_Precinct_2018_General.csv')
+	raw_file = os.path.join(project_root,'local_data', 'MD_old', 'data', '2018g', 'md_general', 'All_By_Precinct_2018_General.csv')
 	raw_file_sep = '\t'
-	db_paramfile = os.path.join(project_root,'local_data/database.ini')
+	db_paramfile = os.path.join(project_root,'local_data', 'database.ini')
 
 	state, munger = new_datafile(raw_file,raw_file_sep,db_paramfile,project_root,state_short_name=state_short_name)
 	print('Done! (user_interface)')

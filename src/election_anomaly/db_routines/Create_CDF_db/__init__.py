@@ -42,9 +42,13 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',dele
                   'BallotMeasureContest', 'Candidate', 'VoteCount', 'SelectionElectionContestVoteCountJoin',
                   'CandidateSelection', 'ElectionContestJoin', 'ComposingReportingUnitJoin',
                   'BallotMeasureContestSelectionJoin', 'CandidateContestSelectionJoin']
+    table_path = os.path.join(dirpath, 'Tables')
+    # assert set(table_list) == set(os.listdir('{}Tables'.format(dirpath))), \
+    #     f'Set of tables to create does not match set of tables in {dirpath}Tables directory'
 
-    assert set(table_list) == set(os.listdir('{}Tables'.format(dirpath))), \
-        f'Set of tables to create does not match set of tables in {dirpath}Tables directory'
+
+    assert set(table_list) == set(os.listdir(table_path)), \
+    f'Set of tables to create does not match set of tables in {dirpath}Tables directory'
 
     for element in table_list:
         with open('{}Tables/{}/short_name.txt'.format(dirpath,element),'r') as f:
@@ -79,8 +83,9 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',dele
 
 # TODO should we somewhere check consistency of enumeration_table_list and the files in enumerations/ ? Is the file enumeration_table_list ever used?
 def enum_table_list(dirpath= 'CDF_schema_def_info/'):
-    if not dirpath[-1] == '/': dirpath += '\''
-    file_list = os.listdir(f'{dirpath}enumerations/')
+    #if not dirpath[-1] == '/': dirpath += '\''
+    enum_path = os.path.join(dirpath, 'enumerations' )
+    file_list = os.listdir(enum_path)
     for f in file_list:
         assert f[-4:] == '.txt', 'File name in ' + dirpath + 'enumerations/ not in expected form: ' + f
     enum_table_list = [f[:-4] for f in file_list]
