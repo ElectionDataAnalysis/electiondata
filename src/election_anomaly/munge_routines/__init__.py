@@ -14,7 +14,7 @@ import os
 from db_routines import dframe_to_sql
 
 
-def load_context_dframe_into_cdf(session,state,source_df1,element,
+def load_context_dframe_into_cdf(session,project_root,state,source_df1,element,
                                  CDF_schema_def_dir='CDF_schema_def_info/'):
     """<source_df> should have all info needed for insertion into cdf:
     for enumerations, the value of the enumeration (e.g., 'precinct')
@@ -92,7 +92,7 @@ def load_context_dframe_into_cdf(session,state,source_df1,element,
                 rut_list = list(cdf_rut['Txt'])
                 ru = ui.fill_context_file(
                     os.path.join(state.path_to_state_dir,'context'),
-                    os.path.join(os.path.abspath(os.path.join(state.path_to_state_dir, os.pardir)),'context_templates'),
+                    os.path.join(project_root,'templates/context_templates'),
                     'ReportingUnit',rut_list,'ReportingUnitType')
                 #  then upload to db
                 ru = enum_col_to_id_othertext(ru,'ReportingUnitType',cdf_rut)
@@ -472,40 +472,6 @@ def raw_dframe_to_cdf(session,raw_rows,mu,e,state_id = 0):
     if process_candidate_contests=='y':
         raw_elements_to_cdf(session,mu,cc_row,'Candidate',e.Election_Id,e.ElectionType,state_id)
 
-    return
-
-
-# TODO this isn't really munging, so should it be elsewhere?
-def context_schema_to_cdf(session,s,enum_table_list):
-    """Takes the info from the tables in the state's context schema and inserts anything new into the cdf schema.
-    Assumes enumeration tables are already filled.
-    """
-    # TODO assumes number elected is same for primary and general for same office, but that's not always true
-    cdf_d = {}  # dict of dframes for CDF db tables
-
-    # create and fill enum dframes and associated dictionaries
-    enum_dframe = {}        # dict of dataframes of enumerations, taken from db
-    enum_id_d = {}  # maps raw Type string to an Id
-    enum_othertype_d = {}  # maps raw Type string to an othertype string
-    for e in enum_table_list:
-        enum_id_d[e] = {}  # maps raw Type string to an Id
-        enum_othertype_d[e] = {}  # maps raw Type string to an othertype string
-
-        # pull enumeration table into a DataFrame
-        enum_dframe[e] = pd.read_sql_table(e, session.bind, index_col=None)
-    # pull list of tables in CDF
-
-    # process other tables; need Office after ReportingUnit and after Party
-    for t in ['ReportingUnit','Party','Office','Election']:
-
-        # create DataFrames of relevant context information and load to cdf
-        source_df = pd.read_csv(f'{s.path_to_state_dir}context/{t}.txt',sep='\t')
-        load_context_dframe_into_cdf(session,s,source_df,t)
-
-    # TODO update CRUJ when munger is updated?
-    # Fill the ComposingReportingUnitJoin table
-    cdf_d['ComposingReportingUnitJoin'] = dbr.fill_composing_reporting_unit_join(session)
-    session.flush()
     return
 
 

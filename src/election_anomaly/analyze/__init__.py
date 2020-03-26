@@ -424,7 +424,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=eng)
     analysis_session = Session()
 
-    state = ui.pick_state(analysis_session.bind,None,
+    state = ui.pick_state(analysis_session.bind,project_root,
         path_to_states=os.path.join(project_root,'jurisdictions'),
         db_name=state_name)
     e = Election(analysis_session,state)

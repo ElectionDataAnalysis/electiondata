@@ -273,7 +273,7 @@ class Munger:
             else:
                 no_dupes = True
 
-        mr.load_context_dframe_into_cdf(sess,state,source_df,element,
+        mr.load_context_dframe_into_cdf(sess,project_path,state,source_df,element,
                                         os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
 
         mr.add_munged_column(results,self,element,f'{element}_external')
@@ -315,7 +315,7 @@ class Munger:
 
         # add all elements from context/ to db
         source_df = pd.read_csv(f'{state.path_to_state_dir}context/{element}.txt',sep='\t')
-        mr.load_context_dframe_into_cdf(sess,
+        mr.load_context_dframe_into_cdf(sess,project_path,
                                         state,source_df,element,
                                         CDF_schema_def_dir=os.path.join(project_path,
                                                                         'election_anomaly/CDF_schema_def_info'))
@@ -347,7 +347,7 @@ class Munger:
                         f'\tYou may need to do some contextual research to fill the other fields in {element}.txt\n\n'
                         f'Then hit return to continue.\n')
         source_df = pd.read_csv(f'{state.path_to_state_dir}context/{element}.txt',sep='\t')
-        mr.load_context_dframe_into_cdf(sess,
+        mr.load_context_dframe_into_cdf(sess,project_path,
                                         state,source_df,element,
                                         CDF_schema_def_dir=os.path.join(project_path,
                                                                         'election_anomaly/CDF_schema_def_info'))

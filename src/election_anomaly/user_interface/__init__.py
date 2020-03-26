@@ -209,7 +209,7 @@ def check_count_columns(df,file,mungerdir,CDF_schema_def_dir):
 	return df
 
 
-def pick_state(con,schema,path_to_states='jurisdictions/',state_name=None):
+def pick_state(con,project_root,path_to_states='jurisdictions/',state_name=None):
 	"""Returns a State object.
 	If <state_short_name> is given, this just initializes based on info
 	in the folder with that name; """
@@ -247,18 +247,18 @@ def pick_state(con,schema,path_to_states='jurisdictions/',state_name=None):
 		context_file_list = ['Office.txt','Party.txt','ReportingUnit.txt','remark.txt']
 		if not all([os.path.isfile(os.path.join(state_path,'context',x)) for x in context_file_list]):
 			# pull necessary enumeration from db: ReportingUnitType
-			ru_type = pd.read_sql_table('ReportingUnitType',con,schema=schema,index_col='Id')
+			ru_type = pd.read_sql_table('ReportingUnitType',con,index_col='Id')
 			standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
 			ru = fill_context_file(os.path.join(state_path,'context'),
-							  os.path.join(path_to_states,'context_templates'),
+							  os.path.join(project_root,'templates/context_templates'),
 								'ReportingUnit',standard_ru_types,'ReportingUnitType')
 			ru_list = ru['Name'].to_list()
 			fill_context_file(os.path.join(state_path,'context'),
-							  os.path.join(path_to_states,'context_templates'),
+							  os.path.join(project_root,'templates/context_templates'),
 								'Office',None,None)  # note check that ElectionDistricts are RUs happens below
 			# Party.txt
 			fill_context_file(os.path.join(state_path,'context'),
-							  os.path.join(path_to_states,'context_templates'),
+							  os.path.join(project_root,'templates/context_templates'),
 								'Party',None,None)
 			# TODO remark
 			remark_path = os.path.join(state_path,'context','remark.txt')
@@ -735,7 +735,7 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 	Assumes cdf db exists already"""
 
 	state = pick_state(
-		session.bind,None,
+		session.bind,project_root,
 		path_to_states=os.path.join(project_root,'jurisdictions'),
 		state_name=state_short_name)
 	# TODO finalize ReportingUnits once for both kinds of files?
@@ -781,7 +781,7 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
 		munger.check_new_results_dataset(cc_results,state,session,'BallotMeasure',project_root=project_root)
 
-	# TODO process new results dataset(s)
+	# TODO set empty count columns to zero
 	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
 		mr.raw_elements_to_cdf(session,munger,cc_results,'Candidate',election_idx,electiontype,state_idx)
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
