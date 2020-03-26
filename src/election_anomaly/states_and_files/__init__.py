@@ -187,7 +187,7 @@ class Munger:
                     f'when {self.ballot_measure_style_description}.\n'
                     f'Check for unnecessary rows in {self.name}/raw_identifiers.txt.')
             # TODO check that every field in ballot_measure_count_column_selections is in count_columns
-            for f in self.ballot_measure_count_column_signs.fieldname.to_list():
+            for f in self.ballot_measure_count_column_selections.fieldname.to_list():
                 if f not in self.count_columns.RawName:
                     input(f'The column {f} in {self.name}/ballot_measure_count_column_selections.txt\n'
                           f'is not listed in the {self.name}/count_columns attribute.\n'
@@ -230,7 +230,9 @@ class Munger:
             add_contests = input(f'Would you like to add any CandidateContests to {self.name}/raw_identifiers.txt (y/n)?\n')
             if add_contests == 'y':
                 input(f'Add any desired contests to {self.name}/raw_identifiers.txt and hit return to continue')
-                ri_df = pd.read_csv(ri,sep='\t')
+                ri_df = pd.read_csv(ri,sep='\t',keep_default_na=False)
+                # If keep_default_na is False, and na_values are not specified, no strings will be parsed as NaN.
+                # TODO use keep_default_na in other places too?
                 raw_from_ri = set(ri_df[ri_df.cdf_element == 'CandidateContest'].loc[:,'raw_identifier_value'])
                 missing_from_ri = [x for x in raw_from_results if x not in raw_from_ri]
             else:
@@ -257,11 +259,11 @@ class Munger:
         """Loads info from context/<element>.txt into db; checks results file <element>s against munger;
         then checks munger against db. Throughout, guides user to make corrections in context/<element>.txt;
         finally loads final context/<element>.txt into db. Note that this will only add records to db, never remove. """
-        # TODO why do ReportingUnits get checked twice somehow?
+        # TODO ReportingUnits get checked twice -- once for ballot measure and once for candidate contest_Type
         print(f'Updating database with info from {state.short_name}/context/{element}.txt.\n')
         no_dupes = False
         while no_dupes == False:
-            source_file = os.path.join(state.path_to_state_dir,f'context/{element}.txt')
+            source_file = os.path.join(state.path_to_state_dir,'context',f'{element}.txt')
             source_df = pd.read_csv(source_file,sep='\t')
 
             dupes,source_df = ui.find_dupes(source_df)
@@ -285,7 +287,7 @@ class Munger:
 
 
         # are there elements in results file that cannot be munged?
-        not_identified = elements_mixed[elements_mixed.raw_identifier_value.isnull()].loc[:,
+        not_identified = elements_mixed[elements_mixed.raw_identifier_value==''].loc[:,
                          f'{element}_external'].to_list()
         # and are not in unmunged_{element}s.txt?
         try:
@@ -471,12 +473,12 @@ class Munger:
             bms_str=cdft.loc['BallotMeasureSelection','raw_identifier_formula']
             # note: bms_str will start and end with <>
             self.ballot_measure_selection_col = bms_str[1:-1]
-            self.ballot_measure_count_column_signs = None
+            self.ballot_measure_count_column_selections = None
 
         else:
             self.ballot_measure_selection_list=None
-            self.ballot_measure_count_column_signs = pd.read_csv(
-                os.path.join(dir_path,'ballot_measure_count_column_signs.txt'),sep='\t'
+            self.ballot_measure_count_column_selections = pd.read_csv(
+                os.path.join(dir_path,'ballot_measure_count_column_selections.txt'),sep='\t'
             )
 
         with open(os.path.join(dir_path,'atomic_reporting_unit_type.txt'),'r') as ff:

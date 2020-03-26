@@ -115,7 +115,7 @@ def show_sample(st,items,condition,outfile='shown_items.txt',dir=None):
 		show_all = input(f'Show all {len(st)} {items} that {condition} (y/n)?\n')
 		if show_all == 'y':
 			for r in st:
-				print(f'\t{r}')
+				print(f'{r}')
 	if dir is None:
 		dir = input(f'Export all {len(st)} {items} that {condition}? If so, enter directory for export\n'
 					f'(Current directory is {os.getcwd()})\n')
@@ -747,6 +747,8 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 	election_idx, electiontype = get_or_create_election_in_db(session)
 	# read file in as dataframe of strings, replacing any nulls with the empty string
 	raw = pd.read_csv(raw_file,sep=raw_file_sep,dtype=str,encoding=encoding,quoting=csv.QUOTE_MINIMAL).fillna('')
+	# strip any whitespace
+	raw = raw.applymap(lambda x: x.strip())
 	column_list = raw.columns.to_list()
 	print('Specify the munger:')
 	munger = pick_munger(
@@ -756,6 +758,9 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 
 	munger.check_ballot_measure_selections()
 	munger.check_atomic_ru_type()
+
+	# change column names in <raw> if necessary
+	raw.rename(columns=munger.rename_column_dictionary,inplace=True)
 
 	bmc_results,cc_results = mr.contest_type_split(raw,munger)
 	if bmc_results.empty:

@@ -57,6 +57,18 @@ def load_context_dframe_into_cdf(session,state,source_df1,element,
 
         # ReportingUnits
         ru = pd.read_csv(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t')
+        nulls_ok = False
+        while not nulls_ok:
+            # find any rows that have nulls, ask user to fix.
+            nulls = ru[ru.isnull().any(axis=1)]
+            if nulls.empty:
+                nulls_ok = True
+            else:
+                input(
+                    f'The file context/ReportingUnit.txt has some blank or null entries.\n'
+                    f'Fill blanks, or erase rows with blanks and hit return to continue.\n')
+                ru = pd.read_csv(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t')
+
         cdf_rut = pd.read_sql_table('ReportingUnitType',session.bind)
         ru = enum_col_to_id_othertext(ru,'ReportingUnitType',cdf_rut)
         cdf_ru = dframe_to_sql(ru,session,None,'ReportingUnit')
@@ -121,14 +133,14 @@ def contest_type_split(row,mu):
         bm_row = row[row[mu.ballot_measure_selection_col].isin(mu.ballot_measure_selection_list)]
         cc_row = row[~row[mu.ballot_measure_selection_col].isin(mu.ballot_measure_selection_list)]
     elif mu.ballot_measure_style == 'yes_and_no_are_columns':
-        bm_count_cols=mu.count_columns[mu.count_columns.ContestType=='BallotMeasure']
+        bm_count_cols=mu.ballot_measure_count_column_selections.merge(mu.count_columns,how='left',left_on='fieldname',right_on='RawName')
         cc_row=row.copy()
         # TODO check that all CountItemTypes have either 2 or 0 columns for ballot measures
         # if any CountItemType has numbers in both yes and no bm columns, assume not a candidate contest
         for cit in bm_count_cols.CountItemType.unique():
             # each count item
-            yes_col= bm_count_cols[(bm_count_cols.CountItemType==cit) & (bm_count_cols.BallotMeasureSelection=='Yes')].iloc[0].RawName
-            no_col= bm_count_cols[(bm_count_cols.CountItemType==cit) & (bm_count_cols.BallotMeasureSelection=='No')].iloc[0].RawName
+            yes_col= bm_count_cols[(bm_count_cols.CountItemType==cit) & (bm_count_cols.selection=='Yes')].iloc[0].RawName
+            no_col= bm_count_cols[(bm_count_cols.CountItemType==cit) & (bm_count_cols.selection=='No')].iloc[0].RawName
             cc_row=cc_row[~((cc_row[yes_col]!='') & (cc_row[no_col]!=''))]
         bm_row = row[~row.index.isin(cc_row.index)]
     else:
@@ -238,18 +250,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
         cdf_d[element] = pd.read_sql_table(element, session.bind)   # note: keep 'Id as df column (not index) so we have access in merges below.
 
 
-    # get vote count column mapping for our munger
-    # Note: need both cases even if contest_type=='Candidate. File count_columns.txt looks different.
-    if mu.ballot_measure_style == 'yes_and_no_are_candidates':
-        vc_col_d = {x['RawName']:x['CountItemType'] for i,x in mu.count_columns.iterrows()}
-    elif mu.ballot_measure_style == 'yes_and_no_are_columns':
-        # TODO make sure munger-testing and munger-creation routines get the right extra columns in to count_columns.txt
-        # TODO test on MD
-        vc_col_d = {
-            x['RawName']:x['CountItemType'] for i,x in mu.count_columns[
-                mu.count_columns.ContestType == contest_type][['RawName','CountItemType']].iterrows()}
-    else:
-        raise Exception(f'Ballot measure style {mu.ballot_measure_style} not recognized.')
+    vc_col_d = {x['RawName']:x['CountItemType'] for i,x in mu.count_columns.iterrows()}
 
     col_list = list(vc_col_d.values()) + ['Election_Id','ReportingUnit_Id',
                                           'ReportingUnitType_Id', 'OtherReportingUnitType',
@@ -408,6 +409,7 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
     else:
         raise Exception(f'Contest type {contest_type} not recognized.')
     # TODO do we need to check whether vote_counts is empty?
+    # TODO check vote_counts for nulls
 
     # To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
     # add SelectionElectionContestJoin columns to VoteCount

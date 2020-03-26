@@ -3,6 +3,6 @@ Office	<Office Name>;<Office District>
 ReportingUnit	<County>;<Election District>;<Election Precinct>
 Party	<Party>
 Candidate	<Candidate Name>
-CandidateContest	<Office Name> District <Office District>
+CandidateContest	<Office Name>;<Office District>
 BallotMeasureContest	<Office Name>
 BallotMeasureSelection	None

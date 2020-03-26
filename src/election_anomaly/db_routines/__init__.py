@@ -178,6 +178,7 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
         target=target.drop(['Id','VoteCount_Id'],axis=1)
     df_to_db = dframe.copy()
     if 'Count' in df_to_db.columns:
+        # TODO bug: catch nulls (e.g., in MD 2018g upload)
         df_to_db.loc[:,'Count']=df_to_db['Count'].astype('int64')
     #df_to_db=df_to_db.astype(str)
     #target=target.astype(str)

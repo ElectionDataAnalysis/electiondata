@@ -405,7 +405,7 @@ Party	Maryland Green Party	GRN
 Party	Maryland Republican Party	REP
 Party	Maryland BOT	BOT
 Party	Maryland UNF	UNF
-Election	General Election 2018-11-06	11/6/2018
+Election	General Election 2018-11-06	11/6/18
 CandidateContest	Maryland;US Congress House of Representatives District 1	Representative in Congress District 1
 CandidateContest	Maryland;US Congress House of Representatives District 2	Representative in Congress District 2
 CandidateContest	Maryland;US Congress House of Representatives District 3	Representative in Congress District 3
@@ -2499,3 +2499,4 @@ ReportingUnit	Maryland;Worcester County;Election District 6:Precinct 1	24;006;00
 ReportingUnit	Maryland;Worcester County;Election District 6:Precinct 2	24;006;002
 ReportingUnit	Maryland;Worcester County;Election District 6:Precinct 3	24;006;003
 ReportingUnit	Maryland;Worcester County;Election District 7:Precinct 1	24;007;001
+Party	Maryland NON	NON
