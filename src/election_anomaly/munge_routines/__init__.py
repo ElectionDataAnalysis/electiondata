@@ -213,6 +213,17 @@ def enum_col_to_id_othertext(df,type_col,enum_df):
     return df
 
 
+def get_enum_value_from_id_othertext(enum_df,id,othertext):
+    """Given an enumeration dframe (with cols 'Id' and 'Txt',
+    along with an (<id>,<othertext>) pair, find and return the plain language
+    value for that enumeration (e.g., 'general')."""
+    if othertext != '':
+        enum_val = othertext
+    else:
+        enum_val = enum_df[enum_df.Id == id].loc[:,'Txt'].to_list()[0]
+    return enum_val
+
+
 def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,state_id):
     """
     NOTE: Tables from context assumed to exist already in db
