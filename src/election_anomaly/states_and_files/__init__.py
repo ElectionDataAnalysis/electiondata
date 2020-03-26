@@ -2,7 +2,7 @@
 import os.path
 import db_routines as dbr
 import pandas as pd
-import re
+import warnings # TODO use warnings module to handle warnings in all files
 import munge_routines as mr
 from sqlalchemy.orm import sessionmaker
 import user_interface as ui
@@ -91,7 +91,7 @@ class State:
         else:
             for col in elts.columns:
                 if col not in df.columns:
-                    print('WARNING: Column {} not found, will be added with no data.'.format(col))
+                    warnings.warn(f'WARNING: Column {col} not found, will be added with no data.')
                     print('Be sure all necessary data is added before processing the file')
                     df.loc[:,col] = ''
             # pull and order necessary columns from <df>
@@ -147,33 +147,52 @@ class Munger:
         return
 
     def check_ballot_measure_selections(self):
-        if len(self.ballot_measure_selection_list) == 0:
-            print(f'There are no Ballot Measure Selections for the munger {self.name}.\n'
-                  f'No ballot measure contests will be processed by this munger.')
-        else:
-            print(f'Ballot Measure Selections for the munger {self.name} are:\n'
-              f'{", ".join(self.ballot_measure_selection_list)}')
-        needs_warning = False
-        correct = input('Does this list include every ballot measure selecton name in your datafile (y/n)?\n')
-        while correct != 'y':
-            needs_warning = True
-            add_or_remove = input('Enter \'a\' to add and \'r\' to remove Ballot Measure Selections.\n')
-            if add_or_remove == 'a':
-                new = input(f'Enter a missing selection\n')
-                if new != '':
-                    self.ballot_measure_selection_list.append(new)
-            elif add_or_remove == 'r' :
-                idx, val = ui.pick_one(pd.DataFrame([[x] for x in self.ballot_measure_selection_list],columns=['Selection']),'Selection',item='Selection')
-                if idx is not None:
-                    self.ballot_measure_selection_list.remove(val)
+        if self.ballot_measure_style == 'yes_and_no_are_candidates':
+            if len(self.ballot_measure_selection_list) == 0:
+                print(f'There are no Ballot Measure Selections for the munger {self.name}.\n'
+                      f'No ballot measure contests will be processed by this munger.')
             else:
-                print('Answer not valid. Please enter \'a\' or \'r\'.')
-            print(f'Ballot Measure Selections for the munger {self.name} are:\n'
+                print(f'Ballot Measure Selections for the munger {self.name} are:\n'
                   f'{", ".join(self.ballot_measure_selection_list)}')
-            correct = input('Is this consistent with your datafile (y/n)?\n')
-        if needs_warning:
-            print(f'To make this change permanent, edit the BallotMeasureSelection lines '
-                  f'in {self.name}/raw_identifiers.txt')
+            if not self.ballot_measure_count_column_selections.empty:
+                warnings.warn(
+                    f'WARNING: When {self.ballot_measure_style_description},\n'
+                    f'there should be no content in the munger\'s ballot_measure_count_column_selections attributes.\n'
+                    f'Check for unnecessary rows in {self.name}/ballot_measure_count_column_selections.txt.')
+            needs_warning = False
+            correct = input('Does this list include every ballot measure selection name in your datafile (y/n)?\n')
+            while correct != 'y':
+                needs_warning = True
+                add_or_remove = input('Enter \'a\' to add and \'r\' to remove Ballot Measure Selections.\n')
+                if add_or_remove == 'a':
+                    new = input(f'Enter a missing selection\n')
+                    if new != '':
+                        self.ballot_measure_selection_list.append(new)
+                elif add_or_remove == 'r' :
+                    idx, val = ui.pick_one(pd.DataFrame([[x] for x in self.ballot_measure_selection_list],columns=['Selection']),'Selection',item='Selection')
+                    if idx is not None:
+                        self.ballot_measure_selection_list.remove(val)
+                else:
+                    print('Answer not valid. Please enter \'a\' or \'r\'.')
+                print(f'Ballot Measure Selections for the munger {self.name} are:\n'
+                      f'{", ".join(self.ballot_measure_selection_list)}')
+                correct = input('Is this consistent with your datafile (y/n)?\n')
+            if needs_warning:
+                print(f'To make this change permanent, edit the BallotMeasureSelection lines '
+                      f'in {self.name}/raw_identifiers.txt')
+        elif self.ballot_measure_style == 'yes_and_no_are_candidates':
+            if self.ballot_measure_selection_list:
+                warnings.warn(
+                    f'WARNING: there should be no ballot selections in the ballot_measure_selection_list attribute.\n'
+                    f'when {self.ballot_measure_style_description}.\n'
+                    f'Check for unnecessary rows in {self.name}/raw_identifiers.txt.')
+            # TODO check that every field in ballot_measure_count_column_selections is in count_columns
+            for f in self.ballot_measure_count_column_signs.fieldname.to_list():
+                if f not in self.count_columns.RawName:
+                    input(f'The column {f} in {self.name}/ballot_measure_count_column_selections.txt\n'
+                          f'is not listed in the {self.name}/count_columns attribute.\n'
+                          f'Please fix this by editing one or both files. Hit return when done')
+        # TODO allow corrections at run time.
         return
 
     def check_atomic_ru_type(self):
@@ -452,12 +471,16 @@ class Munger:
             bms_str=cdft.loc['BallotMeasureSelection','raw_identifier_formula']
             # note: bms_str will start and end with <>
             self.ballot_measure_selection_col = bms_str[1:-1]
+            self.ballot_measure_count_column_signs = None
+
         else:
-            self.ballot_measure_selection_list=None  # TODO is that necessary?
+            self.ballot_measure_selection_list=None
+            self.ballot_measure_count_column_signs = pd.read_csv(
+                os.path.join(dir_path,'ballot_measure_count_column_signs.txt'),sep='\t'
+            )
 
         with open(os.path.join(dir_path,'atomic_reporting_unit_type.txt'),'r') as ff:
             self.atomic_reporting_unit_type = ff.readline()
-
 
 if __name__ == '__main__':
     # get absolute path to jurisdictions directory

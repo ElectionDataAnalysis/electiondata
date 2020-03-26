@@ -179,6 +179,7 @@ def check_count_columns(df,file,mungerdir,CDF_schema_def_dir):
 	"""Checks that <df> is a proper count_columns dataframe;
 	If not, guides user to correct <file> and then upload its
 	contents to a proper count_columns dataframe, which it returns"""
+	# TODO format of count_columns depends on ballot_measure style. Change this -- add ballotmeasurecolumns.txt?
 
 	# get count types from CDF_schema_def_dir and raw cols from munger directory once at beginning
 	with open(os.path.join(CDF_schema_def_dir,'enumerations/CountItemType.txt'),'r') as f:
@@ -578,7 +579,7 @@ def get_or_create_election_in_db(sess):
 	if election_idx is None:
 		election_record_d, election_enum_d = create_record_in_db(sess,project_root,'Election')
 		election_idx = election_record_d['Id']
-		elecitontype = election_enum_d['ElectionType']
+		electiontype = election_enum_d['ElectionType']
 	else:
 		et_row = election_df.loc[:,['ElectionType_Id','OtherElectionType']].merge(
 			electiontype_df,left_on='ElectionType_Id',right_index=True)
@@ -599,12 +600,15 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 	enum_val = {}	# dict to hold plain-text values of enumerations (e.g., ElectionType)
 
 	# check for existing similar records in db
-	already = pd.read_sql_table(table,sess.bind,index_col='Id')
+	from_db = pd.read_sql_table(table,sess.bind,index_col='Id')
 	# filter via known_info_d
-	already = already.loc[(already[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
+	if not from_db.empty:
+		already = from_db.loc[(from_db[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
+	else:
+		already = from_db
 	if not already.empty:
 		print('Is the desired record already in the database?')
-		record_idx, record = pick_one(already,name_field,item='database record')
+		record_idx, record = pick_one(already,name_field)
 		if record_idx:
 			# get the plain enumerations from the <enumeration>_Id and Other<enumeration>
 			df['enumerations'] = pd.read_csv(
