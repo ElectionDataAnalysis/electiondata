@@ -428,7 +428,7 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 	return context_df
 
 
-def pick_munger(sess,munger_dir='mungers/',column_list=None,root='.'):
+def pick_munger(sess,munger_dir='mungers/',column_list=None,root='.',test_munger=True):
 	"""pick (or create) a munger """
 	choice_list = os.listdir(munger_dir)
 	for choice in os.listdir(munger_dir):
@@ -449,10 +449,11 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,root='.'):
 		# user chooses state munger
 		munger_name = input('Enter a short name (alphanumeric only, no spaces) for your munger'
 						   '(e.g., \'nc_primary18\')\n')
-	need_to_check_munger = input(f'Check compatibility of munger {munger_name} (y/n)?\n')
-	if need_to_check_munger == 'y':
-		template_dir = os.path.join(root,'templates/munger_templates')
-		check_munger(sess,munger_name,munger_dir,template_dir,column_list)
+	if test_munger:
+		need_to_check_munger = input(f'Check compatibility of munger {munger_name} (y/n)?\n')
+		if need_to_check_munger == 'y':
+			template_dir = os.path.join(root,'templates/munger_templates')
+			check_munger(sess,munger_name,munger_dir,template_dir,column_list)
 
 	munger_path = os.path.join(munger_dir,munger_name)
 	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(root,'election_anomaly/CDF_schema_def_info'))
@@ -754,7 +755,8 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 	column_list = raw.columns.to_list()
 	print('Specify the munger:')
 	munger = pick_munger(
-		session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),root=project_root)
+		session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
+		root=project_root,test_munger=test_munger)
 	print(f'Munger {munger.name} has been chosen and prepared.')
 
 	if test_munger:
@@ -763,14 +765,14 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 		munger.check_ballot_measure_selections()
 		munger.check_atomic_ru_type()
 
-		# change column names in <raw> if necessary
-		# TODO check that col names in count_columns and ballot_measure*.txt are changed
-		raw.rename(columns=munger.rename_column_dictionary,inplace=True)
+	# change column names in <raw> if necessary
+	# TODO check that col names in count_columns and ballot_measure*.txt are changed
+	raw.rename(columns=munger.rename_column_dictionary,inplace=True)
 
 	# replace any non-numeric strings in count columns with 0.
 	# TODO generalize to decimals for the rare elections wtih fractional votes
 	int_pattern = r'.*[^0-9]+.*'
-	for c in munger.count_columns:
+	for c in munger.count_columns.RawName.unique():
 		raw[c] = raw[c].replace(int_pattern,'0',regex=True)
 
 	bmc_results,cc_results = mr.contest_type_split(raw,munger)

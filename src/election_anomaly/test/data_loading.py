@@ -46,9 +46,9 @@ if __name__ == '__main__':
 
 	# load new datafile
 
-	# TODO fix test_munger keyword argument for new_datafile() so it changes col names as necessary
 	state, munger = ui.new_datafile(
-		raw_file,sep,new_df_session,state_short_name=state_short_name,encoding=dfile_d['encoding'],project_root=project_root)
+		raw_file,sep,new_df_session,state_short_name=state_short_name,encoding=dfile_d['encoding'],
+		project_root=project_root,test_munger=False)
 
 	eng.dispose()
 	print('Done! (user_interface)')
