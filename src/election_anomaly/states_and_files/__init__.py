@@ -154,7 +154,7 @@ class Munger:
             else:
                 print(f'Ballot Measure Selections for the munger {self.name} are:\n'
                   f'{", ".join(self.ballot_measure_selection_list)}')
-            if not self.ballot_measure_count_column_selections.empty:
+            if self.ballot_measure_count_column_selections:
                 warnings.warn(
                     f'WARNING: When {self.ballot_measure_style_description},\n'
                     f'there should be no content in the munger\'s ballot_measure_count_column_selections attributes.\n'
@@ -293,7 +293,8 @@ class Munger:
         try:
             with open(os.path.join(self.path_to_munger_dir,f'unmunged_{element}s_in_datafile.txt'),'r') as f:
                 unmunged_elements_in_datafile = [x.strip() for x in f.readlines()]
-                not_munged = [x for x in not_identified if x not in unmunged_elements_in_datafile]
+                # TODO blank values will not be included in <not_munged> - how does this flow through
+                not_munged = [x for x in not_identified if x not in unmunged_elements_in_datafile and x != '']
         except FileNotFoundError:
             not_munged = not_identified
 

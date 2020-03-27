@@ -838,6 +838,10 @@ if __name__ == '__main__':
 	state_short_name = None
 
 	# load new datafile
+	# TODO handle default values more programmatically
+	encoding = dfile_d['encoding']
+	if encoding == '':
+		encoding = 'utf-8'
 
 	state, munger = new_datafile(
 		raw_file,sep,new_df_session,state_short_name=state_short_name,encoding=dfile_d['encoding'],project_root=project_root)
