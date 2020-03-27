@@ -11,8 +11,6 @@ import analyze as an
 import re
 import os
 
-from db_routines import dframe_to_sql
-
 
 def load_context_dframe_into_cdf(session,project_root,state,source_df1,element,
                                  CDF_schema_def_dir='CDF_schema_def_info/'):
@@ -244,6 +242,10 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
     # TODO some of this could be done once for both BallotMeasure and Candidate contests. Rearrange for efficiency?
     assert contest_type in ['BallotMeasure','Candidate'], f'Contest type {contest_type} not recognized'
 
+    # change any empty count_column values to zero
+    c = mu.count_columns.RawName.to_list()
+    row[c] = row[c].applymap(lambda x: '0' if x=='' else x)
+
 
     cdf_d = {}  # dataframe for each table
     for element in ['Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType','CandidateContest']:
@@ -292,8 +294,10 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
                 new_rows[sel].loc[:,'BallotMeasureSelection'] = sel
                 # melt vote counts into appropriately titled columns
                 for vt in vote_type_list:
-                    raw_name = mu.count_columns[(mu.count_columns.BallotMeasureSelection==sel) &
-                                                (mu.count_columns.CountItemType==vt)].iloc[0]['RawName']
+                    vt_df = mu.count_columns[mu.count_columns.CountItemType==vt].merge(
+                        mu.ballot_measure_count_column_selections,left_on='RawName',right_on='fieldname'
+                    )
+                    raw_name = vt_df[vt_df.selection==sel].iloc[0]['RawName']
                     new_rows[sel].loc[:,vt]=row[raw_name]
             row = pd.concat([new_rows[k] for k in new_rows.keys()])
             bm_contest_selection = pd.concat([bmc[k] for k in bmc.keys()])

@@ -111,7 +111,7 @@ class AnomalyDataFrame(object):
 class Election(object):
     def pull_rollup_from_db_by_types(self, roll_up_to_ru_type, atomic_ru_type='precinct',
             contest_name_list=None,
-            db_paramfile='../jurisdictions/database.ini'):
+            db_paramfile='/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'):
 
         eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=self.state.short_name)
 
@@ -179,8 +179,8 @@ class Election(object):
             eng.dispose()
         return rollup_dframe
 
-    def summarize_results(self,atomic_ru_type='precinct',mode='top',skip_total_column=True):
-        rollup=self.pull_rollup_from_db_by_types('state',atomic_ru_type=atomic_ru_type)
+    def summarize_results(self,atomic_ru_type='precinct',mode='top',skip_total_column=True,db_paramfile='/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'):
+        rollup=self.pull_rollup_from_db_by_types('state',atomic_ru_type=atomic_ru_type,db_paramfile=db_paramfile)
         rollup=rollup.drop(['Contest_Id','ReportingUnit_Id','Selection_Id','CountItemType_Id','contest_type'],axis=1)
         if mode=='top':
             if skip_total_column:
@@ -412,24 +412,28 @@ def anomaly_list(contest_name, c, aframe_columnlist=None):
     return anomaly_list
 
 if __name__ == '__main__':
-    project_root = os.getcwd().split('election_anomaly')[0]
-    paramfile = os.path.join(project_root,'jurisdictions/database.ini')
-    state_name = 'NC_test2'
+    project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
+
+    # pick db to use
+    db_paramfile = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'
+    db_name = 'MD'
+    state_name = 'MD'
     # state_name = None
 
-    db_name = ui.pick_database(paramfile,state_name=state_name)
+    db_name = ui.pick_database(db_paramfile,db_name=db_name)
 
     # initialize main session for connecting to db
-    eng, meta_generic = dbr.sql_alchemy_connect(db_name=state_name)
+    eng, meta_generic = dbr.sql_alchemy_connect(
+        paramfile=db_paramfile,db_name=state_name)
     Session = sessionmaker(bind=eng)
     analysis_session = Session()
 
     state = ui.pick_state(analysis_session.bind,project_root,
         path_to_states=os.path.join(project_root,'jurisdictions'),
-        db_name=state_name)
-    e = Election(analysis_session,state)
+        state_name=state_name)
+    e =Election(analysis_session,state)
 
-    e.summarize_results()
+    e.summarize_results(db_paramfile=db_paramfile)
 
     eng.dispose()
     print('Done')

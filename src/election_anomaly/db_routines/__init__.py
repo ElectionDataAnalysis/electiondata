@@ -6,10 +6,10 @@ import sqlalchemy
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
 import sqlalchemy as db
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.engine import reflection
+import user_interface as ui
 from configparser import ConfigParser
 import pandas as pd
+import tkinter as tk
 import os
 
 
@@ -90,7 +90,10 @@ def establish_connection(paramfile = '../jurisdictions/database.ini',db_name='po
     return con
 
 
-def sql_alchemy_connect(schema=None,paramfile = '../jurisdictions/database.ini',db_name='postgres'):
+def sql_alchemy_connect(
+        schema=None,
+        paramfile='/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini',
+        db_name='postgres'):
     """Returns an engine and a metadata object"""
 
     params = config(paramfile)
@@ -110,10 +113,18 @@ def sql_alchemy_connect(schema=None,paramfile = '../jurisdictions/database.ini',
     return engine, meta
 
 
-def config(filename='../jurisdictions/database.ini', section='postgresql'):
+def config(filename=None, section='postgresql'):
     """
     Creates the parameter dictionary needed to log into our db
+    using info in <filename>
     """
+    if not filename:
+        # if parameter file is not provided, ask for it
+        # initialize root widget for tkinter
+        tk_root = tk.Tk()
+        project_root=ui.get_project_root()
+        ui.pick_paramfile(tk_root,project_root=project_root)
+
     # create a parser
     parser = ConfigParser()
     # read config file
@@ -178,8 +189,8 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
         target=target.drop(['Id','VoteCount_Id'],axis=1)
     df_to_db = dframe.copy()
     if 'Count' in df_to_db.columns:
-        # TODO bug: catch nulls (e.g., in MD 2018g upload)
-        df_to_db.loc[:,'Count']=df_to_db['Count'].astype('int64')
+        # TODO bug: catch anything not an integer (e.g., in MD 2018g upload)
+        df_to_db.loc[:,'Count']=df_to_db['Count'].astype('int64',errors='ignore')
     #df_to_db=df_to_db.astype(str)
     #target=target.astype(str)
 

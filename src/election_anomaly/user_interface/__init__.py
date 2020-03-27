@@ -729,7 +729,7 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
-def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name=None,encoding='utf-8'):
+def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name=None,encoding='utf-8',test_munger=True):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
@@ -753,14 +753,16 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 	print('Specify the munger:')
 	munger = pick_munger(
 		session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),root=project_root)
-	print(f'Munger {munger.name} has been chosen and prepared.\n'
-		  f'Next we check compatibility of the munger with the datafile.')
+	print(f'Munger {munger.name} has been chosen and prepared.')
 
-	munger.check_ballot_measure_selections()
-	munger.check_atomic_ru_type()
+	if test_munger:
+		print( f'Next we check compatibility of the munger with the datafile.')
 
-	# change column names in <raw> if necessary
-	raw.rename(columns=munger.rename_column_dictionary,inplace=True)
+		munger.check_ballot_measure_selections()
+		munger.check_atomic_ru_type()
+
+		# change column names in <raw> if necessary
+		raw.rename(columns=munger.rename_column_dictionary,inplace=True)
 
 	bmc_results,cc_results = mr.contest_type_split(raw,munger)
 	if bmc_results.empty:
@@ -775,11 +777,11 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 			['Candidate'], ['Ballot Measure'], ['Both Candidate and Ballot Measure']
 		], columns=['Contest Type'])
 		contest_type_idx, contest_type = pick_one(contest_type_df,'Contest Type', item='contest type',required=True)
-
-	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
-		munger.check_new_results_dataset(cc_results,state,session,'Candidate',project_root=project_root)
-	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
-		munger.check_new_results_dataset(cc_results,state,session,'BallotMeasure',project_root=project_root)
+	if test_munger:
+		if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
+			munger.check_new_results_dataset(cc_results,state,session,'Candidate',project_root=project_root)
+		if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
+			munger.check_new_results_dataset(cc_results,state,session,'BallotMeasure',project_root=project_root)
 
 	# TODO set empty count columns to zero
 	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
