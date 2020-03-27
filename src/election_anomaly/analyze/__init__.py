@@ -193,7 +193,9 @@ class Election(object):
 
         outpath = os.path.join(self.state.path_to_state_dir,'output')
         if os.path.isdir(outpath):
-            output.to_csv(os.path.join(outpath,f'{self.short_name}_{mode}_results.txt'),sep='\t')
+            fpath = os.path.join(outpath,f'{self.short_name}_{mode}_results.txt')
+            output.to_csv(fpath,sep='\t')
+            print(f'Results exported to {fpath}')
         else:
             print(f'Cannot export; directory {outpath} does not exist')
         return output
@@ -418,8 +420,8 @@ if __name__ == '__main__':
 
     # pick db to use
     db_paramfile = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'
-    db_name = 'MD'
-    state_name = 'MD'
+    db_name = 'NC'
+    state_name = 'NC'
     # state_name = None
 
     db_name = ui.pick_database(db_paramfile,db_name=db_name)

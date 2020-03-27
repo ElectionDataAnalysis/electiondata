@@ -294,9 +294,9 @@ class Munger:
             with open(os.path.join(self.path_to_munger_dir,f'unmunged_{element}s_in_datafile.txt'),'r') as f:
                 unmunged_elements_in_datafile = [x.strip() for x in f.readlines()]
                 # TODO blank values will not be included in <not_munged> - how does this flow through
-                not_munged = [x for x in not_identified if x not in unmunged_elements_in_datafile and x != '']
+            not_munged = [x for x in not_identified if x not in unmunged_elements_in_datafile and x != '']
         except FileNotFoundError:
-            not_munged = not_identified
+            not_munged = [x for x in not_identified if x !='']
 
         if len(not_munged) > 0:
             print(f'Some {element}s in the results file cannot be interpreted by the munger {self.name}.')
