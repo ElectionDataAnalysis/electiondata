@@ -166,7 +166,7 @@ def pick_database(paramfile,db_name=None):
 			pick_db_session,dirpath=os.path.join(
 				project_root,'election_anomaly/CDF_schema_def_info/'),delete_existing=False)
 		db_cdf.fill_cdf_enum_tables(pick_db_session,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
-
+		print(f'New database {desired_db} has been created using the common data format.')
 	# clean up
 	if cur:
 		cur.close()
@@ -749,6 +749,8 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 	raw = pd.read_csv(raw_file,sep=raw_file_sep,dtype=str,encoding=encoding,quoting=csv.QUOTE_MINIMAL).fillna('')
 	# strip any whitespace
 	raw = raw.applymap(lambda x: x.strip())
+
+
 	column_list = raw.columns.to_list()
 	print('Specify the munger:')
 	munger = pick_munger(
@@ -762,7 +764,14 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 		munger.check_atomic_ru_type()
 
 		# change column names in <raw> if necessary
+		# TODO check that col names in count_columns and ballot_measure*.txt are changed
 		raw.rename(columns=munger.rename_column_dictionary,inplace=True)
+
+	# replace any non-numeric strings in count columns with 0.
+	# TODO generalize to decimals for the rare elections wtih fractional votes
+	int_pattern = r'.*[^0-9]+.*'
+	for c in munger.count_columns:
+		raw[c] = raw[c].replace(int_pattern,'0',regex=True)
 
 	bmc_results,cc_results = mr.contest_type_split(raw,munger)
 	if bmc_results.empty:

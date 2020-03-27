@@ -26,7 +26,6 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',dele
     id_seq = sqlalchemy.Sequence('id_seq', metadata=metadata)
 
     # create enumeration tables and push to db
-    print('Creating enumeration tables')
     e_table_list = enum_table_list(dirpath)
     for t in e_table_list:
         if t=='BallotMeasureSelection':

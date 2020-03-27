@@ -167,12 +167,12 @@ Maryland;State Legislature Senate District 6	Maryland;State Legislature Senate D
 Maryland;State Legislature Senate District 7	Maryland;State Legislature Senate District 7	1	1	0	TRUE
 Maryland;State Legislature Senate District 8	Maryland;State Legislature Senate District 8	1	1	0	TRUE
 Maryland;State Legislature Senate District 9	Maryland;State Legislature Senate District 9	1	1	0	TRUE
-Maryland;Representative in Congress District 1	Maryland;Representative in Congress District 1	1	1	0	TRUE
-Maryland;Representative in Congress District 2	Maryland;Representative in Congress District 2	1	1	0	TRUE
-Maryland;Representative in Congress District 3	Maryland;Representative in Congress District 3	1	1	0	TRUE
-Maryland;Representative in Congress District 4	Maryland;Representative in Congress District 4	1	1	0	TRUE
-Maryland;Representative in Congress District 5	Maryland;Representative in Congress District 5	1	1	0	TRUE
-Maryland;Representative in Congress District 6	Maryland;Representative in Congress District 6	1	1	0	TRUE
-Maryland;Representative in Congress District 7	Maryland;Representative in Congress District 7	1	1	0	TRUE
-Maryland;Representative in Congress District 8	Maryland;Representative in Congress District 8	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 1	Maryland;US Congress House of Representatives District 1	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 2	Maryland;US Congress House of Representatives District 2	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 3	Maryland;US Congress House of Representatives District 3	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 4	Maryland;US Congress House of Representatives District 4	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 5	Maryland;US Congress House of Representatives District 5	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 6	Maryland;US Congress House of Representatives District 6	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 7	Maryland;US Congress House of Representatives District 7	1	1	0	TRUE
+Maryland;US Congress House of Representatives District 8	Maryland;US Congress House of Representatives District 8	1	1	0	TRUE
 Maryland;Judge Court of Appeals District 3	Maryland;Judge Court of Appeals District 3	1	1	0	TRUE

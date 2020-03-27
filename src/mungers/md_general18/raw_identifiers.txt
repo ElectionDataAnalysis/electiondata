@@ -128,14 +128,14 @@ Office	Maryland;House of Delegates District 7	House of Delegates;07
 Office	Maryland;House of Delegates District 8	House of Delegates;08
 Office	Maryland;House of Delegates District 9A	House of Delegates;09A
 Office	Maryland;House of Delegates District 9B	House of Delegates;09B
-Office	Maryland;Representative in Congress District 1	Representative in Congress;01
-Office	Maryland;Representative in Congress District 2	Representative in Congress;02
-Office	Maryland;Representative in Congress District 3	Representative in Congress;03
-Office	Maryland;Representative in Congress District 4	Representative in Congress;04
-Office	Maryland;Representative in Congress District 5	Representative in Congress;05
-Office	Maryland;Representative in Congress District 6	Representative in Congress;06
-Office	Maryland;Representative in Congress District 7	Representative in Congress;07
-Office	Maryland;Representative in Congress District 8	Representative in Congress;08
+Office	Maryland;US Congress House of Representatives District 1	Representative in Congress;01
+Office	Maryland;US Congress House of Representatives District 2	Representative in Congress;02
+Office	Maryland;US Congress House of Representatives District 3	Representative in Congress;03
+Office	Maryland;US Congress House of Representatives District 4	Representative in Congress;04
+Office	Maryland;US Congress House of Representatives District 5	Representative in Congress;05
+Office	Maryland;US Congress House of Representatives District 6	Representative in Congress;06
+Office	Maryland;US Congress House of Representatives District 7	Representative in Congress;07
+Office	Maryland;US Congress House of Representatives District 8	Representative in Congress;08
 Office	Maryland;State Legislature Senate District 1	State Senate District 1
 Office	Maryland;State Legislature Senate District 10	State Senate District 10
 Office	Maryland;State Legislature Senate District 11	State Senate District 11
@@ -2692,14 +2692,14 @@ CandidateContest	Maryland;House of Delegates District 45	House of Delegates;45
 CandidateContest	Maryland;House of Delegates District 46	House of Delegates;46
 CandidateContest	Maryland;House of Delegates District 47A	House of Delegates;47A
 CandidateContest	Maryland;House of Delegates District 47B	House of Delegates;47B
-CandidateContest	Maryland;Representative in Congress District 1	Representative in Congress;01
-CandidateContest	Maryland;Representative in Congress District 2	Representative in Congress;02
-CandidateContest	Maryland;Representative in Congress District 3	Representative in Congress;03
-CandidateContest	Maryland;Representative in Congress District 4	Representative in Congress;04
-CandidateContest	Maryland;Representative in Congress District 5	Representative in Congress;05
-CandidateContest	Maryland;Representative in Congress District 6	Representative in Congress;06
-CandidateContest	Maryland;Representative in Congress District 7	Representative in Congress;07
-CandidateContest	Maryland;Representative in Congress District 8	Representative in Congress;08
+CandidateContest	Maryland;US Congress House of Representatives District 1	Representative in Congress;01
+CandidateContest	Maryland;US Congress House of Representatives District 2	Representative in Congress;02
+CandidateContest	Maryland;US Congress House of Representatives District 3	Representative in Congress;03
+CandidateContest	Maryland;US Congress House of Representatives District 4	Representative in Congress;04
+CandidateContest	Maryland;US Congress House of Representatives District 5	Representative in Congress;05
+CandidateContest	Maryland;US Congress House of Representatives District 6	Representative in Congress;06
+CandidateContest	Maryland;US Congress House of Representatives District 7	Representative in Congress;07
+CandidateContest	Maryland;US Congress House of Representatives District 8	Representative in Congress;08
 CandidateContest	Maryland;State Senate District 1	State Senator;01
 CandidateContest	Maryland;State Senate District 2	State Senator;02
 CandidateContest	Maryland;State Senate District 3	State Senator;03

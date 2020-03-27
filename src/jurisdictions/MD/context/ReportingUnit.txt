@@ -2357,15 +2357,14 @@ Maryland;Talbot County;Election District 4:Precinct 1	precinct
 Maryland;Talbot County;Election District 5	md-election-district
 Maryland;Talbot County;Election District 5:Precinct 1	precinct
 Maryland;Talbot County;Election District 5:Precinct 2	precinct
-Maryland;Representative in Congress District 1	congressional
-Maryland;Representative in Congress District 2	congressional
-Maryland;Representative in Congress District 3	congressional
-Maryland;Representative in Congress District 4	congressional
-Maryland;Representative in Congress District 5	congressional
-Maryland;Representative in Congress District 6	congressional
-Maryland;Representative in Congress District 7	congressional
-Maryland;Representative in Congress District 8	congressional
-Maryland;Washington County	county
+Maryland;US Congress House of Representatives District 1	congressional
+Maryland;US Congress House of Representatives District 2	congressional
+Maryland;US Congress House of Representatives District 3	congressional
+Maryland;US Congress House of Representatives District 4	congressional
+Maryland;US Congress House of Representatives District 5	congressional
+Maryland;US Congress House of Representatives District 6	congressional
+Maryland;US Congress House of Representatives District 7	congressional
+Maryland;US Congress House of Representatives District 8	congressional
 Maryland;Washington County;Election District 1	md-election-district
 Maryland;Washington County;Election District 1:Precinct 0	precinct
 Maryland;Washington County;Election District 10	md-election-district

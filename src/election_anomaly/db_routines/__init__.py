@@ -187,7 +187,8 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
         target=target.drop(['Election_Id','Contest_Id','Selection_Id'],axis=1)
         target=target.merge(secvcj,left_on='Id',right_on='VoteCount_Id')
         target=target.drop(['Id','VoteCount_Id'],axis=1)
-    df_to_db = dframe.copy()
+    df_to_db = dframe.drop_duplicates().copy()
+    # TODO there should be no  duplicates in dframe in the first place. MD votecount had some. Why?
     if 'Count' in df_to_db.columns:
         # TODO bug: catch anything not an integer (e.g., in MD 2018g upload)
         df_to_db.loc[:,'Count']=df_to_db['Count'].astype('int64',errors='ignore')
