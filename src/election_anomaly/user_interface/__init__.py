@@ -98,7 +98,7 @@ def pick_database(paramfile,state_name=None):
 	cur = con.cursor()
 	db_df = pd.DataFrame(dbr.query('SELECT datname FROM pg_database',[],[],con,cur))
 	db_idx,desired_db = pick_one(db_df,0,item='database')
-
+	project_root = Path(paramfile).parents[1]
 	if db_idx == None:	# if we're going to need a brand new db
 
 		desired_db = input('Enter name for new database (alphanumeric only):\n')
@@ -116,8 +116,8 @@ def pick_database(paramfile,state_name=None):
 		pick_db_session = Session()
 
 		db_cdf.create_common_data_format_tables(
-			pick_db_session,dirpath=os.path.join(
-				project_root,'election_anomaly','CDF_schema_def_info'),delete_existing=False)
+			#pick_db_session,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'),delete_existing=False)
+			pick_db_session,dirpath=os.path.join(Path(paramfile).parents[1],'election_anomaly','CDF_schema_def_info'),delete_existing=False)
 		db_cdf.fill_cdf_enum_tables(pick_db_session,None,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
 
 	# clean up
@@ -377,7 +377,7 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 	return context_df
 
 
-def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_munger_templates',root='.'):
+def pick_munger(sess,munger_dir='mungers',column_list=None,template_dir='zzz_munger_templates',root='.'):
 	"""pick (or create) a munger """
 	choice_list = os.listdir(munger_dir)
 	for choice in os.listdir(munger_dir):
@@ -403,7 +403,7 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,template_dir='zzz_mu
 		check_munger(sess,munger_name,munger_dir,template_dir,column_list)
 
 	munger_path = os.path.join(munger_dir,munger_name)
-	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(root,'election_anomaly/CDF_schema_def_info'))
+	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(root,'election_anomaly','CDF_schema_def_info'))
 	return munger
 
 
@@ -587,7 +587,7 @@ def new_datafile(raw_file,raw_file_sep,db_paramfile,project_root='.',state_short
 	column_list = raw.columns.to_list()
 	print('Specify the munger:')
 	munger = pick_munger(new_df_session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
-						 template_dir=os.path.join(project_root,'mungers/zzz_munger_templates'),root=project_root)
+						 template_dir=os.path.join(project_root,'mungers', 'zzz_munger_templates'),root=project_root)
 	print(f'Munger {munger.name} has been chosen and prepared.\n'
 		  f'Next we check compatibility of the munger with the datafile.')
 
@@ -636,7 +636,8 @@ if __name__ == '__main__':
 	state_short_name = None
 	#raw_file = os.path.join(project_root,'local_data/NC/data/2018g/nc_general/results_pct_20181106.txt')
 	# raw_file = os.path.join(project_root,'local_data/FL/data/11062018Election.txt')
-	raw_file = os.path.join(project_root,'local_data', 'MD_old', 'data', '2018g', 'md_general', 'All_By_Precinct_2018_General.csv')
+	#raw_file = os.path.join(project_root,'local_data', 'MD_old', 'data', '2018g', 'md_general', 'All_By_Precinct_2018_General.csv')
+	raw_file = os.path.join(project_root, 'local_data', 'MI', 'data', '2018g', 'mi_general', '2018vote.txt')
 	raw_file_sep = '\t'
 	db_paramfile = os.path.join(project_root,'local_data', 'database.ini')
 

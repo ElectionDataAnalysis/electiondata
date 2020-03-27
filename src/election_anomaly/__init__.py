@@ -1,6 +1,7 @@
 #!usr/bin/python3
 import os.path
 import sys
+from pathlib import Path
 
 import munge_routines
 
@@ -28,12 +29,15 @@ if __name__ == '__main__':
     # print('WARNING: Sorry, lots of bugs at the moment. Don\'t waste your time! -- Stephanie')
     # exit()
 
-    project_root = os.getcwd().split('election_anomaly')[0]
+    #project_root = os.getcwd().split('election_anomaly')[0]
+    project_root = Path(__file__).parents[1]
     # state_short_name = 'NC'
     state_short_name = None
-    raw_file = os.path.join(project_root,'local_data/FL/data/11062018Election.txt') # TODO note hard-coded
+    #raw_file = os.path.join(project_root,'local_data/FL/data/11062018Election.txt') # TODO note hard-coded
+    raw_file = os.path.join(project_root, 'local_data', 'MI', 'data', '2018g', 'mi_general', '2018vote.txt')  # TODO note hard-coded
     raw_file_sep = '\t'
-    db_paramfile = os.path.join(project_root,'local_data/database.ini')
+    #db_paramfile = os.path.join(project_root,'local_data/database.ini')
+    db_paramfile = os.path.join(project_root, 'local_data', 'database.ini')
 
     s,mu = ui.new_datafile(raw_file,raw_file_sep,db_paramfile,project_root,state_short_name=state_short_name)
 
