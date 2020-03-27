@@ -49,7 +49,7 @@ def load_context_dframe_into_cdf(session,project_root,state,source_df1,element,
             source_df = enum_col_to_id_othertext(source_df,e,cdf_e)
 
     #  commit info in source_df to corresponding cdf table to db
-    cdf_element = dframe_to_sql(source_df,session,None,element)
+    cdf_element = dbr.dframe_to_sql(source_df,session,None,element)
     if element == 'Office':
         # upload ReportingUnits from context/ReportingUnit.txt to db and upload corresponding CandidateContests too
 
@@ -69,7 +69,7 @@ def load_context_dframe_into_cdf(session,project_root,state,source_df1,element,
 
         cdf_rut = pd.read_sql_table('ReportingUnitType',session.bind)
         ru = enum_col_to_id_othertext(ru,'ReportingUnitType',cdf_rut)
-        cdf_ru = dframe_to_sql(ru,session,None,'ReportingUnit')
+        cdf_ru = dbr.dframe_to_sql(ru,session,None,'ReportingUnit')
 
         eds_ok = False
         while not eds_ok:
@@ -94,7 +94,7 @@ def load_context_dframe_into_cdf(session,project_root,state,source_df1,element,
                     'ReportingUnit',rut_list,'ReportingUnitType')
                 #  then upload to db
                 ru = enum_col_to_id_othertext(ru,'ReportingUnitType',cdf_rut)
-                cdf_ru = dframe_to_sql(ru,session,None,'ReportingUnit')
+                cdf_ru = dbr.dframe_to_sql(ru,session,None,'ReportingUnit')
                 ru_list = list(cdf_ru['Name'].unique())
             else:
                 eds_ok = True

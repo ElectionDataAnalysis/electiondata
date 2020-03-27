@@ -55,7 +55,7 @@ class State:
             # TODO can we use f'' here?
             cc_all = pd.concat([cc_all,cc_primary])
 
-        mr.dframe_to_sql(cc_all,session,None,'CandidateContest')
+        dbr.dframe_to_sql(cc_all,session,None,'CandidateContest')
         return cc_all
 
     def check_election_districts(self):
