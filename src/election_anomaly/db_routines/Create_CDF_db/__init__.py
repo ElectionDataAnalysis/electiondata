@@ -42,19 +42,27 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',dele
                   'BallotMeasureContest', 'Candidate', 'VoteCount', 'SelectionElectionContestVoteCountJoin',
                   'CandidateSelection', 'ElectionContestJoin', 'ComposingReportingUnitJoin',
                   'BallotMeasureContestSelectionJoin', 'CandidateContestSelectionJoin']
+    table_path = os.path.join(dirpath, 'Tables')
+    # assert set(table_list) == set(os.listdir('{}Tables'.format(dirpath))), \
+    #     f'Set of tables to create does not match set of tables in {dirpath}Tables directory'
 
-    assert set(table_list) == set(os.listdir('{}Tables'.format(dirpath))), \
-        f'Set of tables to create does not match set of tables in {dirpath}Tables directory'
+
+    assert set(table_list) == set(os.listdir(table_path)), \
+    f'Set of tables to create does not match set of tables in {dirpath}Tables directory'
 
     for element in table_list:
-        with open('{}Tables/{}/short_name.txt'.format(dirpath,element),'r') as f:
+        #with open('{}Tables/{}/short_name.txt'.format(dirpath,element),'r') as f:
+        with open(os.path.join(table_path, element, 'short_name.txt'), 'r') as f:
             short_name=f.read().strip()
 
         df = {}
-        file_list = os.listdir('{}Tables/{}'.format(dirpath,element))
+        file_list = os.listdir(os.path.join(table_path, element))
         flist = [ f[:-4] for f in file_list] # drop '.txt'
         for f in flist: # TODO picks up short_name too, unnecessary
-            df[f] =  pd.read_csv('{}Tables/{}/{}.txt'.format(dirpath,element,f),sep='\t')
+            #df[f] =  pd.read_csv('{}Tables/{}/{}.txt'.format(dirpath,element,f),sep='\t')
+            df[f] =  pd.read_csv(os.path.join(table_path,element,f+'.txt'),sep='\t') #consider creating element_path at the start of the loop and why not run a loop over file_list
+
+
 
         field_col_list = [Column(r['fieldname'],eval(r['datatype'])) for i,r in df['fields'].iterrows()]
         null_constraint_list = [CheckConstraint('"{}" IS NOT NULL'.format(r['not_null_fields']),name='{}_{}_not_null'.format(short_name,r['not_null_fields'])) for i,r in df['not_null_fields'].iterrows()]
@@ -78,25 +86,27 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',dele
 
 
 # TODO should we somewhere check consistency of enumeration_table_list and the files in enumerations/ ? Is the file enumeration_table_list ever used?
-def enum_table_list(dirpath= 'CDF_schema_def_info/'):
-    if not dirpath[-1] == '/': dirpath += '\''
-    file_list = os.listdir(f'{dirpath}enumerations/')
+def enum_table_list(dirpath= 'CDF_schema_def_info'):
+    #if not dirpath[-1] == '/': dirpath += '\''
+    enum_path = os.path.join(dirpath, 'enumerations' )
+    file_list = os.listdir(enum_path)
     for f in file_list:
         assert f[-4:] == '.txt', 'File name in ' + dirpath + 'enumerations/ not in expected form: ' + f
     enum_table_list = [f[:-4] for f in file_list]
     return enum_table_list
 
 
-def fill_cdf_enum_tables(session,schema,dirpath= 'CDF_schema_def_info/'):
+def fill_cdf_enum_tables(session,schema,dirpath= 'CDF_schema_def_info'):
     """takes lines of text from file and inserts each line into the txt field of the enumeration table"""
-    if not dirpath[-1] == '/': dirpath += '\''
+    #if not dirpath[-1] == '/': dirpath += '\''
     e_table_list = enum_table_list(dirpath)
     for f in e_table_list:
         if f == 'BallotMeasureSelection':
             txt_col='Selection'
         else:
             txt_col='Txt'
-        dframe = pd.read_csv('{}enumerations/{}.txt'.format(dirpath,f),header=None,names = [txt_col])
+        #dframe = pd.read_csv('{}enumerations/{}.txt'.format(dirpath,f),header=None,names = [txt_col])
+        dframe = pd.read_csv(os.path.join(dirpath, 'enumerations', f + '.txt'), header=None, names=[txt_col])
         dframe.to_sql(f,session.bind,schema=schema,if_exists='append',index=False)
     session.flush()
     return e_table_list
