@@ -69,9 +69,11 @@ def append_to_composing_reporting_unit_join(session,ru):
                                         suffixes=['','_' + str(i)])
         cruj_dframe_list.append(ru_for_cruj[['Id','Id_{}'.format(i)]].rename(
             columns={'Id':'ChildReportingUnit_Id','Id_{}'.format(i):'ParentReportingUnit_Id'}))
-
-    cruj_dframe = pd.concat(cruj_dframe_list)
-    cruj_dframe = dframe_to_sql(cruj_dframe,session,None,'ComposingReportingUnitJoin')
+    if cruj_dframe_list:
+        cruj_dframe = pd.concat(cruj_dframe_list)
+        cruj_dframe = dframe_to_sql(cruj_dframe,session,None,'ComposingReportingUnitJoin')
+    else:
+        cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin',session.bind)
     session.flush()
     return cruj_dframe
 

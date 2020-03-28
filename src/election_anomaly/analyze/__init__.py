@@ -432,9 +432,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=eng)
     analysis_session = Session()
 
-    state = ui.pick_state(analysis_session.bind,project_root,
-        path_to_states=os.path.join(project_root,'jurisdictions'),
-        state_name=state_name)
+    state = ui.pick_state_from_filesystem(analysis_session.bind,project_root,
+                                          path_to_states=os.path.join(project_root,'jurisdictions'),
+                                          state_name=state_name)
     e =Election(analysis_session,state)
 
     e.summarize_results(db_paramfile=db_paramfile)

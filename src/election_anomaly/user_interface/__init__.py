@@ -209,13 +209,15 @@ def check_count_columns(df,file,mungerdir,CDF_schema_def_dir):
 	return df
 
 
-def pick_state(con,project_root,path_to_states='jurisdictions/',state_name=None):
+def pick_state_from_filesystem(con,project_root,path_to_states='jurisdictions/',state_name=None):
 	"""Returns a State object.
 	If <state_short_name> is given, this just initializes based on info
 	in the folder with that name; """
+	# TODO need to get the ReportingUnit.Id for the state somewhere and pass it to the row-by-row processor
 	if state_name is None:
 		choice_list = [x for x in os.listdir(path_to_states) if os.path.isdir(os.path.join(path_to_states,x))]
 		state_df = pd.DataFrame(choice_list,columns=['State'])
+		print('Pick the filesystem directory for your state.')
 		state_idx,state_name = pick_one(state_df,'State', item='state')
 
 		if state_idx is None:
@@ -567,7 +569,14 @@ def pick_state_from_db(sess):
 	assert rut[rut.Txt=='state'].shape[0] == 1, '\'ReportingUnitType\' table does not have exactly one \'state\' entry'
 	state_type_id = rut[rut.Txt=='state'].first_valid_index()
 	states = ru[ru.ReportingUnitType_Id==state_type_id]
-	state_idx, state_internal_db_name = pick_one(states,'Name','state')
+	if states.empty:
+		print('No state record found in the database. Please create one.')
+		state_record_d, state_enum_d = create_record_in_db(
+			sess,project_root,'ReportingUnit',known_info_d={'ReportingUnit_Id':state_type_id,'OtherReportingUnit':''})
+		state_idx = state_record_d['Id']
+		state_internal_db_name = state_record_d['Name']
+	else:
+		state_idx, state_internal_db_name = pick_one(states,'Name','state')
 	return state_idx, state_internal_db_name
 
 
@@ -735,7 +744,7 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 	into common data format.
 	Assumes cdf db exists already"""
 
-	state = pick_state(
+	state = pick_state_from_filesystem(
 		session.bind,project_root,
 		path_to_states=os.path.join(project_root,'jurisdictions'),
 		state_name=state_short_name)
@@ -770,11 +779,13 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 	raw.rename(columns=munger.rename_column_dictionary,inplace=True)
 
 	# replace any non-numeric strings in count columns with 0.
+	print('Replacing any non-integer entries in datafile count columns with 0')
 	# TODO generalize to decimals for the rare elections wtih fractional votes
 	int_pattern = r'.*[^0-9]+.*'
 	for c in munger.count_columns.RawName.unique():
 		raw[c] = raw[c].replace(int_pattern,'0',regex=True)
 
+	print('Splitting datafile into BallotMeasureContest rows and CandidateContest rows.')
 	bmc_results,cc_results = mr.contest_type_split(raw,munger)
 	if bmc_results.empty:
 		print('Datafile has only Candidate Contests, and no Ballot Measure Contests')
@@ -794,7 +805,6 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 		if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
 			munger.check_new_results_dataset(cc_results,state,session,'BallotMeasure',project_root=project_root)
 
-	# TODO set empty count columns to zero
 	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
 		mr.raw_elements_to_cdf(session,munger,cc_results,'Candidate',election_idx,electiontype,state_idx)
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
@@ -844,7 +854,7 @@ if __name__ == '__main__':
 		encoding = 'utf-8'
 
 	state, munger = new_datafile(
-		raw_file,sep,new_df_session,state_short_name=state_short_name,encoding=dfile_d['encoding'],project_root=project_root)
+		raw_file,sep,new_df_session,state_short_name=state_short_name,encoding=encoding,project_root=project_root)
 
 	eng.dispose()
 	print('Done! (user_interface)')

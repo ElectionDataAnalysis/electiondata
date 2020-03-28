@@ -8,7 +8,7 @@ if __name__ == '__main__':
 
 	print('\nGet ready to load some election result data!\n')
 	munger_needs_test = input('Do you want program to help check munger (y/n)\n')
-	if munger_needs_test:
+	if munger_needs_test == 'y':
 		print('This program will walk you through the process of creating or checking\n'
 		'an automatic munger that will load your data into a database in the '
 		'NIST common data format.')
