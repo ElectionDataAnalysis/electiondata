@@ -423,8 +423,8 @@ class Munger:
             if not os.path.isfile(os.path.join(dir_path,ff)):
                 input(f'Directory \n\t{dir_path}\ndoes not contain file {ff}.\n'
                       f'Please create the file and hit return to continue')
-        self.name=dir_path.split('/')[-1]    # e.g., 'nc_general'
-
+        #self.name=dir_path.split('/')[-1]    # e.g., 'nc_general'
+        self.name= os.path.basename(dir_path) # e.g., 'nc_general'
         self.path_to_munger_dir=dir_path
 
         # read raw_identifiers file into a table

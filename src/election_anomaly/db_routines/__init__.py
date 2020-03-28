@@ -80,8 +80,10 @@ def append_to_composing_reporting_unit_join(session,ru):
 
 def get_path_to_db_paramfile():
     current_dir = os.getcwd()
-    path_to_src = current_dir.split('/election_anomaly/')[0]
-    fpath='{}/jurisdictions/database.ini'.format(path_to_src)
+    # path_to_src = current_dir.split('/election_anomaly/')[0]
+    path_to_src = current_dir.split('src')[0]
+    #fpath='{}/local_data/database.ini'.format(path_to_src)
+    fpath = os.path.join(path_to_src, 'src', 'local_data', 'database.ini')
     return fpath
 
 

@@ -13,6 +13,7 @@ import re
 import datetime
 import states_and_files as sf
 import random
+from pathlib import Path
 import tkinter as tk
 from tkinter import filedialog
 
@@ -144,7 +145,7 @@ def pick_database(paramfile,db_name=None):
 	cur = con.cursor()
 	db_df = pd.DataFrame(dbr.query('SELECT datname FROM pg_database',[],[],con,cur))
 	db_idx,desired_db = pick_one(db_df,0,item='database')
-
+	project_root = Path(paramfile).parents[1]
 	if db_idx == None:	# if we're going to need a brand new db
 
 		desired_db = input('Enter name for new database (alphanumeric only):\n')
@@ -163,10 +164,13 @@ def pick_database(paramfile,db_name=None):
 		pick_db_session = Session()
 
 		db_cdf.create_common_data_format_tables(
-			pick_db_session,dirpath=os.path.join(
-				project_root,'election_anomaly/CDF_schema_def_info/'),delete_existing=False)
+			pick_db_session,dirpath=os.path.join(Path(paramfile).parents[1],'election_anomaly','CDF_schema_def_info'),
+			delete_existing=False)
 		db_cdf.fill_cdf_enum_tables(pick_db_session,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
 		print(f'New database {desired_db} has been created using the common data format.')
+
+		db_cdf.fill_cdf_enum_tables(pick_db_session,None,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
+
 	# clean up
 	if cur:
 		cur.close()
@@ -430,7 +434,7 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 	return context_df
 
 
-def pick_munger(sess,munger_dir='mungers/',column_list=None,root='.',test_munger=True):
+def pick_munger(sess,munger_dir='mungers',column_list=None,root='.',test_munger=True):
 	"""pick (or create) a munger """
 	choice_list = os.listdir(munger_dir)
 	for choice in os.listdir(munger_dir):
@@ -458,7 +462,7 @@ def pick_munger(sess,munger_dir='mungers/',column_list=None,root='.',test_munger
 			check_munger(sess,munger_name,munger_dir,template_dir,column_list)
 
 	munger_path = os.path.join(munger_dir,munger_name)
-	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(root,'election_anomaly/CDF_schema_def_info'))
+	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(root,'election_anomaly','CDF_schema_def_info'))
 	return munger
 
 

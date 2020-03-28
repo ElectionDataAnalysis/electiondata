@@ -6,7 +6,7 @@ District Code	integer
 Status Code	integer
 Candidate ID#	integer
 County Code	integer
-City/Town Code 	integer
+City/Town Code	integer
 Ward Number	integer
 Precinct Number	integer
 Precinct Label	string
