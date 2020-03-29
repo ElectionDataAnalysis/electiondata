@@ -132,7 +132,7 @@ def show_sample(st,items,condition,outfile='shown_items.txt',dir=None):
 	return
 
 
-def pick_database(paramfile,db_name=None):
+def pick_database(project_root,paramfile,db_name=None):
 	"""Establishes connection to db with name <db_name>,
 	or creates a new cdf_db with that name.
 	In any case, returns the name of the DB."""
@@ -145,7 +145,6 @@ def pick_database(paramfile,db_name=None):
 	cur = con.cursor()
 	db_df = pd.DataFrame(dbr.query('SELECT datname FROM pg_database',[],[],con,cur))
 	db_idx,desired_db = pick_one(db_df,0,item='database')
-	project_root = Path(paramfile).parents[1]
 	if db_idx == None:	# if we're going to need a brand new db
 
 		desired_db = input('Enter name for new database (alphanumeric only):\n')
@@ -164,7 +163,7 @@ def pick_database(paramfile,db_name=None):
 		pick_db_session = Session()
 
 		db_cdf.create_common_data_format_tables(
-			pick_db_session,dirpath=os.path.join(Path(paramfile).parents[1],'election_anomaly','CDF_schema_def_info'),
+			pick_db_session,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'),
 			delete_existing=False)
 		db_cdf.fill_cdf_enum_tables(pick_db_session,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
 		print(f'New database {desired_db} has been created using the common data format.')
@@ -830,7 +829,7 @@ if __name__ == '__main__':
 
 	# pick db to use
 	db_paramfile = pick_paramfile(tk_root,project_root)
-	db_name = pick_database(db_paramfile)
+	db_name = pick_database(project_root,db_paramfile)
 
 	# connect to db
 	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
