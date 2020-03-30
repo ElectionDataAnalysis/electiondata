@@ -271,7 +271,8 @@ def pick_state_from_filesystem(con,project_root,path_to_states='jurisdictions/',
 			with open(remark_path,'r') as f:
 				remark = f.read()
 			print(f'Current contents of remark.txt is:\n{remark}\n')
-			input(f'In the file context/remark.txt, add or correct anything that user should know about the state {state_name}.\n'
+			# TODO replace 'state' by 'jurisdiction', including dealing with non-state top-level jurisdictions
+			input(f'In the file context/remark.txt, add or correct anything that user should know about the jurisdiction {state_name}.\n'
 						f'Then hit return to continue.')
 	else:
 		print(f'Directory {state_name} is assumed to exist and have the required contents.')
@@ -569,6 +570,7 @@ def create_munger(column_list=None):
 def pick_state_from_db(sess):
 	ru = pd.read_sql_table('ReportingUnit',sess.bind,index_col='Id')
 	rut = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
+	# TODO build uniqueness into Txt field of each enumeration on db creation
 	assert rut[rut.Txt=='state'].shape[0] == 1, '\'ReportingUnitType\' table does not have exactly one \'state\' entry'
 	state_type_id = rut[rut.Txt=='state'].first_valid_index()
 	states = ru[ru.ReportingUnitType_Id==state_type_id]
@@ -816,7 +818,7 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 
 
 if __name__ == '__main__':
-
+	# TODO pull info about datafile from a paramfile
 	print('\nReady to load some election result data?\n'
 		  'This program will walk you through the process of creating or checking\n'
 		  'an automatic munger that will load your data into a database in the '

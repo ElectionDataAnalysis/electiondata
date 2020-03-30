@@ -117,6 +117,8 @@ For ReportingUnits, the naming convention is to list as much of the composing in
 # Conventions
 Reporting units that are not physical geographical precincts (such as an administrative precinct containing absentee ballot counts from one county) are classified as Reporting Type `precinct` if they should be part of any roll-up involving all precincts in a jurisdiction (e.g., if the absentee ballot counts are not included in any other Reporting Units of Type `precinct` in the county).
 
+Nesting of Reporting Units is coded by semicolons in the name, e.g., `Pennsylvania;Philadelphia;Ward 8;Division 16` is contained in `Pennsylvania;Philadelphia;Ward 8`, which is contained in `Pennsylvania;Philadelphia`, which is contained in `Pennsylvania`. The semicolons are used by the code to roll up results from smaller Reporting Units into larger Reporting Units.
+
 # Data Import Process
 ## New state
 ## New munger
