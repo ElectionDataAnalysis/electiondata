@@ -709,7 +709,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 			new_record['Id'] = table_df[table_df[name_field] == new_record[name_field]].first_valid_index()
 
 			# add to filesystem
-			new_file_dict = new_record
+			new_file_dict = new_record.copy()
 
 			# get rid of db-only fields
 			new_file_dict.pop('Id')
@@ -831,6 +831,7 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 	# TODO feature: write routine to deduce BallotMeasureContest district from the data?!?
 	# update db from state context file
 
+	# TODO put all info about data cleaning into README.md (e.g., whitespace strip)
 	election_idx, electiontype = get_or_create_election_in_db(session)
 	# read file in as dataframe of strings, replacing any nulls with the empty string
 	raw = pd.read_csv(raw_file,sep=raw_file_sep,dtype=str,encoding=encoding,quoting=csv.QUOTE_MINIMAL).fillna('')

@@ -1,8 +1,9 @@
 cdf_element	raw_identifier_formula
-Office	<Contest Name>
-ReportingUnit	<County>;<Precinct>
-Party	<Choice Party>
-Candidate	<Choice>
-CandidateContest	<Contest Name>
-BallotMeasureContest	<Contest Name>
-BallotMeasureSelection	<Choice>
+Office	<CATEGORY>
+ReportingUnit	Ward <WARD>;Division <DIVISION>
+Party	<PARTY>
+Candidate	<SELECTION>
+CandidateContest	<CATEGORY>
+BallotMeasureContest	<CATEGORY>
+BallotMeasureSelection	<SELECTION>
+VoteType	<VOTE TYPE>
