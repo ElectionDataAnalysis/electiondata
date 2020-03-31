@@ -631,7 +631,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 	else:
 		# create empty, wtih all cols of from_db except Id
 		cols = [x for x in from_db.columns if x != 'Id']
-		already_file = pd.DataFrame(columns=cols)
+		already_file = from_file = pd.DataFrame(columns=cols)
 
 	df = {}	# dict to hold info drawn from system files
 
@@ -676,12 +676,18 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 				# get <enum>_id and Other<enum> from plain text and insert into new_record
 				e = df['enumerations'].loc[i,'enumeration']	# name of enumeration
 				enum_from_db = pd.read_sql_table(e,sess.bind)
-				enhanced = mr.enum_col_to_id_othertext(already_file.loc[record_idx],e,enum_from_db)
-				new_record[f'{e}_Id'] = enhanced.loc[record_idx,f'{e}_Id']
-				new_record[f'Other{e}'] = enhanced.loc[record_idx,f'Other{e}']
+				enhanced = mr.enum_col_to_id_othertext(already_file.loc[[record_idx]],e,enum_from_db)
+				new_record[f'{e}_Id'] = enhanced.loc[0,f'{e}_Id']
+				new_record[f'Other{e}'] = enhanced.loc[0,f'Other{e}']
 
 				# insert plaintext value of <enum> to enum_val
 				enum_val[e] = already_file.loc[record_idx,e]
+
+			# insert into database
+			table_df = dbr.dframe_to_sql(pd.DataFrame(new_record,index=[-1]),sess,None,table)
+
+			# add Id to new_record
+			new_record['Id'] = table_df[table_df[name_field] == new_record[name_field]].first_valid_index()
 			return new_record, enum_val
 
 	# otherwise get the data from user, enter into db an into file system
@@ -695,10 +701,28 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 		else:
 			# TODO offer new record for review with offer to start over
 			finalized = True
+			# upload to database
 			table_df = dbr.dframe_to_sql(pd.DataFrame(new_record,index=[-1]),sess,None,table)
+
+			# prepare new_record and enum_val
 			table_df=table_df.set_index('Id')
 			new_record['Id'] = table_df[table_df[name_field] == new_record[name_field]].first_valid_index()
-			fpath = export_record_to_file_system(root_dir,new_record,enum_val)
+
+			# add to filesystem
+			new_file_dict = new_record
+
+			# get rid of db-only fields
+			new_file_dict.pop('Id')
+			for e in enum_val.keys():
+				new_file_dict.pop(f'{e}_Id',None)
+				new_file_dict.pop(f'Other{e}')
+
+			# combine with enum_val
+			new_file_dict = {** new_file_dict,** enum_val}
+
+			# save to file system
+			from_file = from_file.append(new_file_dict,ignore_index=True)
+			from_file.to_csv(storage_file,sep='\t',index=False)
 			return new_record, enum_val
 
 
