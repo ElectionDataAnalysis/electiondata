@@ -605,37 +605,86 @@ def get_or_create_election_in_db(sess):
 
 def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 	"""create record in <table> table in database from user input
+	(or from existing info db_records_entered_by_hand directory in file system)
 	<known_info_d> is a dict of known field-value pairs.
 	Return the record (in dict form) and any enumeration values (in dict form)
+	Store the record (if new) in the db_records_entered_by_hand directory
 	"""
+	# read table from db
+	from_db = pd.read_sql_table(table,sess.bind,index_col='Id')
+
+
+	# identify/create the directory for storing individual records in file system
+	storage_dir = os.path.join(root_dir,'db_records_entered_by_hand')
+	if not os.path.isdir(storage_dir):
+		os.makedirs(storage_dir)
+
+	# read any info from <table>'s file within that directory
+	storage_file = os.path.join(storage_dir,f'{table}.txt')
+	if os.path.isfile(storage_file):
+		from_file = pd.read_csv(storage_file,sep='\t')
+		if not from_file.empty:
+			# filter via known_info_d
+			already_file = from_file.loc[(from_file[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
+		else:
+			already_file = from_file	# empty
+	else:
+		# create empty, wtih all cols of from_db except Id
+		cols = [x for x in from_db.columns if x != 'Id']
+		already_file = pd.DataFrame(columns=cols)
 
 	df = {}	# dict to hold info drawn from system files
+
+	# get list of all enumerations for the <table>
+	df['enumerations'] = pd.read_csv(
+		os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/Tables',table,'enumerations.txt'),
+		sep='\t',header=0)
+
 	enum_val = {}	# dict to hold plain-text values of enumerations (e.g., ElectionType)
 
+
 	# check for existing similar records in db
-	from_db = pd.read_sql_table(table,sess.bind,index_col='Id')
 	# filter via known_info_d
 	if not from_db.empty:
-		already = from_db.loc[(from_db[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
+		already_db = from_db.loc[(from_db[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
 	else:
-		already = from_db
-	if not already.empty:
+		already_db = from_db # empty
+	if not already_db.empty:
 		print('Is the desired record already in the database?')
-		record_idx, record = pick_one(already,name_field)
+		record_idx, record = pick_one(already_db,name_field)
 		if record_idx:
-			# get the plain enumerations from the <enumeration>_Id and Other<enumeration>
-			df['enumerations'] = pd.read_csv(
-				os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/Tables',table,'enumerations.txt'),
-				sep='\t',header=0)
 			for i in df['enumerations'].index:
-				e = df['enumerations'].loc[i,'enumeration']
-				from_db = pd.read_sql_table(e,sess.bind)
-				enum_id = already.loc[record_idx,f'{e}_Id']
-				enum_othertext = already.loc[record_idx,f'Other{e}']
-				enum_val[e] = mr.get_enum_value_from_id_othertext(from_db,enum_id,enum_othertext)
-			record_as_dict = dict(already.loc[record_idx])
-			record_as_dict['Id'] = record_idx
-			return record_as_dict, enum_val
+				# get the plaintext enumeration from the <enumeration>_Id and Other<enumeration>
+				# and insert into enum_val
+				e = df['enumerations'].loc[i,'enumeration']	# name of enumeration
+				enum_from_db = pd.read_sql_table(e,sess.bind)
+				enum_id = already_db.loc[record_idx,f'{e}_Id']
+				enum_othertext = already_db.loc[record_idx,f'Other{e}']
+				enum_val[e] = mr.get_enum_value_from_id_othertext(enum_from_db,enum_id,enum_othertext)
+			new_record = dict(already_db.loc[record_idx])
+			new_record['Id'] = record_idx
+
+			return new_record, enum_val
+
+	# TODO before each return, write to file system if appropriate
+	if not already_file.empty:
+		print('Is the desired record already in the file system?')
+		record_idx,record = pick_one(already_file,name_field)
+		if record_idx:	# if user picked one
+			new_record = dict(already_file.loc[record_idx])
+			for i in df['enumerations'].index:
+				# get <enum>_id and Other<enum> from plain text and insert into new_record
+				e = df['enumerations'].loc[i,'enumeration']	# name of enumeration
+				enum_from_db = pd.read_sql_table(e,sess.bind)
+				enhanced = mr.enum_col_to_id_othertext(already_file.loc[record_idx],e,enum_from_db)
+				new_record[f'{e}_Id'] = enhanced.loc[record_idx,f'{e}_Id']
+				new_record[f'Other{e}'] = enhanced.loc[record_idx,f'Other{e}']
+
+				# insert plaintext value of <enum> to enum_val
+				enum_val[e] = already_file.loc[record_idx,e]
+			return new_record, enum_val
+
+	# otherwise get the data from user, enter into db an into file system
 	finalized = False
 	while not finalized:
 		new_record, enum_val = enter_new_record_info(
@@ -649,6 +698,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 			table_df = dbr.dframe_to_sql(pd.DataFrame(new_record,index=[-1]),sess,None,table)
 			table_df=table_df.set_index('Id')
 			new_record['Id'] = table_df[table_df[name_field] == new_record[name_field]].first_valid_index()
+			fpath = export_record_to_file_system(root_dir,new_record,enum_val)
 			return new_record, enum_val
 
 
@@ -828,7 +878,9 @@ if __name__ == '__main__':
 	tk_root = tk.Tk()
 
 	# pick db to use
-	db_paramfile = pick_paramfile(tk_root,project_root)
+	# db_paramfile = pick_paramfile(tk_root,project_root)
+	# TODO remove temp hardcoding
+	db_paramfile = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'
 	db_name = pick_database(project_root,db_paramfile)
 
 	# connect to db
