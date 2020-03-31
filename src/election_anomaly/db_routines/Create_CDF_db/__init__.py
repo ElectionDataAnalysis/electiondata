@@ -33,7 +33,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',dele
         else:
             txt_col='Txt'
         Table(t,metadata,Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
-              Column(txt_col,String))
+              Column(txt_col,String,unique=True))
     metadata.create_all()
 
     # create all other tables, in set order because of foreign keys
