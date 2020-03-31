@@ -168,8 +168,6 @@ def pick_database(project_root,paramfile,db_name=None):
 		db_cdf.fill_cdf_enum_tables(pick_db_session,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
 		print(f'New database {desired_db} has been created using the common data format.')
 
-		db_cdf.fill_cdf_enum_tables(pick_db_session,None,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
-
 	# clean up
 	if cur:
 		cur.close()
