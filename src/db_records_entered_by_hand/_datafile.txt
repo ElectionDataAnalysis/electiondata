@@ -1,0 +1,7 @@
+short_name	file_name	encoding	source_url	file_date	download_date	note	_datafile_separator
+test2	test2	test2	test2	2222-11-11	2222-11-11	test2	comma
+test3	test3	test3	test3	2222-11-11	2222-11-11	test3	tab
+wow	wow	wow	wow	2222-11-11	2222-11-11		who_knows
+hey	hey	hey	hey	2020-11-11	2020-11-11		comma
+phila2019g	division-level-results191105.csv	utf-8	PhiladelphiaVotes.com	2019-12-31	2020-03-29	File date uncertain	comma
+Phila_2019_general.csv	Phila_2019_general.csv	utf-8	PhiladelphiaVotes.com	2019-12-31	2020-03-29	Exact file date not known. Post certification, though	comma

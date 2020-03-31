@@ -903,9 +903,7 @@ if __name__ == '__main__':
 	tk_root = tk.Tk()
 
 	# pick db to use
-	# db_paramfile = pick_paramfile(tk_root,project_root)
-	# TODO remove temp hardcoding
-	db_paramfile = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'
+	db_paramfile = pick_paramfile(tk_root,project_root)
 	db_name = pick_database(project_root,db_paramfile)
 
 	# connect to db
