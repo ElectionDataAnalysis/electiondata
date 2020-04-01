@@ -456,10 +456,25 @@ class Munger:
         self.ballot_measure_style,self.ballot_measure_style_description = ui.confirm_or_correct_ballot_measure_style(
             bmso_file,bms_file)
 
-        # determine whether the file has columns for counts by vote types, or just totals
+        # determine whether the munger expects columns for counts by vote types (CountItemType), or just totals
+        # and whether munger has a formula for CountItemType based on values in the row.
 
         count_columns_file = os.path.join(dir_path,'count_columns.txt')
-        count_columns_df=pd.read_csv(count_columns_file,sep='\t').replace({'RawName':col_d})
+        count_columns_df=pd.read_csv(count_columns_file,sep='\t')
+
+        # rename columns conflicting with cdf element names
+        count_columns_df = count_columns_df.replace({'RawName':col_d})  # in RawNames column
+
+        # determine whether any count_columns have nontrivial formulas for CountItemType
+        # and if so, rename within formulas
+        # TODO error check: if column name contains '<' this may cause problems
+        if count_columns_df[count_columns_df.CountItemType.str.contains('<')]:
+            self.formulas_for_count_item_type = True
+            for k,v in col_d.items():
+                count_columns_df.CountItemType.apply(lambda x:x.replace(f'<{k}>',f'<{v}>'))
+        else:
+            self.formulas_for_count_item_type = False
+
         self.count_columns = ui.check_count_columns(
             count_columns_df,count_columns_file,self.path_to_munger_dir,cdf_schema_def_dir)
         if list(self.count_columns['CountItemType'].unique()) == ['total']:

@@ -86,18 +86,28 @@ The folder `src/mungers` holds a directory for each munger. Each munger director
     * `Datatype` datatype of the column in the source file
  * `count_columns.txt` List of columns in source file corresponding to vote counts
     * `RawName` Name of the count column in the source file
-    * `CountItemType` Type of count, according to the Common Data Format (e.g., 'absentee' or 'election-day')
+    * `CountItemType` Type of count, according to the Common Data Format (e.g., 'absentee' or 'election-day'). If the CountItemType is determined by a value or values in the row of the raw file (say, from a "Vote Type" column), this field should contain a formula for creating the raw identifier of the CountItemType, and there should be corresponding rows of the raw_identifiers.txt table.
  * `cdf_tables.txt` One line for each main table in the Common Data Format. Specifies how to read the values for that table from the source file.
     * `CDF_Element` Name of the Common Data Format table/element (e.g., 'ReportingUnit')
-    * `ExternalIdentifier` Recipe for creating the external identifier from the source file. 
+    * `ExternalIdentifier` Formula for creating the raw identifier from the source file. 
     * `InternalFieldName` Usually 'Name', this is the column in the Common Data Format table that names the item.
-    * `Enumerations` Recipes for specifying any enumerated values
-    * `OtherFields` Recipes for specifying any other fields. `ids_d` is used in the code to refer to internal Common Data Format primary keys.
+    * `Enumerations` Formulas for specifying any enumerated values
+    * `OtherFields` Formulas for specifying any other fields. `ids_d` is used in the code to refer to internal Common Data Format primary keys.
 
 
-### About ExternalIdentifiers
+### About raw identifiers
 (TODO)
 Need Office and  CandidateContest separately for each munger. 
+
+### About formulas
+When creating a munger, you will need to create formulas for creating raw identifiers from rows. Use angle brackets <> to enclose field values. E.g. consider this snippet from a Philadelphia voting results file:
+```
+WARD,DIVISION,VOTE TYPE,CATEGORY,SELECTION,PARTY,VOTE COUNT
+01,01,A,JUDGE OF THE SUPERIOR COURT,AMANDA GREEN-HAWKINS,DEMOCRATIC,2
+01,01,M,JUDGE OF THE SUPERIOR COURT,AMANDA GREEN-HAWKINS,DEMOCRATIC,146
+01,01,P,JUDGE OF THE SUPERIOR COURT,AMANDA GREEN-HAWKINS,DEMOCRATIC,0
+```
+The formula `Ward <WARD>;Division <DIVISION>` would yield `Ward 01;Division 01`.
 
 # Code components
 

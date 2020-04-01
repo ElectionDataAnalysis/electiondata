@@ -1,1 +1,5 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CountItemType	provisional	P
+CountItemType	absentee	A
+CountItemType	election-day	M
+
