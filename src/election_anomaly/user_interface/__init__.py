@@ -63,6 +63,10 @@ def get_project_root():
 def pick_one(df,return_col,item='row',required=False):
 	"""Returns index and <return_col> value of item chosen by user"""
 	# TODO check that index entries are positive ints (and handle error)
+
+	# show wider view
+	pd.set_option('display.max_columns',9)
+
 	if df.empty:
 		return None, None
 	print(df)
@@ -84,6 +88,9 @@ def pick_one(df,return_col,item='row',required=False):
 			except ValueError:
 				print(f'You must enter a number {req_str}, then hit return. Please try again.')
 	print(f'Chosen {item} is {df.loc[choice,return_col]}\n\n')
+
+	# return view to default width
+	pd.reset_option('display.max_columns')
 	return choice, df.loc[choice,return_col]
 
 
@@ -891,7 +898,6 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 
 
 if __name__ == '__main__':
-	# TODO pull info about datafile from a paramfile
 	print('\nReady to load some election result data?\n'
 		  'This program will walk you through the process of creating or checking\n'
 		  'an automatic munger that will load your data into a database in the '
