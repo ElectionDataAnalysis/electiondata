@@ -40,6 +40,7 @@ Florida;General Assembly House of Representatives District 114	state-house
 Florida;General Assembly House of Representatives District 115	state-house
 Florida;General Assembly House of Representatives District 116	state-house
 Florida;General Assembly House of Representatives District 117	state-house
+Florida;General Assembly House of Representatives District 118	state-house
 Florida;General Assembly House of Representatives District 119	state-house
 Florida;General Assembly House of Representatives District 12	state-house
 Florida;General Assembly House of Representatives District 120	state-house

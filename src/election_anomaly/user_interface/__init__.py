@@ -18,12 +18,29 @@ import tkinter as tk
 from tkinter import filedialog
 
 
+def get_filepath(r,initialdir=initialdir):
+	"""<r> is a tkinter root for a pop-up window.
+	<fpath_root> is the directory where the pop-up window starts.
+	Returns chosen file path"""
+	while True:
+		fpath = input('Enter path to file (or hit return to use pop-up window to find it).\n')
+		if not fpath:
+			print('Use pop-up window to pick your file.')
+			fpath = filedialog.askopenfilename(
+				initialdir=initialdir,title="Select file",
+				filetypes=(("text files","*.txt"),("csv files","*.csv"),("ini files","*.ini"),("all files","*.*")))
+			print(f'The file you chose is:\n\t{r.filename}')
+
+		elif not os.path.isfile(r.filename):
+			print(f'This is not a file: {r.filename}\nTry again.')
+		else:
+			break
+	return fpath
+
+
 def find_datafile(r,project_root,sess):
-	print('Use pop-up window to pick your datafile.')
-	r.filename = filedialog.askopenfilename(
-		initialdir=project_root,title="Select election results datafile",
-		filetypes=(("text files","*.txt"),("csv files","*.csv"),("all files","*.*")))
-	print(f'The datafile you chose is:\n\t{r.filename}')
+	print("Choose a datafile.")
+	r.filename = get_filepath(r,initialdir=project_root)
 	filename = ntpath.basename(r.filename)
 	datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
 		sess,project_root,'_datafile','short_name',known_info_d={'file_name':filename})
@@ -32,12 +49,8 @@ def find_datafile(r,project_root,sess):
 
 
 def pick_paramfile(r,project_root):
-	print('Use pop-up window to pick the parameter file for your postgreSQL database.')
-	r.filename = filedialog.askopenfilename(
-		initialdir=project_root,title="Select database initialization file",
-		filetypes=(("db initialization","*.ini"),("all files","*.*")))
-	print(f'The parameter file you chose is:\n\t'
-		  f'{r.filename}')
+	print('Choose the parameter file for your postgreSQL database.')
+	r.filename = get_filepath(r)
 	return r.filename
 
 
@@ -573,7 +586,7 @@ def create_munger(column_list=None):
 	return munger
 
 
-def pick_state_from_db(sess):
+def pick_state_from_db(sess,project_root):
 	ru = pd.read_sql_table('ReportingUnit',sess.bind,index_col='Id')
 	rut = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
 	# TODO build uniqueness into Txt field of each enumeration on db creation
@@ -583,7 +596,7 @@ def pick_state_from_db(sess):
 	if states.empty:
 		print('No state record found in the database. Please create one.')
 		state_record_d, state_enum_d = create_record_in_db(
-			sess,project_root,'ReportingUnit',known_info_d={'ReportingUnit_Id':state_type_id,'OtherReportingUnit':''})
+			sess,project_root,'ReportingUnit',known_info_d={'ReportingUnitType_Id':state_type_id,'OtherReportingUnitType':''})
 		state_idx = state_record_d['Id']
 		state_internal_db_name = state_record_d['Name']
 	else:
@@ -710,7 +723,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 			# TODO offer new record for review with offer to start over
 			finalized = True
 			# upload to database
-			table_df = dbr.dframe_to_sql(pd.DataFrame(new_record,index=[-1]),sess,None,table)
+			table_df = dbr.dframe_to_sql(pd.DataFrame(new_record,index=[-1]),None,sess,table)
 
 			# prepare new_record and enum_val
 			table_df=table_df.set_index('Id')
@@ -835,7 +848,7 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 		state_name=state_short_name)
 	# TODO finalize ReportingUnits once for both kinds of files?
 
-	state_idx, state_internal_db_name = pick_state_from_db(session)
+	state_idx, state_internal_db_name = pick_state_from_db(session,project_root)
 	# TODO feature: write routine to deduce BallotMeasureContest district from the data?!?
 	# update db from state context file
 
@@ -913,48 +926,5 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 
 
 if __name__ == '__main__':
-	print('\nReady to load some election result data?\n'
-		  'This program will walk you through the process of creating or checking\n'
-		  'an automatic munger that will load your data into a database in the '
-		  'NIST common data format.')
-
-	project_root = get_project_root()
-
-	# initialize root widget for tkinter
-	tk_root = tk.Tk()
-
-	# pick db to use
-	db_paramfile = pick_paramfile(tk_root,project_root)
-	db_name = pick_database(project_root,db_paramfile)
-
-	# connect to db
-	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
-	Session = sessionmaker(bind=eng)
-	new_df_session = Session()
-
-	# get datafile & info
-	dfile_d, enum_d, raw_file = find_datafile(tk_root,project_root,new_df_session)
-	# TODO store \t and , directly?
-	if enum_d['_datafile_separator'] == 'tab':
-		sep = '\t'
-	elif enum_d['_datafile_separator'] == 'comma':
-		sep = ','
-	else:
-		raise Exception(f'separator {enum_d["_datafile_separator"]} not recognized')
-
-
-	#state_short_name = 'FL'
-	state_short_name = None
-
-	# load new datafile
-	# TODO handle default values more programmatically
-	encoding = dfile_d['encoding']
-	if encoding == '':
-		encoding = 'utf-8'
-
-	state, mnger = new_datafile(
-		raw_file,sep,new_df_session,state_short_name=state_short_name,encoding=encoding,project_root=project_root)
-
-	eng.dispose()
-	print('Done! (user_interface)')
+	print("Data loading routines moved to src/election_anomaly/test folder")
 	exit()
