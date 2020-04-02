@@ -335,11 +335,10 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
                                                                        'BallotMeasureContestSelectionJoin')
 
         # Load ElectionContestJoin table (for ballot measures)
-        # TODO are we pulling ballot measure contests from other elections and assigning them to current election?
         ecj_df = cdf_d['BallotMeasureContest'].copy()
         ecj_df.loc[:,'Election_Id'] = election_id
         ecj_df.rename(columns={'Id': 'Contest_Id'}, inplace=True)
-        cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,None,'ElectionContestJoin')
+        cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,None,'ElectionContestJoin',return_records='original')
 
         # create dframe of vote counts (with join info) for ballot measures
         bm_vote_counts = bm_row[col_list]

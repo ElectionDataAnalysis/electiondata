@@ -174,39 +174,46 @@ def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
     return return_item
 
 
-def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_votecount=False):
+def dframe_to_sql(dframe,schema,session,table,index_col='Id',flush=True,raw_to_votecount=False,return_records='all'):
     """
-    Given a dframe and an existing cdf db table name, clean the dframe
-    (i.e., drop any columns that are not in the table, add null columns to match any missing columns)
+    Given a dataframe <dframe >and an existing cdf db table <table>>, clean <dframe>
+    (i.e., drop any columns that are not in <table>, add null columns to match any missing columns)
     append records any new records to the corresponding table in the db (and commit!)
-    Return the updated dframe, including all rows from the db and all from the dframe.
+    Return the updated dataframe, including all rows from the db and all from the dframe.
+    <return_records> is a flag defaulting to "all" (return all records in db)
+    but can be set to "original" to return only the records from the input <dframe>
     """
     # pull copy of existing table
-    target = pd.read_sql_table(table,session.bind,schema=schema,index_col=index_col)
+    target = pd.read_sql_table(table,session.bind,index_col=index_col)
     # VoteCount table gets added columns during raw data upload, needs special treatment
+
+    # partition the columns
+    dframe_only_cols = [x for x in dframe.columns if x not in target.columns]
+    target_only_cols = [x for x in target.columns if x not in dframe.columns]
+    intersection_cols = [x for x in target.columns if x in dframe.columns]
+
+
     if raw_to_votecount:
         # join with SECVCJ
-        secvcj = pd.read_sql_table('SelectionElectionContestVoteCountJoin',session.bind,schema=schema,index_col=None)
+        secvcj = pd.read_sql_table('SelectionElectionContestVoteCountJoin',session.bind,index_col=None)
         # drop columns that don't belong, but were temporarily created in order to get VoteCount_Id correctly into SECVCJ
         target=target.drop(['Election_Id','Contest_Id','Selection_Id'],axis=1)
         target=target.merge(secvcj,left_on='Id',right_on='VoteCount_Id')
         target=target.drop(['Id','VoteCount_Id'],axis=1)
-    df_to_db = dframe.drop_duplicates().copy()
+    df_to_db = dframe.copy()
+    df_to_db.drop_duplicates(inplace=True)
     # TODO there should be no  duplicates in dframe in the first place. MD votecount had some. Why?
     if 'Count' in df_to_db.columns:
         # TODO bug: catch anything not an integer (e.g., in MD 2018g upload)
         df_to_db.loc[:,'Count']=df_to_db['Count'].astype('int64',errors='ignore')
-    #df_to_db=df_to_db.astype(str)
-    #target=target.astype(str)
 
     # remove columns that don't exist in target table
-    for c in dframe.columns:
-        if c not in target.columns:
-            df_to_db = df_to_db.drop(c, axis=1)
+    df_to_db = df_to_db.drop(dframe_only_cols, axis=1)
+
     # add columns that exist in target table but are missing from original dframe
-    for c in target.columns:
-        if c not in dframe.columns:
-            df_to_db[c] = None
+    for c in target_only_cols:
+        df_to_db.loc[:c] = None
+
     appendable = pd.concat([target,target,df_to_db],sort=False).drop_duplicates(keep=False)
     # note: two copies of target ensures none of the original rows will be appended.
 
@@ -214,16 +221,23 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     if 'Id' in appendable.columns:
         appendable = appendable.drop('Id',axis=1)
 
-    appendable.to_sql(table, session.bind, schema=schema, if_exists='append', index=False)
+    appendable.to_sql(table, session.bind, if_exists='append', index=False)
     if table == 'ReportingUnit' and not appendable.empty:
         append_to_composing_reporting_unit_join(session,appendable)
-    up_to_date_dframe = pd.read_sql_table(table,session.bind,schema=schema)
+    up_to_date_dframe = pd.read_sql_table(table,session.bind)
+
     if raw_to_votecount:
         # need to drop rows that were read originally from target -- these will have null Election_Id
         up_to_date_dframe=up_to_date_dframe[up_to_date_dframe['Election_Id'].notnull()]
     if flush:
         session.flush()
-    return up_to_date_dframe
+    if return_records == 'original':
+        # TODO get rid of rows not in dframe by taking inner join
+        id_enhanced_dframe = dframe.merge(
+            up_to_date_dframe,left_on=intersection_cols,right_on=intersection_cols,how=inner).drop(target_only_cols,axis=1)
+        return id_enhanced_dframe
+    else:
+        return up_to_date_dframe
 
 
 if __name__ == '__main__':
