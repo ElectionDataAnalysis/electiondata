@@ -203,7 +203,7 @@ class Election(object):
     def __init__(self, session,state):
         assert isinstance(state,sf.State)
         cdf_el = pd.read_sql_table('Election',session.bind,index_col='Id')
-        election_idx,electiontype = ui.get_or_create_election_in_db(session)
+        election_idx,electiontype = ui.get_or_create_election_in_db(session,project_root)
 
         self.short_name = cdf_el.loc[election_idx,'Name']
         self.name = self.short_name   # TODO merge name and short_name
@@ -435,7 +435,7 @@ if __name__ == '__main__':
     state = ui.pick_state_from_filesystem(analysis_session.bind,project_root,
                                           path_to_states=os.path.join(project_root,'jurisdictions'),
                                           state_name=state_name)
-    e =Election(analysis_session,state)
+    e =Election(analysis_session,state,project_root)
 
     e.summarize_results(db_paramfile=db_paramfile)
 

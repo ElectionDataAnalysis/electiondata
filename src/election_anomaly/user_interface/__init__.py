@@ -18,7 +18,7 @@ import tkinter as tk
 from tkinter import filedialog
 
 
-def get_filepath(r,initialdir=initialdir):
+def get_filepath(r,initialdir='~/'):
 	"""<r> is a tkinter root for a pop-up window.
 	<fpath_root> is the directory where the pop-up window starts.
 	Returns chosen file path"""
@@ -29,10 +29,10 @@ def get_filepath(r,initialdir=initialdir):
 			fpath = filedialog.askopenfilename(
 				initialdir=initialdir,title="Select file",
 				filetypes=(("text files","*.txt"),("csv files","*.csv"),("ini files","*.ini"),("all files","*.*")))
-			print(f'The file you chose is:\n\t{r.filename}')
-
-		elif not os.path.isfile(r.filename):
-			print(f'This is not a file: {r.filename}\nTry again.')
+			print(f'The file you chose is:\n\t{fpath}')
+			break
+		elif not os.path.isfile(fpath):
+			print(f'This is not a file: {fpath}\nTry again.')
 		else:
 			break
 	return fpath
@@ -604,7 +604,7 @@ def pick_state_from_db(sess,project_root):
 	return state_idx, state_internal_db_name
 
 
-def get_or_create_election_in_db(sess):
+def get_or_create_election_in_db(sess,project_root):
 	"""Get id and electiontype from database, creating record first if necessary"""
 	print('Specify the election:')
 	election_df = pd.read_sql_table('Election',sess.bind,index_col='Id')
@@ -853,7 +853,7 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 	# update db from state context file
 
 	# TODO put all info about data cleaning into README.md (e.g., whitespace strip)
-	election_idx, electiontype = get_or_create_election_in_db(session)
+	election_idx, electiontype = get_or_create_election_in_db(session,project_root)
 	# read file in as dataframe of strings, replacing any nulls with the empty string
 	raw = pd.read_csv(raw_file,sep=raw_file_sep,dtype=str,encoding=encoding,quoting=csv.QUOTE_MINIMAL).fillna('')
 

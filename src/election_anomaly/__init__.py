@@ -49,7 +49,7 @@ if __name__ == '__main__':
     s,mu = ui.new_datafile(
         raw_file,sep,analysis_session,project_root,state_short_name=input('State short_name (e.g., \'NC\'?\n'),
         encoding=encoding)
-    e = an.Election(analysis_session,s)
+    e = an.Election(analysis_session,s,project_root)
 
 
     get_top_results = input('Get top-level results (y/n)?\n')
