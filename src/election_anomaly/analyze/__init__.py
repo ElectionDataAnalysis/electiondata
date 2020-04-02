@@ -200,7 +200,7 @@ class Election(object):
             print(f'Cannot export; directory {outpath} does not exist')
         return output
 
-    def __init__(self, session,state):
+    def __init__(self, session,state,project_root):
         assert isinstance(state,sf.State)
         cdf_el = pd.read_sql_table('Election',session.bind,index_col='Id')
         election_idx,electiontype = ui.get_or_create_election_in_db(session,project_root)
