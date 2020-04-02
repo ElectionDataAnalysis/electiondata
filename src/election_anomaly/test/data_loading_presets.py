@@ -16,7 +16,6 @@ if __name__ == '__main__':
 	else:
 		test_munger=False
 
-
 	project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
 
 	# pick db to use
