@@ -444,41 +444,6 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
     return
 
 
-def raw_dframe_to_cdf(session,raw_rows,mu,e,state_id = 0):
-    """ munger-agnostic raw-to-cdf script; ***
-    dframe is dataframe, mu is munger """
-
-    assert isinstance(e,an.Election),'Argument should be an Election instance'
-    cdf_d = {}  # to hold various dataframes from cdf db tables
-
-    # if state_id is not passed as parameter, get id (default Reporting Unit for ballot questions)
-    for t in ['ReportingUnitType','ReportingUnit']:
-        cdf_d[t] = pd.read_sql_table(t, session.bind, None, index_col='Id')
-    if state_id == 0:
-        state_type_id = cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt'] == 'state'].index.values[0]
-        state_id = cdf_d['ReportingUnit'][cdf_d['ReportingUnit']['ReportingUnitType_Id'] == state_type_id].index.values[0]
-
-    # split raw_rows into a df for ballot measures and a df for contests
-    bm_row,cc_row = contest_type_split(raw_rows,mu)
-
-    if bm_row.empty:
-        print('No ballot measures to process')
-        process_ballot_measures = 'empty'
-    else:
-        process_ballot_measures = input('Process Ballot Measures (y/n)?\n')
-    if process_ballot_measures == 'y':
-        raw_elements_to_cdf(session,mu,bm_row,'BallotMeasure',e.Election_Id,e.ElectionType,state_id)
-    if cc_row.empty:
-        print('No candidate contests to process')
-        process_candidate_contests='empty'
-    else:
-        process_candidate_contests = input('Process Candidate Contests (y/n)?\n')
-    if process_candidate_contests=='y':
-        raw_elements_to_cdf(session,mu,cc_row,'Candidate',e.Election_Id,e.ElectionType,state_id)
-
-    return
-
-
 if __name__ == '__main__':
 
     print('Done!')

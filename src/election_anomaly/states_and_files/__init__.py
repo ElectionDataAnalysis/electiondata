@@ -477,6 +477,7 @@ class Munger:
 
         self.count_columns = ui.check_count_columns(
             count_columns_df,count_columns_file,self.path_to_munger_dir,cdf_schema_def_dir)
+        # TODO what if there is a CountItemType column in raw file whose entries are all 'total'?
         if list(self.count_columns['CountItemType'].unique()) == ['total']:
             self.totals_only=True
         else:

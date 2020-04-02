@@ -331,6 +331,7 @@ def confirm_or_correct_cdf_table_file(cdf_table_file,raw_cols):
 		missing_elements = [x for x in element_list if x not in cdft_df.cdf_element.to_list()]
 
 	# check that formulas refer to existing columns of raw file
+	# TODO create function to check formulas; will use for count_columns too.
 	bad_formulas = [1]
 	while bad_formulas:
 		bad_formulas = []
@@ -842,10 +843,11 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 	election_idx, electiontype = get_or_create_election_in_db(session)
 	# read file in as dataframe of strings, replacing any nulls with the empty string
 	raw = pd.read_csv(raw_file,sep=raw_file_sep,dtype=str,encoding=encoding,quoting=csv.QUOTE_MINIMAL).fillna('')
+
 	# strip any whitespace
 	raw = raw.applymap(lambda x: x.strip())
 
-
+	# have user pick & prepare the munger
 	column_list = raw.columns.to_list()
 	print('Specify the munger:')
 	munger = pick_munger(
@@ -859,13 +861,26 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 		munger.check_ballot_measure_selections()
 		munger.check_atomic_ru_type()
 
+	# reshape raw to get separate vote count columns by vote type if necessary
+	if munger.formulas_for_count_item_type:
+		# TODO
+		# create separate column with single raw identifier of CountItemType as name -- beware of existing column names!
+		# change raw column names to CDF standard names
+		pass
+	else:
+		# change raw column names to CDF standard names for vote count columns
+		# TODO be clear in README about the conventions for values in count_columns.CountItemType.
+		#  For NC, had internal CDF names, but that won't work for Phila.
+		#  Best code would look first in CountItemType table, then in CountItemType rows of raw_identifiers.
+		pass
+
 	# change column names in <raw> if necessary
 	# TODO check that col names in count_columns and ballot_measure*.txt are changed
 	raw.rename(columns=munger.rename_column_dictionary,inplace=True)
 
 	# replace any non-numeric strings in count columns with 0.
 	print('Replacing any non-integer entries in datafile count columns with 0')
-	# TODO generalize to decimals for the rare elections wtih fractional votes
+	# TODO feature generalize to decimals for the rare elections with fractional votes
 	int_pattern = r'.*[^0-9]+.*'
 	for c in munger.count_columns.RawName.unique():
 		raw[c] = raw[c].replace(int_pattern,'0',regex=True)
@@ -876,7 +891,7 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 		print('Datafile has only Candidate Contests, and no Ballot Measure Contests')
 		contest_type_df = ['Candidate']
 	elif cc_results.empty:
-		print('Datafile has only Ballot Measure Contests, andno Candidate Contests')
+		print('Datafile has only Ballot Measure Contests, and no Candidate Contests')
 		contest_type_df = ['Ballot Measure']
 	else:
 		print('What types of contests would you like to analyze from the datafile?')
@@ -937,7 +952,7 @@ if __name__ == '__main__':
 	if encoding == '':
 		encoding = 'utf-8'
 
-	state, munger = new_datafile(
+	state, mnger = new_datafile(
 		raw_file,sep,new_df_session,state_short_name=state_short_name,encoding=encoding,project_root=project_root)
 
 	eng.dispose()
