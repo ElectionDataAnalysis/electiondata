@@ -5,6 +5,8 @@ CandidateContest	Florida;Tolomato Community Development District Seat 5	Tolomato
 CandidateContest	Florida;Tolomato Community Development District Seat 4	Tolomato Community Development District Juris1num  Juris2num 004
 CandidateContest	Florida;State Attorney Circuit 20	State Attorney Juris1num 020 Juris2num 
 CandidateContest	Florida;Sebastian Inlet Tax District Seat 5	Sebastian Inlet Tax District Juris1num  Juris2num 005
+Party	Green Party of Florida	Green Party
+Party	Florida Non-Partisan	Non-Partisan
 Party	Reform Party of Florida	Reform Party of Florida
 BallotMeasureSelection	No	No
 BallotMeasureSelection	No	No for Rejection

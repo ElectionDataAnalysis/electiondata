@@ -468,7 +468,7 @@ class Munger:
         # determine whether any count_columns have nontrivial formulas for CountItemType
         # and if so, rename within formulas
         # TODO error check: if column name contains '<' this may cause problems
-        if count_columns_df[count_columns_df.CountItemType.str.contains('<')]:
+        if not count_columns_df[count_columns_df.CountItemType.str.contains('<')].empty:
             self.formulas_for_count_item_type = True
             for k,v in col_d.items():
                 count_columns_df.CountItemType.apply(lambda x:x.replace(f'<{k}>',f'<{v}>'))

@@ -174,7 +174,7 @@ def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
     return return_item
 
 
-def dframe_to_sql(dframe,schema,session,table,index_col='Id',flush=True,raw_to_votecount=False,return_records='all'):
+def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_votecount=False,return_records='all'):
     """
     Given a dataframe <dframe >and an existing cdf db table <table>>, clean <dframe>
     (i.e., drop any columns that are not in <table>, add null columns to match any missing columns)
@@ -212,7 +212,7 @@ def dframe_to_sql(dframe,schema,session,table,index_col='Id',flush=True,raw_to_v
 
     # add columns that exist in target table but are missing from original dframe
     for c in target_only_cols:
-        df_to_db.loc[:c] = None
+        df_to_db.loc[:,c] = None
 
     appendable = pd.concat([target,target,df_to_db],sort=False).drop_duplicates(keep=False)
     # note: two copies of target ensures none of the original rows will be appended.
@@ -234,7 +234,7 @@ def dframe_to_sql(dframe,schema,session,table,index_col='Id',flush=True,raw_to_v
     if return_records == 'original':
         # TODO get rid of rows not in dframe by taking inner join
         id_enhanced_dframe = dframe.merge(
-            up_to_date_dframe,left_on=intersection_cols,right_on=intersection_cols,how=inner).drop(target_only_cols,axis=1)
+            up_to_date_dframe,left_on=intersection_cols,right_on=intersection_cols,how='inner').drop(target_only_cols,axis=1)
         return id_enhanced_dframe
     else:
         return up_to_date_dframe

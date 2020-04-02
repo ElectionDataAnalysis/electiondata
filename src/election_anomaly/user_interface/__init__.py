@@ -1,5 +1,7 @@
 #!usr/bin/python3
 
+# TODO get rid of refs to 'unmunged_<element>'
+
 import db_routines as dbr
 import db_routines.Create_CDF_db as db_cdf
 import munge_routines as mr
@@ -723,7 +725,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 			# TODO offer new record for review with offer to start over
 			finalized = True
 			# upload to database
-			table_df = dbr.dframe_to_sql(pd.DataFrame(new_record,index=[-1]),None,sess,table)
+			table_df = dbr.dframe_to_sql(pd.DataFrame(new_record,index=[-1]),sess,None,table)
 
 			# prepare new_record and enum_val
 			table_df=table_df.set_index('Id')
@@ -869,7 +871,7 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 	print(f'Munger {munger.name} has been chosen and prepared.')
 
 	if test_munger:
-		print( f'Next we check compatibility of the munger with the datafile.')
+		print( f'\nNext we check compatibility of the munger with the datafile.')
 
 		munger.check_ballot_measure_selections()
 		munger.check_atomic_ru_type()
