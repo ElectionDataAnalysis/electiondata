@@ -18,8 +18,7 @@ if __name__ == '__main__':
 
     # pick db to use
     db_paramfile = ui.pick_paramfile(tk_root,project_root)
-    db_name = 'NC'
-    state_name = 'NC'
+    state_name = 'FL'
     # state_name = None
 
     db_name = ui.pick_database(project_root,db_name=db_name)

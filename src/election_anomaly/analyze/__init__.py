@@ -416,28 +416,4 @@ def anomaly_list(contest_name, c, aframe_columnlist=None):
     return anomaly_list
 
 if __name__ == '__main__':
-    project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
-
-    # pick db to use
-    db_paramfile = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'
-    db_name = 'NC'
-    state_name = 'NC'
-    # state_name = None
-
-    db_name = ui.pick_database(project_root,db_name=db_name)
-
-    # initialize main session for connecting to db
-    eng, meta_generic = dbr.sql_alchemy_connect(
-        paramfile=db_paramfile,db_name=state_name)
-    Session = sessionmaker(bind=eng)
-    analysis_session = Session()
-
-    state = ui.pick_state_from_filesystem(analysis_session.bind,project_root,
-                                          path_to_states=os.path.join(project_root,'jurisdictions'),
-                                          state_name=state_name)
-    e =Election(analysis_session,state,project_root)
-
-    e.summarize_results(db_paramfile=db_paramfile)
-
-    eng.dispose()
-    print('Done')
+    print('Use routine in src/test directory (e.g., pull_top_counts.py')
