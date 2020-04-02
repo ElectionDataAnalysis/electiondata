@@ -16,7 +16,7 @@ if __name__ == '__main__':
 	tk_root = tk.Tk()
 
 	# pick db to use
-	db_paramfile = ui.pick_paramfile(tk_root,project_root)
+	db_paramfile = ui.pick_paramfile(project_root)
 	db_name = ui.pick_database(project_root,db_paramfile)
 
 	# connect to db
@@ -25,7 +25,7 @@ if __name__ == '__main__':
 	new_df_session = Session()
 
 	# get datafile & info
-	dfile_d, enum_d, raw_file = ui.find_datafile(tk_root,project_root,new_df_session)
+	dfile_d, enum_d, raw_file = ui.find_datafile(project_root,new_df_session)
 	# TODO store \t and , directly?
 	if enum_d['_datafile_separator'] == 'tab':
 		sep = '\t'

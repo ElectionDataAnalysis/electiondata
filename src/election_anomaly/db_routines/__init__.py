@@ -127,7 +127,7 @@ def config(filename=None, section='postgresql'):
         # initialize root widget for tkinter
         tk_root = tk.Tk()
         project_root=ui.get_project_root()
-        ui.pick_paramfile(tk_root,project_root=project_root)
+        ui.pick_paramfile(project_root=project_root)
 
     # create a parser
     parser = ConfigParser()

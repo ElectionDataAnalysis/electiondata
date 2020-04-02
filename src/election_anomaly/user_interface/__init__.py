@@ -15,15 +15,14 @@ import re
 import datetime
 import states_and_files as sf
 import random
-from pathlib import Path
-import tkinter as tk
 from tkinter import filedialog
 
 
-def get_filepath(r,initialdir='~/'):
+def get_filepath(initialdir='~/'):
 	"""<r> is a tkinter root for a pop-up window.
 	<fpath_root> is the directory where the pop-up window starts.
 	Returns chosen file path"""
+
 	while True:
 		fpath = input('Enter path to file (or hit return to use pop-up window to find it).\n')
 		if not fpath:
@@ -40,20 +39,20 @@ def get_filepath(r,initialdir='~/'):
 	return fpath
 
 
-def find_datafile(r,project_root,sess):
+def find_datafile(project_root,sess):
 	print("Choose a datafile.")
-	r.filename = get_filepath(r,initialdir=project_root)
-	filename = ntpath.basename(r.filename)
+	fpath = get_filepath(initialdir=project_root)
+	filename = ntpath.basename(fpath)
 	datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
 		sess,project_root,'_datafile','short_name',known_info_d={'file_name':filename})
-	# TODO typing url into debug window opens the webpage; want it to just act like a string
-	return datafile_record_d, datafile_enumeration_name_d, r.filename
+	# TODO typing url into debug window opens the web page; want it to just act like a string
+	return datafile_record_d, datafile_enumeration_name_d, fpath
 
 
-def pick_paramfile(r,project_root):
+def pick_paramfile(project_root):
 	print('Choose the parameter file for your postgreSQL database.')
-	r.filename = get_filepath(r)
-	return r.filename
+	fpath= get_filepath()
+	return fpath
 
 
 def get_project_root():
@@ -198,14 +197,14 @@ def pick_database(project_root,paramfile,db_name=None):
 	return desired_db
 
 
-def check_count_columns(df,file,mungerdir,CDF_schema_def_dir):
+def check_count_columns(df,file,mungerdir,cdf_schema_def_dir):
 	"""Checks that <df> is a proper count_columns dataframe;
 	If not, guides user to correct <file> and then upload its
 	contents to a proper count_columns dataframe, which it returns"""
 	# TODO format of count_columns depends on ballot_measure style. Change this -- add ballotmeasurecolumns.txt?
 
-	# get count types from CDF_schema_def_dir and raw cols from munger directory once at beginning
-	with open(os.path.join(CDF_schema_def_dir,'enumerations/CountItemType.txt'),'r') as f:
+	# get count types from cdf_schema_def_dir and raw cols from munger directory once at beginning
+	with open(os.path.join(cdf_schema_def_dir,'enumerations/CountItemType.txt'),'r') as f:
 		type_list = f.read().split('\n')
 	with open(os.path.join(mungerdir,'raw_columns.txt'),'r') as f:
 		raw_col_list = f.read().split('\n')[1:]
@@ -636,7 +635,6 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 	# read table from db
 	from_db = pd.read_sql_table(table,sess.bind,index_col='Id')
 
-
 	# identify/create the directory for storing individual records in file system
 	storage_dir = os.path.join(root_dir,'db_records_entered_by_hand')
 	if not os.path.isdir(storage_dir):
@@ -652,11 +650,11 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 		else:
 			already_file = from_file	# empty
 	else:
-		# create empty, wtih all cols of from_db except Id
+		# create empty, with all cols of from_db except Id
 		cols = [x for x in from_db.columns if x != 'Id']
 		already_file = from_file = pd.DataFrame(columns=cols)
 
-	df = {}	# dict to hold info drawn from system files
+	df = {}  # dict to hold info drawn from system files
 
 	# get list of all enumerations for the <table>
 	df['enumerations'] = pd.read_csv(

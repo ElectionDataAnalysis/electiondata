@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     project_root = Path(__file__).parents[1]
 
-    dfile_d,enum_d,raw_file = ui.find_datafile(tk_root,project_root,analysis_session)
+    dfile_d,enum_d,raw_file = ui.find_datafile(project_root,analysis_session)
     if enum_d['_datafile_separator'] == 'tab':
         sep = '\t'
     elif enum_d['_datafile_separator'] == 'comma':

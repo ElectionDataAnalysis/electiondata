@@ -5,7 +5,6 @@ from scipy import stats as stats
 import scipy.spatial.distance as dist
 import numpy as np
 import pandas as pd
-from sqlalchemy.orm import sessionmaker
 
 import matplotlib.pyplot as plt
 import db_routines as dbr
@@ -104,14 +103,14 @@ class AnomalyDataFrame(object):
             except:
                 a_list=[]
             if a_list:
-                self.dframe = self.dframe.append(a_list) # less efficient to update anomaly_dframe contest-by-contest, but better for debug
+                self.dframe = self.dframe.append(a_list) # less efficient to update anomaly_dframe contest-by-contest
             else:
                 print('No anomalies found for contest ' + contest_name)
 
+
 class Election(object):
-    def pull_rollup_from_db_by_types(self, roll_up_to_ru_type, atomic_ru_type='precinct',
-            contest_name_list=None,
-            db_paramfile='/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'):
+    def pull_rollup_from_db_by_types(
+            self, roll_up_to_ru_type, atomic_ru_type='precinct',contest_name_list=None,db_paramfile=None):
 
         eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=self.state.short_name)
 

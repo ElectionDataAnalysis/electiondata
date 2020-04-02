@@ -4,20 +4,12 @@ from sqlalchemy.orm import sessionmaker
 import db_routines as dbr
 import user_interface as ui
 import analyze as an
-import tkinter as tk
-try:
-    import cPickle as pickle
-except:
-    import pickle
 
 if __name__ == '__main__':
     project_root = ui.get_project_root()
 
-    # initialize root widget for tkinter
-    tk_root = tk.Tk()
-
     # pick db to use
-    db_paramfile = ui.pick_paramfile(tk_root,project_root)
+    db_paramfile = ui.pick_paramfile(project_root)
     state_name = 'FL'
     # state_name = None
 
