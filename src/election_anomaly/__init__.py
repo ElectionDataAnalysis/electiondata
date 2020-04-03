@@ -3,8 +3,6 @@ import os.path
 import sys
 from pathlib import Path
 
-import munge_routines
-
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '.'))
@@ -16,11 +14,6 @@ import analyze as an
 from sqlalchemy.orm import sessionmaker
 import pandas as pd
 import tkinter as tk
-
-try:
-    import cPickle as pickle
-except:
-    import pickle
 
 if __name__ == '__main__':
 
@@ -50,7 +43,6 @@ if __name__ == '__main__':
         raw_file,sep,analysis_session,project_root,state_short_name=input('State short_name (e.g., \'NC\'?\n'),
         encoding=encoding)
     e = an.Election(analysis_session,s,project_root)
-
 
     get_top_results = input('Get top-level results (y/n)?\n')
     if get_top_results == 'y':

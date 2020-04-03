@@ -40,7 +40,7 @@ def get_filepath(initialdir='~/'):
 
 
 def find_datafile(project_root,sess):
-	print("Choose a datafile.")
+	print("Locate the datafile in the file system.")
 	fpath = get_filepath(initialdir=project_root)
 	filename = ntpath.basename(fpath)
 	datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
@@ -50,7 +50,7 @@ def find_datafile(project_root,sess):
 
 
 def pick_paramfile(project_root):
-	print('Choose the parameter file for your postgreSQL database.')
+	print('Locate the parameter file for your postgreSQL database.')
 	fpath= get_filepath()
 	return fpath
 
@@ -631,9 +631,17 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 	<known_info_d> is a dict of known field-value pairs.
 	Return the record (in dict form) and any enumeration values (in dict form)
 	Store the record (if new) in the db_records_entered_by_hand directory
+	Note: storage in file system should use names of any enumerations, not
+	internal <enum>_Id and Other<enum>.
 	"""
 	# read table from db
 	from_db = pd.read_sql_table(table,sess.bind,index_col='Id')
+
+	# get list of all enumerations for the <table>
+	enum_list = pd.read_csv(
+		os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/Tables',table,'enumerations.txt'),
+		sep='\t',header=0).enumeration.to_list()
+
 
 	# identify/create the directory for storing individual records in file system
 	storage_dir = os.path.join(root_dir,'db_records_entered_by_hand')
@@ -651,15 +659,14 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 			already_file = from_file	# empty
 	else:
 		# create empty, with all cols of from_db except Id
+		# TODO need to have enum, not enum_Id and Otherenum as columns
 		cols = [x for x in from_db.columns if x != 'Id']
+		for e in enum_list:
+			# remove db col names and add plaintext for e
+			cols = [x for x in cols if (x != f'{e}_Id' and x != f'Other{e}')] + [f'{e}']
+
 		already_file = from_file = pd.DataFrame(columns=cols)
 
-	df = {}  # dict to hold info drawn from system files
-
-	# get list of all enumerations for the <table>
-	df['enumerations'] = pd.read_csv(
-		os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/Tables',table,'enumerations.txt'),
-		sep='\t',header=0)
 
 	enum_val = {}	# dict to hold plain-text values of enumerations (e.g., ElectionType)
 
@@ -674,10 +681,9 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 		print('Is the desired record already in the database?')
 		record_idx, record = pick_one(already_db,name_field)
 		if record_idx:
-			for i in df['enumerations'].index:
+			for e in enum_list:
 				# get the plaintext enumeration from the <enumeration>_Id and Other<enumeration>
 				# and insert into enum_val
-				e = df['enumerations'].loc[i,'enumeration']	# name of enumeration
 				enum_from_db = pd.read_sql_table(e,sess.bind)
 				enum_id = already_db.loc[record_idx,f'{e}_Id']
 				enum_othertext = already_db.loc[record_idx,f'Other{e}']
@@ -693,9 +699,8 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 		record_idx,record = pick_one(already_file,name_field)
 		if record_idx:	# if user picked one
 			new_record = dict(already_file.loc[record_idx])
-			for i in df['enumerations'].index:
+			for e in enum_list:
 				# get <enum>_id and Other<enum> from plain text and insert into new_record
-				e = df['enumerations'].loc[i,'enumeration']	# name of enumeration
 				enum_from_db = pd.read_sql_table(e,sess.bind)
 				enhanced = mr.enum_col_to_id_othertext(already_file.loc[[record_idx]],e,enum_from_db)
 				new_record[f'{e}_Id'] = enhanced.loc[0,f'{e}_Id']
@@ -734,7 +739,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 
 			# get rid of db-only fields
 			new_file_dict.pop('Id')
-			for e in enum_val.keys():
+			for e in enum_list:
 				new_file_dict.pop(f'{e}_Id',None)
 				new_file_dict.pop(f'Other{e}')
 
@@ -743,6 +748,9 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 
 			# save to file system
 			from_file = from_file.append(new_file_dict,ignore_index=True)
+
+			# drop db internal fields
+
 			from_file.to_csv(storage_file,sep='\t',index=False)
 			return new_record, enum_val
 

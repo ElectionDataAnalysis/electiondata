@@ -1,3 +1,2 @@
-Name	EndDate	StartDate	ElectionType_Id	OtherElectionType	ElectionType
-2019general	2019-11-05	2019-11-05			general
-2018general	2018-11-06	2018-11-06			general
+Name	EndDate	StartDate	ElectionType
+2018g	2018-11-06	2018-11-06	general
