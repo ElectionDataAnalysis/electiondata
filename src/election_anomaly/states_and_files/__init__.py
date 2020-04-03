@@ -4,7 +4,6 @@ import db_routines as dbr
 import pandas as pd
 import warnings   # TODO use warnings module to handle warnings in all files
 import munge_routines as mr
-from sqlalchemy.orm import sessionmaker
 import user_interface as ui
 
 
@@ -44,14 +43,15 @@ class Jurisdiction:
         cc.rename(columns={'Id_ru':'ElectionDistrict_Id','Id_office':'Office_Id','Name_office':'Name'},inplace=True)
         # insert values for 'PrimaryParty_Id' column
         cc.loc[:,'PrimaryParty_Id'] = None
-        # save cc with just general elections (as basis for defining party primary contests); cc_all will accumulate all party primaries too
+        # save cc with just general elections (as basis for defining party primary contests);
+        # cc_all will accumulate all party primaries too
         cc_all = cc.copy()
 
         cdf_p = pd.read_sql_table('Party',session.bind,None,index_col=None)
         for party_id in cdf_p['Id'].to_list():
             cc_primary = cc[cc['IsPartisan']].copy()  # non-partisan contests don't have party primaries, so omit them.
             cc_primary.loc[:,'PrimaryParty_Id'] = party_id
-            cc_primary.loc[:,'Name'] =  cc_primary['Name'] + ' Primary;' + cdf_p[cdf_p['Id'] == party_id].iloc[0]['Name']
+            cc_primary.loc[:,'Name'] = cc_primary['Name'] + ' Primary;' + cdf_p[cdf_p['Id'] == party_id].iloc[0]['Name']
             # TODO can we use f'' here?
             cc_all = pd.concat([cc_all,cc_primary])
 
@@ -60,7 +60,9 @@ class Jurisdiction:
 
     def check_election_districts(self):
         """Looks in context file to check that every ElectionDistrict in Office.txt is listed in ReportingUnit.txt"""
-        ed = pd.read_csv(os.path.join(self.path_to_juris_dir,'context/Office.txt'),sep='\t',header=0).loc[:,'ElectionDistrict'].to_list()
+        ed = pd.read_csv(
+            os.path.join(
+                self.path_to_juris_dir,'context/Office.txt'),sep='\t',header=0).loc[:,'ElectionDistrict'].to_list()
         ru = list(pd.read_csv(os.path.join(self.path_to_juris_dir,'context/ReportingUnit.txt'),sep='\t').loc[:,'Name'])
         missing = [x for x in ed if x not in ru]
         if len(missing) == 0:
@@ -168,8 +170,10 @@ class Munger:
                     new = input(f'Enter a missing selection\n')
                     if new != '':
                         self.ballot_measure_selection_list.append(new)
-                elif add_or_remove == 'r' :
-                    idx, val = ui.pick_one(pd.DataFrame([[x] for x in self.ballot_measure_selection_list],columns=['Selection']),'Selection',item='Selection')
+                elif add_or_remove == 'r':
+                    idx, val = ui.pick_one(
+                        pd.DataFrame([[x] for x in self.ballot_measure_selection_list],
+                                     columns=['Selection']),'Selection',item='Selection')
                     if idx is not None:
                         self.ballot_measure_selection_list.remove(val)
                 else:
@@ -227,7 +231,8 @@ class Munger:
                 missing_from_ri,'contests in the raw results',
                 f'have no corresponding CandidateContest line in {self.name}/raw_identifiers.txt',
                 outfile='contests_missing_from_munger.txt')
-            add_contests = input(f'Would you like to add any CandidateContests to {self.name}/raw_identifiers.txt (y/n)?\n')
+            add_contests = input(
+                f'Would you like to add any CandidateContests to {self.name}/raw_identifiers.txt (y/n)?\n')
             if add_contests == 'y':
                 input(f'Add any desired contests to {self.name}/raw_identifiers.txt and hit return to continue')
                 ri_df = pd.read_csv(ri,sep='\t',keep_default_na=False)
@@ -246,8 +251,10 @@ class Munger:
             print(f'Some munged candidate contests in the datafile are missing from the database.\n')
             ui.show_sample(missing_from_db,'munged candidate contests','are missing from the database',
                            outfile='missing_ccs.txt')
-            input(f'Add the office corresponding to each missing contest to {jurisdiction.short_name}/context/Office.txt.\n'
-                  f'This may require some research about the office. When ready, hit enter to continue.')
+            input(
+                f'Add the office corresponding to each missing contest to '
+                f'{jurisdiction.short_name}/context/Office.txt.\n'
+                f'This may require some research about the office. When ready, hit enter to continue.')
             self.prepare_context_and_db('Office',results,jurisdiction,sess,project_path=project_path)
             cdf_df = pd.read_sql_table('CandidateContest',sess.bind)
 
@@ -261,17 +268,17 @@ class Munger:
         finally loads final context/<element>.txt into db. Note that this will only add records to db, never remove. """
         # TODO ReportingUnits get checked twice -- once for ballot measure and once for candidate contest_Type
         print(f'Updating database with info from {jurisdiction.short_name}/context/{element}.txt.\n')
-        no_dupes = False
-        while no_dupes == False:
-            source_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
-            source_df = pd.read_csv(source_file,sep='\t')
-
+        source_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
+        source_df = pd.read_csv(source_file,sep='\t')
+        dupes = True
+        while dupes:
             dupes,source_df = ui.find_dupes(source_df)
-            if not dupes.empty:
+            if dupes.empty:
+                dupes = False
+            else:
                 input(f'WARNING: {jurisdiction.short_name}/context/{element}.txt has duplicates.\n'
                       f'Edit the file to remove the duplication, then hit return to continue')
-            else:
-                no_dupes = True
+                source_df = pd.read_csv(source_file,sep='\t')
 
         mr.load_context_dframe_into_cdf(sess,project_path,jurisdiction,source_df,element,
                                         os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
@@ -284,7 +291,6 @@ class Munger:
             results_elements,columns=[f'{element}_external']).merge(
             mu_elements,how='left',left_on=f'{element}_external',right_on='raw_identifier_value'
             ).fillna('')
-
 
         # are there elements in results file that cannot be munged?
         not_identified = elements_mixed[elements_mixed.raw_identifier_value==''].loc[:,
@@ -302,14 +308,16 @@ class Munger:
             print(f'Some {element}s in the results file cannot be interpreted by the munger {self.name}.')
             print(f'Note: {element}s listed in unmunged_{element}s.txt are interpreted as \'to be ignored\'.')
             outfile = f'unmunged_{element}s.txt'
-            ui.show_sample(not_munged,f'{element}s in datafile','cannot be munged',outfile=outfile,dir=self.path_to_munger_dir)
+            ui.show_sample(
+                not_munged,f'{element}s in datafile','cannot be munged',outfile=outfile,dir=self.path_to_munger_dir)
             add_to_munger = input('Would you like to add some/all of these to the munger (y/n)?\n')
             if add_to_munger == 'y':
                 input(f'For each {element} you want to add to the munger:\n'
                     f'\tCut the corresponding line in {self.name}/{outfile} '
                     f'\tAdd a corresponding line the file {self.name}/raw_identifiers.txt, \n'
-                    f'\tincluding creating a name to be used internally in the Common Data Format database Name field.\n'
-                    f'\tThen edit the file {jurisdiction.short_name}/context/{element}.txt, adding a line for each new {element}.\n\n'
+                    f'\tcreating a name to be used internally in the Common Data Format database Name field.\n'
+                    f'\tThen edit the file {jurisdiction.short_name}/context/{element}.txt, '
+                    f'adding a line for each new {element}.\n\n'
                     f'\tMake sure the internal cdf name is exactly the same in both files.\n'
                     f'\tYou may need to do some contextual research to fill all the fields in {element}.txt\n\n'
                     f'Then hit return to continue.\n')
@@ -325,7 +333,8 @@ class Munger:
         db_elements = list(db_element_df['Name'].unique())
 
         # are there elements recognized by munger but not in db?
-        munged_elements = elements_mixed[elements_mixed.raw_identifier_value.notnull()].loc[:,'cdf_internal_name'].to_list()
+        munged_elements = elements_mixed[
+                              elements_mixed.raw_identifier_value.notnull()].loc[:,'cdf_internal_name'].to_list()
         if '' in munged_elements:
             munged_elements = munged_elements.remove('')  # remove any empty strings (e.g., from lines with no Party)
         if munged_elements:
@@ -372,7 +381,8 @@ class Munger:
             f"""A column in {results.columns} is missing from raw_columns.txt."""
 
         if contest_type == 'Candidate':
-            # check Party, Office, ReportingUnit in context & db, updating if necessary (prereq to checking CandidateContests)
+            # check Party, Office, ReportingUnit in context & db, updating if necessary (prereq to checking
+            # CandidateContests)
             for element in ['Party','Office','ReportingUnit']:
                 self.finalize_element(element,results,jurisdiction,sess,project_root)
             # After Party and Office are finalized, prepare CandidateContest and check against munger
@@ -423,8 +433,7 @@ class Munger:
             if not os.path.isfile(os.path.join(dir_path,ff)):
                 input(f'Directory \n\t{dir_path}\ndoes not contain file {ff}.\n'
                       f'Please create the file and hit return to continue')
-        #self.name=dir_path.split('/')[-1]    # e.g., 'nc_general'
-        self.name= os.path.basename(dir_path) # e.g., 'nc_general'
+        self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir=dir_path
 
         # read raw_identifiers file into a table
@@ -442,7 +451,8 @@ class Munger:
 
         # read cdf tables and rename in ExternalIdentifiers col if necessary
         cdf_table_file = os.path.join(dir_path,'cdf_tables.txt')
-        cdft = ui.confirm_or_correct_cdf_table_file(cdf_table_file,undoctored_raw_columns.name.to_list()).set_index('cdf_element')
+        cdft = ui.confirm_or_correct_cdf_table_file(
+            cdf_table_file,undoctored_raw_columns.name.to_list()).set_index('cdf_element')
         # change names for raw columns whose names match cdf elements
         for k in col_d.keys():
             cdft['raw_identifier_formula'] = cdft['raw_identifier_formula'].str.replace(
@@ -451,8 +461,8 @@ class Munger:
 
         # determine how to treat ballot measures (ballot_measure_style) and its description
         bms_file = os.path.join(dir_path,'ballot_measure_style.txt')
-        bmso_file=os.path.join(os.path.abspath(os.path.join(dir_path,os.pardir)),
-                                       'ballot_measure_style_options.txt')
+        bmso_file=os.path.join(
+            os.path.abspath(os.path.join(dir_path,os.pardir)),'ballot_measure_style_options.txt')
         self.ballot_measure_style,self.ballot_measure_style_description = ui.confirm_or_correct_ballot_measure_style(
             bmso_file,bms_file)
 
@@ -485,7 +495,9 @@ class Munger:
 
         if self.ballot_measure_style == 'yes_and_no_are_candidates':
             ri_df = pd.read_csv(os.path.join(dir_path,'raw_identifiers.txt'),sep='\t')
-            self.ballot_measure_selection_list = ri_df[ri_df.cdf_element=='BallotMeasureSelection'].loc[:,'raw_identifier_value'].to_list()
+            self.ballot_measure_selection_list = ri_df[
+                                                     ri_df.cdf_element=='BallotMeasureSelection'].loc[
+                                                 :,'raw_identifier_value'].to_list()
 
             bms_str=cdft.loc['BallotMeasureSelection','raw_identifier_formula']
             # note: bms_str will start and end with <>
