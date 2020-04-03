@@ -270,6 +270,7 @@ class Munger:
         print(f'Updating database with info from {jurisdiction.short_name}/context/{element}.txt.\n')
         source_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
         source_df = pd.read_csv(source_file,sep='\t')
+        # TODO check that logic below still works
         dupes = True
         while dupes:
             dupes,source_df = ui.find_dupes(source_df)
