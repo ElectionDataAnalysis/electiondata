@@ -262,7 +262,8 @@ class ContestRollup:
         self.election=election
         self.atomic_ru_type=atomic_ru_type
         self.roll_up_to_ru_type=roll_up_to_ru_type
-        self.dframe=self.election.pull_rollup_from_db_by_types(self.roll_up_to_ru_type,atomic_ru_type=atomic_ru_type,contest_name_list=contest_name_list)
+        self.dframe=self.election.pull_rollup_from_db_by_types(
+            self.roll_up_to_ru_type,atomic_ru_type=atomic_ru_type,contest_name_list=contest_name_list)
         if not contest_name_list:
             contest_name_list = list(self.dframe['Contest'].unique())
         self.contest_name_list=contest_name_list

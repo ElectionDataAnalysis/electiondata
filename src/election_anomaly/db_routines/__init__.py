@@ -96,10 +96,11 @@ def establish_connection(paramfile = '../jurisdictions/database.ini',db_name='po
 
 def sql_alchemy_connect(
         schema=None,
-        paramfile='/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini',
+        paramfile=None,
         db_name='postgres'):
     """Returns an engine and a metadata object"""
-
+    if not paramfile:
+        paramfile = ui.pick_paramfile(ui.get_project_root())
     params = config(paramfile)
     if db_name != 'postgres': params['dbname'] = db_name
     # We connect with the help of the PostgreSQL URL
