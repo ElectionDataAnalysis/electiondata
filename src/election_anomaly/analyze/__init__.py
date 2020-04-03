@@ -192,6 +192,7 @@ class Election(object):
                 rollup=rollup[rollup['CountItemType']!='total']
             output = rollup.groupby(['Contest','Selection']).sum()
             count_item_type = 'total'
+            # TODO bug FL crashes here
             output.loc[:,'CountItemType'] = count_item_type
         elif mode=='by_vote_type':
             output = rollup.groupby(['Contest','Selection','CountItemType']).sum()
