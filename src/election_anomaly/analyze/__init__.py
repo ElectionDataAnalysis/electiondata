@@ -180,7 +180,10 @@ class Election(object):
 
     def summarize_results(
             self,atomic_ru_type='precinct',mode='top',skip_total_column=True,
-            db_paramfile='/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'):
+            db_paramfile=None):
+        if not db_paramfile:
+            db_paramfile = ui.pick_paramfile(ui.get_project_root())
+
         rollup=self.pull_rollup_from_db_by_types('state',atomic_ru_type=atomic_ru_type,db_paramfile=db_paramfile)
         rollup=rollup.drop(['Contest_Id','ReportingUnit_Id','Selection_Id','CountItemType_Id','contest_type'],axis=1)
         if mode=='top':

@@ -25,15 +25,13 @@ if __name__ == '__main__':
                                           path_to_states=os.path.join(project_root,'jurisdictions'),
                                           state_name=state_name)
 
-
-
     e =an.Election(analysis_session,state,project_root)
 
     arut = input(f'Enter the atomic reporting unit type for {state_name}\n')
     # TODO read applicable reporting unit types from db; make user choose if >1
     # TODO read CountItemTypes from VoteCounts to see if total column should be skipped
     e.summarize_results(atomic_ru_type=arut,mode='by_vote_type',
-                        skip_total_column=False)
+                        skip_total_column=False,db_paramfile=db_paramfile)
 
     eng.dispose()
     print('Done')
