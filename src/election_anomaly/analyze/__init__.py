@@ -208,7 +208,7 @@ class Election(object):
         output.to_csv(out_file,sep='\t')
 
         # TODO create record in inventory.txt
-        print(f'Results exported to {fpath}')
+        print(f'Results exported to {out_file}')
 
         return output
 
