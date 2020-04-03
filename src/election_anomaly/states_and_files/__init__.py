@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker
 import user_interface as ui
 
 
-class State:
+class Jurisdiction:
     def create_db(self):
         # create db
         con = dbr.establish_connection()
@@ -24,7 +24,7 @@ class State:
         # TODO need to run this only when/if Offices change
 
         office_file = os.path.join(
-            self.path_to_state_dir,'context/Office.txt')
+            self.path_to_juris_dir,'context/Office.txt')
         co_kwargs = {'sep':'\t'}
         context_office = pd.read_csv(office_file,**co_kwargs)
         ui.resolve_nulls(context_office,office_file,kwargs=co_kwargs)
@@ -60,8 +60,8 @@ class State:
 
     def check_election_districts(self):
         """Looks in context file to check that every ElectionDistrict in Office.txt is listed in ReportingUnit.txt"""
-        ed = pd.read_csv(os.path.join(self.path_to_state_dir,'context/Office.txt'),sep='\t',header=0).loc[:,'ElectionDistrict'].to_list()
-        ru = list(pd.read_csv(os.path.join(self.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t').loc[:,'Name'])
+        ed = pd.read_csv(os.path.join(self.path_to_juris_dir,'context/Office.txt'),sep='\t',header=0).loc[:,'ElectionDistrict'].to_list()
+        ru = list(pd.read_csv(os.path.join(self.path_to_juris_dir,'context/ReportingUnit.txt'),sep='\t').loc[:,'Name'])
         missing = [x for x in ed if x not in ru]
         if len(missing) == 0:
             all_ok = True
@@ -70,23 +70,23 @@ class State:
             all_ok = False
             print('Every ElectionDistrict must be a ReportingUnit. This is not optional!!')
             ui.show_sample(missing,'ElectionDistricts','are not yet ReportingUnits',
-                           outfile='electiondistricts_missing_from_reportingunits.txt',dir=self.path_to_state_dir)
+                           outfile='electiondistricts_missing_from_reportingunits.txt',dir=self.path_to_juris_dir)
             input('Please make corrections to Office.txt or additions to ReportingUnit.txt to resolve the problem.\n'
                   'Then his return to continue.'
-                  f'(Directory is {os.path.join(self.path_to_state_dir,"context")}')
+                  f'(Directory is {os.path.join(self.path_to_juris_dir,"context")}')
             self.check_election_districts()
         return all_ok
 
     def add_to_context_dir(self,element,df):
-        """Add the data in the dataframe <f> to the file corresponding
-        to <element> in the <state>'s context folder.
+        """Add the data in the dataframe <df> to the file corresponding
+        to <element> in the Jurisdiction's context folder.
         <f> must have all columns matching the columns in context/<element>.
         OK for <f> to have extra columns"""
         # TODO
         try:
-            elts = pd.read_csv('{}context/{}.txt'.format(self.path_to_state_dir,element),sep='\t')
+            elts = pd.read_csv('{}context/{}.txt'.format(self.path_to_juris_dir,element),sep='\t')
         except FileNotFoundError:
-            print('File {}context/{}.txt does not exist'.format(self.path_to_state_dir,element))
+            print('File {}context/{}.txt does not exist'.format(self.path_to_juris_dir,element))
             return
         else:
             for col in elts.columns:
@@ -96,49 +96,49 @@ class State:
                     df.loc[:,col] = ''
             # pull and order necessary columns from <df>
             df_new = pd.concat([df[elts.columns],elts])
-            df_new.to_csv('{}context/{}.txt'.format(self.path_to_state_dir,element),sep='\t',index=False)
+            df_new.to_csv('{}context/{}.txt'.format(self.path_to_juris_dir,element),sep='\t',index=False)
 
             # TODO insert into cdf.<element>, using mr.load_context_dframe_into_cdf
 
             return
 
     def __init__(self,short_name,path_to_parent_dir):        # reporting_units,elections,parties,offices):
-        """ short_name is the name of the directory containing the state info, including data,
+        """ short_name is the name of the directory containing the jurisdiction info, including data,
          and is used other places as well.
          path_to_parent_dir is the parent directory of dir_name
         """
         self.short_name = short_name
         if path_to_parent_dir[-1] != '/':     # should end in /
             path_to_parent_dir += '/'
-        self.path_to_state_dir = path_to_parent_dir + short_name+'/'
-        assert os.path.isdir(self.path_to_state_dir), 'Error: No directory ' + self.path_to_state_dir
-        assert os.path.isdir(self.path_to_state_dir+'context/'), \
-            'Error: No directory ' + self.path_to_state_dir+'context/'
+        self.path_to_juris_dir = path_to_parent_dir + short_name + '/'
+        assert os.path.isdir(self.path_to_juris_dir),'Error: No directory ' + self.path_to_juris_dir
+        assert os.path.isdir(self.path_to_juris_dir + 'context/'), \
+            'Error: No directory ' + self.path_to_juris_dir + 'context/'
         # Check that context directory is missing no essential files
         context_file_list = ['Office.txt','remark.txt','ReportingUnit.txt']
         file_missing_list = [ff for ff in context_file_list
-                             if not os.path.isfile(f'{self.path_to_state_dir}context/{ff}')]
+                             if not os.path.isfile(f'{self.path_to_juris_dir}context/{ff}')]
         assert file_missing_list == [], \
-            f'Error: Missing files in {os.path.join(self.path_to_state_dir,"context")}:\n{file_missing_list}'
+            f'Error: Missing files in {os.path.join(self.path_to_juris_dir,"context")}:\n{file_missing_list}'
 
 
 class Munger:
-    def finalize_element(self,element,results,state,sess,project_root):
+    def finalize_element(self,element,results,jurisdiction,sess,project_root):
         """Guides user to make any necessary or desired changes in context/<element>.txt
         and makes corresponding changes to db"""
         finalized = False
         while not finalized:
-            self.prepare_context_and_db(element,results,state,sess,project_path=project_root)
+            self.prepare_context_and_db(element,results,jurisdiction,sess,project_path=project_root)
             if element == 'ReportingUnit':
                 eds_ok = False
                 while not eds_ok:
-                    eds_ok = state.check_election_districts()
+                    eds_ok = jurisdiction.check_election_districts()
                     if not eds_ok:
                         # recheck Office and ReportingUnit
                         self.prepare_context_and_db(
-                            'Office',results,state,sess,project_path=project_root)
+                            'Office',results,jurisdiction,sess,project_path=project_root)
                         self.prepare_context_and_db(
-                            'ReportingUnit',results,state,sess,project_path=project_root)
+                            'ReportingUnit',results,jurisdiction,sess,project_path=project_root)
             fin = input(f'Is the file context/{element}.txt finalized to your satisfaction (y/n)?\n')
             if fin == 'y':
                 finalized = True
@@ -205,7 +205,7 @@ class Munger:
         else:
             return
 
-    def check_candidatecontest(self,results,state,sess,project_path='.'):
+    def check_candidatecontest(self,results,jurisdiction,sess,project_path='.'):
         # TODO
         """report raw contests in <results> missing from raw_identifiers.txt
         and report cdf_internal names of contests in <results>-join-raw_identifiers
@@ -246,34 +246,34 @@ class Munger:
             print(f'Some munged candidate contests in the datafile are missing from the database.\n')
             ui.show_sample(missing_from_db,'munged candidate contests','are missing from the database',
                            outfile='missing_ccs.txt')
-            input(f'Add the office corresponding to each missing contest to {state.short_name}/context/Office.txt.\n'
+            input(f'Add the office corresponding to each missing contest to {jurisdiction.short_name}/context/Office.txt.\n'
                   f'This may require some research about the office. When ready, hit enter to continue.')
-            self.prepare_context_and_db('Office',results,state,sess,project_path=project_path)
+            self.prepare_context_and_db('Office',results,jurisdiction,sess,project_path=project_path)
             cdf_df = pd.read_sql_table('CandidateContest',sess.bind)
 
             cdf_from_db = set(cdf_df['Name'])
             missing_from_db = {x for x in cdf_from_ri if x not in cdf_from_db}
         return
 
-    def prepare_context_and_db(self,element,results,state,sess,project_path='.'):
+    def prepare_context_and_db(self,element,results,jurisdiction,sess,project_path='.'):
         """Loads info from context/<element>.txt into db; checks results file <element>s against munger;
         then checks munger against db. Throughout, guides user to make corrections in context/<element>.txt;
         finally loads final context/<element>.txt into db. Note that this will only add records to db, never remove. """
         # TODO ReportingUnits get checked twice -- once for ballot measure and once for candidate contest_Type
-        print(f'Updating database with info from {state.short_name}/context/{element}.txt.\n')
+        print(f'Updating database with info from {jurisdiction.short_name}/context/{element}.txt.\n')
         no_dupes = False
         while no_dupes == False:
-            source_file = os.path.join(state.path_to_state_dir,'context',f'{element}.txt')
+            source_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
             source_df = pd.read_csv(source_file,sep='\t')
 
             dupes,source_df = ui.find_dupes(source_df)
             if not dupes.empty:
-                input(f'WARNING: {state.short_name}/context/{element}.txt has duplicates.\n'
+                input(f'WARNING: {jurisdiction.short_name}/context/{element}.txt has duplicates.\n'
                       f'Edit the file to remove the duplication, then hit return to continue')
             else:
                 no_dupes = True
 
-        mr.load_context_dframe_into_cdf(sess,project_path,state,source_df,element,
+        mr.load_context_dframe_into_cdf(sess,project_path,jurisdiction,source_df,element,
                                         os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
 
         mr.add_munged_column(results,self,element,f'{element}_external')
@@ -309,16 +309,16 @@ class Munger:
                     f'\tCut the corresponding line in {self.name}/{outfile} '
                     f'\tAdd a corresponding line the file {self.name}/raw_identifiers.txt, \n'
                     f'\tincluding creating a name to be used internally in the Common Data Format database Name field.\n'
-                    f'\tThen edit the file {state.short_name}/context/{element}.txt, adding a line for each new {element}.\n\n'
+                    f'\tThen edit the file {jurisdiction.short_name}/context/{element}.txt, adding a line for each new {element}.\n\n'
                     f'\tMake sure the internal cdf name is exactly the same in both files.\n'
                     f'\tYou may need to do some contextual research to fill all the fields in {element}.txt\n\n'
                     f'Then hit return to continue.\n')
 
         # add all elements from context/ to db
-        source_df = pd.read_csv(f'{state.path_to_state_dir}context/{element}.txt',sep='\t')
+        source_df = pd.read_csv(f'{jurisdiction.path_to_juris_dir}context/{element}.txt',sep='\t')
         mr.load_context_dframe_into_cdf(sess,project_path,
-                                        state,source_df,element,
-                                        CDF_schema_def_dir=os.path.join(project_path,
+                                        jurisdiction,source_df,element,
+                                        cdf_schema_def_dir=os.path.join(project_path,
                                                                         'election_anomaly/CDF_schema_def_info'))
 
         db_element_df = pd.read_sql_table(element,sess.bind)
@@ -342,15 +342,15 @@ class Munger:
             if add_to_db == 'y':
                 input(f'For each {element} you want to add to the database:\n'
                         f'\tCut the corresponding line in {self.name}/{outfile}.\n'
-                        f'\tAdd a line the file {state.short_name}/context/{element}.txt.\n'
+                        f'\tAdd a line the file {jurisdiction.short_name}/context/{element}.txt.\n'
                         f'\tCopy the internal cdf name from {self.name}/raw_identifiers.txt'
-                        f' and paste it into {state.short_name}/context/{element}.txt.\n'
+                        f' and paste it into {jurisdiction.short_name}/context/{element}.txt.\n'
                         f'\tYou may need to do some contextual research to fill the other fields in {element}.txt\n\n'
                         f'Then hit return to continue.\n')
-        source_df = pd.read_csv(f'{state.path_to_state_dir}context/{element}.txt',sep='\t')
+        source_df = pd.read_csv(f'{jurisdiction.path_to_juris_dir}context/{element}.txt',sep='\t')
         mr.load_context_dframe_into_cdf(sess,project_path,
-                                        state,source_df,element,
-                                        CDF_schema_def_dir=os.path.join(project_path,
+                                        jurisdiction,source_df,element,
+                                        cdf_schema_def_dir=os.path.join(project_path,
                                                                         'election_anomaly/CDF_schema_def_info'))
         return
 
@@ -363,7 +363,7 @@ class Munger:
             print(f'Missing columns are {missing}')
             return False
 
-    def check_new_results_dataset(self,results,state,sess,contest_type,project_root='.'):
+    def check_new_results_dataset(self,results,jurisdiction,sess,contest_type,project_root='.'):
         """<results> is a results dataframe of a single <contest_type>;
         this routine should add what's necessary to the munger to treat the dataframe,
         keeping backwards compatibility and exiting gracefully if dataframe needs different munger."""
@@ -374,13 +374,13 @@ class Munger:
         if contest_type == 'Candidate':
             # check Party, Office, ReportingUnit in context & db, updating if necessary (prereq to checking CandidateContests)
             for element in ['Party','Office','ReportingUnit']:
-                self.finalize_element(element,results,state,sess,project_root)
+                self.finalize_element(element,results,jurisdiction,sess,project_root)
             # After Party and Office are finalized, prepare CandidateContest and check against munger
-            state.prepare_candidatecontests(sess)
-            self.check_candidatecontest(results,state,sess,project_path=project_root)
+            jurisdiction.prepare_candidatecontests(sess)
+            self.check_candidatecontest(results,jurisdiction,sess,project_path=project_root)
 
         if contest_type == 'BallotMeasure':
-            self.finalize_element('ReportingUnit',results,state,sess,project_root)
+            self.finalize_element('ReportingUnit',results,jurisdiction,sess,project_root)
             # TODO feature: prevent finalizing RUs twice if both contest_types are treated
             # check that munger processes ballot measure contests appropriately.
             print(f'This munger assumes that {self.ballot_measure_style_description}.')
@@ -506,7 +506,7 @@ if __name__ == '__main__':
     current_dir=os.getcwd()
     path_to_src_dir=current_dir.split('/election_anomaly/')[0]
 
-    s = State('NC_test2',f'{path_to_src_dir}/jurisdictions/')
+    s = Jurisdiction('NC_test2',f'{path_to_src_dir}/jurisdictions/')
     mu = Munger('../../mungers/not_for_prime_time_NC/',cdf_schema_def_dir='../CDF_schema_def_info/')
     f = pd.read_csv('../../jurisdictions/NC/data/2018g/nc_general',sep='\t')
 

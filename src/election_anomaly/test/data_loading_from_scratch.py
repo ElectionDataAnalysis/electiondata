@@ -43,7 +43,7 @@ if __name__ == '__main__':
 		encoding = 'utf-8'
 
 	state, mnger = ui.new_datafile(
-		raw_file,sep,new_df_session,state_short_name=state_short_name,encoding=encoding,project_root=project_root)
+		raw_file,sep,new_df_session,juris_short_name=state_short_name,encoding=encoding,project_root=project_root)
 
 	eng.dispose()
 	print('Done! (user_interface)')

@@ -112,7 +112,7 @@ class Election(object):
     def pull_rollup_from_db_by_types(
             self, roll_up_to_ru_type, atomic_ru_type='precinct',contest_name_list=None,db_paramfile=None):
 
-        eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=self.state.short_name)
+        eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=self.jurisdiction.short_name)
 
         # Get necessary tables from cdf schema
         cdf_d={}
@@ -193,7 +193,7 @@ class Election(object):
         elif mode=='by_vote_type':
             output = rollup.groupby(['Contest','Selection','CountItemType']).sum()
 
-        outpath = os.path.join(self.state.path_to_state_dir,'output')
+        outpath = os.path.join(self.jurisdiction.path_to_juris_dir,'output')
         if os.path.isdir(outpath):
             fpath = os.path.join(outpath,f'{self.short_name}_{mode}_results.txt')
             output.to_csv(fpath,sep='\t')
@@ -202,14 +202,14 @@ class Election(object):
             print(f'Cannot export; directory {outpath} does not exist')
         return output
 
-    def __init__(self, session,state,project_root):
-        assert isinstance(state,sf.State)
+    def __init__(self,session,jurisdiction,project_root):
+        assert isinstance(jurisdiction,sf.Jurisdiction)
         cdf_el = pd.read_sql_table('Election',session.bind,index_col='Id')
         election_idx,electiontype = ui.get_or_create_election_in_db(session,project_root)
 
         self.short_name = cdf_el.loc[election_idx,'Name']
         self.name = self.short_name   # TODO merge name and short_name
-        self.state=state    # TODO feature: generalize to other ReportingUnits?
+        self.jurisdiction=jurisdiction    # TODO feature: generalize to other ReportingUnits?
         self.ElectionType = electiontype
         self.Election_Id = election_idx
         self.ElectionType_Id = cdf_el.loc[election_idx,'ElectionType_Id']

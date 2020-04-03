@@ -5,15 +5,13 @@
 import db_routines as dbr
 import user_interface as ui
 import pandas as pd
-import numpy as np
 import time
-import analyze as an
 import re
 import os
 
 
-def load_context_dframe_into_cdf(session,project_root,state,source_df1,element,
-                                 CDF_schema_def_dir='CDF_schema_def_info/'):
+def load_context_dframe_into_cdf(
+        session,project_root,jurisdiction,source_df1,element,cdf_schema_def_dir='CDF_schema_def_info/'):
     """<source_df> should have all info needed for insertion into cdf:
     for enumerations, the value of the enumeration (e.g., 'precinct')
     for other fields, the value of the field (e.g., 'North Carolina;Alamance County').
@@ -26,9 +24,9 @@ def load_context_dframe_into_cdf(session,project_root,state,source_df1,element,
     if not dupes.empty:
         print(f'WARNING: duplicates removed from dataframe, may indicate a problem.\n{source_df1}')
 
-    enum_file = os.path.join(CDF_schema_def_dir,'Tables',element,'enumerations.txt')
+    enum_file = os.path.join(cdf_schema_def_dir,'Tables',element,'enumerations.txt')
     if os.path.isfile(enum_file):  # (if not, there are no enums for this element)
-        enums = pd.read_csv(os.path.join(CDF_schema_def_dir,'Tables',element,'enumerations.txt'),sep='\t')
+        enums = pd.read_csv(os.path.join(cdf_schema_def_dir,'Tables',element,'enumerations.txt'),sep='\t')
         # get all relevant enumeration tables
         for e in enums['enumeration']:  # e.g., e = "ReportingUnitType"
             cdf_e = pd.read_sql_table(e,session.bind)
@@ -54,7 +52,7 @@ def load_context_dframe_into_cdf(session,project_root,state,source_df1,element,
         # upload ReportingUnits from context/ReportingUnit.txt to db and upload corresponding CandidateContests too
 
         # ReportingUnits
-        ru = pd.read_csv(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t')
+        ru = pd.read_csv(os.path.join(jurisdiction.path_to_juris_dir,'context/ReportingUnit.txt'),sep='\t')
         nulls_ok = False
         while not nulls_ok:
             # find any rows that have nulls, ask user to fix.
@@ -65,7 +63,7 @@ def load_context_dframe_into_cdf(session,project_root,state,source_df1,element,
                 input(
                     f'The file context/ReportingUnit.txt has some blank or null entries.\n'
                     f'Fill blanks, or erase rows with blanks and hit return to continue.\n')
-                ru = pd.read_csv(os.path.join(state.path_to_state_dir,'context/ReportingUnit.txt'),sep='\t')
+                ru = pd.read_csv(os.path.join(jurisdiction.path_to_juris_dir,'context/ReportingUnit.txt'),sep='\t')
 
         cdf_rut = pd.read_sql_table('ReportingUnitType',session.bind)
         ru = enum_col_to_id_othertext(ru,'ReportingUnitType',cdf_rut)
@@ -85,11 +83,11 @@ def load_context_dframe_into_cdf(session,project_root,state,source_df1,element,
                 ui.show_sample(list(new_ru.ElectionDistrict.unique()),'office election districts',
                                condition='are not in the ReportingUnit table of the common data format',
                                outfile='missing_reportingunits.txt',
-                               dir=os.path.join(state.path_to_state_dir,'output'))
+                               dir=os.path.join(jurisdiction.path_to_juris_dir,'output'))
                 input(f'Please add any missing Election Districts to context/ReportingUnit.txt and hit return to continue.\n')
                 rut_list = list(cdf_rut['Txt'])
                 ru = ui.fill_context_file(
-                    os.path.join(state.path_to_state_dir,'context'),
+                    os.path.join(jurisdiction.path_to_juris_dir,'context'),
                     os.path.join(project_root,'templates/context_templates'),
                     'ReportingUnit',rut_list,'ReportingUnitType')
                 #  then upload to db
@@ -99,7 +97,7 @@ def load_context_dframe_into_cdf(session,project_root,state,source_df1,element,
             else:
                 eds_ok = True
         # CandidateContests
-        state.prepare_candidatecontests(session)
+        jurisdiction.prepare_candidatecontests(session)
     return
 
 
@@ -234,7 +232,7 @@ def get_enum_value_from_id_othertext(enum_df,id,othertext):
     return enum_val
 
 
-def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,state_id):
+def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,juris_id):
     """
     NOTE: Tables from context assumed to exist already in db
     (e.g., Party, ComposingReportingUnitJoin, Election, ReportingUnit etc.)
@@ -312,8 +310,8 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,st
             raise Exception(f'Ballot measure style \'{mu.ballot_measure_style}\' not recognized')
         bm_contest_selection.columns = ['Name','Selection']
         # internal db name for ballot measure contest matches name in file
-        bm_contest_selection.loc[:,'ElectionDistrict_Id'] = state_id  # append column for ElectionDistrict Id
-        print('WARNING: all ballot measure contests assumed to have the whole state as their district')
+        bm_contest_selection.loc[:,'ElectionDistrict_Id'] = juris_id  # append column for ElectionDistrict Id
+        print('WARNING: all ballot measure contests assumed to have the whole datafile jurisdiction as their district')
 
         # Load BallotMeasureContest table to cdf schema
         cdf_d['BallotMeasureContest'] = dbr.dframe_to_sql(bm_contest_selection[['Name','ElectionDistrict_Id']]

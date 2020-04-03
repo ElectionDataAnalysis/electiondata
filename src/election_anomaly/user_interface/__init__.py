@@ -231,35 +231,35 @@ def check_count_columns(df,file,mungerdir,cdf_schema_def_dir):
 	return df
 
 
-def pick_state_from_filesystem(con,project_root,path_to_states='jurisdictions/',state_name=None):
+def pick_juris_from_filesystem(con,project_root,path_to_jurisdictions='jurisdictions/',jurisdiction_name=None):
 	"""Returns a State object.
-	If <state_short_name> is given, this just initializes based on info
+	If <jurisdiction_name> is given, this just initializes based on info
 	in the folder with that name; """
-	# TODO need to get the ReportingUnit.Id for the state somewhere and pass it to the row-by-row processor
-	if state_name is None:
-		choice_list = [x for x in os.listdir(path_to_states) if os.path.isdir(os.path.join(path_to_states,x))]
-		state_df = pd.DataFrame(choice_list,columns=['State'])
-		print('Pick the filesystem directory for your state.')
-		state_idx,state_name = pick_one(state_df,'State', item='state')
+	# TODO need to get the ReportingUnit.Id for the jurisdiction somewhere and pass it to the row-by-row processor
+	if jurisdiction_name is None:
+		choice_list = [x for x in os.listdir(path_to_jurisdictions) if os.path.isdir(os.path.join(path_to_jurisdictions,x))]
+		juris_df = pd.DataFrame(choice_list,columns=['Jurisdiction'])
+		print('Pick the filesystem directory for your jurisdiction.')
+		juris_idx,jurisdiction_name = pick_one(juris_df,'Jurisdiction',item='jurisdiction')
 
-		if state_idx is None:
-			# user chooses state short_name
-			state_name = input('Enter a short name (alphanumeric only, no spaces) for your state '
+		if juris_idx is None:
+			# user chooses jurisdiction short_name
+			jurisdiction_name = input('Enter a short name (alphanumeric only, no spaces) for your jurisdiction '
 							   '(e.g., \'NC\')\n')
-		state_path = os.path.join(path_to_states,state_name)
+		juris_path = os.path.join(path_to_jurisdictions,jurisdiction_name)
 
-		# create state directory
+		# create jurisdiction directory
 		try:
-			os.mkdir(state_path)
+			os.mkdir(juris_path)
 		except FileExistsError:
-			print(f'Directory {state_path} already exists, will be preserved')
+			print(f'Directory {juris_path} already exists, will be preserved')
 		else:
-			print(f'Directory {state_path} created')
+			print(f'Directory {juris_path} created')
 
 		# create subdirectories
 		subdir_list = ['context','data','output']
 		for sd in subdir_list:
-			sd_path = os.path.join(state_path,sd)
+			sd_path = os.path.join(juris_path,sd)
 			try:
 				os.mkdir(sd_path)
 			except FileExistsError:
@@ -269,34 +269,34 @@ def pick_state_from_filesystem(con,project_root,path_to_states='jurisdictions/',
 
 		# ensure context directory has what it needs
 		context_file_list = ['Office.txt','Party.txt','ReportingUnit.txt','remark.txt']
-		if not all([os.path.isfile(os.path.join(state_path,'context',x)) for x in context_file_list]):
+		if not all([os.path.isfile(os.path.join(juris_path,'context',x)) for x in context_file_list]):
 			# pull necessary enumeration from db: ReportingUnitType
 			ru_type = pd.read_sql_table('ReportingUnitType',con,index_col='Id')
 			standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
-			ru = fill_context_file(os.path.join(state_path,'context'),
+			ru = fill_context_file(os.path.join(juris_path,'context'),
 							  os.path.join(project_root,'templates/context_templates'),
 								'ReportingUnit',standard_ru_types,'ReportingUnitType')
 			ru_list = ru['Name'].to_list()
-			fill_context_file(os.path.join(state_path,'context'),
+			fill_context_file(os.path.join(juris_path,'context'),
 							  os.path.join(project_root,'templates/context_templates'),
 								'Office',None,None)  # note check that ElectionDistricts are RUs happens below
 			# Party.txt
-			fill_context_file(os.path.join(state_path,'context'),
+			fill_context_file(os.path.join(juris_path,'context'),
 							  os.path.join(project_root,'templates/context_templates'),
 								'Party',None,None)
 			# TODO remark
-			remark_path = os.path.join(state_path,'context','remark.txt')
+			remark_path = os.path.join(juris_path,'context','remark.txt')
 			open(remark_path,'a').close()	# creates file if it doesn't exist already
 			with open(remark_path,'r') as f:
 				remark = f.read()
 			print(f'Current contents of remark.txt is:\n{remark}\n')
-			# TODO replace 'state' by 'jurisdiction', including dealing with non-state top-level jurisdictions
-			input(f'In the file context/remark.txt, add or correct anything that user should know about the jurisdiction {state_name}.\n'
+			# TODO deal with non-state top-level jurisdictions
+			input(f'In the file context/remark.txt, add or correct anything that user should know about the jurisdiction {jurisdiction_name}.\n'
 						f'Then hit return to continue.')
 	else:
-		print(f'Directory {state_name} is assumed to exist and have the required contents.')
-	# initialize the state
-	ss = sf.State(state_name,path_to_states)
+		print(f'Directory {jurisdiction_name} is assumed to exist and have the required contents.')
+	# initialize the jurisdiction
+	ss = sf.Jurisdiction(jurisdiction_name,path_to_jurisdictions)
 	ss.check_election_districts()
 	return ss
 
@@ -472,7 +472,7 @@ def pick_munger(sess,munger_dir='mungers',column_list=None,root='.',test_munger=
 	munger_df = pd.DataFrame(choice_list,columns=['Munger'])
 	munger_idx,munger_name = pick_one(munger_df,'Munger', item='munger')
 	if munger_idx is None:
-		# user chooses state munger
+		# user chooses munger
 		munger_name = input('Enter a short name (alphanumeric only, no spaces) for your munger'
 						   '(e.g., \'nc_primary18\')\n')
 	if test_munger:
@@ -587,22 +587,23 @@ def create_munger(column_list=None):
 	return munger
 
 
-def pick_state_from_db(sess,project_root):
+def pick_juris_from_db(sess,project_root,juris_type='state'):
 	ru = pd.read_sql_table('ReportingUnit',sess.bind,index_col='Id')
 	rut = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
 	# TODO build uniqueness into Txt field of each enumeration on db creation
-	assert rut[rut.Txt=='state'].shape[0] == 1, '\'ReportingUnitType\' table does not have exactly one \'state\' entry'
-	state_type_id = rut[rut.Txt=='state'].first_valid_index()
-	states = ru[ru.ReportingUnitType_Id==state_type_id]
-	if states.empty:
-		print('No state record found in the database. Please create one.')
-		state_record_d, state_enum_d = create_record_in_db(
-			sess,project_root,'ReportingUnit',known_info_d={'ReportingUnitType_Id':state_type_id,'OtherReportingUnitType':''})
-		state_idx = state_record_d['Id']
-		state_internal_db_name = state_record_d['Name']
+	# TODO allow arbitrary top-level jurisdictions
+	assert rut[rut.Txt==juris_type].shape[0] == 1, f'\'ReportingUnitType\' table does not have exactly one \'{juris_type}\' entry'
+	juris_type_id = rut[rut.Txt==juris_type].first_valid_index()
+	jurisdictions = ru[ru.ReportingUnitType_Id == juris_type_id]
+	if jurisdictions.empty:
+		print(f'No {juris_type} record found in the database. Please create one.')
+		juris_record_d, juris_enum_d = create_record_in_db(
+			sess,project_root,'ReportingUnit',known_info_d={'ReportingUnitType_Id':juris_type_id,'OtherReportingUnitType':''})
+		juris_idx = juris_record_d['Id']
+		juris_internal_db_name = juris_record_d['Name']
 	else:
-		state_idx, state_internal_db_name = pick_one(states,'Name','state')
-	return state_idx, state_internal_db_name
+		juris_idx, juris_internal_db_name = pick_one(jurisdictions,'Name',juris_type)
+	return juris_idx, juris_internal_db_name
 
 
 def get_or_create_election_in_db(sess,project_root):
@@ -845,20 +846,20 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
-def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name=None,encoding='utf-8',test_munger=True):
+def new_datafile(raw_file,raw_file_sep,session,project_root='.',juris_short_name=None,encoding='utf-8',test_munger=True):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
 
-	state = pick_state_from_filesystem(
+	juris = pick_juris_from_filesystem(
 		session.bind,project_root,
-		path_to_states=os.path.join(project_root,'jurisdictions'),
-		state_name=state_short_name)
+		path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
+		jurisdiction_name=juris_short_name)
 	# TODO finalize ReportingUnits once for both kinds of files?
 
-	state_idx, state_internal_db_name = pick_state_from_db(session,project_root)
+	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
 	# TODO feature: write routine to deduce BallotMeasureContest district from the data?!?
-	# update db from state context file
+	# update db from jurisdiction context file
 
 	# TODO put all info about data cleaning into README.md (e.g., whitespace strip)
 	election_idx, electiontype = get_or_create_election_in_db(session,project_root)
@@ -922,15 +923,15 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',state_short_name
 		contest_type_idx, contest_type = pick_one(contest_type_df,'Contest Type', item='contest type',required=True)
 	if test_munger:
 		if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
-			munger.check_new_results_dataset(cc_results,state,session,'Candidate',project_root=project_root)
+			munger.check_new_results_dataset(cc_results,juris,session,'Candidate',project_root=project_root)
 		if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
-			munger.check_new_results_dataset(cc_results,state,session,'BallotMeasure',project_root=project_root)
+			munger.check_new_results_dataset(cc_results,juris,session,'BallotMeasure',project_root=project_root)
 
 	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf(session,munger,cc_results,'Candidate',election_idx,electiontype,state_idx)
+		mr.raw_elements_to_cdf(session,munger,cc_results,'Candidate',election_idx,electiontype,juris_idx)
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf(session,munger,bmc_results,'BallotMeasure',election_idx,electiontype,state_idx)
-	return state, munger
+		mr.raw_elements_to_cdf(session,munger,bmc_results,'BallotMeasure',election_idx,electiontype,juris_idx)
+	return juris, munger
 
 
 if __name__ == '__main__':
