@@ -1,2 +1,3 @@
 Name	EndDate	StartDate	ElectionType
 2018g	2018-11-06	2018-11-06	general
+2018p	2018-05-08	2018-05-08	primary

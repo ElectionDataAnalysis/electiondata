@@ -199,41 +199,22 @@ class Election(object):
         else:
             raise Exception(f'Mode {mode} not recognized')
 
-        # TODO standard order for columns
-        # export to file system
         count_item = f'TYPE{count_item_type}_STATUS{count_item_status}'
-        out_path = os.path.join(
-            self.jurisdiction.path_to_juris_dir,'results_from_cdf_db',self.short_name,summary_ru_type)
-        Path(out_path).mkdir(parents=True,exist_ok=True)
-        out_file = os.path.join(out_path,f'{count_item}.txt')
-        output.to_csv(out_file,sep='\t')
-
-        # create record in inventory.txt
-        inventory_file = os.path.join(self.jurisdiction.path_to_juris_dir,'results_from_cdf_db','inventory.txt')
         inventory_columns = [
             'Election','ReportingUnitType','CountItemType','CountItemStatus',
             'source_db_url','source_db_name','timestamp']
         inventory_values = [
             self.short_name,summary_ru_type,count_item_type,count_item_status,
             'TODO','TODO',datetime.date.today()
-        ]
+        ]   # TODO source_db_url, source_db_name
 
-        inv_exists = os.path.isfile(inventory_file)
-        if inv_exists:
-            # check that header matches inventory_columns
-            with open(inventory_file,newline='') as f:
-                reader = csv.reader(f,delimiter='\t')
-                file_header = next(reader)
-                assert file_header == inventory_columns, \
-                    f'Header of file {f} is\n{file_header},\ndoesn\'t match\n{inventory_columns}.'
+        export_to_inventory_file_tree(
+            os.path.join(self.jurisdiction.path_to_juris_dir,'results_from_cdf_db'),
+            f'{self.short_name}/{summary_ru_type}',
+            f'{count_item}.txt',
+            inventory_columns,
+            inventory_values,output)
 
-        with open(inventory_file,'a',newline='') as csv_file:
-            wr = csv.writer(csv_file,delimiter='\t')
-            if not inv_exists:
-                wr.writerow(inventory_columns)
-            wr.writerow(inventory_values)
-
-        print(f'Results exported to {out_file}')
         return output
 
     def __init__(self,session,jurisdiction,project_root):
@@ -460,6 +441,37 @@ def anomaly_list(contest_name, c, aframe_columnlist=None):
                                max_z['raw'],look_at['raw'],max_z['pct'],look_at['pct']],index=aframe_columnlist))
 
     return anomaly_list
+
+
+def export_to_inventory_file_tree(target_dir,target_sub_dir,target_file,inventory_columns,inventory_values,df):
+    # TODO standard order for columns
+    # export to file system
+    out_path = os.path.join(
+        target_dir,target_sub_dir)
+    Path(out_path).mkdir(parents=True,exist_ok=True)
+    out_file = os.path.join(out_path,target_file)
+    df.to_csv(out_file,sep='\t')
+
+    # create record in inventory.txt
+    inventory_file = os.path.join(target_dir,'inventory.txt')
+    inv_exists = os.path.isfile(inventory_file)
+    if inv_exists:
+        # check that header matches inventory_columns
+        with open(inventory_file,newline='') as f:
+            reader = csv.reader(f,delimiter='\t')
+            file_header = next(reader)
+            assert file_header == inventory_columns, \
+                f'Header of file {f} is\n{file_header},\ndoesn\'t match\n{inventory_columns}.'
+
+    with open(inventory_file,'a',newline='') as csv_file:
+        wr = csv.writer(csv_file,delimiter='\t')
+        if not inv_exists:
+            wr.writerow(inventory_columns)
+        wr.writerow(inventory_values)
+
+    print(f'Results exported to {out_file}')
+
+    return
 
 
 if __name__ == '__main__':
