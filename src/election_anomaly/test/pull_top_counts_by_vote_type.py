@@ -10,14 +10,14 @@ if __name__ == '__main__':
 
     # pick db to use
     db_paramfile = ui.pick_paramfile(project_root)
-    juris_name = 'NC'
-    # juris_name = None
+    # juris_name = 'NC'
+    juris_name = None
 
     db_name = ui.pick_database(project_root,db_paramfile)
 
     # initialize main session for connecting to db
     eng, meta_generic = dbr.sql_alchemy_connect(
-        paramfile=db_paramfile,db_name=juris_name)
+        paramfile=db_paramfile,db_name=db_name)
     Session = sessionmaker(bind=eng)
     analysis_session = Session()
 
@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
     e =an.Election(analysis_session,jurisdiction,project_root)
 
-    arut = input(f'Enter the atomic reporting unit type for {juris_name}\n')
+    arut = input(f'Enter the atomic reporting unit type for {jurisdiction.short_name}\n')
     # TODO read applicable reporting unit types from db; make user choose if >1
     # TODO read CountItemTypes from VoteCounts to see if total column should be skipped
     e.summarize_results(atomic_ru_type=arut,mode='by_vote_type',
