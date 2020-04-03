@@ -2,7 +2,7 @@
 import os.path
 import db_routines as dbr
 import pandas as pd
-import warnings # TODO use warnings module to handle warnings in all files
+import warnings   # TODO use warnings module to handle warnings in all files
 import munge_routines as mr
 from sqlalchemy.orm import sessionmaker
 import user_interface as ui
@@ -391,10 +391,10 @@ class Munger:
 
     def add_to_raw_identifiers(self,df):
         """Adds rows in <df> to the raw_identifiers.txt file and to the attribute <self>.raw_identifiers"""
-        for col in mu.raw_identifiers.columns:
+        for col in self.raw_identifiers.columns:
             assert col in df.columns, 'Column {} is not found in the dataframe'.format(col)
         # restrict to columns needed, and in the right order
-        df = df[mu.raw_identifiers.columns]
+        df = df[self.raw_identifiers.columns]
         # add rows to <self>.raw_identifiers
         self.raw_identifiers = pd.concat([self.raw_identifiers,df]).drop_duplicates()
         # update the external munger file
@@ -501,20 +501,6 @@ class Munger:
         with open(os.path.join(dir_path,'atomic_reporting_unit_type.txt'),'r') as ff:
             self.atomic_reporting_unit_type = ff.readline()
 
+
 if __name__ == '__main__':
-    # get absolute path to jurisdictions directory
-    current_dir=os.getcwd()
-    path_to_src_dir=current_dir.split('/election_anomaly/')[0]
-
-    s = Jurisdiction('NC_test2',f'{path_to_src_dir}/jurisdictions/')
-    mu = Munger('../../mungers/not_for_prime_time_NC/',cdf_schema_def_dir='../CDF_schema_def_info/')
-    f = pd.read_csv('../../jurisdictions/NC/data/2018g/nc_general',sep='\t')
-
-    # initialize main session for connecting to db
-    eng, meta_generic = dbr.sql_alchemy_connect(db_name=s.short_name)
-    Session = sessionmaker(bind=eng)
-    session = Session()
-
-    mu.check_new_results_dataset(f,s,session,project_root=path_to_src_dir)
-
     print('Done (states_and_files)!')

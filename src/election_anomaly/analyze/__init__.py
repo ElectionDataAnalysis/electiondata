@@ -322,6 +322,7 @@ def pivot(dataframe_by_name, col_field='Selection', filter=[],mode='raw'):
         cf=cf.drop(labels=['total'],axis=1)
     return cf
 
+
 def pct_dframe(df):
     """ df is a pandas dataframe """
     assert isinstance(df,pd.DataFrame), 'Argument must be dataframe'
@@ -331,6 +332,7 @@ def pct_dframe(df):
     cf["sum"] = cf.sum(axis=1)
     bf = cf.loc[:,col_list].div(cf["sum"], axis=0)
     return bf
+
 
 def euclidean_zscore(li):
     """Take a list of vectors -- all in the same R^k,
@@ -342,6 +344,7 @@ def euclidean_zscore(li):
         return [0]*len(li)
     else:
         return list(stats.zscore(distance_list))
+
 
 def diff_anomaly_score(left_dframe, right_dframe, left_value_column ='sum', right_value_column='sum', on ='ReportingUnit', anomaly_score_min=2):
     """given two named dataframes indexed by ReportingUnit, find any anomalies
@@ -365,6 +368,7 @@ def diff_anomaly_score(left_dframe, right_dframe, left_value_column ='sum', righ
             # ('Anomaly found comparing:\n\cdf_table'+left_dframe+','+left_value_column+'\n\cdf_table'+right_dframe+','+right_value_column)
         return anomaly_score
 
+
 def numframe_to_zscore(pframe,tolerance = 0.05):
     """ for a dataframe whose values are all numerical, calculate list of z-scores for the rows of the dataframe """
     if pframe.empty:
@@ -380,6 +384,7 @@ def numframe_to_zscore(pframe,tolerance = 0.05):
         score_list = list(frame['ezs'])
         # TODO assert that all rows are numerical vectors, with all other info in the index
         return score_list,max_ezs, look_at_list
+
 
 def choose_by_name(name_list):
     """
@@ -397,6 +402,7 @@ def choose_by_name(name_list):
     id = input(f'Enter Id of desired item \n\t(default is {default})\n') or default
     # TODO add error-checking on user input
     return name_list[int(id)]
+
 
 def anomaly_list(contest_name, c, aframe_columnlist=None):
     if aframe_columnlist is None:
@@ -417,6 +423,7 @@ def anomaly_list(contest_name, c, aframe_columnlist=None):
                                max_z['raw'],look_at['raw'],max_z['pct'],look_at['pct']],index=aframe_columnlist))
 
     return anomaly_list
+
 
 if __name__ == '__main__':
     print('Use routine in src/test directory (e.g., pull_top_counts.py')
