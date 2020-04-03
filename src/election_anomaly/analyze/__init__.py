@@ -10,6 +10,8 @@ import db_routines as dbr
 import states_and_files as sf
 import user_interface as ui
 from pathlib import Path
+import csv
+import datetime
 
 
 class AnomalyDataFrame(object):
@@ -208,6 +210,31 @@ class Election(object):
         output.to_csv(out_file,sep='\t')
 
         # TODO create record in inventory.txt
+        inventory_file = os.path.join(self.jurisdiction.path_to_juris_dir,'results_from_cdf_db','inventory.txt')
+        inventory_columns = [
+            'Election','ReportingUnitType','CountItemType','CountItemStatus',
+            'source_db_url','source_db_name','timestamp']
+        inventory_values = [
+            self.short_name,summary_ru_type,count_item_type,count_item_status,
+            'TODO','TODO',datetime.date.today()
+        ]
+
+        inv_exists = os.path.isfile(inventory_file)
+        if inv_exists:
+            # check that header matches inventory_columns
+            with open(inventory_columns,newline='') as f:
+                reader = csv.reader(f,delimiter='t')
+                file_header = reader[0]
+                assert file_header == inventory_columns, \
+                    f'Header of file {f} is\n{file_header},\ndoesn\'t match\n{inventory_columns}.'
+
+        with open(inventory_file,'a',newline='') as csv_file:
+            wr = csv.writer(csv_file,delimiter='\t')
+            if not inv_exists:
+                wr.writerow(inventory_columns)
+            wr.writerow([])
+
+
         print(f'Results exported to {out_file}')
 
         return output
@@ -218,7 +245,6 @@ class Election(object):
         election_idx,electiontype = ui.get_or_create_election_in_db(session,project_root)
 
         self.short_name = cdf_el.loc[election_idx,'Name']
-        self.name = self.short_name   # TODO merge name and short_name
         self.jurisdiction=jurisdiction    # TODO feature: generalize to other ReportingUnits?
         self.ElectionType = electiontype
         self.Election_Id = election_idx
