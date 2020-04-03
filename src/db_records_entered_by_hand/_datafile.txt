@@ -7,3 +7,4 @@ phila2019g	division-level-results191105.csv	utf-8	PhiladelphiaVotes.com	2019-12-
 Phila_2019_general.csv	Phila_2019_general.csv	utf-8	PhiladelphiaVotes.com	2019-12-31	2020-03-29	Exact file date not known. Post certification, though	comma
 FL20181106_county	11062018Election.txt	iso-8859-1	FL BoE	2222-11-11	2020-02-20	file date unknown	tab
 NC2018g_by_precinct	results_pct_20181106.txt	utf-8	NC BoE	2222-11-11	2019-10-15	file date is 2018-11-16	tab
+2018p	results_pct_20180508.txt	iso-8859-1	NC BoE	2018-05-18	2222-11-11	download date uncertain	tab

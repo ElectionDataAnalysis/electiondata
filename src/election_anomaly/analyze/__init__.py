@@ -196,11 +196,10 @@ class Election(object):
         elif mode=='by_vote_type':
             output = rollup.groupby(['Contest','Selection','CountItemType']).sum()
             count_item_type = 'multiple'
+        else:
+            raise Exception(f'Mode {mode} not recognized')
 
-        # standard order for columns
-        output_column_order = ['Contest','Selection','CountItemType','Count']
-        output = output[[output_column_order]]
-
+        # TODO standard order for columns
         # export to file system
         count_item = f'TYPE{count_item_type}_STATUS{count_item_status}'
         out_path = os.path.join(
@@ -209,7 +208,7 @@ class Election(object):
         out_file = os.path.join(out_path,f'{count_item}.txt')
         output.to_csv(out_file,sep='\t')
 
-        # TODO create record in inventory.txt
+        # create record in inventory.txt
         inventory_file = os.path.join(self.jurisdiction.path_to_juris_dir,'results_from_cdf_db','inventory.txt')
         inventory_columns = [
             'Election','ReportingUnitType','CountItemType','CountItemStatus',
@@ -222,9 +221,9 @@ class Election(object):
         inv_exists = os.path.isfile(inventory_file)
         if inv_exists:
             # check that header matches inventory_columns
-            with open(inventory_columns,newline='') as f:
-                reader = csv.reader(f,delimiter='t')
-                file_header = reader[0]
+            with open(inventory_file,newline='') as f:
+                reader = csv.reader(f,delimiter='\t')
+                file_header = next(reader)
                 assert file_header == inventory_columns, \
                     f'Header of file {f} is\n{file_header},\ndoesn\'t match\n{inventory_columns}.'
 
@@ -232,11 +231,9 @@ class Election(object):
             wr = csv.writer(csv_file,delimiter='\t')
             if not inv_exists:
                 wr.writerow(inventory_columns)
-            wr.writerow([])
-
+            wr.writerow(inventory_values)
 
         print(f'Results exported to {out_file}')
-
         return output
 
     def __init__(self,session,jurisdiction,project_root):
