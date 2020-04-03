@@ -17,9 +17,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=eng)
     analysis_session = Session()
 
-    state = ui.pick_juris_from_filesystem(analysis_session.bind,project_root,
-                                          path_to_jurisdictions=os.path.join(project_root,'jurisdictions'))
-    e = an.Election(analysis_session,state,project_root)
+    jurisdiction = ui.pick_juris_from_filesystem(analysis_session.bind,project_root,
+                                                 path_to_jurisdictions=os.path.join(project_root,'jurisdictions'))
+    e = an.Election(analysis_session,jurisdiction,project_root)
 
     # TODO remove hard-coded county, precinct
     electionrollup = an.ContestRollup(e,'county','precinct')

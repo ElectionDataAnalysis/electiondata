@@ -34,7 +34,7 @@ if __name__ == '__main__':
 	else:
 		raise Exception(f'separator {enum_d["_datafile_separator"]} not recognized')
 
-	state_short_name = None
+	juris_short_name = None
 
 	# load new datafile
 	# TODO handle default values more programmatically
@@ -42,8 +42,8 @@ if __name__ == '__main__':
 	if encoding == '':
 		encoding = 'utf-8'
 
-	state, mnger = ui.new_datafile(
-		raw_file,sep,new_df_session,juris_short_name=state_short_name,encoding=encoding,project_root=project_root)
+	ui.new_datafile(
+		raw_file,sep,new_df_session,juris_short_name=juris_short_name,encoding=encoding,project_root=project_root)
 
 	eng.dispose()
 	print('Done! (user_interface)')
