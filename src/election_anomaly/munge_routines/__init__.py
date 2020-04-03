@@ -33,21 +33,14 @@ def load_context_dframe_into_cdf(
             # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
             if e in source_df.columns:
                 source_df = enum_col_to_id_othertext(source_df,e,cdf_e)
-        if False and element == 'ReportingUnit': # TODO skipping for now,
-            # TODO since we can't assign an ReportingUnit as ElectionDistrict to Office
-            #  (unless Office has a CountItemStatus; can't be right!)
-            # TODO note CountItemStatus is weirdly assigned to ReportingUnit in NIST CDF.
-            #  Note also that CountItemStatus is not required, and a single RU can have many CountItemStatuses
-
-            cis_df = pd.read_sql_table('CountItemStatus',session.bind,index_col='Id')
-            cis_id,cis = ui.pick_one(cis_df,'Txt',item='status',required=True)
-
-            cdf_e = pd.read_sql_table('CountItemStatus',session.bind)
-            source_df.loc[:,e] = cis
-            source_df = enum_col_to_id_othertext(source_df,e,cdf_e)
+        # TODO skipping assignment of CountItemStatus to ReportingUnit for now,
+        # TODO since we can't assign an ReportingUnit as ElectionDistrict to Office
+        #  (unless Office has a CountItemStatus; can't be right!)
+        # TODO note CountItemStatus is weirdly assigned to ReportingUnit in NIST CDF.
+        #  Note also that CountItemStatus is not required, and a single RU can have many CountItemStatuses
 
     #  commit info in source_df to corresponding cdf table to db
-    cdf_element = dbr.dframe_to_sql(source_df,session,None,element)
+    dbr.dframe_to_sql(source_df,session,None,element)
     if element == 'Office':
         # upload ReportingUnits from context/ReportingUnit.txt to db and upload corresponding CandidateContests too
 
