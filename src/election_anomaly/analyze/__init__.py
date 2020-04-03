@@ -5,15 +5,12 @@ from scipy import stats as stats
 import scipy.spatial.distance as dist
 import numpy as np
 import pandas as pd
-
 import matplotlib.pyplot as plt
 import db_routines as dbr
 import states_and_files as sf
 import user_interface as ui
-try:
-    import cPickle as pickle
-except:
-    import pickle
+from pathlib import Path
+
 
 class AnomalyDataFrame(object):
     def worst_bar_for_selected_contests(self,anomaly_min=0,contest_type='Candidate'):
@@ -179,27 +176,40 @@ class Election(object):
         return rollup_dframe
 
     def summarize_results(
-            self,atomic_ru_type='precinct',mode='top',skip_total_column=True,
-            db_paramfile=None):
+            self,atomic_ru_type='precinct',summary_ru_type='state',mode='top',skip_total_column=True,
+            db_paramfile=None,count_item_status='unknown'):
         if not db_paramfile:
             db_paramfile = ui.pick_paramfile(ui.get_project_root())
 
-        rollup=self.pull_rollup_from_db_by_types('state',atomic_ru_type=atomic_ru_type,db_paramfile=db_paramfile)
-        rollup=rollup.drop(['Contest_Id','ReportingUnit_Id','Selection_Id','CountItemType_Id','contest_type'],axis=1)
+        rollup=self.pull_rollup_from_db_by_types(
+            summary_ru_type,atomic_ru_type=atomic_ru_type,db_paramfile=db_paramfile)
+        rollup=rollup.drop(
+            ['Contest_Id','ReportingUnit_Id','Selection_Id','CountItemType_Id','contest_type'],axis=1)
         if mode=='top':
             if skip_total_column:
                 rollup=rollup[rollup['CountItemType']!='total']
             output = rollup.groupby(['Contest','Selection']).sum()
+            count_item_type = 'total'
+            output.loc[:,'CountItemType'] = count_item_type
         elif mode=='by_vote_type':
             output = rollup.groupby(['Contest','Selection','CountItemType']).sum()
+            count_item_type = 'multiple'
 
-        outpath = os.path.join(self.jurisdiction.path_to_juris_dir,'output')
-        if os.path.isdir(outpath):
-            fpath = os.path.join(outpath,f'{self.short_name}_{mode}_results.txt')
-            output.to_csv(fpath,sep='\t')
-            print(f'Results exported to {fpath}')
-        else:
-            print(f'Cannot export; directory {outpath} does not exist')
+        # standard order for columns
+        output_column_order = ['Contest','Selection','CountItemType','Count']
+        output = output[[output_column_order]]
+
+        # export to file system
+        count_item = f'TYPE{count_item_type}_STATUS{count_item_status}'
+        out_path = os.path.join(
+            self.jurisdiction.path_to_juris_dir,'results_from_cdf_db',self.short_name,summary_ru_type)
+        Path(out_path).mkdir(parents=True,exist_ok=True)
+        out_file = os.path.join(out_path,f'{count_item}.txt')
+        output.to_csv(out_file,sep='\t')
+
+        # TODO create record in inventory.txt
+        print(f'Results exported to {fpath}')
+
         return output
 
     def __init__(self,session,jurisdiction,project_root):
@@ -214,6 +224,7 @@ class Election(object):
         self.Election_Id = election_idx
         self.ElectionType_Id = cdf_el.loc[election_idx,'ElectionType_Id']
         self.OtherElectionType = cdf_el.loc[election_idx,'OtherElectionType']
+
 
 class ContestRollup:
     """Holds roll-up of one or more contests (from same election)"""
@@ -271,6 +282,7 @@ class ContestRollup:
             contest_name_list = list(self.dframe['Contest'].unique())
         self.contest_name_list=contest_name_list
         self.contest_name_list.sort()
+
 
 def plot_pivot(contestname,dataframe_by_name,col_field='Selection',filter=[],mode='raw'):
     title_string = contestname
@@ -346,7 +358,9 @@ def euclidean_zscore(li):
         return list(stats.zscore(distance_list))
 
 
-def diff_anomaly_score(left_dframe, right_dframe, left_value_column ='sum', right_value_column='sum', on ='ReportingUnit', anomaly_score_min=2):
+def diff_anomaly_score(
+        left_dframe, right_dframe, left_value_column ='sum', right_value_column='sum',
+        on ='ReportingUnit', anomaly_score_min=2):
     """given two named dataframes indexed by ReportingUnit, find any anomalies
     in the margin between the specified columns (default is 'sum')
     among the set of ReportingUnits of given type.
