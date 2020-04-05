@@ -112,8 +112,8 @@ North Carolina;Jones County;ABSENTEE	precinct
 North Carolina;Lee County;ABSENTEE	precinct
 North Carolina;Lenoir County;ABSENTEE	precinct
 North Carolina;Lenoir County;ONE STOP	precinct
-North Carolina;Mcdowell County;ABSENTEE	precinct
-North Carolina;Mcdowell County;ONE STOP	precinct
+North Carolina;McDowell County;ABSENTEE	precinct
+North Carolina;McDowell County;ONE STOP	precinct
 North Carolina;Moore County;ONE STOP AG	precinct
 North Carolina;Moore County;ONE STOP PFD	precinct
 North Carolina;Nash County;OS MOUNT PLEASANT	precinct
@@ -3434,9 +3434,9 @@ North Carolina;Hyde County;ONE STOP BOE	precinct
 North Carolina;Hyde County;ONE STOP OCK	precinct
 North Carolina;Hyde County;PROVISIONAL	precinct
 North Carolina;Hyde County;TRANSFER	precinct
-North Carolina;Mcdowell County;ABSENTEE MAIL	precinct
-North Carolina;Mcdowell County;OS LOWER LEVEL SR CENTER	precinct
-North Carolina;Mcdowell County;PROVISIONAL	precinct
+North Carolina;McDowell County;ABSENTEE MAIL	precinct
+North Carolina;McDowell County;OS LOWER LEVEL SR CENTER	precinct
+North Carolina;McDowell County;PROVISIONAL	precinct
 North Carolina;Bertie County;ABSENTEE	precinct
 North Carolina;Bertie County;OS-LOB	precinct
 North Carolina;Bertie County;OS-POW	precinct

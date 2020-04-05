@@ -12,6 +12,7 @@ import user_interface as ui
 from pathlib import Path
 import csv
 import datetime
+import analyze_via_pandas as avp
 
 
 class AnomalyDataFrame(object):
@@ -115,28 +116,10 @@ class Election(object):
 
         # Get necessary tables from cdf schema
         cdf_d={}
-        for element in ['ReportingUnitType','CandidateContest','BallotMeasureContest','BallotMeasureSelection',
-                        'CandidateSelection','Candidate','CountItemType','ReportingUnit']:
+        for element in ['ReportingUnitType','CountItemType','ReportingUnit']:
             cdf_d[element]=pd.read_sql_table(element,eng,index_col=None)
-        candidate_name_by_selection_id = cdf_d['CandidateSelection'].merge(
-            cdf_d['Candidate'],left_on='Candidate_Id',right_on='Id',suffixes=['','Candidate'])
 
-        # create and return id-to-contest-type dict for this election.
-        contest_type = {}
-        contest_name = {}
-        selection_name = {}
-
-        for i,r in cdf_d['CandidateContest'].iterrows():
-            contest_type[r['Id']] = 'Candidate'
-            contest_name[r['Id']] = r['Name']
-        for i,r in cdf_d['BallotMeasureContest'].iterrows():
-            contest_type[r['Id']] = 'BallotMeasure'
-            contest_name[r['Id']] = r['Name']
-        for i,r in cdf_d['BallotMeasureSelection'].iterrows():
-            selection_name[r['Id']] = r['Selection']
-        for i,r in candidate_name_by_selection_id.iterrows():
-            selection_name[r['Id']] = r['BallotName']
-
+        contest_type,contest_name,selection_name = avp.contest_type_and_name_by_id(eng)
 
         roll_up_to_ru_type_id = int(
             cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt']==roll_up_to_ru_type].iloc[0]['Id'])
@@ -203,11 +186,11 @@ class Election(object):
         count_item = f'TYPE{count_item_type}_STATUS{count_item_status}'
         inventory_columns = [
             'Election','ReportingUnitType','CountItemType','CountItemStatus',
-            'source_db_url','source_db_name','timestamp']
+            'source_db_url','timestamp']
         inventory_values = [
             self.short_name,summary_ru_type,count_item_type,count_item_status,
-            'TODO','TODO',datetime.date.today()
-        ]   # TODO source_db_url, source_db_name
+            str(self.source_url),datetime.date.today()
+        ]   # TODO source_db_url
 
         export_to_inventory_file_tree(
             os.path.join(self.jurisdiction.path_to_juris_dir,'results_from_cdf_db'),
@@ -229,6 +212,7 @@ class Election(object):
         self.Election_Id = election_idx
         self.ElectionType_Id = cdf_el.loc[election_idx,'ElectionType_Id']
         self.OtherElectionType = cdf_el.loc[election_idx,'OtherElectionType']
+        self.source_url=session.bind.url
 
 
 class ContestRollup:

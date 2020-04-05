@@ -149,7 +149,6 @@ def show_sample(st,items,condition,outfile='shown_items.txt',dir=None):
 			print(f'{items} exported to {os.path.join(dir,outfile)}')
 	elif dir != '':
 		print(f'Directory {dir} does not exist.')
-
 	return
 
 

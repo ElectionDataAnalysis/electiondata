@@ -229,7 +229,7 @@ def get_id_othertext_from_enum_value(enum_df,value):
     """Given an enumeration dframe (with cols 'Id' and 'Txt',
         along with a plain language value for that enumeration
         (e.g., 'general'), return the (<id>,<othertext>) pair."""
-    if value in enum_df.Txt:
+    if value in enum_df.Txt.to_list():
         idx = enum_df[enum_df.Txt == value].loc[:,'Id'].to_list()[0]
         other_txt = ''
     else:
