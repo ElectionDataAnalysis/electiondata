@@ -434,6 +434,10 @@ def export_to_inventory_file_tree(target_dir,target_sub_dir,target_file,inventor
     out_path = os.path.join(
         target_dir,target_sub_dir)
     Path(out_path).mkdir(parents=True,exist_ok=True)
+
+    while os.path.isfile(os.path.join(out_path,target_file)):
+        target_file = (f'There is already a file called {target_file}. Pick another name.\n')
+
     out_file = os.path.join(out_path,target_file)
     df.to_csv(out_file,sep='\t')
 

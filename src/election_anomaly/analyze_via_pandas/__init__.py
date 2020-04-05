@@ -141,15 +141,31 @@ def rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude
 
 	unsummed.rename(columns={'Name_Parent':'ReportingUnit'},inplace=True)
 
+	cis = 'unknown'
 	cit_list = unsummed['CountItemType'].unique()
-	if exclude_total and len(cit_list) > 1:
-		unsummed = unsummed[unsummed.CountItemType != 'total']
+	if len(cit_list) > 1:
+		cit = 'mixed'
+		if exclude_total:
+			unsummed = unsummed[unsummed.CountItemType != 'total']
+	elif len(cit_list) == 1:
+		cit = cit_list[0]
+	else:
+		raise Exception(
+			f'Results dataframe has no CountItemTypes; maybe dataframe is empty?')
+	count_item = f'TYPE{cit}_STATUS{cis}'
 
 	# sum by groups
 	summed_by_name = unsummed[[
 		'contest_type','Contest','Selection','ReportingUnit','CountItemType','Count']].groupby(
 		['contest_type','Contest','Selection','ReportingUnit','CountItemType']).sum()
 
+	inventory_columns = [
+		'Election','ReportingUnitType','CountItemType','CountItemStatus',
+		'source_db_url','timestamp']
+	inventory_values = [
+		election,sub_ru_type,cit,'TODO',
+		str(session.bind.url),datetime.date.today()]
 	an.export_to_inventory_file_tree(
-		target_dir,f'{top_ru}/by_{sub_ru_type}','test.txt',['timestamp'],[datetime.date.today()],summed_by_name)
+		target_dir,f'{session.bind.url.database}/by_{sub_ru_type}',f'{count_item}.txt',
+		inventory_columns,inventory_values,summed_by_name)
 	return summed_by_name
