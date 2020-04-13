@@ -449,6 +449,7 @@ def export_to_inventory_file_tree(target_dir,target_sub_dir,target_file,inventor
         with open(inventory_file,newline='') as f:
             reader = csv.reader(f,delimiter='\t')
             file_header = next(reader)
+            # TODO: offer option to delete inventory file
             assert file_header == inventory_columns, \
                 f'Header of file {f} is\n{file_header},\ndoesn\'t match\n{inventory_columns}.'
 

@@ -2,11 +2,10 @@
 
 import pandas as pd
 import user_interface as ui
-import db_routines as dbr
 import munge_routines as mr
-import warnings
 import analyze as an
 import datetime
+import os
 
 
 def contest_type_and_name_by_id(eng):
@@ -54,9 +53,11 @@ def child_rus_by_id(session,parents,ru_type=None):
 	return children
 
 
-def get_id_check_unique(df,conditions={}):
+def get_id_check_unique(df,conditions=None):
 	"""Finds the index of the unique row of <df> satisfying the <conditions>.
 	Raises exception if there is no unique row"""
+	if conditions is None:
+		conditions = {}
 	found = df.loc[(df[list(conditions)] == pd.Series(conditions)).all(axis=1)]
 	if found.shape[0] == 0:
 		raise Exception(f'None found')
@@ -105,12 +106,12 @@ def rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude
 	atomic_ru_list = child_rus_by_id(session,[top_ru_id],ru_type=[atomic_ru_type_id, atomic_other_ru_type])
 	if not atomic_ru_list:
 		raise Exception(f'Database {db} shows no ReportingUnits of type {atomic_ru_type} nested inside {top_ru}')
-	atomic_ru = df['ReportingUnit'].loc[atomic_ru_list]
+	# atomic_ru = df['ReportingUnit'].loc[atomic_ru_list]
 
 	sub_ru_list = child_rus_by_id(session,[top_ru_id],ru_type=[sub_ru_type_id, sub_other_ru_type])
 	if not sub_ru_list:
 		raise Exception(f'Database {db} shows no ReportingUnits of type {sub_ru_type} nested inside {top_ru}')
-	sub_ru = df['ReportingUnit'].loc[sub_ru_list]
+	# sub_ru = df['ReportingUnit'].loc[sub_ru_list]
 
 	atomic_in_sub_list = child_rus_by_id(session,sub_ru_list,ru_type=[atomic_ru_type_id, atomic_other_ru_type])
 	missing_atomic = [x for x in atomic_ru_list if x not in atomic_in_sub_list]
@@ -118,7 +119,7 @@ def rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude
 		missing_names = set(df['ReportingUnit'].loc[missing_atomic,'Name'])
 		ui.show_sample(missing_names,'atomic ReportingUnits',f'are not in any {sub_ru_type}')
 
-	# TODO calculate specified dataframe with columns [ReportingUnit,Contest,Selection,VoteCount,CountItemType]
+	# calculate specified dataframe with columns [ReportingUnit,Contest,Selection,VoteCount,CountItemType]
 	ru_c = df['ReportingUnit'].loc[atomic_ru_list]
 	ru_p = df['ReportingUnit'].loc[sub_ru_list]
 	secvcj = df['SelectionElectionContestVoteCountJoin'][
@@ -132,7 +133,7 @@ def rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude
 		ru_p,left_on='ParentReportingUnit_Id',right_index=True,suffixes=['','_Parent'])
 	# TODO check this merge -- does it need how='inner'?
 
-	# TODO add columns with names
+	# add columns with names
 	contest_type,contest_name,selection_name = contest_type_and_name_by_id(session.bind)
 	unsummed['contest_type'] = unsummed['Contest_Id'].map(contest_type)
 	unsummed['Contest'] = unsummed['Contest_Id'].map(contest_name)
@@ -163,9 +164,18 @@ def rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude
 		'Election','ReportingUnitType','CountItemType','CountItemStatus',
 		'source_db_url','timestamp']
 	inventory_values = [
-		election,sub_ru_type,cit,'TODO',
+		election,sub_ru_type,cit,cis,
 		str(session.bind.url),datetime.date.today()]
+	sub_dir = os.path.join(f'FROMDB_{session.bind.url.database}',election,top_ru,f'by_{sub_ru_type}')
 	an.export_to_inventory_file_tree(
-		target_dir,f'{session.bind.url.database}/by_{sub_ru_type}',f'{count_item}.txt',
+		target_dir,sub_dir,f'{count_item}.txt',
 		inventory_columns,inventory_values,summed_by_name)
 	return summed_by_name
+
+
+def contest_totals_from_rollup(juris,election,top_ru,sub_ru,count_type,count_status,rollup_dir):
+	input_fpath = os.path.join(
+		project_root,'jurisdictions',juris,election,top_ru,f'by_{sub_ru}',
+		f'TYPE{count_type}_STATUS{count_status}.txt')
+	# TODO
+	return
