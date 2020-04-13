@@ -119,7 +119,7 @@ class Election(object):
         for element in ['ReportingUnitType','CountItemType','ReportingUnit']:
             cdf_d[element]=pd.read_sql_table(element,eng,index_col=None)
 
-        contest_type,contest_name,selection_name = avp.contest_type_and_name_by_id(eng)
+        contest_type,contest_name,selection_name,contest_district_type = avp.contest_type_and_name_by_id(eng)
 
         roll_up_to_ru_type_id = int(
             cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt']==roll_up_to_ru_type].iloc[0]['Id'])

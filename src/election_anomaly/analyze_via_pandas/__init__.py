@@ -9,23 +9,33 @@ import os
 
 
 def contest_type_and_name_by_id(eng):
-	"""create and return id-to-contest-type dict"""
+	"""create and return dictionaries of info about contest & selection by id"""
 
 	df = {}
 	for element in [
 		"CandidateContest","BallotMeasureContest",
 		"BallotMeasureSelection","CandidateSelection","Candidate",
-		"ReportingUnitType","ComposingReportingUnitJoin"]:
+		"ReportingUnitType","ComposingReportingUnitJoin","ReportingUnit"]:
 		df[element] = pd.read_sql_table(element,eng,index_col='Id')
+	for enum in ["ReportingUnitType"]:
+		df[enum] = pd.read_sql_table(element,eng)
+
 	candidate_name_by_selection_id = df['CandidateSelection'].merge(
 		df['Candidate'],left_on='Candidate_Id',right_index=True)
+
+	district_id_by_contest_id = pd.concat(
+		df['CandidateContest'][['Name','ElectionDistrict_Id']],
+		df['BallotMeasureContest'][['Name','ElectionDistrict_Id']])
+	district_type_id_other_by_contest_id = district_id_by_contest_id.merge(
+		df['ReportingUnit'],left_on='ElectionDistrict_Id',right_index=True)
 
 	contest_type = {}
 	contest_name = {}
 	selection_name = {}
+	contest_district_type = {}
 
 	for i,r in df['CandidateContest'].iterrows():
-		contest_type[i] = 'Candidate'
+		 contest_type[i] = 'Candidate'
 		contest_name[i] = r['Name']
 	for i,r in df['BallotMeasureContest'].iterrows():
 		contest_type[i] = 'BallotMeasure'
@@ -34,7 +44,10 @@ def contest_type_and_name_by_id(eng):
 		selection_name[i] = r['Selection']
 	for i,r in candidate_name_by_selection_id.iterrows():
 		selection_name[i] = r['BallotName']
-	return contest_type,contest_name,selection_name
+	for i,r in district_type_id_other_by_contest_id:
+		contest_district_type[i] = mr.get_enum_value_from_id_othertext(
+			df['ReportingUnitType'],r['ReportingUnitType_Id'],r['OtherReportingUnitType'])
+	return contest_type,contest_name,selection_name,contest_district_type
 
 
 def child_rus_by_id(session,parents,ru_type=None):
@@ -134,11 +147,12 @@ def rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude
 	# TODO check this merge -- does it need how='inner'?
 
 	# add columns with names
-	contest_type,contest_name,selection_name = contest_type_and_name_by_id(session.bind)
+	contest_type,contest_name,selection_name,contest_district_type = contest_type_and_name_by_id(session.bind)
 	unsummed['contest_type'] = unsummed['Contest_Id'].map(contest_type)
 	unsummed['Contest'] = unsummed['Contest_Id'].map(contest_name)
 	unsummed['Selection'] = unsummed['Selection_Id'].map(selection_name)
 	unsummed['CountItemType'] = unsummed['CountItemType_Id'].map(count_item_type)
+	unsummed['contest_district_type'] = unsummed['Contest_Id'].map(contest_district_type)
 
 	unsummed.rename(columns={'Name_Parent':'ReportingUnit'},inplace=True)
 
@@ -157,8 +171,8 @@ def rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude
 
 	# sum by groups
 	summed_by_name = unsummed[[
-		'contest_type','Contest','Selection','ReportingUnit','CountItemType','Count']].groupby(
-		['contest_type','Contest','Selection','ReportingUnit','CountItemType']).sum()
+		'contest_type','Contest','contest_district_type','Selection','ReportingUnit','CountItemType','Count']].groupby(
+		['contest_type','Contest','contest_district_type','Selection','ReportingUnit','CountItemType']).sum()
 
 	inventory_columns = [
 		'Election','ReportingUnitType','CountItemType','CountItemStatus',
@@ -173,9 +187,23 @@ def rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude
 	return summed_by_name
 
 
-def contest_totals_from_rollup(juris,election,top_ru,sub_ru,count_type,count_status,rollup_dir):
+def contest_totals_from_rollup(election,top_ru,sub_ru_type,count_type,count_status,rollup_dir):
+	"""<rollup_dir> contains the election folder of the rollup file tree.
+	Find the rollup file determined by <top_ru>,<sub_ru_type>,<count_type>,<count_status>
+	and create from it a dataframe of contest totals by county"""
 	input_fpath = os.path.join(
-		project_root,'jurisdictions',juris,election,top_ru,f'by_{sub_ru}',
+		rollup_dir,election,top_ru,f'by_{sub_ru_type}',
 		f'TYPE{count_type}_STATUS{count_status}.txt')
+	while not os.path.isfile(input_fpath):
+		print(f'File not found:\n{input_fpath}')
+		input_fpath = input('Enter alternate file path to continue (or just hit return to stop).\n')
+		if not input_fpath:
+			return None
 	# TODO
+	rollup = pd.read_csv(input_fpath,sep='\t')
+	sum_by_contest_sub_ru = rollup.groupby(
+		by=['Contest','ReportingUnit']).sum().reset_index().pivot(
+		index='ReportingUnit',columns='Contest',values='Count')
+
+
 	return
