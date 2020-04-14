@@ -138,13 +138,20 @@ def rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude
 	ru_p = df['ReportingUnit'].loc[sub_ru_list]
 	secvcj = df['SelectionElectionContestVoteCountJoin'][
 		df['SelectionElectionContestVoteCountJoin'].Election_Id == election_id
-	]
+		]
 
-	unsummed = secvcj.merge(
-		df['VoteCount'],left_on='VoteCount_Id',right_index=True).merge(
-		df['ComposingReportingUnitJoin'],left_on='ReportingUnit_Id',right_on='ChildReportingUnit_Id').merge(
-		ru_c,left_on='ChildReportingUnit_Id',right_index=True).merge(
-		ru_p,left_on='ParentReportingUnit_Id',right_index=True,suffixes=['','_Parent'])
+	if sub_ru_type == atomic_ru_type:
+		unsummed = secvcj.merge(
+			df['VoteCount'],left_on='VoteCount_Id',right_index=True).merge(
+			df['ReportingUnit'],left_on='ReportingUnit_Id',right_index=True)
+		unsummed.rename(columns={'Name':'ReportingUnit'},inplace=True)
+	else:
+		unsummed = secvcj.merge(
+			df['VoteCount'],left_on='VoteCount_Id',right_index=True).merge(
+			df['ComposingReportingUnitJoin'],left_on='ReportingUnit_Id',right_on='ChildReportingUnit_Id').merge(
+			ru_c,left_on='ChildReportingUnit_Id',right_index=True).merge(
+			ru_p,left_on='ParentReportingUnit_Id',right_index=True,suffixes=['','_Parent'])
+		unsummed.rename(columns={'Name_Parent':'ReportingUnit'},inplace=True)
 	# TODO check this merge -- does it need how='inner'?
 
 	# add columns with names
@@ -154,8 +161,6 @@ def rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude
 	unsummed['Selection'] = unsummed['Selection_Id'].map(selection_name)
 	unsummed['CountItemType'] = unsummed['CountItemType_Id'].map(count_item_type)
 	unsummed['contest_district_type'] = unsummed['Contest_Id'].map(contest_district_type)
-
-	unsummed.rename(columns={'Name_Parent':'ReportingUnit'},inplace=True)
 
 	cis = 'unknown'
 	cit_list = unsummed['CountItemType'].unique()
@@ -188,7 +193,9 @@ def rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude
 	return summed_by_name
 
 
-def contest_totals_from_rollup(election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,contest_group_types=None):
+def contest_totals_from_rollup(
+		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,
+		contest_group_types=None,contest_type_list=['Candidate']):
 	"""<rollup_dir> contains the election folder of the rollup file tree.
 	Find the rollup file determined by <top_ru>,<sub_ru_type>,<count_type>,<count_status>
 	and create from it a dataframe of contest totals by county.
@@ -204,6 +211,9 @@ def contest_totals_from_rollup(election,top_ru,sub_ru_type,count_type,count_stat
 		if not input_fpath:
 			return None
 	rollup = pd.read_csv(input_fpath,sep='\t')
+
+	# filter by contest type
+	rollup = rollup[rollup.contest_type.isin(contest_type_list)]
 
 	# map contests to themselves or to group with which they should be counted
 	if contest_group_types:
@@ -235,21 +245,26 @@ def append_total_and_pcts(df):
 
 
 def diff_from_avg(df,col_list):
-	"""For each record in <df>, calculate the value of the col_list vector for that record
-	minus the average value of the <col_list> vector for all other records"""
+	"""For each record in <df>, calculate (and add columns for) the pct_diff, i.e.,
+	the value of the col_list vector for that record
+	minus the average value of the <col_list> vector for all other records.
+	Also add columns for the abs_diff, i.e., the pct_diff times the total"""
+	# TODO this assumes sum of col_list is 'total'
 	df_copy = df.copy()
-	diff_col_d = {c:f'diff_{c}' for c in col_list}
+	diff_col_d = {f'{c}_pct':f'diff_{c}_pct' for c in col_list}
+	pct_col_list = [f'{c}_pct' for c in col_list]
 	diff_col_list = list(diff_col_d.values())
 
-	# initialize new columns
-	for c in diff_col_list:
-		df_copy.loc[:,c] = None
+	# initialize diff columns
+	for c in col_list:
+		df_copy.loc[:,diff_col_d[f'{c}_pct']] = None
 
-	diff = {}
 	for i in df.index:
-		diff[i] = (df_copy.loc[i,col_list] - df_copy[col_list].drop(i).mean(axis=0)).rename(diff_col_d)
-		df_copy.loc[i,diff_col_list] = diff[i]
+		pct_diff = (df_copy.loc[i,pct_col_list] - df_copy[pct_col_list].drop(i).mean(axis=0)).rename(diff_col_d)
+		df_copy.loc[i,diff_col_list] = pct_diff
+
+	# add columns for absolute diff
+	for c in col_list:
+		df_copy.loc[:,f'diff_{c}'] = df_copy[diff_col_d[f'{c}_pct']] * df_copy['total']
 
 	return df_copy
-
-

@@ -25,9 +25,9 @@ if __name__ == '__main__':
     jurisdiction = ui.pick_juris_from_filesystem(analysis_session.bind,project_root,
                                                  path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
                                                  jurisdiction_name=juris_name)
-    target_dir = os.path.join(project_root,'jurisdictions/NC/rollups_from_cdf_db')
+    target_dir = os.path.join(project_root,'jurisdictions/FL/rollups_from_cdf_db')
     rollup = avp.rollup(
-        analysis_session,'North Carolina','county','precinct','2018 General Election',target_dir)
+        analysis_session,'Florida','county','county','2018general',target_dir)
 
     eng.dispose()
     print('Done')
