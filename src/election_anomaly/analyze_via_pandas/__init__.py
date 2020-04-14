@@ -7,6 +7,7 @@ import analyze as an
 import datetime
 import os
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 def contest_info_by_id(eng):
@@ -273,13 +274,14 @@ def diff_from_avg(df,col_list):
 
 
 def dropoff_from_rollup(
-		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,
+		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,
 		contests,contest_type,
 		contest_group_types=None):
 	"""<contests> is a list of contests (or contest groups such as 'state-house'
 	contest_type is a dictionary whose keys include all items in <contests.
 	"""
 	# TODO check: all items in <contests> are either ocntests or contest group types in <contest_group_types>
+	print('WARNING: this may not be the right calculation for size of effect of dropoff.')
 	# find all contest types represented in contests
 	types = {contest_type[c] for c in contests}
 
@@ -288,12 +290,21 @@ def dropoff_from_rollup(
 		contest_group_types=contest_group_types,contest_types=types)
 	dfa = diff_from_avg(by_cc,contests)
 
+	scatter = {}
 	for c in contests:
-		# TODO scatter plot against average of others
-		# find rus with greatest and least diff, report diffs
-		extremes = [dfa[c].idxmax(),dfa[c].idxmin()]
-		for e in extremes:
-			print(f'')
+		# scatter plot against average of others
+		others = [x for x in contests if x != c]
+		one_vs_others = by_cc
+		one_vs_others['others'] = by_cc[others].mean(axis=1)
+		scatter[c] = plt.scatter(one_vs_others['others'],one_vs_others[c])
+		plt.savefig(os.path.join(output_dir,f'scatter_{c}.png'))
+		plt.clf()
 
+		# open text file for reporting
+		with open(os.path.join(output_dir,f'info_{c}.txt'),'w') as f:
+			# find rus with greatest and least diff, report diffs
+			extremes = [dfa[c].idxmax(),dfa[c].idxmin()]
+			for e in extremes:
+				f.write(f'{e}\n')
 
 	return

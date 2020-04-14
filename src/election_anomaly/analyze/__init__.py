@@ -15,6 +15,7 @@ import datetime
 import analyze_via_pandas as avp
 
 
+
 class AnomalyDataFrame(object):
     def worst_bar_for_selected_contests(self,anomaly_min=0,contest_type='Candidate'):
         dont_stop = input('Create worst bar charts for a single contest (y/n)?\n')
