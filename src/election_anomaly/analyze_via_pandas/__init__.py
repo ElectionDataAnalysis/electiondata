@@ -245,26 +245,26 @@ def append_total_and_pcts(df):
 
 
 def diff_from_avg(df,col_list):
-	"""For each record in <df>, calculate (and add columns for) the pct_diff, i.e.,
-	the value of the col_list vector for that record
+	"""For each record in <df>, for the columns in <col_list>,
+	calculate (and add columns for) the pct_diff, i.e.,
+	the value of the <col_list> vector for that record
 	minus the average value of the <col_list> vector for all other records.
 	Also add columns for the abs_diff, i.e., the pct_diff times the total"""
-	# TODO this assumes sum of col_list is 'total'
-	df_copy = df.copy()
+	diffs_df = append_total_and_pcts(df[col_list])
 	diff_col_d = {f'{c}_pct':f'diff_{c}_pct' for c in col_list}
 	pct_col_list = [f'{c}_pct' for c in col_list]
 	diff_col_list = list(diff_col_d.values())
 
 	# initialize diff columns
 	for c in col_list:
-		df_copy.loc[:,diff_col_d[f'{c}_pct']] = None
+		diffs_df.loc[:,diff_col_d[f'{c}_pct']] = None
 
 	for i in df.index:
-		pct_diff = (df_copy.loc[i,pct_col_list] - df_copy[pct_col_list].drop(i).mean(axis=0)).rename(diff_col_d)
-		df_copy.loc[i,diff_col_list] = pct_diff
+		pct_diff = (diffs_df.loc[i,pct_col_list] - diffs_df[pct_col_list].drop(i).mean(axis=0)).rename(diff_col_d)
+		diffs_df.loc[i,diff_col_list] = pct_diff
 
 	# add columns for absolute diff
 	for c in col_list:
-		df_copy.loc[:,f'diff_{c}'] = df_copy[diff_col_d[f'{c}_pct']] * df_copy['total']
+		diffs_df.loc[:,f'diff_{c}'] = diffs_df[diff_col_d[f'{c}_pct']] * diffs_df['total']
 
-	return df_copy
+	return diffs_df
