@@ -254,14 +254,17 @@ def append_total_and_pcts(df):
 	return df_copy
 
 
-def diff_from_avg(df,col_list):
+def diff_column(col_name):
+	return f'diff_{col_name}'
+
+def diff_from_avg(df,col_list,mode='selections'):
 	"""For each record in <df>, for the columns in <col_list>,
 	calculate (and add columns for) the pct_diff, i.e.,
 	the value of the <col_list> vector for that record
 	minus the average value of the <col_list> vector for all other records.
 	Also add columns for the abs_diff, i.e., the pct_diff times the total"""
 	diffs_df = append_total_and_pcts(df[col_list])
-	diff_col_d = {f'{c}_pct':f'diff_{c}_pct' for c in col_list}
+	diff_col_d = {f'{c}_pct':diff_column(f'{c}_pct') for c in col_list}
 	pct_col_list = [f'{c}_pct' for c in col_list]
 	diff_col_list = list(diff_col_d.values())
 
@@ -275,14 +278,14 @@ def diff_from_avg(df,col_list):
 
 	# add columns for absolute diff
 	for c in col_list:
-		diffs_df.loc[:,f'diff_{c}'] = diffs_df[diff_col_d[f'{c}_pct']] * diffs_df['total']
+		diffs_df.loc[:,diff_column(c)] = diffs_df[diff_col_d[f'{c}_pct']] * diffs_df['total']
 
-	return diffs_df
+	return diffs_df.fillna(0)
 
 
 def single_contest_selection_columns(rollup,contest,count_type,output_dir=None):
 	"""Given a single contest <contest>, 
-	NB: <count_type> might be from the CountType enumeration, or might be 'mixed'
+	NB: <count_type> must be from the CountType enumeration
 	Returns dataframe with columns labeled by selections """ # TODO
 
 	# filter by contest and vote type
@@ -296,7 +299,7 @@ def single_contest_selection_columns(rollup,contest,count_type,output_dir=None):
 	return df
 
 
-def return_top_two(df):
+def top_two_total_columns(df):
 	"""returns the dataframe <df> restricted to the top two columns (by total)"""
 	df_copy = df.copy()
 	top_two = df_copy.sum().nlargest(n=2,keep='all').index
@@ -321,22 +324,38 @@ def dropoff_from_rollup(
 	dfa = diff_from_avg(by_cc,contests)
 
 	scatter = {}
-	for c in contests:
-		# scatter plot against average of others
-		others = [x for x in contests if x != c]
-		one_vs_others = by_cc
-		one_vs_others['others'] = by_cc[others].mean(axis=1)
-		scatter[c] = plt.scatter(one_vs_others['others'],one_vs_others[c])
-		plt.savefig(os.path.join(output_dir,f'scatter_{c}.png'))
-		plt.clf()
+	# open text file for reporting
+	with open(os.path.join(output_dir,f'info.txt'),'w') as f:
+		f.write(
+			f'{election}\t{top_ru}\t{sub_ru_type}\t{count_type}\t{count_status}\t{contests}\n')
+		for c in contests:
+			# scatter plot against average of others
+			diff_col = diff_column(c)
+			others = [x for x in contests if x != c]
+			one_vs_others = by_cc
+			one_vs_others['others'] = by_cc[others].mean(axis=1)
+			scatter[c] = plt.scatter(one_vs_others['others'],one_vs_others[c])
+			plt.savefig(os.path.join(output_dir,f'scatter_{c}.png'))
+			plt.clf()
 
-		# open text file for reporting
-		with open(os.path.join(output_dir,f'info_{c}.txt'),'w') as f:
+			f.write(f'\n{c}\n')
 			# find rus with greatest and least diff, report diffs
-			extremes = [dfa[c].idxmax(),dfa[c].idxmin()]
+			extremes = [dfa[diff_col].idxmax(),dfa[diff_col].idxmin()]
 			for e in extremes:
-				f.write(f'{e}\n')
+				f.write(f'{e}\t{round(dfa.loc[e,diff_col])}\n')
 
 	return
 
 
+def process_single_contest(rollup,contest,output_dir):
+	""" """  # TODO
+
+	counttypes = rollup['CountItemType'].unique()
+	selections = rollup['Selection'].unique()
+	for ct in counttypes:
+		df = single_contest_selection_columns(rollup,ct)
+		top_two_diff = diff_from_avg(top_two_total_columns(df),selections)  # diffs of top two vote-getting selections
+		for s in top_two_diff.columns:
+			extremes = [top_two_diff[f'{s}_diff'].idxmax(),top_two_diff[f'{s}_diff'].idxmin()]
+
+	return
