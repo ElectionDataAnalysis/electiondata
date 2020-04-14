@@ -193,15 +193,17 @@ def rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude
 	return summed_by_name
 
 
-def contest_totals_from_rollup(
+def by_contest_columns(
 		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,
-		contest_group_types=None,contest_type_list=['Candidate']):
+		contest_group_types=None,contest_types=['Candidate']):
 	"""<rollup_dir> contains the election folder of the rollup file tree.
 	Find the rollup file determined by <top_ru>,<sub_ru_type>,<count_type>,<count_status>
 	and create from it a dataframe of contest totals by county.
 	For each ReportingUnitType in <contest_group_types>, use union of all contests whose
-	election district is of that type rather than individual contests"""
-	# TODO handle multiple contest group in same districts, e.g., state party members by congressional district
+	election district is of that type rather than individual contests.
+	<contest_type> is a set or list containing 'Candidate' or 'BallotMeasure' or both."""
+	# TODO handle multiple contest group in same districts, e.g., state party members by congressional district,
+	#  without overcounting
 	input_fpath = os.path.join(
 		rollup_dir,election,top_ru,f'by_{sub_ru_type}',
 		f'TYPE{count_type}_STATUS{count_status}.txt')
@@ -213,7 +215,7 @@ def contest_totals_from_rollup(
 	rollup = pd.read_csv(input_fpath,sep='\t')
 
 	# filter by contest type
-	rollup = rollup[rollup.contest_type.isin(contest_type_list)]
+	rollup = rollup[rollup.contest_type.isin(contest_types)]
 
 	# map contests to themselves or to group with which they should be counted
 	if contest_group_types:
@@ -268,3 +270,30 @@ def diff_from_avg(df,col_list):
 		diffs_df.loc[:,f'diff_{c}'] = diffs_df[diff_col_d[f'{c}_pct']] * diffs_df['total']
 
 	return diffs_df
+
+
+def dropoff_from_rollup(
+		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,
+		contests,contest_type,
+		contest_group_types=None):
+	"""<contests> is a list of contests (or contest groups such as 'state-house'
+	contest_type is a dictionary whose keys include all items in <contests.
+	"""
+	# TODO check: all items in <contests> are either ocntests or contest group types in <contest_group_types>
+	# find all contest types represented in contests
+	types = {contest_type[c] for c in contests}
+
+	by_cc = by_contest_columns(
+		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,
+		contest_group_types=contest_group_types,contest_types=types)
+	dfa = diff_from_avg(by_cc,contests)
+
+	for c in contests:
+		# TODO scatter plot against average of others
+		# find rus with greatest and least diff, report diffs
+		extremes = [dfa[c].idxmax(),dfa[c].idxmin()]
+		for e in extremes:
+			print(f'')
+
+
+	return
