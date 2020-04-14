@@ -26,7 +26,7 @@ if __name__ == '__main__':
                                                  path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
                                                  jurisdiction_name=juris_name)
     target_dir = os.path.join(project_root,'jurisdictions/FL/rollups_from_cdf_db')
-    rollup = avp.rollup(
+    rollup = avp.create_rollup(
         analysis_session,'Florida','county','county','2018general',target_dir)
 
     eng.dispose()

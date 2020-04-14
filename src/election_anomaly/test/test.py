@@ -1,5 +1,6 @@
 #!usr/bin/python3
 import analyze_via_pandas as avp
+import os
 
 if __name__ == '__main__':
     election = '2018general'
@@ -9,6 +10,14 @@ if __name__ == '__main__':
     count_status = 'unknown'
     rollup_dir = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/FL/rollups_from_cdf_db/FROMDB_FL'
     output_dir = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/FL/tmp'
+
+    rollup = avp.rollup_df(os.path.join(rollup_dir,election,top_ru,f'by_{sub_ru_type}',f'TYPE{count_type}_STATUS{count_status}.txt'))
+
+    cc = avp.single_contest_selection_columns(rollup,'Florida;US Congress Senate','total',output_dir)
+
+    col_list = cc.columns
+    bb = avp.diff_from_avg(cc,col_list).round(2)
+
 
     contest_list = ['Florida;Commissioner of Agriculture','Florida;US Congress Senate','Florida;Chief Financial Officer','Florida;Governor','Florida;Attorney General','congressional']
     contests = ['Florida;Commissioner of Agriculture','Florida;US Congress Senate','Florida;Chief Financial Officer','Florida;Governor','Florida;Attorney General']
@@ -21,6 +30,6 @@ if __name__ == '__main__':
     a = avp.by_contest_columns(election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,
                                contest_group_types=['congressional','state-house','state-senate'])
 
-    b =  avp.diff_from_avg(a,contest_list)
+    b = avp.diff_from_avg(a,contest_list)
 
     print('Done')

@@ -82,7 +82,7 @@ def get_id_check_unique(df,conditions=None):
 		return found.first_valid_index()
 
 
-def rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude_total=True):
+def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude_total=True):
 	"""<top_ru> is the internal cdf name of the ReportingUnit whose results will be reported
 	(e.g., Florida or Pennsylvania;Philadelphia).
 	<sub_ru_type> is the ReportingUnitType of the ReportingUnits used in each line of the results file
@@ -194,6 +194,19 @@ def rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude
 	return summed_by_name
 
 
+def rollup_df(input_fpath):
+	"""Gets rollup dataframe stored in file <input_fpath>"""
+	# TODO: read and return info about dataframe?
+	# TODO: check that rollup really is a rollup?
+	while not os.path.isfile(input_fpath):
+		print(f'File not found:\n{input_fpath}')
+		input_fpath = input('Enter alternate file path to continue (or just hit return to stop).\n')
+		if not input_fpath:
+			return None
+	df = pd.read_csv(input_fpath,sep='\t')
+	return df
+
+
 def by_contest_columns(
 		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,
 		contest_group_types=None,contest_types=['Candidate']):
@@ -205,15 +218,8 @@ def by_contest_columns(
 	<contest_type> is a set or list containing 'Candidate' or 'BallotMeasure' or both."""
 	# TODO handle multiple contest group in same districts, e.g., state party members by congressional district,
 	#  without overcounting
-	input_fpath = os.path.join(
-		rollup_dir,election,top_ru,f'by_{sub_ru_type}',
-		f'TYPE{count_type}_STATUS{count_status}.txt')
-	while not os.path.isfile(input_fpath):
-		print(f'File not found:\n{input_fpath}')
-		input_fpath = input('Enter alternate file path to continue (or just hit return to stop).\n')
-		if not input_fpath:
-			return None
-	rollup = pd.read_csv(input_fpath,sep='\t')
+	rollup = rollup_df(
+		os.path.join(rollup_dir,election,top_ru,f'by_{sub_ru_type}',f'TYPE{count_type}_STATUS{count_status}.txt'))
 
 	# filter by contest type
 	rollup = rollup[rollup.contest_type.isin(contest_types)]
@@ -230,6 +236,7 @@ def by_contest_columns(
 	sum_by_contest_sub_ru = rollup.groupby(
 		by=['Contest','ReportingUnit']).sum().reset_index().pivot(
 		index='ReportingUnit',columns='Contest',values='Count')
+	# TODO do we need to groupby ReportingUnit?
 
 	return sum_by_contest_sub_ru
 
@@ -273,6 +280,29 @@ def diff_from_avg(df,col_list):
 	return diffs_df
 
 
+def single_contest_selection_columns(rollup,contest,count_type,output_dir=None):
+	"""Given a single contest <contest>, 
+	NB: <count_type> might be from the CountType enumeration, or might be 'mixed'
+	Returns dataframe with columns labeled by selections """ # TODO
+
+	# filter by contest and vote type
+	df = rollup[(rollup.Contest==contest) & (rollup.CountItemType==count_type)][
+		['Contest','Selection','ReportingUnit','Count']].pivot(
+		index='ReportingUnit',columns='Selection',values='Count'
+	)
+	if output_dir:
+		# TODO store in output_dir
+		pass
+	return df
+
+
+def return_top_two(df):
+	"""returns the dataframe <df> restricted to the top two columns (by total)"""
+	df_copy = df.copy()
+	top_two = df_copy.sum().nlargest(n=2,keep='all').index
+	return df_copy[top_two]
+
+
 def dropoff_from_rollup(
 		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,
 		contests,contest_type,
@@ -308,3 +338,5 @@ def dropoff_from_rollup(
 				f.write(f'{e}\n')
 
 	return
+
+
