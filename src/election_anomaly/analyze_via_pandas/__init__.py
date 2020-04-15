@@ -306,6 +306,10 @@ def complement_column(col_name):
 	return f'{col_name}_complement_in_column'
 
 
+def short_name(text,sep=';'):
+	return text.split(sep)[-1]
+
+
 def diff_from_avg(df,col_list,mode='selections'):
 	"""For each record in <df>, for the columns in <col_list>,
 	add columns expressing the right vote diff.
@@ -408,8 +412,12 @@ def dropoff_from_rollup(
 
 	extremes = [dfa[d].idxmax(),dfa[d].idxmin()]
 
+	# create/find directory for output
+	out_path = os.path.join(output_dir,election)
+	Path(out_path).mkdir(parents=True,exist_ok=True)
+
 	# open text file for reporting
-	with open(os.path.join(output_dir,election,f'info.txt'),'w') as f:
+	with open(os.path.join(out_path,f'{contest}.txt'),'w') as f:
 		f.write(
 			f'{election}\t{top_ru}\t{sub_ru_type}\t{count_type}\t{count_status}\t{comparison_contests}\n')
 		f.write(f'\n{contest}\n')
@@ -427,18 +435,22 @@ def dropoff_from_rollup(
 		f'{contest} dropoff by {sub_ru_type}\nCorrection relative to contests\n{comps_text}',
 	fontsize=10)
 	for e in extremes:
-		plt.annotate(e,(dfa.loc[e,contest]/1000,dfa.loc[e,d]/1000))
+		plt.annotate(short_name(e),(dfa.loc[e,contest]/1000,dfa.loc[e,d]/1000))
 	plt.savefig(os.path.join(output_dir,election,f'scatter_{contest}.png'))
 	plt.clf()
 
-	return dfa.loc[extremes]
+	out_df = dfa.loc[extremes,[diff_column(contest)]]
+	out_df.loc[:,'Contest'] = contest
+	out_df.reset_index(inplace=True)
+	return out_df
 
 
 def dropoff_analysis(
 		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,
 		comparison_contests,contest_type,
 		contest_group_types=None):
-
+	# TODO identify "worst" contests
+	"""Under construction"""
 	extremes = {}
 	for contest in comparison_contests:
 		extremes[contest] = dropoff_from_rollup(
@@ -463,12 +475,41 @@ def dropoff_analysis(
 def process_single_contest(rollup,contest,output_dir):
 	""" """  # TODO
 
-	counttypes = rollup['CountItemType'].unique()
-	selections = rollup['Selection'].unique()
-	for ct in counttypes:
-		df = single_contest_selection_columns(rollup,ct)
-		top_two_diff = diff_from_avg(top_two_total_columns(df),selections)  # diffs of top two vote-getting selections
-		for s in top_two_diff.columns:
-			extremes = [top_two_diff[f'{s}_diff'].idxmax(),top_two_diff[f'{s}_diff'].idxmin()]
+	# create/find directory for output
+	out_path = output_dir	# TODO pass more info for path, or simplify
+	Path(out_path).mkdir(parents=True,exist_ok=True)
+
+	# open text file for reporting
+	with open(os.path.join(out_path,f'{contest}.txt'),'w') as f:
+		f.write(f'{contest}\n\n')
+
+		counttypes = rollup['CountItemType'].unique()
+		selections = rollup['Selection'].unique()
+
+		for ct in counttypes:
+			f.write(f'\t{ct}\n')
+			# filter out for contest and count_type
+			df = single_contest_selection_columns(rollup,contest,ct)
+			top_two = top_two_total_columns(df)
+			top_two_diff = diff_from_avg(top_two,top_two.columns)  # diffs of top two vote-getting selections
+			top_selections = top_two.columns
+			# add column for margin
+			top_two.loc[:,'margin'] = top_two.iloc[:,0] - top_two.iloc[:,1]
+			for s in top_selections:
+				f.write(f'\t\t{s}\n')
+				extremes = [top_two_diff[diff_column(s)].idxmax(),top_two_diff[diff_column(s)].idxmin()]
+				for e in extremes:
+					f.write(f'\t\t\t{e}\tmargin {round(top_two.loc[e,"margin"],0)}\tdiff {round(top_two_diff.loc[e,diff_column(s)],0)}')
+
+			# scatter plot margin vs. diff (winner - loser)
+			plt.scatter(top_two['margin'],top_two_diff[diff_column(top_selections[0])])
+			plt.xlabel(f'Margin')
+			plt.ylabel(f'Correction')
+			plt.suptitle(
+				f'{contest}\n{ct}\nCorrect each county by average of others',fontsize=10)
+			for e in extremes:
+				plt.annotate(short_name(e),(top_two.loc[e,'margin'],top_two_diff.loc[e,diff_column(top_selections[0])]))
+			plt.savefig(os.path.join(output_dir,f'scatter_{ct}.png'))
+			plt.clf()
 
 	return
