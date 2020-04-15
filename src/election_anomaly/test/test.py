@@ -42,7 +42,7 @@ if __name__ == '__main__':
 
     single = avp.process_single_contest(rollup,contest,os.path.join(output_dir,election,top_ru,f'by_{sub_ru_type}'))
 
-    dropoff = avp.dropoff_from_rollup(
+    dropoff = avp.dropoff_one_contest(
         election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,contest,comparison_contests,contest_type,contest_group_types=contest_group_types)
 
 

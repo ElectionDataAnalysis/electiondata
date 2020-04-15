@@ -9,45 +9,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
-import shutil
-import csv
-
-
-
-def export_and_inventory(target_dir,target_sub_dir,target_file,inventory_columns,inventory_values,temp_file):
-	# TODO standard order for columns
-	# export to file system
-	out_path = os.path.join(
-		target_dir,target_sub_dir)
-	Path(out_path).mkdir(parents=True,exist_ok=True)
-
-	while os.path.isfile(os.path.join(out_path,target_file)):
-		target_file = (f'There is already a file called {target_file}. Pick another name.\n')
-
-	out_file = os.path.join(out_path,target_file)
-	shutil.copy2(temp_file,out_file)
-
-	# create record in inventory.txt
-	inventory_file = os.path.join(target_dir,'inventory.txt')
-	inv_exists = os.path.isfile(inventory_file)
-	if inv_exists:
-		# check that header matches inventory_columns
-		with open(inventory_file,newline='') as f:
-			reader = csv.reader(f,delimiter='\t')
-			file_header = next(reader)
-			# TODO: offer option to delete inventory file
-			assert file_header == inventory_columns, \
-				f'Header of file {f} is\n{file_header},\ndoesn\'t match\n{inventory_columns}.'
-
-	with open(inventory_file,'a',newline='') as csv_file:
-		wr = csv.writer(csv_file,delimiter='\t')
-		if not inv_exists:
-			wr.writerow(inventory_columns)
-		wr.writerow(inventory_values)
-
-	print(f'Results exported to {out_file}')
-
-	return
+from pandas.api.types import is_numeric_dtype
 
 
 def contest_info_by_id(eng):
@@ -104,7 +66,6 @@ def child_rus_by_id(session,parents,ru_type=None):
 		ru = pd.read_sql_table('ReportingUnit',session.bind,index_col='Id')
 		right_type_ru = ru[(ru.ReportingUnitType_Id == ru_type[0]) & (ru.OtherReportingUnitType == ru_type[1])]
 		children = [x for x in children if x in right_type_ru.index]
-	# TODO test
 	return children
 
 
@@ -193,7 +154,6 @@ def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,
 			ru_c,left_on='ChildReportingUnit_Id',right_index=True).merge(
 			ru_p,left_on='ParentReportingUnit_Id',right_index=True,suffixes=['','_Parent'])
 		unsummed.rename(columns={'Name_Parent':'ReportingUnit'},inplace=True)
-	# TODO check this merge -- does it need how='inner'?
 
 	# add columns with names
 	contest_type,contest_name,selection_name,contest_district_type = contest_info_by_id(session.bind)
@@ -236,8 +196,6 @@ def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,
 
 def rollup_df(input_fpath):
 	"""Gets rollup dataframe stored in file <input_fpath>"""
-	# TODO: read and return info about dataframe?
-	# TODO: check that rollup really is a rollup?
 	while not os.path.isfile(input_fpath):
 		print(f'File not found:\n{input_fpath}')
 		input_fpath = input('Enter alternate file path to continue (or just hit return to stop).\n')
@@ -257,7 +215,7 @@ def by_contest_columns(
 	election district is of that type rather than individual contests.
 	<contest_type> is a set or list containing 'Candidate' or 'BallotMeasure' or both."""
 	# TODO handle multiple contest group in same districts, e.g., state party members by congressional district,
-	#  without overcounting
+	#  without overcounting. Could do this with OfficeGroup element of CDF
 	rollup = rollup_df(
 		os.path.join(rollup_dir,election,top_ru,f'by_{sub_ru_type}',f'TYPE{count_type}_STATUS{count_status}.txt'))
 
@@ -286,7 +244,7 @@ def append_total_and_pcts(df):
 	Output is a dataframe with all cols of <df>, as well as
 	a total column and pct columns corresponding to cols of <df>"""
 	# TODO allow weights for columns of df
-	# TODO check all columns numeric, none named 'total'
+	assert all([is_numeric_dtype(df[c]) for c in df.columns]), 'All columns of dataframe must be numeric'
 	df_copy = df.copy()
 	df_copy['total'] = df_copy.sum(axis=1)
 	for col in df.columns:
@@ -369,19 +327,17 @@ def diff_from_avg(df,col_list,mode='selections'):
 	return diffs_df.fillna(0)
 
 
-def single_contest_selection_columns(rollup,contest,count_type,output_dir=None):
-	"""Given a single contest <contest>, 
-	NB: <count_type> must be from the CountType enumeration
-	Returns dataframe with columns labeled by selections """ # TODO
+def single_contest_selection_columns(rollup,contest,count_type):
+	"""Given a rollup dataframe <rollup> and a single contest <contest> from <rollup>,
+	and given a <count_type> from the CountType enumeration (e.g., 'absentee-mail')
+	Returns dataframe of vote counts restricted to <contest> and <count_type>
+	with columns labeled by selections """
 
 	# filter by contest and vote type
 	df = rollup[(rollup.Contest==contest) & (rollup.CountItemType==count_type)][
 		['Contest','Selection','ReportingUnit','Count']].pivot(
 		index='ReportingUnit',columns='Selection',values='Count'
 	)
-	if output_dir:
-		# TODO store in output_dir
-		pass
 	return df
 
 
@@ -392,7 +348,7 @@ def top_two_total_columns(df):
 	return df_copy[top_two]
 
 
-def dropoff_from_rollup(
+def dropoff_one_contest(
 		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,contest,
 		comparison_contests,contest_type,
 		contest_group_types=None):
@@ -400,7 +356,7 @@ def dropoff_from_rollup(
 	<contest_type> is a dictionary whose keys include all items in <contests>.
 	<contest> is a contest in the comparison_contests list
 	"""
-	# TODO check: all items in <contests> are either ocntests or contest group types in <contest_group_types>
+	# TODO check: all items in <contests> are either contests or contest group types in <contest_group_types>
 	# find all contest types represented in contests
 	types = {contest_type[c] for c in comparison_contests}
 
@@ -445,15 +401,15 @@ def dropoff_from_rollup(
 	return out_df
 
 
-def dropoff_analysis(
+def dropoff_contest_group(
 		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,
 		comparison_contests,contest_type,
 		contest_group_types=None):
 	# TODO identify "worst" contests
-	"""Under construction"""
+	"""Under construction""" # TODO
 	extremes = {}
 	for contest in comparison_contests:
-		extremes[contest] = dropoff_from_rollup(
+		extremes[contest] = dropoff_one_contest(
 			election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,contest,comparison_contests,
 			contest_type,contest_group_types=contest_group_types)
 		# add column
@@ -469,7 +425,6 @@ def dropoff_analysis(
 	an.export_to_inventory_file_tree(
 		output_dir,f'{election}/{comp_text}/{top_ru}/by_{sub_ru_type}','dropoff_extremes.txt',inv_cols,inv_vals)
 	return pd.concat([three_most_undervoted,three_most_overvoted])
-
 
 
 def process_single_contest(rollup,contest,output_dir):
@@ -524,4 +479,5 @@ def process_single_contest(rollup,contest,output_dir):
 			plt.savefig(os.path.join(output_dir,f'scatter_{ct}.png'))
 			plt.clf()
 
+	# TODO return anomaly rating for contest
 	return
