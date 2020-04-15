@@ -16,6 +16,9 @@ if __name__ == '__main__':
         rollup_dir = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/FL/rollups_from_cdf_db/FROMDB_FL'
         output_dir = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/FL/tmp'
         contest = 'Florida;US Congress Senate'
+        comparison_contests = ['Florida;Commissioner of Agriculture','Florida;US Congress Senate',
+                               'Florida;Chief Financial Officer','Florida;Governor','Florida;Attorney General']
+        contest_group_types = None
 
     elif option == 'NC':
         election = '2018 General Election'
@@ -27,6 +30,8 @@ if __name__ == '__main__':
         rollup_dir = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/NC/rollups_from_cdf_db/FROMDB_NC'
         output_dir = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/NC/tmp'
         contest = 'North Carolina;US Congressional Representative District 9'
+        comparison_contests = ['REQUIRE PHOTO ID TO VOTE','congressional']
+        contest_group_types = ['congressional']
 
 
     rollup = avp.rollup_df(os.path.join(rollup_dir,election,top_ru,f'by_{sub_ru_type}',f'TYPE{count_type}_STATUS{count_status}.txt'))
@@ -45,11 +50,16 @@ if __name__ == '__main__':
 
 
     contest_list = ['Florida;Commissioner of Agriculture','Florida;US Congress Senate','Florida;Chief Financial Officer','Florida;Governor','Florida;Attorney General','congressional']
-    contests = ['Florida;Commissioner of Agriculture','Florida;US Congress Senate','Florida;Chief Financial Officer','Florida;Governor','Florida;Attorney General']
-    contest_type = {x:'Candidate' for x in contests}
+
+    contest_type = {x:'Candidate' for x in comparison_contests}
+
+    aa = avp.dropoff_analysis(
+        election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,
+        comparison_contests,contest_type,
+        contest_group_types=contest_group_types)
 
     dropoff = avp.dropoff_from_rollup(
-        election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,contests,contest_type,contest_group_types=None)
+        election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,contest,comparison_contests,contest_type,contest_group_types=None)
 
     a = avp.by_contest_columns(election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,
                                contest_group_types=['congressional','state-house','state-senate'])

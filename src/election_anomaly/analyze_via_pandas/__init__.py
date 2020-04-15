@@ -8,6 +8,46 @@ import datetime
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
+import shutil
+import csv
+
+
+
+def export_and_inventory(target_dir,target_sub_dir,target_file,inventory_columns,inventory_values,temp_file):
+	# TODO standard order for columns
+	# export to file system
+	out_path = os.path.join(
+		target_dir,target_sub_dir)
+	Path(out_path).mkdir(parents=True,exist_ok=True)
+
+	while os.path.isfile(os.path.join(out_path,target_file)):
+		target_file = (f'There is already a file called {target_file}. Pick another name.\n')
+
+	out_file = os.path.join(out_path,target_file)
+	shutil.copy2(temp_file,out_file)
+
+	# create record in inventory.txt
+	inventory_file = os.path.join(target_dir,'inventory.txt')
+	inv_exists = os.path.isfile(inventory_file)
+	if inv_exists:
+		# check that header matches inventory_columns
+		with open(inventory_file,newline='') as f:
+			reader = csv.reader(f,delimiter='\t')
+			file_header = next(reader)
+			# TODO: offer option to delete inventory file
+			assert file_header == inventory_columns, \
+				f'Header of file {f} is\n{file_header},\ndoesn\'t match\n{inventory_columns}.'
+
+	with open(inventory_file,'a',newline='') as csv_file:
+		wr = csv.writer(csv_file,delimiter='\t')
+		if not inv_exists:
+			wr.writerow(inventory_columns)
+		wr.writerow(inventory_values)
+
+	print(f'Results exported to {out_file}')
+
+	return
 
 
 def contest_info_by_id(eng):
@@ -250,35 +290,77 @@ def append_total_and_pcts(df):
 	df_copy = df.copy()
 	df_copy['total'] = df_copy.sum(axis=1)
 	for col in df.columns:
-		df_copy[f'{col}_pct'] = df_copy[col]/df_copy['total']
+		df_copy[pct_column(col)] = df_copy[col]/df_copy['total']
 	return df_copy
 
 
 def diff_column(col_name):
 	return f'diff_{col_name}'
 
+
+def pct_column(col_name):
+	return f'{col_name}_pct'
+
+
+def complement_column(col_name):
+	return f'{col_name}_complement_in_column'
+
+
 def diff_from_avg(df,col_list,mode='selections'):
 	"""For each record in <df>, for the columns in <col_list>,
+	add columns expressing the right vote diff.
+	For mode 'selections':
 	calculate (and add columns for) the pct_diff, i.e.,
 	the value of the <col_list> vector for that record
 	minus the average value of the <col_list> vector for all other records.
-	Also add columns for the abs_diff, i.e., the pct_diff times the total"""
-	diffs_df = append_total_and_pcts(df[col_list])
-	diff_col_d = {f'{c}_pct':diff_column(f'{c}_pct') for c in col_list}
-	pct_col_list = [f'{c}_pct' for c in col_list]
-	diff_col_list = list(diff_col_d.values())
+	Then add columns for the abs_diff, i.e., the pct_diff times the total.
+	For mode 'dropoff':
+	calculate (and add a column for) the ratio of
+	the sum of all other votes in all columns for the given record
+	to the sum of all other votes in all other columns"""
+	if mode == 'selections':
+		diffs_df = append_total_and_pcts(df[col_list])
+		diff_col_d = {pct_column(c):diff_column(pct_column(c)) for c in col_list}
+		pct_col_list = [pct_column(c) for c in col_list]
+		diff_col_list = [diff_column(pct_column(c)) for c in col_list]
 
-	# initialize diff columns
-	for c in col_list:
-		diffs_df.loc[:,diff_col_d[f'{c}_pct']] = None
+		# initialize diff_pct columns, will be filled row by row
+		for c in col_list:
+			diffs_df.loc[:,diff_column(pct_column(c))] = None
 
-	for i in df.index:
-		pct_diff = (diffs_df.loc[i,pct_col_list] - diffs_df[pct_col_list].drop(i).mean(axis=0)).rename(diff_col_d)
-		diffs_df.loc[i,diff_col_list] = pct_diff
+		for i in df.index:
+			# subtract average pcts over all other records from pcts for record i
+			pct_diff = (diffs_df.loc[i,pct_col_list] - diffs_df[pct_col_list].drop(i).mean(axis=0)).rename(diff_col_d)
+			diffs_df.loc[i,diff_col_list] = pct_diff
 
-	# add columns for absolute diff
-	for c in col_list:
-		diffs_df.loc[:,diff_column(c)] = diffs_df[diff_col_d[f'{c}_pct']] * diffs_df['total']
+		# append columns for absolute diff
+		for c in col_list:
+			diffs_df.loc[:,diff_column(c)] = diffs_df[diff_column(pct_column(c))] * diffs_df['total']
+			
+	elif mode == 'dropoff':
+		diffs_df = df[col_list].copy()
+		# initialize dropoff factor column and complement columns
+		diffs_df.loc[:,'dropoff_factor'] = None
+
+		# initialize complement columns, will be filled row by row
+		for c in col_list:
+			diffs_df.loc[:,complement_column(c)] = None
+
+		for i in df.index:
+			# find multiplicative factor
+			diffs_df.loc[i,'dropoff_factor'] = diffs_df.loc[i].sum() / diffs_df[col_list].drop(i).sum(axis=1).sum()
+
+			# for each contest find sum of votes in the other records
+			for c in col_list:
+				diffs_df.loc[i,complement_column(c)] = diffs_df[c].drop(i).sum()
+
+		# append columns for absolute diff
+		for c in col_list:
+			diffs_df.loc[:,diff_column(c)] = diffs_df[c] - diffs_df['dropoff_factor'] * diffs_df[complement_column(c)]
+
+	else:
+		print(f'mode {mode} not recognized')
+		return None
 
 	return diffs_df.fillna(0)
 
@@ -307,44 +389,75 @@ def top_two_total_columns(df):
 
 
 def dropoff_from_rollup(
-		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,
-		contests,contest_type,
+		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,contest,
+		comparison_contests,contest_type,
 		contest_group_types=None):
 	"""<contests> is a list of contests (or contest groups such as 'state-house'
-	contest_type is a dictionary whose keys include all items in <contests.
+	<contest_type> is a dictionary whose keys include all items in <contests>.
+	<contest> is a contest in the comparison_contests list
 	"""
 	# TODO check: all items in <contests> are either ocntests or contest group types in <contest_group_types>
-	print('WARNING: this may not be the right calculation for size of effect of dropoff.')
 	# find all contest types represented in contests
-	types = {contest_type[c] for c in contests}
+	types = {contest_type[c] for c in comparison_contests}
 
 	by_cc = by_contest_columns(
 		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,
 		contest_group_types=contest_group_types,contest_types=types)
-	dfa = diff_from_avg(by_cc,contests)
+	dfa = diff_from_avg(by_cc,comparison_contests,mode='dropoff')
+	d = diff_column(contest)
 
-	scatter = {}
+	extremes = [dfa[d].idxmax(),dfa[d].idxmin()]
+
 	# open text file for reporting
-	with open(os.path.join(output_dir,f'info.txt'),'w') as f:
+	with open(os.path.join(output_dir,election,f'info.txt'),'w') as f:
 		f.write(
-			f'{election}\t{top_ru}\t{sub_ru_type}\t{count_type}\t{count_status}\t{contests}\n')
-		for c in contests:
-			# scatter plot against average of others
-			diff_col = diff_column(c)
-			others = [x for x in contests if x != c]
-			one_vs_others = by_cc
-			one_vs_others['others'] = by_cc[others].mean(axis=1)
-			scatter[c] = plt.scatter(one_vs_others['others'],one_vs_others[c])
-			plt.savefig(os.path.join(output_dir,f'scatter_{c}.png'))
-			plt.clf()
+			f'{election}\t{top_ru}\t{sub_ru_type}\t{count_type}\t{count_status}\t{comparison_contests}\n')
+		f.write(f'\n{contest}\n')
 
-			f.write(f'\n{c}\n')
-			# find rus with greatest and least diff, report diffs
-			extremes = [dfa[diff_col].idxmax(),dfa[diff_col].idxmin()]
-			for e in extremes:
-				f.write(f'{e}\t{round(dfa.loc[e,diff_col])}\n')
+		# report diffs of extremes
+		for e in extremes:
+			f.write(f'{e}\t{round(dfa.loc[e,d])}\n')
 
-	return
+	# scatter plot total votes vs. diff
+	plt.scatter(dfa[contest]/1000,dfa[d]/1000)
+	plt.xlabel(f'Vote Totals (thousands)')
+	plt.ylabel(f'Dropoff correcion (thousands)')
+	comps_text = "\n".join(comparison_contests)
+	plt.suptitle(
+		f'{contest} dropoff by {sub_ru_type}\nCorrection relative to contests\n{comps_text}',
+	fontsize=10)
+	for e in extremes:
+		plt.annotate(e,(dfa.loc[e,contest]/1000,dfa.loc[e,d]/1000))
+	plt.savefig(os.path.join(output_dir,election,f'scatter_{contest}.png'))
+	plt.clf()
+
+	return dfa.loc[extremes]
+
+
+def dropoff_analysis(
+		election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,
+		comparison_contests,contest_type,
+		contest_group_types=None):
+
+	extremes = {}
+	for contest in comparison_contests:
+		extremes[contest] = dropoff_from_rollup(
+			election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,contest,comparison_contests,
+			contest_type,contest_group_types=contest_group_types)
+		# add column
+		extremes[contest].loc[:,'Contest'] = contest
+
+	all_extremes = pd.concat([extremes[contest] for contest in comparison_contests])
+	all_extremes.set_index(['Contest','ReportingUnit'],inplace=True)
+	three_most_undervoted = all_extremes.nsmallest(n=3,keep='all')
+	three_most_overvoted = all_extremes.nlargest(n=3,keep='all')
+	comp_text = '_'.join(comparison_contests)
+	inv_cols = ['Election','Comparison_Contests','Jurisdiction','by']
+	inv_vals = [election,comp_text,top_ru,sub_ru_type]
+	an.export_to_inventory_file_tree(
+		output_dir,f'{election}/{comp_text}/{top_ru}/by_{sub_ru_type}','dropoff_extremes.txt',inv_cols,inv_vals)
+	return pd.concat([three_most_undervoted,three_most_overvoted])
+
 
 
 def process_single_contest(rollup,contest,output_dir):
