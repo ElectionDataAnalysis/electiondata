@@ -491,8 +491,8 @@ def process_single_contest(rollup,contest,output_dir):
 			# filter out for contest and count_type
 			df = single_contest_selection_columns(rollup,contest,ct)
 			top_two = top_two_total_columns(df)
-			top_two_diff = diff_from_avg(top_two,top_two.columns)  # diffs of top two vote-getting selections
 			top_selections = top_two.columns
+			top_two_diff = diff_from_avg(top_two,top_selections)  # diffs of top two vote-getting selections
 			# add column for margin
 			top_two.loc[:,'margin'] = top_two.iloc[:,0] - top_two.iloc[:,1]
 			for s in top_selections:
@@ -500,6 +500,18 @@ def process_single_contest(rollup,contest,output_dir):
 				extremes = [top_two_diff[diff_column(s)].idxmax(),top_two_diff[diff_column(s)].idxmin()]
 				for e in extremes:
 					f.write(f'\t\t\t{e}\tmargin {round(top_two.loc[e,"margin"],0)}\tdiff {round(top_two_diff.loc[e,diff_column(s)],0)}')
+
+			# bar plot of top two results (votes)
+			top_two[top_selections].plot.bar()
+			plt.title(f'{short_name(contest)},{ct} votes')
+			plt.savefig(os.path.join(output_dir,f'bar_votes_{ct}.png'))
+			plt.clf()
+
+			# bar plot of top two results (pcts)
+			top_two_diff[[pct_column(s) for s in top_selections]].plot.bar()
+			plt.title(f'{short_name(contest)},{ct} vote percentages')
+			plt.savefig(os.path.join(output_dir,f'bar_pcts_{ct}.png'))
+			plt.clf()
 
 			# scatter plot margin vs. diff (winner - loser)
 			plt.scatter(top_two['margin'],top_two_diff[diff_column(top_selections[0])])

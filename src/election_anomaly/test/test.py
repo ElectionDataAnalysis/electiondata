@@ -33,17 +33,17 @@ if __name__ == '__main__':
         rollup_dir = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/NC/rollups_from_cdf_db/FROMDB_NC'
         output_dir = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/NC/tmp'
         contest = 'North Carolina;US Congress House of Representatives District 9'
-        comparison_contests = ['North Carolina;US Congress;Senate','congressional']
-        contest_group_types = ['congressional']
+        comparison_contests = ['state-house','congressional']
+        contest_group_types = ['congressional','state-house']
 
     rollup = avp.rollup_df(os.path.join(rollup_dir,election,top_ru,f'by_{sub_ru_type}',f'TYPE{count_type}_STATUS{count_status}.txt'))
 
     contest_type = {x:'Candidate' for x in comparison_contests} # TODO include BM contests too
 
-    # single = avp.process_single_contest(rollup,contest,os.path.join(output_dir,election,top_ru,f'by_{sub_ru_type}'))
+    single = avp.process_single_contest(rollup,contest,os.path.join(output_dir,election,top_ru,f'by_{sub_ru_type}'))
 
     dropoff = avp.dropoff_from_rollup(
-        election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,contest,comparison_contests,contest_type,contest_group_types=None)
+        election,top_ru,sub_ru_type,count_type,count_status,rollup_dir,output_dir,contest,comparison_contests,contest_type,contest_group_types=contest_group_types)
 
 
     print('Done')
