@@ -30,11 +30,12 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',dele
     # create enumeration tables 
     e_table_list = enum_table_list(dirpath)
     for t in e_table_list:
-        metadata = create_table(metadata,id_seq,t,'enumerations',dirpath)
+        create_table(metadata,id_seq,t,'enumerations',dirpath)
     
     # create element tables (cdf and metadata) and push to db
     element_path = os.path.join(dirpath, 'elements')
-    elements_to_process = glob.glob(os.path.join(element_path,'*.txt'))  # dynamic list of elements whose tables haven't been created yet
+    elements_to_process = [f for f in os.listdir(element_path) if f[0] != '.']
+    # dynamic list of elements whose tables haven't been created yet
     while elements_to_process:
         element = elements_to_process[0]
         # check foreign keys; if any refers to an elt yet to be processed, change to that elt
@@ -49,7 +50,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',dele
             except IndexError:
                 pass
         # create db table for element
-        metadata = create_table(metadata,id_seq,element,'elements',dirpath)
+        create_table(metadata,id_seq,element,'elements',dirpath)
         # remove element from list of yet-to-be-processed
         elements_to_process.remove(element)
 
@@ -57,7 +58,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',dele
     # TODO check for foreign keys, as above
     # check for foreign keys
     join_path = os.path.join(dirpath,'joins')
-    joins_to_process = glob.glob(os.path.join(join_path,'*.txt'))
+    joins_to_process = [f for f in os.listdir(join_path) if f[0] != '.']
     while joins_to_process:
         j = joins_to_process[0]
         # check foreign keys; if any refers to an elt yet to be processed, change to that elt
@@ -72,7 +73,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',dele
             except IndexError:
                 pass
         # create db table for element
-        metadata = create_table(metadata,id_seq,j,'joins',dirpath)
+        create_table(metadata,id_seq,j,'joins',dirpath)
         # remove element from list of yet-to-be-processed
         joins_to_process.remove(j)
 
@@ -109,7 +110,7 @@ def create_table(metadata,id_seq,name,table_type,dirpath):
                                   for i,r in df['unique_constraints'].iterrows()]
         enum_id_list = [Column(f'{r["enumeration"]}_Id',ForeignKey(f'{r["enumeration"]}.Id'))
                         for i,r in df['enumerations'].iterrows()]
-        enum_other_list = [Column(f'Other{r["enumeration"]}') for i,r in df['enumerations'].iterrows()]
+        enum_other_list = [Column(f'Other{r["enumeration"]}',String) for i,r in df['enumerations'].iterrows()]
         Table(name,metadata,
               Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
               * field_col_list, * enum_id_list, * enum_other_list,
@@ -148,7 +149,7 @@ def create_table(metadata,id_seq,name,table_type,dirpath):
 
     else:
         raise Exception(f'table_type {table_type} not recognized')
-    return metadata
+    return
 
 
 def enum_table_list(dirpath= 'CDF_schema_def_info'):
