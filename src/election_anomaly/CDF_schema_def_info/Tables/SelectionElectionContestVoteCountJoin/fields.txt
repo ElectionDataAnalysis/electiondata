@@ -1,3 +1,0 @@
-fieldname	datatype
-Selection_Id	Integer
-Contest_Id	Integer

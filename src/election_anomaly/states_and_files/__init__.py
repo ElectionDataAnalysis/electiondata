@@ -514,6 +514,9 @@ class Munger:
         with open(os.path.join(dir_path,'atomic_reporting_unit_type.txt'),'r') as ff:
             self.atomic_reporting_unit_type = ff.readline()
 
+# TODO before processing context files into db, alert user to any duplicate names.
+#  Enforce name change? Or just suggest?
+
 
 if __name__ == '__main__':
     print('Done (states_and_files)!')

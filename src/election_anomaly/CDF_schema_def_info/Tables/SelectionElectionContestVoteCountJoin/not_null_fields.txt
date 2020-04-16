@@ -1,4 +1,0 @@
-not_null_fields
-Selection_Id
-Election_Id
-VoteCount_Id

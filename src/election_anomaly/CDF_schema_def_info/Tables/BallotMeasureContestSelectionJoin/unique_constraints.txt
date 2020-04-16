@@ -1,2 +1,0 @@
-unique_constraint
-BallotMeasureContest_Id,BallotMeasureSelection_Id

@@ -1,3 +1,0 @@
-not_null_fields
-ParentReportingUnit_Id
-ChildReportingUnit_Id

@@ -1,3 +1,0 @@
-not_null_fields
-Contest_Id
-Election_Id

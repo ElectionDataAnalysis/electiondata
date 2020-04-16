@@ -1,0 +1,4 @@
+fieldname	refers_to
+ElectionContestJoin_Id	ElectionContestJoin
+ContestSelectionJoin_Id	BallotMeasureContestSelectionJoin;CandidateContestSelectionJoin
+VoteCount_Id	VoteCount

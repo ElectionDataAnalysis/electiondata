@@ -1,0 +1,2 @@
+fieldname	refers_to
+Foreign_Id	Candidate;Contest;Election;ReportingUnit;Office;Party
