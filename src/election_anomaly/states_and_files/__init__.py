@@ -430,7 +430,7 @@ class Munger:
     def __init__(self,dir_path,cdf_schema_def_dir='CDF_schema_def_info/'):
         """<dir_path> is the directory for the munger."""
         assert os.path.isdir(dir_path),f'{dir_path} is not a directory'
-        for ff in ['cdf_tables.txt','atomic_reporting_unit_type.txt','count_columns.txt']:
+        for ff in ['cdf_elements.txt','atomic_reporting_unit_type.txt','raw_identifiers.txt']:
             if not os.path.isfile(os.path.join(dir_path,ff)):
                 input(f'Directory \n\t{dir_path}\ndoes not contain file {ff}.\n'
                       f'Please create the file and hit return to continue')
@@ -447,18 +447,21 @@ class Munger:
         self.rename_column_dictionary=col_d
 
         # read raw columns from file (renaming if necessary)
-        undoctored_raw_columns = pd.read_csv(os.path.join(dir_path,'raw_columns.txt'),sep='\t')
-        self.raw_columns = undoctored_raw_columns.replace({'name':col_d})
+        # undoctored_raw_columns = pd.read_csv(os.path.join(dir_path,'raw_columns.txt'),sep='\t')
+        # self.raw_columns = undoctored_raw_columns.replace({'name':col_d})
 
         # read cdf tables and rename in ExternalIdentifiers col if necessary
-        cdf_table_file = os.path.join(dir_path,'cdf_tables.txt')
-        cdft = ui.confirm_or_correct_cdf_table_file(
-            cdf_table_file,undoctored_raw_columns.name.to_list()).set_index('cdf_element')
-        # change names for raw columns whose names match cdf elements
-        for k in col_d.keys():
+        cdf_element_file = os.path.join(dir_path,'cdf_elements.txt')
+
+        # TODO rewrite confirm_or_correct_cdf_element_file
+        cdft = ui.confirm_or_correct_cdf_element_file(
+            cdf_element_file,undoctored_raw_columns.name.to_list()).set_index('cdf_element')
+
+        # change names in munging formulas for raw columns whose names match cdf elements
+        for k in self.rename_column_dictionary():
             cdft['raw_identifier_formula'] = cdft['raw_identifier_formula'].str.replace(
-                '\<{}\>'.format(k),'<{}>'.format(col_d[k]))
-        self.cdf_tables = cdft
+                '\<{}\>'.format(k),'<{}>'.format(self.rename_column_dictionary[k]))
+        self.cdf_elements = cdft
 
         # determine how to treat ballot measures (ballot_measure_style) and its description
         bms_file = os.path.join(dir_path,'ballot_measure_style.txt')
