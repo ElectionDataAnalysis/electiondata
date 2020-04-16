@@ -28,3 +28,10 @@ The Common Data Format does not have an obviously natural way to handle the case
   * name of munger
   * atomic reporting unit type represented in datafile
 * System:
+
+## About the database
+There are several kinds of tables in the database:
+* Tables whose name starts with `_` are 'metadata tables. These are not essential to the cdf, but hold relevant data (such as the source of the data in the database). 
+* Tables with exactly two columns `Id` and `Txt` are 'enumeration tables', holding enumeration lists specified in the CDF.
+* Tables with at least one column that is neither `Txt` nor a foreign id (ending in `_Id`). These are `CDF element tables`. They correspond to the elements of the CDF (boxes in the CDF diagram).
+* Tables whose names end with `Join` are 'join tables', holding relationships between elements of the CDF (lines in the CDF diagram).

@@ -250,11 +250,10 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,ju
     c = mu.count_columns.RawName.to_list()
     row[c] = row[c].applymap(lambda x: '0' if x=='' else x)
 
-
     cdf_d = {}  # dataframe for each table
     for element in ['Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType','CandidateContest']:
-        cdf_d[element] = pd.read_sql_table(element, session.bind)   # note: keep 'Id as df column (not index) so we have access in merges below.
-
+        cdf_d[element] = pd.read_sql_table(element, session.bind)
+        # note: keep 'Id as df column (not index) so we have access in merges below.
 
     vc_col_d = {x['RawName']:x['CountItemType'] for i,x in mu.count_columns.iterrows()}
 
@@ -383,7 +382,6 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,ju
                               right_on='Candidate_Id',suffixes=['','_Selection'])
         cc_row.rename(columns={'Id_Selection':'Selection_Id'},inplace=True)
 
-
         # Office depends on the election type and the CandidateContest.
         if election_type == 'general':
             # Office name is same as CandidateContest name
@@ -409,7 +407,9 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,ju
         cc_row.rename(columns=vc_col_d,inplace=True)  # standardize vote-count column names
         cc_vote_counts = cc_row[col_list]
         # TODO for Florida, why is there no 'Count' column for Candidate contest_type?
-        cc_vote_counts=cc_vote_counts.melt(id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],value_vars=vote_type_list,var_name='CountItemType',value_name='Count')
+        cc_vote_counts=cc_vote_counts.melt(
+            id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],
+            value_vars=vote_type_list,var_name='CountItemType',value_name='Count')
         cc_vote_counts=enum_col_to_id_othertext(cc_vote_counts,'CountItemType',cdf_d['CountItemType'])
         vote_counts = cc_vote_counts
 
@@ -451,4 +451,3 @@ if __name__ == '__main__':
 
     print('Done!')
     exit()
-

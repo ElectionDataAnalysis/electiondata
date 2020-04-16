@@ -40,7 +40,7 @@ if __name__ == '__main__':
 	# TODO handle default values more programmatically
 	encoding = dfile_d['encoding']
 	if encoding == '':
-		encoding = 'utf-8'
+		encoding = 'iso-8859-1'
 
 	ui.new_datafile(
 		raw_file,sep,new_df_session,juris_short_name=juris_short_name,encoding=encoding,project_root=project_root)
