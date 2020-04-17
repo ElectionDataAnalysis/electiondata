@@ -238,7 +238,29 @@ def get_id_othertext_from_enum_value(enum_df,value):
     return idx,other_txt
 
 
-def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,juris_id):
+def raw_elements_to_cdf_NEW(session,mu,row):
+    # change any empty count_column values to zero
+
+    # rename any columns as necessary (if they overlap with cdf_element names)
+
+    # get list of cdf_element tables from db (not joins, columns more than 'Id' and 'Txt') -- except VoteCount
+    # read foreign key relations from db
+    # loop through all cdf_element tables t (respecting foreign key ordering)
+        # munge t info via formulas in mu.cdf_elements and info in mu.raw_identifiers
+        # load raw data into t and pull t.Ids
+
+    # loop through all join tables j (respecting foreign key ordering) -- except ECSVCJoin
+        # load raw data into j and pull j.Ids
+
+    # Fill VoteCount and ElectionContestSelectionVoteCountJoin
+    #  To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
+    #  add ElectionContestSelectionVoteCountJoin columns to VoteCount
+
+    # TODO
+    return
+
+
+def raw_elements_to_cdf_OLD(session,mu,row,contest_type,election_id,election_type,juris_id):
     """
     NOTE: Tables from context assumed to exist already in db
     (e.g., Party, ComposingReportingUnitJoin, Election, ReportingUnit etc.)
@@ -416,7 +438,6 @@ def raw_elements_to_cdf(session,mu,row,contest_type,election_id,election_type,ju
     else:
         raise Exception(f'Contest type {contest_type} not recognized.')
     # TODO do we need to check whether vote_counts is empty?
-    # TODO check vote_counts for nulls
 
     # To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
     # add SelectionElectionContestJoin columns to VoteCount

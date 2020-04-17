@@ -9,11 +9,9 @@
 import db_routines as dbr
 import sqlalchemy
 from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,Date,ForeignKey
-# NB: imports above are used within string argument to exec()
-from sqlalchemy.orm import sessionmaker
 import os
 import pandas as pd
-import glob
+
 
 def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',delete_existing=False):
     """ schema example: 'cdf'; Creates cdf tables in the given schema
@@ -81,7 +79,8 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',dele
     metadata.create_all()
     session.flush()
     return metadata
-    
+
+
 def create_table(metadata,id_seq,name,table_type,dirpath):
 
     t_path = os.path.join(dirpath,table_type,name)

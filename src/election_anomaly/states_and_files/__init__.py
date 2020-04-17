@@ -453,7 +453,7 @@ class Munger:
         # read cdf tables and rename in ExternalIdentifiers col if necessary
         cdf_element_file = os.path.join(dir_path,'cdf_elements.txt')
 
-        # TODO rewrite confirm_or_correct_cdf_element_file
+        # TODO rewrite confirm_or_correct_cdf_element_file, including reading ballot measure style
         cdft = ui.confirm_or_correct_cdf_element_file(
             cdf_element_file,undoctored_raw_columns.name.to_list()).set_index('cdf_element')
 

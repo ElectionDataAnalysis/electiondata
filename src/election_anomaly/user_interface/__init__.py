@@ -857,7 +857,6 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',juris_short_name
 	# TODO finalize ReportingUnits once for both kinds of files?
 
 	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
-	# TODO feature: write routine to deduce BallotMeasureContest district from the data?!?
 	# update db from jurisdiction context file
 
 	# TODO put all info about data cleaning into README.md (e.g., whitespace strip)
@@ -927,9 +926,9 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',juris_short_name
 			munger.check_new_results_dataset(cc_results,juris,session,'BallotMeasure',project_root=project_root)
 
 	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf(session,munger,cc_results,'Candidate',election_idx,electiontype,juris_idx)
+		mr.raw_elements_to_cdf_OLD(session,munger,cc_results,'Candidate',election_idx,electiontype,juris_idx)
 	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf(session,munger,bmc_results,'BallotMeasure',election_idx,electiontype,juris_idx)
+		mr.raw_elements_to_cdf_OLD(session,munger,bmc_results,'BallotMeasure',election_idx,electiontype,juris_idx)
 	return juris, munger
 
 
