@@ -400,6 +400,30 @@ class Munger:
                 raise Exception('Datafile will not be processed. Use a different munger and try again.')
         return
 
+    def check_against_self(self):
+        """check that munger is internally consistent; offer user chance to correct munger"""
+        # TODO write this function
+        # every cdf_element in raw_identifiers.txt is in cdf_elements.cdf_element
+        # every source is either row, column or other
+        # angle brackets match in raw_identifier_formula
+        # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows list
+        return
+
+    def check_against_db(self,sess):
+        """check that munger is consistent with db; offer user chance to correct munger"""
+
+        # pull element names from db
+        # set of cdf_elements in cdf_elements.txt is same as set pulled from db
+        # TODO write this function
+        return
+
+    def check_against_datafile(self,raw):
+        """check that munger is compatible with datafile <raw>; offer user chance to correct munger"""
+        # TODO where does this belong?
+
+        # TODO write this function
+        return
+
     def add_to_raw_identifiers(self,df):
         """Adds rows in <df> to the raw_identifiers.txt file and to the attribute <self>.raw_identifiers"""
         for col in self.raw_identifiers.columns:
@@ -429,96 +453,33 @@ class Munger:
 
     def __init__(self,dir_path,cdf_schema_def_dir='CDF_schema_def_info/'):
         """<dir_path> is the directory for the munger."""
-        assert os.path.isdir(dir_path),f'{dir_path} is not a directory'
-        for ff in ['cdf_elements.txt','atomic_reporting_unit_type.txt','raw_identifiers.txt']:
-            if not os.path.isfile(os.path.join(dir_path,ff)):
+        while not os.path.isdir(dir_path):
+            input(f'{dir_path} is not a directory. Please create it and hit return to continue.')
+        for ff in ['cdf_elements.txt','format.txt','raw_identifiers.txt']:
+            while not os.path.isfile(os.path.join(dir_path,ff)):
                 input(f'Directory \n\t{dir_path}\ndoes not contain file {ff}.\n'
                       f'Please create the file and hit return to continue')
+
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir=dir_path
 
+        # read formatting info
+        format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep = '\t',index_col='item')
+        # TODO check that format.txt file is correct
+        self.atomic_reporting_unit_type =  format_info['atomic_reporting_unit_type']
+        self.header_rows = format_info['header_rows']
+
         # read raw_identifiers file into a table
-        # note no natural index column
+        #  note no natural index column
         self.raw_identifiers=pd.read_csv(os.path.join(dir_path,'raw_identifiers.txt'),sep='\t')
 
-        # define dictionary to change any column names that match internal CDF names
-        col_d = {t:f'{t}_{self.name}'
-                 for t in os.listdir(os.path.join(cdf_schema_def_dir,'elements'))}
-        self.rename_column_dictionary=col_d
-
-        # read raw columns from file (renaming if necessary)
-        # undoctored_raw_columns = pd.read_csv(os.path.join(dir_path,'raw_columns.txt'),sep='\t')
-        # self.raw_columns = undoctored_raw_columns.replace({'name':col_d})
-
-        # read cdf tables and rename in ExternalIdentifiers col if necessary
-        cdf_element_file = os.path.join(dir_path,'cdf_elements.txt')
-
-        # TODO rewrite confirm_or_correct_cdf_element_file, including reading ballot measure style
-        cdft = ui.confirm_or_correct_cdf_element_file(
-            cdf_element_file,undoctored_raw_columns.name.to_list()).set_index('cdf_element')
-
-        # change names in munging formulas for raw columns whose names match cdf elements
-        for k in self.rename_column_dictionary():
-            cdft['raw_identifier_formula'] = cdft['raw_identifier_formula'].str.replace(
-                '\<{}\>'.format(k),'<{}>'.format(self.rename_column_dictionary[k]))
-        self.cdf_elements = cdft
-
-        # determine how to treat ballot measures (ballot_measure_style) and its description
-        bms_file = os.path.join(dir_path,'ballot_measure_style.txt')
-        bmso_file=os.path.join(
-            os.path.abspath(os.path.join(dir_path,os.pardir)),'ballot_measure_style_options.txt')
-        self.ballot_measure_style,self.ballot_measure_style_description = ui.confirm_or_correct_ballot_measure_style(
-            bmso_file,bms_file)
-
-        # determine whether the munger expects columns for counts by vote types (CountItemType), or just totals
-        # and whether munger has a formula for CountItemType based on values in the row.
-
-        count_columns_file = os.path.join(dir_path,'count_columns.txt')
-        count_columns_df=pd.read_csv(count_columns_file,sep='\t')
-
-        # rename columns conflicting with cdf element names
-        count_columns_df = count_columns_df.replace({'RawName':col_d})  # in RawNames column
-
-        # determine whether any count_columns have nontrivial formulas for CountItemType
-        # and if so, rename within formulas
-        # TODO error check: if column name contains '<' this may cause problems
-        if not count_columns_df[count_columns_df.CountItemType.str.contains('<')].empty:
-            self.formulas_for_count_item_type = True
-            for k,v in col_d.items():
-                count_columns_df.CountItemType.apply(lambda x:x.replace(f'<{k}>',f'<{v}>'))
-        else:
-            self.formulas_for_count_item_type = False
-
-        self.count_columns = ui.check_count_columns(
-            count_columns_df,count_columns_file,self.path_to_munger_dir,cdf_schema_def_dir)
-        # TODO what if there is a CountItemType column in raw file whose entries are all 'total'?
-        if list(self.count_columns['CountItemType'].unique()) == ['total']:
-            self.totals_only=True
-        else:
-            self.totals_only=False
-
-        if self.ballot_measure_style == 'yes_and_no_are_candidates':
-            ri_df = pd.read_csv(os.path.join(dir_path,'raw_identifiers.txt'),sep='\t')
-            self.ballot_measure_selection_list = ri_df[
-                                                     ri_df.cdf_element=='BallotMeasureSelection'].loc[
-                                                 :,'raw_identifier_value'].to_list()
-
-            bms_str=cdft.loc['BallotMeasureSelection','raw_identifier_formula']
-            # note: bms_str will start and end with <>
-            self.ballot_measure_selection_col = bms_str[1:-1]
-            self.ballot_measure_count_column_selections = None
-
-        else:
-            self.ballot_measure_selection_list=None
-            self.ballot_measure_count_column_selections = pd.read_csv(
-                os.path.join(dir_path,'ballot_measure_count_column_selections.txt'),sep='\t'
-            )
-
-        with open(os.path.join(dir_path,'atomic_reporting_unit_type.txt'),'r') as ff:
-            self.atomic_reporting_unit_type = ff.readline()
+        # if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
+        #  munger will need to rename some columns of the raw file before processing.
+        self.rename_column_dictionary = {t:f'{t}_{self.name}' for t in self.cdf_elements.cdf_element}
 
 # TODO before processing context files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
+
 
 
 if __name__ == '__main__':

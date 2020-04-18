@@ -1,0 +1,3 @@
+item	value
+atomic_reporting_unit_type	precinct
+header_rows	0

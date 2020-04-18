@@ -1,6 +1,7 @@
 *.pyc
 local/
 .DS_Store
+src/election_anomaly/test/test2.py
 src/election_anomaly/test/test.py
 src/election_anomaly/__pycache__
 src/jurisdictions/MD_old

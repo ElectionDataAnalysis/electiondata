@@ -19,6 +19,7 @@ The Common Data Format does not have an obviously natural way to handle the case
   * creates database as specified in CDF_schema_def_info
 
 ### Create Munger
+[//]: # "TODO explain what header_row =0 means, or header_row = [3,4]"
 
 ### Load data from a datafile into an existing database
 * User uploads datafile, providing:

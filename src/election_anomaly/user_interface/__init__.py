@@ -317,34 +317,30 @@ def format_check_formula(formula,fields):
 	return missing
 
 
-def confirm_or_correct_cdf_table_file(cdf_table_file,raw_cols):
+def confirm_or_correct_cdf_element_file(cdf_elements_file,header_rows,elements):
 	"""
-	Checks that <cdf_table_file> has the right columns and contest;
+	Checks that <cdf_elements_file> has the right columns;
 	if not, guides user to correcting.
 	"""
-	element_list = [
-		'Office','ReportingUnit','Party','Candidate','CandidateContest',
-		'BallotMeasureContest','BallotMeasureSelection']
-	cdft_df = pd.read_csv(cdf_table_file,sep='\t')  # note index
+	cdft_df = pd.read_csv(cdf_elements_file,sep='\t')  # note index
 
 	# check column headings
-	while len(cdft_df.columns) != 2 or cdft_df.columns.to_list() != ['cdf_element','raw_identifier_formula']:
-		input(f'The file {cdf_table_file} should tab-separated with two columns\n'
+	while len(cdft_df.columns) != 3 or cdft_df.columns.to_list() != ['cdf_element','raw_identifier_formula','source']:
+		input(f'The file {cdf_elements_file} should tab-separated with three columns\n'
 			  f'labeled \'cdf_element\' and \'raw_identifier_formula\'.\n'
 			  f'Correct the file as necessary and hit return to continue')
-		cdft_df = pd.read_csv(cdf_table_file,sep='\t')  # note index
+		cdft_df = pd.read_csv(cdf_elements_file,sep='\t')  # note index
 
 	# check for missing rows
 	missing_elements = [x for x in element_list if x not in cdft_df.cdf_element.to_list()]
 	while missing_elements:
-		input(f'Rows are missing from {cdf_table_file}:\n'
+		input(f'Rows are missing from {cdf_elements_file}:\n'
 			  f'{",".join(missing_elements)}\n'
 			  f'Add them and hit return to continue')
-		cdft_df = pd.read_csv(cdf_table_file,sep='\t')  # note index
+		cdft_df = pd.read_csv(cdf_elements_file,sep='\t')  # note index
 		missing_elements = [x for x in element_list if x not in cdft_df.cdf_element.to_list()]
 
-	# check that formulas refer to existing columns of raw file
-	# TODO create function to check formulas; will use for count_columns too.
+	# check that row formulas refer to existing columns of raw file, and column formulas refer to header rows
 	bad_formulas = [1]
 	while bad_formulas:
 		bad_formulas = []
@@ -363,7 +359,7 @@ def confirm_or_correct_cdf_table_file(cdf_table_file,raw_cols):
 			print(f'Unusable formulas for {",".join(bad_formulas)}.\n')
 			input(f'Fix the cdf_elements.txt file \n and hit return to continue.\n')
 			# TODO check raw_columns.txt somewhere else, or let this routine check it & pick up alterations
-		cdft_df = pd.read_csv(cdf_table_file,sep='\t')  # note index
+		cdft_df = pd.read_csv(cdf_elements_file,sep='\t')  # note index
 	return cdft_df
 
 
@@ -508,10 +504,10 @@ def check_munger_files(sess,munger_name,munger_dir,template_dir,column_list):
 		for ff in file_list:
 			create_file_from_template(os.path.join(template_dir,ff),os.path.join(munger_path,ff))
 
-		# create atomic_reporting_unit_type.txt
+		# create format.txt
 		rut_df = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
 		try:
-			with open(os.path.join(munger_path,'atomic_reporting_unit_type.txt'),'r') as f:
+			with open(os.path.join(munger_path,'format.txt'),'r') as f:
 				arut=f.read()
 			change = input(f'Atomic ReportingUnit type is {arut}. Do you need to change it (y/n)?\n')
 		except FileNotFoundError:
@@ -524,17 +520,9 @@ def check_munger_files(sess,munger_name,munger_dir,template_dir,column_list):
 		# prepare cdf_elements.txt
 		#  find db tables corresponding to elements: nothing starting with _, nothing named 'Join',
 		#  and nothing with only 'Id' and 'Txt' columns
-		db_columns = pd.read_sql_table('columns',sess.bind,schema='information_schema')
-		element_list = []
-		for t in db_columns.table_name.unique():
-			# test table name string
-			if t[0] != '_' and t[:-4] != 'Join':
-				# test columns
-				cols = db_columns[db_columns.table_name == t].column_name.unique()
-				if set(cols) != {'Id','Txt'}:
-					element_list.append(t)
 
-		prepare_cdf_elements_file(munger_path,element_list)
+		elements,enums,joins,others = dbr.get_cdf_db_table_names(sess.bind)
+		prepare_cdf_elements_file(munger_path,elements)
 
 		# prepare raw_identifiers.txt
 		prepare_raw_identifiers_file(munger_path)
@@ -550,7 +538,7 @@ def prepare_raw_identifiers_file(dir_path,ballot_measure_style):
 	return
 
 
-def prepare_cdf_elements_file(dir_path,element_list):
+def prepare_cdf_elements_file(dir_path,elements):
 	guided = input(f'Would you like guidance in preparing the cdf_elements.txt file (y/n)?\n')
 	if guided != 'y':
 		input('Prepare cdf_elements.txt and hit return to continue.')
@@ -566,7 +554,7 @@ def prepare_cdf_elements_file(dir_path,element_list):
 				In this case use the row number of the header in angle brackets..
 				For example, if the first row of the file has contest names, the second row has candidate names
 				and then the data rows begin, Candidate formula is <2> and CandidateContest formula is <1>''')
-		for element in element_list:
+		for element in elements:
 			source = input(f'What is the source for {element} (row/column/other)?\n')
 			while source not in ['row','column','other']:
 				source = input(f'''Try again: your answer must be 'row' or 'column' or 'other'.''')

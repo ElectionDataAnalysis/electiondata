@@ -159,13 +159,34 @@ def add_integer_cols(session,table,col_list):
 
 
 def drop_cols(session,table,col_list):
-    drop = ','.join([f' DROP COLUMN {c}' for c in col_list] )
+    drop = ','.join([f' DROP COLUMN {c}' for c in col_list])
     q = f'ALTER TABLE "{table}" {drop}'
     sql_ids=[]
     strs = []
     raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
     return
 
+
+def get_cdf_db_table_names(eng):
+    db_columns = pd.read_sql_table('columns',eng,schema='information_schema')
+    cdf_elements = set()
+    cdf_enumerations = set()
+    cdf_joins = set()
+    others = set()
+    for t in db_columns.table_name.unique():
+        # test table name string
+        if t[0] != '_':
+            others.add(t)
+        elif t[:-4] != 'Join':
+            cdf_joins.add(t)
+        else:
+            # test columns
+            cols = db_columns[db_columns.table_name == t].column_name.unique()
+            if set(cols) != {'Id','Txt'}:
+                cdf_enumerations.add(t)
+            else:
+                cdf_elements.add(t)
+    return cdf_elements, cdf_enumerations, cdf_joins, others
 
 
 def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to create db and schemas

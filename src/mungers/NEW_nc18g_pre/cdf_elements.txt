@@ -7,4 +7,4 @@ CandidateContest	<Contest Name>	row
 BallotMeasureContest	<Contest Name>	row
 BallotMeasureSelection	<Choice>	row
 Election		other
-CountItemType	<1>	column
+CountItemType	<0>	column
