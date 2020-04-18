@@ -149,6 +149,25 @@ def config(filename=None, section='postgresql'):
     return db
 
 
+def add_integer_cols(session,table,col_list):
+    add = ','.join([f' ADD COLUMN "{c}" INTEGER' for c in col_list])
+    q = f'ALTER TABLE "{table}" {add}'
+    sql_ids=[]
+    strs = []
+    raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
+    return
+
+
+def drop_cols(session,table,col_list):
+    drop = ','.join([f' DROP COLUMN {c}' for c in col_list] )
+    q = f'ALTER TABLE "{table}" {drop}'
+    sql_ids=[]
+    strs = []
+    raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
+    return
+
+
+
 def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to create db and schemas
     format_args = [sql.Identifier(a) for a in sql_ids]
     cur.execute(sql.SQL(q).format(*format_args),strs)

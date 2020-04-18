@@ -361,7 +361,7 @@ def confirm_or_correct_cdf_table_file(cdf_table_file,raw_cols):
 
 		if bad_formulas:
 			print(f'Unusable formulas for {",".join(bad_formulas)}.\n')
-			input(f'Fix the cdf_tables.txt file \n and hit return to continue.\n')
+			input(f'Fix the cdf_elements.txt file \n and hit return to continue.\n')
 			# TODO check raw_columns.txt somewhere else, or let this routine check it & pick up alterations
 		cdft_df = pd.read_csv(cdf_table_file,sep='\t')  # note index
 	return cdft_df
@@ -453,41 +453,49 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 	return context_df
 
 
-def pick_munger(sess,munger_dir='mungers',column_list=None,root='.',test_munger=True):
+def pick_munger(sess,munger_dir='mungers',column_list=None,root='.'):
 	"""pick (or create) a munger """
 	choice_list = os.listdir(munger_dir)
 	for choice in os.listdir(munger_dir):
-		p = os.path.join(munger_dir,choice)
-		if not os.path.isdir(p):	# remove non-directories from list
+		c_path = os.path.join(munger_dir,choice)
+		if not os.path.isdir(c_path):  # remove non-directories from list
 			choice_list.remove(choice)
-		elif not os.path.isfile(os.path.join(p,'raw_columns.txt')):
+		elif not os.path.isfile(os.path.join(c_path,'raw_columns.txt')):
 			pass  # list any munger that doesn't have raw_columns.txt file yet
 		else:
-			# remove from list if columns don't match
-			raw_columns = pd.read_csv(os.path.join(p,'raw_columns.txt'),header=0,dtype=str,sep='\t')
-			if raw_columns.name.to_list() != column_list:
+			# remove munger from list if column_list doesn't contain all necessary fields for munging cdf_elements
+			elts = pd.read_csv(os.path.join(c_path,'cdf_elements.txt'),header=0,dtype=str,sep='\t')
+			row_formulas = elts[elts.source=='row'].raw_identifier_formula.unique()
+			necessary_cols = set()
+			for formula in row_formulas:
+				# extract list of necessary fields
+				pattern = '<(?P<field>[^<>]+)>'  # finds field names
+				p = re.compile(pattern)
+				necessary_cols.update(p.findall(formula))
+
+			if not necessary_cols.issubset(set(column_list)):
 				choice_list.remove(choice)
 
 	munger_df = pd.DataFrame(choice_list,columns=['Munger'])
 	munger_idx,munger_name = pick_one(munger_df,'Munger', item='munger')
 	if munger_idx is None:
 		# user chooses munger
-		munger_name = input('Enter a short name (alphanumeric only, no spaces) for your munger'
-						   '(e.g., \'nc_primary18\')\n')
-	if test_munger:
-		need_to_check_munger = input(f'Check compatibility of munger {munger_name} (y/n)?\n')
-		if need_to_check_munger == 'y':
-			template_dir = os.path.join(root,'templates/munger_templates')
-			check_munger(sess,munger_name,munger_dir,template_dir,column_list)
+		munger_name = input(
+			'Enter a short name (alphanumeric only, no spaces) for your munger (e.g., \'nc_primary18\')\n')
+	print(f'List of columns is {column_list}')
+	test_munger = input(f'Ensure completeness of munger {munger_name} and compatibility with list of columns (y/n)?\n')
+	if test_munger == 'y':
+		template_dir = os.path.join(root,'templates/munger_templates')
+		check_munger_files(sess,munger_name,munger_dir,template_dir,column_list)
 
 	munger_path = os.path.join(munger_dir,munger_name)
 	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(root,'election_anomaly','CDF_schema_def_info'))
 	return munger
 
 
-def check_munger(sess,munger_name,munger_dir,template_dir,column_list):
+def check_munger_files(sess,munger_name,munger_dir,template_dir,column_list):
 	munger_path = os.path.join(munger_dir,munger_name)
-	# create munger directory
+	# create munger directory if necessary
 	try:
 		os.mkdir(munger_path)
 	except FileExistsError:
@@ -495,35 +503,10 @@ def check_munger(sess,munger_name,munger_dir,template_dir,column_list):
 	else:
 		print(f'Directory {munger_path} created')
 
-	file_list = ['raw_columns.txt','count_columns.txt','cdf_tables.txt','raw_identifiers.txt']
+	file_list = ['raw_identifiers.txt','cdf_elements.txt']
 	if not all([os.path.isfile(os.path.join(munger_path,x)) for x in file_list]):
 		for ff in file_list:
 			create_file_from_template(os.path.join(template_dir,ff),os.path.join(munger_path,ff))
-		# write column_list to raw_columns.txt
-		if column_list:
-			# np.savetxt(os.path.join(munger_path,ff),np.asarray([[x] for x in column_list]),header='name')
-			pd.DataFrame(np.asarray([[x] for x in column_list]),columns=['name']).to_csv(
-				os.path.join(munger_path,'raw_columns.txt'),sep='\t',index=False)
-		else:
-			input(f"""The file raw_columns.txt should have one row for each column 
-				in the raw datafile to be processed with the munger {munger_name}. 
-				The columns must be listed in the order in which they appear in the raw datafile'
-				Check the file and correct as necessary. Then hit return to continue.\n""")
-
-		# create ballot_measure_style.txt
-		bms,bms_description = confirm_or_correct_ballot_measure_style(
-			os.path.join(munger_dir,'ballot_measure_style_options.txt'),
-				os.path.join(munger_path,'ballot_measure_style.txt'))
-
-		# create/correct count_columns.txt
-		print(f"""The file count_columns.txt should have one row for each vote-count column  
-			in the raw datafile to be processed with the munger {munger_name}. 
-			Each row should have the RawName of the column and the CountItemType. 
-			Standard CountItemTypes are not required, but are recommended:""")
-		cit = pd.read_sql_table('CountItemType',sess.bind)
-		print(cit['Txt'].to_list())
-		input('Check the file and correct as necessary.  Then hit return to continue.\n')
-		# TODO check file against standard CountItemTypes?
 
 		# create atomic_reporting_unit_type.txt
 		rut_df = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
@@ -538,11 +521,23 @@ def check_munger(sess,munger_name,munger_dir,template_dir,column_list):
 			with open(os.path.join(munger_path,'atomic_reporting_unit.txt'),'w') as f:
 				f.write(arut)
 
-		# prepare cdf_tables.txt
-		prepare_cdf_tables_file(munger_path,bms)
+		# prepare cdf_elements.txt
+		#  find db tables corresponding to elements: nothing starting with _, nothing named 'Join',
+		#  and nothing with only 'Id' and 'Txt' columns
+		db_columns = pd.read_sql_table('columns',sess.bind,schema='information_schema')
+		element_list = []
+		for t in db_columns.table_name.unique():
+			# test table name string
+			if t[0] != '_' and t[:-4] != 'Join':
+				# test columns
+				cols = db_columns[db_columns.table_name == t].column_name.unique()
+				if set(cols) != {'Id','Txt'}:
+					element_list.append(t)
+
+		prepare_cdf_elements_file(munger_path,element_list)
 
 		# prepare raw_identifiers.txt
-		prepare_raw_identifiers_file(munger_path,bms)
+		prepare_raw_identifiers_file(munger_path)
 
 	return
 
@@ -555,26 +550,35 @@ def prepare_raw_identifiers_file(dir_path,ballot_measure_style):
 	return
 
 
-def prepare_cdf_tables_file(dir_path,ballot_measure_style):
-	guided = input(f'Would you like guidance in preparing the cdf_tables.txt file (y/n)?\n')
+def prepare_cdf_elements_file(dir_path,element_list):
+	guided = input(f'Would you like guidance in preparing the cdf_elements.txt file (y/n)?\n')
 	if guided != 'y':
-		input('Prepare cdf_tables.txt and hit return to continue.')
+		input('Prepare cdf_elements.txt and hit return to continue.')
 	else:
-		elt_list = ['Office','ReportingUnit','Party','Candidate','CandidateContest',
-						'BallotMeasureContest']
 		out_lines = []
-		if ballot_measure_style == 'yes_and_no_are_candidates':
-			elt_list.append('BallotMeasureSelection')
-		for element in ['Office','ReportingUnit','Party','Candidate','CandidateContest',
-						'BallotMeasureContest','BallotMeasureSelection']:
-			print(f'''Enter your formulas for reading the common-data-format elements from each row
-					of the results file. Put raw column names in brackets (<>).
-					For example if the raw file has columns \'County\' and \'Precinct\',
-					the formula for ReportingUnit might be \'<County>;<Precinct>\'.''')
-			formula = input(f'Formula for {element}:\n')
-			# TODO error check formula against raw_columns.txt and count_columns.txt in <dir_path>
-			out_lines.append(f'{element}\t{formula}')
-		with open(os.path.join(dir_path,'cdf_tables.txt'),'a') as f:
+		print(f'''Enter your formulas for reading the common-data-format elements values
+				associated to any particular vote count value in your file. If the information
+				is in the same row as the vote count, the source is 'row'. In this case, 
+				put raw column names in angle brackets (<>).
+				For example if the raw file has columns \'County\' and \'Precinct\',
+				the formula for ReportingUnit might be \'<County>;<Precinct>\'.
+				If the information must be read from a column header, the source is 'column.' 
+				In this case use the row number of the header in angle brackets..
+				For example, if the first row of the file has contest names, the second row has candidate names
+				and then the data rows begin, Candidate formula is <2> and CandidateContest formula is <1>''')
+		for element in element_list:
+			source = input(f'What is the source for {element} (row/column/other)?\n')
+			while source not in ['row','column','other']:
+				source = input(f'''Try again: your answer must be 'row' or 'column' or 'other'.''')
+			if source == 'row':
+				formula = input(f'Formula for {element} in terms of column names (e.g. <County>):\n')
+			elif source == 'column':
+				formula = input(f'Formula for {element} in terms of header row numbers (e.g. <1>):\n')
+			else:
+				formula = ''
+			out_lines.append(f'{element}\t{formula}\t{source}')
+
+		with open(os.path.join(dir_path,'cdf_elements.txt'),'a') as f:
 			f.write('\n'.join(out_lines))
 	return
 
@@ -595,9 +599,9 @@ def pick_juris_from_db(sess,project_root,juris_type='state'):
 	juris_type_id = rut[rut.Txt==juris_type].first_valid_index()
 	jurisdictions = ru[ru.ReportingUnitType_Id == juris_type_id]
 	if jurisdictions.empty:
-		print(f'No {juris_type} record found in the database. Please create one.')
+		print(f'No {juris_type} record found in the database. Please create one.\n')
 		juris_record_d, juris_enum_d = create_record_in_db(
-			sess,project_root,'ReportingUnit',known_info_d={'ReportingUnitType_Id':juris_type_id,'OtherReportingUnitType':''})
+			sess,project_root,'ReportingUnit',known_info_d={'ReportingUnitType':juris_type})
 		juris_idx = juris_record_d['Id']
 		juris_internal_db_name = juris_record_d['Name']
 	else:
@@ -639,7 +643,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 
 	# get list of all enumerations for the <table>
 	enum_list = pd.read_csv(
-		os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/Tables',table,'enumerations.txt'),
+		os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/elements',table,'enumerations.txt'),
 		sep='\t',header=0).enumeration.to_list()
 
 
@@ -763,7 +767,7 @@ def report_validity_problem(new_record,table,root_dir,sess):
 
 	table_from_db = pd.read_sql_table(table,sess.bind)
 	uniques = pd.read_csv(
-			os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/Tables',table,'unique_constraints.txt'),
+			os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/elements',table,'unique_constraints.txt'),
 			sep='\t')
 	problems = []
 	for idx, row in uniques.iterrows():
@@ -785,9 +789,9 @@ def enter_new_record_info(sess,root_dir,table,known_info_d={}):
 	new_record = {}  # dict to hold values of the record
 	df = {}
 	enum_val = {}
-	for f in ['fields','enumerations','other_element_refs','unique_constraints']:
+	for f in ['fields','enumerations','foreign_keys','unique_constraints']:
 		df[f] = pd.read_csv(
-			os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/Tables',table,f'{f}.txt'),
+			os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/elements',table,f'{f}.txt'),
 			sep='\t')
 
 	for idx,row in df['fields'].iterrows():
@@ -796,7 +800,7 @@ def enter_new_record_info(sess,root_dir,table,known_info_d={}):
 		else:
 			new_record[row["fieldname"]] = enter_and_check_datatype(f'Enter the {row["fieldname"]}.',row['datatype'])
 
-	for idx,row in df['other_element_refs'].iterrows():
+	for idx,row in df['foreign_keys'].iterrows():
 		target = row['refers_to']
 		fieldname = row['fieldname']
 		choices = pd.read_sql_table(target,sess.bind,index_col='Id')
@@ -845,7 +849,37 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
-def new_datafile(raw_file,raw_file_sep,session,project_root='.',juris_short_name=None,encoding='utf-8',test_munger=True):
+def new_datafile_NEW(session,raw,project_root='.',juris_short_name=None):
+	"""Guide user through process of uploading data in <raw_file>
+	into common data format.
+	Assumes cdf db exists already"""
+	juris = pick_juris_from_filesystem(
+		session.bind,project_root,
+		path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
+		jurisdiction_name=juris_short_name)
+
+	# have user pick & prepare the munger
+	column_list = raw.columns.to_list()
+	munger = pick_munger(
+		session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
+		root=project_root)
+
+	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
+	election_idx, electiontype = get_or_create_election_in_db(session,project_root)
+
+	# update db from jurisdiction context file
+	# TODO put all info about data cleaning into README.md (e.g., whitespace strip)
+
+
+
+	print('Specify the munger:')
+
+
+
+	return
+
+
+def new_datafile_OLD(raw_file,raw_file_sep,session,project_root='.',juris_short_name=None,encoding='utf-8',test_munger=True):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
@@ -872,7 +906,7 @@ def new_datafile(raw_file,raw_file_sep,session,project_root='.',juris_short_name
 	print('Specify the munger:')
 	munger = pick_munger(
 		session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
-		root=project_root,test_munger=test_munger)
+		root=project_root)
 	print(f'Munger {munger.name} has been chosen and prepared.')
 
 	if test_munger:

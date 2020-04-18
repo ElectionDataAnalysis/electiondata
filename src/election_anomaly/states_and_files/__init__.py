@@ -443,7 +443,7 @@ class Munger:
 
         # define dictionary to change any column names that match internal CDF names
         col_d = {t:f'{t}_{self.name}'
-                 for t in os.listdir(os.path.join(cdf_schema_def_dir,'Tables'))}
+                 for t in os.listdir(os.path.join(cdf_schema_def_dir,'elements'))}
         self.rename_column_dictionary=col_d
 
         # read raw columns from file (renaming if necessary)

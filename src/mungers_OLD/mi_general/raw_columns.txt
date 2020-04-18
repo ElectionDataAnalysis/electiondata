@@ -1,0 +1,13 @@
+name
+Election Year
+Election Type
+Office Code
+District Code
+Status Code
+Candidate ID#
+County Code
+City/Town Code
+Ward Number
+Precinct Number
+Precinct Label
+Precinct #Votes

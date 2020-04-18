@@ -42,7 +42,7 @@ if __name__ == '__main__':
 	if encoding == '':
 		encoding = 'iso-8859-1'
 
-	ui.new_datafile(
+	ui.new_datafile_OLD(
 		raw_file,sep,new_df_session,juris_short_name=juris_short_name,encoding=encoding,project_root=project_root)
 
 	eng.dispose()

@@ -441,10 +441,8 @@ def raw_elements_to_cdf_OLD(session,mu,row,contest_type,election_id,election_typ
 
     # To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
     # add SelectionElectionContestJoin columns to VoteCount
-    q = 'ALTER TABLE "VoteCount" ADD COLUMN "Election_Id" INTEGER, ADD COLUMN "Contest_Id" INTEGER,  ADD COLUMN "Selection_Id" INTEGER'
-    sql_ids=[]
-    strs = []
-    dbr.raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
+    extra_cols = ['Election_Id','Contest_Id','Selection_Id']
+    dbr.add_integer_cols(session,'VoteCount',extra_cols)
     print('Upload to VoteCount')
     start = time.time()
     vote_counts_fat = dbr.dframe_to_sql(vote_counts,session,None,'VoteCount',raw_to_votecount=True)
@@ -459,6 +457,7 @@ def raw_elements_to_cdf_OLD(session,mu,row,contest_type,election_id,election_typ
     end = time.time()
     print(f'\tSeconds required to upload SelectionElectionContestVoteCountJoin: {round(end - start)}')
     print('Drop columns from cdf table')
+    dbr.drop_cols((session,'VoteCount',extra_cols))
     q = 'ALTER TABLE "VoteCount" DROP COLUMN "Election_Id",' \
         ' DROP COLUMN "Contest_Id" ,  DROP COLUMN "Selection_Id" '
     sql_ids=[]

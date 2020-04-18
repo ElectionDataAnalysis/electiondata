@@ -1,8 +1,0 @@
-cdf_element	raw_identifier_formula
-Office
-ReportingUnit
-Party
-Candidate
-CandidateContest
-BallotMeasureContest
-BallotMeasureSelection
