@@ -453,10 +453,22 @@ class Munger:
 
     def check_against_db(self,sess):
         """check that munger is consistent with db; offer user chance to correct munger"""
+        checked = False
+        while not checked:
+            checked = True
+            problems = []
 
         # pull element names from db
         # set of cdf_elements in cdf_elements.txt is same as set pulled from db
         # TODO write this function
+            if problems:
+                checked = False
+                problem_str = '\n\t'.join(problems)
+                print(f'Problems found:\n{problem_str} ')
+                input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
+                      f'Then hit enter to continue.')
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_rows,self.raw_identifiers,
+                 self.rename_column_dictionary] = read_munger_info_from_files(self.path_to_munger_dir,self.name)
         return
 
     def check_against_datafile(self,raw):
