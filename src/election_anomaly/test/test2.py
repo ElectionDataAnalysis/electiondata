@@ -32,7 +32,7 @@ if __name__ == '__main__':
 
 
 	# datafile & info
-	raw_file = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/NC_old/data/2018g/nc_general/results_pct_20181106.txt'
+	raw_file_path = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/NC_old/data/2018g/nc_general/results_pct_20181106.txt'
 	sep = '\t'
 	juris_short_name = 'NC'
 
@@ -41,7 +41,7 @@ if __name__ == '__main__':
 	encoding =  'iso-8859-1'
 
 	ui.new_datafile_NEW(
-		raw_file,sep,new_df_session,juris_short_name=juris_short_name,encoding=encoding,project_root=project_root)
+		raw_file_path,sep,new_df_session,juris_short_name=juris_short_name,encoding=encoding,project_root=project_root)
 
 	eng.dispose()
 	print('Done! (user_interface)')

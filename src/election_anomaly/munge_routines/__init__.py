@@ -10,6 +10,20 @@ import re
 import os
 
 
+def clean_raw_df(raw,munger):
+    # strip whitespace
+    raw = raw.applymap(lambda x:x.strip())
+
+    # replace nulls with 0, recast columns as integer where possible.
+    #  recast leaves columns with text entries as non-numeric.
+    raw = raw.fillna(0).astype('int64',errors='ignore')
+    field_lists = list(munger.cdf_elements.fields.unique())
+    # TODO keep columns named in munger formulas; keep numerical columns; drop all else.
+    munger_fields = set().union(*field_lists)
+    keepers = [x for x in raw.columns if x[munger.field_name_row] in munger_fields]
+    return raw
+
+
 def load_context_dframe_into_cdf(
         session,project_root,jurisdiction,source_df1,element,cdf_schema_def_dir='CDF_schema_def_info/'):
     """<source_df> should have all info needed for insertion into cdf:
@@ -119,17 +133,25 @@ def add_munged_column(raw,mu,element,new_col_name):
         return raw
 
 
+def text_fragments_and_fields(formula):
+    """Given a formula with fields enclosed in angle brackets,
+    return a list of text-fragment,field pairs (in order of appearance) and a final text fragment.
+    E.g., if formula is <County>;<Precinct>, returned are [(None,County),(';',Precinct)] and None."""
+    # use regex to apply formula (e.g., decode '<County>;<Precinct>'
+    p = re.compile('(?P<text>[^<>]*)<(?P<field>[^<>]+)>')  # pattern to find text,field pairs
+    q = re.compile('(?<=>)[^<]*$')  # pattern to find text following last pair
+    text_field_list = re.findall(p,formula)
+    last_text = re.findall(q,formula)
+    return text_field_list,last_text
+
+
 def add_munged_column_NEW(raw,formula,element):
     """Alters dataframe <raw> (in place), adding or redefining <element> column
     via the <formula>"""
     if raw.empty:
         return raw
     else:
-        # use regex to apply formula (e.g., decode '<County>;<Precinct>'
-        p = re.compile('(?P<text>[^<>]*)<(?P<field>[^<>]+)>')   # pattern to find text,field pairs
-        q = re.compile('(?<=>)[^<]*$')                          # pattern to find text following last pair
-        text_field_list = re.findall(p,formula)
-        last_text = re.findall(q,formula)
+        text_field_list,last_text = text_fragments_and_fields(formula)
 
         if last_text:
             raw.loc[:,element] = last_text[0]

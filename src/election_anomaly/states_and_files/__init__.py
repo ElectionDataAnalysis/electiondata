@@ -428,7 +428,7 @@ class Munger:
                 f_str = ','.join(bad_formula)
                 problems.append(f'''At least one formula in cdf_elements.txt has bad syntax: {f_str} ''')
 
-            # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows list
+            # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows
             p_not_just_digits = re.compile(r'<.*\D.*>')
             p_catch_digits = re.compile(r'<(\d+)>')
             bad_column_formula = set()
@@ -437,14 +437,13 @@ class Munger:
                     bad_column_formula.add(r['raw_identifier_formula'])
                 else:
                     integer_list = [int(x) for x in p_catch_digits.findall(r['raw_identifier_formula'])]
-                    bad_integer_list = [x for x in integer_list if x not in self.header_rows]
+                    bad_integer_list = [x for x in integer_list if (x > self.header_row_count-1 or x < 0)]
                     if bad_integer_list:
                         bad_column_formula.add(r['raw_identifier_formula'])
             if bad_column_formula:
                 cf_str = ','.join(bad_column_formula)
                 problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
 
-            # TODO check field_name_row is in header_rows
             # TODO if field in formula matches a self.cdf_element.name,
             #  check that rename is not also a column
             if problems:
@@ -453,7 +452,7 @@ class Munger:
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_rows,self.field_name_row,
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
                  self.raw_identifiers,self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
         return
 
@@ -482,7 +481,7 @@ class Munger:
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_rows,self.field_name_row,self.raw_identifiers,
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.raw_identifiers,
                  self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
         return
 
@@ -495,13 +494,14 @@ class Munger:
             # all row fields in raw_identifier_formulas are actual columns in <raw>
             # TODO check headers of file somehow?
             # check for unmunged rows and report
+
             if problems:
                 checked = False
                 problem_str = '\n\t'.join(problems)
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_rows,self.field_name_row,self.raw_identifiers,
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.raw_identifiers,
                  self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
         # TODO write this function
         return
@@ -526,6 +526,8 @@ class Munger:
         """find any instances of <element> in raw data <raw> not interpretable by <self>"""
         # TODO under construction
         raw_copy = raw.copy()
+        ri_filtered = self.raw_identifiers[self.raw_identifiers.cdf_element == element]
+        in_munger = ri_filtered['raw_identifier_value'].unique()
 
         # identify instances that are not matched in the munger's raw_identifier table
         # limit to just the given element
@@ -540,14 +542,18 @@ class Munger:
         for k,v in d.items():
             formula = formula.replace(k,v)
 
-        if source == 'column':
+        # check for unmatched
+        if source == 'row':
             mr.add_munged_column_NEW(raw_copy,formula,element)
+            in_raw = raw_copy[element].unique()
+            unmatched = [x for x in in_raw if x not in in_munger]
+        elif source == 'column':
+            pass
+            # TODO generalize for multi-row headers
 
-        in_raw = raw_copy[element].unique()
-        ri_filtered = self.raw_identifiers[self.raw_identifiers.cdf_element == element]
-        in_munger = ri_filtered['raw_identifier_value'].unique()
-
-        unmatched = [x for x in in_raw if x not in in_munger]
+            unmatched = [x for x in in_raw if x not in in_munger]
+        else:
+            unmatched = []
         return unmatched
 
     def __init__(self,dir_path):
@@ -562,28 +568,28 @@ class Munger:
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir=dir_path
 
-        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_rows,self.field_name_row,self.raw_identifiers,
+        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.raw_identifiers,
          self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
 
 # TODO before processing context files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
 
 def read_munger_info_from_files(dir_path):
-    # read cdf_element info
-    cdf_elements = pd.read_csv(os.path.join(dir_path,'cdf_elements.txt'),index_col='name')
+    # read cdf_element info and add column for list of fields used in formulas
+    cdf_elements = pd.read_csv(os.path.join(dir_path,'cdf_elements.txt'),sep='\t',index_col='name').fillna('')
+    cdf_elements.loc[:,'fields'] = None
+    for i,r in cdf_elements.iterrows():
+        text_field_list,last_text = mr.text_fragments_and_fields(cdf_elements.loc[i,'raw_identifier_formula'])
+        cdf_elements.loc[i,'fields'] = [f for t,f in text_field_list]
 
     # read formatting info
     format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep='\t',index_col='item')
     # TODO check that format.txt file is correct
-    atomic_reporting_unit_type = format_info['atomic_reporting_unit_type']
-    field_name_row = format_info['field_name_row']
-    field_rename_suffix = format_info['field_rename_suffix']
-    try:
-        header_rows = [int(x) for x in format_info['header_rows'].split(',')]
-    except TypeError:
-        print('WARNING: header_rows entry in format.txt not parsable; munger will assume a single header row.')
-        header_rows = [0]
-    # TODO maybe file separator and encoding should be in format.txt?
+    atomic_reporting_unit_type = format_info.loc['atomic_reporting_unit_type','value']
+    field_name_row = format_info.loc['field_name_row','value']
+    field_rename_suffix = format_info.loc['field_rename_suffix','value']
+    header_row_count = format_info.loc['header_row_count','value']
+        # TODO maybe file separator and encoding should be in format.txt?
 
     # read raw_identifiers file into a table
     #  note no natural index column
@@ -591,7 +597,7 @@ def read_munger_info_from_files(dir_path):
 
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
     #   will need to rename some columns of the raw file before processing.
-    return [cdf_elements, atomic_reporting_unit_type,header_rows,field_name_row,raw_identifiers,field_rename_suffix]
+    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,raw_identifiers,field_rename_suffix]
 
 if __name__ == '__main__':
     print('Done (states_and_files)!')

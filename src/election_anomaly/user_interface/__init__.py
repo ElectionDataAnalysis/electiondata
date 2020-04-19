@@ -459,7 +459,6 @@ def pick_munger(sess,munger_dir='mungers',column_list=None,root='.'):
 		elif not os.path.isfile(os.path.join(c_path,'raw_columns.txt')):
 			pass  # list any munger that doesn't have raw_columns.txt file yet
 		else:
-			# remove munger from list if column_list doesn't contain all necessary fields for munging cdf_elements
 			elts = pd.read_csv(os.path.join(c_path,'cdf_elements.txt'),header=0,dtype=str,sep='\t')
 			row_formulas = elts[elts.source=='row'].raw_identifier_formula.unique()
 			necessary_cols = set()
@@ -469,28 +468,25 @@ def pick_munger(sess,munger_dir='mungers',column_list=None,root='.'):
 				p = re.compile(pattern)
 				necessary_cols.update(p.findall(formula))
 
-			if not necessary_cols.issubset(set(column_list)):
-				choice_list.remove(choice)
-
 	munger_df = pd.DataFrame(choice_list,columns=['Munger'])
 	munger_idx,munger_name = pick_one(munger_df,'Munger', item='munger')
 	if munger_idx is None:
 		# user chooses munger
 		munger_name = input(
 			'Enter a short name (alphanumeric only, no spaces) for your munger (e.g., \'nc_primary18\')\n')
-	print(f'List of columns is {column_list}')
-	test_munger = input(f'Ensure completeness of munger {munger_name} and compatibility with list of columns (y/n)?\n')
+	test_munger = input(f'Ensure completeness of munger {munger_name} files (y/n)?\n')
 	if test_munger == 'y':
 		template_dir = os.path.join(root,'templates/munger_templates')
-		check_munger_files(sess,munger_name,munger_dir,template_dir,column_list)
+		check_munger_files(sess,munger_name,munger_dir,template_dir)
 
 	munger_path = os.path.join(munger_dir,munger_name)
 	munger = sf.Munger(munger_path)
 	munger.check_against_self()
+	munger.check_against_db(sess)
 	return munger
 
 
-def check_munger_files(sess,munger_name,munger_dir,template_dir,column_list):
+def check_munger_files(sess,munger_name,munger_dir,template_dir):
 	munger_path = os.path.join(munger_dir,munger_name)
 	# create munger directory if necessary
 	try:
@@ -838,32 +834,34 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
-def new_datafile_NEW(session,munger,raw,project_root='.',juris_short_name=None):
+def new_datafile_NEW(session,raw_path,raw_file_sep,encoding,project_root=None,juris_short_name=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
+	if not project_root:
+		get_project_root()
 	juris = pick_juris_from_filesystem(
-		session.bind,project_root,
-		path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
+		session.bind,project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
 		jurisdiction_name=juris_short_name)
+	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
 
 	# have user pick & prepare the munger
-	column_list = raw.columns.to_list()
 	munger = pick_munger(
-		session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
+		session,munger_dir=os.path.join(project_root,'mungers'),
 		root=project_root)
 
-	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
 	election_idx, electiontype = get_or_create_election_in_db(session,project_root)
 
 	# update db from jurisdiction context file
 	# TODO put all info about data cleaning into README.md (e.g., whitespace strip)
 
-
-
-	print('Specify the munger:')
-
-
+	# TODO get data from raw_path into a dataframe, getting column names right
+	#  for multi-line headers
+	raw = pd.read_csv(
+		raw_path,sep=raw_file_sep,dtype=str,encoding=encoding,quoting=csv.QUOTE_MINIMAL,
+		header=list(range(munger.header_row_count))
+	)
+	raw = mr.clean_raw_df(raw)
 
 	return
 
