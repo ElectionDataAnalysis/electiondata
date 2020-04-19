@@ -94,27 +94,53 @@ def load_context_dframe_into_cdf(
     return
 
 
-def add_munged_column(row_df,mu,cdf_element,new_col_name):
-    """Alters dataframe <row_df> (in place), adding or redefining <new_col_name>
+def add_munged_column(raw,mu,element,new_col_name):
+    """Alters dataframe <raw> (in place), adding or redefining <new_col_name>
     via the string corresponding to <cdf_element>, per <munge_dictionary>"""
-    if row_df.empty:
-        return row_df
+    if raw.empty:
+        return raw
     else:
+        raw_copy = raw.copy()
+
         # use regex to turn value string in munge dictionary into the corresponding commands (e.g., decode '<County>;<Precinct>'
         p = re.compile('(?P<text>[^<>]*)<(?P<field>[^<>]+)>')   # pattern to find text,field pairs
         q = re.compile('(?<=>)[^<]*$')                          # pattern to find text following last pair
-        text_field_list = re.findall(p,mu.cdf_tables.loc[cdf_element,'raw_identifier_formula'])
-        last_text = re.findall(q,mu.cdf_tables.loc[cdf_element,'raw_identifier_formula'])
+        text_field_list = re.findall(p,mu.cdf_tables.loc[element,'raw_identifier_formula'])
+        last_text = re.findall(q,mu.cdf_tables.loc[element,'raw_identifier_formula'])
 
         if last_text:
-            row_df.loc[:,new_col_name] = last_text[0]
+            raw.loc[:,new_col_name] = last_text[0]
         else:
-            row_df.loc[:,new_col_name] = ''
+            raw.loc[:,new_col_name] = ''
 
         text_field_list.reverse()
         for t,f in text_field_list:
-            row_df.loc[:,new_col_name] = t+row_df.loc[:,f]+row_df.loc[:,new_col_name]
-        return row_df
+            raw.loc[:,new_col_name] = t + raw.loc[:,f] + raw.loc[:,new_col_name]
+        return raw
+
+
+def add_munged_column_NEW(raw,formula,element):
+    """Alters dataframe <raw> (in place), adding or redefining <element> column
+    via the <formula>"""
+    if raw.empty:
+        return raw
+    else:
+        # use regex to apply formula (e.g., decode '<County>;<Precinct>'
+        p = re.compile('(?P<text>[^<>]*)<(?P<field>[^<>]+)>')   # pattern to find text,field pairs
+        q = re.compile('(?<=>)[^<]*$')                          # pattern to find text following last pair
+        text_field_list = re.findall(p,formula)
+        last_text = re.findall(q,formula)
+
+        if last_text:
+            raw.loc[:,element] = last_text[0]
+        else:
+            raw.loc[:,element] = ''
+
+        text_field_list.reverse()
+        for t,f in text_field_list:
+            assert f != element,f'Column name conflicts with element name: {f}'
+            raw.loc[:,element] = t + raw.loc[:,f] + raw.loc[:,element]
+        return raw
 
 
 def contest_type_split(row,mu):
@@ -138,7 +164,7 @@ def contest_type_split(row,mu):
 
 
 def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False):
-    """replace columns in <row_df> with raw_identifier values by columns with internal names
+    """replace columns in <raw> with raw_identifier values by columns with internal names
     """
     assert os.path.isdir(unmatched_dir), f'Argument {unmatched_dir} is not a directory'
     if drop_unmatched:
@@ -160,7 +186,7 @@ def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_d
 
     row_df = row_df.drop(['raw_identifier_value','cdf_element',element + '_external'],axis=1)
 
-    # ensure that there is a column in row_df called by the element
+    # ensure that there is a column in raw called by the element
     # containing the internal name of the element
     if 'Name_'+element+ '_ei' in row_df.columns:
         row_df.rename(columns={f'Name_{element}_ei':element},inplace=True)
@@ -255,6 +281,7 @@ def good_syntax(s):
                 good = False
                 return good
     return good
+
 
 def raw_elements_to_cdf_NEW(session,mu,row):
     # change any empty count_column values to zero

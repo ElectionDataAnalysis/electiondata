@@ -494,6 +494,7 @@ class Munger:
             problems = []
             # all row fields in raw_identifier_formulas are actual columns in <raw>
             # TODO check headers of file somehow?
+            # check for unmunged rows and report
             if problems:
                 checked = False
                 problem_str = '\n\t'.join(problems)
@@ -504,6 +505,10 @@ class Munger:
                  self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
         # TODO write this function
         return
+
+    def column_rename_dictionary(self):
+        d = {x:f'{x}_{self.field_rename_suffix}' for x in self.cdf_elements.name}
+        return d
 
     def add_to_raw_identifiers(self,df):
         """Adds rows in <df> to the raw_identifiers.txt file and to the attribute <self>.raw_identifiers"""
@@ -517,19 +522,32 @@ class Munger:
         self.raw_identifiers.to_csv(f'{self.path_to_munger_dir}raw_identifiers.txt',sep='\t',index=False)
         return
 
-    def find_unmatched(self,f_elts,element):
-        """find any instances of <element> in <f_elts> but not interpretable by <self>"""
+    def find_unmatched(self,raw,element):
+        """find any instances of <element> in raw data <raw> not interpretable by <self>"""
+        # TODO under construction
+        raw_copy = raw.copy()
 
         # identify instances that are not matched in the munger's raw_identifier table
         # limit to just the given element
-        ri = self.raw_identifiers[self.raw_identifiers.cdf_element==element]
 
-        # TODO prevent index column from getting into f_elts at next line
-        f_elts = f_elts.merge(ri,on='raw_identifier_value',how='left',suffixes=['','_ri'])
-        unmatched = f_elts[f_elts.cdf_internal_name.isnull()]
-        unmatched = unmatched.drop(['cdf_internal_name'],axis=1)
-        unmatched=unmatched.sort_values('raw_identifier_value')
-        # unmatched.rename(columns={'{}_raw'.format(element):'raw_identifier_value'},inplace=True)
+        # read source and formula for element
+        source = self.cdf_elements.loc[element,'source']
+        formula = self.cdf_elements.loc[element,'raw_identifier_formula']
+
+        # rename columns and formula fields as necessary
+        d = self.column_rename_dictionary().items()
+        raw_copy.rename(columns=d,inplace=True)
+        for k,v in d.items():
+            formula = formula.replace(k,v)
+
+        if source == 'column':
+            mr.add_munged_column_NEW(raw_copy,formula,element)
+
+        in_raw = raw_copy[element].unique()
+        ri_filtered = self.raw_identifiers[self.raw_identifiers.cdf_element == element]
+        in_munger = ri_filtered['raw_identifier_value'].unique()
+
+        unmatched = [x for x in in_raw if x not in in_munger]
         return unmatched
 
     def __init__(self,dir_path):
