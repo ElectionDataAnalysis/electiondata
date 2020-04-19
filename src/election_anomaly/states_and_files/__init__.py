@@ -468,6 +468,7 @@ class Munger:
         # TODO check that format.txt file is correct
         self.atomic_reporting_unit_type =  format_info['atomic_reporting_unit_type']
         self.header_rows = format_info['header_rows']
+        # TODO maybe file separator and encoding should be in format.txt?
 
         # read raw_identifiers file into a table
         #  note no natural index column
@@ -476,6 +477,8 @@ class Munger:
         # if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
         #  munger will need to rename some columns of the raw file before processing.
         self.rename_column_dictionary = {t:f'{t}_{self.name}' for t in self.cdf_elements.cdf_element}
+
+
 
 # TODO before processing context files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?

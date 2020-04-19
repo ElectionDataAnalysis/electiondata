@@ -24,6 +24,8 @@ if __name__ == '__main__':
 	Session = sessionmaker(bind=eng)
 	new_df_session = Session()
 
+	# pick munger
+
 	# get datafile & info
 	dfile_d, enum_d, raw_file = ui.find_datafile(project_root,new_df_session)
 	# TODO store \t and , directly?

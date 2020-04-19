@@ -837,7 +837,7 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
-def new_datafile_NEW(session,raw,project_root='.',juris_short_name=None):
+def new_datafile_NEW(session,munger,raw,project_root='.',juris_short_name=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
@@ -899,9 +899,7 @@ def new_datafile_OLD(raw_file,raw_file_sep,session,project_root='.',juris_short_
 
 	if test_munger:
 		print( f'\nNext we check compatibility of the munger with the datafile.')
-
-		munger.check_ballot_measure_selections()
-		munger.check_atomic_ru_type()
+		munger.check_against_datafile(raw_file)
 
 	# reshape raw to get separate vote count columns by vote type if necessary
 	if munger.formulas_for_count_item_type:

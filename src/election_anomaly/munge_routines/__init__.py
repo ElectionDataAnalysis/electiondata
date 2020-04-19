@@ -241,6 +241,9 @@ def get_id_othertext_from_enum_value(enum_df,value):
 def raw_elements_to_cdf_NEW(session,mu,row):
     # change any empty count_column values to zero
 
+    # rename raw columns via mu.rename_column_dictionary
+    # TODO where to rename fields in raw_identifier_formulas?
+
     # rename any columns as necessary (if they overlap with cdf_element names)
 
     # get list of cdf_element tables from db (not joins, columns more than 'Id' and 'Txt') -- except VoteCount

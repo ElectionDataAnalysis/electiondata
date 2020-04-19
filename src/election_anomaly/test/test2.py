@@ -1,6 +1,7 @@
 import db_routines as dbr
 import user_interface as ui
 from sqlalchemy.orm import sessionmaker
+import os
 import tkinter as tk
 
 
@@ -24,6 +25,12 @@ if __name__ == '__main__':
 	Session = sessionmaker(bind=eng)
 	new_df_session = Session()
 
+	# pick munger
+	munger = ui.pick_munger(
+		new_df_session,munger_dir=os.path.join(project_root,'mungers'),
+		root=project_root)
+
+
 	# datafile & info
 	raw_file = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/NC_old/data/2018g/nc_general/results_pct_20181106.txt'
 	sep = '\t'
@@ -33,7 +40,7 @@ if __name__ == '__main__':
 	# TODO handle default values more programmatically
 	encoding =  'iso-8859-1'
 
-	ui.new_datafile_OLD(
+	ui.new_datafile_NEW(
 		raw_file,sep,new_df_session,juris_short_name=juris_short_name,encoding=encoding,project_root=project_root)
 
 	eng.dispose()
