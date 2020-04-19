@@ -238,6 +238,24 @@ def get_id_othertext_from_enum_value(enum_df,value):
     return idx,other_txt
 
 
+def good_syntax(s):
+    """Returns true if formula string <s> passes certain syntax test(s)"""
+    good = True
+    # check that angle brackets match
+    #  split the string by opening angle bracket:
+    split = s.split('<')
+    lead = split[0]  # must be free of close angle brackets
+    if '>' in lead:
+        good = False
+        return good
+    else:
+        p = re.compile('^\S[^>]*\S>')
+        for x in split[1:]:  # must contain >, and can't have whitespace at beginning or just before >
+            if not p.search(x):
+                good = False
+                return good
+    return good
+
 def raw_elements_to_cdf_NEW(session,mu,row):
     # change any empty count_column values to zero
 

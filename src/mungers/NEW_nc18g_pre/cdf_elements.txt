@@ -1,4 +1,4 @@
-cdf_element	raw_identifier_formula	source
+name	raw_identifier_formula	source
 Office	<Contest Name>	row
 ReportingUnit	<County>;<Precinct>	row
 Party	<Choice Party>	row

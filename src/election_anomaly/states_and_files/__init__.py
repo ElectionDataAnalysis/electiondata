@@ -403,8 +403,31 @@ class Munger:
     def check_against_self(self):
         """check that munger is internally consistent; offer user chance to correct munger"""
         # TODO write this function
-        # every cdf_element in raw_identifiers.txt is in cdf_elements.cdf_element
-        # every source is either row, column or other
+        checked = False
+        while not checked:
+            checked = True
+            problems = []
+
+            # every cdf_element in raw_identifiers.txt is in cdf_elements.cdf_element
+            missing = [x for x in self.raw_identifiers.cdf_element.unique() if x not in self.cdf_elements.name]
+            if missing:
+                checked = False
+                m_str = ','.join(missing)
+                problems.append(
+                    f'''At least one cdf_element in raw_identifiers.txt is missing from cdf_elements.txt: {m_str}''')
+
+            # every source is either row, column or other
+            bad_source = [x for x in self.cdf_elements.source if x not in ['row','column','other']]
+            if bad_source:
+                checked = False
+                b_str = ','.join(bad_source)
+                problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
+            bad_formula = [x for x in self.cdf_elements.raw_identifier_formula.unique() if mr.good_syntax(x)]
+            if bad_formula:
+                checked = False
+                f_str = ','.join(bad_formula)
+                problems.append(f'''At least one formula in cdf_elements.txt has bad syntax: {f_str} ''')
+
         # angle brackets match in raw_identifier_formula
         # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows list
         return
@@ -463,6 +486,9 @@ class Munger:
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir=dir_path
 
+        # read cdf_element info
+        self.cdf_elements = pd.read_csv(os.path.join(dir_path,'cdf_elements.txt'),index_col='name')
+
         # read formatting info
         format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep = '\t',index_col='item')
         # TODO check that format.txt file is correct
@@ -474,8 +500,8 @@ class Munger:
         #  note no natural index column
         self.raw_identifiers=pd.read_csv(os.path.join(dir_path,'raw_identifiers.txt'),sep='\t')
 
-        # if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
-        #  munger will need to rename some columns of the raw file before processing.
+        # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
+        #   will need to rename some columns of the raw file before processing.
         self.rename_column_dictionary = {t:f'{t}_{self.name}' for t in self.cdf_elements.cdf_element}
 
 
