@@ -5,6 +5,7 @@ import pandas as pd
 import warnings   # TODO use warnings module to handle warnings in all files
 import munge_routines as mr
 import user_interface as ui
+import re
 
 
 class Jurisdiction:
@@ -411,7 +412,6 @@ class Munger:
             # every cdf_element in raw_identifiers.txt is in cdf_elements.cdf_element
             missing = [x for x in self.raw_identifiers.cdf_element.unique() if x not in self.cdf_elements.name]
             if missing:
-                checked = False
                 m_str = ','.join(missing)
                 problems.append(
                     f'''At least one cdf_element in raw_identifiers.txt is missing from cdf_elements.txt: {m_str}''')
@@ -419,17 +419,36 @@ class Munger:
             # every source is either row, column or other
             bad_source = [x for x in self.cdf_elements.source if x not in ['row','column','other']]
             if bad_source:
-                checked = False
                 b_str = ','.join(bad_source)
                 problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
-            bad_formula = [x for x in self.cdf_elements.raw_identifier_formula.unique() if mr.good_syntax(x)]
+            bad_formula = [x for x in self.cdf_elements.raw_identifier_formula.unique() if not mr.good_syntax(x)]
             if bad_formula:
-                checked = False
                 f_str = ','.join(bad_formula)
                 problems.append(f'''At least one formula in cdf_elements.txt has bad syntax: {f_str} ''')
 
-        # angle brackets match in raw_identifier_formula
-        # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows list
+            # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows list
+            p_not_just_digits = re.compile(r'<.*\D.*>')
+            p_catch_digits = re.compile(r'<(\d+)>')
+            bad_column_formula = set()
+            for i,r in self.cdf_elements[self.cdf_elements.source == 'column'].iterrows():
+                if p_not_just_digits.search(r['raw_identifier_formula']):
+                    bad_column_formula.add(r['raw_identifier_formula'])
+                else:
+                    integer_list = [int(x) for x in p_catch_digits.findall(r['raw_identifier_formula'])]
+                    bad_integer_list = [x for x in integer_list if x not in self.header_rows]
+                    if bad_integer_list:
+                        bad_column_formula.add(r['raw_identifier_formula'])
+            if bad_column_formula:
+                cf_str = ','.join(bad_column_formula)
+                problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
+            if problems:
+                checked = False
+                problem_str = '\n\t'.join(problems)
+                print(f'Problems found:\n{problem_str} ')
+                input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
+                      f'Then hit enter to continue.')
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_rows,self.raw_identifiers,
+                self.rename_column_dictionary] = read_munger_info_from_files(self.path_to_munger_dir,self.name)
         return
 
     def check_against_db(self,sess):
@@ -474,7 +493,7 @@ class Munger:
         # unmatched.rename(columns={'{}_raw'.format(element):'raw_identifier_value'},inplace=True)
         return unmatched
 
-    def __init__(self,dir_path,cdf_schema_def_dir='CDF_schema_def_info/'):
+    def __init__(self,dir_path):
         """<dir_path> is the directory for the munger."""
         while not os.path.isdir(dir_path):
             input(f'{dir_path} is not a directory. Please create it and hit return to continue.')
@@ -486,30 +505,35 @@ class Munger:
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir=dir_path
 
-        # read cdf_element info
-        self.cdf_elements = pd.read_csv(os.path.join(dir_path,'cdf_elements.txt'),index_col='name')
-
-        # read formatting info
-        format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep = '\t',index_col='item')
-        # TODO check that format.txt file is correct
-        self.atomic_reporting_unit_type =  format_info['atomic_reporting_unit_type']
-        self.header_rows = format_info['header_rows']
-        # TODO maybe file separator and encoding should be in format.txt?
-
-        # read raw_identifiers file into a table
-        #  note no natural index column
-        self.raw_identifiers=pd.read_csv(os.path.join(dir_path,'raw_identifiers.txt'),sep='\t')
-
-        # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
-        #   will need to rename some columns of the raw file before processing.
-        self.rename_column_dictionary = {t:f'{t}_{self.name}' for t in self.cdf_elements.cdf_element}
-
-
+        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_rows,self.raw_identifiers,
+         self.rename_column_dictionary] = read_munger_info_from_files(self.path_to_munger_dir,self.name)
 
 # TODO before processing context files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
 
+def read_munger_info_from_files(dir_path,name):
+    # read cdf_element info
+    cdf_elements = pd.read_csv(os.path.join(dir_path,'cdf_elements.txt'),index_col='name')
 
+    # read formatting info
+    format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep='\t',index_col='item')
+    # TODO check that format.txt file is correct
+    atomic_reporting_unit_type = format_info['atomic_reporting_unit_type']
+    try:
+        header_rows = [int(x) for x in format_info['header_rows'].split(',')]
+    except TypeError:
+        print('WARNING: header_rows entry in format.txt not parsable; munger will assume a single header row.')
+        header_rows = [0]
+    # TODO maybe file separator and encoding should be in format.txt?
+
+    # read raw_identifiers file into a table
+    #  note no natural index column
+    raw_identifiers = pd.read_csv(os.path.join(dir_path,'raw_identifiers.txt'),sep='\t')
+
+    # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
+    #   will need to rename some columns of the raw file before processing.
+    rename_column_dictionary = {t:f'{t}_{name}' for t in cdf_elements.cdf_element}
+    return [cdf_elements, atomic_reporting_unit_type,header_rows,raw_identifiers,rename_column_dictionary]
 
 if __name__ == '__main__':
     print('Done (states_and_files)!')

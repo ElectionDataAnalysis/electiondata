@@ -485,7 +485,8 @@ def pick_munger(sess,munger_dir='mungers',column_list=None,root='.'):
 		check_munger_files(sess,munger_name,munger_dir,template_dir,column_list)
 
 	munger_path = os.path.join(munger_dir,munger_name)
-	munger = sf.Munger(munger_path,cdf_schema_def_dir=os.path.join(root,'election_anomaly','CDF_schema_def_info'))
+	munger = sf.Munger(munger_path)
+	munger.check_against_self()
 	return munger
 
 
