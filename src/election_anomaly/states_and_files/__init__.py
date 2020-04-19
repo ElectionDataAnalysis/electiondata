@@ -421,6 +421,8 @@ class Munger:
             if bad_source:
                 b_str = ','.join(bad_source)
                 problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
+
+            # formulas have good syntax
             bad_formula = [x for x in self.cdf_elements.raw_identifier_formula.unique() if not mr.good_syntax(x)]
             if bad_formula:
                 f_str = ','.join(bad_formula)
@@ -441,14 +443,18 @@ class Munger:
             if bad_column_formula:
                 cf_str = ','.join(bad_column_formula)
                 problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
+
+            # TODO check field_name_row is in header_rows
+            # TODO if field in formula matches a self.cdf_element.name,
+            #  check that rename is not also a column
             if problems:
                 checked = False
                 problem_str = '\n\t'.join(problems)
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_rows,self.raw_identifiers,
-                self.rename_column_dictionary] = read_munger_info_from_files(self.path_to_munger_dir,self.name)
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_rows,self.field_name_row,
+                 self.raw_identifiers,self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
         return
 
     def check_against_db(self,sess):
@@ -457,24 +463,45 @@ class Munger:
         while not checked:
             checked = True
             problems = []
+            # set of cdf_elements in cdf_elements.txt is same as set pulled from db
+            [db_elements, db_enumerations, db_joins, db_others] = dbr.get_cdf_db_table_names(sess.bind)
+            m_elements = self.cdf_elements.name
+            db_only = [x for x in db_elements if x not in m_elements]
+            m_only = [x for x in m_elements if x not in db_elements]
 
-        # pull element names from db
-        # set of cdf_elements in cdf_elements.txt is same as set pulled from db
-        # TODO write this function
+            if db_only:
+                db_str = ','.join(db_only)
+                problems.append(f'Some cdf elements in the database are not listed in the munger: {db_str}')
+            if m_only:
+                m_str = ','.join(m_only)
+                problems.append(f'Some cdf elements in the database are not listed in the munger: {m_str}')
+
             if problems:
                 checked = False
                 problem_str = '\n\t'.join(problems)
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_rows,self.raw_identifiers,
-                 self.rename_column_dictionary] = read_munger_info_from_files(self.path_to_munger_dir,self.name)
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_rows,self.field_name_row,self.raw_identifiers,
+                 self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
         return
 
     def check_against_datafile(self,raw):
         """check that munger is compatible with datafile <raw>; offer user chance to correct munger"""
-        # TODO where does this belong?
-
+        checked = False
+        while not checked:
+            checked = True
+            problems = []
+            # all row fields in raw_identifier_formulas are actual columns in <raw>
+            # TODO check headers of file somehow?
+            if problems:
+                checked = False
+                problem_str = '\n\t'.join(problems)
+                print(f'Problems found:\n{problem_str} ')
+                input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
+                      f'Then hit enter to continue.')
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_rows,self.field_name_row,self.raw_identifiers,
+                 self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
         # TODO write this function
         return
 
@@ -517,13 +544,13 @@ class Munger:
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir=dir_path
 
-        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_rows,self.raw_identifiers,
-         self.rename_column_dictionary] = read_munger_info_from_files(self.path_to_munger_dir,self.name)
+        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_rows,self.field_name_row,self.raw_identifiers,
+         self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
 
 # TODO before processing context files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
 
-def read_munger_info_from_files(dir_path,name):
+def read_munger_info_from_files(dir_path):
     # read cdf_element info
     cdf_elements = pd.read_csv(os.path.join(dir_path,'cdf_elements.txt'),index_col='name')
 
@@ -531,6 +558,8 @@ def read_munger_info_from_files(dir_path,name):
     format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep='\t',index_col='item')
     # TODO check that format.txt file is correct
     atomic_reporting_unit_type = format_info['atomic_reporting_unit_type']
+    field_name_row = format_info['field_name_row']
+    field_rename_suffix = format_info['field_rename_suffix']
     try:
         header_rows = [int(x) for x in format_info['header_rows'].split(',')]
     except TypeError:
@@ -544,8 +573,7 @@ def read_munger_info_from_files(dir_path,name):
 
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
     #   will need to rename some columns of the raw file before processing.
-    rename_column_dictionary = {t:f'{t}_{name}' for t in cdf_elements.cdf_element}
-    return [cdf_elements, atomic_reporting_unit_type,header_rows,raw_identifiers,rename_column_dictionary]
+    return [cdf_elements, atomic_reporting_unit_type,header_rows,field_name_row,raw_identifiers,field_rename_suffix]
 
 if __name__ == '__main__':
     print('Done (states_and_files)!')

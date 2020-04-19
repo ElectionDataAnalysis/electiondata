@@ -1,3 +1,5 @@
 item	value
 atomic_reporting_unit_type
 header_rows
+field_name_row
+field_rename_suffix
