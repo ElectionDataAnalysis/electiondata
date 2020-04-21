@@ -94,10 +94,7 @@ def establish_connection(paramfile = '../jurisdictions/database.ini',db_name='po
     return con
 
 
-def sql_alchemy_connect(
-        schema=None,
-        paramfile=None,
-        db_name='postgres'):
+def sql_alchemy_connect(schema=None,paramfile=None,db_name='postgres'):
     """Returns an engine and a metadata object"""
     if not paramfile:
         paramfile = ui.pick_paramfile(ui.get_project_root())
