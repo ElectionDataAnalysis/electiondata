@@ -188,6 +188,15 @@ def get_cdf_db_table_names(eng):
     return cdf_elements, cdf_enumerations, cdf_joins, others
 
 
+def read_enums_from_db_table(sess,element):
+	"""Returns list of enum names (e.g., 'CountItemType') for the given <element>.
+	Identifies enums by the Other{enum} column name (e.g., 'OtherCountItemType)"""
+	df = pd.read_sql_table(element,sess.bind,index_col='Id')
+	other_cols = [x for x in df.columns if x[:5] == 'Other']
+	enums = [x[5:] for x in other_cols]
+	return enums
+
+
 def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to create db and schemas
     format_args = [sql.Identifier(a) for a in sql_ids]
     cur.execute(sql.SQL(q).format(*format_args),strs)

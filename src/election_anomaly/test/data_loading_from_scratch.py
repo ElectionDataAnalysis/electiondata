@@ -27,7 +27,7 @@ if __name__ == '__main__':
 	# pick munger
 
 	# get datafile & info
-	dfile_d, enum_d, raw_file = ui.find_datafile(project_root,new_df_session)
+	dfile_d, enum_d, raw_file = ui.pick_datafile(project_root,new_df_session)
 	# TODO store \t and , directly?
 	if enum_d['_datafile_separator'] == 'tab':
 		sep = '\t'

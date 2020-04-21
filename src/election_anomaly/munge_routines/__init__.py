@@ -255,8 +255,26 @@ def add_non_id_cols_from_id(row_df,cdf_table,table_name):
     return row_df
 
 
+def enum_col_from_id_othertext(df,enum,enum_df):
+    """Returns a copy of dataframe <df>, replacing id and othertext columns
+    (e.g., 'CountItemType_Id' and 'OtherCountItemType)
+    with a plaintext <type> column (e.g., 'CountItemType')
+        using the enumeration given in <enum_df>"""
+    assert f'{enum}_Id' in df.columns,f'Dataframe lackes {enum}_Id column'
+    assert f'Other{enum}' in df.columns,f'Dataframe lackes Other{enum} column'
+    assert 'Txt' in enum_df.columns and 'Id' in enum_df.columns,'Enumeration dataframe should have columns \'Id\' and \'Txt\''
+
+    df = df.merge(enum_df,left_on=f'{enum}_Id',right_on='Id')
+    # TODO if Txt value is 'other', use Other{enum} value instead
+
+    df['Txt'].mask(df['Txt']!='other', other=df[f'Other{enum}'])
+    df.rename(columns={'Txt':enum},inplace=True)
+    df.drop([f'{enum}_Id',f'Other{enum}','Id'],axis=1,inplace=True)
+    return df
+
+
 def enum_col_to_id_othertext(df,type_col,enum_df):
-    """Returns a copy of dataframe <df>, replacing a <type> column (e.g., 'CountItemType') with
+    """Returns a copy of dataframe <df>, replacing a plaintext <type> column (e.g., 'CountItemType') with
     the corresponding two id and othertext columns (e.g., 'CountItemType_Id' and 'OtherCountItemType
     using the enumeration given in <enum_df>"""
     assert type_col in df.columns
@@ -327,7 +345,7 @@ def good_syntax(s):
     return good
 
 
-def raw_elements_to_cdf_NEW(session,mu,raw):
+def raw_elements_to_cdf_NEW(session,project_root,mu,raw):
     """load data from <raw> into the database"""
     raw_copy = raw.copy()
 
@@ -337,8 +355,9 @@ def raw_elements_to_cdf_NEW(session,mu,raw):
 
     # TODO munge from other sources
     for t,r in mu.cdf_elements[mu.cdf_elements.source == 'other'].iterrows():
-        pass
-        # TODO
+        # add column for element id
+        idx = ui.pick_or_create_record(session,project_root,t)
+        raw_copy.loc[:f'{t}_Id'] = idx
 
     # munge info from row sources (after renaming fields in raw formula as necessary)
     for t,r in mu.cdf_elements[mu.cdf_elements.source == 'row'].iterrows():
