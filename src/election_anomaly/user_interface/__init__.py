@@ -474,10 +474,8 @@ def pick_munger(sess,munger_dir='mungers',column_list=None,root='.'):
 		# user chooses munger
 		munger_name = input(
 			'Enter a short name (alphanumeric only, no spaces) for your munger (e.g., \'nc_primary18\')\n')
-	test_munger = input(f'Ensure completeness of munger {munger_name} files (y/n)?\n')
-	if test_munger == 'y':
-		template_dir = os.path.join(root,'templates/munger_templates')
-		check_munger_files(sess,munger_name,munger_dir,template_dir)
+	template_dir = os.path.join(root,'templates/munger_templates')
+	check_munger_files(sess,munger_name,munger_dir,template_dir)
 
 	munger_path = os.path.join(munger_dir,munger_name)
 	munger = sf.Munger(munger_path)
@@ -834,7 +832,7 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
-def new_datafile_NEW(session,raw_path,raw_file_sep,encoding,project_root=None,juris_short_name=None):
+def new_datafile_NEW(session,munger,raw_path,raw_file_sep,encoding,project_root=None,juris_short_name=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
@@ -845,24 +843,22 @@ def new_datafile_NEW(session,raw_path,raw_file_sep,encoding,project_root=None,ju
 		jurisdiction_name=juris_short_name)
 	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
 
-	# have user pick & prepare the munger
-	munger = pick_munger(
-		session,munger_dir=os.path.join(project_root,'mungers'),
-		root=project_root)
-
+	# TODO move to regular treatment of cdf elements?
 	election_idx, electiontype = get_or_create_election_in_db(session,project_root)
 
-	# update db from jurisdiction context file
-	# TODO put all info about data cleaning into README.md (e.g., whitespace strip)
+	# TODO where do we update db from jurisdiction context file?
 
-	# TODO get data from raw_path into a dataframe, getting column names right
-	#  for multi-line headers
 	raw = pd.read_csv(
 		raw_path,sep=raw_file_sep,dtype=str,encoding=encoding,quoting=csv.QUOTE_MINIMAL,
 		header=list(range(munger.header_row_count))
 	)
-	raw = mr.clean_raw_df(raw)
+	[raw,info_cols,numerical_columns] = mr.clean_raw_df(raw,munger)
 
+	# TODO munger.check_against_datafile(raw,cols_to_munge,numerical_columns)
+
+	mr.raw_elements_to_cdf_NEW(session,munger,raw)
+
+	# TODO
 	return
 
 
@@ -875,7 +871,6 @@ def new_datafile_OLD(raw_file,raw_file_sep,session,project_root='.',juris_short_
 		session.bind,project_root,
 		path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
 		jurisdiction_name=juris_short_name)
-	# TODO finalize ReportingUnits once for both kinds of files?
 
 	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
 	# update db from jurisdiction context file

@@ -410,7 +410,7 @@ class Munger:
             problems = []
 
             # every cdf_element in raw_identifiers.txt is in cdf_elements.cdf_element
-            missing = [x for x in self.raw_identifiers.cdf_element.unique() if x not in self.cdf_elements.name]
+            missing = [x for x in self.raw_identifiers.cdf_element.unique() if x not in self.cdf_elements.index]
             if missing:
                 m_str = ','.join(missing)
                 problems.append(
@@ -444,7 +444,7 @@ class Munger:
                 cf_str = ','.join(bad_column_formula)
                 problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
 
-            # TODO if field in formula matches a self.cdf_element.name,
+            # TODO if field in formula matches an element self.cdf_element.index,
             #  check that rename is not also a column
             if problems:
                 checked = False
@@ -464,7 +464,13 @@ class Munger:
             problems = []
             # set of cdf_elements in cdf_elements.txt is same as set pulled from db
             [db_elements, db_enumerations, db_joins, db_others] = dbr.get_cdf_db_table_names(sess.bind)
-            m_elements = self.cdf_elements.name
+            db_elements.add('CountItemType')
+            db_elements.remove('CandidateSelection')
+            db_elements.remove('ExternalIdentifier')
+            db_elements.remove('VoteCount')
+            # TODO why CountItemType? CandidateSelection? ExternalIdentifier? make this programmatic
+
+            m_elements = self.cdf_elements.index
             db_only = [x for x in db_elements if x not in m_elements]
             m_only = [x for x in m_elements if x not in db_elements]
 
@@ -473,7 +479,7 @@ class Munger:
                 problems.append(f'Some cdf elements in the database are not listed in the munger: {db_str}')
             if m_only:
                 m_str = ','.join(m_only)
-                problems.append(f'Some cdf elements in the database are not listed in the munger: {m_str}')
+                problems.append(f'Some cdf elements in the munger are not in the database: {m_str}')
 
             if problems:
                 checked = False
@@ -485,14 +491,13 @@ class Munger:
                  self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
         return
 
-    def check_against_datafile(self,raw):
-        """check that munger is compatible with datafile <raw>; offer user chance to correct munger"""
+    def check_against_datafile(self,raw,cols_to_munge,count_columns):
+        """check that munger is compatible with datafile <raw>;
+        offer user chance to correct munger"""
         checked = False
         while not checked:
             checked = True
             problems = []
-            # all row fields in raw_identifier_formulas are actual columns in <raw>
-            # TODO check headers of file somehow?
             # check for unmunged rows and report
 
             if problems:
@@ -507,7 +512,7 @@ class Munger:
         return
 
     def column_rename_dictionary(self):
-        d = {x:f'{x}_{self.field_rename_suffix}' for x in self.cdf_elements.name}
+        d = {x:f'{x}_{self.field_rename_suffix}' for x in self.cdf_elements.index}
         return d
 
     def add_to_raw_identifiers(self,df):
@@ -586,9 +591,9 @@ def read_munger_info_from_files(dir_path):
     format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep='\t',index_col='item')
     # TODO check that format.txt file is correct
     atomic_reporting_unit_type = format_info.loc['atomic_reporting_unit_type','value']
-    field_name_row = format_info.loc['field_name_row','value']
+    field_name_row = int(format_info.loc['field_name_row','value'])
     field_rename_suffix = format_info.loc['field_rename_suffix','value']
-    header_row_count = format_info.loc['header_row_count','value']
+    header_row_count = int(format_info.loc['header_row_count','value'])
         # TODO maybe file separator and encoding should be in format.txt?
 
     # read raw_identifiers file into a table

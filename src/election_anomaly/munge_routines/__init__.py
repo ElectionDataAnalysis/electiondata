@@ -11,17 +11,38 @@ import os
 
 
 def clean_raw_df(raw,munger):
-    # strip whitespace
-    raw = raw.applymap(lambda x:x.strip())
+    # TODO put all info about data cleaning into README.md (e.g., whitespace strip)
 
-    # replace nulls with 0, recast columns as integer where possible.
-    #  recast leaves columns with text entries as non-numeric.
-    raw = raw.fillna(0).astype('int64',errors='ignore')
-    field_lists = list(munger.cdf_elements.fields.unique())
-    # TODO keep columns named in munger formulas; keep numerical columns; drop all else.
+    # change all nulls to 0
+    raw = raw.fillna(0)
+    # strip whitespace
+    # raw = raw.applymap(lambda x:x.strip())
+
+    field_lists = list(munger.cdf_elements[munger.cdf_elements.source=='row'].fields)
     munger_fields = set().union(*field_lists)
-    keepers = [x for x in raw.columns if x[munger.field_name_row] in munger_fields]
-    return raw
+    # TODO keep columns named in munger formulas; keep numerical columns; drop all else.
+    if munger.header_row_count > 1:
+        cols_to_munge = [x for x in raw.columns if x[munger.field_name_row] in munger_fields]
+    else:
+        cols_to_munge = [x for x in raw.columns if x in munger_fields]
+
+    # TODO error check- what if cols_to_munge is missing something from munger_fields?
+
+    # recast other columns as integer where possible.
+    #  (recast leaves columns with text entries as non-numeric).
+    num_columns = []
+    for c in [x for x in raw.columns if x not in cols_to_munge]:
+        try:
+            raw[c] = raw[c].astype('int64',errors='raise')
+            num_columns.append(c)
+        except ValueError:
+            pass
+
+    raw = raw[cols_to_munge + num_columns]
+    # recast all cols_to_munge to strings
+    for c in cols_to_munge:
+        raw[c] = raw[c].apply(str)
+    return raw, cols_to_munge, num_columns
 
 
 def load_context_dframe_into_cdf(
@@ -297,26 +318,39 @@ def good_syntax(s):
         good = False
         return good
     else:
-        p = re.compile('^\S[^>]*\S>')
-        for x in split[1:]:  # must contain >, and can't have whitespace at beginning or just before >
-            if not p.search(x):
+        p1 = re.compile(r'^\S')  # must start with non-whitespace
+        p2 = re.compile(r'^[^>]*\S>[^>]*$')  # must contain exactly one >, preceded by non-whitespace
+        for x in split[1:]:
+            if not (p1.search(x) and p2.search(x)):
                 good = False
                 return good
     return good
 
 
-def raw_elements_to_cdf_NEW(session,mu,row):
-    # change any empty count_column values to zero
+def raw_elements_to_cdf_NEW(session,mu,raw):
+    """load data from <raw> into the database"""
+    raw_copy = raw.copy()
 
     # rename raw columns via mu.rename_column_dictionary
-    # TODO where to rename fields in raw_identifier_formulas?
+    d = mu.column_rename_dictionary()
+    raw_copy.rename(columns=d,inplace=True)
 
-    # rename any columns as necessary (if they overlap with cdf_element names)
+    # TODO munge from other sources
+    for t,r in mu.cdf_elements[mu.cdf_elements.source == 'other'].iterrows():
+        pass
+        # TODO
 
-    # get list of cdf_element tables from db (not joins, columns more than 'Id' and 'Txt') -- except VoteCount
+    # munge info from row sources (after renaming fields in raw formula as necessary)
+    for t,r in mu.cdf_elements[mu.cdf_elements.source == 'row'].iterrows():
+        formula = r['raw_identifier_formula']
+        for k,v in d.items():
+            formula = formula.replace(k,v)
+        add_munged_column_NEW(raw_copy,formula,t)
+
+    # TODO munge from column sources and reshape
+
     # read foreign key relations from db
     # loop through all cdf_element tables t (respecting foreign key ordering)
-        # munge t info via formulas in mu.cdf_elements and info in mu.raw_identifiers
         # load raw data into t and pull t.Ids
 
     # loop through all join tables j (respecting foreign key ordering) -- except ECSVCJoin

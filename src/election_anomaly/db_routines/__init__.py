@@ -169,23 +169,25 @@ def drop_cols(session,table,col_list):
 
 def get_cdf_db_table_names(eng):
     db_columns = pd.read_sql_table('columns',eng,schema='information_schema')
+    public = db_columns[db_columns.table_schema=='public']
     cdf_elements = set()
     cdf_enumerations = set()
     cdf_joins = set()
     others = set()
-    for t in db_columns.table_name.unique():
+    for t in public.table_name.unique():
         # test table name string
-        if t[0] != '_':
+        if t[0] == '_':
             others.add(t)
-        elif t[:-4] != 'Join':
+        elif t[-4:] == 'Join':
             cdf_joins.add(t)
         else:
             # test columns
-            cols = db_columns[db_columns.table_name == t].column_name.unique()
-            if set(cols) != {'Id','Txt'}:
+            cols = public[public.table_name == t].column_name.unique()
+            if set(cols) == {'Id','Txt'}:
                 cdf_enumerations.add(t)
             else:
                 cdf_elements.add(t)
+    # TODO order cdf_elements and cdf_joins by references to one another
     return cdf_elements, cdf_enumerations, cdf_joins, others
 
 

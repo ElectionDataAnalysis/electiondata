@@ -40,8 +40,8 @@ if __name__ == '__main__':
 	# TODO handle default values more programmatically
 	encoding =  'iso-8859-1'
 
-	ui.new_datafile_NEW(
-		raw_file_path,sep,new_df_session,juris_short_name=juris_short_name,encoding=encoding,project_root=project_root)
+	ui.new_datafile_NEW(new_df_session,munger,
+		raw_file_path,sep,encoding,juris_short_name=juris_short_name,project_root=project_root)
 
 	eng.dispose()
 	print('Done! (user_interface)')
