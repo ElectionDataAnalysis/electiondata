@@ -45,7 +45,10 @@ if __name__ == '__main__':
 	raw = pd.read_csv(
 		raw_file_path,sep=sep,dtype=str,encoding=encoding,quoting=csv.QUOTE_MINIMAL,
 		header=list(range(munger.header_row_count)))
-	mr.raw_elements_to_cdf_NEW(new_df_session,project_root,munger,raw)
+
+	[raw,info_cols,numerical_cols] = mr.clean_raw_df(raw,munger)
+
+	mr.raw_elements_to_cdf_NEW(new_df_session,project_root,munger,raw,info_cols)
 
 	ui.new_datafile_NEW(new_df_session,munger,
 		raw_file_path,sep,encoding,juris_short_name=juris_short_name,project_root=project_root)

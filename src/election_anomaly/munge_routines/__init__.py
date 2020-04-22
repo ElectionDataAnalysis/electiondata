@@ -42,7 +42,11 @@ def clean_raw_df(raw,munger):
     # recast all cols_to_munge to strings
     for c in cols_to_munge:
         raw[c] = raw[c].apply(str)
-    return raw, cols_to_munge, num_columns
+    # rename columns to munge by adding suffix
+    renamer = {x:f'{x}_{munger.field_rename_suffix}' for x in cols_to_munge}
+    raw.rename(columns=renamer,inplace=True)
+    renamed_cols_to_munge = [f'{x}_{munger.field_rename_suffix}' for x in cols_to_munge]
+    return raw, renamed_cols_to_munge, num_columns
 
 
 def load_context_dframe_into_cdf(
@@ -262,14 +266,14 @@ def enum_col_from_id_othertext(df,enum,enum_df):
         using the enumeration given in <enum_df>"""
     assert f'{enum}_Id' in df.columns,f'Dataframe lackes {enum}_Id column'
     assert f'Other{enum}' in df.columns,f'Dataframe lackes Other{enum} column'
-    assert 'Txt' in enum_df.columns and 'Id' in enum_df.columns,'Enumeration dataframe should have columns \'Id\' and \'Txt\''
-
-    df = df.merge(enum_df,left_on=f'{enum}_Id',right_on='Id')
+    assert 'Txt' in enum_df.columns ,'Enumeration dataframe should have column \'Txt\''
+# TODO check index of enum_df is 'Id'
+    df = df.merge(enum_df,left_on=f'{enum}_Id',right_index=True)
     # TODO if Txt value is 'other', use Other{enum} value instead
 
     df['Txt'].mask(df['Txt']!='other', other=df[f'Other{enum}'])
     df.rename(columns={'Txt':enum},inplace=True)
-    df.drop([f'{enum}_Id',f'Other{enum}','Id'],axis=1,inplace=True)
+    df.drop([f'{enum}_Id',f'Other{enum}'],axis=1,inplace=True)
     return df
 
 
@@ -345,26 +349,29 @@ def good_syntax(s):
     return good
 
 
-def raw_elements_to_cdf_NEW(session,project_root,mu,raw):
-    """load data from <raw> into the database"""
-    raw_copy = raw.copy()
+def raw_elements_to_cdf_NEW(session,project_root,mu,raw,info_cols):
+    """load data from <raw> into the database.
+    Note that columns to be munged (e.g. County_xxx) have mu.field_rename_suffix (e.g., _xxx) added already"""
+    working = raw.copy()
 
-    # rename raw columns via mu.rename_column_dictionary
-    d = mu.column_rename_dictionary()
-    raw_copy.rename(columns=d,inplace=True)
-
-    # TODO munge from other sources
+    # munge from other sources
     for t,r in mu.cdf_elements[mu.cdf_elements.source == 'other'].iterrows():
         # add column for element id
         idx = ui.pick_or_create_record(session,project_root,t)
-        raw_copy.loc[:f'{t}_Id'] = idx
+        working[f'{t}_Id'] = idx
 
     # munge info from row sources (after renaming fields in raw formula as necessary)
     for t,r in mu.cdf_elements[mu.cdf_elements.source == 'row'].iterrows():
         formula = r['raw_identifier_formula']
-        for k,v in d.items():
-            formula = formula.replace(k,v)
-        add_munged_column_NEW(raw_copy,formula,t)
+        for field in r['fields']:
+            formula = formula.replace(field,f'{field}_{mu.field_rename_suffix}')
+        add_munged_column_NEW(working,formula,t)
+
+    # reshape
+    working = working.melt(id_vars=info_cols)
+
+    # if only one header row, rename variable to variable_0 for consistency
+    working.rename(columns={'variable':'variable_0'},inplace=True)
 
     # TODO munge from column sources and reshape
 

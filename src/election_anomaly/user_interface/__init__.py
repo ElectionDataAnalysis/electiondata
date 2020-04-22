@@ -317,7 +317,7 @@ def format_check_formula(formula,fields):
 	return missing
 
 
-def confirm_or_correct_cdf_element_file(cdf_elements_file,header_rows,elements):
+def confirm_or_correct_cdf_element_file(cdf_elements_file,header_rows,element_list):
 	"""
 	Checks that <cdf_elements_file> has the right columns;
 	if not, guides user to correcting.
@@ -593,11 +593,14 @@ def pick_juris_from_db(sess,project_root,juris_type='state'):
 
 
 def pick_or_create_record(sess,project_root,element,known_info_d={}):
-	# TODO
+	"""User picks record from database if exists.
+	Otherwise user picks from file system if exists.
+	Otherwise user enters all relevant info.
+	Store record in file system and/or db if new
+	Return index of record in database"""
+
 	storage_dir = os.path.join(project_root,'db_records_entered_by_hand')
-	# TODO get enum_list, other_field_list
 	# pick from database if possible
-	# TODO use/get enum_list and other_field_list here?
 	db_idx, db_values = pick_record_from_db(sess,element,known_info_d=known_info_d)
 
 	# if not from db, pick from file_system
@@ -606,15 +609,22 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 
 		# if not from file_system, pick from scratch
 		if fs_idx is None:
+			# have user enter record; save it to file system
 			user_record, enum_plain_text_values = new_record_info_from_user(sess,project_root,element,known_info_d=known_info_d)
 			# TODO enter_new pulls from file system; would be better here to pull from db
-			# TODO record info in file_system
 			save_record_to_filesystem(storage_dir,element,user_record,enum_plain_text_values)
-		# TODO enter values into db system
-		element_df = dbr.dframe_to_sql(pd.DataFrame(user_record,index=[-1]),sess,None,element)
+
+		# save record to db
+		try:
+			element_df = dbr.dframe_to_sql(pd.DataFrame(user_record,index=[-1]),sess,None,element,index_col='Id')
+			# find index matching inserted element
+			idx = element_df.loc[(element_df[list(user_record)] == pd.Series(user_record)).all(axis=1)].first_valid_index()
+		except dbr.CdfDbException:
+			print('Insertion of new record to db failed, maybe because record already exists. Try again.')
+			idx = pick_or_create_record(sess,project_root,element,known_info_d=known_info_d)
 	else:
 		idx = db_idx
-	#return user_record, enum_val
+
 	return idx
 
 
@@ -646,9 +656,10 @@ def pick_record_from_db(sess,element,known_info_d={}):
 	# add columns for plaintext of any enumerations
 	enums = dbr.read_enums_from_db_table(sess,element)
 	for e in enums:
-		e_df = pd.read_sql_table(e,sess.bind)
+		e_df = pd.read_sql_table(e,sess.bind,index_col='Id')
 		element_df = mr.enum_col_from_id_othertext(element_df,e,e_df)
 
+	# TODO filter by known_info_d
 	element_idx, values = pick_one(element_df,'Name',element)
 	return element_idx, values
 
@@ -668,7 +679,7 @@ def pick_record_from_file_system(storage_dir,table,name_field='Name',known_info_
 			filtered_file = from_file.loc[(from_file[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
 		else:
 			filtered_file = from_file
-		print('Pick a record from {table} list in file system:')
+		print(f'Pick a record from {table} list in file system:')
 		idx, record = pick_one(filtered_file,name_field)
 	else:
 		idx, record = None, None
@@ -944,6 +955,7 @@ def new_datafile_NEW(session,munger,raw_path,raw_file_sep,encoding,project_root=
 		header=list(range(munger.header_row_count))
 	)
 	[raw,info_cols,numerical_columns] = mr.clean_raw_df(raw,munger)
+	# NB: info_cols will have suffix added by munger
 
 	# TODO munger.check_against_datafile(raw,cols_to_munge,numerical_columns)
 

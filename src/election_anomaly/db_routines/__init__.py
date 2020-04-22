@@ -13,6 +13,10 @@ import tkinter as tk
 import os
 
 
+class CdfDbException(Exception):
+    pass
+
+
 def create_database(con,cur,db_name):
     sure = input('If the db exists, it will be deleted and data will be lost. Are you absolutely sure (y/n)?\n')
     if sure == 'y':
@@ -222,7 +226,7 @@ def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
     con.close()
     return return_item
 
-
+# TODO cosmetic: get rid of schema argument
 def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_votecount=False,return_records='all'):
     """
     Given a dataframe <dframe >and an existing cdf db table <table>>, clean <dframe>
@@ -269,8 +273,10 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     # drop the Id column
     if 'Id' in appendable.columns:
         appendable = appendable.drop('Id',axis=1)
-
-    appendable.to_sql(table, session.bind, if_exists='append', index=False)
+    try:
+        appendable.to_sql(table, session.bind, if_exists='append', index=False)
+    except sqlalchemy.exc.IntegrityError as e:
+        raise CdfDbException(e)
     if table == 'ReportingUnit' and not appendable.empty:
         append_to_composing_reporting_unit_join(session,appendable)
     up_to_date_dframe = pd.read_sql_table(table,session.bind)
