@@ -13,6 +13,10 @@ import tkinter as tk
 import os
 
 
+class CdfDbException(Exception):
+    pass
+
+
 def create_database(con,cur,db_name):
     sure = input('If the db exists, it will be deleted and data will be lost. Are you absolutely sure (y/n)?\n')
     if sure == 'y':
@@ -94,10 +98,7 @@ def establish_connection(paramfile = '../jurisdictions/database.ini',db_name='po
     return con
 
 
-def sql_alchemy_connect(
-        schema=None,
-        paramfile=None,
-        db_name='postgres'):
+def sql_alchemy_connect(schema=None,paramfile=None,db_name='postgres'):
     """Returns an engine and a metadata object"""
     if not paramfile:
         paramfile = ui.pick_paramfile(ui.get_project_root())
@@ -191,6 +192,15 @@ def get_cdf_db_table_names(eng):
     return cdf_elements, cdf_enumerations, cdf_joins, others
 
 
+def read_enums_from_db_table(sess,element):
+	"""Returns list of enum names (e.g., 'CountItemType') for the given <element>.
+	Identifies enums by the Other{enum} column name (e.g., 'OtherCountItemType)"""
+	df = pd.read_sql_table(element,sess.bind,index_col='Id')
+	other_cols = [x for x in df.columns if x[:5] == 'Other']
+	enums = [x[5:] for x in other_cols]
+	return enums
+
+
 def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to create db and schemas
     format_args = [sql.Identifier(a) for a in sql_ids]
     cur.execute(sql.SQL(q).format(*format_args),strs)
@@ -216,7 +226,7 @@ def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
     con.close()
     return return_item
 
-
+# TODO cosmetic: get rid of schema argument
 def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_votecount=False,return_records='all'):
     """
     Given a dataframe <dframe >and an existing cdf db table <table>>, clean <dframe>
@@ -263,8 +273,10 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     # drop the Id column
     if 'Id' in appendable.columns:
         appendable = appendable.drop('Id',axis=1)
-
-    appendable.to_sql(table, session.bind, if_exists='append', index=False)
+    try:
+        appendable.to_sql(table, session.bind, if_exists='append', index=False)
+    except sqlalchemy.exc.IntegrityError as e:
+        raise CdfDbException(e)
     if table == 'ReportingUnit' and not appendable.empty:
         append_to_composing_reporting_unit_join(session,appendable)
     up_to_date_dframe = pd.read_sql_table(table,session.bind)

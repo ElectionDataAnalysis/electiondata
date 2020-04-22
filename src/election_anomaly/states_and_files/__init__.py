@@ -453,7 +453,7 @@ class Munger:
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
                 [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
-                 self.raw_identifiers,self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
+                 self.raw_identifiers] = read_munger_info_from_files(self.path_to_munger_dir)
         return
 
     def check_against_db(self,sess):
@@ -510,10 +510,6 @@ class Munger:
                  self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
         # TODO write this function
         return
-
-    def column_rename_dictionary(self):
-        d = {x:f'{x}_{self.field_rename_suffix}' for x in self.cdf_elements.index}
-        return d
 
     def add_to_raw_identifiers(self,df):
         """Adds rows in <df> to the raw_identifiers.txt file and to the attribute <self>.raw_identifiers"""
@@ -573,8 +569,9 @@ class Munger:
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir=dir_path
 
-        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.raw_identifiers,
-         self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
+        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.raw_identifiers] = read_munger_info_from_files(self.path_to_munger_dir)
+
+        self.field_rename_suffix = '___' # NB: must not match any suffix of a cdf element name;
 
 # TODO before processing context files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
@@ -592,7 +589,6 @@ def read_munger_info_from_files(dir_path):
     # TODO check that format.txt file is correct
     atomic_reporting_unit_type = format_info.loc['atomic_reporting_unit_type','value']
     field_name_row = int(format_info.loc['field_name_row','value'])
-    field_rename_suffix = format_info.loc['field_rename_suffix','value']
     header_row_count = int(format_info.loc['header_row_count','value'])
         # TODO maybe file separator and encoding should be in format.txt?
 
@@ -602,7 +598,7 @@ def read_munger_info_from_files(dir_path):
 
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
     #   will need to rename some columns of the raw file before processing.
-    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,raw_identifiers,field_rename_suffix]
+    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,raw_identifiers]
 
 if __name__ == '__main__':
     print('Done (states_and_files)!')
