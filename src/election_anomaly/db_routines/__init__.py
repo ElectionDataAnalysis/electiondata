@@ -226,6 +226,7 @@ def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
     con.close()
     return return_item
 
+
 # TODO cosmetic: get rid of schema argument
 def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_votecount=False,return_records='all'):
     """

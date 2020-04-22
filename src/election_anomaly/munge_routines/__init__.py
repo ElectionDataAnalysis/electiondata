@@ -349,7 +349,7 @@ def good_syntax(s):
     return good
 
 
-def raw_elements_to_cdf_NEW(session,project_root,mu,raw,info_cols):
+def raw_elements_to_cdf_NEW(session,project_root,mu,raw,info_cols,num_cols):
     """load data from <raw> into the database.
     Note that columns to be munged (e.g. County_xxx) have mu.field_rename_suffix (e.g., _xxx) added already"""
     working = raw.copy()
@@ -365,20 +365,47 @@ def raw_elements_to_cdf_NEW(session,project_root,mu,raw,info_cols):
         formula = r['raw_identifier_formula']
         for field in r['fields']:
             formula = formula.replace(field,f'{field}_{mu.field_rename_suffix}')
-        add_munged_column_NEW(working,formula,t)
+        working = add_munged_column_NEW(working,formula,t)
 
+    # remove original row-munge columns
+    munged = [x for x in working.columns if x[-len(mu.field_rename_suffix):] == mu.field_rename_suffix]
+    working.drop(munged,axis=1,inplace=True)
+
+    # if there is just one numerical column, melt still creates dummy variable col
+    #  in which each value is 'value'
     # reshape
-    working = working.melt(id_vars=info_cols)
+    non_num_cols = [x for x in working.columns if x not in num_cols]
+    working = working.melt(id_vars=non_num_cols)
+    # rename count to VoteCount
+    #  if only one header row, rename variable to variable_0 for consistency
+    #  NB: any unnecessary numerical cols (e.g., Contest Group ID) will not matter
+    #  as they will be be missing from raw_identifiers.txt and hence will be ignored.
+    # TODO check and correct: no num col names conflict with raw identifiers of column-source
+    #  elements!
+    working.rename(columns={'variable':'variable_0','value':'VoteCount'},inplace=True)
 
-    # if only one header row, rename variable to variable_0 for consistency
-    working.rename(columns={'variable':'variable_0'},inplace=True)
+    # munge from column sources
+    for t,r in mu.cdf_elements[mu.cdf_elements.source == 'column'].iterrows():
+        formula = r['raw_identifier_formula']
+        for i in range(mu.header_row_count):
+            formula = formula.replace(f'{i}',f'variable_{i}')
+        working = add_munged_column_NEW(working,formula,t)
+    # remove unnecessary columns
+    not_needed = [f'variable_{i}' for i in range(mu.header_row_count)]
+    working.drop(not_needed,axis=1,inplace=True)
 
-    # TODO munge from column sources and reshape
+    # get lists of table names from db
+    [cdf_elements,cdf_enumerations,cdf_joins,others] = dbr.get_cdf_db_table_names(session.bind)
 
-    # read foreign key relations from db
     # loop through all cdf_element tables t (respecting foreign key ordering)
         # load raw data into t and pull t.Ids
-
+    for t in cdf_elements:
+        # TODO
+        # load raw data into context if necessary
+        # load raw data into db if necessary
+        # capture id from db in new column
+        pass
+    # erase all but id and vote-count columns from working
     # loop through all join tables j (respecting foreign key ordering) -- except ECSVCJoin
         # load raw data into j and pull j.Ids
 
