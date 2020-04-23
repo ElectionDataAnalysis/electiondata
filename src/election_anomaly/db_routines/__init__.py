@@ -273,6 +273,11 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     target = pd.read_sql_table(table,session.bind,index_col=index_col)
     # VoteCount table gets added columns during raw data upload, needs special treatment
 
+    if dframe.empty:
+        if return_records == 'original':
+            return dframe
+        else:
+            return target
     # partition the columns
     dframe_only_cols = [x for x in dframe.columns if x not in target.columns]
     target_only_cols = [x for x in target.columns if x not in dframe.columns]

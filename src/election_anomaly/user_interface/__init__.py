@@ -119,6 +119,8 @@ def resolve_nulls(df,source_file,col_list=None,kwargs={}):
 
 
 def show_sample(st,items,condition,outfile='shown_items.txt',dir=None):
+	# TODO revise to allow sample of dataframe and export of dataframe. E.g.
+	#  so that Candidate and Party together can be exported.
 	print(f'There are {len(st)} {items} that {condition}:')
 	if len(st) == 0:
 		return
@@ -139,12 +141,13 @@ def show_sample(st,items,condition,outfile='shown_items.txt',dir=None):
 			for r in st:
 				print(f'{r}')
 	if dir is None:
-		dir = input(f'Export all {len(st)} {items} that {condition}? If so, enter directory for export\n'
+		dir = input(f'Export all {len(st)} {items} that {condition}? If so, enter directory for export.'
+					f'Existing file will be overwritten.\n'
 					f'(Current directory is {os.getcwd()})\n')
-	elif os.path.isdir(dir):
+	if os.path.isdir(dir):
 		export = input(f'Export all {len(st)} {items} that {condition} to {outfile} (y/n)?\n')
 		if export == 'y':
-			with open(os.path.join(dir,outfile),'a') as f:
+			with open(os.path.join(dir,outfile),'w') as f:
 				f.write('\n'.join(st))
 			print(f'{items} exported to {os.path.join(dir,outfile)}')
 	elif dir != '':
@@ -788,6 +791,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 
 	# TODO before each return, write to file system if appropriate
 	if not already_file.empty:
+		# TODO prevent dupes in already_file
 		print('Is the desired record already in the file system?')
 		record_idx,record = pick_one(already_file,name_field)
 		if record_idx is not None:	# if user picked one

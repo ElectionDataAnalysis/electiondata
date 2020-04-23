@@ -21,7 +21,7 @@ if __name__ == '__main__':
 	# pick db to use
 	db_paramfile = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'
 
-	db_name = 'NC_TEST'
+	db_name = 'NC_2'
 
 	# connect to db
 	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
@@ -50,9 +50,9 @@ if __name__ == '__main__':
 		header=list(range(munger.header_row_count)))
 
 	[raw,info_cols,num_cols] = mr.clean_raw_df(raw,munger)
-	check = input(f'Check data file against munger {munger.name} (y/n)?\n')
-	if check == 'y':
-		munger.check_new_results_dataset_NEW(raw,juris,new_df_session,project_root=project_root)
+#	check = input(f'Check data file against munger {munger.name} (y/n)?\n')
+#	if check == 'y':
+#		munger.check_new_results_dataset_NEW(raw,juris,new_df_session,project_root=project_root)
 
 	mr.raw_elements_to_cdf_NEW(new_df_session,project_root,juris,munger,raw,info_cols,num_cols)
 
