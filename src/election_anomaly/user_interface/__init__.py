@@ -937,15 +937,15 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
-def new_datafile_NEW(session,munger,raw_path,raw_file_sep,encoding,project_root=None,juris_short_name=None):
+def new_datafile_NEW(session,munger,raw_path,raw_file_sep,encoding,project_root=None,juris=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
 	if not project_root:
 		get_project_root()
-	juris = pick_juris_from_filesystem(
-		session.bind,project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
-		jurisdiction_name=juris_short_name)
+	if not juris:
+		juris = pick_juris_from_filesystem(
+			session.bind,project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'))
 	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
 
 	# TODO where do we update db from jurisdiction context file?
@@ -959,7 +959,7 @@ def new_datafile_NEW(session,munger,raw_path,raw_file_sep,encoding,project_root=
 
 	# TODO munger.check_against_datafile(raw,cols_to_munge,numerical_columns)
 
-	mr.raw_elements_to_cdf_NEW(session,project_root,munger,raw)
+	mr.raw_elements_to_cdf_NEW(session,project_root,juris,munger,raw)
 
 	# TODO
 	return

@@ -169,6 +169,7 @@ def drop_cols(session,table,col_list):
 
 
 def get_cdf_db_table_names(eng):
+    """This is postgresql-specific"""
     db_columns = pd.read_sql_table('columns',eng,schema='information_schema')
     public = db_columns[db_columns.table_schema=='public']
     cdf_elements = set()
@@ -184,12 +185,43 @@ def get_cdf_db_table_names(eng):
         else:
             # test columns
             cols = public[public.table_name == t].column_name.unique()
-            if set(cols) == {'Id','Txt'}:
+            if set(cols) == {'Id','Txt'} or set(cols) == {'Id','Selection'}:
                 cdf_enumerations.add(t)
             else:
                 cdf_elements.add(t)
     # TODO order cdf_elements and cdf_joins by references to one another
     return cdf_elements, cdf_enumerations, cdf_joins, others
+
+
+def order_by_ref(elements,table_type,project_root):
+    """
+    Return <table_list> sorted by foreign key references from
+    the definitions in the CDF_schema_def_info/<table_type> directory
+    (Ideally this should pull from database instead, which requires
+    true foreign keys everywhere.)
+    """
+    dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info',table_type)
+    ok_list = []
+    elements_to_process = list(elements)
+    while elements_to_process:
+        element = elements_to_process[0]
+        # check foreign keys; if any refers to an elt yet to be processed, change to that elt
+        #  note that any foreign keys for elements are to other elements, so it's OK to do this without considering
+        #  joins first or concurrently.
+        foreign_keys = pd.read_csv(os.path.join(dir,element,'foreign_keys.txt'),sep='\t')
+        for i,r in foreign_keys.iterrows():
+            fk_set = set(r['refers_to'].split(';'))    # lists all targets of the foreign key r['fieldname']
+            try:
+                element = [e for e in fk_set if e in elements_to_process].pop()
+                break
+            except IndexError:
+                pass
+        # append element to ok_list
+        ok_list.append(element)
+        # remove element from list of yet-to-be-processed
+        elements_to_process.remove(element)
+
+    return ok_list
 
 
 def read_enums_from_db_table(sess,element):

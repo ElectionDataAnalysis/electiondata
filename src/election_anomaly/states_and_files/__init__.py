@@ -219,8 +219,8 @@ class Munger:
         ri = os.path.join(self.path_to_munger_dir,'raw_identifiers.txt')
 
         ri_df = pd.read_csv(ri,sep='\t')
-        raw_from_results = set(mr.add_munged_column(
-            results,self,'CandidateContest','CandidateContest_external')['CandidateContest_external'])
+        raw_from_results = set(mr.add_munged_column_NEW(
+            results,self,'CandidateContest')[f'CandidateContest'])
         raw_from_ri = set(ri_df[ri_df.cdf_element == 'CandidateContest'].loc[:,'raw_identifier_value'])
         missing_from_ri = [x for x in raw_from_results if x not in raw_from_ri]
 
@@ -285,18 +285,21 @@ class Munger:
         mr.load_context_dframe_into_cdf(sess,project_path,jurisdiction,source_df,element,
                                         os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
 
-        mr.add_munged_column(results,self,element,f'{element}_external')
-        results_elements = results[f'{element}_external'].unique()
+        d = {x:f'{x}_{self.field_rename_suffix}' for x in self.field_list}
+        results.rename(columns=d,inplace=True)
+        formula = self.cdf_elements.loc[element,'raw_identifier_formula']
+        mr.add_munged_column_NEW(results,self,element)
+        results_elements = results[f'{element}'].unique()
 
         mu_elements = self.raw_identifiers[self.raw_identifiers.cdf_element==element]
         elements_mixed = pd.DataFrame(
-            results_elements,columns=[f'{element}_external']).merge(
-            mu_elements,how='left',left_on=f'{element}_external',right_on='raw_identifier_value'
+            results_elements,columns=[f'{element}_self.field_rename_suffix']).merge(
+            mu_elements,how='left',left_on=f'{element}_self.field_rename_suffix',right_on='raw_identifier_value'
             ).fillna('')
 
         # are there elements in results file that cannot be munged?
         not_identified = elements_mixed[elements_mixed.raw_identifier_value==''].loc[:,
-                         f'{element}_external'].to_list()
+                         f'{element}_self.field_rename_suffix'].to_list()
         # and are not in unmunged_{element}s.txt?
         try:
             with open(os.path.join(self.path_to_munger_dir,f'unmunged_{element}s_in_datafile.txt'),'r') as f:
@@ -401,6 +404,21 @@ class Munger:
                 raise Exception('Datafile will not be processed. Use a different munger and try again.')
         return
 
+    def check_new_results_dataset_NEW(self,results,jurisdiction,sess,project_root='.'):
+        """<results> is a results dataframe of a single <contest_type>;
+        this routine should add what's necessary to the munger to treat the dataframe,
+        keeping backwards compatibility and exiting gracefully if dataframe needs different munger."""
+
+        # check Party, Office, ReportingUnit in context & db, updating if necessary (prereq to checking
+        # CandidateContests)
+        for element in ['Party','Office','ReportingUnit']:
+            self.finalize_element(element,results,jurisdiction,sess,project_root)
+        # After Party and Office are finalized, prepare CandidateContest and check against munger
+        jurisdiction.prepare_candidatecontests(sess)
+        self.check_candidatecontest(results,jurisdiction,sess,project_path=project_root)
+
+        return
+
     def check_against_self(self):
         """check that munger is internally consistent; offer user chance to correct munger"""
         # TODO write this function
@@ -465,6 +483,7 @@ class Munger:
             # set of cdf_elements in cdf_elements.txt is same as set pulled from db
             [db_elements, db_enumerations, db_joins, db_others] = dbr.get_cdf_db_table_names(sess.bind)
             db_elements.add('CountItemType')
+            db_elements.add('BallotMeasureSelection')
             db_elements.remove('CandidateSelection')
             db_elements.remove('ExternalIdentifier')
             db_elements.remove('VoteCount')
@@ -545,7 +564,7 @@ class Munger:
 
         # check for unmatched
         if source == 'row':
-            mr.add_munged_column_NEW(raw_copy,formula,element)
+            mr.add_munged_column_NEW(raw_copy,self,element)
             in_raw = raw_copy[element].unique()
             unmatched = [x for x in in_raw if x not in in_munger]
         elif source == 'column':
@@ -572,6 +591,12 @@ class Munger:
         [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.raw_identifiers] = read_munger_info_from_files(self.path_to_munger_dir)
 
         self.field_rename_suffix = '___' # NB: must not match any suffix of a cdf element name;
+
+        # used repeatedly, so calculated once for convenience
+        # TODO find places this is calculated; replace with self.field_list
+        self.field_list = set()
+        for t,r in self.cdf_elements.iterrows():
+            self.field_list=self.field_list.union(r['fields'])
 
 # TODO before processing context files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?

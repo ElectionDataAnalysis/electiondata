@@ -1,1 +1,2 @@
 fieldname	refers_to
+ElectionDistrict_Id	ReportingUnit
