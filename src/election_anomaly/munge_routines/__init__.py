@@ -487,17 +487,16 @@ def raw_elements_to_cdf_NEW(session,project_root,juris,mu,raw,info_cols,num_cols
         working,mu,df_selection,'BallotMeasureSelection',get_name_field('BallotMeasureSelection'),
         mu.path_to_munger_dir,
         drop_unmatched=False)
-    # TODO append CandidateSelection_Id
 
-
-    # Second: get ids for remaining info sourced from rows and columns, dropping unidentified rows
+    # Second: get ids for remaining info sourced from rows and columns
     element_list = [t for t in mu.cdf_elements[mu.cdf_elements.source != 'other'].index if
                     (t[-7:] != 'Contest' and t[-9:] != 'Selection')]
     for t in element_list:
         # capture id from db in new column and erase any now-redundant cols
         df = pd.read_sql_table(t,session.bind)
         name_field = get_name_field(t)
-        working = replace_raw_with_internal_ids(working,mu,df,t,name_field,mu.path_to_munger_dir,drop_unmatched=True)
+        # NB: drop_unmatched = False below to prevent losing BallotMeasureContest when t == 'Office
+        working = replace_raw_with_internal_ids(working,mu,df,t,name_field,mu.path_to_munger_dir,drop_unmatched=False)
         working.drop(t,axis=1,inplace=True)
         # working = add_non_id_cols_from_id(working,df,t)
 
@@ -507,30 +506,44 @@ def raw_elements_to_cdf_NEW(session,project_root,juris,mu,raw,info_cols,num_cols
     cs_df = pd.read_sql_table('Candidate',session.bind)
     cs_df.rename(columns={'Id':'Candidate_Id'},inplace=True)
     cs_df = dbr.dframe_to_sql(cs_df,session,None,'CandidateSelection',return_records='original')
-    working = working.merge(cs_df,how='left',left_on='Candidate_Id',right_on='Candidate_Id')
+    # add CandidateSelection_Id column, merging on Candidate_Id
+    working = working.merge(
+        cs_df[['Candidate_Id','Id']],how='left',left_on='Candidate_Id',right_on='Candidate_Id')
     working.rename(columns={'Id':'CandidateSelection_Id'},inplace=True)
 
-
-    # Need to treat separately: ElectionContestJoin and ECSVCJoin,
     for j in ['BallotMeasureContestSelectionJoin','CandidateContestSelectionJoin']:
-        # load raw data into j and pull j.Ids
-        # TODO
-        j_path = os.path.join(
-            project_root,'election_anomaly/CDF_schema_def_info/joins',j,'foreign_keys.txt')
-        join_fk = pd.read_csv(j_path,sep='\t',index_col='fieldname')
-        # create dataframe with cols named to match join table, content from corresponding column of working
-        join_df = warning[[f'{x}_Id' for x in join_fk.refers_to]]
-        join_df.columns = list(join_fk.index)
+        append_join_id(project_root,session,working,j)
 
-
-            pass
-
+    # Need to treat separately: ElectionContestJoin and ECSVCJoin
     # Fill VoteCount and ElectionContestSelectionVoteCountJoin
     #  To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
     #  add ElectionContestSelectionVoteCountJoin columns to VoteCount
 
     # TODO
     return
+
+
+def append_join_id(project_root,session,working,j):
+    """Append <join>_Id to <working>"""
+    j_path = os.path.join(
+        project_root,'election_anomaly/CDF_schema_def_info/joins',j,'foreign_keys.txt')
+    join_fk = pd.read_csv(j_path,sep='\t',index_col='fieldname')
+    # create dataframe with cols named to match join table, content from corresponding column of working
+    # NB: w_cols and j_cols depend on honest foreign keys, with only one field in join.fk.refers_to
+    assert join_fk.loc[join_fk.refers_to.str.contains(';')].empty,\
+        'Join has \'dishonest\' foreign key referring to multiple tables.'
+    w_cols = [f'{x}_Id' for x in join_fk.refers_to]
+    j_cols = list(join_fk.index)
+    # drop dupes and any null rows
+    join_df = working[w_cols].drop_duplicates(keep='first')
+    join_df = join_df[join_df.notnull().all(axis=1)]
+
+    join_df.columns = j_cols
+    join_df = dbr.dframe_to_sql(join_df,session,None,j)
+    working = working.merge(join_df,left_on=w_cols,right_on=j_cols)
+    working.rename(columns={'Id':f'{j}_Id'},inplace=True)
+    return working
+
 
 
 def raw_elements_to_cdf_OLD(session,mu,row,contest_type,election_id,election_type,juris_id):
@@ -741,6 +754,20 @@ def raw_elements_to_cdf_OLD(session,mu,row,contest_type,election_id,election_typ
 
 
 if __name__ == '__main__':
+    project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
+    # pick db to use
+    db_paramfile = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'
 
+    db_name = 'NC_2'
+
+    # connect to db
+    from sqlalchemy.orm import sessionmaker
+    eng,meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
+    Session = sessionmaker(bind=eng)
+    sess = Session()
+
+    working = pd.read_csv('/Users/Steph-Airbook/Library/Preferences/PyCharm2019.3/scratches/tmp.txt',sep='\t')
+    j = 'CandidateContestSelectionJoin'
+    new_working=append_join_id(project_root,sess,working,j)
     print('Done!')
     exit()
