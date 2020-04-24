@@ -1379,6 +1379,7 @@ CandidateContest	North Carolina;General Assembly House of Representatives Distri
 Office	North Carolina;General Assembly House of Representatives District 95	NC HOUSE OF REPRESENTATIVES DISTRICT 095
 CandidateContest	North Carolina;General Assembly House of Representatives District 95	NC HOUSE OF REPRESENTATIVES DISTRICT 095
 Office	North Carolina;General Assembly House of Representatives District 96	NC HOUSE OF REPRESENTATIVES DISTRICT 096
+CandidateContest	North Carolina;General Assembly House of Representatives District 96	NC HOUSE OF REPRESENTATIVES DISTRICT 096
 Office	North Carolina;General Assembly House of Representatives District 97	NC HOUSE OF REPRESENTATIVES DISTRICT 097
 CandidateContest	North Carolina;General Assembly House of Representatives District 97	NC HOUSE OF REPRESENTATIVES DISTRICT 097
 Office	North Carolina;General Assembly House of Representatives District 98	NC HOUSE OF REPRESENTATIVES DISTRICT 098
@@ -3938,3 +3939,4 @@ Candidate	William Brisson	William Brisson
 Candidate	William Stinson	William Stinson
 Candidate	Yvonne Lewis Holley	Yvonne Lewis Holley
 Candidate	Zack Forde-Hawkins	Zack Forde-Hawkins
+BallotMeasureContest	REQUIRE PHOTO ID TO VOTE	REQUIRE PHOTO ID TO VOTE

@@ -18,6 +18,30 @@ import random
 from tkinter import filedialog
 
 
+def append_with_dedupe(file_path,dataframe):
+    # TODO Add records in <dataframe> to <file_path>, deduping and allowing for correction of conflicts
+    return
+
+
+def get_project_root():
+	p_root = os.getcwd().split('election_anomaly')[0]
+	confirmed = False
+	subdir_list = ['election_anomaly','jurisdictions','mungers']
+	while not confirmed:
+		missing = [x for x in subdir_list if x not in os.listdir(p_root)]
+		print(f'\nSuggested project root directory is:\n\t{p_root}')
+		if missing:
+			print(f'The suggested directory does not contain required subdirectories {",".join(missing)}')
+			new_pr = input(f'Designate a different project root (y/n)?\n')
+			if new_pr == 'y':
+				p_root = input(f'Enter absolute path of project root.\n')
+			else:
+				input('Add required subdirectories and hit return to continue.\n')
+		elif input('Is this the correct project root (y/n)?\n') == 'y':
+			confirmed = True
+	return p_root
+
+
 def pick_filepath(initialdir='~/'):
 	"""<r> is a tkinter root for a pop-up window.
 	<fpath_root> is the directory where the pop-up window starts.
@@ -53,25 +77,6 @@ def pick_paramfile(project_root):
 	print('Locate the parameter file for your postgreSQL database.')
 	fpath= pick_filepath()
 	return fpath
-
-
-def get_project_root():
-	p_root = os.getcwd().split('election_anomaly')[0]
-	confirmed = False
-	subdir_list = ['election_anomaly','jurisdictions','mungers']
-	while not confirmed:
-		missing = [x for x in subdir_list if x not in os.listdir(p_root)]
-		print(f'\nSuggested project root directory is:\n\t{p_root}')
-		if missing:
-			print(f'The suggested directory does not contain required subdirectories {",".join(missing)}')
-			new_pr = input(f'Designate a different project root (y/n)?\n')
-			if new_pr == 'y':
-				p_root = input(f'Enter absolute path of project root.\n')
-			else:
-				input('Add required subdirectories and hit return to continue.\n')
-		elif input('Is this the correct project root (y/n)?\n') == 'y':
-			confirmed = True
-	return p_root
 
 
 def pick_one(df,return_col,item='row',required=False):
