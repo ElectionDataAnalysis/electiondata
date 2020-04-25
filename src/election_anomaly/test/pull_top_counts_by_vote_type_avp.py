@@ -22,7 +22,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=eng)
     analysis_session = Session()
 
-    jurisdiction = ui.pick_juris_from_filesystem(analysis_session.bind,project_root,
+    jurisdiction = ui.pick_juris_from_filesystem(project_root,
                                                  path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
                                                  jurisdiction_name=juris_name)
     target_dir = os.path.join(project_root,'jurisdictions/FL/rollups_from_cdf_db')

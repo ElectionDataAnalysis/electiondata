@@ -128,16 +128,7 @@ class Jurisdiction:
         self.path_to_juris_dir = os.path.join(path_to_parent_dir, self.short_name)
 
         # Ensure that context directory exists and is missing no essential files
-        ensure_context(path_to_parent_dir,project_root)
-        c_path = os.path.join(self.path_to_juris_dir,'context/')
-        if not os.path.isdir(c_path):
-            Path(c_path).mkdir(parents=True,exist_ok=True)
-            print(f'Context directory created.')
-        context_file_list = ['Office.txt','remark.txt','ReportingUnit.txt']
-        file_missing_list = [ff for ff in context_file_list
-                             if not os.path.isfile(f'{self.path_to_juris_dir}context/{ff}')]
-        assert file_missing_list == [], \
-            f'Error: Missing files in {os.path.join(self.path_to_juris_dir,"context")}:\n{file_missing_list}'
+        ensure_context(path_to_parent_dir,project_root,self.short_name)
 
 
 class Munger:
@@ -617,15 +608,7 @@ def read_munger_info_from_files(dir_path):
     return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,raw_identifiers]
 
 
-def ensure_context(path_to_jurisdictions,project_root):
-    choice_list = [x for x in os.listdir(path_to_jurisdictions) if os.path.isdir(os.path.join(path_to_jurisdictions,x))]
-    print('Pick the filesystem directory for your jurisdiction.')
-    juris_idx,jurisdiction_name = ui.pick_one(choice_list,None,item='jurisdiction')
-
-    if juris_idx is None:
-        # user chooses jurisdiction short_name
-        jurisdiction_name = input('Enter a short name (alphanumeric only, no spaces) for your jurisdiction '
-                                  '(e.g., \'NC\')\n')
+def ensure_context(path_to_jurisdictions,project_root,jurisdiction_name):
     juris_path = os.path.join(path_to_jurisdictions,jurisdiction_name)
 
     # create jurisdiction directory
@@ -649,7 +632,7 @@ def ensure_context(path_to_jurisdictions,project_root):
 
     # ensure context directory has what it needs
     templates = os.path.join(project_root,'templates/context_templates')
-    enums = os.path.join(project_root,'CDF_schema_def_info/enumerations')
+    enums = os.path.join(project_root,'election_anomaly/CDF_schema_def_info/enumerations')
     context_file_list = os.listdir(templates)
     if not all([os.path.isfile(os.path.join(juris_path,'context',x)) for x in context_file_list]):
         # pull necessary enumeration from db: ReportingUnitType

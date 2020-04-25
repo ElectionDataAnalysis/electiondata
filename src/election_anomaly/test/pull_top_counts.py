@@ -21,7 +21,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=eng)
     analysis_session = Session()
 
-    jurisdiction = ui.pick_juris_from_filesystem(analysis_session.bind,project_root,
+    jurisdiction = ui.pick_juris_from_filesystem(aproject_root,
                                                  path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
                                                  jurisdiction_name=juris_name)
     e =an.Election(analysis_session,jurisdiction,project_root)

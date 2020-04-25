@@ -40,7 +40,7 @@ if __name__ == '__main__':
 	sep = '\t'
 	juris_short_name = 'NC'
 	juris = ui.pick_juris_from_filesystem(
-		new_df_session.bind,project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
+		project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
 		jurisdiction_name=juris_short_name)
 
 	# load new datafile

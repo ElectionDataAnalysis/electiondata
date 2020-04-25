@@ -243,13 +243,18 @@ def check_count_columns(df,file,mungerdir,cdf_schema_def_dir):
 	return df
 
 
-def pick_juris_from_filesystem(con,project_root,path_to_jurisdictions='jurisdictions/',jurisdiction_name=None):
+def pick_juris_from_filesystem(project_root,path_to_jurisdictions='jurisdictions/',jurisdiction_name=None):
 	"""Returns a State object.
 	If <jurisdiction_name> is given, this just initializes based on info
 	in the folder with that name; """
 	# TODO need to get the ReportingUnit.Id for the jurisdiction somewhere and pass it to the row-by-row processor
 	if jurisdiction_name is None:
-		sf.ensure_context(path_to_jurisdictions,project_root)
+		print('Pick the filesystem directory for your jurisdiction.')
+		choice_list = [x for x in os.listdir(path_to_jurisdictions) if
+					   os.path.isdir(os.path.join(path_to_jurisdictions,x))]
+		juris_idx,jurisdiction_name = pick_one(choice_list,None,item='jurisdiction')
+
+		sf.ensure_context(path_to_jurisdictions,project_root,jurisdiction_name)
 	else:
 		print(f'Directory {jurisdiction_name} is assumed to exist and have the required contents.')
 	# initialize the jurisdiction
@@ -855,7 +860,7 @@ def new_datafile(session,munger,raw_path,raw_file_sep,encoding,project_root=None
 		get_project_root()
 	if not juris:
 		juris = pick_juris_from_filesystem(
-			session.bind,project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'))
+			project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'))
 	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
 
 	# TODO where do we update db from jurisdiction context file?
