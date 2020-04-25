@@ -7,6 +7,7 @@ import munge_routines as mr
 import user_interface as ui
 import re
 from pathlib import Path
+import csv
 
 
 class Jurisdiction:
@@ -127,6 +128,7 @@ class Jurisdiction:
         self.path_to_juris_dir = os.path.join(path_to_parent_dir, self.short_name)
 
         # Ensure that context directory exists and is missing no essential files
+        ensure_context(path_to_parent_dir,project_root)
         c_path = os.path.join(self.path_to_juris_dir,'context/')
         if not os.path.isdir(c_path):
             Path(c_path).mkdir(parents=True,exist_ok=True)
@@ -563,40 +565,6 @@ class Munger:
         self.raw_identifiers.to_csv(f'{self.path_to_munger_dir}raw_identifiers.txt',sep='\t',index=False)
         return
 
-    def find_unmatched(self,raw,element):
-        """find any instances of <element> in raw data <raw> not interpretable by <self>"""
-        # TODO under construction
-        raw_copy = raw.copy()
-        ri_filtered = self.raw_identifiers[self.raw_identifiers.cdf_element == element]
-        in_munger = ri_filtered['raw_identifier_value'].unique()
-
-        # identify instances that are not matched in the munger's raw_identifier table
-        # limit to just the given element
-
-        # read source and formula for element
-        source = self.cdf_elements.loc[element,'source']
-        formula = self.cdf_elements.loc[element,'raw_identifier_formula']
-
-        # rename columns and formula fields as necessary
-        d = self.column_rename_dictionary().items()
-        raw_copy.rename(columns=d,inplace=True)
-        for k,v in d.items():
-            formula = formula.replace(k,v)
-
-        # check for unmatched
-        if source == 'row':
-            mr.add_munged_column_NEW(raw_copy,self,element,inplace=False)
-            in_raw = raw_copy[element].unique()
-            unmatched = [x for x in in_raw if x not in in_munger]
-        elif source == 'column':
-            pass
-            # TODO generalize for multi-row headers
-
-            unmatched = [x for x in in_raw if x not in in_munger]
-        else:
-            unmatched = []
-        return unmatched
-
     def __init__(self,dir_path):
         """<dir_path> is the directory for the munger."""
         while not os.path.isdir(dir_path):
@@ -623,6 +591,7 @@ class Munger:
 # TODO before processing context files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
 
+
 def read_munger_info_from_files(dir_path):
     # read cdf_element info and add column for list of fields used in formulas
     cdf_elements = pd.read_csv(os.path.join(dir_path,'cdf_elements.txt'),sep='\t',index_col='name').fillna('')
@@ -646,6 +615,70 @@ def read_munger_info_from_files(dir_path):
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
     #   will need to rename some columns of the raw file before processing.
     return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,raw_identifiers]
+
+
+def ensure_context(path_to_jurisdictions,project_root):
+    choice_list = [x for x in os.listdir(path_to_jurisdictions) if os.path.isdir(os.path.join(path_to_jurisdictions,x))]
+    print('Pick the filesystem directory for your jurisdiction.')
+    juris_idx,jurisdiction_name = ui.pick_one(choice_list,None,item='jurisdiction')
+
+    if juris_idx is None:
+        # user chooses jurisdiction short_name
+        jurisdiction_name = input('Enter a short name (alphanumeric only, no spaces) for your jurisdiction '
+                                  '(e.g., \'NC\')\n')
+    juris_path = os.path.join(path_to_jurisdictions,jurisdiction_name)
+
+    # create jurisdiction directory
+    try:
+        os.mkdir(juris_path)
+    except FileExistsError:
+        print(f'Directory {juris_path} already exists, will be preserved')
+    else:
+        print(f'Directory {juris_path} created')
+
+    # create subdirectories
+    subdir_list = ['context','data','output']
+    for sd in subdir_list:
+        sd_path = os.path.join(juris_path,sd)
+        try:
+            os.mkdir(sd_path)
+        except FileExistsError:
+            print(f'Directory {sd_path} already exists, will be preserved')
+        else:
+            print(f'Directory {sd_path} created')
+
+    # ensure context directory has what it needs
+    templates = os.path.join(project_root,'templates/context_templates')
+    enums = os.path.join(project_root,'CDF_schema_def_info/enumerations')
+    context_file_list = os.listdir(templates)
+    if not all([os.path.isfile(os.path.join(juris_path,'context',x)) for x in context_file_list]):
+        # pull necessary enumeration from db: ReportingUnitType
+        e_path = os.path.join(enums,'ReportingUnitType.txt')
+        with open(e_path,'r') as f:
+            rut = f.readlines()
+        standard_ru_types = set(x.strip() for x in rut if x != 'other')
+        ru = ui.fill_context_file(os.path.join(juris_path,'context'),
+                               templates,
+                               'ReportingUnit',standard_ru_types,'ReportingUnitType')
+        ru_list = ru['Name'].to_list()
+        ui.fill_context_file(os.path.join(juris_path,'context'),
+                          templates,
+                          'Office',None,None)  # note check that ElectionDistricts are RUs happens below
+        # Party.txt
+        ui.fill_context_file(os.path.join(juris_path,'context'),
+                          templates,
+                          'Party',None,None)
+
+        # remark
+        remark_path = os.path.join(juris_path,'context','remark.txt')
+        open(remark_path,'a').close()  # creates file if it doesn't exist already
+        with open(remark_path,'r') as f:
+            remark = f.read()
+        print(f'Current contents of remark.txt is:\n{remark}\n')
+        input(
+            f'In the file context/remark.txt, add or correct anything that user should know about the jurisdiction {jurisdiction_name}.\n'
+            f'Then hit return to continue.')
+    return
 
 if __name__ == '__main__':
     print('Done (states_and_files)!')

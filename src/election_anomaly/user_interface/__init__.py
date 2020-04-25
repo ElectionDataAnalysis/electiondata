@@ -81,13 +81,13 @@ def pick_one(choices,return_col,item='row',required=False):
 		df = pd.DataFrame(np.array(list(choices)).transpose(),columns=[item])
 		return_col = item
 	else:
-		df = choices
-		assert all(isinstance(x,int) for x in df.index),'Dataframe index must consist of integers'
+		df = choices.copy()
+		df.index = range(choices.shape[0])
 	if df.empty:
 		return None, None
 	print(df)
 
-	choice = max(df.index) + 1  # guaranteed not to be in df.index at start
+	choice = -1  # guaranteed not to be in df.index
 
 	while choice not in df.index:
 		if not required:
@@ -108,7 +108,7 @@ def pick_one(choices,return_col,item='row',required=False):
 
 	# return view to default width
 	pd.reset_option('display.max_columns')
-	return choice, df.loc[choice,return_col]
+	return choices.index[choice], df.loc[choice,return_col]
 
 
 def pick_paramfile(project_root):
@@ -248,61 +248,7 @@ def pick_juris_from_filesystem(con,project_root,path_to_jurisdictions='jurisdict
 	in the folder with that name; """
 	# TODO need to get the ReportingUnit.Id for the jurisdiction somewhere and pass it to the row-by-row processor
 	if jurisdiction_name is None:
-		choice_list = [x for x in os.listdir(path_to_jurisdictions) if os.path.isdir(os.path.join(path_to_jurisdictions,x))]
-		print('Pick the filesystem directory for your jurisdiction.')
-		juris_idx,jurisdiction_name = pick_one(choice_list,None,item='jurisdiction')
-
-		if juris_idx is None:
-			# user chooses jurisdiction short_name
-			jurisdiction_name = input('Enter a short name (alphanumeric only, no spaces) for your jurisdiction '
-							   '(e.g., \'NC\')\n')
-		juris_path = os.path.join(path_to_jurisdictions,jurisdiction_name)
-
-		# create jurisdiction directory
-		try:
-			os.mkdir(juris_path)
-		except FileExistsError:
-			print(f'Directory {juris_path} already exists, will be preserved')
-		else:
-			print(f'Directory {juris_path} created')
-
-		# create subdirectories
-		subdir_list = ['context','data','output']
-		for sd in subdir_list:
-			sd_path = os.path.join(juris_path,sd)
-			try:
-				os.mkdir(sd_path)
-			except FileExistsError:
-				print(f'Directory {sd_path} already exists, will be preserved')
-			else:
-				print(f'Directory {sd_path} created')
-
-		# ensure context directory has what it needs
-		context_file_list = ['Office.txt','Party.txt','ReportingUnit.txt','remark.txt']
-		if not all([os.path.isfile(os.path.join(juris_path,'context',x)) for x in context_file_list]):
-			# pull necessary enumeration from db: ReportingUnitType
-			ru_type = pd.read_sql_table('ReportingUnitType',con,index_col='Id')
-			standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
-			ru = fill_context_file(os.path.join(juris_path,'context'),
-							  os.path.join(project_root,'templates/context_templates'),
-								'ReportingUnit',standard_ru_types,'ReportingUnitType')
-			ru_list = ru['Name'].to_list()
-			fill_context_file(os.path.join(juris_path,'context'),
-							  os.path.join(project_root,'templates/context_templates'),
-								'Office',None,None)  # note check that ElectionDistricts are RUs happens below
-			# Party.txt
-			fill_context_file(os.path.join(juris_path,'context'),
-							  os.path.join(project_root,'templates/context_templates'),
-								'Party',None,None)
-			# TODO remark
-			remark_path = os.path.join(juris_path,'context','remark.txt')
-			open(remark_path,'a').close()	# creates file if it doesn't exist already
-			with open(remark_path,'r') as f:
-				remark = f.read()
-			print(f'Current contents of remark.txt is:\n{remark}\n')
-			# TODO deal with non-state top-level jurisdictions
-			input(f'In the file context/remark.txt, add or correct anything that user should know about the jurisdiction {jurisdiction_name}.\n'
-						f'Then hit return to continue.')
+		sf.ensure_context(path_to_jurisdictions,project_root)
 	else:
 		print(f'Directory {jurisdiction_name} is assumed to exist and have the required contents.')
 	# initialize the jurisdiction
@@ -326,68 +272,6 @@ def format_check_formula(formula,fields):
 	m = p.findall(formula)
 	missing = [x for x in m if x not in fields]
 	return missing
-
-
-def confirm_or_correct_cdf_element_file(cdf_elements_file,header_rows,element_list):
-	"""
-	Checks that <cdf_elements_file> has the right columns;
-	if not, guides user to correcting.
-	"""
-	cdft_df = pd.read_csv(cdf_elements_file,sep='\t')  # note index
-
-	# check column headings
-	while len(cdft_df.columns) != 3 or cdft_df.columns.to_list() != ['cdf_element','raw_identifier_formula','source']:
-		input(f'The file {cdf_elements_file} should tab-separated with three columns\n'
-			  f'labeled \'cdf_element\' and \'raw_identifier_formula\'.\n'
-			  f'Correct the file as necessary and hit return to continue')
-		cdft_df = pd.read_csv(cdf_elements_file,sep='\t')  # note index
-
-	# check for missing rows
-	missing_elements = [x for x in element_list if x not in cdft_df.cdf_element.to_list()]
-	while missing_elements:
-		input(f'Rows are missing from {cdf_elements_file}:\n'
-			  f'{",".join(missing_elements)}\n'
-			  f'Add them and hit return to continue')
-		cdft_df = pd.read_csv(cdf_elements_file,sep='\t')  # note index
-		missing_elements = [x for x in element_list if x not in cdft_df.cdf_element.to_list()]
-
-	# check that row formulas refer to existing columns of raw file, and column formulas refer to header rows
-	bad_formulas = [1]
-	while bad_formulas:
-		bad_formulas = []
-		misspellings = set()
-		for idx,row in cdft_df.iterrows():
-			new_misspellings = format_check_formula(row['raw_identifier_formula'],raw_cols)
-			if new_misspellings:
-				misspellings = misspellings.union(new_misspellings)
-				bad_formulas.append(row.cdf_element)
-		if misspellings:
-			print(f'Some formula parts are not recognized as raw column labels:\n'
-				  f'{",".join([f"<{m}>" for m in misspellings])}\n\n'
-				  f'Raw columns are: {",".join(raw_cols)}\n')
-
-		if bad_formulas:
-			print(f'Unusable formulas for {",".join(bad_formulas)}.\n')
-			input(f'Fix the cdf_elements.txt file \n and hit return to continue.\n')
-			# TODO check raw_columns.txt somewhere else, or let this routine check it & pick up alterations
-		cdft_df = pd.read_csv(cdf_elements_file,sep='\t')  # note index
-	return cdft_df
-
-
-def confirm_or_correct_ballot_measure_style(options_file,bms_file,sep='\t'):
-	bmso_df = pd.read_csv(options_file,sep=sep)
-	try:
-		with open(bms_file,'r') as f:
-			bms = f.read()
-	except FileNotFoundError:
-		bms = None
-	if bms not in bmso_df['short_name'].to_list():
-		print('Ballot measure style not recognized. Please pick a new one.')
-		bms_idx,bms = pick_one(bmso_df,'short_name',item='ballot measure style',required=True)
-		with open(bms_file,'w') as f:
-			f.write(bms)
-	bms_description = bmso_df[bmso_df.short_name==bms]['description'].iloc[0]
-	return bms, bms_description
 
 
 def create_file_from_template(template_file,new_file,sep='\t'):
@@ -992,9 +876,8 @@ def new_datafile(session,munger,raw_path,raw_file_sep,encoding,project_root=None
 
 def pick_or_create_directory(root_path,d_name):
 	allowed = re.compile(r'^\w+$')
-	while not os.path.isdir(root_path,d_name):
-		if not os.path.isdir(root_path,d_name):
-			print(f'No subdirectory {d_name} in {root_path}.')
+	while not os.path.isdir(os.path.join(root_path,d_name)):
+		print(f'No subdirectory {d_name} in {root_path}. Here are the existing subdirectories:')
 		idx, d_name = pick_one(os.listdir(root_path),None,'directory')
 		if idx is None:
 			d_name = ''
