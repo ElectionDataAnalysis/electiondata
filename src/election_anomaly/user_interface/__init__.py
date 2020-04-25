@@ -80,6 +80,7 @@ def pick_one(choices,return_col,item='row',required=False):
 	if return_col is None:
 		df = pd.DataFrame(np.array(list(choices)).transpose(),columns=[item])
 		return_col = item
+		choices = df  # regularizes 'choices.index[choice]' in return
 	else:
 		df = choices.copy()
 		df.index = range(choices.shape[0])
