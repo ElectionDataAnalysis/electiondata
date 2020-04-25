@@ -2,6 +2,7 @@ import db_routines as dbr
 import user_interface as ui
 from sqlalchemy.orm import sessionmaker
 import tkinter as tk
+import os
 
 
 if __name__ == '__main__':
@@ -25,6 +26,9 @@ if __name__ == '__main__':
 	new_df_session = Session()
 
 	# pick munger
+	munger = ui.pick_munger(
+		new_df_session,munger_dir=os.path.join(project_root,'mungers'),
+		root=project_root)
 
 	# get datafile & info
 	dfile_d, enum_d, raw_file = ui.pick_datafile(project_root,new_df_session)
@@ -44,8 +48,8 @@ if __name__ == '__main__':
 	if encoding == '':
 		encoding = 'iso-8859-1'
 
-	ui.new_datafile_OLD(
-		raw_file,sep,new_df_session,juris_short_name=juris_short_name,encoding=encoding,project_root=project_root)
+	ui.new_datafile_NEW(new_df_session,munger,
+		raw_file,sep,juris=juris_short_name,encoding=encoding,project_root=project_root)
 
 	eng.dispose()
 	print('Done! (user_interface)')

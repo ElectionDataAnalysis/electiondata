@@ -160,7 +160,7 @@ def add_integer_cols(session,table,col_list):
 
 
 def drop_cols(session,table,col_list):
-    drop = ','.join([f' DROP COLUMN {c}' for c in col_list])
+    drop = ','.join([f' DROP COLUMN "{c}"' for c in col_list])
     q = f'ALTER TABLE "{table}" {drop}'
     sql_ids=[]
     strs = []
@@ -286,9 +286,9 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
 
     if raw_to_votecount:
         # join with SECVCJ
-        secvcj = pd.read_sql_table('SelectionElectionContestVoteCountJoin',session.bind,index_col=None)
+        secvcj = pd.read_sql_table('ElectionContestSelectionVoteCountJoin',session.bind,index_col=None)
         # drop columns that don't belong, but were temporarily created in order to get VoteCount_Id correctly into SECVCJ
-        target=target.drop(['Election_Id','Contest_Id','Selection_Id'],axis=1)
+        target=target.drop(['ElectionContestJoin_Id','ContestSelectionJoin_Id'],axis=1)
         target=target.merge(secvcj,left_on='Id',right_on='VoteCount_Id')
         target=target.drop(['Id','VoteCount_Id'],axis=1)
     df_to_db = dframe.copy()

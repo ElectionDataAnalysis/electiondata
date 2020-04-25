@@ -968,7 +968,7 @@ def new_datafile_NEW(session,munger,raw_path,raw_file_sep,encoding,project_root=
 
 	# TODO munger.check_against_datafile(raw,cols_to_munge,numerical_columns)
 
-	mr.raw_elements_to_cdf_NEW(session,project_root,juris,munger,raw)
+	mr.raw_elements_to_cdf_NEW(session,project_root,juris,munger,raw,info_cols,numerical_columns)
 
 	# TODO
 	return
