@@ -350,7 +350,7 @@ def enum_col_from_id_othertext(df,enum,enum_df):
 
 
 def enum_col_to_id_othertext(df,type_col,enum_df):
-    """Returns a copy of dataframe <df>, replacing a plaintext <type> column (e.g., 'CountItemType') with
+    """Returns a copy of dataframe <df>, replacing a plaintext <type_col> column (e.g., 'CountItemType') with
     the corresponding two id and othertext columns (e.g., 'CountItemType_Id' and 'OtherCountItemType
     using the enumeration given in <enum_df>"""
     assert type_col in df.columns

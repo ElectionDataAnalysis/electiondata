@@ -617,8 +617,15 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 			# TODO enter_new pulls from file system; would be better here to pull from db
 			save_record_to_filesystem(storage_dir,element,user_record,enum_plain_text_values)
 
+
 		# save record to db
 		try:
+			element_df = pd.read_sql_table(element,sess.bind)
+			enum_list = [x[5:] for x in element_df.columns if x[:5]=='Other']
+			for e in enum_list:
+				enum_df = pd.read_sql_table(e,sess.bind)
+				user_record[f'{e}_Id'],user_record[f'Other{e}'] = mr.get_id_othertext_from_enum_value(enum_df,user_record[e])
+				user_record.pop(e)
 			element_df = dbr.dframe_to_sql(pd.DataFrame(user_record,index=[-1]),sess,None,element,index_col='Id')
 			# find index matching inserted element
 			idx = element_df.loc[(element_df[list(user_record)] == pd.Series(user_record)).all(axis=1)].first_valid_index()
@@ -653,8 +660,10 @@ def get_or_create_election_in_db(sess,project_root):
 
 def pick_record_from_db(sess,element,known_info_d={}):
 	"""Get id and info from database, if it exists"""
-	print(f'Pick the {element} from the database:')
 	element_df = pd.read_sql_table(element,sess.bind,index_col='Id')
+	# TODO filter by known_info_d filtered_file = from_file.loc[(from_file[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
+	if element_df.empty:
+		return None,None
 
 	# add columns for plaintext of any enumerations
 	enums = dbr.read_enums_from_db_table(sess,element)
@@ -662,7 +671,7 @@ def pick_record_from_db(sess,element,known_info_d={}):
 		e_df = pd.read_sql_table(e,sess.bind,index_col='Id')
 		element_df = mr.enum_col_from_id_othertext(element_df,e,e_df)
 
-	# TODO filter by known_info_d
+	print(f'Pick the {element} from the database:')
 	element_idx, values = pick_one(element_df,'Name',element)
 	return element_idx, values
 
@@ -686,7 +695,7 @@ def pick_record_from_file_system(storage_dir,table,name_field='Name',known_info_
 		idx, record = pick_one(filtered_file,name_field)
 	else:
 		idx, record = None, None
-	if idx:
+	if idx is not None:
 		record = dict(filtered_file.loc[idx])
 	else:
 		record = None
@@ -708,7 +717,7 @@ def save_record_to_filesystem(storage_dir,table,user_record,enum_plain_text_valu
 		records = pd.read_csv(storage_file,sep='\t')
 	else:
 		# create empty, with all cols of from_db except Id
-		records = pd.DataFrame([],columns = user_record.keys())  # TODO create one-line dataframe from user_record
+		records = pd.DataFrame([],columns=user_record.keys())  # TODO create one-line dataframe from user_record
 	records.append(user_record,ignore_index=True)
 	records.to_csv(storage_file,sep='\t')
 	return
@@ -975,4 +984,5 @@ def new_datafile(session,munger,raw_path,raw_file_sep,encoding,project_root=None
 
 if __name__ == '__main__':
 	print("Data loading routines moved to src/election_anomaly/test folder")
+
 	exit()
