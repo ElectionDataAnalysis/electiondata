@@ -21,6 +21,8 @@ The Common Data Format does not have an obviously natural way to handle the case
 ### Create Munger
 [//]: # "TODO explain what header_row 0 means, or header_row 3,4"
 [//]: # "TODO header_row entry in format.txt should be a comma-separated list of integers"
+[//]: # "TODO order of rows in cdf_elements matters ['ReportingUnit','Election','Office','Party','CandidateContest','Candidate','BallotMeasureContest','BallotMeasureSelection','CountItemType']"
+
 
 ### Load data from a datafile into an existing database
 * User uploads datafile, providing:

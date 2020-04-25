@@ -1,6 +1,5 @@
 #!usr/bin/python3
 import os.path
-
 from scipy import stats as stats
 import scipy.spatial.distance as dist
 import numpy as np

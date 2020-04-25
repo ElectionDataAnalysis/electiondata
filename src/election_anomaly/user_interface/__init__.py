@@ -10,6 +10,7 @@ import numpy as np
 import csv
 from sqlalchemy.orm import sessionmaker
 import os
+from pathlib import Path
 import ntpath
 import re
 import datetime
@@ -68,16 +69,24 @@ def pick_filepath(initialdir='~/'):
 	return fpath
 
 
-def pick_one(df,return_col,item='row',required=False):
-	"""Returns index and <return_col> value of item chosen by user"""
-	# TODO check that index entries are positive ints (and handle error)
+def pick_one(choices,return_col,item='row',required=False):
+	"""Returns index and <return_col> value of item chosen by user
+	<choices> is a dataframe, unless <return_col> is None, in which case <choices>
+	may be a list or a set"""
 
 	# show wider view
-	pd.set_option('display.max_columns',9)
+	pd.set_option('display.max_columns',3)
 
+	if return_col is None:
+		df = pd.DataFrame(np.array(list(choices)).transpose(),columns=[item])
+		return_col = item
+	else:
+		df = choices
+		assert all(isinstance(x,int) for x in df.index),'Dataframe index must consist of integers'
 	if df.empty:
 		return None, None
 	print(df)
+
 	choice = max(df.index) + 1  # guaranteed not to be in df.index at start
 
 	while choice not in df.index:
@@ -94,7 +103,7 @@ def pick_one(df,return_col,item='row',required=False):
 				if choice not in df.index:
 					print(f'Enter an option from the leftmost column. Please try again.')
 			except ValueError:
-				print(f'You must enter a number {req_str}, then hit return. Please try again.')
+				print(f'You must enter a number{req_str}, then hit return. Please try again.')
 	print(f'Chosen {item} is {df.loc[choice,return_col]}\n\n')
 
 	# return view to default width
@@ -240,9 +249,8 @@ def pick_juris_from_filesystem(con,project_root,path_to_jurisdictions='jurisdict
 	# TODO need to get the ReportingUnit.Id for the jurisdiction somewhere and pass it to the row-by-row processor
 	if jurisdiction_name is None:
 		choice_list = [x for x in os.listdir(path_to_jurisdictions) if os.path.isdir(os.path.join(path_to_jurisdictions,x))]
-		juris_df = pd.DataFrame(choice_list,columns=['Jurisdiction'])
 		print('Pick the filesystem directory for your jurisdiction.')
-		juris_idx,jurisdiction_name = pick_one(juris_df,'Jurisdiction',item='jurisdiction')
+		juris_idx,jurisdiction_name = pick_one(choice_list,None,item='jurisdiction')
 
 		if juris_idx is None:
 			# user chooses jurisdiction short_name
@@ -298,7 +306,7 @@ def pick_juris_from_filesystem(con,project_root,path_to_jurisdictions='jurisdict
 	else:
 		print(f'Directory {jurisdiction_name} is assumed to exist and have the required contents.')
 	# initialize the jurisdiction
-	ss = sf.Jurisdiction(jurisdiction_name,path_to_jurisdictions)
+	ss = sf.Jurisdiction(jurisdiction_name,path_to_jurisdictions,project_root=project_root)
 	ss.check_election_districts()
 	return ss
 
@@ -980,6 +988,23 @@ def new_datafile(session,munger,raw_path,raw_file_sep,encoding,project_root=None
 
 	# TODO
 	return
+
+
+def pick_or_create_directory(root_path,d_name):
+	allowed = re.compile(r'^\w+$')
+	while not os.path.isdir(root_path,d_name):
+		if not os.path.isdir(root_path,d_name):
+			print(f'No subdirectory {d_name} in {root_path}.')
+		idx, d_name = pick_one(os.listdir(root_path),None,'directory')
+		if idx is None:
+			d_name = ''
+			while not allowed.match(d_name):
+				d_name = input('Enter subdirectory name (alphanumeric and underscore only):\n')
+			full_path = os.path.join(root_path,d_name)
+			confirm = input(f'Confirm creation of directory (y/n)?\n{full_path}\n')
+			if confirm:
+				Path(full_path).mkdir(parents=True,exist_ok=True)
+	return d_name
 
 
 if __name__ == '__main__':

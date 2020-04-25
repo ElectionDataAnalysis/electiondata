@@ -6,6 +6,7 @@ import warnings   # TODO use warnings module to handle warnings in all files
 import munge_routines as mr
 import user_interface as ui
 import re
+from pathlib import Path
 
 
 class Jurisdiction:
@@ -114,19 +115,22 @@ class Jurisdiction:
         # TODO help user add appropriate lines to munger/raw_identifiers.txt and update munger
         return
 
-    def __init__(self,short_name,path_to_parent_dir):        # reporting_units,elections,parties,offices):
+    def __init__(self,short_name,path_to_parent_dir,project_root=None):        # reporting_units,elections,parties,offices):
         """ short_name is the name of the directory containing the jurisdiction info, including data,
          and is used other places as well.
          path_to_parent_dir is the parent directory of dir_name
         """
-        self.short_name = short_name
-        if path_to_parent_dir[-1] != '/':     # should end in /
-            path_to_parent_dir += '/'
-        self.path_to_juris_dir = path_to_parent_dir + short_name + '/'
-        assert os.path.isdir(self.path_to_juris_dir),'Error: No directory ' + self.path_to_juris_dir
-        assert os.path.isdir(self.path_to_juris_dir + 'context/'), \
-            'Error: No directory ' + self.path_to_juris_dir + 'context/'
-        # Check that context directory is missing no essential files
+        if not project_root:
+            project_root = ui.get_project_root()
+
+        self.short_name = ui.pick_or_create_directory(path_to_parent_dir,short_name)
+        self.path_to_juris_dir = os.path.join(path_to_parent_dir, self.short_name)
+
+        # Ensure that context directory exists and is missing no essential files
+        c_path = os.path.join(self.path_to_juris_dir,'context/')
+        if not os.path.isdir(c_path):
+            Path(c_path).mkdir(parents=True,exist_ok=True)
+            print(f'Context directory created.')
         context_file_list = ['Office.txt','remark.txt','ReportingUnit.txt']
         file_missing_list = [ff for ff in context_file_list
                              if not os.path.isfile(f'{self.path_to_juris_dir}context/{ff}')]

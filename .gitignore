@@ -1,6 +1,7 @@
 *.pyc
 local/
 .DS_Store
+src/election_anomaly/test/prepare_context_munger_db.py
 src/election_anomaly/test/test2.py
 src/election_anomaly/test/test.py
 src/election_anomaly/__pycache__
