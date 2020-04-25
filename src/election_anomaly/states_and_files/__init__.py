@@ -324,6 +324,8 @@ class Munger:
             print(f'Some {element}s in the results file cannot be interpreted by the munger {self.name}.')
             print(f'Note: {element}s listed in unmunged_{element}s.txt are interpreted as \'to be ignored\'.')
             outfile = f'unmunged_{element}s.txt'
+            # TODO when showing unmunged candidates, show only unmunged candidates from munged contests
+            #  but first check for unmunged contests!
             ui.show_sample(
                 not_munged,f'{element}s in datafile','cannot be munged',outfile=outfile,dir=self.path_to_munger_dir)
             add_to_munger = input('Would you like to add some/all of these to the munger (y/n)?\n')

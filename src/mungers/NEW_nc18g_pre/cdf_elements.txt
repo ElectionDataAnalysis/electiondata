@@ -1,10 +1,10 @@
 name	raw_identifier_formula	source
-Office	<Contest Name>	row
 ReportingUnit	<County>;<Precinct>	row
+Election		other
+Office	<Contest Name>	row
 Party	<Choice Party>	row
-Candidate	<Choice>	row
 CandidateContest	<Contest Name>	row
+Candidate	<Choice>	row
 BallotMeasureContest	<Contest Name>	row
 BallotMeasureSelection	<Choice>	row
-Election		other
 CountItemType	<0>	column

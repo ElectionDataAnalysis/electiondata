@@ -440,7 +440,6 @@ def raw_elements_to_cdf_NEW(session,project_root,juris,mu,raw,info_cols,num_cols
         if finalize == True:
             if t != 'BallotMeasureSelection':  # TODO ad hoc
                 mu.finalize_element(t,working,juris,session,project_root)
-        name_field = get_name_field(t)
 
     # remove original row-munge columns
     munged = [x for x in working.columns if x[-len(mu.field_rename_suffix):] == mu.field_rename_suffix]
