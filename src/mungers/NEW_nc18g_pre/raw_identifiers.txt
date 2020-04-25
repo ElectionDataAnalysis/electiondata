@@ -1148,343 +1148,174 @@ ReportingUnit	North Carolina;Gates County;Precinct 4N	GATES;4N
 ReportingUnit	North Carolina;Gates County;Precinct 4S	GATES;4S
 ReportingUnit	North Carolina;Gates County;Precinct 5	GATES;5
 CandidateContest	North Carolina;General Assembly House of Representatives District 1	NC HOUSE OF REPRESENTATIVES DISTRICT 001
-Office	North Carolina;General Assembly House of Representatives District 10	NC HOUSE OF REPRESENTATIVES DISTRICT 010
 CandidateContest	North Carolina;General Assembly House of Representatives District 10	NC HOUSE OF REPRESENTATIVES DISTRICT 010
-Office	North Carolina;General Assembly House of Representatives District 100	NC HOUSE OF REPRESENTATIVES DISTRICT 100
 CandidateContest	North Carolina;General Assembly House of Representatives District 100	NC HOUSE OF REPRESENTATIVES DISTRICT 100
-Office	North Carolina;General Assembly House of Representatives District 101	NC HOUSE OF REPRESENTATIVES DISTRICT 101
 CandidateContest	North Carolina;General Assembly House of Representatives District 101	NC HOUSE OF REPRESENTATIVES DISTRICT 101
-Office	North Carolina;General Assembly House of Representatives District 102	NC HOUSE OF REPRESENTATIVES DISTRICT 102
 CandidateContest	North Carolina;General Assembly House of Representatives District 102	NC HOUSE OF REPRESENTATIVES DISTRICT 102
-Office	North Carolina;General Assembly House of Representatives District 103	NC HOUSE OF REPRESENTATIVES DISTRICT 103
 CandidateContest	North Carolina;General Assembly House of Representatives District 103	NC HOUSE OF REPRESENTATIVES DISTRICT 103
-Office	North Carolina;General Assembly House of Representatives District 104	NC HOUSE OF REPRESENTATIVES DISTRICT 104
 CandidateContest	North Carolina;General Assembly House of Representatives District 104	NC HOUSE OF REPRESENTATIVES DISTRICT 104
-Office	North Carolina;General Assembly House of Representatives District 105	NC HOUSE OF REPRESENTATIVES DISTRICT 105
 CandidateContest	North Carolina;General Assembly House of Representatives District 105	NC HOUSE OF REPRESENTATIVES DISTRICT 105
-Office	North Carolina;General Assembly House of Representatives District 106	NC HOUSE OF REPRESENTATIVES DISTRICT 106
 CandidateContest	North Carolina;General Assembly House of Representatives District 106	NC HOUSE OF REPRESENTATIVES DISTRICT 106
-Office	North Carolina;General Assembly House of Representatives District 107	NC HOUSE OF REPRESENTATIVES DISTRICT 107
 CandidateContest	North Carolina;General Assembly House of Representatives District 107	NC HOUSE OF REPRESENTATIVES DISTRICT 107
-Office	North Carolina;General Assembly House of Representatives District 108	NC HOUSE OF REPRESENTATIVES DISTRICT 108
 CandidateContest	North Carolina;General Assembly House of Representatives District 108	NC HOUSE OF REPRESENTATIVES DISTRICT 108
-Office	North Carolina;General Assembly House of Representatives District 109	NC HOUSE OF REPRESENTATIVES DISTRICT 109
 CandidateContest	North Carolina;General Assembly House of Representatives District 109	NC HOUSE OF REPRESENTATIVES DISTRICT 109
-Office	North Carolina;General Assembly House of Representatives District 11	NC HOUSE OF REPRESENTATIVES DISTRICT 011
 CandidateContest	North Carolina;General Assembly House of Representatives District 11	NC HOUSE OF REPRESENTATIVES DISTRICT 011
-Office	North Carolina;General Assembly House of Representatives District 110	NC HOUSE OF REPRESENTATIVES DISTRICT 110
 CandidateContest	North Carolina;General Assembly House of Representatives District 110	NC HOUSE OF REPRESENTATIVES DISTRICT 110
-Office	North Carolina;General Assembly House of Representatives District 111	NC HOUSE OF REPRESENTATIVES DISTRICT 111
 CandidateContest	North Carolina;General Assembly House of Representatives District 111	NC HOUSE OF REPRESENTATIVES DISTRICT 111
-Office	North Carolina;General Assembly House of Representatives District 112	NC HOUSE OF REPRESENTATIVES DISTRICT 112
 CandidateContest	North Carolina;General Assembly House of Representatives District 112	NC HOUSE OF REPRESENTATIVES DISTRICT 112
-Office	North Carolina;General Assembly House of Representatives District 113	NC HOUSE OF REPRESENTATIVES DISTRICT 113
 CandidateContest	North Carolina;General Assembly House of Representatives District 113	NC HOUSE OF REPRESENTATIVES DISTRICT 113
-Office	North Carolina;General Assembly House of Representatives District 114	NC HOUSE OF REPRESENTATIVES DISTRICT 114
 CandidateContest	North Carolina;General Assembly House of Representatives District 114	NC HOUSE OF REPRESENTATIVES DISTRICT 114
-Office	North Carolina;General Assembly House of Representatives District 115	NC HOUSE OF REPRESENTATIVES DISTRICT 115
 CandidateContest	North Carolina;General Assembly House of Representatives District 115	NC HOUSE OF REPRESENTATIVES DISTRICT 115
-Office	North Carolina;General Assembly House of Representatives District 116	NC HOUSE OF REPRESENTATIVES DISTRICT 116
 CandidateContest	North Carolina;General Assembly House of Representatives District 116	NC HOUSE OF REPRESENTATIVES DISTRICT 116
-Office	North Carolina;General Assembly House of Representatives District 117	NC HOUSE OF REPRESENTATIVES DISTRICT 117
 CandidateContest	North Carolina;General Assembly House of Representatives District 117	NC HOUSE OF REPRESENTATIVES DISTRICT 117
-Office	North Carolina;General Assembly House of Representatives District 118	NC HOUSE OF REPRESENTATIVES DISTRICT 118
 CandidateContest	North Carolina;General Assembly House of Representatives District 118	NC HOUSE OF REPRESENTATIVES DISTRICT 118
-Office	North Carolina;General Assembly House of Representatives District 119	NC HOUSE OF REPRESENTATIVES DISTRICT 119
 CandidateContest	North Carolina;General Assembly House of Representatives District 119	NC HOUSE OF REPRESENTATIVES DISTRICT 119
-Office	North Carolina;General Assembly House of Representatives District 12	NC HOUSE OF REPRESENTATIVES DISTRICT 012
 CandidateContest	North Carolina;General Assembly House of Representatives District 12	NC HOUSE OF REPRESENTATIVES DISTRICT 012
-Office	North Carolina;General Assembly House of Representatives District 120	NC HOUSE OF REPRESENTATIVES DISTRICT 120
 CandidateContest	North Carolina;General Assembly House of Representatives District 120	NC HOUSE OF REPRESENTATIVES DISTRICT 120
-Office	North Carolina;General Assembly House of Representatives District 13	NC HOUSE OF REPRESENTATIVES DISTRICT 013
 CandidateContest	North Carolina;General Assembly House of Representatives District 13	NC HOUSE OF REPRESENTATIVES DISTRICT 013
-Office	North Carolina;General Assembly House of Representatives District 14	NC HOUSE OF REPRESENTATIVES DISTRICT 014
 CandidateContest	North Carolina;General Assembly House of Representatives District 14	NC HOUSE OF REPRESENTATIVES DISTRICT 014
-Office	North Carolina;General Assembly House of Representatives District 15	NC HOUSE OF REPRESENTATIVES DISTRICT 015
 CandidateContest	North Carolina;General Assembly House of Representatives District 15	NC HOUSE OF REPRESENTATIVES DISTRICT 015
-Office	North Carolina;General Assembly House of Representatives District 16	NC HOUSE OF REPRESENTATIVES DISTRICT 016
 CandidateContest	North Carolina;General Assembly House of Representatives District 16	NC HOUSE OF REPRESENTATIVES DISTRICT 016
-Office	North Carolina;General Assembly House of Representatives District 17	NC HOUSE OF REPRESENTATIVES DISTRICT 017
 CandidateContest	North Carolina;General Assembly House of Representatives District 17	NC HOUSE OF REPRESENTATIVES DISTRICT 017
-Office	North Carolina;General Assembly House of Representatives District 18	NC HOUSE OF REPRESENTATIVES DISTRICT 018
 CandidateContest	North Carolina;General Assembly House of Representatives District 18	NC HOUSE OF REPRESENTATIVES DISTRICT 018
-Office	North Carolina;General Assembly House of Representatives District 19	NC HOUSE OF REPRESENTATIVES DISTRICT 019
 CandidateContest	North Carolina;General Assembly House of Representatives District 19	NC HOUSE OF REPRESENTATIVES DISTRICT 019
-Office	North Carolina;General Assembly House of Representatives District 2	NC HOUSE OF REPRESENTATIVES DISTRICT 002
 CandidateContest	North Carolina;General Assembly House of Representatives District 2	NC HOUSE OF REPRESENTATIVES DISTRICT 002
-Office	North Carolina;General Assembly House of Representatives District 20	NC HOUSE OF REPRESENTATIVES DISTRICT 020
 CandidateContest	North Carolina;General Assembly House of Representatives District 20	NC HOUSE OF REPRESENTATIVES DISTRICT 020
-Office	North Carolina;General Assembly House of Representatives District 21	NC HOUSE OF REPRESENTATIVES DISTRICT 021
 CandidateContest	North Carolina;General Assembly House of Representatives District 21	NC HOUSE OF REPRESENTATIVES DISTRICT 021
-Office	North Carolina;General Assembly House of Representatives District 22	NC HOUSE OF REPRESENTATIVES DISTRICT 022
 CandidateContest	North Carolina;General Assembly House of Representatives District 22	NC HOUSE OF REPRESENTATIVES DISTRICT 022
-Office	North Carolina;General Assembly House of Representatives District 23	NC HOUSE OF REPRESENTATIVES DISTRICT 023
 CandidateContest	North Carolina;General Assembly House of Representatives District 23	NC HOUSE OF REPRESENTATIVES DISTRICT 023
-Office	North Carolina;General Assembly House of Representatives District 24	NC HOUSE OF REPRESENTATIVES DISTRICT 024
 CandidateContest	North Carolina;General Assembly House of Representatives District 24	NC HOUSE OF REPRESENTATIVES DISTRICT 024
-Office	North Carolina;General Assembly House of Representatives District 25	NC HOUSE OF REPRESENTATIVES DISTRICT 025
 CandidateContest	North Carolina;General Assembly House of Representatives District 25	NC HOUSE OF REPRESENTATIVES DISTRICT 025
-Office	North Carolina;General Assembly House of Representatives District 26	NC HOUSE OF REPRESENTATIVES DISTRICT 026
 CandidateContest	North Carolina;General Assembly House of Representatives District 26	NC HOUSE OF REPRESENTATIVES DISTRICT 026
-Office	North Carolina;General Assembly House of Representatives District 27	NC HOUSE OF REPRESENTATIVES DISTRICT 027
 CandidateContest	North Carolina;General Assembly House of Representatives District 27	NC HOUSE OF REPRESENTATIVES DISTRICT 027
-Office	North Carolina;General Assembly House of Representatives District 28	NC HOUSE OF REPRESENTATIVES DISTRICT 028
 CandidateContest	North Carolina;General Assembly House of Representatives District 28	NC HOUSE OF REPRESENTATIVES DISTRICT 028
-Office	North Carolina;General Assembly House of Representatives District 29	NC HOUSE OF REPRESENTATIVES DISTRICT 029
 CandidateContest	North Carolina;General Assembly House of Representatives District 29	NC HOUSE OF REPRESENTATIVES DISTRICT 029
-Office	North Carolina;General Assembly House of Representatives District 3	NC HOUSE OF REPRESENTATIVES DISTRICT 003
 CandidateContest	North Carolina;General Assembly House of Representatives District 3	NC HOUSE OF REPRESENTATIVES DISTRICT 003
-Office	North Carolina;General Assembly House of Representatives District 30	NC HOUSE OF REPRESENTATIVES DISTRICT 030
 CandidateContest	North Carolina;General Assembly House of Representatives District 30	NC HOUSE OF REPRESENTATIVES DISTRICT 030
-Office	North Carolina;General Assembly House of Representatives District 31	NC HOUSE OF REPRESENTATIVES DISTRICT 031
 CandidateContest	North Carolina;General Assembly House of Representatives District 31	NC HOUSE OF REPRESENTATIVES DISTRICT 031
-Office	North Carolina;General Assembly House of Representatives District 32	NC HOUSE OF REPRESENTATIVES DISTRICT 032
 CandidateContest	North Carolina;General Assembly House of Representatives District 32	NC HOUSE OF REPRESENTATIVES DISTRICT 032
-Office	North Carolina;General Assembly House of Representatives District 33	NC HOUSE OF REPRESENTATIVES DISTRICT 033
 CandidateContest	North Carolina;General Assembly House of Representatives District 33	NC HOUSE OF REPRESENTATIVES DISTRICT 033
-Office	North Carolina;General Assembly House of Representatives District 34	NC HOUSE OF REPRESENTATIVES DISTRICT 034
 CandidateContest	North Carolina;General Assembly House of Representatives District 34	NC HOUSE OF REPRESENTATIVES DISTRICT 034
-Office	North Carolina;General Assembly House of Representatives District 35	NC HOUSE OF REPRESENTATIVES DISTRICT 035
 CandidateContest	North Carolina;General Assembly House of Representatives District 35	NC HOUSE OF REPRESENTATIVES DISTRICT 035
-Office	North Carolina;General Assembly House of Representatives District 36	NC HOUSE OF REPRESENTATIVES DISTRICT 036
 CandidateContest	North Carolina;General Assembly House of Representatives District 36	NC HOUSE OF REPRESENTATIVES DISTRICT 036
-Office	North Carolina;General Assembly House of Representatives District 37	NC HOUSE OF REPRESENTATIVES DISTRICT 037
 CandidateContest	North Carolina;General Assembly House of Representatives District 37	NC HOUSE OF REPRESENTATIVES DISTRICT 037
-Office	North Carolina;General Assembly House of Representatives District 38	NC HOUSE OF REPRESENTATIVES DISTRICT 038
 CandidateContest	North Carolina;General Assembly House of Representatives District 38	NC HOUSE OF REPRESENTATIVES DISTRICT 038
-Office	North Carolina;General Assembly House of Representatives District 39	NC HOUSE OF REPRESENTATIVES DISTRICT 039
 CandidateContest	North Carolina;General Assembly House of Representatives District 39	NC HOUSE OF REPRESENTATIVES DISTRICT 039
-Office	North Carolina;General Assembly House of Representatives District 4	NC HOUSE OF REPRESENTATIVES DISTRICT 004
 CandidateContest	North Carolina;General Assembly House of Representatives District 4	NC HOUSE OF REPRESENTATIVES DISTRICT 004
-Office	North Carolina;General Assembly House of Representatives District 40	NC HOUSE OF REPRESENTATIVES DISTRICT 040
 CandidateContest	North Carolina;General Assembly House of Representatives District 40	NC HOUSE OF REPRESENTATIVES DISTRICT 040
-Office	North Carolina;General Assembly House of Representatives District 41	NC HOUSE OF REPRESENTATIVES DISTRICT 041
 CandidateContest	North Carolina;General Assembly House of Representatives District 41	NC HOUSE OF REPRESENTATIVES DISTRICT 041
-Office	North Carolina;General Assembly House of Representatives District 42	NC HOUSE OF REPRESENTATIVES DISTRICT 042
 CandidateContest	North Carolina;General Assembly House of Representatives District 42	NC HOUSE OF REPRESENTATIVES DISTRICT 042
-Office	North Carolina;General Assembly House of Representatives District 43	NC HOUSE OF REPRESENTATIVES DISTRICT 043
 CandidateContest	North Carolina;General Assembly House of Representatives District 43	NC HOUSE OF REPRESENTATIVES DISTRICT 043
-Office	North Carolina;General Assembly House of Representatives District 44	NC HOUSE OF REPRESENTATIVES DISTRICT 044
 CandidateContest	North Carolina;General Assembly House of Representatives District 44	NC HOUSE OF REPRESENTATIVES DISTRICT 044
-Office	North Carolina;General Assembly House of Representatives District 45	NC HOUSE OF REPRESENTATIVES DISTRICT 045
 CandidateContest	North Carolina;General Assembly House of Representatives District 45	NC HOUSE OF REPRESENTATIVES DISTRICT 045
-Office	North Carolina;General Assembly House of Representatives District 46	NC HOUSE OF REPRESENTATIVES DISTRICT 046
 CandidateContest	North Carolina;General Assembly House of Representatives District 46	NC HOUSE OF REPRESENTATIVES DISTRICT 046
-Office	North Carolina;General Assembly House of Representatives District 47	NC HOUSE OF REPRESENTATIVES DISTRICT 047
 CandidateContest	North Carolina;General Assembly House of Representatives District 47	NC HOUSE OF REPRESENTATIVES DISTRICT 047
-Office	North Carolina;General Assembly House of Representatives District 48	NC HOUSE OF REPRESENTATIVES DISTRICT 048
 CandidateContest	North Carolina;General Assembly House of Representatives District 48	NC HOUSE OF REPRESENTATIVES DISTRICT 048
-Office	North Carolina;General Assembly House of Representatives District 49	NC HOUSE OF REPRESENTATIVES DISTRICT 049
 CandidateContest	North Carolina;General Assembly House of Representatives District 49	NC HOUSE OF REPRESENTATIVES DISTRICT 049
-Office	North Carolina;General Assembly House of Representatives District 5	NC HOUSE OF REPRESENTATIVES DISTRICT 005
 CandidateContest	North Carolina;General Assembly House of Representatives District 5	NC HOUSE OF REPRESENTATIVES DISTRICT 005
-Office	North Carolina;General Assembly House of Representatives District 50	NC HOUSE OF REPRESENTATIVES DISTRICT 050
 CandidateContest	North Carolina;General Assembly House of Representatives District 50	NC HOUSE OF REPRESENTATIVES DISTRICT 050
-Office	North Carolina;General Assembly House of Representatives District 51	NC HOUSE OF REPRESENTATIVES DISTRICT 051
 CandidateContest	North Carolina;General Assembly House of Representatives District 51	NC HOUSE OF REPRESENTATIVES DISTRICT 051
-Office	North Carolina;General Assembly House of Representatives District 52	NC HOUSE OF REPRESENTATIVES DISTRICT 052
 CandidateContest	North Carolina;General Assembly House of Representatives District 52	NC HOUSE OF REPRESENTATIVES DISTRICT 052
-Office	North Carolina;General Assembly House of Representatives District 53	NC HOUSE OF REPRESENTATIVES DISTRICT 053
 CandidateContest	North Carolina;General Assembly House of Representatives District 53	NC HOUSE OF REPRESENTATIVES DISTRICT 053
-Office	North Carolina;General Assembly House of Representatives District 54	NC HOUSE OF REPRESENTATIVES DISTRICT 054
 CandidateContest	North Carolina;General Assembly House of Representatives District 54	NC HOUSE OF REPRESENTATIVES DISTRICT 054
-Office	North Carolina;General Assembly House of Representatives District 55	NC HOUSE OF REPRESENTATIVES DISTRICT 055
 CandidateContest	North Carolina;General Assembly House of Representatives District 55	NC HOUSE OF REPRESENTATIVES DISTRICT 055
-Office	North Carolina;General Assembly House of Representatives District 56	NC HOUSE OF REPRESENTATIVES DISTRICT 056
 CandidateContest	North Carolina;General Assembly House of Representatives District 56	NC HOUSE OF REPRESENTATIVES DISTRICT 056
-Office	North Carolina;General Assembly House of Representatives District 57	NC HOUSE OF REPRESENTATIVES DISTRICT 057
 CandidateContest	North Carolina;General Assembly House of Representatives District 57	NC HOUSE OF REPRESENTATIVES DISTRICT 057
-Office	North Carolina;General Assembly House of Representatives District 58	NC HOUSE OF REPRESENTATIVES DISTRICT 058
 CandidateContest	North Carolina;General Assembly House of Representatives District 58	NC HOUSE OF REPRESENTATIVES DISTRICT 058
-Office	North Carolina;General Assembly House of Representatives District 59	NC HOUSE OF REPRESENTATIVES DISTRICT 059
 CandidateContest	North Carolina;General Assembly House of Representatives District 59	NC HOUSE OF REPRESENTATIVES DISTRICT 059
-Office	North Carolina;General Assembly House of Representatives District 6	NC HOUSE OF REPRESENTATIVES DISTRICT 006
 CandidateContest	North Carolina;General Assembly House of Representatives District 6	NC HOUSE OF REPRESENTATIVES DISTRICT 006
-Office	North Carolina;General Assembly House of Representatives District 60	NC HOUSE OF REPRESENTATIVES DISTRICT 060
 CandidateContest	North Carolina;General Assembly House of Representatives District 60	NC HOUSE OF REPRESENTATIVES DISTRICT 060
-Office	North Carolina;General Assembly House of Representatives District 61	NC HOUSE OF REPRESENTATIVES DISTRICT 061
 CandidateContest	North Carolina;General Assembly House of Representatives District 61	NC HOUSE OF REPRESENTATIVES DISTRICT 061
-Office	North Carolina;General Assembly House of Representatives District 62	NC HOUSE OF REPRESENTATIVES DISTRICT 062
 CandidateContest	North Carolina;General Assembly House of Representatives District 62	NC HOUSE OF REPRESENTATIVES DISTRICT 062
-Office	North Carolina;General Assembly House of Representatives District 63	NC HOUSE OF REPRESENTATIVES DISTRICT 063
 CandidateContest	North Carolina;General Assembly House of Representatives District 63	NC HOUSE OF REPRESENTATIVES DISTRICT 063
-Office	North Carolina;General Assembly House of Representatives District 64	NC HOUSE OF REPRESENTATIVES DISTRICT 064
 CandidateContest	North Carolina;General Assembly House of Representatives District 64	NC HOUSE OF REPRESENTATIVES DISTRICT 064
-Office	North Carolina;General Assembly House of Representatives District 65	NC HOUSE OF REPRESENTATIVES DISTRICT 065
 CandidateContest	North Carolina;General Assembly House of Representatives District 65	NC HOUSE OF REPRESENTATIVES DISTRICT 065
-Office	North Carolina;General Assembly House of Representatives District 66	NC HOUSE OF REPRESENTATIVES DISTRICT 066
 CandidateContest	North Carolina;General Assembly House of Representatives District 66	NC HOUSE OF REPRESENTATIVES DISTRICT 066
-Office	North Carolina;General Assembly House of Representatives District 67	NC HOUSE OF REPRESENTATIVES DISTRICT 067
 CandidateContest	North Carolina;General Assembly House of Representatives District 67	NC HOUSE OF REPRESENTATIVES DISTRICT 067
-Office	North Carolina;General Assembly House of Representatives District 68	NC HOUSE OF REPRESENTATIVES DISTRICT 068
 CandidateContest	North Carolina;General Assembly House of Representatives District 68	NC HOUSE OF REPRESENTATIVES DISTRICT 068
-Office	North Carolina;General Assembly House of Representatives District 69	NC HOUSE OF REPRESENTATIVES DISTRICT 069
 CandidateContest	North Carolina;General Assembly House of Representatives District 69	NC HOUSE OF REPRESENTATIVES DISTRICT 069
-Office	North Carolina;General Assembly House of Representatives District 7	NC HOUSE OF REPRESENTATIVES DISTRICT 007
 CandidateContest	North Carolina;General Assembly House of Representatives District 7	NC HOUSE OF REPRESENTATIVES DISTRICT 007
-Office	North Carolina;General Assembly House of Representatives District 70	NC HOUSE OF REPRESENTATIVES DISTRICT 070
 CandidateContest	North Carolina;General Assembly House of Representatives District 70	NC HOUSE OF REPRESENTATIVES DISTRICT 070
-Office	North Carolina;General Assembly House of Representatives District 71	NC HOUSE OF REPRESENTATIVES DISTRICT 071
 CandidateContest	North Carolina;General Assembly House of Representatives District 71	NC HOUSE OF REPRESENTATIVES DISTRICT 071
-Office	North Carolina;General Assembly House of Representatives District 72	NC HOUSE OF REPRESENTATIVES DISTRICT 072
 CandidateContest	North Carolina;General Assembly House of Representatives District 72	NC HOUSE OF REPRESENTATIVES DISTRICT 072
-Office	North Carolina;General Assembly House of Representatives District 73	NC HOUSE OF REPRESENTATIVES DISTRICT 073
 CandidateContest	North Carolina;General Assembly House of Representatives District 73	NC HOUSE OF REPRESENTATIVES DISTRICT 073
-Office	North Carolina;General Assembly House of Representatives District 74	NC HOUSE OF REPRESENTATIVES DISTRICT 074
 CandidateContest	North Carolina;General Assembly House of Representatives District 74	NC HOUSE OF REPRESENTATIVES DISTRICT 074
-Office	North Carolina;General Assembly House of Representatives District 75	NC HOUSE OF REPRESENTATIVES DISTRICT 075
 CandidateContest	North Carolina;General Assembly House of Representatives District 75	NC HOUSE OF REPRESENTATIVES DISTRICT 075
-Office	North Carolina;General Assembly House of Representatives District 76	NC HOUSE OF REPRESENTATIVES DISTRICT 076
 CandidateContest	North Carolina;General Assembly House of Representatives District 76	NC HOUSE OF REPRESENTATIVES DISTRICT 076
-Office	North Carolina;General Assembly House of Representatives District 77	NC HOUSE OF REPRESENTATIVES DISTRICT 077
 CandidateContest	North Carolina;General Assembly House of Representatives District 77	NC HOUSE OF REPRESENTATIVES DISTRICT 077
-Office	North Carolina;General Assembly House of Representatives District 78	NC HOUSE OF REPRESENTATIVES DISTRICT 078
 CandidateContest	North Carolina;General Assembly House of Representatives District 78	NC HOUSE OF REPRESENTATIVES DISTRICT 078
-Office	North Carolina;General Assembly House of Representatives District 79	NC HOUSE OF REPRESENTATIVES DISTRICT 079
 CandidateContest	North Carolina;General Assembly House of Representatives District 79	NC HOUSE OF REPRESENTATIVES DISTRICT 079
-Office	North Carolina;General Assembly House of Representatives District 8	NC HOUSE OF REPRESENTATIVES DISTRICT 008
 CandidateContest	North Carolina;General Assembly House of Representatives District 8	NC HOUSE OF REPRESENTATIVES DISTRICT 008
-Office	North Carolina;General Assembly House of Representatives District 80	NC HOUSE OF REPRESENTATIVES DISTRICT 080
 CandidateContest	North Carolina;General Assembly House of Representatives District 80	NC HOUSE OF REPRESENTATIVES DISTRICT 080
-Office	North Carolina;General Assembly House of Representatives District 81	NC HOUSE OF REPRESENTATIVES DISTRICT 081
 CandidateContest	North Carolina;General Assembly House of Representatives District 81	NC HOUSE OF REPRESENTATIVES DISTRICT 081
-Office	North Carolina;General Assembly House of Representatives District 82	NC HOUSE OF REPRESENTATIVES DISTRICT 082
 CandidateContest	North Carolina;General Assembly House of Representatives District 82	NC HOUSE OF REPRESENTATIVES DISTRICT 082
-Office	North Carolina;General Assembly House of Representatives District 83	NC HOUSE OF REPRESENTATIVES DISTRICT 083
 CandidateContest	North Carolina;General Assembly House of Representatives District 83	NC HOUSE OF REPRESENTATIVES DISTRICT 083
-Office	North Carolina;General Assembly House of Representatives District 84	NC HOUSE OF REPRESENTATIVES DISTRICT 084
 CandidateContest	North Carolina;General Assembly House of Representatives District 84	NC HOUSE OF REPRESENTATIVES DISTRICT 084
-Office	North Carolina;General Assembly House of Representatives District 85	NC HOUSE OF REPRESENTATIVES DISTRICT 085
 CandidateContest	North Carolina;General Assembly House of Representatives District 85	NC HOUSE OF REPRESENTATIVES DISTRICT 085
-Office	North Carolina;General Assembly House of Representatives District 86	NC HOUSE OF REPRESENTATIVES DISTRICT 086
 CandidateContest	North Carolina;General Assembly House of Representatives District 86	NC HOUSE OF REPRESENTATIVES DISTRICT 086
-Office	North Carolina;General Assembly House of Representatives District 87	NC HOUSE OF REPRESENTATIVES DISTRICT 087
 CandidateContest	North Carolina;General Assembly House of Representatives District 87	NC HOUSE OF REPRESENTATIVES DISTRICT 087
-Office	North Carolina;General Assembly House of Representatives District 88	NC HOUSE OF REPRESENTATIVES DISTRICT 088
 CandidateContest	North Carolina;General Assembly House of Representatives District 88	NC HOUSE OF REPRESENTATIVES DISTRICT 088
-Office	North Carolina;General Assembly House of Representatives District 89	NC HOUSE OF REPRESENTATIVES DISTRICT 089
 CandidateContest	North Carolina;General Assembly House of Representatives District 89	NC HOUSE OF REPRESENTATIVES DISTRICT 089
-Office	North Carolina;General Assembly House of Representatives District 9	NC HOUSE OF REPRESENTATIVES DISTRICT 009
 CandidateContest	North Carolina;General Assembly House of Representatives District 9	NC HOUSE OF REPRESENTATIVES DISTRICT 009
-Office	North Carolina;General Assembly House of Representatives District 90	NC HOUSE OF REPRESENTATIVES DISTRICT 090
 CandidateContest	North Carolina;General Assembly House of Representatives District 90	NC HOUSE OF REPRESENTATIVES DISTRICT 090
-Office	North Carolina;General Assembly House of Representatives District 91	NC HOUSE OF REPRESENTATIVES DISTRICT 091
 CandidateContest	North Carolina;General Assembly House of Representatives District 91	NC HOUSE OF REPRESENTATIVES DISTRICT 091
-Office	North Carolina;General Assembly House of Representatives District 92	NC HOUSE OF REPRESENTATIVES DISTRICT 092
 CandidateContest	North Carolina;General Assembly House of Representatives District 92	NC HOUSE OF REPRESENTATIVES DISTRICT 092
-Office	North Carolina;General Assembly House of Representatives District 93	NC HOUSE OF REPRESENTATIVES DISTRICT 093
 CandidateContest	North Carolina;General Assembly House of Representatives District 93	NC HOUSE OF REPRESENTATIVES DISTRICT 093
-Office	North Carolina;General Assembly House of Representatives District 94	NC HOUSE OF REPRESENTATIVES DISTRICT 094
 CandidateContest	North Carolina;General Assembly House of Representatives District 94	NC HOUSE OF REPRESENTATIVES DISTRICT 094
-Office	North Carolina;General Assembly House of Representatives District 95	NC HOUSE OF REPRESENTATIVES DISTRICT 095
 CandidateContest	North Carolina;General Assembly House of Representatives District 95	NC HOUSE OF REPRESENTATIVES DISTRICT 095
-Office	North Carolina;General Assembly House of Representatives District 96	NC HOUSE OF REPRESENTATIVES DISTRICT 096
 CandidateContest	North Carolina;General Assembly House of Representatives District 96	NC HOUSE OF REPRESENTATIVES DISTRICT 096
-Office	North Carolina;General Assembly House of Representatives District 97	NC HOUSE OF REPRESENTATIVES DISTRICT 097
 CandidateContest	North Carolina;General Assembly House of Representatives District 97	NC HOUSE OF REPRESENTATIVES DISTRICT 097
-Office	North Carolina;General Assembly House of Representatives District 98	NC HOUSE OF REPRESENTATIVES DISTRICT 098
 CandidateContest	North Carolina;General Assembly House of Representatives District 98	NC HOUSE OF REPRESENTATIVES DISTRICT 098
-Office	North Carolina;General Assembly House of Representatives District 99	NC HOUSE OF REPRESENTATIVES DISTRICT 099
 CandidateContest	North Carolina;General Assembly House of Representatives District 99	NC HOUSE OF REPRESENTATIVES DISTRICT 099
-Office	North Carolina;General Assembly Senate District 1	NC STATE SENATE DISTRICT 01
 CandidateContest	North Carolina;General Assembly Senate District 1	NC STATE SENATE DISTRICT 01
-Office	North Carolina;General Assembly Senate District 10	NC STATE SENATE DISTRICT 10
 CandidateContest	North Carolina;General Assembly Senate District 10	NC STATE SENATE DISTRICT 10
-Office	North Carolina;General Assembly Senate District 11	NC STATE SENATE DISTRICT 11
 CandidateContest	North Carolina;General Assembly Senate District 11	NC STATE SENATE DISTRICT 11
-Office	North Carolina;General Assembly Senate District 12	NC STATE SENATE DISTRICT 12
 CandidateContest	North Carolina;General Assembly Senate District 12	NC STATE SENATE DISTRICT 12
-Office	North Carolina;General Assembly Senate District 13	NC STATE SENATE DISTRICT 13
 CandidateContest	North Carolina;General Assembly Senate District 13	NC STATE SENATE DISTRICT 13
-Office	North Carolina;General Assembly Senate District 14	NC STATE SENATE DISTRICT 14
 CandidateContest	North Carolina;General Assembly Senate District 14	NC STATE SENATE DISTRICT 14
-Office	North Carolina;General Assembly Senate District 15	NC STATE SENATE DISTRICT 15
 CandidateContest	North Carolina;General Assembly Senate District 15	NC STATE SENATE DISTRICT 15
-Office	North Carolina;General Assembly Senate District 16	NC STATE SENATE DISTRICT 16
 CandidateContest	North Carolina;General Assembly Senate District 16	NC STATE SENATE DISTRICT 16
-Office	North Carolina;General Assembly Senate District 17	NC STATE SENATE DISTRICT 17
 CandidateContest	North Carolina;General Assembly Senate District 17	NC STATE SENATE DISTRICT 17
-Office	North Carolina;General Assembly Senate District 18	NC STATE SENATE DISTRICT 18
 CandidateContest	North Carolina;General Assembly Senate District 18	NC STATE SENATE DISTRICT 18
-Office	North Carolina;General Assembly Senate District 19	NC STATE SENATE DISTRICT 19
 CandidateContest	North Carolina;General Assembly Senate District 19	NC STATE SENATE DISTRICT 19
-Office	North Carolina;General Assembly Senate District 2	NC STATE SENATE DISTRICT 02
 CandidateContest	North Carolina;General Assembly Senate District 2	NC STATE SENATE DISTRICT 02
-Office	North Carolina;General Assembly Senate District 20	NC STATE SENATE DISTRICT 20
 CandidateContest	North Carolina;General Assembly Senate District 20	NC STATE SENATE DISTRICT 20
-Office	North Carolina;General Assembly Senate District 21	NC STATE SENATE DISTRICT 21
 CandidateContest	North Carolina;General Assembly Senate District 21	NC STATE SENATE DISTRICT 21
-Office	North Carolina;General Assembly Senate District 22	NC STATE SENATE DISTRICT 22
 CandidateContest	North Carolina;General Assembly Senate District 22	NC STATE SENATE DISTRICT 22
-Office	North Carolina;General Assembly Senate District 23	NC STATE SENATE DISTRICT 23
 CandidateContest	North Carolina;General Assembly Senate District 23	NC STATE SENATE DISTRICT 23
-Office	North Carolina;General Assembly Senate District 24	NC STATE SENATE DISTRICT 24
 CandidateContest	North Carolina;General Assembly Senate District 24	NC STATE SENATE DISTRICT 24
-Office	North Carolina;General Assembly Senate District 25	NC STATE SENATE DISTRICT 25
 CandidateContest	North Carolina;General Assembly Senate District 25	NC STATE SENATE DISTRICT 25
-Office	North Carolina;General Assembly Senate District 26	NC STATE SENATE DISTRICT 26
 CandidateContest	North Carolina;General Assembly Senate District 26	NC STATE SENATE DISTRICT 26
-Office	North Carolina;General Assembly Senate District 27	NC STATE SENATE DISTRICT 27
 CandidateContest	North Carolina;General Assembly Senate District 27	NC STATE SENATE DISTRICT 27
-Office	North Carolina;General Assembly Senate District 28	NC STATE SENATE DISTRICT 28
 CandidateContest	North Carolina;General Assembly Senate District 28	NC STATE SENATE DISTRICT 28
-Office	North Carolina;General Assembly Senate District 29	NC STATE SENATE DISTRICT 29
 CandidateContest	North Carolina;General Assembly Senate District 29	NC STATE SENATE DISTRICT 29
-Office	North Carolina;General Assembly Senate District 3	NC STATE SENATE DISTRICT 03
 CandidateContest	North Carolina;General Assembly Senate District 3	NC STATE SENATE DISTRICT 03
-Office	North Carolina;General Assembly Senate District 30	NC STATE SENATE DISTRICT 30
 CandidateContest	North Carolina;General Assembly Senate District 30	NC STATE SENATE DISTRICT 30
-Office	North Carolina;General Assembly Senate District 31	NC STATE SENATE DISTRICT 31
 CandidateContest	North Carolina;General Assembly Senate District 31	NC STATE SENATE DISTRICT 31
-Office	North Carolina;General Assembly Senate District 32	NC STATE SENATE DISTRICT 32
 CandidateContest	North Carolina;General Assembly Senate District 32	NC STATE SENATE DISTRICT 32
-Office	North Carolina;General Assembly Senate District 33	NC STATE SENATE DISTRICT 33
 CandidateContest	North Carolina;General Assembly Senate District 33	NC STATE SENATE DISTRICT 33
-Office	North Carolina;General Assembly Senate District 34	NC STATE SENATE DISTRICT 34
 CandidateContest	North Carolina;General Assembly Senate District 34	NC STATE SENATE DISTRICT 34
-Office	North Carolina;General Assembly Senate District 35	NC STATE SENATE DISTRICT 35
 CandidateContest	North Carolina;General Assembly Senate District 35	NC STATE SENATE DISTRICT 35
-Office	North Carolina;General Assembly Senate District 36	NC STATE SENATE DISTRICT 36
 CandidateContest	North Carolina;General Assembly Senate District 36	NC STATE SENATE DISTRICT 36
-Office	North Carolina;General Assembly Senate District 37	NC STATE SENATE DISTRICT 37
 CandidateContest	North Carolina;General Assembly Senate District 37	NC STATE SENATE DISTRICT 37
-Office	North Carolina;General Assembly Senate District 38	NC STATE SENATE DISTRICT 38
 CandidateContest	North Carolina;General Assembly Senate District 38	NC STATE SENATE DISTRICT 38
-Office	North Carolina;General Assembly Senate District 39	NC STATE SENATE DISTRICT 39
 CandidateContest	North Carolina;General Assembly Senate District 39	NC STATE SENATE DISTRICT 39
-Office	North Carolina;General Assembly Senate District 4	NC STATE SENATE DISTRICT 04
 CandidateContest	North Carolina;General Assembly Senate District 4	NC STATE SENATE DISTRICT 04
-Office	North Carolina;General Assembly Senate District 40	NC STATE SENATE DISTRICT 40
 CandidateContest	North Carolina;General Assembly Senate District 40	NC STATE SENATE DISTRICT 40
-Office	North Carolina;General Assembly Senate District 41	NC STATE SENATE DISTRICT 41
 CandidateContest	North Carolina;General Assembly Senate District 41	NC STATE SENATE DISTRICT 41
-Office	North Carolina;General Assembly Senate District 42	NC STATE SENATE DISTRICT 42
 CandidateContest	North Carolina;General Assembly Senate District 42	NC STATE SENATE DISTRICT 42
-Office	North Carolina;General Assembly Senate District 43	NC STATE SENATE DISTRICT 43
 CandidateContest	North Carolina;General Assembly Senate District 43	NC STATE SENATE DISTRICT 43
-Office	North Carolina;General Assembly Senate District 44	NC STATE SENATE DISTRICT 44
 CandidateContest	North Carolina;General Assembly Senate District 44	NC STATE SENATE DISTRICT 44
-Office	North Carolina;General Assembly Senate District 45	NC STATE SENATE DISTRICT 45
 CandidateContest	North Carolina;General Assembly Senate District 45	NC STATE SENATE DISTRICT 45
-Office	North Carolina;General Assembly Senate District 46	NC STATE SENATE DISTRICT 46
 CandidateContest	North Carolina;General Assembly Senate District 46	NC STATE SENATE DISTRICT 46
-Office	North Carolina;General Assembly Senate District 47	NC STATE SENATE DISTRICT 47
 CandidateContest	North Carolina;General Assembly Senate District 47	NC STATE SENATE DISTRICT 47
-Office	North Carolina;General Assembly Senate District 48	NC STATE SENATE DISTRICT 48
 CandidateContest	North Carolina;General Assembly Senate District 48	NC STATE SENATE DISTRICT 48
-Office	North Carolina;General Assembly Senate District 49	NC STATE SENATE DISTRICT 49
 CandidateContest	North Carolina;General Assembly Senate District 49	NC STATE SENATE DISTRICT 49
-Office	North Carolina;General Assembly Senate District 5	NC STATE SENATE DISTRICT 05
 CandidateContest	North Carolina;General Assembly Senate District 5	NC STATE SENATE DISTRICT 05
-Office	North Carolina;General Assembly Senate District 50	NC STATE SENATE DISTRICT 50
 CandidateContest	North Carolina;General Assembly Senate District 50	NC STATE SENATE DISTRICT 50
-Office	North Carolina;General Assembly Senate District 6	NC STATE SENATE DISTRICT 06
 CandidateContest	North Carolina;General Assembly Senate District 6	NC STATE SENATE DISTRICT 06
-Office	North Carolina;General Assembly Senate District 7	NC STATE SENATE DISTRICT 07
 CandidateContest	North Carolina;General Assembly Senate District 7	NC STATE SENATE DISTRICT 07
-Office	North Carolina;General Assembly Senate District 8	NC STATE SENATE DISTRICT 08
 CandidateContest	North Carolina;General Assembly Senate District 8	NC STATE SENATE DISTRICT 08
-Office	North Carolina;General Assembly Senate District 9	NC STATE SENATE DISTRICT 09
 CandidateContest	North Carolina;General Assembly Senate District 9	NC STATE SENATE DISTRICT 09
 ReportingUnit	North Carolina;Graham County	GRAHAM
 ReportingUnit	North Carolina;Graham County;Precinct EAST	GRAHAM;EAST
@@ -3060,31 +2891,18 @@ ReportingUnit	North Carolina;Union County;Precinct 042	UNION;042
 ReportingUnit	North Carolina;Union County;Precinct 043	UNION;043
 ReportingUnit	North Carolina;Union County;PROVISIONAL	UNION;PROVISIONAL
 ReportingUnit	North Carolina;Union County;TRANSFER	UNION;TRANSFER
-Office	North Carolina;US Congress House of Representatives District 1	US HOUSE OF REPRESENTATIVES DISTRICT 01
 CandidateContest	North Carolina;US Congress House of Representatives District 1	US HOUSE OF REPRESENTATIVES DISTRICT 01
-Office	North Carolina;US Congress House of Representatives District 10	US HOUSE OF REPRESENTATIVES DISTRICT 10
 CandidateContest	North Carolina;US Congress House of Representatives District 10	US HOUSE OF REPRESENTATIVES DISTRICT 10
-Office	North Carolina;US Congress House of Representatives District 11	US HOUSE OF REPRESENTATIVES DISTRICT 11
 CandidateContest	North Carolina;US Congress House of Representatives District 11	US HOUSE OF REPRESENTATIVES DISTRICT 11
-Office	North Carolina;US Congress House of Representatives District 12	US HOUSE OF REPRESENTATIVES DISTRICT 12
 CandidateContest	North Carolina;US Congress House of Representatives District 12	US HOUSE OF REPRESENTATIVES DISTRICT 12
-Office	North Carolina;US Congress House of Representatives District 13	US HOUSE OF REPRESENTATIVES DISTRICT 13
 CandidateContest	North Carolina;US Congress House of Representatives District 13	US HOUSE OF REPRESENTATIVES DISTRICT 13
-Office	North Carolina;US Congress House of Representatives District 2	US HOUSE OF REPRESENTATIVES DISTRICT 02
 CandidateContest	North Carolina;US Congress House of Representatives District 2	US HOUSE OF REPRESENTATIVES DISTRICT 02
-Office	North Carolina;US Congress House of Representatives District 3	US HOUSE OF REPRESENTATIVES DISTRICT 03
 CandidateContest	North Carolina;US Congress House of Representatives District 3	US HOUSE OF REPRESENTATIVES DISTRICT 03
-Office	North Carolina;US Congress House of Representatives District 4	US HOUSE OF REPRESENTATIVES DISTRICT 04
 CandidateContest	North Carolina;US Congress House of Representatives District 4	US HOUSE OF REPRESENTATIVES DISTRICT 04
-Office	North Carolina;US Congress House of Representatives District 5	US HOUSE OF REPRESENTATIVES DISTRICT 05
 CandidateContest	North Carolina;US Congress House of Representatives District 5	US HOUSE OF REPRESENTATIVES DISTRICT 05
-Office	North Carolina;US Congress House of Representatives District 6	US HOUSE OF REPRESENTATIVES DISTRICT 06
 CandidateContest	North Carolina;US Congress House of Representatives District 6	US HOUSE OF REPRESENTATIVES DISTRICT 06
-Office	North Carolina;US Congress House of Representatives District 7	US HOUSE OF REPRESENTATIVES DISTRICT 07
 CandidateContest	North Carolina;US Congress House of Representatives District 7	US HOUSE OF REPRESENTATIVES DISTRICT 07
-Office	North Carolina;US Congress House of Representatives District 8	US HOUSE OF REPRESENTATIVES DISTRICT 08
 CandidateContest	North Carolina;US Congress House of Representatives District 8	US HOUSE OF REPRESENTATIVES DISTRICT 08
-Office	North Carolina;US Congress House of Representatives District 9	US HOUSE OF REPRESENTATIVES DISTRICT 09
 CandidateContest	North Carolina;US Congress House of Representatives District 9	US HOUSE OF REPRESENTATIVES DISTRICT 09
 ReportingUnit	North Carolina;Vance County	VANCE
 ReportingUnit	North Carolina;Vance County;Precinct CC	VANCE;CC

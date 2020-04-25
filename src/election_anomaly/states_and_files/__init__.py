@@ -128,7 +128,8 @@ class Jurisdiction:
         self.path_to_juris_dir = os.path.join(path_to_parent_dir, self.short_name)
 
         # Ensure that context directory exists and is missing no essential files
-        ensure_context(path_to_parent_dir,project_root,self.short_name)
+        check_jurisdiction_directory(self.path_to_juris_dir)
+        ensure_context(self.path_to_juris_dir,project_root)
 
 
 class Munger:
@@ -273,6 +274,8 @@ class Munger:
         """Loads info from context/<element>.txt into db; checks <element>s from file <raw> against munger;
         then checks munger against db. Throughout, guides user to make corrections in context/<element>.txt;
         finally loads final context/<element>.txt into db. Note that this will only add records to db, never remove. """
+
+        c_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
         print(f'Updating database with info from {jurisdiction.short_name}/context/{element}.txt.\n')
         source_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
         source_df = pd.read_csv(source_file,sep='\t')
@@ -338,7 +341,7 @@ class Munger:
                     f'Then hit return to continue.\n')
 
         # add all elements from context/ to db
-        source_df = pd.read_csv(f'{jurisdiction.path_to_juris_dir}context/{element}.txt',sep='\t')
+        source_df = pd.read_csv(c_file,sep='\t')
         mr.load_context_dframe_into_cdf(sess,project_path,
                                         jurisdiction,source_df,element,
                                         cdf_schema_def_dir=os.path.join(project_path,
@@ -375,7 +378,7 @@ class Munger:
                         f'Then hit return to continue.\n')
         else:
             print(f'Congrats! Each munged {element} is in the database!')
-        source_df = pd.read_csv(f'{jurisdiction.path_to_juris_dir}context/{element}.txt',sep='\t')
+        source_df = pd.read_csv(c_file,sep='\t')
         mr.load_context_dframe_into_cdf(sess,project_path,
                                         jurisdiction,source_df,element,
                                         cdf_schema_def_dir=os.path.join(project_path,
@@ -608,9 +611,7 @@ def read_munger_info_from_files(dir_path):
     return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,raw_identifiers]
 
 
-def ensure_context(path_to_jurisdictions,project_root,jurisdiction_name):
-    juris_path = os.path.join(path_to_jurisdictions,jurisdiction_name)
-
+def check_jurisdiction_directory(juris_path):
     # create jurisdiction directory
     try:
         os.mkdir(juris_path)
@@ -629,6 +630,11 @@ def ensure_context(path_to_jurisdictions,project_root,jurisdiction_name):
             print(f'Directory {sd_path} already exists, will be preserved')
         else:
             print(f'Directory {sd_path} created')
+    return
+
+
+def ensure_context(juris_path,project_root):
+    check_jurisdiction_directory(juris_path)
 
     # ensure context directory has what it needs
     templates = os.path.join(project_root,'templates/context_templates')
@@ -640,9 +646,8 @@ def ensure_context(path_to_jurisdictions,project_root,jurisdiction_name):
         with open(e_path,'r') as f:
             rut = f.readlines()
         standard_ru_types = set(x.strip() for x in rut if x != 'other')
-        ru = ui.fill_context_file(os.path.join(juris_path,'context'),
-                               templates,
-                               'ReportingUnit',standard_ru_types,'ReportingUnitType')
+        ru = ui.fill_context_file(
+            os.path.join(juris_path,'context'),templates,'ReportingUnit',standard_ru_types,'ReportingUnitType')
         ru_list = ru['Name'].to_list()
         ui.fill_context_file(os.path.join(juris_path,'context'),
                           templates,

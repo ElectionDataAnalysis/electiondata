@@ -37,7 +37,7 @@ if __name__ == '__main__':
 	else:
 		raise Exception(f'separator {enum_d["_datafile_separator"]} not recognized')
 
-	juris_short_name = 'NC_TEST'
+	juris_short_name = 'NC_TEST_5'
 	juris = ui.pick_juris_from_filesystem(
 		project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
 		jurisdiction_name=juris_short_name)
@@ -56,7 +56,7 @@ if __name__ == '__main__':
 	for element in [
 		'ReportingUnit','Election','Office','Party','CandidateContest','Candidate',
 		'BallotMeasureContest','BallotMeasureSelection','CountItemType']:
-		munger.finalize_element(element,raw,juris,sess)
+		munger.finalize_element(element,raw,juris,sess,project_root)
 	eng.dispose()
 	print('Done! (user_interface)')
 

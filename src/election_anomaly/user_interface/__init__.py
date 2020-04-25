@@ -128,12 +128,16 @@ def resolve_nulls(df,source_file,col_list=None,kwargs={}):
 	return
 
 
-def show_sample(st,items,condition,outfile='shown_items.txt',dir=None):
+def show_sample(st,items,condition,outfile='shown_items.txt',dir=None,export=False):
 	# TODO revise to allow sample of dataframe and export of dataframe. E.g.
 	#  so that Candidate and Party together can be exported.
 	print(f'There are {len(st)} {items} that {condition}:')
 	if len(st) == 0:
 		return
+	if isinstance(st,pd.DataFrame):
+		st_list = []
+		for i in st.index:
+			st.append(f'{st[i]}')
 	st = list(st)
 	st.sort()
 
@@ -150,18 +154,19 @@ def show_sample(st,items,condition,outfile='shown_items.txt',dir=None):
 		if show_all == 'y':
 			for r in st:
 				print(f'{r}')
-	if dir is None:
-		dir = input(f'Export all {len(st)} {items} that {condition}? If so, enter directory for export.'
-					f'Existing file will be overwritten.\n'
-					f'(Current directory is {os.getcwd()})\n')
-	if os.path.isdir(dir):
-		export = input(f'Export all {len(st)} {items} that {condition} to {outfile} (y/n)?\n')
-		if export == 'y':
-			with open(os.path.join(dir,outfile),'w') as f:
-				f.write('\n'.join(st))
-			print(f'{items} exported to {os.path.join(dir,outfile)}')
-	elif dir != '':
-		print(f'Directory {dir} does not exist.')
+	if export:
+		if dir is None:
+			dir = input(f'Export all {len(st)} {items} that {condition}? If so, enter directory for export.'
+						f'Existing file will be overwritten.\n'
+						f'(Current directory is {os.getcwd()})\n')
+		if os.path.isdir(dir):
+			export = input(f'Export all {len(st)} {items} that {condition} to {outfile} (y/n)?\n')
+			if export == 'y':
+				with open(os.path.join(dir,outfile),'w') as f:
+					f.write('\n'.join(st))
+				print(f'{items} exported to {os.path.join(dir,outfile)}')
+		elif dir != '':
+			print(f'Directory {dir} does not exist.')
 	return
 
 
@@ -254,7 +259,9 @@ def pick_juris_from_filesystem(project_root,path_to_jurisdictions='jurisdictions
 					   os.path.isdir(os.path.join(path_to_jurisdictions,x))]
 		juris_idx,jurisdiction_name = pick_one(choice_list,None,item='jurisdiction')
 
-		sf.ensure_context(path_to_jurisdictions,project_root,jurisdiction_name)
+		juris_path = os.path.join(path_to_jurisdictions,jurisdiction_name)
+		sf.check_jurisdiction_directory(juris_path)
+		sf.ensure_context(juris_path,project_root)
 	else:
 		print(f'Directory {jurisdiction_name} is assumed to exist and have the required contents.')
 	# initialize the jurisdiction
@@ -324,7 +331,8 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 			input(f'Please correct and hit return to continue.\n')
 		else:
 			# report contents of file
-			print(f'\nCurrent contents of {element}.txt:\n{context_df}')
+			context_list = context_df.to_csv(header=None,index=False,sep='\t').strip('\n').split('\n')
+			show_sample(context_list,'lines',f'are in {element}.txt')
 
 			# check test conditions
 			if test_list is None:
