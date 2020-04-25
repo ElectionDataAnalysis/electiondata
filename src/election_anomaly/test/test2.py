@@ -21,7 +21,7 @@ if __name__ == '__main__':
 	# pick db to use
 	db_paramfile = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'
 
-	db_name = 'NC_3'
+	db_name = 'NC_4'
 
 	# connect to db
 	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
@@ -54,10 +54,10 @@ if __name__ == '__main__':
 #	if check == 'y':
 #		munger.check_new_results_dataset_NEW(raw,juris,new_df_session,project_root=project_root)
 
-	mr.raw_elements_to_cdf_NEW(new_df_session,project_root,juris,munger,raw,info_cols,num_cols,finalize=False)
+	mr.raw_elements_to_cdf_NEW(new_df_session,project_root,juris,munger,raw,info_cols,num_cols,finalize=True)
 
-	ui.new_datafile_NEW(new_df_session,munger,
-		raw_file_path,sep,encoding,juris=juris,project_root=project_root)
+	ui.new_datafile(new_df_session,munger,
+					raw_file_path,sep,encoding,juris=juris,project_root=project_root)
 
 	eng.dispose()
 	print('Done!')

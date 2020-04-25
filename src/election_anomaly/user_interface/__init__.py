@@ -18,11 +18,6 @@ import random
 from tkinter import filedialog
 
 
-def append_with_dedupe(file_path,dataframe):
-    # TODO Add records in <dataframe> to <file_path>, deduping and allowing for correction of conflicts
-    return
-
-
 def get_project_root():
 	p_root = os.getcwd().split('election_anomaly')[0]
 	confirmed = False
@@ -40,6 +35,16 @@ def get_project_root():
 		elif input('Is this the correct project root (y/n)?\n') == 'y':
 			confirmed = True
 	return p_root
+
+
+def pick_datafile(project_root,sess):
+	print("Locate the datafile in the file system.")
+	fpath = pick_filepath(initialdir=project_root)
+	filename = ntpath.basename(fpath)
+	datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
+		sess,project_root,'_datafile','short_name',known_info_d={'file_name':filename})
+	# TODO typing url into debug window opens the web page; want it to just act like a string
+	return datafile_record_d, datafile_enumeration_name_d, fpath
 
 
 def pick_filepath(initialdir='~/'):
@@ -60,22 +65,6 @@ def pick_filepath(initialdir='~/'):
 			print(f'This is not a file: {fpath}\nTry again.')
 		else:
 			break
-	return fpath
-
-
-def pick_datafile(project_root,sess):
-	print("Locate the datafile in the file system.")
-	fpath = pick_filepath(initialdir=project_root)
-	filename = ntpath.basename(fpath)
-	datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
-		sess,project_root,'_datafile','short_name',known_info_d={'file_name':filename})
-	# TODO typing url into debug window opens the web page; want it to just act like a string
-	return datafile_record_d, datafile_enumeration_name_d, fpath
-
-
-def pick_paramfile(project_root):
-	print('Locate the parameter file for your postgreSQL database.')
-	fpath= pick_filepath()
 	return fpath
 
 
@@ -111,6 +100,12 @@ def pick_one(df,return_col,item='row',required=False):
 	# return view to default width
 	pd.reset_option('display.max_columns')
 	return choice, df.loc[choice,return_col]
+
+
+def pick_paramfile(project_root):
+	print('Locate the parameter file for your postgreSQL database.')
+	fpath= pick_filepath()
+	return fpath
 
 
 def resolve_nulls(df,source_file,col_list=None,kwargs={}):
@@ -691,7 +686,11 @@ def pick_record_from_file_system(storage_dir,table,name_field='Name',known_info_
 		idx, record = pick_one(filtered_file,name_field)
 	else:
 		idx, record = None, None
-	return idx, dict(filtered_file.loc[idx])
+	if idx:
+		record = dict(filtered_file.loc[idx])
+	else:
+		record = None
+	return idx, record
 
 
 def save_record_to_filesystem(storage_dir,table,user_record,enum_plain_text_values):
@@ -946,7 +945,7 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
-def new_datafile_NEW(session,munger,raw_path,raw_file_sep,encoding,project_root=None,juris=None):
+def new_datafile(session,munger,raw_path,raw_file_sep,encoding,project_root=None,juris=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
@@ -972,90 +971,6 @@ def new_datafile_NEW(session,munger,raw_path,raw_file_sep,encoding,project_root=
 
 	# TODO
 	return
-
-
-def new_datafile_OLD(raw_file,raw_file_sep,session,project_root='.',juris_short_name=None,encoding='utf-8',test_munger=True):
-	"""Guide user through process of uploading data in <raw_file>
-	into common data format.
-	Assumes cdf db exists already"""
-
-	juris = pick_juris_from_filesystem(
-		session.bind,project_root,
-		path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
-		jurisdiction_name=juris_short_name)
-
-	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
-	# update db from jurisdiction context file
-
-	# TODO put all info about data cleaning into README.md (e.g., whitespace strip)
-	election_idx, electiontype = get_or_create_election_in_db(session,project_root)
-	# read file in as dataframe of strings, replacing any nulls with the empty string
-	raw = pd.read_csv(raw_file,sep=raw_file_sep,dtype=str,encoding=encoding,quoting=csv.QUOTE_MINIMAL).fillna('')
-
-	# strip any whitespace
-	raw = raw.applymap(lambda x: x.strip())
-
-	# have user pick & prepare the munger
-	column_list = raw.columns.to_list()
-	print('Specify the munger:')
-	munger = pick_munger(
-		session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
-		root=project_root)
-	print(f'Munger {munger.name} has been chosen and prepared.')
-
-	if test_munger:
-		print( f'\nNext we check compatibility of the munger with the datafile.')
-		munger.check_against_datafile(raw_file)
-
-	# reshape raw to get separate vote count columns by vote type if necessary
-	if munger.formulas_for_count_item_type:
-		# TODO
-		# create separate column with single raw identifier of CountItemType as name -- beware of existing column names!
-		# change raw column names to CDF standard names
-		pass
-	else:
-		# change raw column names to CDF standard names for vote count columns
-		# TODO be clear in README about the conventions for values in count_columns.CountItemType.
-		#  For NC, had internal CDF names, but that won't work for Phila.
-		#  Best code would look first in CountItemType table, then in CountItemType rows of raw_identifiers.
-		pass
-
-	# change column names in <raw> if necessary
-	# TODO check that col names in count_columns and ballot_measure*.txt are changed
-	raw.rename(columns=munger.rename_column_dictionary,inplace=True)
-
-	# replace any non-numeric strings in count columns with 0.
-	print('Replacing any non-integer entries in datafile count columns with 0')
-	# TODO feature generalize to decimals for the rare elections with fractional votes
-	int_pattern = r'.*[^0-9]+.*'
-	for c in munger.count_columns.RawName.unique():
-		raw[c] = raw[c].replace(int_pattern,'0',regex=True)
-
-	print('Splitting datafile into BallotMeasureContest rows and CandidateContest rows.')
-	bmc_results,cc_results = mr.contest_type_split(raw,munger)
-	if bmc_results.empty:
-		print('Datafile has only Candidate Contests, and no Ballot Measure Contests')
-		contest_type_df = ['Candidate']
-	elif cc_results.empty:
-		print('Datafile has only Ballot Measure Contests, and no Candidate Contests')
-		contest_type_df = ['Ballot Measure']
-	else:
-		print('What types of contests would you like to analyze from the datafile?')
-		contest_type_df = pd.DataFrame([
-			['Candidate'], ['Ballot Measure'], ['Both Candidate and Ballot Measure']
-		], columns=['Contest Type'])
-		contest_type_idx, contest_type = pick_one(contest_type_df,'Contest Type', item='contest type',required=True)
-	if test_munger:
-		if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
-			munger.check_new_results_dataset(cc_results,juris,session,'Candidate',project_root=project_root)
-		if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
-			munger.check_new_results_dataset(cc_results,juris,session,'BallotMeasure',project_root=project_root)
-
-	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf_OLD(session,munger,cc_results,'Candidate',election_idx,electiontype,juris_idx)
-	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf_OLD(session,munger,bmc_results,'BallotMeasure',election_idx,electiontype,juris_idx)
-	return juris, munger
 
 
 if __name__ == '__main__':

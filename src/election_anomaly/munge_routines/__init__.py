@@ -557,7 +557,8 @@ def raw_elements_to_cdf_NEW(session,project_root,juris,mu,raw,info_cols,num_cols
 
 
 def append_join_id(project_root,session,working,j):
-    """Append <join>_Id to <working>. Unmatched rows are kept"""
+    """Upload join data to db, get Ids,
+    Append <join>_Id to <working>. Unmatched rows are kept"""
     j_path = os.path.join(
         project_root,'election_anomaly/CDF_schema_def_info/joins',j,'foreign_keys.txt')
     join_fk = pd.read_csv(j_path,sep='\t',index_col='fieldname')
@@ -581,7 +582,7 @@ def append_join_id(project_root,session,working,j):
     join_df.drop(unnecessary,axis=1,inplace=True)
 
     join_df = join_df[join_df.notnull().all(axis=1)]
-    join_df = dbr.dframe_to_sql(join_df,session,None,j,index_col=None)
+    join_df = dbr.dframe_to_sql(join_df,session,None,j)
     working = working.merge(join_df,how='left',left_on=j_cols,right_on=j_cols)
     working.rename(columns={'Id':f'{j}_Id'},inplace=True)
     return working
@@ -597,214 +598,6 @@ def append_multi_foreign_key(df,references):
         # change any -1s back to nulls
         df_copy.loc[:,fn]=df_copy[fn].replace(-1,np.NaN)
     return df_copy
-
-
-
-def raw_elements_to_cdf_OLD(session,mu,row,contest_type,election_id,election_type,juris_id):
-    """
-    NOTE: Tables from context assumed to exist already in db
-    (e.g., Party, ComposingReportingUnitJoin, Election, ReportingUnit etc.)
-    """
-    # TODO some of this could be done once for both BallotMeasure and Candidate contests. Rearrange for efficiency?
-    assert contest_type in ['BallotMeasure','Candidate'], f'Contest type {contest_type} not recognized'
-
-    # change any empty count_column values to zero
-    c = mu.count_columns.RawName.to_list()
-    row[c] = row[c].applymap(lambda x: '0' if x=='' else x)
-
-    cdf_d = {}  # dataframe for each table
-    for element in ['Party','BallotMeasureSelection','ReportingUnit','Office','CountItemType','CandidateContest']:
-        cdf_d[element] = pd.read_sql_table(element, session.bind)
-        # note: keep 'Id as df column (not index) so we have access in merges below.
-
-    vc_col_d = {x['RawName']:x['CountItemType'] for i,x in mu.count_columns.iterrows()}
-
-    col_list = list(vc_col_d.values()) + ['Election_Id','ReportingUnit_Id',
-                                          'ReportingUnitType_Id', 'OtherReportingUnitType',
-                                          'Selection_Id','Contest_Id']
-                                    # TODO feature: do we need CountItemStatus_Id or OtherCountItemStatus in col_list?
-    vote_type_list=list({v for k,v in vc_col_d.items()})
-
-    # add columns corresponding to cdf fields
-    # election id
-    row.loc[:,'Election_Id'] = election_id
-
-    # to make sure all added columns get labeled well, make sure 'Name' and 'Id' are existing columns
-    if 'Name' not in row.columns:
-        row.loc[:,'Name'] = None
-    if 'Id' not in row.columns:
-        row.loc[:,'Id'] = None
-
-    element_list = ['ReportingUnit']
-    if contest_type == 'Candidate':
-        element_list.append('Party')
-    for element in element_list:
-        #  merge works for all columns, even if, say, Party is null, because of how='left' (left join) in add_munged_column function
-        row=get_internal_ids(row,mu,cdf_d[element],element,"Name",mu.path_to_munger_dir)
-        row=add_non_id_cols_from_id(row,cdf_d[element],element)
-
-    if contest_type=='BallotMeasure':
-        add_munged_column(row,mu,'BallotMeasureContest','BallotMeasureContest')
-
-        # create DataFrame bm_contest_selections of contest-selection-id tuples
-        if mu.ballot_measure_style == 'yes_and_no_are_columns':
-            bmc={}
-            new_rows={}
-            bm_contests = row['BallotMeasureContest'].drop_duplicates()
-            for sel in ['Yes','No']:    # internal BallotMeasureSelection options
-                bmc[sel]=pd.DataFrame(zip(bm_contests,[sel] * len(bm_contests)),
-                                      columns=['BallotMeasureContest','BallotMeasureSelection'])
-                new_rows[sel]=row.copy()
-                # add column for selection
-                new_rows[sel].loc[:,'BallotMeasureSelection'] = sel
-                # melt vote counts into appropriately titled columns
-                for vt in vote_type_list:
-                    vt_df = mu.count_columns[mu.count_columns.CountItemType==vt].merge(
-                        mu.ballot_measure_count_column_selections,left_on='RawName',right_on='fieldname'
-                    )
-                    raw_name = vt_df[vt_df.selection==sel].iloc[0]['RawName']
-                    new_rows[sel].loc[:,vt]=row[raw_name]
-            row = pd.concat([new_rows[k] for k in new_rows.keys()])
-            bm_contest_selection = pd.concat([bmc[k] for k in bmc.keys()])
-
-        elif mu.ballot_measure_style == 'yes_and_no_are_candidates':
-            add_munged_column(row,mu,'BallotMeasureSelection','BallotMeasureSelection_external')
-            row = get_internal_ids(
-                row,mu,cdf_d['BallotMeasureSelection'],'BallotMeasureSelection','Selection',mu.path_to_munger_dir)
-            bm_contest_selection = row[['BallotMeasureContest','BallotMeasureSelection']].drop_duplicates()
-            row.rename(columns=vc_col_d,inplace=True)  # standardize vote-count column names
-        else:
-            raise Exception(f'Ballot measure style \'{mu.ballot_measure_style}\' not recognized')
-        bm_contest_selection.columns = ['Name','Selection']
-        # internal db name for ballot measure contest matches name in file
-        bm_contest_selection.loc[:,'ElectionDistrict_Id'] = juris_id  # append column for ElectionDistrict Id
-        print('WARNING: all ballot measure contests assumed to have the whole datafile jurisdiction as their district')
-
-        # Load BallotMeasureContest table to cdf schema
-        cdf_d['BallotMeasureContest'] = dbr.dframe_to_sql(bm_contest_selection[['Name','ElectionDistrict_Id']]
-                                                          .drop_duplicates(),session,None,'BallotMeasureContest')
-
-        # add BallotMeasure-related ids needed later
-        bm_row = row.merge(cdf_d['BallotMeasureSelection'],left_on='BallotMeasureSelection',
-                           right_on='Selection',suffixes=['','_Selection'])
-        bm_row.rename(columns={'Id_Selection':'Selection_Id'},inplace=True)
-        bm_row = bm_row.merge(cdf_d['BallotMeasureContest'],left_on='BallotMeasureContest',
-                              right_on='Name',suffixes=['','_Contest'])
-        bm_row.rename(columns={'Id_Contest':'Contest_Id'},inplace=True)
-
-        # Load BallotMeasureContestSelectionJoin table to cdf schema
-        bmcsj_df = bm_row[['Contest_Id','Selection_Id']].drop_duplicates()
-        bmcsj_df.rename(columns={'Contest_Id':'BallotMeasureContest_Id','Selection_Id':'BallotMeasureSelection_Id'},
-                        inplace=True)
-        cdf_d['BallotMeasureContestSelectionJoin'] = dbr.dframe_to_sql(bmcsj_df,session,None,
-                                                                       'BallotMeasureContestSelectionJoin')
-
-        # Load ElectionContestJoin table (for ballot measures)
-        ecj_df = cdf_d['BallotMeasureContest'].copy()
-        ecj_df.loc[:,'Election_Id'] = election_id
-        ecj_df.rename(columns={'Id': 'Contest_Id'}, inplace=True)
-        cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,None,'ElectionContestJoin',return_records='original')
-
-        # create dframe of vote counts (with join info) for ballot measures
-        bm_vote_counts = bm_row[col_list]
-
-        bm_vote_counts=bm_vote_counts.melt(
-            id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],
-            value_vars=vote_type_list,var_name='CountItemType',value_name='Count')
-        bm_vote_counts=enum_col_to_id_othertext(bm_vote_counts,'CountItemType',cdf_d['CountItemType'])
-        vote_counts = bm_vote_counts
-
-    elif contest_type=='Candidate':
-        # process rows with candidate contests
-        # Find CandidateContest_external and CandidateContest_Id
-        # and omit rows with contests not  given in CandidateContest table (filled from context)
-        add_munged_column(row,mu,'CandidateContest','CandidateContest_external')
-        cc_row=get_internal_ids(
-            row,mu,cdf_d['CandidateContest'],'CandidateContest','Name',mu.path_to_munger_dir,drop_unmatched=True)
-        cc_row.rename(columns={'CandidateContest_Id':'Contest_Id'},inplace=True)
-
-        # load Candidate table
-        add_munged_column(cc_row,mu,'Candidate','BallotName')
-        candidate_df = cc_row[['BallotName','Party_Id','Election_Id']].copy().drop_duplicates()
-        candidate_df = candidate_df[candidate_df['BallotName'].notnull()]
-        # TODO add  other notnull criteria
-        cdf_d['Candidate'] = dbr.dframe_to_sql(candidate_df,session,None,'Candidate')
-
-        # load CandidateSelection
-        cs_df = cdf_d['Candidate'].copy()
-        cs_df.rename(columns={'Id':'Candidate_Id'},inplace=True)
-        cdf_d['CandidateSelection'] = dbr.dframe_to_sql(cs_df,session,None,'CandidateSelection')
-
-
-        # add Candidate ids needed later
-        cc_row = cc_row.merge(cs_df,left_on='BallotName',right_on='BallotName',
-                              suffixes=['','_Candidate'])
-        cc_row.rename(columns={'Id_Candidate':'Candidate_Id'},inplace=True)
-        cc_row = cc_row.merge(cdf_d['CandidateSelection'],left_on='Candidate_Id',
-                              right_on='Candidate_Id',suffixes=['','_Selection'])
-        cc_row.rename(columns={'Id_Selection':'Selection_Id'},inplace=True)
-
-        # Office depends on the election type and the CandidateContest.
-        if election_type == 'general':
-            # Office name is same as CandidateContest name
-            cc_row['Office'] = cc_row['CandidateContest']
-        elif election_type == 'primary':
-            # Office name is derived from CandidateContest name
-            cc_row['Office'] = cc_row['CandidateContest'].str.split(' Primary;').iloc[0][0]
-        else:
-            raise Exception(f'Election type {election_type} not recognized by the code') # TODO add all election types
-        cc_row.merge(cdf_d['Office'],left_on='Office',right_on='Name',suffixes=['','_Office'])
-        cc_row.rename(columns={'Id_Office':'Office_Id'},inplace=True)
-
-        # load ElectionContestJoin for Candidate Contests
-        ecj_df = cc_row[['Contest_Id','Election_Id']].drop_duplicates()
-        cdf_d['ElectionContestJoin'] = dbr.dframe_to_sql(ecj_df,session,None,'ElectionContestJoin')
-
-        #  load CandidateContestSelectionJoin
-        ccsj_df = cc_row[['Contest_Id','Selection_Id']].drop_duplicates()
-        ccsj_df.rename(columns={'Contest_Id':'CandidateContest_Id','Selection_Id':'CandidateSelection_Id'},inplace=True)
-        cdf_d['CandidateContestSelectionJoin'] = dbr.dframe_to_sql(ccsj_df,session,None,'CandidateContestSelectionJoin')
-
-        # load candidate counts
-        cc_row.rename(columns=vc_col_d,inplace=True)  # standardize vote-count column names
-        cc_vote_counts = cc_row[col_list]
-        # TODO for Florida, why is there no 'Count' column for Candidate contest_type?
-        cc_vote_counts=cc_vote_counts.melt(
-            id_vars=['Election_Id','Contest_Id','Selection_Id','ReportingUnit_Id'],
-            value_vars=vote_type_list,var_name='CountItemType',value_name='Count')
-        cc_vote_counts=enum_col_to_id_othertext(cc_vote_counts,'CountItemType',cdf_d['CountItemType'])
-        vote_counts = cc_vote_counts
-
-    else:
-        raise Exception(f'Contest type {contest_type} not recognized.')
-    # TODO do we need to check whether vote_counts is empty?
-
-    # To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
-    # add SelectionElectionContestJoin columns to VoteCount
-    extra_cols = ['Election_Id','Contest_Id','Selection_Id']
-    dbr.add_integer_cols(session,'VoteCount',extra_cols)
-    print('Upload to VoteCount')
-    start = time.time()
-    vote_counts_fat = dbr.dframe_to_sql(vote_counts,session,None,'VoteCount',raw_to_votecount=True)
-    vote_counts_fat.rename(columns={'Id':'VoteCount_Id'},inplace=True)
-    session.commit()
-    end = time.time()
-    print(f'\tSeconds required to upload VoteCount: {round(end - start)}')
-    print('Upload to SelectionElectionContestVoteCountJoin')
-    start = time.time()
-
-    cdf_d['SelectionElectionContestVoteCountJoin'] = dbr.dframe_to_sql(vote_counts_fat,session,None,'SelectionElectionContestVoteCountJoin')
-    end = time.time()
-    print(f'\tSeconds required to upload SelectionElectionContestVoteCountJoin: {round(end - start)}')
-    print('Drop columns from cdf table')
-    dbr.drop_cols((session,'VoteCount',extra_cols))
-    q = 'ALTER TABLE "VoteCount" DROP COLUMN "Election_Id",' \
-        ' DROP COLUMN "Contest_Id" ,  DROP COLUMN "Selection_Id" '
-    sql_ids=[]
-    strs = []
-    dbr.raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
-
-    return
 
 
 if __name__ == '__main__':

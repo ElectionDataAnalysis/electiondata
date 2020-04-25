@@ -320,8 +320,8 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     up_to_date_dframe = pd.read_sql_table(table,session.bind)
 
     if raw_to_votecount:
-        # need to drop rows that were read originally from target -- these will have null Election_Id
-        up_to_date_dframe=up_to_date_dframe[up_to_date_dframe['Election_Id'].notnull()]
+        # need to drop rows that were read originally from target -- these will have null ElectionContestJoin_Id
+        up_to_date_dframe=up_to_date_dframe[up_to_date_dframe['ElectionContestJoin_Id'].notnull()]
     if flush:
         session.flush()
     if return_records == 'original':

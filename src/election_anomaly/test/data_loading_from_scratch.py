@@ -48,8 +48,8 @@ if __name__ == '__main__':
 	if encoding == '':
 		encoding = 'iso-8859-1'
 
-	ui.new_datafile_NEW(new_df_session,munger,
-		raw_file,sep,juris=juris_short_name,encoding=encoding,project_root=project_root)
+	ui.new_datafile(new_df_session,munger,
+					raw_file,sep,juris=juris_short_name,encoding=encoding,project_root=project_root)
 
 	eng.dispose()
 	print('Done! (user_interface)')
