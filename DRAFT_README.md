@@ -54,3 +54,7 @@ Not all elements of the NIST CDF need to be in the database. You may wish to alt
 
 [//]: # "TODO give more detail?"
 
+## About the Filesystem
+
+### Context directory
+Each file (except for remark.txt and ExternalIdentifiers.txt and Candidate.txt) has a Name column, which must not have duplicate entries. Entries in this column correspond to the Name field in the corresponding database table

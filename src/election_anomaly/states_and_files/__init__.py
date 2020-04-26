@@ -116,7 +116,7 @@ class Jurisdiction:
         # TODO help user add appropriate lines to munger/raw_identifiers.txt and update munger
         return
 
-    def __init__(self,short_name,path_to_parent_dir,project_root=None):        # reporting_units,elections,parties,offices):
+    def __init__(self,short_name,path_to_parent_dir,project_root=None,check_context=False):        # reporting_units,elections,parties,offices):
         """ short_name is the name of the directory containing the jurisdiction info, including data,
          and is used other places as well.
          path_to_parent_dir is the parent directory of dir_name
@@ -127,9 +127,10 @@ class Jurisdiction:
         self.short_name = ui.pick_or_create_directory(path_to_parent_dir,short_name)
         self.path_to_juris_dir = os.path.join(path_to_parent_dir, self.short_name)
 
-        # Ensure that context directory exists and is missing no essential files
-        check_jurisdiction_directory(self.path_to_juris_dir)
-        ensure_context(self.path_to_juris_dir,project_root)
+        if check_context:
+            # Ensure that context directory exists and is missing no essential files
+            check_jurisdiction_directory(self.path_to_juris_dir)
+            ensure_context(self.path_to_juris_dir,project_root)
 
 
 class Munger:
@@ -278,11 +279,11 @@ class Munger:
         c_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
         print(f'Updating database with info from {jurisdiction.short_name}/context/{element}.txt.\n')
         source_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
+        if not os.path.isfile(source_file):
+            ensure_context(jurisdiction.path_to_juris_dir,project_path)
         source_df = pd.read_csv(source_file,sep='\t')
-        # TODO error handling if source_file doesn't exist yet
 
         results = raw.copy()
-        # TODO check that logic below still works
         dupes = True
         while dupes:
             dupes,source_df = ui.find_dupes(source_df)
@@ -322,7 +323,12 @@ class Munger:
 
         if len(not_munged) > 0:
             print(f'Some {element}s in the results file cannot be interpreted by the munger {self.name}.')
-            print(f'Note: {element}s listed in unmunged_{element}s.txt are interpreted as \'to be ignored\'.')
+            if element[-7:] == 'Contest' or element[-9:] == 'Selection':
+                contest_msg = \
+                    '\nDon\'t worry if Ballot Measure items are listed as unmunged Candidate items, or vice versa.'
+            else:
+                contest_msg = ''
+            print(f'Note: {element}s listed in unmunged_{element}s.txt are interpreted as \'to be ignored\'.{contest_msg}')
             outfile = f'unmunged_{element}s.txt'
             # TODO when showing unmunged candidates, show only unmunged candidates from munged contests
             #  but first check for unmunged contests!
@@ -504,7 +510,8 @@ class Munger:
             db_elements.remove('CandidateSelection')
             db_elements.remove('ExternalIdentifier')
             db_elements.remove('VoteCount')
-            # TODO why CountItemType? CandidateSelection? ExternalIdentifier? make this programmatic
+            db_elements.remove('Office')
+            # TODO why these? make this programmatic
 
             m_elements = self.cdf_elements.index
             db_only = [x for x in db_elements if x not in m_elements]
@@ -634,38 +641,32 @@ def check_jurisdiction_directory(juris_path):
 
 
 def ensure_context(juris_path,project_root):
+    # ensure directory exists
     check_jurisdiction_directory(juris_path)
 
-    # ensure context directory has what it needs
+    # ensure contents are correct
     templates = os.path.join(project_root,'templates/context_templates')
     enums = os.path.join(project_root,'election_anomaly/CDF_schema_def_info/enumerations')
-    context_file_list = os.listdir(templates)
-    if not all([os.path.isfile(os.path.join(juris_path,'context',x)) for x in context_file_list]):
-        # pull necessary enumeration from db: ReportingUnitType
-        e_path = os.path.join(enums,'ReportingUnitType.txt')
-        with open(e_path,'r') as f:
-            rut = f.readlines()
-        standard_ru_types = set(x.strip() for x in rut if x != 'other')
-        ru = ui.fill_context_file(
-            os.path.join(juris_path,'context'),templates,'ReportingUnit',standard_ru_types,'ReportingUnitType')
-        ru_list = ru['Name'].to_list()
-        ui.fill_context_file(os.path.join(juris_path,'context'),
-                          templates,
-                          'Office',None,None)  # note check that ElectionDistricts are RUs happens below
-        # Party.txt
-        ui.fill_context_file(os.path.join(juris_path,'context'),
-                          templates,
-                          'Party',None,None)
+    template_list = os.listdir(templates)
+    context_file_list = ['ReportingUnit','Election','BallotMeasureContest','Office','Party','CandidateContest','Candidate','ExternalIdentifier','remark']
 
+    for element in context_file_list:
+        el_path = os.path.join(juris_path,'context',f'{element}.txt')
         # remark
-        remark_path = os.path.join(juris_path,'context','remark.txt')
-        open(remark_path,'a').close()  # creates file if it doesn't exist already
-        with open(remark_path,'r') as f:
-            remark = f.read()
-        print(f'Current contents of remark.txt is:\n{remark}\n')
-        input(
-            f'In the file context/remark.txt, add or correct anything that user should know about the jurisdiction {jurisdiction_name}.\n'
-            f'Then hit return to continue.')
+        if element == 'remark':
+
+            open(el_path,'a').close()  # creates file if it doesn't exist already
+            with open(el_path,'r') as f:
+                remark = f.read()
+            print(f'Current contents of remark.txt is:\n{remark}\n')
+            input(
+                f'In the file context/remark.txt, add or correct anything that user should know about the jurisdiction.\n'
+                f'Then hit return to continue.')
+        elif element == 'ExternalIdentifier':
+            pass # TODO
+        else:
+            ui.fill_context_file(
+                os.path.join(juris_path,'context'),templates,element)
     return
 
 if __name__ == '__main__':

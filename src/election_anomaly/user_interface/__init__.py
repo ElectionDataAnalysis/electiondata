@@ -128,17 +128,16 @@ def resolve_nulls(df,source_file,col_list=None,kwargs={}):
 	return
 
 
-def show_sample(st,items,condition,outfile='shown_items.txt',dir=None,export=False):
+def show_sample(input_iter,items,condition,outfile='shown_items.txt',dir=None,export=False):
 	# TODO revise to allow sample of dataframe and export of dataframe. E.g.
 	#  so that Candidate and Party together can be exported.
-	print(f'There are {len(st)} {items} that {condition}:')
-	if len(st) == 0:
+	print(f'There are {len(input_iter)} {items} that {condition}:')
+	if len(input_iter) == 0:
 		return
-	if isinstance(st,pd.DataFrame):
-		st_list = []
-		for i in st.index:
-			st.append(f'{st[i]}')
-	st = list(st)
+	if isinstance(input_iter,pd.DataFrame):
+		st = input_iter.to_csv(sep='\t').split('\n')
+	else:
+		st = list(input_iter)
 	st.sort()
 
 	if len(st) < 11:
@@ -298,22 +297,39 @@ def create_file_from_template(template_file,new_file,sep='\t'):
 	return
 
 
-def fill_context_file(context_path,template_dir_path,element,test_list,test_field,sep='\t'):
+def fill_context_file(context_path,template_dir_path,element,sep='\t'):
 	"""Creates file context/<element>.txt if necessary.
 	In any case, runs format and dupe checks on that file, inviting user corrections.
 	Also checks that each <element> passes the test, i.e., that
-	each <element.test_field> is in <test_list>."""
+	for each k,v in <tests>, every value in column k can be found in <v>.txt.
+	Does not apply to ExternalIdentifier.txt or remark.txt"""
 	template_file = os.path.join(template_dir_path,f'{element}.txt')
 	template = pd.read_csv(template_file,sep='\t')
 	context_file = os.path.join(context_path,f'{element}.txt')
 	create_file_from_template(template_file,context_file,sep=sep)
+
+	namefield = 'Name'
+	if element == 'BallotMeasureContest':
+		tests = {'ElectionDistrict':'ReportingUnit','Election':'Election'}
+	elif element == 'Candidate':
+		tests = {'Party':'Party'}
+		namefield = 'BallotName'
+	elif element == 'CandidateContest':
+		tests = {'Office':'Office'}
+	elif element == 'Office':
+		tests = {'ElectionDistrict':'ReportingUnit'}
+	else:
+		tests = {}
+
+	context_df = None
 	in_progress = 'y'
 	while in_progress == 'y':
 		# check format of file
 		context_df = pd.read_csv(context_file,sep=sep,header=0,dtype=str)
-		dupes,deduped = find_dupes(context_df.Name)
+		dupes,deduped = find_dupes(context_df[namefield])
 		if not context_df.columns.to_list() == template.columns.to_list():
-			print(f'WARNING: {element}.txt is not in the correct format.')		# TODO refine error msg?
+			print(f'WARNING: {element}.txt is not in the correct format. Required columns are:\n'
+				  f'{template.columns.to_list()}')
 			input('Please correct the file and hit return to continue.\n')
 
 		# check for empty
@@ -326,7 +342,7 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 
 		# check for dupes
 		elif dupes.shape[0] >0:
-			print(f'File {context_path}\n has duplicates in the Name column.')
+			print(f'File {context_path}\n has duplicates in the {namefield} column.')
 			show_sample(dupes,'names','appear on more than one line')
 			input(f'Please correct and hit return to continue.\n')
 		else:
@@ -335,26 +351,27 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 			show_sample(context_list,'lines',f'are in {element}.txt')
 
 			# check test conditions
-			if test_list is None:
+			if tests is None:
 				in_progress = 'n'
 			else:
-				bad_set = {x for x in context_df[test_field] if x not in test_list}
-				if len(bad_set) == 0:
-					print(f'Congratulations! Contents of context/{element}.txt look good!')
-					in_progress = 'n'
-				else:  # if test condition fails
-					print(f'\tStandard {test_field}s are not required, but you probably want to use them when you can.'
-						  f'\n\tYour file has non-standard {test_field}s:')
-					for rut in bad_set: print(f'\t\t{rut}')
-					# TODO bug: this prints out long long list of ElectionDistricts,
-					# TODO then suggests altering only Office.txt. Should be more graceful.
-					print(f'\tStandard {test_field}s are:')
-					print(f'\t\t{",".join(test_list)}')
-
+				problem = False
+				for test_field in tests.keys():
+					targets = pd.read_csv(os.path.join(context_path,f'{tests[test_field]}.txt'),sep='\t')
+					#bad_set = {x for x in context_df[test_field] if x not in targets.Name.unique()}
+					bad_set = {idx for idx in context_df.index if
+							   context_df.loc[idx,test_field] not in targets.Name.unique()}
+					if len(bad_set) == 0:
+						print(
+							f'Congratulations! The {test_field} for each record in context/{element}.txt looks good!')
+					else:  # if test condition fails
+						show_sample(context_df.loc[bad_set],f'{element}s',f'have unrecognized {test_field}s.')
+						problem = True
+				if problem:
 					# invite input
-					in_progress = input(f'Would you like to alter {element}.txt (y/n)?\n')
-					if in_progress == 'y':
-						input('Make alterations, then hit return to continue')
+					input('Make alterations to fix unrecognized items, then hit return to continue')
+					fill_context_file(context_path,template_dir_path,tests[test_field])
+				else:
+					in_progress = 'n'
 	return context_df
 
 

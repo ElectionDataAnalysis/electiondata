@@ -6,6 +6,7 @@ import os
 import munge_routines as mr
 import pandas as pd
 import csv
+import states_and_files as sf
 
 
 if __name__ == '__main__':
@@ -23,6 +24,11 @@ if __name__ == '__main__':
 	Session = sessionmaker(bind=eng)
 	sess = Session()
 
+	juris_short_name = 'NC_TEST_5'
+	juris = ui.pick_juris_from_filesystem(
+		project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
+		jurisdiction_name=juris_short_name)
+
 	# pick munger
 	munger = ui.pick_munger(
 		sess,munger_dir=os.path.join(project_root,'mungers'),
@@ -37,11 +43,6 @@ if __name__ == '__main__':
 	else:
 		raise Exception(f'separator {enum_d["_datafile_separator"]} not recognized')
 
-	juris_short_name = 'NC_TEST_5'
-	juris = ui.pick_juris_from_filesystem(
-		project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
-		jurisdiction_name=juris_short_name)
-
 	# load new datafile
 	encoding = dfile_d['encoding']
 	if encoding == '':
@@ -53,9 +54,8 @@ if __name__ == '__main__':
 
 	[raw,info_cols,num_cols] = mr.clean_raw_df(raw,munger)
 
-	for element in [
-		'ReportingUnit','Election','Office','Party','CandidateContest','Candidate',
-		'BallotMeasureContest','BallotMeasureSelection','CountItemType']:
+	for element in ['ReportingUnit','Election','Party','CandidateContest','Candidate',
+		'BallotMeasureContest']:
 		munger.finalize_element(element,raw,juris,sess,project_root)
 	eng.dispose()
 	print('Done! (user_interface)')
