@@ -10,11 +10,10 @@ if __name__ == '__main__':
 
     # pick db to use
     db_paramfile = ui.pick_paramfile(project_root)
-    # juris_name = 'NC'
-    juris_name = None
+    juris_name = 'NC_5'
+    #juris_name = None
 
     db_name = ui.pick_database(project_root,db_paramfile)
-    # TODO remove ElectionDistrict-ReportingUnit check from pick_database; make a check_database function.
 
     # initialize main session for connecting to db
     eng, meta_generic = dbr.sql_alchemy_connect(
@@ -25,9 +24,9 @@ if __name__ == '__main__':
     jurisdiction = ui.pick_juris_from_filesystem(project_root,
                                                  path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
                                                  jurisdiction_name=juris_name)
-    target_dir = os.path.join(project_root,'jurisdictions/FL/rollups_from_cdf_db')
+    target_dir = os.path.join(project_root,'jurisdictions/NC_5/rollups_from_cdf_db')
     rollup = avp.create_rollup(
-        analysis_session,'Florida','county','county','2018general',target_dir)
+        analysis_session,'North Carolina','county','precinct','2018g',target_dir)
 
     eng.dispose()
     print('Done')

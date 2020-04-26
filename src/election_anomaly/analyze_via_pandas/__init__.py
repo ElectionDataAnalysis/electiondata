@@ -19,7 +19,7 @@ def contest_info_by_id(eng):
 	for element in [
 		"CandidateContest","BallotMeasureContest",
 		"BallotMeasureSelection","CandidateSelection","Candidate",
-		"ReportingUnitType","ComposingReportingUnitJoin","ReportingUnit"]:
+		"ReportingUnitType","ComposingReportingUnitJoin","ReportingUnit","Office"]:
 		df[element] = pd.read_sql_table(element,eng,index_col='Id')
 	for enum in ["ReportingUnitType"]:
 		df[enum] = pd.read_sql_table(enum,eng)
@@ -28,8 +28,9 @@ def contest_info_by_id(eng):
 		df['Candidate'],left_on='Candidate_Id',right_index=True)
 
 	# TODO need to update: Office has ElectionDistrict; CC does not, but has Office
+	df_cc_district = df['CandidateContest'].merge(df['Office'],how='left',left_on='Office_Id',right_index=True,suffixes=['','_Office'])
 	district_id_by_contest_id = pd.concat(
-		[df['CandidateContest'][['Name','ElectionDistrict_Id']],
+		[df_cc_district[['Name','ElectionDistrict_Id']],
 		df['BallotMeasureContest'][['Name','ElectionDistrict_Id']]])
 	district_type_id_other_by_contest_id = district_id_by_contest_id.merge(
 		df['ReportingUnit'],left_on='ElectionDistrict_Id',right_index=True)
@@ -101,13 +102,16 @@ def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,
 	# pull relevant tables
 	df = {}
 	for element in [
-		"SelectionElectionContestVoteCountJoin","VoteCount",
-		"ComposingReportingUnitJoin","Election","ReportingUnit",
-		"ComposingReportingUnitJoin"]:
+		'ElectionContestSelectionVoteCountJoin','VoteCount','CandidateContestSelectionJoin',
+		'BallotMeasureContestSelectionJoin','ComposingReportingUnitJoin','Election','ReportingUnit',
+		'ElectionContestJoin','CandidateContest','CandidateSelection','BallotMeasureContest',
+		'BallotMeasureSelection','Office','Candidate']:
+		# pull directly from db, using 'Id' as index
 		df[element] = pd.read_sql_table(element,session.bind,index_col='Id')
+
+	# pull enums from db, keeping 'Id as a column, not the index
 	for enum in ["ReportingUnitType","CountItemType"]:
-		df[enum] = pd.read_sql_table(
-			enum,session.bind)  # keep 'Id' as col, not index
+		df[enum] = pd.read_sql_table(enum,session.bind)
 	count_item_type = {r.Id:r.Txt for i,r in df['CountItemType'].iterrows()}
 
 	# Get id for top reporting unit, election
@@ -137,19 +141,55 @@ def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,
 		ui.show_sample(missing_names,'atomic ReportingUnits',f'are not in any {sub_ru_type}')
 
 	# calculate specified dataframe with columns [ReportingUnit,Contest,Selection,VoteCount,CountItemType]
+	#  limit to relevant reporting units
 	ru_c = df['ReportingUnit'].loc[atomic_ru_list]
 	ru_p = df['ReportingUnit'].loc[sub_ru_list]
-	secvcj = df['SelectionElectionContestVoteCountJoin'][
-		df['SelectionElectionContestVoteCountJoin'].Election_Id == election_id
-		]
+
+	#  limit to relevant Election-Contest pairs
+	ecj = df['ElectionContestJoin'][df['ElectionContestJoin'].Election_Id == election_id]
+
+	#  create contest_selection dataframe, adding Contest, Selection and ElectionDistrict_Id columns
+	cc = df['CandidateContestSelectionJoin'].merge(
+		df['CandidateContest'],how='left',left_on='CandidateContest_Id',right_index=True).rename(
+		columns={'Name':'Contest'}).merge(
+		df['CandidateSelection'],how='left',left_on='CandidateSelection_Id',right_index=True).merge(
+		df['Candidate'],how='left',left_on='Candidate_Id',right_index=True).rename(
+		columns={'BallotName':'Selection','CandidateContest_Id':'Contest_Id',
+				 'CandidateSelection_Id':'Selection_Id'}).merge(
+		df['Office'],how='left',left_on='Office_Id',right_index=True)
+	cc = cc[['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id']]
+	cc.loc[:,'contest_type'] = 'Candidate'
+	bm = df['BallotMeasureContestSelectionJoin'].merge(
+		df['BallotMeasureContest'],how='left',left_on='BallotMeasureContest_Id',right_index=True).rename(
+		columns={'Name':'Contest'}).merge(
+		df['BallotMeasureSelection'],how='left',left_on='BallotMeasureSelection_Id',right_index=True).rename(
+		columns={'BallotMeasureSelection_Id':'Selection_Id','BallotMeasureContest_Id':'Contest_Id'}
+	)
+	bm = bm[['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id']]
+	bm.loc[:,'contest_type'] = 'BallotMeasure'
+	contest_selection = pd.concat([cc,bm])
+
+	# append contest_district_type column
+	ru = df['ReportingUnit'][['ReportingUnitType_Id','OtherReportingUnitType']]
+	contest_selection = contest_selection.merge(ru,how='left',left_on='ElectionDistrict_Id',right_index=True)
+	contest_selection = mr.enum_col_from_id_othertext(contest_selection,'ReportingUnitType',df['ReportingUnitType'])
+
+	#  limit to relevant ContestSelection pairs
+	contest_ids = ecj.Contest_Id.unique()
+	csj = contest_selection[contest_selection.Contest_Id.isin(contest_ids)]
+
+	# limit to relevant vote counts
+	ecsvcj = df['ElectionContestSelectionVoteCountJoin'][
+		(df['ElectionContestSelectionVoteCountJoin'].ElectionContestJoin_Id.isin(ecj.index)) &
+		(df['ElectionContestSelectionVoteCountJoin'].ContestSelectionJoin_Id.isin(csj.index))]
 
 	if sub_ru_type == atomic_ru_type:
-		unsummed = secvcj.merge(
+		unsummed = ecsvcj.merge(
 			df['VoteCount'],left_on='VoteCount_Id',right_index=True).merge(
 			df['ReportingUnit'],left_on='ReportingUnit_Id',right_index=True)
 		unsummed.rename(columns={'Name':'ReportingUnit'},inplace=True)
 	else:
-		unsummed = secvcj.merge(
+		unsummed = ecsvcj.merge(
 			df['VoteCount'],left_on='VoteCount_Id',right_index=True).merge(
 			df['ComposingReportingUnitJoin'],left_on='ReportingUnit_Id',right_on='ChildReportingUnit_Id').merge(
 			ru_c,left_on='ChildReportingUnit_Id',right_index=True).merge(
@@ -157,12 +197,8 @@ def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,
 		unsummed.rename(columns={'Name_Parent':'ReportingUnit'},inplace=True)
 
 	# add columns with names
-	contest_type,contest_name,selection_name,contest_district_type = contest_info_by_id(session.bind)
-	unsummed['contest_type'] = unsummed['Contest_Id'].map(contest_type)
-	unsummed['Contest'] = unsummed['Contest_Id'].map(contest_name)
-	unsummed['Selection'] = unsummed['Selection_Id'].map(selection_name)
-	unsummed['CountItemType'] = unsummed['CountItemType_Id'].map(count_item_type)
-	unsummed['contest_district_type'] = unsummed['Contest_Id'].map(contest_district_type)
+	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'])
+	unsummed = unsummed.merge(contest_selection,how='left',left_on='ContestSelectionJoin_Id',right_index=True)
 
 	cis = 'unknown'
 	cit_list = unsummed['CountItemType'].unique()

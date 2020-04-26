@@ -545,7 +545,7 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 
 		# save record to db
 		try:
-			element_df = pd.read_sql_table(element,sess.bind)
+			element_df = pd.read_sql_table(element,sess.bind,index_col='Id')
 			enum_list = [x[5:] for x in element_df.columns if x[:5]=='Other']
 			for e in enum_list:
 				enum_df = pd.read_sql_table(e,sess.bind)
@@ -553,7 +553,8 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 				user_record.pop(e)
 			element_df = dbr.dframe_to_sql(pd.DataFrame(user_record,index=[-1]),sess,None,element,index_col='Id')
 			# find index matching inserted element
-			idx = element_df.loc[(element_df[list(user_record)] == pd.Series(user_record)).all(axis=1)].first_valid_index()
+			idx = element_df.loc[
+				(element_df[list(user_record)] == pd.Series(user_record)).all(axis=1)]['Id'].to_list()[0]
 		except dbr.CdfDbException:
 			print('Insertion of new record to db failed, maybe because record already exists. Try again.')
 			idx = pick_or_create_record(sess,project_root,element,known_info_d=known_info_d)
@@ -580,7 +581,8 @@ def get_or_create_election_in_db(sess,project_root):
 			electiontype = et_row.loc[election_idx,'OtherElectionType']
 		else:
 			electiontype = et_row.loc[election_idx,'Txt']
-	return election_idx,electiontype
+	# TODO understand why election_idx is np.int64 and how to avoid that routinely
+	return int(election_idx),electiontype
 
 
 def pick_record_from_db(sess,element,known_info_d={}):

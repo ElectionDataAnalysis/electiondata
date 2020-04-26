@@ -518,7 +518,7 @@ def raw_elements_to_cdf_NEW(session,project_root,juris,mu,raw,info_cols,num_cols
     # drop extra columns
     dbr.drop_cols(session,'VoteCount',extra_cols)
 
-    # TODO
+    # TODO CandidateContest must get Office_Id
     return
 
 

@@ -18,6 +18,7 @@ class CdfDbException(Exception):
 
 
 def create_database(con,cur,db_name):
+    # TODO review logic & messages
     sure = input('If the db exists, it will be deleted and data will be lost. Are you absolutely sure (y/n)?\n')
     if sure == 'y':
         con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
