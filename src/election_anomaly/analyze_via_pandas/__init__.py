@@ -27,6 +27,7 @@ def contest_info_by_id(eng):
 	candidate_name_by_selection_id = df['CandidateSelection'].merge(
 		df['Candidate'],left_on='Candidate_Id',right_index=True)
 
+	# TODO need to update: Office has ElectionDistrict; CC does not, but has Office
 	district_id_by_contest_id = pd.concat(
 		[df['CandidateContest'][['Name','ElectionDistrict_Id']],
 		df['BallotMeasureContest'][['Name','ElectionDistrict_Id']]])

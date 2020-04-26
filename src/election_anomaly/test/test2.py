@@ -36,9 +36,9 @@ if __name__ == '__main__':
 
 	# datafile & info
 	raw_file_dir = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/NC_old/data/2018g/nc_general/'
-	raw_file_path = os.path.join(raw_file_dir,'results_pct_20181106.txt')
+	raw_file_path = os.path.join(raw_file_dir,'small.txt')
 	sep = '\t'
-	juris_short_name = 'NC'
+	juris_short_name = 'NC_5'
 	juris = ui.pick_juris_from_filesystem(
 		project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
 		jurisdiction_name=juris_short_name)

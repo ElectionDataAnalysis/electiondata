@@ -247,7 +247,8 @@ def check_count_columns(df,file,mungerdir,cdf_schema_def_dir):
 	return df
 
 
-def pick_juris_from_filesystem(project_root,path_to_jurisdictions='jurisdictions/',jurisdiction_name=None):
+def pick_juris_from_filesystem(
+		project_root,path_to_jurisdictions='jurisdictions/',jurisdiction_name=None,check_files=False):
 	"""Returns a State object.
 	If <jurisdiction_name> is given, this just initializes based on info
 	in the folder with that name; """
@@ -258,9 +259,10 @@ def pick_juris_from_filesystem(project_root,path_to_jurisdictions='jurisdictions
 					   os.path.isdir(os.path.join(path_to_jurisdictions,x))]
 		juris_idx,jurisdiction_name = pick_one(choice_list,None,item='jurisdiction')
 
-		juris_path = os.path.join(path_to_jurisdictions,jurisdiction_name)
-		sf.check_jurisdiction_directory(juris_path)
-		sf.ensure_context(juris_path,project_root)
+		if check_files:
+			juris_path = os.path.join(path_to_jurisdictions,jurisdiction_name)
+			sf.check_jurisdiction_directory(juris_path)
+			sf.ensure_context(juris_path,project_root)
 	else:
 		print(f'Directory {jurisdiction_name} is assumed to exist and have the required contents.')
 	# initialize the jurisdiction
