@@ -271,34 +271,33 @@ class Munger:
             missing_from_db = {x for x in cdf_from_ri if x not in cdf_from_db}
         return
 
-    def prepare_context_and_db(self,element,raw,jurisdiction,sess,project_path='.'):
+    def prepare_context_and_db(self,element,raw,jurisdiction,sess,project_path='.',enumeration=False):
         """Loads info from context/<element>.txt into db; checks <element>s from file <raw> against munger;
         then checks munger against db. Throughout, guides user to make corrections in context/<element>.txt;
         finally loads final context/<element>.txt into db. Note that this will only add records to db, never remove. """
 
-        c_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
-        print(f'Updating database with info from {jurisdiction.short_name}/context/{element}.txt.\n')
-        source_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
-        if not os.path.isfile(source_file):
-            ensure_context(jurisdiction.path_to_juris_dir,project_path)
-        source_df = pd.read_csv(source_file,sep='\t')
-
+        # get results and change column names to distinguish raw from munged
         results = raw.copy()
-        dupes = True
-        while dupes:
-            dupes,source_df = ui.find_dupes(source_df)
-            if dupes.empty:
-                dupes = False
-            else:
-                input(f'WARNING: {jurisdiction.short_name}/context/{element}.txt has duplicates.\n'
-                      f'Edit the file to remove the duplication, then hit return to continue')
-                source_df = pd.read_csv(source_file,sep='\t')
-
-        mr.load_context_dframe_into_cdf(sess,project_path,jurisdiction,source_df,element,
-                                        os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
-
         d = {x:f'{x}_{self.field_rename_suffix}' for x in self.field_list}
         results.rename(columns=d,inplace=True)
+
+        if enumeration:
+            source_file = os.path.join(project_path,'election_anomaly/CDF_schema_def_info/enumerations',f'{element}.txt')
+            print(f'Updating database with info from /CDF_schema_def_info/enumerations/{element}.txt.\n')
+            source_df = pd.read_csv(source_file,sep='\t')
+        else:
+            source_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
+            print(f'Updating database with info from {jurisdiction.short_name}/context/{element}.txt.\n')
+            source_df = pd.read_csv(source_file,sep='\t')
+
+            if not os.path.isfile(source_file):
+                ensure_context(jurisdiction.path_to_juris_dir,project_path)
+            source_df = dedupe(
+               source_df,source_file,warning=f'{jurisdiction.short_name}/context/{element}.txt has duplicates.')
+
+            mr.load_context_dframe_into_cdf(sess,project_path,jurisdiction,source_df,element,
+                                        os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
+
 
         mr.add_munged_column_NEW(results,self,element)
         results_elements = results[f'{element}_raw'].unique()
@@ -347,7 +346,7 @@ class Munger:
                     f'Then hit return to continue.\n')
 
         # add all elements from context/ to db
-        source_df = pd.read_csv(c_file,sep='\t')
+        source_df = pd.read_csv(source_file,sep='\t')
         mr.load_context_dframe_into_cdf(sess,project_path,
                                         jurisdiction,source_df,element,
                                         cdf_schema_def_dir=os.path.join(project_path,
@@ -384,7 +383,7 @@ class Munger:
                         f'Then hit return to continue.\n')
         else:
             print(f'Congrats! Each munged {element} is in the database!')
-        source_df = pd.read_csv(c_file,sep='\t')
+        source_df = pd.read_csv(source_file,sep='\t')
         mr.load_context_dframe_into_cdf(sess,project_path,
                                         jurisdiction,source_df,element,
                                         cdf_schema_def_dir=os.path.join(project_path,
@@ -668,6 +667,19 @@ def ensure_context(juris_path,project_root):
             ui.fill_context_file(
                 os.path.join(juris_path,'context'),templates,element)
     return
+
+
+def dedupe(df,f_path,warning='There are duplicates'):
+    dupes = True
+    while dupes:
+        dupes,df = ui.find_dupes(df)
+        if dupes.empty:
+            dupes = False
+        else:
+            input(f'WARNING: {warning}\n'
+                  f'Edit the file to remove the duplication, then hit return to continue')
+            df = pd.read_csv(f_path,sep='\t')
+    return df
 
 if __name__ == '__main__':
     print('Done (states_and_files)!')
