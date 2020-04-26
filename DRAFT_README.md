@@ -58,3 +58,7 @@ Not all elements of the NIST CDF need to be in the database. You may wish to alt
 
 ### Context directory
 Each file (except for remark.txt and ExternalIdentifiers.txt and Candidate.txt) has a Name column, which must not have duplicate entries. Entries in this column correspond to the Name field in the corresponding database table
+
+PrimaryParty column in CandidateContest.txt is for primary election contests. If a contest is not a primary election contest, this should be null. 
+
+[//]: # "TODO per CDF, there should be a CandidateContestOfficeJoin table"

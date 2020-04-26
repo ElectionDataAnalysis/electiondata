@@ -280,25 +280,6 @@ class Munger:
         results = raw.copy()
         d = {x:f'{x}_{self.field_rename_suffix}' for x in self.field_list}
         results.rename(columns=d,inplace=True)
-
-        if enumeration:
-            source_file = os.path.join(project_path,'election_anomaly/CDF_schema_def_info/enumerations',f'{element}.txt')
-            print(f'Updating database with info from /CDF_schema_def_info/enumerations/{element}.txt.\n')
-            source_df = pd.read_csv(source_file,sep='\t')
-        else:
-            source_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
-            print(f'Updating database with info from {jurisdiction.short_name}/context/{element}.txt.\n')
-            source_df = pd.read_csv(source_file,sep='\t')
-
-            if not os.path.isfile(source_file):
-                ensure_context(jurisdiction.path_to_juris_dir,project_path)
-            source_df = dedupe(
-               source_df,source_file,warning=f'{jurisdiction.short_name}/context/{element}.txt has duplicates.')
-
-            mr.load_context_dframe_into_cdf(sess,project_path,jurisdiction,source_df,element,
-                                        os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
-
-
         mr.add_munged_column_NEW(results,self,element)
         results_elements = results[f'{element}_raw'].unique()
 
@@ -344,6 +325,26 @@ class Munger:
                     f'\tMake sure the internal cdf name is exactly the same in both files.\n'
                     f'\tYou may need to do some contextual research to fill all the fields in {element}.txt\n\n'
                     f'Then hit return to continue.\n')
+
+        # get source file for <element> from enumerations or context folders
+        if enumeration:
+            source_file = os.path.join(project_path,'election_anomaly/CDF_schema_def_info/enumerations',f'{element}.txt')
+            print(f'Updating database with info from /CDF_schema_def_info/enumerations/{element}.txt.\n')
+            source_df = pd.read_csv(source_file,sep='\t')
+        else:
+            source_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
+            print(f'Updating database with info from {jurisdiction.short_name}/context/{element}.txt.\n')
+            source_df = pd.read_csv(source_file,sep='\t')
+
+            # check that context folder contents are consistent
+            if not os.path.isfile(source_file):
+                ensure_context(jurisdiction.path_to_juris_dir,project_path)
+
+            source_df = dedupe(
+               source_df,source_file,warning=f'{jurisdiction.short_name}/context/{element}.txt has duplicates.')
+
+            mr.load_context_dframe_into_cdf(sess,project_path,jurisdiction,source_df,element,
+                                        os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
 
         # add all elements from context/ to db
         source_df = pd.read_csv(source_file,sep='\t')
@@ -648,6 +649,8 @@ def ensure_context(juris_path,project_root):
     enums = os.path.join(project_root,'election_anomaly/CDF_schema_def_info/enumerations')
     template_list = os.listdir(templates)
     context_file_list = ['ReportingUnit','Election','BallotMeasureContest','Office','Party','CandidateContest','Candidate','ExternalIdentifier','remark']
+
+    # TODO check for problematic null entries?
 
     for element in context_file_list:
         el_path = os.path.join(juris_path,'context',f'{element}.txt')

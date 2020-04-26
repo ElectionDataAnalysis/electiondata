@@ -17,7 +17,7 @@ def clean_raw_df(raw,munger):
     # change all nulls to 0
     raw = raw.fillna(0)
     # strip whitespace
-    # raw = raw.applymap(lambda x:x.strip())
+    raw = raw.applymap(lambda x:x.strip())
 
     field_lists = list(munger.cdf_elements[munger.cdf_elements.source=='row'].fields)
     munger_fields = set().union(*field_lists)
@@ -57,16 +57,18 @@ def load_context_dframe_into_cdf(
     for other fields, the value of the field (e.g., 'North Carolina;Alamance County').
 """
     # TODO check that source_df has the right format
-    # TODO check that this can be used to update the db as well as initialize it
 
     # dedupe source_df
     dupes,source_df = ui.find_dupes(source_df1)
     if not dupes.empty:
         print(f'WARNING: duplicates removed from dataframe, may indicate a problem.\n{source_df1}')
 
+    # replace nulls with empty strings
+    source_df.fillna('',inplace=True)
+
     enum_file = os.path.join(cdf_schema_def_dir,'elements',element,'enumerations.txt')
     if os.path.isfile(enum_file):  # (if not, there are no enums for this element)
-        enums = pd.read_csv(os.path.join(cdf_schema_def_dir,'elements',element,'enumerations.txt'),sep='\t')
+        enums = pd.read_csv(enum_file,sep='\t')
         # get all relevant enumeration tables
         for e in enums['enumeration']:  # e.g., e = "ReportingUnitType"
             cdf_e = pd.read_sql_table(e,session.bind)
@@ -74,62 +76,27 @@ def load_context_dframe_into_cdf(
             if e in source_df.columns:
                 source_df = enum_col_to_id_othertext(source_df,e,cdf_e)
         # TODO skipping assignment of CountItemStatus to ReportingUnit for now,
-        # TODO since we can't assign an ReportingUnit as ElectionDistrict to Office
+        #  since we can't assign an ReportingUnit as ElectionDistrict to Office
         #  (unless Office has a CountItemStatus; can't be right!)
-        # TODO note CountItemStatus is weirdly assigned to ReportingUnit in NIST CDF.
+        #  Note CountItemStatus is weirdly assigned to ReportingUnit in NIST CDF.
         #  Note also that CountItemStatus is not required, and a single RU can have many CountItemStatuses
 
-    #  commit info in source_df to corresponding cdf table to db
+    # TODO somewhere, check that no CandidateContest & Ballot Measure share a name; ditto for other false foreign keys
+
+    # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
+    fk_file = os.path.join(cdf_schema_def_dir,'elements',element,'foreign_keys.txt')
+    if os.path.isfile(fk_file):
+        fks = pd.read_csv(fk_file,sep='\t',index_col='fieldname')
+        for fn in fks.index:
+            # append the Id corresponding to <fn> from the db
+            refs = fks.loc[fn,'refers_to'].split(';')
+            target = pd.concat([pd.read_sql_table(r,session.bind)[['Id','Name']] for r in refs],axis=1)
+            target.rename(columns={'Id':fn,'Name':f'{fn}_Name'},inplace=True)
+            source_df = source_df.merge(target,how='left',left_on=fn[:-3],right_on=f'{fn}_Name')
+            source_df.drop([f'{fn}_Name'],axis=1)
+
+    # commit info in source_df to corresponding cdf table to db
     dbr.dframe_to_sql(source_df,session,None,element)
-    if element == 'Office':
-        # upload ReportingUnits from context/ReportingUnit.txt to db and upload corresponding CandidateContests too
-
-        # ReportingUnits
-        ru = pd.read_csv(os.path.join(jurisdiction.path_to_juris_dir,'context/ReportingUnit.txt'),sep='\t')
-        nulls_ok = False
-        while not nulls_ok:
-            # find any rows that have nulls, ask user to fix.
-            nulls = ru[ru.isnull().any(axis=1)]
-            if nulls.empty:
-                nulls_ok = True
-            else:
-                input(
-                    f'The file context/ReportingUnit.txt has some blank or null entries.\n'
-                    f'Fill blanks, or erase rows with blanks and hit return to continue.\n')
-                ru = pd.read_csv(os.path.join(jurisdiction.path_to_juris_dir,'context/ReportingUnit.txt'),sep='\t')
-
-        cdf_rut = pd.read_sql_table('ReportingUnitType',session.bind)
-        ru = enum_col_to_id_othertext(ru,'ReportingUnitType',cdf_rut)
-        cdf_ru = dbr.dframe_to_sql(ru,session,None,'ReportingUnit')
-
-        eds_ok = False
-        while not eds_ok:
-            # find any ElectionDistricts that are not in the cdf ReportingUnit table.
-            cdf_ru = pd.read_sql_table('ReportingUnit',session.bind,None,index_col=None)
-            # note: cdf Id column is *not* the index for the dataframe cdf_d['ReportingUnit'].
-
-            office_ed = source_df.drop(['Name'],axis=1)
-            ru_list = list(cdf_ru['Name'].unique())
-            new_ru = office_ed[~office_ed['ElectionDistrict'].isin(ru_list)]
-
-            if not new_ru.empty:
-                ui.show_sample(list(new_ru.ElectionDistrict.unique()),'office election districts',
-                               condition='are not in the ReportingUnit table of the common data format',
-                               outfile='missing_reportingunits.txt',
-                               dir=os.path.join(jurisdiction.path_to_juris_dir,'output'))
-                input(f'Please add any missing Election Districts to context/ReportingUnit.txt and hit return to continue.\n')
-                rut_list = list(cdf_rut['Txt'])
-                ru = ui.fill_context_file(
-                    os.path.join(jurisdiction.path_to_juris_dir,'context'),
-                    os.path.join(project_root,'templates/context_templates'),
-                    'ReportingUnit',rut_list,'ReportingUnitType')
-                #  then upload to db
-                ru = enum_col_to_id_othertext(ru,'ReportingUnitType',cdf_rut)
-                cdf_ru = dbr.dframe_to_sql(ru,session,None,'ReportingUnit')
-                ru_list = list(cdf_ru['Name'].unique())
-            else:
-                eds_ok = True
-        # CandidateContests
     return
 
 
