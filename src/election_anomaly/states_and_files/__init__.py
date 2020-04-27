@@ -66,8 +66,13 @@ class Jurisdiction:
         """Looks in context file to check that every ElectionDistrict in <element>.txt is listed in <target>.txt,
         """
         d = context_dependency_dictionary()
-        element_df = pd.read_csv(os.path.join(self.path_to_juris_dir,f'context/{element}.txt'),sep='\t')
         context_dir = os.path.join(self.path_to_juris_dir,"context")
+        f_path = os.path.join(context_dir,f'{element}.txt')
+        if os.path.isfile(f_path):
+            element_df = pd.read_csv(f_path,sep='\t',index_col=None)
+        else:
+            ensure_context(self.path_to_juris_dir,None)
+
         # Find all dependent columns
         dependent = [c for c in element_df if c in d.keys()]
         changed_elements = set()
@@ -156,10 +161,13 @@ class Munger:
             all_ok = False
             while not all_ok:
                 changed_elements = jurisdiction.check_dependencies(element)
-            if changed_elements:
-                # recheck items from change list
-                for e in changed_elements:
-                    self.prepare_context_and_db(e,results,jurisdiction,sess,project_path=project_root)
+                if changed_elements:
+                    # recheck items from change list
+                    for e in changed_elements:
+                        self.prepare_context_and_db(e,results,jurisdiction,sess,project_path=project_root)
+                else:
+                    all_ok=True
+
             fin = input(f'Is the file {element}.txt finalized to your satisfaction (y/n)?\n')
             if fin == 'y':
                 finalized = True
@@ -650,7 +658,9 @@ def check_jurisdiction_directory(juris_path):
     return
 
 
-def ensure_context(juris_path,project_root):
+def ensure_context(juris_path,project_root=None):
+    if not project_root:
+        project_root = ui.get_project_root()
     # ensure directory exists
     check_jurisdiction_directory(juris_path)
 

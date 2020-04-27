@@ -151,7 +151,7 @@ def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,
 	#  create contest_selection dataframe, adding Contest, Selection and ElectionDistrict_Id columns
 	cc = df['CandidateContestSelectionJoin'].merge(
 		df['CandidateContest'],how='left',left_on='CandidateContest_Id',right_index=True).rename(
-		columns={'Name':'Contest'}).merge(
+		columns={'Name':'Contest','Id':'ContestSelectionJoin_Id'}).merge(
 		df['CandidateSelection'],how='left',left_on='CandidateSelection_Id',right_index=True).merge(
 		df['Candidate'],how='left',left_on='Candidate_Id',right_index=True).rename(
 		columns={'BallotName':'Selection','CandidateContest_Id':'Contest_Id',
@@ -173,6 +173,7 @@ def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,
 	ru = df['ReportingUnit'][['ReportingUnitType_Id','OtherReportingUnitType']]
 	contest_selection = contest_selection.merge(ru,how='left',left_on='ElectionDistrict_Id',right_index=True)
 	contest_selection = mr.enum_col_from_id_othertext(contest_selection,'ReportingUnitType',df['ReportingUnitType'])
+	contest_selection.rename(columns={'ReportingUnitType':'contest_district_type'},inplace=True)
 
 	#  limit to relevant ContestSelection pairs
 	contest_ids = ecj.Contest_Id.unique()

@@ -306,10 +306,14 @@ def enum_col_from_id_othertext(df,enum,enum_df):
     assert f'{enum}_Id' in df.columns,f'Dataframe lackes {enum}_Id column'
     assert f'Other{enum}' in df.columns,f'Dataframe lackes Other{enum} column'
     assert 'Txt' in enum_df.columns ,'Enumeration dataframe should have column \'Txt\''
-# TODO check index of enum_df is 'Id'
-    df = df.merge(enum_df,left_on=f'{enum}_Id',right_index=True)
-    # TODO if Txt value is 'other', use Other{enum} value instead
 
+    # ensure Id is in the index of enum_df (otherwise df index will be lost in merge)
+    if 'Id' in enum_df.columns:
+        enum_df = enum_df.set_index('Id')
+
+    df = df.merge(enum_df,left_on=f'{enum}_Id',right_index=True)
+
+    # if Txt value is 'other', use Other{enum} value instead
     df['Txt'].mask(df['Txt']!='other', other=df[f'Other{enum}'])
     df.rename(columns={'Txt':enum},inplace=True)
     df.drop([f'{enum}_Id',f'Other{enum}'],axis=1,inplace=True)
