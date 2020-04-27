@@ -10,8 +10,8 @@ if __name__ == '__main__':
 
     # pick db to use
     db_paramfile = ui.pick_paramfile(project_root)
-    juris_name = 'NC_5'
-    #juris_name = None
+    #juris_name = 'NC_5'
+    juris_name = None
 
     db_name = ui.pick_database(project_root,db_paramfile)
 

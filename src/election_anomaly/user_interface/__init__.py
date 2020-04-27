@@ -267,7 +267,10 @@ def pick_juris_from_filesystem(
 		print(f'Directory {jurisdiction_name} is assumed to exist and have the required contents.')
 	# initialize the jurisdiction
 	ss = sf.Jurisdiction(jurisdiction_name,path_to_jurisdictions,project_root=project_root)
-	ss.check_election_districts()
+	if check_files:
+		for filename in os.listdir(os.path.join(ss.path_to_juris_dir,'context')):
+			element = filename[:-4]
+			ss.check_dependencies(element)
 	return ss
 
 

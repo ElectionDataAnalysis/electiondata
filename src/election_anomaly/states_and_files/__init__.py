@@ -6,6 +6,7 @@ import warnings   # TODO use warnings module to handle warnings in all files
 import munge_routines as mr
 import user_interface as ui
 import re
+import numpy as np
 from pathlib import Path
 import csv
 
@@ -61,26 +62,36 @@ class Jurisdiction:
         dbr.dframe_to_sql(cc_all,session,None,'CandidateContest')
         return cc_all
 
-    def check_election_districts(self):
-        """Looks in context file to check that every ElectionDistrict in Office.txt is listed in ReportingUnit.txt"""
-        ed = pd.read_csv(
-            os.path.join(
-                self.path_to_juris_dir,'context/Office.txt'),sep='\t',header=0).loc[:,'ElectionDistrict'].to_list()
-        ru = list(pd.read_csv(os.path.join(self.path_to_juris_dir,'context/ReportingUnit.txt'),sep='\t').loc[:,'Name'])
-        missing = [x for x in ed if x not in ru]
-        if len(missing) == 0:
-            all_ok = True
-            print('Congratulations! Every ElectionDistrict is a ReportingUnit!\n')
-        else:
-            all_ok = False
-            print('Every ElectionDistrict must be a ReportingUnit. This is not optional!!')
-            ui.show_sample(missing,'ElectionDistricts','are not yet ReportingUnits',
-                           outfile='electiondistricts_missing_from_reportingunits.txt',dir=self.path_to_juris_dir)
-            input('Please make corrections to Office.txt or additions to ReportingUnit.txt to resolve the problem.\n'
-                  'Then his return to continue.'
-                  f'(Directory is {os.path.join(self.path_to_juris_dir,"context")}')
-            self.check_election_districts()
-        return all_ok
+    def check_dependencies(self,element):
+        """Looks in context file to check that every ElectionDistrict in <element>.txt is listed in <target>.txt,
+        """
+        d = context_dependency_dictionary()
+        element_df = pd.read_csv(os.path.join(self.path_to_juris_dir,f'context/{element}.txt'),sep='\t')
+        context_dir = os.path.join(self.path_to_juris_dir,"context")
+        # Find all dependent columns
+        dependent = [c for c in element_df if c in d.keys()]
+        changed_elements = set()
+        report = [f'In context/{element}.txt:']
+        for c in dependent:
+            target = d[c]
+            ed = pd.read_csv(os.path.join(context_dir,f'{element}.txt'),sep='\t',header=0).loc[:,c].to_list()
+            ru = list(pd.read_csv(os.path.join(context_dir,f'{target}.txt'),sep='\t').loc[:,'Name'])
+            missing = [x for x in ed if x not in ru and not np.isnan(x)]
+            if len(missing) == 0:
+                report.append(f'Every {c} is a {target}.')
+            else:
+                changed_elements.add(element)
+                changed_elements.add(target)
+                print(f'Every {c} must be a {target}. This is not optional!!')
+                ui.show_sample(missing,f'{c}s',f'are not yet {target}s')
+                input(f'Please make corrections to {element}.txt or additions to {target}.txt to resolve the problem.\n'
+                      'Then his return to continue.')
+                changed_elements.update(self.check_dependencies(target))
+        if dependent:
+            print ('\n\t'.join(report))
+        if changed_elements:
+            print(f'(Directory is {context_dir}')
+        return changed_elements
 
     def add_to_context_dir(self,element,df):
         """Add the data in the dataframe <df> to the file corresponding
@@ -140,17 +151,16 @@ class Munger:
         finalized = False
         while not finalized:
             self.prepare_context_and_db(element,results,jurisdiction,sess,project_path=project_root)
-            if element == 'ReportingUnit':
-                eds_ok = False
-                while not eds_ok:
-                    eds_ok = jurisdiction.check_election_districts()
-                    if not eds_ok:
-                        # recheck Office and ReportingUnit
-                        self.prepare_context_and_db(
-                            'Office',results,jurisdiction,sess,project_path=project_root)
-                        self.prepare_context_and_db(
-                            'ReportingUnit',results,jurisdiction,sess,project_path=project_root)
-            fin = input(f'Is the file context/{element}.txt finalized to your satisfaction (y/n)?\n')
+
+            # check dependencies
+            all_ok = False
+            while not all_ok:
+                changed_elements = jurisdiction.check_dependencies(element)
+            if changed_elements:
+                # recheck items from change list
+                for e in changed_elements:
+                    self.prepare_context_and_db(e,results,jurisdiction,sess,project_path=project_root)
+            fin = input(f'Is the file {element}.txt finalized to your satisfaction (y/n)?\n')
             if fin == 'y':
                 finalized = True
             else:
@@ -683,6 +693,14 @@ def dedupe(df,f_path,warning='There are duplicates'):
                   f'Edit the file to remove the duplication, then hit return to continue')
             df = pd.read_csv(f_path,sep='\t')
     return df
+
+
+def context_dependency_dictionary():
+    """Certain fields in context files refer to other context files.
+    E.g., ElectionDistricts are ReportingUnits"""
+    d = {'ElectionDistrict':'ReportingUnit','Office':'Office','PrimaryParty':'Party','Party':'Party',
+         'Election':'Election'}
+    return d
 
 if __name__ == '__main__':
     print('Done (states_and_files)!')
