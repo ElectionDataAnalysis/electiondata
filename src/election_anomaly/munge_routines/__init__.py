@@ -15,7 +15,7 @@ def clean_raw_df(raw,munger):
     # TODO put all info about data cleaning into README.md (e.g., whitespace strip)
 
     # change all nulls to 0
-    raw = raw.fillna(0)
+    raw = raw.fillna('')
     # strip whitespace
     raw = raw.applymap(lambda x:x.strip())
 
