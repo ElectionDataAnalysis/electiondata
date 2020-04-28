@@ -21,7 +21,7 @@ if __name__ == '__main__':
 	# pick db to use
 	db_paramfile = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'
 
-	db_name = 'NC_TEST'
+	db_name = 'NC_5'
 
 	# connect to db
 	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
@@ -35,9 +35,13 @@ if __name__ == '__main__':
 
 
 	# datafile & info
-	raw_file_path = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/NC_old/data/2018g/nc_general/results_pct_20181106.txt'
+	raw_file_dir = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/NC_old/data/2018g/nc_general/'
+	raw_file_path = os.path.join(raw_file_dir,'small.txt')
 	sep = '\t'
-	juris_short_name = 'NC'
+	juris_short_name = 'NC_5'
+	juris = ui.pick_juris_from_filesystem(
+		project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
+		jurisdiction_name=juris_short_name)
 
 	# load new datafile
 	# TODO handle default values more programmatically
@@ -46,12 +50,15 @@ if __name__ == '__main__':
 		raw_file_path,sep=sep,dtype=str,encoding=encoding,quoting=csv.QUOTE_MINIMAL,
 		header=list(range(munger.header_row_count)))
 
-	[raw,info_cols,numerical_cols] = mr.clean_raw_df(raw,munger)
+	[raw,info_cols,num_cols] = mr.clean_raw_df(raw,munger)
+#	check = input(f'Check data file against munger {munger.name} (y/n)?\n')
+#	if check == 'y':
+#		munger.check_new_results_dataset_NEW(raw,juris,new_df_session,project_root=project_root)
 
-	mr.raw_elements_to_cdf_NEW(new_df_session,project_root,munger,raw,info_cols)
+	mr.raw_elements_to_cdf_NEW(new_df_session,project_root,juris,munger,raw,info_cols,num_cols,finalize=False)
 
-	ui.new_datafile_NEW(new_df_session,munger,
-		raw_file_path,sep,encoding,juris_short_name=juris_short_name,project_root=project_root)
+	ui.new_datafile(new_df_session,munger,
+					raw_file_path,sep,encoding,juris=juris,project_root=project_root)
 
 	eng.dispose()
 	print('Done!')

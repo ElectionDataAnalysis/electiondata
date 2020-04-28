@@ -21,6 +21,8 @@ The Common Data Format does not have an obviously natural way to handle the case
 ### Create Munger
 [//]: # "TODO explain what header_row 0 means, or header_row 3,4"
 [//]: # "TODO header_row entry in format.txt should be a comma-separated list of integers"
+[//]: # "TODO order of rows in cdf_elements matters ['ReportingUnit','Election','Office','Party','CandidateContest','Candidate','BallotMeasureContest','BallotMeasureSelection','CountItemType']"
+
 
 ### Load data from a datafile into an existing database
 * User uploads datafile, providing:
@@ -39,8 +41,8 @@ The Common Data Format does not have an obviously natural way to handle the case
 There are several kinds of tables in the database:
 * Tables whose name starts with `_` are 'metadata tables. These are not essential to the cdf, but hold relevant data (such as the source of the data in the database). 
   * NB: there can be metadata enumeration tables, such as `_datafile_separator`
-* Tables with exactly two columns `Id` and `Txt` are 'enumeration tables', holding enumeration lists specified in the CDF.
-* Tables with at least one column that is neither `Txt` nor a foreign id (ending in `_Id`). These are 'CDF element tables'. They correspond to the elements of the CDF (boxes in the CDF diagram).
+* Tables with exactly two columns `Id` and `Txt` (or, in the case of BallotMeasureSelection, `Id` and `Selection`) are 'enumeration tables', holding enumeration lists specified in the CDF.
+* Tables with at least one column that is neither `Txt`, nor `Selection` nor a foreign id (ending in `_Id`). These are 'CDF element tables'. They correspond to the elements of the CDF (boxes in the CDF diagram).
 * Tables whose names end with `Join` are 'join tables', holding relationships between elements of the CDF (lines in the CDF diagram). 
 
 ### Adding elements
@@ -52,3 +54,11 @@ Not all elements of the NIST CDF need to be in the database. You may wish to alt
 
 [//]: # "TODO give more detail?"
 
+## About the Filesystem
+
+### Context directory
+Each file (except for remark.txt and ExternalIdentifiers.txt and Candidate.txt) has a Name column, which must not have duplicate entries. Entries in this column correspond to the Name field in the corresponding database table
+
+PrimaryParty column in CandidateContest.txt is for primary election contests. If a contest is not a primary election contest, this should be null. 
+
+[//]: # "TODO per CDF, there should be a CandidateContestOfficeJoin table"

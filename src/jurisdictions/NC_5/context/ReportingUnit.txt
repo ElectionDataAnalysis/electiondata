@@ -1,0 +1,3702 @@
+Name	ReportingUnitType
+North Carolina;Alamance County;ABSENTEE	precinct
+North Carolina;Alamance County;ONE STOP 1	precinct
+North Carolina;Alamance County;ONE STOP 2	precinct
+North Carolina;Alamance County;ONE STOP 3	precinct
+North Carolina;Alamance County;PROVISIONAL	precinct
+North Carolina;Alleghany County;ABSENTEE	precinct
+North Carolina;Anson County;WADES	precinct
+North Carolina;Ashe County;ABSENTEE	precinct
+North Carolina;Ashe County;CURBSIDE	precinct
+North Carolina;Avery County;ABSENTEE	precinct
+North Carolina;Bertie County;ONE STOP LOB	precinct
+North Carolina;Bertie County;ONE STOP POW	precinct
+North Carolina;Bladen County;BLADEN BOE	precinct
+North Carolina;Bladen County;BLDBORO SPAULD MON	precinct
+North Carolina;Bladen County;E ARC TWN HALL	precinct
+North Carolina;Bladen County;TRANSFER	precinct
+North Carolina;Brunswick County;04B2	precinct
+North Carolina;Buncombe County;ONESTOP-AVML	precinct
+North Carolina;Buncombe County;ONESTOP-BMBL	precinct
+North Carolina;Buncombe County;ONESTOP-COXE	precinct
+North Carolina;Buncombe County;ONESTOP-ECBL	precinct
+North Carolina;Buncombe County;ONESTOP-FVBL	precinct
+North Carolina;Buncombe County;ONESTOP-LCBL	precinct
+North Carolina;Buncombe County;ONESTOP-NABL	precinct
+North Carolina;Buncombe County;ONESTOP-SBBL	precinct
+North Carolina;Buncombe County;ONESTOP-WABL	precinct
+North Carolina;Buncombe County;ONESTOP-WVTH	precinct
+North Carolina;Cabarrus County;01-11	precinct
+North Carolina;Cabarrus County;04-11	precinct
+North Carolina;Cabarrus County;04-12	precinct
+North Carolina;Cabarrus County;04-13	precinct
+North Carolina;Cabarrus County;12-13	precinct
+North Carolina;Caldwell County;ABSENTEE	precinct
+North Carolina;Caldwell County;ONE STOP GFR	precinct
+North Carolina;Caldwell County;ONE STOP RC	precinct
+North Carolina;Carteret County;OTBEG	precinct
+North Carolina;Columbus County;CHADBOURN OS	precinct
+North Carolina;Columbus County;E COLUMBUS OS	precinct
+North Carolina;Columbus County;TABOR CITY OS	precinct
+North Carolina;Craven County;CFB8	precinct
+North Carolina;Craven County;CLR4	precinct
+North Carolina;Craven County;DFB9	precinct
+North Carolina;Craven County;N3N5	precinct
+North Carolina;Craven County;TE13	precinct
+North Carolina;Craven County;VE14	precinct
+North Carolina;Cumberland County;OS A	precinct
+North Carolina;Cumberland County;OS B	precinct
+North Carolina;Cumberland County;OS C	precinct
+North Carolina;Cumberland County;OS D	precinct
+North Carolina;Cumberland County;OS E	precinct
+North Carolina;Cumberland County;OS G	precinct
+North Carolina;Cumberland County;OS J	precinct
+North Carolina;Cumberland County;SL78-3	precinct
+North Carolina;Dare County;OS FESSENDEN ANNEX	precinct
+North Carolina;Davidson County;OS ARCADIA COMM BLDG	precinct
+North Carolina;Davidson County;OS BOE	precinct
+North Carolina;Davidson County;OS DENTON LIBRARY	precinct
+North Carolina;Davidson County;OS MIDWAY FIRE DEPT	precinct
+North Carolina;Davidson County;OS TLIB	precinct
+North Carolina;Davie County;ONE STOP	precinct
+North Carolina;Davie County;TRANSFER	precinct
+North Carolina;Duplin County;ABSENTEE	precinct
+North Carolina;Durham County;OS CJRC	precinct
+North Carolina;Durham County;OS DTN	precinct
+North Carolina;Durham County;OS ERU	precinct
+North Carolina;Edgecombe County;ABSENTEE	precinct
+North Carolina;Edgecombe County;ONE STOP PINETOPS 3	precinct
+North Carolina;Edgecombe County;ONE STOP ROCKY MOUNT 2	precinct
+North Carolina;Edgecombe County;ONE STOP TARBORO 1	precinct
+North Carolina;Forsyth County;ONE-STOP	precinct
+North Carolina;Gaston County;BOE OFFICE	precinct
+North Carolina;Gaston County;DALLAS	precinct
+North Carolina;Gaston County;LIBRARY	precinct
+North Carolina;Gaston County;MOUNT HOLLY	precinct
+North Carolina;Gates County;BLAN GROVE EMP CTR	precinct
+North Carolina;Gates County;GATES BOE	precinct
+North Carolina;Gates County;GATES RURITAN CLUB	precinct
+North Carolina;Guilford County;ABSENTEE	precinct
+North Carolina;Guilford County;ONE-STOP	precinct
+North Carolina;Halifax County;ONE STOP HALIFAX	precinct
+North Carolina;Halifax County;ONE STOP LITTLETON	precinct
+North Carolina;Halifax County;ONE STOP SCOTLAND NECK	precinct
+North Carolina;Halifax County;ONE STOP WELDON	precinct
+North Carolina;Harnett County;ONE STOP ERWIN	precinct
+North Carolina;Harnett County;ONE STOP LOBBY	precinct
+North Carolina;Harnett County;ONE STOP WESTERN	precinct
+North Carolina;Haywood County;ONE STOP CLY	precinct
+North Carolina;Haywood County;ONE STOP LIB	precinct
+North Carolina;Haywood County;ONE STOP SRC	precinct
+North Carolina;Haywood County;TRANSFER	precinct
+North Carolina;Henderson County;OS ETOWAH	precinct
+North Carolina;Henderson County;OS FLAT ROCK	precinct
+North Carolina;Henderson County;OS FLETCHER	precinct
+North Carolina;Henderson County;OS LOBBY	precinct
+North Carolina;Hertford County;OS MURFREE CENT	precinct
+North Carolina;Hertford County;OS OFFICE	precinct
+North Carolina;Hyde County;ABSENTEE	precinct
+North Carolina;Jackson County;ABSENTEE	precinct
+North Carolina;Jackson County;OS CAS	precinct
+North Carolina;Jackson County;OS CUL	precinct
+North Carolina;Jackson County;OS GYM	precinct
+North Carolina;Jackson County;OS OFF	precinct
+North Carolina;Jackson County;OS WCU	precinct
+North Carolina;Jackson County;SDC	precinct
+North Carolina;Jackson County;TRANSFER	precinct
+North Carolina;Johnston County;ARCHER LODGE OS	precinct
+North Carolina;Johnston County;CLAYTON OS	precinct
+North Carolina;Johnston County;PROVIDENCE OS	precinct
+North Carolina;Johnston County;SMITHFIELD OS	precinct
+North Carolina;Jones County;ABSENTEE	precinct
+North Carolina;Lee County;ABSENTEE	precinct
+North Carolina;Lenoir County;ABSENTEE	precinct
+North Carolina;Lenoir County;ONE STOP	precinct
+North Carolina;McDowell County;ABSENTEE	precinct
+North Carolina;McDowell County;ONE STOP	precinct
+North Carolina;Moore County;ONE STOP AG	precinct
+North Carolina;Moore County;ONE STOP PFD	precinct
+North Carolina;Nash County;OS MOUNT PLEASANT	precinct
+North Carolina;Nash County;OS NASHVILLE	precinct
+North Carolina;Nash County;OS ROCKY MOUNT	precinct
+North Carolina;New Hanover County;ABSENTEE	precinct
+North Carolina;New Hanover County;OS PVL	precinct
+North Carolina;Northampton County;ABSENTEE	precinct
+North Carolina;Northampton County;COMIPE	precinct
+North Carolina;Northampton County;GAPL	precinct
+North Carolina;Northampton County;JARE	precinct
+North Carolina;Northampton County;ONE STOP BOE	precinct
+North Carolina;Northampton County;WOPO	precinct
+North Carolina;Orange County;CF1	precinct
+North Carolina;Orange County;EA1	precinct
+North Carolina;Orange County;HE	precinct
+North Carolina;Orange County;OS CARRBORO	precinct
+North Carolina;Orange County;OS COTC	precinct
+North Carolina;Orange County;OS UM	precinct
+North Carolina;Orange County;RE	precinct
+North Carolina;Orange County;UNC	precinct
+North Carolina;Orange County;WW1	precinct
+North Carolina;Pamlico County;ABSENTEE	precinct
+North Carolina;Pamlico County;ONE STOP	precinct
+North Carolina;Perquimans County;ONE STOP	precinct
+North Carolina;Perquimans County;TRANSFER	precinct
+North Carolina;Pitt County;ABSENTEE	precinct
+North Carolina;Pitt County;ONE STOP AG CENTER	precinct
+North Carolina;Pitt County;ONE STOP COMMUNITY SCH	precinct
+North Carolina;Pitt County;ONE STOP COUNTY OFFICE	precinct
+North Carolina;Pitt County;ONE STOP ECU	precinct
+North Carolina;Pitt County;ONE STOP WINTERVILLE	precinct
+North Carolina;Polk County;ONE STOP	precinct
+North Carolina;Polk County;TRANSFER	precinct
+North Carolina;Robeson County;FAIR	precinct
+North Carolina;Robeson County;LOB	precinct
+North Carolina;Robeson County;MX	precinct
+North Carolina;Robeson County;PEM	precinct
+North Carolina;Robeson County;PROVISIONAL	precinct
+North Carolina;Robeson County;REDS	precinct
+North Carolina;Robeson County;STP	precinct
+North Carolina;Robeson County;TRANSFER	precinct
+North Carolina;Sampson County;ABSENTEE	precinct
+North Carolina;Sampson County;ONE STOP	precinct
+North Carolina;Scotland County;01-16	precinct
+North Carolina;Scotland County;02-25	precinct
+North Carolina;Scotland County;05-10	precinct
+North Carolina;Scotland County;06-89	precinct
+North Carolina;Stanly County;0212	precinct
+North Carolina;Stanly County;OS LOC	precinct
+North Carolina;Stokes County;0506	precinct
+North Carolina;Stokes County;1618	precinct
+North Carolina;Stokes County;1819	precinct
+North Carolina;Stokes County;ABSENTEE	precinct
+North Carolina;Surry County;29	precinct
+North Carolina;Surry County;30	precinct
+North Carolina;Surry County;31	precinct
+North Carolina;Surry County;32	precinct
+North Carolina;Surry County;ONE STOP	precinct
+North Carolina;Surry County;TRANSFER	precinct
+North Carolina;Swain County;ABSENTEE	precinct
+North Carolina;Swain County;ONE STOP	precinct
+North Carolina;Swain County;PROVISIONAL	precinct
+North Carolina;Swain County;TRANSFER	precinct
+North Carolina;Transylvania County;ABSENTEE	precinct
+North Carolina;Transylvania County;ONE STOP	precinct
+North Carolina;Transylvania County;PROVISIONAL	precinct
+North Carolina;Transylvania County;TRANSFER	precinct
+North Carolina;Wake County;17-12	precinct
+North Carolina;Wake County;17-13	precinct
+North Carolina;Wake County;19-20	precinct
+North Carolina;Wake County;19-21	precinct
+North Carolina;Wake County;OSAV	precinct
+North Carolina;Wake County;OSCS	precinct
+North Carolina;Wake County;OSFV	precinct
+North Carolina;Wake County;OSKD	precinct
+North Carolina;Wake County;OSME	precinct
+North Carolina;Wake County;OSOP	precinct
+North Carolina;Wake County;OSRB	precinct
+North Carolina;Wake County;OSTA	precinct
+North Carolina;Watauga County;ONE STOP ADMIN	precinct
+North Carolina;Watauga County;ONE STOP ASU	precinct
+North Carolina;Watauga County;ONE STOP BLOWING ROCK	precinct
+North Carolina;Watauga County;ONE STOP DEEP GAP	precinct
+North Carolina;Watauga County;ONE STOP FOSCOE	precinct
+North Carolina;Watauga County;ONE STOP MEAT CAMP	precinct
+North Carolina;Watauga County;ONE STOP WWCC	precinct
+North Carolina;Wayne County;1920	precinct
+North Carolina;Wayne County;2530	precinct
+North Carolina;Wayne County;ABSENTEE	precinct
+North Carolina;Wayne County;OS LIB	precinct
+North Carolina;Wayne County;OS MTO	precinct
+North Carolina;Wayne County;OS PHL	precinct
+North Carolina;Wilkes County;113A	precinct
+North Carolina;Wilkes County;ABSENTEE	precinct
+North Carolina;Wilkes County;ONE STOP	precinct
+North Carolina;Yadkin County;ABSENTEE	precinct
+North Carolina	state
+North Carolina;Alamance County	county
+North Carolina;Alexander County	county
+North Carolina;Alleghany County	county
+North Carolina;Anson County	county
+North Carolina;Ashe County	county
+North Carolina;Avery County	county
+North Carolina;Beaufort County	county
+North Carolina;Bertie County	county
+North Carolina;Bladen County	county
+North Carolina;Brunswick County	county
+North Carolina;Buncombe County	county
+North Carolina;Burke County	county
+North Carolina;Cabarrus County	county
+North Carolina;Caldwell County	county
+North Carolina;Camden County	county
+North Carolina;Carteret County	county
+North Carolina;Caswell County	county
+North Carolina;Catawba County	county
+North Carolina;Chatham County	county
+North Carolina;Cherokee County	county
+North Carolina;Chowan County	county
+North Carolina;Clay County	county
+North Carolina;Cleveland County	county
+North Carolina;Columbus County	county
+North Carolina;Craven County	county
+North Carolina;Cumberland County	county
+North Carolina;Currituck County	county
+North Carolina;Dare County	county
+North Carolina;Davidson County	county
+North Carolina;Davie County	county
+North Carolina;Duplin County	county
+North Carolina;Durham County	county
+North Carolina;Edgecombe County	county
+North Carolina;Forsyth County	county
+North Carolina;Franklin County	county
+North Carolina;Gaston County	county
+North Carolina;Gates County	county
+North Carolina;Graham County	county
+North Carolina;Granville County	county
+North Carolina;Greene County	county
+North Carolina;Guilford County	county
+North Carolina;Halifax County	county
+North Carolina;Harnett County	county
+North Carolina;Haywood County	county
+North Carolina;Henderson County	county
+North Carolina;Hertford County	county
+North Carolina;Hoke County	county
+North Carolina;Hyde County	county
+North Carolina;Iredell County	county
+North Carolina;Jackson County	county
+North Carolina;Johnston County	county
+North Carolina;Jones County	county
+North Carolina;Lee County	county
+North Carolina;Lenoir County	county
+North Carolina;Lincoln County	county
+North Carolina;McDowell County	county
+North Carolina;Macon County	county
+North Carolina;Madison County	county
+North Carolina;Martin County	county
+North Carolina;Mecklenburg County	county
+North Carolina;Mitchell County	county
+North Carolina;Montgomery County	county
+North Carolina;Moore County	county
+North Carolina;Nash County	county
+North Carolina;New Hanover County	county
+North Carolina;Northampton County	county
+North Carolina;Onslow County	county
+North Carolina;Orange County	county
+North Carolina;Pamlico County	county
+North Carolina;Pasquotank County	county
+North Carolina;Pender County	county
+North Carolina;Perquimans County	county
+North Carolina;Person County	county
+North Carolina;Pitt County	county
+North Carolina;Polk County	county
+North Carolina;Randolph County	county
+North Carolina;Richmond County	county
+North Carolina;Robeson County	county
+North Carolina;Rockingham County	county
+North Carolina;Rowan County	county
+North Carolina;Rutherford County	county
+North Carolina;Sampson County	county
+North Carolina;Scotland County	county
+North Carolina;Stanly County	county
+North Carolina;Stokes County	county
+North Carolina;Surry County	county
+North Carolina;Swain County	county
+North Carolina;Transylvania County	county
+North Carolina;Tyrrell County	county
+North Carolina;Union County	county
+North Carolina;Vance County	county
+North Carolina;Wake County	county
+North Carolina;Warren County	county
+North Carolina;Washington County	county
+North Carolina;Watauga County	county
+North Carolina;Wayne County	county
+North Carolina;Wilkes County	county
+North Carolina;Wilson County	county
+North Carolina;Yadkin County	county
+North Carolina;Yancey County	county
+North Carolina;Alamance County;Precinct 064	precinct
+North Carolina;Alamance County;Precinct 03N	precinct
+North Carolina;Alamance County;Precinct 03S	precinct
+North Carolina;Alamance County;Precinct 04	precinct
+North Carolina;Alamance County;Precinct 035	precinct
+North Carolina;Alamance County;Precinct 07	precinct
+North Carolina;Alamance County;Precinct 09S	precinct
+North Carolina;Alamance County;Precinct 12S	precinct
+North Carolina;Alamance County;Precinct 03N2	precinct
+North Carolina;Alamance County;Precinct 03W	precinct
+North Carolina;Alamance County;Precinct 01	precinct
+North Carolina;Alamance County;Precinct 103	precinct
+North Carolina;Alamance County;Precinct 1210	precinct
+North Carolina;Alamance County;Precinct 063	precinct
+North Carolina;Alamance County;Precinct 127	precinct
+North Carolina;Alamance County;Precinct 125	precinct
+North Carolina;Alamance County;Precinct 10S	precinct
+North Carolina;Alamance County;Precinct 06N	precinct
+North Carolina;Alamance County;Precinct 06S	precinct
+North Carolina;Alamance County;Precinct 11	precinct
+North Carolina;Alamance County;Precinct 06W	precinct
+North Carolina;Alamance County;Precinct 08S	precinct
+North Carolina;Alamance County;Precinct 08N	precinct
+North Carolina;Alamance County;Precinct 02	precinct
+North Carolina;Alamance County;Precinct 05	precinct
+North Carolina;Alamance County;Precinct 10N	precinct
+North Carolina;Alamance County;Precinct 06E	precinct
+North Carolina;Alamance County;Precinct 12W	precinct
+North Carolina;Alamance County;Precinct 13	precinct
+North Carolina;Alamance County;Precinct 128	precinct
+North Carolina;Alamance County;Precinct 09N	precinct
+North Carolina;Alamance County;Precinct 03C	precinct
+North Carolina;Alamance County;Precinct 126	precinct
+North Carolina;Alamance County;Precinct 129	precinct
+North Carolina;Alamance County;Precinct 124	precinct
+North Carolina;Alamance County;Precinct 12E	precinct
+North Carolina;Alamance County;Precinct 12N	precinct
+North Carolina;Avery County;Precinct 11	precinct
+North Carolina;Avery County;Precinct 07	precinct
+North Carolina;Avery County;Precinct 04	precinct
+North Carolina;Avery County;ONE STOP	precinct
+North Carolina;Avery County;Precinct 17	precinct
+North Carolina;Avery County;Precinct 12	precinct
+North Carolina;Avery County;Precinct 15	precinct
+North Carolina;Avery County;Precinct 10	precinct
+North Carolina;Avery County;Precinct 09	precinct
+North Carolina;Avery County;Precinct 06	precinct
+North Carolina;Avery County;Precinct 03	precinct
+North Carolina;Avery County;Precinct 08	precinct
+North Carolina;Avery County;Precinct 05	precinct
+North Carolina;Avery County;ABSENTEE MAIL	precinct
+North Carolina;Avery County;Precinct 02	precinct
+North Carolina;Avery County;Precinct 18	precinct
+North Carolina;Avery County;Precinct 13	precinct
+North Carolina;Avery County;Precinct 19	precinct
+North Carolina;Avery County;Precinct 14	precinct
+North Carolina;Avery County;Precinct 01	precinct
+North Carolina;Avery County;Precinct 16	precinct
+North Carolina;Avery County;PROVISIONAL	precinct
+North Carolina;Beaufort County;Precinct OLDF	precinct
+North Carolina;Beaufort County;Precinct BELHV	precinct
+North Carolina;Beaufort County;OS BELHAVEN	precinct
+North Carolina;Beaufort County;Precinct GILEA	precinct
+North Carolina;Beaufort County;Precinct HB	precinct
+North Carolina;Beaufort County;Precinct PSJW3	precinct
+North Carolina;Beaufort County;Precinct SURBA	precinct
+North Carolina;Beaufort County;Precinct WASH1	precinct
+North Carolina;Beaufort County;ABSENTEE	precinct
+North Carolina;Beaufort County;Precinct WDPD	precinct
+North Carolina;Beaufort County;Precinct AUROR	precinct
+North Carolina;Beaufort County;Precinct EDWAR	precinct
+North Carolina;Beaufort County;OS CHOCOWINITY	precinct
+North Carolina;Beaufort County;Precinct PINET	precinct
+North Carolina;Beaufort County;Precinct WASHP	precinct
+North Carolina;Beaufort County;OS AURORA	precinct
+North Carolina;Beaufort County;Precinct RVRD	precinct
+North Carolina;Beaufort County;Precinct WASH2	precinct
+North Carolina;Beaufort County;Precinct BEADM	precinct
+North Carolina;Beaufort County;Precinct BLCK	precinct
+North Carolina;Beaufort County;Precinct CHOCO	precinct
+North Carolina;Beaufort County;Precinct PANTE	precinct
+North Carolina;Beaufort County;Precinct TCRK	precinct
+North Carolina;Beaufort County;Precinct WASH4	precinct
+North Carolina;Beaufort County;Precinct NCRK	precinct
+North Carolina;Beaufort County;OS BOE	precinct
+North Carolina;Beaufort County;PROVISIONAL	precinct
+North Carolina;Brunswick County;Precinct 23	precinct
+North Carolina;Brunswick County;Precinct 06	precinct
+North Carolina;Brunswick County;Precinct 09	precinct
+North Carolina;Brunswick County;Precinct 03	precinct
+North Carolina;Brunswick County;ABSENTEE MAIL	precinct
+North Carolina;Brunswick County;Precinct 04B1	precinct
+North Carolina;Brunswick County;Precinct 21	precinct
+North Carolina;Brunswick County;Precinct 13	precinct
+North Carolina;Brunswick County;Precinct 18	precinct
+North Carolina;Brunswick County;Precinct 10B	precinct
+North Carolina;Brunswick County;Precinct 08	precinct
+North Carolina;Brunswick County;Precinct 11	precinct
+North Carolina;Brunswick County;Precinct 22	precinct
+North Carolina;Brunswick County;Precinct 05	precinct
+North Carolina;Brunswick County;Precinct 02	precinct
+North Carolina;Brunswick County;Precinct 01	precinct
+North Carolina;Brunswick County;Precinct 20	precinct
+North Carolina;Brunswick County;PROVISIONAL	precinct
+North Carolina;Brunswick County;Precinct 16	precinct
+North Carolina;Brunswick County;Precinct 19	precinct
+North Carolina;Brunswick County;Precinct 14	precinct
+North Carolina;Brunswick County;Precinct 12	precinct
+North Carolina;Brunswick County;Precinct 17	precinct
+North Carolina;Brunswick County;Precinct 15	precinct
+North Carolina;Brunswick County;Precinct 07	precinct
+North Carolina;Brunswick County;Precinct 04C1	precinct
+North Carolina;Brunswick County;Precinct 04A	precinct
+North Carolina;Brunswick County;Precinct 10A	precinct
+North Carolina;Brunswick County;CURBSIDE	precinct
+North Carolina;Buncombe County;Precinct 07.1	precinct
+North Carolina;Buncombe County;Precinct 25.1	precinct
+North Carolina;Buncombe County;Precinct 64.1	precinct
+North Carolina;Buncombe County;OS ECBL	precinct
+North Carolina;Buncombe County;CURBSIDE	precinct
+North Carolina;Buncombe County;OS WGSC	precinct
+North Carolina;Buncombe County;Precinct 42.1	precinct
+North Carolina;Buncombe County;Precinct 41.1	precinct
+North Carolina;Buncombe County;Precinct 53.1	precinct
+North Carolina;Buncombe County;Precinct 61.1	precinct
+North Carolina;Buncombe County;Precinct 69.1	precinct
+North Carolina;Buncombe County;Precinct 681	precinct
+North Carolina;Buncombe County;Precinct 15.1	precinct
+North Carolina;Buncombe County;Precinct 26.1	precinct
+North Carolina;Buncombe County;Precinct 27.2	precinct
+North Carolina;Buncombe County;OS WVTH	precinct
+North Carolina;Buncombe County;Precinct 01.1	precinct
+North Carolina;Buncombe County;Precinct 63.1	precinct
+North Carolina;Buncombe County;Precinct 40.2	precinct
+North Carolina;Buncombe County;Precinct 43.2	precinct
+North Carolina;Buncombe County;Precinct 02.1	precinct
+North Carolina;Buncombe County;Precinct 06.1	precinct
+North Carolina;Buncombe County;Precinct 09.1	precinct
+North Carolina;Buncombe County;Precinct 35.1	precinct
+North Carolina;Buncombe County;OS AVML	precinct
+North Carolina;Buncombe County;OS LCBL	precinct
+North Carolina;Buncombe County;TRANSFER	precinct
+North Carolina;Buncombe County;Precinct 59.1	precinct
+North Carolina;Buncombe County;Precinct 23.3	precinct
+North Carolina;Buncombe County;Precinct 16.2	precinct
+North Carolina;Buncombe County;Precinct 24.1	precinct
+North Carolina;Buncombe County;OS SBBL	precinct
+North Carolina;Buncombe County;OS WABL	precinct
+North Carolina;Buncombe County;OS NABL	precinct
+North Carolina;Buncombe County;Precinct 60.4	precinct
+North Carolina;Buncombe County;Precinct 38.3	precinct
+North Carolina;Buncombe County;OS BMBL	precinct
+North Carolina;Buncombe County;OS BCPI	precinct
+North Carolina;Buncombe County;Precinct 29.2	precinct
+North Carolina;Buncombe County;Precinct 12.1	precinct
+North Carolina;Buncombe County;Precinct 56.2	precinct
+North Carolina;Buncombe County;OS FVBL	precinct
+North Carolina;Buncombe County;Precinct 20.1	precinct
+North Carolina;Buncombe County;Precinct 17.1	precinct
+North Carolina;Buncombe County;Precinct 37.1	precinct
+North Carolina;Buncombe County;Precinct 57.1	precinct
+North Carolina;Buncombe County;Precinct 11.1	precinct
+North Carolina;Buncombe County;Precinct 19.1	precinct
+North Carolina;Buncombe County;Precinct 62.1	precinct
+North Carolina;Buncombe County;Precinct 28.1	precinct
+North Carolina;Buncombe County;Precinct 33.3	precinct
+North Carolina;Buncombe County;Precinct 03.1	precinct
+North Carolina;Buncombe County;Precinct 08.3	precinct
+North Carolina;Buncombe County;Precinct 10.1	precinct
+North Carolina;Buncombe County;Precinct 32.1	precinct
+North Carolina;Buncombe County;Precinct 39.3	precinct
+North Carolina;Buncombe County;PROVISIONAL	precinct
+North Carolina;Buncombe County;Precinct 14.2	precinct
+North Carolina;Buncombe County;Precinct 66.1	precinct
+North Carolina;Buncombe County;Precinct 38.2	precinct
+North Carolina;Buncombe County;Precinct 33.2	precinct
+North Carolina;Buncombe County;Precinct 22.2	precinct
+North Carolina;Buncombe County;Precinct 08.2	precinct
+North Carolina;Buncombe County;Precinct 34.1	precinct
+North Carolina;Buncombe County;Precinct 36.1	precinct
+North Carolina;Buncombe County;Precinct 23.2	precinct
+North Carolina;Buncombe County;ABSENTEE	precinct
+North Carolina;Buncombe County;Precinct 65.1	precinct
+North Carolina;Buncombe County;Precinct 21.1	precinct
+North Carolina;Buncombe County;Precinct 39.2	precinct
+North Carolina;Buncombe County;Precinct 55.1	precinct
+North Carolina;Buncombe County;Precinct 60.2	precinct
+North Carolina;Buncombe County;Precinct 67.1	precinct
+North Carolina;Buncombe County;Precinct 71.1	precinct
+North Carolina;Buncombe County;Precinct 05.1	precinct
+North Carolina;Buncombe County;Precinct 47.1	precinct
+North Carolina;Buncombe County;Precinct 68.1	precinct
+North Carolina;Buncombe County;Precinct 58.1	precinct
+North Carolina;Buncombe County;Precinct 51.2	precinct
+North Carolina;Buncombe County;Precinct 54.2	precinct
+North Carolina;Buncombe County;Precinct 46.1	precinct
+North Carolina;Buncombe County;Precinct 48.1	precinct
+North Carolina;Buncombe County;Precinct 18.2	precinct
+North Carolina;Buncombe County;Precinct 49.1	precinct
+North Carolina;Buncombe County;Precinct 45.1	precinct
+North Carolina;Buncombe County;Precinct 14.3	precinct
+North Carolina;Buncombe County;Precinct 04.1	precinct
+North Carolina;Buncombe County;Precinct 50.1	precinct
+North Carolina;Buncombe County;Precinct 52.1	precinct
+North Carolina;Buncombe County;Precinct 30.2	precinct
+North Carolina;Buncombe County;Precinct 31.1	precinct
+North Carolina;Buncombe County;Precinct 44.1	precinct
+North Carolina;Buncombe County;Precinct 13.1	precinct
+North Carolina;Buncombe County;Precinct 70.1	precinct
+North Carolina;Buncombe County;Precinct 30.3	precinct
+North Carolina;Burke County;Precinct 0018	precinct
+North Carolina;Burke County;Precinct 0013	precinct
+North Carolina;Burke County;Precinct 0029-A	precinct
+North Carolina;Burke County;Precinct 0065	precinct
+North Carolina;Burke County;OS SENIOR CENTER PAPER	precinct
+North Carolina;Burke County;Precinct 0047-B	precinct
+North Carolina;Burke County;Precinct 0031	precinct
+North Carolina;Burke County;Precinct 0052	precinct
+North Carolina;Burke County;Precinct 0034	precinct
+North Carolina;Burke County;Precinct 0038	precinct
+North Carolina;Burke County;Precinct 0015	precinct
+North Carolina;Burke County;Precinct 0001	precinct
+North Carolina;Burke County;Precinct 0024	precinct
+North Carolina;Burke County;Precinct 0047-A	precinct
+North Carolina;Burke County;Precinct 0040	precinct
+North Carolina;Burke County;Precinct 0070	precinct
+North Carolina;Burke County;Precinct 0012	precinct
+North Carolina;Burke County;Precinct 0036	precinct
+North Carolina;Burke County;Precinct 0019	precinct
+North Carolina;Burke County;ABSENTEE MAIL	precinct
+North Carolina;Burke County;Precinct 0062	precinct
+North Carolina;Burke County;Precinct 0011	precinct
+North Carolina;Burke County;Precinct 0039	precinct
+North Carolina;Burke County;PROVISIONAL	precinct
+North Carolina;Burke County;Precinct 0066	precinct
+North Carolina;Burke County;Precinct 0021	precinct
+North Carolina;Burke County;Precinct 0051	precinct
+North Carolina;Burke County;OS GLEN ALPINE PAPER	precinct
+North Carolina;Burke County;OS HILDEBRAN PAPER	precinct
+North Carolina;Burke County;OS R COLLEGE PAPER	precinct
+North Carolina;Burke County;Precinct 0022	precinct
+North Carolina;Burke County;Precinct 0003	precinct
+North Carolina;Burke County;Precinct 0014	precinct
+North Carolina;Burke County;Precinct 0035	precinct
+North Carolina;Burke County;Precinct 0020	precinct
+North Carolina;Burke County;Precinct 0048	precinct
+North Carolina;Burke County;Precinct 0053	precinct
+North Carolina;Burke County;Precinct 0064	precinct
+North Carolina;Burke County;TRANSFER PAPER	precinct
+North Carolina;Burke County;OS BOE LOBBY PAPER	precinct
+North Carolina;Burke County;Precinct 0029-B	precinct
+North Carolina;Cabarrus County;Precinct 04-03	precinct
+North Carolina;Cabarrus County;Precinct 07-00	precinct
+North Carolina;Cabarrus County;Precinct 04-06	precinct
+North Carolina;Cabarrus County;Precinct 04-04	precinct
+North Carolina;Cabarrus County;Precinct 12-05	precinct
+North Carolina;Cabarrus County;Precinct 05-00	precinct
+North Carolina;Cabarrus County;TRANSFER	precinct
+North Carolina;Cabarrus County;Precinct 02-09	precinct
+North Carolina;Cabarrus County;Precinct 02-06	precinct
+North Carolina;Cabarrus County;Precinct 04-01	precinct
+North Carolina;Cabarrus County;ABSENTEE	precinct
+North Carolina;Cabarrus County;Precinct 12-04	precinct
+North Carolina;Cabarrus County;Precinct 12-12	precinct
+North Carolina;Cabarrus County;Precinct 12-10	precinct
+North Carolina;Cabarrus County;PROVISIONAL	precinct
+North Carolina;Cabarrus County;Precinct 02-05	precinct
+North Carolina;Cabarrus County;Precinct 02-02	precinct
+North Carolina;Cabarrus County;Precinct 01-04	precinct
+North Carolina;Cabarrus County;Precinct 01-07	precinct
+North Carolina;Cabarrus County;Precinct 08-00	precinct
+North Carolina;Cabarrus County;Precinct 12-08	precinct
+North Carolina;Cabarrus County;Precinct 12-07	precinct
+North Carolina;Cabarrus County;Precinct 09-00	precinct
+North Carolina;Cabarrus County;Precinct 04-10	precinct
+North Carolina;Cabarrus County;Precinct 12-03	precinct
+North Carolina;Cabarrus County;Precinct 10-00	precinct
+North Carolina;Cabarrus County;Precinct 04-09	precinct
+North Carolina;Cabarrus County;Precinct 01-10	precinct
+North Carolina;Cabarrus County;Precinct 04-02	precinct
+North Carolina;Cabarrus County;Precinct 03-00	precinct
+North Carolina;Cabarrus County;Precinct 02-03	precinct
+North Carolina;Cabarrus County;Precinct 01-02	precinct
+North Carolina;Cabarrus County;Precinct 12-11	precinct
+North Carolina;Cabarrus County;OS-LOB	precinct
+North Carolina;Cabarrus County;Precinct 01-08	precinct
+North Carolina;Cabarrus County;Precinct 06-00	precinct
+North Carolina;Cabarrus County;Precinct 02-07	precinct
+North Carolina;Cabarrus County;Precinct 11-02	precinct
+North Carolina;Cabarrus County;Precinct 11-01	precinct
+North Carolina;Cabarrus County;OS-KTD	precinct
+North Carolina;Cabarrus County;Precinct 12-09	precinct
+North Carolina;Cabarrus County;Precinct 12-02	precinct
+North Carolina;Cabarrus County;Precinct 12-01	precinct
+North Carolina;Cabarrus County;Precinct 02-08	precinct
+North Carolina;Cabarrus County;Precinct 02-01	precinct
+North Carolina;Cabarrus County;Precinct 01-06	precinct
+North Carolina;Cabarrus County;Precinct 12-06	precinct
+North Carolina;Cabarrus County;Precinct 01-09	precinct
+North Carolina;Cabarrus County;Precinct 04-05	precinct
+North Carolina;Cabarrus County;Precinct 04-08	precinct
+North Carolina;Cabarrus County;Precinct 04-07	precinct
+North Carolina;Cabarrus County;OS-CFS	precinct
+North Carolina;Cabarrus County;OS-HBP	precinct
+North Carolina;Carteret County;Precinct MHD4	precinct
+North Carolina;Carteret County;Precinct MHD3	precinct
+North Carolina;Carteret County;Precinct WILD	precinct
+North Carolina;Carteret County;Precinct BCRK	precinct
+North Carolina;Carteret County;Precinct CISL	precinct
+North Carolina;Carteret County;Precinct NPT1	precinct
+North Carolina;Carteret County;Precinct WIHA	precinct
+North Carolina;Carteret County;Precinct DASW	precinct
+North Carolina;Carteret County;Precinct ABCH	precinct
+North Carolina;Carteret County;Precinct MASM	precinct
+North Carolina;Carteret County;Precinct CCCP	precinct
+North Carolina;Carteret County;Precinct BFT2	precinct
+North Carolina;Carteret County;Precinct NRIV	precinct
+North Carolina;Carteret County;Precinct PELE	precinct
+North Carolina;Carteret County;Precinct MERR	precinct
+North Carolina;Carteret County;Precinct IBSP	precinct
+North Carolina;Carteret County;Precinct MHD2	precinct
+North Carolina;Carteret County;Precinct MHD1	precinct
+North Carolina;Carteret County;Precinct BOGU	precinct
+North Carolina;Carteret County;Precinct PKNL	precinct
+North Carolina;Carteret County;Precinct HAIS	precinct
+North Carolina;Carteret County;Precinct EMIS	precinct
+North Carolina;Carteret County;Precinct NPT2	precinct
+North Carolina;Carteret County;Precinct ATSL	precinct
+North Carolina;Carteret County;Precinct OTBE	precinct
+North Carolina;Carteret County;Precinct BFT1	precinct
+North Carolina;Carteret County;Precinct MCRK	precinct
+North Carolina;Carteret County;Precinct STEL	precinct
+North Carolina;Chatham County;Precinct 18	precinct
+North Carolina;Chatham County;Precinct ESC114	precinct
+North Carolina;Chatham County;Precinct MCH110	precinct
+North Carolina;Chatham County;ONE STOP	precinct
+North Carolina;Chatham County;Precinct 24	precinct
+North Carolina;Chatham County;Precinct 45	precinct
+North Carolina;Chatham County;Precinct 78	precinct
+North Carolina;Chatham County;Precinct 15	precinct
+North Carolina;Chatham County;Precinct 30	precinct
+North Carolina;Chatham County;Precinct PIT113	precinct
+North Carolina;Chatham County;PROVISIONAL	precinct
+North Carolina;Chatham County;Precinct 6	precinct
+North Carolina;Chatham County;Precinct 9	precinct
+North Carolina;Chatham County;Precinct 20	precinct
+North Carolina;Chatham County;Precinct 21	precinct
+North Carolina;Chatham County;Precinct 3	precinct
+North Carolina;Chatham County;Precinct NWM117	precinct
+North Carolina;Chatham County;Precinct 85	precinct
+North Carolina;Chatham County;ABSENTEE BY MAIL	precinct
+North Carolina;Chatham County;Precinct 75	precinct
+North Carolina;Chatham County;Precinct 42	precinct
+North Carolina;Catawba County;Precinct 05	precinct
+North Carolina;Catawba County;Precinct 02	precinct
+North Carolina;Catawba County;Precinct 22	precinct
+North Carolina;Catawba County;Precinct 32	precinct
+North Carolina;Catawba County;Precinct 29	precinct
+North Carolina;Catawba County;Precinct 35	precinct
+North Carolina;Catawba County;Precinct 38	precinct
+North Carolina;Catawba County;Precinct 11	precinct
+North Carolina;Catawba County;Precinct 39	precinct
+North Carolina;Catawba County;Precinct 34	precinct
+North Carolina;Catawba County;Precinct 21	precinct
+North Carolina;Catawba County;Precinct 16	precinct
+North Carolina;Catawba County;Precinct 19	precinct
+North Carolina;Catawba County;Precinct 14	precinct
+North Carolina;Catawba County;Precinct 41	precinct
+North Carolina;Catawba County;Precinct 20	precinct
+North Carolina;Catawba County;Precinct 01	precinct
+North Carolina;Catawba County;Precinct 25	precinct
+North Carolina;Catawba County;Precinct 28	precinct
+North Carolina;Catawba County;Precinct 04	precinct
+North Carolina;Catawba County;Precinct 36	precinct
+North Carolina;Catawba County;Precinct 15	precinct
+North Carolina;Catawba County;Precinct 12	precinct
+North Carolina;Catawba County;Precinct 08	precinct
+North Carolina;Catawba County;Precinct 33	precinct
+North Carolina;Catawba County;Precinct 13	precinct
+North Carolina;Catawba County;Precinct 09	precinct
+North Carolina;Catawba County;Precinct 30	precinct
+North Carolina;Catawba County;Precinct 26	precinct
+North Carolina;Catawba County;Precinct 24	precinct
+North Carolina;Catawba County;Precinct 23	precinct
+North Carolina;Catawba County;Precinct 06	precinct
+North Carolina;Catawba County;Precinct 03	precinct
+North Carolina;Catawba County;Precinct 31	precinct
+North Carolina;Catawba County;Precinct 37	precinct
+North Carolina;Catawba County;Precinct 17	precinct
+North Carolina;Catawba County;Precinct 07	precinct
+North Carolina;Catawba County;Precinct 27	precinct
+North Carolina;Catawba County;Precinct 40	precinct
+North Carolina;Catawba County;Precinct 10	precinct
+North Carolina;Ashe County;Precinct 10	precinct
+North Carolina;Ashe County;Precinct 08	precinct
+North Carolina;Ashe County;Precinct 11	precinct
+North Carolina;Ashe County;Precinct 02	precinct
+North Carolina;Ashe County;ABSENTEE MAIL	precinct
+North Carolina;Ashe County;Precinct 04	precinct
+North Carolina;Ashe County;Precinct 07	precinct
+North Carolina;Ashe County;Precinct 20	precinct
+North Carolina;Ashe County;Precinct 16	precinct
+North Carolina;Ashe County;PROVISIONAL	precinct
+North Carolina;Ashe County;Precinct 14	precinct
+North Carolina;Ashe County;ONE STOP	precinct
+North Carolina;Ashe County;Precinct 18	precinct
+North Carolina;Ashe County;Precinct 13	precinct
+North Carolina;Ashe County;Precinct 03	precinct
+North Carolina;Ashe County;Precinct 06	precinct
+North Carolina;Ashe County;Precinct 09	precinct
+North Carolina;Ashe County;Precinct 17	precinct
+North Carolina;Ashe County;Precinct 12	precinct
+North Carolina;Ashe County;Precinct 15	precinct
+North Carolina;Bladen County;PROVISIONAL	precinct
+North Carolina;Bladen County;Precinct P70	precinct
+North Carolina;Bladen County;ABSENTEE	precinct
+North Carolina;Bladen County;Precinct P501	precinct
+North Carolina;Bladen County;Precinct P10	precinct
+North Carolina;Bladen County;Precinct P75	precinct
+North Carolina;Bladen County;Precinct P55	precinct
+North Carolina;Bladen County;Precinct P45	precinct
+North Carolina;Bladen County;ONE STOP LIBRARY	precinct
+North Carolina;Bladen County;Precinct P60	precinct
+North Carolina;Bladen County;Precinct P65	precinct
+North Carolina;Bladen County;Precinct P40	precinct
+North Carolina;Bladen County;Precinct P202	precinct
+North Carolina;Bladen County;Precinct P15	precinct
+North Carolina;Bladen County;Precinct P30	precinct
+North Carolina;Bladen County;Precinct P35	precinct
+North Carolina;Bladen County;Precinct P80	precinct
+North Carolina;Bladen County;Precinct P502	precinct
+North Carolina;Bladen County;Precinct P25	precinct
+North Carolina;Bladen County;Precinct P201	precinct
+North Carolina;Camden County;ONE STOP	precinct
+North Carolina;Camden County;Precinct SM	precinct
+North Carolina;Camden County;Precinct SH	precinct
+North Carolina;Camden County;PROVISIONAL	precinct
+North Carolina;Camden County;ABSENTEE	precinct
+North Carolina;Camden County;Precinct CH	precinct
+North Carolina;Caldwell County;PROVISIONAL	precinct
+North Carolina;Caldwell County;Precinct PR30	precinct
+North Carolina;Caldwell County;Precinct PR16	precinct
+North Carolina;Caldwell County;Precinct PR14	precinct
+North Carolina;Caldwell County;ABSENTEE MAIL	precinct
+North Carolina;Caldwell County;Precinct PR22	precinct
+North Carolina;Caldwell County;Precinct PR25	precinct
+North Carolina;Caldwell County;Precinct PR35	precinct
+North Carolina;Caldwell County;Precinct PR34	precinct
+North Carolina;Caldwell County;Precinct PR07	precinct
+North Carolina;Caldwell County;Precinct PR02	precinct
+North Carolina;Caldwell County;OS GRANITE FALLS	precinct
+North Carolina;Caldwell County;Precinct PR17	precinct
+North Carolina;Caldwell County;Precinct PR13	precinct
+North Carolina;Caldwell County;Precinct PR08	precinct
+North Carolina;Caldwell County;Precinct PR18	precinct
+North Carolina;Caldwell County;Precinct PR01	precinct
+North Carolina;Caldwell County;Precinct PR29	precinct
+North Carolina;Caldwell County;OS LENOIR	precinct
+North Carolina;Caldwell County;Precinct PR32	precinct
+North Carolina;Caldwell County;Precinct PR33	precinct
+North Carolina;Caldwell County;Precinct PR24	precinct
+North Carolina;Caldwell County;Precinct PR31	precinct
+North Carolina;Caldwell County;Precinct PR21	precinct
+North Carolina;Anson County;Precinct PEAC	precinct
+North Carolina;Anson County;Precinct WS	precinct
+North Carolina;Anson County;Precinct MM	precinct
+North Carolina;Anson County;Precinct W3	precinct
+North Carolina;Anson County;Precinct W2	precinct
+North Carolina;Anson County;Precinct W1	precinct
+North Carolina;Anson County;Precinct POLK	precinct
+North Carolina;Anson County;Precinct BURN	precinct
+North Carolina;Anson County;Precinct LILE	precinct
+North Carolina;Anson County;Precinct GULL	precinct
+North Carolina;Anson County;Precinct ANS	precinct
+North Carolina;Bertie County;ABSENTEE BY MAIL	precinct
+North Carolina;Bertie County;Precinct W2	precinct
+North Carolina;Bertie County;Precinct IW	precinct
+North Carolina;Bertie County;Precinct WH	precinct
+North Carolina;Bertie County;Precinct C2	precinct
+North Carolina;Bertie County;Precinct SN	precinct
+North Carolina;Bertie County;Precinct W1	precinct
+North Carolina;Bertie County;Precinct WD	precinct
+North Carolina;Bertie County;PROVISIONAL	precinct
+North Carolina;Bertie County;OS LOB	precinct
+North Carolina;Bertie County;Precinct M1	precinct
+North Carolina;Bertie County;Precinct RX	precinct
+North Carolina;Bertie County;Precinct C1	precinct
+North Carolina;Bertie County;Precinct MH	precinct
+North Carolina;Bertie County;Precinct M2	precinct
+North Carolina;Chowan County;Precinct 5	precinct
+North Carolina;Chowan County;Precinct 1	precinct
+North Carolina;Chowan County;Precinct 3	precinct
+North Carolina;Chowan County;ONE STOP	precinct
+North Carolina;Chowan County;Precinct 4	precinct
+North Carolina;Chowan County;ABSENTEE	precinct
+North Carolina;Chowan County;Precinct 2	precinct
+North Carolina;Chowan County;Precinct 6	precinct
+North Carolina;Chowan County;TRANSFER	precinct
+North Carolina;Chowan County;PROVISIONAL	precinct
+North Carolina;Clay County;Precinct WARN	precinct
+North Carolina;Clay County;Precinct HAY2	precinct
+North Carolina;Clay County;Precinct SHCR	precinct
+North Carolina;Clay County;Precinct HAYC	precinct
+North Carolina;Clay County;Precinct BRAS	precinct
+North Carolina;Clay County;Precinct SWEE	precinct
+North Carolina;Clay County;Precinct TUSQ	precinct
+North Carolina;Clay County;Precinct HAY1	precinct
+North Carolina;Clay County;Precinct HIAW	precinct
+North Carolina;Alexander County;Precinct T2T3	precinct
+North Carolina;Alexander County;Precinct B2	precinct
+North Carolina;Alexander County;Precinct M	precinct
+North Carolina;Alexander County;Precinct S1S2	precinct
+North Carolina;Alexander County;Precinct T1T4T5	precinct
+North Carolina;Alexander County;Precinct B1	precinct
+North Carolina;Alexander County;Precinct E	precinct
+North Carolina;Alexander County;Precinct LRSL	precinct
+North Carolina;Alexander County;Precinct G1G2	precinct
+North Carolina;Alexander County;Precinct W	precinct
+North Carolina;Alleghany County;Precinct 06A	precinct
+North Carolina;Alleghany County;Precinct 04	precinct
+North Carolina;Alleghany County;Precinct 01	precinct
+North Carolina;Alleghany County;Precinct 03A	precinct
+North Carolina;Caswell County;CURBSIDE	precinct
+North Carolina;Caswell County;OS CURBSIDE	precinct
+North Carolina;Caswell County;Precinct PROVI	precinct
+North Carolina;Caswell County;Precinct MILT	precinct
+North Carolina;Caswell County;PROVISIONAL	precinct
+North Carolina;Caswell County;Precinct STON	precinct
+North Carolina;Caswell County;Precinct LEAS	precinct
+North Carolina;Caswell County;ABSENTEE	precinct
+North Carolina;Caswell County;Precinct YANC	precinct
+North Carolina;Caswell County;Precinct LOCU	precinct
+North Carolina;Caswell County;Precinct PH	precinct
+North Carolina;Caswell County;Precinct PELH	precinct
+North Carolina;Caswell County;Precinct ANDE	precinct
+North Carolina;Cherokee County;Precinct ANNW	precinct
+North Carolina;Cherokee County;Precinct RGER	precinct
+North Carolina;Cherokee County;Precinct HOTH	precinct
+North Carolina;Cherokee County;Precinct CSON	precinct
+North Carolina;Cherokee County;Precinct UNKA	precinct
+North Carolina;Cherokee County;Precinct PCHT	precinct
+North Carolina;Cherokee County;Precinct TOPT	precinct
+North Carolina;Cherokee County;Precinct MURS	precinct
+North Carolina;Cherokee County;Precinct MARB	precinct
+North Carolina;Cherokee County;Precinct GCRK	precinct
+North Carolina;Cherokee County;Precinct MURN	precinct
+North Carolina;Cherokee County;Precinct BELL	precinct
+North Carolina;Cherokee County;Precinct HIWA	precinct
+North Carolina;Cherokee County;Precinct ANSW	precinct
+North Carolina;Cherokee County;Precinct HANG	precinct
+North Carolina;Cherokee County;Precinct BRAS	precinct
+North Carolina;Cleveland County;Precinct SHANGI	precinct
+North Carolina;Cleveland County;Precinct KINGST	precinct
+North Carolina;Cleveland County;Precinct BR	precinct
+North Carolina;Cleveland County;Precinct LATT	precinct
+North Carolina;Cleveland County;Precinct S C	precinct
+North Carolina;Cleveland County;Precinct MULLS	precinct
+North Carolina;Cleveland County;Precinct KM S	precinct
+North Carolina;Cleveland County;Precinct KM N	precinct
+North Carolina;Cleveland County;Precinct LAWNDL	precinct
+North Carolina;Cleveland County;Precinct BETHWR	precinct
+North Carolina;Cleveland County;Precinct S 5	precinct
+North Carolina;Cleveland County;Precinct GROVER	precinct
+North Carolina;Cleveland County;Precinct FALSTN	precinct
+North Carolina;Cleveland County;Precinct RIPPY	precinct
+North Carolina;Cleveland County;Precinct OAKGRV	precinct
+North Carolina;Cleveland County;Precinct S 4A	precinct
+North Carolina;Cleveland County;Precinct S S	precinct
+North Carolina;Cleveland County;Precinct MRB-YO	precinct
+North Carolina;Cleveland County;Precinct POLKVL	precinct
+North Carolina;Cleveland County;Precinct WACO	precinct
+North Carolina;Cleveland County;Precinct CASAR	precinct
+North Carolina;Columbus County;Precinct P18	precinct
+North Carolina;Columbus County;Precinct P19	precinct
+North Carolina;Columbus County;Precinct P20A	precinct
+North Carolina;Columbus County;Precinct P06	precinct
+North Carolina;Columbus County;Precinct P15	precinct
+North Carolina;Columbus County;Precinct P21	precinct
+North Carolina;Columbus County;Precinct P23	precinct
+North Carolina;Columbus County;Precinct P09	precinct
+North Carolina;Columbus County;Precinct P07	precinct
+North Carolina;Columbus County;Precinct P26B	precinct
+North Carolina;Columbus County;Precinct P22A	precinct
+North Carolina;Columbus County;Precinct P24	precinct
+North Carolina;Columbus County;Precinct P08	precinct
+North Carolina;Columbus County;Precinct P25B	precinct
+North Carolina;Columbus County;Precinct P13	precinct
+North Carolina;Columbus County;Precinct P12	precinct
+North Carolina;Columbus County;Precinct P04	precinct
+North Carolina;Columbus County;Precinct P03	precinct
+North Carolina;Columbus County;Precinct P11	precinct
+North Carolina;Columbus County;Precinct P10	precinct
+North Carolina;Columbus County;Precinct P05	precinct
+North Carolina;Columbus County;Precinct P17	precinct
+North Carolina;Columbus County;Precinct P01A	precinct
+North Carolina;Columbus County;Precinct P02B	precinct
+North Carolina;Columbus County;Precinct P16B	precinct
+North Carolina;Columbus County;Precinct P14	precinct
+North Carolina;Cumberland County;TRANSFER 1-20	precinct
+North Carolina;Cumberland County;Precinct CC10	precinct
+North Carolina;Cumberland County;Precinct G1B	precinct
+North Carolina;Cumberland County;Precinct G11B	precinct
+North Carolina;Cumberland County;Precinct CC32	precinct
+North Carolina;Cumberland County;Precinct CL57-1	precinct
+North Carolina;Cumberland County;Precinct CU02	precinct
+North Carolina;Cumberland County;Precinct G5C	precinct
+North Carolina;Cumberland County;PROVISIONAL 1-20	precinct
+North Carolina;Cumberland County;ONE STOP A 21-45	precinct
+North Carolina;Cumberland County;ONE STOP B 1-20	precinct
+North Carolina;Cumberland County;Precinct MR02	precinct
+North Carolina;Cumberland County;Precinct G2A	precinct
+North Carolina;Cumberland County;Precinct G2E-2	precinct
+North Carolina;Cumberland County;Precinct G3A-1	precinct
+North Carolina;Cumberland County;Precinct G5A-2	precinct
+North Carolina;Cumberland County;Precinct G4A	precinct
+North Carolina;Cumberland County;Precinct G4B	precinct
+North Carolina;Cumberland County;Precinct CC06	precinct
+North Carolina;Cumberland County;ABSENTEE 21-45	precinct
+North Carolina;Cumberland County;Precinct CC08	precinct
+North Carolina;Cumberland County;Precinct CC07	precinct
+North Carolina;Cumberland County;Precinct CC04	precinct
+North Carolina;Cumberland County;Precinct G2C-1	precinct
+North Carolina;Cumberland County;Precinct EO61-1	precinct
+North Carolina;Cumberland County;PROVISIONAL 21-45	precinct
+North Carolina;Cumberland County;Precinct CC26	precinct
+North Carolina;Cumberland County;Precinct CC25	precinct
+North Carolina;Cumberland County;Precinct SH77	precinct
+North Carolina;Cumberland County;TRANSFER 21-45	precinct
+North Carolina;Cumberland County;ONE STOP B 21-45	precinct
+North Carolina;Cumberland County;Precinct G3B	precinct
+North Carolina;Cumberland County;Precinct G9B-2	precinct
+North Carolina;Cumberland County;Precinct LR63	precinct
+North Carolina;Cumberland County;Precinct CC19	precinct
+North Carolina;Cumberland County;Precinct CC17	precinct
+North Carolina;Cumberland County;ABSENTEE 1-20	precinct
+North Carolina;Cumberland County;Precinct G8D	precinct
+North Carolina;Cumberland County;Precinct LI65	precinct
+North Carolina;Cumberland County;Precinct G8B	precinct
+North Carolina;Cumberland County;Precinct G6A	precinct
+North Carolina;Cumberland County;Precinct G3A-2	precinct
+North Carolina;Cumberland County;Precinct CL57-2	precinct
+North Carolina;Cumberland County;Precinct CC16	precinct
+North Carolina;Cumberland County;Precinct CC15	precinct
+North Carolina;Cumberland County;Precinct CC13	precinct
+North Carolina;Cumberland County;Precinct CC34	precinct
+North Carolina;Cumberland County;Precinct CC31	precinct
+North Carolina;Cumberland County;Precinct G1A	precinct
+North Carolina;Cumberland County;Precinct G10A	precinct
+North Carolina;Cumberland County;Precinct EO61-2	precinct
+North Carolina;Cumberland County;Precinct CC18	precinct
+North Carolina;Cumberland County;Precinct CC21	precinct
+North Carolina;Cumberland County;Precinct CC27	precinct
+North Carolina;Cumberland County;Precinct G9A	precinct
+North Carolina;Cumberland County;ONE STOP D 1-20	precinct
+North Carolina;Cumberland County;Precinct G7B	precinct
+North Carolina;Cumberland County;Precinct G5B-2	precinct
+North Carolina;Cumberland County;Precinct G10B	precinct
+North Carolina;Cumberland County;Precinct CC29	precinct
+North Carolina;Cumberland County;Precinct G10C	precinct
+North Carolina;Cumberland County;Precinct CC01	precinct
+North Carolina;Cumberland County;ONE STOP C 21-45	precinct
+North Carolina;Cumberland County;Precinct G5A-1	precinct
+North Carolina;Cumberland County;Precinct G5B-1	precinct
+North Carolina;Cumberland County;Precinct G7A	precinct
+North Carolina;Cumberland County;Precinct G2E-1	precinct
+North Carolina;Cumberland County;Precinct CC24	precinct
+North Carolina;Cumberland County;Precinct G11A-1	precinct
+North Carolina;Cumberland County;Precinct G3C	precinct
+North Carolina;Cumberland County;Precinct MB62	precinct
+North Carolina;Cumberland County;Precinct G8C	precinct
+North Carolina;Cumberland County;Precinct G6C	precinct
+North Carolina;Cumberland County;Precinct G8A	precinct
+North Carolina;Cumberland County;ONE STOP C 1-20	precinct
+North Carolina;Cumberland County;Precinct G2D	precinct
+North Carolina;Cumberland County;Precinct CC03	precinct
+North Carolina;Cumberland County;Precinct AH49	precinct
+North Carolina;Cumberland County;Precinct CC05	precinct
+North Carolina;Cumberland County;ONE STOP A 1-20	precinct
+North Carolina;Cumberland County;Precinct G2B	precinct
+North Carolina;Cumberland County;Precinct G2C-2	precinct
+North Carolina;Cumberland County;Precinct G9B-1	precinct
+North Carolina;Cumberland County;ONE STOP D 21-45	precinct
+North Carolina;Cumberland County;Precinct G4C	precinct
+North Carolina;Cumberland County;Precinct G6B	precinct
+North Carolina;Cumberland County;Precinct AL51	precinct
+North Carolina;Cumberland County;Precinct CC14	precinct
+North Carolina;Cumberland County;Precinct CC12	precinct
+North Carolina;Cumberland County;Precinct G11A-2	precinct
+North Carolina;Cumberland County;Precinct CC33	precinct
+North Carolina;Davidson County;Precinct 68	precinct
+North Carolina;Davidson County;Precinct 82	precinct
+North Carolina;Davidson County;Precinct 48	precinct
+North Carolina;Davidson County;Precinct 52	precinct
+North Carolina;Davidson County;Precinct 36	precinct
+North Carolina;Davidson County;Precinct 12	precinct
+North Carolina;Davidson County;CURBSIDE	precinct
+North Carolina;Davidson County;Precinct 84	precinct
+North Carolina;Davidson County;Precinct 80A	precinct
+North Carolina;Davidson County;Precinct 62	precinct
+North Carolina;Davidson County;Precinct 28	precinct
+North Carolina;Davidson County;Precinct 46	precinct
+North Carolina;Davidson County;Precinct 04	precinct
+North Carolina;Davidson County;PROVISIONAL	precinct
+North Carolina;Davidson County;Precinct 26	precinct
+North Carolina;Davidson County;Precinct 40	precinct
+North Carolina;Davidson County;Precinct 60	precinct
+North Carolina;Davidson County;Precinct 06	precinct
+North Carolina;Davidson County;Precinct 10	precinct
+North Carolina;Davidson County;ABSENTEE	precinct
+North Carolina;Davidson County;Precinct 78	precinct
+North Carolina;Davidson County;Precinct 66	precinct
+North Carolina;Davidson County;Precinct 24	precinct
+North Carolina;Davidson County;Precinct 72	precinct
+North Carolina;Davidson County;Precinct 86A	precinct
+North Carolina;Davidson County;Precinct 20	precinct
+North Carolina;Davidson County;Precinct 16	precinct
+North Carolina;Davidson County;Precinct 38	precinct
+North Carolina;Davidson County;Precinct 32	precinct
+North Carolina;Davidson County;Precinct 58	precinct
+North Carolina;Davidson County;Precinct 88	precinct
+North Carolina;Davidson County;Precinct 08	precinct
+North Carolina;Davidson County;Precinct 22	precinct
+North Carolina;Davidson County;Precinct 44	precinct
+North Carolina;Davidson County;Precinct 42	precinct
+North Carolina;Davidson County;Precinct 64	precinct
+North Carolina;Davidson County;TRANSFER	precinct
+North Carolina;Davidson County;Precinct 54	precinct
+North Carolina;Davidson County;Precinct 34	precinct
+North Carolina;Davidson County;Precinct 14	precinct
+North Carolina;Davidson County;Precinct 70	precinct
+North Carolina;Davidson County;Precinct 76	precinct
+North Carolina;Davidson County;Precinct 74	precinct
+North Carolina;Davidson County;Precinct 56	precinct
+North Carolina;Davidson County;Precinct 50	precinct
+North Carolina;Davidson County;Precinct 30	precinct
+North Carolina;Davidson County;Precinct 18	precinct
+North Carolina;Duplin County;Precinct ROCK	precinct
+North Carolina;Duplin County;Precinct ROSE	precinct
+North Carolina;Duplin County;Precinct GLIS	precinct
+North Carolina;Duplin County;Precinct LOCK	precinct
+North Carolina;Duplin County;Precinct CFRK	precinct
+North Carolina;Duplin County;Precinct BEUL	precinct
+North Carolina;Duplin County;Precinct CHAR	precinct
+North Carolina;Duplin County;ABSENTEE MAIL	precinct
+North Carolina;Duplin County;Precinct KENA	precinct
+North Carolina;Duplin County;Precinct WOLF	precinct
+North Carolina;Duplin County;Precinct HALL	precinct
+North Carolina;Duplin County;Precinct MAGN	precinct
+North Carolina;Duplin County;Precinct CALY	precinct
+North Carolina;Duplin County;Precinct ALBE	precinct
+North Carolina;Duplin County;Precinct FAIS	precinct
+North Carolina;Duplin County;PROVISIONAL	precinct
+North Carolina;Duplin County;Precinct CYCK	precinct
+North Carolina;Duplin County;Precinct SMCA	precinct
+North Carolina;Duplin County;Precinct WALL	precinct
+North Carolina;Duplin County;Precinct CHIN	precinct
+North Carolina;Duplin County;Precinct WARS	precinct
+North Carolina;Duplin County;ONE STOP	precinct
+North Carolina;Durham County;Precinct 02	precinct
+North Carolina;Durham County;Precinct 05	precinct
+North Carolina;Durham County;Precinct 16	precinct
+North Carolina;Durham County;Precinct 32	precinct
+North Carolina;Durham County;Precinct 38	precinct
+North Carolina;Durham County;Precinct 19	precinct
+North Carolina;Durham County;Precinct 51	precinct
+North Carolina;Durham County;OS SRL	precinct
+North Carolina;Durham County;Precinct 20	precinct
+North Carolina;Durham County;Precinct 39	precinct
+North Carolina;Durham County;Precinct 47	precinct
+North Carolina;Durham County;Precinct 55-11	precinct
+North Carolina;Durham County;PROVISIONAL	precinct
+North Carolina;Durham County;Precinct 27	precinct
+North Carolina;Durham County;Precinct 25	precinct
+North Carolina;Durham County;Precinct 28	precinct
+North Carolina;Durham County;Precinct 53-1	precinct
+North Carolina;Durham County;Precinct 35.3	precinct
+North Carolina;Durham County;Precinct 43	precinct
+North Carolina;Durham County;Precinct 41	precinct
+North Carolina;Durham County;Precinct 46	precinct
+North Carolina;Durham County;Precinct 40	precinct
+North Carolina;Durham County;Precinct 23	precinct
+North Carolina;Durham County;Precinct 26	precinct
+North Carolina;Durham County;Precinct 10	precinct
+North Carolina;Durham County;OS NCCU	precinct
+North Carolina;Durham County;Precinct 21	precinct
+North Carolina;Durham County;Precinct 09	precinct
+North Carolina;Durham County;Precinct 06	precinct
+North Carolina;Durham County;Precinct 31	precinct
+North Carolina;Durham County;Precinct 37	precinct
+North Carolina;Durham County;OS NRL	precinct
+North Carolina;Durham County;Precinct 30-2	precinct
+North Carolina;Durham County;Precinct 33	precinct
+North Carolina;Durham County;Precinct 03	precinct
+North Carolina;Durham County;Precinct 13	precinct
+North Carolina;Durham County;Precinct 18	precinct
+North Carolina;Durham County;Precinct 50	precinct
+North Carolina;Durham County;Precinct 14	precinct
+North Carolina;Durham County;Precinct 54	precinct
+North Carolina;Durham County;Precinct 55-49	precinct
+North Carolina;Durham County;ABSENTEE	precinct
+North Carolina;Durham County;Precinct 30-1	precinct
+North Carolina;Durham County;Precinct 48	precinct
+North Carolina;Durham County;Precinct 29	precinct
+North Carolina;Durham County;Precinct 22	precinct
+North Carolina;Durham County;Precinct 44	precinct
+North Carolina;Durham County;Precinct 42	precinct
+North Carolina;Durham County;TRANSFER	precinct
+North Carolina;Durham County;Precinct 01	precinct
+North Carolina;Durham County;Precinct 04	precinct
+North Carolina;Durham County;Precinct 07	precinct
+North Carolina;Durham County;Precinct 34-1	precinct
+North Carolina;Durham County;Precinct 34-2	precinct
+North Carolina;Durham County;OS DUKE	precinct
+North Carolina;Durham County;OS ERL	precinct
+North Carolina;Durham County;OS BOE	precinct
+North Carolina;Durham County;Precinct 24	precinct
+North Carolina;Durham County;Precinct 45	precinct
+North Carolina;Durham County;Precinct 17	precinct
+North Carolina;Durham County;Precinct 12	precinct
+North Carolina;Durham County;Precinct 15	precinct
+North Carolina;Durham County;Precinct 36	precinct
+North Carolina;Durham County;Precinct 52	precinct
+North Carolina;Durham County;Precinct 08	precinct
+North Carolina;Durham County;Precinct 53-2	precinct
+North Carolina;Edgecombe County;Precinct 0104	precinct
+North Carolina;Edgecombe County;Precinct 1001	precinct
+North Carolina;Edgecombe County;Precinct 1204	precinct
+North Carolina;Edgecombe County;Precinct 1401	precinct
+North Carolina;Edgecombe County;Precinct 0501	precinct
+North Carolina;Edgecombe County;ONE STOP #2	precinct
+North Carolina;Edgecombe County;Precinct 0301	precinct
+North Carolina;Edgecombe County;Precinct 1301	precinct
+North Carolina;Edgecombe County;Precinct 0201	precinct
+North Carolina;Edgecombe County;PROVISIONAL	precinct
+North Carolina;Edgecombe County;Precinct 0901	precinct
+North Carolina;Edgecombe County;Precinct 1201	precinct
+North Carolina;Edgecombe County;ABSENTEE MAIL	precinct
+North Carolina;Edgecombe County;Precinct 0401	precinct
+North Carolina;Edgecombe County;ONE STOP #3	precinct
+North Carolina;Edgecombe County;Precinct 0102	precinct
+North Carolina;Edgecombe County;Precinct 0103	precinct
+North Carolina;Edgecombe County;Precinct 0701	precinct
+North Carolina;Edgecombe County;Precinct 0801	precinct
+North Carolina;Edgecombe County;Precinct 1202	precinct
+North Carolina;Edgecombe County;Precinct 1205	precinct
+North Carolina;Edgecombe County;Precinct 1203	precinct
+North Carolina;Edgecombe County;Precinct 1101	precinct
+North Carolina;Edgecombe County;ONE STOP #1	precinct
+North Carolina;Edgecombe County;Precinct 0101	precinct
+North Carolina;Edgecombe County;Precinct 0601	precinct
+North Carolina;Edgecombe County;TRANSFER	precinct
+North Carolina;Forsyth County;Precinct 132	precinct
+North Carolina;Forsyth County;Precinct 902	precinct
+North Carolina;Forsyth County;Precinct 809	precinct
+North Carolina;Forsyth County;Precinct 806	precinct
+North Carolina;Forsyth County;Precinct 501	precinct
+North Carolina;Forsyth County;Precinct 607	precinct
+North Carolina;Forsyth County;Precinct 506	precinct
+North Carolina;Forsyth County;Precinct 907	precinct
+North Carolina;Forsyth County;Precinct 304	precinct
+North Carolina;Forsyth County;Precinct 051	precinct
+North Carolina;Forsyth County;Precinct 067	precinct
+North Carolina;Forsyth County;Precinct 062	precinct
+North Carolina;Forsyth County;Precinct 054	precinct
+North Carolina;Forsyth County;Precinct 702	precinct
+North Carolina;Forsyth County;Precinct 701	precinct
+North Carolina;Forsyth County;Precinct 904	precinct
+North Carolina;Forsyth County;Precinct 302	precinct
+North Carolina;Forsyth County;Precinct 123	precinct
+North Carolina;Forsyth County;Precinct 082	precinct
+North Carolina;Forsyth County;Precinct 083	precinct
+North Carolina;Forsyth County;Precinct 092	precinct
+North Carolina;Forsyth County;Precinct 073	precinct
+North Carolina;Forsyth County;Precinct 072	precinct
+North Carolina;Forsyth County;Precinct 131	precinct
+North Carolina;Forsyth County;Precinct 404	precinct
+North Carolina;Forsyth County;Precinct 402	precinct
+North Carolina;Forsyth County;Precinct 405	precinct
+North Carolina;Forsyth County;Precinct 507	precinct
+North Carolina;Forsyth County;Precinct 908	precinct
+North Carolina;Forsyth County;Precinct 802	precinct
+North Carolina;Forsyth County;Precinct 705	precinct
+North Carolina;Forsyth County;Precinct 706	precinct
+North Carolina;Forsyth County;Precinct 505	precinct
+North Carolina;Forsyth County;Precinct 805	precinct
+North Carolina;Forsyth County;Precinct 808	precinct
+North Carolina;Forsyth County;Precinct 903	precinct
+North Carolina;Forsyth County;Precinct 015	precinct
+North Carolina;Forsyth County;Precinct 012	precinct
+North Carolina;Forsyth County;Precinct 708	precinct
+North Carolina;Forsyth County;Precinct 203	precinct
+North Carolina;Forsyth County;Precinct 201	precinct
+North Carolina;Forsyth County;Precinct 206	precinct
+North Carolina;Forsyth County;Precinct 081	precinct
+North Carolina;Forsyth County;Precinct 061	precinct
+North Carolina;Forsyth County;Precinct 066	precinct
+North Carolina;Forsyth County;Precinct 064	precinct
+North Carolina;Forsyth County;Precinct 055	precinct
+North Carolina;Forsyth County;Precinct 052	precinct
+North Carolina;Forsyth County;Precinct 032	precinct
+North Carolina;Forsyth County;Precinct 603	precinct
+North Carolina;Forsyth County;Precinct 606	precinct
+North Carolina;Forsyth County;Precinct 305	precinct
+North Carolina;Forsyth County;Precinct 207	precinct
+North Carolina;Forsyth County;Precinct 071	precinct
+North Carolina;Forsyth County;Precinct 091	precinct
+North Carolina;Forsyth County;Precinct 804	precinct
+North Carolina;Forsyth County;Precinct 807	precinct
+North Carolina;Forsyth County;Precinct 905	precinct
+North Carolina;Forsyth County;Precinct 707	precinct
+North Carolina;Forsyth County;Precinct 031	precinct
+North Carolina;Forsyth County;Precinct 801	precinct
+North Carolina;Forsyth County;PROVISIONAL	precinct
+North Carolina;Forsyth County;Precinct 204	precinct
+North Carolina;Forsyth County;Precinct 043	precinct
+North Carolina;Forsyth County;Precinct 503	precinct
+North Carolina;Forsyth County;Precinct 909	precinct
+North Carolina;Forsyth County;Precinct 502	precinct
+North Carolina;Forsyth County;Precinct 133	precinct
+North Carolina;Forsyth County;Precinct 101	precinct
+North Carolina;Forsyth County;Precinct 063	precinct
+North Carolina;Forsyth County;Precinct 068	precinct
+North Carolina;Forsyth County;Precinct 065	precinct
+North Carolina;Forsyth County;Precinct 013	precinct
+North Carolina;Forsyth County;Precinct 021	precinct
+North Carolina;Forsyth County;Precinct 053	precinct
+North Carolina;Forsyth County;Precinct 034	precinct
+North Carolina;Forsyth County;Precinct 033	precinct
+North Carolina;Forsyth County;ONE STOP	precinct
+North Carolina;Forsyth County;Precinct 709	precinct
+North Carolina;Forsyth County;Precinct 403	precinct
+North Carolina;Forsyth County;Precinct 042	precinct
+North Carolina;Forsyth County;Precinct 803	precinct
+North Carolina;Forsyth County;Precinct 901	precinct
+North Carolina;Forsyth County;Precinct 401	precinct
+North Carolina;Forsyth County;Precinct 906	precinct
+North Carolina;Forsyth County;Precinct 122	precinct
+North Carolina;Forsyth County;Precinct 301	precinct
+North Carolina;Forsyth County;Precinct 306	precinct
+North Carolina;Forsyth County;ABSENTEE	precinct
+North Carolina;Forsyth County;Precinct 602	precinct
+North Carolina;Forsyth County;Precinct 605	precinct
+North Carolina;Forsyth County;Precinct 112	precinct
+North Carolina;Forsyth County;Precinct 075	precinct
+North Carolina;Forsyth County;Precinct 074	precinct
+North Carolina;Forsyth County;Precinct 011	precinct
+North Carolina;Forsyth County;Precinct 504	precinct
+North Carolina;Forsyth County;Precinct 704	precinct
+North Carolina;Forsyth County;Precinct 703	precinct
+North Carolina;Forsyth County;Precinct 014	precinct
+North Carolina;Forsyth County;Precinct 303	precinct
+North Carolina;Forsyth County;Precinct 111	precinct
+North Carolina;Forsyth County;Precinct 604	precinct
+North Carolina;Forsyth County;Precinct 601	precinct
+North Carolina;Forsyth County;Precinct 205	precinct
+North Carolina;Franklin County;Precinct 18	precinct
+North Carolina;Franklin County;Precinct 02	precinct
+North Carolina;Franklin County;Precinct 03	precinct
+North Carolina;Franklin County;Precinct 15	precinct
+North Carolina;Franklin County;Precinct 14	precinct
+North Carolina;Franklin County;Precinct 19	precinct
+North Carolina;Franklin County;Precinct 05	precinct
+North Carolina;Davie County;Precinct 10	precinct
+North Carolina;Davie County;Precinct 13	precinct
+North Carolina;Davie County;Precinct 12	precinct
+North Carolina;Davie County;ABSENTEE	precinct
+North Carolina;Davie County;Precinct 07	precinct
+North Carolina;Davie County;Precinct 04	precinct
+North Carolina;Davie County;Precinct 01	precinct
+North Carolina;Davie County;Precinct 14	precinct
+North Carolina;Davie County;PROVISIONAL	precinct
+North Carolina;Davie County;Precinct 02	precinct
+North Carolina;Davie County;Precinct 05	precinct
+North Carolina;Davie County;Precinct 08	precinct
+North Carolina;Davie County;Precinct 11	precinct
+North Carolina;Davie County;CURBSIDE	precinct
+North Carolina;Davie County;Precinct 09	precinct
+North Carolina;Davie County;Precinct 06	precinct
+North Carolina;Davie County;Precinct 03	precinct
+North Carolina;Dare County;Precinct EL	precinct
+North Carolina;Dare County;Precinct AVON	precinct
+North Carolina;Dare County;Precinct STPT	precinct
+North Carolina;Dare County;Precinct MH	precinct
+North Carolina;Dare County;Precinct WAN	precinct
+North Carolina;Dare County;OS FESSENDEN	precinct
+North Carolina;Dare County;ABSENTEE MAIL	precinct
+North Carolina;Dare County;Precinct KDH	precinct
+North Carolina;Dare County;PROVISIONAL	precinct
+North Carolina;Dare County;OS KDH TOWN HALL	precinct
+North Carolina;Dare County;Precinct DUCK	precinct
+North Carolina;Dare County;Precinct BUX	precinct
+North Carolina;Dare County;Precinct SOSH	precinct
+North Carolina;Dare County;OS OFFICE	precinct
+North Carolina;Dare County;Precinct COL	precinct
+North Carolina;Dare County;Precinct NGHD	precinct
+North Carolina;Dare County;Precinct MATO	precinct
+North Carolina;Dare County;Precinct CHCA	precinct
+North Carolina;Dare County;Precinct HAT	precinct
+North Carolina;Dare County;Precinct FRCO	precinct
+North Carolina;Dare County;Precinct KTHK	precinct
+North Carolina;Craven County;Precinct 13	precinct
+North Carolina;Craven County;Precinct N3	precinct
+North Carolina;Craven County;Precinct N4	precinct
+North Carolina;Craven County;Precinct 21	precinct
+North Carolina;Craven County;Precinct 02	precinct
+North Carolina;Craven County;Precinct 12	precinct
+North Carolina;Craven County;Precinct 17	precinct
+North Carolina;Craven County;Precinct 06	precinct
+North Carolina;Craven County;Precinct 03	precinct
+North Carolina;Craven County;Precinct 23	precinct
+North Carolina;Craven County;Precinct 10	precinct
+North Carolina;Craven County;Precinct 09	precinct
+North Carolina;Craven County;Precinct 08	precinct
+North Carolina;Craven County;Precinct 05	precinct
+North Carolina;Craven County;Precinct 11	precinct
+North Carolina;Craven County;Precinct 14	precinct
+North Carolina;Craven County;Precinct 19	precinct
+North Carolina;Craven County;Precinct N1	precinct
+North Carolina;Craven County;Precinct N2	precinct
+North Carolina;Craven County;Precinct 20	precinct
+North Carolina;Craven County;Precinct 16	precinct
+North Carolina;Craven County;Precinct N6	precinct
+North Carolina;Craven County;Precinct N5	precinct
+North Carolina;Craven County;Precinct 15	precinct
+North Carolina;Craven County;Precinct 04	precinct
+North Carolina;Craven County;Precinct 07	precinct
+North Carolina;Gaston County;Precinct 18	precinct
+North Carolina;Gaston County;Precinct 30	precinct
+North Carolina;Gaston County;Precinct 06	precinct
+North Carolina;Gaston County;Precinct 03	precinct
+North Carolina;Gaston County;Precinct 40	precinct
+North Carolina;Gaston County;Precinct 45	precinct
+North Carolina;Gaston County;Precinct 23	precinct
+North Carolina;Gaston County;Precinct 24	precinct
+North Carolina;Gaston County;Precinct 09	precinct
+North Carolina;Gaston County;Precinct 10	precinct
+North Carolina;Gaston County;Precinct 26	precinct
+North Carolina;Gaston County;Precinct 15	precinct
+North Carolina;Gaston County;Precinct 36	precinct
+North Carolina;Gaston County;Precinct 12	precinct
+North Carolina;Gaston County;Precinct 17	precinct
+North Carolina;Gaston County;Precinct 37	precinct
+North Carolina;Gaston County;Precinct 21	precinct
+North Carolina;Gaston County;Precinct 44	precinct
+North Carolina;Gaston County;Precinct 02	precinct
+North Carolina;Gaston County;Precinct 29	precinct
+North Carolina;Gaston County;Precinct 22	precinct
+North Carolina;Gaston County;Precinct 05	precinct
+North Carolina;Gaston County;Precinct 08	precinct
+North Carolina;Gaston County;Precinct 42	precinct
+North Carolina;Gaston County;Precinct 11	precinct
+North Carolina;Gaston County;Precinct 01	precinct
+North Carolina;Gaston County;Precinct 43	precinct
+North Carolina;Gaston County;Precinct 46	precinct
+North Carolina;Gaston County;Precinct 41	precinct
+North Carolina;Gaston County;Precinct 28	precinct
+North Carolina;Gaston County;Precinct 25	precinct
+North Carolina;Gaston County;Precinct 27	precinct
+North Carolina;Gaston County;Precinct 07	precinct
+North Carolina;Gaston County;Precinct 04	precinct
+North Carolina;Gaston County;Precinct 14	precinct
+North Carolina;Gaston County;Precinct 19	precinct
+North Carolina;Gaston County;Precinct 35	precinct
+North Carolina;Gaston County;Precinct 34	precinct
+North Carolina;Gaston County;Precinct 32	precinct
+North Carolina;Gaston County;Precinct 16	precinct
+North Carolina;Gaston County;Precinct 20	precinct
+North Carolina;Gaston County;Precinct 39	precinct
+North Carolina;Gaston County;Precinct 38	precinct
+North Carolina;Gaston County;Precinct 31	precinct
+North Carolina;Gaston County;Precinct 13	precinct
+North Carolina;Gaston County;Precinct 33	precinct
+North Carolina;Currituck County;Precinct PB	precinct
+North Carolina;Currituck County;ONE STOP	precinct
+North Carolina;Currituck County;Precinct GW	precinct
+North Carolina;Currituck County;Precinct CH	precinct
+North Carolina;Currituck County;ABSENTEE MAIL	precinct
+North Carolina;Currituck County;Precinct CJ	precinct
+North Carolina;Currituck County;Precinct WH	precinct
+North Carolina;Currituck County;Precinct MY	precinct
+North Carolina;Currituck County;Precinct PP	precinct
+North Carolina;Currituck County;PROVISIONAL	precinct
+North Carolina;Currituck County;Precinct CB	precinct
+North Carolina;Currituck County;Precinct CI	precinct
+North Carolina;Currituck County;Precinct KI	precinct
+North Carolina;Currituck County;Precinct IR	precinct
+North Carolina;Franklin County;Precinct 11	precinct
+North Carolina;Franklin County;Precinct 08	precinct
+North Carolina;Franklin County;Precinct 16	precinct
+North Carolina;Franklin County;Precinct 07	precinct
+North Carolina;Franklin County;Precinct 01	precinct
+North Carolina;Franklin County;Precinct 09	precinct
+North Carolina;Franklin County;Precinct 06	precinct
+North Carolina;Franklin County;Precinct 12	precinct
+North Carolina;Franklin County;Precinct 17	precinct
+North Carolina;Franklin County;Precinct 13	precinct
+North Carolina;Franklin County;Precinct 10	precinct
+North Carolina;Guilford County;Precinct FR5A	precinct
+North Carolina;Guilford County;CURBSIDE 1	precinct
+North Carolina;Guilford County;Precinct MON3	precinct
+North Carolina;Guilford County;Precinct SCLAY	precinct
+North Carolina;Guilford County;Precinct H20B	precinct
+North Carolina;Guilford County;Precinct H22	precinct
+North Carolina;Guilford County;Precinct H06	precinct
+North Carolina;Guilford County;Precinct H10	precinct
+North Carolina;Guilford County;Precinct H13	precinct
+North Carolina;Guilford County;Precinct JAM2	precinct
+North Carolina;Guilford County;Precinct G35	precinct
+North Carolina;Guilford County;Precinct G32	precinct
+North Carolina;Guilford County;Precinct G33	precinct
+North Carolina;Guilford County;Precinct G11	precinct
+North Carolina;Guilford County;Precinct FR4	precinct
+North Carolina;Guilford County;Precinct G17	precinct
+North Carolina;Guilford County;Precinct CG3A	precinct
+North Carolina;Guilford County;CURBSIDE 2	precinct
+North Carolina;Guilford County;Precinct H19A	precinct
+North Carolina;Guilford County;Precinct MON2A	precinct
+North Carolina;Guilford County;Precinct OR1	precinct
+North Carolina;Guilford County;PROVISIONAL 3	precinct
+North Carolina;Guilford County;Precinct G30	precinct
+North Carolina;Guilford County;Precinct G68	precinct
+North Carolina;Guilford County;Precinct G65	precinct
+North Carolina;Guilford County;Precinct H17	precinct
+North Carolina;Guilford County;Precinct SUM2	precinct
+North Carolina;Guilford County;Precinct SWASH	precinct
+North Carolina;Guilford County;Precinct PG2	precinct
+North Carolina;Guilford County;Precinct RC2	precinct
+North Carolina;Guilford County;Precinct JEF3	precinct
+North Carolina;Guilford County;Precinct JAM1	precinct
+North Carolina;Guilford County;Precinct JEF4	precinct
+North Carolina;Guilford County;Precinct G40A1	precinct
+North Carolina;Guilford County;Precinct G47	precinct
+North Carolina;Guilford County;Precinct G51	precinct
+North Carolina;Guilford County;Precinct G54	precinct
+North Carolina;Guilford County;Precinct G57	precinct
+North Carolina;Guilford County;Precinct G62	precinct
+North Carolina;Guilford County;Precinct G13	precinct
+North Carolina;Guilford County;Precinct CG3B	precinct
+North Carolina;Guilford County;Precinct H02	precinct
+North Carolina;Guilford County;Precinct H01	precinct
+North Carolina;Guilford County;Precinct H25	precinct
+North Carolina;Guilford County;Precinct H28	precinct
+North Carolina;Guilford County;Precinct G46	precinct
+North Carolina;Guilford County;Precinct G21	precinct
+North Carolina;Guilford County;Precinct G24	precinct
+North Carolina;Guilford County;Precinct G26	precinct
+North Carolina;Guilford County;Precinct STOK	precinct
+North Carolina;Guilford County;PROVISIONAL 2	precinct
+North Carolina;Guilford County;Precinct H16	precinct
+North Carolina;Guilford County;Precinct G74	precinct
+North Carolina;Guilford County;Precinct G73	precinct
+North Carolina;Guilford County;Precinct G06	precinct
+North Carolina;Guilford County;Precinct FEN2	precinct
+North Carolina;Guilford County;Precinct H23	precinct
+North Carolina;Guilford County;Precinct H26	precinct
+North Carolina;Guilford County;Precinct H27-A	precinct
+North Carolina;Guilford County;Precinct H27-B	precinct
+North Carolina;Guilford County;Precinct RC1	precinct
+North Carolina;Guilford County;Precinct JAM3	precinct
+North Carolina;Guilford County;Precinct G02	precinct
+North Carolina;Guilford County;Precinct G36	precinct
+North Carolina;Guilford County;Precinct G37	precinct
+North Carolina;Guilford County;Precinct G39	precinct
+North Carolina;Guilford County;ABSENTEE 1	precinct
+North Carolina;Guilford County;ABSENTEE 2	precinct
+North Carolina;Guilford County;Precinct H29B	precinct
+North Carolina;Guilford County;Precinct JEF2	precinct
+North Carolina;Guilford County;Precinct PG1	precinct
+North Carolina;Guilford County;Precinct SDRI	precinct
+North Carolina;Guilford County;Precinct G66	precinct
+North Carolina;Guilford County;Precinct G63	precinct
+North Carolina;Guilford County;Precinct H12	precinct
+North Carolina;Guilford County;Precinct H20A	precinct
+North Carolina;Guilford County;Precinct SMAD	precinct
+North Carolina;Guilford County;Precinct SUM3	precinct
+North Carolina;Guilford County;Precinct SUM4	precinct
+North Carolina;Guilford County;Precinct G42B	precinct
+North Carolina;Guilford County;Precinct G58	precinct
+North Carolina;Guilford County;Precinct G60	precinct
+North Carolina;Guilford County;Precinct G52	precinct
+North Carolina;Guilford County;Precinct G55	precinct
+North Carolina;Guilford County;Precinct G14	precinct
+North Carolina;Guilford County;Precinct SF2	precinct
+North Carolina;Guilford County;Precinct H15	precinct
+North Carolina;Guilford County;Precinct JAM4	precinct
+North Carolina;Guilford County;Precinct G69	precinct
+North Carolina;Guilford County;Precinct H08	precinct
+North Carolina;Guilford County;Precinct H07	precinct
+North Carolina;Guilford County;Precinct G34	precinct
+North Carolina;Guilford County;Precinct G18	precinct
+North Carolina;Guilford County;Precinct CG2	precinct
+North Carolina;Guilford County;Precinct G05	precinct
+North Carolina;Guilford County;Precinct MON1	precinct
+North Carolina;Guilford County;Precinct H18	precinct
+North Carolina;Guilford County;Precinct OR2	precinct
+North Carolina;Guilford County;Precinct G25	precinct
+North Carolina;Guilford County;Precinct G44	precinct
+North Carolina;Guilford County;Precinct G09	precinct
+North Carolina;Guilford County;Precinct H19B	precinct
+North Carolina;Guilford County;Precinct H04	precinct
+North Carolina;Guilford County;Precinct H03	precinct
+North Carolina;Guilford County;Precinct GR	precinct
+North Carolina;Guilford County;Precinct SF1	precinct
+North Carolina;Guilford County;Precinct G45	precinct
+North Carolina;Guilford County;Precinct G01	precinct
+North Carolina;Guilford County;Precinct G07	precinct
+North Carolina;Guilford County;Precinct H24	precinct
+North Carolina;Guilford County;Precinct H21	precinct
+North Carolina;Guilford County;Precinct H05	precinct
+North Carolina;Guilford County;Precinct G08	precinct
+North Carolina;Guilford County;Precinct G31	precinct
+North Carolina;Guilford County;Precinct G48	precinct
+North Carolina;Guilford County;Precinct G43	precinct
+North Carolina;Guilford County;Precinct G40B	precinct
+North Carolina;Guilford County;Precinct G38	precinct
+North Carolina;Guilford County;PROVISIONAL 1	precinct
+North Carolina;Guilford County;Precinct SUM1	precinct
+North Carolina;Guilford County;Precinct H14	precinct
+North Carolina;Guilford County;Precinct H11	precinct
+North Carolina;Guilford County;Precinct G59	precinct
+North Carolina;Guilford County;Precinct G49	precinct
+North Carolina;Guilford County;Precinct G50	precinct
+North Carolina;Guilford County;Precinct G53	precinct
+North Carolina;Guilford County;Precinct G56	precinct
+North Carolina;Guilford County;Precinct SF3	precinct
+North Carolina;Guilford County;Precinct SF4	precinct
+North Carolina;Guilford County;Precinct JEF1	precinct
+North Carolina;Guilford County;Precinct G15	precinct
+North Carolina;Guilford County;Precinct G10	precinct
+North Carolina;Guilford County;Precinct G12	precinct
+North Carolina;Guilford County;Precinct G28	precinct
+North Carolina;Guilford County;Precinct G23	precinct
+North Carolina;Guilford County;Precinct G19	precinct
+North Carolina;Guilford County;Precinct G16	precinct
+North Carolina;Guilford County;CURBSIDE 3	precinct
+North Carolina;Guilford County;Precinct H09	precinct
+North Carolina;Guilford County;Precinct MON2B	precinct
+North Carolina;Guilford County;Precinct NMAD	precinct
+North Carolina;Guilford County;Precinct G03	precinct
+North Carolina;Guilford County;Precinct G04	precinct
+North Carolina;Guilford County;Precinct G29	precinct
+North Carolina;Guilford County;Precinct G40A2	precinct
+North Carolina;Guilford County;Precinct NWASH	precinct
+North Carolina;Guilford County;Precinct H29A	precinct
+North Carolina;Guilford County;Precinct G27	precinct
+North Carolina;Guilford County;Precinct G22	precinct
+North Carolina;Guilford County;Precinct FR5B	precinct
+North Carolina;Guilford County;Precinct G71	precinct
+North Carolina;Guilford County;Precinct G72	precinct
+North Carolina;Guilford County;Precinct NDRI	precinct
+North Carolina;Guilford County;Precinct FEN1	precinct
+North Carolina;Guilford County;Precinct G67	precinct
+North Carolina;Guilford County;Precinct FR1	precinct
+North Carolina;Guilford County;Precinct G20	precinct
+North Carolina;Guilford County;Precinct G41A	precinct
+North Carolina;Guilford County;Precinct CG1	precinct
+North Carolina;Guilford County;ABSENTEE 3	precinct
+North Carolina;Guilford County;Precinct NCGR2	precinct
+North Carolina;Guilford County;Precinct JAM5	precinct
+North Carolina;Guilford County;Precinct NCLAY1	precinct
+North Carolina;Guilford County;Precinct FR3	precinct
+North Carolina;Guilford County;Precinct G41B	precinct
+North Carolina;Guilford County;Precinct G70	precinct
+North Carolina;Guilford County;Precinct NCLAY2	precinct
+North Carolina;Guilford County;Precinct NCGR1	precinct
+North Carolina;Guilford County;Precinct FR2	precinct
+North Carolina;Guilford County;Precinct G75	precinct
+North Carolina;Guilford County;Precinct G42A	precinct
+North Carolina;Guilford County;Precinct G64	precinct
+North Carolina;Guilford County;Precinct G61	precinct
+North Carolina;Guilford County;Precinct GIB	precinct
+North Carolina;Halifax County;Precinct HAL	precinct
+North Carolina;Halifax County;Precinct FAUCT	precinct
+North Carolina;Halifax County;ABSENTEE	precinct
+North Carolina;Halifax County;ONE STOP	precinct
+North Carolina;Halifax County;Precinct WEL 3	precinct
+North Carolina;Halifax County;Precinct RR 10	precinct
+North Carolina;Halifax County;Precinct WEL1-2	precinct
+North Carolina;Halifax County;Precinct CONC	precinct
+North Carolina;Halifax County;PROVISIONAL	precinct
+North Carolina;Halifax County;Precinct RR1-2	precinct
+North Carolina;Halifax County;Precinct HPR	precinct
+North Carolina;Halifax County;Precinct RR 7	precinct
+North Carolina;Halifax County;Precinct SN	precinct
+North Carolina;Halifax County;Precinct RR 4	precinct
+North Carolina;Halifax County;Precinct ENF1	precinct
+North Carolina;Halifax County;Precinct LIT 1	precinct
+North Carolina;Halifax County;Precinct LIT 2	precinct
+North Carolina;Halifax County;Precinct RRC	precinct
+North Carolina;Halifax County;Precinct RR 11	precinct
+North Carolina;Halifax County;Precinct RR 9	precinct
+North Carolina;Halifax County;Precinct RR 3	precinct
+North Carolina;Halifax County;Precinct BUTWD	precinct
+North Carolina;Halifax County;Precinct RR 5	precinct
+North Carolina;Halifax County;Precinct ENF 2	precinct
+North Carolina;Halifax County;Precinct HOL	precinct
+North Carolina;Halifax County;Precinct RINGW	precinct
+North Carolina;Henderson County;Precinct GM	precinct
+North Carolina;Henderson County;Precinct NW	precinct
+North Carolina;Henderson County;Precinct FL	precinct
+North Carolina;Henderson County;Precinct NE	precinct
+North Carolina;Henderson County;Precinct BK	precinct
+North Carolina;Henderson County;Precinct CB	precinct
+North Carolina;Henderson County;Precinct ES	precinct
+North Carolina;Henderson County;Precinct LP	precinct
+North Carolina;Henderson County;Precinct SW	precinct
+North Carolina;Henderson County;Precinct SE	precinct
+North Carolina;Henderson County;Precinct LJ	precinct
+North Carolina;Henderson County;Precinct AR	precinct
+North Carolina;Henderson County;Precinct HS	precinct
+North Carolina;Henderson County;PROVISIONAL	precinct
+North Carolina;Henderson County;Precinct AT	precinct
+North Carolina;Henderson County;Precinct MG	precinct
+North Carolina;Henderson County;Precinct NM	precinct
+North Carolina;Henderson County;CURBSIDE	precinct
+North Carolina;Henderson County;ONE STOP	precinct
+North Carolina;Henderson County;Precinct ED	precinct
+North Carolina;Henderson County;Precinct PR	precinct
+North Carolina;Henderson County;Precinct NB	precinct
+North Carolina;Henderson County;Precinct RG	precinct
+North Carolina;Henderson County;ABSENTEE	precinct
+North Carolina;Henderson County;Precinct HV-3	precinct
+North Carolina;Henderson County;Precinct RR	precinct
+North Carolina;Henderson County;Precinct SM	precinct
+North Carolina;Henderson County;Precinct EV	precinct
+North Carolina;Henderson County;Precinct HC	precinct
+North Carolina;Henderson County;Precinct BC	precinct
+North Carolina;Henderson County;Precinct FR	precinct
+North Carolina;Henderson County;TRANSFER	precinct
+North Carolina;Henderson County;Precinct HV-1	precinct
+North Carolina;Henderson County;Precinct HV-2	precinct
+North Carolina;Henderson County;Precinct CV	precinct
+North Carolina;Henderson County;Precinct CC	precinct
+North Carolina;Henderson County;Precinct SB	precinct
+North Carolina;Henderson County;Precinct GR	precinct
+North Carolina;Henderson County;Precinct EF	precinct
+North Carolina;Henderson County;Precinct PV	precinct
+North Carolina;Iredell County;Precinct BA	precinct
+North Carolina;Iredell County;Precinct CC1	precinct
+North Carolina;Iredell County;Precinct NH	precinct
+North Carolina;Iredell County;Precinct ST2	precinct
+North Carolina;Iredell County;Precinct ST5	precinct
+North Carolina;Iredell County;Precinct CH-A	precinct
+North Carolina;Iredell County;Precinct DV2-B	precinct
+North Carolina;Iredell County;Precinct TB	precinct
+North Carolina;Iredell County;Precinct CD	precinct
+North Carolina;Iredell County;Precinct FT	precinct
+North Carolina;Iredell County;Precinct CS	precinct
+North Carolina;Iredell County;Precinct ST3	precinct
+North Carolina;Iredell County;Precinct BE	precinct
+North Carolina;Iredell County;Precinct SH-B	precinct
+North Carolina;Iredell County;Precinct CH-B	precinct
+North Carolina;Iredell County;Precinct DV2-A	precinct
+North Carolina;Iredell County;Precinct CC2	precinct
+North Carolina;Iredell County;Precinct CC4	precinct
+North Carolina;Iredell County;Precinct UG	precinct
+North Carolina;Iredell County;Precinct DV1-A	precinct
+North Carolina;Iredell County;Precinct OL	precinct
+North Carolina;Iredell County;Precinct EM	precinct
+North Carolina;Iredell County;Precinct ST6	precinct
+North Carolina;Iredell County;Precinct CC3	precinct
+North Carolina;Iredell County;Precinct ST4	precinct
+North Carolina;Iredell County;Precinct ST1	precinct
+North Carolina;Iredell County;Precinct SH-A	precinct
+North Carolina;Iredell County;Precinct SB	precinct
+North Carolina;Iredell County;Precinct DV1-B	precinct
+North Carolina;Johnston County;Precinct PR14	precinct
+North Carolina;Johnston County;Precinct PR23A	precinct
+North Carolina;Johnston County;Precinct PR37	precinct
+North Carolina;Johnston County;Precinct PR36	precinct
+North Carolina;Johnston County;Precinct PR12B	precinct
+North Carolina;Johnston County;CLEVELAND	precinct
+North Carolina;Johnston County;Precinct PR21	precinct
+North Carolina;Johnston County;Precinct PR11A	precinct
+North Carolina;Johnston County;SMITHFIELD	precinct
+North Carolina;Johnston County;Precinct PR30	precinct
+North Carolina;Johnston County;Precinct PR28	precinct
+North Carolina;Johnston County;Precinct PR10A	precinct
+North Carolina;Johnston County;Precinct PR27A	precinct
+North Carolina;Johnston County;Precinct PR35	precinct
+North Carolina;Johnston County;Precinct PR31A	precinct
+North Carolina;Johnston County;Precinct PR27B	precinct
+North Carolina;Johnston County;Precinct PR04	precinct
+North Carolina;Johnston County;Precinct PR07	precinct
+North Carolina;Johnston County;Precinct PR09	precinct
+North Carolina;Johnston County;Precinct PR25	precinct
+North Carolina;Johnston County;Precinct PR22	precinct
+North Carolina;Johnston County;Precinct PR34	precinct
+North Carolina;Johnston County;PROVISIONAL	precinct
+North Carolina;Johnston County;Precinct PR23B	precinct
+North Carolina;Johnston County;Precinct PR29A	precinct
+North Carolina;Johnston County;Precinct PR10B	precinct
+North Carolina;Johnston County;Precinct PR20	precinct
+North Carolina;Johnston County;CLAYTON	precinct
+North Carolina;Johnston County;ABSENTEE	precinct
+North Carolina;Johnston County;Precinct PR08	precinct
+North Carolina;Johnston County;Precinct PR13	precinct
+North Carolina;Johnston County;TRANSFER	precinct
+North Carolina;Johnston County;Precinct PR29B	precinct
+North Carolina;Johnston County;Precinct PR11B	precinct
+North Carolina;Johnston County;Precinct PR19	precinct
+North Carolina;Johnston County;Precinct PR26	precinct
+North Carolina;Johnston County;Precinct PR32	precinct
+North Carolina;Johnston County;Precinct PR33	precinct
+North Carolina;Johnston County;Precinct PR38	precinct
+North Carolina;Johnston County;Precinct PR12A	precinct
+North Carolina;Johnston County;Precinct PR24	precinct
+North Carolina;Johnston County;Precinct PR31B	precinct
+North Carolina;Haywood County;ABSENTEE	precinct
+North Carolina;Haywood County;Precinct BE56	precinct
+North Carolina;Haywood County;Precinct CL-N	precinct
+North Carolina;Haywood County;Precinct CE	precinct
+North Carolina;Haywood County;Precinct WW	precinct
+North Carolina;Haywood County;Precinct WS-1	precinct
+North Carolina;Haywood County;Precinct WS-2	precinct
+North Carolina;Haywood County;Precinct EF	precinct
+North Carolina;Haywood County;Precinct FC-1	precinct
+North Carolina;Haywood County;Precinct BE-3	precinct
+North Carolina;Haywood County;Precinct FC-2	precinct
+North Carolina;Haywood County;Precinct WC	precinct
+North Carolina;Haywood County;Precinct LJ	precinct
+North Carolina;Haywood County;Precinct BE-2	precinct
+North Carolina;Haywood County;Precinct AC	precinct
+North Carolina;Haywood County;Precinct ID	precinct
+North Carolina;Haywood County;Precinct BE-7	precinct
+North Carolina;Haywood County;CURBSIDE	precinct
+North Carolina;Haywood County;Precinct HA	precinct
+North Carolina;Haywood County;Precinct JC	precinct
+North Carolina;Haywood County;Precinct CR	precinct
+North Carolina;Haywood County;Precinct PC	precinct
+North Carolina;Haywood County;Precinct BE-4	precinct
+North Carolina;Haywood County;Precinct BE-1	precinct
+North Carolina;Haywood County;Precinct P	precinct
+North Carolina;Haywood County;Precinct BC	precinct
+North Carolina;Haywood County;Precinct SA	precinct
+North Carolina;Haywood County;PROVISIONAL	precinct
+North Carolina;Haywood County;Precinct IH	precinct
+North Carolina;Haywood County;Precinct CL-S	precinct
+North Carolina;Haywood County;Precinct WE	precinct
+North Carolina;Haywood County;Precinct WO	precinct
+North Carolina;Hyde County;OS BOE	precinct
+North Carolina;Hyde County;ABS	precinct
+North Carolina;Hyde County;Precinct SQ	precinct
+North Carolina;Hyde County;PROV	precinct
+North Carolina;Hyde County;OS OCK	precinct
+North Carolina;Hyde County;TRANS	precinct
+North Carolina;Hyde County;Precinct OCK	precinct
+North Carolina;Hyde County;Precinct FF	precinct
+North Carolina;Hyde County;Precinct LL	precinct
+North Carolina;Hyde County;Precinct SLAD	precinct
+North Carolina;Hyde County;Precinct ENG	precinct
+North Carolina;Hyde County;Precinct BM	precinct
+North Carolina;Hoke County;Precinct 13	precinct
+North Carolina;Hoke County;Precinct 65	precinct
+North Carolina;Hoke County;Precinct 02	precinct
+North Carolina;Hoke County;Precinct 03	precinct
+North Carolina;Hoke County;Precinct 61	precinct
+North Carolina;Hoke County;Precinct 12	precinct
+North Carolina;Hoke County;Precinct 01	precinct
+North Carolina;Hoke County;Precinct 62	precinct
+North Carolina;Hoke County;Precinct 04	precinct
+North Carolina;Hoke County;Precinct 63	precinct
+North Carolina;Hoke County;Precinct 15	precinct
+North Carolina;Hoke County;Precinct 06B	precinct
+North Carolina;Hoke County;Precinct 05	precinct
+North Carolina;Hoke County;Precinct 64	precinct
+North Carolina;Hoke County;Precinct 14	precinct
+North Carolina;Greene County;Precinct MAUR	precinct
+North Carolina;Greene County;Precinct HOOK	precinct
+North Carolina;Greene County;Precinct CAST	precinct
+North Carolina;Greene County;ABSENTEE MAIL	precinct
+North Carolina;Greene County;Precinct SHIN	precinct
+North Carolina;Greene County;ONE STOP	precinct
+North Carolina;Greene County;Precinct SUGG	precinct
+North Carolina;Greene County;Precinct ARBA	precinct
+North Carolina;Greene County;Precinct SH#1	precinct
+North Carolina;Greene County;Precinct BULL	precinct
+North Carolina;Greene County;PROVISIONAL	precinct
+North Carolina;Greene County;Precinct BEAR	precinct
+North Carolina;Greene County;Precinct WALS	precinct
+North Carolina;Hertford County;Precinct M1	precinct
+North Carolina;Hertford County;Precinct A3	precinct
+North Carolina;Hertford County;Precinct UN	precinct
+North Carolina;Hertford County;Precinct SJ	precinct
+North Carolina;Hertford County;Precinct CM	precinct
+North Carolina;Hertford County;Precinct ML	precinct
+North Carolina;Hertford County;Precinct M2	precinct
+North Carolina;Hertford County;Precinct HV	precinct
+North Carolina;Hertford County;Precinct BR	precinct
+North Carolina;Hertford County;Precinct CO	precinct
+North Carolina;Hertford County;Precinct WN	precinct
+North Carolina;Hertford County;Precinct A1	precinct
+North Carolina;Hertford County;Precinct A2	precinct
+North Carolina;Granville County;Precinct CORI	precinct
+North Carolina;Granville County;Precinct WILT	precinct
+North Carolina;Granville County;Precinct CRDL	precinct
+North Carolina;Granville County;Precinct BTNR	precinct
+North Carolina;Granville County;Precinct SALM	precinct
+North Carolina;Granville County;Precinct BERE	precinct
+North Carolina;Granville County;Precinct CRDM	precinct
+North Carolina;Granville County;Precinct SOOX	precinct
+North Carolina;Granville County;Precinct WOEL	precinct
+North Carolina;Granville County;Precinct SASS	precinct
+North Carolina;Granville County;Precinct TYHO	precinct
+North Carolina;Granville County;Precinct ANTI	precinct
+North Carolina;Granville County;Precinct OKHL	precinct
+North Carolina;Granville County;Precinct MTEN	precinct
+North Carolina;Granville County;Precinct EAOX	precinct
+North Carolina;Jackson County;Precinct GCK	precinct
+North Carolina;Jackson County;Precinct SCC	precinct
+North Carolina;Jackson County;Precinct RIV	precinct
+North Carolina;Jackson County;ABSENTEE MAIL	precinct
+North Carolina;Jackson County;Precinct CAN	precinct
+North Carolina;Jackson County;Precinct SSW	precinct
+North Carolina;Jackson County;PROVISIONAL	precinct
+North Carolina;Jackson County;Precinct CAS	precinct
+North Carolina;Jackson County;Precinct WEB	precinct
+North Carolina;Jackson County;Precinct SAV	precinct
+North Carolina;Jackson County;Precinct CUL	precinct
+North Carolina;Jackson County;Precinct CFK	precinct
+North Carolina;Jackson County;Precinct BCK	precinct
+North Carolina;Jackson County;CURBSIDE	precinct
+North Carolina;Jackson County;Precinct QUA	precinct
+North Carolina;Jackson County;Precinct SND	precinct
+North Carolina;Jackson County;Precinct GLV	precinct
+North Carolina;Lee County;TRANSFER	precinct
+North Carolina;Lee County;PROVISIONAL	precinct
+North Carolina;Lee County;Precinct C1	precinct
+North Carolina;Lee County;Precinct D1	precinct
+North Carolina;Lee County;ONE STOP BOE	precinct
+North Carolina;Lee County;Precinct A1	precinct
+North Carolina;Lee County;Precinct A2	precinct
+North Carolina;Lee County;Precinct B1	precinct
+North Carolina;Lee County;Precinct C2	precinct
+North Carolina;Lee County;ONE STOP MCSWAIN	precinct
+North Carolina;Lee County;Precinct E1	precinct
+North Carolina;Lee County;ABSENTEE MAIL	precinct
+North Carolina;Lee County;Precinct E2	precinct
+North Carolina;Lee County;Precinct D2	precinct
+North Carolina;Lee County;Precinct B2	precinct
+North Carolina;Lenoir County;Precinct N	precinct
+North Carolina;Lenoir County;Precinct T1	precinct
+North Carolina;Lenoir County;Precinct PH2	precinct
+North Carolina;Lenoir County;CURBSIDE	precinct
+North Carolina;Lenoir County;Precinct T2	precinct
+North Carolina;Lenoir County;Precinct PH1	precinct
+North Carolina;Lenoir County;PROVISIONAL	precinct
+North Carolina;Lenoir County;ABSENTEE MAIL	precinct
+North Carolina;Lenoir County;Precinct MH	precinct
+North Carolina;Lenoir County;Precinct FC	precinct
+North Carolina;Lenoir County;Precinct K7	precinct
+North Carolina;Lenoir County;Precinct K5	precinct
+North Carolina;Lenoir County;Precinct K6	precinct
+North Carolina;Lenoir County;Precinct C	precinct
+North Carolina;Lenoir County;Precinct SW	precinct
+North Carolina;Lenoir County;Precinct K3	precinct
+North Carolina;Lenoir County;Precinct K8	precinct
+North Carolina;Lenoir County;Precinct K2	precinct
+North Carolina;Lenoir County;Precinct K1	precinct
+North Carolina;Lenoir County;Precinct W	precinct
+North Carolina;Lenoir County;Precinct K9	precinct
+North Carolina;Lenoir County;Precinct SH	precinct
+North Carolina;Lenoir County;Precinct V	precinct
+North Carolina;Lenoir County;Precinct K4	precinct
+North Carolina;Lenoir County;Precinct I	precinct
+North Carolina;Graham County;Precinct WEST	precinct
+North Carolina;Graham County;Precinct STEC	precinct
+North Carolina;Graham County;Precinct EAST	precinct
+North Carolina;Graham County;Precinct TAPO	precinct
+North Carolina;Harnett County;Precinct PR28	precinct
+North Carolina;Harnett County;Precinct PR07	precinct
+North Carolina;Harnett County;Precinct PR31	precinct
+North Carolina;Harnett County;Precinct PR16	precinct
+North Carolina;Harnett County;OS LOBBY	precinct
+North Carolina;Harnett County;PROVISIONAL	precinct
+North Carolina;Harnett County;Precinct PR29	precinct
+North Carolina;Harnett County;ABSENTEE	precinct
+North Carolina;Harnett County;Precinct PR32	precinct
+North Carolina;Harnett County;Precinct PR24	precinct
+North Carolina;Harnett County;Precinct PR26	precinct
+North Carolina;Harnett County;Precinct PR20	precinct
+North Carolina;Harnett County;Precinct PR25	precinct
+North Carolina;Harnett County;Precinct PR23	precinct
+North Carolina;Harnett County;Precinct PR08	precinct
+North Carolina;Harnett County;OS WESTERN	precinct
+North Carolina;Harnett County;OS ERWIN	precinct
+North Carolina;Harnett County;Precinct PR01	precinct
+North Carolina;Jones County;Precinct P03	precinct
+North Carolina;Jones County;Precinct P06	precinct
+North Carolina;Jones County;PROVISIONAL	precinct
+North Carolina;Jones County;ONE STOP	precinct
+North Carolina;Jones County;Precinct P07	precinct
+North Carolina;Jones County;Precinct P01	precinct
+North Carolina;Jones County;Precinct P04	precinct
+North Carolina;Jones County;Precinct P05	precinct
+North Carolina;Jones County;ABSENTEE MAIL	precinct
+North Carolina;Jones County;Precinct P02	precinct
+North Carolina;Gates County;Precinct 4N	precinct
+North Carolina;Gates County;Precinct 4S	precinct
+North Carolina;Gates County;Precinct 3	precinct
+North Carolina;Gates County;Precinct 2	precinct
+North Carolina;Gates County;Precinct 5	precinct
+North Carolina;Gates County;Precinct 1	precinct
+North Carolina;Lincoln County;ABSENTEE MAIL	precinct
+North Carolina;Lincoln County;Precinct LW31	precinct
+North Carolina;Lincoln County;Precinct CF19	precinct
+North Carolina;Lincoln County;Precinct DN29	precinct
+North Carolina;Lincoln County;Precinct DW28	precinct
+North Carolina;Lincoln County;Precinct LS12	precinct
+North Carolina;Lincoln County;Precinct NB35	precinct
+North Carolina;Lincoln County;Precinct BS26	precinct
+North Carolina;Lincoln County;Precinct IS23	precinct
+North Carolina;Lincoln County;OS LINCOLN	precinct
+North Carolina;Lincoln County;Precinct TA37	precinct
+North Carolina;Lincoln County;Precinct ST36	precinct
+North Carolina;Lincoln County;Precinct OB21	precinct
+North Carolina;Lincoln County;Precinct HC33	precinct
+North Carolina;Lincoln County;Precinct LW18	precinct
+North Carolina;Lincoln County;Precinct LB34	precinct
+North Carolina;Lincoln County;OS EAST	precinct
+North Carolina;Lincoln County;Precinct SL24	precinct
+North Carolina;Lincoln County;Precinct IS20	precinct
+North Carolina;Lincoln County;Precinct BC13	precinct
+North Carolina;Lincoln County;Precinct DV08	precinct
+North Carolina;Lincoln County;PROVISIONAL	precinct
+North Carolina;Lincoln County;Precinct LN11	precinct
+North Carolina;Lincoln County;Precinct WP32	precinct
+North Carolina;Lincoln County;OS WEST	precinct
+North Carolina;Lincoln County;Precinct PC22	precinct
+North Carolina;Lincoln County;Precinct AS25	precinct
+North Carolina;Lincoln County;Precinct LI14	precinct
+North Carolina;McDowell County;Precinct CCREEK	precinct
+North Carolina;McDowell County;Precinct N.COVE	precinct
+North Carolina;McDowell County;Precinct MAR 4	precinct
+North Carolina;McDowell County;Precinct HIGGIN	precinct
+North Carolina;McDowell County;Precinct DYSART	precinct
+North Carolina;McDowell County;Precinct FORT 2	precinct
+North Carolina;McDowell County;Precinct MAR 2	precinct
+North Carolina;McDowell County;Precinct MAR 3	precinct
+North Carolina;McDowell County;Precinct WEST M	precinct
+North Carolina;McDowell County;Precinct M.COVE	precinct
+North Carolina;McDowell County;Precinct MAR 5	precinct
+North Carolina;McDowell County;Precinct FORT 1	precinct
+North Carolina;McDowell County;Precinct NEBO	precinct
+North Carolina;McDowell County;Precinct T.COVE	precinct
+North Carolina;McDowell County;Precinct PLEASA	precinct
+North Carolina;McDowell County;Precinct MAR 1	precinct
+North Carolina;McDowell County;Precinct GLENWD	precinct
+North Carolina;Mecklenburg County;Precinct 050	precinct
+North Carolina;Mecklenburg County;Precinct 107.1	precinct
+North Carolina;Mecklenburg County;Precinct 208	precinct
+North Carolina;Mecklenburg County;Precinct 206	precinct
+North Carolina;Mecklenburg County;Precinct 203	precinct
+North Carolina;Mecklenburg County;Precinct 201	precinct
+North Carolina;Mecklenburg County;Precinct 220	precinct
+North Carolina;Mecklenburg County;Precinct 223.1	precinct
+North Carolina;Mecklenburg County;Precinct 031	precinct
+North Carolina;Mecklenburg County;Precinct 138	precinct
+North Carolina;Mecklenburg County;Precinct 135	precinct
+North Carolina;Mecklenburg County;Precinct 109	precinct
+North Carolina;Mecklenburg County;Precinct 097	precinct
+North Carolina;Mecklenburg County;Precinct 094	precinct
+North Carolina;Mecklenburg County;Precinct 091	precinct
+North Carolina;Mecklenburg County;Precinct 065	precinct
+North Carolina;Mecklenburg County;Precinct 068	precinct
+North Carolina;Mecklenburg County;Precinct 063	precinct
+North Carolina;Mecklenburg County;Precinct 240	precinct
+North Carolina;Mecklenburg County;CURBSIDE 71-106	precinct
+North Carolina;Mecklenburg County;CURBSIDE 36-70	precinct
+North Carolina;Mecklenburg County;PROVISIONAL 36-70	precinct
+North Carolina;Mecklenburg County;Precinct 225	precinct
+North Carolina;Mecklenburg County;Precinct 209	precinct
+North Carolina;Mecklenburg County;CURBSIDE 1-35	precinct
+North Carolina;Mecklenburg County;Precinct 078.1	precinct
+North Carolina;Mecklenburg County;Precinct 088	precinct
+North Carolina;Mecklenburg County;Precinct 089	precinct
+North Carolina;Mecklenburg County;Precinct 069	precinct
+North Carolina;Mecklenburg County;Precinct 039	precinct
+North Carolina;Mecklenburg County;Precinct 041	precinct
+North Carolina;Mecklenburg County;Precinct 020	precinct
+North Carolina;Mecklenburg County;Precinct 119	precinct
+North Carolina;Mecklenburg County;Precinct 080	precinct
+North Carolina;Mecklenburg County;Precinct 053	precinct
+North Carolina;Mecklenburg County;Precinct 058	precinct
+North Carolina;Mecklenburg County;Precinct 009	precinct
+North Carolina;Mecklenburg County;Precinct 019	precinct
+North Carolina;Mecklenburg County;Precinct 033	precinct
+North Carolina;Mecklenburg County;Precinct 034	precinct
+North Carolina;Mecklenburg County;Precinct 224	precinct
+North Carolina;Mecklenburg County;Precinct 226	precinct
+North Carolina;Mecklenburg County;Precinct 213	precinct
+North Carolina;Mecklenburg County;Precinct 202	precinct
+North Carolina;Mecklenburg County;Precinct 083	precinct
+North Carolina;Mecklenburg County;Precinct 082	precinct
+North Carolina;Mecklenburg County;Precinct 090	precinct
+North Carolina;Mecklenburg County;Precinct 067	precinct
+North Carolina;Mecklenburg County;Precinct 062	precinct
+North Carolina;Mecklenburg County;Precinct 011	precinct
+North Carolina;Mecklenburg County;Precinct 014	precinct
+North Carolina;Mecklenburg County;Precinct 006	precinct
+North Carolina;Mecklenburg County;Precinct 001	precinct
+North Carolina;Mecklenburg County;PROVISIONAL 1-35	precinct
+North Carolina;Mecklenburg County;Precinct 132	precinct
+North Carolina;Mecklenburg County;Precinct 204.1	precinct
+North Carolina;Mecklenburg County;Precinct 231	precinct
+North Carolina;Mecklenburg County;Precinct 218	precinct
+North Carolina;Mecklenburg County;Precinct 219	precinct
+North Carolina;Mecklenburg County;Precinct 049	precinct
+North Carolina;Mecklenburg County;Precinct 042	precinct
+North Carolina;Mecklenburg County;Precinct 025	precinct
+North Carolina;Mecklenburg County;Precinct 022	precinct
+North Carolina;Mecklenburg County;Precinct 028	precinct
+North Carolina;Mecklenburg County;Precinct 008	precinct
+North Carolina;Mecklenburg County;Precinct 010	precinct
+North Carolina;Mecklenburg County;Precinct 002	precinct
+North Carolina;Mecklenburg County;Precinct 003	precinct
+North Carolina;Mecklenburg County;Precinct 087	precinct
+North Carolina;Mecklenburg County;Precinct 086	precinct
+North Carolina;Mecklenburg County;Precinct 102	precinct
+North Carolina;Mecklenburg County;Precinct 104	precinct
+North Carolina;Mecklenburg County;Precinct 105	precinct
+North Carolina;Mecklenburg County;Precinct 040	precinct
+North Carolina;Mecklenburg County;Precinct 081	precinct
+North Carolina;Mecklenburg County;Precinct 066	precinct
+North Carolina;Mecklenburg County;Precinct 061	precinct
+North Carolina;Mecklenburg County;Precinct 064	precinct
+North Carolina;Mecklenburg County;Precinct 216	precinct
+North Carolina;Mecklenburg County;Precinct 233	precinct
+North Carolina;Mecklenburg County;Precinct 142	precinct
+North Carolina;Mecklenburg County;Precinct 128	precinct
+North Carolina;Mecklenburg County;Precinct 123	precinct
+North Carolina;Mecklenburg County;Precinct 147	precinct
+North Carolina;Mecklenburg County;Precinct 148	precinct
+North Carolina;Mecklenburg County;Precinct 230	precinct
+North Carolina;Mecklenburg County;Precinct 242	precinct
+North Carolina;Mecklenburg County;Precinct 056	precinct
+North Carolina;Mecklenburg County;Precinct 059	precinct
+North Carolina;Mecklenburg County;Precinct 036	precinct
+North Carolina;Mecklenburg County;Precinct 108	precinct
+North Carolina;Mecklenburg County;Precinct 217	precinct
+North Carolina;Mecklenburg County;Precinct 098	precinct
+North Carolina;Mecklenburg County;Precinct 095	precinct
+North Carolina;Mecklenburg County;Precinct 112	precinct
+North Carolina;Mecklenburg County;Precinct 114	precinct
+North Carolina;Mecklenburg County;Precinct 013	precinct
+North Carolina;Mecklenburg County;Precinct 016	precinct
+North Carolina;Mecklenburg County;Precinct 072	precinct
+North Carolina;Mecklenburg County;Precinct 075	precinct
+North Carolina;Mecklenburg County;Precinct 051	precinct
+North Carolina;Mecklenburg County;Precinct 227	precinct
+North Carolina;Mecklenburg County;Precinct 228	precinct
+North Carolina;Mecklenburg County;Precinct 018	precinct
+North Carolina;Mecklenburg County;Precinct 035	precinct
+North Carolina;Mecklenburg County;Precinct 054	precinct
+North Carolina;Mecklenburg County;Precinct 073	precinct
+North Carolina;Mecklenburg County;Precinct 092	precinct
+North Carolina;Mecklenburg County;Precinct 137	precinct
+North Carolina;Mecklenburg County;Precinct 118	precinct
+North Carolina;Mecklenburg County;Precinct 131	precinct
+North Carolina;Mecklenburg County;Precinct 149	precinct
+North Carolina;Mecklenburg County;Precinct 151	precinct
+North Carolina;Mecklenburg County;Precinct 143	precinct
+North Carolina;Mecklenburg County;Precinct 144	precinct
+North Carolina;Mecklenburg County;Precinct 124	precinct
+North Carolina;Mecklenburg County;Precinct 126	precinct
+North Carolina;Mecklenburg County;Precinct 129	precinct
+North Carolina;Mecklenburg County;Precinct 060	precinct
+North Carolina;Mecklenburg County;Precinct 057	precinct
+North Carolina;Mecklenburg County;Precinct 032	precinct
+North Carolina;Mecklenburg County;Precinct 038	precinct
+North Carolina;Mecklenburg County;Precinct 037	precinct
+North Carolina;Mecklenburg County;Precinct 055	precinct
+North Carolina;Mecklenburg County;Precinct 052	precinct
+North Carolina;Mecklenburg County;PROVISIONAL 71-106	precinct
+North Carolina;Mecklenburg County;Precinct 237	precinct
+North Carolina;Mecklenburg County;Precinct 235	precinct
+North Carolina;Mecklenburg County;Precinct 238.1	precinct
+North Carolina;Mecklenburg County;ABSENTEE BY MAIL 36-70	precinct
+North Carolina;Mecklenburg County;Precinct 117	precinct
+North Carolina;Mecklenburg County;Precinct 096	precinct
+North Carolina;Mecklenburg County;Precinct 106	precinct
+North Carolina;Mecklenburg County;Precinct 232	precinct
+North Carolina;Mecklenburg County;Precinct 077	precinct
+North Carolina;Mecklenburg County;Precinct 093	precinct
+North Carolina;Mecklenburg County;Precinct 074	precinct
+North Carolina;Mecklenburg County;ABSENTEE BY MAIL 71-106	precinct
+North Carolina;Mecklenburg County;Precinct 243	precinct
+North Carolina;Mecklenburg County;Precinct 099	precinct
+North Carolina;Mecklenburg County;Precinct 116	precinct
+North Carolina;Mecklenburg County;Precinct 111	precinct
+North Carolina;Mecklenburg County;Precinct 113	precinct
+North Carolina;Mecklenburg County;Precinct 076	precinct
+North Carolina;Mecklenburg County;Precinct 079	precinct
+North Carolina;Mecklenburg County;Precinct 047	precinct
+North Carolina;Mecklenburg County;Precinct 012	precinct
+North Carolina;Mecklenburg County;Precinct 015	precinct
+North Carolina;Mecklenburg County;Precinct 005	precinct
+North Carolina;Mecklenburg County;Precinct 030	precinct
+North Carolina;Mecklenburg County;Precinct 229	precinct
+North Carolina;Mecklenburg County;Precinct 214	precinct
+North Carolina;Mecklenburg County;Precinct 212	precinct
+North Carolina;Mecklenburg County;Precinct 215	precinct
+North Carolina;Mecklenburg County;Precinct 120	precinct
+North Carolina;Mecklenburg County;Precinct 140	precinct
+North Carolina;Mecklenburg County;Precinct 200	precinct
+North Carolina;Mecklenburg County;Precinct 205	precinct
+North Carolina;Mecklenburg County;Precinct 045	precinct
+North Carolina;Mecklenburg County;Precinct 048	precinct
+North Carolina;Mecklenburg County;ABSENTEE BY MAIL 1-35	precinct
+North Carolina;Mecklenburg County;Precinct 027	precinct
+North Carolina;Mecklenburg County;Precinct 024	precinct
+North Carolina;Mecklenburg County;Precinct 004	precinct
+North Carolina;Mecklenburg County;Precinct 241	precinct
+North Carolina;Mecklenburg County;Precinct 222	precinct
+North Carolina;Mecklenburg County;Precinct 207	precinct
+North Carolina;Mecklenburg County;Precinct 071	precinct
+North Carolina;Mecklenburg County;Precinct 130	precinct
+North Carolina;Mecklenburg County;Precinct 110	precinct
+North Carolina;Mecklenburg County;Precinct 017	precinct
+North Carolina;Mecklenburg County;Precinct 029	precinct
+North Carolina;Mecklenburg County;Precinct 026	precinct
+North Carolina;Mecklenburg County;Precinct 046	precinct
+North Carolina;Mecklenburg County;Precinct 043	precinct
+North Carolina;Mecklenburg County;Precinct 007	precinct
+North Carolina;Mecklenburg County;Precinct 134	precinct
+North Carolina;Mecklenburg County;Precinct 136	precinct
+North Carolina;Mecklenburg County;Precinct 133	precinct
+North Carolina;Mecklenburg County;Precinct 221	precinct
+North Carolina;Mecklenburg County;Precinct 115	precinct
+North Carolina;Mecklenburg County;Precinct 150	precinct
+North Carolina;Mecklenburg County;Precinct 145	precinct
+North Carolina;Mecklenburg County;Precinct 125	precinct
+North Carolina;Mecklenburg County;Precinct 122	precinct
+North Carolina;Mecklenburg County;Precinct 021	precinct
+North Carolina;Mecklenburg County;Precinct 084	precinct
+North Carolina;Mecklenburg County;Precinct 085	precinct
+North Carolina;Mecklenburg County;Precinct 101	precinct
+North Carolina;Mecklenburg County;Precinct 100	precinct
+North Carolina;Mecklenburg County;Precinct 139.1	precinct
+North Carolina;Mecklenburg County;Precinct 141	precinct
+North Carolina;Mecklenburg County;Precinct 146	precinct
+North Carolina;Mecklenburg County;Precinct 211	precinct
+North Carolina;Mecklenburg County;Precinct 210	precinct
+North Carolina;Mecklenburg County;Precinct 234	precinct
+North Carolina;Mecklenburg County;Precinct 236	precinct
+North Carolina;Mecklenburg County;Precinct 239	precinct
+North Carolina;Mecklenburg County;Precinct 121	precinct
+North Carolina;Mecklenburg County;Precinct 127	precinct
+North Carolina;Mecklenburg County;Precinct 103	precinct
+North Carolina;Mecklenburg County;Precinct 070	precinct
+North Carolina;Mecklenburg County;Precinct 044	precinct
+North Carolina;Mecklenburg County;Precinct 023	precinct
+North Carolina;Montgomery County;Precinct OPH	precinct
+North Carolina;Montgomery County;Precinct MTG	precinct
+North Carolina;Montgomery County;Precinct CHE	precinct
+North Carolina;Montgomery County;Precinct LIT	precinct
+North Carolina;Montgomery County;Precinct ELD	precinct
+North Carolina;Montgomery County;Precinct UWH	precinct
+North Carolina;Montgomery County;Precinct WAD	precinct
+North Carolina;Montgomery County;Precinct T2	precinct
+North Carolina;Montgomery County;Precinct PEE	precinct
+North Carolina;Montgomery County;Precinct T1	precinct
+North Carolina;Montgomery County;Precinct ROC	precinct
+North Carolina;Montgomery County;Precinct CAN	precinct
+North Carolina;Montgomery County;Precinct BIS	precinct
+North Carolina;Montgomery County;Precinct STA	precinct
+North Carolina;New Hanover County;Precinct W27	precinct
+North Carolina;New Hanover County;Precinct CF06	precinct
+North Carolina;New Hanover County;Precinct CF05	precinct
+North Carolina;New Hanover County;Precinct FP08	precinct
+North Carolina;New Hanover County;Precinct W17	precinct
+North Carolina;New Hanover County;Precinct FP04	precinct
+North Carolina;New Hanover County;Precinct W29	precinct
+North Carolina;New Hanover County;Precinct W26	precinct
+North Carolina;New Hanover County;OS GVT PAPER	precinct
+North Carolina;New Hanover County;Precinct H05	precinct
+North Carolina;New Hanover County;Precinct W31	precinct
+North Carolina;New Hanover County;PROVISIONAL	precinct
+North Carolina;New Hanover County;Precinct H11	precinct
+North Carolina;New Hanover County;Precinct FP07	precinct
+North Carolina;New Hanover County;Precinct W13	precinct
+North Carolina;New Hanover County;Precinct W16	precinct
+North Carolina;New Hanover County;Precinct W12	precinct
+North Carolina;New Hanover County;OS CFCC PAPER	precinct
+North Carolina;New Hanover County;Precinct CF01	precinct
+North Carolina;New Hanover County;Precinct CF02	precinct
+North Carolina;New Hanover County;Precinct FP06	precinct
+North Carolina;New Hanover County;Precinct H03	precinct
+North Carolina;New Hanover County;Precinct H04	precinct
+North Carolina;New Hanover County;OS CAB PAPER	precinct
+North Carolina;New Hanover County;Precinct WB	precinct
+North Carolina;New Hanover County;Precinct M03	precinct
+North Carolina;New Hanover County;Precinct W18	precinct
+North Carolina;New Hanover County;Precinct W15	precinct
+North Carolina;New Hanover County;Precinct W30	precinct
+North Carolina;New Hanover County;ABSENTEE MAIL	precinct
+North Carolina;New Hanover County;Precinct M06	precinct
+North Carolina;New Hanover County;Precinct H02	precinct
+North Carolina;New Hanover County;Precinct H01	precinct
+North Carolina;New Hanover County;Precinct W28	precinct
+North Carolina;New Hanover County;Precinct W25	precinct
+North Carolina;New Hanover County;Precinct H10	precinct
+North Carolina;New Hanover County;Precinct H13	precinct
+North Carolina;New Hanover County;Precinct H06	precinct
+North Carolina;New Hanover County;OS NLB PAPER	precinct
+North Carolina;New Hanover County;Precinct W03	precinct
+North Carolina;New Hanover County;OS SRC PAPER	precinct
+North Carolina;New Hanover County;Precinct W08	precinct
+North Carolina;New Hanover County;Precinct W21	precinct
+North Carolina;New Hanover County;Precinct W24	precinct
+North Carolina;New Hanover County;Precinct M02	precinct
+North Carolina;New Hanover County;Precinct M07	precinct
+North Carolina;New Hanover County;Precinct M04	precinct
+North Carolina;New Hanover County;Precinct H12	precinct
+North Carolina;New Hanover County;Precinct H08	precinct
+North Carolina;New Hanover County;Precinct FP03	precinct
+North Carolina;Northampton County;Precinct CONWAY	precinct
+North Carolina;Northampton County;Precinct JACKSO	precinct
+North Carolina;Northampton County;OFFICE ONE STOP	precinct
+North Carolina;Northampton County;Precinct PLEASA	precinct
+North Carolina;Northampton County;Precinct POTECA	precinct
+North Carolina;Northampton County;Precinct SEVERN	precinct
+North Carolina;Northampton County;Precinct GARYSB	precinct
+North Carolina;Northampton County;Precinct GASTON	precinct
+North Carolina;Northampton County;Precinct MILWAU	precinct
+North Carolina;Northampton County;Precinct CREEKS	precinct
+North Carolina;Northampton County;Precinct PENDLE	precinct
+North Carolina;Northampton County;PROVISIONAL	precinct
+North Carolina;Northampton County;Precinct LASKER	precinct
+North Carolina;Northampton County;Precinct SEABOA	precinct
+North Carolina;Northampton County;Precinct GALATI	precinct
+North Carolina;Northampton County;Precinct REHOBE	precinct
+North Carolina;Northampton County;Precinct RICH S	precinct
+North Carolina;Northampton County;GASTON ONE STOP	precinct
+North Carolina;Northampton County;Precinct WOODLA	precinct
+North Carolina;Northampton County;Precinct NEWTOW	precinct
+North Carolina;Northampton County;TRANSFER	precinct
+North Carolina;Northampton County;Precinct LAKE G	precinct
+North Carolina;Northampton County;ABSENTEE BY MAIL	precinct
+North Carolina;Martin County;Precinct W	precinct
+North Carolina;Martin County;ONE STOP	precinct
+North Carolina;Martin County;Precinct R1	precinct
+North Carolina;Martin County;Precinct GR	precinct
+North Carolina;Martin County;Precinct W2	precinct
+North Carolina;Martin County;Precinct HM	precinct
+North Carolina;Martin County;Precinct W1	precinct
+North Carolina;Martin County;Precinct GN	precinct
+North Carolina;Martin County;Precinct R2	precinct
+North Carolina;Martin County;Precinct J	precinct
+North Carolina;Martin County;Precinct CR	precinct
+North Carolina;Martin County;Precinct HS	precinct
+North Carolina;Martin County;PROVISIONAL	precinct
+North Carolina;Martin County;Precinct BG	precinct
+North Carolina;Martin County;Precinct PP	precinct
+North Carolina;Martin County;ABSENTEE	precinct
+North Carolina;Mitchell County;Precinct 02	precinct
+North Carolina;Mitchell County;Precinct 04	precinct
+North Carolina;Mitchell County;Precinct 07	precinct
+North Carolina;Mitchell County;Precinct 09	precinct
+North Carolina;Mitchell County;Precinct 06	precinct
+North Carolina;Mitchell County;Precinct 03	precinct
+North Carolina;Mitchell County;Precinct 01	precinct
+North Carolina;Mitchell County;Precinct 05	precinct
+North Carolina;Mitchell County;Precinct 08	precinct
+North Carolina;Nash County;PROVISIONAL	precinct
+North Carolina;Nash County;Precinct P08A	precinct
+North Carolina;Nash County;Precinct P12A	precinct
+North Carolina;Nash County;Precinct P13A	precinct
+North Carolina;Nash County;Precinct P04A	precinct
+North Carolina;Nash County;NASHVILLE OS	precinct
+North Carolina;Nash County;Precinct P22A	precinct
+North Carolina;Nash County;Precinct P23A	precinct
+North Carolina;Nash County;ROCKY MOUNT OS	precinct
+North Carolina;Nash County;Precinct P10A	precinct
+North Carolina;Nash County;Precinct P07A	precinct
+North Carolina;Nash County;Precinct P19A	precinct
+North Carolina;Nash County;Precinct P20A	precinct
+North Carolina;Nash County;Precinct P16A	precinct
+North Carolina;Nash County;Precinct P05A	precinct
+North Carolina;Nash County;Precinct P06A	precinct
+North Carolina;Nash County;Precinct P03A	precinct
+North Carolina;Nash County;Precinct P11A	precinct
+North Carolina;Nash County;Precinct P17A	precinct
+North Carolina;Nash County;Precinct P15A	precinct
+North Carolina;Nash County;Precinct P24A	precinct
+North Carolina;Nash County;TRANSFER	precinct
+North Carolina;Nash County;Precinct P09A	precinct
+North Carolina;Nash County;ABSENTEE	precinct
+North Carolina;Nash County;Precinct P21A	precinct
+North Carolina;Nash County;Precinct P14A	precinct
+North Carolina;Nash County;Precinct P18A	precinct
+North Carolina;Nash County;Precinct P02A	precinct
+North Carolina;Nash County;Precinct P01A	precinct
+North Carolina;Madison County;Precinct NORTH	precinct
+North Carolina;Madison County;Precinct SANDY	precinct
+North Carolina;Madison County;Precinct GRAPEV	precinct
+North Carolina;Madison County;Precinct HOT SP	precinct
+North Carolina;Madison County;Precinct SOUTH	precinct
+North Carolina;Madison County;Precinct SPRING	precinct
+North Carolina;Madison County;Precinct REVERE	precinct
+North Carolina;Madison County;Precinct BEECH	precinct
+North Carolina;Madison County;Precinct LAUREL	precinct
+North Carolina;Madison County;Precinct EBBS C	precinct
+North Carolina;Madison County;Precinct WALNUT	precinct
+North Carolina;Madison County;Precinct MARS H	precinct
+North Carolina;Macon County;Precinct 02	precinct
+North Carolina;Macon County;TRANSFER	precinct
+North Carolina;Macon County;Precinct 13	precinct
+North Carolina;Macon County;CURBSIDE	precinct
+North Carolina;Macon County;Precinct 05	precinct
+North Carolina;Macon County;Precinct 11	precinct
+North Carolina;Macon County;Precinct 08	precinct
+North Carolina;Macon County;Precinct 14	precinct
+North Carolina;Macon County;ABSENTEE	precinct
+North Carolina;Macon County;Precinct 01	precinct
+North Carolina;Macon County;Precinct 04	precinct
+North Carolina;Macon County;Precinct 07	precinct
+North Carolina;Macon County;Precinct 15	precinct
+North Carolina;Macon County;Precinct 12	precinct
+North Carolina;Macon County;PROVISIONAL	precinct
+North Carolina;Macon County;Precinct 10	precinct
+North Carolina;Macon County;Precinct 06	precinct
+North Carolina;Macon County;Precinct 09	precinct
+North Carolina;Macon County;Precinct 03	precinct
+North Carolina;Macon County;OS HOS	precinct
+North Carolina;Macon County;OS BOE	precinct
+North Carolina;Moore County;Precinct EUR-WP	precinct
+North Carolina;Moore County;Precinct EAB	precinct
+North Carolina;Moore County;Precinct PBF	precinct
+North Carolina;Moore County;ABSENTEE	precinct
+North Carolina;Moore County;Precinct VSS	precinct
+North Carolina;Moore County;Precinct WND	precinct
+North Carolina;Moore County;Precinct RBN	precinct
+North Carolina;Moore County;Precinct DHR	precinct
+North Carolina;Moore County;Precinct BEN	precinct
+North Carolina;Moore County;Precinct EWD	precinct
+North Carolina;Moore County;Precinct PHB2	precinct
+North Carolina;Moore County;PROVISIONAL	precinct
+North Carolina;Moore County;OS LOB	precinct
+North Carolina;Moore County;Precinct WEM	precinct
+North Carolina;Moore County;Precinct PDN	precinct
+North Carolina;Moore County;Precinct PHB1	precinct
+North Carolina;Moore County;Precinct PHA2	precinct
+North Carolina;Moore County;Precinct PHA1	precinct
+North Carolina;Moore County;Precinct EKWD	precinct
+North Carolina;Moore County;Precinct PHC	precinct
+North Carolina;Moore County;Precinct SSP	precinct
+North Carolina;Moore County;Precinct WAB	precinct
+North Carolina;Moore County;Precinct WKWD	precinct
+North Carolina;Moore County;Precinct SLS	precinct
+North Carolina;Moore County;OS DCC	precinct
+North Carolina;Moore County;Precinct CAM	precinct
+North Carolina;Moore County;Precinct TLT	precinct
+North Carolina;Moore County;Precinct CAR	precinct
+North Carolina;Moore County;Precinct LTR	precinct
+North Carolina;Moore County;Precinct NSP	precinct
+North Carolina;Onslow County;Precinct CL10	precinct
+North Carolina;Onslow County;Precinct SF18	precinct
+North Carolina;Onslow County;Precinct TL06	precinct
+North Carolina;Onslow County;Precinct HM05	precinct
+North Carolina;Onslow County;Precinct CR07	precinct
+North Carolina;Onslow County;Precinct SW19	precinct
+North Carolina;Onslow County;Precinct NR02	precinct
+North Carolina;Onslow County;Precinct NM13	precinct
+North Carolina;Onslow County;Precinct EN03	precinct
+North Carolina;Onslow County;Precinct GB12	precinct
+North Carolina;Onslow County;Precinct HR17	precinct
+North Carolina;Onslow County;Precinct HU20	precinct
+North Carolina;Onslow County;Precinct NE22A	precinct
+North Carolina;Onslow County;Precinct JA01	precinct
+North Carolina;Onslow County;Precinct BC21	precinct
+North Carolina;Onslow County;Precinct BM08	precinct
+North Carolina;Onslow County;Precinct WN04	precinct
+North Carolina;Onslow County;Precinct VR15	precinct
+North Carolina;Onslow County;Precinct ML23	precinct
+North Carolina;Onslow County;Precinct HN14	precinct
+North Carolina;Onslow County;Precinct MT24	precinct
+North Carolina;Onslow County;Precinct FS16	precinct
+North Carolina;Onslow County;Precinct NE22B	precinct
+North Carolina;Onslow County;Precinct RL09	precinct
+North Carolina;Orange County;BOE	precinct
+North Carolina;Orange County;CHAPEL OF THE CROSS	precinct
+North Carolina;Orange County;Precinct CP	precinct
+North Carolina;Orange County;Precinct NC	precinct
+North Carolina;Orange County;Precinct PA	precinct
+North Carolina;Orange County;Precinct WD	precinct
+North Carolina;Orange County;Precinct CB	precinct
+North Carolina;Orange County;Precinct CG	precinct
+North Carolina;Orange County;Precinct MF	precinct
+North Carolina;Orange County;Precinct CA	precinct
+North Carolina;Orange County;Precinct EA	precinct
+North Carolina;Orange County;Precinct WC	precinct
+North Carolina;Orange County;Precinct CF	precinct
+North Carolina;Orange County;Precinct CH	precinct
+North Carolina;Orange County;Precinct EH	precinct
+North Carolina;Orange County;Precinct KM	precinct
+North Carolina;Orange County;Precinct OG	precinct
+North Carolina;Orange County;Precinct TH	precinct
+North Carolina;Orange County;Precinct ES	precinct
+North Carolina;Orange County;Precinct CW	precinct
+North Carolina;Orange County;Precinct SJ	precinct
+North Carolina;Orange County;Precinct NS	precinct
+North Carolina;Orange County;ABSENTEE	precinct
+North Carolina;Orange County;EFLAND	precinct
+North Carolina;Orange County;PROVISIONAL	precinct
+North Carolina;Orange County;SEYMOUR SENIOR CENTER	precinct
+North Carolina;Orange County;Precinct BC	precinct
+North Carolina;Orange County;Precinct SM	precinct
+North Carolina;Orange County;Precinct TO	precinct
+North Carolina;Orange County;Precinct WH	precinct
+North Carolina;Orange County;Precinct CC	precinct
+North Carolina;Orange County;Precinct GR	precinct
+North Carolina;Orange County;Precinct WW	precinct
+North Carolina;Orange County;Precinct CX	precinct
+North Carolina;Orange County;Precinct ENO	precinct
+North Carolina;Orange County;Precinct H	precinct
+North Carolina;Orange County;Precinct LC	precinct
+North Carolina;Orange County;Precinct HF	precinct
+North Carolina;Orange County;Precinct WDS	precinct
+North Carolina;Orange County;Precinct OW	precinct
+North Carolina;Orange County;Precinct CO	precinct
+North Carolina;Orange County;Precinct CS1	precinct
+North Carolina;Orange County;Precinct EF	precinct
+North Carolina;Orange County;Precinct DA	precinct
+North Carolina;Orange County;Precinct LI	precinct
+North Carolina;Orange County;Precinct RF	precinct
+North Carolina;Orange County;Precinct BP	precinct
+North Carolina;Orange County;CARRBORO TOWN HALL	precinct
+North Carolina;Orange County;Precinct DM	precinct
+North Carolina;Orange County;Precinct GB	precinct
+North Carolina;Orange County;Precinct GL	precinct
+North Carolina;Person County;Precinct SWST	precinct
+North Carolina;Person County;Precinct HLWY	precinct
+North Carolina;Person County;Precinct MTTZ	precinct
+North Carolina;Person County;Precinct ALVI	precinct
+North Carolina;Person County;Precinct OLHI	precinct
+North Carolina;Person County;Precinct ROX4	precinct
+North Carolina;Person County;Precinct CUCL	precinct
+North Carolina;Person County;Precinct WDSD	precinct
+North Carolina;Person County;Precinct RCTL	precinct
+North Carolina;Person County;Precinct PNTH	precinct
+North Carolina;Person County;Precinct FLRI	precinct
+North Carolina;Pitt County;Precinct 0501	precinct
+North Carolina;Pitt County;Precinct 1102B	precinct
+North Carolina;Pitt County;Precinct 1507B	precinct
+North Carolina;Pitt County;Precinct 1510A	precinct
+North Carolina;Pitt County;Precinct 1513A	precinct
+North Carolina;Pitt County;Precinct 1513B	precinct
+North Carolina;Pitt County;OS WILLIS BUILDING	precinct
+North Carolina;Pitt County;Precinct 1403A2	precinct
+North Carolina;Pitt County;Precinct 1505B	precinct
+North Carolina;Pitt County;Precinct 1511B	precinct
+North Carolina;Pitt County;Precinct 0200A	precinct
+North Carolina;Pitt County;Precinct 0401	precinct
+North Carolina;Pitt County;Precinct 1501	precinct
+North Carolina;Pitt County;Precinct 1506	precinct
+North Carolina;Pitt County;OS COMMUNITY SCHOOLS	precinct
+North Carolina;Pitt County;Precinct 1507	precinct
+North Carolina;Pitt County;Precinct 1508A	precinct
+North Carolina;Pitt County;Precinct 0301	precinct
+North Carolina;Pitt County;Precinct 1001	precinct
+North Carolina;Pitt County;Precinct 1511A	precinct
+North Carolina;Pitt County;TRANSFER	precinct
+North Carolina;Pitt County;Precinct 0200B	precinct
+North Carolina;Pitt County;Precinct 0800B	precinct
+North Carolina;Pitt County;Precinct 1101	precinct
+North Carolina;Pitt County;OS WINTERVILLE	precinct
+North Carolina;Pitt County;Precinct 0701	precinct
+North Carolina;Pitt County;Precinct 1201	precinct
+North Carolina;Pitt County;PROVISIONAL	precinct
+North Carolina;Pitt County;Precinct 0601	precinct
+North Carolina;Pitt County;Precinct 1503	precinct
+North Carolina;Pitt County;Precinct 1508B	precinct
+North Carolina;Pitt County;Precinct 1509	precinct
+North Carolina;Pitt County;OS AG CENTER	precinct
+North Carolina;Pitt County;Precinct 1512A	precinct
+North Carolina;Pitt County;Precinct 1512B	precinct
+North Carolina;Pitt County;Precinct 1403A1	precinct
+North Carolina;Pitt County;Precinct 1510B	precinct
+North Carolina;Pitt County;Precinct 0101	precinct
+North Carolina;Pitt County;Precinct 1102A	precinct
+North Carolina;Pitt County;Precinct 1301	precinct
+North Carolina;Pitt County;Precinct 0800A	precinct
+North Carolina;Pitt County;Precinct 1505A	precinct
+North Carolina;Pitt County;Precinct 1504A	precinct
+North Carolina;Pitt County;Precinct 1504B	precinct
+North Carolina;Pitt County;Precinct 0901	precinct
+North Carolina;Pitt County;ABSENTEE MAIL	precinct
+North Carolina;Pitt County;Precinct 1403B	precinct
+North Carolina;Pitt County;OS COUNTY OFFICE	precinct
+North Carolina;Randolph County;Precinct PR	precinct
+North Carolina;Randolph County;Precinct SO	precinct
+North Carolina;Randolph County;Precinct SE	precinct
+North Carolina;Randolph County;Precinct TR	precinct
+North Carolina;Randolph County;Precinct NM	precinct
+North Carolina;Randolph County;Precinct AS	precinct
+North Carolina;Randolph County;Precinct AN	precinct
+North Carolina;Randolph County;Precinct SW	precinct
+North Carolina;Randolph County;Precinct ST	precinct
+North Carolina;Randolph County;Precinct LC	precinct
+North Carolina;Randolph County;Precinct AR	precinct
+North Carolina;Randolph County;Precinct TB	precinct
+North Carolina;Randolph County;Precinct LB	precinct
+North Carolina;Randolph County;Precinct AE	precinct
+North Carolina;Randolph County;Precinct BC	precinct
+North Carolina;Randolph County;Precinct UG	precinct
+North Carolina;Randolph County;Precinct GR	precinct
+North Carolina;Randolph County;Precinct TT	precinct
+North Carolina;Randolph County;Precinct AW	precinct
+North Carolina;Randolph County;Precinct DR	precinct
+North Carolina;Randolph County;Precinct RM	precinct
+North Carolina;Randolph County;Precinct RN	precinct
+North Carolina;Rockingham County;Precinct ED-1	precinct
+North Carolina;Rockingham County;Precinct NB	precinct
+North Carolina;Rockingham County;Precinct HO	precinct
+North Carolina;Rockingham County;Precinct HU	precinct
+North Carolina;Rockingham County;Precinct SE	precinct
+North Carolina;Rockingham County;Precinct WS	precinct
+North Carolina;Rockingham County;Precinct MC	precinct
+North Carolina;Rockingham County;Precinct RC	precinct
+North Carolina;Rockingham County;Precinct LK-2	precinct
+North Carolina;Rockingham County;Precinct IR	precinct
+North Carolina;Rockingham County;Precinct LI	precinct
+North Carolina;Rockingham County;Precinct EC	precinct
+North Carolina;Rockingham County;Precinct MA	precinct
+North Carolina;Rockingham County;Precinct MS	precinct
+North Carolina;Rockingham County;Precinct DR	precinct
+North Carolina;Rowan County;Precinct 05A	precinct
+North Carolina;Rowan County;Precinct 15	precinct
+North Carolina;Rowan County;Precinct 12	precinct
+North Carolina;Rowan County;Precinct 17	precinct
+North Carolina;Rowan County;Precinct 03	precinct
+North Carolina;Rowan County;Precinct 23	precinct
+North Carolina;Rowan County;Precinct 24	precinct
+North Carolina;Rowan County;Precinct 30	precinct
+North Carolina;Rowan County;Precinct 31	precinct
+North Carolina;Rowan County;Precinct 33	precinct
+North Carolina;Rowan County;Precinct 40	precinct
+North Carolina;Rowan County;Precinct 45	precinct
+North Carolina;Rowan County;Precinct 14A	precinct
+North Carolina;Rowan County;Precinct 19A	precinct
+North Carolina;Rowan County;Precinct 07	precinct
+North Carolina;Rowan County;Precinct 04	precinct
+North Carolina;Rowan County;Precinct 25	precinct
+North Carolina;Rowan County;Precinct 27	precinct
+North Carolina;Rowan County;Precinct 28	precinct
+North Carolina;Rowan County;Precinct 36	precinct
+North Carolina;Rowan County;Precinct 41	precinct
+North Carolina;Rowan County;Precinct 01	precinct
+North Carolina;Rowan County;Precinct 16	precinct
+North Carolina;Rowan County;Precinct 21	precinct
+North Carolina;Rowan County;Precinct 13	precinct
+North Carolina;Rowan County;Precinct 18	precinct
+North Carolina;Rowan County;Precinct 09	precinct
+North Carolina;Rowan County;Precinct 10	precinct
+North Carolina;Rowan County;Precinct 26	precinct
+North Carolina;Rowan County;Precinct 11	precinct
+North Carolina;Rowan County;Precinct 02	precinct
+North Carolina;Rowan County;Precinct 35	precinct
+North Carolina;Rowan County;Precinct 34	precinct
+North Carolina;Rowan County;Precinct 44	precinct
+North Carolina;Rowan County;Precinct 08	precinct
+North Carolina;Rowan County;Precinct 22	precinct
+North Carolina;Rowan County;Precinct 29	precinct
+North Carolina;Rowan County;Precinct 32	precinct
+North Carolina;Rowan County;Precinct 38	precinct
+North Carolina;Rowan County;Precinct 39	precinct
+North Carolina;Rowan County;Precinct 42	precinct
+North Carolina;Sampson County;ABSENTEE MAIL	precinct
+North Carolina;Sampson County;ONE STOP BOE	precinct
+North Carolina;Sampson County;ONE STOP NGRV	precinct
+North Carolina;Sampson County;Precinct KEEN	precinct
+North Carolina;Sampson County;ONE STOP GARL	precinct
+North Carolina;Sampson County;Precinct WBRK	precinct
+North Carolina;Sampson County;Precinct NGRV	precinct
+North Carolina;Sampson County;Precinct CLEA	precinct
+North Carolina;Sampson County;Precinct GIDD	precinct
+North Carolina;Sampson County;TRANSFER	precinct
+North Carolina;Sampson County;Precinct KFRK	precinct
+North Carolina;Sampson County;PROVISIONAL	precinct
+North Carolina;Sampson County;Precinct LAKE	precinct
+North Carolina;Sampson County;Precinct CLWE	precinct
+North Carolina;Sampson County;Precinct INGO	precinct
+North Carolina;Sampson County;Precinct ROSE	precinct
+North Carolina;Sampson County;Precinct TURK	precinct
+North Carolina;Sampson County;Precinct CLSW	precinct
+North Carolina;Sampson County;Precinct AUTR	precinct
+North Carolina;Sampson County;Precinct MING	precinct
+North Carolina;Sampson County;Precinct PLVW	precinct
+North Carolina;Sampson County;Precinct CLEM	precinct
+North Carolina;Sampson County;Precinct CLNE	precinct
+North Carolina;Sampson County;Precinct HERR	precinct
+North Carolina;Sampson County;Precinct CLCE	precinct
+North Carolina;Sampson County;Precinct HARR	precinct
+North Carolina;Sampson County;Precinct ROWA	precinct
+North Carolina;Sampson County;Precinct GARL	precinct
+North Carolina;Sampson County;Precinct SBRG	precinct
+North Carolina;Stokes County;Precinct 19	precinct
+North Carolina;Stokes County;ONE STOP KING	precinct
+North Carolina;Stokes County;Precinct 08	precinct
+North Carolina;Stokes County;Precinct 11	precinct
+North Carolina;Stokes County;Precinct 02	precinct
+North Carolina;Stokes County;Precinct 05	precinct
+North Carolina;Stokes County;ONE STOP DANBURY	precinct
+North Carolina;Stokes County;Precinct 10	precinct
+North Carolina;Stokes County;Precinct 13	precinct
+North Carolina;Stokes County;Precinct 18	precinct
+North Carolina;Stokes County;Precinct 17	precinct
+North Carolina;Stokes County;ABSENTEE MAIL	precinct
+North Carolina;Stokes County;Precinct 12	precinct
+North Carolina;Stokes County;Precinct 15	precinct
+North Carolina;Stokes County;Precinct 09	precinct
+North Carolina;Stokes County;Precinct 06	precinct
+North Carolina;Stokes County;Precinct 03	precinct
+North Carolina;Stokes County;Precinct 07	precinct
+North Carolina;Stokes County;Precinct 04	precinct
+North Carolina;Stokes County;Precinct 20	precinct
+North Carolina;Stokes County;Precinct 01	precinct
+North Carolina;Stokes County;Precinct 16	precinct
+North Carolina;Stokes County;Precinct 14	precinct
+North Carolina;Stokes County;PROVISIONAL	precinct
+North Carolina;Stokes County;ONE STOP WALNUT COVE	precinct
+North Carolina;Transylvania County;Precinct B4	precinct
+North Carolina;Transylvania County;Precinct CC	precinct
+North Carolina;Transylvania County;Precinct B3	precinct
+North Carolina;Transylvania County;Precinct B2	precinct
+North Carolina;Transylvania County;Precinct WC	precinct
+North Carolina;Transylvania County;Precinct RE	precinct
+North Carolina;Transylvania County;Precinct CM	precinct
+North Carolina;Transylvania County;Precinct BD	precinct
+North Carolina;Transylvania County;Precinct TC7	precinct
+North Carolina;Transylvania County;Precinct B1	precinct
+North Carolina;Transylvania County;Precinct EF	precinct
+North Carolina;Transylvania County;Precinct PF	precinct
+North Carolina;Transylvania County;Precinct LR	precinct
+North Carolina;Transylvania County;Precinct TC1	precinct
+North Carolina;Transylvania County;Precinct DR	precinct
+North Carolina;Tyrrell County;PROVISIONAL	precinct
+North Carolina;Tyrrell County;Precinct 1	precinct
+North Carolina;Tyrrell County;Precinct 15	precinct
+North Carolina;Tyrrell County;ONE STOP	precinct
+North Carolina;Tyrrell County;ABSENTEE	precinct
+North Carolina;Tyrrell County;Precinct 2	precinct
+North Carolina;Tyrrell County;Precinct 14	precinct
+North Carolina;Tyrrell County;Precinct 16	precinct
+North Carolina;Tyrrell County;Precinct 3	precinct
+North Carolina;Union County;Precinct 015	precinct
+North Carolina;Union County;Precinct 028C	precinct
+North Carolina;Union County;Precinct 034	precinct
+North Carolina;Union County;Precinct 039	precinct
+North Carolina;Union County;Precinct 007	precinct
+North Carolina;Union County;Precinct 028D	precinct
+North Carolina;Union County;Precinct 041	precinct
+North Carolina;Union County;Precinct 022	precinct
+North Carolina;Union County;Precinct 025	precinct
+North Carolina;Union County;Precinct 042	precinct
+North Carolina;Union County;TRANSFER	precinct
+North Carolina;Union County;Precinct 020A	precinct
+North Carolina;Union County;Precinct 020B	precinct
+North Carolina;Union County;Precinct 029B	precinct
+North Carolina;Union County;Precinct 038A	precinct
+North Carolina;Union County;Precinct 040	precinct
+North Carolina;Union County;ABSENTEE	precinct
+North Carolina;Union County;Precinct 004	precinct
+North Carolina;Union County;Precinct 005	precinct
+North Carolina;Union County;Precinct 012	precinct
+North Carolina;Union County;Precinct 035	precinct
+North Carolina;Union County;Precinct 036	precinct
+North Carolina;Union County;Precinct 018	precinct
+North Carolina;Union County;Precinct 002	precinct
+North Carolina;Union County;Precinct 030	precinct
+North Carolina;Union County;CURBSIDE	precinct
+North Carolina;Union County;Precinct 024	precinct
+North Carolina;Union County;Precinct 027	precinct
+North Carolina;Union County;Precinct 029A	precinct
+North Carolina;Union County;Precinct 037B	precinct
+North Carolina;Union County;Precinct 003	precinct
+North Carolina;Union County;Precinct 010	precinct
+North Carolina;Union County;Precinct 013	precinct
+North Carolina;Union County;Precinct 016	precinct
+North Carolina;Union County;Precinct 032	precinct
+North Carolina;Union County;Precinct 017A	precinct
+North Carolina;Union County;Precinct 028A	precinct
+North Carolina;Union County;Precinct 028B	precinct
+North Carolina;Union County;PROVISIONAL	precinct
+North Carolina;Union County;Precinct 001	precinct
+North Carolina;Union County;Precinct 006	precinct
+North Carolina;Union County;Precinct 021	precinct
+North Carolina;Union County;Precinct 011	precinct
+North Carolina;Union County;Precinct 014	precinct
+North Carolina;Wake County;Precinct 01-09	precinct
+North Carolina;Wake County;Precinct 01-29	precinct
+North Carolina;Wake County;Precinct 01-31	precinct
+North Carolina;Wake County;Precinct 19-15	precinct
+North Carolina;Wake County;Precinct 19-18	precinct
+North Carolina;Wake County;OSTA 41-80	precinct
+North Carolina;Wake County;PROVI 41-80	precinct
+North Carolina;Wake County;Precinct 14-02	precinct
+North Carolina;Wake County;Precinct 16-05	precinct
+North Carolina;Wake County;Precinct 17-10	precinct
+North Carolina;Wake County;Precinct 12-05	precinct
+North Carolina;Wake County;Precinct 07-12	precinct
+North Carolina;Wake County;Precinct 06-10	precinct
+North Carolina;Wake County;Precinct 04-04	precinct
+North Carolina;Wake County;Precinct 01-39	precinct
+North Carolina;Wake County;Precinct 01-16	precinct
+North Carolina;Wake County;Precinct 01-18	precinct
+North Carolina;Wake County;Precinct 01-11	precinct
+North Carolina;Wake County;OSKD 1-40	precinct
+North Carolina;Wake County;OSKD 81-95	precinct
+North Carolina;Wake County;Precinct 13-11	precinct
+North Carolina;Wake County;Precinct 18-01	precinct
+North Carolina;Wake County;Precinct 18-06	precinct
+North Carolina;Wake County;Precinct 18-07	precinct
+North Carolina;Wake County;Precinct 19-12	precinct
+North Carolina;Wake County;Precinct 08-10	precinct
+North Carolina;Wake County;Precinct 04-21	precinct
+North Carolina;Wake County;Precinct 20-17	precinct
+North Carolina;Wake County;Precinct 20-11	precinct
+North Carolina;Wake County;Precinct 19-09	precinct
+North Carolina;Wake County;OSLL 1-40	precinct
+North Carolina;Wake County;OSLOB 1-40	precinct
+North Carolina;Wake County;OSLOB 81-95	precinct
+North Carolina;Wake County;PROVI 81-95	precinct
+North Carolina;Wake County;TRANS 1-40	precinct
+North Carolina;Wake County;Precinct 13-07	precinct
+North Carolina;Wake County;Precinct 16-10	precinct
+North Carolina;Wake County;Precinct 13-01	precinct
+North Carolina;Wake County;Precinct 12-08	precinct
+North Carolina;Wake County;Precinct 12-07	precinct
+North Carolina;Wake County;Precinct 10-04	precinct
+North Carolina;Wake County;Precinct 08-05	precinct
+North Carolina;Wake County;Precinct 07-05	precinct
+North Carolina;Wake County;Precinct 07-11	precinct
+North Carolina;Wake County;Precinct 08-03	precinct
+North Carolina;Wake County;Precinct 05-05	precinct
+North Carolina;Wake County;Precinct 07-02	precinct
+North Carolina;Wake County;Precinct 04-11	precinct
+North Carolina;Wake County;Precinct 05-03	precinct
+North Carolina;Wake County;Precinct 04-10	precinct
+North Carolina;Wake County;Precinct 02-06	precinct
+North Carolina;Wake County;Precinct 01-22	precinct
+North Carolina;Wake County;Precinct 01-43	precinct
+North Carolina;Wake County;Precinct 01-48	precinct
+North Carolina;Wake County;OSNR 1-40	precinct
+North Carolina;Wake County;OSKD 41-80	precinct
+North Carolina;Wake County;TRANS 41-80	precinct
+North Carolina;Wake County;OSCH 1-40	precinct
+North Carolina;Wake County;Precinct 17-03	precinct
+North Carolina;Wake County;Precinct 14-01	precinct
+North Carolina;Wake County;Precinct 02-02	precinct
+North Carolina;Wake County;Precinct 02-05	precinct
+North Carolina;Wake County;Precinct 06-04	precinct
+North Carolina;Wake County;Precinct 06-09	precinct
+North Carolina;Wake County;Precinct 01-21	precinct
+North Carolina;Wake County;Precinct 01-34	precinct
+North Carolina;Wake County;Precinct 01-36	precinct
+North Carolina;Wake County;Precinct 01-37	precinct
+North Carolina;Wake County;Precinct 01-01	precinct
+North Carolina;Wake County;Precinct 01-04	precinct
+North Carolina;Wake County;OSNR 81-95	precinct
+North Carolina;Wake County;OSOP 1-40	precinct
+North Carolina;Wake County;OSLL 41-80	precinct
+North Carolina;Wake County;ABSEN 81-95	precinct
+North Carolina;Wake County;ABSEN 41-80	precinct
+North Carolina;Wake County;OSCH 81-95	precinct
+North Carolina;Wake County;Precinct 19-11	precinct
+North Carolina;Wake County;Precinct 19-14	precinct
+North Carolina;Wake County;Precinct 19-17	precinct
+North Carolina;Wake County;Precinct 20-05	precinct
+North Carolina;Wake County;Precinct 20-06B	precinct
+North Carolina;Wake County;Precinct 13-10	precinct
+North Carolina;Wake County;Precinct 17-11	precinct
+North Carolina;Wake County;Precinct 12-04	precinct
+North Carolina;Wake County;Precinct 08-11	precinct
+North Carolina;Wake County;Precinct 04-15	precinct
+North Carolina;Wake County;Precinct 04-17	precinct
+North Carolina;Wake County;Precinct 01-12	precinct
+North Carolina;Wake County;Precinct 01-14	precinct
+North Carolina;Wake County;Precinct 01-17	precinct
+North Carolina;Wake County;Precinct 04-14	precinct
+North Carolina;Wake County;OSWA 1-40	precinct
+North Carolina;Wake County;OSAP 81-95	precinct
+North Carolina;Wake County;Precinct 20-09	precinct
+North Carolina;Wake County;Precinct 18-08	precinct
+North Carolina;Wake County;Precinct 19-05	precinct
+North Carolina;Wake County;Precinct 16-06	precinct
+North Carolina;Wake County;Precinct 18-02	precinct
+North Carolina;Wake County;Precinct 18-03	precinct
+North Carolina;Wake County;Precinct 09-02	precinct
+North Carolina;Wake County;Precinct 03-00	precinct
+North Carolina;Wake County;Precinct 01-50	precinct
+North Carolina;Wake County;Precinct 01-45	precinct
+North Carolina;Wake County;Precinct 01-19	precinct
+North Carolina;Wake County;OSNR 41-80	precinct
+North Carolina;Wake County;OSLL 81-95	precinct
+North Carolina;Wake County;Precinct 20-04	precinct
+North Carolina;Wake County;Precinct 20-01	precinct
+North Carolina;Wake County;Precinct 18-05	precinct
+North Carolina;Wake County;Precinct 16-11	precinct
+North Carolina;Wake County;Precinct 07-09	precinct
+North Carolina;Wake County;Precinct 07-10	precinct
+North Carolina;Wake County;Precinct 07-06	precinct
+North Carolina;Wake County;Precinct 05-07	precinct
+North Carolina;Wake County;Precinct 01-42	precinct
+North Carolina;Wake County;Precinct 01-47	precinct
+North Carolina;Wake County;Precinct 04-01	precinct
+North Carolina;Wake County;Precinct 04-13	precinct
+North Carolina;Wake County;Precinct 04-20	precinct
+North Carolina;Wake County;ABSEN 1-40	precinct
+North Carolina;Wake County;Precinct 15-04	precinct
+North Carolina;Wake County;Precinct 16-01	precinct
+North Carolina;Wake County;Precinct 16-04	precinct
+North Carolina;Wake County;Precinct 10-01	precinct
+North Carolina;Wake County;Precinct 15-01	precinct
+North Carolina;Wake County;Precinct 15-02	precinct
+North Carolina;Wake County;Precinct 06-05	precinct
+North Carolina;Wake County;Precinct 07-13	precinct
+North Carolina;Wake County;Precinct 01-51	precinct
+North Carolina;Wake County;Precinct 01-15	precinct
+North Carolina;Wake County;OSTA 1-40	precinct
+North Carolina;Wake County;OSLOB 41-80	precinct
+North Carolina;Wake County;TRANS 81-95	precinct
+North Carolina;Wake County;OSAP 41-80	precinct
+North Carolina;Wake County;Precinct 20-08	precinct
+North Carolina;Wake County;Precinct 19-04	precinct
+North Carolina;Wake County;Precinct 18-04	precinct
+North Carolina;Wake County;Precinct 12-09	precinct
+North Carolina;Wake County;Precinct 08-08	precinct
+North Carolina;Wake County;Precinct 05-08	precinct
+North Carolina;Wake County;Precinct 07-03	precinct
+North Carolina;Wake County;Precinct 01-07	precinct
+North Carolina;Wake County;Precinct 20-06A	precinct
+North Carolina;Wake County;Precinct 20-16	precinct
+North Carolina;Wake County;OSAP 1-40	precinct
+North Carolina;Wake County;OSCA 1-40	precinct
+North Carolina;Wake County;Precinct 04-09	precinct
+North Carolina;Wake County;Precinct 04-02	precinct
+North Carolina;Wake County;Precinct 07-07A	precinct
+North Carolina;Wake County;Precinct 08-06	precinct
+North Carolina;Wake County;Precinct 01-10	precinct
+North Carolina;Wake County;Precinct 01-13	precinct
+North Carolina;Wake County;Precinct 01-07A	precinct
+North Carolina;Wake County;Precinct 01-23	precinct
+North Carolina;Wake County;Precinct 01-25	precinct
+North Carolina;Wake County;Precinct 01-26	precinct
+North Carolina;Wake County;Precinct 01-28	precinct
+North Carolina;Wake County;Precinct 01-32	precinct
+North Carolina;Wake County;Precinct 01-35	precinct
+North Carolina;Wake County;Precinct 06-08	precinct
+North Carolina;Wake County;Precinct 07-04	precinct
+North Carolina;Wake County;Precinct 07-07	precinct
+North Carolina;Wake County;Precinct 04-05	precinct
+North Carolina;Wake County;Precinct 04-07	precinct
+North Carolina;Wake County;Precinct 04-08	precinct
+North Carolina;Wake County;Precinct 20-15	precinct
+North Carolina;Wake County;Precinct 20-03	precinct
+North Carolina;Wake County;Precinct 20-10	precinct
+North Carolina;Wake County;OSOP 41-80	precinct
+North Carolina;Wake County;Precinct 01-49	precinct
+North Carolina;Wake County;Precinct 01-30	precinct
+North Carolina;Wake County;Precinct 01-33	precinct
+North Carolina;Wake County;Precinct 06-07	precinct
+North Carolina;Wake County;Precinct 04-12	precinct
+North Carolina;Wake County;Precinct 10-03	precinct
+North Carolina;Wake County;Precinct 13-09	precinct
+North Carolina;Wake County;Precinct 13-06	precinct
+North Carolina;Wake County;Precinct 16-09	precinct
+North Carolina;Wake County;Precinct 19-03	precinct
+North Carolina;Wake County;Precinct 01-46	precinct
+North Carolina;Wake County;Precinct 04-16	precinct
+North Carolina;Wake County;Precinct 04-19	precinct
+North Carolina;Wake County;Precinct 01-44	precinct
+North Carolina;Wake County;Precinct 01-41	precinct
+North Carolina;Wake County;Precinct 09-03	precinct
+North Carolina;Wake County;Precinct 12-01	precinct
+North Carolina;Wake County;Precinct 15-03	precinct
+North Carolina;Wake County;Precinct 17-01	precinct
+North Carolina;Wake County;Precinct 04-18	precinct
+North Carolina;Wake County;Precinct 02-04	precinct
+North Carolina;Wake County;Precinct 12-02	precinct
+North Carolina;Wake County;Precinct 01-06	precinct
+North Carolina;Wake County;Precinct 01-03	precinct
+North Carolina;Wake County;Precinct 16-07	precinct
+North Carolina;Wake County;Precinct 16-02	precinct
+North Carolina;Wake County;Precinct 17-05	precinct
+North Carolina;Wake County;Precinct 17-04	precinct
+North Carolina;Wake County;Precinct 17-07	precinct
+North Carolina;Wake County;OSCA 81-95	precinct
+North Carolina;Wake County;Precinct 05-01	precinct
+North Carolina;Wake County;Precinct 05-06	precinct
+North Carolina;Wake County;OSTA 81-95	precinct
+North Carolina;Wake County;OSWA 81-95	precinct
+North Carolina;Wake County;Precinct 02-01	precinct
+North Carolina;Wake County;Precinct 01-40	precinct
+North Carolina;Wake County;Precinct 01-20	precinct
+North Carolina;Wake County;Precinct 07-01	precinct
+North Carolina;Wake County;Precinct 19-07	precinct
+North Carolina;Wake County;Precinct 01-38	precinct
+North Carolina;Wake County;Precinct 01-27	precinct
+North Carolina;Wake County;PROVI 1-40	precinct
+North Carolina;Wake County;Precinct 19-13	precinct
+North Carolina;Wake County;Precinct 19-16	precinct
+North Carolina;Wake County;Precinct 19-19	precinct
+North Carolina;Wake County;Precinct 02-03	precinct
+North Carolina;Wake County;Precinct 01-02	precinct
+North Carolina;Wake County;Precinct 11-01	precinct
+North Carolina;Wake County;Precinct 11-02	precinct
+North Carolina;Wake County;Precinct 17-02	precinct
+North Carolina;Wake County;Precinct 13-02	precinct
+North Carolina;Wake County;Precinct 13-05	precinct
+North Carolina;Wake County;Precinct 13-08	precinct
+North Carolina;Wake County;OSOP 81-95	precinct
+North Carolina;Wake County;Precinct 20-12	precinct
+North Carolina;Wake County;OSCH 41-80	precinct
+North Carolina;Wake County;Precinct 01-05	precinct
+North Carolina;Wake County;Precinct 08-02	precinct
+North Carolina;Wake County;Precinct 08-04	precinct
+North Carolina;Wake County;Precinct 08-07	precinct
+North Carolina;Wake County;Precinct 08-09	precinct
+North Carolina;Wake County;Precinct 09-01	precinct
+North Carolina;Wake County;Precinct 10-02	precinct
+North Carolina;Wake County;Precinct 12-06	precinct
+North Carolina;Wake County;OSCA 41-80	precinct
+North Carolina;Wake County;Precinct 04-03	precinct
+North Carolina;Wake County;Precinct 04-06	precinct
+North Carolina;Wake County;Precinct 17-06	precinct
+North Carolina;Wake County;Precinct 16-03	precinct
+North Carolina;Wake County;Precinct 17-09	precinct
+North Carolina;Wake County;Precinct 17-08	precinct
+North Carolina;Wake County;Precinct 20-14	precinct
+North Carolina;Wake County;OSWA 41-80	precinct
+North Carolina;Wake County;Precinct 06-06	precinct
+North Carolina;Perquimans County;Precinct BELVID	precinct
+North Carolina;Perquimans County;Precinct BETHEL	precinct
+North Carolina;Perquimans County;ABSENTEE	precinct
+North Carolina;Perquimans County;PROVISIONAL	precinct
+North Carolina;Perquimans County;Precinct NEW HO	precinct
+North Carolina;Perquimans County;Precinct EAST H	precinct
+North Carolina;Perquimans County;Precinct NICANO	precinct
+North Carolina;Perquimans County;Precinct PARKVI	precinct
+North Carolina;Perquimans County;Precinct WEST H	precinct
+North Carolina;Polk County;Precinct GC09	precinct
+North Carolina;Polk County;Precinct CL07	precinct
+North Carolina;Polk County;ABSENTEE	precinct
+North Carolina;Polk County;Precinct WO06	precinct
+North Carolina;Polk County;Precinct TR123	precinct
+North Carolina;Polk County;Precinct SA04	precinct
+North Carolina;Polk County;Precinct CL08	precinct
+North Carolina;Polk County;Precinct CG05	precinct
+North Carolina;Polk County;CURBSIDE	precinct
+North Carolina;Polk County;PROVISIONAL	precinct
+North Carolina;Rutherford County;Precinct 13	precinct
+North Carolina;Rutherford County;Precinct 18	precinct
+North Carolina;Rutherford County;Precinct 04A	precinct
+North Carolina;Rutherford County;Precinct 10A	precinct
+North Carolina;Rutherford County;Precinct 16A	precinct
+North Carolina;Rutherford County;PROVISIONAL	precinct
+North Carolina;Rutherford County;Precinct 19	precinct
+North Carolina;Rutherford County;OS ANNEX PAPER	precinct
+North Carolina;Rutherford County;Precinct 34	precinct
+North Carolina;Rutherford County;Precinct 14	precinct
+North Carolina;Rutherford County;Precinct 29	precinct
+North Carolina;Rutherford County;Precinct 11	precinct
+North Carolina;Rutherford County;Precinct 27	precinct
+North Carolina;Rutherford County;OS BOE PAPER	precinct
+North Carolina;Rutherford County;ABSENTEE	precinct
+North Carolina;Rutherford County;Precinct 28	precinct
+North Carolina;Rutherford County;Precinct 03A	precinct
+North Carolina;Rutherford County;Precinct 05A	precinct
+North Carolina;Rutherford County;CURBSIDE	precinct
+North Carolina;Rutherford County;Precinct 09A	precinct
+North Carolina;Rutherford County;Precinct 06A	precinct
+North Carolina;Rutherford County;Precinct 30	precinct
+North Carolina;Stanly County;OS BOE	precinct
+North Carolina;Stanly County;Precinct 0014	precinct
+North Carolina;Stanly County;ABS BY MAIL	precinct
+North Carolina;Stanly County;Precinct 0022	precinct
+North Carolina;Stanly County;Precinct 0003	precinct
+North Carolina;Stanly County;Precinct 0002	precinct
+North Carolina;Stanly County;Precinct 0028	precinct
+North Carolina;Stanly County;Precinct 0021	precinct
+North Carolina;Stanly County;Precinct 0017	precinct
+North Carolina;Stanly County;Precinct 0012	precinct
+North Carolina;Stanly County;Precinct 0010	precinct
+North Carolina;Stanly County;Precinct 0008	precinct
+North Carolina;Stanly County;Precinct 0011	precinct
+North Carolina;Stanly County;Precinct 0016	precinct
+North Carolina;Stanly County;Precinct 0023	precinct
+North Carolina;Stanly County;Precinct 0025	precinct
+North Carolina;Stanly County;Precinct 0020	precinct
+North Carolina;Stanly County;PROVISIONAL	precinct
+North Carolina;Stanly County;ABS ADDTNL	precinct
+North Carolina;Stanly County;Precinct 0015	precinct
+North Carolina;Stanly County;Precinct 0018	precinct
+North Carolina;Stanly County;Precinct 0013	precinct
+North Carolina;Stanly County;TRANSFER	precinct
+North Carolina;Stanly County;Precinct 0019	precinct
+North Carolina;Stanly County;Precinct 0024	precinct
+North Carolina;Stanly County;Precinct 0027	precinct
+North Carolina;Stanly County;Precinct 0026	precinct
+North Carolina;Stanly County;Precinct 0007	precinct
+North Carolina;Vance County;Precinct WH	precinct
+North Carolina;Vance County;Precinct SH1	precinct
+North Carolina;Vance County;Precinct HTOP	precinct
+North Carolina;Vance County;Precinct NH1	precinct
+North Carolina;Vance County;Precinct SH2	precinct
+North Carolina;Vance County;Precinct KITT	precinct
+North Carolina;Vance County;Precinct SCRK	precinct
+North Carolina;Vance County;Precinct EH1	precinct
+North Carolina;Vance County;Precinct NH	precinct
+North Carolina;Vance County;Precinct MIDD	precinct
+North Carolina;Vance County;Precinct CC	precinct
+North Carolina;Vance County;Precinct NV	precinct
+North Carolina;Pender County;Precinct RP20	precinct
+North Carolina;Pender County;CURBSIDE	precinct
+North Carolina;Pender County;Precinct CT03	precinct
+North Carolina;Pender County;Precinct NB01	precinct
+North Carolina;Pender County;Precinct MT19	precinct
+North Carolina;Pender County;Precinct UH08	precinct
+North Carolina;Pender County;Precinct LU16	precinct
+North Carolina;Pender County;Precinct SC13	precinct
+North Carolina;Pender County;Precinct CF11	precinct
+North Carolina;Pender County;Precinct SH12	precinct
+North Carolina;Pender County;Precinct SP15	precinct
+North Carolina;Pender County;Precinct UU17	precinct
+North Carolina;Pender County;Precinct CS04	precinct
+North Carolina;Pender County;Precinct LC09	precinct
+North Carolina;Pender County;Precinct CL05	precinct
+North Carolina;Pender County;Precinct PL10	precinct
+North Carolina;Pender County;ABSENTEE MAIL	precinct
+North Carolina;Pender County;Precinct UT14	precinct
+North Carolina;Pender County;Precinct SB02	precinct
+North Carolina;Pender County;Precinct GR06	precinct
+North Carolina;Pender County;PROVISIONAL	precinct
+North Carolina;Pender County;Precinct MH07	precinct
+North Carolina;Pender County;Precinct LT18	precinct
+North Carolina;Robeson County;Precinct 39	precinct
+North Carolina;Robeson County;Precinct 41	precinct
+North Carolina;Robeson County;Precinct 11A	precinct
+North Carolina;Robeson County;Precinct 28	precinct
+North Carolina;Robeson County;Precinct 07	precinct
+North Carolina;Robeson County;Precinct 25	precinct
+North Carolina;Robeson County;Precinct 26A	precinct
+North Carolina;Robeson County;Precinct 04	precinct
+North Carolina;Robeson County;Precinct 19	precinct
+North Carolina;Robeson County;Precinct 14	precinct
+North Carolina;Robeson County;Precinct 16	precinct
+North Carolina;Robeson County;Precinct 38	precinct
+North Carolina;Robeson County;Precinct 35	precinct
+North Carolina;Robeson County;Precinct 20	precinct
+North Carolina;Robeson County;Precinct 01	precinct
+North Carolina;Robeson County;Precinct 36	precinct
+North Carolina;Robeson County;Precinct 15	precinct
+North Carolina;Robeson County;Precinct 12	precinct
+North Carolina;Robeson County;Precinct 17	precinct
+North Carolina;Robeson County;Precinct 37	precinct
+North Carolina;Robeson County;Precinct 13	precinct
+North Carolina;Robeson County;Precinct 33	precinct
+North Carolina;Robeson County;Precinct 30	precinct
+North Carolina;Robeson County;Precinct 40	precinct
+North Carolina;Robeson County;Precinct 24	precinct
+North Carolina;Robeson County;Precinct 23	precinct
+North Carolina;Robeson County;Precinct 09	precinct
+North Carolina;Robeson County;Precinct 03	precinct
+North Carolina;Robeson County;Precinct 32A	precinct
+North Carolina;Robeson County;Precinct 10	precinct
+North Carolina;Robeson County;Precinct 05A	precinct
+North Carolina;Robeson County;Precinct 21	precinct
+North Carolina;Robeson County;Precinct 29	precinct
+North Carolina;Robeson County;Precinct 08	precinct
+North Carolina;Robeson County;Precinct 02	precinct
+North Carolina;Robeson County;Precinct 22	precinct
+North Carolina;Robeson County;Precinct 18A	precinct
+North Carolina;Robeson County;Precinct 34	precinct
+North Carolina;Robeson County;Precinct 11	precinct
+North Carolina;Surry County;Precinct 05	precinct
+North Carolina;Surry County;Precinct 02	precinct
+North Carolina;Surry County;Precinct 16	precinct
+North Carolina;Surry County;Precinct 14	precinct
+North Carolina;Surry County;Precinct 08	precinct
+North Carolina;Surry County;Precinct 11	precinct
+North Carolina;Surry County;Precinct 21	precinct
+North Carolina;Surry County;CURBSIDE	precinct
+North Carolina;Surry County;Precinct 20	precinct
+North Carolina;Surry County;ABSENTEE BY MAIL	precinct
+North Carolina;Surry County;Precinct 01	precinct
+North Carolina;Surry County;Precinct 12	precinct
+North Carolina;Surry County;Precinct 15	precinct
+North Carolina;Surry County;Precinct 27	precinct
+North Carolina;Surry County;Precinct 28	precinct
+North Carolina;Surry County;Precinct 07	precinct
+North Carolina;Surry County;Precinct 04	precinct
+North Carolina;Surry County;Precinct 25	precinct
+North Carolina;Surry County;Precinct 17	precinct
+North Carolina;Surry County;Precinct 10	precinct
+North Carolina;Surry County;Precinct 06	precinct
+North Carolina;Surry County;Precinct 03	precinct
+North Carolina;Surry County;Precinct 09	precinct
+North Carolina;Surry County;Precinct 23	precinct
+North Carolina;Surry County;Precinct 18	precinct
+North Carolina;Surry County;Precinct 13	precinct
+North Carolina;Surry County;Precinct 26	precinct
+North Carolina;Surry County;Precinct 24	precinct
+North Carolina;Surry County;Precinct 33	precinct
+North Carolina;Surry County;Precinct 22	precinct
+North Carolina;Surry County;PROVISIONAL	precinct
+North Carolina;Surry County;Precinct 19	precinct
+North Carolina;Swain County;Precinct ALMOND	precinct
+North Carolina;Swain County;Precinct ALARKA	precinct
+North Carolina;Swain County;Precinct BC2	precinct
+North Carolina;Swain County;Precinct BC1	precinct
+North Carolina;Swain County;Precinct WHCH	precinct
+North Carolina;Union County;Precinct 009	precinct
+North Carolina;Union County;Precinct 037A	precinct
+North Carolina;Union County;Precinct 043	precinct
+North Carolina;Union County;Precinct 008	precinct
+North Carolina;Union County;Precinct 029C	precinct
+North Carolina;Union County;Precinct 033	precinct
+North Carolina;Union County;Precinct 017B	precinct
+North Carolina;Union County;Precinct 026	precinct
+North Carolina;Union County;Precinct 023	precinct
+North Carolina;Union County;Precinct 031	precinct
+North Carolina;Union County;Precinct 038B	precinct
+North Carolina;Union County;Precinct 019	precinct
+North Carolina;Pasquotank County;Precinct EAST	precinct
+North Carolina;Pasquotank County;Precinct NIX	precinct
+North Carolina;Pasquotank County;Precinct SAL	precinct
+North Carolina;Pasquotank County;Precinct PRO	precinct
+North Carolina;Pasquotank County;Precinct WEST	precinct
+North Carolina;Pasquotank County;Precinct NORTH	precinct
+North Carolina;Pasquotank County;Precinct SOUTH	precinct
+North Carolina;Pasquotank County;Precinct NEW	precinct
+North Carolina;Pasquotank County;Precinct MH	precinct
+North Carolina;Richmond County;Precinct 07	precinct
+North Carolina;Richmond County;Precinct 12	precinct
+North Carolina;Richmond County;Precinct 04	precinct
+North Carolina;Richmond County;ONE STOP	precinct
+North Carolina;Richmond County;Precinct 02	precinct
+North Carolina;Richmond County;Precinct 13	precinct
+North Carolina;Richmond County;Precinct 16	precinct
+North Carolina;Richmond County;Precinct 14	precinct
+North Carolina;Richmond County;Precinct 01	precinct
+North Carolina;Richmond County;Precinct 08	precinct
+North Carolina;Richmond County;Precinct 05	precinct
+North Carolina;Richmond County;Precinct 11	precinct
+North Carolina;Richmond County;Precinct 15	precinct
+North Carolina;Richmond County;PROVISIONAL	precinct
+North Carolina;Richmond County;Precinct 06	precinct
+North Carolina;Richmond County;Precinct 03	precinct
+North Carolina;Richmond County;Precinct 09	precinct
+North Carolina;Richmond County;Precinct 10	precinct
+North Carolina;Richmond County;ABSENTEE MAIL	precinct
+North Carolina;Scotland County;Precinct 10	precinct
+North Carolina;Scotland County;ONE STOP	precinct
+North Carolina;Scotland County;Precinct 09	precinct
+North Carolina;Scotland County;Precinct 06	precinct
+North Carolina;Scotland County;Precinct 03	precinct
+North Carolina;Scotland County;ABSENTEE	precinct
+North Carolina;Scotland County;Precinct 01	precinct
+North Carolina;Scotland County;Precinct 05	precinct
+North Carolina;Scotland County;Precinct 08	precinct
+North Carolina;Scotland County;Precinct 02	precinct
+North Carolina;Scotland County;Precinct 07	precinct
+North Carolina;Scotland County;Precinct 04	precinct
+North Carolina;Scotland County;PROVISIOINAL	precinct
+North Carolina;Pamlico County;Precinct 2OT	precinct
+North Carolina;Pamlico County;CURBSIDE	precinct
+North Carolina;Pamlico County;PROVISIONAL	precinct
+North Carolina;Pamlico County;Precinct 4MSIC	precinct
+North Carolina;Pamlico County;Precinct 3BY	precinct
+North Carolina;Pamlico County;Precinct 1GB	precinct
+North Carolina;Pamlico County;ABSENTEE MAIL	precinct
+North Carolina;Pamlico County;Precinct 1RB	precinct
+North Carolina;Pamlico County;Precinct 4HB	precinct
+North Carolina;Pamlico County;Precinct 1AL A	precinct
+North Carolina;Pamlico County;Precinct 4VM A	precinct
+North Carolina;Pamlico County;Precinct 5AP	precinct
+North Carolina;Pamlico County;Precinct 2SW	precinct
+North Carolina;Warren County;Precinct 005	precinct
+North Carolina;Warren County;Precinct 013	precinct
+North Carolina;Warren County;Precinct 010	precinct
+North Carolina;Warren County;Precinct 003	precinct
+North Carolina;Warren County;Precinct 002	precinct
+North Carolina;Warren County;Precinct 011	precinct
+North Carolina;Warren County;Precinct 014	precinct
+North Carolina;Warren County;Precinct 006	precinct
+North Carolina;Warren County;Precinct 008	precinct
+North Carolina;Warren County;Precinct 009	precinct
+North Carolina;Warren County;Precinct 007	precinct
+North Carolina;Warren County;Precinct 001	precinct
+North Carolina;Warren County;Precinct 012	precinct
+North Carolina;Warren County;Precinct 004	precinct
+North Carolina;Washington County;ONE STOP	precinct
+North Carolina;Washington County;Precinct SC	precinct
+North Carolina;Washington County;Precinct LM	precinct
+North Carolina;Washington County;Precinct P2	precinct
+North Carolina;Washington County;ABSENTEE	precinct
+North Carolina;Washington County;Precinct P1	precinct
+North Carolina;Washington County;PROVISIONAL	precinct
+North Carolina;Washington County;Precinct SK	precinct
+North Carolina;Washington County;Precinct P3	precinct
+North Carolina;Wayne County;Precinct 30	precinct
+North Carolina;Wayne County;PROVISIONAL	precinct
+North Carolina;Wayne County;Precinct 21	precinct
+North Carolina;Wayne County;TRANSFER	precinct
+North Carolina;Wayne County;Precinct 22	precinct
+North Carolina;Wayne County;Precinct 29	precinct
+North Carolina;Wayne County;Precinct 02	precinct
+North Carolina;Wayne County;Precinct 05	precinct
+North Carolina;Wayne County;Precinct 08	precinct
+North Carolina;Wayne County;Precinct 11	precinct
+North Carolina;Wayne County;ONE STOP #1	precinct
+North Carolina;Wayne County;Precinct 19	precinct
+North Carolina;Wayne County;Precinct 16	precinct
+North Carolina;Wayne County;Precinct 14	precinct
+North Carolina;Wayne County;Precinct 04	precinct
+North Carolina;Wayne County;Precinct 25	precinct
+North Carolina;Wayne County;Precinct 20	precinct
+North Carolina;Wayne County;Precinct 01	precinct
+North Carolina;Wayne County;Precinct 15	precinct
+North Carolina;Wayne County;Precinct 17	precinct
+North Carolina;Wayne County;Precinct 12	precinct
+North Carolina;Wayne County;ABSENTEE MAIL	precinct
+North Carolina;Wayne County;Precinct 27	precinct
+North Carolina;Wayne County;Precinct 28	precinct
+North Carolina;Wayne County;Precinct 07	precinct
+North Carolina;Wayne County;ONE STOP #2	precinct
+North Carolina;Wayne County;Precinct 10	precinct
+North Carolina;Wayne County;Precinct 23	precinct
+North Carolina;Wayne County;Precinct 26	precinct
+North Carolina;Wayne County;Precinct 24	precinct
+North Carolina;Wayne County;Precinct 09	precinct
+North Carolina;Wayne County;Precinct 06	precinct
+North Carolina;Wayne County;Precinct 03	precinct
+North Carolina;Wayne County;ONE STOP #3	precinct
+North Carolina;Wayne County;ONE STOP #4	precinct
+North Carolina;Wayne County;Precinct 13	precinct
+North Carolina;Wayne County;Precinct 18	precinct
+North Carolina;Yadkin County;Precinct EBND	precinct
+North Carolina;Yadkin County;ONE STOP	precinct
+North Carolina;Yadkin County;Precinct DCRK	precinct
+North Carolina;Yadkin County;Precinct SFAL	precinct
+North Carolina;Yadkin County;Precinct NBCK	precinct
+North Carolina;Yadkin County;Precinct FBSH	precinct
+North Carolina;Yadkin County;ABSENTEE MAIL	precinct
+North Carolina;Yadkin County;Precinct NFAL	precinct
+North Carolina;Yadkin County;Precinct SBCK	precinct
+North Carolina;Yadkin County;Precinct NKNB	precinct
+North Carolina;Yadkin County;Precinct SKNB	precinct
+North Carolina;Yadkin County;Precinct NLIB	precinct
+North Carolina;Yadkin County;Precinct SLIB	precinct
+North Carolina;Yadkin County;Precinct BNVL	precinct
+North Carolina;Yadkin County;PROVISIONAL	precinct
+North Carolina;Yancey County;Precinct 04 RAM	precinct
+North Carolina;Yancey County;Precinct 11 PRI	precinct
+North Carolina;Yancey County;Precinct 01 BUR	precinct
+North Carolina;Yancey County;Precinct 02 CAN	precinct
+North Carolina;Yancey County;Precinct 10 PEN	precinct
+North Carolina;Yancey County;Precinct 08 CRA	precinct
+North Carolina;Yancey County;Precinct 07 BRU	precinct
+North Carolina;Yancey County;Precinct 03 EGY	precinct
+North Carolina;Yancey County;Precinct 06 JAC	precinct
+North Carolina;Yancey County;Precinct 05 GRE	precinct
+North Carolina;Yancey County;Precinct 09 SOU	precinct
+North Carolina;Wilson County;Precinct PRWK	precinct
+North Carolina;Wilson County;Precinct PRWI	precinct
+North Carolina;Wilson County;Precinct PRWD	precinct
+North Carolina;Wilson County;Precinct PRWB	precinct
+North Carolina;Wilson County;Precinct PRST	precinct
+North Carolina;Wilson County;Precinct PRWA	precinct
+North Carolina;Wilson County;Precinct PRWC	precinct
+North Carolina;Wilson County;Precinct PRTA	precinct
+North Carolina;Wilson County;Precinct PRSP	precinct
+North Carolina;Wilson County;Precinct PRGA	precinct
+North Carolina;Wilson County;Precinct PRWM	precinct
+North Carolina;Wilson County;Precinct PRWH	precinct
+North Carolina;Wilson County;Precinct PRWR	precinct
+North Carolina;Wilson County;Precinct PRSA	precinct
+North Carolina;Wilson County;Precinct PRWP	precinct
+North Carolina;Wilson County;Precinct PRTO	precinct
+North Carolina;Wilson County;Precinct PRBL	precinct
+North Carolina;Wilson County;Precinct PRWJ	precinct
+North Carolina;Wilson County;Precinct PRWE	precinct
+North Carolina;Wilson County;Precinct PRWQ	precinct
+North Carolina;Wilson County;Precinct PRWL	precinct
+North Carolina;Wilson County;Precinct PRCR	precinct
+North Carolina;Wilson County;Precinct PROL	precinct
+North Carolina;Wilson County;Precinct PRWN	precinct
+North Carolina;Watauga County;Precinct 15	precinct
+North Carolina;Watauga County;Precinct 20	precinct
+North Carolina;Watauga County;OS ASU	precinct
+North Carolina;Watauga County;OS DEEP GAP	precinct
+North Carolina;Watauga County;Precinct 12	precinct
+North Carolina;Watauga County;Precinct 07	precinct
+North Carolina;Watauga County;Precinct 17	precinct
+North Carolina;Watauga County;Precinct 04	precinct
+North Carolina;Watauga County;Precinct 10	precinct
+North Carolina;Watauga County;Precinct 13	precinct
+North Carolina;Watauga County;Precinct 06	precinct
+North Carolina;Watauga County;Precinct 03	precinct
+North Carolina;Watauga County;Precinct 18	precinct
+North Carolina;Watauga County;Precinct 01	precinct
+North Carolina;Watauga County;PROVISIONAL	precinct
+North Carolina;Watauga County;Precinct 02	precinct
+North Carolina;Watauga County;OS BLOWING ROCK	precinct
+North Carolina;Watauga County;ABSENTEE MAIL	precinct
+North Carolina;Watauga County;Precinct 11	precinct
+North Carolina;Watauga County;Precinct 08	precinct
+North Carolina;Watauga County;Precinct 05	precinct
+North Carolina;Watauga County;OS ADMIN	precinct
+North Carolina;Watauga County;Precinct 16	precinct
+North Carolina;Watauga County;Precinct 14	precinct
+North Carolina;Watauga County;Precinct 19	precinct
+North Carolina;Watauga County;OS WWCC	precinct
+North Carolina;Watauga County;OS MEAT CAMP	precinct
+North Carolina;Watauga County;Precinct 09	precinct
+North Carolina;Watauga County;TRANSFER	precinct
+North Carolina;Wilkes County;Precinct 114	precinct
+North Carolina;Wilkes County;Precinct 112	precinct
+North Carolina;Wilkes County;Precinct 105	precinct
+North Carolina;Wilkes County;Precinct 104	precinct
+North Carolina;Wilkes County;Precinct 102	precinct
+North Carolina;Wilkes County;ABSENTEE MAIL	precinct
+North Carolina;Wilkes County;Precinct 128	precinct
+North Carolina;Wilkes County;Precinct 123	precinct
+North Carolina;Wilkes County;Precinct 115A	precinct
+North Carolina;Wilkes County;Precinct 110	precinct
+North Carolina;Wilkes County;Precinct 119	precinct
+North Carolina;Wilkes County;Precinct 103	precinct
+North Carolina;Wilkes County;Precinct 125	precinct
+North Carolina;Wilkes County;Precinct 122	precinct
+North Carolina;Wilkes County;ONE STOP MILLERS CREEK	precinct
+North Carolina;Wilkes County;Precinct 127	precinct
+North Carolina;Wilkes County;Precinct 121	precinct
+North Carolina;Wilkes County;Precinct 107	precinct
+North Carolina;Wilkes County;Precinct 101	precinct
+North Carolina;Wilkes County;Precinct 126	precinct
+North Carolina;Wilkes County;Precinct 124	precinct
+North Carolina;Wilkes County;Precinct 129	precinct
+North Carolina;Wilkes County;PROVISIONAL	precinct
+North Carolina;Wilkes County;Precinct 120	precinct
+North Carolina;Wilkes County;Precinct 106	precinct
+North Carolina;Wilkes County;Precinct 117	precinct
+North Carolina;Wilkes County;Precinct 111	precinct
+North Carolina;Wilkes County;Precinct 113	precinct
+North Carolina;Wilkes County;TRANSFER	precinct
+North Carolina;Wilkes County;Precinct 118	precinct
+North Carolina;Wilkes County;Precinct 109	precinct
+North Carolina;Wilkes County;Precinct 108	precinct
+North Carolina;Wilkes County;ONE STOP PLEASANT HILL	precinct
+North Carolina;Wilkes County;ONE STOP OFFICE	precinct
+North Carolina;Alleghany County;ABSENTEE MAIL	precinct
+North Carolina;Alleghany County;ONE STOP	precinct
+North Carolina;Alleghany County;PROVISIONAL	precinct
+North Carolina;Buncombe County;AVML	precinct
+North Carolina;Buncombe County;BMBL	precinct
+North Carolina;Buncombe County;ECBL	precinct
+North Carolina;Buncombe County;NABL	precinct
+North Carolina;Buncombe County;SBBL	precinct
+North Carolina;Buncombe County;WABL	precinct
+North Carolina;Buncombe County;WVTH	precinct
+North Carolina;Buncombe County;WGSC	precinct
+North Carolina;Burke County;OS SR CENTER PAPER	precinct
+North Carolina;Columbus County;BOLT-OS	precinct
+North Carolina;Columbus County;CHAD-OS	precinct
+North Carolina;Columbus County;ECOL-OS	precinct
+North Carolina;Columbus County;FBLUFF-OS	precinct
+North Carolina;Columbus County;LOBBY OS	precinct
+North Carolina;Columbus County;ABSENTEE	precinct
+North Carolina;Columbus County;TCITY-OS	precinct
+North Carolina;Columbus County;PROVISIONAL	precinct
+North Carolina;Gaston County;ABSENTEE	precinct
+North Carolina;Gaston County;BOE DALLAS	precinct
+North Carolina;Gaston County;PROVISIONAL	precinct
+North Carolina;Gaston County;TRANSFER	precinct
+North Carolina;Gaston County;BOE MOUNT HOLLY	precinct
+North Carolina;Gaston County;OS BOE OFFICE	precinct
+North Carolina;Guilford County;CURBSIDE	precinct
+North Carolina;Guilford County;ABSENTEE BY MAIL	precinct
+North Carolina;Halifax County;OS ENFIELD	precinct
+North Carolina;Halifax County;OS HALIFAX	precinct
+North Carolina;Halifax County;OS SCOTLAND NECK	precinct
+North Carolina;Halifax County;OS WELDON	precinct
+North Carolina;Johnston County;OS SMITHFIELD	precinct
+North Carolina;Johnston County;OS CLEVELAND	precinct
+North Carolina;Johnston County;OS CLAYTON	precinct
+North Carolina;Mecklenburg County;ABSENTEE BY MAIL	precinct
+North Carolina;Mecklenburg County;CURBSIDE	precinct
+North Carolina;Mecklenburg County;PROVISIONAL	precinct
+North Carolina;Forsyth County;OS LEW	precinct
+North Carolina;Forsyth County;OS KVFW	precinct
+North Carolina;Forsyth County;OS RURL	precinct
+North Carolina;Forsyth County;OS LOB	precinct
+North Carolina;Forsyth County;OS SOUT	precinct
+North Carolina;Guilford County;PROVISIONAL	precinct
+North Carolina;Chatham County;ABS MAIL	precinct
+North Carolina;Dare County;OS PITTS	precinct
+North Carolina;Cumberland County;ONE STOP A	precinct
+North Carolina;Cumberland County;ONE STOP B	precinct
+North Carolina;Cumberland County;ONE STOP C	precinct
+North Carolina;Cumberland County;ONE STOP D	precinct
+North Carolina;Cumberland County;ONE STOP E	precinct
+North Carolina;Cumberland County;ONE STOP J	precinct
+North Carolina;Cumberland County;PROVISIONAL	precinct
+North Carolina;Cumberland County;TRANSFER	precinct
+North Carolina;Cumberland County;ABSENTEE	precinct
+North Carolina;Currituck County;ABSENTEE	precinct
+North Carolina;Bladen County;OS EAST ARCADIA	precinct
+North Carolina;Bladen County;OS LIBRARY	precinct
+North Carolina;Bladen County;OS DUBLIN	precinct
+North Carolina;Bladen County;OS BLADENBORO	precinct
+North Carolina;Bladen County;MAIL ABSENTEE	precinct
+North Carolina;Caswell County;ABSENTEE BY MAIL	precinct
+North Carolina;Hertford County;ABSENTEE	precinct
+North Carolina;Hertford County;ONE STOP	precinct
+North Carolina;Hertford County;PROVISIONAL	precinct
+North Carolina;Hyde County;ABSENTEE MAIL	precinct
+North Carolina;Hyde County;ONE STOP BOE	precinct
+North Carolina;Hyde County;ONE STOP OCK	precinct
+North Carolina;Hyde County;PROVISIONAL	precinct
+North Carolina;Hyde County;TRANSFER	precinct
+North Carolina;McDowell County;ABSENTEE MAIL	precinct
+North Carolina;McDowell County;OS LOWER LEVEL SR CENTER	precinct
+North Carolina;McDowell County;PROVISIONAL	precinct
+North Carolina;Bertie County;ABSENTEE	precinct
+North Carolina;Bertie County;OS-LOB	precinct
+North Carolina;Bertie County;OS-POW	precinct
+North Carolina;Cabarrus County;ONE STOP	precinct
+North Carolina;Caldwell County;ONE STOP GRANITE FALLS	precinct
+North Carolina;Caldwell County;ONE STOP LENOIR	precinct
+North Carolina;Henderson County;BOEOS	precinct
+North Carolina;Macon County;ABSENTEE MAIL	precinct
+North Carolina;Macon County;ONE STOP BOE	precinct
+North Carolina;Macon County;ONE STOP HOS	precinct
+North Carolina;Durham County;OS DBOE	precinct
+North Carolina;Durham County;OS EAST	precinct
+North Carolina;Durham County;OS NORTH	precinct
+North Carolina;Durham County;OS SOUTH	precinct
+North Carolina;Gates County;ABSENTEE	precinct
+North Carolina;Gates County;ONE STOP	precinct
+North Carolina;Gates County;PROVISIONAL	precinct
+North Carolina;Gates County;ONE STOP BOE	precinct
+North Carolina;Lincoln County;ABSENTEE	precinct
+North Carolina;Lincoln County;TRANSFER	precinct
+North Carolina;Duplin County;TRANSFER	precinct
+North Carolina;Harnett County;OS ANDERSON	precinct
+North Carolina;Harnett County;OS ANGIER	precinct
+North Carolina;Nash County;MT PLEASANT OS	precinct
+North Carolina;New Hanover County;OS CAB	precinct
+North Carolina;New Hanover County;OS CFCC	precinct
+North Carolina;New Hanover County;OS GVT	precinct
+North Carolina;New Hanover County;OS NLB	precinct
+North Carolina;New Hanover County;OS SRC	precinct
+North Carolina;Pitt County;OS AYDEN	precinct
+North Carolina;Pitt County;OS FARMVILLE	precinct
+North Carolina;Wake County;ABSEN	precinct
+North Carolina;Wake County;OSCA	precinct
+North Carolina;Wake County;OSCH	precinct
+North Carolina;Wake County;OSHS	precinct
+North Carolina;Wake County;OSLL	precinct
+North Carolina;Wake County;OSLOB	precinct
+North Carolina;Wake County;OSNR	precinct
+North Carolina;Wake County;PROVI	precinct
+North Carolina;Wake County;TRANS	precinct
+North Carolina;Moore County;ONE STOP	precinct
+North Carolina;Perquimans County;CURBSIDE	precinct
+North Carolina;Robeson County;OS REDS	precinct
+North Carolina;Robeson County;OS PEM	precinct
+North Carolina;Robeson County;OS MX	precinct
+North Carolina;Robeson County;OS ML	precinct
+North Carolina;Robeson County;PROVISONAL	precinct
+North Carolina;Robeson County;OS STP	precinct
+North Carolina;Robeson County;OS FAIR	precinct
+North Carolina;Robeson County;OS LOB	precinct
+North Carolina;Robeson County;ABSENTEE	precinct
+North Carolina;Pasquotank County;ABSENTEE	precinct
+North Carolina;Pasquotank County;ONE STOP	precinct
+North Carolina;Pasquotank County;PROVISIONAL	precinct
+North Carolina;Pasquotank County;TRANSFER	precinct
+North Carolina;Wilson County;ABSENTEE	precinct
+North Carolina;Wilson County;PROVISIONAL	precinct
+North Carolina;Wilson County;ONE STOP	precinct
+North Carolina;Orange County;OS SEYMOUR	precinct
+North Carolina;Orange County;OS EFLAND	precinct
+North Carolina;Orange County;OS CHPL OF CROSS	precinct
+North Carolina;Orange County;OS CARB TWN HALL	precinct
+North Carolina;Orange County;OS BOE	precinct
+North Carolina;Orange County;ABSENTEE BY MAIL	precinct
+North Carolina;Wayne County;ONE STOP	precinct
+North Carolina;Northampton County;ONE STOP RICH SQUARE	precinct
+North Carolina;Richmond County;ABSENTEE	precinct
+North Carolina;Scotland County;PROVISIONAL	precinct
+North Carolina;Washington County;ABSENTEE MAIL	precinct
+North Carolina;Northampton County;ONE STOP GASTON	precinct
+North Carolina;Northampton County;ONE STOP OFFICE	precinct
+North Carolina;Northampton County;ABSENTEE MAIL	precinct
+North Carolina;Union County;OS WCC	precinct
+North Carolina;Union County;OS WCHA	precinct
+North Carolina;Union County;OS WSCH	precinct
+North Carolina;Union County;OS HBR	precinct
+North Carolina;Union County;OS LOBB	precinct
+North Carolina;Union County;OS MSP	precinct
+North Carolina;Union County;OS STAL	precinct
+North Carolina;General Assembly House of Representatives District 1	state-house
+North Carolina;General Assembly House of Representatives District 2	state-house
+North Carolina;General Assembly House of Representatives District 3	state-house
+North Carolina;General Assembly House of Representatives District 4	state-house
+North Carolina;General Assembly House of Representatives District 5	state-house
+North Carolina;General Assembly House of Representatives District 6	state-house
+North Carolina;General Assembly House of Representatives District 7	state-house
+North Carolina;General Assembly House of Representatives District 8	state-house
+North Carolina;General Assembly House of Representatives District 9	state-house
+North Carolina;General Assembly House of Representatives District 10	state-house
+North Carolina;General Assembly House of Representatives District 11	state-house
+North Carolina;General Assembly House of Representatives District 12	state-house
+North Carolina;General Assembly House of Representatives District 13	state-house
+North Carolina;General Assembly House of Representatives District 14	state-house
+North Carolina;General Assembly House of Representatives District 15	state-house
+North Carolina;General Assembly House of Representatives District 16	state-house
+North Carolina;General Assembly House of Representatives District 17	state-house
+North Carolina;General Assembly House of Representatives District 18	state-house
+North Carolina;General Assembly House of Representatives District 19	state-house
+North Carolina;General Assembly House of Representatives District 20	state-house
+North Carolina;General Assembly House of Representatives District 21	state-house
+North Carolina;General Assembly House of Representatives District 22	state-house
+North Carolina;General Assembly House of Representatives District 23	state-house
+North Carolina;General Assembly House of Representatives District 24	state-house
+North Carolina;General Assembly House of Representatives District 25	state-house
+North Carolina;General Assembly House of Representatives District 26	state-house
+North Carolina;General Assembly House of Representatives District 27	state-house
+North Carolina;General Assembly House of Representatives District 28	state-house
+North Carolina;General Assembly House of Representatives District 29	state-house
+North Carolina;General Assembly House of Representatives District 30	state-house
+North Carolina;General Assembly House of Representatives District 31	state-house
+North Carolina;General Assembly House of Representatives District 32	state-house
+North Carolina;General Assembly House of Representatives District 33	state-house
+North Carolina;General Assembly House of Representatives District 34	state-house
+North Carolina;General Assembly House of Representatives District 35	state-house
+North Carolina;General Assembly House of Representatives District 36	state-house
+North Carolina;General Assembly House of Representatives District 37	state-house
+North Carolina;General Assembly House of Representatives District 38	state-house
+North Carolina;General Assembly House of Representatives District 39	state-house
+North Carolina;General Assembly House of Representatives District 40	state-house
+North Carolina;General Assembly House of Representatives District 41	state-house
+North Carolina;General Assembly House of Representatives District 42	state-house
+North Carolina;General Assembly House of Representatives District 43	state-house
+North Carolina;General Assembly House of Representatives District 44	state-house
+North Carolina;General Assembly House of Representatives District 45	state-house
+North Carolina;General Assembly House of Representatives District 46	state-house
+North Carolina;General Assembly House of Representatives District 47	state-house
+North Carolina;General Assembly House of Representatives District 48	state-house
+North Carolina;General Assembly House of Representatives District 49	state-house
+North Carolina;General Assembly House of Representatives District 50	state-house
+North Carolina;General Assembly House of Representatives District 51	state-house
+North Carolina;General Assembly House of Representatives District 52	state-house
+North Carolina;General Assembly House of Representatives District 53	state-house
+North Carolina;General Assembly House of Representatives District 54	state-house
+North Carolina;General Assembly House of Representatives District 55	state-house
+North Carolina;General Assembly House of Representatives District 56	state-house
+North Carolina;General Assembly House of Representatives District 57	state-house
+North Carolina;General Assembly House of Representatives District 58	state-house
+North Carolina;General Assembly House of Representatives District 59	state-house
+North Carolina;General Assembly House of Representatives District 60	state-house
+North Carolina;General Assembly House of Representatives District 61	state-house
+North Carolina;General Assembly House of Representatives District 62	state-house
+North Carolina;General Assembly House of Representatives District 63	state-house
+North Carolina;General Assembly House of Representatives District 64	state-house
+North Carolina;General Assembly House of Representatives District 65	state-house
+North Carolina;General Assembly House of Representatives District 66	state-house
+North Carolina;General Assembly House of Representatives District 67	state-house
+North Carolina;General Assembly House of Representatives District 68	state-house
+North Carolina;General Assembly House of Representatives District 69	state-house
+North Carolina;General Assembly House of Representatives District 70	state-house
+North Carolina;General Assembly House of Representatives District 71	state-house
+North Carolina;General Assembly House of Representatives District 72	state-house
+North Carolina;General Assembly House of Representatives District 73	state-house
+North Carolina;General Assembly House of Representatives District 74	state-house
+North Carolina;General Assembly House of Representatives District 75	state-house
+North Carolina;General Assembly House of Representatives District 76	state-house
+North Carolina;General Assembly House of Representatives District 77	state-house
+North Carolina;General Assembly House of Representatives District 78	state-house
+North Carolina;General Assembly House of Representatives District 79	state-house
+North Carolina;General Assembly House of Representatives District 80	state-house
+North Carolina;General Assembly House of Representatives District 81	state-house
+North Carolina;General Assembly House of Representatives District 82	state-house
+North Carolina;General Assembly House of Representatives District 83	state-house
+North Carolina;General Assembly House of Representatives District 84	state-house
+North Carolina;General Assembly House of Representatives District 85	state-house
+North Carolina;General Assembly House of Representatives District 86	state-house
+North Carolina;General Assembly House of Representatives District 87	state-house
+North Carolina;General Assembly House of Representatives District 88	state-house
+North Carolina;General Assembly House of Representatives District 89	state-house
+North Carolina;General Assembly House of Representatives District 90	state-house
+North Carolina;General Assembly House of Representatives District 91	state-house
+North Carolina;General Assembly House of Representatives District 92	state-house
+North Carolina;General Assembly House of Representatives District 93	state-house
+North Carolina;General Assembly House of Representatives District 94	state-house
+North Carolina;General Assembly House of Representatives District 95	state-house
+North Carolina;General Assembly House of Representatives District 96	state-house
+North Carolina;General Assembly House of Representatives District 97	state-house
+North Carolina;General Assembly House of Representatives District 98	state-house
+North Carolina;General Assembly House of Representatives District 99	state-house
+North Carolina;General Assembly House of Representatives District 100	state-house
+North Carolina;General Assembly House of Representatives District 101	state-house
+North Carolina;General Assembly House of Representatives District 102	state-house
+North Carolina;General Assembly House of Representatives District 103	state-house
+North Carolina;General Assembly House of Representatives District 104	state-house
+North Carolina;General Assembly House of Representatives District 105	state-house
+North Carolina;General Assembly House of Representatives District 106	state-house
+North Carolina;General Assembly House of Representatives District 107	state-house
+North Carolina;General Assembly House of Representatives District 108	state-house
+North Carolina;General Assembly House of Representatives District 109	state-house
+North Carolina;General Assembly House of Representatives District 110	state-house
+North Carolina;General Assembly House of Representatives District 111	state-house
+North Carolina;General Assembly House of Representatives District 112	state-house
+North Carolina;General Assembly House of Representatives District 113	state-house
+North Carolina;General Assembly House of Representatives District 114	state-house
+North Carolina;General Assembly House of Representatives District 115	state-house
+North Carolina;General Assembly House of Representatives District 116	state-house
+North Carolina;General Assembly House of Representatives District 117	state-house
+North Carolina;General Assembly House of Representatives District 118	state-house
+North Carolina;General Assembly House of Representatives District 119	state-house
+North Carolina;General Assembly House of Representatives District 120	state-house
+North Carolina;General Assembly Senate District 1	state-senate
+North Carolina;General Assembly Senate District 2	state-senate
+North Carolina;General Assembly Senate District 3	state-senate
+North Carolina;General Assembly Senate District 4	state-senate
+North Carolina;General Assembly Senate District 5	state-senate
+North Carolina;General Assembly Senate District 6	state-senate
+North Carolina;General Assembly Senate District 7	state-senate
+North Carolina;General Assembly Senate District 8	state-senate
+North Carolina;General Assembly Senate District 9	state-senate
+North Carolina;General Assembly Senate District 10	state-senate
+North Carolina;General Assembly Senate District 11	state-senate
+North Carolina;General Assembly Senate District 12	state-senate
+North Carolina;General Assembly Senate District 13	state-senate
+North Carolina;General Assembly Senate District 14	state-senate
+North Carolina;General Assembly Senate District 15	state-senate
+North Carolina;General Assembly Senate District 16	state-senate
+North Carolina;General Assembly Senate District 17	state-senate
+North Carolina;General Assembly Senate District 18	state-senate
+North Carolina;General Assembly Senate District 19	state-senate
+North Carolina;General Assembly Senate District 20	state-senate
+North Carolina;General Assembly Senate District 21	state-senate
+North Carolina;General Assembly Senate District 22	state-senate
+North Carolina;General Assembly Senate District 23	state-senate
+North Carolina;General Assembly Senate District 24	state-senate
+North Carolina;General Assembly Senate District 25	state-senate
+North Carolina;General Assembly Senate District 26	state-senate
+North Carolina;General Assembly Senate District 27	state-senate
+North Carolina;General Assembly Senate District 28	state-senate
+North Carolina;General Assembly Senate District 29	state-senate
+North Carolina;General Assembly Senate District 30	state-senate
+North Carolina;General Assembly Senate District 31	state-senate
+North Carolina;General Assembly Senate District 32	state-senate
+North Carolina;General Assembly Senate District 33	state-senate
+North Carolina;General Assembly Senate District 34	state-senate
+North Carolina;General Assembly Senate District 35	state-senate
+North Carolina;General Assembly Senate District 36	state-senate
+North Carolina;General Assembly Senate District 37	state-senate
+North Carolina;General Assembly Senate District 38	state-senate
+North Carolina;General Assembly Senate District 39	state-senate
+North Carolina;General Assembly Senate District 40	state-senate
+North Carolina;General Assembly Senate District 41	state-senate
+North Carolina;General Assembly Senate District 42	state-senate
+North Carolina;General Assembly Senate District 43	state-senate
+North Carolina;General Assembly Senate District 44	state-senate
+North Carolina;General Assembly Senate District 45	state-senate
+North Carolina;General Assembly Senate District 46	state-senate
+North Carolina;General Assembly Senate District 47	state-senate
+North Carolina;General Assembly Senate District 48	state-senate
+North Carolina;General Assembly Senate District 49	state-senate
+North Carolina;General Assembly Senate District 50	state-senate
+North Carolina;US Congress House of Representatives District 1	congressional
+North Carolina;US Congress House of Representatives District 2	congressional
+North Carolina;US Congress House of Representatives District 3	congressional
+North Carolina;US Congress House of Representatives District 4	congressional
+North Carolina;US Congress House of Representatives District 5	congressional
+North Carolina;US Congress House of Representatives District 6	congressional
+North Carolina;US Congress House of Representatives District 7	congressional
+North Carolina;US Congress House of Representatives District 8	congressional
+North Carolina;US Congress House of Representatives District 9	congressional
+North Carolina;US Congress House of Representatives District 10	congressional
+North Carolina;US Congress House of Representatives District 11	congressional
+North Carolina;US Congress House of Representatives District 12	congressional
+North Carolina;US Congress House of Representatives District 13	congressional
+North Carolina;Judicial District 22B	judicial

@@ -18,6 +18,7 @@ class CdfDbException(Exception):
 
 
 def create_database(con,cur,db_name):
+    # TODO review logic & messages
     sure = input('If the db exists, it will be deleted and data will be lost. Are you absolutely sure (y/n)?\n')
     if sure == 'y':
         con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
@@ -160,7 +161,7 @@ def add_integer_cols(session,table,col_list):
 
 
 def drop_cols(session,table,col_list):
-    drop = ','.join([f' DROP COLUMN {c}' for c in col_list])
+    drop = ','.join([f' DROP COLUMN "{c}"' for c in col_list])
     q = f'ALTER TABLE "{table}" {drop}'
     sql_ids=[]
     strs = []
@@ -169,6 +170,7 @@ def drop_cols(session,table,col_list):
 
 
 def get_cdf_db_table_names(eng):
+    """This is postgresql-specific"""
     db_columns = pd.read_sql_table('columns',eng,schema='information_schema')
     public = db_columns[db_columns.table_schema=='public']
     cdf_elements = set()
@@ -184,12 +186,43 @@ def get_cdf_db_table_names(eng):
         else:
             # test columns
             cols = public[public.table_name == t].column_name.unique()
-            if set(cols) == {'Id','Txt'}:
+            if set(cols) == {'Id','Txt'} or set(cols) == {'Id','Selection'}:
                 cdf_enumerations.add(t)
             else:
                 cdf_elements.add(t)
     # TODO order cdf_elements and cdf_joins by references to one another
     return cdf_elements, cdf_enumerations, cdf_joins, others
+
+
+def order_by_ref(elements,table_type,project_root):
+    """
+    Return <table_list> sorted by foreign key references from
+    the definitions in the CDF_schema_def_info/<table_type> directory
+    (Ideally this should pull from database instead, which requires
+    true foreign keys everywhere.)
+    """
+    dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info',table_type)
+    ok_list = []
+    elements_to_process = list(elements)
+    while elements_to_process:
+        element = elements_to_process[0]
+        # check foreign keys; if any refers to an elt yet to be processed, change to that elt
+        #  note that any foreign keys for elements are to other elements, so it's OK to do this without considering
+        #  joins first or concurrently.
+        foreign_keys = pd.read_csv(os.path.join(dir,element,'foreign_keys.txt'),sep='\t')
+        for i,r in foreign_keys.iterrows():
+            fk_set = set(r['refers_to'].split(';'))    # lists all targets of the foreign key r['fieldname']
+            try:
+                element = [e for e in fk_set if e in elements_to_process].pop()
+                break
+            except IndexError:
+                pass
+        # append element to ok_list
+        ok_list.append(element)
+        # remove element from list of yet-to-be-processed
+        elements_to_process.remove(element)
+
+    return ok_list
 
 
 def read_enums_from_db_table(sess,element):
@@ -226,6 +259,7 @@ def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
     con.close()
     return return_item
 
+
 # TODO cosmetic: get rid of schema argument
 def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_votecount=False,return_records='all'):
     """
@@ -240,6 +274,11 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     target = pd.read_sql_table(table,session.bind,index_col=index_col)
     # VoteCount table gets added columns during raw data upload, needs special treatment
 
+    if dframe.empty:
+        if return_records == 'original':
+            return dframe
+        else:
+            return target
     # partition the columns
     dframe_only_cols = [x for x in dframe.columns if x not in target.columns]
     target_only_cols = [x for x in target.columns if x not in dframe.columns]
@@ -248,9 +287,9 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
 
     if raw_to_votecount:
         # join with SECVCJ
-        secvcj = pd.read_sql_table('SelectionElectionContestVoteCountJoin',session.bind,index_col=None)
+        secvcj = pd.read_sql_table('ElectionContestSelectionVoteCountJoin',session.bind,index_col=None)
         # drop columns that don't belong, but were temporarily created in order to get VoteCount_Id correctly into SECVCJ
-        target=target.drop(['Election_Id','Contest_Id','Selection_Id'],axis=1)
+        target=target.drop(['ElectionContestJoin_Id','ContestSelectionJoin_Id'],axis=1)
         target=target.merge(secvcj,left_on='Id',right_on='VoteCount_Id')
         target=target.drop(['Id','VoteCount_Id'],axis=1)
     df_to_db = dframe.copy()
@@ -282,8 +321,8 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     up_to_date_dframe = pd.read_sql_table(table,session.bind)
 
     if raw_to_votecount:
-        # need to drop rows that were read originally from target -- these will have null Election_Id
-        up_to_date_dframe=up_to_date_dframe[up_to_date_dframe['Election_Id'].notnull()]
+        # need to drop rows that were read originally from target -- these will have null ElectionContestJoin_Id
+        up_to_date_dframe=up_to_date_dframe[up_to_date_dframe['ElectionContestJoin_Id'].notnull()]
     if flush:
         session.flush()
     if return_records == 'original':

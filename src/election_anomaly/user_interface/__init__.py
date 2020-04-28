@@ -10,12 +10,42 @@ import numpy as np
 import csv
 from sqlalchemy.orm import sessionmaker
 import os
+from pathlib import Path
 import ntpath
 import re
 import datetime
 import states_and_files as sf
 import random
 from tkinter import filedialog
+
+
+def get_project_root():
+	p_root = os.getcwd().split('election_anomaly')[0]
+	confirmed = False
+	subdir_list = ['election_anomaly','jurisdictions','mungers']
+	while not confirmed:
+		missing = [x for x in subdir_list if x not in os.listdir(p_root)]
+		print(f'\nSuggested project root directory is:\n\t{p_root}')
+		if missing:
+			print(f'The suggested directory does not contain required subdirectories {",".join(missing)}')
+			new_pr = input(f'Designate a different project root (y/n)?\n')
+			if new_pr == 'y':
+				p_root = input(f'Enter absolute path of project root.\n')
+			else:
+				input('Add required subdirectories and hit return to continue.\n')
+		elif input('Is this the correct project root (y/n)?\n') == 'y':
+			confirmed = True
+	return p_root
+
+
+def pick_datafile(project_root,sess):
+	print("Locate the datafile in the file system.")
+	fpath = pick_filepath(initialdir=project_root)
+	filename = ntpath.basename(fpath)
+	datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
+		sess,project_root,'_datafile','short_name',known_info_d={'file_name':filename})
+	# TODO typing url into debug window opens the web page; want it to just act like a string
+	return datafile_record_d, datafile_enumeration_name_d, fpath
 
 
 def pick_filepath(initialdir='~/'):
@@ -39,52 +69,26 @@ def pick_filepath(initialdir='~/'):
 	return fpath
 
 
-def pick_datafile(project_root,sess):
-	print("Locate the datafile in the file system.")
-	fpath = pick_filepath(initialdir=project_root)
-	filename = ntpath.basename(fpath)
-	datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
-		sess,project_root,'_datafile','short_name',known_info_d={'file_name':filename})
-	# TODO typing url into debug window opens the web page; want it to just act like a string
-	return datafile_record_d, datafile_enumeration_name_d, fpath
-
-
-def pick_paramfile(project_root):
-	print('Locate the parameter file for your postgreSQL database.')
-	fpath= pick_filepath()
-	return fpath
-
-
-def get_project_root():
-	p_root = os.getcwd().split('election_anomaly')[0]
-	confirmed = False
-	subdir_list = ['election_anomaly','jurisdictions','mungers']
-	while not confirmed:
-		missing = [x for x in subdir_list if x not in os.listdir(p_root)]
-		print(f'\nSuggested project root directory is:\n\t{p_root}')
-		if missing:
-			print(f'The suggested directory does not contain required subdirectories {",".join(missing)}')
-			new_pr = input(f'Designate a different project root (y/n)?\n')
-			if new_pr == 'y':
-				p_root = input(f'Enter absolute path of project root.\n')
-			else:
-				input('Add required subdirectories and hit return to continue.\n')
-		elif input('Is this the correct project root (y/n)?\n') == 'y':
-			confirmed = True
-	return p_root
-
-
-def pick_one(df,return_col,item='row',required=False):
-	"""Returns index and <return_col> value of item chosen by user"""
-	# TODO check that index entries are positive ints (and handle error)
+def pick_one(choices,return_col,item='row',required=False):
+	"""Returns index and <return_col> value of item chosen by user
+	<choices> is a dataframe, unless <return_col> is None, in which case <choices>
+	may be a list or a set"""
 
 	# show wider view
-	pd.set_option('display.max_columns',9)
+	pd.set_option('display.max_columns',3)
 
+	if return_col is None:
+		df = pd.DataFrame(np.array(list(choices)).transpose(),columns=[item])
+		return_col = item
+		choices = df  # regularizes 'choices.index[choice]' in return
+	else:
+		df = choices.copy()
+		df.index = range(choices.shape[0])
 	if df.empty:
 		return None, None
 	print(df)
-	choice = max(df.index) + 1  # guaranteed not to be in df.index at start
+
+	choice = -1  # guaranteed not to be in df.index
 
 	while choice not in df.index:
 		if not required:
@@ -100,12 +104,18 @@ def pick_one(df,return_col,item='row',required=False):
 				if choice not in df.index:
 					print(f'Enter an option from the leftmost column. Please try again.')
 			except ValueError:
-				print(f'You must enter a number {req_str}, then hit return. Please try again.')
+				print(f'You must enter a number{req_str}, then hit return. Please try again.')
 	print(f'Chosen {item} is {df.loc[choice,return_col]}\n\n')
 
 	# return view to default width
 	pd.reset_option('display.max_columns')
-	return choice, df.loc[choice,return_col]
+	return choices.index[choice], df.loc[choice,return_col]
+
+
+def pick_paramfile(project_root):
+	print('Locate the parameter file for your postgreSQL database.')
+	fpath= pick_filepath()
+	return fpath
 
 
 def resolve_nulls(df,source_file,col_list=None,kwargs={}):
@@ -118,11 +128,16 @@ def resolve_nulls(df,source_file,col_list=None,kwargs={}):
 	return
 
 
-def show_sample(st,items,condition,outfile='shown_items.txt',dir=None):
-	print(f'There are {len(st)} {items} that {condition}:')
-	if len(st) == 0:
+def show_sample(input_iter,items,condition,outfile='shown_items.txt',dir=None,export=False):
+	# TODO revise to allow sample of dataframe and export of dataframe. E.g.
+	#  so that Candidate and Party together can be exported.
+	print(f'There are {len(input_iter)} {items} that {condition}:')
+	if len(input_iter) == 0:
 		return
-	st = list(st)
+	if isinstance(input_iter,pd.DataFrame):
+		st = input_iter.to_csv(sep='\t').split('\n')
+	else:
+		st = list(input_iter)
 	st.sort()
 
 	if len(st) < 11:
@@ -138,17 +153,19 @@ def show_sample(st,items,condition,outfile='shown_items.txt',dir=None):
 		if show_all == 'y':
 			for r in st:
 				print(f'{r}')
-	if dir is None:
-		dir = input(f'Export all {len(st)} {items} that {condition}? If so, enter directory for export\n'
-					f'(Current directory is {os.getcwd()})\n')
-	elif os.path.isdir(dir):
-		export = input(f'Export all {len(st)} {items} that {condition} to {outfile} (y/n)?\n')
-		if export == 'y':
-			with open(os.path.join(dir,outfile),'a') as f:
-				f.write('\n'.join(st))
-			print(f'{items} exported to {os.path.join(dir,outfile)}')
-	elif dir != '':
-		print(f'Directory {dir} does not exist.')
+	if export:
+		if dir is None:
+			dir = input(f'Export all {len(st)} {items} that {condition}? If so, enter directory for export.'
+						f'Existing file will be overwritten.\n'
+						f'(Current directory is {os.getcwd()})\n')
+		if os.path.isdir(dir):
+			export = input(f'Export all {len(st)} {items} that {condition} to {outfile} (y/n)?\n')
+			if export == 'y':
+				with open(os.path.join(dir,outfile),'w') as f:
+					f.write('\n'.join(st))
+				print(f'{items} exported to {os.path.join(dir,outfile)}')
+		elif dir != '':
+			print(f'Directory {dir} does not exist.')
 	return
 
 
@@ -230,73 +247,30 @@ def check_count_columns(df,file,mungerdir,cdf_schema_def_dir):
 	return df
 
 
-def pick_juris_from_filesystem(con,project_root,path_to_jurisdictions='jurisdictions/',jurisdiction_name=None):
+def pick_juris_from_filesystem(
+		project_root,path_to_jurisdictions='jurisdictions/',jurisdiction_name=None,check_files=False):
 	"""Returns a State object.
 	If <jurisdiction_name> is given, this just initializes based on info
 	in the folder with that name; """
 	# TODO need to get the ReportingUnit.Id for the jurisdiction somewhere and pass it to the row-by-row processor
 	if jurisdiction_name is None:
-		choice_list = [x for x in os.listdir(path_to_jurisdictions) if os.path.isdir(os.path.join(path_to_jurisdictions,x))]
-		juris_df = pd.DataFrame(choice_list,columns=['Jurisdiction'])
 		print('Pick the filesystem directory for your jurisdiction.')
-		juris_idx,jurisdiction_name = pick_one(juris_df,'Jurisdiction',item='jurisdiction')
+		choice_list = [x for x in os.listdir(path_to_jurisdictions) if
+					   os.path.isdir(os.path.join(path_to_jurisdictions,x))]
+		juris_idx,jurisdiction_name = pick_one(choice_list,None,item='jurisdiction')
 
-		if juris_idx is None:
-			# user chooses jurisdiction short_name
-			jurisdiction_name = input('Enter a short name (alphanumeric only, no spaces) for your jurisdiction '
-							   '(e.g., \'NC\')\n')
-		juris_path = os.path.join(path_to_jurisdictions,jurisdiction_name)
-
-		# create jurisdiction directory
-		try:
-			os.mkdir(juris_path)
-		except FileExistsError:
-			print(f'Directory {juris_path} already exists, will be preserved')
-		else:
-			print(f'Directory {juris_path} created')
-
-		# create subdirectories
-		subdir_list = ['context','data','output']
-		for sd in subdir_list:
-			sd_path = os.path.join(juris_path,sd)
-			try:
-				os.mkdir(sd_path)
-			except FileExistsError:
-				print(f'Directory {sd_path} already exists, will be preserved')
-			else:
-				print(f'Directory {sd_path} created')
-
-		# ensure context directory has what it needs
-		context_file_list = ['Office.txt','Party.txt','ReportingUnit.txt','remark.txt']
-		if not all([os.path.isfile(os.path.join(juris_path,'context',x)) for x in context_file_list]):
-			# pull necessary enumeration from db: ReportingUnitType
-			ru_type = pd.read_sql_table('ReportingUnitType',con,index_col='Id')
-			standard_ru_types = set(ru_type[ru_type.Txt != 'other']['Txt'])
-			ru = fill_context_file(os.path.join(juris_path,'context'),
-							  os.path.join(project_root,'templates/context_templates'),
-								'ReportingUnit',standard_ru_types,'ReportingUnitType')
-			ru_list = ru['Name'].to_list()
-			fill_context_file(os.path.join(juris_path,'context'),
-							  os.path.join(project_root,'templates/context_templates'),
-								'Office',None,None)  # note check that ElectionDistricts are RUs happens below
-			# Party.txt
-			fill_context_file(os.path.join(juris_path,'context'),
-							  os.path.join(project_root,'templates/context_templates'),
-								'Party',None,None)
-			# TODO remark
-			remark_path = os.path.join(juris_path,'context','remark.txt')
-			open(remark_path,'a').close()	# creates file if it doesn't exist already
-			with open(remark_path,'r') as f:
-				remark = f.read()
-			print(f'Current contents of remark.txt is:\n{remark}\n')
-			# TODO deal with non-state top-level jurisdictions
-			input(f'In the file context/remark.txt, add or correct anything that user should know about the jurisdiction {jurisdiction_name}.\n'
-						f'Then hit return to continue.')
+		if check_files:
+			juris_path = os.path.join(path_to_jurisdictions,jurisdiction_name)
+			sf.check_jurisdiction_directory(juris_path)
+			sf.ensure_context(juris_path,project_root)
 	else:
 		print(f'Directory {jurisdiction_name} is assumed to exist and have the required contents.')
 	# initialize the jurisdiction
-	ss = sf.Jurisdiction(jurisdiction_name,path_to_jurisdictions)
-	ss.check_election_districts()
+	ss = sf.Jurisdiction(jurisdiction_name,path_to_jurisdictions,project_root=project_root)
+	if check_files:
+		for filename in os.listdir(os.path.join(ss.path_to_juris_dir,'context')):
+			element = filename[:-4]
+			ss.check_dependencies(element)
 	return ss
 
 
@@ -317,68 +291,6 @@ def format_check_formula(formula,fields):
 	return missing
 
 
-def confirm_or_correct_cdf_element_file(cdf_elements_file,header_rows,element_list):
-	"""
-	Checks that <cdf_elements_file> has the right columns;
-	if not, guides user to correcting.
-	"""
-	cdft_df = pd.read_csv(cdf_elements_file,sep='\t')  # note index
-
-	# check column headings
-	while len(cdft_df.columns) != 3 or cdft_df.columns.to_list() != ['cdf_element','raw_identifier_formula','source']:
-		input(f'The file {cdf_elements_file} should tab-separated with three columns\n'
-			  f'labeled \'cdf_element\' and \'raw_identifier_formula\'.\n'
-			  f'Correct the file as necessary and hit return to continue')
-		cdft_df = pd.read_csv(cdf_elements_file,sep='\t')  # note index
-
-	# check for missing rows
-	missing_elements = [x for x in element_list if x not in cdft_df.cdf_element.to_list()]
-	while missing_elements:
-		input(f'Rows are missing from {cdf_elements_file}:\n'
-			  f'{",".join(missing_elements)}\n'
-			  f'Add them and hit return to continue')
-		cdft_df = pd.read_csv(cdf_elements_file,sep='\t')  # note index
-		missing_elements = [x for x in element_list if x not in cdft_df.cdf_element.to_list()]
-
-	# check that row formulas refer to existing columns of raw file, and column formulas refer to header rows
-	bad_formulas = [1]
-	while bad_formulas:
-		bad_formulas = []
-		misspellings = set()
-		for idx,row in cdft_df.iterrows():
-			new_misspellings = format_check_formula(row['raw_identifier_formula'],raw_cols)
-			if new_misspellings:
-				misspellings = misspellings.union(new_misspellings)
-				bad_formulas.append(row.cdf_element)
-		if misspellings:
-			print(f'Some formula parts are not recognized as raw column labels:\n'
-				  f'{",".join([f"<{m}>" for m in misspellings])}\n\n'
-				  f'Raw columns are: {",".join(raw_cols)}\n')
-
-		if bad_formulas:
-			print(f'Unusable formulas for {",".join(bad_formulas)}.\n')
-			input(f'Fix the cdf_elements.txt file \n and hit return to continue.\n')
-			# TODO check raw_columns.txt somewhere else, or let this routine check it & pick up alterations
-		cdft_df = pd.read_csv(cdf_elements_file,sep='\t')  # note index
-	return cdft_df
-
-
-def confirm_or_correct_ballot_measure_style(options_file,bms_file,sep='\t'):
-	bmso_df = pd.read_csv(options_file,sep=sep)
-	try:
-		with open(bms_file,'r') as f:
-			bms = f.read()
-	except FileNotFoundError:
-		bms = None
-	if bms not in bmso_df['short_name'].to_list():
-		print('Ballot measure style not recognized. Please pick a new one.')
-		bms_idx,bms = pick_one(bmso_df,'short_name',item='ballot measure style',required=True)
-		with open(bms_file,'w') as f:
-			f.write(bms)
-	bms_description = bmso_df[bmso_df.short_name==bms]['description'].iloc[0]
-	return bms, bms_description
-
-
 def create_file_from_template(template_file,new_file,sep='\t'):
 	"""For tab-separated files (or others, using <sep>); does not replace existing file
 	but creates <new_file> with the proper header row
@@ -390,22 +302,39 @@ def create_file_from_template(template_file,new_file,sep='\t'):
 	return
 
 
-def fill_context_file(context_path,template_dir_path,element,test_list,test_field,sep='\t'):
+def fill_context_file(context_path,template_dir_path,element,sep='\t'):
 	"""Creates file context/<element>.txt if necessary.
 	In any case, runs format and dupe checks on that file, inviting user corrections.
 	Also checks that each <element> passes the test, i.e., that
-	each <element.test_field> is in <test_list>."""
+	for each k,v in <tests>, every value in column k can be found in <v>.txt.
+	Does not apply to ExternalIdentifier.txt or remark.txt"""
 	template_file = os.path.join(template_dir_path,f'{element}.txt')
 	template = pd.read_csv(template_file,sep='\t')
 	context_file = os.path.join(context_path,f'{element}.txt')
 	create_file_from_template(template_file,context_file,sep=sep)
+
+	namefield = 'Name'
+	if element == 'BallotMeasureContest':
+		tests = {'ElectionDistrict':'ReportingUnit','Election':'Election'}
+	elif element == 'Candidate':
+		tests = {'Party':'Party'}
+		namefield = 'BallotName'
+	elif element == 'CandidateContest':
+		tests = {'Office':'Office'}
+	elif element == 'Office':
+		tests = {'ElectionDistrict':'ReportingUnit'}
+	else:
+		tests = {}
+
+	context_df = None
 	in_progress = 'y'
 	while in_progress == 'y':
 		# check format of file
 		context_df = pd.read_csv(context_file,sep=sep,header=0,dtype=str)
-		dupes,deduped = find_dupes(context_df.Name)
+		dupes,deduped = find_dupes(context_df[namefield])
 		if not context_df.columns.to_list() == template.columns.to_list():
-			print(f'WARNING: {element}.txt is not in the correct format.')		# TODO refine error msg?
+			print(f'WARNING: {element}.txt is not in the correct format. Required columns are:\n'
+				  f'{template.columns.to_list()}')
 			input('Please correct the file and hit return to continue.\n')
 
 		# check for empty
@@ -418,34 +347,36 @@ def fill_context_file(context_path,template_dir_path,element,test_list,test_fiel
 
 		# check for dupes
 		elif dupes.shape[0] >0:
-			print(f'File {context_path}\n has duplicates in the Name column.')
+			print(f'File {context_path}\n has duplicates in the {namefield} column.')
 			show_sample(dupes,'names','appear on more than one line')
 			input(f'Please correct and hit return to continue.\n')
 		else:
 			# report contents of file
-			print(f'\nCurrent contents of {element}.txt:\n{context_df}')
+			context_list = context_df.to_csv(header=None,index=False,sep='\t').strip('\n').split('\n')
+			show_sample(context_list,'lines',f'are in {element}.txt')
 
 			# check test conditions
-			if test_list is None:
+			if tests is None:
 				in_progress = 'n'
 			else:
-				bad_set = {x for x in context_df[test_field] if x not in test_list}
-				if len(bad_set) == 0:
-					print(f'Congratulations! Contents of context/{element}.txt look good!')
-					in_progress = 'n'
-				else:  # if test condition fails
-					print(f'\tStandard {test_field}s are not required, but you probably want to use them when you can.'
-						  f'\n\tYour file has non-standard {test_field}s:')
-					for rut in bad_set: print(f'\t\t{rut}')
-					# TODO bug: this prints out long long list of ElectionDistricts,
-					# TODO then suggests altering only Office.txt. Should be more graceful.
-					print(f'\tStandard {test_field}s are:')
-					print(f'\t\t{",".join(test_list)}')
-
+				problem = False
+				for test_field in tests.keys():
+					targets = pd.read_csv(os.path.join(context_path,f'{tests[test_field]}.txt'),sep='\t')
+					#bad_set = {x for x in context_df[test_field] if x not in targets.Name.unique()}
+					bad_set = {idx for idx in context_df.index if
+							   context_df.loc[idx,test_field] not in targets.Name.unique()}
+					if len(bad_set) == 0:
+						print(
+							f'Congratulations! The {test_field} for each record in context/{element}.txt looks good!')
+					else:  # if test condition fails
+						show_sample(context_df.loc[bad_set],f'{element}s',f'have unrecognized {test_field}s.')
+						problem = True
+				if problem:
 					# invite input
-					in_progress = input(f'Would you like to alter {element}.txt (y/n)?\n')
-					if in_progress == 'y':
-						input('Make alterations, then hit return to continue')
+					input('Make alterations to fix unrecognized items, then hit return to continue')
+					fill_context_file(context_path,template_dir_path,tests[test_field])
+				else:
+					in_progress = 'n'
 	return context_df
 
 
@@ -614,11 +545,19 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 			# TODO enter_new pulls from file system; would be better here to pull from db
 			save_record_to_filesystem(storage_dir,element,user_record,enum_plain_text_values)
 
+
 		# save record to db
 		try:
+			element_df = pd.read_sql_table(element,sess.bind,index_col='Id')
+			enum_list = [x[5:] for x in element_df.columns if x[:5]=='Other']
+			for e in enum_list:
+				enum_df = pd.read_sql_table(e,sess.bind)
+				user_record[f'{e}_Id'],user_record[f'Other{e}'] = mr.get_id_othertext_from_enum_value(enum_df,user_record[e])
+				user_record.pop(e)
 			element_df = dbr.dframe_to_sql(pd.DataFrame(user_record,index=[-1]),sess,None,element,index_col='Id')
 			# find index matching inserted element
-			idx = element_df.loc[(element_df[list(user_record)] == pd.Series(user_record)).all(axis=1)].first_valid_index()
+			idx = element_df.loc[
+				(element_df[list(user_record)] == pd.Series(user_record)).all(axis=1)]['Id'].to_list()[0]
 		except dbr.CdfDbException:
 			print('Insertion of new record to db failed, maybe because record already exists. Try again.')
 			idx = pick_or_create_record(sess,project_root,element,known_info_d=known_info_d)
@@ -645,13 +584,16 @@ def get_or_create_election_in_db(sess,project_root):
 			electiontype = et_row.loc[election_idx,'OtherElectionType']
 		else:
 			electiontype = et_row.loc[election_idx,'Txt']
-	return election_idx,electiontype
+	# TODO understand why election_idx is np.int64 and how to avoid that routinely
+	return int(election_idx),electiontype
 
 
 def pick_record_from_db(sess,element,known_info_d={}):
 	"""Get id and info from database, if it exists"""
-	print(f'Pick the {element} from the database:')
 	element_df = pd.read_sql_table(element,sess.bind,index_col='Id')
+	# TODO filter by known_info_d filtered_file = from_file.loc[(from_file[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
+	if element_df.empty:
+		return None,None
 
 	# add columns for plaintext of any enumerations
 	enums = dbr.read_enums_from_db_table(sess,element)
@@ -659,7 +601,7 @@ def pick_record_from_db(sess,element,known_info_d={}):
 		e_df = pd.read_sql_table(e,sess.bind,index_col='Id')
 		element_df = mr.enum_col_from_id_othertext(element_df,e,e_df)
 
-	# TODO filter by known_info_d
+	print(f'Pick the {element} from the database:')
 	element_idx, values = pick_one(element_df,'Name',element)
 	return element_idx, values
 
@@ -683,7 +625,11 @@ def pick_record_from_file_system(storage_dir,table,name_field='Name',known_info_
 		idx, record = pick_one(filtered_file,name_field)
 	else:
 		idx, record = None, None
-	return idx, dict(filtered_file.loc[idx])
+	if idx is not None:
+		record = dict(filtered_file.loc[idx])
+	else:
+		record = None
+	return idx, record
 
 
 def save_record_to_filesystem(storage_dir,table,user_record,enum_plain_text_values):
@@ -701,7 +647,7 @@ def save_record_to_filesystem(storage_dir,table,user_record,enum_plain_text_valu
 		records = pd.read_csv(storage_file,sep='\t')
 	else:
 		# create empty, with all cols of from_db except Id
-		records = pd.DataFrame([],columns = user_record.keys())  # TODO create one-line dataframe from user_record
+		records = pd.DataFrame([],columns=user_record.keys())  # TODO create one-line dataframe from user_record
 	records.append(user_record,ignore_index=True)
 	records.to_csv(storage_file,sep='\t')
 	return
@@ -788,6 +734,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 
 	# TODO before each return, write to file system if appropriate
 	if not already_file.empty:
+		# TODO prevent dupes in already_file
 		print('Is the desired record already in the file system?')
 		record_idx,record = pick_one(already_file,name_field)
 		if record_idx is not None:	# if user picked one
@@ -937,15 +884,15 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
-def new_datafile_NEW(session,munger,raw_path,raw_file_sep,encoding,project_root=None,juris_short_name=None):
+def new_datafile(session,munger,raw_path,raw_file_sep,encoding,project_root=None,juris=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
 	if not project_root:
 		get_project_root()
-	juris = pick_juris_from_filesystem(
-		session.bind,project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
-		jurisdiction_name=juris_short_name)
+	if not juris:
+		juris = pick_juris_from_filesystem(
+			project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'))
 	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
 
 	# TODO where do we update db from jurisdiction context file?
@@ -959,96 +906,29 @@ def new_datafile_NEW(session,munger,raw_path,raw_file_sep,encoding,project_root=
 
 	# TODO munger.check_against_datafile(raw,cols_to_munge,numerical_columns)
 
-	mr.raw_elements_to_cdf_NEW(session,project_root,munger,raw)
+	mr.raw_elements_to_cdf_NEW(session,project_root,juris,munger,raw,info_cols,numerical_columns)
 
 	# TODO
 	return
 
 
-def new_datafile_OLD(raw_file,raw_file_sep,session,project_root='.',juris_short_name=None,encoding='utf-8',test_munger=True):
-	"""Guide user through process of uploading data in <raw_file>
-	into common data format.
-	Assumes cdf db exists already"""
-
-	juris = pick_juris_from_filesystem(
-		session.bind,project_root,
-		path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
-		jurisdiction_name=juris_short_name)
-
-	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
-	# update db from jurisdiction context file
-
-	# TODO put all info about data cleaning into README.md (e.g., whitespace strip)
-	election_idx, electiontype = get_or_create_election_in_db(session,project_root)
-	# read file in as dataframe of strings, replacing any nulls with the empty string
-	raw = pd.read_csv(raw_file,sep=raw_file_sep,dtype=str,encoding=encoding,quoting=csv.QUOTE_MINIMAL).fillna('')
-
-	# strip any whitespace
-	raw = raw.applymap(lambda x: x.strip())
-
-	# have user pick & prepare the munger
-	column_list = raw.columns.to_list()
-	print('Specify the munger:')
-	munger = pick_munger(
-		session,column_list=column_list,munger_dir=os.path.join(project_root,'mungers'),
-		root=project_root)
-	print(f'Munger {munger.name} has been chosen and prepared.')
-
-	if test_munger:
-		print( f'\nNext we check compatibility of the munger with the datafile.')
-		munger.check_against_datafile(raw_file)
-
-	# reshape raw to get separate vote count columns by vote type if necessary
-	if munger.formulas_for_count_item_type:
-		# TODO
-		# create separate column with single raw identifier of CountItemType as name -- beware of existing column names!
-		# change raw column names to CDF standard names
-		pass
-	else:
-		# change raw column names to CDF standard names for vote count columns
-		# TODO be clear in README about the conventions for values in count_columns.CountItemType.
-		#  For NC, had internal CDF names, but that won't work for Phila.
-		#  Best code would look first in CountItemType table, then in CountItemType rows of raw_identifiers.
-		pass
-
-	# change column names in <raw> if necessary
-	# TODO check that col names in count_columns and ballot_measure*.txt are changed
-	raw.rename(columns=munger.rename_column_dictionary,inplace=True)
-
-	# replace any non-numeric strings in count columns with 0.
-	print('Replacing any non-integer entries in datafile count columns with 0')
-	# TODO feature generalize to decimals for the rare elections with fractional votes
-	int_pattern = r'.*[^0-9]+.*'
-	for c in munger.count_columns.RawName.unique():
-		raw[c] = raw[c].replace(int_pattern,'0',regex=True)
-
-	print('Splitting datafile into BallotMeasureContest rows and CandidateContest rows.')
-	bmc_results,cc_results = mr.contest_type_split(raw,munger)
-	if bmc_results.empty:
-		print('Datafile has only Candidate Contests, and no Ballot Measure Contests')
-		contest_type_df = ['Candidate']
-	elif cc_results.empty:
-		print('Datafile has only Ballot Measure Contests, and no Candidate Contests')
-		contest_type_df = ['Ballot Measure']
-	else:
-		print('What types of contests would you like to analyze from the datafile?')
-		contest_type_df = pd.DataFrame([
-			['Candidate'], ['Ballot Measure'], ['Both Candidate and Ballot Measure']
-		], columns=['Contest Type'])
-		contest_type_idx, contest_type = pick_one(contest_type_df,'Contest Type', item='contest type',required=True)
-	if test_munger:
-		if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
-			munger.check_new_results_dataset(cc_results,juris,session,'Candidate',project_root=project_root)
-		if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
-			munger.check_new_results_dataset(cc_results,juris,session,'BallotMeasure',project_root=project_root)
-
-	if contest_type in ['Candidate','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf_OLD(session,munger,cc_results,'Candidate',election_idx,electiontype,juris_idx)
-	if contest_type in ['Ballot Measure','Both Candidate and Ballot Measure']:
-		mr.raw_elements_to_cdf_OLD(session,munger,bmc_results,'BallotMeasure',election_idx,electiontype,juris_idx)
-	return juris, munger
+def pick_or_create_directory(root_path,d_name):
+	allowed = re.compile(r'^\w+$')
+	while not os.path.isdir(os.path.join(root_path,d_name)):
+		print(f'No subdirectory {d_name} in {root_path}. Here are the existing subdirectories:')
+		idx, d_name = pick_one(os.listdir(root_path),None,'directory')
+		if idx is None:
+			d_name = ''
+			while not allowed.match(d_name):
+				d_name = input('Enter subdirectory name (alphanumeric and underscore only):\n')
+			full_path = os.path.join(root_path,d_name)
+			confirm = input(f'Confirm creation of directory (y/n)?\n{full_path}\n')
+			if confirm:
+				Path(full_path).mkdir(parents=True,exist_ok=True)
+	return d_name
 
 
 if __name__ == '__main__':
 	print("Data loading routines moved to src/election_anomaly/test folder")
+
 	exit()

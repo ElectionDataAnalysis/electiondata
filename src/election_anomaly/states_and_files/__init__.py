@@ -6,6 +6,9 @@ import warnings   # TODO use warnings module to handle warnings in all files
 import munge_routines as mr
 import user_interface as ui
 import re
+import numpy as np
+from pathlib import Path
+import csv
 
 
 class Jurisdiction:
@@ -59,37 +62,52 @@ class Jurisdiction:
         dbr.dframe_to_sql(cc_all,session,None,'CandidateContest')
         return cc_all
 
-    def check_election_districts(self):
-        """Looks in context file to check that every ElectionDistrict in Office.txt is listed in ReportingUnit.txt"""
-        ed = pd.read_csv(
-            os.path.join(
-                self.path_to_juris_dir,'context/Office.txt'),sep='\t',header=0).loc[:,'ElectionDistrict'].to_list()
-        ru = list(pd.read_csv(os.path.join(self.path_to_juris_dir,'context/ReportingUnit.txt'),sep='\t').loc[:,'Name'])
-        missing = [x for x in ed if x not in ru]
-        if len(missing) == 0:
-            all_ok = True
-            print('Congratulations! Every ElectionDistrict is a ReportingUnit!\n')
+    def check_dependencies(self,element):
+        """Looks in context file to check that every ElectionDistrict in <element>.txt is listed in <target>.txt,
+        """
+        d = context_dependency_dictionary()
+        context_dir = os.path.join(self.path_to_juris_dir,"context")
+        f_path = os.path.join(context_dir,f'{element}.txt')
+        if os.path.isfile(f_path):
+            element_df = pd.read_csv(f_path,sep='\t',index_col=None)
         else:
-            all_ok = False
-            print('Every ElectionDistrict must be a ReportingUnit. This is not optional!!')
-            ui.show_sample(missing,'ElectionDistricts','are not yet ReportingUnits',
-                           outfile='electiondistricts_missing_from_reportingunits.txt',dir=self.path_to_juris_dir)
-            input('Please make corrections to Office.txt or additions to ReportingUnit.txt to resolve the problem.\n'
-                  'Then his return to continue.'
-                  f'(Directory is {os.path.join(self.path_to_juris_dir,"context")}')
-            self.check_election_districts()
-        return all_ok
+            ensure_context(self.path_to_juris_dir,None)
+
+        # Find all dependent columns
+        dependent = [c for c in element_df if c in d.keys()]
+        changed_elements = set()
+        report = [f'In context/{element}.txt:']
+        for c in dependent:
+            target = d[c]
+            ed = pd.read_csv(os.path.join(context_dir,f'{element}.txt'),sep='\t',header=0).loc[:,c].to_list()
+            ru = list(pd.read_csv(os.path.join(context_dir,f'{target}.txt'),sep='\t').loc[:,'Name'])
+            missing = [x for x in ed if x not in ru and not np.isnan(x)]
+            if len(missing) == 0:
+                report.append(f'Every {c} is a {target}.')
+            else:
+                changed_elements.add(element)
+                changed_elements.add(target)
+                print(f'Every {c} must be a {target}. This is not optional!!')
+                ui.show_sample(missing,f'{c}s',f'are not yet {target}s')
+                input(f'Please make corrections to {element}.txt or additions to {target}.txt to resolve the problem.\n'
+                      'Then his return to continue.')
+                changed_elements.update(self.check_dependencies(target))
+        if dependent:
+            print ('\n\t'.join(report))
+        if changed_elements:
+            print(f'(Directory is {context_dir}')
+        return changed_elements
 
     def add_to_context_dir(self,element,df):
         """Add the data in the dataframe <df> to the file corresponding
         to <element> in the Jurisdiction's context folder.
-        <f> must have all columns matching the columns in context/<element>.
-        OK for <f> to have extra columns"""
+        <df> must have all columns matching the columns in context/<element>.
+        OK for <df> to have extra columns"""
         # TODO
         try:
-            elts = pd.read_csv('{}context/{}.txt'.format(self.path_to_juris_dir,element),sep='\t')
+            elts = pd.read_csv(f'{self.path_to_juris_dir}context/{element}.txt',sep='\t')
         except FileNotFoundError:
-            print('File {}context/{}.txt does not exist'.format(self.path_to_juris_dir,element))
+            print(f'File {self.path_to_juris_dir}context/{element}.txt does not exist')
             return
         else:
             for col in elts.columns:
@@ -99,30 +117,36 @@ class Jurisdiction:
                     df.loc[:,col] = ''
             # pull and order necessary columns from <df>
             df_new = pd.concat([df[elts.columns],elts])
-            df_new.to_csv('{}context/{}.txt'.format(self.path_to_juris_dir,element),sep='\t',index=False)
+            df_new.to_csv(f'{self.path_to_juris_dir}context/{element}.txt',sep='\t',index=False)
 
             # TODO insert into cdf.<element>, using mr.load_context_dframe_into_cdf
+            #  in separate function, or in wrapper
 
             return
 
-    def __init__(self,short_name,path_to_parent_dir):        # reporting_units,elections,parties,offices):
+    def extract_context(self,results,munger,element):
+        # TODO
+        """Return a dataframe of context info for <element> extracted
+        from raw results file <results> via <munger>, suitable for
+        applying add_to_context_dir()"""
+        # TODO help user add appropriate lines to munger/raw_identifiers.txt and update munger
+        return
+
+    def __init__(self,short_name,path_to_parent_dir,project_root=None,check_context=False):        # reporting_units,elections,parties,offices):
         """ short_name is the name of the directory containing the jurisdiction info, including data,
          and is used other places as well.
          path_to_parent_dir is the parent directory of dir_name
         """
-        self.short_name = short_name
-        if path_to_parent_dir[-1] != '/':     # should end in /
-            path_to_parent_dir += '/'
-        self.path_to_juris_dir = path_to_parent_dir + short_name + '/'
-        assert os.path.isdir(self.path_to_juris_dir),'Error: No directory ' + self.path_to_juris_dir
-        assert os.path.isdir(self.path_to_juris_dir + 'context/'), \
-            'Error: No directory ' + self.path_to_juris_dir + 'context/'
-        # Check that context directory is missing no essential files
-        context_file_list = ['Office.txt','remark.txt','ReportingUnit.txt']
-        file_missing_list = [ff for ff in context_file_list
-                             if not os.path.isfile(f'{self.path_to_juris_dir}context/{ff}')]
-        assert file_missing_list == [], \
-            f'Error: Missing files in {os.path.join(self.path_to_juris_dir,"context")}:\n{file_missing_list}'
+        if not project_root:
+            project_root = ui.get_project_root()
+
+        self.short_name = ui.pick_or_create_directory(path_to_parent_dir,short_name)
+        self.path_to_juris_dir = os.path.join(path_to_parent_dir, self.short_name)
+
+        if check_context:
+            # Ensure that context directory exists and is missing no essential files
+            check_jurisdiction_directory(self.path_to_juris_dir)
+            ensure_context(self.path_to_juris_dir,project_root)
 
 
 class Munger:
@@ -132,17 +156,19 @@ class Munger:
         finalized = False
         while not finalized:
             self.prepare_context_and_db(element,results,jurisdiction,sess,project_path=project_root)
-            if element == 'ReportingUnit':
-                eds_ok = False
-                while not eds_ok:
-                    eds_ok = jurisdiction.check_election_districts()
-                    if not eds_ok:
-                        # recheck Office and ReportingUnit
-                        self.prepare_context_and_db(
-                            'Office',results,jurisdiction,sess,project_path=project_root)
-                        self.prepare_context_and_db(
-                            'ReportingUnit',results,jurisdiction,sess,project_path=project_root)
-            fin = input(f'Is the file context/{element}.txt finalized to your satisfaction (y/n)?\n')
+
+            # check dependencies
+            all_ok = False
+            while not all_ok:
+                changed_elements = jurisdiction.check_dependencies(element)
+                if changed_elements:
+                    # recheck items from change list
+                    for e in changed_elements:
+                        self.prepare_context_and_db(e,results,jurisdiction,sess,project_path=project_root)
+                else:
+                    all_ok=True
+
+            fin = input(f'Is the file {element}.txt finalized to your satisfaction (y/n)?\n')
             if fin == 'y':
                 finalized = True
             else:
@@ -219,8 +245,8 @@ class Munger:
         ri = os.path.join(self.path_to_munger_dir,'raw_identifiers.txt')
 
         ri_df = pd.read_csv(ri,sep='\t')
-        raw_from_results = set(mr.add_munged_column(
-            results,self,'CandidateContest','CandidateContest_external')['CandidateContest_external'])
+        raw_from_results = set(mr.add_munged_column_NEW(
+            results,self,'CandidateContest',inplace=False)[f'CandidateContest_raw'])
         raw_from_ri = set(ri_df[ri_df.cdf_element == 'CandidateContest'].loc[:,'raw_identifier_value'])
         missing_from_ri = [x for x in raw_from_results if x not in raw_from_ri]
 
@@ -263,40 +289,27 @@ class Munger:
             missing_from_db = {x for x in cdf_from_ri if x not in cdf_from_db}
         return
 
-    def prepare_context_and_db(self,element,results,jurisdiction,sess,project_path='.'):
-        """Loads info from context/<element>.txt into db; checks results file <element>s against munger;
+    def prepare_context_and_db(self,element,raw,jurisdiction,sess,project_path='.',enumeration=False):
+        """Loads info from context/<element>.txt into db; checks <element>s from file <raw> against munger;
         then checks munger against db. Throughout, guides user to make corrections in context/<element>.txt;
         finally loads final context/<element>.txt into db. Note that this will only add records to db, never remove. """
-        # TODO ReportingUnits get checked twice -- once for ballot measure and once for candidate contest_Type
-        print(f'Updating database with info from {jurisdiction.short_name}/context/{element}.txt.\n')
-        source_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
-        source_df = pd.read_csv(source_file,sep='\t')
-        # TODO check that logic below still works
-        dupes = True
-        while dupes:
-            dupes,source_df = ui.find_dupes(source_df)
-            if dupes.empty:
-                dupes = False
-            else:
-                input(f'WARNING: {jurisdiction.short_name}/context/{element}.txt has duplicates.\n'
-                      f'Edit the file to remove the duplication, then hit return to continue')
-                source_df = pd.read_csv(source_file,sep='\t')
 
-        mr.load_context_dframe_into_cdf(sess,project_path,jurisdiction,source_df,element,
-                                        os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
-
-        mr.add_munged_column(results,self,element,f'{element}_external')
-        results_elements = results[f'{element}_external'].unique()
+        # get results and change column names to distinguish raw from munged
+        results = raw.copy()
+        d = {x:f'{x}_{self.field_rename_suffix}' for x in self.field_list}
+        results.rename(columns=d,inplace=True)
+        mr.add_munged_column_NEW(results,self,element)
+        results_elements = results[f'{element}_raw'].unique()
 
         mu_elements = self.raw_identifiers[self.raw_identifiers.cdf_element==element]
         elements_mixed = pd.DataFrame(
-            results_elements,columns=[f'{element}_external']).merge(
-            mu_elements,how='left',left_on=f'{element}_external',right_on='raw_identifier_value'
+            results_elements,columns=[f'{element}_self.field_rename_suffix']).merge(
+            mu_elements,how='left',left_on=f'{element}_self.field_rename_suffix',right_on='raw_identifier_value'
             ).fillna('')
 
         # are there elements in results file that cannot be munged?
         not_identified = elements_mixed[elements_mixed.raw_identifier_value==''].loc[:,
-                         f'{element}_external'].to_list()
+                         f'{element}_self.field_rename_suffix'].to_list()
         # and are not in unmunged_{element}s.txt?
         try:
             with open(os.path.join(self.path_to_munger_dir,f'unmunged_{element}s_in_datafile.txt'),'r') as f:
@@ -308,8 +321,15 @@ class Munger:
 
         if len(not_munged) > 0:
             print(f'Some {element}s in the results file cannot be interpreted by the munger {self.name}.')
-            print(f'Note: {element}s listed in unmunged_{element}s.txt are interpreted as \'to be ignored\'.')
+            if element[-7:] == 'Contest' or element[-9:] == 'Selection':
+                contest_msg = \
+                    '\nDon\'t worry if Ballot Measure items are listed as unmunged Candidate items, or vice versa.'
+            else:
+                contest_msg = ''
+            print(f'Note: {element}s listed in unmunged_{element}s.txt are interpreted as \'to be ignored\'.{contest_msg}')
             outfile = f'unmunged_{element}s.txt'
+            # TODO when showing unmunged candidates, show only unmunged candidates from munged contests
+            #  but first check for unmunged contests!
             ui.show_sample(
                 not_munged,f'{element}s in datafile','cannot be munged',outfile=outfile,dir=self.path_to_munger_dir)
             add_to_munger = input('Would you like to add some/all of these to the munger (y/n)?\n')
@@ -324,15 +344,37 @@ class Munger:
                     f'\tYou may need to do some contextual research to fill all the fields in {element}.txt\n\n'
                     f'Then hit return to continue.\n')
 
+        # get source file for <element> from enumerations or context folders
+        if enumeration:
+            source_file = os.path.join(project_path,'election_anomaly/CDF_schema_def_info/enumerations',f'{element}.txt')
+            print(f'Updating database with info from /CDF_schema_def_info/enumerations/{element}.txt.\n')
+            source_df = pd.read_csv(source_file,sep='\t')
+        else:
+            source_file = os.path.join(jurisdiction.path_to_juris_dir,'context',f'{element}.txt')
+            print(f'Updating database with info from {jurisdiction.short_name}/context/{element}.txt.\n')
+            source_df = pd.read_csv(source_file,sep='\t')
+
+            # check that context folder contents are consistent
+            if not os.path.isfile(source_file):
+                ensure_context(jurisdiction.path_to_juris_dir,project_path)
+
+            source_df = dedupe(
+               source_df,source_file,warning=f'{jurisdiction.short_name}/context/{element}.txt has duplicates.')
+
+            mr.load_context_dframe_into_cdf(sess,project_path,jurisdiction,source_df,element,
+                                        os.path.join(project_path,'election_anomaly/CDF_schema_def_info'))
+
         # add all elements from context/ to db
-        source_df = pd.read_csv(f'{jurisdiction.path_to_juris_dir}context/{element}.txt',sep='\t')
+        source_df = pd.read_csv(source_file,sep='\t')
         mr.load_context_dframe_into_cdf(sess,project_path,
                                         jurisdiction,source_df,element,
                                         cdf_schema_def_dir=os.path.join(project_path,
                                                                         'election_anomaly/CDF_schema_def_info'))
 
         db_element_df = pd.read_sql_table(element,sess.bind)
-        db_elements = list(db_element_df['Name'].unique())
+        # TODO: some elements need more than just name to match. E.g., Candidate may have Party_Id
+        name_field = mr.get_name_field(element)
+        db_elements = list(db_element_df[name_field].unique())
 
         # are there elements recognized by munger but not in db?
         munged_elements = elements_mixed[
@@ -358,7 +400,9 @@ class Munger:
                         f' and paste it into {jurisdiction.short_name}/context/{element}.txt.\n'
                         f'\tYou may need to do some contextual research to fill the other fields in {element}.txt\n\n'
                         f'Then hit return to continue.\n')
-        source_df = pd.read_csv(f'{jurisdiction.path_to_juris_dir}context/{element}.txt',sep='\t')
+        else:
+            print(f'Congrats! Each munged {element} is in the database!')
+        source_df = pd.read_csv(source_file,sep='\t')
         mr.load_context_dframe_into_cdf(sess,project_path,
                                         jurisdiction,source_df,element,
                                         cdf_schema_def_dir=os.path.join(project_path,
@@ -399,6 +443,21 @@ class Munger:
             check_bms = input(f'\tIs this appropriate for the datafile (y/n)?\n')
             if check_bms != 'y':
                 raise Exception('Datafile will not be processed. Use a different munger and try again.')
+        return
+
+    def check_new_results_dataset_NEW(self,results,jurisdiction,sess,project_root='.'):
+        """<results> is a results dataframe of a single <contest_type>;
+        this routine should add what's necessary to the munger to treat the dataframe,
+        keeping backwards compatibility and exiting gracefully if dataframe needs different munger."""
+
+        # check Party, Office, ReportingUnit in context & db, updating if necessary (prereq to checking
+        # CandidateContests)
+        for element in ['Party','Office','ReportingUnit','Candidate','BallotMeasureContest']:
+            self.finalize_element(element,results,jurisdiction,sess,project_root)
+        # After Party and Office are finalized, prepare CandidateContest and check against munger
+        jurisdiction.prepare_candidatecontests(sess)
+        self.check_candidatecontest(results,jurisdiction,sess,project_path=project_root)
+
         return
 
     def check_against_self(self):
@@ -465,10 +524,12 @@ class Munger:
             # set of cdf_elements in cdf_elements.txt is same as set pulled from db
             [db_elements, db_enumerations, db_joins, db_others] = dbr.get_cdf_db_table_names(sess.bind)
             db_elements.add('CountItemType')
+            db_elements.add('BallotMeasureSelection')
             db_elements.remove('CandidateSelection')
             db_elements.remove('ExternalIdentifier')
             db_elements.remove('VoteCount')
-            # TODO why CountItemType? CandidateSelection? ExternalIdentifier? make this programmatic
+            db_elements.remove('Office')
+            # TODO why these? make this programmatic
 
             m_elements = self.cdf_elements.index
             db_only = [x for x in db_elements if x not in m_elements]
@@ -523,40 +584,6 @@ class Munger:
         self.raw_identifiers.to_csv(f'{self.path_to_munger_dir}raw_identifiers.txt',sep='\t',index=False)
         return
 
-    def find_unmatched(self,raw,element):
-        """find any instances of <element> in raw data <raw> not interpretable by <self>"""
-        # TODO under construction
-        raw_copy = raw.copy()
-        ri_filtered = self.raw_identifiers[self.raw_identifiers.cdf_element == element]
-        in_munger = ri_filtered['raw_identifier_value'].unique()
-
-        # identify instances that are not matched in the munger's raw_identifier table
-        # limit to just the given element
-
-        # read source and formula for element
-        source = self.cdf_elements.loc[element,'source']
-        formula = self.cdf_elements.loc[element,'raw_identifier_formula']
-
-        # rename columns and formula fields as necessary
-        d = self.column_rename_dictionary().items()
-        raw_copy.rename(columns=d,inplace=True)
-        for k,v in d.items():
-            formula = formula.replace(k,v)
-
-        # check for unmatched
-        if source == 'row':
-            mr.add_munged_column_NEW(raw_copy,formula,element)
-            in_raw = raw_copy[element].unique()
-            unmatched = [x for x in in_raw if x not in in_munger]
-        elif source == 'column':
-            pass
-            # TODO generalize for multi-row headers
-
-            unmatched = [x for x in in_raw if x not in in_munger]
-        else:
-            unmatched = []
-        return unmatched
-
     def __init__(self,dir_path):
         """<dir_path> is the directory for the munger."""
         while not os.path.isdir(dir_path):
@@ -569,12 +596,20 @@ class Munger:
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir=dir_path
 
-        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.raw_identifiers] = read_munger_info_from_files(self.path_to_munger_dir)
+        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
+         self.raw_identifiers] = read_munger_info_from_files(self.path_to_munger_dir)
 
         self.field_rename_suffix = '___' # NB: must not match any suffix of a cdf element name;
 
+        # used repeatedly, so calculated once for convenience
+        # TODO find places this is calculated; replace with self.field_list
+        self.field_list = set()
+        for t,r in self.cdf_elements.iterrows():
+            self.field_list=self.field_list.union(r['fields'])
+
 # TODO before processing context files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
+
 
 def read_munger_info_from_files(dir_path):
     # read cdf_element info and add column for list of fields used in formulas
@@ -599,6 +634,83 @@ def read_munger_info_from_files(dir_path):
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
     #   will need to rename some columns of the raw file before processing.
     return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,raw_identifiers]
+
+
+def check_jurisdiction_directory(juris_path):
+    # create jurisdiction directory
+    try:
+        os.mkdir(juris_path)
+    except FileExistsError:
+        print(f'Directory {juris_path} already exists, will be preserved')
+    else:
+        print(f'Directory {juris_path} created')
+
+    # create subdirectories
+    subdir_list = ['context','data','output']
+    for sd in subdir_list:
+        sd_path = os.path.join(juris_path,sd)
+        try:
+            os.mkdir(sd_path)
+        except FileExistsError:
+            print(f'Directory {sd_path} already exists, will be preserved')
+        else:
+            print(f'Directory {sd_path} created')
+    return
+
+
+def ensure_context(juris_path,project_root=None):
+    if not project_root:
+        project_root = ui.get_project_root()
+    # ensure directory exists
+    check_jurisdiction_directory(juris_path)
+
+    # ensure contents are correct
+    templates = os.path.join(project_root,'templates/context_templates')
+    enums = os.path.join(project_root,'election_anomaly/CDF_schema_def_info/enumerations')
+    template_list = os.listdir(templates)
+    context_file_list = ['ReportingUnit','Election','BallotMeasureContest','Office','Party','CandidateContest','Candidate','ExternalIdentifier','remark']
+
+    # TODO check for problematic null entries?
+
+    for element in context_file_list:
+        el_path = os.path.join(juris_path,'context',f'{element}.txt')
+        # remark
+        if element == 'remark':
+
+            open(el_path,'a').close()  # creates file if it doesn't exist already
+            with open(el_path,'r') as f:
+                remark = f.read()
+            print(f'Current contents of remark.txt is:\n{remark}\n')
+            input(
+                f'In the file context/remark.txt, add or correct anything that user should know about the jurisdiction.\n'
+                f'Then hit return to continue.')
+        elif element == 'ExternalIdentifier':
+            pass # TODO
+        else:
+            ui.fill_context_file(
+                os.path.join(juris_path,'context'),templates,element)
+    return
+
+
+def dedupe(df,f_path,warning='There are duplicates'):
+    dupes = True
+    while dupes:
+        dupes,df = ui.find_dupes(df)
+        if dupes.empty:
+            dupes = False
+        else:
+            input(f'WARNING: {warning}\n'
+                  f'Edit the file to remove the duplication, then hit return to continue')
+            df = pd.read_csv(f_path,sep='\t')
+    return df
+
+
+def context_dependency_dictionary():
+    """Certain fields in context files refer to other context files.
+    E.g., ElectionDistricts are ReportingUnits"""
+    d = {'ElectionDistrict':'ReportingUnit','Office':'Office','PrimaryParty':'Party','Party':'Party',
+         'Election':'Election'}
+    return d
 
 if __name__ == '__main__':
     print('Done (states_and_files)!')

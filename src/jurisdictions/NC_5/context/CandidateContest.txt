@@ -1,0 +1,187 @@
+Name	VotesAllowed	NumberElected	NumberRunoff	IsPartisan	Office	PrimaryParty
+North Carolina;General Assembly House of Representatives District 2	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 2
+North Carolina;General Assembly House of Representatives District 3	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 3
+North Carolina;General Assembly House of Representatives District 4	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 4
+North Carolina;General Assembly House of Representatives District 5	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 5
+North Carolina;General Assembly House of Representatives District 6	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 6
+North Carolina;General Assembly House of Representatives District 7	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 7
+North Carolina;General Assembly House of Representatives District 8	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 8
+North Carolina;General Assembly House of Representatives District 9	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 9
+North Carolina;General Assembly House of Representatives District 10	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 10
+North Carolina;General Assembly House of Representatives District 11	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 11
+North Carolina;General Assembly House of Representatives District 12	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 12
+North Carolina;General Assembly House of Representatives District 13	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 13
+North Carolina;General Assembly House of Representatives District 14	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 14
+North Carolina;General Assembly House of Representatives District 15	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 15
+North Carolina;General Assembly House of Representatives District 16	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 16
+North Carolina;General Assembly House of Representatives District 17	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 17
+North Carolina;General Assembly House of Representatives District 18	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 18
+North Carolina;General Assembly House of Representatives District 19	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 19
+North Carolina;General Assembly House of Representatives District 20	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 20
+North Carolina;General Assembly House of Representatives District 21	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 21
+North Carolina;General Assembly House of Representatives District 22	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 22
+North Carolina;General Assembly House of Representatives District 23	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 23
+North Carolina;General Assembly House of Representatives District 24	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 24
+North Carolina;General Assembly House of Representatives District 25	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 25
+North Carolina;General Assembly House of Representatives District 26	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 26
+North Carolina;General Assembly House of Representatives District 27	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 27
+North Carolina;General Assembly House of Representatives District 28	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 28
+North Carolina;General Assembly House of Representatives District 29	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 29
+North Carolina;General Assembly House of Representatives District 30	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 30
+North Carolina;General Assembly House of Representatives District 31	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 31
+North Carolina;General Assembly House of Representatives District 32	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 32
+North Carolina;General Assembly House of Representatives District 33	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 33
+North Carolina;General Assembly House of Representatives District 34	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 34
+North Carolina;General Assembly House of Representatives District 35	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 35
+North Carolina;General Assembly House of Representatives District 36	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 36
+North Carolina;General Assembly House of Representatives District 37	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 37
+North Carolina;General Assembly House of Representatives District 38	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 38
+North Carolina;General Assembly House of Representatives District 39	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 39
+North Carolina;General Assembly House of Representatives District 40	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 40
+North Carolina;General Assembly House of Representatives District 41	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 41
+North Carolina;General Assembly House of Representatives District 42	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 42
+North Carolina;General Assembly House of Representatives District 43	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 43
+North Carolina;General Assembly House of Representatives District 44	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 44
+North Carolina;General Assembly House of Representatives District 45	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 45
+North Carolina;General Assembly House of Representatives District 46	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 46
+North Carolina;General Assembly House of Representatives District 47	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 47
+North Carolina;General Assembly House of Representatives District 48	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 48
+North Carolina;General Assembly House of Representatives District 49	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 49
+North Carolina;General Assembly House of Representatives District 50	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 50
+North Carolina;General Assembly House of Representatives District 51	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 51
+North Carolina;General Assembly House of Representatives District 52	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 52
+North Carolina;General Assembly House of Representatives District 53	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 53
+North Carolina;General Assembly House of Representatives District 54	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 54
+North Carolina;General Assembly House of Representatives District 55	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 55
+North Carolina;General Assembly House of Representatives District 56	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 56
+North Carolina;General Assembly House of Representatives District 57	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 57
+North Carolina;General Assembly House of Representatives District 58	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 58
+North Carolina;General Assembly House of Representatives District 59	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 59
+North Carolina;General Assembly House of Representatives District 60	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 60
+North Carolina;General Assembly House of Representatives District 61	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 61
+North Carolina;General Assembly House of Representatives District 62	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 62
+North Carolina;General Assembly House of Representatives District 63	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 63
+North Carolina;General Assembly House of Representatives District 64	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 64
+North Carolina;General Assembly House of Representatives District 65	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 65
+North Carolina;General Assembly House of Representatives District 66	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 66
+North Carolina;General Assembly House of Representatives District 67	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 67
+North Carolina;General Assembly House of Representatives District 68	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 68
+North Carolina;General Assembly House of Representatives District 69	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 69
+North Carolina;General Assembly House of Representatives District 70	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 70
+North Carolina;General Assembly House of Representatives District 71	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 71
+North Carolina;General Assembly House of Representatives District 72	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 72
+North Carolina;General Assembly House of Representatives District 73	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 73
+North Carolina;General Assembly House of Representatives District 74	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 74
+North Carolina;General Assembly House of Representatives District 75	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 75
+North Carolina;General Assembly House of Representatives District 76	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 76
+North Carolina;General Assembly House of Representatives District 77	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 77
+North Carolina;General Assembly House of Representatives District 78	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 78
+North Carolina;General Assembly House of Representatives District 79	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 79
+North Carolina;General Assembly House of Representatives District 80	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 80
+North Carolina;General Assembly House of Representatives District 81	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 81
+North Carolina;General Assembly House of Representatives District 82	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 82
+North Carolina;General Assembly House of Representatives District 83	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 83
+North Carolina;General Assembly House of Representatives District 84	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 84
+North Carolina;General Assembly House of Representatives District 85	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 85
+North Carolina;General Assembly House of Representatives District 86	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 86
+North Carolina;General Assembly House of Representatives District 87	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 87
+North Carolina;General Assembly House of Representatives District 88	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 88
+North Carolina;General Assembly House of Representatives District 89	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 89
+North Carolina;General Assembly House of Representatives District 90	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 90
+North Carolina;General Assembly House of Representatives District 91	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 91
+North Carolina;General Assembly House of Representatives District 92	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 92
+North Carolina;General Assembly House of Representatives District 93	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 93
+North Carolina;General Assembly House of Representatives District 94	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 94
+North Carolina;General Assembly House of Representatives District 95	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 95
+North Carolina;General Assembly House of Representatives District 96	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 96
+North Carolina;General Assembly House of Representatives District 97	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 97
+North Carolina;General Assembly House of Representatives District 98	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 98
+North Carolina;General Assembly House of Representatives District 99	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 99
+North Carolina;General Assembly House of Representatives District 100	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 100
+North Carolina;General Assembly House of Representatives District 101	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 101
+North Carolina;General Assembly House of Representatives District 102	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 102
+North Carolina;General Assembly House of Representatives District 103	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 103
+North Carolina;General Assembly House of Representatives District 104	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 104
+North Carolina;General Assembly House of Representatives District 105	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 105
+North Carolina;General Assembly House of Representatives District 106	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 106
+North Carolina;General Assembly House of Representatives District 107	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 107
+North Carolina;General Assembly House of Representatives District 108	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 108
+North Carolina;General Assembly House of Representatives District 109	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 109
+North Carolina;General Assembly House of Representatives District 110	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 110
+North Carolina;General Assembly House of Representatives District 111	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 111
+North Carolina;General Assembly House of Representatives District 112	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 112
+North Carolina;General Assembly House of Representatives District 113	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 113
+North Carolina;General Assembly House of Representatives District 114	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 114
+North Carolina;General Assembly House of Representatives District 115	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 115
+North Carolina;General Assembly House of Representatives District 116	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 116
+North Carolina;General Assembly House of Representatives District 117	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 117
+North Carolina;General Assembly House of Representatives District 118	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 118
+North Carolina;General Assembly House of Representatives District 119	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 119
+North Carolina;General Assembly House of Representatives District 120	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 120
+North Carolina;General Assembly Senate District 1	1	1	0	TRUE	North Carolina;General Assembly Senate District 1
+North Carolina;General Assembly Senate District 2	1	1	0	TRUE	North Carolina;General Assembly Senate District 2
+North Carolina;General Assembly Senate District 3	1	1	0	TRUE	North Carolina;General Assembly Senate District 3
+North Carolina;General Assembly Senate District 4	1	1	0	TRUE	North Carolina;General Assembly Senate District 4
+North Carolina;General Assembly Senate District 5	1	1	0	TRUE	North Carolina;General Assembly Senate District 5
+North Carolina;General Assembly Senate District 6	1	1	0	TRUE	North Carolina;General Assembly Senate District 6
+North Carolina;General Assembly Senate District 7	1	1	0	TRUE	North Carolina;General Assembly Senate District 7
+North Carolina;General Assembly Senate District 8	1	1	0	TRUE	North Carolina;General Assembly Senate District 8
+North Carolina;General Assembly Senate District 9	1	1	0	TRUE	North Carolina;General Assembly Senate District 9
+North Carolina;General Assembly Senate District 10	1	1	0	TRUE	North Carolina;General Assembly Senate District 10
+North Carolina;General Assembly Senate District 11	1	1	0	TRUE	North Carolina;General Assembly Senate District 11
+North Carolina;General Assembly Senate District 12	1	1	0	TRUE	North Carolina;General Assembly Senate District 12
+North Carolina;General Assembly Senate District 13	1	1	0	TRUE	North Carolina;General Assembly Senate District 13
+North Carolina;General Assembly Senate District 14	1	1	0	TRUE	North Carolina;General Assembly Senate District 14
+North Carolina;General Assembly Senate District 15	1	1	0	TRUE	North Carolina;General Assembly Senate District 15
+North Carolina;General Assembly Senate District 16	1	1	0	TRUE	North Carolina;General Assembly Senate District 16
+North Carolina;General Assembly Senate District 17	1	1	0	TRUE	North Carolina;General Assembly Senate District 17
+North Carolina;General Assembly Senate District 18	1	1	0	TRUE	North Carolina;General Assembly Senate District 18
+North Carolina;General Assembly Senate District 19	1	1	0	TRUE	North Carolina;General Assembly Senate District 19
+North Carolina;General Assembly Senate District 20	1	1	0	TRUE	North Carolina;General Assembly Senate District 20
+North Carolina;General Assembly Senate District 21	1	1	0	TRUE	North Carolina;General Assembly Senate District 21
+North Carolina;General Assembly Senate District 22	1	1	0	TRUE	North Carolina;General Assembly Senate District 22
+North Carolina;General Assembly Senate District 23	1	1	0	TRUE	North Carolina;General Assembly Senate District 23
+North Carolina;General Assembly Senate District 24	1	1	0	TRUE	North Carolina;General Assembly Senate District 24
+North Carolina;General Assembly Senate District 25	1	1	0	TRUE	North Carolina;General Assembly Senate District 25
+North Carolina;General Assembly Senate District 26	1	1	0	TRUE	North Carolina;General Assembly Senate District 26
+North Carolina;General Assembly Senate District 27	1	1	0	TRUE	North Carolina;General Assembly Senate District 27
+North Carolina;General Assembly Senate District 28	1	1	0	TRUE	North Carolina;General Assembly Senate District 28
+North Carolina;General Assembly Senate District 29	1	1	0	TRUE	North Carolina;General Assembly Senate District 29
+North Carolina;General Assembly Senate District 30	1	1	0	TRUE	North Carolina;General Assembly Senate District 30
+North Carolina;General Assembly Senate District 31	1	1	0	TRUE	North Carolina;General Assembly Senate District 31
+North Carolina;General Assembly Senate District 32	1	1	0	TRUE	North Carolina;General Assembly Senate District 32
+North Carolina;General Assembly Senate District 33	1	1	0	TRUE	North Carolina;General Assembly Senate District 33
+North Carolina;General Assembly Senate District 34	1	1	0	TRUE	North Carolina;General Assembly Senate District 34
+North Carolina;General Assembly Senate District 35	1	1	0	TRUE	North Carolina;General Assembly Senate District 35
+North Carolina;General Assembly Senate District 36	1	1	0	TRUE	North Carolina;General Assembly Senate District 36
+North Carolina;General Assembly Senate District 37	1	1	0	TRUE	North Carolina;General Assembly Senate District 37
+North Carolina;General Assembly Senate District 38	1	1	0	TRUE	North Carolina;General Assembly Senate District 38
+North Carolina;General Assembly Senate District 39	1	1	0	TRUE	North Carolina;General Assembly Senate District 39
+North Carolina;General Assembly Senate District 40	1	1	0	TRUE	North Carolina;General Assembly Senate District 40
+North Carolina;General Assembly Senate District 41	1	1	0	TRUE	North Carolina;General Assembly Senate District 41
+North Carolina;General Assembly Senate District 42	1	1	0	TRUE	North Carolina;General Assembly Senate District 42
+North Carolina;General Assembly Senate District 43	1	1	0	TRUE	North Carolina;General Assembly Senate District 43
+North Carolina;General Assembly Senate District 44	1	1	0	TRUE	North Carolina;General Assembly Senate District 44
+North Carolina;General Assembly Senate District 45	1	1	0	TRUE	North Carolina;General Assembly Senate District 45
+North Carolina;General Assembly Senate District 46	1	1	0	TRUE	North Carolina;General Assembly Senate District 46
+North Carolina;General Assembly Senate District 47	1	1	0	TRUE	North Carolina;General Assembly Senate District 47
+North Carolina;General Assembly Senate District 48	1	1	0	TRUE	North Carolina;General Assembly Senate District 48
+North Carolina;General Assembly Senate District 49	1	1	0	TRUE	North Carolina;General Assembly Senate District 49
+North Carolina;General Assembly Senate District 50	1	1	0	TRUE	North Carolina;General Assembly Senate District 50
+North Carolina;US Congress House of Representatives District 1	1	1	0	TRUE	North Carolina;US Congress House of Representatives District 1
+North Carolina;US Congress House of Representatives District 2	1	1	0	TRUE	North Carolina;US Congress House of Representatives District 2
+North Carolina;US Congress House of Representatives District 3	1	1	0	TRUE	North Carolina;US Congress House of Representatives District 3
+North Carolina;US Congress House of Representatives District 4	1	1	0	TRUE	North Carolina;US Congress House of Representatives District 4
+North Carolina;US Congress House of Representatives District 5	1	1	0	TRUE	North Carolina;US Congress House of Representatives District 5
+North Carolina;US Congress House of Representatives District 6	1	1	0	TRUE	North Carolina;US Congress House of Representatives District 6
+North Carolina;US Congress House of Representatives District 7	1	1	0	TRUE	North Carolina;US Congress House of Representatives District 7
+North Carolina;US Congress House of Representatives District 8	1	1	0	TRUE	North Carolina;US Congress House of Representatives District 8
+North Carolina;US Congress House of Representatives District 9	1	1	0	TRUE	North Carolina;US Congress House of Representatives District 9
+North Carolina;US Congress House of Representatives District 10	1	1	0	TRUE	North Carolina;US Congress House of Representatives District 10
+North Carolina;US Congress House of Representatives District 11	1	1	0	TRUE	North Carolina;US Congress House of Representatives District 11
+North Carolina;US Congress House of Representatives District 12	1	1	0	TRUE	North Carolina;US Congress House of Representatives District 12
+North Carolina;US Congress House of Representatives District 13	1	1	0	TRUE	North Carolina;US Congress House of Representatives District 13
+North Carolina;US Congress;Senate	1	1	0	TRUE	North Carolina;US Congress;Senate
+North Carolina; Bertie County;Board of Commissioners District 3	1	1	0	TRUE	North Carolina; Bertie County;Board of Commissioners District 3
+North Carolina;District Court Judge District 22B Seat 2	1	1	0	TRUE	North Carolina;District Court Judge District 22B Seat 2
+North Carolina;General Assembly House of Representatives District 1	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 1
