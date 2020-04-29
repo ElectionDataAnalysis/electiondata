@@ -12,13 +12,18 @@ import csv
 
 
 class Jurisdiction:
-    def create_db(self):
-        # create db
-        con = dbr.establish_connection()
-        cur = con.cursor()
-        dbr.create_database(con,cur,self.short_name)
-        cur.close()
-        con.close()
+    def add_to_raw_identifiers(self,df):
+        """Adds rows in <df> to the dictionary.txt file and to the attribute <self>.raw_identifiers"""
+        d_path = os.path.join(self.path_to_juris_dir,'context/dictionary.txt')
+        dictionary = pd.read_csv(d_path,sep='\t')
+        for col in dictionary.columns:
+            assert col in df.columns, 'Column {} is not found in the dataframe'.format(col)
+        # restrict to columns needed, and in the right order
+        df = df[dictionary.columns]
+        # add rows to <self>.raw_identifiers
+        new_dictionary = pd.concat([dictionary,df]).drop_duplicates()
+        # update the external munger file
+        new_dictionary.to_csv(d_path,sep='\t',index=False)
         return
 
     def prepare_candidatecontests(self,session):
@@ -129,7 +134,7 @@ class Jurisdiction:
         """Return a dataframe of context info for <element> extracted
         from raw results file <results> via <munger>, suitable for
         applying add_to_context_dir()"""
-        # TODO help user add appropriate lines to munger/raw_identifiers.txt and update munger
+        # TODO help user add appropriate lines to jurisdiction/dictionary.txt
         return
 
     def __init__(self,short_name,path_to_parent_dir,project_root=None,check_context=False):        # reporting_units,elections,parties,offices):
@@ -175,74 +180,13 @@ class Munger:
                 input('Make your changes, then hit return to continue.')
         return
 
-    def check_ballot_measure_selections(self):
-        if self.ballot_measure_style == 'yes_and_no_are_candidates':
-            if len(self.ballot_measure_selection_list) == 0:
-                print(f'There are no Ballot Measure Selections for the munger {self.name}.\n'
-                      f'No ballot measure contests will be processed by this munger.')
-            else:
-                print(f'Ballot Measure Selections for the munger {self.name} are:\n'
-                  f'{", ".join(self.ballot_measure_selection_list)}')
-            if self.ballot_measure_count_column_selections:
-                warnings.warn(
-                    f'WARNING: When {self.ballot_measure_style_description},\n'
-                    f'there should be no content in the munger\'s ballot_measure_count_column_selections attributes.\n'
-                    f'Check for unnecessary rows in {self.name}/ballot_measure_count_column_selections.txt.')
-            needs_warning = False
-            correct = input('Does this list include every ballot measure selection name in your datafile (y/n)?\n')
-            while correct != 'y':
-                needs_warning = True
-                add_or_remove = input('Enter \'a\' to add and \'r\' to remove Ballot Measure Selections.\n')
-                if add_or_remove == 'a':
-                    new = input(f'Enter a missing selection\n')
-                    if new != '':
-                        self.ballot_measure_selection_list.append(new)
-                elif add_or_remove == 'r':
-                    idx, val = ui.pick_one(
-                        pd.DataFrame([[x] for x in self.ballot_measure_selection_list],
-                                     columns=['Selection']),'Selection',item='Selection')
-                    if idx is not None:
-                        self.ballot_measure_selection_list.remove(val)
-                else:
-                    print('Answer not valid. Please enter \'a\' or \'r\'.')
-                print(f'Ballot Measure Selections for the munger {self.name} are:\n'
-                      f'{", ".join(self.ballot_measure_selection_list)}')
-                correct = input('Is this consistent with your datafile (y/n)?\n')
-            if needs_warning:
-                print(f'To make this change permanent, edit the BallotMeasureSelection lines '
-                      f'in {self.name}/raw_identifiers.txt')
-        elif self.ballot_measure_style == 'yes_and_no_are_candidates':
-            if self.ballot_measure_selection_list:
-                warnings.warn(
-                    f'WARNING: there should be no ballot selections in the ballot_measure_selection_list attribute.\n'
-                    f'when {self.ballot_measure_style_description}.\n'
-                    f'Check for unnecessary rows in {self.name}/raw_identifiers.txt.')
-            # TODO check that every field in ballot_measure_count_column_selections is in count_columns
-            for f in self.ballot_measure_count_column_selections.fieldname.to_list():
-                if f not in self.count_columns.RawName:
-                    input(f'The column {f} in {self.name}/ballot_measure_count_column_selections.txt\n'
-                          f'is not listed in the {self.name}/count_columns attribute.\n'
-                          f'Please fix this by editing one or both files. Hit return when done')
-        # TODO allow corrections at run time.
-        return
-
-    def check_atomic_ru_type(self):
-        print(f'This munger classifies each line of the datafile as type \'{self.atomic_reporting_unit_type}\'.')
-        check_ru_type = input(
-            f'\tIs it OK to treat every line of the datafile as \'{self.atomic_reporting_unit_type}\'(y/n)?\n')
-        if check_ru_type != 'y':
-            print('Datafile will not be processed.')
-            raise Exception('Munger would assign wrong ReportingUnitType to datafile. Use a different munger.')
-        else:
-            return
-
     def check_candidatecontest(self,results,jurisdiction,sess,project_path='.'):
         # TODO
-        """report raw contests in <results> missing from raw_identifiers.txt
-        and report cdf_internal names of contests in <results>-join-raw_identifiers
+        """report raw contests in <results> missing from dictionary.txt
+        and report cdf_internal names of contests in <results>-join-dictionary
         that are missing from db, guiding user to fix if desired
         """
-        ri = os.path.join(self.path_to_munger_dir,'raw_identifiers.txt')
+        ri = os.path.join(jurisdiction.path_to_juris_dir,'context/dictionary.txt')
 
         ri_df = pd.read_csv(ri,sep='\t')
         raw_from_results = set(mr.add_munged_column_NEW(
@@ -252,16 +196,16 @@ class Munger:
 
         while missing_from_ri:
             print(f'Contests in the raw results with no corresponding CandidateContest line '
-                  f'in {self.name}/raw_identifiers.txt will be ignored,\n'
+                  f'in {jurisdiction.short_name}/context/dictionary.txt will be ignored,\n'
                   f'and no results for these contests will be loaded into the database.')
             ui.show_sample(
                 missing_from_ri,'contests in the raw results',
-                f'have no corresponding CandidateContest line in {self.name}/raw_identifiers.txt',
+                f'have no corresponding CandidateContest line in {jurisdiction.short_name}/context/dictionary.txt',
                 outfile='contests_missing_from_munger.txt')
             add_contests = input(
-                f'Would you like to add any CandidateContests to {self.name}/raw_identifiers.txt (y/n)?\n')
+                f'Would you like to add any CandidateContests to {jurisdiction.short_name}/context/dictionary.txt (y/n)?\n')
             if add_contests == 'y':
-                input(f'Add any desired contests to {self.name}/raw_identifiers.txt and hit return to continue')
+                input(f'Add any desired contests to {jurisdiction.short_name}/context/dictionary.txt and hit return to continue')
                 ri_df = pd.read_csv(ri,sep='\t',keep_default_na=False)
                 # If keep_default_na is False, and na_values are not specified, no strings will be parsed as NaN.
                 # TODO use keep_default_na in other places too?
@@ -336,7 +280,7 @@ class Munger:
             if add_to_munger == 'y':
                 input(f'For each {element} you want to add to the munger:\n'
                     f'\tCut the corresponding line in {self.name}/{outfile} '
-                    f'\tAdd a corresponding line the file {self.name}/raw_identifiers.txt, \n'
+                    f'\tAdd a corresponding line the file {jurisdiction.short_name}/context/dictionary.txt, \n'
                     f'\tcreating a name to be used internally in the Common Data Format database Name field.\n'
                     f'\tThen edit the file {jurisdiction.short_name}/context/{element}.txt, '
                     f'adding a line for each new {element}.\n\n'
@@ -389,14 +333,14 @@ class Munger:
         if len(bad_set) > 0:
             print(f'Election results for munged {element}s missing from database will not be processed.')
             outfile = f'{element}s_munged_but_not_in_db.txt'
-            ui.show_sample(bad_set,f'munged elements','are in raw_identifiers.txt but not in the database',
+            ui.show_sample(bad_set,f'munged elements','are in dictionary.txt but not in the database',
                            outfile=outfile,dir=self.path_to_munger_dir)
             add_to_db = input('Would you like to add some/all of these to the database (y/n)?\n')
             if add_to_db == 'y':
                 input(f'For each {element} you want to add to the database:\n'
                         f'\tCut the corresponding line in {self.name}/{outfile}.\n'
                         f'\tAdd a line the file {jurisdiction.short_name}/context/{element}.txt.\n'
-                        f'\tCopy the internal cdf name from {self.name}/raw_identifiers.txt'
+                        f'\tCopy the internal cdf name from {jurisdiction.short_name}/context/dictionary.txt'
                         f' and paste it into {jurisdiction.short_name}/context/{element}.txt.\n'
                         f'\tYou may need to do some contextual research to fill the other fields in {element}.txt\n\n'
                         f'Then hit return to continue.\n')
@@ -417,33 +361,6 @@ class Munger:
             missing = [x for x in set(cols) if x not in df.columns]
             print(f'Missing columns are {missing}')
             return False
-
-    def check_new_results_dataset(self,results,jurisdiction,sess,contest_type,project_root='.'):
-        """<results> is a results dataframe of a single <contest_type>;
-        this routine should add what's necessary to the munger to treat the dataframe,
-        keeping backwards compatibility and exiting gracefully if dataframe needs different munger."""
-
-        assert self.raw_cols_match(results), \
-            f"""A column in {results.columns} is missing from raw_columns.txt."""
-
-        if contest_type == 'Candidate':
-            # check Party, Office, ReportingUnit in context & db, updating if necessary (prereq to checking
-            # CandidateContests)
-            for element in ['Party','Office','ReportingUnit']:
-                self.finalize_element(element,results,jurisdiction,sess,project_root)
-            # After Party and Office are finalized, prepare CandidateContest and check against munger
-            jurisdiction.prepare_candidatecontests(sess)
-            self.check_candidatecontest(results,jurisdiction,sess,project_path=project_root)
-
-        if contest_type == 'BallotMeasure':
-            self.finalize_element('ReportingUnit',results,jurisdiction,sess,project_root)
-            # TODO feature: prevent finalizing RUs twice if both contest_types are treated
-            # check that munger processes ballot measure contests appropriately.
-            print(f'This munger assumes that {self.ballot_measure_style_description}.')
-            check_bms = input(f'\tIs this appropriate for the datafile (y/n)?\n')
-            if check_bms != 'y':
-                raise Exception('Datafile will not be processed. Use a different munger and try again.')
-        return
 
     def check_new_results_dataset_NEW(self,results,jurisdiction,sess,project_root='.'):
         """<results> is a results dataframe of a single <contest_type>;
@@ -468,12 +385,12 @@ class Munger:
             checked = True
             problems = []
 
-            # every cdf_element in raw_identifiers.txt is in cdf_elements.cdf_element
+            # every cdf_element in dictionary.txt is in cdf_elements.cdf_element
             missing = [x for x in self.raw_identifiers.cdf_element.unique() if x not in self.cdf_elements.index]
             if missing:
                 m_str = ','.join(missing)
                 problems.append(
-                    f'''At least one cdf_element in raw_identifiers.txt is missing from cdf_elements.txt: {m_str}''')
+                    f'''At least one cdf_element in dictionary.txt is missing from cdf_elements.txt: {m_str}''')
 
             # every source is either row, column or other
             bad_source = [x for x in self.cdf_elements.source if x not in ['row','column','other']]
@@ -511,8 +428,8 @@ class Munger:
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
-                 self.raw_identifiers] = read_munger_info_from_files(self.path_to_munger_dir)
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row] = \
+                    read_munger_info_from_files(self.path_to_munger_dir)
         return
 
     def check_against_db(self,sess):
@@ -548,8 +465,7 @@ class Munger:
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.raw_identifiers,
-                 self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row] = read_munger_info_from_files(self.path_to_munger_dir)
         return
 
     def check_against_datafile(self,raw,cols_to_munge,count_columns):
@@ -567,28 +483,16 @@ class Munger:
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.raw_identifiers,
-                 self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row] = \
+                    read_munger_info_from_files(self.path_to_munger_dir)
         # TODO write this function
-        return
-
-    def add_to_raw_identifiers(self,df):
-        """Adds rows in <df> to the raw_identifiers.txt file and to the attribute <self>.raw_identifiers"""
-        for col in self.raw_identifiers.columns:
-            assert col in df.columns, 'Column {} is not found in the dataframe'.format(col)
-        # restrict to columns needed, and in the right order
-        df = df[self.raw_identifiers.columns]
-        # add rows to <self>.raw_identifiers
-        self.raw_identifiers = pd.concat([self.raw_identifiers,df]).drop_duplicates()
-        # update the external munger file
-        self.raw_identifiers.to_csv(f'{self.path_to_munger_dir}raw_identifiers.txt',sep='\t',index=False)
         return
 
     def __init__(self,dir_path):
         """<dir_path> is the directory for the munger."""
         while not os.path.isdir(dir_path):
             input(f'{dir_path} is not a directory. Please create it and hit return to continue.')
-        for ff in ['cdf_elements.txt','format.txt','raw_identifiers.txt']:
+        for ff in ['cdf_elements.txt','format.txt']:
             while not os.path.isfile(os.path.join(dir_path,ff)):
                 input(f'Directory \n\t{dir_path}\ndoes not contain file {ff}.\n'
                       f'Please create the file and hit return to continue')
@@ -596,8 +500,8 @@ class Munger:
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir=dir_path
 
-        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
-         self.raw_identifiers] = read_munger_info_from_files(self.path_to_munger_dir)
+        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row] = \
+            read_munger_info_from_files(self.path_to_munger_dir)
 
         self.field_rename_suffix = '___' # NB: must not match any suffix of a cdf element name;
 
@@ -627,13 +531,9 @@ def read_munger_info_from_files(dir_path):
     header_row_count = int(format_info.loc['header_row_count','value'])
         # TODO maybe file separator and encoding should be in format.txt?
 
-    # read raw_identifiers file into a table
-    #  note no natural index column
-    raw_identifiers = pd.read_csv(os.path.join(dir_path,'raw_identifiers.txt'),sep='\t')
-
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
     #   will need to rename some columns of the raw file before processing.
-    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,raw_identifiers]
+    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row]
 
 
 def check_jurisdiction_directory(juris_path):
