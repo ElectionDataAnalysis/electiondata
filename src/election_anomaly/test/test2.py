@@ -57,7 +57,7 @@ if __name__ == '__main__':
 #	if check == 'y':
 #		munger.check_new_results_dataset_NEW(raw,juris,new_df_session,project_root=project_root)
 
-	mr.raw_elements_to_cdf_NEW(new_df_session,project_root,juris,munger,raw,info_cols,num_cols,finalize=False)
+	mr.raw_elements_to_cdf(new_df_session,project_root,juris,munger,raw,info_cols,num_cols,finalize=False)
 
 	ui.new_datafile(new_df_session,munger,
 					raw_file_path,sep,encoding,juris=juris,project_root=project_root)

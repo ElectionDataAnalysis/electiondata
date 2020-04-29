@@ -3633,6 +3633,8 @@ Candidate	Michael Lee	Michael Lee
 Candidate	Michael Nelson	Michael Nelson
 Candidate	Michael Speciale	Michael Speciale
 Candidate	Michele D. Presnell	Michele D. Presnell
+Candidate	Edward C. Goodwin	Edward C. Goodwin
+Candidate	Ronald (Ron) Wesson	Ronald (Ron) Wesson
 Candidate	Mike Clampitt	Mike Clampitt
 Candidate	Mike Woodard	Mike Woodard
 Candidate	"Milton F. (Toby) Fitch, Jr."	"Milton F. (Toby) Fitch, Jr."
@@ -3757,4 +3759,8 @@ Candidate	William Brisson	William Brisson
 Candidate	William Stinson	William Stinson
 Candidate	Yvonne Lewis Holley	Yvonne Lewis Holley
 Candidate	Zack Forde-Hawkins	Zack Forde-Hawkins
+Candidate	Dana Bumgardner	Dana Bumgardner
+Candidate	Jennie Stultz (Write-In)	Jennie Stultz (Write-In)
+Candidate	Susan Maxon	Susan Maxon
+Candidate	Write-In (Miscellaneous)	Write-In (Miscellaneous)
 BallotMeasureContest	REQUIRE PHOTO ID TO VOTE	REQUIRE PHOTO ID TO VOTE

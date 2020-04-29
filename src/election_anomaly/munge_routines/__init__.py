@@ -392,7 +392,7 @@ def good_syntax(s):
     return good
 
 
-def raw_elements_to_cdf_NEW(session,project_root,juris,mu,raw,info_cols,num_cols,finalize=True):
+def raw_elements_to_cdf(session,project_root,juris,mu,raw,info_cols,num_cols,finalize=True):
     """load data from <raw> into the database.
     Note that columns to be munged (e.g. County_xxx) have mu.field_rename_suffix (e.g., _xxx) added already"""
     working = raw.copy()
@@ -496,6 +496,7 @@ def raw_elements_to_cdf_NEW(session,project_root,juris,mu,raw,info_cols,num_cols
         cs_df[['Candidate_Id','Id']],how='left',left_on='Candidate_Id',right_on='Candidate_Id')
     working.rename(columns={'Id':'CandidateSelection_Id'},inplace=True)
 
+    # TODO: warn user if contest is munged but candidates are not
     for j in ['BallotMeasureContestSelectionJoin','CandidateContestSelectionJoin','ElectionContestJoin']:
         working = append_join_id(project_root,session,working,j)
 
@@ -522,7 +523,6 @@ def raw_elements_to_cdf_NEW(session,project_root,juris,mu,raw,info_cols,num_cols
     # drop extra columns
     dbr.drop_cols(session,'VoteCount',extra_cols)
 
-    # TODO CandidateContest must get Office_Id
     return
 
 
