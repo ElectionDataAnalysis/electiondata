@@ -907,21 +907,21 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={}):
 	edf = {}
 	# read relevant enumerations from database into dataframes
 	for idx in df['enumerations'].index:
-		e =
-		edf[idx] = df['enumerations'].loc[idx,'enumeration']
-		enum_df = pd.read_sql_table(e,sess.bind,index_col='Id')
+		e = df['enumerations'].loc[idx,'enumeration']
+		edf[e] = pd.read_sql_table(e,sess.bind,index_col='Id')
 
 	unconfirmed = True
 	while unconfirmed:
 		print(f'Enter info for new {table} record.')
-		new_record = {}  # dict to hold values of the record
+		user_input_record = {}  # dict to hold values of the record
 		enum_val = {}
 
 		for idx,row in df['fields'].iterrows():
 			if row["fieldname"] in known_info_d.keys():
-				new_record[row["fieldname"]] = known_info_d[row["fieldname"]]
+				user_input_record[row["fieldname"]] = known_info_d[row["fieldname"]]
 			else:
-				new_record[row["fieldname"]] = enter_and_check_datatype(f'Enter the {row["fieldname"]}.',row['datatype'])
+				user_input_record[row["fieldname"]] = enter_and_check_datatype(
+					f'Enter the {row["fieldname"]}.',row['datatype'])
 
 		for idx,row in df['foreign_keys'].iterrows():
 			target = row['refers_to']
@@ -929,24 +929,26 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={}):
 			choices = pd.read_sql_table(target,sess.bind,index_col='Id')
 			if choices.empty:
 				raise Exception(f'Cannot add record to {table} while {target} does not contain the required {fieldname}.\n')
-			new_record[fieldname], name = pick_one(choices,choices.columns[0],required=True)
+			user_input_record[fieldname], name = pick_one(
+				choices,choices.columns[0],required=True)
 
-		for idx in df['enumerations'].index:
-			e = df['enumerations'].loc[idx,'enumeration']
-			enum_df = pd.read_sql_table(e,sess.bind,index_col='Id')
-			new_record[f'{e}_Id'], enum_txt = pick_one(enum_df,'Txt',df['enumerations'].loc[idx,'enumeration'],required=True)
+		for e in edf.keys():
+			user_input_record[f'{e}_Id'], enum_txt = pick_one(
+				edf[e],'Txt',e,required=True)
 			if enum_txt == 'other':
-				std_enum_list = list(enum_df['Txt'])
+				std_enum_list = list(edf[e]['Txt'])
 				std_enum_list.remove('other')
-				enum_val[e] = new_record[f'Other{e}'] = input(f'Enter the {e}:\n')
-				if new_record[f'Other{e}'] in std_enum_list:
-					new_record[f'{e}_Id'] = enum_df[enum_df.Txt == new_record[f'Other{e}']].first_valid_index()
-					new_record[f'Other{e}'] = ''
+				enum_val[e] = user_input_record[f'Other{e}'] = input(f'Enter the {e}:\n')
+				if user_input_record[f'Other{e}'] in std_enum_list:
+					user_input_record[f'{e}_Id'] = enum_df[edf[e].Txt == user_input_record[f'Other{e}']].first_valid_index()
+					user_input_record[f'Other{e}'] = ''
 			else:
-				new_record[f'Other{e}'] = ''
+				user_input_record[f'Other{e}'] = ''
 				enum_val[e] = enum_txt
-
-	return new_record, enum_val
+		confirm = input(f'Confirm entry:\n{user_input_record}\nIs this correct (y/n)?\n')
+		if confirm == 'y':
+			unconfirmed = False
+	return user_input_record, enum_val
 
 
 def enter_and_check_datatype(question,datatype):
