@@ -7210,3 +7210,4 @@ BallotMeasureSelection	No	-1271
 BallotMeasureSelection	No	-1267
 BallotMeasureSelection	No	-1269
 Election	General Election 2018-11-06	11/6/2018
+CountItemType	total	Precinct #Votes

@@ -1,0 +1,11 @@
+cdf_element	raw_identifier_formula	source
+Office	<Office Name>;<Office District>	row
+ReportingUnit	<County>;<Election District>;<Election Precinct>	row
+Party	<Party>	row
+Candidate	<Candidate Name>	row
+CandidateContest	<Office Name>;<Office District>	row
+BallotMeasureContest	<Office Name>;<Candidate Name>	row
+BallotMeasureSelection	<0>	column
+Election		other
+CountItemType	<0>	column
+

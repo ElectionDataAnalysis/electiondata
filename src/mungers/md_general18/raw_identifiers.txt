@@ -2750,3 +2750,4 @@ CandidateContest	Maryland;State Senate District 47	State Senator;47
 CandidateContest	Maryland;State's Attorney	State's Attorney;
 CandidateContest	Maryland;Treasurer	Treasurer;
 CandidateContest	Maryland;U.S. Senator	U.S. Senator;
+Election	General Election 2018-11-06	11/6/18

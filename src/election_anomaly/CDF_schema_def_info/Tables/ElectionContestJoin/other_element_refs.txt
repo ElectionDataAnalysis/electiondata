@@ -1,2 +1,0 @@
-fieldname	refers_to
-Election_Id	Election

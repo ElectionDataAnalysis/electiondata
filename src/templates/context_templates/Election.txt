@@ -1,1 +1,1 @@
-Name	ElectionType	short_name	ReportingUnit	StartDate	EndDate
+Name	EndDate	StartDate	ElectionType

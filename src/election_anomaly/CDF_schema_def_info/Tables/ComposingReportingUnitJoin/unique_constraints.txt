@@ -1,2 +1,0 @@
-unique_constraint
-ParentReportingUnit_Id,ChildReportingUnit_Id

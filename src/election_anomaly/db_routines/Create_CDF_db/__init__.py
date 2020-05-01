@@ -3,12 +3,12 @@
 # db_routines/Create_CDF_db/__init__.py
 # TODO may need to add "NOT NULL" requirements per CDF
 # TODO add OfficeContestJoin table (e.g., Presidential contest has two offices)
+# TODO consistency check on SelectionElectionContestVoteCountJoin to make sure ElectionContestJoin_Id
+#  and ContestSelectionJoin_Id share a contest? Should this happen during the rollup process?
 
 import db_routines as dbr
 import sqlalchemy
 from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,Date,ForeignKey
-# NB: imports above are used within string argument to exec()
-from sqlalchemy.orm import sessionmaker
 import os
 import pandas as pd
 
@@ -25,66 +25,132 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',dele
     # create the single sequence for all db ids
     id_seq = sqlalchemy.Sequence('id_seq', metadata=metadata)
 
-    # create enumeration tables and push to db
+    # create enumeration tables 
     e_table_list = enum_table_list(dirpath)
     for t in e_table_list:
-        if t=='BallotMeasureSelection':
-            txt_col='Selection'
-        else:
-            txt_col='Txt'
-        Table(t,metadata,Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
-              Column(txt_col,String,unique=True))
-    metadata.create_all()
+        create_table(metadata,id_seq,t,'enumerations',dirpath)
+    
+    # create element tables (cdf and metadata) and push to db
+    element_path = os.path.join(dirpath, 'elements')
+    elements_to_process = [f for f in os.listdir(element_path) if f[0] != '.']
+    # dynamic list of elements whose tables haven't been created yet
+    while elements_to_process:
+        element = elements_to_process[0]
+        # check foreign keys; if any refers to an elt yet to be processed, change to that elt
+        #  note that any foreign keys for elements are to other elements, so it's OK to do this without considering
+        #  joins first or concurrently.
+        foreign_keys = pd.read_csv(os.path.join(element_path,element,'foreign_keys.txt'),sep='\t')
+        for i,r in foreign_keys.iterrows():
+            fk_set = set(r['refers_to'].split(';'))    # lists all targets of the foreign key r['fieldname']
+            try:
+                element = [e for e in fk_set if e in elements_to_process].pop()
+                break
+            except IndexError:
+                pass
+        # create db table for element
+        create_table(metadata,id_seq,element,'elements',dirpath)
+        # remove element from list of yet-to-be-processed
+        elements_to_process.remove(element)
 
-    # create all other tables, in set order because of foreign keys
-    table_list = ['ExternalIdentifier', 'ReportingUnit', 'Party', 'Election', 'Office', 'CandidateContest',
-                  'BallotMeasureContest', 'Candidate', 'VoteCount', 'SelectionElectionContestVoteCountJoin',
-                  'CandidateSelection', 'ElectionContestJoin', 'ComposingReportingUnitJoin',
-                  'BallotMeasureContestSelectionJoin', 'CandidateContestSelectionJoin','_datafile']
-    table_path = os.path.join(dirpath, 'Tables')
-    # assert set(table_list) == set(os.listdir('{}Tables'.format(dirpath))), \
-    #     f'Set of tables to create does not match set of tables in {dirpath}Tables directory'
+    # create join tables
+    # TODO check for foreign keys, as above
+    # check for foreign keys
+    join_path = os.path.join(dirpath,'joins')
+    joins_to_process = [f for f in os.listdir(join_path) if f[0] != '.']
+    while joins_to_process:
+        j = joins_to_process[0]
+        # check foreign keys; if any refers to an elt yet to be processed, change to that elt
+        #  note that any foreign keys for elements are to other elements, so it's OK to do this without considering
+        #  joins first or concurrently.
+        foreign_keys = pd.read_csv(os.path.join(join_path,j,'foreign_keys.txt'),sep='\t')
+        for i,r in foreign_keys.iterrows():
+            fk_set = set(r['refers_to'].split(';'))  # lists all targets of the foreign key r['fieldname']
+            try:
+                j = [e for e in fk_set if e in joins_to_process].pop()
+                break
+            except IndexError:
+                pass
+        # create db table for element
+        create_table(metadata,id_seq,j,'joins',dirpath)
+        # remove element from list of yet-to-be-processed
+        joins_to_process.remove(j)
 
-
-    assert set(table_list) == set(os.listdir(table_path)), \
-    f'Set of tables to create does not match set of tables in {dirpath}Tables directory'
-
-    for element in table_list:
-        #with open('{}Tables/{}/short_name.txt'.format(dirpath,element),'r') as f:
-        with open(os.path.join(table_path, element, 'short_name.txt'), 'r') as f:
-            short_name=f.read().strip()
-
-        df = {}
-        file_list = os.listdir(os.path.join(table_path, element))
-        flist = [ f[:-4] for f in file_list] # drop '.txt'
-        for f in flist: # TODO picks up short_name too, unnecessary
-            #df[f] =  pd.read_csv('{}Tables/{}/{}.txt'.format(dirpath,element,f),sep='\t')
-            df[f] =  pd.read_csv(os.path.join(table_path,element,f+'.txt'),sep='\t') #consider creating element_path at the start of the loop and why not run a loop over file_list
-
-
-
-        field_col_list = [Column(r['fieldname'],eval(r['datatype'])) for i,r in df['fields'].iterrows()]
-        null_constraint_list = [CheckConstraint('"{}" IS NOT NULL'.format(r['not_null_fields']),name='{}_{}_not_null'.format(short_name,r['not_null_fields'])) for i,r in df['not_null_fields'].iterrows()]
-        other_elt_list = [Column(r['fieldname'],ForeignKey(f'{r["refers_to"]}.Id'))
-            for i,r in df['other_element_refs'].iterrows()]
-        # unique constraints
-        df['unique_constraints']['arg_list'] = df['unique_constraints']['unique_constraint'].str.split(',')
-        unique_constraint_list = [UniqueConstraint( * r['arg_list'],name='{}_ux{}'.format(short_name,i)) for i,r in df['unique_constraints'].iterrows()]
-
-        enum_id_list = [Column('{}_Id'.format(r['enumeration']),ForeignKey(f'{r["enumeration"]}.Id'))
-                         for i,r in df['enumerations'].iterrows()]
-        enum_other_list = [Column('Other{}'.format(r['enumeration']),String) for i,r in df['enumerations'].iterrows()]
-        Table(element,metadata,
-          Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
-              * field_col_list, * enum_id_list, * enum_other_list,
-              * other_elt_list, * null_constraint_list, * unique_constraint_list)
-
+    # push all tables to db
     metadata.create_all()
     session.flush()
     return metadata
 
 
-# TODO should we somewhere check consistency of enumeration_table_list and the files in enumerations/ ? Is the file enumeration_table_list ever used?
+def create_table(metadata,id_seq,name,table_type,dirpath):
+
+    t_path = os.path.join(dirpath,table_type,name)
+    if table_type == 'elements':
+        with open(os.path.join(t_path, 'short_name.txt'), 'r') as f:
+            short_name=f.read().strip()
+
+        # read info from files into dataframes
+        df = {}
+        for filename in ['enumerations','fields','foreign_keys','not_null_fields','unique_constraints']:
+            df[filename] = pd.read_csv(os.path.join(t_path,f'{filename}.txt'),sep='\t')
+
+        # define table
+        field_col_list = [Column(r['fieldname'],eval(r['datatype'])) for i,r in df['fields'].iterrows()]
+        null_constraint_list = [
+            CheckConstraint(
+                f'"{r["not_null_fields"]}" IS NOT NULL',name=f'{short_name}_{r["not_null_fields"]}_not_null')
+            for i,r in df['not_null_fields'].iterrows()]
+        # omit 'foreign keys' that refer to more than one table,
+        #  e.g. Contest_Id to BallotMeasureContest and CandidateContest
+        foreign_key_list = [Column(r['fieldname'],ForeignKey(f'{r["refers_to"]}.Id'))
+                          for i,r in df['foreign_keys'].iterrows() if ';' not in r['refers_to']]
+        # unique constraints
+        df['unique_constraints']['arg_list'] = df['unique_constraints']['unique_constraint'].str.split(',')
+        unique_constraint_list = [UniqueConstraint(*r['arg_list'],name=f'{short_name}_ux{i}')
+                                  for i,r in df['unique_constraints'].iterrows()]
+        enum_id_list = [Column(f'{r["enumeration"]}_Id',ForeignKey(f'{r["enumeration"]}.Id'))
+                        for i,r in df['enumerations'].iterrows()]
+        enum_other_list = [Column(f'Other{r["enumeration"]}',String) for i,r in df['enumerations'].iterrows()]
+        Table(name,metadata,
+              Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
+              * field_col_list, * enum_id_list, * enum_other_list,
+              * foreign_key_list, * null_constraint_list, * unique_constraint_list)
+
+    elif table_type == 'enumerations':
+        if name == 'BallotMeasureSelection':
+            txt_col = 'Selection'
+        else:
+            txt_col = 'Txt'
+        Table(name,metadata,Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
+              Column(txt_col,String,unique=True))
+    
+    elif table_type == 'joins':
+        with open(os.path.join(t_path, 'short_name.txt'), 'r') as f:
+            short_name=f.read().strip()
+        # read info from files into dataframes
+        
+        fk = pd.read_csv(os.path.join(t_path,'foreign_keys.txt'),sep='\t')
+
+        # define table
+        col_list = [Column(r['fieldname'],Integer) for i,r in fk.iterrows()]
+        null_constraint_list = [
+            CheckConstraint(
+                f'"{r["fieldname"]}" IS NOT NULL',name=f'{short_name}_{r["fieldname"]}_not_null')
+            for i,r in fk.iterrows()]
+        # omit 'foreign keys' that refer to more than one table,
+        #  e.g. Contest_Id to BallotMeasureContest and CandidateContest
+        true_foreign_key_list = [Column(r['fieldname'],ForeignKey(f'{r["refers_to"]}.Id'))
+                          for i,r in fk.iterrows() if ';' not in r['refers_to']]
+
+        Table(name,metadata,
+              Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
+              * col_list,
+              * true_foreign_key_list, * null_constraint_list)
+
+    else:
+        raise Exception(f'table_type {table_type} not recognized')
+    return
+
+
 def enum_table_list(dirpath= 'CDF_schema_def_info'):
     #if not dirpath[-1] == '/': dirpath += '\''
     enum_path = os.path.join(dirpath, 'enumerations' )

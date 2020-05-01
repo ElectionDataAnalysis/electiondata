@@ -1,0 +1,641 @@
+BallotName	Party	
+Andrew T. Heath	REP	North Carolina Republican Party
+John S. Arrowood	DEM	North Carolina Democratic Party
+Jefferson G. Griffin	REP	North Carolina Republican Party
+Sandra Alice Ray	REP	North Carolina Republican Party
+Tobias (Toby) Hampson	DEM	North Carolina Democratic Party
+"Michael Monaco, Sr."	LIB	North Carolina Libertarian Party
+Allegra Katherine Collins	DEM	North Carolina Democratic Party
+Chuck Kitchen	REP	North Carolina Republican Party
+Robert Parks Trivette	DEM	North Carolina Democratic Party
+Eula E. Reid	DEM	North Carolina Democratic Party
+Meader Harriss	REP	North Carolina Republican Party
+"Darrell B. Cayton, Jr."	DEM	North Carolina Democratic Party
+Sarah A. Homes	REP	North Carolina Republican Party
+Regina R. Parker	DEM	North Carolina Democratic Party
+Daniel Hines Entzminger	REP	North Carolina Republican Party
+Jarrette Pittman	DEM	North Carolina Democratic Party
+Mario E. Perez	DEM	North Carolina Democratic Party
+Lee Teague	REP	North Carolina Republican Party
+Paul A. Hardison	DEM	North Carolina Democratic Party
+Sarah C. Seaton	REP	North Carolina Republican Party
+Lindsey L. McKee	REP	North Carolina Republican Party
+James H. Faison III	DEM	North Carolina Democratic Party
+Melinda H. Crouch	DEM	North Carolina Democratic Party
+Chad E. Hogston	REP	North Carolina Republican Party
+Pell Cooper	DEM	North Carolina Democratic Party
+Wayne S. Boyette	DEM	North Carolina Democratic Party
+Beth Heath	DEM	North Carolina Democratic Party
+Ben Hunter	DEM	North Carolina Democratic Party
+"Michael W. Putney, Jr."	DEM	North Carolina Democratic Party
+Michael J. Denning	REP	North Carolina Republican Party
+Craig Croom	DEM	North Carolina Democratic Party
+Margaret Phillips Eagles	DEM	North Carolina Democratic Party
+Evan Charles Schreier	REP	North Carolina Republican Party
+J. Brian Ratledge	REP	North Carolina Republican Party
+Nicolette Fulton	UNA	North Carolina Unaffiliated Voter
+Rebecca Anne Edwards	DEM	North Carolina Democratic Party
+Walter Rand	DEM	North Carolina Democratic Party
+Ned W. Mangum	REP	North Carolina Republican Party
+Ms. Sam Hamadani	DEM	North Carolina Democratic Party
+Louis Meyer	DEM	North Carolina Democratic Party
+Kris D. Bailey	REP	North Carolina Republican Party
+Joy Jones	REP	North Carolina Republican Party
+Addie Rawls	DEM	North Carolina Democratic Party
+Caron Stewart	REP	North Carolina Republican Party
+Toni S. King	DEM	North Carolina Democratic Party
+Robert J. Stiehl III	DEM	North Carolina Democratic Party
+David H. Hasty	DEM	North Carolina Democratic Party
+Stephen Craig Stokes	DEM	North Carolina Democratic Party
+Cheri Siler-Mack	DEM	North Carolina Democratic Party
+April Smith	DEM	North Carolina Democratic Party
+Caitlin Evans	DEM	North Carolina Democratic Party
+Tal Baggett	DEM	North Carolina Democratic Party
+W. Fred Gore	REP	North Carolina Republican Party
+William F. Fairley	REP	North Carolina Republican Party
+Dave Hall	DEM	North Carolina Democratic Party
+"Fred Battaglia, Jr."	DEM	North Carolina Democratic Party
+Doretta L. Walker	DEM	North Carolina Democratic Party
+Pat Evans	DEM	North Carolina Democratic Party
+Brian C. Wilks	DEM	North Carolina Democratic Party
+Clayton Jones	DEM	North Carolina Democratic Party
+James T. (Jim) Hill	REP	North Carolina Republican Party
+Amanda Maris	DEM	North Carolina Democratic Party
+Brad Allen	DEM	North Carolina Democratic Party
+Joseph Moody (Joe) Buckner	DEM	North Carolina Democratic Party
+Chris Rhue	DEM	North Carolina Democratic Party
+Chevonne Wallace	DEM	North Carolina Democratic Party
+Brooke Locklear Clark	DEM	North Carolina Democratic Party
+"Jack Moody, Jr."	REP	North Carolina Republican Party
+Vanessa Burton	DEM	North Carolina Democratic Party
+Angelica Chavis McIntyre	DEM	North Carolina Democratic Party
+Dale Deese	UNA	North Carolina Unaffiliated Voter
+Chris Freeman	REP	North Carolina Republican Party
+Christine Fields Strader	REP	North Carolina Republican Party
+Erica Standfield Brandon	DEM	North Carolina Democratic Party
+Gabriel E. (Gabe) Zeller	UNA	North Carolina Unaffiliated Voter
+Mike Gentry	REP	North Carolina Republican Party
+"Spencer G. Key, Jr."	REP	North Carolina Republican Party
+Gretchen Hollar Kirkman	REP	North Carolina Republican Party
+Tom Langan	REP	North Carolina Republican Party
+Marion M. Boone	REP	North Carolina Republican Party
+"H. Thomas (Tom) Jarrell, Jr."	DEM	North Carolina Democratic Party
+Jonathan G. (Jon) Kreider	REP	North Carolina Republican Party
+Larry L. Archie	DEM	North Carolina Democratic Party
+Christy E. Wilhelm	REP	North Carolina Republican Party
+James (Jim) DeMay	REP	North Carolina Republican Party
+Juanita Boger-Allen	DEM	North Carolina Democratic Party
+Michael G. Knox	REP	North Carolina Republican Party
+Darrin M. Gamradt	REP	North Carolina Republican Party
+Steve Grossman	REP	North Carolina Republican Party
+Brent Cloninger	REP	North Carolina Republican Party
+Andrew W. Davis	REP	North Carolina Republican Party
+J. Brooke Schmidly	DEM	North Carolina Democratic Party
+Sarah Neely Lanier	REP	North Carolina Republican Party
+Lee Gavin	REP	North Carolina Republican Party
+Scott Etheridge	REP	North Carolina Republican Party
+Kevin Eddinger	UNA	North Carolina Unaffiliated Voter
+Beth Dixon	REP	North Carolina Republican Party
+Charlie Brown	UNA	North Carolina Unaffiliated Voter
+James Randolph	REP	North Carolina Republican Party
+Warren McSweeney	REP	North Carolina Republican Party
+Brian Godfrey	REP	North Carolina Republican Party
+Regina M. Joe	DEM	North Carolina Democratic Party
+Steve Bibey	REP	North Carolina Republican Party
+William C. (Bill) Tucker	REP	North Carolina Republican Party
+John R. Nance	REP	North Carolina Republican Party
+Beverly Routh Spencer	REP	North Carolina Republican Party
+Thai Vang	REP	North Carolina Republican Party
+Denise S. Hartsfield	DEM	North Carolina Democratic Party
+Lisa V. Menefee	DEM	North Carolina Democratic Party
+Theodore (Ted) Kazakos	REP	North Carolina Republican Party
+George A. Bedsworth	DEM	North Carolina Democratic Party
+Brantley Ostwalt	REP	North Carolina Republican Party
+Carole A. Hicks	REP	North Carolina Republican Party
+"Daryl G. Davidson, Sr."	UNA	North Carolina Unaffiliated Voter
+Rob Young	REP	North Carolina Republican Party
+W. Carey Parker	DEM	North Carolina Democratic Party
+April C. Crowson	REP	North Carolina Republican Party
+Mary F. Covington	REP	North Carolina Republican Party
+Wayne L. Michael	REP	North Carolina Republican Party
+Carlton Terry	REP	North Carolina Republican Party
+April C. Wood	REP	North Carolina Republican Party
+Roy McDonald	REP	North Carolina Republican Party
+Jimmy Laird Myers	REP	North Carolina Republican Party
+Carlos Jane'	REP	North Carolina Republican Party
+Shelby S. Chase	REP	North Carolina Republican Party
+Robert (Rob) Crumpton	REP	North Carolina Republican Party
+William (Bill) Brooks	REP	North Carolina Republican Party
+David V. Byrd	REP	North Carolina Republican Party
+Larry Leake	DEM	North Carolina Democratic Party
+David W. Aycock	REP	North Carolina Republican Party
+Wes W. Barkley	REP	North Carolina Republican Party
+Sherri Wilson Elliott	REP	North Carolina Republican Party
+"Robert A. Mullinax, Jr."	REP	North Carolina Republican Party
+Amy Sigmon Walker	REP	North Carolina Republican Party
+Scott M. Cranford	DEM	North Carolina Democratic Party
+Clifton H. Smith	REP	North Carolina Republican Party
+Mark L. Killian	REP	North Carolina Republican Party
+Alicia D. Brooks	DEM	North Carolina Democratic Party
+Michael J. Stading	REP	North Carolina Republican Party
+"Donald Cureton, Jr."	DEM	North Carolina Democratic Party
+Paulina N. Havelka	REP	North Carolina Republican Party
+Sabrina Blain	DEM	North Carolina Democratic Party
+Sean Smith	REP	North Carolina Republican Party
+Matt Osman	REP	North Carolina Republican Party
+Paige McThenia	DEM	North Carolina Democratic Party
+Regan A. Miller	DEM	North Carolina Democratic Party
+Tracy Hanna Hewett	DEM	North Carolina Democratic Party
+Karen D. McCallum	DEM	North Carolina Democratic Party
+Khalif Rhodes	DEM	North Carolina Democratic Party
+Rickye McKoy-Mitchell	DEM	North Carolina Democratic Party
+Craig Collins	REP	North Carolina Republican Party
+Michael K. Lands	REP	North Carolina Republican Party
+"Ali Paksoy, Jr."	DEM	North Carolina Democratic Party
+Micah J. Sanderson	REP	North Carolina Republican Party
+Ward D. Scott	DEM	North Carolina Democratic Party
+Julie M. Kepple	DEM	North Carolina Democratic Party
+Patricia Kaufmann Young	DEM	North Carolina Democratic Party
+Susan (Smitty) Dotson-Smith	DEM	North Carolina Democratic Party
+Ed Clontz	DEM	North Carolina Democratic Party
+Robert K. Martelle	REP	North Carolina Republican Party
+Corey J. MacKinnon	REP	North Carolina Republican Party
+Randy Pool	REP	North Carolina Republican Party
+Laura Anne Powell	REP	North Carolina Republican Party
+Donna Forga	REP	North Carolina Republican Party
+Kristina L. Earwood	REP	North Carolina Republican Party
+Leo J. Phillips	REP	North Carolina Republican Party
+Roy Wijewickrama	DEM	North Carolina Democratic Party
+Edward C. Goodwin	REP	North Carolina Republican Party
+Ronald (Ron) Wesson	DEM	North Carolina Democratic Party
+Darryl D. Moss	DEM	North Carolina Democratic Party
+Larry Yarborough	REP	North Carolina Republican Party
+Barbara Lee	DEM	North Carolina Democratic Party
+Michael Speciale	REP	North Carolina Republican Party
+T. Lee Horne III	LIB	North Carolina Libertarian Party
+Da'Quan Marcell Love	DEM	North Carolina Democratic Party
+Jimmy Dixon	REP	North Carolina Republican Party
+Kevin E. Hayes	CST	North Carolina Constitution Party
+Howard J. Hunter III	DEM	North Carolina Democratic Party
+Phillip Smith	REP	North Carolina Republican Party
+Bobby Hanig	REP	North Carolina Republican Party
+Tess Judge	DEM	North Carolina Democratic Party
+Bobbie Richardson	DEM	North Carolina Democratic Party
+Lisa Stone Barnes	REP	North Carolina Republican Party
+Brenda Letchworth Smith	REP	North Carolina Republican Party
+Kandie D. Smith	DEM	North Carolina Democratic Party
+Greg Murphy	REP	North Carolina Republican Party
+Kris Rixon	DEM	North Carolina Democratic Party
+John Bell	REP	North Carolina Republican Party
+Tracy Blackmon	DEM	North Carolina Democratic Party
+Allison Dahle	DEM	North Carolina Democratic Party
+Travis Groo	LIB	North Carolina Libertarian Party
+Tyler Brooks	REP	North Carolina Republican Party
+Chris Humphrey	REP	North Carolina Republican Party
+George Graham	DEM	North Carolina Democratic Party
+Patricia (Pat) McElraft	REP	North Carolina Republican Party
+Pene diMaio	UNA	North Carolina Unaffiliated Voter
+George G. Cleveland	REP	North Carolina Republican Party
+Isaiah (Ike) Johnson	DEM	North Carolina Democratic Party
+Dan Whitten	DEM	North Carolina Democratic Party
+Phillip Shepard	REP	North Carolina Republican Party
+Carson Smith	REP	North Carolina Republican Party
+John Johnson	DEM	North Carolina Democratic Party
+Frank Iler	REP	North Carolina Republican Party
+Tom Simmons	DEM	North Carolina Democratic Party
+Deb Butler	DEM	North Carolina Democratic Party
+Joseph D. Sharp	LIB	North Carolina Libertarian Party
+Louis Harmati	REP	North Carolina Republican Party
+David Perry	LIB	North Carolina Libertarian Party
+Marcia Morgan	DEM	North Carolina Democratic Party
+"Ted Davis, Jr."	REP	North Carolina Republican Party
+Holly Grange	REP	North Carolina Republican Party
+Leslie Cohen	DEM	North Carolina Democratic Party
+Raymond Smith	DEM	North Carolina Democratic Party
+Robert E. Freeman	REP	North Carolina Republican Party
+Martin (Tony) Denning	DEM	North Carolina Democratic Party
+William Brisson	REP	North Carolina Republican Party
+Claiborne Holtzman	REP	North Carolina Republican Party
+Shelly Willingham	DEM	North Carolina Democratic Party
+Jean Farmer Butterfield	DEM	North Carolina Democratic Party
+Ken Fontenot	UNA	North Carolina Unaffiliated Voter
+James D. Gailliard	DEM	North Carolina Democratic Party
+John M. Check	REP	North Carolina Republican Party
+Nick Taylor	LIB	North Carolina Libertarian Party
+Donna McDowell White	REP	North Carolina Republican Party
+Linda Bennett	DEM	North Carolina Democratic Party
+Michael H. Wray	DEM	North Carolina Democratic Party
+Raymond (Ray) Dyer	REP	North Carolina Republican Party
+Jimmie M. Massengill	DEM	North Carolina Democratic Party
+Larry C. Strickland	REP	North Carolina Republican Party
+Walt Rabon	LIB	North Carolina Libertarian Party
+Charles Becker	REP	North Carolina Republican Party
+MaryAnn E. Black	DEM	North Carolina Democratic Party
+"B. Angelo Burch, Sr."	REP	North Carolina Republican Party
+Marcia Morey	DEM	North Carolina Democratic Party
+Matthew Wagoner	LIB	North Carolina Libertarian Party
+Erik Raudsep	LIB	North Carolina Libertarian Party
+Torian Webson	REP	North Carolina Republican Party
+Zack Forde-Hawkins	DEM	North Carolina Democratic Party
+Robert Shingler	REP	North Carolina Republican Party
+Terry Garrison	DEM	North Carolina Democratic Party
+Anne Murtha	REP	North Carolina Republican Party
+Rosa U. Gill	DEM	North Carolina Democratic Party
+Cap Hayes	LIB	North Carolina Libertarian Party
+Catherine Whiteford	REP	North Carolina Republican Party
+Grier Martin	DEM	North Carolina Democratic Party
+Michael Nelson	LIB	North Carolina Libertarian Party
+Terence Everitt	DEM	North Carolina Democratic Party
+Chris Malone	REP	North Carolina Republican Party
+Julie von Haefen	DEM	North Carolina Democratic Party
+Nelson Dollar	REP	North Carolina Republican Party
+Robyn Haley Pegram	LIB	North Carolina Libertarian Party
+Guy Meilleur	LIB	North Carolina Libertarian Party
+John B. Adcock	REP	North Carolina Republican Party
+Mrs. Sydney Batch	DEM	North Carolina Democratic Party
+Ken Bagnal	REP	North Carolina Republican Party
+Yvonne Lewis Holley	DEM	North Carolina Democratic Party
+Bobby Yates Emory	LIB	North Carolina Libertarian Party
+Darren Jackson	DEM	North Carolina Democratic Party
+Martin Matuszewski	LIB	North Carolina Libertarian Party
+Rhonda Allen	REP	North Carolina Republican Party
+David Ulmer	LIB	North Carolina Libertarian Party
+Joe John	DEM	North Carolina Democratic Party
+Marilyn Avila	REP	North Carolina Republican Party
+Emmanuel Wilder	REP	North Carolina Republican Party
+Gale Adcock	DEM	North Carolina Democratic Party
+Ed Williams	REP	North Carolina Republican Party
+Mark A. Crowe	CST	North Carolina Constitution Party
+Marvin W. Lucas	DEM	North Carolina Democratic Party
+Elmer Floyd	DEM	North Carolina Democratic Party
+John Czajkowski	REP	North Carolina Republican Party
+Billy Richardson	DEM	North Carolina Democratic Party
+Linda Devore	REP	North Carolina Republican Party
+Albeiro (Al) Florez	DEM	North Carolina Democratic Party
+John Szoka	REP	North Carolina Republican Party
+Barbara S. Yates-Lockamy	DEM	North Carolina Democratic Party
+Brenden H. Jones	REP	North Carolina Republican Party
+Jarrod Lowery	REP	North Carolina Republican Party
+Charles Graham	DEM	North Carolina Democratic Party
+Garland E. Pierce	DEM	North Carolina Democratic Party
+Russell Walker	REP	North Carolina Republican Party
+Cynthia Ball	DEM	North Carolina Democratic Party
+David Robertson	REP	North Carolina Republican Party
+Jonathan Horst	LIB	North Carolina Libertarian Party
+Graig R. Meyer	DEM	North Carolina Democratic Party
+Kenneth Price Rothrock	REP	North Carolina Republican Party
+John Sauls	REP	North Carolina Republican Party
+Lisa D. Mathis	DEM	North Carolina Democratic Party
+Jamie Boles	REP	North Carolina Republican Party
+Lowell Simon	DEM	North Carolina Democratic Party
+David Lewis	REP	North Carolina Republican Party
+Richard Chapman	DEM	North Carolina Democratic Party
+Jay Stobbs	REP	North Carolina Republican Party
+Robert T. Reives II	DEM	North Carolina Democratic Party
+Frank Deese	DEM	North Carolina Democratic Party
+Mark Brody	REP	North Carolina Republican Party
+Marcus Cooke	REP	North Carolina Republican Party
+Matthew P. Clements	LIB	North Carolina Libertarian Party
+Verla C. Insko	DEM	North Carolina Democratic Party
+Ashton Clemmons	DEM	North Carolina Democratic Party
+Troy Lawson	REP	North Carolina Republican Party
+Amos Quick	DEM	North Carolina Democratic Party
+Peter Boykin	REP	North Carolina Republican Party
+Steven A. Buccini	DEM	North Carolina Democratic Party
+Jon Hardister	REP	North Carolina Republican Party
+Cecil Brockman	DEM	North Carolina Democratic Party
+Kurt Collins	REP	North Carolina Republican Party
+Alissa Batts	REP	North Carolina Republican Party
+Mary Price (Pricey) Harrison	DEM	North Carolina Democratic Party
+John Faircloth	REP	North Carolina Republican Party
+Martha R. Shafer	DEM	North Carolina Democratic Party
+Erica McAdoo	DEM	North Carolina Democratic Party
+Stephen Ross	REP	North Carolina Republican Party
+Dennis Riddell	REP	North Carolina Republican Party
+Elliott Lynch	DEM	North Carolina Democratic Party
+Houston Barrow	LIB	North Carolina Libertarian Party
+Jerry Carter	REP	North Carolina Republican Party
+Michael H. (Mike) Lee	DEM	North Carolina Democratic Party
+Joey Davis	REP	North Carolina Republican Party
+Justin Miller	GRE	North Carolina Green Party
+Ken Goodman	DEM	North Carolina Democratic Party
+Karen Webster	DEM	North Carolina Democratic Party
+Michael Finn	LIB	North Carolina Libertarian Party
+Wayne Sasser	REP	North Carolina Republican Party
+Craig Horn	REP	North Carolina Republican Party
+Rick Foulke	DEM	North Carolina Democratic Party
+Dean Arp	REP	North Carolina Republican Party
+Jennifer Benson	DEM	North Carolina Democratic Party
+Mary Rulli	DEM	North Carolina Democratic Party
+Pat B. Hurley	REP	North Carolina Republican Party
+Scott Arnold	REP	North Carolina Republican Party
+Evelyn Terry	DEM	North Carolina Democratic Party
+Derwin L. Montgomery	DEM	North Carolina Democratic Party
+Reginald Reid	REP	North Carolina Republican Party
+Lee Zachary	REP	North Carolina Republican Party
+William Stinson	DEM	North Carolina Democratic Party
+Debra Conrad	REP	North Carolina Republican Party
+Terri Elizabeth LeGrand	DEM	North Carolina Democratic Party
+Dan Besse	DEM	North Carolina Democratic Party
+Donny C. Lambeth	REP	North Carolina Republican Party
+Harry Warren	REP	North Carolina Republican Party
+Joe Fowler	DEM	North Carolina Democratic Party
+Bonnie Dawn Clark	DEM	North Carolina Democratic Party
+Julia Craven Howard	REP	North Carolina Republican Party
+Allen Ray McNeill	REP	North Carolina Republican Party
+Jim Meredith	DEM	North Carolina Democratic Party
+Jerry E. Langley	DEM	North Carolina Democratic Party
+Keith Kidwell	REP	North Carolina Republican Party
+Steve Jarvis	REP	North Carolina Republican Party
+Wendy B. Sellars	DEM	North Carolina Democratic Party
+Larry W. Potts	REP	North Carolina Republican Party
+Lewie Phillips	DEM	North Carolina Democratic Party
+Aimy Steele	DEM	North Carolina Democratic Party
+Linda P. Johnson	REP	North Carolina Republican Party
+Gail Young	DEM	North Carolina Democratic Party
+Larry G. Pittman	REP	North Carolina Republican Party
+Allen R. Edwards	DEM	North Carolina Democratic Party
+Rena W. Turner	REP	North Carolina Republican Party
+Howard Larsen	DEM	North Carolina Democratic Party
+Josh Dobson	REP	North Carolina Republican Party
+Hugh Blackwell	REP	North Carolina Republican Party
+Tim Barnsback	DEM	North Carolina Democratic Party
+Amanda Bregel	DEM	North Carolina Democratic Party
+Destin Hall	REP	North Carolina Republican Party
+Mary G. Belk	DEM	North Carolina Democratic Party
+Ty Turner	REP	North Carolina Republican Party
+Greg Cranford	DEM	North Carolina Democratic Party
+Mitchell Smith Setzer	REP	North Carolina Republican Party
+Allen Poindexter	CST	North Carolina Constitution Party
+John Worth Wiles	DEM	North Carolina Democratic Party
+Sarah Stevens	REP	North Carolina Republican Party
+Kyle Hall	REP	North Carolina Republican Party
+Michael Booth	DEM	North Carolina Democratic Party
+Steve Brenneis	LIB	North Carolina Libertarian Party
+Chaz Beasley	DEM	North Carolina Democratic Party
+Debbie Ware	REP	North Carolina Republican Party
+Jonathan C. Jordan	REP	North Carolina Republican Party
+Ray Russell	DEM	North Carolina Democratic Party
+Dianne Little	DEM	North Carolina Democratic Party
+Jeffrey Elmore	REP	North Carolina Republican Party
+Carla Fassbender	DEM	North Carolina Democratic Party
+John A. Fraley	REP	North Carolina Republican Party
+Jay Adams	REP	North Carolina Republican Party
+Kim Bost	DEM	North Carolina Democratic Party
+Jason R. Saine	REP	North Carolina Republican Party
+Natalie Robertson	DEM	North Carolina Democratic Party
+Christy Clark	DEM	North Carolina Democratic Party
+John R. Bradford III	REP	North Carolina Republican Party
+Joshua Niday	REP	North Carolina Republican Party
+Nasif Majeed	DEM	North Carolina Democratic Party
+John Autry	DEM	North Carolina Democratic Party
+Nancy Campbell	REP	North Carolina Republican Party
+Carolyn Logan	DEM	North Carolina Democratic Party
+Steve Mauney	REP	North Carolina Republican Party
+Becky Carney	DEM	North Carolina Democratic Party
+Tyler Norris	REP	North Carolina Republican Party
+Bill Brawley	REP	North Carolina Republican Party
+Rachel Hunt	DEM	North Carolina Democratic Party
+Andy Dulin	REP	North Carolina Republican Party
+Brandon Lofton	DEM	North Carolina Democratic Party
+Scott Stone	REP	North Carolina Republican Party
+Wesley Harris	DEM	North Carolina Democratic Party
+Carla Cunningham	DEM	North Carolina Democratic Party
+Geovani Opry Sherow	REP	North Carolina Republican Party
+Kelly Alexander	DEM	North Carolina Democratic Party
+John A. Torbett	REP	North Carolina Republican Party
+Robert Kellogg	DEM	North Carolina Democratic Party
+Dana Bumgardner	REP	North Carolina Republican Party
+Jennie Stultz (Write-In)		North Carolina Constitution Party
+Susan Maxon	DEM	North Carolina Democratic Party
+Write-In (Miscellaneous)		North Carolina Constitution Party
+Christy McCleary	DEM	North Carolina Democratic Party
+Kelly E. Hastings	REP	North Carolina Republican Party
+David C. Brinkley	DEM	North Carolina Democratic Party
+Tim Moore	REP	North Carolina Republican Party
+David Rogers	REP	North Carolina Republican Party
+Gregory James Gallagher	DEM	North Carolina Democratic Party
+Cody Henson	REP	North Carolina Republican Party
+Sam Edney	DEM	North Carolina Democratic Party
+Kris A. Lindstam	REP	North Carolina Republican Party
+Susan C. Fisher	DEM	North Carolina Democratic Party
+Amy Evans	REP	North Carolina Republican Party
+John Ager	DEM	North Carolina Democratic Party
+Brian Turner	DEM	North Carolina Democratic Party
+Marilyn A. Brown	REP	North Carolina Republican Party
+Chuck McGrady	REP	North Carolina Republican Party
+Gayle Kemp	DEM	North Carolina Democratic Party
+Michele D. Presnell	REP	North Carolina Republican Party
+Rhonda Cole Schandevel	DEM	North Carolina Democratic Party
+Joe Sam Queen	DEM	North Carolina Democratic Party
+Mike Clampitt	REP	North Carolina Republican Party
+Aaron Martin	DEM	North Carolina Democratic Party
+Kevin Corbin	REP	North Carolina Republican Party
+Bob Steinburg	REP	North Carolina Republican Party
+D. Cole Phelps	DEM	North Carolina Democratic Party
+Ginger Garner	DEM	North Carolina Democratic Party
+Norman Sanderson	REP	North Carolina Republican Party
+Tim Harris	LIB	North Carolina Libertarian Party
+"C. (Chuck) Earley, Jr."	REP	North Carolina Republican Party
+Erica D. Smith	DEM	North Carolina Democratic Party
+Jesse Shearin	LIB	North Carolina Libertarian Party
+"Milton F. (Toby) Fitch, Jr."	DEM	North Carolina Democratic Party
+Richard Scott	REP	North Carolina Republican Party
+Don Davis	DEM	North Carolina Democratic Party
+Kimberly Robb	REP	North Carolina Republican Party
+Harry Brown	REP	North Carolina Republican Party
+Joseph (Joe) Webb	DEM	North Carolina Democratic Party
+David B. Brantley	DEM	North Carolina Democratic Party
+"Louis Milford Pate, Jr."	REP	North Carolina Republican Party
+Anthony H. Mascolo	LIB	North Carolina Libertarian Party
+Bill Rabon	REP	North Carolina Republican Party
+"David W. Sink, Jr."	DEM	North Carolina Democratic Party
+Michael Lee	REP	North Carolina Republican Party
+Ethan Bickley	LIB	North Carolina Libertarian Party
+Harper Peterson	DEM	North Carolina Democratic Party
+Brent Jackson	REP	North Carolina Republican Party
+Vernon R. Moore	DEM	North Carolina Democratic Party
+Albert R. Pacer	DEM	North Carolina Democratic Party
+Rick Horner	REP	North Carolina Republican Party
+Jean Sivoli	DEM	North Carolina Democratic Party
+Jim Burgin	REP	North Carolina Republican Party
+"Danny Earl Britt, Jr."	REP	North Carolina Republican Party
+John Campbell	DEM	North Carolina Democratic Party
+Dan Blue	DEM	North Carolina Democratic Party
+Richard Haygood	LIB	North Carolina Libertarian Party
+Sandy Andrews	REP	North Carolina Republican Party
+Jay J. Chaudhuri	DEM	North Carolina Democratic Party
+Alan David Michael	REP	North Carolina Republican Party
+Brian Lewis	LIB	North Carolina Libertarian Party
+Brian Irving	LIB	North Carolina Libertarian Party
+Paul Smith	REP	North Carolina Republican Party
+Wiley Nickel	DEM	North Carolina Democratic Party
+Tamara Barringer	REP	North Carolina Republican Party
+Bruce Basson	LIB	North Carolina Libertarian Party
+Sam Searcy	DEM	North Carolina Democratic Party
+Brad Hessel	LIB	North Carolina Libertarian Party
+John Alexander	REP	North Carolina Republican Party
+Mack Paul	DEM	North Carolina Democratic Party
+Kirk DeViere	DEM	North Carolina Democratic Party
+Wesley Meredith	REP	North Carolina Republican Party
+"Floyd B. McKissick, Jr."	DEM	North Carolina Democratic Party
+Jared Erickson	LIB	North Carolina Libertarian Party
+Tom Stark	REP	North Carolina Republican Party
+Ben Clark	DEM	North Carolina Democratic Party
+Timothy Leever	REP	North Carolina Republican Party
+Mike Woodard	DEM	North Carolina Democratic Party
+Ray Ubinger	LIB	North Carolina Libertarian Party
+Rickey (Rick) Padgett	REP	North Carolina Republican Party
+Tom Glendinning	REP	North Carolina Republican Party
+Valerie P. Foushee	DEM	North Carolina Democratic Party
+J. D. Wooten	DEM	North Carolina Democratic Party
+Rick Gunn	REP	North Carolina Republican Party
+Helen Probst Mills	DEM	North Carolina Democratic Party
+Tom McInnis	REP	North Carolina Republican Party
+Jerry W. Tillman	REP	North Carolina Republican Party
+William (Bill) McCaskill	DEM	North Carolina Democratic Party
+Michael Garrett	DEM	North Carolina Democratic Party
+Trudy Wade	REP	North Carolina Republican Party
+Clark Porter	REP	North Carolina Republican Party
+Gladys Robinson	DEM	North Carolina Democratic Party
+Cheraton Love	DEM	North Carolina Democratic Party
+Eddie Gallimore	REP	North Carolina Republican Party
+Jen Mangrum	DEM	North Carolina Democratic Party
+Philip E. (Phil) Berger	REP	North Carolina Republican Party
+R. Michael Jordan	LIB	North Carolina Libertarian Party
+"John Motsinger, Jr."	DEM	North Carolina Democratic Party
+Joyce Krawiec	REP	North Carolina Republican Party
+Eric Henderson	REP	North Carolina Republican Party
+"Paul Lowe, Jr."	DEM	North Carolina Democratic Party
+Carl Ford	REP	North Carolina Republican Party
+Arin Wilhelm	DEM	North Carolina Democratic Party
+Beniah McMiller	DEM	North Carolina Democratic Party
+Vickie Sawyer	REP	North Carolina Republican Party
+Caroline L. Walker	DEM	North Carolina Democratic Party
+Todd Johnson	REP	North Carolina Republican Party
+Mark E. Shelley	DEM	North Carolina Democratic Party
+Paul R. Newton	REP	North Carolina Republican Party
+Jeff Jackson	DEM	North Carolina Democratic Party
+Nora Trotman	REP	North Carolina Republican Party
+Stuart Andrew Collins	CST	North Carolina Constitution Party
+Mujtaba A. Mohammed	DEM	North Carolina Democratic Party
+Richard Rivette	REP	North Carolina Republican Party
+Dan Bishop	REP	North Carolina Republican Party
+Chad Stachowicz	DEM	North Carolina Democratic Party
+Joyce Waddell	DEM	North Carolina Democratic Party
+Mr. Bobbie Shields	REP	North Carolina Republican Party
+Jeff Tarte	REP	North Carolina Republican Party
+Natasha Marcus	DEM	North Carolina Democratic Party
+Andy Wells	REP	North Carolina Republican Party
+Ric Vandett	DEM	North Carolina Democratic Party
+Altriese Price	DEM	North Carolina Democratic Party
+Kathy Harrington	REP	North Carolina Republican Party
+Mitchell D. Bridges	LIB	North Carolina Libertarian Party
+David Lee Lattimore	DEM	North Carolina Democratic Party
+Ted Alexander	REP	North Carolina Republican Party
+Deanna Ballard	REP	North Carolina Republican Party
+Wes Luther	DEM	North Carolina Democratic Party
+Warren Daniel	REP	North Carolina Republican Party
+Art Sherwood	DEM	North Carolina Democratic Party
+David Wheeler	DEM	North Carolina Democratic Party
+Ralph Hise	REP	North Carolina Republican Party
+Chuck Edwards	REP	North Carolina Republican Party
+Norm Bossert	DEM	North Carolina Democratic Party
+Terry Van Duyn	DEM	North Carolina Democratic Party
+Lyndon John Smith	LIB	North Carolina Libertarian Party
+Mark Crawford	REP	North Carolina Republican Party
+Bobby Kuppers	DEM	North Carolina Democratic Party
+Jim Davis	REP	North Carolina Republican Party
+J. C. Cole	DEM	North Carolina Democratic Party
+Jerry R. Tillett	REP	North Carolina Republican Party
+"Wayland J. Sermons, Jr."	DEM	North Carolina Democratic Party
+Paul M. Quinn	REP	North Carolina Republican Party
+John Nobles	REP	North Carolina Republican Party
+"Albert D. Kirby, Jr."	DEM	North Carolina Democratic Party
+Henry L. Stevens IV	REP	North Carolina Republican Party
+G. Frank Jones	REP	North Carolina Republican Party
+Tripp Watson	REP	North Carolina Republican Party
+Quentin T. Sumner	DEM	North Carolina Democratic Party
+Lamont Wiggins	DEM	North Carolina Democratic Party
+"Walter H. Godwin, Jr."	DEM	North Carolina Democratic Party
+John Dunlow	REP	North Carolina Republican Party
+Lawrence Tickle	DEM	North Carolina Democratic Party
+Paul Ross	DEM	North Carolina Democratic Party
+Steven E. Hight	DEM	North Carolina Democratic Party
+Carolyn J. Thompson	DEM	North Carolina Democratic Party
+Cindy Sturges	REP	North Carolina Republican Party
+Mitchell Styers	DEM	North Carolina Democratic Party
+"Vince Rozier, Jr."	DEM	North Carolina Democratic Party
+Keith Gregory	DEM	North Carolina Democratic Party
+Matt Van Sickle	UNA	North Carolina Unaffiliated Voter
+Claire V. Hill	DEM	North Carolina Democratic Party
+"James (Jim) Floyd Ammons, Jr."	UNA	North Carolina Unaffiliated Voter
+Mary Ann Tally	DEM	North Carolina Democratic Party
+Ola M. Lewis	REP	North Carolina Republican Party
+"James E. (Jim) Hardin, Jr."	DEM	North Carolina Democratic Party
+Michael O'Foghludha	DEM	North Carolina Democratic Party
+Dawn Baxton	DEM	North Carolina Democratic Party
+Josephine Kerr Davis	DEM	North Carolina Democratic Party
+Tom Lambeth	DEM	North Carolina Democratic Party
+Andy Hanford	DEM	North Carolina Democratic Party
+Pat Nadolski	REP	North Carolina Republican Party
+Mark T. Cummings	DEM	North Carolina Democratic Party
+Lora Christine Cubbage	DEM	North Carolina Democratic Party
+Joe Craig	UNA	North Carolina Unaffiliated Voter
+Gavin Reardon	DEM	North Carolina Democratic Party
+William A. (Bill) Wood	DEM	North Carolina Democratic Party
+James P. (Jimmy) Hill	REP	North Carolina Republican Party
+Anna Mills Wagoner	REP	North Carolina Republican Party
+Gregory B. Thompson	DEM	North Carolina Democratic Party
+Michael (Mike) Stone	REP	North Carolina Republican Party
+Chris Bragg	REP	North Carolina Republican Party
+Gary Gavenus	REP	North Carolina Republican Party
+Robert C. (Bob) Ervin	DEM	North Carolina Democratic Party
+Nathaniel (Nathan) J. Poovey	REP	North Carolina Republican Party
+Reggie E. McKnight	DEM	North Carolina Democratic Party
+George Bell	REP	North Carolina Republican Party
+Howard L. Clark III	DEM	North Carolina Democratic Party
+Donnie Hoover	DEM	North Carolina Democratic Party
+Karen Eady-Williams	DEM	North Carolina Democratic Party
+Lou Trosch	DEM	North Carolina Democratic Party
+David A. Phillips	DEM	North Carolina Democratic Party
+Forrest Donald Bridges	DEM	North Carolina Democratic Party
+Marvin P. Pope	DEM	North Carolina Democratic Party
+Alan Thornburg	DEM	North Carolina Democratic Party
+Bradley B. Letts	DEM	North Carolina Democratic Party
+Mark Melrose	DEM	North Carolina Democratic Party
+Anita Earls	DEM	North Carolina Democratic Party
+Barbara Jackson	REP	North Carolina Republican Party
+Christopher (Chris) Anglin	REP	North Carolina Republican Party
+G. K. Butterfield	DEM	North Carolina Democratic Party
+Roger W. Allison	REP	North Carolina Republican Party
+George Holding	REP	North Carolina Republican Party
+Jeff Matemu	LIB	North Carolina Libertarian Party
+Linda Coleman	DEM	North Carolina Democratic Party
+Walter B. Jones	REP	North Carolina Republican Party
+Barbara Howe	LIB	North Carolina Libertarian Party
+David Price	DEM	North Carolina Democratic Party
+Steve A. (Von) Loor	REP	North Carolina Republican Party
+DD Adams	DEM	North Carolina Democratic Party
+Virginia Foxx	REP	North Carolina Republican Party
+B. Mark Walker	REP	North Carolina Republican Party
+Ryan Watts	DEM	North Carolina Democratic Party
+David W. Fallin	CST	North Carolina Constitution Party
+Kyle Horton	DEM	North Carolina Democratic Party
+David Rouzer	REP	North Carolina Republican Party
+Frank McNeill	DEM	North Carolina Democratic Party
+Richard Hudson	REP	North Carolina Republican Party
+Dan McCready	DEM	North Carolina Democratic Party
+Jeff Scott	LIB	North Carolina Libertarian Party
+Mark Harris	REP	North Carolina Republican Party
+David Wilson Brown	DEM	North Carolina Democratic Party
+Patrick McHenry	REP	North Carolina Republican Party
+"Clifton B. Ingram, Jr."	LIB	North Carolina Libertarian Party
+Mark Meadows	REP	North Carolina Republican Party
+Phillip G. Price	DEM	North Carolina Democratic Party
+Alma Adams	DEM	North Carolina Democratic Party
+Paul Wright	REP	North Carolina Republican Party
+Kathy Manning	DEM	North Carolina Democratic Party
+Robert Corriher	GRE	North Carolina Green Party
+Ted Budd	REP	North Carolina Republican Party
+Tom Bailey	LIB	North Carolina Libertarian Party
