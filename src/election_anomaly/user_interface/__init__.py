@@ -957,12 +957,8 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={}):
 			if row["fieldname"] in known_info_d.keys():
 				user_input_record[row["fieldname"]] = known_info_d[row["fieldname"]]
 			else:
-				if 'fieldname' == '_datafile_separator':
-					msg = '\nIf you\'re not sure, try iso-8859-1'
-				else:
-					msg = ''
 				user_input_record[row["fieldname"]] = enter_and_check_datatype(
-					f'Enter the {row["fieldname"]}.{msg}',row['datatype'])
+					f'Enter the {row["fieldname"]}',row['datatype'])
 
 		for idx,row in df['foreign_keys'].iterrows():
 			target = row['refers_to']
