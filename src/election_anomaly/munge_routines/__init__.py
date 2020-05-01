@@ -298,7 +298,7 @@ def add_non_id_cols_from_id(row_df,cdf_table,table_name):
     return row_df
 
 
-def enum_col_from_id_othertext(df,enum,enum_df):
+def enum_col_from_id_othertext(df,enum,enum_df,drop_old=True):
     """Returns a copy of dataframe <df>, replacing id and othertext columns
     (e.g., 'CountItemType_Id' and 'OtherCountItemType)
     with a plaintext <type> column (e.g., 'CountItemType')
@@ -316,7 +316,8 @@ def enum_col_from_id_othertext(df,enum,enum_df):
     # if Txt value is 'other', use Other{enum} value instead
     df['Txt'].mask(df['Txt']!='other', other=df[f'Other{enum}'])
     df.rename(columns={'Txt':enum},inplace=True)
-    df.drop([f'{enum}_Id',f'Other{enum}'],axis=1,inplace=True)
+    if drop_old:
+        df.drop([f'{enum}_Id',f'Other{enum}'],axis=1,inplace=True)
     return df
 
 

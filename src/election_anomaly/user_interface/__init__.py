@@ -408,8 +408,8 @@ def pick_munger(sess,munger_dir='mungers',template_dir='templates/munger_templat
 	check_munger_files(sess,munger_name,munger_dir,template_dir)
 
 	munger_path = os.path.join(munger_dir,munger_name)
-	munger = sf.Munger(munger_path,template_dir)
-	munger.check_against_self(os.path.join(root,template_dir))
+	munger = sf.Munger(munger_path)
+	munger.check_against_self()
 	munger.check_against_db(sess)
 	return munger
 
