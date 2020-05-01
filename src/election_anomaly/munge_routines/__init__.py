@@ -321,7 +321,7 @@ def enum_col_from_id_othertext(df,enum,enum_df,drop_old=True):
     return df
 
 
-def enum_col_to_id_othertext(df,type_col,enum_df):
+def enum_col_to_id_othertext(df,type_col,enum_df,drop_old=True):
     """Returns a copy of dataframe <df>, replacing a plaintext <type_col> column (e.g., 'CountItemType') with
     the corresponding two id and othertext columns (e.g., 'CountItemType_Id' and 'OtherCountItemType
     using the enumeration given in <enum_df>"""
@@ -341,7 +341,9 @@ def enum_col_to_id_othertext(df,type_col,enum_df):
         other_id = other_id_df.iloc[0]['Id']
         df[f'{type_col}_Id'] = df[f'{type_col}_Id'].fillna(other_id)
         df.loc[df[f'{type_col}_Id'] == other_id,'Other'+type_col] = df.loc[df[f'{type_col}_Id'] == other_id,type_col]
-    df = df.drop(['Txt',type_col],axis=1)
+    df = df.drop(['Txt'],axis=1)
+    if drop_old:
+        df = df.drop([type_col],axis=1)
     for c in ['Id','Txt']:
         if c*3 in df.columns:
             # avoid restore name renaming the column in the main dataframe
