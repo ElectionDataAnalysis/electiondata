@@ -19,15 +19,13 @@ def clean_raw_df(raw,munger):
     # strip whitespace
     raw = raw.applymap(lambda x:x.strip())
 
-    field_lists = list(munger.cdf_elements[munger.cdf_elements.source=='row'].fields)
-    munger_fields = set().union(*field_lists)
     # TODO keep columns named in munger formulas; keep numerical columns; drop all else.
     if munger.header_row_count > 1:
-        cols_to_munge = [x for x in raw.columns if x[munger.field_name_row] in munger_fields]
+        cols_to_munge = [x for x in raw.columns if x[munger.field_name_row] in munger.field_list]
     else:
-        cols_to_munge = [x for x in raw.columns if x in munger_fields]
+        cols_to_munge = [x for x in raw.columns if x in munger.field_list]
 
-    # TODO error check- what if cols_to_munge is missing something from munger_fields?
+    # TODO error check- what if cols_to_munge is missing something from munger.field_list?
 
     # recast other columns as integer where possible.
     #  (recast leaves columns with text entries as non-numeric).

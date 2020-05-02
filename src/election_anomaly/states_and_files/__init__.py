@@ -462,18 +462,10 @@ class Munger:
 
     def check_against_self(self):
         """check that munger is internally consistent; offer user chance to correct munger"""
-        # TODO write this function
         checked = False
         while not checked:
             checked = True
             problems = []
-
-            # every cdf_element in raw_identifiers.txt is in cdf_elements.cdf_element
-            missing = [x for x in self.raw_identifiers.cdf_element.unique() if x not in self.cdf_elements.index]
-            if missing:
-                m_str = ','.join(missing)
-                problems.append(
-                    f'''At least one cdf_element in raw_identifiers.txt is missing from cdf_elements.txt: {m_str}''')
 
             # every source is either row, column or other
             bad_source = [x for x in self.cdf_elements.source if x not in ['row','column','other']]
@@ -602,7 +594,6 @@ class Munger:
         self.field_rename_suffix = '___' # NB: must not match any suffix of a cdf element name;
 
         # used repeatedly, so calculated once for convenience
-        # TODO find places this is calculated; replace with self.field_list
         self.field_list = set()
         for t,r in self.cdf_elements.iterrows():
             self.field_list=self.field_list.union(r['fields'])
