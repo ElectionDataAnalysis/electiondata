@@ -697,15 +697,32 @@ def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={
 	Note: storage in file system should use names of any enumerations, not
 	internal <enum>_Id and Other<enum>.
 	"""
+	# initialize various items to make syntax-checker happy
+	db_record = pd.Series()
+	file_record = pd.Series()
+	enum_val = {}
+
 	# get list -- from file system -- of all enumerations for the <table>
 	enum_list = pd.read_csv(
 		os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/elements',table,'enumerations.txt'),
 		sep='\t',header=0).enumeration.to_list()
 
+	# identify/create the directory for storing individual records in file system
+	storage_dir = os.path.join(root_dir,'db_records_entered_by_hand')
+	if not os.path.isdir(storage_dir):
+		os.makedirs(storage_dir)
+
+	storage_file = os.path.join(storage_dir,f'{table}.txt')
+	# read from file system (if file exists)
+	if os.path.isfile(storage_file):
+		all_from_file = pd.read_csv(storage_file,sep='\t')
+	else:
+		all_from_file = pd.DataFrame()  # empty
+
 	# get dataframe for each enumeration
-	df = {}
+	e_df = {}
 	for e in enum_list:
-		df[e] = pd.read_sql_table(e,sess.bind)
+		e_df[e] = pd.read_sql_table(e,sess.bind)
 
 	# read from db and filter
 	all_from_db = pd.read_sql_table(table,sess.bind,index_col='Id')
@@ -717,54 +734,60 @@ def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={
 		# add plaintext enum columns
 		filtered_from_db_with_plaintext = filtered_from_db
 		for e in enum_list:
-			e_df = pd.read_sql_table(e,sess.bind)
+			e_df[e] = pd.read_sql_table(e,sess.bind)
 			filtered_from_db_with_plaintext = mr.enum_col_from_id_othertext(filtered_from_db_with_plaintext,e,e_df,drop_old=False)
+	else:
+		filtered_from_db = pd.DataFrame()
+	# ask user to pick from db
+	if not filtered_from_db.empty:
+		print('Is the desired record already in the database?')
+		show_filtered_from_db = filtered_from_db.drop(enum_list,axis=1)
+		db_idx,file_record = pick_one(show_filtered_from_db,name_field)
+		# if user picks, define <db_record>
+		if db_idx:
+			db_record = filtered_from_db.loc[db_idx]
+			picked_from_db = True
+			# define enum_val dictionary
+			enum_val = {}
+			for e in enum_list:
+				enum_val[e] = file_record[e]
 
-		# ask user to pick from db
-		if not filtered_from_db.empty:
-			print('Is the desired record already in the database?')
-			show_filtered_from_db = filtered_from_db.drop(enum_list,axis=1)
-			db_idx,file_record = pick_one(show_filtered_from_db,name_field)
-			# if user picks, define <db_record>
-			if db_idx:
-				file_and_db_record = filtered_from_db_with_plaintext.loc[db_idx]
-				picked_from_db = True
-
+	picked_from_file = False
 	if not picked_from_db:
-		# identify/create the directory for storing individual records in file system
-		storage_dir = os.path.join(root_dir,'db_records_entered_by_hand')
-		if not os.path.isdir(storage_dir):
-			os.makedirs(storage_dir)
-
-		storage_file = os.path.join(storage_dir,f'{table}.txt')
-		# read from file system (if file exists) and filter
-		if os.path.isfile(storage_file):
-			all_from_file = pd.read_csv(storage_file,sep='\t')
-			if not all_from_file.empty:
-				# filter via known_info_d
-				filtered_from_file = all_from_file.loc[(all_from_file[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
+		# find record in file system if possible
+		if not all_from_file.empty:
+			# filter via known_info_d
+			filtered_from_file = all_from_file.loc[(all_from_file[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
 
 			# ask user to pick from file
-			picked_from_file = False
 			if not filtered_from_file.empty:
 				print('Is the desired record already in the file system?')
-				record_idx,record = pick_one(filtered_from_file,name_field)
-				# if user picks, define <file_record>
+				record_idx,file_record = pick_one(filtered_from_file,name_field)
 				if record_idx is not None:  # if user picked one
 					picked_from_file = True
-					file_record = filtered_from_file.loc[record_idx]
+					# define enum_val and db_record
+					enum_val = {}
+					db_record = file_record.copy()
+					for e in enum_list:
+						enum_val[e]=file_record[e]
+						db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.get_id_othertext_from_enum_value(
+							e_df[e],file_record[e])
+						db_record.pop(e)
 
-			# if not, ask user to enter info for file_record (require validation)
+			# if not, ask user to enter info for file_record
 			if not picked_from_file:
-				new_record,enum_val = new_record_info_from_user(
-					sess,root_dir,table,known_info_d=known_info_d)
+				db_and_file_record,enum_val = new_record_info_from_user(
+					sess,root_dir,table,known_info_d=known_info_d,mode='database_and_filesystem')
+				file_record = db_and_file_record.copy()
+				for e in enum_list:
+					file_record.pop(f'{e}_Id')
+					file_record.pop(f'Other{e}')
+	if not picked_from_file:
+		# write to file
+		to_file = pd.concat([all_from_file,file_record]).drop_duplicates()
+		to_file.to_csv(storage_file,sep='\t')
 
-	# if we have file_and_db_record , define db_record (db minus plaintext) and enum_val
-	# if not, then we have file_record or new_record
-	# Create enum_val and create record by adding id/othertext, delete plaintext,
-
-	# TODO
-	return None, enum_val # TODO first returned should be db_record
+	return db_record, enum_val
 
 
 def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
@@ -928,11 +951,14 @@ def report_uniqueness_problem(new_record,table,root_dir,sess):
 		return None
 
 
-def new_record_info_from_user(sess,root_dir,table,known_info_d={}):
+def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database'):
 	"""Collect new record info from user, with chance to confirm.
 	For each enumeration, translate the user's plaintext input into id/othertext.
 	Return the correponding db record (id/othertext only) and an enumeration-value
 	dictionary."""
+
+	# initialize items to keep syntax-checker happy
+	user_input_record = show_user = enum_val = {}
 
 	# read necessary info about <table> from file system into dataframes
 	df = {}
@@ -969,6 +995,7 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={}):
 			user_input_record[fieldname], name = pick_one(
 				choices,choices.columns[0],required=True)
 
+		show_user = user_input_record.copy()
 		for e in edf.keys():
 			user_input_record[f'{e}_Id'], enum_txt = pick_one(
 				edf[e],'Txt',e,required=True)
@@ -982,12 +1009,21 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={}):
 			else:
 				user_input_record[f'Other{e}'] = ''
 				enum_val[e] = enum_txt
-		entry = [f'{k}:\t{v}\n' for k,v in user_input_record.items()]
+			show_user[e] = enum_txt
+		entry = '\n\t'.join([f'{k}:\t{v}' for k,v in show_user.items()])
 		confirm = input(
-			f'Confirm entry:\n{entry}\nIs this correct (y/n)?\n')
+			f'Confirm entry:\n\t{entry}\nIs this correct (y/n)?\n')
 		if confirm == 'y':
 			unconfirmed = False
-	return user_input_record, enum_val
+	if mode == 'database':
+		return user_input_record, enum_val
+	elif mode == 'filesystem':
+		return show_user, enum_val
+	elif mode == 'database_and_filesystem':
+		return {**user_input_record,**show_user},enum_val
+	else:
+		print(f'Mode {mode} not recognized.')
+		return None, None
 
 
 def enter_and_check_datatype(question,datatype):
@@ -1017,6 +1053,8 @@ def enter_and_check_datatype(question,datatype):
 								 f'Continue with {answer}, even though it is not recognized (y/n)?\n')
 				if go_on == 'y':
 					good = True
+				else:
+					answer = input(f'Enter a new encoding.\n')
 		else:
 			good = True
 	return answer
