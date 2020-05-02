@@ -1,1 +1,0 @@
-{'General Election 2019-11-05':{'ElectionType':'general','ReportingUnit':'Pennsylvania;Philadelphia County','StartDate':'2018-11-05','EndDate':'2018-11-05','ExternalIdentifiers':{}}}

@@ -1,0 +1,5 @@
+2018general	Florida	county	total	unknown	['Florida;Commissioner of Agriculture', 'Florida;US Congress Senate', 'Florida;Chief Financial Officer', 'Florida;Governor', 'Florida;Attorney General']
+
+Florida;US Congress Senate
+Florida;Miami-Dade County	7312.0
+Florida;Broward County	-19284.0
