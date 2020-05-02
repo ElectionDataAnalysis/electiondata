@@ -588,7 +588,7 @@ class Munger:
         """<dir_path> is the directory for the munger."""
         while not os.path.isdir(dir_path):
             input(f'{dir_path} is not a directory. Please create it and hit return to continue.')
-        for ff in ['cdf_elements.txt','format.txt','raw_identifiers.txt']:
+        for ff in ['cdf_elements.txt','format.txt']:
             while not os.path.isfile(os.path.join(dir_path,ff)):
                 input(f'Directory \n\t{dir_path}\ndoes not contain file {ff}.\n'
                       f'Please create the file and hit return to continue')

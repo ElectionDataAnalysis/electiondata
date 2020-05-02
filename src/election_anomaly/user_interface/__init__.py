@@ -216,7 +216,9 @@ def pick_database(project_root,paramfile,db_name=None):
 	cur = con.cursor()
 	db_df = dbr.get_database_names(con,cur)
 	db_idx,desired_db = pick_one(db_df,0,item='database')
-	if not db_idx:  # if we're going to need a brand new db
+	if db_idx:
+		create_new = False
+	else:  # if we're going to need a brand new db
 		desired_db = get_alphanumeric_from_user('Enter name for new database (alphanumeric only)')
 		create_new = True
 		while desired_db in db_df[0].unique():
