@@ -326,7 +326,12 @@ def enum_col_to_id_othertext(df,type_col,enum_df,drop_old=True):
     the corresponding two id and othertext columns (e.g., 'CountItemType_Id' and 'OtherCountItemType
     using the enumeration given in <enum_df>"""
     assert type_col in df.columns
-    assert 'Txt' in enum_df.columns and 'Id' in enum_df.columns,'Enumeration dataframe should have columns \'Id\' and \'Txt\''
+    assert 'Txt' in enum_df.columns ,'Enumeration dataframe should have a \'Txt\' column'
+
+    # ensure Id is a column, not the index, of enum_df (otherwise df index will be lost in merge)
+    if 'Id' not in enum_df.columns:
+        enum_df['Id'] = enum_df.index
+
     for c in ['Id','Txt']:
         if c in df.columns:
             # avoid conflict by temporarily renaming the column in the main dataframe
@@ -355,6 +360,10 @@ def get_enum_value_from_id_othertext(enum_df,id,othertext):
     """Given an enumeration dframe (with cols 'Id' and 'Txt',
     along with an (<id>,<othertext>) pair, find and return the plain language
     value for that enumeration (e.g., 'general')."""
+    # ensure Id is in the index of enum_df (otherwise df index will be lost in merge)
+    if 'Id' in enum_df.columns:
+        enum_df = enum_df.set_index('Id')
+
     if othertext != '':
         enum_val = othertext
     else:
@@ -363,9 +372,13 @@ def get_enum_value_from_id_othertext(enum_df,id,othertext):
 
 
 def get_id_othertext_from_enum_value(enum_df,value):
-    """Given an enumeration dframe (with cols 'Id' and 'Txt',
+    """Given an enumeration dframe,
         along with a plain language value for that enumeration
         (e.g., 'general'), return the (<id>,<othertext>) pair."""
+    # ensure Id is in the index of enum_df (otherwise df index will be lost in merge)
+    if 'Id' in enum_df.columns:
+        enum_df = enum_df.set_index('Id')
+
     if value in enum_df.Txt.to_list():
         idx = enum_df[enum_df.Txt == value].loc[:,'Id'].to_list()[0]
         other_txt = ''
