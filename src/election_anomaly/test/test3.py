@@ -29,7 +29,7 @@ if __name__ == '__main__':
 	sess = Session()
 
 	known_info_d={'file_name':'small20181106.txt'}
-	ui.create_record_in_db_NEW(sess,project_root,'_datafile',name_field='short_name',known_info_d=known_info_d)
+	ui.create_record_in_db(sess,project_root,'_datafile',name_field='short_name',known_info_d=known_info_d)
 
 	eng.dispose()
 	print('Done!')

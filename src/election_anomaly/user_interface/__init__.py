@@ -78,7 +78,7 @@ def pick_datafile(project_root,sess):
 	print("Locate the datafile in the file system.")
 	fpath = pick_filepath(initialdir=project_root)
 	filename = ntpath.basename(fpath)
-	datafile_record_d, datafile_enumeration_name_d = create_record_in_db_NEW(
+	datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
 		sess,project_root,'_datafile','short_name',known_info_d={'file_name':filename})
 	# TODO typing url into debug window opens the web page; want it to just act like a string
 	return datafile_record_d, datafile_enumeration_name_d, fpath
@@ -537,7 +537,7 @@ def pick_juris_from_db(sess,project_root,juris_type='state'):
 	jurisdictions = ru[ru.ReportingUnitType_Id == juris_type_id]
 	if jurisdictions.empty:
 		print(f'No {juris_type} record found in the database. Please create one.\n')
-		juris_record_d, juris_enum_d = create_record_in_db_NEW(
+		juris_record_d, juris_enum_d = create_record_in_db(
 			sess,project_root,'ReportingUnit',known_info_d={'ReportingUnitType':juris_type})
 		juris_idx = juris_record_d['Id']
 		juris_internal_db_name = juris_record_d['Name']
@@ -598,7 +598,7 @@ def get_or_create_election_in_db(sess,project_root):
 	election_idx, election = pick_one(election_df,'Name','election')
 	electiontype_df = pd.read_sql_table('ElectionType',sess.bind,index_col='Id')
 	if election_idx is None:
-		election_record_d, election_enum_d = create_record_in_db_NEW(sess,project_root,'Election')
+		election_record_d, election_enum_d = create_record_in_db(sess,project_root,'Election')
 		election_idx = election_record_d['Id']
 		electiontype = election_enum_d['ElectionType']
 	else:
@@ -688,7 +688,7 @@ def get_record_from_user(sess,table,enum_list,other_field_list):
 	return new_record
 
 
-def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={}):
+def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 	"""create record in <table> table in database from user input
 	(or from existing info db_records_entered_by_hand directory in file system)
 	<known_info_d> is a dict of known field-value pairs.
