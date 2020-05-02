@@ -730,7 +730,9 @@ def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={
 	# read from db and filter
 	all_from_db = pd.read_sql_table(table,sess.bind,index_col='Id')
 	picked_from_db = False
-	if not all_from_db.empty:
+	if all_from_db.empty:
+		filtered_from_db = pd.DataFrame()
+	else:
 		filtered_from_db = all_from_db.loc[
 			(all_from_db[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
 
@@ -740,12 +742,13 @@ def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={
 			e_df[e] = pd.read_sql_table(e,sess.bind)
 			filtered_from_db_with_plaintext = mr.enum_col_from_id_othertext(
 				filtered_from_db_with_plaintext,e,e_df[e],drop_old=False)
-	else:
-		filtered_from_db = pd.DataFrame()
 	# ask user to pick from db
-	if not filtered_from_db.empty:
+	if filtered_from_db.empty:
+		print(f'No records in database {known_info_string}\n\n ')
+	else:
 		print('Is the desired record already in the database?')
-		show_filtered_from_db = filtered_from_db.drop(enum_list,axis=1)
+		drop_list = [f'{e}_Id' for e in enum_list] + [f'Other{e}' for e in enum_list]
+		show_filtered_from_db = filtered_from_db_with_plaintext.drop(drop_list,axis=1)
 		db_idx,db_record_name = pick_one(show_filtered_from_db,name_field)
 		# if user picks, define <db_record>
 		if db_idx:
@@ -755,8 +758,6 @@ def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={
 			enum_val = {}
 			for e in enum_list:
 				enum_val[e] = file_record[e]
-	else:
-		print(f'No records in database {known_info_string}\n\n ')
 
 	picked_from_file = False
 	if not picked_from_db:
