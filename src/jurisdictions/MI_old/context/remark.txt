@@ -1,2 +1,0 @@
-Remark
-Unlike NC and MD, results in  Michigan is distributed over multiple files. Party column not present in votes.txt

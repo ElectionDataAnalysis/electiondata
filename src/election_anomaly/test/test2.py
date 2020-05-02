@@ -8,9 +8,7 @@ import csv
 
 
 if __name__ == '__main__':
-	print("Ready to load some election result data?\n"
-			"This program will walk you through the process of creating or checking\n"
-			"an automatic munger that will load your data into a database in the NIST common data format.")
+	print("Ready to load some election result data?\n")
 
 	project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
 
@@ -54,8 +52,7 @@ if __name__ == '__main__':
 
 	mr.raw_elements_to_cdf(new_df_session,project_root,juris,munger,raw,info_cols,num_cols,finalize=False)
 
-	ui.new_datafile(new_df_session,munger,
-					raw_file_path,sep,encoding,juris=juris,project_root=project_root,finalize_context=False)
+	# ui.new_datafile(new_df_session,munger,raw_file_path,sep,encoding,juris=juris,project_root=project_root,finalize_context=False)
 
 	eng.dispose()
 	print('Done!')

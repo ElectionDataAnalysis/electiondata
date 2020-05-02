@@ -13,7 +13,7 @@ if __name__ == '__main__':
     juris_name = 'NC_5'
     #juris_name = None
 
-    db_name = 'NC_5'
+    db_name = 'NC'
     # db_name = ui.pick_database(project_root,db_paramfile)
 
     # initialize main session for connecting to db

@@ -1,4 +1,4 @@
-Name	VotesAllowed	NumberElected	NumberRunoff	IsPartisan	Office
+Name	VotesAllowed	NumberElected	NumberRunoff	IsPartisan	Office	PrimaryParty
 North Carolina;General Assembly House of Representatives District 2	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 2
 North Carolina;General Assembly House of Representatives District 3	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 3
 North Carolina;General Assembly House of Representatives District 4	1	1	0	TRUE	North Carolina;General Assembly House of Representatives District 4
