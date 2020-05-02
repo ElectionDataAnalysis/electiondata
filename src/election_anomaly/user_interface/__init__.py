@@ -214,12 +214,20 @@ def pick_database(project_root,paramfile,db_name=None):
 	con = dbr.establish_connection(paramfile=paramfile)  # TODO error handling for paramfile
 	print(f'Connection established to database {con.info.dbname}')
 	cur = con.cursor()
-	db_df = pd.DataFrame(dbr.query('SELECT datname FROM pg_database',[],[],con,cur))
+	db_df = dbr.get_database_names(con,cur)
 	db_idx,desired_db = pick_one(db_df,0,item='database')
-	if db_idx == None:	# if we're going to need a brand new db
-
-		desired_db = input('Enter name for new database (alphanumeric only):\n')
-		dbr.create_database(con,cur,desired_db)
+	if not db_idx:  # if we're going to need a brand new db
+		desired_db = get_alphanumeric_from_user('Enter name for new database (alphanumeric only)')
+		create_new = True
+		while desired_db in db_df[0].unique():
+			use_existing = input(f'Database {desired_db} exists! Use existing database {desired_db} (y/n)?\n')
+			if use_existing == 'y':
+				create_new = False
+				break
+			else:
+				desired_db = get_alphanumeric_from_user('Enter name for new database (alphanumeric only)')
+		if create_new:
+			dbr.create_database(con,cur,desired_db)
 
 	if desired_db != con.info.dbname:
 		cur.close()
@@ -227,7 +235,7 @@ def pick_database(project_root,paramfile,db_name=None):
 		con = dbr.establish_connection(paramfile,db_name=desired_db)
 		cur = con.cursor()
 
-	if db_idx == None: 	# if our db is brand new
+	if create_new: 	# if our db is brand new
 		eng,meta = dbr.sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
 		# TODO remove second arg from sql_alchemy_connect?
 		Session = sessionmaker(bind=eng)
@@ -439,7 +447,7 @@ def pick_munger(sess,munger_dir='mungers',template_dir='templates/munger_templat
 	munger_idx,munger_name = pick_one(munger_df,'Munger', item='munger')
 	if munger_idx is None:
 		# user chooses munger
-		munger_name = input(
+		munger_name = get_alphanumeric_from_user(
 			'Enter a short name (alphanumeric only, no spaces) for your munger (e.g., \'nc_primary18\')\n')
 	template_dir = os.path.join(root,'templates/munger_templates')
 	check_munger_files(sess,munger_name,munger_dir,template_dir)
@@ -970,12 +978,25 @@ def pick_or_create_directory(root_path,d_name):
 		if idx is None:
 			d_name = ''
 			while not allowed.match(d_name):
-				d_name = input('Enter subdirectory name (alphanumeric and underscore only):\n')
+				d_name = get_alphanumeric_from_user('Enter subdirectory name (alphanumeric and underscore only)')
 			full_path = os.path.join(root_path,d_name)
 			confirm = input(f'Confirm creation of directory (y/n)?\n{full_path}\n')
 			if confirm:
 				Path(full_path).mkdir(parents=True,exist_ok=True)
 	return d_name
+
+
+def get_alphanumeric_from_user(request):
+	good = False
+	alpha = re.compile('^\w+$')
+	s = input(f'{request}\n')
+	while not good:
+		if alpha.match(s):
+			good = True
+		else:
+			s = input('Answer needs to be alphanumeric. Please try again.\n')
+	return s
+
 
 
 if __name__ == '__main__':

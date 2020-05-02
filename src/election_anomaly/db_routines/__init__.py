@@ -17,20 +17,19 @@ class CdfDbException(Exception):
     pass
 
 
-def create_database(con,cur,db_name):
-    # TODO review logic & messages
-    sure = input('If the db exists, it will be deleted and data will be lost. Are you absolutely sure (y/n)?\n')
-    if sure == 'y':
-        con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-        q = "DROP DATABASE IF EXISTS {0}"
-        sql_ids = [db_name]
-        out1 = query(q,sql_ids,[],con,cur)
+def get_database_names(con,cur):
+    names = pd.DataFrame(query('SELECT datname FROM pg_database',[],[],con,cur))
+    return names
 
-        q = "CREATE DATABASE {0}"
-        out2 = query(q,sql_ids,[],con,cur)
-        return out1,out2
-    else:
-        return None,None
+def create_database(con,cur,db_name):
+    con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
+    q = "DROP DATABASE IF EXISTS {0}"
+    sql_ids = [db_name]
+    out1 = query(q,sql_ids,[],con,cur)
+
+    q = "CREATE DATABASE {0}"
+    out2 = query(q,sql_ids,[],con,cur)
+    return out1,out2
 
 
 def create_raw_schema(con,cur,schema):

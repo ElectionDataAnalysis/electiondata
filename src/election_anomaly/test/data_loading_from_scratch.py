@@ -40,17 +40,13 @@ if __name__ == '__main__':
 		sep = ','
 	else:
 		raise Exception(f'separator {enum_d["_datafile_separator"]} not recognized')
+	encoding = dfile_d['encoding']
 
 	juris_short_name = None
 
 	# load new datafile
-	# TODO handle default values more programmatically
-	encoding = dfile_d['encoding']
-	if encoding == '':
-		encoding = 'iso-8859-1'
-
-	ui.new_datafile(new_df_session,munger,
-					raw_file,sep,juris=juris_short_name,encoding=encoding,project_root=project_root)
+	ui.new_datafile(
+		new_df_session,munger,raw_file,sep,juris=juris_short_name,encoding=encoding,project_root=project_root)
 
 	eng.dispose()
 	print('Done! (user_interface)')

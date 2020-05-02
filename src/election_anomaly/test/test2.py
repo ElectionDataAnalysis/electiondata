@@ -36,14 +36,13 @@ if __name__ == '__main__':
 	raw_file_path = os.path.join(raw_file_dir,'results_pct_20181106.txt')
 
 	sep = '\t'
+	encoding = 'iso-8859-1'
 	juris_short_name = 'NC_5'
 	juris = ui.pick_juris_from_filesystem(
 		project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
 		jurisdiction_name=juris_short_name)
 
 	# load new datafile
-	# TODO handle default values more programmatically
-	encoding = 'iso-8859-1'
 	raw = pd.read_csv(
 		raw_file_path,sep=sep,dtype=str,encoding=encoding,quoting=csv.QUOTE_MINIMAL,
 		header=list(range(munger.header_row_count)))
@@ -51,8 +50,6 @@ if __name__ == '__main__':
 	[raw,info_cols,num_cols] = mr.clean_raw_df(raw,munger)
 
 	mr.raw_elements_to_cdf(new_df_session,project_root,juris,munger,raw,info_cols,num_cols,finalize=False)
-
-	# ui.new_datafile(new_df_session,munger,raw_file_path,sep,encoding,juris=juris,project_root=project_root,finalize_context=False)
 
 	eng.dispose()
 	print('Done!')

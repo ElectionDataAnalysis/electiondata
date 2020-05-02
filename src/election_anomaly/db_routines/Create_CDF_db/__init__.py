@@ -94,6 +94,7 @@ def create_table(metadata,id_seq,name,table_type,dirpath):
             df[filename] = pd.read_csv(os.path.join(t_path,f'{filename}.txt'),sep='\t')
 
         # define table
+        df['fields']['datatype'].replace({'Encoding':'String'},inplace=True)
         field_col_list = [Column(r['fieldname'],eval(r['datatype'])) for i,r in df['fields'].iterrows()]
         null_constraint_list = [
             CheckConstraint(
