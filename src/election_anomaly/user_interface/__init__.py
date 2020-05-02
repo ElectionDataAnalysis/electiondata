@@ -765,14 +765,6 @@ def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={
 				record_idx,file_record = pick_one(filtered_from_file,name_field)
 				if record_idx is not None:  # if user picked one
 					picked_from_file = True
-					# define enum_val and db_record
-					enum_val = {}
-					db_record = file_record.copy()
-					for e in enum_list:
-						enum_val[e]=file_record[e]
-						db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.get_id_othertext_from_enum_value(
-							e_df[e],file_record[e])
-						db_record.pop(e)
 
 			# if not, ask user to enter info for file_record
 			if not picked_from_file:
@@ -783,9 +775,19 @@ def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={
 					file_record.pop(f'{e}_Id')
 					file_record.pop(f'Other{e}')
 	if not picked_from_file:
-		# write to file
-		to_file = pd.concat([all_from_file,file_record]).drop_duplicates()
+		# append new record to all_from_file; write to file system
+		to_file = pd.concat([all_from_file,pd.DataFrame.from_dict([file_record],orient='columns')]).drop_duplicates()
 		to_file.to_csv(storage_file,sep='\t')
+
+	if not picked_from_db:
+		# define enum_val and db_record
+		enum_val = {}
+		db_record = file_record.copy()
+		for e in enum_list:
+			enum_val[e] = file_record[e]
+			db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.get_id_othertext_from_enum_value(
+				e_df[e],file_record[e])
+			db_record.pop(e)
 
 	return db_record, enum_val
 

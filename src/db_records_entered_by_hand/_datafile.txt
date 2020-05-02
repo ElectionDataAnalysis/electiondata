@@ -1,11 +1,19 @@
-short_name	file_name	encoding	source_url	file_date	download_date	note	_datafile_separator
-test2	test2	test2	test2	2222-11-11	2222-11-11	test2	comma
-test3	test3	test3	test3	2222-11-11	2222-11-11	test3	tab
-wow	wow	wow	wow	2222-11-11	2222-11-11		who_knows
-hey	hey	hey	hey	2020-11-11	2020-11-11		comma
-phila2019g	division-level-results191105.csv	utf-8	PhiladelphiaVotes.com	2019-12-31	2020-03-29	File date uncertain	comma
-Phila_2019_general.csv	Phila_2019_general.csv	utf-8	PhiladelphiaVotes.com	2019-12-31	2020-03-29	Exact file date not known. Post certification, though	comma
-FL20181106_county	11062018Election.txt	iso-8859-1	FL BoE	2222-11-11	2020-02-20	file date unknown	tab
-NC2018g_by_precinct	results_pct_20181106.txt	utf-8	NC BoE	2222-11-11	2019-10-15	file date is 2018-11-16	tab
-2018p	results_pct_20180508.txt	iso-8859-1	NC BoE	2018-05-18	2222-11-11	download date uncertain	tab
-small_test_nc2018g	small.txt	iso-8859-1	none	2020-04-23	2020-04-23	truncated by hand	tab
+	Unnamed: 0	0	_datafile_separator	download_date	encoding	file_date	file_name	note	short_name	source_url
+0	0		comma	2222-11-11	test2	2222-11-11	test2	test2	test2	test2
+1	1		tab	2222-11-11	test3	2222-11-11	test3	test3	test3	test3
+2	2		who_knows	2222-11-11	wow	2222-11-11	wow		wow	wow
+3	3		comma	2020-11-11	hey	2020-11-11	hey		hey	hey
+4	4		comma	2020-03-29	utf-8	2019-12-31	division-level-results191105.csv	File date uncertain	phila2019g	PhiladelphiaVotes.com
+5	5		comma	2020-03-29	utf-8	2019-12-31	Phila_2019_general.csv	Exact file date not known. Post certification, though	Phila_2019_general.csv	PhiladelphiaVotes.com
+6	6		tab	2020-02-20	iso-8859-1	2222-11-11	11062018Election.txt	file date unknown	FL20181106_county	FL BoE
+7	7		tab	2019-10-15	utf-8	2222-11-11	results_pct_20181106.txt	file date is 2018-11-16	NC2018g_by_precinct	NC BoE
+8	8		tab	2222-11-11	iso-8859-1	2018-05-18	results_pct_20180508.txt	download date uncertain	2018p	NC BoE
+9	9		tab	2020-04-23	iso-8859-1	2020-04-23	small.txt	truncated by hand	small_test_nc2018g	none
+10	short_name	small_nc_2018g								
+11	file_name	small20181106.txt								
+12	encoding	iso-8859-1								
+13	source_url	none								
+14	file_date	2222-11-11								
+15	note	test								
+16	_datafile_separator	tab								
+0			tab	2222-11-11	iso-8859-1	2222-11-11	small20181106.txt	testing	small_2018g_nc_for_testing	none
