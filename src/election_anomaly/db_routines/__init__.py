@@ -76,7 +76,7 @@ def append_to_composing_reporting_unit_join(session,ru):
             columns={'Id':'ChildReportingUnit_Id','Id_{}'.format(i):'ParentReportingUnit_Id'}))
     if cruj_dframe_list:
         cruj_dframe = pd.concat(cruj_dframe_list)
-        cruj_dframe = dframe_to_sql(cruj_dframe,session,None,'ComposingReportingUnitJoin')
+        cruj_dframe = dframe_to_sql(cruj_dframe,session,'ComposingReportingUnitJoin')
     else:
         cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin',session.bind)
     session.flush()
@@ -261,14 +261,15 @@ def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
 
 
 # TODO cosmetic: get rid of schema argument
-def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_votecount=False,return_records='all'):
+def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecount=False,return_records='all'):
     """
     Given a dataframe <dframe >and an existing cdf db table <table>>, clean <dframe>
     (i.e., drop any columns that are not in <table>, add null columns to match any missing columns)
     append records any new records to the corresponding table in the db (and commit!)
     Return the updated dataframe, including all rows from the db and all from the dframe.
     <return_records> is a flag defaulting to "all" (return all records in db)
-    but can be set to "original" to return only the records from the input <dframe>
+    but can be set to "original" to return only the records from the input <dframe>.
+
     """
     # pull copy of existing table
     target = pd.read_sql_table(table,session.bind,index_col=index_col)
@@ -328,7 +329,8 @@ def dframe_to_sql(dframe,session,schema,table,index_col='Id',flush=True,raw_to_v
     if return_records == 'original':
         # TODO get rid of rows not in dframe by taking inner join
         id_enhanced_dframe = dframe.merge(
-            up_to_date_dframe,left_on=intersection_cols,right_on=intersection_cols,how='inner').drop(target_only_cols,axis=1)
+            up_to_date_dframe,left_on=intersection_cols,right_on=intersection_cols,how='inner').drop(
+            target_only_cols,axis=1)
         return id_enhanced_dframe
     else:
         return up_to_date_dframe

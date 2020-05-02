@@ -578,7 +578,7 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 				enum_df = pd.read_sql_table(e,sess.bind)
 				user_record[f'{e}_Id'],user_record[f'Other{e}'] = mr.get_id_othertext_from_enum_value(enum_df,user_record[e])
 				user_record.pop(e)
-			element_df = dbr.dframe_to_sql(pd.DataFrame(user_record,index=[-1]),sess,None,element,index_col='Id')
+			element_df = dbr.dframe_to_sql(pd.DataFrame(user_record,index=[-1]),sess,element)
 			# find index matching inserted element
 			idx = element_df.loc[
 				(element_df[list(user_record)] == pd.Series(user_record)).all(axis=1)]['Id'].to_list()[0]
@@ -796,7 +796,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 			db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.get_id_othertext_from_enum_value(
 				e_df[e],file_record[e])
 			db_record.pop(e)
-		dbr.dframe_to_sql(pd.DataFrame.from_dict([db_record],orient='columns'),sess,None,table)
+		dbr.dframe_to_sql(pd.DataFrame.from_dict([db_record],orient='columns'),sess,table)
 	return db_record, enum_val
 
 
@@ -934,7 +934,7 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
-def new_datafile(session,munger,raw_path,raw_file_sep,encoding,project_root=None,juris=None):
+def new_datafile(session,munger,raw_path,raw_file_sep,encoding,project_root=None,juris=None,finalize_context=True):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
@@ -956,7 +956,7 @@ def new_datafile(session,munger,raw_path,raw_file_sep,encoding,project_root=None
 
 	# TODO munger.check_against_datafile(raw,cols_to_munge,numerical_columns)
 
-	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,info_cols,numerical_columns)
+	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,info_cols,numerical_columns,finalize=finalize_context)
 
 	# TODO
 	return

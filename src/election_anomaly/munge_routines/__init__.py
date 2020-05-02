@@ -96,7 +96,7 @@ def load_context_dframe_into_cdf(
             source_df.drop([f'{fn}_Name'],axis=1)
 
     # commit info in source_df to corresponding cdf table to db
-    dbr.dframe_to_sql(source_df,session,None,element)
+    dbr.dframe_to_sql(source_df,session,element)
     return
 
 
@@ -506,7 +506,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,info_cols,num_cols,fin
     # TODO maybe introduce Selection and Contest tables, have C an BM types refer to them?
     c_df = pd.read_sql_table('Candidate',session.bind)
     c_df.rename(columns={'Id':'Candidate_Id'},inplace=True)
-    cs_df = dbr.dframe_to_sql(c_df,session,None,'CandidateSelection',return_records='original')
+    cs_df = dbr.dframe_to_sql(c_df,session,'CandidateSelection',return_records='original')
     # add CandidateSelection_Id column, merging on Candidate_Id
     working = working.merge(
         cs_df[['Candidate_Id','Id']],how='left',left_on='Candidate_Id',right_on='Candidate_Id')
@@ -529,12 +529,12 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,info_cols,num_cols,fin
     dbr.add_integer_cols(session,'VoteCount',extra_cols)
 
     # upload to VoteCount table, pull  Ids
-    working_fat = dbr.dframe_to_sql(working,session,None,'VoteCount',raw_to_votecount=True)
+    working_fat = dbr.dframe_to_sql(working,session,'VoteCount',raw_to_votecount=True)
     working_fat.rename(columns={'Id':'VoteCount_Id'},inplace=True)
     session.commit()
 
     # upload to ElectionContestSelectionVoteCountJoin
-    dbr.dframe_to_sql(working_fat,session,None,'ElectionContestSelectionVoteCountJoin')
+    dbr.dframe_to_sql(working_fat,session,'ElectionContestSelectionVoteCountJoin')
 
     # drop extra columns
     dbr.drop_cols(session,'VoteCount',extra_cols)
@@ -568,7 +568,7 @@ def append_join_id(project_root,session,working,j):
     join_df.drop(unnecessary,axis=1,inplace=True)
 
     join_df = join_df[join_df.notnull().all(axis=1)]
-    join_df = dbr.dframe_to_sql(join_df,session,None,j)
+    join_df = dbr.dframe_to_sql(join_df,session,j)
     working = working.merge(join_df,how='left',left_on=j_cols,right_on=j_cols)
     working.rename(columns={'Id':f'{j}_Id'},inplace=True)
     return working
