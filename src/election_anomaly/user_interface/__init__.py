@@ -533,7 +533,7 @@ def pick_juris_from_db(sess,project_root,juris_type='state'):
 	rut = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
 	# TODO build uniqueness into Txt field of each enumeration on db creation
 
-	juris_type_id,other_juris_type = mr.get_id_othertext_from_enum_value(juris_type)
+	juris_type_id,other_juris_type = mr.get_id_othertext_from_enum_value(rut,juris_type)
 	jurisdictions = ru[ru.ReportingUnitType_Id == juris_type_id]
 	if jurisdictions.empty:
 		print(f'No {juris_type} record found in the database. Please create one.\n')
@@ -702,6 +702,9 @@ def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={
 	file_record = pd.Series()
 	enum_val = {}
 
+	# for messages to user
+	known_info_string = ' with\n' + '\n\t'.join([f'{k}:\t{v}' for k,v in known_info_d.items()])
+
 	# get list -- from file system -- of all enumerations for the <table>
 	enum_list = pd.read_csv(
 		os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/elements',table,'enumerations.txt'),
@@ -735,14 +738,15 @@ def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={
 		filtered_from_db_with_plaintext = filtered_from_db
 		for e in enum_list:
 			e_df[e] = pd.read_sql_table(e,sess.bind)
-			filtered_from_db_with_plaintext = mr.enum_col_from_id_othertext(filtered_from_db_with_plaintext,e,e_df,drop_old=False)
+			filtered_from_db_with_plaintext = mr.enum_col_from_id_othertext(
+				filtered_from_db_with_plaintext,e,e_df[e],drop_old=False)
 	else:
 		filtered_from_db = pd.DataFrame()
 	# ask user to pick from db
 	if not filtered_from_db.empty:
 		print('Is the desired record already in the database?')
 		show_filtered_from_db = filtered_from_db.drop(enum_list,axis=1)
-		db_idx,file_record = pick_one(show_filtered_from_db,name_field)
+		db_idx,db_record_name = pick_one(show_filtered_from_db,name_field)
 		# if user picks, define <db_record>
 		if db_idx:
 			db_record = filtered_from_db.loc[db_idx]
@@ -751,6 +755,8 @@ def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={
 			enum_val = {}
 			for e in enum_list:
 				enum_val[e] = file_record[e]
+	else:
+		print(f'No records in database {known_info_string}\n\n ')
 
 	picked_from_file = False
 	if not picked_from_db:
@@ -762,9 +768,10 @@ def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={
 			# ask user to pick from file
 			if not filtered_from_file.empty:
 				print('Is the desired record already in the file system?')
-				record_idx,file_record = pick_one(filtered_from_file,name_field)
+				record_idx,file_record_short_name = pick_one(filtered_from_file,name_field)
 				if record_idx is not None:  # if user picked one
 					picked_from_file = True
+					file_record = filtered_from_file.loc[record_idx]
 
 			# if not, ask user to enter info for file_record
 			if not picked_from_file:
@@ -788,6 +795,7 @@ def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={
 			db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.get_id_othertext_from_enum_value(
 				e_df[e],file_record[e])
 			db_record.pop(e)
+		dbr.dframe_to_sql(pd.DataFrame.from_dict([db_record],orient='columns'),sess,None,table)
 
 	return db_record, enum_val
 

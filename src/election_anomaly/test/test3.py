@@ -28,7 +28,8 @@ if __name__ == '__main__':
 	Session = sessionmaker(bind=eng)
 	sess = Session()
 
-	ui.pick_or_create_record(sess,project_root,'Election',known_info_d={})
+	known_info_d={'file_name':'small20181106.txt'}
+	ui.create_record_in_db_NEW(sess,project_root,'_datafile',name_field='short_name',known_info_d=known_info_d)
 
 	eng.dispose()
 	print('Done!')
