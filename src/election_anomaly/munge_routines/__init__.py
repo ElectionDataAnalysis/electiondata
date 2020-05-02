@@ -380,10 +380,10 @@ def get_id_othertext_from_enum_value(enum_df,value):
         enum_df = enum_df.set_index('Id')
 
     if value in enum_df.Txt.to_list():
-        idx = enum_df[enum_df.Txt == value].loc[:,'Id'].to_list()[0]
+        idx = enum_df[enum_df.Txt == value].first_valid_index()
         other_txt = ''
     else:
-        idx = enum_df[enum_df.Txt == 'other'].loc[:,'Id'].to_list()[0]
+        idx = enum_df[enum_df.Txt == 'other'].first_valid_index()
         other_txt = value
     return idx,other_txt
 

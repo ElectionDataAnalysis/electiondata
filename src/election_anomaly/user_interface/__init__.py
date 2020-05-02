@@ -537,7 +537,7 @@ def pick_juris_from_db(sess,project_root,juris_type='state'):
 	jurisdictions = ru[ru.ReportingUnitType_Id == juris_type_id]
 	if jurisdictions.empty:
 		print(f'No {juris_type} record found in the database. Please create one.\n')
-		juris_record_d, juris_enum_d = create_record_in_db(
+		juris_record_d, juris_enum_d = create_record_in_db_NEW(
 			sess,project_root,'ReportingUnit',known_info_d={'ReportingUnitType':juris_type})
 		juris_idx = juris_record_d['Id']
 		juris_internal_db_name = juris_record_d['Name']
@@ -598,7 +598,7 @@ def get_or_create_election_in_db(sess,project_root):
 	election_idx, election = pick_one(election_df,'Name','election')
 	electiontype_df = pd.read_sql_table('ElectionType',sess.bind,index_col='Id')
 	if election_idx is None:
-		election_record_d, election_enum_d = create_record_in_db(sess,project_root,'Election')
+		election_record_d, election_enum_d = create_record_in_db_NEW(sess,project_root,'Election')
 		election_idx = election_record_d['Id']
 		electiontype = election_enum_d['ElectionType']
 	else:
@@ -754,10 +754,10 @@ def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={
 		if db_idx:
 			db_record = filtered_from_db.loc[db_idx]
 			picked_from_db = True
-			# define enum_val dictionary
-			enum_val = {}
+
+			# fill enum_val dictionary
 			for e in enum_list:
-				enum_val[e] = file_record[e]
+				enum_val[e] = show_filtered_from_db.loc[db_idx,e]
 
 	picked_from_file = False
 	if not picked_from_db:
@@ -797,144 +797,7 @@ def create_record_in_db_NEW(sess,root_dir,table,name_field='Name',known_info_d={
 				e_df[e],file_record[e])
 			db_record.pop(e)
 		dbr.dframe_to_sql(pd.DataFrame.from_dict([db_record],orient='columns'),sess,None,table)
-
 	return db_record, enum_val
-
-
-def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
-	"""create record in <table> table in database from user input
-	(or from existing info db_records_entered_by_hand directory in file system)
-	<known_info_d> is a dict of known field-value pairs.
-	Return the record (in dict form) and any enumeration values (in dict form)
-	Store the record (if new) in the db_records_entered_by_hand directory
-	Note: storage in file system should use names of any enumerations, not
-	internal <enum>_Id and Other<enum>.
-	"""
-	confirmed_in_file = False
-	confirmed_in_db = False
-	# read table from db
-	all_from_db = pd.read_sql_table(table,sess.bind,index_col='Id')
-
-	# get list -- from file system -- of all enumerations for the <table>
-	enum_list = pd.read_csv(
-		os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/elements',table,'enumerations.txt'),
-		sep='\t',header=0).enumeration.to_list()
-
-	df = {}
-	# get dataframe for each enumeration
-	for e in enum_list:
-		df[e] = pd.read_sql_table(e,sess.bind)
-
-	# identify/create the directory for storing individual records in file system
-	storage_dir = os.path.join(root_dir,'db_records_entered_by_hand')
-	if not os.path.isdir(storage_dir):
-		os.makedirs(storage_dir)
-
-	# check whether record is in db
-	# filter via known_info_d
-	if not all_from_db.empty:
-		filtered_from_db = all_from_db.loc[(all_from_db[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
-	else:
-		filtered_from_db = all_from_db  # empty
-
-	# append plain text column to filtered_from_db for enumerations, keeping id and other
-	for e in enum_list:
-		e_df = pd.read_sql_table(e,sess.bind)
-		filtered_from_db = mr.enum_col_from_id_othertext(filtered_from_db,e,e_df,drop_old=False)
-
-	# look for record in db
-	if not filtered_from_db.empty:
-		print('Is the desired record already in the database?')
-		record_idx,record = pick_one(filtered_from_db,name_field)
-		if record_idx:
-			new_record = dict(filtered_from_db.loc[record_idx])
-			new_record['Id'] = record_idx
-			confirmed_in_db = True
-
-	# if record not found in db, look in file system
-	if not confirmed_in_db:
-		# create filtered_from_file
-		#  if file exists, read any info from <table>'s file, then add id/other columns
-		storage_file = os.path.join(storage_dir,f'{table}.txt')
-		if os.path.isfile(storage_file):
-			all_from_file = pd.read_csv(storage_file,sep='\t')
-			if not all_from_file.empty:
-				# filter via known_info_d
-				filtered_from_file = all_from_file.loc[(all_from_file[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
-			else:
-				filtered_from_file = all_from_file  # empty
-			for e in enum_list:
-				filtered_from_file = mr.enum_col_to_id_othertext(filtered_from_file,e,df[e],drop_old=False)
-
-		# if file doesn't exist, create empty dataframe with columns to match db (except Id)
-		#  then add plaintext enum columns
-		else:
-			# create empty, with all cols of all_from_db except Id
-			cols = [x for x in all_from_db.columns if x != 'Id']
-			filtered_from_file = all_from_file = pd.DataFrame(columns=cols)
-			for e in enum_list:
-				filtered_from_file = mr.enum_col_from_id_othertext(filtered_from_file,e,df[e],drop_old=False)
-
-		if not filtered_from_file.empty:
-
-			# TODO prevent dupes in filtered_from_file
-			print('Is the desired record already in the file system?')
-			record_idx,record = pick_one(filtered_from_file,name_field)
-			if record_idx is not None:	# if user picked one
-				confirmed_in_file = True
-				new_record = dict(filtered_from_file.loc[record_idx])
-				# TODO why dict?
-
-	if not confirmed_in_file:
-		# otherwise get the data from user, enter into db an into file system
-			finalized = False
-			while not finalized:
-				new_record,enum_val = new_record_info_from_user(
-				sess,root_dir,table,known_info_d=known_info_d)
-			problem = report_uniqueness_problem(new_record,table,root_dir,sess)
-			if problem:
-				print(problem)
-			else:
-				finalized = True
-				# upload to database
-				table_df = dbr.dframe_to_sql(pd.DataFrame(new_record,index=[-1]),sess,None,table)
-
-				# prepare new_record and enum_val
-				table_df = table_df.set_index('Id')
-				new_record['Id'] = table_df[table_df[name_field] == new_record[name_field]].first_valid_index()
-				record_idx = new_record['Id']
-				# add to filesystem
-				new_file_dict = new_record.copy()
-
-				#  get rid of db-only fields
-				new_file_dict.pop('Id')
-				for e in enum_list:
-					new_file_dict.pop(f'{e}_Id',None)
-					new_file_dict.pop(f'Other{e}')
-
-				#  combine with enum_val
-				new_file_dict = {**new_file_dict,**enum_val}
-
-				# ask user to confirm
-				user_confirmed = input(f'Here\'s what you entered:\n{new_file_dict}.\n'
-					  f'Is this correct (y/n)?\n')
-				if user_confirmed == 'y':
-					finalized = True
-
-
-	# insert into database
-	if not confirmed_in_db:
-		table_df = dbr.dframe_to_sql(pd.DataFrame(new_record,index=[-1]),sess,None,table)
-
-		# add Id to new_record
-		new_record['Id'] = table_df[table_df[name_field] == new_record[name_field]].first_valid_index()
-		record = new_record
-
-	# create dict to hold plain-text values of any enumerations for the returned record
-	enum_val = {}
-	for e in enum_list:
-		enum_val[e] = new_record.loc[record_idx,e]
-	return new_record, enum_val
 
 
 def report_uniqueness_problem(new_record,table,root_dir,sess):
