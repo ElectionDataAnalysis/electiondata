@@ -511,8 +511,8 @@ class Munger:
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
-                 self.raw_identifiers] = read_munger_info_from_files(self.path_to_munger_dir)
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,
+                 self.field_name_row,] = read_munger_info_from_files(self.path_to_munger_dir)
         return
 
     def check_against_db(self,sess):
@@ -548,8 +548,8 @@ class Munger:
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.raw_identifiers,
-                 self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,
+                 self.field_name_row] = read_munger_info_from_files(self.path_to_munger_dir)
         return
 
     def check_against_datafile(self,raw,cols_to_munge,count_columns):
@@ -567,8 +567,8 @@ class Munger:
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.raw_identifiers,
-                 self.field_rename_suffix] = read_munger_info_from_files(self.path_to_munger_dir)
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,
+                 self.field_name_row] = read_munger_info_from_files(self.path_to_munger_dir)
         # TODO write this function
         return
 
@@ -596,8 +596,8 @@ class Munger:
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir=dir_path
 
-        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
-         self.raw_identifiers] = read_munger_info_from_files(self.path_to_munger_dir)
+        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,
+         self.field_name_row] = read_munger_info_from_files(self.path_to_munger_dir)
 
         self.field_rename_suffix = '___' # NB: must not match any suffix of a cdf element name;
 
@@ -627,13 +627,9 @@ def read_munger_info_from_files(dir_path):
     header_row_count = int(format_info.loc['header_row_count','value'])
         # TODO maybe file separator and encoding should be in format.txt?
 
-    # read raw_identifiers file into a table
-    #  note no natural index column
-    raw_identifiers = pd.read_csv(os.path.join(dir_path,'raw_identifiers.txt'),sep='\t')
-
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
     #   will need to rename some columns of the raw file before processing.
-    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,raw_identifiers]
+    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row]
 
 
 def check_jurisdiction_directory(juris_path):
