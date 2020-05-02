@@ -564,18 +564,6 @@ class Munger:
         # TODO write this function
         return
 
-    def add_to_raw_identifiers(self,df):
-        """Adds rows in <df> to the raw_identifiers.txt file and to the attribute <self>.raw_identifiers"""
-        for col in self.raw_identifiers.columns:
-            assert col in df.columns, 'Column {} is not found in the dataframe'.format(col)
-        # restrict to columns needed, and in the right order
-        df = df[self.raw_identifiers.columns]
-        # add rows to <self>.raw_identifiers
-        self.raw_identifiers = pd.concat([self.raw_identifiers,df]).drop_duplicates()
-        # update the external munger file
-        self.raw_identifiers.to_csv(f'{self.path_to_munger_dir}raw_identifiers.txt',sep='\t',index=False)
-        return
-
     def __init__(self,dir_path):
         """<dir_path> is the directory for the munger."""
         while not os.path.isdir(dir_path):

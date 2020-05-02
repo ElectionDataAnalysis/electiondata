@@ -78,7 +78,7 @@ def pick_datafile(project_root,sess):
 	print("Locate the datafile in the file system.")
 	fpath = pick_filepath(initialdir=project_root)
 	filename = ntpath.basename(fpath)
-	datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
+	db_idx, datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
 		sess,project_root,'_datafile','short_name',known_info_d={'file_name':filename})
 	# TODO typing url into debug window opens the web page; want it to just act like a string
 	return datafile_record_d, datafile_enumeration_name_d, fpath
@@ -547,9 +547,9 @@ def pick_juris_from_db(sess,project_root,juris_type='state'):
 	jurisdictions = ru[ru.ReportingUnitType_Id == juris_type_id]
 	if jurisdictions.empty:
 		print(f'No {juris_type} record found in the database. Please create one.\n')
-		juris_record_d, juris_enum_d = create_record_in_db(
+		juris_idx, juris_record_d, juris_enum_d = create_record_in_db(
 			sess,project_root,'ReportingUnit',known_info_d={'ReportingUnitType':juris_type})
-		juris_idx = juris_record_d['Id']
+
 		juris_internal_db_name = juris_record_d['Name']
 	else:
 		jurisdictions = mr.enum_col_from_id_othertext(jurisdictions,'ReportingUnitType',rut)
@@ -608,8 +608,7 @@ def get_or_create_election_in_db(sess,project_root):
 	election_idx, election = pick_one(election_df,'Name','election')
 	electiontype_df = pd.read_sql_table('ElectionType',sess.bind,index_col='Id')
 	if election_idx is None:
-		election_record_d, election_enum_d = create_record_in_db(sess,project_root,'Election')
-		election_idx = election_record_d['Id']
+		election_idx, election_record_d, election_enum_d = create_record_in_db(sess,project_root,'Election')
 		electiontype = election_enum_d['ElectionType']
 	else:
 		et_row = election_df.loc[:,['ElectionType_Id','OtherElectionType']].merge(
@@ -711,6 +710,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 	db_record = pd.Series()
 	file_record = pd.Series()
 	enum_val = {}
+	db_idx = -1
 
 	# for messages to user
 	known_info_string = ' with\n' + '\n\t'.join([f'{k}:\t{v}' for k,v in known_info_d.items()])
@@ -795,7 +795,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 	if not picked_from_file:
 		# append new record to all_from_file; write to file system
 		to_file = pd.concat([all_from_file,pd.DataFrame.from_dict([file_record],orient='columns')]).drop_duplicates()
-		to_file.to_csv(storage_file,sep='\t')
+		to_file.to_csv(storage_file,sep='\t',index=False)
 
 	if not picked_from_db:
 		# define enum_val and db_record
@@ -806,8 +806,10 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 			db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.get_id_othertext_from_enum_value(
 				e_df[e],file_record[e])
 			db_record.pop(e)
-		dbr.dframe_to_sql(pd.DataFrame.from_dict([db_record],orient='columns'),sess,table)
-	return db_record, enum_val
+		from_db = dbr.dframe_to_sql(
+			pd.DataFrame.from_dict([db_record],orient='columns'),sess,table,return_records='new')
+		db_idx = from_db.Id.unique().to_list()[0]
+	return db_idx, db_record, enum_val
 
 
 def report_uniqueness_problem(new_record,table,root_dir,sess):
@@ -881,19 +883,25 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 
 		show_user = user_input_record.copy()
 		for e in edf.keys():
-			user_input_record[f'{e}_Id'], enum_txt = pick_one(
-				edf[e],'Txt',e,required=True)
+			# force user to pick from standard list (plus 'other')
+			user_input_record[f'{e}_Id'], enum_txt = pick_one(edf[e],'Txt',e,required=True)
 			if enum_txt == 'other':
+				# get plaintext from user
+				user_input_record[f'Other{e}'] = input(f'Enter the {e}:\n')
+				# check against standard list
 				std_enum_list = list(edf[e]['Txt'])
 				std_enum_list.remove('other')
-				enum_val[e] = user_input_record[f'Other{e}'] = input(f'Enter the {e}:\n')
 				if user_input_record[f'Other{e}'] in std_enum_list:
-					user_input_record[f'{e}_Id'] = edf[e][edf[e].Txt == user_input_record[f'Other{e}']].first_valid_index()
+					# if user's plaintext is on standard list, change <e>_Id to match plaintext (rather than 'other')
+					#  and change Other<e> back to blank
+					user_input_record[f'{e}_Id'] = \
+						edf[e][edf[e].Txt == user_input_record[f'Other{e}']].first_valid_index()
 					user_input_record[f'Other{e}'] = ''
 			else:
 				user_input_record[f'Other{e}'] = ''
-				enum_val[e] = enum_txt
-			show_user[e] = enum_txt
+			# get plaintext from id/othertext
+			enum_val[e] = show_user[e] = mr.get_enum_value_from_id_othertext(
+				edf[e],user_input_record[f'{e}_Id'],user_input_record[f'Other{e}'])
 		entry = '\n\t'.join([f'{k}:\t{v}' for k,v in show_user.items()])
 		confirm = input(
 			f'Confirm entry:\n\t{entry}\nIs this correct (y/n)?\n')

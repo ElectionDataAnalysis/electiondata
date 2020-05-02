@@ -1,13 +1,11 @@
-	Unnamed: 0	Unnamed: 0.1	Unnamed: 0.1.1	Unnamed: 0.1.1.1	short_name	file_name	encoding	_datafile_separator	source_url	file_date	note
-0	0.0	0.0	0.0	0.0	phila2019g	division-level-results191105.csv	utf-8	comma	PhiladelphiaVotes.com	12/31/19	File date uncertain
-1	1.0	1.0	1.0	1.0	Phila_2019_general.csv	Phila_2019_general.csv	utf-8	comma	PhiladelphiaVotes.com	12/31/19	Exact file date not known. Post certification, though
-2	2.0	2.0	2.0	2.0	FL20181106_county	11062018Election.txt	iso-8859-1	tab	FL BoE	11/11/22	file date unknown
-3	3.0	3.0	3.0	3.0	NC2018g_by_precinct	results_pct_20181106.txt	utf-8	tab	NC BoE	11/11/22	file date is 2018-11-16
-4	4.0	4.0	4.0	4.0	2018p	results_pct_20180508.txt	iso-8859-1	tab	NC BoE	5/18/18	download date uncertain
-5	5.0	5.0	5.0	5.0	small_test_nc2018g	small.txt	iso-8859-1	tab	none	4/23/20	truncated by hand
-6	6.0	6.0	6.0	6.0	small_2018g_nc_for_testing	small20181106.txt	iso-8859-1	tab	none	11/11/22	testing
-7	7.0	7.0	7.0	0.0							
-8	8.0	8.0	0.0								
-9	9.0	0.0									
-10	0.0										
-0											
+short_name	file_name	encoding	_datafile_separator	source_url	file_date	note	download_date
+phila2019g	division-level-results191105.csv	utf-8	comma	PhiladelphiaVotes.com	12/31/19	File date uncertain	
+Phila_2019_general.csv	Phila_2019_general.csv	utf-8	comma	PhiladelphiaVotes.com	12/31/19	Exact file date not known. Post certification, though	
+FL20181106_county	11062018Election.txt	iso-8859-1	tab	FL BoE	11/11/22	file date unknown	
+NC2018g_by_precinct	results_pct_20181106.txt	utf-8	tab	NC BoE	11/11/22	file date is 2018-11-16	
+2018p	results_pct_20180508.txt	iso-8859-1	tab	NC BoE	5/18/18	download date uncertain	
+small_test_nc2018g	small.txt	iso-8859-1	tab	none	4/23/20	truncated by hand	
+small_2018g_nc_for_testing	small20181106.txt	iso-8859-1	tab	none	11/11/22	testing	
+test	small20181106.txt	iso-8859-1	tab	asdf	2222-11-11	sdf	2222-11-11
+;lj	small20181106.txt	utf8	;	lj	2222-11-11	jk	2222-11-11
+							

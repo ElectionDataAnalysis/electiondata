@@ -21,7 +21,7 @@ if __name__ == '__main__':
 	# pick db to use
 	db_paramfile = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'
 
-	db_name = 'NC_5'
+	db_name = 'NC'
 
 	# connect to db
 	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
