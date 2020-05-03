@@ -22,8 +22,8 @@ if __name__ == '__main__':
     analysis_session = Session()
 
     jurisdiction = ui.pick_juris_from_filesystem(project_root,
-                                                 path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
-                                                 jurisdiction_name=juris_name)
+												 path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
+												 juris_name=juris_name)
     e =an.Election(analysis_session,jurisdiction,project_root)
 
     e.summarize_results(db_paramfile=db_paramfile,summary_ru_type='county')

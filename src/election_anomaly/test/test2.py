@@ -40,7 +40,7 @@ if __name__ == '__main__':
 	juris_short_name = 'NC_5'
 	juris = ui.pick_juris_from_filesystem(
 		project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
-		jurisdiction_name=juris_short_name)
+		juris_name=juris_short_name)
 
 	# load new datafile
 	raw = pd.read_csv(

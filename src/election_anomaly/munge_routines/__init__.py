@@ -406,7 +406,7 @@ def good_syntax(s):
     return good
 
 
-def raw_elements_to_cdf(session,project_root,juris,mu,raw,info_cols,num_cols,finalize=True):
+def raw_elements_to_cdf(session,project_root,juris,mu,raw,info_cols,num_cols):
     """load data from <raw> into the database.
     Note that columns to be munged (e.g. County_xxx) have mu.field_rename_suffix (e.g., _xxx) added already"""
     working = raw.copy()
@@ -422,9 +422,6 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,info_cols,num_cols,fin
     for t in mu.cdf_elements[mu.cdf_elements.source == 'row'].index:
         working = add_munged_column_NEW(working,mu,t,mode='row')
         # TODO this finalization lumps BMContest and CContests together, not quite right
-        if finalize == True:
-            if t != 'BallotMeasureSelection':  # TODO ad hoc
-                mu.finalize_element(t,working,juris,session,project_root)
 
     # remove original row-munge columns
     munged = [x for x in working.columns if x[-len(mu.field_rename_suffix):] == mu.field_rename_suffix]

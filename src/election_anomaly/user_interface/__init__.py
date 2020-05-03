@@ -292,29 +292,34 @@ def check_count_columns(df,file,mungerdir,cdf_schema_def_dir):
 
 
 def pick_juris_from_filesystem(
-		project_root,path_to_jurisdictions='jurisdictions/',jurisdiction_name=None,check_files=False):
+		project_root,path_to_jurisdictions='jurisdictions/',juris_name=None,check_files=False):
 	"""Returns a State object.
 	If <jurisdiction_name> is given, this just initializes based on info
 	in the folder with that name; """
-	# TODO need to get the ReportingUnit.Id for the jurisdiction somewhere and pass it to the row-by-row processor
-	if jurisdiction_name is None:
+
+	# if no jurisdiction name provided, ask user to pick from file system
+	if juris_name is None:
+		# ask user to pick from the available ones
 		print('Pick the filesystem directory for your jurisdiction.')
 		choice_list = [x for x in os.listdir(path_to_jurisdictions) if
 					   os.path.isdir(os.path.join(path_to_jurisdictions,x))]
-		juris_idx,jurisdiction_name = pick_one(choice_list,None,item='jurisdiction')
+		juris_idx,juris_name = pick_one(choice_list,None,item='jurisdiction')
 
-		if check_files:
-			juris_path = os.path.join(path_to_jurisdictions,jurisdiction_name)
-			sf.check_jurisdiction_directory(juris_path)
-			sf.check_context_files(juris_path,project_root)
+		#if nothing picked, ask user for alphanumeric name and create necessary files
+		if not juris_idx:
+			juris_name = get_alphanumeric_from_user('Enter a directory name for your jurisdiction files.')
+			juris_path = os.path.join(path_to_jurisdictions,juris_name)
+			sf.ensure_jurisdiction_files(juris_path,project_root)
+
+	elif check_files:
+		juris_path = os.path.join(path_to_jurisdictions,juris_name)
+		sf.ensure_jurisdiction_files(juris_path,project_root)
 	else:
-		print(f'Directory {jurisdiction_name} is assumed to exist and have the required contents.')
+		print(f'WARNING: if necessary files are missing from the directory {juris_name},\n'
+			  f'system may fail.')
+
 	# initialize the jurisdiction
-	ss = sf.Jurisdiction(jurisdiction_name,path_to_jurisdictions,project_root=project_root)
-	if check_files:
-		for filename in os.listdir(os.path.join(ss.path_to_juris_dir,'context')):
-			element = filename[:-4]
-			ss.check_dependencies(element)
+	ss = sf.Jurisdiction(juris_name,path_to_jurisdictions,project_root=project_root)
 	return ss
 
 
@@ -951,7 +956,7 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
-def new_datafile(session,munger,raw_path,raw_file_sep,encoding,project_root=None,juris=None,finalize_context=True):
+def new_datafile(session,munger,raw_path,raw_file_sep,encoding,project_root=None,juris=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
@@ -973,7 +978,7 @@ def new_datafile(session,munger,raw_path,raw_file_sep,encoding,project_root=None
 
 	# TODO munger.check_against_datafile(raw,cols_to_munge,numerical_columns)
 
-	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,info_cols,numerical_columns,finalize=finalize_context)
+	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,info_cols,numerical_columns)
 
 	# TODO
 	return

@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     jurisdiction = ui.pick_juris_from_filesystem(project_root,
                                                  path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
-                                                 jurisdiction_name=juris_name)
+                                                 juris_name=juris_name)
     target_dir = os.path.join(project_root,'jurisdictions/NC_5/rollups_from_cdf_db')
     rollup = avp.create_rollup(
         analysis_session,'North Carolina','county','precinct','2018g',target_dir)
