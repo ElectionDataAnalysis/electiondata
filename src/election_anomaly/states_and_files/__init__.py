@@ -107,6 +107,10 @@ class Jurisdiction:
         self.short_name = ui.pick_or_create_directory(path_to_parent_dir,short_name)
         self.path_to_juris_dir = os.path.join(path_to_parent_dir, self.short_name)
 
+        with open(os.path.join(self.path_to_juris_dir,'context/remark.txt'),'r') as f:
+            remark = f.read()
+        print(f'\n\nJurisdiction {short_name} initialized! Note:\n{remark}')
+
 
 class Munger:
     def check_new_results_dataset(self,results,jurisdiction,sess,project_root='.'):
@@ -413,11 +417,22 @@ def check_dependencies(context_dir,element):
     report = [f'In context/{element}.txt:']
     for c in dependent:
         target = d[c]
-        ed = pd.read_csv(os.path.join(context_dir,f'{element}.txt'),sep='\t',header=0).loc[:,c].to_list()
-        ru = list(pd.read_csv(os.path.join(context_dir,f'{target}.txt'),sep='\t').loc[:,'Name'])
-        missing = [x for x in ed if x not in ru and not np.isnan(x)]
+        ed = pd.read_csv(os.path.join(
+            context_dir,f'{element}.txt'),sep='\t',header=0).fillna('').loc[:,c].unique()
+
+        # create list of elements, removing any nulls
+        ru = list(pd.read_csv(os.path.join(context_dir,f'{target}.txt'),sep='\t').fillna('').loc[:,'Name'])
+        try:
+            ru.remove(np.nan)
+        except ValueError:
+            pass
+
+        missing = [x for x in ed if x not in ru]
         if len(missing) == 0:
-            report.append(f'Every {c} is a {target}.')
+            report.append(f'Every {c} in {element}.txt is a {target}.')
+        elif len(missing) == 1 and missing == ['']:  # if the only missing is null or blank
+            # TODO some dependencies are ok with null (eg. PrimaryParty) and some are not
+            report.append(f'Some {c} are null, and every non-null {c} is a {target}.')
         else:
             changed_elements.add(element)
             changed_elements.add(target)
