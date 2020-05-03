@@ -13,7 +13,7 @@ if __name__ == '__main__':
 	j_path = os.path.join(project_root,'jurisdictions')
 
 	juris_short_name = None
-	juris = ui.pick_juris_from_filesystem(project_root,j_path,check_files=True)
+	juris = ui.pick_juris_from_filesystem(project_root,j_path,check_files=False)
 
 
 	exit()

@@ -21,6 +21,7 @@ def get_database_names(con,cur):
     names = pd.DataFrame(query('SELECT datname FROM pg_database',[],[],con,cur))
     return names
 
+
 def create_database(con,cur,db_name):
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     q = "DROP DATABASE IF EXISTS {0}"

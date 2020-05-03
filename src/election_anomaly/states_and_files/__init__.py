@@ -12,15 +12,6 @@ import csv
 
 
 class Jurisdiction:
-    def create_db(self):
-        # create db
-        con = dbr.establish_connection()
-        cur = con.cursor()
-        dbr.create_database(con,cur,self.short_name)
-        cur.close()
-        con.close()
-        return
-
     def prepare_candidatecontests(self,session):
         """create/update corresponding CandidateContest records for general and primary election contests
         (and insert in cdf db if they don't already exist)"""
@@ -472,8 +463,6 @@ def finalize_context_element(context_dir,element):
         else:
             input('Make your changes, then hit return to continue.')
     return
-
-
 
 
 def context_dependency_dictionary():
