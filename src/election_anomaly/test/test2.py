@@ -12,8 +12,6 @@ if __name__ == '__main__':
 
 	project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
 
-	# initialize root widget for tkinter
-
 	# pick db to use
 	db_paramfile = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'
 

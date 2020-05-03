@@ -48,56 +48,6 @@ def clean_raw_df(raw,munger):
     return raw, renamed_cols_to_munge, num_columns
 
 
-def load_context_dframe_into_cdf(
-        session,project_root,jurisdiction,source_df1,element,cdf_schema_def_dir='CDF_schema_def_info/'):
-    """<source_df> should have all info needed for insertion into cdf:
-    for enumerations, the value of the enumeration (e.g., 'precinct')
-    for other fields, the value of the field (e.g., 'North Carolina;Alamance County').
-"""
-    # TODO check that source_df has the right format
-
-    # dedupe source_df
-    dupes,source_df = ui.find_dupes(source_df1)
-    if not dupes.empty:
-        print(f'WARNING: duplicates removed from dataframe, may indicate a problem.\n{source_df1}')
-
-    # replace nulls with empty strings
-    source_df.fillna('',inplace=True)
-
-    enum_file = os.path.join(cdf_schema_def_dir,'elements',element,'enumerations.txt')
-    if os.path.isfile(enum_file):  # (if not, there are no enums for this element)
-        enums = pd.read_csv(enum_file,sep='\t')
-        # get all relevant enumeration tables
-        for e in enums['enumeration']:  # e.g., e = "ReportingUnitType"
-            cdf_e = pd.read_sql_table(e,session.bind)
-            # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
-            if e in source_df.columns:
-                source_df = enum_col_to_id_othertext(source_df,e,cdf_e)
-        # TODO skipping assignment of CountItemStatus to ReportingUnit for now,
-        #  since we can't assign an ReportingUnit as ElectionDistrict to Office
-        #  (unless Office has a CountItemStatus; can't be right!)
-        #  Note CountItemStatus is weirdly assigned to ReportingUnit in NIST CDF.
-        #  Note also that CountItemStatus is not required, and a single RU can have many CountItemStatuses
-
-    # TODO somewhere, check that no CandidateContest & Ballot Measure share a name; ditto for other false foreign keys
-
-    # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
-    fk_file = os.path.join(cdf_schema_def_dir,'elements',element,'foreign_keys.txt')
-    if os.path.isfile(fk_file):
-        fks = pd.read_csv(fk_file,sep='\t',index_col='fieldname')
-        for fn in fks.index:
-            # append the Id corresponding to <fn> from the db
-            refs = fks.loc[fn,'refers_to'].split(';')
-            target = pd.concat([pd.read_sql_table(r,session.bind)[['Id','Name']] for r in refs],axis=1)
-            target.rename(columns={'Id':fn,'Name':f'{fn}_Name'},inplace=True)
-            source_df = source_df.merge(target,how='left',left_on=fn[:-3],right_on=f'{fn}_Name')
-            source_df.drop([f'{fn}_Name'],axis=1)
-
-    # commit info in source_df to corresponding cdf table to db
-    dbr.dframe_to_sql(source_df,session,element)
-    return
-
-
 def add_munged_column(raw,mu,element,new_col_name):
     """Alters dataframe <raw> (in place), adding or redefining <new_col_name>
     via the string corresponding to <cdf_element>, per <munge_dictionary>"""

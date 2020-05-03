@@ -436,6 +436,7 @@ def fill_context_file(context_path,template_dir_path,element,sep='\t'):
 
 def pick_munger(sess,munger_dir='mungers',template_dir='templates/munger_templates',column_list=None,root=None):
 	"""pick (or create) a munger """
+	# TODO create option to pick munger without reference to db.
 	if not root:
 		root = get_project_root()
 	choice_list = os.listdir(munger_dir)

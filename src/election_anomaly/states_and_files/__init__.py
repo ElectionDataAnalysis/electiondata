@@ -87,6 +87,21 @@ class Jurisdiction:
         # TODO help user add appropriate lines to munger/raw_identifiers.txt and update munger
         return
 
+    def load_context_to_db(self,session,project_root):
+        """ """  # TODO
+        cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
+        # for element in context directory (except dictionary, remark)
+        context_dir = os.path.join(self.path_to_juris_dir,'context')
+        context_files = os.listdir(context_dir)
+        context_elements = [
+            x[:-4] for x in context_files if x != 'remark.txt' and x != 'dictionary.txt']
+        for element in context_elements:
+            # read df from context directory
+            df = pd.read_csv(os.path.join(context_dir,f'{element}.txt'),sep='\t')
+            # load df to db
+            load_context_dframe_into_cdf(session,df,element,cdf_schema_def_dir)
+        return
+
     def __init__(self,short_name,path_to_parent_dir,project_root=None,check_context=False):        # reporting_units,elections,parties,offices):
         """ short_name is the name of the directory containing the jurisdiction info, including data,
          and is used other places as well.
@@ -471,6 +486,59 @@ def context_dependency_dictionary():
     d = {'ElectionDistrict':'ReportingUnit','Office':'Office','PrimaryParty':'Party','Party':'Party',
          'Election':'Election'}
     return d
+
+
+def load_context_dframe_into_cdf(
+        session,source_df1,element,cdf_schema_def_dir):
+    """<source_df> should have all info needed for insertion into cdf:
+    for enumerations, the plaintext value of the enumeration (e.g., 'precinct')
+    for other fields, the value of the field (e.g., 'North Carolina;Alamance County').
+"""
+    if not source_df1.empty:
+        # TODO check that source_df has the right format
+
+        # dedupe source_df
+        dupes,source_df = ui.find_dupes(source_df1)
+        if not dupes.empty:
+            print(f'WARNING: duplicates removed from dataframe, may indicate a problem.\n')
+            ui.show_sample(dupes,f'lines in {element} source data','are duplicates')
+
+        # replace nulls with empty strings
+        source_df.fillna('',inplace=True)
+
+        enum_file = os.path.join(cdf_schema_def_dir,'elements',element,'enumerations.txt')
+        if os.path.isfile(enum_file):  # (if not, there are no enums for this element)
+            enums = pd.read_csv(enum_file,sep='\t')
+            # get all relevant enumeration tables
+            for e in enums['enumeration']:  # e.g., e = "ReportingUnitType"
+                cdf_e = pd.read_sql_table(e,session.bind)
+                # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
+                if e in source_df.columns:
+                    source_df = mr.enum_col_to_id_othertext(source_df,e,cdf_e)
+            # TODO skipping assignment of CountItemStatus to ReportingUnit for now,
+            #  since we can't assign an ReportingUnit as ElectionDistrict to Office
+            #  (unless Office has a CountItemStatus; can't be right!)
+            #  Note CountItemStatus is weirdly assigned to ReportingUnit in NIST CDF.
+            #  Note also that CountItemStatus is not required, and a single RU can have many CountItemStatuses
+
+        # TODO somewhere, check that no CandidateContest & Ballot Measure share a name; ditto for other false foreign keys
+
+        # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
+        fk_file = os.path.join(cdf_schema_def_dir,'elements',element,'foreign_keys.txt')
+        if os.path.isfile(fk_file):
+            fks = pd.read_csv(fk_file,sep='\t',index_col='fieldname')
+            for fn in fks.index:
+                # append the Id corresponding to <fn> from the db
+                refs = fks.loc[fn,'refers_to'].split(';')
+                target = pd.concat([pd.read_sql_table(r,session.bind)[['Id','Name']] for r in refs],axis=1)
+                target.rename(columns={'Id':fn,'Name':f'{fn}_Name'},inplace=True)
+                source_df = source_df.merge(target,how='left',left_on=fn[:-3],right_on=f'{fn}_Name')
+                source_df.drop([f'{fn}_Name'],axis=1)
+
+        # commit info in source_df to corresponding cdf table to db
+        dbr.dframe_to_sql(source_df,session,element)
+    return
+
 
 if __name__ == '__main__':
     print('Done (states_and_files)!')
