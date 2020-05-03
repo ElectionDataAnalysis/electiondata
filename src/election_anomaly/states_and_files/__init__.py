@@ -383,6 +383,9 @@ def check_nulls(element,f_path,project_root):
     while nulls:
         problems = []
         for nn in not_nulls.not_null_fields.unique():
+            # if nn is an Id, name in context file is element name
+            if nn[-3:] == '_Id':
+                nn = nn[:-3]
             n = df[df[nn].isnull()]
             if not n.empty:
                 ui.show_sample(n,f'Lines in {element} file',f'have illegal nulls in {nn}')
