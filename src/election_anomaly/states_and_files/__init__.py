@@ -284,46 +284,74 @@ def ensure_jurisdiction_files(juris_path,project_root):
         try:
             os.mkdir(sd_path)
         except FileExistsError:
-            print(f'Directory {sd_path} already exists, will be preserved')
+            print(f'Subdirectory {sd} already exists, will be preserved')
         else:
-            print(f'Directory {sd_path} created')
+            print(f'Subdirectory {sd} created')
     ensure_context_files(juris_path,project_root)
     return
 
 
 def ensure_context_files(juris_path,project_root):
     """Check that the context files are complete and consistent with one another.
-    Assumes context directory exists"""
+    Assumes context directory exists. Assumes dictionary.txt is in the template file"""
 
     context_dir = os.path.join(juris_path,'context')
     # ensure all files exist
     templates = os.path.join(project_root,'templates/context_templates')
-    template_list = os.listdir(templates)
-    context_file_list = template_list
+    template_list = [x[:-4] for x in os.listdir(templates)]
+    # move 'dictionary' to front of template_list, so that it is created first
+    template_list = ['dictionary'] + [x for x in template_list if x != 'dictionary']
 
-    for context_file in context_file_list:
+    for context_file in template_list:
+        print(f'Checking {context_file}.txt')
         cf_path = os.path.join(context_dir,f'{context_file}.txt')
-        # remark
-        if context_file == 'remark':
-            open(cf_path,'a').close()  # creates file if it doesn't exist already
-            with open(cf_path,'r') as f:
-                remark = f.read()
-            print(f'Current contents of remark.txt is:\n{remark}\n')
-            input(
-                f'In the file context/remark.txt, add or correct anything that '
-                f'user should know about the jurisdiction.\n'
-                f'Then hit return to continue.')
-        elif context_file == 'ExternalIdentifier':
+        # if file does not already exist in context dir, create from template and invite user to fill
+        try:
+            temp = pd.read_csv(os.path.join(templates,f'{context_file}.txt'),sep='\t')
+        except pd.error.EmptyDataError:
+            print(f'Template file {context_file}.txt has no contents')
+            temp = pd.DataFrame()
+        if not os.path.isfile(cf_path):
+            temp.to_csv(cf_path,sep='\t',index=False)
+            input(f'Enter information in the file {context_file}.txt. Then hit return to continue.')
+
+        # if file exists, check format against template
+        cf_df = pd.read_csv(os.path.join(context_dir,f'{context_file}.txt'),sep='\t')
+        format_confirmed = False
+        while not format_confirmed:
+            if set(cf_df.columns) != set(temp.columns):
+                cols = '\t'.join(temp.columns.to_list())
+                input(f'Columns of {context_file}.txt need to be (tab-separated):\n'
+                      f' {cols}\n'
+                      f'Edit {context_file}.txt, and hit return to continue.')
+            else:
+                format_confirmed = True
+
+        if context_file == 'ExternalIdentifier':
             dedupe(cf_path)
         elif context_file == 'dictionary':
             dedupe(cf_path)
         else:
-            # check dependencies
-            check_dependencies(context_dir,context_file)
             # run dupe check
             dedupe(cf_path)
             # check for problematic null entries
             check_nulls(context_file,cf_path,project_root)
+    # check dependencies
+    for context_file in [x for x in template_list if x != 'remark' and x != 'dictionary']:
+        # check dependencies
+        check_dependencies(context_dir,context_file)
+    # remark
+    rem_path = os.path.join(context_dir,'remark.txt')
+    try:
+        with open(rem_path,'r') as f:
+            remark = f.read()
+        print(f'Current contents of remark.txt is:\n{remark}\n')
+    except FileNotFoundError:
+        open(rem_path, 'a').close()  # create empty file
+    input(
+        f'In the file context/remark.txt, add or correct anything that '
+        f'user should know about the jurisdiction.\n'
+        f'Then hit return to continue.')
     return
 
 
@@ -335,9 +363,11 @@ def dedupe(f_path,warning='There are duplicates'):
         dupes,df = ui.find_dupes(df)
         if dupes.empty:
             dupes = False
+            print(f'No dupes in {f_path}')
         else:
-            input(f'WARNING: {warning}\n'
-                  f'Edit the file to remove the duplication, then hit return to continue')
+            print(f'WARNING: {warning}\n')
+            ui.show_sample(dupes,'lines','are duplicates')
+            input(f'Edit the file to remove the duplication, then hit return to continue')
             df = pd.read_csv(f_path,sep='\t')
     return df
 
@@ -371,7 +401,7 @@ def check_dependencies(context_dir,element):
     d = context_dependency_dictionary()
     # context_dir = os.path.join(self.path_to_juris_dir,"context")
     f_path = os.path.join(context_dir,f'{element}.txt')
-    assert os.path.isfile(f_path)
+    assert os.path.isdir(context_dir)
     element_df = pd.read_csv(f_path,sep='\t',index_col=None)
 
     # Find all dependent columns

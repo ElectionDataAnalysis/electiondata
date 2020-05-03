@@ -310,12 +310,18 @@ def pick_juris_from_filesystem(
 			juris_name = get_alphanumeric_from_user('Enter a directory name for your jurisdiction files.')
 			juris_path = os.path.join(path_to_jurisdictions,juris_name)
 			sf.ensure_jurisdiction_files(juris_path,project_root)
-
-	elif check_files:
-		juris_path = os.path.join(path_to_jurisdictions,juris_name)
-		sf.ensure_jurisdiction_files(juris_path,project_root)
+		elif check_files:
+			juris_path = os.path.join(path_to_jurisdictions,juris_name)
+			sf.ensure_jurisdiction_files(juris_path,project_root)
+		else:
+			print(f'WARNING: if necessary files are missing from the directory {juris_name},\n'
+				  f'system may fail.')
 	else:
-		print(f'WARNING: if necessary files are missing from the directory {juris_name},\n'
+		if check_files:
+			juris_path = os.path.join(path_to_jurisdictions,juris_name)
+			sf.ensure_jurisdiction_files(juris_path,project_root)
+		else:
+			print(f'WARNING: if necessary files are missing from the directory {juris_name},\n'
 			  f'system may fail.')
 
 	# initialize the jurisdiction
