@@ -314,20 +314,21 @@ def ensure_context_files(juris_path,project_root):
                 f'user should know about the jurisdiction.\n'
                 f'Then hit return to continue.')
         elif context_file == 'ExternalIdentifier':
-            pass # TODO
+            dedupe(cf_path)
         elif context_file == 'dictionary':
-            pass # TODO
+            dedupe(cf_path)
         else:
             # check dependencies
             check_dependencies(context_dir,context_file)
             # run dupe check
             dedupe(cf_path)
             # check for problematic null entries
-            check_nulls(context_file,cf_path)
+            check_nulls(context_file,cf_path,project_root)
     return
 
 
 def dedupe(f_path,warning='There are duplicates'):
+    # TODO allow specificaiton of unique constraints
     df = pd.read_csv(f_path,sep='\t')
     dupes = True
     while dupes:
@@ -341,8 +342,25 @@ def dedupe(f_path,warning='There are duplicates'):
     return df
 
 
-def check_nulls(element,f_path):
+def check_nulls(element,f_path,project_root):
     # TODO
+    nn_path = os.path.join(
+        project_root,'election_anomaly/CDF_schema_def_info/elements',element,'not_null_fields.txt')
+    not_nulls = pd.read_csv(nn_path,sep='\t')
+    df = pd.read_csv(f_path,sep='\t')
+
+    nulls = True
+    while nulls:
+        problems = []
+        for nn in not_nulls.not_null_fields.unique():
+            n = df[df[nn].isnull()]
+            if not n.empty:
+                ui.show_sample(n,f'Lines in {element} file',f'have illegal nulls in {nn}')
+                problems.append(nn)
+        if problems:
+            input(f'Fix the nulls, then hit enter to continue.')
+        else:
+            nulls = False
     return
 
 
