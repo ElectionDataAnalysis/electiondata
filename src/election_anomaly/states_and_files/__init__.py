@@ -231,8 +231,11 @@ class Munger:
         # TODO write this function
         return
 
-    def __init__(self,dir_path):
+    def __init__(self,dir_path,project_root=None):
         """<dir_path> is the directory for the munger."""
+        if not project_root:
+            project_root = ui.get_project_root()
+        # TODO create dir if necessary; create files if necessary
         while not os.path.isdir(dir_path):
             input(f'{dir_path} is not a directory. Please create it and hit return to continue.')
         for ff in ['cdf_elements.txt','format.txt']:

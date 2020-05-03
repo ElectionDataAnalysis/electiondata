@@ -434,11 +434,15 @@ def fill_context_file(context_path,template_dir_path,element,sep='\t'):
 	return context_df
 
 
-def pick_munger(sess,munger_dir='mungers',template_dir='templates/munger_templates',column_list=None,root=None):
+def pick_munger(munger_dir='mungers',project_root=None,session=None):
 	"""pick (or create) a munger """
 	# TODO create option to pick munger without reference to db.
-	if not root:
-		root = get_project_root()
+	if not project_root:
+		project_root = get_project_root()
+	if not session:
+		pass
+		# TODO use files instead of db for enum info
+
 	choice_list = os.listdir(munger_dir)
 	for choice in os.listdir(munger_dir):
 		c_path = os.path.join(munger_dir,choice)
@@ -462,17 +466,21 @@ def pick_munger(sess,munger_dir='mungers',template_dir='templates/munger_templat
 		# user chooses munger
 		munger_name = get_alphanumeric_from_user(
 			'Enter a short name (alphanumeric only, no spaces) for your munger (e.g., \'nc_primary18\')\n')
-	template_dir = os.path.join(root,'templates/munger_templates')
-	check_munger_files(sess,munger_name,munger_dir,template_dir)
+	template_dir = os.path.join(project_root,'templates/munger_templates')
+	check_munger_files(munger_name,munger_dir,template_dir,project_root=project_root)
 
 	munger_path = os.path.join(munger_dir,munger_name)
 	munger = sf.Munger(munger_path)
 	munger.check_against_self()
-	munger.check_against_db(sess)
+	if session:
+		munger.check_against_db(session)
 	return munger
 
 
-def check_munger_files(sess,munger_name,munger_dir,template_dir):
+def check_munger_files(munger_name,munger_dir,template_dir,session=None,project_root=None):
+	if not project_root:
+		project_root = get_project_root()
+
 	munger_path = os.path.join(munger_dir,munger_name)
 	# create munger directory if necessary
 	try:
@@ -488,7 +496,14 @@ def check_munger_files(sess,munger_name,munger_dir,template_dir):
 			create_file_from_template(os.path.join(template_dir,ff),os.path.join(munger_path,ff))
 
 		# create format.txt
-		rut_df = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
+		if session:
+			rut_df = pd.read_sql_table('ReportingUnitType',session.bind,index_col='Id')
+		else:
+			rut_df = pd.read_csv(
+				os.path.join(
+					project_root,
+					'election_anomaly/CDF_schema_def_info/enumerations/ReportingUnitType.txt'),
+			names=['Txt'])
 		try:
 			with open(os.path.join(munger_path,'format.txt'),'r') as f:
 				arut=f.read()
@@ -503,8 +518,11 @@ def check_munger_files(sess,munger_name,munger_dir,template_dir):
 		# prepare cdf_elements.txt
 		#  find db tables corresponding to elements: nothing starting with _, nothing named 'Join',
 		#  and nothing with only 'Id' and 'Txt' columns
-
-		elements,enums,joins,others = dbr.get_cdf_db_table_names(sess.bind)
+		if session:
+			elements,enums,joins,others = dbr.get_cdf_db_table_names(session.bind)
+		else:
+			all_elements = os.listdir(os.path.join(project_root,'election_anomaly/CDF_schema_def_info/elements'))
+			elements = [x for x in all_elements if x != '_datafile']
 		prepare_cdf_elements_file(munger_path,elements)
 	return
 
@@ -540,13 +558,6 @@ def prepare_cdf_elements_file(dir_path,elements):
 		with open(os.path.join(dir_path,'cdf_elements.txt'),'a') as f:
 			f.write('\n'.join(out_lines))
 	return
-
-
-def create_munger(column_list=None):
-	# TODO walk user through munger creation
-	#
-	munger = None # TODO temp
-	return munger
 
 
 def pick_juris_from_db(sess,project_root,juris_type='state'):
