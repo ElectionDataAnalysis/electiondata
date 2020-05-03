@@ -306,7 +306,7 @@ def pick_juris_from_filesystem(
 		if check_files:
 			juris_path = os.path.join(path_to_jurisdictions,jurisdiction_name)
 			sf.check_jurisdiction_directory(juris_path)
-			sf.ensure_context(juris_path,project_root)
+			sf.check_context_files(juris_path,project_root)
 	else:
 		print(f'Directory {jurisdiction_name} is assumed to exist and have the required contents.')
 	# initialize the jurisdiction
@@ -351,18 +351,18 @@ def fill_context_file(context_path,template_dir_path,element,sep='\t'):
 	In any case, runs format and dupe checks on that file, inviting user corrections.
 	Also checks that each <element> passes the test, i.e., that
 	for each k,v in <tests>, every value in column k can be found in <v>.txt.
-	Does not apply to ExternalIdentifier.txt or remark.txt"""
+	Does not apply to ExternalIdentifier.txt or remark.txt or dictionary.txt"""
 	template_file = os.path.join(template_dir_path,f'{element}.txt')
 	template = pd.read_csv(template_file,sep='\t')
 	context_file = os.path.join(context_path,f'{element}.txt')
 	create_file_from_template(template_file,context_file,sep=sep)
 
-	namefield = 'Name'
+	name_field = 'Name'
 	if element == 'BallotMeasureContest':
 		tests = {'ElectionDistrict':'ReportingUnit','Election':'Election'}
 	elif element == 'Candidate':
 		tests = {'Party':'Party'}
-		namefield = 'BallotName'
+		name_field = 'BallotName'
 	elif element == 'CandidateContest':
 		tests = {'Office':'Office'}
 	elif element == 'Office':
@@ -375,7 +375,7 @@ def fill_context_file(context_path,template_dir_path,element,sep='\t'):
 	while in_progress == 'y':
 		# check format of file
 		context_df = pd.read_csv(context_file,sep=sep,header=0,dtype=str)
-		dupes,deduped = find_dupes(context_df[namefield])
+		dupes,deduped = find_dupes(context_df[name_field])
 		if not context_df.columns.to_list() == template.columns.to_list():
 			print(f'WARNING: {element}.txt is not in the correct format. Required columns are:\n'
 				  f'{template.columns.to_list()}')
@@ -391,7 +391,7 @@ def fill_context_file(context_path,template_dir_path,element,sep='\t'):
 
 		# check for dupes
 		elif dupes.shape[0] >0:
-			print(f'File {context_path}\n has duplicates in the {namefield} column.')
+			print(f'File {context_path}\n has duplicates in the {name_field} column.')
 			show_sample(dupes,'names','appear on more than one line')
 			input(f'Please correct and hit return to continue.\n')
 		else:
@@ -406,7 +406,6 @@ def fill_context_file(context_path,template_dir_path,element,sep='\t'):
 				problem = False
 				for test_field in tests.keys():
 					targets = pd.read_csv(os.path.join(context_path,f'{tests[test_field]}.txt'),sep='\t')
-					#bad_set = {x for x in context_df[test_field] if x not in targets.Name.unique()}
 					bad_set = {idx for idx in context_df.index if
 							   context_df.loc[idx,test_field] not in targets.Name.unique()}
 					if len(bad_set) == 0:

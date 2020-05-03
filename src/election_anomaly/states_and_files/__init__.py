@@ -62,42 +62,6 @@ class Jurisdiction:
         dbr.dframe_to_sql(cc_all,session,'CandidateContest')
         return cc_all
 
-    def check_dependencies(self,element):
-        """Looks in context file to check that every ElectionDistrict in <element>.txt is listed in <target>.txt,
-        """
-        d = context_dependency_dictionary()
-        context_dir = os.path.join(self.path_to_juris_dir,"context")
-        f_path = os.path.join(context_dir,f'{element}.txt')
-        if os.path.isfile(f_path):
-            element_df = pd.read_csv(f_path,sep='\t',index_col=None)
-        else:
-            ensure_context(self.path_to_juris_dir,None)
-
-        # Find all dependent columns
-        dependent = [c for c in element_df if c in d.keys()]
-        changed_elements = set()
-        report = [f'In context/{element}.txt:']
-        for c in dependent:
-            target = d[c]
-            ed = pd.read_csv(os.path.join(context_dir,f'{element}.txt'),sep='\t',header=0).loc[:,c].to_list()
-            ru = list(pd.read_csv(os.path.join(context_dir,f'{target}.txt'),sep='\t').loc[:,'Name'])
-            missing = [x for x in ed if x not in ru and not np.isnan(x)]
-            if len(missing) == 0:
-                report.append(f'Every {c} is a {target}.')
-            else:
-                changed_elements.add(element)
-                changed_elements.add(target)
-                print(f'Every {c} must be a {target}. This is not optional!!')
-                ui.show_sample(missing,f'{c}s',f'are not yet {target}s')
-                input(f'Please make corrections to {element}.txt or additions to {target}.txt to resolve the problem.\n'
-                      'Then his return to continue.')
-                changed_elements.update(self.check_dependencies(target))
-        if dependent:
-            print ('\n\t'.join(report))
-        if changed_elements:
-            print(f'(Directory is {context_dir}')
-        return changed_elements
-
     def add_to_context_dir(self,element,df):
         """Add the data in the dataframe <df> to the file corresponding
         to <element> in the Jurisdiction's context folder.
@@ -146,13 +110,14 @@ class Jurisdiction:
         if check_context:
             # Ensure that context directory exists and is missing no essential files
             check_jurisdiction_directory(self.path_to_juris_dir)
-            ensure_context(self.path_to_juris_dir,project_root)
+            check_context_files(self.path_to_juris_dir,project_root)
 
 
 class Munger:
     def finalize_element(self,element,results,jurisdiction,sess,project_root):
         """Guides user to make any necessary or desired changes in context/<element>.txt
         and makes corresponding changes to db"""
+        context_dir = os.path.join(jurisdiction.path_to_juris_dir,'context')
         finalized = False
         while not finalized:
             self.prepare_context_and_db(element,results,jurisdiction,sess,project_path=project_root)
@@ -160,7 +125,7 @@ class Munger:
             # check dependencies
             all_ok = False
             while not all_ok:
-                changed_elements = jurisdiction.check_dependencies(element)
+                changed_elements = jurisdiction.check_dependencies(context_dir,element)
                 if changed_elements:
                     # recheck items from change list
                     for e in changed_elements:
@@ -356,7 +321,7 @@ class Munger:
 
             # check that context folder contents are consistent
             if not os.path.isfile(source_file):
-                ensure_context(jurisdiction.path_to_juris_dir,project_path)
+                check_context_files(jurisdiction.path_to_juris_dir,project_path)
 
             source_df = dedupe(
                source_df,source_file,warning=f'{jurisdiction.short_name}/context/{element}.txt has duplicates.')
@@ -633,9 +598,11 @@ def check_jurisdiction_directory(juris_path):
     return
 
 
-def ensure_context(juris_path,project_root=None):
+def check_context_files(juris_path,project_root=None):
+    """Check that the context files are complete and consistent with one another"""
     if not project_root:
         project_root = ui.get_project_root()
+
     # ensure directory exists
     check_jurisdiction_directory(juris_path)
 
@@ -643,14 +610,15 @@ def ensure_context(juris_path,project_root=None):
     templates = os.path.join(project_root,'templates/context_templates')
     enums = os.path.join(project_root,'election_anomaly/CDF_schema_def_info/enumerations')
     template_list = os.listdir(templates)
-    context_file_list = ['ReportingUnit','Election','BallotMeasureContest','Office','Party','CandidateContest','Candidate','ExternalIdentifier','remark']
+    context_file_list = ['ReportingUnit','Election','BallotMeasureContest','Office','Party','CandidateContest',
+                         'Candidate','ExternalIdentifier','remark','dictionary']
 
     # TODO check for problematic null entries?
 
-    for element in context_file_list:
-        el_path = os.path.join(juris_path,'context',f'{element}.txt')
+    for context_file in context_file_list:
+        el_path = os.path.join(juris_path,'context',f'{context_file}.txt')
         # remark
-        if element == 'remark':
+        if context_file == 'remark':
 
             open(el_path,'a').close()  # creates file if it doesn't exist already
             with open(el_path,'r') as f:
@@ -659,11 +627,13 @@ def ensure_context(juris_path,project_root=None):
             input(
                 f'In the file context/remark.txt, add or correct anything that user should know about the jurisdiction.\n'
                 f'Then hit return to continue.')
-        elif element == 'ExternalIdentifier':
+        elif context_file == 'ExternalIdentifier':
+            pass # TODO
+        elif context_file == 'dictionary':
             pass # TODO
         else:
             ui.fill_context_file(
-                os.path.join(juris_path,'context'),templates,element)
+                os.path.join(juris_path,'context'),templates,context_file)
     return
 
 
@@ -678,6 +648,42 @@ def dedupe(df,f_path,warning='There are duplicates'):
                   f'Edit the file to remove the duplication, then hit return to continue')
             df = pd.read_csv(f_path,sep='\t')
     return df
+
+
+def check_dependencies(context_dir,element):
+    """Looks in <context_dir> to check that every dependent column in <element>.txt
+    is listed in the corresponding context file. Note: <context_dir> assumed to exist.
+    """
+    d = context_dependency_dictionary()
+    # context_dir = os.path.join(self.path_to_juris_dir,"context")
+    f_path = os.path.join(context_dir,f'{element}.txt')
+    assert os.path.isfile(f_path)
+    element_df = pd.read_csv(f_path,sep='\t',index_col=None)
+
+    # Find all dependent columns
+    dependent = [c for c in element_df if c in d.keys()]
+    changed_elements = set()
+    report = [f'In context/{element}.txt:']
+    for c in dependent:
+        target = d[c]
+        ed = pd.read_csv(os.path.join(context_dir,f'{element}.txt'),sep='\t',header=0).loc[:,c].to_list()
+        ru = list(pd.read_csv(os.path.join(context_dir,f'{target}.txt'),sep='\t').loc[:,'Name'])
+        missing = [x for x in ed if x not in ru and not np.isnan(x)]
+        if len(missing) == 0:
+            report.append(f'Every {c} is a {target}.')
+        else:
+            changed_elements.add(element)
+            changed_elements.add(target)
+            print(f'Every {c} must be a {target}. This is not optional!!')
+            ui.show_sample(missing,f'{c}s',f'are not yet {target}s')
+            input(f'Please make corrections to {element}.txt or additions to {target}.txt to resolve the problem.\n'
+                  'Then his return to continue.')
+            changed_elements.update(check_dependencies(context_dir,target))
+    if dependent:
+        print ('\n\t'.join(report))
+    if changed_elements:
+        print(f'(Directory is {context_dir}')
+    return changed_elements
 
 
 def context_dependency_dictionary():
