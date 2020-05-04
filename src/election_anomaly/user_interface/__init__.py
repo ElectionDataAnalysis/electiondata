@@ -462,7 +462,6 @@ def pick_munger(mungers_dir='mungers',project_root=None,session=None):
 		# user chooses munger
 		munger_name = get_alphanumeric_from_user(
 			'Enter a short name (alphanumeric only, no spaces) for your munger (e.g., \'nc_primary18\')\n')
-	template_dir = os.path.join(project_root,'templates/munger_templates')
 	sf.ensure_munger_files(munger_name,project_root=project_root)
 
 	munger_path = os.path.join(mungers_dir,munger_name)

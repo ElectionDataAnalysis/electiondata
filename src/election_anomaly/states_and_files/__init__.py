@@ -178,7 +178,6 @@ class Munger:
         """check that munger is consistent with db; offer user chance to correct munger"""
         checked = False
         while not checked:
-            checked = True
             problems = []
             # set of cdf_elements in cdf_elements.txt is same as set pulled from db
             [db_elements, db_enumerations, db_joins, db_others] = dbr.get_cdf_db_table_names(sess.bind)
@@ -209,6 +208,9 @@ class Munger:
                       f'Then hit enter to continue.')
                 [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,
                  self.field_name_row] = read_munger_info_from_files(self.path_to_munger_dir)
+            else:
+                checked = True
+                print(f'Munger {self.name} checked against database.')
         return
 
     def check_against_datafile(self,raw,cols_to_munge,count_columns):
@@ -268,15 +270,15 @@ def read_munger_info_from_files(dir_path):
 
     # read formatting info
     format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep='\t',index_col='item')
-    # TODO check that format.txt file is correct
     atomic_reporting_unit_type = format_info.loc['atomic_reporting_unit_type','value']
     field_name_row = int(format_info.loc['field_name_row','value'])
     header_row_count = int(format_info.loc['header_row_count','value'])
-        # TODO maybe file separator and encoding should be in format.txt?
+    separator = format_info.loc['separator','value']
+    encoding = format_info.loc['encoding','value']
 
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
     #   will need to rename some columns of the raw file before processing.
-    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row]
+    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,separator,encoding]
 
 
 def ensure_jurisdiction_files(juris_path,project_root):
