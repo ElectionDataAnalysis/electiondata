@@ -206,7 +206,7 @@ class Munger:
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
                  self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
             else:
                 checked = True
