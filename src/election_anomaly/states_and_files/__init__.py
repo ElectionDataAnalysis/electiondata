@@ -170,8 +170,8 @@ class Munger:
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,
-                 self.field_name_row,] = read_munger_info_from_files(self.path_to_munger_dir)
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
+                 self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
         return
 
     def check_against_db(self,sess):
@@ -206,8 +206,8 @@ class Munger:
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,
-                 self.field_name_row] = read_munger_info_from_files(self.path_to_munger_dir)
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row
+                 self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
             else:
                 checked = True
                 print(f'Munger {self.name} checked against database.')
@@ -228,8 +228,8 @@ class Munger:
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,
-                 self.field_name_row] = read_munger_info_from_files(self.path_to_munger_dir)
+                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
+                 self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
         # TODO write this function
         return
 
@@ -249,8 +249,8 @@ class Munger:
 
         if check_files:
             ensure_munger_files(self.name,project_root=project_root)
-        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,
-         self.field_name_row] = read_munger_info_from_files(self.path_to_munger_dir)
+        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
+         self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
 
         self.field_rename_suffix = '___' # NB: must not match any suffix of a cdf element name;
 
