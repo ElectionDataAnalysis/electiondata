@@ -238,17 +238,15 @@ class Munger:
         template_dir = os.path.join(project_root,'templates/munger_templates')
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
 
-        # create dir if necessary; create files if necessary
+        # create dir if necessary
         if os.path.isdir(dir_path):
             print(f'Directory {self.name} exists.')
         else:
             print(f'Creating directory {self.name}')
             Path(dir_path).mkdir(parents=True,exist_ok=True)
-        for ff in ['cdf_elements.txt','format.txt']:
-            ui.create_file_from_template(
-                os.path.join(template_dir,ff),os.path.join(dir_path,ff))
-        self.path_to_munger_dir=dir_path
 
+        # TODO check munger files for consistency, completeness
+        ensure_munger_files(dir_path,project_root)
         [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,
          self.field_name_row] = read_munger_info_from_files(self.path_to_munger_dir)
 
@@ -366,6 +364,109 @@ def ensure_context_files(juris_path,project_root):
         f'user should know about the jurisdiction.\n'
         f'Then hit return to continue.')
     return
+
+
+def ensure_munger_files(munger_path,project_root):
+    """Check that the munger files are complete and consistent with one another.
+    Assumes munger directory exists. Assumes dictionary.txt is in the template file"""
+
+    # ensure all files exist
+    templates = os.path.join(project_root,'templates/munger_templates')
+    template_list = [x[:-4] for x in os.listdir(templates)]
+
+    for munger_file in template_list:
+        print(f'Checking {munger_file}.txt')
+        cf_path = os.path.join(munger_path,f'{munger_file}.txt')
+        # if file does not already exist in munger dir, create from template and invite user to fill
+        try:
+            temp = pd.read_csv(os.path.join(templates,f'{munger_file}.txt'),sep='\t')
+        except pd.error.EmptyDataError:
+            print(f'Template file {munger_file}.txt has no contents')
+            temp = pd.DataFrame()
+        if not os.path.isfile(cf_path):
+            temp.to_csv(cf_path,sep='\t',index=False)
+            input(f'Enter information in the file {munger_file}.txt. Then hit return to continue.')
+
+        # if file exists, check format against template
+        cf_df = pd.read_csv(os.path.join(munger_path,f'{munger_file}.txt'),sep='\t')
+        format_confirmed = False
+        while not format_confirmed:
+            problems = []
+            # check columns are correct
+            if set(cf_df.columns) != set(temp.columns):
+                cols = '\t'.join(temp.columns.to_list())
+                problems.append(f'Columns of {munger_file}.txt need to be (tab-separated):\n'
+                      f' {cols}\n')
+            # check first column matches template
+            if cf_df.iloc[:0] != temp.iloc[:0]:
+                first_col = '\n'.join(list(cf_df.iloc[:0]))
+                problems.append(f'First column of {munger_file}.txt must be:\n{first_col}')
+            if problems:
+                prob_str = '\n\t'.join(problems)
+                input(f'There are problems:\n\t{prob_str}\nEdit {munger_file}.txt, and hit return to continue.')
+            else:
+                format_confirmed = True
+        # check contents of each file
+        check_munger_file_contents()
+    return
+
+
+def check_munger_file_contents(munger_dir):
+    """check that munger files are internally consistent; offer user chance to correct"""
+    checked = False
+    while not checked:
+        problems = []
+
+        # read cdf_elements and format from files
+        cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),sep='\t')
+        format = pd.read_csv(os.path.join(munger_dir,'format.txt'),sep='\t',index_col='item')
+        # every source is either row, column or other
+        bad_source = [x for x in cdf_elements.source if x not in ['row','column','other']]
+        if bad_source:
+            b_str = ','.join(bad_source)
+            problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
+
+        # formulas have good syntax
+        bad_formula = [x for x in cdf_elements.raw_identifier_formula.unique() if not mr.good_syntax(x)]
+        if bad_formula:
+            f_str = ','.join(bad_formula)
+            problems.append(f'''At least one formula in cdf_elements.txt has bad syntax: {f_str} ''')
+
+        # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows
+        p_not_just_digits = re.compile(r'<.*\D.*>')
+        p_catch_digits = re.compile(r'<(\d+)>')
+        bad_column_formula = set()
+        for i,r in cdf_elements[cdf_elements.source == 'column'].iterrows():
+            if p_not_just_digits.search(r['raw_identifier_formula']):
+                bad_column_formula.add(r['raw_identifier_formula'])
+            else:
+                integer_list = [int(x) for x in p_catch_digits.findall(r['raw_identifier_formula'])]
+                bad_integer_list = [x for x in integer_list if (x > self.header_row_count-1 or x < 0)]
+                if bad_integer_list:
+                    bad_column_formula.add(r['raw_identifier_formula'])
+        if bad_column_formula:
+            cf_str = ','.join(bad_column_formula)
+            problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
+
+        # check entries in format.txt
+        if not format.loc['header_row_count','value'].isint():
+            problems.append('In format file, header_row_count must be an integer')
+        if not format.loc['field_name_row','value'].isint():
+            problems.append('In format file, field_name_row must be an integer')
+
+
+        # TODO if field in formula matches an element self.cdf_element.index,
+        #  check that rename is not also a column
+        if problems:
+            problem_str = '\n\t'.join(problems)
+            print(f'Problems found:\n{problem_str} ')
+            input(f'Correct the problems by editing files in {munger_dir}\n'
+                  f'Then hit enter to continue.')
+        else:
+            checked = True
+    return
+
+
 
 
 def dedupe(f_path,warning='There are duplicates'):
