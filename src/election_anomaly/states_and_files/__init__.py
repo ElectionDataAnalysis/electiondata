@@ -8,7 +8,6 @@ import user_interface as ui
 import re
 import numpy as np
 from pathlib import Path
-import csv
 
 
 class Jurisdiction:
@@ -275,6 +274,7 @@ def read_munger_info_from_files(dir_path):
     header_row_count = int(format_info.loc['header_row_count','value'])
     separator = format_info.loc['separator','value']
     encoding = format_info.loc['encoding','value']
+    # TODO warn if encoding not recognized
 
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
     #   will need to rename some columns of the raw file before processing.
