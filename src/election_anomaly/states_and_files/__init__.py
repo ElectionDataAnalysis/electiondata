@@ -235,15 +235,18 @@ class Munger:
         """<dir_path> is the directory for the munger."""
         if not project_root:
             project_root = ui.get_project_root()
-        # TODO create dir if necessary; create files if necessary
-        while not os.path.isdir(dir_path):
-            input(f'{dir_path} is not a directory. Please create it and hit return to continue.')
-        for ff in ['cdf_elements.txt','format.txt']:
-            while not os.path.isfile(os.path.join(dir_path,ff)):
-                input(f'Directory \n\t{dir_path}\ndoes not contain file {ff}.\n'
-                      f'Please create the file and hit return to continue')
-
+        template_dir = os.path.join(project_root,'templates/munger_templates')
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
+
+        # create dir if necessary; create files if necessary
+        if os.path.isdir(dir_path):
+            print(f'Directory {self.name} exists.')
+        else:
+            print(f'Creating directory {self.name}')
+            Path(dir_path).mkdir(parents=True,exist_ok=True)
+        for ff in ['cdf_elements.txt','format.txt']:
+            ui.create_file_from_template(
+                os.path.join(template_dir,ff),os.path.join(dir_path,ff))
         self.path_to_munger_dir=dir_path
 
         [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,
@@ -255,9 +258,6 @@ class Munger:
         self.field_list = set()
         for t,r in self.cdf_elements.iterrows():
             self.field_list=self.field_list.union(r['fields'])
-
-# TODO before processing context files into db, alert user to any duplicate names.
-#  Enforce name change? Or just suggest?
 
 
 def read_munger_info_from_files(dir_path):
@@ -491,6 +491,8 @@ def context_dependency_dictionary():
     return d
 
 
+# TODO before processing context files into db, alert user to any duplicate names.
+#  Enforce name change? Or just suggest?
 def load_context_dframe_into_cdf(
         session,source_df1,element,cdf_schema_def_dir):
     """<source_df> should have all info needed for insertion into cdf:
