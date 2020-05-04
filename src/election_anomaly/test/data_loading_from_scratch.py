@@ -27,8 +27,8 @@ if __name__ == '__main__':
 
 
 	# pick munger
-	munger = ui.pick_munger(munger_dir=os.path.join(project_root,'mungers'),
-		project_root=project_root,session=new_df_session)
+	munger = ui.pick_munger(mungers_dir=os.path.join(project_root,'mungers'),
+							project_root=project_root,session=new_df_session)
 
 	# get datafile & info
 	dfile_d, enum_d, raw_file = ui.pick_datafile(project_root,new_df_session)

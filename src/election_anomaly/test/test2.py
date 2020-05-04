@@ -23,8 +23,8 @@ if __name__ == '__main__':
 	new_df_session = Session()
 
 	# pick munger
-	munger = ui.pick_munger(munger_dir=os.path.join(project_root,'mungers'),
-		project_root=project_root,session=new_df_session)
+	munger = ui.pick_munger(mungers_dir=os.path.join(project_root,'mungers'),
+							project_root=project_root,session=new_df_session)
 
 	# datafile & info
 	raw_file_dir = '/Users/Steph-Airbook/Documents/Temp/'

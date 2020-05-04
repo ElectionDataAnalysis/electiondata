@@ -231,12 +231,12 @@ class Munger:
         # TODO write this function
         return
 
-    def __init__(self,dir_path,project_root=None):
+    def __init__(self,dir_path,project_root=None,check_files=True):
         """<dir_path> is the directory for the munger."""
         if not project_root:
             project_root = ui.get_project_root()
-        template_dir = os.path.join(project_root,'templates/munger_templates')
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
+        self.path_to_munger_dir = dir_path
 
         # create dir if necessary
         if os.path.isdir(dir_path):
@@ -245,8 +245,8 @@ class Munger:
             print(f'Creating directory {self.name}')
             Path(dir_path).mkdir(parents=True,exist_ok=True)
 
-        # TODO check munger files for consistency, completeness
-        ensure_munger_files(dir_path,project_root)
+        if check_files:
+            ensure_munger_files(self.name,project_root=project_root)
         [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,
          self.field_name_row] = read_munger_info_from_files(self.path_to_munger_dir)
 
@@ -366,14 +366,19 @@ def ensure_context_files(juris_path,project_root):
     return
 
 
-def ensure_munger_files(munger_path,project_root):
+def ensure_munger_files(munger_name,project_root=None):
     """Check that the munger files are complete and consistent with one another.
     Assumes munger directory exists. Assumes dictionary.txt is in the template file"""
+    if not project_root:
+        project_root = ui.get_project_root()
 
+    # define path to directory for the specific munger
+    munger_path = os.path.join(project_root,'mungers',munger_name)
     # ensure all files exist
     templates = os.path.join(project_root,'templates/munger_templates')
     template_list = [x[:-4] for x in os.listdir(templates)]
 
+    # create each file if necessary
     for munger_file in template_list:
         print(f'Checking {munger_file}.txt')
         cf_path = os.path.join(munger_path,f'{munger_file}.txt')
@@ -397,8 +402,9 @@ def ensure_munger_files(munger_path,project_root):
                 cols = '\t'.join(temp.columns.to_list())
                 problems.append(f'Columns of {munger_file}.txt need to be (tab-separated):\n'
                       f' {cols}\n')
+
             # check first column matches template
-            if cf_df.iloc[:0] != temp.iloc[:0]:
+            if cf_df.empty or (cf_df.iloc[:,0] != temp.iloc[:,0]).any():
                 first_col = '\n'.join(list(cf_df.iloc[:0]))
                 problems.append(f'First column of {munger_file}.txt must be:\n{first_col}')
             if problems:
@@ -406,20 +412,25 @@ def ensure_munger_files(munger_path,project_root):
                 input(f'There are problems:\n\t{prob_str}\nEdit {munger_file}.txt, and hit return to continue.')
             else:
                 format_confirmed = True
-        # check contents of each file
-        check_munger_file_contents()
+    # check contents of each file
+    check_munger_file_contents(munger_name,project_root=project_root)
     return
 
 
-def check_munger_file_contents(munger_dir):
+def check_munger_file_contents(munger_name,project_root=None):
     """check that munger files are internally consistent; offer user chance to correct"""
+    # define path to munger's directory
+    if not project_root:
+        project_root = ui.get_project_root()
+    munger_dir = os.path.join(project_root,'mungers',munger_name)
+
     checked = False
     while not checked:
         problems = []
 
         # read cdf_elements and format from files
-        cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),sep='\t')
-        format = pd.read_csv(os.path.join(munger_dir,'format.txt'),sep='\t',index_col='item')
+        cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),sep='\t').fillna('')
+        format_df = pd.read_csv(os.path.join(munger_dir,'format.txt'),sep='\t',index_col='item').fillna('')
         # every source is either row, column or other
         bad_source = [x for x in cdf_elements.source if x not in ['row','column','other']]
         if bad_source:
@@ -441,7 +452,7 @@ def check_munger_file_contents(munger_dir):
                 bad_column_formula.add(r['raw_identifier_formula'])
             else:
                 integer_list = [int(x) for x in p_catch_digits.findall(r['raw_identifier_formula'])]
-                bad_integer_list = [x for x in integer_list if (x > self.header_row_count-1 or x < 0)]
+                bad_integer_list = [x for x in integer_list if (x > format_df.header_row_count-1 or x < 0)]
                 if bad_integer_list:
                     bad_column_formula.add(r['raw_identifier_formula'])
         if bad_column_formula:
@@ -449,11 +460,10 @@ def check_munger_file_contents(munger_dir):
             problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
 
         # check entries in format.txt
-        if not format.loc['header_row_count','value'].isint():
+        if not format_df.loc['header_row_count','value'].isnumeric():
             problems.append('In format file, header_row_count must be an integer')
-        if not format.loc['field_name_row','value'].isint():
+        if not format_df.loc['field_name_row','value'].isnumeric():
             problems.append('In format file, field_name_row must be an integer')
-
 
         # TODO if field in formula matches an element self.cdf_element.index,
         #  check that rename is not also a column
@@ -465,7 +475,6 @@ def check_munger_file_contents(munger_dir):
         else:
             checked = True
     return
-
 
 
 

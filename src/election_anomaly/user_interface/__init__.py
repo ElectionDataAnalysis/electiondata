@@ -434,18 +434,14 @@ def fill_context_file(context_path,template_dir_path,element,sep='\t'):
 	return context_df
 
 
-def pick_munger(munger_dir='mungers',project_root=None,session=None):
+def pick_munger(mungers_dir='mungers',project_root=None,session=None):
 	"""pick (or create) a munger """
-	# TODO create option to pick munger without reference to db.
 	if not project_root:
 		project_root = get_project_root()
-	if not session:
-		pass
-		# TODO use files instead of db for enum info
 
-	choice_list = os.listdir(munger_dir)
-	for choice in os.listdir(munger_dir):
-		c_path = os.path.join(munger_dir,choice)
+	choice_list = os.listdir(mungers_dir)
+	for choice in os.listdir(mungers_dir):
+		c_path = os.path.join(mungers_dir,choice)
 		if not os.path.isdir(c_path):  # remove non-directories from list
 			choice_list.remove(choice)
 		elif not os.path.isfile(os.path.join(c_path,'raw_columns.txt')):
@@ -467,9 +463,9 @@ def pick_munger(munger_dir='mungers',project_root=None,session=None):
 		munger_name = get_alphanumeric_from_user(
 			'Enter a short name (alphanumeric only, no spaces) for your munger (e.g., \'nc_primary18\')\n')
 	template_dir = os.path.join(project_root,'templates/munger_templates')
-	check_munger_files(munger_name,munger_dir,template_dir,project_root=project_root)
+	sf.ensure_munger_files(munger_name,project_root=project_root)
 
-	munger_path = os.path.join(munger_dir,munger_name)
+	munger_path = os.path.join(mungers_dir,munger_name)
 	munger = sf.Munger(munger_path)
 	munger.check_against_self()
 	if session:
@@ -494,36 +490,6 @@ def check_munger_files(munger_name,munger_dir,template_dir,session=None,project_
 	if not all([os.path.isfile(os.path.join(munger_path,x)) for x in file_list]):
 		for ff in file_list:
 			create_file_from_template(os.path.join(template_dir,ff),os.path.join(munger_path,ff))
-
-		# create format.txt
-		if session:
-			rut_df = pd.read_sql_table('ReportingUnitType',session.bind,index_col='Id')
-		else:
-			rut_df = pd.read_csv(
-				os.path.join(
-					project_root,
-					'election_anomaly/CDF_schema_def_info/enumerations/ReportingUnitType.txt'),
-			names=['Txt'])
-		try:
-			with open(os.path.join(munger_path,'format.txt'),'r') as f:
-				arut=f.read()
-			change = input(f'Atomic ReportingUnit type is {arut}. Do you need to change it (y/n)?\n')
-		except FileNotFoundError:
-			change = 'y'
-		if change == 'y':
-			arut_idx,arut = pick_one(rut_df,'Txt',item='\'atomic\' reporting unit type for results file',required=True)
-			with open(os.path.join(munger_path,'atomic_reporting_unit.txt'),'w') as f:
-				f.write(arut)
-
-		# prepare cdf_elements.txt
-		#  find db tables corresponding to elements: nothing starting with _, nothing named 'Join',
-		#  and nothing with only 'Id' and 'Txt' columns
-		if session:
-			elements,enums,joins,others = dbr.get_cdf_db_table_names(session.bind)
-		else:
-			all_elements = os.listdir(os.path.join(project_root,'election_anomaly/CDF_schema_def_info/elements'))
-			elements = [x for x in all_elements if x != '_datafile']
-		prepare_cdf_elements_file(munger_path,elements)
 	return
 
 
