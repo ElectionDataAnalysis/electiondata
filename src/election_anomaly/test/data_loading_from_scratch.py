@@ -32,20 +32,11 @@ if __name__ == '__main__':
 
 	# get datafile & info
 	dfile_d, enum_d, raw_file = ui.pick_datafile(project_root,new_df_session)
-	# TODO store \t and , directly?
-	if enum_d['_datafile_separator'] == 'tab':
-		sep = '\t'
-	elif enum_d['_datafile_separator'] == 'comma':
-		sep = ','
-	else:
-		raise Exception(f'separator {enum_d["_datafile_separator"]} not recognized')
-	encoding = dfile_d['encoding']
-
 	juris_short_name = None
 
 	# load new datafile
 	ui.new_datafile(
-		new_df_session,munger,raw_file,sep,juris=juris_short_name,encoding=encoding,project_root=project_root)
+		new_df_session,munger,raw_file,juris=juris_short_name,project_root=project_root)
 
 	eng.dispose()
 	print('Done! (user_interface)')

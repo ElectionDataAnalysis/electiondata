@@ -9,3 +9,4 @@ small_2018g_nc_for_testing	small20181106.txt	none	11/11/22	testing
 test	small20181106.txt	asdf	2222-11-11	sdf	2222-11-11
 ;lj	small20181106.txt	lj	2222-11-11	jk	2222-11-11
 phila_2018g	2018_general.csv	philadelphiavotes.com	2018-12-31	exact file date uncertain	2020-05-02
+					

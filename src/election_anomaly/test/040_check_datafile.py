@@ -26,21 +26,23 @@ if __name__ == '__main__':
 	# connect to db
 	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
 	Session = sessionmaker(bind=eng)
-	new_df_session = Session()
+	sess = Session()
 
 	# pick munger
 	munger = ui.pick_munger(mungers_dir=os.path.join(project_root,'mungers'),
-							project_root=project_root,session=new_df_session)
+							project_root=project_root,session=sess)
 
 	# get datafile & info
-	[dfile_d, enum_d, raw_file] = ui.pick_datafile(project_root,new_df_session)
+	[dfile_d, enum_d, data_path] = ui.pick_datafile(project_root,sess)
 
-	# TODO check datafile
+	# check munger against datafile.
+	munger.check_against_datafile(data_path)
 
+	# TODO check datafile/munger against db?
 
 	# load new datafile
 	ui.new_datafile(
-		new_df_session,munger,raw_file,munger.separator,munger.encoding,juris=juris_short_name,project_root=project_root)
+		sess,munger,data_path,juris=juris,project_root=project_root)
 
 	eng.dispose()
 	print('Done! (user_interface)')

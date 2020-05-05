@@ -122,11 +122,12 @@ def config(filename=None, section='postgresql'):
     Creates the parameter dictionary needed to log into our db
     using info in <filename>
     """
+    db = {}
     if not filename:
         # if parameter file is not provided, ask for it
         # initialize root widget for tkinter
         tk_root = tk.Tk()
-        f_path = ui.pick_paramfile()
+        filename = ui.pick_paramfile()
 
     # create a parser
     parser = ConfigParser()
@@ -136,10 +137,10 @@ def config(filename=None, section='postgresql'):
         parser.read(filename)
     except MissingSectionHeaderError as e:
         print(e)
-        db = config(section=section)
+        db = config(filename=None,section=section)
+        return db
 
     # get section, default to postgresql
-    db = {}
     if parser.has_section(section):
         params = parser.items(section)
         for param in params:

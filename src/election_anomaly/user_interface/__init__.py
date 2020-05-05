@@ -940,7 +940,7 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
-def new_datafile(session,munger,raw_path,raw_file_sep,encoding,project_root=None,juris=None):
+def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
@@ -948,19 +948,17 @@ def new_datafile(session,munger,raw_path,raw_file_sep,encoding,project_root=None
 		get_project_root()
 	if not juris:
 		juris = pick_juris_from_filesystem(
-			project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'))
+			project_root,jurisdictions_dir='jurisdictions')
 	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
 
 	# TODO where do we update db from jurisdiction context file?
-
+	sep = munger.separator.replace('\\t','\t')
 	raw = pd.read_csv(
-		raw_path,sep=raw_file_sep,dtype=str,encoding=encoding,quoting=csv.QUOTE_MINIMAL,
+		raw_path,sep=sep,dtype=str,encoding=munger.encoding,quoting=csv.QUOTE_MINIMAL,
 		header=list(range(munger.header_row_count))
 	)
 	[raw,info_cols,numerical_columns] = mr.clean_raw_df(raw,munger)
 	# NB: info_cols will have suffix added by munger
-
-	# TODO munger.check_against_datafile(raw,cols_to_munge,numerical_columns)
 
 	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,info_cols,numerical_columns)
 

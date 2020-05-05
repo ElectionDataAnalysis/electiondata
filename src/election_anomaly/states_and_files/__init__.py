@@ -8,6 +8,7 @@ import user_interface as ui
 import re
 import numpy as np
 from pathlib import Path
+import csv
 
 
 class Jurisdiction:
@@ -78,14 +79,6 @@ class Jurisdiction:
 
             return
 
-    def extract_context(self,results,munger,element):
-        # TODO
-        """Return a dataframe of context info for <element> extracted
-        from raw results file <results> via <munger>, suitable for
-        applying add_to_context_dir()"""
-        # TODO help user add appropriate lines to munger/raw_identifiers.txt and update munger
-        return
-
     def load_context_to_db(self,session,project_root):
         """ """  # TODO
         cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
@@ -118,14 +111,6 @@ class Jurisdiction:
 
 
 class Munger:
-    def check_new_results_dataset(self,results,jurisdiction,sess,project_root='.'):
-        """<results> is a results dataframe of a single <contest_type>;
-        this routine should add what's necessary to the munger to treat the dataframe,
-        keeping backwards compatibility and exiting gracefully if dataframe needs different munger."""
-
-        # TODO write or omit!
-        return
-
     def check_against_self(self):
         """check that munger is internally consistent; offer user chance to correct munger"""
         checked = False
@@ -212,24 +197,49 @@ class Munger:
                 print(f'Munger {self.name} checked against database.')
         return
 
-    def check_against_datafile(self,raw,cols_to_munge,count_columns):
+    def check_against_datafile(self,datafile_path):
         """check that munger is compatible with datafile <raw>;
         offer user chance to correct munger"""
         checked = False
         while not checked:
-            checked = True
             problems = []
-            # check for unmunged rows and report
+
+            # check encoding
+            try:
+                # TODO how best to get separator \t read correction from file?
+                sep= self.separator.replace('\\t','\t')
+                raw = pd.read_csv(
+                    datafile_path,sep=sep,dtype=str,encoding=self.encoding,quoting=csv.QUOTE_MINIMAL,
+                    header=None)
+            except UnicodeEncodeError:
+                problems.append(f'Datafile is not encoded as {self.encoding}.')
+
+            col_fields = '\n\t'.join(raw.iloc[self.field_name_row])
+            cf_ok = input(f'Munger reads the following column fields from datafile (one per line):\n'
+                          f'{col_fields}\n Are these correct (y/n)?\n')
+            if cf_ok != 'y':
+                problems.append('Either column_field_row or separator is incorrect.')
+            # user confirm format.atomic_reporting_unit_type
+            first_data_row = '\t'.join(raw.iloc[self.header_row_count])
+            fdr_ok = input(f'Munger thinks the first data row is:\n{first_data_row}\n'
+                           f'Is this correct (y/n)?\n')
+            if fdr_ok != 'y':
+                problems.append('header_row_count does not match the datafile.')
+            arut_ok = input(f'Munger assumes that each vote count in the file is associated to '
+                            f'a single {self.atomic_reporting_unit_type}. Is this correct (y/n)?\n')
+            if arut_ok != 'y':
+                problems.append(f'atomic_reporting_unit_type for munger does not match datafile')
 
             if problems:
-                checked = False
                 problem_str = '\n\t'.join(problems)
                 print(f'Problems found:\n{problem_str} ')
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
                 [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
                  self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
-        # TODO write this function
+            else:
+                checked = True
+        # TODO allow user to pick different munger from file system
         return
 
     def __init__(self,dir_path,project_root=None,check_files=True):
@@ -477,7 +487,6 @@ def check_munger_file_contents(munger_name,project_root=None):
         else:
             checked = True
     return
-
 
 
 def dedupe(f_path,warning='There are duplicates'):
