@@ -17,7 +17,7 @@ if __name__ == '__main__':
 	tk_root = tk.Tk()
 
 	# pick db to use
-	db_paramfile = ui.pick_paramfile(project_root)
+	db_paramfile = ui.pick_paramfile()
 	db_name = ui.pick_database(project_root,db_paramfile)
 
 	# connect to db

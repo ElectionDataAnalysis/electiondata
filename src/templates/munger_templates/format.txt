@@ -2,5 +2,5 @@ item	value
 atomic_reporting_unit_type	""
 header_row_count	""
 field_name_row	""
-file_separator	""
+separator	""
 encoding	""

@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     # initialize main session for connecting to db for data-loading and analysis
     eng, meta_generic = dbr.sql_alchemy_connect(
-        db_name=input('Database name?\n'),paramfile=ui.pick_paramfile(project_root))
+        db_name=input('Database name?\n'),paramfile=ui.pick_paramfile())
     Session = sessionmaker(bind=eng)
     analysis_session = Session()
 

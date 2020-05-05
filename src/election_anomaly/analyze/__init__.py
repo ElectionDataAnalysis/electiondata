@@ -164,7 +164,7 @@ class Election(object):
             self,atomic_ru_type='precinct',summary_ru_type='state',mode='top',skip_total_column=True,
             db_paramfile=None,count_item_status='unknown'):
         if not db_paramfile:
-            db_paramfile = ui.pick_paramfile(ui.get_project_root())
+            db_paramfile = ui.pick_paramfile()
 
         rollup=self.pull_rollup_from_db_by_types(
             summary_ru_type,atomic_ru_type=atomic_ru_type,db_paramfile=db_paramfile)

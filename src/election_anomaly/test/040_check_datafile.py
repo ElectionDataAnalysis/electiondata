@@ -20,7 +20,7 @@ if __name__ == '__main__':
 	juris = ui.pick_juris_from_filesystem(project_root)
 
 	# pick db to use
-	db_paramfile = ui.pick_paramfile(project_root)
+	db_paramfile = ui.pick_paramfile()
 	db_name = ui.pick_database(project_root,db_paramfile)
 
 	# connect to db

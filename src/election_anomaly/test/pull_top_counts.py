@@ -9,7 +9,7 @@ if __name__ == '__main__':
     project_root = ui.get_project_root()
 
     # pick db to use
-    db_paramfile = ui.pick_paramfile(project_root)
+    db_paramfile = ui.pick_paramfile()
     # juris_name = 'NC'
     juris_name = None
 

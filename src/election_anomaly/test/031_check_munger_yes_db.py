@@ -15,7 +15,7 @@ if __name__ == '__main__':
 	project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
 
 	# pick db to use
-	db_paramfile = ui.pick_paramfile(project_root)
+	db_paramfile = ui.pick_paramfile()
 	db_name = ui.pick_database(project_root,db_paramfile)
 
 	# connect to db

@@ -146,7 +146,7 @@ def pick_one(choices,return_col,item='row',required=False):
 	return choices.index[choice], df.loc[choice,return_col]
 
 
-def pick_paramfile(project_root):
+def pick_paramfile():
 	print('Locate the parameter file for your postgreSQL database.')
 	fpath= pick_filepath()
 	return fpath
@@ -211,7 +211,7 @@ def pick_database(project_root,paramfile,db_name=None):
 		print(f'WARNING: will use db {db_name}, assumed to exist.')
 		# TODO check that db actually exists and recover if not.
 		return db_name
-	con = dbr.establish_connection(paramfile=paramfile)  # TODO error handling for paramfile
+	[con, paramfile] = dbr.establish_connection(paramfile=paramfile)
 	print(f'Connection established to database {con.info.dbname}')
 	cur = con.cursor()
 	db_df = dbr.get_database_names(con,cur)
@@ -234,7 +234,7 @@ def pick_database(project_root,paramfile,db_name=None):
 	if desired_db != con.info.dbname:
 		cur.close()
 		con.close()
-		con = dbr.establish_connection(paramfile,db_name=desired_db)
+		con,paramfile = dbr.establish_connection(paramfile,db_name=desired_db)
 		cur = con.cursor()
 
 	if create_new: 	# if our db is brand new
@@ -292,11 +292,12 @@ def check_count_columns(df,file,mungerdir,cdf_schema_def_dir):
 
 
 def pick_juris_from_filesystem(
-		project_root,path_to_jurisdictions='jurisdictions/',juris_name=None,check_files=False):
+		project_root,jurisdictions_dir='jurisdictions',juris_name=None,check_files=False):
 	"""Returns a State object.
 	If <jurisdiction_name> is given, this just initializes based on info
 	in the folder with that name; """
 
+	path_to_jurisdictions = os.path.join(project_root,jurisdictions_dir)
 	# if no jurisdiction name provided, ask user to pick from file system
 	if juris_name is None:
 		# ask user to pick from the available ones
@@ -465,7 +466,7 @@ def pick_munger(mungers_dir='mungers',project_root=None,session=None):
 	sf.ensure_munger_files(munger_name,project_root=project_root)
 
 	munger_path = os.path.join(mungers_dir,munger_name)
-	munger = sf.Munger(munger_path)
+	munger = sf.Munger(munger_path,project_root=project_root)
 	munger.check_against_self()
 	if session:
 		munger.check_against_db(session)
@@ -795,7 +796,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 			db_record.pop(e)
 		from_db = dbr.dframe_to_sql(
 			pd.DataFrame.from_dict([db_record],orient='columns'),sess,table,return_records='new')
-		db_idx = from_db.Id.unique().to_list()[0]
+		db_idx = list(from_db.Id.unique())[0]
 	return db_idx, db_record, enum_val
 
 

@@ -7,7 +7,7 @@ from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
 import sqlalchemy as db
 import user_interface as ui
-from configparser import ConfigParser
+from configparser import ConfigParser, MissingSectionHeaderError
 import pandas as pd
 import tkinter as tk
 import os
@@ -93,26 +93,32 @@ def get_path_to_db_paramfile():
 
 
 def establish_connection(paramfile = '../jurisdictions/database.ini',db_name='postgres'):
-    params = config(paramfile)
-    if db_name != 'postgres': params['dbname']=db_name
+    """Return a db connection object; if <paramfile> fails,
+    return corrected <paramfile>"""
+    try:
+        params = config(paramfile)
+    except MissingSectionHeaderError as e:
+        new_param = input(f'{e}\nEnter path to correct parameter file\n')
+        con, paramfile = establish_connection(new_param,db_name)
+        return con, paramfile
+    if db_name != 'postgres':
+        params['dbname']=db_name
     con = psycopg2.connect(**params)
-    return con
+    return con, paramfile
 
 
 def sql_alchemy_connect(schema=None,paramfile=None,db_name='postgres'):
     """Returns an engine and a metadata object"""
     if not paramfile:
-        paramfile = ui.pick_paramfile(ui.get_project_root())
+        paramfile = ui.pick_paramfile()
     params = config(paramfile)
     if db_name != 'postgres': params['dbname'] = db_name
     # We connect with the help of the PostgreSQL URL
     url = 'postgresql://{user}:{password}@{host}:{port}/{dbname}'
     url = url.format(**params)
 
-
     # The return value of create_engine() is our connection object
     engine = db.create_engine(url, client_encoding='utf8')
-
 
     # We then bind the connection to MetaData()
     meta = db.MetaData(bind=engine, reflect=True,schema=schema)
@@ -130,7 +136,7 @@ def config(filename=None, section='postgresql'):
         # initialize root widget for tkinter
         tk_root = tk.Tk()
         project_root=ui.get_project_root()
-        ui.pick_paramfile(project_root=project_root)
+        ui.pick_paramfile()
 
     # create a parser
     parser = ConfigParser()
@@ -138,7 +144,11 @@ def config(filename=None, section='postgresql'):
 
     if not os.path.isfile(filename): # if <filename> doesn't exist, look in a canonical place
         filename=get_path_to_db_paramfile()
-    parser.read(filename)
+    try:
+        parser.read(filename)
+    except MissingSectionHeaderError as e:
+        print(e)
+        db = config(section=section)
 
     # get section, default to postgresql
     db = {}
