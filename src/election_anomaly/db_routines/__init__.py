@@ -83,15 +83,6 @@ def append_to_composing_reporting_unit_join(session,ru):
     return cruj_dframe
 
 
-def get_path_to_db_paramfile():
-    current_dir = os.getcwd()
-    # path_to_src = current_dir.split('/election_anomaly/')[0]
-    path_to_src = current_dir.split('src')[0]
-    #fpath='{}/local_data/database.ini'.format(path_to_src)
-    fpath = os.path.join(path_to_src, 'src', 'local_data', 'database.ini')
-    return fpath
-
-
 def establish_connection(paramfile = '../jurisdictions/database.ini',db_name='postgres'):
     """Return a db connection object; if <paramfile> fails,
     return corrected <paramfile>"""
@@ -135,14 +126,12 @@ def config(filename=None, section='postgresql'):
         # if parameter file is not provided, ask for it
         # initialize root widget for tkinter
         tk_root = tk.Tk()
-        ui.pick_paramfile()
+        f_path = ui.pick_paramfile()
 
     # create a parser
     parser = ConfigParser()
     # read config file
 
-    if not os.path.isfile(filename): # if <filename> doesn't exist, look in a canonical place
-        filename=get_path_to_db_paramfile()
     try:
         parser.read(filename)
     except MissingSectionHeaderError as e:
