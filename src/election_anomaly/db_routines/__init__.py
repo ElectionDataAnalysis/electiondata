@@ -135,7 +135,6 @@ def config(filename=None, section='postgresql'):
         # if parameter file is not provided, ask for it
         # initialize root widget for tkinter
         tk_root = tk.Tk()
-        project_root=ui.get_project_root()
         ui.pick_paramfile()
 
     # create a parser
