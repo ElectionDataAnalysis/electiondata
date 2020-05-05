@@ -210,6 +210,9 @@ def replace_raw_with_internal_ids(row_df,mu,table_df,element,internal_name_colum
         how='left'
     # join the 'cdf_internal_name' from the raw_identifier table -- this is the internal name field value,
     # no matter what the name field name is in the internal element table (e.g. 'Name', 'BallotName' or 'Selection')
+    # use dictionary.txxt from context
+
+    # TODO dictionary instead of raw_identifiers
     row_df = row_df.merge(
         mu.raw_identifiers[mu.raw_identifiers['cdf_element'] == element],
         how=how,

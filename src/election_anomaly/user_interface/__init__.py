@@ -955,8 +955,8 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 	sep = munger.separator.replace('\\t','\t')
 	raw = pd.read_csv(
 		raw_path,sep=sep,dtype=str,encoding=munger.encoding,quoting=csv.QUOTE_MINIMAL,
-		header=list(range(munger.header_row_count))
-	)
+		header=list(range(munger.header_row_count)))
+
 	[raw,info_cols,numerical_columns] = mr.clean_raw_df(raw,munger)
 	# NB: info_cols will have suffix added by munger
 

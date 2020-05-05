@@ -210,17 +210,19 @@ class Munger:
                 sep= self.separator.replace('\\t','\t')
                 raw = pd.read_csv(
                     datafile_path,sep=sep,dtype=str,encoding=self.encoding,quoting=csv.QUOTE_MINIMAL,
-                    header=None)
+                    header=None).fillna('')
             except UnicodeEncodeError:
                 problems.append(f'Datafile is not encoded as {self.encoding}.')
 
             col_fields = '\n\t'.join(raw.iloc[self.field_name_row])
-            cf_ok = input(f'Munger reads the following column fields from datafile (one per line):\n'
+            cf_ok = input(f'Munger reads the following column fields from datafile (one per line):\n\t'
                           f'{col_fields}\n Are these correct (y/n)?\n')
+            if cf_ok == 'y' and raw.shape[1] <3:
+                cf_ok = input(f'Are you sure? Is each SEPARATE LINE above a single field (y/n)?\n')
             if cf_ok != 'y':
                 problems.append('Either column_field_row or separator is incorrect.')
             # user confirm format.atomic_reporting_unit_type
-            first_data_row = '\t'.join(raw.iloc[self.header_row_count])
+            first_data_row = '\t'.join([f'{x}' for x in raw.iloc[self.header_row_count]])
             fdr_ok = input(f'Munger thinks the first data row is:\n{first_data_row}\n'
                            f'Is this correct (y/n)?\n')
             if fdr_ok != 'y':
