@@ -197,7 +197,7 @@ def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_d
     return row_df
 
 
-def replace_raw_with_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False):
+def replace_raw_with_internal_ids(row_df,juris,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False):
     """replace columns in <row_df> with raw_identifier values by columns with internal names and Ids
     from <table_df>, which has structure of a db table for <element>.
     # TODO If <element> is BallotMeasureContest or CandidateContest,
@@ -212,14 +212,14 @@ def replace_raw_with_internal_ids(row_df,mu,table_df,element,internal_name_colum
     # no matter what the name field name is in the internal element table (e.g. 'Name', 'BallotName' or 'Selection')
     # use dictionary.txxt from context
 
-    # TODO dictionary instead of raw_identifiers
+    raw_identifiers = pd.read_csv(os.path.join(juris.path_to_juris_dir,'context/dictionary.txt'),sep='\t')
     row_df = row_df.merge(
-        mu.raw_identifiers[mu.raw_identifiers['cdf_element'] == element],
+        raw_identifiers[raw_identifiers['cdf_element'] == element],
         how=how,
         left_on=f'{element}_raw',
         right_on='raw_identifier_value',suffixes=['',f'_{element}_ei'])
 
-    # Note: if how = left, unmatched elements get nan in fields from raw_identifiers table
+    # Note: if how = left, unmatched elements get nan in fields from dictionary table
     # TODO how do these nans flow through?
 
     # drop extraneous cols from mu.raw_identifier, and drop original raw
@@ -409,7 +409,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,info_cols,num_cols):
         # TODO if CandidateContest.txt is loaded to db, don't load candidatecontests from Office.txt
         df_contest = pd.read_sql_table(f'{c_type}Contest',session.bind)
         working = replace_raw_with_internal_ids(
-            working,mu,df_contest,f'{c_type}Contest',get_name_field(f'{c_type}Contest'),mu.path_to_munger_dir,
+            working,juris,df_contest,f'{c_type}Contest',get_name_field(f'{c_type}Contest'),mu.path_to_munger_dir,
             drop_unmatched=False)
 
         # set contest_type where id was found
@@ -437,14 +437,14 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,info_cols,num_cols):
             drop = True
         else:
             drop = False
-        working = replace_raw_with_internal_ids(working,mu,df,t,name_field,mu.path_to_munger_dir,drop_unmatched=drop)
+        working = replace_raw_with_internal_ids(working,juris,df,t,name_field,mu.path_to_munger_dir,drop_unmatched=drop)
         working.drop(t,axis=1,inplace=True)
         # working = add_non_id_cols_from_id(working,df,t)
 
     # append BallotMeasureSelection_Id, drop BallotMeasureSelection
     df_selection = pd.read_sql_table(f'BallotMeasureSelection',session.bind)
     working = replace_raw_with_internal_ids(
-        working,mu,df_selection,'BallotMeasureSelection',get_name_field('BallotMeasureSelection'),
+        working,juris,df_selection,'BallotMeasureSelection',get_name_field('BallotMeasureSelection'),
         mu.path_to_munger_dir,
         drop_unmatched=False)
     working.drop('BallotMeasureSelection',axis=1,inplace=True)
