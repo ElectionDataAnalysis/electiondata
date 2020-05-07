@@ -360,7 +360,7 @@ def good_syntax(s):
     return good
 
 
-def raw_elements_to_cdf(session,project_root,juris,mu,raw,info_cols,num_cols):
+def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
     """load data from <raw> into the database.
     Note that columns to be munged (e.g. County_xxx) have mu.field_rename_suffix (e.g., _xxx) added already"""
     working = raw.copy()
@@ -462,6 +462,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,info_cols,num_cols):
     working.rename(columns={'Id':'CandidateSelection_Id'},inplace=True)
 
     # TODO: warn user if contest is munged but candidates are not
+    # TODO warn user if BallotMeasureSelections not recognized in dictionary.txt
     for j in ['BallotMeasureContestSelectionJoin','CandidateContestSelectionJoin','ElectionContestJoin']:
         working = append_join_id(project_root,session,working,j)
 

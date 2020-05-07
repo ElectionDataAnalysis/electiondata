@@ -962,7 +962,7 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 	[raw,info_cols,numerical_columns] = mr.clean_raw_df(raw,munger)
 	# NB: info_cols will have suffix added by munger
 
-	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,info_cols,numerical_columns)
+	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,numerical_columns)
 
 	# TODO
 	return

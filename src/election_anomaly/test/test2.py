@@ -15,7 +15,7 @@ if __name__ == '__main__':
 	# pick db to use
 	db_paramfile = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'
 
-	db_name = 'NC'
+	db_name = 'Philadelphia'
 
 	# connect to db
 	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
@@ -27,17 +27,15 @@ if __name__ == '__main__':
 							project_root=project_root,session=new_df_session)
 
 	# datafile & info
-	raw_file_dir = '/Users/Steph-Airbook/Documents/Temp/'
+	raw_file_dir = '/Users/Steph-Airbook/Documents/Temp/Philadelphia/data/'
 
 	#raw_file_path = os.path.join(raw_file_dir,'small20181106.txt')
-	raw_file_path = os.path.join(raw_file_dir,'results_pct_20181106.txt')
+	raw_file_path = os.path.join(raw_file_dir,'2018_general.csv')
 
-	sep = '\t'
-	encoding = 'iso-8859-1'
-	juris_short_name = 'NC_5'
-	juris = ui.pick_juris_from_filesystem(
-		project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
-		juris_name=juris_short_name)
+	sep = munger.separator.replace('\\t','\t')  # TODO find right way to read \t
+	encoding = munger.encoding
+	juris_short_name = 'Phila'
+	juris = ui.pick_juris_from_filesystem(project_root,juris_name=juris_short_name)
 
 	# load new datafile
 	raw = pd.read_csv(
@@ -46,7 +44,7 @@ if __name__ == '__main__':
 
 	[raw,info_cols,num_cols] = mr.clean_raw_df(raw,munger)
 
-	mr.raw_elements_to_cdf(new_df_session,project_root,juris,munger,raw,info_cols,num_cols,finalize=False)
+	mr.raw_elements_to_cdf(new_df_session,project_root,juris,munger,raw,num_cols)
 
 	eng.dispose()
 	print('Done!')
