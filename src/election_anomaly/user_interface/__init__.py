@@ -526,9 +526,11 @@ def prepare_cdf_elements_file(dir_path,elements):
 	return
 
 
-def pick_juris_from_db(sess,project_root,juris_type='state'):
+def pick_juris_from_db(sess,project_root,juris_type=None):
 	ru = pd.read_sql_table('ReportingUnit',sess.bind,index_col='Id')
 	rut = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
+	if not juris_type:
+		jt_idx, juris_type = pick_one(rut,'Txt','type of jurisdiction')
 	# TODO build uniqueness into Txt field of each enumeration on db creation
 
 	juris_type_id,other_juris_type = mr.get_id_othertext_from_enum_value(rut,juris_type)
