@@ -962,6 +962,10 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 	[raw,info_cols,numerical_columns] = mr.clean_raw_df(raw,munger)
 	# NB: info_cols will have suffix added by munger
 
+	# check jurisdiction against raw results file, adapting context as necessary
+	juris.check_against_raw_results(raw,munger)
+
+	# TODO check db against raw results?
 	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,numerical_columns)
 
 	# TODO

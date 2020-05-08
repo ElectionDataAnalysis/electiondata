@@ -12,46 +12,15 @@ import csv
 
 
 class Jurisdiction:
-    def prepare_candidatecontests(self,session):
-        """create/update corresponding CandidateContest records for general and primary election contests
-        (and insert in cdf db if they don't already exist)"""
-        # TODO need to run this only when/if Offices change
-
-        office_file = os.path.join(
-            self.path_to_juris_dir,'context/Office.txt')
-        co_kwargs = {'sep':'\t'}
-        context_office = pd.read_csv(office_file,**co_kwargs)
-        ui.resolve_nulls(context_office,office_file,kwargs=co_kwargs)
-
-        cdf_office = pd.read_sql_table('Office',session.bind,index_col=None)
-        cdf_ru = pd.read_sql_table('ReportingUnit',session.bind,index_col=None)
-
-        # create dataframe of general election candidatecontests (cc) with right data
-        cc = cdf_office.merge(
-            context_office,left_on='Name',right_on='Name',suffixes=['','_context']
-        ).merge(
-            cdf_ru,left_on='ElectionDistrict',right_on='Name',suffixes=['_office','_ru']
-        )
-        # restrict to columns we need and set order
-        cc = cc[['Name_office','VotesAllowed','NumberElected','NumberRunoff','Id_office','Id_ru','IsPartisan']]
-        # ensure names of columns are correct (note we name contest after office)
-        cc.rename(columns={'Id_ru':'ElectionDistrict_Id','Id_office':'Office_Id','Name_office':'Name'},inplace=True)
-        # insert values for 'PrimaryParty_Id' column
-        cc.loc[:,'PrimaryParty_Id'] = None
-        # save cc with just general elections (as basis for defining party primary contests);
-        # cc_all will accumulate all party primaries too
-        cc_all = cc.copy()
-
-        cdf_p = pd.read_sql_table('Party',session.bind,None,index_col=None)
-        for party_id in cdf_p['Id'].to_list():
-            cc_primary = cc[cc['IsPartisan']].copy()  # non-partisan contests don't have party primaries, so omit them.
-            cc_primary.loc[:,'PrimaryParty_Id'] = party_id
-            cc_primary.loc[:,'Name'] = cc_primary['Name'] + ' Primary;' + cdf_p[cdf_p['Id'] == party_id].iloc[0]['Name']
-            # TODO can we use f'' here?
-            cc_all = pd.concat([cc_all,cc_primary])
-
-        dbr.dframe_to_sql(cc_all,session,'CandidateContest')
-        return cc_all
+    def check_against_raw_results(self,results_df,munger):
+        """Warn user of any mungeable elements in <results_df> that are not
+        translatable via context/dictionary.txt"""
+        d = pd.read_csv(os.path.join(self.path_to_juris_dir,'context/dictionary.txt'),sep='\t')
+        for el in munger.cdf_elements.index:
+            relevant = results_df[munger.cdf_elements.loc[el,'fields']].drop_duplicates()
+            relevant = mr.add_munged_column()
+        # TODO
+        return
 
     def add_to_context_dir(self,element,df):
         """Add the data in the dataframe <df> to the file corresponding

@@ -48,37 +48,6 @@ def clean_raw_df(raw,munger):
     return raw, renamed_cols_to_munge, num_columns
 
 
-def add_munged_column(raw,mu,element,new_col_name):
-    """Alters dataframe <raw> (in place), adding or redefining <new_col_name>
-    via the string corresponding to <cdf_element>, per <munge_dictionary>"""
-    if raw.empty:
-        return raw
-    else:
-
-        # use regex to turn value string in munge dictionary into the corresponding commands (e.g., decode '<County>;<Precinct>'
-        p = re.compile('(?P<text>[^<>]*)<(?P<field>[^<>]+)>')   # pattern to find text,field pairs
-        q = re.compile('(?<=>)[^<]*$')                          # pattern to find text following last pair
-
-        # add suffix as necessary
-        formula = mu.cdf_elements.loc[element,'raw_identifier_formula']
-        for x in mu.field_list:
-            if x not in raw.columns:
-                formula = formula.replace(f'<{x}>',f'<{x}_{mu.field_rename_suffix}>')
-
-        text_field_list = re.findall(p,formula)
-        last_text = re.findall(q,formula)
-
-        if last_text:
-            raw.loc[:,new_col_name] = last_text[0]
-        else:
-            raw.loc[:,new_col_name] = ''
-
-        text_field_list.reverse()
-        for t,f in text_field_list:
-            raw.loc[:,new_col_name] = t + raw.loc[:,f] + raw.loc[:,new_col_name]
-        return raw
-
-
 def text_fragments_and_fields(formula):
     """Given a formula with fields enclosed in angle brackets,
     return a list of text-fragment,field pairs (in order of appearance) and a final text fragment.
@@ -103,7 +72,7 @@ def get_name_field(t):
     return field
 
 
-def add_munged_column_NEW(raw,munger,element,mode='row',inplace=True):
+def add_munged_column(raw,munger,element,mode='row',inplace=True):
     """Alters dataframe <raw>, adding or redefining <element>_raw column
     via the <formula>."""
     if raw.empty:
@@ -152,49 +121,6 @@ def contest_type_split(row,mu):
     else:
         raise Exception(f'Ballot measure style {mu.ballot_measure_style} not recognized')
     return bm_row.copy(), cc_row.copy()
-
-
-def get_internal_ids(row_df,mu,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False):
-    """replace columns in <raw> with raw_identifier values by columns with internal names
-    """
-    assert os.path.isdir(unmatched_dir), f'Argument {unmatched_dir} is not a directory'
-    if drop_unmatched:
-        how='inner'
-    else:
-        how='left'
-    # join the 'cdf_internal_name' from the raw_identifier table -- this is the internal name field value,
-    # no matter what the name field name is in the internal element table (e.g. 'Name', 'BallotName' or 'Selection')
-    if f'{element}_external' not in row_df.columns:
-        row_df = add_munged_column(row_df,mu,element,f'{element}_external')
-    row_df = row_df.merge(
-        mu.raw_identifiers[mu.raw_identifiers['cdf_element'] == element],
-        how=how,
-        left_on=f'{element}_external',
-        right_on='raw_identifier_value',suffixes=['','_' + element + '_ei'])
-
-    # Note: if how = left, unmatched elements get nan in fields from raw_identifiers table
-    # TODO how do these nans flow through?
-
-    row_df = row_df.drop(['raw_identifier_value','cdf_element',element + '_external'],axis=1)
-
-    # ensure that there is a column in raw called by the element
-    # containing the internal name of the element
-    if 'Name_'+element+ '_ei' in row_df.columns:
-        row_df.rename(columns={f'Name_{element}_ei':element},inplace=True)
-    else:
-        row_df.rename(columns={'cdf_internal_name':element},inplace=True)
-
-    # join the element table Id and name columns.
-    # This will create two columns with the internal name field,
-    # whose names will be element (from above)
-    # and either internal_name_column or internal_name_column_table_name
-    row_df = row_df.merge(table_df[['Id',internal_name_column]],how='left',left_on=element,right_on=internal_name_column,suffixes=['','_' + element])
-    if internal_name_column+'_' + element in row_df.columns:
-        row_df=row_df.drop(internal_name_column +'_' + element,axis=1)
-    else:
-        row_df=row_df.drop([internal_name_column],axis=1)
-    row_df.rename(columns={f'Id_{element}':f'{element}_Id'},inplace=True)
-    return row_df
 
 
 def replace_raw_with_internal_ids(row_df,juris,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False):
@@ -360,22 +286,16 @@ def good_syntax(s):
     return good
 
 
-def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
-    """load data from <raw> into the database.
-    Note that columns to be munged (e.g. County_xxx) have mu.field_rename_suffix (e.g., _xxx) added already"""
+def munge_and_melt(mu,raw,num_cols):
+    """Does not alter raw; returns Transformation of raw:
+     all row- and column-sourced mungeable info into columns (but doesn't translate via dictionary)
+    new column names are, e.g., ReportingUnit_raw, Candidate_raw, etc.
+    """
     working = raw.copy()
-
-    # munge from other sources, including creating id column(s)
-    # TODO what if contest_type (BallotMeasure or Candidate) has source 'other'?
-    for t,r in mu.cdf_elements[mu.cdf_elements.source == 'other'].iterrows():
-        # add column for element id
-        idx = ui.pick_or_create_record(session,project_root,t)
-        working[f'{t}_Id'] = idx
 
     # apply munging formula from row sources (after renaming fields in raw formula as necessary)
     for t in mu.cdf_elements[mu.cdf_elements.source == 'row'].index:
-        working = add_munged_column_NEW(working,mu,t,mode='row')
-        # TODO this finalization lumps BMContest and CContests together, not quite right
+        working = add_munged_column(working,mu,t,mode='row')
 
     # remove original row-munge columns
     munged = [x for x in working.columns if x[-len(mu.field_rename_suffix):] == mu.field_rename_suffix]
@@ -397,10 +317,27 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
 
     # apply munge formulas for column sources
     for t in mu.cdf_elements[mu.cdf_elements.source == 'column'].index:
-        working = add_munged_column_NEW(working,mu,t,mode='column')
+        working = add_munged_column(working,mu,t,mode='column')
     # remove unnecessary columns
     not_needed = [f'variable_{i}' for i in range(mu.header_row_count)]
     working.drop(not_needed,axis=1,inplace=True)
+
+    return working
+
+
+def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
+    """load data from <raw> into the database.
+    Note that columns to be munged (e.g. County_xxx) have mu.field_rename_suffix (e.g., _xxx) added already"""
+    working = raw.copy()
+
+    # enter elements from sources outside datarows, including creating id column(s)
+    # TODO what if contest_type (BallotMeasure or Candidate) has source 'other'?
+    for t,r in mu.cdf_elements[mu.cdf_elements.source == 'other'].iterrows():
+        # add column for element id
+        idx = ui.pick_or_create_record(session,project_root,t)
+        working[f'{t}_Id'] = idx
+
+    working = munge_and_melt(mu,raw, num_cols)
 
     # append ids for BallotMeasureContests and CandidateContests
     working.loc[:,'contest_type'] = 'unknown'
@@ -483,6 +420,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
     working_fat.rename(columns={'Id':'VoteCount_Id'},inplace=True)
     session.commit()
 
+    # TODO check that all candidates in munged contests (including write ins!) are munged
     # upload to ElectionContestSelectionVoteCountJoin
     dbr.dframe_to_sql(working_fat,session,'ElectionContestSelectionVoteCountJoin')
 
