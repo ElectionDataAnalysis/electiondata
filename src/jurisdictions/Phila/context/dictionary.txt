@@ -1,5 +1,4 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-Party	Democratic Party	DEMOCRATIC
 Party	Green Party	GREEN
 Party	Independent	INDEPENDENT
 Party	Libertarian Party	LIBERTARIAN
@@ -7,7 +6,6 @@ Party	Republican Party	REPUBLICAN
 CandidateContest	Pennsylvania;Governor and Lieutenant Governor	GOVERNOR AND LIEUTENANT GOVERNOR
 CandidateContest	Pennsylvania;United States Congress District 2	REPRESENTATIVE IN CONGRESS-2ND DISTRICT
 CandidateContest	Pennsylvania;United States Congress District 3	REPRESENTATIVE IN CONGRESS-3RD DISTRICT
-CandidateContest	Pennsylvania;United States Congress District 5	REPRESENTATIVE IN CONGRESS-5TH DISTRICT
 CandidateContest	Pennslyvania;General Assembly House District 152	REPRESENTATIVE IN THE GENERAL ASSEMBLY-152ND DISTRICT
 CandidateContest	Pennslyvania;General Assembly House District 170	REPRESENTATIVE IN THE GENERAL ASSEMBLY-170TH DISTRICT
 CandidateContest	Pennslyvania;General Assembly House District 172	REPRESENTATIVE IN THE GENERAL ASSEMBLY-172ND DISTRICT
@@ -137,7 +135,6 @@ ReportingUnit	Pennsylvania;Philadelphia;Ward 13;Division 1	Ward 13;Division 1
 ReportingUnit	Pennsylvania;Philadelphia;Ward 13;Division 10	Ward 13;Division 10
 ReportingUnit	Pennsylvania;Philadelphia;Ward 13;Division 11	Ward 13;Division 11
 ReportingUnit	Pennsylvania;Philadelphia;Ward 13;Division 12	Ward 13;Division 12
-ReportingUnit	Pennsylvania;Philadelphia;Ward 13;Division 13	Ward 13;Division 13
 ReportingUnit	Pennsylvania;Philadelphia;Ward 13;Division 14	Ward 13;Division 14
 ReportingUnit	Pennsylvania;Philadelphia;Ward 13;Division 15	Ward 13;Division 15
 ReportingUnit	Pennsylvania;Philadelphia;Ward 13;Division 16	Ward 13;Division 16
