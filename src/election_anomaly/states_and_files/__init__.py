@@ -15,11 +15,25 @@ class Jurisdiction:
     def check_against_raw_results(self,results_df,munger):
         """Warn user of any mungeable elements in <results_df> that are not
         translatable via context/dictionary.txt"""
-        d = pd.read_csv(os.path.join(self.path_to_juris_dir,'context/dictionary.txt'),sep='\t')
+        d = pd.read_csv(
+            os.path.join(
+                self.path_to_juris_dir,'context/dictionary.txt'
+            ),sep='\t',index_col='cdf_element')
+
+        # for each relevant element
         for el in munger.cdf_elements.index:
-            relevant = results_df[munger.cdf_elements.loc[el,'fields']].drop_duplicates()
-            relevant = mr.add_munged_column()
-        # TODO
+            mode = munger.cdf_elements.loc[el,'source']
+            if mode in ['row','column']:
+                # add munged column
+                raw_fields = [f'{x}_{munger.field_rename_suffix}' for x in munger.cdf_elements.loc[el,'fields']]
+                relevant = results_df[raw_fields].drop_duplicates()
+                mr.add_munged_column(relevant,munger,el,mode=mode)
+                # check for untranslatable items
+                relevant = relevant.merge(
+                    d.loc[el],left_on=f'{el}_raw',right_on='raw_identifier_value')
+                missing = relevant[relevant.cdf_internal_name.isnull()]
+                if not missing.empty:
+                    ui.show_sample(missing,f'{el}s','cannot be translated')
         return
 
     def add_to_context_dir(self,element,df):

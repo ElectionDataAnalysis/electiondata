@@ -1,0 +1,35 @@
+Name	ElectionDistrict
+Pennsylvania;Governor and Lieutenant Governor	Pennsylvania
+Pennsylvania;United States Congress District 2	Pennsylvania;United States Congress District 2
+Pennsylvania;United States Congress District 3	Pennsylvania;United States Congress District 3
+Pennsylvania;United States Congress District 5	Pennsylvania;United States Congress District 5
+Pennslyvania;General Assembly House District 152	Pennslyvania;General Assembly House District 152
+Pennslyvania;General Assembly House District 170	Pennslyvania;General Assembly House District 170
+Pennslyvania;General Assembly House District 172	Pennslyvania;General Assembly House District 172
+Pennslyvania;General Assembly House District 173	Pennslyvania;General Assembly House District 173
+Pennslyvania;General Assembly House District 174	Pennslyvania;General Assembly House District 174
+Pennslyvania;General Assembly House District 175	Pennslyvania;General Assembly House District 175
+Pennslyvania;General Assembly House District 177	Pennslyvania;General Assembly House District 177
+Pennslyvania;General Assembly House District 179	Pennslyvania;General Assembly House District 179
+Pennslyvania;General Assembly House District 180	Pennslyvania;General Assembly House District 180
+Pennslyvania;General Assembly House District 181	Pennslyvania;General Assembly House District 181
+Pennslyvania;General Assembly House District 182	Pennslyvania;General Assembly House District 182
+Pennslyvania;General Assembly House District 184	Pennslyvania;General Assembly House District 184
+Pennslyvania;General Assembly House District 185	Pennslyvania;General Assembly House District 185
+Pennslyvania;General Assembly House District 186	Pennslyvania;General Assembly House District 186
+Pennslyvania;General Assembly House District 188	Pennslyvania;General Assembly House District 188
+Pennslyvania;General Assembly House District 190	Pennslyvania;General Assembly House District 190
+Pennslyvania;General Assembly House District 191	Pennslyvania;General Assembly House District 191
+Pennslyvania;General Assembly House District 192	Pennslyvania;General Assembly House District 192
+Pennslyvania;General Assembly House District 194	Pennslyvania;General Assembly House District 194
+Pennslyvania;General Assembly House District 195	Pennslyvania;General Assembly House District 195
+Pennslyvania;General Assembly House District 197	Pennslyvania;General Assembly House District 197
+Pennslyvania;General Assembly House District 198	Pennslyvania;General Assembly House District 198
+Pennslyvania;General Assembly House District 200	Pennslyvania;General Assembly House District 200
+Pennslyvania;General Assembly House District 201	Pennslyvania;General Assembly House District 201
+Pennslyvania;General Assembly House District 202	Pennslyvania;General Assembly House District 202
+Pennslyvania;General Assembly House District 203	Pennslyvania;General Assembly House District 203
+Pennsylvania;General Assembly Senate District 2	Pennsylvania;General Assembly Senate District 2
+Pennsylvania;General Assembly Senate District 4	Pennsylvania;General Assembly Senate District 4
+Pennsylvania;General Assembly Senate District 8	Pennsylvania;General Assembly Senate District 8
+Pennslyvania;United States Senate	Pennsylvania
