@@ -1,0 +1,23 @@
+Virginia;US Congress House of Representatives District 1	1	1	0	TRUE	Virginia;US Congress House of Representatives District 1
+Virginia;US Congress House of Representatives District 2	1	1	0	TRUE	Virginia;US Congress House of Representatives District 2
+Virginia;US Congress House of Representatives District 3	1	1	0	TRUE	Virginia;US Congress House of Representatives District 3
+Virginia;US Congress House of Representatives District 4	1	1	0	TRUE	Virginia;US Congress House of Representatives District 4
+Virginia;US Congress House of Representatives District 5	1	1	0	TRUE	Virginia;US Congress House of Representatives District 5
+Virginia;US Congress House of Representatives District 6	1	1	0	TRUE	Virginia;US Congress House of Representatives District 6
+Virginia;US Congress House of Representatives District 7	1	1	0	TRUE	Virginia;US Congress House of Representatives District 7
+Virginia;US Congress House of Representatives District 8	1	1	0	TRUE	Virginia;US Congress House of Representatives District 8
+Virginia;US Congress House of Representatives District 9	1	1	0	TRUE	Virginia;US Congress House of Representatives District 9
+Virginia;US Congress House of Representatives District 10	1	1	0	TRUE	Virginia;US Congress House of Representatives District 10
+Virginia;US Congress House of Representatives District 11	1	1	0	TRUE	Virginia;US Congress House of Representatives District 11
+Virginia;US Congress;Senate	1	1	0	TRUE	Virginia;US Congress;Senate
+Virginia;US Congress;Senate	1	1	0	TRUE	Virginia;US Congress;Senate
+Virginia;US Congress;Senate	1	1	0	TRUE	Virginia;US Congress;Senate
+Virginia;US Congress;Senate	1	1	0	TRUE	Virginia;US Congress;Senate
+Virginia;US Congress;Senate	1	1	0	TRUE	Virginia;US Congress;Senate
+Virginia;US Congress;Senate	1	1	0	TRUE	Virginia;US Congress;Senate
+Virginia;US Congress;Senate	1	1	0	TRUE	Virginia;US Congress;Senate
+Virginia;US Congress;Senate	1	1	0	TRUE	Virginia;US Congress;Senate
+Virginia;US Congress;Senate	1	1	0	TRUE	Virginia;US Congress;Senate
+Virginia;US Congress;Senate	1	1	0	TRUE	Virginia;US Congress;Senate
+Virginia;US Congress;Senate	1	1	0	TRUE	Virginia;US Congress;Senate
+Virginia;General Assembly House of Representatives District 8	1	1	0	TRUE	Virginia;General Assembly House of Representatives District 8
