@@ -1,1 +1,2 @@
 The file dowload link https://www.sos.state.co.us/pubs/elections/Results/archive2000.html
+Added part as unknown for candidates that do not have a prty (judges etc)
