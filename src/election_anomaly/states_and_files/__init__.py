@@ -33,7 +33,7 @@ class Jurisdiction:
                     mr.add_munged_column(relevant,munger,el,mode=mode)
                     # check for untranslatable items
                     relevant = relevant.merge(
-                        d.loc[el],left_on=f'{el}_raw',right_on='raw_identifier_value')
+                        d.loc[[el]],left_on=f'{el}_raw',right_on='raw_identifier_value')
                     missing = relevant[relevant.cdf_internal_name.isnull()]
                     if not missing.empty:
                         ui.show_sample(missing,f'{el}s','cannot be translated')

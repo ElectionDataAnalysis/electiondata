@@ -337,7 +337,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
         idx = ui.pick_or_create_record(session,project_root,t)
         working[f'{t}_Id'] = idx
 
-    working = munge_and_melt(mu,raw, num_cols)
+    working = munge_and_melt(mu,working, num_cols)
 
     # append ids for BallotMeasureContests and CandidateContests
     working.loc[:,'contest_type'] = 'unknown'

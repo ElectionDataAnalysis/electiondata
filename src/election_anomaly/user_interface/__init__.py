@@ -75,7 +75,7 @@ def get_project_root():
 
 
 def pick_datafile(project_root,sess):
-	print("Locate the datafile in the file system.")
+	print("Locate the results file in the file system.")
 	fpath = pick_filepath(initialdir=project_root)
 	filename = ntpath.basename(fpath)
 	db_idx, datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
