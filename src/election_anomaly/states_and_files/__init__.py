@@ -78,7 +78,7 @@ class Jurisdiction:
             return
 
     def load_context_to_db(self,session,project_root):
-        """"""  # TODO
+        """Load info from each element in the context directory into the db"""
         cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
         # for element in context directory (except dictionary, remark)
         context_dir = os.path.join(self.path_to_juris_dir,'context')
@@ -89,7 +89,6 @@ class Jurisdiction:
             # read df from context directory
             df = pd.read_csv(os.path.join(context_dir,f'{element}.txt'),sep='\t')
             load_context_dframe_into_cdf(session,df,element,cdf_schema_def_dir)
-
         return
 
     def __init__(self,short_name,path_to_parent_dir,project_root=None,check_context=False):        # reporting_units,elections,parties,offices):
