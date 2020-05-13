@@ -1,7 +1,5 @@
 #!usr/bin/python3
 
-# TODO get rid of refs to 'unmunged_<element>'
-
 import db_routines as dbr
 import db_routines.Create_CDF_db as db_cdf
 import munge_routines as mr
@@ -152,16 +150,6 @@ def pick_paramfile():
 	return fpath
 
 
-def resolve_nulls(df,source_file,col_list=None,kwargs={}):
-	working_df = df.copy()
-	if col_list:
-		working_df = working_df[col_list]
-	while df.isna().any().any():
-		input(f'There are nulls. Edit {source_file} to remove any nulls or blanks, then hit return to continue.\n')
-		df = pd.read_csv(source_file,**kwargs)
-	return
-
-
 def show_sample(input_iter,items,condition,outfile='shown_items.txt',dir=None,export=False):
 	# TODO revise to allow sample of dataframe and export of dataframe. E.g.
 	#  so that Candidate and Party together can be exported.
@@ -203,10 +191,12 @@ def show_sample(input_iter,items,condition,outfile='shown_items.txt',dir=None,ex
 	return
 
 
-def pick_database(project_root,paramfile,db_name=None):
+def pick_database(project_root,paramfile=None,db_name=None):
 	"""Establishes connection to db with name <db_name>,
 	or creates a new cdf_db with that name.
 	In any case, returns the name of the DB."""
+	if not paramfile:
+		paramfile = pick_paramfile()
 	if db_name:
 		print(f'WARNING: will use db {db_name}, assumed to exist.')
 		# TODO check that db actually exists and recover if not.
@@ -257,47 +247,12 @@ def pick_database(project_root,paramfile,db_name=None):
 	return desired_db
 
 
-def check_count_columns(df,file,mungerdir,cdf_schema_def_dir):
-	"""Checks that <df> is a proper count_columns dataframe;
-	If not, guides user to correct <file> and then upload its
-	contents to a proper count_columns dataframe, which it returns"""
-	# TODO format of count_columns depends on ballot_measure style. Change this -- add ballotmeasurecolumns.txt?
-
-	# get count types from cdf_schema_def_dir and raw cols from munger directory once at beginning
-	with open(os.path.join(cdf_schema_def_dir,'enumerations/CountItemType.txt'),'r') as f:
-		type_list = f.read().split('\n')
-	with open(os.path.join(mungerdir,'raw_columns.txt'),'r') as f:
-		raw_col_list = f.read().split('\n')[1:]
-	ok = 'unknown'
-	while not ok == 'y':
-		if df.empty:
-			print(f'No count columns found. Make sure there is at least one entry in {file}.\n')
-		elif len(df.columns) != 2 or df.columns.to_list() != ['RawName','CountItemType']:
-			print(f'Column headers must be [\'RawName\',\'CountItemType\']\n')
-		elif df.CountItemType.all() not in type_list:
-			for idx,row in df.iterrows():
-				if row.CountItemType not in type_list:
-					print(f'CountItemType \'{row.CountItemType}\' is not recognized on line {idx+2}.')
-		elif df.RawName.all() not in raw_col_list:
-			for idx,row in df.iterrows():
-				if row.RawName not in raw_col_list:
-					print(f'Column name \'{row.RawName}\' on line {idx+2} does not appear in the datafile.')
-		else:
-			ok = 'y'
-			print(f'{file} has correct form')
-		if ok != 'y':
-			input(f'Correct the file {file}\nand hit return to continue.\n')
-		df = pd.read_csv(file,sep='\t')
-	return df
-
-
-def pick_juris_from_filesystem(
-		project_root,jurisdictions_dir='jurisdictions',juris_name=None,check_files=False):
+def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_name=None,check_files=False):
 	"""Returns a State object.
 	If <jurisdiction_name> is given, this just initializes based on info
 	in the folder with that name; """
 
-	path_to_jurisdictions = os.path.join(project_root,jurisdictions_dir)
+	path_to_jurisdictions = os.path.join(project_root,juriss_dir)
 	# if no jurisdiction name provided, ask user to pick from file system
 	if juris_name is None:
 		# ask user to pick from the available ones
@@ -358,83 +313,6 @@ def create_file_from_template(template_file,new_file,sep='\t'):
 	return
 
 
-def fill_context_file(context_path,template_dir_path,element,sep='\t'):
-	"""Creates file context/<element>.txt if necessary.
-	In any case, runs format and dupe checks on that file, inviting user corrections.
-	Also checks that each <element> passes the test, i.e., that
-	for each k,v in <tests>, every value in column k can be found in <v>.txt.
-	Does not apply to ExternalIdentifier.txt or remark.txt or dictionary.txt"""
-	template_file = os.path.join(template_dir_path,f'{element}.txt')
-	template = pd.read_csv(template_file,sep='\t')
-	context_file = os.path.join(context_path,f'{element}.txt')
-	create_file_from_template(template_file,context_file,sep=sep)
-
-	name_field = 'Name'
-	if element == 'BallotMeasureContest':
-		tests = {'ElectionDistrict':'ReportingUnit','Election':'Election'}
-	elif element == 'Candidate':
-		tests = {'Party':'Party'}
-		name_field = 'BallotName'
-	elif element == 'CandidateContest':
-		tests = {'Office':'Office'}
-	elif element == 'Office':
-		tests = {'ElectionDistrict':'ReportingUnit'}
-	else:
-		tests = {}
-
-	context_df = None
-	in_progress = 'y'
-	while in_progress == 'y':
-		# check format of file
-		context_df = pd.read_csv(context_file,sep=sep,header=0,dtype=str)
-		dupes,deduped = find_dupes(context_df[name_field])
-		if not context_df.columns.to_list() == template.columns.to_list():
-			print(f'WARNING: {element}.txt is not in the correct format. Required columns are:\n'
-				  f'{template.columns.to_list()}')
-			input('Please correct the file and hit return to continue.\n')
-
-		# check for empty
-		elif context_df.empty:
-			empty_ok = input(f'File context/{element}.txt has no data. Is that correct (y/n)?\n')
-			if empty_ok == 'y':
-				in_progress = 'n'
-			else:
-				input(f'Please fill file context/{element}.txt, then hit return to continue.\n')
-
-		# check for dupes
-		elif dupes.shape[0] >0:
-			print(f'File {context_path}\n has duplicates in the {name_field} column.')
-			show_sample(dupes,'names','appear on more than one line')
-			input(f'Please correct and hit return to continue.\n')
-		else:
-			# report contents of file
-			context_list = context_df.to_csv(header=None,index=False,sep='\t').strip('\n').split('\n')
-			show_sample(context_list,'lines',f'are in {element}.txt')
-
-			# check test conditions
-			if tests is None:
-				in_progress = 'n'
-			else:
-				problem = False
-				for test_field in tests.keys():
-					targets = pd.read_csv(os.path.join(context_path,f'{tests[test_field]}.txt'),sep='\t')
-					bad_set = {idx for idx in context_df.index if
-							   context_df.loc[idx,test_field] not in targets.Name.unique()}
-					if len(bad_set) == 0:
-						print(
-							f'Congratulations! The {test_field} for each record in context/{element}.txt looks good!')
-					else:  # if test condition fails
-						show_sample(context_df.loc[bad_set],f'{element}s',f'have unrecognized {test_field}s.')
-						problem = True
-				if problem:
-					# invite input
-					input('Make alterations to fix unrecognized items, then hit return to continue')
-					fill_context_file(context_path,template_dir_path,tests[test_field])
-				else:
-					in_progress = 'n'
-	return context_df
-
-
 def pick_munger(mungers_dir='mungers',project_root=None,session=None):
 	"""pick (or create) a munger """
 	if not project_root:
@@ -473,59 +351,6 @@ def pick_munger(mungers_dir='mungers',project_root=None,session=None):
 	return munger
 
 
-def check_munger_files(munger_name,munger_dir,template_dir,session=None,project_root=None):
-	if not project_root:
-		project_root = get_project_root()
-
-	munger_path = os.path.join(munger_dir,munger_name)
-	# create munger directory if necessary
-	try:
-		os.mkdir(munger_path)
-	except FileExistsError:
-		print(f'Directory {munger_path} already exists, will be preserved')
-	else:
-		print(f'Directory {munger_path} created')
-
-	file_list = ['cdf_elements.txt']
-	if not all([os.path.isfile(os.path.join(munger_path,x)) for x in file_list]):
-		for ff in file_list:
-			create_file_from_template(os.path.join(template_dir,ff),os.path.join(munger_path,ff))
-	return
-
-
-def prepare_cdf_elements_file(dir_path,elements):
-	guided = input(f'Would you like guidance in preparing the cdf_elements.txt file (y/n)?\n')
-	if guided != 'y':
-		input('Prepare cdf_elements.txt and hit return to continue.')
-	else:
-		out_lines = []
-		print(f'''Enter your formulas for reading the common-data-format elements values
-				associated to any particular vote count value in your file. If the information
-				is in the same row as the vote count, the source is 'row'. In this case, 
-				put raw column names in angle brackets (<>).
-				For example if the raw file has columns \'County\' and \'Precinct\',
-				the formula for ReportingUnit might be \'<County>;<Precinct>\'.
-				If the information must be read from a column header, the source is 'column.' 
-				In this case use the row number of the header in angle brackets..
-				For example, if the first row of the file has contest names, the second row has candidate names
-				and then the data rows begin, Candidate formula is <2> and CandidateContest formula is <1>''')
-		for element in elements:
-			source = input(f'What is the source for {element} (row/column/other)?\n')
-			while source not in ['row','column','other']:
-				source = input(f'''Try again: your answer must be 'row' or 'column' or 'other'.''')
-			if source == 'row':
-				formula = input(f'Formula for {element} in terms of column names (e.g. <County>):\n')
-			elif source == 'column':
-				formula = input(f'Formula for {element} in terms of header row numbers (e.g. <1>):\n')
-			else:
-				formula = ''
-			out_lines.append(f'{element}\t{formula}\t{source}')
-
-		with open(os.path.join(dir_path,'cdf_elements.txt'),'a') as f:
-			f.write('\n'.join(out_lines))
-	return
-
-
 def pick_juris_from_db(sess,project_root,juris_type=None):
 	ru = pd.read_sql_table('ReportingUnit',sess.bind,index_col='Id')
 	rut = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
@@ -533,7 +358,7 @@ def pick_juris_from_db(sess,project_root,juris_type=None):
 		jt_idx, juris_type = pick_one(rut,'Txt','type for the file\'s overall jurisdiction')
 	# TODO build uniqueness into Txt field of each enumeration on db creation
 
-	juris_type_id,other_juris_type = mr.get_id_othertext_from_enum_value(rut,juris_type)
+	juris_type_id,other_juris_type = mr.enum_value_to_id_othertext(rut,juris_type)
 	jurisdictions = ru[ru.ReportingUnitType_Id == juris_type_id]
 	if jurisdictions.empty:
 		print(f'No {juris_type} record found in the database. Please create one.\n')
@@ -576,7 +401,7 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 			enum_list = [x[5:] for x in element_df.columns if x[:5]=='Other']
 			for e in enum_list:
 				enum_df = pd.read_sql_table(e,sess.bind)
-				user_record[f'{e}_Id'],user_record[f'Other{e}'] = mr.get_id_othertext_from_enum_value(enum_df,user_record[e])
+				user_record[f'{e}_Id'],user_record[f'Other{e}'] = mr.enum_value_to_id_othertext(enum_df,user_record[e])
 				user_record.pop(e)
 			element_df = dbr.dframe_to_sql(pd.DataFrame(user_record,index=[-1]),sess,element)
 			# find index matching inserted element
@@ -674,17 +499,6 @@ def save_record_to_filesystem(storage_dir,table,user_record,enum_plain_text_valu
 	records.append(user_record,ignore_index=True)
 	records.to_csv(storage_file,sep='\t')
 	return
-
-
-def get_record_from_user(sess,table,enum_list,other_field_list):
-	"""Returns record, with three columns for each enum: _Id, Other and plaintext"""
-	new_record = {}  # to hold values of the record
-	for e in enum_list:
-		vals = pd.read_sql_table(e,sess.bind)
-	# TODO
-	for f in other_field_list:
-		pass
-	return new_record
 
 
 def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
@@ -793,38 +607,13 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 		db_record = file_record.copy()
 		for e in enum_list:
 			enum_val[e] = file_record[e]
-			db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.get_id_othertext_from_enum_value(
+			db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.enum_value_to_id_othertext(
 				e_df[e],file_record[e])
 			db_record.pop(e)
 		from_db = dbr.dframe_to_sql(
 			pd.DataFrame.from_dict([db_record],orient='columns'),sess,table,return_records='new')
 		db_idx = list(from_db.Id.unique())[0]
 	return db_idx, db_record, enum_val
-
-
-def report_uniqueness_problem(new_record,table,root_dir,sess):
-	"""
-	<new_record> is a dictionary of values corresponding to a new  record.
-	Check whether new_record satisfies the uniqueness constraints of the <table>
-	"""
-
-	table_from_db = pd.read_sql_table(table,sess.bind)
-	uniques = pd.read_csv(
-			os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/elements',table,'unique_constraints.txt'),
-			sep='\t')
-	problems = []
-	for idx, row in uniques.iterrows():
-		c_fields = row['unique_constraint'].split(',')	# list of fields in constraint
-		val_list = [new_record[cf] for cf in c_fields]
-		for i,r in table_from_db.iterrows():
-			if [r[cf] for cf in c_fields] == val_list:
-				problems.append(f"Table {table} already has a record with the desired value(s) " \
-					   f"of {c_fields}: {[new_record[cf] for cf in c_fields]}.\n")
-				break
-	if problems:
-		return '\n'.join(problems)
-	else:
-		return None
 
 
 def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database'):
@@ -890,7 +679,7 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 			else:
 				user_input_record[f'Other{e}'] = ''
 			# get plaintext from id/othertext
-			enum_val[e] = show_user[e] = mr.get_enum_value_from_id_othertext(
+			enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(
 				edf[e],user_input_record[f'{e}_Id'],user_input_record[f'Other{e}'])
 		entry = '\n\t'.join([f'{k}:\t{v}' for k,v in show_user.items()])
 		confirm = input(
@@ -950,7 +739,7 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 		get_project_root()
 	if not juris:
 		juris = pick_juris_from_filesystem(
-			project_root,jurisdictions_dir='jurisdictions')
+			project_root,juriss_dir='jurisdictions')
 	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
 
 	# TODO where do we update db from jurisdiction context file?

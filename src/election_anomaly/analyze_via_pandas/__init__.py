@@ -51,7 +51,7 @@ def contest_info_by_id(eng):
 	for i,r in candidate_name_by_selection_id.iterrows():
 		selection_name[i] = r['BallotName']
 	for i,r in district_type_id_other_by_contest_id.iterrows():
-		contest_district_type[i] = mr.get_enum_value_from_id_othertext(
+		contest_district_type[i] = mr.enum_value_from_id_othertext(
 			df['ReportingUnitType'],r['ReportingUnitType_Id'],r['OtherReportingUnitType'])
 	return contest_type,contest_name,selection_name,contest_district_type
 
@@ -118,9 +118,9 @@ def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,
 	top_ru_id = get_id_check_unique(df['ReportingUnit'],conditions={'Name':top_ru})
 	election_id = get_id_check_unique(df['Election'],conditions={'Name':election})
 
-	atomic_ru_type_id, atomic_other_ru_type = mr.get_id_othertext_from_enum_value(
+	atomic_ru_type_id, atomic_other_ru_type = mr.enum_value_to_id_othertext(
 		df['ReportingUnitType'],atomic_ru_type)
-	sub_ru_type_id, sub_other_ru_type = mr.get_id_othertext_from_enum_value(
+	sub_ru_type_id, sub_other_ru_type = mr.enum_value_to_id_othertext(
 		df['ReportingUnitType'],sub_ru_type)
 
 	# limit to atomic and sub RUs nested inside the top RU

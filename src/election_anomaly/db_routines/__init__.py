@@ -33,14 +33,7 @@ def create_database(con,cur,db_name):
     return out1,out2
 
 
-def create_raw_schema(con,cur,schema):
-    q = "CREATE SCHEMA {0}"
-    sql_ids = [schema]
-    con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-    out1 = query(q,sql_ids,[],con,cur)
-    return out1
-
-
+# TODO where should this happen?
 def fill_composing_reporting_unit_join(session):
     print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
     ru_dframe = pd.read_sql_table('ReportingUnit',session.bind,'cdf',index_col=None)
@@ -193,6 +186,7 @@ def get_cdf_db_table_names(eng):
     return cdf_elements, cdf_enumerations, cdf_joins, others
 
 
+# TODO use this?
 def order_by_ref(elements,table_type,project_root):
     """
     Return <table_list> sorted by foreign key references from
@@ -233,6 +227,7 @@ def read_enums_from_db_table(sess,element):
 	return enums
 
 
+# TODO combine query() and raw_query_via_SQLALCHEMY()?
 def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to create db and schemas
     format_args = [sql.Identifier(a) for a in sql_ids]
     cur.execute(sql.SQL(q).format(*format_args),strs)
@@ -259,7 +254,6 @@ def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
     return return_item
 
 
-# TODO cosmetic: get rid of schema argument
 def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecount=False,return_records='all'):
     """
     Given a dataframe <dframe >and an existing cdf db table <table>>, clean <dframe>

@@ -5,7 +5,6 @@
 import db_routines as dbr
 import user_interface as ui
 import pandas as pd
-import time
 import re
 import os
 import numpy as np
@@ -107,26 +106,6 @@ def add_munged_column(raw,munger,element,mode='row',inplace=True):
     return working
 
 
-def contest_type_split(row,mu):
-    if mu.ballot_measure_style=='yes_and_no_are_candidates':
-        bm_row = row[row[mu.ballot_measure_selection_col].isin(mu.ballot_measure_selection_list)]
-        cc_row = row[~row[mu.ballot_measure_selection_col].isin(mu.ballot_measure_selection_list)]
-    elif mu.ballot_measure_style == 'yes_and_no_are_columns':
-        bm_count_cols=mu.ballot_measure_count_column_selections.merge(mu.count_columns,how='left',left_on='fieldname',right_on='RawName')
-        cc_row=row.copy()
-        # TODO check that all CountItemTypes have either 2 or 0 columns for ballot measures
-        # if any CountItemType has numbers in both yes and no bm columns, assume not a candidate contest
-        for cit in bm_count_cols.CountItemType.unique():
-            # each count item
-            yes_col= bm_count_cols[(bm_count_cols.CountItemType==cit) & (bm_count_cols.selection=='Yes')].iloc[0].RawName
-            no_col= bm_count_cols[(bm_count_cols.CountItemType==cit) & (bm_count_cols.selection=='No')].iloc[0].RawName
-            cc_row=cc_row[~((cc_row[yes_col]!='') & (cc_row[no_col]!=''))]
-        bm_row = row[~row.index.isin(cc_row.index)]
-    else:
-        raise Exception(f'Ballot measure style {mu.ballot_measure_style} not recognized')
-    return bm_row.copy(), cc_row.copy()
-
-
 def replace_raw_with_internal_ids(row_df,juris,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False):
     """replace columns in <row_df> with raw_identifier values by columns with internal names and Ids
     from <table_df>, which has structure of a db table for <element>.
@@ -170,12 +149,6 @@ def replace_raw_with_internal_ids(row_df,juris,table_df,element,internal_name_co
         table_df[['Id',internal_name_column]],how='left',left_on=element,right_on=internal_name_column)
     row_df=row_df.drop([internal_name_column],axis=1)
     row_df.rename(columns={'Id':f'{element}_Id'},inplace=True)
-    return row_df
-
-
-def add_non_id_cols_from_id(row_df,cdf_table,table_name):
-    row_df=row_df.merge(cdf_table,left_on=table_name+'_Id',right_on='Id',how='left',suffixes=['','_'+table_name])
-    row_df=row_df.drop('Id_'+table_name,axis=1)
     return row_df
 
 
@@ -241,7 +214,7 @@ def enum_col_to_id_othertext(df,type_col,enum_df,drop_old=True):
     return df
 
 
-def get_enum_value_from_id_othertext(enum_df,id,othertext):
+def enum_value_from_id_othertext(enum_df,id,othertext):
     """Given an enumeration dframe (with cols 'Id' and 'Txt', or index and column 'Txt'),
     along with an (<id>,<othertext>) pair, find and return the plain language
     value for that enumeration (e.g., 'general')."""
@@ -257,7 +230,7 @@ def get_enum_value_from_id_othertext(enum_df,id,othertext):
     return enum_val
 
 
-def get_id_othertext_from_enum_value(enum_df,value):
+def enum_value_to_id_othertext(enum_df,value):
     """Given an enumeration dframe,
         along with a plain language value for that enumeration
         (e.g., 'general'), return the (<id>,<othertext>) pair."""
@@ -483,20 +456,5 @@ def append_multi_foreign_key(df,references):
 
 
 if __name__ == '__main__':
-    p_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
-    # pick db to use
-    db_paramfile = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'
-
-    db_name = 'NC_2'
-
-    # connect to db
-    from sqlalchemy.orm import sessionmaker
-    eng,meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
-    Session = sessionmaker(bind=eng)
-    sess = Session()
-
-    ww = pd.read_csv('/Users/Steph-Airbook/Library/Preferences/PyCharm2019.3/scratches/tmp.txt',sep='\t')
-    for j in ['ElectionContestJoin']:
-        ww = append_join_id(p_root,sess,ww,j)
-    print('Done!')
+    pass
     exit()

@@ -51,32 +51,6 @@ class Jurisdiction:
                 finished = True
         return changed
 
-    def add_to_context_dir(self,element,df):
-        """Add the data in the dataframe <df> to the file corresponding
-        to <element> in the Jurisdiction's context folder.
-        <df> must have all columns matching the columns in context/<element>.
-        OK for <df> to have extra columns"""
-        # TODO
-        try:
-            elts = pd.read_csv(f'{self.path_to_juris_dir}context/{element}.txt',sep='\t')
-        except FileNotFoundError:
-            print(f'File {self.path_to_juris_dir}context/{element}.txt does not exist')
-            return
-        else:
-            for col in elts.columns:
-                if col not in df.columns:
-                    warnings.warn(f'WARNING: Column {col} not found, will be added with no data.')
-                    print('Be sure all necessary data is added before processing the file')
-                    df.loc[:,col] = ''
-            # pull and order necessary columns from <df>
-            df_new = pd.concat([df[elts.columns],elts])
-            df_new.to_csv(f'{self.path_to_juris_dir}context/{element}.txt',sep='\t',index=False)
-
-            # TODO insert into cdf.<element>, using mr.load_context_dframe_into_cdf
-            #  in separate function, or in wrapper
-
-            return
-
     def load_context_to_db(self,session,project_root):
         """Load info from each element in the context directory into the db"""
         cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
@@ -578,32 +552,6 @@ def check_dependencies(context_dir,element):
     if changed_elements:
         print(f'(Directory is {context_dir}')
     return changed_elements
-
-
-def finalize_context_element(context_dir,element):
-    """Guides user to make any necessary or desired changes in context/<element>.txt
-    and makes corresponding changes to db""" # TODO rewrite desciption
-    finalized = False
-    while not finalized:
-        #self.prepare_context_and_db(element,results,jurisdiction,sess,project_path=project_root)
-
-        # check dependencies
-        all_ok = False
-        while not all_ok:
-            changed_elements = check_dependencies(context_dir,element)
-            if changed_elements:
-                # recheck items from change list
-                for ce in changed_elements:
-                    check_dependencies(context_dir,ce)
-            else:
-                all_ok=True
-
-        fin = input(f'Is the file {element}.txt finalized to your satisfaction (y/n)?\n')
-        if fin == 'y':
-            finalized = True
-        else:
-            input('Make your changes, then hit return to continue.')
-    return
 
 
 def context_dependency_dictionary():
