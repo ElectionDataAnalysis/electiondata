@@ -87,8 +87,8 @@ class Jurisdiction:
             x[:-4] for x in context_files if x != 'remark.txt' and x != 'dictionary.txt']
         for element in context_elements:
             # read df from context directory
-            df = pd.read_csv(os.path.join(context_dir,f'{element}.txt'),sep='\t')
-            load_context_dframe_into_cdf(session,df,element,cdf_schema_def_dir)
+
+            load_context_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root)
         return
 
     def __init__(self,short_name,path_to_parent_dir,project_root=None,check_context=False):        # reporting_units,elections,parties,offices):
@@ -616,18 +616,20 @@ def context_dependency_dictionary():
 
 # TODO before processing context files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
-def load_context_dframe_into_cdf(
-        session,source_df,element,cdf_schema_def_dir):
-    """<source_df> should have all info needed for insertion into cdf:
+def load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True):
+    """<df> should have all info needed for insertion into cdf:
     for enumerations, the plaintext value of the enumeration (e.g., 'precinct')
     for other fields, the value of the field (e.g., 'North Carolina;Alamance County').
     """
-    # TODO check that source_df has the right format
+    cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
+    context_dir = os.path.join(juris_path,'context')
+    df = pd.read_csv(os.path.join(context_dir,f'{element}.txt'),sep='\t')
+    # TODO check that df has the right format
 
     # TODO deal with duplicate 'none or unknown' records
     if element != 'ExternalIdentifier':
-        # add 'none or unknown' line to source_df
-        d = {c:'none or unknown' for c in source_df.columns}
+        # add 'none or unknown' line to df
+        d = {c:'none or unknown' for c in df.columns}
         fields_file = os.path.join(cdf_schema_def_dir,'elements',element,'fields.txt')
         fields = pd.read_csv(fields_file,sep='\t',index_col='fieldname')
         for f in fields.index:
@@ -639,16 +641,16 @@ def load_context_dframe_into_cdf(
                 d[f] = -1
             elif t != 'String':
                 raise TypeError(f'Datatype {t} not recognized')
-        source_df = source_df.append([d])
+        df = df.append([d])
 
-    # dedupe source_df
-    dupes,source_df = ui.find_dupes(source_df)
+    # dedupe df
+    dupes,df = ui.find_dupes(df)
     if not dupes.empty:
         print(f'WARNING: duplicates removed from dataframe, may indicate a problem.\n')
         ui.show_sample(dupes,f'lines in {element} source data','are duplicates')
 
     # replace nulls with empty strings
-    source_df.fillna('',inplace=True)
+    df.fillna('',inplace=True)
 
     # replace plain text enumerations from file system with id/othertext from db
     enum_file = os.path.join(cdf_schema_def_dir,'elements',element,'enumerations.txt')
@@ -658,8 +660,8 @@ def load_context_dframe_into_cdf(
         for e in enums['enumeration']:  # e.g., e = "ReportingUnitType"
             cdf_e = pd.read_sql_table(e,session.bind)
             # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
-            if e in source_df.columns:
-                source_df = mr.enum_col_to_id_othertext(source_df,e,cdf_e)
+            if e in df.columns:
+                df = mr.enum_col_to_id_othertext(df,e,cdf_e)
         # TODO skipping assignment of CountItemStatus to ReportingUnit for now,
         #  since we can't assign an ReportingUnit as ElectionDistrict to Office
         #  (unless Office has a CountItemStatus; can't be right!)
@@ -669,51 +671,75 @@ def load_context_dframe_into_cdf(
     # TODO somewhere, check that no CandidateContest & Ballot Measure share a name; ditto for other false foreign keys
 
     # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
-    source_df = get_ids_for_foreign_key(session,cdf_schema_def_dir,source_df,element)
-
-    # commit info in source_df to corresponding cdf table to db
-    dbr.dframe_to_sql(source_df,session,element)
-
-    return
-
-
-def get_ids_for_foreign_key(session,cdf_schema_def_dir,df,element):
-    # TODO error handling if Id not found
     fk_file_path = os.path.join(
             cdf_schema_def_dir,'elements',element,'foreign_keys.txt')
     if os.path.isfile(fk_file_path):
         fks = pd.read_csv(fk_file_path,sep='\t',index_col='fieldname')
+
         for fn in fks.index:
-            # append the Id corresponding to <fn> from the db
-            interim = f'{fn[:-3]}_Name'
-
             refs = fks.loc[fn,'refers_to'].split(';')
-            target_list = []
-            for r in refs:
-                ref_name_field = mr.get_name_field(r)
 
-                r_target = pd.read_sql_table(r,session.bind)[['Id',ref_name_field]]
-                r_target.rename(columns={'Id':fn,ref_name_field:interim},inplace=True)
-                if element == 'ExternalIdentifier':
-                    # add column for cdf_table of referent
-                    r_target.loc[:,'cdf_element'] = r
+            try:
+                df = get_ids_for_foreign_key(session,df,element,fn,refs)
+            except ForeignKeyException as e:
+                if load_refs:
+                    for r in refs:
+                        load_context_dframe_into_cdf(session,r,juris_path,project_root)
+                    # try again to load main element (but don't load referred-to again)
+                    # TODO allow opt-out (e.g., for Primary Party, which might be legitimately null)
+                    load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=False)
+                else:
+                    try_again = input(f'{e}\nWould you like to make changes to the context directory and try again (y/n)?\n')
+                    if try_again:
+                        load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
+                        return
 
-                target_list.append(r_target)
+    # commit info in df to corresponding cdf table to db
+    dbr.dframe_to_sql(df,session,element)
+    return
 
-            target = pd.concat(target_list)
 
-            if element == 'ExternalIdentifier':
-                # join on cdf_element name as well
-                df = df.merge(
-                    target,how='left',left_on=['cdf_element','internal_name'],right_on=['cdf_element',interim])
-            else:
-                df = df.merge(target,how='left',left_on=fn[:-3],right_on=interim)
+def get_ids_for_foreign_key(session,df,element,foreign_key,refs):
+    """ TODO <fn> is foreign key"""
 
-            # TODO if any unmatched records in df, load refs tables to context and try again;
-            #  if still unmatched, ask user to correct.
+    # append the Id corresponding to <fn> from the db
+    foreign_elt = f'{foreign_key[:-3]}'
+    interim = f'{foreign_elt}_Name'
 
-            df.drop([interim],axis=1)
+    target_list = []
+    for r in refs:
+        ref_name_field = mr.get_name_field(r)
+
+        r_target = pd.read_sql_table(r,session.bind)[['Id',ref_name_field]]
+        r_target.rename(columns={'Id':foreign_key,ref_name_field:interim},inplace=True)
+        if element == 'ExternalIdentifier':
+            # add column for cdf_table of referent
+            r_target.loc[:,'cdf_element'] = r
+
+        target_list.append(r_target)
+
+    target = pd.concat(target_list)
+
+    if element == 'ExternalIdentifier':
+        # join on cdf_element name as well
+        df = df.merge(
+            target,how='left',left_on=['cdf_element','internal_name'],right_on=['cdf_element',interim])
+    else:
+        df = df.merge(target,how='left',left_on=foreign_elt,right_on=interim)
+
+    missing = df[(df[foreign_key].notnull()) & (df[interim].isnull())]
+    if missing.empty:
+        df.drop([interim],axis=1)
+    else:
+        ui.show_sample(missing,f'records in {element} with a {foreign_elt}',f'was not found in the database')
+        ignore = input(f'OK to continue, even though some records in {element} are missing {foreign_elt} (y/n)?\n')
+        if not ignore:
+            raise ForeignKeyException(f'For some {element} records, {foreign_elt} was not found')
     return df
+
+
+class ForeignKeyException(Exception):
+    pass
 
 if __name__ == '__main__':
     print('Done (states_and_files)!')

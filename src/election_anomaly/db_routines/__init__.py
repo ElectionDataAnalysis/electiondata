@@ -315,7 +315,11 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
     try:
         appendable.to_sql(table, session.bind, if_exists='append', index=False)
     except sqlalchemy.exc.IntegrityError as e:
-        raise CdfDbException(e)
+        ignore = input(f'Database integrity error: {e}. Continue anyway (y/n)?\n')
+        if ignore == 'y':
+            pass
+        else:
+            raise e
     if table == 'ReportingUnit' and not appendable.empty:
         append_to_composing_reporting_unit_join(session,appendable)
     up_to_date_dframe = pd.read_sql_table(table,session.bind)
