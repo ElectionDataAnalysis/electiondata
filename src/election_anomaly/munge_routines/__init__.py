@@ -12,9 +12,11 @@ import numpy as np
 
 
 def clean_raw_df(raw,munger):
+    """Replaces nulls, strips whitespace, changes any blank entries in non-numeric columns to 'none or unknown'.
+    Appends munger suffix to raw column names to avoid conflicts"""
     # TODO put all info about data cleaning into README.md (e.g., whitespace strip)
 
-    # change all nulls to 0
+    # change all nulls to blank
     raw = raw.fillna('')
     # strip whitespace
     raw = raw.applymap(lambda x:x.strip())
@@ -38,9 +40,11 @@ def clean_raw_df(raw,munger):
             pass
 
     raw = raw[cols_to_munge + num_columns]
-    # recast all cols_to_munge to strings
+    # recast all cols_to_munge to strings,
+    # change all blanks to "none or unknown"
     for c in cols_to_munge:
         raw[c] = raw[c].apply(str)
+        raw[c].map({'':'none or unknown'})
     # rename columns to munge by adding suffix
     renamer = {x:f'{x}_{munger.field_rename_suffix}' for x in cols_to_munge}
     raw.rename(columns=renamer,inplace=True)
@@ -202,34 +206,38 @@ def enum_col_to_id_othertext(df,type_col,enum_df,drop_old=True):
     """Returns a copy of dataframe <df>, replacing a plaintext <type_col> column (e.g., 'CountItemType') with
     the corresponding two id and othertext columns (e.g., 'CountItemType_Id' and 'OtherCountItemType
     using the enumeration given in <enum_df>"""
-    assert type_col in df.columns
-    assert 'Txt' in enum_df.columns ,'Enumeration dataframe should have a \'Txt\' column'
+    if df.empty:
+        # add two columns
+        df[f'{type_col}_Id'] = df[f'Other{type_col}'] = df.iloc[:,0]
+    else:
+        assert type_col in df.columns
+        assert 'Txt' in enum_df.columns ,'Enumeration dataframe should have a \'Txt\' column'
 
-    # ensure Id is a column, not the index, of enum_df (otherwise df index will be lost in merge)
-    if 'Id' not in enum_df.columns:
-        enum_df['Id'] = enum_df.index
+        # ensure Id is a column, not the index, of enum_df (otherwise df index will be lost in merge)
+        if 'Id' not in enum_df.columns:
+            enum_df['Id'] = enum_df.index
 
-    for c in ['Id','Txt']:
-        if c in df.columns:
-            # avoid conflict by temporarily renaming the column in the main dataframe
-            assert c*3 not in df.colums, 'Column name '+c*3+' conflicts with variable used in code'
-            df.rename(columns={c:c*3},inplace=True)
-    df = df.merge(enum_df,how='left',left_on=type_col,right_on='Txt')
-    df.rename(columns={'Id':f'{type_col}_Id'},inplace=True)
-    df.loc[:,f'Other{type_col}']=''
+        for c in ['Id','Txt']:
+            if c in df.columns:
+                # avoid conflict by temporarily renaming the column in the main dataframe
+                assert c*3 not in df.colums, 'Column name '+c*3+' conflicts with variable used in code'
+                df.rename(columns={c:c*3},inplace=True)
+        df = df.merge(enum_df,how='left',left_on=type_col,right_on='Txt')
+        df.rename(columns={'Id':f'{type_col}_Id'},inplace=True)
+        df.loc[:,f'Other{type_col}']=''
 
-    other_id_df = enum_df[enum_df['Txt']=='other']
-    if not other_id_df.empty:
-        other_id = other_id_df.iloc[0]['Id']
-        df[f'{type_col}_Id'] = df[f'{type_col}_Id'].fillna(other_id)
-        df.loc[df[f'{type_col}_Id'] == other_id,'Other'+type_col] = df.loc[df[f'{type_col}_Id'] == other_id,type_col]
-    df = df.drop(['Txt'],axis=1)
+        other_id_df = enum_df[enum_df['Txt']=='other']
+        if not other_id_df.empty:
+            other_id = other_id_df.iloc[0]['Id']
+            df[f'{type_col}_Id'] = df[f'{type_col}_Id'].fillna(other_id)
+            df.loc[df[f'{type_col}_Id'] == other_id,'Other'+type_col] = df.loc[df[f'{type_col}_Id'] == other_id,type_col]
+        df = df.drop(['Txt'],axis=1)
+        for c in ['Id','Txt']:
+            if c*3 in df.columns:
+                # avoid restore name renaming the column in the main dataframe
+                df.rename(columns={c*3:c},inplace=True)
     if drop_old:
         df = df.drop([type_col],axis=1)
-    for c in ['Id','Txt']:
-        if c*3 in df.columns:
-            # avoid restore name renaming the column in the main dataframe
-            df.rename(columns={c*3:c},inplace=True)
     return df
 
 

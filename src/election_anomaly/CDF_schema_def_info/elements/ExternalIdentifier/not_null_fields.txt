@@ -1,4 +1,4 @@
 not_null_fields
 Value
-ForeignId
+Foreign_Id
 IdentifierType_Id

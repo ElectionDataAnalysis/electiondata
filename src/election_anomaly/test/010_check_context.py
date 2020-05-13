@@ -15,5 +15,5 @@ if __name__ == '__main__':
 	juris_short_name = None
 	juris = ui.pick_juris_from_filesystem(project_root,j_path,check_files=True)
 
-
+	print(f'Context fils for {juris.short_name} are internally consistent.')
 	exit()
