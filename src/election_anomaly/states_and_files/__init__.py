@@ -621,7 +621,7 @@ def load_context_dframe_into_cdf(
     """<source_df> should have all info needed for insertion into cdf:
     for enumerations, the plaintext value of the enumeration (e.g., 'precinct')
     for other fields, the value of the field (e.g., 'North Carolina;Alamance County').
-"""
+    """
     # TODO check that source_df has the right format
 
     # TODO deal with duplicate 'none or unknown' records
@@ -669,9 +669,20 @@ def load_context_dframe_into_cdf(
     # TODO somewhere, check that no CandidateContest & Ballot Measure share a name; ditto for other false foreign keys
 
     # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
-    fk_file = os.path.join(cdf_schema_def_dir,'elements',element,'foreign_keys.txt')
-    if os.path.isfile(fk_file):
-        fks = pd.read_csv(fk_file,sep='\t',index_col='fieldname')
+    source_df = get_ids_for_foreign_key(session,cdf_schema_def_dir,source_df,element)
+
+    # commit info in source_df to corresponding cdf table to db
+    dbr.dframe_to_sql(source_df,session,element)
+
+    return
+
+
+def get_ids_for_foreign_key(session,cdf_schema_def_dir,df,element):
+    # TODO error handling if Id not found
+    fk_file_path = os.path.join(
+            cdf_schema_def_dir,'elements',element,'foreign_keys.txt')
+    if os.path.isfile(fk_file_path):
+        fks = pd.read_csv(fk_file_path,sep='\t',index_col='fieldname')
         for fn in fks.index:
             # append the Id corresponding to <fn> from the db
             interim = f'{fn[:-3]}_Name'
@@ -693,17 +704,16 @@ def load_context_dframe_into_cdf(
 
             if element == 'ExternalIdentifier':
                 # join on cdf_element name as well
-                source_df = source_df.merge(
+                df = df.merge(
                     target,how='left',left_on=['cdf_element','internal_name'],right_on=['cdf_element',interim])
             else:
-                source_df = source_df.merge(target,how='left',left_on=fn[:-3],right_on=interim)
-            source_df.drop([interim],axis=1)
+                df = df.merge(target,how='left',left_on=fn[:-3],right_on=interim)
 
-    # commit info in source_df to corresponding cdf table to db
-    dbr.dframe_to_sql(source_df,session,element)
+            # TODO if any unmatched records in df, load refs tables to context and try again;
+            #  if still unmatched, ask user to correct.
 
-    return
-
+            df.drop([interim],axis=1)
+    return df
 
 if __name__ == '__main__':
     print('Done (states_and_files)!')
