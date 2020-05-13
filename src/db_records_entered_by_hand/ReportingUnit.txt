@@ -1,4 +1,5 @@
 Name	ReportingUnitType
+Colorado	state
 North Carolina	state
 Florida	state
 Pennsylvania	state

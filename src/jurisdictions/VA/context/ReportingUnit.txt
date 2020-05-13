@@ -1,0 +1,2851 @@
+Name	ReportingUnitType
+Virginia;ACCOMACK COUNTY	county
+Virginia;ALBEMARLE COUNTY	county
+Virginia;ALLEGHANY COUNTY	county
+Virginia;AMELIA COUNTY	county
+Virginia;AMHERST COUNTY	county
+Virginia;APPOMATTOX COUNTY	county
+Virginia;ARLINGTON COUNTY	county
+Virginia;AUGUSTA COUNTY	county
+Virginia;BATH COUNTY	county
+Virginia;BEDFORD COUNTY	county
+Virginia;BLAND COUNTY	county
+Virginia;BOTETOURT COUNTY	county
+Virginia;BRUNSWICK COUNTY	county
+Virginia;BUCHANAN COUNTY	county
+Virginia;BUCKINGHAM COUNTY	county
+Virginia;CAMPBELL COUNTY	county
+Virginia;CAROLINE COUNTY	county
+Virginia;CARROLL COUNTY	county
+Virginia;CHARLES CITY COUNTY	county
+Virginia;CHARLOTTE COUNTY	county
+Virginia;CHESTERFIELD COUNTY	county
+Virginia;CLARKE COUNTY	county
+Virginia;CRAIG COUNTY	county
+Virginia;CULPEPER COUNTY	county
+Virginia;CUMBERLAND COUNTY	county
+Virginia;DICKENSON COUNTY	county
+Virginia;DINWIDDIE COUNTY	county
+Virginia;ESSEX COUNTY	county
+Virginia;FAIRFAX COUNTY	county
+Virginia;FAUQUIER COUNTY	county
+Virginia;FLOYD COUNTY	county
+Virginia;FLUVANNA COUNTY	county
+Virginia;FRANKLIN COUNTY	county
+Virginia;FREDERICK COUNTY	county
+Virginia;GILES COUNTY	county
+Virginia;GLOUCESTER COUNTY	county
+Virginia;GOOCHLAND COUNTY	county
+Virginia;GRAYSON COUNTY	county
+Virginia;GREENE COUNTY	county
+Virginia;GREENSVILLE COUNTY	county
+Virginia;HALIFAX COUNTY	county
+Virginia;HANOVER COUNTY	county
+Virginia;HENRICO COUNTY	county
+Virginia;HENRY COUNTY	county
+Virginia;HIGHLAND COUNTY	county
+Virginia;ISLE OF WIGHT COUNTY	county
+Virginia;JAMES CITY COUNTY	county
+Virginia;KING & QUEEN COUNTY	county
+Virginia;KING GEORGE COUNTY	county
+Virginia;KING WILLIAM COUNTY	county
+Virginia;LANCASTER COUNTY	county
+Virginia;LEE COUNTY	county
+Virginia;LOUDOUN COUNTY	county
+Virginia;LOUISA COUNTY	county
+Virginia;LUNENBURG COUNTY	county
+Virginia;MADISON COUNTY	county
+Virginia;MATHEWS COUNTY	county
+Virginia;MECKLENBURG COUNTY	county
+Virginia;MIDDLESEX COUNTY	county
+Virginia;MONTGOMERY COUNTY	county
+Virginia;NELSON COUNTY	county
+Virginia;NEW KENT COUNTY	county
+Virginia;NORTHAMPTON COUNTY	county
+Virginia;NORTHUMBERLAND COUNTY	county
+Virginia;NOTTOWAY COUNTY	county
+Virginia;ORANGE COUNTY	county
+Virginia;PAGE COUNTY	county
+Virginia;PATRICK COUNTY	county
+Virginia;PITTSYLVANIA COUNTY	county
+Virginia;POWHATAN COUNTY	county
+Virginia;PRINCE EDWARD COUNTY	county
+Virginia;PRINCE GEORGE COUNTY	county
+Virginia;PRINCE WILLIAM COUNTY	county
+Virginia;PULASKI COUNTY	county
+Virginia;RAPPAHANNOCK COUNTY	county
+Virginia;RICHMOND COUNTY	county
+Virginia;ROANOKE COUNTY	county
+Virginia;ROCKBRIDGE COUNTY	county
+Virginia;ROCKINGHAM COUNTY	county
+Virginia;RUSSELL COUNTY	county
+Virginia;SCOTT COUNTY	county
+Virginia;SHENANDOAH COUNTY	county
+Virginia;SMYTH COUNTY	county
+Virginia;SOUTHAMPTON COUNTY	county
+Virginia;SPOTSYLVANIA COUNTY	county
+Virginia;STAFFORD COUNTY	county
+Virginia;SURRY COUNTY	county
+Virginia;SUSSEX COUNTY	county
+Virginia;TAZEWELL COUNTY	county
+Virginia;WARREN COUNTY	county
+Virginia;WASHINGTON COUNTY	county
+Virginia;WESTMORELAND COUNTY	county
+Virginia;WISE COUNTY	county
+Virginia;WYTHE COUNTY	county
+Virginia;YORK COUNTY	county
+Virginia;ALEXANDRIA CITY	county
+Virginia;BRISTOL CITY	county
+Virginia;BUENA VISTA CITY	county
+Virginia;CHARLOTTESVILLE CITY	county
+Virginia;CHESAPEAKE CITY	county
+Virginia;COLONIAL HEIGHTS CITY	county
+Virginia;COVINGTON CITY	county
+Virginia;DANVILLE CITY	county
+Virginia;EMPORIA CITY	county
+Virginia;FAIRFAX CITY	county
+Virginia;FALLS CHURCH CITY	county
+Virginia;FRANKLIN CITY	county
+Virginia;FREDERICKSBURG CITY	county
+Virginia;GALAX CITY	county
+Virginia;HAMPTON CITY	county
+Virginia;HARRISONBURG CITY	county
+Virginia;HOPEWELL CITY	county
+Virginia;LEXINGTON CITY	county
+Virginia;LYNCHBURG CITY	county
+Virginia;MANASSAS CITY	county
+Virginia;MANASSAS PARK CITY	county
+Virginia;MARTINSVILLE CITY	county
+Virginia;NEWPORT NEWS CITY	county
+Virginia;NORFOLK CITY	county
+Virginia;NORTON CITY	county
+Virginia;PETERSBURG CITY	county
+Virginia;POQUOSON CITY	county
+Virginia;PORTSMOUTH CITY	county
+Virginia;RADFORD CITY	county
+Virginia;RICHMOND CITY	county
+Virginia;ROANOKE CITY	county
+Virginia;SALEM CITY	county
+Virginia;STAUNTON CITY	county
+Virginia;SUFFOLK CITY	county
+Virginia;VIRGINIA BEACH CITY	county
+Virginia;WAYNESBORO CITY	county
+Virginia;WILLIAMSBURG CITY	county
+Virginia;WINCHESTER CITY	county
+Virginia;ACCOMACK COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;ACCOMACK COUNTY;## Provisional Precinct	precinct
+Virginia;ACCOMACK COUNTY;101 - CHINCOTEAGUE Precinct	precinct
+Virginia;ACCOMACK COUNTY;201 - ATLANTIC Precinct	precinct
+Virginia;ACCOMACK COUNTY;202 - GREENBACKVILLE Precinct	precinct
+Virginia;ACCOMACK COUNTY;301 - NEW CHURCH Precinct	precinct
+Virginia;ACCOMACK COUNTY;401 - BLOXOM Precinct	precinct
+Virginia;ACCOMACK COUNTY;402 - PARKSLEY Precinct	precinct
+Virginia;ACCOMACK COUNTY;403 - SAXIS Precinct	precinct
+Virginia;ACCOMACK COUNTY;501 - MAPPSVILLE Precinct	precinct
+Virginia;ACCOMACK COUNTY;502 - RUE Precinct	precinct
+Virginia;ACCOMACK COUNTY;601 - ACCOMAC Precinct	precinct
+Virginia;ACCOMACK COUNTY;602 - TANGIER Precinct	precinct
+Virginia;ACCOMACK COUNTY;701 - NANDUA Precinct	precinct
+Virginia;ACCOMACK COUNTY;801 - BOBTOWN Precinct	precinct
+Virginia;ACCOMACK COUNTY;802 - MELFA Precinct	precinct
+Virginia;ACCOMACK COUNTY;803 - WACHAPREAGUE Precinct	precinct
+Virginia;ACCOMACK COUNTY;901 - PAINTER Precinct	precinct
+Virginia;ALBEMARLE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;ALBEMARLE COUNTY;## Provisional Precinct	precinct
+Virginia;ALBEMARLE COUNTY;101 - WOODBROOK Precinct	precinct
+Virginia;ALBEMARLE COUNTY;103 - BRANCHLANDS Precinct	precinct
+Virginia;ALBEMARLE COUNTY;104 - AGNOR-HURT Precinct	precinct
+Virginia;ALBEMARLE COUNTY;105 - DUNLORA Precinct	precinct
+Virginia;ALBEMARLE COUNTY;106 - NORTHSIDE Precinct	precinct
+Virginia;ALBEMARLE COUNTY;201 - JACK JOUETT Precinct	precinct
+Virginia;ALBEMARLE COUNTY;202 - UNIVERSITY Precinct	precinct
+Virginia;ALBEMARLE COUNTY;203 - GEORGETOWN Precinct	precinct
+Virginia;ALBEMARLE COUNTY;301 - IVY Precinct	precinct
+Virginia;ALBEMARLE COUNTY;302 - RED HILL Precinct	precinct
+Virginia;ALBEMARLE COUNTY;304 - EAST IVY Precinct	precinct
+Virginia;ALBEMARLE COUNTY;305 - COUNTRY GREEN Precinct	precinct
+Virginia;ALBEMARLE COUNTY;306 - PORTERS Precinct	precinct
+Virginia;ALBEMARLE COUNTY;307 - YELLOW MOUNTAIN Precinct	precinct
+Virginia;ALBEMARLE COUNTY;401 - SCOTTSVILLE Precinct	precinct
+Virginia;ALBEMARLE COUNTY;402 - MONTICELLO Precinct	precinct
+Virginia;ALBEMARLE COUNTY;405 - CALE Precinct	precinct
+Virginia;ALBEMARLE COUNTY;406 - STONE ROBINSON Precinct	precinct
+Virginia;ALBEMARLE COUNTY;407 - BISCUIT RUN Precinct	precinct
+Virginia;ALBEMARLE COUNTY;501 - KESWICK Precinct	precinct
+Virginia;ALBEMARLE COUNTY;502 - STONY POINT Precinct	precinct
+Virginia;ALBEMARLE COUNTY;503 - HOLLYMEAD Precinct	precinct
+Virginia;ALBEMARLE COUNTY;504 - FREE BRIDGE Precinct	precinct
+Virginia;ALBEMARLE COUNTY;506 - BAKER-BUTLER Precinct	precinct
+Virginia;ALBEMARLE COUNTY;507 - PANTOPS Precinct	precinct
+Virginia;ALBEMARLE COUNTY;601 - CROZET Precinct	precinct
+Virginia;ALBEMARLE COUNTY;602 - FREE UNION Precinct	precinct
+Virginia;ALBEMARLE COUNTY;603 - EARLYSVILLE Precinct	precinct
+Virginia;ALBEMARLE COUNTY;604 - BROWNSVILLE Precinct	precinct
+Virginia;ALBEMARLE COUNTY;606 - MECHUMS RIVER Precinct	precinct
+Virginia;ALLEGHANY COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;ALLEGHANY COUNTY;## Provisional Precinct	precinct
+Virginia;ALLEGHANY COUNTY;101 - ARRITT Precinct	precinct
+Virginia;ALLEGHANY COUNTY;103 - DAMERON Precinct	precinct
+Virginia;ALLEGHANY COUNTY;201 - HUMPBACK BRIDGE Precinct	precinct
+Virginia;ALLEGHANY COUNTY;202 - DOLLY ANN Precinct	precinct
+Virginia;ALLEGHANY COUNTY;301 - CALLAGHAN Precinct	precinct
+Virginia;ALLEGHANY COUNTY;302 - GRIFFITH Precinct	precinct
+Virginia;ALLEGHANY COUNTY;401 - LOW MOOR Precinct	precinct
+Virginia;ALLEGHANY COUNTY;402 - JACKSON HEIGHTS Precinct	precinct
+Virginia;ALLEGHANY COUNTY;501 - IRON GATE Precinct	precinct
+Virginia;ALLEGHANY COUNTY;502 - PETERS SWITCH Precinct	precinct
+Virginia;ALLEGHANY COUNTY;601 - DISTRICT 1 Precinct	precinct
+Virginia;ALLEGHANY COUNTY;701 - DISTRICT 2 Precinct	precinct
+Virginia;AMELIA COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;AMELIA COUNTY;## Provisional Precinct	precinct
+Virginia;AMELIA COUNTY;101 - NUMBER ONE Precinct	precinct
+Virginia;AMELIA COUNTY;201 - NUMBER TWO Precinct	precinct
+Virginia;AMELIA COUNTY;301 - NUMBER THREE Precinct	precinct
+Virginia;AMELIA COUNTY;401 - NUMBER FOUR Precinct	precinct
+Virginia;AMELIA COUNTY;501 - NUMBER FIVE Precinct	precinct
+Virginia;AMHERST COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;AMHERST COUNTY;## Provisional Precinct	precinct
+Virginia;AMHERST COUNTY;101 - WRIGHT SHOP Precinct	precinct
+Virginia;AMHERST COUNTY;102 - NEW GLASGOW Precinct	precinct
+Virginia;AMHERST COUNTY;103 - COOLWELL Precinct	precinct
+Virginia;AMHERST COUNTY;201 - COURT HOUSE Precinct	precinct
+Virginia;AMHERST COUNTY;202 - TEMPERANCE Precinct	precinct
+Virginia;AMHERST COUNTY;301 - MONROE Precinct	precinct
+Virginia;AMHERST COUNTY;302 - ELON Precinct	precinct
+Virginia;AMHERST COUNTY;303 - PLEASANT VIEW Precinct	precinct
+Virginia;AMHERST COUNTY;401 - AMELON Precinct	precinct
+Virginia;AMHERST COUNTY;402 - LONCO Precinct	precinct
+Virginia;AMHERST COUNTY;501 - MADISON Precinct	precinct
+Virginia;APPOMATTOX COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;APPOMATTOX COUNTY;## Provisional Precinct	precinct
+Virginia;APPOMATTOX COUNTY;101 - VERA Precinct	precinct
+Virginia;APPOMATTOX COUNTY;102 - PAMPLIN Precinct	precinct
+Virginia;APPOMATTOX COUNTY;201 - CHAP Precinct	precinct
+Virginia;APPOMATTOX COUNTY;202 - SPOUT SPRING Precinct	precinct
+Virginia;APPOMATTOX COUNTY;301 - US  460 Precinct	precinct
+Virginia;APPOMATTOX COUNTY;302 - STONEWALL Precinct	precinct
+Virginia;APPOMATTOX COUNTY;401 - COURTHOUSE Precinct	precinct
+Virginia;APPOMATTOX COUNTY;501 - OAKVILLE Precinct	precinct
+Virginia;APPOMATTOX COUNTY;502 - AGEE Precinct	precinct
+Virginia;ARLINGTON COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;ARLINGTON COUNTY;## Provisional Precinct	precinct
+Virginia;ARLINGTON COUNTY;001 - ARLINGTON Precinct	precinct
+Virginia;ARLINGTON COUNTY;002 - ASHTON HEIGHTS Precinct	precinct
+Virginia;ARLINGTON COUNTY;003 - AURORA HILLS Precinct	precinct
+Virginia;ARLINGTON COUNTY;004 - BALLSTON Precinct	precinct
+Virginia;ARLINGTON COUNTY;005 - BARCROFT Precinct	precinct
+Virginia;ARLINGTON COUNTY;006 - CRYSTAL CITY Precinct	precinct
+Virginia;ARLINGTON COUNTY;007 - CHERRYDALE Precinct	precinct
+Virginia;ARLINGTON COUNTY;008 - HUME Precinct	precinct
+Virginia;ARLINGTON COUNTY;009 - COLUMBIA Precinct	precinct
+Virginia;ARLINGTON COUNTY;010 - WILSON Precinct	precinct
+Virginia;ARLINGTON COUNTY;011 - EAST FALLS CHURCH Precinct	precinct
+Virginia;ARLINGTON COUNTY;012 - FAIRLINGTON Precinct	precinct
+Virginia;ARLINGTON COUNTY;013 - GLEN CARLYN Precinct	precinct
+Virginia;ARLINGTON COUNTY;014 - CLARENDON Precinct	precinct
+Virginia;ARLINGTON COUNTY;015 - LYON PARK Precinct	precinct
+Virginia;ARLINGTON COUNTY;016 - LYON VILLAGE Precinct	precinct
+Virginia;ARLINGTON COUNTY;017 - OVERLEE KNOLLS Precinct	precinct
+Virginia;ARLINGTON COUNTY;018 - PARK LANE Precinct	precinct
+Virginia;ARLINGTON COUNTY;019 - ROSSLYN Precinct	precinct
+Virginia;ARLINGTON COUNTY;020 - THRIFTON Precinct	precinct
+Virginia;ARLINGTON COUNTY;021 - VIRGINIA HIGHLANDS Precinct	precinct
+Virginia;ARLINGTON COUNTY;022 - ABINGDON Precinct	precinct
+Virginia;ARLINGTON COUNTY;023 - WESTOVER Precinct	precinct
+Virginia;ARLINGTON COUNTY;024 - WOODLAWN Precinct	precinct
+Virginia;ARLINGTON COUNTY;025 - ARLINGTON FOREST Precinct	precinct
+Virginia;ARLINGTON COUNTY;026 - FILLMORE Precinct	precinct
+Virginia;ARLINGTON COUNTY;027 - JEFFERSON Precinct	precinct
+Virginia;ARLINGTON COUNTY;028 - WAKEFIELD Precinct	precinct
+Virginia;ARLINGTON COUNTY;029 - DOMINION HILLS Precinct	precinct
+Virginia;ARLINGTON COUNTY;030 - GLEBE Precinct	precinct
+Virginia;ARLINGTON COUNTY;031 - LEXINGTON Precinct	precinct
+Virginia;ARLINGTON COUNTY;032 - OAKRIDGE Precinct	precinct
+Virginia;ARLINGTON COUNTY;033 - ROCK SPRING Precinct	precinct
+Virginia;ARLINGTON COUNTY;034 - YORKTOWN Precinct	precinct
+Virginia;ARLINGTON COUNTY;035 - MADISON Precinct	precinct
+Virginia;ARLINGTON COUNTY;036 - MARSHALL Precinct	precinct
+Virginia;ARLINGTON COUNTY;037 - NOTTINGHAM Precinct	precinct
+Virginia;ARLINGTON COUNTY;038 - ARLINGTON VIEW Precinct	precinct
+Virginia;ARLINGTON COUNTY;039 - ASHLAWN Precinct	precinct
+Virginia;ARLINGTON COUNTY;040 - VIRGINIA SQUARE Precinct	precinct
+Virginia;ARLINGTON COUNTY;041 - NAVY LEAGUE Precinct	precinct
+Virginia;ARLINGTON COUNTY;042 - SHIRLINGTON Precinct	precinct
+Virginia;ARLINGTON COUNTY;043 - CAMPBELL Precinct	precinct
+Virginia;ARLINGTON COUNTY;044 - DAWSON TERRACE Precinct	precinct
+Virginia;ARLINGTON COUNTY;045 - BUCKINGHAM Precinct	precinct
+Virginia;ARLINGTON COUNTY;046 - CENTRAL Precinct	precinct
+Virginia;ARLINGTON COUNTY;047 - FOUR MILE RUN Precinct	precinct
+Virginia;ARLINGTON COUNTY;048 - AUSA Precinct	precinct
+Virginia;ARLINGTON COUNTY;049 - MONROE Precinct	precinct
+Virginia;ARLINGTON COUNTY;050 - CRYSTAL PLAZA Precinct	precinct
+Virginia;ARLINGTON COUNTY;051 - TAYLOR Precinct	precinct
+Virginia;ARLINGTON COUNTY;052 - GUNSTON Precinct	precinct
+Virginia;ARLINGTON COUNTY;053 - MET PARK Precinct	precinct
+Virginia;ARLINGTON COUNTY;054 - GARFIELD PARK Precinct	precinct
+Virginia;AUGUSTA COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;AUGUSTA COUNTY;## Provisional Precinct	precinct
+Virginia;AUGUSTA COUNTY;101 - JOLIVUE Precinct	precinct
+Virginia;AUGUSTA COUNTY;102 - STUARTS DRAFT ELEMENTARY Precinct	precinct
+Virginia;AUGUSTA COUNTY;103 - VERONA Precinct	precinct
+Virginia;AUGUSTA COUNTY;201 - CRIMORA Precinct	precinct
+Virginia;AUGUSTA COUNTY;202 - NEW HOPE Precinct	precinct
+Virginia;AUGUSTA COUNTY;203 - WEYERS CAVE Precinct	precinct
+Virginia;AUGUSTA COUNTY;301 - FORT DEFIANCE Precinct	precinct
+Virginia;AUGUSTA COUNTY;302 - NORTH RIVER Precinct	precinct
+Virginia;AUGUSTA COUNTY;303 - MOUNT SOLON Precinct	precinct
+Virginia;AUGUSTA COUNTY;304 - CHURCHVILLE FIRE STATION Precinct	precinct
+Virginia;AUGUSTA COUNTY;401 - BUFFALO GAP Precinct	precinct
+Virginia;AUGUSTA COUNTY;402 - CHURCHVILLE ELEMENTARY Precinct	precinct
+Virginia;AUGUSTA COUNTY;403 - CRAIGSVILLE Precinct	precinct
+Virginia;AUGUSTA COUNTY;404 - DEERFIELD Precinct	precinct
+Virginia;AUGUSTA COUNTY;405 - CEDAR GREEN Precinct	precinct
+Virginia;AUGUSTA COUNTY;501 - GREENVILLE Precinct	precinct
+Virginia;AUGUSTA COUNTY;502 - MIDDLEBROOK Precinct	precinct
+Virginia;AUGUSTA COUNTY;503 - SPOTTSWOOD Precinct	precinct
+Virginia;AUGUSTA COUNTY;504 - WHITE HILL Precinct	precinct
+Virginia;AUGUSTA COUNTY;601 - SHERANDO Precinct	precinct
+Virginia;AUGUSTA COUNTY;602 - RIDGEVIEW Precinct	precinct
+Virginia;AUGUSTA COUNTY;603 - LYNDHURST Precinct	precinct
+Virginia;AUGUSTA COUNTY;801 - DOOMS Precinct	precinct
+Virginia;AUGUSTA COUNTY;802 - FISHERSVILLE Precinct	precinct
+Virginia;AUGUSTA COUNTY;803 - WILSON Precinct	precinct
+Virginia;BATH COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;BATH COUNTY;## Provisional Precinct	precinct
+Virginia;BATH COUNTY;101 - WARM SPRINGS Precinct	precinct
+Virginia;BATH COUNTY;102 - MOUNTAIN GROVE Precinct	precinct
+Virginia;BATH COUNTY;201 - HOT SPRINGS Precinct	precinct
+Virginia;BATH COUNTY;301 - FAIRVIEW Precinct	precinct
+Virginia;BATH COUNTY;302 - BURNSVILLE Precinct	precinct
+Virginia;BATH COUNTY;401 - MILLBORO Precinct	precinct
+Virginia;BATH COUNTY;501 - HEALING SPRINGS Precinct	precinct
+Virginia;BEDFORD COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;BEDFORD COUNTY;## Provisional Precinct	precinct
+Virginia;BEDFORD COUNTY;101 - GOODVIEW ELEM SCHOOL Precinct	precinct
+Virginia;BEDFORD COUNTY;102 - HARDY VOL FIRE CO Precinct	precinct
+Virginia;BEDFORD COUNTY;103 - CHAMBLISSBURG BAPTIST CHURCH Precinct	precinct
+Virginia;BEDFORD COUNTY;104 - STEWARTSVILLE RESCUE SQUAD Precinct	precinct
+Virginia;BEDFORD COUNTY;201 - BEDFORD CHRISTIAN CHURCH Precinct	precinct
+Virginia;BEDFORD COUNTY;202 - STAUNTON RIVER HIGH SCHOOL Precinct	precinct
+Virginia;BEDFORD COUNTY;203 - MONETA ELEM SCHOOL Precinct	precinct
+Virginia;BEDFORD COUNTY;204 - Quaker BAPTIST CHURCH Precinct	precinct
+Virginia;BEDFORD COUNTY;205 - SAUNDERS VOL FIRE CO Precinct	precinct
+Virginia;BEDFORD COUNTY;301 - NEW LONDON ACADEMY Precinct	precinct
+Virginia;BEDFORD COUNTY;302 - BEDFORD REGIONAL WATER AUTH Precinct	precinct
+Virginia;BEDFORD COUNTY;303 - BETHESDA UNITED METHODIST CHURCH Precinct	precinct
+Virginia;BEDFORD COUNTY;304 - RIVERSIDE CHURCH Precinct	precinct
+Virginia;BEDFORD COUNTY;305 - HUDDLESTON ELEM SCHOOL Precinct	precinct
+Virginia;BEDFORD COUNTY;306 - FOREST FIRE STATION #2 Precinct	precinct
+Virginia;BEDFORD COUNTY;401 - FOREST ELEMENTARY SCHOOL Precinct	precinct
+Virginia;BEDFORD COUNTY;402 - THOMAS JEFFERSON ELEM SCHOOL Precinct	precinct
+Virginia;BEDFORD COUNTY;403 - KNIGHTS OF COLUMBUS BLDG Precinct	precinct
+Virginia;BEDFORD COUNTY;404 - FOREST RECREATION CENTER Precinct	precinct
+Virginia;BEDFORD COUNTY;502 - BIG ISLAND ELEM SCHOOL Precinct	precinct
+Virginia;BEDFORD COUNTY;503 - SEDALIA CENTER Precinct	precinct
+Virginia;BEDFORD COUNTY;504 - SUCK SPRINGS BAPTIST CHURCH Precinct	precinct
+Virginia;BEDFORD COUNTY;505 - BOONSBORO ELEMENTARY SCHOOL Precinct	precinct
+Virginia;BEDFORD COUNTY;506 - BOONSBORO RURITAN CLUB Precinct	precinct
+Virginia;BEDFORD COUNTY;601 - MONTVALE ELEM SCHOOL Precinct	precinct
+Virginia;BEDFORD COUNTY;602 - SHADY GROVE FIRE DEPARTMENT Precinct	precinct
+Virginia;BEDFORD COUNTY;603 - THAXTON BAPTIST CHURCH #1 Precinct	precinct
+Virginia;BEDFORD COUNTY;604 - BEDFORD WELCOME CENTER Precinct	precinct
+Virginia;BEDFORD COUNTY;701 - GOODE VOL RESCUE SQUAD Precinct	precinct
+Virginia;BEDFORD COUNTY;702 - LIBERTY HIGH SCHOOL Precinct	precinct
+Virginia;BEDFORD COUNTY;703 - THAXTON BAPTIST CHURCH #2 Precinct	precinct
+Virginia;BEDFORD COUNTY;704 - BEDFORD CENTRAL LIBRARY Precinct	precinct
+Virginia;BLAND COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;BLAND COUNTY;## Provisional Precinct	precinct
+Virginia;BLAND COUNTY;101 - BASTIAN Precinct	precinct
+Virginia;BLAND COUNTY;102 - CERES Precinct	precinct
+Virginia;BLAND COUNTY;201 - DAVIS Precinct	precinct
+Virginia;BLAND COUNTY;202 - SEDDON Precinct	precinct
+Virginia;BLAND COUNTY;301 - HOLLYBROOK Precinct	precinct
+Virginia;BLAND COUNTY;302 - MECHANICSBURG Precinct	precinct
+Virginia;BLAND COUNTY;401 - ROCKY GAP Precinct	precinct
+Virginia;BOTETOURT COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;BOTETOURT COUNTY;## Provisional Precinct	precinct
+Virginia;BOTETOURT COUNTY;101 - DALEVILLE Precinct	precinct
+Virginia;BOTETOURT COUNTY;102 - GREENFIELD Precinct	precinct
+Virginia;BOTETOURT COUNTY;201 - BLUE RIDGE Precinct	precinct
+Virginia;BOTETOURT COUNTY;202 - RAINBOW FOREST Precinct	precinct
+Virginia;BOTETOURT COUNTY;301 - BUCHANAN Precinct	precinct
+Virginia;BOTETOURT COUNTY;302 - MILL CREEK Precinct	precinct
+Virginia;BOTETOURT COUNTY;403 - EAGLE ROCK Precinct	precinct
+Virginia;BOTETOURT COUNTY;406 - FINCASTLE Precinct	precinct
+Virginia;BOTETOURT COUNTY;501 - TROUTVILLE Precinct	precinct
+Virginia;BOTETOURT COUNTY;502 - CLOVERDALE Precinct	precinct
+Virginia;BRUNSWICK COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;BRUNSWICK COUNTY;## Provisional Precinct	precinct
+Virginia;BRUNSWICK COUNTY;101 - BRODNAX Precinct	precinct
+Virginia;BRUNSWICK COUNTY;102 - ROCK STORE Precinct	precinct
+Virginia;BRUNSWICK COUNTY;103 - TILLMAN Precinct	precinct
+Virginia;BRUNSWICK COUNTY;201 - DROMGOOLE Precinct	precinct
+Virginia;BRUNSWICK COUNTY;202 - EDGERTON Precinct	precinct
+Virginia;BRUNSWICK COUNTY;203 - FITZHUGH Precinct	precinct
+Virginia;BRUNSWICK COUNTY;301 - ALBERTA Precinct	precinct
+Virginia;BRUNSWICK COUNTY;302 - DANIELTOWN Precinct	precinct
+Virginia;BRUNSWICK COUNTY;303 - ELMORE Precinct	precinct
+Virginia;BRUNSWICK COUNTY;304 - SEYMOUR Precinct	precinct
+Virginia;BRUNSWICK COUNTY;401 - STURGEON Precinct	precinct
+Virginia;BRUNSWICK COUNTY;402 - KING'S STORE Precinct	precinct
+Virginia;BRUNSWICK COUNTY;501 - TOTARO Precinct	precinct
+Virginia;BUCHANAN COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;BUCHANAN COUNTY;## Provisional Precinct	precinct
+Virginia;BUCHANAN COUNTY;102 - BLACKEY Precinct	precinct
+Virginia;BUCHANAN COUNTY;103 - HURLEY Precinct	precinct
+Virginia;BUCHANAN COUNTY;201 - GRASSY Precinct	precinct
+Virginia;BUCHANAN COUNTY;202 - BULL Precinct	precinct
+Virginia;BUCHANAN COUNTY;203 - ROCKLICK Precinct	precinct
+Virginia;BUCHANAN COUNTY;301 - SLATE Precinct	precinct
+Virginia;BUCHANAN COUNTY;302 - NORTH GRUNDY Precinct	precinct
+Virginia;BUCHANAN COUNTY;403 - SOUTH GRUNDY Precinct	precinct
+Virginia;BUCHANAN COUNTY;404 - OAKWOOD Precinct	precinct
+Virginia;BUCHANAN COUNTY;501 - PRATER Precinct	precinct
+Virginia;BUCHANAN COUNTY;502 - FOX Precinct	precinct
+Virginia;BUCHANAN COUNTY;503 - VANSANT Precinct	precinct
+Virginia;BUCHANAN COUNTY;601 - COUNCIL Precinct	precinct
+Virginia;BUCHANAN COUNTY;602 - GARDEN Precinct	precinct
+Virginia;BUCHANAN COUNTY;603 - HURRICANE Precinct	precinct
+Virginia;BUCHANAN COUNTY;701 - WHITEWOOD Precinct	precinct
+Virginia;BUCHANAN COUNTY;702 - CONTRARY Precinct	precinct
+Virginia;BUCKINGHAM COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;BUCKINGHAM COUNTY;## Provisional Precinct	precinct
+Virginia;BUCKINGHAM COUNTY;101 - NEW CANTON Precinct	precinct
+Virginia;BUCKINGHAM COUNTY;102  - GEORGIA CREEK Precinct	precinct
+Virginia;BUCKINGHAM COUNTY;201 - WHITE HALL Precinct	precinct
+Virginia;BUCKINGHAM COUNTY;301 - CURDSVILLE Precinct	precinct
+Virginia;BUCKINGHAM COUNTY;302 - NEW STORE Precinct	precinct
+Virginia;BUCKINGHAM COUNTY;401 - MAYSVILLE Precinct	precinct
+Virginia;BUCKINGHAM COUNTY;501 - WRIGHTS Precinct	precinct
+Virginia;BUCKINGHAM COUNTY;502 - GLENMORE Precinct	precinct
+Virginia;BUCKINGHAM COUNTY;601 - SLATE RIVER Precinct	precinct
+Virginia;BUCKINGHAM COUNTY;701 - GOLD HILL Precinct	precinct
+Virginia;CAMPBELL COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;CAMPBELL COUNTY;## Provisional Precinct	precinct
+Virginia;CAMPBELL COUNTY;101 - BROOKVILLE Precinct	precinct
+Virginia;CAMPBELL COUNTY;102 - NEW LONDON Precinct	precinct
+Virginia;CAMPBELL COUNTY;201 - WALKER Precinct	precinct
+Virginia;CAMPBELL COUNTY;202 - BEDFORD SPRINGS Precinct	precinct
+Virginia;CAMPBELL COUNTY;301 - EVINGTON Precinct	precinct
+Virginia;CAMPBELL COUNTY;302 - OTTER RIVER Precinct	precinct
+Virginia;CAMPBELL COUNTY;303 - ALTAVISTA Precinct	precinct
+Virginia;CAMPBELL COUNTY;401 - THREE FORKS Precinct	precinct
+Virginia;CAMPBELL COUNTY;402 - COURT HOUSE Precinct	precinct
+Virginia;CAMPBELL COUNTY;501 - SPRING HILL Precinct	precinct
+Virginia;CAMPBELL COUNTY;502 - YELLOW BRANCH Precinct	precinct
+Virginia;CAMPBELL COUNTY;601 - KINGS Precinct	precinct
+Virginia;CAMPBELL COUNTY;602 - CONCORD Precinct	precinct
+Virginia;CAMPBELL COUNTY;701 - BROOKNEAL Precinct	precinct
+Virginia;CAMPBELL COUNTY;702 - GLADYS Precinct	precinct
+Virginia;CAMPBELL COUNTY;703 - MORRIS CHURCH Precinct	precinct
+Virginia;CAROLINE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;CAROLINE COUNTY;## Provisional Precinct	precinct
+Virginia;CAROLINE COUNTY;101 - BOWLING GREEN Precinct	precinct
+Virginia;CAROLINE COUNTY;102 - SPARTA Precinct	precinct
+Virginia;CAROLINE COUNTY;201 - NORTH MADISON Precinct	precinct
+Virginia;CAROLINE COUNTY;202 - SOUTH MADISON Precinct	precinct
+Virginia;CAROLINE COUNTY;301 - PORT ROYAL Precinct	precinct
+Virginia;CAROLINE COUNTY;302 - WOODFORD Precinct	precinct
+Virginia;CAROLINE COUNTY;401 - DAWN Precinct	precinct
+Virginia;CAROLINE COUNTY;402 - CARMEL CHURCH Precinct	precinct
+Virginia;CAROLINE COUNTY;501 - WEST MATTAPONI Precinct	precinct
+Virginia;CAROLINE COUNTY;502 - MILFORD Precinct	precinct
+Virginia;CAROLINE COUNTY;601 - CHILESBURG Precinct	precinct
+Virginia;CAROLINE COUNTY;602 - LAKE Precinct	precinct
+Virginia;CARROLL COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;CARROLL COUNTY;## Provisional Precinct	precinct
+Virginia;CARROLL COUNTY;101 - MT BETHEL Precinct	precinct
+Virginia;CARROLL COUNTY;102 - ST PAUL Precinct	precinct
+Virginia;CARROLL COUNTY;103 - LAMBSBURG Precinct	precinct
+Virginia;CARROLL COUNTY;105 - FANCY GAP Precinct	precinct
+Virginia;CARROLL COUNTY;201 - HILLSVILLE B Precinct	precinct
+Virginia;CARROLL COUNTY;202 - LAUREL FORK Precinct	precinct
+Virginia;CARROLL COUNTY;203 - GLADESBORO Precinct	precinct
+Virginia;CARROLL COUNTY;301 - HILLSVILLE C Precinct	precinct
+Virginia;CARROLL COUNTY;302 - SYLVATUS Precinct	precinct
+Virginia;CARROLL COUNTY;303 - DUGSPUR Precinct	precinct
+Virginia;CARROLL COUNTY;401 - OAKLAND Precinct	precinct
+Virginia;CARROLL COUNTY;402 - WOODLAWN D Precinct	precinct
+Virginia;CARROLL COUNTY;406 - WOODLAWN F Precinct	precinct
+Virginia;CARROLL COUNTY;501 - VAUGHAN Precinct	precinct
+Virginia;CARROLL COUNTY;502 - GLADEVILLE Precinct	precinct
+Virginia;CARROLL COUNTY;503 - WOODLAWN E Precinct	precinct
+Virginia;CARROLL COUNTY;504 - LAUREL Precinct	precinct
+Virginia;CHARLES CITY COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;CHARLES CITY COUNTY;## Provisional Precinct	precinct
+Virginia;CHARLES CITY COUNTY;101 - PRECINCT 1-1 Precinct	precinct
+Virginia;CHARLES CITY COUNTY;201 - PRECINCT 2-1 Precinct	precinct
+Virginia;CHARLES CITY COUNTY;301 - PRECINCT 3-1 Precinct	precinct
+Virginia;CHARLOTTE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;CHARLOTTE COUNTY;## Provisional Precinct	precinct
+Virginia;CHARLOTTE COUNTY;101 - COUNTY SEAT Precinct	precinct
+Virginia;CHARLOTTE COUNTY;201 - RED OAK WYLLIESBURG Precinct	precinct
+Virginia;CHARLOTTE COUNTY;302 - DRAKES BRANCH Precinct	precinct
+Virginia;CHARLOTTE COUNTY;401 - KEYSVILLE Precinct	precinct
+Virginia;CHARLOTTE COUNTY;501 - CULLEN/RED HOUSE Precinct	precinct
+Virginia;CHARLOTTE COUNTY;602 - PHENIX Precinct	precinct
+Virginia;CHARLOTTE COUNTY;702 - BACON/SAXE Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;## Provisional Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;101 - BELLWOOD Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;102 - SOUTH CHESTER Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;103 - ENON Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;104 - NORTH CHESTER Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;105 - DREWRYS BLUFF Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;106 - HARROWGATE Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;107 - WELLS Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;108 - ECOFF Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;109 - ELIZABETH SCOTT Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;110 - DUTCH GAP Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;111 - IRON BRIDGE Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;112 - CARVER Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;201 - GATES Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;202 - BEULAH Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;203 - BIRD Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;204 - JACOBS Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;205 - FALLING CREEK Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;206 - BELMONT Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;207 - CHIPPENHAM Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;208 - MEADOWBROOK Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;209 - SALEM CHURCH Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;210 - FIVE FORKS Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;211 - NASH Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;212 - ST. LUKE'S Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;213 - SOUTHSIDE Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;214 - HOPKINS Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;215 - North Bird Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;301 - ETTRICK Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;302 - DEER RUN Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;303 - MATOACA Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;304 - WINFREES STORE Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;305 - BEACH Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;306 - WINTERPOCK Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;307 - COSBY Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;308 - SOUTH MANCHESTER Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;309 - SKINQUARTER Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;310 - TOMAHAWK Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;313 - WOOLRIDGE Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;315 - BAILEY BRIDGE Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;316 - SPRING RUN Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;317 - BIRKDALE Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;318 - WEST BEACH Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;401 - HARBOUR POINTE Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;402 - GENITO Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;403 - BRANDERMILL Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;404 - PROVIDENCE Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;405 - LA PRADE Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;406 - SMOKETREE Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;407 - MONACAN Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;408 - REAMS Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;409 - MANCHESTER Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;410 - WAGSTAFF Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;411 - SWIFT CREEK Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;413 - SHENANDOAH Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;414 - CRENSHAW Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;415 - EVERGREEN Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;416 - EVERGREEN WEST Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;417 - EDGEWATER Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;501 - HUGUENOT Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;502 - CRESTWOOD Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;503 - MIDLOTHIAN Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;504 - ROBIOUS Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;505 - BON AIR Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;506 - GREENFIELD Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;507 - SALISBURY Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;508 - BELGRADE Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;509 - CRANBECK Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;510 - SYCAMORE Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;511 - BLACK HEATH Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;513 - BEAUFONT Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;514 - WATKINS Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;515 - DAVIS Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;516 - POCOSHOCK Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;517 - ROSELAND Precinct	precinct
+Virginia;CHESTERFIELD COUNTY;518 - MIDLOTHIAN NORTH Precinct	precinct
+Virginia;CLARKE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;CLARKE COUNTY;## Provisional Precinct	precinct
+Virginia;CLARKE COUNTY;101 - RUSSELL Precinct	precinct
+Virginia;CLARKE COUNTY;201 - BERRYVILLE Precinct	precinct
+Virginia;CLARKE COUNTY;301 - MILLWOOD Precinct	precinct
+Virginia;CLARKE COUNTY;302 - PINE GROVE Precinct	precinct
+Virginia;CLARKE COUNTY;401 - WHITE POST Precinct	precinct
+Virginia;CLARKE COUNTY;501 - BUCKMARSH Precinct	precinct
+Virginia;CLARKE COUNTY;502 - BLUE RIDGE Precinct	precinct
+Virginia;CRAIG COUNTY;## Provisional Precinct	precinct
+Virginia;CRAIG COUNTY;101 - COURT HOUSE Precinct	precinct
+Virginia;CRAIG COUNTY;201 - AMMENDALE PRECINCT Precinct	precinct
+Virginia;CRAIG COUNTY;301 - GIVENS & REYNOLDS STORE Precinct	precinct
+Virginia;CRAIG COUNTY;303 - MARSHALLS STORE Precinct	precinct
+Virginia;CRAIG COUNTY;401 - BARBOURS CREEK Precinct	precinct
+Virginia;CRAIG COUNTY;402 - PAINT BANK Precinct	precinct
+Virginia;CRAIG COUNTY;403 - CRAIG SPRINGS Precinct	precinct
+Virginia;CRAIG COUNTY;501 - CRAIG CITY Precinct	precinct
+Virginia;CULPEPER COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;CULPEPER COUNTY;## Provisional Precinct	precinct
+Virginia;CULPEPER COUNTY;101 - WEST FAIRFAX Precinct	precinct
+Virginia;CULPEPER COUNTY;201 - EAST FAIRFAX Precinct	precinct
+Virginia;CULPEPER COUNTY;302 - EGGBORNSVILLE Precinct	precinct
+Virginia;CULPEPER COUNTY;303 - CARDOVA Precinct	precinct
+Virginia;CULPEPER COUNTY;304 - WILLOW SHADE Precinct	precinct
+Virginia;CULPEPER COUNTY;401 - ELDORADO Precinct	precinct
+Virginia;CULPEPER COUNTY;402 - BROWNS STORE Precinct	precinct
+Virginia;CULPEPER COUNTY;501 - JEFFERSONTON Precinct	precinct
+Virginia;CULPEPER COUNTY;502 - RIXEYVILLE Precinct	precinct
+Virginia;CULPEPER COUNTY;601 - MITCHELLS Precinct	precinct
+Virginia;CULPEPER COUNTY;602 - PEARL SAMPLE Precinct	precinct
+Virginia;CULPEPER COUNTY;603 - SOUTH RIDGE Precinct	precinct
+Virginia;CULPEPER COUNTY;702 - BRANDY STATION Precinct	precinct
+Virginia;CULPEPER COUNTY;703 - LIGNUM Precinct	precinct
+Virginia;CULPEPER COUNTY;704 - RICHARDSVILLE Precinct	precinct
+Virginia;CUMBERLAND COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;CUMBERLAND COUNTY;## Provisional Precinct	precinct
+Virginia;CUMBERLAND COUNTY;101 - PRECINCT 1 Precinct	precinct
+Virginia;CUMBERLAND COUNTY;201 - PRECINCT 2 Precinct	precinct
+Virginia;CUMBERLAND COUNTY;301 - PRECINCT 3 Precinct	precinct
+Virginia;CUMBERLAND COUNTY;401 - PRECINCT 4 Precinct	precinct
+Virginia;CUMBERLAND COUNTY;501 - PRECINCT 5 Precinct	precinct
+Virginia;DICKENSON COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;DICKENSON COUNTY;## Provisional Precinct	precinct
+Virginia;DICKENSON COUNTY;101 - SOUTH CLINTWOOD Precinct	precinct
+Virginia;DICKENSON COUNTY;201 - NORA Precinct	precinct
+Virginia;DICKENSON COUNTY;202 - FRYING PAN Precinct	precinct
+Virginia;DICKENSON COUNTY;203 - CLINCHCO Precinct	precinct
+Virginia;DICKENSON COUNTY;301 - WEST DANTE Precinct	precinct
+Virginia;DICKENSON COUNTY;302 - HERALD Precinct	precinct
+Virginia;DICKENSON COUNTY;303 - RIDGE Precinct	precinct
+Virginia;DICKENSON COUNTY;401 - HAYSI-COLLEY Precinct	precinct
+Virginia;DICKENSON COUNTY;501 - TARPON Precinct	precinct
+Virginia;DICKENSON COUNTY;502 - NORTH CLINTWOOD Precinct	precinct
+Virginia;DINWIDDIE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;DINWIDDIE COUNTY;## Provisional Precinct	precinct
+Virginia;DINWIDDIE COUNTY;101 - WHITE OAK Precinct	precinct
+Virginia;DINWIDDIE COUNTY;102 - ROCKY RUN Precinct	precinct
+Virginia;DINWIDDIE COUNTY;103 - CHURCH ROAD Precinct	precinct
+Virginia;DINWIDDIE COUNTY;201 - ROHOIC Precinct	precinct
+Virginia;DINWIDDIE COUNTY;202 - SUTHERLAND Precinct	precinct
+Virginia;DINWIDDIE COUNTY;301 - REAMS Precinct	precinct
+Virginia;DINWIDDIE COUNTY;302 - NEW HOPE Precinct	precinct
+Virginia;DINWIDDIE COUNTY;303 - LITTLE ZION Precinct	precinct
+Virginia;DINWIDDIE COUNTY;401 - DINWIDDIE Precinct	precinct
+Virginia;DINWIDDIE COUNTY;402 - MCKENNEY Precinct	precinct
+Virginia;DINWIDDIE COUNTY;403 - CHERRY HILL Precinct	precinct
+Virginia;DINWIDDIE COUNTY;501 - EDGEHILL Precinct	precinct
+Virginia;DINWIDDIE COUNTY;502 - CHESDIN Precinct	precinct
+Virginia;ESSEX COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;ESSEX COUNTY;## Provisional Precinct	precinct
+Virginia;ESSEX COUNTY;101 - GREATER TAPPAHANNOCK Precinct	precinct
+Virginia;ESSEX COUNTY;201 - NORTH Precinct	precinct
+Virginia;ESSEX COUNTY;301 - SOUTH Precinct	precinct
+Virginia;ESSEX COUNTY;401 - CENTRAL Precinct	precinct
+Virginia;FAIRFAX COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;FAIRFAX COUNTY;## Provisional Precinct	precinct
+Virginia;FAIRFAX COUNTY;104 - CHAPEL Precinct	precinct
+Virginia;FAIRFAX COUNTY;105 - FAIRVIEW Precinct	precinct
+Virginia;FAIRFAX COUNTY;106 - HERITAGE Precinct	precinct
+Virginia;FAIRFAX COUNTY;108 - KINGS PARK Precinct	precinct
+Virginia;FAIRFAX COUNTY;109 - LITTLE RUN Precinct	precinct
+Virginia;FAIRFAX COUNTY;110 - NORTH SPRINGFIELD Precinct	precinct
+Virginia;FAIRFAX COUNTY;113 - CANTERBURY Precinct	precinct
+Virginia;FAIRFAX COUNTY;114 - OLDE CREEK Precinct	precinct
+Virginia;FAIRFAX COUNTY;115 - RAVENSWORTH Precinct	precinct
+Virginia;FAIRFAX COUNTY;116 - WAKEFIELD Precinct	precinct
+Virginia;FAIRFAX COUNTY;117 - WOODSON Precinct	precinct
+Virginia;FAIRFAX COUNTY;118 - LAKE BRADDOCK Precinct	precinct
+Virginia;FAIRFAX COUNTY;119 - LAUREL Precinct	precinct
+Virginia;FAIRFAX COUNTY;120 - SIDEBURN Precinct	precinct
+Virginia;FAIRFAX COUNTY;121 - VILLA Precinct	precinct
+Virginia;FAIRFAX COUNTY;123 - ROBINSON Precinct	precinct
+Virginia;FAIRFAX COUNTY;125 - SIGNAL HILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;126 - BONNIE BRAE Precinct	precinct
+Virginia;FAIRFAX COUNTY;127 - BURKE CENTRE Precinct	precinct
+Virginia;FAIRFAX COUNTY;128 - CARDINAL Precinct	precinct
+Virginia;FAIRFAX COUNTY;129 - KEENE MILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;130 - TERRA CENTRE Precinct	precinct
+Virginia;FAIRFAX COUNTY;131 - EAGLE VIEW Precinct	precinct
+Virginia;FAIRFAX COUNTY;132 - MONUMENT Precinct	precinct
+Virginia;FAIRFAX COUNTY;133 - DANBURY Precinct	precinct
+Virginia;FAIRFAX COUNTY;134 - UNIVERSITY Precinct	precinct
+Virginia;FAIRFAX COUNTY;201 - Armstrong Precinct	precinct
+Virginia;FAIRFAX COUNTY;202 - FLINT HILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;203 - FLORIS Precinct	precinct
+Virginia;FAIRFAX COUNTY;204 - MADISON Precinct	precinct
+Virginia;FAIRFAX COUNTY;208 - RESTON #1 Precinct	precinct
+Virginia;FAIRFAX COUNTY;209 - RESTON #2 Precinct	precinct
+Virginia;FAIRFAX COUNTY;213 - VIENNA #1 Precinct	precinct
+Virginia;FAIRFAX COUNTY;214 - VIENNA #2 Precinct	precinct
+Virginia;FAIRFAX COUNTY;216 - VIENNA #4 Precinct	precinct
+Virginia;FAIRFAX COUNTY;218 - VIENNA #6 Precinct	precinct
+Virginia;FAIRFAX COUNTY;219 - WESTBRIAR Precinct	precinct
+Virginia;FAIRFAX COUNTY;220 - DOGWOOD Precinct	precinct
+Virginia;FAIRFAX COUNTY;221 - HUNTERS WOODS Precinct	precinct
+Virginia;FAIRFAX COUNTY;222 - RESTON #3 Precinct	precinct
+Virginia;FAIRFAX COUNTY;223 - GLADE Precinct	precinct
+Virginia;FAIRFAX COUNTY;224 - SOUTH LAKES Precinct	precinct
+Virginia;FAIRFAX COUNTY;225 - HUGHES Precinct	precinct
+Virginia;FAIRFAX COUNTY;226 - WOLFTRAP Precinct	precinct
+Virginia;FAIRFAX COUNTY;227 - SUNRISE VALLEY Precinct	precinct
+Virginia;FAIRFAX COUNTY;229 - FOX MILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;233 - NORTH POINT Precinct	precinct
+Virginia;FAIRFAX COUNTY;234 - ALDRIN Precinct	precinct
+Virginia;FAIRFAX COUNTY;235 - FRYING PAN Precinct	precinct
+Virginia;FAIRFAX COUNTY;236 - STUART Precinct	precinct
+Virginia;FAIRFAX COUNTY;237 - MCNAIR Precinct	precinct
+Virginia;FAIRFAX COUNTY;238 - CAMERON GLEN Precinct	precinct
+Virginia;FAIRFAX COUNTY;240 - COLVIN Precinct	precinct
+Virginia;FAIRFAX COUNTY;301 - CHAIN BRIDGE Precinct	precinct
+Virginia;FAIRFAX COUNTY;302 - CHESTERBROOK Precinct	precinct
+Virginia;FAIRFAX COUNTY;303 - CHURCHILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;304 - COOPER Precinct	precinct
+Virginia;FAIRFAX COUNTY;305 - EL NIDO Precinct	precinct
+Virginia;FAIRFAX COUNTY;306 - GREAT FALLS Precinct	precinct
+Virginia;FAIRFAX COUNTY;307 - HAYCOCK Precinct	precinct
+Virginia;FAIRFAX COUNTY;309 - KENMORE Precinct	precinct
+Virginia;FAIRFAX COUNTY;310 - KIRBY Precinct	precinct
+Virginia;FAIRFAX COUNTY;311 - LANGLEY Precinct	precinct
+Virginia;FAIRFAX COUNTY;312 - LONGFELLOW Precinct	precinct
+Virginia;FAIRFAX COUNTY;314 - MCLEAN Precinct	precinct
+Virginia;FAIRFAX COUNTY;315 - PIMMIT Precinct	precinct
+Virginia;FAIRFAX COUNTY;316 - SALONA #1 Precinct	precinct
+Virginia;FAIRFAX COUNTY;317 - WESTHAMPTON Precinct	precinct
+Virginia;FAIRFAX COUNTY;318 - WESTMORELAND Precinct	precinct
+Virginia;FAIRFAX COUNTY;319 - HERNDON #1 Precinct	precinct
+Virginia;FAIRFAX COUNTY;320 - HERNDON #2 Precinct	precinct
+Virginia;FAIRFAX COUNTY;321 - CLEARVIEW Precinct	precinct
+Virginia;FAIRFAX COUNTY;322 - FORESTVILLE Precinct	precinct
+Virginia;FAIRFAX COUNTY;323 - SHOUSE Precinct	precinct
+Virginia;FAIRFAX COUNTY;324 - HERNDON #3 Precinct	precinct
+Virginia;FAIRFAX COUNTY;325 - HUTCHISON Precinct	precinct
+Virginia;FAIRFAX COUNTY;327 - SUGARLAND Precinct	precinct
+Virginia;FAIRFAX COUNTY;328 - HICKORY Precinct	precinct
+Virginia;FAIRFAX COUNTY;329 - SENECA Precinct	precinct
+Virginia;FAIRFAX COUNTY;331 - SPRING HILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;332 - COATES Precinct	precinct
+Virginia;FAIRFAX COUNTY;333 - SALONA #2 Precinct	precinct
+Virginia;FAIRFAX COUNTY;401 - BUSH HILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;402 - CAMERON Precinct	precinct
+Virginia;FAIRFAX COUNTY;403 - FORESTDALE Precinct	precinct
+Virginia;FAIRFAX COUNTY;404 - FRANCONIA Precinct	precinct
+Virginia;FAIRFAX COUNTY;405 - GROVETON Precinct	precinct
+Virginia;FAIRFAX COUNTY;406 - HAYFIELD Precinct	precinct
+Virginia;FAIRFAX COUNTY;408 - MOUNT EAGLE Precinct	precinct
+Virginia;FAIRFAX COUNTY;409 - PIONEER Precinct	precinct
+Virginia;FAIRFAX COUNTY;410 - ROSE HILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;411 - VIRGINIA HILLS Precinct	precinct
+Virginia;FAIRFAX COUNTY;413 - FAIRFIELD Precinct	precinct
+Virginia;FAIRFAX COUNTY;415 - CRESTWOOD Precinct	precinct
+Virginia;FAIRFAX COUNTY;417 - GARFIELD Precinct	precinct
+Virginia;FAIRFAX COUNTY;418 - LYNBROOK Precinct	precinct
+Virginia;FAIRFAX COUNTY;419 - LANE Precinct	precinct
+Virginia;FAIRFAX COUNTY;420 - VILLAGES Precinct	precinct
+Virginia;FAIRFAX COUNTY;421 - KINGSTOWNE Precinct	precinct
+Virginia;FAIRFAX COUNTY;422 - VAN DORN Precinct	precinct
+Virginia;FAIRFAX COUNTY;423 - CLERMONT Precinct	precinct
+Virginia;FAIRFAX COUNTY;424 - HUNTLEY Precinct	precinct
+Virginia;FAIRFAX COUNTY;426 - GREENSPRING Precinct	precinct
+Virginia;FAIRFAX COUNTY;427 - ISLAND CREEK Precinct	precinct
+Virginia;FAIRFAX COUNTY;428 - PINEWOOD Precinct	precinct
+Virginia;FAIRFAX COUNTY;429 - HYBLA VALLEY Precinct	precinct
+Virginia;FAIRFAX COUNTY;501 - BAILEYS Precinct	precinct
+Virginia;FAIRFAX COUNTY;502 - BARCROFT Precinct	precinct
+Virginia;FAIRFAX COUNTY;503 - BELVEDERE Precinct	precinct
+Virginia;FAIRFAX COUNTY;504 - BRISTOW Precinct	precinct
+Virginia;FAIRFAX COUNTY;505 - GLEN FOREST Precinct	precinct
+Virginia;FAIRFAX COUNTY;506 - HOLMES #1 Precinct	precinct
+Virginia;FAIRFAX COUNTY;507 - LINCOLNIA Precinct	precinct
+Virginia;FAIRFAX COUNTY;508 - MASONVILLE Precinct	precinct
+Virginia;FAIRFAX COUNTY;509 - PLAZA Precinct	precinct
+Virginia;FAIRFAX COUNTY;510 - PARKLAWN Precinct	precinct
+Virginia;FAIRFAX COUNTY;511 - RAVENWOOD Precinct	precinct
+Virginia;FAIRFAX COUNTY;512 - SLEEPY HOLLOW Precinct	precinct
+Virginia;FAIRFAX COUNTY;513 - SAINT ALBANS Precinct	precinct
+Virginia;FAIRFAX COUNTY;514 - CROSSROADS Precinct	precinct
+Virginia;FAIRFAX COUNTY;515 - WESTLAWN Precinct	precinct
+Virginia;FAIRFAX COUNTY;516 - WEYANOKE Precinct	precinct
+Virginia;FAIRFAX COUNTY;517 - WILLSTON Precinct	precinct
+Virginia;FAIRFAX COUNTY;518 - COLUMBIA Precinct	precinct
+Virginia;FAIRFAX COUNTY;519 - HUMMER Precinct	precinct
+Virginia;FAIRFAX COUNTY;520 - SKYLINE Precinct	precinct
+Virginia;FAIRFAX COUNTY;521 - BROOK HILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;522 - CAMELOT Precinct	precinct
+Virginia;FAIRFAX COUNTY;523 - POE Precinct	precinct
+Virginia;FAIRFAX COUNTY;525 - WALNUT HILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;526 - BREN MAR Precinct	precinct
+Virginia;FAIRFAX COUNTY;527 - EDSALL Precinct	precinct
+Virginia;FAIRFAX COUNTY;528 - RIDGELEA Precinct	precinct
+Virginia;FAIRFAX COUNTY;530 - HOLMES #2 Precinct	precinct
+Virginia;FAIRFAX COUNTY;601 - BELLE HAVEN Precinct	precinct
+Virginia;FAIRFAX COUNTY;602 - BELLEVIEW Precinct	precinct
+Virginia;FAIRFAX COUNTY;604 - BUCKNELL Precinct	precinct
+Virginia;FAIRFAX COUNTY;605 - FORT HUNT Precinct	precinct
+Virginia;FAIRFAX COUNTY;606 - HOLLIN HALL Precinct	precinct
+Virginia;FAIRFAX COUNTY;607 - HUNTINGTON Precinct	precinct
+Virginia;FAIRFAX COUNTY;608 - KIRKSIDE Precinct	precinct
+Virginia;FAIRFAX COUNTY;609 - MARLAN Precinct	precinct
+Virginia;FAIRFAX COUNTY;610 - SHERWOOD Precinct	precinct
+Virginia;FAIRFAX COUNTY;611 - STRATFORD Precinct	precinct
+Virginia;FAIRFAX COUNTY;612 - WAYNEWOOD Precinct	precinct
+Virginia;FAIRFAX COUNTY;613 - WESTGATE Precinct	precinct
+Virginia;FAIRFAX COUNTY;614 - RIVERSIDE Precinct	precinct
+Virginia;FAIRFAX COUNTY;615 - WOODLEY Precinct	precinct
+Virginia;FAIRFAX COUNTY;616 - GUNSTON Precinct	precinct
+Virginia;FAIRFAX COUNTY;617 - LORTON Precinct	precinct
+Virginia;FAIRFAX COUNTY;618 - NEWINGTON Precinct	precinct
+Virginia;FAIRFAX COUNTY;619 - BELVOIR Precinct	precinct
+Virginia;FAIRFAX COUNTY;621 - GROSVENOR Precinct	precinct
+Virginia;FAIRFAX COUNTY;622 - LORTON STATION Precinct	precinct
+Virginia;FAIRFAX COUNTY;623 - ALBAN Precinct	precinct
+Virginia;FAIRFAX COUNTY;626 - SARATOGA Precinct	precinct
+Virginia;FAIRFAX COUNTY;627 - WOODLAWN Precinct	precinct
+Virginia;FAIRFAX COUNTY;628 - LAUREL HILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;629 - SOUTH COUNTY Precinct	precinct
+Virginia;FAIRFAX COUNTY;630- ARMY Precinct	precinct
+Virginia;FAIRFAX COUNTY;701 - BLAKE Precinct	precinct
+Virginia;FAIRFAX COUNTY;703 - FORT BUFFALO Precinct	precinct
+Virginia;FAIRFAX COUNTY;704 - FREEDOM HILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;705 - GRAHAM - GREENWAY Precinct	precinct
+Virginia;FAIRFAX COUNTY;707 - MANTUA Precinct	precinct
+Virginia;FAIRFAX COUNTY;708 - MARSHALL Precinct	precinct
+Virginia;FAIRFAX COUNTY;709 - MOSBY Precinct	precinct
+Virginia;FAIRFAX COUNTY;710 - PINE SPRING Precinct	precinct
+Virginia;FAIRFAX COUNTY;711 - PRICE Precinct	precinct
+Virginia;FAIRFAX COUNTY;712 - SHREVE Precinct	precinct
+Virginia;FAIRFAX COUNTY;713 - TIMBER LANE Precinct	precinct
+Virginia;FAIRFAX COUNTY;714 - WALKER Precinct	precinct
+Virginia;FAIRFAX COUNTY;717 - WOODBURN Precinct	precinct
+Virginia;FAIRFAX COUNTY;718 - PINE RIDGE Precinct	precinct
+Virginia;FAIRFAX COUNTY;720 - THOREAU Precinct	precinct
+Virginia;FAIRFAX COUNTY;721 - MERRIFIELD Precinct	precinct
+Virginia;FAIRFAX COUNTY;723 - GALLOWS EAST Precinct	precinct
+Virginia;FAIRFAX COUNTY;726 - MAGARITY Precinct	precinct
+Virginia;FAIRFAX COUNTY;727 - OAKTON Precinct	precinct
+Virginia;FAIRFAX COUNTY;729 - NOTTOWAY Precinct	precinct
+Virginia;FAIRFAX COUNTY;730 - PENDERBROOK Precinct	precinct
+Virginia;FAIRFAX COUNTY;731 - TYSONS Precinct	precinct
+Virginia;FAIRFAX COUNTY;732 - OAK MARR Precinct	precinct
+Virginia;FAIRFAX COUNTY;733 - KILMER Precinct	precinct
+Virginia;FAIRFAX COUNTY;734 - HUNTERS BRANCH Precinct	precinct
+Virginia;FAIRFAX COUNTY;735 - ROTONDA Precinct	precinct
+Virginia;FAIRFAX COUNTY;801 - BURKE Precinct	precinct
+Virginia;FAIRFAX COUNTY;802 - CEDAR LAKE Precinct	precinct
+Virginia;FAIRFAX COUNTY;803 - CLIFTON Precinct	precinct
+Virginia;FAIRFAX COUNTY;804 - COLCHESTER Precinct	precinct
+Virginia;FAIRFAX COUNTY;805 - FAIRFAX STATION Precinct	precinct
+Virginia;FAIRFAX COUNTY;806 - SYDENSTRICKER Precinct	precinct
+Virginia;FAIRFAX COUNTY;807 - HUNT VALLEY Precinct	precinct
+Virginia;FAIRFAX COUNTY;811 - POHICK Precinct	precinct
+Virginia;FAIRFAX COUNTY;812 - VALLEY Precinct	precinct
+Virginia;FAIRFAX COUNTY;815 - WOODYARD Precinct	precinct
+Virginia;FAIRFAX COUNTY;824 - ORANGE Precinct	precinct
+Virginia;FAIRFAX COUNTY;825 - CHERRY RUN Precinct	precinct
+Virginia;FAIRFAX COUNTY;827 - IRVING Precinct	precinct
+Virginia;FAIRFAX COUNTY;833 - WHITE OAKS Precinct	precinct
+Virginia;FAIRFAX COUNTY;838 - SANGSTER Precinct	precinct
+Virginia;FAIRFAX COUNTY;839 - SILVERBROOK Precinct	precinct
+Virginia;FAIRFAX COUNTY;840 - WEST SPRINGFIELD Precinct	precinct
+Virginia;FAIRFAX COUNTY;841 - POPES HEAD Precinct	precinct
+Virginia;FAIRFAX COUNTY;842 - PARKWAY Precinct	precinct
+Virginia;FAIRFAX COUNTY;843 - FAIR LAKES Precinct	precinct
+Virginia;FAIRFAX COUNTY;844 - CENTERPOINTE Precinct	precinct
+Virginia;FAIRFAX COUNTY;845 - FOUNTAINHEAD Precinct	precinct
+Virginia;FAIRFAX COUNTY;846 - GREENBRIAR EAST Precinct	precinct
+Virginia;FAIRFAX COUNTY;847 - GREENBRIAR WEST Precinct	precinct
+Virginia;FAIRFAX COUNTY;848 - FAIR OAKS Precinct	precinct
+Virginia;FAIRFAX COUNTY;849 - NEWGATE Precinct	precinct
+Virginia;FAIRFAX COUNTY;850 - SOUTH RUN Precinct	precinct
+Virginia;FAIRFAX COUNTY;851 - WILLOW SPRINGS Precinct	precinct
+Virginia;FAIRFAX COUNTY;901 - CENTRE RIDGE Precinct	precinct
+Virginia;FAIRFAX COUNTY;902 - BROOKFIELD Precinct	precinct
+Virginia;FAIRFAX COUNTY;903 - CUB RUN Precinct	precinct
+Virginia;FAIRFAX COUNTY;904 - STONECROFT Precinct	precinct
+Virginia;FAIRFAX COUNTY;905 - FRANKLIN Precinct	precinct
+Virginia;FAIRFAX COUNTY;908 - HIDDEN MEADOW Precinct	precinct
+Virginia;FAIRFAX COUNTY;909 - OAK HILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;910 - LONDON TOWNE Precinct	precinct
+Virginia;FAIRFAX COUNTY;911 - NAVY Precinct	precinct
+Virginia;FAIRFAX COUNTY;913 - ROCKY RUN Precinct	precinct
+Virginia;FAIRFAX COUNTY;914 - VALE Precinct	precinct
+Virginia;FAIRFAX COUNTY;915 - VIRGINIA RUN Precinct	precinct
+Virginia;FAIRFAX COUNTY;916 - WAPLES MILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;917 - STONE NORTH Precinct	precinct
+Virginia;FAIRFAX COUNTY;918 - CENTREVILLE Precinct	precinct
+Virginia;FAIRFAX COUNTY;919 - GREEN TRAILS Precinct	precinct
+Virginia;FAIRFAX COUNTY;920 - CHANTILLY Precinct	precinct
+Virginia;FAIRFAX COUNTY;921 - DEER PARK Precinct	precinct
+Virginia;FAIRFAX COUNTY;923 - BULL RUN Precinct	precinct
+Virginia;FAIRFAX COUNTY;924 - SPINDLE Precinct	precinct
+Virginia;FAIRFAX COUNTY;925 - OLD MILL Precinct	precinct
+Virginia;FAIRFAX COUNTY;926 - POWELL Precinct	precinct
+Virginia;FAIRFAX COUNTY;927 - ARMFIELD Precinct	precinct
+Virginia;FAIRFAX COUNTY;928 - POPLAR TREE Precinct	precinct
+Virginia;FAIRFAX COUNTY;929 - DIFFICULT RUN Precinct	precinct
+Virginia;FAIRFAX COUNTY;930 - LEES CORNER  Precinct	precinct
+Virginia;FAIRFAX COUNTY;931 - CARSON Precinct	precinct
+Virginia;FAIRFAX COUNTY;932 - STONE SOUTH Precinct	precinct
+Virginia;FAIRFAX COUNTY;933 - COMPTON Precinct	precinct
+Virginia;FAUQUIER COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;FAUQUIER COUNTY;## Provisional Precinct	precinct
+Virginia;FAUQUIER COUNTY;101 - KETTLE RUN Precinct	precinct
+Virginia;FAUQUIER COUNTY;102 - CATLETT Precinct	precinct
+Virginia;FAUQUIER COUNTY;103 - CASANOVA Precinct	precinct
+Virginia;FAUQUIER COUNTY;104 - LOIS Precinct	precinct
+Virginia;FAUQUIER COUNTY;105 - OPAL Precinct	precinct
+Virginia;FAUQUIER COUNTY;106 - BALDWIN RIDGE Precinct	precinct
+Virginia;FAUQUIER COUNTY;201 - COURTHOUSE Precinct	precinct
+Virginia;FAUQUIER COUNTY;202 - AIRLIE Precinct	precinct
+Virginia;FAUQUIER COUNTY;203 - WARRENTON Precinct	precinct
+Virginia;FAUQUIER COUNTY;301 - MORRISVILLE Precinct	precinct
+Virginia;FAUQUIER COUNTY;302 - REMINGTON Precinct	precinct
+Virginia;FAUQUIER COUNTY;303 - BEALETON Precinct	precinct
+Virginia;FAUQUIER COUNTY;401 - MARSHALL Precinct	precinct
+Virginia;FAUQUIER COUNTY;402 - LEEDS Precinct	precinct
+Virginia;FAUQUIER COUNTY;403 - WATERLOO Precinct	precinct
+Virginia;FAUQUIER COUNTY;404 - SPRINGS VALLEY Precinct	precinct
+Virginia;FAUQUIER COUNTY;501 - THE PLAINS Precinct	precinct
+Virginia;FAUQUIER COUNTY;502 - NEW BALTIMORE Precinct	precinct
+Virginia;FAUQUIER COUNTY;503 - BROAD RUN Precinct	precinct
+Virginia;FAUQUIER COUNTY;504 - VINT HILL Precinct	precinct
+Virginia;FLOYD COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;FLOYD COUNTY;## Provisional Precinct	precinct
+Virginia;FLOYD COUNTY;101 - LOCUST GROVE Precinct	precinct
+Virginia;FLOYD COUNTY;201 - LITTLE RIVER Precinct	precinct
+Virginia;FLOYD COUNTY;301 - COURTHOUSE Precinct	precinct
+Virginia;FLOYD COUNTY;401 - BURKS FORK Precinct	precinct
+Virginia;FLOYD COUNTY;501 - INDIAN VALLEY Precinct	precinct
+Virginia;FLUVANNA COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;FLUVANNA COUNTY;## Provisional Precinct	precinct
+Virginia;FLUVANNA COUNTY;101 - PALMYRA Precinct	precinct
+Virginia;FLUVANNA COUNTY;201 - COLUMBIA Precinct	precinct
+Virginia;FLUVANNA COUNTY;301 - FORK UNION Precinct	precinct
+Virginia;FLUVANNA COUNTY;401 - CUNNINGHAM Precinct	precinct
+Virginia;FLUVANNA COUNTY;501 - RIVANNA Precinct	precinct
+Virginia;FRANKLIN COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;FRANKLIN COUNTY;## Provisional Precinct	precinct
+Virginia;FRANKLIN COUNTY;102 - BURNT CHIMNEY Precinct	precinct
+Virginia;FRANKLIN COUNTY;103 - SCRUGGS Precinct	precinct
+Virginia;FRANKLIN COUNTY;201 - GLADE HILL Precinct	precinct
+Virginia;FRANKLIN COUNTY;202 - PENHOOK Precinct	precinct
+Virginia;FRANKLIN COUNTY;203 - HODGESVILLE Precinct	precinct
+Virginia;FRANKLIN COUNTY;204 - DUDLEY Precinct	precinct
+Virginia;FRANKLIN COUNTY;301 - SNOW CREEK Precinct	precinct
+Virginia;FRANKLIN COUNTY;302 - FORK MOUNTAIN Precinct	precinct
+Virginia;FRANKLIN COUNTY;303 - SONTAG Precinct	precinct
+Virginia;FRANKLIN COUNTY;304 - DICKINSON Precinct	precinct
+Virginia;FRANKLIN COUNTY;401 - HENRY Precinct	precinct
+Virginia;FRANKLIN COUNTY;402 - FERRUM Precinct	precinct
+Virginia;FRANKLIN COUNTY;403 - ENDICOTT Precinct	precinct
+Virginia;FRANKLIN COUNTY;501 - WAIDSBORO Precinct	precinct
+Virginia;FRANKLIN COUNTY;502 - CALLAWAY Precinct	precinct
+Virginia;FRANKLIN COUNTY;503 - BOWMANS Precinct	precinct
+Virginia;FRANKLIN COUNTY;504 - GOGGINSVILLE Precinct	precinct
+Virginia;FRANKLIN COUNTY;601 - BOONES MILL Precinct	precinct
+Virginia;FRANKLIN COUNTY;602 - BONBROOK Precinct	precinct
+Virginia;FRANKLIN COUNTY;603 - COOPERS COVE Precinct	precinct
+Virginia;FRANKLIN COUNTY;701 - ROCKY MOUNT EAST Precinct	precinct
+Virginia;FRANKLIN COUNTY;702 - ROCKY MOUNT WEST Precinct	precinct
+Virginia;FRANKLIN COUNTY;703 - ROCKY MOUNT SOUTH Precinct	precinct
+Virginia;FREDERICK COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;FREDERICK COUNTY;## Provisional Precinct	precinct
+Virginia;FREDERICK COUNTY;101 - RUSSELLS Precinct	precinct
+Virginia;FREDERICK COUNTY;102 - GORE Precinct	precinct
+Virginia;FREDERICK COUNTY;103 - KERNSTOWN Precinct	precinct
+Virginia;FREDERICK COUNTY;104 - CEDAR CREEK Precinct	precinct
+Virginia;FREDERICK COUNTY;201 - GAINESBOROUGH Precinct	precinct
+Virginia;FREDERICK COUNTY;202 - ALBIN Precinct	precinct
+Virginia;FREDERICK COUNTY;203 - REDLAND Precinct	precinct
+Virginia;FREDERICK COUNTY;204 - NAIN Precinct	precinct
+Virginia;FREDERICK COUNTY;301 - CLEAR BROOK Precinct	precinct
+Virginia;FREDERICK COUNTY;302 - NEFF'S TOWN Precinct	precinct
+Virginia;FREDERICK COUNTY;303 - WHITE HALL Precinct	precinct
+Virginia;FREDERICK COUNTY;401 - CARPERS VALLEY Precinct	precinct
+Virginia;FREDERICK COUNTY;402 - SHENANDOAH Precinct	precinct
+Virginia;FREDERICK COUNTY;403 - PARKIN'S MILL Precinct	precinct
+Virginia;FREDERICK COUNTY;404 - ARMEL Precinct	precinct
+Virginia;FREDERICK COUNTY;501 - STEPHENS CITY Precinct	precinct
+Virginia;FREDERICK COUNTY;502 - NEWTOWN Precinct	precinct
+Virginia;FREDERICK COUNTY;503 - CANTERBURG Precinct	precinct
+Virginia;FREDERICK COUNTY;601 - MILLBROOK Precinct	precinct
+Virginia;FREDERICK COUNTY;602 - ASH HOLLOW Precinct	precinct
+Virginia;FREDERICK COUNTY;603 - GREENWOOD Precinct	precinct
+Virginia;GILES COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;GILES COUNTY;## Provisional Precinct	precinct
+Virginia;GILES COUNTY;101 - GLEN LYN Precinct	precinct
+Virginia;GILES COUNTY;102 - RICH CREEK Precinct	precinct
+Virginia;GILES COUNTY;103 - NARROWS Precinct	precinct
+Virginia;GILES COUNTY;201 - PEARISBURG Precinct	precinct
+Virginia;GILES COUNTY;202 - STAFFORDSVILLE Precinct	precinct
+Virginia;GILES COUNTY;203 - WHITE GATE Precinct	precinct
+Virginia;GILES COUNTY;301 - EGGLESTON Precinct	precinct
+Virginia;GILES COUNTY;302 - PEMBROKE Precinct	precinct
+Virginia;GILES COUNTY;303 - NEWPORT Precinct	precinct
+Virginia;GLOUCESTER COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;GLOUCESTER COUNTY;## Provisional Precinct	precinct
+Virginia;GLOUCESTER COUNTY;101 - HARCUM Precinct	precinct
+Virginia;GLOUCESTER COUNTY;102 - SALEM Precinct	precinct
+Virginia;GLOUCESTER COUNTY;103 - PEASLEY Precinct	precinct
+Virginia;GLOUCESTER COUNTY;201 - COURTHOUSE Precinct	precinct
+Virginia;GLOUCESTER COUNTY;202 - BOTETOURT Precinct	precinct
+Virginia;GLOUCESTER COUNTY;301 - WHITE MARSH Precinct	precinct
+Virginia;GLOUCESTER COUNTY;302 - ROANES Precinct	precinct
+Virginia;GLOUCESTER COUNTY;401 - HAYES Precinct	precinct
+Virginia;GLOUCESTER COUNTY;402 - SARAHS CREEK Precinct	precinct
+Virginia;GLOUCESTER COUNTY;501 - ACHILLES Precinct	precinct
+Virginia;GLOUCESTER COUNTY;502 - WALKER Precinct	precinct
+Virginia;GOOCHLAND COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;GOOCHLAND COUNTY;## Provisional Precinct	precinct
+Virginia;GOOCHLAND COUNTY;101 - FIFE Precinct	precinct
+Virginia;GOOCHLAND COUNTY;102 - HADENSVILLE Precinct	precinct
+Virginia;GOOCHLAND COUNTY;201 - THREE SQUARE Precinct	precinct
+Virginia;GOOCHLAND COUNTY;202 - SANDY HOOK Precinct	precinct
+Virginia;GOOCHLAND COUNTY;301 - GOOCHLAND COURT HOUSE 1 Precinct	precinct
+Virginia;GOOCHLAND COUNTY;302 - GOOCHLAND COURT HOUSE 2 Precinct	precinct
+Virginia;GOOCHLAND COUNTY;401 - SHALLOW WELL Precinct	precinct
+Virginia;GOOCHLAND COUNTY;402 - CENTERVILLE Precinct	precinct
+Virginia;GOOCHLAND COUNTY;501 - MANAKIN Precinct	precinct
+Virginia;GOOCHLAND COUNTY;502 - BLAIR ROAD Precinct	precinct
+Virginia;GRAYSON COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;GRAYSON COUNTY;## Provisional Precinct	precinct
+Virginia;GRAYSON COUNTY;101 - BRIDLE CREEK Precinct	precinct
+Virginia;GRAYSON COUNTY;102 - FLATRIDGE Precinct	precinct
+Virginia;GRAYSON COUNTY;103 - GRANT Precinct	precinct
+Virginia;GRAYSON COUNTY;104 - MOUTH OF WILSON Precinct	precinct
+Virginia;GRAYSON COUNTY;105 - MOUNT ROGERS Precinct	precinct
+Virginia;GRAYSON COUNTY;106 - RUGBY Precinct	precinct
+Virginia;GRAYSON COUNTY;107 - TROUTDALE Precinct	precinct
+Virginia;GRAYSON COUNTY;108 - COMERS ROCK Precinct	precinct
+Virginia;GRAYSON COUNTY;202 - ELK CREEK Precinct	precinct
+Virginia;GRAYSON COUNTY;203 - INDEPENDENCE Precinct	precinct
+Virginia;GRAYSON COUNTY;301 - BAYWOOD Precinct	precinct
+Virginia;GRAYSON COUNTY;302 - FAIRVIEW Precinct	precinct
+Virginia;GRAYSON COUNTY;401 - FRIES Precinct	precinct
+Virginia;GRAYSON COUNTY;402 - PROVIDENCE Precinct	precinct
+Virginia;GRAYSON COUNTY;403 - OLDTOWN Precinct	precinct
+Virginia;GREENE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;GREENE COUNTY;## Provisional Precinct	precinct
+Virginia;GREENE COUNTY;101 - DYKE Precinct	precinct
+Virginia;GREENE COUNTY;102 - SWIFT RUN Precinct	precinct
+Virginia;GREENE COUNTY;201 - RUCKERSVILLE Precinct	precinct
+Virginia;GREENE COUNTY;301 - STANARDSVILLE Precinct	precinct
+Virginia;GREENE COUNTY;401 - MIDWAY Precinct	precinct
+Virginia;GREENSVILLE COUNTY;## Provisional Precinct	precinct
+Virginia;GREENSVILLE COUNTY;101 - PRECINCT 1-A Precinct	precinct
+Virginia;GREENSVILLE COUNTY;102 - PRECINCT 1-B Precinct	precinct
+Virginia;GREENSVILLE COUNTY;103 - PRECINCT 1-C Precinct	precinct
+Virginia;GREENSVILLE COUNTY;201 - PRECINCT 2-A Precinct	precinct
+Virginia;GREENSVILLE COUNTY;202 - PRECINCT 2-B Precinct	precinct
+Virginia;GREENSVILLE COUNTY;302 - PRECINCT 3-A Precinct	precinct
+Virginia;GREENSVILLE COUNTY;401 - PRECINCT 4-A Precinct	precinct
+Virginia;GREENSVILLE COUNTY;402 - PRECINCT 4-B Precinct	precinct
+Virginia;GREENSVILLE COUNTY;403 - PRECINCT 4-C Precinct	precinct
+Virginia;HALIFAX COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;HALIFAX COUNTY;## Provisional Precinct	precinct
+Virginia;HALIFAX COUNTY;101 - CHILDREY Precinct	precinct
+Virginia;HALIFAX COUNTY;102 - LIBERTY Precinct	precinct
+Virginia;HALIFAX COUNTY;103 - REPUBLICAN GROVE Precinct	precinct
+Virginia;HALIFAX COUNTY;201 - CLAYS MILL Precinct	precinct
+Virginia;HALIFAX COUNTY;202 - CROSSROADS Precinct	precinct
+Virginia;HALIFAX COUNTY;203 - CLOVER Precinct	precinct
+Virginia;HALIFAX COUNTY;302 - MEADVILLE Precinct	precinct
+Virginia;HALIFAX COUNTY;304 - VERNON HILL Precinct	precinct
+Virginia;HALIFAX COUNTY;305 - SINAI Precinct	precinct
+Virginia;HALIFAX COUNTY;401 - COURTHOUSE Precinct	precinct
+Virginia;HALIFAX COUNTY;403 - CENTER Precinct	precinct
+Virginia;HALIFAX COUNTY;502 - DAN RIVER Precinct	precinct
+Virginia;HALIFAX COUNTY;503 - SCOTTSBURG Precinct	precinct
+Virginia;HALIFAX COUNTY;601 - BLACK WALNUT Precinct	precinct
+Virginia;HALIFAX COUNTY;603 - MT CARMEL Precinct	precinct
+Virginia;HALIFAX COUNTY;605 - UNION Precinct	precinct
+Virginia;HALIFAX COUNTY;701 - HYCO Precinct	precinct
+Virginia;HALIFAX COUNTY;702 - MIDWAY Precinct	precinct
+Virginia;HALIFAX COUNTY;703 - VIRGILINA Precinct	precinct
+Virginia;HALIFAX COUNTY;801 - SOUTH BOSTON Precinct	precinct
+Virginia;HALIFAX COUNTY;WARD A - 1160A Precinct	precinct
+Virginia;HALIFAX COUNTY;WARD B - 1160B Precinct	precinct
+Virginia;HALIFAX COUNTY;WARD C - 1160C Precinct	precinct
+Virginia;HALIFAX COUNTY;WARD D - 1160D Precinct	precinct
+Virginia;HANOVER COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;HANOVER COUNTY;## Provisional Precinct	precinct
+Virginia;HANOVER COUNTY;101 - ASHLAND Precinct	precinct
+Virginia;HANOVER COUNTY;104 - SLIDING HILL Precinct	precinct
+Virginia;HANOVER COUNTY;105 - BERKLEY Precinct	precinct
+Virginia;HANOVER COUNTY;106 - KERSEY CREEK Precinct	precinct
+Virginia;HANOVER COUNTY;107 - CHICKAHOMINY Precinct	precinct
+Virginia;HANOVER COUNTY;201 - BEAVERDAM Precinct	precinct
+Virginia;HANOVER COUNTY;202 - BLUNTS Precinct	precinct
+Virginia;HANOVER COUNTY;203 - WILMINGTON PARISH Precinct	precinct
+Virginia;HANOVER COUNTY;206 - COURTHOUSE Precinct	precinct
+Virginia;HANOVER COUNTY;208 - OAK KNOLL Precinct	precinct
+Virginia;HANOVER COUNTY;209 - WEST HANOVER Precinct	precinct
+Virginia;HANOVER COUNTY;210 - OAK HILL Precinct	precinct
+Virginia;HANOVER COUNTY;301 - CLAY Precinct	precinct
+Virginia;HANOVER COUNTY;303 - SHADY GROVE Precinct	precinct
+Virginia;HANOVER COUNTY;304 - ATLEE Precinct	precinct
+Virginia;HANOVER COUNTY;305 - COOL SPRING Precinct	precinct
+Virginia;HANOVER COUNTY;401 - BATTLEFIELD Precinct	precinct
+Virginia;HANOVER COUNTY;403 - COLD HARBOR Precinct	precinct
+Virginia;HANOVER COUNTY;404 - BLACK CREEK Precinct	precinct
+Virginia;HANOVER COUNTY;405 - PEBBLE CREEK Precinct	precinct
+Virginia;HANOVER COUNTY;406 - BEAVERDAM CREEK Precinct	precinct
+Virginia;HANOVER COUNTY;502 - RURAL POINT Precinct	precinct
+Virginia;HANOVER COUNTY;503 - NEWMAN Precinct	precinct
+Virginia;HANOVER COUNTY;504 - STUDLEY Precinct	precinct
+Virginia;HANOVER COUNTY;505 - TOTOPOTOMOY Precinct	precinct
+Virginia;HANOVER COUNTY;506 - GEORGETOWN Precinct	precinct
+Virginia;HANOVER COUNTY;507 - LAUREL MEADOW Precinct	precinct
+Virginia;HANOVER COUNTY;601 - VILLAGE Precinct	precinct
+Virginia;HANOVER COUNTY;602 - LEE DAVIS Precinct	precinct
+Virginia;HANOVER COUNTY;603 - MECHANICSVILLE Precinct	precinct
+Virginia;HANOVER COUNTY;604 - HANOVER GROVE Precinct	precinct
+Virginia;HANOVER COUNTY;701 - FARRINGTON Precinct	precinct
+Virginia;HANOVER COUNTY;702 - MONTPELIER Precinct	precinct
+Virginia;HANOVER COUNTY;703 - ROCKVILLE Precinct	precinct
+Virginia;HANOVER COUNTY;704 - ELMONT Precinct	precinct
+Virginia;HANOVER COUNTY;705 - SOUTH ANNA Precinct	precinct
+Virginia;HENRICO COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;HENRICO COUNTY;## Provisional Precinct	precinct
+Virginia;HENRICO COUNTY;101 - COALPIT Precinct	precinct
+Virginia;HENRICO COUNTY;102 - DUMBARTON Precinct	precinct
+Virginia;HENRICO COUNTY;103 - GLEN ALLEN Precinct	precinct
+Virginia;HENRICO COUNTY;105 - GREENDALE Precinct	precinct
+Virginia;HENRICO COUNTY;106 - HERMITAGE Precinct	precinct
+Virginia;HENRICO COUNTY;108 - HUNGARY CREEK Precinct	precinct
+Virginia;HENRICO COUNTY;109 - HUNTON Precinct	precinct
+Virginia;HENRICO COUNTY;110 - JOHNSON Precinct	precinct
+Virginia;HENRICO COUNTY;111 - LAKESIDE Precinct	precinct
+Virginia;HENRICO COUNTY;112 - LONGAN Precinct	precinct
+Virginia;HENRICO COUNTY;113 - MAUDE TREVVETT Precinct	precinct
+Virginia;HENRICO COUNTY;114 - MONUMENT HILLS Precinct	precinct
+Virginia;HENRICO COUNTY;115 - STAPLES MILL Precinct	precinct
+Virginia;HENRICO COUNTY;117 - WESTWOOD Precinct	precinct
+Virginia;HENRICO COUNTY;201 - ADAMS Precinct	precinct
+Virginia;HENRICO COUNTY;202 - AZALEA Precinct	precinct
+Virginia;HENRICO COUNTY;203 - BELMONT Precinct	precinct
+Virginia;HENRICO COUNTY;204 - BROOKLAND Precinct	precinct
+Virginia;HENRICO COUNTY;205 - CANTERBURY Precinct	precinct
+Virginia;HENRICO COUNTY;206 - CENTRAL GARDENS Precinct	precinct
+Virginia;HENRICO COUNTY;207 - CHAMBERLAYNE Precinct	precinct
+Virginia;HENRICO COUNTY;208 - FAIRFIELD Precinct	precinct
+Virginia;HENRICO COUNTY;209 - GLEN LEA Precinct	precinct
+Virginia;HENRICO COUNTY;210 - GREENWOOD Precinct	precinct
+Virginia;HENRICO COUNTY;211 - HIGHLAND GARDENS Precinct	precinct
+Virginia;HENRICO COUNTY;212 - HOLLYBROOK Precinct	precinct
+Virginia;HENRICO COUNTY;213 - HUNGARY Precinct	precinct
+Virginia;HENRICO COUNTY;214 - LONGDALE Precinct	precinct
+Virginia;HENRICO COUNTY;215 - MAPLEWOOD Precinct	precinct
+Virginia;HENRICO COUNTY;216 - MOODY Precinct	precinct
+Virginia;HENRICO COUNTY;217 - MOUNTAIN Precinct	precinct
+Virginia;HENRICO COUNTY;218 - OAKVIEW Precinct	precinct
+Virginia;HENRICO COUNTY;219 - RANDOLPH Precinct	precinct
+Virginia;HENRICO COUNTY;220 - RATCLIFFE Precinct	precinct
+Virginia;HENRICO COUNTY;221 - STRATFORD HALL Precinct	precinct
+Virginia;HENRICO COUNTY;222 - WILDER Precinct	precinct
+Virginia;HENRICO COUNTY;223 - YELLOW TAVERN Precinct	precinct
+Virginia;HENRICO COUNTY;224 - ESSEX VILLAGE Precinct	precinct
+Virginia;HENRICO COUNTY;301 - CAUSEWAY Precinct	precinct
+Virginia;HENRICO COUNTY;302 - CEDARFIELD Precinct	precinct
+Virginia;HENRICO COUNTY;303 - INNSBROOK Precinct	precinct
+Virginia;HENRICO COUNTY;304 - JACKSON DAVIS Precinct	precinct
+Virginia;HENRICO COUNTY;305 - NUCKOLS FARM Precinct	precinct
+Virginia;HENRICO COUNTY;306 - POCAHONTAS Precinct	precinct
+Virginia;HENRICO COUNTY;307 - RIDGE Precinct	precinct
+Virginia;HENRICO COUNTY;308 - RIVERS EDGE Precinct	precinct
+Virginia;HENRICO COUNTY;309 - SADLER Precinct	precinct
+Virginia;HENRICO COUNTY;310 - SHADY GROVE Precinct	precinct
+Virginia;HENRICO COUNTY;311 - SHORT PUMP Precinct	precinct
+Virginia;HENRICO COUNTY;312 - SPRINGFIELD Precinct	precinct
+Virginia;HENRICO COUNTY;313 - STONEY RUN Precinct	precinct
+Virginia;HENRICO COUNTY;314 - THREE CHOPT Precinct	precinct
+Virginia;HENRICO COUNTY;315 - TUCKER Precinct	precinct
+Virginia;HENRICO COUNTY;401 - QUIOCCASIN  Precinct	precinct
+Virginia;HENRICO COUNTY;402 - CRESTVIEW Precinct	precinct
+Virginia;HENRICO COUNTY;403 - DERBYSHIRE Precinct	precinct
+Virginia;HENRICO COUNTY;404 - FREEMAN Precinct	precinct
+Virginia;HENRICO COUNTY;405 - GAYTON Precinct	precinct
+Virginia;HENRICO COUNTY;406 - GODWIN Precinct	precinct
+Virginia;HENRICO COUNTY;407 - LAKEWOOD Precinct	precinct
+Virginia;HENRICO COUNTY;408 - LAUDERDALE Precinct	precinct
+Virginia;HENRICO COUNTY;409 - MAYBEURY Precinct	precinct
+Virginia;HENRICO COUNTY;410 - MOORELAND Precinct	precinct
+Virginia;HENRICO COUNTY;411 - PEMBERTON Precinct	precinct
+Virginia;HENRICO COUNTY;412 - PINCHBECK Precinct	precinct
+Virginia;HENRICO COUNTY;413 - RIDGEFIELD Precinct	precinct
+Virginia;HENRICO COUNTY;414 - ROLLINGWOOD Precinct	precinct
+Virginia;HENRICO COUNTY;415 - SKIPWITH Precinct	precinct
+Virginia;HENRICO COUNTY;416 - SPOTTSWOOD Precinct	precinct
+Virginia;HENRICO COUNTY;417 - TUCKAHOE Precinct	precinct
+Virginia;HENRICO COUNTY;418 - WELBORNE Precinct	precinct
+Virginia;HENRICO COUNTY;419 - WEST END Precinct	precinct
+Virginia;HENRICO COUNTY;501 - ANTIOCH Precinct	precinct
+Virginia;HENRICO COUNTY;502 - CEDAR FORK Precinct	precinct
+Virginia;HENRICO COUNTY;503 - CHICKAHOMINY Precinct	precinct
+Virginia;HENRICO COUNTY;504 - DONAHOE Precinct	precinct
+Virginia;HENRICO COUNTY;505 - DOREY Precinct	precinct
+Virginia;HENRICO COUNTY;506 - EANES Precinct	precinct
+Virginia;HENRICO COUNTY;507 - ELKO Precinct	precinct
+Virginia;HENRICO COUNTY;508 - HIGHLAND SPRINGS Precinct	precinct
+Virginia;HENRICO COUNTY;509 - LABURNUM Precinct	precinct
+Virginia;HENRICO COUNTY;510 - MEHFOUD Precinct	precinct
+Virginia;HENRICO COUNTY;511 - MONTROSE Precinct	precinct
+Virginia;HENRICO COUNTY;512 - NINE MILE Precinct	precinct
+Virginia;HENRICO COUNTY;513 - PLEASANTS Precinct	precinct
+Virginia;HENRICO COUNTY;514 - ROLFE Precinct	precinct
+Virginia;HENRICO COUNTY;515 - SANDSTON Precinct	precinct
+Virginia;HENRICO COUNTY;516 - SULLIVANS Precinct	precinct
+Virginia;HENRICO COUNTY;517 - TOWN HALL Precinct	precinct
+Virginia;HENRICO COUNTY;518 - WHITLOCKS Precinct	precinct
+Virginia;HENRY COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;HENRY COUNTY;## Provisional Precinct	precinct
+Virginia;HENRY COUNTY;101 - BASSETT NUMBER TWO Precinct	precinct
+Virginia;HENRY COUNTY;102 - GUNVILLE Precinct	precinct
+Virginia;HENRY COUNTY;103 - SCOTT'S TANYARD Precinct	precinct
+Virginia;HENRY COUNTY;201 - FIELDALE Precinct	precinct
+Virginia;HENRY COUNTY;202 - HORSEPASTURE #1 Precinct	precinct
+Virginia;HENRY COUNTY;203 - HORSEPASTURE #2 Precinct	precinct
+Virginia;HENRY COUNTY;204 - SPENCER Precinct	precinct
+Virginia;HENRY COUNTY;302 - AXTON Precinct	precinct
+Virginia;HENRY COUNTY;303 - IRISBURG Precinct	precinct
+Virginia;HENRY COUNTY;304 - MOUNT OLIVET Precinct	precinct
+Virginia;HENRY COUNTY;305 - MOUNTAIN VALLEY Precinct	precinct
+Virginia;HENRY COUNTY;401 - COLLINSVILLE NUMBER 1 Precinct	precinct
+Virginia;HENRY COUNTY;402 - DANIELS CREEK Precinct	precinct
+Virginia;HENRY COUNTY;404 - COLLINSVILLE NUMBER 2 Precinct	precinct
+Virginia;HENRY COUNTY;405 - MOUNTAIN VIEW Precinct	precinct
+Virginia;HENRY COUNTY;501 - BASSETT NUMBER ONE Precinct	precinct
+Virginia;HENRY COUNTY;502 - FIGSBORO Precinct	precinct
+Virginia;HENRY COUNTY;503 - STANLEYTOWN Precinct	precinct
+Virginia;HENRY COUNTY;504 - OAK LEVEL Precinct	precinct
+Virginia;HENRY COUNTY;505 - DYERS STORE Precinct	precinct
+Virginia;HENRY COUNTY;601 - FONTAINE Precinct	precinct
+Virginia;HENRY COUNTY;602 - HILLCREST Precinct	precinct
+Virginia;HENRY COUNTY;603 - RIDGEWAY #1 Precinct	precinct
+Virginia;HENRY COUNTY;604 - RIDGEWAY #2 Precinct	precinct
+Virginia;HIGHLAND COUNTY;## Provisional Precinct	precinct
+Virginia;HIGHLAND COUNTY;001 - MONTEREY Precinct	precinct
+Virginia;HIGHLAND COUNTY;003 - WILSONS MILL Precinct	precinct
+Virginia;HIGHLAND COUNTY;005 - BLUE GRASS Precinct	precinct
+Virginia;HIGHLAND COUNTY;007 - MILL GAP Precinct	precinct
+Virginia;HIGHLAND COUNTY;008 - MCDOWELL Precinct	precinct
+Virginia;HIGHLAND COUNTY;010 - HEADWATERS Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;## Provisional Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;101 - SMITHFIELD Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;102 - CYPRESS CREEK Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;201 - BARTLETT Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;202 - CARROLLTON Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;301 - RUSHMERE Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;302 - PONS Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;401 - COURTHOUSE Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;402 - WINDSOR Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;403 - LONGVIEW Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;501 - WALTERS Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;502 - CAMPS MILL Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;503 - CARRSVILLE Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;504 - ZUNI Precinct	precinct
+Virginia;ISLE OF WIGHT COUNTY;505 - RAYNOR Precinct	precinct
+Virginia;JAMES CITY COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;JAMES CITY COUNTY;## Provisional Precinct	precinct
+Virginia;JAMES CITY COUNTY;101 - BERKELEY A Precinct	precinct
+Virginia;JAMES CITY COUNTY;102 - BERKELEY B Precinct	precinct
+Virginia;JAMES CITY COUNTY;103 - BERKELEY C Precinct	precinct
+Virginia;JAMES CITY COUNTY;104- BERKELEY D Precinct	precinct
+Virginia;JAMES CITY COUNTY;201 - JAMESTOWN A Precinct	precinct
+Virginia;JAMES CITY COUNTY;202 - JAMESTOWN B Precinct	precinct
+Virginia;JAMES CITY COUNTY;203 - JAMESTOWN C Precinct	precinct
+Virginia;JAMES CITY COUNTY;204 - JAMESTOWN D Precinct	precinct
+Virginia;JAMES CITY COUNTY;301 - POWHATAN A Precinct	precinct
+Virginia;JAMES CITY COUNTY;302 - POWHATAN B Precinct	precinct
+Virginia;JAMES CITY COUNTY;303 - POWHATAN C Precinct	precinct
+Virginia;JAMES CITY COUNTY;304 - POWHATAN D Precinct	precinct
+Virginia;JAMES CITY COUNTY;401 - STONEHOUSE A Precinct	precinct
+Virginia;JAMES CITY COUNTY;402 - STONEHOUSE B Precinct	precinct
+Virginia;JAMES CITY COUNTY;403 - STONEHOUSE C Precinct	precinct
+Virginia;JAMES CITY COUNTY;501 - ROBERTS A Precinct	precinct
+Virginia;JAMES CITY COUNTY;502 - ROBERTS B Precinct	precinct
+Virginia;JAMES CITY COUNTY;503 - ROBERTS C Precinct	precinct
+Virginia;JAMES CITY COUNTY;504 - ROBERTS D Precinct	precinct
+Virginia;KING & QUEEN COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;KING & QUEEN COUNTY;## Provisional Precinct	precinct
+Virginia;KING & QUEEN COUNTY;101 - OWENTON Precinct	precinct
+Virginia;KING & QUEEN COUNTY;201 - CLARKS Precinct	precinct
+Virginia;KING & QUEEN COUNTY;301 - SHACKLEFORDS Precinct	precinct
+Virginia;KING & QUEEN COUNTY;401 - COURTHOUSE Precinct	precinct
+Virginia;KING & QUEEN COUNTY;501 - OLDMILL Precinct	precinct
+Virginia;KING GEORGE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;KING GEORGE COUNTY;## Provisional Precinct	precinct
+Virginia;KING GEORGE COUNTY;101 - COURTHOUSE Precinct	precinct
+Virginia;KING GEORGE COUNTY;102 - PASSAPATANZY Precinct	precinct
+Virginia;KING GEORGE COUNTY;201 - MONROE Precinct	precinct
+Virginia;KING GEORGE COUNTY;301 - DAHLGREN Precinct	precinct
+Virginia;KING GEORGE COUNTY;401 - SHILOH Precinct	precinct
+Virginia;KING WILLIAM COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;KING WILLIAM COUNTY;## Provisional Precinct	precinct
+Virginia;KING WILLIAM COUNTY;101 - WEST POINT Precinct	precinct
+Virginia;KING WILLIAM COUNTY;201 - SWEET HALL Precinct	precinct
+Virginia;KING WILLIAM COUNTY;202 - COURTHOUSE Precinct	precinct
+Virginia;KING WILLIAM COUNTY;301 - AYLETT Precinct	precinct
+Virginia;KING WILLIAM COUNTY;401 - MANQUIN Precinct	precinct
+Virginia;KING WILLIAM COUNTY;501 - MANGOHICK Precinct	precinct
+Virginia;LANCASTER COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;LANCASTER COUNTY;## Provisional Precinct	precinct
+Virginia;LANCASTER COUNTY;101 - PRECINCT 1-1 Precinct	precinct
+Virginia;LANCASTER COUNTY;201 - PRECINCT 2-1 Precinct	precinct
+Virginia;LANCASTER COUNTY;301 - PRECINCT 3-1 Precinct	precinct
+Virginia;LANCASTER COUNTY;302 - PRECINCT 3-2 Precinct	precinct
+Virginia;LANCASTER COUNTY;401 - PRECINCT 4-1 Precinct	precinct
+Virginia;LANCASTER COUNTY;501 - PRECINCT 5-1 Precinct	precinct
+Virginia;LEE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;LEE COUNTY;## Provisional Precinct	precinct
+Virginia;LEE COUNTY;101 - ELYDALE Precinct	precinct
+Virginia;LEE COUNTY;102 - EWING Precinct	precinct
+Virginia;LEE COUNTY;103 - ROSE HILL Precinct	precinct
+Virginia;LEE COUNTY;201 - BLACKWATER Precinct	precinct
+Virginia;LEE COUNTY;202 - FLATWOODS Precinct	precinct
+Virginia;LEE COUNTY;203 - JONESVILLE Precinct	precinct
+Virginia;LEE COUNTY;301 - BEN HUR Precinct	precinct
+Virginia;LEE COUNTY;302 - WOODWAY Precinct	precinct
+Virginia;LEE COUNTY;401 - STICKLEYVILLE Precinct	precinct
+Virginia;LEE COUNTY;402 - JASPER Precinct	precinct
+Virginia;LEE COUNTY;403 - SEMINARY Precinct	precinct
+Virginia;LEE COUNTY;404 - DRYDEN Precinct	precinct
+Virginia;LEE COUNTY;501 - SAINT CHARLES Precinct	precinct
+Virginia;LEE COUNTY;502 - PENNINGTON Precinct	precinct
+Virginia;LEE COUNTY;503 - ROBBINS CHAPEL Precinct	precinct
+Virginia;LEE COUNTY;504 - KEOKEE Precinct	precinct
+Virginia;LOUDOUN COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;LOUDOUN COUNTY;## Provisional Precinct	precinct
+Virginia;LOUDOUN COUNTY;107 - LITTLE RIVER Precinct	precinct
+Virginia;LOUDOUN COUNTY;108 - MERCER Precinct	precinct
+Virginia;LOUDOUN COUNTY;112 - FREEDOM Precinct	precinct
+Virginia;LOUDOUN COUNTY;114 - DULLES SOUTH Precinct	precinct
+Virginia;LOUDOUN COUNTY;117 - CARTER Precinct	precinct
+Virginia;LOUDOUN COUNTY;118 - MOOREFIELD Precinct	precinct
+Virginia;LOUDOUN COUNTY;119 - ARCOLA Precinct	precinct
+Virginia;LOUDOUN COUNTY;120 - LUNSFORD Precinct	precinct
+Virginia;LOUDOUN COUNTY;121 - TOWN HALL Precinct	precinct
+Virginia;LOUDOUN COUNTY;122 - HUTCHISON FARM Precinct	precinct
+Virginia;LOUDOUN COUNTY;123 - CARDINAL RIDGE Precinct	precinct
+Virginia;LOUDOUN COUNTY;124 - LIBERTY Precinct	precinct
+Virginia;LOUDOUN COUNTY;125 - ROCK RIDGE Precinct	precinct
+Virginia;LOUDOUN COUNTY;126-GOSHEN POST Precinct	precinct
+Virginia;LOUDOUN COUNTY;207 - RIVER BEND Precinct	precinct
+Virginia;LOUDOUN COUNTY;208 - ALGONKIAN Precinct	precinct
+Virginia;LOUDOUN COUNTY;209 - POTOMAC FALLS Precinct	precinct
+Virginia;LOUDOUN COUNTY;210 - CASCADES Precinct	precinct
+Virginia;LOUDOUN COUNTY;213 - COUNTRYSIDE Precinct	precinct
+Virginia;LOUDOUN COUNTY;214 - SUGARLAND NORTH Precinct	precinct
+Virginia;LOUDOUN COUNTY;215 - SUGARLAND SOUTH Precinct	precinct
+Virginia;LOUDOUN COUNTY;216 - LOWES ISLAND Precinct	precinct
+Virginia;LOUDOUN COUNTY;217 - SOUTH BANK Precinct	precinct
+Virginia;LOUDOUN COUNTY;218 - UNIVERSITY CENTER Precinct	precinct
+Virginia;LOUDOUN COUNTY;219 - GALILEE CHURCH Precinct	precinct
+Virginia;LOUDOUN COUNTY;301 - PURCELLVILLE Precinct	precinct
+Virginia;LOUDOUN COUNTY;302 - ROUND HILL Precinct	precinct
+Virginia;LOUDOUN COUNTY;303 - HILLSBORO Precinct	precinct
+Virginia;LOUDOUN COUNTY;305 - PHILOMONT Precinct	precinct
+Virginia;LOUDOUN COUNTY;307 - MIDDLEBURG Precinct	precinct
+Virginia;LOUDOUN COUNTY;308 - ST LOUIS Precinct	precinct
+Virginia;LOUDOUN COUNTY;309 - ALDIE Precinct	precinct
+Virginia;LOUDOUN COUNTY;310 - MOUNTAIN VIEW Precinct	precinct
+Virginia;LOUDOUN COUNTY;311 - ROUND HILL ELEMENTARY Precinct	precinct
+Virginia;LOUDOUN COUNTY;312 - BRIAR WOODS Precinct	precinct
+Virginia;LOUDOUN COUNTY;313 - PINEBROOK Precinct	precinct
+Virginia;LOUDOUN COUNTY;314 - LEGACY Precinct	precinct
+Virginia;LOUDOUN COUNTY;315 - FIREHOUSE Precinct	precinct
+Virginia;LOUDOUN COUNTY;316 - CREIGHTON'S CORNER Precinct	precinct
+Virginia;LOUDOUN COUNTY;318 - MADISON'S TRUST Precinct	precinct
+Virginia;LOUDOUN COUNTY;319 - JOHN CHAMPE Precinct	precinct
+Virginia;LOUDOUN COUNTY;320 - STONE HILL Precinct	precinct
+Virginia;LOUDOUN COUNTY;321 - BRAMBLETON MIDDLE Precinct	precinct
+Virginia;LOUDOUN COUNTY;322-BUFFALO TRAIL Precinct	precinct
+Virginia;LOUDOUN COUNTY;401 - WEST LOVETTSVILLE Precinct	precinct
+Virginia;LOUDOUN COUNTY;402 - WATERFORD Precinct	precinct
+Virginia;LOUDOUN COUNTY;403 - LUCKETTS Precinct	precinct
+Virginia;LOUDOUN COUNTY;407 - HARPER PARK Precinct	precinct
+Virginia;LOUDOUN COUNTY;408 - EVERGREEN Precinct	precinct
+Virginia;LOUDOUN COUNTY;409 - CLARKES GAP Precinct	precinct
+Virginia;LOUDOUN COUNTY;411 - EAST LOVETTSVILLE Precinct	precinct
+Virginia;LOUDOUN COUNTY;413 - TUSCARORA Precinct	precinct
+Virginia;LOUDOUN COUNTY;414 - RED ROCK Precinct	precinct
+Virginia;LOUDOUN COUNTY;416 - HAMILTON Precinct	precinct
+Virginia;LOUDOUN COUNTY;420 - RIVER CREEK Precinct	precinct
+Virginia;LOUDOUN COUNTY;421 - BETWEEN THE HILLS Precinct	precinct
+Virginia;LOUDOUN COUNTY;422 - SYCOLIN CREEK Precinct	precinct
+Virginia;LOUDOUN COUNTY;501 - WEST LEESBURG Precinct	precinct
+Virginia;LOUDOUN COUNTY;502 - EAST LEESBURG Precinct	precinct
+Virginia;LOUDOUN COUNTY;503 - DRY MILL Precinct	precinct
+Virginia;LOUDOUN COUNTY;504 - SMARTS MILL Precinct	precinct
+Virginia;LOUDOUN COUNTY;505 - COOL SPRING Precinct	precinct
+Virginia;LOUDOUN COUNTY;506 - BRANDON PARK Precinct	precinct
+Virginia;LOUDOUN COUNTY;507 - GREENWAY Precinct	precinct
+Virginia;LOUDOUN COUNTY;508 - BALLS BLUFF Precinct	precinct
+Virginia;LOUDOUN COUNTY;509 - TOLBERT Precinct	precinct
+Virginia;LOUDOUN COUNTY;510 - HERITAGE Precinct	precinct
+Virginia;LOUDOUN COUNTY;615 - HILLSIDE Precinct	precinct
+Virginia;LOUDOUN COUNTY;616 - EAGLE RIDGE Precinct	precinct
+Virginia;LOUDOUN COUNTY;617 - OAK GROVE Precinct	precinct
+Virginia;LOUDOUN COUNTY;619 - RIDGETOP Precinct	precinct
+Virginia;LOUDOUN COUNTY;620 - RUSSELL BRANCH Precinct	precinct
+Virginia;LOUDOUN COUNTY;621 - DOMINION TRAIL Precinct	precinct
+Virginia;LOUDOUN COUNTY;622 - FARMWELL STATION Precinct	precinct
+Virginia;LOUDOUN COUNTY;623 - WELLER Precinct	precinct
+Virginia;LOUDOUN COUNTY;625 - MILL RUN Precinct	precinct
+Virginia;LOUDOUN COUNTY;626 - ASHBY PONDS Precinct	precinct
+Virginia;LOUDOUN COUNTY;627 - ASHBROOK Precinct	precinct
+Virginia;LOUDOUN COUNTY;628 - MOOREFIELD STATION Precinct	precinct
+Virginia;LOUDOUN COUNTY;629 - DISCOVERY Precinct	precinct
+Virginia;LOUDOUN COUNTY;701 - SULLY Precinct	precinct
+Virginia;LOUDOUN COUNTY;702 - PARK VIEW Precinct	precinct
+Virginia;LOUDOUN COUNTY;703 - ROLLING RIDGE Precinct	precinct
+Virginia;LOUDOUN COUNTY;705 - FOREST GROVE Precinct	precinct
+Virginia;LOUDOUN COUNTY;707 - CLAUDE MOORE PARK Precinct	precinct
+Virginia;LOUDOUN COUNTY;708 - SENECA Precinct	precinct
+Virginia;LOUDOUN COUNTY;709 - MIRROR RIDGE Precinct	precinct
+Virginia;LOUDOUN COUNTY;710 - STERLING Precinct	precinct
+Virginia;LOUDOUN COUNTY;808 - STONE BRIDGE Precinct	precinct
+Virginia;LOUDOUN COUNTY;810 - CEDAR LANE Precinct	precinct
+Virginia;LOUDOUN COUNTY;813 - SELDENS LANDING Precinct	precinct
+Virginia;LOUDOUN COUNTY;814 - NEWTON - LEE Precinct	precinct
+Virginia;LOUDOUN COUNTY;815 - BELMONT RIDGE Precinct	precinct
+Virginia;LOUDOUN COUNTY;817 - SANDERS CORNER Precinct	precinct
+Virginia;LOUDOUN COUNTY;818 - BROAD RUN Precinct	precinct
+Virginia;LOUDOUN COUNTY;819 - HERITAGE CHURCH Precinct	precinct
+Virginia;LOUDOUN COUNTY;820 - BELMONT STATION Precinct	precinct
+Virginia;LOUDOUN COUNTY;822 - RIVERSIDE Precinct	precinct
+Virginia;LOUISA COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;LOUISA COUNTY;## Provisional Precinct	precinct
+Virginia;LOUISA COUNTY;101 - ZION Precinct	precinct
+Virginia;LOUISA COUNTY;102 - MECHANICSVILLE Precinct	precinct
+Virginia;LOUISA COUNTY;201 - LOUISA #1 Precinct	precinct
+Virginia;LOUISA COUNTY;202 - LOUISA #2 Precinct	precinct
+Virginia;LOUISA COUNTY;301 - PATRICK HENRY NO 1 Precinct	precinct
+Virginia;LOUISA COUNTY;302 - PATRICK HENRY #2 Precinct	precinct
+Virginia;LOUISA COUNTY;401 - MINERAL Precinct	precinct
+Virginia;LOUISA COUNTY;402 - YANCEYVILLE Precinct	precinct
+Virginia;LOUISA COUNTY;501 - FREDERICKS HALL Precinct	precinct
+Virginia;LOUISA COUNTY;502 - CUCKOO Precinct	precinct
+Virginia;LOUISA COUNTY;503 - ELK CREEK Precinct	precinct
+Virginia;LOUISA COUNTY;601 - BUMPASS Precinct	precinct
+Virginia;LOUISA COUNTY;602 - LOCUST CREEK Precinct	precinct
+Virginia;LOUISA COUNTY;701 - SHELTONS MILL Precinct	precinct
+Virginia;LOUISA COUNTY;702 - SOUTH ANNA Precinct	precinct
+Virginia;LUNENBURG COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;LUNENBURG COUNTY;## Provisional Precinct	precinct
+Virginia;LUNENBURG COUNTY;101 - PLYMOUTH Precinct	precinct
+Virginia;LUNENBURG COUNTY;201 - BROWNS STORE Precinct	precinct
+Virginia;LUNENBURG COUNTY;301 - ROSEBUD Precinct	precinct
+Virginia;LUNENBURG COUNTY;302 - FLAT ROCK Precinct	precinct
+Virginia;LUNENBURG COUNTY;401 - ARROWHEAD GUN CLUB Precinct	precinct
+Virginia;LUNENBURG COUNTY;402 - PLEASANT GROVE Precinct	precinct
+Virginia;LUNENBURG COUNTY;501 - REEDY CREEK Precinct	precinct
+Virginia;LUNENBURG COUNTY;502 - PEOPLES COMMUNITY CENTER Precinct	precinct
+Virginia;LUNENBURG COUNTY;601 - HOUNDS CREEK Precinct	precinct
+Virginia;LUNENBURG COUNTY;701 - MEHERRIN FIRE DEPARTMENT Precinct	precinct
+Virginia;LUNENBURG COUNTY;702 - VICTORIA PUBLIC LIBRARY Precinct	precinct
+Virginia;MADISON COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;MADISON COUNTY;## Provisional Precinct	precinct
+Virginia;MADISON COUNTY;001 - OAK PARK Precinct	precinct
+Virginia;MADISON COUNTY;002 - RADIANT Precinct	precinct
+Virginia;MADISON COUNTY;003 - ROCHELLE Precinct	precinct
+Virginia;MADISON COUNTY;004 - GRAVES MILL Precinct	precinct
+Virginia;MADISON COUNTY;005 - MADISON Precinct	precinct
+Virginia;MADISON COUNTY;006 - WOLFTOWN Precinct	precinct
+Virginia;MADISON COUNTY;007 - BRIGHTWOOD Precinct	precinct
+Virginia;MADISON COUNTY;008 - CRIGLERSVILLE Precinct	precinct
+Virginia;MADISON COUNTY;009 - ETLAN Precinct	precinct
+Virginia;MATHEWS COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;MATHEWS COUNTY;## Provisional Precinct	precinct
+Virginia;MATHEWS COUNTY;001 - CHESAPEAKE Precinct	precinct
+Virginia;MATHEWS COUNTY;002 - WESTVILLE Precinct	precinct
+Virginia;MATHEWS COUNTY;003 - PIANKATANK Precinct	precinct
+Virginia;MECKLENBURG COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;MECKLENBURG COUNTY;## Provisional Precinct	precinct
+Virginia;MECKLENBURG COUNTY;101 - WRIGHTS STORE Precinct	precinct
+Virginia;MECKLENBURG COUNTY;102 - PEARSONS STORE Precinct	precinct
+Virginia;MECKLENBURG COUNTY;103 - SOUTH CLARKSVILLE Precinct	precinct
+Virginia;MECKLENBURG COUNTY;201 - BOYDTON Precinct	precinct
+Virginia;MECKLENBURG COUNTY;202 - BLUESTONE SENIOR HIGH SCHOOL Precinct	precinct
+Virginia;MECKLENBURG COUNTY;203 - CHASE CITY VFW POST Precinct	precinct
+Virginia;MECKLENBURG COUNTY;301 - BRACEY Precinct	precinct
+Virginia;MECKLENBURG COUNTY;302 - LACROSSE Precinct	precinct
+Virginia;MECKLENBURG COUNTY;401 - AMERICAN LEGION HALL Precinct	precinct
+Virginia;MECKLENBURG COUNTY;402 - PARK VIEW MIDDLE SCHOOL Precinct	precinct
+Virginia;MECKLENBURG COUNTY;501 - SOUTH HILL Precinct	precinct
+Virginia;MECKLENBURG COUNTY;601 - BASKERVILLE Precinct	precinct
+Virginia;MECKLENBURG COUNTY;602 - UNION LEVEL Precinct	precinct
+Virginia;MECKLENBURG COUNTY;603 - SMITH CROSSROADS Precinct	precinct
+Virginia;MECKLENBURG COUNTY;604 - LAKE GASTON Precinct	precinct
+Virginia;MECKLENBURG COUNTY;701 - CHASE CITY Precinct	precinct
+Virginia;MECKLENBURG COUNTY;702 - SUNSHINE Precinct	precinct
+Virginia;MECKLENBURG COUNTY;801 - FINCHLEY Precinct	precinct
+Virginia;MECKLENBURG COUNTY;802 - BLUESTONE Precinct	precinct
+Virginia;MECKLENBURG COUNTY;803 - CHASE CITY ELEMENTARY SCHOOL Precinct	precinct
+Virginia;MECKLENBURG COUNTY;901 - AVERETT Precinct	precinct
+Virginia;MECKLENBURG COUNTY;902 - BUFFALO SPRINGS Precinct	precinct
+Virginia;MECKLENBURG COUNTY;903 - CLARKSVILLE Precinct	precinct
+Virginia;MIDDLESEX COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;MIDDLESEX COUNTY;## Provisional Precinct	precinct
+Virginia;MIDDLESEX COUNTY;101 - SALUDA Precinct	precinct
+Virginia;MIDDLESEX COUNTY;102 - URBANNA Precinct	precinct
+Virginia;MIDDLESEX COUNTY;201 - NEW MARKET Precinct	precinct
+Virginia;MIDDLESEX COUNTY;302 - CHURCH VIEW Precinct	precinct
+Virginia;MIDDLESEX COUNTY;401- HARMONY VILLAGE Precinct	precinct
+Virginia;MIDDLESEX COUNTY;501 - WILTON Precinct	precinct
+Virginia;MONTGOMERY COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;MONTGOMERY COUNTY;## Provisional Precinct	precinct
+Virginia;MONTGOMERY COUNTY;101 - PRECINCT A-1 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;102 - PRECINCT A-2 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;103 - PRECINCT A-3 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;201 - PRECINCT B-1 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;202 - PRECINCT B-2 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;203 - PRECINCT B-3 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;204 - PRECINCT B-4 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;301 - PRECINCT C-1 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;302 - PRECINCT C-2 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;303 - PRECINCT C-3 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;304 - PRECINCT C-4 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;401 - PRECINCT D-1 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;402 - PRECINCT D-2 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;403 - PRECINCT D-3 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;404 - PRECINCT D-4 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;405 - PRECINCT D-5 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;501 - PRECINCT E-1 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;502 - PRECINCT E-2 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;503 - PRECINCT E-3 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;601 - PRECINCT F-1 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;602 - PRECINCT F-2 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;603 - PRECINCT F-3 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;701 - PRECINCT G-1 Precinct	precinct
+Virginia;MONTGOMERY COUNTY;702 - PRECINCT G-2 Precinct	precinct
+Virginia;NELSON COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;NELSON COUNTY;## Provisional Precinct	precinct
+Virginia;NELSON COUNTY;101 - ROCKFISH Precinct	precinct
+Virginia;NELSON COUNTY;201 - LOVINGSTON Precinct	precinct
+Virginia;NELSON COUNTY;202 - SCHUYLER Precinct	precinct
+Virginia;NELSON COUNTY;301 - SHIPMAN Precinct	precinct
+Virginia;NELSON COUNTY;302 - GLADSTONE Precinct	precinct
+Virginia;NELSON COUNTY;401 - ROSELAND Precinct	precinct
+Virginia;NELSON COUNTY;402 - MONTEBELLO Precinct	precinct
+Virginia;NELSON COUNTY;501 - FABER Precinct	precinct
+Virginia;NELSON COUNTY;502 - NELLYSFORD Precinct	precinct
+Virginia;NEW KENT COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;NEW KENT COUNTY;## Provisional Precinct	precinct
+Virginia;NEW KENT COUNTY;102 - TUNSTALL Precinct	precinct
+Virginia;NEW KENT COUNTY;103 - SOUTHERN BRANCH Precinct	precinct
+Virginia;NEW KENT COUNTY;201 - QUINTON Precinct	precinct
+Virginia;NEW KENT COUNTY;202 - KENTWOOD Precinct	precinct
+Virginia;NEW KENT COUNTY;301 - WATKINS Precinct	precinct
+Virginia;NEW KENT COUNTY;302 - CUMBERLAND Precinct	precinct
+Virginia;NEW KENT COUNTY;401 - PROVIDENCE FORGE Precinct	precinct
+Virginia;NEW KENT COUNTY;403 - MOUNTCASTLE Precinct	precinct
+Virginia;NEW KENT COUNTY;501 - ELTHAM Precinct	precinct
+Virginia;NEW KENT COUNTY;502 - CHICKAHOMINY RIVER Precinct	precinct
+Virginia;NORTHAMPTON COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;NORTHAMPTON COUNTY;## Provisional Precinct	precinct
+Virginia;NORTHAMPTON COUNTY;101 - PRECINCT 1-1 Precinct	precinct
+Virginia;NORTHAMPTON COUNTY;201 - PRECINCT 2-1 Precinct	precinct
+Virginia;NORTHAMPTON COUNTY;301 - PRECINCT 3-1 Precinct	precinct
+Virginia;NORTHAMPTON COUNTY;401 - PRECINCT 4-1 Precinct	precinct
+Virginia;NORTHAMPTON COUNTY;501 - PRECINCT 5-1 Precinct	precinct
+Virginia;NORTHUMBERLAND COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;NORTHUMBERLAND COUNTY;## Provisional Precinct	precinct
+Virginia;NORTHUMBERLAND COUNTY;101 - 1A Precinct	precinct
+Virginia;NORTHUMBERLAND COUNTY;201 - 2A Precinct	precinct
+Virginia;NORTHUMBERLAND COUNTY;301 - 3A Precinct	precinct
+Virginia;NORTHUMBERLAND COUNTY;302 - 3B Precinct	precinct
+Virginia;NORTHUMBERLAND COUNTY;401 - 4A Precinct	precinct
+Virginia;NORTHUMBERLAND COUNTY;501 - 5A Precinct	precinct
+Virginia;NOTTOWAY COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;NOTTOWAY COUNTY;## Provisional Precinct	precinct
+Virginia;NOTTOWAY COUNTY;101 - PRECINCT 1-1 Precinct	precinct
+Virginia;NOTTOWAY COUNTY;102 - PRECINCT 1-2 Precinct	precinct
+Virginia;NOTTOWAY COUNTY;201 - PRECINCT 2-1 Precinct	precinct
+Virginia;NOTTOWAY COUNTY;202 - PRECINCT 2-2 Precinct	precinct
+Virginia;NOTTOWAY COUNTY;301 - PRECINCT 3-1 Precinct	precinct
+Virginia;NOTTOWAY COUNTY;302 - PRECINCT 3-2 Precinct	precinct
+Virginia;NOTTOWAY COUNTY;401 - PRECINCT 4-1 Precinct	precinct
+Virginia;NOTTOWAY COUNTY;402 - PRECINCT 4-2 Precinct	precinct
+Virginia;NOTTOWAY COUNTY;501 - PRECINCT 5-1 Precinct	precinct
+Virginia;ORANGE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;ORANGE COUNTY;## Provisional Precinct	precinct
+Virginia;ORANGE COUNTY;101 - ONE WEST Precinct	precinct
+Virginia;ORANGE COUNTY;102 - ONE EAST Precinct	precinct
+Virginia;ORANGE COUNTY;201 - TWO WEST Precinct	precinct
+Virginia;ORANGE COUNTY;202 - TWO EAST Precinct	precinct
+Virginia;ORANGE COUNTY;301 - THREE WEST Precinct	precinct
+Virginia;ORANGE COUNTY;302 - THREE EAST Precinct	precinct
+Virginia;ORANGE COUNTY;401 - FOUR WEST Precinct	precinct
+Virginia;ORANGE COUNTY;402 - FOUR EAST Precinct	precinct
+Virginia;ORANGE COUNTY;501 - FIVE SOUTH Precinct	precinct
+Virginia;ORANGE COUNTY;502 - FIVE NORTH Precinct	precinct
+Virginia;PAGE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;PAGE COUNTY;## Provisional Precinct	precinct
+Virginia;PAGE COUNTY;101 - WEST LURAY Precinct	precinct
+Virginia;PAGE COUNTY;201 - EAST LURAY Precinct	precinct
+Virginia;PAGE COUNTY;301 - MARKSVILLE Precinct	precinct
+Virginia;PAGE COUNTY;401 - NEWPORT Precinct	precinct
+Virginia;PAGE COUNTY;501 - SHENANDOAH Precinct	precinct
+Virginia;PATRICK COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;PATRICK COUNTY;## Provisional Precinct	precinct
+Virginia;PATRICK COUNTY;101 - ARARAT Precinct	precinct
+Virginia;PATRICK COUNTY;102 - CLAUDVILLE Precinct	precinct
+Virginia;PATRICK COUNTY;103 - WILLIS GAP Precinct	precinct
+Virginia;PATRICK COUNTY;201 - DRY POND Precinct	precinct
+Virginia;PATRICK COUNTY;202 - PATRICK SPRINGS Precinct	precinct
+Virginia;PATRICK COUNTY;203 - RUSSELL CREEK Precinct	precinct
+Virginia;PATRICK COUNTY;301 - CRITZ/STELLA Precinct	precinct
+Virginia;PATRICK COUNTY;302 - LIBERTY Precinct	precinct
+Virginia;PATRICK COUNTY;401 - MEADOWS OF DAN Precinct	precinct
+Virginia;PATRICK COUNTY;402 - STUART FAIRGROUNDS Precinct	precinct
+Virginia;PATRICK COUNTY;501 - STUART COMMUNITY Precinct	precinct
+Virginia;PATRICK COUNTY;502 - ELAMSVILLE Precinct	precinct
+Virginia;PATRICK COUNTY;503 - WOOLWINE Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;## Provisional Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;103 - TWIN SPRINGS Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;105 - CHATHAM Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;106 - TUNSTALL Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;108 - WEST BLAIRS Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;201 - CALLANDS Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;202- BEARSKIN Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;204 - SANDY LEVEL Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;206 - CLIMAX Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;207 - GRETNA Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;301 - CENTRAL Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;305 - RICEVILLE Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;307 - EAST BLAIRS Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;308 - MT AIRY Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;309 - EAST GRETNA Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;402 - KEELING Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;404 - KENTUCK Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;405 - RINGGOLD Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;501 - HURT Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;502 - MOTLEY SYCAMORE Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;503 - RENAN Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;603 - STONY MILL Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;604 - SWANSONVILLE Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;605 - WHITMELL Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;606 - BROSVILLE Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;607 - DRY FORK Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;702 - BACHELORS HALL Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;703 - FERRY ROAD Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;704 - MT HERMON Precinct	precinct
+Virginia;PITTSYLVANIA COUNTY;705 - MT CROSS Precinct	precinct
+Virginia;POWHATAN COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;POWHATAN COUNTY;## Provisional Precinct	precinct
+Virginia;POWHATAN COUNTY;101 - SUBLETTS Precinct	precinct
+Virginia;POWHATAN COUNTY;102 - MANAKIN Precinct	precinct
+Virginia;POWHATAN COUNTY;103 - FLAT ROCK Precinct	precinct
+Virginia;POWHATAN COUNTY;201 - POWHATAN STATION Precinct	precinct
+Virginia;POWHATAN COUNTY;202 - GRACELAND Precinct	precinct
+Virginia;POWHATAN COUNTY;301 - BETHESDA Precinct	precinct
+Virginia;POWHATAN COUNTY;302 - LEE'S LANDING Precinct	precinct
+Virginia;POWHATAN COUNTY;401 - POWHATAN COURTHOUSE Precinct	precinct
+Virginia;POWHATAN COUNTY;402 - MT ZION  Precinct	precinct
+Virginia;POWHATAN COUNTY;501 - SMITH CROSS ROADS Precinct	precinct
+Virginia;POWHATAN COUNTY;502 - PINEVILLE Precinct	precinct
+Virginia;POWHATAN COUNTY;503 - TOBACCOVILLE Precinct	precinct
+Virginia;PRINCE EDWARD COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;PRINCE EDWARD COUNTY;## Provisional Precinct	precinct
+Virginia;PRINCE EDWARD COUNTY;101 - FARMVILLE Precinct	precinct
+Virginia;PRINCE EDWARD COUNTY;201 - LOCKETT Precinct	precinct
+Virginia;PRINCE EDWARD COUNTY;301 - LEIGH Precinct	precinct
+Virginia;PRINCE EDWARD COUNTY;302 - MT PLEASANT Precinct	precinct
+Virginia;PRINCE EDWARD COUNTY;401 - HAMPDEN Precinct	precinct
+Virginia;PRINCE EDWARD COUNTY;501 - DARLINGTON HTS Precinct	precinct
+Virginia;PRINCE EDWARD COUNTY;502 - BUFFALO HTS Precinct	precinct
+Virginia;PRINCE EDWARD COUNTY;601 - PROSPECT Precinct	precinct
+Virginia;PRINCE EDWARD COUNTY;701 - WEST END Precinct	precinct
+Virginia;PRINCE EDWARD COUNTY;801 - CENTER Precinct	precinct
+Virginia;PRINCE GEORGE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;PRINCE GEORGE COUNTY;## Provisional Precinct	precinct
+Virginia;PRINCE GEORGE COUNTY;101 - RICHARD BLAND Precinct	precinct
+Virginia;PRINCE GEORGE COUNTY;102 - TEMPLETON Precinct	precinct
+Virginia;PRINCE GEORGE COUNTY;103 - UNION BRANCH Precinct	precinct
+Virginia;PRINCE GEORGE COUNTY;104 - RIVES Precinct	precinct
+Virginia;PRINCE GEORGE COUNTY;105 - HARRISON Precinct	precinct
+Virginia;PRINCE GEORGE COUNTY;201 - BLAND Precinct	precinct
+Virginia;PRINCE GEORGE COUNTY;202 - BLACK WATER Precinct	precinct
+Virginia;PRINCE GEORGE COUNTY;203 - BRANDON Precinct	precinct
+Virginia;PRINCE GEORGE COUNTY;204 - COURTS BLDG Precinct	precinct
+Virginia;PRINCE GEORGE COUNTY;205 - JEFFERSON PARK Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;## Provisional Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;101 - BRENTSVILLE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;102 - CEDAR POINT Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;103 - GLENKIRK Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;104 - NOKESVILLE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;105 - LIMESTONE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;106 - WESTGATE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;107 - MARSTELLER Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;108 - VICTORY Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;109 - PINEY BRANCH Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;110 - BUCKLAND MILLS Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;111 - BRISTOW RUN Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;112 - BURKE-NICKENS Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;201 - SAUNDERS Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;202 - MARSHALL Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;203 - BENNETT Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;204 - ELLIS Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;205 - BUCKHALL Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;206 - COLES Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;207 - SPRIGGS Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;208 - HYLTON Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;209 - INDEPENDENT HILL Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;210 - PENN Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;211 - SIGNAL HILL Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;212 - YORKSHIRE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;213 - SARATOGA Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;214 - LUCASVILLE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;215 - ROSA PARKS Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;301 - DUMFRIES Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;302 - POTOMAC Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;303 - GRAHAM PARK Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;304 - QUANTICO Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;305 - PATTIE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;306 - WASHINGTON-REID Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;307 - HENDERSON Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;308 - MONTCLAIR Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;309 - ASHLAND  Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;310 - FOREST PARK Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;311 - SWANS CREEK Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;312 - TRIANGLE  Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;313 - CARDINAL Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;314 - CABIN BRANCH Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;401 - EVERGREEN Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;402 - BATTLEFIELD Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;403 - BULL RUN Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;404 - BEN LOMOND Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;405 - STONEWALL Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;406 - ALVEY Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;407 - HERITAGE HUNT Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;408 - SUDLEY Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;409 - TYLER Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;410 - MOUNTAIN VIEW Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;411 - MULLEN Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;412 - CATHARPIN Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;413 - REAGAN Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;501 - LAKE RIDGE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;502 - OCCOQUAN Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;503 - OLD BRIDGE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;504 - ROCKLEDGE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;505 - MOHICAN Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;506 - BETHEL Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;507 - CHINN Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;508 - SPRINGWOODS Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;509 - MC COART Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;510 - YATES FORD Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;511 - WESTRIDGE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;512 - YORK Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;513 - LYNNWOOD Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;514 - ANTIETAM Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;601 - DALE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;602 - BEVILLE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;603 - HAMPTON Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;604 - GIDEON Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;605 - MINNIEVILLE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;606 - BEL AIR Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;607 - KERRYDALE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;608 - ENTERPRISE Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;609 - KING Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;610 - FITZGERALD Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;611 - NEABSCO Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;701 - BELMONT Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;702 - LIBRARY Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;703 - LYNN Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;704 - PORTER Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;705 - POTOMAC VIEW Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;706 - RIPPON Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;707 - KILBY Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;708 - RIVER OAKS Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;709 - FREEDOM Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;710 - POWELLS CREEK Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;711 - GRAYSON Precinct	precinct
+Virginia;PRINCE WILLIAM COUNTY;712 - LEESYLVANIA Precinct	precinct
+Virginia;PULASKI COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;PULASKI COUNTY;## Provisional Precinct	precinct
+Virginia;PULASKI COUNTY;101 - BELSPRING Precinct	precinct
+Virginia;PULASKI COUNTY;102 - NEW RIVER Precinct	precinct
+Virginia;PULASKI COUNTY;103 - WEST CLOYD Precinct	precinct
+Virginia;PULASKI COUNTY;201 - DRAPER Precinct	precinct
+Virginia;PULASKI COUNTY;202 - SOUTH PULASKI Precinct	precinct
+Virginia;PULASKI COUNTY;203 - NEWBERN Precinct	precinct
+Virginia;PULASKI COUNTY;301 - DUBLIN Precinct	precinct
+Virginia;PULASKI COUNTY;302 - HIWASSEE Precinct	precinct
+Virginia;PULASKI COUNTY;304 - SNOWVILLE Precinct	precinct
+Virginia;PULASKI COUNTY;401 - MASSIE Precinct	precinct
+Virginia;PULASKI COUNTY;402 - WALKER Precinct	precinct
+Virginia;PULASKI COUNTY;501 - ROBINSON Precinct	precinct
+Virginia;RAPPAHANNOCK COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;RAPPAHANNOCK COUNTY;## Provisional Precinct	precinct
+Virginia;RAPPAHANNOCK COUNTY;101 - WASHINGTON Precinct	precinct
+Virginia;RAPPAHANNOCK COUNTY;201 - AMISSVILLE Precinct	precinct
+Virginia;RAPPAHANNOCK COUNTY;301 - SPERRYVILLE Precinct	precinct
+Virginia;RAPPAHANNOCK COUNTY;401 - SCRABBLE Precinct	precinct
+Virginia;RAPPAHANNOCK COUNTY;501 - CHESTER GAP Precinct	precinct
+Virginia;RAPPAHANNOCK COUNTY;502 - FLINT HILL Precinct	precinct
+Virginia;RICHMOND COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;RICHMOND COUNTY;## Provisional Precinct	precinct
+Virginia;RICHMOND COUNTY;101 - PRECINCT 1-1 Precinct	precinct
+Virginia;RICHMOND COUNTY;201 - PRECINCT 2-1 Precinct	precinct
+Virginia;RICHMOND COUNTY;301 - PRECINCT 3-1 Precinct	precinct
+Virginia;RICHMOND COUNTY;401 - PRECINCT 4-1 Precinct	precinct
+Virginia;RICHMOND COUNTY;501 - PRECINCT 5-1 Precinct	precinct
+Virginia;ROANOKE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;ROANOKE COUNTY;## Provisional Precinct	precinct
+Virginia;ROANOKE COUNTY;101 - CATAWBA Precinct	precinct
+Virginia;ROANOKE COUNTY;102 - MASON VALLEY Precinct	precinct
+Virginia;ROANOKE COUNTY;103 - GLENVAR Precinct	precinct
+Virginia;ROANOKE COUNTY;104 - NORTHSIDE Precinct	precinct
+Virginia;ROANOKE COUNTY;105 - PETERS CREEK Precinct	precinct
+Virginia;ROANOKE COUNTY;106 - GREEN HILL Precinct	precinct
+Virginia;ROANOKE COUNTY;107 - BENNETT SPRINGS Precinct	precinct
+Virginia;ROANOKE COUNTY;108 - WILDWOOD Precinct	precinct
+Virginia;ROANOKE COUNTY;201 - PLANTATION Precinct	precinct
+Virginia;ROANOKE COUNTY;202 - BURLINGTON Precinct	precinct
+Virginia;ROANOKE COUNTY;203 - MOUNTAIN VIEW Precinct	precinct
+Virginia;ROANOKE COUNTY;204 - BOTETOURT SPRINGS Precinct	precinct
+Virginia;ROANOKE COUNTY;205 - ORCHARDS Precinct	precinct
+Virginia;ROANOKE COUNTY;206 - HOLLINS Precinct	precinct
+Virginia;ROANOKE COUNTY;301 - BENT MOUNTAIN Precinct	precinct
+Virginia;ROANOKE COUNTY;302 - POAGES MILL Precinct	precinct
+Virginia;ROANOKE COUNTY;303 - WINDSOR HILLS Precinct	precinct
+Virginia;ROANOKE COUNTY;304 - OAK GROVE Precinct	precinct
+Virginia;ROANOKE COUNTY;305 - CASTLE ROCK Precinct	precinct
+Virginia;ROANOKE COUNTY;306 - GARST MILL Precinct	precinct
+Virginia;ROANOKE COUNTY;402 - BONSACK Precinct	precinct
+Virginia;ROANOKE COUNTY;403 - NORTH VINTON Precinct	precinct
+Virginia;ROANOKE COUNTY;404 - SOUTH VINTON Precinct	precinct
+Virginia;ROANOKE COUNTY;405 - LINDENWOOD Precinct	precinct
+Virginia;ROANOKE COUNTY;406 - MOUNT PLEASANT Precinct	precinct
+Virginia;ROANOKE COUNTY;501 - COTTON HILL Precinct	precinct
+Virginia;ROANOKE COUNTY;502 - PENN FOREST Precinct	precinct
+Virginia;ROANOKE COUNTY;503 - CAVE SPRING Precinct	precinct
+Virginia;ROANOKE COUNTY;504 - OGDEN Precinct	precinct
+Virginia;ROANOKE COUNTY;505 - CLEARBROOK Precinct	precinct
+Virginia;ROANOKE COUNTY;506 - MOUNT VERNON Precinct	precinct
+Virginia;ROANOKE COUNTY;507 - HUNTING HILLS Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;## Provisional Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;101 - AIRPORT Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;102 - BEN SALEM Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;103 - PLANK ROAD Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;104 - EFFINGER Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;201 - COLLIERSTOWN Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;202 - HIGHLAND BELLE Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;203 - VO-TECH Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;301 - MAURY RIVER Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;302 - NATURAL BRIDGE Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;303 - FALLING SPRING Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;401 - FAIRFIELD Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;402 - MOUNTAIN VIEW Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;403 - VESUVIUS Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;501 - GOSHEN Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;502 - MEADOWVIEW Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;503 - ROCKBRIDGE BATHS Precinct	precinct
+Virginia;ROCKBRIDGE COUNTY;504 - ROCKBRIDGE Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;## Provisional Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;101 - BROADWAY Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;102 - TIMBERVILLE Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;103 - FULKS RUN Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;104 - BERGTON Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;105 - LACEY SPRING Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;106 - TENTH LEGION Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;107 - PLAINS Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;108 - LITTLE NORTH MOUNTAIN Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;201 - SINGERS GLEN Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;202 - EDOM Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;203 - DAYTON Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;204 - MT CLINTON Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;205 - SILVER LAKE Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;301 - KEEZLETOWN Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;302 - PORT REPUBLIC Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;303 - MELROSE Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;304 - GROTTOES Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;305 - MASSANETTA SPRINGS Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;306 - CROSS KEYS Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;307 - CROSSROADS Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;401 - WEST BRIDGEWATER Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;402 - MONTEZUMA Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;403 - MT CRAWFORD Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;404 - NORTH RIVER Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;405 - OTTOBINE Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;406 - EAST BRIDGEWATER Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;501 - ELKTON Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;502 - SWIFT RUN Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;503 - MCGAHEYSVILLE Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;504 - SOUTH FORK Precinct	precinct
+Virginia;ROCKINGHAM COUNTY;505 - STONY RUN Precinct	precinct
+Virginia;RUSSELL COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;RUSSELL COUNTY;## Provisional Precinct	precinct
+Virginia;RUSSELL COUNTY;101 - MOCCASIN Precinct	precinct
+Virginia;RUSSELL COUNTY;102 - COPPER CREEK Precinct	precinct
+Virginia;RUSSELL COUNTY;103 - SOUTH CASTLEWOOD Precinct	precinct
+Virginia;RUSSELL COUNTY;201 - NORTH CASTLEWOOD Precinct	precinct
+Virginia;RUSSELL COUNTY;202 - DANTE Precinct	precinct
+Virginia;RUSSELL COUNTY;301 - COOKS MILL Precinct	precinct
+Virginia;RUSSELL COUNTY;302 - DAUGHERTY Precinct	precinct
+Virginia;RUSSELL COUNTY;303 - NEW GARDEN Precinct	precinct
+Virginia;RUSSELL COUNTY;304 - CLEVELAND Precinct	precinct
+Virginia;RUSSELL COUNTY;401 - DRILL Precinct	precinct
+Virginia;RUSSELL COUNTY;402 - SWORDS CREEK Precinct	precinct
+Virginia;RUSSELL COUNTY;403 - HONAKER Precinct	precinct
+Virginia;RUSSELL COUNTY;501 - WEST LEBANON Precinct	precinct
+Virginia;RUSSELL COUNTY;601 -  EAST LEBANON Precinct	precinct
+Virginia;RUSSELL COUNTY;602 - ELK GARDEN Precinct	precinct
+Virginia;SCOTT COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;SCOTT COUNTY;## Provisional Precinct	precinct
+Virginia;SCOTT COUNTY;101 - WEBER CITY Precinct	precinct
+Virginia;SCOTT COUNTY;102 - YUMA Precinct	precinct
+Virginia;SCOTT COUNTY;202 - WEBER CITY EAST Precinct	precinct
+Virginia;SCOTT COUNTY;203 - HILTONS Precinct	precinct
+Virginia;SCOTT COUNTY;204 - CLARK'S Precinct	precinct
+Virginia;SCOTT COUNTY;301 - NICKELSVILLE Precinct	precinct
+Virginia;SCOTT COUNTY;302 - SNOWFLAKE Precinct	precinct
+Virginia;SCOTT COUNTY;303 - TWIN SPRINGS Precinct	precinct
+Virginia;SCOTT COUNTY;304 - COPPER CREEK Precinct	precinct
+Virginia;SCOTT COUNTY;401 - GATE CITY Precinct	precinct
+Virginia;SCOTT COUNTY;501 - DUNGANNON Precinct	precinct
+Virginia;SCOTT COUNTY;502 - FORT BLACKMORE Precinct	precinct
+Virginia;SCOTT COUNTY;503 - MANVILLE Precinct	precinct
+Virginia;SCOTT COUNTY;504 - RYE COVE Precinct	precinct
+Virginia;SCOTT COUNTY;601 - CLINCHPORT Precinct	precinct
+Virginia;SCOTT COUNTY;602 - DUFFIELD-PATTONSVILLE Precinct	precinct
+Virginia;SCOTT COUNTY;603 - FAIRVIEW Precinct	precinct
+Virginia;SHENANDOAH COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;SHENANDOAH COUNTY;## Provisional Precinct	precinct
+Virginia;SHENANDOAH COUNTY;101 - ORKNEY SPRINGS Precinct	precinct
+Virginia;SHENANDOAH COUNTY;103 - NEW MARKET Precinct	precinct
+Virginia;SHENANDOAH COUNTY;201 - CONICVILLE Precinct	precinct
+Virginia;SHENANDOAH COUNTY;202 - MT JACKSON Precinct	precinct
+Virginia;SHENANDOAH COUNTY;302 - EDINBURG Precinct	precinct
+Virginia;SHENANDOAH COUNTY;303 - ST LUKE Precinct	precinct
+Virginia;SHENANDOAH COUNTY;304 - FORT VALLEY Precinct	precinct
+Virginia;SHENANDOAH COUNTY;401 - WOODSTOCK Precinct	precinct
+Virginia;SHENANDOAH COUNTY;501 - CEDAR CREEK Precinct	precinct
+Virginia;SHENANDOAH COUNTY;503 - TOMS BROOK Precinct	precinct
+Virginia;SHENANDOAH COUNTY;504 - LEBANON CHURCH Precinct	precinct
+Virginia;SHENANDOAH COUNTY;601 - STRASBURG Precinct	precinct
+Virginia;SMYTH COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;SMYTH COUNTY;## Provisional Precinct	precinct
+Virginia;SMYTH COUNTY;101 - SALTVILLE Precinct	precinct
+Virginia;SMYTH COUNTY;201 - SEVEN MILE FORD Precinct	precinct
+Virginia;SMYTH COUNTY;202 - RICH VALLEY Precinct	precinct
+Virginia;SMYTH COUNTY;301 - CHILHOWIE Precinct	precinct
+Virginia;SMYTH COUNTY;302 - ST CLAIR Precinct	precinct
+Virginia;SMYTH COUNTY;401 - EAST PARK Precinct	precinct
+Virginia;SMYTH COUNTY;402 - WEST PARK Precinct	precinct
+Virginia;SMYTH COUNTY;501 - ATKINS Precinct	precinct
+Virginia;SMYTH COUNTY;502 - WASSONA Precinct	precinct
+Virginia;SMYTH COUNTY;601 - ROYAL OAK EAST Precinct	precinct
+Virginia;SMYTH COUNTY;602 - ROYAL OAK WEST Precinct	precinct
+Virginia;SMYTH COUNTY;701 - ADWOLFE Precinct	precinct
+Virginia;SMYTH COUNTY;702 - SUGAR GROVE Precinct	precinct
+Virginia;SMYTH COUNTY;703 - KONNAROCK Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;## Provisional Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;101 - BERLIN Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;102 - IVOR Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;201 - BOYKINS Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;202 - BRANCHVILLE Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;301 - CAPRON Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;302 - SEBRELL Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;401 - DREWRYVILLE Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;501 - HUNTERDALE Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;502 - FORKS-OF-THE-RIVER Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;601 - COURTLAND Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;602 - SEDLEY Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;701 - BLACKWATER RIVER Precinct	precinct
+Virginia;SOUTHAMPTON COUNTY;702 - NEWSOMS Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;## Provisional Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;101 - PARTLOW Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;102 - BLAYDES CORNER Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;103 - TRAVELERS REST Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;104 - MASSAPONAX Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;201 - WILDERNESS SCHOOL Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;202 - WILDERNESS FIRE Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;203 - NI RIVER / ELYS FORD Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;204 - CHANCELLOR Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;301 - PLANK ROAD Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;302 - HAZEL RUN Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;303 - RIVERBEND Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;401 - SUMMIT Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;402 - PARKSIDE Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;403 - LEE HILL Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;501 - BELMONT Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;502 - BROKENBURG Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;503 - POST OAK Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;504 - COURTHOUSE Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;505 - BROCK Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;601 - SALEM Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;602 - SMITH STATION Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;603 - PIEDMONT Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;701 - BATTLEFIELD Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;702 - BRENTS MILL Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;703 - FAIRVIEW Precinct	precinct
+Virginia;SPOTSYLVANIA COUNTY;704 - GAYLE Precinct	precinct
+Virginia;STAFFORD COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;STAFFORD COUNTY;## Provisional Precinct	precinct
+Virginia;STAFFORD COUNTY;101 - HARTWOOD Precinct	precinct
+Virginia;STAFFORD COUNTY;102 - ROCKY RUN Precinct	precinct
+Virginia;STAFFORD COUNTY;103 - SIMPSON Precinct	precinct
+Virginia;STAFFORD COUNTY;104 - COLLEGE Precinct	precinct
+Virginia;STAFFORD COUNTY;201 - ROCK HILL Precinct	precinct
+Virginia;STAFFORD COUNTY;202 - ROSEVILLE Precinct	precinct
+Virginia;STAFFORD COUNTY;203 - RUBY Precinct	precinct
+Virginia;STAFFORD COUNTY;204 - STEFANIGA Precinct	precinct
+Virginia;STAFFORD COUNTY;301 - GRIFFIS Precinct	precinct
+Virginia;STAFFORD COUNTY;302 - WIDEWATER Precinct	precinct
+Virginia;STAFFORD COUNTY;303 - HARBOUR Precinct	precinct
+Virginia;STAFFORD COUNTY;304 - BARRETT Precinct	precinct
+Virginia;STAFFORD COUNTY;401 - AQUIA Precinct	precinct
+Virginia;STAFFORD COUNTY;402 - COURTHOUSE Precinct	precinct
+Virginia;STAFFORD COUNTY;403 - BROOKE Precinct	precinct
+Virginia;STAFFORD COUNTY;404 - GOVERNMENT ISLAND Precinct	precinct
+Virginia;STAFFORD COUNTY;501 - GRAFTON Precinct	precinct
+Virginia;STAFFORD COUNTY;502 - FALMOUTH Precinct	precinct
+Virginia;STAFFORD COUNTY;503 - DREW Precinct	precinct
+Virginia;STAFFORD COUNTY;504 - GAYLE Precinct	precinct
+Virginia;STAFFORD COUNTY;601 - FERRY FARM Precinct	precinct
+Virginia;STAFFORD COUNTY;602 - CHATHAM Precinct	precinct
+Virginia;STAFFORD COUNTY;603 - WHITE OAK Precinct	precinct
+Virginia;STAFFORD COUNTY;604 - ENGLAND RUN Precinct	precinct
+Virginia;STAFFORD COUNTY;701 - WOODLANDS Precinct	precinct
+Virginia;STAFFORD COUNTY;702 - WHITSON Precinct	precinct
+Virginia;STAFFORD COUNTY;703 - HAMPTON Precinct	precinct
+Virginia;SURRY COUNTY;## Provisional Precinct	precinct
+Virginia;SURRY COUNTY;101 - SURRY Precinct	precinct
+Virginia;SURRY COUNTY;201 - BACONS CASTLE Precinct	precinct
+Virginia;SURRY COUNTY;301 - DENDRON Precinct	precinct
+Virginia;SURRY COUNTY;302 - WALLS BRIDGE Precinct	precinct
+Virginia;SURRY COUNTY;401 - CARSLEY Precinct	precinct
+Virginia;SURRY COUNTY;501 - CLAREMONT Precinct	precinct
+Virginia;SURRY COUNTY;502 - SPRING GROVE Precinct	precinct
+Virginia;SUSSEX COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;SUSSEX COUNTY;## Provisional Precinct	precinct
+Virginia;SUSSEX COUNTY;101 - WAVERLY Precinct	precinct
+Virginia;SUSSEX COUNTY;201 - STONY CREEK Precinct	precinct
+Virginia;SUSSEX COUNTY;202 - LITTLE MILL Precinct	precinct
+Virginia;SUSSEX COUNTY;301 - COURTHOUSE Precinct	precinct
+Virginia;SUSSEX COUNTY;302 - WAKEFIELD Precinct	precinct
+Virginia;SUSSEX COUNTY;401 - MARS HILL Precinct	precinct
+Virginia;SUSSEX COUNTY;402 - WEST WAKEFIELD Precinct	precinct
+Virginia;SUSSEX COUNTY;501 - HENRY Precinct	precinct
+Virginia;SUSSEX COUNTY;502 - YALE Precinct	precinct
+Virginia;SUSSEX COUNTY;601 - BLACKWATER Precinct	precinct
+Virginia;SUSSEX COUNTY;602 - NEWVILLE Precinct	precinct
+Virginia;TAZEWELL COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;TAZEWELL COUNTY;## Provisional Precinct	precinct
+Virginia;TAZEWELL COUNTY;101 - INDIAN VALLEY Precinct	precinct
+Virginia;TAZEWELL COUNTY;102 - TIP TOP Precinct	precinct
+Virginia;TAZEWELL COUNTY;103 - MUNDY TOWN Precinct	precinct
+Virginia;TAZEWELL COUNTY;104 - FALLS MILLS Precinct	precinct
+Virginia;TAZEWELL COUNTY;106 - POCAHONTAS Precinct	precinct
+Virginia;TAZEWELL COUNTY;107 - AMONATE Precinct	precinct
+Virginia;TAZEWELL COUNTY;109 - BISHOP Precinct	precinct
+Virginia;TAZEWELL COUNTY;112 - BANDY Precinct	precinct
+Virginia;TAZEWELL COUNTY;203 - BURKES GARDEN Precinct	precinct
+Virginia;TAZEWELL COUNTY;204 - CLEAR FORK Precinct	precinct
+Virginia;TAZEWELL COUNTY;207 - FREESTONE Precinct	precinct
+Virginia;TAZEWELL COUNTY;209 - JEFFERSONVILLE Precinct	precinct
+Virginia;TAZEWELL COUNTY;214 - THOMPSON VALLEY Precinct	precinct
+Virginia;TAZEWELL COUNTY;301 - CEDAR BLUFF Precinct	precinct
+Virginia;TAZEWELL COUNTY;302 - BAPTIST VALLEY Precinct	precinct
+Virginia;TAZEWELL COUNTY;303 - PAINT LICK Precinct	precinct
+Virginia;TAZEWELL COUNTY;401 - RICHLANDS Precinct	precinct
+Virginia;TAZEWELL COUNTY;402 - JEWELL RIDGE Precinct	precinct
+Virginia;TAZEWELL COUNTY;501 - SPRINGVILLE Precinct	precinct
+Virginia;TAZEWELL COUNTY;502 - GRAHAM Precinct	precinct
+Virginia;WARREN COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;WARREN COUNTY;## Provisional Precinct	precinct
+Virginia;WARREN COUNTY;101 - FORK TOWN Precinct	precinct
+Virginia;WARREN COUNTY;102 - OTTERBURN Precinct	precinct
+Virginia;WARREN COUNTY;201 - HAPPY CREEK Precinct	precinct
+Virginia;WARREN COUNTY;202 - LINDEN Precinct	precinct
+Virginia;WARREN COUNTY;301 - NORTH RIVER Precinct	precinct
+Virginia;WARREN COUNTY;302 - RIVERTON Precinct	precinct
+Virginia;WARREN COUNTY;401 - EAST SHENANDOAH Precinct	precinct
+Virginia;WARREN COUNTY;402 - TOWN - WEST SHENANDOAH Precinct	precinct
+Virginia;WARREN COUNTY;501 - SOUTH RIVER Precinct	precinct
+Virginia;WARREN COUNTY;502 - BENTONVILLE Precinct	precinct
+Virginia;WARREN COUNTY;504 - BROWNTOWN Precinct	precinct
+Virginia;WASHINGTON COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;WASHINGTON COUNTY;## Provisional Precinct	precinct
+Virginia;WASHINGTON COUNTY;101 - EAST ABINGDON Precinct	precinct
+Virginia;WASHINGTON COUNTY;102 - WEST ABINGDON Precinct	precinct
+Virginia;WASHINGTON COUNTY;201 - CLINCHBURG Precinct	precinct
+Virginia;WASHINGTON COUNTY;202 - GREENDALE Precinct	precinct
+Virginia;WASHINGTON COUNTY;203 - HAYTERS GAP Precinct	precinct
+Virginia;WASHINGTON COUNTY;204 WOODLAND HILLS Precinct	precinct
+Virginia;WASHINGTON COUNTY;301 - WATAUGA Precinct	precinct
+Virginia;WASHINGTON COUNTY;302 - SOUTH ABINGDON Precinct	precinct
+Virginia;WASHINGTON COUNTY;401 - GLADE SPRING Precinct	precinct
+Virginia;WASHINGTON COUNTY;402 - MEADOWVIEW Precinct	precinct
+Virginia;WASHINGTON COUNTY;501 - RHEA VALLEY Precinct	precinct
+Virginia;WASHINGTON COUNTY;502 - DAMASCUS Precinct	precinct
+Virginia;WASHINGTON COUNTY;504 - GREEN COVE Precinct	precinct
+Virginia;WASHINGTON COUNTY;601 - BURSON PLACE Precinct	precinct
+Virginia;WASHINGTON COUNTY;602 - MENDOTA Precinct	precinct
+Virginia;WASHINGTON COUNTY;603 - VALLEY INSTITUTE Precinct	precinct
+Virginia;WASHINGTON COUNTY;701 - HIGH POINT Precinct	precinct
+Virginia;WASHINGTON COUNTY;702 - WALLACE Precinct	precinct
+Virginia;WASHINGTON COUNTY;703 - JOHN BATTLE Precinct	precinct
+Virginia;WESTMORELAND COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;WESTMORELAND COUNTY;## Provisional Precinct	precinct
+Virginia;WESTMORELAND COUNTY;101 - PRECINCT 1-1 Precinct	precinct
+Virginia;WESTMORELAND COUNTY;102 - PRECINCT 1-2 Precinct	precinct
+Virginia;WESTMORELAND COUNTY;201 - PRECINCT 2-1 Precinct	precinct
+Virginia;WESTMORELAND COUNTY;202 - PRECINCT 2-2 Precinct	precinct
+Virginia;WESTMORELAND COUNTY;301 - PRECINCT 3-1 Precinct	precinct
+Virginia;WESTMORELAND COUNTY;302 - PRECINCT 3-2 Precinct	precinct
+Virginia;WESTMORELAND COUNTY;401 - PRECINCT 4-1 Precinct	precinct
+Virginia;WESTMORELAND COUNTY;501 - PRECINCT 5-1 Precinct	precinct
+Virginia;WISE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;WISE COUNTY;## Provisional Precinct	precinct
+Virginia;WISE COUNTY;101 - APPALACHIA Precinct	precinct
+Virginia;WISE COUNTY;102 - DORCHESTER Precinct	precinct
+Virginia;WISE COUNTY;103 - GUEST RIVER VOTING PLACE Precinct	precinct
+Virginia;WISE COUNTY;104 - WEST POUND Precinct	precinct
+Virginia;WISE COUNTY;201 - NORTH COEBURN Precinct	precinct
+Virginia;WISE COUNTY;202 - WISE Precinct	precinct
+Virginia;WISE COUNTY;203 - EAST POUND Precinct	precinct
+Virginia;WISE COUNTY;301 - BIG STONE GAP Precinct	precinct
+Virginia;WISE COUNTY;302 - EAST STONE GAP Precinct	precinct
+Virginia;WISE COUNTY;401 - CLINCH VALLEY Precinct	precinct
+Virginia;WISE COUNTY;402 - SOUTH COEBURN Precinct	precinct
+Virginia;WISE COUNTY;403 - ST PAUL Precinct	precinct
+Virginia;WYTHE COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;WYTHE COUNTY;## Provisional Precinct	precinct
+Virginia;WYTHE COUNTY;101 - ROYAL OAK Precinct	precinct
+Virginia;WYTHE COUNTY;102 - RURAL RETREAT Precinct	precinct
+Virginia;WYTHE COUNTY;203 - WEST WYTHEVILLE Precinct	precinct
+Virginia;WYTHE COUNTY;303 - EAST WYTHEVILLE Precinct	precinct
+Virginia;WYTHE COUNTY;401 - FORT CHISWELL Precinct	precinct
+Virginia;WYTHE COUNTY;402 - MAX MEADOWS Precinct	precinct
+Virginia;WYTHE COUNTY;501 - JACKSON MEMORIAL Precinct	precinct
+Virginia;WYTHE COUNTY;502 - SHEFFEY Precinct	precinct
+Virginia;WYTHE COUNTY;601 - HUDDLE Precinct	precinct
+Virginia;WYTHE COUNTY;602 - ZION Precinct	precinct
+Virginia;WYTHE COUNTY;603   EVERGREEN Precinct	precinct
+Virginia;YORK COUNTY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;YORK COUNTY;## Provisional Precinct	precinct
+Virginia;YORK COUNTY;101 - QUEENS LAKE Precinct	precinct
+Virginia;YORK COUNTY;102 - WALLER MILL Precinct	precinct
+Virginia;YORK COUNTY;103 - MAGRUDER Precinct	precinct
+Virginia;YORK COUNTY;201 - COVENTRY Precinct	precinct
+Virginia;YORK COUNTY;202 - KILN CREEK Precinct	precinct
+Virginia;YORK COUNTY;301 - SEAFORD Precinct	precinct
+Virginia;YORK COUNTY;302 - YORKTOWN Precinct	precinct
+Virginia;YORK COUNTY;303 - EDGEHILL Precinct	precinct
+Virginia;YORK COUNTY;401 - HARWOODS MILL Precinct	precinct
+Virginia;YORK COUNTY;402 - DARE Precinct	precinct
+Virginia;YORK COUNTY;403 - GRAFTON Precinct	precinct
+Virginia;YORK COUNTY;501 - TABB Precinct	precinct
+Virginia;YORK COUNTY;502 - BETHEL Precinct	precinct
+Virginia;ALEXANDRIA CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;ALEXANDRIA CITY;## Provisional Precinct	precinct
+Virginia;ALEXANDRIA CITY;101 - LADREY SENIOR BUILDING Precinct	precinct
+Virginia;ALEXANDRIA CITY;102 - CITY HALL Precinct	precinct
+Virginia;ALEXANDRIA CITY;103 - LYLES CROUCH SCHOOL Precinct	precinct
+Virginia;ALEXANDRIA CITY;104 - DURANT CENTER Precinct	precinct
+Virginia;ALEXANDRIA CITY;105 - LEE CENTER Precinct	precinct
+Virginia;ALEXANDRIA CITY;106 - CORA KELLY Precinct	precinct
+Virginia;ALEXANDRIA CITY;107 - MT VERNON RECREATION CENTER Precinct	precinct
+Virginia;ALEXANDRIA CITY;108 - GEORGE WASHINGTON MIDDLE SCH Precinct	precinct
+Virginia;ALEXANDRIA CITY;109 - FIRE DEPARTMENT HEADQUARTERS Precinct	precinct
+Virginia;ALEXANDRIA CITY;110 - CHARLES HOUSTON CENTER Precinct	precinct
+Virginia;ALEXANDRIA CITY;111 - POTOMAC YARD Precinct	precinct
+Virginia;ALEXANDRIA CITY;201 - MAURY SCHOOL Precinct	precinct
+Virginia;ALEXANDRIA CITY;202 - GEORGE MASON SCHOOL Precinct	precinct
+Virginia;ALEXANDRIA CITY;203 - CHARLES BARRETT CENTER Precinct	precinct
+Virginia;ALEXANDRIA CITY;204 - BLESSED SACRAMENT CHURCH Precinct	precinct
+Virginia;ALEXANDRIA CITY;205 - DOUGLAS MACARTHUR SCHOOL Precinct	precinct
+Virginia;ALEXANDRIA CITY;206 - CHINQUAPIN PARK RECREATION CTR Precinct	precinct
+Virginia;ALEXANDRIA CITY;207 - TEMPLE BETH EL SYNAGOGUE Precinct	precinct
+Virginia;ALEXANDRIA CITY;208 - NOVA ARTS CENTER Precinct	precinct
+Virginia;ALEXANDRIA CITY;209 - JAMES K POLK SCHOOL Precinct	precinct
+Virginia;ALEXANDRIA CITY;210 - The Hermitage Precinct	precinct
+Virginia;ALEXANDRIA CITY;302 - PATRICK HENRY REC CENTER Precinct	precinct
+Virginia;ALEXANDRIA CITY;303 - CHARLES E BEATLEY LIBRARY Precinct	precinct
+Virginia;ALEXANDRIA CITY;304 - SAMUEL TUCKER SCHOOL Precinct	precinct
+Virginia;ALEXANDRIA CITY;305 - JOHN ADAMS SCHOOL Precinct	precinct
+Virginia;ALEXANDRIA CITY;306 - WILLIAM RAMSAY SCHOOL Precinct	precinct
+Virginia;ALEXANDRIA CITY;307 - SOUTH PORT Precinct	precinct
+Virginia;ALEXANDRIA CITY;308 - CAMERON STATION COMMUNITY CTR Precinct	precinct
+Virginia;BRISTOL CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;BRISTOL CITY;## Provisional Precinct	precinct
+Virginia;BRISTOL CITY;001 - FIRST WARD Precinct	precinct
+Virginia;BRISTOL CITY;002 - SECOND WARD Precinct	precinct
+Virginia;BRISTOL CITY;003 - THIRD WARD Precinct	precinct
+Virginia;BRISTOL CITY;004 - FOURTH WARD Precinct	precinct
+Virginia;BUENA VISTA CITY;## Provisional Precinct	precinct
+Virginia;BUENA VISTA CITY;001 - FIRST WARD Precinct	precinct
+Virginia;BUENA VISTA CITY;002 - SECOND WARD Precinct	precinct
+Virginia;CHARLOTTESVILLE CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;CHARLOTTESVILLE CITY;## Provisional Precinct	precinct
+Virginia;CHARLOTTESVILLE CITY;101 - Key Recreation Precinct	precinct
+Virginia;CHARLOTTESVILLE CITY;102 - CLARK Precinct	precinct
+Virginia;CHARLOTTESVILLE CITY;201 - CARVER Precinct	precinct
+Virginia;CHARLOTTESVILLE CITY;202 - WALKER Precinct	precinct
+Virginia;CHARLOTTESVILLE CITY;301 - BENJAMIN TONSLER Precinct	precinct
+Virginia;CHARLOTTESVILLE CITY;302 - JOHNSON Precinct	precinct
+Virginia;CHARLOTTESVILLE CITY;303 - BUFORD Precinct	precinct
+Virginia;CHARLOTTESVILLE CITY;401 - VENABLE Precinct	precinct
+Virginia;CHARLOTTESVILLE CITY;402 - ALUMNI HALL Precinct	precinct
+Virginia;CHESAPEAKE CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;CHESAPEAKE CITY;## Provisional Precinct	precinct
+Virginia;CHESAPEAKE CITY;001 - GREAT BRIDGE Precinct	precinct
+Virginia;CHESAPEAKE CITY;002 - BETHEL Precinct	precinct
+Virginia;CHESAPEAKE CITY;003 - CAMELOT Precinct	precinct
+Virginia;CHESAPEAKE CITY;004 - CHURCHLAND Precinct	precinct
+Virginia;CHESAPEAKE CITY;005 - CRESTWOOD Precinct	precinct
+Virginia;CHESAPEAKE CITY;006 - DEEP CREEK Precinct	precinct
+Virginia;CHESAPEAKE CITY;007 - GREENBRIER Precinct	precinct
+Virginia;CHESAPEAKE CITY;008 - SOUTH NORFOLK RECREATION Precinct	precinct
+Virginia;CHESAPEAKE CITY;009 - BELLS MILL Precinct	precinct
+Virginia;CHESAPEAKE CITY;010 - OSCAR SMITH Precinct	precinct
+Virginia;CHESAPEAKE CITY;011 - GENEVA PARK Precinct	precinct
+Virginia;CHESAPEAKE CITY;012 - GEORGETOWN Precinct	precinct
+Virginia;CHESAPEAKE CITY;013 - GILMERTON Precinct	precinct
+Virginia;CHESAPEAKE CITY;014 - GRASSFIELD Precinct	precinct
+Virginia;CHESAPEAKE CITY;015 - B M WILLIAMS Precinct	precinct
+Virginia;CHESAPEAKE CITY;016 - HICKORY GROVE Precinct	precinct
+Virginia;CHESAPEAKE CITY;017 - INDIAN CREEK Precinct	precinct
+Virginia;CHESAPEAKE CITY;018 - INDIAN RIVER Precinct	precinct
+Virginia;CHESAPEAKE CITY;019 - JOLLIFF Precinct	precinct
+Virginia;CHESAPEAKE CITY;020 - E W CHITTUM Precinct	precinct
+Virginia;CHESAPEAKE CITY;021 - FELLOWSHIP Precinct	precinct
+Virginia;CHESAPEAKE CITY;022 - NORFOLK HIGHLANDS Precinct	precinct
+Virginia;CHESAPEAKE CITY;023 - OAK GROVE Precinct	precinct
+Virginia;CHESAPEAKE CITY;024 - OAKLETTE Precinct	precinct
+Virginia;CHESAPEAKE CITY;025 - ST JULIANS Precinct	precinct
+Virginia;CHESAPEAKE CITY;026 - JOHNSON PARK Precinct	precinct
+Virginia;CHESAPEAKE CITY;027 - SILVERWOOD Precinct	precinct
+Virginia;CHESAPEAKE CITY;028 - SUNRAY I Precinct	precinct
+Virginia;CHESAPEAKE CITY;029 - TANGLEWOOD Precinct	precinct
+Virginia;CHESAPEAKE CITY;030 - SOUTH NORFOLK Precinct	precinct
+Virginia;CHESAPEAKE CITY;031 - CARVER SCHOOL Precinct	precinct
+Virginia;CHESAPEAKE CITY;032 - PROVIDENCE Precinct	precinct
+Virginia;CHESAPEAKE CITY;033 - WESTOVER Precinct	precinct
+Virginia;CHESAPEAKE CITY;034 - HICKORY MIDDLE SCHOOL Precinct	precinct
+Virginia;CHESAPEAKE CITY;035 - TAYLOR ROAD Precinct	precinct
+Virginia;CHESAPEAKE CITY;036 - GREAT BRIDGE BAPTIST CHURCH Precinct	precinct
+Virginia;CHESAPEAKE CITY;037 - BRIDGETOWN Precinct	precinct
+Virginia;CHESAPEAKE CITY;038 - BAILEY CREEK Precinct	precinct
+Virginia;CHESAPEAKE CITY;039 - LAKE DRUMMOND Precinct	precinct
+Virginia;CHESAPEAKE CITY;040 - RIVER BIRCH Precinct	precinct
+Virginia;CHESAPEAKE CITY;041 - JOHN T WEST Precinct	precinct
+Virginia;CHESAPEAKE CITY;042 - PARKWAYS Precinct	precinct
+Virginia;CHESAPEAKE CITY;043 - PLEASANT CROSSING Precinct	precinct
+Virginia;CHESAPEAKE CITY;044 - NANSEMOND Precinct	precinct
+Virginia;CHESAPEAKE CITY;045 - SUNRAY II Precinct	precinct
+Virginia;CHESAPEAKE CITY;046 - BELLS MILL II Precinct	precinct
+Virginia;CHESAPEAKE CITY;047 - GREEN SEA Precinct	precinct
+Virginia;CHESAPEAKE CITY;048 - JOLLIFF MIDDLE SCHOOL Precinct	precinct
+Virginia;CHESAPEAKE CITY;049 - WATERWAY Precinct	precinct
+Virginia;CHESAPEAKE CITY;050 - RIVER WALK Precinct	precinct
+Virginia;CHESAPEAKE CITY;051 - COOPERS WAY Precinct	precinct
+Virginia;CHESAPEAKE CITY;052 - SHIPYARD ROAD Precinct	precinct
+Virginia;CHESAPEAKE CITY;053 - FAIRWAYS Precinct	precinct
+Virginia;CHESAPEAKE CITY;054 - PUGHSVILLE Precinct	precinct
+Virginia;CHESAPEAKE CITY;055 - GEORGETOWN EAST Precinct	precinct
+Virginia;CHESAPEAKE CITY;056 - GREEN TREE Precinct	precinct
+Virginia;CHESAPEAKE CITY;057 - CYPRESS Precinct	precinct
+Virginia;CHESAPEAKE CITY;058 - EXPRESSWAY Precinct	precinct
+Virginia;CHESAPEAKE CITY;059 - CLEARFIELD Precinct	precinct
+Virginia;CHESAPEAKE CITY;060 - PARKER ROAD Precinct	precinct
+Virginia;CHESAPEAKE CITY;061 - CENTERVILLE Precinct	precinct
+Virginia;CHESAPEAKE CITY;062 - FENTRESS Precinct	precinct
+Virginia;CHESAPEAKE CITY;063 - POPLAR BRANCH Precinct	precinct
+Virginia;COLONIAL HEIGHTS CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;COLONIAL HEIGHTS CITY;## Provisional Precinct	precinct
+Virginia;COLONIAL HEIGHTS CITY;001 - FIRST Precinct	precinct
+Virginia;COLONIAL HEIGHTS CITY;002 - SECOND Precinct	precinct
+Virginia;COLONIAL HEIGHTS CITY;003 - THIRD Precinct	precinct
+Virginia;COLONIAL HEIGHTS CITY;004 - FOURTH Precinct	precinct
+Virginia;COLONIAL HEIGHTS CITY;005 - FIFTH Precinct	precinct
+Virginia;COVINGTON CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;COVINGTON CITY;## Provisional Precinct	precinct
+Virginia;COVINGTON CITY;101 - PRECINCT 1-1 Precinct	precinct
+Virginia;COVINGTON CITY;201 - PRECINCT 2-1 Precinct	precinct
+Virginia;COVINGTON CITY;301 - PRECINCT 3-1 Precinct	precinct
+Virginia;COVINGTON CITY;401 - PRECINCT 4-1 Precinct	precinct
+Virginia;COVINGTON CITY;501 - PRECINCT 5-1 Precinct	precinct
+Virginia;DANVILLE CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;DANVILLE CITY;## Provisional Precinct	precinct
+Virginia;DANVILLE CITY;001 - WARD ONE Precinct	precinct
+Virginia;DANVILLE CITY;002 - WARD TWO Precinct	precinct
+Virginia;DANVILLE CITY;003 - WARD THREE Precinct	precinct
+Virginia;DANVILLE CITY;004 - WARD FOUR Precinct	precinct
+Virginia;DANVILLE CITY;006 - WARD SIX Precinct	precinct
+Virginia;DANVILLE CITY;007 - WARD SEVEN Precinct	precinct
+Virginia;DANVILLE CITY;008 - WARD EIGHT Precinct	precinct
+Virginia;DANVILLE CITY;009 - WARD NINE Precinct	precinct
+Virginia;DANVILLE CITY;010 - WARD TEN Precinct	precinct
+Virginia;DANVILLE CITY;011 - WARD ELEVEN Precinct	precinct
+Virginia;DANVILLE CITY;012 - WARD TWELVE Precinct	precinct
+Virginia;DANVILLE CITY;013 - WARD THIRTEEN Precinct	precinct
+Virginia;DANVILLE CITY;014 - WARD FOURTEEN Precinct	precinct
+Virginia;DANVILLE CITY;015 - WARD FIFTEEN Precinct	precinct
+Virginia;DANVILLE CITY;016 - WARD SIXTEEN Precinct	precinct
+Virginia;DANVILLE CITY;017 - WARD SEVENTEEN Precinct	precinct
+Virginia;EMPORIA CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;EMPORIA CITY;## Provisional Precinct	precinct
+Virginia;EMPORIA CITY;101 - PRECINCT 1-1 Precinct	precinct
+Virginia;EMPORIA CITY;201 - PRECINCT 2-1 Precinct	precinct
+Virginia;EMPORIA CITY;301 - PRECINCT 3-1 Precinct	precinct
+Virginia;EMPORIA CITY;401 - PRECINCT 4-1 Precinct	precinct
+Virginia;EMPORIA CITY;501 - PRECINCT 5-1 Precinct	precinct
+Virginia;EMPORIA CITY;601 - DISTRICT 6 Precinct	precinct
+Virginia;EMPORIA CITY;701 - DISTRICT 7 Precinct	precinct
+Virginia;FAIRFAX CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;FAIRFAX CITY;## Provisional Precinct	precinct
+Virginia;FAIRFAX CITY;001 - ONE Precinct	precinct
+Virginia;FAIRFAX CITY;002 - TWO Precinct	precinct
+Virginia;FAIRFAX CITY;003 - THREE Precinct	precinct
+Virginia;FAIRFAX CITY;004 - FOUR Precinct	precinct
+Virginia;FAIRFAX CITY;005 - FIVE Precinct	precinct
+Virginia;FAIRFAX CITY;006 - SIX Precinct	precinct
+Virginia;FALLS CHURCH CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;FALLS CHURCH CITY;## Provisional Precinct	precinct
+Virginia;FALLS CHURCH CITY;001 - FIRST WARD Precinct	precinct
+Virginia;FALLS CHURCH CITY;002 - SECOND WARD Precinct	precinct
+Virginia;FALLS CHURCH CITY;003 - THIRD WARD Precinct	precinct
+Virginia;FRANKLIN CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;FRANKLIN CITY;## Provisional Precinct	precinct
+Virginia;FRANKLIN CITY;101 - PRECINCT 1-1 Precinct	precinct
+Virginia;FRANKLIN CITY;201 - PRECINCT 2-1 Precinct	precinct
+Virginia;FRANKLIN CITY;301 - PRECINCT 3-1 Precinct	precinct
+Virginia;FRANKLIN CITY;401 - PRECINCT 4-1 Precinct	precinct
+Virginia;FRANKLIN CITY;501 - PRECINCT 5-1 Precinct	precinct
+Virginia;FRANKLIN CITY;601 - PRECINCT 6-1 Precinct	precinct
+Virginia;FREDERICKSBURG CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;FREDERICKSBURG CITY;## Provisional Precinct	precinct
+Virginia;FREDERICKSBURG CITY;101 - PRECINCT 1 - DISTRICT ONE Precinct	precinct
+Virginia;FREDERICKSBURG CITY;201 - PRECINCT 1 - DISTRICT TWO Precinct	precinct
+Virginia;FREDERICKSBURG CITY;301 - PRECINCT 1 - DISTRICT THREE Precinct	precinct
+Virginia;FREDERICKSBURG CITY;401 - PRECINCT 1 - DISTRICT FOUR Precinct	precinct
+Virginia;FREDERICKSBURG CITY;402 - PRECINCT 2 - DISTRICT FOUR Precinct	precinct
+Virginia;GALAX CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;GALAX CITY;## Provisional Precinct	precinct
+Virginia;GALAX CITY;001 - EAST Precinct	precinct
+Virginia;GALAX CITY;002 - NORTH Precinct	precinct
+Virginia;GALAX CITY;003 - SOUTH Precinct	precinct
+Virginia;HAMPTON CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;HAMPTON CITY;## Provisional Precinct	precinct
+Virginia;HAMPTON CITY;101 - ABERDEEN Precinct	precinct
+Virginia;HAMPTON CITY;102 - BASSETTE Precinct	precinct
+Virginia;HAMPTON CITY;103 - CITY HALL Precinct	precinct
+Virginia;HAMPTON CITY;104 - COOPER Precinct	precinct
+Virginia;HAMPTON CITY;105 - EAST HAMPTON Precinct	precinct
+Virginia;HAMPTON CITY;106 - ARMSTRONG Precinct	precinct
+Virginia;HAMPTON CITY;107 - LINDSAY Precinct	precinct
+Virginia;HAMPTON CITY;108 - THOMAS Precinct	precinct
+Virginia;HAMPTON CITY;109 - PHENIX Precinct	precinct
+Virginia;HAMPTON CITY;110 - PHOEBUS Precinct	precinct
+Virginia;HAMPTON CITY;111 - HAMPTON LIBRARY Precinct	precinct
+Virginia;HAMPTON CITY;112 - SMITH Precinct	precinct
+Virginia;HAMPTON CITY;115 - WYTHE Precinct	precinct
+Virginia;HAMPTON CITY;116 - JONES Precinct	precinct
+Virginia;HAMPTON CITY;117 - KECOUGHTAN Precinct	precinct
+Virginia;HAMPTON CITY;118 - MALLORY Precinct	precinct
+Virginia;HAMPTON CITY;201 - BOOKER Precinct	precinct
+Virginia;HAMPTON CITY;202 - BRYAN Precinct	precinct
+Virginia;HAMPTON CITY;203 - BURBANK Precinct	precinct
+Virginia;HAMPTON CITY;204 - FORREST Precinct	precinct
+Virginia;HAMPTON CITY;205 - ASBURY Precinct	precinct
+Virginia;HAMPTON CITY;208 - KRAFT Precinct	precinct
+Virginia;HAMPTON CITY;209 - LANGLEY Precinct	precinct
+Virginia;HAMPTON CITY;210 - MACHEN Precinct	precinct
+Virginia;HAMPTON CITY;212 - BETHEL Precinct	precinct
+Virginia;HAMPTON CITY;213 - PHILLIPS Precinct	precinct
+Virginia;HAMPTON CITY;214 - TUCKER CAPPS Precinct	precinct
+Virginia;HAMPTON CITY;215 - TYLER Precinct	precinct
+Virginia;HAMPTON CITY;216 - SANDY BOTTOM Precinct	precinct
+Virginia;HAMPTON CITY;217 - SYMS Precinct	precinct
+Virginia;HARRISONBURG CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;HARRISONBURG CITY;## Provisional Precinct	precinct
+Virginia;HARRISONBURG CITY;101 - NORTHEAST Precinct	precinct
+Virginia;HARRISONBURG CITY;102 - EAST CENTRAL Precinct	precinct
+Virginia;HARRISONBURG CITY;103 - SOUTHEAST Precinct	precinct
+Virginia;HARRISONBURG CITY;104 - EAST Precinct	precinct
+Virginia;HARRISONBURG CITY;105 - South East Central Precinct	precinct
+Virginia;HARRISONBURG CITY;201 - NORTHWEST Precinct	precinct
+Virginia;HARRISONBURG CITY;202 - SOUTHWEST Precinct	precinct
+Virginia;HARRISONBURG CITY;203 -  WEST Precinct	precinct
+Virginia;HOPEWELL CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;HOPEWELL CITY;## Provisional Precinct	precinct
+Virginia;HOPEWELL CITY;101 - WARD ONE Precinct	precinct
+Virginia;HOPEWELL CITY;201 - WARD TWO Precinct	precinct
+Virginia;HOPEWELL CITY;301 - WARD THREE Precinct	precinct
+Virginia;HOPEWELL CITY;401 - WARD FOUR Precinct	precinct
+Virginia;HOPEWELL CITY;501 - WARD FIVE Precinct	precinct
+Virginia;HOPEWELL CITY;601 - WARD SIX Precinct	precinct
+Virginia;HOPEWELL CITY;701 - WARD SEVEN Precinct	precinct
+Virginia;LEXINGTON CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;LEXINGTON CITY;## Provisional Precinct	precinct
+Virginia;LEXINGTON CITY;001 - LEXINGTON Precinct	precinct
+Virginia;LYNCHBURG CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;LYNCHBURG CITY;## Provisional Precinct	precinct
+Virginia;LYNCHBURG CITY;101 - FIRST WARD FIRST PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;102 - FIRST WARD SECOND PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;103 - FIRST WARD THIRD PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;104 - FIRST WARD FOURTH PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;105 - FIRST WARD FIFTH PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;201 - SECOND WARD FIRST PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;202 - SECOND WARD SECOND PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;203 - SECOND WARD THIRD PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;204 - SECOND WARD FOURTH PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;301 - THIRD WARD FIRST PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;302 - THIRD WARD SECOND PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;303 - THIRD WARD THIRD PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;304 - THIRD WARD FOURTH PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;305 - THIRD WARD FIFTH PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;401 - FOURTH WARD FIRST PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;402 - FOURTH WARD SECOND PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;403 - FOURTH WARD THIRD PRECINCT Precinct	precinct
+Virginia;LYNCHBURG CITY;404 - FOURTH WARD FOURTH PRECINCT Precinct	precinct
+Virginia;MANASSAS CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;MANASSAS CITY;## Provisional Precinct	precinct
+Virginia;MANASSAS CITY;001 - DEAN Precinct	precinct
+Virginia;MANASSAS CITY;002 - WEEMS Precinct	precinct
+Virginia;MANASSAS CITY;003 - METZ Precinct	precinct
+Virginia;MANASSAS CITY;004 - HAYDON Precinct	precinct
+Virginia;MANASSAS CITY;005 - BALDWIN Precinct	precinct
+Virginia;MANASSAS CITY;006 - ROUND Precinct	precinct
+Virginia;MANASSAS PARK CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;MANASSAS PARK CITY;## Provisional Precinct	precinct
+Virginia;MANASSAS PARK CITY;001 - PRECINCT ONE Precinct	precinct
+Virginia;MANASSAS PARK CITY;002 - PRECINCT TWO Precinct	precinct
+Virginia;MANASSAS PARK CITY;003 - PRECINCT THREE Precinct	precinct
+Virginia;MARTINSVILLE CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;MARTINSVILLE CITY;## Provisional Precinct	precinct
+Virginia;MARTINSVILLE CITY;001 - PRECINCT #1 Precinct	precinct
+Virginia;MARTINSVILLE CITY;002 - PRECINCT #2 Precinct	precinct
+Virginia;MARTINSVILLE CITY;003 - PRECINCT #3 Precinct	precinct
+Virginia;MARTINSVILLE CITY;004 - PRECINCT #4 Precinct	precinct
+Virginia;MARTINSVILLE CITY;005 - PRECINCT #5 Precinct	precinct
+Virginia;MARTINSVILLE CITY;006 - PRECINCT #6 Precinct	precinct
+Virginia;NEWPORT NEWS CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;NEWPORT NEWS CITY;## Provisional Precinct	precinct
+Virginia;NEWPORT NEWS CITY;101 - DENBIGH Precinct	precinct
+Virginia;NEWPORT NEWS CITY;102 - EPES Precinct	precinct
+Virginia;NEWPORT NEWS CITY;103 - JENKINS Precinct	precinct
+Virginia;NEWPORT NEWS CITY;104 - MCINTOSH Precinct	precinct
+Virginia;NEWPORT NEWS CITY;105 - OYSTER POINT Precinct	precinct
+Virginia;NEWPORT NEWS CITY;106 - RESERVOIR Precinct	precinct
+Virginia;NEWPORT NEWS CITY;107 - RICHNECK Precinct	precinct
+Virginia;NEWPORT NEWS CITY;108 - LEE HALL Precinct	precinct
+Virginia;NEWPORT NEWS CITY;109 - WINDSOR Precinct	precinct
+Virginia;NEWPORT NEWS CITY;110 - GREENWOOD Precinct	precinct
+Virginia;NEWPORT NEWS CITY;201 - BLAND Precinct	precinct
+Virginia;NEWPORT NEWS CITY;202 - BOULEVARD Precinct	precinct
+Virginia;NEWPORT NEWS CITY;203 - CHARLES Precinct	precinct
+Virginia;NEWPORT NEWS CITY;204 - WELLESLEY Precinct	precinct
+Virginia;NEWPORT NEWS CITY;205 - DEEP CREEK Precinct	precinct
+Virginia;NEWPORT NEWS CITY;208 - HIDENWOOD Precinct	precinct
+Virginia;NEWPORT NEWS CITY;209 - HILTON Precinct	precinct
+Virginia;NEWPORT NEWS CITY;210 - NELSON Precinct	precinct
+Virginia;NEWPORT NEWS CITY;211 - PALMER Precinct	precinct
+Virginia;NEWPORT NEWS CITY;212 - RIVERSIDE Precinct	precinct
+Virginia;NEWPORT NEWS CITY;213 - SANFORD Precinct	precinct
+Virginia;NEWPORT NEWS CITY;215 - WARWICK Precinct	precinct
+Virginia;NEWPORT NEWS CITY;216 - YATES Precinct	precinct
+Virginia;NEWPORT NEWS CITY;217 - RIVERVIEW Precinct	precinct
+Virginia;NEWPORT NEWS CITY;218 - KILN CREEK Precinct	precinct
+Virginia;NEWPORT NEWS CITY;219 - DEER PARK Precinct	precinct
+Virginia;NEWPORT NEWS CITY;302 - BRIARFIELD Precinct	precinct
+Virginia;NEWPORT NEWS CITY;303 - CARVER Precinct	precinct
+Virginia;NEWPORT NEWS CITY;304 - CHESTNUT Precinct	precinct
+Virginia;NEWPORT NEWS CITY;305 - DOWNTOWN Precinct	precinct
+Virginia;NEWPORT NEWS CITY;306 - DUNBAR Precinct	precinct
+Virginia;NEWPORT NEWS CITY;307 - HUNTINGTON Precinct	precinct
+Virginia;NEWPORT NEWS CITY;308 - JEFFERSON Precinct	precinct
+Virginia;NEWPORT NEWS CITY;309 - MAGRUDER Precinct	precinct
+Virginia;NEWPORT NEWS CITY;310 - MARSHALL Precinct	precinct
+Virginia;NEWPORT NEWS CITY;311 - NEWMARKET Precinct	precinct
+Virginia;NEWPORT NEWS CITY;312 - NEWSOME PARK Precinct	precinct
+Virginia;NEWPORT NEWS CITY;313 - REED Precinct	precinct
+Virginia;NEWPORT NEWS CITY;314 - RIVER Precinct	precinct
+Virginia;NEWPORT NEWS CITY;315 - SEDGEFIELD Precinct	precinct
+Virginia;NEWPORT NEWS CITY;316 - SOUTH MORRISON Precinct	precinct
+Virginia;NEWPORT NEWS CITY;317 - WASHINGTON Precinct	precinct
+Virginia;NEWPORT NEWS CITY;318 - WILSON Precinct	precinct
+Virginia;NEWPORT NEWS CITY;319 - SAUNDERS Precinct	precinct
+Virginia;NEWPORT NEWS CITY;320 - WATKINS Precinct	precinct
+Virginia;NORFOLK CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;NORFOLK CITY;## Provisional Precinct	precinct
+Virginia;NORFOLK CITY;101 - GRANBY Precinct	precinct
+Virginia;NORFOLK CITY;102 - OCEAN VIEW SCHOOL Precinct	precinct
+Virginia;NORFOLK CITY;103 - NORTHSIDE Precinct	precinct
+Virginia;NORFOLK CITY;104 - TITUSTOWN  Precinct	precinct
+Virginia;NORFOLK CITY;106 - SECOND PRESBYTERIAN Precinct	precinct
+Virginia;NORFOLK CITY;201 - LARCHMONT SCHOOL Precinct	precinct
+Virginia;NORFOLK CITY;203 - GHENT SQUARE Precinct	precinct
+Virginia;NORFOLK CITY;207 - LAMBERT'S POINT Precinct	precinct
+Virginia;NORFOLK CITY;208 - LARCHMONT LIBRARY Precinct	precinct
+Virginia;NORFOLK CITY;210 - MAURY Precinct	precinct
+Virginia;NORFOLK CITY;211 - CHRYSLER MUSEUM Precinct	precinct
+Virginia;NORFOLK CITY;212 - PARK PLACE Precinct	precinct
+Virginia;NORFOLK CITY;213 - TAYLOR ELEMENTARY SCHOOL Precinct	precinct
+Virginia;NORFOLK CITY;214 - STUART Precinct	precinct
+Virginia;NORFOLK CITY;215 - SUBURBAN PARK Precinct	precinct
+Virginia;NORFOLK CITY;217 - WESLEY Precinct	precinct
+Virginia;NORFOLK CITY;218 - WILLARD Precinct	precinct
+Virginia;NORFOLK CITY;301 - BALLENTINE Precinct	precinct
+Virginia;NORFOLK CITY;302 - TANNERS CREEK Precinct	precinct
+Virginia;NORFOLK CITY;303 - BROAD CREEK Precinct	precinct
+Virginia;NORFOLK CITY;304 - COLEMAN PLACE SCHOOL Precinct	precinct
+Virginia;NORFOLK CITY;305 - LAFAYETTE-WINONA Precinct	precinct
+Virginia;NORFOLK CITY;306 - LINDENWOOD Precinct	precinct
+Virginia;NORFOLK CITY;309 - NORVIEW Precinct	precinct
+Virginia;NORFOLK CITY;310 - ROSEMONT Precinct	precinct
+Virginia;NORFOLK CITY;311 - SHERWOOD Precinct	precinct
+Virginia;NORFOLK CITY;313 - UNION CHAPEL Precinct	precinct
+Virginia;NORFOLK CITY;402 - BERKLEY Precinct	precinct
+Virginia;NORFOLK CITY;404 - CAMPOSTELLA Precinct	precinct
+Virginia;NORFOLK CITY;405 - CHESTERFIELD Precinct	precinct
+Virginia;NORFOLK CITY;406 - BARRON BLACK Precinct	precinct
+Virginia;NORFOLK CITY;408 - EASTON Precinct	precinct
+Virginia;NORFOLK CITY;409 - FAIRLAWN Precinct	precinct
+Virginia;NORFOLK CITY;411 - RUFFNER ACADEMY Precinct	precinct
+Virginia;NORFOLK CITY;412 - INGLESIDE Precinct	precinct
+Virginia;NORFOLK CITY;413 - POPLAR HALLS Precinct	precinct
+Virginia;NORFOLK CITY;414 - YOUNG PARK Precinct	precinct
+Virginia;NORFOLK CITY;415 - LAKE TAYLOR HIGH SCHOOL Precinct	precinct
+Virginia;NORFOLK CITY;501 - BAYVIEW Precinct	precinct
+Virginia;NORFOLK CITY;503 - EAST OCEAN VIEW Precinct	precinct
+Virginia;NORFOLK CITY;504 - LARRYMORE Precinct	precinct
+Virginia;NORFOLK CITY;505 - LITTLE CREEK Precinct	precinct
+Virginia;NORFOLK CITY;506 - OCEAN VIEW CENTER Precinct	precinct
+Virginia;NORFOLK CITY;507 - PRETLOW Precinct	precinct
+Virginia;NORFOLK CITY;509 - TARRALLTON Precinct	precinct
+Virginia;NORFOLK CITY;510 - THIRD PRESBYTERIAN Precinct	precinct
+Virginia;NORFOLK CITY;511 - CROSSROADS Precinct	precinct
+Virginia;NORFOLK CITY;512 - AZALEA GARDENS Precinct	precinct
+Virginia;NORTON CITY;## Provisional Precinct	precinct
+Virginia;NORTON CITY;001 - EAST WARD Precinct	precinct
+Virginia;PETERSBURG CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;PETERSBURG CITY;## Provisional Precinct	precinct
+Virginia;PETERSBURG CITY;101 - FIRST WARD FIRST PRECINCT Precinct	precinct
+Virginia;PETERSBURG CITY;201 - SECOND WARD FIRST PRECINCT Precinct	precinct
+Virginia;PETERSBURG CITY;301 - THIRD WARD FIRST PRECINCT Precinct	precinct
+Virginia;PETERSBURG CITY;401 - FOURTH WARD FIRST PRECINCT Precinct	precinct
+Virginia;PETERSBURG CITY;501 - FIFTH WARD FIRST PRECINCT Precinct	precinct
+Virginia;PETERSBURG CITY;601 - SIXTH WARD FIRST PRECINCT Precinct	precinct
+Virginia;PETERSBURG CITY;701 - SEVENTH WARD FIRST PRECINCT Precinct	precinct
+Virginia;POQUOSON CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;POQUOSON CITY;## Provisional Precinct	precinct
+Virginia;POQUOSON CITY;001 - CENTRAL Precinct	precinct
+Virginia;POQUOSON CITY;002 - EASTERN Precinct	precinct
+Virginia;POQUOSON CITY;003 - WESTERN Precinct	precinct
+Virginia;PORTSMOUTH CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;PORTSMOUTH CITY;## Provisional Precinct	precinct
+Virginia;PORTSMOUTH CITY;001 - EMANUEL A. M. E. CHURCH  Precinct	precinct
+Virginia;PORTSMOUTH CITY;005 - HAMPTON ROADS COMMUNITY HEALTH CENTER Precinct	precinct
+Virginia;PORTSMOUTH CITY;007- PARK VIEW ELEMENTARY SCHOOL Precinct	precinct
+Virginia;PORTSMOUTH CITY;009 - THIRD BAPTIST CHURCH Precinct	precinct
+Virginia;PORTSMOUTH CITY;010 - PORT NORFOLK RECREATION CENTER Precinct	precinct
+Virginia;PORTSMOUTH CITY;011 - MT. HERMON VILLAGE Precinct	precinct
+Virginia;PORTSMOUTH CITY;013 - ST. MARK MISSIONARY BAPTIST CHURCH Precinct	precinct
+Virginia;PORTSMOUTH CITY;014 - BRIGHTON ELEMENTARY SCHOOL Precinct	precinct
+Virginia;PORTSMOUTH CITY;016 - CRADOCK MIDDLE SCHOOL Precinct	precinct
+Virginia;PORTSMOUTH CITY;017 - VICTORY LIFE FELLOWSHIP Precinct	precinct
+Virginia;PORTSMOUTH CITY;019 - FAIRVIEW HEIGHTS BAPTIST CHURCH Precinct	precinct
+Virginia;PORTSMOUTH CITY;020 - NOBLE STREET BAPTIST CHURCH Precinct	precinct
+Virginia;PORTSMOUTH CITY;021 - JOHN F. KENNEDY COMMUNITY CENTER Precinct	precinct
+Virginia;PORTSMOUTH CITY;022 - ST. MARK DELIVERANCE CENTER Precinct	precinct
+Virginia;PORTSMOUTH CITY;023 - WESTHAVEN BAPTIST CHURCH Precinct	precinct
+Virginia;PORTSMOUTH CITY;024 - THE SENIOR STATION Precinct	precinct
+Virginia;PORTSMOUTH CITY;025 - JOHN TYLER ELEMENTARY SCHOOL  Precinct	precinct
+Virginia;PORTSMOUTH CITY;026 - WILLIAM E. WATERS MIDDLE SCHOOL Precinct	precinct
+Virginia;PORTSMOUTH CITY;027 - CAVALIER MANOR RECREATION CENTER Precinct	precinct
+Virginia;PORTSMOUTH CITY;028 - LAKEVIEW ELEMENTARY SCHOOL Precinct	precinct
+Virginia;PORTSMOUTH CITY;029 - SAINT ANDREW'S UNITED METHODIST CHURCH Precinct	precinct
+Virginia;PORTSMOUTH CITY;030 - THE RESCUE CHURCH Precinct	precinct
+Virginia;PORTSMOUTH CITY;031 - WEST PARK CHURCH OF CHRIST  Precinct	precinct
+Virginia;PORTSMOUTH CITY;032 - HODGES MANOR ELEMENTARY SCHOOL  Precinct	precinct
+Virginia;PORTSMOUTH CITY;033- PINECREST BAPTIST CHURCH Precinct	precinct
+Virginia;PORTSMOUTH CITY;034- CHURCHLAND BRANCH LIBRARY Precinct	precinct
+Virginia;PORTSMOUTH CITY;035 - CHURCHLAND ELEMENTARY SCHOOL Precinct	precinct
+Virginia;PORTSMOUTH CITY;036 - SCOTTISH RITE TEMPLE Precinct	precinct
+Virginia;PORTSMOUTH CITY;037 - CHURCHLAND MIDDLE SCHOOL Precinct	precinct
+Virginia;PORTSMOUTH CITY;038 - GROVE BAPTIST CHURCH Precinct	precinct
+Virginia;PORTSMOUTH CITY;039 - CHURCHLAND PRIMARY AND INTERMEDIATE SCHOOL Precinct	precinct
+Virginia;RADFORD CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;RADFORD CITY;## Provisional Precinct	precinct
+Virginia;RADFORD CITY;001 - EAST PRECINCT Precinct	precinct
+Virginia;RADFORD CITY;002 - CENTRAL PRECINCT Precinct	precinct
+Virginia;RADFORD CITY;003 - WEST PRECINCT Precinct	precinct
+Virginia;RICHMOND CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;RICHMOND CITY;## Provisional Precinct	precinct
+Virginia;RICHMOND CITY;101 - ONE HUNDRED ONE Precinct	precinct
+Virginia;RICHMOND CITY;102 - ONE HUNDRED TWO Precinct	precinct
+Virginia;RICHMOND CITY;104 - ONE HUNDRED FOUR Precinct	precinct
+Virginia;RICHMOND CITY;105 - ONE HUNDRED FIVE Precinct	precinct
+Virginia;RICHMOND CITY;106 - ONE HUNDRED SIX Precinct	precinct
+Virginia;RICHMOND CITY;111 - ONE HUNDRED ELEVEN Precinct	precinct
+Virginia;RICHMOND CITY;112 - ONE HUNDRED TWELVE Precinct	precinct
+Virginia;RICHMOND CITY;113 - ONE HUNDRED THIRTEEN Precinct	precinct
+Virginia;RICHMOND CITY;114 - ONE HUNDRED FOURTEEN Precinct	precinct
+Virginia;RICHMOND CITY;115 - ONE HUNDRED FIFTEEN Precinct	precinct
+Virginia;RICHMOND CITY;203 - TWO HUNDRED THREE Precinct	precinct
+Virginia;RICHMOND CITY;204 - TWO HUNDRED FOUR Precinct	precinct
+Virginia;RICHMOND CITY;206 - TWO HUNDRED SIX Precinct	precinct
+Virginia;RICHMOND CITY;207 - TWO HUNDRED SEVEN Precinct	precinct
+Virginia;RICHMOND CITY;208 - TWO HUNDRED EIGHT Precinct	precinct
+Virginia;RICHMOND CITY;213 - TWO HUNDRED THIRTEEN Precinct	precinct
+Virginia;RICHMOND CITY;214 - TWO HUNDRED FOURTEEN Precinct	precinct
+Virginia;RICHMOND CITY;301 - THREE HUNDRED ONE Precinct	precinct
+Virginia;RICHMOND CITY;302 - THREE HUNDRED TWO Precinct	precinct
+Virginia;RICHMOND CITY;303 - THREE HUNDRED THREE Precinct	precinct
+Virginia;RICHMOND CITY;304 - THREE HUNDRED FOUR Precinct	precinct
+Virginia;RICHMOND CITY;305 - THREE HUNDRED FIVE Precinct	precinct
+Virginia;RICHMOND CITY;306 - THREE HUNDRED SIX Precinct	precinct
+Virginia;RICHMOND CITY;307 - THREE HUNDRED SEVEN Precinct	precinct
+Virginia;RICHMOND CITY;308 - THREE HUNDRED EIGHT Precinct	precinct
+Virginia;RICHMOND CITY;309 - THREE HUNDRED NINE Precinct	precinct
+Virginia;RICHMOND CITY;310 - THREE HUNDRED TEN Precinct	precinct
+Virginia;RICHMOND CITY;402 - FOUR HUNDRED TWO Precinct	precinct
+Virginia;RICHMOND CITY;404 - FOUR HUNDRED FOUR Precinct	precinct
+Virginia;RICHMOND CITY;409 - FOUR HUNDRED NINE Precinct	precinct
+Virginia;RICHMOND CITY;410 - FOUR HUNDRED TEN Precinct	precinct
+Virginia;RICHMOND CITY;412 - FOUR HUNDRED TWELVE Precinct	precinct
+Virginia;RICHMOND CITY;413 - FOUR HUNDRED THIRTEEN Precinct	precinct
+Virginia;RICHMOND CITY;414 - FOUR HUNDRED FOURTEEN Precinct	precinct
+Virginia;RICHMOND CITY;501 - FIVE HUNDRED ONE Precinct	precinct
+Virginia;RICHMOND CITY;503 - FIVE HUNDRED THREE Precinct	precinct
+Virginia;RICHMOND CITY;504 - FIVE HUNDRED FOUR Precinct	precinct
+Virginia;RICHMOND CITY;505 - FIVE HUNDRED FIVE Precinct	precinct
+Virginia;RICHMOND CITY;508 - FIVE HUNDRED EIGHT Precinct	precinct
+Virginia;RICHMOND CITY;509 - FIVE HUNDRED NINE Precinct	precinct
+Virginia;RICHMOND CITY;510 - FIVE HUNDRED TEN Precinct	precinct
+Virginia;RICHMOND CITY;602 - SIX HUNDRED TWO Precinct	precinct
+Virginia;RICHMOND CITY;603 - SIX HUNDRED THREE Precinct	precinct
+Virginia;RICHMOND CITY;604 - SIX HUNDRED FOUR Precinct	precinct
+Virginia;RICHMOND CITY;606 - SIX HUNDRED SIX Precinct	precinct
+Virginia;RICHMOND CITY;607 - SIX HUNDRED SEVEN Precinct	precinct
+Virginia;RICHMOND CITY;609 - SIX HUNDRED NINE Precinct	precinct
+Virginia;RICHMOND CITY;610 - SIX HUNDRED TEN Precinct	precinct
+Virginia;RICHMOND CITY;701 - SEVEN HUNDRED ONE Precinct	precinct
+Virginia;RICHMOND CITY;702 - SEVEN HUNDRED TWO Precinct	precinct
+Virginia;RICHMOND CITY;703 - SEVEN HUNDRED THREE Precinct	precinct
+Virginia;RICHMOND CITY;705 - SEVEN HUNDRED FIVE Precinct	precinct
+Virginia;RICHMOND CITY;706 - SEVEN HUNDRED SIX Precinct	precinct
+Virginia;RICHMOND CITY;707 - SEVEN HUNDRED SEVEN Precinct	precinct
+Virginia;RICHMOND CITY;708 - SEVEN HUNDRED EIGHT Precinct	precinct
+Virginia;RICHMOND CITY;802 - EIGHT HUNDRED TWO Precinct	precinct
+Virginia;RICHMOND CITY;806 - EIGHT HUNDRED SIX Precinct	precinct
+Virginia;RICHMOND CITY;810 - EIGHT HUNDRED TEN Precinct	precinct
+Virginia;RICHMOND CITY;811 - EIGHT HUNDRED ELEVEN Precinct	precinct
+Virginia;RICHMOND CITY;812 - EIGHT HUNDRED TWELVE Precinct	precinct
+Virginia;RICHMOND CITY;814 - EIGHT HUNDRED FOURTEEN Precinct	precinct
+Virginia;RICHMOND CITY;902 - NINE HUNDRED TWO Precinct	precinct
+Virginia;RICHMOND CITY;903 - NINE HUNDRED THREE Precinct	precinct
+Virginia;RICHMOND CITY;908 - NINE HUNDRED EIGHT Precinct	precinct
+Virginia;RICHMOND CITY;909 - NINE HUNDRED NINE Precinct	precinct
+Virginia;RICHMOND CITY;910 - NINE HUNDRED TEN Precinct	precinct
+Virginia;RICHMOND CITY;911 - NINE HUNDRED ELEVEN Precinct	precinct
+Virginia;ROANOKE CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;ROANOKE CITY;## Provisional Precinct	precinct
+Virginia;ROANOKE CITY;001 -Peters Creek Precinct	precinct
+Virginia;ROANOKE CITY;002 - Grandview Precinct	precinct
+Virginia;ROANOKE CITY;003 -Preston Park Precinct	precinct
+Virginia;ROANOKE CITY;004 - Williamson Road Precinct	precinct
+Virginia;ROANOKE CITY;005 - East Gate Precinct	precinct
+Virginia;ROANOKE CITY;006 - Hollins Road Precinct	precinct
+Virginia;ROANOKE CITY;007 - Southeast Precinct	precinct
+Virginia;ROANOKE CITY;008 - Lincoln Terrace Precinct	precinct
+Virginia;ROANOKE CITY;009 - Highland Precinct	precinct
+Virginia;ROANOKE CITY;010 - Old Southwest-Wasena Precinct	precinct
+Virginia;ROANOKE CITY;011 - RALEIGH COURT Precinct	precinct
+Virginia;ROANOKE CITY;012 - SOUTH ROANOKE Precinct	precinct
+Virginia;ROANOKE CITY;013 - GARDEN CITY Precinct	precinct
+Virginia;ROANOKE CITY;014 - Crystal Spring Precinct	precinct
+Virginia;ROANOKE CITY;015 - Grandin Court Precinct	precinct
+Virginia;ROANOKE CITY;016 - Deyerle Precinct	precinct
+Virginia;ROANOKE CITY;017 - LEE-HI Precinct	precinct
+Virginia;ROANOKE CITY;018 - Summit Hills Precinct	precinct
+Virginia;ROANOKE CITY;019 - Forest Park Precinct	precinct
+Virginia;ROANOKE CITY;020 - EUREKA PARK Precinct	precinct
+Virginia;SALEM CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;SALEM CITY;## Provisional Precinct	precinct
+Virginia;SALEM CITY;001 - NORTH SALEM NO 2 Precinct	precinct
+Virginia;SALEM CITY;002 - CONEHURST Precinct	precinct
+Virginia;SALEM CITY;003 - BEVERLY HEIGHTS Precinct	precinct
+Virginia;SALEM CITY;004 - WEST SALEM Precinct	precinct
+Virginia;SALEM CITY;005 - NORTH SALEM NO 1 Precinct	precinct
+Virginia;SALEM CITY;006 - SOUTH SALEM NO 1 Precinct	precinct
+Virginia;SALEM CITY;007 - SOUTH SALEM NO 2 Precinct	precinct
+Virginia;SALEM CITY;008 - EAST SALEM Precinct	precinct
+Virginia;SALEM CITY;009 - SOUTH SIDE HILLS Precinct	precinct
+Virginia;SALEM CITY;010 - HIDDEN VALLEY Precinct	precinct
+Virginia;STAUNTON CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;STAUNTON CITY;## Provisional Precinct	precinct
+Virginia;STAUNTON CITY;101 - WARD NO 1 Precinct	precinct
+Virginia;STAUNTON CITY;201 - WARD NO 2 Precinct	precinct
+Virginia;STAUNTON CITY;301 - WARD NO 3 Precinct	precinct
+Virginia;STAUNTON CITY;401 - WARD NO 4 Precinct	precinct
+Virginia;STAUNTON CITY;501 - WARD NO 5 Precinct	precinct
+Virginia;SUFFOLK CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;SUFFOLK CITY;## Provisional Precinct	precinct
+Virginia;SUFFOLK CITY;101 - BELLEHARBOUR Precinct	precinct
+Virginia;SUFFOLK CITY;102 - DRIVER Precinct	precinct
+Virginia;SUFFOLK CITY;104 - BENNETTS CREEK Precinct	precinct
+Virginia;SUFFOLK CITY;201 - EBENEZER Precinct	precinct
+Virginia;SUFFOLK CITY;202 - CHUCKATUCK Precinct	precinct
+Virginia;SUFFOLK CITY;203 - KINGS FORK Precinct	precinct
+Virginia;SUFFOLK CITY;204 - HILLPOINT Precinct	precinct
+Virginia;SUFFOLK CITY;301 - WHITE MARSH Precinct	precinct
+Virginia;SUFFOLK CITY;302 - JOHN F KENNEDY Precinct	precinct
+Virginia;SUFFOLK CITY;304 - NANSEMOND RIVER Precinct	precinct
+Virginia;SUFFOLK CITY;305 - SHOULDERS HILL Precinct	precinct
+Virginia;SUFFOLK CITY;401 - AIRPORT Precinct	precinct
+Virginia;SUFFOLK CITY;402 - WHALEYVILLE Precinct	precinct
+Virginia;SUFFOLK CITY;403 - SOUTHSIDE Precinct	precinct
+Virginia;SUFFOLK CITY;404 - BOOKER T WASHINGTON Precinct	precinct
+Virginia;SUFFOLK CITY;405 - PITTMANTOWN Precinct	precinct
+Virginia;SUFFOLK CITY;501 - KILBYS MILL Precinct	precinct
+Virginia;SUFFOLK CITY;502 - HOLLAND Precinct	precinct
+Virginia;SUFFOLK CITY;504 - LAKE COHOON Precinct	precinct
+Virginia;SUFFOLK CITY;601 - LAKESIDE Precinct	precinct
+Virginia;SUFFOLK CITY;602 - OLDE TOWNE Precinct	precinct
+Virginia;SUFFOLK CITY;603 - ELEPHANTS FORK/WESTHAVEN Precinct	precinct
+Virginia;SUFFOLK CITY;604 - WILROY Precinct	precinct
+Virginia;SUFFOLK CITY;605 - HOLLYWOOD Precinct	precinct
+Virginia;SUFFOLK CITY;702 - HARBOURVIEW Precinct	precinct
+Virginia;SUFFOLK CITY;704 - BURBAGE GRANT Precinct	precinct
+Virginia;SUFFOLK CITY;706 - HUNTERSVILLE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;## Provisional Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;001 - NORTH BEACH Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;002 - SOUTH BEACH Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;003 - OCEAN LAKES Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;004 - LINKHORN Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;005 - SEATACK Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;006 - ALANTON Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;007 - KINGSTON Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;008 - LONDON BRIDGE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;009 - TRANTWOOD Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;010 - GREAT NECK Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;011 - CAPE HENRY Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;012 - PLAZA Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;013 - MT TRASHMORE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;014 - MALIBU Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;015 - OLD DONATION Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;016 - ARAGONA Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;017 - OCEAN PARK Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;018 - THOROUGHGOOD Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;019 - LAKE SMITH Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;020 - BAYSIDE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;021 - DAVIS CORNER Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;022 - POINT O VIEW Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;023 - ARROWHEAD Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;024 - LARKSPUR Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;025 - AVALON Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;026 - FAIRFIELD Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;027 - EDWIN Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;028 - THALIA Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;029 - HOLLAND Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;030 - RED WING Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;031 - SIGMA Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;032 - CREEDS Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;033 - CAPPS SHOP Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;034 - BLACKWATER Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;035 - COURTHOUSE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;036 - WINDSOR OAKS Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;037 - CHESAPEAKE BEACH Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;038 - WITCHDUCK Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;039 - PEMBROKE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;040 - BONNEY Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;041 - COLLEGE PARK Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;042 - BRANDON Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;043 - BELLAMY Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;044 - CENTERVILLE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;045 - TIMBERLAKE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;046 - GREEN RUN Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;047 - KINGS GRANT Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;048 - WOLFSNARE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;049 - LYNNHAVEN Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;050 - OCEANA Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;051 - STRATFORD CHASE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;052 - HOMESTEAD Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;053 - SHANNON Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;054 - CROMWELL Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;055 - MAGIC HOLLOW Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;056 - EDINBURGH Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;057 - SHERRY PARK Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;058 - GLENWOOD Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;059 - SHELTON PARK Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;060 - FOXFIRE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;061 - BAKER Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;062 - LANDSTOWN Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;063 - CULVER Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;064 - ROSEMONT FOREST Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;065 - COLONIAL Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;066 - HUNT Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;067 - EASTERN SHORE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;068 - MANOR Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;069 - SHELL Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;070 - CORPORATE LANDING Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;071 - ROUND HILL Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;072 - RUDEE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;073 - DAHLIA Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;074 - BUCKNER Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;075 - COLONY Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;076 - VILLAGE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;077 - BROOKWOOD Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;078 - INDIAN LAKES Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;079 - PLEASANT HALL Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;080 - CHIMNEY HILL Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;081 - ROCK LAKE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;082 - SHELBURNE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;083 - STRAWBRIDGE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;084 - TALLWOOD Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;085 - UPTON Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;086 - HAYGOOD Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;087 - HILLCREST Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;088 - NORTH LANDING Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;089 - LAKE CHRISTOPHER Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;090 - LAKE JOYCE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;091 - LEXINGTON Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;092 - LITTLE NECK Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;093 - NEWTOWN Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;094 - PINEWOOD Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;095 - DAM NECK Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;096 - HILLTOP Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;097 - INDIAN RIVER Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;098 - INDEPENDENCE Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;099 - SALEM WOODS Precinct	precinct
+Virginia;VIRGINIA BEACH CITY;100 - SANDBRIDGE Precinct	precinct
+Virginia;WAYNESBORO CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;WAYNESBORO CITY;## Provisional Precinct	precinct
+Virginia;WAYNESBORO CITY;001 - WARD A Precinct	precinct
+Virginia;WAYNESBORO CITY;002 - WARD B Precinct	precinct
+Virginia;WAYNESBORO CITY;003 - WARD C Precinct	precinct
+Virginia;WAYNESBORO CITY;004 - WARD D Precinct	precinct
+Virginia;WILLIAMSBURG CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;WILLIAMSBURG CITY;## Provisional Precinct	precinct
+Virginia;WILLIAMSBURG CITY;001 - STRYKER Precinct	precinct
+Virginia;WILLIAMSBURG CITY;002 - MATOAKA Precinct	precinct
+Virginia;WINCHESTER CITY;# AB - Central Absentee Precinct Precinct	precinct
+Virginia;WINCHESTER CITY;## Provisional Precinct	precinct
+Virginia;WINCHESTER CITY;101 - MERRIMANS Precinct	precinct
+Virginia;WINCHESTER CITY;102 - OLD TOWN Precinct	precinct
+Virginia;WINCHESTER CITY;201 - VIRGINIA AVENUE Precinct	precinct
+Virginia;WINCHESTER CITY;301 - WAR MEMORIAL Precinct	precinct
+Virginia;WINCHESTER CITY;401 - FREDERICK DOUGLASS Precinct	precinct
+Virginia;WINCHESTER CITY;402 - ROLLING HILLS Precinct	precinct
+Virginia;US Congress House of Representatives District 1	congressional
+Virginia;US Congress House of Representatives District 2	congressional
+Virginia;US Congress House of Representatives District 3	congressional
+Virginia;US Congress House of Representatives District 4	congressional
+Virginia;US Congress House of Representatives District 5	congressional
+Virginia;US Congress House of Representatives District 6	congressional
+Virginia;US Congress House of Representatives District 7	congressional
+Virginia;US Congress House of Representatives District 8	congressional
+Virginia;US Congress House of Representatives District 9	congressional
+Virginia;US Congress House of Representatives District 10	congressional
+Virginia;US Congress House of Representatives District 11	congressional
+Virginia;US Congress;Senate	state
+Virginia;General Assembly House of Representatives District 8	state-house
