@@ -358,7 +358,7 @@ def pick_juris_from_db(sess,project_root,juris_type=None):
 		jt_idx, juris_type = pick_one(rut[rut.Txt != 'other'],'Txt','type for the file\'s overall jurisdiction')
 		# if nothing chosen
 		if not juris_type:
-			juris_type = get_alphanumeric_from_user('Enter the jurisdiction type') # TODO allow hyphen?
+			juris_type = get_alphanumeric_from_user('Enter the jurisdiction type',allow_hyphen=True)
 	# TODO build uniqueness into Txt field of each enumeration on db creation
 
 	juris_type_id,other_juris_type = mr.enum_value_to_id_othertext(rut,juris_type)
@@ -395,7 +395,6 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 		if fs_idx is None:
 			# have user enter record; save it to file system
 			user_record, enum_plain_text_values = new_record_info_from_user(sess,project_root,element,known_info_d=known_info_d)
-			# TODO enter_new pulls from file system; would be better here to pull from db
 			save_record_to_filesystem(storage_dir,element,user_record,enum_plain_text_values)
 
 
@@ -799,9 +798,14 @@ def pick_or_create_directory(root_path,d_name):
 	return d_name
 
 
-def get_alphanumeric_from_user(request):
+def get_alphanumeric_from_user(request,allow_hyphen=False):
+	# specify regex
+	if allow_hyphen:
+		alpha = re.compile('^[\w\-]+$')
+	else:
+		alpha = re.compile('^\w+$')
+
 	good = False
-	alpha = re.compile('^\w+$')
 	s = input(f'{request}\n')
 	while not good:
 		if alpha.match(s):
