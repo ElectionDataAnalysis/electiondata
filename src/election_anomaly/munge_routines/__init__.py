@@ -43,7 +43,7 @@ def clean_raw_df(raw,munger):
     # change all blanks to "none or unknown"
     for c in cols_to_munge:
         raw[c] = raw[c].apply(str)
-        raw[c].map({'':'none or unknown'})
+        raw[c] = raw[c].replace('','none or unknown')
     # rename columns to munge by adding suffix
     renamer = {x:f'{x}_{munger.field_rename_suffix}' for x in cols_to_munge}
     raw.rename(columns=renamer,inplace=True)
@@ -311,7 +311,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
     Note that columns to be munged (e.g. County_xxx) have mu.field_rename_suffix (e.g., _xxx) added already"""
     working = raw.copy()
 
-    # enter elements from sources outside datarows, including creating id column(s)
+    # enter elements from sources outside raw data, including creating id column(s)
     # TODO what if contest_type (BallotMeasure or Candidate) has source 'other'?
     for t,r in mu.cdf_elements[mu.cdf_elements.source == 'other'].iterrows():
         # add column for element id

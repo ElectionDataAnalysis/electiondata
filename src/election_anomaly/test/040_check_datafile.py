@@ -40,10 +40,6 @@ if __name__ == '__main__':
 
 	# TODO check datafile/munger against db?
 
-	# load new datafile
-	ui.new_datafile(
-		sess,munger,data_path,juris=juris,project_root=project_root)
-
 	eng.dispose()
 	print('Done! (user_interface)')
 

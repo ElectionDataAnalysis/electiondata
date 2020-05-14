@@ -565,13 +565,11 @@ def context_dependency_dictionary():
 # TODO before processing context files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
 def load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True):
-    """<df> should have all info needed for insertion into cdf:
-    for enumerations, the plaintext value of the enumeration (e.g., 'precinct')
-    for other fields, the value of the field (e.g., 'North Carolina;Alamance County').
+    """ TODO
     """
     cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
     context_dir = os.path.join(juris_path,'context')
-    df = pd.read_csv(os.path.join(context_dir,f'{element}.txt'),sep='\t')
+    df = pd.read_csv(os.path.join(context_dir,f'{element}.txt'),sep='\t').fillna('none or unknown')
     # TODO check that df has the right format
 
     # TODO deal with duplicate 'none or unknown' records

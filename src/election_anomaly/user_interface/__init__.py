@@ -354,16 +354,22 @@ def pick_munger(mungers_dir='mungers',project_root=None,session=None):
 def pick_juris_from_db(sess,project_root,juris_type=None):
 	ru = pd.read_sql_table('ReportingUnit',sess.bind,index_col='Id')
 	rut = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
+
+	# if juris_type not passed, ask for it
 	if not juris_type:
-		jt_idx, juris_type = pick_one(rut,'Txt','type for the file\'s overall jurisdiction')
+		jt_idx, juris_type = pick_one(rut[rut.Txt != 'other'],'Txt','type for the file\'s overall jurisdiction')
+		# if nothing chosen
+		if not juris_type:
+			juris_type = get_alphanumeric_from_user('Enter the jurisdiction type') # TODO allow hyphen?
 	# TODO build uniqueness into Txt field of each enumeration on db creation
 
 	juris_type_id,other_juris_type = mr.enum_value_to_id_othertext(rut,juris_type)
 	jurisdictions = ru[ru.ReportingUnitType_Id == juris_type_id]
 	if jurisdictions.empty:
-		print(f'No {juris_type} record found in the database. Please create one.\n')
 		juris_idx, juris_record_d, juris_enum_d = create_record_in_db(
-			sess,project_root,'ReportingUnit',known_info_d={'ReportingUnitType':juris_type})
+			sess,project_root,'ReportingUnit',known_info_d={
+				'ReportingUnitType':juris_type,
+				'ReportingUnitType_Id':juris_type_id,'OtherReportingUnitType':other_juris_type})
 
 		juris_internal_db_name = juris_record_d['Name']
 	else:
@@ -517,7 +523,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 	db_idx = -1
 
 	# for messages to user
-	known_info_string = ' with\n' + '\n\t'.join([f'{k}:\t{v}' for k,v in known_info_d.items()])
+	known_info_string = '\n\t' + '\n\t'.join([f'{k}:\t{v}' for k,v in known_info_d.items()])
 
 	# get list -- from file system -- of all enumerations for the <table>
 	enum_list = pd.read_csv(
@@ -547,8 +553,9 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 	if all_from_db.empty:
 		filtered_from_db = pd.DataFrame()
 	else:
+		d = {k:v for k,v in known_info_d.items() if k in all_from_db.columns}
 		filtered_from_db = all_from_db.loc[
-			(all_from_db[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
+			(all_from_db[list(d)] == pd.Series(d)).all(axis=1)]
 
 		# add plaintext enum columns
 		filtered_from_db_with_plaintext = filtered_from_db
@@ -558,7 +565,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 				filtered_from_db_with_plaintext,e,e_df[e],drop_old=False)
 	# ask user to pick from db
 	if filtered_from_db.empty:
-		print(f'No records in database {known_info_string}\n\n ')
+		print(f'No records in database with {known_info_string}\n\n ')
 	else:
 		print('Is the desired record already in the database?')
 		drop_list = [f'{e}_Id' for e in enum_list] + [f'Other{e}' for e in enum_list]
@@ -577,8 +584,9 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 	if not picked_from_db:
 		# find record in file system if possible
 		if not all_from_file.empty:
-			# filter via known_info_d
-			filtered_from_file = all_from_file.loc[(all_from_file[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
+			# filter via known_info_d (restricted to relevant columns)
+			d = {k:v for k,v in known_info_d.items() if k in all_from_file.columns}
+			filtered_from_file = all_from_file.loc[(all_from_file[list(d)] == pd.Series(d)).all(axis=1)]
 
 			# ask user to pick from file
 			if not filtered_from_file.empty:
@@ -662,25 +670,38 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 
 		show_user = user_input_record.copy()
 		for e in edf.keys():
-			# force user to pick from standard list (plus 'other')
-			user_input_record[f'{e}_Id'], enum_txt = pick_one(edf[e],'Txt',e,required=True)
-			if enum_txt == 'other':
-				# get plaintext from user
-				user_input_record[f'Other{e}'] = input(f'Enter the {e}:\n')
-				# check against standard list
-				std_enum_list = list(edf[e]['Txt'])
-				std_enum_list.remove('other')
-				if user_input_record[f'Other{e}'] in std_enum_list:
-					# if user's plaintext is on standard list, change <e>_Id to match plaintext (rather than 'other')
-					#  and change Other<e> back to blank
-					user_input_record[f'{e}_Id'] = \
-						edf[e][edf[e].Txt == user_input_record[f'Other{e}']].first_valid_index()
-					user_input_record[f'Other{e}'] = ''
+			# define show_user, user_input_record and enum_val dictionaries
+			if e in known_info_d.keys():
+				# take plaintext from known_info_d if possible
+				show_user[e] = enum_val[e] = known_info_d[e]
+				user_input_record[f'{e}_Id'],user_input_record[f'Other{e}'] = mr.enum_value_to_id_othertext(
+					edf[e],known_info_d[e])
+			elif f'{e}_Id' in known_info_d.keys() and f'Other{e}' in known_info_d.keys():
+				# otherwise take id/othertext from known_info_d if possible
+				enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(
+					edf[e],known_info_d[f'{e}_Id'],known_info_d[f'Other{e}'])
+				user_input_record[f'{e}_Id'] = known_info_d[f'{e}_Id']
+				user_input_record[f'Other{e}'] = known_info_d[f'Other{e}']
 			else:
-				user_input_record[f'Other{e}'] = ''
-			# get plaintext from id/othertext
-			enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(
-				edf[e],user_input_record[f'{e}_Id'],user_input_record[f'Other{e}'])
+				# otherwise force user to pick from standard list (plus 'other')
+				user_input_record[f'{e}_Id'], enum_txt = pick_one(edf[e],'Txt',e,required=True)
+				if enum_txt == 'other':
+					# get plaintext from user
+					user_input_record[f'Other{e}'] = input(f'Enter the {e}:\n')
+					# check against standard list
+					std_enum_list = list(edf[e]['Txt'])
+					std_enum_list.remove('other')
+					if user_input_record[f'Other{e}'] in std_enum_list:
+						# if user's plaintext is on standard list, change <e>_Id to match plaintext (rather than 'other')
+						#  and change Other<e> back to blank
+						user_input_record[f'{e}_Id'] = \
+							edf[e][edf[e].Txt == user_input_record[f'Other{e}']].first_valid_index()
+						user_input_record[f'Other{e}'] = ''
+				else:
+					user_input_record[f'Other{e}'] = ''
+				# get plaintext from id/othertext
+				enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(
+					edf[e],user_input_record[f'{e}_Id'],user_input_record[f'Other{e}'])
 		entry = '\n\t'.join([f'{k}:\t{v}' for k,v in show_user.items()])
 		confirm = input(
 			f'Confirm entry:\n\t{entry}\nIs this correct (y/n)?\n')
