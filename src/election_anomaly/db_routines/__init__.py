@@ -309,7 +309,7 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
     try:
         appendable.to_sql(table, session.bind, if_exists='append', index=False)
     except sqlalchemy.exc.IntegrityError as e:
-        ignore = input(f'Database integrity error: {e}. Continue anyway (y/n)?\n')
+        ignore = input(f'Database integrity error: {e}. \nContinue anyway (y/n)?\n')
         if ignore == 'y':
             pass
         else:

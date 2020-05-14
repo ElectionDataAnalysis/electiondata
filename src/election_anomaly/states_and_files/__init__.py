@@ -579,7 +579,7 @@ def load_context_dframe_into_cdf(session,element,juris_path,project_root,load_re
         fields_file = os.path.join(cdf_schema_def_dir,'elements',element,'fields.txt')
         fields = pd.read_csv(fields_file,sep='\t',index_col='fieldname')
         for f in fields.index:
-            # change any non-string fields to default values
+            # change any non-string, non-foreign-id fields to default values
             t = fields.loc[f,'datatype']
             if t == 'Date':
                 d[f]='1000-01-01'
@@ -620,10 +620,10 @@ def load_context_dframe_into_cdf(session,element,juris_path,project_root,load_re
     fk_file_path = os.path.join(
             cdf_schema_def_dir,'elements',element,'foreign_keys.txt')
     if os.path.isfile(fk_file_path):
-        fks = pd.read_csv(fk_file_path,sep='\t',index_col='fieldname')
+        foreign_keys = pd.read_csv(fk_file_path,sep='\t',index_col='fieldname')
 
-        for fn in fks.index:
-            refs = fks.loc[fn,'refers_to'].split(';')
+        for fn in foreign_keys.index:
+            refs = foreign_keys.loc[fn,'refers_to'].split(';')
 
             try:
                 df = get_ids_for_foreign_key(session,df,element,fn,refs)
@@ -670,16 +670,20 @@ def get_ids_for_foreign_key(session,df,element,foreign_key,refs):
         # join on cdf_element name as well
         df = df.merge(
             target,how='left',left_on=['cdf_element','internal_name'],right_on=['cdf_element',interim])
+        # rename 'Foreign_Id' to 'Foreign' for consistency in definition of missing
+        # TODO why is ExternalIdentifier special in this regard? Is it that ExternalIdentifier doesn't have a name field?
+        df.rename(columns={foreign_key:foreign_elt},inplace=True)
     else:
         df = df.merge(target,how='left',left_on=foreign_elt,right_on=interim)
 
-    missing = df[(df[foreign_key].notnull()) & (df[interim].isnull())]
+    missing = df[(df[foreign_elt].notnull()) & (df[interim].isnull())]
     if missing.empty:
         df.drop([interim],axis=1)
     else:
         ui.show_sample(missing,f'records in {element} with a {foreign_elt}',f'was not found in the database')
-        ignore = input(f'OK to continue, even though some records in {element} are missing {foreign_elt} (y/n)?\n')
-        if not ignore:
+        ignore = input(f'Continue anyway, letting some records in {element} be without {foreign_elt} (y/n)?\n')
+        if ignore != 'y':
+            print(f'Let\'s make sure the db has the records required for {foreign_elt}')
             raise ForeignKeyException(f'For some {element} records, {foreign_elt} was not found')
     return df
 
