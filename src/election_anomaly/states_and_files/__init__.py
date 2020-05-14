@@ -626,16 +626,18 @@ def load_context_dframe_into_cdf(session,element,juris_path,project_root,load_re
             refs = foreign_keys.loc[fn,'refers_to'].split(';')
 
             try:
-                df = get_ids_for_foreign_key(session,df,element,fn,refs)
+                df = get_ids_for_foreign_keys(session,df,element,fn,refs)
+                print(f'Database foreign id assigned for each {fn} in {element}.')
             except ForeignKeyException as e:
                 if load_refs:
                     for r in refs:
                         load_context_dframe_into_cdf(session,r,juris_path,project_root)
                     # try again to load main element (but don't load referred-to again)
-                    # TODO allow opt-out (e.g., for Primary Party, which might be legitimately null)
                     load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=False)
+                    return
                 else:
-                    try_again = input(f'{e}\nWould you like to make changes to the context directory and try again (y/n)?\n')
+                    try_again = input(
+                        f'{e}\nWould you like to make changes to the context directory and try again (y/n)?\n')
                     if try_again:
                         load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
                         return
@@ -645,9 +647,9 @@ def load_context_dframe_into_cdf(session,element,juris_path,project_root,load_re
     return
 
 
-def get_ids_for_foreign_key(session,df,element,foreign_key,refs):
+def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs):
     """ TODO <fn> is foreign key"""
-
+    df = df1.copy()
     # append the Id corresponding to <fn> from the db
     foreign_elt = f'{foreign_key[:-3]}'
     interim = f'{foreign_elt}_Name'
