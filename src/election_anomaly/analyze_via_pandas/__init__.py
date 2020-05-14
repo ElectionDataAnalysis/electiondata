@@ -158,7 +158,12 @@ def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,
 				 'CandidateSelection_Id':'Selection_Id'}).merge(
 		df['Office'],how='left',left_on='Office_Id',right_index=True)
 	cc = cc[['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id']]
-	cc.loc[:,'contest_type'] = 'Candidate'
+	if cc.empty:
+		cc['contest_type'] = None
+	else:
+		cc.loc[:,'contest_type'] = 'Candidate'
+
+	# create ballotmeasure_selection dataframe
 	bm = df['BallotMeasureContestSelectionJoin'].merge(
 		df['BallotMeasureContest'],how='left',left_on='BallotMeasureContest_Id',right_index=True).rename(
 		columns={'Name':'Contest'}).merge(
@@ -166,7 +171,11 @@ def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,
 		columns={'BallotMeasureSelection_Id':'Selection_Id','BallotMeasureContest_Id':'Contest_Id'}
 	)
 	bm = bm[['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id']]
-	bm.loc[:,'contest_type'] = 'BallotMeasure'
+	if bm.empty:
+		bm['contest_type'] = None
+	else:
+		bm.loc[:,'contest_type'] = 'BallotMeasure'
+
 	contest_selection = pd.concat([cc,bm])
 
 	# append contest_district_type column

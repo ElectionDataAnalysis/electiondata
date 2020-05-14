@@ -20,12 +20,13 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=eng)
     analysis_session = Session()
 
-    jurisdiction = ui.pick_juris_from_filesystem(project_root,
-                                                 path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
-                                                 juris_name=juris_name)
-    target_dir = os.path.join(project_root,'jurisdictions/NC_5/rollups_from_cdf_db')
+    jurisdiction = ui.pick_juris_from_filesystem(
+        project_root,juriss_dir=os.path.join(project_root,'jurisdictions'),juris_name=juris_name)
+
+    target_dir = os.path.join(jurisdiction.path_to_juris_dir,'rollups_from_cdf_db')
     rollup = avp.create_rollup(
-        analysis_session,'North Carolina','county','precinct','2018g',target_dir)
+        analysis_session,'Pennsylvania;Philadelphia;Ward 8;Division 6','precinct','precinct',
+        '2018 General Election',target_dir)
 
     eng.dispose()
     print('Done')
