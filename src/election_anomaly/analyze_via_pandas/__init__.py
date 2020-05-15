@@ -96,6 +96,8 @@ def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,
 	If <exclude_total> is True, don't include 'total' CountItemType
 	(unless 'total' the only CountItemType)"""
 
+	# TODO allow user to pick top_ru, sub_ru_type, atomic_ru_type, election from db
+
 	# Get name of db for error messages
 	db = session.bind.url.database
 
