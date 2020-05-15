@@ -78,6 +78,7 @@ def get_id_check_unique(df,conditions=None):
 		conditions = {}
 	found = df.loc[(df[list(conditions)] == pd.Series(conditions)).all(axis=1)]
 	if found.shape[0] == 0:
+		# TODO allow user to revise?
 		raise Exception(f'None found')
 	elif found.shape[0] > 1:
 		raise Exception(f'More than one found')

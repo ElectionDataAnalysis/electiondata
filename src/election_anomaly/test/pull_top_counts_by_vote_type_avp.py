@@ -24,13 +24,13 @@ if __name__ == '__main__':
     analysis_session = Session()
 
     target_dir = os.path.join(jurisdiction.path_to_juris_dir,'rollups_from_cdf_db')
-    top_reporting_unit_type = 'Pennsylvania;Philadelphia'
-    sub_reporting_unit_type = 'ward'  # report will give results by this ru_type
+    top_reporting_unit_type = 'North Carolina'
+    sub_reporting_unit_type = 'county'  # report will give results by this ru_type
     atomic_ru_type = 'precinct'
 
     rollup = avp.create_rollup(
         analysis_session,top_reporting_unit_type,sub_reporting_unit_type,atomic_ru_type,
-        '2018 General Election',target_dir)
+        '2018 General',target_dir)
 
     eng.dispose()
     print('Done')

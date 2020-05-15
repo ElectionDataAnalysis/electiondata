@@ -772,7 +772,7 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 	# NB: info_cols will have suffix added by munger
 
 	# check jurisdiction against raw results file, adapting context as necessary
-	if juris.check_against_raw_results(raw,munger):
+	if juris.check_against_raw_results(raw,munger,numerical_columns):
 		# if context changed, load to db
 		juris.load_context_to_db(session,project_root)
 

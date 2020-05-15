@@ -77,7 +77,8 @@ def get_name_field(t):
 
 def add_munged_column(raw,munger,element,mode='row',inplace=True):
     """Alters dataframe <raw>, adding or redefining <element>_raw column
-    via the <formula>."""
+    via the <formula>. Assumes some preprocessing of <raw> """
+    # TODO what preprocessing exactly? Improve description
     if raw.empty:
         return raw
     if inplace:
