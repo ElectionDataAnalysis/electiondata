@@ -18,7 +18,7 @@ if __name__ == '__main__':
 	db_name = 'Philadelphia'
 
 	# connect to db
-	eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
+	eng = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
 	Session = sessionmaker(bind=eng)
 	new_df_session = Session()
 

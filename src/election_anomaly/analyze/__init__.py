@@ -112,7 +112,7 @@ class Election(object):
     def pull_rollup_from_db_by_types(
             self, roll_up_to_ru_type, atomic_ru_type='precinct',contest_name_list=None,db_paramfile=None):
 
-        eng, meta = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=self.jurisdiction.short_name)
+        eng = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=self.jurisdiction.short_name)
 
         # Get necessary tables from cdf schema
         cdf_d={}

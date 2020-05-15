@@ -107,7 +107,7 @@ def sql_alchemy_connect(schema=None,paramfile=None,db_name='postgres'):
     # We then bind the connection to MetaData()
     meta = db.MetaData(bind=engine, reflect=True,schema=schema)
 
-    return engine, meta
+    return engine
 
 
 def config(filename=None, section='postgresql'):

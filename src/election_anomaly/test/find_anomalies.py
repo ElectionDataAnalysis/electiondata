@@ -12,13 +12,13 @@ if __name__ == '__main__':
     project_root = ui.get_project_root()
 
     # initialize main session for connecting to db for data-loading and analysis
-    eng, meta_generic = dbr.sql_alchemy_connect(
+    eng = dbr.sql_alchemy_connect(
         db_name=input('Database name?\n'),paramfile=ui.pick_paramfile())
     Session = sessionmaker(bind=eng)
     analysis_session = Session()
 
-    jurisdiction = ui.pick_juris_from_filesystem(project_root,
-                                                 path_to_jurisdictions=os.path.join(project_root,'jurisdictions'))
+    jurisdiction = ui.pick_juris_from_filesystem(
+        project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'))
     e = an.Election(analysis_session,jurisdiction,project_root)
 
     # TODO remove hard-coded county, precinct
@@ -56,7 +56,7 @@ if __name__ == '__main__':
         draw_all = input('Plot worst bar chart for all contests? (y/n)?\n')
         if draw_all == 'y':
             rollup = e.pull_rollup_from_db_by_types()
-            anomalies.worst_bar_for_each_contest(analysis_session,meta_generic)
+            anomalies.worst_bar_for_each_contest()
 
     eng.dispose()
     print('Done!')
