@@ -284,9 +284,9 @@ def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_nam
 
 
 def find_dupes(df):
-	dupes = df[df.duplicated()].drop_duplicates(keep='first')
+	dupes_df = df[df.duplicated()].drop_duplicates(keep='first')
 	deduped = df.drop_duplicates(keep='first')
-	return dupes, deduped
+	return dupes_df, deduped
 
 
 def format_check_formula(formula,fields):

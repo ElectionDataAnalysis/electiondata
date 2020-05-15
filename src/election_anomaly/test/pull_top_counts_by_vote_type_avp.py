@@ -17,7 +17,6 @@ if __name__ == '__main__':
 
     db_name = ui.pick_database(project_root,db_paramfile)
 
-
     # initialize main session for connecting to db
     eng, meta_generic = dbr.sql_alchemy_connect(
         paramfile=db_paramfile,db_name=db_name)

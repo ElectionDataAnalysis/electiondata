@@ -412,10 +412,29 @@ def check_munger_file_contents(munger_name,project_root=None):
     checked = False
     while not checked:
         problems = []
+        warnings = []
 
         # read cdf_elements and format from files
         cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),sep='\t').fillna('')
         format_df = pd.read_csv(os.path.join(munger_dir,'format.txt'),sep='\t',index_col='item').fillna('')
+
+        # format.txt has the required items
+        req_list = ['atomic_reporting_unit_type','header_row_count','field_name_row','separator','encoding']
+        missing_items = [x for x in req_list if x not in format_df.index]
+        if missing_items:
+            item_string = ','.join(missing_items)
+            problems.append(f'Format file is missing some items: {item_string}')
+
+        # entries in format.txt are of correct type
+        if not format_df.loc['header_row_count','value'].isnumeric():
+            problems.append(f'In format file, header_row_count must be an integer'
+                            f'({format_df.loc["header_row_count","value"]} is not.)')
+        if not format_df.loc['field_name_row','value'].isnumeric():
+            problems.append(f'In format file, field_name_row must be an integer '
+                            f'({format_df.loc["field_name_row","value"]} is not.)')
+        if not format_df.loc['encoding','value'] in ui.recognized_encodings:
+            warnings.append(f'Encoding {format_df.loc["field_name_row","value"]} in format file is not recognized.')
+
         # every source is either row, column or other
         bad_source = [x for x in cdf_elements.source if x not in ['row','column','other']]
         if bad_source:
@@ -437,28 +456,33 @@ def check_munger_file_contents(munger_name,project_root=None):
                 bad_column_formula.add(r['raw_identifier_formula'])
             else:
                 integer_list = [int(x) for x in p_catch_digits.findall(r['raw_identifier_formula'])]
-                bad_integer_list = [x for x in integer_list if (x > format_df.header_row_count-1 or x < 0)]
+                bad_integer_list = [
+                    x for x in integer_list if (x > format_df.loc['header_row_count','value']-1 or x < 0)]
                 if bad_integer_list:
                     bad_column_formula.add(r['raw_identifier_formula'])
         if bad_column_formula:
             cf_str = ','.join(bad_column_formula)
             problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
 
-        # check entries in format.txt
-        if not format_df.loc['header_row_count','value'].isnumeric():
-            problems.append('In format file, header_row_count must be an integer')
-        if not format_df.loc['field_name_row','value'].isnumeric():
-            problems.append('In format file, field_name_row must be an integer')
-
         # TODO if field in formula matches an element self.cdf_element.index,
         #  check that rename is not also a column
         if problems:
             problem_str = '\n\t'.join(problems)
-            print(f'Problems found:\n{problem_str} ')
-            input(f'Correct the problems by editing files in {munger_dir}\n'
-                  f'Then hit enter to continue.')
+            print(f'Problems found:\nt{problem_str} ')
+            print(f'Correct the problems by editing files in {munger_dir}\n')
+            if warnings:
+                warn_string = '\n\t'.join(warnings)
+                print(f'You may wish to address these potential problems as well:\n\t{warn_string}')
+            input(f'Then hit enter to continue.')
         else:
             checked = True
+            if warnings:
+                warn_string = '\n\t'.join(warnings)
+                print(f'Potential problems found:\n\t{warn_string}')
+                address = input('Would you like to address any of these (y/n)?\n')
+                if address:
+                    input(f'Address potential problems by editing files in {munger_dir}.\n Then hit enter to continue.')
+                    checked = False
     return
 
 
@@ -467,13 +491,13 @@ def dedupe(f_path,warning='There are duplicates'):
     df = pd.read_csv(f_path,sep='\t')
     dupes = True
     while dupes:
-        dupes,df = ui.find_dupes(df)
-        if dupes.empty:
+        dupes_df,df = ui.find_dupes(df)
+        if dupes_df.empty:
             dupes = False
             print(f'No dupes in {f_path}')
         else:
             print(f'WARNING: {warning}\n')
-            ui.show_sample(dupes,'lines','are duplicates')
+            ui.show_sample(dupes_df,'lines','are duplicates')
             input(f'Edit the file to remove the duplication, then hit return to continue')
             df = pd.read_csv(f_path,sep='\t')
     return df
