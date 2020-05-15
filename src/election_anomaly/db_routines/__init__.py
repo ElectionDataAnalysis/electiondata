@@ -278,17 +278,16 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
     target_only_cols = [x for x in target.columns if x not in dframe.columns]
     intersection_cols = [x for x in target.columns if x in dframe.columns]
 
-
     if raw_to_votecount:
         # join with SECVCJ
         secvcj = pd.read_sql_table('ElectionContestSelectionVoteCountJoin',session.bind,index_col=None)
-        # drop columns that don't belong, but were temporarily created in order to get VoteCount_Id correctly into SECVCJ
+        # drop columns that don't belong, but were temporarily created in order
+        #  to get VoteCount_Id correctly into SECVCJ
         target=target.drop(['ElectionContestJoin_Id','ContestSelectionJoin_Id'],axis=1)
         target=target.merge(secvcj,left_on='Id',right_on='VoteCount_Id')
         target=target.drop(['Id','VoteCount_Id'],axis=1)
     df_to_db = dframe.copy()
     df_to_db.drop_duplicates(inplace=True)
-    # TODO there should be no  duplicates in dframe in the first place. MD votecount had some. Why?
     if 'Count' in df_to_db.columns:
         # TODO bug: catch anything not an integer (e.g., in MD 2018g upload)
         df_to_db.loc[:,'Count']=df_to_db['Count'].astype('int64',errors='ignore')

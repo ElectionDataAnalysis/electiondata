@@ -227,7 +227,6 @@ def pick_database(project_root,paramfile=None,db_name=None):
 
 	if create_new: 	# if our db is brand new
 		eng = dbr.sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
-		# TODO remove second arg from sql_alchemy_connect?
 		Session = sessionmaker(bind=eng)
 		pick_db_session = Session()
 

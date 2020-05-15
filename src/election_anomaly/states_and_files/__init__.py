@@ -525,7 +525,7 @@ def dedupe(f_path,warning='There are duplicates'):
 
 
 def check_nulls(element,f_path,project_root):
-    # TODO
+    # TODO write description
     nn_path = os.path.join(
         project_root,'election_anomaly/CDF_schema_def_info/elements',element,'not_null_fields.txt')
     not_nulls = pd.read_csv(nn_path,sep='\t')
