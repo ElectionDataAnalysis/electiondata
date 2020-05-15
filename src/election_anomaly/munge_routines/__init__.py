@@ -77,7 +77,8 @@ def get_name_field(t):
 
 def add_munged_column(raw,munger,element,mode='row',inplace=True):
     """Alters dataframe <raw>, adding or redefining <element>_raw column
-    via the <formula>."""
+    via the <formula>. Assumes some preprocessing of <raw> """
+    # TODO what preprocessing exactly? Improve description
     if raw.empty:
         return raw
     if inplace:
@@ -119,7 +120,7 @@ def replace_raw_with_internal_ids(row_df,juris,table_df,element,internal_name_co
         how='left'
     # join the 'cdf_internal_name' from the raw_identifier table -- this is the internal name field value,
     # no matter what the name field name is in the internal element table (e.g. 'Name', 'BallotName' or 'Selection')
-    # use dictionary.txxt from context
+    # use dictionary.txt from context
 
     raw_identifiers = pd.read_csv(os.path.join(juris.path_to_juris_dir,'context/dictionary.txt'),sep='\t')
     row_df = row_df.merge(
@@ -323,8 +324,6 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
     # append ids for BallotMeasureContests and CandidateContests
     working.loc[:,'contest_type'] = 'unknown'
     for c_type in ['BallotMeasure','Candidate']:
-        # TODO make sure BallotMeasureContest gets ElectionDistrict_Id when it is inserted
-        # TODO if CandidateContest.txt is loaded to db, don't load candidatecontests from Office.txt
         df_contest = pd.read_sql_table(f'{c_type}Contest',session.bind)
         working = replace_raw_with_internal_ids(
             working,juris,df_contest,f'{c_type}Contest',get_name_field(f'{c_type}Contest'),mu.path_to_munger_dir,
@@ -350,7 +349,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
         # capture id from db in new column and erase any now-redundant cols
         df = pd.read_sql_table(t,session.bind)
         name_field = get_name_field(t)
-        # NB: drop_unmatched = False to prevent losing BallotMeasureContests for BM-inessential fields
+        # set drop_unmatched = False to prevent losing BallotMeasureContests for BM-inessential fields
         if t == 'ReportingUnit' or t == 'CountItemType':
             drop = True
         else:
@@ -420,11 +419,11 @@ def append_join_id(project_root,session,working,j):
     join_fk.loc[:,'refers_to_list'] = join_fk.refers_to.str.split(';')
     # create dataframe with cols named to match join table, content from corresponding column of working
 
-    ww_cols = set().union(*join_fk.refers_to_list)  # all referents of cols in join table
-    w_cols = [f'{x}_Id' for x in ww_cols]
+    refs = set().union(*join_fk.refers_to_list)  # all referents of cols in join table
+    ref_ids = [f'{x}_Id' for x in refs]
     j_cols = list(join_fk.index)
     # drop dupes and any null rows
-    join_df = working[w_cols].drop_duplicates(keep='first')  # take only nec cols from working and dedupe
+    join_df = working[ref_ids].drop_duplicates(keep='first')  # take only nec cols from working and dedupe
 
     ref_d = {}
     for fn in join_fk.index:
@@ -433,25 +432,44 @@ def append_join_id(project_root,session,working,j):
     working = append_multi_foreign_key(working,ref_d)
 
     # remove any join_df rows with any *IMPORTANT* null and load to db
-    unnecessary = [x for x in w_cols if x not in j_cols]
+    unnecessary = [x for x in ref_ids if x not in j_cols]
     join_df.drop(unnecessary,axis=1,inplace=True)
-
+    # remove any row with a null value in all columns
+    join_df = join_df[join_df.notnull().any(axis=1)]
+    # warn user of rows with null value in some columns
+    bad_rows = join_df.isnull().any(axis=1)
+    if bad_rows.any():
+        print(f'Warning: there are null values, which may indicate a problem.')
+        ui.show_sample(
+            join_df[join_df.isnull().any(axis=1)],f'rows proposed for {j}','have null values')
+    # remove any row with a null value in any column
     join_df = join_df[join_df.notnull().all(axis=1)]
-    join_df = dbr.dframe_to_sql(join_df,session,j)
-    working = working.merge(join_df,how='left',left_on=j_cols,right_on=j_cols)
-    working.rename(columns={'Id':f'{j}_Id'},inplace=True)
+    # add column for join id
+    if join_df.empty:
+        working[f'{j}_Id'] = np.nan
+    else:
+        join_df = dbr.dframe_to_sql(join_df,session,j)
+        working = working.merge(join_df,how='left',left_on=j_cols,right_on=j_cols)
+        working.rename(columns={'Id':f'{j}_Id'},inplace=True)
     return working
 
 
 def append_multi_foreign_key(df,references):
-    """<references> is a dictionary whose keys are fieldnames for the new column and whose value for any key
-    is the list of reference targets.
-    If a row in df has more than one non-null value, only the first will be taken."""
+    """<references> is a dictionary whose keys are fieldnames for the new column
+    and whose value for any key is the list of reference targets.
+    If a row in df has more than one non-null value, only the first will be taken.
+    Return the a copy of <df> with a column added for each fieldname in <references>.keys()"""
+    # TODO inefficient if only one ref target
     df_copy = df.copy()
     for fn in references.keys():
-        df_copy.loc[:,fn] = df_copy[references[fn]].fillna(-1).max(axis=1)
-        # change any -1s back to nulls
-        df_copy.loc[:,fn]=df_copy[fn].replace(-1,np.NaN)
+        if df_copy[references[fn]].isnull().all().all():
+            # if everything is null, just add the necessary column with all null values
+            df_copy.loc[:,fn] = np.nan
+        else:
+            # expect at most one non-null entry in each row; find the value of that one
+            df_copy.loc[:,fn] = df_copy[references[fn]].fillna(-1).max(axis=1)
+            # change any -1s back to nulls (if all were null, return null)
+            df_copy.loc[:,fn]=df_copy[fn].replace(-1,np.NaN)
     return df_copy
 
 

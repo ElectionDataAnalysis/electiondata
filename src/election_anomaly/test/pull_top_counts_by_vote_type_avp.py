@@ -12,20 +12,25 @@ if __name__ == '__main__':
     db_paramfile = ui.pick_paramfile()
     juris_name = None
 
+    jurisdiction = ui.pick_juris_from_filesystem(
+        project_root,juriss_dir=os.path.join(project_root,'jurisdictions'),juris_name=juris_name)
+
     db_name = ui.pick_database(project_root,db_paramfile)
 
     # initialize main session for connecting to db
-    eng, meta_generic = dbr.sql_alchemy_connect(
+    eng = dbr.sql_alchemy_connect(
         paramfile=db_paramfile,db_name=db_name)
     Session = sessionmaker(bind=eng)
     analysis_session = Session()
 
-    jurisdiction = ui.pick_juris_from_filesystem(project_root,
-                                                 path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),
-                                                 juris_name=juris_name)
-    target_dir = os.path.join(project_root,'jurisdictions/NC_5/rollups_from_cdf_db')
+    target_dir = os.path.join(jurisdiction.path_to_juris_dir,'rollups_from_cdf_db')
+    top_reporting_unit_type = 'North Carolina'
+    sub_reporting_unit_type = 'county'  # report will give results by this ru_type
+    atomic_ru_type = 'precinct'
+
     rollup = avp.create_rollup(
-        analysis_session,'North Carolina','county','precinct','2018g',target_dir)
+        analysis_session,top_reporting_unit_type,sub_reporting_unit_type,atomic_ru_type,
+        '2018 General',target_dir)
 
     eng.dispose()
     print('Done')

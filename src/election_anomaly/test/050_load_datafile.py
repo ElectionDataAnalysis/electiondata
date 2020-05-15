@@ -6,11 +6,6 @@ import os
 
 
 if __name__ == '__main__':
-	print("""Ready to load some election result data?
-			"This program will walk you through the process of creating or checking
-			"an automatic munger that will load your data into a database in the 
-			"NIST common data format.""")
-
 	project_root = ui.get_project_root()
 
 	# initialize root widget for tkinter
@@ -35,10 +30,9 @@ if __name__ == '__main__':
 	# get datafile & info
 	[dfile_d, enum_d, data_path] = ui.pick_datafile(project_root,sess)
 
-	# check munger against datafile.
-	munger.check_against_datafile(data_path)
-
-	# TODO check datafile/munger against db?
+	# load new datafile
+	ui.new_datafile(
+		sess,munger,data_path,juris=juris,project_root=project_root)
 
 	eng.dispose()
 	print('Done! (user_interface)')

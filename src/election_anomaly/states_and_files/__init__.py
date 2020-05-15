@@ -12,7 +12,7 @@ import csv
 
 
 class Jurisdiction:
-    def check_against_raw_results(self,results_df,munger):
+    def check_against_raw_results(self,results_df,munger,numerical_columns):
         """Warn user of any mungeable elements in <results_df> that are not
         translatable via context/dictionary.txt"""
         finished = False
@@ -29,9 +29,30 @@ class Jurisdiction:
                 mode = munger.cdf_elements.loc[el,'source']
                 if mode in ['row','column']:
                     # add munged column
-                    raw_fields = [f'{x}_{munger.field_rename_suffix}' for x in munger.cdf_elements.loc[el,'fields']]
-                    relevant = results_df[raw_fields].drop_duplicates()
-                    mr.add_munged_column(relevant,munger,el,mode=mode)
+                    if mode == 'row':
+                        raw_fields = [f'{x}_{munger.field_rename_suffix}' for x in munger.cdf_elements.loc[el,'fields']]
+                        relevant = results_df[raw_fields].drop_duplicates()
+                        mr.add_munged_column(relevant,munger,el,mode=mode)
+                    if mode == 'column':
+                        pass
+                        # TODO
+                        formula = munger.cdf_elements.loc[el,'raw_identifier_formula']
+                        text_field_list,last_text = mr.text_fragments_and_fields(formula)
+                        # TODO create raw element column from formula applied to num col headers
+                        val = {}  # holds evaluations of fields
+                        raw_val = {}  # holds the raw value for column c
+                        for c in numerical_columns:
+                            raw_val[c] = ''
+                            # evaluate f-th entry in the column whose 0th entry is c
+                            for t,f in text_field_list:
+                                if int(f) == 0:  # TODO make prettier, assumes first line is col header in df
+                                    val[f] = c
+                                else:
+                                    val[f] = results_df.loc[f-1,c]
+                                raw_val[c] += t + val[f]
+                        # TODO check that numerical cols are correctly identified even when more than one header row
+                        relevant = pd.DataFrame(pd.Series([raw_val[c] for c in numerical_columns],name=f'{el}_raw'))
+
                     # check for untranslatable items
                     relevant = relevant.merge(
                         d.loc[[el]],left_on=f'{el}_raw',right_on='raw_identifier_value')
@@ -412,10 +433,29 @@ def check_munger_file_contents(munger_name,project_root=None):
     checked = False
     while not checked:
         problems = []
+        warnings = []
 
         # read cdf_elements and format from files
         cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),sep='\t').fillna('')
         format_df = pd.read_csv(os.path.join(munger_dir,'format.txt'),sep='\t',index_col='item').fillna('')
+
+        # format.txt has the required items
+        req_list = ['atomic_reporting_unit_type','header_row_count','field_name_row','separator','encoding']
+        missing_items = [x for x in req_list if x not in format_df.index]
+        if missing_items:
+            item_string = ','.join(missing_items)
+            problems.append(f'Format file is missing some items: {item_string}')
+
+        # entries in format.txt are of correct type
+        if not format_df.loc['header_row_count','value'].isnumeric():
+            problems.append(f'In format file, header_row_count must be an integer'
+                            f'({format_df.loc["header_row_count","value"]} is not.)')
+        if not format_df.loc['field_name_row','value'].isnumeric():
+            problems.append(f'In format file, field_name_row must be an integer '
+                            f'({format_df.loc["field_name_row","value"]} is not.)')
+        if not format_df.loc['encoding','value'] in ui.recognized_encodings:
+            warnings.append(f'Encoding {format_df.loc["field_name_row","value"]} in format file is not recognized.')
+
         # every source is either row, column or other
         bad_source = [x for x in cdf_elements.source if x not in ['row','column','other']]
         if bad_source:
@@ -437,28 +477,33 @@ def check_munger_file_contents(munger_name,project_root=None):
                 bad_column_formula.add(r['raw_identifier_formula'])
             else:
                 integer_list = [int(x) for x in p_catch_digits.findall(r['raw_identifier_formula'])]
-                bad_integer_list = [x for x in integer_list if (x > format_df.header_row_count-1 or x < 0)]
+                bad_integer_list = [
+                    x for x in integer_list if (x > int(format_df.loc['header_row_count','value'])-1 or x < 0)]
                 if bad_integer_list:
                     bad_column_formula.add(r['raw_identifier_formula'])
         if bad_column_formula:
             cf_str = ','.join(bad_column_formula)
             problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
 
-        # check entries in format.txt
-        if not format_df.loc['header_row_count','value'].isnumeric():
-            problems.append('In format file, header_row_count must be an integer')
-        if not format_df.loc['field_name_row','value'].isnumeric():
-            problems.append('In format file, field_name_row must be an integer')
-
         # TODO if field in formula matches an element self.cdf_element.index,
         #  check that rename is not also a column
         if problems:
             problem_str = '\n\t'.join(problems)
-            print(f'Problems found:\n{problem_str} ')
-            input(f'Correct the problems by editing files in {munger_dir}\n'
-                  f'Then hit enter to continue.')
+            print(f'Problems found:\nt{problem_str} ')
+            print(f'Correct the problems by editing files in {munger_dir}\n')
+            if warnings:
+                warn_string = '\n\t'.join(warnings)
+                print(f'You may wish to address these potential problems as well:\n\t{warn_string}')
+            input(f'Then hit enter to continue.')
         else:
             checked = True
+            if warnings:
+                warn_string = '\n\t'.join(warnings)
+                print(f'Potential problems found:\n\t{warn_string}')
+                address = input('Would you like to address any of these (y/n)?\n')
+                if address:
+                    input(f'Address potential problems by editing files in {munger_dir}.\n Then hit enter to continue.')
+                    checked = False
     return
 
 
@@ -467,20 +512,20 @@ def dedupe(f_path,warning='There are duplicates'):
     df = pd.read_csv(f_path,sep='\t')
     dupes = True
     while dupes:
-        dupes,df = ui.find_dupes(df)
-        if dupes.empty:
+        dupes_df,df = ui.find_dupes(df)
+        if dupes_df.empty:
             dupes = False
             print(f'No dupes in {f_path}')
         else:
             print(f'WARNING: {warning}\n')
-            ui.show_sample(dupes,'lines','are duplicates')
+            ui.show_sample(dupes_df,'lines','are duplicates')
             input(f'Edit the file to remove the duplication, then hit return to continue')
             df = pd.read_csv(f_path,sep='\t')
     return df
 
 
 def check_nulls(element,f_path,project_root):
-    # TODO
+    # TODO write description
     nn_path = os.path.join(
         project_root,'election_anomaly/CDF_schema_def_info/elements',element,'not_null_fields.txt')
     not_nulls = pd.read_csv(nn_path,sep='\t')
@@ -626,16 +671,18 @@ def load_context_dframe_into_cdf(session,element,juris_path,project_root,load_re
             refs = foreign_keys.loc[fn,'refers_to'].split(';')
 
             try:
-                df = get_ids_for_foreign_key(session,df,element,fn,refs)
+                df = get_ids_for_foreign_keys(session,df,element,fn,refs)
+                print(f'Database foreign id assigned for each {fn} in {element}.')
             except ForeignKeyException as e:
                 if load_refs:
                     for r in refs:
                         load_context_dframe_into_cdf(session,r,juris_path,project_root)
                     # try again to load main element (but don't load referred-to again)
-                    # TODO allow opt-out (e.g., for Primary Party, which might be legitimately null)
                     load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=False)
+                    return
                 else:
-                    try_again = input(f'{e}\nWould you like to make changes to the context directory and try again (y/n)?\n')
+                    try_again = input(
+                        f'{e}\nWould you like to make changes to the context directory and try again (y/n)?\n')
                     if try_again:
                         load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
                         return
@@ -645,9 +692,9 @@ def load_context_dframe_into_cdf(session,element,juris_path,project_root,load_re
     return
 
 
-def get_ids_for_foreign_key(session,df,element,foreign_key,refs):
+def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs):
     """ TODO <fn> is foreign key"""
-
+    df = df1.copy()
     # append the Id corresponding to <fn> from the db
     foreign_elt = f'{foreign_key[:-3]}'
     interim = f'{foreign_elt}_Name'

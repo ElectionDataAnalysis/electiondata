@@ -1,3 +1,4 @@
 Election	ReportingUnitType	CountItemType	CountItemStatus	source_db_url	timestamp
 2018g	county	mixed	unknown	postgresql://postgres:''@localhost:5432/NC_5	2020-05-02
 2018g	county	mixed	unknown	postgresql://postgres:''@localhost:5432/NC	2020-05-02
+2018 General	county	mixed	unknown	postgresql://postgres:''@localhost:5432/NC	2020-05-14

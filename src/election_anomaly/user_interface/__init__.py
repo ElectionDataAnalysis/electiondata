@@ -151,8 +151,6 @@ def pick_paramfile():
 
 
 def show_sample(input_iter,items,condition,outfile='shown_items.txt',dir=None,export=False):
-	# TODO revise to allow sample of dataframe and export of dataframe. E.g.
-	#  so that Candidate and Party together can be exported.
 	print(f'There are {len(input_iter)} {items} that {condition}:')
 	if len(input_iter) == 0:
 		return
@@ -228,8 +226,7 @@ def pick_database(project_root,paramfile=None,db_name=None):
 		cur = con.cursor()
 
 	if create_new: 	# if our db is brand new
-		eng,meta = dbr.sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
-		# TODO remove second arg from sql_alchemy_connect?
+		eng = dbr.sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
 		Session = sessionmaker(bind=eng)
 		pick_db_session = Session()
 
@@ -286,9 +283,9 @@ def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_nam
 
 
 def find_dupes(df):
-	dupes = df[df.duplicated()].drop_duplicates(keep='first')
+	dupes_df = df[df.duplicated()].drop_duplicates(keep='first')
 	deduped = df.drop_duplicates(keep='first')
-	return dupes, deduped
+	return dupes_df, deduped
 
 
 def format_check_formula(formula,fields):
@@ -360,7 +357,7 @@ def pick_juris_from_db(sess,project_root,juris_type=None):
 		jt_idx, juris_type = pick_one(rut[rut.Txt != 'other'],'Txt','type for the file\'s overall jurisdiction')
 		# if nothing chosen
 		if not juris_type:
-			juris_type = get_alphanumeric_from_user('Enter the jurisdiction type') # TODO allow hyphen?
+			juris_type = get_alphanumeric_from_user('Enter the jurisdiction type',allow_hyphen=True)
 	# TODO build uniqueness into Txt field of each enumeration on db creation
 
 	juris_type_id,other_juris_type = mr.enum_value_to_id_othertext(rut,juris_type)
@@ -397,7 +394,6 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 		if fs_idx is None:
 			# have user enter record; save it to file system
 			user_record, enum_plain_text_values = new_record_info_from_user(sess,project_root,element,known_info_d=known_info_d)
-			# TODO enter_new pulls from file system; would be better here to pull from db
 			save_record_to_filesystem(storage_dir,element,user_record,enum_plain_text_values)
 
 
@@ -445,7 +441,6 @@ def get_or_create_election_in_db(sess,project_root):
 def pick_record_from_db(sess,element,known_info_d={}):
 	"""Get id and info from database, if it exists"""
 	element_df = pd.read_sql_table(element,sess.bind,index_col='Id')
-	# TODO filter by known_info_d filtered_file = from_file.loc[(from_file[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
 	if element_df.empty:
 		return None,None
 
@@ -455,8 +450,12 @@ def pick_record_from_db(sess,element,known_info_d={}):
 		e_df = pd.read_sql_table(e,sess.bind,index_col='Id')
 		element_df = mr.enum_col_from_id_othertext(element_df,e,e_df)
 
+	# filter by known_info_d
+	d = {k:v for k,v in known_info_d.items() if k in element_df.columns}
+	filtered = element_df.loc[(element_df[list(d)] == pd.Series(d)).all(axis=1)]
+
 	print(f'Pick the {element} from the database:')
-	element_idx, values = pick_one(element_df,'Name',element)
+	element_idx, values = pick_one(filtered,'Name',element)
 	return element_idx, values
 
 
@@ -501,7 +500,7 @@ def save_record_to_filesystem(storage_dir,table,user_record,enum_plain_text_valu
 		records = pd.read_csv(storage_file,sep='\t')
 	else:
 		# create empty, with all cols of from_db except Id
-		records = pd.DataFrame([],columns=user_record.keys())  # TODO create one-line dataframe from user_record
+		records = pd.DataFrame([],columns=user_record.keys())
 	records.append(user_record,ignore_index=True)
 	records.to_csv(storage_file,sep='\t')
 	return
@@ -763,7 +762,6 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 			project_root,juriss_dir='jurisdictions')
 	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
 
-	# TODO where do we update db from jurisdiction context file?
 	sep = munger.separator.replace('\\t','\t')
 	raw = pd.read_csv(
 		raw_path,sep=sep,dtype=str,encoding=munger.encoding,quoting=csv.QUOTE_MINIMAL,
@@ -773,14 +771,13 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 	# NB: info_cols will have suffix added by munger
 
 	# check jurisdiction against raw results file, adapting context as necessary
-	if juris.check_against_raw_results(raw,munger):
+	if juris.check_against_raw_results(raw,munger,numerical_columns):
 		# if context changed, load to db
 		juris.load_context_to_db(session,project_root)
 
 	# TODO check db against raw results?
 	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,numerical_columns)
-
-	# TODO
+	print(f'Datafile contents uploaded to database {session.bind.engine}')
 	return
 
 
@@ -800,9 +797,14 @@ def pick_or_create_directory(root_path,d_name):
 	return d_name
 
 
-def get_alphanumeric_from_user(request):
+def get_alphanumeric_from_user(request,allow_hyphen=False):
+	# specify regex
+	if allow_hyphen:
+		alpha = re.compile('^[\w\-]+$')
+	else:
+		alpha = re.compile('^\w+$')
+
 	good = False
-	alpha = re.compile('^\w+$')
 	s = input(f'{request}\n')
 	while not good:
 		if alpha.match(s):
