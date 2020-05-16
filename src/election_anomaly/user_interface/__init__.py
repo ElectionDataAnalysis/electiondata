@@ -121,7 +121,6 @@ def pick_one(choices,return_col,item='row',required=False):
 	with pd.option_context('display.max_rows',None,'display.max_columns',None):
 		print(df)
 
-
 	choice = -1  # guaranteed not to be in df.index
 
 	while choice not in df.index:
@@ -373,6 +372,74 @@ def pick_juris_from_db(sess,project_root,juris_type=None):
 		jurisdictions = mr.enum_col_from_id_othertext(jurisdictions,'ReportingUnitType',rut)
 		juris_idx, juris_internal_db_name = pick_one(jurisdictions,'Name',juris_type)
 	return juris_idx, juris_internal_db_name
+
+
+def translate_db_to_show_user(db_record,edf):
+	"""<edf> is a dictionary of enumeration dataframes including all in <db_record>.
+	<db_record> is a dictionary of values from db (all enums in id/othertext)
+	returns dictionary of values to show user (all enums in plaintext)
+	and dictionary of enumeration values"""
+	# TODO add ability to handle foreign keys/values such as ElectionDistricts?
+	enum_val = {}
+	show_user = db_record.copy()
+	for e in edf.keys():
+		enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(edf[e],db_record[f'{e}_Id'],db_record[f'Other{e}'])
+		show_user.pop(f'{e}_Id')
+		show_user.pop(f'Other{e}')
+	return show_user, enum_val
+
+
+def translate_show_user_to_db(show_user,edf):
+	"""<edf> is a dictionary of enumeration dataframes including all in <show_user>.
+	<show_user> is a dictionary of values to show user (all enums in plaintext)
+	returns dictionary of values from db (all enums in id/othertext)
+	and dictionary of enumeration values"""
+	enum_val = {}
+	db_record = show_user.copy()
+	for e in edf.keys():
+		enum_val[e] = show_user[e]
+		db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.enum_value_to_id_othertext(edf[e],show_user[e])
+	return db_record, enum_val
+
+
+def translate_db_to_show_user_PLUS_OTHER_STUFF(db_record,edf,known_info_d):
+	enum_val = {}
+	show_user = db_record.copy()
+	for e in edf.keys():
+		# define show_user, db_record and enum_val dictionaries
+		if e in known_info_d.keys():
+			# take plaintext from known_info_d if possible
+			show_user[e] = enum_val[e] = known_info_d[e]
+			db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.enum_value_to_id_othertext(
+				edf[e],known_info_d[e])
+		elif f'{e}_Id' in known_info_d.keys() and f'Other{e}' in known_info_d.keys():
+			# otherwise take id/othertext from known_info_d if possible
+			enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(
+				edf[e],known_info_d[f'{e}_Id'],known_info_d[f'Other{e}'])
+			db_record[f'{e}_Id'] = known_info_d[f'{e}_Id']
+			db_record[f'Other{e}'] = known_info_d[f'Other{e}']
+		else:
+			# otherwise force user to pick from standard list (plus 'other')
+			db_record[f'{e}_Id'],enum_txt = pick_one(edf[e],'Txt',e,required=True)
+			if enum_txt == 'other':
+				# get plaintext from user
+				db_record[f'Other{e}'] = input(f'Enter the {e}:\n')
+				# check against standard list
+				std_enum_list = list(edf[e]['Txt'])
+				std_enum_list.remove('other')
+				if db_record[f'Other{e}'] in std_enum_list:
+					# if user's plaintext is on standard list, change <e>_Id to match plaintext (rather than 'other')
+					#  and change Other<e> back to blank
+					db_record[f'{e}_Id'] = \
+						edf[e][edf[e].Txt == db_record[f'Other{e}']].first_valid_index()
+					db_record[f'Other{e}'] = ''
+			else:
+				db_record[f'Other{e}'] = ''
+			# get plaintext from id/othertext
+			enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(
+				edf[e],db_record[f'{e}_Id'],db_record[f'Other{e}'])
+
+	return show_user, enum_val
 
 
 def pick_or_create_record(sess,project_root,element,known_info_d={}):
@@ -627,7 +694,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 	return db_idx, db_record, enum_val
 
 
-def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database',unique=None):
+def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database',unique=[]):
 	"""Collect new record info from user, with chance to confirm.
 	For each enumeration, translate the user's plaintext input into id/othertext.
 	Enforce uniqueness of any list of fields in the list <unique>
@@ -654,21 +721,27 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 
 	# read existing info from db and file system
 	all_from_db = pd.read_sql_table(table,sess.bind,index_col='Id')
+
+	# translate all enums from db to show_user
+	all_from_db_for_user = all_from_db
+	for e in edf.keys():
+		all_from_db_for_user = mr.enum_col_from_id_othertext(all_from_db_for_user,e,edf[e])
+
 	all_from_file, storage_file = get_by_hand_records_from_file_system(root_dir,table)
 
-	# collect and confirm info from user
+	# collect and confirm "show_user" info from user
 	unconfirmed = True
 	while unconfirmed:
 		# solicit info from user and store values for db insertion
 		print(f'Enter info for new {table} record.')
-		db_record = {}  # dict to hold values of the record
-		enum_val = {}
+		show_user = {}
+		db_record = {}  # initialize db_record to pick up foreign ids
 
 		for idx,row in df['fields'].iterrows():
 			if row["fieldname"] in known_info_d.keys():
-				db_record[row["fieldname"]] = known_info_d[row["fieldname"]]
+				show_user[row["fieldname"]] = known_info_d[row["fieldname"]]
 			else:
-				db_record[row["fieldname"]] = enter_and_check_datatype(
+				show_user[row["fieldname"]] = enter_and_check_datatype(
 					f'Enter the {row["fieldname"]}',row['datatype'])
 
 		for idx,row in df['foreign_keys'].iterrows():
@@ -677,53 +750,51 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 			choices = pd.read_sql_table(target,sess.bind,index_col='Id')
 			if choices.empty:
 				raise Exception(f'Cannot add record to {table} while {target} does not contain the required {fieldname}.\n')
-			db_record[fieldname], name = pick_one(
-				choices,choices.columns[0],required=True)
+			db_record[fieldname], name = pick_one(choices,choices.columns[0],required=True)
 
-		# translate db values into values to show user
-		show_user = db_record.copy()
 		for e in edf.keys():
 			# define show_user, db_record and enum_val dictionaries
 			if e in known_info_d.keys():
 				# take plaintext from known_info_d if possible
-				show_user[e] = enum_val[e] = known_info_d[e]
-				db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.enum_value_to_id_othertext(
-					edf[e],known_info_d[e])
+				show_user[e] = known_info_d[e]
 			elif f'{e}_Id' in known_info_d.keys() and f'Other{e}' in known_info_d.keys():
-				# otherwise take id/othertext from known_info_d if possible
+				# otherwise take id/othertext from known_info_d if possible and translate to show_user
 				enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(
 					edf[e],known_info_d[f'{e}_Id'],known_info_d[f'Other{e}'])
-				db_record[f'{e}_Id'] = known_info_d[f'{e}_Id']
-				db_record[f'Other{e}'] = known_info_d[f'Other{e}']
 			else:
 				# otherwise force user to pick from standard list (plus 'other')
-				db_record[f'{e}_Id'], enum_txt = pick_one(edf[e],'Txt',e,required=True)
+				db_record[f'{e}_Id'],enum_txt = pick_one(edf[e],'Txt',e,required=True)
 				if enum_txt == 'other':
 					# get plaintext from user
-					db_record[f'Other{e}'] = input(f'Enter the {e}:\n')
-					# check against standard list
-					std_enum_list = list(edf[e]['Txt'])
-					std_enum_list.remove('other')
-					if db_record[f'Other{e}'] in std_enum_list:
-						# if user's plaintext is on standard list, change <e>_Id to match plaintext (rather than 'other')
-						#  and change Other<e> back to blank
-						db_record[f'{e}_Id'] = \
-							edf[e][edf[e].Txt == db_record[f'Other{e}']].first_valid_index()
-						db_record[f'Other{e}'] = ''
+					show_user[e] = input(f'Enter the {e}:\n')
 				else:
-					db_record[f'Other{e}'] = ''
-				# get plaintext from id/othertext
-				enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(
-					edf[e],db_record[f'{e}_Id'],db_record[f'Other{e}'])
+					show_user[e] = enum_txt
+
+		# show user any records that match any uniqueness criterion, offer choices from db. If all refused
+		#  continue with user's choice. Note some uniqueness might be required
+		picked_from_db = False
+		# TODO deal with required uniqueness criteria
+		for u in unique:  # e.g., u = ['file_name','source','file_date']
+			if not picked_from_db: # TODO inefficient way to break for loop
+				d = {k:v for k,v in show_user.items() if k in u}
+				appears = mr.filter_by_dict(all_from_db_for_user,d)
+				if not appears.empty:
+					print('Your record may already be in the database. Is it one of these?')
+					db_idx, picked_record = pick_one(appears,u)
+					# if user picked one, continue with that one
+					if db_idx:
+						picked_from_db = True
+						show_user = appears.loc[db_idx].to_dict()
+
+		# present to user for confirmation
 		entry = '\n\t'.join([f'{k}:\t{v}' for k,v in show_user.items()])
-		confirm = input(
-			f'Confirm entry:\n\t{entry}\nIs this correct (y/n)?\n')
+		confirm = input(f'Confirm entry:\n\t{entry}\nIs this correct (y/n)?\n')
 		if confirm == 'y':
-			# TODO check uniqueness criteria and offer appropriate existing records to user
-			for unique_multi_field in unique:  # e.g., ['election','filename']
-				# TODO
-				pass
 			unconfirmed = False
+
+	# get db_record and enum_val
+	db_record,enum_val = translate_show_user_to_db(show_user,edf)
+
 	if mode == 'database':
 		return db_record, enum_val
 	elif mode == 'filesystem':

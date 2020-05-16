@@ -107,6 +107,12 @@ def add_munged_column(raw,munger,element,mode='row',inplace=True):
     return working
 
 
+def filter_by_dict(df,d):
+	"""Returns <df> filtered by dictionary <d> ,
+	where keys of <d> are column names of <df> and values of <d> are the desired value"""
+	return df.loc[(df[list(d)] == pd.Series(d)).all(axis=1)]
+
+
 def replace_raw_with_internal_ids(row_df,juris,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False):
     """replace columns in <row_df> with raw_identifier values by columns with internal names and Ids
     from <table_df>, which has structure of a db table for <element>.
