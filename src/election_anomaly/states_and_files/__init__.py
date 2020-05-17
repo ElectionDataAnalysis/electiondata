@@ -33,7 +33,7 @@ class Jurisdiction:
                         raw_fields = [f'{x}_{munger.field_rename_suffix}' for x in munger.cdf_elements.loc[el,'fields']]
                         relevant = results_df[raw_fields].drop_duplicates()
                         mr.add_munged_column(relevant,munger,el,mode=mode)
-                    if mode == 'column':
+                    elif mode == 'column':
                         pass
                         # TODO
                         formula = munger.cdf_elements.loc[el,'raw_identifier_formula']
@@ -55,7 +55,7 @@ class Jurisdiction:
 
                     # check for untranslatable items
                     relevant = relevant.merge(
-                        d.loc[[el]],left_on=f'{el}_raw',right_on='raw_identifier_value')
+                        d.loc[[el]],how='left',left_on=f'{el}_raw',right_on='raw_identifier_value')
                     missing = relevant[relevant.cdf_internal_name.isnull()]
                     if not missing.empty:
                         ui.show_sample(missing,f'{el}s','cannot be translated')
@@ -159,6 +159,7 @@ class Munger:
             [db_elements, db_enumerations, db_joins, db_others] = dbr.get_cdf_db_table_names(sess.bind)
             db_elements.add('CountItemType')
             db_elements.add('BallotMeasureSelection')
+            db_elements.add('_datafile')
             db_elements.remove('CandidateSelection')
             db_elements.remove('ExternalIdentifier')
             db_elements.remove('VoteCount')
@@ -264,9 +265,13 @@ class Munger:
 
 
 def read_munger_info_from_files(dir_path):
-    # read cdf_element info and add column for list of fields used in formulas
+    # read cdf_element info and
     cdf_elements = pd.read_csv(os.path.join(dir_path,'cdf_elements.txt'),sep='\t',index_col='name').fillna('')
-    cdf_elements.loc[:,'fields'] = None
+    # add row for _datafile element
+    datafile_elt = pd.DataFrame([['','other']],columns=['raw_identifier_formula','source'],index=['_datafile'])
+    cdf_elements = cdf_elements.append(datafile_elt)
+    # add column for list of fields used in formulas
+    cdf_elements['fields'] = [[]]*cdf_elements.shape[0]
     for i,r in cdf_elements.iterrows():
         text_field_list,last_text = mr.text_fragments_and_fields(cdf_elements.loc[i,'raw_identifier_formula'])
         cdf_elements.loc[i,'fields'] = [f for t,f in text_field_list]

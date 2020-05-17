@@ -273,17 +273,12 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
             return dframe
         else:
             return target
-    # partition the columns
-    dframe_only_cols = [x for x in dframe.columns if x not in target.columns]
-    target_only_cols = [x for x in target.columns if x not in dframe.columns]
-    intersection_cols = [x for x in target.columns if x in dframe.columns]
-
     if raw_to_votecount:
-        # join with SECVCJ
+        # join with ECSVCJ
         secvcj = pd.read_sql_table('ElectionContestSelectionVoteCountJoin',session.bind,index_col=None)
         # drop columns that don't belong, but were temporarily created in order
-        #  to get VoteCount_Id correctly into SECVCJ
-        target=target.drop(['ElectionContestJoin_Id','ContestSelectionJoin_Id'],axis=1)
+        #  to get VoteCount_Id correctly into ECSVCJ
+        target=target.drop(['ElectionContestJoin_Id','ContestSelectionJoin_Id','_datafile_Id'],axis=1)
         target=target.merge(secvcj,left_on='Id',right_on='VoteCount_Id')
         target=target.drop(['Id','VoteCount_Id'],axis=1)
     df_to_db = dframe.copy()
@@ -291,6 +286,11 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
     if 'Count' in df_to_db.columns:
         # TODO bug: catch anything not an integer (e.g., in MD 2018g upload)
         df_to_db.loc[:,'Count']=df_to_db['Count'].astype('int64',errors='ignore')
+
+    # partition the columns
+    dframe_only_cols = [x for x in dframe.columns if x not in target.columns]
+    target_only_cols = [x for x in target.columns if x not in dframe.columns]
+    intersection_cols = [x for x in target.columns if x in dframe.columns]
 
     # remove columns that don't exist in target table
     df_to_db = df_to_db.drop(dframe_only_cols, axis=1)

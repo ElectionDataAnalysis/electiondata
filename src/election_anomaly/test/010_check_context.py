@@ -9,11 +9,10 @@ if __name__ == '__main__':
 			"an automatic munger that will load your data into a database in the 
 			"NIST common data format.""")
 
-	project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
+	project_root = ui.get_project_root()
 	j_path = os.path.join(project_root,'jurisdictions')
 
-	juris_short_name = None
 	juris = ui.pick_juris_from_filesystem(project_root,j_path,check_files=True)
 
-	print(f'Context fils for {juris.short_name} are internally consistent.')
+	print(f'Context files for {juris.short_name} are internally consistent.')
 	exit()

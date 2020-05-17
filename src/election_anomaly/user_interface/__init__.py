@@ -544,7 +544,8 @@ def pick_record_from_db(sess,element,known_info_d={}):
 	filtered = element_df.loc[(element_df[list(d)] == pd.Series(d)).all(axis=1)]
 
 	print(f'Pick the {element} from the database:')
-	element_idx, values = pick_one(filtered,'Name',element)
+	name_field = mr.get_name_field(element)
+	element_idx, values = pick_one(filtered,name_field,element)
 	return element_idx, values
 
 
@@ -595,7 +596,7 @@ def save_record_to_filesystem(storage_dir,table,user_record,enum_plain_text_valu
 	return
 
 
-def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={},unique=unique):
+def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={},unique=[]):
 	"""create record in <table> table in database from user input
 	(or from existing info db_records_entered_by_hand directory in file system)
 	<known_info_d> is a dict of known field-value pairs.
@@ -712,7 +713,7 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 	dictionary. Depending on <mode> ('database', 'filesystem' or 'database_and_filesystem'),
 	returns enum plaintext, or enum id/othertext pairs, or both.
 	"""
-
+	# TODO read uniqueness from CDF schema definition for table
 	# initialize items to keep syntax-checker happy
 	db_record = show_user = enum_val = {}
 

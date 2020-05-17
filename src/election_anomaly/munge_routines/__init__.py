@@ -70,6 +70,8 @@ def get_name_field(t):
         field = 'BallotName'
     elif t == 'CountItemType':
         field = 'Txt'
+    elif t == '_datafile':
+        field = 'short_name'
     else:
         field = 'Name'
     return field
@@ -398,7 +400,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
     working = append_multi_foreign_key(working,ref_d)
 
     # add extra columns to VoteCount table temporarily to allow proper join
-    extra_cols = ['ElectionContestJoin_Id','ContestSelectionJoin_Id']
+    extra_cols = ['ElectionContestJoin_Id','ContestSelectionJoin_Id','_datafile_Id']
     dbr.add_integer_cols(session,'VoteCount',extra_cols)
 
     # upload to VoteCount table, pull  Ids
