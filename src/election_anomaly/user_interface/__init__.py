@@ -17,6 +17,8 @@ import datetime
 import states_and_files as sf
 import random
 from tkinter import filedialog
+from configparser import MissingSectionHeaderError
+
 
 
 recognized_encodings = {'iso2022jp', 'arabic', 'cp861', 'csptcp154', 'shiftjisx0213', '950', 'IBM775',
@@ -147,8 +149,8 @@ def pick_one(choices,return_col,item='row',required=False):
 	return choices.index[choice], df.loc[choice,return_col]
 
 
-def pick_paramfile():
-	print('Locate the parameter file for your postgreSQL database.')
+def pick_paramfile(msg='Locate the parameter file for your postgreSQL database.'):
+	print(msg)
 	fpath= pick_filepath()
 	return fpath
 
@@ -313,34 +315,34 @@ def create_file_from_template(template_file,new_file,sep='\t'):
 	return
 
 
-def pick_munger(mungers_dir='mungers',project_root=None,session=None):
+def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name=None):
 	"""pick (or create) a munger """
 	if not project_root:
 		project_root = get_project_root()
+	if not munger_name:
+		choice_list = os.listdir(mungers_dir)
+		for choice in os.listdir(mungers_dir):
+			c_path = os.path.join(mungers_dir,choice)
+			if not os.path.isdir(c_path):  # remove non-directories from list
+				choice_list.remove(choice)
+			elif not os.path.isfile(os.path.join(c_path,'raw_columns.txt')):
+				pass  # list any munger that doesn't have raw_columns.txt file yet
+			else:
+				elts = pd.read_csv(os.path.join(c_path,'cdf_elements.txt'),header=0,dtype=str,sep='\t')
+				row_formulas = elts[elts.source=='row'].raw_identifier_formula.unique()
+				necessary_cols = set()
+				for formula in row_formulas:
+					# extract list of necessary fields
+					pattern = '<(?P<field>[^<>]+)>'  # finds field names
+					p = re.compile(pattern)
+					necessary_cols.update(p.findall(formula))
 
-	choice_list = os.listdir(mungers_dir)
-	for choice in os.listdir(mungers_dir):
-		c_path = os.path.join(mungers_dir,choice)
-		if not os.path.isdir(c_path):  # remove non-directories from list
-			choice_list.remove(choice)
-		elif not os.path.isfile(os.path.join(c_path,'raw_columns.txt')):
-			pass  # list any munger that doesn't have raw_columns.txt file yet
-		else:
-			elts = pd.read_csv(os.path.join(c_path,'cdf_elements.txt'),header=0,dtype=str,sep='\t')
-			row_formulas = elts[elts.source=='row'].raw_identifier_formula.unique()
-			necessary_cols = set()
-			for formula in row_formulas:
-				# extract list of necessary fields
-				pattern = '<(?P<field>[^<>]+)>'  # finds field names
-				p = re.compile(pattern)
-				necessary_cols.update(p.findall(formula))
-
-	munger_df = pd.DataFrame(choice_list,columns=['Munger'])
-	munger_idx,munger_name = pick_one(munger_df,'Munger', item='munger')
-	if munger_idx is None:
-		# user chooses munger
-		munger_name = get_alphanumeric_from_user(
-			'Enter a short name (alphanumeric only, no spaces) for your munger (e.g., \'nc_primary18\')\n')
+		munger_df = pd.DataFrame(choice_list,columns=['Munger'])
+		munger_idx,munger_name = pick_one(munger_df,'Munger', item='munger')
+		if munger_idx is None:
+			# user chooses munger
+			munger_name = get_alphanumeric_from_user(
+				'Enter a short name (alphanumeric only, no spaces) for your munger (e.g., \'nc_primary18\')\n')
 	sf.ensure_munger_files(munger_name,project_root=project_root)
 
 	munger_path = os.path.join(mungers_dir,munger_name)
@@ -916,41 +918,33 @@ def get_alphanumeric_from_user(request,allow_hyphen=False):
 	return s
 
 
+def config(filename=None, section='postgresql',msg='Pick parameter file for connecting to the database'):
+	"""
+	Creates a parameter dictionary <d> from the section <section> in <filename>
+	default section is info needed to log into our db
+	"""
+	d = {}
+	if not filename:
+		# if parameter file is not provided, ask for it
+		# initialize root widget for tkinter
+		filename = pick_paramfile(msg=msg)
 
-if __name__ == '__main__':
-	print("Data loading routines moved to src/election_anomaly/test folder")
+	# create a parser
+	parser = ConfigParser()
+	# read config file
 
-	exit()
+	try:
+		parser.read(filename)
+	except MissingSectionHeaderError as e:
+		print(e)
+		d = config(filename=None,section=section)
+		return d
 
-
-def config(filename=None, section='postgresql'):
-    """
-    Creates the parameter dictionary needed to log into our db
-    using info in <filename>
-    """
-    db = {}
-    if not filename:
-        # if parameter file is not provided, ask for it
-        # initialize root widget for tkinter
-        tk_root = tk.Tk()
-        filename = ui.pick_paramfile()
-
-    # create a parser
-    parser = ConfigParser()
-    # read config file
-
-    try:
-        parser.read(filename)
-    except MissingSectionHeaderError as e:
-        print(e)
-        db = config(filename=None,section=section)
-        return db
-
-    # get section, default to postgresql
-    if parser.has_section(section):
-        params = parser.items(section)
-        for param in params:
-            db[param[0]] = param[1]
-    else:
-        raise Exception('Section {0} not found in the {1} file'.format(section, filename))
-    return db
+	# get section, default to postgresql
+	if parser.has_section(section):
+		params = parser.items(section)
+		for param in params:
+			d[param[0]] = param[1]
+	else:
+		raise Exception('Section {0} not found in the {1} file'.format(section, filename))
+	return d

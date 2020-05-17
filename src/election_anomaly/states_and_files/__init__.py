@@ -19,6 +19,11 @@ class Jurisdiction:
             raw_fields = [f'{x}_{munger.field_rename_suffix}' for x in munger.cdf_elements.loc[el,'fields']]
             relevant = results_df[raw_fields].drop_duplicates()
             mr.add_munged_column(relevant,munger,el,mode=mode)
+            # check for untranslatable items
+            relevant = relevant.merge(
+                d.loc[[el]],how='left',left_on=f'{el}_raw',right_on='raw_identifier_value')
+            missing = relevant[relevant.cdf_internal_name.isnull()]
+
         elif mode == 'column':
             # add munged column
             formula = munger.cdf_elements.loc[el,'raw_identifier_formula']
@@ -37,13 +42,14 @@ class Jurisdiction:
                     raw_val[c] += t + val[f]
             # TODO check that numerical cols are correctly identified even when more than one header row
             relevant = pd.DataFrame(pd.Series([raw_val[c] for c in numerical_columns],name=f'{el}_raw'))
+            # check for untranslatable items
+            relevant = relevant.merge(
+                d.loc[[el]],how='left',left_on=f'{el}_raw',right_on='raw_identifier_value')
+            missing = relevant[relevant.cdf_internal_name.isnull()]
+
         else:
-            relevant = pd.DataFrame([],name=f'{el}_raw')
+            missing = pd.DataFrame([])
             print(f'Not checking {el}, which is not read from the records in the results file.')
-        # check for untranslatable items
-        relevant = relevant.merge(
-            d.loc[[el]],how='left',left_on=f'{el}_raw',right_on='raw_identifier_value')
-        missing = relevant[relevant.cdf_internal_name.isnull()]
         return missing
 
     def check_against_raw_results(self,results_df,munger,numerical_columns):
