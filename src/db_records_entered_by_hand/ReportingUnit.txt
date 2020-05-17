@@ -4,3 +4,4 @@ North Carolina	state
 Florida	state
 Pennsylvania	state
 SHD	utility
+Pennsylvania;Philadelphia	county
