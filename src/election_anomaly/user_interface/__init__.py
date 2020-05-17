@@ -77,7 +77,9 @@ def pick_datafile(project_root,sess):
 	fpath = pick_filepath(initialdir=project_root)
 	filename = ntpath.basename(fpath)
 	db_idx, datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
-		sess,project_root,'_datafile','short_name',known_info_d={'file_name':filename})
+		sess,project_root,'_datafile','short_name',
+		known_info_d={'file_name':filename},
+		unique=[['short_name'],['file_name','file_date','source']])
 	# TODO typing url into debug window opens the web page; want it to just act like a string
 	return datafile_record_d, datafile_enumeration_name_d, fpath
 
@@ -363,9 +365,12 @@ def pick_juris_from_db(sess,project_root,juris_type=None):
 	jurisdictions = ru[ru.ReportingUnitType_Id == juris_type_id]
 	if jurisdictions.empty:
 		juris_idx, juris_record_d, juris_enum_d = create_record_in_db(
-			sess,project_root,'ReportingUnit',known_info_d={
+			sess,project_root,'ReportingUnit',
+			known_info_d={
 				'ReportingUnitType':juris_type,
-				'ReportingUnitType_Id':juris_type_id,'OtherReportingUnitType':other_juris_type})
+				'ReportingUnitType_Id':juris_type_id,
+				'OtherReportingUnitType':other_juris_type},
+			unique=[['Name']])
 
 		juris_internal_db_name = juris_record_d['Name']
 	else:
@@ -442,10 +447,11 @@ def translate_db_to_show_user_PLUS_OTHER_STUFF(db_record,edf,known_info_d):
 	return show_user, enum_val
 
 
-def pick_or_create_record(sess,project_root,element,known_info_d={}):
+def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
 	"""User picks record from database if exists.
 	Otherwise user picks from file system if exists.
 	Otherwise user enters all relevant info.
+	<unique> is list of uniqueness criteria, where each criterion is a list of fields
 	Store record in file system and/or db if new
 	Return index of record in database"""
 
@@ -460,7 +466,8 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 		# if not from file_system, pick from scratch
 		if fs_idx is None:
 			# have user enter record; save it to file system
-			user_record, enum_plain_text_values = new_record_info_from_user(sess,project_root,element,known_info_d=known_info_d)
+			user_record, enum_plain_text_values = new_record_info_from_user(
+				sess,project_root,element,known_info_d=known_info_d,unique=unique)
 			save_record_to_filesystem(storage_dir,element,user_record,enum_plain_text_values)
 
 		# save record to db
@@ -506,7 +513,8 @@ def get_or_create_election_in_db(sess,project_root):
 	election_idx, election = pick_one(election_df,'Name','election')
 	electiontype_df = pd.read_sql_table('ElectionType',sess.bind,index_col='Id')
 	if election_idx is None:
-		election_idx, election_record_d, election_enum_d = create_record_in_db(sess,project_root,'Election')
+		election_idx, election_record_d, election_enum_d = create_record_in_db(
+			sess,project_root,'Election',unique=[['Name'],['EndDate','ElectionType_Id','OtherElectionType']])
 		electiontype = election_enum_d['ElectionType']
 	else:
 		et_row = election_df.loc[:,['ElectionType_Id','OtherElectionType']].merge(
@@ -587,7 +595,7 @@ def save_record_to_filesystem(storage_dir,table,user_record,enum_plain_text_valu
 	return
 
 
-def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
+def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={},unique=unique):
 	"""create record in <table> table in database from user input
 	(or from existing info db_records_entered_by_hand directory in file system)
 	<known_info_d> is a dict of known field-value pairs.
@@ -669,14 +677,16 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 			# if not, ask user to enter info for file_record
 			if not picked_from_file:
 				db_and_file_record,enum_val = new_record_info_from_user(
-					sess,root_dir,table,known_info_d=known_info_d,mode='database_and_filesystem')
+					sess,root_dir,table,
+					known_info_d=known_info_d,mode='database_and_filesystem',unique=unique)
 				file_record = db_and_file_record.copy()
 				for e in enum_list:
 					file_record.pop(f'{e}_Id')
 					file_record.pop(f'Other{e}')
 	if not picked_from_file:
 		# append new record to all_from_file; write to file system
-		to_file = pd.concat([all_from_file,pd.DataFrame.from_dict([file_record],orient='columns')]).drop_duplicates()
+		to_file = pd.concat(
+			[all_from_file,pd.DataFrame.from_dict([file_record],orient='columns')]).drop_duplicates()
 		to_file.to_csv(storage_file,sep='\t',index=False)
 
 	if not picked_from_db:
