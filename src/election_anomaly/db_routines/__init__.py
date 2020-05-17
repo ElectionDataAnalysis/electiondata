@@ -7,10 +7,11 @@ from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
 import sqlalchemy as db
 import user_interface as ui
-from configparser import ConfigParser, MissingSectionHeaderError
+from configparser import MissingSectionHeaderError
 import pandas as pd
-import tkinter as tk
 import os
+
+from user_interface import config
 
 
 class CdfDbException(Exception):
@@ -108,39 +109,6 @@ def sql_alchemy_connect(schema=None,paramfile=None,db_name='postgres'):
     meta = db.MetaData(bind=engine, reflect=True,schema=schema)
 
     return engine
-
-
-def config(filename=None, section='postgresql'):
-    """
-    Creates the parameter dictionary needed to log into our db
-    using info in <filename>
-    """
-    db = {}
-    if not filename:
-        # if parameter file is not provided, ask for it
-        # initialize root widget for tkinter
-        tk_root = tk.Tk()
-        filename = ui.pick_paramfile()
-
-    # create a parser
-    parser = ConfigParser()
-    # read config file
-
-    try:
-        parser.read(filename)
-    except MissingSectionHeaderError as e:
-        print(e)
-        db = config(filename=None,section=section)
-        return db
-
-    # get section, default to postgresql
-    if parser.has_section(section):
-        params = parser.items(section)
-        for param in params:
-            db[param[0]] = param[1]
-    else:
-        raise Exception('Section {0} not found in the {1} file'.format(section, filename))
-    return db
 
 
 def add_integer_cols(session,table,col_list):

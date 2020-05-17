@@ -1,4 +1,6 @@
 #!usr/bin/python3
+import tkinter as tk
+from configparser import ConfigParser,MissingSectionHeaderError
 
 import db_routines as dbr
 import db_routines.Create_CDF_db as db_cdf
@@ -919,3 +921,36 @@ if __name__ == '__main__':
 	print("Data loading routines moved to src/election_anomaly/test folder")
 
 	exit()
+
+
+def config(filename=None, section='postgresql'):
+    """
+    Creates the parameter dictionary needed to log into our db
+    using info in <filename>
+    """
+    db = {}
+    if not filename:
+        # if parameter file is not provided, ask for it
+        # initialize root widget for tkinter
+        tk_root = tk.Tk()
+        filename = ui.pick_paramfile()
+
+    # create a parser
+    parser = ConfigParser()
+    # read config file
+
+    try:
+        parser.read(filename)
+    except MissingSectionHeaderError as e:
+        print(e)
+        db = config(filename=None,section=section)
+        return db
+
+    # get section, default to postgresql
+    if parser.has_section(section):
+        params = parser.items(section)
+        for param in params:
+            db[param[0]] = param[1]
+    else:
+        raise Exception('Section {0} not found in the {1} file'.format(section, filename))
+    return db
