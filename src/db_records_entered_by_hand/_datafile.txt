@@ -11,3 +11,4 @@ test	small20181106.txt	asdf	2222-11-11	sdf	2222-11-11
 phila_2018g	2018_general.csv	philadelphiavotes.com	2018-12-31	exact file date uncertain	2020-05-02
 					
 write_in_only_phila2018g	trunc_2018_general.csv	by hand	2020-05-13		1000-01-01
+2018_CO_gen	2018GEPrecinctLevelResults.csv	https://www.sos.state.co.us/pubs/elections/resultsData.html 	2018-11-06	Actual file date is unknown	2020-05-15

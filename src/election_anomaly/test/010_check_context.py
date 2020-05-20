@@ -9,7 +9,7 @@ if __name__ == '__main__':
 			"an automatic munger that will load your data into a database in the 
 			"NIST common data format.""")
 
-	project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
+	project_root = os.path('C:\Users\jsru2\Desktop\GitHub\election_anomaly\src')
 	j_path = os.path.join(project_root,'jurisdictions')
 
 	juris_short_name = None
