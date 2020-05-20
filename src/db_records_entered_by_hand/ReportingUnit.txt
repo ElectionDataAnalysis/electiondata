@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+Name	ReportingUnitType
+Colorado	state
+North Carolina	state
+Florida	state
+Pennsylvania	state
+SHD	utility
+=======
 Name	ReportingUnitType
 Colorado	state
 North Carolina	state
@@ -5,3 +13,4 @@ Florida	state
 Pennsylvania	state
 SHD	utility
 Pennsylvania;Philadelphia	county
+>>>>>>> master

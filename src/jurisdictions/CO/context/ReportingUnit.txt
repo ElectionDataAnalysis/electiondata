@@ -1,4 +1,5 @@
 Name	ReportingUnitType
+Colorado	state
 Colorado;Adams County	county
 Colorado;Alamosa County	county
 Colorado;Arapahoe County	county
@@ -3199,92 +3200,92 @@ Colorado;Yuma County;4016563011 Precinct	precinct
 Colorado;Yuma County;4016563012 Precinct	precinct
 Colorado;Yuma County;4016563013 Precinct	precinct
 Colorado;Yuma County;4016563014 Precinct	precinct
-State Representative - District 1	state-house
-State Representative - District 10	state-house
-State Representative - District 11	state-house
-State Representative - District 12	state-house
-State Representative - District 13	state-house
-State Representative - District 14	state-house
-State Representative - District 15	state-house
-State Representative - District 16	state-house
-State Representative - District 17	state-house
-State Representative - District 18	state-house
-State Representative - District 19	state-house
-State Representative - District 2	state-house
-State Representative - District 20	state-house
-State Representative - District 21	state-house
-State Representative - District 22	state-house
-State Representative - District 23	state-house
-State Representative - District 24	state-house
-State Representative - District 25	state-house
-State Representative - District 26	state-house
-State Representative - District 27	state-house
-State Representative - District 28	state-house
-State Representative - District 29	state-house
-State Representative - District 3	state-house
-State Representative - District 30	state-house
-State Representative - District 31	state-house
-State Representative - District 32	state-house
-State Representative - District 33	state-house
-State Representative - District 34	state-house
-State Representative - District 35	state-house
-State Representative - District 36	state-house
-State Representative - District 37	state-house
-State Representative - District 38	state-house
-State Representative - District 39	state-house
-State Representative - District 4	state-house
-State Representative - District 40	state-house
-State Representative - District 41	state-house
-State Representative - District 42	state-house
-State Representative - District 43	state-house
-State Representative - District 44	state-house
-State Representative - District 45	state-house
-State Representative - District 46	state-house
-State Representative - District 47	state-house
-State Representative - District 48	state-house
-State Representative - District 49	state-house
-State Representative - District 5	state-house
-State Representative - District 50	state-house
-State Representative - District 51	state-house
-State Representative - District 52	state-house
-State Representative - District 53	state-house
-State Representative - District 54	state-house
-State Representative - District 55	state-house
-State Representative - District 56	state-house
-State Representative - District 57	state-house
-State Representative - District 58	state-house
-State Representative - District 59	state-house
-State Representative - District 6	state-house
-State Representative - District 60	state-house
-State Representative - District 61	state-house
-State Representative - District 62	state-house
-State Representative - District 63	state-house
-State Representative - District 64	state-house
-State Representative - District 65	state-house
-State Representative - District 7	state-house
-State Representative - District 8	state-house
-State Representative - District 9	state-house
-State Senate - District 1	state-senate
-State Senate - District 11	state-senate
-State Senate - District 13	state-senate
-State Senate - District 15	state-senate
-State Senate - District 16	state-senate
-State Senate - District 2	state-senate
-State Senate - District 20	state-senate
-State Senate - District 22	state-senate
-State Senate - District 24	state-senate
-State Senate - District 3	state-senate
-State Senate - District 30	state-senate
-State Senate - District 32	state-senate
-State Senate - District 34	state-senate
-State Senate - District 5	state-senate
-State Senate - District 6	state-senate
-State Senate - District 7	state-senate
-State Senate - District 9	state-senate
-United States Representative - District 1	congressional
-United States Representative - District 2	congressional
-United States Representative - District 3	congressional
-United States Representative - District 4	congressional
-United States Representative - District 5	congressional
-United States Representative - District 6	congressional
-United States Representative - District 7	congressional
+Colorado;General Assembly House of Representatives District 1	state-house
+Colorado;General Assembly House of Representatives District 10	state-house
+Colorado;General Assembly House of Representatives District 11	state-house
+Colorado;General Assembly House of Representatives District 12	state-house
+Colorado;General Assembly House of Representatives District 13	state-house
+Colorado;General Assembly House of Representatives District 14	state-house
+Colorado;General Assembly House of Representatives District 15	state-house
+Colorado;General Assembly House of Representatives District 16	state-house
+Colorado;General Assembly House of Representatives District 17	state-house
+Colorado;General Assembly House of Representatives District 18	state-house
+Colorado;General Assembly House of Representatives District 19	state-house
+Colorado;General Assembly House of Representatives District 2	state-house
+Colorado;General Assembly House of Representatives District 20	state-house
+Colorado;General Assembly House of Representatives District 21	state-house
+Colorado;General Assembly House of Representatives District 22	state-house
+Colorado;General Assembly House of Representatives District 23	state-house
+Colorado;General Assembly House of Representatives District 24	state-house
+Colorado;General Assembly House of Representatives District 25	state-house
+Colorado;General Assembly House of Representatives District 26	state-house
+Colorado;General Assembly House of Representatives District 27	state-house
+Colorado;General Assembly House of Representatives District 28	state-house
+Colorado;General Assembly House of Representatives District 29	state-house
+Colorado;General Assembly House of Representatives District 3	state-house
+Colorado;General Assembly House of Representatives District 30	state-house
+Colorado;General Assembly House of Representatives District 31	state-house
+Colorado;General Assembly House of Representatives District 32	state-house
+Colorado;General Assembly House of Representatives District 33	state-house
+Colorado;General Assembly House of Representatives District 34	state-house
+Colorado;General Assembly House of Representatives District 35	state-house
+Colorado;General Assembly House of Representatives District 36	state-house
+Colorado;General Assembly House of Representatives District 37	state-house
+Colorado;General Assembly House of Representatives District 38	state-house
+Colorado;General Assembly House of Representatives District 39	state-house
+Colorado;General Assembly House of Representatives District 4	state-house
+Colorado;General Assembly House of Representatives District 40	state-house
+Colorado;General Assembly House of Representatives District 41	state-house
+Colorado;General Assembly House of Representatives District 42	state-house
+Colorado;General Assembly House of Representatives District 43	state-house
+Colorado;General Assembly House of Representatives District 44	state-house
+Colorado;General Assembly House of Representatives District 45	state-house
+Colorado;General Assembly House of Representatives District 46	state-house
+Colorado;General Assembly House of Representatives District 47	state-house
+Colorado;General Assembly House of Representatives District 48	state-house
+Colorado;General Assembly House of Representatives District 49	state-house
+Colorado;General Assembly House of Representatives District 5	state-house
+Colorado;General Assembly House of Representatives District 50	state-house
+Colorado;General Assembly House of Representatives District 51	state-house
+Colorado;General Assembly House of Representatives District 52	state-house
+Colorado;General Assembly House of Representatives District 53	state-house
+Colorado;General Assembly House of Representatives District 54	state-house
+Colorado;General Assembly House of Representatives District 55	state-house
+Colorado;General Assembly House of Representatives District 56	state-house
+Colorado;General Assembly House of Representatives District 57	state-house
+Colorado;General Assembly House of Representatives District 58	state-house
+Colorado;General Assembly House of Representatives District 59	state-house
+Colorado;General Assembly House of Representatives District 6	state-house
+Colorado;General Assembly House of Representatives District 60	state-house
+Colorado;General Assembly House of Representatives District 61	state-house
+Colorado;General Assembly House of Representatives District 62	state-house
+Colorado;General Assembly House of Representatives District 63	state-house
+Colorado;General Assembly House of Representatives District 64	state-house
+Colorado;General Assembly House of Representatives District 65	state-house
+Colorado;General Assembly House of Representatives District 7	state-house
+Colorado;General Assembly House of Representatives District 8	state-house
+Colorado;General Assembly House of Representatives District 9	state-house
+Colorado;General Assembly Senate District 1	state-senate
+Colorado;General Assembly Senate District 11	state-senate
+Colorado;General Assembly Senate District 13	state-senate
+Colorado;General Assembly Senate District 15	state-senate
+Colorado;General Assembly Senate District 16	state-senate
+Colorado;General Assembly Senate District 2	state-senate
+Colorado;General Assembly Senate District 20	state-senate
+Colorado;General Assembly Senate District 22	state-senate
+Colorado;General Assembly Senate District 24	state-senate
+Colorado;General Assembly Senate District 3	state-senate
+Colorado;General Assembly Senate District 30	state-senate
+Colorado;General Assembly Senate District 32	state-senate
+Colorado;General Assembly Senate District 34	state-senate
+Colorado;General Assembly Senate District 5	state-senate
+Colorado;General Assembly Senate District 6	state-senate
+Colorado;General Assembly Senate District 7	state-senate
+Colorado;General Assembly Senate District 9	state-senate
+Colorado;US Congress House of Representatives District 1	congressional
+Colorado;US Congress House of Representatives District 2	congressional
+Colorado;US Congress House of Representatives District 3	congressional
+Colorado;US Congress House of Representatives District 4	congressional
+Colorado;US Congress House of Representatives District 5	congressional
+Colorado;US Congress House of Representatives District 6	congressional
+Colorado;US Congress House of Representatives District 7	congressional

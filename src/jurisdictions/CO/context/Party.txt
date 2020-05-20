@@ -1,4 +1,14 @@
 Name
+Colorado American Constitution Party
+Colorado Approval Voting Party
+Colorado Democratic Party
+Colorado Green Party
+Colorado Independent
+Colorado Libertarian Party
+Colorado No party
+Colorado Republican Party
+Colorado Unaffiliated
+Colorado Unity Party of Colorado
 Democratic Party
 Republican Party
 Green Party
@@ -8,4 +18,4 @@ American Constitution Party
 Approval Voting Party
 Unaffiliated
 Independent
-Unknown
+No Party
