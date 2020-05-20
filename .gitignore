@@ -1,4 +1,5 @@
 *.pyc
+src/tmp/
 local/
 .DS_Store
 src/election_anomaly/test/

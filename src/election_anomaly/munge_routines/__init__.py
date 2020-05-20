@@ -70,6 +70,8 @@ def get_name_field(t):
         field = 'BallotName'
     elif t == 'CountItemType':
         field = 'Txt'
+    elif t == '_datafile':
+        field = 'short_name'
     else:
         field = 'Name'
     return field
@@ -105,6 +107,12 @@ def add_munged_column(raw,munger,element,mode='row',inplace=True):
         assert f != f'{element}_raw',f'Column name conflicts with element name: {f}'
         working.loc[:,f'{element}_raw'] = t + working.loc[:,f] + working.loc[:,f'{element}_raw']
     return working
+
+
+def filter_by_dict(df,d):
+	"""Returns <df> filtered by dictionary <d> ,
+	where keys of <d> are column names of <df> and values of <d> are the desired value"""
+	return df.loc[(df[list(d)] == pd.Series(d)).all(axis=1)]
 
 
 def replace_raw_with_internal_ids(row_df,juris,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False):
@@ -392,7 +400,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
     working = append_multi_foreign_key(working,ref_d)
 
     # add extra columns to VoteCount table temporarily to allow proper join
-    extra_cols = ['ElectionContestJoin_Id','ContestSelectionJoin_Id']
+    extra_cols = ['ElectionContestJoin_Id','ContestSelectionJoin_Id','_datafile_Id']
     dbr.add_integer_cols(session,'VoteCount',extra_cols)
 
     # upload to VoteCount table, pull  Ids

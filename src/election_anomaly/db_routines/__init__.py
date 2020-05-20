@@ -7,10 +7,11 @@ from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
 import sqlalchemy as db
 import user_interface as ui
-from configparser import ConfigParser, MissingSectionHeaderError
+from configparser import MissingSectionHeaderError
 import pandas as pd
-import tkinter as tk
 import os
+
+from user_interface import config
 
 
 class CdfDbException(Exception):
@@ -108,39 +109,6 @@ def sql_alchemy_connect(schema=None,paramfile=None,db_name='postgres'):
     meta = db.MetaData(bind=engine, reflect=True,schema=schema)
 
     return engine
-
-
-def config(filename=None, section='postgresql'):
-    """
-    Creates the parameter dictionary needed to log into our db
-    using info in <filename>
-    """
-    db = {}
-    if not filename:
-        # if parameter file is not provided, ask for it
-        # initialize root widget for tkinter
-        tk_root = tk.Tk()
-        filename = ui.pick_paramfile()
-
-    # create a parser
-    parser = ConfigParser()
-    # read config file
-
-    try:
-        parser.read(filename)
-    except MissingSectionHeaderError as e:
-        print(e)
-        db = config(filename=None,section=section)
-        return db
-
-    # get section, default to postgresql
-    if parser.has_section(section):
-        params = parser.items(section)
-        for param in params:
-            db[param[0]] = param[1]
-    else:
-        raise Exception('Section {0} not found in the {1} file'.format(section, filename))
-    return db
 
 
 def add_integer_cols(session,table,col_list):
@@ -273,17 +241,12 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
             return dframe
         else:
             return target
-    # partition the columns
-    dframe_only_cols = [x for x in dframe.columns if x not in target.columns]
-    target_only_cols = [x for x in target.columns if x not in dframe.columns]
-    intersection_cols = [x for x in target.columns if x in dframe.columns]
-
     if raw_to_votecount:
-        # join with SECVCJ
+        # join with ECSVCJ
         secvcj = pd.read_sql_table('ElectionContestSelectionVoteCountJoin',session.bind,index_col=None)
         # drop columns that don't belong, but were temporarily created in order
-        #  to get VoteCount_Id correctly into SECVCJ
-        target=target.drop(['ElectionContestJoin_Id','ContestSelectionJoin_Id'],axis=1)
+        #  to get VoteCount_Id correctly into ECSVCJ
+        target=target.drop(['ElectionContestJoin_Id','ContestSelectionJoin_Id','_datafile_Id'],axis=1)
         target=target.merge(secvcj,left_on='Id',right_on='VoteCount_Id')
         target=target.drop(['Id','VoteCount_Id'],axis=1)
     df_to_db = dframe.copy()
@@ -291,6 +254,11 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
     if 'Count' in df_to_db.columns:
         # TODO bug: catch anything not an integer (e.g., in MD 2018g upload)
         df_to_db.loc[:,'Count']=df_to_db['Count'].astype('int64',errors='ignore')
+
+    # partition the columns
+    dframe_only_cols = [x for x in dframe.columns if x not in target.columns]
+    target_only_cols = [x for x in target.columns if x not in dframe.columns]
+    intersection_cols = [x for x in target.columns if x in dframe.columns]
 
     # remove columns that don't exist in target table
     df_to_db = df_to_db.drop(dframe_only_cols, axis=1)

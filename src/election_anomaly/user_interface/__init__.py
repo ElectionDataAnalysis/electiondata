@@ -1,4 +1,6 @@
 #!usr/bin/python3
+import tkinter as tk
+from configparser import ConfigParser,MissingSectionHeaderError
 
 import db_routines as dbr
 import db_routines.Create_CDF_db as db_cdf
@@ -15,6 +17,8 @@ import datetime
 import states_and_files as sf
 import random
 from tkinter import filedialog
+from configparser import MissingSectionHeaderError
+
 
 
 recognized_encodings = {'iso2022jp', 'arabic', 'cp861', 'csptcp154', 'shiftjisx0213', '950', 'IBM775',
@@ -77,7 +81,9 @@ def pick_datafile(project_root,sess):
 	fpath = pick_filepath(initialdir=project_root)
 	filename = ntpath.basename(fpath)
 	db_idx, datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
-		sess,project_root,'_datafile','short_name',known_info_d={'file_name':filename})
+		sess,project_root,'_datafile','short_name',
+		known_info_d={'file_name':filename},
+		unique=[['short_name'],['file_name','file_date','source']])
 	# TODO typing url into debug window opens the web page; want it to just act like a string
 	return datafile_record_d, datafile_enumeration_name_d, fpath
 
@@ -121,7 +127,6 @@ def pick_one(choices,return_col,item='row',required=False):
 	with pd.option_context('display.max_rows',None,'display.max_columns',None):
 		print(df)
 
-
 	choice = -1  # guaranteed not to be in df.index
 
 	while choice not in df.index:
@@ -144,8 +149,8 @@ def pick_one(choices,return_col,item='row',required=False):
 	return choices.index[choice], df.loc[choice,return_col]
 
 
-def pick_paramfile():
-	print('Locate the parameter file for your postgreSQL database.')
+def pick_paramfile(msg='Locate the parameter file for your postgreSQL database.'):
+	print(msg)
 	fpath= pick_filepath()
 	return fpath
 
@@ -310,34 +315,34 @@ def create_file_from_template(template_file,new_file,sep='\t'):
 	return
 
 
-def pick_munger(mungers_dir='mungers',project_root=None,session=None):
+def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name=None):
 	"""pick (or create) a munger """
 	if not project_root:
 		project_root = get_project_root()
+	if not munger_name:
+		choice_list = os.listdir(mungers_dir)
+		for choice in os.listdir(mungers_dir):
+			c_path = os.path.join(mungers_dir,choice)
+			if not os.path.isdir(c_path):  # remove non-directories from list
+				choice_list.remove(choice)
+			elif not os.path.isfile(os.path.join(c_path,'raw_columns.txt')):
+				pass  # list any munger that doesn't have raw_columns.txt file yet
+			else:
+				elts = pd.read_csv(os.path.join(c_path,'cdf_elements.txt'),header=0,dtype=str,sep='\t')
+				row_formulas = elts[elts.source=='row'].raw_identifier_formula.unique()
+				necessary_cols = set()
+				for formula in row_formulas:
+					# extract list of necessary fields
+					pattern = '<(?P<field>[^<>]+)>'  # finds field names
+					p = re.compile(pattern)
+					necessary_cols.update(p.findall(formula))
 
-	choice_list = os.listdir(mungers_dir)
-	for choice in os.listdir(mungers_dir):
-		c_path = os.path.join(mungers_dir,choice)
-		if not os.path.isdir(c_path):  # remove non-directories from list
-			choice_list.remove(choice)
-		elif not os.path.isfile(os.path.join(c_path,'raw_columns.txt')):
-			pass  # list any munger that doesn't have raw_columns.txt file yet
-		else:
-			elts = pd.read_csv(os.path.join(c_path,'cdf_elements.txt'),header=0,dtype=str,sep='\t')
-			row_formulas = elts[elts.source=='row'].raw_identifier_formula.unique()
-			necessary_cols = set()
-			for formula in row_formulas:
-				# extract list of necessary fields
-				pattern = '<(?P<field>[^<>]+)>'  # finds field names
-				p = re.compile(pattern)
-				necessary_cols.update(p.findall(formula))
-
-	munger_df = pd.DataFrame(choice_list,columns=['Munger'])
-	munger_idx,munger_name = pick_one(munger_df,'Munger', item='munger')
-	if munger_idx is None:
-		# user chooses munger
-		munger_name = get_alphanumeric_from_user(
-			'Enter a short name (alphanumeric only, no spaces) for your munger (e.g., \'nc_primary18\')\n')
+		munger_df = pd.DataFrame(choice_list,columns=['Munger'])
+		munger_idx,munger_name = pick_one(munger_df,'Munger', item='munger')
+		if munger_idx is None:
+			# user chooses munger
+			munger_name = get_alphanumeric_from_user(
+				'Enter a short name (alphanumeric only, no spaces) for your munger (e.g., \'nc_primary18\')\n')
 	sf.ensure_munger_files(munger_name,project_root=project_root)
 
 	munger_path = os.path.join(mungers_dir,munger_name)
@@ -364,9 +369,12 @@ def pick_juris_from_db(sess,project_root,juris_type=None):
 	jurisdictions = ru[ru.ReportingUnitType_Id == juris_type_id]
 	if jurisdictions.empty:
 		juris_idx, juris_record_d, juris_enum_d = create_record_in_db(
-			sess,project_root,'ReportingUnit',known_info_d={
+			sess,project_root,'ReportingUnit',
+			known_info_d={
 				'ReportingUnitType':juris_type,
-				'ReportingUnitType_Id':juris_type_id,'OtherReportingUnitType':other_juris_type})
+				'ReportingUnitType_Id':juris_type_id,
+				'OtherReportingUnitType':other_juris_type},
+			unique=[['Name']])
 
 		juris_internal_db_name = juris_record_d['Name']
 	else:
@@ -375,10 +383,79 @@ def pick_juris_from_db(sess,project_root,juris_type=None):
 	return juris_idx, juris_internal_db_name
 
 
-def pick_or_create_record(sess,project_root,element,known_info_d={}):
+def translate_db_to_show_user(db_record,edf):
+	"""<edf> is a dictionary of enumeration dataframes including all in <db_record>.
+	<db_record> is a dictionary of values from db (all enums in id/othertext)
+	returns dictionary of values to show user (all enums in plaintext)
+	and dictionary of enumeration values"""
+	# TODO add ability to handle foreign keys/values such as ElectionDistricts?
+	enum_val = {}
+	show_user = db_record.copy()
+	for e in edf.keys():
+		enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(edf[e],db_record[f'{e}_Id'],db_record[f'Other{e}'])
+		show_user.pop(f'{e}_Id')
+		show_user.pop(f'Other{e}')
+	return show_user, enum_val
+
+
+def translate_show_user_to_db(show_user,edf):
+	"""<edf> is a dictionary of enumeration dataframes including all in <show_user>.
+	<show_user> is a dictionary of values to show user (all enums in plaintext)
+	returns dictionary of values from db (all enums in id/othertext)
+	and dictionary of enumeration values"""
+	enum_val = {}
+	db_record = show_user.copy()
+	for e in edf.keys():
+		enum_val[e] = show_user[e]
+		db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.enum_value_to_id_othertext(edf[e],show_user[e])
+	return db_record, enum_val
+
+
+def translate_db_to_show_user_PLUS_OTHER_STUFF(db_record,edf,known_info_d):
+	enum_val = {}
+	show_user = db_record.copy()
+	for e in edf.keys():
+		# define show_user, db_record and enum_val dictionaries
+		if e in known_info_d.keys():
+			# take plaintext from known_info_d if possible
+			show_user[e] = enum_val[e] = known_info_d[e]
+			db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.enum_value_to_id_othertext(
+				edf[e],known_info_d[e])
+		elif f'{e}_Id' in known_info_d.keys() and f'Other{e}' in known_info_d.keys():
+			# otherwise take id/othertext from known_info_d if possible
+			enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(
+				edf[e],known_info_d[f'{e}_Id'],known_info_d[f'Other{e}'])
+			db_record[f'{e}_Id'] = known_info_d[f'{e}_Id']
+			db_record[f'Other{e}'] = known_info_d[f'Other{e}']
+		else:
+			# otherwise force user to pick from standard list (plus 'other')
+			db_record[f'{e}_Id'],enum_txt = pick_one(edf[e],'Txt',e,required=True)
+			if enum_txt == 'other':
+				# get plaintext from user
+				db_record[f'Other{e}'] = input(f'Enter the {e}:\n')
+				# check against standard list
+				std_enum_list = list(edf[e]['Txt'])
+				std_enum_list.remove('other')
+				if db_record[f'Other{e}'] in std_enum_list:
+					# if user's plaintext is on standard list, change <e>_Id to match plaintext (rather than 'other')
+					#  and change Other<e> back to blank
+					db_record[f'{e}_Id'] = \
+						edf[e][edf[e].Txt == db_record[f'Other{e}']].first_valid_index()
+					db_record[f'Other{e}'] = ''
+			else:
+				db_record[f'Other{e}'] = ''
+			# get plaintext from id/othertext
+			enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(
+				edf[e],db_record[f'{e}_Id'],db_record[f'Other{e}'])
+
+	return show_user, enum_val
+
+
+def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
 	"""User picks record from database if exists.
 	Otherwise user picks from file system if exists.
 	Otherwise user enters all relevant info.
+	<unique> is list of uniqueness criteria, where each criterion is a list of fields
 	Store record in file system and/or db if new
 	Return index of record in database"""
 
@@ -393,9 +470,9 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 		# if not from file_system, pick from scratch
 		if fs_idx is None:
 			# have user enter record; save it to file system
-			user_record, enum_plain_text_values = new_record_info_from_user(sess,project_root,element,known_info_d=known_info_d)
+			user_record, enum_plain_text_values = new_record_info_from_user(
+				sess,project_root,element,known_info_d=known_info_d,unique=unique)
 			save_record_to_filesystem(storage_dir,element,user_record,enum_plain_text_values)
-
 
 		# save record to db
 		try:
@@ -418,6 +495,21 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 	return idx
 
 
+def get_by_hand_records_from_file_system(root_dir,table,subdir='db_records_entered_by_hand'):
+	# identify/create the directory for storing individual records in file system
+	storage_dir = os.path.join(root_dir,subdir)
+	if not os.path.isdir(storage_dir):
+		os.makedirs(storage_dir)
+
+	storage_file = os.path.join(storage_dir,f'{table}.txt')
+	# read from file system (if file exists)
+	if os.path.isfile(storage_file):
+		all_from_file = pd.read_csv(storage_file,sep='\t')
+	else:
+		all_from_file = pd.DataFrame()  # empty
+	return all_from_file, storage_file
+
+
 def get_or_create_election_in_db(sess,project_root):
 	"""Get id and electiontype from database, creating record first if necessary"""
 	print('Specify the election:')
@@ -425,7 +517,8 @@ def get_or_create_election_in_db(sess,project_root):
 	election_idx, election = pick_one(election_df,'Name','election')
 	electiontype_df = pd.read_sql_table('ElectionType',sess.bind,index_col='Id')
 	if election_idx is None:
-		election_idx, election_record_d, election_enum_d = create_record_in_db(sess,project_root,'Election')
+		election_idx, election_record_d, election_enum_d = create_record_in_db(
+			sess,project_root,'Election',unique=[['Name'],['EndDate','ElectionType_Id','OtherElectionType']])
 		electiontype = election_enum_d['ElectionType']
 	else:
 		et_row = election_df.loc[:,['ElectionType_Id','OtherElectionType']].merge(
@@ -455,7 +548,8 @@ def pick_record_from_db(sess,element,known_info_d={}):
 	filtered = element_df.loc[(element_df[list(d)] == pd.Series(d)).all(axis=1)]
 
 	print(f'Pick the {element} from the database:')
-	element_idx, values = pick_one(filtered,'Name',element)
+	name_field = mr.get_name_field(element)
+	element_idx, values = pick_one(filtered,name_field,element)
 	return element_idx, values
 
 
@@ -506,7 +600,7 @@ def save_record_to_filesystem(storage_dir,table,user_record,enum_plain_text_valu
 	return
 
 
-def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
+def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={},unique=[]):
 	"""create record in <table> table in database from user input
 	(or from existing info db_records_entered_by_hand directory in file system)
 	<known_info_d> is a dict of known field-value pairs.
@@ -529,17 +623,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 		os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/elements',table,'enumerations.txt'),
 		sep='\t',header=0).enumeration.to_list()
 
-	# identify/create the directory for storing individual records in file system
-	storage_dir = os.path.join(root_dir,'db_records_entered_by_hand')
-	if not os.path.isdir(storage_dir):
-		os.makedirs(storage_dir)
-
-	storage_file = os.path.join(storage_dir,f'{table}.txt')
-	# read from file system (if file exists)
-	if os.path.isfile(storage_file):
-		all_from_file = pd.read_csv(storage_file,sep='\t')
-	else:
-		all_from_file = pd.DataFrame()  # empty
+	all_from_file, storage_file = get_by_hand_records_from_file_system(root_dir,table)
 
 	# get dataframe for each enumeration
 	e_df = {}
@@ -598,14 +682,16 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 			# if not, ask user to enter info for file_record
 			if not picked_from_file:
 				db_and_file_record,enum_val = new_record_info_from_user(
-					sess,root_dir,table,known_info_d=known_info_d,mode='database_and_filesystem')
+					sess,root_dir,table,
+					known_info_d=known_info_d,mode='database_and_filesystem',unique=unique)
 				file_record = db_and_file_record.copy()
 				for e in enum_list:
 					file_record.pop(f'{e}_Id')
 					file_record.pop(f'Other{e}')
 	if not picked_from_file:
 		# append new record to all_from_file; write to file system
-		to_file = pd.concat([all_from_file,pd.DataFrame.from_dict([file_record],orient='columns')]).drop_duplicates()
+		to_file = pd.concat(
+			[all_from_file,pd.DataFrame.from_dict([file_record],orient='columns')]).drop_duplicates()
 		to_file.to_csv(storage_file,sep='\t',index=False)
 
 	if not picked_from_db:
@@ -623,14 +709,17 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={}):
 	return db_idx, db_record, enum_val
 
 
-def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database'):
+def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database',unique=[]):
 	"""Collect new record info from user, with chance to confirm.
 	For each enumeration, translate the user's plaintext input into id/othertext.
-	Return the correponding db record (id/othertext only) and an enumeration-value
-	dictionary."""
-
+	Enforce uniqueness of any list of fields in the list <unique>
+	Return the corresponding record (id/othertext only) and an enumeration-value
+	dictionary. Depending on <mode> ('database', 'filesystem' or 'database_and_filesystem'),
+	returns enum plaintext, or enum id/othertext pairs, or both.
+	"""
+	# TODO read uniqueness from CDF schema definition for table
 	# initialize items to keep syntax-checker happy
-	user_input_record = show_user = enum_val = {}
+	db_record = show_user = enum_val = {}
 
 	# read necessary info about <table> from file system into dataframes
 	df = {}
@@ -645,17 +734,29 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 		e = df['enumerations'].loc[idx,'enumeration']
 		edf[e] = pd.read_sql_table(e,sess.bind,index_col='Id')
 
+	# read existing info from db and file system
+	all_from_db = pd.read_sql_table(table,sess.bind,index_col='Id')
+
+	# translate all enums from db to show_user
+	all_from_db_for_user = all_from_db
+	for e in edf.keys():
+		all_from_db_for_user = mr.enum_col_from_id_othertext(all_from_db_for_user,e,edf[e])
+
+	all_from_file, storage_file = get_by_hand_records_from_file_system(root_dir,table)
+
+	# collect and confirm "show_user" info from user
 	unconfirmed = True
 	while unconfirmed:
+		# solicit info from user and store values for db insertion
 		print(f'Enter info for new {table} record.')
-		user_input_record = {}  # dict to hold values of the record
-		enum_val = {}
+		show_user = {}
+		db_record = {}  # initialize db_record to pick up foreign ids
 
 		for idx,row in df['fields'].iterrows():
 			if row["fieldname"] in known_info_d.keys():
-				user_input_record[row["fieldname"]] = known_info_d[row["fieldname"]]
+				show_user[row["fieldname"]] = known_info_d[row["fieldname"]]
 			else:
-				user_input_record[row["fieldname"]] = enter_and_check_datatype(
+				show_user[row["fieldname"]] = enter_and_check_datatype(
 					f'Enter the {row["fieldname"]}',row['datatype'])
 
 		for idx,row in df['foreign_keys'].iterrows():
@@ -664,54 +765,57 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 			choices = pd.read_sql_table(target,sess.bind,index_col='Id')
 			if choices.empty:
 				raise Exception(f'Cannot add record to {table} while {target} does not contain the required {fieldname}.\n')
-			user_input_record[fieldname], name = pick_one(
-				choices,choices.columns[0],required=True)
+			db_record[fieldname], name = pick_one(choices,choices.columns[0],required=True)
 
-		show_user = user_input_record.copy()
 		for e in edf.keys():
-			# define show_user, user_input_record and enum_val dictionaries
+			# define show_user, db_record and enum_val dictionaries
 			if e in known_info_d.keys():
 				# take plaintext from known_info_d if possible
-				show_user[e] = enum_val[e] = known_info_d[e]
-				user_input_record[f'{e}_Id'],user_input_record[f'Other{e}'] = mr.enum_value_to_id_othertext(
-					edf[e],known_info_d[e])
+				show_user[e] = known_info_d[e]
 			elif f'{e}_Id' in known_info_d.keys() and f'Other{e}' in known_info_d.keys():
-				# otherwise take id/othertext from known_info_d if possible
+				# otherwise take id/othertext from known_info_d if possible and translate to show_user
 				enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(
 					edf[e],known_info_d[f'{e}_Id'],known_info_d[f'Other{e}'])
-				user_input_record[f'{e}_Id'] = known_info_d[f'{e}_Id']
-				user_input_record[f'Other{e}'] = known_info_d[f'Other{e}']
 			else:
 				# otherwise force user to pick from standard list (plus 'other')
-				user_input_record[f'{e}_Id'], enum_txt = pick_one(edf[e],'Txt',e,required=True)
+				db_record[f'{e}_Id'],enum_txt = pick_one(edf[e],'Txt',e,required=True)
 				if enum_txt == 'other':
 					# get plaintext from user
-					user_input_record[f'Other{e}'] = input(f'Enter the {e}:\n')
-					# check against standard list
-					std_enum_list = list(edf[e]['Txt'])
-					std_enum_list.remove('other')
-					if user_input_record[f'Other{e}'] in std_enum_list:
-						# if user's plaintext is on standard list, change <e>_Id to match plaintext (rather than 'other')
-						#  and change Other<e> back to blank
-						user_input_record[f'{e}_Id'] = \
-							edf[e][edf[e].Txt == user_input_record[f'Other{e}']].first_valid_index()
-						user_input_record[f'Other{e}'] = ''
+					show_user[e] = input(f'Enter the {e}:\n')
 				else:
-					user_input_record[f'Other{e}'] = ''
-				# get plaintext from id/othertext
-				enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(
-					edf[e],user_input_record[f'{e}_Id'],user_input_record[f'Other{e}'])
+					show_user[e] = enum_txt
+
+		# show user any records that match any uniqueness criterion, offer choices from db. If all refused
+		#  continue with user's choice. Note some uniqueness might be required
+		picked_from_db = False
+		# TODO deal with required uniqueness criteria
+		for u in unique:  # e.g., u = ['file_name','source','file_date']
+			if not picked_from_db: # TODO inefficient way to break for loop
+				d = {k:v for k,v in show_user.items() if k in u}
+				appears = mr.filter_by_dict(all_from_db_for_user,d)
+				if not appears.empty:
+					print('Your record may already be in the database. Is it one of these?')
+					db_idx, picked_record = pick_one(appears,u)
+					# if user picked one, continue with that one
+					if db_idx:
+						picked_from_db = True
+						show_user = appears.loc[db_idx].to_dict()
+
+		# present to user for confirmation
 		entry = '\n\t'.join([f'{k}:\t{v}' for k,v in show_user.items()])
-		confirm = input(
-			f'Confirm entry:\n\t{entry}\nIs this correct (y/n)?\n')
+		confirm = input(f'Confirm entry:\n\t{entry}\nIs this correct (y/n)?\n')
 		if confirm == 'y':
 			unconfirmed = False
+
+	# get db_record and enum_val
+	db_record,enum_val = translate_show_user_to_db(show_user,edf)
+
 	if mode == 'database':
-		return user_input_record, enum_val
+		return db_record, enum_val
 	elif mode == 'filesystem':
 		return show_user, enum_val
 	elif mode == 'database_and_filesystem':
-		return {**user_input_record,**show_user},enum_val
+		return {**db_record,**show_user},enum_val
 	else:
 		print(f'Mode {mode} not recognized.')
 		return None, None
@@ -814,8 +918,33 @@ def get_alphanumeric_from_user(request,allow_hyphen=False):
 	return s
 
 
+def config(filename=None, section='postgresql',msg='Pick parameter file for connecting to the database'):
+	"""
+	Creates a parameter dictionary <d> from the section <section> in <filename>
+	default section is info needed to log into our db
+	"""
+	d = {}
+	if not filename:
+		# if parameter file is not provided, ask for it
+		# initialize root widget for tkinter
+		filename = pick_paramfile(msg=msg)
 
-if __name__ == '__main__':
-	print("Data loading routines moved to src/election_anomaly/test folder")
+	# create a parser
+	parser = ConfigParser()
+	# read config file
 
-	exit()
+	try:
+		parser.read(filename)
+	except MissingSectionHeaderError as e:
+		print(e)
+		d = config(filename=None,section=section)
+		return d
+
+	# get section, default to postgresql
+	if parser.has_section(section):
+		params = parser.items(section)
+		for param in params:
+			d[param[0]] = param[1]
+	else:
+		raise Exception('Section {0} not found in the {1} file'.format(section, filename))
+	return d
