@@ -517,6 +517,8 @@ def pick_record_from_db(sess,element,known_info_d={}):
 def pick_record_from_file_system(storage_dir,table,name_field='Name',known_info_d={}):
 	"""<field_list> is list of fields for table
 	(with plaintext enums instead of {enum}_Id and Other{enum}"""
+	# initialize to keep syntax-checker happy
+	filtered_file = None
 	# identify/create the directory for storing individual records in file system
 	if not os.path.isdir(storage_dir):
 		os.makedirs(storage_dir)
@@ -680,7 +682,7 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 	"""
 	# TODO read uniqueness from CDF schema definition for table
 	# initialize items to keep syntax-checker happy
-	db_record = show_user = enum_val = {}
+	show_user = enum_val = {}
 
 	# read necessary info about <table> from file system into dataframes
 	df = {}
@@ -824,7 +826,6 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 	if not juris:
 		juris = pick_juris_from_filesystem(
 			project_root,juriss_dir='jurisdictions')
-	juris_idx, juris_internal_db_name = pick_juris_from_db(session,project_root)
 
 	sep = munger.separator.replace('\\t','\t')
 	raw = pd.read_csv(
