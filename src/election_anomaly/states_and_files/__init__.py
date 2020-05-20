@@ -67,7 +67,6 @@ class Jurisdiction:
 
     def load_context_to_db(self,session,project_root):
         """Load info from each element in the context directory into the db"""
-        cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
         # for element in context directory (except dictionary, remark)
         context_dir = os.path.join(self.path_to_juris_dir,'context')
         context_files = os.listdir(context_dir)
@@ -79,14 +78,11 @@ class Jurisdiction:
             load_context_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root)
         return
 
-    def __init__(self,short_name,path_to_parent_dir,project_root=None,check_context=False):        # reporting_units,elections,parties,offices):
+    def __init__(self,short_name,path_to_parent_dir):
         """ short_name is the name of the directory containing the jurisdiction info, including data,
          and is used other places as well.
          path_to_parent_dir is the parent directory of dir_name
         """
-        if not project_root:
-            project_root = ui.get_project_root()
-
         self.short_name = ui.pick_or_create_directory(path_to_parent_dir,short_name)
         self.path_to_juris_dir = os.path.join(path_to_parent_dir, self.short_name)
 
@@ -249,7 +245,7 @@ class Munger:
         [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
          self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
 
-        self.field_rename_suffix = '___' # NB: must not match any suffix of a cdf element name;
+        self.field_rename_suffix = '___'  # NB: must not match any suffix of a cdf element name;
 
         # used repeatedly, so calculated once for convenience
         self.field_list = set()
@@ -431,7 +427,7 @@ def check_munger_file_contents(munger_name,project_root=None):
     checked = False
     while not checked:
         problems = []
-        warnings = []
+        warns = []
 
         # read cdf_elements and format from files
         cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),sep='\t').fillna('')
@@ -452,7 +448,7 @@ def check_munger_file_contents(munger_name,project_root=None):
             problems.append(f'In format file, field_name_row must be an integer '
                             f'({format_df.loc["field_name_row","value"]} is not.)')
         if not format_df.loc['encoding','value'] in ui.recognized_encodings:
-            warnings.append(f'Encoding {format_df.loc["field_name_row","value"]} in format file is not recognized.')
+            warns.append(f'Encoding {format_df.loc["field_name_row","value"]} in format file is not recognized.')
 
         # every source is either row, column or other
         bad_source = [x for x in cdf_elements.source if x not in ['row','column','other']]
@@ -489,14 +485,14 @@ def check_munger_file_contents(munger_name,project_root=None):
             problem_str = '\n\t'.join(problems)
             print(f'Problems found:\nt{problem_str} ')
             print(f'Correct the problems by editing files in {munger_dir}\n')
-            if warnings:
-                warn_string = '\n\t'.join(warnings)
+            if warns:
+                warn_string = '\n\t'.join(warns)
                 print(f'You may wish to address these potential problems as well:\n\t{warn_string}')
             input(f'Then hit enter to continue.')
         else:
             checked = True
-            if warnings:
-                warn_string = '\n\t'.join(warnings)
+            if warns:
+                warn_string = '\n\t'.join(warns)
                 print(f'Potential problems found:\n\t{warn_string}')
                 address = input('Would you like to address any of these (y/n)?\n')
                 if address:
@@ -551,7 +547,6 @@ def check_dependencies(context_dir,element):
     """Looks in <context_dir> to check that every dependent column in <element>.txt
     is listed in the corresponding context file. Note: <context_dir> assumed to exist.
     """
-    name_field = mr.get_name_field(element)
     d = context_dependency_dictionary()
     # context_dir = os.path.join(self.path_to_juris_dir,"context")
     f_path = os.path.join(context_dir,f'{element}.txt')
@@ -591,7 +586,7 @@ def check_dependencies(context_dir,element):
                   'Then his return to continue.')
             changed_elements.update(check_dependencies(context_dir,target))
     if dependent:
-        print ('\n\t'.join(report))
+        print('\n\t'.join(report))
     if changed_elements:
         print(f'(Directory is {context_dir}')
     return changed_elements
@@ -716,7 +711,8 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs):
         df = df.merge(
             target,how='left',left_on=['cdf_element','internal_name'],right_on=['cdf_element',interim])
         # rename 'Foreign_Id' to 'Foreign' for consistency in definition of missing
-        # TODO why is ExternalIdentifier special in this regard? Is it that ExternalIdentifier doesn't have a name field?
+        # TODO why is ExternalIdentifier special in this regard?
+        #  Is it that ExternalIdentifier doesn't have a name field?
         df.rename(columns={foreign_key:foreign_elt},inplace=True)
     else:
         df = df.merge(target,how='left',left_on=foreign_elt,right_on=interim)

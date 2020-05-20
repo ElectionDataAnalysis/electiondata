@@ -283,7 +283,7 @@ def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_nam
 			  f'system may fail.')
 
 	# initialize the jurisdiction
-	ss = sf.Jurisdiction(juris_name,path_to_jurisdictions,project_root=project_root)
+	ss = sf.Jurisdiction(juris_name,path_to_jurisdictions)
 	return ss
 
 
