@@ -20,7 +20,6 @@ from tkinter import filedialog
 from configparser import MissingSectionHeaderError
 
 
-
 recognized_encodings = {'iso2022jp', 'arabic', 'cp861', 'csptcp154', 'shiftjisx0213', '950', 'IBM775',
 						'IBM861', 'shift_jis', 'euc_jp', 'ibm1026', 'ascii', 'IBM437', 'EBCDIC-CP-BE',
 						'csshiftjis', 'cp1253', 'jisx0213', 'latin', 'cp874', '861', 'windows-1255', 'cp1361',
@@ -155,7 +154,7 @@ def pick_paramfile(msg='Locate the parameter file for your postgreSQL database.'
 	return fpath
 
 
-def show_sample(input_iter,items,condition,outfile='shown_items.txt',dir=None,export=False):
+def show_sample(input_iter,items,condition,outfile='shown_items.txt',export_dir=None,export=False):
 	print(f'There are {len(input_iter)} {items} that {condition}:')
 	if len(input_iter) == 0:
 		return
@@ -179,18 +178,18 @@ def show_sample(input_iter,items,condition,outfile='shown_items.txt',dir=None,ex
 			for r in st:
 				print(f'{r}')
 	if export:
-		if dir is None:
-			dir = input(f'Export all {len(st)} {items} that {condition}? If so, enter directory for export.'
+		if export_dir is None:
+			export_dir = input(f'Export all {len(st)} {items} that {condition}? If so, enter directory for export.'
 						f'Existing file will be overwritten.\n'
 						f'(Current directory is {os.getcwd()})\n')
-		if os.path.isdir(dir):
+		if os.path.isdir(export_dir):
 			export = input(f'Export all {len(st)} {items} that {condition} to {outfile} (y/n)?\n')
 			if export == 'y':
-				with open(os.path.join(dir,outfile),'w') as f:
+				with open(os.path.join(export_dir,outfile),'w') as f:
 					f.write('\n'.join(st))
-				print(f'{items} exported to {os.path.join(dir,outfile)}')
-		elif dir != '':
-			print(f'Directory {dir} does not exist.')
+				print(f'{items} exported to {os.path.join(export_dir,outfile)}')
+		elif export_dir != '':
+			print(f'Directory {export_dir} does not exist.')
 	return
 
 
@@ -232,13 +231,15 @@ def pick_database(project_root,paramfile=None,db_name=None):
 
 	if create_new: 	# if our db is brand new
 		eng = dbr.sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
+		# noinspection PyPep8Naming
 		Session = sessionmaker(bind=eng)
 		pick_db_session = Session()
 
 		db_cdf.create_common_data_format_tables(
 			pick_db_session,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'),
 			delete_existing=False)
-		db_cdf.fill_cdf_enum_tables(pick_db_session,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
+		db_cdf.fill_cdf_enum_tables(
+			pick_db_session,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
 		print(f'New database {desired_db} has been created using the common data format.')
 
 	# clean up
@@ -260,10 +261,10 @@ def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_nam
 		# ask user to pick from the available ones
 		print('Pick the filesystem directory for your jurisdiction.')
 		choice_list = [x for x in os.listdir(path_to_jurisdictions) if
-					   os.path.isdir(os.path.join(path_to_jurisdictions,x))]
+					os.path.isdir(os.path.join(path_to_jurisdictions,x))]
 		juris_idx,juris_name = pick_one(choice_list,None,item='jurisdiction')
 
-		#if nothing picked, ask user for alphanumeric name and create necessary files
+		# if nothing picked, ask user for alphanumeric name and create necessary files
 		if not juris_idx:
 			juris_name = get_alphanumeric_from_user('Enter a directory name for your jurisdiction files.')
 			juris_path = os.path.join(path_to_jurisdictions,juris_name)
@@ -272,15 +273,15 @@ def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_nam
 			juris_path = os.path.join(path_to_jurisdictions,juris_name)
 			sf.ensure_jurisdiction_files(juris_path,project_root)
 		else:
-			print(f'WARNING: if necessary files are missing from the directory {juris_name},\n'
-				  f'system may fail.')
+			print(
+				f'WARNING: if necessary files are missing from the directory {juris_name},\nsystem may fail.')
 	else:
 		if check_files:
 			juris_path = os.path.join(path_to_jurisdictions,juris_name)
 			sf.ensure_jurisdiction_files(juris_path,project_root)
 		else:
-			print(f'WARNING: if necessary files are missing from the directory {juris_name},\n'
-			  f'system may fail.')
+			print(
+				f'WARNING: if necessary files are missing from the directory {juris_name},\nsystem may fail.')
 
 	# initialize the jurisdiction
 	ss = sf.Jurisdiction(juris_name,path_to_jurisdictions)
@@ -409,46 +410,6 @@ def translate_show_user_to_db(show_user,edf):
 		enum_val[e] = show_user[e]
 		db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.enum_value_to_id_othertext(edf[e],show_user[e])
 	return db_record, enum_val
-
-
-def translate_db_to_show_user_PLUS_OTHER_STUFF(db_record,edf,known_info_d):
-	enum_val = {}
-	show_user = db_record.copy()
-	for e in edf.keys():
-		# define show_user, db_record and enum_val dictionaries
-		if e in known_info_d.keys():
-			# take plaintext from known_info_d if possible
-			show_user[e] = enum_val[e] = known_info_d[e]
-			db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.enum_value_to_id_othertext(
-				edf[e],known_info_d[e])
-		elif f'{e}_Id' in known_info_d.keys() and f'Other{e}' in known_info_d.keys():
-			# otherwise take id/othertext from known_info_d if possible
-			enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(
-				edf[e],known_info_d[f'{e}_Id'],known_info_d[f'Other{e}'])
-			db_record[f'{e}_Id'] = known_info_d[f'{e}_Id']
-			db_record[f'Other{e}'] = known_info_d[f'Other{e}']
-		else:
-			# otherwise force user to pick from standard list (plus 'other')
-			db_record[f'{e}_Id'],enum_txt = pick_one(edf[e],'Txt',e,required=True)
-			if enum_txt == 'other':
-				# get plaintext from user
-				db_record[f'Other{e}'] = input(f'Enter the {e}:\n')
-				# check against standard list
-				std_enum_list = list(edf[e]['Txt'])
-				std_enum_list.remove('other')
-				if db_record[f'Other{e}'] in std_enum_list:
-					# if user's plaintext is on standard list, change <e>_Id to match plaintext (rather than 'other')
-					#  and change Other<e> back to blank
-					db_record[f'{e}_Id'] = \
-						edf[e][edf[e].Txt == db_record[f'Other{e}']].first_valid_index()
-					db_record[f'Other{e}'] = ''
-			else:
-				db_record[f'Other{e}'] = ''
-			# get plaintext from id/othertext
-			enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(
-				edf[e],db_record[f'{e}_Id'],db_record[f'Other{e}'])
-
-	return show_user, enum_val
 
 
 def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
@@ -742,8 +703,6 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 	for e in edf.keys():
 		all_from_db_for_user = mr.enum_col_from_id_othertext(all_from_db_for_user,e,edf[e])
 
-	all_from_file, storage_file = get_by_hand_records_from_file_system(root_dir,table)
-
 	# collect and confirm "show_user" info from user
 	unconfirmed = True
 	while unconfirmed:
@@ -842,10 +801,11 @@ def enter_and_check_datatype(question,datatype):
 			if answer in recognized_encodings:
 				good = True
 			else:
-				go_on = input(f'This system does not recognize "{answer}" as an encoding. If you are sure it is right,'
-								 f'continue.\nIf you do not know what the encoding is, try "iso-8859-1".\n'
-								 f'For more information, see https://docs.python.org/2.4/lib/standard-encodings.html.\n'
-								 f'Continue with {answer}, even though it is not recognized (y/n)?\n')
+				go_on = input(
+					f'This system does not recognize "{answer}" as an encoding. If you are sure it is right,'
+					f'continue.\nIf you do not know what the encoding is, try "iso-8859-1".\n'
+					f'For more information, see https://docs.python.org/2.4/lib/standard-encodings.html.\n'
+					f'Continue with {answer}, even though it is not recognized (y/n)?\n')
 				if go_on == 'y':
 					good = True
 				else:
@@ -871,7 +831,7 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 		raw_path,sep=sep,dtype=str,encoding=munger.encoding,quoting=csv.QUOTE_MINIMAL,
 		header=list(range(munger.header_row_count)))
 
-	[raw,info_cols,numerical_columns] = mr.clean_raw_df(raw,munger)
+	[raw,numerical_columns] = mr.clean_raw_df(raw,munger)
 	# NB: info_cols will have suffix added by munger
 
 	# check jurisdiction against raw results file, adapting context as necessary
@@ -948,4 +908,3 @@ def config(filename=None, section='postgresql',msg='Pick parameter file for conn
 	else:
 		raise Exception('Section {0} not found in the {1} file'.format(section, filename))
 	return d
-# comment to check git, added on master by SFS locally

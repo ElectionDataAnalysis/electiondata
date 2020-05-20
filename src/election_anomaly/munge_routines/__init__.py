@@ -52,7 +52,7 @@ def clean_raw_df(raw,munger):
     renamer = {x:f'{x}_{munger.field_rename_suffix}' for x in cols_to_munge}
     raw.rename(columns=renamer,inplace=True)
     renamed_cols_to_munge = [f'{x}_{munger.field_rename_suffix}' for x in cols_to_munge]
-    return raw, renamed_cols_to_munge, num_columns
+    return raw, num_columns
 
 
 def text_fragments_and_fields(formula):
