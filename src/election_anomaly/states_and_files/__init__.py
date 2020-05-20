@@ -12,46 +12,6 @@ import csv
 
 
 class Jurisdiction:
-    def check_element_against_raw_results(self,el,results_df,munger,numerical_columns,d):
-        mode = munger.cdf_elements.loc[el,'source']
-        if mode == 'row':
-            # add munged column
-            raw_fields = [f'{x}_{munger.field_rename_suffix}' for x in munger.cdf_elements.loc[el,'fields']]
-            relevant = results_df[raw_fields].drop_duplicates()
-            mr.add_munged_column(relevant,munger,el,mode=mode)
-            # check for untranslatable items
-            relevant = relevant.merge(
-                d.loc[[el]],how='left',left_on=f'{el}_raw',right_on='raw_identifier_value')
-            missing = relevant[relevant.cdf_internal_name.isnull()]
-
-        elif mode == 'column':
-            # add munged column
-            formula = munger.cdf_elements.loc[el,'raw_identifier_formula']
-            text_field_list,last_text = mr.text_fragments_and_fields(formula)
-            # create raw element column from formula applied to num col headers
-            val = {}  # holds evaluations of fields
-            raw_val = {}  # holds the raw value for column c
-            for c in numerical_columns:
-                raw_val[c] = ''
-                # evaluate f-th entry in the column whose 0th entry is c
-                for t,f in text_field_list:
-                    if int(f) == 0:  # TODO make prettier, assumes first line is col header in df
-                        val[f] = c
-                    else:
-                        val[f] = results_df.loc[f - 1,c]
-                    raw_val[c] += t + val[f]
-            # TODO check that numerical cols are correctly identified even when more than one header row
-            relevant = pd.DataFrame(pd.Series([raw_val[c] for c in numerical_columns],name=f'{el}_raw'))
-            # check for untranslatable items
-            relevant = relevant.merge(
-                d.loc[[el]],how='left',left_on=f'{el}_raw',right_on='raw_identifier_value')
-            missing = relevant[relevant.cdf_internal_name.isnull()]
-
-        else:
-            missing = pd.DataFrame([])
-            print(f'Not checking {el}, which is not read from the records in the results file.')
-        return missing
-
     def check_against_raw_results(self,results_df,munger,numerical_columns):
         """Warn user of any mungeable elements in <results_df> that are not
         translatable via context/dictionary.txt"""
@@ -69,17 +29,19 @@ class Jurisdiction:
                      x not in ['BallotMeasureContest','CandidateContest','BallotMeasureSelection','Candidate']]
 
             # find missing contests
-            missing_bmc = self.check_element_against_raw_results('BallotMeasureContest',results_df,munger,numerical_columns,d)
-            missing_cc = self.check_element_against_raw_results('CandidateContest',results_df,munger,numerical_columns,d)
+            missing_bmc = check_element_against_raw_results(
+                'BallotMeasureContest',results_df,munger,numerical_columns,d)
+            missing_cc = check_element_against_raw_results(
+                'CandidateContest',results_df,munger,numerical_columns,d)
             missing_contest = missing_bmc.merge(missing_cc,how='inner',left_index=True,right_index=True)
             if not missing_contest.empty:
                 ui.show_sample(missing_contest,f'Contests','cannot be translated')
                 problems.append(f'At least one contest unrecognized by dictionary.txt')
 
             # find missing candidates/selections
-            missing_bms = self.check_element_against_raw_results(
+            missing_bms = check_element_against_raw_results(
                 'BallotMeasureSelection',results_df,munger,numerical_columns,d)
-            missing_c = self.check_element_against_raw_results(
+            missing_c = check_element_against_raw_results(
                 'Candidate',results_df,munger,numerical_columns,d)
             missing_s = missing_bms.merge(missing_c,how='inner',left_index=True,right_index=True)
 
@@ -87,7 +49,7 @@ class Jurisdiction:
                 ui.show_sample(missing_s,f'selections','cannot be translated')
                 problems.append(f'At least one selection unrecognized by dictionary.txt')
             for el in others:
-                missing = self.check_element_against_raw_results(el,results_df,munger,numerical_columns,d)
+                missing = check_element_against_raw_results(el,results_df,munger,numerical_columns,d)
                 if not missing.empty:
                     ui.show_sample(missing,f'{el}s','cannot be translated')
                     problems.append(f'At least one {el} unrecognized by dictionary.txt')
@@ -771,8 +733,50 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs):
     return df
 
 
+def check_element_against_raw_results(el,results_df,munger,numerical_columns,d):
+    mode = munger.cdf_elements.loc[el,'source']
+    if mode == 'row':
+        # add munged column
+        raw_fields = [f'{x}_{munger.field_rename_suffix}' for x in munger.cdf_elements.loc[el,'fields']]
+        relevant = results_df[raw_fields].drop_duplicates()
+        mr.add_munged_column(relevant,munger,el,mode=mode)
+        # check for untranslatable items
+        relevant = relevant.merge(
+            d.loc[[el]],how='left',left_on=f'{el}_raw',right_on='raw_identifier_value')
+        missing = relevant[relevant.cdf_internal_name.isnull()]
+
+    elif mode == 'column':
+        # add munged column
+        formula = munger.cdf_elements.loc[el,'raw_identifier_formula']
+        text_field_list,last_text = mr.text_fragments_and_fields(formula)
+        # create raw element column from formula applied to num col headers
+        val = {}  # holds evaluations of fields
+        raw_val = {}  # holds the raw value for column c
+        for c in numerical_columns:
+            raw_val[c] = ''
+            # evaluate f-th entry in the column whose 0th entry is c
+            for t,f in text_field_list:
+                if int(f) == 0:  # TODO make prettier, assumes first line is col header in df
+                    val[f] = c
+                else:
+                    val[f] = results_df.loc[f - 1,c]
+                raw_val[c] += t + val[f]
+        # TODO check that numerical cols are correctly identified even when more than one header row
+        relevant = pd.DataFrame(pd.Series([raw_val[c] for c in numerical_columns],name=f'{el}_raw'))
+        # check for untranslatable items
+        relevant = relevant.merge(
+            d.loc[[el]],how='left',left_on=f'{el}_raw',right_on='raw_identifier_value')
+        missing = relevant[relevant.cdf_internal_name.isnull()]
+
+    else:
+        missing = pd.DataFrame([])
+        print(f'Not checking {el}, which is not read from the records in the results file.')
+    return missing
+
+
 class ForeignKeyException(Exception):
     pass
+
 
 if __name__ == '__main__':
     print('Done (states_and_files)!')
