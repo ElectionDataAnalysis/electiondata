@@ -34,6 +34,11 @@ if __name__ == '__main__':
 	eng = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
 	Session = sessionmaker(bind=eng)
 	sess = Session()
+	skip_load = input('Skip context loading (y/n)?\n')
+	if skip_load == 'y':
+		print('Warning: results for contests, selections and reporting units not loaded will not be processed.')
+	else:
+		juris.load_context_to_db(sess,project_root)
 
 	if interact == 'y':
 		[dfile_d,enum_d,data_path] = ui.pick_datafile(project_root,sess)

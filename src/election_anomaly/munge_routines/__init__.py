@@ -10,6 +10,10 @@ import os
 import numpy as np
 
 
+class MungeError(Exception):
+    pass
+
+
 def clean_raw_df(raw,munger):
     """Replaces nulls, strips whitespace, changes any blank entries in non-numeric columns to 'none or unknown'.
     Appends munger suffix to raw column names to avoid conflicts"""
@@ -79,7 +83,8 @@ def get_name_field(t):
 
 def add_munged_column(raw,munger,element,mode='row',inplace=True):
     """Alters dataframe <raw>, adding or redefining <element>_raw column
-    via the <formula>. Assumes some preprocessing of <raw> """
+    via the <formula>. Assumes some preprocessing of <raw> .
+    Does not alter row count."""
     # TODO what preprocessing exactly? Improve description
     if raw.empty:
         return raw
@@ -131,9 +136,18 @@ def replace_raw_with_internal_ids(row_df,juris,table_df,element,internal_name_co
     # use dictionary.txt from context
 
     raw_identifiers = pd.read_csv(os.path.join(juris.path_to_juris_dir,'context/dictionary.txt'),sep='\t')
-    row_df = row_df.merge(
-        raw_identifiers[raw_identifiers['cdf_element'] == element],
-        how=how,
+
+    # error/warning for unmatched elements to be dropped
+    raw_ids_for_element = raw_identifiers[raw_identifiers['cdf_element'] == element]
+    if drop_unmatched:
+        to_be_dropped = row_df[~row_df[f'{element}_raw'].isin(raw_ids_for_element['raw_identifier_value'])]
+        if to_be_dropped.shape[0] == row_df.shape[0]:
+            raise MungeError(f'No {element} was found in \'context/dictionary.txt\'')
+        elif not to_be_dropped.empty:
+            print(
+                f'Warning: Results for {to_be_dropped.shape[0]} rows with unmatched {element}s will not be loaded to database.')
+
+    row_df = row_df.merge(raw_ids_for_element,how=how,
         left_on=f'{element}_raw',
         right_on='raw_identifier_value',suffixes=['',f'_{element}_ei'])
 
@@ -348,7 +362,13 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
         working.drop(f'{c_type}Contest',axis=1,inplace=True)
 
     # drop rows with unmatched contests
-    working = working[working['contest_type'] != 'unknown']
+    to_be_dropped = working[working['contest_type'] == 'unknown']
+    working_temp = working[working['contest_type'] != 'unknown']
+    if working_temp.empty:
+        raise MungeError('No contests in database matched. No results will be loaded to database.')
+    elif not to_be_dropped.empty:
+        print(f'Warning: Results for {to_be_dropped.shape[0]} rows with unmatched contests will not be loaded to database.')
+    working = working_temp
 
     # get ids for remaining info sourced from rows and columns
     element_list = [t for t in mu.cdf_elements[mu.cdf_elements.source != 'other'].index if
@@ -382,6 +402,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
     c_df.rename(columns={'Id':'Candidate_Id'},inplace=True)
     cs_df = dbr.dframe_to_sql(c_df,session,'CandidateSelection',return_records='original')
     # add CandidateSelection_Id column, merging on Candidate_Id
+
     working = working.merge(
         cs_df[['Candidate_Id','Id']],how='left',left_on='Candidate_Id',right_on='Candidate_Id')
     working.rename(columns={'Id':'CandidateSelection_Id'},inplace=True)
