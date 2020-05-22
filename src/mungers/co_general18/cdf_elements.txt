@@ -6,4 +6,4 @@ CandidateContest	<Office/Issue/Judgeship>	row
 Candidate	<Candidate>	row
 BallotMeasureContest	<Office/Issue/Judgeship>	row
 BallotMeasureSelection	<0>	column
-CountItemType	<0>	column
+CountItemType		other
