@@ -1,2 +1,2 @@
-The file dowload link https://www.sos.state.co.us/pubs/elections/Results/archive2000.html
-Added party as No Party for candidates that do not have a prty (judges etc)
+The election results download link https://www.sos.state.co.us/pubs/elections/Results/archive2000.html
+Added party as No Party for candidates that do not have a party (judges etc). As far as we know, CO data source does not say what type of votes; we assume for now that the files contain vote totals.
