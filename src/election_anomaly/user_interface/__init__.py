@@ -948,3 +948,4 @@ def config(filename=None, section='postgresql',msg='Pick parameter file for conn
 	else:
 		raise Exception('Section {0} not found in the {1} file'.format(section, filename))
 	return d
+# comment to check git, added on master by SFS locally
