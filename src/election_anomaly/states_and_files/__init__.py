@@ -314,7 +314,7 @@ def ensure_context_files(juris_path,project_root):
     template_list = ['dictionary'] + [x for x in template_list if x != 'dictionary']
 
     for context_file in template_list:
-        print(f'Checking {context_file}.txt')
+        print(f'\nChecking {context_file}.txt')
         cf_path = os.path.join(context_dir,f'{context_file}.txt')
         # if file does not already exist in context dir, create from template and invite user to fill
         try:
@@ -324,7 +324,8 @@ def ensure_context_files(juris_path,project_root):
             temp = pd.DataFrame()
         if not os.path.isfile(cf_path):
             temp.to_csv(cf_path,sep='\t',index=False)
-            input(f'Enter information in the file {context_file}.txt. Then hit return to continue.')
+            input(f'File {context_file}.txt has just been created.\n'
+                  f'Enter information in the file, then hit return to continue.')
 
         # if file exists, check format against template
         cf_df = pd.read_csv(os.path.join(context_dir,f'{context_file}.txt'),sep='\t')

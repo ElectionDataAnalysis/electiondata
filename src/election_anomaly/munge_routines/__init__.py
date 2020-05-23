@@ -354,11 +354,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
         # set contest_type where id was found
         working.loc[working[f'{c_type}Contest_Id'].notnull(),'contest_type'] = c_type
 
-        # empty {type}Contest columns where id was not found
-        # working.loc[working[f'{c_type}Contest_Id'].isnull(),f'{c_type}Contest'] = ''
-        # working.loc[working[f'{c_type}Contest_Id'].isnull(),f'{c_type}Selection_raw'] = ''
-
-        # drop column with munged name
+         # drop column with munged name
         working.drop(f'{c_type}Contest',axis=1,inplace=True)
 
     # drop rows with unmatched contests

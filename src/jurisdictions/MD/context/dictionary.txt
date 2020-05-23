@@ -58,7 +58,6 @@ CandidateContest	Maryland;US Congress House of Representatives District 6	Repres
 CandidateContest	Maryland;US Congress House of Representatives District 7	Representative in Congress District 7
 CandidateContest	Maryland;US Congress House of Representatives District 8	Representative in Congress District 8
 Election	General Election 2018-11-06	43410
-CandidateContest	Maryland;Attorney General	Attorney General;
 Office	Maryland;Attorney General	Attorney General;
 Office	Maryland;Governor / Lt. Governor	Governor / Lt. Governor;
 Office	Maryland;House of Delegates District 10	House of Delegates;10

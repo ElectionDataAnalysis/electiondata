@@ -4,19 +4,19 @@ import user_interface as ui
 
 
 if __name__ == '__main__':
-	print("""Ready to load some election result data?
-			"This program will walk you through the process of creating or checking
-			"an automatic munger that will load your data into a database in the 
-			"NIST common data format.""")
+	interact = input('Run interactively (y/n)?\n')
+	if interact == 'y':
+		project_root = ui.get_project_root()
+		juris_name = None
 
-<<<<<<< HEAD
-	project_root = os.path('C:\Users\jsru2\Desktop\GitHub\election_anomaly\src')
-=======
-	project_root = ui.get_project_root()
->>>>>>> master
+	else:
+		d = ui.config(section='050',msg='Pick a paramfile for testing.')
+		project_root = d['project_root']
+		juris_name = d['juris_name']
+
 	j_path = os.path.join(project_root,'jurisdictions')
 
-	juris = ui.pick_juris_from_filesystem(project_root,j_path,check_files=True)
+	juris = ui.pick_juris_from_filesystem(project_root,j_path,check_files=True,juris_name=juris_name)
 
 	print(f'Context files for {juris.short_name} are internally consistent.')
 	exit()
