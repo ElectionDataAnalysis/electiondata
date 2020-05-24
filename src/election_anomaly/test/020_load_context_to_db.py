@@ -5,19 +5,27 @@ import munge_routines as mr
 import db_routines as dbr
 from sqlalchemy.orm import sessionmaker
 
-
-
 if __name__ == '__main__':
+	interact = input('Run interactively (y/n)?\n')
+	if interact == 'y':
+		project_root = ui.get_project_root()
+		juris_name = None
+		db_paramfile = ui.pick_paramfile()
+		db_name = ui.pick_database(project_root,db_paramfile)
+		munger_name = None
+
+	else:
+		d = ui.config(section='050',msg='Pick a paramfile for 020.')
+		project_root = d['project_root']
+		juris_name = d['juris_name']
+		db_paramfile = d['db_paramfile']
+		db_name = d['db_name']
+		munger_name = d['munger_name']
+
 	project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
 
 	j_path = os.path.join(project_root,'jurisdictions')
-
-	juris_short_name = None
 	juris = ui.pick_juris_from_filesystem(project_root,j_path,check_files=False)
-
-	# pick db to use
-	db_paramfile = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini'
-	db_name = ui.pick_database(project_root,db_paramfile)
 
 	# connect to db
 	eng = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)

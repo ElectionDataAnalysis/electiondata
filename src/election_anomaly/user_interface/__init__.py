@@ -831,17 +831,18 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 	raw = pd.read_csv(
 		raw_path,sep=sep,dtype=str,encoding=munger.encoding,quoting=csv.QUOTE_MINIMAL,
 		header=list(range(munger.header_row_count)))
+	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
 
-	[raw,numerical_columns] = mr.clean_raw_df(raw,munger)
+	raw = mr.clean_raw_df(raw,munger)
 	# NB: info_cols will have suffix added by munger
 
 	# check jurisdiction against raw results file, adapting context as necessary
-	if juris.check_against_raw_results(raw,munger,numerical_columns):
+	if juris.check_against_raw_results(raw,munger,count_columns_by_name):
 		# if context changed, load to db
 		juris.load_context_to_db(session,project_root)
 
 	# TODO check db against raw results?
-	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,numerical_columns)
+	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name)
 	print(f'Datafile contents uploaded to database {session.bind.engine}')
 	return
 

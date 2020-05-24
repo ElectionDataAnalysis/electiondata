@@ -136,7 +136,7 @@ class Munger:
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
                 [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
-                 self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
+                 self.count_columns,self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
         return
 
     def check_against_db(self,sess):
@@ -173,7 +173,7 @@ class Munger:
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
                 [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
-                 self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
+                 self.count_columns,self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
             else:
                 checked = True
                 print(f'Munger {self.name} checked against database.')
@@ -220,7 +220,7 @@ class Munger:
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
                 [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
-                 self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
+                 self.count_columns,self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
             else:
                 checked = True
         # TODO allow user to pick different munger from file system
@@ -242,7 +242,7 @@ class Munger:
 
         if check_files:
             ensure_munger_files(self.name,project_root=project_root)
-        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
+        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.count_columns,
          self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
 
         self.field_rename_suffix = '___'  # NB: must not match any suffix of a cdf element name;
@@ -270,13 +270,14 @@ def read_munger_info_from_files(dir_path):
     atomic_reporting_unit_type = format_info.loc['atomic_reporting_unit_type','value']
     field_name_row = int(format_info.loc['field_name_row','value'])
     header_row_count = int(format_info.loc['header_row_count','value'])
+    count_columns = [int(x) for x in format_info.loc['count_columns','value'].split(',')]
     separator = format_info.loc['separator','value']
     encoding = format_info.loc['encoding','value']
     # TODO warn if encoding not recognized
 
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
     #   will need to rename some columns of the raw file before processing.
-    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,separator,encoding]
+    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,count_columns,separator,encoding]
 
 
 def ensure_jurisdiction_files(juris_path,project_root):

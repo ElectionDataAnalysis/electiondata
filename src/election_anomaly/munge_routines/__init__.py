@@ -52,7 +52,7 @@ def clean_raw_df(raw,munger):
     renamer = {x:f'{x}_{munger.field_rename_suffix}' for x in cols_to_munge}
     raw.rename(columns=renamer,inplace=True)
     renamed_cols_to_munge = [f'{x}_{munger.field_rename_suffix}' for x in cols_to_munge]
-    return raw, num_columns
+    return raw
 
 
 def text_fragments_and_fields(formula):
@@ -120,7 +120,8 @@ def filter_by_dict(df,d):
 	return df.loc[(df[list(d)] == pd.Series(d)).all(axis=1)]
 
 
-def replace_raw_with_internal_ids(row_df,juris,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False):
+def replace_raw_with_internal_ids(
+        row_df,juris,table_df,element,internal_name_column,unmatched_dir,drop_unmatched=False,mode='row'):
     """replace columns in <row_df> with raw_identifier values by columns with internal names and Ids
     from <table_df>, which has structure of a db table for <element>.
     # TODO If <element> is BallotMeasureContest or CandidateContest,
@@ -153,6 +154,13 @@ def replace_raw_with_internal_ids(row_df,juris,table_df,element,internal_name_co
 
     # Note: if how = left, unmatched elements get nan in fields from dictionary table
     # TODO how do these nans flow through?
+
+    if mode == 'column':
+        # drop rows that melted from unrecognized columns, EVEN IF drop_unmatched=False.
+        #  These rows are ALWAYS extraneous. Drop cols where raw_identifier is not null
+        #  but no cdf_internal_name was found
+        row_df = row_df[(row_df['raw_identifier_value'].isnull()) | (row_df['cdf_internal_name'].notnull())]
+        # TODO more efficient to drop these earlier, before melting
 
     # drop extraneous cols from mu.raw_identifier, and drop original raw
     row_df = row_df.drop(['raw_identifier_value','cdf_element',f'{element}_raw'],axis=1)
@@ -290,7 +298,7 @@ def good_syntax(s):
     return good
 
 
-def munge_and_melt(mu,raw,num_cols):
+def munge_and_melt(mu,raw,count_cols):
     """Does not alter raw; returns Transformation of raw:
      all row- and column-sourced mungeable info into columns (but doesn't translate via dictionary)
     new column names are, e.g., ReportingUnit_raw, Candidate_raw, etc.
@@ -307,9 +315,10 @@ def munge_and_melt(mu,raw,num_cols):
 
     # if there is just one numerical column, melt still creates dummy variable col
     #  in which each value is 'value'
+    # TODO how to ensure such files munge correctly?
 
     # reshape
-    non_count_cols = [x for x in working.columns if x not in num_cols]
+    non_count_cols = [x for x in working.columns if x not in count_cols]
     working = working.melt(id_vars=non_count_cols)
     # rename count to Count
     #  if only one header row, rename variable to variable_0 for consistency
@@ -322,6 +331,7 @@ def munge_and_melt(mu,raw,num_cols):
     # apply munge formulas for column sources
     for t in mu.cdf_elements[mu.cdf_elements.source == 'column'].index:
         working = add_munged_column(working,mu,t,mode='column')
+
     # remove unnecessary columns
     not_needed = [f'variable_{i}' for i in range(mu.header_row_count)]
     working.drop(not_needed,axis=1,inplace=True)
@@ -329,7 +339,7 @@ def munge_and_melt(mu,raw,num_cols):
     return working
 
 
-def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
+def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
     """load data from <raw> into the database.
     Note that columns to be munged (e.g. County_xxx) have mu.field_rename_suffix (e.g., _xxx) added already"""
     working = raw.copy()
@@ -341,7 +351,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
         idx = ui.pick_or_create_record(session,project_root,t)
         working[f'{t}_Id'] = idx
 
-    working = munge_and_melt(mu,working, num_cols)
+    working = munge_and_melt(mu,working,count_cols)
 
     # append ids for BallotMeasureContests and CandidateContests
     working.loc[:,'contest_type'] = 'unknown'
@@ -373,7 +383,8 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
         # capture id from db in new column and erase any now-redundant cols
         df = pd.read_sql_table(t,session.bind)
         name_field = get_name_field(t)
-        # set drop_unmatched = False to prevent losing BallotMeasureContests for BM-inessential fields
+        # set drop_unmatched = True for fields necessary to BallotMeasure rows,
+        #  drop_unmatched = False otherwise to prevent losing BallotMeasureContests for BM-inessential fields
         if t == 'ReportingUnit' or t == 'CountItemType':
             drop = True
         else:
@@ -387,7 +398,9 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,num_cols):
     working = replace_raw_with_internal_ids(
         working,juris,df_selection,'BallotMeasureSelection',get_name_field('BallotMeasureSelection'),
         mu.path_to_munger_dir,
-        drop_unmatched=False)
+        drop_unmatched=False,
+        mode=mu.cdf_elements.loc['BallotMeasureSelection','source'])
+
     working.drop('BallotMeasureSelection',axis=1,inplace=True)
 
     # append CandidateSelection_Id
