@@ -283,7 +283,9 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
             raise e
     if table == 'ReportingUnit' and not appendable.empty:
         append_to_composing_reporting_unit_join(session,appendable)
+
     up_to_date_dframe = pd.read_sql_table(table,session.bind)
+    up_to_date_dframe = format_dates(up_to_date_dframe)
 
     if raw_to_votecount:
         # need to drop rows that were read originally from target -- these will have null ElectionContestJoin_Id
@@ -298,6 +300,15 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
         return id_enhanced_dframe
     else:
         return up_to_date_dframe
+
+
+def format_dates(dframe):
+    """ensure any date columns are pulled in 2020-05-20 format"""
+    df = dframe.copy()
+    # TODO is 'datetime64[ns]' the only thing that will show up?
+    for c in df.columns[df.dtypes=='datetime64[ns]']:
+        df[c] = f'{df[c].dt.date}'
+    return df
 
 
 if __name__ == '__main__':

@@ -444,12 +444,14 @@ def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
 				user_record[f'{e}_Id'],user_record[f'Other{e}'] = mr.enum_value_to_id_othertext(enum_df,user_record[e])
 				user_record.pop(e)
 			element_df = dbr.dframe_to_sql(pd.DataFrame(user_record,index=[-1]),sess,element)
+			element_df = dbr.format_dates(element_df)
 			# find index matching inserted element
 			idx = element_df.loc[
 				(element_df[list(user_record)] == pd.Series(user_record)).all(axis=1)]['Id'].to_list()[0]
 		except dbr.CdfDbException:
 			print('Insertion of new record to db failed, maybe because record already exists. Try again.')
 			idx = pick_or_create_record(sess,project_root,element,known_info_d=known_info_d)
+
 	else:
 		idx = db_idx
 
@@ -559,7 +561,7 @@ def save_record_to_filesystem(storage_dir,table,user_record,enum_plain_text_valu
 		# create empty, with all cols of from_db except Id
 		records = pd.DataFrame([],columns=user_record.keys())
 	records.append(user_record,ignore_index=True)
-	records.to_csv(storage_file,sep='\t')
+	records.to_csv(storage_file,sep='\t',index=False)
 	return
 
 
@@ -782,38 +784,56 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 		return None, None
 
 
-def enter_and_check_datatype(question,datatype):
+def check_datatype(answer,datatype):
 	"""Datatype is typically 'Integer', 'String', 'Date' or 'Encoding'"""
-	answer = input(f'{question}\n')
 	good = False
-	while not good:
-		if datatype == 'Date':
-			try:
-				datetime.datetime.strptime(answer, '%Y-%m-%d').date()
-				good = True
-			except ValueError:
-				answer = input('You need to enter a date in the form \'2018-11-06\'. Try again.\n')
-		elif datatype == 'Integer':
-			try:
-				int(answer)
-				good = True
-			except ValueError:
-				answer = input('You need to enter an integer. Try again.')
-		elif datatype == 'Encoding':
-			if answer in recognized_encodings:
+	if datatype == 'Date':
+		default = datetime.datetime.today().date()
+		try:
+			answer = datetime.datetime.strptime(answer,'%Y-%m-%d').date()
+			good = True
+		except ValueError:
+			use_default = input(f'Answer not recognized as {datatype}. Use default value of {default} (y/n)?\n')
+			if use_default == 'y':
+				answer = default
 				good = True
 			else:
+				print('You need to enter a date in the form \'2018-11-06\'.')
+		# express date as string, e.g., 2020-05-23
+		answer = f'{answer}'
+	elif datatype == 'Integer':
+		try:
+			int(answer)
+			good = True
+		except ValueError:
+			print('You need to enter an integer.')
+	elif datatype == 'Encoding':
+		default = 'iso-8859-1'
+		if answer in recognized_encodings:
+			good = True
+		else:
+			use_default = input(f'Answer not recognized as {datatype}. Use default value of {default} (y/n)?\n')
+			if use_default == 'y':
+				answer = default
+			else:
 				go_on = input(
-					f'This system does not recognize "{answer}" as an encoding. If you are sure it is right,'
-					f'continue.\nIf you do not know what the encoding is, try "iso-8859-1".\n'
-					f'For more information, see https://docs.python.org/2.4/lib/standard-encodings.html.\n'
-					f'Continue with {answer}, even though it is not recognized (y/n)?\n')
+					f'This system does not recognize "{answer}" as an encoding.\n'
+					f'Continue with encoding {answer} anyway (y/n)?\n')
 				if go_on == 'y':
 					good = True
-				else:
-					answer = input(f'Enter a new encoding.\n')
-		else:
-			good = True
+	else:
+		"Nothing to check for String datatype"
+		good = True
+	return good, answer
+
+
+def enter_and_check_datatype(question,datatype):
+	answer = input(f'{question}')
+	good = False
+	while not good:
+		good,answer = check_datatype(answer,datatype)
+		if not good:
+			answer = input('Try again:\n')
 	return answer
 
 

@@ -1,15 +1,12 @@
-	short_name	file_name	source	file_date	note	download_date
-0	phila2019g	division-level-results191105.csv	PhiladelphiaVotes.com	12/31/19	File date uncertain	
-1	Phila_2019_general.csv	Phila_2019_general.csv	PhiladelphiaVotes.com	12/31/19	Exact file date not known. Post certification, though	
-2	FL20181106_county	11062018Election.txt	FL BoE	11/11/22	file date unknown	
-3	NC2018g_by_precinct	results_pct_20181106.txt	NC BoE	11/11/22	file date is 2018-11-16	
-4	2018p	results_pct_20180508.txt	NC BoE	5/18/18	download date uncertain	
-5	small_test_nc2018g	small.txt	none	4/23/20	truncated by hand	
-6	small_2018g_nc_for_testing	small20181106.txt	none	11/11/22	testing	
-7	test	small20181106.txt	asdf	2222-11-11	sdf	2222-11-11
-8	;lj	small20181106.txt	lj	2222-11-11	jk	2222-11-11
-9	phila_2018g	2018_general.csv	philadelphiavotes.com	2018-12-31	exact file date uncertain	2020-05-02
-10						
-11	write_in_only_phila2018g	trunc_2018_general.csv	by hand	2020-05-13		1000-01-01
-12	2018_CO_gen	2018GEPrecinctLevelResults.csv	https://www.sos.state.co.us/pubs/elections/resultsData.html 	2018-11-06	Actual file date is unknown	2020-05-15
-13	2018g_co	2018GEPrecinctLevelResults.txt	Colorado Board of Elections https://www.sos.state.co.us/pubs/elections/Results/archive2000.html	2018-12-31	exact file date unknown	2020-05-22
+short_name	file_name	source	file_date	note	download_date
+phila2019g	division-level-results191105.csv	PhiladelphiaVotes.com	12/31/19	File date uncertain	
+Phila_2019_general.csv	Phila_2019_general.csv	PhiladelphiaVotes.com	12/31/19	Exact file date not known. Post certification, though	
+FL20181106_county	11062018Election.txt	FL BoE	11/11/22	file date unknown	
+NC2018g_by_precinct	results_pct_20181106.txt	NC BoE	11/11/22	file date is 2018-11-16	
+2018p	results_pct_20180508.txt	NC BoE	5/18/18	download date uncertain	
+small_test_nc2018g	small.txt	none	4/23/20	truncated by hand	
+small_2018g_nc_for_testing	small20181106.txt	none	11/11/22	testing	
+phila_2018g	2018_general.csv	philadelphiavotes.com	2018-12-31	exact file date uncertain	2020-05-02
+write_in_only_phila2018g	trunc_2018_general.csv	by hand	2020-05-13		1000-01-01
+2018_CO_gen	2018GEPrecinctLevelResults.csv	https://www.sos.state.co.us/pubs/elections/resultsData.html 	2018-11-06	Actual file date is unknown	2020-05-15
+2018g_co	2018GEPrecinctLevelResults.txt	Colorado Board of Elections https://www.sos.state.co.us/pubs/elections/Results/archive2000.html	2018-12-31	exact file date unknown	2020-05-22
