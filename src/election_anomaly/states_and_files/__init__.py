@@ -399,16 +399,22 @@ def ensure_munger_files(munger_name,project_root=None):
         format_confirmed = False
         while not format_confirmed:
             problems = []
-            # check columns are correct
+            # check column names are correct
             if set(cf_df.columns) != set(temp.columns):
                 cols = '\t'.join(temp.columns.to_list())
                 problems.append(f'Columns of {munger_file}.txt need to be (tab-separated):\n'
                       f' {cols}\n')
 
             # check first column matches template
-            if cf_df.empty or (cf_df.iloc[:,0] != temp.iloc[:,0]).any():
-                first_col = '\n'.join(list(cf_df.iloc[:0]))
-                problems.append(f'First column of {munger_file}.txt must be:\n{first_col}')
+            #  check same number of rows
+            elif cf_df.shape[0] != temp.shape[0]:
+                first_col = '\n'.join(list(temp.iloc[:,0]))
+                problems.append(f'Wrong number of rows in {munger_file}.txt. \nFirst column must be exactly:\n{first_col}')
+            elif (cf_df.iloc[:,0] != temp.iloc[:,0]).any():
+                first_error = (cf_df.iloc[:,0] != temp.iloc[:,0]).index.to_list()[0]
+                first_col = '\n'.join(list(temp.iloc[:,0]))
+                problems.append(f'First column of {munger_file}.txt must be exactly:\n{first_col}\n'
+                                f'First error is at row {first_error}: {cf_df.loc[first_error]}')
             if problems:
                 prob_str = '\n\t'.join(problems)
                 input(f'There are problems:\n\t{prob_str}\nEdit {munger_file}.txt, and hit return to continue.')

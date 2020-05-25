@@ -115,9 +115,9 @@ def add_munged_column(raw,munger,element,mode='row',inplace=True):
 
 
 def filter_by_dict(df,d):
-	"""Returns <df> filtered by dictionary <d> ,
-	where keys of <d> are column names of <df> and values of <d> are the desired value"""
-	return df.loc[(df[list(d)] == pd.Series(d)).all(axis=1)]
+    """Returns <df> filtered by dictionary <d> ,
+    where keys of <d> are column names of <df> and values of <d> are the desired value"""
+    return df.loc[(df[list(d)] == pd.Series(d)).all(axis=1)]
 
 
 def replace_raw_with_internal_ids(
@@ -180,7 +180,7 @@ def replace_raw_with_internal_ids(
         table_df[['Id',internal_name_column]],how='left',left_on=element,right_on=internal_name_column)
     row_df=row_df.drop([internal_name_column],axis=1)
     row_df.rename(columns={'Id':f'{element}_Id'},inplace=True)
-    return row_df
+    return row_df   # TODO rename table_df to context_df
 
 
 def enum_col_from_id_othertext(df,enum,enum_df,drop_old=True):
@@ -400,6 +400,8 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
         mu.path_to_munger_dir,
         drop_unmatched=False,
         mode=mu.cdf_elements.loc['BallotMeasureSelection','source'])
+    # drop records with a BMC_Id but no BMS_Id (i.e., keep if BMC_Id is null or BMS_Id is not null)
+    working = working[(working['BallotMeasureContest_Id'].isnull()) | (working['BallotMeasureSelection_Id']).notnull()]
 
     working.drop('BallotMeasureSelection',axis=1,inplace=True)
 
@@ -415,6 +417,8 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
     working = working.merge(
         cs_df[['Candidate_Id','Id']],how='left',left_on='Candidate_Id',right_on='Candidate_Id')
     working.rename(columns={'Id':'CandidateSelection_Id'},inplace=True)
+    # drop records with a CC_Id but no CS_Id (i.e., keep if CC_Id is null or CS_Id is not null)
+    working = working[(working['CandidateContest_Id'].isnull()) | (working['CandidateSelection_Id']).notnull()]
 
     # TODO: warn user if contest is munged but candidates are not
     # TODO warn user if BallotMeasureSelections not recognized in dictionary.txt
