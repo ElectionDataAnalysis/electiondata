@@ -30,9 +30,9 @@ class Jurisdiction:
 
             # find missing contests
             missing_bmc = check_element_against_raw_results(
-                'BallotMeasureContest',results_df,munger,numerical_columns,d)
+                'BallotMeasureContest',results_df,munger,numerical_columns,d)[['BallotMeasureContest_raw']]
             missing_cc = check_element_against_raw_results(
-                'CandidateContest',results_df,munger,numerical_columns,d)
+                'CandidateContest',results_df,munger,numerical_columns,d)[['CandidateContest_raw']]
             missing_contest = missing_bmc.merge(missing_cc,how='inner',left_index=True,right_index=True)
             if not missing_contest.empty:
                 ui.show_sample(missing_contest,f'Contests','cannot be translated')
@@ -742,12 +742,22 @@ def check_element_against_raw_results(el,results_df,munger,numerical_columns,d):
     if mode == 'row':
         # add munged column
         raw_fields = [f'{x}_{munger.field_rename_suffix}' for x in munger.cdf_elements.loc[el,'fields']]
-        relevant = results_df[raw_fields].drop_duplicates()
+        try:
+            relevant = results_df[raw_fields].drop_duplicates()
+        except KeyError:
+            formula = munger.cdf_elements.loc[el,"raw_identifier_formula"]
+            raise mr.MungeError(
+                f'Required column from formula {formula} not found in file columns:\n{results_df.columns}')
         mr.add_munged_column(relevant,munger,el,mode=mode)
         # check for untranslatable items
-        relevant = relevant.merge(
-            d.loc[[el]],how='left',left_on=f'{el}_raw',right_on='raw_identifier_value')
-        missing = relevant[relevant.cdf_internal_name.isnull()]
+        if el in d.index:
+            # if there are any items in d corresponding to the element <el>, do left merge and identify nulls
+            # TODO more natural way to do this, without taking cases?
+            relevant = relevant.merge(
+                d.loc[[el]],how='left',left_on=f'{el}_raw',right_on='raw_identifier_value')
+            missing = relevant[relevant.cdf_internal_name.isnull()]
+        else:
+            missing = relevant
 
     elif mode == 'column':
         # add munged column
@@ -767,10 +777,15 @@ def check_element_against_raw_results(el,results_df,munger,numerical_columns,d):
                 raw_val[c] += t + val[f]
         # TODO check that numerical cols are correctly identified even when more than one header row
         relevant = pd.DataFrame(pd.Series([raw_val[c] for c in numerical_columns],name=f'{el}_raw'))
-        # check for untranslatable items
-        relevant = relevant.merge(
-            d.loc[[el]],how='left',left_on=f'{el}_raw',right_on='raw_identifier_value')
-        missing = relevant[relevant.cdf_internal_name.isnull()]
+        # check for untranslatable items # TODO code repeated from above
+        if el in d.index:
+            # if there are any items in d corresponding to the element <el>, do left merge and identify nulls
+            # TODO more natural way to do this, without taking cases?
+            relevant = relevant.merge(
+                d.loc[[el]],how='left',left_on=f'{el}_raw',right_on='raw_identifier_value')
+            missing = relevant[relevant.cdf_internal_name.isnull()]
+        else:
+            missing = relevant
 
     else:
         missing = pd.DataFrame([])
