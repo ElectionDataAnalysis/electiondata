@@ -739,6 +739,9 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs):
 
 def check_element_against_raw_results(el,results_df,munger,numerical_columns,d):
     mode = munger.cdf_elements.loc[el,'source']
+    d_restricted = d[d.index == el]
+    translatable = [x for x in d_restricted['raw_identifier_value']]
+
     if mode == 'row':
         # add munged column
         raw_fields = [f'{x}_{munger.field_rename_suffix}' for x in munger.cdf_elements.loc[el,'fields']]
@@ -750,14 +753,7 @@ def check_element_against_raw_results(el,results_df,munger,numerical_columns,d):
                 f'Required column from formula {formula} not found in file columns:\n{results_df.columns}')
         mr.add_munged_column(relevant,munger,el,mode=mode)
         # check for untranslatable items
-        if el in d.index:
-            # if there are any items in d corresponding to the element <el>, do left merge and identify nulls
-            # TODO more natural way to do this, without taking cases?
-            relevant = relevant.merge(
-                d.loc[[el]],how='left',left_on=f'{el}_raw',right_on='raw_identifier_value')
-            missing = relevant[relevant.cdf_internal_name.isnull()]
-        else:
-            missing = relevant
+        missing = relevant[~relevant[f'{el}_raw'].isin(translatable)]
 
     elif mode == 'column':
         # add munged column
