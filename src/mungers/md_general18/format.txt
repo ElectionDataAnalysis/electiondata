@@ -3,5 +3,5 @@ atomic_reporting_unit_type	precinct
 header_row_count	1
 field_name_row	0
 count_columns	11,12
-file_type	txt
+file_type	xls
 encoding	iso-8859-1
