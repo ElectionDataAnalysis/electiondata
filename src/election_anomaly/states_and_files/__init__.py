@@ -136,7 +136,7 @@ class Munger:
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
                 [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
-                 self.count_columns,self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
+                 self.count_columns,self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
         return
 
     def check_against_db(self,sess):
@@ -173,7 +173,7 @@ class Munger:
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
                 [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
-                 self.count_columns,self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
+                 self.count_columns,self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
             else:
                 checked = True
                 print(f'Munger {self.name} checked against database.')
@@ -188,11 +188,7 @@ class Munger:
 
             # check encoding
             try:
-                # TODO how best to get separator \t read correctly from file?
-                sep= self.separator.replace('\\t','\t')
-                raw = pd.read_csv(
-                    datafile_path,sep=sep,dtype=str,encoding=self.encoding,quoting=csv.QUOTE_MINIMAL,
-                    header=None).fillna('')
+                raw = ui.read_datafile(self,datafile_path)
             except UnicodeEncodeError:
                 problems.append(f'Datafile is not encoded as {self.encoding}.')
 
@@ -202,7 +198,7 @@ class Munger:
             if cf_ok == 'y' and raw.shape[1] <3:
                 cf_ok = input(f'Are you sure? Is each SEPARATE LINE above a single field (y/n)?\n')
             if cf_ok != 'y':
-                problems.append('Either column_field_row or separator is incorrect.')
+                problems.append(f'Either column_field_row ({col_fields}) or file_type ({self.file_type}) is incorrect.')
             # user confirm format.atomic_reporting_unit_type
             first_data_row = '\t'.join([f'{x}' for x in raw.iloc[self.header_row_count]])
             fdr_ok = input(f'Munger thinks the first data row is:\n{first_data_row}\n'
@@ -220,7 +216,7 @@ class Munger:
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
                 [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
-                 self.count_columns,self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
+                 self.count_columns,self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
             else:
                 checked = True
         # TODO allow user to pick different munger from file system
@@ -243,7 +239,7 @@ class Munger:
         if check_files:
             ensure_munger_files(self.name,project_root=project_root)
         [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.count_columns,
-         self.separator,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
+         self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
 
         self.field_rename_suffix = '___'  # NB: must not match any suffix of a cdf element name;
 
@@ -271,13 +267,13 @@ def read_munger_info_from_files(dir_path):
     field_name_row = int(format_info.loc['field_name_row','value'])
     header_row_count = int(format_info.loc['header_row_count','value'])
     count_columns = [int(x) for x in format_info.loc['count_columns','value'].split(',')]
-    separator = format_info.loc['separator','value']
+    file_type = format_info.loc['file_type','value']
     encoding = format_info.loc['encoding','value']
     # TODO warn if encoding not recognized
 
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
     #   will need to rename some columns of the raw file before processing.
-    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,count_columns,separator,encoding]
+    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,count_columns,file_type,encoding]
 
 
 def ensure_jurisdiction_files(juris_path,project_root):
@@ -442,7 +438,7 @@ def check_munger_file_contents(munger_name,project_root=None):
         format_df = pd.read_csv(os.path.join(munger_dir,'format.txt'),sep='\t',index_col='item').fillna('')
 
         # format.txt has the required items
-        req_list = ['atomic_reporting_unit_type','header_row_count','field_name_row','separator','encoding']
+        req_list = ['atomic_reporting_unit_type','header_row_count','field_name_row','file_type','encoding']
         missing_items = [x for x in req_list if x not in format_df.index]
         if missing_items:
             item_string = ','.join(missing_items)

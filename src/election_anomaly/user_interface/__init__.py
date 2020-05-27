@@ -837,6 +837,24 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
+def read_datafile(munger,f_path):
+	if munger.file_type == 'txt':
+		# tab-separated text file
+		df = pd.read_csv(
+			f_path,sep='\t',dtype=str,encoding=munger.encoding,quoting=csv.QUOTE_MINIMAL,
+			header=list(range(munger.header_row_count)))
+	elif munger.file_type == 'csv':
+		# comma-separated text file
+		df = pd.read_csv(
+			f_path,sep=',',dtype=str,encoding=munger.encoding,quoting=csv.QUOTE_MINIMAL,
+			header=list(range(munger.header_row_count)))
+	elif munger.file_type in ['xls','xlsx']:
+		df = pd.read_excel(f_path,dtype=str)
+	else:
+		raise mr.MungeError(f'Unrecognized file_type in munger: {munger.file_type}')
+	return df
+
+
 def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
@@ -846,11 +864,7 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 	if not juris:
 		juris = pick_juris_from_filesystem(
 			project_root,juriss_dir='jurisdictions')
-
-	sep = munger.separator.replace('\\t','\t')
-	raw = pd.read_csv(
-		raw_path,sep=sep,dtype=str,encoding=munger.encoding,quoting=csv.QUOTE_MINIMAL,
-		header=list(range(munger.header_row_count)))
+	raw = read_datafile(munger,raw_path)
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
 
 	raw = mr.clean_raw_df(raw,munger)
