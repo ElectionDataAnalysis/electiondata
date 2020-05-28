@@ -204,11 +204,10 @@ class Election(object):
     def __init__(self,session,jurisdiction,project_root):
         assert isinstance(jurisdiction,sf.Jurisdiction)
         cdf_el = pd.read_sql_table('Election',session.bind,index_col='Id')
-        election_idx,electiontype = ui.get_or_create_election_in_db(session,project_root)
+        election_idx = ui.pick_or_create_record(session,project_root,'Election',known_info_d={},unique=[])
 
         self.short_name = cdf_el.loc[election_idx,'Name']
         self.jurisdiction=jurisdiction    # TODO feature: generalize to other ReportingUnits?
-        self.ElectionType = electiontype
         self.Election_Id = election_idx
         self.ElectionType_Id = cdf_el.loc[election_idx,'ElectionType_Id']
         self.OtherElectionType = cdf_el.loc[election_idx,'OtherElectionType']

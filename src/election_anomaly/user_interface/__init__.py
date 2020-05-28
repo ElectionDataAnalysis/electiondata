@@ -354,36 +354,6 @@ def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name
 	return munger
 
 
-def pick_juris_from_db(sess,project_root,juris_type=None):
-	ru = pd.read_sql_table('ReportingUnit',sess.bind,index_col='Id')
-	rut = pd.read_sql_table('ReportingUnitType',sess.bind,index_col='Id')
-
-	# if juris_type not passed, ask for it
-	if not juris_type:
-		jt_idx, juris_type = pick_one(rut[rut.Txt != 'other'],'Txt','type for the file\'s overall jurisdiction')
-		# if nothing chosen
-		if not juris_type:
-			juris_type = get_alphanumeric_from_user('Enter the jurisdiction type',allow_hyphen=True)
-	# TODO build uniqueness into Txt field of each enumeration on db creation
-
-	juris_type_id,other_juris_type = mr.enum_value_to_id_othertext(rut,juris_type)
-	jurisdictions = ru[ru.ReportingUnitType_Id == juris_type_id]
-	if jurisdictions.empty:
-		juris_idx, juris_record_d, juris_enum_d = create_record_in_db(
-			sess,project_root,'ReportingUnit',
-			known_info_d={
-				'ReportingUnitType':juris_type,
-				'ReportingUnitType_Id':juris_type_id,
-				'OtherReportingUnitType':other_juris_type},
-			unique=[['Name']])
-
-		juris_internal_db_name = juris_record_d['Name']
-	else:
-		jurisdictions = mr.enum_col_from_id_othertext(jurisdictions,'ReportingUnitType',rut)
-		juris_idx, juris_internal_db_name = pick_one(jurisdictions,'Name',juris_type)
-	return juris_idx, juris_internal_db_name
-
-
 def translate_db_to_show_user(db_record,edf):
 	"""<edf> is a dictionary of enumeration dataframes including all in <db_record>.
 	<db_record> is a dictionary of values from db (all enums in id/othertext)
@@ -420,42 +390,47 @@ def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
 	Store record in file system and/or db if new
 	Return index of record in database"""
 
+	# FIXME in progress; create functions enum_plaintext_dict_from_db_record(sess,db_style_record)
+	#  and conversely
 	storage_dir = os.path.join(project_root,'db_records_entered_by_hand')
 	# pick from database if possible
-	db_idx, db_values = pick_record_from_db(sess,element,known_info_d=known_info_d)
+	db_idx, db_style_record = pick_record_from_db(sess,element,known_info_d=known_info_d)
 
 	# if not from db, pick from file_system
 	if db_idx is None:
-		fs_idx, user_record = pick_record_from_file_system(storage_dir,element,known_info_d=known_info_d)
+		fs_idx, file_style_record = pick_record_from_file_system(storage_dir,element,known_info_d=known_info_d)
 
 		# if not from file_system, pick from scratch
 		if fs_idx is None:
 			# have user enter record; save it to file system
-			user_record, enum_plain_text_values = new_record_info_from_user(
+			db_style_record, enum_plain_text_values = new_record_info_from_user(
 				sess,project_root,element,known_info_d=known_info_d,unique=unique)
-			save_record_to_filesystem(storage_dir,element,user_record,enum_plain_text_values)
+			save_record_to_filesystem(storage_dir,element,db_style_record,enum_plain_text_values)
 
 		# save record to db
+		# TODO separate db entry out into separate function; handle uniqueness problems nicely
 		try:
 			element_df = pd.read_sql_table(element,sess.bind,index_col='Id')
 			enum_list = [x[5:] for x in element_df.columns if x[:5]=='Other']
 			for e in enum_list:
 				enum_df = pd.read_sql_table(e,sess.bind)
-				user_record[f'{e}_Id'],user_record[f'Other{e}'] = mr.enum_value_to_id_othertext(enum_df,user_record[e])
-				user_record.pop(e)
-			element_df = dbr.dframe_to_sql(pd.DataFrame(user_record,index=[-1]),sess,element)
+				file_style_record[f'{e}_Id'],file_style_record[f'Other{e}'] = mr.enum_value_to_id_othertext(enum_df,file_style_record[e])
+				file_style_record.pop(e)
+			element_df = dbr.dframe_to_sql(pd.DataFrame(file_style_record,index=[-1]),sess,element)
 			element_df = dbr.format_dates(element_df)
 			# find index matching inserted element
 			idx = element_df.loc[
-				(element_df[list(user_record)] == pd.Series(user_record)).all(axis=1)]['Id'].to_list()[0]
+				(element_df[list(file_style_record)] == pd.Series(file_style_record)).all(axis=1)]['Id'].to_list()[0]
+			# FIXME got IndexError on above line, maybe because of uniqueness requirements in Election table? Fix.
 		except dbr.CdfDbException:
 			print('Insertion of new record to db failed, maybe because record already exists. Try again.')
 			idx = pick_or_create_record(sess,project_root,element,known_info_d=known_info_d)
 
 	else:
 		idx = db_idx
+		enum_plain_text_values = mr.enum_plaintext_dict_from_db_record(sess,db_style_record)  # TODO
 
-	return idx
+	return idx, db_style_record, enum_plain_text_values
 
 
 def get_by_hand_records_from_file_system(root_dir,table,subdir='db_records_entered_by_hand'):
@@ -471,27 +446,6 @@ def get_by_hand_records_from_file_system(root_dir,table,subdir='db_records_enter
 	else:
 		all_from_file = pd.DataFrame()  # empty
 	return all_from_file, storage_file
-
-
-def get_or_create_election_in_db(sess,project_root):
-	"""Get id and electiontype from database, creating record first if necessary"""
-	print('Specify the election:')
-	election_df = pd.read_sql_table('Election',sess.bind,index_col='Id')
-	election_idx, election = pick_one(election_df,'Name','election')
-	electiontype_df = pd.read_sql_table('ElectionType',sess.bind,index_col='Id')
-	if election_idx is None:
-		election_idx, election_record_d, election_enum_d = create_record_in_db(
-			sess,project_root,'Election',unique=[['Name'],['EndDate','ElectionType_Id','OtherElectionType']])
-		electiontype = election_enum_d['ElectionType']
-	else:
-		et_row = election_df.loc[:,['ElectionType_Id','OtherElectionType']].merge(
-			electiontype_df,left_on='ElectionType_Id',right_index=True)
-		if et_row.loc[election_idx,'OtherElectionType'] != '':
-			electiontype = et_row.loc[election_idx,'OtherElectionType']
-		else:
-			electiontype = et_row.loc[election_idx,'Txt']
-	# TODO understand why election_idx is np.int64 and how to avoid that routinely
-	return int(election_idx),electiontype
 
 
 def pick_record_from_db(sess,element,known_info_d={}):
@@ -517,8 +471,10 @@ def pick_record_from_db(sess,element,known_info_d={}):
 
 
 def pick_record_from_file_system(storage_dir,table,name_field='Name',known_info_d={}):
-	"""<field_list> is list of fields for table
-	(with plaintext enums instead of {enum}_Id and Other{enum}"""
+	""" Looks for record in file system.
+	Returns a file-style <record> (with enums as plaintext).
+	If no record found, <idx> is none;
+	otherwise value of <idx> is irrelevant."""
 	# initialize to keep syntax-checker happy
 	filtered_file = None
 	# identify/create the directory for storing individual records in file system
@@ -534,14 +490,14 @@ def pick_record_from_file_system(storage_dir,table,name_field='Name',known_info_
 		else:
 			filtered_file = from_file
 		print(f'Pick a record from {table} list in file system:')
-		idx, record = pick_one(filtered_file,name_field)
+		idx, file_style_record = pick_one(filtered_file,name_field)
 	else:
-		idx, record = None, None
+		idx, file_style_record = None, None
 	if idx is not None:
-		record = dict(filtered_file.loc[idx])
+		file_style_record = dict(filtered_file.loc[idx])
 	else:
-		record = None
-	return idx, record
+		file_style_record = None
+	return idx, file_style_record
 
 
 def save_record_to_filesystem(storage_dir,table,user_record,enum_plain_text_values):
@@ -729,6 +685,7 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 			if choices.empty:
 				raise Exception(f'Cannot add record to {table} while {target} does not contain the required {fieldname}.\n')
 			db_record[fieldname], name = pick_one(choices,choices.columns[0],required=True)
+			# FIXME way too many choices for ReportingUnits
 
 		for e in edf.keys():
 			# define show_user, db_record and enum_val dictionaries
