@@ -390,16 +390,14 @@ def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
 	Store record in file system and/or db if new
 	Return index of record in database"""
 
-	# FIXME in progress; create functions enum_plaintext_dict_from_db_record(sess,db_style_record)
-	#  and conversely
 	storage_dir = os.path.join(project_root,'db_records_entered_by_hand')
 	# pick from database if possible
 	db_idx, db_style_record = pick_record_from_db(sess,element,known_info_d=known_info_d)
+	enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(sess,element,db_style_record)
 
 	# if not from db, pick from file_system
 	if db_idx is None:
 		fs_idx, file_style_record = pick_record_from_file_system(storage_dir,element,known_info_d=known_info_d)
-
 		# if not from file_system, pick from scratch
 		if fs_idx is None:
 			# have user enter record; save it to file system
@@ -410,13 +408,7 @@ def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
 		# save record to db
 		# TODO separate db entry out into separate function; handle uniqueness problems nicely
 		try:
-			element_df = pd.read_sql_table(element,sess.bind,index_col='Id')
-			enum_list = [x[5:] for x in element_df.columns if x[:5]=='Other']
-			for e in enum_list:
-				enum_df = pd.read_sql_table(e,sess.bind)
-				file_style_record[f'{e}_Id'],file_style_record[f'Other{e}'] = mr.enum_value_to_id_othertext(enum_df,file_style_record[e])
-				file_style_record.pop(e)
-			element_df = dbr.dframe_to_sql(pd.DataFrame(file_style_record,index=[-1]),sess,element)
+			element_df = dbr.dframe_to_sql(pd.DataFrame(db_style_record,index=[-1]),sess,element)
 			element_df = dbr.format_dates(element_df)
 			# find index matching inserted element
 			idx = element_df.loc[
@@ -428,9 +420,9 @@ def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
 
 	else:
 		idx = db_idx
-		enum_plain_text_values = mr.enum_plaintext_dict_from_db_record(sess,db_style_record)  # TODO
+		enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(sess,db_style_record)  # TODO
 
-	return idx, db_style_record, enum_plain_text_values
+	return idx, db_style_record, enum_plaintext_dict
 
 
 def get_by_hand_records_from_file_system(root_dir,table,subdir='db_records_entered_by_hand'):

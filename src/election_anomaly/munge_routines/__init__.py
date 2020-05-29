@@ -278,6 +278,46 @@ def enum_value_to_id_othertext(enum_df,value):
     return idx,other_txt
 
 
+def enum_plaintext_dict_from_file_record(session,element,file_record):
+    """Return a dictionary of <enum>:<plaintext> for all enumerations in
+    <file_record>, which is itself a dictionary of <field>:<value>"""
+    element_df_columns = pd.read_sql_table(element,session.bind,index_col='Id').columns
+    # TODO INEFFICIENT don't need all of element_df; just need columns
+    # identify enumerations by existence of `<enum>Other` field
+    enum_list = [x[5:] for x in element_df_columns if x[:5] == 'Other']
+    enum_plaintext_dict = {[e]:file_record[e] for e in enum_list}
+    return enum_plaintext_dict
+
+
+
+def enum_plaintext_dict_from_db_record(session,element,db_record):
+    """Return a dictionary of <enum>:<plaintext> for all enumerations in
+    <db_record>, which is itself a dictionary of <field>:<value>"""
+    enum_plaintext_dict = {}
+    element_df_columns = pd.read_sql_table(element,session.bind,index_col='Id').columns
+    # TODO INEFFICIENT don't need all of element_df; just need columns
+    # identify enumerations by existence of `<enum>Other` field
+    enum_list = [x[5:] for x in element_df_columns if x[:5] == 'Other']
+    for e in enum_list:
+        enum_df = pd.read_sql_table(e,session.bind)
+        enum_plaintext_dict[e] = enum_value_from_id_othertext(enum_df,db_record[f'{e}_Id'],db_record[f'Other{e}'])
+    return enum_plaintext_dict
+
+
+def db_record_from_file_record_and_plaintext_dict(session,element,file_record,enum_plaintext_dict):
+    db_record = file_record.copy()
+    element_df_columns = pd.read_sql_table(element,session.bind,index_col='Id').columns
+    # TODO INEFFICIENT don't need all of element_df; just need columns
+    # identify enumerations by existence of `<enum>Other` field
+    enum_list = [x[5:] for x in element_df_columns if x[:5] == 'Other']
+    for e in enum_list:
+        enum_df = pd.read_sql_table(e,session.bind)
+        db_record[f'{e}_Id'],db_record[f'Other{e}'] = \
+            enum_value_to_id_othertext(enum_df,db_record[e])
+        db_record.pop(e)
+    return db_record
+
+
 def good_syntax(s):
     """Returns true if formula string <s> passes certain syntax test(s)"""
     good = True
