@@ -12,8 +12,6 @@ import pandas as pd
 import os
 import munge_routines as mr
 
-from user_interface import config
-
 
 class CdfDbException(Exception):
     pass
@@ -82,7 +80,7 @@ def establish_connection(paramfile = '../jurisdictions/database.ini',db_name='po
     """Return a db connection object; if <paramfile> fails,
     return corrected <paramfile>"""
     try:
-        params = config(paramfile)
+        params = ui.config(paramfile)
     except MissingSectionHeaderError as e:
         new_param = input(f'{e}\nEnter path to correct parameter file\n')
         con, paramfile = establish_connection(new_param,db_name)
@@ -97,7 +95,7 @@ def sql_alchemy_connect(schema=None,paramfile=None,db_name='postgres'):
     """Returns an engine and a metadata object"""
     if not paramfile:
         paramfile = ui.pick_paramfile()
-    params = config(paramfile)
+    params = ui.config(paramfile)
     if db_name != 'postgres': params['dbname'] = db_name
     # We connect with the help of the PostgreSQL URL
     url = 'postgresql://{user}:{password}@{host}:{port}/{dbname}'
@@ -223,6 +221,19 @@ def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
     return return_item
 
 
+def get_enumerations(session,element):
+    """Returns a list of enumerations referenced in the <element> table"""
+    q = f"""
+        SELECT column_name
+        FROM information_schema.columns
+        WHERE table_name='{element}';
+    """
+    col_df = pd.read_sql(q,session.bind)
+    maybe_enum_list = [x[:-3] for x in col_df.column_name if x[-3:] == '_Id']
+    enum_list = [x for x in maybe_enum_list if f'Other{x}' in col_df.column_name.unique()]
+    return enum_list
+
+
 def get_foreign_key(session,element):
     """Returns a dataframe whose index is the name of the field in the <element> table, with columns
     foreign_table_name and foreign_column_name"""
@@ -243,6 +254,18 @@ def get_foreign_key(session,element):
     """
     fk_df = pd.read_sql(q,session.bind,index_col='column_name')
     return fk_df
+
+
+def add_foreign_key_name_col(sess,df,foreign_key_col,foreign_key_element,drop_old=False):
+    df_copy = df.copy()
+    fk_element_df = pd.read_sql_table(foreign_key_element,sess.bind,index_col='Id')
+    name_field = get_name_field(foreign_key_element)
+    fk_element_df.rename(columns={name_field:foreign_key_col[:-3]},inplace=True)
+    df_copy = df_copy.merge(
+        fk_element_df[[foreign_key_col[:-3]]],how='left',left_on=foreign_key_col,right_index=True)
+    if drop_old:
+        df_copy.drop(foreign_key_col,axis=1,inplace=True)
+    return df_copy
 
 
 def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecount=False,return_records='all'):
@@ -354,7 +377,7 @@ def save_one_to_db(session,project_root,element,record,known_info_d):
             ui.report_problems(problems)
             print(f'Enter an alternative {element}')
             # TODO depending on problem, offer choice from db or filesystem?
-            record, enum_plaintext_dict = ui.new_record_info_from_user(session,project_root,element,known_info_d)
+            record, enum_plaintext_dict = ui.new_record_info_from_user_OLD(session,project_root,element,known_info_d)
             changed = True
         else:
             ok = True
@@ -362,7 +385,46 @@ def save_one_to_db(session,project_root,element,record,known_info_d):
     return record, enum_plaintext_dict, changed
 
 
+def name_from_id(session,element,idx):
+    name_field = get_name_field(element)
+    q = f"""SELECT "{name_field}" FROM "{element}" WHERE "Id" = {idx}"""
+    name_df = pd.read_sql(q,session.bind)
+    try:
+        name = name_df.loc[0,name_field]
+    except KeyError:
+        # if no record with Id = <idx> was found
+        name = None
+    return name
+
+
+def name_to_id(session,element,name):
+    name_field = get_name_field(element)
+    q = f"""SELECT "Id" FROM "{element}" WHERE "{name_field}" = '{name}' """
+    idx_df = pd.read_sql(q,session.bind)
+    try:
+        idx = idx_df.loc[0,'Id']
+    except KeyError:
+        # if no record with name <name> was found
+        idx = None
+    return idx
+
+
+def get_name_field(element):
+    if element == 'BallotMeasureSelection':
+        field = 'Selection'
+    elif element == 'Candidate':
+        field = 'BallotName'
+    elif element == 'CountItemType':
+        field = 'Txt'
+    elif element == '_datafile':
+        field = 'short_name'
+    else:
+        field = 'Name'
+    return field
+
+
 if __name__ == '__main__':
 
     print('Done')
+
 

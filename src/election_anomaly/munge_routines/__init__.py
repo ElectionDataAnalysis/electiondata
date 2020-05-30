@@ -10,6 +10,7 @@ import os
 import numpy as np
 
 
+
 class MungeError(Exception):
     pass
 
@@ -65,20 +66,6 @@ def text_fragments_and_fields(formula):
     text_field_list = re.findall(p,formula)
     last_text = re.findall(q,formula)
     return text_field_list,last_text
-
-
-def get_name_field(t):
-    if t == 'BallotMeasureSelection':
-        field = 'Selection'
-    elif t == 'Candidate':
-        field = 'BallotName'
-    elif t == 'CountItemType':
-        field = 'Txt'
-    elif t == '_datafile':
-        field = 'short_name'
-    else:
-        field = 'Name'
-    return field
 
 
 def add_munged_column(raw,munger,element,mode='row',inplace=True):
@@ -289,6 +276,17 @@ def enum_plaintext_dict_from_file_record(session,element,file_record):
     return enum_plaintext_dict
 
 
+def fk_plaintext_dict_from_db_record(session,element,db_record,excluded=[]):
+    """Return a dictionary of <name>:<value> for any <name>_Id that is a foreign key
+    in the <element> table, excluding any foreign key in the list <excluded>"""
+    fk_dict = {}
+    fk_df = dbr.get_foreign_key(session,element)
+    for i,r in fk_df.iterrows():
+        if i not in excluded:
+            fk_dict[i] = dbr.name_from_id(session,r['foreign_table_name'],db_record[i])
+    return fk_dict
+
+
 def enum_plaintext_dict_from_db_record(session,element,db_record):
     """Return a dictionary of <enum>:<plaintext> for all enumerations in
     <db_record>, which is itself a dictionary of <field>:<value>"""
@@ -393,7 +391,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
     for c_type in ['BallotMeasure','Candidate']:
         df_contest = pd.read_sql_table(f'{c_type}Contest',session.bind)
         working = replace_raw_with_internal_ids(
-            working,juris,df_contest,f'{c_type}Contest',get_name_field(f'{c_type}Contest'),mu.path_to_munger_dir,
+            working,juris,df_contest,f'{c_type}Contest',dbr.get_name_field(f'{c_type}Contest'),mu.path_to_munger_dir,
             drop_unmatched=False)
 
         # set contest_type where id was found
@@ -417,7 +415,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
     for t in element_list:
         # capture id from db in new column and erase any now-redundant cols
         df = pd.read_sql_table(t,session.bind)
-        name_field = get_name_field(t)
+        name_field = dbr.get_name_field(t)
         # set drop_unmatched = True for fields necessary to BallotMeasure rows,
         #  drop_unmatched = False otherwise to prevent losing BallotMeasureContests for BM-inessential fields
         if t == 'ReportingUnit' or t == 'CountItemType':
@@ -431,7 +429,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
     # append BallotMeasureSelection_Id, drop BallotMeasureSelection
     df_selection = pd.read_sql_table(f'BallotMeasureSelection',session.bind)
     working = replace_raw_with_internal_ids(
-        working,juris,df_selection,'BallotMeasureSelection',get_name_field('BallotMeasureSelection'),
+        working,juris,df_selection,'BallotMeasureSelection',dbr.get_name_field('BallotMeasureSelection'),
         mu.path_to_munger_dir,
         drop_unmatched=False,
         mode=mu.cdf_elements.loc['BallotMeasureSelection','source'])

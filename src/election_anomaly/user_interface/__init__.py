@@ -2,6 +2,7 @@
 import tkinter as tk
 from configparser import ConfigParser,MissingSectionHeaderError
 
+import db_routines
 import db_routines as dbr
 import db_routines.Create_CDF_db as db_cdf
 import munge_routines as mr
@@ -401,7 +402,7 @@ def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
 		# if not from file_system, pick from scratch
 		if fs_idx is None:
 			# have user enter record; save to db and file system
-			db_style_record, enum_plaintext_dict = new_record_info_from_user(
+			db_style_record, enum_plaintext_dict = new_record_info_from_user_OLD(
 				sess,project_root,element,known_info_d=known_info_d,unique=unique)
 			db_style_record, enum_plaintext_dict, changed = dbr.save_one_to_db(
 				sess,project_root,element,db_style_record,known_info_d)
@@ -430,7 +431,7 @@ def get_by_hand_records_from_file_system(root_dir,table,subdir='db_records_enter
 	return all_from_file, storage_file
 
 
-def pick_record_from_db(sess,element,known_info_d={}):
+def pick_record_from_db(sess,element,known_info_d={},required=False):
 	"""Get id and info from database, if it exists"""
 	element_df = pd.read_sql_table(element,sess.bind,index_col='Id')
 	if element_df.empty:
@@ -440,16 +441,45 @@ def pick_record_from_db(sess,element,known_info_d={}):
 	enums = dbr.read_enums_from_db_table(sess,element)
 	for e in enums:
 		e_df = pd.read_sql_table(e,sess.bind,index_col='Id')
-		element_df = mr.enum_col_from_id_othertext(element_df,e,e_df)
+		element_enhanced_df = mr.enum_col_from_id_othertext(element_df,e,e_df)
 
 	# filter by known_info_d
-	d = {k:v for k,v in known_info_d.items() if k in element_df.columns}
-	filtered = element_df.loc[(element_df[list(d)] == pd.Series(d)).all(axis=1)]
+	d = {k:v for k,v in known_info_d.items() if k in element_enhanced_df.columns}
+	filtered = element_enhanced_df.loc[(element_enhanced_df[list(d)] == pd.Series(d)).all(axis=1)]
 
 	print(f'Pick the {element} from the database:')
-	name_field = mr.get_name_field(element)
+	name_field = db_routines.get_name_field(element)
 	element_idx, values = pick_one(filtered,name_field,element)
-	return element_idx, values
+	if element_idx in element_df.index:
+		d = dict(element_df.loc[element_idx])
+	else:
+		d = None
+	if required and element_idx is None:
+		enum_list = [x for x in dbr.get_enumerations(sess,element) if x not in known_info_d]
+		if len(enum_list) == 0:
+			print('No more filters available. You must choose from this list')
+			element_idx, d = pick_record_from_db(sess,element,known_info_d=known_info_d)
+		else:
+			e = enum_list[0]
+			e_filter = input(f'Filter by {e} (y/n)?\n')
+			if e_filter == 'y':
+				known_info_d[f'{e}_Id'],known_info_d[f'Other{e}'],known_info_d[e] = pick_enum(sess,e)
+				element_idx, d = pick_record_from_db(sess,element,known_info_d=known_info_d,required=True)
+	return element_idx, d
+
+
+def pick_enum(sess,e):
+	e_df = pd.read_sql_table(e,sess.bind)
+	e_idx,e_plaintext = pick_one(e_df,'Txt',item=e,required=True)
+	if e_plaintext == 'other':
+		# get plaintext from user
+		while e_plaintext in ['','other']:
+			e_plaintext = get_alphanumeric_from_user(
+				f'Enter the value for {e}, which cannot be empty and cannot be \'other\'',allow_hyphen=True)
+		e_othertext = e_plaintext
+	else:
+		e_othertext = ''
+	return e_idx,e_othertext,e_plaintext
 
 
 def pick_record_from_file_system(storage_dir,table,name_field='Name',known_info_d={}):
@@ -584,7 +614,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={},un
 
 			# if not, ask user to enter info for file_record
 			if not picked_from_file:
-				db_and_file_record,enum_val = new_record_info_from_user(
+				db_and_file_record,enum_val = new_record_info_from_user_OLD(
 					sess,root_dir,table,
 					known_info_d=known_info_d,mode='database_and_filesystem',unique=unique)
 				file_record = db_and_file_record.copy()
@@ -612,7 +642,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={},un
 	return db_idx, db_record, enum_val
 
 
-def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database',unique=[]):
+def new_record_info_from_user_OLD(sess,root_dir,element,known_info_d={},mode='database',unique=[]):
 	"""Collect new record info from user, with chance to confirm.
 	For each enumeration, translate the user's plaintext input into id/othertext.
 	Enforce uniqueness of any list of fields in the list <unique>
@@ -628,7 +658,7 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 	df = {}
 	for f in ['fields','enumerations','foreign_keys','unique_constraints']:
 		df[f] = pd.read_csv(
-			os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/elements',table,f'{f}.txt'),
+			os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/elements',element,f'{f}.txt'),
 			sep='\t')
 
 	edf = {}
@@ -638,7 +668,7 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 		edf[e] = pd.read_sql_table(e,sess.bind,index_col='Id')
 
 	# read existing info from db and file system
-	all_from_db = pd.read_sql_table(table,sess.bind,index_col='Id')
+	all_from_db = pd.read_sql_table(element,sess.bind,index_col='Id')
 
 	# translate all enums from db to show_user
 	all_from_db_for_user = all_from_db
@@ -646,12 +676,11 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 		all_from_db_for_user = mr.enum_col_from_id_othertext(all_from_db_for_user,e,edf[e])
 
 	# TODO translate all foreign keys from db to show_user
-
 	# collect and confirm "show_user" info from user
 	unconfirmed = True
 	while unconfirmed:
 		# solicit info from user and store values for db insertion
-		print(f'Enter info for new {table} record.')
+		print(f'Enter info for new {element} record.')
 		show_user = {}
 		db_record = {}  # initialize db_record to pick up foreign ids
 
@@ -668,7 +697,7 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 			choices = pd.read_sql_table(target,sess.bind,index_col='Id')
 			if choices.empty:
 				raise Exception(
-					f'Cannot add record to {table} while {target} does not contain the required {fieldname}.\n')
+					f'Cannot add record to {element} while {target} does not contain the required {fieldname}.\n')
 			fieldname_for_user = fieldname[:-3]  # remove '_Id'
 			db_record[fieldname], show_user[fieldname_for_user] = pick_one(
 				choices,choices.columns[0],item=target,required=True)
@@ -714,20 +743,146 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 		if confirm == 'y':
 			unconfirmed = False
 
-	# get db_record and enum_val
+	# get db_record, enum_val and fk_val
 	db_record,enum_val = translate_show_user_to_db(show_user,edf)
+	fk_val = mr.fk_plaintext_dict_from_db_record(sess,element,db_record,excluded=[])
 	# TODO translate_show_user_to_db duplicates mr.enum_plaintext_dict.... functions
-	#  except what about foreign keys, not just enums?
+
 
 	if mode == 'database':
-		return db_record, enum_val
+		return db_record, enum_val, fk_val
 	elif mode == 'filesystem':
-		return show_user, enum_val
+		return show_user, enum_val, fk_val
 	elif mode == 'database_and_filesystem':
-		return {**db_record,**show_user},enum_val
+		return {**db_record,**show_user},enum_val, fk_val
 	else:
 		print(f'Mode {mode} not recognized.')
-		return None, None
+		return None, None, None
+
+
+def get_datatype(df,c):
+	"""Kludge to get datatype"""
+	if df.dtypes[c] in [np.dtype('M8[ns]'),np.dtype('datetime64')]:
+		datatype_string = 'Date'
+	elif df.dtypes[c] in [np.dtype('int64')]:
+		datatype_string = 'Int'
+	elif df.dtypes[c] in [np.object]:
+		datatype_string = 'String'
+	else:
+		print(f'Datatype {df.dtypes[c]} not recognized. To fix this error, alter code in the `get_datatype` function.')
+		datatype_string = None
+	return datatype_string
+
+
+def new_record_info_from_user_NEW(sess,root_dir,element,known_info_d={},mode='database',unique=[]):
+	"""Collect new record info from user, with chance to confirm.
+	For each enumeration, translate the user's plaintext input into id/othertext.
+	Enforce uniqueness of any list of fields in the list <unique>
+	Return the corresponding record (id/othertext only) and an enumeration-value
+	dictionary. Depending on <mode> ('database', 'filesystem' or 'database_and_filesystem'),
+	returns enum plaintext, or enum id/othertext pairs, or both.
+	"""
+	# TODO read uniqueness from CDF schema definition for table
+
+	# read existing info from db
+	all_from_db = pd.read_sql_table(element,sess.bind,index_col='Id')
+	db_cols = all_from_db.columns  # note: does not include 'Id'
+	enum_list = dbr.get_enumerations(sess,element)
+	fk_df = dbr.get_foreign_key(sess,element)
+
+	# get enumeration tables from db
+	e_df = {}
+	for e in enum_list:
+		e_df[e] = pd.read_sql_table(e,sess.bind,index_col='Id')
+
+	# add cols to all_from_db for showing user
+	for e in enum_list:
+		all_from_db = mr.enum_col_from_id_othertext(all_from_db,e,e_df[e],drop_old=False)
+	for i,r in fk_df.iterrows():
+		all_from_db = dbr.add_foreign_key_name_col(
+			sess,all_from_db,r['foreign_column_name'],r['foreign_table_name'],drop_old=False)
+
+	# collect and confirm "show_user" info from user
+	unconfirmed = True
+	while unconfirmed:
+		# solicit info from user and store values for db insertion
+		new = {}
+		print(f'Enter info for new {element} record.')
+		for c in db_cols:
+			# define new[c] if value is known
+			if c in known_info_d.keys():
+				new[c] = known_info_d[c]
+
+			# if c is an enumeration Id
+			if c[-3:] == '_Id' and c[:-3] in enum_list:
+				c_plain = c[:-3]
+				# if plaintext of enumeration is known
+				if c_plain in new.keys():
+					new[c], new[f'Other{c_plain}'] = mr.enum_value_to_id_othertext(e_df[c],new[c_plain])
+				# if id/othertext of enumeration is known
+				elif f'{c}_Id' in new.keys() and f'Other{c}' in new.keys():
+					new[c] = mr.enum_value_from_id_othertext(e_df[c],new[f'{c}_Id'],new[f'Other{c}'])
+				# otherwise
+				else:
+					# new[c_plain] = enter_and_check_datatype(f'Enter the {c_plain}','String') TODO delete
+					idx, new[c_plain] = pick_one(e_df[c_plain],'Txt',item=c_plain)
+					new[c], new[f'Other{c_plain}'] = mr.enum_value_to_id_othertext(e_df[c_plain],new[c_plain])
+			# if c is a foreign key (and not an enumeration)
+			elif c in fk_df.index:
+				# if foreign key id is known
+				c_plain = c[:-3]
+				if c in new.keys():
+					new[c_plain] = dbr.name_from_id(sess,fk_df.loc[c,'foreign_table_name'],new[c])
+				# if foreign key plaintext is known
+				elif c_plain in new.keys():
+					new[c] = dbr.name_to_id(sess,fk_df.loc[c,'foreign_table_name'],new[c_plain])
+				# otherwise
+				else:
+					new[c_plain] = pick_record_from_db(sess,fk_df.loc[c,'foreign_table_name'])
+					new[c] = dbr.name_to_id(sess,fk_df.loc[c,'foreign_table_name'],new[c_plain])
+			else:
+				new[c] = enter_and_check_datatype(f'Enter the {c}',get_datatype(all_from_db,c))
+
+			# FIXME way too many choices for ReportingUnits
+
+
+		# show user any records that match any uniqueness criterion, offer choices from db. If all refused
+		#  continue with user's choice. Note some uniqueness might be required
+		picked_from_db = False
+		# TODO deal with required uniqueness criteria
+		for u in unique:  # e.g., u = ['file_name','source','file_date']
+			if not picked_from_db: # TODO inefficient way to break for loop
+				d = {k:v for k,v in show_user.items() if k in u}
+				appears = mr.filter_by_dict(all_from_db_for_user,d)
+				if not appears.empty:
+					print('Your record may already be in the database. Is it one of these?')
+					db_idx, picked_record = pick_one(appears,u)
+					# if user picked one, continue with that one
+					if db_idx:
+						picked_from_db = True
+						show_user = appears.loc[db_idx].to_dict()
+
+		# present to user for confirmation
+		entry = '\n\t'.join([f'{k}:\t{v}' for k,v in show_user.items()])
+		confirm = input(f'Confirm entry:\n\t{entry}\nIs this correct (y/n)?\n')
+		if confirm == 'y':
+			unconfirmed = False
+
+	# get db_record, enum_val and fk_val
+	db_record,enum_val = translate_show_user_to_db(show_user,edf)
+	fk_val = mr.fk_plaintext_dict_from_db_record(sess,element,db_record,excluded=[])
+	# TODO translate_show_user_to_db duplicates mr.enum_plaintext_dict.... functions
+
+
+	if mode == 'database':
+		return db_record, enum_val, fk_val
+	elif mode == 'filesystem':
+		return show_user, enum_val, fk_val
+	elif mode == 'database_and_filesystem':
+		return {**db_record,**show_user},enum_val, fk_val
+	else:
+		print(f'Mode {mode} not recognized.')
+		return None, None, None
 
 
 def check_datatype(answer,datatype):
@@ -753,22 +908,8 @@ def check_datatype(answer,datatype):
 			good = True
 		except ValueError:
 			print('You need to enter an integer.')
-	elif datatype == 'Encoding':
-		default = 'iso-8859-1'
-		if answer in recognized_encodings:
-			good = True
-		else:
-			use_default = input(f'Answer not recognized as {datatype}. Use default value of {default} (y/n)?\n')
-			if use_default == 'y':
-				answer = default
-			else:
-				go_on = input(
-					f'This system does not recognize "{answer}" as an encoding.\n'
-					f'Continue with encoding {answer} anyway (y/n)?\n')
-				if go_on == 'y':
-					good = True
 	else:
-		"Nothing to check for String datatype"
+		# Nothing to check for String datatype
 		good = True
 	return good, answer
 

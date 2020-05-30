@@ -1,5 +1,7 @@
 #!usr/bin/python3
 import os.path
+
+import db_routines
 import db_routines as dbr
 import pandas as pd
 import warnings   # TODO use warnings module to handle warnings in all files
@@ -564,7 +566,7 @@ def check_dependencies(context_dir,element):
         # create list of elements, removing any nulls
         ru = list(
             pd.read_csv(
-                os.path.join(context_dir,f'{target}.txt'),sep='\t').fillna('').loc[:,mr.get_name_field(target)])
+                os.path.join(context_dir,f'{target}.txt'),sep='\t').fillna('').loc[:,db_routines.get_name_field(target)])
         try:
             ru.remove(np.nan)
         except ValueError:
@@ -693,7 +695,7 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs):
 
     target_list = []
     for r in refs:
-        ref_name_field = mr.get_name_field(r)
+        ref_name_field = db_routines.get_name_field(r)
 
         r_target = pd.read_sql_table(r,session.bind)[['Id',ref_name_field]]
         r_target.rename(columns={'Id':foreign_key,ref_name_field:interim},inplace=True)

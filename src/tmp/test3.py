@@ -20,7 +20,7 @@ if __name__ == '__main__':
 	known_info_d={'ReportingUnitType_Id':15}
 	unique = [['Name'],['Name','ReportingUnitType_Id']]
 	mode = 'database_and_filesystem'
-	output = ui.new_record_info_from_user(sess, project_root,table,mode=mode,unique=unique)
+	output = ui.new_record_info_from_user_OLD(sess,project_root,table,mode=mode,unique=unique)
 	print(output)
 	eng.dispose()
 	print('Done!')
