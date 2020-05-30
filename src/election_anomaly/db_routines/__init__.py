@@ -10,6 +10,7 @@ import user_interface as ui
 from configparser import MissingSectionHeaderError
 import pandas as pd
 import os
+import munge_routines as mr
 
 from user_interface import config
 
@@ -222,6 +223,28 @@ def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
     return return_item
 
 
+def get_foreign_key(session,element):
+    """Returns a dataframe whose index is the name of the field in the <element> table, with columns
+    foreign_table_name and foreign_column_name"""
+    q = f"""
+        SELECT
+        kcu.column_name,
+        ccu.table_name AS foreign_table_name,
+        ccu.column_name AS foreign_column_name
+        FROM
+        information_schema.table_constraints AS tc
+        JOIN information_schema.key_column_usage AS kcu
+          ON tc.constraint_name = kcu.constraint_name
+          AND tc.table_schema = kcu.table_schema
+        JOIN information_schema.constraint_column_usage AS ccu
+          ON ccu.constraint_name = tc.constraint_name
+          AND ccu.table_schema = tc.table_schema
+        WHERE tc.constraint_type = 'FOREIGN KEY' AND tc.table_name='{element}';
+    """
+    fk_df = pd.read_sql(q,session.bind,index_col='column_name')
+    return fk_df
+
+
 def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecount=False,return_records='all'):
     """
     Given a dataframe <dframe >and an existing cdf db table <table>>, clean <dframe>
@@ -309,6 +332,35 @@ def format_dates(dframe):
     for c in df.columns[df.dtypes=='datetime64[ns]']:
         df[c] = f'{df[c].dt.date}'
     return df
+
+
+def save_one_to_db(session,project_root,element,record,known_info_d):
+    """Create a record in the <element> table corresponding to the info in the
+    dictionary <record>, which is in <field>:<value> form, excluding the Id field.
+    On error, offers user chance to re-enter information"""
+    changed = False
+    ok = False
+    while not ok:
+        problems = []
+        if record == {}:
+            problems.append('No data given for insert.')
+        try:
+            df = pd.DataFrame({k:[v] for k,v in record.items()})
+            df.to_sql(element,session.bind,if_exists='append',index=False)
+            enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(session,element,record)
+        except sqlalchemy.exc.IntegrityError as e:
+            problems.append(f'Database integrity error: {e}')
+        if problems:
+            # TODO make ui.report_problems() function
+            # TODO depending on problem, offer choice from db or filesystem?
+            prob_str = '\n\t'.join(problems)
+            print(f'There are problems:\n\t{prob_str}\nEnter an alternative')
+            record, enum_plaintext_dict = ui.new_record_info_from_user(session,project_root,element,known_info_d)
+            changed = True
+        else:
+            ok = True
+    session.flush()
+    return record, enum_plaintext_dict, changed
 
 
 if __name__ == '__main__':

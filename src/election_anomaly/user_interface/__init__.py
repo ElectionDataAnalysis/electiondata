@@ -123,7 +123,7 @@ def pick_one(choices,return_col,item='row',required=False):
 		df.index = range(choices.shape[0])
 	if df.empty:
 		return None, None
-	with pd.option_context('display.max_rows',None,'display.max_columns',None):
+	with pd.option_context('display.max_rows',20,'display.max_columns',None):
 		print(df)
 
 	choice = -1  # guaranteed not to be in df.index
@@ -400,24 +400,14 @@ def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
 		fs_idx, file_style_record = pick_record_from_file_system(storage_dir,element,known_info_d=known_info_d)
 		# if not from file_system, pick from scratch
 		if fs_idx is None:
-			# have user enter record; save it to file system
-			db_style_record, enum_plain_text_values = new_record_info_from_user(
+			# have user enter record; save to db and file system
+			db_style_record, enum_plaintext_dict = new_record_info_from_user(
 				sess,project_root,element,known_info_d=known_info_d,unique=unique)
-			save_record_to_filesystem(storage_dir,element,db_style_record,enum_plain_text_values)
+			db_style_record, enum_plaintext_dict, changed = dbr.save_one_to_db(
+				sess,project_root,element,db_style_record,known_info_d)
+			save_record_to_filesystem(storage_dir,element,db_style_record,enum_plaintext_dict)
 
-		# save record to db
-		# TODO separate db entry out into separate function; handle uniqueness problems nicely
-		try:
-			element_df = dbr.dframe_to_sql(pd.DataFrame(db_style_record,index=[-1]),sess,element)
-			element_df = dbr.format_dates(element_df)
-			# find index matching inserted element
-			idx = element_df.loc[
-				(element_df[list(file_style_record)] == pd.Series(file_style_record)).all(axis=1)]['Id'].to_list()[0]
-			# FIXME got IndexError on above line, maybe because of uniqueness requirements in Election table? Fix.
-		except dbr.CdfDbException:
-			print('Insertion of new record to db failed, maybe because record already exists. Try again.')
-			idx = pick_or_create_record(sess,project_root,element,known_info_d=known_info_d)
-
+		# TODO if <changed>, need to enter new into file system
 	else:
 		idx = db_idx
 		enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(sess,db_style_record)  # TODO
@@ -676,7 +666,8 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 			choices = pd.read_sql_table(target,sess.bind,index_col='Id')
 			if choices.empty:
 				raise Exception(f'Cannot add record to {table} while {target} does not contain the required {fieldname}.\n')
-			db_record[fieldname], name = pick_one(choices,choices.columns[0],required=True)
+			fieldname_for_user = fieldname[:-3]  # remove '_Id'
+			db_record[fieldname], show_user[fieldname_for_user] = pick_one(choices,choices.columns[0],item=target,required=True)
 			# FIXME way too many choices for ReportingUnits
 
 		for e in edf.keys():
@@ -721,6 +712,8 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 
 	# get db_record and enum_val
 	db_record,enum_val = translate_show_user_to_db(show_user,edf)
+	# TODO translate_show_user_to_db duplicates mr.enum_plaintext_dict.... functions
+	#  except what about foreign keys, not just enums?
 
 	if mode == 'database':
 		return db_record, enum_val

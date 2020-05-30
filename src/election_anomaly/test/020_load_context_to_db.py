@@ -11,7 +11,6 @@ if __name__ == '__main__':
 		project_root = ui.get_project_root()
 		juris_name = None
 		db_paramfile = ui.pick_paramfile()
-		db_name = ui.pick_database(project_root,db_paramfile)
 		munger_name = None
 
 	else:
@@ -19,7 +18,6 @@ if __name__ == '__main__':
 		project_root = d['project_root']
 		juris_name = d['juris_name']
 		db_paramfile = d['db_paramfile']
-		db_name = d['db_name']
 		munger_name = d['munger_name']
 
 	project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
@@ -28,6 +26,7 @@ if __name__ == '__main__':
 	juris = ui.pick_juris_from_filesystem(project_root,j_path,check_files=False)
 
 	# connect to db
+	db_name = ui.pick_database(project_root,db_paramfile)
 	eng = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)
 	Session = sessionmaker(bind=eng)
 	sess = Session()

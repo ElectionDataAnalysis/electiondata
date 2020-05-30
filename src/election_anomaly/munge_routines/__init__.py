@@ -289,7 +289,6 @@ def enum_plaintext_dict_from_file_record(session,element,file_record):
     return enum_plaintext_dict
 
 
-
 def enum_plaintext_dict_from_db_record(session,element,db_record):
     """Return a dictionary of <enum>:<plaintext> for all enumerations in
     <db_record>, which is itself a dictionary of <field>:<value>"""
@@ -304,13 +303,9 @@ def enum_plaintext_dict_from_db_record(session,element,db_record):
     return enum_plaintext_dict
 
 
-def db_record_from_file_record_and_plaintext_dict(session,element,file_record,enum_plaintext_dict):
+def db_record_from_file_record_and_plaintext_dict(session,file_record,enum_plaintext_dict):
     db_record = file_record.copy()
-    element_df_columns = pd.read_sql_table(element,session.bind,index_col='Id').columns
-    # TODO INEFFICIENT don't need all of element_df; just need columns
-    # identify enumerations by existence of `<enum>Other` field
-    enum_list = [x[5:] for x in element_df_columns if x[:5] == 'Other']
-    for e in enum_list:
+    for e in enum_plaintext_dict.keys():
         enum_df = pd.read_sql_table(e,session.bind)
         db_record[f'{e}_Id'],db_record[f'Other{e}'] = \
             enum_value_to_id_othertext(enum_df,db_record[e])
