@@ -645,6 +645,8 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 	for e in edf.keys():
 		all_from_db_for_user = mr.enum_col_from_id_othertext(all_from_db_for_user,e,edf[e])
 
+	# TODO translate all foreign keys from db to show_user
+
 	# collect and confirm "show_user" info from user
 	unconfirmed = True
 	while unconfirmed:
@@ -665,9 +667,11 @@ def new_record_info_from_user(sess,root_dir,table,known_info_d={},mode='database
 			fieldname = row['fieldname']
 			choices = pd.read_sql_table(target,sess.bind,index_col='Id')
 			if choices.empty:
-				raise Exception(f'Cannot add record to {table} while {target} does not contain the required {fieldname}.\n')
+				raise Exception(
+					f'Cannot add record to {table} while {target} does not contain the required {fieldname}.\n')
 			fieldname_for_user = fieldname[:-3]  # remove '_Id'
-			db_record[fieldname], show_user[fieldname_for_user] = pick_one(choices,choices.columns[0],item=target,required=True)
+			db_record[fieldname], show_user[fieldname_for_user] = pick_one(
+				choices,choices.columns[0],item=target,required=True)
 			# FIXME way too many choices for ReportingUnits
 
 		for e in edf.keys():
