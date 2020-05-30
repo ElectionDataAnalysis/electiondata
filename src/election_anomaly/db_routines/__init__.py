@@ -351,10 +351,9 @@ def save_one_to_db(session,project_root,element,record,known_info_d):
         except sqlalchemy.exc.IntegrityError as e:
             problems.append(f'Database integrity error: {e}')
         if problems:
-            # TODO make ui.report_problems() function
+            ui.report_problems(problems)
+            print(f'Enter an alternative {element}')
             # TODO depending on problem, offer choice from db or filesystem?
-            prob_str = '\n\t'.join(problems)
-            print(f'There are problems:\n\t{prob_str}\nEnter an alternative')
             record, enum_plaintext_dict = ui.new_record_info_from_user(session,project_root,element,known_info_d)
             changed = True
         else:

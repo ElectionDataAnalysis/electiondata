@@ -886,3 +886,10 @@ def config(filename=None, section='postgresql',msg='Pick parameter file for conn
 	else:
 		raise Exception('Section {0} not found in the {1} file'.format(section, filename))
 	return d
+
+
+def report_problems(problems):
+	"""<problems> is a text list of problems to be reported to user"""
+	prob_str = '\n\t'.join(problems)
+	print(f'There are problems:\n\t{prob_str}\n')
+	return

@@ -131,8 +131,7 @@ class Munger:
             #  check that rename is not also a column
             if problems:
                 checked = False
-                problem_str = '\n\t'.join(problems)
-                print(f'Problems found:\n{problem_str} ')
+                ui.report_problems(problems)
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
                 [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
@@ -168,8 +167,7 @@ class Munger:
 
             if problems:
                 checked = False
-                problem_str = '\n\t'.join(problems)
-                print(f'Problems found:\n{problem_str} ')
+                ui.report_problems(problems)
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
                 [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
@@ -211,8 +209,7 @@ class Munger:
                 problems.append(f'atomic_reporting_unit_type for munger does not match datafile')
 
             if problems:
-                problem_str = '\n\t'.join(problems)
-                print(f'Problems found:\n{problem_str} ')
+                ui.report_problems(problems)
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
                 [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
@@ -412,8 +409,7 @@ def ensure_munger_files(munger_name,project_root=None):
                 problems.append(f'First column of {munger_file}.txt must be exactly:\n{first_col}\n'
                                 f'First error is at row {first_error}: {cf_df.loc[first_error]}')
             if problems:
-                prob_str = '\n\t'.join(problems)
-                input(f'There are problems:\n\t{prob_str}\nEdit {munger_file}.txt, and hit return to continue.')
+                ui.report_problems(problems)
             else:
                 format_confirmed = True
     # check contents of each file
@@ -486,8 +482,7 @@ def check_munger_file_contents(munger_name,project_root=None):
         # TODO if field in formula matches an element self.cdf_element.index,
         #  check that rename is not also a column
         if problems:
-            problem_str = '\n\t'.join(problems)
-            print(f'Problems found:\nt{problem_str} ')
+            ui.report_problems(problems)
             print(f'Correct the problems by editing files in {munger_dir}\n')
             if warns:
                 warn_string = '\n\t'.join(warns)
