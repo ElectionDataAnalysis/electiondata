@@ -83,7 +83,7 @@ def pick_datafile(project_root,sess):
 	db_idx, datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
 		sess,project_root,'_datafile','short_name',
 		known_info_d={'file_name':filename},
-		unique=[['short_name'],['file_name','file_date','source']])
+		unique=[['short_name'],['file_name','file_date']])
 	# TODO typing url into debug window opens the web page; want it to just act like a string
 	return datafile_record_d, datafile_enumeration_name_d, fpath
 
@@ -110,7 +110,7 @@ def pick_filepath(initialdir='~/'):
 	return fpath
 
 
-def pick_one(choices,return_col,item='row',required=False):
+def pick_one(choices,return_col,item='row',required=False,max_rows=40):
 	"""Returns index and <return_col> value of item chosen by user
 	<choices> is a dataframe, unless <return_col> is None, in which case <choices>
 	may be a list or a set"""
@@ -124,7 +124,7 @@ def pick_one(choices,return_col,item='row',required=False):
 		df.index = range(choices.shape[0])
 	if df.empty:
 		return None, None
-	with pd.option_context('display.max_rows',20,'display.max_columns',None):
+	with pd.option_context('display.max_rows',max_rows,'display.max_columns',None):
 		print(df)
 
 	choice = -1  # guaranteed not to be in df.index
@@ -402,7 +402,7 @@ def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
 		# if not from file_system, pick from scratch
 		if fs_idx is None:
 			# have user enter record; save to db and file system
-			db_style_record, enum_plaintext_dict = new_record_info_from_user_OLD(
+			db_style_record, enum_plaintext_dict = get_record_info_from_user(
 				sess,project_root,element,known_info_d=known_info_d,unique=unique)
 			db_style_record, enum_plaintext_dict, changed = dbr.save_one_to_db(
 				sess,project_root,element,db_style_record,known_info_d)
@@ -446,6 +446,10 @@ def pick_record_from_db(sess,element,known_info_d={},required=False):
 	# filter by known_info_d
 	d = {k:v for k,v in known_info_d.items() if k in element_enhanced_df.columns}
 	filtered = element_enhanced_df.loc[(element_enhanced_df[list(d)] == pd.Series(d)).all(axis=1)]
+	# TODO if filtered is empty, offer all
+	if filtered.empty:
+		print('Nothing meets the filter criteria. Unfiltered options will be offered.')
+		filtered = element_enhanced_df
 
 	print(f'Pick the {element} from the database:')
 	name_field = db_routines.get_name_field(element)
@@ -469,7 +473,7 @@ def pick_record_from_db(sess,element,known_info_d={},required=False):
 
 
 def pick_enum(sess,e):
-	e_df = pd.read_sql_table(e,sess.bind)
+	e_df = pd.read_sql_table(e,sess.bind,index_col='Id')
 	e_idx,e_plaintext = pick_one(e_df,'Txt',item=e,required=True)
 	if e_plaintext == 'other':
 		# get plaintext from user
@@ -614,7 +618,7 @@ def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={},un
 
 			# if not, ask user to enter info for file_record
 			if not picked_from_file:
-				db_and_file_record,enum_val = new_record_info_from_user_OLD(
+				db_and_file_record,enum_val = get_record_info_from_user(
 					sess,root_dir,table,
 					known_info_d=known_info_d,mode='database_and_filesystem',unique=unique)
 				file_record = db_and_file_record.copy()
@@ -701,7 +705,6 @@ def new_record_info_from_user_OLD(sess,root_dir,element,known_info_d={},mode='da
 			fieldname_for_user = fieldname[:-3]  # remove '_Id'
 			db_record[fieldname], show_user[fieldname_for_user] = pick_one(
 				choices,choices.columns[0],item=target,required=True)
-			# FIXME way too many choices for ReportingUnits
 
 		for e in edf.keys():
 			# define show_user, db_record and enum_val dictionaries
@@ -774,15 +777,14 @@ def get_datatype(df,c):
 	return datatype_string
 
 
-def new_record_info_from_user_NEW(sess,root_dir,element,known_info_d={},mode='database',unique=[]):
+def get_record_info_from_user(sess,root_dir,element,known_info_d={},mode='database',unique=[]):
 	"""Collect new record info from user, with chance to confirm.
 	For each enumeration, translate the user's plaintext input into id/othertext.
-	Enforce uniqueness of any list of fields in the list <unique>
+
 	Return the corresponding record (id/othertext only) and an enumeration-value
 	dictionary. Depending on <mode> ('database', 'filesystem' or 'database_and_filesystem'),
 	returns enum plaintext, or enum id/othertext pairs, or both.
 	"""
-	# TODO read uniqueness from CDF schema definition for table
 
 	# read existing info from db
 	all_from_db = pd.read_sql_table(element,sess.bind,index_col='Id')
@@ -826,7 +828,7 @@ def new_record_info_from_user_NEW(sess,root_dir,element,known_info_d={},mode='da
 				else:
 					# new[c_plain] = enter_and_check_datatype(f'Enter the {c_plain}','String') TODO delete
 					idx, new[c_plain] = pick_one(e_df[c_plain],'Txt',item=c_plain)
-					new[c], new[f'Other{c_plain}'] = mr.enum_value_to_id_othertext(e_df[c_plain],new[c_plain])
+					new[c], new[f'Other{c_plain}'], new[f'{c_plain}'] = pick_enum(sess,c_plain)
 			# if c is a foreign key (and not an enumeration)
 			elif c in fk_df.index:
 				# if foreign key id is known
@@ -838,13 +840,12 @@ def new_record_info_from_user_NEW(sess,root_dir,element,known_info_d={},mode='da
 					new[c] = dbr.name_to_id(sess,fk_df.loc[c,'foreign_table_name'],new[c_plain])
 				# otherwise
 				else:
-					new[c_plain] = pick_record_from_db(sess,fk_df.loc[c,'foreign_table_name'])
+					idx, db_record = pick_record_from_db(sess,fk_df.loc[c,'foreign_table_name'],required=True)
+					new[c_plain] = db_record[dbr.get_name_field(fk_df.loc[c,'foreign_table_name'])]
+					# TODO pull from DB info about whether the foreign key is required
 					new[c] = dbr.name_to_id(sess,fk_df.loc[c,'foreign_table_name'],new[c_plain])
 			else:
 				new[c] = enter_and_check_datatype(f'Enter the {c}',get_datatype(all_from_db,c))
-
-			# FIXME way too many choices for ReportingUnits
-
 
 		# show user any records that match any uniqueness criterion, offer choices from db. If all refused
 		#  continue with user's choice. Note some uniqueness might be required
