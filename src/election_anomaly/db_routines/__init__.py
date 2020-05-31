@@ -357,7 +357,7 @@ def format_dates(dframe):
     return df
 
 
-def save_one_to_db(session,element,record,known_info_d):
+def save_one_to_db(session,element,record):
     """Create a record in the <element> table corresponding to the info in the
     dictionary <record>, which is in <field>:<value> form, excluding the Id field.
     On error, offers user chance to re-enter information"""
@@ -377,7 +377,7 @@ def save_one_to_db(session,element,record,known_info_d):
             ui.report_problems(problems)
             print(f'Enter an alternative {element}')
             # TODO depending on problem, offer choice from db or filesystem?
-            record, enum_plaintext_dict = ui.get_record_info_from_user(session,element,known_info_d)
+            record, enum_plaintext_dict, fk_plaintext_dict = ui.get_record_info_from_user(session,element,known_info_d=record)
             changed = True
         else:
             ok = True

@@ -80,10 +80,9 @@ def pick_datafile(project_root,sess):
 	print("Locate the results file in the file system.")
 	fpath = pick_filepath(initialdir=project_root)
 	filename = ntpath.basename(fpath)
-	db_idx, datafile_record_d, datafile_enumeration_name_d = create_record_in_db(
-		sess,project_root,'_datafile','short_name',
-		known_info_d={'file_name':filename},
-		unique=[['short_name'],['file_name','file_date']])
+	db_idx, datafile_record_d, datafile_enumeration_name_d, datafile_fk_name_d = pick_or_create_record(
+		sess,project_root,'_datafile',
+		known_info_d={'file_name':filename})
 	# TODO typing url into debug window opens the web page; want it to just act like a string
 	return datafile_record_d, datafile_enumeration_name_d, fpath
 
@@ -365,8 +364,8 @@ def translate_db_to_show_user(db_record,edf):
 	show_user = db_record.copy()
 	for e in edf.keys():
 		enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(edf[e],db_record[f'{e}_Id'],db_record[f'Other{e}'])
-		show_user.pop(f'{e}_Id')
-		show_user.pop(f'Other{e}')
+		show_user.remove(f'{e}_Id')
+		show_user.remove(f'Other{e}')
 	return show_user, enum_val
 
 
@@ -383,7 +382,7 @@ def translate_show_user_to_db(show_user,edf):
 	return db_record, enum_val
 
 
-def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
+def pick_or_create_record(sess,project_root,element,known_info_d={}):
 	"""User picks record from database if exists.
 	Otherwise user picks from file system if exists.
 	Otherwise user enters all relevant info.
@@ -395,6 +394,7 @@ def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
 	# pick from database if possible
 	db_idx, db_style_record = pick_record_from_db(sess,element,known_info_d=known_info_d)
 	enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(sess,element,db_style_record)
+	fk_plaintext_dict = mr.fk_plaintext_dict_from_db_record(sess,element,db_style_record)
 
 	# if not from db, pick from file_system
 	if db_idx is None:
@@ -402,18 +402,18 @@ def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
 		# if not from file_system, pick from scratch
 		if fs_idx is None:
 			# have user enter record; save to db and file system
-			db_style_record, enum_plaintext_dict = get_record_info_from_user(
+			db_style_record, enum_plaintext_dict, fk_plaintext_dict = get_record_info_from_user(
 				sess,element,known_info_d=known_info_d)
 			db_style_record, enum_plaintext_dict, changed = dbr.save_one_to_db(
-				sess,element,db_style_record,known_info_d)
+				sess,element,db_style_record)
 			save_record_to_filesystem(storage_dir,element,db_style_record,enum_plaintext_dict)
 
 		# TODO if <changed>, need to enter new into file system
 	else:
 		idx = db_idx
 		enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(sess,db_style_record)  # TODO
-
-	return idx, db_style_record, enum_plaintext_dict
+	# FIXME ensure fk_plaintext_dict is correct in all cases
+	return idx, db_style_record, enum_plaintext_dict, fk_plaintext_dict
 
 
 def get_by_hand_records_from_file_system(root_dir,table,subdir='db_records_entered_by_hand'):
@@ -520,8 +520,8 @@ def save_record_to_filesystem(storage_dir,table,user_record,enum_plain_text_valu
 	# identify/create the directory for storing individual records in file system
 	for e in enum_plain_text_values.keys():
 		user_record[e] = enum_plain_text_values[e]  # add plain text
-		user_record.pop(f'{e}_Id')  # remove Id
-		user_record.pop(f'Other{e}')  # remove other text
+		user_record.remove(f'{e}_Id')  # remove Id
+		user_record.remove(f'Other{e}')  # remove other text
 
 	if not os.path.isdir(storage_dir):
 		os.makedirs(storage_dir)
@@ -535,115 +535,6 @@ def save_record_to_filesystem(storage_dir,table,user_record,enum_plain_text_valu
 	records.append(user_record,ignore_index=True)
 	records.to_csv(storage_file,sep='\t',index=False)
 	return
-
-
-def create_record_in_db(sess,root_dir,table,name_field='Name',known_info_d={},unique=[]):
-	"""create record in <table> table in database from user input
-	(or from existing info db_records_entered_by_hand directory in file system)
-	<known_info_d> is a dict of known field-value pairs.
-	Return the record (in dict form) and any enumeration values (in dict form)
-	Store the record (if new) in the db_records_entered_by_hand directory
-	Note: storage in file system should use names of any enumerations, not
-	internal <enum>_Id and Other<enum>.
-	"""
-	# initialize various items to make syntax-checker happy
-	db_record = pd.Series()
-	file_record = pd.Series()
-	enum_val = {}
-	db_idx = -1
-
-	# for messages to user
-	known_info_string = '\n\t' + '\n\t'.join([f'{k}:\t{v}' for k,v in known_info_d.items()])
-
-	# get list -- from file system -- of all enumerations for the <table>
-	enum_list = pd.read_csv(
-		os.path.join(root_dir,'election_anomaly/CDF_schema_def_info/elements',table,'enumerations.txt'),
-		sep='\t',header=0).enumeration.to_list()
-
-	all_from_file, storage_file = get_by_hand_records_from_file_system(root_dir,table)
-
-	# get dataframe for each enumeration
-	e_df = {}
-	for e in enum_list:
-		e_df[e] = pd.read_sql_table(e,sess.bind)
-
-	# read from db and filter
-	all_from_db = pd.read_sql_table(table,sess.bind,index_col='Id')
-	picked_from_db = False
-	if all_from_db.empty:
-		filtered_from_db = pd.DataFrame()
-	else:
-		d = {k:v for k,v in known_info_d.items() if k in all_from_db.columns}
-		filtered_from_db = all_from_db.loc[
-			(all_from_db[list(d)] == pd.Series(d)).all(axis=1)]
-
-		# add plaintext enum columns
-		filtered_from_db_with_plaintext = filtered_from_db
-		for e in enum_list:
-			e_df[e] = pd.read_sql_table(e,sess.bind)
-			filtered_from_db_with_plaintext = mr.enum_col_from_id_othertext(
-				filtered_from_db_with_plaintext,e,e_df[e],drop_old=False)
-	# ask user to pick from db
-	if filtered_from_db.empty:
-		print(f'No records in database with {known_info_string}\n\n ')
-	else:
-		print('Is the desired record already in the database?')
-		drop_list = [f'{e}_Id' for e in enum_list] + [f'Other{e}' for e in enum_list]
-		show_filtered_from_db = filtered_from_db_with_plaintext.drop(drop_list,axis=1)
-		db_idx,db_record_name = pick_one(show_filtered_from_db,name_field)
-		# if user picks, define <db_record>
-		if db_idx:
-			db_record = filtered_from_db.loc[db_idx]
-			picked_from_db = True
-
-			# fill enum_val dictionary
-			for e in enum_list:
-				enum_val[e] = show_filtered_from_db.loc[db_idx,e]
-
-	picked_from_file = False
-	if not picked_from_db:
-		# find record in file system if possible
-		if not all_from_file.empty:
-			# filter via known_info_d (restricted to relevant columns)
-			d = {k:v for k,v in known_info_d.items() if k in all_from_file.columns}
-			filtered_from_file = all_from_file.loc[(all_from_file[list(d)] == pd.Series(d)).all(axis=1)]
-
-			# ask user to pick from file
-			if not filtered_from_file.empty:
-				print('Is the desired record already in the file system?')
-				record_idx,file_record_short_name = pick_one(filtered_from_file,name_field)
-				if record_idx is not None:  # if user picked one
-					picked_from_file = True
-					file_record = filtered_from_file.loc[record_idx]
-
-			# if not, ask user to enter info for file_record
-			if not picked_from_file:
-				db_and_file_record,enum_val = get_record_info_from_user(
-					sess,table,
-					known_info_d=known_info_d,mode='database_and_filesystem')
-				file_record = db_and_file_record.copy()
-				for e in enum_list:
-					file_record.pop(f'{e}_Id')
-					file_record.pop(f'Other{e}')
-	if not picked_from_file:
-		# append new record to all_from_file; write to file system
-		to_file = pd.concat(
-			[all_from_file,pd.DataFrame.from_dict([file_record],orient='columns')]).drop_duplicates()
-		to_file.to_csv(storage_file,sep='\t',index=False)
-
-	if not picked_from_db:
-		# define enum_val and db_record
-		enum_val = {}
-		db_record = file_record.copy()
-		for e in enum_list:
-			enum_val[e] = file_record[e]
-			db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.enum_value_to_id_othertext(
-				e_df[e],file_record[e])
-			db_record.pop(e)
-		from_db = dbr.dframe_to_sql(
-			pd.DataFrame.from_dict([db_record],orient='columns'),sess,table,return_records='new')
-		db_idx = list(from_db.Id.unique())[0]
-	return db_idx, db_record, enum_val
 
 
 def get_datatype(df,c):
@@ -672,7 +563,7 @@ def get_record_info_from_user(sess,element,known_info_d={},mode='database'):
 	# read existing info from db
 	all_from_db = pd.read_sql_table(element,sess.bind,index_col='Id')
 	# initialize <show_user_cols>
-	show_user_cols = db_cols = all_from_db.columns  # note: does not include 'Id'
+	show_user_cols = db_cols = list(all_from_db.columns)  # note: does not include 'Id'
 
 	# initialize value dictionaries to be returned
 	enum_val = fk_val = new = {}
@@ -688,13 +579,15 @@ def get_record_info_from_user(sess,element,known_info_d={},mode='database'):
 	for e in enum_list:
 		all_from_db = mr.enum_col_from_id_othertext(all_from_db,e,e_df[e],drop_old=False)
 		show_user_cols.append(e)
-		show_user_cols.pop(f'{e}_Id')
-		show_user_cols.pop(f'Other{e}')
+		show_user_cols.remove(f'{e}_Id')
+		show_user_cols.remove(f'Other{e}')
 	for i,r in fk_df.iterrows():
-		all_from_db = dbr.add_foreign_key_name_col(
-			sess,all_from_db,r['foreign_column_name'],r['foreign_table_name'],drop_old=False)
-		show_user_cols.append(i[:-3])
-		show_user_cols.pop(i)
+		# exclude foreign ids pointing to enumerations
+		if i[:-3] not in enum_list:
+			all_from_db = dbr.add_foreign_key_name_col(
+				sess,all_from_db,r['foreign_column_name'],r['foreign_table_name'],drop_old=False)
+			show_user_cols.append(i[:-3])
+			show_user_cols.remove(i)
 
 	# collect and confirm info from user
 	unconfirmed = True
