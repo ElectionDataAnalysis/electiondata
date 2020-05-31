@@ -357,7 +357,7 @@ def format_dates(dframe):
     return df
 
 
-def save_one_to_db(session,project_root,element,record,known_info_d):
+def save_one_to_db(session,element,record,known_info_d):
     """Create a record in the <element> table corresponding to the info in the
     dictionary <record>, which is in <field>:<value> form, excluding the Id field.
     On error, offers user chance to re-enter information"""

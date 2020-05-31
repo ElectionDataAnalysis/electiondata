@@ -405,7 +405,7 @@ def pick_or_create_record(sess,project_root,element,known_info_d={},unique=[]):
 			db_style_record, enum_plaintext_dict = get_record_info_from_user(
 				sess,element,known_info_d=known_info_d)
 			db_style_record, enum_plaintext_dict, changed = dbr.save_one_to_db(
-				sess,project_root,element,db_style_record,known_info_d)
+				sess,element,db_style_record,known_info_d)
 			save_record_to_filesystem(storage_dir,element,db_style_record,enum_plaintext_dict)
 
 		# TODO if <changed>, need to enter new into file system
