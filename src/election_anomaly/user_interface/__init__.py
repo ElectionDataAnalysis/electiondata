@@ -386,7 +386,6 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 	"""User picks record from database if exists.
 	Otherwise user picks from file system if exists.
 	Otherwise user enters all relevant info.
-	<unique> is list of uniqueness criteria, where each criterion is a list of fields
 	Store record in file system and/or db if new
 	Return index of record in database"""
 
@@ -396,24 +395,27 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 	enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(sess,element,db_style_record)
 	fk_plaintext_dict = mr.fk_plaintext_dict_from_db_record(sess,element,db_style_record)
 
-	# if not from db, pick from file_system
+	# if not from db
 	if db_idx is None:
+		# pick from file_system
 		fs_idx, file_style_record = pick_record_from_file_system(storage_dir,element,known_info_d=known_info_d)
-		# if not from file_system, pick from scratch
+		# if not from file_system
 		if fs_idx is None:
-			# have user enter record; save to db and file system
+			# have user enter record
 			db_style_record, enum_plaintext_dict, fk_plaintext_dict = get_record_info_from_user(
 				sess,element,known_info_d=known_info_d)
-			db_style_record, enum_plaintext_dict, changed = dbr.save_one_to_db(
+			# save to db
+			db_idx, db_style_record, enum_plaintext_dict, fk_plaintext_dict = dbr.save_one_to_db(
 				sess,element,db_style_record)
+			# save to file system
 			save_record_to_filesystem(storage_dir,element,db_style_record,enum_plaintext_dict)
 
 		# TODO if <changed>, need to enter new into file system
+	# if picked from db
 	else:
-		idx = db_idx
-		enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(sess,db_style_record)  # TODO
-	# FIXME ensure fk_plaintext_dict is correct in all cases
-	return idx, db_style_record, enum_plaintext_dict, fk_plaintext_dict
+		enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(sess,db_style_record)
+		fk_plaintext_dict = mr.fk_plaintext_dict_from_db_record(sess,element,db_style_record)
+	return db_idx, db_style_record, enum_plaintext_dict, fk_plaintext_dict
 
 
 def get_by_hand_records_from_file_system(root_dir,table,subdir='db_records_entered_by_hand'):
@@ -438,10 +440,12 @@ def pick_record_from_db(sess,element,known_info_d={},required=False):
 		return None,None
 
 	# add columns for plaintext of any enumerations
+	# FIXME also add columns for foreign key plaintext
 	enums = dbr.read_enums_from_db_table(sess,element)
+	element_enhanced_df = element_df.copy()
 	for e in enums:
 		e_df = pd.read_sql_table(e,sess.bind,index_col='Id')
-		element_enhanced_df = mr.enum_col_from_id_othertext(element_df,e,e_df)
+		element_enhanced_df = mr.enum_col_from_id_othertext(element_enhanced_df,e,e_df)
 
 	# filter by known_info_d
 	d = {k:v for k,v in known_info_d.items() if k in element_enhanced_df.columns}
@@ -563,7 +567,8 @@ def get_record_info_from_user(sess,element,known_info_d={},mode='database'):
 	# read existing info from db
 	all_from_db = pd.read_sql_table(element,sess.bind,index_col='Id')
 	# initialize <show_user_cols>
-	show_user_cols = db_cols = list(all_from_db.columns)  # note: does not include 'Id'
+	db_cols = list(all_from_db.columns)  # note: does not include 'Id'
+	show_user_cols=db_cols.copy()
 
 	# initialize value dictionaries to be returned
 	enum_val = fk_val = new = {}
@@ -611,9 +616,10 @@ def get_record_info_from_user(sess,element,known_info_d={},mode='database'):
 					new[c] = mr.enum_value_from_id_othertext(e_df[c],new[f'{c}_Id'],new[f'Other{c}'])
 				# otherwise
 				else:
-					# new[c_plain] = enter_and_check_datatype(f'Enter the {c_plain}','String') TODO delete
-					idx, new[c_plain] = pick_one(e_df[c_plain],'Txt',item=c_plain)
-					new[c], new[f'Other{c_plain}'], new[f'{c_plain}'] = pick_enum(sess,c_plain)
+					new[c], new[f'Other{c_plain}'], new[c_plain] = pick_enum(sess,c_plain)
+			# if c is an Other<enumeration>, new value was defined in loop through enum_list
+			elif c[:5] == 'Other' and c[5:] in enum_list:
+				pass
 			# if c is a foreign key (and not an enumeration)
 			elif c in fk_df.index:
 				# if foreign key id is known

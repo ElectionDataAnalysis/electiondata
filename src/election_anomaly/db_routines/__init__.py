@@ -11,6 +11,7 @@ from configparser import MissingSectionHeaderError
 import pandas as pd
 import os
 import munge_routines as mr
+import re
 
 
 class CdfDbException(Exception):
@@ -359,10 +360,16 @@ def format_dates(dframe):
 
 def save_one_to_db(session,element,record):
     """Create a record in the <element> table corresponding to the info in the
-    dictionary <record>, which is in <field>:<value> form, excluding the Id field.
+    dictionary <record>, which is in <field>:<value> form, using db (not user-friendly)
+    fields -- i.e., ids for enums and foreign keys -- excluding the Id field.
     On error, offers user chance to re-enter information"""
+    # initialize
+    enum_plaintext_dict = fk_plaintext_dict = {}
     changed = False
     ok = False
+
+    # define regex for pulling info from IntegrityError
+    pattern = re.compile(r'Key \((?P<fields>.+)\)=\((?P<values>.+)\) already exists.')
     while not ok:
         problems = []
         if record == {}:
@@ -371,18 +378,44 @@ def save_one_to_db(session,element,record):
             df = pd.DataFrame({k:[v] for k,v in record.items()})
             df.to_sql(element,session.bind,if_exists='append',index=False)
             enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(session,element,record)
+            fk_plaintext_dict = mr.fk_plaintext_dict_from_db_record(
+                session,element,record,excluded=enum_plaintext_dict.keys())
+            db_idx = name_to_id(session,element,record[get_name_field(element)])
         except sqlalchemy.exc.IntegrityError as e:
-            problems.append(f'Database integrity error: {e}')
+            if 'duplicate key value violates unique constraint' in e.orig.pgerror:
+                m = pattern.search(e.orig.pgerror)
+                field_str = m.group("fields")
+                value_str = m.group("values")
+                use_existing = input(f'Record already exists with value(s)\n\t{value_str}\n'
+                                     f'in field(s)\n\t{field_str}\n'
+                                     f'Use existing record (y/n?\n')
+                if use_existing == 'y':
+                    # pull record from db
+                    fields = field_str.split(',')
+                    values = value_str.split(',')
+                    dupe_d = {fields[i]:values[i] for i in range(len(fields))}
+                    db_idx, record = ui.pick_record_from_db(
+                        session,element,known_info_d=dupe_d)
+                    enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(session,element,record)
+                    fk_plaintext_dict = mr.fk_plaintext_dict_from_db_record(
+                        session,element,record,excluded=enum_plaintext_dict.keys())
+                    ok = True
+                else:
+                    problems.append(f'Database integrity error: {e}')
+            else:
+                problems.append(f'Database integrity error: {e}')
+
         if problems:
             ui.report_problems(problems)
             print(f'Enter an alternative {element}')
             # TODO depending on problem, offer choice from db or filesystem?
-            record, enum_plaintext_dict, fk_plaintext_dict = ui.get_record_info_from_user(session,element,known_info_d=record)
+            record, enum_plaintext_dict, fk_plaintext_dict = ui.get_record_info_from_user(
+                session,element,known_info_d=record,mode='database')
             changed = True
         else:
             ok = True
     session.flush()
-    return record, enum_plaintext_dict, changed
+    return db_idx, record, enum_plaintext_dict, fk_plaintext_dict, changed
 
 
 def name_from_id(session,element,idx):
