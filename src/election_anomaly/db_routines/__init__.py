@@ -377,7 +377,7 @@ def save_one_to_db(session,project_root,element,record,known_info_d):
             ui.report_problems(problems)
             print(f'Enter an alternative {element}')
             # TODO depending on problem, offer choice from db or filesystem?
-            record, enum_plaintext_dict = ui.get_record_info_from_user(session,project_root,element,known_info_d)
+            record, enum_plaintext_dict = ui.get_record_info_from_user(session,element,known_info_d)
             changed = True
         else:
             ok = True
