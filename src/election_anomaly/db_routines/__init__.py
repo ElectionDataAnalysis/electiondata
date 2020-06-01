@@ -235,7 +235,7 @@ def get_enumerations(session,element):
     return enum_list
 
 
-def get_foreign_key(session,element):
+def get_foreign_key_df(session,element):
     """Returns a dataframe whose index is the name of the field in the <element> table, with columns
     foreign_table_name and foreign_column_name"""
     q = f"""
@@ -443,11 +443,12 @@ def name_to_id(session,element,name):
 
 
 def get_name_field(element):
+    # TODO pull from db or filesystem instead of hard coding
     if element == 'BallotMeasureSelection':
         field = 'Selection'
     elif element == 'Candidate':
         field = 'BallotName'
-    elif element == 'CountItemType':
+    elif element in ['CountItemType','ElectionType','IdentifierType','ReportingUnitType']:
         field = 'Txt'
     elif element == '_datafile':
         field = 'short_name'

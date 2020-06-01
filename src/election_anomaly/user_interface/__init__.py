@@ -392,8 +392,6 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 	storage_dir = os.path.join(project_root,'db_records_entered_by_hand')
 	# pick from database if possible
 	db_idx, db_style_record = pick_record_from_db(sess,element,known_info_d=known_info_d)
-	enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(sess,element,db_style_record)
-	fk_plaintext_dict = mr.fk_plaintext_dict_from_db_record(sess,element,db_style_record)
 
 	# if not from db
 	if db_idx is None:
@@ -409,12 +407,18 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 				sess,element,db_style_record)
 			# save to file system
 			save_record_to_filesystem(storage_dir,element,db_style_record,enum_plaintext_dict)
+		# if found in file system
+		else:
+			db_style_record = mr.db_record_from_file_record(sess,element,file_style_record)
+			db_idx,db_style_record,enum_plaintext_dict,fk_plaintext_dict = dbr.save_one_to_db(
+				sess,element,db_style_record)
 
 		# TODO if <changed>, need to enter new into file system
 	# if picked from db
 	else:
-		enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(sess,db_style_record)
-		fk_plaintext_dict = mr.fk_plaintext_dict_from_db_record(sess,element,db_style_record)
+		enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(sess,element,db_style_record)
+		fk_plaintext_dict = mr.fk_plaintext_dict_from_db_record(
+			sess,element,db_style_record,excluded=enum_plaintext_dict.keys())
 	return db_idx, db_style_record, enum_plaintext_dict, fk_plaintext_dict
 
 
@@ -490,12 +494,13 @@ def pick_enum(sess,e):
 	return e_idx,e_othertext,e_plaintext
 
 
-def pick_record_from_file_system(storage_dir,table,name_field='Name',known_info_d={}):
+def pick_record_from_file_system(storage_dir,table,known_info_d={}):
 	""" Looks for record in file system.
 	Returns a file-style <record> (with enums as plaintext).
 	If no record found, <idx> is none;
 	otherwise value of <idx> is irrelevant."""
 	# initialize to keep syntax-checker happy
+	name_field = dbr.get_name_field(table)
 	filtered_file = None
 	# identify/create the directory for storing individual records in file system
 	if not os.path.isdir(storage_dir):
@@ -573,7 +578,7 @@ def get_record_info_from_user(sess,element,known_info_d={},mode='database'):
 	# initialize value dictionaries to be returned
 	enum_val = fk_val = new = {}
 	enum_list = dbr.get_enumerations(sess,element)
-	fk_df = dbr.get_foreign_key(sess,element)
+	fk_df = dbr.get_foreign_key_df(sess,element)
 
 	# get enumeration tables from db
 	e_df = {}
@@ -805,7 +810,8 @@ def config(filename=None, section='postgresql',msg='Pick parameter file for conn
 		for param in params:
 			d[param[0]] = param[1]
 	else:
-		raise Exception('Section {0} not found in the {1} file'.format(section, filename))
+		print(f'Section {section} not found in the {filename} file. Try again.')
+		d = config(section=section,msg=msg)
 	return d
 
 

@@ -412,6 +412,7 @@ def ensure_munger_files(munger_name,project_root=None):
                                 f'First error is at row {first_error}: {cf_df.loc[first_error]}')
             if problems:
                 ui.report_problems(problems)
+                input(f'Edit {munger_file}.txt and hit return to continue.')
             else:
                 format_confirmed = True
     # check contents of each file

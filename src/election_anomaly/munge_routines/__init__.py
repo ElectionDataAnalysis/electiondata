@@ -280,9 +280,10 @@ def fk_plaintext_dict_from_db_record(session,element,db_record,excluded=[]):
     """Return a dictionary of <name>:<value> for any <name>_Id that is a foreign key
     in the <element> table, excluding any foreign key in the list <excluded>"""
     fk_dict = {}
-    fk_df = dbr.get_foreign_key(session,element)
+    fk_df = dbr.get_foreign_key_df(session,element)
     for i,r in fk_df.iterrows():
-        if i not in excluded:
+        # TODO normalize: do elts of <excluded> end in '_Id' or not?
+        if i not in excluded and i[:-3] not in excluded:
             fk_dict[i] = dbr.name_from_id(session,r['foreign_table_name'],db_record[i])
     return fk_dict
 
@@ -301,13 +302,19 @@ def enum_plaintext_dict_from_db_record(session,element,db_record):
     return enum_plaintext_dict
 
 
-def db_record_from_file_record_and_plaintext_dict(session,file_record,enum_plaintext_dict):
+def db_record_from_file_record(session,element,file_record):
     db_record = file_record.copy()
-    for e in enum_plaintext_dict.keys():
+    enum_list = dbr.get_enumerations(session,element)
+    for e in enum_list:
         enum_df = pd.read_sql_table(e,session.bind)
         db_record[f'{e}_Id'],db_record[f'Other{e}'] = \
             enum_value_to_id_othertext(enum_df,db_record[e])
         db_record.pop(e)
+    fk_df = dbr.get_foreign_key_df(session,element)
+    for fk in fk_df.index:
+        if fk[:-3] not in enum_list:
+            db_record[fk] = dbr.name_to_id(session,fk_df.loc[fk,'foreign_table_name'],file_record[fk[:-3]])
+            db_record.pop(fk[:-3])
     return db_record
 
 
@@ -372,6 +379,12 @@ def munge_and_melt(mu,raw,count_cols):
     return working
 
 
+def add_constant_column(df,col_name,col_value):
+    new_col = pd.DataFrame([col_value]*df.shape[0],columns=[col_name])
+    new_df = pd.concat([df,new_col],axis=1)
+    return new_df
+
+
 def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
     """load data from <raw> into the database.
     Note that columns to be munged (e.g. County_xxx) have mu.field_rename_suffix (e.g., _xxx) added already"""
@@ -381,13 +394,13 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
     # TODO what if contest_type (BallotMeasure or Candidate) has source 'other'?
     for t,r in mu.cdf_elements[mu.cdf_elements.source == 'other'].iterrows():
         # add column for element id
-        idx = ui.pick_or_create_record(session,project_root,t)
-        working[f'{t}_Id'] = idx
+        idx, db_record, enum_d, fk_d = ui.pick_or_create_record(session,project_root,t)
+        working = add_constant_column(working,f'{t}_Id',idx)
 
     working = munge_and_melt(mu,working,count_cols)
 
     # append ids for BallotMeasureContests and CandidateContests
-    working.loc[:,'contest_type'] = 'unknown'
+    working = add_constant_column(working,'contest_type','unknown')
     for c_type in ['BallotMeasure','Candidate']:
         df_contest = pd.read_sql_table(f'{c_type}Contest',session.bind)
         working = replace_raw_with_internal_ids(
