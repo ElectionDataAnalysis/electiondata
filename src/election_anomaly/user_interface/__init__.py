@@ -409,11 +409,18 @@ def pick_or_create_record(sess,project_root,element,known_info_d={}):
 			save_record_to_filesystem(storage_dir,element,db_style_record,enum_plaintext_dict)
 		# if found in file system
 		else:
-			db_style_record = mr.db_record_from_file_record(sess,element,file_style_record)
-			db_idx,db_style_record,enum_plaintext_dict,fk_plaintext_dict = dbr.save_one_to_db(
-				sess,element,db_style_record)
-
-		# TODO if <changed>, need to enter new into file system
+			try:
+				db_style_record = mr.db_record_from_file_record(sess,element,file_style_record)
+				db_idx,db_style_record,enum_plaintext_dict,fk_plaintext_dict, changed = dbr.save_one_to_db(
+					sess,element,db_style_record)
+			except KeyError as e:
+				print(e)
+				input(
+					f'Perhaps the file {element}.txt in {storage_dir} does not have all fields '
+					f'required by the corresponding database table.\n'
+					f'Revise {element}.txt and hit return to continue.')
+				db_idx,db_style_record,enum_plaintext_dict,fk_plaintext_dict = pick_or_create_record(
+					sess,project_root,element,known_info_d=known_info_d)
 	# if picked from db
 	else:
 		enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(sess,element,db_style_record)
@@ -739,9 +746,11 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 	# NB: info_cols will have suffix added by munger
 
 	# check jurisdiction against raw results file, adapting context as necessary
-	if juris.check_against_raw_results(raw,munger,count_columns_by_name):
-		# if context changed, load to db
-		juris.load_context_to_db(session,project_root)
+	check_juris = input(f'Check jurisdiction {juris.short_name} against raw results (y/n)?\n')
+	if check_juris == 'y':
+		if juris.check_against_raw_results(raw,munger,count_columns_by_name):
+			# if context changed, load to db
+			juris.load_context_to_db(session,project_root)
 
 	# TODO check db against raw results?
 	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name)
