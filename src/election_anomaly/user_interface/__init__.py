@@ -824,8 +824,8 @@ def config(filename=None, section='postgresql',msg='Pick parameter file for conn
 	return d
 
 
-def report_problems(problems):
+def report_problems(problems,msg='There are problems'):
 	"""<problems> is a text list of problems to be reported to user"""
 	prob_str = '\n\t'.join(problems)
-	print(f'There are problems:\n\t{prob_str}\n')
+	print(f'{msg}:\n\t{prob_str}\n')
 	return

@@ -300,21 +300,32 @@ def ensure_jurisdiction_files(juris_path,project_root):
 
 def ensure_context_files(juris_path,project_root):
     """Check that the context files are complete and consistent with one another.
+    Check for extraneous files in context directory.
     Assumes context directory exists. Assumes dictionary.txt is in the template file"""
 
     context_dir = os.path.join(juris_path,'context')
-    # ensure all files exist
-    templates = os.path.join(project_root,'templates/context_templates')
-    template_list = [x[:-4] for x in os.listdir(templates)]
-    # move 'dictionary' to front of template_list, so that it is created first
+    templates_dir = os.path.join(project_root,'templates/context_templates')
+    # ask user to remove any extraneous files
+    extraneous = ['unknown']
+    while extraneous:
+        extraneous = [f for f in os.listdir(context_dir) if f not in os.listdir(templates_dir)]
+        if extraneous:
+            ui.report_problems(extraneous,msg=f'There are extraneous files in {context_dir}')
+            input(f'Remove all extraneous files; then hit return to continue.')
+
+    template_list = [x[:-4] for x in os.listdir(templates_dir)]
+
+    # reorder template_list, so that first things are created first
+    ordered_list = ['dictionary','ReportingUnit','Office','CandidateContest']
     template_list = ['dictionary'] + [x for x in template_list if x != 'dictionary']
 
+    # ensure necessary all files exist
     for context_file in template_list:
         print(f'\nChecking {context_file}.txt')
         cf_path = os.path.join(context_dir,f'{context_file}.txt')
         # if file does not already exist in context dir, create from template and invite user to fill
         try:
-            temp = pd.read_csv(os.path.join(templates,f'{context_file}.txt'),sep='\t')
+            temp = pd.read_csv(os.path.join(templates_dir,f'{context_file}.txt'),sep='\t')
         except pd.error.EmptyDataError:
             print(f'Template file {context_file}.txt has no contents')
             temp = pd.DataFrame()
