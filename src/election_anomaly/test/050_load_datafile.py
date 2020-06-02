@@ -49,7 +49,6 @@ if __name__ == '__main__':
 	munger = ui.pick_munger(mungers_dir=os.path.join(project_root,'mungers'),
 							project_root=project_root,session=sess,munger_name=munger_name)
 
-	# get datafile & info
 	# load new datafile
 	ui.new_datafile(sess,munger,data_path,juris=juris,project_root=project_root)
 
