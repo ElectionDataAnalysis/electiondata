@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
 
 	else:
-		d = ui.config(section='election_anomaly',msg='Pick a paramfile for 050.')
+		d = ui.config(section='election_anomaly',msg='Pick a parameter file.')
 		project_root = d['project_root']
 
 	# project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'

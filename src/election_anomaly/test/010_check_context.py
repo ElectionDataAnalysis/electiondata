@@ -10,7 +10,7 @@ if __name__ == '__main__':
 		juris_name = None
 
 	else:
-		d = ui.config(section='election_anomaly',msg='Pick a paramfile for 050.')
+		d = ui.config(section='election_anomaly',msg='Pick a parameter file.')
 		project_root = d['project_root']
 		juris_name = d['juris_name']
 

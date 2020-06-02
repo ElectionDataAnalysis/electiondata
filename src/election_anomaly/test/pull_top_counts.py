@@ -6,14 +6,22 @@ import user_interface as ui
 import analyze as an
 
 if __name__ == '__main__':
-    project_root = ui.get_project_root()
 
-    # pick db to use
-    db_paramfile = ui.pick_paramfile()
-    # juris_name = 'NC'
-    juris_name = None
+    interact = input('Run interactively (y/n)?\n')
+    if interact == 'y':
+        project_root = ui.get_project_root()
+        db_paramfile = ui.pick_paramfile()
+        db_name = ui.pick_database(project_root, db_paramfile)
+        juris_name = None
 
-    db_name = ui.pick_database(project_root,db_paramfile)
+    else:
+        d = ui.config(section='election_anomaly', msg='Pick a parameter file.')
+        project_root = d['project_root']
+        juris_name = None
+        db_paramfile = d['db_paramfile']
+        db_name = d['db_name']
+
+
 
     # initialize main session for connecting to db
     eng = dbr.sql_alchemy_connect(

@@ -14,7 +14,7 @@ if __name__ == '__main__':
 		db_paramfile = ui.pick_paramfile()
 		db_name = ui.pick_database(project_root, db_paramfile)
 	else:
-		d = ui.config(section='election_anomaly',msg='Pick a paramfile for 050.')
+		d = ui.config(section='election_anomaly',msg='Pick a parameter file.')
 		project_root = d['project_root']
 		db_paramfile = d['db_paramfile']
 		db_name = d['db_name']

@@ -1,7 +1,7 @@
 [election_anomaly]
 project_root=C:\Users\jsru2\Desktop\GitHub\election_anomaly\src
-data_path=C:\Users\jsru2\Desktop\GitHub\election_anomaly\src\jurisdictions\CO\data\2018GEPrecinctLevelResults.csv
-juris_name=North Carolina
+data_path=C:\Users\jsru2\Desktop\GitHub\election_anomaly\src\jurisdictions\NC\data\2018g\nc_general\results_pct_20181106.txt
+juris_name=NC
 db_paramfile=C:\Users\jsru2\Desktop\GitHub\election_anomaly\src\jurisdictions\database.ini
 munger_name=NEW_nc18g_pre
 db_name=NC
