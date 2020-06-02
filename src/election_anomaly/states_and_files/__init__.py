@@ -689,9 +689,16 @@ def load_context_dframe_into_cdf(session,element,juris_path,project_root,load_re
                 else:
                     try_again = input(
                         f'{e}\nWould you like to make changes to the context directory and try again (y/n)?\n')
-                    if try_again:
+                    if try_again == 'y':
                         load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
                         return
+            except Exception as e:
+                try_again = input(
+                    f'{e}\nThere may be something wrong with the file {element}.txt. '
+                    f'Would you like to make changes to the context directory and try again (y/n)?\n')
+                if try_again == 'y':
+                    load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
+                    return
 
     # commit info in df to corresponding cdf table to db
     dbr.dframe_to_sql(df,session,element)
