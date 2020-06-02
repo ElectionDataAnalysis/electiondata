@@ -22,7 +22,7 @@ if __name__ == '__main__':
     analysis_session = Session()
 
     jurisdiction = ui.pick_juris_from_filesystem(
-        project_root,path_to_jurisdictions=os.path.join(project_root,'jurisdictions'),juris_name=juris_name)
+        project_root,juris_name=juris_name)
     e = an.Election(analysis_session,jurisdiction,project_root)
     # TODO allow db and filesystem directory to have different names
 

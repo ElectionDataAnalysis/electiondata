@@ -7,7 +7,8 @@ from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == '__main__':
-	project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
+	#project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
+	project_root = ui.get_project_root()
 
 	# pick db to use
 	db_paramfile = ui.pick_paramfile()

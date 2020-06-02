@@ -20,7 +20,7 @@ if __name__ == '__main__':
 		db_paramfile = d['db_paramfile']
 		munger_name = d['munger_name']
 
-	project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
+	#project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
 
 	j_path = os.path.join(project_root,'jurisdictions')
 	juris = ui.pick_juris_from_filesystem(project_root,j_path,check_files=False)
