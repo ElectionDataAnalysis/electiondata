@@ -72,6 +72,12 @@ class Jurisdiction:
         context_files = os.listdir(context_dir)
         context_elements = [
             x[:-4] for x in context_files if x != 'remark.txt' and x != 'dictionary.txt']
+        # reorder context_elements for efficiency
+        leading = ['ReportingUnit','Office','CandidateContest']
+        trailing = ['ExternalIdentifier']
+        context_elements = leading + [
+            x for x in context_elements if x not in leading and x not in trailing
+        ] + trailing
         for element in context_elements:
             # read df from context directory
 
@@ -447,7 +453,7 @@ def check_munger_file_contents(munger_name,project_root=None):
         ).fillna('')
 
         # format.txt has the required items
-        req_list = template_format_df.item.unique()
+        req_list = template_format_df.index
         missing_items = [x for x in req_list if x not in format_df.index]
         if missing_items:
             item_string = ','.join(missing_items)
@@ -750,7 +756,12 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs):
 
 def check_element_against_raw_results(el,results_df,munger,numerical_columns,d):
     mode = munger.cdf_elements.loc[el,'source']
-    d_restricted = d[d.index == el]
+
+    # restrict to element in question; add row for 'none or unknown'
+    none_series = pd.Series(
+        {'cdf_internal_name':'none or unknown','raw_identifier_value':'none or unknown'},name=el)
+    d_restricted = d[d.index == el].append(none_series)
+
     translatable = [x for x in d_restricted['raw_identifier_value']]
 
     if mode == 'row':
