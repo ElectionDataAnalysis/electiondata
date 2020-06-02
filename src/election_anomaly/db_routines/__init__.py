@@ -323,11 +323,13 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
     try:
         appendable.to_sql(table, session.bind, if_exists='append', index=False)
     except sqlalchemy.exc.IntegrityError as e:
-        ignore = input(f'Database integrity error: {e}. \nContinue anyway (y/n)?\n')
-        if ignore == 'y':
-            pass
-        else:
-            raise e
+        ignore = input(f'Some record insertions into table {table} failed.\n'
+                       f'It may be that the record(s) is already in the table (probably harmless).\n'
+                       f'It may be due to non-unique names (might be a problem).\nContinue anyway (y/n)?\n')
+        if ignore != 'y':
+            ignore = input(f'Specific error is: {e}. \nContinue anyway (y/n)?\n')
+            if ignore != 'y':
+                raise e
     if table == 'ReportingUnit' and not appendable.empty:
         append_to_composing_reporting_unit_join(session,appendable)
 

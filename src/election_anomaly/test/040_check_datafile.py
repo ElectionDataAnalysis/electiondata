@@ -25,8 +25,7 @@ if __name__ == '__main__':
 		db_name = d['db_name']
 		data_path = d['data_path']
 
-
-	# initialize root widget for tkinter
+  # initialize root widget for tkinter
 	tk_root = tk.Tk()
 
 	# pick jurisdiction

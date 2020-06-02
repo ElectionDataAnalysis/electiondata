@@ -1,4 +1,3 @@
-#!usr/bin/python3
 import os.path
 
 import db_routines
@@ -10,7 +9,6 @@ import user_interface as ui
 import re
 import numpy as np
 from pathlib import Path
-import csv
 
 
 class Jurisdiction:
@@ -74,6 +72,12 @@ class Jurisdiction:
         context_files = os.listdir(context_dir)
         context_elements = [
             x[:-4] for x in context_files if x != 'remark.txt' and x != 'dictionary.txt']
+        # reorder context_elements for efficiency
+        leading = ['ReportingUnit','Office','CandidateContest']
+        trailing = ['ExternalIdentifier']
+        context_elements = leading + [
+            x for x in context_elements if x not in leading and x not in trailing
+        ] + trailing
         for element in context_elements:
             # read df from context directory
 
@@ -136,7 +140,7 @@ class Munger:
                 ui.report_problems(problems)
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
+                [self.cdf_elements,self.header_row_count,self.field_name_row,
                  self.count_columns,self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
         return
 
@@ -172,7 +176,7 @@ class Munger:
                 ui.report_problems(problems)
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
+                [self.cdf_elements,self.header_row_count,self.field_name_row,
                  self.count_columns,self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
             else:
                 checked = True
@@ -192,29 +196,26 @@ class Munger:
             except UnicodeEncodeError:
                 problems.append(f'Datafile is not encoded as {self.encoding}.')
 
-            col_fields = '\n\t'.join(raw.iloc[self.field_name_row])
+            col_fields = '\n\t'.join(raw.columns)
             cf_ok = input(f'Munger reads the following column fields from datafile (one per line):\n\t'
                           f'{col_fields}\n Are these correct (y/n)?\n')
             if cf_ok == 'y' and raw.shape[1] <3:
                 cf_ok = input(f'Are you sure? Is each SEPARATE LINE above a single field (y/n)?\n')
             if cf_ok != 'y':
                 problems.append(f'Either column_field_row ({col_fields}) or file_type ({self.file_type}) is incorrect.')
-            # user confirm format.atomic_reporting_unit_type
-            first_data_row = '\t'.join([f'{x}' for x in raw.iloc[self.header_row_count]])
+
+            # user confirm first data row
+            first_data_row = '\t'.join([f'{x}' for x in raw.iloc[0]])
             fdr_ok = input(f'Munger thinks the first data row is:\n{first_data_row}\n'
                            f'Is this correct (y/n)?\n')
             if fdr_ok != 'y':
                 problems.append('header_row_count does not match the datafile.')
-            arut_ok = input(f'Munger assumes that each vote count in the file is associated to '
-                            f'a single {self.atomic_reporting_unit_type}.\nIs this correct (y/n)?\n')
-            if arut_ok != 'y':
-                problems.append(f'atomic_reporting_unit_type for munger does not match datafile')
 
             if problems:
                 ui.report_problems(problems)
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
+                [self.cdf_elements,self.header_row_count,self.field_name_row,
                  self.count_columns,self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
             else:
                 checked = True
@@ -237,7 +238,7 @@ class Munger:
 
         if check_files:
             ensure_munger_files(self.name,project_root=project_root)
-        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.count_columns,
+        [self.cdf_elements,self.header_row_count,self.field_name_row,self.count_columns,
          self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
 
         self.field_rename_suffix = '___'  # NB: must not match any suffix of a cdf element name;
@@ -262,7 +263,6 @@ def read_munger_info_from_files(dir_path):
 
     # read formatting info
     format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep='\t',index_col='item')
-    atomic_reporting_unit_type = format_info.loc['atomic_reporting_unit_type','value']
     field_name_row = int(format_info.loc['field_name_row','value'])
     header_row_count = int(format_info.loc['header_row_count','value'])
     count_columns = [int(x) for x in format_info.loc['count_columns','value'].split(',')]
@@ -272,7 +272,7 @@ def read_munger_info_from_files(dir_path):
 
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
     #   will need to rename some columns of the raw file before processing.
-    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,count_columns,file_type,encoding]
+    return [cdf_elements,header_row_count,field_name_row,count_columns,file_type,encoding]
 
 
 def ensure_jurisdiction_files(juris_path,project_root):
@@ -300,22 +300,33 @@ def ensure_jurisdiction_files(juris_path,project_root):
 
 def ensure_context_files(juris_path,project_root):
     """Check that the context files are complete and consistent with one another.
+    Check for extraneous files in context directory.
     Assumes context directory exists. Assumes dictionary.txt is in the template file"""
 
     context_dir = os.path.join(juris_path,'context')
-    # ensure all files exist
-    templates = os.path.join(project_root,'templates/context_templates')
-    template_list = [x[:-4] for x in os.listdir(templates)]
-    # move 'dictionary' to front of template_list, so that it is created first
+    templates_dir = os.path.join(project_root,'templates/context_templates')
+    # ask user to remove any extraneous files
+    extraneous = ['unknown']
+    while extraneous:
+        extraneous = [f for f in os.listdir(context_dir) if f != 'remark.txt' and f not in os.listdir(templates_dir)]
+        if extraneous:
+            ui.report_problems(extraneous,msg=f'There are extraneous files in {context_dir}')
+            input(f'Remove all extraneous files; then hit return to continue.')
+
+    template_list = [x[:-4] for x in os.listdir(templates_dir)]
+
+    # reorder template_list, so that first things are created first
+    ordered_list = ['dictionary','ReportingUnit','Office','CandidateContest']
     template_list = ['dictionary'] + [x for x in template_list if x != 'dictionary']
 
+    # ensure necessary all files exist
     for context_file in template_list:
         print(f'\nChecking {context_file}.txt')
         cf_path = os.path.join(context_dir,f'{context_file}.txt')
         # if file does not already exist in context dir, create from template and invite user to fill
         try:
-            temp = pd.read_csv(os.path.join(templates,f'{context_file}.txt'),sep='\t')
-        except pd.error.EmptyDataError:
+            temp = pd.read_csv(os.path.join(templates_dir,f'{context_file}.txt'),sep='\t')
+        except pd.errors.EmptyDataError:
             print(f'Template file {context_file}.txt has no contents')
             temp = pd.DataFrame()
         if not os.path.isfile(cf_path):
@@ -435,9 +446,14 @@ def check_munger_file_contents(munger_name,project_root=None):
         # read cdf_elements and format from files
         cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),sep='\t').fillna('')
         format_df = pd.read_csv(os.path.join(munger_dir,'format.txt'),sep='\t',index_col='item').fillna('')
+        template_format_df = pd.read_csv(
+            os.path.join(
+                project_root,'templates/munger_templates/format.txt'
+            ),sep='\t',index_col='item'
+        ).fillna('')
 
         # format.txt has the required items
-        req_list = ['atomic_reporting_unit_type','header_row_count','field_name_row','file_type','encoding']
+        req_list = template_format_df.index
         missing_items = [x for x in req_list if x not in format_df.index]
         if missing_items:
             item_string = ','.join(missing_items)
@@ -678,9 +694,16 @@ def load_context_dframe_into_cdf(session,element,juris_path,project_root,load_re
                 else:
                     try_again = input(
                         f'{e}\nWould you like to make changes to the context directory and try again (y/n)?\n')
-                    if try_again:
+                    if try_again == 'y':
                         load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
                         return
+            except Exception as e:
+                try_again = input(
+                    f'{e}\nThere may be something wrong with the file {element}.txt. '
+                    f'Would you like to make changes to the context directory and try again (y/n)?\n')
+                if try_again == 'y':
+                    load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
+                    return
 
     # commit info in df to corresponding cdf table to db
     dbr.dframe_to_sql(df,session,element)
@@ -733,7 +756,12 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs):
 
 def check_element_against_raw_results(el,results_df,munger,numerical_columns,d):
     mode = munger.cdf_elements.loc[el,'source']
-    d_restricted = d[d.index == el]
+
+    # restrict to element in question; add row for 'none or unknown'
+    none_series = pd.Series(
+        {'cdf_internal_name':'none or unknown','raw_identifier_value':'none or unknown'},name=el)
+    d_restricted = d[d.index == el].append(none_series)
+
     translatable = [x for x in d_restricted['raw_identifier_value']]
 
     if mode == 'row':

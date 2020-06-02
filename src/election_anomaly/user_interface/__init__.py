@@ -466,7 +466,7 @@ def pick_record_from_db(sess,element,known_info_d={},required=False):
 		print('Nothing meets the filter criteria. Unfiltered options will be offered.')
 		filtered = element_enhanced_df
 
-	print(f'Pick the {element} from the database:')
+	print(f'Pick the {element} record from the database:')
 	name_field = db_routines.get_name_field(element)
 	element_idx, values = pick_one(filtered,name_field,element)
 	if element_idx in element_df.index:
@@ -824,8 +824,8 @@ def config(filename=None, section='postgresql',msg='Pick parameter file for conn
 	return d
 
 
-def report_problems(problems):
+def report_problems(problems,msg='There are problems'):
 	"""<problems> is a text list of problems to be reported to user"""
 	prob_str = '\n\t'.join(problems)
-	print(f'There are problems:\n\t{prob_str}\n')
+	print(f'{msg}:\n\t{prob_str}\n')
 	return

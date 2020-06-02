@@ -1,5 +1,4 @@
 item	value
-atomic_reporting_unit_type
 header_row_count
 field_name_row
 count_columns
