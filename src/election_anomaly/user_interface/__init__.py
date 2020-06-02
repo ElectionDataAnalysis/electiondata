@@ -466,7 +466,7 @@ def pick_record_from_db(sess,element,known_info_d={},required=False):
 		print('Nothing meets the filter criteria. Unfiltered options will be offered.')
 		filtered = element_enhanced_df
 
-	print(f'Pick the {element} from the database:')
+	print(f'Pick the {element} record from the database:')
 	name_field = db_routines.get_name_field(element)
 	element_idx, values = pick_one(filtered,name_field,element)
 	if element_idx in element_df.index:

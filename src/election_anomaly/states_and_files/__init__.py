@@ -192,7 +192,7 @@ class Munger:
             except UnicodeEncodeError:
                 problems.append(f'Datafile is not encoded as {self.encoding}.')
 
-            col_fields = '\n\t'.join(raw.iloc[self.field_name_row])
+            col_fields = '\n\t'.join(raw.columns)
             cf_ok = input(f'Munger reads the following column fields from datafile (one per line):\n\t'
                           f'{col_fields}\n Are these correct (y/n)?\n')
             if cf_ok == 'y' and raw.shape[1] <3:
@@ -200,7 +200,7 @@ class Munger:
             if cf_ok != 'y':
                 problems.append(f'Either column_field_row ({col_fields}) or file_type ({self.file_type}) is incorrect.')
             # user confirm format.atomic_reporting_unit_type
-            first_data_row = '\t'.join([f'{x}' for x in raw.iloc[self.header_row_count]])
+            first_data_row = '\t'.join([f'{x}' for x in raw.iloc[0]])
             fdr_ok = input(f'Munger thinks the first data row is:\n{first_data_row}\n'
                            f'Is this correct (y/n)?\n')
             if fdr_ok != 'y':
@@ -308,7 +308,7 @@ def ensure_context_files(juris_path,project_root):
     # ask user to remove any extraneous files
     extraneous = ['unknown']
     while extraneous:
-        extraneous = [f for f in os.listdir(context_dir) if f not in os.listdir(templates_dir)]
+        extraneous = [f for f in os.listdir(context_dir) if f != 'remark.txt' and f not in os.listdir(templates_dir)]
         if extraneous:
             ui.report_problems(extraneous,msg=f'There are extraneous files in {context_dir}')
             input(f'Remove all extraneous files; then hit return to continue.')
@@ -326,7 +326,7 @@ def ensure_context_files(juris_path,project_root):
         # if file does not already exist in context dir, create from template and invite user to fill
         try:
             temp = pd.read_csv(os.path.join(templates_dir,f'{context_file}.txt'),sep='\t')
-        except pd.error.EmptyDataError:
+        except pd.errors.EmptyDataError:
             print(f'Template file {context_file}.txt has no contents')
             temp = pd.DataFrame()
         if not os.path.isfile(cf_path):
