@@ -474,16 +474,20 @@ def pick_record_from_db(sess,element,known_info_d={},required=False):
 	else:
 		d = None
 	if required and element_idx is None:
+		# offer to filter by available enumerations
 		enum_list = [x for x in dbr.get_enumerations(sess,element) if x not in known_info_d]
 		if len(enum_list) == 0:
 			print('No more filters available. You must choose from this list')
 			element_idx, d = pick_record_from_db(sess,element,known_info_d=known_info_d)
 		else:
-			e = enum_list[0]
-			e_filter = input(f'Filter by {e} (y/n)?\n')
-			if e_filter == 'y':
-				known_info_d[f'{e}_Id'],known_info_d[f'Other{e}'],known_info_d[e] = pick_enum(sess,e)
-				element_idx, d = pick_record_from_db(sess,element,known_info_d=known_info_d,required=True)
+			while element_idx is None and len(enum_list) > 0:
+				e = enum_list[0]
+				e_filter = input(f'Filter by {e} (y/n)?\n')
+				if e_filter == 'y':
+					known_info_d[f'{e}_Id'],known_info_d[f'Other{e}'],known_info_d[e] = pick_enum(sess,e)
+					element_idx, d = pick_record_from_db(sess,element,known_info_d=known_info_d,required=True)
+				enum_list.remove(e)
+
 	return element_idx, d
 
 

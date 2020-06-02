@@ -86,6 +86,23 @@ def get_id_check_unique(df,conditions=None):
 		return found.first_valid_index()
 
 
+def create_rollup_NEW(
+		session,target_dir,top_ru_id=None,sub_rutype_id=None,sub_rutype_othertext=None,election_id=None,
+		datafile_id_list=None,exclude_total=True):
+	"""<target_dir> is the directory where the resulting rollup will be stored.
+	<election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
+	<top_ru_id> is the internal cdf name of the ReportingUnit whose results will be reported
+	<sub_rutype_id>,<sub_rutype_othertext> identifies the ReportingUnitType
+	of the ReportingUnits used in each line of the results file
+	created by the routine. (E.g., county or ward)
+	If <exclude_total> is True, don't include 'total' CountItemType
+	(unless 'total' the only CountItemType)"""
+	if top_ru_id is None:
+		ui.pick_record_from_db(session,'ReportingUnit',required=True)
+
+	return summed_by_name
+
+
 def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude_total=True):
 	"""<top_ru> is the internal cdf name of the ReportingUnit whose results will be reported
 	(e.g., Florida or Pennsylvania;Philadelphia).
