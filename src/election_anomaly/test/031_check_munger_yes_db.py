@@ -7,11 +7,17 @@ from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == '__main__':
-	project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
 
-	# pick db to use
-	db_paramfile = ui.pick_paramfile()
-	db_name = ui.pick_database(project_root,db_paramfile)
+	interact = input('Run interactively (y/n)?\n')
+	if interact == 'y':
+		project_root = ui.get_project_root()
+		db_paramfile = ui.pick_paramfile()
+		db_name = ui.pick_database(project_root, db_paramfile)
+	else:
+		d = ui.config(section='election_anomaly',msg='Pick a parameter file.')
+		project_root = d['project_root']
+		db_paramfile = d['db_paramfile']
+		db_name = d['db_name']
 
 	# connect to db
 	eng = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)

@@ -14,13 +14,13 @@ if __name__ == '__main__':
 		munger_name = None
 
 	else:
-		d = ui.config(section='050',msg='Pick a paramfile for 020.')
+		d = ui.config(section='election_anomaly',msg='Pick a parameter file.')
 		project_root = d['project_root']
-		juris_name = d['juris_name']
+		juris_name = None
 		db_paramfile = d['db_paramfile']
 		munger_name = d['munger_name']
 
-	project_root = '/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/'
+
 
 	j_path = os.path.join(project_root,'jurisdictions')
 	juris = ui.pick_juris_from_filesystem(project_root,j_path,check_files=False)
