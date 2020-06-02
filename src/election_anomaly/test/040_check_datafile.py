@@ -11,7 +11,24 @@ if __name__ == '__main__':
 			"an automatic munger that will load your data into a database in the 
 			"NIST common data format.""")
 
-	project_root = ui.get_project_root()
+	interact = input('Run interactively (y/n)?\n')
+	if interact == 'y':
+		project_root = ui.get_project_root()
+		db_paramfile = ui.pick_paramfile()
+		db_name = ui.pick_database(project_root,db_paramfile)
+
+
+	else:
+		d = ui.config(section='election_anomaly',msg='Pick a paramfile for 050.')
+		project_root = d['project_root']
+		db_paramfile = d['db_paramfile']
+		db_name = d['db_name']
+
+
+
+
+
+	#project_root = ui.get_project_root()
 
 	# initialize root widget for tkinter
 	tk_root = tk.Tk()
@@ -19,9 +36,6 @@ if __name__ == '__main__':
 	# pick jurisdiction
 	juris = ui.pick_juris_from_filesystem(project_root)
 
-	# pick db to use
-	db_paramfile = ui.pick_paramfile()
-	db_name = ui.pick_database(project_root,db_paramfile)
 
 	# connect to db
 	eng = dbr.sql_alchemy_connect(paramfile=db_paramfile,db_name=db_name)

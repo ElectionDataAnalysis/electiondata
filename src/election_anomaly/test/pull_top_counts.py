@@ -20,9 +20,8 @@ if __name__ == '__main__':
         paramfile=db_paramfile,db_name=db_name)
     Session = sessionmaker(bind=eng)
     analysis_session = Session()
-
     jurisdiction = ui.pick_juris_from_filesystem(
-        project_root,juris_name=juris_name)
+        project_root,juriss_dir=os.path.join(project_root, 'jurisdictions'),juris_name=juris_name)
     e = an.Election(analysis_session,jurisdiction,project_root)
     # TODO allow db and filesystem directory to have different names
 
