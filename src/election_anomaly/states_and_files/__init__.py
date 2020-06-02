@@ -1,4 +1,3 @@
-#!usr/bin/python3
 import os.path
 
 import db_routines
@@ -10,7 +9,6 @@ import user_interface as ui
 import re
 import numpy as np
 from pathlib import Path
-import csv
 
 
 class Jurisdiction:
@@ -136,7 +134,7 @@ class Munger:
                 ui.report_problems(problems)
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
+                [self.cdf_elements,self.header_row_count,self.field_name_row,
                  self.count_columns,self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
         return
 
@@ -172,7 +170,7 @@ class Munger:
                 ui.report_problems(problems)
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
+                [self.cdf_elements,self.header_row_count,self.field_name_row,
                  self.count_columns,self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
             else:
                 checked = True
@@ -199,22 +197,19 @@ class Munger:
                 cf_ok = input(f'Are you sure? Is each SEPARATE LINE above a single field (y/n)?\n')
             if cf_ok != 'y':
                 problems.append(f'Either column_field_row ({col_fields}) or file_type ({self.file_type}) is incorrect.')
-            # user confirm format.atomic_reporting_unit_type
+
+            # user confirm first data row
             first_data_row = '\t'.join([f'{x}' for x in raw.iloc[0]])
             fdr_ok = input(f'Munger thinks the first data row is:\n{first_data_row}\n'
                            f'Is this correct (y/n)?\n')
             if fdr_ok != 'y':
                 problems.append('header_row_count does not match the datafile.')
-            arut_ok = input(f'Munger assumes that each vote count in the file is associated to '
-                            f'a single {self.atomic_reporting_unit_type}.\nIs this correct (y/n)?\n')
-            if arut_ok != 'y':
-                problems.append(f'atomic_reporting_unit_type for munger does not match datafile')
 
             if problems:
                 ui.report_problems(problems)
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,
+                [self.cdf_elements,self.header_row_count,self.field_name_row,
                  self.count_columns,self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
             else:
                 checked = True
@@ -237,7 +232,7 @@ class Munger:
 
         if check_files:
             ensure_munger_files(self.name,project_root=project_root)
-        [self.cdf_elements,self.atomic_reporting_unit_type,self.header_row_count,self.field_name_row,self.count_columns,
+        [self.cdf_elements,self.header_row_count,self.field_name_row,self.count_columns,
          self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
 
         self.field_rename_suffix = '___'  # NB: must not match any suffix of a cdf element name;
@@ -262,7 +257,6 @@ def read_munger_info_from_files(dir_path):
 
     # read formatting info
     format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep='\t',index_col='item')
-    atomic_reporting_unit_type = format_info.loc['atomic_reporting_unit_type','value']
     field_name_row = int(format_info.loc['field_name_row','value'])
     header_row_count = int(format_info.loc['header_row_count','value'])
     count_columns = [int(x) for x in format_info.loc['count_columns','value'].split(',')]
@@ -272,7 +266,7 @@ def read_munger_info_from_files(dir_path):
 
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
     #   will need to rename some columns of the raw file before processing.
-    return [cdf_elements, atomic_reporting_unit_type,header_row_count,field_name_row,count_columns,file_type,encoding]
+    return [cdf_elements,header_row_count,field_name_row,count_columns,file_type,encoding]
 
 
 def ensure_jurisdiction_files(juris_path,project_root):
@@ -446,9 +440,14 @@ def check_munger_file_contents(munger_name,project_root=None):
         # read cdf_elements and format from files
         cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),sep='\t').fillna('')
         format_df = pd.read_csv(os.path.join(munger_dir,'format.txt'),sep='\t',index_col='item').fillna('')
+        template_format_df = pd.read_csv(
+            os.path.join(
+                project_root,'templates/munger_templates/format.txt'
+            ),sep='\t',index_col='item'
+        ).fillna('')
 
         # format.txt has the required items
-        req_list = ['atomic_reporting_unit_type','header_row_count','field_name_row','file_type','encoding']
+        req_list = template_format_df.item.unique()
         missing_items = [x for x in req_list if x not in format_df.index]
         if missing_items:
             item_string = ','.join(missing_items)
