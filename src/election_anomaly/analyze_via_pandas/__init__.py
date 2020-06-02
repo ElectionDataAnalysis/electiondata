@@ -97,8 +97,93 @@ def create_rollup_NEW(
 	created by the routine. (E.g., county or ward)
 	If <exclude_total> is True, don't include 'total' CountItemType
 	(unless 'total' the only CountItemType)"""
+	# Get name of db for error messages
+	db = session.bind.url.database
+
+	# ask user to select any info not supplied
 	if top_ru_id is None:
-		ui.pick_record_from_db(session,'ReportingUnit',required=True)
+		print('Select the top ReportingUnit for the rollup')
+		top_ru_id, top_ru = ui.pick_record_from_db(session,'ReportingUnit',required=True)
+	if election_id is None:
+		print('Select the Election')
+		election_id,election = ui.pick_record_from_db(session,'Election',required=True)
+	if datafile_id_list is None:
+		# TODO allow several datafiles to be picked
+		# TODO restrict to datafiles whose ReportingUnit intersects top_ru?
+		# TODO note/enforce that no datafile double counts anything?
+		print('Select the datafile')
+		datafile_id_list = ui.pick_record_from_db(
+			session,'_datafile',required=True,known_info_d={'Election_Id':election_id})[0]
+	if sub_rutype_id is None:
+		# TODO restrict to types that appear as subreportingunits of top_ru?
+		#  Or that appear in VoteCounts associated to one of the datafiles?
+		print('Select the ReportingUnitType for the lines of the rollup')
+		sub_rutype_id, sub_rutype_othertext,sub_rutype = ui.pick_enum(session,'ReportingUnitType')
+
+	# pull relevant tables
+	df = {}
+	for element in [
+		'ElectionContestSelectionVoteCountJoin','VoteCount','CandidateContestSelectionJoin',
+		'BallotMeasureContestSelectionJoin','ComposingReportingUnitJoin','Election','ReportingUnit',
+		'ElectionContestJoin','CandidateContest','CandidateSelection','BallotMeasureContest',
+		'BallotMeasureSelection','Office','Candidate']:
+		# pull directly from db, using 'Id' as index
+		df[element] = pd.read_sql_table(element,session.bind,index_col='Id')
+
+	# pull enums from db, keeping 'Id as a column, not the index
+	for enum in ["ReportingUnitType","CountItemType"]:
+		df[enum] = pd.read_sql_table(enum,session.bind)
+	count_item_type = {r.Id:r.Txt for i,r in df['CountItemType'].iterrows()}
+
+	#  limit to relevant Election-Contest pairs
+	ecj = df['ElectionContestJoin'][df['ElectionContestJoin'].Election_Id == election_id]
+
+	# calculate specified dataframe with columns [ReportingUnit,Contest,Selection,VoteCount,CountItemType]
+	#  create contest_selection dataframe, adding Contest, Selection and ElectionDistrict_Id columns
+	cc = df['CandidateContestSelectionJoin'].merge(
+		df['CandidateContest'],how='left',left_on='CandidateContest_Id',right_index=True).rename(
+		columns={'Name':'Contest','Id':'ContestSelectionJoin_Id'}).merge(
+		df['CandidateSelection'],how='left',left_on='CandidateSelection_Id',right_index=True).merge(
+		df['Candidate'],how='left',left_on='Candidate_Id',right_index=True).rename(
+		columns={'BallotName':'Selection','CandidateContest_Id':'Contest_Id',
+				 'CandidateSelection_Id':'Selection_Id'}).merge(
+		df['Office'],how='left',left_on='Office_Id',right_index=True)
+	cc = cc[['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id']]
+	if cc.empty:
+		cc['contest_type'] = None
+	else:
+		cc.loc[:,'contest_type'] = 'Candidate'
+	#  create ballotmeasure_selection dataframe
+	bm = df['BallotMeasureContestSelectionJoin'].merge(
+		df['BallotMeasureContest'],how='left',left_on='BallotMeasureContest_Id',right_index=True).rename(
+		columns={'Name':'Contest'}).merge(
+		df['BallotMeasureSelection'],how='left',left_on='BallotMeasureSelection_Id',right_index=True).rename(
+		columns={'BallotMeasureSelection_Id':'Selection_Id','BallotMeasureContest_Id':'Contest_Id'}
+	)
+	bm = bm[['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id']]
+	if bm.empty:
+		bm['contest_type'] = None
+	else:
+		bm.loc[:,'contest_type'] = 'BallotMeasure'
+	#  combine all contest_selections
+	contest_selection = pd.concat([cc,bm])
+
+	# append contest_district_type column
+	ru = df['ReportingUnit'][['ReportingUnitType_Id','OtherReportingUnitType']]
+	contest_selection = contest_selection.merge(ru,how='left',left_on='ElectionDistrict_Id',right_index=True)
+	contest_selection = mr.enum_col_from_id_othertext(contest_selection,'ReportingUnitType',df['ReportingUnitType'])
+	contest_selection.rename(columns={'ReportingUnitType':'contest_district_type'},inplace=True)
+
+	#  limit to relevant ContestSelection pairs
+	contest_ids = ecj.Contest_Id.unique()
+	csj = contest_selection[contest_selection.Contest_Id.isin(contest_ids)]
+
+	# limit to relevant vote counts
+	ecsvcj = df['ElectionContestSelectionVoteCountJoin'][
+		(df['ElectionContestSelectionVoteCountJoin'].ElectionContestJoin_Id.isin(ecj.index)) &
+		(df['ElectionContestSelectionVoteCountJoin'].ContestSelectionJoin_Id.isin(csj.index))]
+
+	# calculate specified dataframe with columns [ReportingUnit,Contest,Selection,VoteCount,CountItemType]
 
 	return summed_by_name
 
@@ -213,6 +298,7 @@ def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,
 		(df['ElectionContestSelectionVoteCountJoin'].ElectionContestJoin_Id.isin(ecj.index)) &
 		(df['ElectionContestSelectionVoteCountJoin'].ContestSelectionJoin_Id.isin(csj.index))]
 
+	# create unsummed dataframe of results
 	if sub_ru_type == atomic_ru_type:
 		unsummed = ecsvcj.merge(
 			df['VoteCount'],left_on='VoteCount_Id',right_index=True).merge(
