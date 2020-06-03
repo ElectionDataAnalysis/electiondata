@@ -444,11 +444,14 @@ def get_by_hand_records_from_file_system(root_dir,table,subdir='db_records_enter
 	return all_from_file, storage_file
 
 
-def pick_record_from_db(sess,element,known_info_d={},required=False):
-	"""Get id and info from database, if it exists"""
+def pick_record_from_db(sess,element,known_info_d={},required=False,db_idx=None):
+	"""Get id and info from database, if it exists.
+	If <db_idx> is passed, return that index and a dictionary with the rest of the record"""
 	element_df = pd.read_sql_table(element,sess.bind,index_col='Id')
 	if element_df.empty:
 		return None,None
+	elif db_idx:
+		return db_idx, element_df.loc[db_idx].to_dict()
 
 	# add columns for plaintext of any enumerations
 	# FIXME also add columns for foreign key plaintext

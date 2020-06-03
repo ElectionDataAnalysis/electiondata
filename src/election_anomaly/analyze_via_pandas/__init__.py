@@ -1,9 +1,10 @@
 #!usr/bin/python3
+import csv
+import os.path
 
 import pandas as pd
 import user_interface as ui
 import munge_routines as mr
-import analyze as an
 import datetime
 import os
 import numpy as np
@@ -86,9 +87,9 @@ def get_id_check_unique(df,conditions=None):
 		return found.first_valid_index()
 
 
-def create_rollup_NEW(
+def create_rollup(
 		session,target_dir,top_ru_id=None,sub_rutype_id=None,sub_rutype_othertext=None,election_id=None,
-		datafile_id_list=None,exclude_total=True):
+		datafile_id_list=None,by_vote_type=True,exclude_total=True):
 	"""<target_dir> is the directory where the resulting rollup will be stored.
 	<election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
 	<top_ru_id> is the internal cdf name of the ReportingUnit whose results will be reported
@@ -96,7 +97,7 @@ def create_rollup_NEW(
 	of the ReportingUnits used in each line of the results file
 	created by the routine. (E.g., county or ward)
 	If <exclude_total> is True, don't include 'total' CountItemType
-	(unless 'total' the only CountItemType)"""
+	(unless 'total' is the only CountItemType)"""
 	# Get name of db for error messages
 	db = session.bind.url.database
 
@@ -108,9 +109,12 @@ def create_rollup_NEW(
 		top_ru_id, top_ru = ui.pick_record_from_db(
 			session,'ReportingUnit',known_info_d={
 				'ReportingUnitType_Id':top_rutype_id, 'OtherReportingUnitType':top_rutype_othertext},required=True)
+	else:
+		top_ru_id, top_ru = ui.pick_record_from_db(session,'ReportingUnit',required=True,db_idx=top_ru_id)
 	if election_id is None:
 		print('Select the Election')
-		election_id,election = ui.pick_record_from_db(session,'Election',required=True)
+	election_id,election = ui.pick_record_from_db(session,'Election',required=True,db_idx=election_id)
+
 	if datafile_id_list is None:
 		# TODO allow several datafiles to be picked
 		# TODO restrict to datafiles whose ReportingUnit intersects top_ru?
@@ -119,10 +123,12 @@ def create_rollup_NEW(
 		datafile_id_list = ui.pick_record_from_db(
 			session,'_datafile',required=True,known_info_d={'Election_Id':election_id})[0]
 	if sub_rutype_id is None:
-		# TODO restrict to types that appear as subreportingunits of top_ru?
+		# TODO restrict to types that appear as sub-reportingunits of top_ru?
 		#  Or that appear in VoteCounts associated to one of the datafiles?
 		print('Select the ReportingUnitType for the lines of the rollup')
 		sub_rutype_id, sub_rutype_othertext,sub_rutype = ui.pick_enum(session,'ReportingUnitType')
+	else:
+		sub_rutype = mr.enum_value_from_id_othertext('ReportingUnitType',sub_rutype_id,sub_rutype_othertext)
 
 	# pull relevant tables
 	df = {}
@@ -137,7 +143,6 @@ def create_rollup_NEW(
 	# pull enums from db, keeping 'Id as a column, not the index
 	for enum in ["ReportingUnitType","CountItemType"]:
 		df[enum] = pd.read_sql_table(enum,session.bind)
-	count_item_type = {r.Id:r.Txt for i,r in df['CountItemType'].iterrows()}
 
 	#  limit to relevant Election-Contest pairs
 	ecj = df['ElectionContestJoin'][df['ElectionContestJoin'].Election_Id == election_id]
@@ -149,7 +154,7 @@ def create_rollup_NEW(
 		df['CandidateSelection'],how='left',left_on='CandidateSelection_Id',right_index=True).merge(
 		df['Candidate'],how='left',left_on='Candidate_Id',right_index=True).rename(
 		columns={'BallotName':'Selection','CandidateContest_Id':'Contest_Id',
-				 'CandidateSelection_Id':'Selection_Id'}).merge(
+				'CandidateSelection_Id':'Selection_Id'}).merge(
 		df['Office'],how='left',left_on='Office_Id',right_index=True)
 	cc = cc[['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id']]
 	if cc.empty:
@@ -212,13 +217,17 @@ def create_rollup_NEW(
 		ru_children,left_on='ChildReportingUnit_Id',right_index=True).merge(
 		sub_ru,left_on='ParentReportingUnit_Id',right_index=True,suffixes=['','_Parent'])
 	unsummed.rename(columns={'Name_Parent':'ReportingUnit'},inplace=True)
-	# FIXME  2. sum by name
 	# add columns with names
 	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'])
 	unsummed = unsummed.merge(contest_selection,how='left',left_on='ContestSelectionJoin_Id',right_index=True)
 
-	cis = 'unknown'
-	cit_list = unsummed['CountItemType'].unique()
+	cis = 'unknown'  # TODO placeholder while CountItemStatus is unused
+	if by_vote_type:
+		cit_list = unsummed['CountItemType'].unique()
+	else:
+		cit_list = ['all']
+		if exclude_total:
+			unsummed = unsummed[unsummed.CountItemType != 'total']
 	if len(cit_list) > 1:
 		cit = 'mixed'
 		if exclude_total:
@@ -230,180 +239,24 @@ def create_rollup_NEW(
 			f'Results dataframe has no CountItemTypes; maybe dataframe is empty?')
 	count_item = f'TYPE{cit}_STATUS{cis}'
 
+	if by_vote_type:
+		index_cols = ['contest_type','Contest','contest_district_type','Selection','ReportingUnit','CountItemType']
+	else:
+		index_cols = ['contest_type','Contest','contest_district_type','Selection','ReportingUnit']
+
 	# sum by groups
-	summed_by_name = unsummed[[
-		'contest_type','Contest','contest_district_type','Selection','ReportingUnit','CountItemType','Count']].groupby(
-		['contest_type','Contest','contest_district_type','Selection','ReportingUnit','CountItemType']).sum()
+	summed_by_name = unsummed[index_cols + ['Count']].groupby(index_cols).sum()
 
 	inventory_columns = [
 		'Election','ReportingUnitType','CountItemType','CountItemStatus',
 		'source_db_url','timestamp']
 	inventory_values = [
-		election,sub_rutype,cit,cis,
+		election['Name'],sub_rutype,cit,cis,
 		str(session.bind.url),datetime.date.today()]
 	sub_dir = os.path.join(f'FROMDB_{session.bind.url.database}',election['Name'],top_ru["Name"],f'by_{sub_rutype}')
-	an.export_to_inventory_file_tree(
-		target_dir,sub_dir,f'{count_item}.txt',
-		inventory_columns,inventory_values,summed_by_name)
-	return summed_by_name
+	export_to_inventory_file_tree(
+		target_dir,sub_dir,f'{count_item}.txt',inventory_columns,inventory_values,summed_by_name)
 
-
-def create_rollup(session,top_ru,sub_ru_type,atomic_ru_type,election,target_dir,exclude_total=True):
-	"""<top_ru> is the internal cdf name of the ReportingUnit whose results will be reported
-	(e.g., Florida or Pennsylvania;Philadelphia).
-	<sub_ru_type> is the ReportingUnitType of the ReportingUnits used in each line of the results file
-	for <election> created by the routine. (E.g., county or ward)
-	<atomic_ru_type> is the ReportingUnitType in the database from which the results
-	at the <sub_ru_type> level are calculated. (E.g., county or precinct)
-	<session> and <db> provide access to the db containing results.
-	If <exclude_total> is True, don't include 'total' CountItemType
-	(unless 'total' the only CountItemType)"""
-
-	# TODO allow user to pick top_ru, sub_ru_type, atomic_ru_type, election from db
-
-	# Get name of db for error messages
-	db = session.bind.url.database
-
-	# pull relevant tables
-	df = {}
-	for element in [
-		'ElectionContestSelectionVoteCountJoin','VoteCount','CandidateContestSelectionJoin',
-		'BallotMeasureContestSelectionJoin','ComposingReportingUnitJoin','Election','ReportingUnit',
-		'ElectionContestJoin','CandidateContest','CandidateSelection','BallotMeasureContest',
-		'BallotMeasureSelection','Office','Candidate']:
-		# pull directly from db, using 'Id' as index
-		df[element] = pd.read_sql_table(element,session.bind,index_col='Id')
-
-	# pull enums from db, keeping 'Id as a column, not the index
-	for enum in ["ReportingUnitType","CountItemType"]:
-		df[enum] = pd.read_sql_table(enum,session.bind)
-	count_item_type = {r.Id:r.Txt for i,r in df['CountItemType'].iterrows()}
-
-	# Get id for top reporting unit, election
-	top_ru_id = get_id_check_unique(df['ReportingUnit'],conditions={'Name':top_ru})
-	election_id = get_id_check_unique(df['Election'],conditions={'Name':election})
-
-	atomic_ru_type_id, atomic_other_ru_type = mr.enum_value_to_id_othertext(
-		df['ReportingUnitType'],atomic_ru_type)
-	sub_ru_type_id, sub_other_ru_type = mr.enum_value_to_id_othertext(
-		df['ReportingUnitType'],sub_ru_type)
-
-	# limit to atomic and sub RUs nested inside the top RU
-	atomic_ru_list = child_rus_by_id(session,[top_ru_id],ru_type=[atomic_ru_type_id, atomic_other_ru_type])
-	if not atomic_ru_list:
-		raise Exception(f'Database {db} shows no ReportingUnits of type {atomic_ru_type} nested inside {top_ru}')
-	# atomic_ru = df['ReportingUnit'].loc[atomic_ru_list]
-
-	sub_ru_list = child_rus_by_id(session,[top_ru_id],ru_type=[sub_ru_type_id, sub_other_ru_type])
-	if not sub_ru_list:
-		raise Exception(f'Database {db} shows no ReportingUnits of type {sub_ru_type} nested inside {top_ru}')
-	# sub_ru = df['ReportingUnit'].loc[sub_ru_list]
-
-	atomic_in_sub_list = child_rus_by_id(session,sub_ru_list,ru_type=[atomic_ru_type_id, atomic_other_ru_type])
-	missing_atomic = [x for x in atomic_ru_list if x not in atomic_in_sub_list]
-	if missing_atomic:
-		missing_names = set(df['ReportingUnit'].loc[missing_atomic,'Name'])
-		ui.show_sample(missing_names,'atomic ReportingUnits',f'are not in any {sub_ru_type}')
-
-	# calculate specified dataframe with columns [ReportingUnit,Contest,Selection,VoteCount,CountItemType]
-	#  limit to relevant reporting units
-	ru_c = df['ReportingUnit'].loc[atomic_ru_list]
-	ru_p = df['ReportingUnit'].loc[sub_ru_list]
-
-	#  limit to relevant Election-Contest pairs
-	ecj = df['ElectionContestJoin'][df['ElectionContestJoin'].Election_Id == election_id]
-
-	#  create contest_selection dataframe, adding Contest, Selection and ElectionDistrict_Id columns
-	cc = df['CandidateContestSelectionJoin'].merge(
-		df['CandidateContest'],how='left',left_on='CandidateContest_Id',right_index=True).rename(
-		columns={'Name':'Contest','Id':'ContestSelectionJoin_Id'}).merge(
-		df['CandidateSelection'],how='left',left_on='CandidateSelection_Id',right_index=True).merge(
-		df['Candidate'],how='left',left_on='Candidate_Id',right_index=True).rename(
-		columns={'BallotName':'Selection','CandidateContest_Id':'Contest_Id',
-				 'CandidateSelection_Id':'Selection_Id'}).merge(
-		df['Office'],how='left',left_on='Office_Id',right_index=True)
-	cc = cc[['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id']]
-	if cc.empty:
-		cc['contest_type'] = None
-	else:
-		cc.loc[:,'contest_type'] = 'Candidate'
-
-	# create ballotmeasure_selection dataframe
-	bm = df['BallotMeasureContestSelectionJoin'].merge(
-		df['BallotMeasureContest'],how='left',left_on='BallotMeasureContest_Id',right_index=True).rename(
-		columns={'Name':'Contest'}).merge(
-		df['BallotMeasureSelection'],how='left',left_on='BallotMeasureSelection_Id',right_index=True).rename(
-		columns={'BallotMeasureSelection_Id':'Selection_Id','BallotMeasureContest_Id':'Contest_Id'}
-	)
-	bm = bm[['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id']]
-	if bm.empty:
-		bm['contest_type'] = None
-	else:
-		bm.loc[:,'contest_type'] = 'BallotMeasure'
-
-	contest_selection = pd.concat([cc,bm])
-
-	# append contest_district_type column
-	ru = df['ReportingUnit'][['ReportingUnitType_Id','OtherReportingUnitType']]
-	contest_selection = contest_selection.merge(ru,how='left',left_on='ElectionDistrict_Id',right_index=True)
-	contest_selection = mr.enum_col_from_id_othertext(contest_selection,'ReportingUnitType',df['ReportingUnitType'])
-	contest_selection.rename(columns={'ReportingUnitType':'contest_district_type'},inplace=True)
-
-	#  limit to relevant ContestSelection pairs
-	contest_ids = ecj.Contest_Id.unique()
-	csj = contest_selection[contest_selection.Contest_Id.isin(contest_ids)]
-
-	# limit to relevant vote counts
-	ecsvcj = df['ElectionContestSelectionVoteCountJoin'][
-		(df['ElectionContestSelectionVoteCountJoin'].ElectionContestJoin_Id.isin(ecj.index)) &
-		(df['ElectionContestSelectionVoteCountJoin'].ContestSelectionJoin_Id.isin(csj.index))]
-
-	# create unsummed dataframe of results
-	if sub_ru_type == atomic_ru_type:
-		unsummed = ecsvcj.merge(
-			df['VoteCount'],left_on='VoteCount_Id',right_index=True).merge(
-			df['ReportingUnit'],left_on='ReportingUnit_Id',right_index=True)
-		unsummed.rename(columns={'Name':'ReportingUnit'},inplace=True)
-	else:
-		unsummed = ecsvcj.merge(
-			df['VoteCount'],left_on='VoteCount_Id',right_index=True).merge(
-			df['ComposingReportingUnitJoin'],left_on='ReportingUnit_Id',right_on='ChildReportingUnit_Id').merge(
-			ru_c,left_on='ChildReportingUnit_Id',right_index=True).merge(
-			ru_p,left_on='ParentReportingUnit_Id',right_index=True,suffixes=['','_Parent'])
-		unsummed.rename(columns={'Name_Parent':'ReportingUnit'},inplace=True)
-
-	# add columns with names
-	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'])
-	unsummed = unsummed.merge(contest_selection,how='left',left_on='ContestSelectionJoin_Id',right_index=True)
-
-	cis = 'unknown'
-	cit_list = unsummed['CountItemType'].unique()
-	if len(cit_list) > 1:
-		cit = 'mixed'
-		if exclude_total:
-			unsummed = unsummed[unsummed.CountItemType != 'total']
-	elif len(cit_list) == 1:
-		cit = cit_list[0]
-	else:
-		raise Exception(
-			f'Results dataframe has no CountItemTypes; maybe dataframe is empty?')
-	count_item = f'TYPE{cit}_STATUS{cis}'
-
-	# sum by groups
-	summed_by_name = unsummed[[
-		'contest_type','Contest','contest_district_type','Selection','ReportingUnit','CountItemType','Count']].groupby(
-		['contest_type','Contest','contest_district_type','Selection','ReportingUnit','CountItemType']).sum()
-
-	inventory_columns = [
-		'Election','ReportingUnitType','CountItemType','CountItemStatus',
-		'source_db_url','timestamp']
-	inventory_values = [
-		election,sub_ru_type,cit,cis,
-		str(session.bind.url),datetime.date.today()]
-	sub_dir = os.path.join(f'FROMDB_{session.bind.url.database}',election,top_ru,f'by_{sub_ru_type}')
-	an.export_to_inventory_file_tree(
-		target_dir,sub_dir,f'{count_item}.txt',
-		inventory_columns,inventory_values,summed_by_name)
 	return summed_by_name
 
 
@@ -635,7 +488,7 @@ def dropoff_contest_group(
 	comp_text = '_'.join(comparison_contests)
 	inv_cols = ['Election','Comparison_Contests','Jurisdiction','by']
 	inv_vals = [election,comp_text,top_ru,sub_ru_type]
-	an.export_to_inventory_file_tree(
+	export_to_inventory_file_tree(
 		output_dir,f'{election}/{comp_text}/{top_ru}/by_{sub_ru_type}','dropoff_extremes.txt',inv_cols,inv_vals)
 	return pd.concat([three_most_undervoted,three_most_overvoted])
 
@@ -694,3 +547,39 @@ def process_single_contest(rollup,contest,output_dir):
 
 	# TODO return anomaly rating for contest
 	return
+
+
+def export_to_inventory_file_tree(target_dir,target_sub_dir,target_file,inventory_columns,inventory_values,df):
+    # TODO standard order for columns
+    # export to file system
+    out_path = os.path.join(
+        target_dir,target_sub_dir)
+    Path(out_path).mkdir(parents=True,exist_ok=True)
+
+    while os.path.isfile(os.path.join(out_path,target_file)):
+        target_file = input(f'There is already a file called {target_file}. Pick another name.\n')
+
+    out_file = os.path.join(out_path,target_file)
+    df.to_csv(out_file,sep='\t')
+
+    # create record in inventory.txt
+    inventory_file = os.path.join(target_dir,'inventory.txt')
+    inv_exists = os.path.isfile(inventory_file)
+    if inv_exists:
+        # check that header matches inventory_columns
+        with open(inventory_file,newline='') as f:
+            reader = csv.reader(f,delimiter='\t')
+            file_header = next(reader)
+            # TODO: offer option to delete inventory file
+            assert file_header == inventory_columns, \
+                f'Header of file {f} is\n{file_header},\ndoesn\'t match\n{inventory_columns}.'
+
+    with open(inventory_file,'a',newline='') as csv_file:
+        wr = csv.writer(csv_file,delimiter='\t')
+        if not inv_exists:
+            wr.writerow(inventory_columns)
+        wr.writerow(inventory_values)
+
+    print(f'Results exported to {out_file}')
+
+    return

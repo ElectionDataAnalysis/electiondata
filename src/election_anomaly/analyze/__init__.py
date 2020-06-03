@@ -1,5 +1,7 @@
 #!usr/bin/python3
 import os.path
+
+from analyze_via_pandas import export_to_inventory_file_tree
 from scipy import stats as stats
 import scipy.spatial.distance as dist
 import numpy as np
@@ -8,8 +10,6 @@ import matplotlib.pyplot as plt
 import db_routines as dbr
 import states_and_files as sf
 import user_interface as ui
-from pathlib import Path
-import csv
 import datetime
 import analyze_via_pandas as avp
 
@@ -425,42 +425,6 @@ def anomaly_list(contest_name, c, aframe_columnlist=None):
                                max_z['raw'],look_at['raw'],max_z['pct'],look_at['pct']],index=aframe_columnlist))
 
     return anomaly_list
-
-
-def export_to_inventory_file_tree(target_dir,target_sub_dir,target_file,inventory_columns,inventory_values,df):
-    # TODO standard order for columns
-    # export to file system
-    out_path = os.path.join(
-        target_dir,target_sub_dir)
-    Path(out_path).mkdir(parents=True,exist_ok=True)
-
-    while os.path.isfile(os.path.join(out_path,target_file)):
-        target_file = (f'There is already a file called {target_file}. Pick another name.\n')
-
-    out_file = os.path.join(out_path,target_file)
-    df.to_csv(out_file,sep='\t')
-
-    # create record in inventory.txt
-    inventory_file = os.path.join(target_dir,'inventory.txt')
-    inv_exists = os.path.isfile(inventory_file)
-    if inv_exists:
-        # check that header matches inventory_columns
-        with open(inventory_file,newline='') as f:
-            reader = csv.reader(f,delimiter='\t')
-            file_header = next(reader)
-            # TODO: offer option to delete inventory file
-            assert file_header == inventory_columns, \
-                f'Header of file {f} is\n{file_header},\ndoesn\'t match\n{inventory_columns}.'
-
-    with open(inventory_file,'a',newline='') as csv_file:
-        wr = csv.writer(csv_file,delimiter='\t')
-        if not inv_exists:
-            wr.writerow(inventory_columns)
-        wr.writerow(inventory_values)
-
-    print(f'Results exported to {out_file}')
-
-    return
 
 
 if __name__ == '__main__':
