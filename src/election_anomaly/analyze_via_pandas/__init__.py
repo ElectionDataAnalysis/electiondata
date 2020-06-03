@@ -57,14 +57,14 @@ def contest_info_by_id(eng):
 
 
 def child_rus_by_id(session,parents,ru_type=None):
-	"""Given a list <parents> of parent ids, return
-	list of those parents along with all children of those parents.
+	"""Given a list <parents> of parent ids (or just a single parent_id), return
+	list containing those parents along with all children of those parents.
 	If (ReportingUnitType_Id,OtherReportingUnit) pair <rutype> is given,
 	restrict children to that ReportingUnitType"""
-	assert len(ru_type) == 2,f'argument {ru_type} does not have exactly 2 elements'
 	cruj = pd.read_sql_table('ComposingReportingUnitJoin',session.bind)
 	children = list(cruj[cruj.ParentReportingUnit_Id.isin(parents)].ChildReportingUnit_Id.unique()) + parents
 	if ru_type:
+		assert len(ru_type) == 2,f'argument {ru_type} does not have exactly 2 elements'
 		ru = pd.read_sql_table('ReportingUnit',session.bind,index_col='Id')
 		right_type_ru = ru[(ru.ReportingUnitType_Id == ru_type[0]) & (ru.OtherReportingUnitType == ru_type[1])]
 		children = [x for x in children if x in right_type_ru.index]
@@ -102,8 +102,12 @@ def create_rollup_NEW(
 
 	# ask user to select any info not supplied
 	if top_ru_id is None:
+		print('Select the type of the top ReportingUnit for the rollup.')
+		top_rutype_id, top_rutype_othertext, top_rutype = ui.pick_enum(session,'ReportingUnitType')
 		print('Select the top ReportingUnit for the rollup')
-		top_ru_id, top_ru = ui.pick_record_from_db(session,'ReportingUnit',required=True)
+		top_ru_id, top_ru = ui.pick_record_from_db(
+			session,'ReportingUnit',known_info_d={
+				'ReportingUnitType_Id':top_rutype_id, 'OtherReportingUnitType':top_rutype_othertext},required=True)
 	if election_id is None:
 		print('Select the Election')
 		election_id,election = ui.pick_record_from_db(session,'Election',required=True)
@@ -138,8 +142,7 @@ def create_rollup_NEW(
 	#  limit to relevant Election-Contest pairs
 	ecj = df['ElectionContestJoin'][df['ElectionContestJoin'].Election_Id == election_id]
 
-	# calculate specified dataframe with columns [ReportingUnit,Contest,Selection,VoteCount,CountItemType]
-	#  create contest_selection dataframe, adding Contest, Selection and ElectionDistrict_Id columns
+	# create contest_selection dataframe, adding Contest, Selection and ElectionDistrict_Id columns
 	cc = df['CandidateContestSelectionJoin'].merge(
 		df['CandidateContest'],how='left',left_on='CandidateContest_Id',right_index=True).rename(
 		columns={'Name':'Contest','Id':'ContestSelectionJoin_Id'}).merge(
@@ -153,7 +156,8 @@ def create_rollup_NEW(
 		cc['contest_type'] = None
 	else:
 		cc.loc[:,'contest_type'] = 'Candidate'
-	#  create ballotmeasure_selection dataframe
+
+	# create ballotmeasure_selection dataframe
 	bm = df['BallotMeasureContestSelectionJoin'].merge(
 		df['BallotMeasureContest'],how='left',left_on='BallotMeasureContest_Id',right_index=True).rename(
 		columns={'Name':'Contest'}).merge(
@@ -165,7 +169,8 @@ def create_rollup_NEW(
 		bm['contest_type'] = None
 	else:
 		bm.loc[:,'contest_type'] = 'BallotMeasure'
-	#  combine all contest_selections
+
+	#  combine all contest_selections into one dataframe
 	contest_selection = pd.concat([cc,bm])
 
 	# append contest_district_type column
@@ -178,13 +183,68 @@ def create_rollup_NEW(
 	contest_ids = ecj.Contest_Id.unique()
 	csj = contest_selection[contest_selection.Contest_Id.isin(contest_ids)]
 
+	# find ReportingUnits of the correct type that are subunits of top_ru
+	sub_ru_ids = child_rus_by_id(session,[top_ru_id],ru_type=[sub_rutype_id, sub_rutype_othertext])
+	if not sub_ru_ids:
+		# TODO better error handling (while not sub_ru_list....)
+		raise Exception(f'Database {db} shows no ReportingUnits of type {sub_rutype} nested inside {top_ru}')
+	sub_ru = df['ReportingUnit'].loc[sub_ru_ids]
+
+	# find all subReportingUnits of top_ru
+	all_subs_ids = child_rus_by_id(session,[top_ru_id])
+
+	# find all children of subReportingUnits
+	children_of_subs_ids = child_rus_by_id(session,sub_ru_ids)
+	ru_children = df['ReportingUnit'].loc[children_of_subs_ids]
+
+	# TODO check for any reporting units that should be included in roll-up but were missed
+
 	# limit to relevant vote counts
 	ecsvcj = df['ElectionContestSelectionVoteCountJoin'][
 		(df['ElectionContestSelectionVoteCountJoin'].ElectionContestJoin_Id.isin(ecj.index)) &
 		(df['ElectionContestSelectionVoteCountJoin'].ContestSelectionJoin_Id.isin(csj.index))]
 
 	# calculate specified dataframe with columns [ReportingUnit,Contest,Selection,VoteCount,CountItemType]
+	#  1. create unsummed dataframe of results
+	unsummed = ecsvcj.merge(
+		df['VoteCount'],left_on='VoteCount_Id',right_index=True).merge(
+		df['ComposingReportingUnitJoin'],left_on='ReportingUnit_Id',right_on='ChildReportingUnit_Id').merge(
+		ru_children,left_on='ChildReportingUnit_Id',right_index=True).merge(
+		sub_ru,left_on='ParentReportingUnit_Id',right_index=True,suffixes=['','_Parent'])
+	unsummed.rename(columns={'Name_Parent':'ReportingUnit'},inplace=True)
+	# FIXME  2. sum by name
+	# add columns with names
+	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'])
+	unsummed = unsummed.merge(contest_selection,how='left',left_on='ContestSelectionJoin_Id',right_index=True)
 
+	cis = 'unknown'
+	cit_list = unsummed['CountItemType'].unique()
+	if len(cit_list) > 1:
+		cit = 'mixed'
+		if exclude_total:
+			unsummed = unsummed[unsummed.CountItemType != 'total']
+	elif len(cit_list) == 1:
+		cit = cit_list[0]
+	else:
+		raise Exception(
+			f'Results dataframe has no CountItemTypes; maybe dataframe is empty?')
+	count_item = f'TYPE{cit}_STATUS{cis}'
+
+	# sum by groups
+	summed_by_name = unsummed[[
+		'contest_type','Contest','contest_district_type','Selection','ReportingUnit','CountItemType','Count']].groupby(
+		['contest_type','Contest','contest_district_type','Selection','ReportingUnit','CountItemType']).sum()
+
+	inventory_columns = [
+		'Election','ReportingUnitType','CountItemType','CountItemStatus',
+		'source_db_url','timestamp']
+	inventory_values = [
+		election,sub_rutype,cit,cis,
+		str(session.bind.url),datetime.date.today()]
+	sub_dir = os.path.join(f'FROMDB_{session.bind.url.database}',election['Name'],top_ru["Name"],f'by_{sub_rutype}')
+	an.export_to_inventory_file_tree(
+		target_dir,sub_dir,f'{count_item}.txt',
+		inventory_columns,inventory_values,summed_by_name)
 	return summed_by_name
 
 

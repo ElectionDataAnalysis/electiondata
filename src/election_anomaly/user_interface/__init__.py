@@ -456,7 +456,7 @@ def pick_record_from_db(sess,element,known_info_d={},required=False):
 	element_enhanced_df = element_df.copy()
 	for e in enums:
 		e_df = pd.read_sql_table(e,sess.bind,index_col='Id')
-		element_enhanced_df = mr.enum_col_from_id_othertext(element_enhanced_df,e,e_df)
+		element_enhanced_df = mr.enum_col_from_id_othertext(element_enhanced_df,e,e_df,drop_old=False)
 
 	# filter by known_info_d
 	d = {k:v for k,v in known_info_d.items() if k in element_enhanced_df.columns}
