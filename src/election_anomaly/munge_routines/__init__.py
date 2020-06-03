@@ -1,14 +1,9 @@
-#!/usr/bin/python3
-# munge_routines/__init__.py
-# under construction
-
 import db_routines as dbr
 import user_interface as ui
 import pandas as pd
 import re
 import os
 import numpy as np
-
 
 
 class MungeError(Exception):
@@ -52,7 +47,6 @@ def clean_raw_df(raw,munger):
     # rename columns to munge by adding suffix
     renamer = {x:f'{x}_{munger.field_rename_suffix}' for x in cols_to_munge}
     raw.rename(columns=renamer,inplace=True)
-    renamed_cols_to_munge = [f'{x}_{munger.field_rename_suffix}' for x in cols_to_munge]
     return raw
 
 
@@ -133,7 +127,8 @@ def replace_raw_with_internal_ids(
             raise MungeError(f'No {element} was found in \'context/dictionary.txt\'')
         elif not to_be_dropped.empty:
             print(
-                f'Warning: Results for {to_be_dropped.shape[0]} rows with unmatched {element}s will not be loaded to database.')
+                f'Warning: Results for {to_be_dropped.shape[0]} rows '
+                f'with unmatched {element}s will not be loaded to database.')
 
     row_df = row_df.merge(raw_ids_for_element,how=how,
         left_on=f'{element}_raw',
@@ -175,9 +170,9 @@ def enum_col_from_id_othertext(df,enum,enum_df,drop_old=True):
     (e.g., 'CountItemType_Id' and 'OtherCountItemType)
     with a plaintext <type> column (e.g., 'CountItemType')
         using the enumeration given in <enum_df>"""
-    assert f'{enum}_Id' in df.columns,f'Dataframe lackes {enum}_Id column'
-    assert f'Other{enum}' in df.columns,f'Dataframe lackes Other{enum} column'
-    assert 'Txt' in enum_df.columns ,'Enumeration dataframe should have column \'Txt\''
+    assert f'{enum}_Id' in df.columns,f'Dataframe lacks {enum}_Id column'
+    assert f'Other{enum}' in df.columns,f'Dataframe lacks Other{enum} column'
+    assert 'Txt' in enum_df.columns,'Enumeration dataframe should have column \'Txt\''
 
     # ensure Id is in the index of enum_df (otherwise df index will be lost in merge)
     if 'Id' in enum_df.columns:
@@ -202,7 +197,7 @@ def enum_col_to_id_othertext(df,type_col,enum_df,drop_old=True):
         df[f'{type_col}_Id'] = df[f'Other{type_col}'] = df.iloc[:,0]
     else:
         assert type_col in df.columns
-        assert 'Txt' in enum_df.columns ,'Enumeration dataframe should have a \'Txt\' column'
+        assert 'Txt' in enum_df.columns,'Enumeration dataframe should have a \'Txt\' column'
 
         # ensure Id is a column, not the index, of enum_df (otherwise df index will be lost in merge)
         if 'Id' not in enum_df.columns:
@@ -221,7 +216,8 @@ def enum_col_to_id_othertext(df,type_col,enum_df,drop_old=True):
         if not other_id_df.empty:
             other_id = other_id_df.iloc[0]['Id']
             df[f'{type_col}_Id'] = df[f'{type_col}_Id'].fillna(other_id)
-            df.loc[df[f'{type_col}_Id'] == other_id,'Other'+type_col] = df.loc[df[f'{type_col}_Id'] == other_id,type_col]
+            df.loc[
+                df[f'{type_col}_Id'] == other_id,'Other'+type_col] = df.loc[df[f'{type_col}_Id'] == other_id,type_col]
         df = df.drop(['Txt'],axis=1)
         for c in ['Id','Txt']:
             if c*3 in df.columns:
@@ -232,7 +228,7 @@ def enum_col_to_id_othertext(df,type_col,enum_df,drop_old=True):
     return df
 
 
-def enum_value_from_id_othertext(enum_df,id,othertext):
+def enum_value_from_id_othertext(enum_df,idx,othertext):
     """Given an enumeration dframe (with cols 'Id' and 'Txt', or index and column 'Txt'),
     along with an (<id>,<othertext>) pair, find and return the plain language
     value for that enumeration (e.g., 'general')."""
@@ -244,7 +240,7 @@ def enum_value_from_id_othertext(enum_df,id,othertext):
     if othertext != '':
         enum_val = othertext
     else:
-        enum_val = enum_df[enum_df.Id == id].loc[:,'Txt'].to_list()[0]
+        enum_val = enum_df[enum_df.Id == idx].loc[:,'Txt'].to_list()[0]
     return enum_val
 
 
@@ -276,14 +272,18 @@ def enum_plaintext_dict_from_file_record(session,element,file_record):
     return enum_plaintext_dict
 
 
-def fk_plaintext_dict_from_db_record(session,element,db_record,excluded=[]):
+def fk_plaintext_dict_from_db_record(session,element,db_record,excluded=None):
     """Return a dictionary of <name>:<value> for any <name>_Id that is a foreign key
     in the <element> table, excluding any foreign key in the list <excluded>"""
     fk_dict = {}
     fk_df = dbr.get_foreign_key_df(session,element)
-    for i,r in fk_df.iterrows():
-        # TODO normalize: do elts of <excluded> end in '_Id' or not?
-        if i not in excluded and i[:-3] not in excluded:
+    if excluded:
+        for i,r in fk_df.iterrows():
+            # TODO normalize: do elts of <excluded> end in '_Id' or not?
+            if i not in excluded and i[:-3] not in excluded:
+                fk_dict[i] = dbr.name_from_id(session,r['foreign_table_name'],db_record[i])
+    else:
+        for i,r in fk_df.iterrows():
             fk_dict[i] = dbr.name_from_id(session,r['foreign_table_name'],db_record[i])
     return fk_dict
 
@@ -410,7 +410,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
         # set contest_type where id was found
         working.loc[working[f'{c_type}Contest_Id'].notnull(),'contest_type'] = c_type
 
-         # drop column with munged name
+        # drop column with munged name
         working.drop(f'{c_type}Contest',axis=1,inplace=True)
 
     # drop rows with unmatched contests
@@ -419,7 +419,8 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
     if working_temp.empty:
         raise MungeError('No contests in database matched. No results will be loaded to database.')
     elif not to_be_dropped.empty:
-        print(f'Warning: Results for {to_be_dropped.shape[0]} rows with unmatched contests will not be loaded to database.')
+        print(f'Warning: Results for {to_be_dropped.shape[0]} rows '
+              f'with unmatched contests will not be loaded to database.')
     working = working_temp
 
     # get ids for remaining info sourced from rows and columns
