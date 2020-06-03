@@ -20,7 +20,7 @@ if __name__ == '__main__':
 		munger_name = None
 
 	else:
-		d = ui.config(section='050',msg='Pick a paramfile for 050.')
+		d = ui.config(section='election_anomaly',msg='Pick a parameter file.')
 		project_root = d['project_root']
 		juris_name = d['juris_name']
 		db_paramfile = d['db_paramfile']
@@ -49,7 +49,6 @@ if __name__ == '__main__':
 	munger = ui.pick_munger(mungers_dir=os.path.join(project_root,'mungers'),
 							project_root=project_root,session=sess,munger_name=munger_name)
 
-	# get datafile & info
 	# load new datafile
 	ui.new_datafile(sess,munger,data_path,juris=juris,project_root=project_root)
 

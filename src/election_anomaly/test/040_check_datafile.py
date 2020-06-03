@@ -16,21 +16,16 @@ if __name__ == '__main__':
 		project_root = ui.get_project_root()
 		db_paramfile = ui.pick_paramfile()
 		db_name = ui.pick_database(project_root,db_paramfile)
-
+		[dfile_d, enum_d, data_path] = ui.pick_datafile(project_root,sess)
 
 	else:
 		d = ui.config(section='election_anomaly',msg='Pick a parameter file.')
 		project_root = d['project_root']
 		db_paramfile = d['db_paramfile']
 		db_name = d['db_name']
+		data_path = d['data_path']
 
-
-
-
-
-	#project_root = ui.get_project_root()
-
-	# initialize root widget for tkinter
+  # initialize root widget for tkinter
 	tk_root = tk.Tk()
 
 	# pick jurisdiction
@@ -46,8 +41,7 @@ if __name__ == '__main__':
 	munger = ui.pick_munger(mungers_dir=os.path.join(project_root,'mungers'),
 							project_root=project_root,session=sess)
 
-	# get datafile & info
-	[dfile_d, enum_d, data_path] = ui.pick_datafile(project_root,sess)
+
 
 	# check munger against datafile.
 	munger.check_against_datafile(data_path)
