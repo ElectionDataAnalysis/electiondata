@@ -1,4 +1,3 @@
-#!usr/bin/python3
 import csv
 import os.path
 
@@ -203,6 +202,10 @@ def create_rollup(
 	ru_children = df['ReportingUnit'].loc[children_of_subs_ids]
 
 	# TODO check for any reporting units that should be included in roll-up but were missed
+	missing = [x for x in all_subs_ids if x not in children_of_subs_ids]
+	if missing:
+		ui.report_problems(missing,msg=f'The following reporting units are nested in {top_ru["Name"]} '
+								f'but are not nested in any {sub_rutype} nested in {top_ru["Name"]}')
 
 	# limit to relevant vote counts
 	ecsvcj = df['ElectionContestSelectionVoteCountJoin'][
@@ -454,8 +457,7 @@ def dropoff_one_contest(
 	plt.ylabel(f'Dropoff correcion (thousands)')
 	comps_text = "\n".join(comparison_contests)
 	plt.suptitle(
-		f'{contest} dropoff by {sub_ru_type}\nCorrection relative to contests\n{comps_text}',
-	fontsize=10)
+		f'{contest} dropoff by {sub_ru_type}\nCorrection relative to contests\n{comps_text}',fontsize=10)
 	for e in extremes:
 		plt.annotate(short_name(e),(dfa.loc[e,contest]/1000,dfa.loc[e,d]/1000))
 	plt.savefig(os.path.join(output_dir,election,f'scatter_{contest}.png'))
@@ -504,10 +506,10 @@ def process_single_contest(rollup,contest,output_dir):
 	with open(os.path.join(out_path,f'{contest}.txt'),'w') as f:
 		f.write(f'{contest}\n\n')
 
-		counttypes = rollup['CountItemType'].unique()
+		count_types = rollup['CountItemType'].unique()
 		selections = rollup['Selection'].unique()
 
-		for ct in counttypes:
+		for ct in count_types:
 			f.write(f'\t{ct}\n')
 			# filter out for contest and count_type
 			df = single_contest_selection_columns(rollup,contest,ct)
@@ -550,36 +552,35 @@ def process_single_contest(rollup,contest,output_dir):
 
 
 def export_to_inventory_file_tree(target_dir,target_sub_dir,target_file,inventory_columns,inventory_values,df):
-    # TODO standard order for columns
-    # export to file system
-    out_path = os.path.join(
-        target_dir,target_sub_dir)
-    Path(out_path).mkdir(parents=True,exist_ok=True)
+	# TODO standard order for columns
+	# export to file system
+	out_path = os.path.join(
+		target_dir,target_sub_dir)
+	Path(out_path).mkdir(parents=True,exist_ok=True)
 
-    while os.path.isfile(os.path.join(out_path,target_file)):
-        target_file = input(f'There is already a file called {target_file}. Pick another name.\n')
+	while os.path.isfile(os.path.join(out_path,target_file)):
+		target_file = input(f'There is already a file called {target_file}. Pick another name.\n')
 
-    out_file = os.path.join(out_path,target_file)
-    df.to_csv(out_file,sep='\t')
+	out_file = os.path.join(out_path,target_file)
+	df.to_csv(out_file,sep='\t')
 
-    # create record in inventory.txt
-    inventory_file = os.path.join(target_dir,'inventory.txt')
-    inv_exists = os.path.isfile(inventory_file)
-    if inv_exists:
-        # check that header matches inventory_columns
-        with open(inventory_file,newline='') as f:
-            reader = csv.reader(f,delimiter='\t')
-            file_header = next(reader)
-            # TODO: offer option to delete inventory file
-            assert file_header == inventory_columns, \
-                f'Header of file {f} is\n{file_header},\ndoesn\'t match\n{inventory_columns}.'
+	# create record in inventory.txt
+	inventory_file = os.path.join(target_dir,'inventory.txt')
+	inv_exists = os.path.isfile(inventory_file)
+	if inv_exists:
+		# check that header matches inventory_columns
+		with open(inventory_file,newline='') as f:
+			reader = csv.reader(f,delimiter='\t')
+			file_header = next(reader)
+			# TODO: offer option to delete inventory file
+			assert file_header == inventory_columns, \
+				f'Header of file {f} is\n{file_header},\ndoesn\'t match\n{inventory_columns}.'
 
-    with open(inventory_file,'a',newline='') as csv_file:
-        wr = csv.writer(csv_file,delimiter='\t')
-        if not inv_exists:
-            wr.writerow(inventory_columns)
-        wr.writerow(inventory_values)
+	with open(inventory_file,'a',newline='') as csv_file:
+		wr = csv.writer(csv_file,delimiter='\t')
+		if not inv_exists:
+			wr.writerow(inventory_columns)
+		wr.writerow(inventory_values)
 
-    print(f'Results exported to {out_file}')
-
-    return
+	print(f'Results exported to {out_file}')
+	return
