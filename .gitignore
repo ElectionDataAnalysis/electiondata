@@ -39,5 +39,5 @@ src/jurisdictions/database.ini
 temp
 /venv/
 src/election_anomaly/analyze/__pycache__/__init__.cpython-37.pyc
-src/election_anomaly/db_routines/Create_CDF_db/__pycache__/__init__.cpython-37.pyc
+src/election_anomaly/db_routines/create_cdf_db/__pycache__/__init__.cpython-37.pyc
 

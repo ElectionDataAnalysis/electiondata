@@ -4,7 +4,6 @@ from sqlalchemy.orm import sessionmaker
 import db_routines as dbr
 import user_interface as ui
 import analyze_via_pandas as avp
-import pandas as pd
 
 if __name__ == '__main__':
     interact = input('Run interactively (y/n)?\n')
