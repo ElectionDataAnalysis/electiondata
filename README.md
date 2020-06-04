@@ -9,13 +9,20 @@ Funding provided October 2019 - April 2021 by the National Science Foundation
 # License
 See [LICENSE.md](./LICENSE.md)
 
-#General note
- The word 'state' includes also the District of Columbia and the five major US territories: Puerto Rico, American Samoa, the US Virgin Islands, the Northern Mariana Islands and Guam.
+# Overview
+This repository hopes to provide reliable tools for consolidation and analysis of election results. 
+ * Consolidation: can take as input election results files from a wide variety of sources and loads the data into the [common data format](https://github.com/usnistgov/ElectionResultsReporting) from the National Institute of Standards and Technology (NIST)
+ * Export: creates tab-separated flat export files of results sets rolled up to any desired intermediate geography (e.g., by county, or by congressional district)
+ * Analysis: provides a variety of analysis tools
+ 
+[//]: # "TODO keep this up to date"
+ * Visualization: provides a variety of visualization tools.
+ 
+[//]: # "TODO keep this up to date"
 
-## Nota bene
- * leading and trailing whitespace is stripped from values in each datafile
 # How to run the app
-***
+[//]: # "TODO keep this up to date"
+
 
 ## Environment
 ### Database
@@ -31,7 +38,7 @@ user=<your user name>
 password=<your password>
 ```
   
-###`context` for information about the state that cannot be read from the contents of the data and metadata files. 
+### Context information by jurisdiction
 This information may be common to many datafiles; it may be related to information in the datafile but may require some contextual knowledge outside of any particular datafile. For example, the fact that the election on 2018-11-06 in North Carolina was a `general` election is contextual knowledge. Each file in the `context` directory should have a single header row.
 
 
@@ -97,3 +104,4 @@ Even if the munger is essentially unchanged, each new datafile may have new Repo
 A new datafile may have new names for existing elements (such as Reporting Units or Offices) ***
 
 More rarely, a new datafile may have new Offices and CandidateContests.
+
