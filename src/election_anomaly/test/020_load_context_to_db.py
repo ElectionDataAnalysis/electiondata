@@ -1,7 +1,5 @@
-import states_and_files as sf
 import os
 import user_interface as ui
-import munge_routines as mr
 import db_routines as dbr
 from sqlalchemy.orm import sessionmaker
 
@@ -19,8 +17,6 @@ if __name__ == '__main__':
 		juris_name = None
 		db_paramfile = d['db_paramfile']
 		munger_name = d['munger_name']
-
-
 
 	j_path = os.path.join(project_root,'jurisdictions')
 	juris = ui.pick_juris_from_filesystem(project_root,j_path,check_files=False)
