@@ -1,6 +1,6 @@
 item	value
+count_columns
 header_row_count
 field_name_row
-count_columns
 file_type
 encoding
