@@ -6,14 +6,13 @@
 # TODO consistency check on SelectionElectionContestVoteCountJoin to make sure ElectionContestJoin_Id
 #  and ContestSelectionJoin_Id share a contest? Should this happen during the rollup process?
 
-import db_routines as dbr
 import sqlalchemy
-from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,Date,ForeignKey
+from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,ForeignKey
 import os
 import pandas as pd
 
 
-def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/',delete_existing=False):
+def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
     """ schema example: 'cdf'; Creates cdf tables in the given schema
     (or directly in the db if schema == None)
     e_table_list is a list of enumeration tables for the CDF, e.g., ['ReportingUnitType','CountItemType', ... ]
@@ -146,34 +145,29 @@ def create_table(metadata,id_seq,name,table_type,dirpath):
               Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
               * col_list,
               * true_foreign_key_list, * null_constraint_list)
-
     else:
         raise Exception(f'table_type {table_type} not recognized')
     return
 
 
-def enum_table_list(dirpath= 'CDF_schema_def_info'):
-    #if not dirpath[-1] == '/': dirpath += '\''
-    enum_path = os.path.join(dirpath, 'enumerations' )
+def enum_table_list(dirpath='CDF_schema_def_info'):
+    enum_path = os.path.join(dirpath, 'enumerations')
     file_list = os.listdir(enum_path)
     for f in file_list:
         assert f[-4:] == '.txt', 'File name in ' + dirpath + 'enumerations/ not in expected form: ' + f
-    enum_table_list = [f[:-4] for f in file_list]
-    return enum_table_list
+    e_table_list = [f[:-4] for f in file_list]
+    return e_table_list
 
 
-def fill_cdf_enum_tables(session,schema,dirpath= 'CDF_schema_def_info'):
+def fill_cdf_enum_tables(session,schema,dirpath='CDF_schema_def_info'):
     """takes lines of text from file and inserts each line into the txt field of the enumeration table"""
-    #if not dirpath[-1] == '/': dirpath += '\''
     e_table_list = enum_table_list(dirpath)
     for f in e_table_list:
         if f == 'BallotMeasureSelection':
             txt_col='Selection'
         else:
             txt_col='Txt'
-        #dframe = pd.read_csv('{}enumerations/{}.txt'.format(dirpath,f),header=None,names = [txt_col])
         dframe = pd.read_csv(os.path.join(dirpath, 'enumerations', f + '.txt'), header=None, names=[txt_col])
         dframe.to_sql(f,session.bind,schema=schema,if_exists='append',index=False)
     session.flush()
     return e_table_list
-
