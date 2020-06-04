@@ -206,7 +206,7 @@ def pick_database(project_root,paramfile=None,db_name=None):
 	[con, paramfile] = dbr.establish_connection(paramfile=paramfile)
 	print(f'Connection established to database {con.info.dbname}')
 	cur = con.cursor()
-	db_df = dbr.get_database_names(con,cur)
+	db_df = dbr.get_database_names(con)
 	db_idx,desired_db = pick_one(db_df,0,item='database')
 	if db_idx:
 		create_new = False

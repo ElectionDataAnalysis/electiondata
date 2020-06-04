@@ -18,14 +18,14 @@ class CdfDbException(Exception):
     pass
 
 
-def get_database_names(con,cur):
-    names = pd.DataFrame(query('SELECT datname FROM pg_database',[],[],con,cur))
+def get_database_names(con):
+    names = pd.read_sql('SELECT datname FROM pg_database',con)
     return names
 
 
 def create_database(con,cur,db_name):
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-    q = "DROP DATABASE IF EXISTS {0}"
+    q = f"DROP DATABASE IF EXISTS {0}"
     sql_ids = [db_name]
     out1 = query(q,sql_ids,[],con,cur)
 
@@ -34,7 +34,6 @@ def create_database(con,cur,db_name):
     return out1,out2
 
 
-# TODO where should this happen?
 def fill_composing_reporting_unit_join(session):
     print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
     ru_dframe = pd.read_sql_table('ReportingUnit',session.bind,'cdf',index_col=None)
@@ -77,7 +76,7 @@ def append_to_composing_reporting_unit_join(session,ru):
     return cruj_dframe
 
 
-def establish_connection(paramfile = '../jurisdictions/database.ini',db_name='postgres'):
+def establish_connection(paramfile='../jurisdictions/database.ini',db_name='postgres'):
     """Return a db connection object; if <paramfile> fails,
     return corrected <paramfile>"""
     try:
@@ -92,22 +91,19 @@ def establish_connection(paramfile = '../jurisdictions/database.ini',db_name='po
     return con, paramfile
 
 
-def sql_alchemy_connect(schema=None,paramfile=None,db_name='postgres'):
+def sql_alchemy_connect(paramfile=None,db_name='postgres'):
     """Returns an engine and a metadata object"""
     if not paramfile:
         paramfile = ui.pick_paramfile()
     params = ui.config(paramfile)
-    if db_name != 'postgres': params['dbname'] = db_name
+    if db_name != 'postgres':
+        params['dbname'] = db_name
     # We connect with the help of the PostgreSQL URL
     url = 'postgresql://{user}:{password}@{host}:{port}/{dbname}'
     url = url.format(**params)
 
     # The return value of create_engine() is our connection object
     engine = db.create_engine(url, client_encoding='utf8')
-
-    # We then bind the connection to MetaData()
-    meta = db.MetaData(bind=engine, reflect=True,schema=schema)
-
     return engine
 
 
@@ -116,7 +112,7 @@ def add_integer_cols(session,table,col_list):
     q = f'ALTER TABLE "{table}" {add}'
     sql_ids=[]
     strs = []
-    raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
+    raw_query_via_sqlalchemy(session,q,sql_ids,strs)
     return
 
 
@@ -125,7 +121,7 @@ def drop_cols(session,table,col_list):
     q = f'ALTER TABLE "{table}" {drop}'
     sql_ids=[]
     strs = []
-    raw_query_via_SQLALCHEMY(session,q,sql_ids,strs)
+    raw_query_via_sqlalchemy(session,q,sql_ids,strs)
     return
 
 
@@ -154,38 +150,6 @@ def get_cdf_db_table_names(eng):
     return cdf_elements, cdf_enumerations, cdf_joins, others
 
 
-# TODO use this?
-def order_by_ref(elements,table_type,project_root):
-    """
-    Return <table_list> sorted by foreign key references from
-    the definitions in the CDF_schema_def_info/<table_type> directory
-    (Ideally this should pull from database instead, which requires
-    true foreign keys everywhere.)
-    """
-    dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info',table_type)
-    ok_list = []
-    elements_to_process = list(elements)
-    while elements_to_process:
-        element = elements_to_process[0]
-        # check foreign keys; if any refers to an elt yet to be processed, change to that elt
-        #  note that any foreign keys for elements are to other elements, so it's OK to do this without considering
-        #  joins first or concurrently.
-        foreign_keys = pd.read_csv(os.path.join(dir,element,'foreign_keys.txt'),sep='\t')
-        for i,r in foreign_keys.iterrows():
-            fk_set = set(r['refers_to'].split(';'))    # lists all targets of the foreign key r['fieldname']
-            try:
-                element = [e for e in fk_set if e in elements_to_process].pop()
-                break
-            except IndexError:
-                pass
-        # append element to ok_list
-        ok_list.append(element)
-        # remove element from list of yet-to-be-processed
-        elements_to_process.remove(element)
-
-    return ok_list
-
-
 def read_enums_from_db_table(sess,element):
 	"""Returns list of enum names (e.g., 'CountItemType') for the given <element>.
 	Identifies enums by the Other{enum} column name (e.g., 'OtherCountItemType)"""
@@ -195,7 +159,7 @@ def read_enums_from_db_table(sess,element):
 	return enums
 
 
-# TODO combine query() and raw_query_via_SQLALCHEMY()?
+# TODO combine query() and raw_query_via_sqlalchemy()?
 def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to create db and schemas
     format_args = [sql.Identifier(a) for a in sql_ids]
     cur.execute(sql.SQL(q).format(*format_args),strs)
@@ -206,7 +170,7 @@ def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to crea
         return None
 
 
-def raw_query_via_SQLALCHEMY(session,q,sql_ids,strs):
+def raw_query_via_sqlalchemy(session,q,sql_ids,strs):
     connection = session.bind.connect()
     con = connection.connection
     cur = con.cursor()
@@ -462,5 +426,3 @@ def get_name_field(element):
 if __name__ == '__main__':
 
     print('Done')
-
-
