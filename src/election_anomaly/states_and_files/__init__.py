@@ -3,7 +3,6 @@ import os.path
 import db_routines
 import db_routines as dbr
 import pandas as pd
-import warnings   # TODO use warnings module to handle warnings in all files
 import munge_routines as mr
 import user_interface as ui
 import re
@@ -150,7 +149,7 @@ class Munger:
         while not checked:
             problems = []
             # set of cdf_elements in cdf_elements.txt is same as set pulled from db
-            [db_elements, db_enumerations, db_joins, db_others] = dbr.get_cdf_db_table_names(sess.bind)
+            db_elements = dbr.get_cdf_db_table_names(sess.bind)[0]
             db_elements.add('CountItemType')
             db_elements.add('BallotMeasureSelection')
             db_elements.add('_datafile')
@@ -186,6 +185,10 @@ class Munger:
     def check_against_datafile(self,datafile_path):
         """check that munger is compatible with datafile <raw>;
         offer user chance to correct munger"""
+
+        # initialize to keep syntax-checker happy
+        raw = pd.DataFrame([[]])
+
         checked = False
         while not checked:
             problems = []
@@ -317,7 +320,7 @@ def ensure_context_files(juris_path,project_root):
 
     # reorder template_list, so that first things are created first
     ordered_list = ['dictionary','ReportingUnit','Office','CandidateContest']
-    template_list = ['dictionary'] + [x for x in template_list if x != 'dictionary']
+    template_list = ordered_list + [x for x in template_list if x not in ordered_list]
 
     # ensure necessary all files exist
     for context_file in template_list:
@@ -374,6 +377,7 @@ def ensure_context_files(juris_path,project_root):
     return
 
 
+# noinspection PyUnresolvedReferences
 def ensure_munger_files(munger_name,project_root=None):
     """Check that the munger files are complete and consistent with one another.
     Assumes munger directory exists. Assumes dictionary.txt is in the template file"""
@@ -415,7 +419,8 @@ def ensure_munger_files(munger_name,project_root=None):
             #  check same number of rows
             elif cf_df.shape[0] != temp.shape[0]:
                 first_col = '\n'.join(list(temp.iloc[:,0]))
-                problems.append(f'Wrong number of rows in {munger_file}.txt. \nFirst column must be exactly:\n{first_col}')
+                problems.append(
+                    f'Wrong number of rows in {munger_file}.txt. \nFirst column must be exactly:\n{first_col}')
             elif (cf_df.iloc[:,0] != temp.iloc[:,0]).any():
                 first_error = (cf_df.iloc[:,0] != temp.iloc[:,0]).index.to_list()[0]
                 first_col = '\n'.join(list(temp.iloc[:,0]))
@@ -583,7 +588,8 @@ def check_dependencies(context_dir,element):
         # create list of elements, removing any nulls
         ru = list(
             pd.read_csv(
-                os.path.join(context_dir,f'{target}.txt'),sep='\t').fillna('').loc[:,db_routines.get_name_field(target)])
+                os.path.join(
+                    context_dir,f'{target}.txt'),sep='\t').fillna('').loc[:,db_routines.get_name_field(target)])
         try:
             ru.remove(np.nan)
         except ValueError:

@@ -381,12 +381,14 @@ def translate_show_user_to_db(show_user,edf):
 	return db_record, enum_val
 
 
-def pick_or_create_record(sess,project_root,element,known_info_d={}):
+def pick_or_create_record(sess,project_root,element,known_info_d=None):
 	"""User picks record from database if exists.
 	Otherwise user picks from file system if exists.
 	Otherwise user enters all relevant info.
 	Store record in file system and/or db if new
 	Return index of record in database"""
+	if not known_info_d:
+		known_info_d = {}
 
 	storage_dir = os.path.join(project_root,'db_records_entered_by_hand')
 	# pick from database if possible
@@ -443,9 +445,12 @@ def get_by_hand_records_from_file_system(root_dir,table,subdir='db_records_enter
 	return all_from_file, storage_file
 
 
-def pick_record_from_db(sess,element,known_info_d={},required=False,db_idx=None):
+def pick_record_from_db(sess,element,known_info_d=None,required=False,db_idx=None):
 	"""Get id and info from database, if it exists.
 	If <db_idx> is passed, return that index and a dictionary with the rest of the record"""
+	if not known_info_d:
+		known_info_d = {}
+
 	element_df = pd.read_sql_table(element,sess.bind,index_col='Id')
 	if element_df.empty:
 		return None,None
@@ -507,14 +512,17 @@ def pick_enum(sess,e):
 	return e_idx,e_othertext,e_plaintext
 
 
-def pick_record_from_file_system(storage_dir,table,known_info_d={}):
+def pick_record_from_file_system(storage_dir,table,known_info_d=None):
 	""" Looks for record in file system.
 	Returns a file-style <record> (with enums as plaintext).
 	If no record found, <idx> is none;
 	otherwise value of <idx> is irrelevant."""
 	# initialize to keep syntax-checker happy
-	name_field = dbr.get_name_field(table)
 	filtered_file = None
+	if not known_info_d:
+		known_info_d = {}
+	name_field = dbr.get_name_field(table)
+
 	# identify/create the directory for storing individual records in file system
 	if not os.path.isdir(storage_dir):
 		os.makedirs(storage_dir)
