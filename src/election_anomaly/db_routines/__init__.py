@@ -134,13 +134,13 @@ def get_cdf_db_table_names(eng):
     cdf_joins = set()
     others = set()
     for t in public.table_name.unique():
-        # test table name string
+        # main_routines table name string
         if t[0] == '_':
             others.add(t)
         elif t[-4:] == 'Join':
             cdf_joins.add(t)
         else:
-            # test columns
+            # main_routines columns
             cols = public[public.table_name == t].column_name.unique()
             if set(cols) == {'Id','Txt'} or set(cols) == {'Id','Selection'}:
                 cdf_enumerations.add(t)

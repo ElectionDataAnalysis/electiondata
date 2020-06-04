@@ -10,7 +10,7 @@ Funding provided October 2019 - April 2021 by the National Science Foundation
 See [LICENSE.md](./LICENSE.md)
 
 # Overview
-This repository hopes to provide reliable tools for consolidation and analysis of election results. 
+This repository hopes to provide reliable tools for consolidation and analysis of raw election results from the most reliable sources -- the election agencies themselves. 
  * Consolidation: can take as input election results files from a wide variety of sources and loads the data into the [common data format](https://github.com/usnistgov/ElectionResultsReporting) from the National Institute of Standards and Technology (NIST)
  * Export: creates tab-separated flat export files of results sets rolled up to any desired intermediate geography (e.g., by county, or by congressional district)
  * Analysis: provides a variety of analysis tools
@@ -39,13 +39,15 @@ password=<your password>
 ```
   
 ### Context information by jurisdiction
-This information may be common to many datafiles; it may be related to information in the datafile but may require some contextual knowledge outside of any particular datafile. For example, the fact that the election on 2018-11-06 in North Carolina was a `general` election is contextual knowledge. Each file in the `context` directory should have a single header row.
+Because each original raw results file comes from a particular election agency, and each election agency has a fixed jurisdiction, it is natural to organize information by jurisdiction. 
+
+Each jurisdiction should have its own subdirectory of the directory `src/jurisdictions`.
 
 
 ## Mungers
 Election result data comes in a variety of file formats. Even when the basic format is the same, file columns may have different interpretations. The code is built to ease -- as much as possible -- the chore of processing and interpreting each format. Following the [Jargon File](http://catb.org/jargon/html/M/munge.html), which gives one meaning of "munge" as "modify data in some way the speaker doesn't need to go into right now or cannot describe succinctly," we call each set of basic information about interpreting an election result file a "munger". The munger template is in the directory `src/templates/munger_templates`.
 
-The folder `src/mungers` holds the munger directories. Each munger directory needs the following component files:
+The directory `src/mungers` holds the munger directories. Each munger directory needs the following component files:
  * `format.txt` holds information about the file format
    * `count_columns` is a comma-separated list of integers identifying the columns that contain vote counts. Our convention is to count from the left of the file, with leftmost column as 0.
    * `header_row_count` is an integer, the number of header rows in the file

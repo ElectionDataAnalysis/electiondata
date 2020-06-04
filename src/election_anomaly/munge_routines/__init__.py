@@ -319,7 +319,7 @@ def db_record_from_file_record(session,element,file_record):
 
 
 def good_syntax(s):
-    """Returns true if formula string <s> passes certain syntax test(s)"""
+    """Returns true if formula string <s> passes certain syntax main_routines(s)"""
     good = True
     # check that angle brackets match
     #  split the string by opening angle bracket:

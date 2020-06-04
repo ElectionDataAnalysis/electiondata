@@ -254,7 +254,7 @@ class ContestRollup:
         return ContestRollup(self.election,self.roll_up_to_ru_type,self.atomic_ru_type,contest_name_list=new_list)
 
     def restrict_by_contest_name_NEW(self,contest_name_list):
-        # TODO test: does this change the original adf?
+        # TODO main_routines: does this change the original adf?
         new_adf = self
         if self.contest_name_list:
             new_adf.dframe = self.dframe[self.dframe['ContestName'].isin(contest_name_list)]
@@ -428,4 +428,4 @@ def anomaly_list(contest_name, c, aframe_columnlist=None):
 
 
 if __name__ == '__main__':
-    print('Use routine in src/test directory (e.g., pull_top_counts.py')
+    print('Use routine in src/main_routines directory (e.g., pull_top_counts.py')
