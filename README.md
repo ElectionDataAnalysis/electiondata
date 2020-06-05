@@ -2,25 +2,33 @@
 _Documentation under construction_
 
 # Funding
-Funding provided October 2019 - September 2020 by the National Science Foundation, Award #1936809, "EAGER: Data Science for Election Verification" 
+Funding provided October 2019 - April 2021 by the National Science Foundation
+ * Award #1936809, "EAGER: Data Science for Election Verification" 
+ * Award #2027089, "RAPID: Election Result Anomaly Detection for 2020"
 
 # License
 See [LICENSE.md](./LICENSE.md)
 
-#General note
- The word 'state' includes also the District of Columbia and the five major US territories: Puerto Rico, American Samoa, the US Virgin Islands, the Northern Mariana Islands and Guam.
+# Overview
+This repository hopes to provide reliable tools for consolidation and analysis of raw election results from the most reliable sources -- the election agencies themselves. 
+ * Consolidation: can take as input election results files from a wide variety of sources and loads the data into the [common data format](https://github.com/usnistgov/ElectionResultsReporting) from the National Institute of Standards and Technology (NIST)
+ * Export: creates tab-separated flat export files of results sets rolled up to any desired intermediate geography (e.g., by county, or by congressional district)
+ * Analysis: provides a variety of analysis tools
+ 
+[//]: # "TODO keep this up to date"
+ * Visualization: provides a variety of visualization tools.
+ 
+[//]: # "TODO keep this up to date"
 
-## Nota bene
- * leading and trailing whitespace is stripped from values in each datafile
- * munger & munger v. datafile review is still rough. When in doubt, start over
- * in `cdf_tables.txt` use same formula for `Office` and `CandidateContest` 
-## How to run the app
-***
+# How to run the app
+[//]: # "TODO keep this up to date"
+
 
 ## Environment
 ### Database
-You will need access to a postgresql database, with your login credentials stored in a file. Contents of that file should be:
+The system runs out of the box with a postgresql database; to use other varieties of SQL, you will need to modify the routines in the `dbr_routines` module. 
 
+Store your login credentials stored in a file. Contents of that file should be:
 ```
 [postgresql]
 host=<url for your postgresql server>
@@ -29,78 +37,37 @@ dbname=<name of your election data database>
 user=<your user name>
 password=<your password>
 ```
-
-
-### .gitignore
-Folders you will need in your local repo:
-`src/jurisdictions` holds your jurisdiction-specific data. 
- * Each jurisdiction needs its own directory, e.g., `src/jurisdictions/NC` for North Carolina. 
-
-## State-specific information
-Each state directory has three required subfolders.
-
   
-###`context` for information about the state that cannot be read from the contents of the data and metadata files. 
-This information may be common to many datafiles; it may be related to information in the datafile but may require some contextual knowledge outside of any particular datafile. For example, the fact that the election on 2018-11-06 in North Carolina was a `general` election is contextual knowledge. Each file in the `context` directory should have a single header row.
+### Context information by jurisdiction
+Because each original raw results file comes from a particular election agency, and each election agency has a fixed jurisdiction, it is natural to organize information by jurisdiction. 
 
-    * `BallotMeasureSelection.txt` Header is `Selection`; one row for each possible selection, e.g., `Yes` or `No` or `For` or `Against`. 
-    * `datafile.txt` describes all datafiles for the state. Columns are:
-      * `name`	
-      * `encoding`	
-      * `separator` ('comma' or 'tab')
-      * `source_url`
-      * `file_date` date given for the file at the source
-      * `download_date`	
-      * `note`	
-
-    * `remark.txt` String containing any notable information about the state and its data
-    * `Election.txt` Tab-separated list of elections. Columns are:
-      * `Name`
-      * `ElectionType`
-      * `ShortName`    Name that will be used for directories, etc.
-      * `ReportingUnit` Parent Reporting Units (e.g., 'North Carolina' must precede children (e.g., 'North Carolina;Alamance County'))
-      * `StartDate`
-      * `EndDate`
-    * `Office.txt` Tab-separated list of office names. Note that when datafiles are processed, lines relevant to offices **not** listed here will not be loaded into the common data format schema. Note that party nominees for office contests are treated as offices; i.e., 'US Senate primary; Republican Party' is an Office. Columns are:
-      * `Name`
-      * `ElectionDistrict`
-      * `ElectionDistrictType` e.g., 'state-house' or 'congressional', following conventions in `CDF_schema_def_info/enumerations/ReportingUnitType.txt`
-    * `ReportingUnit.txt` Tab-separated list of reporting units (usually geographical precincts, counties, etc., but could also be individual machines, adminstrative precincts, etc.). Columns are:
-      * `Name`
-      * `ReportingUnitType`
-     * `Party.txt` List of political parties, one per line. One column:
-       * `Name`
-
-### About mungers
-Files from different sources require different processing assumptions. We call each set of assumptions a "munger"
-
-The folder `src/mungers` holds a directory for each munger. Each munger directory needs the following component files:
- * `ExternalIdentifiers.txt` [*** explain]
- * `atomic_reporting_unit_type.txt` contains one line, holding the type of the basic ("atomic") reporting unit type of the datafile. If the datafile rows correspond to precincts, then 'precinct'. If each row represents information for an entire county, then 'county'. Note that in either case there may be "administrative precincts" to handle, e.g., absentee ballots. Because the program sums over all appropriate elements of the given 'atomic' type, it is important that each vote is counted in one and only one atomic reporting unit.
- * `ballot_measure_count_column_selections.txt`
-    Necessary only for mungers with ballot measure yes and no votes in separate columns. Columns are:
-    * `fieldname`
-    *  `selection` (Must be "Yes" or "No")
- * `raw_columns.txt` List of columns in source file. Columns are:
-    * `Name` name of the column in the source file
-    * `Datatype` datatype of the column in the source file
- * `count_columns.txt` List of columns in source file corresponding to vote counts
-    * `RawName` Name of the count column in the source file
-    * `CountItemType` Type of count, according to the Common Data Format (e.g., 'absentee' or 'election-day'). If the CountItemType is determined by a value or values in the row of the raw file (say, from a "Vote Type" column), this field should contain a formula for creating the raw identifier of the CountItemType, and there should be corresponding rows of the raw_identifiers.txt table.
- * `cdf_tables.txt` One line for each main table in the Common Data Format. Specifies how to read the values for that table from the source file.
-    * `CDF_Element` Name of the Common Data Format table/element (e.g., 'ReportingUnit')
-    * `ExternalIdentifier` Formula for creating the raw identifier from the source file. 
-    * `InternalFieldName` Usually 'Name', this is the column in the Common Data Format table that names the item.
-    * `Enumerations` Formulas for specifying any enumerated values
-    * `OtherFields` Formulas for specifying any other fields. `ids_d` is used in the code to refer to internal Common Data Format primary keys.
+Each jurisdiction should have its own subdirectory of the directory `src/jurisdictions`.
 
 
-### About raw identifiers
-(TODO)
-Need Office and  CandidateContest separately for each munger. 
+## Mungers
+Election result data comes in a variety of file formats. Even when the basic format is the same, file columns may have different interpretations. The code is built to ease -- as much as possible -- the chore of processing and interpreting each format. Following the [Jargon File](http://catb.org/jargon/html/M/munge.html), which gives one meaning of "munge" as "modify data in some way the speaker doesn't need to go into right now or cannot describe succinctly," we call each set of basic information about interpreting an election result file a "munger". The munger template is in the directory `src/templates/munger_templates`.
 
-### About formulas
-When creating a munger, you will need to create formulas for creating raw identifiers from rows. Use angle brackets <> to enclose field values. E.g. consider this snippet from a Philadelphia voting results file:
+The directory `src/mungers` holds the munger directories. Each munger directory needs the following component files:
+ * `format.txt` holds information about the file format
+   * `count_columns` is a comma-separated list of integers identifying the columns that contain vote counts. Our convention is to count from the left of the file, with leftmost column as 0.
+   * `header_row_count` is an integer, the number of header rows in the file
+   * `field_name_row` is the single header row containing field names for columns that do not hold counts. (Columns containing vote counts may have field value information in more than one header row, e.g., one header row for contest and a second header row for candidate). Our convention is to count from the top of the file, with the top row as 0.
+   * `file_type` is one of a certain list of types recognized by the system. As of 6/4/2020, the list is:
+     * `txt` for tab-separated text
+     * `csv` for comma-separated text
+     * `xls` or `xlsx` for Excel files (and any other files readable by the `read_excel` function in the `pandas` package.
+   * `encoding` is the file encoding, e.g., `iso-8859-1`.
+   
+  * `cdf_tables.txt` One line for each main class in the Common Data Format. Specifies how to read the values for that table from the source file. Columns are:
+    * `name` Name of the Common Data Format class (e.g., 'ReportingUnit')
+    * `raw_identifier_formula` Formula for creating the raw identifier from the results file. 
+    * `source` Identifies the placement in the file of the relevant information. The system recognizes these possibilities:
+      * `row` for classes calculated from values in same row as a given vote count value. In this case the `raw_identifier_formula` can reference entries within the row via the relevant column name in angle brackets (e.g., <COUNTY>)
+      * `column` for classes calculated from values in the same column as a given vote count value. In this case the `raw_identifier_formula can reference entries within the column via the relevant row number in angle brackets (e.g., <0>)
+      * `other` for classes that are the same for the whole results file. In this case the `raw_identifier_formula` should be blank.
+    
+### row-sourced formula example
+Consider this snippet from a Philadelphia, Pennsylvania voting results file:
 ```
 WARD,DIVISION,VOTE TYPE,CATEGORY,SELECTION,PARTY,VOTE COUNT
 01,01,A,JUDGE OF THE SUPERIOR COURT,AMANDA GREEN-HAWKINS,DEMOCRATIC,2
@@ -139,3 +106,4 @@ Even if the munger is essentially unchanged, each new datafile may have new Repo
 A new datafile may have new names for existing elements (such as Reporting Units or Offices) ***
 
 More rarely, a new datafile may have new Offices and CandidateContests.
+
