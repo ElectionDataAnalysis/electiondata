@@ -74,34 +74,46 @@ def get_project_root():
 	return p_root
 
 
+def pick_directory(description='the directory'):
+	print(f'Use the pop-up window to pick {description}.')
+	directory = pick_path(mode='directory')
+	return directory
+
+
+
 def pick_datafile(project_root,sess):
 	print("Locate the results file in the file system.")
-	fpath = pick_filepath(initialdir=project_root)
+	fpath = pick_path(initialdir=project_root)
 	filename = ntpath.basename(fpath)
 	db_idx, datafile_record_d, datafile_enumeration_name_d, datafile_fk_name_d = pick_or_create_record(
-		sess,project_root,'_datafile',
-		known_info_d={'file_name':filename})
+		sess,project_root,'_datafile',known_info_d={'file_name':filename})
 	# TODO typing url into debug window opens the web page; want it to just act like a string
 	return datafile_record_d, datafile_enumeration_name_d, fpath
 
 
-def pick_filepath(initialdir='~/'):
-	"""<r> is a tkinter root for a pop-up window.
-	<fpath_root> is the directory where the pop-up window starts.
-	Returns chosen file path"""
+def pick_path(initialdir='~/',mode='file'):
+	"""Creates pop-up window for user to choose a <mode>, starting from <initialdir>.
+	Returns chosen file path or directory path (depending on <mode>"""
 
 	while True:
 		fpath = input(
-			'Enter path to file (or hit return to use pop-up window to find it).\n').strip()
+			f'Enter path to {mode} (or hit return to use pop-up window to find it).\n').strip()
 		if not fpath:
-			print('Use pop-up window to pick your file.')
-			fpath = filedialog.askopenfilename(
-				initialdir=initialdir,title="Select file",
-				filetypes=(("text files","*.txt"),("csv files","*.csv"),("ini files","*.ini"),("all files","*.*")))
-			print(f'The file you chose is:\n\t{fpath}')
+			print(f'Use pop-up window to pick your {mode}.')
+			if mode == 'file':
+				fpath = filedialog.askopenfilename(
+					initialdir=initialdir,title=f"Select {mode}",
+					filetypes=(("text files","*.txt"),("csv files","*.csv"),("ini files","*.ini"),("all files","*.*")))
+			elif mode == 'directory':
+				fpath = filedialog.askdirectory(initialdir=initialdir,title=f'Select {mode}')
+			else:
+				print(f'Mode {mode} not recognized')
+				return None
+
+			print(f'The {mode} you chose is:\n\t{fpath}')
 			break
-		elif not os.path.isfile(fpath):
-			print(f'This is not a file: {fpath}\nTry again.')
+		elif (mode == 'file' and not os.path.isfile(fpath)) or (mode == 'directory' and not os.path.isdir(fpath)):
+			print(f'This is not a {mode}: {fpath}\nTry again.')
 		else:
 			break
 	return fpath
@@ -148,7 +160,7 @@ def pick_one(choices,return_col,item='row',required=False,max_rows=40):
 
 def pick_paramfile(msg='Locate the parameter file for your postgreSQL database.'):
 	print(msg)
-	fpath= pick_filepath()
+	fpath= pick_path()
 	return fpath
 
 

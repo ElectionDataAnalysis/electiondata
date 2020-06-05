@@ -1,7 +1,6 @@
 #!usr/bin/python3
 import os.path
 
-from analyze_via_pandas import export_to_inventory_file_tree
 from scipy import stats as stats
 import scipy.spatial.distance as dist
 import numpy as np
@@ -127,7 +126,8 @@ class Election(object):
             cdf_d['ReportingUnitType'][cdf_d['ReportingUnitType']['Txt']==atomic_ru_type].iloc[0]['Id'])
 
         q = """SELECT
-            secvcj."Contest_Id", cruj."ParentReportingUnit_Id" AS "ReportingUnit_Id",  secvcj."Selection_Id", vc."CountItemType_Id", COALESCE(sum(vc."Count"),0) AS "Count"
+            secvcj."Contest_Id", cruj."ParentReportingUnit_Id" AS "ReportingUnit_Id",  secvcj."Selection_Id",
+             vc."CountItemType_Id", COALESCE(sum(vc."Count"),0) AS "Count"
          FROM
              "SelectionElectionContestVoteCountJoin" secvcj 
              LEFT JOIN "VoteCount" vc ON secvcj."VoteCount_Id" = vc."Id"
@@ -192,7 +192,7 @@ class Election(object):
             str(self.source_url),datetime.date.today()
         ]   # TODO source_db_url
 
-        export_to_inventory_file_tree(
+        avp.export_to_inventory_file_tree(
             os.path.join(self.jurisdiction.path_to_juris_dir,'results_from_cdf_db'),
             f'{self.short_name}/{summary_ru_type}',
             f'{count_item}.txt',

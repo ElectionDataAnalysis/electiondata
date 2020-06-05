@@ -256,7 +256,7 @@ def create_rollup(
 	inventory_values = [
 		election['Name'],sub_rutype,cit,cis,
 		str(session.bind.url),datetime.date.today()]
-	sub_dir = os.path.join(f'FROMDB_{session.bind.url.database}',election['Name'],top_ru["Name"],f'by_{sub_rutype}')
+	sub_dir = os.path.join(election['Name'],top_ru["Name"],f'by_{sub_rutype}')
 	export_to_inventory_file_tree(
 		target_dir,sub_dir,f'{count_item}.txt',inventory_columns,inventory_values,summed_by_name)
 
