@@ -201,8 +201,9 @@ def create_rollup(
 	children_of_subs_ids = child_rus_by_id(session,sub_ru_ids)
 	ru_children = df['ReportingUnit'].loc[children_of_subs_ids]
 
-	# TODO check for any reporting units that should be included in roll-up but were missed
-	missing = [x for x in all_subs_ids if x not in children_of_subs_ids]
+	# check for any reporting units that should be included in roll-up but were missed
+	# TODO list can be long and irrelevant. Instead list ReportingUnitTypes of the missing
+	missing = [str(x) for x in all_subs_ids if x not in children_of_subs_ids]
 	if missing:
 		ui.report_problems(missing,msg=f'The following reporting units are nested in {top_ru["Name"]} '
 								f'but are not nested in any {sub_rutype} nested in {top_ru["Name"]}')

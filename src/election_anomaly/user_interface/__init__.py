@@ -80,7 +80,6 @@ def pick_directory(description='the directory'):
 	return directory
 
 
-
 def pick_datafile(project_root,sess):
 	print("Locate the results file in the file system.")
 	fpath = pick_path(initialdir=project_root)
@@ -853,3 +852,30 @@ def report_problems(problems,msg='There are problems'):
 	prob_str = '\n\t'.join(problems)
 	print(f'{msg}:\n\t{prob_str}\n')
 	return
+
+
+def get_runtime_parameters(keys):
+	interact = input('Run interactively (y/n)?\n')
+	d = {}
+	if interact == 'y':
+		if 'project_root' in keys:
+			d['project_root'] = get_project_root()
+		if 'db_paramfile' in keys:
+			d['db_paramfile'] = pick_paramfile()
+		if 'db_name' in keys:
+			d['db_name'] = pick_database(d['project_root'],d['db_paramfile'])
+		if 'juris_name' in keys:
+			d['juris_name'] = None
+		if 'rollup_directory' in keys:
+			d['rollup_directory'] = pick_directory(description='the directory for election result rollup exports')
+		for k in [x for x in keys if x not in [
+			'project_root','db_paramfile','db_name','juris_name','rollup_directory']]:
+			d[k] = input(f'Enter {k}')
+	else:
+		d_from_file = config(section='election_anomaly',msg='Pick a paramfile.')
+		for k in keys:
+			try:
+				d[k] = d_from_file[k]
+			except KeyError:
+				print(f'Warning: no value found for {k} in the parameter file.')
+	return d
