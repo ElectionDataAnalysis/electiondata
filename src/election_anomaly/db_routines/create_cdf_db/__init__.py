@@ -4,7 +4,7 @@
 #  and ContestSelectionJoin_Id share a contest? Should this happen during the rollup process?
 
 import sqlalchemy
-from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,ForeignKey
+from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,ForeignKey, Date
 import os
 import pandas as pd
 

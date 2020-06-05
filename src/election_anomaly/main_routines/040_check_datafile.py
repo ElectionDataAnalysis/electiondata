@@ -35,7 +35,7 @@ if __name__ == '__main__':
 	sess = Session()
 
 	if interact == 'y':
-		[dfile_d, enum_d, data_path] = ui.pick_datafile(project_root,sess)
+		[dfile_d, enum_d, data_path] = ui.track_results_file(project_root,sess)
 	else:
 		# noinspection PyUnboundLocalVariable
 		data_path = d['data_path']

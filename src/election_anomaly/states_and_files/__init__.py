@@ -629,6 +629,8 @@ def context_dependency_dictionary():
 def load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True):
     """ TODO
     """
+
+    # TODO check that cdf database exists and has the necessary enumeration tables; fail gracefully if not
     cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
     context_dir = os.path.join(juris_path,'context')
     df = pd.read_csv(os.path.join(context_dir,f'{element}.txt'),sep='\t').fillna('none or unknown')

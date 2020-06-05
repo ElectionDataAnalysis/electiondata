@@ -74,20 +74,27 @@ def get_project_root():
 	return p_root
 
 
-def pick_directory(description='the directory'):
-	print(f'Use the pop-up window to pick {description}.')
-	directory = pick_path(mode='directory')
+def pick_file_or_directory(description=None,mode=None):
+	if not mode:
+		print(f'No mode specified')
+		return None
+	elif mode not in ['file','directory']:
+		print(f'Mode {mode} not recognized')
+		return None
+	else:
+		if not description:
+			description = f'the {mode}'
+		print(f'Use the pop-up window to pick {description}.')
+		directory = pick_path(mode=mode)
 	return directory
 
 
-def pick_datafile(project_root,sess):
-	print("Locate the results file in the file system.")
-	fpath = pick_path(initialdir=project_root)
-	filename = ntpath.basename(fpath)
+def track_results_file(project_root,sess,results_file):
+	filename = ntpath.basename(results_file)
 	db_idx, datafile_record_d, datafile_enumeration_name_d, datafile_fk_name_d = pick_or_create_record(
 		sess,project_root,'_datafile',known_info_d={'file_name':filename})
 	# TODO typing url into debug window opens the web page; want it to just act like a string
-	return datafile_record_d, datafile_enumeration_name_d, fpath
+	return [datafile_record_d, datafile_enumeration_name_d]
 
 
 def pick_path(initialdir='~/',mode='file'):
@@ -222,7 +229,7 @@ def pick_database(project_root,paramfile=None,db_name=None):
 	else:  # if we're going to need a brand new db
 		desired_db = get_alphanumeric_from_user('Enter name for new database (alphanumeric only)')
 		create_new = True
-		while desired_db in db_df[0].unique():
+		while desired_db in db_df.datname.unique():
 			use_existing = input(f'Database {desired_db} exists! Use existing database {desired_db} (y/n)?\n')
 			if use_existing == 'y':
 				create_new = False
@@ -866,8 +873,14 @@ def get_runtime_parameters(keys):
 			d['db_name'] = pick_database(d['project_root'],d['db_paramfile'])
 		if 'juris_name' in keys:
 			d['juris_name'] = None
+		if 'munger_name' in keys:
+			d['munger_name'] = None
 		if 'rollup_directory' in keys:
-			d['rollup_directory'] = pick_directory(description='the directory for election result rollup exports')
+			d['rollup_directory'] = pick_file_or_directory(
+				description='the directory for election result rollup exports',mode='directory')
+		if 'results_file' in keys:
+			d['results_file'] = pick_file_or_directory(description='the election results file',mode='file')
+
 		for k in [x for x in keys if x not in [
 			'project_root','db_paramfile','db_name','juris_name','rollup_directory']]:
 			d[k] = input(f'Enter {k}')

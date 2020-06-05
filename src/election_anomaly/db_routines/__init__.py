@@ -9,7 +9,6 @@ import sqlalchemy as db
 import user_interface as ui
 from configparser import MissingSectionHeaderError
 import pandas as pd
-import os
 import munge_routines as mr
 import re
 
@@ -19,13 +18,14 @@ class CdfDbException(Exception):
 
 
 def get_database_names(con):
+    """Return dataframe with one column called `datname` """
     names = pd.read_sql('SELECT datname FROM pg_database',con)
     return names
 
 
 def create_database(con,cur,db_name):
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-    q = f"DROP DATABASE IF EXISTS {0}"
+    q = "DROP DATABASE IF EXISTS {0}"
     sql_ids = [db_name]
     out1 = query(q,sql_ids,[],con,cur)
 
