@@ -7,16 +7,22 @@ import os
 if __name__ == '__main__':
 
 	d = ui.get_runtime_parameters(
-		['project_root','juris_name','db_paramfile','db_name','rollup_directory','munger_name'])
+		['project_root','juris_name','db_paramfile','db_name','munger_name','results_file'])
 
 	# pick jurisdiction
 	juris = ui.pick_juris_from_filesystem(d['project_root'],juris_name=d['juris_name'])
 
-	# TODO create db if it does not already exist
+	# create db if it does not already exist
+	con, paramfile = dbr.establish_connection(paramfile=d['db_paramfile'],db_name=d['db_name'])
+	if not con:
+		print(f'Database {d["db_name"]} not found')
+		ui.pick_database(d['project_root'],paramfile=d['db_paramfile'],db_name=d['db_name'])
+
 	# connect to db
 	eng = dbr.sql_alchemy_connect(paramfile=d['db_paramfile'],db_name=d['db_name'])
 	Session = sessionmaker(bind=eng)
 	sess = Session()
+
 	skip_load = input('Skip context loading (y/n)?\n')
 	if skip_load == 'y':
 		print('Warning: results for contests, selections and reporting units not loaded will not be processed.')
@@ -31,7 +37,7 @@ if __name__ == '__main__':
 		mungers_dir=os.path.join(d['project_root'],'mungers'),session=sess,munger_name=d['munger_name'])
 
 	# load new datafile
-	ui.new_datafile(sess,munger,d['data_path'],juris=juris,project_root=d['project_root'])
+	ui.new_datafile(sess,munger,d['results_file'],juris=juris,project_root=d['project_root'])
 
 	eng.dispose()
 	print('Done!')

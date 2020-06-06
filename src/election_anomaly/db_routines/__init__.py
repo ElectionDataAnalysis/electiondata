@@ -6,11 +6,13 @@ import sqlalchemy
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
 import sqlalchemy as db
+import sqlalchemy_utils
 import user_interface as ui
 from configparser import MissingSectionHeaderError
 import pandas as pd
 import munge_routines as mr
 import re
+import datetime
 
 
 class CdfDbException(Exception):
@@ -87,7 +89,11 @@ def establish_connection(paramfile='../jurisdictions/database.ini',db_name='post
         return con, paramfile
     if db_name != 'postgres':
         params['dbname']=db_name
-    con = psycopg2.connect(**params)
+    try:
+        con = psycopg2.connect(**params)
+    except psycopg2.OperationalError:
+        con = None
+        print(f'Connection failed with parameters {params}')
     return con, paramfile
 
 
@@ -287,8 +293,11 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
     try:
         appendable.to_sql(table, session.bind, if_exists='append', index=False)
     except sqlalchemy.exc.IntegrityError as e:
+        # FIXME: target, pulled from DB, has datetime, while dframe has date,
+        #  so record might look like same-name-different-date when it isn't really
         ignore = input(f'Some record insertions into table {table} failed.\n'
                        f'It may be that the record(s) is already in the table (probably harmless).\n'
+                       f'It may be due to bug in handling datetime fields'
                        f'It may be due to non-unique names (might be a problem).\nContinue anyway (y/n)?\n')
         if ignore != 'y':
             ignore = input(f'Specific error is: {e}. \nContinue anyway (y/n)?\n')
@@ -423,6 +432,5 @@ def get_name_field(element):
     return field
 
 
-if __name__ == '__main__':
-
-    print('Done')
+def db_exists(session):
+    return sqlalchemy_utils.functions.database_exists(session.bind.url)

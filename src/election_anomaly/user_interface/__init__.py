@@ -215,47 +215,49 @@ def pick_database(project_root,paramfile=None,db_name=None):
 	In any case, returns the name of the DB."""
 	if not paramfile:
 		paramfile = pick_paramfile()
-	if db_name:
-		print(f'WARNING: will use db {db_name}, assumed to exist.')
-		# TODO check that db actually exists and recover if not.
-		return db_name
 	[con, paramfile] = dbr.establish_connection(paramfile=paramfile)
 	print(f'Connection established to database {con.info.dbname}')
 	cur = con.cursor()
 	db_df = dbr.get_database_names(con)
-	db_idx,desired_db = pick_one(db_df,0,item='database')
-	if db_idx:
-		create_new = False
-	else:  # if we're going to need a brand new db
-		desired_db = get_alphanumeric_from_user('Enter name for new database (alphanumeric only)')
-		create_new = True
-		while desired_db in db_df.datname.unique():
-			use_existing = input(f'Database {desired_db} exists! Use existing database {desired_db} (y/n)?\n')
-			if use_existing == 'y':
-				create_new = False
-				break
-			else:
-				desired_db = get_alphanumeric_from_user('Enter name for new database (alphanumeric only)')
-		if create_new:
-			dbr.create_database(con,cur,desired_db)
+	if db_name and db_name in db_df.datname.unique():
+		print(f'Will use existing database {db_name}')
+		desired_db = db_name
 
-	if desired_db != con.info.dbname:
-		cur.close()
-		con.close()
-		con,paramfile = dbr.establish_connection(paramfile,db_name=desired_db)
-		cur = con.cursor()
+	else:
+		db_idx,desired_db = pick_one(db_df,'datname',item='database')
+		if db_idx:
+			create_new = False
+		else:  # if we're going to need a brand new db
+			desired_db = get_alphanumeric_from_user('Enter name for new database (alphanumeric only)')
+			create_new = True
+			while desired_db in db_df.datname.unique() and create_new:
+				use_existing = input(f'Database {desired_db} exists! Use existing database {desired_db} (y/n)?\n')
+				if use_existing == 'y':
+					create_new = False
+				else:
+					desired_db = get_alphanumeric_from_user('Enter name for new database (alphanumeric only)')
+			if create_new:  # then desired_db is not in the list of dbs
+				dbr.create_database(con,cur,desired_db)
+			# TODO otherwise check that desired_db has right format?
 
-	if create_new: 	# if our db is brand new
-		eng = dbr.sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
-		# noinspection PyPep8Naming
-		Session = sessionmaker(bind=eng)
-		pick_db_session = Session()
+		# connect to the desired_db, if not already connected to it
+		if desired_db != con.info.dbname:
+			cur.close()
+			con.close()
+			con,paramfile = dbr.establish_connection(paramfile,db_name=desired_db)
+			cur = con.cursor()
 
-		db_cdf.create_common_data_format_tables(
-			pick_db_session,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
-		db_cdf.fill_cdf_enum_tables(
-			pick_db_session,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
-		print(f'New database {desired_db} has been created using the common data format.')
+		if create_new: 	# if our db is brand new
+			eng = dbr.sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
+			# noinspection PyPep8Naming
+			Session = sessionmaker(bind=eng)
+			sess = Session()
+
+			db_cdf.create_common_data_format_tables(
+				sess,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
+			db_cdf.fill_cdf_enum_tables(
+				sess,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
+			print(f'New database {desired_db} has been created using the common data format.')
 
 	# clean up
 	if cur:

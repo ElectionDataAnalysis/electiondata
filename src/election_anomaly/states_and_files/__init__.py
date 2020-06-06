@@ -421,7 +421,7 @@ def ensure_munger_files(munger_name,project_root=None):
                 first_col = '\n'.join(list(temp.iloc[:,0]))
                 problems.append(
                     f'Wrong number of rows in {munger_file}.txt. \nFirst column must be exactly:\n{first_col}')
-            elif (cf_df.iloc[:,0] != temp.iloc[:,0]).any():
+            elif set(cf_df.iloc[:,0]) != set(temp.iloc[:,0]):
                 first_error = (cf_df.iloc[:,0] != temp.iloc[:,0]).index.to_list()[0]
                 first_col = '\n'.join(list(temp.iloc[:,0]))
                 problems.append(f'First column of {munger_file}.txt must be exactly:\n{first_col}\n'
@@ -630,7 +630,6 @@ def load_context_dframe_into_cdf(session,element,juris_path,project_root,load_re
     """ TODO
     """
 
-    # TODO check that cdf database exists and has the necessary enumeration tables; fail gracefully if not
     cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
     context_dir = os.path.join(juris_path,'context')
     df = pd.read_csv(os.path.join(context_dir,f'{element}.txt'),sep='\t').fillna('none or unknown')
