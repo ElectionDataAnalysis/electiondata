@@ -58,11 +58,12 @@ def contest_info_by_id(eng):
 
 def child_rus_by_id(session,parents,ru_type=None):
 	"""Given a list <parents> of parent ids (or just a single parent_id), return
-	list containing those parents along with all children of those parents.
+	list containing all children of those parents.
+	(By convention, a ReportingUnit counts as one of its own 'parents',)
 	If (ReportingUnitType_Id,OtherReportingUnit) pair <rutype> is given,
 	restrict children to that ReportingUnitType"""
 	cruj = pd.read_sql_table('ComposingReportingUnitJoin',session.bind)
-	children = list(cruj[cruj.ParentReportingUnit_Id.isin(parents)].ChildReportingUnit_Id.unique()) + parents
+	children = list(cruj[cruj.ParentReportingUnit_Id.isin(parents)].ChildReportingUnit_Id.unique())
 	if ru_type:
 		assert len(ru_type) == 2,f'argument {ru_type} does not have exactly 2 elements'
 		ru = pd.read_sql_table('ReportingUnit',session.bind,index_col='Id')

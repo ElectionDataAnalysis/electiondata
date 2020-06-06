@@ -47,28 +47,33 @@ def append_to_composing_reporting_unit_join(session,ru):
     """<ru> is a dframe of reporting units, with cdf internal name in column 'Name'.
     cdf internal name indicates nesting via semicolons.
     This routine calculates the nesting relationships from the Names and uploads to db.
-    Returns the *all* CRUJ data from the db."""
+    Returns the *all* composing-reporting-unit-join data from the db.
+    By convention, a ReportingUnit is it's own ancestor (ancestor_0)."""
     ru['split'] = ru['Name'].apply(lambda x:x.split(';'))
     ru['length'] = ru['split'].apply(len)
     
     # pull ReportingUnit to get ids matched to names
     ru_cdf = pd.read_sql_table('ReportingUnit',session.bind,index_col=None)
     ru_static = ru.copy()
-    # get Id of the child reporting unit, if it's not already there
+
+    # add db Id column to ru_static, if it's not already there
     if 'Id' not in ru.columns:
         ru_static = ru_static.merge(ru_cdf[['Name','Id']],on='Name',how='left')
+
+    # create a list of rows to append to the ComposingReportingUnitJoin table
     cruj_dframe_list = []
-    for i in range(ru['length'].max() - 1):
+    for i in range(ru['length'].max()):
         # check that all components of all Reporting Units are themselves ReportingUnits
         ru_for_cruj = ru_static.copy()  # start fresh, without detritus from previous i
 
         # get name of ith ancestor
-        ru_for_cruj['ancestor_{}'.format(i)] = ru_static['split'].apply(lambda x:';'.join(x[:-i - 1]))
+        #  E.g., ancestor_0 is largest ancestor (i.e., shortest string, often the state); ancestor_1 is the second-largest parent, etc.
+        ru_for_cruj[f'ancestor_{i}'] = ru_static['split'].apply(lambda x:';'.join(x[:i+1]))
         # get Id of ith ancestor
-        ru_for_cruj = ru_for_cruj.merge(ru_cdf,left_on='ancestor_{}'.format(i),right_on='Name',
-                                        suffixes=['','_' + str(i)])
-        cruj_dframe_list.append(ru_for_cruj[['Id','Id_{}'.format(i)]].rename(
-            columns={'Id':'ChildReportingUnit_Id','Id_{}'.format(i):'ParentReportingUnit_Id'}))
+        ru_for_cruj = ru_for_cruj.merge(ru_cdf,left_on=f'ancestor_{i}',right_on='Name',
+                                        suffixes=['',f'_{i}'])
+        cruj_dframe_list.append(ru_for_cruj[['Id',f'Id_{i}']].rename(
+            columns={'Id':'ChildReportingUnit_Id',f'Id_{i}':'ParentReportingUnit_Id'}))
     if cruj_dframe_list:
         cruj_dframe = pd.concat(cruj_dframe_list)
         cruj_dframe = dframe_to_sql(cruj_dframe,session,'ComposingReportingUnitJoin')
