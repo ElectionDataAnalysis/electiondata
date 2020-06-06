@@ -394,6 +394,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
     # TODO what if contest_type (BallotMeasure or Candidate) has source 'other'?
     for t,r in mu.cdf_elements[mu.cdf_elements.source == 'other'].iterrows():
         # add column for element id
+        # TODO allow record to be passed as a parameter
         idx, db_record, enum_d, fk_d = ui.pick_or_create_record(session,project_root,t)
         working = add_constant_column(working,f'{t}_Id',idx)
 

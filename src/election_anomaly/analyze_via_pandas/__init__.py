@@ -102,6 +102,7 @@ def create_rollup(
 
 	# ask user to select any info not supplied
 	if top_ru_id is None:
+		# TODO allow passage of top_ru name, from which id is deduced. Similarly for other args.
 		print('Select the type of the top ReportingUnit for the rollup.')
 		top_rutype_id, top_rutype_othertext, top_rutype = ui.pick_enum(session,'ReportingUnitType')
 		print('Select the top ReportingUnit for the rollup')
