@@ -21,14 +21,15 @@ This repository hopes to provide reliable tools for consolidation and analysis o
 [//]: # "TODO keep this up to date"
 
 # How to run the app
+The main routines are in `src/election_anomaly/main_routines`. Each can be run interactively or via a parameter file with an `[election_anomaly]` section. 
 ## Loading data
 run `src/election_anomaly/main_routines/050_load_datafile.py`
 
 ## Pulling election result rollups
 run `src/election_anomaly/main_routines/100_pull_top_counts_by_vote_type.py`
 or `src/election_anomaly/main_routines/101_pull_top_counts.py`
-[//]: # "TODO keep this up to date"
 
+[//]: # "TODO keep this up to date"
 
 ## Environment
 ### Database
