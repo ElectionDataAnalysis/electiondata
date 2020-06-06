@@ -1,3 +1,0 @@
-(2, 'Florida;Chief Financial Officer')
-
-	total

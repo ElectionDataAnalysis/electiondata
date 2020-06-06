@@ -1,2 +1,0 @@
-Election	ReportingUnitType	CountItemType	CountItemStatus	source_db_url	timestamp
-2018general	county	total	unknown	postgresql://postgres:''@localhost:5432/FL	2020-04-13
