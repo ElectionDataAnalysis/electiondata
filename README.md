@@ -21,7 +21,8 @@ This repository hopes to provide reliable tools for consolidation and analysis o
 [//]: # "TODO keep this up to date"
 
 # How to run the app
-The main routines are in `src/election_anomaly/main_routines`. Each can be run interactively or via a parameter file with an `[election_anomaly]` section. 
+The main routines are in `src/election_anomaly/main_routines`. Each can be run interactively or via a parameter file (template is `src/templates/parameter_file_templates/run_time.par`). 
+
 ## Loading data
 run `src/election_anomaly/main_routines/050_load_datafile.py`
 
@@ -35,15 +36,7 @@ or `src/election_anomaly/main_routines/101_pull_top_counts.py`
 ### Database
 The system runs out of the box with a postgresql database; to use other varieties of SQL, you will need to modify the routines in the `dbr_routines` module. 
 
-Store your login credentials stored in a file. Contents of that file should be:
-```
-[postgresql]
-host=<url for your postgresql server>
-port=<port for your postgresql server>
-dbname=<name of your election data database>
-user=<your user name>
-password=<your password>
-```
+Store your database login credentials stored in a file (template is `src/templates/parameter_file_templates/database.par`)
   
 ### Context information by jurisdiction
 Because each original raw results file comes from a particular election agency, and each election agency has a fixed jurisdiction, it is natural to organize information by jurisdiction. 
@@ -114,3 +107,4 @@ A new datafile may have new names for existing elements (such as Reporting Units
 
 More rarely, a new datafile may have new Offices and CandidateContests.
 
+[//]: # "TODO per CDF, there should be a CandidateContestOfficeJoin table"
