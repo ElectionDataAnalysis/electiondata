@@ -91,9 +91,8 @@ def establish_connection(paramfile='../jurisdictions/database.ini',db_name='post
         params['dbname']=db_name
     try:
         con = psycopg2.connect(**params)
-    except psycopg2.OperationalError:
+    except psycopg2.OperationalError as e:
         con = None
-        print(f'Connection failed with parameters {params}')
     return con, paramfile
 
 
@@ -297,7 +296,7 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
         #  so record might look like same-name-different-date when it isn't really
         ignore = input(f'Some record insertions into table {table} failed.\n'
                        f'It may be that the record(s) is already in the table (probably harmless).\n'
-                       f'It may be due to bug in handling datetime fields.\n'
+                       f'It may be due to bug in handling datetime fields (probably harmless).\n'
                        f'It may be due to non-unique names (might be a problem).\n'
                        f'Continue anyway (y/n)?\n')
         if ignore != 'y':
@@ -391,7 +390,7 @@ def save_one_to_db(session,element,record):
         else:
             ok = True
     session.flush()
-    return db_idx, record, enum_plaintext_dict, fk_plaintext_dict, changed
+    return [db_idx, record, enum_plaintext_dict, fk_plaintext_dict, changed]
 
 
 def name_from_id(session,element,idx):

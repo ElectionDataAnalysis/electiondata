@@ -6,10 +6,6 @@ import os
 
 
 if __name__ == '__main__':
-	print("""Ready to load some election result data?
-			"This program will walk you through the process of creating or checking
-			"an automatic munger that will load your data into a database in the 
-			"NIST common data format.""")
 	d = ui.get_runtime_parameters(
 		['project_root','results_file','db_paramfile','db_name','juris_name','munger_name'])
 

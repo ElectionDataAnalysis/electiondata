@@ -1,0 +1,760 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+Election	General Election 2018-11-06	11/6/2001
+Party	Pennsylvania Democratic Party	Democratic
+Party	Pennsylvania Republican Party	Republican
+Party	Pennsylvania Green Party	Green
+Party	Pennsylvania Libertarian Party	Libertarian
+Party	Pennsylvania Democratic / Republican Party	Democratic / Republican
+Party	Pennsylvania Independent Party	Independent
+Party	Pennsylvania No Affiliation Party	No Affiliation
+CandidateContest	Pennsylvania;Governor	Governor;Statewide
+CandidateContest	Pennsylvania;US Congress House of Representatives District 10	Representative in Congress;10th Congressional District
+CandidateContest	Representative in Congress;11th Congressional District	Pennsylvania;US Congress House of Representatives District 11
+CandidateContest	Representative in Congress;12th Congressional District	Pennsylvania;US Congress House of Representatives District 12
+CandidateContest	Representative in Congress;13th Congressional District	Pennsylvania;US Congress House of Representatives District 13
+CandidateContest	Representative in Congress;14th Congressional District	Pennsylvania;US Congress House of Representatives District 14
+CandidateContest	Representative in Congress;15th Congressional District	Pennsylvania;US Congress House of Representatives District 15
+CandidateContest	Representative in Congress;16th Congressional District	Pennsylvania;US Congress House of Representatives District 16
+CandidateContest	Representative in Congress;17th Congressional District	Pennsylvania;US Congress House of Representatives District 17
+CandidateContest	Representative in Congress;18th Congressional District	Pennsylvania;US Congress House of Representatives District 18
+CandidateContest	Representative in Congress;1st Congressional District	Pennsylvania;US Congress House of Representatives District 1
+CandidateContest	Representative in Congress;2nd Congressional District	Pennsylvania;US Congress House of Representatives District 2
+CandidateContest	Representative in Congress;3rd Congressional District	Pennsylvania;US Congress House of Representatives District 3
+CandidateContest	Representative in Congress;4th Congressional District	Pennsylvania;US Congress House of Representatives District 4
+CandidateContest	Representative in Congress;5th Congressional District	Pennsylvania;US Congress House of Representatives District 5
+CandidateContest	Representative in Congress;6th Congressional District	Pennsylvania;US Congress House of Representatives District 6
+CandidateContest	Representative in Congress;7th Congressional District	Pennsylvania;US Congress House of Representatives District 7
+CandidateContest	Representative in Congress;8th Congressional District	Pennsylvania;US Congress House of Representatives District 8
+CandidateContest	Representative in Congress;9th Congressional District	Pennsylvania;US Congress House of Representatives District 9
+CandidateContest	Representative in the General Assembly;100th Legislative District	Pennsylvania;General Assembly House of Representatives District 100
+CandidateContest	Representative in the General Assembly;101st Legislative District	Pennsylvania;General Assembly House of Representatives District 101
+CandidateContest	Representative in the General Assembly;102nd Legislative District	Pennsylvania;General Assembly House of Representatives District 102
+CandidateContest	Representative in the General Assembly;103rd Legislative District	Pennsylvania;General Assembly House of Representatives District 103
+CandidateContest	Representative in the General Assembly;104th Legislative District	Pennsylvania;General Assembly House of Representatives District 104
+CandidateContest	Representative in the General Assembly;105th Legislative District	Pennsylvania;General Assembly House of Representatives District 105
+CandidateContest	Representative in the General Assembly;106th Legislative District	Pennsylvania;General Assembly House of Representatives District 106
+CandidateContest	Representative in the General Assembly;107th Legislative District	Pennsylvania;General Assembly House of Representatives District 107
+CandidateContest	Representative in the General Assembly;108th Legislative District	Pennsylvania;General Assembly House of Representatives District 108
+CandidateContest	Representative in the General Assembly;109th Legislative District	Pennsylvania;General Assembly House of Representatives District 109
+CandidateContest	Representative in the General Assembly;10th Legislative District	Pennsylvania;General Assembly House of Representatives District 10
+CandidateContest	Representative in the General Assembly;110th Legislative District	Pennsylvania;General Assembly House of Representatives District 110
+CandidateContest	Representative in the General Assembly;111th Legislative District	Pennsylvania;General Assembly House of Representatives District 111
+CandidateContest	Representative in the General Assembly;112th Legislative District	Pennsylvania;General Assembly House of Representatives District 112
+CandidateContest	Representative in the General Assembly;113th Legislative District	Pennsylvania;General Assembly House of Representatives District 113
+CandidateContest	Representative in the General Assembly;114th Legislative District	Pennsylvania;General Assembly House of Representatives District 114
+CandidateContest	Representative in the General Assembly;115th Legislative District	Pennsylvania;General Assembly House of Representatives District 115
+CandidateContest	Representative in the General Assembly;116th Legislative District	Pennsylvania;General Assembly House of Representatives District 116
+CandidateContest	Representative in the General Assembly;117th Legislative District	Pennsylvania;General Assembly House of Representatives District 117
+CandidateContest	Representative in the General Assembly;118th Legislative District	Pennsylvania;General Assembly House of Representatives District 118
+CandidateContest	Representative in the General Assembly;119th Legislative District	Pennsylvania;General Assembly House of Representatives District 119
+CandidateContest	Representative in the General Assembly;11th Legislative District	Pennsylvania;General Assembly House of Representatives District 11
+CandidateContest	Representative in the General Assembly;120th Legislative District	Pennsylvania;General Assembly House of Representatives District 120
+CandidateContest	Representative in the General Assembly;121st Legislative District	Pennsylvania;General Assembly House of Representatives District 121
+CandidateContest	Representative in the General Assembly;122nd Legislative District	Pennsylvania;General Assembly House of Representatives District 122
+CandidateContest	Representative in the General Assembly;123rd Legislative District	Pennsylvania;General Assembly House of Representatives District 123
+CandidateContest	Representative in the General Assembly;124th Legislative District	Pennsylvania;General Assembly House of Representatives District 124
+CandidateContest	Representative in the General Assembly;125th Legislative District	Pennsylvania;General Assembly House of Representatives District 125
+CandidateContest	Representative in the General Assembly;126th Legislative District	Pennsylvania;General Assembly House of Representatives District 126
+CandidateContest	Representative in the General Assembly;127th Legislative District	Pennsylvania;General Assembly House of Representatives District 127
+CandidateContest	Representative in the General Assembly;128th Legislative District	Pennsylvania;General Assembly House of Representatives District 128
+CandidateContest	Representative in the General Assembly;129th Legislative District	Pennsylvania;General Assembly House of Representatives District 129
+CandidateContest	Representative in the General Assembly;12th Legislative District	Pennsylvania;General Assembly House of Representatives District 12
+CandidateContest	Representative in the General Assembly;130th Legislative District	Pennsylvania;General Assembly House of Representatives District 130
+CandidateContest	Representative in the General Assembly;131st Legislative District	Pennsylvania;General Assembly House of Representatives District 131
+CandidateContest	Representative in the General Assembly;132nd Legislative District	Pennsylvania;General Assembly House of Representatives District 132
+CandidateContest	Representative in the General Assembly;133rd Legislative District	Pennsylvania;General Assembly House of Representatives District 133
+CandidateContest	Representative in the General Assembly;134th Legislative District	Pennsylvania;General Assembly House of Representatives District 134
+CandidateContest	Representative in the General Assembly;135th Legislative District	Pennsylvania;General Assembly House of Representatives District 135
+CandidateContest	Representative in the General Assembly;136th Legislative District	Pennsylvania;General Assembly House of Representatives District 136
+CandidateContest	Representative in the General Assembly;137th Legislative District	Pennsylvania;General Assembly House of Representatives District 137
+CandidateContest	Representative in the General Assembly;138th Legislative District	Pennsylvania;General Assembly House of Representatives District 138
+CandidateContest	Representative in the General Assembly;139th Legislative District	Pennsylvania;General Assembly House of Representatives District 139
+CandidateContest	Representative in the General Assembly;13th Legislative District	Pennsylvania;General Assembly House of Representatives District 13
+CandidateContest	Representative in the General Assembly;140th Legislative District	Pennsylvania;General Assembly House of Representatives District 140
+CandidateContest	Representative in the General Assembly;141st Legislative District	Pennsylvania;General Assembly House of Representatives District 141
+CandidateContest	Representative in the General Assembly;142nd Legislative District	Pennsylvania;General Assembly House of Representatives District 142
+CandidateContest	Representative in the General Assembly;143rd Legislative District	Pennsylvania;General Assembly House of Representatives District 143
+CandidateContest	Representative in the General Assembly;144th Legislative District	Pennsylvania;General Assembly House of Representatives District 144
+CandidateContest	Representative in the General Assembly;145th Legislative District	Pennsylvania;General Assembly House of Representatives District 145
+CandidateContest	Representative in the General Assembly;146th Legislative District	Pennsylvania;General Assembly House of Representatives District 146
+CandidateContest	Representative in the General Assembly;147th Legislative District	Pennsylvania;General Assembly House of Representatives District 147
+CandidateContest	Representative in the General Assembly;148th Legislative District	Pennsylvania;General Assembly House of Representatives District 148
+CandidateContest	Representative in the General Assembly;149th Legislative District	Pennsylvania;General Assembly House of Representatives District 149
+CandidateContest	Representative in the General Assembly;14th Legislative District	Pennsylvania;General Assembly House of Representatives District 14
+CandidateContest	Representative in the General Assembly;150th Legislative District	Pennsylvania;General Assembly House of Representatives District 150
+CandidateContest	Representative in the General Assembly;151st Legislative District	Pennsylvania;General Assembly House of Representatives District 151
+CandidateContest	Representative in the General Assembly;152nd Legislative District	Pennsylvania;General Assembly House of Representatives District 152
+CandidateContest	Representative in the General Assembly;153rd Legislative District	Pennsylvania;General Assembly House of Representatives District 153
+CandidateContest	Representative in the General Assembly;154th Legislative District	Pennsylvania;General Assembly House of Representatives District 154
+CandidateContest	Representative in the General Assembly;155th Legislative District	Pennsylvania;General Assembly House of Representatives District 155
+CandidateContest	Representative in the General Assembly;156th Legislative District	Pennsylvania;General Assembly House of Representatives District 156
+CandidateContest	Representative in the General Assembly;157th Legislative District	Pennsylvania;General Assembly House of Representatives District 157
+CandidateContest	Representative in the General Assembly;158th Legislative District	Pennsylvania;General Assembly House of Representatives District 158
+CandidateContest	Representative in the General Assembly;159th Legislative District	Pennsylvania;General Assembly House of Representatives District 159
+CandidateContest	Representative in the General Assembly;15th Legislative District	Pennsylvania;General Assembly House of Representatives District 15
+CandidateContest	Representative in the General Assembly;160th Legislative District	Pennsylvania;General Assembly House of Representatives District 160
+CandidateContest	Representative in the General Assembly;161st Legislative District	Pennsylvania;General Assembly House of Representatives District 161
+CandidateContest	Representative in the General Assembly;162nd Legislative District	Pennsylvania;General Assembly House of Representatives District 162
+CandidateContest	Representative in the General Assembly;163rd Legislative District	Pennsylvania;General Assembly House of Representatives District 163
+CandidateContest	Representative in the General Assembly;164th Legislative District	Pennsylvania;General Assembly House of Representatives District 164
+CandidateContest	Representative in the General Assembly;165th Legislative District	Pennsylvania;General Assembly House of Representatives District 165
+CandidateContest	Representative in the General Assembly;166th Legislative District	Pennsylvania;General Assembly House of Representatives District 166
+CandidateContest	Representative in the General Assembly;167th Legislative District	Pennsylvania;General Assembly House of Representatives District 167
+CandidateContest	Representative in the General Assembly;168th Legislative District	Pennsylvania;General Assembly House of Representatives District 168
+CandidateContest	Representative in the General Assembly;169th Legislative District	Pennsylvania;General Assembly House of Representatives District 169
+CandidateContest	Representative in the General Assembly;16th Legislative District	Pennsylvania;General Assembly House of Representatives District 16
+CandidateContest	Representative in the General Assembly;170th Legislative District	Pennsylvania;General Assembly House of Representatives District 170
+CandidateContest	Representative in the General Assembly;171st Legislative District	Pennsylvania;General Assembly House of Representatives District 171
+CandidateContest	Representative in the General Assembly;172nd Legislative District	Pennsylvania;General Assembly House of Representatives District 172
+CandidateContest	Representative in the General Assembly;173rd Legislative District	Pennsylvania;General Assembly House of Representatives District 173
+CandidateContest	Representative in the General Assembly;174th Legislative District	Pennsylvania;General Assembly House of Representatives District 174
+CandidateContest	Representative in the General Assembly;175th Legislative District	Pennsylvania;General Assembly House of Representatives District 175
+CandidateContest	Representative in the General Assembly;176th Legislative District	Pennsylvania;General Assembly House of Representatives District 176
+CandidateContest	Representative in the General Assembly;177th Legislative District	Pennsylvania;General Assembly House of Representatives District 177
+CandidateContest	Representative in the General Assembly;178th Legislative District	Pennsylvania;General Assembly House of Representatives District 178
+CandidateContest	Representative in the General Assembly;179th Legislative District	Pennsylvania;General Assembly House of Representatives District 179
+CandidateContest	Representative in the General Assembly;17th Legislative District	Pennsylvania;General Assembly House of Representatives District 17
+CandidateContest	Representative in the General Assembly;180th Legislative District	Pennsylvania;General Assembly House of Representatives District 180
+CandidateContest	Representative in the General Assembly;181st Legislative District	Pennsylvania;General Assembly House of Representatives District 181
+CandidateContest	Representative in the General Assembly;182nd Legislative District	Pennsylvania;General Assembly House of Representatives District 182
+CandidateContest	Representative in the General Assembly;183rd Legislative District	Pennsylvania;General Assembly House of Representatives District 183
+CandidateContest	Representative in the General Assembly;184th Legislative District	Pennsylvania;General Assembly House of Representatives District 184
+CandidateContest	Representative in the General Assembly;185th Legislative District	Pennsylvania;General Assembly House of Representatives District 185
+CandidateContest	Representative in the General Assembly;186th Legislative District	Pennsylvania;General Assembly House of Representatives District 186
+CandidateContest	Representative in the General Assembly;187th Legislative District	Pennsylvania;General Assembly House of Representatives District 187
+CandidateContest	Representative in the General Assembly;188th Legislative District	Pennsylvania;General Assembly House of Representatives District 188
+CandidateContest	Representative in the General Assembly;189th Legislative District	Pennsylvania;General Assembly House of Representatives District 189
+CandidateContest	Representative in the General Assembly;18th Legislative District	Pennsylvania;General Assembly House of Representatives District 18
+CandidateContest	Representative in the General Assembly;190th Legislative District	Pennsylvania;General Assembly House of Representatives District 190
+CandidateContest	Representative in the General Assembly;191st Legislative District	Pennsylvania;General Assembly House of Representatives District 191
+CandidateContest	Representative in the General Assembly;192nd Legislative District	Pennsylvania;General Assembly House of Representatives District 192
+CandidateContest	Representative in the General Assembly;193rd Legislative District	Pennsylvania;General Assembly House of Representatives District 193
+CandidateContest	Representative in the General Assembly;194th Legislative District	Pennsylvania;General Assembly House of Representatives District 194
+CandidateContest	Representative in the General Assembly;195th Legislative District	Pennsylvania;General Assembly House of Representatives District 195
+CandidateContest	Representative in the General Assembly;196th Legislative District	Pennsylvania;General Assembly House of Representatives District 196
+CandidateContest	Representative in the General Assembly;197th Legislative District	Pennsylvania;General Assembly House of Representatives District 197
+CandidateContest	Representative in the General Assembly;198th Legislative District	Pennsylvania;General Assembly House of Representatives District 198
+CandidateContest	Representative in the General Assembly;199th Legislative District	Pennsylvania;General Assembly House of Representatives District 199
+CandidateContest	Representative in the General Assembly;19th Legislative District	Pennsylvania;General Assembly House of Representatives District 19
+CandidateContest	Representative in the General Assembly;1st Legislative District	Pennsylvania;General Assembly House of Representatives District 1
+CandidateContest	Representative in the General Assembly;200th Legislative District	Pennsylvania;General Assembly House of Representatives District 200
+CandidateContest	Representative in the General Assembly;201st Legislative District	Pennsylvania;General Assembly House of Representatives District 201
+CandidateContest	Representative in the General Assembly;202nd Legislative District	Pennsylvania;General Assembly House of Representatives District 202
+CandidateContest	Representative in the General Assembly;203rd Legislative District	Pennsylvania;General Assembly House of Representatives District 203
+CandidateContest	Representative in the General Assembly;20th Legislative District	Pennsylvania;General Assembly House of Representatives District 20
+CandidateContest	Representative in the General Assembly;21st Legislative District	Pennsylvania;General Assembly House of Representatives District 21
+CandidateContest	Representative in the General Assembly;22nd Legislative District	Pennsylvania;General Assembly House of Representatives District 22
+CandidateContest	Representative in the General Assembly;23rd Legislative District	Pennsylvania;General Assembly House of Representatives District 23
+CandidateContest	Representative in the General Assembly;24th Legislative District	Pennsylvania;General Assembly House of Representatives District 24
+CandidateContest	Representative in the General Assembly;25th Legislative District	Pennsylvania;General Assembly House of Representatives District 25
+CandidateContest	Representative in the General Assembly;26th Legislative District	Pennsylvania;General Assembly House of Representatives District 26
+CandidateContest	Representative in the General Assembly;27th Legislative District	Pennsylvania;General Assembly House of Representatives District 27
+CandidateContest	Representative in the General Assembly;28th Legislative District	Pennsylvania;General Assembly House of Representatives District 28
+CandidateContest	Representative in the General Assembly;29th Legislative District	Pennsylvania;General Assembly House of Representatives District 29
+CandidateContest	Representative in the General Assembly;2nd Legislative District	Pennsylvania;General Assembly House of Representatives District 2
+CandidateContest	Representative in the General Assembly;30th Legislative District	Pennsylvania;General Assembly House of Representatives District 30
+CandidateContest	Representative in the General Assembly;31st Legislative District	Pennsylvania;General Assembly House of Representatives District 31
+CandidateContest	Representative in the General Assembly;32nd Legislative District	Pennsylvania;General Assembly House of Representatives District 32
+CandidateContest	Representative in the General Assembly;33rd Legislative District	Pennsylvania;General Assembly House of Representatives District 33
+CandidateContest	Representative in the General Assembly;34th Legislative District	Pennsylvania;General Assembly House of Representatives District 34
+CandidateContest	Representative in the General Assembly;35th Legislative District	Pennsylvania;General Assembly House of Representatives District 35
+CandidateContest	Representative in the General Assembly;36th Legislative District	Pennsylvania;General Assembly House of Representatives District 36
+CandidateContest	Representative in the General Assembly;37th Legislative District	Pennsylvania;General Assembly House of Representatives District 37
+CandidateContest	Representative in the General Assembly;38th Legislative District	Pennsylvania;General Assembly House of Representatives District 38
+CandidateContest	Representative in the General Assembly;39th Legislative District	Pennsylvania;General Assembly House of Representatives District 39
+CandidateContest	Representative in the General Assembly;3rd Legislative District	Pennsylvania;General Assembly House of Representatives District 3
+CandidateContest	Representative in the General Assembly;40th Legislative District	Pennsylvania;General Assembly House of Representatives District 40
+CandidateContest	Representative in the General Assembly;41st Legislative District	Pennsylvania;General Assembly House of Representatives District 41
+CandidateContest	Representative in the General Assembly;42nd Legislative District	Pennsylvania;General Assembly House of Representatives District 42
+CandidateContest	Representative in the General Assembly;43rd Legislative District	Pennsylvania;General Assembly House of Representatives District 43
+CandidateContest	Representative in the General Assembly;44th Legislative District	Pennsylvania;General Assembly House of Representatives District 44
+CandidateContest	Representative in the General Assembly;45th Legislative District	Pennsylvania;General Assembly House of Representatives District 45
+CandidateContest	Representative in the General Assembly;46th Legislative District	Pennsylvania;General Assembly House of Representatives District 46
+CandidateContest	Representative in the General Assembly;47th Legislative District	Pennsylvania;General Assembly House of Representatives District 47
+CandidateContest	Representative in the General Assembly;48th Legislative District	Pennsylvania;General Assembly House of Representatives District 48
+CandidateContest	Representative in the General Assembly;49th Legislative District	Pennsylvania;General Assembly House of Representatives District 49
+CandidateContest	Representative in the General Assembly;4th Legislative District	Pennsylvania;General Assembly House of Representatives District 4
+CandidateContest	Representative in the General Assembly;50th Legislative District	Pennsylvania;General Assembly House of Representatives District 50
+CandidateContest	Representative in the General Assembly;51st Legislative District	Pennsylvania;General Assembly House of Representatives District 51
+CandidateContest	Representative in the General Assembly;52nd Legislative District	Pennsylvania;General Assembly House of Representatives District 52
+CandidateContest	Representative in the General Assembly;53rd Legislative District	Pennsylvania;General Assembly House of Representatives District 53
+CandidateContest	Representative in the General Assembly;54th Legislative District	Pennsylvania;General Assembly House of Representatives District 54
+CandidateContest	Representative in the General Assembly;55th Legislative District	Pennsylvania;General Assembly House of Representatives District 55
+CandidateContest	Representative in the General Assembly;56th Legislative District	Pennsylvania;General Assembly House of Representatives District 56
+CandidateContest	Representative in the General Assembly;57th Legislative District	Pennsylvania;General Assembly House of Representatives District 57
+CandidateContest	Representative in the General Assembly;58th Legislative District	Pennsylvania;General Assembly House of Representatives District 58
+CandidateContest	Representative in the General Assembly;59th Legislative District	Pennsylvania;General Assembly House of Representatives District 59
+CandidateContest	Representative in the General Assembly;5th Legislative District	Pennsylvania;General Assembly House of Representatives District 5
+CandidateContest	Representative in the General Assembly;60th Legislative District	Pennsylvania;General Assembly House of Representatives District 60
+CandidateContest	Representative in the General Assembly;61st Legislative District	Pennsylvania;General Assembly House of Representatives District 61
+CandidateContest	Representative in the General Assembly;62nd Legislative District	Pennsylvania;General Assembly House of Representatives District 62
+CandidateContest	Representative in the General Assembly;63rd Legislative District	Pennsylvania;General Assembly House of Representatives District 63
+CandidateContest	Representative in the General Assembly;64th Legislative District	Pennsylvania;General Assembly House of Representatives District 64
+CandidateContest	Representative in the General Assembly;65th Legislative District	Pennsylvania;General Assembly House of Representatives District 65
+CandidateContest	Representative in the General Assembly;66th Legislative District	Pennsylvania;General Assembly House of Representatives District 66
+CandidateContest	Representative in the General Assembly;67th Legislative District	Pennsylvania;General Assembly House of Representatives District 67
+CandidateContest	Representative in the General Assembly;68th Legislative District	Pennsylvania;General Assembly House of Representatives District 68
+CandidateContest	Representative in the General Assembly;69th Legislative District	Pennsylvania;General Assembly House of Representatives District 69
+CandidateContest	Representative in the General Assembly;6th Legislative District	Pennsylvania;General Assembly House of Representatives District 6
+CandidateContest	Representative in the General Assembly;70th Legislative District	Pennsylvania;General Assembly House of Representatives District 70
+CandidateContest	Representative in the General Assembly;71st Legislative District	Pennsylvania;General Assembly House of Representatives District 71
+CandidateContest	Representative in the General Assembly;72nd Legislative District	Pennsylvania;General Assembly House of Representatives District 72
+CandidateContest	Representative in the General Assembly;73rd Legislative District	Pennsylvania;General Assembly House of Representatives District 73
+CandidateContest	Representative in the General Assembly;74th Legislative District	Pennsylvania;General Assembly House of Representatives District 74
+CandidateContest	Representative in the General Assembly;75th Legislative District	Pennsylvania;General Assembly House of Representatives District 75
+CandidateContest	Representative in the General Assembly;76th Legislative District	Pennsylvania;General Assembly House of Representatives District 76
+CandidateContest	Representative in the General Assembly;77th Legislative District	Pennsylvania;General Assembly House of Representatives District 77
+CandidateContest	Representative in the General Assembly;78th Legislative District	Pennsylvania;General Assembly House of Representatives District 78
+CandidateContest	Representative in the General Assembly;79th Legislative District	Pennsylvania;General Assembly House of Representatives District 79
+CandidateContest	Representative in the General Assembly;7th Legislative District	Pennsylvania;General Assembly House of Representatives District 7
+CandidateContest	Representative in the General Assembly;80th Legislative District	Pennsylvania;General Assembly House of Representatives District 80
+CandidateContest	Representative in the General Assembly;81st Legislative District	Pennsylvania;General Assembly House of Representatives District 81
+CandidateContest	Representative in the General Assembly;82nd Legislative District	Pennsylvania;General Assembly House of Representatives District 82
+CandidateContest	Representative in the General Assembly;83rd Legislative District	Pennsylvania;General Assembly House of Representatives District 83
+CandidateContest	Representative in the General Assembly;84th Legislative District	Pennsylvania;General Assembly House of Representatives District 84
+CandidateContest	Representative in the General Assembly;85th Legislative District	Pennsylvania;General Assembly House of Representatives District 85
+CandidateContest	Representative in the General Assembly;86th Legislative District	Pennsylvania;General Assembly House of Representatives District 86
+CandidateContest	Representative in the General Assembly;87th Legislative District	Pennsylvania;General Assembly House of Representatives District 87
+CandidateContest	Representative in the General Assembly;88th Legislative District	Pennsylvania;General Assembly House of Representatives District 88
+CandidateContest	Representative in the General Assembly;89th Legislative District	Pennsylvania;General Assembly House of Representatives District 89
+CandidateContest	Representative in the General Assembly;8th Legislative District	Pennsylvania;General Assembly House of Representatives District 8
+CandidateContest	Representative in the General Assembly;90th Legislative District	Pennsylvania;General Assembly House of Representatives District 90
+CandidateContest	Representative in the General Assembly;91st Legislative District	Pennsylvania;General Assembly House of Representatives District 91
+CandidateContest	Representative in the General Assembly;92nd Legislative District	Pennsylvania;General Assembly House of Representatives District 92
+CandidateContest	Representative in the General Assembly;93rd Legislative District	Pennsylvania;General Assembly House of Representatives District 93
+CandidateContest	Representative in the General Assembly;94th Legislative District	Pennsylvania;General Assembly House of Representatives District 94
+CandidateContest	Representative in the General Assembly;95th Legislative District	Pennsylvania;General Assembly House of Representatives District 95
+CandidateContest	Representative in the General Assembly;96th Legislative District	Pennsylvania;General Assembly House of Representatives District 96
+CandidateContest	Representative in the General Assembly;97th Legislative District	Pennsylvania;General Assembly House of Representatives District 97
+CandidateContest	Representative in the General Assembly;98th Legislative District	Pennsylvania;General Assembly House of Representatives District 98
+CandidateContest	Representative in the General Assembly;99th Legislative District	Pennsylvania;General Assembly House of Representatives District 99
+CandidateContest	Representative in the General Assembly;9th Legislative District	Pennsylvania;General Assembly House of Representatives District 9
+CandidateContest	Senator in the General Assembly;10th Senatorial District	Pennsylvania;General Assembly Senate District 10
+CandidateContest	Senator in the General Assembly;12th Senatorial District	Pennsylvania;General Assembly Senate District 12
+CandidateContest	Senator in the General Assembly;14th Senatorial District	Pennsylvania;General Assembly Senate District 14
+CandidateContest	Senator in the General Assembly;16th Senatorial District	Pennsylvania;General Assembly Senate District 16
+CandidateContest	Senator in the General Assembly;18th Senatorial District	Pennsylvania;General Assembly Senate District 18
+CandidateContest	Senator in the General Assembly;20th Senatorial District	Pennsylvania;General Assembly Senate District 20
+CandidateContest	Senator in the General Assembly;22nd Senatorial District	Pennsylvania;General Assembly Senate District 22
+CandidateContest	Senator in the General Assembly;24th Senatorial District	Pennsylvania;General Assembly Senate District 24
+CandidateContest	Senator in the General Assembly;26th Senatorial District	Pennsylvania;General Assembly Senate District 26
+CandidateContest	Senator in the General Assembly;28th Senatorial District	Pennsylvania;General Assembly Senate District 28
+CandidateContest	Senator in the General Assembly;2nd Senatorial District	Pennsylvania;General Assembly Senate District 2
+CandidateContest	Senator in the General Assembly;30th Senatorial District	Pennsylvania;General Assembly Senate District 30
+CandidateContest	Senator in the General Assembly;32nd Senatorial District	Pennsylvania;General Assembly Senate District 32
+CandidateContest	Senator in the General Assembly;34th Senatorial District	Pennsylvania;General Assembly Senate District 34
+CandidateContest	Senator in the General Assembly;36th Senatorial District	Pennsylvania;General Assembly Senate District 36
+CandidateContest	Senator in the General Assembly;38th Senatorial District	Pennsylvania;General Assembly Senate District 38
+CandidateContest	Senator in the General Assembly;40th Senatorial District	Pennsylvania;General Assembly Senate District 40
+CandidateContest	Senator in the General Assembly;42nd Senatorial District	Pennsylvania;General Assembly Senate District 42
+CandidateContest	Senator in the General Assembly;44th Senatorial District	Pennsylvania;General Assembly Senate District 44
+CandidateContest	Senator in the General Assembly;46th Senatorial District	Pennsylvania;General Assembly Senate District 46
+CandidateContest	Senator in the General Assembly;48th Senatorial District	Pennsylvania;General Assembly Senate District 48
+CandidateContest	Senator in the General Assembly;4th Senatorial District	Pennsylvania;General Assembly Senate District 4
+CandidateContest	Senator in the General Assembly;50th Senatorial District	Pennsylvania;General Assembly Senate District 50
+CandidateContest	Senator in the General Assembly;6th Senatorial District	Pennsylvania;General Assembly Senate District 6
+CandidateContest	Senator in the General Assembly;8th Senatorial District	Pennsylvania;General Assembly Senate District 8
+CandidateContest	United States Senator;Statewide	Pennsylvania;US Congress;Senate
+ReportingUnit	Pennsylvania;ADAMS County	ADAMS
+ReportingUnit	Pennsylvania;ALLEGHENY County	ALLEGHENY
+ReportingUnit	Pennsylvania;ARMSTRONG County	ARMSTRONG
+ReportingUnit	Pennsylvania;BEAVER County	BEAVER
+ReportingUnit	Pennsylvania;BEDFORD County	BEDFORD
+ReportingUnit	Pennsylvania;BERKS County	BERKS
+ReportingUnit	Pennsylvania;BLAIR County	BLAIR
+ReportingUnit	Pennsylvania;BRADFORD County	BRADFORD
+ReportingUnit	Pennsylvania;BUCKS County	BUCKS
+ReportingUnit	Pennsylvania;BUTLER County	BUTLER
+ReportingUnit	Pennsylvania;CAMBRIA County	CAMBRIA
+ReportingUnit	Pennsylvania;CAMERON County	CAMERON
+ReportingUnit	Pennsylvania;CARBON County	CARBON
+ReportingUnit	Pennsylvania;CENTRE County	CENTRE
+ReportingUnit	Pennsylvania;CHESTER County	CHESTER
+ReportingUnit	Pennsylvania;CLARION County	CLARION
+ReportingUnit	Pennsylvania;CLEARFIELD County	CLEARFIELD
+ReportingUnit	Pennsylvania;CLINTON County	CLINTON
+ReportingUnit	Pennsylvania;COLUMBIA County	COLUMBIA
+ReportingUnit	Pennsylvania;CRAWFORD County	CRAWFORD
+ReportingUnit	Pennsylvania;CUMBERLAND County	CUMBERLAND
+ReportingUnit	Pennsylvania;DAUPHIN County	DAUPHIN
+ReportingUnit	Pennsylvania;DELAWARE County	DELAWARE
+ReportingUnit	Pennsylvania;ELK County	ELK
+ReportingUnit	Pennsylvania;ERIE County	ERIE
+ReportingUnit	Pennsylvania;FAYETTE County	FAYETTE
+ReportingUnit	Pennsylvania;FOREST County	FOREST
+ReportingUnit	Pennsylvania;FRANKLIN County	FRANKLIN
+ReportingUnit	Pennsylvania;FULTON County	FULTON
+ReportingUnit	Pennsylvania;GREENE County	GREENE
+ReportingUnit	Pennsylvania;HUNTINGDON County	HUNTINGDON
+ReportingUnit	Pennsylvania;INDIANA County	INDIANA
+ReportingUnit	Pennsylvania;JEFFERSON County	JEFFERSON
+ReportingUnit	Pennsylvania;JUNIATA County	JUNIATA
+ReportingUnit	Pennsylvania;LACKAWANNA County	LACKAWANNA
+ReportingUnit	Pennsylvania;LANCASTER County	LANCASTER
+ReportingUnit	Pennsylvania;LAWRENCE County	LAWRENCE
+ReportingUnit	Pennsylvania;LEBANON County	LEBANON
+ReportingUnit	Pennsylvania;LEHIGH County	LEHIGH
+ReportingUnit	Pennsylvania;LUZERNE County	LUZERNE
+ReportingUnit	Pennsylvania;LYCOMING County	LYCOMING
+ReportingUnit	Pennsylvania;McKEAN County	McKEAN
+ReportingUnit	Pennsylvania;MERCER County	MERCER
+ReportingUnit	Pennsylvania;MIFFLIN County	MIFFLIN
+ReportingUnit	Pennsylvania;MONROE County	MONROE
+ReportingUnit	Pennsylvania;MONTGOMERY County	MONTGOMERY
+ReportingUnit	Pennsylvania;MONTOUR County	MONTOUR
+ReportingUnit	Pennsylvania;NORTHAMPTON County	NORTHAMPTON
+ReportingUnit	Pennsylvania;NORTHUMBERLAND County	NORTHUMBERLAND
+ReportingUnit	Pennsylvania;PERRY County	PERRY
+ReportingUnit	Pennsylvania;PHILADELPHIA County	PHILADELPHIA
+ReportingUnit	Pennsylvania;PIKE County	PIKE
+ReportingUnit	Pennsylvania;POTTER County	POTTER
+ReportingUnit	Pennsylvania;SCHUYLKILL County	SCHUYLKILL
+ReportingUnit	Pennsylvania;SNYDER County	SNYDER
+ReportingUnit	Pennsylvania;SOMERSET County	SOMERSET
+ReportingUnit	Pennsylvania;SULLIVAN County	SULLIVAN
+ReportingUnit	Pennsylvania;SUSQUEHANNA County	SUSQUEHANNA
+ReportingUnit	Pennsylvania;TIOGA County	TIOGA
+ReportingUnit	Pennsylvania;UNION County	UNION
+ReportingUnit	Pennsylvania;VENANGO County	VENANGO
+ReportingUnit	Pennsylvania;WARREN County	WARREN
+ReportingUnit	Pennsylvania;WASHINGTON County	WASHINGTON
+ReportingUnit	Pennsylvania;WAYNE County	WAYNE
+ReportingUnit	Pennsylvania;WESTMORELAND County	WESTMORELAND
+ReportingUnit	Pennsylvania;WYOMING County	WYOMING
+ReportingUnit	Pennsylvania;YORK County	YORK
+Candidate	CASEY, ROBERT P JR	CASEY, ROBERT P JR
+Candidate	BARLETTA, LOUIS J.	BARLETTA, LOUIS J.
+Candidate	GALE, NEAL TAYLOR	GALE, NEAL TAYLOR
+Candidate	KERNS, DALE R JR	KERNS, DALE R JR
+Candidate	WOLF, THOMAS W	WOLF, THOMAS W
+Candidate	WAGNER, SCOTT R	WAGNER, SCOTT R
+Candidate	GLOVER, PAUL	GLOVER, PAUL
+Candidate	KRAWCHUK, KENNETH V	KRAWCHUK, KENNETH V
+Candidate	OTTAWAY, BRENT M	OTTAWAY, BRENT M
+Candidate	JOYCE, JOHN	JOYCE, JOHN
+Candidate	QUALLY, MARTY	QUALLY, MARTY
+Candidate	MOUL, DANIEL P	MOUL, DANIEL P
+Candidate	NELSON, MATTHEW P	NELSON, MATTHEW P
+Candidate	ECKER, TORREN C	ECKER, TORREN C
+Candidate	LAMB, CONOR JAMES	LAMB, CONOR JAMES
+Candidate	ROTHFUS, KEITH	ROTHFUS, KEITH
+Candidate	DOYLE, MICHAEL F JR	DOYLE, MICHAEL F JR
+Candidate	WILLIAMS, LINDSEY MARIE	WILLIAMS, LINDSEY MARIE
+Candidate	SHAFFER, JEREMY KEVIN	SHAFFER, JEREMY KEVIN
+Candidate	FONTANA, WAYNE D	FONTANA, WAYNE D
+Candidate	MATZIE, ROBERT F	MATZIE, ROBERT F
+Candidate	WHEATLEY, JAKE	WHEATLEY, JAKE
+Candidate	RAVENSTAHL, ADAM J	RAVENSTAHL, ADAM J
+Candidate	INNAMORATO, SARA G	INNAMORATO, SARA G
+Candidate	FRANKEL, DAN B.	FRANKEL, DAN B.
+Candidate	WALKER, JAY TING	WALKER, JAY TING
+Candidate	GAINEY, EDWARD C	GAINEY, EDWARD C
+Candidate	MARKOSEK, BRANDON J	MARKOSEK, BRANDON J
+Candidate	SCHLAUCH, STEPHEN DAVID	SCHLAUCH, STEPHEN DAVID
+Candidate	DEASY, DANIEL J	DEASY, DANIEL J
+Candidate	SKOPOV, EMILY S	SKOPOV, EMILY S
+Candidate	TURZAI, MICHAEL C	TURZAI, MICHAEL C
+Candidate	MONROE, ELIZABETH	MONROE, ELIZABETH
+Candidate	MIZGORSKI, LORI A	MIZGORSKI, LORI A
+Candidate	DELUCA, ANTHONY M	DELUCA, ANTHONY M
+Candidate	DERMODY, FRANCIS J	DERMODY, FRANCIS J
+Candidate	NULPH, JOSHUA RICHARD	NULPH, JOSHUA RICHARD
+Candidate	LEE, SUMMER L	LEE, SUMMER L
+Candidate	DAVIS, AUSTIN	DAVIS, AUSTIN
+Candidate	READSHAW, HARRY A III	READSHAW, HARRY A III
+Candidate	KORTZ, WILLIAM C II	KORTZ, WILLIAM C II
+Candidate	RHODERICK, ROBERT E JR	RHODERICK, ROBERT E JR
+Candidate	PUSKARIC, MICHAEL J	PUSKARIC, MICHAEL J
+Candidate	GUIDI, SHARON  M.	GUIDI, SHARON  M.
+Candidate	MIHALEK STUCK , NATALIE  NICOLE	MIHALEK STUCK , NATALIE  NICOLE
+Candidate	MILLER, DANIEL L	MILLER, DANIEL L
+Candidate	KNOLL, MICHELE	KNOLL, MICHELE
+Candidate	GAYDOS, VALERIE S	GAYDOS, VALERIE S
+Candidate	KULIK, ANITA ASTORINO	KULIK, ANITA ASTORINO
+Candidate	TIMMINS, BYRON FLAVIN	TIMMINS, BYRON FLAVIN
+Candidate	ORTITAY, JASON A	ORTITAY, JASON A
+Candidate	MCCABE, JONATHAN PAUL	MCCABE, JONATHAN PAUL
+Candidate	BROOKS, ROBERT J	BROOKS, ROBERT J
+Candidate	BOSER, SUSAN	BOSER, SUSAN
+Candidate	THOMPSON, GLENN WILLIAM JR	THOMPSON, GLENN WILLIAM JR
+Candidate	PETRARCA, JOSEPH A	PETRARCA, JOSEPH A
+Candidate	PYLE, JEFFREY PAUL	PYLE, JEFFREY PAUL
+Candidate	WARNER, CONRAD	WARNER, CONRAD
+Candidate	OBERLANDER, DONNA R	OBERLANDER, DONNA R
+Candidate	CRAIG, JAMES R	CRAIG, JAMES R
+Candidate	BARTOLOTTA, CAMERA C	BARTOLOTTA, CAMERA C
+Candidate	BERNSTINE, AARON JOSEPH	BERNSTINE, AARON JOSEPH
+Candidate	SLAPPY, DARCELLE L	SLAPPY, DARCELLE L
+Candidate	FAZIO, AMY	FAZIO, AMY
+Candidate	MARSHALL, JAMES E	MARSHALL, JAMES E
+Candidate	MITKO, TERRI	MITKO, TERRI
+Candidate	KAIL, JOSHUA DANIEL	KAIL, JOSHUA DANIEL
+Candidate	COLE, JEFF	COLE, JEFF
+Candidate	METZGAR, CARL WALKER	METZGAR, CARL WALKER
+Candidate	BAUGHMAN, DEBORAH TURNER	BAUGHMAN, DEBORAH TURNER
+Candidate	TOPPER, JESSE WILLS	TOPPER, JESSE WILLS
+Candidate	DEAN CUNNANE , MADELEINE	DEAN CUNNANE , MADELEINE
+Candidate	DAVID, DANIEL	DAVID, DANIEL
+Candidate	HOULAHAN, CHRISTINA JAMPOLER	HOULAHAN, CHRISTINA JAMPOLER
+Candidate	MCCAULEY, GREGORY MICHAEL SENIOR	MCCAULEY, GREGORY MICHAEL SENIOR
+Candidate	WOLFF, DENNIS	WOLFF, DENNIS
+Candidate	MEUSER, DANIEL	MEUSER, DANIEL
+Candidate	FIELDS, LINDA	FIELDS, LINDA
+Candidate	MENSCH, ROBERT BRUCE	MENSCH, ROBERT BRUCE
+Candidate	MUTH, KATIE J	MUTH, KATIE J
+Candidate	RAFFERTY, JOHN C JR	RAFFERTY, JOHN C JR
+Candidate	JOZWIAK, BARRY J	JOZWIAK, BARRY J
+Candidate	KNOWLES, JEROME P	KNOWLES, JEROME P
+Candidate	ROZZI, MARK LUCIO	ROZZI, MARK LUCIO
+Candidate	CALTAGIRONE, THOMAS R	CALTAGIRONE, THOMAS R
+Candidate	GAGLIARDO, VINCENT D JR	GAGLIARDO, VINCENT D JR
+Candidate	METCALFE, DOUGLAS B	METCALFE, DOUGLAS B
+Candidate	GILLEN, MARK M	GILLEN, MARK M
+Candidate	WERTZ, TRICIA L	WERTZ, TRICIA L
+Candidate	COX, JAMES A JR	COX, JAMES A JR
+Candidate	MALONEY, DAVID M SR	MALONEY, DAVID M SR
+Candidate	APPLEBACH, THOMAS LEE	APPLEBACH, THOMAS LEE
+Candidate	MACKENZIE, RYAN E	MACKENZIE, RYAN E
+Candidate	BLICHAR, MICHAEL JR	BLICHAR, MICHAEL JR
+Candidate	DAY, GARY  W	DAY, GARY  W
+Candidate	GARBUNY BEST, EMILY	GARBUNY BEST, EMILY
+Candidate	WARD, JUDITH F	WARD, JUDITH F
+Candidate	SCHMITT, LOUIS C. JR	SCHMITT, LOUIS C. JR
+Candidate	BURKE, LAURA	BURKE, LAURA
+Candidate	GREGORY, JAMES V	GREGORY, JAMES V
+Candidate	FRIEDENBERG, MARC	FRIEDENBERG, MARC
+Candidate	MARINO, THOMAS A	MARINO, THOMAS A
+Candidate	HEATH, CARRIE L	HEATH, CARRIE L
+Candidate	OWLETT, CLINTON DENNIS	OWLETT, CLINTON DENNIS
+Candidate	IANNONE, DONNA	IANNONE, DONNA
+Candidate	PICKETT, TINA	PICKETT, TINA
+Candidate	WALLACE, HENRY SCOTT	WALLACE, HENRY SCOTT
+Candidate	FITZPATRICK, BRIAN K	FITZPATRICK, BRIAN K
+Candidate	DAVIS, TINA	DAVIS, TINA
+Candidate	TOMLINSON, ROBERT M	TOMLINSON, ROBERT M
+Candidate	SANTARSIERO, STEVEN J	SANTARSIERO, STEVEN J
+Candidate	QUINN, MARGUERITE C	QUINN, MARGUERITE C
+Candidate	COLLETT, MARIA	COLLETT, MARIA
+Candidate	GREENLEAF, STEWART JR	GREENLEAF, STEWART JR
+Candidate	LAMB, JAMES JOHN III	LAMB, JAMES JOHN III
+Candidate	DIGIROLAMO, GENE	DIGIROLAMO, GENE
+Candidate	DIXON, ANDREW FRANKLIN	DIXON, ANDREW FRANKLIN
+Candidate	SCHROEDER, MEGHAN	SCHROEDER, MEGHAN
+Candidate	WARREN, PERRY S JR	WARREN, PERRY S JR
+Candidate	GALLAGHER, RYAN W	GALLAGHER, RYAN W
+Candidate	GALLOWAY, JOHN T	GALLOWAY, JOHN T
+Candidate	SPOSATO, ANTHONY	SPOSATO, ANTHONY
+Candidate	LAREAU, MALINDA LAUREN	LAREAU, MALINDA LAUREN
+Candidate	FARRY, FRANK ANTHONY III	FARRY, FRANK ANTHONY III
+Candidate	ULLMAN, WENDY	ULLMAN, WENDY
+Candidate	FLOOD, JOSEPH PATRICK	FLOOD, JOSEPH PATRICK
+Candidate	BUCK, MEREDITH JEAN	BUCK, MEREDITH JEAN
+Candidate	POLINCHOCK, F TODD	POLINCHOCK, F TODD
+Candidate	KLINE, BRIAN	KLINE, BRIAN
+Candidate	STAATS, CRAIG  T	STAATS, CRAIG  T
+Candidate	TAI, HELEN D	TAI, HELEN D
+Candidate	THOMAS, WENDI	THOMAS, WENDI
+Candidate	DINICOLA, RONALD A	DINICOLA, RONALD A
+Candidate	KELLY, GEORGE J JR	KELLY, GEORGE J JR
+Candidate	BEEMAN, EBERT G BILL	BEEMAN, EBERT G BILL
+Candidate	BOEVING-LEARNED, LISA K	BOEVING-LEARNED, LISA K
+Candidate	NESBIT, TEDD	NESBIT, TEDD
+Candidate	ELLIS, BRIAN L	ELLIS, BRIAN L
+Candidate	DOCTOR, SAMUEL	DOCTOR, SAMUEL
+Candidate	SMITH, DANIEL BURTON JR	SMITH, DANIEL BURTON JR
+Candidate	METCALFE, DARYL D	METCALFE, DARYL D
+Candidate	KLUCK, JOHN	KLUCK, JOHN
+Candidate	JAMES, R LEE	JAMES, R LEE
+Candidate	BARBIN, BRYAN E	BARBIN, BRYAN E
+Candidate	RIGBY, JAMES PATRICK	RIGBY, JAMES PATRICK
+Candidate	BURNS, FRANK	BURNS, FRANK
+Candidate	CARNICELLA, GERALD S	CARNICELLA, GERALD S
+Candidate	SANKEY, THOMAS R III	SANKEY, THOMAS R III
+Candidate	COLE, MARYANNE	COLE, MARYANNE
+Candidate	CAUSER, MARTIN T	CAUSER, MARTIN T
+Candidate	YUDICHAK, JOHN T	YUDICHAK, JOHN T
+Candidate	SCOTT, KARA M	SCOTT, KARA M
+Candidate	HEFFLEY, DOYLE M	HEFFLEY, DOYLE M
+Candidate	NANES, EZRA J	NANES, EZRA J
+Candidate	CORMAN, JACOB D III	CORMAN, JACOB D III
+Candidate	HANNA, MICHAEL  KELLY JR	HANNA, MICHAEL  KELLY JR
+Candidate	BOROWICZ, STEPHANIE PAIGE	BOROWICZ, STEPHANIE PAIGE
+Candidate	CONKLIN, H SCOTT	CONKLIN, H SCOTT
+Candidate	ROGERS, RICHARD JAMES SR	ROGERS, RICHARD JAMES SR
+Candidate	IRVIN, RICHARD S.	IRVIN, RICHARD S.
+Candidate	SOLOSKI, JOSEPH P	SOLOSKI, JOSEPH P
+Candidate	MCCRACKEN, ERIN  CONDO	MCCRACKEN, ERIN  CONDO
+Candidate	BENNINGHOFF, KERRY ALBERT	BENNINGHOFF, KERRY ALBERT
+Candidate	SCANLON, MARY GAY	SCANLON, MARY GAY
+Candidate	KIM, PEARL	KIM, PEARL
+Candidate	KEARNEY, TIMOTHY P	KEARNEY, TIMOTHY P
+Candidate	MCGARRIGLE, THOMAS J SR	MCGARRIGLE, THOMAS J SR
+Candidate	WALKER, SUSANNAH L	WALKER, SUSANNAH L
+Candidate	LAWRENCE, JOHN ADDA	LAWRENCE, JOHN ADDA
+Candidate	PIROCCHI, DOMINIC J	PIROCCHI, DOMINIC J
+Candidate	HACKER, PAMELA A	HACKER, PAMELA A
+Candidate	HENNESSEY, TIMOTHY F	HENNESSEY, TIMOTHY F
+Candidate	WILLIAMS, DAN K	WILLIAMS, DAN K
+Candidate	TURNER, AMBER LITTLE	TURNER, AMBER LITTLE
+Candidate	OTTEN, DANIELLE FRIEL	OTTEN, DANIELLE FRIEL
+Candidate	CORBIN, REBECCA P	CORBIN, REBECCA P
+Candidate	COMITTA, CAROLYN	COMITTA, CAROLYN
+Candidate	DEMINSKI, NICHOLAS	DEMINSKI, NICHOLAS
+Candidate	SHUSTERMAN, MELISSA	SHUSTERMAN, MELISSA
+Candidate	KAMPF, WARREN E	KAMPF, WARREN E
+Candidate	SAPPEY, CHRISTINA  D	SAPPEY, CHRISTINA  D
+Candidate	ROE, ERIC MARK	ROE, ERIC MARK
+Candidate	ANDREW, ANTON	ANDREW, ANTON
+Candidate	BARRAR, STEPHEN E.	BARRAR, STEPHEN E.
+Candidate	HOWARD, KRISTINE C	HOWARD, KRISTINE C
+Candidate	MILNE, DUANE D	MILNE, DUANE D
+Candidate	GABLER, MATTHEW M	GABLER, MATTHEW M
+Candidate	DONNELLY, SARAH	DONNELLY, SARAH
+Candidate	MASSER, KURT A	MASSER, KURT A
+Candidate	SANDERS, EDWARD THOMAS III	SANDERS, EDWARD THOMAS III
+Candidate	MILLARD, DAVID R	MILLARD, DAVID R
+Candidate	MULVEY, SUE ANN	MULVEY, SUE ANN
+Candidate	BROOKS, MICHELE	BROOKS, MICHELE
+Candidate	ROAE, BRADLEY T	ROAE, BRADLEY T
+Candidate	WENTLING, PARKE H	WENTLING, PARKE H
+Candidate	RAPP, KATHY L	RAPP, KATHY L
+Candidate	SCOTT, GEORGE B	SCOTT, GEORGE B
+Candidate	PERRY, SCOTT G	PERRY, SCOTT G
+Candidate	ANDERSON, KAREN ANN	ANDERSON, KAREN ANN
+Candidate	KELLER, MARK K	KELLER, MARK K
+Candidate	QUINLAN, SEAN PATRICK	QUINLAN, SEAN PATRICK
+Candidate	ROTHMAN, WILLIAM GREGORY	ROTHMAN, WILLIAM GREGORY
+Candidate	FOSCHI, JEAN  MARIE VARGAS	FOSCHI, JEAN  MARIE VARGAS
+Candidate	DELOZIER, SHERYL M	DELOZIER, SHERYL M
+Candidate	DANIELSON, SHANNA LEIGH	DANIELSON, SHANNA LEIGH
+Candidate	KEEFER, DAWN WETZEL	KEEFER, DAWN WETZEL
+Candidate	MCGINNIS, JOSEPH SHERWOOD JR	MCGINNIS, JOSEPH SHERWOOD JR
+Candidate	GLEIM, BARBARA J	GLEIM, BARBARA J
+Candidate	BOUST, CHARLES M	BOUST, CHARLES M
+Candidate	HERR, LOIS  K	HERR, LOIS  K
+Candidate	FOLMER, MICHAEL J	FOLMER, MICHAEL J
+Candidate	AUKER-ENDRES, MARY	AUKER-ENDRES, MARY
+Candidate	HICKERNELL, DAVID S	HICKERNELL, DAVID S
+Candidate	MILLER, JAMES M	MILLER, JAMES M
+Candidate	KIM, PATTY H	KIM, PATTY H
+Candidate	HARRELL, ANTHONY THOMAS	HARRELL, ANTHONY THOMAS
+Candidate	SMITH, PATRICIA ANN	SMITH, PATRICIA ANN
+Candidate	HELM, SUSAN C	HELM, SUSAN C
+Candidate	EPSTEIN, ERIC J	EPSTEIN, ERIC J
+Candidate	LEWIS, ANDREW	LEWIS, ANDREW
+Candidate	LINTA, JILL	LINTA, JILL
+Candidate	MEHAFFIE, THOMAS L III	MEHAFFIE, THOMAS L III
+Candidate	TOBASH, MICHAEL G	TOBASH, MICHAEL G
+Candidate	WILLIAMS, ANTHONY  H	WILLIAMS, ANTHONY  H
+Candidate	KIRKLAND, BRIAN J	KIRKLAND, BRIAN J
+Candidate	MOTON, RUTH	MOTON, RUTH
+Candidate	KRUEGER-BRANEKY, LEANNE T	KRUEGER-BRANEKY, LEANNE T
+Candidate	RODGERS MORRISETTE, PATTI	RODGERS MORRISETTE, PATTI
+Candidate	DELLOSO, DAVID M	DELLOSO, DAVID M
+Candidate	HOPPER, MARY	HOPPER, MARY
+Candidate	ZABEL, MICHAEL PATRICK	ZABEL, MICHAEL PATRICK
+Candidate	SANTORA, JAMES	SANTORA, JAMES
+Candidate	DAVIDSON, MARGO LOMAX	DAVIDSON, MARGO LOMAX
+Candidate	BAINS, INDERJIT	BAINS, INDERJIT
+Candidate	OMARA, JENNIFER M	OMARA, JENNIFER M
+Candidate	CHARLTON, ALEXANDER T	CHARLTON, ALEXANDER T
+Candidate	VITALI, GREGORY S	VITALI, GREGORY S
+Candidate	RUBIO, BALTAZAR EDSON	RUBIO, BALTAZAR EDSON
+Candidate	SEALE, KRISTIN	SEALE, KRISTIN
+Candidate	QUINN, CHRISTOPHER B	QUINN, CHRISTOPHER B
+Candidate	DONATUCCI, MARIA P	DONATUCCI, MARIA P
+Candidate	MCCLINTON, JOANNA E	MCCLINTON, JOANNA E
+Candidate	HARKINS, PATRICK J	HARKINS, PATRICK J
+Candidate	MERSKI, ROBERT E	MERSKI, ROBERT E
+Candidate	KUZMA, TIMOTHY P	KUZMA, TIMOTHY P
+Candidate	BIZZARRO, RYAN A	BIZZARRO, RYAN A
+Candidate	SONNEY, CURTIS G	SONNEY, CURTIS G
+Candidate	BOERIO, BIBIANA	BOERIO, BIBIANA
+Candidate	RESCHENTHALER, GUY L	RESCHENTHALER, GUY L
+Candidate	GERARD, PAMELA	GERARD, PAMELA
+Candidate	STEFANO, PATRICK J.	STEFANO, PATRICK J.
+Candidate	TOPRANI, STEVEN MATTHEW	TOPRANI, STEVEN MATTHEW
+Candidate	COOK, DONALD	COOK, DONALD
+Candidate	SNYDER, PAMELA	SNYDER, PAMELA
+Candidate	ROHANNA MCCLURE, ELIZABETH L	ROHANNA MCCLURE, ELIZABETH L
+Candidate	MAHONEY, TIMOTHY S	MAHONEY, TIMOTHY S
+Candidate	DOWLING, MATTHEW DAVID	DOWLING, MATTHEW DAVID
+Candidate	KEEDY, ETHAN EARL	KEEDY, ETHAN EARL
+Candidate	WARNER, RYAN JAMES	WARNER, RYAN JAMES
+Candidate	HERSHEY, JOHNATHAN DEAN	HERSHEY, JOHNATHAN DEAN
+Candidate	BOOK, ELIZABETH S	BOOK, ELIZABETH S
+Candidate	KAUFFMAN, ROBERT W	KAUFFMAN, ROBERT W
+Candidate	SCHEMEL, PAUL THOMAS	SCHEMEL, PAUL THOMAS
+Candidate	DELLAFIORA, LOGAN SHERIFF	DELLAFIORA, LOGAN SHERIFF
+Candidate	STRUZZI, JAMES  BRUNO II	STRUZZI, JAMES  BRUNO II
+Candidate	TAYLOR, KERITH STRANO	TAYLOR, KERITH STRANO
+Candidate	DUSH, CRIS  E	DUSH, CRIS  E
+Candidate	CARTWRIGHT, MATTHEW ALTON	CARTWRIGHT, MATTHEW ALTON
+Candidate	CHRIN, JOHN ROBERT	CHRIN, JOHN ROBERT
+Candidate	BLAKE, JOHN P	BLAKE, JOHN P
+Candidate	SCAVO, FRANK J III	SCAVO, FRANK J III
+Candidate	MULLINS, KYLE J	MULLINS, KYLE J
+Candidate	LEMONCELLI, ERNEST DOMINIC	LEMONCELLI, ERNEST DOMINIC
+Candidate	FLYNN, MARTIN B	FLYNN, MARTIN B
+Candidate	KAVULICH, MICHAEL G	KAVULICH, MICHAEL G
+Candidate	BOBACK, KAREN	BOBACK, KAREN
+Candidate	JASIKOFF, LOU	JASIKOFF, LOU
+Candidate	CARROLL, MICHAEL B	CARROLL, MICHAEL B
+Candidate	KING, JESSICA	KING, JESSICA
+Candidate	SMUCKER, LLOYD K	SMUCKER, LLOYD K
+Candidate	TROUTMAN, WILLIAM N JR	TROUTMAN, WILLIAM N JR
+Candidate	AUMENT, RYAN  PATRICK	AUMENT, RYAN  PATRICK
+Candidate	DELAHUNT, SUZANNE M	DELAHUNT, SUZANNE M
+Candidate	FEE, MELINDA S	FEE, MELINDA S
+Candidate	WHERLEY, MICHELE D	WHERLEY, MICHELE D
+Candidate	MILLER, BRETT R	MILLER, BRETT R
+Candidate	PORTER, JENNIE ELAINE	PORTER, JENNIE ELAINE
+Candidate	GREINER, KEITH JAMES	GREINER, KEITH JAMES
+Candidate	STURLA, PETER MICHAEL	STURLA, PETER MICHAEL
+Candidate	GULICK, DANA HAMP	GULICK, DANA HAMP
+Candidate	MENTZER, STEVEN CURTIS	MENTZER, STEVEN CURTIS
+Candidate	MALARKEY, ELIZABETH	MALARKEY, ELIZABETH
+Candidate	ZIMMERMAN, DAVID H	ZIMMERMAN, DAVID H
+Candidate	HAMBY, DALE ALLEN	HAMBY, DALE ALLEN
+Candidate	CUTLER, BRYAN D	CUTLER, BRYAN D
+Candidate	SAINATO, CHRISTOPHER	SAINATO, CHRISTOPHER
+Candidate	MICHALEK, GREGORY E	MICHALEK, GREGORY E
+Candidate	LIRIANO, CESAR F	LIRIANO, CESAR F
+Candidate	RYAN, FRANCIS X	RYAN, FRANCIS X
+Candidate	DIAMOND, RUSS	DIAMOND, RUSS
+Candidate	WILD, SUSAN ELLIS	WILD, SUSAN ELLIS
+Candidate	NOTHSTEIN, MARTIN W	NOTHSTEIN, MARTIN W
+Candidate	SILFIES, TIM	SILFIES, TIM
+Candidate	PINSLEY, MARK	PINSLEY, MARK
+Candidate	BROWNE, PATRICK M	BROWNE, PATRICK M
+Candidate	BOSCOLA, LISA M	BOSCOLA, LISA M
+Candidate	SCHWEYER, PETER GEORGE	SCHWEYER, PETER GEORGE
+Candidate	LEE, ANDREW SCOTT	LEE, ANDREW SCOTT
+Candidate	SIMMONS, JUSTIN J	SIMMONS, JUSTIN J
+Candidate	SCHLOSSBERG, MICHAEL H	SCHLOSSBERG, MICHAEL H
+Candidate	MCNEILL, JEANNE	MCNEILL, JEANNE
+Candidate	RUFF, JASON	RUFF, JASON
+Candidate	MAKO, ZACHARY	MAKO, ZACHARY
+Candidate	BAKER, ELISABETH J	BAKER, ELISABETH J
+Candidate	SWEENEY, JOHN J	SWEENEY, JOHN J
+Candidate	TOOHIL, TARAH C	TOOHIL, TARAH C
+Candidate	MULLERY, GERALD J	MULLERY, GERALD J
+Candidate	BEHRENS, JUSTIN  V	BEHRENS, JUSTIN  V
+Candidate	KAUFER, AARON D.	KAUFER, AARON D.
+Candidate	PASHINSKI, EDWIN A	PASHINSKI, EDWIN A
+Candidate	HENRY, SUSAN	HENRY, SUSAN
+Candidate	PAGE-DELAHAYE, AIRNEEZER J	PAGE-DELAHAYE, AIRNEEZER J
+Candidate	WHEELAND, JEFF C	WHEELAND, JEFF C
+Candidate	SOSNIAK, LINDA KAY	SOSNIAK, LINDA KAY
+Candidate	EVERETT, GARTH DAVID	EVERETT, GARTH DAVID
+Candidate	LONGIETTI, MARK ALFRED	LONGIETTI, MARK ALFRED
+Candidate	PROBST, TARAH DOROTHEA	PROBST, TARAH DOROTHEA
+Candidate	SCAVELLO, MARIO M	SCAVELLO, MARIO M
+Candidate	REINHARDT, ADAM	REINHARDT, ADAM
+Candidate	MADDEN, MAUREEN E	MADDEN, MAUREEN E
+Candidate	PARKER, DAVID C	PARKER, DAVID C
+Candidate	WILLIAMS, CLAUDETTE	WILLIAMS, CLAUDETTE
+Candidate	RADER, JACK B JR	RADER, JACK B JR
+Candidate	RODRIGUEZ, ADAM ANTHONY	RODRIGUEZ, ADAM ANTHONY
+Candidate	BROWN, ROSEMARY	BROWN, ROSEMARY
+Candidate	HAYWOOD, ARTHUR L III	HAYWOOD, ARTHUR L III
+Candidate	HOLT, RONALD F	HOLT, RONALD F
+Candidate	MALAGARI, STEVEN RICHARD	MALAGARI, STEVEN RICHARD
+Candidate	SZEKELY, GEORGE ANDREW II	SZEKELY, GEORGE ANDREW II
+Candidate	WALDENBERGER, JOHN M	WALDENBERGER, JOHN M
+Candidate	HANBIDGE, LAURA  ELIZABETH FRANCES	HANBIDGE, LAURA  ELIZABETH FRANCES
+Candidate	HARPER, CATHERINE M	HARPER, CATHERINE M
+Candidate	BRADFORD, MATTHEW D	BRADFORD, MATTHEW D
+Candidate	MUNDIATH, CHRISTOPHER	MUNDIATH, CHRISTOPHER
+Candidate	CIRESI, JOSEPH P	CIRESI, JOSEPH P
+Candidate	QUIGLEY, THOMAS J	QUIGLEY, THOMAS J
+Candidate	CAMSON, JOSHUA HARRIS	CAMSON, JOSHUA HARRIS
+Candidate	TOEPEL, MARCY L	TOEPEL, MARCY L
+Candidate	DALEY, MARY  JOSEPHINE	DALEY, MARY  JOSEPHINE
+Candidate	BRIGGS, TIMOTHY PATRICK	BRIGGS, TIMOTHY PATRICK
+Candidate	WEBSTER, JOSEPH G. PHD	WEBSTER, JOSEPH G. PHD
+Candidate	FOUNTAIN, NICHOLAS	FOUNTAIN, NICHOLAS
+Candidate	JOHNSON ROTHMAN, SARA JOANNE	JOHNSON ROTHMAN, SARA JOANNE
+Candidate	STEPHENS, WILLIAM TODD	STEPHENS, WILLIAM TODD
+Candidate	BOLING, DARYL KIRK	BOLING, DARYL KIRK
+Candidate	MURT, THOMAS PAUL	MURT, THOMAS PAUL
+Candidate	SANCHEZ, BEN	SANCHEZ, BEN
+Candidate	BEAVER, DOUGLAS M JR	BEAVER, DOUGLAS M JR
+Candidate	BOZZACCO, MARC	BOZZACCO, MARC
+Candidate	MCCARTER, STEPHEN C	MCCARTER, STEPHEN C
+Candidate	BOWERS, KATHLEEN E	BOWERS, KATHLEEN E
+Candidate	BOYLE, KEVIN J	BOYLE, KEVIN J
+Candidate	DELISSIO, PAMELA ANN	DELISSIO, PAMELA ANN
+Candidate	STEVENS, SEAN PATRICK	STEVENS, SEAN PATRICK
+Candidate	BALTSAR, MATTHEW RYAN	BALTSAR, MATTHEW RYAN
+Candidate	SAMUELSON, STEPHEN P	SAMUELSON, STEPHEN P
+Candidate	FREEMAN, ROBERT	FREEMAN, ROBERT
+Candidate	COZZE, AMY	COZZE, AMY
+Candidate	EMRICK, JOSEPH T	EMRICK, JOSEPH T
+Candidate	REAGAN, ED	REAGAN, ED
+Candidate	DONAHER, DEAN	DONAHER, DEAN
+Candidate	HAHN, MARCIA M	HAHN, MARCIA M
+Candidate	TOWNE, JAKE	TOWNE, JAKE
+Candidate	SCHLEGEL CULVER, LYNDA J	SCHLEGEL CULVER, LYNDA J
+Candidate	BOYLE, BRENDAN F	BOYLE, BRENDAN F
+Candidate	TORRES, DAVID	TORRES, DAVID
+Candidate	EVANS, DWIGHT	EVANS, DWIGHT
+Candidate	LEIB, BRYAN E	LEIB, BRYAN E
+Candidate	TARTAGLIONE, CHRISTINE M	TARTAGLIONE, CHRISTINE M
+Candidate	DOYLE, MICHAEL FRANCIS JR	DOYLE, MICHAEL FRANCIS JR
+Candidate	WHITE, MARTINA A	WHITE, MARTINA A
+Candidate	DRISCOLL, MICHAEL J	DRISCOLL, MICHAEL J
+Candidate	NEILSON, ED	NEILSON, ED
+Candidate	ISAACSON, MARYLOUISE	ISAACSON, MARYLOUISE
+Candidate	HOHENSTEIN, JOSEPH C	HOHENSTEIN, JOSEPH C
+Candidate	KOZLOWSKI, PATTY PAT	KOZLOWSKI, PATTY PAT
+Candidate	DAWKINS, JASON T	DAWKINS, JASON T
+Candidate	CRUZ, ANGEL	CRUZ, ANGEL
+Candidate	KENYATTA, MALCOLM	KENYATTA, MALCOLM
+Candidate	STREET, THOMAS M	STREET, THOMAS M
+Candidate	SIMS, BRIAN K	SIMS, BRIAN K
+Candidate	MCDEVITT, JAMES M	MCDEVITT, JAMES M
+Candidate	FIEDLER, ELIZABETH	FIEDLER, ELIZABETH
+Candidate	HARRIS, JORDAN A	HARRIS, JORDAN A
+Candidate	ROEBUCK, JAMES R	ROEBUCK, JAMES R
+Candidate	BROWN, VANESSA L	BROWN, VANESSA L
+Candidate	CEPHAS, MORGAN	CEPHAS, MORGAN
+Candidate	BULLOCK, DONNA	BULLOCK, DONNA
+Candidate	BURGOS, DANILO  R.	BURGOS, DANILO  R.
+Candidate	YOUNGBLOOD, ROSITA C	YOUNGBLOOD, ROSITA C
+Candidate	RABB, CHRISTOPHER	RABB, CHRISTOPHER
+Candidate	KINSEY, STEPHEN	KINSEY, STEPHEN
+Candidate	SOLOMON, JARED G	SOLOMON, JARED G
+Candidate	FITZGERALD, ISABELLA	FITZGERALD, ISABELLA
+Candidate	MARRERO, ORLANDO D	MARRERO, ORLANDO D
+Candidate	PEIFER, MICHAEL T	PEIFER, MICHAEL T
+Candidate	GOODMAN, NEAL P	GOODMAN, NEAL P
+Candidate	RAGER-KAY, JENNIFER RENEE	RAGER-KAY, JENNIFER RENEE
+Candidate	KELLER, FREDERICK B	KELLER, FREDERICK B
+Candidate	DOOLEY, CLARE HELEN	DOOLEY, CLARE HELEN
+Candidate	REESE, MICHAEL P	REESE, MICHAEL P
+Candidate	KINNEY, REBECCA L	KINNEY, REBECCA L
+Candidate	FRITZ, JONATHAN A.	FRITZ, JONATHAN A.
+Candidate	MITCHELL, CLARK ALEXANDER JR.	MITCHELL, CLARK ALEXANDER JR.
+Candidate	O'NEAL, TIMOTHY JON	O'NEAL, TIMOTHY JON
+Candidate	HUNT, DOUGLAS D	HUNT, DOUGLAS D
+Candidate	DUNBAR, GEORGE  S	DUNBAR, GEORGE  S
+Candidate	WARREN, COLLIN	WARREN, COLLIN
+Candidate	NELSON, ERIC R	NELSON, ERIC R
+Candidate	POPOVICH, MARY E	POPOVICH, MARY E
+Candidate	WALSH, JUSTIN  M.	WALSH, JUSTIN  M.
+Candidate	MCCORMICK HIGGINS, JUDITH  A	MCCORMICK HIGGINS, JUDITH  A
+Candidate	PHILLIPS-HILL, KRISTIN LEE	PHILLIPS-HILL, KRISTIN LEE
+Candidate	WASCOVICH, MICHAEL J	WASCOVICH, MICHAEL J
+Candidate	GILLESPIE, KEITH J	GILLESPIE, KEITH J
+Candidate	RIVERA-LYTLE, DELMA	RIVERA-LYTLE, DELMA
+Candidate	JONES, PAUL MICHAEL	JONES, PAUL MICHAEL
+Candidate	SNELL, STEPHEN RICHARD	SNELL, STEPHEN RICHARD
+Candidate	SAYLOR, STANLEY E	SAYLOR, STANLEY E
+Candidate	HILL-EVANS, CAROL DELORES	HILL-EVANS, CAROL DELORES
+Candidate	HAMMOND, SARAH ELIZABETH	HAMMOND, SARAH ELIZABETH
+Candidate	KLUNK, KATE ANNE	KLUNK, KATE ANNE
+Candidate	GROVE, SETH MICHAEL	GROVE, SETH MICHAEL
+BallotMeasureSelection	No	No Votes
+BallotMeasureSelection	Yes	Yes Votes
+CountItemType	total	Votes

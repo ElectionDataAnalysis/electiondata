@@ -138,8 +138,9 @@ class Munger:
                 ui.report_problems(problems)
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.header_row_count,self.field_name_row,
-                 self.count_columns,self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
+                [self.cdf_elements,self.header_row_count,self.field_name_row,self.count_columns,
+                 self.file_type,self.encoding,self.thousands_separator] = read_munger_info_from_files(
+                    self.path_to_munger_dir)
         return
 
     def check_against_db(self,sess):
@@ -174,8 +175,9 @@ class Munger:
                 ui.report_problems(problems)
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.header_row_count,self.field_name_row,
-                 self.count_columns,self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
+                [self.cdf_elements,self.header_row_count,self.field_name_row,self.count_columns,
+                 self.file_type,self.encoding,self.thousands_separator] = read_munger_info_from_files(
+                    self.path_to_munger_dir)
             else:
                 checked = True
                 print(f'Munger {self.name} checked against database.')
@@ -198,9 +200,27 @@ class Munger:
             except UnicodeEncodeError:
                 problems.append(f'Datafile is not encoded as {self.encoding}.')
 
+            # check that all count_columns are indeed read as integers
+            bad_columns = [raw.columns[idx] for idx in self.count_columns if raw.dtypes[idx] != 'int64']
+            if bad_columns:
+                bad_col_string = '\n\t'.join(bad_columns)
+                problems.append(f'Munger fails to parse some VoteCount columns in the results file as integers:\n'
+                                f'{bad_col_string}')
+
+            non_count_integer_cols = [x for x in raw.columns if raw[x].dtype == 'int64' and
+                                      raw.columns.get_loc(x) not in self.count_columns]
+            if non_count_integer_cols:
+                ncic_string = '\n\t'.join(non_count_integer_cols)
+                ncic_ok = input(f'Munger parses the following columns as integers, but does not recognize them as'
+                                f'VoteCount columns.\n{ncic_string}\nIs this correct (y/n)?\n')
+                if ncic_ok != 'y':
+                    problems.append(f'Count_columns line in the format.txt file needs to be corrected.\n'
+                                    f'Value should be a comma-separated list of integers. Convention is\n'
+                                    f'to label the leftmost column 0.')
+
             col_fields = '\n\t'.join(raw.columns)
             cf_ok = input(f'Munger reads the following column fields from datafile (one per line):\n\t'
-                          f'{col_fields}\n Are these correct (y/n)?\n')
+                          f'{col_fields}\nAre these correct (y/n)?\n')
             if cf_ok == 'y' and raw.shape[1] <3:
                 cf_ok = input(f'Are you sure? Is each SEPARATE LINE above a single field (y/n)?\n')
             if cf_ok != 'y':
@@ -217,8 +237,9 @@ class Munger:
                 ui.report_problems(problems)
                 input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
                       f'Then hit enter to continue.')
-                [self.cdf_elements,self.header_row_count,self.field_name_row,
-                 self.count_columns,self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
+                [self.cdf_elements,self.header_row_count,self.field_name_row,self.count_columns,
+                 self.file_type,self.encoding,self.thousands_separator] = read_munger_info_from_files(
+                    self.path_to_munger_dir)
             else:
                 checked = True
         # TODO allow user to pick different munger from file system
@@ -241,7 +262,8 @@ class Munger:
         if check_files:
             ensure_munger_files(self.name,project_root=project_root)
         [self.cdf_elements,self.header_row_count,self.field_name_row,self.count_columns,
-         self.file_type,self.encoding] = read_munger_info_from_files(self.path_to_munger_dir)
+         self.file_type,self.encoding,self.thousands_separator] = read_munger_info_from_files(
+            self.path_to_munger_dir)
 
         self.field_rename_suffix = '___'  # NB: must not match any suffix of a cdf element name;
 
@@ -270,11 +292,12 @@ def read_munger_info_from_files(dir_path):
     count_columns = [int(x) for x in format_info.loc['count_columns','value'].split(',')]
     file_type = format_info.loc['file_type','value']
     encoding = format_info.loc['encoding','value']
+    thousands_separator = format_info.loc['thousands_separator','value']
     # TODO warn if encoding not recognized
 
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
     #   will need to rename some columns of the raw file before processing.
-    return [cdf_elements,header_row_count,field_name_row,count_columns,file_type,encoding]
+    return [cdf_elements,header_row_count,field_name_row,count_columns,file_type,encoding,thousands_separator]
 
 
 def ensure_jurisdiction_files(juris_path,project_root):

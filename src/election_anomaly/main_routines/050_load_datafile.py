@@ -15,7 +15,7 @@ if __name__ == '__main__':
 	# create db if it does not already exist
 	con, paramfile = dbr.establish_connection(paramfile=d['db_paramfile'],db_name=d['db_name'])
 	if not con:
-		print(f'Database {d["db_name"]} not found')
+		print(f'Database {d["db_name"]} not found, will be created.')
 		ui.pick_database(d['project_root'],paramfile=d['db_paramfile'],db_name=d['db_name'])
 
 	# connect to db
@@ -23,9 +23,10 @@ if __name__ == '__main__':
 	Session = sessionmaker(bind=eng)
 	sess = Session()
 
-	skip_load = input('Skip context loading (y/n)?\n')
+	skip_load = input('Skip jurisdiction info loading (y/n)?\n')
 	if skip_load == 'y':
-		print('Warning: results for contests, selections and reporting units not loaded will not be processed.')
+		print('Warning: results for contests, selections and reporting units not loaded from jurisdiction\n'
+			  'will not be processed.')
 	else:
 		juris.load_juris_to_db(sess,d['project_root'])
 

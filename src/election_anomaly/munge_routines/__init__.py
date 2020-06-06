@@ -17,10 +17,12 @@ def clean_raw_df(raw,munger):
 
     # change all nulls to blank
     raw = raw.fillna('')
-    # strip whitespace
-    raw = raw.applymap(lambda x:x.strip())
+    # strip whitespace from non-integer columns
+    non_numerical = {raw.columns.get_loc(c):c for idx,c in enumerate(raw.columns) if raw[c].dtype != 'int64'}
+    for location,name in non_numerical.items():
+        raw.iloc[:,location] = raw.iloc[:,location].apply(lambda x:x.strip())
 
-    # TODO keep columns named in munger formulas; keep numerical columns; drop all else.
+    # TODO keep columns named in munger formulas; keep count columns; drop all else.
     if munger.header_row_count > 1:
         cols_to_munge = [x for x in raw.columns if x[munger.field_name_row] in munger.field_list]
     else:
@@ -28,15 +30,14 @@ def clean_raw_df(raw,munger):
 
     # TODO error check- what if cols_to_munge is missing something from munger.field_list?
 
-    # recast other columns as integer where possible.
+    # recast count columns as integer where possible.
     #  (recast leaves columns with text entries as non-numeric).
-    num_columns = []
-    for c in [x for x in raw.columns if x not in cols_to_munge]:
+    num_columns = [raw.columns[idx] for idx in munger.count_columns]
+    for c in num_columns:
         try:
             raw[c] = raw[c].astype('int64',errors='raise')
-            num_columns.append(c)
         except ValueError:
-            pass
+            raise
 
     raw = raw[cols_to_munge + num_columns]
     # recast all cols_to_munge to strings,

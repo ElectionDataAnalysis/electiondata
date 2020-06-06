@@ -1,0 +1,7 @@
+item	value
+header_row_count	1
+field_name_row	0
+count_columns	6,7,8
+file_type	csv
+encoding	iso-8859-1
+thousands_separator	,

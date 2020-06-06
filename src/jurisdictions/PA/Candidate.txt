@@ -1,0 +1,434 @@
+BallotName	Party
+CASEY, ROBERT P JR	Pennsylvania Democratic Party
+BARLETTA, LOUIS J.	Pennsylvania Republican Party
+GALE, NEAL TAYLOR	Pennsylvania Green Party
+KERNS, DALE R JR	Pennsylvania Libertarian Party
+WOLF, THOMAS W	Pennsylvania Democratic Party
+WAGNER, SCOTT R	Pennsylvania Republican Party
+GLOVER, PAUL	Pennsylvania Green Party
+KRAWCHUK, KENNETH V	Pennsylvania Libertarian Party
+OTTAWAY, BRENT M	Pennsylvania Democratic Party
+JOYCE, JOHN	Pennsylvania Republican Party
+QUALLY, MARTY	Pennsylvania Democratic Party
+MOUL, DANIEL P	Pennsylvania Republican Party
+NELSON, MATTHEW P	Pennsylvania Democratic Party
+ECKER, TORREN C	Pennsylvania Republican Party
+LAMB, CONOR JAMES	Pennsylvania Democratic Party
+ROTHFUS, KEITH	Pennsylvania Republican Party
+DOYLE, MICHAEL F JR	Pennsylvania Democratic Party
+WILLIAMS, LINDSEY MARIE	Pennsylvania Democratic Party
+SHAFFER, JEREMY KEVIN	Pennsylvania Republican Party
+FONTANA, WAYNE D	Pennsylvania Democratic Party
+MATZIE, ROBERT F	Pennsylvania Democratic Party
+WHEATLEY, JAKE	Pennsylvania Democratic Party
+RAVENSTAHL, ADAM J	Pennsylvania Democratic Party
+INNAMORATO, SARA G	Pennsylvania Democratic Party
+FRANKEL, DAN B.	Pennsylvania Democratic Party
+WALKER, JAY TING	Pennsylvania Green Party
+GAINEY, EDWARD C	Pennsylvania Democratic Party
+MARKOSEK, BRANDON J	Pennsylvania Democratic Party
+SCHLAUCH, STEPHEN DAVID	Pennsylvania Republican Party
+DEASY, DANIEL J	Pennsylvania Democratic Party
+SKOPOV, EMILY S	Pennsylvania Democratic Party
+TURZAI, MICHAEL C	Pennsylvania Republican Party
+MONROE, ELIZABETH	Pennsylvania Democratic Party
+MIZGORSKI, LORI A	Pennsylvania Republican Party
+DELUCA, ANTHONY M	Pennsylvania Democratic Party
+DERMODY, FRANCIS J	Pennsylvania Democratic Party
+NULPH, JOSHUA RICHARD	Pennsylvania Republican Party
+LEE, SUMMER L	Pennsylvania Democratic Party
+DAVIS, AUSTIN	Pennsylvania Democratic Party
+READSHAW, HARRY A III	Pennsylvania Democratic Party
+KORTZ, WILLIAM C II	Pennsylvania Democratic Party
+RHODERICK, ROBERT E JR	Pennsylvania Democratic Party
+PUSKARIC, MICHAEL J	Pennsylvania Republican Party
+GUIDI, SHARON  M.	Pennsylvania Democratic Party
+MIHALEK STUCK , NATALIE  NICOLE	Pennsylvania Republican Party
+MILLER, DANIEL L	Pennsylvania Democratic Party
+KNOLL, MICHELE	Pennsylvania Democratic Party
+GAYDOS, VALERIE S	Pennsylvania Republican Party
+KULIK, ANITA ASTORINO	Pennsylvania Democratic Party
+TIMMINS, BYRON FLAVIN	Pennsylvania Democratic Party
+ORTITAY, JASON A	Pennsylvania Republican Party
+MCCABE, JONATHAN PAUL	Pennsylvania Democratic Party
+BROOKS, ROBERT J	Pennsylvania Republican Party
+BOSER, SUSAN	Pennsylvania Democratic Party
+THOMPSON, GLENN WILLIAM JR	Pennsylvania Republican Party
+PETRARCA, JOSEPH A	Pennsylvania Democratic Party
+PYLE, JEFFREY PAUL	Pennsylvania Republican Party
+WARNER, CONRAD	Pennsylvania Democratic Party
+OBERLANDER, DONNA R	Pennsylvania Republican Party
+CRAIG, JAMES R	Pennsylvania Democratic Party
+BARTOLOTTA, CAMERA C	Pennsylvania Republican Party
+BERNSTINE, AARON JOSEPH	Pennsylvania Democratic / Republican Party
+SLAPPY, DARCELLE L	Pennsylvania Green Party
+FAZIO, AMY	Pennsylvania Democratic Party
+MARSHALL, JAMES E	Pennsylvania Republican Party
+MITKO, TERRI	Pennsylvania Democratic Party
+KAIL, JOSHUA DANIEL	Pennsylvania Republican Party
+COLE, JEFF	Pennsylvania Democratic Party
+METZGAR, CARL WALKER	Pennsylvania Republican Party
+BAUGHMAN, DEBORAH TURNER	Pennsylvania Democratic Party
+TOPPER, JESSE WILLS	Pennsylvania Republican Party
+DEAN CUNNANE , MADELEINE	Pennsylvania Democratic Party
+DAVID, DANIEL	Pennsylvania Republican Party
+HOULAHAN, CHRISTINA JAMPOLER	Pennsylvania Democratic Party
+MCCAULEY, GREGORY MICHAEL SENIOR	Pennsylvania Republican Party
+WOLFF, DENNIS	Pennsylvania Democratic Party
+MEUSER, DANIEL	Pennsylvania Republican Party
+FIELDS, LINDA	Pennsylvania Democratic Party
+MENSCH, ROBERT BRUCE	Pennsylvania Republican Party
+MUTH, KATIE J	Pennsylvania Democratic Party
+RAFFERTY, JOHN C JR	Pennsylvania Republican Party
+JOZWIAK, BARRY J	Pennsylvania Republican Party
+KNOWLES, JEROME P	Pennsylvania Republican Party
+ROZZI, MARK LUCIO	Pennsylvania Democratic Party
+CALTAGIRONE, THOMAS R	Pennsylvania Democratic Party
+GAGLIARDO, VINCENT D JR	Pennsylvania Republican Party
+METCALFE, DOUGLAS B	Pennsylvania Democratic Party
+GILLEN, MARK M	Pennsylvania Republican Party
+WERTZ, TRICIA L	Pennsylvania Democratic Party
+COX, JAMES A JR	Pennsylvania Republican Party
+MALONEY, DAVID M SR	Pennsylvania Republican Party
+APPLEBACH, THOMAS LEE	Pennsylvania Democratic Party
+MACKENZIE, RYAN E	Pennsylvania Republican Party
+BLICHAR, MICHAEL JR	Pennsylvania Democratic Party
+DAY, GARY  W	Pennsylvania Republican Party
+GARBUNY BEST, EMILY	Pennsylvania Democratic Party
+WARD, JUDITH F	Pennsylvania Republican Party
+SCHMITT, LOUIS C. JR	Pennsylvania Republican Party
+BURKE, LAURA	Pennsylvania Democratic Party
+GREGORY, JAMES V	Pennsylvania Republican Party
+FRIEDENBERG, MARC	Pennsylvania Democratic Party
+MARINO, THOMAS A	Pennsylvania Republican Party
+HEATH, CARRIE L	Pennsylvania Democratic Party
+OWLETT, CLINTON DENNIS	Pennsylvania Republican Party
+IANNONE, DONNA	Pennsylvania Democratic Party
+PICKETT, TINA	Pennsylvania Republican Party
+WALLACE, HENRY SCOTT	Pennsylvania Democratic Party
+FITZPATRICK, BRIAN K	Pennsylvania Republican Party
+DAVIS, TINA	Pennsylvania Democratic Party
+TOMLINSON, ROBERT M	Pennsylvania Republican Party
+SANTARSIERO, STEVEN J	Pennsylvania Democratic Party
+QUINN, MARGUERITE C	Pennsylvania Republican Party
+COLLETT, MARIA	Pennsylvania Democratic Party
+GREENLEAF, STEWART JR	Pennsylvania Republican Party
+LAMB, JAMES JOHN III	Pennsylvania Democratic Party
+DIGIROLAMO, GENE	Pennsylvania Republican Party
+DIXON, ANDREW FRANKLIN	Pennsylvania Democratic Party
+SCHROEDER, MEGHAN	Pennsylvania Republican Party
+WARREN, PERRY S JR	Pennsylvania Democratic Party
+GALLAGHER, RYAN W	Pennsylvania Republican Party
+GALLOWAY, JOHN T	Pennsylvania Democratic Party
+SPOSATO, ANTHONY	Pennsylvania Republican Party
+LAREAU, MALINDA LAUREN	Pennsylvania Democratic Party
+FARRY, FRANK ANTHONY III	Pennsylvania Republican Party
+ULLMAN, WENDY	Pennsylvania Democratic Party
+FLOOD, JOSEPH PATRICK	Pennsylvania Republican Party
+BUCK, MEREDITH JEAN	Pennsylvania Democratic Party
+POLINCHOCK, F TODD	Pennsylvania Republican Party
+KLINE, BRIAN	Pennsylvania Democratic Party
+STAATS, CRAIG  T	Pennsylvania Republican Party
+TAI, HELEN D	Pennsylvania Democratic Party
+THOMAS, WENDI	Pennsylvania Republican Party
+DINICOLA, RONALD A	Pennsylvania Democratic Party
+KELLY, GEORGE J JR	Pennsylvania Republican Party
+BEEMAN, EBERT G BILL	Pennsylvania Libertarian Party
+BOEVING-LEARNED, LISA K	Pennsylvania Democratic Party
+NESBIT, TEDD	Pennsylvania Republican Party
+ELLIS, BRIAN L	Pennsylvania Republican Party
+DOCTOR, SAMUEL	Pennsylvania Independent Party
+SMITH, DANIEL BURTON JR	Pennsylvania Democratic Party
+METCALFE, DARYL D	Pennsylvania Republican Party
+KLUCK, JOHN	Pennsylvania Democratic Party
+JAMES, R LEE	Pennsylvania Republican Party
+BARBIN, BRYAN E	Pennsylvania Democratic Party
+RIGBY, JAMES PATRICK	Pennsylvania Republican Party
+BURNS, FRANK	Pennsylvania Democratic Party
+CARNICELLA, GERALD S	Pennsylvania Republican Party
+SANKEY, THOMAS R III	Pennsylvania Democratic / Republican Party
+COLE, MARYANNE	Pennsylvania Democratic Party
+CAUSER, MARTIN T	Pennsylvania Republican Party
+YUDICHAK, JOHN T	Pennsylvania Democratic Party
+SCOTT, KARA M	Pennsylvania Democratic Party
+HEFFLEY, DOYLE M	Pennsylvania Republican Party
+NANES, EZRA J	Pennsylvania Democratic Party
+CORMAN, JACOB D III	Pennsylvania Republican Party
+HANNA, MICHAEL  KELLY JR	Pennsylvania Democratic Party
+BOROWICZ, STEPHANIE PAIGE	Pennsylvania Republican Party
+CONKLIN, H SCOTT	Pennsylvania Democratic Party
+ROGERS, RICHARD JAMES SR	Pennsylvania Democratic Party
+IRVIN, RICHARD S.	Pennsylvania Republican Party
+SOLOSKI, JOSEPH P	Pennsylvania Libertarian Party
+MCCRACKEN, ERIN  CONDO	Pennsylvania Democratic Party
+BENNINGHOFF, KERRY ALBERT	Pennsylvania Republican Party
+SCANLON, MARY GAY	Pennsylvania Democratic Party
+KIM, PEARL	Pennsylvania Republican Party
+KEARNEY, TIMOTHY P	Pennsylvania Democratic Party
+MCGARRIGLE, THOMAS J SR	Pennsylvania Republican Party
+WALKER, SUSANNAH L	Pennsylvania Democratic Party
+LAWRENCE, JOHN ADDA	Pennsylvania Republican Party
+PIROCCHI, DOMINIC J	Pennsylvania Libertarian Party
+HACKER, PAMELA A	Pennsylvania Democratic Party
+HENNESSEY, TIMOTHY F	Pennsylvania Republican Party
+WILLIAMS, DAN K	Pennsylvania Democratic Party
+TURNER, AMBER LITTLE	Pennsylvania Republican Party
+OTTEN, DANIELLE FRIEL	Pennsylvania Democratic Party
+CORBIN, REBECCA P	Pennsylvania Republican Party
+COMITTA, CAROLYN	Pennsylvania Democratic Party
+DEMINSKI, NICHOLAS	Pennsylvania Republican Party
+SHUSTERMAN, MELISSA	Pennsylvania Democratic Party
+KAMPF, WARREN E	Pennsylvania Republican Party
+SAPPEY, CHRISTINA  D	Pennsylvania Democratic Party
+ROE, ERIC MARK	Pennsylvania Republican Party
+ANDREW, ANTON	Pennsylvania Democratic Party
+BARRAR, STEPHEN E.	Pennsylvania Republican Party
+HOWARD, KRISTINE C	Pennsylvania Democratic Party
+MILNE, DUANE D	Pennsylvania Republican Party
+GABLER, MATTHEW M	Pennsylvania Democratic / Republican Party
+DONNELLY, SARAH	Pennsylvania Democratic Party
+MASSER, KURT A	Pennsylvania Republican Party
+SANDERS, EDWARD THOMAS III	Pennsylvania Democratic Party
+MILLARD, DAVID R	Pennsylvania Republican Party
+MULVEY, SUE ANN	Pennsylvania Democratic Party
+BROOKS, MICHELE	Pennsylvania Republican Party
+ROAE, BRADLEY T	Pennsylvania Republican Party
+WENTLING, PARKE H	Pennsylvania Republican Party
+RAPP, KATHY L	Pennsylvania Republican Party
+SCOTT, GEORGE B	Pennsylvania Democratic Party
+PERRY, SCOTT G	Pennsylvania Republican Party
+ANDERSON, KAREN ANN	Pennsylvania Democratic Party
+KELLER, MARK K	Pennsylvania Republican Party
+QUINLAN, SEAN PATRICK	Pennsylvania Democratic Party
+ROTHMAN, WILLIAM GREGORY	Pennsylvania Republican Party
+FOSCHI, JEAN  MARIE VARGAS	Pennsylvania Democratic Party
+DELOZIER, SHERYL M	Pennsylvania Republican Party
+DANIELSON, SHANNA LEIGH	Pennsylvania Democratic Party
+KEEFER, DAWN WETZEL	Pennsylvania Republican Party
+MCGINNIS, JOSEPH SHERWOOD JR	Pennsylvania Democratic Party
+GLEIM, BARBARA J	Pennsylvania Republican Party
+BOUST, CHARLES M	Pennsylvania Libertarian Party
+HERR, LOIS  K	Pennsylvania Democratic Party
+FOLMER, MICHAEL J	Pennsylvania Republican Party
+AUKER-ENDRES, MARY	Pennsylvania Democratic Party
+HICKERNELL, DAVID S	Pennsylvania Republican Party
+MILLER, JAMES M	Pennsylvania Libertarian Party
+KIM, PATTY H	Pennsylvania Democratic Party
+HARRELL, ANTHONY THOMAS	Pennsylvania Republican Party
+SMITH, PATRICIA ANN	Pennsylvania Democratic Party
+HELM, SUSAN C	Pennsylvania Republican Party
+EPSTEIN, ERIC J	Pennsylvania Democratic Party
+LEWIS, ANDREW	Pennsylvania Republican Party
+LINTA, JILL	Pennsylvania Democratic Party
+MEHAFFIE, THOMAS L III	Pennsylvania Republican Party
+TOBASH, MICHAEL G	Pennsylvania Republican Party
+WILLIAMS, ANTHONY  H	Pennsylvania Democratic Party
+KIRKLAND, BRIAN J	Pennsylvania Democratic Party
+MOTON, RUTH	Pennsylvania Republican Party
+KRUEGER-BRANEKY, LEANNE T	Pennsylvania Democratic Party
+RODGERS MORRISETTE, PATTI	Pennsylvania Republican Party
+DELLOSO, DAVID M	Pennsylvania Democratic Party
+HOPPER, MARY	Pennsylvania Republican Party
+ZABEL, MICHAEL PATRICK	Pennsylvania Democratic Party
+SANTORA, JAMES	Pennsylvania Republican Party
+DAVIDSON, MARGO LOMAX	Pennsylvania Democratic Party
+BAINS, INDERJIT	Pennsylvania Republican Party
+OMARA, JENNIFER M	Pennsylvania Democratic Party
+CHARLTON, ALEXANDER T	Pennsylvania Republican Party
+VITALI, GREGORY S	Pennsylvania Democratic Party
+RUBIO, BALTAZAR EDSON	Pennsylvania Republican Party
+SEALE, KRISTIN	Pennsylvania Democratic Party
+QUINN, CHRISTOPHER B	Pennsylvania Republican Party
+DONATUCCI, MARIA P	Pennsylvania Democratic Party
+MCCLINTON, JOANNA E	Pennsylvania Democratic Party
+HARKINS, PATRICK J	Pennsylvania Democratic Party
+MERSKI, ROBERT E	Pennsylvania Democratic Party
+KUZMA, TIMOTHY P	Pennsylvania Republican Party
+BIZZARRO, RYAN A	Pennsylvania Democratic Party
+SONNEY, CURTIS G	Pennsylvania Republican Party
+BOERIO, BIBIANA	Pennsylvania Democratic Party
+RESCHENTHALER, GUY L	Pennsylvania Republican Party
+GERARD, PAMELA	Pennsylvania Democratic Party
+STEFANO, PATRICK J.	Pennsylvania Republican Party
+TOPRANI, STEVEN MATTHEW	Pennsylvania Democratic Party
+COOK, DONALD	Pennsylvania Republican Party
+SNYDER, PAMELA	Pennsylvania Democratic Party
+ROHANNA MCCLURE, ELIZABETH L	Pennsylvania Republican Party
+MAHONEY, TIMOTHY S	Pennsylvania Democratic Party
+DOWLING, MATTHEW DAVID	Pennsylvania Republican Party
+KEEDY, ETHAN EARL	Pennsylvania Democratic Party
+WARNER, RYAN JAMES	Pennsylvania Republican Party
+HERSHEY, JOHNATHAN DEAN	Pennsylvania Republican Party
+BOOK, ELIZABETH S	Pennsylvania No Affiliation Party
+KAUFFMAN, ROBERT W	Pennsylvania Republican Party
+SCHEMEL, PAUL THOMAS	Pennsylvania Republican Party
+DELLAFIORA, LOGAN SHERIFF	Pennsylvania Democratic Party
+STRUZZI, JAMES  BRUNO II	Pennsylvania Republican Party
+TAYLOR, KERITH STRANO	Pennsylvania Democratic Party
+DUSH, CRIS  E	Pennsylvania Republican Party
+CARTWRIGHT, MATTHEW ALTON	Pennsylvania Democratic Party
+CHRIN, JOHN ROBERT	Pennsylvania Republican Party
+BLAKE, JOHN P	Pennsylvania Democratic Party
+SCAVO, FRANK J III	Pennsylvania Republican Party
+MULLINS, KYLE J	Pennsylvania Democratic Party
+LEMONCELLI, ERNEST DOMINIC	Pennsylvania Republican Party
+FLYNN, MARTIN B	Pennsylvania Democratic Party
+KAVULICH, MICHAEL G	Pennsylvania Democratic Party
+BOBACK, KAREN	Pennsylvania Republican Party
+JASIKOFF, LOU	Pennsylvania Libertarian Party
+CARROLL, MICHAEL B	Pennsylvania Democratic Party
+KING, JESSICA	Pennsylvania Democratic Party
+SMUCKER, LLOYD K	Pennsylvania Republican Party
+TROUTMAN, WILLIAM N JR	Pennsylvania Democratic Party
+AUMENT, RYAN  PATRICK	Pennsylvania Republican Party
+DELAHUNT, SUZANNE M	Pennsylvania Democratic Party
+FEE, MELINDA S	Pennsylvania Republican Party
+WHERLEY, MICHELE D	Pennsylvania Democratic Party
+MILLER, BRETT R	Pennsylvania Republican Party
+PORTER, JENNIE ELAINE	Pennsylvania Democratic Party
+GREINER, KEITH JAMES	Pennsylvania Republican Party
+STURLA, PETER MICHAEL	Pennsylvania Democratic Party
+GULICK, DANA HAMP	Pennsylvania Democratic Party
+MENTZER, STEVEN CURTIS	Pennsylvania Republican Party
+MALARKEY, ELIZABETH	Pennsylvania Democratic Party
+ZIMMERMAN, DAVID H	Pennsylvania Republican Party
+HAMBY, DALE ALLEN	Pennsylvania Democratic Party
+CUTLER, BRYAN D	Pennsylvania Republican Party
+SAINATO, CHRISTOPHER	Pennsylvania Democratic Party
+MICHALEK, GREGORY E	Pennsylvania Republican Party
+LIRIANO, CESAR F	Pennsylvania Democratic Party
+RYAN, FRANCIS X	Pennsylvania Republican Party
+DIAMOND, RUSS	Pennsylvania Republican Party
+WILD, SUSAN ELLIS	Pennsylvania Democratic Party
+NOTHSTEIN, MARTIN W	Pennsylvania Republican Party
+SILFIES, TIM	Pennsylvania Libertarian Party
+PINSLEY, MARK	Pennsylvania Democratic Party
+BROWNE, PATRICK M	Pennsylvania Republican Party
+BOSCOLA, LISA M	Pennsylvania Democratic Party
+SCHWEYER, PETER GEORGE	Pennsylvania Democratic Party
+LEE, ANDREW SCOTT	Pennsylvania Democratic Party
+SIMMONS, JUSTIN J	Pennsylvania Republican Party
+SCHLOSSBERG, MICHAEL H	Pennsylvania Democratic Party
+MCNEILL, JEANNE	Pennsylvania Democratic Party
+RUFF, JASON	Pennsylvania Democratic Party
+MAKO, ZACHARY	Pennsylvania Republican Party
+BAKER, ELISABETH J	Pennsylvania Republican Party
+SWEENEY, JOHN J	Pennsylvania Green Party
+TOOHIL, TARAH C	Pennsylvania Republican Party
+MULLERY, GERALD J	Pennsylvania Democratic Party
+BEHRENS, JUSTIN  V	Pennsylvania Republican Party
+KAUFER, AARON D.	Pennsylvania Republican Party
+PASHINSKI, EDWIN A	Pennsylvania Democratic Party
+HENRY, SUSAN	Pennsylvania Republican Party
+PAGE-DELAHAYE, AIRNEEZER J	Pennsylvania Democratic Party
+WHEELAND, JEFF C	Pennsylvania Republican Party
+SOSNIAK, LINDA KAY	Pennsylvania Democratic Party
+EVERETT, GARTH DAVID	Pennsylvania Republican Party
+LONGIETTI, MARK ALFRED	Pennsylvania Democratic / Republican Party
+PROBST, TARAH DOROTHEA	Pennsylvania Democratic Party
+SCAVELLO, MARIO M	Pennsylvania Republican Party
+REINHARDT, ADAM	Pennsylvania Libertarian Party
+MADDEN, MAUREEN E	Pennsylvania Democratic Party
+PARKER, DAVID C	Pennsylvania Republican Party
+WILLIAMS, CLAUDETTE	Pennsylvania Democratic Party
+RADER, JACK B JR	Pennsylvania Republican Party
+RODRIGUEZ, ADAM ANTHONY	Pennsylvania Democratic Party
+BROWN, ROSEMARY	Pennsylvania Republican Party
+HAYWOOD, ARTHUR L III	Pennsylvania Democratic Party
+HOLT, RONALD F	Pennsylvania Republican Party
+MALAGARI, STEVEN RICHARD	Pennsylvania Democratic Party
+SZEKELY, GEORGE ANDREW II	Pennsylvania Republican Party
+WALDENBERGER, JOHN M	Pennsylvania Libertarian Party
+HANBIDGE, LAURA  ELIZABETH FRANCES	Pennsylvania Democratic Party
+HARPER, CATHERINE M	Pennsylvania Republican Party
+BRADFORD, MATTHEW D	Pennsylvania Democratic Party
+MUNDIATH, CHRISTOPHER	Pennsylvania Republican Party
+CIRESI, JOSEPH P	Pennsylvania Democratic Party
+QUIGLEY, THOMAS J	Pennsylvania Republican Party
+CAMSON, JOSHUA HARRIS	Pennsylvania Democratic Party
+TOEPEL, MARCY L	Pennsylvania Republican Party
+DALEY, MARY  JOSEPHINE	Pennsylvania Democratic Party
+BRIGGS, TIMOTHY PATRICK	Pennsylvania Democratic Party
+WEBSTER, JOSEPH G. PHD	Pennsylvania Democratic Party
+FOUNTAIN, NICHOLAS	Pennsylvania Republican Party
+JOHNSON ROTHMAN, SARA JOANNE	Pennsylvania Democratic Party
+STEPHENS, WILLIAM TODD	Pennsylvania Republican Party
+BOLING, DARYL KIRK	Pennsylvania Democratic Party
+MURT, THOMAS PAUL	Pennsylvania Republican Party
+SANCHEZ, BEN	Pennsylvania Democratic Party
+BEAVER, DOUGLAS M JR	Pennsylvania Republican Party
+BOZZACCO, MARC	Pennsylvania Libertarian Party
+MCCARTER, STEPHEN C	Pennsylvania Democratic Party
+BOWERS, KATHLEEN E	Pennsylvania Republican Party
+BOYLE, KEVIN J	Pennsylvania Democratic Party
+DELISSIO, PAMELA ANN	Pennsylvania Democratic Party
+STEVENS, SEAN PATRICK	Pennsylvania Republican Party
+BALTSAR, MATTHEW RYAN	Pennsylvania Libertarian Party
+SAMUELSON, STEPHEN P	Pennsylvania Democratic Party
+FREEMAN, ROBERT	Pennsylvania Democratic Party
+COZZE, AMY	Pennsylvania Democratic Party
+EMRICK, JOSEPH T	Pennsylvania Republican Party
+REAGAN, ED	Pennsylvania Libertarian Party
+DONAHER, DEAN	Pennsylvania Democratic Party
+HAHN, MARCIA M	Pennsylvania Republican Party
+TOWNE, JAKE	Pennsylvania Libertarian Party
+SCHLEGEL CULVER, LYNDA J	Pennsylvania Republican Party
+BOYLE, BRENDAN F	Pennsylvania Democratic Party
+TORRES, DAVID	Pennsylvania Republican Party
+EVANS, DWIGHT	Pennsylvania Democratic Party
+LEIB, BRYAN E	Pennsylvania Republican Party
+TARTAGLIONE, CHRISTINE M	Pennsylvania Democratic Party
+DOYLE, MICHAEL FRANCIS JR	Pennsylvania Democratic Party
+WHITE, MARTINA A	Pennsylvania Republican Party
+DRISCOLL, MICHAEL J	Pennsylvania Democratic Party
+NEILSON, ED	Pennsylvania Democratic Party
+ISAACSON, MARYLOUISE	Pennsylvania Democratic Party
+HOHENSTEIN, JOSEPH C	Pennsylvania Democratic Party
+KOZLOWSKI, PATTY PAT	Pennsylvania Republican Party
+DAWKINS, JASON T	Pennsylvania Democratic Party
+CRUZ, ANGEL	Pennsylvania Democratic Party
+KENYATTA, MALCOLM	Pennsylvania Democratic Party
+STREET, THOMAS M	Pennsylvania Republican Party
+SIMS, BRIAN K	Pennsylvania Democratic Party
+MCDEVITT, JAMES M	Pennsylvania Independent Party
+FIEDLER, ELIZABETH	Pennsylvania Democratic Party
+HARRIS, JORDAN A	Pennsylvania Democratic Party
+ROEBUCK, JAMES R	Pennsylvania Democratic Party
+BROWN, VANESSA L	Pennsylvania Democratic Party
+CEPHAS, MORGAN	Pennsylvania Democratic Party
+BULLOCK, DONNA	Pennsylvania Democratic Party
+BURGOS, DANILO  R.	Pennsylvania Democratic Party
+YOUNGBLOOD, ROSITA C	Pennsylvania Democratic Party
+RABB, CHRISTOPHER	Pennsylvania Democratic Party
+KINSEY, STEPHEN	Pennsylvania Democratic Party
+SOLOMON, JARED G	Pennsylvania Democratic Party
+FITZGERALD, ISABELLA	Pennsylvania Democratic Party
+MARRERO, ORLANDO D	Pennsylvania Democratic Party
+PEIFER, MICHAEL T	Pennsylvania Republican Party
+GOODMAN, NEAL P	Pennsylvania Democratic Party
+RAGER-KAY, JENNIFER RENEE	Pennsylvania Democratic Party
+KELLER, FREDERICK B	Pennsylvania Republican Party
+DOOLEY, CLARE HELEN	Pennsylvania Democratic Party
+REESE, MICHAEL P	Pennsylvania Republican Party
+KINNEY, REBECCA L	Pennsylvania Democratic Party
+FRITZ, JONATHAN A.	Pennsylvania Republican Party
+MITCHELL, CLARK ALEXANDER JR.	Pennsylvania Democratic Party
+O'NEAL, TIMOTHY JON	Pennsylvania Republican Party
+HUNT, DOUGLAS D	Pennsylvania Democratic Party
+DUNBAR, GEORGE  S	Pennsylvania Republican Party
+WARREN, COLLIN	Pennsylvania Democratic Party
+NELSON, ERIC R	Pennsylvania Republican Party
+POPOVICH, MARY E	Pennsylvania Democratic Party
+WALSH, JUSTIN  M.	Pennsylvania Republican Party
+MCCORMICK HIGGINS, JUDITH  A	Pennsylvania Democratic Party
+PHILLIPS-HILL, KRISTIN LEE	Pennsylvania Republican Party
+WASCOVICH, MICHAEL J	Pennsylvania Democratic Party
+GILLESPIE, KEITH J	Pennsylvania Republican Party
+RIVERA-LYTLE, DELMA	Pennsylvania Democratic Party
+JONES, PAUL MICHAEL	Pennsylvania Republican Party
+SNELL, STEPHEN RICHARD	Pennsylvania Democratic Party
+SAYLOR, STANLEY E	Pennsylvania Republican Party
+HILL-EVANS, CAROL DELORES	Pennsylvania Democratic Party
+HAMMOND, SARAH ELIZABETH	Pennsylvania Democratic Party
+KLUNK, KATE ANNE	Pennsylvania Republican Party
+GROVE, SETH MICHAEL	Pennsylvania Republican Party

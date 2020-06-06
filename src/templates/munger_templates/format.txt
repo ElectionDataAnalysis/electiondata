@@ -1,6 +1,7 @@
 item	value
-count_columns
-header_row_count
-field_name_row
-file_type
-encoding
+header_row_count	1
+field_name_row	<top row is 0>
+count_columns	<left-most column is 0>
+file_type	txt
+encoding	iso-8859-1
+thousands_separator	None

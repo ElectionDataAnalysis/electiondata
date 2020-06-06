@@ -1,5 +1,5 @@
 short_name	file_name	source	file_date	note	download_date	ReportingUnit	Election
-Phila_2019_general.csv	Phila_2019_general.csv	PhiladelphiaVotes.com	12/31/19	"Exact file date not known. Post certification, though"		Pennsylvania;Philadelphia	2019 General
+Phila_2019_general.csv	Phila_2019_general.csv	PhiladelphiaVotes.com	12/31/19	Exact file date not known. Post certification, though		Pennsylvania;Philadelphia	2019 General
 FL20181106_county	11062018Election.txt	FL BoE	11/11/22	file date unknown		Florida	2018 General
 NC2018g_by_precinct	results_pct_20181106.txt	NC BoE	11/11/22	file date is 2018-11-16		North Carolina	2018 General
 NC2018p_by_precinct	results_pct_20180508.txt	NC BoE	5/18/18	download date uncertain		North Carolina	2018 Primary

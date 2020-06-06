@@ -222,8 +222,12 @@ def pick_database(project_root,paramfile=None,db_name=None):
 	if db_name and db_name in db_df.datname.unique():
 		print(f'Will use existing database {db_name}')
 		desired_db = db_name
-
-	else:
+		create_new = False
+	elif db_name:  # but not in existing
+		desired_db = db_name
+		dbr.create_database(con,cur,desired_db)
+		create_new = True
+	else:  # if no db_name given
 		db_idx,desired_db = pick_one(db_df,'datname',item='database')
 		if db_idx:
 			create_new = False
@@ -240,24 +244,18 @@ def pick_database(project_root,paramfile=None,db_name=None):
 				dbr.create_database(con,cur,desired_db)
 			# TODO otherwise check that desired_db has right format?
 
-		# connect to the desired_db, if not already connected to it
-		if desired_db != con.info.dbname:
-			cur.close()
-			con.close()
-			con,paramfile = dbr.establish_connection(paramfile,db_name=desired_db)
-			cur = con.cursor()
+	if create_new: 	# if our db is brand new
+		# connect to the desired_db
+		eng = dbr.sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
+		Session = sessionmaker(bind=eng)
+		sess = Session()
 
-		if create_new: 	# if our db is brand new
-			eng = dbr.sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
-			# noinspection PyPep8Naming
-			Session = sessionmaker(bind=eng)
-			sess = Session()
-
-			db_cdf.create_common_data_format_tables(
-				sess,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
-			db_cdf.fill_cdf_enum_tables(
-				sess,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
-			print(f'New database {desired_db} has been created using the common data format.')
+		# load cdf tables
+		db_cdf.create_common_data_format_tables(
+			sess,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
+		db_cdf.fill_cdf_enum_tables(
+			sess,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
+		print(f'New database {desired_db} has been created using the common data format.')
 
 	# clean up
 	if cur:
@@ -422,7 +420,7 @@ def pick_or_create_record(sess,project_root,element,known_info_d=None):
 			db_style_record, enum_plaintext_dict, fk_plaintext_dict = get_record_info_from_user(
 				sess,element,known_info_d=known_info_d)
 			# save to db
-			db_idx, db_style_record, enum_plaintext_dict, fk_plaintext_dict = dbr.save_one_to_db(
+			[db_idx, db_style_record, enum_plaintext_dict, fk_plaintext_dict,changed] = dbr.save_one_to_db(
 				sess,element,db_style_record)
 			# save to file system
 			save_record_to_filesystem(storage_dir,element,db_style_record,enum_plaintext_dict)
@@ -675,6 +673,7 @@ def get_record_info_from_user(sess,element,known_info_d={},mode='database'):
 					new[c] = dbr.name_to_id(sess,fk_df.loc[c,'foreign_table_name'],new[c_plain])
 				# otherwise
 				else:
+					print(f'Specify the {fk_df.loc[c,"foreign_table_name"]} for this {element}')
 					idx, db_record = pick_record_from_db(sess,fk_df.loc[c,'foreign_table_name'],required=True)
 					new[c_plain] = db_record[dbr.get_name_field(fk_df.loc[c,'foreign_table_name'])]
 					# TODO pull from DB info about whether the foreign key is required
@@ -745,18 +744,15 @@ def enter_and_check_datatype(question,datatype):
 
 
 def read_datafile(munger,f_path):
-	if munger.file_type == 'txt':
-		# tab-separated text file
-		df = pd.read_csv(
-			f_path,sep='\t',dtype=str,encoding=munger.encoding,quoting=csv.QUOTE_MINIMAL,
-			header=list(range(munger.header_row_count)))
-	elif munger.file_type == 'csv':
-		# comma-separated text file
-		df = pd.read_csv(
-			f_path,sep=',',dtype=str,encoding=munger.encoding,quoting=csv.QUOTE_MINIMAL,
-			header=list(range(munger.header_row_count)))
+	if munger.file_type in ['txt','csv']:
+		kwargs = {'encoding':munger.encoding,'quoting':csv.QUOTE_MINIMAL,'header':list(range(munger.header_row_count)),
+			'thousands':munger.thousands_separator}
+		if munger.file_type == 'txt':
+			kwargs['sep'] = '\t'
+		df = pd.read_csv(f_path,**kwargs)
+
 	elif munger.file_type in ['xls','xlsx']:
-		df = pd.read_excel(f_path,dtype=str)
+		df = pd.read_excel(f_path,dtype=str,thousands=munger.thousands_separator)
 	else:
 		raise mr.MungeError(f'Unrecognized file_type in munger: {munger.file_type}')
 	return df
