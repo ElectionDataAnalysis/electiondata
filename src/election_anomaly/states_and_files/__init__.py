@@ -68,7 +68,8 @@ class Jurisdiction:
         """Load info from each element in the Jurisdiction's directory into the db"""
         # for element in Jurisdiction directory (except dictionary, remark)
         juris_elements = [
-            x[:-4] for x in self.path_to_juris_dir if x != 'remark.txt' and x != 'dictionary.txt']
+            x[:-4] for x in os.listdir(self.path_to_juris_dir)
+            if x != 'remark.txt' and x != 'dictionary.txt' and x[0] != '.']
         # reorder juris_elements for efficiency
         leading = ['ReportingUnit','Office','CandidateContest']
         trailing = ['ExternalIdentifier']
@@ -299,7 +300,8 @@ def ensure_juris_files(juris_path,project_root):
     # ask user to remove any extraneous files
     extraneous = ['unknown']
     while extraneous:
-        extraneous = [f for f in os.listdir(juris_path) if f != 'remark.txt' and f not in os.listdir(templates_dir)]
+        extraneous = [f for f in os.listdir(juris_path) if
+                      f != 'remark.txt' and f not in os.listdir(templates_dir) and f[0] != '.']
         if extraneous:
             ui.report_problems(extraneous,msg=f'There are extraneous files in {juris_path}')
             input(f'Remove all extraneous files; then hit return to continue.')

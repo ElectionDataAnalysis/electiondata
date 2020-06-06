@@ -297,8 +297,9 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
         #  so record might look like same-name-different-date when it isn't really
         ignore = input(f'Some record insertions into table {table} failed.\n'
                        f'It may be that the record(s) is already in the table (probably harmless).\n'
-                       f'It may be due to bug in handling datetime fields'
-                       f'It may be due to non-unique names (might be a problem).\nContinue anyway (y/n)?\n')
+                       f'It may be due to bug in handling datetime fields.\n'
+                       f'It may be due to non-unique names (might be a problem).\n'
+                       f'Continue anyway (y/n)?\n')
         if ignore != 'y':
             ignore = input(f'Specific error is: {e}. \nContinue anyway (y/n)?\n')
             if ignore != 'y':
