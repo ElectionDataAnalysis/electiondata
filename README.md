@@ -108,3 +108,4 @@ A new datafile may have new names for existing elements (such as Reporting Units
 More rarely, a new datafile may have new Offices and CandidateContests.
 
 [//]: # "TODO per CDF, there should be a CandidateContestOfficeJoin table"
+
