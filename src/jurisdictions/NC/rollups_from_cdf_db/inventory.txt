@@ -1,9 +1,0 @@
-Election	ReportingUnitType	CountItemType	CountItemStatus	source_db_url	timestamp
-2018g	county	mixed	unknown	postgresql://postgres:''@localhost:5432/NC_5	2020-05-02
-2018g	county	mixed	unknown	postgresql://postgres:''@localhost:5432/NC	2020-05-02
-2018 General	county	mixed	unknown	postgresql://postgres:''@localhost:5432/NC	2020-05-14
-2018 General	county	mixed	unknown	postgresql://postgres:''@localhost:5432/NC_0531	2020-05-31
-{'Name': '2018 General', 'EndDate': numpy.datetime64('2018-11-06T00:00:00.000000000'), 'StartDate': numpy.datetime64('2018-11-06T00:00:00.000000000'), 'ElectionType_Id': 36, 'OtherElectionType': ''}	county	mixed	unknown	postgresql://postgres:''@localhost:5432/NC_0602	2020-06-02
-2018 General	county	mixed	unknown	postgresql://postgres:''@localhost:5432/NC_0602	2020-06-02
-2018 General	county	all	unknown	postgresql://postgres:''@localhost:5432/NC_0602	2020-06-02
-2018 General	county	all	unknown	postgresql://postgres:''@localhost:5432/NC_0602	2020-06-02

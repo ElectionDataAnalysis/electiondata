@@ -13,13 +13,13 @@ from pathlib import Path
 class Jurisdiction:
     def check_against_raw_results(self,results_df,munger,numerical_columns):
         """Warn user of any mungeable elements in <results_df> that are not
-        translatable via context/dictionary.txt"""
+        translatable via dictionary.txt"""
         finished = False
         changed = False
         while not finished:
             d = pd.read_csv(
                 os.path.join(
-                    self.path_to_juris_dir,'context/dictionary.txt'
+                    self.path_to_juris_dir,'dictionary.txt'
                 ),sep='\t',index_col='cdf_element')
 
             problems = []
@@ -64,23 +64,21 @@ class Jurisdiction:
                 finished = True
         return changed
 
-    def load_context_to_db(self,session,project_root):
-        """Load info from each element in the context directory into the db"""
-        # for element in context directory (except dictionary, remark)
-        context_dir = os.path.join(self.path_to_juris_dir,'context')
-        context_files = os.listdir(context_dir)
-        context_elements = [
-            x[:-4] for x in context_files if x != 'remark.txt' and x != 'dictionary.txt']
-        # reorder context_elements for efficiency
+    def load_juris_to_db(self,session,project_root):
+        """Load info from each element in the Jurisdiction's directory into the db"""
+        # for element in Jurisdiction directory (except dictionary, remark)
+        juris_elements = [
+            x[:-4] for x in self.path_to_juris_dir if x != 'remark.txt' and x != 'dictionary.txt']
+        # reorder juris_elements for efficiency
         leading = ['ReportingUnit','Office','CandidateContest']
         trailing = ['ExternalIdentifier']
-        context_elements = leading + [
-            x for x in context_elements if x not in leading and x not in trailing
+        juris_elements = leading + [
+            x for x in juris_elements if x not in leading and x not in trailing
         ] + trailing
-        for element in context_elements:
-            # read df from context directory
+        for element in juris_elements:
+            # read df from Jurisdiction directory
 
-            load_context_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root)
+            load_juris_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root)
         return
 
     def __init__(self,short_name,path_to_parent_dir):
@@ -91,7 +89,7 @@ class Jurisdiction:
         self.short_name = ui.pick_or_create_directory(path_to_parent_dir,short_name)
         self.path_to_juris_dir = os.path.join(path_to_parent_dir, self.short_name)
 
-        with open(os.path.join(self.path_to_juris_dir,'context/remark.txt'),'r') as f:
+        with open(os.path.join(self.path_to_juris_dir,'remark.txt'),'r') as f:
             remark = f.read()
         print(f'\n\nJurisdiction {short_name} initialized! Note:\n{remark}')
 
@@ -287,33 +285,23 @@ def ensure_jurisdiction_files(juris_path,project_root):
     else:
         print(f'Directory {juris_path} created')
 
-    # create subdirectories
-    subdir_list = ['context','data','output']
-    for sd in subdir_list:
-        sd_path = os.path.join(juris_path,sd)
-        try:
-            os.mkdir(sd_path)
-        except FileExistsError:
-            print(f'Subdirectory {sd} already exists, will be preserved')
-        else:
-            print(f'Subdirectory {sd} created')
-    ensure_context_files(juris_path,project_root)
+    # ensure the contents of the jurisdiction directory are correct
+    ensure_juris_files(juris_path,project_root)
     return
 
 
-def ensure_context_files(juris_path,project_root):
-    """Check that the context files are complete and consistent with one another.
-    Check for extraneous files in context directory.
-    Assumes context directory exists. Assumes dictionary.txt is in the template file"""
+def ensure_juris_files(juris_path,project_root):
+    """Check that the jurisdiction files are complete and consistent with one another.
+    Check for extraneous files in Jurisdiction directory.
+    Assumes Jurisdiction directory exists. Assumes dictionary.txt is in the template file"""
 
-    context_dir = os.path.join(juris_path,'context')
-    templates_dir = os.path.join(project_root,'templates/context_templates')
+    templates_dir = os.path.join(project_root,'templates/jurisdiction_templates')
     # ask user to remove any extraneous files
     extraneous = ['unknown']
     while extraneous:
-        extraneous = [f for f in os.listdir(context_dir) if f != 'remark.txt' and f not in os.listdir(templates_dir)]
+        extraneous = [f for f in os.listdir(juris_path) if f != 'remark.txt' and f not in os.listdir(templates_dir)]
         if extraneous:
-            ui.report_problems(extraneous,msg=f'There are extraneous files in {context_dir}')
+            ui.report_problems(extraneous,msg=f'There are extraneous files in {juris_path}')
             input(f'Remove all extraneous files; then hit return to continue.')
 
     template_list = [x[:-4] for x in os.listdir(templates_dir)]
@@ -323,47 +311,47 @@ def ensure_context_files(juris_path,project_root):
     template_list = ordered_list + [x for x in template_list if x not in ordered_list]
 
     # ensure necessary all files exist
-    for context_file in template_list:
-        print(f'\nChecking {context_file}.txt')
-        cf_path = os.path.join(context_dir,f'{context_file}.txt')
-        # if file does not already exist in context dir, create from template and invite user to fill
+    for juris_file in template_list:
+        print(f'\nChecking {juris_file}.txt')
+        cf_path = os.path.join(juris_path,f'{juris_file}.txt')
+        # if file does not already exist in jurisdiction directory, create from template and invite user to fill
         try:
-            temp = pd.read_csv(os.path.join(templates_dir,f'{context_file}.txt'),sep='\t')
+            temp = pd.read_csv(os.path.join(templates_dir,f'{juris_file}.txt'),sep='\t')
         except pd.errors.EmptyDataError:
-            print(f'Template file {context_file}.txt has no contents')
+            print(f'Template file {juris_file}.txt has no contents')
             temp = pd.DataFrame()
         if not os.path.isfile(cf_path):
             temp.to_csv(cf_path,sep='\t',index=False)
-            input(f'File {context_file}.txt has just been created.\n'
+            input(f'File {juris_file}.txt has just been created.\n'
                   f'Enter information in the file, then hit return to continue.')
 
         # if file exists, check format against template
-        cf_df = pd.read_csv(os.path.join(context_dir,f'{context_file}.txt'),sep='\t')
+        cf_df = pd.read_csv(os.path.join(juris_path,f'{juris_file}.txt'),sep='\t')
         format_confirmed = False
         while not format_confirmed:
             if set(cf_df.columns) != set(temp.columns):
                 cols = '\t'.join(temp.columns.to_list())
-                input(f'Columns of {context_file}.txt need to be (tab-separated):\n'
+                input(f'Columns of {juris_file}.txt need to be (tab-separated):\n'
                       f' {cols}\n'
-                      f'Edit {context_file}.txt, and hit return to continue.')
+                      f'Edit {juris_file}.txt, and hit return to continue.')
             else:
                 format_confirmed = True
 
-        if context_file == 'ExternalIdentifier':
+        if juris_file == 'ExternalIdentifier':
             dedupe(cf_path)
-        elif context_file == 'dictionary':
+        elif juris_file == 'dictionary':
             dedupe(cf_path)
         else:
             # run dupe check
             dedupe(cf_path)
             # check for problematic null entries
-            check_nulls(context_file,cf_path,project_root)
+            check_nulls(juris_file,cf_path,project_root)
     # check dependencies
-    for context_file in [x for x in template_list if x != 'remark' and x != 'dictionary']:
+    for juris_file in [x for x in template_list if x != 'remark' and x != 'dictionary']:
         # check dependencies
-        check_dependencies(context_dir,context_file)
+        check_dependencies(juris_path,juris_file)
     # remark
-    rem_path = os.path.join(context_dir,'remark.txt')
+    rem_path = os.path.join(juris_path,'remark.txt')
     try:
         with open(rem_path,'r') as f:
             remark = f.read()
@@ -371,7 +359,7 @@ def ensure_context_files(juris_path,project_root):
     except FileNotFoundError:
         open(rem_path, 'a').close()  # create empty file
     input(
-        f'In the file context/remark.txt, add or correct anything that '
+        f'In the file remark.txt, add or correct anything that '
         f'user should know about the jurisdiction.\n'
         f'Then hit return to continue.')
     return
@@ -552,7 +540,7 @@ def check_nulls(element,f_path,project_root):
     while nulls:
         problems = []
         for nn in not_nulls.not_null_fields.unique():
-            # if nn is an Id, name in context file is element name
+            # if nn is an Id, name in jurisdiction file is element name
             if nn[-3:] == '_Id':
                 nn = nn[:-3]
             n = df[df[nn].isnull()]
@@ -566,30 +554,29 @@ def check_nulls(element,f_path,project_root):
     return
 
 
-def check_dependencies(context_dir,element):
-    """Looks in <context_dir> to check that every dependent column in <element>.txt
-    is listed in the corresponding context file. Note: <context_dir> assumed to exist.
+def check_dependencies(juris_dir,element):
+    """Looks in <juris_dir> to check that every dependent column in <element>.txt
+    is listed in the corresponding jurisdiction file. Note: <juris_dir> assumed to exist.
     """
-    d = context_dependency_dictionary()
-    # context_dir = os.path.join(self.path_to_juris_dir,"context")
-    f_path = os.path.join(context_dir,f'{element}.txt')
-    assert os.path.isdir(context_dir)
+    d = juris_dependency_dictionary()
+    f_path = os.path.join(juris_dir,f'{element}.txt')
+    assert os.path.isdir(juris_dir)
     element_df = pd.read_csv(f_path,sep='\t',index_col=None)
 
     # Find all dependent columns
     dependent = [c for c in element_df if c in d.keys()]
     changed_elements = set()
-    report = [f'In context/{element}.txt:']
+    report = [f'In {element}.txt:']
     for c in dependent:
         target = d[c]
         ed = pd.read_csv(os.path.join(
-            context_dir,f'{element}.txt'),sep='\t',header=0).fillna('').loc[:,c].unique()
+            juris_dir,f'{element}.txt'),sep='\t',header=0).fillna('').loc[:,c].unique()
 
         # create list of elements, removing any nulls
         ru = list(
             pd.read_csv(
                 os.path.join(
-                    context_dir,f'{target}.txt'),sep='\t').fillna('').loc[:,db_routines.get_name_field(target)])
+                    juris_dir,f'{target}.txt'),sep='\t').fillna('').loc[:,db_routines.get_name_field(target)])
         try:
             ru.remove(np.nan)
         except ValueError:
@@ -608,31 +595,30 @@ def check_dependencies(context_dir,element):
             ui.show_sample(missing,f'{c}s',f'are not yet {target}s')
             input(f'Please make corrections to {element}.txt or additions to {target}.txt to resolve the problem.\n'
                   'Then his return to continue.')
-            changed_elements.update(check_dependencies(context_dir,target))
+            changed_elements.update(check_dependencies(juris_dir,target))
     if dependent:
         print('\n\t'.join(report))
     if changed_elements:
-        print(f'(Directory is {context_dir}')
+        print(f'(Directory is {juris_dir}')
     return changed_elements
 
 
-def context_dependency_dictionary():
-    """Certain fields in context files refer to other context files.
+def juris_dependency_dictionary():
+    """Certain fields in jurisdiction files refer to other jurisdiction files.
     E.g., ElectionDistricts are ReportingUnits"""
     d = {'ElectionDistrict':'ReportingUnit','Office':'Office','PrimaryParty':'Party','Party':'Party',
          'Election':'Election'}
     return d
 
 
-# TODO before processing context files into db, alert user to any duplicate names.
+# TODO before processing jurisdiction files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
-def load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True):
+def load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True):
     """ TODO
     """
 
     cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
-    context_dir = os.path.join(juris_path,'context')
-    df = pd.read_csv(os.path.join(context_dir,f'{element}.txt'),sep='\t').fillna('none or unknown')
+    df = pd.read_csv(os.path.join(juris_path,f'{element}.txt'),sep='\t').fillna('none or unknown')
     # TODO check that df has the right format
 
     # TODO deal with duplicate 'none or unknown' records
@@ -694,22 +680,22 @@ def load_context_dframe_into_cdf(session,element,juris_path,project_root,load_re
             except ForeignKeyException as e:
                 if load_refs:
                     for r in refs:
-                        load_context_dframe_into_cdf(session,r,juris_path,project_root)
+                        load_juris_dframe_into_cdf(session,r,juris_path,project_root)
                     # try again to load main element (but don't load referred-to again)
-                    load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=False)
+                    load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=False)
                     return
                 else:
                     try_again = input(
-                        f'{e}\nWould you like to make changes to the context directory and try again (y/n)?\n')
+                        f'{e}\nWould you like to make changes to the Jurisdiction directory and try again (y/n)?\n')
                     if try_again == 'y':
-                        load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
+                        load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
                         return
             except Exception as e:
                 try_again = input(
                     f'{e}\nThere may be something wrong with the file {element}.txt. '
-                    f'Would you like to make changes to the context directory and try again (y/n)?\n')
+                    f'Would you like to make changes to the Jurisdiction directory and try again (y/n)?\n')
                 if try_again == 'y':
-                    load_context_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
+                    load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
                     return
 
     # commit info in df to corresponding cdf table to db

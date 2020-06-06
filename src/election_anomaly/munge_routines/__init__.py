@@ -115,16 +115,16 @@ def replace_raw_with_internal_ids(
         how='left'
     # join the 'cdf_internal_name' from the raw_identifier table -- this is the internal name field value,
     # no matter what the name field name is in the internal element table (e.g. 'Name', 'BallotName' or 'Selection')
-    # use dictionary.txt from context
+    # use dictionary.txt from jurisdiction
 
-    raw_identifiers = pd.read_csv(os.path.join(juris.path_to_juris_dir,'context/dictionary.txt'),sep='\t')
+    raw_identifiers = pd.read_csv(os.path.join(juris.path_to_juris_dir,'dictionary.txt'),sep='\t')
 
     # error/warning for unmatched elements to be dropped
     raw_ids_for_element = raw_identifiers[raw_identifiers['cdf_element'] == element]
     if drop_unmatched:
         to_be_dropped = row_df[~row_df[f'{element}_raw'].isin(raw_ids_for_element['raw_identifier_value'])]
         if to_be_dropped.shape[0] == row_df.shape[0]:
-            raise MungeError(f'No {element} was found in \'context/dictionary.txt\'')
+            raise MungeError(f'No {element} was found in \'dictionary.txt\'')
         elif not to_be_dropped.empty:
             print(
                 f'Warning: Results for {to_be_dropped.shape[0]} rows '
@@ -162,7 +162,7 @@ def replace_raw_with_internal_ids(
         table_df[['Id',internal_name_column]],how='left',left_on=element,right_on=internal_name_column)
     row_df=row_df.drop([internal_name_column],axis=1)
     row_df.rename(columns={'Id':f'{element}_Id'},inplace=True)
-    return row_df   # TODO rename table_df to context_df
+    return row_df
 
 
 def enum_col_from_id_othertext(df,enum,enum_df,drop_old=True):

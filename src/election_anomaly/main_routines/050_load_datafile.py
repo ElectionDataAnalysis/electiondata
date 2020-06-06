@@ -27,7 +27,7 @@ if __name__ == '__main__':
 	if skip_load == 'y':
 		print('Warning: results for contests, selections and reporting units not loaded will not be processed.')
 	else:
-		juris.load_context_to_db(sess,d['project_root'])
+		juris.load_juris_to_db(sess,d['project_root'])
 
 	ui.track_results_file(d['project_root'],sess,d['results_file'])
 

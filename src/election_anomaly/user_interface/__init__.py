@@ -777,14 +777,13 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 	raw = mr.clean_raw_df(raw,munger)
 	# NB: info_cols will have suffix added by munger
 
-	# check jurisdiction against raw results file, adapting context as necessary
+	# check jurisdiction against raw results file, adapting jurisdiction files as necessary
 	check_juris = input(f'Check jurisdiction {juris.short_name} against raw results (y/n)?\n')
 	if check_juris == 'y':
 		if juris.check_against_raw_results(raw,munger,count_columns_by_name):
-			# if context changed, load to db
-			juris.load_context_to_db(session,project_root)
+			# if jurisdction changed, load to db
+			juris.load_juris_to_db(session,project_root)
 
-	# TODO check db against raw results?
 	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name)
 	print(f'Datafile contents uploaded to database {session.bind.engine}')
 	return
