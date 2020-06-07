@@ -45,7 +45,7 @@ def fill_composing_reporting_unit_join(session):
 
 def append_to_composing_reporting_unit_join(session,ru):
     """<ru> is a dframe of reporting units, with cdf internal name in column 'Name'.
-    cdf internal name indicates nesting via semicolons.
+    cdf internal name indicates nesting via semicolons `;`.
     This routine calculates the nesting relationships from the Names and uploads to db.
     Returns the *all* composing-reporting-unit-join data from the db.
     By convention, a ReportingUnit is it's own ancestor (ancestor_0)."""

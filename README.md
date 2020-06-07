@@ -38,11 +38,18 @@ The system runs out of the box with a postgresql database; to use other varietie
 
 Store your database login credentials stored in a file (template is `src/templates/parameter_file_templates/database.par`)
   
-### Context information by jurisdiction
+### Jurisdiction information
 Because each original raw results file comes from a particular election agency, and each election agency has a fixed jurisdiction, it is natural to organize information by jurisdiction. 
 
 Each jurisdiction should have its own subdirectory of the directory `src/jurisdictions`.
 
+The system assumes that internal database names of ReportingUnits carry information about the nesting of the basic ReportingUnits (e.g., counties, towns, wards, etc., but not congressional districts) via semicolons. For example: `
+ * `Pennsylvania;Philadelphia;Ward 8;Division 6` is a precinct in 
+ * `Pennsylvania;Philadelphia;Ward 8`, which is a ward in
+ * `Pennsylvania;Philadelphia`, which is a county in
+ * `Pennsylvania`, which is a state.
+ 
+Other nesting relationships (e.g., `Pennsylvania;Philadelphia;Ward 8;Division 6` is in `Pennsylvania;PA Senate District 1`) are not recorded in the system (as of 6/6/2020).
 
 ## Mungers
 Election result data comes in a variety of file formats. Even when the basic format is the same, file columns may have different interpretations. The code is built to ease -- as much as possible -- the chore of processing and interpreting each format. Following the [Jargon File](http://catb.org/jargon/html/M/munge.html), which gives one meaning of "munge" as "modify data in some way the speaker doesn't need to go into right now or cannot describe succinctly," we call each set of basic information about interpreting an election result file a "munger". The munger template is in the directory `src/templates/munger_templates`.

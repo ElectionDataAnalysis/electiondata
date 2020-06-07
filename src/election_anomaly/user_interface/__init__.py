@@ -888,4 +888,6 @@ def get_runtime_parameters(keys):
 				d[k] = d_from_file[k]
 			except KeyError:
 				print(f'Warning: no value found for {k} in the parameter file.')
+	for k in keys:
+		print(f'{k}: {d[k]}')
 	return d
