@@ -643,7 +643,7 @@ def juris_dependency_dictionary():
 def load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True):
     """ TODO
     """
-
+    # TODO fail gracefully if file does not exist
     cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
     df = pd.read_csv(os.path.join(juris_path,f'{element}.txt'),sep='\t').fillna('none or unknown')
     # TODO check that df has the right format
