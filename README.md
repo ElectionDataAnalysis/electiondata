@@ -21,7 +21,9 @@ This repository hopes to provide reliable tools for consolidation and analysis o
 [//]: # "TODO keep this up to date"
 
 # How to run the app
-The main routines are in `src/election_anomaly/main_routines`. Each can be run interactively or via a parameter file (template is `src/templates/parameter_file_templates/run_time.par`). 
+Clone the repository to a local machine. Navigate to `/path/to/repo/election_anomaly` and run `python setup.py install`. From a python script or python interactive shell, import the package with `import election_anomaly`.
+
+The main routines are in `src/election_anomaly/main_routines`. Each can be run interactively or via a parameter file (template is `src/templates/parameter_file_templates/run_time.par`). Only the scripts beginning with a 3-digit number are actively maintained; others are in the process of deprecation.
 
 ## Loading data
 run `src/election_anomaly/main_routines/050_load_datafile.py`
@@ -34,7 +36,7 @@ or `src/election_anomaly/main_routines/101_pull_top_counts.py`
 
 ## Environment
 ### Database
-The system runs out of the box with a postgresql database; to use other varieties of SQL, you will need to modify the routines in the `dbr_routines` module. 
+The system runs out of the box with a postgresql database; to use other varieties of SQL, you will need to modify the routines in the `db_routines` module. 
 
 Store your database login credentials stored in a file (template is `src/templates/parameter_file_templates/database.par`)
   

@@ -1,5 +1,5 @@
-import db_routines as dbr
-import user_interface as ui
+from election_anomaly import db_routines as dbr
+from election_anomaly import user_interface as ui
 from sqlalchemy.orm import sessionmaker
 import tkinter as tk
 import os

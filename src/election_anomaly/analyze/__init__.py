@@ -6,11 +6,11 @@ import scipy.spatial.distance as dist
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import db_routines as dbr
-import states_and_files as sf
-import user_interface as ui
+from election_anomaly import db_routines as dbr
+from election_anomaly import states_and_files as sf
+from election_anomaly import user_interface as ui
 import datetime
-import analyze_via_pandas as avp
+from election_anomaly import analyze_via_pandas as avp
 
 
 

@@ -2,8 +2,8 @@ import csv
 import os.path
 
 import pandas as pd
-import user_interface as ui
-import munge_routines as mr
+from election_anomaly import user_interface as ui
+from election_anomaly import munge_routines as mr
 import datetime
 import os
 import numpy as np

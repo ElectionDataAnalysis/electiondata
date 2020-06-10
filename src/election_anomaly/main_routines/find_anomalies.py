@@ -1,8 +1,8 @@
 #!usr/bin/python3
 import os.path
-import db_routines as dbr
-import user_interface as ui
-import analyze as an
+from election_anomaly import db_routines as dbr
+from election_anomaly import user_interface as ui
+from election_anomaly import analyze as an
 from sqlalchemy.orm import sessionmaker
 import pandas as pd
 
