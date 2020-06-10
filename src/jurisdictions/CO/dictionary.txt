@@ -3209,95 +3209,95 @@ Party	Colorado American Constitution Party	American Constitution Party
 Party	Colorado Approval Voting Party	Approval Voting Party
 Party	Colorado Unaffiliated	Unaffiliated
 Party	Colorado Independent	Independent
-CandidateContest	Colorado;CO State House District 1	State Representative - District 1
-CandidateContest	Colorado;CO State House District 10	State Representative - District 10
-CandidateContest	Colorado;CO State House District 11	State Representative - District 11
-CandidateContest	Colorado;CO State House District 12	State Representative - District 12
-CandidateContest	Colorado;CO State House District 13	State Representative - District 13
-CandidateContest	Colorado;CO State House District 14	State Representative - District 14
-CandidateContest	Colorado;CO State House District 15	State Representative - District 15
-CandidateContest	Colorado;CO State House District 16	State Representative - District 16
-CandidateContest	Colorado;CO State House District 17	State Representative - District 17
-CandidateContest	Colorado;CO State House District 18	State Representative - District 18
-CandidateContest	Colorado;CO State House District 19	State Representative - District 19
-CandidateContest	Colorado;CO State House District 2	State Representative - District 2
-CandidateContest	Colorado;CO State House District 20	State Representative - District 20
-CandidateContest	Colorado;CO State House District 21	State Representative - District 21
-CandidateContest	Colorado;CO State House District 22	State Representative - District 22
-CandidateContest	Colorado;CO State House District 23	State Representative - District 23
-CandidateContest	Colorado;CO State House District 24	State Representative - District 24
-CandidateContest	Colorado;CO State House District 25	State Representative - District 25
-CandidateContest	Colorado;CO State House District 26	State Representative - District 26
-CandidateContest	Colorado;CO State House District 27	State Representative - District 27
-CandidateContest	Colorado;CO State House District 28	State Representative - District 28
-CandidateContest	Colorado;CO State House District 29	State Representative - District 29
-CandidateContest	Colorado;CO State House District 3	State Representative - District 3
-CandidateContest	Colorado;CO State House District 30	State Representative - District 30
-CandidateContest	Colorado;CO State House District 31	State Representative - District 31
-CandidateContest	Colorado;CO State House District 32	State Representative - District 32
-CandidateContest	Colorado;CO State House District 33	State Representative - District 33
-CandidateContest	Colorado;CO State House District 34	State Representative - District 34
-CandidateContest	Colorado;CO State House District 35	State Representative - District 35
-CandidateContest	Colorado;CO State House District 36	State Representative - District 36
-CandidateContest	Colorado;CO State House District 37	State Representative - District 37
-CandidateContest	Colorado;CO State House District 38	State Representative - District 38
-CandidateContest	Colorado;CO State House District 39	State Representative - District 39
-CandidateContest	Colorado;CO State House District 4	State Representative - District 4
-CandidateContest	Colorado;CO State House District 40	State Representative - District 40
-CandidateContest	Colorado;CO State House District 41	State Representative - District 41
-CandidateContest	Colorado;CO State House District 42	State Representative - District 42
-CandidateContest	Colorado;CO State House District 43	State Representative - District 43
-CandidateContest	Colorado;CO State House District 44	State Representative - District 44
-CandidateContest	Colorado;CO State House District 45	State Representative - District 45
-CandidateContest	Colorado;CO State House District 46	State Representative - District 46
-CandidateContest	Colorado;CO State House District 47	State Representative - District 47
-CandidateContest	Colorado;CO State House District 48	State Representative - District 48
-CandidateContest	Colorado;CO State House District 49	State Representative - District 49
-CandidateContest	Colorado;CO State House District 5	State Representative - District 5
-CandidateContest	Colorado;CO State House District 50	State Representative - District 50
-CandidateContest	Colorado;CO State House District 51	State Representative - District 51
-CandidateContest	Colorado;CO State House District 52	State Representative - District 52
-CandidateContest	Colorado;CO State House District 53	State Representative - District 53
-CandidateContest	Colorado;CO State House District 54	State Representative - District 54
-CandidateContest	Colorado;CO State House District 55	State Representative - District 55
-CandidateContest	Colorado;CO State House District 56	State Representative - District 56
-CandidateContest	Colorado;CO State House District 57	State Representative - District 57
-CandidateContest	Colorado;CO State House District 58	State Representative - District 58
-CandidateContest	Colorado;CO State House District 59	State Representative - District 59
-CandidateContest	Colorado;CO State House District 6	State Representative - District 6
-CandidateContest	Colorado;CO State House District 60	State Representative - District 60
-CandidateContest	Colorado;CO State House District 61	State Representative - District 61
-CandidateContest	Colorado;CO State House District 62	State Representative - District 62
-CandidateContest	Colorado;CO State House District 63	State Representative - District 63
-CandidateContest	Colorado;CO State House District 64	State Representative - District 64
-CandidateContest	Colorado;CO State House District 65	State Representative - District 65
-CandidateContest	Colorado;CO State House District 7	State Representative - District 7
-CandidateContest	Colorado;CO State House District 8	State Representative - District 8
-CandidateContest	Colorado;CO State House District 9	State Representative - District 9
-CandidateContest	Colorado;CO State Senate District 1	State Senate - District 1
-CandidateContest	Colorado;CO State Senate District 11	State Senate - District 11
-CandidateContest	Colorado;CO State Senate District 13	State Senate - District 13
-CandidateContest	Colorado;CO State Senate District 15	State Senate - District 15
-CandidateContest	Colorado;CO State Senate District 16	State Senate - District 16
-CandidateContest	Colorado;CO State Senate District 2	State Senate - District 2
-CandidateContest	Colorado;CO State Senate District 20	State Senate - District 20
-CandidateContest	Colorado;CO State Senate District 22	State Senate - District 22
-CandidateContest	Colorado;CO State Senate District 24	State Senate - District 24
-CandidateContest	Colorado;CO State Senate District 3	State Senate - District 3
-CandidateContest	Colorado;CO State Senate District 30	State Senate - District 30
-CandidateContest	Colorado;CO State Senate District 32	State Senate - District 32
-CandidateContest	Colorado;CO State Senate District 34	State Senate - District 34
-CandidateContest	Colorado;CO State Senate District 5	State Senate - District 5
-CandidateContest	Colorado;CO State Senate District 6	State Senate - District 6
-CandidateContest	Colorado;CO State Senate District 7	State Senate - District 7
-CandidateContest	Colorado;CO State Senate District 9	State Senate - District 9
-CandidateContest	Colorado;US House CO District 1	United States Representative - District 1
-CandidateContest	Colorado;US House CO District 2	United States Representative - District 2
-CandidateContest	Colorado;US House CO District 3	United States Representative - District 3
-CandidateContest	Colorado;US House CO District 4	United States Representative - District 4
-CandidateContest	Colorado;US House CO District 5	United States Representative - District 5
-CandidateContest	Colorado;US House CO District 6	United States Representative - District 6
-CandidateContest	Colorado;US House CO District 7	United States Representative - District 7
+CandidateContest	CO State House District 1	State Representative - District 1
+CandidateContest	CO State House District 10	State Representative - District 10
+CandidateContest	CO State House District 11	State Representative - District 11
+CandidateContest	CO State House District 12	State Representative - District 12
+CandidateContest	CO State House District 13	State Representative - District 13
+CandidateContest	CO State House District 14	State Representative - District 14
+CandidateContest	CO State House District 15	State Representative - District 15
+CandidateContest	CO State House District 16	State Representative - District 16
+CandidateContest	CO State House District 17	State Representative - District 17
+CandidateContest	CO State House District 18	State Representative - District 18
+CandidateContest	CO State House District 19	State Representative - District 19
+CandidateContest	CO State House District 2	State Representative - District 2
+CandidateContest	CO State House District 20	State Representative - District 20
+CandidateContest	CO State House District 21	State Representative - District 21
+CandidateContest	CO State House District 22	State Representative - District 22
+CandidateContest	CO State House District 23	State Representative - District 23
+CandidateContest	CO State House District 24	State Representative - District 24
+CandidateContest	CO State House District 25	State Representative - District 25
+CandidateContest	CO State House District 26	State Representative - District 26
+CandidateContest	CO State House District 27	State Representative - District 27
+CandidateContest	CO State House District 28	State Representative - District 28
+CandidateContest	CO State House District 29	State Representative - District 29
+CandidateContest	CO State House District 3	State Representative - District 3
+CandidateContest	CO State House District 30	State Representative - District 30
+CandidateContest	CO State House District 31	State Representative - District 31
+CandidateContest	CO State House District 32	State Representative - District 32
+CandidateContest	CO State House District 33	State Representative - District 33
+CandidateContest	CO State House District 34	State Representative - District 34
+CandidateContest	CO State House District 35	State Representative - District 35
+CandidateContest	CO State House District 36	State Representative - District 36
+CandidateContest	CO State House District 37	State Representative - District 37
+CandidateContest	CO State House District 38	State Representative - District 38
+CandidateContest	CO State House District 39	State Representative - District 39
+CandidateContest	CO State House District 4	State Representative - District 4
+CandidateContest	CO State House District 40	State Representative - District 40
+CandidateContest	CO State House District 41	State Representative - District 41
+CandidateContest	CO State House District 42	State Representative - District 42
+CandidateContest	CO State House District 43	State Representative - District 43
+CandidateContest	CO State House District 44	State Representative - District 44
+CandidateContest	CO State House District 45	State Representative - District 45
+CandidateContest	CO State House District 46	State Representative - District 46
+CandidateContest	CO State House District 47	State Representative - District 47
+CandidateContest	CO State House District 48	State Representative - District 48
+CandidateContest	CO State House District 49	State Representative - District 49
+CandidateContest	CO State House District 5	State Representative - District 5
+CandidateContest	CO State House District 50	State Representative - District 50
+CandidateContest	CO State House District 51	State Representative - District 51
+CandidateContest	CO State House District 52	State Representative - District 52
+CandidateContest	CO State House District 53	State Representative - District 53
+CandidateContest	CO State House District 54	State Representative - District 54
+CandidateContest	CO State House District 55	State Representative - District 55
+CandidateContest	CO State House District 56	State Representative - District 56
+CandidateContest	CO State House District 57	State Representative - District 57
+CandidateContest	CO State House District 58	State Representative - District 58
+CandidateContest	CO State House District 59	State Representative - District 59
+CandidateContest	CO State House District 6	State Representative - District 6
+CandidateContest	CO State House District 60	State Representative - District 60
+CandidateContest	CO State House District 61	State Representative - District 61
+CandidateContest	CO State House District 62	State Representative - District 62
+CandidateContest	CO State House District 63	State Representative - District 63
+CandidateContest	CO State House District 64	State Representative - District 64
+CandidateContest	CO State House District 65	State Representative - District 65
+CandidateContest	CO State House District 7	State Representative - District 7
+CandidateContest	CO State House District 8	State Representative - District 8
+CandidateContest	CO State House District 9	State Representative - District 9
+CandidateContest	CO State Senate District 1	State Senate - District 1
+CandidateContest	CO State Senate District 11	State Senate - District 11
+CandidateContest	CO State Senate District 13	State Senate - District 13
+CandidateContest	CO State Senate District 15	State Senate - District 15
+CandidateContest	CO State Senate District 16	State Senate - District 16
+CandidateContest	CO State Senate District 2	State Senate - District 2
+CandidateContest	CO State Senate District 20	State Senate - District 20
+CandidateContest	CO State Senate District 22	State Senate - District 22
+CandidateContest	CO State Senate District 24	State Senate - District 24
+CandidateContest	CO State Senate District 3	State Senate - District 3
+CandidateContest	CO State Senate District 30	State Senate - District 30
+CandidateContest	CO State Senate District 32	State Senate - District 32
+CandidateContest	CO State Senate District 34	State Senate - District 34
+CandidateContest	CO State Senate District 5	State Senate - District 5
+CandidateContest	CO State Senate District 6	State Senate - District 6
+CandidateContest	CO State Senate District 7	State Senate - District 7
+CandidateContest	CO State Senate District 9	State Senate - District 9
+CandidateContest	US House CO District 1	United States Representative - District 1
+CandidateContest	US House CO District 2	United States Representative - District 2
+CandidateContest	US House CO District 3	United States Representative - District 3
+CandidateContest	US House CO District 4	United States Representative - District 4
+CandidateContest	US House CO District 5	United States Representative - District 5
+CandidateContest	US House CO District 6	United States Representative - District 6
+CandidateContest	US House CO District 7	United States Representative - District 7
 Candidate	Karen McCormick	Karen McCormick
 Candidate	Ken Buck	Ken Buck
 Candidate	Richard Lyons Weil	Richard Lyons Weil
@@ -3704,3 +3704,7 @@ BallotMeasureContest	Setback Requirement for Oil and Gas	Proposition 112 (STATUT
 BallotMeasureSelection	No	No Votes
 BallotMeasureSelection	Yes	Yes Votes
 CountItemType	total	Candidate Votes
+CandidateContest	CO Treasurer	Treasurer
+CandidateContest	CO Secretary of State	Secretary of State
+CandidateContest	CO Attorney General	Attorney General
+CandidateContest	CO Governor	Governor
