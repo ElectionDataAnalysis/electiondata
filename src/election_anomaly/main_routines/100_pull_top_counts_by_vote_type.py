@@ -1,9 +1,9 @@
 #!usr/bin/python3
 import os.path
 from sqlalchemy.orm import sessionmaker
-import db_routines as dbr
-import user_interface as ui
-import analyze_via_pandas as avp
+from election_anomaly import db_routines as dbr
+from election_anomaly import user_interface as ui
+from election_anomaly import analyze_via_pandas as avp
 
 if __name__ == '__main__':
     d = ui.get_runtime_parameters(

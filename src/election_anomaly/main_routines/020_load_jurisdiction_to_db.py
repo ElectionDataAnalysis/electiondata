@@ -1,6 +1,6 @@
 import os
-import user_interface as ui
-import db_routines as dbr
+from election_anomaly import user_interface as ui
+from election_anomaly import db_routines as dbr
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':

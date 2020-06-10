@@ -7,10 +7,10 @@ from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
 import sqlalchemy as db
 import sqlalchemy_utils
-import user_interface as ui
+from election_anomaly import user_interface as ui
 from configparser import MissingSectionHeaderError
 import pandas as pd
-import munge_routines as mr
+from election_anomaly import munge_routines as mr
 import re
 import datetime
 

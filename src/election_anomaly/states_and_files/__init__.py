@@ -1,10 +1,10 @@
 import os.path
 
-import db_routines
-import db_routines as dbr
+from election_anomaly import db_routines
+from election_anomaly import db_routines as dbr
 import pandas as pd
-import munge_routines as mr
-import user_interface as ui
+from election_anomaly import munge_routines as mr
+from election_anomaly import user_interface as ui
 import re
 import numpy as np
 from pathlib import Path

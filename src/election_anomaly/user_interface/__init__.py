@@ -1,9 +1,9 @@
 from configparser import ConfigParser
 
-import db_routines
-import db_routines as dbr
-import db_routines.create_cdf_db as db_cdf
-import munge_routines as mr
+from election_anomaly import db_routines
+from election_anomaly import db_routines as dbr
+from election_anomaly import db_routines.create_cdf_db as db_cdf
+from election_anomaly import munge_routines as mr
 import pandas as pd
 import numpy as np
 import csv
@@ -13,7 +13,7 @@ from pathlib import Path
 import ntpath
 import re
 import datetime
-import states_and_files as sf
+from election_anomaly import states_and_files as sf
 import random
 from tkinter import filedialog
 from configparser import MissingSectionHeaderError

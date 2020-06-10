@@ -1,5 +1,5 @@
 import os
-import user_interface as ui
+from election_anomaly import user_interface as ui
 
 
 if __name__ == '__main__':
