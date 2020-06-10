@@ -293,6 +293,8 @@ def read_munger_info_from_files(dir_path):
     file_type = format_info.loc['file_type','value']
     encoding = format_info.loc['encoding','value']
     thousands_separator = format_info.loc['thousands_separator','value']
+    if thousands_separator in ['None','',np.nan]:
+        thousands_separator = None
     # TODO warn if encoding not recognized
 
     # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
