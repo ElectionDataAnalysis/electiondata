@@ -13,7 +13,7 @@ from pathlib import Path
 import ntpath
 import re
 import datetime
-from election_anomaly import states_and_files as sf
+from election_anomaly import juris_and_munger as sf
 import random
 from tkinter import filedialog
 from configparser import MissingSectionHeaderError
@@ -309,28 +309,6 @@ def find_dupes(df):
 	return dupes_df, deduped
 
 
-def format_check_formula(formula,fields):
-	"""
-	Checks all strings encased in angle brackets in <formula>
-	Returns list of such strings missing from <field_list>
-	"""
-	p=re.compile('<(?P<field>[^<>]+)>')
-	m = p.findall(formula)
-	missing = [x for x in m if x not in fields]
-	return missing
-
-
-def create_file_from_template(template_file,new_file,sep='\t'):
-	"""For tab-separated files (or others, using <sep>); does not replace existing file
-	but creates <new_file> with the proper header row
-	taking the headers from the <template_file>"""
-	template = pd.read_csv(template_file,sep=sep,header=0,dtype=str)
-	if not os.path.isfile(new_file):
-		# create file with just header row
-		template.iloc[0:0].to_csv(new_file,index=None,sep=sep)
-	return
-
-
 def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name=None):
 	"""pick (or create) a munger """
 	if not project_root:
@@ -367,34 +345,6 @@ def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name
 	if session:
 		munger.check_against_db(session)
 	return munger
-
-
-def translate_db_to_show_user(db_record,edf):
-	"""<edf> is a dictionary of enumeration dataframes including all in <db_record>.
-	<db_record> is a dictionary of values from db (all enums in id/othertext)
-	returns dictionary of values to show user (all enums in plaintext)
-	and dictionary of enumeration values"""
-	# TODO add ability to handle foreign keys/values such as ElectionDistricts?
-	enum_val = {}
-	show_user = db_record.copy()
-	for e in edf.keys():
-		enum_val[e] = show_user[e] = mr.enum_value_from_id_othertext(edf[e],db_record[f'{e}_Id'],db_record[f'Other{e}'])
-		show_user.remove(f'{e}_Id')
-		show_user.remove(f'Other{e}')
-	return show_user, enum_val
-
-
-def translate_show_user_to_db(show_user,edf):
-	"""<edf> is a dictionary of enumeration dataframes including all in <show_user>.
-	<show_user> is a dictionary of values to show user (all enums in plaintext)
-	returns dictionary of values from db (all enums in id/othertext)
-	and dictionary of enumeration values"""
-	enum_val = {}
-	db_record = show_user.copy()
-	for e in edf.keys():
-		enum_val[e] = show_user[e]
-		db_record[f'{e}_Id'],db_record[f'Other{e}'] = mr.enum_value_to_id_othertext(edf[e],show_user[e])
-	return db_record, enum_val
 
 
 def pick_or_create_record(sess,project_root,element,known_info_d=None):
@@ -444,21 +394,6 @@ def pick_or_create_record(sess,project_root,element,known_info_d=None):
 		fk_plaintext_dict = mr.fk_plaintext_dict_from_db_record(
 			sess,element,db_style_record,excluded=enum_plaintext_dict.keys())
 	return db_idx, db_style_record, enum_plaintext_dict, fk_plaintext_dict
-
-
-def get_by_hand_records_from_file_system(root_dir,table,subdir='db_records_entered_by_hand'):
-	# identify/create the directory for storing individual records in file system
-	storage_dir = os.path.join(root_dir,subdir)
-	if not os.path.isdir(storage_dir):
-		os.makedirs(storage_dir)
-
-	storage_file = os.path.join(storage_dir,f'{table}.txt')
-	# read from file system (if file exists)
-	if os.path.isfile(storage_file):
-		all_from_file = pd.read_csv(storage_file,sep='\t')
-	else:
-		all_from_file = pd.DataFrame()  # empty
-	return all_from_file, storage_file
 
 
 def pick_record_from_db(sess,element,known_info_d=None,required=False,db_idx=None):

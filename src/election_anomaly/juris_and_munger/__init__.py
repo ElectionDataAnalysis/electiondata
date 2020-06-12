@@ -301,7 +301,7 @@ def read_munger_info_from_files(dir_path):
     #   will need to rename some columns of the raw file before processing.
     return [cdf_elements,header_row_count,field_name_row,count_columns,file_type,encoding,thousands_separator]
 
-
+# TODO combine ensure_jurisdiction_files with ensure_juris_files
 def ensure_jurisdiction_files(juris_path,project_root):
     # create jurisdiction directory
     try:
@@ -836,4 +836,4 @@ class ForeignKeyException(Exception):
 
 
 if __name__ == '__main__':
-    print('Done (states_and_files)!')
+    print('Done (juris_and_munger)!')

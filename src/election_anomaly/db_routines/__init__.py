@@ -12,11 +12,6 @@ from configparser import MissingSectionHeaderError
 import pandas as pd
 from election_anomaly import munge_routines as mr
 import re
-import datetime
-
-
-class CdfDbException(Exception):
-    pass
 
 
 def get_database_names(con):
@@ -34,13 +29,6 @@ def create_database(con,cur,db_name):
     q = "CREATE DATABASE {0}"
     out2 = query(q,sql_ids,[],con,cur)
     return out1,out2
-
-
-def fill_composing_reporting_unit_join(session):
-    print('Filling ComposingReportingUnitJoin table, i.e., recording nesting relations of ReportingUnits')
-    ru_dframe = pd.read_sql_table('ReportingUnit',session.bind,'cdf',index_col=None)
-    cruj_dframe = append_to_composing_reporting_unit_join(session,ru_dframe)
-    return cruj_dframe
 
 
 def append_to_composing_reporting_unit_join(session,ru):
@@ -435,7 +423,3 @@ def get_name_field(element):
     else:
         field = 'Name'
     return field
-
-
-def db_exists(session):
-    return sqlalchemy_utils.functions.database_exists(session.bind.url)
