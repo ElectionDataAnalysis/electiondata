@@ -9,6 +9,11 @@ Funding provided October 2019 - April 2021 by the National Science Foundation
 # License
 See [LICENSE.md](./LICENSE.md)
 
+# Contributors
+ * [Stephanie Singer](http://campaignscientific.com/), Hatfield School of Government (Portland State University), former Chair, Philadelphia County Board of Elections
+ * Janaki Raghuram Srungavarapu, Hatfield School of Government (Portland State University)
+ * Eric Tsai, Hatfield School of Government (Portland State University)
+
 # Overview
 This repository hopes to provide reliable tools for consolidation and analysis of raw election results from the most reliable sources -- the election agencies themselves. 
  * Consolidation: can take as input election results files from a wide variety of sources and loads the data into the [common data format](https://github.com/usnistgov/ElectionResultsReporting) from the National Institute of Standards and Technology (NIST)
@@ -51,7 +56,7 @@ The system assumes that internal database names of ReportingUnits carry informat
  * `Pennsylvania;Philadelphia`, which is a county in
  * `Pennsylvania`, which is a state.
  
-Other nesting relationships (e.g., `Pennsylvania;Philadelphia;Ward 8;Division 6` is in `Pennsylvania;PA Senate District 1`) are not recorded in the system (as of 6/6/2020).
+Other nesting relationships (e.g., `Pennsylvania;Philadelphia;Ward 8;Division 6` is in `Pennsylvania;PA Senate District 1`) are not yet recorded in the system (as of 6/6/2020).
 
 ## Mungers
 Election result data comes in a variety of file formats. Even when the basic format is the same, file columns may have different interpretations. The code is built to ease -- as much as possible -- the chore of processing and interpreting each format. Following the [Jargon File](http://catb.org/jargon/html/M/munge.html), which gives one meaning of "munge" as "modify data in some way the speaker doesn't need to go into right now or cannot describe succinctly," we call each set of basic information about interpreting an election result file a "munger". The munger template is in the directory `src/templates/munger_templates`.
