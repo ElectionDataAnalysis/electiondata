@@ -1,19 +1,3 @@
-# election_anomaly
-_Documentation under construction_
-
-# Funding
-Funding provided October 2019 - April 2021 by the National Science Foundation
- * Award #1936809, "EAGER: Data Science for Election Verification" 
- * Award #2027089, "RAPID: Election Result Anomaly Detection for 2020"
-
-# License
-See [LICENSE.md](./LICENSE.md)
-
-# Contributors
- * [Stephanie Singer](http://campaignscientific.com/), Hatfield School of Government (Portland State University), former Chair, Philadelphia County Board of Elections
- * Janaki Raghuram Srungavarapu, Hatfield School of Government (Portland State University)
- * Eric Tsai, Hatfield School of Government (Portland State University)
-
 # Overview
 This repository hopes to provide reliable tools for consolidation and analysis of raw election results from the most reliable sources -- the election agencies themselves. 
  * Consolidation: can take as input election results files from a wide variety of sources and loads the data into the [common data format](https://github.com/usnistgov/ElectionResultsReporting) from the National Institute of Standards and Technology (NIST)
@@ -24,6 +8,11 @@ This repository hopes to provide reliable tools for consolidation and analysis o
  * Visualization: provides a variety of visualization tools.
  
 [//]: # "TODO keep this up to date"
+
+# Target Audience
+This system is intended to be of use to candidates and campaigns, election officials, students of politics and elections, and anyone else who is interested in assembling and understanding election results.
+
+If you are interested in contributing, or staying updated on the progress of this project, please [contact Stephanie Singer](http://symmetrysinger.com/index.php?id=contact).
 
 # How to run the app
 Clone the repository to a local machine. Navigate to `/path/to/repo/election_anomaly` and run `python setup.py install`. From a python script or python interactive shell, import the package with `import election_anomaly`.
@@ -122,4 +111,17 @@ A new datafile may have new names for existing elements (such as Reporting Units
 More rarely, a new datafile may have new Offices and CandidateContests.
 
 [//]: # "TODO per CDF, there should be a CandidateContestOfficeJoin table"
+
+# Contributors
+ * [Stephanie Singer](http://campaignscientific.com/), Hatfield School of Government (Portland State University), former Chair, Philadelphia County Board of Elections
+ * Janaki Raghuram Srungavarapu, Hatfield School of Government (Portland State University)
+ * Eric Tsai, Hatfield School of Government (Portland State University)
+
+# Funding
+Funding provided October 2019 - April 2021 by the National Science Foundation
+ * Award #1936809, "EAGER: Data Science for Election Verification" 
+ * Award #2027089, "RAPID: Election Result Anomaly Detection for 2020"
+
+# License
+See [LICENSE.md](./LICENSE.md)
 
