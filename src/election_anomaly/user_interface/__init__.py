@@ -793,12 +793,16 @@ def report_problems(problems,msg='There are problems'):
 	return
 
 
-def get_runtime_parameters(keys):
+def get_runtime_parameters(keys, param_file=None):
 	d = {}
 	missing_params = {'missing':[]}
 
 	parser = ConfigParser()
-	parser.read('run_time.ini')
+	if param_file:
+		filename = param_file
+	else:
+		filename = 'run_time.ini'
+	parser.read(filename)
 
 	for k in keys:
 		try:
@@ -810,4 +814,3 @@ def get_runtime_parameters(keys):
 		missing_params = None
 
 	return d, missing_params
-
