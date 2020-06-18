@@ -795,6 +795,7 @@ def report_problems(problems,msg='There are problems'):
 
 def get_runtime_parameters(keys):
 	d = {}
+	missing_params = {'missing':[]}
 
 	parser = ConfigParser()
 	parser.read('run_time.ini')
@@ -803,7 +804,10 @@ def get_runtime_parameters(keys):
 		try:
 			d[k] = parser['election_anomaly'][k]
 		except KeyError:
-			print(f'Warning: no value found for {k} in the parameter file.')
-	for k in keys:
-		print(f'{k}: {d[k]}')
-	return d
+			missing_params['missing'].append(k)
+
+	if len(missing_params['missing']) == 0:
+		missing_params = None
+
+	return d, missing_params
+

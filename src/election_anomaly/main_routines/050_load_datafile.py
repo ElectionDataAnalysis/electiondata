@@ -6,7 +6,7 @@ import os
 
 if __name__ == '__main__':
 
-	d = ui.get_runtime_parameters(
+	d, error = ui.get_runtime_parameters(
 		['project_root','juris_name','db_paramfile','db_name','munger_name','results_file'])
 
 	# pick jurisdiction
