@@ -3,7 +3,7 @@ from election_anomaly import user_interface as ui
 
 
 if __name__ == '__main__':
-	d = ui.get_runtime_parameters(['project_root','juris_name'])
+	d, error = ui.get_runtime_parameters(['project_root','juris_name'])
 	j_path = os.path.join(d['project_root'],'jurisdictions')
 
 	juris = ui.pick_juris_from_filesystem(

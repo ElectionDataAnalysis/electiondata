@@ -6,7 +6,7 @@ from election_anomaly import user_interface as ui
 from election_anomaly import analyze_via_pandas as avp
 
 if __name__ == '__main__':
-    d = ui.get_runtime_parameters(
+    d, error = ui.get_runtime_parameters(
         ['project_root','juris_name','db_paramfile','db_name','rollup_directory'])
 
     jurisdiction = ui.pick_juris_from_filesystem(

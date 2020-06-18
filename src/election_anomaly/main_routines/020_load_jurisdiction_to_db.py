@@ -4,7 +4,7 @@ from election_anomaly import db_routines as dbr
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
-	d = ui.get_runtime_parameters(
+	d, error = ui.get_runtime_parameters(
 		['project_root','juris_name','db_paramfile','db_name'])
 
 	j_path = os.path.join(d['project_root'],'jurisdictions')

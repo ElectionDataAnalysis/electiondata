@@ -4,7 +4,7 @@ from election_anomaly import user_interface as ui
 
 if __name__ == '__main__':
 
-	d = ui.get_runtime_parameters(
+	d, error = ui.get_runtime_parameters(
 		['project_root','munger_name'])
 
 	# pick munger (nb: session=None by default, so info pulled from file system, not db)
