@@ -19,3 +19,4 @@ src/election_anomaly/db_routines/create_cdf_db/__pycache__/__init__.cpython-37.p
 dist
 *.egg-info
 build
+.ini
