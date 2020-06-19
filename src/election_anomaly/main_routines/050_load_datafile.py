@@ -13,10 +13,7 @@ if __name__ == '__main__':
 	juris = ui.pick_juris_from_filesystem(d['project_root'],juris_name=d['juris_name'])
 
 	# create db if it does not already exist
-	con, paramfile = dbr.establish_connection(paramfile=d['db_paramfile'],db_name=d['db_name'])
-	if not con:
-		print(f'Database {d["db_name"]} not found, will be created.')
-		ui.pick_database(d['project_root'],paramfile=d['db_paramfile'],db_name=d['db_name'])
+	error = dbr.establish_connection(paramfile=d['db_paramfile'],db_name=d['db_name'])
 
 	# connect to db
 	eng = dbr.sql_alchemy_connect(paramfile=d['db_paramfile'],db_name=d['db_name'])
