@@ -12,6 +12,8 @@ from configparser import MissingSectionHeaderError
 import pandas as pd
 from election_anomaly import munge_routines as mr
 import re
+from election_anomaly.db_routines import create_cdf_db as db_cdf
+import os
 
 
 def get_database_names(con):
@@ -71,22 +73,65 @@ def append_to_composing_reporting_unit_join(session,ru):
     return cruj_dframe
 
 
-def establish_connection(paramfile='../jurisdictions/database.ini',db_name='postgres'):
+def establish_connection(paramfile, db_name='postgres'):
     """Return a db connection object; if <paramfile> fails,
     return corrected <paramfile>"""
     try:
         params = ui.config(paramfile)
     except MissingSectionHeaderError as e:
-        new_param = input(f'{e}\nEnter path to correct parameter file\n')
-        con, paramfile = establish_connection(new_param,db_name)
-        return con, paramfile
-    if db_name != 'postgres':
-        params['dbname']=db_name
+        return {'message': 'database.ini file not found suggested location.'}
+    params['dbname']=db_name
     try:
         con = psycopg2.connect(**params)
     except psycopg2.OperationalError as e:
-        con = None
-    return con, paramfile
+        # ERIC: call the pick_database function from here?
+        # probably put it into this file instead of UI
+        # remove the default db_name in argument
+        # if we can't make a connection here return another message
+        # otherwise this function returns none
+        return {'message': 'Unable to establish connection to database.'}
+    con.close()
+    return None
+
+
+#ERIC: can probs move this whole thing to the DBR file. Only
+#other place it's called is by the get_runtime_params, but that was deleted by other thing
+def create_new_db(project_root, paramfile, db_name):
+    # get connection to default postgres DB to create new one
+    try:    
+        params = ui.config(paramfile)
+        params['dbname'] = 'postgres'
+        con = psycopg2.connect(**params)
+    except:
+        # Can't connect to the default postgres database, so there
+        # seems to be something wrong with connection. Fail here.
+        print('Unable to find database. Exiting.')
+        quit()
+    cur = con.cursor()
+    db_df = get_database_names(con)
+
+    # DB already exists. Keeping to implement the format check in future
+    if db_name in db_df.datname.unique():
+        desired_db = db_name
+        create_new = False
+        # TODO otherwise check that desired_db has right format?
+    elif db_name:  # but not in existing
+        desired_db = db_name
+        create_database(con,cur,desired_db)
+        create_new = True
+        
+    if create_new: 	# if our db is brand new
+        # connect to the desired_db
+        eng = sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
+        Session = sqlalchemy.orm.sessionmaker(bind=eng)
+        sess = Session()
+
+		# load cdf tables
+        db_cdf.create_common_data_format_tables(
+            sess,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
+        db_cdf.fill_cdf_enum_tables(
+            sess,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
+    con.close()
 
 
 def sql_alchemy_connect(paramfile=None,db_name='postgres'):
