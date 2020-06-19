@@ -84,18 +84,11 @@ def establish_connection(paramfile, db_name='postgres'):
     try:
         con = psycopg2.connect(**params)
     except psycopg2.OperationalError as e:
-        # ERIC: call the pick_database function from here?
-        # probably put it into this file instead of UI
-        # remove the default db_name in argument
-        # if we can't make a connection here return another message
-        # otherwise this function returns none
         return {'message': 'Unable to establish connection to database.'}
     con.close()
     return None
 
 
-#ERIC: can probs move this whole thing to the DBR file. Only
-#other place it's called is by the get_runtime_params, but that was deleted by other thing
 def create_new_db(project_root, paramfile, db_name):
     # get connection to default postgres DB to create new one
     try:    
