@@ -801,7 +801,7 @@ def get_runtime_parameters(keys, param_file=None):
 	if param_file:
 		filename = param_file
 	else:
-		filename = 'run_time.ini'
+		filename = 'run_time.par'
 	parser.read(filename)
 
 	for k in keys:
