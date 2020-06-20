@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
 
-	d = ui.get_runtime_parameters(
+	d, error = ui.get_runtime_parameters(
 		['project_root','db_paramfile','db_name','munger_name'])
 
 	# connect to db

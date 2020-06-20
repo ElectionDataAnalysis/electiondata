@@ -793,36 +793,24 @@ def report_problems(problems,msg='There are problems'):
 	return
 
 
-def get_runtime_parameters(keys):
-	interact = input('Run interactively (y/n)?\n')
+def get_runtime_parameters(keys, param_file=None):
 	d = {}
-	if interact == 'y':
-		if 'project_root' in keys:
-			d['project_root'] = get_project_root()
-		if 'db_paramfile' in keys:
-			d['db_paramfile'] = pick_paramfile()
-		if 'db_name' in keys:
-			d['db_name'] = pick_database(d['project_root'],d['db_paramfile'])
-		if 'juris_name' in keys:
-			d['juris_name'] = None
-		if 'munger_name' in keys:
-			d['munger_name'] = None
-		if 'rollup_directory' in keys:
-			d['rollup_directory'] = pick_file_or_directory(
-				description='the directory for election result rollup exports',mode='directory')
-		if 'results_file' in keys:
-			d['results_file'] = pick_file_or_directory(description='the election results file',mode='file')
+	missing_params = {'missing':[]}
 
-		for k in [x for x in keys if x not in [
-			'project_root','db_paramfile','db_name','juris_name','rollup_directory']]:
-			d[k] = input(f'Enter {k}')
+	parser = ConfigParser()
+	if param_file:
+		filename = param_file
 	else:
-		d_from_file = config(section='election_anomaly',msg='Pick a paramfile.')
-		for k in keys:
-			try:
-				d[k] = d_from_file[k]
-			except KeyError:
-				print(f'Warning: no value found for {k} in the parameter file.')
+		filename = 'run_time.par'
+	parser.read(filename)
+
 	for k in keys:
-		print(f'{k}: {d[k]}')
-	return d
+		try:
+			d[k] = parser['election_anomaly'][k]
+		except KeyError:
+			missing_params['missing'].append(k)
+
+	if len(missing_params['missing']) == 0:
+		missing_params = None
+
+	return d, missing_params

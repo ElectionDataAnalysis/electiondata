@@ -7,7 +7,7 @@ from election_anomaly import analyze_via_pandas as avp
 
 # FIXME failed on CO 2018g by county, maybe issue with totals?
 if __name__ == '__main__':
-    d = ui.get_runtime_parameters(
+    d, error = ui.get_runtime_parameters(
         ['project_root','juris_name','db_paramfile','db_name','rollup_directory'])
     jurisdiction = ui.pick_juris_from_filesystem(
         d['project_root'],juriss_dir=os.path.join(
