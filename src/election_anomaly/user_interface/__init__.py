@@ -209,62 +209,6 @@ def show_sample(input_iter,items,condition,outfile='shown_items.txt',export_dir=
 	return
 
 
-def pick_database(project_root,paramfile=None,db_name=None):
-	"""Establishes connection to db with name <db_name>,
-	or creates a new cdf_db with that name.
-	In any case, returns the name of the DB."""
-	if not paramfile:
-		paramfile = pick_paramfile()
-	[con, paramfile] = dbr.establish_connection(paramfile=paramfile)
-	print(f'Connection established to database {con.info.dbname}')
-	cur = con.cursor()
-	db_df = dbr.get_database_names(con)
-	if db_name and db_name in db_df.datname.unique():
-		print(f'Will use existing database {db_name}')
-		desired_db = db_name
-		create_new = False
-	elif db_name:  # but not in existing
-		desired_db = db_name
-		dbr.create_database(con,cur,desired_db)
-		create_new = True
-	else:  # if no db_name given
-		db_idx,desired_db = pick_one(db_df,'datname',item='database')
-		if db_idx:
-			create_new = False
-		else:  # if we're going to need a brand new db
-			desired_db = get_alphanumeric_from_user('Enter name for new database (alphanumeric only)')
-			create_new = True
-			while desired_db in db_df.datname.unique() and create_new:
-				use_existing = input(f'Database {desired_db} exists! Use existing database {desired_db} (y/n)?\n')
-				if use_existing == 'y':
-					create_new = False
-				else:
-					desired_db = get_alphanumeric_from_user('Enter name for new database (alphanumeric only)')
-			if create_new:  # then desired_db is not in the list of dbs
-				dbr.create_database(con,cur,desired_db)
-			# TODO otherwise check that desired_db has right format?
-
-	if create_new: 	# if our db is brand new
-		# connect to the desired_db
-		eng = dbr.sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
-		Session = sessionmaker(bind=eng)
-		sess = Session()
-
-		# load cdf tables
-		db_cdf.create_common_data_format_tables(
-			sess,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
-		db_cdf.fill_cdf_enum_tables(
-			sess,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
-		print(f'New database {desired_db} has been created using the common data format.')
-
-	# clean up
-	if cur:
-		cur.close()
-	if con:
-		con.close()
-	return desired_db
-
-
 def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_name=None,check_files=False):
 	"""Returns a State object.
 	If <jurisdiction_name> is given, this just initializes based on info
