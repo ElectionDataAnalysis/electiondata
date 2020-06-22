@@ -76,11 +76,11 @@ class Jurisdiction:
         juris_elements = leading + [
             x for x in juris_elements if x not in leading and x not in trailing
         ] + trailing
+        error_dict = {}
         for element in juris_elements:
             # read df from Jurisdiction directory
-
-            load_juris_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root)
-        return
+            load_juris_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root,error_dict)
+        return error_dict
 
     def __init__(self,short_name,path_to_parent_dir):
         """ short_name is the name of the directory containing the jurisdiction info, including data,
@@ -640,7 +640,7 @@ def juris_dependency_dictionary():
 
 # TODO before processing jurisdiction files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
-def load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True):
+def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error_dict,load_refs=True):
     """ TODO
     """
     # TODO fail gracefully if file does not exist
@@ -669,7 +669,9 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs
     dupes,df = ui.find_dupes(df)
     if not dupes.empty:
         print(f'WARNING: duplicates removed from dataframe, may indicate a problem.\n')
-        ui.show_sample(dupes,f'lines in {element} source data','are duplicates')
+        #ui.show_sample(dupes,f'lines in {element} source data','are duplicates')
+        error_dict[element] = {}
+        error_dict[element]["found_duplicates"] = True
 
     # replace nulls with empty strings
     df.fillna('',inplace=True)
@@ -707,27 +709,27 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs
             except ForeignKeyException as e:
                 if load_refs:
                     for r in refs:
-                        load_juris_dframe_into_cdf(session,r,juris_path,project_root)
+                        load_juris_dframe_into_cdf(session,r,juris_path,project_root,error_dict)
                     # try again to load main element (but don't load referred-to again)
-                    load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=False)
+                    load_juris_dframe_into_cdf(session,element,juris_path,project_root,error_dict,load_refs=False)
                     return
                 else:
                     try_again = input(
                         f'{e}\nWould you like to make changes to the Jurisdiction directory and try again (y/n)?\n')
                     if try_again == 'y':
-                        load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
+                        load_juris_dframe_into_cdf(session,element,juris_path,project_root,error_dict,load_refs=True)
                         return
             except Exception as e:
                 try_again = input(
                     f'{e}\nThere may be something wrong with the file {element}.txt. '
                     f'Would you like to make changes to the Jurisdiction directory and try again (y/n)?\n')
                 if try_again == 'y':
-                    load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
+                    load_juris_dframe_into_cdf(session,element,juris_path,project_root,error_dict,load_refs=True)
                     return
 
     # commit info in df to corresponding cdf table to db
     dbr.dframe_to_sql(df,session,element)
-    return
+    return error_dict
 
 
 def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs):
