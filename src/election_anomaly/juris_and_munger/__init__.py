@@ -670,7 +670,8 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error_dic
     if not dupes.empty:
         print(f'WARNING: duplicates removed from dataframe, may indicate a problem.\n')
         #ui.show_sample(dupes,f'lines in {element} source data','are duplicates')
-        error_dict[element] = {}
+        if not element in error_dict:
+            error_dict[element] = {}
         error_dict[element]["found_duplicates"] = True
 
     # replace nulls with empty strings
