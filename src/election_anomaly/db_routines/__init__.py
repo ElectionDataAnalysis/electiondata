@@ -320,20 +320,17 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
     # drop the Id column
     if 'Id' in appendable.columns:
         appendable = appendable.drop('Id',axis=1)
+
+    error = {}
     try:
         appendable.to_sql(table, session.bind, if_exists='append', index=False)
     except sqlalchemy.exc.IntegrityError as e:
         # FIXME: target, pulled from DB, has datetime, while dframe has date,
         #  so record might look like same-name-different-date when it isn't really
-        ignore = input(f'Some record insertions into table {table} failed.\n'
-                       f'It may be that the record(s) is already in the table (probably harmless).\n'
-                       f'It may be due to bug in handling datetime fields (probably harmless).\n'
-                       f'It may be due to non-unique names (might be a problem).\n'
-                       f'Continue anyway (y/n)?\n')
-        if ignore != 'y':
-            ignore = input(f'Specific error is: {e}. \nContinue anyway (y/n)?\n')
-            if ignore != 'y':
-                raise e
+        error["type"] = e
+    if not error:
+        error = None
+    
     if table == 'ReportingUnit' and not appendable.empty:
         append_to_composing_reporting_unit_join(session,appendable)
 
@@ -350,9 +347,9 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
         id_enhanced_dframe = dframe.merge(
             up_to_date_dframe,left_on=intersection_cols,right_on=intersection_cols,how='inner').drop(
             target_only_cols,axis=1)
-        return id_enhanced_dframe
+        return id_enhanced_dframe, error
     else:
-        return up_to_date_dframe
+        return up_to_date_dframe, error
 
 
 def format_dates(dframe):
