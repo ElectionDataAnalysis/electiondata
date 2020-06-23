@@ -80,7 +80,9 @@ class Jurisdiction:
         for element in juris_elements:
             # read df from Jurisdiction directory
             load_juris_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root,error)
-        return error
+        if error:
+            return error
+        return None
 
     def __init__(self,short_name,path_to_parent_dir):
         """ short_name is the name of the directory containing the jurisdiction info, including data,
@@ -734,7 +736,6 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
         if not element in error:
             error[element] = {}
         error[element]["database"] = err
-
     return
 
 

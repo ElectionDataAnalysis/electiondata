@@ -22,7 +22,9 @@ if __name__ == '__main__':
 	Session = sessionmaker(bind=eng)
 	sess = Session()
 
-	err = juris.load_juris_to_db(sess,d['project_root'])
+	error = juris.load_juris_to_db(sess,d['project_root'])
+	print(error)
+	input()
 
 	ui.track_results_file(d['project_root'],sess,d['results_file'])
 
