@@ -769,11 +769,8 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs):
     if missing.empty:
         df.drop([interim],axis=1)
     else:
-        ui.show_sample(missing,f'records in {element} with a {foreign_elt}',f'was not found in the database')
-        ignore = input(f'Continue anyway, letting some records in {element} be without {foreign_elt} (y/n)?\n')
-        if ignore != 'y':
-            print(f'Let\'s make sure the db has the records required for {foreign_elt}')
-            raise ForeignKeyException(f'For some {element} records, {foreign_elt} was not found')
+        # Always try to handle/fill in the missing IDs
+        raise ForeignKeyException(f'For some {element} records, {foreign_elt} was not found')
     return df
 
 
