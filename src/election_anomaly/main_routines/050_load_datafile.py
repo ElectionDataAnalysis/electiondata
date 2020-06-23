@@ -27,7 +27,9 @@ if __name__ == '__main__':
 		print('Warning: results for contests, selections and reporting units not loaded from jurisdiction\n'
 			  'will not be processed.')
 	else:
-		juris.load_juris_to_db(sess,d['project_root'])
+		err = juris.load_juris_to_db(sess,d['project_root'])
+		print(err)
+		input()
 
 	ui.track_results_file(d['project_root'],sess,d['results_file'])
 
