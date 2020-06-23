@@ -715,21 +715,22 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error_dic
                     load_juris_dframe_into_cdf(session,element,juris_path,project_root,error_dict,load_refs=False)
                     return
                 else:
-                    try_again = input(
-                        f'{e}\nWould you like to make changes to the Jurisdiction directory and try again (y/n)?\n')
-                    if try_again == 'y':
-                        load_juris_dframe_into_cdf(session,element,juris_path,project_root,error_dict,load_refs=True)
-                        return
-            except Exception as e:
-                try_again = input(
-                    f'{e}\nThere may be something wrong with the file {element}.txt. '
-                    f'Would you like to make changes to the Jurisdiction directory and try again (y/n)?\n')
-                if try_again == 'y':
-                    load_juris_dframe_into_cdf(session,element,juris_path,project_root,error_dict,load_refs=True)
+                    if not element in error_dict:
+                        error_dict[element] = {}
+                    error_dict[element]["foreign_key"] = \
+                        f"""For some {element} records, {fn} was not found"""
                     return
+            except Exception as e:
+                if not element in error_dict:
+                    error_dict[element] = {}
+                error_dict[element]["jurisdiction"] = \
+                    f"""{e}\nThere may be something wrong with the file {element}.txt.
+                    You may need to make changes to the Jurisdiction directory and try again."""
+                return
 
     # commit info in df to corresponding cdf table to db
-    dbr.dframe_to_sql(df,session,element)
+    data, err = dbr.dframe_to_sql(df,session,element)
+    print(err)
     return error_dict
 
 

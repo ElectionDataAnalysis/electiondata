@@ -66,7 +66,7 @@ def append_to_composing_reporting_unit_join(session,ru):
             columns={'Id':'ChildReportingUnit_Id',f'Id_{i}':'ParentReportingUnit_Id'}))
     if cruj_dframe_list:
         cruj_dframe = pd.concat(cruj_dframe_list)
-        cruj_dframe = dframe_to_sql(cruj_dframe,session,'ComposingReportingUnitJoin')
+        cruj_dframe, err = dframe_to_sql(cruj_dframe,session,'ComposingReportingUnitJoin')
     else:
         cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin',session.bind)
     session.flush()
@@ -285,9 +285,9 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
 
     if dframe.empty:
         if return_records == 'original':
-            return dframe
+            return dframe, None
         else:
-            return target
+            return target, None
     if raw_to_votecount:
         # join with ECSVCJ
         secvcj = pd.read_sql_table('ElectionContestSelectionVoteCountJoin',session.bind,index_col=None)
