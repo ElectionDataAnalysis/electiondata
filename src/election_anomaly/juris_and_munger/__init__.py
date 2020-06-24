@@ -707,31 +707,20 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
             refs = foreign_keys.loc[fn,'refers_to'].split(';')
 
             try:
-                # When load_refs is false, this means we are "reprocessing" the data.
-                # So this is passed into the reprocess arg in the below function
                 df = get_ids_for_foreign_keys(session,df,element,fn,refs,load_refs,error)
                 print(f'Database foreign id assigned for each {fn} in {element}.')
             except ForeignKeyException as e:
-                print("In the exception")
                 if load_refs:
                     for r in refs:
                         load_juris_dframe_into_cdf(session,r,juris_path,project_root,error)
                     # try again to load main element (but don't load referred-to again)
                     load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,load_refs=False)
-                    #return
-                else:
-                    if not element in error:
-                        error[element] = {}
-                    error[element]["foreign_key"] = \
-                        f"For some {element} records, {fn} was not found"
-                    #return
             except Exception as e:
                 if not element in error:
                     error[element] = {}
                 error[element]["jurisdiction"] = \
                     f"""{e}\nThere may be something wrong with the file {element}.txt.
                     You may need to make changes to the Jurisdiction directory and try again."""
-                #return
 
     # commit info in df to corresponding cdf table to db
     data, err = dbr.dframe_to_sql(df,session,element)
@@ -742,7 +731,7 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
     return
 
 
-def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,reprocess,error):
+def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,load_refs,error):
     """ TODO <fn> is foreign key"""
     df = df1.copy()
     # append the Id corresponding to <fn> from the db
@@ -778,7 +767,7 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,reprocess,erro
     if missing.empty:
         df.drop([interim],axis=1)
     else:
-        if reprocess:
+        if load_refs:
             #if not element in error:
             #    error[element] = {}
             #error[element]["foreign_key"] = \

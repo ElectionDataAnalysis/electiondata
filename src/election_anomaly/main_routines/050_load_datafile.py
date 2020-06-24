@@ -23,8 +23,6 @@ if __name__ == '__main__':
 	sess = Session()
 
 	error = juris.load_juris_to_db(sess,d['project_root'])
-	print(error)
-	input()
 
 	ui.track_results_file(d['project_root'],sess,d['results_file'])
 
