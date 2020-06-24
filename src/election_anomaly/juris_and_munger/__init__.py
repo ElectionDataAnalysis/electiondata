@@ -719,14 +719,12 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
                     # try again to load main element (but don't load referred-to again)
                     load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,load_refs=False)
                     #return
-                """
                 else:
                     if not element in error:
                         error[element] = {}
                     error[element]["foreign_key"] = \
                         f"For some {element} records, {fn} was not found"
-                    return
-                """
+                    #return
             except Exception as e:
                 if not element in error:
                     error[element] = {}
@@ -781,12 +779,17 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,reprocess,erro
         df.drop([interim],axis=1)
     else:
         if reprocess:
+            #if not element in error:
+            #    error[element] = {}
+            #error[element]["foreign_key"] = \
+            #f"For some {element} records, {foreign_elt} was not found"
+        # Always try to handle/fill in the missing IDs
+            raise ForeignKeyException(f'For some {element} records, {foreign_elt} was not found')
+        else:
             if not element in error:
                 error[element] = {}
             error[element]["foreign_key"] = \
             f"For some {element} records, {foreign_elt} was not found"
-        # Always try to handle/fill in the missing IDs
-            raise ForeignKeyException(f'For some {element} records, {foreign_elt} was not found')
     return df
 
 
