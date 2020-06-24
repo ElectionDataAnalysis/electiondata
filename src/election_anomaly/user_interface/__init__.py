@@ -310,33 +310,6 @@ def find_dupes(df):
 
 
 def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name=None):
-	"""pick (or create) a munger """
-	if not project_root:
-		project_root = get_project_root()
-	if not munger_name:
-		choice_list = os.listdir(mungers_dir)
-		for choice in os.listdir(mungers_dir):
-			c_path = os.path.join(mungers_dir,choice)
-			if not os.path.isdir(c_path):  # remove non-directories from list
-				choice_list.remove(choice)
-			elif not os.path.isfile(os.path.join(c_path,'raw_columns.txt')):
-				pass  # list any munger that doesn't have raw_columns.txt file yet
-			else:
-				elts = pd.read_csv(os.path.join(c_path,'cdf_elements.txt'),header=0,dtype=str,sep='\t')
-				row_formulas = elts[elts.source=='row'].raw_identifier_formula.unique()
-				necessary_cols = set()
-				for formula in row_formulas:
-					# extract list of necessary fields
-					pattern = '<(?P<field>[^<>]+)>'  # finds field names
-					p = re.compile(pattern)
-					necessary_cols.update(p.findall(formula))
-
-		munger_df = pd.DataFrame(choice_list,columns=['Munger'])
-		munger_idx,munger_name = pick_one(munger_df,'Munger', item='munger')
-		if munger_idx is None:
-			# user chooses munger
-			munger_name = get_alphanumeric_from_user(
-				'Enter a short name (alphanumeric only, no spaces) for your munger (e.g., \'nc_primary18\')\n')
 	sf.ensure_munger_files(munger_name,project_root=project_root)
 
 	munger_path = os.path.join(mungers_dir,munger_name)
