@@ -407,6 +407,8 @@ def ensure_munger_files(munger_name,project_root=None):
     templates = os.path.join(project_root,'templates/munger_templates')
     template_list = [x[:-4] for x in os.listdir(templates)]
 
+
+    error = {}
     # create each file if necessary
     for munger_file in template_list:
         cf_path = os.path.join(munger_path,f'{munger_file}.txt')
@@ -417,7 +419,7 @@ def ensure_munger_files(munger_name,project_root=None):
             #ERIC: ADD ERROR COLLECTION HERE
             print(f'Template file {munger_file}.txt has no contents')
             created.append(f'{munger_file}.txt')
-            temp = pd.DataFrame()
+            #temp = pd.DataFrame()
             temp.to_csv(cf_path,sep='\t',index=False)
 
         # if file exists, check format against template
@@ -425,7 +427,11 @@ def ensure_munger_files(munger_name,project_root=None):
         # NEED A VAR TO CHECK TO SEE IF IT WAS CREATED OR ALREADY EXISTED
         # IF ALREADY EXISTED, THEN RUN THIS
         if file_exists:
-            check_munger_file_format(munger_path, munger_file)
+            err = check_munger_file_format(munger_path, munger_file)
+            if err:
+                error[munger_file] = err
+            print(munger_file, err)
+            input()
 
         # check contents of each file
         # ERIC: ONLY CHECK THIS IF MUNGER FILES ALREADY EXISTED AND FORMAT 
@@ -433,14 +439,13 @@ def ensure_munger_files(munger_name,project_root=None):
         if file_exists:
             check_munger_file_contents(munger_name,project_root=project_root)
 
-
-    if len(created) > 0:
+    if created:
         created = ', '.join(created)
-        error = {}
         error["newly_created"] = created
-    else:
-        error = None
-    return error
+    if error:
+        return error
+    return None
+
 
 def check_munger_file_format(munger_path, munger_file):
     cf_df = pd.read_csv(os.path.join(munger_path,f'{munger_file}.txt'),sep='\t')
@@ -462,9 +467,14 @@ def check_munger_file_format(munger_path, munger_file):
         first_col = '\n'.join(list(temp.iloc[:,0]))
         problems.append(f'First column of {munger_file}.txt must be exactly:\n{first_col}\n'
                         f'First error is at row {first_error}: {cf_df.loc[first_error]}')
+
     if problems:
-        ui.report_problems(problems)
-        input(f'Edit {cf_path} and hit return to continue.')
+        problems = ', '.join(problems)
+        error = {}
+        error["format_problems"] = problems
+    else:
+        error = None
+    return error
 
 def check_munger_file_contents(munger_name,project_root=None):
     """check that munger files are internally consistent; offer user chance to correct"""
