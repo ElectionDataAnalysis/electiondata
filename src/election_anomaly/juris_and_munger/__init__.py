@@ -400,14 +400,15 @@ def ensure_munger_files(munger_name,project_root=None):
     # define path to directory for the specific munger
     munger_path = os.path.join(project_root,'mungers',munger_name)
     # ensure all files exist
+    created = []
     if not os.path.isdir(munger_path):
+        created.append(munger_path)
         os.makedirs(munger_path)
     templates = os.path.join(project_root,'templates/munger_templates')
     template_list = [x[:-4] for x in os.listdir(templates)]
 
     # create each file if necessary
     for munger_file in template_list:
-        print(f'Checking {munger_file}.txt')
         cf_path = os.path.join(munger_path,f'{munger_file}.txt')
         # if file does not already exist in munger dir, create from template and invite user to fill
         file_exists = os.path.isfile(cf_path)
@@ -415,6 +416,7 @@ def ensure_munger_files(munger_name,project_root=None):
             temp = pd.read_csv(os.path.join(templates,f'{munger_file}.txt'),sep='\t')
             #ERIC: ADD ERROR COLLECTION HERE
             print(f'Template file {munger_file}.txt has no contents')
+            created.append(f'{munger_file}.txt')
             temp = pd.DataFrame()
             temp.to_csv(cf_path,sep='\t',index=False)
 
@@ -428,9 +430,17 @@ def ensure_munger_files(munger_name,project_root=None):
         # check contents of each file
         # ERIC: ONLY CHECK THIS IF MUNGER FILES ALREADY EXISTED AND FORMAT 
         # IS CONFIRMED - meaning `problems` is empty
-        check_munger_file_contents(munger_name,project_root=project_root)
-    input()
-    return
+        if file_exists:
+            check_munger_file_contents(munger_name,project_root=project_root)
+
+
+    if len(created) > 0:
+        created = ', '.join(created)
+        error = {}
+        error["newly_created"] = created
+    else:
+        error = None
+    return error
 
 def check_munger_file_format(munger_path, munger_file):
     cf_df = pd.read_csv(os.path.join(munger_path,f'{munger_file}.txt'),sep='\t')
