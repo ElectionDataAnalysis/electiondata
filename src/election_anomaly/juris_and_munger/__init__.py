@@ -395,7 +395,8 @@ def ensure_juris_files(juris_path,project_root):
 # noinspection PyUnresolvedReferences
 def ensure_munger_files(munger_name,project_root=None):
     """Check that the munger files are complete and consistent with one another.
-    Assumes munger directory exists. Assumes dictionary.txt is in the template file"""
+    Adds munger directory and files if they do not exist. 
+    Assumes dictionary.txt is in the template file"""
     # define path to directory for the specific munger
     munger_path = os.path.join(project_root,'mungers',munger_name)
     # ensure all files exist
@@ -423,34 +424,33 @@ def ensure_munger_files(munger_name,project_root=None):
         # IF ALREADY EXISTED, THEN RUN THIS
         if file_exists:
             cf_df = pd.read_csv(os.path.join(munger_path,f'{munger_file}.txt'),sep='\t')
-            format_confirmed = False
-            while not format_confirmed:
-                problems = []
-                # check column names are correct
-                if set(cf_df.columns) != set(temp.columns):
-                    cols = '\t'.join(temp.columns.to_list())
-                    problems.append(f'Columns of {munger_file}.txt need to be (tab-separated):\n'
-                        f' {cols}\n')
+            problems = []
+            # check column names are correct
+            if set(cf_df.columns) != set(temp.columns):
+                cols = '\t'.join(temp.columns.to_list())
+                problems.append(f'Columns of {munger_file}.txt need to be (tab-separated):\n'
+                    f' {cols}\n')
 
-                # check first column matches template
-                #  check same number of rows
-                elif cf_df.shape[0] != temp.shape[0]:
-                    first_col = '\n'.join(list(temp.iloc[:,0]))
-                    problems.append(
-                        f'Wrong number of rows in {munger_file}.txt. \nFirst column must be exactly:\n{first_col}')
-                elif set(cf_df.iloc[:,0]) != set(temp.iloc[:,0]):
-                    first_error = (cf_df.iloc[:,0] != temp.iloc[:,0]).index.to_list()[0]
-                    first_col = '\n'.join(list(temp.iloc[:,0]))
-                    problems.append(f'First column of {munger_file}.txt must be exactly:\n{first_col}\n'
-                                    f'First error is at row {first_error}: {cf_df.loc[first_error]}')
-                if problems:
-                    ui.report_problems(problems)
-                    input(f'Edit {cf_path} and hit return to continue.')
-                else:
-                    format_confirmed = True
-            # check contents of each file
-            # ERIC: ONLY CHECK THIS IF MUNGER FILES ALREADY EXISTED
-            check_munger_file_contents(munger_name,project_root=project_root)
+            # check first column matches template
+            #  check same number of rows
+            elif cf_df.shape[0] != temp.shape[0]:
+                first_col = '\n'.join(list(temp.iloc[:,0]))
+                problems.append(
+                    f'Wrong number of rows in {munger_file}.txt. \nFirst column must be exactly:\n{first_col}')
+            elif set(cf_df.iloc[:,0]) != set(temp.iloc[:,0]):
+                first_error = (cf_df.iloc[:,0] != temp.iloc[:,0]).index.to_list()[0]
+                first_col = '\n'.join(list(temp.iloc[:,0]))
+                problems.append(f'First column of {munger_file}.txt must be exactly:\n{first_col}\n'
+                                f'First error is at row {first_error}: {cf_df.loc[first_error]}')
+            if problems:
+                ui.report_problems(problems)
+                input(f'Edit {cf_path} and hit return to continue.')
+            else:
+                format_confirmed = True
+        # check contents of each file
+        # ERIC: ONLY CHECK THIS IF MUNGER FILES ALREADY EXISTED AND FORMAT 
+        # IS CONFIRMED - meaning `problems` is empty
+        check_munger_file_contents(munger_name,project_root=project_root)
     input()
     return
 
