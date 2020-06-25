@@ -427,11 +427,9 @@ def ensure_munger_files(munger_name,project_root=None):
         # NEED A VAR TO CHECK TO SEE IF IT WAS CREATED OR ALREADY EXISTED
         # IF ALREADY EXISTED, THEN RUN THIS
         if file_exists:
-            err = check_munger_file_format(munger_path, munger_file)
+            err = check_munger_file_format(munger_path, munger_file, templates)
             if err:
-                error[munger_file] = err
-            print(munger_file, err)
-            input()
+                error[f'{munger_file}.txt'] = err
 
         # check contents of each file
         # ERIC: ONLY CHECK THIS IF MUNGER FILES ALREADY EXISTED AND FORMAT 
@@ -447,8 +445,9 @@ def ensure_munger_files(munger_name,project_root=None):
     return None
 
 
-def check_munger_file_format(munger_path, munger_file):
+def check_munger_file_format(munger_path, munger_file, templates):
     cf_df = pd.read_csv(os.path.join(munger_path,f'{munger_file}.txt'),sep='\t')
+    temp = pd.read_csv(os.path.join(templates,f'{munger_file}.txt'),sep='\t')
     problems = []
     # check column names are correct
     if set(cf_df.columns) != set(temp.columns):
