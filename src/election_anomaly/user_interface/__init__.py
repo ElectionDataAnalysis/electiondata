@@ -310,14 +310,17 @@ def find_dupes(df):
 
 
 def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name=None):
-	sf.ensure_munger_files(munger_name,project_root=project_root)
+	error = sf.ensure_munger_files(munger_name,project_root=project_root)
 
 	munger_path = os.path.join(mungers_dir,munger_name)
-	munger = sf.Munger(munger_path,project_root=project_root)
-	munger.check_against_self()
-	if session:
-		munger.check_against_db(session)
-	return munger
+	if not error:
+		munger = sf.Munger(munger_path,project_root=project_root,check_files=False)
+		munger.check_against_self()
+		if session:
+			munger.check_against_db(session)
+		return munger, None
+	else:
+		return None, error
 
 
 def pick_or_create_record(sess,project_root,element,known_info_d=None):
