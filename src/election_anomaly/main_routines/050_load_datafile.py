@@ -32,7 +32,7 @@ if __name__ == '__main__':
 	ui.track_results_file(d['project_root'],sess,d['results_file'])
 
 	# pick munger
-	munger = ui.pick_munger(
+	munger, error = ui.pick_munger(
 		project_root=d['project_root'],
 		mungers_dir=os.path.join(d['project_root'],'mungers'),session=sess,munger_name=d['munger_name'])
 
