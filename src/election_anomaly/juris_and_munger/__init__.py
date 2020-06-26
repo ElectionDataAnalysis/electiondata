@@ -423,19 +423,17 @@ def ensure_munger_files(munger_name,project_root=None):
             temp.to_csv(cf_path,sep='\t',index=False)
 
         # if file exists, check format against template
-        # ERIC: THE FILE ALWAYS EXISTS BECAUSE WE CREATE IT
-        # NEED A VAR TO CHECK TO SEE IF IT WAS CREATED OR ALREADY EXISTED
-        # IF ALREADY EXISTED, THEN RUN THIS
         if file_exists:
             err = check_munger_file_format(munger_path, munger_file, templates)
             if err:
                 error[f'{munger_file}.txt'] = err
 
-        # check contents of each file
-        # ERIC: ONLY CHECK THIS IF MUNGER FILES ALREADY EXISTED AND FORMAT 
-        # IS CONFIRMED - meaning `problems` is empty
-        if file_exists:
-            check_munger_file_contents(munger_name,project_root=project_root)
+    # check contents of each file if they were not newly created and
+    # if they have successfully been checked for the format
+    if file_exists and not error:
+        err = check_munger_file_contents(munger_name,project_root=project_root)
+        if err:
+            error["contents"] = err
 
     if created:
         created = ', '.join(created)
@@ -482,85 +480,78 @@ def check_munger_file_contents(munger_name,project_root=None):
         project_root = ui.get_project_root()
     munger_dir = os.path.join(project_root,'mungers',munger_name)
 
-    checked = False
-    while not checked:
-        problems = []
-        warns = []
+    problems = []
+    warns = []
 
-        # read cdf_elements and format from files
-        cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),sep='\t').fillna('')
-        format_df = pd.read_csv(os.path.join(munger_dir,'format.txt'),sep='\t',index_col='item').fillna('')
-        template_format_df = pd.read_csv(
-            os.path.join(
-                project_root,'templates/munger_templates/format.txt'
-            ),sep='\t',index_col='item'
-        ).fillna('')
+    # read cdf_elements and format from files
+    cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),sep='\t').fillna('')
+    format_df = pd.read_csv(os.path.join(munger_dir,'format.txt'),sep='\t',index_col='item').fillna('')
+    template_format_df = pd.read_csv(
+        os.path.join(
+            project_root,'templates/munger_templates/format.txt'
+        ),sep='\t',index_col='item'
+    ).fillna('')
 
-        # format.txt has the required items
-        req_list = template_format_df.index
-        missing_items = [x for x in req_list if x not in format_df.index]
-        if missing_items:
-            item_string = ','.join(missing_items)
-            problems.append(f'Format file is missing some items: {item_string}')
+    # format.txt has the required items
+    req_list = template_format_df.index
+    missing_items = [x for x in req_list if x not in format_df.index]
+    if missing_items:
+        item_string = ','.join(missing_items)
+        problems.append(f'Format file is missing some items: {item_string}')
 
-        # entries in format.txt are of correct type
-        if not format_df.loc['header_row_count','value'].isnumeric():
-            problems.append(f'In format file, header_row_count must be an integer'
-                            f'({format_df.loc["header_row_count","value"]} is not.)')
-        if not format_df.loc['field_name_row','value'].isnumeric():
-            problems.append(f'In format file, field_name_row must be an integer '
-                            f'({format_df.loc["field_name_row","value"]} is not.)')
-        if not format_df.loc['encoding','value'] in ui.recognized_encodings:
-            warns.append(f'Encoding {format_df.loc["field_name_row","value"]} in format file is not recognized.')
+    # entries in format.txt are of correct type
+    if not format_df.loc['header_row_count','value'].isnumeric():
+        problems.append(f'In format file, header_row_count must be an integer'
+                        f'({format_df.loc["header_row_count","value"]} is not.)')
+    if not format_df.loc['field_name_row','value'].isnumeric():
+        problems.append(f'In format file, field_name_row must be an integer '
+                        f'({format_df.loc["field_name_row","value"]} is not.)')
+    if not format_df.loc['encoding','value'] in ui.recognized_encodings:
+        warns.append(f'Encoding {format_df.loc["field_name_row","value"]} in format file is not recognized.')
 
-        # every source is either row, column or other
-        bad_source = [x for x in cdf_elements.source if x not in ['row','column','other']]
-        if bad_source:
-            b_str = ','.join(bad_source)
-            problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
+    # every source is either row, column or other
+    bad_source = [x for x in cdf_elements.source if x not in ['row','column','other']]
+    if bad_source:
+        b_str = ','.join(bad_source)
+        problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
 
-        # formulas have good syntax
-        bad_formula = [x for x in cdf_elements.raw_identifier_formula.unique() if not mr.good_syntax(x)]
-        if bad_formula:
-            f_str = ','.join(bad_formula)
-            problems.append(f'''At least one formula in cdf_elements.txt has bad syntax: {f_str} ''')
+    # formulas have good syntax
+    bad_formula = [x for x in cdf_elements.raw_identifier_formula.unique() if not mr.good_syntax(x)]
+    if bad_formula:
+        f_str = ','.join(bad_formula)
+        problems.append(f'''At least one formula in cdf_elements.txt has bad syntax: {f_str} ''')
 
-        # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows
-        p_not_just_digits = re.compile(r'<.*\D.*>')
-        p_catch_digits = re.compile(r'<(\d+)>')
-        bad_column_formula = set()
-        for i,r in cdf_elements[cdf_elements.source == 'column'].iterrows():
-            if p_not_just_digits.search(r['raw_identifier_formula']):
-                bad_column_formula.add(r['raw_identifier_formula'])
-            else:
-                integer_list = [int(x) for x in p_catch_digits.findall(r['raw_identifier_formula'])]
-                bad_integer_list = [
-                    x for x in integer_list if (x > int(format_df.loc['header_row_count','value'])-1 or x < 0)]
-                if bad_integer_list:
-                    bad_column_formula.add(r['raw_identifier_formula'])
-        if bad_column_formula:
-            cf_str = ','.join(bad_column_formula)
-            problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
+    # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows
+    p_not_just_digits = re.compile(r'<.*\D.*>')
+    p_catch_digits = re.compile(r'<(\d+)>')
+    bad_column_formula = set()
 
-        # TODO if field in formula matches an element self.cdf_element.index,
-        #  check that rename is not also a column
-        if problems:
-            ui.report_problems(problems)
-            print(f'Correct the problems by editing files in {munger_dir}\n')
-            if warns:
-                warn_string = '\n\t'.join(warns)
-                print(f'You may wish to address these potential problems as well:\n\t{warn_string}')
-            input(f'Then hit enter to continue.')
+    # problems found above may cause this block of code to error out, so this is
+    # wrapped in a try block since it returns a general error message
+    for i,r in cdf_elements[cdf_elements.source == 'column'].iterrows():
+        if p_not_just_digits.search(r['raw_identifier_formula']):
+            bad_column_formula.add(r['raw_identifier_formula'])
         else:
-            checked = True
-            if warns:
-                warn_string = '\n\t'.join(warns)
-                print(f'Potential problems found:\n\t{warn_string}')
-                address = input('Would you like to address any of these (y/n)?\n')
-                if address:
-                    input(f'Address potential problems by editing files in {munger_dir}.\n Then hit enter to continue.')
-                    checked = False
-    return
+            integer_list = [int(x) for x in p_catch_digits.findall(r['raw_identifier_formula'])]
+            bad_integer_list = [
+                x for x in integer_list if (x > int(format_df.loc['header_row_count','value'])-1 or x < 0)]
+            if bad_integer_list:
+                bad_column_formula.add(r['raw_identifier_formula'])
+    if bad_column_formula:
+        cf_str = ','.join(bad_column_formula)
+        problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
+
+    # TODO if field in formula matches an element self.cdf_element.index,
+    #  check that rename is not also a column
+    error = {}
+    if problems:
+        error['problems'] = '\n\t'.join(problems)
+    if warns:
+        error['warnings'] = '\n\t'.join(warns)
+
+    if error:
+        return error
+    return None
 
 
 def dedupe(f_path,warning='There are duplicates'):
