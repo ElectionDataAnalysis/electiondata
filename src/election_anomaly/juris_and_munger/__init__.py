@@ -145,46 +145,6 @@ class Munger:
                     self.path_to_munger_dir)
         return
 
-    def check_against_db(self,sess):
-        """check that munger is consistent with db; offer user chance to correct munger"""
-        checked = False
-        while not checked:
-            problems = []
-            # set of cdf_elements in cdf_elements.txt is same as set pulled from db
-            db_elements = dbr.get_cdf_db_table_names(sess.bind)[0]
-            db_elements.add('CountItemType')
-            db_elements.add('BallotMeasureSelection')
-            db_elements.add('_datafile')
-            db_elements.remove('CandidateSelection')
-            db_elements.remove('ExternalIdentifier')
-            db_elements.remove('VoteCount')
-            db_elements.remove('Office')
-            # TODO why these? make this programmatic
-
-            m_elements = self.cdf_elements.index
-            db_only = [x for x in db_elements if x not in m_elements]
-            m_only = [x for x in m_elements if x not in db_elements]
-
-            if db_only:
-                db_str = ','.join(db_only)
-                problems.append(f'Some cdf elements in the database are not listed in the munger: {db_str}')
-            if m_only:
-                m_str = ','.join(m_only)
-                problems.append(f'Some cdf elements in the munger are not in the database: {m_str}')
-
-            if problems:
-                checked = False
-                ui.report_problems(problems)
-                input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
-                      f'Then hit enter to continue.')
-                [self.cdf_elements,self.header_row_count,self.field_name_row,self.count_columns,
-                 self.file_type,self.encoding,self.thousands_separator] = read_munger_info_from_files(
-                    self.path_to_munger_dir)
-            else:
-                checked = True
-                print(f'Munger {self.name} checked against database.')
-        return
-
     def check_against_datafile(self,datafile_path):
         """check that munger is compatible with datafile <raw>;
         offer user chance to correct munger"""
