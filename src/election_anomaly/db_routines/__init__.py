@@ -458,3 +458,9 @@ def get_name_field(element):
     else:
         field = 'Name'
     return field
+
+
+def truncate_table(session, table_name):
+    session.execute(f'TRUNCATE TABLE "{table_name}" CASCADE')
+    session.commit()
+    return

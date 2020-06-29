@@ -81,6 +81,8 @@ class Jurisdiction:
             # read df from Jurisdiction directory
             load_juris_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root,error)
         if error:
+            for element in juris_elements:
+                dbr.truncate_table(session, element)
             return error
         return None
 
@@ -768,11 +770,7 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,load_refs,erro
         df.drop([interim],axis=1)
     else:
         if load_refs:
-            #if not element in error:
-            #    error[element] = {}
-            #error[element]["foreign_key"] = \
-            #f"For some {element} records, {foreign_elt} was not found"
-        # Always try to handle/fill in the missing IDs
+            # Always try to handle/fill in the missing IDs
             raise ForeignKeyException(f'For some {element} records, {foreign_elt} was not found')
         else:
             if not element in error:
