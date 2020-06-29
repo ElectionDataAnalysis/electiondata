@@ -410,10 +410,7 @@ def ensure_munger_files(munger_name,project_root=None):
         file_exists = os.path.isfile(cf_path)
         if not file_exists:
             temp = pd.read_csv(os.path.join(templates,f'{munger_file}.txt'),sep='\t')
-            #ERIC: ADD ERROR COLLECTION HERE
-            print(f'Template file {munger_file}.txt has no contents')
             created.append(f'{munger_file}.txt')
-            #temp = pd.DataFrame()
             temp.to_csv(cf_path,sep='\t',index=False)
 
         # if file exists, check format against template
