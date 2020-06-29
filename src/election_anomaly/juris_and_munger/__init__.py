@@ -97,51 +97,45 @@ class Jurisdiction:
 
 class Munger:
     def check_against_self(self):
-        """check that munger is internally consistent; offer user chance to correct munger"""
-        checked = False
-        while not checked:
-            checked = True
-            problems = []
+        """check that munger is internally consistent"""
+        problems = []
 
-            # every source is either row, column or other
-            bad_source = [x for x in self.cdf_elements.source if x not in ['row','column','other']]
-            if bad_source:
-                b_str = ','.join(bad_source)
-                problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
+        # every source is either row, column or other
+        bad_source = [x for x in self.cdf_elements.source if x not in ['row','column','other']]
+        if bad_source:
+            b_str = ','.join(bad_source)
+            problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
 
-            # formulas have good syntax
-            bad_formula = [x for x in self.cdf_elements.raw_identifier_formula.unique() if not mr.good_syntax(x)]
-            if bad_formula:
-                f_str = ','.join(bad_formula)
-                problems.append(f'''At least one formula in cdf_elements.txt has bad syntax: {f_str} ''')
+        # formulas have good syntax
+        bad_formula = [x for x in self.cdf_elements.raw_identifier_formula.unique() if not mr.good_syntax(x)]
+        if bad_formula:
+            f_str = ','.join(bad_formula)
+            problems.append(f'''At least one formula in cdf_elements.txt has bad syntax: {f_str} ''')
 
-            # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows
-            p_not_just_digits = re.compile(r'<.*\D.*>')
-            p_catch_digits = re.compile(r'<(\d+)>')
-            bad_column_formula = set()
-            for i,r in self.cdf_elements[self.cdf_elements.source == 'column'].iterrows():
-                if p_not_just_digits.search(r['raw_identifier_formula']):
+        # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows
+        p_not_just_digits = re.compile(r'<.*\D.*>')
+        p_catch_digits = re.compile(r'<(\d+)>')
+        bad_column_formula = set()
+        for i,r in self.cdf_elements[self.cdf_elements.source == 'column'].iterrows():
+            if p_not_just_digits.search(r['raw_identifier_formula']):
+                bad_column_formula.add(r['raw_identifier_formula'])
+            else:
+                integer_list = [int(x) for x in p_catch_digits.findall(r['raw_identifier_formula'])]
+                bad_integer_list = [x for x in integer_list if (x > self.header_row_count-1 or x < 0)]
+                if bad_integer_list:
                     bad_column_formula.add(r['raw_identifier_formula'])
-                else:
-                    integer_list = [int(x) for x in p_catch_digits.findall(r['raw_identifier_formula'])]
-                    bad_integer_list = [x for x in integer_list if (x > self.header_row_count-1 or x < 0)]
-                    if bad_integer_list:
-                        bad_column_formula.add(r['raw_identifier_formula'])
-            if bad_column_formula:
-                cf_str = ','.join(bad_column_formula)
-                problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
+        if bad_column_formula:
+            cf_str = ','.join(bad_column_formula)
+            problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
 
-            # TODO if field in formula matches an element self.cdf_element.index,
-            #  check that rename is not also a column
-            if problems:
-                checked = False
-                ui.report_problems(problems)
-                input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
-                      f'Then hit enter to continue.')
-                [self.cdf_elements,self.header_row_count,self.field_name_row,self.count_columns,
-                 self.file_type,self.encoding,self.thousands_separator] = read_munger_info_from_files(
-                    self.path_to_munger_dir)
-        return
+        # TODO if field in formula matches an element self.cdf_element.index,
+        #  check that rename is not also a column
+        if problems:
+            error = {}
+            error["munger_internal_consistency"] = ", ".join(problems)
+            return error
+        else:
+            return None
 
     def check_against_db(self,sess):
         """check that munger is consistent with db; offer user chance to correct munger"""

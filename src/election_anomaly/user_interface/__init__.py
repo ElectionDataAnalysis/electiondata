@@ -315,8 +315,9 @@ def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name
 	munger_path = os.path.join(mungers_dir,munger_name)
 	if not error:
 		munger = sf.Munger(munger_path,project_root=project_root,check_files=False)
-		munger.check_against_self()
-		return munger, None
+		#munger_error is None unless internal inconsistency found
+		munger_error = munger.check_against_self()
+		return munger, munger_error
 	else:
 		return None, error
 
