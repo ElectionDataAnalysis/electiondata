@@ -316,8 +316,6 @@ def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name
 	if not error:
 		munger = sf.Munger(munger_path,project_root=project_root,check_files=False)
 		munger.check_against_self()
-		if session:
-			munger.check_against_db(session)
 		return munger, None
 	else:
 		return None, error
