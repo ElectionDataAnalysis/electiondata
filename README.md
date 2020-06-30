@@ -4,8 +4,6 @@ This repository hopes to provide reliable tools for consolidation and analysis o
  * Export: create tab-separated flat export files of results sets rolled up to any desired intermediate geography (e.g., by county, or by congressional district)
  * Analysis: (in progress as of 6/17/20) provide a variety of analysis tools
  * Visualization: (in progress as of 6/17/20) provide a variety of visualization tools.
- 
-[//]: # "TODO keep this up to date"
 
 # Target Audience
 This system is intended to be of use to candidates and campaigns, election officials, students of politics and elections, and anyone else who is interested in assembling and understanding election results.
@@ -14,20 +12,23 @@ This system is intended to be of use to candidates and campaigns, election offic
 If you have skills to contribute to building the system, we can definitely use your help:
  * Creating visualizations
  * Importing and exporting data via xml feeds
- * Preparing for intake of specific states' data
+ * Preparing for intake of specific states' results files
+ * Managing collection of data files in real time
  * Writing documentation
  * Merging other data sets of interest (e.g., demographics)
  * Building our open source community
  * What else? Let us know!
  
-If you are a potential user -- an election official, political scientist or campaign consultant, for instance -- we would love to talk with you about what you want to from this system.
+If you are a potential end user -- an election official, political scientist or campaign consultant, for instance -- we would love to talk with you about what you want to from this system.
  
 If you are interested in contributing, or just staying updated on the progress of this project, please [contact Stephanie Singer](http://symmetrysinger.com/index.php?id=contact). 
 
 # How to run the app
-Clone the repository to a local machine. Navigate to `/path/to/repo/election_anomaly` and run `python setup.py install`. From a python script or python interactive shell, import the package with `import election_anomaly`.
+Clone the repository to a local machine. Navigate to `/path/to/repo/election_anomaly` and run `python3 setup.py install`. 
 
 The main routines are in `src/election_anomaly/main_routines`. Each can be run interactively or via a parameter file (template is `src/templates/parameter_file_templates/run_time.par`). Only the scripts beginning with a 3-digit number are actively maintained; others are in the process of deprecation.
+
+To run the modules from within a python script or python interactive shell, import the package with `import election_anomaly`. To run one of the main routines from the command line, run `python3 <path/to/main_routines/filename.py` from a directory containing your `run_time.par`
 
 ## Loading data
 run `src/election_anomaly/main_routines/050_load_datafile.py`
@@ -38,6 +39,8 @@ or `src/election_anomaly/main_routines/101_pull_top_counts.py`
 
 ## Environment
 ### Database
+You will need `python3`. If you use the alias `python`, make sure it points to `python3`.
+
 The system runs out of the box with a postgresql database; to use other varieties of SQL, you will need to modify the routines in the `db_routines` module. 
 
 Store your database login credentials stored in a file (template is `src/templates/parameter_file_templates/database.par`)
