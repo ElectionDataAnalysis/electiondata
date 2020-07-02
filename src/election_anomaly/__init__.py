@@ -29,8 +29,11 @@ class DataLoader():
         Session = sessionmaker(bind=self.engine)
         self.session = Session()
 
-        self.juris_load_err = self.juris.load_juris_to_db(self.session,
-            self.d['project_root'])
+        if self.juris:
+            self.juris_load_err = self.juris.load_juris_to_db(self.session,
+                self.d['project_root'])
+        else:
+            self.juris_load_err = None
 
         # pick munger
         self.munger, self.munger_err = ui.pick_munger(
@@ -52,6 +55,8 @@ class DataLoader():
         if self.juris_err:
             print("Jurisdiction file errors:")
             pprint(self.juris_err)
+        if not self.juris:
+            print("Jurisdiction object not created")
         if self.juris_load_err:
             print("Jurisdiction loading errors:")
             pprint(self.juris_load_err)

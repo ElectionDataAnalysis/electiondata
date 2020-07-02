@@ -221,12 +221,12 @@ def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_nam
 	if check_files:
 		juris_path = os.path.join(path_to_jurisdictions,juris_name)
 		missing_values = sf.ensure_jurisdiction_files(juris_path,project_root)
-	# else:
-	# 	print(
-	# 		f'WARNING: if necessary files are missing from the directory {juris_name},\nsystem may fail.')
 
 	# initialize the jurisdiction
-	ss = sf.Jurisdiction(juris_name,path_to_jurisdictions)
+	if not missing_values:
+		ss = None
+	else:
+		ss = sf.Jurisdiction(juris_name,path_to_jurisdictions)
 	return ss, missing_values
 
 
