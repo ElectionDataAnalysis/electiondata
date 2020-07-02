@@ -20,7 +20,7 @@ class Jurisdiction:
             d = pd.read_csv(
                 os.path.join(
                     self.path_to_juris_dir,'dictionary.txt'
-                ),sep='\t',index_col='cdf_element')
+                ),sep='\t',index_col='cdf_element',encoding='iso-8859-1')
 
             problems = []
             # for each relevant element
@@ -233,7 +233,8 @@ class Munger:
 
 def read_munger_info_from_files(dir_path):
     # read cdf_element info and
-    cdf_elements = pd.read_csv(os.path.join(dir_path,'cdf_elements.txt'),sep='\t',index_col='name').fillna('')
+    cdf_elements = pd.read_csv(
+        os.path.join(dir_path,'cdf_elements.txt'),sep='\t',index_col='name',encoding='iso-8859-1').fillna('')
     # add row for _datafile element
     datafile_elt = pd.DataFrame([['','other']],columns=['raw_identifier_formula','source'],index=['_datafile'])
     cdf_elements = cdf_elements.append(datafile_elt)
@@ -244,7 +245,7 @@ def read_munger_info_from_files(dir_path):
         cdf_elements.loc[i,'fields'] = [f for t,f in text_field_list]
 
     # read formatting info
-    format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep='\t',index_col='item')
+    format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep='\t',index_col='item',encoding='iso-8859-1')
     field_name_row = int(format_info.loc['field_name_row','value'])
     header_row_count = int(format_info.loc['header_row_count','value'])
     count_columns = [int(x) for x in format_info.loc['count_columns','value'].split(',')]
@@ -322,7 +323,7 @@ def ensure_juris_files(juris_path,project_root):
         cf_path = os.path.join(juris_path,f'{juris_file}.txt')
         # if file does not already exist in jurisdiction directory, create from template and invite user to fill
         try:
-            temp = pd.read_csv(os.path.join(templates_dir,f'{juris_file}.txt'),sep='\t')
+            temp = pd.read_csv(os.path.join(templates_dir,f'{juris_file}.txt'),sep='\t',encoding='iso-8859-1')
         except pd.errors.EmptyDataError:
             file_empty.append('Template file {'+juris_file+'}.txt has no contents')
             # print(f'Template file {juris_file}.txt has no contents')
@@ -333,7 +334,7 @@ def ensure_juris_files(juris_path,project_root):
 
 
         # if file exists, check format against template
-        cf_df = pd.read_csv(os.path.join(juris_path,f'{juris_file}.txt'),sep='\t')
+        cf_df = pd.read_csv(os.path.join(juris_path,f'{juris_file}.txt'),sep='\t',encoding='iso=8859-1')
         format_confirmed = False
         while not format_confirmed:
             if set(cf_df.columns) != set(temp.columns):
@@ -409,7 +410,7 @@ def ensure_munger_files(munger_name,project_root=None):
         # if file does not already exist in munger dir, create from template and invite user to fill
         file_exists = os.path.isfile(cf_path)
         if not file_exists:
-            temp = pd.read_csv(os.path.join(templates,f'{munger_file}.txt'),sep='\t')
+            temp = pd.read_csv(os.path.join(templates,f'{munger_file}.txt'),sep='\t',encoding='iso-8859-1')
             created.append(f'{munger_file}.txt')
             temp.to_csv(cf_path,sep='\t',index=False)
 
@@ -435,8 +436,8 @@ def ensure_munger_files(munger_name,project_root=None):
 
 
 def check_munger_file_format(munger_path, munger_file, templates):
-    cf_df = pd.read_csv(os.path.join(munger_path,f'{munger_file}.txt'),sep='\t')
-    temp = pd.read_csv(os.path.join(templates,f'{munger_file}.txt'),sep='\t')
+    cf_df = pd.read_csv(os.path.join(munger_path,f'{munger_file}.txt'),sep='\t',encoding='iso-8859-1')
+    temp = pd.read_csv(os.path.join(templates,f'{munger_file}.txt'),sep='\t',encoding='iso-8859-1')
     problems = []
     # check column names are correct
     if set(cf_df.columns) != set(temp.columns):
@@ -475,12 +476,12 @@ def check_munger_file_contents(munger_name,project_root=None):
     warns = []
 
     # read cdf_elements and format from files
-    cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),sep='\t').fillna('')
-    format_df = pd.read_csv(os.path.join(munger_dir,'format.txt'),sep='\t',index_col='item').fillna('')
+    cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),sep='\t',encoding='iso-8859-1').fillna('')
+    format_df = pd.read_csv(
+        os.path.join(munger_dir,'format.txt'),sep='\t',index_col='item',encoding='iso-8859-1').fillna('')
     template_format_df = pd.read_csv(
         os.path.join(
-            project_root,'templates/munger_templates/format.txt'
-        ),sep='\t',index_col='item'
+            project_root,'templates/munger_templates/format.txt'),sep='\t',index_col='item',encoding='iso-8859-1'
     ).fillna('')
 
     # format.txt has the required items
@@ -547,7 +548,7 @@ def check_munger_file_contents(munger_name,project_root=None):
 
 def dedupe(f_path,warning='There are duplicates'):
     # TODO allow specificaiton of unique constraints
-    df = pd.read_csv(f_path,sep='\t')
+    df = pd.read_csv(f_path,sep='\t',encoding='iso-8859-1')
     dupes = True
     dupe=''
     while dupes:
@@ -559,7 +560,7 @@ def dedupe(f_path,warning='There are duplicates'):
             # print(f'WARNING: {warning}\n')
             # ui.show_sample(dupes_df,'lines','are duplicates')
             dupe = f'Edit {f_path} to remove the duplication, then hit return to continue'
-            df = pd.read_csv(f_path,sep='\t')
+            df = pd.read_csv(f_path,sep='\t',encoding='iso-8859-1')
     return df,dupe
 
 
@@ -567,8 +568,8 @@ def check_nulls(element,f_path,project_root):
     # TODO write description
     nn_path = os.path.join(
         project_root,'election_anomaly/CDF_schema_def_info/elements',element,'not_null_fields.txt')
-    not_nulls = pd.read_csv(nn_path,sep='\t')
-    df = pd.read_csv(f_path,sep='\t')
+    not_nulls = pd.read_csv(nn_path,sep='\t',encoding='iso-8859-1')
+    df = pd.read_csv(f_path,sep='\t',encoding='iso-8859-1')
 
     problems = []
 
@@ -596,7 +597,7 @@ def check_dependencies(juris_dir,element):
     d = juris_dependency_dictionary()
     f_path = os.path.join(juris_dir,f'{element}.txt')
     assert os.path.isdir(juris_dir)
-    element_df = pd.read_csv(f_path,sep='\t',index_col=None)
+    element_df = pd.read_csv(f_path,sep='\t',index_col=None,encoding='iso-8859-1')
     unmatched_error = []
 
     # Find all dependent columns
@@ -606,13 +607,14 @@ def check_dependencies(juris_dir,element):
     for c in dependent:
         target = d[c]
         ed = pd.read_csv(os.path.join(
-            juris_dir,f'{element}.txt'),sep='\t',header=0).fillna('').loc[:,c].unique()
+            juris_dir,f'{element}.txt'),sep='\t',header=0,encoding='iso-8859-1').fillna('').loc[:,c].unique()
 
         # create list of elements, removing any nulls
         ru = list(
             pd.read_csv(
                 os.path.join(
-                    juris_dir,f'{target}.txt'),sep='\t').fillna('').loc[:,db_routines.get_name_field(target)])
+                    juris_dir,f'{target}.txt'),sep='\t',
+                encoding='iso-8859-1').fillna('').loc[:,db_routines.get_name_field(target)])
         try:
             ru.remove(np.nan)
         except ValueError:
@@ -650,7 +652,8 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
     """
     # TODO fail gracefully if file does not exist
     cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
-    df = pd.read_csv(os.path.join(juris_path,f'{element}.txt'),sep='\t').fillna('none or unknown')
+    df = pd.read_csv(
+        os.path.join(juris_path,f'{element}.txt'),sep='\t',encoding='iso-8859-1').fillna('none or unknown')
     # TODO check that df has the right format
 
     # TODO deal with duplicate 'none or unknown' records
