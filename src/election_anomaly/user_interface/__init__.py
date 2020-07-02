@@ -286,8 +286,6 @@ def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name
 	munger_path = os.path.join(mungers_dir,munger_name)
 	munger = sf.Munger(munger_path,project_root=project_root)
 	munger.check_against_self()
-	if session:
-		munger.check_against_db(session)
 	return munger
 
 

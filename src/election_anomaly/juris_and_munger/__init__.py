@@ -76,11 +76,15 @@ class Jurisdiction:
         juris_elements = leading + [
             x for x in juris_elements if x not in leading and x not in trailing
         ] + trailing
+        error = {}
         for element in juris_elements:
             # read df from Jurisdiction directory
-
-            load_juris_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root)
-        return
+            load_juris_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root,error)
+        if error:
+            for element in juris_elements:
+                dbr.truncate_table(session, element)
+            return error
+        return None
 
     def __init__(self,short_name,path_to_parent_dir):
         """ short_name is the name of the directory containing the jurisdiction info, including data,
@@ -141,46 +145,6 @@ class Munger:
                 [self.cdf_elements,self.header_row_count,self.field_name_row,self.count_columns,
                  self.file_type,self.encoding,self.thousands_separator] = read_munger_info_from_files(
                     self.path_to_munger_dir)
-        return
-
-    def check_against_db(self,sess):
-        """check that munger is consistent with db; offer user chance to correct munger"""
-        checked = False
-        while not checked:
-            problems = []
-            # set of cdf_elements in cdf_elements.txt is same as set pulled from db
-            db_elements = dbr.get_cdf_db_table_names(sess.bind)[0]
-            db_elements.add('CountItemType')
-            db_elements.add('BallotMeasureSelection')
-            db_elements.add('_datafile')
-            db_elements.remove('CandidateSelection')
-            db_elements.remove('ExternalIdentifier')
-            db_elements.remove('VoteCount')
-            db_elements.remove('Office')
-            # TODO why these? make this programmatic
-
-            m_elements = self.cdf_elements.index
-            db_only = [x for x in db_elements if x not in m_elements]
-            m_only = [x for x in m_elements if x not in db_elements]
-
-            if db_only:
-                db_str = ','.join(db_only)
-                problems.append(f'Some cdf elements in the database are not listed in the munger: {db_str}')
-            if m_only:
-                m_str = ','.join(m_only)
-                problems.append(f'Some cdf elements in the munger are not in the database: {m_str}')
-
-            if problems:
-                checked = False
-                ui.report_problems(problems)
-                input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
-                      f'Then hit enter to continue.')
-                [self.cdf_elements,self.header_row_count,self.field_name_row,self.count_columns,
-                 self.file_type,self.encoding,self.thousands_separator] = read_munger_info_from_files(
-                    self.path_to_munger_dir)
-            else:
-                checked = True
-                print(f'Munger {self.name} checked against database.')
         return
 
     def check_against_datafile(self,datafile_path):
@@ -640,7 +604,7 @@ def juris_dependency_dictionary():
 
 # TODO before processing jurisdiction files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
-def load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True):
+def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,load_refs=True):
     """ TODO
     """
     # TODO fail gracefully if file does not exist
@@ -669,7 +633,10 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs
     dupes,df = ui.find_dupes(df)
     if not dupes.empty:
         print(f'WARNING: duplicates removed from dataframe, may indicate a problem.\n')
-        ui.show_sample(dupes,f'lines in {element} source data','are duplicates')
+        #ui.show_sample(dupes,f'lines in {element} source data','are duplicates')
+        if not element in error:
+            error[element] = {}
+        error[element]["found_duplicates"] = True
 
     # replace nulls with empty strings
     df.fillna('',inplace=True)
@@ -702,35 +669,31 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs
             refs = foreign_keys.loc[fn,'refers_to'].split(';')
 
             try:
-                df = get_ids_for_foreign_keys(session,df,element,fn,refs)
+                df = get_ids_for_foreign_keys(session,df,element,fn,refs,load_refs,error)
                 print(f'Database foreign id assigned for each {fn} in {element}.')
             except ForeignKeyException as e:
                 if load_refs:
                     for r in refs:
-                        load_juris_dframe_into_cdf(session,r,juris_path,project_root)
+                        load_juris_dframe_into_cdf(session,r,juris_path,project_root,error)
                     # try again to load main element (but don't load referred-to again)
-                    load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=False)
-                    return
-                else:
-                    try_again = input(
-                        f'{e}\nWould you like to make changes to the Jurisdiction directory and try again (y/n)?\n')
-                    if try_again == 'y':
-                        load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
-                        return
+                    load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,load_refs=False)
             except Exception as e:
-                try_again = input(
-                    f'{e}\nThere may be something wrong with the file {element}.txt. '
-                    f'Would you like to make changes to the Jurisdiction directory and try again (y/n)?\n')
-                if try_again == 'y':
-                    load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
-                    return
+                if not element in error:
+                    error[element] = {}
+                error[element]["jurisdiction"] = \
+                    f"""{e}\nThere may be something wrong with the file {element}.txt.
+                    You may need to make changes to the Jurisdiction directory and try again."""
 
     # commit info in df to corresponding cdf table to db
-    dbr.dframe_to_sql(df,session,element)
+    data, err = dbr.dframe_to_sql(df,session,element)
+    if err:
+        if not element in error:
+            error[element] = {}
+        error[element]["database"] = err
     return
 
 
-def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs):
+def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,load_refs,error):
     """ TODO <fn> is foreign key"""
     df = df1.copy()
     # append the Id corresponding to <fn> from the db
@@ -766,11 +729,14 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs):
     if missing.empty:
         df.drop([interim],axis=1)
     else:
-        ui.show_sample(missing,f'records in {element} with a {foreign_elt}',f'was not found in the database')
-        ignore = input(f'Continue anyway, letting some records in {element} be without {foreign_elt} (y/n)?\n')
-        if ignore != 'y':
-            print(f'Let\'s make sure the db has the records required for {foreign_elt}')
+        if load_refs:
+            # Always try to handle/fill in the missing IDs
             raise ForeignKeyException(f'For some {element} records, {foreign_elt} was not found')
+        else:
+            if not element in error:
+                error[element] = {}
+            error[element]["foreign_key"] = \
+            f"For some {element} records, {foreign_elt} was not found"
     return df
 
 

@@ -22,12 +22,7 @@ if __name__ == '__main__':
 	Session = sessionmaker(bind=eng)
 	sess = Session()
 
-	skip_load = input('Skip jurisdiction info loading (y/n)?\n')
-	if skip_load == 'y':
-		print('Warning: results for contests, selections and reporting units not loaded from jurisdiction\n'
-			  'will not be processed.')
-	else:
-		juris.load_juris_to_db(sess,d['project_root'])
+	error = juris.load_juris_to_db(sess,d['project_root'])
 
 	ui.track_results_file(d['project_root'],sess,d['results_file'])
 
