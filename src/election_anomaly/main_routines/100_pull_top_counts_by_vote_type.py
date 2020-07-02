@@ -9,7 +9,7 @@ from election_anomaly import analyze_via_pandas as avp
 if __name__ == '__main__':
     d, error = ui.get_runtime_parameters(
         ['project_root','juris_name','db_paramfile','db_name','rollup_directory'])
-    jurisdiction = ui.pick_juris_from_filesystem(
+    jurisdiction, juris_error = ui.pick_juris_from_filesystem(
         d['project_root'],juriss_dir=os.path.join(
             d['project_root'],'jurisdictions'),juris_name=d['juris_name'])
 
