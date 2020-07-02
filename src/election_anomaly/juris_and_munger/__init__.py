@@ -262,9 +262,7 @@ def read_munger_info_from_files(dir_path):
 
 # TODO combine ensure_jurisdiction_files with ensure_juris_files
 def ensure_jurisdiction_files(juris_path,project_root):
-
-
-    path_output = ''
+    path_output = None
     # create jurisdiction directory
     try:
         os.mkdir(juris_path)
@@ -274,11 +272,14 @@ def ensure_jurisdiction_files(juris_path,project_root):
         path_output = 'Directory {'+juris_path+'} created.'
         #todo should the program exit if the directory is created ?
 
-
     # ensure the contents of the jurisdiction directory are correct
     juris_file_error = ensure_juris_files(juris_path,project_root)
-    juris_file_error ["directory_status"] = path_output
-    return juris_file_error
+    if path_output:
+        juris_file_error["directory_status"] = path_output
+    if juris_file_error:
+        return juris_file_error
+    else:
+        return None
 
 
 def ensure_juris_files(juris_path,project_root):
@@ -289,7 +290,6 @@ def ensure_juris_files(juris_path,project_root):
     #package possible errors from this function into a dictionary and return them
     error_ensure_juris_files = {}
 
-
     templates_dir = os.path.join(project_root,'templates/jurisdiction_templates')
     # ask user to remove any extraneous files
     extraneous = ['unknown']
@@ -297,9 +297,7 @@ def ensure_juris_files(juris_path,project_root):
         extraneous = [f for f in os.listdir(juris_path) if
                       f != 'remark.txt' and f not in os.listdir(templates_dir) and f[0] != '.']
         if extraneous:
-            # ui.report_problems(extraneous,msg=f'There are extraneous files in {juris_path}')
             error_ensure_juris_files["extraneous_files_in_juris_directory"] = extraneous
-            # input(f'Remove all extraneous files; then hit return to continue.')
 
     template_list = [x[:-4] for x in os.listdir(templates_dir)]
 
@@ -314,13 +312,9 @@ def ensure_juris_files(juris_path,project_root):
 
     # ensure necessary all files exist
     for juris_file in template_list:
-
-
-        # print(f'\nChecking {juris_file}.txt')
-
         #a list of file empty errors
-
         cf_path = os.path.join(juris_path,f'{juris_file}.txt')
+        created = False
         # if file does not already exist in jurisdiction directory, create from template and invite user to fill
         try:
             temp = pd.read_csv(os.path.join(templates_dir,f'{juris_file}.txt'),sep='\t',encoding='iso-8859-1')
@@ -331,60 +325,58 @@ def ensure_juris_files(juris_path,project_root):
         if not os.path.isfile(cf_path):
             temp.to_csv(cf_path,sep='\t',index=False)
             file_empty.append('File {'+juris_file+'}.txt has just been created. Enter information in the file')
-
+            created = True
 
         # if file exists, check format against template
-        cf_df = pd.read_csv(os.path.join(juris_path,f'{juris_file}.txt'),sep='\t',encoding='iso=8859-1')
-        format_confirmed = False
-        while not format_confirmed:
-            if set(cf_df.columns) != set(temp.columns):
-                cols = '\t'.join(temp.columns.to_list())
-                column_errors.append(f'Columns of {juris_file}.txt need to be (tab-separated):\n '
-                                     f' {cols}\n')
+        if not created:
+            cf_df = pd.read_csv(os.path.join(juris_path,f'{juris_file}.txt'),sep='\t',encoding='iso=8859-1')
+            format_confirmed = False
+            while not format_confirmed:
+                if set(cf_df.columns) != set(temp.columns):
+                    cols = '\t'.join(temp.columns.to_list())
+                    column_errors.append(f'Columns of {juris_file}.txt need to be (tab-separated):\n '
+                                        f' {cols}\n')
+                else:
+                    format_confirmed = True
 
+            if juris_file == 'ExternalIdentifier':
+                d, dupe =  dedupe(cf_path)
+            elif juris_file == 'dictionary':
+                d, dupe = dedupe(cf_path)
             else:
-                format_confirmed = True
+                # run dupe check
+                d, dupe = dedupe(cf_path)
+                # check for problematic null entries
+                null_columns = check_nulls(juris_file,cf_path,project_root)
+                if null_columns:
+                    null_columns_dict[juris_file] = null_columns
 
-        if juris_file == 'ExternalIdentifier':
-           d, dupe =  dedupe(cf_path)
-        elif juris_file == 'dictionary':
-            d, dupe = dedupe(cf_path)
-        else:
-            # run dupe check
-            d, dupe = dedupe(cf_path)
-            # check for problematic null entries
-            null_columns = check_nulls(juris_file,cf_path,project_root)
-            null_columns_dict[juris_file] = null_columns
+            if dupe != '':
+                duplicate_files.append(dupe)
 
-        duplicate_files.append(dupe)
+            if column_errors:
+                error_ensure_juris_files["column_errors"] = column_errors
+            if null_columns_dict:
+                error_ensure_juris_files["null_columns"] = null_columns_dict
+            if duplicate_files:
+                error_ensure_juris_files["duplicate_files"] = duplicate_files
 
-    error_ensure_juris_files["file_empty_errors"] = file_empty
-    error_ensure_juris_files["column_errors"] = column_errors
-    error_ensure_juris_files["null_columns"] = null_columns_dict
-    error_ensure_juris_files["duplicate_files"] = duplicate_files
-
-    dependency_error = []
+        if file_empty:
+            error_ensure_juris_files["file_empty_errors"] = file_empty
 
     # check dependencies
+    dependency_error = []
     for juris_file in [x for x in template_list if x != 'remark' and x != 'dictionary']:
         # check dependencies
         d, dep_error = check_dependencies(juris_path,juris_file)
-        dependency_error.append(dep_error)
-    # remark
-    # rem_path = os.path.join(juris_path,'remark.txt')
-    # try:
-    #     with open(rem_path,'r') as f:
-    #         remark = f.read()
-    #     print(f'Current contents of remark.txt is:\n{remark}\n')
-    # except FileNotFoundError:
-    #     open(rem_path, 'a').close()  # create empty file
-    # input(
-    #     f'In the file remark.txt, add or correct anything that '
-    #     f'user should know about the jurisdiction.\n'
-    #     f'Then hit return to continue.')
-
-    error_ensure_juris_files["failed_dependencies"] = dependency_error
-    return error_ensure_juris_files
+        if dep_error:
+            dependency_error.append(dep_error)
+    if dependency_error:
+        error_ensure_juris_files["failed_dependencies"] = dependency_error
+    if error_ensure_juris_files:
+        return error_ensure_juris_files
+    else:
+        return {}
 
 
 # noinspection PyUnresolvedReferences
