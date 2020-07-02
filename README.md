@@ -27,6 +27,7 @@ If you are interested in contributing, or just staying updated on the progress o
 Clone the repository to a local machine. Navigate to `/path/to/repo/election_anomaly` and run `python3 setup.py install`. 
 
 The main routines are in `src/election_anomaly/main_routines`. Each can be run interactively or via a parameter file (template is `src/templates/parameter_file_templates/run_time.par`). Only the scripts beginning with a 3-digit number are actively maintained; others are in the process of deprecation.
+ * `010_check_jurisdiction.py` Use this routine to set up jurisdiction files for a new jurisdiction, or to check jurisdiction files that already exist. The routine ensures that the jurisdiction directory contains the required files and that the files are consistent with one another.
 
 To run the modules from within a python script or python interactive shell, import the package with `import election_anomaly`. To run one of the main routines from the command line, run `python3 <path/to/main_routines/filename.py` from a directory containing your `run_time.par`
 
