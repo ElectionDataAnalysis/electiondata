@@ -1,8 +1,0 @@
-cdf_element	raw_identifier_formula
-Office	<Office Name>;<Office District>
-ReportingUnit	<County>;<Election District>;<Election Precinct>
-Party	<Party>
-Candidate	<Candidate Name>
-CandidateContest	<Office Name>;<Office District>
-BallotMeasureContest	<Office Name>;<Candidate Name>
-BallotMeasureSelection	None

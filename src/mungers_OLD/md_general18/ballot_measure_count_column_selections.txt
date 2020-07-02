@@ -1,3 +1,0 @@
-fieldname	selection
-Election Night Votes	Yes
-Election Night Votes Against	No

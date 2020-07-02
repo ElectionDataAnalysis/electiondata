@@ -1,6 +1,0 @@
-RawName	CountItemType
-Election Day	election-day
-One Stop	early
-Absentee by Mail	absentee-mail
-Provisional	provisional
-Total Votes	total

@@ -1,2 +1,0 @@
-RawName	CountItemType
-Precinct #Votes	election-day

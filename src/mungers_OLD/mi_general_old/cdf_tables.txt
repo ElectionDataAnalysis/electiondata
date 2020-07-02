@@ -1,8 +1,0 @@
-cdf_element	raw_identifier_formula
-Office	<Office Code>;<District Code>
-ReportingUnit	<County Code>;<City/Town Code>;<Ward Number>;<Precinct Number>;<Precinct Label>
-Party	Unknown
-Candidate	<Candidate ID#>
-CandidateContest	<Office Code>;<District Code>
-BallotMeasureContest	<Office Code>;<Status Code>
-BallotMeasureSelection	<Candidate ID#>

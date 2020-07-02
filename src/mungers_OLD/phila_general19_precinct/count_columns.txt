@@ -1,2 +1,0 @@
-RawName	CountItemType
-VOTE COUNT	<VOTE TYPE>

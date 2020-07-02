@@ -1,8 +1,0 @@
-cdf_element	raw_identifier_formula
-Office	<OfficeDesc> Juris1num <Juris1num> Juris2num <Juris2num>
-ReportingUnit	<CountyName>
-Party	<PartyName>
-Candidate	<CanNameFirst> <CanNameMiddle> <CanNameLast>
-CandidateContest	<OfficeDesc> Juris1num <Juris1num> Juris2num <Juris2num>
-BallotMeasureContest	<OfficeDesc>
-BallotMeasureSelection	<CanNameLast>

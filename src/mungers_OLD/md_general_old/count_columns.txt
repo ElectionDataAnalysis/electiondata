@@ -1,3 +1,0 @@
-RawName	CountItemType
-Election Night Votes	election-day
-Election Night Votes Against	election-day
