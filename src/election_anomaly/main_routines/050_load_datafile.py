@@ -10,7 +10,7 @@ if __name__ == '__main__':
 		['project_root','juris_name','db_paramfile','db_name','munger_name','results_file'])
 
 	# pick jurisdiction
-	juris, juris_error = ui.pick_juris_from_filesystem(d['project_root'],juris_name=d['juris_name'])
+	juris, juris_error = ui.pick_juris_from_filesystem(d['project_root'],juris_name=d['juris_name'],check_files=True)
 
 	# create db if it does not already exist
 	error = dbr.establish_connection(paramfile=d['db_paramfile'],db_name=d['db_name'])
