@@ -705,9 +705,6 @@ def get_runtime_parameters(keys, param_file=None):
 		filename = param_file
 	else:
 		filename = 'run_time.par'
-		if os.path.isfile('./run_time.par') == False:
-			print("pick file containing run time parameters")
-			filename = pick_path(os.getcwd(),mode='file')
 	parser.read(filename)
 
 	for k in keys:

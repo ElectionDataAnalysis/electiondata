@@ -14,7 +14,6 @@ src/election_anomaly/db_routines/__pycache__/__init__.cpython-37.pyc
 src/election_anomaly/munge_routines/__pycache__/__init__.cpython-37.pyc
 src/election_anomaly/context/__pycache__/__init__.cpython-37.pyc
 src/election_anomaly/munge_routines/__pycache__/__init__.cpython-38.pyc
-src/election_anomaly/__init__.py
 .idea
 /venv/
 src/election_anomaly/analyze/__pycache__/__init__.cpython-37.pyc
