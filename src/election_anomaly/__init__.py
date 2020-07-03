@@ -54,20 +54,12 @@ class DataLoader():
 
     
     def data_load_errors(self):
-        if self.parameter_err:
-            print("Parameter errors:")
-            pprint(self.parameter_err)
-        if self.juris_err:
-            print("Jurisdiction file errors:")
-            pprint(self.juris_err)
+        juris_exists = None
         if not self.juris:
-            print("Jurisdiction object not created")
-        if self.juris_load_err:
-            print("Jurisdiction loading errors:")
-            pprint(self.juris_load_err)
-        if self.munger_err:
-            print("Munger file errors:")
-            pprint(self.munger_err) 
+            juris_exists = {"juris_created": False}
+        
+        return self.parameter_err, self.juris_err, juris_exists, \
+            self.juris_load_err, self.munger_err
 
 
     def fix_errors(self):
