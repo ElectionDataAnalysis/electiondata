@@ -6,22 +6,31 @@ from pprint import pprint
 import sys
 
 class DataLoader():
-    def __init__(self):
-        # grab parameters
+    def __new__(self):
+        """ Checks if parameter file exists and is correct. If not, does
+        not create DataLoader object. """
         try:
-            self.d, self.parameter_err = ui.get_runtime_parameters(
+            d, parameter_err = ui.get_runtime_parameters(
                 ['project_root','juris_name','db_paramfile',
                 'db_name','munger_name','results_file'])
         except FileNotFoundError as e:
             print("Parameter file not found. Ensure that it is located" \
-                " in the current directory. Exiting.")
-            sys.exit()
+                " in the current directory. DataLoader object not created.")
+            return None
 
-        if self.parameter_err:
+        if parameter_err:
             print("Parameter file missing requirements.")
-            print(self.parameter_err)
-            print("Exiting")
-            sys.exit()
+            print(parameter_err)
+            print("DataLoader object not created.")
+            return None
+
+        return super().__new__(self)
+
+    def __init__(self):
+        # grab parameters
+        self.d, self.parameter_err = ui.get_runtime_parameters(
+            ['project_root','juris_name','db_paramfile',
+            'db_name','munger_name','results_file'])
 
         # pick jurisdiction
         self.juris, self.juris_err = ui.pick_juris_from_filesystem(
