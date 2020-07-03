@@ -53,7 +53,7 @@ class DataLoader():
             session=self.session,munger_name=self.d['munger_name'])
 
     
-    def data_load_errors(self):
+    def check_errors(self):
         juris_exists = None
         if not self.juris:
             juris_exists = {"juris_created": False}
@@ -62,7 +62,7 @@ class DataLoader():
             self.juris_load_err, self.munger_err
 
 
-    def fix_errors(self):
+    def reload_requirements(self):
         if self.session:
             self.session.close()
         if self.engine:
