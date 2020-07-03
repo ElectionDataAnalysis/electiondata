@@ -222,9 +222,6 @@ def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_nam
 		juris_path = os.path.join(path_to_jurisdictions,juris_name)
 		missing_values = sf.ensure_jurisdiction_files(juris_path,project_root)
 
-
-	print(missing_values)
-	input()
 	# initialize the jurisdiction
 	if missing_values:
 		ss = None
@@ -708,7 +705,9 @@ def get_runtime_parameters(keys, param_file=None):
 		filename = param_file
 	else:
 		filename = 'run_time.par'
-	parser.read(filename)
+	p = parser.read(filename)
+	if len(p) == 0:
+		raise FileNotFoundError
 
 	for k in keys:
 		try:

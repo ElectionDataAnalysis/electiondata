@@ -3,14 +3,25 @@ from election_anomaly import user_interface as ui
 from sqlalchemy.orm import sessionmaker
 import os
 from pprint import pprint
+import sys
 
 class DataLoader():
     def __init__(self):
-        print("we're really doing it!")
+        # grab parameters
+        try:
+            self.d, self.parameter_err = ui.get_runtime_parameters(
+                ['project_root','juris_name','db_paramfile',
+                'db_name','munger_name','results_file'])
+        except FileNotFoundError as e:
+            print("Parameter file not found. Ensure that it is located" \
+                " in the current directory. Exiting.")
+            sys.exit()
 
-        self.d, self.parameter_err = ui.get_runtime_parameters(
-            ['project_root','juris_name','db_paramfile',
-            'db_name','munger_name','results_file'])
+        if self.parameter_err:
+            print("Parameter file missing requirements.")
+            print(self.parameter_err)
+            print("Exiting")
+            sys.exit()
 
         # pick jurisdiction
         self.juris, self.juris_err = ui.pick_juris_from_filesystem(
@@ -40,12 +51,6 @@ class DataLoader():
             project_root=self.d['project_root'],
             mungers_dir=os.path.join(self.d['project_root'],'mungers'),
             session=self.session,munger_name=self.d['munger_name'])
-
-        pprint(self.parameter_err)
-        pprint(self.juris_err)
-        pprint(self.juris_load_err)
-        pprint(self.munger_err) 
-        print("done!")
 
     
     def data_load_errors(self):
