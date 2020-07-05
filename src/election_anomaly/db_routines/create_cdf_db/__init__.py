@@ -24,7 +24,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
     # create enumeration tables 
     e_table_list = enum_table_list(dirpath)
     for t in e_table_list:
-        create_table(metadata,id_seq,t,'enumerations',dirpath)
+        create_table(metadata,id_seq,t,'enumerations',dirpath,eng,session)
     
     # create element tables (cdf and metadata) and push to db
     element_path = os.path.join(dirpath, 'elements')
@@ -44,7 +44,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
             except IndexError:
                 pass
         # create db table for element
-        create_table(metadata,id_seq,element,'elements',dirpath)
+        create_table(metadata,id_seq,element,'elements',dirpath,eng,session)
         # remove element from list of yet-to-be-processed
         elements_to_process.remove(element)
 
@@ -67,7 +67,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
             except IndexError:
                 pass
         # create db table for element
-        create_table(metadata,id_seq,j,'joins',dirpath)
+        create_table(metadata,id_seq,j,'joins',dirpath,eng,session)
         # remove element from list of yet-to-be-processed
         joins_to_process.remove(j)
 
@@ -77,8 +77,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
     return metadata
 
 
-def create_table(metadata,id_seq,name,table_type,dirpath):
-
+def create_table(metadata,id_seq,name,table_type,dirpath,engine,session):
     t_path = os.path.join(dirpath,table_type,name)
     if table_type == 'elements':
         with open(os.path.join(t_path, 'short_name.txt'), 'r') as f:
@@ -168,3 +167,33 @@ def fill_cdf_enum_tables(session,schema,dirpath='CDF_schema_def_info'):
         dframe.to_sql(f,session.bind,schema=schema,if_exists='append',index=False)
     session.flush()
     return e_table_list
+
+
+def reset_db(session, dirpath):
+    """ Resets DB to a clean state with no tables/sequences.
+    Used if a DB is created for a user but not populated, for example."""
+
+    eng = session.bind
+    conn = eng.connect()
+    conn.execute('DROP SEQUENCE IF EXISTS id_seq CASCADE;')
+    session.commit()
+
+    # create enumeration tables 
+    e_table_list = enum_table_list(dirpath)
+    for table in e_table_list:
+        conn.execute(f'DROP TABLE IF EXISTS "{table}" CASCADE;')
+        session.commit()
+    
+    element_path = os.path.join(dirpath, 'elements')
+    elements_to_process = [f for f in os.listdir(element_path) if f[0] != '.']
+    # dynamic list of elements whose tables haven't been created yet
+    for table in elements_to_process:
+        conn.execute(f'DROP TABLE IF EXISTS "{table}" CASCADE;')
+        session.commit()
+
+    join_path = os.path.join(dirpath,'joins')
+    joins_to_process = [f for f in os.listdir(join_path) if f[0] != '.']
+    for table in joins_to_process:
+        conn.execute(f'DROP TABLE IF EXISTS "{table}" CASCADE;')
+        session.commit()
+    conn.close()

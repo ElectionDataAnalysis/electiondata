@@ -37,7 +37,7 @@ class DataLoader():
             self.d['project_root'],juris_name=self.d['juris_name'],check_files=True)
 
         # create db if it does not already exist
-        error = dbr.establish_connection(paramfile=self.d['db_paramfile'],
+        error = dbr.establish_connection(paramfile=self.d['db_paramfile'], 
             db_name=self.d['db_name'])
         if error:
             dbr.create_new_db(self.d['project_root'], self.d['db_paramfile'], 

@@ -113,27 +113,22 @@ def create_new_db(project_root, paramfile, db_name):
     cur = con.cursor()
     db_df = get_database_names(con)
 
-    # DB already exists. Keeping to implement the format check in future
-    if db_name in db_df.datname.unique():
-        desired_db = db_name
-        create_new = False
-        # TODO otherwise check that desired_db has right format?
-    elif db_name:  # but not in existing
-        desired_db = db_name
-        create_database(con,cur,desired_db)
-        create_new = True
-        
-    if create_new: 	# if our db is brand new
-        # connect to the desired_db
-        eng = sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
-        Session = sqlalchemy.orm.sessionmaker(bind=eng)
-        sess = Session()
+    eng = sql_alchemy_connect(paramfile=paramfile,db_name=db_name)
+    Session = sqlalchemy.orm.sessionmaker(bind=eng)
+    sess = Session()
 
-		# load cdf tables
-        db_cdf.create_common_data_format_tables(
-            sess,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
-        db_cdf.fill_cdf_enum_tables(
-            sess,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
+    # DB already exists.
+    # TODO if DB exists, check that desired_db has right format?
+    if db_name in db_df.datname.unique():
+        # Clean out DB
+        db_cdf.reset_db(sess,
+            os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
+
+    # load cdf tables
+    db_cdf.create_common_data_format_tables(
+        sess,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
+    db_cdf.fill_cdf_enum_tables(
+        sess,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
     con.close()
 
 
