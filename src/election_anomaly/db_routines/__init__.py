@@ -74,8 +74,8 @@ def append_to_composing_reporting_unit_join(session,ru):
 
 
 def establish_connection(paramfile, db_name='postgres'):
-    """Return a db connection object; if <paramfile> fails,
-    return corrected <paramfile>"""
+    """Check for DB and relevant tables; if they don't exist, return
+    error message"""
     try:
         params = ui.config(paramfile)
     except MissingSectionHeaderError as e:
@@ -85,6 +85,16 @@ def establish_connection(paramfile, db_name='postgres'):
         con = psycopg2.connect(**params)
     except psycopg2.OperationalError as e:
         return {'message': 'Unable to establish connection to database.'}
+
+    # Look for tables
+    engine = sql_alchemy_connect(paramfile, db_name)
+    elems, enums, joins, o = get_cdf_db_table_names(engine)
+
+    # All tables except "Others" must be created. Essentially looks for
+    # a "complete" database.
+    if not elems or not enums or not joins:
+        return {'message': 'Required tables not found.'}
+
     con.close()
     return None
 
