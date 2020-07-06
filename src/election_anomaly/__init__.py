@@ -103,4 +103,7 @@ class DataLoader():
 
     
     def display_options(self, input):
-        return dbr.get_input_options(self.session, input)
+        results = dbr.get_input_options(self.session, input)
+        if results:
+            return results
+        return None

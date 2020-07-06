@@ -478,15 +478,33 @@ def get_input_options(session, input):
     # input comes as a pythonic (snake case) input, need to 
     # change to match DB table naming format
     name_parts = input.split('_')
-    table_name = "".join([name_part.capitalize() for name_part in name_parts])
+    search_str = "".join([name_part.capitalize() for name_part in name_parts])
 
-    if table_name in ['BallotMeasureContest', 'CandidateContest', 'Election',
+    if search_str in ['BallotMeasureContest', 'CandidateContest', 'Election',
         'Office', 'Party', 'ReportingUnit']:
         column_name = 'Name'
-    elif table_name in ['CountItemStatus', 'CountItemType', 'ElectionType',
+        table_search = True
+    elif search_str in ['CountItemStatus', 'CountItemType', 'ElectionType',
         'IdentifierType', 'ReportingUnitType']:
         column_name = 'Txt'
+        table_search = True
+    elif search_str == 'BallotMeasureSelection':
+        column_name = 'Selection'
+        table_search = True
+    elif search_str == 'Candidate':
+        column_name = 'BallotName'
+        table_search = True
+    else:
+        search_str = search_str.lower()
+        table_search = False
 
-    print(f'SELECT "{column_name}" FROM "{table_name}";')
-    result = session.execute(f'SELECT "{column_name}" FROM "{table_name}";')
-    return [r[0] for r in result]
+    if table_search:
+        print(f'SELECT "{column_name}" FROM "{table_name}";')
+        result = session.execute(f'SELECT "{column_name}" FROM "{table_name}";')
+        return [r[0] for r in result]
+    else:
+        result = session.execute(f' \
+            SELECT "Name" FROM "ReportingUnit" ru \
+            JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" \
+            WHERE rut."Txt" = \'{search_str}\'')
+        return [r[0] for r in result]
