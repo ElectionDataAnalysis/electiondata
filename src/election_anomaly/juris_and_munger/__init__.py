@@ -96,7 +96,6 @@ class Jurisdiction:
 
         with open(os.path.join(self.path_to_juris_dir,'remark.txt'),'r') as f:
             remark = f.read()
-        print(f'\n\nJurisdiction {short_name} initialized! Note:\n{remark}')
 
 
 class Munger:
@@ -211,10 +210,7 @@ class Munger:
         self.path_to_munger_dir = dir_path
 
         # create dir if necessary
-        if os.path.isdir(dir_path):
-            print(f'Directory {self.name} exists.')
-        else:
-            print(f'Creating directory {self.name}')
+        if not os.path.isdir(dir_path):
             Path(dir_path).mkdir(parents=True,exist_ok=True)
 
         if check_files:
@@ -706,7 +702,6 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
 
             try:
                 df = get_ids_for_foreign_keys(session,df,element,fn,refs,load_refs,error)
-                print(f'Database foreign id assigned for each {fn} in {element}.')
             except ForeignKeyException as e:
                 if load_refs:
                     for r in refs:
