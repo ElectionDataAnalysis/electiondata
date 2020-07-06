@@ -140,67 +140,52 @@ class Munger:
         else:
             return None
 
-    def check_against_datafile(self,datafile_path):
+    def check_against_datafile(self,datafile_path,check_first_row=False):
         """check that munger is compatible with datafile <raw>;
         offer user chance to correct munger"""
 
         # initialize to keep syntax-checker happy
         raw = pd.DataFrame([[]])
 
-        checked = False
-        while not checked:
-            problems = []
+        error = {}
 
-            # check encoding
-            try:
-                raw = ui.read_datafile(self,datafile_path)
-            except UnicodeEncodeError:
-                problems.append(f'Datafile is not encoded as {self.encoding}.')
+        # check encoding
+        try:
+            raw = ui.read_datafile(self,datafile_path)
+        except UnicodeEncodeError:
+            error["encoding"] = f'Datafile is not encoded as {self.encoding}.'
 
-            # check that all count_columns are indeed read as integers
-            bad_columns = [raw.columns[idx] for idx in self.count_columns if raw.dtypes[idx] != 'int64']
-            if bad_columns:
-                bad_col_string = '\n\t'.join(bad_columns)
-                problems.append(f'Munger fails to parse some VoteCount columns in the results file as integers:\n'
-                                f'{bad_col_string}')
+        # check that all count_columns are indeed read as integers
+        bad_columns = [raw.columns[idx] for idx in self.count_columns if raw.dtypes[idx] != 'int64']
+        if bad_columns:
+            bad_col_string = '\n\t'.join(bad_columns)
+            error["vote_count_columns"] = \
+                f'Munger fails to parse some VoteCount columns in the results file as integers:\n' \
+                f'{bad_col_string}'
 
-            non_count_integer_cols = [x for x in raw.columns if raw[x].dtype == 'int64' and
-                                      raw.columns.get_loc(x) not in self.count_columns]
-            if non_count_integer_cols:
-                ncic_string = '\n\t'.join(non_count_integer_cols)
-                ncic_ok = input(f'Munger parses the following columns as integers, but does not recognize them as'
-                                f'VoteCount columns.\n{ncic_string}\nIs this correct (y/n)?\n')
-                if ncic_ok != 'y':
-                    problems.append(f'Count_columns line in the format.txt file needs to be corrected.\n'
-                                    f'Value should be a comma-separated list of integers. Convention is\n'
-                                    f'to label the leftmost column 0.')
+        non_count_integer_cols = [x for x in raw.columns if raw[x].dtype == 'int64' and
+                                    raw.columns.get_loc(x) not in self.count_columns]
+        if non_count_integer_cols:
+            ncic_string = '\n\t'.join(non_count_integer_cols)
+            error["integer_columns"] = f'Munger parses the following columns as integers, ' \
+                            f'but does not recognize them as VoteCount columns.\n{ncic_string}\n' \
+                            f'Count_columns line in the format.txt file may need to be corrected.\n'
 
-            col_fields = '\n\t'.join(raw.columns)
-            cf_ok = input(f'Munger reads the following column fields from datafile (one per line):\n\t'
-                          f'{col_fields}\nAre these correct (y/n)?\n')
-            if cf_ok == 'y' and raw.shape[1] <3:
-                cf_ok = input(f'Are you sure? Is each SEPARATE LINE above a single field (y/n)?\n')
-            if cf_ok != 'y':
-                problems.append(f'Either column_field_row ({col_fields}) or file_type ({self.file_type}) is incorrect.')
+        if raw.shape[1] < 3:
+            error["row_count"] = f'Munger is reading a minimal number of columns.' \
+                            f'Check that column_field_row ({col_fields}) and' \
+                            f'file_type ({self.file_type}) are correct.'
 
-            # user confirm first data row
+        # user confirm first data row
+        if check_first_row:
             first_data_row = '\t'.join([f'{x}' for x in raw.iloc[0]])
-            fdr_ok = input(f'Munger thinks the first data row is:\n{first_data_row}\n'
-                           f'Is this correct (y/n)?\n')
-            if fdr_ok != 'y':
-                problems.append('header_row_count does not match the datafile.')
+            error["first_data_row"] = \
+                f'Munger thinks the first data row is:\n{first_data_row}\n'
 
-            if problems:
-                ui.report_problems(problems)
-                input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
-                      f'Then hit enter to continue.')
-                [self.cdf_elements,self.header_row_count,self.field_name_row,self.count_columns,
-                 self.file_type,self.encoding,self.thousands_separator] = read_munger_info_from_files(
-                    self.path_to_munger_dir)
-            else:
-                checked = True
+        if error:
+            return error
         # TODO allow user to pick different munger from file system
-        return
+        return None
 
     def __init__(self,dir_path,project_root=None,check_files=True):
         """<dir_path> is the directory for the munger."""
