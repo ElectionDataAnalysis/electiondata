@@ -471,3 +471,22 @@ def truncate_table(session, table_name):
     session.execute(f'TRUNCATE TABLE "{table_name}" CASCADE')
     session.commit()
     return
+
+
+def get_input_options(session, input):
+    """Returns a list of response options based on the input"""
+    # input comes as a pythonic (snake case) input, need to 
+    # change to match DB table naming format
+    name_parts = input.split('_')
+    table_name = "".join([name_part.capitalize() for name_part in name_parts])
+
+    if table_name in ['BallotMeasureContest', 'CandidateContest', 'Election',
+        'Office', 'Party', 'ReportingUnit']:
+        column_name = 'Name'
+    elif table_name in ['CountItemStatus', 'CountItemType', 'ElectionType',
+        'IdentifierType', 'ReportingUnitType']:
+        column_name = 'Txt'
+
+    print(f'SELECT "{column_name}" FROM "{table_name}";')
+    result = session.execute(f'SELECT "{column_name}" FROM "{table_name}";')
+    return [r[0] for r in result]

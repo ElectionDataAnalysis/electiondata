@@ -100,3 +100,7 @@ class DataLoader():
 
         self.juris_load_err = self.juris.load_juris_to_db(self.session,
             self.d['project_root'])    
+
+    
+    def display_options(self, input):
+        return dbr.get_input_options(self.session, input)
