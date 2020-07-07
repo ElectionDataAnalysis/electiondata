@@ -334,7 +334,9 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
     except sqlalchemy.exc.IntegrityError as e:
         # FIXME: target, pulled from DB, has datetime, while dframe has date,
         #  so record might look like same-name-different-date when it isn't really
-        error["type"] = e
+        # FIXME: IntegrityError will fail silently because it broke the dataload
+        # error["type"] = e
+        pass
     if not error:
         error = None
     
