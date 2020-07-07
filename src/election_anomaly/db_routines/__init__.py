@@ -123,6 +123,8 @@ def create_new_db(project_root, paramfile, db_name):
         # Clean out DB
         db_cdf.reset_db(sess,
             os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
+    else:
+        create_database(con, cur, db_name)
 
     # load cdf tables
     db_cdf.create_common_data_format_tables(
