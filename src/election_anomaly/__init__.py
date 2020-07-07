@@ -12,7 +12,7 @@ class DataLoader():
         try:
             d, parameter_err = ui.get_runtime_parameters(
                 ['project_root','juris_name','db_paramfile',
-                'db_name','munger_name','results_file'])
+                'db_name','munger_name','results_file','top_reporting_unit'])
         except FileNotFoundError as e:
             print("Parameter file not found. Ensure that it is located" \
                 " in the current directory. DataLoader object not created.")
@@ -30,7 +30,7 @@ class DataLoader():
         # grab parameters
         self.d, self.parameter_err = ui.get_runtime_parameters(
             ['project_root','juris_name','db_paramfile',
-            'db_name','munger_name','results_file'])
+            'db_name','munger_name','results_file','top_reporting_unit'])
 
         # pick jurisdiction
         self.juris, self.juris_err = ui.pick_juris_from_filesystem(
@@ -79,7 +79,7 @@ class DataLoader():
 
         self.d, self.parameter_err = ui.get_runtime_parameters(
             ['project_root','juris_name','db_paramfile',
-            'db_name','munger_name','results_file'])
+            'db_name','munger_name','results_file','top_reporting_unit'])
 
         # pick jurisdiction
         self.juris, self.juris_err = ui.pick_juris_from_filesystem(
@@ -101,30 +101,17 @@ class DataLoader():
         self.juris_load_err = self.juris.load_juris_to_db(self.session,
             self.d['project_root'])
 
-    def track_results(self, shortname, top_reporting_unit, election):
+    def track_results(self, shortname, election):
 
-        #TODO these values seem to be specific to the results file, then why not read them from run time parameters
-        #To
+        filename = self.d['results_file']
+        top_reporting_unit = self.d['top_reporting_unit']
 
-        if self.session:
-            self.session.close()
-        if self.engine:
-            self.engine.dispose()
-
-        # grab parameters
-        self.d, self.parameter_err = ui.get_runtime_parameters(
-            ['project_root', 'juris_name', 'db_paramfile',
-             'db_name', 'results_file', 'top_reporting_unit'])
-
-        # connect to db
-        eng = dbr.sql_alchemy_connect(paramfile=self.d['db_paramfile'],
-                                      db_name=self.d['db_name'])
-        Session = sessionmaker(bind=eng)
-        self.session = Session()
-
-        filename = ntpath.basename(self.d['results_file'])
-
-        known_info_d = {'file_name': filename, 'short_name': shortname, 'ReportingUnit_Id' : top_reporting_unit, 'Election_Id': election  }
+        known_info_d = {
+            'file_name': filename, 
+            'short_name': shortname, 
+            'ReportingUnit_Id': top_reporting_unit, 
+            'Election_Id': election
+        }
 
         db_style_record, error = ui.set_record_info_from_user(self.session, '_datafile', known_info_d=known_info_d)
 
@@ -133,4 +120,3 @@ class DataLoader():
             exit()
         else:
             dbr.save_one_to_db(self.session, '_datafile', db_style_record)
-
