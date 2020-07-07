@@ -126,8 +126,6 @@ class DataLoader():
 
         known_info_d = {'file_name': filename, 'short_name': shortname, 'ReportingUnit_Id' : top_reporting_unit, 'Election_Id': election  }
 
-        #TODO return errors if the foreign key is not found
-
         db_style_record, error = ui.set_record_info_from_user(self.session, '_datafile', known_info_d=known_info_d)
 
         if error != []:
