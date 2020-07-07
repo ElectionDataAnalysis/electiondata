@@ -369,18 +369,22 @@ def add_constant_column(df,col_name,col_value):
     return new_df
 
 
-def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
+def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,ids=None):
     """load data from <raw> into the database.
     Note that columns to be munged (e.g. County_xxx) have mu.field_rename_suffix (e.g., _xxx) added already"""
     working = raw.copy()
 
     # enter elements from sources outside raw data, including creating id column(s)
     # TODO what if contest_type (BallotMeasure or Candidate) has source 'other'?
-    for t,r in mu.cdf_elements[mu.cdf_elements.source == 'other'].iterrows():
-        # add column for element id
-        # TODO allow record to be passed as a parameter
-        idx, db_record, enum_d, fk_d = ui.pick_or_create_record(session,project_root,t)
-        working = add_constant_column(working,f'{t}_Id',idx)
+    if not ids:
+        for t,r in mu.cdf_elements[mu.cdf_elements.source == 'other'].iterrows():
+            # add column for element id
+            # TODO allow record to be passed as a parameter
+            idx, db_record, enum_d, fk_d = ui.pick_or_create_record(session,project_root,t)
+            working = add_constant_column(working,f'{t}_Id',idx)
+    else:
+        working = add_constant_column(working,'Election_Id',ids[1])
+        working = add_constant_column(working,'_datafile_Id',ids[0])
 
     working = munge_and_melt(mu,working,count_cols)
 

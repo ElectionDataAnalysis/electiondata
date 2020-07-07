@@ -120,3 +120,12 @@ class DataLoader():
             exit()
         else:
             dbr.save_one_to_db(self.session, '_datafile', db_style_record)
+
+
+    def load_results(self):
+
+        results_info = dbr.get_datafile_info(self.session, self.d['results_file'])
+
+        ui.new_datafile(self.session, self.munger, self.d['results_file'],
+            juris=self.juris, project_root=self.d['project_root'], 
+            results_info=results_info)
