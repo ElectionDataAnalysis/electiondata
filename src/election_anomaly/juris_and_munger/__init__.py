@@ -279,6 +279,7 @@ def ensure_juris_files(juris_path,project_root):
                       f != 'remark.txt' and f not in os.listdir(templates_dir) and f[0] != '.']
         if extraneous:
             error_ensure_juris_files["extraneous_files_in_juris_directory"] = extraneous
+            extraneous = []
 
     template_list = [x[:-4] for x in os.listdir(templates_dir)]
 

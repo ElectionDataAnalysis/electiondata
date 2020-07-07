@@ -121,6 +121,7 @@ class DataLoader():
         else:
             dbr.save_one_to_db(self.session, '_datafile', db_style_record)
 
+
     def load_results(self):
 
         results_info = dbr.get_datafile_info(self.session, self.d['results_file'])
