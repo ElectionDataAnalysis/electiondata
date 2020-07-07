@@ -719,3 +719,37 @@ def get_runtime_parameters(keys, param_file=None):
 		missing_params = None
 
 	return d, missing_params
+
+def set_record_info_from_user(sess,element,known_info_d={}):
+
+	#Collect new record info from user and return a dictionary ready to be written to element table
+
+	# read existing info from db
+	all_from_db = pd.read_sql_table(element,sess.bind,index_col='Id')
+	db_cols = list(all_from_db.columns)  # note: does not include 'Id'
+
+	new = {}
+
+	for c in db_cols:
+		# define new[c] if value is known
+		if c in known_info_d.keys():
+			new[c] = known_info_d[c]
+		else:
+			new[c] = None
+
+	#Get foreign key references.
+	fk_df = dbr.get_foreign_key_df(sess,element)
+
+#replaces foreign key id's inplace of user provided names.
+	for c in fk_df.index:
+		if c in new.keys():
+			new[c] = dbr.name_to_id(sess, fk_df.loc[c, 'foreign_table_name'], new[c])
+
+	# TODO generate error if the foreign key is not found. new[c] can't be none?
+
+
+	db_record = {k: new[k] for k in db_cols}
+
+	return db_record
+
+

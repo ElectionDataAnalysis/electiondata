@@ -21,9 +21,9 @@ if __name__ == '__main__':
 	sess = Session()
 
 	# pick munger
-	munger = ui.pick_munger(
-		mungers_dir=os.path.join(d['project_root'],'mungers'),project_root=d['project_root'],
-		session=sess,munger_name=d['munger_name'])
+	munger, error = ui.pick_munger(
+		project_root=d['project_root'],
+		mungers_dir=os.path.join(d['project_root'],'mungers'),session=sess,munger_name=d['munger_name'])
 
 	# check munger against datafile.
 	munger.check_against_datafile(d['results_file'])
