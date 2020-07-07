@@ -596,7 +596,7 @@ def read_datafile(munger,f_path):
 	return df
 
 
-def new_datafile(session,munger,raw_path,project_root=None,juris=None):
+def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_info=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
@@ -618,7 +618,7 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 			# if jurisdction changed, load to db
 			juris.load_juris_to_db(session,project_root)
 
-	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name)
+	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,results_info)
 	print(f'Datafile contents uploaded to database {session.bind.engine}')
 	return
 
