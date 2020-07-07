@@ -32,6 +32,7 @@ dataloader = DataLoader() # create object, check some files, load supporting dat
 errors = dataloader.check_errors() # *** see note on these errors below
 
 # Once the user has addressed any errors identified:
+dataloader.reload_requirements() # Reloads and rechecks any errors addressed above
 dataloader.track_results('<short_name>', '<election_name>') # creates metadata record
 dataloader.load_results()
 ```
@@ -45,7 +46,7 @@ That's it! All your data for this election should be in the specified database l
 * Problems found while loading the jurisdiction info into the DB
 * Problems found while checking the munger directory
 
-Typically all errors should be `None` before moving onto the next steps.
+Typically all errors should be `None` before moving onto the next steps. The user can run `errors = dataloader.check_errors()`, adjust the supporting files, and `dataloader.reload_requirements()` multiple times until all errors are `None`.
 
 ## Pulling election result rollups
 run `src/election_anomaly/main_routines/100_pull_top_counts_by_vote_type.py`
