@@ -473,3 +473,11 @@ def truncate_table(session, table_name):
     session.execute(f'TRUNCATE TABLE "{table_name}" CASCADE')
     session.commit()
     return
+
+def get_datafile_info(session, results_file):
+    q = session.execute(f'''
+        SELECT "Id", "Election_Id" 
+        FROM _datafile 
+        WHERE file_name = '{results_file}'
+        ''').fetchall()
+    return q[0]
