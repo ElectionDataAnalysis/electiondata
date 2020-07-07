@@ -111,23 +111,28 @@ class DataLoader():
         if self.engine:
             self.engine.dispose()
 
-            # grab parameters
-            self.d, self.parameter_err = ui.get_runtime_parameters(
-                ['project_root', 'juris_name', 'db_paramfile',
-                 'db_name', 'munger_name', 'results_file', 'top_reporting_unit'])
+        # grab parameters
+        self.d, self.parameter_err = ui.get_runtime_parameters(
+            ['project_root', 'juris_name', 'db_paramfile',
+             'db_name', 'results_file', 'top_reporting_unit'])
 
-            # connect to db
-            eng = dbr.sql_alchemy_connect(paramfile=self.d['db_paramfile'],
-                                          db_name=self.d['db_name'])
-            Session = sessionmaker(bind=eng)
-            self.session = Session()
+        # connect to db
+        eng = dbr.sql_alchemy_connect(paramfile=self.d['db_paramfile'],
+                                      db_name=self.d['db_name'])
+        Session = sessionmaker(bind=eng)
+        self.session = Session()
 
-            filename = ntpath.basename(self.d['results_file'])
+        filename = ntpath.basename(self.d['results_file'])
 
-            known_info_d = {'file_name': filename, 'short_name': shortname, 'ReportingUnit_Id' : top_reporting_unit, 'Election_Id': election  }
+        known_info_d = {'file_name': filename, 'short_name': shortname, 'ReportingUnit_Id' : top_reporting_unit, 'Election_Id': election  }
 
-            #TODO return errors if the foreign key is not found
+        #TODO return errors if the foreign key is not found
 
-            db_style_record = ui.set_record_info_from_user(self.session, '_datafile', known_info_d=known_info_d)
+        db_style_record, error = ui.set_record_info_from_user(self.session, '_datafile', known_info_d=known_info_d)
+
+        if error != []:
+            print(error)
+            exit()
+        else:
             dbr.save_one_to_db(self.session, '_datafile', db_style_record)
 

@@ -729,6 +729,7 @@ def set_record_info_from_user(sess,element,known_info_d={}):
 	db_cols = list(all_from_db.columns)  # note: does not include 'Id'
 
 	new = {}
+	error = []
 
 	for c in db_cols:
 		# define new[c] if value is known
@@ -737,19 +738,24 @@ def set_record_info_from_user(sess,element,known_info_d={}):
 		else:
 			new[c] = None
 
+
+
 	#Get foreign key references.
 	fk_df = dbr.get_foreign_key_df(sess,element)
 
 #replaces foreign key id's inplace of user provided names.
 	for c in fk_df.index:
+		c_plain = c[:-3]
 		if c in new.keys():
 			new[c] = dbr.name_to_id(sess, fk_df.loc[c, 'foreign_table_name'], new[c])
+			if new[c] == None:
+				error.append(f'{known_info_d[c]} is invalid c_plain')
+		# TODO display valid entries in the error report.
 
-	# TODO generate error if the foreign key is not found. new[c] can't be none?
 
 
 	db_record = {k: new[k] for k in db_cols}
 
-	return db_record
+	return db_record, error
 
 
