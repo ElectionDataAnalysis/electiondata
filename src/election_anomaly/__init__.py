@@ -141,6 +141,38 @@ class DataLoader():
             results_info=results_info)
 
 
+class Analyzer():
+    def __new__(self):
+        """ Checks if parameter file exists and is correct. If not, does
+        not create DataLoader object. """
+        try:
+            d, parameter_err = ui.get_runtime_parameters(['db_paramfile', 
+                'db_name'])
+        except FileNotFoundError as e:
+            print("Parameter file not found. Ensure that it is located" \
+                " in the current directory. Analyzer object not created.")
+            return None
+
+        if parameter_err:
+            print("Parameter file missing requirements.")
+            print(parameter_err)
+            print("Analyzer object not created.")
+            return None
+
+        return super().__new__(self)
+
+
+    def __init__(self):
+        self.d, self.parameter_err = ui.get_runtime_parameters(['db_paramfile', 
+            'db_name'])
+
+        eng = dbr.sql_alchemy_connect(paramfile=self.d['db_paramfile'],
+            db_name=self.d['db_name'])
+        Session = sessionmaker(bind=eng)
+        self.session = Session()
+
+
+
 def get_filename(path):
     head, tail = ntpath.split(path)
     return tail or ntpath.basename(head)
