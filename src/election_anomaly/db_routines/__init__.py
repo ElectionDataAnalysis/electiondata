@@ -370,7 +370,7 @@ def format_dates(dframe):
     return df
 
 
-def save_one_to_db(session,element,record):
+def save_one_to_db(session,element,record,upsert=False):
     """Create a record in the <element> table corresponding to the info in the
     dictionary <record>, which is in <field>:<value> form, using db (not user-friendly)
     fields -- i.e., ids for enums and foreign keys -- excluding the Id field.
@@ -388,6 +388,12 @@ def save_one_to_db(session,element,record):
             problems.append('No data given for insert.')
         try:
             df = pd.DataFrame({k:[v] for k,v in record.items()})
+            # currently this upsert only used for the _datafile record
+            if upsert:
+                session.execute(f'''
+                    DELETE FROM _datafile 
+                    WHERE short_name = '{record['short_name']}';''')
+                session.commit()                
             df.to_sql(element,session.bind,if_exists='append',index=False)
             enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(session,element,record)
             fk_plaintext_dict = mr.fk_plaintext_dict_from_db_record(
@@ -399,8 +405,8 @@ def save_one_to_db(session,element,record):
                 field_str = m.group("fields")
                 value_str = m.group("values")
                 use_existing = input(f'Record already exists with value(s)\n\t{value_str}\n'
-                                     f'in field(s)\n\t{field_str}\n'
-                                     f'Use existing record (y/n?\n')
+                                    f'in field(s)\n\t{field_str}\n'
+                                    f'Use existing record (y/n?\n')
                 if use_existing == 'y':
                     # pull record from db
                     fields = field_str.split(',')
