@@ -5,6 +5,7 @@ import os
 from pprint import pprint
 import sys
 import ntpath
+from election_anomaly import analyze_via_pandas as avp
 
 class DataLoader():
     def __new__(self):
@@ -140,7 +141,7 @@ class Analyzer():
         not create DataLoader object. """
         try:
             d, parameter_err = ui.get_runtime_parameters(['db_paramfile', 
-                'db_name'])
+                'db_name', 'results_file'])
         except FileNotFoundError as e:
             print("Parameter file not found. Ensure that it is located" \
                 " in the current directory. Analyzer object not created.")
@@ -157,7 +158,8 @@ class Analyzer():
 
     def __init__(self):
         self.d, self.parameter_err = ui.get_runtime_parameters(['db_paramfile', 
-            'db_name'])
+            'db_name', 'results_file'])
+        self.d['results_file_short'] = get_filename(self.d['results_file'])
 
         eng = dbr.sql_alchemy_connect(paramfile=self.d['db_paramfile'],
             db_name=self.d['db_name'])
@@ -170,6 +172,23 @@ class Analyzer():
         if results:
             return results
         return None
+
+
+    def top_counts_by_vote_type(self, rollup_unit, sub_unit):
+        d, error = ui.get_runtime_parameters(['rollup_directory'])
+        if error:
+            print("Parameter file missing requirements.")
+            print(error)
+            print("Data not created.")
+            return
+        else:
+            rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
+            sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
+            results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
+            rollup = avp.create_rollup(self.session, d['rollup_directory'], top_ru_id=rollup_unit_id,
+                sub_rutype_id=sub_unit_id, sub_rutype_othertext='', datafile_id_list=results_info[0], 
+                election_id=results_info[1])
+            return
 
 
 def get_filename(path):
