@@ -36,8 +36,6 @@ class DataLoader():
         # results_file is the entire path, the _short version is just
         # the filename
         self.d['results_file_short'] = get_filename(self.d['results_file'])
-        print(self.d)
-        input()
 
         # pick jurisdiction
         self.juris, self.juris_err = ui.pick_juris_from_filesystem(
@@ -108,9 +106,10 @@ class DataLoader():
         self.juris_load_err = self.juris.load_juris_to_db(self.session,
             self.d['project_root'])
 
+
     def track_results(self, shortname, election):
 
-        filename = self.d['results_file']
+        filename = self.d['results_file_short']
         top_reporting_unit = self.d['top_reporting_unit']
 
         known_info_d = {
