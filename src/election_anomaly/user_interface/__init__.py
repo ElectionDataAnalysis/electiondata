@@ -611,6 +611,7 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_in
 		juris = pick_juris_from_filesystem(
 			project_root,juriss_dir='jurisdictions')
 	raw = read_datafile(munger,raw_path)
+
 	if raw.empty:
 		print('Datafile unable to be parsed with munger. Results not loaded to database. '
 			'Please check compatibilty between the two and try again.')
@@ -618,7 +619,13 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_in
 	
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
 
-	raw = mr.clean_raw_df(raw,munger)
+	try:
+		raw = mr.clean_raw_df(raw,munger)
+	except:
+		print('Datafile unable to be parsed with munger. Results not loaded to database. '
+			'Please check compatibilty between the two and try again.')
+		return
+
 	# NB: info_cols will have suffix added by munger
 
 	# check jurisdiction against raw results file, adapting jurisdiction files as necessary
@@ -626,7 +633,13 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_in
 	# if jurisdction changed, load to db
 	juris.load_juris_to_db(session,project_root)
 
-	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,results_info)
+	try:
+		mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,results_info)
+	except:
+		print('Datafile unable to be parsed with munger. Results not loaded to database. '
+			'Please check compatibilty between the two and try again.')
+		return
+
 	print(f'Datafile contents uploaded to database {session.bind.engine}')
 	return
 
