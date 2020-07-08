@@ -106,7 +106,14 @@ class DataLoader():
         self.session = Session()
 
         self.juris_load_err = self.juris.load_juris_to_db(self.session,
-            self.d['project_root'])
+            self.d['project_root'])    
+
+    
+    def display_options(self, input):
+        results = dbr.get_input_options(self.session, input)
+        if results:
+            return results
+        return None
 
 
     def track_results(self, shortname, election):

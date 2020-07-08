@@ -480,6 +480,44 @@ def truncate_table(session, table_name):
     session.commit()
     return
 
+
+def get_input_options(session, input):
+    """Returns a list of response options based on the input"""
+    # input comes as a pythonic (snake case) input, need to 
+    # change to match DB table naming format
+    name_parts = input.split('_')
+    search_str = "".join([name_part.capitalize() for name_part in name_parts])
+
+    if search_str in ['BallotMeasureContest', 'CandidateContest', 'Election',
+        'Office', 'Party', 'ReportingUnit']:
+        column_name = 'Name'
+        table_search = True
+    elif search_str in ['CountItemStatus', 'CountItemType', 'ElectionType',
+        'IdentifierType', 'ReportingUnitType']:
+        column_name = 'Txt'
+        table_search = True
+    elif search_str == 'BallotMeasureSelection':
+        column_name = 'Selection'
+        table_search = True
+    elif search_str == 'Candidate':
+        column_name = 'BallotName'
+        table_search = True
+    else:
+        search_str = search_str.lower()
+        table_search = False
+
+    if table_search:
+        print(f'SELECT "{column_name}" FROM "{table_name}";')
+        result = session.execute(f'SELECT "{column_name}" FROM "{table_name}";')
+        return [r[0] for r in result]
+    else:
+        result = session.execute(f' \
+            SELECT "Name" FROM "ReportingUnit" ru \
+            JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" \
+            WHERE rut."Txt" = \'{search_str}\'')
+        return [r[0] for r in result]
+
+
 def get_datafile_info(session, results_file):
     q = session.execute(f'''
         SELECT "Id", "Election_Id" 
