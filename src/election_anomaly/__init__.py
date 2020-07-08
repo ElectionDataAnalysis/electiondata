@@ -4,6 +4,7 @@ from sqlalchemy.orm import sessionmaker
 import os
 from pprint import pprint
 import sys
+import ntpath
 
 class DataLoader():
     def __new__(self):
@@ -31,6 +32,12 @@ class DataLoader():
         self.d, self.parameter_err = ui.get_runtime_parameters(
             ['project_root','juris_name','db_paramfile',
             'db_name','munger_name','results_file','top_reporting_unit'])
+
+        # results_file is the entire path, the _short version is just
+        # the filename
+        self.d['results_file_short'] = get_filename(self.d['results_file'])
+        print(self.d)
+        input()
 
         # pick jurisdiction
         self.juris, self.juris_err = ui.pick_juris_from_filesystem(
@@ -129,3 +136,8 @@ class DataLoader():
         ui.new_datafile(self.session, self.munger, self.d['results_file'],
             juris=self.juris, project_root=self.d['project_root'], 
             results_info=results_info)
+
+
+def get_filename(path):
+    head, tail = ntpath.split(path)
+    return tail or ntpath.basename(head)
