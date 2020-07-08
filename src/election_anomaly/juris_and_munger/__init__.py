@@ -94,8 +94,10 @@ class Jurisdiction:
         self.short_name = short_name
         self.path_to_juris_dir = os.path.join(path_to_parent_dir, self.short_name)
 
-        with open(os.path.join(self.path_to_juris_dir,'remark.txt'),'r') as f:
-            remark = f.read()
+        remark_path = os.path.join(self.path_to_juris_dir,'remark.txt')
+        if os.path.exists(remark_path):
+            with open(os.path.join(self.path_to_juris_dir,'remark.txt'),'r') as f:
+                remark = f.read()
 
 
 class Munger:
