@@ -109,13 +109,6 @@ class DataLoader():
             self.d['project_root'])    
 
     
-    def display_options(self, input):
-        results = dbr.get_input_options(self.session, input)
-        if results:
-            return results
-        return None
-
-
     def track_results(self, shortname, election):
         filename = self.d['results_file_short']
         top_reporting_unit = self.d['top_reporting_unit']
@@ -171,6 +164,12 @@ class Analyzer():
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
+
+    def display_options(self, input):
+        results = dbr.get_input_options(self.session, input)
+        if results:
+            return results
+        return None
 
 
 def get_filename(path):
