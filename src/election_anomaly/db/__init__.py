@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-# db_routines/__init__.py
+# db/__init__.py
 
 import psycopg2
 import sqlalchemy
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql
 import sqlalchemy as db
-import sqlalchemy_utils
 from election_anomaly import user_interface as ui
 from configparser import MissingSectionHeaderError
 import pandas as pd
-from election_anomaly import munge_routines as mr
+from election_anomaly import munge as mr
 import re
-from election_anomaly.db_routines import create_cdf_db as db_cdf
+from election_anomaly.db import create_cdf_db as db_cdf
 import os
 
 
@@ -122,15 +121,15 @@ def create_new_db(project_root, paramfile, db_name):
     if db_name in db_df.datname.unique():
         # Clean out DB
         db_cdf.reset_db(sess,
-            os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
+            os.path.join(project_root,'election_anomaly','schema_definition'))
     else:
         create_database(con, cur, db_name)
 
     # load cdf tables
     db_cdf.create_common_data_format_tables(
-        sess,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
+        sess,dirpath=os.path.join(project_root,'election_anomaly','schema_definition'))
     db_cdf.fill_cdf_enum_tables(
-        sess,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
+        sess,None,dirpath=os.path.join(project_root,'election_anomaly/schema_definition/'))
     con.close()
 
 
@@ -177,13 +176,13 @@ def get_cdf_db_table_names(eng):
     cdf_joins = set()
     others = set()
     for t in public.table_name.unique():
-        # main_routines table name string
+        # main table name string
         if t[0] == '_':
             others.add(t)
         elif t[-4:] == 'Join':
             cdf_joins.add(t)
         else:
-            # main_routines columns
+            # main columns
             cols = public[public.table_name == t].column_name.unique()
             if set(cols) == {'Id','Txt'} or set(cols) == {'Id','Selection'}:
                 cdf_enumerations.add(t)

@@ -1,11 +1,9 @@
-from election_anomaly import db_routines as dbr
+from election_anomaly import db as dbr
 from election_anomaly import user_interface as ui
+from election_anomaly import analyze as avp
 from sqlalchemy.orm import sessionmaker
 import os
-from pprint import pprint
-import sys
 import ntpath
-from election_anomaly import analyze_via_pandas as avp
 
 class DataLoader():
     def __new__(self):

@@ -1,4 +1,4 @@
-from election_anomaly import db_routines as dbr
+from election_anomaly import db as dbr
 from election_anomaly import user_interface as ui
 import pandas as pd
 import re
@@ -303,7 +303,7 @@ def db_record_from_file_record(session,element,file_record):
 
 
 def good_syntax(s):
-    """Returns true if formula string <s> passes certain syntax main_routines(s)"""
+    """Returns true if formula string <s> passes certain syntax main(s)"""
     good = True
     # check that angle brackets match
     #  split the string by opening angle bracket:
@@ -492,7 +492,7 @@ def append_join_id(project_root,session,working,j):
     """Upload join data to db, get Ids,
     Append <join>_Id to <working>. Unmatched rows are kept"""
     j_path = os.path.join(
-        project_root,'election_anomaly/CDF_schema_def_info/joins',j,'foreign_keys.txt')
+        project_root,'election_anomaly/schema_definition/joins',j,'foreign_keys.txt')
     join_fk = pd.read_csv(j_path,sep='\t',index_col='fieldname')
     join_fk.loc[:,'refers_to_list'] = join_fk.refers_to.str.split(';')
     # create dataframe with cols named to match join table, content from corresponding column of working
