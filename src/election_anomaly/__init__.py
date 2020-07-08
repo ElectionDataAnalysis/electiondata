@@ -27,6 +27,7 @@ class DataLoader():
 
         return super().__new__(self)
 
+
     def __init__(self):
         # grab parameters
         self.d, self.parameter_err = ui.get_runtime_parameters(
@@ -108,17 +109,14 @@ class DataLoader():
 
 
     def track_results(self, shortname, election):
-
         filename = self.d['results_file_short']
         top_reporting_unit = self.d['top_reporting_unit']
-
         known_info_d = {
             'file_name': filename, 
             'short_name': shortname, 
             'ReportingUnit_Id': top_reporting_unit, 
             'Election_Id': election
         }
-
         db_style_record, error = ui.set_record_info_from_user(self.session, '_datafile', known_info_d=known_info_d)
 
         if error != []:
@@ -129,9 +127,7 @@ class DataLoader():
 
 
     def load_results(self):
-
         results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
-
         ui.new_datafile(self.session, self.munger, self.d['results_file'],
             juris=self.juris, project_root=self.d['project_root'], 
             results_info=results_info)
