@@ -582,18 +582,23 @@ def enter_and_check_datatype(question,datatype):
 
 
 def read_datafile(munger,f_path):
-	if munger.file_type in ['txt','csv']:
-		kwargs = {'encoding':munger.encoding,'quoting':csv.QUOTE_MINIMAL,'header':list(range(munger.header_row_count)),
-			'thousands':munger.thousands_separator}
-		if munger.file_type == 'txt':
-			kwargs['sep'] = '\t'
-		df = pd.read_csv(f_path,**kwargs)
+	try:
+		if munger.file_type in ['txt','csv']:
+			kwargs = {'encoding':munger.encoding,'quoting':csv.QUOTE_MINIMAL,'header':list(range(munger.header_row_count)),
+				'thousands':munger.thousands_separator}
+			if munger.file_type == 'txt':
+				kwargs['sep'] = '\t'
+			df = pd.read_csv(f_path,**kwargs)
 
-	elif munger.file_type in ['xls','xlsx']:
-		df = pd.read_excel(f_path,dtype=str,thousands=munger.thousands_separator)
-	else:
-		raise mr.MungeError(f'Unrecognized file_type in munger: {munger.file_type}')
-	return df
+		elif munger.file_type in ['xls','xlsx']:
+			df = pd.read_excel(f_path,dtype=str,thousands=munger.thousands_separator)
+		else:
+			raise mr.MungeError(f'Unrecognized file_type in munger: {munger.file_type}')
+		return df
+	except:
+		# DFs have trouble comparing against None. So we return an empty DF and 
+		# check for emptiness below as an indication of an error.
+		return pd.DataFrame()
 
 
 def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_info=None):
@@ -606,6 +611,11 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_in
 		juris = pick_juris_from_filesystem(
 			project_root,juriss_dir='jurisdictions')
 	raw = read_datafile(munger,raw_path)
+	if raw.empty:
+		print('Datafile unable to be parsed with munger. Results not loaded to database. '
+			'Please check compatibilty between the two and try again.')
+		return
+	
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
 
 	raw = mr.clean_raw_df(raw,munger)

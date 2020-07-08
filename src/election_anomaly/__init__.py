@@ -86,6 +86,7 @@ class DataLoader():
         self.d, self.parameter_err = ui.get_runtime_parameters(
             ['project_root','juris_name','db_paramfile',
             'db_name','munger_name','results_file','top_reporting_unit'])
+        self.d['results_file_short'] = get_filename(self.d['results_file'])
 
         # pick jurisdiction
         self.juris, self.juris_err = ui.pick_juris_from_filesystem(
