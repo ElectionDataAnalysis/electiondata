@@ -191,6 +191,23 @@ class Analyzer():
             return
 
 
+    def top_counts(self, rollup_unit, sub_unit):
+        d, error = ui.get_runtime_parameters(['rollup_directory'])
+        if error:
+            print("Parameter file missing requirements.")
+            print(error)
+            print("Data not created.")
+            return
+        else:
+            rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
+            sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
+            results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
+            rollup = avp.create_rollup(self.session, d['rollup_directory'], top_ru_id=rollup_unit_id,
+                sub_rutype_id=sub_unit_id, sub_rutype_othertext='', datafile_id_list=results_info[0], 
+                election_id=results_info[1], by_vote_type=False)
+            return
+
+
 def get_filename(path):
     head, tail = ntpath.split(path)
     return tail or ntpath.basename(head)
