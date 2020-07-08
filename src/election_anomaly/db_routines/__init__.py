@@ -507,8 +507,7 @@ def get_input_options(session, input):
         table_search = False
 
     if table_search:
-        print(f'SELECT "{column_name}" FROM "{table_name}";')
-        result = session.execute(f'SELECT "{column_name}" FROM "{table_name}";')
+        result = session.execute(f'SELECT "{column_name}" FROM "{search_str}";')
         return [r[0] for r in result]
     else:
         result = session.execute(f' \
