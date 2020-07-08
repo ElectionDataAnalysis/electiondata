@@ -334,7 +334,9 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
     except sqlalchemy.exc.IntegrityError as e:
         # FIXME: target, pulled from DB, has datetime, while dframe has date,
         #  so record might look like same-name-different-date when it isn't really
-        error["type"] = e
+        # FIXME: IntegrityError will fail silently because it broke the dataload
+        # error["type"] = e
+        pass
     if not error:
         error = None
     
@@ -368,7 +370,7 @@ def format_dates(dframe):
     return df
 
 
-def save_one_to_db(session,element,record):
+def save_one_to_db(session,element,record,upsert=False):
     """Create a record in the <element> table corresponding to the info in the
     dictionary <record>, which is in <field>:<value> form, using db (not user-friendly)
     fields -- i.e., ids for enums and foreign keys -- excluding the Id field.
@@ -386,6 +388,12 @@ def save_one_to_db(session,element,record):
             problems.append('No data given for insert.')
         try:
             df = pd.DataFrame({k:[v] for k,v in record.items()})
+            # currently this upsert only used for the _datafile record
+            if upsert:
+                session.execute(f'''
+                    DELETE FROM _datafile 
+                    WHERE short_name = '{record['short_name']}';''')
+                session.commit()                
             df.to_sql(element,session.bind,if_exists='append',index=False)
             enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(session,element,record)
             fk_plaintext_dict = mr.fk_plaintext_dict_from_db_record(
@@ -397,8 +405,8 @@ def save_one_to_db(session,element,record):
                 field_str = m.group("fields")
                 value_str = m.group("values")
                 use_existing = input(f'Record already exists with value(s)\n\t{value_str}\n'
-                                     f'in field(s)\n\t{field_str}\n'
-                                     f'Use existing record (y/n?\n')
+                                    f'in field(s)\n\t{field_str}\n'
+                                    f'Use existing record (y/n?\n')
                 if use_existing == 'y':
                     # pull record from db
                     fields = field_str.split(',')
@@ -508,3 +516,12 @@ def get_input_options(session, input):
             JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" \
             WHERE rut."Txt" = \'{search_str}\'')
         return [r[0] for r in result]
+
+
+def get_datafile_info(session, results_file):
+    q = session.execute(f'''
+        SELECT "Id", "Election_Id" 
+        FROM _datafile 
+        WHERE file_name = '{results_file}'
+        ''').fetchall()
+    return q[0]

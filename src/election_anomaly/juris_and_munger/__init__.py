@@ -94,8 +94,10 @@ class Jurisdiction:
         self.short_name = short_name
         self.path_to_juris_dir = os.path.join(path_to_parent_dir, self.short_name)
 
-        with open(os.path.join(self.path_to_juris_dir,'remark.txt'),'r') as f:
-            remark = f.read()
+        remark_path = os.path.join(self.path_to_juris_dir,'remark.txt')
+        if os.path.exists(remark_path):
+            with open(os.path.join(self.path_to_juris_dir,'remark.txt'),'r') as f:
+                remark = f.read()
 
 
 class Munger:
@@ -279,6 +281,7 @@ def ensure_juris_files(juris_path,project_root):
                       f != 'remark.txt' and f not in os.listdir(templates_dir) and f[0] != '.']
         if extraneous:
             error_ensure_juris_files["extraneous_files_in_juris_directory"] = extraneous
+            extraneous = []
 
     template_list = [x[:-4] for x in os.listdir(templates_dir)]
 
@@ -623,10 +626,13 @@ def juris_dependency_dictionary():
 def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,load_refs=True):
     """ TODO
     """
-    # TODO fail gracefully if file does not exist
     cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
-    df = pd.read_csv(
-        os.path.join(juris_path,f'{element}.txt'),sep='\t',encoding='iso-8859-1').fillna('none or unknown')
+    element_fpath = os.path.join(juris_path,f'{element}.txt')
+    if not os.path.exists(element_fpath):
+        error[f'{element}.txt'] = "file not found"
+        return
+    df = pd.read_csv(element_fpath,sep='\t',encoding='iso-8859-1') \
+        .fillna('none or unknown')
     # TODO check that df has the right format
 
     # TODO deal with duplicate 'none or unknown' records

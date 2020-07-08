@@ -582,21 +582,26 @@ def enter_and_check_datatype(question,datatype):
 
 
 def read_datafile(munger,f_path):
-	if munger.file_type in ['txt','csv']:
-		kwargs = {'encoding':munger.encoding,'quoting':csv.QUOTE_MINIMAL,'header':list(range(munger.header_row_count)),
-			'thousands':munger.thousands_separator}
-		if munger.file_type == 'txt':
-			kwargs['sep'] = '\t'
-		df = pd.read_csv(f_path,**kwargs)
+	try:
+		if munger.file_type in ['txt','csv']:
+			kwargs = {'encoding':munger.encoding,'quoting':csv.QUOTE_MINIMAL,'header':list(range(munger.header_row_count)),
+				'thousands':munger.thousands_separator}
+			if munger.file_type == 'txt':
+				kwargs['sep'] = '\t'
+			df = pd.read_csv(f_path,**kwargs)
 
-	elif munger.file_type in ['xls','xlsx']:
-		df = pd.read_excel(f_path,dtype=str,thousands=munger.thousands_separator)
-	else:
-		raise mr.MungeError(f'Unrecognized file_type in munger: {munger.file_type}')
-	return df
+		elif munger.file_type in ['xls','xlsx']:
+			df = pd.read_excel(f_path,dtype=str,thousands=munger.thousands_separator)
+		else:
+			raise mr.MungeError(f'Unrecognized file_type in munger: {munger.file_type}')
+		return df
+	except:
+		# DFs have trouble comparing against None. So we return an empty DF and 
+		# check for emptiness below as an indication of an error.
+		return pd.DataFrame()
 
 
-def new_datafile(session,munger,raw_path,project_root=None,juris=None):
+def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_info=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
@@ -606,19 +611,22 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 		juris = pick_juris_from_filesystem(
 			project_root,juriss_dir='jurisdictions')
 	raw = read_datafile(munger,raw_path)
+	if raw.empty:
+		print('Datafile unable to be parsed with munger. Results not loaded to database. '
+			'Please check compatibilty between the two and try again.')
+		return
+	
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
 
 	raw = mr.clean_raw_df(raw,munger)
 	# NB: info_cols will have suffix added by munger
 
 	# check jurisdiction against raw results file, adapting jurisdiction files as necessary
-	check_juris = input(f'Check jurisdiction {juris.short_name} against raw results (y/n)?\n')
-	if check_juris == 'y':
-		if juris.check_against_raw_results(raw,munger,count_columns_by_name):
-			# if jurisdction changed, load to db
-			juris.load_juris_to_db(session,project_root)
+	# TODO: incorporate juris.check_against_raw_results(raw,munger,count_columns_by_name)
+	# if jurisdction changed, load to db
+	juris.load_juris_to_db(session,project_root)
 
-	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name)
+	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,results_info)
 	print(f'Datafile contents uploaded to database {session.bind.engine}')
 	return
 
@@ -719,3 +727,43 @@ def get_runtime_parameters(keys, param_file=None):
 		missing_params = None
 
 	return d, missing_params
+
+def set_record_info_from_user(sess,element,known_info_d={}):
+
+	#Collect new record info from user and return a dictionary ready to be written to element table
+
+	# read existing info from db
+	all_from_db = pd.read_sql_table(element,sess.bind,index_col='Id')
+	db_cols = list(all_from_db.columns)  # note: does not include 'Id'
+
+	new = {}
+	error = []
+
+	for c in db_cols:
+		# define new[c] if value is known
+		if c in known_info_d.keys():
+			new[c] = known_info_d[c]
+		else:
+			new[c] = None
+
+
+
+	#Get foreign key references.
+	fk_df = dbr.get_foreign_key_df(sess,element)
+
+#replaces foreign key id's inplace of user provided names.
+	for c in fk_df.index:
+		c_plain = c[:-3]
+		if c in new.keys():
+			new[c] = dbr.name_to_id(sess, fk_df.loc[c, 'foreign_table_name'], new[c])
+			if new[c] == None:
+				error.append(f'{known_info_d[c]} is invalid c_plain')
+		# TODO display valid entries in the error report.
+
+
+
+	db_record = {k: new[k] for k in db_cols}
+
+	return db_record, error
+
+
