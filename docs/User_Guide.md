@@ -19,6 +19,7 @@ Create a DataLoader instance and check for errors in the Jurisdiction and Munger
 >>> 
 ```
 If all errors are `None`, the DataLoader initialization will have loaded information in the Jurisdiction folder (e.g, contest and candidate names) into the database. You are ready to process the results file. The five error categories are: 
+
  0. parameter errors 
  1. missing files or consistency errors in existing jurisdiction directory
  2. errors due to non-existent jurisdiction directory
