@@ -1,0 +1,9 @@
+name	raw_identifier_formula	source
+ReportingUnit	Ward <WARD>;Division <DIVISION>	row
+Election		other
+Party	<PARTY>	row
+CandidateContest	<CATEGORY>	row
+Candidate	<SELECTION>	row
+BallotMeasureContest	<CATEGORY>	row
+BallotMeasureSelection	<SELECTION>	row
+CountItemType	<TYPE>	row

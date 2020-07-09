@@ -20,7 +20,7 @@ class Jurisdiction:
             d = pd.read_csv(
                 os.path.join(
                     self.path_to_juris_dir,'dictionary.txt'
-                ),sep='\t',index_col='cdf_element')
+                ),sep='\t',index_col='cdf_element',encoding='iso-8859-1')
 
             problems = []
             # for each relevant element
@@ -76,174 +76,118 @@ class Jurisdiction:
         juris_elements = leading + [
             x for x in juris_elements if x not in leading and x not in trailing
         ] + trailing
+        error = {}
         for element in juris_elements:
             # read df from Jurisdiction directory
-
-            load_juris_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root)
-        return
+            load_juris_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root,error)
+        if error:
+            for element in juris_elements:
+                dbr.truncate_table(session, element)
+            return error
+        return None
 
     def __init__(self,short_name,path_to_parent_dir):
         """ short_name is the name of the directory containing the jurisdiction info, including data,
          and is used other places as well.
          path_to_parent_dir is the parent directory of dir_name
         """
-        self.short_name = ui.pick_or_create_directory(path_to_parent_dir,short_name)
+        self.short_name = short_name
         self.path_to_juris_dir = os.path.join(path_to_parent_dir, self.short_name)
 
-        with open(os.path.join(self.path_to_juris_dir,'remark.txt'),'r') as f:
-            remark = f.read()
-        print(f'\n\nJurisdiction {short_name} initialized! Note:\n{remark}')
+        remark_path = os.path.join(self.path_to_juris_dir,'remark.txt')
+        if os.path.exists(remark_path):
+            with open(os.path.join(self.path_to_juris_dir,'remark.txt'),'r') as f:
+                remark = f.read()
 
 
 class Munger:
     def check_against_self(self):
-        """check that munger is internally consistent; offer user chance to correct munger"""
-        checked = False
-        while not checked:
-            checked = True
-            problems = []
+        """check that munger is internally consistent"""
+        problems = []
 
-            # every source is either row, column or other
-            bad_source = [x for x in self.cdf_elements.source if x not in ['row','column','other']]
-            if bad_source:
-                b_str = ','.join(bad_source)
-                problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
+        # every source is either row, column or other
+        bad_source = [x for x in self.cdf_elements.source if x not in ['row','column','other']]
+        if bad_source:
+            b_str = ','.join(bad_source)
+            problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
 
-            # formulas have good syntax
-            bad_formula = [x for x in self.cdf_elements.raw_identifier_formula.unique() if not mr.good_syntax(x)]
-            if bad_formula:
-                f_str = ','.join(bad_formula)
-                problems.append(f'''At least one formula in cdf_elements.txt has bad syntax: {f_str} ''')
+        # formulas have good syntax
+        bad_formula = [x for x in self.cdf_elements.raw_identifier_formula.unique() if not mr.good_syntax(x)]
+        if bad_formula:
+            f_str = ','.join(bad_formula)
+            problems.append(f'''At least one formula in cdf_elements.txt has bad syntax: {f_str} ''')
 
-            # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows
-            p_not_just_digits = re.compile(r'<.*\D.*>')
-            p_catch_digits = re.compile(r'<(\d+)>')
-            bad_column_formula = set()
-            for i,r in self.cdf_elements[self.cdf_elements.source == 'column'].iterrows():
-                if p_not_just_digits.search(r['raw_identifier_formula']):
-                    bad_column_formula.add(r['raw_identifier_formula'])
-                else:
-                    integer_list = [int(x) for x in p_catch_digits.findall(r['raw_identifier_formula'])]
-                    bad_integer_list = [x for x in integer_list if (x > self.header_row_count-1 or x < 0)]
-                    if bad_integer_list:
-                        bad_column_formula.add(r['raw_identifier_formula'])
-            if bad_column_formula:
-                cf_str = ','.join(bad_column_formula)
-                problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
-
-            # TODO if field in formula matches an element self.cdf_element.index,
-            #  check that rename is not also a column
-            if problems:
-                checked = False
-                ui.report_problems(problems)
-                input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
-                      f'Then hit enter to continue.')
-                [self.cdf_elements,self.header_row_count,self.field_name_row,self.count_columns,
-                 self.file_type,self.encoding,self.thousands_separator] = read_munger_info_from_files(
-                    self.path_to_munger_dir)
-        return
-
-    def check_against_db(self,sess):
-        """check that munger is consistent with db; offer user chance to correct munger"""
-        checked = False
-        while not checked:
-            problems = []
-            # set of cdf_elements in cdf_elements.txt is same as set pulled from db
-            db_elements = dbr.get_cdf_db_table_names(sess.bind)[0]
-            db_elements.add('CountItemType')
-            db_elements.add('BallotMeasureSelection')
-            db_elements.add('_datafile')
-            db_elements.remove('CandidateSelection')
-            db_elements.remove('ExternalIdentifier')
-            db_elements.remove('VoteCount')
-            db_elements.remove('Office')
-            # TODO why these? make this programmatic
-
-            m_elements = self.cdf_elements.index
-            db_only = [x for x in db_elements if x not in m_elements]
-            m_only = [x for x in m_elements if x not in db_elements]
-
-            if db_only:
-                db_str = ','.join(db_only)
-                problems.append(f'Some cdf elements in the database are not listed in the munger: {db_str}')
-            if m_only:
-                m_str = ','.join(m_only)
-                problems.append(f'Some cdf elements in the munger are not in the database: {m_str}')
-
-            if problems:
-                checked = False
-                ui.report_problems(problems)
-                input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
-                      f'Then hit enter to continue.')
-                [self.cdf_elements,self.header_row_count,self.field_name_row,self.count_columns,
-                 self.file_type,self.encoding,self.thousands_separator] = read_munger_info_from_files(
-                    self.path_to_munger_dir)
+        # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows
+        p_not_just_digits = re.compile(r'<.*\D.*>')
+        p_catch_digits = re.compile(r'<(\d+)>')
+        bad_column_formula = set()
+        for i,r in self.cdf_elements[self.cdf_elements.source == 'column'].iterrows():
+            if p_not_just_digits.search(r['raw_identifier_formula']):
+                bad_column_formula.add(r['raw_identifier_formula'])
             else:
-                checked = True
-                print(f'Munger {self.name} checked against database.')
-        return
+                integer_list = [int(x) for x in p_catch_digits.findall(r['raw_identifier_formula'])]
+                bad_integer_list = [x for x in integer_list if (x > self.header_row_count-1 or x < 0)]
+                if bad_integer_list:
+                    bad_column_formula.add(r['raw_identifier_formula'])
+        if bad_column_formula:
+            cf_str = ','.join(bad_column_formula)
+            problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
 
-    def check_against_datafile(self,datafile_path):
+        # TODO if field in formula matches an element self.cdf_element.index,
+        #  check that rename is not also a column
+        if problems:
+            error = {}
+            error["munger_internal_consistency"] = ", ".join(problems)
+            return error
+        else:
+            return None
+
+    def check_against_datafile(self,datafile_path,check_first_row=False):
         """check that munger is compatible with datafile <raw>;
         offer user chance to correct munger"""
 
         # initialize to keep syntax-checker happy
         raw = pd.DataFrame([[]])
 
-        checked = False
-        while not checked:
-            problems = []
+        error = {}
 
-            # check encoding
-            try:
-                raw = ui.read_datafile(self,datafile_path)
-            except UnicodeEncodeError:
-                problems.append(f'Datafile is not encoded as {self.encoding}.')
+        # check encoding
+        try:
+            raw = ui.read_datafile(self,datafile_path)
+        except UnicodeEncodeError:
+            error["encoding"] = f'Datafile is not encoded as {self.encoding}.'
 
-            # check that all count_columns are indeed read as integers
-            bad_columns = [raw.columns[idx] for idx in self.count_columns if raw.dtypes[idx] != 'int64']
-            if bad_columns:
-                bad_col_string = '\n\t'.join(bad_columns)
-                problems.append(f'Munger fails to parse some VoteCount columns in the results file as integers:\n'
-                                f'{bad_col_string}')
+        # check that all count_columns are indeed read as integers
+        bad_columns = [raw.columns[idx] for idx in self.count_columns if raw.dtypes[idx] != 'int64']
+        if bad_columns:
+            bad_col_string = '\n\t'.join(bad_columns)
+            error["vote_count_columns"] = \
+                f'Munger fails to parse some VoteCount columns in the results file as integers:\n' \
+                f'{bad_col_string}'
 
-            non_count_integer_cols = [x for x in raw.columns if raw[x].dtype == 'int64' and
-                                      raw.columns.get_loc(x) not in self.count_columns]
-            if non_count_integer_cols:
-                ncic_string = '\n\t'.join(non_count_integer_cols)
-                ncic_ok = input(f'Munger parses the following columns as integers, but does not recognize them as'
-                                f'VoteCount columns.\n{ncic_string}\nIs this correct (y/n)?\n')
-                if ncic_ok != 'y':
-                    problems.append(f'Count_columns line in the format.txt file needs to be corrected.\n'
-                                    f'Value should be a comma-separated list of integers. Convention is\n'
-                                    f'to label the leftmost column 0.')
+        non_count_integer_cols = [x for x in raw.columns if raw[x].dtype == 'int64' and
+                                    raw.columns.get_loc(x) not in self.count_columns]
+        if non_count_integer_cols:
+            ncic_string = '\n\t'.join(non_count_integer_cols)
+            error["integer_columns"] = f'Munger parses the following columns as integers, ' \
+                            f'but does not recognize them as VoteCount columns.\n{ncic_string}\n' \
+                            f'Count_columns line in the format.txt file may need to be corrected.\n'
 
-            col_fields = '\n\t'.join(raw.columns)
-            cf_ok = input(f'Munger reads the following column fields from datafile (one per line):\n\t'
-                          f'{col_fields}\nAre these correct (y/n)?\n')
-            if cf_ok == 'y' and raw.shape[1] <3:
-                cf_ok = input(f'Are you sure? Is each SEPARATE LINE above a single field (y/n)?\n')
-            if cf_ok != 'y':
-                problems.append(f'Either column_field_row ({col_fields}) or file_type ({self.file_type}) is incorrect.')
+        if raw.shape[1] < 3:
+            error["row_count"] = f'Munger is reading a minimal number of columns.' \
+                            f'Check that column_field_row ({col_fields}) and' \
+                            f'file_type ({self.file_type}) are correct.'
 
-            # user confirm first data row
+        # user confirm first data row
+        if check_first_row:
             first_data_row = '\t'.join([f'{x}' for x in raw.iloc[0]])
-            fdr_ok = input(f'Munger thinks the first data row is:\n{first_data_row}\n'
-                           f'Is this correct (y/n)?\n')
-            if fdr_ok != 'y':
-                problems.append('header_row_count does not match the datafile.')
+            error["first_data_row"] = \
+                f'Munger thinks the first data row is:\n{first_data_row}\n'
 
-            if problems:
-                ui.report_problems(problems)
-                input(f'Correct the problems by editing the files in the directory {self.path_to_munger_dir}\n'
-                      f'Then hit enter to continue.')
-                [self.cdf_elements,self.header_row_count,self.field_name_row,self.count_columns,
-                 self.file_type,self.encoding,self.thousands_separator] = read_munger_info_from_files(
-                    self.path_to_munger_dir)
-            else:
-                checked = True
+        if error:
+            return error
         # TODO allow user to pick different munger from file system
-        return
+        return None
 
     def __init__(self,dir_path,project_root=None,check_files=True):
         """<dir_path> is the directory for the munger."""
@@ -253,10 +197,7 @@ class Munger:
         self.path_to_munger_dir = dir_path
 
         # create dir if necessary
-        if os.path.isdir(dir_path):
-            print(f'Directory {self.name} exists.')
-        else:
-            print(f'Creating directory {self.name}')
+        if not os.path.isdir(dir_path):
             Path(dir_path).mkdir(parents=True,exist_ok=True)
 
         if check_files:
@@ -275,7 +216,8 @@ class Munger:
 
 def read_munger_info_from_files(dir_path):
     # read cdf_element info and
-    cdf_elements = pd.read_csv(os.path.join(dir_path,'cdf_elements.txt'),sep='\t',index_col='name').fillna('')
+    cdf_elements = pd.read_csv(
+        os.path.join(dir_path,'cdf_elements.txt'),sep='\t',index_col='name',encoding='iso-8859-1').fillna('')
     # add row for _datafile element
     datafile_elt = pd.DataFrame([['','other']],columns=['raw_identifier_formula','source'],index=['_datafile'])
     cdf_elements = cdf_elements.append(datafile_elt)
@@ -286,7 +228,7 @@ def read_munger_info_from_files(dir_path):
         cdf_elements.loc[i,'fields'] = [f for t,f in text_field_list]
 
     # read formatting info
-    format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep='\t',index_col='item')
+    format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep='\t',index_col='item',encoding='iso-8859-1')
     field_name_row = int(format_info.loc['field_name_row','value'])
     header_row_count = int(format_info.loc['header_row_count','value'])
     count_columns = [int(x) for x in format_info.loc['count_columns','value'].split(',')]
@@ -303,23 +245,33 @@ def read_munger_info_from_files(dir_path):
 
 # TODO combine ensure_jurisdiction_files with ensure_juris_files
 def ensure_jurisdiction_files(juris_path,project_root):
+    path_output = None
     # create jurisdiction directory
     try:
         os.mkdir(juris_path)
     except FileExistsError:
-        print(f'Directory {juris_path} already exists, will be preserved')
+        pass
     else:
-        print(f'Directory {juris_path} created')
+        path_output = 'Directory {'+juris_path+'} created.'
+        #todo should the program exit if the directory is created ?
 
     # ensure the contents of the jurisdiction directory are correct
-    ensure_juris_files(juris_path,project_root)
-    return
+    juris_file_error = ensure_juris_files(juris_path,project_root)
+    if path_output:
+        juris_file_error["directory_status"] = path_output
+    if juris_file_error:
+        return juris_file_error
+    else:
+        return None
 
 
 def ensure_juris_files(juris_path,project_root):
     """Check that the jurisdiction files are complete and consistent with one another.
     Check for extraneous files in Jurisdiction directory.
     Assumes Jurisdiction directory exists. Assumes dictionary.txt is in the template file"""
+
+    #package possible errors from this function into a dictionary and return them
+    error_ensure_juris_files = {}
 
     templates_dir = os.path.join(project_root,'templates/jurisdiction_templates')
     # ask user to remove any extraneous files
@@ -328,8 +280,8 @@ def ensure_juris_files(juris_path,project_root):
         extraneous = [f for f in os.listdir(juris_path) if
                       f != 'remark.txt' and f not in os.listdir(templates_dir) and f[0] != '.']
         if extraneous:
-            ui.report_problems(extraneous,msg=f'There are extraneous files in {juris_path}')
-            input(f'Remove all extraneous files; then hit return to continue.')
+            error_ensure_juris_files["extraneous_files_in_juris_directory"] = extraneous
+            extraneous = []
 
     template_list = [x[:-4] for x in os.listdir(templates_dir)]
 
@@ -337,119 +289,157 @@ def ensure_juris_files(juris_path,project_root):
     ordered_list = ['dictionary','ReportingUnit','Office','CandidateContest']
     template_list = ordered_list + [x for x in template_list if x not in ordered_list]
 
+    file_empty = []
+    column_errors =[]
+    null_columns_dict = {}
+    duplicate_files = []
+
     # ensure necessary all files exist
     for juris_file in template_list:
-        print(f'\nChecking {juris_file}.txt')
+        #a list of file empty errors
         cf_path = os.path.join(juris_path,f'{juris_file}.txt')
+        created = False
         # if file does not already exist in jurisdiction directory, create from template and invite user to fill
         try:
-            temp = pd.read_csv(os.path.join(templates_dir,f'{juris_file}.txt'),sep='\t')
+            temp = pd.read_csv(os.path.join(templates_dir,f'{juris_file}.txt'),sep='\t',encoding='iso-8859-1')
         except pd.errors.EmptyDataError:
-            print(f'Template file {juris_file}.txt has no contents')
+            file_empty.append('Template file {'+juris_file+'}.txt has no contents')
+            # print(f'Template file {juris_file}.txt has no contents')
             temp = pd.DataFrame()
         if not os.path.isfile(cf_path):
             temp.to_csv(cf_path,sep='\t',index=False)
-            input(f'File {juris_file}.txt has just been created.\n'
-                  f'Enter information in the file, then hit return to continue.')
+            file_empty.append('File {'+juris_file+'}.txt has just been created. Enter information in the file')
+            created = True
 
         # if file exists, check format against template
-        cf_df = pd.read_csv(os.path.join(juris_path,f'{juris_file}.txt'),sep='\t')
-        format_confirmed = False
-        while not format_confirmed:
-            if set(cf_df.columns) != set(temp.columns):
-                cols = '\t'.join(temp.columns.to_list())
-                input(f'Columns of {juris_file}.txt need to be (tab-separated):\n'
-                      f' {cols}\n'
-                      f'Edit {juris_file}.txt, and hit return to continue.')
-            else:
-                format_confirmed = True
+        if not created:
+            cf_df = pd.read_csv(os.path.join(juris_path,f'{juris_file}.txt'),sep='\t',encoding='iso=8859-1')
+            format_confirmed = False
+            while not format_confirmed:
+                if set(cf_df.columns) != set(temp.columns):
+                    cols = '\t'.join(temp.columns.to_list())
+                    column_errors.append(f'Columns of {juris_file}.txt need to be (tab-separated):\n '
+                                        f' {cols}\n')
+                else:
+                    format_confirmed = True
 
-        if juris_file == 'ExternalIdentifier':
-            dedupe(cf_path)
-        elif juris_file == 'dictionary':
-            dedupe(cf_path)
-        else:
-            # run dupe check
-            dedupe(cf_path)
-            # check for problematic null entries
-            check_nulls(juris_file,cf_path,project_root)
+            if juris_file == 'ExternalIdentifier':
+                d, dupe =  dedupe(cf_path)
+            elif juris_file == 'dictionary':
+                d, dupe = dedupe(cf_path)
+            else:
+                # run dupe check
+                d, dupe = dedupe(cf_path)
+                # check for problematic null entries
+                null_columns = check_nulls(juris_file,cf_path,project_root)
+                if null_columns:
+                    null_columns_dict[juris_file] = null_columns
+
+            if dupe != '':
+                duplicate_files.append(dupe)
+
+            if column_errors:
+                error_ensure_juris_files["column_errors"] = column_errors
+            if null_columns_dict:
+                error_ensure_juris_files["null_columns"] = null_columns_dict
+            if duplicate_files:
+                error_ensure_juris_files["duplicate_files"] = duplicate_files
+
+        if file_empty:
+            error_ensure_juris_files["file_empty_errors"] = file_empty
+
     # check dependencies
+    dependency_error = []
     for juris_file in [x for x in template_list if x != 'remark' and x != 'dictionary']:
         # check dependencies
-        check_dependencies(juris_path,juris_file)
-    # remark
-    rem_path = os.path.join(juris_path,'remark.txt')
-    try:
-        with open(rem_path,'r') as f:
-            remark = f.read()
-        print(f'Current contents of remark.txt is:\n{remark}\n')
-    except FileNotFoundError:
-        open(rem_path, 'a').close()  # create empty file
-    input(
-        f'In the file remark.txt, add or correct anything that '
-        f'user should know about the jurisdiction.\n'
-        f'Then hit return to continue.')
-    return
+        d, dep_error = check_dependencies(juris_path,juris_file)
+        if dep_error:
+            dependency_error.append(dep_error)
+    if dependency_error:
+        error_ensure_juris_files["failed_dependencies"] = dependency_error
+    if error_ensure_juris_files:
+        return error_ensure_juris_files
+    else:
+        return {}
 
 
 # noinspection PyUnresolvedReferences
 def ensure_munger_files(munger_name,project_root=None):
     """Check that the munger files are complete and consistent with one another.
-    Assumes munger directory exists. Assumes dictionary.txt is in the template file"""
-    if not project_root:
-        project_root = ui.get_project_root()
-
+    Adds munger directory and files if they do not exist. 
+    Assumes dictionary.txt is in the template file"""
     # define path to directory for the specific munger
     munger_path = os.path.join(project_root,'mungers',munger_name)
     # ensure all files exist
+    created = []
+    if not os.path.isdir(munger_path):
+        created.append(munger_path)
+        os.makedirs(munger_path)
     templates = os.path.join(project_root,'templates/munger_templates')
     template_list = [x[:-4] for x in os.listdir(templates)]
 
+
+    error = {}
     # create each file if necessary
     for munger_file in template_list:
-        print(f'Checking {munger_file}.txt')
         cf_path = os.path.join(munger_path,f'{munger_file}.txt')
         # if file does not already exist in munger dir, create from template and invite user to fill
-        try:
-            temp = pd.read_csv(os.path.join(templates,f'{munger_file}.txt'),sep='\t')
-        except pd.error.EmptyDataError:
-            print(f'Template file {munger_file}.txt has no contents')
-            temp = pd.DataFrame()
-        if not os.path.isfile(cf_path):
+        file_exists = os.path.isfile(cf_path)
+        if not file_exists:
+            temp = pd.read_csv(os.path.join(templates,f'{munger_file}.txt'),sep='\t',encoding='iso-8859-1')
+            created.append(f'{munger_file}.txt')
             temp.to_csv(cf_path,sep='\t',index=False)
-            input(f'Enter information in the file {munger_file}.txt. Then hit return to continue.')
 
         # if file exists, check format against template
-        cf_df = pd.read_csv(os.path.join(munger_path,f'{munger_file}.txt'),sep='\t')
-        format_confirmed = False
-        while not format_confirmed:
-            problems = []
-            # check column names are correct
-            if set(cf_df.columns) != set(temp.columns):
-                cols = '\t'.join(temp.columns.to_list())
-                problems.append(f'Columns of {munger_file}.txt need to be (tab-separated):\n'
-                      f' {cols}\n')
+        if file_exists:
+            err = check_munger_file_format(munger_path, munger_file, templates)
+            if err:
+                error[f'{munger_file}.txt'] = err
 
-            # check first column matches template
-            #  check same number of rows
-            elif cf_df.shape[0] != temp.shape[0]:
-                first_col = '\n'.join(list(temp.iloc[:,0]))
-                problems.append(
-                    f'Wrong number of rows in {munger_file}.txt. \nFirst column must be exactly:\n{first_col}')
-            elif set(cf_df.iloc[:,0]) != set(temp.iloc[:,0]):
-                first_error = (cf_df.iloc[:,0] != temp.iloc[:,0]).index.to_list()[0]
-                first_col = '\n'.join(list(temp.iloc[:,0]))
-                problems.append(f'First column of {munger_file}.txt must be exactly:\n{first_col}\n'
-                                f'First error is at row {first_error}: {cf_df.loc[first_error]}')
-            if problems:
-                ui.report_problems(problems)
-                input(f'Edit {cf_path} and hit return to continue.')
-            else:
-                format_confirmed = True
-    # check contents of each file
-    check_munger_file_contents(munger_name,project_root=project_root)
-    return
+    # check contents of each file if they were not newly created and
+    # if they have successfully been checked for the format
+    if file_exists and not error:
+        err = check_munger_file_contents(munger_name,project_root=project_root)
+        if err:
+            error["contents"] = err
 
+    if created:
+        created = ', '.join(created)
+        error["newly_created"] = created
+    if error:
+        return error
+    return None
+
+
+def check_munger_file_format(munger_path, munger_file, templates):
+    cf_df = pd.read_csv(os.path.join(munger_path,f'{munger_file}.txt'),sep='\t',encoding='iso-8859-1')
+    temp = pd.read_csv(os.path.join(templates,f'{munger_file}.txt'),sep='\t',encoding='iso-8859-1')
+    problems = []
+    # check column names are correct
+    if set(cf_df.columns) != set(temp.columns):
+        cols = '\t'.join(temp.columns.to_list())
+        problems.append(f'Columns of {munger_file}.txt need to be (tab-separated):\n'
+            f' {cols}\n')
+
+    # check first column matches template
+    #  check same number of rows
+    elif cf_df.shape[0] != temp.shape[0]:
+        first_col = '\n'.join(list(temp.iloc[:,0]))
+        problems.append(
+            f'Wrong number of rows in {munger_file}.txt. \nFirst column must be exactly:\n{first_col}')
+    elif set(cf_df.iloc[:,0]) != set(temp.iloc[:,0]):
+        first_error = (cf_df.iloc[:,0] != temp.iloc[:,0]).index.to_list()[0]
+        first_col = '\n'.join(list(temp.iloc[:,0]))
+        problems.append(f'First column of {munger_file}.txt must be exactly:\n{first_col}\n'
+                        f'First error is at row {first_error}: {cf_df.loc[first_error]}')
+
+    if problems:
+        problems = ', '.join(problems)
+        error = {}
+        error["format_problems"] = problems
+    else:
+        error = None
+    return error
 
 def check_munger_file_contents(munger_name,project_root=None):
     """check that munger files are internally consistent; offer user chance to correct"""
@@ -458,127 +448,122 @@ def check_munger_file_contents(munger_name,project_root=None):
         project_root = ui.get_project_root()
     munger_dir = os.path.join(project_root,'mungers',munger_name)
 
-    checked = False
-    while not checked:
-        problems = []
-        warns = []
+    problems = []
+    warns = []
 
-        # read cdf_elements and format from files
-        cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),sep='\t').fillna('')
-        format_df = pd.read_csv(os.path.join(munger_dir,'format.txt'),sep='\t',index_col='item').fillna('')
-        template_format_df = pd.read_csv(
-            os.path.join(
-                project_root,'templates/munger_templates/format.txt'
-            ),sep='\t',index_col='item'
-        ).fillna('')
+    # read cdf_elements and format from files
+    cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),sep='\t',encoding='iso-8859-1').fillna('')
+    format_df = pd.read_csv(
+        os.path.join(munger_dir,'format.txt'),sep='\t',index_col='item',encoding='iso-8859-1').fillna('')
+    template_format_df = pd.read_csv(
+        os.path.join(
+            project_root,'templates/munger_templates/format.txt'),sep='\t',index_col='item',encoding='iso-8859-1'
+    ).fillna('')
 
-        # format.txt has the required items
-        req_list = template_format_df.index
-        missing_items = [x for x in req_list if x not in format_df.index]
-        if missing_items:
-            item_string = ','.join(missing_items)
-            problems.append(f'Format file is missing some items: {item_string}')
+    # format.txt has the required items
+    req_list = template_format_df.index
+    missing_items = [x for x in req_list if x not in format_df.index]
+    if missing_items:
+        item_string = ','.join(missing_items)
+        problems.append(f'Format file is missing some items: {item_string}')
 
-        # entries in format.txt are of correct type
-        if not format_df.loc['header_row_count','value'].isnumeric():
-            problems.append(f'In format file, header_row_count must be an integer'
-                            f'({format_df.loc["header_row_count","value"]} is not.)')
-        if not format_df.loc['field_name_row','value'].isnumeric():
-            problems.append(f'In format file, field_name_row must be an integer '
-                            f'({format_df.loc["field_name_row","value"]} is not.)')
-        if not format_df.loc['encoding','value'] in ui.recognized_encodings:
-            warns.append(f'Encoding {format_df.loc["field_name_row","value"]} in format file is not recognized.')
+    # entries in format.txt are of correct type
+    if not format_df.loc['header_row_count','value'].isnumeric():
+        problems.append(f'In format file, header_row_count must be an integer'
+                        f'({format_df.loc["header_row_count","value"]} is not.)')
+    if not format_df.loc['field_name_row','value'].isnumeric():
+        problems.append(f'In format file, field_name_row must be an integer '
+                        f'({format_df.loc["field_name_row","value"]} is not.)')
+    if not format_df.loc['encoding','value'] in ui.recognized_encodings:
+        warns.append(f'Encoding {format_df.loc["field_name_row","value"]} in format file is not recognized.')
 
-        # every source is either row, column or other
-        bad_source = [x for x in cdf_elements.source if x not in ['row','column','other']]
-        if bad_source:
-            b_str = ','.join(bad_source)
-            problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
+    # every source is either row, column or other
+    bad_source = [x for x in cdf_elements.source if x not in ['row','column','other']]
+    if bad_source:
+        b_str = ','.join(bad_source)
+        problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
 
-        # formulas have good syntax
-        bad_formula = [x for x in cdf_elements.raw_identifier_formula.unique() if not mr.good_syntax(x)]
-        if bad_formula:
-            f_str = ','.join(bad_formula)
-            problems.append(f'''At least one formula in cdf_elements.txt has bad syntax: {f_str} ''')
+    # formulas have good syntax
+    bad_formula = [x for x in cdf_elements.raw_identifier_formula.unique() if not mr.good_syntax(x)]
+    if bad_formula:
+        f_str = ','.join(bad_formula)
+        problems.append(f'''At least one formula in cdf_elements.txt has bad syntax: {f_str} ''')
 
-        # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows
-        p_not_just_digits = re.compile(r'<.*\D.*>')
-        p_catch_digits = re.compile(r'<(\d+)>')
-        bad_column_formula = set()
-        for i,r in cdf_elements[cdf_elements.source == 'column'].iterrows():
-            if p_not_just_digits.search(r['raw_identifier_formula']):
-                bad_column_formula.add(r['raw_identifier_formula'])
-            else:
-                integer_list = [int(x) for x in p_catch_digits.findall(r['raw_identifier_formula'])]
-                bad_integer_list = [
-                    x for x in integer_list if (x > int(format_df.loc['header_row_count','value'])-1 or x < 0)]
-                if bad_integer_list:
-                    bad_column_formula.add(r['raw_identifier_formula'])
-        if bad_column_formula:
-            cf_str = ','.join(bad_column_formula)
-            problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
+    # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows
+    p_not_just_digits = re.compile(r'<.*\D.*>')
+    p_catch_digits = re.compile(r'<(\d+)>')
+    bad_column_formula = set()
 
-        # TODO if field in formula matches an element self.cdf_element.index,
-        #  check that rename is not also a column
-        if problems:
-            ui.report_problems(problems)
-            print(f'Correct the problems by editing files in {munger_dir}\n')
-            if warns:
-                warn_string = '\n\t'.join(warns)
-                print(f'You may wish to address these potential problems as well:\n\t{warn_string}')
-            input(f'Then hit enter to continue.')
+    # problems found above may cause this block of code to error out, so this is
+    # wrapped in a try block since it returns a general error message
+    for i,r in cdf_elements[cdf_elements.source == 'column'].iterrows():
+        if p_not_just_digits.search(r['raw_identifier_formula']):
+            bad_column_formula.add(r['raw_identifier_formula'])
         else:
-            checked = True
-            if warns:
-                warn_string = '\n\t'.join(warns)
-                print(f'Potential problems found:\n\t{warn_string}')
-                address = input('Would you like to address any of these (y/n)?\n')
-                if address:
-                    input(f'Address potential problems by editing files in {munger_dir}.\n Then hit enter to continue.')
-                    checked = False
-    return
+            integer_list = [int(x) for x in p_catch_digits.findall(r['raw_identifier_formula'])]
+            bad_integer_list = [
+                x for x in integer_list if (x > int(format_df.loc['header_row_count','value'])-1 or x < 0)]
+            if bad_integer_list:
+                bad_column_formula.add(r['raw_identifier_formula'])
+    if bad_column_formula:
+        cf_str = ','.join(bad_column_formula)
+        problems.append(f'''At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} ''')
+
+    # TODO if field in formula matches an element self.cdf_element.index,
+    #  check that rename is not also a column
+    error = {}
+    if problems:
+        error['problems'] = '\n\t'.join(problems)
+    if warns:
+        error['warnings'] = '\n\t'.join(warns)
+
+    if error:
+        return error
+    return None
 
 
 def dedupe(f_path,warning='There are duplicates'):
     # TODO allow specificaiton of unique constraints
-    df = pd.read_csv(f_path,sep='\t')
+    df = pd.read_csv(f_path,sep='\t',encoding='iso-8859-1')
     dupes = True
+    dupe=''
     while dupes:
         dupes_df,df = ui.find_dupes(df)
         if dupes_df.empty:
             dupes = False
-            print(f'No dupes in {f_path}')
+            # print(f'No dupes in {f_path}')
         else:
-            print(f'WARNING: {warning}\n')
-            ui.show_sample(dupes_df,'lines','are duplicates')
-            input(f'Edit the file to remove the duplication, then hit return to continue')
-            df = pd.read_csv(f_path,sep='\t')
-    return df
+            # print(f'WARNING: {warning}\n')
+            # ui.show_sample(dupes_df,'lines','are duplicates')
+            dupe = f'Edit {f_path} to remove the duplication, then hit return to continue'
+            df = pd.read_csv(f_path,sep='\t',encoding='iso-8859-1')
+    return df,dupe
 
 
 def check_nulls(element,f_path,project_root):
     # TODO write description
     nn_path = os.path.join(
         project_root,'election_anomaly/CDF_schema_def_info/elements',element,'not_null_fields.txt')
-    not_nulls = pd.read_csv(nn_path,sep='\t')
-    df = pd.read_csv(f_path,sep='\t')
+    not_nulls = pd.read_csv(nn_path,sep='\t',encoding='iso-8859-1')
+    df = pd.read_csv(f_path,sep='\t',encoding='iso-8859-1')
+
+    problems = []
 
     nulls = True
     while nulls:
-        problems = []
+
         for nn in not_nulls.not_null_fields.unique():
             # if nn is an Id, name in jurisdiction file is element name
             if nn[-3:] == '_Id':
                 nn = nn[:-3]
             n = df[df[nn].isnull()]
             if not n.empty:
-                ui.show_sample(n,f'Lines in {element} file',f'have illegal nulls in {nn}')
+                # ui.show_sample(n,f'Lines in {element} file',f'have illegal nulls in {nn}')
                 problems.append(nn)
-        if problems:
-            input(f'Fix the nulls, then hit enter to continue.')
-        else:
+        if not problems:
             nulls = False
-    return
+    return problems
+
 
 
 def check_dependencies(juris_dir,element):
@@ -588,7 +573,8 @@ def check_dependencies(juris_dir,element):
     d = juris_dependency_dictionary()
     f_path = os.path.join(juris_dir,f'{element}.txt')
     assert os.path.isdir(juris_dir)
-    element_df = pd.read_csv(f_path,sep='\t',index_col=None)
+    element_df = pd.read_csv(f_path,sep='\t',index_col=None,encoding='iso-8859-1')
+    unmatched_error = []
 
     # Find all dependent columns
     dependent = [c for c in element_df if c in d.keys()]
@@ -597,13 +583,14 @@ def check_dependencies(juris_dir,element):
     for c in dependent:
         target = d[c]
         ed = pd.read_csv(os.path.join(
-            juris_dir,f'{element}.txt'),sep='\t',header=0).fillna('').loc[:,c].unique()
+            juris_dir,f'{element}.txt'),sep='\t',header=0,encoding='iso-8859-1').fillna('').loc[:,c].unique()
 
         # create list of elements, removing any nulls
         ru = list(
             pd.read_csv(
                 os.path.join(
-                    juris_dir,f'{target}.txt'),sep='\t').fillna('').loc[:,db_routines.get_name_field(target)])
+                    juris_dir,f'{target}.txt'),sep='\t',
+                encoding='iso-8859-1').fillna('').loc[:,db_routines.get_name_field(target)])
         try:
             ru.remove(np.nan)
         except ValueError:
@@ -618,16 +605,12 @@ def check_dependencies(juris_dir,element):
         else:
             changed_elements.add(element)
             changed_elements.add(target)
-            print(f'Every {c} must be a {target}. This is not optional!!')
-            ui.show_sample(missing,f'{c}s',f'are not yet {target}s')
-            input(f'Please make corrections to {element}.txt or additions to {target}.txt to resolve the problem.\n'
-                  'Then his return to continue.')
-            changed_elements.update(check_dependencies(juris_dir,target))
-    if dependent:
-        print('\n\t'.join(report))
-    if changed_elements:
-        print(f'(Directory is {juris_dir}')
-    return changed_elements
+            unmatched_error.append(f'Every {c} must be a {target}. This is not optional!!')
+
+    # if dependent:
+    #     print('\n\t'.join(report))
+
+    return changed_elements, unmatched_error
 
 
 def juris_dependency_dictionary():
@@ -640,12 +623,16 @@ def juris_dependency_dictionary():
 
 # TODO before processing jurisdiction files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
-def load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True):
+def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,load_refs=True):
     """ TODO
     """
-    # TODO fail gracefully if file does not exist
     cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
-    df = pd.read_csv(os.path.join(juris_path,f'{element}.txt'),sep='\t').fillna('none or unknown')
+    element_fpath = os.path.join(juris_path,f'{element}.txt')
+    if not os.path.exists(element_fpath):
+        error[f'{element}.txt'] = "file not found"
+        return
+    df = pd.read_csv(element_fpath,sep='\t',encoding='iso-8859-1') \
+        .fillna('none or unknown')
     # TODO check that df has the right format
 
     # TODO deal with duplicate 'none or unknown' records
@@ -669,7 +656,10 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs
     dupes,df = ui.find_dupes(df)
     if not dupes.empty:
         print(f'WARNING: duplicates removed from dataframe, may indicate a problem.\n')
-        ui.show_sample(dupes,f'lines in {element} source data','are duplicates')
+        #ui.show_sample(dupes,f'lines in {element} source data','are duplicates')
+        if not element in error:
+            error[element] = {}
+        error[element]["found_duplicates"] = True
 
     # replace nulls with empty strings
     df.fillna('',inplace=True)
@@ -702,35 +692,30 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs
             refs = foreign_keys.loc[fn,'refers_to'].split(';')
 
             try:
-                df = get_ids_for_foreign_keys(session,df,element,fn,refs)
-                print(f'Database foreign id assigned for each {fn} in {element}.')
+                df = get_ids_for_foreign_keys(session,df,element,fn,refs,load_refs,error)
             except ForeignKeyException as e:
                 if load_refs:
                     for r in refs:
-                        load_juris_dframe_into_cdf(session,r,juris_path,project_root)
+                        load_juris_dframe_into_cdf(session,r,juris_path,project_root,error)
                     # try again to load main element (but don't load referred-to again)
-                    load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=False)
-                    return
-                else:
-                    try_again = input(
-                        f'{e}\nWould you like to make changes to the Jurisdiction directory and try again (y/n)?\n')
-                    if try_again == 'y':
-                        load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
-                        return
+                    load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,load_refs=False)
             except Exception as e:
-                try_again = input(
-                    f'{e}\nThere may be something wrong with the file {element}.txt. '
-                    f'Would you like to make changes to the Jurisdiction directory and try again (y/n)?\n')
-                if try_again == 'y':
-                    load_juris_dframe_into_cdf(session,element,juris_path,project_root,load_refs=True)
-                    return
+                if not element in error:
+                    error[element] = {}
+                error[element]["jurisdiction"] = \
+                    f"""{e}\nThere may be something wrong with the file {element}.txt.
+                    You may need to make changes to the Jurisdiction directory and try again."""
 
     # commit info in df to corresponding cdf table to db
-    dbr.dframe_to_sql(df,session,element)
+    data, err = dbr.dframe_to_sql(df,session,element)
+    if err:
+        if not element in error:
+            error[element] = {}
+        error[element]["database"] = err
     return
 
 
-def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs):
+def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,load_refs,error):
     """ TODO <fn> is foreign key"""
     df = df1.copy()
     # append the Id corresponding to <fn> from the db
@@ -766,11 +751,14 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs):
     if missing.empty:
         df.drop([interim],axis=1)
     else:
-        ui.show_sample(missing,f'records in {element} with a {foreign_elt}',f'was not found in the database')
-        ignore = input(f'Continue anyway, letting some records in {element} be without {foreign_elt} (y/n)?\n')
-        if ignore != 'y':
-            print(f'Let\'s make sure the db has the records required for {foreign_elt}')
+        if load_refs:
+            # Always try to handle/fill in the missing IDs
             raise ForeignKeyException(f'For some {element} records, {foreign_elt} was not found')
+        else:
+            if not element in error:
+                error[element] = {}
+            error[element]["foreign_key"] = \
+            f"For some {element} records, {foreign_elt} was not found"
     return df
 
 

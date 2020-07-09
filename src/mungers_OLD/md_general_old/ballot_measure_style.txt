@@ -1,3 +1,0 @@
-short_name	description	truth
-yes_and_no_are_candidates	Ballot measure selections (e.g., "yes" and "no") are treated as candidates	False
-yes_and_no_are_columns	There are separate columns (in the same record) for "yes" and "no" votes	True

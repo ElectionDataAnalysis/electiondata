@@ -26,13 +26,30 @@ If you are interested in contributing, or just staying updated on the progress o
 # How to run the app
 Clone the repository to a local machine. Navigate to `/path/to/repo/election_anomaly` and run `python3 setup.py install`. 
 
-The main routines are in `src/election_anomaly/main_routines`. Each can be run interactively or via a parameter file (template is `src/templates/parameter_file_templates/run_time.par`). Only the scripts beginning with a 3-digit number are actively maintained; others are in the process of deprecation.
- * `010_check_jurisdiction.py` Use this routine to set up jurisdiction files for a new jurisdiction, or to check jurisdiction files that already exist. The routine ensures that the jurisdiction directory contains the required files and that the files are consistent with one another.
-
-To run the modules from within a python script or python interactive shell, import the package with `import election_anomaly`. To run one of the main routines from the command line, run `python3 <path/to/main_routines/filename.py` from a directory containing your `run_time.par`
-
 ## Loading data
-run `src/election_anomaly/main_routines/050_load_datafile.py`
+The the location of the parameter files are assumed to be in the calling directory (a template file is located at `src/templates/parameter_file_templates/run_time.par`). Assuming this is filled out correctly, here is a sample python script to load data:
+```
+from election_anomaly import DataLoader
+dataloader = DataLoader() # create object, check some files, load supporting data to DB
+
+errors = dataloader.check_errors() # *** see note on these errors below
+
+# Once the user has addressed any errors identified:
+dataloader.reload_requirements() # Reloads and rechecks any errors addressed above
+dataloader.track_results('<short_name>', '<election_name>') # creates metadata record
+dataloader.load_results()
+```
+
+That's it! All your data for this election should be in the specified database location.
+
+*** Note about the errors: This call returns a 5-tuple with dictionaries in the following order:
+* Problems loading parameters from the parameter file
+* Problems found while checking the jurisdiction directory
+* Whether the jurisdiction object itself was able to be created
+* Problems found while loading the jurisdiction info into the DB
+* Problems found while checking the munger directory
+
+Typically all errors should be `None` before moving onto the next steps. The user can run `errors = dataloader.check_errors()`, adjust the supporting files, and `dataloader.reload_requirements()` multiple times until all errors are `None`.
 
 ## Pulling election result rollups
 run `src/election_anomaly/main_routines/100_pull_top_counts_by_vote_type.py`

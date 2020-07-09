@@ -12,6 +12,8 @@ from configparser import MissingSectionHeaderError
 import pandas as pd
 from election_anomaly import munge_routines as mr
 import re
+from election_anomaly.db_routines import create_cdf_db as db_cdf
+import os
 
 
 def get_database_names(con):
@@ -64,29 +66,72 @@ def append_to_composing_reporting_unit_join(session,ru):
             columns={'Id':'ChildReportingUnit_Id',f'Id_{i}':'ParentReportingUnit_Id'}))
     if cruj_dframe_list:
         cruj_dframe = pd.concat(cruj_dframe_list)
-        cruj_dframe = dframe_to_sql(cruj_dframe,session,'ComposingReportingUnitJoin')
+        cruj_dframe, err = dframe_to_sql(cruj_dframe,session,'ComposingReportingUnitJoin')
     else:
         cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin',session.bind)
     session.flush()
     return cruj_dframe
 
 
-def establish_connection(paramfile='../jurisdictions/database.ini',db_name='postgres'):
-    """Return a db connection object; if <paramfile> fails,
-    return corrected <paramfile>"""
+def establish_connection(paramfile, db_name='postgres'):
+    """Check for DB and relevant tables; if they don't exist, return
+    error message"""
     try:
         params = ui.config(paramfile)
     except MissingSectionHeaderError as e:
-        new_param = input(f'{e}\nEnter path to correct parameter file\n')
-        con, paramfile = establish_connection(new_param,db_name)
-        return con, paramfile
-    if db_name != 'postgres':
-        params['dbname']=db_name
+        return {'message': 'database.ini file not found suggested location.'}
+    params['dbname']=db_name
     try:
         con = psycopg2.connect(**params)
     except psycopg2.OperationalError as e:
-        con = None
-    return con, paramfile
+        return {'message': 'Unable to establish connection to database.'}
+
+    # Look for tables
+    engine = sql_alchemy_connect(paramfile, db_name)
+    elems, enums, joins, o = get_cdf_db_table_names(engine)
+
+    # All tables except "Others" must be created. Essentially looks for
+    # a "complete" database.
+    if not elems or not enums or not joins:
+        return {'message': 'Required tables not found.'}
+
+    con.close()
+    return None
+
+
+def create_new_db(project_root, paramfile, db_name):
+    # get connection to default postgres DB to create new one
+    try:    
+        params = ui.config(paramfile)
+        params['dbname'] = 'postgres'
+        con = psycopg2.connect(**params)
+    except:
+        # Can't connect to the default postgres database, so there
+        # seems to be something wrong with connection. Fail here.
+        print('Unable to find database. Exiting.')
+        quit()
+    cur = con.cursor()
+    db_df = get_database_names(con)
+
+    eng = sql_alchemy_connect(paramfile=paramfile,db_name=db_name)
+    Session = sqlalchemy.orm.sessionmaker(bind=eng)
+    sess = Session()
+
+    # DB already exists.
+    # TODO if DB exists, check that desired_db has right format?
+    if db_name in db_df.datname.unique():
+        # Clean out DB
+        db_cdf.reset_db(sess,
+            os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
+    else:
+        create_database(con, cur, db_name)
+
+    # load cdf tables
+    db_cdf.create_common_data_format_tables(
+        sess,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
+    db_cdf.fill_cdf_enum_tables(
+        sess,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
+    con.close()
 
 
 def sql_alchemy_connect(paramfile=None,db_name='postgres'):
@@ -247,9 +292,9 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
 
     if dframe.empty:
         if return_records == 'original':
-            return dframe
+            return dframe, None
         else:
-            return target
+            return target, None
     if raw_to_votecount:
         # join with ECSVCJ
         secvcj = pd.read_sql_table('ElectionContestSelectionVoteCountJoin',session.bind,index_col=None)
@@ -282,20 +327,19 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
     # drop the Id column
     if 'Id' in appendable.columns:
         appendable = appendable.drop('Id',axis=1)
+
+    error = {}
     try:
         appendable.to_sql(table, session.bind, if_exists='append', index=False)
     except sqlalchemy.exc.IntegrityError as e:
         # FIXME: target, pulled from DB, has datetime, while dframe has date,
         #  so record might look like same-name-different-date when it isn't really
-        ignore = input(f'Some record insertions into table {table} failed.\n'
-                       f'It may be that the record(s) is already in the table (probably harmless).\n'
-                       f'It may be due to bug in handling datetime fields (probably harmless).\n'
-                       f'It may be due to non-unique names (might be a problem).\n'
-                       f'Continue anyway (y/n)?\n')
-        if ignore != 'y':
-            ignore = input(f'Specific error is: {e}. \nContinue anyway (y/n)?\n')
-            if ignore != 'y':
-                raise e
+        # FIXME: IntegrityError will fail silently because it broke the dataload
+        # error["type"] = e
+        pass
+    if not error:
+        error = None
+    
     if table == 'ReportingUnit' and not appendable.empty:
         append_to_composing_reporting_unit_join(session,appendable)
 
@@ -312,9 +356,9 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
         id_enhanced_dframe = dframe.merge(
             up_to_date_dframe,left_on=intersection_cols,right_on=intersection_cols,how='inner').drop(
             target_only_cols,axis=1)
-        return id_enhanced_dframe
+        return id_enhanced_dframe, error
     else:
-        return up_to_date_dframe
+        return up_to_date_dframe, error
 
 
 def format_dates(dframe):
@@ -326,7 +370,7 @@ def format_dates(dframe):
     return df
 
 
-def save_one_to_db(session,element,record):
+def save_one_to_db(session,element,record,upsert=False):
     """Create a record in the <element> table corresponding to the info in the
     dictionary <record>, which is in <field>:<value> form, using db (not user-friendly)
     fields -- i.e., ids for enums and foreign keys -- excluding the Id field.
@@ -344,6 +388,12 @@ def save_one_to_db(session,element,record):
             problems.append('No data given for insert.')
         try:
             df = pd.DataFrame({k:[v] for k,v in record.items()})
+            # currently this upsert only used for the _datafile record
+            if upsert:
+                session.execute(f'''
+                    DELETE FROM _datafile 
+                    WHERE short_name = '{record['short_name']}';''')
+                session.commit()                
             df.to_sql(element,session.bind,if_exists='append',index=False)
             enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(session,element,record)
             fk_plaintext_dict = mr.fk_plaintext_dict_from_db_record(
@@ -355,8 +405,8 @@ def save_one_to_db(session,element,record):
                 field_str = m.group("fields")
                 value_str = m.group("values")
                 use_existing = input(f'Record already exists with value(s)\n\t{value_str}\n'
-                                     f'in field(s)\n\t{field_str}\n'
-                                     f'Use existing record (y/n?\n')
+                                    f'in field(s)\n\t{field_str}\n'
+                                    f'Use existing record (y/n?\n')
                 if use_existing == 'y':
                     # pull record from db
                     fields = field_str.split(',')
@@ -423,3 +473,54 @@ def get_name_field(element):
     else:
         field = 'Name'
     return field
+
+
+def truncate_table(session, table_name):
+    session.execute(f'TRUNCATE TABLE "{table_name}" CASCADE')
+    session.commit()
+    return
+
+
+def get_input_options(session, input):
+    """Returns a list of response options based on the input"""
+    # input comes as a pythonic (snake case) input, need to 
+    # change to match DB table naming format
+    name_parts = input.split('_')
+    search_str = "".join([name_part.capitalize() for name_part in name_parts])
+
+    if search_str in ['BallotMeasureContest', 'CandidateContest', 'Election',
+        'Office', 'Party', 'ReportingUnit']:
+        column_name = 'Name'
+        table_search = True
+    elif search_str in ['CountItemStatus', 'CountItemType', 'ElectionType',
+        'IdentifierType', 'ReportingUnitType']:
+        column_name = 'Txt'
+        table_search = True
+    elif search_str == 'BallotMeasureSelection':
+        column_name = 'Selection'
+        table_search = True
+    elif search_str == 'Candidate':
+        column_name = 'BallotName'
+        table_search = True
+    else:
+        search_str = search_str.lower()
+        table_search = False
+
+    if table_search:
+        result = session.execute(f'SELECT "{column_name}" FROM "{search_str}";')
+        return [r[0] for r in result]
+    else:
+        result = session.execute(f' \
+            SELECT "Name" FROM "ReportingUnit" ru \
+            JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" \
+            WHERE rut."Txt" = \'{search_str}\'')
+        return [r[0] for r in result]
+
+
+def get_datafile_info(session, results_file):
+    q = session.execute(f'''
+        SELECT "Id", "Election_Id" 
+        FROM _datafile 
+        WHERE file_name = '{results_file}'
+        ''').fetchall()
+    return q[0]

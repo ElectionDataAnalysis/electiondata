@@ -369,18 +369,22 @@ def add_constant_column(df,col_name,col_value):
     return new_df
 
 
-def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
+def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,ids=None):
     """load data from <raw> into the database.
     Note that columns to be munged (e.g. County_xxx) have mu.field_rename_suffix (e.g., _xxx) added already"""
     working = raw.copy()
 
     # enter elements from sources outside raw data, including creating id column(s)
     # TODO what if contest_type (BallotMeasure or Candidate) has source 'other'?
-    for t,r in mu.cdf_elements[mu.cdf_elements.source == 'other'].iterrows():
-        # add column for element id
-        # TODO allow record to be passed as a parameter
-        idx, db_record, enum_d, fk_d = ui.pick_or_create_record(session,project_root,t)
-        working = add_constant_column(working,f'{t}_Id',idx)
+    if not ids:
+        for t,r in mu.cdf_elements[mu.cdf_elements.source == 'other'].iterrows():
+            # add column for element id
+            # TODO allow record to be passed as a parameter
+            idx, db_record, enum_d, fk_d = ui.pick_or_create_record(session,project_root,t)
+            working = add_constant_column(working,f'{t}_Id',idx)
+    else:
+        working = add_constant_column(working,'Election_Id',ids[1])
+        working = add_constant_column(working,'_datafile_Id',ids[0])
 
     working = munge_and_melt(mu,working,count_cols)
 
@@ -443,7 +447,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
     # TODO maybe introduce Selection and Contest tables, have C an BM types refer to them?
     c_df = pd.read_sql_table('Candidate',session.bind)
     c_df.rename(columns={'Id':'Candidate_Id'},inplace=True)
-    cs_df = dbr.dframe_to_sql(c_df,session,'CandidateSelection',return_records='original')
+    cs_df, err = dbr.dframe_to_sql(c_df,session,'CandidateSelection',return_records='original')
     # add CandidateSelection_Id column, merging on Candidate_Id
 
     working = working.merge(
@@ -470,13 +474,13 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols):
     dbr.add_integer_cols(session,'VoteCount',extra_cols)
 
     # upload to VoteCount table, pull  Ids
-    working_fat = dbr.dframe_to_sql(working,session,'VoteCount',raw_to_votecount=True)
+    working_fat, err = dbr.dframe_to_sql(working,session,'VoteCount',raw_to_votecount=True)
     working_fat.rename(columns={'Id':'VoteCount_Id'},inplace=True)
     session.commit()
 
     # TODO check that all candidates in munged contests (including write ins!) are munged
     # upload to ElectionContestSelectionVoteCountJoin
-    dbr.dframe_to_sql(working_fat,session,'ElectionContestSelectionVoteCountJoin')
+    data, err = dbr.dframe_to_sql(working_fat,session,'ElectionContestSelectionVoteCountJoin')
 
     # drop extra columns
     dbr.drop_cols(session,'VoteCount',extra_cols)
@@ -522,7 +526,7 @@ def append_join_id(project_root,session,working,j):
     if join_df.empty:
         working[f'{j}_Id'] = np.nan
     else:
-        join_df = dbr.dframe_to_sql(join_df,session,j)
+        join_df, err = dbr.dframe_to_sql(join_df,session,j)
         working = working.merge(join_df,how='left',left_on=j_cols,right_on=j_cols)
         working.rename(columns={'Id':f'{j}_Id'},inplace=True)
     return working

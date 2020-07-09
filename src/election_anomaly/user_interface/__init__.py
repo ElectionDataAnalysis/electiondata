@@ -209,98 +209,25 @@ def show_sample(input_iter,items,condition,outfile='shown_items.txt',export_dir=
 	return
 
 
-def pick_database(project_root,paramfile=None,db_name=None):
-	"""Establishes connection to db with name <db_name>,
-	or creates a new cdf_db with that name.
-	In any case, returns the name of the DB."""
-	if not paramfile:
-		paramfile = pick_paramfile()
-	[con, paramfile] = dbr.establish_connection(paramfile=paramfile)
-	print(f'Connection established to database {con.info.dbname}')
-	cur = con.cursor()
-	db_df = dbr.get_database_names(con)
-	if db_name and db_name in db_df.datname.unique():
-		print(f'Will use existing database {db_name}')
-		desired_db = db_name
-		create_new = False
-	elif db_name:  # but not in existing
-		desired_db = db_name
-		dbr.create_database(con,cur,desired_db)
-		create_new = True
-	else:  # if no db_name given
-		db_idx,desired_db = pick_one(db_df,'datname',item='database')
-		if db_idx:
-			create_new = False
-		else:  # if we're going to need a brand new db
-			desired_db = get_alphanumeric_from_user('Enter name for new database (alphanumeric only)')
-			create_new = True
-			while desired_db in db_df.datname.unique() and create_new:
-				use_existing = input(f'Database {desired_db} exists! Use existing database {desired_db} (y/n)?\n')
-				if use_existing == 'y':
-					create_new = False
-				else:
-					desired_db = get_alphanumeric_from_user('Enter name for new database (alphanumeric only)')
-			if create_new:  # then desired_db is not in the list of dbs
-				dbr.create_database(con,cur,desired_db)
-			# TODO otherwise check that desired_db has right format?
-
-	if create_new: 	# if our db is brand new
-		# connect to the desired_db
-		eng = dbr.sql_alchemy_connect(paramfile=paramfile,db_name=desired_db)
-		Session = sessionmaker(bind=eng)
-		sess = Session()
-
-		# load cdf tables
-		db_cdf.create_common_data_format_tables(
-			sess,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
-		db_cdf.fill_cdf_enum_tables(
-			sess,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
-		print(f'New database {desired_db} has been created using the common data format.')
-
-	# clean up
-	if cur:
-		cur.close()
-	if con:
-		con.close()
-	return desired_db
-
-
 def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_name=None,check_files=False):
 	"""Returns a State object.
 	If <jurisdiction_name> is given, this just initializes based on info
 	in the folder with that name; """
 
-	path_to_jurisdictions = os.path.join(project_root,juriss_dir)
-	# if no jurisdiction name provided, ask user to pick from file system
-	if juris_name is None:
-		# ask user to pick from the available ones
-		print('Pick the filesystem directory for your jurisdiction.')
-		choice_list = [x for x in os.listdir(path_to_jurisdictions) if
-					os.path.isdir(os.path.join(path_to_jurisdictions,x))]
-		juris_idx,juris_name = pick_one(choice_list,None,item='jurisdiction')
+	missing_values = {}
 
-		# if nothing picked, ask user for alphanumeric name and create necessary files
-		if not juris_idx:
-			juris_name = get_alphanumeric_from_user('Enter a directory name for your jurisdiction files.')
-			juris_path = os.path.join(path_to_jurisdictions,juris_name)
-			sf.ensure_jurisdiction_files(juris_path,project_root)
-		elif check_files:
-			juris_path = os.path.join(path_to_jurisdictions,juris_name)
-			sf.ensure_jurisdiction_files(juris_path,project_root)
-		else:
-			print(
-				f'WARNING: if necessary files are missing from the directory {juris_name},\nsystem may fail.')
-	else:
-		if check_files:
-			juris_path = os.path.join(path_to_jurisdictions,juris_name)
-			sf.ensure_jurisdiction_files(juris_path,project_root)
-		else:
-			print(
-				f'WARNING: if necessary files are missing from the directory {juris_name},\nsystem may fail.')
+	path_to_jurisdictions = os.path.join(project_root,juriss_dir)
+
+	if check_files:
+		juris_path = os.path.join(path_to_jurisdictions,juris_name)
+		missing_values = sf.ensure_jurisdiction_files(juris_path,project_root)
 
 	# initialize the jurisdiction
-	ss = sf.Jurisdiction(juris_name,path_to_jurisdictions)
-	return ss
+	if missing_values:
+		ss = None
+	else:
+		ss = sf.Jurisdiction(juris_name,path_to_jurisdictions)
+	return ss, missing_values
 
 
 def find_dupes(df):
@@ -310,41 +237,17 @@ def find_dupes(df):
 
 
 def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name=None):
-	"""pick (or create) a munger """
-	if not project_root:
-		project_root = get_project_root()
-	if not munger_name:
-		choice_list = os.listdir(mungers_dir)
-		for choice in os.listdir(mungers_dir):
-			c_path = os.path.join(mungers_dir,choice)
-			if not os.path.isdir(c_path):  # remove non-directories from list
-				choice_list.remove(choice)
-			elif not os.path.isfile(os.path.join(c_path,'raw_columns.txt')):
-				pass  # list any munger that doesn't have raw_columns.txt file yet
-			else:
-				elts = pd.read_csv(os.path.join(c_path,'cdf_elements.txt'),header=0,dtype=str,sep='\t')
-				row_formulas = elts[elts.source=='row'].raw_identifier_formula.unique()
-				necessary_cols = set()
-				for formula in row_formulas:
-					# extract list of necessary fields
-					pattern = '<(?P<field>[^<>]+)>'  # finds field names
-					p = re.compile(pattern)
-					necessary_cols.update(p.findall(formula))
-
-		munger_df = pd.DataFrame(choice_list,columns=['Munger'])
-		munger_idx,munger_name = pick_one(munger_df,'Munger', item='munger')
-		if munger_idx is None:
-			# user chooses munger
-			munger_name = get_alphanumeric_from_user(
-				'Enter a short name (alphanumeric only, no spaces) for your munger (e.g., \'nc_primary18\')\n')
-	sf.ensure_munger_files(munger_name,project_root=project_root)
+	error = sf.ensure_munger_files(munger_name,project_root=project_root)
 
 	munger_path = os.path.join(mungers_dir,munger_name)
-	munger = sf.Munger(munger_path,project_root=project_root)
-	munger.check_against_self()
-	if session:
-		munger.check_against_db(session)
-	return munger
+
+	if not error:
+		munger = sf.Munger(munger_path,project_root=project_root,check_files=False)
+		#munger_error is None unless internal inconsistency found
+		munger_error = munger.check_against_self()
+		return munger, munger_error
+	else:
+		return None, error
 
 
 def pick_or_create_record(sess,project_root,element,known_info_d=None):
@@ -679,21 +582,26 @@ def enter_and_check_datatype(question,datatype):
 
 
 def read_datafile(munger,f_path):
-	if munger.file_type in ['txt','csv']:
-		kwargs = {'encoding':munger.encoding,'quoting':csv.QUOTE_MINIMAL,'header':list(range(munger.header_row_count)),
-			'thousands':munger.thousands_separator}
-		if munger.file_type == 'txt':
-			kwargs['sep'] = '\t'
-		df = pd.read_csv(f_path,**kwargs)
+	try:
+		if munger.file_type in ['txt','csv']:
+			kwargs = {'encoding':munger.encoding,'quoting':csv.QUOTE_MINIMAL,'header':list(range(munger.header_row_count)),
+				'thousands':munger.thousands_separator}
+			if munger.file_type == 'txt':
+				kwargs['sep'] = '\t'
+			df = pd.read_csv(f_path,**kwargs)
 
-	elif munger.file_type in ['xls','xlsx']:
-		df = pd.read_excel(f_path,dtype=str,thousands=munger.thousands_separator)
-	else:
-		raise mr.MungeError(f'Unrecognized file_type in munger: {munger.file_type}')
-	return df
+		elif munger.file_type in ['xls','xlsx']:
+			df = pd.read_excel(f_path,dtype=str,thousands=munger.thousands_separator)
+		else:
+			raise mr.MungeError(f'Unrecognized file_type in munger: {munger.file_type}')
+		return df
+	except:
+		# DFs have trouble comparing against None. So we return an empty DF and 
+		# check for emptiness below as an indication of an error.
+		return pd.DataFrame()
 
 
-def new_datafile(session,munger,raw_path,project_root=None,juris=None):
+def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_info=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
@@ -703,19 +611,35 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None):
 		juris = pick_juris_from_filesystem(
 			project_root,juriss_dir='jurisdictions')
 	raw = read_datafile(munger,raw_path)
+
+	if raw.empty:
+		print('Datafile unable to be parsed with munger. Results not loaded to database. '
+			'Please check compatibilty between the two and try again.')
+		return
+	
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
 
-	raw = mr.clean_raw_df(raw,munger)
+	try:
+		raw = mr.clean_raw_df(raw,munger)
+	except:
+		print('Datafile unable to be parsed with munger. Results not loaded to database. '
+			'Please check compatibilty between the two and try again.')
+		return
+
 	# NB: info_cols will have suffix added by munger
 
 	# check jurisdiction against raw results file, adapting jurisdiction files as necessary
-	check_juris = input(f'Check jurisdiction {juris.short_name} against raw results (y/n)?\n')
-	if check_juris == 'y':
-		if juris.check_against_raw_results(raw,munger,count_columns_by_name):
-			# if jurisdction changed, load to db
-			juris.load_juris_to_db(session,project_root)
+	# TODO: incorporate juris.check_against_raw_results(raw,munger,count_columns_by_name)
+	# if jurisdction changed, load to db
+	juris.load_juris_to_db(session,project_root)
 
-	mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name)
+	try:
+		mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,results_info)
+	except:
+		print('Datafile unable to be parsed with munger. Results not loaded to database. '
+			'Please check compatibilty between the two and try again.')
+		return
+
 	print(f'Datafile contents uploaded to database {session.bind.engine}')
 	return
 
@@ -793,36 +717,66 @@ def report_problems(problems,msg='There are problems'):
 	return
 
 
-def get_runtime_parameters(keys):
-	interact = input('Run interactively (y/n)?\n')
+def get_runtime_parameters(keys, param_file=None):
 	d = {}
-	if interact == 'y':
-		if 'project_root' in keys:
-			d['project_root'] = get_project_root()
-		if 'db_paramfile' in keys:
-			d['db_paramfile'] = pick_paramfile()
-		if 'db_name' in keys:
-			d['db_name'] = pick_database(d['project_root'],d['db_paramfile'])
-		if 'juris_name' in keys:
-			d['juris_name'] = None
-		if 'munger_name' in keys:
-			d['munger_name'] = None
-		if 'rollup_directory' in keys:
-			d['rollup_directory'] = pick_file_or_directory(
-				description='the directory for election result rollup exports',mode='directory')
-		if 'results_file' in keys:
-			d['results_file'] = pick_file_or_directory(description='the election results file',mode='file')
+	missing_params = {'missing':[]}
 
-		for k in [x for x in keys if x not in [
-			'project_root','db_paramfile','db_name','juris_name','rollup_directory']]:
-			d[k] = input(f'Enter {k}')
+	parser = ConfigParser()
+	if param_file:
+		filename = param_file
 	else:
-		d_from_file = config(section='election_anomaly',msg='Pick a paramfile.')
-		for k in keys:
-			try:
-				d[k] = d_from_file[k]
-			except KeyError:
-				print(f'Warning: no value found for {k} in the parameter file.')
+		filename = 'run_time.par'
+	p = parser.read(filename)
+	if len(p) == 0:
+		raise FileNotFoundError
+
 	for k in keys:
-		print(f'{k}: {d[k]}')
-	return d
+		try:
+			d[k] = parser['election_anomaly'][k]
+		except KeyError:
+			missing_params['missing'].append(k)
+
+	if len(missing_params['missing']) == 0:
+		missing_params = None
+
+	return d, missing_params
+
+def set_record_info_from_user(sess,element,known_info_d={}):
+
+	#Collect new record info from user and return a dictionary ready to be written to element table
+
+	# read existing info from db
+	all_from_db = pd.read_sql_table(element,sess.bind,index_col='Id')
+	db_cols = list(all_from_db.columns)  # note: does not include 'Id'
+
+	new = {}
+	error = []
+
+	for c in db_cols:
+		# define new[c] if value is known
+		if c in known_info_d.keys():
+			new[c] = known_info_d[c]
+		else:
+			new[c] = None
+
+
+
+	#Get foreign key references.
+	fk_df = dbr.get_foreign_key_df(sess,element)
+
+#replaces foreign key id's inplace of user provided names.
+	for c in fk_df.index:
+		c_plain = c[:-3]
+		if c in new.keys():
+			new[c] = dbr.name_to_id(sess, fk_df.loc[c, 'foreign_table_name'], new[c])
+			if new[c] == None:
+				error.append(f'{known_info_d[c]} is invalid c_plain')
+		# TODO display valid entries in the error report.
+
+
+
+	db_record = {k: new[k] for k in db_cols}
+
+	return db_record, error
+
+

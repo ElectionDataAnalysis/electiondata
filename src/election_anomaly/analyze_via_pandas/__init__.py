@@ -10,6 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 from pandas.api.types import is_numeric_dtype
+from election_anomaly import db_routines as dbr
 
 
 def child_rus_by_id(session,parents,ru_type=None):
@@ -70,7 +71,7 @@ def create_rollup(
 		print('Select the ReportingUnitType for the lines of the rollup')
 		sub_rutype_id, sub_rutype_othertext,sub_rutype = ui.pick_enum(session,'ReportingUnitType')
 	else:
-		sub_rutype = mr.enum_value_from_id_othertext('ReportingUnitType',sub_rutype_id,sub_rutype_othertext)
+		sub_rutype = dbr.name_from_id(session, 'ReportingUnitType', sub_rutype_id)
 
 	# pull relevant tables
 	df = {}
@@ -146,10 +147,11 @@ def create_rollup(
 
 	# check for any reporting units that should be included in roll-up but were missed
 	# TODO list can be long and irrelevant. Instead list ReportingUnitTypes of the missing
-	missing = [str(x) for x in all_subs_ids if x not in children_of_subs_ids]
-	if missing:
-		ui.report_problems(missing,msg=f'The following reporting units are nested in {top_ru["Name"]} '
-								f'but are not nested in any {sub_rutype} nested in {top_ru["Name"]}')
+	# missing = [str(x) for x in all_subs_ids if x not in children_of_subs_ids]
+	# if missing:
+	# TODO report these out to the export directory
+	#	ui.report_problems(missing,msg=f'The following reporting units are nested in {top_ru["Name"]} '
+	#							f'but are not nested in any {sub_rutype} nested in {top_ru["Name"]}')
 
 	# limit to relevant vote counts
 	ecsvcj = df['ElectionContestSelectionVoteCountJoin'][
