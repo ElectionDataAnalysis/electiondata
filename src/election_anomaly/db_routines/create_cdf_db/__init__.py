@@ -9,7 +9,7 @@ import os
 import pandas as pd
 
 
-def create_common_data_format_tables(session,dirpath='schema_definition/'):
+def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
     """ schema example: 'cdf'; Creates cdf tables in the given schema
     (or directly in the db if schema == None)
     e_table_list is a list of enumeration tables for the CDF, e.g., ['ReportingUnitType','CountItemType', ... ]
@@ -146,7 +146,7 @@ def create_table(metadata,id_seq,name,table_type,dirpath,engine,session):
     return
 
 
-def enum_table_list(dirpath='schema_definition'):
+def enum_table_list(dirpath='CDF_schema_def_info'):
     enum_path = os.path.join(dirpath, 'enumerations')
     file_list = os.listdir(enum_path)
     for f in file_list:
@@ -155,7 +155,7 @@ def enum_table_list(dirpath='schema_definition'):
     return e_table_list
 
 
-def fill_cdf_enum_tables(session,schema,dirpath='schema_definition'):
+def fill_cdf_enum_tables(session,schema,dirpath='CDF_schema_def_info'):
     """takes lines of text from file and inserts each line into the txt field of the enumeration table"""
     e_table_list = enum_table_list(dirpath)
     for f in e_table_list:

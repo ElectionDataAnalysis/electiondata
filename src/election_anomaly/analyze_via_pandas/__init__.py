@@ -3,11 +3,14 @@ import os.path
 
 import pandas as pd
 from election_anomaly import user_interface as ui
-from election_anomaly import munge as mr
+from election_anomaly import munge_routines as mr
 import datetime
 import os
+import numpy as np
+import matplotlib.pyplot as plt
 from pathlib import Path
-from election_anomaly import db as dbr
+from pandas.api.types import is_numeric_dtype
+from election_anomaly import db_routines as dbr
 
 
 def child_rus_by_id(session,parents,ru_type=None):

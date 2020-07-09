@@ -1,10 +1,10 @@
 import os.path
 
-from election_anomaly import db
-from election_anomaly import db as dbr
-from election_anomaly import munge as mr
-from election_anomaly import user_interface as ui
+from election_anomaly import db_routines
+from election_anomaly import db_routines as dbr
 import pandas as pd
+from election_anomaly import munge_routines as mr
+from election_anomaly import user_interface as ui
 import re
 import numpy as np
 from pathlib import Path
@@ -543,7 +543,7 @@ def dedupe(f_path,warning='There are duplicates'):
 def check_nulls(element,f_path,project_root):
     # TODO write description
     nn_path = os.path.join(
-        project_root,'election_anomaly/schema_definition/elements',element,'not_null_fields.txt')
+        project_root,'election_anomaly/CDF_schema_def_info/elements',element,'not_null_fields.txt')
     not_nulls = pd.read_csv(nn_path,sep='\t',encoding='iso-8859-1')
     df = pd.read_csv(f_path,sep='\t',encoding='iso-8859-1')
 
@@ -590,7 +590,7 @@ def check_dependencies(juris_dir,element):
             pd.read_csv(
                 os.path.join(
                     juris_dir,f'{target}.txt'),sep='\t',
-                encoding='iso-8859-1').fillna('').loc[:, db.get_name_field(target)])
+                encoding='iso-8859-1').fillna('').loc[:,db_routines.get_name_field(target)])
         try:
             ru.remove(np.nan)
         except ValueError:
@@ -626,7 +626,7 @@ def juris_dependency_dictionary():
 def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,load_refs=True):
     """ TODO
     """
-    cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/schema_definition')
+    cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
     element_fpath = os.path.join(juris_path,f'{element}.txt')
     if not os.path.exists(element_fpath):
         error[f'{element}.txt'] = "file not found"
@@ -724,7 +724,7 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,load_refs,erro
 
     target_list = []
     for r in refs:
-        ref_name_field = db.get_name_field(r)
+        ref_name_field = db_routines.get_name_field(r)
 
         r_target = pd.read_sql_table(r,session.bind)[['Id',ref_name_field]]
         r_target.rename(columns={'Id':foreign_key,ref_name_field:interim},inplace=True)

@@ -1,17 +1,19 @@
 from configparser import ConfigParser
 
-from election_anomaly import db
-from election_anomaly import db as dbr
-from election_anomaly import munge as mr
-from election_anomaly import juris_and_munger as sf
+from election_anomaly import db_routines
+from election_anomaly import db_routines as dbr
+from election_anomaly.db_routines import create_cdf_db as db_cdf
+from election_anomaly import munge_routines as mr
 import pandas as pd
 import numpy as np
 import csv
+from sqlalchemy.orm import sessionmaker
 import os
 from pathlib import Path
 import ntpath
 import re
 import datetime
+from election_anomaly import juris_and_munger as sf
 import random
 from tkinter import filedialog
 from configparser import MissingSectionHeaderError
@@ -326,7 +328,7 @@ def pick_record_from_db(sess,element,known_info_d=None,required=False,db_idx=Non
 		filtered = element_enhanced_df
 
 	print(f'Pick the {element} record from the database:')
-	name_field = db.get_name_field(element)
+	name_field = db_routines.get_name_field(element)
 	element_idx, values = pick_one(filtered,name_field,element)
 	if element_idx in element_df.index:
 		d = dict(element_df.loc[element_idx])
