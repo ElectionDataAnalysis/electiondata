@@ -124,7 +124,7 @@ class DataLoader():
         if error:
             print(error)
             print("metadata record not created in database")
-            exit()
+
         else:
             dbr.save_one_to_db(self.session, '_datafile', db_style_record, True)
 
