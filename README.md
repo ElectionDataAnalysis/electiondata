@@ -23,36 +23,8 @@ This repository hopes to provide reliable tools for consolidation and analysis o
 # How to run the app
 Clone the repository to a local machine. Navigate to `/path/to/repo/election_anomaly` and run `python setup.py install`. From a python script or python interactive shell, import the package with `import election_anomaly`.
 
-## Loading data
-The the location of the parameter files are assumed to be in the calling directory (a template file is located at `src/templates/parameter_file_templates/run_time.par`). Assuming this is filled out correctly, here is a sample python script to load data:
-```
-from election_anomaly import DataLoader
-dataloader = DataLoader() # create object, check some files, load supporting data to DB
-
-errors = dataloader.check_errors() # *** see note on these errors below
-
-# Once the user has addressed any errors identified:
-dataloader.reload_requirements() # Reloads and rechecks any errors addressed above
-dataloader.track_results('<short_name>', '<election_name>') # creates metadata record
-dataloader.load_results()
-```
-
-That's it! All your data for this election should be in the specified database location.
-
-*** Note about the errors: This call returns a 5-tuple with dictionaries in the following order:
-* Problems loading parameters from the parameter file
-* Problems found while checking the jurisdiction directory
-* Whether the jurisdiction object itself was able to be created
-* Problems found while loading the jurisdiction info into the DB
-* Problems found while checking the munger directory
-
-Typically all errors should be `None` before moving onto the next steps. The user can run `errors = dataloader.check_errors()`, adjust the supporting files, and `dataloader.reload_requirements()` multiple times until all errors are `None`.
-
-## Pulling election result rollups
-run `src/election_anomaly/main_routines/100_pull_top_counts_by_vote_type.py`
-or `src/election_anomaly/main_routines/101_pull_top_counts.py`
-
-[//]: # "TODO keep this up to date"
+# How to use the app
+Detailed instructions can be found [here](https://github.com/sfsinger19103/election_anomaly/blob/master/docs/User_Guide.md).
 
 ## Environment
 ### Database
