@@ -1,3 +1,0 @@
-The file All_By_Precinct_2018_General.csv for 2018 general election has Spanish characters, so use encoding 'iso-8859-1'.
-
-
