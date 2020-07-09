@@ -121,7 +121,7 @@ class DataLoader():
         }
         db_style_record, error = ui.set_record_info_from_user(self.session, '_datafile', known_info_d=known_info_d)
 
-        if error != []:
+        if error:
             print(error)
             print("metadata record not created in database")
             exit()
