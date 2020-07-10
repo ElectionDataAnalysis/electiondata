@@ -261,27 +261,9 @@ def short_name(text,sep=';'):
 	
 	# filter based on 
 
-<<<<<<< HEAD
 	# cleanup for purposes of flexibility
 	unsummed = unsummed[['ReportingUnit', 'Count', 'Selection', 'Contest_Id', 'Candidate_Id']]
 	unsummed.rename(columns={'ReportingUnit': 'Name'}, inplace=True)
-=======
-	# package into dictionary
-	x = dbr.name_from_id(session, 'Candidate', candidate_1_id)
-	y = dbr.name_from_id(session, 'Candidate', candidate_2_id) 
-	results = {
-		"election": dbr.name_from_id(session, 'Election', election_id),
-		"jurisdiction": dbr.name_from_id(session, 'ReportingUnit', top_ru_id),
-		"subdivision_type": dbr.name_from_id(session, 'ReportingUnitType', sub_rutype_id),
-		"count_item_type": count_item_type,
-		"x": x,
-		"y": y,
-		"counts": {}
-	}
-	reporting_units = unsummed.Name.unique()
-	for reporting_unit in reporting_units:
-		results["counts"][reporting_unit] = {}
->>>>>>> rename components to match user flows
 
 	# if filter_id is -1, then that means we have all contests or candidates
 	# so we need to group by
