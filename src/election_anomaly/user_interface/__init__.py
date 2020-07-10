@@ -770,7 +770,7 @@ def set_record_info_from_user(sess,element,known_info_d={}):
 		if c in new.keys():
 			new[c] = dbr.name_to_id(sess, fk_df.loc[c, 'foreign_table_name'], new[c])
 			if new[c] == None:
-				error.append(f'{known_info_d[c]} is invalid c_plain')
+				error.append(f'{known_info_d[c]} is invalid {c_plain}')
 		# TODO display valid entries in the error report.
 
 
