@@ -281,10 +281,12 @@ def read_munger_info_from_files(dir_path,project_root=None,aux_data_dir=None):
 
     # read formatting info
     format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep='\t',index_col='item',encoding='iso-8859-1')
-    if format_info.loc['field_name_row','value'].isnumeric():
+    try:
+        # if field_name_row can be interpreted as an integer, use it
         field_name_row = int(format_info.loc['field_name_row','value'])
         field_names_if_no_field_name_row = None
-    else:
+    except:
+        # otherwise assume no field_name_row
         field_name_row = None
         field_names_if_no_field_name_row = format_info.loc['field_names_if_no_field_name_row','value'].split(',')
 
@@ -539,9 +541,12 @@ def check_munger_file_contents(munger_name,project_root=None):
                         f'but no field names are give in field_names_if_no_field_name_row.')
 
     # other entries in format.txt are of correct type
-    if not format_df.loc['header_row_count','value'].isnumeric():
+    try:
+        int(format_df.loc['header_row_count','value'])
+    except:
         problems.append(f'In format file, header_row_count must be an integer'
                         f'({format_df.loc["header_row_count","value"]} is not.)')
+
     if not format_df.loc['encoding','value'] in ui.recognized_encodings:
         warns.append(f'Encoding {format_df.loc["field_name_row","value"]} in format file is not recognized.')
 
