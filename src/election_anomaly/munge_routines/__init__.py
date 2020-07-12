@@ -1,5 +1,6 @@
 from election_anomaly import db_routines as dbr
 from election_anomaly import user_interface as ui
+from election_anomaly import juris_and_munger as jm
 import pandas as pd
 import re
 import os
@@ -10,45 +11,68 @@ class MungeError(Exception):
     pass
 
 
-def clean_raw_df(raw,munger):
-    """Replaces nulls, strips whitespace, changes any blank entries in non-numeric columns to 'none or unknown'.
-    Appends munger suffix to raw column names to avoid conflicts"""
+def generic_clean(df:pd.DataFrame) -> pd.DataFrame:
+    """Replaces nulls, strips whitespace."""
     # TODO put all info about data cleaning into README.md (e.g., whitespace strip)
-
     # change all nulls to blank
-    raw = raw.fillna('')
+    df = df.fillna('')
     # strip whitespace from non-integer columns
-    non_numerical = {raw.columns.get_loc(c):c for idx,c in enumerate(raw.columns) if raw[c].dtype != 'int64'}
+    non_numerical = {df.columns.get_loc(c):c for idx,c in enumerate(df.columns) if df[c].dtype != 'int64'}
     for location,name in non_numerical.items():
-        raw.iloc[:,location] = raw.iloc[:,location].apply(lambda x:x.strip())
+        df.iloc[:,location] = df.iloc[:,location].apply(lambda x:x.strip())
+    return df
 
-    # TODO keep columns named in munger formulas; keep count columns; drop all else.
-    if munger.header_row_count > 1:
-        cols_to_munge = [x for x in raw.columns if x[munger.field_name_row] in munger.field_list]
+
+def cast_cols_as_int(df: pd.DataFrame, col_list: list,mode='name',error_msg='') -> pd.DataFrame:
+    """recast columns as integer where possible, leaving columns with text entries as non-numeric)"""
+    if mode == 'index':
+        num_columns = [df.columns[idx] for idx in col_list]
+    elif mode == 'name':
+        num_columns = [c for c in df.columns if c in col_list]
     else:
-        cols_to_munge = [x for x in raw.columns if x in munger.field_list]
-
-    # TODO error check- what if cols_to_munge is missing something from munger.field_list?
-
-    # recast count columns as integer where possible.
-    #  (recast leaves columns with text entries as non-numeric).
-    num_columns = [raw.columns[idx] for idx in munger.count_columns]
+        raise ValueError(f'Mode {mode} not recognized')
     for c in num_columns:
         try:
-            raw[c] = raw[c].astype('int64',errors='raise')
-        except ValueError:
-            raise
+            df[c] = df[c].astype('int64',errors='raise')
+        except ValueError as e:
+            print(f'{error_msg}\nColumn {c} cannot be cast as integer:\n{e}')
+    return df
 
-    raw = raw[cols_to_munge + num_columns]
-    # recast all cols_to_munge to strings,
-    # change all blanks to "none or unknown"
-    for c in cols_to_munge:
-        raw[c] = raw[c].apply(str)
-        raw[c] = raw[c].replace('','none or unknown')
-    # rename columns to munge by adding suffix
-    renamer = {x:f'{x}_{munger.field_rename_suffix}' for x in cols_to_munge}
-    raw.rename(columns=renamer,inplace=True)
-    return raw
+
+def none_or_unknown(df:pd.DataFrame,cols:list) -> pd.DataFrame:
+    """ change all blanks to 'none or unknown' """
+    df_copy = df.copy()
+    for c in cols:
+        df.loc[:, c] = df[c].apply(str)
+        df.loc[:, c] = df[c].replace('', 'none or unknown')
+    return df_copy
+
+
+def munge_clean(raw: pd.DataFrame, munger: jm.Munger):
+    """Drop unnecessary columns.
+    Append '_SOURCE' suffix to raw column names to avoid conflicts"""
+    working = raw.copy()
+    # drop columns that are neither count columns nor used in munger formulas
+    #  define columns named in munger formulas
+    if munger.header_row_count > 1:
+        munger_formula_columns = [x for x in working.columns if x[munger.field_name_row] in munger.field_list]
+    else:
+        munger_formula_columns = [x for x in working.columns if x in munger.field_list]
+
+    if munger.field_name_row is None:
+        count_columns_by_name = [munger.field_names_if_no_field_name_row[idx] for idx in munger.count_columns]
+    else:
+        count_columns_by_name = [working.columns[idx][munger.field_name_row] for idx in munger.count_columns]
+    # TODO error check- what if cols_to_munge is missing something from munger.field_list?
+
+    # keep columns named in munger formulas; keep count columns; drop all else.
+    working = working[munger_formula_columns + count_columns_by_name]
+
+    # add suffix '_SOURCE' to certain columns to avoid any conflict with db table names
+    # (since no db table name ends with _SOURCE)
+    renamer = {x:f'{x}_SOURCE' for x in munger_formula_columns}
+    working.rename(columns=renamer, inplace=True)
+    return working
 
 
 def text_fragments_and_fields(formula):
@@ -77,7 +101,7 @@ def add_munged_column(raw,munger,element,mode='row',inplace=True):
     formula = munger.cdf_elements.loc[element,'raw_identifier_formula']
     if mode == 'row':
         for field in munger.field_list:
-            formula = formula.replace(f'<{field}>',f'<{field}_{munger.field_rename_suffix}>')
+            formula = formula.replace(f'<{field}>',f'<{field}_SOURCE>')
     elif mode == 'column':
         for i in range(munger.header_row_count):
             formula = formula.replace(f'<{i}>',f'<variable_{i}>')
@@ -334,7 +358,7 @@ def munge_and_melt(mu,raw,count_cols):
         working = add_munged_column(working,mu,t,mode='row')
 
     # remove original row-munge columns
-    munged = [x for x in working.columns if x[-len(mu.field_rename_suffix):] == mu.field_rename_suffix]
+    munged = [x for x in working.columns if x[-7:] == '_SOURCE']
     working.drop(munged,axis=1,inplace=True)
 
     # if there is just one numerical column, melt still creates dummy variable col
@@ -370,8 +394,7 @@ def add_constant_column(df,col_name,col_value):
 
 
 def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,ids=None):
-    """load data from <raw> into the database.
-    Note that columns to be munged (e.g. County_xxx) have mu.field_rename_suffix (e.g., _xxx) added already"""
+    """load data from <raw> into the database."""
     working = raw.copy()
 
     # enter elements from sources outside raw data, including creating id column(s)

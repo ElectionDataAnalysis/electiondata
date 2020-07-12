@@ -206,8 +206,6 @@ class Munger:
          self.file_type,self.encoding,self.thousands_separator] = read_munger_info_from_files(
             self.path_to_munger_dir)
 
-        self.field_rename_suffix = '___'  # NB: must not match any suffix of a cdf element name;
-
         # used repeatedly, so calculated once for convenience
         self.field_list = set()
         for t,r in self.cdf_elements.iterrows():
@@ -783,7 +781,7 @@ def check_element_against_raw_results(el,results_df,munger,numerical_columns,d):
 
     if mode == 'row':
         # add munged column
-        raw_fields = [f'{x}_{munger.field_rename_suffix}' for x in munger.cdf_elements.loc[el,'fields']]
+        raw_fields = [f'{x}_SOURCE' for x in munger.cdf_elements.loc[el,'fields']]
         try:
             relevant = results_df[raw_fields].drop_duplicates()
         except KeyError:

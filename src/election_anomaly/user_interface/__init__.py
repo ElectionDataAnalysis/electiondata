@@ -14,6 +14,7 @@ import ntpath
 import re
 import datetime
 from election_anomaly import juris_and_munger as sf
+# TODO change sf to jm
 import random
 from tkinter import filedialog
 from configparser import MissingSectionHeaderError
@@ -602,12 +603,20 @@ def read_single_datafile(munger, f_path):
 			df = pd.read_excel(f_path, **kwargs)
 		else:
 			raise mr.MungeError(f'Unrecognized file_type in munger: {munger.file_type}')
-		# df = mr.generic_clean(df)
+		df = mr.generic_clean(df)
 		return df
 	except:
 		# DFs have trouble comparing against None. So we return an empty DF and 
 		# check for emptiness below as an indication of an error.
 		return pd.DataFrame()
+
+
+def read_combine_results(mu: sf.Munger, results_file, project_root):
+	working = read_single_datafile(mu, results_file)
+	working = mr.cast_cols_as_int(working, mu.count_columns,mode='index')
+
+
+	return working
 
 
 def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_info=None):
@@ -619,7 +628,7 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_in
 	if not juris:
 		juris = pick_juris_from_filesystem(
 			project_root,juriss_dir='jurisdictions')
-	raw = read_single_datafile(munger, raw_path)
+	raw = read_combine_results(munger, raw_path, project_root)
 
 	if raw.empty:
 		print('Datafile unable to be parsed with munger. Results not loaded to database. '
@@ -629,9 +638,9 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_in
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
 
 	try:
-		raw = mr.clean_raw_df(raw,munger)
+		raw = mr.munge_clean(raw, munger)
 	except:
-		print('Datafile unable to be parsed with munger. Results not loaded to database. '
+		print('Cleaning of datafile failed.. Results not loaded to database. '
 			'Please check compatibilty between the two and try again.')
 		return
 
@@ -645,7 +654,7 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_in
 	try:
 		mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,results_info)
 	except:
-		print('Datafile unable to be parsed with munger. Results not loaded to database. '
+		print('Datafile not loaded. Results not loaded to database. '
 			'Please check compatibilty between the two and try again.')
 		return
 
