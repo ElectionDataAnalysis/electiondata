@@ -1,4 +1,0 @@
-item	value
-header_row_count	1
-field_name_row	0
-thousands_separator	None

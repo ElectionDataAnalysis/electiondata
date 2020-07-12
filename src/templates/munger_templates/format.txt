@@ -1,6 +1,7 @@
 item	value
 header_row_count	1
 field_name_row	<top row is 0>
+field_names_if_no_field_name_row	None
 count_columns	<left-most column is 0>
 file_type	txt
 encoding	iso-8859-1

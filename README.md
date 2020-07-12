@@ -57,7 +57,8 @@ The directory `src/mungers` holds the munger directories. Each munger directory 
  * `format.txt` holds information about the file format
    * `count_columns` is a comma-separated list of integers identifying the columns that contain vote counts. Our convention is to count from the left of the file, with leftmost column as 0.
    * `header_row_count` is an integer, the number of header rows in the file
-   * `field_name_row` is the single header row containing field names for columns that do not hold counts. (Columns containing vote counts may have field value information in more than one header row, e.g., one header row for contest and a second header row for candidate). Our convention is to count from the top of the file, with the top row as 0.
+   * `field_name_row` is the single header row containing field names for columns that do not hold counts. (Columns containing vote counts may have field value information in more than one header row, e.g., one header row for contest and a second header row for candidate). Our convention is to count from the top of the file, with the top row as 0. If there is no field names in the file, the value should be 'None'.
+   * `file_type` is one of a certain list of types recognized by the system. As of 6/4/2020, the list is:
    * `file_type` is one of a certain list of types recognized by the system. As of 6/4/2020, the list is:
      * `txt` for tab-separated text
      * `csv` for comma-separated text
