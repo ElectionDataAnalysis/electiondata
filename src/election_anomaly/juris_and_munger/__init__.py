@@ -101,6 +101,45 @@ class Jurisdiction:
 
 
 class Munger:
+    def get_aux_data(self, aux_data_dir, project_root=None) -> dict:
+        """creates dictionary of dataframes, one for each auxiliary datafile.
+       DataFrames returned are (multi-)indexed by the primary key(s)"""
+        aux_data_dict = {}  # will hold dataframe for each abbreviated file name
+
+        field_list = list(set([x[0] for x in self.auxiliary_fields()]))
+        for abbrev in field_list:
+            # get munger for the auxiliary file
+            aux_mu = Munger(os.path.join(self.path_to_munger_dir, abbrev), project_root=project_root)
+
+            # find file in aux_data_dir whose name contains the string <afn>
+            aux_filename_list = [x for x in os.listdir(aux_data_dir) if abbrev in x]
+            if len(aux_filename_list) == 0:
+                raise mr.MungeError(f'No file found with name containing {abbrev} in the directory {aux_data_dir}')
+            elif len(aux_filename_list) > 1:
+                raise mr.MungeError(f'Too many files found with name containing {abbrev} in the directory {aux_data_dir}')
+            else:
+                aux_path = os.path.join(aux_data_dir, aux_filename_list[0])
+
+            # read and clean the auxiliary data file, including setting primary key columns as int
+            df = ui.read_single_datafile(aux_mu, aux_path)
+
+            # cast primary key(s) as int if possible, and set as (multi-)index
+            primary_keys = self.aux_meta.loc[abbrev, 'primary_key'].split(',')
+            df = mr.cast_cols_as_int(df,primary_keys,error_msg=f'In dataframe for {abbrev}')
+            df.set_index(primary_keys, inplace=True)
+
+            aux_data_dict[abbrev] = df
+
+        return aux_data_dict
+
+    def auxiliary_fields(self):
+        """Return set of [file_abbrev,field] pairs, one for each
+        field in <self>.cdf_elements.fields referring to auxilliary files"""
+        pat = re.compile('([^\\[]+)\\[([^\\[\\]]+)\\]')
+        all_set = set().union(*list(self.cdf_elements.fields))
+        aux_field_list = [re.findall(pat,x)[0] for x in all_set if re.findall(pat,x)]
+        return aux_field_list
+
     def check_against_self(self):
         """check that munger is internally consistent"""
         problems = []
@@ -189,8 +228,9 @@ class Munger:
         # TODO allow user to pick different munger from file system
         return None
 
-    def __init__(self,dir_path,project_root=None,check_files=True):
-        """<dir_path> is the directory for the munger."""
+    def __init__(self,dir_path,aux_data_dir=None,project_root=None,check_files=True):
+        """<dir_path> is the directory for the munger. If munger deals with auxiliary data files,
+        <aux_data_dir> is the directory holding those files."""
         if not project_root:
             project_root = ui.get_project_root()
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
@@ -201,10 +241,15 @@ class Munger:
             Path(dir_path).mkdir(parents=True,exist_ok=True)
 
         if check_files:
-            ensure_munger_files(self.name,project_root=project_root)
+            ensure_munger_files(dir_path,project_root=project_root)
         [self.cdf_elements,self.header_row_count,self.field_name_row,self.field_names_if_no_field_name_row,self.count_columns,
-         self.file_type,self.encoding,self.thousands_separator] = read_munger_info_from_files(
-            self.path_to_munger_dir)
+         self.file_type,self.encoding,self.thousands_separator,self.aux_meta] = read_munger_info_from_files(
+            self.path_to_munger_dir,project_root=project_root)
+
+        if aux_data_dir:
+            self.aux_data = self.get_aux_data(aux_data_dir,project_root=project_root)
+        else:
+            self.aux_data = {}
 
         # used repeatedly, so calculated once for convenience
         self.field_list = set()
@@ -212,7 +257,16 @@ class Munger:
             self.field_list=self.field_list.union(r['fields'])
 
 
-def read_munger_info_from_files(dir_path):
+def read_munger_info_from_files(dir_path,project_root=None,aux_data_dir=None):
+    """<aux_data_dir> is required if there are auxiliary data files"""
+    # create auxiliary dataframe
+    if 'aux_meta.txt' in os.listdir(dir_path):
+        # if some elements are reported in separate files per auxilliary.txt file, read from file
+        aux_meta = pd.read_csv(os.path.join(dir_path, 'aux_meta.txt'),sep='\t',index_col='abbreviated_file_name')
+    else:
+        # set auxiliary dataframe to empty
+        aux_meta = pd.DataFrame([[]])
+
     # read cdf_element info and
     cdf_elements = pd.read_csv(
         os.path.join(dir_path,'cdf_elements.txt'),sep='\t',index_col='name',encoding='iso-8859-1').fillna('')
@@ -235,7 +289,13 @@ def read_munger_info_from_files(dir_path):
         field_names_if_no_field_name_row = format_info.loc['field_names_if_no_field_name_row','value'].split(',')
 
     header_row_count = int(format_info.loc['header_row_count','value'])
-    count_columns = [int(x) for x in format_info.loc['count_columns','value'].split(',')]
+    if format_info.loc['count_columns','value'] == 'None' or (
+            type(format_info.loc['count_columns','value']) == float
+            and np.isnan(format_info.loc['count_columns','value'])
+    ) or format_info.loc['count_columns','value'] == '':
+        count_columns = []
+    else:
+        count_columns = [int(x) for x in format_info.loc['count_columns','value'].split(',')]
     file_type = format_info.loc['file_type','value']
     encoding = format_info.loc['encoding','value']
     thousands_separator = format_info.loc['thousands_separator','value']
@@ -243,9 +303,8 @@ def read_munger_info_from_files(dir_path):
         thousands_separator = None
     # TODO warn if encoding not recognized
 
-    # TODO if cdf_elements.txt uses any cdf_element names as fields in any raw_identifiers formula,
-    #   will need to rename some columns of the raw file before processing.
-    return [cdf_elements,header_row_count,field_name_row,field_names_if_no_field_name_row,count_columns,file_type,encoding,thousands_separator]
+    return [cdf_elements,header_row_count,field_name_row,field_names_if_no_field_name_row,count_columns,file_type,
+            encoding,thousands_separator,aux_meta]
 
 # TODO combine ensure_jurisdiction_files with ensure_juris_files
 def ensure_jurisdiction_files(juris_path,project_root):
@@ -367,13 +426,13 @@ def ensure_juris_files(juris_path,project_root):
         return {}
 
 
-# noinspection PyUnresolvedReferences
-def ensure_munger_files(munger_name,project_root=None):
+def ensure_munger_files(munger_path,project_root=None):
     """Check that the munger files are complete and consistent with one another.
-    Adds munger directory and files if they do not exist. 
-    Assumes dictionary.txt is in the template file"""
-    # define path to directory for the specific munger
-    munger_path = os.path.join(project_root,'mungers',munger_name)
+    Assumes munger directory exists. Assumes dictionary.txt is in the template file.
+    <munger_path> is the path to the directory of the particular munger"""
+    if not project_root:
+        project_root = ui.get_project_root()
+
     # ensure all files exist
     created = []
     if not os.path.isdir(munger_path):
@@ -386,6 +445,8 @@ def ensure_munger_files(munger_name,project_root=None):
     error = {}
     # create each file if necessary
     for munger_file in template_list:
+        # TODO create optional template for auxiliary.txt
+        print(f'Checking {munger_file}.txt')
         cf_path = os.path.join(munger_path,f'{munger_file}.txt')
         # if file does not already exist in munger dir, create from template and invite user to fill
         file_exists = os.path.isfile(cf_path)
@@ -403,7 +464,7 @@ def ensure_munger_files(munger_name,project_root=None):
     # check contents of each file if they were not newly created and
     # if they have successfully been checked for the format
     if file_exists and not error:
-        err = check_munger_file_contents(munger_name,project_root=project_root)
+        err = check_munger_file_contents(munger_path,project_root=project_root)
         if err:
             error["contents"] = err
 

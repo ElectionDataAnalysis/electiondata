@@ -4,6 +4,8 @@
 import psycopg2
 import sqlalchemy
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
+# import the error handling libraries for psycopg2
+from psycopg2 import OperationalError, errorcodes, errors
 from psycopg2 import sql
 import sqlalchemy as db
 import sqlalchemy_utils
@@ -15,6 +17,9 @@ import re
 from election_anomaly.db_routines import create_cdf_db as db_cdf
 import os
 
+
+class DatabaseError(psycopg2.OperationalError):
+    pass
 
 def get_database_names(con):
     """Return dataframe with one column called `datname` """

@@ -238,7 +238,8 @@ def find_dupes(df):
 
 
 def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name=None):
-	error = sf.ensure_munger_files(munger_name,project_root=project_root)
+	munger_path = os.path.join(project_root,mungers_dir,munger_name)
+	error = sf.ensure_munger_files(munger_path,project_root=project_root)
 
 	munger_path = os.path.join(mungers_dir,munger_name)
 
@@ -611,15 +612,29 @@ def read_single_datafile(munger, f_path):
 		return pd.DataFrame()
 
 
-def read_combine_results(mu: sf.Munger, results_file, project_root):
+def read_combine_results(mu: sf.Munger, results_file, project_root, aux_data_dir=None):
 	working = read_single_datafile(mu, results_file)
 	working = mr.cast_cols_as_int(working, mu.count_columns,mode='index')
 
+	# merge with auxiliary files (if any)
+	if aux_data_dir is not None:
+		# get auxiliary data (includes cleaning and setting (multi-)index of primary key column(s))
+		aux_data = mu.get_aux_data(aux_data_dir, project_root=project_root)
+		for abbrev,r in mu.aux_meta.iterrows():
+			# cast foreign key columns of main results file as int if possible
+			foreign_key = r['foreign_key'].split(',')
+			working = mr.cast_cols_as_int(working,foreign_key)
+			# rename columns
+			col_rename = {f'{c}':f'{abbrev}[{c}]' for c in aux_data[abbrev].columns}
+			# merge auxiliary info into <working>
+			a_d = aux_data[abbrev].rename(columns=col_rename)
+			working = working.merge(a_d,how='left',left_on=foreign_key,right_index=True)
 
 	return working
 
 
-def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_info=None):
+def new_datafile(
+		session,munger:sf.Munger,raw_path,project_root=None,juris=None,results_info=None,aux_data_dir=None):
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
@@ -628,9 +643,10 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_in
 	if not juris:
 		juris = pick_juris_from_filesystem(
 			project_root,juriss_dir='jurisdictions')
-	raw = read_combine_results(munger, raw_path, project_root)
+	raw = read_combine_results(munger, raw_path, project_root,aux_data_dir=aux_data_dir)
 
 	if raw.empty:
+		# TODO improve error tracking
 		print('Datafile unable to be parsed with munger. Results not loaded to database. '
 			'Please check compatibilty between the two and try again.')
 		return
@@ -648,12 +664,15 @@ def new_datafile(session,munger,raw_path,project_root=None,juris=None,results_in
 
 	# check jurisdiction against raw results file, adapting jurisdiction files as necessary
 	# TODO: incorporate juris.check_against_raw_results(raw,munger,count_columns_by_name)
-	# if jurisdction changed, load to db
+	# if jurisdiction changed, load to db
 	juris.load_juris_to_db(session,project_root)
 
 	try:
-		mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,results_info)
+		err = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,results_info)
+		if err:
+			print(f'{err}. Results not loaded to database')
 	except:
+		# TODO improve error message
 		print('Datafile not loaded. Results not loaded to database. '
 			'Please check compatibilty between the two and try again.')
 		return
@@ -735,9 +754,9 @@ def report_problems(problems,msg='There are problems'):
 	return
 
 
-def get_runtime_parameters(keys, param_file=None):
+def get_runtime_parameters(required_keys, optional_keys=None,param_file=None):
 	d = {}
-	missing_params = {'missing':[]}
+	missing_required_params = {'missing':[]}
 
 	parser = ConfigParser()
 	if param_file:
@@ -748,16 +767,23 @@ def get_runtime_parameters(keys, param_file=None):
 	if len(p) == 0:
 		raise FileNotFoundError
 
-	for k in keys:
+	for k in required_keys:
 		try:
 			d[k] = parser['election_anomaly'][k]
 		except KeyError:
-			missing_params['missing'].append(k)
+			missing_required_params['missing'].append(k)
 
-	if len(missing_params['missing']) == 0:
-		missing_params = None
+	if optional_keys:
+		for k in optional_keys:
+			try:
+				d[k]=parser['election_anomaly'][k]
+			except KeyError:
+				d[k] = None
 
-	return d, missing_params
+	if len(missing_required_params['missing']) == 0:
+		missing_required_params = None
+
+	return d, missing_required_params
 
 def set_record_info_from_user(sess,element,known_info_d={}):
 
@@ -788,7 +814,7 @@ def set_record_info_from_user(sess,element,known_info_d={}):
 		if c in new.keys():
 			new[c] = dbr.name_to_id(sess, fk_df.loc[c, 'foreign_table_name'], new[c])
 			if new[c] == None:
-				error.append(f'{known_info_d[c]} is invalid c_plain')
+				error.append(f'{known_info_d[c]} is invalid {c_plain} (not found in {sess.bind.url})')
 		# TODO display valid entries in the error report.
 
 

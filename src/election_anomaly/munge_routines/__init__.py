@@ -83,7 +83,10 @@ def text_fragments_and_fields(formula):
     p = re.compile('(?P<text>[^<>]*)<(?P<field>[^<>]+)>')  # pattern to find text,field pairs
     q = re.compile('(?<=>)[^<]*$')  # pattern to find text following last pair
     text_field_list = re.findall(p,formula)
-    last_text = re.findall(q,formula)
+    if not text_field_list:
+        last_text = [formula]
+    else:
+        last_text = re.findall(q,formula)
     return text_field_list,last_text
 
 
@@ -116,8 +119,19 @@ def add_munged_column(raw,munger,element,mode='row',inplace=True):
     text_field_list.reverse()
     for t,f in text_field_list:
         assert f != f'{element}_raw',f'Column name conflicts with element name: {f}'
-        working.loc[:,f'{element}_raw'] = t + working.loc[:,f] + working.loc[:,f'{element}_raw']
+        working.loc[:,f'{element}_raw'] = working.loc[:,f].apply(lambda x:f'{t}{x}') + working.loc[:,f'{element}_raw']
+
+    # compress whitespace for <element>_raw
+    working.loc[:,f'{element}_raw'] = working[f'{element}_raw'].apply(compress_whitespace)
     return working
+
+
+def compress_whitespace(s:str) -> str:
+    """Return a string where every instance of consecutive whitespaces in <s> has been replace by a single space,
+    and leading and trailing whitespace is eliminated"""
+    new_s = re.sub(r'\s+',' ',s)
+    new_s = new_s.strip()
+    return new_s
 
 
 def replace_raw_with_internal_ids(
@@ -396,6 +410,7 @@ def add_constant_column(df,col_name,col_value):
 def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,ids=None):
     """load data from <raw> into the database."""
     working = raw.copy()
+    err = []
 
     # enter elements from sources outside raw data, including creating id column(s)
     # TODO what if contest_type (BallotMeasure or Candidate) has source 'other'?
@@ -408,22 +423,29 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,ids=None):
     else:
         working = add_constant_column(working,'Election_Id',ids[1])
         working = add_constant_column(working,'_datafile_Id',ids[0])
-
-    working = munge_and_melt(mu,working,count_cols)
+    try:
+        working = munge_and_melt(mu,working,count_cols)
+    except:
+        err = 'munge_and_melt error'
+        return err
 
     # append ids for BallotMeasureContests and CandidateContests
-    working = add_constant_column(working,'contest_type','unknown')
-    for c_type in ['BallotMeasure','Candidate']:
-        df_contest = pd.read_sql_table(f'{c_type}Contest',session.bind)
-        working = replace_raw_with_internal_ids(
-            working,juris,df_contest,f'{c_type}Contest',dbr.get_name_field(f'{c_type}Contest'),mu.path_to_munger_dir,
-            drop_unmatched=False)
+    try:
+        working = add_constant_column(working,'contest_type','unknown')
+        for c_type in ['BallotMeasure','Candidate']:
+            df_contest = pd.read_sql_table(f'{c_type}Contest',session.bind)
+            working = replace_raw_with_internal_ids(
+                working,juris,df_contest,f'{c_type}Contest',dbr.get_name_field(f'{c_type}Contest'),mu.path_to_munger_dir,
+                drop_unmatched=False)
 
-        # set contest_type where id was found
-        working.loc[working[f'{c_type}Contest_Id'].notnull(),'contest_type'] = c_type
+            # set contest_type where id was found
+            working.loc[working[f'{c_type}Contest_Id'].notnull(),'contest_type'] = c_type
 
-        # drop column with munged name
-        working.drop(f'{c_type}Contest',axis=1,inplace=True)
+            # drop column with munged name
+            working.drop(f'{c_type}Contest',axis=1,inplace=True)
+    except:
+        err = MungeError('error appending Contest_Ids')
+        return err
 
     # drop rows with unmatched contests
     to_be_dropped = working[working['contest_type'] == 'unknown']
@@ -439,50 +461,65 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,ids=None):
     element_list = [t for t in mu.cdf_elements[mu.cdf_elements.source != 'other'].index if
                     (t[-7:] != 'Contest' and t[-9:] != 'Selection')]
     for t in element_list:
-        # capture id from db in new column and erase any now-redundant cols
-        df = pd.read_sql_table(t,session.bind)
-        name_field = dbr.get_name_field(t)
-        # set drop_unmatched = True for fields necessary to BallotMeasure rows,
-        #  drop_unmatched = False otherwise to prevent losing BallotMeasureContests for BM-inessential fields
-        if t == 'ReportingUnit' or t == 'CountItemType':
-            drop = True
-        else:
-            drop = False
-        working = replace_raw_with_internal_ids(working,juris,df,t,name_field,mu.path_to_munger_dir,drop_unmatched=drop)
-        working.drop(t,axis=1,inplace=True)
-        # working = add_non_id_cols_from_id(working,df,t)
+        try:
+            # capture id from db in new column and erase any now-redundant cols
+            df = pd.read_sql_table(t,session.bind)
+            name_field = dbr.get_name_field(t)
+            # set drop_unmatched = True for fields necessary to BallotMeasure rows,
+            #  drop_unmatched = False otherwise to prevent losing BallotMeasureContests for BM-inessential fields
+            if t == 'ReportingUnit' or t == 'CountItemType':
+                drop = True
+            else:
+                drop = False
+            working = replace_raw_with_internal_ids(working,juris,df,t,name_field,mu.path_to_munger_dir,drop_unmatched=drop)
+            working.drop(t,axis=1,inplace=True)
+            # working = add_non_id_cols_from_id(working,df,t)
+        except:
+            err = f'Error appending {t}_Id'
+            return err
 
     # append BallotMeasureSelection_Id, drop BallotMeasureSelection
-    df_selection = pd.read_sql_table(f'BallotMeasureSelection',session.bind)
-    working = replace_raw_with_internal_ids(
-        working,juris,df_selection,'BallotMeasureSelection',dbr.get_name_field('BallotMeasureSelection'),
-        mu.path_to_munger_dir,
-        drop_unmatched=False,
-        mode=mu.cdf_elements.loc['BallotMeasureSelection','source'])
-    # drop records with a BMC_Id but no BMS_Id (i.e., keep if BMC_Id is null or BMS_Id is not null)
-    working = working[(working['BallotMeasureContest_Id'].isnull()) | (working['BallotMeasureSelection_Id']).notnull()]
+    try:
+        df_selection = pd.read_sql_table(f'BallotMeasureSelection',session.bind)
+        working = replace_raw_with_internal_ids(
+            working,juris,df_selection,'BallotMeasureSelection',dbr.get_name_field('BallotMeasureSelection'),
+            mu.path_to_munger_dir,
+            drop_unmatched=False,
+            mode=mu.cdf_elements.loc['BallotMeasureSelection','source'])
+        # drop records with a BMC_Id but no BMS_Id (i.e., keep if BMC_Id is null or BMS_Id is not null)
+        working = working[(working['BallotMeasureContest_Id'].isnull()) | (working['BallotMeasureSelection_Id']).notnull()]
 
-    working.drop('BallotMeasureSelection',axis=1,inplace=True)
+        working.drop('BallotMeasureSelection',axis=1,inplace=True)
+    except:
+        err = 'Error appending BallotMeasureSelection_Id'
+        return err
 
     # append CandidateSelection_Id
     #  First must load CandidateSelection table (not directly munged, not exactly a join either)
     #  Note left join, as not every record in working has a Candidate_Id
     # TODO maybe introduce Selection and Contest tables, have C an BM types refer to them?
-    c_df = pd.read_sql_table('Candidate',session.bind)
-    c_df.rename(columns={'Id':'Candidate_Id'},inplace=True)
-    cs_df, err = dbr.dframe_to_sql(c_df,session,'CandidateSelection',return_records='original')
-    # add CandidateSelection_Id column, merging on Candidate_Id
+    try:
+        c_df = pd.read_sql_table('Candidate',session.bind)
+        c_df.rename(columns={'Id':'Candidate_Id'},inplace=True)
+        cs_df, err = dbr.dframe_to_sql(c_df,session,'CandidateSelection',return_records='original')
+        # add CandidateSelection_Id column, merging on Candidate_Id
 
-    working = working.merge(
-        cs_df[['Candidate_Id','Id']],how='left',left_on='Candidate_Id',right_on='Candidate_Id')
-    working.rename(columns={'Id':'CandidateSelection_Id'},inplace=True)
-    # drop records with a CC_Id but no CS_Id (i.e., keep if CC_Id is null or CS_Id is not null)
-    working = working[(working['CandidateContest_Id'].isnull()) | (working['CandidateSelection_Id']).notnull()]
-
+        working = working.merge(
+            cs_df[['Candidate_Id','Id']],how='left',left_on='Candidate_Id',right_on='Candidate_Id')
+        working.rename(columns={'Id':'CandidateSelection_Id'},inplace=True)
+        # drop records with a CC_Id but no CS_Id (i.e., keep if CC_Id is null or CS_Id is not null)
+        working = working[(working['CandidateContest_Id'].isnull()) | (working['CandidateSelection_Id']).notnull()]
+    except:
+        err = 'error appending CandidateSelection_Id'
+        return err
     # TODO: warn user if contest is munged but candidates are not
     # TODO warn user if BallotMeasureSelections not recognized in dictionary.txt
     for j in ['BallotMeasureContestSelectionJoin','CandidateContestSelectionJoin','ElectionContestJoin']:
-        working = append_join_id(project_root,session,working,j)
+        try:
+            working = append_join_id(project_root,session,working,j)
+        except:
+            err = f'error appending {j}_Id'
+            return err
 
     # Fill VoteCount and ElectionContestSelectionVoteCountJoin
     #  To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
@@ -494,7 +531,10 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,ids=None):
 
     # add extra columns to VoteCount table temporarily to allow proper join
     extra_cols = ['ElectionContestJoin_Id','ContestSelectionJoin_Id','_datafile_Id']
-    dbr.add_integer_cols(session,'VoteCount',extra_cols)
+    try:
+        dbr.add_integer_cols(session,'VoteCount',extra_cols)
+    except:
+        print(f'Warning: columns not added.')
 
     # upload to VoteCount table, pull  Ids
     working_fat, err = dbr.dframe_to_sql(working,session,'VoteCount',raw_to_votecount=True)
@@ -508,7 +548,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,ids=None):
     # drop extra columns
     dbr.drop_cols(session,'VoteCount',extra_cols)
 
-    return
+    return err
 
 
 def append_join_id(project_root,session,working,j):
