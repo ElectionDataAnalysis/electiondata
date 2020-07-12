@@ -256,6 +256,7 @@ CandidateContest	Senator in the General Assembly;6th Senatorial District	Pennsyl
 CandidateContest	Senator in the General Assembly;8th Senatorial District	Pennsylvania;General Assembly Senate District 8
 CandidateContest	United States Senator;Statewide	Pennsylvania;US Congress;Senate
 ReportingUnit	Pennsylvania;ADAMS County	ADAMS
+ReportingUnit	Pennsylvania;ADAMS County	ADAMS
 ReportingUnit	Pennsylvania;ALLEGHENY County	ALLEGHENY
 ReportingUnit	Pennsylvania;ARMSTRONG County	ARMSTRONG
 ReportingUnit	Pennsylvania;BEAVER County	BEAVER

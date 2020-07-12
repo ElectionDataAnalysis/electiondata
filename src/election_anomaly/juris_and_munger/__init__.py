@@ -523,20 +523,13 @@ def check_munger_file_contents(munger_name,project_root=None):
 
 
 def dedupe(f_path,warning='There are duplicates'):
-    # TODO allow specificaiton of unique constraints
+    # TODO allow specification of unique constraints
     df = pd.read_csv(f_path,sep='\t',encoding='iso-8859-1')
-    dupes = True
     dupe=''
-    while dupes:
-        dupes_df,df = ui.find_dupes(df)
-        if dupes_df.empty:
-            dupes = False
-            # print(f'No dupes in {f_path}')
-        else:
-            # print(f'WARNING: {warning}\n')
-            # ui.show_sample(dupes_df,'lines','are duplicates')
-            dupe = f'Edit {f_path} to remove the duplication, then hit return to continue'
-            df = pd.read_csv(f_path,sep='\t',encoding='iso-8859-1')
+    dupes_df,df = ui.find_dupes(df)
+    if not dupes_df.empty:
+        dupe = f'Edit {f_path} to remove the duplication, then hit return to continue'
+        df = pd.read_csv(f_path,sep='\t',encoding='iso-8859-1')
     return df,dupe
 
 
