@@ -71,7 +71,7 @@ class Jurisdiction:
             x[:-4] for x in os.listdir(self.path_to_juris_dir)
             if x != 'remark.txt' and x != 'dictionary.txt' and x[0] != '.']
         # reorder juris_elements for efficiency
-        leading = ['ReportingUnit','Office','CandidateContest']
+        leading = ['ReportingUnit','Office','Party','CandidateContest']
         trailing = ['ExternalIdentifier']
         juris_elements = leading + [
             x for x in juris_elements if x not in leading and x not in trailing
@@ -708,6 +708,7 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
 
     # commit info in df to corresponding cdf table to db
     data, err = dbr.dframe_to_sql(df,session,element)
+    err = None
     if err:
         if not element in error:
             error[element] = {}
