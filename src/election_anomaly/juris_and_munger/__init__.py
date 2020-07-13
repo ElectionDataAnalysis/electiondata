@@ -189,10 +189,8 @@ class Munger:
         # TODO allow user to pick different munger from file system
         return None
 
-    def __init__(self,dir_path,project_root=None,check_files=True):
+    def __init__(self,dir_path,project_root,check_files=True):
         """<dir_path> is the directory for the munger."""
-        if not project_root:
-            project_root = ui.get_project_root()
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir = dir_path
 
@@ -399,7 +397,7 @@ def ensure_munger_files(munger_name,project_root=None):
     # check contents of each file if they were not newly created and
     # if they have successfully been checked for the format
     if file_exists and not error:
-        err = check_munger_file_contents(munger_name,project_root=project_root)
+        err = check_munger_file_contents(munger_name, project_root)
         if err:
             error["contents"] = err
 
@@ -441,11 +439,9 @@ def check_munger_file_format(munger_path, munger_file, templates):
         error = None
     return error
 
-def check_munger_file_contents(munger_name,project_root=None):
+def check_munger_file_contents(munger_name,project_root):
     """check that munger files are internally consistent; offer user chance to correct"""
     # define path to munger's directory
-    if not project_root:
-        project_root = ui.get_project_root()
     munger_dir = os.path.join(project_root,'mungers',munger_name)
 
     problems = []
