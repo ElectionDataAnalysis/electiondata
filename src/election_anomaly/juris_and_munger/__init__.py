@@ -708,7 +708,6 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
 
     # commit info in df to corresponding cdf table to db
     data, err = dbr.dframe_to_sql(df,session,element)
-    err = None
     if err:
         if not element in error:
             error[element] = {}
