@@ -678,16 +678,15 @@ def make_par_files(
             print(error)
             print("Data not created.")
             return
-        else:
-            rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
-            sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
-            results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
-            candidate_1_id = dbr.name_to_id(self.session, 'Candidate', candidate_1) 
-            candidate_2_id = dbr.name_to_id(self.session, 'Candidate', candidate_2) 
-            rollup = avp.create_scatter(self.session, d['rollup_directory'], rollup_unit_id,
-                sub_unit_id, results_info[1], 
-                results_info[0],candidate_1_id,candidate_2_id, count_item_type)
-            return rollup
+        rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
+        sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
+        results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
+        candidate_1_id = dbr.name_to_id(self.session, 'Candidate', candidate_1) 
+        candidate_2_id = dbr.name_to_id(self.session, 'Candidate', candidate_2) 
+        rollup = avp.create_scatter(self.session, d['rollup_directory'], rollup_unit_id,
+            sub_unit_id, results_info[1], 
+            results_info[0],candidate_1_id,candidate_2_id, count_item_type)
+        return rollup
 
 
 def get_filename(path):
