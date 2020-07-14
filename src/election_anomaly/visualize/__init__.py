@@ -9,18 +9,18 @@ def plot_scatter(data, fig_type, target_dir):
     fig.add_trace(go.Scatter(
         x=x,
         y=y,
-        mode='markers',
+        mode="markers",
         marker=go.scatter.Marker(
             size=10,
-            color='blue'
+            color="blue"
         ),
         hovertext=labels
     ))
     fig.update_layout(
-        xaxis_title=data['x'],
-        yaxis_title=data['y'],
+        xaxis_title=data["x"],
+        yaxis_title=data["y"],
         font=dict(
-            family='Courier New, monospace',
+            family="Courier New, monospace",
             size=18
         )
     )
@@ -31,7 +31,7 @@ def plot_scatter(data, fig_type, target_dir):
     if not os.path.isdir(image_dir):
         os.mkdir(image_dir)
 
-    if fig_type == 'html':
+    if fig_type == "html":
         fig.write_html(file_path)
     else:
         fig.write_image(file_path)
