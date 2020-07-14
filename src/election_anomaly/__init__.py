@@ -874,20 +874,20 @@ class Analyzer():
             return
 
 
-    def scatter(self, rollup_unit, sub_unit, candidate_1, candidate_2, count_item_type):
+    def scatter(self, jurisdiction, subdivision_type, candidate_1, candidate_2, count_item_type):
         d, error = ui.get_runtime_parameters(['rollup_directory'])
         if error:
             print("Parameter file missing requirements.")
             print(error)
             print("Data not created.")
             return
-        rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
-        sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
+        jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', jurisdiction)
+        subdivision_type_id = dbr.name_to_id(self.session, 'ReportingUnitType', subdivision_type)
         results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
         candidate_1_id = dbr.name_to_id(self.session, 'Candidate', candidate_1) 
         candidate_2_id = dbr.name_to_id(self.session, 'Candidate', candidate_2) 
-        rollup = a.create_scatter(self.session, d['rollup_directory'], rollup_unit_id,
-            sub_unit_id, results_info[1], 
+        rollup = a.create_scatter(self.session, d['rollup_directory'], jurisdiction_id,
+            subdivision_type_id, results_info[1], 
             results_info[0],candidate_1_id,candidate_2_id, count_item_type)
         return rollup
 
