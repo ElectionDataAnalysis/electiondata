@@ -13,3 +13,4 @@ SQLAlchemy==1.3.12
 easygui
 xlrd
 sqlalchemy_utils
+plotly
