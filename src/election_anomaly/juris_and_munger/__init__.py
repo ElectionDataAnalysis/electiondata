@@ -71,7 +71,7 @@ class Jurisdiction:
             x[:-4] for x in os.listdir(self.path_to_juris_dir)
             if x != 'remark.txt' and x != 'dictionary.txt' and x[0] != '.']
         # reorder juris_elements for efficiency
-        leading = ['ReportingUnit','Office','CandidateContest']
+        leading = ['ReportingUnit','Office','Party','CandidateContest']
         trailing = ['ExternalIdentifier']
         juris_elements = leading + [
             x for x in juris_elements if x not in leading and x not in trailing
