@@ -90,40 +90,49 @@ def text_fragments_and_fields(formula):
     return text_field_list,last_text
 
 
-def add_munged_column(raw,munger,element,mode='row',inplace=True):
+def add_munged_column(raw,munger,element,err,mode='row',inplace=True):
     """Alters dataframe <raw>, adding or redefining <element>_raw column
     via the <formula>. Assumes some preprocessing of <raw> .
     Does not alter row count."""
     # TODO what preprocessing exactly? Improve description
+    if not err:
+        err = {}
     if raw.empty:
         return raw
     if inplace:
         working = raw
     else:
         working = raw.copy()
-    formula = munger.cdf_elements.loc[element,'raw_identifier_formula']
-    if mode == 'row':
-        for field in munger.field_list:
-            formula = formula.replace(f'<{field}>',f'<{field}_SOURCE>')
-    elif mode == 'column':
-        for i in range(munger.header_row_count):
-            formula = formula.replace(f'<{i}>',f'<variable_{i}>')
 
-    text_field_list,last_text = text_fragments_and_fields(formula)
+    try:
+        formula = munger.cdf_elements.loc[element,'raw_identifier_formula']
+        if mode == 'row':
+            for field in munger.field_list:
+                formula = formula.replace(f'<{field}>',f'<{field}_SOURCE>')
+        elif mode == 'column':
+            for i in range(munger.header_row_count):
+                formula = formula.replace(f'<{i}>',f'<variable_{i}>')
 
-    if last_text:
-        working.loc[:,f'{element}_raw'] = last_text[0]
-    else:
-        working.loc[:,f'{element}_raw'] = ''
+        text_field_list,last_text = text_fragments_and_fields(formula)
 
-    text_field_list.reverse()
-    for t,f in text_field_list:
-        assert f != f'{element}_raw',f'Column name conflicts with element name: {f}'
-        working.loc[:,f'{element}_raw'] = working.loc[:,f].apply(lambda x:f'{t}{x}') + working.loc[:,f'{element}_raw']
+        if last_text:
+            working.loc[:,f'{element}_raw'] = last_text[0]
+        else:
+            working.loc[:,f'{element}_raw'] = ''
+
+        text_field_list.reverse()
+        for t,f in text_field_list:
+            working.loc[:,f'{element}_raw'] = working.loc[:,f].apply(lambda x:f'{t}{x}') + working.loc[:,f'{element}_raw']
+    except:
+        e = f'Error munging {element}. Check raw_identifier_formula for {element} in cdf_elements.txt'
+        if 'cdf_elements.txt' in err.keys():
+            err['cdf_elements.txt'].append(e)
+        else:
+            err['cdf_elements.txt'] = [e]
 
     # compress whitespace for <element>_raw
     working.loc[:,f'{element}_raw'] = working[f'{element}_raw'].apply(compress_whitespace)
-    return working
+    return working, err
 
 
 def compress_whitespace(s:str) -> str:
@@ -360,7 +369,7 @@ def good_syntax(s):
     return good
 
 
-def munge_and_melt(mu,raw,count_cols):
+def munge_and_melt(mu,raw,count_cols,err):
     """Does not alter raw; returns Transformation of raw:
      all row- and column-sourced mungeable info into columns (but doesn't translate via dictionary)
     new column names are, e.g., ReportingUnit_raw, Candidate_raw, etc.
@@ -369,7 +378,7 @@ def munge_and_melt(mu,raw,count_cols):
 
     # apply munging formula from row sources (after renaming fields in raw formula as necessary)
     for t in mu.cdf_elements[mu.cdf_elements.source == 'row'].index:
-        working = add_munged_column(working,mu,t,mode='row')
+        working, err = add_munged_column(working,mu,t,err,mode='row')
 
     # remove original row-munge columns
     munged = [x for x in working.columns if x[-7:] == '_SOURCE']
@@ -392,13 +401,13 @@ def munge_and_melt(mu,raw,count_cols):
 
     # apply munge formulas for column sources
     for t in mu.cdf_elements[mu.cdf_elements.source == 'column'].index:
-        working = add_munged_column(working,mu,t,mode='column')
+        working,err = add_munged_column(working,mu,t,err,mode='column')
 
     # remove unnecessary columns
     not_needed = [f'variable_{i}' for i in range(mu.header_row_count)]
     working.drop(not_needed,axis=1,inplace=True)
 
-    return working
+    return working, err
 
 
 def add_constant_column(df,col_name,col_value):
@@ -407,10 +416,9 @@ def add_constant_column(df,col_name,col_value):
     return new_df
 
 
-def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,ids=None):
+def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,err,ids=None):
     """load data from <raw> into the database."""
     working = raw.copy()
-    err = []
 
     # enter elements from sources outside raw data, including creating id column(s)
     # TODO what if contest_type (BallotMeasure or Candidate) has source 'other'?
@@ -423,11 +431,8 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,ids=None):
     else:
         working = add_constant_column(working,'Election_Id',ids[1])
         working = add_constant_column(working,'_datafile_Id',ids[0])
-    try:
-        working = munge_and_melt(mu,working,count_cols)
-    except:
-        err = 'munge_and_melt error'
-        return err
+
+    working, err = munge_and_melt(mu,working,count_cols,err)
 
     # append ids for BallotMeasureContests and CandidateContests
     try:

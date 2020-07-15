@@ -583,14 +583,14 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
-def read_single_datafile(munger, f_path):
+def read_single_datafile(munger, f_path, err):
 	try:
 		kwargs = {'thousands': munger.thousands_separator}
-		if not munger.field_name_row:
+		if munger.field_name_row is None:
 			kwargs['header'] = None
 			kwargs['names'] = munger.field_names_if_no_field_name_row
 		else:
-			kwargs['header'] = range(len(munger.header_row_count))
+			kwargs['header'] = range(munger.header_row_count)
 
 		if munger.file_type in ['txt', 'csv']:
 			kwargs['encoding'] = munger.encoding
@@ -603,23 +603,39 @@ def read_single_datafile(munger, f_path):
 			kwargs['dtype'] = str
 			df = pd.read_excel(f_path, **kwargs)
 		else:
-			raise mr.MungeError(f'Unrecognized file_type in munger: {munger.file_type}')
-		df = mr.generic_clean(df)
-		return df
+			e = f'Unrecognized file_type in munger: {munger.file_type}'
+			if 'format.txt' in err.keys():
+				err['format.txt'].append(e)
+			else:
+				err['format.txt'] = [e]
+		if df.empty:
+			e = f'Nothing read from datafile; file type {munger.file_type} may be inconsistent, or datafile may be empty.'
+			if 'format.txt' in err.keys():
+				err['format.txt'].append(e)
+			else:
+				err['format.txt'] = [e]
+		else:
+			df = mr.generic_clean(df)
+		return df, err
 	except:
 		# DFs have trouble comparing against None. So we return an empty DF and 
 		# check for emptiness below as an indication of an error.
-		return pd.DataFrame()
+		e = f'Nothing read from datafile; if datafile is not empty, look for inconsistency in format.txt.'
+		if 'format.txt' in err.keys():
+			err['format.txt'].append(e)
+		else:
+			err['format.txt'] = [e]
+		return pd.DataFrame(), err
 
 
-def read_combine_results(mu: sf.Munger, results_file, project_root, aux_data_dir=None):
-	working = read_single_datafile(mu, results_file)
+def read_combine_results(mu: sf.Munger, results_file, project_root, err, aux_data_dir=None):
+	working, err = read_single_datafile(mu, results_file, err)
 	working = mr.cast_cols_as_int(working, mu.count_columns,mode='index')
 
 	# merge with auxiliary files (if any)
 	if aux_data_dir is not None:
 		# get auxiliary data (includes cleaning and setting (multi-)index of primary key column(s))
-		aux_data = mu.get_aux_data(aux_data_dir, project_root=project_root)
+		aux_data,err = mu.get_aux_data(aux_data_dir, err,project_root=project_root)
 		for abbrev,r in mu.aux_meta.iterrows():
 			# cast foreign key columns of main results file as int if possible
 			foreign_key = r['foreign_key'].split(',')
@@ -630,7 +646,7 @@ def read_combine_results(mu: sf.Munger, results_file, project_root, aux_data_dir
 			a_d = aux_data[abbrev].rename(columns=col_rename)
 			working = working.merge(a_d,how='left',left_on=foreign_key,right_index=True)
 
-	return working
+	return working, err
 
 
 def new_datafile(
@@ -643,13 +659,17 @@ def new_datafile(
 	if not juris:
 		juris = pick_juris_from_filesystem(
 			project_root,juriss_dir='jurisdictions')
-	raw = read_combine_results(munger, raw_path, project_root,aux_data_dir=aux_data_dir)
+	err = {}
+	raw, err = read_combine_results(munger, raw_path, project_root,err,aux_data_dir=aux_data_dir)
 
 	if raw.empty:
 		# TODO improve error tracking
-		print('Datafile unable to be parsed with munger. Results not loaded to database. '
-			'Please check compatibilty between the two and try again.')
-		return
+		e = f'No data read from datafile {raw_path}.'
+		if 'datafile' in err.keys():
+			err['datafile'].append(e)
+		else:
+			err['datafile'] = [e]
+		return err
 	
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
 
@@ -668,7 +688,7 @@ def new_datafile(
 	juris.load_juris_to_db(session,project_root)
 
 	try:
-		err = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,results_info)
+		err = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,err)
 		if err:
 			print(f'{err}. Results not loaded to database')
 	except:

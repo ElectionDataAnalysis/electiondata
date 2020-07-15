@@ -1,6 +1,5 @@
 import os.path
 
-from election_anomaly import db_routines
 from election_anomaly import db_routines as dbr
 import pandas as pd
 from election_anomaly import munge_routines as mr
@@ -101,7 +100,7 @@ class Jurisdiction:
 
 
 class Munger:
-    def get_aux_data(self, aux_data_dir, project_root=None) -> dict:
+    def get_aux_data(self, aux_data_dir, err, project_root=None) -> dict:
         """creates dictionary of dataframes, one for each auxiliary datafile.
        DataFrames returned are (multi-)indexed by the primary key(s)"""
         aux_data_dict = {}  # will hold dataframe for each abbreviated file name
@@ -114,14 +113,22 @@ class Munger:
             # find file in aux_data_dir whose name contains the string <afn>
             aux_filename_list = [x for x in os.listdir(aux_data_dir) if abbrev in x]
             if len(aux_filename_list) == 0:
-                raise mr.MungeError(f'No file found with name containing {abbrev} in the directory {aux_data_dir}')
+                e = f'No file found with name containing {abbrev} in the directory {aux_data_dir}'
+                if 'datafile' in err.keys():
+                    err['datafile'].append(e)
+                else:
+                    err['datafile'] = [e]
             elif len(aux_filename_list) > 1:
-                raise mr.MungeError(f'Too many files found with name containing {abbrev} in the directory {aux_data_dir}')
+                e = f'Too many files found with name containing {abbrev} in the directory {aux_data_dir}'
+                if 'datafile' in err.keys():
+                    err['datafile'].append(e)
+                else:
+                    err['datafile'] = [e]
             else:
                 aux_path = os.path.join(aux_data_dir, aux_filename_list[0])
 
             # read and clean the auxiliary data file, including setting primary key columns as int
-            df = ui.read_single_datafile(aux_mu, aux_path)
+            df, err = ui.read_single_datafile(aux_mu, aux_path, err)
 
             # cast primary key(s) as int if possible, and set as (multi-)index
             primary_keys = self.aux_meta.loc[abbrev, 'primary_key'].split(',')
@@ -130,7 +137,7 @@ class Munger:
 
             aux_data_dict[abbrev] = df
 
-        return aux_data_dict
+        return aux_data_dict, err
 
     def auxiliary_fields(self):
         """Return set of [file_abbrev,field] pairs, one for each
@@ -180,53 +187,6 @@ class Munger:
             return error
         else:
             return None
-
-    def check_against_datafile(self,datafile_path,check_first_row=False):
-        """check that munger is compatible with datafile <raw>;
-        offer user chance to correct munger"""
-
-        # initialize to keep syntax-checker happy
-        raw = pd.DataFrame([[]])
-
-        error = {}
-
-        # check encoding
-        try:
-            raw = ui.read_single_datafile(self, datafile_path)
-        except UnicodeEncodeError:
-            error["encoding"] = f'Datafile is not encoded as {self.encoding}.'
-
-        # check that all count_columns are indeed read as integers
-        bad_columns = [raw.columns[idx] for idx in self.count_columns if raw.dtypes[idx] != 'int64']
-        if bad_columns:
-            bad_col_string = '\n\t'.join(bad_columns)
-            error["vote_count_columns"] = \
-                f'Munger fails to parse some VoteCount columns in the results file as integers:\n' \
-                f'{bad_col_string}'
-
-        non_count_integer_cols = [x for x in raw.columns if raw[x].dtype == 'int64' and
-                                    raw.columns.get_loc(x) not in self.count_columns]
-        if non_count_integer_cols:
-            ncic_string = '\n\t'.join(non_count_integer_cols)
-            error["integer_columns"] = f'Munger parses the following columns as integers, ' \
-                            f'but does not recognize them as VoteCount columns.\n{ncic_string}\n' \
-                            f'Count_columns line in the format.txt file may need to be corrected.\n'
-
-        if raw.shape[1] < 3:
-            error["row_count"] = f'Munger is reading a minimal number of columns.' \
-                            f'Check that column_field_row ({col_fields}) and' \
-                            f'file_type ({self.file_type}) are correct.'
-
-        # user confirm first data row
-        if check_first_row:
-            first_data_row = '\t'.join([f'{x}' for x in raw.iloc[0]])
-            error["first_data_row"] = \
-                f'Munger thinks the first data row is:\n{first_data_row}\n'
-
-        if error:
-            return error
-        # TODO allow user to pick different munger from file system
-        return None
 
     def __init__(self,dir_path,aux_data_dir=None,project_root=None,check_files=True):
         """<dir_path> is the directory for the munger. If munger deals with auxiliary data files,
@@ -619,7 +579,7 @@ def check_nulls(element,f_path,project_root):
     not_nulls = pd.read_csv(nn_path,sep='\t',encoding='iso-8859-1')
     df = pd.read_csv(f_path,sep='\t',encoding='iso-8859-1')
 
-    problems = []
+    problem_columns = []
 
     nulls = True
     while nulls:
@@ -631,10 +591,10 @@ def check_nulls(element,f_path,project_root):
             n = df[df[nn].isnull()]
             if not n.empty:
                 # ui.show_sample(n,f'Lines in {element} file',f'have illegal nulls in {nn}')
-                problems.append(nn)
-        if not problems:
+                problem_columns.append(nn)
+        if not problem_columns:
             nulls = False
-    return problems
+    return problem_columns
 
 
 
@@ -662,7 +622,7 @@ def check_dependencies(juris_dir,element):
             pd.read_csv(
                 os.path.join(
                     juris_dir,f'{target}.txt'),sep='\t',
-                encoding='iso-8859-1').fillna('').loc[:,db_routines.get_name_field(target)])
+                encoding='iso-8859-1').fillna('').loc[:,dbr.get_name_field(target)])
         try:
             ru.remove(np.nan)
         except ValueError:
@@ -796,7 +756,7 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,load_refs,erro
 
     target_list = []
     for r in refs:
-        ref_name_field = db_routines.get_name_field(r)
+        ref_name_field = dbr.get_name_field(r)
 
         r_target = pd.read_sql_table(r,session.bind)[['Id',ref_name_field]]
         r_target.rename(columns={'Id':foreign_key,ref_name_field:interim},inplace=True)
@@ -834,7 +794,7 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,load_refs,erro
     return df
 
 
-def check_element_against_raw_results(el,results_df,munger,numerical_columns,d):
+def check_element_against_raw_results(el,results_df,munger,numerical_columns,d,err=None):
     mode = munger.cdf_elements.loc[el,'source']
 
     # restrict to element in question; add row for 'none or unknown'
@@ -853,7 +813,7 @@ def check_element_against_raw_results(el,results_df,munger,numerical_columns,d):
             formula = munger.cdf_elements.loc[el,"raw_identifier_formula"]
             raise mr.MungeError(
                 f'Required column from formula {formula} not found in file columns:\n{results_df.columns}')
-        mr.add_munged_column(relevant,munger,el,mode=mode)
+        mr.add_munged_column(relevant,munger,el,err,mode=mode)
         # check for untranslatable items
         missing = relevant[~relevant[f'{el}_raw'].isin(translatable)]
 
