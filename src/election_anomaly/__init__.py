@@ -898,6 +898,21 @@ class Analyzer():
             v.plot_scatter(rollup, fig_type, d['rollup_directory'])
         return rollup
 
+    
+    def bar(self, jurisdiction, contest_type=None, fig_type=None):
+        """contest_type is one of state, congressional, state-senate, state-house"""
+        d, error = ui.get_runtime_parameters(['rollup_directory'])
+        if error:
+            print("Parameter file missing requirements.")
+            print(error)
+            print("Data not created.")
+            return
+        jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', jurisdiction)
+        results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
+        rollup = a.create_bar(self.session, jurisdiction_id, contest_type, results_info[1], results_info[0])
+        return rollup
+
+
 
 def get_filename(path):
 	head, tail = ntpath.split(path)
