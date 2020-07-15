@@ -773,14 +773,15 @@ def get_runtime_parameters(required_keys, optional_keys=None,param_file=None):
 		except KeyError:
 			missing_required_params['missing'].append(k)
 
-	if optional_keys:
-		for k in optional_keys:
-			try:
-				d[k]=parser['election_anomaly'][k]
-			except KeyError:
-				d[k] = None
+	if optional_keys is None:
+		optional_keys = []
+	for k in optional_keys:
+		try:
+			d[k] = parser['election_anomaly'][k]
+		except KeyError:
+			d[k] = None
 
-	if len(missing_required_params['missing']) == 0:
+	if not missing_required_params['missing']:
 		missing_required_params = None
 
 	return d, missing_required_params

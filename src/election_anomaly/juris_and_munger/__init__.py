@@ -448,7 +448,6 @@ def ensure_munger_files(munger_path,project_root=None):
     # create each file if necessary
     for munger_file in template_list:
         # TODO create optional template for auxiliary.txt
-        print(f'Checking {munger_file}.txt')
         cf_path = os.path.join(munger_path,f'{munger_file}.txt')
         # if file does not already exist in munger dir, create from template and invite user to fill
         file_exists = os.path.isfile(cf_path)
