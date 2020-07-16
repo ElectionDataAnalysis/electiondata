@@ -362,12 +362,13 @@ def assign_anomaly_score(data):
 def get_most_anomalous(data, n):
 	"""gets the n contests with the highest individual anomaly score"""
 	df = data.groupby('Contest_Id')['score'].max().reset_index()
+	df.rename(columns={'score': 'max_score'}, inplace=True)
 	data = data.merge(df, on='Contest_Id')
-	data.drop('score_x', axis=1, inplace=True)
-	data.rename(columns={'score_y': 'score'}, inplace=True)
-	unique_scores = sorted(set(df['score']), reverse=True)
+	# data.drop('score_x', axis=1, inplace=True)
+	# data.rename(columns={'score_y': 'score'}, inplace=True)
+	unique_scores = sorted(set(df['max_score']), reverse=True)
 	top_scores = unique_scores[:n]
 
-	result = data[data['score'].isin(top_scores)]
+	result = data[data['max_score'].isin(top_scores)]
 
 	return result
