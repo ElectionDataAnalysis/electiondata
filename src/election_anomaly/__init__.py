@@ -131,9 +131,8 @@ class DataLoader():
 
     def load_results(self):
         results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
-        ui.new_datafile(self.session, self.munger, self.d['results_file'],
-            juris=self.juris, project_root=self.d['project_root'], 
-            results_info=results_info)
+        ui.new_datafile(self.session, self.munger, self.d['results_file'], self.d['project_root'],
+            juris=self.juris, results_info=results_info)
 
 
 class Analyzer():
