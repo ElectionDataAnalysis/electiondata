@@ -590,12 +590,12 @@ def read_single_datafile(munger, f_path, err):
 			kwargs['header'] = None
 			kwargs['names'] = munger.field_names_if_no_field_name_row
 		else:
-			kwargs['header'] = range(munger.header_row_count)
+			kwargs['header'] = list(range(munger.header_row_count))
 
 		if munger.file_type in ['txt', 'csv']:
 			kwargs['encoding'] = munger.encoding
 			kwargs['quoting'] = csv.QUOTE_MINIMAL
-			kwargs['index_col'] = False
+			kwargs['index_col'] = None
 			if munger.file_type == 'txt':
 				kwargs['sep'] = '\t'
 			df = pd.read_csv(f_path, **kwargs)
@@ -688,13 +688,12 @@ def new_datafile(
 	juris.load_juris_to_db(session,project_root)
 
 	try:
-		err = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,err)
+		err = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,err,ids=results_info)
 		if err:
-			print(f'{err}. Results not loaded to database')
+			print(f'{err}. Results not loaded to database.')
 	except:
-		# TODO improve error message
 		print('Datafile not loaded. Results not loaded to database. '
-			'Please check compatibilty between the two and try again.')
+			'Please check compatibility of munger and datafile, and try again.')
 		return
 
 	print(f'Datafile contents uploaded to database {session.bind.engine}')
