@@ -18,9 +18,6 @@ from election_anomaly.db_routines import create_cdf_db as db_cdf
 import os
 
 
-class DatabaseError(psycopg2.OperationalError):
-    pass
-
 def get_database_names(con):
     """Return dataframe with one column called `datname` """
     names = pd.read_sql('SELECT datname FROM pg_database',con)

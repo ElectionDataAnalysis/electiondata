@@ -676,7 +676,7 @@ def new_datafile(
 	try:
 		raw = mr.munge_clean(raw, munger)
 	except:
-		print('Cleaning of datafile failed.. Results not loaded to database. '
+		print('Cleaning of datafile failed. Results not loaded to database. '
 			'Please check compatibilty between the two and try again.')
 		return
 
