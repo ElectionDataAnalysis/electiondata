@@ -56,25 +56,6 @@ recognized_encodings = {'iso2022jp', 'arabic', 'cp861', 'csptcp154', 'shiftjisx0
 						'ks_c-5601-1987'}
 
 
-def get_project_root():
-	p_root = os.getcwd().split('election_anomaly')[0]
-	confirmed = False
-	subdir_list = ['election_anomaly','jurisdictions','mungers']
-	while not confirmed:
-		missing = [x for x in subdir_list if x not in os.listdir(p_root)]
-		print(f'\nSuggested project root directory is:\n\t{p_root}')
-		if missing:
-			print(f'The suggested directory does not contain required subdirectories {",".join(missing)}')
-			new_pr = input(f'Designate a different project root (y/n)?\n')
-			if new_pr == 'y':
-				p_root = input(f'Enter absolute path of project root.\n')
-			else:
-				input('Add required subdirectories and hit return to continue.\n')
-		elif input('Is this the correct project root (y/n)?\n') == 'y':
-			confirmed = True
-	return p_root
-
-
 def pick_file_or_directory(description=None,mode=None):
 	if not mode:
 		print(f'No mode specified')
@@ -244,7 +225,7 @@ def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name
 	munger_path = os.path.join(mungers_dir,munger_name)
 
 	if not error:
-		munger = sf.Munger(munger_path,project_root=project_root,check_files=False)
+		munger = sf.Munger(munger_path, project_root,check_files=False)
 		#munger_error is None unless internal inconsistency found
 		munger_error = munger.check_against_self()
 		return munger, munger_error
@@ -654,8 +635,6 @@ def new_datafile(
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
-	if not project_root:
-		get_project_root()
 	if not juris:
 		juris = pick_juris_from_filesystem(
 			project_root,juriss_dir='jurisdictions')
