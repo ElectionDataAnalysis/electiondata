@@ -1,0 +1,490 @@
+BallotName	Party
+A. BOMER	No Party Affiliation
+AARON DELIKTA	Republican Party
+AARON MARIASY	Green Party
+AARON MILLER	Republican Party
+ABDULLAH HAMMOUD	Democratic Party
+ADAM DREHER	Democratic Party
+ADAM HOLLIER	Democratic Party
+AL HARDWICK	Republican Party
+ALBERTA GRIFFIN	Democratic Party
+ALEX GARZA	Democratic Party
+AMANDA BRAND	Republican Party
+AMBER PEDERSEN	Democratic Party
+ANDRE DWAN GODWIN	No Party Affiliation
+ANDREA FISCHER NEWMAN	Republican Party
+ANDREA GERALDS	Democratic Party
+ANDREA K. SCHROEDER	Republican Party
+ANDREA KIRBY	Republican Party
+ANDREA POLLOCK	Republican Party
+ANDREW RICHNER	Republican Party
+ANDY LEVIN	Democratic Party
+ANGELA SAVINO	Republican Party
+ANGELA WITWER	Democratic Party
+ANGELO SCOTT BROWN	No Party Affiliation
+ANIL KUMAR	Democratic Party
+ANN BOLLIN	Republican Party
+ANNETTE GLENN	Republican Party
+ANNIE SPENCER	Republican Party
+ANTHONY CROFF	Libertarian Party
+ARIC NESBITT	Republican Party
+ARTHUR BLUNDELL	Republican Party
+BEAU MATTHEW LAFAVE	Republican Party
+BEN FREDERICK	Republican Party
+BENJAMIN CARR	Libertarian Party
+BENJAMIN DRYKE	Libertarian Party
+BETH GRIFFIN	Republican Party
+BETTY JEAN ALEXANDER	Democratic Party
+BILL GELINEAU	Libertarian Party
+BILL HUIZENGA	Republican Party
+BILL LAVOY	Democratic Party
+BILL SAXTON	Democratic Party
+BILL SCHUETTE	Republican Party
+BOB BAIRD	Republican Party
+BOB ROMPS	Democratic Party
+BORIS TUMAN	Republican Party
+BRAD PAQUETTE	Republican Party
+BRADLEY SLAGH	Republican Party
+BRANDON HOEZEE	Republican Party
+BRANDT IDEN	Republican Party
+BRENDA CARTER	Democratic Party
+BRENDA JONES	Democratic Party
+BRENDA LAWRENCE	Democratic Party
+BRIAN ELLISON	Libertarian Party
+BRIAN K. ELDER	Democratic Party
+BRIAN MEAKIN	Republican Party
+BRIAN R. WRIGHT	Libertarian Party
+BRIANNA T. SCOTT	Democratic Party
+BRIDGETTE R. ABRAHAM-GUZMAN	Natural Law Party
+BRONNA KAHLE	Republican Party
+BRUCE CAMPBELL	Libertarian Party
+BRYAN C. BARNHILL	Democratic Party
+CANDIUS STEARNS	Republican Party
+CARA CLEMENTE	Democratic Party
+CATHY ALBRO	Democratic Party
+CELIA YOUNG-WENKEL	Democratic Party
+CHAD MCNAMARA	Libertarian Party
+CHANEIKA RANELL PENNY	No Party Affiliation
+CHRIS AFENDOULIS	Republican Party
+CHRIS GRAVELINE	No Party Affiliation
+CHRISTINE C. SCHWARTZ	Republican Party
+CHRISTINE E. BARNES	Republican Party
+CHRISTINE GREIG	Democratic Party
+CHRISTOPHER BANKS	Democratic Party
+CHRISTOPHER COMDEN	Republican Party
+CHRISTOPHER GILES	Democratic Party
+CLYDE DARNELL LYNCH	No Party Affiliation
+CLYDE LYNCH	No Party Affiliation
+COLLEEN TURK	Democratic Party
+COLTON A. CAMPBELL	Republican Party
+COOPER NYE	No Party Affiliation
+CRAIG BEACH	Democratic Party
+CRYSTAL VAN SICKLE	Republican Party
+CURT VANDERWALL	Republican Party
+"CURTIS HERTEL, JR."	Democratic Party
+CYNTHIA A. JOHNSON	Democratic Party
+CYNTHIA A. LUCZAK	Democratic Party
+D. ETTA WILCOXON	Green Party
+DAIRE RENDON	Republican Party
+DALE W. ZORN	Republican Party
+DAN LAUWERS	Republican Party
+DAN O'NEIL	Democratic Party
+DAN SEIBERT	Democratic Party
+DANA KNIGHT	Democratic Party
+DANA NESSEL	Democratic Party
+DANETTA L. SIMPSON	No Party Affiliation
+DANIEL T. KILDEE	Democratic Party
+DARIAN MOORE	Republican Party
+DARRELL STASIK	Republican Party
+DARRIN CAMILLERI	Democratic Party
+DAVE ADAMS	Democratic Party
+DAVE DUTCH	Republican Party
+DAVE MORGAN	Republican Party
+DAVID ANTHONY DUDENHOEFER	No Party Affiliation
+DAVID E. LOSSING	Democratic Party
+DAVID J. LILLIS	Republican Party
+DAVID LAGRAND	Democratic Party
+DAVID MOTT	No Party Affiliation
+DAVID NICHOLSON	Republican Party
+DAVID WOLKINSON	Republican Party
+DAWN D. LEVEY	Democratic Party
+DAYNA POLEHANKI	Democratic Party
+DEAN E. HILL	Democratic Party
+DEBBIE BOURGOIS	Democratic Party
+DEBBIE DINGELL	Democratic Party
+DEBBIE STABENOW	Democratic Party
+DENNIS B. SMITH	Democratic Party
+DESHAWN WILKINS	Republican Party
+DIANA FARRINGTON	Republican Party
+DIANE DUNASKISS	Republican Party
+DION ADAMS	Democratic Party
+DOLORES BRODERSEN	Republican Party
+DONNA KEKESIS	Republican Party
+DONNA LASINSKI	Democratic Party
+DOROTHY PATTERSON	Republican Party
+DOROTHY TANNER	Republican Party
+DOUG DERN	No Party Affiliation
+DOUG MITCHELL	Republican Party
+DOUG TIETZ	Republican Party
+DOUGLAS C. WOZNIAK	Republican Party
+DOUGLAS LEVESQUE	Republican Party
+DOUGLAS W. GARDNER	No Party Affiliation
+ED MCBROOM	Republican Party
+ELISSA SLOTKIN	Democratic Party
+ELIZABETH T. CLEMENT	No Party Affiliation
+ERIC BORREGARD	Green Party
+ERIC EDWARD SABIN	Democratic Party
+ERIC LEUTHEUSER	Republican Party
+ERIKA GEISS	Democratic Party
+ERNIE WHITESIDE	Democratic Party
+ERWIN HAAS	Libertarian Party
+EUGENE SINTA	No Party Affiliation
+EVAN SPACE	No Party Affiliation
+FRANCIS L. ROWLEY	No Party Affiliation
+FRANK LIBERATI	Democratic Party
+FRED UPTON	Republican Party
+GAIL EICHORST	Republican Party
+GARNET LEWIS	Democratic Party
+GARY HOWELL	Republican Party
+GARY R. EISEN	Republican Party
+GARY WALKOWICZ	Republican Party
+GEORGE E. HUFFMAN III	Republican Party
+GEORGE NASTAS	Republican Party
+GERALD T. VAN SICKLE	Republican Party
+GRAHAM FILLER	Republican Party
+GREG VANWOERKOM	Republican Party
+GREGORY CRESWELL	Libertarian Party
+GREGORY MARKKANEN	Republican Party
+GREGORY SCOTT STEMPFLE	Libertarian Party
+GRETCHEN DRISKELL	Democratic Party
+GRETCHEN WHITMER	Democratic Party
+HALEY STEVENS	Democratic Party
+HALI MCEACHERN	Republican Party
+HANK VAUPEL	Republican Party
+HARLEY MIKKELSON	Green Party
+HEIDI A. ZUNIGA	Democratic Party
+HENRY JOSEPH LESTER	No Party Affiliation
+HENRY SWIFT	Republican Party
+HENRY YANEZ	Democratic Party
+HOWARD WEATHINGTON	Republican Party
+IAN HAIGHT	Democratic Party
+ISAAC ROBINSON	Democratic Party
+JACK BERGMAN	Republican Party
+JACK O'MALLEY	Republican Party
+JACOB STRALEY	Green Party
+JAMES A. LOWER	Republican Party
+JAMES K. YOUNG	Libertarian Party
+JAMES LEWIS HUDLER	Libertarian Party
+JAMES S. CASHA	No Party Affiliation
+JAMES STEPHENS	Republican Party
+JAMES TOWNSEND	Republican Party
+JAMIE LEWIS	Libertarian Party
+JANET FLESSLAND	Republican Party
+JANET M. SANGER	Republican Party
+JASON B. REES	Libertarian Party
+JASON M. SHEPPARD	Republican Party
+JASON NOBLE	Democratic Party
+JASON WENTWORTH	Republican Party
+JAZMINE M. EARLY	Republican Party
+JEAN E. HOLLAND	Republican Party
+JEANETTE SCHIPPER	Democratic Party
+JEFF BONNELL	Republican Party
+JEFF IRWIN	Democratic Party
+JEFF JONES	Republican Party
+JEFF NOBLE	Republican Party
+JEFF PITTEL	Libertarian Party
+JEFF YAROCH	Republican Party
+JENNIFER ANIANO	Democratic Party
+JENNIFER SUIDAN	Democratic Party
+JENNIFER V. KURLAND	Green Party
+JEREMY MORGAN	Libertarian Party
+JEREMY MOSS	Democratic Party
+JEREMY PERUSKI	No Party Affiliation
+JERRY HILLIARD	Democratic Party
+JERRY SIAS	Democratic Party
+JESSICIA SMITH	Green Party
+JEWELL JONES	Democratic Party
+JIM ANANICH	Democratic Party
+JIM ELLISON	Democratic Party
+JIM HAADSMA	Democratic Party
+JIM LILLY	Republican Party
+JIM PAGE	Democratic Party
+JIM RUNESTAD	Republican Party
+JIM STAMAS	Republican Party
+JOANNE SCHMIDT GALLOWAY	Democratic Party
+JOCELYN BENSON	Democratic Party
+JODY RICE-WHITE	Republican Party
+"JOE BELLINO, JR."	Republican Party
+JOE FARRINGTON	No Party Affiliation
+JOE SANGER	Republican Party
+JOE TATE	Democratic Party
+JOE WEIR	Democratic Party
+JOEY B. ANDREWS	Democratic Party
+JOHN ANTHONY LA PIETRA	Green Party
+JOHN ARTHUR WILLIAMS	No Party Affiliation
+JOHN BIZON	Republican Party
+JOHN CHIRKUN	Democratic Party
+JOHN CONYERS III	No Party Affiliation
+JOHN D. CHERRY	Democratic Party
+JOHN HOWARD WILHELM	Natural Law Party
+JOHN J. TATAR	Libertarian Party
+JOHN JAMES	Republican Party
+JOHN JASCOB	Libertarian Party
+JOHN MOOLENAAR	Republican Party
+JOHN P. SPICA	Democratic Party
+JOHN PALFFY	Republican Party
+JOHN PAUL SANGER	Republican Party
+JOHN REILLY	Republican Party
+JOHN T. HARGENRADER	Libertarian Party
+JOHN V. MCDERMOTT	Green Party
+JON BUMSTEAD	Republican Party
+JON ELGAS	Libertarian Party
+JON HOADLEY	Democratic Party
+JONATHAN LEE POMMERVILLE	No Party Affiliation
+JOSEPH H. LEBLANC	Libertarian Party
+JOSEPH P. GILLOTTE	Libertarian Party
+JOSHUA RIVARD	Democratic Party
+JUDITH P. PRITCHETT	Democratic Party
+JULIA PULVER	Democratic Party
+JULIE A. CALLEY	Republican Party
+JULIE ALEXANDER	Republican Party
+JULIE BRIXIE	Democratic Party
+JUSTIN AMASH	Republican Party
+KARA HOPE	Democratic Party
+KAREN ADAMS	Republican Party
+KAREN WHITSETT	Democratic Party
+KATHY GOODWIN	Republican Party
+KATHY S. CRAWFORD	Republican Party
+KATHY STECKER	Republican Party
+KATHY WIEJACZKA	Democratic Party
+KATIE NEPTON	Libertarian Party
+KEITH BUTKOVICH	Natural Law Party
+KELLY A. BREEN	Democratic Party
+KELLY CHARRON TEBAY	Democratic Party
+KELLY ROSSMAN-MCKINNEY	Democratic Party
+KEN HORN	Republican Party
+KEN SUMMERS	Democratic Party
+KERRY LEE MORGAN	No Party Affiliation
+KEVIN A. GRAVES	Green Party
+KEVIN COLEMAN	Democratic Party
+KEVIN DALEY	Republican Party
+KEVIN HERTEL	Democratic Party
+KIM LASATA	Republican Party
+KIMBERLY BIZON	Democratic Party
+KIMBERLY HILL KNOTT	No Party Affiliation
+KRESTA TRAIN	Democratic Party
+KRISTEN BROWN	Democratic Party
+KRISTY PAGAN	Democratic Party
+KURTIS T. WILDER	No Party Affiliation
+KYLE COOPER	Democratic Party
+KYLE MCKEE	Republican Party
+KYRA HARRIS BOLDEN	Democratic Party
+LANA THEIS	Republican Party
+LANCE HERMAN	No Party Affiliation
+LARRY BETTS	Republican Party
+LARRY C. INMAN	Republican Party
+"LARRY JAMES HUTCHINSON, JR."	No Party Affiliation
+LATANYA GARRETT	Democratic Party
+LAURA COX	Republican Party
+LAURA DODD	Democratic Party
+LAURA WINN	Democratic Party
+LAUREN TAYLOR	Democratic Party
+LAURIE POHUTSKY	Democratic Party
+LEE CHATFIELD	Republican Party
+LENA EPSTEIN	Republican Party
+LEON R. CLARK	Republican Party
+LEONARD SCHWARTZ	Libertarian Party
+LESLIE LOVE	Democratic Party
+LINDA SAWYER	Republican Party
+LISA LANE GIOIA	Libertarian Party
+LISA PAPAS	Republican Party
+LISA VALERIO-NOWC	Republican Party
+LOGAN R. SMITH	Republican Party
+LORA GREENE	Democratic Party
+LORENCE WENKE	Libertarian Party
+LORI M. STONE	Democratic Party
+LOUIS PALUS	Republican Party
+LUKE MEERMAN	Republican Party
+LYNN AFENDOULIS	Republican Party
+MALLORY MCMORROW	Democratic Party
+MARC JOSEPH SOSNOWSKI	Republican Party
+MARCELIS TURNER	Republican Party
+MARCIA SQUIER	Green Party
+MARGARET E. O'BRIEN	Republican Party
+MARGE KATCHMARK SALLOWS	Natural Law Party
+MARI MANOOGIAN	Democratic Party
+MARK BIGNELL	Democratic Party
+MARK CORCORAN	Republican Party
+MARK E. HUIZENGA	Republican Party
+MARK LUDWIG	Democratic Party
+MARSHALL BULLOCK	Democratic Party
+MARTIN CHURCH	Republican Party
+MARTY KNOLLENBERG	Republican Party
+MARY ANNE HERING	Republican Party
+MARY BUZUMA	Libertarian Party
+MARY TREDER LANG	Republican Party
+MARY WHITEFORD	Republican Party
+MATT HALL	Republican Party
+MATT KOLESZAR	Democratic Party
+MATT KUEHNEL	Libertarian Party
+MATT LONGJOHN	Democratic Party
+MATT MADDOCK	Republican Party
+MATTHEW SHEPARD	Republican Party
+MATTHEW W. MORGAN	Democratic Party
+MAX RIEKSE	Libertarian Party
+MD RABBI ALAM	No Party Affiliation
+MEAGAN L. CARR	Democratic Party
+MEGAN KATHLEEN CAVANAGH	No Party Affiliation
+MELISSA FRUGE	Democratic Party
+MELODY WAGNER	Republican Party
+MICHAEL D. MCCREADY	Republican Party
+MICHAEL FRAZIER	Republican Party
+MICHAEL MACDONALD	Republican Party
+MICHAEL WEBBER	Republican Party
+MICHELE HOITENGA	Republican Party
+MICHELLE BAILEY	Republican Party
+MICHELLE LAVOY	Democratic Party
+MIKE BISHOP	Republican Party
+MIKE MILLER	Republican Party
+MIKE MUELLER	Republican Party
+MIKE SALIBA	Libertarian Party
+MIKE SHIRKEY	Republican Party
+MIKE TAILLARD	Democratic Party
+MINDY DENNINGER	Democratic Party
+MITCH SWOBODA	Republican Party
+MONA M. SHAND	Democratic Party
+NATE SHANNON	Democratic Party
+NATHAN HEWER	Libertarian Party
+NICOLE BREADON	Democratic Party
+NILES NIEMUTH	No Party Affiliation
+NORMAN M. PETERSON	Libertarian Party
+PADMA KUPPA	Democratic Party
+PAMELA HORNBERGER	Republican Party
+PATRICK DUVENDECK	Republican Party
+PATRICK O'NEAL BURNEY	No Party Affiliation
+PATTY MALOWNEY	Libertarian Party
+PAUL BROWN	Democratic Party
+PAUL MANLEY	Democratic Party
+PAUL MITCHELL	Republican Party
+PAUL R. FRANCIS	Democratic Party
+PAUL WOJNO	Democratic Party
+PAULINE MONTIE	Republican Party
+PAULINE WENDZEL	Republican Party
+PETER J. LUCIDO	Republican Party
+PETER MACGREGOR	Republican Party
+PHIL GREEN	Republican Party
+PHIL PHELPS	Democratic Party
+PHILIP KOLODY	Republican Party
+POPPY SIAS-HERNANDEZ	Democratic Party
+RACHEL HOOD	Democratic Party
+RASHIDA TLAIB	Democratic Party
+RAYMOND A. HALL	No Party Affiliation
+REBEKAH WARREN	Democratic Party
+RENEE WATSON	Democratic Party
+RICHARD ZEILE	Republican Party
+RICK OUTMAN	Republican Party
+RITA ROSS	No Party Affiliation
+ROB DAVIDSON	Democratic Party
+ROBERT GALE	Republican Party
+ROBERT M. ALWAY	Green Party
+ROBERT MURPHY	Democratic Party
+ROBERT VANNOLLER	Libertarian Party
+ROBERT WITTENBERG	Democratic Party
+ROBIN LEA LAURAIN	Green Party
+ROBIN LEE SANDERS	No Party Affiliation
+RODNEY WAKEMAN	Republican Party
+ROGER HAUCK	Republican Party
+ROGER VICTORY	Republican Party
+RON DRAAYER	Democratic Party
+RONALD A. MUSZYNSKI	Libertarian Party
+RONALD E. GRAESER	Republican Party
+RONALD HAWKINS	Libertarian Party
+RONNIE D. PETERSON	Democratic Party
+ROSALINDA HERNANDEZ	Republican Party
+ROSEMARY BAYER	Democratic Party
+ROYCE KINNIEBREW	No Party Affiliation
+RUTH JOHNSON	Republican Party
+RYAN BERMAN	Republican Party
+RYAN MANIER	Libertarian Party
+SAM JOHNSON	Republican Party
+SAMUEL BAGENSTOS	No Party Affiliation
+SANDY CLARKE	Democratic Party
+SARA CAMBENSY	Democratic Party
+SARAH ANTHONY	Democratic Party
+SARAH LIGHTNER	Republican Party
+SARAH SCHULZ	Democratic Party
+SCOTT A. VANSINGEL	Republican Party
+SCOTT DIANDA	Democratic Party
+SCOTTY BOMAN	Libertarian Party
+SEAN MCCANN	Democratic Party
+SHANE HERNANDEZ	Republican Party
+SHAWN MARIE WINTERS	Democratic Party
+SHEILA TROXEL	Democratic Party
+SHELDON A. NEELEY	Democratic Party
+SHERRY A. WELLS	Green Party
+SHERRY GAY DAGNOGO	Democratic Party
+SHERYL Y. KENNEDY	Democratic Party
+STEFANIE BROWN	Democratic Party
+STEPHANIE CHANG	Democratic Party
+STEPHEN J. YOUNG	Republican Party
+STEPHEN L. BORRELLO	No Party Affiliation
+STEVE MARINO	Republican Party
+STEVEN JOHNSON	Republican Party
+SUE ALLOR	Republican Party
+SUE NORMAN	No Party Affiliation
+SUSAN KAY KOWALSKI	Republican Party
+SYLVIA SANTANA	Democratic Party
+TAMARA C. BARNES	Democratic Party
+TAMI CARLONE	Republican Party
+TANYA CABALA	Democratic Party
+TED GERRARD	Republican Party
+TENISHA YANCEY	Democratic Party
+TERESA SPIEGELBERG	No Party Affiliation
+TERI AIUTO	Republican Party
+TERRI MCKINNON	Democratic Party
+TERRY J. SABO	Democratic Party
+THEODORE ALFONSETTI III	Republican Party
+THOMAS A. ALBERT	Republican Party
+THOMAS REPASKY	Republican Party
+TIFFANY TILLEY	Democratic Party
+TIM ORZECHOWSKI	Libertarian Party
+TIM SCHAIBERGER	Democratic Party
+TIM SNELLER	Democratic Party
+TIM WALBERG	Republican Party
+TIM YOW	No Party Affiliation
+TIMOTHY COON	Libertarian Party
+TIMOTHY D. CARRIER	Republican Party
+TIMOTHY JOE PRANTLE	No Party Affiliation
+TODD SCHLEIGER	Republican Party
+TOM BAGWELL	No Party Affiliation
+TOM BARRETT	Republican Party
+TOM LEONARD	Republican Party
+TOMMY BRANN	Republican Party
+TRACE FISHER	Republican Party
+TRAVIS WINES	Republican Party
+TRISTON COLE	Republican Party
+TYLER PALMER	Libertarian Party
+TYRONE CARTER	Democratic Party
+VAL COCHRAN TOOPS	Democratic Party
+VALERIE L. WILLIS	No Party Affiliation
+VALERIE R. PARKER	Republican Party
+VANESSA GUERRA	Democratic Party
+WADE PAUL ROBERTS	Green Party
+WAYNE SCHMIDT	Republican Party
+WENDELL L. BYRD	Democratic Party
+WILLIAM BAKER	Republican Party
+WILLIAM BRANG	Republican Party
+WILLIAM COBBS	No Party Affiliation
+WILLIAM F. WHITE	No Party Affiliation
+WILLIAM J. SOWERBY	Democratic Party
+WILLIAM SHOOP	Democratic Party
+WINNIE BRINKS	Democratic Party
+YOLANDA JAMES	No Party Affiliation
+YOUSEF RABHI	Democratic Party
+ZACHARY MOREAU	Libertarian Party
+BRENDA JONES	No Party Affiliation
+AL GUI	Republican Party
+DANIEL ALLEN SCHUTTE	Republican Party
+DAVID BULLOCK	Green Party
+JORDAN ACKER	Democratic Party
+MARC S. HERSCHFUS	Republican Party

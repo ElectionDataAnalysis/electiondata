@@ -1,0 +1,8 @@
+item	value
+header_row_count	0
+field_name_row	None
+field_names_if_no_field_name_row	Election Year,Election Type,County Code,City/Township Code,City/Township Description
+count_columns	None
+file_type	txt
+encoding	iso-8859-1
+thousands_separator	None

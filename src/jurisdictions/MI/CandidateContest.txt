@@ -1,0 +1,164 @@
+Name	VotesAllowed	NumberElected	NumberRunoff	IsPartisan	Office	PrimaryParty
+MI House District 1	1	1	0	FALSE	MI House District 1
+MI House District 2	1	1	0	FALSE	MI House District 2
+MI House District 3	1	1	0	FALSE	MI House District 3
+MI House District 4	1	1	0	FALSE	MI House District 4
+MI House District 5	1	1	0	FALSE	MI House District 5
+MI House District 6	1	1	0	FALSE	MI House District 6
+MI House District 7	1	1	0	FALSE	MI House District 7
+MI House District 8	1	1	0	FALSE	MI House District 8
+MI House District 9	1	1	0	FALSE	MI House District 9
+MI House District 10	1	1	0	FALSE	MI House District 10
+MI House District 11	1	1	0	FALSE	MI House District 11
+MI House District 12	1	1	0	FALSE	MI House District 12
+MI House District 13	1	1	0	FALSE	MI House District 13
+MI House District 14	1	1	0	FALSE	MI House District 14
+MI House District 15	1	1	0	FALSE	MI House District 15
+MI House District 16	1	1	0	FALSE	MI House District 16
+MI House District 17	1	1	0	FALSE	MI House District 17
+MI House District 18	1	1	0	FALSE	MI House District 18
+MI House District 19	1	1	0	FALSE	MI House District 19
+MI House District 20	1	1	0	FALSE	MI House District 20
+MI House District 21	1	1	0	FALSE	MI House District 21
+MI House District 22	1	1	0	FALSE	MI House District 22
+MI House District 23	1	1	0	FALSE	MI House District 23
+MI House District 24	1	1	0	FALSE	MI House District 24
+MI House District 25	1	1	0	FALSE	MI House District 25
+MI House District 26	1	1	0	FALSE	MI House District 26
+MI House District 27	1	1	0	FALSE	MI House District 27
+MI House District 28	1	1	0	FALSE	MI House District 28
+MI House District 29	1	1	0	FALSE	MI House District 29
+MI House District 30	1	1	0	FALSE	MI House District 30
+MI House District 31	1	1	0	FALSE	MI House District 31
+MI House District 32	1	1	0	FALSE	MI House District 32
+MI House District 33	1	1	0	FALSE	MI House District 33
+MI House District 34	1	1	0	FALSE	MI House District 34
+MI House District 35	1	1	0	FALSE	MI House District 35
+MI House District 36	1	1	0	FALSE	MI House District 36
+MI House District 37	1	1	0	FALSE	MI House District 37
+MI House District 38	1	1	0	FALSE	MI House District 38
+MI House District 39	1	1	0	FALSE	MI House District 39
+MI House District 40	1	1	0	FALSE	MI House District 40
+MI House District 41	1	1	0	FALSE	MI House District 41
+MI House District 42	1	1	0	FALSE	MI House District 42
+MI House District 43	1	1	0	FALSE	MI House District 43
+MI House District 44	1	1	0	FALSE	MI House District 44
+MI House District 45	1	1	0	FALSE	MI House District 45
+MI House District 46	1	1	0	FALSE	MI House District 46
+MI House District 47	1	1	0	FALSE	MI House District 47
+MI House District 48	1	1	0	FALSE	MI House District 48
+MI House District 49	1	1	0	FALSE	MI House District 49
+MI House District 50	1	1	0	FALSE	MI House District 50
+MI House District 51	1	1	0	FALSE	MI House District 51
+MI House District 52	1	1	0	FALSE	MI House District 52
+MI House District 53	1	1	0	FALSE	MI House District 53
+MI House District 54	1	1	0	FALSE	MI House District 54
+MI House District 55	1	1	0	FALSE	MI House District 55
+MI House District 56	1	1	0	FALSE	MI House District 56
+MI House District 57	1	1	0	FALSE	MI House District 57
+MI House District 58	1	1	0	FALSE	MI House District 58
+MI House District 59	1	1	0	FALSE	MI House District 59
+MI House District 60	1	1	0	FALSE	MI House District 60
+MI House District 61	1	1	0	FALSE	MI House District 61
+MI House District 62	1	1	0	FALSE	MI House District 62
+MI House District 63	1	1	0	FALSE	MI House District 63
+MI House District 64	1	1	0	FALSE	MI House District 64
+MI House District 65	1	1	0	FALSE	MI House District 65
+MI House District 66	1	1	0	FALSE	MI House District 66
+MI House District 67	1	1	0	FALSE	MI House District 67
+MI House District 68	1	1	0	FALSE	MI House District 68
+MI House District 69	1	1	0	FALSE	MI House District 69
+MI House District 70	1	1	0	FALSE	MI House District 70
+MI House District 71	1	1	0	FALSE	MI House District 71
+MI House District 72	1	1	0	FALSE	MI House District 72
+MI House District 73	1	1	0	FALSE	MI House District 73
+MI House District 74	1	1	0	FALSE	MI House District 74
+MI House District 75	1	1	0	FALSE	MI House District 75
+MI House District 76	1	1	0	FALSE	MI House District 76
+MI House District 77	1	1	0	FALSE	MI House District 77
+MI House District 78	1	1	0	FALSE	MI House District 78
+MI House District 79	1	1	0	FALSE	MI House District 79
+MI House District 80	1	1	0	FALSE	MI House District 80
+MI House District 81	1	1	0	FALSE	MI House District 81
+MI House District 82	1	1	0	FALSE	MI House District 82
+MI House District 83	1	1	0	FALSE	MI House District 83
+MI House District 84	1	1	0	FALSE	MI House District 84
+MI House District 85	1	1	0	FALSE	MI House District 85
+MI House District 86	1	1	0	FALSE	MI House District 86
+MI House District 87	1	1	0	FALSE	MI House District 87
+MI House District 88	1	1	0	FALSE	MI House District 88
+MI House District 89	1	1	0	FALSE	MI House District 89
+MI House District 90	1	1	0	FALSE	MI House District 90
+MI House District 91	1	1	0	FALSE	MI House District 91
+MI House District 92	1	1	0	FALSE	MI House District 92
+MI House District 93	1	1	0	FALSE	MI House District 93
+MI House District 94	1	1	0	FALSE	MI House District 94
+MI House District 95	1	1	0	FALSE	MI House District 95
+MI House District 96	1	1	0	FALSE	MI House District 96
+MI House District 97	1	1	0	FALSE	MI House District 97
+MI House District 98	1	1	0	FALSE	MI House District 98
+MI House District 99	1	1	0	FALSE	MI House District 99
+MI House District 100	1	1	0	FALSE	MI House District 100
+MI House District 101	1	1	0	FALSE	MI House District 101
+MI House District 102	1	1	0	FALSE	MI House District 102
+MI House District 103	1	1	0	FALSE	MI House District 103
+MI House District 104	1	1	0	FALSE	MI House District 104
+MI House District 105	1	1	0	FALSE	MI House District 105
+MI House District 106	1	1	0	FALSE	MI House District 106
+MI House District 107	1	1	0	FALSE	MI House District 107
+MI House District 108	1	1	0	FALSE	MI House District 108
+MI House District 109	1	1	0	FALSE	MI House District 109
+MI House District 110	1	1	0	FALSE	MI House District 110
+MI Senate District 1	1	1	0	FALSE	MI Senate District 1
+MI Senate District 2	1	1	0	FALSE	MI Senate District 2
+MI Senate District 3	1	1	0	FALSE	MI Senate District 3
+MI Senate District 4	1	1	0	FALSE	MI Senate District 4
+MI Senate District 5	1	1	0	FALSE	MI Senate District 5
+MI Senate District 6	1	1	0	FALSE	MI Senate District 6
+MI Senate District 7	1	1	0	FALSE	MI Senate District 7
+MI Senate District 8	1	1	0	FALSE	MI Senate District 8
+MI Senate District 9	1	1	0	FALSE	MI Senate District 9
+MI Senate District 10	1	1	0	FALSE	MI Senate District 10
+MI Senate District 11	1	1	0	FALSE	MI Senate District 11
+MI Senate District 12	1	1	0	FALSE	MI Senate District 12
+MI Senate District 13	1	1	0	FALSE	MI Senate District 13
+MI Senate District 14	1	1	0	FALSE	MI Senate District 14
+MI Senate District 15	1	1	0	FALSE	MI Senate District 15
+MI Senate District 16	1	1	0	FALSE	MI Senate District 16
+MI Senate District 17	1	1	0	FALSE	MI Senate District 17
+MI Senate District 18	1	1	0	FALSE	MI Senate District 18
+MI Senate District 19	1	1	0	FALSE	MI Senate District 19
+MI Senate District 20	1	1	0	FALSE	MI Senate District 20
+MI Senate District 21	1	1	0	FALSE	MI Senate District 21
+MI Senate District 22	1	1	0	FALSE	MI Senate District 22
+MI Senate District 23	1	1	0	FALSE	MI Senate District 23
+MI Senate District 24	1	1	0	FALSE	MI Senate District 24
+MI Senate District 25	1	1	0	FALSE	MI Senate District 25
+MI Senate District 26	1	1	0	FALSE	MI Senate District 26
+MI Senate District 27	1	1	0	FALSE	MI Senate District 27
+MI Senate District 28	1	1	0	FALSE	MI Senate District 28
+MI Senate District 29	1	1	0	FALSE	MI Senate District 29
+MI Senate District 30	1	1	0	FALSE	MI Senate District 30
+MI Senate District 31	1	1	0	FALSE	MI Senate District 31
+MI Senate District 32	1	1	0	FALSE	MI Senate District 32
+MI Senate District 33	1	1	0	FALSE	MI Senate District 33
+MI Senate District 34	1	1	0	FALSE	MI Senate District 34
+MI Senate District 35	1	1	0	FALSE	MI Senate District 35
+MI Senate District 36	1	1	0	FALSE	MI Senate District 36
+MI Senate District 37	1	1	0	FALSE	MI Senate District 37
+MI Senate District 38	1	1	0	FALSE	MI Senate District 38
+US House MI District 1	1	1	0	FALSE	US House MI District 1
+US House MI District 2	1	1	0	FALSE	US House MI District 2
+US House MI District 3	1	1	0	FALSE	US House MI District 3
+US House MI District 4	1	1	0	FALSE	US House MI District 4
+US House MI District 5	1	1	0	FALSE	US House MI District 5
+US House MI District 6	1	1	0	FALSE	US House MI District 6
+US House MI District 7	1	1	0	FALSE	US House MI District 7
+US House MI District 8	1	1	0	FALSE	US House MI District 8
+US House MI District 9	1	1	0	FALSE	US House MI District 9
+US House MI District 10	1	1	0	FALSE	US House MI District 10
+US House MI District 11	1	1	0	FALSE	US House MI District 11
+US House MI District 12	1	1	0	FALSE	US House MI District 12
+US House MI District 13	1	1	0	FALSE	US House MI District 13
+US House MI District 14	1	1	0	FALSE	US House MI District 14
+US Senate	1	1	0	FALSE	US Senate

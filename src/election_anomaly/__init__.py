@@ -33,7 +33,7 @@ class DataLoader():
         # grab parameters
         self.d, self.parameter_err = ui.get_runtime_parameters(
             ['project_root','juris_name','db_paramfile',
-            'db_name','munger_name','results_file','top_reporting_unit'])
+            'db_name','munger_name','results_file','top_reporting_unit'],optional_keys=['aux_data_dir'])
 
         # results_file is the entire path, the _short version is just
         # the filename
@@ -131,8 +131,9 @@ class DataLoader():
 
     def load_results(self):
         results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
-        ui.new_datafile(self.session, self.munger, self.d['results_file'], self.d['project_root'],
-            juris=self.juris, results_info=results_info)
+        ui.new_datafile(self.session, self.munger, self.d['results_file'],
+            juris=self.juris, project_root=self.d['project_root'], 
+            results_info=results_info,aux_data_dir=self.d['aux_data_dir'])
 
 
 class Analyzer():

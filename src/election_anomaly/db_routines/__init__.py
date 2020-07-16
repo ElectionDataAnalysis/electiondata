@@ -4,6 +4,8 @@
 import psycopg2
 import sqlalchemy
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
+# import the error handling libraries for psycopg2
+from psycopg2 import OperationalError, errorcodes, errors
 from psycopg2 import sql
 import sqlalchemy as db
 import sqlalchemy_utils
@@ -306,7 +308,8 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
     df_to_db = dframe.copy()
     df_to_db.drop_duplicates(inplace=True)
     if 'Count' in df_to_db.columns:
-        # TODO bug: catch anything not an integer (e.g., in MD 2018g upload)
+        # catch anything not an integer (e.g., in MD 2018g upload)
+        # TODO is this still necessary, given cast_cols_as_int?
         df_to_db.loc[:,'Count']=df_to_db['Count'].astype('int64',errors='ignore')
 
     # partition the columns

@@ -1,0 +1,8 @@
+item	value
+header_row_count	0
+field_name_row
+field_names_if_no_field_name_row	Election Year,Election Type,Office Code,District Code,Status Code,Candidate ID#,County Code,City/Town Code,Ward Number,Precinct Number,Precinct Label,Precinct #Votes
+count_columns	11
+file_type	txt
+encoding	iso-8859-1
+thousands_separator	None
