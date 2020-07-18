@@ -217,7 +217,6 @@ def short_name(text,sep=';'):
 		results["counts"][reporting_unit] = {}
 
 	for i, row in unsummed.iterrows():
-		results["counts"][row.Name]["anomalous"] = False
 		if row.Selection == x:
 			results["counts"][row.Name]["x"] = row.Count
 		elif row.Selection == y:
@@ -324,33 +323,37 @@ def create_bar(session, top_ru_id, contest_type, election_id, datafile_id_list):
 	ranked = assign_anomaly_score(unsummed)
 	top_ranked = get_most_anomalous(ranked, 3)
 
-	return top_ranked
-	"""
-	# package into dictionary
-	x = dbr.name_from_id(session, 'Candidate', candidate_1_id)
-	y = dbr.name_from_id(session, 'Candidate', candidate_2_id) 
-	results = {
-		"election": dbr.name_from_id(session, 'Election', election_id),
-		"jurisdiction": dbr.name_from_id(session, 'ReportingUnit', top_ru_id),
-		"subdivision_type": dbr.name_from_id(session, 'ReportingUnitType', sub_rutype_id),
-		"count_item_type": count_item_type,
-		"x": x,
-		"y": y,
-		"counts": {}
-	}
-	reporting_units = unsummed.Name.unique()
-	for reporting_unit in reporting_units:
-		results["counts"][reporting_unit] = {}
 
-	for i, row in unsummed.iterrows():
-		results["counts"][row.Name]["anomalous"] = False
-		if row.Selection == x:
-			results["counts"][row.Name]["x"] = row.Count
-		elif row.Selection == y:
-			results["counts"][row.Name]["y"] = row.Count
+	# package into list of dictionary
+	result_list = []
+	ids = top_ranked['Contest_Id'].unique()
+	for id in ids:
+		temp_df = top_ranked[top_ranked['Contest_Id'] == id]
+
+		x = dbr.name_from_id(session, 'Candidate', temp_df.iloc[0]['Candidate_Id'])
+		y = dbr.name_from_id(session, 'Candidate', temp_df.iloc[1]['Candidate_Id']) 
+		results = {
+			"election": dbr.name_from_id(session, 'Election', election_id),
+			"jurisdiction": dbr.name_from_id(session, 'ReportingUnit', top_ru_id),
+			"subdivision_type": dbr.name_from_id(session, 'ReportingUnit', top_ru_id),
+			"count_item_type": temp_df.iloc[0]['CountItemType'],
+			"x": x,
+			"y": y,
+			"counts": {}
+		}
+		reporting_units = temp_df.Name.unique()
+		for reporting_unit in reporting_units:
+			results["counts"][reporting_unit] = {}
+
+		for i, row in temp_df.iterrows():
+			if row.Selection == x:
+				results["counts"][row.Name]["x"] = row.Count
+			elif row.Selection == y:
+				results["counts"][row.Name]["y"] = row.Count
+		result_list.append(results)
 		
-	return results
-	"""
+	return result_list
+
 
 def assign_anomaly_score(data):
 	"""adds a new column called score between 0 and 1; 1 is more anomalous"""
@@ -371,4 +374,23 @@ def get_most_anomalous(data, n):
 
 	result = data[data['max_score'].isin(top_scores)]
 
-	return result
+	# Eventually we want to return the winner and the most anomalous
+	# for each contest. For now, just 2 random ones
+	ids = result['Contest_Id'].unique()
+	df = pd.DataFrame()
+	for id in ids:
+		temp_df = result[result['Contest_Id'] == id]
+		df_child_ru = temp_df.sample()
+		child_ru = df_child_ru.iloc[0]['ChildReportingUnit_Id']
+		unique = temp_df[temp_df['ChildReportingUnit_Id']==child_ru]['Candidate_Id'].unique()
+		while len(unique) < 2:
+			df_child_ru = temp_df.sample()
+			child_ru = df_child_ru.iloc[0]['ChildReportingUnit_Id']
+			unique = temp_df[temp_df['ChildReportingUnit_Id']==child_ru]['Candidate_Id'].unique()
+		df_child_ru = temp_df[temp_df['ChildReportingUnit_Id']==child_ru] 
+		df_final = df_child_ru.sample(frac=1).drop_duplicates(['Candidate_Id'])
+		df_final = df_final.iloc[0:2]
+		
+		df = pd.concat([df, df_final])
+
+	return df
