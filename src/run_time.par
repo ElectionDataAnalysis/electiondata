@@ -1,0 +1,11 @@
+[election_anomaly]
+project_root=/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/
+rollup_directory=/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/rollups_from_db
+results_file=/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/Pennsylvania/PA_2018g_by_county_exported_20200606.txt
+juris_name=PA
+db_paramfile=/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/database.ini
+munger_name=pa_general18
+db_name=test_cpjoin0719a
+top_reporting_unit=Pennsylvania
+sub_reporting_unit_type=county
+

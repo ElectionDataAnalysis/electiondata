@@ -192,8 +192,6 @@ class Munger:
     def __init__(self,dir_path,aux_data_dir=None,project_root=None,check_files=True):
         """<dir_path> is the directory for the munger. If munger deals with auxiliary data files,
         <aux_data_dir> is the directory holding those files."""
-        if not project_root:
-            project_root = ui.get_project_root()
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir = dir_path
 
