@@ -1,5 +1,6 @@
 name	raw_identifier_formula	source
 ReportingUnit	<County>;<Election District>;<Election Precinct>	row
+Election		other
 Party	<Party>	row
 CandidateContest	<Office Name> District <Office District>	row
 Candidate	<Candidate Name>	row

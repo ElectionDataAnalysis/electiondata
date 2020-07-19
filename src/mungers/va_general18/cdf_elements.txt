@@ -1,0 +1,9 @@
+name	raw_identifier_formula	source
+ReportingUnit	<LocalityName>;<PrecinctName>	row
+Election	<ElectionName>	row
+Party	<Party>	row
+CandidateContest	<OfficeTitle>;<DistrictName>	row
+Candidate	<FirstName>;<MiddleNamee>;<LastName>;<Suffix>	row
+BallotMeasureContest	<OfficeTitle>	row
+BallotMeasureSelection	<FirstName>;<MiddleNamee>;<LastName>;<Suffix>	row
+CountItemType	<TOTAL_VOTES>	row

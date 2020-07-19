@@ -1,7 +1,6 @@
 item	value
 header_row_count	1
 field_name_row	0
-field_names_if_no_field_name_row	None
 count_columns	6
 file_type	csv
 encoding	iso-8859-1
