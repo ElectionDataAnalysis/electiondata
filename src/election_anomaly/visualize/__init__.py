@@ -76,6 +76,35 @@ def plot(type, data, fig_type, target_dir):
     fig.show()
 
 
+def plot_bar(data, fig_type, target_dir):
+    labels, x, y = parse_data(data)
+    fig = go.Figure(
+        data=[
+            go.Bar(name=data['x'], x=[labels[0]], y=x),
+            go.Bar(name=data['y'], x=[labels[0]], y=y)
+        ]
+    )
+    fig.update_layout(
+        barmode='group',
+        font=dict(
+            family='Courier New, monospace',
+            size=18
+        )
+    )
+    image_dir = os.path.join(target_dir, 'images')
+    file_name = f'{data["x"].replace(" ", "-")}_{data["y"].replace(" ", "-")}.{fig_type}'
+    file_path = os.path.join(image_dir, file_name)
+
+    if not os.path.isdir(image_dir):
+        os.mkdir(image_dir)
+
+    if fig_type == 'html':
+        fig.write_html(file_path)
+    else:
+        fig.write_image(file_path)
+    fig.show()
+
+
 def parse_data(data):
     """returns a list of labels, x, and y data from the standard JSON format
     returned by the analyze functions"""
