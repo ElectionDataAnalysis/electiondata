@@ -912,9 +912,8 @@ class Analyzer():
         agg_results = a.create_bar(self.session, jurisdiction_id, contest_type, results_info[1], results_info[0])
         if fig_type:
             for agg_result in agg_results:
-                v.plot_scatter(agg_result, fig_type, d['rollup_directory'])
+                v.plot_bar(agg_result, fig_type, d['rollup_directory'])
         return agg_results
-
 
 
 def get_filename(path):
