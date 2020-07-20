@@ -93,7 +93,7 @@ def add_elements_from_datafile(
 	new_raw_df = pd.DataFrame(
 		[[element,x,x] for x in new_raw],
 		columns=['cdf_element','cdf_internal_name','raw_identifier_value'])
-	wd = pd.concat([wd,new_raw_df])
+	wd = pd.concat([wd,new_raw_df]).drop_duplicates()
 	write_element(juris,'dictionary',wd)
 
 	# TODO find cdf_internal_names that are not in <element>.txt and add them to <element>.txt
@@ -101,7 +101,7 @@ def add_elements_from_datafile(
 	old_internal = we[name_field].to_list()
 	new_internal = [x for x in wd[wd.cdf_element == element]['cdf_internal_name'] if x not in old_internal]
 	new_internal_df = pd.DataFrame([[x] for x in new_internal],columns=[name_field])
-	we = pd.concat([we,new_internal_df])
+	we = pd.concat([we,new_internal_df]).drop_duplicates()
 	write_element(juris,element,we)
 	# if <element>.txt has columns other than <name_field>, notify user
 	if we.shape[1] > 1 and not new_internal_df.empty:
