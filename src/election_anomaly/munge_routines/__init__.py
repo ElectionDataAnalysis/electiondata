@@ -516,7 +516,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,err,ids=Non
     working = working[(working['CandidateContest_Id'].isnull()) | (working['CandidateSelection_Id']).notnull()]
     # TODO: warn user if contest is munged but candidates are not
     # TODO warn user if BallotMeasureSelections not recognized in dictionary.txt
-    for j in ['BallotMeasureContestSelectionJoin','CandidateContestSelectionJoin','ElectionContestJoin']:
+    for j in ['CandidatePartyJoin','BallotMeasureContestSelectionJoin','CandidateContestSelectionJoin','ElectionContestJoin']:
         # TODO error handling
         working = append_join_id(project_root,session,working,j)
 
