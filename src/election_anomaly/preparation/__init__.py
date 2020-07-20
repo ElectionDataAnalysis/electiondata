@@ -51,7 +51,7 @@ def get_element(juris: str, element: str) -> pd.DataFrame:
 def write_element(juris: str, element: str, df: pd.DataFrame):
 	"""<juris> is path to jurisdiction directory. Info taken
 	from <element>.txt file in that directory"""
-	df.fillna('').to_csv(os.path.join(juris,element),index=False,sep='\t')
+	df.fillna('').to_csv(os.path.join(juris,f'{element}.txt'),index=False,sep='\t')
 	return
 
 
@@ -82,9 +82,10 @@ def add_elements_from_datafile(
 	"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
 	or not already in <element>.txt"""
 	wr =results.copy()
-	# TODO append <element>_raw
+	# append <element>_raw
+	wr.columns = [f'{x}_SOURCE' for x in wr.columns]
 	mr.add_munged_column(wr, mu, element, error, mode=mu.cdf_elements.loc[element,'source'])
-	# TODO find <element>_raw values not in dictionary.txt.raw_identifier_value;
+	# find <element>_raw values not in dictionary.txt.raw_identifier_value;
 	#  add corresponding lines to dictionary.txt
 	wd = get_element(juris,'dictionary')
 	old_raw = wd[wd.cdf_element==element]['raw_identifier_value'].to_list()
@@ -92,15 +93,15 @@ def add_elements_from_datafile(
 	new_raw_df = pd.DataFrame(
 		[[element,x,x] for x in new_raw],
 		columns=['cdf_element','cdf_internal_name','raw_identifier_value'])
-	wd = pd.concat(wd,new_raw_df)
+	wd = pd.concat([wd,new_raw_df])
 	write_element(juris,'dictionary',wd)
 
 	# TODO find cdf_internal_names that are not in <element>.txt and add them to <element>.txt
 	we = get_element(juris,element)
 	old_internal = we[name_field].to_list()
-	new_internal = [x for x in wd['cdf_internal_name'] if x not in old_internal]
+	new_internal = [x for x in wd[wd.cdf_element == element]['cdf_internal_name'] if x not in old_internal]
 	new_internal_df = pd.DataFrame([[x] for x in new_internal],columns=[name_field])
-	we = pd.concat(we,new_internal_df)
+	we = pd.concat([we,new_internal_df])
 	write_element(juris,element,we)
 	# if <element>.txt has columns other than <name_field>, notify user
 	if we.shape[1] > 1 and not new_internal_df.empty:

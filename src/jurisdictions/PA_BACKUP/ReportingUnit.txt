@@ -1,0 +1,315 @@
+Name	ReportingUnitType
+Pennsylvania;ADAMS County	county
+Pennsylvania;ALLEGHENY County	county
+Pennsylvania;ARMSTRONG County	county
+Pennsylvania;BEAVER County	county
+Pennsylvania;BEDFORD County	county
+Pennsylvania;BERKS County	county
+Pennsylvania;BLAIR County	county
+Pennsylvania;BRADFORD County	county
+Pennsylvania;BUCKS County	county
+Pennsylvania;BUTLER County	county
+Pennsylvania;CAMBRIA County	county
+Pennsylvania;CAMERON County	county
+Pennsylvania;CARBON County	county
+Pennsylvania;CENTRE County	county
+Pennsylvania;CHESTER County	county
+Pennsylvania;CLARION County	county
+Pennsylvania;CLEARFIELD County	county
+Pennsylvania;CLINTON County	county
+Pennsylvania;COLUMBIA County	county
+Pennsylvania;CRAWFORD County	county
+Pennsylvania;CUMBERLAND County	county
+Pennsylvania;DAUPHIN County	county
+Pennsylvania;DELAWARE County	county
+Pennsylvania;ELK County	county
+Pennsylvania;ERIE County	county
+Pennsylvania;FAYETTE County	county
+Pennsylvania;FOREST County	county
+Pennsylvania;FRANKLIN County	county
+Pennsylvania;FULTON County	county
+Pennsylvania;GREENE County	county
+Pennsylvania;HUNTINGDON County	county
+Pennsylvania;INDIANA County	county
+Pennsylvania;JEFFERSON County	county
+Pennsylvania;JUNIATA County	county
+Pennsylvania;LACKAWANNA County	county
+Pennsylvania;LANCASTER County	county
+Pennsylvania;LAWRENCE County	county
+Pennsylvania;LEBANON County	county
+Pennsylvania;LEHIGH County	county
+Pennsylvania;LUZERNE County	county
+Pennsylvania;LYCOMING County	county
+Pennsylvania;McKEAN County	county
+Pennsylvania;MERCER County	county
+Pennsylvania;MIFFLIN County	county
+Pennsylvania;MONROE County	county
+Pennsylvania;MONTGOMERY County	county
+Pennsylvania;MONTOUR County	county
+Pennsylvania;NORTHAMPTON County	county
+Pennsylvania;NORTHUMBERLAND County	county
+Pennsylvania;PERRY County	county
+Pennsylvania;PHILADELPHIA County	county
+Pennsylvania;PIKE County	county
+Pennsylvania;POTTER County	county
+Pennsylvania;SCHUYLKILL County	county
+Pennsylvania;SNYDER County	county
+Pennsylvania;SOMERSET County	county
+Pennsylvania;SULLIVAN County	county
+Pennsylvania;SUSQUEHANNA County	county
+Pennsylvania;TIOGA County	county
+Pennsylvania;UNION County	county
+Pennsylvania;VENANGO County	county
+Pennsylvania;WARREN County	county
+Pennsylvania;WASHINGTON County	county
+Pennsylvania;WAYNE County	county
+Pennsylvania;WESTMORELAND County	county
+Pennsylvania;WYOMING County	county
+Pennsylvania;YORK County	county
+Pennsylvania;US Congress House of Representatives District 10	congressional
+Pennsylvania;US Congress House of Representatives District 11	congressional
+Pennsylvania;US Congress House of Representatives District 12	congressional
+Pennsylvania;US Congress House of Representatives District 13	congressional
+Pennsylvania;US Congress House of Representatives District 14	congressional
+Pennsylvania;US Congress House of Representatives District 15	congressional
+Pennsylvania;US Congress House of Representatives District 16	congressional
+Pennsylvania;US Congress House of Representatives District 17	congressional
+Pennsylvania;US Congress House of Representatives District 18	congressional
+Pennsylvania;US Congress House of Representatives District 1	congressional
+Pennsylvania;US Congress House of Representatives District 2	congressional
+Pennsylvania;US Congress House of Representatives District 3	congressional
+Pennsylvania;US Congress House of Representatives District 4	congressional
+Pennsylvania;US Congress House of Representatives District 5	congressional
+Pennsylvania;US Congress House of Representatives District 6	congressional
+Pennsylvania;US Congress House of Representatives District 7	congressional
+Pennsylvania;US Congress House of Representatives District 8	congressional
+Pennsylvania;US Congress House of Representatives District 9	congressional
+Pennsylvania;General Assembly House of Representatives District 100	state-house
+Pennsylvania;General Assembly House of Representatives District 101	state-house
+Pennsylvania;General Assembly House of Representatives District 102	state-house
+Pennsylvania;General Assembly House of Representatives District 103	state-house
+Pennsylvania;General Assembly House of Representatives District 104	state-house
+Pennsylvania;General Assembly House of Representatives District 105	state-house
+Pennsylvania;General Assembly House of Representatives District 106	state-house
+Pennsylvania;General Assembly House of Representatives District 107	state-house
+Pennsylvania;General Assembly House of Representatives District 108	state-house
+Pennsylvania;General Assembly House of Representatives District 109	state-house
+Pennsylvania;General Assembly House of Representatives District 10	state-house
+Pennsylvania;General Assembly House of Representatives District 110	state-house
+Pennsylvania;General Assembly House of Representatives District 111	state-house
+Pennsylvania;General Assembly House of Representatives District 112	state-house
+Pennsylvania;General Assembly House of Representatives District 113	state-house
+Pennsylvania;General Assembly House of Representatives District 114	state-house
+Pennsylvania;General Assembly House of Representatives District 115	state-house
+Pennsylvania;General Assembly House of Representatives District 116	state-house
+Pennsylvania;General Assembly House of Representatives District 117	state-house
+Pennsylvania;General Assembly House of Representatives District 118	state-house
+Pennsylvania;General Assembly House of Representatives District 119	state-house
+Pennsylvania;General Assembly House of Representatives District 11	state-house
+Pennsylvania;General Assembly House of Representatives District 120	state-house
+Pennsylvania;General Assembly House of Representatives District 121	state-house
+Pennsylvania;General Assembly House of Representatives District 122	state-house
+Pennsylvania;General Assembly House of Representatives District 123	state-house
+Pennsylvania;General Assembly House of Representatives District 124	state-house
+Pennsylvania;General Assembly House of Representatives District 125	state-house
+Pennsylvania;General Assembly House of Representatives District 126	state-house
+Pennsylvania;General Assembly House of Representatives District 127	state-house
+Pennsylvania;General Assembly House of Representatives District 128	state-house
+Pennsylvania;General Assembly House of Representatives District 129	state-house
+Pennsylvania;General Assembly House of Representatives District 12	state-house
+Pennsylvania;General Assembly House of Representatives District 130	state-house
+Pennsylvania;General Assembly House of Representatives District 131	state-house
+Pennsylvania;General Assembly House of Representatives District 132	state-house
+Pennsylvania;General Assembly House of Representatives District 133	state-house
+Pennsylvania;General Assembly House of Representatives District 134	state-house
+Pennsylvania;General Assembly House of Representatives District 135	state-house
+Pennsylvania;General Assembly House of Representatives District 136	state-house
+Pennsylvania;General Assembly House of Representatives District 137	state-house
+Pennsylvania;General Assembly House of Representatives District 138	state-house
+Pennsylvania;General Assembly House of Representatives District 139	state-house
+Pennsylvania;General Assembly House of Representatives District 13	state-house
+Pennsylvania;General Assembly House of Representatives District 140	state-house
+Pennsylvania;General Assembly House of Representatives District 141	state-house
+Pennsylvania;General Assembly House of Representatives District 142	state-house
+Pennsylvania;General Assembly House of Representatives District 143	state-house
+Pennsylvania;General Assembly House of Representatives District 144	state-house
+Pennsylvania;General Assembly House of Representatives District 145	state-house
+Pennsylvania;General Assembly House of Representatives District 146	state-house
+Pennsylvania;General Assembly House of Representatives District 147	state-house
+Pennsylvania;General Assembly House of Representatives District 148	state-house
+Pennsylvania;General Assembly House of Representatives District 149	state-house
+Pennsylvania;General Assembly House of Representatives District 14	state-house
+Pennsylvania;General Assembly House of Representatives District 150	state-house
+Pennsylvania;General Assembly House of Representatives District 151	state-house
+Pennsylvania;General Assembly House of Representatives District 152	state-house
+Pennsylvania;General Assembly House of Representatives District 153	state-house
+Pennsylvania;General Assembly House of Representatives District 154	state-house
+Pennsylvania;General Assembly House of Representatives District 155	state-house
+Pennsylvania;General Assembly House of Representatives District 156	state-house
+Pennsylvania;General Assembly House of Representatives District 157	state-house
+Pennsylvania;General Assembly House of Representatives District 158	state-house
+Pennsylvania;General Assembly House of Representatives District 159	state-house
+Pennsylvania;General Assembly House of Representatives District 15	state-house
+Pennsylvania;General Assembly House of Representatives District 160	state-house
+Pennsylvania;General Assembly House of Representatives District 161	state-house
+Pennsylvania;General Assembly House of Representatives District 162	state-house
+Pennsylvania;General Assembly House of Representatives District 163	state-house
+Pennsylvania;General Assembly House of Representatives District 164	state-house
+Pennsylvania;General Assembly House of Representatives District 165	state-house
+Pennsylvania;General Assembly House of Representatives District 166	state-house
+Pennsylvania;General Assembly House of Representatives District 167	state-house
+Pennsylvania;General Assembly House of Representatives District 168	state-house
+Pennsylvania;General Assembly House of Representatives District 169	state-house
+Pennsylvania;General Assembly House of Representatives District 16	state-house
+Pennsylvania;General Assembly House of Representatives District 170	state-house
+Pennsylvania;General Assembly House of Representatives District 171	state-house
+Pennsylvania;General Assembly House of Representatives District 172	state-house
+Pennsylvania;General Assembly House of Representatives District 173	state-house
+Pennsylvania;General Assembly House of Representatives District 174	state-house
+Pennsylvania;General Assembly House of Representatives District 175	state-house
+Pennsylvania;General Assembly House of Representatives District 176	state-house
+Pennsylvania;General Assembly House of Representatives District 177	state-house
+Pennsylvania;General Assembly House of Representatives District 178	state-house
+Pennsylvania;General Assembly House of Representatives District 179	state-house
+Pennsylvania;General Assembly House of Representatives District 17	state-house
+Pennsylvania;General Assembly House of Representatives District 180	state-house
+Pennsylvania;General Assembly House of Representatives District 181	state-house
+Pennsylvania;General Assembly House of Representatives District 182	state-house
+Pennsylvania;General Assembly House of Representatives District 183	state-house
+Pennsylvania;General Assembly House of Representatives District 184	state-house
+Pennsylvania;General Assembly House of Representatives District 185	state-house
+Pennsylvania;General Assembly House of Representatives District 186	state-house
+Pennsylvania;General Assembly House of Representatives District 187	state-house
+Pennsylvania;General Assembly House of Representatives District 188	state-house
+Pennsylvania;General Assembly House of Representatives District 189	state-house
+Pennsylvania;General Assembly House of Representatives District 18	state-house
+Pennsylvania;General Assembly House of Representatives District 190	state-house
+Pennsylvania;General Assembly House of Representatives District 191	state-house
+Pennsylvania;General Assembly House of Representatives District 192	state-house
+Pennsylvania;General Assembly House of Representatives District 193	state-house
+Pennsylvania;General Assembly House of Representatives District 194	state-house
+Pennsylvania;General Assembly House of Representatives District 195	state-house
+Pennsylvania;General Assembly House of Representatives District 196	state-house
+Pennsylvania;General Assembly House of Representatives District 197	state-house
+Pennsylvania;General Assembly House of Representatives District 198	state-house
+Pennsylvania;General Assembly House of Representatives District 199	state-house
+Pennsylvania;General Assembly House of Representatives District 19	state-house
+Pennsylvania;General Assembly House of Representatives District 1	state-house
+Pennsylvania;General Assembly House of Representatives District 200	state-house
+Pennsylvania;General Assembly House of Representatives District 201	state-house
+Pennsylvania;General Assembly House of Representatives District 202	state-house
+Pennsylvania;General Assembly House of Representatives District 203	state-house
+Pennsylvania;General Assembly House of Representatives District 20	state-house
+Pennsylvania;General Assembly House of Representatives District 21	state-house
+Pennsylvania;General Assembly House of Representatives District 22	state-house
+Pennsylvania;General Assembly House of Representatives District 23	state-house
+Pennsylvania;General Assembly House of Representatives District 24	state-house
+Pennsylvania;General Assembly House of Representatives District 25	state-house
+Pennsylvania;General Assembly House of Representatives District 26	state-house
+Pennsylvania;General Assembly House of Representatives District 27	state-house
+Pennsylvania;General Assembly House of Representatives District 28	state-house
+Pennsylvania;General Assembly House of Representatives District 29	state-house
+Pennsylvania;General Assembly House of Representatives District 2	state-house
+Pennsylvania;General Assembly House of Representatives District 30	state-house
+Pennsylvania;General Assembly House of Representatives District 31	state-house
+Pennsylvania;General Assembly House of Representatives District 32	state-house
+Pennsylvania;General Assembly House of Representatives District 33	state-house
+Pennsylvania;General Assembly House of Representatives District 34	state-house
+Pennsylvania;General Assembly House of Representatives District 35	state-house
+Pennsylvania;General Assembly House of Representatives District 36	state-house
+Pennsylvania;General Assembly House of Representatives District 37	state-house
+Pennsylvania;General Assembly House of Representatives District 38	state-house
+Pennsylvania;General Assembly House of Representatives District 39	state-house
+Pennsylvania;General Assembly House of Representatives District 3	state-house
+Pennsylvania;General Assembly House of Representatives District 40	state-house
+Pennsylvania;General Assembly House of Representatives District 41	state-house
+Pennsylvania;General Assembly House of Representatives District 42	state-house
+Pennsylvania;General Assembly House of Representatives District 43	state-house
+Pennsylvania;General Assembly House of Representatives District 44	state-house
+Pennsylvania;General Assembly House of Representatives District 45	state-house
+Pennsylvania;General Assembly House of Representatives District 46	state-house
+Pennsylvania;General Assembly House of Representatives District 47	state-house
+Pennsylvania;General Assembly House of Representatives District 48	state-house
+Pennsylvania;General Assembly House of Representatives District 49	state-house
+Pennsylvania;General Assembly House of Representatives District 4	state-house
+Pennsylvania;General Assembly House of Representatives District 50	state-house
+Pennsylvania;General Assembly House of Representatives District 51	state-house
+Pennsylvania;General Assembly House of Representatives District 52	state-house
+Pennsylvania;General Assembly House of Representatives District 53	state-house
+Pennsylvania;General Assembly House of Representatives District 54	state-house
+Pennsylvania;General Assembly House of Representatives District 55	state-house
+Pennsylvania;General Assembly House of Representatives District 56	state-house
+Pennsylvania;General Assembly House of Representatives District 57	state-house
+Pennsylvania;General Assembly House of Representatives District 58	state-house
+Pennsylvania;General Assembly House of Representatives District 59	state-house
+Pennsylvania;General Assembly House of Representatives District 5	state-house
+Pennsylvania;General Assembly House of Representatives District 60	state-house
+Pennsylvania;General Assembly House of Representatives District 61	state-house
+Pennsylvania;General Assembly House of Representatives District 62	state-house
+Pennsylvania;General Assembly House of Representatives District 63	state-house
+Pennsylvania;General Assembly House of Representatives District 64	state-house
+Pennsylvania;General Assembly House of Representatives District 65	state-house
+Pennsylvania;General Assembly House of Representatives District 66	state-house
+Pennsylvania;General Assembly House of Representatives District 67	state-house
+Pennsylvania;General Assembly House of Representatives District 68	state-house
+Pennsylvania;General Assembly House of Representatives District 69	state-house
+Pennsylvania;General Assembly House of Representatives District 6	state-house
+Pennsylvania;General Assembly House of Representatives District 70	state-house
+Pennsylvania;General Assembly House of Representatives District 71	state-house
+Pennsylvania;General Assembly House of Representatives District 72	state-house
+Pennsylvania;General Assembly House of Representatives District 73	state-house
+Pennsylvania;General Assembly House of Representatives District 74	state-house
+Pennsylvania;General Assembly House of Representatives District 75	state-house
+Pennsylvania;General Assembly House of Representatives District 76	state-house
+Pennsylvania;General Assembly House of Representatives District 77	state-house
+Pennsylvania;General Assembly House of Representatives District 78	state-house
+Pennsylvania;General Assembly House of Representatives District 79	state-house
+Pennsylvania;General Assembly House of Representatives District 7	state-house
+Pennsylvania;General Assembly House of Representatives District 80	state-house
+Pennsylvania;General Assembly House of Representatives District 81	state-house
+Pennsylvania;General Assembly House of Representatives District 82	state-house
+Pennsylvania;General Assembly House of Representatives District 83	state-house
+Pennsylvania;General Assembly House of Representatives District 84	state-house
+Pennsylvania;General Assembly House of Representatives District 85	state-house
+Pennsylvania;General Assembly House of Representatives District 86	state-house
+Pennsylvania;General Assembly House of Representatives District 87	state-house
+Pennsylvania;General Assembly House of Representatives District 88	state-house
+Pennsylvania;General Assembly House of Representatives District 89	state-house
+Pennsylvania;General Assembly House of Representatives District 8	state-house
+Pennsylvania;General Assembly House of Representatives District 90	state-house
+Pennsylvania;General Assembly House of Representatives District 91	state-house
+Pennsylvania;General Assembly House of Representatives District 92	state-house
+Pennsylvania;General Assembly House of Representatives District 93	state-house
+Pennsylvania;General Assembly House of Representatives District 94	state-house
+Pennsylvania;General Assembly House of Representatives District 95	state-house
+Pennsylvania;General Assembly House of Representatives District 96	state-house
+Pennsylvania;General Assembly House of Representatives District 97	state-house
+Pennsylvania;General Assembly House of Representatives District 98	state-house
+Pennsylvania;General Assembly House of Representatives District 99	state-house
+Pennsylvania;General Assembly House of Representatives District 9	state-house
+Pennsylvania;General Assembly Senate District 10	state-senate
+Pennsylvania;General Assembly Senate District 12	state-senate
+Pennsylvania;General Assembly Senate District 14	state-senate
+Pennsylvania;General Assembly Senate District 16	state-senate
+Pennsylvania;General Assembly Senate District 18	state-senate
+Pennsylvania;General Assembly Senate District 20	state-senate
+Pennsylvania;General Assembly Senate District 22	state-senate
+Pennsylvania;General Assembly Senate District 24	state-senate
+Pennsylvania;General Assembly Senate District 26	state-senate
+Pennsylvania;General Assembly Senate District 28	state-senate
+Pennsylvania;General Assembly Senate District 2	state-senate
+Pennsylvania;General Assembly Senate District 30	state-senate
+Pennsylvania;General Assembly Senate District 32	state-senate
+Pennsylvania;General Assembly Senate District 34	state-senate
+Pennsylvania;General Assembly Senate District 36	state-senate
+Pennsylvania;General Assembly Senate District 38	state-senate
+Pennsylvania;General Assembly Senate District 40	state-senate
+Pennsylvania;General Assembly Senate District 42	state-senate
+Pennsylvania;General Assembly Senate District 44	state-senate
+Pennsylvania;General Assembly Senate District 46	state-senate
+Pennsylvania;General Assembly Senate District 48	state-senate
+Pennsylvania;General Assembly Senate District 4	state-senate
+Pennsylvania;General Assembly Senate District 50	state-senate
+Pennsylvania;General Assembly Senate District 6	state-senate
+Pennsylvania;General Assembly Senate District 8	state-senate
+Pennsylvania	state
