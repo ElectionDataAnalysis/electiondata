@@ -3,27 +3,42 @@ import plotly.graph_objects as go
 import numpy as np
 import os
 
-def plot_scatter(data, fig_type, target_dir):
+def plot(type, data, fig_type, target_dir):
     labels, x, y = parse_data(data)
     fig = go.Figure()
-    fig.add_trace(go.Scatter(
-        x=x,
-        y=y,
-        mode='markers',
-        marker=go.scatter.Marker(
-            size=10,
-            color='blue'
-        ),
-        hovertext=labels
-    ))
-    fig.update_layout(
-        xaxis_title=data['x'],
-        yaxis_title=data['y'],
-        font=dict(
-            family='Courier New, monospace',
-            size=18
+    if type == 'scatter':
+        fig.add_trace(go.Scatter(
+            x=x,
+            y=y,
+            mode='markers',
+            marker=go.scatter.Marker(
+                size=10,
+                color='blue'
+            ),
+            hovertext=labels
+        ))
+        fig.update_layout(
+            xaxis_title=data['x'],
+            yaxis_title=data['y'],
+            font=dict(
+                family='Courier New, monospace',
+                size=18
+            )
         )
-    )
+    elif type == 'bar':
+        fig = go.Figure(
+            data=[
+                go.Bar(name=data['x'], x=[labels[0]], y=x),
+                go.Bar(name=data['y'], x=[labels[0]], y=y)
+            ]
+        )
+        fig.update_layout(
+            barmode='group',
+            font=dict(
+                family='Courier New, monospace',
+                size=18
+            )
+        )
     image_dir = os.path.join(target_dir, 'images')
     file_name = f'{data["x"].replace(" ", "-")}_{data["y"].replace(" ", "-")}.{fig_type}'
     file_path = os.path.join(image_dir, file_name)

@@ -895,7 +895,7 @@ class Analyzer():
         agg_results = a.create_scatter(self.session, jurisdiction_id, subdivision_type_id, results_info[1], 
             results_info[0],candidate_1_id,candidate_2_id, count_item_type)
         if fig_type:
-            v.plot_scatter(agg_results, fig_type, d['rollup_directory'])
+            v.plot('scatter', agg_results, fig_type, d['rollup_directory'])
         return agg_results
 
     
@@ -912,7 +912,7 @@ class Analyzer():
         agg_results = a.create_bar(self.session, jurisdiction_id, contest_type, results_info[1], results_info[0])
         if fig_type:
             for agg_result in agg_results:
-                v.plot_bar(agg_result, fig_type, d['rollup_directory'])
+                v.plot('bar', agg_result, fig_type, d['rollup_directory'])
         return agg_results
 
 
