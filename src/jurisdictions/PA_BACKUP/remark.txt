@@ -1,4 +1,0 @@
-Pennsylvania results can be downloaded by county, by congressional district or statewide
-from https://www.electionreturns.pa.gov/ReportCenter/Reports.
-
-There is an
