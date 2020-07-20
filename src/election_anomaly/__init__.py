@@ -909,7 +909,7 @@ class Analyzer():
             return
         jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', jurisdiction)
         results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
-        rollup = a.create_bar(self.session, jurisdiction_id, contest_type, results_info[1], results_info[0])
+        agg_results = a.create_bar(self.session, jurisdiction_id, contest_type, results_info[1], results_info[0])
         if fig_type:
             for agg_result in agg_results:
                 v.plot_scatter(agg_result, fig_type, d['rollup_directory'])
