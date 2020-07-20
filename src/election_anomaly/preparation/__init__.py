@@ -48,6 +48,13 @@ def get_element(juris: str, element: str) -> pd.DataFrame:
 	return element_df
 
 
+def write_element(juris: str, element: str, df: pd.DataFrame):
+	"""<juris> is path to jurisdiction directory. Info taken
+	from <element>.txt file in that directory"""
+	df.fillna('').to_csv(os.path.join(juris,element),index=False,sep='\t')
+	return
+
+
 def add_primary_contests(juris: str):
 	"""Revise CandidateContest.txt and dictionary.txt
 	to add all possible primary contests. Assume raw identifier
@@ -69,85 +76,44 @@ def add_primary_contests(juris: str):
 	return
 
 
-def add_candidates_from_datafile(juris: str,results_df: pd.DataFrame,mu: jm.Munger,warn: dict) -> dict:
-	"""Add candidate names to Candidate.txt and dictionary.txt.
-	Set cdf_internal_name equal to raw_identifier"""
-	err = {}
-	# list fields needed for candidate and party
-	c_fields = mu.cdf_elements.loc['Candidate','fields']
-	p_fields = mu.cdf_elements.loc['Party','fields']
-	fields = list(set(c_fields).union(set(p_fields)))
+def add_elements_from_datafile(
+		juris: str,results: pd.DataFrame,mu: jm.Munger,element: str, error: dict,
+		name_field='Name') -> dict:
+	"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
+	or not already in <element>.txt"""
+	wr =results.copy()
+	# TODO append <element>_raw
+	mr.add_munged_column(wr, mu, element, error, mode=mu.cdf_elements.loc[element,'source'])
+	# TODO find <element>_raw values not in dictionary.txt.raw_identifier_value;
+	#  add corresponding lines to dictionary.txt
+	wd = get_element(juris,'dictionary')
+	old_raw = wd[wd.cdf_element==element]['raw_identifier_value'].to_list()
+	new_raw = [x for x in wr[f'{element}_raw'] if x not in old_raw]
+	new_raw_df = pd.DataFrame(
+		[[element,x,x] for x in new_raw],
+		columns=['cdf_element','cdf_internal_name','raw_identifier_value'])
+	wd = pd.concat(wd,new_raw_df)
+	write_element(juris,'dictionary',wd)
 
-	# extract raw identifiers of candidates and parties
-	can_par_df = results_df[fields].drop_duplicates()
-	can_par_df.columns = [f'{x}_SOURCE' for x in can_par_df.columns]
-	mr.add_munged_column(can_par_df,mu,'Party',err, mode=mu.cdf_elements.loc['Party','source'])
-	mr.add_munged_column(can_par_df,mu,'Candidate', err, mode=mu.cdf_elements.loc['Candidate','source'])
+	# TODO find cdf_internal_names that are not in <element>.txt and add them to <element>.txt
+	we = get_element(juris,element)
+	old_internal = we[name_field].to_list()
+	new_internal = [x for x in wd['cdf_internal_name'] if x not in old_internal]
+	new_internal_df = pd.DataFrame([[x] for x in new_internal],columns=[name_field])
+	we = pd.concat(we,new_internal_df)
+	write_element(juris,element,we)
+	# if <element>.txt has columns other than <name_field>, notify user
+	if we.shape[1] > 1 and not new_internal_df.empty:
+		add_or_append_msg(
+			error,'Jurisdiction',
+			f'New rows added to {element}.txt, but data may be missing from some fields in those rows.')
+	return error
 
-	# append columns with internal cdf_names (using _raw value if item is not in dictionary)
-	old_dictionary = get_element(juris,'dictionary')
-	party_map = {r['raw_identifier_value']:r['cdf_internal_name'] for
-			i,r in old_dictionary.iterrows() if r['cdf_element'] == 'Party'}
-	candidate_map = {r['raw_identifier_value']:r['cdf_internal_name'] for
-			i,r in old_dictionary.iterrows() if r['cdf_element'] == 'Candidate'}
-	can_par_df['Candidate.BallotName'] = can_par_df['Candidate_raw'].map(candidate_map)
-	can_par_df.loc[(can_par_df['Candidate.BallotName'].isnull()),'Candidate.BallotName'] = can_par_df.loc[
-		(can_par_df['Candidate.BallotName'].isnull()),'Candidate_raw']
-	can_par_df['Party.Name'] = can_par_df['Party_raw'].map(party_map)
-	can_par_df.loc[(can_par_df['Party.Name'].isnull()),'Party.Name'] = can_par_df.loc[
-		(can_par_df['Party.Name'].isnull()),'Party_raw']
 
-	# parties
-	old_party = get_element(juris,'Party')
-	results_party = pd.DataFrame(columns=old_party.columns)
-	results_party['raw_identifier_value'] = can_par_df['Party_raw'].drop_duplicates()
-	results_party['Name'] = results_party['raw_identifier_value'].map(party_map)
-	# find any novel parties; prepare to add them to party.txt and dictionary.txt
-	novel_party = [p for p in results_party['Name'].to_list() if p not in old_party['Name'].to_list()]
-	if novel_party:
-		w = f'New parties will be added: {novel_party}'
-		if 'Jurisdiction' in warn.keys():
-			warn['Jurisdiction'].append(w)
-		else:
-			warn['Juridiction'] = [w]
-		novel_party_df = results_party[results_party['Name'].isin(novel_party)]
-		novel_dictionary_p = novel_party_df.copy()
-		novel_dictionary_p.rename(columns={'Name','cdf_internal_name'},inplace=True)
-		mr.add_constant_column(novel_dictionary_p,'cdf_element','Party')
+def add_or_append_msg(d: dict, key: str, msg: str):
+	if key in d.keys():
+		d[key].append(msg)
 	else:
-		novel_dictionary_p = pd.DataFrame()
-
-	# candidates
-	old_candidate = get_element(juris,'Candidate')
-	results_candidate = can_par_df[['Candidate_raw','Party_raw']].drop_duplicates()
-
-	# TODO find novel candidates, prepare to add to Candidate.txt and dictionary.txt
-	novel = results_candidate[['BallotName','Party']][
-		~results_candidate[['BallotName','Party']].isin(old_candidate[['BallotName','Party']].to_dict('list')).all(1)]
-	if novel.empty:
-		novel_dictionary_c = pd.DataFrame()
-	else:
-		w = f'New candidates will be added:\n {novel}'
-		if 'Jurisdiction' in warn.keys():
-			warn['Jurisdiction'].append(w)
-		else:
-			warn['Juridiction'] = [w]
-		novel_dictionary_c = novel.copy()
-		novel_dictionary_c.rename(columns={'BallotName','cdf_internal_name'},inplace=True)
-		mr.add_constant_column(novel_dictionary_c,'cdf_element','Candidate')
-
-	results_dictionary = pd.DataFrame(columns=old_dictionary.columns)
-	results_dictionary.loc[:,['cdf_internal_name','raw_identifier_value']] = can_par_df[
-		['Candidate_raw','Candidate_raw']].drop_duplicates()
-	results_dictionary.loc[:,'cdf_element'] = 'Candidate'
-
-#######
-
-	write_candidate = pd.concat([old_candidate,novel_candidate])
-	write_dictionary = pd.concat([old_dictionary,novel_dictionary_p,novel_dictionary_c])
-
-	# TODO overwrite Candidate.txt and Dictionary.txt and Party.txt
-
-	return warn
-
+		d[key] = [msg]
+	return d
 
