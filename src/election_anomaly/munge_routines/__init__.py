@@ -500,23 +500,23 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,err,ids=Non
     working.drop('BallotMeasureSelection',axis=1,inplace=True)
 
     # append CandidateSelection_Id
-    #  First must load CandidateSelection table (not directly munged, not exactly a join either)
+    #  Load CandidateSelection table (not directly munged, not exactly a join either)
     #  Note left join, as not every record in working has a Candidate_Id
     # TODO maybe introduce Selection and Contest tables, have C an BM types refer to them?
 
-    c_df = pd.read_sql_table('Candidate',session.bind)
-    c_df.rename(columns={'Id':'Candidate_Id'},inplace=True)
+    c_df = working[['Candidate_Id','Party_Id']].drop_duplicates()
     cs_df, err = dbr.dframe_to_sql(c_df,session,'CandidateSelection',return_records='original')
-    # add CandidateSelection_Id column, merging on Candidate_Id
-
+    # add CandidateSelection_Id column, merging on Candidate_Id and Party_Id
     working = working.merge(
-        cs_df[['Candidate_Id','Id']],how='left',left_on='Candidate_Id',right_on='Candidate_Id')
+        cs_df[['Party_Id','Candidate_Id','Id']],how='left',
+        left_on=['Candidate_Id','Party_Id'],right_on=['Candidate_Id','Party_Id'])
     working.rename(columns={'Id':'CandidateSelection_Id'},inplace=True)
+
     # drop records with a CC_Id but no CS_Id (i.e., keep if CC_Id is null or CS_Id is not null)
     working = working[(working['CandidateContest_Id'].isnull()) | (working['CandidateSelection_Id']).notnull()]
     # TODO: warn user if contest is munged but candidates are not
     # TODO warn user if BallotMeasureSelections not recognized in dictionary.txt
-    for j in ['CandidatePartyJoin','BallotMeasureContestSelectionJoin','CandidateContestSelectionJoin','ElectionContestJoin']:
+    for j in ['BallotMeasureContestSelectionJoin','CandidateContestSelectionJoin','ElectionContestJoin']:
         # TODO error handling
         working = append_join_id(project_root,session,working,j)
 
