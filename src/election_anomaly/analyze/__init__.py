@@ -224,7 +224,7 @@ def short_name(text,sep=';'):
 		
 	return results
 
-def create_bar(session, top_ru_id, contest_type, election_id, datafile_id_list):
+def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_id_list):
 	"""<target_dir> is the directory where the resulting rollup will be stored.
 	<election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
 	<top_ru_id> is the internal cdf name of the ReportingUnit whose results will be reported
@@ -282,6 +282,8 @@ def create_bar(session, top_ru_id, contest_type, election_id, datafile_id_list):
 
 	if contest_type:
 		contest_selection = contest_selection[contest_selection['contest_district_type'] == contest_type]
+	if contest:
+		contest_selection = contest_selection[contest_selection['Contest'] == contest]
 	# limit to relevant ContestSelection pairs
 	contest_ids = ecj.Contest_Id.unique()
 	csj = contest_selection[contest_selection.Contest_Id.isin(contest_ids)]
@@ -313,17 +315,27 @@ def create_bar(session, top_ru_id, contest_type, election_id, datafile_id_list):
 		ru_children,left_on='ChildReportingUnit_Id',right_index=True).merge(
 		sub_ru,left_on='ParentReportingUnit_Id',right_index=True,suffixes=['','_Parent'])
 	unsummed.rename(columns={'Name_Parent':'ReportingUnit'},inplace=True)
+
+	# Some super kludgy stuff to remove duplicates that get introduced somewhere
+	# TODO: FIXME
+	unsummed = unsummed[(unsummed['ChildReportingUnit_Id'] != unsummed['ParentReportingUnit_Id'])]
+	unsummed = unsummed.drop(columns=['OtherReportingUnitType', 'ChildReportingUnit_Id', 
+				'ParentReportingUnit_Id', 'ReportingUnitType_Id_Parent'])
+	unsummed = unsummed.drop_duplicates()
+	unsummed = unsummed[unsummed['ReportingUnitType_Id'] != 19] # is not a state
+	unsummed = unsummed[~unsummed['ReportingUnit'].isin(['North Carolina', 'Colorado', 'Pennsylvania', 
+				'Michigan', 'Maryland', 'Virginia'])]
+
+
 	# add columns with names
 	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'])
 	unsummed = unsummed.merge(contest_selection,how='left',left_on='ContestSelectionJoin_Id',right_index=True)
 
-	# filter based on vote count type
-	unsummed = unsummed[unsummed['CountItemType'] == 'total']
-
 	ranked = assign_anomaly_score(unsummed)
 	top_ranked = get_most_anomalous(ranked, 3)
+	return top_ranked
 
-
+	"""
 	# package into list of dictionary
 	result_list = []
 	ids = top_ranked['Contest_Id'].unique()
@@ -353,6 +365,7 @@ def create_bar(session, top_ru_id, contest_type, election_id, datafile_id_list):
 		result_list.append(results)
 		
 	return result_list
+	"""
 
 
 def assign_anomaly_score(data):
@@ -380,17 +393,15 @@ def get_most_anomalous(data, n):
 	df = pd.DataFrame()
 	for id in ids:
 		temp_df = result[result['Contest_Id'] == id]
-		df_child_ru = temp_df.sample()
-		child_ru = df_child_ru.iloc[0]['ChildReportingUnit_Id']
-		unique = temp_df[temp_df['ChildReportingUnit_Id']==child_ru]['Candidate_Id'].unique()
-		while len(unique) < 2:
-			df_child_ru = temp_df.sample()
-			child_ru = df_child_ru.iloc[0]['ChildReportingUnit_Id']
-			unique = temp_df[temp_df['ChildReportingUnit_Id']==child_ru]['Candidate_Id'].unique()
-		df_child_ru = temp_df[temp_df['ChildReportingUnit_Id']==child_ru] 
-		df_final = df_child_ru.sample(frac=1).drop_duplicates(['Candidate_Id'])
-		df_final = df_final.iloc[0:2]
-		
+		unique = temp_df['Candidate_Id'].unique()
+		candidates = unique[0:2]
+		candidate_df = temp_df[temp_df['Candidate_Id'].isin(candidates)]
+		unique = candidate_df['ReportingUnit_Id'].unique()
+		reporting_units = unique[0:6]
+		df_final = candidate_df[candidate_df['ReportingUnit_Id'].isin(reporting_units)]. \
+			sort_values(['ReportingUnit_Id', 'score'], ascending=False)
+		# TODO: remove this filter on total
+		df_final = df_final[df_final['CountItemType'] == 'total']
 		df = pd.concat([df, df_final])
 
 	return df

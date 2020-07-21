@@ -899,7 +899,7 @@ class Analyzer():
         return agg_results
 
     
-    def bar(self, jurisdiction, contest_type=None, fig_type=None):
+    def bar(self, jurisdiction, contest_type=None, contest=None, fig_type=None):
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(['rollup_directory'])
         if error:
@@ -909,7 +909,8 @@ class Analyzer():
             return
         jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', jurisdiction)
         results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
-        agg_results = a.create_bar(self.session, jurisdiction_id, contest_type, results_info[1], results_info[0])
+        agg_results = a.create_bar(self.session, jurisdiction_id, contest_type, contest,
+                        results_info[1], results_info[0])
         if fig_type:
             for agg_result in agg_results:
                 v.plot('bar', agg_result, fig_type, d['rollup_directory'])
