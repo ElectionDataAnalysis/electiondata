@@ -833,8 +833,8 @@ class Analyzer():
         self.session = Session()
 
 
-    def display_options(self, input):
-        results = dbr.get_input_options(self.session, input)
+    def display_options(self, input, verbose=False):
+        results = dbr.get_input_options(self.session, input, verbose)
         if results:
             return results
         return None

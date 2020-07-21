@@ -644,3 +644,70 @@ def remove_vote_counts(connection, cursor, id: int) -> str:
 	else:
 		err_str = 'Deletion not confirmed by user'
 	return err_str
+def get_input_options(session, input, verbose):
+    """Returns a list of response options based on the input"""
+    # input comes as a pythonic (snake case) input, need to 
+    # change to match DB element naming format
+    name_parts = input.split('_')
+    search_str = "".join([name_part.capitalize() for name_part in name_parts])
+
+    if search_str in ['BallotMeasureContest', 'CandidateContest', 'Election',
+        'Office', 'Party', 'ReportingUnit']:
+        column_name = 'Name'
+        table_search = True
+    elif search_str in ['CountItemStatus', 'CountItemType', 'ElectionType',
+        'IdentifierType', 'ReportingUnitType']:
+        column_name = 'Txt'
+        table_search = True
+    elif search_str == 'BallotMeasureSelection':
+        column_name = 'Selection'
+        table_search = True
+    elif search_str == 'Candidate':
+        column_name = 'BallotName'
+        table_search = True
+    # TODO: do we need a subdivision_type?
+    else:
+        search_str = search_str.lower()
+        table_search = False
+
+    if not verbose:
+        if table_search:
+            result = session.execute(f'SELECT "{column_name}" FROM "{search_str}";')
+            return [r[0] for r in result]
+        else:
+            result = session.execute(f' \
+                SELECT "Name" FROM "ReportingUnit" ru \
+                JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" \
+                WHERE rut."Txt" = \'{search_str}\'')
+            return [r[0] for r in result]
+    else:
+        if search_str == 'BallotMeasureContest':
+            result = session.execute(f'''
+                SELECT  ru."Id" AS parent_id, c."Name" AS name, rut."Txt" AS type
+                FROM    "BallotMeasureContest" c
+                        JOIN "ReportingUnit" ru ON c."ElectionDistrict_Id" = ru."Id"
+                        JOIN "ReportingUnitType" rut ON ru."ReportingUnitType_Id" = rut."Id"
+            ''')
+        elif search_str == 'CandidateContest':
+            result = session.execute(f'''
+                SELECT  ru."Id" AS parent_id, c."Name" AS name, rut."Txt" AS type
+                FROM    "CandidateContest" c
+                        JOIN "Office" o ON c."Office_Id" = o."Id"
+                        JOIN "ReportingUnit" ru ON o."ElectionDistrict_Id" = ru."Id"
+                        JOIN "ReportingUnitType" rut ON ru."ReportingUnitType_Id" = rut."Id"
+            ''')
+        else:
+           pass 
+
+
+def get_datafile_info(session, results_file):
+    q = session.execute(f'''
+        SELECT "Id", "Election_Id" 
+        FROM _datafile 
+        WHERE short_name = '{results_file}'
+        ''').fetchall()
+    try:
+        return q[0]
+    except IndexError:
+        print(f'No record named {results_file} found in _datafile table in {session.bind.url}')
+        return [0,0]
