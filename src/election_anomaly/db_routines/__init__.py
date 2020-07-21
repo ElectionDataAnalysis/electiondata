@@ -783,35 +783,8 @@ def get_input_options(session, input, verbose):
                         JOIN "ReportingUnitType" rut ON ru."ReportingUnitType_Id" = rut."Id"
                 ORDER BY c."Name"
             ''')
-        elif search_str == 'Candidate':
-            result = session.execute(f'''
-                SELECT  cc."Name" AS parent, 
-                        c."BallotName" as name, 
-                        p."Name" AS type
-                FROM    "Candidate" c
-                        JOIN "CandidateSelection" cs ON c."Id" = cs."Candidate_Id"
-                        JOIN "ContestSelectionJoin" ccsj 
-                            ON cs."Id" = ccsj."Selection_Id"
-                        JOIN "CandidateContest" cc ON ccsj."Contest_Id" = cc."Id"                        
-						JOIN "Party" p ON cs."Party_Id" = p."Id"
-                ORDER BY c."BallotName"
-            ''')
         else:
-            # parent_id is candidate_id, type is combo of party and contest name
-            result = session.execute(f'''
-                SELECT  cc."Name" AS parent,
-                        c."BallotName" as name, 
-                        p."Name" AS type
-                FROM    "Candidate" c
-                        JOIN "CandidateSelection" cs ON c."Id" = cs."Candidate_Id"
-                        JOIN "ContestSelectionJoin" ccsj 
-                            ON cs."Id" = ccsj."Selection_Id"
-                        JOIN "CandidateContest" cc ON ccsj."Contest_Id" = cc."Id"                        
-						JOIN "Party" p ON cs."Party_Id" = p."Id"
-                WHERE   c."BallotName" ILIKE '%{search_str}%'
-                ORDER BY c."BallotName"
-            ''')
-        return result
+           pass 
 
 
 def get_datafile_info(session, results_file):
