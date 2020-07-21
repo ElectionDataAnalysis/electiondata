@@ -1,0 +1,10 @@
+Instructions to compare two results file. 
+
+Runelection_anomaly\src\election_anomaly\verify_result.
+Select result file 1 for comparison.
+Select result file 2 for comparison.
+
+
+1.Both the files are expected to have same headers. The program expects the files to have following columns.
+['Contest', 'ReportingUnit', 'Selection', 'Count']
+
