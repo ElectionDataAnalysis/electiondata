@@ -697,7 +697,19 @@ def get_input_options(session, input, verbose):
                         JOIN "ReportingUnitType" rut ON ru."ReportingUnitType_Id" = rut."Id"
             ''')
         else:
-           pass 
+            # parent_id is candidate_id, type is combo of party and contest name
+            result = session.execute(f'''
+                SELECT  c."Id" AS parent_id, c."BallotName" as name, 
+                        p."Name" || ' - ' || cc."Name" AS type
+                FROM    "Candidate" c
+                        JOIN "Party" p ON c."Party_Id" = p."Id"
+                        JOIN "CandidateSelection" cs ON c."Id" = cs."Candidate_Id"
+                        JOIN "CandidateContestSelectionJoin" ccsj 
+                            ON cs."Id" = ccsj."CandidateSelection_Id"
+                        JOIN "CandidateContest" cc ON ccsj."CandidateContest_Id" = cc."Id"
+                WHERE   c."BallotName" ILIKE '%{search_str}%'
+            ''')
+        return package_display_results(result)
 
 
 def get_datafile_info(session, results_file):
@@ -711,3 +723,30 @@ def get_datafile_info(session, results_file):
     except IndexError:
         print(f'No record named {results_file} found in _datafile table in {session.bind.url}')
         return [0,0]
+    return q[0]
+
+
+def candidate_to_id(session, name):
+    """fuzzy string matching on name field, may return multiple results"""
+    name_field = get_name_field("Candidate")
+    q = f"""SELECT "Id" FROM "{element}" WHERE "{name_field}" = '{name}' """
+    idx_df = pd.read_sql(q,session.bind)
+    try:
+        idx = idx_df.loc[0,'Id']
+    except KeyError:
+        # if no record with name <name> was found
+        idx = None
+    return idx
+
+
+def package_display_results(data):
+    """takes a result set and packages into JSON to return"""
+    results = []
+    for d in data:
+        temp = {
+            'parent_id': d[0],
+            'name': d[1],
+            'type': d[2]
+        }
+        results.append(temp)
+    return results
