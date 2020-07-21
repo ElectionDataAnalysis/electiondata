@@ -1,6 +1,6 @@
 Instructions to compare two results file. 
 
-Runelection_anomaly\src\election_anomaly\verify_result.
+Run election_anomaly\verify_results\result_verification.py
 Select result file 1 for comparison.
 Select result file 2 for comparison.
 
