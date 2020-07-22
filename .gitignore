@@ -2,17 +2,6 @@
 src/tmp/
 local/
 .DS_Store
-src/election_anomaly/__pycache__
-query_create/__pycache__
-src/election_anomaly/query_create/__pycache__/__init__.cpython-37.pyc
-src/election_anomaly/states_and_files/__pycache__/__init__.cpython-37.pyc
-src/election_anomaly/clean/__pycache__/__init__.cpython-37.pyc
-src/election_anomaly/query_create/__pycache__/__init__.cpython-37.pyc
-src/election_anomaly/db_routines/__pycache__/__init__.cpython-37.pyc
-src/election_anomaly/munge_routines/__pycache__/__init__.cpython-37.pyc
-src/election_anomaly/context/__pycache__/__init__.cpython-37.pyc
-src/election_anomaly/munge_routines/__pycache__/__init__.cpython-38.pyc
-src/jurisdictions/README.md
 .idea
 /venv/
 dist
@@ -23,9 +12,3 @@ build
 src/tmp/
 local/
 .DS_Store
-src/data_preprocessing
-src/db_records_entered_by_hand
-src/election_anomaly/context/
-src/election_anomaly/db_records_entered_by_hand
-src/election_anomaly/states_and_files
-src/election_anomaly/local_data
