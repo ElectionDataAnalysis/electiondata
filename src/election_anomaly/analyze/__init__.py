@@ -333,17 +333,16 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 
 	ranked = assign_anomaly_score(unsummed)
 	top_ranked = get_most_anomalous(ranked, 3)
-	return top_ranked
 
-	"""
 	# package into list of dictionary
 	result_list = []
 	ids = top_ranked['Contest_Id'].unique()
 	for id in ids:
 		temp_df = top_ranked[top_ranked['Contest_Id'] == id]
 
-		x = dbr.name_from_id(session, 'Candidate', temp_df.iloc[0]['Candidate_Id'])
-		y = dbr.name_from_id(session, 'Candidate', temp_df.iloc[1]['Candidate_Id']) 
+		candidates = temp_df['Candidate_Id'].unique()
+		x = dbr.name_from_id(session, 'Candidate', candidates[0])
+		y = dbr.name_from_id(session, 'Candidate', candidates[1]) 
 		results = {
 			"election": dbr.name_from_id(session, 'Election', election_id),
 			"jurisdiction": dbr.name_from_id(session, 'ReportingUnit', top_ru_id),
@@ -365,7 +364,6 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 		result_list.append(results)
 		
 	return result_list
-	"""
 
 
 def assign_anomaly_score(data):

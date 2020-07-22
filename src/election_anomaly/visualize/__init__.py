@@ -55,10 +55,15 @@ def plot(type, data, fig_type, target_dir):
 
 def plot_bar(data, fig_type, target_dir):
     labels, x, y = parse_data(data)
+    #labels might get long, so we grab the most granular portion:
+    for i in range(0, len(labels)):
+        l = labels[i].split(';')[-1]
+        labels[i] = l
+    
     fig = go.Figure(
         data=[
-            go.Bar(name=data['x'], x=[labels[0]], y=x),
-            go.Bar(name=data['y'], x=[labels[0]], y=y)
+            go.Bar(name=data['x'], x=labels, y=x),
+            go.Bar(name=data['y'], x=labels, y=y)
         ]
     )
     fig.update_layout(
