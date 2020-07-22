@@ -2,11 +2,11 @@
 
 ## Capture Historical Data
 - [ ] Record source and format (flat file? api?) of historical files in `remark.txt` (or note if unavailable)
-- [ ] Download 2016, 2018, 2020 primary and general elections. For each file, note file creation date and download date.
+- [ ] Download 2016 (primary & general), 2018 (primary & general) and 2020 primary elections. For each file, note file creation date and download date.
 
 ## Munge Historical Data
 - [ ] Create jurisdiction files
-- [ ] Create munger files. (More than one munger may be necessary.)
+- [ ] Create munger files (more than one munger may be necessary)
 - [ ] Load data to common database
 
 ## Create Nov 4, 2020 Plan
