@@ -48,10 +48,18 @@ def plot(type, data, fig_type, target_dir):
             ]
         )
         fig.update_layout(
+            title=dict(
+                text=f'''{data['contest']}<br>{data['subdivision_type']}<br>{data['count_item_type']}''',
+                x = 0.5,
+                font=dict(
+                   family='Courier New, monospace',
+                   size=18 
+                )
+            ),
             barmode='group',
             font=dict(
                 family='Courier New, monospace',
-                size=18
+                size=14
             )
         )
     image_dir = os.path.join(target_dir, 'images')

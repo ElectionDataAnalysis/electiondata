@@ -206,6 +206,7 @@ def short_name(text,sep=';'):
 	results = {
 		"election": dbr.name_from_id(session, 'Election', election_id),
 		"jurisdiction": dbr.name_from_id(session, 'ReportingUnit', top_ru_id),
+		"contest": dbr.name_from_id(session, 'CandidateContest', temp_df.iloc[0]['Contest_Id']),
 		"subdivision_type": dbr.name_from_id(session, 'ReportingUnitType', sub_rutype_id),
 		"count_item_type": count_item_type,
 		"x": x,
@@ -346,7 +347,9 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 		results = {
 			"election": dbr.name_from_id(session, 'Election', election_id),
 			"jurisdiction": dbr.name_from_id(session, 'ReportingUnit', top_ru_id),
-			"subdivision_type": dbr.name_from_id(session, 'ReportingUnit', top_ru_id),
+			"contest": dbr.name_from_id(session, 'CandidateContest', temp_df.iloc[0]['Contest_Id']),
+			# TODO: remove hard coded subdivision type
+			"subdivision_type": 'precinct',
 			"count_item_type": temp_df.iloc[0]['CountItemType'],
 			"x": x,
 			"y": y,
