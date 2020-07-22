@@ -26,10 +26,25 @@ def plot(type, data, fig_type, target_dir):
             )
         )
     elif type == 'bar':
+        #labels might get long, so we grab the most granular portion:
+        for i in range(0, len(labels)):
+            l = labels[i].split(';')[-1]
+            labels[i] = l
+
+        #sort by most anomalous
+        anomalous = [x_i - y_i for x_i, y_i in zip(x, y)]
+        anomalous = list(map(abs, anomalous))
+        to_sort = list(zip(anomalous, labels, x, y))
+        ordered = sorted(to_sort, reverse=True)
+        anomalous, labels, x, y = list(zip(*ordered))
+        labels = list(labels)
+        x = list(x)
+        y = list(y)
+
         fig = go.Figure(
             data=[
-                go.Bar(name=data['x'], x=[labels[0]], y=x),
-                go.Bar(name=data['y'], x=[labels[0]], y=y)
+                go.Bar(name=data['x'], x=labels, y=x),
+                go.Bar(name=data['y'], x=labels, y=y)
             ]
         )
         fig.update_layout(

@@ -913,7 +913,7 @@ class Analyzer():
                         results_info[1], results_info[0])
         if fig_type:
             for agg_result in agg_results:
-                v.plot_bar(agg_result, fig_type, d['rollup_directory'])
+                v.plot('bar', agg_result, fig_type, d['rollup_directory'])
         return agg_results
 
 
