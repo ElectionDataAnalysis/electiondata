@@ -289,44 +289,26 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 	contest_ids = ecj.Contest_Id.unique()
 	csj = contest_selection[contest_selection.Contest_Id.isin(contest_ids)]
 
-	# find ReportingUnits of the correct type that are subunits of top_ru
-	# sub_ru_ids = child_rus_by_id(session,[top_ru_id],ru_type=[sub_rutype_id, ''])
-	# if not sub_ru_ids:
-	# 	# TODO better error handling (while not sub_ru_list....)
-	# 	raise Exception(f'Database {db} shows no ReportingUnits of type {sub_rutype} nested inside {top_ru}')
-	sub_ru = df['ReportingUnit']
-
-	# find all subReportingUnits of top_ru
-	all_subs_ids = child_rus_by_id(session,[top_ru_id])
-
-	# find all children of subReportingUnits
-	children_of_subs_ids = child_rus_by_id(session,all_subs_ids)
-	ru_children = df['ReportingUnit'].loc[children_of_subs_ids]
-
 	# limit to relevant vote counts
 	ecsvcj = df['ElectionContestSelectionVoteCountJoin'][
 		(df['ElectionContestSelectionVoteCountJoin'].ElectionContestJoin_Id.isin(ecj.index)) &
 		(df['ElectionContestSelectionVoteCountJoin'].ContestSelectionJoin_Id.isin(csj.index))]
 
-	# calculate specified dataframe with columns [ReportingUnit,Contest,Selection,VoteCount,CountItemType]
-	#  1. create unsummed dataframe of results
+	# Create data frame of all our results at all levels
 	unsummed = ecsvcj.merge(
 		df['VoteCount'],left_on='VoteCount_Id',right_index=True).merge(
 		df['ComposingReportingUnitJoin'],left_on='ReportingUnit_Id',right_on='ChildReportingUnit_Id').merge(
-		ru_children,left_on='ChildReportingUnit_Id',right_index=True).merge(
-		sub_ru,left_on='ParentReportingUnit_Id',right_index=True,suffixes=['','_Parent'])
-	unsummed.rename(columns={'Name_Parent':'ReportingUnit'},inplace=True)
-
-	# Some super kludgy stuff to remove duplicates that get introduced somewhere
-	# TODO: FIXME
-	unsummed = unsummed[(unsummed['ChildReportingUnit_Id'] != unsummed['ParentReportingUnit_Id'])]
-	unsummed = unsummed.drop(columns=['OtherReportingUnitType', 'ChildReportingUnit_Id', 
-				'ParentReportingUnit_Id', 'ReportingUnitType_Id_Parent'])
-	unsummed = unsummed.drop_duplicates()
-	unsummed = unsummed[unsummed['ReportingUnitType_Id'] != 19] # is not a state
-	unsummed = unsummed[~unsummed['ReportingUnit'].isin(['North Carolina', 'Colorado', 'Pennsylvania', 
-				'Michigan', 'Maryland', 'Virginia'])]
-
+		df['ReportingUnit'],left_on='ChildReportingUnit_Id',right_index=True).merge(
+		df['ReportingUnit'],left_on='ParentReportingUnit_Id',right_index=True,suffixes=['','_Parent'])
+	
+	# Some cleanup: Rename, drop a duplicated column 	
+	rename = {
+		'Name_Parent': 'ParentName',
+		'ReportingUnitType_Id_Parent': 'ParentReportingUnitType_Id',
+		'OtherReportingUnitType_Parent': 'ParentOtherReportingUnitType'
+	}
+	unsummed.rename(columns=rename, inplace=True)
+	unsummed.drop(columns='ChildReportingUnit_Id', inplace=True)
 
 	# add columns with names
 	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'])
