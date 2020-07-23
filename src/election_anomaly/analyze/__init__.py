@@ -301,6 +301,10 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 		df['ReportingUnit'],left_on='ChildReportingUnit_Id',right_index=True).merge(
 		df['ReportingUnit'],left_on='ParentReportingUnit_Id',right_index=True,suffixes=['','_Parent'])
 	
+	# add columns with names
+	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'])
+	unsummed = unsummed.merge(contest_selection,how='left',left_on='ContestSelectionJoin_Id',right_index=True)
+
 	# Some cleanup: Rename, drop a duplicated column 	
 	rename = {
 		'Name_Parent': 'ParentName',
@@ -308,20 +312,17 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 		'OtherReportingUnitType_Parent': 'ParentOtherReportingUnitType'
 	}
 	unsummed.rename(columns=rename, inplace=True)
-	unsummed.drop(columns='ChildReportingUnit_Id', inplace=True)
-
-	# add columns with names
-	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'])
-	unsummed = unsummed.merge(contest_selection,how='left',left_on='ContestSelectionJoin_Id',right_index=True)
+	unsummed.drop(columns=['ChildReportingUnit_Id', 'ElectionContestJoin_Id', 'ContestSelectionJoin_Id'],
+				inplace=True)
 
 	ranked = assign_anomaly_score(unsummed)
 	top_ranked = get_most_anomalous(ranked, 3)
 
 	# package into list of dictionary
 	result_list = []
-	ids = top_ranked['Contest_Id'].unique()
+	ids = top_ranked['unit_id'].unique()
 	for id in ids:
-		temp_df = top_ranked[top_ranked['Contest_Id'] == id]
+		temp_df = top_ranked[top_ranked['unit_id'] == id]
 
 		candidates = temp_df['Candidate_Id'].unique()
 		x = dbr.name_from_id(session, 'Candidate', candidates[0])
@@ -331,7 +332,8 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 			"jurisdiction": dbr.name_from_id(session, 'ReportingUnit', top_ru_id),
 			"contest": dbr.name_from_id(session, 'CandidateContest', temp_df.iloc[0]['Contest_Id']),
 			# TODO: remove hard coded subdivision type
-			"subdivision_type": 'precinct',
+			"subdivision_type": dbr.name_from_id(session, 'ReportingUnitType', 
+				temp_df.iloc[0]['ReportingUnitType_Id']),
 			"count_item_type": temp_df.iloc[0]['CountItemType'],
 			"x": x,
 			"y": y,
@@ -352,30 +354,39 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 
 
 def assign_anomaly_score(data):
-	"""adds a new column called score between 0 and 1; 1 is more anomalous"""
+	"""adds a new column called score between 0 and 1; 1 is more anomalous.
+	Also adds a `unit_id` column which assigns a score to each unit of analysis
+	that is considered. For example, we may decide to look at anomalies across each
+	distinct combination of contest, reporting unit type, and vote type. Each 
+	combination of those would get assigned an ID. This means rows may get added
+	to the dataframe if needed."""
 	import numpy as np
 	data['score'] = np.random.rand(data.shape[0])
+
+	# assign unit_ids to contest, ru_type, and count type
+	df_unit = data[['Contest_Id', 'ReportingUnitType_Id', 'CountItemType']].drop_duplicates()
+	df_unit = df_unit.reset_index()
+	df_unit['unit_id'] = df_unit.index
+	data = data.merge(df_unit, how='left', on=['Contest_Id', 'ReportingUnitType_Id', 'CountItemType'])
+
 	return data
 
 
 def get_most_anomalous(data, n):
 	"""gets the n contests with the highest individual anomaly score"""
-	df = data.groupby('Contest_Id')['score'].max().reset_index()
+	df = data.groupby('unit_id')['score'].max().reset_index()
 	df.rename(columns={'score': 'max_score'}, inplace=True)
-	data = data.merge(df, on='Contest_Id')
-	# data.drop('score_x', axis=1, inplace=True)
-	# data.rename(columns={'score_y': 'score'}, inplace=True)
+	data = data.merge(df, on='unit_id')
 	unique_scores = sorted(set(df['max_score']), reverse=True)
 	top_scores = unique_scores[:n]
-
 	result = data[data['max_score'].isin(top_scores)]
 
 	# Eventually we want to return the winner and the most anomalous
-	# for each contest. For now, just 2 random ones
-	ids = result['Contest_Id'].unique()
+	# for each contest grouping (unit). For now, just 2 random ones
+	ids = result['unit_id'].unique()
 	df = pd.DataFrame()
 	for id in ids:
-		temp_df = result[result['Contest_Id'] == id]
+		temp_df = result[result['unit_id'] == id]
 		unique = temp_df['Candidate_Id'].unique()
 		candidates = unique[0:2]
 		candidate_df = temp_df[temp_df['Candidate_Id'].isin(candidates)]
@@ -383,8 +394,5 @@ def get_most_anomalous(data, n):
 		reporting_units = unique[0:6]
 		df_final = candidate_df[candidate_df['ReportingUnit_Id'].isin(reporting_units)]. \
 			sort_values(['ReportingUnit_Id', 'score'], ascending=False)
-		# TODO: remove this filter on total
-		df_final = df_final[df_final['CountItemType'] == 'total']
 		df = pd.concat([df, df_final])
-
 	return df
