@@ -696,6 +696,18 @@ def get_input_options(session, input, verbose):
                         JOIN "ReportingUnit" ru ON o."ElectionDistrict_Id" = ru."Id"
                         JOIN "ReportingUnitType" rut ON ru."ReportingUnitType_Id" = rut."Id"
             ''')
+        elif search_str == 'Candidate':
+            result = session.execute(f'''
+                SELECT  c."Id" AS parent_id, c."BallotName" as name, 
+                        p."Name" || ' - ' || cc."Name" AS type
+                FROM    "Candidate" c
+                        JOIN "Party" p ON c."Party_Id" = p."Id"
+                        JOIN "CandidateSelection" cs ON c."Id" = cs."Candidate_Id"
+                        JOIN "CandidateContestSelectionJoin" ccsj 
+                            ON cs."Id" = ccsj."CandidateSelection_Id"
+                        JOIN "CandidateContest" cc ON ccsj."CandidateContest_Id" = cc."Id"
+                ORDER BY c."BallotName"
+            ''')
         else:
             # parent_id is candidate_id, type is combo of party and contest name
             result = session.execute(f'''
