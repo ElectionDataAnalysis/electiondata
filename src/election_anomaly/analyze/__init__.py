@@ -374,6 +374,17 @@ def assign_anomaly_score(data):
 
 def get_most_anomalous(data, n):
 	"""gets the n contests with the highest individual anomaly score"""
+	# get rid of all contest-counttypes with 0 votes
+	# not sure we really want to do this in final version
+	zeros_df = data[['Contest_Id', 'ReportingUnitType_Id', 'CountItemType', 'ReportingUnit_Id', 'Count']]
+	zeros_df = zeros_df.groupby(['Contest_Id', 'ReportingUnitType_Id', 'ReportingUnit_Id', 'CountItemType']).sum()
+	zeros_df = zeros_df.reset_index()
+	no_zeros = zeros_df[zeros_df['Count'] != 0]
+	data = data.merge(no_zeros, how='inner', on=['Contest_Id', 'ReportingUnitType_Id', 'ReportingUnit_Id', 'CountItemType'])
+	data.rename(columns={'Count_x':'Count'}, inplace=True)
+	data.drop(columns=['Count_y'], inplace=True)
+
+	# Now do the filtering on most anomalous
 	df = data.groupby('unit_id')['score'].max().reset_index()
 	df.rename(columns={'score': 'max_score'}, inplace=True)
 	data = data.merge(df, on='unit_id')
