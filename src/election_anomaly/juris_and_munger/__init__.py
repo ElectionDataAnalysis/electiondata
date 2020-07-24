@@ -226,12 +226,9 @@ def read_munger_info_from_files(dir_path,project_root=None,aux_data_dir=None):
         # set auxiliary dataframe to empty
         aux_meta = pd.DataFrame([[]])
 
-    # read cdf_element info and
+    # read cdf_element info
     cdf_elements = pd.read_csv(
         os.path.join(dir_path,'cdf_elements.txt'),sep='\t',index_col='name',encoding='iso-8859-1').fillna('')
-    # add row for _datafile element
-    datafile_elt = pd.DataFrame([['','other']],columns=['raw_identifier_formula','source'],index=['_datafile'])
-    cdf_elements = cdf_elements.append(datafile_elt)
     # add column for list of fields used in formulas
     cdf_elements['fields'] = [[]]*cdf_elements.shape[0]
     for i,r in cdf_elements.iterrows():
