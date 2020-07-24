@@ -5,4 +5,4 @@ CandidateContest	<Office Name> District <Office District>	row
 Candidate	<Candidate Name>	row
 BallotMeasureContest	<Office Name>;<Candidate Name>	row
 BallotMeasureSelection	<0>	column
-CountItemType		other
+CountItemType	unknown	row

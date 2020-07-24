@@ -72,7 +72,8 @@ The directory `src/mungers` holds the munger directories. Each munger directory 
     * `source` Identifies the placement in the file of the relevant information. The system recognizes these possibilities:
       * `row` for classes calculated from values in same row as a given vote count value. In this case the `raw_identifier_formula` can reference entries within the row via the relevant column name in angle brackets (e.g., <COUNTY>)
       * `column` for classes calculated from values in the same column as a given vote count value. In this case the `raw_identifier_formula can reference entries within the column via the relevant row number in angle brackets (e.g., <0>)
-      * `other` for classes that are the same for the whole results file. In this case the `raw_identifier_formula` should be blank.
+      * If a value is the same for everything in the results file (e.g., all results in the file are of CountItemType 'election-day'), use 'row' for the source and set the formula to the constant. For example, the entry might look like: 
+      ```CountItemType  election-day    row```
     
 ### row-sourced formula example
 Consider this snippet from a comma-separated Philadelphia, Pennsylvania voting results file:

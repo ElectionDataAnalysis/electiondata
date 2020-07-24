@@ -175,7 +175,9 @@ def create_rollup(
 		cit_list = unsummed['CountItemType'].unique()
 	else:
 		cit_list = ['all']
-		if exclude_total:
+		# if there is a 'total' type as well as other types, need to avoid doubling.
+		# if the only type is 'total', don't rule it out.
+		if exclude_total and [x for x in unsummed['CountItemType'] if x != 'total']:
 			unsummed = unsummed[unsummed.CountItemType != 'total']
 	if len(cit_list) > 1:
 		cit = 'mixed'

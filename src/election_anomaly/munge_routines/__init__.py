@@ -92,7 +92,7 @@ def text_fragments_and_fields(formula):
 
 def add_munged_column(raw,munger,element,err,mode='row',inplace=True):
     """Alters dataframe <raw>, adding or redefining <element>_raw column
-    via the <formula>. Assumes some preprocessing of <raw> .
+    via the <formula>. Assumes "_SOURCE" has been appended to all columns of raw
     Does not alter row count."""
     # TODO what preprocessing exactly? Improve description
     if not err:
@@ -421,16 +421,8 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,err,ids=Non
     working = raw.copy()
 
     # enter elements from sources outside raw data, including creating id column(s)
-    # TODO what if contest_type (BallotMeasure or Candidate) has source 'other'?
-    if not ids:
-        for t,r in mu.cdf_elements[mu.cdf_elements.source == 'other'].iterrows():
-            # add column for element id
-            # TODO allow record to be passed as a parameter
-            idx, db_record, enum_d, fk_d = ui.pick_or_create_record(session,project_root,t)
-            working = add_constant_column(working,f'{t}_Id',idx)
-    else:
-        working = add_constant_column(working,'Election_Id',ids[1])
-        working = add_constant_column(working,'_datafile_Id',ids[0])
+    working = add_constant_column(working,'Election_Id',ids[1])
+    working = add_constant_column(working,'_datafile_Id',ids[0])
 
     working, err = munge_and_melt(mu,working,count_cols,err)
 
@@ -468,7 +460,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,err,ids=Non
     working = working_temp
 
     # get ids for remaining info sourced from rows and columns
-    element_list = [t for t in mu.cdf_elements[mu.cdf_elements.source != 'other'].index if
+    element_list = [t for t in mu.cdf_elements.index if
                     (t[-7:] != 'Contest' and t[-9:] != 'Selection')]
     for t in element_list:
         # capture id from db in new column and erase any now-redundant cols
@@ -480,7 +472,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,err,ids=Non
             drop = True
         else:
             drop = False
-        # TODO add error handling
+        # FIXME add error handling
         working = replace_raw_with_internal_ids(working,juris,df,t,name_field,mu.path_to_munger_dir,drop_unmatched=drop)
         working.drop(t,axis=1,inplace=True)
         # working = add_non_id_cols_from_id(working,df,t)
@@ -500,18 +492,18 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,err,ids=Non
     working.drop('BallotMeasureSelection',axis=1,inplace=True)
 
     # append CandidateSelection_Id
-    #  First must load CandidateSelection table (not directly munged, not exactly a join either)
+    #  Load CandidateSelection table (not directly munged, not exactly a join either)
     #  Note left join, as not every record in working has a Candidate_Id
     # TODO maybe introduce Selection and Contest tables, have C an BM types refer to them?
 
-    c_df = pd.read_sql_table('Candidate',session.bind)
-    c_df.rename(columns={'Id':'Candidate_Id'},inplace=True)
+    c_df = working[['Candidate_Id','Party_Id']].drop_duplicates()
     cs_df, err = dbr.dframe_to_sql(c_df,session,'CandidateSelection',return_records='original')
-    # add CandidateSelection_Id column, merging on Candidate_Id
-
+    # add CandidateSelection_Id column, merging on Candidate_Id and Party_Id
     working = working.merge(
-        cs_df[['Candidate_Id','Id']],how='left',left_on='Candidate_Id',right_on='Candidate_Id')
+        cs_df[['Party_Id','Candidate_Id','Id']],how='left',
+        left_on=['Candidate_Id','Party_Id'],right_on=['Candidate_Id','Party_Id'])
     working.rename(columns={'Id':'CandidateSelection_Id'},inplace=True)
+
     # drop records with a CC_Id but no CS_Id (i.e., keep if CC_Id is null or CS_Id is not null)
     working = working[(working['CandidateContest_Id'].isnull()) | (working['CandidateSelection_Id']).notnull()]
     # TODO: warn user if contest is munged but candidates are not

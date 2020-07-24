@@ -1,641 +1,641 @@
-BallotName	Party
-Andrew T. Heath	North Carolina Republican Party
-John S. Arrowood	North Carolina Democratic Party
-Jefferson G. Griffin	North Carolina Republican Party
-Sandra Alice Ray	North Carolina Republican Party
-Tobias (Toby) Hampson	North Carolina Democratic Party
-"Michael Monaco, Sr."	North Carolina Libertarian Party
-Allegra Katherine Collins	North Carolina Democratic Party
-Chuck Kitchen	North Carolina Republican Party
-Robert Parks Trivette	North Carolina Democratic Party
-Eula E. Reid	North Carolina Democratic Party
-Meader Harriss	North Carolina Republican Party
-"Darrell B. Cayton, Jr."	North Carolina Democratic Party
-Sarah A. Homes	North Carolina Republican Party
-Regina R. Parker	North Carolina Democratic Party
-Daniel Hines Entzminger	North Carolina Republican Party
-Jarrette Pittman	North Carolina Democratic Party
-Mario E. Perez	North Carolina Democratic Party
-Lee Teague	North Carolina Republican Party
-Paul A. Hardison	North Carolina Democratic Party
-Sarah C. Seaton	North Carolina Republican Party
-Lindsey L. McKee	North Carolina Republican Party
-James H. Faison III	North Carolina Democratic Party
-Melinda H. Crouch	North Carolina Democratic Party
-Chad E. Hogston	North Carolina Republican Party
-Pell Cooper	North Carolina Democratic Party
-Wayne S. Boyette	North Carolina Democratic Party
-Beth Heath	North Carolina Democratic Party
-Ben Hunter	North Carolina Democratic Party
-"Michael W. Putney, Jr."	North Carolina Democratic Party
-Michael J. Denning	North Carolina Republican Party
-Craig Croom	North Carolina Democratic Party
-Margaret Phillips Eagles	North Carolina Democratic Party
-Evan Charles Schreier	North Carolina Republican Party
-J. Brian Ratledge	North Carolina Republican Party
-Nicolette Fulton	North Carolina Unaffiliated Voter
-Rebecca Anne Edwards	North Carolina Democratic Party
-Walter Rand	North Carolina Democratic Party
-Ned W. Mangum	North Carolina Republican Party
-Ms. Sam Hamadani	North Carolina Democratic Party
-Louis Meyer	North Carolina Democratic Party
-Kris D. Bailey	North Carolina Republican Party
-Joy Jones	North Carolina Republican Party
-Addie Rawls	North Carolina Democratic Party
-Caron Stewart	North Carolina Republican Party
-Toni S. King	North Carolina Democratic Party
-Robert J. Stiehl III	North Carolina Democratic Party
-David H. Hasty	North Carolina Democratic Party
-Stephen Craig Stokes	North Carolina Democratic Party
-Cheri Siler-Mack	North Carolina Democratic Party
-April Smith	North Carolina Democratic Party
-Caitlin Evans	North Carolina Democratic Party
-Tal Baggett	North Carolina Democratic Party
-W. Fred Gore	North Carolina Republican Party
-William F. Fairley	North Carolina Republican Party
-Dave Hall	North Carolina Democratic Party
-"Fred Battaglia, Jr."	North Carolina Democratic Party
-Doretta L. Walker	North Carolina Democratic Party
-Pat Evans	North Carolina Democratic Party
-Brian C. Wilks	North Carolina Democratic Party
-Clayton Jones	North Carolina Democratic Party
-James T. (Jim) Hill	North Carolina Republican Party
-Amanda Maris	North Carolina Democratic Party
-Brad Allen	North Carolina Democratic Party
-Joseph Moody (Joe) Buckner	North Carolina Democratic Party
-Chris Rhue	North Carolina Democratic Party
-Chevonne Wallace	North Carolina Democratic Party
-Brooke Locklear Clark	North Carolina Democratic Party
-"Jack Moody, Jr."	North Carolina Republican Party
-Vanessa Burton	North Carolina Democratic Party
-Angelica Chavis McIntyre	North Carolina Democratic Party
-Dale Deese	North Carolina Unaffiliated Voter
-Chris Freeman	North Carolina Republican Party
-Christine Fields Strader	North Carolina Republican Party
-Erica Standfield Brandon	North Carolina Democratic Party
-Gabriel E. (Gabe) Zeller	North Carolina Unaffiliated Voter
-Mike Gentry	North Carolina Republican Party
-"Spencer G. Key, Jr."	North Carolina Republican Party
-Gretchen Hollar Kirkman	North Carolina Republican Party
-Tom Langan	North Carolina Republican Party
-Marion M. Boone	North Carolina Republican Party
-"H. Thomas (Tom) Jarrell, Jr."	North Carolina Democratic Party
-Jonathan G. (Jon) Kreider	North Carolina Republican Party
-Larry L. Archie	North Carolina Democratic Party
-Christy E. Wilhelm	North Carolina Republican Party
-James (Jim) DeMay	North Carolina Republican Party
-Juanita Boger-Allen	North Carolina Democratic Party
-Michael G. Knox	North Carolina Republican Party
-Darrin M. Gamradt	North Carolina Republican Party
-Steve Grossman	North Carolina Republican Party
-Brent Cloninger	North Carolina Republican Party
-Andrew W. Davis	North Carolina Republican Party
-J. Brooke Schmidly	North Carolina Democratic Party
-Sarah Neely Lanier	North Carolina Republican Party
-Lee Gavin	North Carolina Republican Party
-Scott Etheridge	North Carolina Republican Party
-Kevin Eddinger	North Carolina Unaffiliated Voter
-Beth Dixon	North Carolina Republican Party
-Charlie Brown	North Carolina Unaffiliated Voter
-James Randolph	North Carolina Republican Party
-Warren McSweeney	North Carolina Republican Party
-Brian Godfrey	North Carolina Republican Party
-Regina M. Joe	North Carolina Democratic Party
-Steve Bibey	North Carolina Republican Party
-William C. (Bill) Tucker	North Carolina Republican Party
-John R. Nance	North Carolina Republican Party
-Beverly Routh Spencer	North Carolina Republican Party
-Thai Vang	North Carolina Republican Party
-Denise S. Hartsfield	North Carolina Democratic Party
-Lisa V. Menefee	North Carolina Democratic Party
-Theodore (Ted) Kazakos	North Carolina Republican Party
-George A. Bedsworth	North Carolina Democratic Party
-Brantley Ostwalt	North Carolina Republican Party
-Carole A. Hicks	North Carolina Republican Party
-"Daryl G. Davidson, Sr."	North Carolina Unaffiliated Voter
-Rob Young	North Carolina Republican Party
-W. Carey Parker	North Carolina Democratic Party
-April C. Crowson	North Carolina Republican Party
-Mary F. Covington	North Carolina Republican Party
-Wayne L. Michael	North Carolina Republican Party
-Carlton Terry	North Carolina Republican Party
-April C. Wood	North Carolina Republican Party
-Roy McDonald	North Carolina Republican Party
-Jimmy Laird Myers	North Carolina Republican Party
-Carlos Jane'	North Carolina Republican Party
-Shelby S. Chase	North Carolina Republican Party
-Robert (Rob) Crumpton	North Carolina Republican Party
-William (Bill) Brooks	North Carolina Republican Party
-David V. Byrd	North Carolina Republican Party
-Larry Leake	North Carolina Democratic Party
-David W. Aycock	North Carolina Republican Party
-Wes W. Barkley	North Carolina Republican Party
-Sherri Wilson Elliott	North Carolina Republican Party
-"Robert A. Mullinax, Jr."	North Carolina Republican Party
-Amy Sigmon Walker	North Carolina Republican Party
-Scott M. Cranford	North Carolina Democratic Party
-Clifton H. Smith	North Carolina Republican Party
-Mark L. Killian	North Carolina Republican Party
-Alicia D. Brooks	North Carolina Democratic Party
-Michael J. Stading	North Carolina Republican Party
-"Donald Cureton, Jr."	North Carolina Democratic Party
-Paulina N. Havelka	North Carolina Republican Party
-Sabrina Blain	North Carolina Democratic Party
-Sean Smith	North Carolina Republican Party
-Matt Osman	North Carolina Republican Party
-Paige McThenia	North Carolina Democratic Party
-Regan A. Miller	North Carolina Democratic Party
-Tracy Hanna Hewett	North Carolina Democratic Party
-Karen D. McCallum	North Carolina Democratic Party
-Khalif Rhodes	North Carolina Democratic Party
-Rickye McKoy-Mitchell	North Carolina Democratic Party
-Craig Collins	North Carolina Republican Party
-Michael K. Lands	North Carolina Republican Party
-"Ali Paksoy, Jr."	North Carolina Democratic Party
-Micah J. Sanderson	North Carolina Republican Party
-Ward D. Scott	North Carolina Democratic Party
-Julie M. Kepple	North Carolina Democratic Party
-Patricia Kaufmann Young	North Carolina Democratic Party
-Susan (Smitty) Dotson-Smith	North Carolina Democratic Party
-Ed Clontz	North Carolina Democratic Party
-Robert K. Martelle	North Carolina Republican Party
-Corey J. MacKinnon	North Carolina Republican Party
-Randy Pool	North Carolina Republican Party
-Laura Anne Powell	North Carolina Republican Party
-Donna Forga	North Carolina Republican Party
-Kristina L. Earwood	North Carolina Republican Party
-Leo J. Phillips	North Carolina Republican Party
-Roy Wijewickrama	North Carolina Democratic Party
-Edward C. Goodwin	North Carolina Republican Party
-Ronald (Ron) Wesson	North Carolina Democratic Party
-Darryl D. Moss	North Carolina Democratic Party
-Larry Yarborough	North Carolina Republican Party
-Barbara Lee	North Carolina Democratic Party
-Michael Speciale	North Carolina Republican Party
-T. Lee Horne III	North Carolina Libertarian Party
-Da'Quan Marcell Love	North Carolina Democratic Party
-Jimmy Dixon	North Carolina Republican Party
-Kevin E. Hayes	North Carolina Constitution Party
-Howard J. Hunter III	North Carolina Democratic Party
-Phillip Smith	North Carolina Republican Party
-Bobby Hanig	North Carolina Republican Party
-Tess Judge	North Carolina Democratic Party
-Bobbie Richardson	North Carolina Democratic Party
-Lisa Stone Barnes	North Carolina Republican Party
-Brenda Letchworth Smith	North Carolina Republican Party
-Kandie D. Smith	North Carolina Democratic Party
-Greg Murphy	North Carolina Republican Party
-Kris Rixon	North Carolina Democratic Party
-John Bell	North Carolina Republican Party
-Tracy Blackmon	North Carolina Democratic Party
-Allison Dahle	North Carolina Democratic Party
-Travis Groo	North Carolina Libertarian Party
-Tyler Brooks	North Carolina Republican Party
-Chris Humphrey	North Carolina Republican Party
-George Graham	North Carolina Democratic Party
-Patricia (Pat) McElraft	North Carolina Republican Party
-Pene diMaio	North Carolina Unaffiliated Voter
-George G. Cleveland	North Carolina Republican Party
-Isaiah (Ike) Johnson	North Carolina Democratic Party
-Dan Whitten	North Carolina Democratic Party
-Phillip Shepard	North Carolina Republican Party
-Carson Smith	North Carolina Republican Party
-John Johnson	North Carolina Democratic Party
-Frank Iler	North Carolina Republican Party
-Tom Simmons	North Carolina Democratic Party
-Deb Butler	North Carolina Democratic Party
-Joseph D. Sharp	North Carolina Libertarian Party
-Louis Harmati	North Carolina Republican Party
-David Perry	North Carolina Libertarian Party
-Marcia Morgan	North Carolina Democratic Party
-"Ted Davis, Jr."	North Carolina Republican Party
-Holly Grange	North Carolina Republican Party
-Leslie Cohen	North Carolina Democratic Party
-Raymond Smith	North Carolina Democratic Party
-Robert E. Freeman	North Carolina Republican Party
-Martin (Tony) Denning	North Carolina Democratic Party
-William Brisson	North Carolina Republican Party
-Claiborne Holtzman	North Carolina Republican Party
-Shelly Willingham	North Carolina Democratic Party
-Jean Farmer Butterfield	North Carolina Democratic Party
-Ken Fontenot	North Carolina Unaffiliated Voter
-James D. Gailliard	North Carolina Democratic Party
-John M. Check	North Carolina Republican Party
-Nick Taylor	North Carolina Libertarian Party
-Donna McDowell White	North Carolina Republican Party
-Linda Bennett	North Carolina Democratic Party
-Michael H. Wray	North Carolina Democratic Party
-Raymond (Ray) Dyer	North Carolina Republican Party
-Jimmie M. Massengill	North Carolina Democratic Party
-Larry C. Strickland	North Carolina Republican Party
-Walt Rabon	North Carolina Libertarian Party
-Charles Becker	North Carolina Republican Party
-MaryAnn E. Black	North Carolina Democratic Party
-"B. Angelo Burch, Sr."	North Carolina Republican Party
-Marcia Morey	North Carolina Democratic Party
-Matthew Wagoner	North Carolina Libertarian Party
-Erik Raudsep	North Carolina Libertarian Party
-Torian Webson	North Carolina Republican Party
-Zack Forde-Hawkins	North Carolina Democratic Party
-Robert Shingler	North Carolina Republican Party
-Terry Garrison	North Carolina Democratic Party
-Anne Murtha	North Carolina Republican Party
-Rosa U. Gill	North Carolina Democratic Party
-Cap Hayes	North Carolina Libertarian Party
-Catherine Whiteford	North Carolina Republican Party
-Grier Martin	North Carolina Democratic Party
-Michael Nelson	North Carolina Libertarian Party
-Terence Everitt	North Carolina Democratic Party
-Chris Malone	North Carolina Republican Party
-Julie von Haefen	North Carolina Democratic Party
-Nelson Dollar	North Carolina Republican Party
-Robyn Haley Pegram	North Carolina Libertarian Party
-Guy Meilleur	North Carolina Libertarian Party
-John B. Adcock	North Carolina Republican Party
-Mrs. Sydney Batch	North Carolina Democratic Party
-Ken Bagnal	North Carolina Republican Party
-Yvonne Lewis Holley	North Carolina Democratic Party
-Bobby Yates Emory	North Carolina Libertarian Party
-Darren Jackson	North Carolina Democratic Party
-Martin Matuszewski	North Carolina Libertarian Party
-Rhonda Allen	North Carolina Republican Party
-David Ulmer	North Carolina Libertarian Party
-Joe John	North Carolina Democratic Party
-Marilyn Avila	North Carolina Republican Party
-Emmanuel Wilder	North Carolina Republican Party
-Gale Adcock	North Carolina Democratic Party
-Ed Williams	North Carolina Republican Party
-Mark A. Crowe	North Carolina Constitution Party
-Marvin W. Lucas	North Carolina Democratic Party
-Elmer Floyd	North Carolina Democratic Party
-John Czajkowski	North Carolina Republican Party
-Billy Richardson	North Carolina Democratic Party
-Linda Devore	North Carolina Republican Party
-Albeiro (Al) Florez	North Carolina Democratic Party
-John Szoka	North Carolina Republican Party
-Barbara S. Yates-Lockamy	North Carolina Democratic Party
-Brenden H. Jones	North Carolina Republican Party
-Jarrod Lowery	North Carolina Republican Party
-Charles Graham	North Carolina Democratic Party
-Garland E. Pierce	North Carolina Democratic Party
-Russell Walker	North Carolina Republican Party
-Cynthia Ball	North Carolina Democratic Party
-David Robertson	North Carolina Republican Party
-Jonathan Horst	North Carolina Libertarian Party
-Graig R. Meyer	North Carolina Democratic Party
-Kenneth Price Rothrock	North Carolina Republican Party
-John Sauls	North Carolina Republican Party
-Lisa D. Mathis	North Carolina Democratic Party
-Jamie Boles	North Carolina Republican Party
-Lowell Simon	North Carolina Democratic Party
-David Lewis	North Carolina Republican Party
-Richard Chapman	North Carolina Democratic Party
-Jay Stobbs	North Carolina Republican Party
-Robert T. Reives II	North Carolina Democratic Party
-Frank Deese	North Carolina Democratic Party
-Mark Brody	North Carolina Republican Party
-Marcus Cooke	North Carolina Republican Party
-Matthew P. Clements	North Carolina Libertarian Party
-Verla C. Insko	North Carolina Democratic Party
-Ashton Clemmons	North Carolina Democratic Party
-Troy Lawson	North Carolina Republican Party
-Amos Quick	North Carolina Democratic Party
-Peter Boykin	North Carolina Republican Party
-Steven A. Buccini	North Carolina Democratic Party
-Jon Hardister	North Carolina Republican Party
-Cecil Brockman	North Carolina Democratic Party
-Kurt Collins	North Carolina Republican Party
-Alissa Batts	North Carolina Republican Party
-Mary Price (Pricey) Harrison	North Carolina Democratic Party
-John Faircloth	North Carolina Republican Party
-Martha R. Shafer	North Carolina Democratic Party
-Erica McAdoo	North Carolina Democratic Party
-Stephen Ross	North Carolina Republican Party
-Dennis Riddell	North Carolina Republican Party
-Elliott Lynch	North Carolina Democratic Party
-Houston Barrow	North Carolina Libertarian Party
-Jerry Carter	North Carolina Republican Party
-Michael H. (Mike) Lee	North Carolina Democratic Party
-Joey Davis	North Carolina Republican Party
-Justin Miller	North Carolina Green Party
-Ken Goodman	North Carolina Democratic Party
-Karen Webster	North Carolina Democratic Party
-Michael Finn	North Carolina Libertarian Party
-Wayne Sasser	North Carolina Republican Party
-Craig Horn	North Carolina Republican Party
-Rick Foulke	North Carolina Democratic Party
-Dean Arp	North Carolina Republican Party
-Jennifer Benson	North Carolina Democratic Party
-Mary Rulli	North Carolina Democratic Party
-Pat B. Hurley	North Carolina Republican Party
-Scott Arnold	North Carolina Republican Party
-Evelyn Terry	North Carolina Democratic Party
-Derwin L. Montgomery	North Carolina Democratic Party
-Reginald Reid	North Carolina Republican Party
-Lee Zachary	North Carolina Republican Party
-William Stinson	North Carolina Democratic Party
-Debra Conrad	North Carolina Republican Party
-Terri Elizabeth LeGrand	North Carolina Democratic Party
-Dan Besse	North Carolina Democratic Party
-Donny C. Lambeth	North Carolina Republican Party
-Harry Warren	North Carolina Republican Party
-Joe Fowler	North Carolina Democratic Party
-Bonnie Dawn Clark	North Carolina Democratic Party
-Julia Craven Howard	North Carolina Republican Party
-Allen Ray McNeill	North Carolina Republican Party
-Jim Meredith	North Carolina Democratic Party
-Jerry E. Langley	North Carolina Democratic Party
-Keith Kidwell	North Carolina Republican Party
-Steve Jarvis	North Carolina Republican Party
-Wendy B. Sellars	North Carolina Democratic Party
-Larry W. Potts	North Carolina Republican Party
-Lewie Phillips	North Carolina Democratic Party
-Aimy Steele	North Carolina Democratic Party
-Linda P. Johnson	North Carolina Republican Party
-Gail Young	North Carolina Democratic Party
-Larry G. Pittman	North Carolina Republican Party
-Allen R. Edwards	North Carolina Democratic Party
-Rena W. Turner	North Carolina Republican Party
-Howard Larsen	North Carolina Democratic Party
-Josh Dobson	North Carolina Republican Party
-Hugh Blackwell	North Carolina Republican Party
-Tim Barnsback	North Carolina Democratic Party
-Amanda Bregel	North Carolina Democratic Party
-Destin Hall	North Carolina Republican Party
-Mary G. Belk	North Carolina Democratic Party
-Ty Turner	North Carolina Republican Party
-Greg Cranford	North Carolina Democratic Party
-Mitchell Smith Setzer	North Carolina Republican Party
-Allen Poindexter	North Carolina Constitution Party
-John Worth Wiles	North Carolina Democratic Party
-Sarah Stevens	North Carolina Republican Party
-Kyle Hall	North Carolina Republican Party
-Michael Booth	North Carolina Democratic Party
-Steve Brenneis	North Carolina Libertarian Party
-Chaz Beasley	North Carolina Democratic Party
-Debbie Ware	North Carolina Republican Party
-Jonathan C. Jordan	North Carolina Republican Party
-Ray Russell	North Carolina Democratic Party
-Dianne Little	North Carolina Democratic Party
-Jeffrey Elmore	North Carolina Republican Party
-Carla Fassbender	North Carolina Democratic Party
-John A. Fraley	North Carolina Republican Party
-Jay Adams	North Carolina Republican Party
-Kim Bost	North Carolina Democratic Party
-Jason R. Saine	North Carolina Republican Party
-Natalie Robertson	North Carolina Democratic Party
-Christy Clark	North Carolina Democratic Party
-John R. Bradford III	North Carolina Republican Party
-Joshua Niday	North Carolina Republican Party
-Nasif Majeed	North Carolina Democratic Party
-John Autry	North Carolina Democratic Party
-Nancy Campbell	North Carolina Republican Party
-Carolyn Logan	North Carolina Democratic Party
-Steve Mauney	North Carolina Republican Party
-Becky Carney	North Carolina Democratic Party
-Tyler Norris	North Carolina Republican Party
-Bill Brawley	North Carolina Republican Party
-Rachel Hunt	North Carolina Democratic Party
-Andy Dulin	North Carolina Republican Party
-Brandon Lofton	North Carolina Democratic Party
-Scott Stone	North Carolina Republican Party
-Wesley Harris	North Carolina Democratic Party
-Carla Cunningham	North Carolina Democratic Party
-Geovani Opry Sherow	North Carolina Republican Party
-Kelly Alexander	North Carolina Democratic Party
-John A. Torbett	North Carolina Republican Party
-Robert Kellogg	North Carolina Democratic Party
-Dana Bumgardner	North Carolina Republican Party
-Jennie Stultz (Write-In)	North Carolina Constitution Party
-Susan Maxon	North Carolina Democratic Party
-Write-In (Miscellaneous)	North Carolina Constitution Party
-Christy McCleary	North Carolina Democratic Party
-Kelly E. Hastings	North Carolina Republican Party
-David C. Brinkley	North Carolina Democratic Party
-Tim Moore	North Carolina Republican Party
-David Rogers	North Carolina Republican Party
-Gregory James Gallagher	North Carolina Democratic Party
-Cody Henson	North Carolina Republican Party
-Sam Edney	North Carolina Democratic Party
-Kris A. Lindstam	North Carolina Republican Party
-Susan C. Fisher	North Carolina Democratic Party
-Amy Evans	North Carolina Republican Party
-John Ager	North Carolina Democratic Party
-Brian Turner	North Carolina Democratic Party
-Marilyn A. Brown	North Carolina Republican Party
-Chuck McGrady	North Carolina Republican Party
-Gayle Kemp	North Carolina Democratic Party
-Michele D. Presnell	North Carolina Republican Party
-Rhonda Cole Schandevel	North Carolina Democratic Party
-Joe Sam Queen	North Carolina Democratic Party
-Mike Clampitt	North Carolina Republican Party
-Aaron Martin	North Carolina Democratic Party
-Kevin Corbin	North Carolina Republican Party
-Bob Steinburg	North Carolina Republican Party
-D. Cole Phelps	North Carolina Democratic Party
-Ginger Garner	North Carolina Democratic Party
-Norman Sanderson	North Carolina Republican Party
-Tim Harris	North Carolina Libertarian Party
-"C. (Chuck) Earley, Jr."	North Carolina Republican Party
-Erica D. Smith	North Carolina Democratic Party
-Jesse Shearin	North Carolina Libertarian Party
-"Milton F. (Toby) Fitch, Jr."	North Carolina Democratic Party
-Richard Scott	North Carolina Republican Party
-Don Davis	North Carolina Democratic Party
-Kimberly Robb	North Carolina Republican Party
-Harry Brown	North Carolina Republican Party
-Joseph (Joe) Webb	North Carolina Democratic Party
-David B. Brantley	North Carolina Democratic Party
-"Louis Milford Pate, Jr."	North Carolina Republican Party
-Anthony H. Mascolo	North Carolina Libertarian Party
-Bill Rabon	North Carolina Republican Party
-"David W. Sink, Jr."	North Carolina Democratic Party
-Michael Lee	North Carolina Republican Party
-Ethan Bickley	North Carolina Libertarian Party
-Harper Peterson	North Carolina Democratic Party
-Brent Jackson	North Carolina Republican Party
-Vernon R. Moore	North Carolina Democratic Party
-Albert R. Pacer	North Carolina Democratic Party
-Rick Horner	North Carolina Republican Party
-Jean Sivoli	North Carolina Democratic Party
-Jim Burgin	North Carolina Republican Party
-"Danny Earl Britt, Jr."	North Carolina Republican Party
-John Campbell	North Carolina Democratic Party
-Dan Blue	North Carolina Democratic Party
-Richard Haygood	North Carolina Libertarian Party
-Sandy Andrews	North Carolina Republican Party
-Jay J. Chaudhuri	North Carolina Democratic Party
-Alan David Michael	North Carolina Republican Party
-Brian Lewis	North Carolina Libertarian Party
-Brian Irving	North Carolina Libertarian Party
-Paul Smith	North Carolina Republican Party
-Wiley Nickel	North Carolina Democratic Party
-Tamara Barringer	North Carolina Republican Party
-Bruce Basson	North Carolina Libertarian Party
-Sam Searcy	North Carolina Democratic Party
-Brad Hessel	North Carolina Libertarian Party
-John Alexander	North Carolina Republican Party
-Mack Paul	North Carolina Democratic Party
-Kirk DeViere	North Carolina Democratic Party
-Wesley Meredith	North Carolina Republican Party
-"Floyd B. McKissick, Jr."	North Carolina Democratic Party
-Jared Erickson	North Carolina Libertarian Party
-Tom Stark	North Carolina Republican Party
-Ben Clark	North Carolina Democratic Party
-Timothy Leever	North Carolina Republican Party
-Mike Woodard	North Carolina Democratic Party
-Ray Ubinger	North Carolina Libertarian Party
-Rickey (Rick) Padgett	North Carolina Republican Party
-Tom Glendinning	North Carolina Republican Party
-Valerie P. Foushee	North Carolina Democratic Party
-J. D. Wooten	North Carolina Democratic Party
-Rick Gunn	North Carolina Republican Party
-Helen Probst Mills	North Carolina Democratic Party
-Tom McInnis	North Carolina Republican Party
-Jerry W. Tillman	North Carolina Republican Party
-William (Bill) McCaskill	North Carolina Democratic Party
-Michael Garrett	North Carolina Democratic Party
-Trudy Wade	North Carolina Republican Party
-Clark Porter	North Carolina Republican Party
-Gladys Robinson	North Carolina Democratic Party
-Cheraton Love	North Carolina Democratic Party
-Eddie Gallimore	North Carolina Republican Party
-Jen Mangrum	North Carolina Democratic Party
-Philip E. (Phil) Berger	North Carolina Republican Party
-R. Michael Jordan	North Carolina Libertarian Party
-"John Motsinger, Jr."	North Carolina Democratic Party
-Joyce Krawiec	North Carolina Republican Party
-Eric Henderson	North Carolina Republican Party
-"Paul Lowe, Jr."	North Carolina Democratic Party
-Carl Ford	North Carolina Republican Party
-Arin Wilhelm	North Carolina Democratic Party
-Beniah McMiller	North Carolina Democratic Party
-Vickie Sawyer	North Carolina Republican Party
-Caroline L. Walker	North Carolina Democratic Party
-Todd Johnson	North Carolina Republican Party
-Mark E. Shelley	North Carolina Democratic Party
-Paul R. Newton	North Carolina Republican Party
-Jeff Jackson	North Carolina Democratic Party
-Nora Trotman	North Carolina Republican Party
-Stuart Andrew Collins	North Carolina Constitution Party
-Mujtaba A. Mohammed	North Carolina Democratic Party
-Richard Rivette	North Carolina Republican Party
-Dan Bishop	North Carolina Republican Party
-Chad Stachowicz	North Carolina Democratic Party
-Joyce Waddell	North Carolina Democratic Party
-Mr. Bobbie Shields	North Carolina Republican Party
-Jeff Tarte	North Carolina Republican Party
-Natasha Marcus	North Carolina Democratic Party
-Andy Wells	North Carolina Republican Party
-Ric Vandett	North Carolina Democratic Party
-Altriese Price	North Carolina Democratic Party
-Kathy Harrington	North Carolina Republican Party
-Mitchell D. Bridges	North Carolina Libertarian Party
-David Lee Lattimore	North Carolina Democratic Party
-Ted Alexander	North Carolina Republican Party
-Deanna Ballard	North Carolina Republican Party
-Wes Luther	North Carolina Democratic Party
-Warren Daniel	North Carolina Republican Party
-Art Sherwood	North Carolina Democratic Party
-David Wheeler	North Carolina Democratic Party
-Ralph Hise	North Carolina Republican Party
-Chuck Edwards	North Carolina Republican Party
-Norm Bossert	North Carolina Democratic Party
-Terry Van Duyn	North Carolina Democratic Party
-Lyndon John Smith	North Carolina Libertarian Party
-Mark Crawford	North Carolina Republican Party
-Bobby Kuppers	North Carolina Democratic Party
-Jim Davis	North Carolina Republican Party
-J. C. Cole	North Carolina Democratic Party
-Jerry R. Tillett	North Carolina Republican Party
-"Wayland J. Sermons, Jr."	North Carolina Democratic Party
-Paul M. Quinn	North Carolina Republican Party
-John Nobles	North Carolina Republican Party
-"Albert D. Kirby, Jr."	North Carolina Democratic Party
-Henry L. Stevens IV	North Carolina Republican Party
-G. Frank Jones	North Carolina Republican Party
-Tripp Watson	North Carolina Republican Party
-Quentin T. Sumner	North Carolina Democratic Party
-Lamont Wiggins	North Carolina Democratic Party
-"Walter H. Godwin, Jr."	North Carolina Democratic Party
-John Dunlow	North Carolina Republican Party
-Lawrence Tickle	North Carolina Democratic Party
-Paul Ross	North Carolina Democratic Party
-Steven E. Hight	North Carolina Democratic Party
-Carolyn J. Thompson	North Carolina Democratic Party
-Cindy Sturges	North Carolina Republican Party
-Mitchell Styers	North Carolina Democratic Party
-"Vince Rozier, Jr."	North Carolina Democratic Party
-Keith Gregory	North Carolina Democratic Party
-Matt Van Sickle	North Carolina Unaffiliated Voter
-Claire V. Hill	North Carolina Democratic Party
-"James (Jim) Floyd Ammons, Jr."	North Carolina Unaffiliated Voter
-Mary Ann Tally	North Carolina Democratic Party
-Ola M. Lewis	North Carolina Republican Party
-"James E. (Jim) Hardin, Jr."	North Carolina Democratic Party
-Michael O'Foghludha	North Carolina Democratic Party
-Dawn Baxton	North Carolina Democratic Party
-Josephine Kerr Davis	North Carolina Democratic Party
-Tom Lambeth	North Carolina Democratic Party
-Andy Hanford	North Carolina Democratic Party
-Pat Nadolski	North Carolina Republican Party
-Mark T. Cummings	North Carolina Democratic Party
-Lora Christine Cubbage	North Carolina Democratic Party
-Joe Craig	North Carolina Unaffiliated Voter
-Gavin Reardon	North Carolina Democratic Party
-William A. (Bill) Wood	North Carolina Democratic Party
-James P. (Jimmy) Hill	North Carolina Republican Party
-Anna Mills Wagoner	North Carolina Republican Party
-Gregory B. Thompson	North Carolina Democratic Party
-Michael (Mike) Stone	North Carolina Republican Party
-Chris Bragg	North Carolina Republican Party
-Gary Gavenus	North Carolina Republican Party
-Robert C. (Bob) Ervin	North Carolina Democratic Party
-Nathaniel (Nathan) J. Poovey	North Carolina Republican Party
-Reggie E. McKnight	North Carolina Democratic Party
-George Bell	North Carolina Republican Party
-Howard L. Clark III	North Carolina Democratic Party
-Donnie Hoover	North Carolina Democratic Party
-Karen Eady-Williams	North Carolina Democratic Party
-Lou Trosch	North Carolina Democratic Party
-David A. Phillips	North Carolina Democratic Party
-Forrest Donald Bridges	North Carolina Democratic Party
-Marvin P. Pope	North Carolina Democratic Party
-Alan Thornburg	North Carolina Democratic Party
-Bradley B. Letts	North Carolina Democratic Party
-Mark Melrose	North Carolina Democratic Party
-Anita Earls	North Carolina Democratic Party
-Barbara Jackson	North Carolina Republican Party
-Christopher (Chris) Anglin	North Carolina Republican Party
-G. K. Butterfield	North Carolina Democratic Party
-Roger W. Allison	North Carolina Republican Party
-George Holding	North Carolina Republican Party
-Jeff Matemu	North Carolina Libertarian Party
-Linda Coleman	North Carolina Democratic Party
-Walter B. Jones	North Carolina Republican Party
-Barbara Howe	North Carolina Libertarian Party
-David Price	North Carolina Democratic Party
-Steve A. (Von) Loor	North Carolina Republican Party
-DD Adams	North Carolina Democratic Party
-Virginia Foxx	North Carolina Republican Party
-B. Mark Walker	North Carolina Republican Party
-Ryan Watts	North Carolina Democratic Party
-David W. Fallin	North Carolina Constitution Party
-Kyle Horton	North Carolina Democratic Party
-David Rouzer	North Carolina Republican Party
-Frank McNeill	North Carolina Democratic Party
-Richard Hudson	North Carolina Republican Party
-Dan McCready	North Carolina Democratic Party
-Jeff Scott	North Carolina Libertarian Party
-Mark Harris	North Carolina Republican Party
-David Wilson Brown	North Carolina Democratic Party
-Patrick McHenry	North Carolina Republican Party
-"Clifton B. Ingram, Jr."	North Carolina Libertarian Party
-Mark Meadows	North Carolina Republican Party
-Phillip G. Price	North Carolina Democratic Party
-Alma Adams	North Carolina Democratic Party
-Paul Wright	North Carolina Republican Party
-Kathy Manning	North Carolina Democratic Party
-Robert Corriher	North Carolina Green Party
-Ted Budd	North Carolina Republican Party
-Tom Bailey	North Carolina Libertarian Party
+BallotName
+Andrew T. Heath
+John S. Arrowood
+Jefferson G. Griffin
+Sandra Alice Ray
+Tobias (Toby) Hampson
+Michael Monaco, Sr.
+Allegra Katherine Collins
+Chuck Kitchen
+Robert Parks Trivette
+Eula E. Reid
+Meader Harriss
+Darrell B. Cayton, Jr.
+Sarah A. Homes
+Regina R. Parker
+Daniel Hines Entzminger
+Jarrette Pittman
+Mario E. Perez
+Lee Teague
+Paul A. Hardison
+Sarah C. Seaton
+Lindsey L. McKee
+James H. Faison III
+Melinda H. Crouch
+Chad E. Hogston
+Pell Cooper
+Wayne S. Boyette
+Beth Heath
+Ben Hunter
+Michael W. Putney, Jr.
+Michael J. Denning
+Craig Croom
+Margaret Phillips Eagles
+Evan Charles Schreier
+J. Brian Ratledge
+Nicolette Fulton
+Rebecca Anne Edwards
+Walter Rand
+Ned W. Mangum
+Ms. Sam Hamadani
+Louis Meyer
+Kris D. Bailey
+Joy Jones
+Addie Rawls
+Caron Stewart
+Toni S. King
+Robert J. Stiehl III
+David H. Hasty
+Stephen Craig Stokes
+Cheri Siler-Mack
+April Smith
+Caitlin Evans
+Tal Baggett
+W. Fred Gore
+William F. Fairley
+Dave Hall
+Fred Battaglia, Jr.
+Doretta L. Walker
+Pat Evans
+Brian C. Wilks
+Clayton Jones
+James T. (Jim) Hill
+Amanda Maris
+Brad Allen
+Joseph Moody (Joe) Buckner
+Chris Rhue
+Chevonne Wallace
+Brooke Locklear Clark
+Jack Moody, Jr.
+Vanessa Burton
+Angelica Chavis McIntyre
+Dale Deese
+Chris Freeman
+Christine Fields Strader
+Erica Standfield Brandon
+Gabriel E. (Gabe) Zeller
+Mike Gentry
+Spencer G. Key, Jr.
+Gretchen Hollar Kirkman
+Tom Langan
+Marion M. Boone
+H. Thomas (Tom) Jarrell, Jr.
+Jonathan G. (Jon) Kreider
+Larry L. Archie
+Christy E. Wilhelm
+James (Jim) DeMay
+Juanita Boger-Allen
+Michael G. Knox
+Darrin M. Gamradt
+Steve Grossman
+Brent Cloninger
+Andrew W. Davis
+J. Brooke Schmidly
+Sarah Neely Lanier
+Lee Gavin
+Scott Etheridge
+Kevin Eddinger
+Beth Dixon
+Charlie Brown
+James Randolph
+Warren McSweeney
+Brian Godfrey
+Regina M. Joe
+Steve Bibey
+William C. (Bill) Tucker
+John R. Nance
+Beverly Routh Spencer
+Thai Vang
+Denise S. Hartsfield
+Lisa V. Menefee
+Theodore (Ted) Kazakos
+George A. Bedsworth
+Brantley Ostwalt
+Carole A. Hicks
+Daryl G. Davidson, Sr.
+Rob Young
+W. Carey Parker
+April C. Crowson
+Mary F. Covington
+Wayne L. Michael
+Carlton Terry
+April C. Wood
+Roy McDonald
+Jimmy Laird Myers
+Carlos Jane'
+Shelby S. Chase
+Robert (Rob) Crumpton
+William (Bill) Brooks
+David V. Byrd
+Larry Leake
+David W. Aycock
+Wes W. Barkley
+Sherri Wilson Elliott
+Robert A. Mullinax, Jr.
+Amy Sigmon Walker
+Scott M. Cranford
+Clifton H. Smith
+Mark L. Killian
+Alicia D. Brooks
+Michael J. Stading
+Donald Cureton, Jr.
+Paulina N. Havelka
+Sabrina Blain
+Sean Smith
+Matt Osman
+Paige McThenia
+Regan A. Miller
+Tracy Hanna Hewett
+Karen D. McCallum
+Khalif Rhodes
+Rickye McKoy-Mitchell
+Craig Collins
+Michael K. Lands
+Ali Paksoy, Jr.
+Micah J. Sanderson
+Ward D. Scott
+Julie M. Kepple
+Patricia Kaufmann Young
+Susan (Smitty) Dotson-Smith
+Ed Clontz
+Robert K. Martelle
+Corey J. MacKinnon
+Randy Pool
+Laura Anne Powell
+Donna Forga
+Kristina L. Earwood
+Leo J. Phillips
+Roy Wijewickrama
+Edward C. Goodwin
+Ronald (Ron) Wesson
+Darryl D. Moss
+Larry Yarborough
+Barbara Lee
+Michael Speciale
+T. Lee Horne III
+Da'Quan Marcell Love
+Jimmy Dixon
+Kevin E. Hayes
+Howard J. Hunter III
+Phillip Smith
+Bobby Hanig
+Tess Judge
+Bobbie Richardson
+Lisa Stone Barnes
+Brenda Letchworth Smith
+Kandie D. Smith
+Greg Murphy
+Kris Rixon
+John Bell
+Tracy Blackmon
+Allison Dahle
+Travis Groo
+Tyler Brooks
+Chris Humphrey
+George Graham
+Patricia (Pat) McElraft
+Pene diMaio
+George G. Cleveland
+Isaiah (Ike) Johnson
+Dan Whitten
+Phillip Shepard
+Carson Smith
+John Johnson
+Frank Iler
+Tom Simmons
+Deb Butler
+Joseph D. Sharp
+Louis Harmati
+David Perry
+Marcia Morgan
+Ted Davis, Jr.
+Holly Grange
+Leslie Cohen
+Raymond Smith
+Robert E. Freeman
+Martin (Tony) Denning
+William Brisson
+Claiborne Holtzman
+Shelly Willingham
+Jean Farmer Butterfield
+Ken Fontenot
+James D. Gailliard
+John M. Check
+Nick Taylor
+Donna McDowell White
+Linda Bennett
+Michael H. Wray
+Raymond (Ray) Dyer
+Jimmie M. Massengill
+Larry C. Strickland
+Walt Rabon
+Charles Becker
+MaryAnn E. Black
+B. Angelo Burch, Sr.
+Marcia Morey
+Matthew Wagoner
+Erik Raudsep
+Torian Webson
+Zack Forde-Hawkins
+Robert Shingler
+Terry Garrison
+Anne Murtha
+Rosa U. Gill
+Cap Hayes
+Catherine Whiteford
+Grier Martin
+Michael Nelson
+Terence Everitt
+Chris Malone
+Julie von Haefen
+Nelson Dollar
+Robyn Haley Pegram
+Guy Meilleur
+John B. Adcock
+Mrs. Sydney Batch
+Ken Bagnal
+Yvonne Lewis Holley
+Bobby Yates Emory
+Darren Jackson
+Martin Matuszewski
+Rhonda Allen
+David Ulmer
+Joe John
+Marilyn Avila
+Emmanuel Wilder
+Gale Adcock
+Ed Williams
+Mark A. Crowe
+Marvin W. Lucas
+Elmer Floyd
+John Czajkowski
+Billy Richardson
+Linda Devore
+Albeiro (Al) Florez
+John Szoka
+Barbara S. Yates-Lockamy
+Brenden H. Jones
+Jarrod Lowery
+Charles Graham
+Garland E. Pierce
+Russell Walker
+Cynthia Ball
+David Robertson
+Jonathan Horst
+Graig R. Meyer
+Kenneth Price Rothrock
+John Sauls
+Lisa D. Mathis
+Jamie Boles
+Lowell Simon
+David Lewis
+Richard Chapman
+Jay Stobbs
+Robert T. Reives II
+Frank Deese
+Mark Brody
+Marcus Cooke
+Matthew P. Clements
+Verla C. Insko
+Ashton Clemmons
+Troy Lawson
+Amos Quick
+Peter Boykin
+Steven A. Buccini
+Jon Hardister
+Cecil Brockman
+Kurt Collins
+Alissa Batts
+Mary Price (Pricey) Harrison
+John Faircloth
+Martha R. Shafer
+Erica McAdoo
+Stephen Ross
+Dennis Riddell
+Elliott Lynch
+Houston Barrow
+Jerry Carter
+Michael H. (Mike) Lee
+Joey Davis
+Justin Miller
+Ken Goodman
+Karen Webster
+Michael Finn
+Wayne Sasser
+Craig Horn
+Rick Foulke
+Dean Arp
+Jennifer Benson
+Mary Rulli
+Pat B. Hurley
+Scott Arnold
+Evelyn Terry
+Derwin L. Montgomery
+Reginald Reid
+Lee Zachary
+William Stinson
+Debra Conrad
+Terri Elizabeth LeGrand
+Dan Besse
+Donny C. Lambeth
+Harry Warren
+Joe Fowler
+Bonnie Dawn Clark
+Julia Craven Howard
+Allen Ray McNeill
+Jim Meredith
+Jerry E. Langley
+Keith Kidwell
+Steve Jarvis
+Wendy B. Sellars
+Larry W. Potts
+Lewie Phillips
+Aimy Steele
+Linda P. Johnson
+Gail Young
+Larry G. Pittman
+Allen R. Edwards
+Rena W. Turner
+Howard Larsen
+Josh Dobson
+Hugh Blackwell
+Tim Barnsback
+Amanda Bregel
+Destin Hall
+Mary G. Belk
+Ty Turner
+Greg Cranford
+Mitchell Smith Setzer
+Allen Poindexter
+John Worth Wiles
+Sarah Stevens
+Kyle Hall
+Michael Booth
+Steve Brenneis
+Chaz Beasley
+Debbie Ware
+Jonathan C. Jordan
+Ray Russell
+Dianne Little
+Jeffrey Elmore
+Carla Fassbender
+John A. Fraley
+Jay Adams
+Kim Bost
+Jason R. Saine
+Natalie Robertson
+Christy Clark
+John R. Bradford III
+Joshua Niday
+Nasif Majeed
+John Autry
+Nancy Campbell
+Carolyn Logan
+Steve Mauney
+Becky Carney
+Tyler Norris
+Bill Brawley
+Rachel Hunt
+Andy Dulin
+Brandon Lofton
+Scott Stone
+Wesley Harris
+Carla Cunningham
+Geovani Opry Sherow
+Kelly Alexander
+John A. Torbett
+Robert Kellogg
+Dana Bumgardner
+Jennie Stultz (Write-In)
+Susan Maxon
+Write-In (Miscellaneous)
+Christy McCleary
+Kelly E. Hastings
+David C. Brinkley
+Tim Moore
+David Rogers
+Gregory James Gallagher
+Cody Henson
+Sam Edney
+Kris A. Lindstam
+Susan C. Fisher
+Amy Evans
+John Ager
+Brian Turner
+Marilyn A. Brown
+Chuck McGrady
+Gayle Kemp
+Michele D. Presnell
+Rhonda Cole Schandevel
+Joe Sam Queen
+Mike Clampitt
+Aaron Martin
+Kevin Corbin
+Bob Steinburg
+D. Cole Phelps
+Ginger Garner
+Norman Sanderson
+Tim Harris
+C. (Chuck) Earley, Jr.
+Erica D. Smith
+Jesse Shearin
+Milton F. (Toby) Fitch, Jr.
+Richard Scott
+Don Davis
+Kimberly Robb
+Harry Brown
+Joseph (Joe) Webb
+David B. Brantley
+Louis Milford Pate, Jr.
+Anthony H. Mascolo
+Bill Rabon
+David W. Sink, Jr.
+Michael Lee
+Ethan Bickley
+Harper Peterson
+Brent Jackson
+Vernon R. Moore
+Albert R. Pacer
+Rick Horner
+Jean Sivoli
+Jim Burgin
+Danny Earl Britt, Jr.
+John Campbell
+Dan Blue
+Richard Haygood
+Sandy Andrews
+Jay J. Chaudhuri
+Alan David Michael
+Brian Lewis
+Brian Irving
+Paul Smith
+Wiley Nickel
+Tamara Barringer
+Bruce Basson
+Sam Searcy
+Brad Hessel
+John Alexander
+Mack Paul
+Kirk DeViere
+Wesley Meredith
+Floyd B. McKissick, Jr.
+Jared Erickson
+Tom Stark
+Ben Clark
+Timothy Leever
+Mike Woodard
+Ray Ubinger
+Rickey (Rick) Padgett
+Tom Glendinning
+Valerie P. Foushee
+J. D. Wooten
+Rick Gunn
+Helen Probst Mills
+Tom McInnis
+Jerry W. Tillman
+William (Bill) McCaskill
+Michael Garrett
+Trudy Wade
+Clark Porter
+Gladys Robinson
+Cheraton Love
+Eddie Gallimore
+Jen Mangrum
+Philip E. (Phil) Berger
+R. Michael Jordan
+John Motsinger, Jr.
+Joyce Krawiec
+Eric Henderson
+Paul Lowe, Jr.
+Carl Ford
+Arin Wilhelm
+Beniah McMiller
+Vickie Sawyer
+Caroline L. Walker
+Todd Johnson
+Mark E. Shelley
+Paul R. Newton
+Jeff Jackson
+Nora Trotman
+Stuart Andrew Collins
+Mujtaba A. Mohammed
+Richard Rivette
+Dan Bishop
+Chad Stachowicz
+Joyce Waddell
+Mr. Bobbie Shields
+Jeff Tarte
+Natasha Marcus
+Andy Wells
+Ric Vandett
+Altriese Price
+Kathy Harrington
+Mitchell D. Bridges
+David Lee Lattimore
+Ted Alexander
+Deanna Ballard
+Wes Luther
+Warren Daniel
+Art Sherwood
+David Wheeler
+Ralph Hise
+Chuck Edwards
+Norm Bossert
+Terry Van Duyn
+Lyndon John Smith
+Mark Crawford
+Bobby Kuppers
+Jim Davis
+J. C. Cole
+Jerry R. Tillett
+Wayland J. Sermons, Jr.
+Paul M. Quinn
+John Nobles
+Albert D. Kirby, Jr.
+Henry L. Stevens IV
+G. Frank Jones
+Tripp Watson
+Quentin T. Sumner
+Lamont Wiggins
+Walter H. Godwin, Jr.
+John Dunlow
+Lawrence Tickle
+Paul Ross
+Steven E. Hight
+Carolyn J. Thompson
+Cindy Sturges
+Mitchell Styers
+Vince Rozier, Jr.
+Keith Gregory
+Matt Van Sickle
+Claire V. Hill
+James (Jim) Floyd Ammons, Jr.
+Mary Ann Tally
+Ola M. Lewis
+James E. (Jim) Hardin, Jr.
+Michael O'Foghludha
+Dawn Baxton
+Josephine Kerr Davis
+Tom Lambeth
+Andy Hanford
+Pat Nadolski
+Mark T. Cummings
+Lora Christine Cubbage
+Joe Craig
+Gavin Reardon
+William A. (Bill) Wood
+James P. (Jimmy) Hill
+Anna Mills Wagoner
+Gregory B. Thompson
+Michael (Mike) Stone
+Chris Bragg
+Gary Gavenus
+Robert C. (Bob) Ervin
+Nathaniel (Nathan) J. Poovey
+Reggie E. McKnight
+George Bell
+Howard L. Clark III
+Donnie Hoover
+Karen Eady-Williams
+Lou Trosch
+David A. Phillips
+Forrest Donald Bridges
+Marvin P. Pope
+Alan Thornburg
+Bradley B. Letts
+Mark Melrose
+Anita Earls
+Barbara Jackson
+Christopher (Chris) Anglin
+G. K. Butterfield
+Roger W. Allison
+George Holding
+Jeff Matemu
+Linda Coleman
+Walter B. Jones
+Barbara Howe
+David Price
+Steve A. (Von) Loor
+DD Adams
+Virginia Foxx
+B. Mark Walker
+Ryan Watts
+David W. Fallin
+Kyle Horton
+David Rouzer
+Frank McNeill
+Richard Hudson
+Dan McCready
+Jeff Scott
+Mark Harris
+David Wilson Brown
+Patrick McHenry
+Clifton B. Ingram, Jr.
+Mark Meadows
+Phillip G. Price
+Alma Adams
+Paul Wright
+Kathy Manning
+Robert Corriher
+Ted Budd
+Tom Bailey

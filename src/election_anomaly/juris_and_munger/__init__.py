@@ -151,8 +151,8 @@ class Munger:
         """check that munger is internally consistent"""
         problems = []
 
-        # every source is either row, column or other
-        bad_source = [x for x in self.cdf_elements.source if x not in ['row','column','other']]
+        # every source is either row or column
+        bad_source = [x for x in self.cdf_elements.source if x not in ['row','column']]
         if bad_source:
             b_str = ','.join(bad_source)
             problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
@@ -192,8 +192,6 @@ class Munger:
     def __init__(self,dir_path,aux_data_dir=None,project_root=None,check_files=True):
         """<dir_path> is the directory for the munger. If munger deals with auxiliary data files,
         <aux_data_dir> is the directory holding those files."""
-        if not project_root:
-            project_root = ui.get_project_root()
         self.name= os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir = dir_path
 
@@ -228,12 +226,9 @@ def read_munger_info_from_files(dir_path,project_root=None,aux_data_dir=None):
         # set auxiliary dataframe to empty
         aux_meta = pd.DataFrame([[]])
 
-    # read cdf_element info and
+    # read cdf_element info
     cdf_elements = pd.read_csv(
         os.path.join(dir_path,'cdf_elements.txt'),sep='\t',index_col='name',encoding='iso-8859-1').fillna('')
-    # add row for _datafile element
-    datafile_elt = pd.DataFrame([['','other']],columns=['raw_identifier_formula','source'],index=['_datafile'])
-    cdf_elements = cdf_elements.append(datafile_elt)
     # add column for list of fields used in formulas
     cdf_elements['fields'] = [[]]*cdf_elements.shape[0]
     for i,r in cdf_elements.iterrows():
@@ -509,7 +504,7 @@ def check_munger_file_contents(munger_name,project_root):
         warns.append(f'Encoding {format_df.loc["field_name_row","value"]} in format file is not recognized.')
 
     # every source is either row, column or other
-    bad_source = [x for x in cdf_elements.source if x not in ['row','column','other']]
+    bad_source = [x for x in cdf_elements.source if x not in ['row','column']]
     if bad_source:
         b_str = ','.join(bad_source)
         problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
