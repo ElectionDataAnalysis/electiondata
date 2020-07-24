@@ -504,7 +504,7 @@ def check_munger_file_contents(munger_name,project_root):
         warns.append(f'Encoding {format_df.loc["field_name_row","value"]} in format file is not recognized.')
 
     # every source is either row, column or other
-    bad_source = [x for x in cdf_elements.source if x not in ['row','column','other']]
+    bad_source = [x for x in cdf_elements.source if x not in ['row','column']]
     if bad_source:
         b_str = ','.join(bad_source)
         problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')

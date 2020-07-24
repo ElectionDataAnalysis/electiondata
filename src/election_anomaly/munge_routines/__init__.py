@@ -421,16 +421,8 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,err,ids=Non
     working = raw.copy()
 
     # enter elements from sources outside raw data, including creating id column(s)
-    # TODO what if contest_type (BallotMeasure or Candidate) has source 'other'?
-    if not ids:
-        for t,r in mu.cdf_elements[mu.cdf_elements.source == 'other'].iterrows():
-            # add column for element id
-            # TODO allow record to be passed as a parameter
-            idx, db_record, enum_d, fk_d = ui.pick_or_create_record(session,project_root,t)
-            working = add_constant_column(working,f'{t}_Id',idx)
-    else:
-        working = add_constant_column(working,'Election_Id',ids[1])
-        working = add_constant_column(working,'_datafile_Id',ids[0])
+    working = add_constant_column(working,'Election_Id',ids[1])
+    working = add_constant_column(working,'_datafile_Id',ids[0])
 
     working, err = munge_and_melt(mu,working,count_cols,err)
 
@@ -468,7 +460,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,err,ids=Non
     working = working_temp
 
     # get ids for remaining info sourced from rows and columns
-    element_list = [t for t in mu.cdf_elements[mu.cdf_elements.source != 'other'].index if
+    element_list = [t for t in mu.cdf_elements.index if
                     (t[-7:] != 'Contest' and t[-9:] != 'Selection')]
     for t in element_list:
         # capture id from db in new column and erase any now-redundant cols
