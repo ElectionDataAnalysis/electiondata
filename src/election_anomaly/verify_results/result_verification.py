@@ -20,8 +20,8 @@ if __name__ == '__main__':
     Typetotal_df = pd.read_csv(fpath, sep='\t')
 
     print("Select result file 2 for comparision")
-    fpath = ui.pick_path()
-    TypetotalMod_df = pd.read_csv(fpath,sep='\t')
+    fpath1 = ui.pick_path()
+    TypetotalMod_df = pd.read_csv(fpath1,sep='\t')
 
 
 
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     merge_types = ['left_only','right_only']
     diff_df = comparison_df[comparison_df._merge.isin(merge_types)]
     if len(diff_df.index) == 0:
-        print('Both the files exactly match')
+        print(f'No discrepancies found between \n {fpath} and \n {fpath1}')
 
     else:
 
