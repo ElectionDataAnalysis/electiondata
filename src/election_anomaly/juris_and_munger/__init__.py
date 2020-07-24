@@ -151,8 +151,8 @@ class Munger:
         """check that munger is internally consistent"""
         problems = []
 
-        # every source is either row, column or other
-        bad_source = [x for x in self.cdf_elements.source if x not in ['row','column','other']]
+        # every source is either row or column
+        bad_source = [x for x in self.cdf_elements.source if x not in ['row','column']]
         if bad_source:
             b_str = ','.join(bad_source)
             problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
