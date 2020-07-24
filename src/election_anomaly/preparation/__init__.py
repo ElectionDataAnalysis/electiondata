@@ -118,3 +118,39 @@ def add_or_append_msg(d: dict, key: str, msg: str):
 		d[key] = [msg]
 	return d
 
+
+def add_district_contests(juris: str,count: dict, ru_type: dict):
+	"""<juris> is path to jurisdiction directory.
+	Keys of <count> are contest family names;
+	value is the number of districts for that
+	family of contests"
+	Keys of <ru_type> are the contest family names
+	value is reporting unit type for that contests family"""
+	w_office = get_element(juris,'Office')
+	w_ru = get_element(juris,'ReportingUnit')
+	w_cc = get_element(juris,'CandidateContest')
+	new_office = {}
+	new_ru = {}
+	new_cc = {}
+	cols_off = ['Name','ElectionDistrict']
+	cols_ru = ['Name','ReportingUnitType']
+	cols_cc = [
+		'Name','VotesAllowed','Number_Elected',
+		'NumberRunoff','IsPartisan','Office'
+	]
+	for k in count.keys():
+		w_office = w_office.append(pd.DataFrame([
+			[f'{k} District {i+1}',f'{k} District {i+1}'] for i in range(count[k])
+		],columns=cols_off),ignore_index=True)
+		w_ru = w_ru.append(pd.DataFrame([
+			[f'{k} District {i+1}',ru_type[k]] for i in range(count[k])
+		],columns=cols_ru),ignore_index=True)
+		w_cc = w_cc.append(pd.DataFrame([
+			[f'{k} District {i + 1}',1,1,0,True,f'{k} District {i + 1}',''] for i in range(count[k])
+		],columns=cols_cc),ignore_index=True)
+
+	write_element(juris,'Office',w_office.drop_duplicates())
+	write_element(juris,'ReportingUnit',w_ru.drop_duplicates())
+	write_element(juris,'Office',w_cc.drop_duplicates())
+	return
+
