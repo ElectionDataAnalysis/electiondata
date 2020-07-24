@@ -363,7 +363,7 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'])
 	unsummed = unsummed.merge(contest_selection,how='left',left_on='ContestSelectionJoin_Id',right_index=True)
 
-	# Some cleanup: Rename, drop a duplicated column 	
+	# cleanup: Rename, drop a duplicated column
 	rename = {
 		'Name_Parent': 'ParentName',
 		'ReportingUnitType_Id_Parent': 'ParentReportingUnitType_Id',
@@ -372,8 +372,10 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 	unsummed.rename(columns=rename, inplace=True)
 	unsummed.drop(columns=['ChildReportingUnit_Id', 'ElectionContestJoin_Id', 'ContestSelectionJoin_Id'],
 				inplace=True)
+	unsummed = unsummed[unsummed['ReportingUnit_Id'] == unsummed['ParentReportingUnit_Id']]
 
 	ranked = assign_anomaly_score(unsummed)
+	return ranked
 	top_ranked = get_most_anomalous(ranked, 3)
 
 	# package into list of dictionary
@@ -422,10 +424,19 @@ def assign_anomaly_score(data):
 	data['score'] = np.random.rand(data.shape[0])
 
 	# assign unit_ids to contest, ru_type, and count type
+	# currently this only looks at the most granular level, not rolled up
+	data = data[data['ReportingUnit_Id'] == data['ParentReportingUnit_Id']]
 	df_unit = data[['Contest_Id', 'ReportingUnitType_Id', 'CountItemType']].drop_duplicates()
 	df_unit = df_unit.reset_index()
 	df_unit['unit_id'] = df_unit.index
 	data = data.merge(df_unit, how='left', on=['Contest_Id', 'ReportingUnitType_Id', 'CountItemType'])
+
+	unit_ids = data['unit_id'].unique()
+	for unit_id in unit_ids:
+		temp_df = data[data['unit_id'] == unit_id]
+		return temp_df
+		print(temp_df)
+		input()
 
 	return data
 
