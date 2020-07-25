@@ -173,7 +173,7 @@ def add_district_contests(juris_path: str,count: dict,ru_type: dict):
 	return
 
 
-def new_juris_files(juris_path: str,abbr: str,state_house: int,state_senate: int,congressional: int, error: dict,
+def new_juris_files(juris_path: str, project_root: str, abbr: str,state_house: int,state_senate: int,congressional: int, error: dict,
                     other_districts: dict=None):
 	"""<juris_path> identifies the directory where the files will live.
 	<abbr> is the two-letter abbreviation for state/district/territory.
@@ -182,7 +182,7 @@ def new_juris_files(juris_path: str,abbr: str,state_house: int,state_senate: int
 	{'Circuit Court':{'ReportingUnitType':'judicial','count':5}}
 	"""
 	# create directory if it doesn't exist
-	Path(juris_path).mkdir(parents=True,exist_ok=True)
+	error['jurisdiction'] = jm.ensure_jurisdiction_dir(juris_path,project_root)
 
 	# add default parties
 	add_default_parties(juris_path)

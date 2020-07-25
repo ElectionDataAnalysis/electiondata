@@ -264,8 +264,8 @@ def read_munger_info_from_files(dir_path,project_root=None,aux_data_dir=None):
     return [cdf_elements,header_row_count,field_name_row,field_names_if_no_field_name_row,count_columns,file_type,
             encoding,thousands_separator,aux_meta]
 
-# TODO combine ensure_jurisdiction_files with ensure_juris_files
-def ensure_jurisdiction_files(juris_path,project_root):
+# TODO combine ensure_jurisdiction_dir with ensure_juris_files
+def ensure_jurisdiction_dir(juris_path,project_root):
     path_output = None
     # create jurisdiction directory
     try:
