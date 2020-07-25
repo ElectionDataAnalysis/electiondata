@@ -4,6 +4,7 @@ import os
 import munge_routines as mr
 import user_interface as ui
 import juris_and_munger as jm
+from pathlib import Path
 
 
 def primary_contests(
@@ -41,39 +42,58 @@ def primary_contests(
 	return p_contests, p_dictionary_rows
 
 
-def get_element(juris: str, element: str) -> pd.DataFrame:
+def get_element(juris_path: str,element: str) -> pd.DataFrame:
 	"""<juris> is path to jurisdiction directory. Info taken
-	from <element>.txt file in that directory"""
-	element_df = pd.read_csv(os.path.join(juris, f'{element}.txt'),sep='\t')
+	from <element>.txt file in that directory. If file doesn't exist,
+	empty dataframe returned"""
+	f_path = os.path.join(juris_path,f'{element}.txt')
+	if os.path.isfile(f_path):
+		element_df = pd.read_csv(f_path,sep='\t')
+	else:
+		element_df = pd.DataFrame()
 	return element_df
 
 
-def write_element(juris: str, element: str, df: pd.DataFrame):
+def write_element(juris_path: str,element: str,df: pd.DataFrame):
 	"""<juris> is path to jurisdiction directory. Info taken
 	from <element>.txt file in that directory"""
-	df.fillna('').to_csv(os.path.join(juris,f'{element}.txt'),index=False,sep='\t')
+	df.fillna('').to_csv(os.path.join(juris_path,f'{element}.txt'),index=False,sep='\t')
 	return
 
 
-def add_primary_contests(juris: str):
+def add_default_parties(juris_path: str):
+	party_list = ['Democratic','Republican','Green','Libertarian']
+	old_party = get_element(juris_path,'Party')
+	new_party = pd.DataFrame([[f'{p} Party'] for p in party_list],columns=['Name'])
+	write_element(juris_path,'Party',pd.concat([old_party,new_party]).drop_duplicates())
+	return
+
+def add_primary_contests(juris_path: str, error: dict) -> dict:
 	"""Revise CandidateContest.txt and dictionary.txt
 	to add all possible primary contests. Assume raw identifier
 	is built as <contest> (<party>)"""
 	# TODO allow user to specify other raw identifiers.
 
-	contests = get_element(juris, 'CandidateContest')
-	parties = get_element(juris, 'Party')
-	dictionary = get_element(juris, 'dictionary')
+	contests = get_element(juris_path,'CandidateContest')
+	if contests.empty:
+		add_or_append_msg(error,'jurisdiction','CandidateContest.txt is missing or empty. No primary contests added.')
+		return error
+	parties = get_element(juris_path,'Party')
+	if parties.empty:
+		add_or_append_msg(error,'jurisdiction','Party.txt is missing or empty. No primary contests added.')
+		return error
+
+	dictionary = get_element(juris_path,'dictionary')
 
 	[p_contests, p_dictionary] = primary_contests(dictionary, contests, parties)
 
 	new_contests = pd.concat([contests, p_contests]).drop_duplicates().fillna('')
 	new_dictionary = pd.concat([dictionary,p_dictionary]).drop_duplicates().fillna('')
 
-	# TODO overwrite CandidateContest.txt and dictionary.txt
-	new_contests.to_csv(os.path.join(juris,'revised_CandidateContest.txt'),sep='\t',index=False)
-	new_dictionary.to_csv(os.path.join(juris,'revised_dictionary.txt'),sep='\t',index=False)
-	return
+	# overwrite CandidateContest.txt and dictionary.txt
+	new_contests.to_csv(os.path.join(juris_path,'CandidateContest.txt'),sep='\t',index=False)
+	new_dictionary.to_csv(os.path.join(juris_path,'dictionary.txt'),sep='\t',index=False)
+	return error
 
 
 def add_elements_from_datafile(
@@ -119,25 +139,23 @@ def add_or_append_msg(d: dict, key: str, msg: str):
 	return d
 
 
-def add_district_contests(juris: str,count: dict, ru_type: dict):
+def add_district_contests(juris_path: str,count: dict,ru_type: dict):
 	"""<juris> is path to jurisdiction directory.
 	Keys of <count> are contest family names;
 	value is the number of districts for that
 	family of contests"
 	Keys of <ru_type> are the contest family names
 	value is reporting unit type for that contests family"""
-	w_office = get_element(juris,'Office')
-	w_ru = get_element(juris,'ReportingUnit')
-	w_cc = get_element(juris,'CandidateContest')
+
+	w_office = get_element(juris_path,'Office')
+	w_ru = get_element(juris_path,'ReportingUnit')
+	w_cc = get_element(juris_path,'CandidateContest')
 	new_office = {}
 	new_ru = {}
 	new_cc = {}
 	cols_off = ['Name','ElectionDistrict']
 	cols_ru = ['Name','ReportingUnitType']
-	cols_cc = [
-		'Name','VotesAllowed','Number_Elected',
-		'NumberRunoff','IsPartisan','Office'
-	]
+	cols_cc = ['Name','NumberElected','Office','PrimaryParty']
 	for k in count.keys():
 		w_office = w_office.append(pd.DataFrame([
 			[f'{k} District {i+1}',f'{k} District {i+1}'] for i in range(count[k])
@@ -146,11 +164,37 @@ def add_district_contests(juris: str,count: dict, ru_type: dict):
 			[f'{k} District {i+1}',ru_type[k]] for i in range(count[k])
 		],columns=cols_ru),ignore_index=True)
 		w_cc = w_cc.append(pd.DataFrame([
-			[f'{k} District {i + 1}',1,1,0,True,f'{k} District {i + 1}',''] for i in range(count[k])
+			[f'{k} District {i + 1}',1,f'{k} District {i + 1}',''] for i in range(count[k])
 		],columns=cols_cc),ignore_index=True)
 
-	write_element(juris,'Office',w_office.drop_duplicates())
-	write_element(juris,'ReportingUnit',w_ru.drop_duplicates())
-	write_element(juris,'Office',w_cc.drop_duplicates())
+	write_element(juris_path,'Office',w_office.drop_duplicates())
+	write_element(juris_path,'ReportingUnit',w_ru.drop_duplicates())
+	write_element(juris_path,'CandidateContest',w_cc.drop_duplicates())
 	return
 
+
+def new_juris_files(juris_path: str,abbr: str,state_house: int,state_senate: int,congressional: int, error: dict,
+                    other_districts: dict=None):
+	"""<juris_path> identifies the directory where the files will live.
+	<abbr> is the two-letter abbreviation for state/district/territory.
+	<state_house>, etc., gives the number of districts;
+	<other_districts> is a dictionary of other district names, types & counts, e.g.,
+	{'Circuit Court':{'ReportingUnitType':'judicial','count':5}}
+	"""
+	# create directory if it doesn't exist
+	Path(juris_path).mkdir(parents=True,exist_ok=True)
+
+	# add default parties
+	add_default_parties(juris_path)
+
+	# add all district Offices/RUs/CandidateContests
+	count = {f'{abbr} House':state_house,f'{abbr} Senate':state_senate,f'US House {abbr}':congressional}
+	ru_type = {f'{abbr} House':'state-house',f'{abbr} Senate':'state-senate',f'US House {abbr}':'congressional'}
+	if other_districts:
+		for k in other_districts.keys():
+			count[k] = other_districts[k]['count']
+			ru_type[k] = other_districts[k]['ReportingUnitType']
+	add_district_contests(juris_path,count,ru_type)
+	# add all primary CandidateContests
+	error = add_primary_contests(juris_path, error)
+	return error
