@@ -265,7 +265,7 @@ def read_munger_info_from_files(dir_path,project_root=None,aux_data_dir=None):
             encoding,thousands_separator,aux_meta]
 
 # TODO combine ensure_jurisdiction_dir with ensure_juris_files
-def ensure_jurisdiction_dir(juris_path,project_root):
+def ensure_jurisdiction_dir(juris_path,project_root,ignore_empty=False):
     path_output = None
     # create jurisdiction directory
     try:
@@ -277,7 +277,7 @@ def ensure_jurisdiction_dir(juris_path,project_root):
         #todo should the program exit if the directory is created ?
 
     # ensure the contents of the jurisdiction directory are correct
-    juris_file_error = ensure_juris_files(juris_path,project_root)
+    juris_file_error = ensure_juris_files(juris_path,project_root,ignore_empty=ignore_empty)
     if path_output:
         juris_file_error["directory_status"] = path_output
     if juris_file_error:
@@ -286,7 +286,7 @@ def ensure_jurisdiction_dir(juris_path,project_root):
         return None
 
 
-def ensure_juris_files(juris_path,project_root):
+def ensure_juris_files(juris_path,project_root,ignore_empty=False):
     """Check that the jurisdiction files are complete and consistent with one another.
     Check for extraneous files in Jurisdiction directory.
     Assumes Jurisdiction directory exists. Assumes dictionary.txt is in the template file"""
@@ -324,8 +324,9 @@ def ensure_juris_files(juris_path,project_root):
         try:
             temp = pd.read_csv(os.path.join(templates_dir,f'{juris_file}.txt'),sep='\t',encoding='iso-8859-1')
         except pd.errors.EmptyDataError:
-            file_empty.append('Template file {'+juris_file+'}.txt has no contents')
-            # print(f'Template file {juris_file}.txt has no contents')
+            if not ignore_empty:
+                file_empty.append('Template file {'+juris_file+'}.txt has no contents')
+                # print(f'Template file {juris_file}.txt has no contents')
             temp = pd.DataFrame()
         if not os.path.isfile(cf_path):
             temp.to_csv(cf_path,sep='\t',index=False)
