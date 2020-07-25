@@ -7,10 +7,10 @@ import juris_and_munger as jm
 from pathlib import Path
 
 
-def primary_contests(
+def primary_contests_with_dictionary(
 		dictionary: pd.DataFrame, contests: pd.DataFrame, parties: pd.DataFrame) -> (pd.DataFrame, pd.DataFrame):
-	"""Returns a dataframe of all primary contests corresponding to lines in <contests>
-	and parties in <parties>"""
+	"""Returns a dataframe <p_contests> of all primary contests corresponding to lines in <contests>
+	and parties in <parties>, and a dataframe <p_dictionary_rows>"""
 	c_df = {}
 	d_df = {}
 	# add column with raw identifiers to <parties>
@@ -19,20 +19,20 @@ def primary_contests(
 		get_party[['cdf_internal_name', 'raw_identifier_value']],
 		how='left',left_on='Name',right_on='cdf_internal_name')
 
-	get_con = dictionary[dictionary['cdf_element'] == 'CandidateContest']
+	# read existing contests from dictionary
+	# TODO how to handle if there are no contests in dictionary?
+	get_dict_contests = dictionary[dictionary['cdf_element'] == 'CandidateContest']
 	for i, p in parties.iterrows():
 		c_df[i] = contests.copy()
 		working = contests.merge(
-			get_con,
+			get_dict_contests,
 			how='inner', left_on='Name', right_on='cdf_internal_name'
 		)
 		# assign 'cdf_element' to 'CandidateContest, since we're creating CandidateContest lines
-		# TODO generalize next line to handle other cases
-		working['raw_identifier_value'] = working['raw_identifier_value'] + ';' + \
-											p['raw_identifier_value'] + ' Primary'
-
-		c_df[i]['Name'] = working['cdf_internal_name'] = \
-			contests["Name"] + f' ({p["Name"]} Primary)'
+		# TODO generalize next line to handle other formats for name of primary
+		working['raw_identifier_value'] = working['raw_identifier_value'] + ';' + p['raw_identifier_value'] + ' Primary'
+		working.loc[:,'cdf_element'] = 'CandidateContest'
+		c_df[i]['Name'] = working['cdf_internal_name'] = contests["Name"] + f' ({p["Name"]} Primary)'
 		c_df[i]['PrimaryParty'] = p['Name']
 
 		d_df[i] = working[['cdf_element', 'cdf_internal_name', 'raw_identifier_value']]
@@ -40,6 +40,49 @@ def primary_contests(
 	p_contests = pd.concat([c_df[i] for i in parties.index])
 	p_dictionary_rows = pd.concat([d_df[i] for i in parties.index])
 	return p_contests, p_dictionary_rows
+
+
+def add_primary_contests_to_file_and_dictionary(juris_path: str,error: dict) -> dict:
+	"""Revise CandidateContest.txt and dictionary.txt
+	to add all possible primary contests. Assume raw identifier
+	is built as <contest> (<party>)"""
+	# TODO allow user to specify other raw identifiers.
+
+	contests = get_element(juris_path,'CandidateContest')
+	if contests.empty:
+		add_or_append_msg(error,'jurisdiction','CandidateContest.txt is missing or empty. No primary contests added.')
+		return error
+	parties = get_element(juris_path,'Party')
+	if parties.empty:
+		add_or_append_msg(error,'jurisdiction','Party.txt is missing or empty. No primary contests added.')
+		return error
+
+	dictionary = get_element(juris_path,'dictionary')
+
+	[p_contests, p_dictionary] = primary_contests_with_dictionary(dictionary,contests,parties)
+
+	# overwrite CandidateContest.txt and dictionary.txt with new info
+	new_contests = pd.concat([contests, p_contests]).drop_duplicates().fillna('')
+	new_contests.to_csv(os.path.join(juris_path,'CandidateContest.txt'),sep='\t',index=False)
+
+	if p_dictionary:
+		new_dictionary = pd.concat([dictionary,p_dictionary]).drop_duplicates().fillna('')
+		new_dictionary.to_csv(os.path.join(juris_path,'dictionary.txt'),sep='\t',index=False)
+	return error
+
+
+def primary_contests_no_dictionary(contests: pd.DataFrame, parties: pd.DataFrame) -> pd.DataFrame:
+	"""Returns a dataframe <p_contests> of all primary contests corresponding to lines in <contests>
+	and parties in <parties>,"""
+	c_df = {}
+
+	for i, p in parties.iterrows():
+		c_df[i] = contests.copy()
+		c_df[i]['Name'] = contests["Name"] + f' ({p["Name"]} Primary)'
+		c_df[i]['PrimaryParty'] = p['Name']
+
+	p_contests = pd.concat([c_df[i] for i in parties.index])
+	return p_contests
 
 
 def get_element(juris_path: str,element: str) -> pd.DataFrame:
@@ -68,11 +111,10 @@ def add_default_parties(juris_path: str):
 	write_element(juris_path,'Party',pd.concat([old_party,new_party]).drop_duplicates())
 	return
 
-def add_primary_contests(juris_path: str, error: dict) -> dict:
-	"""Revise CandidateContest.txt and dictionary.txt
-	to add all possible primary contests. Assume raw identifier
-	is built as <contest> (<party>)"""
-	# TODO allow user to specify other raw identifiers.
+
+def add_primary_contests_to_file_only(juris_path: str,error: dict) -> dict:
+	"""Revise CandidateContest.txt
+	to add all possible primary contests. """
 
 	contests = get_element(juris_path,'CandidateContest')
 	if contests.empty:
@@ -83,16 +125,12 @@ def add_primary_contests(juris_path: str, error: dict) -> dict:
 		add_or_append_msg(error,'jurisdiction','Party.txt is missing or empty. No primary contests added.')
 		return error
 
-	dictionary = get_element(juris_path,'dictionary')
+	p_contests = primary_contests_no_dictionary(contests, parties)
 
-	[p_contests, p_dictionary] = primary_contests(dictionary, contests, parties)
-
+	# overwrite CandidateContest.txt with new info
 	new_contests = pd.concat([contests, p_contests]).drop_duplicates().fillna('')
-	new_dictionary = pd.concat([dictionary,p_dictionary]).drop_duplicates().fillna('')
-
-	# overwrite CandidateContest.txt and dictionary.txt
 	new_contests.to_csv(os.path.join(juris_path,'CandidateContest.txt'),sep='\t',index=False)
-	new_dictionary.to_csv(os.path.join(juris_path,'dictionary.txt'),sep='\t',index=False)
+
 	return error
 
 
@@ -182,7 +220,7 @@ def new_juris_files(juris_path: str, project_root: str, abbr: str,state_house: i
 	{'Circuit Court':{'ReportingUnitType':'judicial','count':5}}
 	"""
 	# create directory if it doesn't exist
-	error['jurisdiction'] = jm.ensure_jurisdiction_dir(juris_path,project_root)
+	error['jurisdiction'] = jm.ensure_jurisdiction_dir(juris_path,project_root,ignore_empty=True)
 
 	# add default parties
 	add_default_parties(juris_path)
@@ -196,5 +234,5 @@ def new_juris_files(juris_path: str, project_root: str, abbr: str,state_house: i
 			ru_type[k] = other_districts[k]['ReportingUnitType']
 	add_district_contests(juris_path,count,ru_type)
 	# add all primary CandidateContests
-	error = add_primary_contests(juris_path, error)
+	error = add_primary_contests_to_file_only(juris_path,error)
 	return error
