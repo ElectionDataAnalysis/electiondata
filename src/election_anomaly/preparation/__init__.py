@@ -50,11 +50,10 @@ def write_element(juris_path: str, element: str, df: pd.DataFrame):
 	return
 
 
-def add_default_parties(juris_path: str):
-	party_list = ['Democratic','Republican','Green','Libertarian']
-	old_party = get_element(juris_path,'Party')
-	new_party = pd.DataFrame([[f'{p} Party'] for p in party_list],columns=['Name'])
-	write_element(juris_path,'Party',pd.concat([old_party,new_party]).drop_duplicates())
+def add_defaults(juris_path: str, juris_template_dir: str, element: str):
+	old = get_element(juris_path, element)
+	new = get_element(juris_template_dir,element)
+	write_element(juris_path,element, pd.concat([old, new]).drop_duplicates())
 	return
 
 
@@ -159,8 +158,10 @@ class JurisdictionPrepper():
 		# create directory if it doesn't exist
 		error['directory_creation'] = jm.ensure_jurisdiction_dir(self.d['jurisdiction_path'], self.d['project_root'], ignore_empty=True)
 
-		# add default parties
-		add_default_parties(self.d['jurisdiction_path'])
+		# add default entries
+		templates = os.path.join(self.d['project_root'],'templates/jurisdiction_templates')
+		for element in ['Party','Election']:
+			add_defaults(self.d['jurisdiction_path'],templates,element)
 
 		# add all district Offices/RUs/CandidateContests
 		count = {f'{self.d["abbreviated_name"]} House': self.state_house, f'{self.d["abbreviated_name"]} Senate': self.state_senate, f'US House {self.d["abbreviated_name"]}': self.congressional}
