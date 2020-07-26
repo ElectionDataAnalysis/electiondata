@@ -84,14 +84,6 @@ def add_primary_contests(juris_path: str) -> str:
 	return error
 
 
-def add_or_append_msg(d: dict, key: str, msg: str):
-	if key in d.keys():
-		d[key].append(msg)
-	else:
-		d[key] = [msg]
-	return d
-
-
 def add_district_contests(juris_path: str,count: dict,ru_type: dict):
 	"""<juris> is path to jurisdiction directory.
 	Keys of <count> are contest family names;
