@@ -1,2 +1,7 @@
-Name	EndDate	StartDate	ElectionType
-2018 General	2018-11-06	2018-11-06	general
+Name	ElectionType
+2020 General	general
+2020 Primary	primary
+2018 General	general
+2018 Primary	primary
+2016 General	general
+2016 Primary	primary
