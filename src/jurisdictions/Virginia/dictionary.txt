@@ -1,0 +1,7 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	VA House District 1 (Democratic Party)	1st State House District (DEM)
+CandidateContest	VA House District 1 (Republican Party)	1st State House District (REP)
+CandidateContest	VA House District 1	1st State House District
+CandidateContest	US Congress VA District 2	2nd Congressional District
+Party	Democratic Party	DEM
+Party	Republican Party	REP
