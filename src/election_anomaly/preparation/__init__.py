@@ -58,19 +58,22 @@ def add_default_parties(juris_path: str):
 	return
 
 
-def add_primary_contests(juris_path: str,error: dict) -> dict:
+def add_primary_contests(juris_path: str) -> str:
 	"""Revise CandidateContest.txt
 	to add all possible primary contests. """
-
+	error = None
 	# get all contests that are not already primaries
 	contests = get_element(juris_path,'CandidateContest')
 	contests = contests[contests['PrimaryParty'].isnull()]
 	if contests.empty:
-		add_or_append_msg(error,'jurisdiction','CandidateContest.txt is missing or has no non-primary contests. No primary contests added.')
+		error = 'CandidateContest.txt is missing or has no non-primary contests. No primary contests added.'
 		return error
 	parties = get_element(juris_path,'Party')
 	if parties.empty:
-		add_or_append_msg(error,'jurisdiction','Party.txt is missing or empty. No primary contests added.')
+		if error:
+			error += '\n Party.txt is missing or empty. No primary contests added.'
+		else:
+			error = '\n Party.txt is missing or empty. No primary contests added.'
 		return error
 
 	p_contests = primary_contests_no_dictionary(contests, parties)
@@ -124,95 +127,125 @@ def add_district_contests(juris_path: str,count: dict,ru_type: dict):
 	return
 
 
-def new_juris_files(
-		juris_path: str, project_root: str, abbr: str,state_house: int,state_senate: int,congressional: int,
-		error: dict, other_districts: dict=None):
-	"""<juris_path> identifies the directory where the files will live.
-	<abbr> is the two-letter abbreviation for state/district/territory.
-	<state_house>, etc., gives the number of districts;
-	<other_districts> is a dictionary of other district names, types & counts, e.g.,
-	{'Circuit Court':{'ReportingUnitType':'judicial','count':5}}
-	"""
-	# create directory if it doesn't exist
-	error['jurisdiction'] = jm.ensure_jurisdiction_dir(juris_path,project_root,ignore_empty=True)
+class JurisdictionPrepper():
+	def __new__(cls):
+		""" Checks if parameter file exists and is correct. If not, does
+		not create JurisdictionPrepper object. """
+		param_file = 'new_jurisdiction.par'
+		try:
+			d, parameter_err = ui.get_runtime_parameters(
+				['project_root', 'jurisdiction_path', 'abbreviated_name','count_of_state_house_districts', 'count_of_state_senate_districts', 'count_of_us_house_districts'],param_file='new_jurisdiction.par')
+		except FileNotFoundError as e:
+			print(f"File {param_file} not found. Ensure that it is located" \
+				  " in the current directory. DataLoader object not created.")
+			return None
 
-	# add default parties
-	add_default_parties(juris_path)
+		if parameter_err:
+			print(f"File {param_file} missing requirements.")
+			print(parameter_err)
+			print("JurisdictionPrepper object not created.")
+			return None
+		return super().__new__(cls)
+	
+	def new_juris_files(self, other_districts: dict = None):
+		"""<juris_path> identifies the directory where the files will live.
+		<abbr> is the two-letter abbreviation for state/district/territory.
+		<state_house>, etc., gives the number of districts;
+		<other_districts> is a dictionary of other district names, types & counts, e.g.,
+		{'Circuit Court':{'ReportingUnitType':'judicial','count':5}}
+		"""
+		# TODO Feature: allow other districts to be set in paramfile
+		error = dict()
+		# create directory if it doesn't exist
+		error['directory_creation'] = jm.ensure_jurisdiction_dir(self.d['jurisdiction_path'], self.d['project_root'], ignore_empty=True)
 
-	# add all district Offices/RUs/CandidateContests
-	count = {f'{abbr} House':state_house,f'{abbr} Senate':state_senate,f'US House {abbr}':congressional}
-	ru_type = {f'{abbr} House':'state-house',f'{abbr} Senate':'state-senate',f'US House {abbr}':'congressional'}
-	if other_districts:
-		for k in other_districts.keys():
-			count[k] = other_districts[k]['count']
-			ru_type[k] = other_districts[k]['ReportingUnitType']
-	add_district_contests(juris_path,count,ru_type)
+		# add default parties
+		add_default_parties(self.d['jurisdiction_path'])
 
-	# add all primary CandidateContests
-	error = add_primary_contests(juris_path,error)
-	return error
+		# add all district Offices/RUs/CandidateContests
+		count = {f'{self.d["abbreviated_name"]} House': self.state_house, f'{self.d["abbreviated_name"]} Senate': self.state_senate, f'US House {self.d["abbreviated_name"]}': self.congressional}
+		ru_type = {f'{self.d["abbreviated_name"]} House': 'state-house', f'{self.d["abbreviated_name"]} Senate': 'state-senate',
+				f'US House {self.d["abbreviated_name"]}': 'congressional'}
+		if other_districts:
+			for k in other_districts.keys():
+				count[k] = other_districts[k]['count']
+				ru_type[k] = other_districts[k]['ReportingUnitType']
+		add_district_contests(self.d['jurisdiction_path'], count, ru_type)
 
+		# add all primary CandidateContests
+		error['primaries'] = add_primary_contests(self.d['jurisdiction_path'])
+		
+		# TODO Feature create starter dictionary.txt with cdf_internal name
+		#  used as placeholder for raw_identifier_value
+		return error
 
-def add_elements_from_datafile(
-		juris: str,results: pd.DataFrame,mu: jm.Munger,element: str, error: dict,
-		name_field='Name') -> dict:
-	"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
-	or not already in <element>.txt"""
-	wr =results.copy()
-	# append <element>_raw
-	wr.columns = [f'{x}_SOURCE' for x in wr.columns]
-	mr.add_munged_column(wr, mu, element, error, mode=mu.cdf_elements.loc[element,'source'])
-	# find <element>_raw values not in dictionary.txt.raw_identifier_value;
-	#  add corresponding lines to dictionary.txt
-	wd = get_element(juris,'dictionary')
-	old_raw = wd[wd.cdf_element==element]['raw_identifier_value'].to_list()
-	new_raw = [x for x in wr[f'{element}_raw'] if x not in old_raw]
-	new_raw_df = pd.DataFrame(
-		[[element,x,x] for x in new_raw],
-		columns=['cdf_element','cdf_internal_name','raw_identifier_value'])
-	wd = pd.concat([wd,new_raw_df]).drop_duplicates()
-	write_element(juris,'dictionary',wd)
+	def add_primaries_to_dict(self):
+		primaries = {}
+		# read CandidateContest.txt, Party.txt and dictionary.txt
+		cc = get_element(self.d['jurisdiction_path'], 'CandidateContest')
+		p = get_element(self.d['jurisdiction_path'], 'Party')
+		d = get_element(self.d['jurisdiction_path'], 'dictionary')
+		# for each CandidateContest line in dictionary.txt with cdf_identifier in CandidateContest.txt
+		# and for each Party line in dictionary.txt with cdf_identifier in Party.txt
+		# append corresponding line in dictionary.txt
+		party_d = d[(d['cdf_element'] == 'Party') & (d['cdf_internal_name'].isin(p['Name'].tolist()))]
+		contest_d = d[(d['cdf_element'] == 'CandidateContest') & (d['cdf_internal_name'].isin(cc['Name'].tolist()))]
+		for i, p in party_d.iterrows():
+			primaries[p['raw_identifier_value']] = contest_d.copy().rename(
+				columns={'cdf_internal_name': 'contest_internal', 'raw_identifier_value': 'contest_raw'})
+			primaries[p['raw_identifier_value']]['cdf_internal_name'] = primaries[p['raw_identifier_value']].apply(
+				lambda row: primary(row, p['cdf_internal_name'], 'internal'), axis=1)
+			primaries[p['raw_identifier_value']]['raw_identifier_value'] = primaries[p['raw_identifier_value']].apply(
+				lambda row: primary(row, p['raw_identifier_value'], 'raw'), axis=1)
 
-	# TODO find cdf_internal_names that are not in <element>.txt and add them to <element>.txt
-	we = get_element(juris,element)
-	old_internal = we[name_field].to_list()
-	new_internal = [x for x in wd[wd.cdf_element == element]['cdf_internal_name'] if x not in old_internal]
-	new_internal_df = pd.DataFrame([[x] for x in new_internal],columns=[name_field])
-	we = pd.concat([we,new_internal_df]).drop_duplicates()
-	write_element(juris,element,we)
-	# if <element>.txt has columns other than <name_field>, notify user
-	if we.shape[1] > 1 and not new_internal_df.empty:
-		add_or_append_msg(
-			error,'Jurisdiction',
-			f'New rows added to {element}.txt, but data may be missing from some fields in those rows.')
-	return error
+		if primaries:
+			df_list = [df[['cdf_element', 'cdf_internal_name', 'raw_identifier_value']] for df in primaries.values()]
+			df_list.append(d)
+			new_dictionary = pd.concat(df_list)
+		else:
+			new_dictionary = d
+		write_element(self.d['jurisdiction_path'], 'dictionary', new_dictionary)
+		return
 
+	def add_elements_from_datafile(self,results: pd.DataFrame, mu: jm.Munger, element: str, error: dict,
+			name_field='Name') -> dict:
+		"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
+		or not already in <element>.txt"""
+		error = dict()
+		wr = results.copy()
+		# append <element>_raw
+		wr.columns = [f'{x}_SOURCE' for x in wr.columns]
+		err = mr.add_munged_column(wr, mu, element, error, mode=mu.cdf_elements.loc[element, 'source'])
+		if err:
+			error['munging'] = f'Error adding raw column for {element}:\n{err}'
+		# find <element>_raw values not in dictionary.txt.raw_identifier_value;
+		#  add corresponding lines to dictionary.txt
+		wd = get_element(self.d['jurisdiction_path'], 'dictionary')
+		old_raw = wd[wd.cdf_element == element]['raw_identifier_value'].to_list()
+		new_raw = [x for x in wr[f'{element}_raw'] if x not in old_raw]
+		new_raw_df = pd.DataFrame(
+			[[element, x, x] for x in new_raw],
+			columns=['cdf_element', 'cdf_internal_name', 'raw_identifier_value'])
+		wd = pd.concat([wd, new_raw_df]).drop_duplicates()
+		write_element(self.d['jurisdiction_path'], 'dictionary', wd)
 
-def add_primaries_to_dict(juris_path):
-	primaries = {}
-	# read CandidateContest.txt, Party.txt and dictionary.txt
-	cc = get_element(juris_path,'CandidateContest')
-	p = get_element(juris_path,'Party')
-	d = get_element(juris_path,'dictionary')
-	# for each CandidateContest line in dictionary.txt with cdf_identifier in CandidateContest.txt
-	# and for each Party line in dictionary.txt with cdf_identifier in Party.txt
-	# append corresponding line in dictionary.txt
-	party_d = d[(d['cdf_element']=='Party') & (d['cdf_internal_name'].isin(p['Name'].tolist()))]
-	contest_d = d[(d['cdf_element']=='CandidateContest') & (d['cdf_internal_name'].isin(cc['Name'].tolist()))]
-	for i, p in party_d.iterrows():
-		primaries[p['raw_identifier_value']] = contest_d.copy().rename(
-			columns={'cdf_internal_name':'contest_internal','raw_identifier_value':'contest_raw'})
-		primaries[p['raw_identifier_value']]['cdf_internal_name'] = primaries[p['raw_identifier_value']].apply(
-			lambda row: primary(row, p['cdf_internal_name'], 'internal'),axis=1)
-		primaries[p['raw_identifier_value']]['raw_identifier_value'] = primaries[p['raw_identifier_value']].apply(
-			lambda row: primary(row, p['raw_identifier_value'], 'raw'),axis=1)
+		# find cdf_internal_names that are not in <element>.txt and add them to <element>.txt
+		we = get_element(self.d['jurisdiction_path'], element)
+		old_internal = we[name_field].to_list()
+		new_internal = [x for x in wd[wd.cdf_element == element]['cdf_internal_name'] if x not in old_internal]
+		new_internal_df = pd.DataFrame([[x] for x in new_internal], columns=[name_field])
+		we = pd.concat([we, new_internal_df]).drop_duplicates()
+		write_element(self.d['jurisdiction_path'], element, we)
+		# if <element>.txt has columns other than <name_field>, notify user
+		if we.shape[1] > 1 and not new_internal_df.empty:
+			error['warning'] = f'New rows added to {element}.txt, but data may be missing from some fields in those rows.'
+		return error
 
-	if primaries:
-		df_list = [df[['cdf_element','cdf_internal_name','raw_identifier_value']] for df in primaries.values()]
-		df_list.append(d)
-		new_dictionary = pd.concat(df_list)
-	else:
-		new_dictionary = d
-	write_element(juris_path,'dictionary',new_dictionary)
-	return
+	def __init__(self):
+		self.d, self.parameter_err = ui.get_runtime_parameters(
+				['project_root', 'jurisdiction_path', 'abbreviated_name','count_of_state_house_districts', 'count_of_state_senate_districts', 'count_of_us_house_districts'],param_file='new_jurisdiction.par')
+		self.state_house = int(self.d['count_of_state_house_districts'])
+		self.state_senate = int(self.d['count_of_state_senate_districts'])
+		self.congressional = int(self.d['count_of_us_house_districts'])
+
 
