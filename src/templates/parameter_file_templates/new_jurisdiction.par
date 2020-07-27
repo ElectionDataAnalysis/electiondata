@@ -1,7 +1,9 @@
 [election_anomaly]
 project_root=<path to project root>
 jurisdiction_path=<path to jurisdiction directory (does not need to exist already)>
-abbreviated_name=<two-letter code for state, territory or district>
+name=<official name>
+reporting_unit_type=<type of jurisdiction (usually state)>
+abbreviated_name=<two-letter code for jurisdiction>
 count_of_state_house_districts=<integer>
 count_of_state_senate_districts=<integer>
 count_of_us_house_districts=<integer>

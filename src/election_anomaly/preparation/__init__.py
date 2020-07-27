@@ -8,6 +8,13 @@ import db_routines as db
 from pathlib import Path
 
 
+prep_param_list = ['project_root', 'jurisdiction_path', 'name', 'abbreviated_name',
+					'count_of_state_house_districts',
+					'count_of_state_senate_districts',
+				   'count_of_us_house_districts',
+				   'reporting_unit_type']
+
+
 def primary(row: pd.Series, party: str, mode: str) -> str:
 	if mode == 'internal':
 		pr = f'{row["contest_internal"]} ({party})'
@@ -92,45 +99,13 @@ def add_primary_contests(juris_path: str) -> str:
 	return error
 
 
-def add_district_contests(juris_path: str,count: dict,ru_type: dict):
-	"""<juris> is path to jurisdiction directory.
-	Keys of <count> are contest family names;
-	value is the number of districts for that
-	family of contests"
-	Keys of <ru_type> are the contest family names
-	value is reporting unit type for that contests family"""
-
-	w_office = get_element(juris_path,'Office')
-	w_ru = get_element(juris_path,'ReportingUnit')
-	w_cc = get_element(juris_path,'CandidateContest')
-	cols_off = ['Name','ElectionDistrict']
-	cols_ru = ['Name','ReportingUnitType']
-	cols_cc = ['Name','NumberElected','Office','PrimaryParty']
-	for k in count.keys():
-		w_office = w_office.append(pd.DataFrame([
-			[f'{k} District {i+1}',f'{k} District {i+1}'] for i in range(count[k])
-		],columns=cols_off),ignore_index=True)
-		w_ru = w_ru.append(pd.DataFrame([
-			[f'{k} District {i+1}',ru_type[k]] for i in range(count[k])
-		],columns=cols_ru),ignore_index=True)
-		w_cc = w_cc.append(pd.DataFrame([
-			[f'{k} District {i + 1}',1,f'{k} District {i + 1}',''] for i in range(count[k])
-		],columns=cols_cc),ignore_index=True)
-
-	write_element(juris_path,'Office',w_office.drop_duplicates())
-	write_element(juris_path,'ReportingUnit',w_ru.drop_duplicates())
-	write_element(juris_path,'CandidateContest',w_cc.drop_duplicates())
-	return
-
-
 class JurisdictionPrepper():
 	def __new__(cls):
 		""" Checks if parameter file exists and is correct. If not, does
 		not create JurisdictionPrepper object. """
 		param_file = 'new_jurisdiction.par'
 		try:
-			d, parameter_err = ui.get_runtime_parameters(
-				['project_root', 'jurisdiction_path', 'abbreviated_name','count_of_state_house_districts', 'count_of_state_senate_districts', 'count_of_us_house_districts'],param_file='new_jurisdiction.par')
+			d, parameter_err = ui.get_runtime_parameters(prep_param_list, param_file='new_jurisdiction.par')
 		except FileNotFoundError as e:
 			print(f"File {param_file} not found. Ensure that it is located" \
 				  " in the current directory. DataLoader object not created.")
@@ -160,15 +135,8 @@ class JurisdictionPrepper():
 		for element in ['Party','Election']:
 			add_defaults(self.d['jurisdiction_path'],templates,element)
 
-		# add all district Offices/RUs/CandidateContests
-		count = {f'{self.d["abbreviated_name"]} House': self.state_house, f'{self.d["abbreviated_name"]} Senate': self.state_senate, f'US House {self.d["abbreviated_name"]}': self.congressional}
-		ru_type = {f'{self.d["abbreviated_name"]} House': 'state-house', f'{self.d["abbreviated_name"]} Senate': 'state-senate',
-				f'US House {self.d["abbreviated_name"]}': 'congressional'}
-		if other_districts:
-			for k in other_districts.keys():
-				count[k] = other_districts[k]['count']
-				ru_type[k] = other_districts[k]['ReportingUnitType']
-		add_district_contests(self.d['jurisdiction_path'], count, ru_type)
+		# add all standard Offices/RUs/CandidateContests
+		self.add_standard_contests()
 
 		# add all primary CandidateContests
 		error['primaries'] = add_primary_contests(self.d['jurisdiction_path'])
@@ -204,6 +172,61 @@ class JurisdictionPrepper():
 		else:
 			new_dictionary = d
 		write_element(self.d['jurisdiction_path'], 'dictionary', new_dictionary)
+		return
+
+	def add_standard_contests(self, juriswide_contests: list=None, other_districts: dict=None):
+		"""If <juriswide_contest> is None, use standard list hard-coded."""
+		abbr = self.d["abbreviated_name"]
+		count = {f'{abbr} House': self.state_house, f'{abbr} Senate': self.state_senate, f'US House {abbr}': self.congressional}
+		ru_type = {f'{abbr} House': 'state-house', f'{abbr} Senate': 'state-senate',
+				f'US House {abbr}': 'congressional'}
+		if other_districts:
+			for k in other_districts.keys():
+				count[k] = other_districts[k]['count']
+				ru_type[k] = other_districts[k]['ReportingUnitType']
+
+		w_office = get_element(self.d['jurisdiction_path'], 'Office')
+		w_ru = get_element(self.d['jurisdiction_path'], 'ReportingUnit')
+		w_cc = get_element(self.d['jurisdiction_path'], 'CandidateContest')
+		cols_off = ['Name', 'ElectionDistrict']
+		cols_ru = ['Name', 'ReportingUnitType']
+		cols_cc = ['Name', 'NumberElected', 'Office', 'PrimaryParty']
+
+		# add all district offices/contests/reportingunits
+		for k in count.keys():
+			w_office = w_office.append(pd.DataFrame([
+				[f'{k} District {i + 1}', f'{k} District {i + 1}'] for i in range(count[k])
+			], columns=cols_off), ignore_index=True)
+			w_ru = w_ru.append(pd.DataFrame([
+				[f'{k} District {i + 1}', ru_type[k]] for i in range(count[k])
+			], columns=cols_ru), ignore_index=True)
+			w_cc = w_cc.append(pd.DataFrame([
+				[f'{k} District {i + 1}', 1, f'{k} District {i + 1}', ''] for i in range(count[k])
+			], columns=cols_cc), ignore_index=True)
+
+		# append top jurisdiction reporting unit
+		top_ru = {'Name': self.d['name'], 'ReportingUnitType':self.d['reporting_unit_type']}
+		w_ru = w_ru.append(top_ru, ignore_index=True)
+
+		# add standard jurisdiction-wide offices
+		if not juriswide_contests:
+			juriswide_contests = [f'{abbr} Governor', f'US Senate {abbr}', f'{abbr} Attorney General',
+								  f'{abbr} Lieutenant Governor', f'{abbr} Treasurer']
+		# append jurisdiction-wide offices
+		jw_off = pd.DataFrame(
+			[[x, self.d['name']] for x in juriswide_contests],columns=cols_off)
+		w_office = w_office.append(jw_off,ignore_index=True)
+
+		# append jurisdiction-wide contests
+		jw_cc = pd.DataFrame(
+			[[x, 1, x, ''] for x in juriswide_contests], columns=cols_cc
+		)
+		w_cc = w_cc.append(jw_cc,ignore_index=True)
+
+
+		write_element(self.d['jurisdiction_path'], 'Office', w_office.drop_duplicates())
+		write_element(self.d['jurisdiction_path'], 'ReportingUnit', w_ru.drop_duplicates())
+		write_element(self.d['jurisdiction_path'], 'CandidateContest', w_cc.drop_duplicates())
 		return
 
 	def add_elements_from_datafile(self,results: pd.DataFrame, mu: jm.Munger, element: str, error: dict,
@@ -264,8 +287,7 @@ class JurisdictionPrepper():
 		return err
 
 	def __init__(self):
-		self.d, self.parameter_err = ui.get_runtime_parameters(
-				['project_root', 'jurisdiction_path', 'abbreviated_name','count_of_state_house_districts', 'count_of_state_senate_districts', 'count_of_us_house_districts'],param_file='new_jurisdiction.par')
+		self.d, self.parameter_err = ui.get_runtime_parameters(prep_param_list,param_file='new_jurisdiction.par')
 		self.state_house = int(self.d['count_of_state_house_districts'])
 		self.state_senate = int(self.d['count_of_state_senate_districts'])
 		self.congressional = int(self.d['count_of_us_house_districts'])
