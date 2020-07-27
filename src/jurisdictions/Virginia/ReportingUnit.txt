@@ -151,3 +151,136 @@ US House VA District 9	congressional
 US House VA District 10	congressional
 US House VA District 11	congressional
 Virginia	state
+Virginia;Falls Church City	city
+Virginia;Alexandria City	city
+Virginia;Bristol City	city
+Virginia;Buena Vista City	city
+Virginia;Charlottesville City	city
+Virginia;Chesapeake City	city
+Virginia;Colonial Heights City	city
+Virginia;Covington City	city
+Virginia;Danville City	city
+Virginia;Emporia City	city
+Virginia;Fairfax City	city
+Virginia;Franklin City	city
+Virginia;Fredericksburg City	city
+Virginia;Galax City	city
+Virginia;Hampton City	city
+Virginia;Harrisonburg City	city
+Virginia;Hopewell City	city
+Virginia;Lexington City	city
+Virginia;Lynchburg City	city
+Virginia;Manassas City	city
+Virginia;Manassas Park City	city
+Virginia;Martinsville City	city
+Virginia;Newport News City	city
+Virginia;Norfolk City	city
+Virginia;Norton City	city
+Virginia;Petersburg City	city
+Virginia;Poquoson City	city
+Virginia;Portsmouth City	city
+Virginia;Radford City	city
+Virginia;Richmond City	city
+Virginia;Roanoke City	city
+Virginia;Salem City	city
+Virginia;Staunton City	city
+Virginia;Suffolk City	city
+Virginia;Virginia Beach City	city
+Virginia;Waynesboro City	city
+Virginia;Williamsburg City	city
+Virginia;Winchester City	city
+Virginia;Charles City County	county
+Virginia;James City County	county
+Virginia;Accomack County	county
+Virginia;Albemarle County	county
+Virginia;Alleghany County	county
+Virginia;Amelia County	county
+Virginia;Amherst County	county
+Virginia;Appomattox County	county
+Virginia;Arlington County	county
+Virginia;Augusta County	county
+Virginia;Bath County	county
+Virginia;Bedford County	county
+Virginia;Bland County	county
+Virginia;Botetourt County	county
+Virginia;Brunswick County	county
+Virginia;Buchanan County	county
+Virginia;Buckingham County	county
+Virginia;Campbell County	county
+Virginia;Caroline County	county
+Virginia;Carroll County	county
+Virginia;Charlotte County	county
+Virginia;Chesterfield County	county
+Virginia;Clarke County	county
+Virginia;Craig County	county
+Virginia;Culpeper County	county
+Virginia;Cumberland County	county
+Virginia;Dickenson County	county
+Virginia;Dinwiddie County	county
+Virginia;Essex County	county
+Virginia;Fairfax County	county
+Virginia;Fauquier County	county
+Virginia;Floyd County	county
+Virginia;Fluvanna County	county
+Virginia;Franklin County	county
+Virginia;Frederick County	county
+Virginia;Giles County	county
+Virginia;Gloucester County	county
+Virginia;Goochland County	county
+Virginia;Grayson County	county
+Virginia;Greene County	county
+Virginia;Greensville County	county
+Virginia;Halifax County	county
+Virginia;Hanover County	county
+Virginia;Henrico County	county
+Virginia;Henry County	county
+Virginia;Highland County	county
+Virginia;Isle Of Wight County	county
+Virginia;King & Queen County	county
+Virginia;King George County	county
+Virginia;King William County	county
+Virginia;Lancaster County	county
+Virginia;Lee County	county
+Virginia;Loudoun County	county
+Virginia;Louisa County	county
+Virginia;Lunenburg County	county
+Virginia;Madison County	county
+Virginia;Mathews County	county
+Virginia;Mecklenburg County	county
+Virginia;Middlesex County	county
+Virginia;Montgomery County	county
+Virginia;Nelson County	county
+Virginia;New Kent County	county
+Virginia;Northampton County	county
+Virginia;Northumberland County	county
+Virginia;Nottoway County	county
+Virginia;Orange County	county
+Virginia;Page County	county
+Virginia;Patrick County	county
+Virginia;Pittsylvania County	county
+Virginia;Powhatan County	county
+Virginia;Prince Edward County	county
+Virginia;Prince George County	county
+Virginia;Prince William County	county
+Virginia;Pulaski County	county
+Virginia;Rappahannock County	county
+Virginia;Richmond County	county
+Virginia;Roanoke County	county
+Virginia;Rockbridge County	county
+Virginia;Rockingham County	county
+Virginia;Russell County	county
+Virginia;Scott County	county
+Virginia;Shenandoah County	county
+Virginia;Smyth County	county
+Virginia;Southampton County	county
+Virginia;Spotsylvania County	county
+Virginia;Stafford County	county
+Virginia;Surry County	county
+Virginia;Sussex County	county
+Virginia;Tazewell County	county
+Virginia;Warren County	county
+Virginia;Washington County	county
+Virginia;Westmoreland County	county
+Virginia;Wise County	county
+Virginia;Wythe County	county
+Virginia;York County	county
