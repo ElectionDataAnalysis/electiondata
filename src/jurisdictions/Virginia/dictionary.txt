@@ -5,3 +5,138 @@ CandidateContest	VA House District 1	1st State House District
 CandidateContest	US Congress VA District 2	2nd Congressional District
 Party	Democratic Party	DEM
 Party	Republican Party	REP
+CountItemType	absentee	# AB - Central Absentee Precinct
+CountItemType	provisional	## Provisional
+ReportingUnit	Virginia;Falls Church City	FALLS CHURCH CITY
+ReportingUnit	Virginia;Alexandria City	ALEXANDRIA CITY
+ReportingUnit	Virginia;Bristol City	BRISTOL CITY
+ReportingUnit	Virginia;Buena Vista City	BUENA VISTA CITY
+ReportingUnit	Virginia;Charlottesville City	CHARLOTTESVILLE CITY
+ReportingUnit	Virginia;Chesapeake City	CHESAPEAKE CITY
+ReportingUnit	Virginia;Colonial Heights City	COLONIAL HEIGHTS CITY
+ReportingUnit	Virginia;Covington City	COVINGTON CITY
+ReportingUnit	Virginia;Danville City	DANVILLE CITY
+ReportingUnit	Virginia;Emporia City	EMPORIA CITY
+ReportingUnit	Virginia;Fairfax City	FAIRFAX CITY
+ReportingUnit	Virginia;Franklin City	FRANKLIN CITY
+ReportingUnit	Virginia;Fredericksburg City	FREDERICKSBURG CITY
+ReportingUnit	Virginia;Galax City	GALAX CITY
+ReportingUnit	Virginia;Hampton City	HAMPTON CITY
+ReportingUnit	Virginia;Harrisonburg City	HARRISONBURG CITY
+ReportingUnit	Virginia;Hopewell City	HOPEWELL CITY
+ReportingUnit	Virginia;Lexington City	LEXINGTON CITY
+ReportingUnit	Virginia;Lynchburg City	LYNCHBURG CITY
+ReportingUnit	Virginia;Manassas City	MANASSAS CITY
+ReportingUnit	Virginia;Manassas Park City	MANASSAS PARK CITY
+ReportingUnit	Virginia;Martinsville City	MARTINSVILLE CITY
+ReportingUnit	Virginia;Newport News City	NEWPORT NEWS CITY
+ReportingUnit	Virginia;Norfolk City	NORFOLK CITY
+ReportingUnit	Virginia;Norton City	NORTON CITY
+ReportingUnit	Virginia;Petersburg City	PETERSBURG CITY
+ReportingUnit	Virginia;Poquoson City	POQUOSON CITY
+ReportingUnit	Virginia;Portsmouth City	PORTSMOUTH CITY
+ReportingUnit	Virginia;Radford City	RADFORD CITY
+ReportingUnit	Virginia;Richmond City	RICHMOND CITY
+ReportingUnit	Virginia;Roanoke City	ROANOKE CITY
+ReportingUnit	Virginia;Salem City	SALEM CITY
+ReportingUnit	Virginia;Staunton City	STAUNTON CITY
+ReportingUnit	Virginia;Suffolk City	SUFFOLK CITY
+ReportingUnit	Virginia;Virginia Beach City	VIRGINIA BEACH CITY
+ReportingUnit	Virginia;Waynesboro City	WAYNESBORO CITY
+ReportingUnit	Virginia;Williamsburg City	WILLIAMSBURG CITY
+ReportingUnit	Virginia;Winchester City	WINCHESTER CITY
+ReportingUnit	Virginia;Charles City County	CHARLES CITY COUNTY
+ReportingUnit	Virginia;James City County	JAMES CITY COUNTY
+ReportingUnit	Virginia;Accomack County	ACCOMACK COUNTY
+ReportingUnit	Virginia;Albemarle County	ALBEMARLE COUNTY
+ReportingUnit	Virginia;Alleghany County	ALLEGHANY COUNTY
+ReportingUnit	Virginia;Amelia County	AMELIA COUNTY
+ReportingUnit	Virginia;Amherst County	AMHERST COUNTY
+ReportingUnit	Virginia;Appomattox County	APPOMATTOX COUNTY
+ReportingUnit	Virginia;Arlington County	ARLINGTON COUNTY
+ReportingUnit	Virginia;Augusta County	AUGUSTA COUNTY
+ReportingUnit	Virginia;Bath County	BATH COUNTY
+ReportingUnit	Virginia;Bedford County	BEDFORD COUNTY
+ReportingUnit	Virginia;Bland County	BLAND COUNTY
+ReportingUnit	Virginia;Botetourt County	BOTETOURT COUNTY
+ReportingUnit	Virginia;Brunswick County	BRUNSWICK COUNTY
+ReportingUnit	Virginia;Buchanan County	BUCHANAN COUNTY
+ReportingUnit	Virginia;Buckingham County	BUCKINGHAM COUNTY
+ReportingUnit	Virginia;Campbell County	CAMPBELL COUNTY
+ReportingUnit	Virginia;Caroline County	CAROLINE COUNTY
+ReportingUnit	Virginia;Carroll County	CARROLL COUNTY
+ReportingUnit	Virginia;Charlotte County	CHARLOTTE COUNTY
+ReportingUnit	Virginia;Chesterfield County	CHESTERFIELD COUNTY
+ReportingUnit	Virginia;Clarke County	CLARKE COUNTY
+ReportingUnit	Virginia;Craig County	CRAIG COUNTY
+ReportingUnit	Virginia;Culpeper County	CULPEPER COUNTY
+ReportingUnit	Virginia;Cumberland County	CUMBERLAND COUNTY
+ReportingUnit	Virginia;Dickenson County	DICKENSON COUNTY
+ReportingUnit	Virginia;Dinwiddie County	DINWIDDIE COUNTY
+ReportingUnit	Virginia;Essex County	ESSEX COUNTY
+ReportingUnit	Virginia;Fairfax County	FAIRFAX COUNTY
+ReportingUnit	Virginia;Fauquier County	FAUQUIER COUNTY
+ReportingUnit	Virginia;Floyd County	FLOYD COUNTY
+ReportingUnit	Virginia;Fluvanna County	FLUVANNA COUNTY
+ReportingUnit	Virginia;Franklin County	FRANKLIN COUNTY
+ReportingUnit	Virginia;Frederick County	FREDERICK COUNTY
+ReportingUnit	Virginia;Giles County	GILES COUNTY
+ReportingUnit	Virginia;Gloucester County	GLOUCESTER COUNTY
+ReportingUnit	Virginia;Goochland County	GOOCHLAND COUNTY
+ReportingUnit	Virginia;Grayson County	GRAYSON COUNTY
+ReportingUnit	Virginia;Greene County	GREENE COUNTY
+ReportingUnit	Virginia;Greensville County	GREENSVILLE COUNTY
+ReportingUnit	Virginia;Halifax County	HALIFAX COUNTY
+ReportingUnit	Virginia;Hanover County	HANOVER COUNTY
+ReportingUnit	Virginia;Henrico County	HENRICO COUNTY
+ReportingUnit	Virginia;Henry County	HENRY COUNTY
+ReportingUnit	Virginia;Highland County	HIGHLAND COUNTY
+ReportingUnit	Virginia;Isle Of Wight County	ISLE OF WIGHT COUNTY
+ReportingUnit	Virginia;King & Queen County	KING & QUEEN COUNTY
+ReportingUnit	Virginia;King George County	KING GEORGE COUNTY
+ReportingUnit	Virginia;King William County	KING WILLIAM COUNTY
+ReportingUnit	Virginia;Lancaster County	LANCASTER COUNTY
+ReportingUnit	Virginia;Lee County	LEE COUNTY
+ReportingUnit	Virginia;Loudoun County	LOUDOUN COUNTY
+ReportingUnit	Virginia;Louisa County	LOUISA COUNTY
+ReportingUnit	Virginia;Lunenburg County	LUNENBURG COUNTY
+ReportingUnit	Virginia;Madison County	MADISON COUNTY
+ReportingUnit	Virginia;Mathews County	MATHEWS COUNTY
+ReportingUnit	Virginia;Mecklenburg County	MECKLENBURG COUNTY
+ReportingUnit	Virginia;Middlesex County	MIDDLESEX COUNTY
+ReportingUnit	Virginia;Montgomery County	MONTGOMERY COUNTY
+ReportingUnit	Virginia;Nelson County	NELSON COUNTY
+ReportingUnit	Virginia;New Kent County	NEW KENT COUNTY
+ReportingUnit	Virginia;Northampton County	NORTHAMPTON COUNTY
+ReportingUnit	Virginia;Northumberland County	NORTHUMBERLAND COUNTY
+ReportingUnit	Virginia;Nottoway County	NOTTOWAY COUNTY
+ReportingUnit	Virginia;Orange County	ORANGE COUNTY
+ReportingUnit	Virginia;Page County	PAGE COUNTY
+ReportingUnit	Virginia;Patrick County	PATRICK COUNTY
+ReportingUnit	Virginia;Pittsylvania County	PITTSYLVANIA COUNTY
+ReportingUnit	Virginia;Powhatan County	POWHATAN COUNTY
+ReportingUnit	Virginia;Prince Edward County	PRINCE EDWARD COUNTY
+ReportingUnit	Virginia;Prince George County	PRINCE GEORGE COUNTY
+ReportingUnit	Virginia;Prince William County	PRINCE WILLIAM COUNTY
+ReportingUnit	Virginia;Pulaski County	PULASKI COUNTY
+ReportingUnit	Virginia;Rappahannock County	RAPPAHANNOCK COUNTY
+ReportingUnit	Virginia;Richmond County	RICHMOND COUNTY
+ReportingUnit	Virginia;Roanoke County	ROANOKE COUNTY
+ReportingUnit	Virginia;Rockbridge County	ROCKBRIDGE COUNTY
+ReportingUnit	Virginia;Rockingham County	ROCKINGHAM COUNTY
+ReportingUnit	Virginia;Russell County	RUSSELL COUNTY
+ReportingUnit	Virginia;Scott County	SCOTT COUNTY
+ReportingUnit	Virginia;Shenandoah County	SHENANDOAH COUNTY
+ReportingUnit	Virginia;Smyth County	SMYTH COUNTY
+ReportingUnit	Virginia;Southampton County	SOUTHAMPTON COUNTY
+ReportingUnit	Virginia;Spotsylvania County	SPOTSYLVANIA COUNTY
+ReportingUnit	Virginia;Stafford County	STAFFORD COUNTY
+ReportingUnit	Virginia;Surry County	SURRY COUNTY
+ReportingUnit	Virginia;Sussex County	SUSSEX COUNTY
+ReportingUnit	Virginia;Tazewell County	TAZEWELL COUNTY
+ReportingUnit	Virginia;Warren County	WARREN COUNTY
+ReportingUnit	Virginia;Washington County	WASHINGTON COUNTY
+ReportingUnit	Virginia;Westmoreland County	WESTMORELAND COUNTY
+ReportingUnit	Virginia;Wise County	WISE COUNTY
+ReportingUnit	Virginia;Wythe County	WYTHE COUNTY
+ReportingUnit	Virginia;York County	YORK COUNTY
