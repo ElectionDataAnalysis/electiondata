@@ -11,6 +11,9 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 from pandas.api.types import is_numeric_dtype
 from election_anomaly import db_routines as dbr
+import scipy.spatial.distance as dist
+from scipy import stats
+
 
 
 def child_rus_by_id(session,parents,ru_type=None):
@@ -476,3 +479,14 @@ def get_most_anomalous(data, n):
 			sort_values(['ReportingUnit_Id', 'score'], ascending=False)
 		df = pd.concat([df, df_final])
 	return df
+
+
+def euclidean_zscore(li):
+    """Take a list of vectors -- all in the same R^k,
+    returns a list of the z-scores of the vectors -- each relative to the ensemble"""
+    distance_list = [sum([dist.euclidean(item,y) for y in li]) for item in li]
+    if len(set(distance_list)) == 1:
+        # if all distances are the same, which yields z-score nan values
+        return [0]*len(li)
+    else:
+        return list(stats.zscore(distance_list))
