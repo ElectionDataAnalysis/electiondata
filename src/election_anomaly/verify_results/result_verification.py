@@ -5,6 +5,7 @@ import pandas as pd
 from election_anomaly import user_interface as ui
 import os
 import time
+import pandas.io.common as pderror
 
 
 
@@ -14,14 +15,31 @@ if __name__ == '__main__':
     pd.set_option('display.width', desired_width)
     pd.set_option('display.max_columns', 10)
 
-    #read both the result files
-    print("Select result file 1 for comparision")
-    fpath = ui.pick_path()
-    Typetotal_df = pd.read_csv(fpath, sep='\t')
+    # read both the result file
+    fpath = fpath1 = ''
 
-    print("Select result file 2 for comparision")
-    fpath1 = ui.pick_path()
-    TypetotalMod_df = pd.read_csv(fpath1,sep='\t')
+    while True:
+        file1 =  ''
+        try:
+            print("Select result file 1 for comparision")
+            fpath = ui.pick_path()
+            Typetotal_df = pd.read_csv(fpath, sep='\t')
+            file1 = os.path.basename(fpath)
+            break
+        except pderror.EmptyDataError:
+            print (f'The input file {file1} is empty. Select another file')
+
+    while True:
+        file2 = ''
+        try:
+            print("Select result file 2 for comparision")
+            fpath1 = ui.pick_path()
+            TypetotalMod_df = pd.read_csv(fpath1,sep='\t')
+            file2 = os.path.basename(fpath1)
+            break
+        except pderror.EmptyDataError:
+            print(f'The input file {file2}is empty. Select another file')
+
 
     #Check if the files are comparable
     Typetotal_df_header = list(Typetotal_df.columns)
@@ -34,8 +52,31 @@ if __name__ == '__main__':
         print(' The header rows of both files do not match. The files cannot be compared')
 
     else:
+        #check if the files have data
+        if len(Typetotal_df.index) == 0:
+            print(f'Files cannot be compared to since {fpath} has no data.')
+            exit(0)
+
+        if len(TypetotalMod_df.index) == 0:
+            print(f'Files cannot be compared to since {fpath1} has no data.')
+            exit(0)
+
+        #Define group columns for comparsion and check if the set is unique in each file.
+        grp_cols = ['Contest', 'ReportingUnit', 'Selection']
+        if 'CountItemType' in Typetotal_df.columns:
+            grp_cols.append('CountItemType')
+
+        if Typetotal_df.set_index(grp_cols).index.is_unique is False:
+            print(f'The files cannot be compared since columns {grp_cols} of {fpath} do not uniquely identify the rows.')
+            exit(0)
+
+        if TypetotalMod_df.set_index(grp_cols).index.is_unique is False:
+            print(f'The files cannot be compared since columns {grp_cols} of {fpath1} do not uniquely identify the rows.')
+            exit(0)
+
         # Find rows which are different between two DataFrames.
         comparison_df = Typetotal_df.merge(TypetotalMod_df, indicator=True, how='outer')
+
 
         #case 1
         merge_types = ['left_only','right_only']
@@ -43,7 +84,6 @@ if __name__ == '__main__':
         if len(diff_df.index) == 0:
             print(f'No discrepancies found between \n {fpath} and \n {fpath1}')
         else:
-
             #case 2
             #Define coulumns to group by and campare
             grp_cols = ['Contest', 'ReportingUnit', 'Selection']
