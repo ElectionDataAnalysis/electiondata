@@ -4,6 +4,7 @@ import os
 import munge_routines as mr
 import user_interface as ui
 import juris_and_munger as jm
+import db_routines as db
 from pathlib import Path
 
 
@@ -43,11 +44,18 @@ def get_element(juris_path: str,element: str) -> pd.DataFrame:
 	return element_df
 
 
-def write_element(juris_path: str, element: str, df: pd.DataFrame):
+def write_element(juris_path: str, element: str, df: pd.DataFrame, file_name=None) -> str:
 	"""<juris> is path to jurisdiction directory. Info taken
 	from <element>.txt file in that directory"""
-	df.drop_duplicates().fillna('').to_csv(os.path.join(juris_path,f'{element}.txt'),index=False,sep='\t')
-	return
+	if not file_name:
+		file_name = f'{element}.txt'
+	dupes_df, deduped = ui.find_dupes(df)
+	deduped.drop_duplicates().fillna('').to_csv(os.path.join(juris_path, file_name), index=False,sep='\t')
+	if dupes_df.empty:
+		err = None
+	else:
+		err = f'Duplicate lines:\n{dupes_df}'
+	return err
 
 
 def add_defaults(juris_path: str, juris_template_dir: str, element: str):
@@ -95,9 +103,6 @@ def add_district_contests(juris_path: str,count: dict,ru_type: dict):
 	w_office = get_element(juris_path,'Office')
 	w_ru = get_element(juris_path,'ReportingUnit')
 	w_cc = get_element(juris_path,'CandidateContest')
-	new_office = {}
-	new_ru = {}
-	new_cc = {}
 	cols_off = ['Name','ElectionDistrict']
 	cols_ru = ['Name','ReportingUnitType']
 	cols_cc = ['Name','NumberElected','Office','PrimaryParty']
@@ -168,8 +173,9 @@ class JurisdictionPrepper():
 		# add all primary CandidateContests
 		error['primaries'] = add_primary_contests(self.d['jurisdiction_path'])
 		
-		# TODO Feature create starter dictionary.txt with cdf_internal name
+		# Feature create starter dictionary.txt with cdf_internal name
 		#  used as placeholder for raw_identifier_value
+		error['dictionary'] = self.starter_dictionary()
 		return error
 
 	def add_primaries_to_dict(self):
@@ -233,6 +239,29 @@ class JurisdictionPrepper():
 		if we.shape[1] > 1 and not new_internal_df.empty:
 			error['warning'] = f'New rows added to {element}.txt, but data may be missing from some fields in those rows.'
 		return error
+
+	def starter_dictionary(self,include_existing=True) -> str:
+		"""Creates a starter file for dictionary.txt, assuming raw_identifiers are the same as cdf_internal names.
+		Puts file in the current directory"""
+		w = dict()
+		elements = ['BallotMeasureContest','Candidate','CandidateContest','Election','Office','Party','ReportingUnit']
+		old = get_element(self.d['jurisdiction_path'],'dictionary')
+		if not include_existing:
+			old.drop()
+		for element in elements:
+			w[element] = get_element(self.d['jurisdiction_path'],element)
+			name_field = db.get_name_field(element)
+			w[element] = mr.add_constant_column(w[element],'cdf_element',element)
+			w[element].rename(columns={name_field:'cdf_internal_name'},inplace=True)
+			w[element]['raw_identifier_value'] = w[element]['cdf_internal_name']
+
+		starter_file_name = f'{self.d["abbreviated_name"]}_starter_dictionary.txt'
+		err = write_element(
+			'.','dictionary',pd.concat(
+				[w[element][['cdf_element','cdf_internal_name','raw_identifier_value']] for element in elements]),
+			file_name=starter_file_name)
+		print(f'Starter dictionary created: {starter_file_name}')
+		return err
 
 	def __init__(self):
 		self.d, self.parameter_err = ui.get_runtime_parameters(
