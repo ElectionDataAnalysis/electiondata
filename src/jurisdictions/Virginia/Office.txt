@@ -1,0 +1,157 @@
+Name	ElectionDistrict
+VA House District 1	VA House District 1
+VA House District 2	VA House District 2
+VA House District 3	VA House District 3
+VA House District 4	VA House District 4
+VA House District 5	VA House District 5
+VA House District 6	VA House District 6
+VA House District 7	VA House District 7
+VA House District 8	VA House District 8
+VA House District 9	VA House District 9
+VA House District 10	VA House District 10
+VA House District 11	VA House District 11
+VA House District 12	VA House District 12
+VA House District 13	VA House District 13
+VA House District 14	VA House District 14
+VA House District 15	VA House District 15
+VA House District 16	VA House District 16
+VA House District 17	VA House District 17
+VA House District 18	VA House District 18
+VA House District 19	VA House District 19
+VA House District 20	VA House District 20
+VA House District 21	VA House District 21
+VA House District 22	VA House District 22
+VA House District 23	VA House District 23
+VA House District 24	VA House District 24
+VA House District 25	VA House District 25
+VA House District 26	VA House District 26
+VA House District 27	VA House District 27
+VA House District 28	VA House District 28
+VA House District 29	VA House District 29
+VA House District 30	VA House District 30
+VA House District 31	VA House District 31
+VA House District 32	VA House District 32
+VA House District 33	VA House District 33
+VA House District 34	VA House District 34
+VA House District 35	VA House District 35
+VA House District 36	VA House District 36
+VA House District 37	VA House District 37
+VA House District 38	VA House District 38
+VA House District 39	VA House District 39
+VA House District 40	VA House District 40
+VA House District 41	VA House District 41
+VA House District 42	VA House District 42
+VA House District 43	VA House District 43
+VA House District 44	VA House District 44
+VA House District 45	VA House District 45
+VA House District 46	VA House District 46
+VA House District 47	VA House District 47
+VA House District 48	VA House District 48
+VA House District 49	VA House District 49
+VA House District 50	VA House District 50
+VA House District 51	VA House District 51
+VA House District 52	VA House District 52
+VA House District 53	VA House District 53
+VA House District 54	VA House District 54
+VA House District 55	VA House District 55
+VA House District 56	VA House District 56
+VA House District 57	VA House District 57
+VA House District 58	VA House District 58
+VA House District 59	VA House District 59
+VA House District 60	VA House District 60
+VA House District 61	VA House District 61
+VA House District 62	VA House District 62
+VA House District 63	VA House District 63
+VA House District 64	VA House District 64
+VA House District 65	VA House District 65
+VA House District 66	VA House District 66
+VA House District 67	VA House District 67
+VA House District 68	VA House District 68
+VA House District 69	VA House District 69
+VA House District 70	VA House District 70
+VA House District 71	VA House District 71
+VA House District 72	VA House District 72
+VA House District 73	VA House District 73
+VA House District 74	VA House District 74
+VA House District 75	VA House District 75
+VA House District 76	VA House District 76
+VA House District 77	VA House District 77
+VA House District 78	VA House District 78
+VA House District 79	VA House District 79
+VA House District 80	VA House District 80
+VA House District 81	VA House District 81
+VA House District 82	VA House District 82
+VA House District 83	VA House District 83
+VA House District 84	VA House District 84
+VA House District 85	VA House District 85
+VA House District 86	VA House District 86
+VA House District 87	VA House District 87
+VA House District 88	VA House District 88
+VA House District 89	VA House District 89
+VA House District 90	VA House District 90
+VA House District 91	VA House District 91
+VA House District 92	VA House District 92
+VA House District 93	VA House District 93
+VA House District 94	VA House District 94
+VA House District 95	VA House District 95
+VA House District 96	VA House District 96
+VA House District 97	VA House District 97
+VA House District 98	VA House District 98
+VA House District 99	VA House District 99
+VA House District 100	VA House District 100
+VA Senate District 1	VA Senate District 1
+VA Senate District 2	VA Senate District 2
+VA Senate District 3	VA Senate District 3
+VA Senate District 4	VA Senate District 4
+VA Senate District 5	VA Senate District 5
+VA Senate District 6	VA Senate District 6
+VA Senate District 7	VA Senate District 7
+VA Senate District 8	VA Senate District 8
+VA Senate District 9	VA Senate District 9
+VA Senate District 10	VA Senate District 10
+VA Senate District 11	VA Senate District 11
+VA Senate District 12	VA Senate District 12
+VA Senate District 13	VA Senate District 13
+VA Senate District 14	VA Senate District 14
+VA Senate District 15	VA Senate District 15
+VA Senate District 16	VA Senate District 16
+VA Senate District 17	VA Senate District 17
+VA Senate District 18	VA Senate District 18
+VA Senate District 19	VA Senate District 19
+VA Senate District 20	VA Senate District 20
+VA Senate District 21	VA Senate District 21
+VA Senate District 22	VA Senate District 22
+VA Senate District 23	VA Senate District 23
+VA Senate District 24	VA Senate District 24
+VA Senate District 25	VA Senate District 25
+VA Senate District 26	VA Senate District 26
+VA Senate District 27	VA Senate District 27
+VA Senate District 28	VA Senate District 28
+VA Senate District 29	VA Senate District 29
+VA Senate District 30	VA Senate District 30
+VA Senate District 31	VA Senate District 31
+VA Senate District 32	VA Senate District 32
+VA Senate District 33	VA Senate District 33
+VA Senate District 34	VA Senate District 34
+VA Senate District 35	VA Senate District 35
+VA Senate District 36	VA Senate District 36
+VA Senate District 37	VA Senate District 37
+VA Senate District 38	VA Senate District 38
+VA Senate District 39	VA Senate District 39
+VA Senate District 40	VA Senate District 40
+US House VA District 1	US House VA District 1
+US House VA District 2	US House VA District 2
+US House VA District 3	US House VA District 3
+US House VA District 4	US House VA District 4
+US House VA District 5	US House VA District 5
+US House VA District 6	US House VA District 6
+US House VA District 7	US House VA District 7
+US House VA District 8	US House VA District 8
+US House VA District 9	US House VA District 9
+US House VA District 10	US House VA District 10
+US House VA District 11	US House VA District 11
+VA Governor	Virginia
+US Senate VA	Virginia
+VA Attorney General	Virginia
+VA Lieutenant Governor	Virginia
+VA Treasurer	Virginia
