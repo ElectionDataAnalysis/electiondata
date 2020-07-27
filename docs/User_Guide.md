@@ -76,7 +76,9 @@ Lists of reporting units will be quite long, in which case searching by substrin
 Here we have used the capability of `display_options()` to take as an argument either a general database category ('reporting unit') or a type ('county'). 
 
 ## Create or Repair a Jurisdiction
-There are routines in the `preparation` module to help prepare a jurisdiction. 
+There are routines in the `JurisdictionPrepper()` class to help prepare a jurisdiction.
+ * `JurisdictionPrepper()` reads parameters about the  file (`new_jurisdiction.par`) to create the 
+ * The method `new_juris_files()` builds a directory for the jurisdiction, including starter files with the standard contests.
 
 If the `juris_name` given in `run_time.par` does not exist,`DataLoader()` will create a folder for that jurisdiction, with template files and record error. Then `check_error()` will show the errors. Before proceeding, edit the jurisdiction files appropriately for your jurisdiction. The system may detect errors.
 
