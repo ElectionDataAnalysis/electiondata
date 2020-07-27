@@ -7,4 +7,6 @@ Select result file 2 for comparison.
 
 1.Both the files are expected to have same headers. The program expects the files to have following columns.
 ['Contest', 'ReportingUnit', 'Selection', 'Count']
+2. The program expects ['Contest', 'ReportingUnit', 'Selection'] columns to uniquely identify each row in a file. In other words, the st is expected to form a primary key. 
+
 
