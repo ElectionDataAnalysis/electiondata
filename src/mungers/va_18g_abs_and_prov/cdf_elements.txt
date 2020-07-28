@@ -2,7 +2,7 @@ name	raw_identifier_formula	source
 ReportingUnit	<LocalityName>	row
 Party	<Party>	row
 CandidateContest	<OfficeTitle> District <DistrictName>	row
-Candidate	<LastName>, <FirstName> <MiddleName>	row
+Candidate	<FirstName> <MiddleName> <LastName> <Suffix>	row
 BallotMeasureContest	placeholder	row
 BallotMeasureSelection	placeholder	row
 CountItemType	<PrecinctName>	row
