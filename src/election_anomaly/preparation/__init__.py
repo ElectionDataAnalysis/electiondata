@@ -12,7 +12,7 @@ prep_param_list = ['project_root', 'jurisdiction_path', 'name', 'abbreviated_nam
 					'count_of_state_house_districts',
 					'count_of_state_senate_districts',
 				   'count_of_us_house_districts',
-				   'reporting_unit_type']
+				   'reporting_unit_type','munger_name','results_file']
 
 
 def primary(row: pd.Series, party: str, mode: str) -> str:
@@ -229,11 +229,11 @@ class JurisdictionPrepper():
 		write_element(self.d['jurisdiction_path'], 'CandidateContest', w_cc.drop_duplicates())
 		return
 
-	def add_elements_from_datafile(self,results: pd.DataFrame, mu: jm.Munger, element: str, error: dict,
-			name_field='Name') -> dict:
+	def add_elements_from_datafile(
+			self,results: pd.DataFrame, mu: jm.Munger, element: str, error: dict) -> dict:
 		"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
 		or not already in <element>.txt"""
-		error = dict()
+		name_field = db.get_name_field(element)
 		wr = results.copy()
 		# append <element>_raw
 		wr.columns = [f'{x}_SOURCE' for x in wr.columns]

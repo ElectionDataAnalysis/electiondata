@@ -434,12 +434,13 @@ def munge_and_melt(mu,raw,count_cols,err):
 
 
 def add_constant_column(df,col_name,col_value):
-    new_col = pd.DataFrame([col_value]*df.shape[0],columns=[col_name])
-    new_df = pd.concat([df,new_col],axis=1)
+    new_df = df.assign(**dict.fromkeys([col_name], col_value))
     return new_df
 
 
-def raw_elements_to_cdf(session,project_root,juris,mu,raw: pd.DataFrame,count_cols,err,ids=None):
+def raw_elements_to_cdf(
+        session, project_root: str, juris: jm.Jurisdiction, mu: jm.Munger,raw: pd.DataFrame, count_cols: list,
+        err: dict, ids=None) -> dict:
     """load data from <raw> into the database."""
     working = raw.copy()
 
@@ -520,7 +521,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw: pd.DataFrame,count_co
     # TODO maybe introduce Selection and Contest tables, have C an BM types refer to them?
 
     c_df = working[['Candidate_Id','Party_Id']]
-    c_df.drop_duplicates(inplace=True)
+    c_df = c_df.drop_duplicates()
     c_df = c_df[c_df['Candidate_Id'].notnull()]
     cs_df, e = dbr.dframe_to_sql(c_df,session,'CandidateSelection',return_records='original')
     if e:
@@ -528,7 +529,7 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw: pd.DataFrame,count_co
     # add CandidateSelection_Id column, merging on Candidate_Id and Party_Id
 
     if cs_df.empty:
-        add_constant_column(working,'CandidateSelection_Id', np.nan)
+        working = add_constant_column(working, 'CandidateSelection_Id', np.nan)
     else:
         working = working.merge(
             cs_df[['Party_Id','Candidate_Id','Id']],how='left',
@@ -537,10 +538,14 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw: pd.DataFrame,count_co
 
     # drop records with a CC_Id but no CS_Id (i.e., keep if CC_Id is null or CS_Id is not null)
     working = working[(working['CandidateContest_Id'].isnull()) | (working['CandidateSelection_Id']).notnull()]
-    # TODO: warn user if contest is munged but candidates are not
+    if working.empty:
+        e = 'No contests found, or no selections found for contests.'
+        err = ui.add_error(err,'datafile',e)
+        return err
+
     # TODO warn user if BallotMeasureSelections not recognized in dictionary.txt
     for j in ['BallotMeasureContestSelectionJoin','CandidateContestSelectionJoin','ElectionContestJoin']:
-        working = append_join_id(project_root,session,working,j,err)
+        working, err = append_join_id(project_root, session, working,j,err)
 
     # Fill VoteCount and ElectionContestSelectionVoteCountJoin
     #  To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
