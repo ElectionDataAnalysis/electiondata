@@ -378,7 +378,6 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 	unsummed = unsummed[unsummed['ReportingUnit_Id'] == unsummed['ParentReportingUnit_Id']]
 
 	ranked = assign_anomaly_score(unsummed)
-	return ranked
 	top_ranked = get_most_anomalous(ranked, 3)
 
 	# package into list of dictionary
@@ -423,8 +422,6 @@ def assign_anomaly_score(data):
 	distinct combination of contest, reporting unit type, and vote type. Each 
 	combination of those would get assigned an ID. This means rows may get added
 	to the dataframe if needed."""
-	import numpy as np
-	data['score'] = np.random.rand(data.shape[0])
 
 	# assign unit_ids to contest, ru_type, and count type
 	# currently this only looks at the most granular level, not rolled up
@@ -435,13 +432,19 @@ def assign_anomaly_score(data):
 	data = data.merge(df_unit, how='left', on=['Contest_Id', 'ReportingUnitType_Id', 'CountItemType'])
 
 	unit_ids = data['unit_id'].unique()
+	df = pd.DataFrame()
 	for unit_id in unit_ids:
 		temp_df = data[data['unit_id'] == unit_id]
-		return temp_df
-		print(temp_df)
-		input()
-
-	return data
+		pivot_df = pd.pivot_table(temp_df, values='Count', index=['ReportingUnit_Id'], \
+			columns='Selection').sort_values('ReportingUnit_Id').reset_index()
+		pivot_df_values = pivot_df.drop(columns='ReportingUnit_Id')
+		to_drop = pivot_df_values.columns
+		scored = euclidean_zscore(pivot_df_values.values)
+		pivot_df['score'] = scored
+		temp_df = temp_df.merge(pivot_df, how='left', on='ReportingUnit_Id') \
+					.drop(columns=to_drop)
+		df = pd.concat([df, temp_df])
+	return df
 
 
 def get_most_anomalous(data, n):
