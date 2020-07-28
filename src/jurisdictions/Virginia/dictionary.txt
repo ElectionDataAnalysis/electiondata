@@ -1,10 +1,8 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-CandidateContest	VA House District 1 (Democratic Party)	1st State House District (DEM)
-CandidateContest	VA House District 1 (Republican Party)	1st State House District (REP)
-CandidateContest	VA House District 1	1st State House District
-CandidateContest	US Congress VA District 2	2nd Congressional District
-Party	Democratic Party	DEM
-Party	Republican Party	REP
+Party	Democratic Party	Democratic
+Party	Republican Party	Republican
+Party	Libertarian Party	Libertarian
+Party	Independent Party	Independent
 CountItemType	absentee	# AB - Central Absentee Precinct
 CountItemType	provisional	## Provisional
 ReportingUnit	Virginia;Falls Church City	FALLS CHURCH CITY
@@ -140,3 +138,173 @@ ReportingUnit	Virginia;Westmoreland County	WESTMORELAND COUNTY
 ReportingUnit	Virginia;Wise County	WISE COUNTY
 ReportingUnit	Virginia;Wythe County	WYTHE COUNTY
 ReportingUnit	Virginia;York County	YORK COUNTY
+CandidateContest	VA House District 1	Member House of Delegates District 1
+CandidateContest	VA House District 2	Member House of Delegates District 2
+CandidateContest	VA House District 3	Member House of Delegates District 3
+CandidateContest	VA House District 4	Member House of Delegates District 4
+CandidateContest	VA House District 5	Member House of Delegates District 5
+CandidateContest	VA House District 6	Member House of Delegates District 6
+CandidateContest	VA House District 7	Member House of Delegates District 7
+CandidateContest	VA House District 8	Member House of Delegates District 8
+CandidateContest	VA House District 9	Member House of Delegates District 9
+CandidateContest	VA House District 10	Member House of Delegates District 10
+CandidateContest	VA House District 11	Member House of Delegates District 11
+CandidateContest	VA House District 12	Member House of Delegates District 12
+CandidateContest	VA House District 13	Member House of Delegates District 13
+CandidateContest	VA House District 14	Member House of Delegates District 14
+CandidateContest	VA House District 15	Member House of Delegates District 15
+CandidateContest	VA House District 16	Member House of Delegates District 16
+CandidateContest	VA House District 17	Member House of Delegates District 17
+CandidateContest	VA House District 18	Member House of Delegates District 18
+CandidateContest	VA House District 19	Member House of Delegates District 19
+CandidateContest	VA House District 20	Member House of Delegates District 20
+CandidateContest	VA House District 21	Member House of Delegates District 21
+CandidateContest	VA House District 22	Member House of Delegates District 22
+CandidateContest	VA House District 23	Member House of Delegates District 23
+CandidateContest	VA House District 24	Member House of Delegates District 24
+CandidateContest	VA House District 25	Member House of Delegates District 25
+CandidateContest	VA House District 26	Member House of Delegates District 26
+CandidateContest	VA House District 27	Member House of Delegates District 27
+CandidateContest	VA House District 28	Member House of Delegates District 28
+CandidateContest	VA House District 29	Member House of Delegates District 29
+CandidateContest	VA House District 30	Member House of Delegates District 30
+CandidateContest	VA House District 31	Member House of Delegates District 31
+CandidateContest	VA House District 32	Member House of Delegates District 32
+CandidateContest	VA House District 33	Member House of Delegates District 33
+CandidateContest	VA House District 34	Member House of Delegates District 34
+CandidateContest	VA House District 35	Member House of Delegates District 35
+CandidateContest	VA House District 36	Member House of Delegates District 36
+CandidateContest	VA House District 37	Member House of Delegates District 37
+CandidateContest	VA House District 38	Member House of Delegates District 38
+CandidateContest	VA House District 39	Member House of Delegates District 39
+CandidateContest	VA House District 40	Member House of Delegates District 40
+CandidateContest	VA House District 41	Member House of Delegates District 41
+CandidateContest	VA House District 42	Member House of Delegates District 42
+CandidateContest	VA House District 43	Member House of Delegates District 43
+CandidateContest	VA House District 44	Member House of Delegates District 44
+CandidateContest	VA House District 45	Member House of Delegates District 45
+CandidateContest	VA House District 46	Member House of Delegates District 46
+CandidateContest	VA House District 47	Member House of Delegates District 47
+CandidateContest	VA House District 48	Member House of Delegates District 48
+CandidateContest	VA House District 49	Member House of Delegates District 49
+CandidateContest	VA House District 50	Member House of Delegates District 50
+CandidateContest	VA House District 51	Member House of Delegates District 51
+CandidateContest	VA House District 52	Member House of Delegates District 52
+CandidateContest	VA House District 53	Member House of Delegates District 53
+CandidateContest	VA House District 54	Member House of Delegates District 54
+CandidateContest	VA House District 55	Member House of Delegates District 55
+CandidateContest	VA House District 56	Member House of Delegates District 56
+CandidateContest	VA House District 57	Member House of Delegates District 57
+CandidateContest	VA House District 58	Member House of Delegates District 58
+CandidateContest	VA House District 59	Member House of Delegates District 59
+CandidateContest	VA House District 60	Member House of Delegates District 60
+CandidateContest	VA House District 61	Member House of Delegates District 61
+CandidateContest	VA House District 62	Member House of Delegates District 62
+CandidateContest	VA House District 63	Member House of Delegates District 63
+CandidateContest	VA House District 64	Member House of Delegates District 64
+CandidateContest	VA House District 65	Member House of Delegates District 65
+CandidateContest	VA House District 66	Member House of Delegates District 66
+CandidateContest	VA House District 67	Member House of Delegates District 67
+CandidateContest	VA House District 68	Member House of Delegates District 68
+CandidateContest	VA House District 69	Member House of Delegates District 69
+CandidateContest	VA House District 70	Member House of Delegates District 70
+CandidateContest	VA House District 71	Member House of Delegates District 71
+CandidateContest	VA House District 72	Member House of Delegates District 72
+CandidateContest	VA House District 73	Member House of Delegates District 73
+CandidateContest	VA House District 74	Member House of Delegates District 74
+CandidateContest	VA House District 75	Member House of Delegates District 75
+CandidateContest	VA House District 76	Member House of Delegates District 76
+CandidateContest	VA House District 77	Member House of Delegates District 77
+CandidateContest	VA House District 78	Member House of Delegates District 78
+CandidateContest	VA House District 79	Member House of Delegates District 79
+CandidateContest	VA House District 80	Member House of Delegates District 80
+CandidateContest	VA House District 81	Member House of Delegates District 81
+CandidateContest	VA House District 82	Member House of Delegates District 82
+CandidateContest	VA House District 83	Member House of Delegates District 83
+CandidateContest	VA House District 84	Member House of Delegates District 84
+CandidateContest	VA House District 85	Member House of Delegates District 85
+CandidateContest	VA House District 86	Member House of Delegates District 86
+CandidateContest	VA House District 87	Member House of Delegates District 87
+CandidateContest	VA House District 88	Member House of Delegates District 88
+CandidateContest	VA House District 89	Member House of Delegates District 89
+CandidateContest	VA House District 90	Member House of Delegates District 90
+CandidateContest	VA House District 91	Member House of Delegates District 91
+CandidateContest	VA House District 92	Member House of Delegates District 92
+CandidateContest	VA House District 93	Member House of Delegates District 93
+CandidateContest	VA House District 94	Member House of Delegates District 94
+CandidateContest	VA House District 95	Member House of Delegates District 95
+CandidateContest	VA House District 96	Member House of Delegates District 96
+CandidateContest	VA House District 97	Member House of Delegates District 97
+CandidateContest	VA House District 98	Member House of Delegates District 98
+CandidateContest	VA House District 99	Member House of Delegates District 99
+CandidateContest	VA House District 100	Member House of Delegates District 100
+CandidateContest	VA Senate District 1	Member Senate of Virginia District 1
+CandidateContest	VA Senate District 2	Member Senate of Virginia District 2
+CandidateContest	VA Senate District 3	Member Senate of Virginia District 3
+CandidateContest	VA Senate District 4	Member Senate of Virginia District 4
+CandidateContest	VA Senate District 5	Member Senate of Virginia District 5
+CandidateContest	VA Senate District 6	Member Senate of Virginia District 6
+CandidateContest	VA Senate District 7	Member Senate of Virginia District 7
+CandidateContest	VA Senate District 8	Member Senate of Virginia District 8
+CandidateContest	VA Senate District 9	Member Senate of Virginia District 9
+CandidateContest	VA Senate District 10	Member Senate of Virginia District 10
+CandidateContest	VA Senate District 11	Member Senate of Virginia District 11
+CandidateContest	VA Senate District 12	Member Senate of Virginia District 12
+CandidateContest	VA Senate District 13	Member Senate of Virginia District 13
+CandidateContest	VA Senate District 14	Member Senate of Virginia District 14
+CandidateContest	VA Senate District 15	Member Senate of Virginia District 15
+CandidateContest	VA Senate District 16	Member Senate of Virginia District 16
+CandidateContest	VA Senate District 17	Member Senate of Virginia District 17
+CandidateContest	VA Senate District 18	Member Senate of Virginia District 18
+CandidateContest	VA Senate District 19	Member Senate of Virginia District 19
+CandidateContest	VA Senate District 20	Member Senate of Virginia District 20
+CandidateContest	VA Senate District 21	Member Senate of Virginia District 21
+CandidateContest	VA Senate District 22	Member Senate of Virginia District 22
+CandidateContest	VA Senate District 23	Member Senate of Virginia District 23
+CandidateContest	VA Senate District 24	Member Senate of Virginia District 24
+CandidateContest	VA Senate District 25	Member Senate of Virginia District 25
+CandidateContest	VA Senate District 26	Member Senate of Virginia District 26
+CandidateContest	VA Senate District 27	Member Senate of Virginia District 27
+CandidateContest	VA Senate District 28	Member Senate of Virginia District 28
+CandidateContest	VA Senate District 29	Member Senate of Virginia District 29
+CandidateContest	VA Senate District 30	Member Senate of Virginia District 30
+CandidateContest	VA Senate District 31	Member Senate of Virginia District 31
+CandidateContest	VA Senate District 32	Member Senate of Virginia District 32
+CandidateContest	VA Senate District 33	Member Senate of Virginia District 33
+CandidateContest	VA Senate District 34	Member Senate of Virginia District 34
+CandidateContest	VA Senate District 35	Member Senate of Virginia District 35
+CandidateContest	VA Senate District 36	Member Senate of Virginia District 36
+CandidateContest	VA Senate District 37	Member Senate of Virginia District 37
+CandidateContest	VA Senate District 38	Member Senate of Virginia District 38
+CandidateContest	VA Senate District 39	Member Senate of Virginia District 39
+CandidateContest	VA Senate District 40	Member Senate of Virginia District 40
+CandidateContest	US House VA District 1	Member House of Representatives District 1
+CandidateContest	US House VA District 2	Member House of Representatives District 2
+CandidateContest	US House VA District 3	Member House of Representatives District 3
+CandidateContest	US House VA District 4	Member House of Representatives District 4
+CandidateContest	US House VA District 5	Member House of Representatives District 5
+CandidateContest	US House VA District 6	Member House of Representatives District 6
+CandidateContest	US House VA District 7	Member House of Representatives District 7
+CandidateContest	US House VA District 8	Member House of Representatives District 8
+CandidateContest	US House VA District 9	Member House of Representatives District 9
+CandidateContest	US House VA District 10	Member House of Representatives District 10
+CandidateContest	US House VA District 11	Member House of Representatives District 11
+CandidateContest	VA Governor	Governor
+CandidateContest	VA Lieutenant Governor	Lieutenant Governor
+CandidateContest	US Senate VA	Member United States Senate District 1
+CandidateContest	US Senate VA	Member United States Senate District 2
+CandidateContest	US Senate VA	Member United States Senate District 3
+CandidateContest	US Senate VA	Member United States Senate District 4
+CandidateContest	US Senate VA	Member United States Senate District 5
+CandidateContest	US Senate VA	Member United States Senate District 6
+CandidateContest	US Senate VA	Member United States Senate District 7
+CandidateContest	US Senate VA	Member United States Senate District 8
+CandidateContest	US Senate VA	Member United States Senate District 9
+CandidateContest	US Senate VA	Member United States Senate District 10
+CandidateContest	US Senate VA	Member United States Senate District 11
+CandidateContest	VA School Board Chairman	Chairman - School Board
+CandidateContest	VA Clerk of Court	Clerk of Court
+CandidateContest	VA Commissioner of Revenue	Commissioner of Revenue
+CandidateContest	VA Commonwealth's Attorney	Commonwealth's Attorney
+CandidateContest	VA Sheriff	Sheriff
+CandidateContest	VA Treasurer	Treasurer

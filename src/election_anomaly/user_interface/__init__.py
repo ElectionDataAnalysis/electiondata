@@ -5,6 +5,7 @@ from election_anomaly import db_routines as dbr
 from election_anomaly.db_routines import create_cdf_db as db_cdf
 from election_anomaly import munge_routines as mr
 import pandas as pd
+from pandas.errors import ParserError, ParserWarning
 import numpy as np
 import csv
 from sqlalchemy.orm import sessionmaker
@@ -564,7 +565,7 @@ def enter_and_check_datatype(question,datatype):
 	return answer
 
 
-def read_single_datafile(munger, f_path, err):
+def read_single_datafile(munger: sf.Munger, f_path: str, err: dict) -> [pd.DataFrame, dict]:
 	try:
 		kwargs = {'thousands': munger.thousands_separator}
 		if munger.field_name_row is None:
@@ -597,52 +598,57 @@ def read_single_datafile(munger, f_path, err):
 				err['format.txt'] = [e]
 		else:
 			df = mr.generic_clean(df)
-		return df, err
-	except:
+			err = sf.check_results_munger_compatibility(munger, df, err)
+		return [df, err]
+	except UnicodeDecodeError as ude:
+		e = f'Encoding error. Datafile not read completely.\n{ude}'
+	except ParserError as pe:
 		# DFs have trouble comparing against None. So we return an empty DF and 
 		# check for emptiness below as an indication of an error.
-		e = f'Nothing read from datafile; if datafile is not empty, look for inconsistency in format.txt.'
-		if 'format.txt' in err.keys():
-			err['format.txt'].append(e)
-		else:
-			err['format.txt'] = [e]
-		return pd.DataFrame(), err
+		e = f'Error parsing results file.\n{pe}'
+	if 'datafile' in err.keys():
+		err['datafile'].append(e)
+	else:
+		err['datafile'] = [e]
+	return [pd.DataFrame(), err]
 
 
 def read_combine_results(mu: sf.Munger, results_file, project_root, err, aux_data_dir=None):
 	working, err = read_single_datafile(mu, results_file, err)
-	working = mr.cast_cols_as_int(working, mu.count_columns,mode='index')
+	if err:
+		return pd.DataFrame(), err
+	else:
+		working = mr.cast_cols_as_int(working, mu.count_columns,mode='index')
 
-	# merge with auxiliary files (if any)
-	if aux_data_dir is not None:
-		# get auxiliary data (includes cleaning and setting (multi-)index of primary key column(s))
-		aux_data,err = mu.get_aux_data(aux_data_dir, err,project_root=project_root)
-		for abbrev,r in mu.aux_meta.iterrows():
-			# cast foreign key columns of main results file as int if possible
-			foreign_key = r['foreign_key'].split(',')
-			working = mr.cast_cols_as_int(working,foreign_key)
-			# rename columns
-			col_rename = {f'{c}':f'{abbrev}[{c}]' for c in aux_data[abbrev].columns}
-			# merge auxiliary info into <working>
-			a_d = aux_data[abbrev].rename(columns=col_rename)
-			working = working.merge(a_d,how='left',left_on=foreign_key,right_index=True)
+		# merge with auxiliary files (if any)
+		if aux_data_dir is not None:
+			# get auxiliary data (includes cleaning and setting (multi-)index of primary key column(s))
+			aux_data,err = mu.get_aux_data(aux_data_dir, err,project_root=project_root)
+			for abbrev,r in mu.aux_meta.iterrows():
+				# cast foreign key columns of main results file as int if possible
+				foreign_key = r['foreign_key'].split(',')
+				working = mr.cast_cols_as_int(working,foreign_key)
+				# rename columns
+				col_rename = {f'{c}':f'{abbrev}[{c}]' for c in aux_data[abbrev].columns}
+				# merge auxiliary info into <working>
+				a_d = aux_data[abbrev].rename(columns=col_rename)
+				working = working.merge(a_d,how='left',left_on=foreign_key,right_index=True)
 
 	return working, err
 
 
 def new_datafile(
-		session,munger:sf.Munger,raw_path,project_root=None,juris=None,results_info=None,aux_data_dir=None):
+		session,munger: sf.Munger, raw_path: str, project_root: str=None, juris:sf.Jurisdiction=None,
+		results_info:list=None,aux_data_dir: str=None) -> dict:
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
 	if not juris:
 		juris = pick_juris_from_filesystem(
 			project_root,juriss_dir='jurisdictions')
-	err = {}
+	err = None
 	raw, err = read_combine_results(munger, raw_path, project_root,err,aux_data_dir=aux_data_dir)
-
 	if raw.empty:
-		# TODO improve error tracking
 		e = f'No data read from datafile {raw_path}.'
 		if 'datafile' in err.keys():
 			err['datafile'].append(e)
@@ -652,12 +658,12 @@ def new_datafile(
 	
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
 
+
 	try:
 		raw = mr.munge_clean(raw, munger)
 	except:
-		print('Cleaning of datafile failed. Results not loaded to database. '
-			'Please check compatibilty between the two and try again.')
-		return
+		err['datafile'] = ['Cleaning of datafile failed. Results not loaded to database.']
+		return err
 
 	# NB: info_cols will have suffix added by munger
 
@@ -668,15 +674,16 @@ def new_datafile(
 
 	try:
 		err = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,err,ids=results_info)
-		if err:
-			print(f'{err}. Results not loaded to database.')
 	except:
-		print('Datafile not loaded. Results not loaded to database. '
-			'Please check compatibility of munger and datafile, and try again.')
-		return
+		e = 'Unspecified error during munging. Results not loaded to database.'
+		if 'datafile' in err.keys():
+			err['datafile'].append(e)
+		else:
+			err['datafile'] = [e]
+		return err
 
 	print(f'Datafile contents uploaded to database {session.bind.engine}')
-	return
+	return err
 
 
 def pick_or_create_directory(root_path,d_name):

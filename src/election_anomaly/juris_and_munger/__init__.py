@@ -2,6 +2,7 @@ import os.path
 
 from election_anomaly import db_routines as dbr
 import pandas as pd
+from pandas.api.types import is_numeric_dtype
 from election_anomaly import munge_routines as mr
 from election_anomaly import user_interface as ui
 import re
@@ -780,6 +781,27 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,load_refs,erro
             error[element]["foreign_key"] = \
             f"For some {element} records, {foreign_elt} was not found"
     return df
+
+
+def check_results_munger_compatibility(mu: Munger, df: pd.DataFrame, error: dict) -> dict:
+    # check that count columns exist
+    missing = [i for i in mu.count_columns if i >= df.shape[1]]
+    if missing:
+        e = f'Only {df.shape[1]} columns read from file. Check file_type in format.txt'
+        if 'datafile' in error.keys():
+            error['datafile'].append(e)
+        else:
+            error['datafile'] = e
+    else:
+        # check that count cols are numeric
+        for i in mu.count_columns:
+            if not is_numeric_dtype(df.iloc[:,i]):
+                e = f'Column {i} ({df.columns[i]}) is not numeric.'
+                if 'datafile' in error.keys():
+                    error['datafile'].append(e)
+                else:
+                    error['datafile'] = e
+    return error
 
 
 def check_element_against_raw_results(el,results_df,munger,numerical_columns,d,err=None):
