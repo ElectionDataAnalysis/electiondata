@@ -2,6 +2,7 @@ from election_anomaly import db_routines as dbr
 from election_anomaly import user_interface as ui
 from election_anomaly import juris_and_munger as jm
 import pandas as pd
+from pandas.api.types import is_numeric_dtype
 import re
 import os
 import numpy as np
@@ -14,13 +15,18 @@ class MungeError(Exception):
 def generic_clean(df:pd.DataFrame) -> pd.DataFrame:
     """Replaces nulls, strips whitespace."""
     # TODO put all info about data cleaning into README.md (e.g., whitespace strip)
-    # change all nulls to blank
-    df = df.fillna('')
-    # strip whitespace from non-integer columns
-    non_numerical = {df.columns.get_loc(c):c for idx,c in enumerate(df.columns) if df[c].dtype != 'int64'}
-    for location,name in non_numerical.items():
-        df.iloc[:,location] = df.iloc[:,location].apply(lambda x:x.strip())
-    return df
+    # TODO return error if cleaning fails, including dtypes of columns
+    working = df.copy()
+    for c in working.columns:
+        if is_numeric_dtype(working[c]):
+            working[c] = working[c].fillna(0)
+        else:
+            working[c] = working[c].fillna('')
+            try:
+                working[c] = working[c].apply(lambda x:x.strip())
+            except AttributeError:
+                pass
+    return working
 
 
 def cast_cols_as_int(df: pd.DataFrame, col_list: list,mode='name',error_msg='') -> pd.DataFrame:
