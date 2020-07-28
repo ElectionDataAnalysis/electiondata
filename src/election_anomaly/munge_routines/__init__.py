@@ -464,6 +464,8 @@ def raw_elements_to_cdf(session,project_root,juris,mu,raw,count_cols,err,ids=Non
             err['munge_warning'].append(e)
         else:
             err['munge_warning'] = [e]
+        return err
+
     elif not to_be_dropped.empty:
         e = f'Warning: Results for {to_be_dropped.shape[0]} rows ' \
             f'with unmatched contests will not be loaded to database.'

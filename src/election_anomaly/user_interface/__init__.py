@@ -673,12 +673,7 @@ def new_datafile(
 	juris.load_juris_to_db(session,project_root)
 
 	try:
-		e = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,err,ids=results_info)
-		if e:
-			if 'datafile' in err.keys():
-				err['datafile'].append(f'{e}. Results not loaded to database.')
-			else:
-				err['datafile'] = [f'{e}. Results not loaded to database.']
+		err = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,err,ids=results_info)
 	except:
 		e = 'Unspecified error during munging. Results not loaded to database.'
 		if 'datafile' in err.keys():
