@@ -646,7 +646,7 @@ def new_datafile(
 	if not juris:
 		juris = pick_juris_from_filesystem(
 			project_root,juriss_dir='jurisdictions')
-	err = None
+	err = dict()
 	raw, err = read_combine_results(munger, raw_path, project_root,err,aux_data_dir=aux_data_dir)
 	if raw.empty:
 		e = f'No data read from datafile {raw_path}.'
@@ -683,6 +683,8 @@ def new_datafile(
 		return err
 
 	print(f'Datafile contents uploaded to database {session.bind.engine}')
+	if err == dict():
+		err = None
 	return err
 
 
@@ -828,5 +830,15 @@ def set_record_info_from_user(sess,element,known_info_d={}):
 	db_record = {k: new[k] for k in db_cols}
 
 	return db_record, error
+
+
+def add_error(err: dict, key: str, msg: str) -> dict:
+	if msg:
+		if msg in err.keys():
+			err[key].append(msg)
+		else:
+			err[key] = msg
+	return err
+
 
 

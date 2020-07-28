@@ -52,7 +52,7 @@ def append_to_composing_reporting_unit_join(session,ru):
     if 'Id' not in ru.columns:
         ru_static = ru_static.merge(ru_cdf[['Name','Id']],on='Name',how='left')
 
-    # create a list of rows to append to the ComposingReportingUnitJoin table
+    # create a list of rows to append to the ComposingReportingUnitJoin element
     cruj_dframe_list = []
     for i in range(ru['length'].max()):
         # check that all components of all Reporting Units are themselves ReportingUnits
@@ -68,7 +68,7 @@ def append_to_composing_reporting_unit_join(session,ru):
             columns={'Id':'ChildReportingUnit_Id',f'Id_{i}':'ParentReportingUnit_Id'}))
     if cruj_dframe_list:
         cruj_dframe = pd.concat(cruj_dframe_list)
-        cruj_dframe, err = dframe_to_sql(cruj_dframe,session,'ComposingReportingUnitJoin')
+        cruj_dframe, e = dframe_to_sql(cruj_dframe,session,'ComposingReportingUnitJoin')
     else:
         cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin',session.bind)
     session.flush()
@@ -179,7 +179,7 @@ def get_cdf_db_table_names(eng):
     cdf_joins = set()
     others = set()
     for t in public.table_name.unique():
-        # main_routines table name string
+        # main_routines element name string
         if t[0] == '_':
             others.add(t)
         elif t[-4:] == 'Join':
@@ -232,7 +232,7 @@ def raw_query_via_sqlalchemy(session,q,sql_ids,strs):
 
 
 def get_enumerations(session,element):
-    """Returns a list of enumerations referenced in the <element> table"""
+    """Returns a list of enumerations referenced in the <element> element"""
     q = f"""
         SELECT column_name
         FROM information_schema.columns
@@ -245,7 +245,7 @@ def get_enumerations(session,element):
 
 
 def get_foreign_key_df(session,element):
-    """Returns a dataframe whose index is the name of the field in the <element> table, with columns
+    """Returns a dataframe whose index is the name of the field in the <element> element, with columns
     foreign_table_name and foreign_column_name"""
     q = f"""
         SELECT
@@ -278,19 +278,21 @@ def add_foreign_key_name_col(sess,df,foreign_key_col,foreign_key_element,drop_ol
     return df_copy
 
 
-def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecount=False,return_records='all'):
+def dframe_to_sql(
+        dframe: pd.DataFrame, session, element: str, index_col: str= 'Id', flush: bool=True,
+        raw_to_votecount: bool=False, return_records: str='all') -> [pd.DataFrame, str]:
     """
-    Given a dataframe <dframe >and an existing cdf db table <table>>, clean <dframe>
-    (i.e., drop any columns that are not in <table>, add null columns to match any missing columns)
-    append records any new records to the corresponding table in the db (and commit!)
+    Given a dataframe <dframe >and an existing cdf db element <element>>, clean <dframe>
+    (i.e., drop any columns that are not in <element>, add null columns to match any missing columns)
+    append records any new records to the corresponding element in the db (and commit!)
     Return the updated dataframe, including all rows from the db and all from the dframe.
     <return_records> is a flag defaulting to "all" (return all records in db)
     but can be set to "original" to return only the records from the input <dframe>.
 
     """
-    # pull copy of existing table
-    target = pd.read_sql_table(table,session.bind,index_col=index_col)
-    # VoteCount table gets added columns during raw data upload, needs special treatment
+    # pull copy of existing element
+    target = pd.read_sql_table(element, session.bind, index_col=index_col)
+    # VoteCount element gets added columns during raw data upload, needs special treatment
 
     if dframe.empty:
         if return_records == 'original':
@@ -317,10 +319,10 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
     target_only_cols = [x for x in target.columns if x not in dframe.columns]
     intersection_cols = [x for x in target.columns if x in dframe.columns]
 
-    # remove columns that don't exist in target table
+    # remove columns that don't exist in target element
     df_to_db = df_to_db.drop(dframe_only_cols, axis=1)
 
-    # add columns that exist in target table but are missing from original dframe
+    # add columns that exist in target element but are missing from original dframe
     for c in target_only_cols:
         df_to_db.loc[:,c] = None
 
@@ -331,22 +333,19 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
     if 'Id' in appendable.columns:
         appendable = appendable.drop('Id',axis=1)
 
-    error = {}
+    error_string = None
     try:
-        appendable.to_sql(table, session.bind, if_exists='append', index=False)
+        appendable.to_sql(element, session.bind, if_exists='append', index=False)
     except sqlalchemy.exc.IntegrityError as e:
         # FIXME: target, pulled from DB, has datetime, while dframe has date,
         #  so record might look like same-name-different-date when it isn't really
         # FIXME: IntegrityError will fail silently because it broke the dataload
-        # error["type"] = e
-        pass
-    if not error:
-        error = None
-    
-    if table == 'ReportingUnit' and not appendable.empty:
+        error_string = f'Error uploading {element} to {session.bind.url}: {e}'
+
+    if element == 'ReportingUnit' and not appendable.empty:
         append_to_composing_reporting_unit_join(session,appendable)
 
-    up_to_date_dframe = pd.read_sql_table(table,session.bind)
+    up_to_date_dframe = pd.read_sql_table(element, session.bind)
     up_to_date_dframe = format_dates(up_to_date_dframe)
 
     if raw_to_votecount:
@@ -359,9 +358,9 @@ def dframe_to_sql(dframe,session,table,index_col='Id',flush=True,raw_to_votecoun
         id_enhanced_dframe = dframe.merge(
             up_to_date_dframe,left_on=intersection_cols,right_on=intersection_cols,how='inner').drop(
             target_only_cols,axis=1)
-        return id_enhanced_dframe, error
+        return id_enhanced_dframe, error_string
     else:
-        return up_to_date_dframe, error
+        return up_to_date_dframe, error_string
 
 
 def format_dates(dframe):
@@ -374,7 +373,7 @@ def format_dates(dframe):
 
 
 def save_one_to_db(session,element,record,upsert=False):
-    """Create a record in the <element> table corresponding to the info in the
+    """Create a record in the <element> element corresponding to the info in the
     dictionary <record>, which is in <field>:<value> form, using db (not user-friendly)
     fields -- i.e., ids for enums and foreign keys -- excluding the Id field.
     On error, offers user chance to re-enter information"""
@@ -487,7 +486,7 @@ def truncate_table(session, table_name):
 def get_input_options(session, input):
     """Returns a list of response options based on the input"""
     # input comes as a pythonic (snake case) input, need to 
-    # change to match DB table naming format
+    # change to match DB element naming format
     name_parts = input.split('_')
     search_str = "".join([name_part.capitalize() for name_part in name_parts])
 
