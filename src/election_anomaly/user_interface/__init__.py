@@ -72,14 +72,6 @@ def pick_file_or_directory(description=None,mode=None):
 	return directory
 
 
-def track_results_file(project_root,sess,results_file):
-	filename = ntpath.basename(results_file)
-	db_idx, datafile_record_d, datafile_enumeration_name_d, datafile_fk_name_d = pick_or_create_record(
-		sess,project_root,'_datafile',known_info_d={'file_name':filename})
-	# TODO typing url into debug window opens the web page; want it to just act like a string
-	return [datafile_record_d, datafile_enumeration_name_d]
-
-
 def pick_path(initialdir='~/',mode='file'):
 	"""Creates pop-up window for user to choose a <mode>, starting from <initialdir>.
 	Returns chosen file path or directory path (depending on <mode>"""
@@ -232,55 +224,6 @@ def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name
 		return munger, munger_error
 	else:
 		return None, error
-
-
-def pick_or_create_record(sess,project_root,element,known_info_d=None):
-	"""User picks record from database if exists.
-	Otherwise user picks from file system if exists.
-	Otherwise user enters all relevant info.
-	Store record in file system and/or db if new
-	Return index of record in database"""
-	if not known_info_d:
-		known_info_d = {}
-
-	storage_dir = os.path.join(project_root,'db_records_entered_by_hand')
-	# pick from database if possible
-	db_idx, db_style_record = pick_record_from_db(sess,element,known_info_d=known_info_d)
-
-	# if not from db
-	if db_idx is None:
-		# pick from file_system
-		fs_idx, file_style_record = pick_record_from_file_system(storage_dir,element,known_info_d=known_info_d)
-		# if not from file_system
-		if fs_idx is None:
-			# have user enter record
-			db_style_record, enum_plaintext_dict, fk_plaintext_dict = get_record_info_from_user(
-				sess,element,known_info_d=known_info_d)
-			# save to db
-			[db_idx, db_style_record, enum_plaintext_dict, fk_plaintext_dict,changed] = dbr.save_one_to_db(
-				sess,element,db_style_record)
-			# save to file system
-			save_record_to_filesystem(storage_dir,element,db_style_record,enum_plaintext_dict)
-		# if found in file system
-		else:
-			try:
-				db_style_record = mr.db_record_from_file_record(sess,element,file_style_record)
-				db_idx,db_style_record,enum_plaintext_dict,fk_plaintext_dict, changed = dbr.save_one_to_db(
-					sess,element,db_style_record)
-			except KeyError as e:
-				print(e)
-				input(
-					f'Perhaps the file {element}.txt in {storage_dir} does not have all fields '
-					f'required by the corresponding database table.\n'
-					f'Revise {element}.txt and hit return to continue.')
-				db_idx,db_style_record,enum_plaintext_dict,fk_plaintext_dict = pick_or_create_record(
-					sess,project_root,element,known_info_d=known_info_d)
-	# if picked from db
-	else:
-		enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(sess,element,db_style_record)
-		fk_plaintext_dict = mr.fk_plaintext_dict_from_db_record(
-			sess,element,db_style_record,excluded=enum_plaintext_dict.keys())
-	return db_idx, db_style_record, enum_plaintext_dict, fk_plaintext_dict
 
 
 def pick_record_from_db(sess,element,known_info_d=None,required=False,db_idx=None):

@@ -237,9 +237,7 @@ class JurisdictionPrepper():
 		wr = results.copy()
 		# append <element>_raw
 		wr.columns = [f'{x}_SOURCE' for x in wr.columns]
-		err = mr.add_munged_column(wr, mu, element, error, mode=mu.cdf_elements.loc[element, 'source'])
-		if err:
-			error['munging'] = f'Error adding raw column for {element}:\n{err}'
+		wr, error = mr.add_munged_column(wr, mu, element, error, mode=mu.cdf_elements.loc[element, 'source'])
 		# find <element>_raw values not in dictionary.txt.raw_identifier_value;
 		#  add corresponding lines to dictionary.txt
 		wd = get_element(self.d['jurisdiction_path'], 'dictionary')
@@ -260,7 +258,8 @@ class JurisdictionPrepper():
 		write_element(self.d['jurisdiction_path'], element, we)
 		# if <element>.txt has columns other than <name_field>, notify user
 		if we.shape[1] > 1 and not new_internal_df.empty:
-			error['warning'] = f'New rows added to {element}.txt, but data may be missing from some fields in those rows.'
+			ui.add_error(error,'preparation',
+						 f'New rows added to {element}.txt, but data may be missing from some fields in those rows.')
 		return error
 
 	def starter_dictionary(self,include_existing=True) -> str:
