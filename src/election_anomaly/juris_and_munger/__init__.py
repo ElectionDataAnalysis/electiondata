@@ -782,6 +782,27 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,load_refs,erro
     return df
 
 
+def check_results_munger_compatibility(mu: Munger, df: pd.DataFrame) -> str:
+    error = []
+    # check that count columns exist
+    missing = [i for i in mu.count_columns if i >= df.shape[1]]
+    if missing:
+        error.append(f'Only {df.shape[1]} columns read from file, so count columns {missing} are missing. '
+                     f'Check file_type in format.txt')
+    else:
+        # check that count cols can be cast as integers
+        for i in mu.count_columns:
+            try:
+                df.iloc[:,c].astype('int64', errors='raise')
+            except ValueError as e:
+                error.append(f'Column {i} cannot be cast as integer. Column name is {df.columns[i]}:\n{e}')
+    if error:
+        err = ';'.join(error)
+    else:
+        err = None
+    return err
+
+
 def check_element_against_raw_results(el,results_df,munger,numerical_columns,d,err=None):
     mode = munger.cdf_elements.loc[el,'source']
 

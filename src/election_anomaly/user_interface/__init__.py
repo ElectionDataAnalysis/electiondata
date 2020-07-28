@@ -597,6 +597,7 @@ def read_single_datafile(munger, f_path, err):
 				err['format.txt'] = [e]
 		else:
 			df = mr.generic_clean(df)
+			err['datafile'] = [sf.check_results_munger_compatibility(munger,df)]
 		return df, err
 	except:
 		# DFs have trouble comparing against None. So we return an empty DF and 
@@ -611,36 +612,39 @@ def read_single_datafile(munger, f_path, err):
 
 def read_combine_results(mu: sf.Munger, results_file, project_root, err, aux_data_dir=None):
 	working, err = read_single_datafile(mu, results_file, err)
-	working = mr.cast_cols_as_int(working, mu.count_columns,mode='index')
+	if 'datafile' in err.keys():
+		return pd.DataFrame(), err
+	else:
+		working = mr.cast_cols_as_int(working, mu.count_columns,mode='index')
 
-	# merge with auxiliary files (if any)
-	if aux_data_dir is not None:
-		# get auxiliary data (includes cleaning and setting (multi-)index of primary key column(s))
-		aux_data,err = mu.get_aux_data(aux_data_dir, err,project_root=project_root)
-		for abbrev,r in mu.aux_meta.iterrows():
-			# cast foreign key columns of main results file as int if possible
-			foreign_key = r['foreign_key'].split(',')
-			working = mr.cast_cols_as_int(working,foreign_key)
-			# rename columns
-			col_rename = {f'{c}':f'{abbrev}[{c}]' for c in aux_data[abbrev].columns}
-			# merge auxiliary info into <working>
-			a_d = aux_data[abbrev].rename(columns=col_rename)
-			working = working.merge(a_d,how='left',left_on=foreign_key,right_index=True)
+		# merge with auxiliary files (if any)
+		if aux_data_dir is not None:
+			# get auxiliary data (includes cleaning and setting (multi-)index of primary key column(s))
+			aux_data,err = mu.get_aux_data(aux_data_dir, err,project_root=project_root)
+			for abbrev,r in mu.aux_meta.iterrows():
+				# cast foreign key columns of main results file as int if possible
+				foreign_key = r['foreign_key'].split(',')
+				working = mr.cast_cols_as_int(working,foreign_key)
+				# rename columns
+				col_rename = {f'{c}':f'{abbrev}[{c}]' for c in aux_data[abbrev].columns}
+				# merge auxiliary info into <working>
+				a_d = aux_data[abbrev].rename(columns=col_rename)
+				working = working.merge(a_d,how='left',left_on=foreign_key,right_index=True)
 
 	return working, err
 
 
 def new_datafile(
-		session,munger:sf.Munger,raw_path,project_root=None,juris=None,results_info=None,aux_data_dir=None):
+		session,munger: sf.Munger, raw_path: str, project_root: str=None, juris:sf.Jurisdiction=None,
+		results_info:list=None,aux_data_dir: str=None) -> dict:
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
 	if not juris:
 		juris = pick_juris_from_filesystem(
 			project_root,juriss_dir='jurisdictions')
-	err = {}
+	err = dict()
 	raw, err = read_combine_results(munger, raw_path, project_root,err,aux_data_dir=aux_data_dir)
-
 	if raw.empty:
 		# TODO improve error tracking
 		e = f'No data read from datafile {raw_path}.'
@@ -655,9 +659,8 @@ def new_datafile(
 	try:
 		raw = mr.munge_clean(raw, munger)
 	except:
-		print('Cleaning of datafile failed. Results not loaded to database. '
-			'Please check compatibilty between the two and try again.')
-		return
+		err['datafile'] = ['Cleaning of datafile failed. Results not loaded to database.']
+		return err
 
 	# NB: info_cols will have suffix added by munger
 
@@ -667,16 +670,15 @@ def new_datafile(
 	juris.load_juris_to_db(session,project_root)
 
 	try:
-		err = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,err,ids=results_info)
-		if err:
-			print(f'{err}. Results not loaded to database.')
+		e = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,err,ids=results_info)
+		if e:
+			err['datafile'].append(f'{e}. Results not loaded to database.')
 	except:
-		print('Datafile not loaded. Results not loaded to database. '
-			'Please check compatibility of munger and datafile, and try again.')
-		return
+		err['datafile'].append('Error during munging. Results not loaded to database.')
+		return err
 
 	print(f'Datafile contents uploaded to database {session.bind.engine}')
-	return
+	return err
 
 
 def pick_or_create_directory(root_path,d_name):
