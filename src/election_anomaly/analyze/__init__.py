@@ -435,11 +435,18 @@ def assign_anomaly_score(data):
 	df = pd.DataFrame()
 	for unit_id in unit_ids:
 		temp_df = data[data['unit_id'] == unit_id]
+		# pivot so each candidate gets own column
 		pivot_df = pd.pivot_table(temp_df, values='Count', index=['ReportingUnit_Id'], \
 			columns='Selection').sort_values('ReportingUnit_Id').reset_index()
+		# keep the candidate column names only
 		pivot_df_values = pivot_df.drop(columns='ReportingUnit_Id')
 		to_drop = pivot_df_values.columns
-		scored = euclidean_zscore(pivot_df_values.values)
+		# pass in proportions instead of raw vlaues
+		row_totals = pivot_df_values.values.sum(axis=1)
+		vote_proportions = np.array(np.divide(pivot_df_values, row_totals.reshape(-1, 1)))
+		np.nan_to_num(vote_proportions, copy=False)
+		# assign z score and then add back into final DF
+		scored = euclidean_zscore(vote_proportions)
 		pivot_df['score'] = scored
 		temp_df = temp_df.merge(pivot_df, how='left', on='ReportingUnit_Id') \
 					.drop(columns=to_drop)
