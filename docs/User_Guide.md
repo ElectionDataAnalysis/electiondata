@@ -28,7 +28,7 @@ If all errors are `None`, the DataLoader initialization will have loaded informa
 
 Insert information about your results file into the database. 
 ```python
->>> phila.track_results('phila_2018g','2018 General')
+>>> phila.track_results()
 >>> 
 ```
 The arguments are a shorthand name for your results file and the name of the election. The name of the election must match the name of an election already in the database. To find all available election names, use the analyzer:

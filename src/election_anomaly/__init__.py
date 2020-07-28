@@ -2,10 +2,16 @@ from election_anomaly import db_routines as dbr
 from election_anomaly import user_interface as ui
 from sqlalchemy.orm import sessionmaker
 import os
+import pandas as pd
 from pprint import pprint
 import sys
 import ntpath
 from election_anomaly import analyze_via_pandas as avp
+
+data_loader_parameter_list = [
+    'project_root','juris_name','db_paramfile','db_name','munger_name',
+    'results_file', 'results_short_name', 'results_download_date', 'results_source', 'results_note',
+    'top_reporting_unit','election']
 
 class DataLoader():
     def __new__(self):
@@ -13,8 +19,7 @@ class DataLoader():
         not create DataLoader object. """
         try:
             d, parameter_err = ui.get_runtime_parameters(
-                ['project_root','juris_name','db_paramfile',
-                'db_name','munger_name','results_file','top_reporting_unit'])
+                data_loader_parameter_list)
         except FileNotFoundError as e:
             print("Parameter file not found. Ensure that it is located" \
                 " in the current directory. DataLoader object not created.")
@@ -32,8 +37,7 @@ class DataLoader():
     def __init__(self):
         # grab parameters
         self.d, self.parameter_err = ui.get_runtime_parameters(
-            ['project_root','juris_name','db_paramfile',
-            'db_name','munger_name','results_file','top_reporting_unit'],optional_keys=['aux_data_dir'])
+            data_loader_parameter_list, optional_keys=['aux_data_dir'])
 
         # results_file is the entire path, the _short version is just
         # the filename
@@ -85,8 +89,7 @@ class DataLoader():
             self.engine.dispose()
 
         self.d, self.parameter_err = ui.get_runtime_parameters(
-            ['project_root','juris_name','db_paramfile',
-            'db_name','munger_name','results_file','top_reporting_unit'])
+            data_loader_parameter_list)
         self.d['results_file_short'] = get_filename(self.d['results_file'])
 
         # pick jurisdiction
@@ -110,24 +113,23 @@ class DataLoader():
             self.d['project_root'])    
 
     
-    def track_results(self, shortname, election):
+    def track_results(self):
         filename = self.d['results_file_short']
-        top_reporting_unit = self.d['top_reporting_unit']
-        known_info_d = {
-            'file_name': filename, 
-            'short_name': shortname, 
-            'ReportingUnit_Id': top_reporting_unit, 
-            'Election_Id': election
+        top_reporting_unit_id = dbr.name_to_id(self.session,'ReportingUnit',self.d['top_reporting_unit'])
+        election_id = dbr.name_to_id(self.session,'Election',self.d['election'])
+
+        data_file = {
+            'short_name': self.d['results_short_name'],
+            'file_name': filename,
+            'download_date': self.d['results_download_date'],
+            'source': self.d['results_source'],
+            'note': self.d['results_note'],
+            'ReportingUnit_Id': top_reporting_unit_id,
+            'Election_Id': election_id
         }
-        db_style_record, error = ui.set_record_info_from_user(self.session, '_datafile', known_info_d=known_info_d)
-
-        if error:
-            print(error)
-            print("metadata record not created in database")
-
-        else:
-            dbr.save_one_to_db(self.session, '_datafile', db_style_record, True)
-
+        [df,e] = dbr.dframe_to_sql(pd.DataFrame(pd.Series(data_file)),self.session,'_datafile')
+        if e:
+            print(f'Error creating datafile record: {e}')
 
     def load_results(self):
         results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])

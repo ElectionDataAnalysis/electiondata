@@ -30,7 +30,7 @@ def child_rus_by_id(session,parents,ru_type=None):
 
 
 def create_rollup(
-		session,target_dir,top_ru_id=None,sub_rutype_id=None,sub_rutype_othertext=None,election_id=None,
+		session,target_dir,top_ru_id,sub_rutype_id=None,sub_rutype_othertext=None,election_id=None,
 		datafile_id_list=None,by_vote_type=True,exclude_total=True):
 	"""<target_dir> is the directory where the resulting rollup will be stored.
 	<election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
@@ -43,35 +43,10 @@ def create_rollup(
 	# Get name of db for error messages
 	db = session.bind.url.database
 
-	# ask user to select any info not supplied
-	if top_ru_id is None:
-		# TODO allow passage of top_ru name, from which id is deduced. Similarly for other args.
-		print('Select the type of the top ReportingUnit for the rollup.')
-		top_rutype_id, top_rutype_othertext, top_rutype = ui.pick_enum(session,'ReportingUnitType')
-		print('Select the top ReportingUnit for the rollup')
-		top_ru_id, top_ru = ui.pick_record_from_db(
-			session,'ReportingUnit',known_info_d={
-				'ReportingUnitType_Id':top_rutype_id, 'OtherReportingUnitType':top_rutype_othertext},required=True)
-	else:
-		top_ru_id, top_ru = ui.pick_record_from_db(session,'ReportingUnit',required=True,db_idx=top_ru_id)
-	if election_id is None:
-		print('Select the Election')
-	election_id,election = ui.pick_record_from_db(session,'Election',required=True,db_idx=election_id)
-
-	if datafile_id_list is None:
-		# TODO allow several datafiles to be picked
-		# TODO restrict to datafiles whose ReportingUnit intersects top_ru?
-		# TODO note/enforce that no datafile double counts anything?
-		print('Select the datafile')
-		datafile_id_list = ui.pick_record_from_db(
-			session,'_datafile',required=True,known_info_d={'Election_Id':election_id})[0]
-	if sub_rutype_id is None:
-		# TODO restrict to types that appear as sub-reportingunits of top_ru?
-		#  Or that appear in VoteCounts associated to one of the datafiles?
-		print('Select the ReportingUnitType for the lines of the rollup')
-		sub_rutype_id, sub_rutype_othertext,sub_rutype = ui.pick_enum(session,'ReportingUnitType')
-	else:
-		sub_rutype = dbr.name_from_id(session, 'ReportingUnitType', sub_rutype_id)
+	# get names from ids
+	top_ru = dbr.name_from_id(session,'ReportingUnit',top_ru_id)
+	election = dbr.name_from_id(session,'Election',election_id)
+	sub_rutype = dbr.name_from_id(session, 'ReportingUnitType', sub_rutype_id)
 
 	# pull relevant tables
 	df = {}

@@ -582,7 +582,7 @@ def raw_elements_to_cdf(
     return err
 
 
-def append_join_id(project_root: str, session, working: pd.DataFrame, j: str,err: dict) -> [pd.DataFrame, dict]:
+def append_join_id(project_root: str, session, working: pd.DataFrame, j: str, err: dict) -> [pd.DataFrame, dict]:
     """Upload join data to db, get Ids,
     Append <join>_Id to <working>. Unmatched rows are kept"""
     j_path = os.path.join(
@@ -611,9 +611,10 @@ def append_join_id(project_root: str, session, working: pd.DataFrame, j: str,err
     # warn user of rows with null value in some columns
     bad_rows = join_df.isnull().any(axis=1)
     if bad_rows.any():
-        print(f'Warning: there are null values, which may indicate a problem.')
-        ui.show_sample(
-            join_df[join_df.isnull().any(axis=1)],f'rows proposed for {j}','have null values')
+        ui.add_error(
+            err,'munge-warning',
+            f'Warning: there are {bad_rows.shape[0]} rows proposed for {j} that have nulls values. '
+            f'These will not be uploaded')
     # remove any row with a null value in any column
     join_df = join_df[join_df.notnull().all(axis=1)]
     # add column for join id
