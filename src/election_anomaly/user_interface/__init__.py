@@ -206,14 +206,11 @@ def read_combine_results(mu: sf.Munger, results_file, project_root, err, aux_dat
 
 
 def new_datafile(
-		session,munger: sf.Munger, raw_path: str, project_root: str=None, juris:sf.Jurisdiction=None,
-		results_info:list=None,aux_data_dir: str=None) -> dict:
+		session,munger: sf.Munger, raw_path: str, project_root: str, juris: sf.Jurisdiction,
+		results_info: list=None, aux_data_dir: str=None) -> dict:
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
-	if not juris:
-		juris = pick_juris_from_filesystem(
-			project_root,juriss_dir='jurisdictions')
 	err = dict()
 	raw, err = read_combine_results(munger, raw_path, project_root,err,aux_data_dir=aux_data_dir)
 	if raw.empty:
@@ -235,8 +232,6 @@ def new_datafile(
 
 	# NB: info_cols will have suffix added by munger
 
-	# check jurisdiction against raw results file, adapting jurisdiction files as necessary
-	# TODO: incorporate juris.check_against_raw_results(raw,munger,count_columns_by_name)
 	# if jurisdiction changed, load to db
 	juris.load_juris_to_db(session,project_root)
 
@@ -250,7 +245,7 @@ def new_datafile(
 			err['datafile'] = [e]
 		return err
 
-	print(f'Datafile contents uploaded to database {session.bind.engine}')
+	print(f'Datafile contents uploaded with munger {munger.name} to database {session.bind.engine}')
 	if err == dict():
 		err = None
 	return err

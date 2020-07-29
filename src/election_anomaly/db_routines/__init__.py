@@ -326,6 +326,11 @@ def dframe_to_sql(
     for c in target_only_cols:
         df_to_db.loc[:,c] = None
 
+    # make sure datatypes of df_to_db match the types of target
+    for c in intersection_cols:
+        if target[c].dtype != df_to_db[c].dtype:
+            df_to_db[c] = df_to_db[c].astype(target[c].dtype,errors='ignore')
+
     appendable = pd.concat([target,target,df_to_db],sort=False).drop_duplicates(keep=False)
     # note: two copies of target ensures none of the original rows will be appended.
 

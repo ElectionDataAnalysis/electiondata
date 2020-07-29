@@ -118,24 +118,29 @@ class DataLoader():
         top_reporting_unit_id = dbr.name_to_id(self.session,'ReportingUnit',self.d['top_reporting_unit'])
         election_id = dbr.name_to_id(self.session,'Election',self.d['election'])
 
-        data_file = {
-            'short_name': self.d['results_short_name'],
-            'file_name': filename,
-            'download_date': self.d['results_download_date'],
-            'source': self.d['results_source'],
-            'note': self.d['results_note'],
-            'ReportingUnit_Id': top_reporting_unit_id,
-            'Election_Id': election_id
-        }
-        [df,e] = dbr.dframe_to_sql(pd.DataFrame(pd.Series(data_file)),self.session,'_datafile')
+        data = pd.DataFrame(
+            [[self.d['results_short_name'],filename,
+              self.d['results_download_date'], self.d['results_source'],
+                self.d['results_note'], top_reporting_unit_id, election_id]],
+            columns=['short_name', 'file_name',
+                     'download_date', 'source',
+                     'note', 'ReportingUnit_Id', 'Election_Id'])
+        [df,e] = dbr.dframe_to_sql(data,self.session,'_datafile')
         if e:
-            print(f'Error creating datafile record: {e}')
+            return [0,0],e
+        else:
+            datafile_id = df[(df['short_name']== self.d['results_short_name']) &
+                         (df['file_name']==filename) & (df['ReportingUnit_Id']==top_reporting_unit_id) &
+                         (df['Election_Id']==election_id)]['Id'].to_list()[0]
+            return [datafile_id, election_id], e
 
     def load_results(self):
-        results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
-        err = ui.new_datafile(self.session, self.munger, self.d['results_file'],
-            juris=self.juris, project_root=self.d['project_root'], 
-            results_info=results_info,aux_data_dir=self.d['aux_data_dir'])
+        results_info, e = self.track_results()
+        if e:
+            err = {'database':e}
+        else:
+            err = ui.new_datafile(self.session, self.munger, self.d['results_file'],self.d['project_root'],
+            self.juris, results_info=results_info,aux_data_dir=self.d['aux_data_dir'])
         return err
 
 

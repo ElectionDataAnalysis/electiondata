@@ -640,7 +640,7 @@ def append_multi_foreign_key(df: pd.DataFrame, references: dict, err: dict) -> [
         if df_copy[references[fn]].isnull().all().all():
             # if everything is null, just add the necessary column with all null values
             df_copy.loc[:, fn] = np.nan
-            err = ui.add_error(err, 'munge-warning', f'Nothing matched to {fn}')
+            err = ui.add_error(err, 'munge_warning', f'Nothing matched to {fn}')
         else:
             # expect at most one non-null entry in each row; find the value of that one
             df_copy.loc[:,fn] = df_copy[references[fn]].fillna(-1).max(axis=1)

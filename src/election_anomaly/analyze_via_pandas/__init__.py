@@ -44,8 +44,8 @@ def create_rollup(
 	db = session.bind.url.database
 
 	# get names from ids
-	top_ru = dbr.name_from_id(session,'ReportingUnit',top_ru_id)
-	election = dbr.name_from_id(session,'Election',election_id)
+	top_ru = dbr.name_from_id(session,'ReportingUnit',top_ru_id).replace(" ","-")
+	election = dbr.name_from_id(session,'Election',election_id).replace(" ","-")
 	sub_rutype = dbr.name_from_id(session, 'ReportingUnitType', sub_rutype_id)
 
 	# pull relevant tables
@@ -125,8 +125,6 @@ def create_rollup(
 	# missing = [str(x) for x in all_subs_ids if x not in children_of_subs_ids]
 	# if missing:
 	# TODO report these out to the export directory
-	#	ui.report_problems(missing,msg=f'The following reporting units are nested in {top_ru["Name"]} '
-	#							f'but are not nested in any {sub_rutype} nested in {top_ru["Name"]}')
 
 	# limit to relevant vote counts
 	ecsvcj = df['ElectionContestSelectionVoteCountJoin'][
@@ -177,9 +175,9 @@ def create_rollup(
 		'Election','ReportingUnitType','CountItemType','CountItemStatus',
 		'source_db_url','timestamp']
 	inventory_values = [
-		election['Name'],sub_rutype,cit,cis,
+		election,sub_rutype,cit,cis,
 		str(session.bind.url),datetime.date.today()]
-	sub_dir = os.path.join(election['Name'],top_ru["Name"],f'by_{sub_rutype}')
+	sub_dir = os.path.join(election, top_ru, f'by_{sub_rutype}')
 	export_to_inventory_file_tree(
 		target_dir,sub_dir,f'{count_item}.txt',inventory_columns,inventory_values,summed_by_name)
 
