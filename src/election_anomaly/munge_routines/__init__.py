@@ -151,7 +151,7 @@ def compress_whitespace(s:str) -> str:
 
 def replace_raw_with_internal_ids(
         row_df: pd.DataFrame, juris: jm.Jurisdiction, table_df: pd.DataFrame, element: str, internal_name_column: str
-        ,unmatched_dir: str, error: dict, drop_unmatched: bool=False, mode: str='row') -> [pd.DataFrame, dict]:
+        ,unmatched_dir: str, error: dict, drop_unmatched: bool=False, mode: str='row') -> (pd.DataFrame, dict):
     """replace columns in <row_df> with raw_identifier values by columns with internal names and Ids
     from <table_df>, which has structure of a db table for <element>.
     # TODO If <element> is BallotMeasureContest or CandidateContest,
@@ -178,7 +178,7 @@ def replace_raw_with_internal_ids(
                 error['munge_error'].append(e)
             else:
                 error['munge_error'] = [e]
-            return [row_df.drop(row_df.index), error]
+            return row_df.drop(row_df.index), error
         elif not to_be_dropped.empty:
             e = f'Warning: Results for {to_be_dropped.shape[0]} rows with unmatched {element}s ' \
                 f'will not be loaded to database.'
@@ -197,7 +197,7 @@ def replace_raw_with_internal_ids(
             error['munge_error'].append(e)
         else:
             error['munge_error'] = [e]
-        return [row_df, error]
+        return row_df, error
 
     # Note: if how = left, unmatched elements get nan in fields from dictionary table
     # TODO how do these nans flow through?
@@ -225,9 +225,9 @@ def replace_raw_with_internal_ids(
     # and either internal_name_column or internal_name_column_table_name
     row_df = row_df.merge(
         table_df[['Id',internal_name_column]],how='left',left_on=element,right_on=internal_name_column)
-    row_df=row_df.drop([internal_name_column],axis=1)
+    row_df = row_df.drop([internal_name_column],axis=1)
     row_df.rename(columns={'Id':f'{element}_Id'},inplace=True)
-    return [row_df, error]
+    return row_df, error
 
 
 def enum_col_from_id_othertext(df,enum,enum_df,drop_old=True):
@@ -582,7 +582,7 @@ def raw_elements_to_cdf(
     return err
 
 
-def append_join_id(project_root: str, session, working: pd.DataFrame, j: str, err: dict) -> [pd.DataFrame, dict]:
+def append_join_id(project_root: str, session, working: pd.DataFrame, j: str, err: dict) -> (pd.DataFrame, dict):
     """Upload join data to db, get Ids,
     Append <join>_Id to <working>. Unmatched rows are kept"""
     j_path = os.path.join(
@@ -626,10 +626,10 @@ def append_join_id(project_root: str, session, working: pd.DataFrame, j: str, er
             ui.add_error(err,'database',e)
         working = working.merge(join_df,how='left',left_on=j_cols,right_on=j_cols)
         working.rename(columns={'Id':f'{j}_Id'},inplace=True)
-    return [working, err]
+    return working, err
 
 
-def append_multi_foreign_key(df: pd.DataFrame, references: dict, err: dict) -> [pd.DataFrame, dict]:
+def append_multi_foreign_key(df: pd.DataFrame, references: dict, err: dict) -> (pd.DataFrame, dict):
     """<references> is a dictionary whose keys are fieldnames for the new column
     and whose value for any key is the list of reference targets.
     If a row in df has more than one non-null value, only the first will be taken.
@@ -646,7 +646,7 @@ def append_multi_foreign_key(df: pd.DataFrame, references: dict, err: dict) -> [
             df_copy.loc[:,fn] = df_copy[references[fn]].fillna(-1).max(axis=1)
             # change any -1s back to nulls (if all were null, return null)
             df_copy.loc[:,fn]=df_copy[fn].replace(-1,np.NaN)
-    return [df_copy, err]
+    return df_copy, err
 
 
 if __name__ == '__main__':

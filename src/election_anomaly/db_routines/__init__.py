@@ -360,12 +360,10 @@ def dframe_to_sql(
         session.flush()
     if return_records == 'original':
         # TODO get rid of rows not in dframe by taking inner join
-        id_enhanced_dframe = dframe.merge(
+        up_to_date_dframe = dframe.merge(
             up_to_date_dframe,left_on=intersection_cols,right_on=intersection_cols,how='inner').drop(
             target_only_cols,axis=1)
-        return id_enhanced_dframe, error_string
-    else:
-        return up_to_date_dframe, error_string
+    return up_to_date_dframe, error_string
 
 
 def format_dates(dframe):
