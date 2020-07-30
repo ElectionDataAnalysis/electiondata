@@ -2,19 +2,73 @@
 
 ## Get Started
  * In a python interpreter, import the `election_anomaly` module. 
-```python
+```
 >>> import election_anomaly as ea
 ```
+## Create or Repair a Jurisdiction
+### Order of operations
+1. Prepare your new_jurisdiction.par file, following the template. (`src/templates/parameter_file_templates/new_jurisdiction.par`)
+2. Initialize a JurisdictionPrepper.
+3. Call new_juris_files()
+4. Insert any additional CandidateContests you care about into `CandidateContest.txt`, and the corresponding Offices into `Office.txt`. Note that every CandidateContest must have an Office, and that Office must be in `Office.txt`.
+5. Choose raw identifiers for the CandidateContests you care about, and modify the corresponding rows in `dictionary.txt`. You will eventually have to provide a simple formula to calculate these from the results file. Use the names that can be easily concatenated from columns in the results file you're planning to munge.
+6. Add any missing Parties to `Party.txt`.
+7. Choose raw identifiers for all parties. Choose carefully, as for CandidateContests. Modify or create the corresponding rows in `dictionary.txt`.
+8. Add all necessary ReportingUnits to `ReportingUnit.txt` (without creating duplicates). You MUST use the naming conventions with semicolons to indicate nesting of reportingunits. Typically you will want:
+    1. the jurisdiction itself (`North Carolina`)
+    2. counties (e.g., `North Carolina;Alamance County`)
+    3. districts for each district contest (e.g., `North Carolina;US House VA District 2`)
+    4. any reporting units used in your results file, often precincts, nested within counties (e.g., `North Carolina;Alamance County;Precinct 064`)
+  
+        Note: as of 8/2020, the system does not handle nesting of precincts inside contest districts.
+9. Choose raw identifiers for all ReportingUnits that appear in your results file. Choose carefully, as for CandidateContests. Modify or create the corresponding rows in `dictionary.txt`. (Note: you can omit ReportingUnits such as contest districts from `dictionary.txt` if they aren't needed to specify the vote count in the results file.)
+10. If necessary, add the relevant election to `Election.txt`.
+11. Add any BallotMeasureContests you care about to `BallotMeasureContest.txt`, specifying the ElectionDistrict, which must be in the `ReportingUnit.txt` file. (If you don't know the ElectionDistrict, nothing will break if you assign it the entire jurisdiction as ElectionDistrict.)
+12. Choose raw identifiers for the BallotMeasureContests and modify `dictionary.txt` accordingly.
+13. Add anything useful you've discovered (such as the sources for the data) to `remark.txt`.
+
+### The JurisdictionPrepper class details
+There are routines in the `JurisdictionPrepper()` class to help prepare a jurisdiction.
+ * `JurisdictionPrepper()` reads parameters from the file (`new_jurisdiction.par`) to create the directories and basic necessary files. 
+ * `new_juris_files()` builds a directory for the jurisdiction, including starter files with the standard contests. It calls some methods that may be independently useful:
+   * `add_standard_contests()` creates records in `CandidateContest.txt` corresponding to contests that appear in many or most jurisdictions, including all federal offices as well as state house and senate offices. 
+   * `add_primary_contests()` creates a record in `CandidateContest.txt` for every CandidateContest-Party pair that can be created from `CandidateContest.txt` entries with no assigned PrimaryParty and `Party.txt` entries. (Note: records for non-existent primary contests will not break anything.) 
+   * `starter_dictionary()` creates a `starter_dictionary.txt` file in the current directory. Lines in this starter dictionary will *not* have the correct `raw_identifier_value` entries. Assigning the correct raw identifier values must be done by hand before proceeding.
+ * `add_primaries_to_dict()` creates an entry in `dictionary.txt` for every CandidateContest-Party pair that can be created from the CandidateContests and Parties already in `dictioary.txt`. (Note: entries in `dictionary.txt` that never occur in your results file won't break anything.)
+
+If the `juris_name` given in `run_time.par` does not exist,`DataLoader()` will create a folder for that jurisdiction, with template files and record error. Then `check_error()` will show the errors. Before proceeding, edit the jurisdiction files appropriately for your jurisdiction. The system may detect errors.
+
+Once all errors are fixed, you are ready to load data from this jurisdiction.
+
+## Create or Repair a Munger
+If the munger given in `run_time.par` does not exist, `DataLoader()` will create a folder for that munger, with template files and record the error. Then `check_error()` will show the errors. E.g.
+```python
+>>> import election_anomaly as ea
+>>> phila=ea.DataLoader(); phila.check_errors()
+(None, None, None, None, {'newly_created': '/Users/username/PycharmProjects/results_analysis/src/mungers/phila_general2018, cdf_elements.txt, format.txt'})
+>>> 
+```
+Before proceeding, edit the munger files appropriately for your data file. The system may detect errors in your files. E.g.
+```python
+>>> phila=ea.DataLoader();phila.check_errors()
+(None, None, None, None, {'format.txt': {'format_problems': 'Wrong number of rows in format.txt. \nFirst column must be exactly:\nheader_row_count\nfield_name_row\ncount_columns\nfile_type\nencoding\nthousands_separator'}})
+>>> 
+```
+Once all errors are fixed, you are ready to load data with this munger.
+```python
+>>> phila=ea.DataLoader();phila.check_errors()
+(None, None, None, None, None)
+>>> 
+## Load Data
 Some routines in the Analyzer class are useful even in the data-loading process, so  create an analyzer before you start loading data.
 ```python
 >>> an = ea.Analyzer()
 >>> 
 ```
 
-## Load Data
 Create a DataLoader instance and check for errors in the Jurisdiction and Munger directories specified in `run_time.par`
 ```python
->>> phila=ea.DataLoader();phila.check_errors()
+>>> phila = ea.DataLoader();phila.check_errors()
 (None, None, None, None, None)
 >>> 
 ```
@@ -75,33 +129,5 @@ Lists of reporting units will be quite long, in which case searching by substrin
 ```
 Here we have used the capability of `display_options()` to take as an argument either a general database category ('reporting unit') or a type ('county'). 
 
-## Create or Repair a Jurisdiction
-There are routines in the `JurisdictionPrepper()` class to help prepare a jurisdiction.
- * `JurisdictionPrepper()` reads parameters about the  file (`new_jurisdiction.par`) to create the 
- * The method `new_juris_files()` builds a directory for the jurisdiction, including starter files with the standard contests.
-
-If the `juris_name` given in `run_time.par` does not exist,`DataLoader()` will create a folder for that jurisdiction, with template files and record error. Then `check_error()` will show the errors. Before proceeding, edit the jurisdiction files appropriately for your jurisdiction. The system may detect errors.
-
-Once all errors are fixed, you are ready to load data as above.
-
-## Create or Repair a Munger
-If the munger given in `run_time.par` does not exist, `DataLoader()` will create a folder for that munger, with template files and record the error. Then `check_error()` will show the errors. E.g.
-```python
->>> import election_anomaly as ea
->>> phila=ea.DataLoader(); phila.check_errors()
-(None, None, None, None, {'newly_created': '/Users/username/PycharmProjects/results_analysis/src/mungers/phila_general2018, cdf_elements.txt, format.txt'})
->>> 
-```
-Before proceeding, edit the munger files appropriately for your data file. The system may detect errors in your files. E.g.
-```python
->>> phila=ea.DataLoader();phila.check_errors()
-(None, None, None, None, {'format.txt': {'format_problems': 'Wrong number of rows in format.txt. \nFirst column must be exactly:\nheader_row_count\nfield_name_row\ncount_columns\nfile_type\nencoding\nthousands_separator'}})
->>> 
-```
-Once all errors are fixed, you are ready to load data as above.
-```python
->>> phila=ea.DataLoader();phila.check_errors()
-(None, None, None, None, None)
->>> 
 ```
 
