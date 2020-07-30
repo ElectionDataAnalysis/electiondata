@@ -19,7 +19,7 @@ prep_param_list = ['project_root', 'jurisdiction_path', 'name', 'abbreviated_nam
 					'count_of_state_house_districts',
 					'count_of_state_senate_districts',
 				   'count_of_us_house_districts',
-				   'reporting_unit_type','munger_name','results_file']
+				   'reporting_unit_type']
 
 class DataLoader():
     def __new__(self):
