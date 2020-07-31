@@ -5,6 +5,7 @@ from election_anomaly import db_routines as dbr
 from election_anomaly.db_routines import create_cdf_db as db_cdf
 from election_anomaly import munge_routines as mr
 import pandas as pd
+from pandas.errors import ParserError, ParserWarning
 import numpy as np
 import csv
 from sqlalchemy.orm import sessionmaker
@@ -56,29 +57,6 @@ recognized_encodings = {'iso2022jp', 'arabic', 'cp861', 'csptcp154', 'shiftjisx0
 						'ks_c-5601-1987'}
 
 
-def pick_file_or_directory(description=None,mode=None):
-	if not mode:
-		print(f'No mode specified')
-		return None
-	elif mode not in ['file','directory']:
-		print(f'Mode {mode} not recognized')
-		return None
-	else:
-		if not description:
-			description = f'the {mode}'
-		print(f'Use the pop-up window to pick {description}.')
-		directory = pick_path(mode=mode)
-	return directory
-
-
-def track_results_file(project_root,sess,results_file):
-	filename = ntpath.basename(results_file)
-	db_idx, datafile_record_d, datafile_enumeration_name_d, datafile_fk_name_d = pick_or_create_record(
-		sess,project_root,'_datafile',known_info_d={'file_name':filename})
-	# TODO typing url into debug window opens the web page; want it to just act like a string
-	return [datafile_record_d, datafile_enumeration_name_d]
-
-
 def pick_path(initialdir='~/',mode='file'):
 	"""Creates pop-up window for user to choose a <mode>, starting from <initialdir>.
 	Returns chosen file path or directory path (depending on <mode>"""
@@ -107,88 +85,10 @@ def pick_path(initialdir='~/',mode='file'):
 	return fpath
 
 
-def pick_one(choices,return_col,item='row',required=False,max_rows=40):
-	"""Returns index and <return_col> value of item chosen by user
-	<choices> is a dataframe, unless <return_col> is None, in which case <choices>
-	may be a list or a set"""
-
-	if return_col is None:
-		df = pd.DataFrame(np.array(list(choices)).transpose(),columns=[item])
-		return_col = item
-		choices = df  # regularizes 'choices.index[choice]' in return
-	else:
-		df = choices.copy()
-		df.index = range(choices.shape[0])
-	if df.empty:
-		return None, None
-	with pd.option_context('display.max_rows',max_rows,'display.max_columns',None):
-		print(df)
-
-	choice = -1  # guaranteed not to be in df.index
-
-	while choice not in df.index:
-		if not required:
-			req_str=' (or nothing, if your choice is not on the list)'
-		else:
-			req_str=''
-		choice_str = input(f'Enter the number of the desired {item}{req_str}:\n')
-		if choice_str == '' and not required:
-			return None,None
-		else:
-			try:
-				choice = int(choice_str)
-				if choice not in df.index:
-					print(f'Enter an option from the leftmost column. Please try again.')
-			except ValueError:
-				print(f'You must enter a number{req_str}, then hit return. Please try again.')
-	print(f'Chosen {item} is {df.loc[choice,return_col]}\n\n')
-
-	return choices.index[choice], df.loc[choice,return_col]
-
-
 def pick_paramfile(msg='Locate the parameter file for your postgreSQL database.'):
 	print(msg)
 	fpath= pick_path()
 	return fpath
-
-
-def show_sample(input_iter,items,condition,outfile='shown_items.txt',export_dir=None,export=False):
-	print(f'There are {len(input_iter)} {items} that {condition}:')
-	if len(input_iter) == 0:
-		return
-	if isinstance(input_iter,pd.DataFrame):
-		st = input_iter.to_csv(sep='\t').split('\n')
-	else:
-		st = list(input_iter)
-	st.sort()
-
-	if len(st) < 11:
-		show_list = st
-	else:
-		print('(sample)')
-		show_list = random.sample(st,10)
-		show_list.sort()
-	for r in show_list:
-		print(r)
-	if len(st) > 10:
-		show_all = input(f'Show all {len(st)} {items} that {condition} (y/n)?\n')
-		if show_all == 'y':
-			for r in st:
-				print(f'{r}')
-	if export:
-		if export_dir is None:
-			export_dir = input(f'Export all {len(st)} {items} that {condition}? If so, enter directory for export.'
-						f'Existing file will be overwritten.\n'
-						f'(Current directory is {os.getcwd()})\n')
-		if os.path.isdir(export_dir):
-			export = input(f'Export all {len(st)} {items} that {condition} to {outfile} (y/n)?\n')
-			if export == 'y':
-				with open(os.path.join(export_dir,outfile),'w') as f:
-					f.write('\n'.join(st))
-				print(f'{items} exported to {os.path.join(export_dir,outfile)}')
-		elif export_dir != '':
-			print(f'Directory {export_dir} does not exist.')
-	return
 
 
 def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_name=None,check_files=False):
@@ -202,7 +102,7 @@ def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_nam
 
 	if check_files:
 		juris_path = os.path.join(path_to_jurisdictions,juris_name)
-		missing_values = sf.ensure_jurisdiction_files(juris_path,project_root)
+		missing_values = sf.ensure_jurisdiction_dir(juris_path,project_root)
 
 	# initialize the jurisdiction
 	if missing_values:
@@ -233,338 +133,7 @@ def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name
 		return None, error
 
 
-def pick_or_create_record(sess,project_root,element,known_info_d=None):
-	"""User picks record from database if exists.
-	Otherwise user picks from file system if exists.
-	Otherwise user enters all relevant info.
-	Store record in file system and/or db if new
-	Return index of record in database"""
-	if not known_info_d:
-		known_info_d = {}
-
-	storage_dir = os.path.join(project_root,'db_records_entered_by_hand')
-	# pick from database if possible
-	db_idx, db_style_record = pick_record_from_db(sess,element,known_info_d=known_info_d)
-
-	# if not from db
-	if db_idx is None:
-		# pick from file_system
-		fs_idx, file_style_record = pick_record_from_file_system(storage_dir,element,known_info_d=known_info_d)
-		# if not from file_system
-		if fs_idx is None:
-			# have user enter record
-			db_style_record, enum_plaintext_dict, fk_plaintext_dict = get_record_info_from_user(
-				sess,element,known_info_d=known_info_d)
-			# save to db
-			[db_idx, db_style_record, enum_plaintext_dict, fk_plaintext_dict,changed] = dbr.save_one_to_db(
-				sess,element,db_style_record)
-			# save to file system
-			save_record_to_filesystem(storage_dir,element,db_style_record,enum_plaintext_dict)
-		# if found in file system
-		else:
-			try:
-				db_style_record = mr.db_record_from_file_record(sess,element,file_style_record)
-				db_idx,db_style_record,enum_plaintext_dict,fk_plaintext_dict, changed = dbr.save_one_to_db(
-					sess,element,db_style_record)
-			except KeyError as e:
-				print(e)
-				input(
-					f'Perhaps the file {element}.txt in {storage_dir} does not have all fields '
-					f'required by the corresponding database table.\n'
-					f'Revise {element}.txt and hit return to continue.')
-				db_idx,db_style_record,enum_plaintext_dict,fk_plaintext_dict = pick_or_create_record(
-					sess,project_root,element,known_info_d=known_info_d)
-	# if picked from db
-	else:
-		enum_plaintext_dict = mr.enum_plaintext_dict_from_db_record(sess,element,db_style_record)
-		fk_plaintext_dict = mr.fk_plaintext_dict_from_db_record(
-			sess,element,db_style_record,excluded=enum_plaintext_dict.keys())
-	return db_idx, db_style_record, enum_plaintext_dict, fk_plaintext_dict
-
-
-def pick_record_from_db(sess,element,known_info_d=None,required=False,db_idx=None):
-	"""Get id and info from database, if it exists.
-	If <db_idx> is passed, return that index and a dictionary with the rest of the record"""
-	if not known_info_d:
-		known_info_d = {}
-
-	element_df = pd.read_sql_table(element,sess.bind,index_col='Id')
-	if element_df.empty:
-		return None,None
-	elif db_idx:
-		return db_idx, element_df.loc[db_idx].to_dict()
-
-	# add columns for plaintext of any enumerations
-	# FIXME also add columns for foreign key plaintext
-	enums = dbr.read_enums_from_db_table(sess,element)
-	element_enhanced_df = element_df.copy()
-	for e in enums:
-		e_df = pd.read_sql_table(e,sess.bind,index_col='Id')
-		element_enhanced_df = mr.enum_col_from_id_othertext(element_enhanced_df,e,e_df,drop_old=False)
-
-	# filter by known_info_d
-	d = {k:v for k,v in known_info_d.items() if k in element_enhanced_df.columns}
-	filtered = element_enhanced_df.loc[(element_enhanced_df[list(d)] == pd.Series(d)).all(axis=1)]
-	# TODO if filtered is empty, offer all
-	if filtered.empty:
-		print('Nothing meets the filter criteria. Unfiltered options will be offered.')
-		filtered = element_enhanced_df
-
-	print(f'Pick the {element} record from the database:')
-	name_field = db_routines.get_name_field(element)
-	element_idx, values = pick_one(filtered,name_field,element)
-	if element_idx in element_df.index:
-		d = dict(element_df.loc[element_idx])
-	else:
-		d = None
-	if required and element_idx is None:
-		# offer to filter by available enumerations
-		enum_list = [x for x in dbr.get_enumerations(sess,element) if x not in known_info_d]
-		if len(enum_list) == 0:
-			print('No more filters available. You must choose from this list')
-			element_idx, d = pick_record_from_db(sess,element,known_info_d=known_info_d)
-		else:
-			while element_idx is None and len(enum_list) > 0:
-				e = enum_list[0]
-				e_filter = input(f'Filter by {e} (y/n)?\n')
-				if e_filter == 'y':
-					known_info_d[f'{e}_Id'],known_info_d[f'Other{e}'],known_info_d[e] = pick_enum(sess,e)
-					element_idx, d = pick_record_from_db(sess,element,known_info_d=known_info_d,required=True)
-				enum_list.remove(e)
-
-	return element_idx, d
-
-
-def pick_enum(sess,e):
-	e_df = pd.read_sql_table(e,sess.bind,index_col='Id')
-	e_idx,e_plaintext = pick_one(e_df,'Txt',item=e,required=True)
-	if e_plaintext == 'other':
-		# get plaintext from user
-		while e_plaintext in ['','other']:
-			e_plaintext = get_alphanumeric_from_user(
-				f'Enter the value for {e}, which cannot be empty and cannot be \'other\'',allow_hyphen=True)
-		e_othertext = e_plaintext
-	else:
-		e_othertext = ''
-	return e_idx,e_othertext,e_plaintext
-
-
-def pick_record_from_file_system(storage_dir,table,known_info_d=None):
-	""" Looks for record in file system.
-	Returns a file-style <record> (with enums as plaintext).
-	If no record found, <idx> is none;
-	otherwise value of <idx> is irrelevant."""
-	# initialize to keep syntax-checker happy
-	filtered_file = None
-	if not known_info_d:
-		known_info_d = {}
-	name_field = dbr.get_name_field(table)
-
-	# identify/create the directory for storing individual records in file system
-	if not os.path.isdir(storage_dir):
-		os.makedirs(storage_dir)
-	# read any info from <table>'s file within that directory
-	storage_file = os.path.join(storage_dir,f'{table}.txt')
-	if os.path.isfile(storage_file):
-		from_file = pd.read_csv(storage_file,sep='\t')
-		if not from_file.empty:
-			# filter via known_info_d
-			filtered_file = from_file.loc[(from_file[list(known_info_d)] == pd.Series(known_info_d)).all(axis=1)]
-		else:
-			filtered_file = from_file
-		print(f'Pick a record from {table} list in file system:')
-		idx, file_style_record = pick_one(filtered_file,name_field)
-	else:
-		idx, file_style_record = None, None
-	if idx is not None:
-		file_style_record = dict(filtered_file.loc[idx])
-	else:
-		file_style_record = None
-	return idx, file_style_record
-
-
-def save_record_to_filesystem(storage_dir,table,user_record,enum_plain_text_values):
-	# identify/create the directory for storing individual records in file system
-	for e in enum_plain_text_values.keys():
-		user_record[e] = enum_plain_text_values[e]  # add plain text
-		user_record.remove(f'{e}_Id')  # remove Id
-		user_record.remove(f'Other{e}')  # remove other text
-
-	if not os.path.isdir(storage_dir):
-		os.makedirs(storage_dir)
-
-	storage_file = os.path.join(storage_dir,f'{table}.txt')
-	if os.path.isfile(storage_file):
-		records = pd.read_csv(storage_file,sep='\t')
-	else:
-		# create empty, with all cols of from_db except Id
-		records = pd.DataFrame([],columns=user_record.keys())
-	records.append(user_record,ignore_index=True)
-	records.to_csv(storage_file,sep='\t',index=False)
-	return
-
-
-def get_datatype(df,c):
-	"""Kludge to get datatype"""
-	if df.dtypes[c] in [np.dtype('M8[ns]'),np.dtype('datetime64')]:
-		datatype_string = 'Date'
-	elif df.dtypes[c] in [np.dtype('int64')]:
-		datatype_string = 'Int'
-	elif df.dtypes[c] in [np.object]:
-		datatype_string = 'String'
-	else:
-		print(f'Datatype {df.dtypes[c]} not recognized. To fix this error, alter code in the `get_datatype` function.')
-		datatype_string = None
-	return datatype_string
-
-
-def get_record_info_from_user(sess,element,known_info_d={},mode='database'):
-	"""Collect new record info from user, with chance to confirm.
-	For each enumeration, translate the user's plaintext input into id/othertext.
-
-	Return the corresponding record (id/othertext only) and an enumeration-value
-	dictionary. Depending on <mode> ('database', 'filesystem' or 'database_and_filesystem'),
-	returns enum plaintext, or enum id/othertext pairs, or both.
-	"""
-
-	# read existing info from db
-	all_from_db = pd.read_sql_table(element,sess.bind,index_col='Id')
-	# initialize <show_user_cols>
-	db_cols = list(all_from_db.columns)  # note: does not include 'Id'
-	show_user_cols=db_cols.copy()
-
-	# initialize value dictionaries to be returned
-	enum_val = fk_val = new = {}
-	enum_list = dbr.get_enumerations(sess,element)
-	fk_df = dbr.get_foreign_key_df(sess,element)
-
-	# get enumeration tables from db
-	e_df = {}
-	for e in enum_list:
-		e_df[e] = pd.read_sql_table(e,sess.bind,index_col='Id')
-
-	# add cols to all_from_db for showing user and update show_user_cols
-	for e in enum_list:
-		all_from_db = mr.enum_col_from_id_othertext(all_from_db,e,e_df[e],drop_old=False)
-		show_user_cols.append(e)
-		show_user_cols.remove(f'{e}_Id')
-		show_user_cols.remove(f'Other{e}')
-	for i,r in fk_df.iterrows():
-		# exclude foreign ids pointing to enumerations
-		if i[:-3] not in enum_list:
-			all_from_db = dbr.add_foreign_key_name_col(
-				sess,all_from_db,r['foreign_column_name'],r['foreign_table_name'],drop_old=False)
-			show_user_cols.append(i[:-3])
-			show_user_cols.remove(i)
-
-	# collect and confirm info from user
-	unconfirmed = True
-	while unconfirmed:
-		# solicit info from user and store values for db insertion
-		new = {}
-		print(f'Enter info for new {element} record.')
-		for c in db_cols:
-			# define new[c] if value is known
-			if c in known_info_d.keys():
-				new[c] = known_info_d[c]
-
-			# if c is an enumeration Id
-			if c[-3:] == '_Id' and c[:-3] in enum_list:
-				c_plain = c[:-3]
-				# if plaintext of enumeration is known
-				if c_plain in new.keys():
-					new[c], new[f'Other{c_plain}'] = mr.enum_value_to_id_othertext(e_df[c],new[c_plain])
-				# if id/othertext of enumeration is known
-				elif f'{c}_Id' in new.keys() and f'Other{c}' in new.keys():
-					new[c] = mr.enum_value_from_id_othertext(e_df[c],new[f'{c}_Id'],new[f'Other{c}'])
-				# otherwise
-				else:
-					new[c], new[f'Other{c_plain}'], new[c_plain] = pick_enum(sess,c_plain)
-			# if c is an Other<enumeration>, new value was defined in loop through enum_list
-			elif c[:5] == 'Other' and c[5:] in enum_list:
-				pass
-			# if c is a foreign key (and not an enumeration)
-			elif c in fk_df.index:
-				# if foreign key id is known
-				c_plain = c[:-3]
-				if c in new.keys():
-					new[c_plain] = dbr.name_from_id(sess,fk_df.loc[c,'foreign_table_name'],new[c])
-				# if foreign key plaintext is known
-				elif c_plain in new.keys():
-					new[c] = dbr.name_to_id(sess,fk_df.loc[c,'foreign_table_name'],new[c_plain])
-				# otherwise
-				else:
-					print(f'Specify the {fk_df.loc[c,"foreign_table_name"]} for this {element}')
-					idx, db_record = pick_record_from_db(sess,fk_df.loc[c,'foreign_table_name'],required=True)
-					new[c_plain] = db_record[dbr.get_name_field(fk_df.loc[c,'foreign_table_name'])]
-					# TODO pull from DB info about whether the foreign key is required
-					new[c] = dbr.name_to_id(sess,fk_df.loc[c,'foreign_table_name'],new[c_plain])
-			else:
-				new[c] = enter_and_check_datatype(f'Enter the {c}',get_datatype(all_from_db,c))
-
-		# present to user for confirmation
-		entry = '\n\t'.join([f'{k}:\t{new[k]}' for k in show_user_cols])
-		confirm = input(f'Confirm entry:\n\t{entry}\nIs this correct (y/n)?\n')
-		if confirm == 'y':
-			unconfirmed = False
-
-	# get db_record, enum_val, fk_val
-	db_record = {k:new[k] for k in db_cols}
-	enum_val = {e:new[e] for e in enum_list}
-	fk_val = {k[:-3]:new[k[:-3]] for k in fk_df.index}
-	show_user = {k:new[k] for k in show_user_cols}
-
-	if mode == 'database':
-		return db_record, enum_val, fk_val
-	elif mode == 'filesystem':
-		return show_user, enum_val, fk_val
-	elif mode == 'database_and_filesystem':
-		return {**db_record,**show_user},enum_val, fk_val
-	else:
-		print(f'Mode {mode} not recognized.')
-		return None, None, None
-
-
-def check_datatype(answer,datatype):
-	"""Datatype is typically 'Integer', 'String', 'Date' or 'Encoding'"""
-	good = False
-	if datatype == 'Date':
-		default = datetime.datetime.today().date()
-		try:
-			answer = datetime.datetime.strptime(answer,'%Y-%m-%d').date()
-			good = True
-		except ValueError:
-			use_default = input(f'Answer not recognized as {datatype}. Use default value of {default} (y/n)?\n')
-			if use_default == 'y':
-				answer = default
-				good = True
-			else:
-				print('You need to enter a date in the form \'2018-11-06\'.')
-		# express date as string, e.g., 2020-05-23
-		answer = f'{answer}'
-	elif datatype == 'Integer':
-		try:
-			int(answer)
-			good = True
-		except ValueError:
-			print('You need to enter an integer.')
-	else:
-		# Nothing to check for String datatype
-		good = True
-	return good, answer
-
-
-def enter_and_check_datatype(question,datatype):
-	answer = input(f'{question}')
-	good = False
-	while not good:
-		good,answer = check_datatype(answer,datatype)
-		if not good:
-			answer = input('Try again:\n')
-	return answer
-
-
-def read_single_datafile(munger, f_path, err):
+def read_single_datafile(munger: sf.Munger, f_path: str, err: dict) -> [pd.DataFrame, dict]:
 	try:
 		kwargs = {'thousands': munger.thousands_separator}
 		if munger.field_name_row is None:
@@ -597,52 +166,54 @@ def read_single_datafile(munger, f_path, err):
 				err['format.txt'] = [e]
 		else:
 			df = mr.generic_clean(df)
-		return df, err
-	except:
+			err = sf.check_results_munger_compatibility(munger, df, err)
+		return [df, err]
+	except UnicodeDecodeError as ude:
+		e = f'Encoding error. Datafile not read completely.\n{ude}'
+	except ParserError as pe:
 		# DFs have trouble comparing against None. So we return an empty DF and 
 		# check for emptiness below as an indication of an error.
-		e = f'Nothing read from datafile; if datafile is not empty, look for inconsistency in format.txt.'
-		if 'format.txt' in err.keys():
-			err['format.txt'].append(e)
-		else:
-			err['format.txt'] = [e]
-		return pd.DataFrame(), err
+		e = f'Error parsing results file.\n{pe}'
+	if 'datafile' in err.keys():
+		err['datafile'].append(e)
+	else:
+		err['datafile'] = [e]
+	return [pd.DataFrame(), err]
 
 
 def read_combine_results(mu: sf.Munger, results_file, project_root, err, aux_data_dir=None):
 	working, err = read_single_datafile(mu, results_file, err)
-	working = mr.cast_cols_as_int(working, mu.count_columns,mode='index')
+	if err:
+		return pd.DataFrame(), err
+	else:
+		working = mr.cast_cols_as_int(working, mu.count_columns,mode='index')
 
-	# merge with auxiliary files (if any)
-	if aux_data_dir is not None:
-		# get auxiliary data (includes cleaning and setting (multi-)index of primary key column(s))
-		aux_data,err = mu.get_aux_data(aux_data_dir, err,project_root=project_root)
-		for abbrev,r in mu.aux_meta.iterrows():
-			# cast foreign key columns of main results file as int if possible
-			foreign_key = r['foreign_key'].split(',')
-			working = mr.cast_cols_as_int(working,foreign_key)
-			# rename columns
-			col_rename = {f'{c}':f'{abbrev}[{c}]' for c in aux_data[abbrev].columns}
-			# merge auxiliary info into <working>
-			a_d = aux_data[abbrev].rename(columns=col_rename)
-			working = working.merge(a_d,how='left',left_on=foreign_key,right_index=True)
+		# merge with auxiliary files (if any)
+		if aux_data_dir is not None:
+			# get auxiliary data (includes cleaning and setting (multi-)index of primary key column(s))
+			aux_data,err = mu.get_aux_data(aux_data_dir, err,project_root=project_root)
+			for abbrev,r in mu.aux_meta.iterrows():
+				# cast foreign key columns of main results file as int if possible
+				foreign_key = r['foreign_key'].split(',')
+				working = mr.cast_cols_as_int(working,foreign_key)
+				# rename columns
+				col_rename = {f'{c}':f'{abbrev}[{c}]' for c in aux_data[abbrev].columns}
+				# merge auxiliary info into <working>
+				a_d = aux_data[abbrev].rename(columns=col_rename)
+				working = working.merge(a_d,how='left',left_on=foreign_key,right_index=True)
 
 	return working, err
 
 
 def new_datafile(
-		session,munger:sf.Munger,raw_path,project_root=None,juris=None,results_info=None,aux_data_dir=None):
+		session,munger: sf.Munger, raw_path: str, project_root: str, juris: sf.Jurisdiction,
+		results_info: list=None, aux_data_dir: str=None) -> dict:
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
 	Assumes cdf db exists already"""
-	if not juris:
-		juris = pick_juris_from_filesystem(
-			project_root,juriss_dir='jurisdictions')
-	err = {}
+	err = dict()
 	raw, err = read_combine_results(munger, raw_path, project_root,err,aux_data_dir=aux_data_dir)
-
 	if raw.empty:
-		# TODO improve error tracking
 		e = f'No data read from datafile {raw_path}.'
 		if 'datafile' in err.keys():
 			err['datafile'].append(e)
@@ -652,64 +223,32 @@ def new_datafile(
 	
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
 
+
 	try:
 		raw = mr.munge_clean(raw, munger)
 	except:
-		print('Cleaning of datafile failed. Results not loaded to database. '
-			'Please check compatibilty between the two and try again.')
-		return
+		err['datafile'] = ['Cleaning of datafile failed. Results not loaded to database.']
+		return err
 
 	# NB: info_cols will have suffix added by munger
 
-	# check jurisdiction against raw results file, adapting jurisdiction files as necessary
-	# TODO: incorporate juris.check_against_raw_results(raw,munger,count_columns_by_name)
 	# if jurisdiction changed, load to db
 	juris.load_juris_to_db(session,project_root)
 
 	try:
 		err = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,err,ids=results_info)
-		if err:
-			print(f'{err}. Results not loaded to database.')
 	except:
-		print('Datafile not loaded. Results not loaded to database. '
-			'Please check compatibility of munger and datafile, and try again.')
-		return
-
-	print(f'Datafile contents uploaded to database {session.bind.engine}')
-	return
-
-
-def pick_or_create_directory(root_path,d_name):
-	allowed = re.compile(r'^\w+$')
-	while not os.path.isdir(os.path.join(root_path,d_name)):
-		print(f'No subdirectory {d_name} in {root_path}. Here are the existing subdirectories:')
-		idx, d_name = pick_one(os.listdir(root_path),None,'directory')
-		if idx is None:
-			d_name = ''
-			while not allowed.match(d_name):
-				d_name = get_alphanumeric_from_user('Enter subdirectory name (alphanumeric and underscore only)')
-			full_path = os.path.join(root_path,d_name)
-			confirm = input(f'Confirm creation of directory (y/n)?\n{full_path}\n')
-			if confirm:
-				Path(full_path).mkdir(parents=True,exist_ok=True)
-	return d_name
-
-
-def get_alphanumeric_from_user(request,allow_hyphen=False):
-	# specify regex
-	if allow_hyphen:
-		alpha = re.compile('^[\w\-]+$')
-	else:
-		alpha = re.compile('^\w+$')
-
-	good = False
-	s = input(f'{request}\n')
-	while not good:
-		if alpha.match(s):
-			good = True
+		e = 'Unspecified error during munging. Results not loaded to database.'
+		if 'datafile' in err.keys():
+			err['datafile'].append(e)
 		else:
-			s = input('Answer needs to be alphanumeric. Please try again.\n')
-	return s
+			err['datafile'] = [e]
+		return err
+
+	print(f'Datafile contents uploaded with munger {munger.name} to database {session.bind.engine}')
+	if err == dict():
+		err = None
+	return err
 
 
 def config(filename=None, section='postgresql',msg='Pick parameter file for connecting to the database'):
@@ -745,13 +284,6 @@ def config(filename=None, section='postgresql',msg='Pick parameter file for conn
 	return d
 
 
-def report_problems(problems,msg='There are problems'):
-	"""<problems> is a text list of problems to be reported to user"""
-	prob_str = '\n\t'.join(problems)
-	print(f'{msg}:\n\t{prob_str}\n')
-	return
-
-
 def get_runtime_parameters(required_keys, optional_keys=None,param_file=None):
 	d = {}
 	missing_required_params = {'missing':[]}
@@ -784,42 +316,13 @@ def get_runtime_parameters(required_keys, optional_keys=None,param_file=None):
 
 	return d, missing_required_params
 
-def set_record_info_from_user(sess,element,known_info_d={}):
-
-	#Collect new record info from user and return a dictionary ready to be written to element table
-
-	# read existing info from db
-	all_from_db = pd.read_sql_table(element,sess.bind,index_col='Id')
-	db_cols = list(all_from_db.columns)  # note: does not include 'Id'
-
-	new = {}
-	error = []
-
-	for c in db_cols:
-		# define new[c] if value is known
-		if c in known_info_d.keys():
-			new[c] = known_info_d[c]
+def add_error(err: dict, key: str, msg: str) -> dict:
+	if msg:
+		if msg in err.keys():
+			err[key].append(msg)
 		else:
-			new[c] = None
+			err[key] = msg
+	return err
 
-
-
-	#Get foreign key references.
-	fk_df = dbr.get_foreign_key_df(sess,element)
-
-#replaces foreign key id's inplace of user provided names.
-	for c in fk_df.index:
-		c_plain = c[:-3]
-		if c in new.keys():
-			new[c] = dbr.name_to_id(sess, fk_df.loc[c, 'foreign_table_name'], new[c])
-			if new[c] == None:
-				error.append(f'{known_info_d[c]} is invalid {c_plain} (not found in {sess.bind.url})')
-		# TODO display valid entries in the error report.
-
-
-
-	db_record = {k: new[k] for k in db_cols}
-
-	return db_record, error
 
 

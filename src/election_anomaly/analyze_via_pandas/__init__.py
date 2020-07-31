@@ -30,7 +30,7 @@ def child_rus_by_id(session,parents,ru_type=None):
 
 
 def create_rollup(
-		session,target_dir,top_ru_id=None,sub_rutype_id=None,sub_rutype_othertext=None,election_id=None,
+		session,target_dir,top_ru_id,sub_rutype_id=None,sub_rutype_othertext=None,election_id=None,
 		datafile_id_list=None,by_vote_type=True,exclude_total=True):
 	"""<target_dir> is the directory where the resulting rollup will be stored.
 	<election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
@@ -43,35 +43,10 @@ def create_rollup(
 	# Get name of db for error messages
 	db = session.bind.url.database
 
-	# ask user to select any info not supplied
-	if top_ru_id is None:
-		# TODO allow passage of top_ru name, from which id is deduced. Similarly for other args.
-		print('Select the type of the top ReportingUnit for the rollup.')
-		top_rutype_id, top_rutype_othertext, top_rutype = ui.pick_enum(session,'ReportingUnitType')
-		print('Select the top ReportingUnit for the rollup')
-		top_ru_id, top_ru = ui.pick_record_from_db(
-			session,'ReportingUnit',known_info_d={
-				'ReportingUnitType_Id':top_rutype_id, 'OtherReportingUnitType':top_rutype_othertext},required=True)
-	else:
-		top_ru_id, top_ru = ui.pick_record_from_db(session,'ReportingUnit',required=True,db_idx=top_ru_id)
-	if election_id is None:
-		print('Select the Election')
-	election_id,election = ui.pick_record_from_db(session,'Election',required=True,db_idx=election_id)
-
-	if datafile_id_list is None:
-		# TODO allow several datafiles to be picked
-		# TODO restrict to datafiles whose ReportingUnit intersects top_ru?
-		# TODO note/enforce that no datafile double counts anything?
-		print('Select the datafile')
-		datafile_id_list = ui.pick_record_from_db(
-			session,'_datafile',required=True,known_info_d={'Election_Id':election_id})[0]
-	if sub_rutype_id is None:
-		# TODO restrict to types that appear as sub-reportingunits of top_ru?
-		#  Or that appear in VoteCounts associated to one of the datafiles?
-		print('Select the ReportingUnitType for the lines of the rollup')
-		sub_rutype_id, sub_rutype_othertext,sub_rutype = ui.pick_enum(session,'ReportingUnitType')
-	else:
-		sub_rutype = dbr.name_from_id(session, 'ReportingUnitType', sub_rutype_id)
+	# get names from ids
+	top_ru = dbr.name_from_id(session,'ReportingUnit',top_ru_id).replace(" ","-")
+	election = dbr.name_from_id(session,'Election',election_id).replace(" ","-")
+	sub_rutype = dbr.name_from_id(session, 'ReportingUnitType', sub_rutype_id)
 
 	# pull relevant tables
 	df = {}
@@ -150,8 +125,6 @@ def create_rollup(
 	# missing = [str(x) for x in all_subs_ids if x not in children_of_subs_ids]
 	# if missing:
 	# TODO report these out to the export directory
-	#	ui.report_problems(missing,msg=f'The following reporting units are nested in {top_ru["Name"]} '
-	#							f'but are not nested in any {sub_rutype} nested in {top_ru["Name"]}')
 
 	# limit to relevant vote counts
 	ecsvcj = df['ElectionContestSelectionVoteCountJoin'][
@@ -202,9 +175,9 @@ def create_rollup(
 		'Election','ReportingUnitType','CountItemType','CountItemStatus',
 		'source_db_url','timestamp']
 	inventory_values = [
-		election['Name'],sub_rutype,cit,cis,
+		election,sub_rutype,cit,cis,
 		str(session.bind.url),datetime.date.today()]
-	sub_dir = os.path.join(election['Name'],top_ru["Name"],f'by_{sub_rutype}')
+	sub_dir = os.path.join(election, top_ru, f'by_{sub_rutype}')
 	export_to_inventory_file_tree(
 		target_dir,sub_dir,f'{count_item}.txt',inventory_columns,inventory_values,summed_by_name)
 

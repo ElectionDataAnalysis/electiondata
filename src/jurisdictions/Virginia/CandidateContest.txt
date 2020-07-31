@@ -1,0 +1,781 @@
+Name	NumberElected	Office	PrimaryParty
+VA House District 1	1	VA House District 1	
+VA House District 2	1	VA House District 2	
+VA House District 3	1	VA House District 3	
+VA House District 4	1	VA House District 4	
+VA House District 5	1	VA House District 5	
+VA House District 6	1	VA House District 6	
+VA House District 7	1	VA House District 7	
+VA House District 8	1	VA House District 8	
+VA House District 9	1	VA House District 9	
+VA House District 10	1	VA House District 10	
+VA House District 11	1	VA House District 11	
+VA House District 12	1	VA House District 12	
+VA House District 13	1	VA House District 13	
+VA House District 14	1	VA House District 14	
+VA House District 15	1	VA House District 15	
+VA House District 16	1	VA House District 16	
+VA House District 17	1	VA House District 17	
+VA House District 18	1	VA House District 18	
+VA House District 19	1	VA House District 19	
+VA House District 20	1	VA House District 20	
+VA House District 21	1	VA House District 21	
+VA House District 22	1	VA House District 22	
+VA House District 23	1	VA House District 23	
+VA House District 24	1	VA House District 24	
+VA House District 25	1	VA House District 25	
+VA House District 26	1	VA House District 26	
+VA House District 27	1	VA House District 27	
+VA House District 28	1	VA House District 28	
+VA House District 29	1	VA House District 29	
+VA House District 30	1	VA House District 30	
+VA House District 31	1	VA House District 31	
+VA House District 32	1	VA House District 32	
+VA House District 33	1	VA House District 33	
+VA House District 34	1	VA House District 34	
+VA House District 35	1	VA House District 35	
+VA House District 36	1	VA House District 36	
+VA House District 37	1	VA House District 37	
+VA House District 38	1	VA House District 38	
+VA House District 39	1	VA House District 39	
+VA House District 40	1	VA House District 40	
+VA House District 41	1	VA House District 41	
+VA House District 42	1	VA House District 42	
+VA House District 43	1	VA House District 43	
+VA House District 44	1	VA House District 44	
+VA House District 45	1	VA House District 45	
+VA House District 46	1	VA House District 46	
+VA House District 47	1	VA House District 47	
+VA House District 48	1	VA House District 48	
+VA House District 49	1	VA House District 49	
+VA House District 50	1	VA House District 50	
+VA House District 51	1	VA House District 51	
+VA House District 52	1	VA House District 52	
+VA House District 53	1	VA House District 53	
+VA House District 54	1	VA House District 54	
+VA House District 55	1	VA House District 55	
+VA House District 56	1	VA House District 56	
+VA House District 57	1	VA House District 57	
+VA House District 58	1	VA House District 58	
+VA House District 59	1	VA House District 59	
+VA House District 60	1	VA House District 60	
+VA House District 61	1	VA House District 61	
+VA House District 62	1	VA House District 62	
+VA House District 63	1	VA House District 63	
+VA House District 64	1	VA House District 64	
+VA House District 65	1	VA House District 65	
+VA House District 66	1	VA House District 66	
+VA House District 67	1	VA House District 67	
+VA House District 68	1	VA House District 68	
+VA House District 69	1	VA House District 69	
+VA House District 70	1	VA House District 70	
+VA House District 71	1	VA House District 71	
+VA House District 72	1	VA House District 72	
+VA House District 73	1	VA House District 73	
+VA House District 74	1	VA House District 74	
+VA House District 75	1	VA House District 75	
+VA House District 76	1	VA House District 76	
+VA House District 77	1	VA House District 77	
+VA House District 78	1	VA House District 78	
+VA House District 79	1	VA House District 79	
+VA House District 80	1	VA House District 80	
+VA House District 81	1	VA House District 81	
+VA House District 82	1	VA House District 82	
+VA House District 83	1	VA House District 83	
+VA House District 84	1	VA House District 84	
+VA House District 85	1	VA House District 85	
+VA House District 86	1	VA House District 86	
+VA House District 87	1	VA House District 87	
+VA House District 88	1	VA House District 88	
+VA House District 89	1	VA House District 89	
+VA House District 90	1	VA House District 90	
+VA House District 91	1	VA House District 91	
+VA House District 92	1	VA House District 92	
+VA House District 93	1	VA House District 93	
+VA House District 94	1	VA House District 94	
+VA House District 95	1	VA House District 95	
+VA House District 96	1	VA House District 96	
+VA House District 97	1	VA House District 97	
+VA House District 98	1	VA House District 98	
+VA House District 99	1	VA House District 99	
+VA House District 100	1	VA House District 100	
+VA Senate District 1	1	VA Senate District 1	
+VA Senate District 2	1	VA Senate District 2	
+VA Senate District 3	1	VA Senate District 3	
+VA Senate District 4	1	VA Senate District 4	
+VA Senate District 5	1	VA Senate District 5	
+VA Senate District 6	1	VA Senate District 6	
+VA Senate District 7	1	VA Senate District 7	
+VA Senate District 8	1	VA Senate District 8	
+VA Senate District 9	1	VA Senate District 9	
+VA Senate District 10	1	VA Senate District 10	
+VA Senate District 11	1	VA Senate District 11	
+VA Senate District 12	1	VA Senate District 12	
+VA Senate District 13	1	VA Senate District 13	
+VA Senate District 14	1	VA Senate District 14	
+VA Senate District 15	1	VA Senate District 15	
+VA Senate District 16	1	VA Senate District 16	
+VA Senate District 17	1	VA Senate District 17	
+VA Senate District 18	1	VA Senate District 18	
+VA Senate District 19	1	VA Senate District 19	
+VA Senate District 20	1	VA Senate District 20	
+VA Senate District 21	1	VA Senate District 21	
+VA Senate District 22	1	VA Senate District 22	
+VA Senate District 23	1	VA Senate District 23	
+VA Senate District 24	1	VA Senate District 24	
+VA Senate District 25	1	VA Senate District 25	
+VA Senate District 26	1	VA Senate District 26	
+VA Senate District 27	1	VA Senate District 27	
+VA Senate District 28	1	VA Senate District 28	
+VA Senate District 29	1	VA Senate District 29	
+VA Senate District 30	1	VA Senate District 30	
+VA Senate District 31	1	VA Senate District 31	
+VA Senate District 32	1	VA Senate District 32	
+VA Senate District 33	1	VA Senate District 33	
+VA Senate District 34	1	VA Senate District 34	
+VA Senate District 35	1	VA Senate District 35	
+VA Senate District 36	1	VA Senate District 36	
+VA Senate District 37	1	VA Senate District 37	
+VA Senate District 38	1	VA Senate District 38	
+VA Senate District 39	1	VA Senate District 39	
+VA Senate District 40	1	VA Senate District 40	
+US House VA District 1	1	US House VA District 1	
+US House VA District 2	1	US House VA District 2	
+US House VA District 3	1	US House VA District 3	
+US House VA District 4	1	US House VA District 4	
+US House VA District 5	1	US House VA District 5	
+US House VA District 6	1	US House VA District 6	
+US House VA District 7	1	US House VA District 7	
+US House VA District 8	1	US House VA District 8	
+US House VA District 9	1	US House VA District 9	
+US House VA District 10	1	US House VA District 10	
+US House VA District 11	1	US House VA District 11	
+VA Governor	1	VA Governor	
+US Senate VA	1	US Senate VA	
+VA Attorney General	1	VA Attorney General	
+VA Lieutenant Governor	1	VA Lieutenant Governor	
+VA Treasurer	1	VA Treasurer	
+VA House District 1 (Democratic Party Primary)	1	VA House District 1	Democratic Party
+VA House District 2 (Democratic Party Primary)	1	VA House District 2	Democratic Party
+VA House District 3 (Democratic Party Primary)	1	VA House District 3	Democratic Party
+VA House District 4 (Democratic Party Primary)	1	VA House District 4	Democratic Party
+VA House District 5 (Democratic Party Primary)	1	VA House District 5	Democratic Party
+VA House District 6 (Democratic Party Primary)	1	VA House District 6	Democratic Party
+VA House District 7 (Democratic Party Primary)	1	VA House District 7	Democratic Party
+VA House District 8 (Democratic Party Primary)	1	VA House District 8	Democratic Party
+VA House District 9 (Democratic Party Primary)	1	VA House District 9	Democratic Party
+VA House District 10 (Democratic Party Primary)	1	VA House District 10	Democratic Party
+VA House District 11 (Democratic Party Primary)	1	VA House District 11	Democratic Party
+VA House District 12 (Democratic Party Primary)	1	VA House District 12	Democratic Party
+VA House District 13 (Democratic Party Primary)	1	VA House District 13	Democratic Party
+VA House District 14 (Democratic Party Primary)	1	VA House District 14	Democratic Party
+VA House District 15 (Democratic Party Primary)	1	VA House District 15	Democratic Party
+VA House District 16 (Democratic Party Primary)	1	VA House District 16	Democratic Party
+VA House District 17 (Democratic Party Primary)	1	VA House District 17	Democratic Party
+VA House District 18 (Democratic Party Primary)	1	VA House District 18	Democratic Party
+VA House District 19 (Democratic Party Primary)	1	VA House District 19	Democratic Party
+VA House District 20 (Democratic Party Primary)	1	VA House District 20	Democratic Party
+VA House District 21 (Democratic Party Primary)	1	VA House District 21	Democratic Party
+VA House District 22 (Democratic Party Primary)	1	VA House District 22	Democratic Party
+VA House District 23 (Democratic Party Primary)	1	VA House District 23	Democratic Party
+VA House District 24 (Democratic Party Primary)	1	VA House District 24	Democratic Party
+VA House District 25 (Democratic Party Primary)	1	VA House District 25	Democratic Party
+VA House District 26 (Democratic Party Primary)	1	VA House District 26	Democratic Party
+VA House District 27 (Democratic Party Primary)	1	VA House District 27	Democratic Party
+VA House District 28 (Democratic Party Primary)	1	VA House District 28	Democratic Party
+VA House District 29 (Democratic Party Primary)	1	VA House District 29	Democratic Party
+VA House District 30 (Democratic Party Primary)	1	VA House District 30	Democratic Party
+VA House District 31 (Democratic Party Primary)	1	VA House District 31	Democratic Party
+VA House District 32 (Democratic Party Primary)	1	VA House District 32	Democratic Party
+VA House District 33 (Democratic Party Primary)	1	VA House District 33	Democratic Party
+VA House District 34 (Democratic Party Primary)	1	VA House District 34	Democratic Party
+VA House District 35 (Democratic Party Primary)	1	VA House District 35	Democratic Party
+VA House District 36 (Democratic Party Primary)	1	VA House District 36	Democratic Party
+VA House District 37 (Democratic Party Primary)	1	VA House District 37	Democratic Party
+VA House District 38 (Democratic Party Primary)	1	VA House District 38	Democratic Party
+VA House District 39 (Democratic Party Primary)	1	VA House District 39	Democratic Party
+VA House District 40 (Democratic Party Primary)	1	VA House District 40	Democratic Party
+VA House District 41 (Democratic Party Primary)	1	VA House District 41	Democratic Party
+VA House District 42 (Democratic Party Primary)	1	VA House District 42	Democratic Party
+VA House District 43 (Democratic Party Primary)	1	VA House District 43	Democratic Party
+VA House District 44 (Democratic Party Primary)	1	VA House District 44	Democratic Party
+VA House District 45 (Democratic Party Primary)	1	VA House District 45	Democratic Party
+VA House District 46 (Democratic Party Primary)	1	VA House District 46	Democratic Party
+VA House District 47 (Democratic Party Primary)	1	VA House District 47	Democratic Party
+VA House District 48 (Democratic Party Primary)	1	VA House District 48	Democratic Party
+VA House District 49 (Democratic Party Primary)	1	VA House District 49	Democratic Party
+VA House District 50 (Democratic Party Primary)	1	VA House District 50	Democratic Party
+VA House District 51 (Democratic Party Primary)	1	VA House District 51	Democratic Party
+VA House District 52 (Democratic Party Primary)	1	VA House District 52	Democratic Party
+VA House District 53 (Democratic Party Primary)	1	VA House District 53	Democratic Party
+VA House District 54 (Democratic Party Primary)	1	VA House District 54	Democratic Party
+VA House District 55 (Democratic Party Primary)	1	VA House District 55	Democratic Party
+VA House District 56 (Democratic Party Primary)	1	VA House District 56	Democratic Party
+VA House District 57 (Democratic Party Primary)	1	VA House District 57	Democratic Party
+VA House District 58 (Democratic Party Primary)	1	VA House District 58	Democratic Party
+VA House District 59 (Democratic Party Primary)	1	VA House District 59	Democratic Party
+VA House District 60 (Democratic Party Primary)	1	VA House District 60	Democratic Party
+VA House District 61 (Democratic Party Primary)	1	VA House District 61	Democratic Party
+VA House District 62 (Democratic Party Primary)	1	VA House District 62	Democratic Party
+VA House District 63 (Democratic Party Primary)	1	VA House District 63	Democratic Party
+VA House District 64 (Democratic Party Primary)	1	VA House District 64	Democratic Party
+VA House District 65 (Democratic Party Primary)	1	VA House District 65	Democratic Party
+VA House District 66 (Democratic Party Primary)	1	VA House District 66	Democratic Party
+VA House District 67 (Democratic Party Primary)	1	VA House District 67	Democratic Party
+VA House District 68 (Democratic Party Primary)	1	VA House District 68	Democratic Party
+VA House District 69 (Democratic Party Primary)	1	VA House District 69	Democratic Party
+VA House District 70 (Democratic Party Primary)	1	VA House District 70	Democratic Party
+VA House District 71 (Democratic Party Primary)	1	VA House District 71	Democratic Party
+VA House District 72 (Democratic Party Primary)	1	VA House District 72	Democratic Party
+VA House District 73 (Democratic Party Primary)	1	VA House District 73	Democratic Party
+VA House District 74 (Democratic Party Primary)	1	VA House District 74	Democratic Party
+VA House District 75 (Democratic Party Primary)	1	VA House District 75	Democratic Party
+VA House District 76 (Democratic Party Primary)	1	VA House District 76	Democratic Party
+VA House District 77 (Democratic Party Primary)	1	VA House District 77	Democratic Party
+VA House District 78 (Democratic Party Primary)	1	VA House District 78	Democratic Party
+VA House District 79 (Democratic Party Primary)	1	VA House District 79	Democratic Party
+VA House District 80 (Democratic Party Primary)	1	VA House District 80	Democratic Party
+VA House District 81 (Democratic Party Primary)	1	VA House District 81	Democratic Party
+VA House District 82 (Democratic Party Primary)	1	VA House District 82	Democratic Party
+VA House District 83 (Democratic Party Primary)	1	VA House District 83	Democratic Party
+VA House District 84 (Democratic Party Primary)	1	VA House District 84	Democratic Party
+VA House District 85 (Democratic Party Primary)	1	VA House District 85	Democratic Party
+VA House District 86 (Democratic Party Primary)	1	VA House District 86	Democratic Party
+VA House District 87 (Democratic Party Primary)	1	VA House District 87	Democratic Party
+VA House District 88 (Democratic Party Primary)	1	VA House District 88	Democratic Party
+VA House District 89 (Democratic Party Primary)	1	VA House District 89	Democratic Party
+VA House District 90 (Democratic Party Primary)	1	VA House District 90	Democratic Party
+VA House District 91 (Democratic Party Primary)	1	VA House District 91	Democratic Party
+VA House District 92 (Democratic Party Primary)	1	VA House District 92	Democratic Party
+VA House District 93 (Democratic Party Primary)	1	VA House District 93	Democratic Party
+VA House District 94 (Democratic Party Primary)	1	VA House District 94	Democratic Party
+VA House District 95 (Democratic Party Primary)	1	VA House District 95	Democratic Party
+VA House District 96 (Democratic Party Primary)	1	VA House District 96	Democratic Party
+VA House District 97 (Democratic Party Primary)	1	VA House District 97	Democratic Party
+VA House District 98 (Democratic Party Primary)	1	VA House District 98	Democratic Party
+VA House District 99 (Democratic Party Primary)	1	VA House District 99	Democratic Party
+VA House District 100 (Democratic Party Primary)	1	VA House District 100	Democratic Party
+VA Senate District 1 (Democratic Party Primary)	1	VA Senate District 1	Democratic Party
+VA Senate District 2 (Democratic Party Primary)	1	VA Senate District 2	Democratic Party
+VA Senate District 3 (Democratic Party Primary)	1	VA Senate District 3	Democratic Party
+VA Senate District 4 (Democratic Party Primary)	1	VA Senate District 4	Democratic Party
+VA Senate District 5 (Democratic Party Primary)	1	VA Senate District 5	Democratic Party
+VA Senate District 6 (Democratic Party Primary)	1	VA Senate District 6	Democratic Party
+VA Senate District 7 (Democratic Party Primary)	1	VA Senate District 7	Democratic Party
+VA Senate District 8 (Democratic Party Primary)	1	VA Senate District 8	Democratic Party
+VA Senate District 9 (Democratic Party Primary)	1	VA Senate District 9	Democratic Party
+VA Senate District 10 (Democratic Party Primary)	1	VA Senate District 10	Democratic Party
+VA Senate District 11 (Democratic Party Primary)	1	VA Senate District 11	Democratic Party
+VA Senate District 12 (Democratic Party Primary)	1	VA Senate District 12	Democratic Party
+VA Senate District 13 (Democratic Party Primary)	1	VA Senate District 13	Democratic Party
+VA Senate District 14 (Democratic Party Primary)	1	VA Senate District 14	Democratic Party
+VA Senate District 15 (Democratic Party Primary)	1	VA Senate District 15	Democratic Party
+VA Senate District 16 (Democratic Party Primary)	1	VA Senate District 16	Democratic Party
+VA Senate District 17 (Democratic Party Primary)	1	VA Senate District 17	Democratic Party
+VA Senate District 18 (Democratic Party Primary)	1	VA Senate District 18	Democratic Party
+VA Senate District 19 (Democratic Party Primary)	1	VA Senate District 19	Democratic Party
+VA Senate District 20 (Democratic Party Primary)	1	VA Senate District 20	Democratic Party
+VA Senate District 21 (Democratic Party Primary)	1	VA Senate District 21	Democratic Party
+VA Senate District 22 (Democratic Party Primary)	1	VA Senate District 22	Democratic Party
+VA Senate District 23 (Democratic Party Primary)	1	VA Senate District 23	Democratic Party
+VA Senate District 24 (Democratic Party Primary)	1	VA Senate District 24	Democratic Party
+VA Senate District 25 (Democratic Party Primary)	1	VA Senate District 25	Democratic Party
+VA Senate District 26 (Democratic Party Primary)	1	VA Senate District 26	Democratic Party
+VA Senate District 27 (Democratic Party Primary)	1	VA Senate District 27	Democratic Party
+VA Senate District 28 (Democratic Party Primary)	1	VA Senate District 28	Democratic Party
+VA Senate District 29 (Democratic Party Primary)	1	VA Senate District 29	Democratic Party
+VA Senate District 30 (Democratic Party Primary)	1	VA Senate District 30	Democratic Party
+VA Senate District 31 (Democratic Party Primary)	1	VA Senate District 31	Democratic Party
+VA Senate District 32 (Democratic Party Primary)	1	VA Senate District 32	Democratic Party
+VA Senate District 33 (Democratic Party Primary)	1	VA Senate District 33	Democratic Party
+VA Senate District 34 (Democratic Party Primary)	1	VA Senate District 34	Democratic Party
+VA Senate District 35 (Democratic Party Primary)	1	VA Senate District 35	Democratic Party
+VA Senate District 36 (Democratic Party Primary)	1	VA Senate District 36	Democratic Party
+VA Senate District 37 (Democratic Party Primary)	1	VA Senate District 37	Democratic Party
+VA Senate District 38 (Democratic Party Primary)	1	VA Senate District 38	Democratic Party
+VA Senate District 39 (Democratic Party Primary)	1	VA Senate District 39	Democratic Party
+VA Senate District 40 (Democratic Party Primary)	1	VA Senate District 40	Democratic Party
+US House VA District 1 (Democratic Party Primary)	1	US House VA District 1	Democratic Party
+US House VA District 2 (Democratic Party Primary)	1	US House VA District 2	Democratic Party
+US House VA District 3 (Democratic Party Primary)	1	US House VA District 3	Democratic Party
+US House VA District 4 (Democratic Party Primary)	1	US House VA District 4	Democratic Party
+US House VA District 5 (Democratic Party Primary)	1	US House VA District 5	Democratic Party
+US House VA District 6 (Democratic Party Primary)	1	US House VA District 6	Democratic Party
+US House VA District 7 (Democratic Party Primary)	1	US House VA District 7	Democratic Party
+US House VA District 8 (Democratic Party Primary)	1	US House VA District 8	Democratic Party
+US House VA District 9 (Democratic Party Primary)	1	US House VA District 9	Democratic Party
+US House VA District 10 (Democratic Party Primary)	1	US House VA District 10	Democratic Party
+US House VA District 11 (Democratic Party Primary)	1	US House VA District 11	Democratic Party
+VA Governor (Democratic Party Primary)	1	VA Governor	Democratic Party
+US Senate VA (Democratic Party Primary)	1	US Senate VA	Democratic Party
+VA Attorney General (Democratic Party Primary)	1	VA Attorney General	Democratic Party
+VA Lieutenant Governor (Democratic Party Primary)	1	VA Lieutenant Governor	Democratic Party
+VA Treasurer (Democratic Party Primary)	1	VA Treasurer	Democratic Party
+VA House District 1 (Republican Party Primary)	1	VA House District 1	Republican Party
+VA House District 2 (Republican Party Primary)	1	VA House District 2	Republican Party
+VA House District 3 (Republican Party Primary)	1	VA House District 3	Republican Party
+VA House District 4 (Republican Party Primary)	1	VA House District 4	Republican Party
+VA House District 5 (Republican Party Primary)	1	VA House District 5	Republican Party
+VA House District 6 (Republican Party Primary)	1	VA House District 6	Republican Party
+VA House District 7 (Republican Party Primary)	1	VA House District 7	Republican Party
+VA House District 8 (Republican Party Primary)	1	VA House District 8	Republican Party
+VA House District 9 (Republican Party Primary)	1	VA House District 9	Republican Party
+VA House District 10 (Republican Party Primary)	1	VA House District 10	Republican Party
+VA House District 11 (Republican Party Primary)	1	VA House District 11	Republican Party
+VA House District 12 (Republican Party Primary)	1	VA House District 12	Republican Party
+VA House District 13 (Republican Party Primary)	1	VA House District 13	Republican Party
+VA House District 14 (Republican Party Primary)	1	VA House District 14	Republican Party
+VA House District 15 (Republican Party Primary)	1	VA House District 15	Republican Party
+VA House District 16 (Republican Party Primary)	1	VA House District 16	Republican Party
+VA House District 17 (Republican Party Primary)	1	VA House District 17	Republican Party
+VA House District 18 (Republican Party Primary)	1	VA House District 18	Republican Party
+VA House District 19 (Republican Party Primary)	1	VA House District 19	Republican Party
+VA House District 20 (Republican Party Primary)	1	VA House District 20	Republican Party
+VA House District 21 (Republican Party Primary)	1	VA House District 21	Republican Party
+VA House District 22 (Republican Party Primary)	1	VA House District 22	Republican Party
+VA House District 23 (Republican Party Primary)	1	VA House District 23	Republican Party
+VA House District 24 (Republican Party Primary)	1	VA House District 24	Republican Party
+VA House District 25 (Republican Party Primary)	1	VA House District 25	Republican Party
+VA House District 26 (Republican Party Primary)	1	VA House District 26	Republican Party
+VA House District 27 (Republican Party Primary)	1	VA House District 27	Republican Party
+VA House District 28 (Republican Party Primary)	1	VA House District 28	Republican Party
+VA House District 29 (Republican Party Primary)	1	VA House District 29	Republican Party
+VA House District 30 (Republican Party Primary)	1	VA House District 30	Republican Party
+VA House District 31 (Republican Party Primary)	1	VA House District 31	Republican Party
+VA House District 32 (Republican Party Primary)	1	VA House District 32	Republican Party
+VA House District 33 (Republican Party Primary)	1	VA House District 33	Republican Party
+VA House District 34 (Republican Party Primary)	1	VA House District 34	Republican Party
+VA House District 35 (Republican Party Primary)	1	VA House District 35	Republican Party
+VA House District 36 (Republican Party Primary)	1	VA House District 36	Republican Party
+VA House District 37 (Republican Party Primary)	1	VA House District 37	Republican Party
+VA House District 38 (Republican Party Primary)	1	VA House District 38	Republican Party
+VA House District 39 (Republican Party Primary)	1	VA House District 39	Republican Party
+VA House District 40 (Republican Party Primary)	1	VA House District 40	Republican Party
+VA House District 41 (Republican Party Primary)	1	VA House District 41	Republican Party
+VA House District 42 (Republican Party Primary)	1	VA House District 42	Republican Party
+VA House District 43 (Republican Party Primary)	1	VA House District 43	Republican Party
+VA House District 44 (Republican Party Primary)	1	VA House District 44	Republican Party
+VA House District 45 (Republican Party Primary)	1	VA House District 45	Republican Party
+VA House District 46 (Republican Party Primary)	1	VA House District 46	Republican Party
+VA House District 47 (Republican Party Primary)	1	VA House District 47	Republican Party
+VA House District 48 (Republican Party Primary)	1	VA House District 48	Republican Party
+VA House District 49 (Republican Party Primary)	1	VA House District 49	Republican Party
+VA House District 50 (Republican Party Primary)	1	VA House District 50	Republican Party
+VA House District 51 (Republican Party Primary)	1	VA House District 51	Republican Party
+VA House District 52 (Republican Party Primary)	1	VA House District 52	Republican Party
+VA House District 53 (Republican Party Primary)	1	VA House District 53	Republican Party
+VA House District 54 (Republican Party Primary)	1	VA House District 54	Republican Party
+VA House District 55 (Republican Party Primary)	1	VA House District 55	Republican Party
+VA House District 56 (Republican Party Primary)	1	VA House District 56	Republican Party
+VA House District 57 (Republican Party Primary)	1	VA House District 57	Republican Party
+VA House District 58 (Republican Party Primary)	1	VA House District 58	Republican Party
+VA House District 59 (Republican Party Primary)	1	VA House District 59	Republican Party
+VA House District 60 (Republican Party Primary)	1	VA House District 60	Republican Party
+VA House District 61 (Republican Party Primary)	1	VA House District 61	Republican Party
+VA House District 62 (Republican Party Primary)	1	VA House District 62	Republican Party
+VA House District 63 (Republican Party Primary)	1	VA House District 63	Republican Party
+VA House District 64 (Republican Party Primary)	1	VA House District 64	Republican Party
+VA House District 65 (Republican Party Primary)	1	VA House District 65	Republican Party
+VA House District 66 (Republican Party Primary)	1	VA House District 66	Republican Party
+VA House District 67 (Republican Party Primary)	1	VA House District 67	Republican Party
+VA House District 68 (Republican Party Primary)	1	VA House District 68	Republican Party
+VA House District 69 (Republican Party Primary)	1	VA House District 69	Republican Party
+VA House District 70 (Republican Party Primary)	1	VA House District 70	Republican Party
+VA House District 71 (Republican Party Primary)	1	VA House District 71	Republican Party
+VA House District 72 (Republican Party Primary)	1	VA House District 72	Republican Party
+VA House District 73 (Republican Party Primary)	1	VA House District 73	Republican Party
+VA House District 74 (Republican Party Primary)	1	VA House District 74	Republican Party
+VA House District 75 (Republican Party Primary)	1	VA House District 75	Republican Party
+VA House District 76 (Republican Party Primary)	1	VA House District 76	Republican Party
+VA House District 77 (Republican Party Primary)	1	VA House District 77	Republican Party
+VA House District 78 (Republican Party Primary)	1	VA House District 78	Republican Party
+VA House District 79 (Republican Party Primary)	1	VA House District 79	Republican Party
+VA House District 80 (Republican Party Primary)	1	VA House District 80	Republican Party
+VA House District 81 (Republican Party Primary)	1	VA House District 81	Republican Party
+VA House District 82 (Republican Party Primary)	1	VA House District 82	Republican Party
+VA House District 83 (Republican Party Primary)	1	VA House District 83	Republican Party
+VA House District 84 (Republican Party Primary)	1	VA House District 84	Republican Party
+VA House District 85 (Republican Party Primary)	1	VA House District 85	Republican Party
+VA House District 86 (Republican Party Primary)	1	VA House District 86	Republican Party
+VA House District 87 (Republican Party Primary)	1	VA House District 87	Republican Party
+VA House District 88 (Republican Party Primary)	1	VA House District 88	Republican Party
+VA House District 89 (Republican Party Primary)	1	VA House District 89	Republican Party
+VA House District 90 (Republican Party Primary)	1	VA House District 90	Republican Party
+VA House District 91 (Republican Party Primary)	1	VA House District 91	Republican Party
+VA House District 92 (Republican Party Primary)	1	VA House District 92	Republican Party
+VA House District 93 (Republican Party Primary)	1	VA House District 93	Republican Party
+VA House District 94 (Republican Party Primary)	1	VA House District 94	Republican Party
+VA House District 95 (Republican Party Primary)	1	VA House District 95	Republican Party
+VA House District 96 (Republican Party Primary)	1	VA House District 96	Republican Party
+VA House District 97 (Republican Party Primary)	1	VA House District 97	Republican Party
+VA House District 98 (Republican Party Primary)	1	VA House District 98	Republican Party
+VA House District 99 (Republican Party Primary)	1	VA House District 99	Republican Party
+VA House District 100 (Republican Party Primary)	1	VA House District 100	Republican Party
+VA Senate District 1 (Republican Party Primary)	1	VA Senate District 1	Republican Party
+VA Senate District 2 (Republican Party Primary)	1	VA Senate District 2	Republican Party
+VA Senate District 3 (Republican Party Primary)	1	VA Senate District 3	Republican Party
+VA Senate District 4 (Republican Party Primary)	1	VA Senate District 4	Republican Party
+VA Senate District 5 (Republican Party Primary)	1	VA Senate District 5	Republican Party
+VA Senate District 6 (Republican Party Primary)	1	VA Senate District 6	Republican Party
+VA Senate District 7 (Republican Party Primary)	1	VA Senate District 7	Republican Party
+VA Senate District 8 (Republican Party Primary)	1	VA Senate District 8	Republican Party
+VA Senate District 9 (Republican Party Primary)	1	VA Senate District 9	Republican Party
+VA Senate District 10 (Republican Party Primary)	1	VA Senate District 10	Republican Party
+VA Senate District 11 (Republican Party Primary)	1	VA Senate District 11	Republican Party
+VA Senate District 12 (Republican Party Primary)	1	VA Senate District 12	Republican Party
+VA Senate District 13 (Republican Party Primary)	1	VA Senate District 13	Republican Party
+VA Senate District 14 (Republican Party Primary)	1	VA Senate District 14	Republican Party
+VA Senate District 15 (Republican Party Primary)	1	VA Senate District 15	Republican Party
+VA Senate District 16 (Republican Party Primary)	1	VA Senate District 16	Republican Party
+VA Senate District 17 (Republican Party Primary)	1	VA Senate District 17	Republican Party
+VA Senate District 18 (Republican Party Primary)	1	VA Senate District 18	Republican Party
+VA Senate District 19 (Republican Party Primary)	1	VA Senate District 19	Republican Party
+VA Senate District 20 (Republican Party Primary)	1	VA Senate District 20	Republican Party
+VA Senate District 21 (Republican Party Primary)	1	VA Senate District 21	Republican Party
+VA Senate District 22 (Republican Party Primary)	1	VA Senate District 22	Republican Party
+VA Senate District 23 (Republican Party Primary)	1	VA Senate District 23	Republican Party
+VA Senate District 24 (Republican Party Primary)	1	VA Senate District 24	Republican Party
+VA Senate District 25 (Republican Party Primary)	1	VA Senate District 25	Republican Party
+VA Senate District 26 (Republican Party Primary)	1	VA Senate District 26	Republican Party
+VA Senate District 27 (Republican Party Primary)	1	VA Senate District 27	Republican Party
+VA Senate District 28 (Republican Party Primary)	1	VA Senate District 28	Republican Party
+VA Senate District 29 (Republican Party Primary)	1	VA Senate District 29	Republican Party
+VA Senate District 30 (Republican Party Primary)	1	VA Senate District 30	Republican Party
+VA Senate District 31 (Republican Party Primary)	1	VA Senate District 31	Republican Party
+VA Senate District 32 (Republican Party Primary)	1	VA Senate District 32	Republican Party
+VA Senate District 33 (Republican Party Primary)	1	VA Senate District 33	Republican Party
+VA Senate District 34 (Republican Party Primary)	1	VA Senate District 34	Republican Party
+VA Senate District 35 (Republican Party Primary)	1	VA Senate District 35	Republican Party
+VA Senate District 36 (Republican Party Primary)	1	VA Senate District 36	Republican Party
+VA Senate District 37 (Republican Party Primary)	1	VA Senate District 37	Republican Party
+VA Senate District 38 (Republican Party Primary)	1	VA Senate District 38	Republican Party
+VA Senate District 39 (Republican Party Primary)	1	VA Senate District 39	Republican Party
+VA Senate District 40 (Republican Party Primary)	1	VA Senate District 40	Republican Party
+US House VA District 1 (Republican Party Primary)	1	US House VA District 1	Republican Party
+US House VA District 2 (Republican Party Primary)	1	US House VA District 2	Republican Party
+US House VA District 3 (Republican Party Primary)	1	US House VA District 3	Republican Party
+US House VA District 4 (Republican Party Primary)	1	US House VA District 4	Republican Party
+US House VA District 5 (Republican Party Primary)	1	US House VA District 5	Republican Party
+US House VA District 6 (Republican Party Primary)	1	US House VA District 6	Republican Party
+US House VA District 7 (Republican Party Primary)	1	US House VA District 7	Republican Party
+US House VA District 8 (Republican Party Primary)	1	US House VA District 8	Republican Party
+US House VA District 9 (Republican Party Primary)	1	US House VA District 9	Republican Party
+US House VA District 10 (Republican Party Primary)	1	US House VA District 10	Republican Party
+US House VA District 11 (Republican Party Primary)	1	US House VA District 11	Republican Party
+VA Governor (Republican Party Primary)	1	VA Governor	Republican Party
+US Senate VA (Republican Party Primary)	1	US Senate VA	Republican Party
+VA Attorney General (Republican Party Primary)	1	VA Attorney General	Republican Party
+VA Lieutenant Governor (Republican Party Primary)	1	VA Lieutenant Governor	Republican Party
+VA Treasurer (Republican Party Primary)	1	VA Treasurer	Republican Party
+VA House District 1 (Green Party Primary)	1	VA House District 1	Green Party
+VA House District 2 (Green Party Primary)	1	VA House District 2	Green Party
+VA House District 3 (Green Party Primary)	1	VA House District 3	Green Party
+VA House District 4 (Green Party Primary)	1	VA House District 4	Green Party
+VA House District 5 (Green Party Primary)	1	VA House District 5	Green Party
+VA House District 6 (Green Party Primary)	1	VA House District 6	Green Party
+VA House District 7 (Green Party Primary)	1	VA House District 7	Green Party
+VA House District 8 (Green Party Primary)	1	VA House District 8	Green Party
+VA House District 9 (Green Party Primary)	1	VA House District 9	Green Party
+VA House District 10 (Green Party Primary)	1	VA House District 10	Green Party
+VA House District 11 (Green Party Primary)	1	VA House District 11	Green Party
+VA House District 12 (Green Party Primary)	1	VA House District 12	Green Party
+VA House District 13 (Green Party Primary)	1	VA House District 13	Green Party
+VA House District 14 (Green Party Primary)	1	VA House District 14	Green Party
+VA House District 15 (Green Party Primary)	1	VA House District 15	Green Party
+VA House District 16 (Green Party Primary)	1	VA House District 16	Green Party
+VA House District 17 (Green Party Primary)	1	VA House District 17	Green Party
+VA House District 18 (Green Party Primary)	1	VA House District 18	Green Party
+VA House District 19 (Green Party Primary)	1	VA House District 19	Green Party
+VA House District 20 (Green Party Primary)	1	VA House District 20	Green Party
+VA House District 21 (Green Party Primary)	1	VA House District 21	Green Party
+VA House District 22 (Green Party Primary)	1	VA House District 22	Green Party
+VA House District 23 (Green Party Primary)	1	VA House District 23	Green Party
+VA House District 24 (Green Party Primary)	1	VA House District 24	Green Party
+VA House District 25 (Green Party Primary)	1	VA House District 25	Green Party
+VA House District 26 (Green Party Primary)	1	VA House District 26	Green Party
+VA House District 27 (Green Party Primary)	1	VA House District 27	Green Party
+VA House District 28 (Green Party Primary)	1	VA House District 28	Green Party
+VA House District 29 (Green Party Primary)	1	VA House District 29	Green Party
+VA House District 30 (Green Party Primary)	1	VA House District 30	Green Party
+VA House District 31 (Green Party Primary)	1	VA House District 31	Green Party
+VA House District 32 (Green Party Primary)	1	VA House District 32	Green Party
+VA House District 33 (Green Party Primary)	1	VA House District 33	Green Party
+VA House District 34 (Green Party Primary)	1	VA House District 34	Green Party
+VA House District 35 (Green Party Primary)	1	VA House District 35	Green Party
+VA House District 36 (Green Party Primary)	1	VA House District 36	Green Party
+VA House District 37 (Green Party Primary)	1	VA House District 37	Green Party
+VA House District 38 (Green Party Primary)	1	VA House District 38	Green Party
+VA House District 39 (Green Party Primary)	1	VA House District 39	Green Party
+VA House District 40 (Green Party Primary)	1	VA House District 40	Green Party
+VA House District 41 (Green Party Primary)	1	VA House District 41	Green Party
+VA House District 42 (Green Party Primary)	1	VA House District 42	Green Party
+VA House District 43 (Green Party Primary)	1	VA House District 43	Green Party
+VA House District 44 (Green Party Primary)	1	VA House District 44	Green Party
+VA House District 45 (Green Party Primary)	1	VA House District 45	Green Party
+VA House District 46 (Green Party Primary)	1	VA House District 46	Green Party
+VA House District 47 (Green Party Primary)	1	VA House District 47	Green Party
+VA House District 48 (Green Party Primary)	1	VA House District 48	Green Party
+VA House District 49 (Green Party Primary)	1	VA House District 49	Green Party
+VA House District 50 (Green Party Primary)	1	VA House District 50	Green Party
+VA House District 51 (Green Party Primary)	1	VA House District 51	Green Party
+VA House District 52 (Green Party Primary)	1	VA House District 52	Green Party
+VA House District 53 (Green Party Primary)	1	VA House District 53	Green Party
+VA House District 54 (Green Party Primary)	1	VA House District 54	Green Party
+VA House District 55 (Green Party Primary)	1	VA House District 55	Green Party
+VA House District 56 (Green Party Primary)	1	VA House District 56	Green Party
+VA House District 57 (Green Party Primary)	1	VA House District 57	Green Party
+VA House District 58 (Green Party Primary)	1	VA House District 58	Green Party
+VA House District 59 (Green Party Primary)	1	VA House District 59	Green Party
+VA House District 60 (Green Party Primary)	1	VA House District 60	Green Party
+VA House District 61 (Green Party Primary)	1	VA House District 61	Green Party
+VA House District 62 (Green Party Primary)	1	VA House District 62	Green Party
+VA House District 63 (Green Party Primary)	1	VA House District 63	Green Party
+VA House District 64 (Green Party Primary)	1	VA House District 64	Green Party
+VA House District 65 (Green Party Primary)	1	VA House District 65	Green Party
+VA House District 66 (Green Party Primary)	1	VA House District 66	Green Party
+VA House District 67 (Green Party Primary)	1	VA House District 67	Green Party
+VA House District 68 (Green Party Primary)	1	VA House District 68	Green Party
+VA House District 69 (Green Party Primary)	1	VA House District 69	Green Party
+VA House District 70 (Green Party Primary)	1	VA House District 70	Green Party
+VA House District 71 (Green Party Primary)	1	VA House District 71	Green Party
+VA House District 72 (Green Party Primary)	1	VA House District 72	Green Party
+VA House District 73 (Green Party Primary)	1	VA House District 73	Green Party
+VA House District 74 (Green Party Primary)	1	VA House District 74	Green Party
+VA House District 75 (Green Party Primary)	1	VA House District 75	Green Party
+VA House District 76 (Green Party Primary)	1	VA House District 76	Green Party
+VA House District 77 (Green Party Primary)	1	VA House District 77	Green Party
+VA House District 78 (Green Party Primary)	1	VA House District 78	Green Party
+VA House District 79 (Green Party Primary)	1	VA House District 79	Green Party
+VA House District 80 (Green Party Primary)	1	VA House District 80	Green Party
+VA House District 81 (Green Party Primary)	1	VA House District 81	Green Party
+VA House District 82 (Green Party Primary)	1	VA House District 82	Green Party
+VA House District 83 (Green Party Primary)	1	VA House District 83	Green Party
+VA House District 84 (Green Party Primary)	1	VA House District 84	Green Party
+VA House District 85 (Green Party Primary)	1	VA House District 85	Green Party
+VA House District 86 (Green Party Primary)	1	VA House District 86	Green Party
+VA House District 87 (Green Party Primary)	1	VA House District 87	Green Party
+VA House District 88 (Green Party Primary)	1	VA House District 88	Green Party
+VA House District 89 (Green Party Primary)	1	VA House District 89	Green Party
+VA House District 90 (Green Party Primary)	1	VA House District 90	Green Party
+VA House District 91 (Green Party Primary)	1	VA House District 91	Green Party
+VA House District 92 (Green Party Primary)	1	VA House District 92	Green Party
+VA House District 93 (Green Party Primary)	1	VA House District 93	Green Party
+VA House District 94 (Green Party Primary)	1	VA House District 94	Green Party
+VA House District 95 (Green Party Primary)	1	VA House District 95	Green Party
+VA House District 96 (Green Party Primary)	1	VA House District 96	Green Party
+VA House District 97 (Green Party Primary)	1	VA House District 97	Green Party
+VA House District 98 (Green Party Primary)	1	VA House District 98	Green Party
+VA House District 99 (Green Party Primary)	1	VA House District 99	Green Party
+VA House District 100 (Green Party Primary)	1	VA House District 100	Green Party
+VA Senate District 1 (Green Party Primary)	1	VA Senate District 1	Green Party
+VA Senate District 2 (Green Party Primary)	1	VA Senate District 2	Green Party
+VA Senate District 3 (Green Party Primary)	1	VA Senate District 3	Green Party
+VA Senate District 4 (Green Party Primary)	1	VA Senate District 4	Green Party
+VA Senate District 5 (Green Party Primary)	1	VA Senate District 5	Green Party
+VA Senate District 6 (Green Party Primary)	1	VA Senate District 6	Green Party
+VA Senate District 7 (Green Party Primary)	1	VA Senate District 7	Green Party
+VA Senate District 8 (Green Party Primary)	1	VA Senate District 8	Green Party
+VA Senate District 9 (Green Party Primary)	1	VA Senate District 9	Green Party
+VA Senate District 10 (Green Party Primary)	1	VA Senate District 10	Green Party
+VA Senate District 11 (Green Party Primary)	1	VA Senate District 11	Green Party
+VA Senate District 12 (Green Party Primary)	1	VA Senate District 12	Green Party
+VA Senate District 13 (Green Party Primary)	1	VA Senate District 13	Green Party
+VA Senate District 14 (Green Party Primary)	1	VA Senate District 14	Green Party
+VA Senate District 15 (Green Party Primary)	1	VA Senate District 15	Green Party
+VA Senate District 16 (Green Party Primary)	1	VA Senate District 16	Green Party
+VA Senate District 17 (Green Party Primary)	1	VA Senate District 17	Green Party
+VA Senate District 18 (Green Party Primary)	1	VA Senate District 18	Green Party
+VA Senate District 19 (Green Party Primary)	1	VA Senate District 19	Green Party
+VA Senate District 20 (Green Party Primary)	1	VA Senate District 20	Green Party
+VA Senate District 21 (Green Party Primary)	1	VA Senate District 21	Green Party
+VA Senate District 22 (Green Party Primary)	1	VA Senate District 22	Green Party
+VA Senate District 23 (Green Party Primary)	1	VA Senate District 23	Green Party
+VA Senate District 24 (Green Party Primary)	1	VA Senate District 24	Green Party
+VA Senate District 25 (Green Party Primary)	1	VA Senate District 25	Green Party
+VA Senate District 26 (Green Party Primary)	1	VA Senate District 26	Green Party
+VA Senate District 27 (Green Party Primary)	1	VA Senate District 27	Green Party
+VA Senate District 28 (Green Party Primary)	1	VA Senate District 28	Green Party
+VA Senate District 29 (Green Party Primary)	1	VA Senate District 29	Green Party
+VA Senate District 30 (Green Party Primary)	1	VA Senate District 30	Green Party
+VA Senate District 31 (Green Party Primary)	1	VA Senate District 31	Green Party
+VA Senate District 32 (Green Party Primary)	1	VA Senate District 32	Green Party
+VA Senate District 33 (Green Party Primary)	1	VA Senate District 33	Green Party
+VA Senate District 34 (Green Party Primary)	1	VA Senate District 34	Green Party
+VA Senate District 35 (Green Party Primary)	1	VA Senate District 35	Green Party
+VA Senate District 36 (Green Party Primary)	1	VA Senate District 36	Green Party
+VA Senate District 37 (Green Party Primary)	1	VA Senate District 37	Green Party
+VA Senate District 38 (Green Party Primary)	1	VA Senate District 38	Green Party
+VA Senate District 39 (Green Party Primary)	1	VA Senate District 39	Green Party
+VA Senate District 40 (Green Party Primary)	1	VA Senate District 40	Green Party
+US House VA District 1 (Green Party Primary)	1	US House VA District 1	Green Party
+US House VA District 2 (Green Party Primary)	1	US House VA District 2	Green Party
+US House VA District 3 (Green Party Primary)	1	US House VA District 3	Green Party
+US House VA District 4 (Green Party Primary)	1	US House VA District 4	Green Party
+US House VA District 5 (Green Party Primary)	1	US House VA District 5	Green Party
+US House VA District 6 (Green Party Primary)	1	US House VA District 6	Green Party
+US House VA District 7 (Green Party Primary)	1	US House VA District 7	Green Party
+US House VA District 8 (Green Party Primary)	1	US House VA District 8	Green Party
+US House VA District 9 (Green Party Primary)	1	US House VA District 9	Green Party
+US House VA District 10 (Green Party Primary)	1	US House VA District 10	Green Party
+US House VA District 11 (Green Party Primary)	1	US House VA District 11	Green Party
+VA Governor (Green Party Primary)	1	VA Governor	Green Party
+US Senate VA (Green Party Primary)	1	US Senate VA	Green Party
+VA Attorney General (Green Party Primary)	1	VA Attorney General	Green Party
+VA Lieutenant Governor (Green Party Primary)	1	VA Lieutenant Governor	Green Party
+VA Treasurer (Green Party Primary)	1	VA Treasurer	Green Party
+VA House District 1 (Libertarian Party Primary)	1	VA House District 1	Libertarian Party
+VA House District 2 (Libertarian Party Primary)	1	VA House District 2	Libertarian Party
+VA House District 3 (Libertarian Party Primary)	1	VA House District 3	Libertarian Party
+VA House District 4 (Libertarian Party Primary)	1	VA House District 4	Libertarian Party
+VA House District 5 (Libertarian Party Primary)	1	VA House District 5	Libertarian Party
+VA House District 6 (Libertarian Party Primary)	1	VA House District 6	Libertarian Party
+VA House District 7 (Libertarian Party Primary)	1	VA House District 7	Libertarian Party
+VA House District 8 (Libertarian Party Primary)	1	VA House District 8	Libertarian Party
+VA House District 9 (Libertarian Party Primary)	1	VA House District 9	Libertarian Party
+VA House District 10 (Libertarian Party Primary)	1	VA House District 10	Libertarian Party
+VA House District 11 (Libertarian Party Primary)	1	VA House District 11	Libertarian Party
+VA House District 12 (Libertarian Party Primary)	1	VA House District 12	Libertarian Party
+VA House District 13 (Libertarian Party Primary)	1	VA House District 13	Libertarian Party
+VA House District 14 (Libertarian Party Primary)	1	VA House District 14	Libertarian Party
+VA House District 15 (Libertarian Party Primary)	1	VA House District 15	Libertarian Party
+VA House District 16 (Libertarian Party Primary)	1	VA House District 16	Libertarian Party
+VA House District 17 (Libertarian Party Primary)	1	VA House District 17	Libertarian Party
+VA House District 18 (Libertarian Party Primary)	1	VA House District 18	Libertarian Party
+VA House District 19 (Libertarian Party Primary)	1	VA House District 19	Libertarian Party
+VA House District 20 (Libertarian Party Primary)	1	VA House District 20	Libertarian Party
+VA House District 21 (Libertarian Party Primary)	1	VA House District 21	Libertarian Party
+VA House District 22 (Libertarian Party Primary)	1	VA House District 22	Libertarian Party
+VA House District 23 (Libertarian Party Primary)	1	VA House District 23	Libertarian Party
+VA House District 24 (Libertarian Party Primary)	1	VA House District 24	Libertarian Party
+VA House District 25 (Libertarian Party Primary)	1	VA House District 25	Libertarian Party
+VA House District 26 (Libertarian Party Primary)	1	VA House District 26	Libertarian Party
+VA House District 27 (Libertarian Party Primary)	1	VA House District 27	Libertarian Party
+VA House District 28 (Libertarian Party Primary)	1	VA House District 28	Libertarian Party
+VA House District 29 (Libertarian Party Primary)	1	VA House District 29	Libertarian Party
+VA House District 30 (Libertarian Party Primary)	1	VA House District 30	Libertarian Party
+VA House District 31 (Libertarian Party Primary)	1	VA House District 31	Libertarian Party
+VA House District 32 (Libertarian Party Primary)	1	VA House District 32	Libertarian Party
+VA House District 33 (Libertarian Party Primary)	1	VA House District 33	Libertarian Party
+VA House District 34 (Libertarian Party Primary)	1	VA House District 34	Libertarian Party
+VA House District 35 (Libertarian Party Primary)	1	VA House District 35	Libertarian Party
+VA House District 36 (Libertarian Party Primary)	1	VA House District 36	Libertarian Party
+VA House District 37 (Libertarian Party Primary)	1	VA House District 37	Libertarian Party
+VA House District 38 (Libertarian Party Primary)	1	VA House District 38	Libertarian Party
+VA House District 39 (Libertarian Party Primary)	1	VA House District 39	Libertarian Party
+VA House District 40 (Libertarian Party Primary)	1	VA House District 40	Libertarian Party
+VA House District 41 (Libertarian Party Primary)	1	VA House District 41	Libertarian Party
+VA House District 42 (Libertarian Party Primary)	1	VA House District 42	Libertarian Party
+VA House District 43 (Libertarian Party Primary)	1	VA House District 43	Libertarian Party
+VA House District 44 (Libertarian Party Primary)	1	VA House District 44	Libertarian Party
+VA House District 45 (Libertarian Party Primary)	1	VA House District 45	Libertarian Party
+VA House District 46 (Libertarian Party Primary)	1	VA House District 46	Libertarian Party
+VA House District 47 (Libertarian Party Primary)	1	VA House District 47	Libertarian Party
+VA House District 48 (Libertarian Party Primary)	1	VA House District 48	Libertarian Party
+VA House District 49 (Libertarian Party Primary)	1	VA House District 49	Libertarian Party
+VA House District 50 (Libertarian Party Primary)	1	VA House District 50	Libertarian Party
+VA House District 51 (Libertarian Party Primary)	1	VA House District 51	Libertarian Party
+VA House District 52 (Libertarian Party Primary)	1	VA House District 52	Libertarian Party
+VA House District 53 (Libertarian Party Primary)	1	VA House District 53	Libertarian Party
+VA House District 54 (Libertarian Party Primary)	1	VA House District 54	Libertarian Party
+VA House District 55 (Libertarian Party Primary)	1	VA House District 55	Libertarian Party
+VA House District 56 (Libertarian Party Primary)	1	VA House District 56	Libertarian Party
+VA House District 57 (Libertarian Party Primary)	1	VA House District 57	Libertarian Party
+VA House District 58 (Libertarian Party Primary)	1	VA House District 58	Libertarian Party
+VA House District 59 (Libertarian Party Primary)	1	VA House District 59	Libertarian Party
+VA House District 60 (Libertarian Party Primary)	1	VA House District 60	Libertarian Party
+VA House District 61 (Libertarian Party Primary)	1	VA House District 61	Libertarian Party
+VA House District 62 (Libertarian Party Primary)	1	VA House District 62	Libertarian Party
+VA House District 63 (Libertarian Party Primary)	1	VA House District 63	Libertarian Party
+VA House District 64 (Libertarian Party Primary)	1	VA House District 64	Libertarian Party
+VA House District 65 (Libertarian Party Primary)	1	VA House District 65	Libertarian Party
+VA House District 66 (Libertarian Party Primary)	1	VA House District 66	Libertarian Party
+VA House District 67 (Libertarian Party Primary)	1	VA House District 67	Libertarian Party
+VA House District 68 (Libertarian Party Primary)	1	VA House District 68	Libertarian Party
+VA House District 69 (Libertarian Party Primary)	1	VA House District 69	Libertarian Party
+VA House District 70 (Libertarian Party Primary)	1	VA House District 70	Libertarian Party
+VA House District 71 (Libertarian Party Primary)	1	VA House District 71	Libertarian Party
+VA House District 72 (Libertarian Party Primary)	1	VA House District 72	Libertarian Party
+VA House District 73 (Libertarian Party Primary)	1	VA House District 73	Libertarian Party
+VA House District 74 (Libertarian Party Primary)	1	VA House District 74	Libertarian Party
+VA House District 75 (Libertarian Party Primary)	1	VA House District 75	Libertarian Party
+VA House District 76 (Libertarian Party Primary)	1	VA House District 76	Libertarian Party
+VA House District 77 (Libertarian Party Primary)	1	VA House District 77	Libertarian Party
+VA House District 78 (Libertarian Party Primary)	1	VA House District 78	Libertarian Party
+VA House District 79 (Libertarian Party Primary)	1	VA House District 79	Libertarian Party
+VA House District 80 (Libertarian Party Primary)	1	VA House District 80	Libertarian Party
+VA House District 81 (Libertarian Party Primary)	1	VA House District 81	Libertarian Party
+VA House District 82 (Libertarian Party Primary)	1	VA House District 82	Libertarian Party
+VA House District 83 (Libertarian Party Primary)	1	VA House District 83	Libertarian Party
+VA House District 84 (Libertarian Party Primary)	1	VA House District 84	Libertarian Party
+VA House District 85 (Libertarian Party Primary)	1	VA House District 85	Libertarian Party
+VA House District 86 (Libertarian Party Primary)	1	VA House District 86	Libertarian Party
+VA House District 87 (Libertarian Party Primary)	1	VA House District 87	Libertarian Party
+VA House District 88 (Libertarian Party Primary)	1	VA House District 88	Libertarian Party
+VA House District 89 (Libertarian Party Primary)	1	VA House District 89	Libertarian Party
+VA House District 90 (Libertarian Party Primary)	1	VA House District 90	Libertarian Party
+VA House District 91 (Libertarian Party Primary)	1	VA House District 91	Libertarian Party
+VA House District 92 (Libertarian Party Primary)	1	VA House District 92	Libertarian Party
+VA House District 93 (Libertarian Party Primary)	1	VA House District 93	Libertarian Party
+VA House District 94 (Libertarian Party Primary)	1	VA House District 94	Libertarian Party
+VA House District 95 (Libertarian Party Primary)	1	VA House District 95	Libertarian Party
+VA House District 96 (Libertarian Party Primary)	1	VA House District 96	Libertarian Party
+VA House District 97 (Libertarian Party Primary)	1	VA House District 97	Libertarian Party
+VA House District 98 (Libertarian Party Primary)	1	VA House District 98	Libertarian Party
+VA House District 99 (Libertarian Party Primary)	1	VA House District 99	Libertarian Party
+VA House District 100 (Libertarian Party Primary)	1	VA House District 100	Libertarian Party
+VA Senate District 1 (Libertarian Party Primary)	1	VA Senate District 1	Libertarian Party
+VA Senate District 2 (Libertarian Party Primary)	1	VA Senate District 2	Libertarian Party
+VA Senate District 3 (Libertarian Party Primary)	1	VA Senate District 3	Libertarian Party
+VA Senate District 4 (Libertarian Party Primary)	1	VA Senate District 4	Libertarian Party
+VA Senate District 5 (Libertarian Party Primary)	1	VA Senate District 5	Libertarian Party
+VA Senate District 6 (Libertarian Party Primary)	1	VA Senate District 6	Libertarian Party
+VA Senate District 7 (Libertarian Party Primary)	1	VA Senate District 7	Libertarian Party
+VA Senate District 8 (Libertarian Party Primary)	1	VA Senate District 8	Libertarian Party
+VA Senate District 9 (Libertarian Party Primary)	1	VA Senate District 9	Libertarian Party
+VA Senate District 10 (Libertarian Party Primary)	1	VA Senate District 10	Libertarian Party
+VA Senate District 11 (Libertarian Party Primary)	1	VA Senate District 11	Libertarian Party
+VA Senate District 12 (Libertarian Party Primary)	1	VA Senate District 12	Libertarian Party
+VA Senate District 13 (Libertarian Party Primary)	1	VA Senate District 13	Libertarian Party
+VA Senate District 14 (Libertarian Party Primary)	1	VA Senate District 14	Libertarian Party
+VA Senate District 15 (Libertarian Party Primary)	1	VA Senate District 15	Libertarian Party
+VA Senate District 16 (Libertarian Party Primary)	1	VA Senate District 16	Libertarian Party
+VA Senate District 17 (Libertarian Party Primary)	1	VA Senate District 17	Libertarian Party
+VA Senate District 18 (Libertarian Party Primary)	1	VA Senate District 18	Libertarian Party
+VA Senate District 19 (Libertarian Party Primary)	1	VA Senate District 19	Libertarian Party
+VA Senate District 20 (Libertarian Party Primary)	1	VA Senate District 20	Libertarian Party
+VA Senate District 21 (Libertarian Party Primary)	1	VA Senate District 21	Libertarian Party
+VA Senate District 22 (Libertarian Party Primary)	1	VA Senate District 22	Libertarian Party
+VA Senate District 23 (Libertarian Party Primary)	1	VA Senate District 23	Libertarian Party
+VA Senate District 24 (Libertarian Party Primary)	1	VA Senate District 24	Libertarian Party
+VA Senate District 25 (Libertarian Party Primary)	1	VA Senate District 25	Libertarian Party
+VA Senate District 26 (Libertarian Party Primary)	1	VA Senate District 26	Libertarian Party
+VA Senate District 27 (Libertarian Party Primary)	1	VA Senate District 27	Libertarian Party
+VA Senate District 28 (Libertarian Party Primary)	1	VA Senate District 28	Libertarian Party
+VA Senate District 29 (Libertarian Party Primary)	1	VA Senate District 29	Libertarian Party
+VA Senate District 30 (Libertarian Party Primary)	1	VA Senate District 30	Libertarian Party
+VA Senate District 31 (Libertarian Party Primary)	1	VA Senate District 31	Libertarian Party
+VA Senate District 32 (Libertarian Party Primary)	1	VA Senate District 32	Libertarian Party
+VA Senate District 33 (Libertarian Party Primary)	1	VA Senate District 33	Libertarian Party
+VA Senate District 34 (Libertarian Party Primary)	1	VA Senate District 34	Libertarian Party
+VA Senate District 35 (Libertarian Party Primary)	1	VA Senate District 35	Libertarian Party
+VA Senate District 36 (Libertarian Party Primary)	1	VA Senate District 36	Libertarian Party
+VA Senate District 37 (Libertarian Party Primary)	1	VA Senate District 37	Libertarian Party
+VA Senate District 38 (Libertarian Party Primary)	1	VA Senate District 38	Libertarian Party
+VA Senate District 39 (Libertarian Party Primary)	1	VA Senate District 39	Libertarian Party
+VA Senate District 40 (Libertarian Party Primary)	1	VA Senate District 40	Libertarian Party
+US House VA District 1 (Libertarian Party Primary)	1	US House VA District 1	Libertarian Party
+US House VA District 2 (Libertarian Party Primary)	1	US House VA District 2	Libertarian Party
+US House VA District 3 (Libertarian Party Primary)	1	US House VA District 3	Libertarian Party
+US House VA District 4 (Libertarian Party Primary)	1	US House VA District 4	Libertarian Party
+US House VA District 5 (Libertarian Party Primary)	1	US House VA District 5	Libertarian Party
+US House VA District 6 (Libertarian Party Primary)	1	US House VA District 6	Libertarian Party
+US House VA District 7 (Libertarian Party Primary)	1	US House VA District 7	Libertarian Party
+US House VA District 8 (Libertarian Party Primary)	1	US House VA District 8	Libertarian Party
+US House VA District 9 (Libertarian Party Primary)	1	US House VA District 9	Libertarian Party
+US House VA District 10 (Libertarian Party Primary)	1	US House VA District 10	Libertarian Party
+US House VA District 11 (Libertarian Party Primary)	1	US House VA District 11	Libertarian Party
+VA Governor (Libertarian Party Primary)	1	VA Governor	Libertarian Party
+US Senate VA (Libertarian Party Primary)	1	US Senate VA	Libertarian Party
+VA Attorney General (Libertarian Party Primary)	1	VA Attorney General	Libertarian Party
+VA Lieutenant Governor (Libertarian Party Primary)	1	VA Lieutenant Governor	Libertarian Party
+VA Treasurer (Libertarian Party Primary)	1	VA Treasurer	Libertarian Party

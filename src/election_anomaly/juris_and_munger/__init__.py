@@ -2,6 +2,7 @@ import os.path
 
 from election_anomaly import db_routines as dbr
 import pandas as pd
+from pandas.api.types import is_numeric_dtype
 from election_anomaly import munge_routines as mr
 from election_anomaly import user_interface as ui
 import re
@@ -10,59 +11,6 @@ from pathlib import Path
 
 
 class Jurisdiction:
-    def check_against_raw_results(self,results_df,munger,numerical_columns):
-        """Warn user of any mungeable elements in <results_df> that are not
-        translatable via dictionary.txt"""
-        finished = False
-        changed = False
-        while not finished:
-            d = pd.read_csv(
-                os.path.join(
-                    self.path_to_juris_dir,'dictionary.txt'
-                ),sep='\t',index_col='cdf_element',encoding='iso-8859-1')
-
-            problems = []
-            # for each relevant element
-            others = [x for x in munger.cdf_elements.index if
-                     x not in ['BallotMeasureContest','CandidateContest','BallotMeasureSelection','Candidate']]
-
-            # find missing contests
-            missing_bmc = check_element_against_raw_results(
-                'BallotMeasureContest',results_df,munger,numerical_columns,d)[['BallotMeasureContest_raw']]
-            missing_cc = check_element_against_raw_results(
-                'CandidateContest',results_df,munger,numerical_columns,d)[['CandidateContest_raw']]
-            missing_contest = missing_bmc.merge(missing_cc,how='inner',left_index=True,right_index=True)
-            if not missing_contest.empty:
-                ui.show_sample(missing_contest,f'Contests','cannot be translated')
-                problems.append(f'At least one contest unrecognized by dictionary.txt')
-
-            # find missing candidates/selections
-            missing_bms = check_element_against_raw_results(
-                'BallotMeasureSelection',results_df,munger,numerical_columns,d)
-            missing_c = check_element_against_raw_results(
-                'Candidate',results_df,munger,numerical_columns,d)
-            missing_s = missing_bms.merge(missing_c,how='inner',left_index=True,right_index=True)
-
-            if not missing_s.empty:
-                ui.show_sample(missing_s,f'selections','cannot be translated')
-                problems.append(f'At least one selection unrecognized by dictionary.txt')
-            for el in others:
-                missing = check_element_against_raw_results(el,results_df,munger,numerical_columns,d)
-                if not missing.empty:
-                    ui.show_sample(missing,f'{el}s','cannot be translated')
-                    problems.append(f'At least one {el} unrecognized by dictionary.txt')
-            if problems:
-                prob_str = '\n\t'.join(problems)
-                ignore = input(f'Summary of omissions:\n\t{prob_str}\nContinue despite omissions (y/n)?')
-                if ignore == 'y':
-                    finished = True
-                else:
-                    input(f'Make any necessary changes to dictionary.txt, then hit return to continue.')
-                    changed = True
-            else:
-                finished = True
-        return changed
-
     def load_juris_to_db(self,session,project_root):
         """Load info from each element in the Jurisdiction's directory into the db"""
         # for element in Jurisdiction directory (except dictionary, remark)
@@ -264,8 +212,8 @@ def read_munger_info_from_files(dir_path,project_root=None,aux_data_dir=None):
     return [cdf_elements,header_row_count,field_name_row,field_names_if_no_field_name_row,count_columns,file_type,
             encoding,thousands_separator,aux_meta]
 
-# TODO combine ensure_jurisdiction_files with ensure_juris_files
-def ensure_jurisdiction_files(juris_path,project_root):
+# TODO combine ensure_jurisdiction_dir with ensure_juris_files
+def ensure_jurisdiction_dir(juris_path,project_root,ignore_empty=False):
     path_output = None
     # create jurisdiction directory
     try:
@@ -277,7 +225,7 @@ def ensure_jurisdiction_files(juris_path,project_root):
         #todo should the program exit if the directory is created ?
 
     # ensure the contents of the jurisdiction directory are correct
-    juris_file_error = ensure_juris_files(juris_path,project_root)
+    juris_file_error = ensure_juris_files(juris_path,project_root,ignore_empty=ignore_empty)
     if path_output:
         juris_file_error["directory_status"] = path_output
     if juris_file_error:
@@ -286,7 +234,7 @@ def ensure_jurisdiction_files(juris_path,project_root):
         return None
 
 
-def ensure_juris_files(juris_path,project_root):
+def ensure_juris_files(juris_path,project_root,ignore_empty=False):
     """Check that the jurisdiction files are complete and consistent with one another.
     Check for extraneous files in Jurisdiction directory.
     Assumes Jurisdiction directory exists. Assumes dictionary.txt is in the template file"""
@@ -324,8 +272,9 @@ def ensure_juris_files(juris_path,project_root):
         try:
             temp = pd.read_csv(os.path.join(templates_dir,f'{juris_file}.txt'),sep='\t',encoding='iso-8859-1')
         except pd.errors.EmptyDataError:
-            file_empty.append('Template file {'+juris_file+'}.txt has no contents')
-            # print(f'Template file {juris_file}.txt has no contents')
+            if not ignore_empty:
+                file_empty.append('Template file {'+juris_file+'}.txt has no contents')
+                # print(f'Template file {juris_file}.txt has no contents')
             temp = pd.DataFrame()
         if not os.path.isfile(cf_path):
             temp.to_csv(cf_path,sep='\t',index=False)
@@ -779,6 +728,27 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,load_refs,erro
             error[element]["foreign_key"] = \
             f"For some {element} records, {foreign_elt} was not found"
     return df
+
+
+def check_results_munger_compatibility(mu: Munger, df: pd.DataFrame, error: dict) -> dict:
+    # check that count columns exist
+    missing = [i for i in mu.count_columns if i >= df.shape[1]]
+    if missing:
+        e = f'Only {df.shape[1]} columns read from file. Check file_type in format.txt'
+        if 'datafile' in error.keys():
+            error['datafile'].append(e)
+        else:
+            error['datafile'] = e
+    else:
+        # check that count cols are numeric
+        for i in mu.count_columns:
+            if not is_numeric_dtype(df.iloc[:,i]):
+                e = f'Column {i} ({df.columns[i]}) is not numeric.'
+                if 'datafile' in error.keys():
+                    error['datafile'].append(e)
+                else:
+                    error['datafile'] = e
+    return error
 
 
 def check_element_against_raw_results(el,results_df,munger,numerical_columns,d,err=None):
