@@ -1,5 +1,6 @@
 from election_anomaly import db_routines as dbr
 from election_anomaly import user_interface as ui
+from election_anomaly import munge_routines as mr
 from sqlalchemy.orm import sessionmaker
 import os
 import pandas as pd
@@ -8,7 +9,7 @@ import sys
 import ntpath
 from election_anomaly import analyze_via_pandas as avp
 from election_anomaly import juris_and_munger as jm
-from election_anomaly import preparation as p
+from election_anomaly import preparation as prep
 
 data_loader_parameter_list = [
     'project_root','juris_name','db_paramfile','db_name','munger_name',
@@ -260,13 +261,13 @@ class JurisdictionPrepper():
 		# add default entries
 		templates = os.path.join(self.d['project_root'],'templates/jurisdiction_templates')
 		for element in ['Party','Election']:
-			p.add_defaults(self.d['jurisdiction_path'],templates,element)
+			prep.add_defaults(self.d['jurisdiction_path'],templates,element)
 
 		# add all standard Offices/RUs/CandidateContests
 		self.add_standard_contests()
 
 		# add all primary CandidateContests
-		error['primaries'] = p.add_primary_contests(self.d['jurisdiction_path'])
+		error['primaries'] = prep.add_primary_contests(self.d['jurisdiction_path'])
 		
 		# Feature create starter dictionary.txt with cdf_internal name
 		#  used as placeholder for raw_identifier_value
@@ -276,9 +277,9 @@ class JurisdictionPrepper():
 	def add_primaries_to_dict(self):
 		primaries = {}
 		# read CandidateContest.txt, Party.txt and dictionary.txt
-		cc = p.get_element(self.d['jurisdiction_path'], 'CandidateContest')
-		p = p.get_element(self.d['jurisdiction_path'], 'Party')
-		d = p.get_element(self.d['jurisdiction_path'], 'dictionary')
+		cc = prep.get_element(self.d['jurisdiction_path'], 'CandidateContest')
+		p = prep.get_element(self.d['jurisdiction_path'], 'Party')
+		d = prep.get_element(self.d['jurisdiction_path'], 'dictionary')
 		# for each CandidateContest line in dictionary.txt with cdf_identifier in CandidateContest.txt
 		# and for each Party line in dictionary.txt with cdf_identifier in Party.txt
 		# append corresponding line in dictionary.txt
@@ -288,9 +289,9 @@ class JurisdictionPrepper():
 			primaries[p['raw_identifier_value']] = contest_d.copy().rename(
 				columns={'cdf_internal_name': 'contest_internal', 'raw_identifier_value': 'contest_raw'})
 			primaries[p['raw_identifier_value']]['cdf_internal_name'] = primaries[p['raw_identifier_value']].apply(
-				lambda row: p.primary(row, p['cdf_internal_name'], 'internal'), axis=1)
+				lambda row: prep.primary(row, p['cdf_internal_name'], 'internal'), axis=1)
 			primaries[p['raw_identifier_value']]['raw_identifier_value'] = primaries[p['raw_identifier_value']].apply(
-				lambda row: p.primary(row, p['raw_identifier_value'], 'raw'), axis=1)
+				lambda row: prep.primary(row, p['raw_identifier_value'], 'raw'), axis=1)
 
 		if primaries:
 			df_list = [df[['cdf_element', 'cdf_internal_name', 'raw_identifier_value']] for df in primaries.values()]
@@ -298,7 +299,7 @@ class JurisdictionPrepper():
 			new_dictionary = pd.concat(df_list)
 		else:
 			new_dictionary = d
-		p.write_element(self.d['jurisdiction_path'], 'dictionary', new_dictionary)
+		prep.write_element(self.d['jurisdiction_path'], 'dictionary', new_dictionary)
 		return
 
 	def add_standard_contests(self, juriswide_contests: list=None, other_districts: dict=None):
@@ -312,9 +313,9 @@ class JurisdictionPrepper():
 				count[k] = other_districts[k]['count']
 				ru_type[k] = other_districts[k]['ReportingUnitType']
 
-		w_office = p.get_element(self.d['jurisdiction_path'], 'Office')
-		w_ru = p.get_element(self.d['jurisdiction_path'], 'ReportingUnit')
-		w_cc = p.get_element(self.d['jurisdiction_path'], 'CandidateContest')
+		w_office = prep.get_element(self.d['jurisdiction_path'], 'Office')
+		w_ru = prep.get_element(self.d['jurisdiction_path'], 'ReportingUnit')
+		w_cc = prep.get_element(self.d['jurisdiction_path'], 'CandidateContest')
 		cols_off = ['Name', 'ElectionDistrict']
 		cols_ru = ['Name', 'ReportingUnitType']
 		cols_cc = ['Name', 'NumberElected', 'Office', 'PrimaryParty']
@@ -351,38 +352,38 @@ class JurisdictionPrepper():
 		w_cc = w_cc.append(jw_cc,ignore_index=True)
 
 
-		p.write_element(self.d['jurisdiction_path'], 'Office', w_office.drop_duplicates())
-		p.write_element(self.d['jurisdiction_path'], 'ReportingUnit', w_ru.drop_duplicates())
-		p.write_element(self.d['jurisdiction_path'], 'CandidateContest', w_cc.drop_duplicates())
+		prep.write_element(self.d['jurisdiction_path'], 'Office', w_office.drop_duplicates())
+		prep.write_element(self.d['jurisdiction_path'], 'ReportingUnit', w_ru.drop_duplicates())
+		prep.write_element(self.d['jurisdiction_path'], 'CandidateContest', w_cc.drop_duplicates())
 		return
 
 	def add_elements_from_datafile(
 			self,results: pd.DataFrame, mu: jm.Munger, element: str, error: dict) -> dict:
 		"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
 		or not already in <element>.txt"""
-		name_field = db.get_name_field(element)
+		name_field = dbr.get_name_field(element)
 		wr = results.copy()
 		# append <element>_raw
 		wr.columns = [f'{x}_SOURCE' for x in wr.columns]
 		wr, error = mr.add_munged_column(wr, mu, element, error, mode=mu.cdf_elements.loc[element, 'source'])
 		# find <element>_raw values not in dictionary.txt.raw_identifier_value;
 		#  add corresponding lines to dictionary.txt
-		wd = p.get_element(self.d['jurisdiction_path'], 'dictionary')
+		wd = prep.get_element(self.d['jurisdiction_path'], 'dictionary')
 		old_raw = wd[wd.cdf_element == element]['raw_identifier_value'].to_list()
 		new_raw = [x for x in wr[f'{element}_raw'] if x not in old_raw]
 		new_raw_df = pd.DataFrame(
 			[[element, x, x] for x in new_raw],
 			columns=['cdf_element', 'cdf_internal_name', 'raw_identifier_value'])
 		wd = pd.concat([wd, new_raw_df]).drop_duplicates()
-		p.write_element(self.d['jurisdiction_path'], 'dictionary', wd)
+		prep.write_element(self.d['jurisdiction_path'], 'dictionary', wd)
 
 		# find cdf_internal_names that are not in <element>.txt and add them to <element>.txt
-		we = p.get_element(self.d['jurisdiction_path'], element)
+		we = prep.get_element(self.d['jurisdiction_path'], element)
 		old_internal = we[name_field].to_list()
 		new_internal = [x for x in wd[wd.cdf_element == element]['cdf_internal_name'] if x not in old_internal]
 		new_internal_df = pd.DataFrame([[x] for x in new_internal], columns=[name_field])
 		we = pd.concat([we, new_internal_df]).drop_duplicates()
-		p.write_element(self.d['jurisdiction_path'], element, we)
+		prep.write_element(self.d['jurisdiction_path'], element, we)
 		# if <element>.txt has columns other than <name_field>, notify user
 		if we.shape[1] > 1 and not new_internal_df.empty:
 			ui.add_error(error,'preparation',
@@ -394,18 +395,18 @@ class JurisdictionPrepper():
 		Puts file in the current directory"""
 		w = dict()
 		elements = ['BallotMeasureContest','Candidate','CandidateContest','Election','Office','Party','ReportingUnit']
-		old = p.get_element(self.d['jurisdiction_path'],'dictionary')
+		old = prep.get_element(self.d['jurisdiction_path'],'dictionary')
 		if not include_existing:
 			old.drop()
 		for element in elements:
-			w[element] = p.get_element(self.d['jurisdiction_path'],element)
-			name_field = db.get_name_field(element)
+			w[element] = prep.get_element(self.d['jurisdiction_path'],element)
+			name_field = dbr.get_name_field(element)
 			w[element] = mr.add_constant_column(w[element],'cdf_element',element)
 			w[element].rename(columns={name_field:'cdf_internal_name'},inplace=True)
 			w[element]['raw_identifier_value'] = w[element]['cdf_internal_name']
 
 		starter_file_name = f'{self.d["abbreviated_name"]}_starter_dictionary.txt'
-		err = p.write_element(
+		err = prep.write_element(
 			'.','dictionary',pd.concat(
 				[w[element][['cdf_element','cdf_internal_name','raw_identifier_value']] for element in elements]),
 			file_name=starter_file_name)
