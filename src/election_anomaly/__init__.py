@@ -357,9 +357,10 @@ class JurisdictionPrepper():
 		return
 
 	def add_elements_from_datafile(
-			self,results: pd.DataFrame, mu: jm.Munger, element: str, error: dict) -> dict:
+			self,results: pd.DataFrame, mu: jm.Munger, element: str) -> dict:
 		"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
 		or not already in <element>.txt"""
+		error = dict()
 		name_field = dbr.get_name_field(element)
 		wr = results.copy()
 		# append <element>_raw
