@@ -226,7 +226,6 @@ class Analyzer():
             return
 
 
-
 class JurisdictionPrepper():
 	def __new__(cls):
 		""" Checks if parameter file exists and is correct. If not, does
@@ -410,7 +409,7 @@ class JurisdictionPrepper():
 			'.','dictionary',pd.concat(
 				[w[element][['cdf_element','cdf_internal_name','raw_identifier_value']] for element in elements]),
 			file_name=starter_file_name)
-		print(f'Starter dictionary created: {starter_file_name}')
+		print(f'Starter dictionary created in current directory (not in jurisdiction directory):\n{starter_file_name}')
 		return err
 
 	def __init__(self):
