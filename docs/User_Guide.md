@@ -9,11 +9,11 @@
 ### Order of operations
 1. Prepare your new_jurisdiction.par file, following the template. (`src/templates/parameter_file_templates/new_jurisdiction.par`)
 2. Initialize a JurisdictionPrepper.
-3. Call new_juris_files()
+3. Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
 4. Insert any additional CandidateContests you care about into `CandidateContest.txt`, and the corresponding Offices into `Office.txt`. Note that every CandidateContest must have an Office, and that Office must be in `Office.txt`.
-5. Choose raw identifiers for the CandidateContests you care about, and modify the corresponding rows in `dictionary.txt`. You will eventually have to provide a simple formula to calculate these from the results file. Use the names that can be easily concatenated from columns in the results file you're planning to munge.
+5. Choose raw identifiers for the CandidateContests you care about, and modify the corresponding rows in `XX_starter_dictionary.txt`. You will eventually have to provide a simple formula to calculate these from the results file. Use the names that can be easily concatenated from columns in the results file you're planning to munge.
 6. Add any missing Parties to `Party.txt`.
-7. Choose raw identifiers for all parties. Choose carefully, as for CandidateContests. Modify or create the corresponding rows in `dictionary.txt`.
+7. Choose raw identifiers for all parties. Choose carefully, as for CandidateContests. Modify or create the corresponding rows in `XX_starter_dictionary.txt`.
 8. Add all necessary ReportingUnits to `ReportingUnit.txt` (without creating duplicates). You MUST use the naming conventions with semicolons to indicate nesting of reportingunits. Typically you will want:
     1. the jurisdiction itself (`North Carolina`)
     2. counties (e.g., `North Carolina;Alamance County`)
@@ -21,10 +21,11 @@
     4. any reporting units used in your results file, often precincts, nested within counties (e.g., `North Carolina;Alamance County;Precinct 064`)
   
         Note: as of 8/2020, the system does not handle nesting of precincts inside contest districts.
-9. Choose raw identifiers for all ReportingUnits that appear in your results file. Choose carefully, as for CandidateContests. Modify or create the corresponding rows in `dictionary.txt`. (Note: you can omit ReportingUnits such as contest districts from `dictionary.txt` if they aren't needed to specify the vote count in the results file.)
+9. Choose raw identifiers for all ReportingUnits that appear in your results file. Choose carefully, as for CandidateContests. Modify or create the corresponding rows in `XX_starter_dictionary.txt`. (Note: you can omit ReportingUnits such as contest districts from `XX_starter_dictionary.txt` if they aren't needed to specify the vote count in the results file.)
 10. If necessary, add the relevant election to `Election.txt`.
 11. Add any BallotMeasureContests you care about to `BallotMeasureContest.txt`, specifying the ElectionDistrict, which must be in the `ReportingUnit.txt` file. (If you don't know the ElectionDistrict, nothing will break if you assign it the entire jurisdiction as ElectionDistrict.)
-12. Choose raw identifiers for the BallotMeasureContests and modify `dictionary.txt` accordingly.
+12. Choose raw identifiers for the BallotMeasureContests and modify `XX_starter_dictionary.txt` accordingly.
+13. Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt`. 
 13. Add anything useful you've discovered (such as the sources for the data) to `remark.txt`.
 
 ### The JurisdictionPrepper class details
