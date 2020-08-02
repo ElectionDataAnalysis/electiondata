@@ -11,7 +11,7 @@
 2. Initialize a JurisdictionPrepper.
 3. Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
 4. Insert any additional CandidateContests you care about into `CandidateContest.txt`, and the corresponding Offices into `Office.txt`. Note that every CandidateContest must have an Office, and that Office must be in `Office.txt`.
-13. Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt`. 
+13. Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` (or append the contents of `XX_starter_dictionary.txt` to `dictionary.txt` and dedupe). 
 5. Choose raw identifiers for the CandidateContests you care about, and modify the corresponding rows in `dictionary.txt`. You will eventually have to provide a simple formula to calculate these from the results file. Use the names that can be easily concatenated from columns in the results file you're planning to munge.
 6. Add any missing Parties to `Party.txt`. If your munger is already set up you can use 
     
