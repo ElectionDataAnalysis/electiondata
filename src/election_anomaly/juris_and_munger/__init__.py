@@ -157,11 +157,12 @@ class Munger:
             self.aux_data = self.get_aux_data(aux_data_dir,project_root=project_root)
         else:
             self.aux_data = {}
+        self.aux_data_dir = aux_data_dir
 
         # used repeatedly, so calculated once for convenience
         self.field_list = set()
         for t,r in self.cdf_elements.iterrows():
-            self.field_list=self.field_list.union(r['fields'])
+            self.field_list = self.field_list.union(r['fields'])
 
 
 def read_munger_info_from_files(dir_path,project_root=None,aux_data_dir=None):

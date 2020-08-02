@@ -22,6 +22,8 @@ prep_param_list = ['project_root', 'jurisdiction_path', 'name', 'abbreviated_nam
 				   'count_of_us_house_districts',
 				   'reporting_unit_type']
 
+optional_prep_param_list = ['results_file','munger_name']
+
 class DataLoader():
     def __new__(self):
         """ Checks if parameter file exists and is correct. If not, does
@@ -356,39 +358,52 @@ class JurisdictionPrepper():
 		prep.write_element(self.d['jurisdiction_path'], 'CandidateContest', w_cc.drop_duplicates())
 		return
 
-	def add_elements_from_datafile(
-			self,results: pd.DataFrame, mu: jm.Munger, element: str) -> dict:
+	def add_elements_from_datafile(self, element: str, error: dict) -> dict:
 		"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
 		or not already in <element>.txt"""
-		error = dict()
-		name_field = dbr.get_name_field(element)
-		wr = results.copy()
-		# append <element>_raw
-		wr.columns = [f'{x}_SOURCE' for x in wr.columns]
-		wr, error = mr.add_munged_column(wr, mu, element, error, mode=mu.cdf_elements.loc[element, 'source'])
-		# find <element>_raw values not in dictionary.txt.raw_identifier_value;
-		#  add corresponding lines to dictionary.txt
-		wd = prep.get_element(self.d['jurisdiction_path'], 'dictionary')
-		old_raw = wd[wd.cdf_element == element]['raw_identifier_value'].to_list()
-		new_raw = [x for x in wr[f'{element}_raw'] if x not in old_raw]
-		new_raw_df = pd.DataFrame(
-			[[element, x, x] for x in new_raw],
-			columns=['cdf_element', 'cdf_internal_name', 'raw_identifier_value'])
-		wd = pd.concat([wd, new_raw_df]).drop_duplicates()
-		prep.write_element(self.d['jurisdiction_path'], 'dictionary', wd)
 
-		# find cdf_internal_names that are not in <element>.txt and add them to <element>.txt
-		we = prep.get_element(self.d['jurisdiction_path'], element)
-		old_internal = we[name_field].to_list()
-		new_internal = [x for x in wd[wd.cdf_element == element]['cdf_internal_name'] if x not in old_internal]
-		new_internal_df = pd.DataFrame([[x] for x in new_internal], columns=[name_field])
-		we = pd.concat([we, new_internal_df]).drop_duplicates()
-		prep.write_element(self.d['jurisdiction_path'], element, we)
-		# if <element>.txt has columns other than <name_field>, notify user
-		if we.shape[1] > 1 and not new_internal_df.empty:
-			ui.add_error(error,'preparation',
-						 f'New rows added to {element}.txt, but data may be missing from some fields in those rows.')
-		return error
+		missing = [x for x in ['results_file','munger_name'] if x not in self.d.keys()]
+
+		if missing:
+			ui.add_error(error,'datafile',f'Parameters missing: {missing}. Results file cannot be processed.')
+			return error
+		else:
+			if 'aux_data_dir' in self.d.keys():
+				aux_data_dir = self.d['aux_data_dir']
+			else:
+				aux_data_dir = None
+			name_field = dbr.get_name_field(element)
+			mu = jm.Munger(
+				os.path.join(self.d['project_root'], 'mungers', self.d['munger_name']), aux_data_dir=aux_data_dir,
+				project_root=self.d['project_root'])
+			wr, error = ui.read_combine_results(mu, self.d['results_file'],self.d['project_root'], error)
+
+			# append <element>_raw
+			wr.columns = [f'{x}_SOURCE' for x in wr.columns]
+			wr, error = mr.add_munged_column(wr, mu, element, error, mode=mu.cdf_elements.loc[element, 'source'])
+			# find <element>_raw values not in dictionary.txt.raw_identifier_value;
+			#  add corresponding lines to dictionary.txt
+			wd = prep.get_element(self.d['jurisdiction_path'], 'dictionary')
+			old_raw = wd[wd.cdf_element == element]['raw_identifier_value'].to_list()
+			new_raw = [x for x in wr[f'{element}_raw'] if x not in old_raw]
+			new_raw_df = pd.DataFrame(
+				[[element, x, x] for x in new_raw],
+				columns=['cdf_element', 'cdf_internal_name', 'raw_identifier_value'])
+			wd = pd.concat([wd, new_raw_df]).drop_duplicates()
+			prep.write_element(self.d['jurisdiction_path'], 'dictionary', wd)
+
+			# find cdf_internal_names that are not in <element>.txt and add them to <element>.txt
+			we = prep.get_element(self.d['jurisdiction_path'], element)
+			old_internal = we[name_field].to_list()
+			new_internal = [x for x in wd[wd.cdf_element == element]['cdf_internal_name'] if x not in old_internal]
+			new_internal_df = pd.DataFrame([[x] for x in new_internal], columns=[name_field])
+			we = pd.concat([we, new_internal_df]).drop_duplicates()
+			prep.write_element(self.d['jurisdiction_path'], element, we)
+			# if <element>.txt has columns other than <name_field>, notify user
+			if we.shape[1] > 1 and not new_internal_df.empty:
+				ui.add_error(error,'preparation',
+							 f'New rows added to {element}.txt, but data may be missing from some fields in those rows.')
+			return error
 
 	def starter_dictionary(self,include_existing=True) -> str:
 		"""Creates a starter file for dictionary.txt, assuming raw_identifiers are the same as cdf_internal names.
@@ -414,7 +429,8 @@ class JurisdictionPrepper():
 		return err
 
 	def __init__(self):
-		self.d, self.parameter_err = ui.get_runtime_parameters(prep_param_list,param_file='new_jurisdiction.par')
+		self.d, self.parameter_err = ui.get_runtime_parameters(
+			prep_param_list,optional_keys=optional_prep_param_list,param_file='new_jurisdiction.par')
 		self.state_house = int(self.d['count_of_state_house_districts'])
 		self.state_senate = int(self.d['count_of_state_senate_districts'])
 		self.congressional = int(self.d['count_of_us_house_districts'])
