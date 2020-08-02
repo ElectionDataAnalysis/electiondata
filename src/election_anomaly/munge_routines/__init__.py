@@ -96,7 +96,9 @@ def text_fragments_and_fields(formula):
     return text_field_list,last_text
 
 
-def add_munged_column(raw,munger,element,err,mode='row',inplace=True):
+def add_munged_column(
+        raw: pd.DataFrame, munger: jm.Munger, element: str, err: dict, mode: str = 'row',
+        inplace: bool = True) -> (pd.DataFrame, dict):
     """Alters dataframe <raw>, adding or redefining <element>_raw column
     via the <formula>. Assumes "_SOURCE" has been appended to all columns of raw
     Does not alter row count."""
@@ -104,7 +106,7 @@ def add_munged_column(raw,munger,element,err,mode='row',inplace=True):
     if not err:
         err = {}
     if raw.empty:
-        return raw
+        return raw, err
     if inplace:
         working = raw
     else:
