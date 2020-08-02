@@ -744,11 +744,14 @@ def check_results_munger_compatibility(mu: Munger, df: pd.DataFrame, error: dict
         # check that count cols are numeric
         for i in mu.count_columns:
             if not is_numeric_dtype(df.iloc[:,i]):
-                e = f'Column {i} ({df.columns[i]}) is not numeric.'
-                if 'datafile' in error.keys():
-                    error['datafile'].append(e)
-                else:
-                    error['datafile'] = e
+                try:
+                    df.iloc[:, i]= df.iloc[:,i].astype(int)
+                except ValueError as ve:
+                    e = f'Column {i} ({df.columns[i]}) cannot be parsed as an integer.\n{ve}'
+                    if 'datafile' in error.keys():
+                        error['datafile'].append(e)
+                    else:
+                        error['datafile'] = e
     return error
 
 

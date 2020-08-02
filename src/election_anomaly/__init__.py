@@ -362,7 +362,7 @@ class JurisdictionPrepper():
 		"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
 		or not already in <element>.txt"""
 
-		missing = [x for x in ['results_file','munger_name'] if x not in self.d.keys()]
+		missing = [x for x in ['results_file','munger_name'] if self.d[x] is None]
 
 		if missing:
 			ui.add_error(error,'datafile',f'Parameters missing: {missing}. Results file cannot be processed.')

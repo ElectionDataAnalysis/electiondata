@@ -1,0 +1,175 @@
+Name	ReportingUnitType
+CA House District 1	state-house
+CA House District 2	state-house
+CA House District 3	state-house
+CA House District 4	state-house
+CA House District 5	state-house
+CA House District 6	state-house
+CA House District 7	state-house
+CA House District 8	state-house
+CA House District 9	state-house
+CA House District 10	state-house
+CA House District 11	state-house
+CA House District 12	state-house
+CA House District 13	state-house
+CA House District 14	state-house
+CA House District 15	state-house
+CA House District 16	state-house
+CA House District 17	state-house
+CA House District 18	state-house
+CA House District 19	state-house
+CA House District 20	state-house
+CA House District 21	state-house
+CA House District 22	state-house
+CA House District 23	state-house
+CA House District 24	state-house
+CA House District 25	state-house
+CA House District 26	state-house
+CA House District 27	state-house
+CA House District 28	state-house
+CA House District 29	state-house
+CA House District 30	state-house
+CA House District 31	state-house
+CA House District 32	state-house
+CA House District 33	state-house
+CA House District 34	state-house
+CA House District 35	state-house
+CA House District 36	state-house
+CA House District 37	state-house
+CA House District 38	state-house
+CA House District 39	state-house
+CA House District 40	state-house
+CA House District 41	state-house
+CA House District 42	state-house
+CA House District 43	state-house
+CA House District 44	state-house
+CA House District 45	state-house
+CA House District 46	state-house
+CA House District 47	state-house
+CA House District 48	state-house
+CA House District 49	state-house
+CA House District 50	state-house
+CA House District 51	state-house
+CA House District 52	state-house
+CA House District 53	state-house
+CA House District 54	state-house
+CA House District 55	state-house
+CA House District 56	state-house
+CA House District 57	state-house
+CA House District 58	state-house
+CA House District 59	state-house
+CA House District 60	state-house
+CA House District 61	state-house
+CA House District 62	state-house
+CA House District 63	state-house
+CA House District 64	state-house
+CA House District 65	state-house
+CA House District 66	state-house
+CA House District 67	state-house
+CA House District 68	state-house
+CA House District 69	state-house
+CA House District 70	state-house
+CA House District 71	state-house
+CA House District 72	state-house
+CA House District 73	state-house
+CA House District 74	state-house
+CA House District 75	state-house
+CA House District 76	state-house
+CA House District 77	state-house
+CA House District 78	state-house
+CA House District 79	state-house
+CA House District 80	state-house
+CA Senate District 1	state-senate
+CA Senate District 2	state-senate
+CA Senate District 3	state-senate
+CA Senate District 4	state-senate
+CA Senate District 5	state-senate
+CA Senate District 6	state-senate
+CA Senate District 7	state-senate
+CA Senate District 8	state-senate
+CA Senate District 9	state-senate
+CA Senate District 10	state-senate
+CA Senate District 11	state-senate
+CA Senate District 12	state-senate
+CA Senate District 13	state-senate
+CA Senate District 14	state-senate
+CA Senate District 15	state-senate
+CA Senate District 16	state-senate
+CA Senate District 17	state-senate
+CA Senate District 18	state-senate
+CA Senate District 19	state-senate
+CA Senate District 20	state-senate
+CA Senate District 21	state-senate
+CA Senate District 22	state-senate
+CA Senate District 23	state-senate
+CA Senate District 24	state-senate
+CA Senate District 25	state-senate
+CA Senate District 26	state-senate
+CA Senate District 27	state-senate
+CA Senate District 28	state-senate
+CA Senate District 29	state-senate
+CA Senate District 30	state-senate
+CA Senate District 31	state-senate
+CA Senate District 32	state-senate
+CA Senate District 33	state-senate
+CA Senate District 34	state-senate
+CA Senate District 35	state-senate
+CA Senate District 36	state-senate
+CA Senate District 37	state-senate
+CA Senate District 38	state-senate
+CA Senate District 39	state-senate
+CA Senate District 40	state-senate
+US House CA District 1	congressional
+US House CA District 2	congressional
+US House CA District 3	congressional
+US House CA District 4	congressional
+US House CA District 5	congressional
+US House CA District 6	congressional
+US House CA District 7	congressional
+US House CA District 8	congressional
+US House CA District 9	congressional
+US House CA District 10	congressional
+US House CA District 11	congressional
+US House CA District 12	congressional
+US House CA District 13	congressional
+US House CA District 14	congressional
+US House CA District 15	congressional
+US House CA District 16	congressional
+US House CA District 17	congressional
+US House CA District 18	congressional
+US House CA District 19	congressional
+US House CA District 20	congressional
+US House CA District 21	congressional
+US House CA District 22	congressional
+US House CA District 23	congressional
+US House CA District 24	congressional
+US House CA District 25	congressional
+US House CA District 26	congressional
+US House CA District 27	congressional
+US House CA District 28	congressional
+US House CA District 29	congressional
+US House CA District 30	congressional
+US House CA District 31	congressional
+US House CA District 32	congressional
+US House CA District 33	congressional
+US House CA District 34	congressional
+US House CA District 35	congressional
+US House CA District 36	congressional
+US House CA District 37	congressional
+US House CA District 38	congressional
+US House CA District 39	congressional
+US House CA District 40	congressional
+US House CA District 41	congressional
+US House CA District 42	congressional
+US House CA District 43	congressional
+US House CA District 44	congressional
+US House CA District 45	congressional
+US House CA District 46	congressional
+US House CA District 47	congressional
+US House CA District 48	congressional
+US House CA District 49	congressional
+US House CA District 50	congressional
+US House CA District 51	congressional
+US House CA District 52	congressional
+US House CA District 53	congressional
+California	state
