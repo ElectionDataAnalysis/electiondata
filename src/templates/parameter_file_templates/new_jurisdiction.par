@@ -7,3 +7,5 @@ abbreviated_name=<two-letter code for jurisdiction>
 count_of_state_house_districts=<integer>
 count_of_state_senate_districts=<integer>
 count_of_us_house_districts=<integer>
+results_file=<(optional) path to results file>
+munger_name=<(optional) name of munger>
