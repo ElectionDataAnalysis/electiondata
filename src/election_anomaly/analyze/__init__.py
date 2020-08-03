@@ -369,16 +369,18 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 	# cleanup: Rename, drop a duplicated column
 	rename = {
 		'Name_Parent': 'ParentName',
-		'ReportingUnitType_Id_Parent': 'ParentReportingUnitType_Id',
-		'OtherReportingUnitType_Parent': 'ParentOtherReportingUnitType'
+		'ReportingUnitType_Id_Parent': 'ParentReportingUnitType_Id'
 	}
 	unsummed.rename(columns=rename, inplace=True)
-	unsummed.drop(columns=['ChildReportingUnit_Id', 'ElectionContestJoin_Id', 'ContestSelectionJoin_Id'],
-				inplace=True)
-	unsummed = unsummed[unsummed['ReportingUnit_Id'] == unsummed['ParentReportingUnit_Id']]
+	unsummed.drop(columns=['_datafile_Id', 'OtherReportingUnitType', 
+		'ChildReportingUnit_Id', 'ElectionContestJoin_Id','OtherReportingUnitType_Parent', 
+		'ContestSelectionJoin_Id'],
+		inplace=True)
+	#unsummed = unsummed[unsummed['ReportingUnit_Id'] == unsummed['ParentReportingUnit_Id']]
 
 	ranked = assign_anomaly_score(unsummed)
 	top_ranked = get_most_anomalous(ranked, 3)
+	#return top_ranked
 
 	# package into list of dictionary
 	result_list = []
@@ -423,34 +425,50 @@ def assign_anomaly_score(data):
 	combination of those would get assigned an ID. This means rows may get added
 	to the dataframe if needed."""
 
+	# Group data by parent info. This works because each child is also its own
+	# parent in the DB table
+	grouped_df = data.groupby(['ParentReportingUnit_Id', 'ParentName', 
+			'ParentReportingUnitType_Id', 'Candidate_Id',
+            'CountItemType', 'Contest_Id', 'Contest', 'Selection', 
+            'contest_type', 'contest_district_type'], as_index=False)['Count'].sum().reset_index()
+	grouped_df.drop(columns='index', inplace=True)
+	grouped_df.rename(columns={
+		'ParentReportingUnit_Id': 'ReportingUnit_Id',
+		'ParentName': 'Name',	
+		'ParentReportingUnitType_Id': 'ReportingUnitType_Id'
+	}, inplace=True)
+
 	# assign unit_ids to contest, ru_type, and count type
 	# currently this only looks at the most granular level, not rolled up
-	data = data[data['ReportingUnit_Id'] == data['ParentReportingUnit_Id']]
-	df_unit = data[['Contest_Id', 'ReportingUnitType_Id', 'CountItemType']].drop_duplicates()
+	#data = data[data['ReportingUnit_Id'] == data['ParentReportingUnit_Id']]
+	df_unit = grouped_df[['Contest_Id', 'ReportingUnitType_Id', 'CountItemType']].drop_duplicates()
 	df_unit = df_unit.reset_index()
 	df_unit['unit_id'] = df_unit.index
-	data = data.merge(df_unit, how='left', on=['Contest_Id', 'ReportingUnitType_Id', 'CountItemType'])
-
-	unit_ids = data['unit_id'].unique()
+	df_with_units = grouped_df.merge(df_unit, how='left', on=['Contest_Id', 'ReportingUnitType_Id', 'CountItemType'])
+	unit_ids = df_with_units['unit_id'].unique()
 	df = pd.DataFrame()
 	for unit_id in unit_ids:
-		temp_df = data[data['unit_id'] == unit_id]
+		temp_df = df_with_units[df_with_units['unit_id'] == unit_id]
 		# pivot so each candidate gets own column
 		pivot_df = pd.pivot_table(temp_df, values='Count', index=['ReportingUnit_Id'], \
 			columns='Selection').sort_values('ReportingUnit_Id').reset_index()
-		# keep the candidate column names only
-		pivot_df_values = pivot_df.drop(columns='ReportingUnit_Id')
-		to_drop = pivot_df_values.columns
-		# pass in proportions instead of raw vlaues
-		row_totals = pivot_df_values.values.sum(axis=1)
-		vote_proportions = np.array(np.divide(pivot_df_values, row_totals.reshape(-1, 1)))
-		np.nan_to_num(vote_proportions, copy=False)
-		# assign z score and then add back into final DF
-		scored = euclidean_zscore(vote_proportions)
-		pivot_df['score'] = scored
-		temp_df = temp_df.merge(pivot_df, how='left', on='ReportingUnit_Id') \
-					.drop(columns=to_drop)
-		df = pd.concat([df, temp_df])
+		# filter out no votes
+		pivot_df['sum'] = pivot_df.drop('ReportingUnit_Id', axis=1).sum(axis=1)
+		pivot_df = pivot_df[pivot_df['sum'] > 100]
+		if pivot_df.shape[0] >= 5:
+			# keep the candidate column names only
+			pivot_df_values = pivot_df.drop(columns='ReportingUnit_Id')
+			to_drop = pivot_df_values.columns
+			# pass in proportions instead of raw vlaues
+			row_totals = pivot_df_values.values.sum(axis=1)
+			vote_proportions = np.array(np.divide(pivot_df_values, row_totals.reshape(-1, 1)))
+			np.nan_to_num(vote_proportions, copy=False)
+			# assign z score and then add back into final DF
+			scored = euclidean_zscore(vote_proportions)
+			pivot_df['score'] = scored
+			temp_df = temp_df.merge(pivot_df, how='left', on='ReportingUnit_Id') \
+						.drop(columns=to_drop)
+			df = pd.concat([df, temp_df])
 	return df
 
 
@@ -467,6 +485,7 @@ def get_most_anomalous(data, n):
 	data.drop(columns=['Count_y'], inplace=True)
 
 	# Now do the filtering on most anomalous
+	data['score'] = data['score'].abs()
 	df = data.groupby('unit_id')['score'].max().reset_index()
 	df.rename(columns={'score': 'max_score'}, inplace=True)
 	data = data.merge(df, on='unit_id')
@@ -480,8 +499,9 @@ def get_most_anomalous(data, n):
 	df = pd.DataFrame()
 	for id in ids:
 		temp_df = result[result['unit_id'] == id]
-		unique = temp_df['Candidate_Id'].unique()
-		candidates = unique[0:2]
+		#unique = temp_df['Candidate_Id'].unique()
+		#candidates = unique[0:2]
+		candidates = temp_df['Candidate_Id'].unique()
 		candidate_df = temp_df[temp_df['Candidate_Id'].isin(candidates)]
 		unique = candidate_df['ReportingUnit_Id'].unique()
 		reporting_units = unique[0:8]
