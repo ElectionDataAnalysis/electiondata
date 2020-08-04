@@ -376,9 +376,11 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 		'ChildReportingUnit_Id', 'ElectionContestJoin_Id','OtherReportingUnitType_Parent', 
 		'ContestSelectionJoin_Id'],
 		inplace=True)
-	#unsummed = unsummed[unsummed['ReportingUnit_Id'] == unsummed['ParentReportingUnit_Id']]
+	unsummed = unsummed[unsummed['ParentReportingUnit_Id'] != top_ru_id]
 
 	ranked = assign_anomaly_score(unsummed)
+	ranked_margin = calculate_margins(unsummed)
+	return ranked_margin
 	top_ranked = get_most_anomalous(ranked, 3)
 	#return top_ranked
 
@@ -449,6 +451,17 @@ def assign_anomaly_score(data):
 	df = pd.DataFrame()
 	for unit_id in unit_ids:
 		temp_df = df_with_units[df_with_units['unit_id'] == unit_id]
+		# if there are more than 2 candidates, just take the top 2
+		# TODO: do pairwise comparison against winner
+		if len(temp_df['Selection'].unique()) > 2:
+			contest_id = temp_df.iloc[0]['Contest_Id']
+			reporting_unit_type_id = temp_df.iloc[0]['ReportingUnitType_Id']
+			total_df = df_with_units[(df_with_units['Contest_Id'] == contest_id) &
+						(df_with_units['CountItemType'] == 'total') &
+						(df_with_units['ReportingUnitType_Id'] == reporting_unit_type_id)]
+			counts = total_df.groupby('Selection')['Count'].sum().sort_values(ascending=False)
+			top = list(counts.index[0:2])
+			temp_df = temp_df[temp_df['Selection'].isin(top)]
 		# pivot so each candidate gets own column
 		pivot_df = pd.pivot_table(temp_df, values='Count', index=['ReportingUnit_Id'], \
 			columns='Selection').sort_values('ReportingUnit_Id').reset_index()
@@ -457,7 +470,7 @@ def assign_anomaly_score(data):
 		pivot_df = pivot_df[pivot_df['sum'] > 100]
 		if pivot_df.shape[0] >= 5:
 			# keep the candidate column names only
-			pivot_df_values = pivot_df.drop(columns='ReportingUnit_Id')
+			pivot_df_values = pivot_df.drop(columns=['ReportingUnit_Id', 'sum'])
 			to_drop = pivot_df_values.columns
 			# pass in proportions instead of raw vlaues
 			row_totals = pivot_df_values.values.sum(axis=1)
@@ -465,6 +478,7 @@ def assign_anomaly_score(data):
 			np.nan_to_num(vote_proportions, copy=False)
 			# assign z score and then add back into final DF
 			scored = euclidean_zscore(vote_proportions)
+			#scored = density_score(vote_proportions)
 			pivot_df['score'] = scored
 			temp_df = temp_df.merge(pivot_df, how='left', on='ReportingUnit_Id') \
 						.drop(columns=to_drop)
@@ -520,3 +534,36 @@ def euclidean_zscore(li):
         return [0]*len(li)
     else:
         return list(stats.zscore(distance_list))
+
+
+def density_score(points):
+	"""Take a list of vectors -- all in the same R^k,
+	return a list of comparison of density with or without the anomaly"""
+	density_list = [0] * len(points)
+	x_order = list(points[:, 0])
+	xs = points[:, 0]
+	xs.sort()
+	head, *tail = xs
+	density = (tail[-2] - tail[0]) / (len(tail) - 1)
+	total_density = (xs[-2] - xs[0]) / (len(xs) - 1)
+	density_asc = total_density / density
+	density_asc_xval = xs[0]
+
+	# Sort in reverse order
+	xs = xs[::-1]
+	head, *tail = xs
+	density = (tail[-2] - tail[0]) / (len(tail) - 1)
+	total_density = (xs[-2] - xs[0]) / (len(xs) - 1)
+	density_desc = total_density / density
+	density_desc_xval = xs[0]
+	if density_asc > density_desc:
+		i = x_order.index(density_asc_xval)
+		density_list[i] = density_asc
+	else:
+		i = x_order.index(density_desc_xval)
+		density_list[i] = density_desc
+	return density_list
+
+
+def calculate_margins(data):
+	return data
