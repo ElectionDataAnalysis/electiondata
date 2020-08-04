@@ -379,8 +379,9 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 	unsummed = unsummed[unsummed['ParentReportingUnit_Id'] != top_ru_id]
 
 	ranked = assign_anomaly_score(unsummed)
-	ranked_margin = calculate_margins(unsummed)
-	return ranked_margin
+	ranked_margin = calculate_margins(ranked)
+	votes_at_stake = calculate_votes_at_stake(ranked_margin)
+	return votes_at_stake
 	top_ranked = get_most_anomalous(ranked, 3)
 	#return top_ranked
 
@@ -445,10 +446,16 @@ def assign_anomaly_score(data):
 	#data = data[data['ReportingUnit_Id'] == data['ParentReportingUnit_Id']]
 	df_unit = grouped_df[['Contest_Id', 'ReportingUnitType_Id', 'CountItemType']].drop_duplicates()
 	df_unit = df_unit.reset_index()
+
+	######### FOR TESTING PURPOSES ONLY!!!!! ###########
+	df_unit = df_unit[df_unit['Contest_Id'] == 14949]
+
+
 	df_unit['unit_id'] = df_unit.index
 	df_with_units = grouped_df.merge(df_unit, how='left', on=['Contest_Id', 'ReportingUnitType_Id', 'CountItemType'])
 	unit_ids = df_with_units['unit_id'].unique()
 	df = pd.DataFrame()
+
 	for unit_id in unit_ids:
 		temp_df = df_with_units[df_with_units['unit_id'] == unit_id]
 		# if there are more than 2 candidates, just take the top 2
@@ -566,4 +573,43 @@ def density_score(points):
 
 
 def calculate_margins(data):
+	return data
+
+
+def calculate_votes_at_stake(data):
+	"""Move the most anomalous pairing to the equivalent of the second-most anomalous
+	and calculate the differences in votes that would be returned"""
+	unit_ids = data['unit_id'].unique()
+	for unit_id in unit_ids:
+		temp_df = data[data['unit_id'] == unit_id]
+		if temp_df.shape[0] > 2:
+			temp_df['abs_score'] = temp_df['score'].abs()
+			temp_df.sort_values('abs_score', ascending=False, inplace=True)
+			# The first 2 rows are the most anomalous candidate pairing
+			anomalous_df = temp_df.iloc[0:2]
+			# Resort so we have the DF back in order by scores
+			temp_df.sort_values('score', ascending=False, inplace=True)
+			# Now we need to know whether the original score was pos or neg
+			is_positive = (anomalous_df.iloc[0]['score'] > 0)
+			if is_positive:
+				next_anomalous_df = temp_df[temp_df['score'] < anomalous_df.iloc[0]['score']][0:2]
+			elif not is_positive:
+				next_anomalous_df = temp_df[temp_df['score'] > anomalous_df.iloc[0]['score']][0:2]	
+			anomalous_total = int(anomalous_df['Count'].sum())
+			next_anomalous_total = int(next_anomalous_df['Count'].sum())
+			candidate_1 = anomalous_df.iloc[0]['Candidate_Id']
+			candidate_2 = anomalous_df.iloc[1]['Candidate_Id']
+			candidate_1_cnt = anomalous_df[anomalous_df['Candidate_Id'] == candidate_1].iloc[0]['Count']
+			candidate_2_cnt = anomalous_df[anomalous_df['Candidate_Id'] == candidate_2].iloc[0]['Count']
+			candidate_1_prop = int(next_anomalous_df[next_anomalous_df['Candidate_Id'] == candidate_1]['Count']) / \
+								int(next_anomalous_total)
+			candidate_2_prop = int(next_anomalous_df[next_anomalous_df['Candidate_Id'] == candidate_2]['Count']) / \
+								int(next_anomalous_total)
+			margin = abs(candidate_1_prop * anomalous_total - candidate_1_cnt) + \
+						abs(candidate_2_prop * anomalous_total - candidate_2_cnt)
+			temp_df['votes_at_stake'] = margin / anomalous_total
+		else:
+			temp_df['margin'] = 0
+		print(temp_df)
+		input()
 	return data
