@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 def plot(type, data, fig_type, target_dir):
-    labels, x, y = parse_data(data)
+    labels, x, y, scores = parse_data(data)
     fig = go.Figure()
     if type == 'scatter':
         fig.add_trace(go.Scatter(
@@ -27,19 +27,18 @@ def plot(type, data, fig_type, target_dir):
         )
     elif type == 'bar':
         #labels might get long, so we grab the most granular portion:
-        for i in range(0, len(labels)):
-            l = labels[i].split(';')[-1]
-            labels[i] = l
+        # for i in range(0, len(labels)):
+        #     l = labels[i].split(';')[-1]
+        #     labels[i] = l
 
         #sort by most anomalous
-        anomalous = [x_i - y_i for x_i, y_i in zip(x, y)]
-        anomalous = list(map(abs, anomalous))
-        to_sort = list(zip(anomalous, labels, x, y))
-        ordered = sorted(to_sort, reverse=True)
-        anomalous, labels, x, y = list(zip(*ordered))
-        labels = list(labels)
-        x = list(x)
-        y = list(y)
+        # anomalous = list(map(abs, scores))
+        # to_sort = list(zip(anomalous, labels, x, y))
+        # ordered = sorted(to_sort, reverse=True)
+        # anomalous, labels, x, y = list(zip(*ordered))
+        # labels = list(labels)
+        # x = list(x)
+        # y = list(y)
 
         fig = go.Figure(
             data=[
