@@ -381,8 +381,7 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 	ranked = assign_anomaly_score(unsummed)
 	ranked_margin = calculate_margins(ranked)
 	votes_at_stake = calculate_votes_at_stake(ranked_margin)
-	return votes_at_stake
-	top_ranked = get_most_anomalous(ranked, 3)
+	top_ranked = get_most_anomalous(votes_at_stake, 3)
 	#return top_ranked
 
 	# package into list of dictionary
@@ -448,7 +447,7 @@ def assign_anomaly_score(data):
 	df_unit = df_unit.reset_index()
 
 	######### FOR TESTING PURPOSES ONLY!!!!! ###########
-	df_unit = df_unit[df_unit['Contest_Id'] == 14949]
+	#df_unit = df_unit[df_unit['Contest_Id'] == 14949]
 
 
 	df_unit['unit_id'] = df_unit.index
@@ -494,7 +493,7 @@ def assign_anomaly_score(data):
 
 
 def get_most_anomalous(data, n):
-	"""gets the n contests with the highest individual anomaly score"""
+	"""gets the n contests with the highest votes_at_stake score"""
 	# get rid of all contest-counttypes with 0 votes
 	# not sure we really want to do this in final version
 	zeros_df = data[['Contest_Id', 'ReportingUnitType_Id', 'CountItemType', 'ReportingUnit_Id', 'Count']]
@@ -506,13 +505,12 @@ def get_most_anomalous(data, n):
 	data.drop(columns=['Count_y'], inplace=True)
 
 	# Now do the filtering on most anomalous
-	data['score'] = data['score'].abs()
-	df = data.groupby('unit_id')['score'].max().reset_index()
-	df.rename(columns={'score': 'max_score'}, inplace=True)
+	df = data.groupby('unit_id')['votes_at_stake'].max().reset_index()
+	df.rename(columns={'votes_at_stake': 'max_votes_at_stake'}, inplace=True)
 	data = data.merge(df, on='unit_id')
-	unique_scores = sorted(set(df['max_score']), reverse=True)
+	unique_scores = sorted(set(df['max_votes_at_stake']), reverse=True)
 	top_scores = unique_scores[:n]
-	result = data[data['max_score'].isin(top_scores)]
+	result = data[data['max_votes_at_stake'].isin(top_scores)]
 
 	# Eventually we want to return the winner and the most anomalous
 	# for each contest grouping (unit). For now, just 2 random ones
@@ -579,37 +577,40 @@ def calculate_margins(data):
 def calculate_votes_at_stake(data):
 	"""Move the most anomalous pairing to the equivalent of the second-most anomalous
 	and calculate the differences in votes that would be returned"""
+	df = pd.DataFrame()
 	unit_ids = data['unit_id'].unique()
 	for unit_id in unit_ids:
 		temp_df = data[data['unit_id'] == unit_id]
 		if temp_df.shape[0] > 2:
-			temp_df['abs_score'] = temp_df['score'].abs()
-			temp_df.sort_values('abs_score', ascending=False, inplace=True)
-			# The first 2 rows are the most anomalous candidate pairing
-			anomalous_df = temp_df.iloc[0:2]
-			# Resort so we have the DF back in order by scores
-			temp_df.sort_values('score', ascending=False, inplace=True)
-			# Now we need to know whether the original score was pos or neg
-			is_positive = (anomalous_df.iloc[0]['score'] > 0)
-			if is_positive:
-				next_anomalous_df = temp_df[temp_df['score'] < anomalous_df.iloc[0]['score']][0:2]
-			elif not is_positive:
-				next_anomalous_df = temp_df[temp_df['score'] > anomalous_df.iloc[0]['score']][0:2]	
-			anomalous_total = int(anomalous_df['Count'].sum())
-			next_anomalous_total = int(next_anomalous_df['Count'].sum())
-			candidate_1 = anomalous_df.iloc[0]['Candidate_Id']
-			candidate_2 = anomalous_df.iloc[1]['Candidate_Id']
-			candidate_1_cnt = anomalous_df[anomalous_df['Candidate_Id'] == candidate_1].iloc[0]['Count']
-			candidate_2_cnt = anomalous_df[anomalous_df['Candidate_Id'] == candidate_2].iloc[0]['Count']
-			candidate_1_prop = int(next_anomalous_df[next_anomalous_df['Candidate_Id'] == candidate_1]['Count']) / \
-								int(next_anomalous_total)
-			candidate_2_prop = int(next_anomalous_df[next_anomalous_df['Candidate_Id'] == candidate_2]['Count']) / \
-								int(next_anomalous_total)
-			margin = abs(candidate_1_prop * anomalous_total - candidate_1_cnt) + \
-						abs(candidate_2_prop * anomalous_total - candidate_2_cnt)
-			temp_df['votes_at_stake'] = margin / anomalous_total
+			try:
+				temp_df['abs_score'] = temp_df['score'].abs()
+				temp_df.sort_values('abs_score', ascending=False, inplace=True)
+				# The first 2 rows are the most anomalous candidate pairing
+				anomalous_df = temp_df.iloc[0:2]
+				# Resort so we have the DF back in order by scores
+				temp_df.sort_values('score', ascending=False, inplace=True)
+				# Now we need to know whether the original score was pos or neg
+				is_positive = (anomalous_df.iloc[0]['score'] > 0)
+				if is_positive:
+					next_anomalous_df = temp_df[temp_df['score'] < anomalous_df.iloc[0]['score']][0:2]
+				elif not is_positive:
+					next_anomalous_df = temp_df[temp_df['score'] > anomalous_df.iloc[0]['score']][0:2]	
+				anomalous_total = int(anomalous_df['Count'].sum())
+				next_anomalous_total = int(next_anomalous_df['Count'].sum())
+				candidate_1 = anomalous_df.iloc[0]['Candidate_Id']
+				candidate_2 = anomalous_df.iloc[1]['Candidate_Id']
+				candidate_1_cnt = anomalous_df[anomalous_df['Candidate_Id'] == candidate_1].iloc[0]['Count']
+				candidate_2_cnt = anomalous_df[anomalous_df['Candidate_Id'] == candidate_2].iloc[0]['Count']
+				candidate_1_prop = int(next_anomalous_df[next_anomalous_df['Candidate_Id'] == candidate_1].iloc[0]['Count']) / \
+									int(next_anomalous_total)
+				candidate_2_prop = int(next_anomalous_df[next_anomalous_df['Candidate_Id'] == candidate_2].iloc[0]['Count']) / \
+									int(next_anomalous_total)
+				margin = abs(candidate_1_prop * anomalous_total - candidate_1_cnt) + \
+							abs(candidate_2_prop * anomalous_total - candidate_2_cnt)
+				temp_df['votes_at_stake'] = margin / anomalous_total
+			except:
+				temp_df['votes_at_stake'] = 0
 		else:
-			temp_df['margin'] = 0
-		print(temp_df)
-		input()
-	return data
+			temp_df['votes_at_stake'] = 0
+		df = pd.concat([df, temp_df])
+	return df
