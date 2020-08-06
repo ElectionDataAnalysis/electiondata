@@ -449,7 +449,7 @@ def assign_anomaly_score(data):
 	df_unit = df_unit.reset_index()
 
 	######### FOR TESTING PURPOSES ONLY!!!!! ###########
-	df_unit = df_unit[df_unit['Contest_Id'] == 14949]
+	#df_unit = df_unit[df_unit['Contest_Id'] == 14949]
 
 
 	df_unit['unit_id'] = df_unit.index
