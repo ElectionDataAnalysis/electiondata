@@ -24,6 +24,7 @@ When all errors are fixed, your munger should be able to interpret your data fil
 
 ## Create or Improve a Jurisdiction
 ### Order of operations
+1. Choose (or create) the munger for the results file.
 1. Prepare your new_jurisdiction.par file, following the template. (`src/templates/parameter_file_templates/new_jurisdiction.par`)
 2. Initialize a JurisdictionPrepper.
 3. Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
