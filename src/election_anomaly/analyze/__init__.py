@@ -403,6 +403,8 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 			"count_item_type": temp_df.iloc[0]['CountItemType'],
 			"x": x,
 			"y": y,
+			"margin": temp_df.iloc[0]['margins'],
+			"votes_at_stake": temp_df.iloc[0]['max_votes_at_stake'], 
 			"counts": []
 		}
 
@@ -447,7 +449,7 @@ def assign_anomaly_score(data):
 	df_unit = df_unit.reset_index()
 
 	######### FOR TESTING PURPOSES ONLY!!!!! ###########
-	#df_unit = df_unit[df_unit['Contest_Id'] == 14949]
+	df_unit = df_unit[df_unit['Contest_Id'] == 14949]
 
 
 	df_unit['unit_id'] = df_unit.index
@@ -607,7 +609,7 @@ def calculate_votes_at_stake(data):
 									int(next_anomalous_total)
 				margin = abs(candidate_1_prop * anomalous_total - candidate_1_cnt) + \
 							abs(candidate_2_prop * anomalous_total - candidate_2_cnt)
-				temp_df['votes_at_stake'] = margin / anomalous_total
+				temp_df['votes_at_stake'] = margin / temp_df.iloc[0].margins
 			except:
 				temp_df['votes_at_stake'] = 0
 		else:
