@@ -36,36 +36,28 @@ When all errors are fixed, your munger should be able to interpret your data fil
 5. Revise `XX_starter_dictionary.txt` so that the raw_identifier_value entries match what will be munged from your datafile via the formulas in `cdf_elements.txt`. 
 13. Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` (or append the entries of `XX_starter_dictionary.txt` to `dictionary.txt` and dedupe). 
 5. Apply the formula from the munger's `cdf_elements.txt` to the results file to identify raw identifiers for the CandidateContests you care about, and modify the corresponding rows in `dictionary.txt`. 
-6. Add any missing Parties to `Party.txt`. If your munger is already set up you can use 
-    
-        `add_elements_from_datafile(<file_path>,<munger_name>,'Party')` 
-        
-        to enter all parties from the file into `Party.txt` and `dictionary.txt`, but you may have to alter the resulting rows in both files to make sure the internal database names obey any conventions.
-7. Choose raw identifiers for all parties. Choose carefully, as for CandidateContests. Modify or create the corresponding rows in `dictionary.txt`.
-8. Add all necessary ReportingUnits to `ReportingUnit.txt` (without creating duplicates). You MUST use the naming conventions with semicolons to indicate nesting of reporting units. Typically you will want:
-    1. the jurisdiction itself (`North Carolina`)
+6. If your munger is already set up you can use 
+
+         `add_elements_from_datafile(<file_path>,<munger_name>,['Party','ReportingUnit','CandidateContest','Candidate,'BallotMeasureContest'])`
+         
+ to enter elements from the file into the jurisdiction files (including `dictionary.txt`). You may have to alter the resulting rows in both files to make sure the internal database names obey any conventions.
+6. Otherwise, add any missing Parties to `Party.txt`. Modify or create the corresponding rows in `dictionary.txt` to match the party names that will be munged from the file.
+8. Add all necessary ReportingUnits to `ReportingUnit.txt` (without creating duplicates). You MUST use the naming conventions with semicolons to indicate nesting of reporting units. The jurisdiction itself (e.g., `North Carolina`) and the districts for the standard district contests will be created by `new_juris_files()`. Typically -- even if you used `add_elements_from_datafile()` -- you will need to add:
     2. counties (e.g., `North Carolina;Alamance County`)
-    3. districts for each district contest (e.g., `North Carolina;US House VA District 2`)
-    4. any reporting units used in your results file, often precincts, nested within counties (e.g., `North Carolina;Alamance County;Precinct 064`). If your munger is already set up you can use 
-    
-        `add_elements_from_datafile(<file_path>,<munger_name>,'ReportingUnit')` 
-        
-        to enter all reporting units from the file into `ReportingUnit.txt` and `dictionary.txt`, but you will have to alter the resulting rows in both files to make sure the internal database names obey the conventions (e.g., semicolons for nesting, starting with state, territory or district).
+    4. any reporting units used in your results file, often precincts, nested within counties (e.g., `North Carolina;Alamance County;Precinct 064`). 
+  and if you haven't used `add_elements_from_datafile()`, you will need to add:
+    1. the jurisdiction itself (e.g., `North Carolina`)
+    2. ElectionDistricts corresponding to Offices or BallotMeasureContests.
   
         Note: as of 8/2020, the system does not yet handle nesting of precincts inside contest districts.
-    9. If you did not use `add_elements_from_datafile` in the previous step, you must choose raw identifiers for all ReportingUnits that appear in your results file. Choose carefully, as for CandidateContests. Modify or create the corresponding rows in `dictionary.txt`. (Note: you can omit ReportingUnits such as contest districts from `dictionary.txt` if they aren't needed to specify the vote count in the results file.)
+    9. If you did not use `add_elements_from_datafile` in the previous step, modify or create the corresponding rows in `dictionary.txt`. (Note: you can omit ReportingUnits such as contest districts from `dictionary.txt` if they aren't needed to specify the vote count in the results file.)
 10. If necessary, add the relevant election to `Election.txt`.
 11. Add any BallotMeasureContests you care about to `BallotMeasureContest.txt` and `dictionary.txt`. 
     1. Choose raw identifiers for the BallotMeasureContests and modify `dictionary.txt` accordingly.
-    1. If your munger is already set up you can add all BallotMeasureContests from a results file with 
-    
-        `add_elements_from_datafile(<file_path>,<munger_name>,'BallotMeasureContest')`
     1. Specify the ElectionDistrict, which must be in the `ReportingUnit.txt` file. (If you don't know the ElectionDistrict, nothing will break if you assign it the entire jurisdiction as ElectionDistrict.)
 12. Add Candidates from the contests you care about to `Candidate.txt` and `dictionary.txt`.
     1. Choose raw identifiers for the Candidates and modify `dictionary.txt`
-    1. If your munger is already set up you can add all Candidates from a results file with 
-    
-        `add_elements_from_datafile(<file_path>,<munger_name>,'Candidate')`
+12. Add all CountItemTypes to `dictionary.txt`. 
 13. Add any useful info about the jurisdiction (such as the sources for the data) to `remark.txt`.
 
 ### The JurisdictionPrepper class details
