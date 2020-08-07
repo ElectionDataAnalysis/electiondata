@@ -399,7 +399,8 @@ class JurisdictionPrepper():
 		# TODO Feature: allow other districts to be set in paramfile
 		error = dict()
 		# create directory if it doesn't exist
-		error['directory_creation'] = jm.ensure_jurisdiction_dir(self.d['jurisdiction_path'], self.d['project_root'], ignore_empty=True)
+		error['directory_creation'] = jm.ensure_jurisdiction_dir(
+			self.d['jurisdiction_path'], self.d['project_root'], ignore_empty=True)
 
 		# add default entries
 		templates = os.path.join(self.d['project_root'],'templates/jurisdiction_templates')
@@ -447,6 +448,7 @@ class JurisdictionPrepper():
 
 	def add_standard_contests(self, juriswide_contests: list=None, other_districts: dict=None):
 		"""If <juriswide_contest> is None, use standard list hard-coded."""
+		name = self.d['name']
 		abbr = self.d["abbreviated_name"]
 		count = {f'{abbr} House': self.state_house, f'{abbr} Senate': self.state_senate, f'US House {abbr}': self.congressional}
 		ru_type = {f'{abbr} House': 'state-house', f'{abbr} Senate': 'state-senate',
@@ -469,7 +471,7 @@ class JurisdictionPrepper():
 				[f'{k} District {i + 1}', f'{k} District {i + 1}'] for i in range(count[k])
 			], columns=cols_off), ignore_index=True)
 			w_ru = w_ru.append(pd.DataFrame([
-				[f'{k} District {i + 1}', ru_type[k]] for i in range(count[k])
+				[f'{name};{k} District {i + 1}', ru_type[k]] for i in range(count[k])
 			], columns=cols_ru), ignore_index=True)
 			w_cc = w_cc.append(pd.DataFrame([
 				[f'{k} District {i + 1}', 1, f'{k} District {i + 1}', ''] for i in range(count[k])
