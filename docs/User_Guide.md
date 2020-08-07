@@ -30,7 +30,7 @@ When all errors are fixed, your munger should be able to interpret your data fil
 4. Insert any additional CandidateContests you care about into `CandidateContest.txt`, and the corresponding Offices into `Office.txt`. Note that every CandidateContest must have an Office, and that Office must be in `Office.txt`.
 5. Revise `XX_starter_dictionary.txt` so that the raw_identifier_value entries match what will be munged from your datafile via the formulas in `cdf_elements.txt`. 
 13. Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` (or append the entries of `XX_starter_dictionary.txt` to `dictionary.txt` and dedupe). 
-5. Choose raw identifiers for the CandidateContests you care about, and modify the corresponding rows in `dictionary.txt`. You will eventually have to provide a simple formula to calculate these from the results file. Use the names that can be easily concatenated from columns in the results file you're planning to munge.
+5. Apply the formula from the munger's `cdf_elements.txt` to the results file to identify raw identifiers for the CandidateContests you care about, and modify the corresponding rows in `dictionary.txt`. 
 6. Add any missing Parties to `Party.txt`. If your munger is already set up you can use 
     
         `add_elements_from_datafile(<file_path>,<munger_name>,'Party')` 
