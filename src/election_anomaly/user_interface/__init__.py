@@ -135,7 +135,8 @@ def pick_munger(mungers_dir='mungers',project_root=None, munger_name=None):
 
 def read_single_datafile(munger: sf.Munger, f_path: str, err: dict) -> [pd.DataFrame, dict]:
 	try:
-		kwargs = {'thousands': munger.thousands_separator}
+		kwargs = {'thousands': munger.thousands_separator, 'dtype': str}
+
 		if munger.field_name_row is None:
 			kwargs['header'] = None
 			kwargs['names'] = munger.field_names_if_no_field_name_row
@@ -150,7 +151,6 @@ def read_single_datafile(munger: sf.Munger, f_path: str, err: dict) -> [pd.DataF
 				kwargs['sep'] = '\t'
 			df = pd.read_csv(f_path, **kwargs)
 		elif munger.file_type in ['xls', 'xlsx']:
-			kwargs['dtype'] = str
 			df = pd.read_excel(f_path, **kwargs)
 		else:
 			e = f'Unrecognized file_type in munger: {munger.file_type}'
@@ -183,7 +183,7 @@ def read_single_datafile(munger: sf.Munger, f_path: str, err: dict) -> [pd.DataF
 
 def read_combine_results(mu: sf.Munger, results_file, project_root, err, aux_data_dir=None):
 	working, err = read_single_datafile(mu, results_file, err)
-	if err:
+	if [k for k in err.keys() if err[k] != None]:
 		return pd.DataFrame(), err
 	else:
 		working = mr.cast_cols_as_int(working, mu.count_columns,mode='index')
