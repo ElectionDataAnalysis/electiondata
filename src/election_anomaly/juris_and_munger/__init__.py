@@ -222,8 +222,7 @@ def ensure_jurisdiction_dir(juris_path,project_root,ignore_empty=False):
     except FileExistsError:
         pass
     else:
-        path_output = 'Directory {'+juris_path+'} created.'
-        #todo should the program exit if the directory is created ?
+        path_output = f'Directory {juris_path} created.'
 
     # ensure the contents of the jurisdiction directory are correct
     juris_file_error = ensure_juris_files(juris_path,project_root,ignore_empty=ignore_empty)
@@ -285,14 +284,10 @@ def ensure_juris_files(juris_path,project_root,ignore_empty=False):
         # if file exists, check format against template
         if not created:
             cf_df = pd.read_csv(os.path.join(juris_path,f'{juris_file}.txt'),sep='\t',encoding='iso=8859-1')
-            format_confirmed = False
-            while not format_confirmed:
-                if set(cf_df.columns) != set(temp.columns):
-                    cols = '\t'.join(temp.columns.to_list())
-                    column_errors.append(f'Columns of {juris_file}.txt need to be (tab-separated):\n '
-                                        f' {cols}\n')
-                else:
-                    format_confirmed = True
+            if set(cf_df.columns) != set(temp.columns):
+                cols = '\t'.join(temp.columns.to_list())
+                column_errors.append(f'Columns of {juris_file}.txt need to be (tab-separated):\n '
+                                    f' {cols}\n')
 
             if juris_file == 'ExternalIdentifier':
                 d, dupe =  dedupe(cf_path)
