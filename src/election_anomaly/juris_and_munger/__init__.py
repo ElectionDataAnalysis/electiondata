@@ -243,14 +243,12 @@ def ensure_juris_files(juris_path,project_root,ignore_empty=False):
     error_ensure_juris_files = {}
 
     templates_dir = os.path.join(project_root,'templates/jurisdiction_templates')
-    # ask user to remove any extraneous files
-    extraneous = ['unknown']
-    while extraneous:
-        extraneous = [f for f in os.listdir(juris_path) if
-                      f != 'remark.txt' and f not in os.listdir(templates_dir) and f[0] != '.']
-        if extraneous:
-            error_ensure_juris_files["extraneous_files_in_juris_directory"] = extraneous
-            extraneous = []
+    # notify user of any extraneous files
+    extraneous = [f for f in os.listdir(juris_path) if
+                  f != 'remark.txt' and f not in os.listdir(templates_dir) and f[0] != '.']
+    if extraneous:
+        error_ensure_juris_files["extraneous_files_in_juris_directory"] = extraneous
+        extraneous = []
 
     template_list = [x[:-4] for x in os.listdir(templates_dir)]
 
@@ -513,19 +511,14 @@ def check_nulls(element,f_path,project_root):
 
     problem_columns = []
 
-    nulls = True
-    while nulls:
-
-        for nn in not_nulls.not_null_fields.unique():
-            # if nn is an Id, name in jurisdiction file is element name
-            if nn[-3:] == '_Id':
-                nn = nn[:-3]
-            n = df[df[nn].isnull()]
-            if not n.empty:
-                # ui.show_sample(n,f'Lines in {element} file',f'have illegal nulls in {nn}')
-                problem_columns.append(nn)
-        if not problem_columns:
-            nulls = False
+    for nn in not_nulls.not_null_fields.unique():
+        # if nn is an Id, name in jurisdiction file is element name
+        if nn[-3:] == '_Id':
+            nn = nn[:-3]
+        n = df[df[nn].isnull()]
+        if not n.empty:
+            # ui.show_sample(n,f'Lines in {element} file',f'have illegal nulls in {nn}')
+            problem_columns.append(nn)
     return problem_columns
 
 
