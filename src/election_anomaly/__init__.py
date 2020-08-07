@@ -11,6 +11,7 @@ from election_anomaly import analyze_via_pandas as avp
 from election_anomaly import juris_and_munger as jm
 from election_anomaly import preparation as prep
 
+# constants
 data_loader_pars = [
 	'project_root','juris_name','db_paramfile','db_name','munger_name',
 	'results_file', 'results_short_name', 'results_download_date', 'results_source', 'results_note',
@@ -23,14 +24,16 @@ single_data_loader_pars = ['juris_name', 'munge_with', 'results_file_name',
 multi_data_loader_pars = ['project_root', 'db_paramfile', 'db_name', 'results_dir', 'archive_dir']
 
 prep_pars = ['project_root', 'jurisdiction_path', 'name', 'abbreviated_name',
-					'count_of_state_house_districts',
-					'count_of_state_senate_districts',
-				   'count_of_us_house_districts',
-				   'reporting_unit_type']
+				'count_of_state_house_districts',
+				'count_of_state_senate_districts',
+				'count_of_us_house_districts',
+				'reporting_unit_type']
 
 optional_prep_pars = ['results_file', 'munger_name']
 
+analyze_pars = ['db_paramfile', 'db_name', 'results_file_short_name']
 
+# classes
 class MultiDataLoader():
 	def __new__(self):
 		""" Checks if parameter file exists and is correct. If not, does
@@ -100,7 +103,7 @@ class SingleDataLoader():
 
 		# convert comma-separated list to python list
 		# TODO document
-		self.munger_list = self.d['munge_with'].split(',')
+		self.munger_list = [x.strip() for x in self.d['munge_with'].split(',')]
 
 		# set aux_data_dir to None if appropriate
 		if self.d['aux_data_dir'] in ['None','']:
@@ -135,7 +138,7 @@ class SingleDataLoader():
 			self.juris_load_err, self.munger_err
 
 	def track_results(self):
-		filename = self.d['results_short_name']
+		filename = self.d['results_file_name']
 		top_reporting_unit_id = dbr.name_to_id(self.session,'ReportingUnit', self.d['top_reporting_unit'])
 		election_id = dbr.name_to_id(self.session,'Election',self.d['election'])
 
@@ -300,14 +303,14 @@ class DataLoader():
 			self.juris, results_info=results_info,aux_data_dir=self.d['aux_data_dir'])
 		return err
 
-
+# TODO allow rollups from several datafiles at once (e.g., if we get separate files from separate counties,
+#  still want to be able to roll up to state.
 class Analyzer():
 	def __new__(self):
 		""" Checks if parameter file exists and is correct. If not, does
 		not create DataLoader object. """
 		try:
-			d, parameter_err = ui.get_runtime_parameters(['db_paramfile', 
-				'db_name', 'results_file'])
+			d, parameter_err = ui.get_runtime_parameters(analyze_pars, param_file='analyze.par')
 		except FileNotFoundError as e:
 			print("Parameter file not found. Ensure that it is located" \
 				" in the current directory. Analyzer object not created.")
@@ -321,17 +324,14 @@ class Analyzer():
 
 		return super().__new__(self)
 
-
 	def __init__(self):
-		self.d, self.parameter_err = ui.get_runtime_parameters(['db_paramfile', 
-			'db_name', 'results_file'])
-		self.d['results_file_short'] = get_filename(self.d['results_file'])
+		self.d, self.parameter_err = ui.get_runtime_parameters(
+			analyze_pars,param_file='analyze.par')
 
 		eng = dbr.sql_alchemy_connect(paramfile=self.d['db_paramfile'],
 			db_name=self.d['db_name'])
 		Session = sessionmaker(bind=eng)
 		self.session = Session()
-
 
 	def display_options(self, input):
 		results = dbr.get_input_options(self.session, input)
@@ -339,9 +339,8 @@ class Analyzer():
 			return results
 		return None
 
-
 	def top_counts_by_vote_type(self, rollup_unit, sub_unit):
-		d, error = ui.get_runtime_parameters(['rollup_directory'])
+		d, error = ui.get_runtime_parameters(['rollup_directory'], param_file='analyze.par')
 		if error:
 			print("Parameter file missing requirements.")
 			print(error)
@@ -350,15 +349,14 @@ class Analyzer():
 		else:
 			rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
 			sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
-			results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
+			results_info = dbr.get_datafile_info(self.session, self.d['results_file_short_name'])
 			rollup = avp.create_rollup(self.session, d['rollup_directory'], top_ru_id=rollup_unit_id,
 				sub_rutype_id=sub_unit_id, sub_rutype_othertext='', datafile_id_list=results_info[0], 
 				election_id=results_info[1])
 			return
 
-
 	def top_counts(self, rollup_unit, sub_unit):
-		d, error = ui.get_runtime_parameters(['rollup_directory'])
+		d, error = ui.get_runtime_parameters(['rollup_directory'], param_file='analyze.par')
 		if error:
 			print("Parameter file missing requirements.")
 			print(error)
@@ -367,7 +365,7 @@ class Analyzer():
 		else:
 			rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
 			sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
-			results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
+			results_info = dbr.get_datafile_info(self.session, self.d['results_file_short_name'])
 			rollup = avp.create_rollup(self.session, d['rollup_directory'], top_ru_id=rollup_unit_id,
 				sub_rutype_id=sub_unit_id, sub_rutype_othertext='', datafile_id_list=results_info[0], 
 				election_id=results_info[1], by_vote_type=False)
