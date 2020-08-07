@@ -1,0 +1,6 @@
+[election_anomaly]
+db_paramfile=</path/to/database/parameter/file>
+db_name=<name of database>
+project_root=</path/to/src/>
+results_dir=</path/to/folder/containing/result/and/parameter/files/for/batch/upload>
+archive_dir=</path/to/folder/for/archiving/uploaded/files>
