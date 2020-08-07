@@ -1,12 +1,6 @@
 # How to Use the System
 
 ## Get Started
- * Create the parameter files you'll need:
-   * `analyzer.par` for Analyzer class if you want it
-   * `new_jurisdiction.par` for the JurisdictionPrepper() class
-   * `run_time.par` if you will be using DataLoader class to look in detail at one file/jurisdiction/munger
-   * `multi.par` if you will be batch loading data. In this case the directory with your results file will need a `.par` file for each results file. See the `results.par` template
-   
  * In a python interpreter, import the `election_anomaly` module and create a DataLoader() instance.
 ```
 >>> import election_anomaly as ea
@@ -30,13 +24,21 @@ When all errors are fixed, your munger should be able to interpret your data fil
 
 ## Create or Improve a Jurisdiction
 ### Order of operations
-1. Choose (or create) the munger for the results file.
 1. Prepare your new_jurisdiction.par file, following the template. (`src/templates/parameter_file_templates/new_jurisdiction.par`)
 2. Initialize a JurisdictionPrepper.
 3. Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
 4. Insert any additional CandidateContests you care about into `CandidateContest.txt`, and the corresponding Offices into `Office.txt`. Note that every CandidateContest must have an Office, and that Office must be in `Office.txt`.
 5. Revise `XX_starter_dictionary.txt` so that the raw_identifier_value entries match what will be munged from your datafile via the formulas in `cdf_elements.txt`. 
 13. Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` (or append the entries of `XX_starter_dictionary.txt` to `dictionary.txt` and dedupe). 
+5. Apply the formula from the munger's `cdf_elements.txt` to the results file to identify raw identifiers for the CandidateContests you care about, and modify the corresponding rows in `dictionary.txt`. 
+6. Add any missing Parties to `Party.txt`. If your munger is already set up you can use 
+    
+        `add_elements_from_datafile(<file_path>,<munger_name>,'Party')` 
+        
+        to enter all parties from the file into `Party.txt` and `dictionary.txt`, but you may have to alter the resulting rows in both files to make sure the internal database names obey any conventions.
+7. Choose raw identifiers for all parties. Choose carefully, as for CandidateContests. Modify or create the corresponding rows in `dictionary.txt`.
+8. Add all necessary ReportingUnits to `ReportingUnit.txt` (without creating duplicates). You MUST use the naming conventions with semicolons to indicate nesting of reporting units. Typically you will want:
+    1. the jurisdiction itself (`North Carolina`)
 5. Apply the formula from the munger's `cdf_elements.txt` to the results file to identify raw identifiers for the CandidateContests you care about, and modify the corresponding rows in `dictionary.txt`. 
 6. If your munger is already set up you can use 
 
