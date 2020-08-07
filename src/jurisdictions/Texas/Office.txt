@@ -1,0 +1,223 @@
+Name	ElectionDistrict
+TX House District 1	Texas;TX House District 1
+TX House District 2	Texas;TX House District 2
+TX House District 3	Texas;TX House District 3
+TX House District 4	Texas;TX House District 4
+TX House District 5	Texas;TX House District 5
+TX House District 6	Texas;TX House District 6
+TX House District 7	Texas;TX House District 7
+TX House District 8	Texas;TX House District 8
+TX House District 9	Texas;TX House District 9
+TX House District 10	Texas;TX House District 10
+TX House District 11	Texas;TX House District 11
+TX House District 12	Texas;TX House District 12
+TX House District 13	Texas;TX House District 13
+TX House District 14	Texas;TX House District 14
+TX House District 15	Texas;TX House District 15
+TX House District 16	Texas;TX House District 16
+TX House District 17	Texas;TX House District 17
+TX House District 18	Texas;TX House District 18
+TX House District 19	Texas;TX House District 19
+TX House District 20	Texas;TX House District 20
+TX House District 21	Texas;TX House District 21
+TX House District 22	Texas;TX House District 22
+TX House District 23	Texas;TX House District 23
+TX House District 24	Texas;TX House District 24
+TX House District 25	Texas;TX House District 25
+TX House District 26	Texas;TX House District 26
+TX House District 27	Texas;TX House District 27
+TX House District 28	Texas;TX House District 28
+TX House District 29	Texas;TX House District 29
+TX House District 30	Texas;TX House District 30
+TX House District 31	Texas;TX House District 31
+TX House District 32	Texas;TX House District 32
+TX House District 33	Texas;TX House District 33
+TX House District 34	Texas;TX House District 34
+TX House District 35	Texas;TX House District 35
+TX House District 36	Texas;TX House District 36
+TX House District 37	Texas;TX House District 37
+TX House District 38	Texas;TX House District 38
+TX House District 39	Texas;TX House District 39
+TX House District 40	Texas;TX House District 40
+TX House District 41	Texas;TX House District 41
+TX House District 42	Texas;TX House District 42
+TX House District 43	Texas;TX House District 43
+TX House District 44	Texas;TX House District 44
+TX House District 45	Texas;TX House District 45
+TX House District 46	Texas;TX House District 46
+TX House District 47	Texas;TX House District 47
+TX House District 48	Texas;TX House District 48
+TX House District 49	Texas;TX House District 49
+TX House District 50	Texas;TX House District 50
+TX House District 51	Texas;TX House District 51
+TX House District 52	Texas;TX House District 52
+TX House District 53	Texas;TX House District 53
+TX House District 54	Texas;TX House District 54
+TX House District 55	Texas;TX House District 55
+TX House District 56	Texas;TX House District 56
+TX House District 57	Texas;TX House District 57
+TX House District 58	Texas;TX House District 58
+TX House District 59	Texas;TX House District 59
+TX House District 60	Texas;TX House District 60
+TX House District 61	Texas;TX House District 61
+TX House District 62	Texas;TX House District 62
+TX House District 63	Texas;TX House District 63
+TX House District 64	Texas;TX House District 64
+TX House District 65	Texas;TX House District 65
+TX House District 66	Texas;TX House District 66
+TX House District 67	Texas;TX House District 67
+TX House District 68	Texas;TX House District 68
+TX House District 69	Texas;TX House District 69
+TX House District 70	Texas;TX House District 70
+TX House District 71	Texas;TX House District 71
+TX House District 72	Texas;TX House District 72
+TX House District 73	Texas;TX House District 73
+TX House District 74	Texas;TX House District 74
+TX House District 75	Texas;TX House District 75
+TX House District 76	Texas;TX House District 76
+TX House District 77	Texas;TX House District 77
+TX House District 78	Texas;TX House District 78
+TX House District 79	Texas;TX House District 79
+TX House District 80	Texas;TX House District 80
+TX House District 81	Texas;TX House District 81
+TX House District 82	Texas;TX House District 82
+TX House District 83	Texas;TX House District 83
+TX House District 84	Texas;TX House District 84
+TX House District 85	Texas;TX House District 85
+TX House District 86	Texas;TX House District 86
+TX House District 87	Texas;TX House District 87
+TX House District 88	Texas;TX House District 88
+TX House District 89	Texas;TX House District 89
+TX House District 90	Texas;TX House District 90
+TX House District 91	Texas;TX House District 91
+TX House District 92	Texas;TX House District 92
+TX House District 93	Texas;TX House District 93
+TX House District 94	Texas;TX House District 94
+TX House District 95	Texas;TX House District 95
+TX House District 96	Texas;TX House District 96
+TX House District 97	Texas;TX House District 97
+TX House District 98	Texas;TX House District 98
+TX House District 99	Texas;TX House District 99
+TX House District 100	Texas;TX House District 100
+TX House District 101	Texas;TX House District 101
+TX House District 102	Texas;TX House District 102
+TX House District 103	Texas;TX House District 103
+TX House District 104	Texas;TX House District 104
+TX House District 105	Texas;TX House District 105
+TX House District 106	Texas;TX House District 106
+TX House District 107	Texas;TX House District 107
+TX House District 108	Texas;TX House District 108
+TX House District 109	Texas;TX House District 109
+TX House District 110	Texas;TX House District 110
+TX House District 111	Texas;TX House District 111
+TX House District 112	Texas;TX House District 112
+TX House District 113	Texas;TX House District 113
+TX House District 114	Texas;TX House District 114
+TX House District 115	Texas;TX House District 115
+TX House District 116	Texas;TX House District 116
+TX House District 117	Texas;TX House District 117
+TX House District 118	Texas;TX House District 118
+TX House District 119	Texas;TX House District 119
+TX House District 120	Texas;TX House District 120
+TX House District 121	Texas;TX House District 121
+TX House District 122	Texas;TX House District 122
+TX House District 123	Texas;TX House District 123
+TX House District 124	Texas;TX House District 124
+TX House District 125	Texas;TX House District 125
+TX House District 126	Texas;TX House District 126
+TX House District 127	Texas;TX House District 127
+TX House District 128	Texas;TX House District 128
+TX House District 129	Texas;TX House District 129
+TX House District 130	Texas;TX House District 130
+TX House District 131	Texas;TX House District 131
+TX House District 132	Texas;TX House District 132
+TX House District 133	Texas;TX House District 133
+TX House District 134	Texas;TX House District 134
+TX House District 135	Texas;TX House District 135
+TX House District 136	Texas;TX House District 136
+TX House District 137	Texas;TX House District 137
+TX House District 138	Texas;TX House District 138
+TX House District 139	Texas;TX House District 139
+TX House District 140	Texas;TX House District 140
+TX House District 141	Texas;TX House District 141
+TX House District 142	Texas;TX House District 142
+TX House District 143	Texas;TX House District 143
+TX House District 144	Texas;TX House District 144
+TX House District 145	Texas;TX House District 145
+TX House District 146	Texas;TX House District 146
+TX House District 147	Texas;TX House District 147
+TX House District 148	Texas;TX House District 148
+TX House District 149	Texas;TX House District 149
+TX House District 150	Texas;TX House District 150
+TX Senate District 1	Texas;TX Senate District 1
+TX Senate District 2	Texas;TX Senate District 2
+TX Senate District 3	Texas;TX Senate District 3
+TX Senate District 4	Texas;TX Senate District 4
+TX Senate District 5	Texas;TX Senate District 5
+TX Senate District 6	Texas;TX Senate District 6
+TX Senate District 7	Texas;TX Senate District 7
+TX Senate District 8	Texas;TX Senate District 8
+TX Senate District 9	Texas;TX Senate District 9
+TX Senate District 10	Texas;TX Senate District 10
+TX Senate District 11	Texas;TX Senate District 11
+TX Senate District 12	Texas;TX Senate District 12
+TX Senate District 13	Texas;TX Senate District 13
+TX Senate District 14	Texas;TX Senate District 14
+TX Senate District 15	Texas;TX Senate District 15
+TX Senate District 16	Texas;TX Senate District 16
+TX Senate District 17	Texas;TX Senate District 17
+TX Senate District 18	Texas;TX Senate District 18
+TX Senate District 19	Texas;TX Senate District 19
+TX Senate District 20	Texas;TX Senate District 20
+TX Senate District 21	Texas;TX Senate District 21
+TX Senate District 22	Texas;TX Senate District 22
+TX Senate District 23	Texas;TX Senate District 23
+TX Senate District 24	Texas;TX Senate District 24
+TX Senate District 25	Texas;TX Senate District 25
+TX Senate District 26	Texas;TX Senate District 26
+TX Senate District 27	Texas;TX Senate District 27
+TX Senate District 28	Texas;TX Senate District 28
+TX Senate District 29	Texas;TX Senate District 29
+TX Senate District 30	Texas;TX Senate District 30
+TX Senate District 31	Texas;TX Senate District 31
+US House TX District 1	Texas;US House TX District 1
+US House TX District 2	Texas;US House TX District 2
+US House TX District 3	Texas;US House TX District 3
+US House TX District 4	Texas;US House TX District 4
+US House TX District 5	Texas;US House TX District 5
+US House TX District 6	Texas;US House TX District 6
+US House TX District 7	Texas;US House TX District 7
+US House TX District 8	Texas;US House TX District 8
+US House TX District 9	Texas;US House TX District 9
+US House TX District 10	Texas;US House TX District 10
+US House TX District 11	Texas;US House TX District 11
+US House TX District 12	Texas;US House TX District 12
+US House TX District 13	Texas;US House TX District 13
+US House TX District 14	Texas;US House TX District 14
+US House TX District 15	Texas;US House TX District 15
+US House TX District 16	Texas;US House TX District 16
+US House TX District 17	Texas;US House TX District 17
+US House TX District 18	Texas;US House TX District 18
+US House TX District 19	Texas;US House TX District 19
+US House TX District 20	Texas;US House TX District 20
+US House TX District 21	Texas;US House TX District 21
+US House TX District 22	Texas;US House TX District 22
+US House TX District 23	Texas;US House TX District 23
+US House TX District 24	Texas;US House TX District 24
+US House TX District 25	Texas;US House TX District 25
+US House TX District 26	Texas;US House TX District 26
+US House TX District 27	Texas;US House TX District 27
+US House TX District 28	Texas;US House TX District 28
+US House TX District 29	Texas;US House TX District 29
+US House TX District 30	Texas;US House TX District 30
+US House TX District 31	Texas;US House TX District 31
+US House TX District 32	Texas;US House TX District 32
+US House TX District 33	Texas;US House TX District 33
+US House TX District 34	Texas;US House TX District 34
+US House TX District 35	Texas;US House TX District 35
+US House TX District 36	Texas;US House TX District 36
+TX Governor	Texas
+US Senate TX	Texas
+TX Attorney General	Texas
+TX Lieutenant Governor	Texas
+TX Treasurer	Texas
