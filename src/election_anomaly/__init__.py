@@ -99,7 +99,7 @@ class SingleDataLoader():
 		# grab parameters
 		par_file = os.path.join(results_dir,par_file_name)
 		self.d, self.parameter_err = ui.get_runtime_parameters(
-			single_data_loader_pars, optional_keys=['aux_data_dir'],param_file=par_file)
+			single_data_loader_pars, optional_keys=['aux_data_dir'], param_file=par_file)
 
 		# convert comma-separated list to python list
 		# TODO document
@@ -181,7 +181,7 @@ class DataLoader():
 		""" Checks if parameter file exists and is correct. If not, does
 		not create DataLoader object. """
 		try:
-			d, parameter_err = ui.get_runtime_parameters(data_loader_pars)
+			d, parameter_err = ui.get_runtime_parameters(data_loader_pars, param_file='dataloader.par')
 		except FileNotFoundError as e:
 			print("Parameter file not found. Ensure that it is located" \
 				" in the current directory. DataLoader object not created.")
@@ -198,7 +198,7 @@ class DataLoader():
 	def __init__(self):
 		# grab parameters
 		self.d, self.parameter_err = ui.get_runtime_parameters(
-			data_loader_pars, optional_keys=['aux_data_dir'])
+			data_loader_pars, optional_keys=['aux_data_dir'], param_file='dataloader.par')
 
 		# results_file is the entire path, the _short version is just
 		# the filename
@@ -248,8 +248,7 @@ class DataLoader():
 		if self.engine:
 			self.engine.dispose()
 
-		self.d, self.parameter_err = ui.get_runtime_parameters(
-			data_loader_pars)
+		self.d, self.parameter_err = ui.get_runtime_parameters(data_loader_pars, param_file='dataloader.par')
 		self.d['results_file_short'] = get_filename(self.d['results_file'])
 
 		# pick jurisdiction
@@ -325,8 +324,7 @@ class Analyzer():
 		return super().__new__(self)
 
 	def __init__(self):
-		self.d, self.parameter_err = ui.get_runtime_parameters(
-			analyze_pars,param_file='analyze.par')
+		self.d, self.parameter_err = ui.get_runtime_parameters(analyze_pars,param_file='analyze.par')
 
 		eng = dbr.sql_alchemy_connect(paramfile=self.d['db_paramfile'],
 			db_name=self.d['db_name'])
