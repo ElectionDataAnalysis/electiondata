@@ -399,8 +399,7 @@ class JurisdictionPrepper():
 		# TODO Feature: allow other districts to be set in paramfile
 		error = dict()
 		# create directory if it doesn't exist
-		error['directory_creation'] = jm.ensure_jurisdiction_dir(
-			self.d['jurisdiction_path'], self.d['project_root'], ignore_empty=True)
+		jm.ensure_jurisdiction_dir(self.d['jurisdiction_path'], self.d['project_root'], ignore_empty=True)
 
 		# add default entries
 		templates = os.path.join(self.d['project_root'],'templates/jurisdiction_templates')
@@ -410,9 +409,6 @@ class JurisdictionPrepper():
 		# add all standard Offices/RUs/CandidateContests
 		self.add_standard_contests()
 
-		# add all primary CandidateContests
-		error['primaries'] = prep.add_primary_contests(self.d['jurisdiction_path'])
-		
 		# Feature create starter dictionary.txt with cdf_internal name
 		#  used as placeholder for raw_identifier_value
 		error['dictionary'] = self.starter_dictionary()
@@ -468,7 +464,7 @@ class JurisdictionPrepper():
 		# add all district offices/contests/reportingunits
 		for k in count.keys():
 			w_office = w_office.append(pd.DataFrame([
-				[f'{k} District {i + 1}', f'{k} District {i + 1}'] for i in range(count[k])
+				[f'{k} District {i + 1}', f'{name};{k} District {i + 1}'] for i in range(count[k])
 			], columns=cols_off), ignore_index=True)
 			w_ru = w_ru.append(pd.DataFrame([
 				[f'{name};{k} District {i + 1}', ru_type[k]] for i in range(count[k])
@@ -496,35 +492,37 @@ class JurisdictionPrepper():
 		)
 		w_cc = w_cc.append(jw_cc,ignore_index=True)
 
-
 		prep.write_element(self.d['jurisdiction_path'], 'Office', w_office.drop_duplicates())
 		prep.write_element(self.d['jurisdiction_path'], 'ReportingUnit', w_ru.drop_duplicates())
 		prep.write_element(self.d['jurisdiction_path'], 'CandidateContest', w_cc.drop_duplicates())
 		return
 
-	def add_elements_from_datafile(self, element: str, error: dict) -> dict:
+	def add_elements_from_datafile(self, elements: iter, error: dict) -> dict:
 		"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
-		or not already in <element>.txt"""
+		or not already in <element>.txt for each <element> in <elements>"""
+		# read data from file
+		if 'aux_data_dir' in self.d.keys():
+			aux_data_dir = self.d['aux_data_dir']
+		else:
+			aux_data_dir = None
+		mu = jm.Munger(
+			os.path.join(self.d['project_root'], 'mungers', self.d['munger_name']), aux_data_dir=aux_data_dir,
+			project_root=self.d['project_root'])
+		wr, error = ui.read_combine_results(mu, self.d['results_file'], self.d['project_root'], error)
+		wr.columns = [f'{x}_SOURCE' for x in wr.columns]
 
 		missing = [x for x in ['results_file','munger_name'] if self.d[x] is None]
 
 		if missing:
 			ui.add_error(error,'datafile',f'Parameters missing: {missing}. Results file cannot be processed.')
 			return error
-		else:
-			if 'aux_data_dir' in self.d.keys():
-				aux_data_dir = self.d['aux_data_dir']
-			else:
-				aux_data_dir = None
-			name_field = dbr.get_name_field(element)
-			mu = jm.Munger(
-				os.path.join(self.d['project_root'], 'mungers', self.d['munger_name']), aux_data_dir=aux_data_dir,
-				project_root=self.d['project_root'])
-			wr, error = ui.read_combine_results(mu, self.d['results_file'],self.d['project_root'], error)
 
+		for element in elements:
+			name_field = dbr.get_name_field(element)
 			# append <element>_raw
-			wr.columns = [f'{x}_SOURCE' for x in wr.columns]
-			wr, error = mr.add_munged_column(wr, mu, element, error, mode=mu.cdf_elements.loc[element, 'source'])
+			wr, error = mr.add_munged_column(
+				wr, mu, element, error, mode=mu.cdf_elements.loc[element, 'source'],
+				inplace=False)
 			# find <element>_raw values not in dictionary.txt.raw_identifier_value;
 			#  add corresponding lines to dictionary.txt
 			wd = prep.get_element(self.d['jurisdiction_path'], 'dictionary')
@@ -547,7 +545,7 @@ class JurisdictionPrepper():
 			if we.shape[1] > 1 and not new_internal_df.empty:
 				ui.add_error(error,'preparation',
 							 f'New rows added to {element}.txt, but data may be missing from some fields in those rows.')
-			return error
+		return error
 
 	def starter_dictionary(self,include_existing=True) -> str:
 		"""Creates a starter file for dictionary.txt, assuming raw_identifiers are the same as cdf_internal names.
@@ -565,9 +563,13 @@ class JurisdictionPrepper():
 			w[element]['raw_identifier_value'] = w[element]['cdf_internal_name']
 
 		starter_file_name = f'{self.d["abbreviated_name"]}_starter_dictionary.txt'
+		starter = pd.concat(
+				[w[element][[
+					'cdf_element',
+					'cdf_internal_name',
+					'raw_identifier_value']] for element in elements]).drop_duplicates()
 		err = prep.write_element(
-			'.','dictionary',pd.concat(
-				[w[element][['cdf_element','cdf_internal_name','raw_identifier_value']] for element in elements]),
+			'.','dictionary',starter,
 			file_name=starter_file_name)
 		print(f'Starter dictionary created in current directory (not in jurisdiction directory):\n{starter_file_name}')
 		return err
