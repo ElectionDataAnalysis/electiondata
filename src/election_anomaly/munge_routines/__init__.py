@@ -478,12 +478,9 @@ def raw_elements_to_cdf(
         return err
 
     elif not to_be_dropped.empty:
-        e = f'Warning: Results for {to_be_dropped.shape[0]} rows ' \
-            f'with unmatched contests will not be loaded to database.'
-        if 'munge_warning' in err.keys():
-            err['munge_warning'].append(e)
-        else:
-            err['munge_warning'] = [e]
+        ui.add_error(
+            err,'munge_warning',
+            f'Warning: Results for {to_be_dropped.shape[0]} rows with unmatched contests will not be loaded to database.')
     working = working_temp
 
     # get ids for remaining info sourced from rows and columns
@@ -499,13 +496,17 @@ def raw_elements_to_cdf(
             drop = True
         else:
             drop = False
-        [working, err] = replace_raw_with_internal_ids(
-            working, juris, df, t, name_field, mu.path_to_munger_dir, err, drop_unmatched=drop)
-        working.drop(t,axis=1,inplace=True)
-        # working = add_non_id_cols_from_id(working,df,t)
+        try:
+            [working, err] = replace_raw_with_internal_ids(
+                working, juris, df, t, name_field, mu.path_to_munger_dir, err, drop_unmatched=drop)
+            working.drop(t,axis=1,inplace=True)
+        except:
+            e = f'Error adding internal ids for {t}.'
+            if t == 'CountItemType':
+                e += ' Are CountItemTypes correct in dictionary.txt?'
+            ui.add_error(err, 'munge-error', f'Error adding internal ids for {t}.')
 
     # append BallotMeasureSelection_Id, drop BallotMeasureSelection
-
     df_selection = pd.read_sql_table(f'BallotMeasureSelection',session.bind)
     [working, err] = replace_raw_with_internal_ids(
         working,juris,df_selection,'BallotMeasureSelection',dbr.get_name_field('BallotMeasureSelection'),
