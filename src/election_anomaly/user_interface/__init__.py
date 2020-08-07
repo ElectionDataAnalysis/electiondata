@@ -90,41 +90,6 @@ def pick_paramfile(msg='Locate the parameter file for your postgreSQL database.'
 	return fpath
 
 
-def make_par_files(dir: str, munger_name: str, top_ru,election,download_date,source,results_note=None,aux_data_dir=''):
-	data_file_list = os.listdir(dir)
-	for f in data_file_list:
-		par_text = f'[election_anomaly]\nresults_file={f}\njuris_name=Florida\nmunger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\nresults_short_name={top_ru}_{f}\nresults_download_date={download_date}\nresults_source={source}\nresults_note={results_note}\naux_data_dir={aux_data_dir}\n'
-		par_name = '.'.join(f.split('.')[:-1]) + '.par'
-		with open(os.path.join(dir,par_name),'w') as p:
-			p.write(par_text)
-	return
-
-
-def get_params_to_read_results(d: dict, results_file, munger_name) -> (dict, list):
-	kwargs = d
-	if results_file:
-		kwargs['results_file'] = results_file
-	if munger_name:
-		kwargs['munger_name'] = munger_name
-	missing = [x for x in ['results_file', 'munger_name', 'project_root'] if kwargs[x] is None]
-	return kwargs, missing
-
-def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
-	"""Reads results (appending '_SOURCE' to the columns)
-	and initiates munger. <params> must include these keys: 
-	'project_root', 'munger_name', 'results_file'"""
-	if 'aux_data_dir' in params.keys():
-		aux_data_dir = params['aux_data_dir']
-	else:
-		aux_data_dir = None
-	mu = jm.Munger(
-		os.path.join(params['project_root'], 'mungers', params['munger_name']), aux_data_dir=aux_data_dir,
-		project_root=params['project_root'])
-	wr, error = read_combine_results(mu, params['results_file'], params['project_root'], error)
-	wr.columns = [f'{x}_SOURCE' for x in wr.columns]
-	return wr, mu, error
-
-
 def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_name=None,check_files=False):
 	"""Returns a State object.
 	If <jurisdiction_name> is given, this just initializes based on info
@@ -136,13 +101,13 @@ def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_nam
 
 	if check_files:
 		juris_path = os.path.join(path_to_jurisdictions,juris_name)
-		missing_values = jm.ensure_jurisdiction_dir(juris_path,project_root)
+		missing_values = sf.ensure_jurisdiction_dir(juris_path,project_root)
 
 	# initialize the jurisdiction
 	if missing_values:
 		ss = None
 	else:
-		ss = jm.Jurisdiction(juris_name,path_to_jurisdictions)
+		ss = sf.Jurisdiction(juris_name,path_to_jurisdictions)
 	return ss, missing_values
 
 
@@ -154,12 +119,12 @@ def find_dupes(df):
 
 def pick_munger(mungers_dir='mungers',project_root=None, munger_name=None):
 	munger_path = os.path.join(project_root,mungers_dir,munger_name)
-	error = jm.ensure_munger_files(munger_path,project_root=project_root)
+	error = sf.ensure_munger_files(munger_path,project_root=project_root)
 
 	munger_path = os.path.join(mungers_dir,munger_name)
 
 	if not error:
-		munger = jm.Munger(munger_path, project_root=project_root,check_files=False)
+		munger = sf.Munger(munger_path, project_root=project_root,check_files=False)
 		#munger_error is None unless internal inconsistency found
 		munger_error = munger.check_against_self()
 		return munger, munger_error
@@ -186,6 +151,7 @@ def read_single_datafile(munger: jm.Munger, f_path: str, err: dict) -> [pd.DataF
 				kwargs['sep'] = '\t'
 			df = pd.read_csv(f_path, **kwargs)
 		elif munger.file_type in ['xls', 'xlsx']:
+			kwargs['dtype'] = str
 			df = pd.read_excel(f_path, **kwargs)
 		else:
 			e = f'Unrecognized file_type in munger: {munger.file_type}'
@@ -201,7 +167,7 @@ def read_single_datafile(munger: jm.Munger, f_path: str, err: dict) -> [pd.DataF
 				err['format.txt'] = [e]
 		else:
 			df = mr.generic_clean(df)
-			err = jm.check_results_munger_compatibility(munger, df, err)
+			err = sf.check_results_munger_compatibility(munger, df, err)
 		return [df, err]
 	except UnicodeDecodeError as ude:
 		e = f'Encoding error. Datafile not read completely.\n{ude}'
@@ -216,9 +182,9 @@ def read_single_datafile(munger: jm.Munger, f_path: str, err: dict) -> [pd.DataF
 	return [pd.DataFrame(), err]
 
 
-def read_combine_results(mu: jm.Munger, results_file, project_root, err, aux_data_dir=None):
+def read_combine_results(mu: sf.Munger, results_file, project_root, err, aux_data_dir=None):
 	working, err = read_single_datafile(mu, results_file, err)
-	if [k for k in err.keys() if err[k] != None]:
+	if err:
 		return pd.DataFrame(), err
 	else:
 		working = mr.cast_cols_as_int(working, mu.count_columns,mode='index')
@@ -257,7 +223,7 @@ def archive_results(file_name: str, current_dir: str, archive_dir: str):
 
 
 def new_datafile(
-		session,munger: jm.Munger, raw_path: str, project_root: str, juris: jm.Jurisdiction,
+		session,munger: sf.Munger, raw_path: str, project_root: str, juris: sf.Jurisdiction,
 		results_info: list=None, aux_data_dir: str=None) -> dict:
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
@@ -266,7 +232,10 @@ def new_datafile(
 	raw, err = read_combine_results(munger, raw_path, project_root,err,aux_data_dir=aux_data_dir)
 	if raw.empty:
 		e = f'No data read from datafile {raw_path}.'
-		add_error(err,'datafile',e)
+		if 'datafile' in err.keys():
+			err['datafile'].append(e)
+		else:
+			err['datafile'] = [e]
 		return err
 	
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
