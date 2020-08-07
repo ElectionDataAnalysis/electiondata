@@ -1,0 +1,8 @@
+name	raw_identifier_formula	source
+ReportingUnit	Texas;<county> County	row
+Party		row
+CandidateContest	<formula, with raw column names or row numbers in angle brackets>	<row,column or other>
+Candidate	<formula, with raw column names or row numbers in angle brackets>	<row,column or other>
+BallotMeasureContest	<formula, with raw column names or row numbers in angle brackets>	<row,column or other>
+BallotMeasureSelection	<formula, with raw column names or row numbers in angle brackets>	<row,column or other>
+CountItemType	<formula, with raw column names or row numbers in angle brackets>	<row,column or other>
