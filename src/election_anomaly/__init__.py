@@ -18,7 +18,7 @@ data_loader_pars = [
 	'results_file', 'results_short_name', 'results_download_date', 'results_source', 'results_note',
 	'top_reporting_unit','election']
 
-single_data_loader_pars = ['juris_name', 'munger_name', 'results_file',
+single_data_loader_pars = ['juris_name', 'munge_with', 'results_file_name',
 	'results_short_name', 'results_download_date', 'results_source', 'results_note',
 	'top_reporting_unit', 'election', 'aux_data_dir']
 
@@ -85,7 +85,7 @@ class MultiDataLoader():
 				else:
 					# move results file and its parameter file to the archive directory
 					ui.archive_results(f, self.d['results_dir'], self.d['archive_dir'])
-					ui.archive_results(sdl.d['results_file'], self.d['results_dir'], self.d['archive_dir'])
+					ui.archive_results(sdl.d['results_file_name'], self.d['results_dir'], self.d['archive_dir'])
 			else:
 				err[f] = errors
 		return err
@@ -104,7 +104,7 @@ class SingleDataLoader():
 
 		# convert comma-separated list to python list
 		# TODO document
-		self.munger_list = [x.strip() for x in self.d['munger_name'].split(',')]
+		self.munger_list = [x.strip() for x in self.d['munge_with'].split(',')]
 
 		# set aux_data_dir to None if appropriate
 		if self.d['aux_data_dir'] in ['None','']:
@@ -127,7 +127,7 @@ class SingleDataLoader():
 				mungers_dir=munger_path,
 				project_root=project_root, munger_name=mu)
 		# if no munger throws an error:
-		if all([x is None for x in self.munger_err.values()]):
+		if set(self.munger_err.values()) == {None}:
 			self.munger_err = None
 
 	def check_errors(self):
@@ -139,17 +139,17 @@ class SingleDataLoader():
 			self.juris_load_err, self.munger_err
 
 	def track_results(self):
-		filename = self.d['results_file']
+		filename = self.d['results_file_name']
 		top_reporting_unit_id = dbr.name_to_id(self.session,'ReportingUnit', self.d['top_reporting_unit'])
 		election_id = dbr.name_to_id(self.session,'Election',self.d['election'])
 
 		data = pd.DataFrame(
 			[[self.d['results_short_name'],filename,
 			  self.d['results_download_date'], self.d['results_source'],
-				self.d['results_note'], top_reporting_unit_id, election_id,datetime.datetime.now()]],
+				self.d['results_note'], top_reporting_unit_id, election_id]],
 			columns=['short_name', 'file_name',
 					 'download_date', 'source',
-					 'note', 'ReportingUnit_Id', 'Election_Id','created_at'])
+					 'note', 'ReportingUnit_Id', 'Election_Id'])
 		[df,e] = dbr.dframe_to_sql(data,self.session,'_datafile')
 		if e:
 			return [0, 0], e
@@ -166,7 +166,7 @@ class SingleDataLoader():
 		else:
 			err = dict()
 			for mu in self.munger_list:
-				f_path = os.path.join(self.results_dir, self.d['results_file'])
+				f_path = os.path.join(self.results_dir, self.d['results_file_name'])
 				emu = ui.new_datafile(
 					self.session, self.munger[mu], f_path ,self.project_root,
 					self.juris, results_info=results_info, aux_data_dir=self.d['aux_data_dir'])
@@ -281,10 +281,10 @@ class DataLoader():
 		data = pd.DataFrame(
 			[[self.d['results_short_name'],filename,
 			  self.d['results_download_date'], self.d['results_source'],
-				self.d['results_note'], top_reporting_unit_id, election_id,datetime.datetime.now()]],
+				self.d['results_note'], top_reporting_unit_id, election_id]],
 			columns=['short_name', 'file_name',
 					 'download_date', 'source',
-					 'note', 'ReportingUnit_Id', 'Election_Id','created_at'])
+					 'note', 'ReportingUnit_Id', 'Election_Id'])
 		[df,e] = dbr.dframe_to_sql(data,self.session,'_datafile')
 		if e:
 			return [0,0],e
@@ -375,9 +375,9 @@ class JurisdictionPrepper():
 	def __new__(cls):
 		""" Checks if parameter file exists and is correct. If not, does
 		not create JurisdictionPrepper object. """
-		param_file = 'jurisdiction_prep.par'
+		param_file = 'new_jurisdiction.par'
 		try:
-			d, parameter_err = ui.get_runtime_parameters(prep_pars, param_file='jurisdiction_prep.par')
+			d, parameter_err = ui.get_runtime_parameters(prep_pars, param_file='new_jurisdiction.par')
 		except FileNotFoundError as e:
 			print(f"File {param_file} not found. Ensure that it is located" \
 				  " in the current directory. DataLoader object not created.")
@@ -400,7 +400,8 @@ class JurisdictionPrepper():
 		# TODO Feature: allow other districts to be set in paramfile
 		error = dict()
 		# create directory if it doesn't exist
-		jm.ensure_jurisdiction_dir(self.d['jurisdiction_path'], self.d['project_root'], ignore_empty=True)
+		error['directory_creation'] = jm.ensure_jurisdiction_dir(
+			self.d['jurisdiction_path'], self.d['project_root'], ignore_empty=True)
 
 		# add default entries
 		templates = os.path.join(self.d['project_root'],'templates/jurisdiction_templates')
@@ -432,9 +433,9 @@ class JurisdictionPrepper():
 			primaries[p['raw_identifier_value']] = contest_d.copy().rename(
 				columns={'cdf_internal_name': 'contest_internal', 'raw_identifier_value': 'contest_raw'})
 			primaries[p['raw_identifier_value']]['cdf_internal_name'] = primaries[p['raw_identifier_value']].apply(
-				lambda row: prep.primary(row, p['cdf_internal_name'], 'contest_internal'), axis=1)
+				lambda row: prep.primary(row, p['cdf_internal_name'], 'internal'), axis=1)
 			primaries[p['raw_identifier_value']]['raw_identifier_value'] = primaries[p['raw_identifier_value']].apply(
-				lambda row: prep.primary(row, p['raw_identifier_value'], 'contest_raw'), axis=1)
+				lambda row: prep.primary(row, p['raw_identifier_value'], 'raw'), axis=1)
 
 		if primaries:
 			df_list = [df[['cdf_element', 'cdf_internal_name', 'raw_identifier_value']] for df in primaries.values()]
@@ -443,7 +444,7 @@ class JurisdictionPrepper():
 		else:
 			new_dictionary = d
 		prep.write_element(self.d['jurisdiction_path'], 'dictionary', new_dictionary)
-		return error
+		return
 
 	def add_standard_contests(self, juriswide_contests: list=None, other_districts: dict=None):
 		"""If <juriswide_contest> is None, use standard list hard-coded."""
@@ -482,7 +483,7 @@ class JurisdictionPrepper():
 
 		# add standard jurisdiction-wide offices
 		if not juriswide_contests:
-			juriswide_contests = [f'US President ({abbr})',f'{abbr} Governor', f'US Senate {abbr}', f'{abbr} Attorney General',
+			juriswide_contests = [f'{abbr} Governor', f'US Senate {abbr}', f'{abbr} Attorney General',
 								  f'{abbr} Lieutenant Governor', f'{abbr} Treasurer']
 		# append jurisdiction-wide offices
 		jw_off = pd.DataFrame(
@@ -495,145 +496,35 @@ class JurisdictionPrepper():
 		)
 		w_cc = w_cc.append(jw_cc,ignore_index=True)
 
+
 		prep.write_element(self.d['jurisdiction_path'], 'Office', w_office.drop_duplicates())
 		prep.write_element(self.d['jurisdiction_path'], 'ReportingUnit', w_ru.drop_duplicates())
 		prep.write_element(self.d['jurisdiction_path'], 'CandidateContest', w_cc.drop_duplicates())
 		return
 
-	def add_primaries_to_candidate_contest(self):
-		primaries = {}
-		error = None
-
-		# get contests that are not already primaries
-		contests = prep.get_element(self.d['jurisdiction_path'], 'CandidateContest')
-		non_p_contests = contests[contests['PrimaryParty'].isnull()]
-		if non_p_contests.empty:
-			error = 'CandidateContest.txt is missing or has no non-primary contests. No primary contests added.'
-			return error
-
-		# get parties
-		parties = prep.get_element(self.d['jurisdiction_path'], 'Party')
-		if parties.empty:
-			if error:
-				error += '\n Party.txt is missing or empty. No primary contests added.'
-			else:
-				error = '\n Party.txt is missing or empty. No primary contests added.'
-			return error
-
-		for i, party in parties.iterrows():
-			p = party['Name']
-			primaries[p] = non_p_contests.copy()
-			primaries[p]['Name'] = non_p_contests.apply(lambda row: prep.primary(row,p,'Name'),axis=1)
-			primaries[p]['PrimaryParty'] = p
-
-		all_primaries = [primaries[p] for p in parties.Name.unique()]
-		prep.write_element(
-			self.d['jurisdiction_path'], 'CandidateContest',pd.concat([contests] + all_primaries))
-		return error
-
-	def add_sub_county_rus_from_results_file(
-			self, error: dict, sub_ru_type: str='precinct', results_file_path=None, munger_name=None, **kwargs) -> dict:
-		"""Assumes precincts (or other sub-county reporting units)
-		are munged from row of the results file.
-		Adds corresponding rows to ReportingUnit.txt and dictionary.txt
-		using internal County name correctly"""
-
-		# get parameters from arguments; otherwise from self.d; otherwise throw error
-		kwargs, missing = ui.get_params_to_read_results(self.d, results_file_path, munger_name)
-		if missing:
-			ui.add_error(error,'datafile',f'Parameters missing: {missing}. Results file cannot be processed.')
-			return error
-
-		# read data from file (appending _SOURCE)
-		wr, munger, error = ui.read_results(kwargs,error)
-
-		# reduce <wr> in size
-		fields = [f'{field}_SOURCE' for field in munger.cdf_elements.loc['ReportingUnit','fields']]
-		wr = wr[fields].drop_duplicates()
-
-		# get formulas from munger
-		ru_formula = munger.cdf_elements.loc['ReportingUnit', 'raw_identifier_formula']
-		try:
-			[county_formula,sub_ru_formula] = ru_formula.split(';')
-		except ValueError:
-			ui.add_error(error,'munge_error',f'ReportingUnit formula in munger {munger.name} has wrong format (should have two parts separated by ;)')
-			return error
-
-		# add columns for county and sub_ru
-		wr, error = mr.add_column_from_formula(wr,county_formula, 'County_raw', error, suffix='_SOURCE')
-		wr, error = mr.add_column_from_formula(wr,sub_ru_formula, 'Sub_County_raw', error, suffix='_SOURCE')
-
-		# add column for county internal name
-		ru_dict_old = prep.get_element(self.d['jurisdiction_path'],'dictionary')
-		ru_dict_new = ru_dict_old[ru_dict_old.cdf_element=='ReportingUnit']
-		wr = wr.merge(ru_dict_new,how='left',left_on='County_raw',right_on='raw_identifier_value').rename(columns={'cdf_internal_name':'County_internal'})
-
-		# add required new columns
-		wr = mr.add_constant_column(wr,'ReportingUnitType',sub_ru_type)
-		wr = mr.add_constant_column(wr,'cdf_element','ReportingUnit')
-		wr['Name'] = wr.apply(lambda x: f'{x["County_internal"]};{x["Sub_County_raw"]}',axis=1)
-		wr['raw_identifier_value'] = wr.apply(lambda x: f'{x["County_raw"]};{x["Sub_County_raw"]}',axis=1)
-
-		# add info to ReportingUnit.txt
-		ru_add = wr[['Name','ReportingUnitType']]
-		ru_old = prep.get_element(self.d['jurisdiction_path'],'ReportingUnit')
-		prep.write_element(self.d['jurisdiction_path'],'ReportingUnit',pd.concat([ru_old,ru_add]))
-
-		# add info to dictionary
-		wr.rename(columns={'Name':'cdf_internal_name'},inplace=True)
-		dict_add = wr[['cdf_element','cdf_internal_name','raw_identifier_value']]
-		prep.write_element(self.d['jurisdiction_path'],'dictionary',pd.concat([ru_dict_old,dict_add]))		# TODO test this!!!
-		return error
-
-	def add_sub_county_rus_from_multi_results_file(self, dir: str, error: dict, sub_ru_type: str='precinct') -> dict:
-		"""Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
-		for each file in <dir> named (with munger) in a .par file in the directory"""
-		for par_file_name in [x for x in os.listdir(dir) if x[-4:]=='.par']:
-			par_file = os.path.join(dir, par_file_name)
-			file_dict, missing_params = ui.get_runtime_parameters(
-				['results_file','munger_name'], optional_keys=['aux_data_dir'], param_file=par_file)
-			file_dict['sub_ru_type'] = sub_ru_type
-			file_dict['results_file_path'] = os.path.join(dir,file_dict['results_file'])
-			if missing_params:
-				ui.add_error(error, 'parameter_file', f'Parameters missing from {par_file_name}:{missing_params}')
-			else:
-				error = self.add_sub_county_rus_from_results_file(error, ** file_dict)
-		return error
-
-	def add_elements_from_multi_results_file(self, elements: iter, dir: str, error: dict):
-		"""Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
-		for each file in <dir> named (with munger) in a .par file in the directory"""
-		for par_file_name in [x for x in os.listdir(dir) if x[-4:]=='.par']:
-			par_file = os.path.join(dir, par_file_name)
-			file_dict, missing_params = ui.get_runtime_parameters(
-				['results_file','munger_name'], optional_keys=['aux_data_dir'], param_file=par_file)
-			file_dict['results_file_path'] = os.path.join(dir,file_dict['results_file'])
-			if missing_params:
-				ui.add_error(error, 'parameter_file', f'Parameters missing from {par_file_name}:{missing_params}')
-			else:
-				error = self.add_elements_from_results_file(elements, error, ** file_dict)
-		return error
-
-	def add_elements_from_results_file(self, elements: iter, error: dict, results_file_path=None, munger_name=None, **kwargs) -> dict:
+	def add_elements_from_datafile(self, element: str, error: dict) -> dict:
 		"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
-		or not already in <element>.txt for each <element> in <elements>"""
+		or not already in <element>.txt"""
 
-		# get parameters from arguments; otherwise from self.d; otherwise throw error
-		# get parameters from arguments; otherwise from self.d; otherwise throw error
-		kwargs, missing = ui.get_params_to_read_results(self.d, results_file_path, munger_name)
+		missing = [x for x in ['results_file','munger_name'] if self.d[x] is None]
+
 		if missing:
 			ui.add_error(error,'datafile',f'Parameters missing: {missing}. Results file cannot be processed.')
 			return error
-
-		# read data from file (appending _SOURCE)
-		wr, mu, error = ui.read_results(kwargs,error)
-
-		for element in elements:
+		else:
+			if 'aux_data_dir' in self.d.keys():
+				aux_data_dir = self.d['aux_data_dir']
+			else:
+				aux_data_dir = None
 			name_field = dbr.get_name_field(element)
+			mu = jm.Munger(
+				os.path.join(self.d['project_root'], 'mungers', self.d['munger_name']), aux_data_dir=aux_data_dir,
+				project_root=self.d['project_root'])
+			wr, error = ui.read_combine_results(mu, self.d['results_file'],self.d['project_root'], error)
+
 			# append <element>_raw
-			wr, error = mr.add_munged_column(
-				wr, mu, element, error, mode=mu.cdf_elements.loc[element, 'source'],
-				inplace=False)
+			wr.columns = [f'{x}_SOURCE' for x in wr.columns]
+			wr, error = mr.add_munged_column(wr, mu, element, error, mode=mu.cdf_elements.loc[element, 'source'])
 			# find <element>_raw values not in dictionary.txt.raw_identifier_value;
 			#  add corresponding lines to dictionary.txt
 			wd = prep.get_element(self.d['jurisdiction_path'], 'dictionary')
@@ -649,8 +540,6 @@ class JurisdictionPrepper():
 			we = prep.get_element(self.d['jurisdiction_path'], element)
 			old_internal = we[name_field].to_list()
 			new_internal = [x for x in wd[wd.cdf_element == element]['cdf_internal_name'] if x not in old_internal]
-			# TODO guide user to check dictionary for bad stuff before running this
-			#  e.g., primary contests already in dictionary cause a problem.
 			new_internal_df = pd.DataFrame([[x] for x in new_internal], columns=[name_field])
 			we = pd.concat([we, new_internal_df]).drop_duplicates()
 			prep.write_element(self.d['jurisdiction_path'], element, we)
@@ -658,7 +547,7 @@ class JurisdictionPrepper():
 			if we.shape[1] > 1 and not new_internal_df.empty:
 				ui.add_error(error,'preparation',
 							 f'New rows added to {element}.txt, but data may be missing from some fields in those rows.')
-		return error
+			return error
 
 	def starter_dictionary(self,include_existing=True) -> str:
 		"""Creates a starter file for dictionary.txt, assuming raw_identifiers are the same as cdf_internal names.
@@ -676,37 +565,20 @@ class JurisdictionPrepper():
 			w[element]['raw_identifier_value'] = w[element]['cdf_internal_name']
 
 		starter_file_name = f'{self.d["abbreviated_name"]}_starter_dictionary.txt'
-		starter = pd.concat(
-				[w[element][[
-					'cdf_element',
-					'cdf_internal_name',
-					'raw_identifier_value']] for element in elements]).drop_duplicates()
 		err = prep.write_element(
-			'.','dictionary',starter,
+			'.','dictionary',pd.concat(
+				[w[element][['cdf_element','cdf_internal_name','raw_identifier_value']] for element in elements]),
 			file_name=starter_file_name)
 		print(f'Starter dictionary created in current directory (not in jurisdiction directory):\n{starter_file_name}')
 		return err
 
 	def __init__(self):
 		self.d, self.parameter_err = ui.get_runtime_parameters(
-			prep_pars,optional_keys=optional_prep_pars,param_file='jurisdiction_prep'
-																  '.par')
+			prep_pars,optional_keys=optional_prep_pars,param_file='new_jurisdiction.par')
 		self.state_house = int(self.d['count_of_state_house_districts'])
 		self.state_senate = int(self.d['count_of_state_senate_districts'])
 		self.congressional = int(self.d['count_of_us_house_districts'])
 
-
-def make_par_files(dir: str, munger_name: str, top_ru: str, election: str, download_date: str, source: str,
-				   results_note: str=None, aux_data_dir: str=''):
-	"""Utility to create parameter files for multiple files. Makes a parameter file for each file in <dir>,
-	once all other necessary parameters are specified. """
-	data_file_list = os.listdir(dir)
-	for f in data_file_list:
-		par_text = f'[election_anomaly]\nresults_file_name={f}\njuris_name=Florida\nmunge_with={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\nresults_short_name={top_ru}_{f}\nresults_download_date={download_date}\nresults_source={source}\nresults_note={results_note}\naux_data_dir={aux_data_dir}\n'
-		par_name = '.'.join(f.split('.')[:-1]) + '.par'
-		with open(os.path.join(dir,par_name),'w') as p:
-			p.write(par_text)
-	return
 
 def get_filename(path):
 	head, tail = ntpath.split(path)
