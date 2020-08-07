@@ -1,0 +1,223 @@
+Name	NumberElected	Office	PrimaryParty
+TX House District 1	1.0	TX House District 1	
+TX House District 2	1.0	TX House District 2	
+TX House District 3	1.0	TX House District 3	
+TX House District 4	1.0	TX House District 4	
+TX House District 5	1.0	TX House District 5	
+TX House District 6	1.0	TX House District 6	
+TX House District 7	1.0	TX House District 7	
+TX House District 8	1.0	TX House District 8	
+TX House District 9	1.0	TX House District 9	
+TX House District 10	1.0	TX House District 10	
+TX House District 11	1.0	TX House District 11	
+TX House District 12	1.0	TX House District 12	
+TX House District 13	1.0	TX House District 13	
+TX House District 14	1.0	TX House District 14	
+TX House District 15	1.0	TX House District 15	
+TX House District 16	1.0	TX House District 16	
+TX House District 17	1.0	TX House District 17	
+TX House District 18	1.0	TX House District 18	
+TX House District 19	1.0	TX House District 19	
+TX House District 20	1.0	TX House District 20	
+TX House District 21	1.0	TX House District 21	
+TX House District 22	1.0	TX House District 22	
+TX House District 23	1.0	TX House District 23	
+TX House District 24	1.0	TX House District 24	
+TX House District 25	1.0	TX House District 25	
+TX House District 26	1.0	TX House District 26	
+TX House District 27	1.0	TX House District 27	
+TX House District 28	1.0	TX House District 28	
+TX House District 29	1.0	TX House District 29	
+TX House District 30	1.0	TX House District 30	
+TX House District 31	1.0	TX House District 31	
+TX House District 32	1.0	TX House District 32	
+TX House District 33	1.0	TX House District 33	
+TX House District 34	1.0	TX House District 34	
+TX House District 35	1.0	TX House District 35	
+TX House District 36	1.0	TX House District 36	
+TX House District 37	1.0	TX House District 37	
+TX House District 38	1.0	TX House District 38	
+TX House District 39	1.0	TX House District 39	
+TX House District 40	1.0	TX House District 40	
+TX House District 41	1.0	TX House District 41	
+TX House District 42	1.0	TX House District 42	
+TX House District 43	1.0	TX House District 43	
+TX House District 44	1.0	TX House District 44	
+TX House District 45	1.0	TX House District 45	
+TX House District 46	1.0	TX House District 46	
+TX House District 47	1.0	TX House District 47	
+TX House District 48	1.0	TX House District 48	
+TX House District 49	1.0	TX House District 49	
+TX House District 50	1.0	TX House District 50	
+TX House District 51	1.0	TX House District 51	
+TX House District 52	1.0	TX House District 52	
+TX House District 53	1.0	TX House District 53	
+TX House District 54	1.0	TX House District 54	
+TX House District 55	1.0	TX House District 55	
+TX House District 56	1.0	TX House District 56	
+TX House District 57	1.0	TX House District 57	
+TX House District 58	1.0	TX House District 58	
+TX House District 59	1.0	TX House District 59	
+TX House District 60	1.0	TX House District 60	
+TX House District 61	1.0	TX House District 61	
+TX House District 62	1.0	TX House District 62	
+TX House District 63	1.0	TX House District 63	
+TX House District 64	1.0	TX House District 64	
+TX House District 65	1.0	TX House District 65	
+TX House District 66	1.0	TX House District 66	
+TX House District 67	1.0	TX House District 67	
+TX House District 68	1.0	TX House District 68	
+TX House District 69	1.0	TX House District 69	
+TX House District 70	1.0	TX House District 70	
+TX House District 71	1.0	TX House District 71	
+TX House District 72	1.0	TX House District 72	
+TX House District 73	1.0	TX House District 73	
+TX House District 74	1.0	TX House District 74	
+TX House District 75	1.0	TX House District 75	
+TX House District 76	1.0	TX House District 76	
+TX House District 77	1.0	TX House District 77	
+TX House District 78	1.0	TX House District 78	
+TX House District 79	1.0	TX House District 79	
+TX House District 80	1.0	TX House District 80	
+TX House District 81	1.0	TX House District 81	
+TX House District 82	1.0	TX House District 82	
+TX House District 83	1.0	TX House District 83	
+TX House District 84	1.0	TX House District 84	
+TX House District 85	1.0	TX House District 85	
+TX House District 86	1.0	TX House District 86	
+TX House District 87	1.0	TX House District 87	
+TX House District 88	1.0	TX House District 88	
+TX House District 89	1.0	TX House District 89	
+TX House District 90	1.0	TX House District 90	
+TX House District 91	1.0	TX House District 91	
+TX House District 92	1.0	TX House District 92	
+TX House District 93	1.0	TX House District 93	
+TX House District 94	1.0	TX House District 94	
+TX House District 95	1.0	TX House District 95	
+TX House District 96	1.0	TX House District 96	
+TX House District 97	1.0	TX House District 97	
+TX House District 98	1.0	TX House District 98	
+TX House District 99	1.0	TX House District 99	
+TX House District 100	1.0	TX House District 100	
+TX House District 101	1.0	TX House District 101	
+TX House District 102	1.0	TX House District 102	
+TX House District 103	1.0	TX House District 103	
+TX House District 104	1.0	TX House District 104	
+TX House District 105	1.0	TX House District 105	
+TX House District 106	1.0	TX House District 106	
+TX House District 107	1.0	TX House District 107	
+TX House District 108	1.0	TX House District 108	
+TX House District 109	1.0	TX House District 109	
+TX House District 110	1.0	TX House District 110	
+TX House District 111	1.0	TX House District 111	
+TX House District 112	1.0	TX House District 112	
+TX House District 113	1.0	TX House District 113	
+TX House District 114	1.0	TX House District 114	
+TX House District 115	1.0	TX House District 115	
+TX House District 116	1.0	TX House District 116	
+TX House District 117	1.0	TX House District 117	
+TX House District 118	1.0	TX House District 118	
+TX House District 119	1.0	TX House District 119	
+TX House District 120	1.0	TX House District 120	
+TX House District 121	1.0	TX House District 121	
+TX House District 122	1.0	TX House District 122	
+TX House District 123	1.0	TX House District 123	
+TX House District 124	1.0	TX House District 124	
+TX House District 125	1.0	TX House District 125	
+TX House District 126	1.0	TX House District 126	
+TX House District 127	1.0	TX House District 127	
+TX House District 128	1.0	TX House District 128	
+TX House District 129	1.0	TX House District 129	
+TX House District 130	1.0	TX House District 130	
+TX House District 131	1.0	TX House District 131	
+TX House District 132	1.0	TX House District 132	
+TX House District 133	1.0	TX House District 133	
+TX House District 134	1.0	TX House District 134	
+TX House District 135	1.0	TX House District 135	
+TX House District 136	1.0	TX House District 136	
+TX House District 137	1.0	TX House District 137	
+TX House District 138	1.0	TX House District 138	
+TX House District 139	1.0	TX House District 139	
+TX House District 140	1.0	TX House District 140	
+TX House District 141	1.0	TX House District 141	
+TX House District 142	1.0	TX House District 142	
+TX House District 143	1.0	TX House District 143	
+TX House District 144	1.0	TX House District 144	
+TX House District 145	1.0	TX House District 145	
+TX House District 146	1.0	TX House District 146	
+TX House District 147	1.0	TX House District 147	
+TX House District 148	1.0	TX House District 148	
+TX House District 149	1.0	TX House District 149	
+TX House District 150	1.0	TX House District 150	
+TX Senate District 1	1.0	TX Senate District 1	
+TX Senate District 2	1.0	TX Senate District 2	
+TX Senate District 3	1.0	TX Senate District 3	
+TX Senate District 4	1.0	TX Senate District 4	
+TX Senate District 5	1.0	TX Senate District 5	
+TX Senate District 6	1.0	TX Senate District 6	
+TX Senate District 7	1.0	TX Senate District 7	
+TX Senate District 8	1.0	TX Senate District 8	
+TX Senate District 9	1.0	TX Senate District 9	
+TX Senate District 10	1.0	TX Senate District 10	
+TX Senate District 11	1.0	TX Senate District 11	
+TX Senate District 12	1.0	TX Senate District 12	
+TX Senate District 13	1.0	TX Senate District 13	
+TX Senate District 14	1.0	TX Senate District 14	
+TX Senate District 15	1.0	TX Senate District 15	
+TX Senate District 16	1.0	TX Senate District 16	
+TX Senate District 17	1.0	TX Senate District 17	
+TX Senate District 18	1.0	TX Senate District 18	
+TX Senate District 19	1.0	TX Senate District 19	
+TX Senate District 20	1.0	TX Senate District 20	
+TX Senate District 21	1.0	TX Senate District 21	
+TX Senate District 22	1.0	TX Senate District 22	
+TX Senate District 23	1.0	TX Senate District 23	
+TX Senate District 24	1.0	TX Senate District 24	
+TX Senate District 25	1.0	TX Senate District 25	
+TX Senate District 26	1.0	TX Senate District 26	
+TX Senate District 27	1.0	TX Senate District 27	
+TX Senate District 28	1.0	TX Senate District 28	
+TX Senate District 29	1.0	TX Senate District 29	
+TX Senate District 30	1.0	TX Senate District 30	
+TX Senate District 31	1.0	TX Senate District 31	
+US House TX District 1	1.0	US House TX District 1	
+US House TX District 2	1.0	US House TX District 2	
+US House TX District 3	1.0	US House TX District 3	
+US House TX District 4	1.0	US House TX District 4	
+US House TX District 5	1.0	US House TX District 5	
+US House TX District 6	1.0	US House TX District 6	
+US House TX District 7	1.0	US House TX District 7	
+US House TX District 8	1.0	US House TX District 8	
+US House TX District 9	1.0	US House TX District 9	
+US House TX District 10	1.0	US House TX District 10	
+US House TX District 11	1.0	US House TX District 11	
+US House TX District 12	1.0	US House TX District 12	
+US House TX District 13	1.0	US House TX District 13	
+US House TX District 14	1.0	US House TX District 14	
+US House TX District 15	1.0	US House TX District 15	
+US House TX District 16	1.0	US House TX District 16	
+US House TX District 17	1.0	US House TX District 17	
+US House TX District 18	1.0	US House TX District 18	
+US House TX District 19	1.0	US House TX District 19	
+US House TX District 20	1.0	US House TX District 20	
+US House TX District 21	1.0	US House TX District 21	
+US House TX District 22	1.0	US House TX District 22	
+US House TX District 23	1.0	US House TX District 23	
+US House TX District 24	1.0	US House TX District 24	
+US House TX District 25	1.0	US House TX District 25	
+US House TX District 26	1.0	US House TX District 26	
+US House TX District 27	1.0	US House TX District 27	
+US House TX District 28	1.0	US House TX District 28	
+US House TX District 29	1.0	US House TX District 29	
+US House TX District 30	1.0	US House TX District 30	
+US House TX District 31	1.0	US House TX District 31	
+US House TX District 32	1.0	US House TX District 32	
+US House TX District 33	1.0	US House TX District 33	
+US House TX District 34	1.0	US House TX District 34	
+US House TX District 35	1.0	US House TX District 35	
+US House TX District 36	1.0	US House TX District 36	
+TX Governor	1.0	TX Governor	
+US Senate TX	1.0	US Senate TX	
+TX Attorney General	1.0	TX Attorney General	
+TX Lieutenant Governor	1.0	TX Lieutenant Governor	
+TX Treasurer	1.0	TX Treasurer	
