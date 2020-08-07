@@ -118,7 +118,7 @@ def find_dupes(df):
 	return dupes_df, deduped
 
 
-def pick_munger(mungers_dir='mungers',project_root=None,session=None,munger_name=None):
+def pick_munger(mungers_dir='mungers',project_root=None, munger_name=None):
 	munger_path = os.path.join(project_root,mungers_dir,munger_name)
 	error = sf.ensure_munger_files(munger_path,project_root=project_root)
 
@@ -205,6 +205,22 @@ def read_combine_results(mu: sf.Munger, results_file, project_root, err, aux_dat
 	return working, err
 
 
+def archive_results(file_name: str, current_dir: str, archive_dir: str):
+	"""Move <file_name> from <current_dir> to <archive_dir>. If <archive_dir> already has a file with that name,
+	prefix <prefix> to the file name and try again. If that doesn't work, add prefix and timestamp"""
+	archive = Path(archive_dir)
+	archive.mkdir(parents=True, exist_ok=True)
+	old_path = os.path.join(current_dir,file_name)
+	new_path = os.path.join(archive_dir,file_name)
+	i = 0
+	while os.path.exists(new_path):
+		i += 1
+		new_path = os.path.join(archive_dir, f'{i}_{file_name}')
+
+	os.rename(old_path, new_path)
+	return
+
+
 def new_datafile(
 		session,munger: sf.Munger, raw_path: str, project_root: str, juris: sf.Jurisdiction,
 		results_info: list=None, aux_data_dir: str=None) -> dict:
@@ -222,7 +238,6 @@ def new_datafile(
 		return err
 	
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
-
 
 	try:
 		raw = mr.munge_clean(raw, munger)
@@ -284,16 +299,12 @@ def config(filename=None, section='postgresql',msg='Pick parameter file for conn
 	return d
 
 
-def get_runtime_parameters(required_keys, optional_keys=None,param_file=None):
+def get_runtime_parameters(required_keys, optional_keys=None,param_file='run_time.par'):
 	d = {}
 	missing_required_params = {'missing':[]}
 
 	parser = ConfigParser()
-	if param_file:
-		filename = param_file
-	else:
-		filename = 'run_time.par'
-	p = parser.read(filename)
+	p = parser.read(param_file)
 	if len(p) == 0:
 		raise FileNotFoundError
 

@@ -1,6 +1,11 @@
 # How to Use the System
 
 ## Get Started
+ * Create the parameter files you'll need:
+   * `analyzer.par` for Analyzer class if you want it
+   * `run_time.par` if you will be using DataLoader class to look in detail at one file/jurisdiction/munger
+   * `multi.par` if you will be batch loading data. In this case the directory with your results file will need a `.par` file for each results file. See the `results.par` template
+   
  * In a python interpreter, import the `election_anomaly` module and create a DataLoader() instance.
 ```
 >>> import election_anomaly as ea
@@ -24,6 +29,7 @@ When all errors are fixed, your munger should be able to interpret your data fil
 
 ## Create or Improve a Jurisdiction
 ### Order of operations
+1. Choose (or create) the munger for the results file.
 1. Prepare your new_jurisdiction.par file, following the template. (`src/templates/parameter_file_templates/new_jurisdiction.par`)
 2. Initialize a JurisdictionPrepper.
 3. Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
@@ -81,6 +87,8 @@ Some routines in the Analyzer class are useful even in the data-loading process,
 >>> 
 ```
 
+### Load a single file with a single munger via DataLoader()
+The DataLoader class has some checking routines that are useful for ensuring the munger and jurisdiction files are working.
 
 Create a DataLoader instance and check for errors in the Jurisdiction and Munger directories specified in `run_time.par`
 ```
@@ -115,7 +123,12 @@ Datafile contents uploaded to database Engine(postgresql://postgres:***@localhos
 ```
 Note that only lines with data corresponding to contests, selections and reporting units listed in the Jurisdiction directory will be processed. 
 
+### Batch Load Data
+The MultiDataLoader class allows batch uploading of all data in a given directory. 
+
 ## Pull Data
+The Analyzer class uses parameters in the file `analyze.par`, which should be in the directory from which you are running the program.
+
 There are two options: pulling total vote counts, or pulling vote counts by vote type. To pull totals, use `top_counts()` in the Analyzer class.
 ```
 >>> an.top_counts('Pennsylvania;Philadelphia','ward')

@@ -462,4 +462,8 @@ def get_datafile_info(session, results_file):
         FROM _datafile 
         WHERE file_name = '{results_file}'
         ''').fetchall()
-    return q[0]
+    try:
+        return q[0]
+    except IndexError:
+        print(f'No record named {results_file} found in _datafile table in {session.bind.url}')
+        return [0,0]
