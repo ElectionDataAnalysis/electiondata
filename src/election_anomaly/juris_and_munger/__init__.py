@@ -243,12 +243,14 @@ def ensure_juris_files(juris_path,project_root,ignore_empty=False):
     error_ensure_juris_files = {}
 
     templates_dir = os.path.join(project_root,'templates/jurisdiction_templates')
-    # notify user of any extraneous files
-    extraneous = [f for f in os.listdir(juris_path) if
-                  f != 'remark.txt' and f not in os.listdir(templates_dir) and f[0] != '.']
-    if extraneous:
-        error_ensure_juris_files["extraneous_files_in_juris_directory"] = extraneous
-        extraneous = []
+    # ask user to remove any extraneous files
+    extraneous = ['unknown']
+    while extraneous:
+        extraneous = [f for f in os.listdir(juris_path) if
+                      f != 'remark.txt' and f not in os.listdir(templates_dir) and f[0] != '.']
+        if extraneous:
+            error_ensure_juris_files["extraneous_files_in_juris_directory"] = extraneous
+            extraneous = []
 
     template_list = [x[:-4] for x in os.listdir(templates_dir)]
 
@@ -259,7 +261,7 @@ def ensure_juris_files(juris_path,project_root,ignore_empty=False):
     file_empty = []
     column_errors =[]
     null_columns_dict = {}
-    duplicate_rows = []
+    duplicate_files = []
 
     # ensure necessary all files exist
     for juris_file in template_list:
@@ -300,14 +302,14 @@ def ensure_juris_files(juris_path,project_root,ignore_empty=False):
                     null_columns_dict[juris_file] = null_columns
 
             if dupe != '':
-                duplicate_rows.append(dupe)
+                duplicate_files.append(dupe)
 
             if column_errors:
                 error_ensure_juris_files["column_errors"] = column_errors
             if null_columns_dict:
                 error_ensure_juris_files["null_columns"] = null_columns_dict
-            if duplicate_rows:
-                error_ensure_juris_files["duplicate_rows"] = duplicate_rows
+            if duplicate_files:
+                error_ensure_juris_files["duplicate_files"] = duplicate_files
 
         if file_empty:
             error_ensure_juris_files["file_empty_errors"] = file_empty
@@ -504,7 +506,6 @@ def dedupe(f_path,warning='There are duplicates'):
 
 def check_nulls(element,f_path,project_root):
     # TODO write description
-    # TODO automatically drop null rows
     nn_path = os.path.join(
         project_root,'election_anomaly/CDF_schema_def_info/elements',element,'not_null_fields.txt')
     not_nulls = pd.read_csv(nn_path,sep='\t',encoding='iso-8859-1')
@@ -512,16 +513,19 @@ def check_nulls(element,f_path,project_root):
 
     problem_columns = []
 
-    for nn in not_nulls.not_null_fields.unique():
-        # if nn is an Id, name in jurisdiction file is element name
-        if nn[-3:] == '_Id':
-            nn = nn[:-3]
-        n = df[df[nn].isnull()]
-        if not n.empty:
-            problem_columns.append(nn)
-            # drop offending rows
-            df = df[df[nn].notnull()]
+    nulls = True
+    while nulls:
 
+        for nn in not_nulls.not_null_fields.unique():
+            # if nn is an Id, name in jurisdiction file is element name
+            if nn[-3:] == '_Id':
+                nn = nn[:-3]
+            n = df[df[nn].isnull()]
+            if not n.empty:
+                # ui.show_sample(n,f'Lines in {element} file',f'have illegal nulls in {nn}')
+                problem_columns.append(nn)
+        if not problem_columns:
+            nulls = False
     return problem_columns
 
 
