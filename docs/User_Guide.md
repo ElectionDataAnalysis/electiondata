@@ -56,6 +56,9 @@ When all errors are fixed, your munger should be able to interpret your data fil
 10. If necessary, add the relevant election to `Election.txt`.
 11. Add any BallotMeasureContests you care about to `BallotMeasureContest.txt` and `dictionary.txt`. 
     1. Choose raw identifiers for the BallotMeasureContests and modify `dictionary.txt` accordingly.
+    1. If your munger is already set up you can add all BallotMeasureContests from a results file with 
+    
+        `add_elements_from_datafile(<file_path>,<munger_name>,'BallotMeasureContest')`
     1. Specify the ElectionDistrict, which must be in the `ReportingUnit.txt` file. (If you don't know the ElectionDistrict, nothing will break if you assign it the entire jurisdiction as ElectionDistrict.)
 12. Add Candidates from the contests you care about to `Candidate.txt` and `dictionary.txt`.
     1. Choose raw identifiers for the Candidates and modify `dictionary.txt`
