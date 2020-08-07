@@ -97,33 +97,13 @@ def text_fragments_and_fields(formula):
     return text_field_list,last_text
 
 
-def add_column_from_formula(working: pd.DataFrame, formula: str, new_col: str, err: dict, suffix=None) -> (pd.DataFrame, dict):
-    """If <suffix> is given, add it to each field in the formula"""
-    text_field_list, last_text = text_fragments_and_fields(formula)
-
-    # add suffix, if required
-    if suffix:
-        text_field_list = [(t,f'{f}{suffix}') for (t,f) in text_field_list]
-
-    if last_text:
-        working.loc[:, new_col] = last_text[0]
-    else:
-        working.loc[:, new_col] = ''
-    text_field_list.reverse()
-    for t, f in text_field_list:
-        try:
-            working.loc[:, new_col] = working.loc[:, f].apply(lambda x: f'{t}{x}') + working.loc[:,new_col]
-        except KeyError:
-            ui.add_error(err,'munge-error',f'missing column {f}')
-    return working, err
-
-
 def add_munged_column(
         raw: pd.DataFrame, munger: jm.Munger, element: str, err: dict, mode: str = 'row',
         inplace: bool = True) -> (pd.DataFrame, dict):
     """Alters dataframe <raw>, adding or redefining <element>_raw column
     via the <formula>. Assumes "_SOURCE" has been appended to all columns of raw
     Does not alter row count."""
+    # TODO what preprocessing exactly? Improve description
     if not err:
         err = {}
     if raw.empty:
@@ -142,8 +122,16 @@ def add_munged_column(
             for i in range(munger.header_row_count):
                 formula = formula.replace(f'<{i}>',f'<variable_{i}>')
 
-        working, err = add_column_from_formula(working, formula,f'{element}_raw', err)
+        text_field_list,last_text = text_fragments_and_fields(formula)
 
+        if last_text:
+            working.loc[:,f'{element}_raw'] = last_text[0]
+        else:
+            working.loc[:,f'{element}_raw'] = ''
+
+        text_field_list.reverse()
+        for t,f in text_field_list:
+            working.loc[:,f'{element}_raw'] = working.loc[:,f].apply(lambda x:f'{t}{x}') + working.loc[:,f'{element}_raw']
     except:
         e = f'Error munging {element}. Check raw_identifier_formula for {element} in cdf_elements.txt'
         if 'cdf_elements.txt' in err.keys():
@@ -166,12 +154,13 @@ def compress_whitespace(s:str) -> str:
 
 def replace_raw_with_internal_ids(
         row_df: pd.DataFrame, juris: jm.Jurisdiction, table_df: pd.DataFrame, element: str, internal_name_column: str
-        ,error: dict, drop_unmatched: bool=False, mode: str='row') -> (pd.DataFrame, dict):
+        ,unmatched_dir: str, error: dict, drop_unmatched: bool=False, mode: str='row') -> (pd.DataFrame, dict):
     """replace columns in <row_df> with raw_identifier values by columns with internal names and Ids
     from <table_df>, which has structure of a db table for <element>.
     # TODO If <element> is BallotMeasureContest or CandidateContest,
     #  contest_type column is added/updated
     """
+    assert os.path.isdir(unmatched_dir), f'Argument {unmatched_dir} is not a directory'
     if drop_unmatched:
         how='inner'
     else:
@@ -452,23 +441,25 @@ def add_constant_column(df,col_name,col_value):
     return new_df
 
 
-def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session: Session) -> (pd.DataFrame, dict):
-    working = df.copy()
+def raw_elements_to_cdf(
+        session, project_root: str, juris: jm.Jurisdiction, mu: jm.Munger,raw: pd.DataFrame, count_cols: list,
+        err: dict, ids=None) -> dict:
+    """load data from <raw> into the database."""
+    working = raw.copy()
 
-    # add column for contest_type
-    working = add_constant_column(working,'contest_type','unknown')
+    # enter elements from sources outside raw data, including creating id column(s)
+    working = add_constant_column(working,'Election_Id',ids[1])
+    working = add_constant_column(working,'_datafile_Id',ids[0])
+
+    working, err = munge_and_melt(mu,working,count_cols,err)
 
     # append ids for BallotMeasureContests and CandidateContests
+    working = add_constant_column(working,'contest_type','unknown')
     for c_type in ['BallotMeasure','Candidate']:
         df_contest = pd.read_sql_table(f'{c_type}Contest',session.bind)
         [working, err] = replace_raw_with_internal_ids(
-            working,
-            juris,
-            df_contest,
-            f'{c_type}Contest',
-            dbr.get_name_field(f'{c_type}Contest'),
-            err,
-            drop_unmatched=False)
+            working,juris,df_contest,f'{c_type}Contest',dbr.get_name_field(f'{c_type}Contest'),mu.path_to_munger_dir,
+            err, drop_unmatched=False)
 
         # set contest_type where id was found
         working.loc[working[f'{c_type}Contest_Id'].notnull(), 'contest_type'] = c_type
