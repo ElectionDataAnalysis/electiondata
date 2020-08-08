@@ -1,3 +1,0 @@
-fieldname	refers_to
-CandidateContest_Id	CandidateContest
-CandidateSelection_Id	CandidateSelection
