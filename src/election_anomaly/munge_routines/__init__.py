@@ -154,13 +154,12 @@ def compress_whitespace(s:str) -> str:
 
 def replace_raw_with_internal_ids(
         row_df: pd.DataFrame, juris: jm.Jurisdiction, table_df: pd.DataFrame, element: str, internal_name_column: str
-        ,unmatched_dir: str, error: dict, drop_unmatched: bool=False, mode: str='row') -> (pd.DataFrame, dict):
+        ,error: dict, drop_unmatched: bool=False, mode: str='row') -> (pd.DataFrame, dict):
     """replace columns in <row_df> with raw_identifier values by columns with internal names and Ids
     from <table_df>, which has structure of a db table for <element>.
     # TODO If <element> is BallotMeasureContest or CandidateContest,
     #  contest_type column is added/updated
     """
-    assert os.path.isdir(unmatched_dir), f'Argument {unmatched_dir} is not a directory'
     if drop_unmatched:
         how='inner'
     else:
@@ -441,25 +440,23 @@ def add_constant_column(df,col_name,col_value):
     return new_df
 
 
-def raw_elements_to_cdf(
-        session, project_root: str, juris: jm.Jurisdiction, mu: jm.Munger,raw: pd.DataFrame, count_cols: list,
-        err: dict, ids=None) -> dict:
-    """load data from <raw> into the database."""
-    working = raw.copy()
+def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session: Session) -> (pd.DataFrame, dict):
+    working = df.copy()
 
-    # enter elements from sources outside raw data, including creating id column(s)
-    working = add_constant_column(working,'Election_Id',ids[1])
-    working = add_constant_column(working,'_datafile_Id',ids[0])
-
-    working, err = munge_and_melt(mu,working,count_cols,err)
+    # add column for contest_type
+    working = add_constant_column(working,'contest_type','unknown')
 
     # append ids for BallotMeasureContests and CandidateContests
-    working = add_constant_column(working,'contest_type','unknown')
     for c_type in ['BallotMeasure','Candidate']:
         df_contest = pd.read_sql_table(f'{c_type}Contest',session.bind)
         [working, err] = replace_raw_with_internal_ids(
-            working,juris,df_contest,f'{c_type}Contest',dbr.get_name_field(f'{c_type}Contest'),mu.path_to_munger_dir,
-            err, drop_unmatched=False)
+            working,
+            juris,
+            df_contest,
+            f'{c_type}Contest',
+            dbr.get_name_field(f'{c_type}Contest'),
+            err,
+            drop_unmatched=False)
 
         # set contest_type where id was found
         working.loc[working[f'{c_type}Contest_Id'].notnull(), 'contest_type'] = c_type

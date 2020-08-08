@@ -232,10 +232,7 @@ def new_datafile(
 	raw, err = read_combine_results(munger, raw_path, project_root,err,aux_data_dir=aux_data_dir)
 	if raw.empty:
 		e = f'No data read from datafile {raw_path}.'
-		if 'datafile' in err.keys():
-			err['datafile'].append(e)
-		else:
-			err['datafile'] = [e]
+		add_error(err,'datafile',e)
 		return err
 	
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
