@@ -1,5 +1,5 @@
 fieldname	refers_to
 ElectionContestJoin_Id	ElectionContestJoin
-ContestSelectionJoin_Id	BallotMeasureContestSelectionJoin;CandidateContestSelectionJoin
+ContestSelectionJoin_Id	ContestSelectionJoin
 VoteCount_Id	VoteCount
 _datafile_Id	_datafile

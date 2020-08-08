@@ -135,7 +135,8 @@ def pick_munger(mungers_dir='mungers',project_root=None, munger_name=None):
 
 def read_single_datafile(munger: sf.Munger, f_path: str, err: dict) -> [pd.DataFrame, dict]:
 	try:
-		kwargs = {'thousands': munger.thousands_separator, 'dtype': str}
+		dtype = {c: str for c in munger.field_list}
+		kwargs = {'thousands': munger.thousands_separator, 'dtype': dtype}
 
 		if munger.field_name_row is None:
 			kwargs['header'] = None
@@ -231,10 +232,7 @@ def new_datafile(
 	raw, err = read_combine_results(munger, raw_path, project_root,err,aux_data_dir=aux_data_dir)
 	if raw.empty:
 		e = f'No data read from datafile {raw_path}.'
-		if 'datafile' in err.keys():
-			err['datafile'].append(e)
-		else:
-			err['datafile'] = [e]
+		add_error(err,'datafile',e)
 		return err
 	
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
