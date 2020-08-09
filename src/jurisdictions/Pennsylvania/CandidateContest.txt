@@ -743,3 +743,6 @@ PA Senate District 23 (Republican Party Primary)	1.0	PA Senate District 23	Repub
 PA Senate District 24 (Republican Party Primary)	1.0	PA Senate District 24	Republican Party
 PA Senate District 25 (Republican Party Primary)	1.0	PA Senate District 25	Republican Party
 US Senate PA (Republican Party Primary)	1.0	US Senate PA	Republican Party
+US President (PA)	1.0	Pennsylvania
+US President (PA) (Democratic Party Primary)	1.0	Pennsylvania	Democratic Party
+US President (PA) (Republican Party Primary)	1.0	Pennsylvania	Republican Party
