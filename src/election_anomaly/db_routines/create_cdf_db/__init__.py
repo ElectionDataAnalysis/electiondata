@@ -3,10 +3,11 @@
 # TODO consistency check on SelectionElectionContestVoteCountJoin to make sure ElectionContestJoin_Id
 #  and ContestSelectionJoin_Id share a contest? Should this happen during the rollup process?
 
-import sqlalchemy
-from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,ForeignKey, Date
+import sqlalchemy as sa
+from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,ForeignKey, TIMESTAMP, Date
 import os
 import pandas as pd
+import datetime
 
 
 def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
@@ -19,7 +20,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
     metadata = MetaData(bind=eng)
 
     # create the single sequence for all db ids
-    id_seq = sqlalchemy.Sequence('id_seq', metadata=metadata)
+    id_seq = sa.Sequence('id_seq', metadata=metadata)
 
     # create enumeration tables 
     e_table_list = enum_table_list(dirpath)
@@ -103,13 +104,22 @@ def create_table(metadata,id_seq,name,table_type,dirpath,engine,session):
         df['unique_constraints']['arg_list'] = df['unique_constraints']['unique_constraint'].str.split(',')
         unique_constraint_list = [UniqueConstraint(*r['arg_list'],name=f'{short_name}_ux{i}')
                                   for i,r in df['unique_constraints'].iterrows()]
+        # enumerations
         enum_id_list = [Column(f'{r["enumeration"]}_Id',ForeignKey(f'{r["enumeration"]}.Id'))
                         for i,r in df['enumerations'].iterrows()]
         enum_other_list = [Column(f'Other{r["enumeration"]}',String) for i,r in df['enumerations'].iterrows()]
+
+        # add timestamp to _datafile
+        if name == '_datafile':
+            time_stamp_list = [Column('created_at', sa.DateTime, default=sa.func.now())]
+        else:
+            time_stamp_list = []
+
         Table(name,metadata,
               Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
               * field_col_list, * enum_id_list, * enum_other_list,
-              * foreign_key_list, * null_constraint_list, * unique_constraint_list)
+              * foreign_key_list, * null_constraint_list, * unique_constraint_list, * time_stamp_list)
+
 
     elif table_type == 'enumerations':
         if name == 'BallotMeasureSelection':
