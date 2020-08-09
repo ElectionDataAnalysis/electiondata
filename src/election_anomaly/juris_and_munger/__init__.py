@@ -259,7 +259,7 @@ def ensure_juris_files(juris_path,project_root,ignore_empty=False):
     file_empty = []
     column_errors =[]
     null_columns_dict = {}
-    duplicate_files = []
+    duplicate_rows = []
 
     # ensure necessary all files exist
     for juris_file in template_list:
@@ -281,7 +281,7 @@ def ensure_juris_files(juris_path,project_root,ignore_empty=False):
 
         # if file exists, check format against template
         if not created:
-            cf_df = pd.read_csv(os.path.join(juris_path,f'{juris_file}.txt'),sep='\t',encoding='iso=8859-1')
+            cf_df = pd.read_csv(os.path.join(juris_path,f'{juris_file}.txt'), sep='\t', encoding='iso=8859-1')
             if set(cf_df.columns) != set(temp.columns):
                 cols = '\t'.join(temp.columns.to_list())
                 column_errors.append(f'Columns of {juris_file}.txt need to be (tab-separated):\n '
@@ -300,14 +300,14 @@ def ensure_juris_files(juris_path,project_root,ignore_empty=False):
                     null_columns_dict[juris_file] = null_columns
 
             if dupe != '':
-                duplicate_files.append(dupe)
+                duplicate_rows.append(dupe)
 
             if column_errors:
                 error_ensure_juris_files["column_errors"] = column_errors
             if null_columns_dict:
                 error_ensure_juris_files["null_columns"] = null_columns_dict
-            if duplicate_files:
-                error_ensure_juris_files["duplicate_files"] = duplicate_files
+            if duplicate_rows:
+                error_ensure_juris_files["duplicate_rows"] = duplicate_rows
 
         if file_empty:
             error_ensure_juris_files["file_empty_errors"] = file_empty
