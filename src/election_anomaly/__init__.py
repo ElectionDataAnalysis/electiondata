@@ -414,7 +414,9 @@ class JurisdictionPrepper():
 		error['dictionary'] = self.starter_dictionary()
 		return error
 
-	def add_primaries_to_dict(self):
+	def add_primaries_to_dict(self) -> str:
+		error = None
+		# TODO add real error handling
 		primaries = {}
 		# read CandidateContest.txt, Party.txt and dictionary.txt
 		cc = prep.get_element(self.d['jurisdiction_path'], 'CandidateContest')
@@ -429,9 +431,9 @@ class JurisdictionPrepper():
 			primaries[p['raw_identifier_value']] = contest_d.copy().rename(
 				columns={'cdf_internal_name': 'contest_internal', 'raw_identifier_value': 'contest_raw'})
 			primaries[p['raw_identifier_value']]['cdf_internal_name'] = primaries[p['raw_identifier_value']].apply(
-				lambda row: prep.primary(row, p['cdf_internal_name'], 'internal'), axis=1)
+				lambda row: prep.primary(row, p['cdf_internal_name'], 'cdf_internal_name'), axis=1)
 			primaries[p['raw_identifier_value']]['raw_identifier_value'] = primaries[p['raw_identifier_value']].apply(
-				lambda row: prep.primary(row, p['raw_identifier_value'], 'raw'), axis=1)
+				lambda row: prep.primary(row, p['raw_identifier_value'], 'raw_identifier_value'), axis=1)
 
 		if primaries:
 			df_list = [df[['cdf_element', 'cdf_internal_name', 'raw_identifier_value']] for df in primaries.values()]
@@ -440,7 +442,7 @@ class JurisdictionPrepper():
 		else:
 			new_dictionary = d
 		prep.write_element(self.d['jurisdiction_path'], 'dictionary', new_dictionary)
-		return
+		return error
 
 	def add_standard_contests(self, juriswide_contests: list=None, other_districts: dict=None):
 		"""If <juriswide_contest> is None, use standard list hard-coded."""
@@ -497,6 +499,37 @@ class JurisdictionPrepper():
 		prep.write_element(self.d['jurisdiction_path'], 'CandidateContest', w_cc.drop_duplicates())
 		return
 
+	def add_primaries_to_CandidateContest(self):
+		primaries = {}
+		error = None
+
+		# get contests that are not already primaries
+		contests = prep.get_element(self.d['jurisdiction_path'], 'CandidateContest')
+		non_p_contests = contests[contests['PrimaryParty'].isnull()]
+		if non_p_contests.empty:
+			error = 'CandidateContest.txt is missing or has no non-primary contests. No primary contests added.'
+			return error
+
+		# get parties
+		parties = prep.get_element(self.d['jurisdiction_path'], 'Party')
+		if parties.empty:
+			if error:
+				error += '\n Party.txt is missing or empty. No primary contests added.'
+			else:
+				error = '\n Party.txt is missing or empty. No primary contests added.'
+			return error
+
+		for i, party in parties.iterrows():
+			p = party['Name']
+			primaries[p] = non_p_contests.copy()
+			primaries[p]['Name'] = non_p_contests.apply(lambda row: prep.primary(row,p,'Name'),axis=1)
+			primaries[p]['PrimaryParty'] = p
+
+		all_primaries = [primaries[p] for p in parties.Name.unique()]
+		prep.write_element(
+			self.d['jurisdiction_path'], 'CandidateContest',pd.concat([contests] + all_primaries))
+		return error
+
 	def add_elements_from_datafile(self, elements: iter, error: dict) -> dict:
 		"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
 		or not already in <element>.txt for each <element> in <elements>"""
@@ -538,6 +571,8 @@ class JurisdictionPrepper():
 			we = prep.get_element(self.d['jurisdiction_path'], element)
 			old_internal = we[name_field].to_list()
 			new_internal = [x for x in wd[wd.cdf_element == element]['cdf_internal_name'] if x not in old_internal]
+			# TODO guide user to check dictionary for bad stuff before running this
+			#  e.g., primary contests already in dictionary cause a problem.
 			new_internal_df = pd.DataFrame([[x] for x in new_internal], columns=[name_field])
 			we = pd.concat([we, new_internal_df]).drop_duplicates()
 			prep.write_element(self.d['jurisdiction_path'], element, we)
