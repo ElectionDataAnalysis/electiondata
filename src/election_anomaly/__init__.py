@@ -146,10 +146,10 @@ class SingleDataLoader():
 		data = pd.DataFrame(
 			[[self.d['results_short_name'],filename,
 			  self.d['results_download_date'], self.d['results_source'],
-				self.d['results_note'], top_reporting_unit_id, election_id]],
+				self.d['results_note'], top_reporting_unit_id, election_id,datetime.datetime.now()]],
 			columns=['short_name', 'file_name',
 					 'download_date', 'source',
-					 'note', 'ReportingUnit_Id', 'Election_Id'])
+					 'note', 'ReportingUnit_Id', 'Election_Id','created_at'])
 		[df,e] = dbr.dframe_to_sql(data,self.session,'_datafile')
 		if e:
 			return [0, 0], e
@@ -281,10 +281,10 @@ class DataLoader():
 		data = pd.DataFrame(
 			[[self.d['results_short_name'],filename,
 			  self.d['results_download_date'], self.d['results_source'],
-				self.d['results_note'], top_reporting_unit_id, election_id]],
+				self.d['results_note'], top_reporting_unit_id, election_id,datetime.datetime.now()]],
 			columns=['short_name', 'file_name',
 					 'download_date', 'source',
-					 'note', 'ReportingUnit_Id', 'Election_Id'])
+					 'note', 'ReportingUnit_Id', 'Election_Id','created_at'])
 		[df,e] = dbr.dframe_to_sql(data,self.session,'_datafile')
 		if e:
 			return [0,0],e
