@@ -58,6 +58,9 @@ def create_rollup(
 		# pull directly from db, using 'Id' as index
 		df[element] = pd.read_sql_table(element,session.bind,index_col='Id')
 
+	# avoid conflict if by chance VoteCount table has extra columns during data upload
+	df['VoteCount'] = df['VoteCount'][['Count','CountItemType_Id','OtherCountItemType','ReportingUnit_Id']]
+
 	# pull enums from db, keeping 'Id as a column, not the index
 	for enum in ["ReportingUnitType","CountItemType"]:
 		df[enum] = pd.read_sql_table(enum,session.bind)
