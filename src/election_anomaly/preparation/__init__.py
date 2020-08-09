@@ -8,14 +8,12 @@ from election_anomaly import db_routines as db
 from pathlib import Path
 
 
-# TODO: routine to add precincts from a results file to both ReportingUnit.txt and dictionary.txt,
-#  assuming counties are already in both files and precincts munged as <county>;Precinct <precinct>
-
-
-def primary(row: pd.Series, party: str, contest_field: str) -> str:
-	try:
-		pr = f'{row[contest_field]} ({party})'
-	except KeyError:
+def primary(row: pd.Series, party: str, mode: str) -> str:
+	if mode == 'internal':
+		pr = f'{row["contest_internal"]} ({party})'
+	elif mode == 'raw':
+		pr = f'{row["contest_raw"]} ({party})'
+	else:
 		pr = None
 	return pr
 
@@ -60,13 +58,10 @@ def remove_empty_lines(df: pd.DataFrame, element: str) -> pd.DataFrame:
 
 def write_element(juris_path: str, element: str, df: pd.DataFrame, file_name=None) -> str:
 	"""<juris> is path to jurisdiction directory. Info taken
-	from <element>.txt file in that directory.
-	<element>.txt is overwritten with info in <df>"""
+	from <element>.txt file in that directory"""
 	if not file_name:
 		file_name = f'{element}.txt'
 	dupes_df, deduped = ui.find_dupes(df)
-	if element == 'dictionary':
-		deduped = remove_empty_lines(deduped, element)
 	deduped.drop_duplicates().fillna('').to_csv(os.path.join(juris_path, file_name), index=False,sep='\t')
 	if dupes_df.empty:
 		err = None
@@ -80,3 +75,31 @@ def add_defaults(juris_path: str, juris_template_dir: str, element: str):
 	new = get_element(juris_template_dir,element)
 	write_element(juris_path,element, pd.concat([old, new]).drop_duplicates())
 	return
+
+
+def add_primary_contests(juris_path: str) -> str:
+	"""Revise CandidateContest.txt
+	to add all possible primary contests. """
+	error = None
+	# get all contests that are not already primaries
+	contests = get_element(juris_path,'CandidateContest')
+	contests = contests[contests['PrimaryParty'].isnull()]
+	if contests.empty:
+		error = 'CandidateContest.txt is missing or has no non-primary contests. No primary contests added.'
+		return error
+	parties = get_element(juris_path,'Party')
+	if parties.empty:
+		if error:
+			error += '\n Party.txt is missing or empty. No primary contests added.'
+		else:
+			error = '\n Party.txt is missing or empty. No primary contests added.'
+		return error
+
+	p_contests = primary_contests_no_dictionary(contests, parties)
+
+	# overwrite CandidateContest.txt with new info
+	new_contests = pd.concat([contests, p_contests]).drop_duplicates().fillna('')
+	new_contests.to_csv(os.path.join(juris_path,'CandidateContest.txt'),sep='\t',index=False)
+
+	return error
+
