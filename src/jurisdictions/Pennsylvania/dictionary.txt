@@ -6,6 +6,7 @@ Party	Libertarian Party	Libertarian
 Party	Democratic / Republican Party	Democratic / Republican
 Party	Independent Party	Independent
 Party	No Affiliation	No Affiliation
+CandidateContest	US President (PA)	President of the United States
 CandidateContest	PA Governor	Governor;Statewide
 CandidateContest	US House PA District 1	Representative in Congress;1st Congressional District
 CandidateContest	US House PA District 2	Representative in Congress;2nd Congressional District
@@ -757,6 +758,8 @@ Candidate	GROVE, SETH MICHAEL	GROVE, SETH MICHAEL
 BallotMeasureSelection	No	No Votes
 BallotMeasureSelection	Yes	Yes Votes
 CountItemType	total	Votes
+CandidateContest	US President (PA) (Democratic Party Primary)	President of the United States;Democratic Primary
+CandidateContest	US President (PA) (Republican Party Primary)	President of the United States;Republican Primary
 CandidateContest	PA Governor (Democratic Party Primary)	Governor;Statewide;Democratic Primary
 CandidateContest	US House PA District 1 (Democratic Party Primary)	Representative in Congress;1st Congressional District;Democratic Primary
 CandidateContest	US House PA District 2 (Democratic Party Primary)	Representative in Congress;2nd Congressional District;Democratic Primary
