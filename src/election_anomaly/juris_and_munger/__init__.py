@@ -504,6 +504,7 @@ def dedupe(f_path,warning='There are duplicates'):
 
 def check_nulls(element,f_path,project_root):
     # TODO write description
+    # TODO automatically drop null rows
     nn_path = os.path.join(
         project_root,'election_anomaly/CDF_schema_def_info/elements',element,'not_null_fields.txt')
     not_nulls = pd.read_csv(nn_path,sep='\t',encoding='iso-8859-1')
@@ -517,8 +518,10 @@ def check_nulls(element,f_path,project_root):
             nn = nn[:-3]
         n = df[df[nn].isnull()]
         if not n.empty:
-            # ui.show_sample(n,f'Lines in {element} file',f'have illegal nulls in {nn}')
             problem_columns.append(nn)
+            # drop offending rows
+            df = df[df[nn].notnull()]
+
     return problem_columns
 
 
