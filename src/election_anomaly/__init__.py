@@ -482,7 +482,7 @@ class JurisdictionPrepper():
 
 		# add standard jurisdiction-wide offices
 		if not juriswide_contests:
-			juriswide_contests = [f'{abbr} Governor', f'US Senate {abbr}', f'{abbr} Attorney General',
+			juriswide_contests = [f'US President ({abbr})',f'{abbr} Governor', f'US Senate {abbr}', f'{abbr} Attorney General',
 								  f'{abbr} Lieutenant Governor', f'{abbr} Treasurer']
 		# append jurisdiction-wide offices
 		jw_off = pd.DataFrame(
