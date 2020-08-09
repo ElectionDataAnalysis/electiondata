@@ -743,6 +743,42 @@ PA Senate District 23 (Republican Party Primary)	1.0	PA Senate District 23	Repub
 PA Senate District 24 (Republican Party Primary)	1.0	PA Senate District 24	Republican Party
 PA Senate District 25 (Republican Party Primary)	1.0	PA Senate District 25	Republican Party
 US Senate PA (Republican Party Primary)	1.0	US Senate PA	Republican Party
-US President (PA)	1.0	Pennsylvania
+US President (PA)	1.0	Pennsylvania	
 US President (PA) (Democratic Party Primary)	1.0	Pennsylvania	Democratic Party
 US President (PA) (Republican Party Primary)	1.0	Pennsylvania	Republican Party
+PA Senate District 26	1.0	PA Senate District 26	
+PA Senate District 27	1.0	PA Senate District 27	
+PA Senate District 28	1.0	PA Senate District 28	
+PA Senate District 29	1.0	PA Senate District 29	
+PA Senate District 30	1.0	PA Senate District 30	
+PA Senate District 31	1.0	PA Senate District 31	
+PA Senate District 32	1.0	PA Senate District 32	
+PA Senate District 33	1.0	PA Senate District 33	
+PA Senate District 34	1.0	PA Senate District 34	
+PA Senate District 35	1.0	PA Senate District 35	
+PA Senate District 36	1.0	PA Senate District 36	
+PA Senate District 37	1.0	PA Senate District 37	
+PA Senate District 38	1.0	PA Senate District 38	
+PA Senate District 39	1.0	PA Senate District 39	
+PA Senate District 40	1.0	PA Senate District 40	
+PA Senate District 41	1.0	PA Senate District 41	
+PA Senate District 42	1.0	PA Senate District 42	
+PA Senate District 43	1.0	PA Senate District 43	
+PA Senate District 44	1.0	PA Senate District 44	
+PA Senate District 45	1.0	PA Senate District 45	
+PA Senate District 46	1.0	PA Senate District 46	
+PA Senate District 47	1.0	PA Senate District 47	
+PA Senate District 48	1.0	PA Senate District 48	
+PA Senate District 49	1.0	PA Senate District 49	
+PA Senate District 50	1.0	PA Senate District 50	
+US President (PA)	1.0	US President (PA)	
+PA Attorney General (Democratic Party Primary)	1.0	PA Attorney General
+PA Attorney General (Republican Party Primary)	1.0	PA Attorney General
+PA Attorney General	1.0	PA Attorney General
+PA Lieutenant Governor (Democratic Party Primary)	1.0	PA Lieutenant Governor
+PA Lieutenant Governor (Republican Party Primary)	1.0	PA Lieutenant Governor
+PA Lieutenant Governor	1.0	PA Lieutenant Governor
+PA Treasurer (Democratic Party Primary)	1.0	PA Treasurer
+PA Treasurer (Republican Party Primary)	1.0	PA Treasurer
+PA Treasurer	1.0	PA Treasurer
+PA Auditor General	1.0	PA Auditor General
