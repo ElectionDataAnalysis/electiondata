@@ -51,8 +51,8 @@ def create_rollup(
 	# pull relevant tables
 	df = {}
 	for element in [
-		'ElectionContestSelectionVoteCountJoin','VoteCount','CandidateContestSelectionJoin',
-		'BallotMeasureContestSelectionJoin','ComposingReportingUnitJoin','Election','ReportingUnit',
+		'ElectionContestSelectionVoteCountJoin','VoteCount','ContestSelectionJoin',
+		'ComposingReportingUnitJoin','Election','ReportingUnit',
 		'ElectionContestJoin','CandidateContest','CandidateSelection','BallotMeasureContest',
 		'BallotMeasureSelection','Office','Candidate']:
 		# pull directly from db, using 'Id' as index
@@ -66,32 +66,29 @@ def create_rollup(
 	ecj = df['ElectionContestJoin'][df['ElectionContestJoin'].Election_Id == election_id]
 
 	# create contest_selection dataframe, adding Contest, Selection and ElectionDistrict_Id columns
-	cc = df['CandidateContestSelectionJoin'].merge(
-		df['CandidateContest'],how='left',left_on='CandidateContest_Id',right_index=True).rename(
+	cc = df['ContestSelectionJoin'].merge(
+		df['CandidateContest'],how='right',left_on='Contest_Id',right_index=True).rename(
 		columns={'Name':'Contest','Id':'ContestSelectionJoin_Id'}).merge(
-		df['CandidateSelection'],how='left',left_on='CandidateSelection_Id',right_index=True).merge(
+		df['CandidateSelection'],how='left',left_on='Selection_Id',right_index=True).merge(
 		df['Candidate'],how='left',left_on='Candidate_Id',right_index=True).rename(
-		columns={'BallotName':'Selection','CandidateContest_Id':'Contest_Id',
-				'CandidateSelection_Id':'Selection_Id'}).merge(
+		columns={'BallotName':'Selection'}).merge(
 		df['Office'],how='left',left_on='Office_Id',right_index=True)
 	cc = cc[['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id']]
 	if cc.empty:
 		cc['contest_type'] = None
 	else:
-		cc.loc[:,'contest_type'] = 'Candidate'
+		cc = mr.add_constant_column(cc,'contest_type','Candidate')
 
 	# create ballotmeasure_selection dataframe
-	bm = df['BallotMeasureContestSelectionJoin'].merge(
-		df['BallotMeasureContest'],how='left',left_on='BallotMeasureContest_Id',right_index=True).rename(
+	bm = df['ContestSelectionJoin'].merge(
+		df['BallotMeasureContest'],how='right',left_on='Contest_Id',right_index=True).rename(
 		columns={'Name':'Contest'}).merge(
-		df['BallotMeasureSelection'],how='left',left_on='BallotMeasureSelection_Id',right_index=True).rename(
-		columns={'BallotMeasureSelection_Id':'Selection_Id','BallotMeasureContest_Id':'Contest_Id'}
-	)
+		df['BallotMeasureSelection'],how='left',left_on='Selection_Id',right_index=True)
 	bm = bm[['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id']]
 	if bm.empty:
 		bm['contest_type'] = None
 	else:
-		bm.loc[:,'contest_type'] = 'BallotMeasure'
+		bm = mr.add_constant_column(bm,'contest_type','BallotMeasure')
 
 	#  combine all contest_selections into one dataframe
 	contest_selection = pd.concat([cc,bm])
