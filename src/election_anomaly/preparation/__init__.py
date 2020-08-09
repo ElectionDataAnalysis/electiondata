@@ -49,7 +49,7 @@ def remove_empty_lines(df: pd.DataFrame, element: str) -> pd.DataFrame:
 	For dictionary element, such lines may have a first entry (e.g., CandidateContest)"""
 	working = df.copy()
 	# remove all rows with nothing
-	working = working[(working.notin('','""')).any(axis=1)]
+	working = working[((working != '') & (working != '""')).any(axis=1)]
 
 	if element == 'dictionary':
 		working = working[(working.iloc[:,1:] != '').any(axis=1)]
