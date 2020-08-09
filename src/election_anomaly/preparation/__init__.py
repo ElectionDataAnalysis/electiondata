@@ -44,12 +44,26 @@ def get_element(juris_path: str,element: str) -> pd.DataFrame:
 	return element_df
 
 
+def remove_empty_lines(df: pd.DataFrame, element: str) -> pd.DataFrame:
+	"""return copy of <df> with any contentless lines removed.
+	For dictionary element, such lines may have a first entry (e.g., CandidateContest)"""
+	working = df.copy()
+	# remove all rows with nothing
+	working = working[(working.notin('','""')).any(axis=1)]
+
+	if element == 'dictionary':
+		working = working[(working.iloc[:,1:] != '').any(axis=1)]
+	return working
+
+
 def write_element(juris_path: str, element: str, df: pd.DataFrame, file_name=None) -> str:
 	"""<juris> is path to jurisdiction directory. Info taken
 	from <element>.txt file in that directory"""
 	if not file_name:
 		file_name = f'{element}.txt'
 	dupes_df, deduped = ui.find_dupes(df)
+	if element == 'dictionary':
+		deduped = remove_empty_lines(deduped, element)
 	deduped.drop_duplicates().fillna('').to_csv(os.path.join(juris_path, file_name), index=False,sep='\t')
 	if dupes_df.empty:
 		err = None
