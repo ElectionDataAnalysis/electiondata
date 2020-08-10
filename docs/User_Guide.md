@@ -3,6 +3,7 @@
 ## Get Started
  * Create the parameter files you'll need:
    * `analyzer.par` for Analyzer class if you want it
+   * `new_jurisdiction.par` for the JurisdictionPrepper() class
    * `run_time.par` if you will be using DataLoader class to look in detail at one file/jurisdiction/munger
    
  * In a python interpreter, import the `election_anomaly` module and create a DataLoader() instance.
