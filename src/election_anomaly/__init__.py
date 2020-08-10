@@ -127,7 +127,7 @@ class SingleDataLoader():
 				mungers_dir=munger_path,
 				project_root=project_root, munger_name=mu)
 		# if no munger throws an error:
-		if set(self.munger_err.values()) == {None}:
+		if all([x is None for x in self.munger_err.values()]):
 			self.munger_err = None
 
 	def check_errors(self):
