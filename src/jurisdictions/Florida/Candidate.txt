@@ -1,0 +1,355 @@
+BallotName
+De La Fuente, Roque 'Rocky'
+Scott, Rick
+Dosev, Cris
+Gaetz, Matt
+Mills, John
+Sapp, Judson
+Yoho, Ted
+Costello, Fred
+Waltz, Michael
+Ward, John
+Francois, Vennia
+Miller, Mike
+Sturgill, Scott
+Buck, George
+Sostack, Brad
+Combee, Neil
+Harper, Sean
+Kushmer, Danny
+Shoemaker, Ed
+Spano, Ross
+Akins, Bill
+Gonzalez, Julio
+Steube, Greg
+Cummings, Dave
+Freeman, Mark
+Mast, Brian
+Kimaz, Nicolas
+Manjarres, Javier 'Javi'
+Walters, Eddison
+Kaufman, Joseph 'Joe'
+Reyes, Carlos J.
+Spalding, Carla
+Curbelo, Carlos
+Faas, Souraya
+Adadi, Elizabeth
+Barreiro, Bruno A.
+Chirino, Angie
+Marks, Stephen
+Ohevzion, Michael
+Peiro, Maria
+Rodriguez Aguilera, Bettina
+Salazar, Maria Elvira
+Sosa, Gina
+Baldauf, Don
+DeSantis, Ron
+Devine, Timothy M.
+Langford, Bob
+Mercadante, John Joseph
+Nathan, Bruce
+Putnam, Adam H.
+White, Bob
+Moody, Ashley
+White, Frank
+Caldwell, Matt
+Grimsley, Denise
+McCalister, Mike
+Troutman, Baxter
+Crowley, Chris
+Fox, Amira
+Bean, Aaron
+Slay, Carlos E.
+Hooper, Ed
+Karruli, Leo
+Houman, John Manners
+Lee, Tom
+Harrell, Gayle
+Keiser, Belinda
+Bydlak, Rebekah
+Doss, Lisa
+Hill, Mike
+Andrade, Alex
+Merk, Greg
+Brannan, Chuck
+Vann, Marc
+Byrd, Cord
+Zimmerman, Joe
+Duggan, Wyman
+Hogan, Joseph
+Zeigler, Mark
+Smith, Brigitte
+Stone, Charlie
+Cantu, Michael
+Fetterhoff, Elizabeth
+Elswick, Shannon
+Sabatini, Anthony
+Wofford, Monica L.
+Boney, Ryan Patrick
+Rudisill, Elle
+Zika, Ardian
+Nix, Mikaela
+Reeves, Stockton
+Collins, George
+Plasencia, Rene 'Coach P'
+Parrish, Henry
+Sirois, Tyler
+Altman, Thad
+Nye, Matt
+Beltran, Mike
+McCoy, Sean
+Storms, Ronda
+Wicker, Joe
+Grant, James
+Power, Terry
+DiCeglie, Nick
+Jacques, Berny
+Bailie, Jeremy
+Blacklidge, Ray
+Miller, Jason
+Pilon, Ray
+Buchanan, James Vernon
+Yates, Linda
+Miller, Matthew Shawn
+Roach, Spencer
+Dadan, Sasha
+Overdorf, Toby
+Gotz, Mark
+Pinney, Theresa 'Teri'
+Caruso, Mike
+Spritz, Matt
+Aloupis, Vance
+Fernandez, Jose
+Gobel, Carlos Daniel
+Lopez, Rhonda
+Perez, Daniel Anthony
+Polo, Frank E.
+Fernandez-Barquin, Juan
+Lopez, Enrique
+Martinez, Analeen 'Annie'
+Potestad, Bibiana 'Bibi'
+Ehr, Phil
+Zimmerman, Jennifer M.
+Peters, Brandon
+Rackleff, Bob
+Gosai, Dushyant Jethagir
+Hayes Hinson, Yvonne
+Wells, Tom
+Brown, Alvin
+Lawson, Al
+Sevigny, Stephen
+Soderberg, Nancy
+Upchurch, John
+Murphy, Stephanie
+Richardson, Chardo
+Grayson, Alan
+Soto, Darren
+Darius, Wade
+Demings, Val
+Hunter, Chris
+Perenich, Stephen M.
+Tager, Robert Matthew
+Carlson, Kristen
+Learned, Andrew P.
+Pena, Raymond 'Ray'
+Schneider, Jan
+Shapiro, David
+Freeman, April
+Pollard, Bill
+Baer, Lauren
+Keith, Pam
+Holden, David
+Truax, Todd James
+Cherfilus-McCormick, Sheila
+Hastings, Alcee L.
+Deutch, Ted
+Fandl, Jeff
+De La Fuente, Ricardo
+Wilson, Frederica S.
+Grimes, Demetries Andrew
+Mucarsel-Powell, Debbie
+Gonzalez, Kristen Rosen
+Haggman, Matt
+Hepburn, Michael A.
+Richardson, David
+Shalala, Donna
+Gillum, Andrew
+Graham, Gwen
+Greene, Jeff
+King, Chris
+Levine, Philip
+Lundmark, Alex 'Lundy'
+Wetherbee, John
+Shaw, Sean
+Torrens, Ryan
+Fried, Nicole 'Nikki'
+Porter, Jeffrey Duane
+Walker, Roy David
+Enneking, Kayser
+Magruder, Olysha
+Gibson, Joy
+Lewis, Kathy
+Doyel, Bob
+Rangel, Ricardo
+Anderson, Rubin
+Powell, Bobby
+Farmer, Gary M.
+Waldman, Jim
+Perez, David
+Santos, Julian
+Campbell, Daphne
+Pizzo, Jason
+Garrett, Vikki
+Mathis, Franscine Cecilia
+Daniels, Kimberly
+Wright, Paula D.
+Haeseler, Jason Lee
+Jethwani, Amol
+Henry, Patrick
+Williamson, Percy L.
+Henrichsen, Neil
+Lawrence, Carol
+Block, Darryl
+Kagan, Tracey
+Anderson, Clark
+Goff-Marcil, Joy
+Ramirez, Brendan
+Brown, Cynthia
+Needle Cohn, Sheryl
+Gold, Margaret Melanie
+Thompson, Geraldine F.
+Frias, FiorD'Aliza A.
+Moore, Phil
+Asciutto, Audrey
+Mrozowski, Nicholas
+Carter, Sharon
+Harris, Norman
+Hart, Dianne 'Ms Dee'
+Skyers, Karen
+Alvarez, Mike
+Cano, Christopher Carlos
+Valdes, Susan L.
+Douglas, Dawn C.
+Ryan, Tom
+Bell, Keisha
+Newton, Wengay 'Newt'
+Sheeley, Vito D.
+Ayers, Neilson Croll
+Bogner, David
+Koch, Mindy
+Polsky, Tina
+Blanton, Forest W.
+Hogan Johnson, Delores
+Johnson, Kim
+Joseph, Robert L.
+Hernandez, Edgardo
+Silvers, David
+Bonfiglio, Jim
+Rossi, Ryan A.
+Armstead, Paulette V.
+Hawkins-Williams, Patricia
+Farooqui, Saima
+Jacobs, Kristin
+Mohammad, Imtiaz Ahmad
+Moskowitz, Jared E.
+Dolberg, Andrew
+Geller, Elaine
+Gottlieb, Michael
+Korka, Stephen
+Stallone, Daniel J.
+Polo, Cindy
+Tapia, Rick
+Estevez, Javier
+Hancock, Ross
+Beauvil, Joseph
+Hardemon, Roy
+Joseph, Dotie
+Bush, James
+McMinn, Cedric
+Grieco, Michael
+Lalchandani, Kubs
+Weithorn, Deede
+Schulman, James Linwood
+Solomon, Jeffrey
+Barclay Fountain, Lisa
+Frank, David
+Thurman, D. Christine
+Horkan, Maureen T.
+McBurney, Charles
+Barbee, Don
+Spaight, Edward C.
+Anderson, Dustin
+Ellis, Dave
+Fixsen, Roxanne
+Blackwell, Claudia Elizabeth
+Helinger, Christine
+Loar, Doneene D.
+McBath, Donald
+Minkoff, Thomas H. 'Tommy'
+Trentalange, Mike
+Frayman, Evan
+Hamilton, Rebecca
+Gaustad, Linda L.
+Slack, Sebrina L.
+Will, Ryan
+Robertson, David
+Waldman, Julie
+Walker, Gloria
+Ashton, Jeff
+Friedman, Howard
+Davis, Joseph Haynes
+Young, Tom
+DeYoung, Lorraine Elizabeth
+Mosley, Dean
+Shaffer, Laura
+Cohen, Lee
+Gravitt, Melissa
+Merritt, Keith P.
+Moore, Dana Y.
+Pincket, Stephen Paul
+Espinosa, Elisabeth
+Miller, David C.
+del Rio, Vivianne
+Gordon, Renee
+Martinez, Louis V.
+Marrero, Yery
+Perkins, Joe
+Iten, Brian A.
+Ruhl, Maria
+Boza Sevelin, Cissy
+Brookins, Starr
+Fuson, Robin
+Moody, Jamey
+Jordan, Jordan H.
+Kerner, Scott Ryan
+St. Juste, Alcolya J.L.
+Cheesman, Maxine
+Coleman, Marybel Reinoso
+Maryuma, Joseph 'Joe'
+Johnson, Henry Quinn
+McAuliffe, Michael
+Willis, Sarah
+Kollra, Ernest Albert
+Schneider, Alan B.
+Africk-Olefson, Shari Beth
+Padowitz, Kristin Weisberg
+Allen-Rosner, Jason
+Donoho, Melissa Minsk
+Leali, Linda Marie
+Moon, Stefanie Camille
+Alspector, Susan Lynn
+Coolidge-Shotwell, Camille
+Kaplan, Richard Brian
+Usan, Michael
+Berger, Karen Elizabeth
+Casey, Dan
+Curry, H. James
+Markhasin-Weekes, Maria
+Miller, Walter 'Dale'
+Pollack, Adam
+Souto, Melissa Dyan
+Larsen, Louis 'Lou'
+Meadows, Robert 'Bob'
+Smartt, Nirlaine
+Chandler, James Wesley
+McGowan, John Owen
