@@ -1,0 +1,256 @@
+Name	ReportingUnitType
+Florida;FL House District 1	state-house
+Florida;FL House District 2	state-house
+Florida;FL House District 3	state-house
+Florida;FL House District 4	state-house
+Florida;FL House District 5	state-house
+Florida;FL House District 6	state-house
+Florida;FL House District 7	state-house
+Florida;FL House District 8	state-house
+Florida;FL House District 9	state-house
+Florida;FL House District 10	state-house
+Florida;FL House District 11	state-house
+Florida;FL House District 12	state-house
+Florida;FL House District 13	state-house
+Florida;FL House District 14	state-house
+Florida;FL House District 15	state-house
+Florida;FL House District 16	state-house
+Florida;FL House District 17	state-house
+Florida;FL House District 18	state-house
+Florida;FL House District 19	state-house
+Florida;FL House District 20	state-house
+Florida;FL House District 21	state-house
+Florida;FL House District 22	state-house
+Florida;FL House District 23	state-house
+Florida;FL House District 24	state-house
+Florida;FL House District 25	state-house
+Florida;FL House District 26	state-house
+Florida;FL House District 27	state-house
+Florida;FL House District 28	state-house
+Florida;FL House District 29	state-house
+Florida;FL House District 30	state-house
+Florida;FL House District 31	state-house
+Florida;FL House District 32	state-house
+Florida;FL House District 33	state-house
+Florida;FL House District 34	state-house
+Florida;FL House District 35	state-house
+Florida;FL House District 36	state-house
+Florida;FL House District 37	state-house
+Florida;FL House District 38	state-house
+Florida;FL House District 39	state-house
+Florida;FL House District 40	state-house
+Florida;FL House District 41	state-house
+Florida;FL House District 42	state-house
+Florida;FL House District 43	state-house
+Florida;FL House District 44	state-house
+Florida;FL House District 45	state-house
+Florida;FL House District 46	state-house
+Florida;FL House District 47	state-house
+Florida;FL House District 48	state-house
+Florida;FL House District 49	state-house
+Florida;FL House District 50	state-house
+Florida;FL House District 51	state-house
+Florida;FL House District 52	state-house
+Florida;FL House District 53	state-house
+Florida;FL House District 54	state-house
+Florida;FL House District 55	state-house
+Florida;FL House District 56	state-house
+Florida;FL House District 57	state-house
+Florida;FL House District 58	state-house
+Florida;FL House District 59	state-house
+Florida;FL House District 60	state-house
+Florida;FL House District 61	state-house
+Florida;FL House District 62	state-house
+Florida;FL House District 63	state-house
+Florida;FL House District 64	state-house
+Florida;FL House District 65	state-house
+Florida;FL House District 66	state-house
+Florida;FL House District 67	state-house
+Florida;FL House District 68	state-house
+Florida;FL House District 69	state-house
+Florida;FL House District 70	state-house
+Florida;FL House District 71	state-house
+Florida;FL House District 72	state-house
+Florida;FL House District 73	state-house
+Florida;FL House District 74	state-house
+Florida;FL House District 75	state-house
+Florida;FL House District 76	state-house
+Florida;FL House District 77	state-house
+Florida;FL House District 78	state-house
+Florida;FL House District 79	state-house
+Florida;FL House District 80	state-house
+Florida;FL House District 81	state-house
+Florida;FL House District 82	state-house
+Florida;FL House District 83	state-house
+Florida;FL House District 84	state-house
+Florida;FL House District 85	state-house
+Florida;FL House District 86	state-house
+Florida;FL House District 87	state-house
+Florida;FL House District 88	state-house
+Florida;FL House District 89	state-house
+Florida;FL House District 90	state-house
+Florida;FL House District 91	state-house
+Florida;FL House District 92	state-house
+Florida;FL House District 93	state-house
+Florida;FL House District 94	state-house
+Florida;FL House District 95	state-house
+Florida;FL House District 96	state-house
+Florida;FL House District 97	state-house
+Florida;FL House District 98	state-house
+Florida;FL House District 99	state-house
+Florida;FL House District 100	state-house
+Florida;FL House District 101	state-house
+Florida;FL House District 102	state-house
+Florida;FL House District 103	state-house
+Florida;FL House District 104	state-house
+Florida;FL House District 105	state-house
+Florida;FL House District 106	state-house
+Florida;FL House District 107	state-house
+Florida;FL House District 108	state-house
+Florida;FL House District 109	state-house
+Florida;FL House District 110	state-house
+Florida;FL House District 111	state-house
+Florida;FL House District 112	state-house
+Florida;FL House District 113	state-house
+Florida;FL House District 114	state-house
+Florida;FL House District 115	state-house
+Florida;FL House District 116	state-house
+Florida;FL House District 117	state-house
+Florida;FL House District 118	state-house
+Florida;FL House District 119	state-house
+Florida;FL House District 120	state-house
+Florida;FL Senate District 1	state-senate
+Florida;FL Senate District 2	state-senate
+Florida;FL Senate District 3	state-senate
+Florida;FL Senate District 4	state-senate
+Florida;FL Senate District 5	state-senate
+Florida;FL Senate District 6	state-senate
+Florida;FL Senate District 7	state-senate
+Florida;FL Senate District 8	state-senate
+Florida;FL Senate District 9	state-senate
+Florida;FL Senate District 10	state-senate
+Florida;FL Senate District 11	state-senate
+Florida;FL Senate District 12	state-senate
+Florida;FL Senate District 13	state-senate
+Florida;FL Senate District 14	state-senate
+Florida;FL Senate District 15	state-senate
+Florida;FL Senate District 16	state-senate
+Florida;FL Senate District 17	state-senate
+Florida;FL Senate District 18	state-senate
+Florida;FL Senate District 19	state-senate
+Florida;FL Senate District 20	state-senate
+Florida;FL Senate District 21	state-senate
+Florida;FL Senate District 22	state-senate
+Florida;FL Senate District 23	state-senate
+Florida;FL Senate District 24	state-senate
+Florida;FL Senate District 25	state-senate
+Florida;FL Senate District 26	state-senate
+Florida;FL Senate District 27	state-senate
+Florida;FL Senate District 28	state-senate
+Florida;FL Senate District 29	state-senate
+Florida;FL Senate District 30	state-senate
+Florida;FL Senate District 31	state-senate
+Florida;FL Senate District 32	state-senate
+Florida;FL Senate District 33	state-senate
+Florida;FL Senate District 34	state-senate
+Florida;FL Senate District 35	state-senate
+Florida;FL Senate District 36	state-senate
+Florida;FL Senate District 37	state-senate
+Florida;FL Senate District 38	state-senate
+Florida;FL Senate District 39	state-senate
+Florida;FL Senate District 40	state-senate
+Florida;US House FL District 1	congressional
+Florida;US House FL District 2	congressional
+Florida;US House FL District 3	congressional
+Florida;US House FL District 4	congressional
+Florida;US House FL District 5	congressional
+Florida;US House FL District 6	congressional
+Florida;US House FL District 7	congressional
+Florida;US House FL District 8	congressional
+Florida;US House FL District 9	congressional
+Florida;US House FL District 10	congressional
+Florida;US House FL District 11	congressional
+Florida;US House FL District 12	congressional
+Florida;US House FL District 13	congressional
+Florida;US House FL District 14	congressional
+Florida;US House FL District 15	congressional
+Florida;US House FL District 16	congressional
+Florida;US House FL District 17	congressional
+Florida;US House FL District 18	congressional
+Florida;US House FL District 19	congressional
+Florida;US House FL District 20	congressional
+Florida;US House FL District 21	congressional
+Florida;US House FL District 22	congressional
+Florida;US House FL District 23	congressional
+Florida;US House FL District 24	congressional
+Florida;US House FL District 25	congressional
+Florida;US House FL District 26	congressional
+Florida;US House FL District 27	congressional
+Florida	state
+Alachua County	county
+Baker County	county
+Bay County	county
+Bradford County	county
+Brevard County	county
+Broward County	county
+Calhoun County	county
+Charlotte County	county
+Citrus County	county
+Clay County	county
+Collier County	county
+Columbia County	county
+Desoto County	county
+Dixie County	county
+Duval County	county
+Escambia County	county
+Flagler County	county
+Franklin County	county
+Gadsden County	county
+Gilchrist County	county
+Glades County	county
+Gulf County	county
+Hamilton County	county
+Hardee County	county
+Hendry County	county
+Hernando County	county
+Highlands County	county
+Hillsborough County	county
+Holmes County	county
+Indian River County	county
+Jackson County	county
+Jefferson County	county
+Lafayette County	county
+Lake County	county
+Lee County	county
+Leon County	county
+Levy County	county
+Liberty County	county
+Madison County	county
+Manatee County	county
+Marion County	county
+Martin County	county
+Miami-Dade County	county
+Monroe County	county
+Nassau County	county
+Okaloosa County	county
+Okeechobee County	county
+Orange County	county
+Osceola County	county
+Palm Beach County	county
+Pasco County	county
+Pinellas County	county
+Polk County	county
+Putnam County	county
+Santa Rosa County	county
+Sarasota County	county
+Seminole County	county
+St. Johns County	county
+St. Lucie County	county
+Sumter County	county
+Suwannee County	county
+Taylor County	county
+Union County	county
+Volusia County	county
+Wakulla County	county
+Walton County	county
+Washington County	county
