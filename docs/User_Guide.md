@@ -5,6 +5,7 @@
    * `analyzer.par` for Analyzer class if you want it
    * `new_jurisdiction.par` for the JurisdictionPrepper() class
    * `run_time.par` if you will be using DataLoader class to look in detail at one file/jurisdiction/munger
+   * `multi.par` if you will be batch loading data. In this case the directory with your results file will need a `.par` file for each results file. See the `results.par` template
    
  * In a python interpreter, import the `election_anomaly` module and create a DataLoader() instance.
 ```
@@ -114,6 +115,15 @@ Datafile contents uploaded to database Engine(postgresql://postgres:***@localhos
 >>> 
 ```
 Note that only lines with data corresponding to contests, selections and reporting units listed in the Jurisdiction directory will be processed. 
+
+### Batch Load Data
+The MultiDataLoader class allows batch uploading of all data in a given directory. That directory should contain the files to be uploaded, as well as a `.par` file for each file to be uploaded. The `load_all()` method will read each `.par` file and make the corresponding upload.
+From a directory containing a `multi.par` parameter file, run
+```
+import election_anomaly as ea
+mdl = ea.MultiDataLoader()
+err = mdl.load_all()
+```
 
 ## Pull Data
 The Analyzer class uses parameters in the file `analyze.par`, which should be in the directory from which you are running the program.

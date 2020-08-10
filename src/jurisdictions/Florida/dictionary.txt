@@ -1,4 +1,390 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	FL House District 1 (Democratic Party)	FL House District 1 (Democrat)
+CandidateContest	FL House District 2 (Democratic Party)	FL House District 2 (Democrat)
+CandidateContest	FL House District 3 (Democratic Party)	FL House District 3 (Democrat)
+CandidateContest	FL House District 4 (Democratic Party)	FL House District 4 (Democrat)
+CandidateContest	FL House District 5 (Democratic Party)	FL House District 5 (Democrat)
+CandidateContest	FL House District 6 (Democratic Party)	FL House District 6 (Democrat)
+CandidateContest	FL House District 7 (Democratic Party)	FL House District 7 (Democrat)
+CandidateContest	FL House District 8 (Democratic Party)	FL House District 8 (Democrat)
+CandidateContest	FL House District 9 (Democratic Party)	FL House District 9 (Democrat)
+CandidateContest	FL House District 10 (Democratic Party)	FL House District 10 (Democrat)
+CandidateContest	FL House District 11 (Democratic Party)	FL House District 11 (Democrat)
+CandidateContest	FL House District 12 (Democratic Party)	FL House District 12 (Democrat)
+CandidateContest	FL House District 13 (Democratic Party)	FL House District 13 (Democrat)
+CandidateContest	FL House District 14 (Democratic Party)	FL House District 14 (Democrat)
+CandidateContest	FL House District 15 (Democratic Party)	FL House District 15 (Democrat)
+CandidateContest	FL House District 16 (Democratic Party)	FL House District 16 (Democrat)
+CandidateContest	FL House District 17 (Democratic Party)	FL House District 17 (Democrat)
+CandidateContest	FL House District 18 (Democratic Party)	FL House District 18 (Democrat)
+CandidateContest	FL House District 19 (Democratic Party)	FL House District 19 (Democrat)
+CandidateContest	FL House District 20 (Democratic Party)	FL House District 20 (Democrat)
+CandidateContest	FL House District 21 (Democratic Party)	FL House District 21 (Democrat)
+CandidateContest	FL House District 22 (Democratic Party)	FL House District 22 (Democrat)
+CandidateContest	FL House District 23 (Democratic Party)	FL House District 23 (Democrat)
+CandidateContest	FL House District 24 (Democratic Party)	FL House District 24 (Democrat)
+CandidateContest	FL House District 25 (Democratic Party)	FL House District 25 (Democrat)
+CandidateContest	FL House District 26 (Democratic Party)	FL House District 26 (Democrat)
+CandidateContest	FL House District 27 (Democratic Party)	FL House District 27 (Democrat)
+CandidateContest	FL House District 28 (Democratic Party)	FL House District 28 (Democrat)
+CandidateContest	FL House District 29 (Democratic Party)	FL House District 29 (Democrat)
+CandidateContest	FL House District 30 (Democratic Party)	FL House District 30 (Democrat)
+CandidateContest	FL House District 31 (Democratic Party)	FL House District 31 (Democrat)
+CandidateContest	FL House District 32 (Democratic Party)	FL House District 32 (Democrat)
+CandidateContest	FL House District 33 (Democratic Party)	FL House District 33 (Democrat)
+CandidateContest	FL House District 34 (Democratic Party)	FL House District 34 (Democrat)
+CandidateContest	FL House District 35 (Democratic Party)	FL House District 35 (Democrat)
+CandidateContest	FL House District 36 (Democratic Party)	FL House District 36 (Democrat)
+CandidateContest	FL House District 37 (Democratic Party)	FL House District 37 (Democrat)
+CandidateContest	FL House District 38 (Democratic Party)	FL House District 38 (Democrat)
+CandidateContest	FL House District 39 (Democratic Party)	FL House District 39 (Democrat)
+CandidateContest	FL House District 40 (Democratic Party)	FL House District 40 (Democrat)
+CandidateContest	FL House District 41 (Democratic Party)	FL House District 41 (Democrat)
+CandidateContest	FL House District 42 (Democratic Party)	FL House District 42 (Democrat)
+CandidateContest	FL House District 43 (Democratic Party)	FL House District 43 (Democrat)
+CandidateContest	FL House District 44 (Democratic Party)	FL House District 44 (Democrat)
+CandidateContest	FL House District 45 (Democratic Party)	FL House District 45 (Democrat)
+CandidateContest	FL House District 46 (Democratic Party)	FL House District 46 (Democrat)
+CandidateContest	FL House District 47 (Democratic Party)	FL House District 47 (Democrat)
+CandidateContest	FL House District 48 (Democratic Party)	FL House District 48 (Democrat)
+CandidateContest	FL House District 49 (Democratic Party)	FL House District 49 (Democrat)
+CandidateContest	FL House District 50 (Democratic Party)	FL House District 50 (Democrat)
+CandidateContest	FL House District 51 (Democratic Party)	FL House District 51 (Democrat)
+CandidateContest	FL House District 52 (Democratic Party)	FL House District 52 (Democrat)
+CandidateContest	FL House District 53 (Democratic Party)	FL House District 53 (Democrat)
+CandidateContest	FL House District 54 (Democratic Party)	FL House District 54 (Democrat)
+CandidateContest	FL House District 55 (Democratic Party)	FL House District 55 (Democrat)
+CandidateContest	FL House District 56 (Democratic Party)	FL House District 56 (Democrat)
+CandidateContest	FL House District 57 (Democratic Party)	FL House District 57 (Democrat)
+CandidateContest	FL House District 58 (Democratic Party)	FL House District 58 (Democrat)
+CandidateContest	FL House District 59 (Democratic Party)	FL House District 59 (Democrat)
+CandidateContest	FL House District 60 (Democratic Party)	FL House District 60 (Democrat)
+CandidateContest	FL House District 61 (Democratic Party)	FL House District 61 (Democrat)
+CandidateContest	FL House District 62 (Democratic Party)	FL House District 62 (Democrat)
+CandidateContest	FL House District 63 (Democratic Party)	FL House District 63 (Democrat)
+CandidateContest	FL House District 64 (Democratic Party)	FL House District 64 (Democrat)
+CandidateContest	FL House District 65 (Democratic Party)	FL House District 65 (Democrat)
+CandidateContest	FL House District 66 (Democratic Party)	FL House District 66 (Democrat)
+CandidateContest	FL House District 67 (Democratic Party)	FL House District 67 (Democrat)
+CandidateContest	FL House District 68 (Democratic Party)	FL House District 68 (Democrat)
+CandidateContest	FL House District 69 (Democratic Party)	FL House District 69 (Democrat)
+CandidateContest	FL House District 70 (Democratic Party)	FL House District 70 (Democrat)
+CandidateContest	FL House District 71 (Democratic Party)	FL House District 71 (Democrat)
+CandidateContest	FL House District 72 (Democratic Party)	FL House District 72 (Democrat)
+CandidateContest	FL House District 73 (Democratic Party)	FL House District 73 (Democrat)
+CandidateContest	FL House District 74 (Democratic Party)	FL House District 74 (Democrat)
+CandidateContest	FL House District 75 (Democratic Party)	FL House District 75 (Democrat)
+CandidateContest	FL House District 76 (Democratic Party)	FL House District 76 (Democrat)
+CandidateContest	FL House District 77 (Democratic Party)	FL House District 77 (Democrat)
+CandidateContest	FL House District 78 (Democratic Party)	FL House District 78 (Democrat)
+CandidateContest	FL House District 79 (Democratic Party)	FL House District 79 (Democrat)
+CandidateContest	FL House District 80 (Democratic Party)	FL House District 80 (Democrat)
+CandidateContest	FL House District 81 (Democratic Party)	FL House District 81 (Democrat)
+CandidateContest	FL House District 82 (Democratic Party)	FL House District 82 (Democrat)
+CandidateContest	FL House District 83 (Democratic Party)	FL House District 83 (Democrat)
+CandidateContest	FL House District 84 (Democratic Party)	FL House District 84 (Democrat)
+CandidateContest	FL House District 85 (Democratic Party)	FL House District 85 (Democrat)
+CandidateContest	FL House District 86 (Democratic Party)	FL House District 86 (Democrat)
+CandidateContest	FL House District 87 (Democratic Party)	FL House District 87 (Democrat)
+CandidateContest	FL House District 88 (Democratic Party)	FL House District 88 (Democrat)
+CandidateContest	FL House District 89 (Democratic Party)	FL House District 89 (Democrat)
+CandidateContest	FL House District 90 (Democratic Party)	FL House District 90 (Democrat)
+CandidateContest	FL House District 91 (Democratic Party)	FL House District 91 (Democrat)
+CandidateContest	FL House District 92 (Democratic Party)	FL House District 92 (Democrat)
+CandidateContest	FL House District 93 (Democratic Party)	FL House District 93 (Democrat)
+CandidateContest	FL House District 94 (Democratic Party)	FL House District 94 (Democrat)
+CandidateContest	FL House District 95 (Democratic Party)	FL House District 95 (Democrat)
+CandidateContest	FL House District 96 (Democratic Party)	FL House District 96 (Democrat)
+CandidateContest	FL House District 97 (Democratic Party)	FL House District 97 (Democrat)
+CandidateContest	FL House District 98 (Democratic Party)	FL House District 98 (Democrat)
+CandidateContest	FL House District 99 (Democratic Party)	FL House District 99 (Democrat)
+CandidateContest	FL House District 100 (Democratic Party)	FL House District 100 (Democrat)
+CandidateContest	FL House District 101 (Democratic Party)	FL House District 101 (Democrat)
+CandidateContest	FL House District 102 (Democratic Party)	FL House District 102 (Democrat)
+CandidateContest	FL House District 103 (Democratic Party)	FL House District 103 (Democrat)
+CandidateContest	FL House District 104 (Democratic Party)	FL House District 104 (Democrat)
+CandidateContest	FL House District 105 (Democratic Party)	FL House District 105 (Democrat)
+CandidateContest	FL House District 106 (Democratic Party)	FL House District 106 (Democrat)
+CandidateContest	FL House District 107 (Democratic Party)	FL House District 107 (Democrat)
+CandidateContest	FL House District 108 (Democratic Party)	FL House District 108 (Democrat)
+CandidateContest	FL House District 109 (Democratic Party)	FL House District 109 (Democrat)
+CandidateContest	FL House District 110 (Democratic Party)	FL House District 110 (Democrat)
+CandidateContest	FL House District 111 (Democratic Party)	FL House District 111 (Democrat)
+CandidateContest	FL House District 112 (Democratic Party)	FL House District 112 (Democrat)
+CandidateContest	FL House District 113 (Democratic Party)	FL House District 113 (Democrat)
+CandidateContest	FL House District 114 (Democratic Party)	FL House District 114 (Democrat)
+CandidateContest	FL House District 115 (Democratic Party)	FL House District 115 (Democrat)
+CandidateContest	FL House District 116 (Democratic Party)	FL House District 116 (Democrat)
+CandidateContest	FL House District 117 (Democratic Party)	FL House District 117 (Democrat)
+CandidateContest	FL House District 118 (Democratic Party)	FL House District 118 (Democrat)
+CandidateContest	FL House District 119 (Democratic Party)	FL House District 119 (Democrat)
+CandidateContest	FL House District 120 (Democratic Party)	FL House District 120 (Democrat)
+CandidateContest	FL Senate District 1 (Democratic Party)	FL Senate District 1 (Democrat)
+CandidateContest	FL Senate District 2 (Democratic Party)	FL Senate District 2 (Democrat)
+CandidateContest	FL Senate District 3 (Democratic Party)	FL Senate District 3 (Democrat)
+CandidateContest	FL Senate District 4 (Democratic Party)	FL Senate District 4 (Democrat)
+CandidateContest	FL Senate District 5 (Democratic Party)	FL Senate District 5 (Democrat)
+CandidateContest	FL Senate District 6 (Democratic Party)	FL Senate District 6 (Democrat)
+CandidateContest	FL Senate District 7 (Democratic Party)	FL Senate District 7 (Democrat)
+CandidateContest	FL Senate District 8 (Democratic Party)	FL Senate District 8 (Democrat)
+CandidateContest	FL Senate District 9 (Democratic Party)	FL Senate District 9 (Democrat)
+CandidateContest	FL Senate District 10 (Democratic Party)	FL Senate District 10 (Democrat)
+CandidateContest	FL Senate District 11 (Democratic Party)	FL Senate District 11 (Democrat)
+CandidateContest	FL Senate District 12 (Democratic Party)	FL Senate District 12 (Democrat)
+CandidateContest	FL Senate District 13 (Democratic Party)	FL Senate District 13 (Democrat)
+CandidateContest	FL Senate District 14 (Democratic Party)	FL Senate District 14 (Democrat)
+CandidateContest	FL Senate District 15 (Democratic Party)	FL Senate District 15 (Democrat)
+CandidateContest	FL Senate District 16 (Democratic Party)	FL Senate District 16 (Democrat)
+CandidateContest	FL Senate District 17 (Democratic Party)	FL Senate District 17 (Democrat)
+CandidateContest	FL Senate District 18 (Democratic Party)	FL Senate District 18 (Democrat)
+CandidateContest	FL Senate District 19 (Democratic Party)	FL Senate District 19 (Democrat)
+CandidateContest	FL Senate District 20 (Democratic Party)	FL Senate District 20 (Democrat)
+CandidateContest	FL Senate District 21 (Democratic Party)	FL Senate District 21 (Democrat)
+CandidateContest	FL Senate District 22 (Democratic Party)	FL Senate District 22 (Democrat)
+CandidateContest	FL Senate District 23 (Democratic Party)	FL Senate District 23 (Democrat)
+CandidateContest	FL Senate District 24 (Democratic Party)	FL Senate District 24 (Democrat)
+CandidateContest	FL Senate District 25 (Democratic Party)	FL Senate District 25 (Democrat)
+CandidateContest	FL Senate District 26 (Democratic Party)	FL Senate District 26 (Democrat)
+CandidateContest	FL Senate District 27 (Democratic Party)	FL Senate District 27 (Democrat)
+CandidateContest	FL Senate District 28 (Democratic Party)	FL Senate District 28 (Democrat)
+CandidateContest	FL Senate District 29 (Democratic Party)	FL Senate District 29 (Democrat)
+CandidateContest	FL Senate District 30 (Democratic Party)	FL Senate District 30 (Democrat)
+CandidateContest	FL Senate District 31 (Democratic Party)	FL Senate District 31 (Democrat)
+CandidateContest	FL Senate District 32 (Democratic Party)	FL Senate District 32 (Democrat)
+CandidateContest	FL Senate District 33 (Democratic Party)	FL Senate District 33 (Democrat)
+CandidateContest	FL Senate District 34 (Democratic Party)	FL Senate District 34 (Democrat)
+CandidateContest	FL Senate District 35 (Democratic Party)	FL Senate District 35 (Democrat)
+CandidateContest	FL Senate District 36 (Democratic Party)	FL Senate District 36 (Democrat)
+CandidateContest	FL Senate District 37 (Democratic Party)	FL Senate District 37 (Democrat)
+CandidateContest	FL Senate District 38 (Democratic Party)	FL Senate District 38 (Democrat)
+CandidateContest	FL Senate District 39 (Democratic Party)	FL Senate District 39 (Democrat)
+CandidateContest	FL Senate District 40 (Democratic Party)	FL Senate District 40 (Democrat)
+CandidateContest	US House FL District 1 (Democratic Party)	US House FL District 1 (Democrat)
+CandidateContest	US House FL District 2 (Democratic Party)	US House FL District 2 (Democrat)
+CandidateContest	US House FL District 3 (Democratic Party)	US House FL District 3 (Democrat)
+CandidateContest	US House FL District 4 (Democratic Party)	US House FL District 4 (Democrat)
+CandidateContest	US House FL District 5 (Democratic Party)	US House FL District 5 (Democrat)
+CandidateContest	US House FL District 6 (Democratic Party)	US House FL District 6 (Democrat)
+CandidateContest	US House FL District 7 (Democratic Party)	US House FL District 7 (Democrat)
+CandidateContest	US House FL District 8 (Democratic Party)	US House FL District 8 (Democrat)
+CandidateContest	US House FL District 9 (Democratic Party)	US House FL District 9 (Democrat)
+CandidateContest	US House FL District 10 (Democratic Party)	US House FL District 10 (Democrat)
+CandidateContest	US House FL District 11 (Democratic Party)	US House FL District 11 (Democrat)
+CandidateContest	US House FL District 12 (Democratic Party)	US House FL District 12 (Democrat)
+CandidateContest	US House FL District 13 (Democratic Party)	US House FL District 13 (Democrat)
+CandidateContest	US House FL District 14 (Democratic Party)	US House FL District 14 (Democrat)
+CandidateContest	US House FL District 15 (Democratic Party)	US House FL District 15 (Democrat)
+CandidateContest	US House FL District 16 (Democratic Party)	US House FL District 16 (Democrat)
+CandidateContest	US House FL District 17 (Democratic Party)	US House FL District 17 (Democrat)
+CandidateContest	US House FL District 18 (Democratic Party)	US House FL District 18 (Democrat)
+CandidateContest	US House FL District 19 (Democratic Party)	US House FL District 19 (Democrat)
+CandidateContest	US House FL District 20 (Democratic Party)	US House FL District 20 (Democrat)
+CandidateContest	US House FL District 21 (Democratic Party)	US House FL District 21 (Democrat)
+CandidateContest	US House FL District 22 (Democratic Party)	US House FL District 22 (Democrat)
+CandidateContest	US House FL District 23 (Democratic Party)	US House FL District 23 (Democrat)
+CandidateContest	US House FL District 24 (Democratic Party)	US House FL District 24 (Democrat)
+CandidateContest	US House FL District 25 (Democratic Party)	US House FL District 25 (Democrat)
+CandidateContest	US House FL District 26 (Democratic Party)	US House FL District 26 (Democrat)
+CandidateContest	US House FL District 27 (Democratic Party)	US House FL District 27 (Democrat)
+CandidateContest	US President (FL) (Democratic Party)	President of the United States (Democrat)
+CandidateContest	FL Governor (Democratic Party)	FL Governor (Democrat)
+CandidateContest	US Senate FL (Democratic Party)	US Senate FL (Democrat)
+CandidateContest	FL Attorney General (Democratic Party)	FL Attorney General (Democrat)
+CandidateContest	FL Lieutenant Governor (Democratic Party)	FL Lieutenant Governor (Democrat)
+CandidateContest	FL Treasurer (Democratic Party)	FL Treasurer (Democrat)
+CandidateContest	FL House District 1 (Republican Party)	FL House District 1 (Republican)
+CandidateContest	FL House District 2 (Republican Party)	FL House District 2 (Republican)
+CandidateContest	FL House District 3 (Republican Party)	FL House District 3 (Republican)
+CandidateContest	FL House District 4 (Republican Party)	FL House District 4 (Republican)
+CandidateContest	FL House District 5 (Republican Party)	FL House District 5 (Republican)
+CandidateContest	FL House District 6 (Republican Party)	FL House District 6 (Republican)
+CandidateContest	FL House District 7 (Republican Party)	FL House District 7 (Republican)
+CandidateContest	FL House District 8 (Republican Party)	FL House District 8 (Republican)
+CandidateContest	FL House District 9 (Republican Party)	FL House District 9 (Republican)
+CandidateContest	FL House District 10 (Republican Party)	FL House District 10 (Republican)
+CandidateContest	FL House District 11 (Republican Party)	FL House District 11 (Republican)
+CandidateContest	FL House District 12 (Republican Party)	FL House District 12 (Republican)
+CandidateContest	FL House District 13 (Republican Party)	FL House District 13 (Republican)
+CandidateContest	FL House District 14 (Republican Party)	FL House District 14 (Republican)
+CandidateContest	FL House District 15 (Republican Party)	FL House District 15 (Republican)
+CandidateContest	FL House District 16 (Republican Party)	FL House District 16 (Republican)
+CandidateContest	FL House District 17 (Republican Party)	FL House District 17 (Republican)
+CandidateContest	FL House District 18 (Republican Party)	FL House District 18 (Republican)
+CandidateContest	FL House District 19 (Republican Party)	FL House District 19 (Republican)
+CandidateContest	FL House District 20 (Republican Party)	FL House District 20 (Republican)
+CandidateContest	FL House District 21 (Republican Party)	FL House District 21 (Republican)
+CandidateContest	FL House District 22 (Republican Party)	FL House District 22 (Republican)
+CandidateContest	FL House District 23 (Republican Party)	FL House District 23 (Republican)
+CandidateContest	FL House District 24 (Republican Party)	FL House District 24 (Republican)
+CandidateContest	FL House District 25 (Republican Party)	FL House District 25 (Republican)
+CandidateContest	FL House District 26 (Republican Party)	FL House District 26 (Republican)
+CandidateContest	FL House District 27 (Republican Party)	FL House District 27 (Republican)
+CandidateContest	FL House District 28 (Republican Party)	FL House District 28 (Republican)
+CandidateContest	FL House District 29 (Republican Party)	FL House District 29 (Republican)
+CandidateContest	FL House District 30 (Republican Party)	FL House District 30 (Republican)
+CandidateContest	FL House District 31 (Republican Party)	FL House District 31 (Republican)
+CandidateContest	FL House District 32 (Republican Party)	FL House District 32 (Republican)
+CandidateContest	FL House District 33 (Republican Party)	FL House District 33 (Republican)
+CandidateContest	FL House District 34 (Republican Party)	FL House District 34 (Republican)
+CandidateContest	FL House District 35 (Republican Party)	FL House District 35 (Republican)
+CandidateContest	FL House District 36 (Republican Party)	FL House District 36 (Republican)
+CandidateContest	FL House District 37 (Republican Party)	FL House District 37 (Republican)
+CandidateContest	FL House District 38 (Republican Party)	FL House District 38 (Republican)
+CandidateContest	FL House District 39 (Republican Party)	FL House District 39 (Republican)
+CandidateContest	FL House District 40 (Republican Party)	FL House District 40 (Republican)
+CandidateContest	FL House District 41 (Republican Party)	FL House District 41 (Republican)
+CandidateContest	FL House District 42 (Republican Party)	FL House District 42 (Republican)
+CandidateContest	FL House District 43 (Republican Party)	FL House District 43 (Republican)
+CandidateContest	FL House District 44 (Republican Party)	FL House District 44 (Republican)
+CandidateContest	FL House District 45 (Republican Party)	FL House District 45 (Republican)
+CandidateContest	FL House District 46 (Republican Party)	FL House District 46 (Republican)
+CandidateContest	FL House District 47 (Republican Party)	FL House District 47 (Republican)
+CandidateContest	FL House District 48 (Republican Party)	FL House District 48 (Republican)
+CandidateContest	FL House District 49 (Republican Party)	FL House District 49 (Republican)
+CandidateContest	FL House District 50 (Republican Party)	FL House District 50 (Republican)
+CandidateContest	FL House District 51 (Republican Party)	FL House District 51 (Republican)
+CandidateContest	FL House District 52 (Republican Party)	FL House District 52 (Republican)
+CandidateContest	FL House District 53 (Republican Party)	FL House District 53 (Republican)
+CandidateContest	FL House District 54 (Republican Party)	FL House District 54 (Republican)
+CandidateContest	FL House District 55 (Republican Party)	FL House District 55 (Republican)
+CandidateContest	FL House District 56 (Republican Party)	FL House District 56 (Republican)
+CandidateContest	FL House District 57 (Republican Party)	FL House District 57 (Republican)
+CandidateContest	FL House District 58 (Republican Party)	FL House District 58 (Republican)
+CandidateContest	FL House District 59 (Republican Party)	FL House District 59 (Republican)
+CandidateContest	FL House District 60 (Republican Party)	FL House District 60 (Republican)
+CandidateContest	FL House District 61 (Republican Party)	FL House District 61 (Republican)
+CandidateContest	FL House District 62 (Republican Party)	FL House District 62 (Republican)
+CandidateContest	FL House District 63 (Republican Party)	FL House District 63 (Republican)
+CandidateContest	FL House District 64 (Republican Party)	FL House District 64 (Republican)
+CandidateContest	FL House District 65 (Republican Party)	FL House District 65 (Republican)
+CandidateContest	FL House District 66 (Republican Party)	FL House District 66 (Republican)
+CandidateContest	FL House District 67 (Republican Party)	FL House District 67 (Republican)
+CandidateContest	FL House District 68 (Republican Party)	FL House District 68 (Republican)
+CandidateContest	FL House District 69 (Republican Party)	FL House District 69 (Republican)
+CandidateContest	FL House District 70 (Republican Party)	FL House District 70 (Republican)
+CandidateContest	FL House District 71 (Republican Party)	FL House District 71 (Republican)
+CandidateContest	FL House District 72 (Republican Party)	FL House District 72 (Republican)
+CandidateContest	FL House District 73 (Republican Party)	FL House District 73 (Republican)
+CandidateContest	FL House District 74 (Republican Party)	FL House District 74 (Republican)
+CandidateContest	FL House District 75 (Republican Party)	FL House District 75 (Republican)
+CandidateContest	FL House District 76 (Republican Party)	FL House District 76 (Republican)
+CandidateContest	FL House District 77 (Republican Party)	FL House District 77 (Republican)
+CandidateContest	FL House District 78 (Republican Party)	FL House District 78 (Republican)
+CandidateContest	FL House District 79 (Republican Party)	FL House District 79 (Republican)
+CandidateContest	FL House District 80 (Republican Party)	FL House District 80 (Republican)
+CandidateContest	FL House District 81 (Republican Party)	FL House District 81 (Republican)
+CandidateContest	FL House District 82 (Republican Party)	FL House District 82 (Republican)
+CandidateContest	FL House District 83 (Republican Party)	FL House District 83 (Republican)
+CandidateContest	FL House District 84 (Republican Party)	FL House District 84 (Republican)
+CandidateContest	FL House District 85 (Republican Party)	FL House District 85 (Republican)
+CandidateContest	FL House District 86 (Republican Party)	FL House District 86 (Republican)
+CandidateContest	FL House District 87 (Republican Party)	FL House District 87 (Republican)
+CandidateContest	FL House District 88 (Republican Party)	FL House District 88 (Republican)
+CandidateContest	FL House District 89 (Republican Party)	FL House District 89 (Republican)
+CandidateContest	FL House District 90 (Republican Party)	FL House District 90 (Republican)
+CandidateContest	FL House District 91 (Republican Party)	FL House District 91 (Republican)
+CandidateContest	FL House District 92 (Republican Party)	FL House District 92 (Republican)
+CandidateContest	FL House District 93 (Republican Party)	FL House District 93 (Republican)
+CandidateContest	FL House District 94 (Republican Party)	FL House District 94 (Republican)
+CandidateContest	FL House District 95 (Republican Party)	FL House District 95 (Republican)
+CandidateContest	FL House District 96 (Republican Party)	FL House District 96 (Republican)
+CandidateContest	FL House District 97 (Republican Party)	FL House District 97 (Republican)
+CandidateContest	FL House District 98 (Republican Party)	FL House District 98 (Republican)
+CandidateContest	FL House District 99 (Republican Party)	FL House District 99 (Republican)
+CandidateContest	FL House District 100 (Republican Party)	FL House District 100 (Republican)
+CandidateContest	FL House District 101 (Republican Party)	FL House District 101 (Republican)
+CandidateContest	FL House District 102 (Republican Party)	FL House District 102 (Republican)
+CandidateContest	FL House District 103 (Republican Party)	FL House District 103 (Republican)
+CandidateContest	FL House District 104 (Republican Party)	FL House District 104 (Republican)
+CandidateContest	FL House District 105 (Republican Party)	FL House District 105 (Republican)
+CandidateContest	FL House District 106 (Republican Party)	FL House District 106 (Republican)
+CandidateContest	FL House District 107 (Republican Party)	FL House District 107 (Republican)
+CandidateContest	FL House District 108 (Republican Party)	FL House District 108 (Republican)
+CandidateContest	FL House District 109 (Republican Party)	FL House District 109 (Republican)
+CandidateContest	FL House District 110 (Republican Party)	FL House District 110 (Republican)
+CandidateContest	FL House District 111 (Republican Party)	FL House District 111 (Republican)
+CandidateContest	FL House District 112 (Republican Party)	FL House District 112 (Republican)
+CandidateContest	FL House District 113 (Republican Party)	FL House District 113 (Republican)
+CandidateContest	FL House District 114 (Republican Party)	FL House District 114 (Republican)
+CandidateContest	FL House District 115 (Republican Party)	FL House District 115 (Republican)
+CandidateContest	FL House District 116 (Republican Party)	FL House District 116 (Republican)
+CandidateContest	FL House District 117 (Republican Party)	FL House District 117 (Republican)
+CandidateContest	FL House District 118 (Republican Party)	FL House District 118 (Republican)
+CandidateContest	FL House District 119 (Republican Party)	FL House District 119 (Republican)
+CandidateContest	FL House District 120 (Republican Party)	FL House District 120 (Republican)
+CandidateContest	FL Senate District 1 (Republican Party)	FL Senate District 1 (Republican)
+CandidateContest	FL Senate District 2 (Republican Party)	FL Senate District 2 (Republican)
+CandidateContest	FL Senate District 3 (Republican Party)	FL Senate District 3 (Republican)
+CandidateContest	FL Senate District 4 (Republican Party)	FL Senate District 4 (Republican)
+CandidateContest	FL Senate District 5 (Republican Party)	FL Senate District 5 (Republican)
+CandidateContest	FL Senate District 6 (Republican Party)	FL Senate District 6 (Republican)
+CandidateContest	FL Senate District 7 (Republican Party)	FL Senate District 7 (Republican)
+CandidateContest	FL Senate District 8 (Republican Party)	FL Senate District 8 (Republican)
+CandidateContest	FL Senate District 9 (Republican Party)	FL Senate District 9 (Republican)
+CandidateContest	FL Senate District 10 (Republican Party)	FL Senate District 10 (Republican)
+CandidateContest	FL Senate District 11 (Republican Party)	FL Senate District 11 (Republican)
+CandidateContest	FL Senate District 12 (Republican Party)	FL Senate District 12 (Republican)
+CandidateContest	FL Senate District 13 (Republican Party)	FL Senate District 13 (Republican)
+CandidateContest	FL Senate District 14 (Republican Party)	FL Senate District 14 (Republican)
+CandidateContest	FL Senate District 15 (Republican Party)	FL Senate District 15 (Republican)
+CandidateContest	FL Senate District 16 (Republican Party)	FL Senate District 16 (Republican)
+CandidateContest	FL Senate District 17 (Republican Party)	FL Senate District 17 (Republican)
+CandidateContest	FL Senate District 18 (Republican Party)	FL Senate District 18 (Republican)
+CandidateContest	FL Senate District 19 (Republican Party)	FL Senate District 19 (Republican)
+CandidateContest	FL Senate District 20 (Republican Party)	FL Senate District 20 (Republican)
+CandidateContest	FL Senate District 21 (Republican Party)	FL Senate District 21 (Republican)
+CandidateContest	FL Senate District 22 (Republican Party)	FL Senate District 22 (Republican)
+CandidateContest	FL Senate District 23 (Republican Party)	FL Senate District 23 (Republican)
+CandidateContest	FL Senate District 24 (Republican Party)	FL Senate District 24 (Republican)
+CandidateContest	FL Senate District 25 (Republican Party)	FL Senate District 25 (Republican)
+CandidateContest	FL Senate District 26 (Republican Party)	FL Senate District 26 (Republican)
+CandidateContest	FL Senate District 27 (Republican Party)	FL Senate District 27 (Republican)
+CandidateContest	FL Senate District 28 (Republican Party)	FL Senate District 28 (Republican)
+CandidateContest	FL Senate District 29 (Republican Party)	FL Senate District 29 (Republican)
+CandidateContest	FL Senate District 30 (Republican Party)	FL Senate District 30 (Republican)
+CandidateContest	FL Senate District 31 (Republican Party)	FL Senate District 31 (Republican)
+CandidateContest	FL Senate District 32 (Republican Party)	FL Senate District 32 (Republican)
+CandidateContest	FL Senate District 33 (Republican Party)	FL Senate District 33 (Republican)
+CandidateContest	FL Senate District 34 (Republican Party)	FL Senate District 34 (Republican)
+CandidateContest	FL Senate District 35 (Republican Party)	FL Senate District 35 (Republican)
+CandidateContest	FL Senate District 36 (Republican Party)	FL Senate District 36 (Republican)
+CandidateContest	FL Senate District 37 (Republican Party)	FL Senate District 37 (Republican)
+CandidateContest	FL Senate District 38 (Republican Party)	FL Senate District 38 (Republican)
+CandidateContest	FL Senate District 39 (Republican Party)	FL Senate District 39 (Republican)
+CandidateContest	FL Senate District 40 (Republican Party)	FL Senate District 40 (Republican)
+CandidateContest	US House FL District 1 (Republican Party)	US House FL District 1 (Republican)
+CandidateContest	US House FL District 2 (Republican Party)	US House FL District 2 (Republican)
+CandidateContest	US House FL District 3 (Republican Party)	US House FL District 3 (Republican)
+CandidateContest	US House FL District 4 (Republican Party)	US House FL District 4 (Republican)
+CandidateContest	US House FL District 5 (Republican Party)	US House FL District 5 (Republican)
+CandidateContest	US House FL District 6 (Republican Party)	US House FL District 6 (Republican)
+CandidateContest	US House FL District 7 (Republican Party)	US House FL District 7 (Republican)
+CandidateContest	US House FL District 8 (Republican Party)	US House FL District 8 (Republican)
+CandidateContest	US House FL District 9 (Republican Party)	US House FL District 9 (Republican)
+CandidateContest	US House FL District 10 (Republican Party)	US House FL District 10 (Republican)
+CandidateContest	US House FL District 11 (Republican Party)	US House FL District 11 (Republican)
+CandidateContest	US House FL District 12 (Republican Party)	US House FL District 12 (Republican)
+CandidateContest	US House FL District 13 (Republican Party)	US House FL District 13 (Republican)
+CandidateContest	US House FL District 14 (Republican Party)	US House FL District 14 (Republican)
+CandidateContest	US House FL District 15 (Republican Party)	US House FL District 15 (Republican)
+CandidateContest	US House FL District 16 (Republican Party)	US House FL District 16 (Republican)
+CandidateContest	US House FL District 17 (Republican Party)	US House FL District 17 (Republican)
+CandidateContest	US House FL District 18 (Republican Party)	US House FL District 18 (Republican)
+CandidateContest	US House FL District 19 (Republican Party)	US House FL District 19 (Republican)
+CandidateContest	US House FL District 20 (Republican Party)	US House FL District 20 (Republican)
+CandidateContest	US House FL District 21 (Republican Party)	US House FL District 21 (Republican)
+CandidateContest	US House FL District 22 (Republican Party)	US House FL District 22 (Republican)
+CandidateContest	US House FL District 23 (Republican Party)	US House FL District 23 (Republican)
+CandidateContest	US House FL District 24 (Republican Party)	US House FL District 24 (Republican)
+CandidateContest	US House FL District 25 (Republican Party)	US House FL District 25 (Republican)
+CandidateContest	US House FL District 26 (Republican Party)	US House FL District 26 (Republican)
+CandidateContest	US House FL District 27 (Republican Party)	US House FL District 27 (Republican)
+CandidateContest	US President (FL) (Republican Party)	President of the United States (Republican)
+CandidateContest	FL Governor (Republican Party)	FL Governor (Republican)
+CandidateContest	US Senate FL (Republican Party)	US Senate FL (Republican)
+CandidateContest	FL Attorney General (Republican Party)	FL Attorney General (Republican)
+CandidateContest	FL Lieutenant Governor (Republican Party)	FL Lieutenant Governor (Republican)
+CandidateContest	FL Treasurer (Republican Party)	FL Treasurer (Republican)
 CandidateContest	FL House District 1	FL House District 1
 CandidateContest	FL House District 2	FL House District 2
 CandidateContest	FL House District 3	FL House District 3
@@ -394,6 +780,12 @@ Office	FL Lieutenant Governor	FL Lieutenant Governor
 Office	FL Treasurer	FL Treasurer
 Party	Democratic Party	Democrat
 Party	Republican Party	Republican
+Party	Democratic Party	DEM
+Party	Libertarian Party	LPF
+Party	Nonpartisan	NOP
+Party	NPA	NPA
+Party	Reform Party	REF
+Party	Republican Party	REP
 ReportingUnit	Florida;FL House District 1	Florida;FL House District 1
 ReportingUnit	Florida;FL House District 2	Florida;FL House District 2
 ReportingUnit	Florida;FL House District 3	Florida;FL House District 3
@@ -582,73 +974,73 @@ ReportingUnit	Florida;US House FL District 25	Florida;US House FL District 25
 ReportingUnit	Florida;US House FL District 26	Florida;US House FL District 26
 ReportingUnit	Florida;US House FL District 27	Florida;US House FL District 27
 ReportingUnit	Florida	Florida
-ReportingUnit	Alachua County	Alachua
-ReportingUnit	Baker County	Baker
-ReportingUnit	Bay County	Bay
-ReportingUnit	Bradford County	Bradford
-ReportingUnit	Brevard County	Brevard
-ReportingUnit	Broward County	Broward
-ReportingUnit	Calhoun County	Calhoun
-ReportingUnit	Charlotte County	Charlotte
-ReportingUnit	Citrus County	Citrus
-ReportingUnit	Clay County	Clay
-ReportingUnit	Collier County	Collier
-ReportingUnit	Columbia County	Columbia
-ReportingUnit	Desoto County	Desoto
-ReportingUnit	Dixie County	Dixie
-ReportingUnit	Duval County	Duval
-ReportingUnit	Escambia County	Escambia
-ReportingUnit	Flagler County	Flagler
-ReportingUnit	Franklin County	Franklin
-ReportingUnit	Gadsden County	Gadsden
-ReportingUnit	Gilchrist County	Gilchrist
-ReportingUnit	Glades County	Glades
-ReportingUnit	Gulf County	Gulf
-ReportingUnit	Hamilton County	Hamilton
-ReportingUnit	Hardee County	Hardee
-ReportingUnit	Hendry County	Hendry
-ReportingUnit	Hernando County	Hernando
-ReportingUnit	Highlands County	Highlands
-ReportingUnit	Hillsborough County	Hillsborough
-ReportingUnit	Holmes County	Holmes
-ReportingUnit	Indian River County	Indian River
-ReportingUnit	Jackson County	Jackson
-ReportingUnit	Jefferson County	Jefferson
-ReportingUnit	Lafayette County	Lafayette
-ReportingUnit	Lake County	Lake
-ReportingUnit	Lee County	Lee
-ReportingUnit	Leon County	Leon
-ReportingUnit	Levy County	Levy
-ReportingUnit	Liberty County	Liberty
-ReportingUnit	Madison County	Madison
-ReportingUnit	Manatee County	Manatee
-ReportingUnit	Marion County	Marion
-ReportingUnit	Martin County	Martin
-ReportingUnit	Miami-Dade County	Miami-Dade
-ReportingUnit	Monroe County	Monroe
-ReportingUnit	Nassau County	Nassau
-ReportingUnit	Okaloosa County	Okaloosa
-ReportingUnit	Okeechobee County	Okeechobee
-ReportingUnit	Orange County	Orange
-ReportingUnit	Osceola County	Osceola
-ReportingUnit	Palm Beach County	Palm Beach
-ReportingUnit	Pasco County	Pasco
-ReportingUnit	Pinellas County	Pinellas
-ReportingUnit	Polk County	Polk
-ReportingUnit	Putnam County	Putnam
-ReportingUnit	Santa Rosa County	Santa Rosa
-ReportingUnit	Sarasota County	Sarasota
-ReportingUnit	Seminole County	Seminole
-ReportingUnit	St. Johns County	St. Johns
-ReportingUnit	St. Lucie County	St. Lucie
-ReportingUnit	Sumter County	Sumter
-ReportingUnit	Suwannee County	Suwannee
-ReportingUnit	Taylor County	Taylor
-ReportingUnit	Union County	Union
-ReportingUnit	Volusia County	Volusia
-ReportingUnit	Wakulla County	Wakulla
-ReportingUnit	Walton County	Walton
-ReportingUnit	Washington County	Washington
+ReportingUnit	Florida;Alachua County	Alachua
+ReportingUnit	Florida;Baker County	Baker
+ReportingUnit	Florida;Bay County	Bay
+ReportingUnit	Florida;Bradford County	Bradford
+ReportingUnit	Florida;Brevard County	Brevard
+ReportingUnit	Florida;Broward County	Broward
+ReportingUnit	Florida;Calhoun County	Calhoun
+ReportingUnit	Florida;Charlotte County	Charlotte
+ReportingUnit	Florida;Citrus County	Citrus
+ReportingUnit	Florida;Clay County	Clay
+ReportingUnit	Florida;Collier County	Collier
+ReportingUnit	Florida;Columbia County	Columbia
+ReportingUnit	Florida;Desoto County	Desoto
+ReportingUnit	Florida;Dixie County	Dixie
+ReportingUnit	Florida;Duval County	Duval
+ReportingUnit	Florida;Escambia County	Escambia
+ReportingUnit	Florida;Flagler County	Flagler
+ReportingUnit	Florida;Franklin County	Franklin
+ReportingUnit	Florida;Gadsden County	Gadsden
+ReportingUnit	Florida;Gilchrist County	Gilchrist
+ReportingUnit	Florida;Glades County	Glades
+ReportingUnit	Florida;Gulf County	Gulf
+ReportingUnit	Florida;Hamilton County	Hamilton
+ReportingUnit	Florida;Hardee County	Hardee
+ReportingUnit	Florida;Hendry County	Hendry
+ReportingUnit	Florida;Hernando County	Hernando
+ReportingUnit	Florida;Highlands County	Highlands
+ReportingUnit	Florida;Hillsborough County	Hillsborough
+ReportingUnit	Florida;Holmes County	Holmes
+ReportingUnit	Florida;Indian River County	Indian River
+ReportingUnit	Florida;Jackson County	Jackson
+ReportingUnit	Florida;Jefferson County	Jefferson
+ReportingUnit	Florida;Lafayette County	Lafayette
+ReportingUnit	Florida;Lake County	Lake
+ReportingUnit	Florida;Lee County	Lee
+ReportingUnit	Florida;Leon County	Leon
+ReportingUnit	Florida;Levy County	Levy
+ReportingUnit	Florida;Liberty County	Liberty
+ReportingUnit	Florida;Madison County	Madison
+ReportingUnit	Florida;Manatee County	Manatee
+ReportingUnit	Florida;Marion County	Marion
+ReportingUnit	Florida;Martin County	Martin
+ReportingUnit	Florida;Miami-Dade County	Miami-Dade
+ReportingUnit	Florida;Monroe County	Monroe
+ReportingUnit	Florida;Nassau County	Nassau
+ReportingUnit	Florida;Okaloosa County	Okaloosa
+ReportingUnit	Florida;Okeechobee County	Okeechobee
+ReportingUnit	Florida;Orange County	Orange
+ReportingUnit	Florida;Osceola County	Osceola
+ReportingUnit	Florida;Palm Beach County	Palm Beach
+ReportingUnit	Florida;Pasco County	Pasco
+ReportingUnit	Florida;Pinellas County	Pinellas
+ReportingUnit	Florida;Polk County	Polk
+ReportingUnit	Florida;Putnam County	Putnam
+ReportingUnit	Florida;Santa Rosa County	Santa Rosa
+ReportingUnit	Florida;Sarasota County	Sarasota
+ReportingUnit	Florida;Seminole County	Seminole
+ReportingUnit	Florida;St. Johns County	St. Johns
+ReportingUnit	Florida;St. Lucie County	St. Lucie
+ReportingUnit	Florida;Sumter County	Sumter
+ReportingUnit	Florida;Suwannee County	Suwannee
+ReportingUnit	Florida;Taylor County	Taylor
+ReportingUnit	Florida;Union County	Union
+ReportingUnit	Florida;Volusia County	Volusia
+ReportingUnit	Florida;Wakulla County	Wakulla
+ReportingUnit	Florida;Walton County	Walton
+ReportingUnit	Florida;Washington County	Washington
 Candidate	De La Fuente, Roque 'Rocky'	De La Fuente, Roque 'Rocky'
 Candidate	Scott, Rick	Scott, Rick
 Candidate	Dosev, Cris	Dosev, Cris
@@ -1004,3 +1396,24 @@ Candidate	Smartt, Nirlaine	Smartt, Nirlaine
 Candidate	Chandler, James Wesley	Chandler, James Wesley
 Candidate	McGowan, John Owen	McGowan, John Owen
 CountItemType	total	total
+Candidate	Trump, Donald J.	Trump, Donald J.
+Candidate	Walsh, Joe	Walsh, Joe
+Candidate	Weld, Bill	Weld, Bill
+Candidate	Bennet, Michael	Bennet, Michael
+Candidate	Biden, Joe	Biden, Joe
+Candidate	Bloomberg, Michael R.	Bloomberg, Michael R.
+Candidate	Booker, Cory	Booker, Cory
+Candidate	Buttigieg, Pete	Buttigieg, Pete
+Candidate	Castro, Julian	Castro, Julian
+Candidate	Delaney, John	Delaney, John
+Candidate	Gabbard, Tulsi	Gabbard, Tulsi
+Candidate	Klobuchar, Amy	Klobuchar, Amy
+Candidate	Patrick, Deval	Patrick, Deval
+Candidate	Sanders, Bernie	Sanders, Bernie
+Candidate	Sestak, Joe	Sestak, Joe
+Candidate	Steyer, Tom	Steyer, Tom
+Candidate	Warren, Elizabeth	Warren, Elizabeth
+Candidate	Williamson, Marianne	Williamson, Marianne
+Candidate	Yang, Andrew	Yang, Andrew
+BallotMeasureSelection	Yes	10
+BallotMeasureSelection	No	20
