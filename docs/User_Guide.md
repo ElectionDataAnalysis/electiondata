@@ -3,6 +3,7 @@
 ## Get Started
  * Create the parameter files you'll need:
    * `analyzer.par` for Analyzer class if you want it
+   * `new_jurisdiction.par` for the JurisdictionPrepper() class
    * `run_time.par` if you will be using DataLoader class to look in detail at one file/jurisdiction/munger
    * `multi.par` if you will be batch loading data. In this case the directory with your results file will need a `.par` file for each results file. See the `results.par` template
    
