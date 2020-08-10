@@ -783,7 +783,7 @@ Party	Republican Party	Republican
 Party	Democratic Party	DEM
 Party	Libertarian Party	LPF
 Party	Nonpartisan	NOP
-Party	NPA	NPA
+Party	No party affiliation	NPA
 Party	Reform Party	REF
 Party	Republican Party	REP
 ReportingUnit	Florida;FL House District 1	Florida;FL House District 1
