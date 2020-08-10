@@ -379,6 +379,8 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 	unsummed = unsummed[unsummed['ParentReportingUnit_Id'] != top_ru_id]
 
 	ranked = assign_anomaly_score(unsummed)
+	print(ranked)
+	input()
 	ranked_margin = calculate_margins(ranked)
 	votes_at_stake = calculate_votes_at_stake(ranked_margin)
 	top_ranked = get_most_anomalous(votes_at_stake, 3)
@@ -429,6 +431,19 @@ def assign_anomaly_score(data):
 	combination of those would get assigned an ID. This means rows may get added
 	to the dataframe if needed."""
 
+	######### FOR TESTING PURPOSES ONLY!!!!! ###########
+	data = data[data['Contest_Id'] == 14949] # only 2 candidates
+	#data = data[data['Contest_Id'] == 14777] # 3 candidates
+
+	# Assign a ranking for each candidate by votes for each contest
+	total_data = data[(data['CountItemType'] == 'total') & 
+					(data['ReportingUnit_Id'] == data['ParentReportingUnit_Id'])]
+	ranked_df = total_data.groupby(['Contest_Id', 'Selection'], as_index=False)['Count'] \
+				.sum().sort_values(['Contest_Id', 'Count'], ascending=False)
+	ranked_df['rank'] = ranked_df.groupby('Contest_Id')['Count'].rank('dense', ascending=False)
+	ranked_df['contest_total'] = ranked_df['Count'].sum()
+	ranked_df.rename(columns={'Count':'ind_total'}, inplace=True)
+
 	# Group data by parent info. This works because each child is also its own
 	# parent in the DB table
 	grouped_df = data.groupby(['ParentReportingUnit_Id', 'ParentName', 
@@ -441,56 +456,70 @@ def assign_anomaly_score(data):
 		'ParentName': 'Name',	
 		'ParentReportingUnitType_Id': 'ReportingUnitType_Id'
 	}, inplace=True)
+	grouped_df = grouped_df.merge(ranked_df, how='inner', on=['Contest_Id', 'Selection'])
 
-	# assign unit_ids to contest, ru_type, and count type
-	# currently this only looks at the most granular level, not rolled up
-	#data = data[data['ReportingUnit_Id'] == data['ParentReportingUnit_Id']]
+	# assign unit_ids to unique combination of contest, ru_type, and count type
 	df_unit = grouped_df[['Contest_Id', 'ReportingUnitType_Id', 'CountItemType']].drop_duplicates()
 	df_unit = df_unit.reset_index()
-
-	######### FOR TESTING PURPOSES ONLY!!!!! ###########
-	#df_unit = df_unit[df_unit['Contest_Id'] == 14949]
-
-
 	df_unit['unit_id'] = df_unit.index
 	df_with_units = grouped_df.merge(df_unit, how='left', on=['Contest_Id', 'ReportingUnitType_Id', 'CountItemType'])
+
+	# loop through each unit ID and assign anomaly scores
 	unit_ids = df_with_units['unit_id'].unique()
 	df = pd.DataFrame()
-
+	# for each unit ID
 	for unit_id in unit_ids:
+		# grab all the data there
 		temp_df = df_with_units[df_with_units['unit_id'] == unit_id]
+		total = temp_df.groupby('ReportingUnit_Id')['Count'].sum().reset_index()
+		total.rename(columns={'Count': 'reporting_unit_total'}, inplace=True)
+		temp_df = temp_df.merge(total, how='inner', on='ReportingUnit_Id')
 		# if there are more than 2 candidates, just take the top 2
 		# TODO: do pairwise comparison against winner
-		if len(temp_df['Selection'].unique()) > 2:
-			contest_id = temp_df.iloc[0]['Contest_Id']
-			reporting_unit_type_id = temp_df.iloc[0]['ReportingUnitType_Id']
-			total_df = df_with_units[(df_with_units['Contest_Id'] == contest_id) &
-						(df_with_units['CountItemType'] == 'total') &
-						(df_with_units['ReportingUnitType_Id'] == reporting_unit_type_id)]
-			counts = total_df.groupby('Selection')['Count'].sum().sort_values(ascending=False)
-			top = list(counts.index[0:2])
-			temp_df = temp_df[temp_df['Selection'].isin(top)]
+		# if there are more than 2 candidates
+		#for i in range(2, temp_df['rank'].max() + 1):
+		# if len(temp_df['Selection'].unique()) > 2:
+		# 	# get the contest ID
+		# 	contest_id = temp_df.iloc[0]['Contest_Id']
+		# 	# get the reporting unit type ID
+		# 	reporting_unit_type_id = temp_df.iloc[0]['ReportingUnitType_Id']
+		# 	# create a new dataframe for total data
+		# 	total_df = df_with_units[(df_with_units['Contest_Id'] == contest_id) &
+		# 				(df_with_units['CountItemType'] == 'total') &
+		# 				(df_with_units['ReportingUnitType_Id'] == reporting_unit_type_id)]
+		# 	# get the total counts per candidate
+		# 	counts = total_df.groupby('Selection')['Count'].sum().sort_values(ascending=False)
+		# 	# get the top 2
+		# 	top = list(counts.index[0:2])
+		# 	# filter temp dataframe on top 2
+		# 	temp_df = temp_df[temp_df['Selection'].isin(top)]
+		# for i in range(len(temp_df['rank'].unique())
 		# pivot so each candidate gets own column
-		pivot_df = pd.pivot_table(temp_df, values='Count', index=['ReportingUnit_Id'], \
-			columns='Selection').sort_values('ReportingUnit_Id').reset_index()
-		# filter out no votes
-		pivot_df['sum'] = pivot_df.drop('ReportingUnit_Id', axis=1).sum(axis=1)
-		pivot_df = pivot_df[pivot_df['sum'] > 100]
-		if pivot_df.shape[0] >= 5:
-			# keep the candidate column names only
-			pivot_df_values = pivot_df.drop(columns=['ReportingUnit_Id', 'sum'])
-			to_drop = pivot_df_values.columns
-			# pass in proportions instead of raw vlaues
-			row_totals = pivot_df_values.values.sum(axis=1)
-			vote_proportions = np.array(np.divide(pivot_df_values, row_totals.reshape(-1, 1)))
-			np.nan_to_num(vote_proportions, copy=False)
-			# assign z score and then add back into final DF
-			scored = euclidean_zscore(vote_proportions)
-			#scored = density_score(vote_proportions)
-			pivot_df['score'] = scored
-			temp_df = temp_df.merge(pivot_df, how='left', on='ReportingUnit_Id') \
-						.drop(columns=to_drop)
-			df = pd.concat([df, temp_df])
+		scored_df = pd.DataFrame()
+		for i in range(2, int(temp_df['rank'].max()) + 1):
+			selection_df = temp_df[temp_df['rank'].isin([1, i])]
+			if selection_df.shape[0] >= 5:
+				pivot_df = pd.pivot_table(selection_df, values='Count', \
+					index=['ReportingUnit_Id', 'reporting_unit_total'], \
+					columns='Selection').sort_values('ReportingUnit_Id').reset_index()
+				pivot_df_values = pivot_df.drop(columns=['ReportingUnit_Id', 'reporting_unit_total'])
+				to_drop = [selection_df[selection_df['rank'] == 1]['Selection'].unique()[0], \
+					selection_df[selection_df['rank'] == i]['Selection'].unique()[0]]
+				# pass in proportions instead of raw vlaues
+				vote_proportions = pivot_df_values.div(pivot_df['reporting_unit_total'], axis=0)
+				np.nan_to_num(vote_proportions, copy=False)
+				# assign z score and then add back into final DF
+				scored = euclidean_zscore(vote_proportions.to_numpy())
+				#scored = density_score(vote_proportions)
+				pivot_df['score'] = scored
+				pivot_df = pivot_df[['ReportingUnit_Id', to_drop[1], 'score']]
+				pivot_df['Selection'] = to_drop[1]
+				pivot_df.rename(columns={to_drop[1]: 'Count'}, inplace=True)
+				selection_df = selection_df.merge(pivot_df, how='left', \
+					on=['ReportingUnit_Id', 'Selection', 'Count'])
+				scored_df = pd.concat([scored_df, selection_df])
+		df = pd.concat([df, scored_df])
+	df['score'] = df['score'].fillna(0)
 	return df
 
 
@@ -573,6 +602,37 @@ def density_score(points):
 
 
 def calculate_margins(data):
+	"""Takes a dataframe with an anomaly score and assigns
+	a margin score"""
+	# dictionary to hold totals for each contest ID, so we don't
+	# need to calculate multiple times for different count item types
+	contests = []
+	totals = []
+	margins = []
+
+	contest_ids = data['Contest_Id'].unique()
+	for contest_id in contest_ids:
+		contest_df = data[(data['Contest_Id'] == contest_id) &
+						(data['CountItemType'] == 'total')]
+		reporting_unit_type_id = contest_df.iloc[0]['ReportingUnitType_Id']
+		contest_df = contest_df[contest_df['ReportingUnitType_Id'] == reporting_unit_type_id]
+		counts = contest_df.groupby('Selection')['Count'].sum() 
+		contests.append(contest_id)
+		total = contest_df['Count'].sum()
+		totals.append(total)
+		if len(counts) > 1:
+			to_subtract = int(counts[1])
+		else:
+			to_subtract = 0
+		margins.append(abs(int(counts[0]) - to_subtract) / total)
+	df_dict = {
+		'Contest_Id': contests,
+		'totals': totals,
+		'margins': margins
+	}
+	df = pd.DataFrame.from_dict(df_dict)
+	data = data.merge(df, how='inner', on='Contest_Id')
+
 	return data
 
 
