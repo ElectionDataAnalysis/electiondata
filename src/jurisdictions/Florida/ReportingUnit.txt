@@ -187,70 +187,70 @@ Florida;US House FL District 25	congressional
 Florida;US House FL District 26	congressional
 Florida;US House FL District 27	congressional
 Florida	state
-Florida;Alachua County	county
-Florida;Baker County	county
-Florida;Bay County	county
-Florida;Bradford County	county
-Florida;Brevard County	county
-Florida;Broward County	county
-Florida;Calhoun County	county
-Florida;Charlotte County	county
-Florida;Citrus County	county
-Florida;Clay County	county
-Florida;Collier County	county
-Florida;Columbia County	county
-Florida;Desoto County	county
-Florida;Dixie County	county
-Florida;Duval County	county
-Florida;Escambia County	county
-Florida;Flagler County	county
-Florida;Franklin County	county
-Florida;Gadsden County	county
-Florida;Gilchrist County	county
-Florida;Glades County	county
-Florida;Gulf County	county
-Florida;Hamilton County	county
-Florida;Hardee County	county
-Florida;Hendry County	county
-Florida;Hernando County	county
-Florida;Highlands County	county
-Florida;Hillsborough County	county
-Florida;Holmes County	county
-Florida;Indian River County	county
-Florida;Jackson County	county
-Florida;Jefferson County	county
-Florida;Lafayette County	county
-Florida;Lake County	county
-Florida;Lee County	county
-Florida;Leon County	county
-Florida;Levy County	county
-Florida;Liberty County	county
-Florida;Madison County	county
-Florida;Manatee County	county
-Florida;Marion County	county
-Florida;Martin County	county
-Florida;Miami-Dade County	county
-Florida;Monroe County	county
-Florida;Nassau County	county
-Florida;Okaloosa County	county
-Florida;Okeechobee County	county
-Florida;Orange County	county
-Florida;Osceola County	county
-Florida;Palm Beach County	county
-Florida;Pasco County	county
-Florida;Pinellas County	county
-Florida;Polk County	county
-Florida;Putnam County	county
-Florida;Santa Rosa County	county
-Florida;Sarasota County	county
-Florida;Seminole County	county
-Florida;St. Johns County	county
-Florida;St. Lucie County	county
-Florida;Sumter County	county
-Florida;Suwannee County	county
-Florida;Taylor County	county
-Florida;Union County	county
-Florida;Volusia County	county
-Florida;Wakulla County	county
-Florida;Walton County	county
-Florida;Washington County	county
+Alachua County	county
+Baker County	county
+Bay County	county
+Bradford County	county
+Brevard County	county
+Broward County	county
+Calhoun County	county
+Charlotte County	county
+Citrus County	county
+Clay County	county
+Collier County	county
+Columbia County	county
+Desoto County	county
+Dixie County	county
+Duval County	county
+Escambia County	county
+Flagler County	county
+Franklin County	county
+Gadsden County	county
+Gilchrist County	county
+Glades County	county
+Gulf County	county
+Hamilton County	county
+Hardee County	county
+Hendry County	county
+Hernando County	county
+Highlands County	county
+Hillsborough County	county
+Holmes County	county
+Indian River County	county
+Jackson County	county
+Jefferson County	county
+Lafayette County	county
+Lake County	county
+Lee County	county
+Leon County	county
+Levy County	county
+Liberty County	county
+Madison County	county
+Manatee County	county
+Marion County	county
+Martin County	county
+Miami-Dade County	county
+Monroe County	county
+Nassau County	county
+Okaloosa County	county
+Okeechobee County	county
+Orange County	county
+Osceola County	county
+Palm Beach County	county
+Pasco County	county
+Pinellas County	county
+Polk County	county
+Putnam County	county
+Santa Rosa County	county
+Sarasota County	county
+Seminole County	county
+St. Johns County	county
+St. Lucie County	county
+Sumter County	county
+Suwannee County	county
+Taylor County	county
+Union County	county
+Volusia County	county
+Wakulla County	county
+Walton County	county
+Washington County	county
