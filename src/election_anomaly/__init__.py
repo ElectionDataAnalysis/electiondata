@@ -432,9 +432,9 @@ class JurisdictionPrepper():
 			primaries[p['raw_identifier_value']] = contest_d.copy().rename(
 				columns={'cdf_internal_name': 'contest_internal', 'raw_identifier_value': 'contest_raw'})
 			primaries[p['raw_identifier_value']]['cdf_internal_name'] = primaries[p['raw_identifier_value']].apply(
-				lambda row: prep.primary(row, p['cdf_internal_name'], 'cdf_internal_name'), axis=1)
+				lambda row: prep.primary(row, p['cdf_internal_name'], 'contest_internal'), axis=1)
 			primaries[p['raw_identifier_value']]['raw_identifier_value'] = primaries[p['raw_identifier_value']].apply(
-				lambda row: prep.primary(row, p['raw_identifier_value'], 'raw_identifier_value'), axis=1)
+				lambda row: prep.primary(row, p['raw_identifier_value'], 'contest_raw'), axis=1)
 
 		if primaries:
 			df_list = [df[['cdf_element', 'cdf_internal_name', 'raw_identifier_value']] for df in primaries.values()]
