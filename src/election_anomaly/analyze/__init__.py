@@ -379,10 +379,9 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 	unsummed = unsummed[unsummed['ParentReportingUnit_Id'] != top_ru_id]
 
 	ranked = assign_anomaly_score(unsummed)
-	print(ranked)
-	input()
 	ranked_margin = calculate_margins(ranked)
 	votes_at_stake = calculate_votes_at_stake(ranked_margin)
+	return votes_at_stake
 	top_ranked = get_most_anomalous(votes_at_stake, 3)
 	#return top_ranked
 
@@ -604,35 +603,10 @@ def density_score(points):
 def calculate_margins(data):
 	"""Takes a dataframe with an anomaly score and assigns
 	a margin score"""
-	# dictionary to hold totals for each contest ID, so we don't
-	# need to calculate multiple times for different count item types
-	contests = []
-	totals = []
-	margins = []
-
-	contest_ids = data['Contest_Id'].unique()
-	for contest_id in contest_ids:
-		contest_df = data[(data['Contest_Id'] == contest_id) &
-						(data['CountItemType'] == 'total')]
-		reporting_unit_type_id = contest_df.iloc[0]['ReportingUnitType_Id']
-		contest_df = contest_df[contest_df['ReportingUnitType_Id'] == reporting_unit_type_id]
-		counts = contest_df.groupby('Selection')['Count'].sum() 
-		contests.append(contest_id)
-		total = contest_df['Count'].sum()
-		totals.append(total)
-		if len(counts) > 1:
-			to_subtract = int(counts[1])
-		else:
-			to_subtract = 0
-		margins.append(abs(int(counts[0]) - to_subtract) / total)
-	df_dict = {
-		'Contest_Id': contests,
-		'totals': totals,
-		'margins': margins
-	}
-	df = pd.DataFrame.from_dict(df_dict)
-	data = data.merge(df, how='inner', on='Contest_Id')
-
+	rank_1_df = data[data['rank'] == 1][['unit_id', 'ReportingUnit_Id', 'Count']]
+	rank_1_df = rank_1_df.rename(columns={'Count': 'rank_1_total'})
+	data = data.merge(rank_1_df, how='inner', on=['unit_id', 'ReportingUnit_Id'])
+	data['margins'] = (data['rank_1_total'] - data['Count']) / data['contest_total']
 	return data
 
 
@@ -648,15 +622,30 @@ def calculate_votes_at_stake(data):
 				temp_df['abs_score'] = temp_df['score'].abs()
 				temp_df.sort_values('abs_score', ascending=False, inplace=True)
 				# The first 2 rows are the most anomalous candidate pairing
-				anomalous_df = temp_df.iloc[0:2]
+				#anomalous_df = temp_df.iloc[0:2]
+				max_anomaly_score = temp_df['abs_score'].max() 
+				reporting_unit_id = temp_df.loc[temp_df['abs_score'] == max_anomaly_score, \
+					'ReportingUnit_Id'].item()
+				selection = temp_df.loc[temp_df['abs_score'] == max_anomaly_score, \
+					'Selection'].item()
+				anomalous_df = temp_df[(temp_df['ReportingUnit_Id'] == reporting_unit_id) & \
+					(((temp_df['Selection'] == selection)  & \
+						(temp_df['abs_score'] == max_anomaly_score)) |
+					(temp_df['rank'] == 1))].sort_values('abs_score', ascending=False)
 				# Resort so we have the DF back in order by scores
-				temp_df.sort_values('score', ascending=False, inplace=True)
+				#temp_df.sort_values('score', ascending=False, inplace=True)
 				# Now we need to know whether the original score was pos or neg
 				is_positive = (anomalous_df.iloc[0]['score'] > 0)
 				if is_positive:
-					next_anomalous_df = temp_df[temp_df['score'] < anomalous_df.iloc[0]['score']][0:2]
+					next_max_score = temp_df[temp_df['score'] < max_anomaly_score]['score'].max()
 				elif not is_positive:
-					next_anomalous_df = temp_df[temp_df['score'] > anomalous_df.iloc[0]['score']][0:2]	
+					next_max_score = temp_df[temp_df['score'] > max_anomaly_score]['score'].min()
+				next_reporting_unit_id = temp_df.loc[temp_df['score'] == next_max_score, \
+					'ReportingUnit_Id'].item()
+				next_anomalous_df =temp_df[(temp_df['ReportingUnit_Id'] == next_reporting_unit_id) & \
+					(((temp_df['Selection'] == selection)  & \
+						(temp_df['score'] == next_max_score)) |
+					(temp_df['rank'] == 1))]
 				anomalous_total = int(anomalous_df['Count'].sum())
 				next_anomalous_total = int(next_anomalous_df['Count'].sum())
 				candidate_1 = anomalous_df.iloc[0]['Candidate_Id']
