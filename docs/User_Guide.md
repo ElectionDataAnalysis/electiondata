@@ -117,7 +117,16 @@ Datafile contents uploaded to database Engine(postgresql://postgres:***@localhos
 Note that only lines with data corresponding to contests, selections and reporting units listed in the Jurisdiction directory will be processed. 
 
 ### Batch Load Data
-The MultiDataLoader class allows batch uploading of all data in a given directory. That directory should contain the files to be uploaded, as well as a `.par` file for each file to be uploaded. The `load_all()` method will read each `.par` file and make the corresponding upload.
+The MultiDataLoader class allows batch uploading of all data in a given directory. That directory should contain the files to be uploaded, as well as a `.par` file for each file to be uploaded. See `templates/parameter_file_templates/results.par`. You can use `make_par_files()` to create parameter files for multiple files when they share values of the following parameters:
+ * directory in which the files can be found
+ * munger
+ * jurisdiction
+ * election
+ * download_date
+ * source
+ * note
+ * auxiliary data directory (if any)
+The `load_all()` method will read each `.par` file and make the corresponding upload.
 From a directory containing a `multi.par` parameter file, run
 ```
 import election_anomaly as ea
