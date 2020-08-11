@@ -103,7 +103,6 @@ def add_munged_column(
     """Alters dataframe <raw>, adding or redefining <element>_raw column
     via the <formula>. Assumes "_SOURCE" has been appended to all columns of raw
     Does not alter row count."""
-    # TODO what preprocessing exactly? Improve description
     if not err:
         err = {}
     if raw.empty:
