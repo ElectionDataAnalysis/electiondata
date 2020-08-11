@@ -500,7 +500,7 @@ class JurisdictionPrepper():
 		prep.write_element(self.d['jurisdiction_path'], 'CandidateContest', w_cc.drop_duplicates())
 		return
 
-	def add_primaries_to_CandidateContest(self):
+	def add_primaries_to_candidate_contest(self):
 		primaries = {}
 		error = None
 
