@@ -531,10 +531,9 @@ class JurisdictionPrepper():
 			self.d['jurisdiction_path'], 'CandidateContest',pd.concat([contests] + all_primaries))
 		return error
 
-	def add_elements_from_datafile(self, elements: iter, error: dict) -> dict:
-		"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
-		or not already in <element>.txt for each <element> in <elements>"""
-		# read data from file
+	def read_results(self, error: dict) -> (pd.DataFrame, jm.Munger, dict):
+		"""Reads results (appending '_SOURCE' to the columns)
+		and initiates munger"""
 		if 'aux_data_dir' in self.d.keys():
 			aux_data_dir = self.d['aux_data_dir']
 		else:
@@ -544,12 +543,20 @@ class JurisdictionPrepper():
 			project_root=self.d['project_root'])
 		wr, error = ui.read_combine_results(mu, self.d['results_file'], self.d['project_root'], error)
 		wr.columns = [f'{x}_SOURCE' for x in wr.columns]
+		return wr, mu, error
 
+	def add_elements_from_datafile(self, elements: iter, error: dict) -> dict:
+		"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
+		or not already in <element>.txt for each <element> in <elements>"""
+
+		# ensure necessary parameters have data
 		missing = [x for x in ['results_file','munger_name'] if self.d[x] is None]
-
 		if missing:
 			ui.add_error(error,'datafile',f'Parameters missing: {missing}. Results file cannot be processed.')
 			return error
+
+		# read data from file
+		wr, mu, error = self.read_results(error)
 
 		for element in elements:
 			name_field = dbr.get_name_field(element)
