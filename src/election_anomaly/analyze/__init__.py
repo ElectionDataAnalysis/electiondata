@@ -618,49 +618,51 @@ def calculate_votes_at_stake(data):
 	for unit_id in unit_ids:
 		temp_df = data[data['unit_id'] == unit_id]
 		if temp_df.shape[0] > 2:
-			try:
-				#temp_df['abs_score'] = temp_df['score'].abs()
-				temp_df.sort_values('score', ascending=False, inplace=True)
-				# The first 2 rows are the most anomalous candidate pairing
-				#anomalous_df = temp_df.iloc[0:2]
-				max_anomaly_score = temp_df['score'].max() 
-				reporting_unit_id = temp_df.loc[temp_df['score'] == max_anomaly_score, \
-					'ReportingUnit_Id'].item()
-				selection = temp_df.loc[temp_df['score'] == max_anomaly_score, \
-					'Selection'].item()
-				anomalous_df = temp_df[(temp_df['ReportingUnit_Id'] == reporting_unit_id) & \
-					(((temp_df['Selection'] == selection)  & \
-						(temp_df['score'] == max_anomaly_score)) |
-					(temp_df['rank'] == 1))].sort_values('score', ascending=False)
-				#temp_df.sort_values('score', ascending=False, inplace=True)
-				# Now we need to know whether the original score was pos or neg
-				#is_positive = (anomalous_df.iloc[0]['score'] > 0)
-				#if is_positive:
-				#	next_max_score = temp_df[temp_df['score'] < max_anomaly_score]['score'].max()
-				#elif not is_positive:
-				#	next_max_score = temp_df[temp_df['score'] > max_anomaly_score]['score'].min()
-				next_reporting_unit_id = temp_df.loc[temp_df['score'] == next_max_score, \
-					'ReportingUnit_Id'].item()
-				next_anomalous_df =temp_df[(temp_df['ReportingUnit_Id'] == next_reporting_unit_id) & \
-					(((temp_df['Selection'] == selection)  & \
-						(temp_df['score'] == next_max_score)) |
-					(temp_df['rank'] == 1))]
-				anomalous_total = int(anomalous_df['Count'].sum())
-				next_anomalous_total = int(next_anomalous_df['Count'].sum())
-				candidate_1 = anomalous_df.iloc[0]['Candidate_Id']
-				candidate_2 = anomalous_df.iloc[1]['Candidate_Id']
-				candidate_1_cnt = anomalous_df[anomalous_df['Candidate_Id'] == candidate_1].iloc[0]['Count']
-				candidate_2_cnt = anomalous_df[anomalous_df['Candidate_Id'] == candidate_2].iloc[0]['Count']
-				candidate_1_prop = int(next_anomalous_df[next_anomalous_df['Candidate_Id'] == candidate_1].iloc[0]['Count']) / \
-									int(next_anomalous_total)
-				candidate_2_prop = int(next_anomalous_df[next_anomalous_df['Candidate_Id'] == candidate_2].iloc[0]['Count']) / \
-									int(next_anomalous_total)
-				margin = abs(candidate_1_prop * anomalous_total - candidate_1_cnt) + \
-							abs(candidate_2_prop * anomalous_total - candidate_2_cnt)
-				temp_df['votes_at_stake'] = margin / temp_df.iloc[0].margins
-			except:
-				temp_df['votes_at_stake'] = 0
+			#try:
+			#temp_df['abs_score'] = temp_df['score'].abs()
+			#temp_df.sort_values('score', ascending=False, inplace=True)
+			# The first 2 rows are the most anomalous candidate pairing
+			#anomalous_df = temp_df.iloc[0:2]
+			max_anomaly_score = temp_df['score'].max() 
+			reporting_unit_id = temp_df[temp_df['score'] == max_anomaly_score] \
+				.iloc[0]['ReportingUnit_Id']
+			selection = temp_df.loc[temp_df['score'] == max_anomaly_score] \
+				.iloc[0]['Selection']
+			anomalous_df = temp_df[(temp_df['ReportingUnit_Id'] == reporting_unit_id) & \
+				(((temp_df['Selection'] == selection)  & \
+					(temp_df['score'] == max_anomaly_score)) |
+				(temp_df['rank'] == 1))].sort_values('score', ascending=False)
+			#temp_df.sort_values('score', ascending=False, inplace=True)
+			# Now we need to know whether the original score was pos or neg
+			#is_positive = (anomalous_df.iloc[0]['score'] > 0)
+			#if is_positive:
+			next_max_score = temp_df[temp_df['score'] < max_anomaly_score]['score'].max()
+			#elif not is_positive:
+			#	next_max_score = temp_df[temp_df['score'] > max_anomaly_score]['score'].min()
+			next_reporting_unit_id = temp_df.loc[temp_df['score'] == next_max_score] \
+				.iloc[0]['ReportingUnit_Id']
+			next_anomalous_df =temp_df[(temp_df['ReportingUnit_Id'] == next_reporting_unit_id) & \
+				(((temp_df['Selection'] == selection)  & \
+					(temp_df['score'] == next_max_score)) |
+				(temp_df['rank'] == 1))].sort_values('score', ascending=False)
+			# anomalous_total = int(anomalous_df['Count'].sum())
+			# next_anomalous_total = int(next_anomalous_df['Count'].sum())
+			# candidate_1 = anomalous_df.iloc[0]['Candidate_Id']
+			# candidate_2 = anomalous_df.iloc[1]['Candidate_Id']
+			# candidate_1_cnt = anomalous_df[anomalous_df['Candidate_Id'] == candidate_1].iloc[0]['Count']
+			# candidate_2_cnt = anomalous_df[anomalous_df['Candidate_Id'] == candidate_2].iloc[0]['Count']
+			# candidate_1_prop = int(next_anomalous_df[next_anomalous_df['Candidate_Id'] == candidate_1].iloc[0]['Count']) / \
+			# 					int(next_anomalous_total)
+			# candidate_2_prop = int(next_anomalous_df[next_anomalous_df['Candidate_Id'] == candidate_2].iloc[0]['Count']) / \
+			# 					int(next_anomalous_total)
+			# margin = abs(candidate_1_prop * anomalous_total - candidate_1_cnt) + \
+			# 			abs(candidate_2_prop * anomalous_total - candidate_2_cnt)
+			# temp_df['votes_at_stake'] = margin / temp_df.iloc[0].margins
+			temp_df['margin_ratio'] = (anomalous_df.iloc[0]['margins'] - next_anomalous_df.iloc[0]['margins']) \
+				/ anomalous_df.iloc[0]['margins'] 
+			#except:
+			#	temp_df['votes_at_stake'] = 0
 		else:
-			temp_df['votes_at_stake'] = 0
+			temp_df['margin_ratio'] = 0
 		df = pd.concat([df, temp_df])
 	return df
