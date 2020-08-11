@@ -97,6 +97,22 @@ def text_fragments_and_fields(formula):
     return text_field_list,last_text
 
 
+def add_column_from_formula(working, formula, new_col,err):
+    text_field_list, last_text = text_fragments_and_fields(formula)
+
+    if last_text:
+        working.loc[:, new_col] = last_text[0]
+    else:
+        working.loc[:, new_col] = ''
+    text_field_list.reverse()
+    for t, f in text_field_list:
+        try:
+            working.loc[:, new_col] = working.loc[:, f].apply(lambda x: f'{t}{x}') + working.loc[:,new_col]
+        except KeyError:
+            ui.add_error(err,'munge-error',f'missing column {f}')
+    return working, err
+
+
 def add_munged_column(
         raw: pd.DataFrame, munger: jm.Munger, element: str, err: dict, mode: str = 'row',
         inplace: bool = True) -> (pd.DataFrame, dict):
@@ -113,6 +129,7 @@ def add_munged_column(
         working = raw.copy()
 
     try:
+
         formula = munger.cdf_elements.loc[element,'raw_identifier_formula']
         if mode == 'row':
             for field in munger.field_list:
@@ -121,16 +138,8 @@ def add_munged_column(
             for i in range(munger.header_row_count):
                 formula = formula.replace(f'<{i}>',f'<variable_{i}>')
 
-        text_field_list,last_text = text_fragments_and_fields(formula)
+        working, err = add_column_from_formula(working, formula,f'{element}_raw', err)
 
-        if last_text:
-            working.loc[:,f'{element}_raw'] = last_text[0]
-        else:
-            working.loc[:,f'{element}_raw'] = ''
-
-        text_field_list.reverse()
-        for t,f in text_field_list:
-            working.loc[:,f'{element}_raw'] = working.loc[:,f].apply(lambda x:f'{t}{x}') + working.loc[:,f'{element}_raw']
     except:
         e = f'Error munging {element}. Check raw_identifier_formula for {element} in cdf_elements.txt'
         if 'cdf_elements.txt' in err.keys():
