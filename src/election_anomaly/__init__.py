@@ -618,6 +618,18 @@ class JurisdictionPrepper():
 		self.congressional = int(self.d['count_of_us_house_districts'])
 
 
+def make_par_files(dir: str, munger_name: str, top_ru: str, election: str, download_date: str, source: str,
+				   results_note: str=None, aux_data_dir: str=''):
+	"""Utility to create parameter files for multiple files. Makes a parameter file for each file in <dir>,
+	once all other necessary parameters are specified. """
+	data_file_list = os.listdir(dir)
+	for f in data_file_list:
+		par_text = f'[election_anomaly]\nresults_file_name={f}\njuris_name=Florida\nmunge_with={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\nresults_short_name={top_ru}_{f}\nresults_download_date={download_date}\nresults_source={source}\nresults_note={results_note}\naux_data_dir={aux_data_dir}\n'
+		par_name = '.'.join(f.split('.')[:-1]) + '.par'
+		with open(os.path.join(dir,par_name),'w') as p:
+			p.write(par_text)
+	return
+
 def get_filename(path):
 	head, tail = ntpath.split(path)
 	return tail or ntpath.basename(head)
