@@ -97,13 +97,33 @@ def text_fragments_and_fields(formula):
     return text_field_list,last_text
 
 
+def add_column_from_formula(working: pd.DataFrame, formula: str, new_col: str, err: dict, suffix=None) -> (pd.DataFrame, dict):
+    """If <suffix> is given, add it to each field in the formula"""
+    text_field_list, last_text = text_fragments_and_fields(formula)
+
+    # add suffix, if required
+    if suffix:
+        text_field_list = [(t,f'{f}{suffix}') for (t,f) in text_field_list]
+
+    if last_text:
+        working.loc[:, new_col] = last_text[0]
+    else:
+        working.loc[:, new_col] = ''
+    text_field_list.reverse()
+    for t, f in text_field_list:
+        try:
+            working.loc[:, new_col] = working.loc[:, f].apply(lambda x: f'{t}{x}') + working.loc[:,new_col]
+        except KeyError:
+            ui.add_error(err,'munge-error',f'missing column {f}')
+    return working, err
+
+
 def add_munged_column(
         raw: pd.DataFrame, munger: jm.Munger, element: str, err: dict, mode: str = 'row',
         inplace: bool = True) -> (pd.DataFrame, dict):
     """Alters dataframe <raw>, adding or redefining <element>_raw column
     via the <formula>. Assumes "_SOURCE" has been appended to all columns of raw
     Does not alter row count."""
-    # TODO what preprocessing exactly? Improve description
     if not err:
         err = {}
     if raw.empty:
@@ -122,16 +142,8 @@ def add_munged_column(
             for i in range(munger.header_row_count):
                 formula = formula.replace(f'<{i}>',f'<variable_{i}>')
 
-        text_field_list,last_text = text_fragments_and_fields(formula)
+        working, err = add_column_from_formula(working, formula,f'{element}_raw', err)
 
-        if last_text:
-            working.loc[:,f'{element}_raw'] = last_text[0]
-        else:
-            working.loc[:,f'{element}_raw'] = ''
-
-        text_field_list.reverse()
-        for t,f in text_field_list:
-            working.loc[:,f'{element}_raw'] = working.loc[:,f].apply(lambda x:f'{t}{x}') + working.loc[:,f'{element}_raw']
     except:
         e = f'Error munging {element}. Check raw_identifier_formula for {element} in cdf_elements.txt'
         if 'cdf_elements.txt' in err.keys():
