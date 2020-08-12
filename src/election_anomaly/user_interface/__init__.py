@@ -14,8 +14,7 @@ from pathlib import Path
 import ntpath
 import re
 import datetime
-from election_anomaly import juris_and_munger as sf
-# TODO change sf to jm
+from election_anomaly import juris_and_munger as jm
 import random
 from tkinter import filedialog
 from configparser import MissingSectionHeaderError
@@ -91,6 +90,31 @@ def pick_paramfile(msg='Locate the parameter file for your postgreSQL database.'
 	return fpath
 
 
+def get_params_to_read_results(d: dict, results_file, munger_name) -> (dict, list):
+	kwargs = d
+	if results_file:
+		kwargs['results_file'] = results_file
+	if munger_name:
+		kwargs['munger_name'] = munger_name
+	missing = [x for x in ['results_file', 'munger_name', 'project_root'] if kwargs[x] is None]
+	return kwargs, missing
+
+def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
+	"""Reads results (appending '_SOURCE' to the columns)
+	and initiates munger. <params> must include these keys: 
+	'project_root', 'munger_name', 'results_file'"""
+	if 'aux_data_dir' in params.keys():
+		aux_data_dir = params['aux_data_dir']
+	else:
+		aux_data_dir = None
+	mu = jm.Munger(
+		os.path.join(params['project_root'], 'mungers', params['munger_name']), aux_data_dir=aux_data_dir,
+		project_root=params['project_root'])
+	wr, error = read_combine_results(mu, params['results_file'], params['project_root'], error)
+	wr.columns = [f'{x}_SOURCE' for x in wr.columns]
+	return wr, mu, error
+
+
 def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_name=None,check_files=False):
 	"""Returns a State object.
 	If <jurisdiction_name> is given, this just initializes based on info
@@ -102,13 +126,13 @@ def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_nam
 
 	if check_files:
 		juris_path = os.path.join(path_to_jurisdictions,juris_name)
-		missing_values = sf.ensure_jurisdiction_dir(juris_path,project_root)
+		missing_values = jm.ensure_jurisdiction_dir(juris_path,project_root)
 
 	# initialize the jurisdiction
 	if missing_values:
 		ss = None
 	else:
-		ss = sf.Jurisdiction(juris_name,path_to_jurisdictions)
+		ss = jm.Jurisdiction(juris_name,path_to_jurisdictions)
 	return ss, missing_values
 
 
@@ -120,12 +144,12 @@ def find_dupes(df):
 
 def pick_munger(mungers_dir='mungers',project_root=None, munger_name=None):
 	munger_path = os.path.join(project_root,mungers_dir,munger_name)
-	error = sf.ensure_munger_files(munger_path,project_root=project_root)
+	error = jm.ensure_munger_files(munger_path,project_root=project_root)
 
 	munger_path = os.path.join(mungers_dir,munger_name)
 
 	if not error:
-		munger = sf.Munger(munger_path, project_root=project_root,check_files=False)
+		munger = jm.Munger(munger_path, project_root=project_root,check_files=False)
 		#munger_error is None unless internal inconsistency found
 		munger_error = munger.check_against_self()
 		return munger, munger_error
@@ -133,7 +157,7 @@ def pick_munger(mungers_dir='mungers',project_root=None, munger_name=None):
 		return None, error
 
 
-def read_single_datafile(munger: sf.Munger, f_path: str, err: dict) -> [pd.DataFrame, dict]:
+def read_single_datafile(munger: jm.Munger, f_path: str, err: dict) -> [pd.DataFrame, dict]:
 	try:
 		dtype = {c: str for c in munger.field_list}
 		kwargs = {'thousands': munger.thousands_separator, 'dtype': dtype}
@@ -167,7 +191,7 @@ def read_single_datafile(munger: sf.Munger, f_path: str, err: dict) -> [pd.DataF
 				err['format.txt'] = [e]
 		else:
 			df = mr.generic_clean(df)
-			err = sf.check_results_munger_compatibility(munger, df, err)
+			err = jm.check_results_munger_compatibility(munger, df, err)
 		return [df, err]
 	except UnicodeDecodeError as ude:
 		e = f'Encoding error. Datafile not read completely.\n{ude}'
@@ -182,7 +206,7 @@ def read_single_datafile(munger: sf.Munger, f_path: str, err: dict) -> [pd.DataF
 	return [pd.DataFrame(), err]
 
 
-def read_combine_results(mu: sf.Munger, results_file, project_root, err, aux_data_dir=None):
+def read_combine_results(mu: jm.Munger, results_file, project_root, err, aux_data_dir=None):
 	working, err = read_single_datafile(mu, results_file, err)
 	if [k for k in err.keys() if err[k] != None]:
 		return pd.DataFrame(), err
@@ -223,7 +247,7 @@ def archive_results(file_name: str, current_dir: str, archive_dir: str):
 
 
 def new_datafile(
-		session,munger: sf.Munger, raw_path: str, project_root: str, juris: sf.Jurisdiction,
+		session,munger: jm.Munger, raw_path: str, project_root: str, juris: jm.Jurisdiction,
 		results_info: list=None, aux_data_dir: str=None) -> dict:
 	"""Guide user through process of uploading data in <raw_file>
 	into common data format.
