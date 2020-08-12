@@ -139,6 +139,16 @@ err = mdl.load_all()
 
 Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.par` file for that results file has `munger_name` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
 
+If every file in your directory will use the same munger(s) -- e.g., if the jurisdiction offers results in a directory of one-county-at-a-time files, such AZ or FL -- then you may want to use `make_par_files()`, whose arguments are:
+ * the directory holding the results files,
+ * the munger name (for multiple mungers, pass a string that is a comma-separated list of munger names)
+ * jurisdiction (can be, e.g., 'Florida' as long as every file has Florida results)
+ * election (has to be just one election),
+ * download_date
+ * source
+ * note (optional)
+ * aux_data_dir (optional -- use it if your files have all have the same auxiliary data files, which might never happen in practice)
+
 ## Pull Data
 The Analyzer class uses parameters in the file `analyze.par`, which should be in the directory from which you are running the program.
 
