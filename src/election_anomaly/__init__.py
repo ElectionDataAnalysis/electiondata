@@ -531,7 +531,7 @@ class JurisdictionPrepper():
 			self.d['jurisdiction_path'], 'CandidateContest',pd.concat([contests] + all_primaries))
 		return error
 
-	def add_sub_county_rus_from_datafile(
+	def add_sub_county_rus_from_results_file(
 			self, error: dict, sub_ru_type: str='precinct', results_file=None, munger_name=None) -> dict:
 		"""Assumes precincts (or other sub-county reporting units)
 		are munged from row of the results file.
@@ -596,7 +596,7 @@ class JurisdictionPrepper():
 			if missing_params:
 				ui.add_error(error, 'parameter_file', f'Parameters missing from {par_file_name}:{missing_params}')
 			else:
-				error = self.add_sub_county_rus_from_datafile(error, ** file_dict)
+				error = self.add_sub_county_rus_from_results_file(error, ** file_dict)
 		return error
 
 	def add_elements_from_multi_results_file(self, elements: iter, dir: str, error: dict):

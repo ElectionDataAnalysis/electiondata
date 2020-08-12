@@ -71,7 +71,7 @@ There are routines in the `JurisdictionPrepper()` class to help prepare a jurisd
    * `starter_dictionary()` creates a `starter_dictionary.txt` file in the current directory. Lines in this starter dictionary will *not* have the correct `raw_identifier_value` entries. Assigning the correct raw identifier values must be done by hand before proceeding.
  * `add_primaries_to_dict()` creates an entry in `dictionary.txt` for every CandidateContest-Party pair that can be created from the CandidateContests and Parties already in `dictioary.txt`. (Note: entries in `dictionary.txt` that never occur in your results file won't break anything.)
  * `add_elements_from_results_file(result_file,munger,element`) pulls raw identifiers for all instances of the element from the datafile and inserts corresponding rows in `<element>.txt` and `dictionary.txt`. These rows may have to be edited by hand to make sure the internal database names match any conventions (e.g., for ReportingUnits or CandidateContests, but maybe not for Candidates or BallotMeasureContests.)
- * `add_sub_county_rus_from_datafile(error)` is useful when:
+ * `add_sub_county_rus_from_results_file(error)` is useful when:
      * county names can be munged from the rows
      * precinct (or other sub-county reporting unit) names can be munged from the rows
      * all counties are already in `dictionary.txt`
