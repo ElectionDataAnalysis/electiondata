@@ -545,6 +545,52 @@ class JurisdictionPrepper():
 		wr.columns = [f'{x}_SOURCE' for x in wr.columns]
 		return wr, mu, error
 
+	def add_sub_county_rus_from_datafile(self, error: dict, sub_ru_type: str='precinct') -> dict:
+		"""Assumes precincts (or other sub-county reporting units)
+		are munged from row of the results file.
+		Adds corresponding rows to ReportingUnit.txt and dictionary.txt
+		using internal County name correctly"""
+		# read data from file (appending _SOURCE)
+		wr, munger, error = self.read_results(error)
+
+		# reduce <wr> in size
+		fields = [f'{field}_SOURCE' for field in munger.cdf_elements.loc['ReportingUnit','fields']]
+		wr = wr[fields].drop_duplicates()
+
+		# get formulas from munger
+		ru_formula = munger.cdf_elements.loc['ReportingUnit', 'raw_identifier_formula']
+		try:
+			[county_formula,sub_ru_formula] = ru_formula.split(';')
+		except ValueError:
+			ui.add_error(error,'munge_error',f'ReportingUnit formula in munger {munger.name} has wrong format (should have two parts separated by ;)')
+			return error
+
+		# add columns for county and sub_ru
+		wr, error = mr.add_column_from_formula(wr,county_formula, 'County_raw', error, suffix='_SOURCE')
+		wr, error = mr.add_column_from_formula(wr,sub_ru_formula, 'Sub_County_raw', error, suffix='_SOURCE')
+
+		# add column for county internal name
+		ru_dict_old = prep.get_element(self.d['jurisdiction_path'],'dictionary')
+		ru_dict_new = ru_dict_old[ru_dict_old.cdf_element=='ReportingUnit']
+		wr = wr.merge(ru_dict_new,how='left',left_on='County_raw',right_on='raw_identifier_value').rename(columns={'cdf_internal_name':'County_internal'})
+
+		# add required new columns
+		wr = mr.add_constant_column(wr,'ReportingUnitType',sub_ru_type)
+		wr = mr.add_constant_column(wr,'cdf_element','ReportingUnit')
+		wr['Name'] = wr.apply(lambda x: f'{x["County_internal"]};{x["Sub_County_raw"]}',axis=1)
+		wr['raw_identifier_value'] = wr.apply(lambda x: f'{x["County_raw"]};{x["Sub_County_raw"]}',axis=1)
+
+		# add info to ReportingUnit.txt
+		ru_add = wr[['Name','ReportingUnitType']]
+		ru_old = prep.get_element(self.d['jurisdiction_path'],'ReportingUnit')
+		prep.write_element(self.d['jurisdiction_path'],'ReportingUnit',pd.concat([ru_old,ru_add]))
+
+		# add info to dictionary
+		wr.rename(columns={'Name':'cdf_internal_name'},inplace=True)
+		dict_add = wr[['cdf_element','cdf_internal_name','raw_identifier_value']]
+		prep.write_element(self.d['jurisdiction_path'],'dictionary',pd.concat([ru_dict_old,dict_add]))		# TODO test this!!!
+		return error
+
 	def add_elements_from_datafile(self, elements: iter, error: dict) -> dict:
 		"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
 		or not already in <element>.txt for each <element> in <elements>"""
