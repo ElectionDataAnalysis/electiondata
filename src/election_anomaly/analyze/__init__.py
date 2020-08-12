@@ -94,8 +94,8 @@ def create_rollup(
 	return
 
 
-def create_scatter(session, top_ru_id, sub_rutype_id, election_id, datafile_id_list,
-	candidate_1_id, candidate_2_id, count_item_type):
+def create_scatter(session, jurisdiction_id, subdivision_type_id, 
+            h_election_id, h_category, h_count_id, v_election_id, v_category, v_count_id):
 	"""<target_dir> is the directory where the resulting rollup will be stored.
 	<election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
 	<top_ru_id> is the internal cdf name of the ReportingUnit whose results will be reported
@@ -105,12 +105,48 @@ def create_scatter(session, top_ru_id, sub_rutype_id, election_id, datafile_id_l
 	If <exclude_total> is True, don't include 'total' CountItemType
 	(unless 'total' is the only CountItemType)"""
 	# Get name of db for error messages
+	dfh = get_data_for_scatter(session, jurisdiction_id, subdivision_type_id, h_election_id, \
+		h_category, h_count_id)
+	dfv = get_data_for_scatter(session, jurisdiction_id, subdivision_type_id, v_election_id, \
+		v_category, v_count_id)
+	unsummed = pd.concat([dfh, dfv])
+	# package into dictionary
+	x = dbr.name_from_id(session, 'Candidate', h_count_id)
+	y = dbr.name_from_id(session, 'Candidate', v_count_id) 
+	results = {
+		"x-election": dbr.name_from_id(session, 'Election', h_election_id),
+		"y-election": dbr.name_from_id(session, 'Election', v_election_id),
+		"jurisdiction": dbr.name_from_id(session, 'ReportingUnit', jurisdiction_id),
+		"contest": dbr.name_from_id(session, 'CandidateContest', unsummed.iloc[0]['Contest_Id']),
+		"subdivision_type": dbr.name_from_id(session, 'ReportingUnitType', subdivision_type_id),
+		"x-count_item_type": h_category,
+		"y-count_item_type": v_category,
+		"x": x,
+		"y": y,
+		"counts": {}
+	}
+	reporting_units = unsummed.Name.unique()
+	for reporting_unit in reporting_units:
+		results["counts"][reporting_unit] = {}
+
+	for i, row in unsummed.iterrows():
+		if row.Selection == x:
+			results["counts"][row.Name]["x"] = row.Count
+		elif row.Selection == y:
+			results["counts"][row.Name]["y"] = row.Count
+		
+	return results
+
+
+def get_data_for_scatter(session, jurisdiction_id, subdivision_type_id, 
+	election_id, count_item_type, candidate_id):
+	"""Since this could be data across 2 elections, grab data one election at a time"""
 	db = session.bind.url.database
 
-	top_ru_id, top_ru = ui.pick_record_from_db(session,'ReportingUnit',required=True,db_idx=top_ru_id)
+	top_ru_id, top_ru = ui.pick_record_from_db(session,'ReportingUnit',required=True,db_idx=jurisdiction_id)
 	election_id,election = ui.pick_record_from_db(session,'Election',required=True,db_idx=election_id)
 
-	sub_rutype = dbr.name_from_id(session, 'ReportingUnitType', sub_rutype_id)
+	sub_rutype = dbr.name_from_id(session, 'ReportingUnitType', subdivision_type_id)
 
 	# pull relevant tables
 	df = {}
@@ -143,30 +179,35 @@ def create_scatter(session, top_ru_id, sub_rutype_id, election_id, datafile_id_l
 	if contest_selection.empty:
 		contest_selection['contest_type'] = None
 	else:
-		inv_df = pd.DataFrame()
-	inventory = {'Election': election, 'ReportingUnitType': sub_rutype,
-				 'source_db_url': cursor.connection.dsn, 'timestamp': datetime.date.today()}
+		contest_selection.loc[:,'contest_type'] = 'Candidate'
 
-	for contest_type in ['BallotMeasure','Candidate']:
-		# export data
-		rollup_file = f'{cursor.connection.info.dbname}_{contest_type}_results.txt'
-		while os.path.isfile(os.path.join(leaf_dir, rollup_file)):
-			rollup_file = input(f'There is already a file called {rollup_file}. Pick another name.\n')
+	# append contest_district_type column
+	ru = df['ReportingUnit'][['ReportingUnitType_Id','OtherReportingUnitType']]
+	contest_selection = contest_selection.merge(ru,how='left',left_on='ElectionDistrict_Id',right_index=True)
+	contest_selection = mr.enum_col_from_id_othertext(contest_selection,'ReportingUnitType',df['ReportingUnitType'])
+	contest_selection.rename(columns={'ReportingUnitType':'contest_district_type'},inplace=True)
 
-		err = dbr.export_rollup_to_csv(
-			cursor, top_ru, sub_rutype, contest_type, datafile_list,
-			os.path.join(leaf_dir, rollup_file), by=by, exclude_total=exclude_total
-		)
-		if err:
-			err_str = err
-		else:
-			# create record for inventory.txt
-			inv_df = inv_df.append(inventory, ignore_index=True).fillna('')
-			err_str = None
+	# limit to relevant ContestSelection pairs
+	contest_ids = ecj.Contest_Id.unique()
+	csj = contest_selection[contest_selection.Contest_Id.isin(contest_ids)]
 
-	# export to inventory file
-	inv_df.to_csv(inventory_file, index=False, sep='\t')
-	return err_str
+	#csj = contest_selection
+	# limit to 
+	csj = csj[csj.Candidate_Id.isin([candidate_id])]
+
+	# find ReportingUnits of the correct type that are subunits of top_ru
+	sub_ru_ids = child_rus_by_id(session,[top_ru_id],ru_type=[subdivision_type_id, ''])
+	if not sub_ru_ids:
+		# TODO better error handling (while not sub_ru_list....)
+		raise Exception(f'Database {db} shows no ReportingUnits of type {sub_rutype} nested inside {top_ru}')
+	sub_ru = df['ReportingUnit'].loc[sub_ru_ids]
+
+	# find all subReportingUnits of top_ru
+	all_subs_ids = child_rus_by_id(session,[top_ru_id])
+
+	# find all children of subReportingUnits
+	children_of_subs_ids = child_rus_by_id(session,sub_ru_ids)
+	ru_children = df['ReportingUnit'].loc[children_of_subs_ids]
 
 def short_name(text,sep=';'):
 	return text.split(sep)[-1]
@@ -198,32 +239,7 @@ def short_name(text,sep=';'):
 	# filter based on vote count type
 	unsummed = unsummed[unsummed['CountItemType'] == count_item_type]
 	return unsummed
-	"""
 
-	# package into dictionary
-	x = dbr.name_from_id(session, 'Candidate', candidate_1_id)
-	y = dbr.name_from_id(session, 'Candidate', candidate_2_id) 
-	results = {
-		"election": dbr.name_from_id(session, 'Election', election_id),
-		"jurisdiction": dbr.name_from_id(session, 'ReportingUnit', top_ru_id),
-		"contest": dbr.name_from_id(session, 'CandidateContest', unsummed.iloc[0]['Contest_Id']),
-		"subdivision_type": dbr.name_from_id(session, 'ReportingUnitType', sub_rutype_id),
-		"count_item_type": count_item_type,
-		"x": x,
-		"y": y,
-		"counts": {}
-	}
-	reporting_units = unsummed.Name.unique()
-	for reporting_unit in reporting_units:
-		results["counts"][reporting_unit] = {}
-
-	for i, row in unsummed.iterrows():
-		if row.Selection == x:
-			results["counts"][row.Name]["x"] = row.Count
-		elif row.Selection == y:
-			results["counts"][row.Name]["y"] = row.Count
-		
-	return results
 
 def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_id_list):
 	"""<target_dir> is the directory where the resulting rollup will be stored.

@@ -874,7 +874,10 @@ class Analyzer():
             return
 
 
-    def scatter(self, jurisdiction, subdivision_type, candidate_1, candidate_2, count_item_type,
+    def scatter(self, jurisdiction, subdivision_type, 
+            h_election, h_category, h_count, # horizontal axis params
+            v_election, v_category, v_count, # vertical axis params
+            #candidate_1, candidate_2, count_item_type,
             fig_type=None):
         """Used to create a scatter plot based on selected inputs. The fig_type parameter
         is used when the user wants to actually create the visualization; this uses plotly
@@ -889,11 +892,15 @@ class Analyzer():
             return
         jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', jurisdiction)
         subdivision_type_id = dbr.name_to_id(self.session, 'ReportingUnitType', subdivision_type)
-        results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
-        candidate_1_id = dbr.name_to_id(self.session, 'Candidate', candidate_1) 
-        candidate_2_id = dbr.name_to_id(self.session, 'Candidate', candidate_2) 
-        agg_results = a.create_scatter(self.session, jurisdiction_id, subdivision_type_id, results_info[1], 
-            results_info[0],candidate_1_id,candidate_2_id, count_item_type)
+        h_election_id = dbr.name_to_id(self.session, 'Election', h_election)
+        v_election_id = dbr.name_to_id(self.session, 'Election', v_election)
+        #results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
+        h_count_id = dbr.name_to_id(self.session, 'Candidate', h_count) 
+        v_count_id = dbr.name_to_id(self.session, 'Candidate', v_count) 
+        agg_results = a.create_scatter(self.session, jurisdiction_id, subdivision_type_id, 
+            h_election_id, h_category, h_count_id, v_election_id, v_category, v_count_id) 
+            #results_info[1], 
+            #results_info[0],candidate_1_id,candidate_2_id, count_item_type)
         if fig_type:
             v.plot('scatter', agg_results, fig_type, d['rollup_directory'])
         return agg_results
@@ -920,3 +927,13 @@ class Analyzer():
 def get_filename(path):
 	head, tail = ntpath.split(path)
 	return tail or ntpath.basename(head)
+    head, tail = ntpath.split(path)
+    return tail or ntpath.basename(head)
+
+
+def category_cleaner(input):
+    """ Takes an input from the front end that is the cartesian product
+    of the CountItemType and {'Candidate', 'Contest'}. So something like:
+    Total Candidates or Absentee Contests. Cleans this and returns 
+    something usable for the system to identify what the user is asking for."""
+    return
