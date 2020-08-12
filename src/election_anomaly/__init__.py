@@ -18,7 +18,7 @@ data_loader_pars = [
 	'results_file', 'results_short_name', 'results_download_date', 'results_source', 'results_note',
 	'top_reporting_unit','election']
 
-single_data_loader_pars = ['juris_name', 'munge_with', 'results_file_name',
+single_data_loader_pars = ['juris_name', 'munger_name', 'results_file',
 	'results_short_name', 'results_download_date', 'results_source', 'results_note',
 	'top_reporting_unit', 'election', 'aux_data_dir']
 
@@ -85,7 +85,7 @@ class MultiDataLoader():
 				else:
 					# move results file and its parameter file to the archive directory
 					ui.archive_results(f, self.d['results_dir'], self.d['archive_dir'])
-					ui.archive_results(sdl.d['results_file_name'], self.d['results_dir'], self.d['archive_dir'])
+					ui.archive_results(sdl.d['results_file'], self.d['results_dir'], self.d['archive_dir'])
 			else:
 				err[f] = errors
 		return err
@@ -104,7 +104,7 @@ class SingleDataLoader():
 
 		# convert comma-separated list to python list
 		# TODO document
-		self.munger_list = [x.strip() for x in self.d['munge_with'].split(',')]
+		self.munger_list = [x.strip() for x in self.d['munger_name'].split(',')]
 
 		# set aux_data_dir to None if appropriate
 		if self.d['aux_data_dir'] in ['None','']:
@@ -139,7 +139,7 @@ class SingleDataLoader():
 			self.juris_load_err, self.munger_err
 
 	def track_results(self):
-		filename = self.d['results_file_name']
+		filename = self.d['results_file']
 		top_reporting_unit_id = dbr.name_to_id(self.session,'ReportingUnit', self.d['top_reporting_unit'])
 		election_id = dbr.name_to_id(self.session,'Election',self.d['election'])
 
@@ -166,7 +166,7 @@ class SingleDataLoader():
 		else:
 			err = dict()
 			for mu in self.munger_list:
-				f_path = os.path.join(self.results_dir, self.d['results_file_name'])
+				f_path = os.path.join(self.results_dir, self.d['results_file'])
 				emu = ui.new_datafile(
 					self.session, self.munger[mu], f_path ,self.project_root,
 					self.juris, results_info=results_info, aux_data_dir=self.d['aux_data_dir'])
@@ -375,9 +375,9 @@ class JurisdictionPrepper():
 	def __new__(cls):
 		""" Checks if parameter file exists and is correct. If not, does
 		not create JurisdictionPrepper object. """
-		param_file = 'new_jurisdiction.par'
+		param_file = 'jurisdiction_prep.par'
 		try:
-			d, parameter_err = ui.get_runtime_parameters(prep_pars, param_file='new_jurisdiction.par')
+			d, parameter_err = ui.get_runtime_parameters(prep_pars, param_file='jurisdiction_prep.par')
 		except FileNotFoundError as e:
 			print(f"File {param_file} not found. Ensure that it is located" \
 				  " in the current directory. DataLoader object not created.")
@@ -531,27 +531,21 @@ class JurisdictionPrepper():
 			self.d['jurisdiction_path'], 'CandidateContest',pd.concat([contests] + all_primaries))
 		return error
 
-	def read_results(self, error: dict) -> (pd.DataFrame, jm.Munger, dict):
-		"""Reads results (appending '_SOURCE' to the columns)
-		and initiates munger"""
-		if 'aux_data_dir' in self.d.keys():
-			aux_data_dir = self.d['aux_data_dir']
-		else:
-			aux_data_dir = None
-		mu = jm.Munger(
-			os.path.join(self.d['project_root'], 'mungers', self.d['munger_name']), aux_data_dir=aux_data_dir,
-			project_root=self.d['project_root'])
-		wr, error = ui.read_combine_results(mu, self.d['results_file'], self.d['project_root'], error)
-		wr.columns = [f'{x}_SOURCE' for x in wr.columns]
-		return wr, mu, error
-
-	def add_sub_county_rus_from_datafile(self, error: dict, sub_ru_type: str='precinct') -> dict:
+	def add_sub_county_rus_from_results_file(
+			self, error: dict, sub_ru_type: str='precinct', results_file_path=None, munger_name=None, **kwargs) -> dict:
 		"""Assumes precincts (or other sub-county reporting units)
 		are munged from row of the results file.
 		Adds corresponding rows to ReportingUnit.txt and dictionary.txt
 		using internal County name correctly"""
+
+		# get parameters from arguments; otherwise from self.d; otherwise throw error
+		kwargs, missing = ui.get_params_to_read_results(self.d, results_file_path, munger_name)
+		if missing:
+			ui.add_error(error,'datafile',f'Parameters missing: {missing}. Results file cannot be processed.')
+			return error
+
 		# read data from file (appending _SOURCE)
-		wr, munger, error = self.read_results(error)
+		wr, munger, error = ui.read_results(kwargs,error)
 
 		# reduce <wr> in size
 		fields = [f'{field}_SOURCE' for field in munger.cdf_elements.loc['ReportingUnit','fields']]
@@ -591,18 +585,48 @@ class JurisdictionPrepper():
 		prep.write_element(self.d['jurisdiction_path'],'dictionary',pd.concat([ru_dict_old,dict_add]))		# TODO test this!!!
 		return error
 
-	def add_elements_from_datafile(self, elements: iter, error: dict) -> dict:
+	def add_sub_county_rus_from_multi_results_file(self, dir: str, error: dict, sub_ru_type: str='precinct') -> dict:
+		"""Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
+		for each file in <dir> named (with munger) in a .par file in the directory"""
+		for par_file_name in [x for x in os.listdir(dir) if x[-4:]=='.par']:
+			par_file = os.path.join(dir, par_file_name)
+			file_dict, missing_params = ui.get_runtime_parameters(
+				['results_file','munger_name'], optional_keys=['aux_data_dir'], param_file=par_file)
+			file_dict['sub_ru_type'] = sub_ru_type
+			file_dict['results_file_path'] = os.path.join(dir,file_dict['results_file'])
+			if missing_params:
+				ui.add_error(error, 'parameter_file', f'Parameters missing from {par_file_name}:{missing_params}')
+			else:
+				error = self.add_sub_county_rus_from_results_file(error, ** file_dict)
+		return error
+
+	def add_elements_from_multi_results_file(self, elements: iter, dir: str, error: dict):
+		"""Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
+		for each file in <dir> named (with munger) in a .par file in the directory"""
+		for par_file_name in [x for x in os.listdir(dir) if x[-4:]=='.par']:
+			par_file = os.path.join(dir, par_file_name)
+			file_dict, missing_params = ui.get_runtime_parameters(
+				['results_file','munger_name'], optional_keys=['aux_data_dir'], param_file=par_file)
+			file_dict['results_file_path'] = os.path.join(dir,file_dict['results_file'])
+			if missing_params:
+				ui.add_error(error, 'parameter_file', f'Parameters missing from {par_file_name}:{missing_params}')
+			else:
+				error = self.add_elements_from_results_file(elements, error, ** file_dict)
+		return error
+
+	def add_elements_from_results_file(self, elements: iter, error: dict, results_file_path=None, munger_name=None, **kwargs) -> dict:
 		"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
 		or not already in <element>.txt for each <element> in <elements>"""
 
-		# ensure necessary parameters have data
-		missing = [x for x in ['results_file','munger_name'] if self.d[x] is None]
+		# get parameters from arguments; otherwise from self.d; otherwise throw error
+		# get parameters from arguments; otherwise from self.d; otherwise throw error
+		kwargs, missing = ui.get_params_to_read_results(self.d, results_file_path, munger_name)
 		if missing:
 			ui.add_error(error,'datafile',f'Parameters missing: {missing}. Results file cannot be processed.')
 			return error
 
-		# read data from file
-		wr, mu, error = self.read_results(error)
+		# read data from file (appending _SOURCE)
+		wr, mu, error = ui.read_results(kwargs,error)
 
 		for element in elements:
 			name_field = dbr.get_name_field(element)
@@ -665,7 +689,8 @@ class JurisdictionPrepper():
 
 	def __init__(self):
 		self.d, self.parameter_err = ui.get_runtime_parameters(
-			prep_pars,optional_keys=optional_prep_pars,param_file='new_jurisdiction.par')
+			prep_pars,optional_keys=optional_prep_pars,param_file='jurisdiction_prep'
+																  '.par')
 		self.state_house = int(self.d['count_of_state_house_districts'])
 		self.state_senate = int(self.d['count_of_state_senate_districts'])
 		self.congressional = int(self.d['count_of_us_house_districts'])

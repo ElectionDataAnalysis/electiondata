@@ -40,19 +40,19 @@ When all errors are fixed, your munger should be able to interpret your data fil
 5. Apply the formula from the munger's `cdf_elements.txt` to the results file to identify raw identifiers for the CandidateContests you care about, and modify the corresponding rows in `dictionary.txt`. 
 6. If your munger is already set up you can use 
 
-         `add_elements_from_datafile(<file_path>,<munger_name>,['Party','ReportingUnit','CandidateContest','Candidate,'BallotMeasureContest'])`
+         `add_elements_from_results_file(<file_path>,<munger_name>,['Party','ReportingUnit','CandidateContest','Candidate,'BallotMeasureContest'])`
          
  to enter elements from the file into the jurisdiction files (including `dictionary.txt`). You may have to alter the resulting rows in both files to make sure the internal database names obey any conventions.
 6. Otherwise, add any missing Parties to `Party.txt`. Modify or create the corresponding rows in `dictionary.txt` to match the party names that will be munged from the file.
-8. Add all necessary ReportingUnits to `ReportingUnit.txt` (without creating duplicates). You MUST use the naming conventions with semicolons to indicate nesting of reporting units. The jurisdiction itself (e.g., `North Carolina`) and the districts for the standard district contests will be created by `new_juris_files()`. Typically -- even if you used `add_elements_from_datafile()` -- you will need to add:
+8. Add all necessary ReportingUnits to `ReportingUnit.txt` (without creating duplicates). You MUST use the naming conventions with semicolons to indicate nesting of reporting units. The jurisdiction itself (e.g., `North Carolina`) and the districts for the standard district contests will be created by `new_juris_files()`. Typically -- even if you used `add_elements_from_results_file()` -- you will need to add:
     2. counties (e.g., `North Carolina;Alamance County`)
     4. any reporting units used in your results file, often precincts, nested within counties (e.g., `North Carolina;Alamance County;Precinct 064`). 
-  and if you haven't used `add_elements_from_datafile()`, you will need to add:
+  and if you haven't used `add_elements_from_results_file()`, you will need to add:
     1. the jurisdiction itself (e.g., `North Carolina`)
     2. ElectionDistricts corresponding to Offices or BallotMeasureContests.
   
         Note: as of 8/2020, the system does not yet handle nesting of precincts inside contest districts.
-    9. If you did not use `add_elements_from_datafile` in the previous step, modify or create the corresponding rows in `dictionary.txt`. (Note: you can omit ReportingUnits such as contest districts from `dictionary.txt` if they aren't needed to specify the vote count in the results file.)
+    9. If you did not use `add_elements_from_results_file` in the previous step, modify or create the corresponding rows in `dictionary.txt`. (Note: you can omit ReportingUnits such as contest districts from `dictionary.txt` if they aren't needed to specify the vote count in the results file.)
 10. If necessary, add the relevant election to `Election.txt`.
 11. Add any BallotMeasureContests you care about to `BallotMeasureContest.txt` and `dictionary.txt`. 
     1. Choose raw identifiers for the BallotMeasureContests and modify `dictionary.txt` accordingly.
@@ -70,20 +70,23 @@ There are routines in the `JurisdictionPrepper()` class to help prepare a jurisd
    * `add_primary_contests()` creates a record in `CandidateContest.txt` for every CandidateContest-Party pair that can be created from `CandidateContest.txt` entries with no assigned PrimaryParty and `Party.txt` entries. (Note: records for non-existent primary contests will not break anything.) 
    * `starter_dictionary()` creates a `starter_dictionary.txt` file in the current directory. Lines in this starter dictionary will *not* have the correct `raw_identifier_value` entries. Assigning the correct raw identifier values must be done by hand before proceeding.
  * `add_primaries_to_dict()` creates an entry in `dictionary.txt` for every CandidateContest-Party pair that can be created from the CandidateContests and Parties already in `dictioary.txt`. (Note: entries in `dictionary.txt` that never occur in your results file won't break anything.)
- * `add_elements_from_datafile(result_file,munger,element`) pulls raw identifiers for all instances of the element from the datafile and inserts corresponding rows in `<element>.txt` and `dictionary.txt`. These rows may have to be edited by hand to make sure the internal database names match any conventions (e.g., for ReportingUnits or CandidateContests, but maybe not for Candidates or BallotMeasureContests.)
- * `add_sub_county_rus_from_datafile(error)` is useful when:
-     * county names can be munged from the rows
-     * precinct (or other sub-county reporting unit) names can be munged from the rows
-     * all counties are already in `dictionary.txt`
+ * Adding precincts automatically:
+     *`add_sub_county_rus_from_results_file(error)` is useful when:
+         * county names can be munged from the rows
+         * precinct (or other sub-county reporting unit) names can be munged from the rows
+         * all counties are already in `dictionary.txt`
    
-   can be read from _rows_ of the datafile. The method adds a record for each precinct to `ReportingUnit.txt` and `dictionary.txt`, with internal db name obeying the semicolon convention. For instance, if:
-     * `ReportingUnit\tFlorida;Alachua County\tAlachua` is in `dictionary.txt
-     * County name `Alachua` and precinct name `Precinct 1` can both be munged from the same row of the results file
+       can be read from _rows_ of the datafile. The method adds a record for each precinct to `ReportingUnit.txt` and `dictionary.txt`, with internal db name obeying the semicolon convention. For instance, if:
+         * `ReportingUnit\tFlorida;Alachua County\tAlachua` is in `dictionary.txt
+         * County name `Alachua` and precinct name `Precinct 1` can both be munged from the same row of the results file
      
-     then:
-     * `Florida;Alachua County;Precinct 1\tprecinct` will be added to `ReportingUnit.txt`
-     * `ReportingUnit\tFlorida;Alachua County;Precinct 1\tAlachua;Precinct 1` will be added to `dictionary.txt`
-
+         then:
+         * `Florida;Alachua County;Precinct 1\tprecinct` will be added to `ReportingUnit.txt`
+         * `ReportingUnit\tFlorida;Alachua County;Precinct 1\tAlachua;Precinct 1` will be added to `dictionary.txt`
+     * `add_sub_county_rus_from_multi_results_file(directory,error)` does the same for every results file/munger in the directory named in a `.par` file in the directory.
+ * adding other elements automatically:
+     * `add_elements_from_results_file(result_file,munger,element`) pulls raw identifiers for all instances of the element from the datafile and inserts corresponding rows in `<element>.txt` and `dictionary.txt`. These rows may have to be edited by hand to make sure the internal database names match any conventions (e.g., for ReportingUnits or CandidateContests, but maybe not for Candidates or BallotMeasureContests.)
+     * `add_elements_from_multi_results_file(directory, error)` does the same for every file/munger in the directory named in a `.par` file in the directory
  
 ## Load Data
 Some routines in the Analyzer class are useful even in the data-loading process, so  create an analyzer before you start loading data.
@@ -145,6 +148,18 @@ import election_anomaly as ea
 mdl = ea.MultiDataLoader()
 err = mdl.load_all()
 ```
+
+Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.par` file for that results file has `munger_name` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
+
+If every file in your directory will use the same munger(s) -- e.g., if the jurisdiction offers results in a directory of one-county-at-a-time files, such AZ or FL -- then you may want to use `make_par_files()`, whose arguments are:
+ * the directory holding the results files,
+ * the munger name (for multiple mungers, pass a string that is a comma-separated list of munger names)
+ * jurisdiction (can be, e.g., 'Florida' as long as every file has Florida results)
+ * election (has to be just one election),
+ * download_date
+ * source
+ * note (optional)
+ * aux_data_dir (optional -- use it if your files have all have the same auxiliary data files, which might never happen in practice)
 
 ## Pull Data
 The Analyzer class uses parameters in the file `analyze.par`, which should be in the directory from which you are running the program.
