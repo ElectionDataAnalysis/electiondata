@@ -18,7 +18,7 @@ data_loader_pars = [
 	'results_file', 'results_short_name', 'results_download_date', 'results_source', 'results_note',
 	'top_reporting_unit','election']
 
-single_data_loader_pars = ['juris_name', 'munge_with', 'results_file_name',
+single_data_loader_pars = ['juris_name', 'munger_name', 'results_file',
 	'results_short_name', 'results_download_date', 'results_source', 'results_note',
 	'top_reporting_unit', 'election', 'aux_data_dir']
 
@@ -85,7 +85,7 @@ class MultiDataLoader():
 				else:
 					# move results file and its parameter file to the archive directory
 					ui.archive_results(f, self.d['results_dir'], self.d['archive_dir'])
-					ui.archive_results(sdl.d['results_file_name'], self.d['results_dir'], self.d['archive_dir'])
+					ui.archive_results(sdl.d['results_file'], self.d['results_dir'], self.d['archive_dir'])
 			else:
 				err[f] = errors
 		return err
@@ -104,7 +104,7 @@ class SingleDataLoader():
 
 		# convert comma-separated list to python list
 		# TODO document
-		self.munger_list = [x.strip() for x in self.d['munge_with'].split(',')]
+		self.munger_list = [x.strip() for x in self.d['munger_name'].split(',')]
 
 		# set aux_data_dir to None if appropriate
 		if self.d['aux_data_dir'] in ['None','']:
@@ -139,7 +139,7 @@ class SingleDataLoader():
 			self.juris_load_err, self.munger_err
 
 	def track_results(self):
-		filename = self.d['results_file_name']
+		filename = self.d['results_file']
 		top_reporting_unit_id = dbr.name_to_id(self.session,'ReportingUnit', self.d['top_reporting_unit'])
 		election_id = dbr.name_to_id(self.session,'Election',self.d['election'])
 
@@ -166,7 +166,7 @@ class SingleDataLoader():
 		else:
 			err = dict()
 			for mu in self.munger_list:
-				f_path = os.path.join(self.results_dir, self.d['results_file_name'])
+				f_path = os.path.join(self.results_dir, self.d['results_file'])
 				emu = ui.new_datafile(
 					self.session, self.munger[mu], f_path ,self.project_root,
 					self.juris, results_info=results_info, aux_data_dir=self.d['aux_data_dir'])
@@ -375,9 +375,9 @@ class JurisdictionPrepper():
 	def __new__(cls):
 		""" Checks if parameter file exists and is correct. If not, does
 		not create JurisdictionPrepper object. """
-		param_file = 'jurisdiction_prep.par.par'
+		param_file = 'jurisdiction_prep.par'
 		try:
-			d, parameter_err = ui.get_runtime_parameters(prep_pars, param_file='jurisdiction_prep.par.par')
+			d, parameter_err = ui.get_runtime_parameters(prep_pars, param_file='jurisdiction_prep.par')
 		except FileNotFoundError as e:
 			print(f"File {param_file} not found. Ensure that it is located" \
 				  " in the current directory. DataLoader object not created.")
