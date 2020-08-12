@@ -585,6 +585,20 @@ class JurisdictionPrepper():
 		prep.write_element(self.d['jurisdiction_path'],'dictionary',pd.concat([ru_dict_old,dict_add]))		# TODO test this!!!
 		return error
 
+	def add_sub_county_rus_from_multi_results_file(self, dir: str, error: dict, sub_ru_type: str='precinct') -> dict:
+		"""Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
+		for each file in <dir> named (with munger) in a .par file in the directory"""
+		for par_file_name in [x for x in os.listdir(dir) if x[-4:]=='.par']:
+			par_file = os.path.join(dir, par_file_name)
+			file_dict, missing_params = ui.get_runtime_parameters(
+				['results_file','munger_name'], optional_keys=['aux_data_dir'], param_file=par_file)
+			file_dict['sub_ru_type'] = sub_ru_type
+			if missing_params:
+				ui.add_error(error, 'parameter_file', f'Parameters missing from {par_file_name}:{missing_params}')
+			else:
+				error = self.add_sub_county_rus_from_datafile(error, ** file_dict)
+		return error
+
 	def add_elements_from_multi_results_file(self, elements: iter, dir: str, error: dict):
 		"""Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
 		for each file in <dir> named (with munger) in a .par file in the directory"""
