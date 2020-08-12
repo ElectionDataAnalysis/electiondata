@@ -97,8 +97,13 @@ def text_fragments_and_fields(formula):
     return text_field_list,last_text
 
 
-def add_column_from_formula(working, formula, new_col,err):
+def add_column_from_formula(working: pd.DataFrame, formula: str, new_col: str, err: dict, suffix=None) -> (pd.DataFrame, dict):
+    """If <suffix> is given, add it to each field in the formula"""
     text_field_list, last_text = text_fragments_and_fields(formula)
+
+    # add suffix, if required
+    if suffix:
+        text_field_list = [(t,f'{f}{suffix}') for (t,f) in text_field_list]
 
     if last_text:
         working.loc[:, new_col] = last_text[0]
@@ -129,7 +134,6 @@ def add_munged_column(
         working = raw.copy()
 
     try:
-
         formula = munger.cdf_elements.loc[element,'raw_identifier_formula']
         if mode == 'row':
             for field in munger.field_list:
