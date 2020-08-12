@@ -877,7 +877,6 @@ class Analyzer():
     def scatter(self, jurisdiction, subdivision_type, 
             h_election, h_category, h_count, # horizontal axis params
             v_election, v_category, v_count, # vertical axis params
-            #candidate_1, candidate_2, count_item_type,
             fig_type=None):
         """Used to create a scatter plot based on selected inputs. The fig_type parameter
         is used when the user wants to actually create the visualization; this uses plotly
@@ -897,10 +896,10 @@ class Analyzer():
         #results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
         h_count_id = dbr.name_to_id(self.session, 'Candidate', h_count) 
         v_count_id = dbr.name_to_id(self.session, 'Candidate', v_count) 
+        h_count_item_type = self.split_category_input(h_category)[0]
+        v_count_item_type = self.split_category_input(v_category)[0]
         agg_results = a.create_scatter(self.session, jurisdiction_id, subdivision_type_id, 
-            h_election_id, h_category, h_count_id, v_election_id, v_category, v_count_id) 
-            #results_info[1], 
-            #results_info[0],candidate_1_id,candidate_2_id, count_item_type)
+            h_election_id, h_count_item_type, h_count_id, v_election_id, v_count_item_type, v_count_id) 
         if fig_type:
             v.plot('scatter', agg_results, fig_type, d['rollup_directory'])
         return agg_results
@@ -924,6 +923,17 @@ class Analyzer():
         return agg_results
 
 
+    def split_category_input(self, input_str):
+        """ Helper function. Takes an input from the front end that is the cartesian 
+        product of the CountItemType and {'Candidate', 'Contest'}. So something like:
+        Total Candidates or Absentee Contests. Cleans this and returns 
+        something usable for the system to identify what the user is asking for."""
+        count_item_types = self.display_options('count_item_type')
+        count_item_type = [count_type for count_type in count_item_types if count_type in input_str][0]
+        selection_type = input_str[len(count_item_type) + 1:]
+        return count_item_type, selection_type
+
+
 def get_filename(path):
 	head, tail = ntpath.split(path)
 	return tail or ntpath.basename(head)
@@ -931,9 +941,3 @@ def get_filename(path):
     return tail or ntpath.basename(head)
 
 
-def category_cleaner(input):
-    """ Takes an input from the front end that is the cartesian product
-    of the CountItemType and {'Candidate', 'Contest'}. So something like:
-    Total Candidates or Absentee Contests. Cleans this and returns 
-    something usable for the system to identify what the user is asking for."""
-    return
