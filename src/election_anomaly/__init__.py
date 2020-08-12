@@ -375,9 +375,9 @@ class JurisdictionPrepper():
 	def __new__(cls):
 		""" Checks if parameter file exists and is correct. If not, does
 		not create JurisdictionPrepper object. """
-		param_file = 'new_jurisdiction.par'
+		param_file = 'jurisdiction_prep.par.par'
 		try:
-			d, parameter_err = ui.get_runtime_parameters(prep_pars, param_file='new_jurisdiction.par')
+			d, parameter_err = ui.get_runtime_parameters(prep_pars, param_file='jurisdiction_prep.par.par')
 		except FileNotFoundError as e:
 			print(f"File {param_file} not found. Ensure that it is located" \
 				  " in the current directory. DataLoader object not created.")
@@ -687,7 +687,8 @@ class JurisdictionPrepper():
 
 	def __init__(self):
 		self.d, self.parameter_err = ui.get_runtime_parameters(
-			prep_pars,optional_keys=optional_prep_pars,param_file='new_jurisdiction.par')
+			prep_pars,optional_keys=optional_prep_pars,param_file='jurisdiction_prep'
+																  '.par')
 		self.state_house = int(self.d['count_of_state_house_districts'])
 		self.state_senate = int(self.d['count_of_state_senate_districts'])
 		self.congressional = int(self.d['count_of_us_house_districts'])
