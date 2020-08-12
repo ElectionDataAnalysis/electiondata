@@ -65,6 +65,8 @@ def write_element(juris_path: str, element: str, df: pd.DataFrame, file_name=Non
 	if not file_name:
 		file_name = f'{element}.txt'
 	dupes_df, deduped = ui.find_dupes(df)
+	if element == 'dictionary':
+		deduped = remove_empty_lines(deduped, element)
 	deduped.drop_duplicates().fillna('').to_csv(os.path.join(juris_path, file_name), index=False,sep='\t')
 	if dupes_df.empty:
 		err = None
