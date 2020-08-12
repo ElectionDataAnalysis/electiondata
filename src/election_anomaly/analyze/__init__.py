@@ -13,7 +13,7 @@ from pandas.api.types import is_numeric_dtype
 from election_anomaly import db_routines as dbr
 import scipy.spatial.distance as dist
 from scipy import stats
-
+import math
 
 
 def child_rus_by_id(session,parents,ru_type=None):
@@ -444,6 +444,7 @@ def assign_anomaly_score(data):
 	#data = data[data['Contest_Id'] == 14949] # only 2 candidates
 	#data = data[data['Contest_Id'] == 14777] # 3 candidates
 	#data = data[(data['Contest_Id'] == 14949) | (data['Contest_Id'] == 14777)]
+	#data = data[data['Contest_Id'] == 14917] # this has infinite margins
 
 	# Assign a ranking for each candidate by votes for each contest
 	total_data = data[(data['CountItemType'] == 'total') & 
@@ -594,6 +595,8 @@ def calculate_margins(data):
 	rank_1_df = rank_1_df.rename(columns={'Count': 'rank_1_total'})
 	data = data.merge(rank_1_df, how='inner', on=['unit_id', 'ReportingUnit_Id'])
 	data['margins'] = (data['rank_1_total'] - data['Count']) / data['contest_total']
+	data = data[data['margins'] != math.inf]
+	data = data[data['margins'] != -math.inf]
 	return data
 
 
@@ -626,4 +629,6 @@ def calculate_votes_at_stake(data):
 		else:
 			temp_df['margin_ratio'] = 0
 		df = pd.concat([df, temp_df])
+	df = df[df['margin_ratio'] != math.inf]
+	df = df[df['margin_ratio'] != -math.inf]
 	return df
