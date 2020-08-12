@@ -381,15 +381,21 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 	ranked = assign_anomaly_score(unsummed)
 	ranked_margin = calculate_margins(ranked)
 	votes_at_stake = calculate_votes_at_stake(ranked_margin)
-	return votes_at_stake
 	top_ranked = get_most_anomalous(votes_at_stake, 3)
-	#return top_ranked
 
 	# package into list of dictionary
 	result_list = []
 	ids = top_ranked['unit_id'].unique()
 	for id in ids:
 		temp_df = top_ranked[top_ranked['unit_id'] == id]
+
+		# some cleaning here to make the pivoting work
+		scores_df = temp_df[temp_df['rank'] != 1]
+		scores_df = scores_df[['ReportingUnit_Id', 'score', 'margins']]
+		scores_df.rename(columns={'score': 'max_score', 'margins': 'max_margins'}, inplace=True)
+		temp_df = temp_df.merge(scores_df, how='inner', on='ReportingUnit_Id')
+		temp_df.drop(columns=['score', 'margins'], inplace=True)
+		temp_df.rename(columns={'max_score': 'score', 'max_margins': 'margins'}, inplace=True)
 
 		candidates = temp_df['Candidate_Id'].unique()
 		x = dbr.name_from_id(session, 'Candidate', candidates[0])
@@ -405,9 +411,18 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 			"x": x,
 			"y": y,
 			"margin": temp_df.iloc[0]['margins'],
-			"votes_at_stake": temp_df.iloc[0]['max_votes_at_stake'], 
+			"votes_at_stake": temp_df.iloc[0]['margin_ratio'], 
 			"counts": []
 		}
+<<<<<<< HEAD
+=======
+		pivot_df = pd.pivot_table(temp_df, values='Count', 
+			index=['ReportingUnit_Id', 'Name', 'score', 'margins'], \
+			columns='Selection', aggfunc=np.mean).sort_values('score', ascending=False).reset_index()
+		#reporting_units = pivot_df.Name.unique()
+		#for reporting_unit in reporting_units:
+		#	results["counts"][reporting_unit] = {}
+>>>>>>> top anomalies refactor WIP
 
 		pivot_df = pd.pivot_table(temp_df, values='Count',
 			index=['Name'], columns='Selection').reset_index()
@@ -416,7 +431,20 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 				'name': row['Name'],
 				'x': row[x],
 				'y': row[y],
+<<<<<<< HEAD
 			})			
+=======
+				'score': row['score'],
+				'margin': row['margins']
+			})
+			if i == 7:
+				break
+			# if row.Selection == x:
+			# 	results["counts"][row.Name]["x"] = row.Count
+			# elif row.Selection == y:
+			# 	results["counts"][row.Name]["y"] = row.Count
+			# results["counts"][row.Name]["score"] = row.score
+>>>>>>> top anomalies refactor WIP
 		result_list.append(results)
 		
 	return result_list
@@ -431,8 +459,9 @@ def assign_anomaly_score(data):
 	to the dataframe if needed."""
 
 	######### FOR TESTING PURPOSES ONLY!!!!! ###########
-	data = data[data['Contest_Id'] == 14949] # only 2 candidates
+	#data = data[data['Contest_Id'] == 14949] # only 2 candidates
 	#data = data[data['Contest_Id'] == 14777] # 3 candidates
+	#data = data[(data['Contest_Id'] == 14949) | (data['Contest_Id'] == 14777)]
 
 	# Assign a ranking for each candidate by votes for each contest
 	total_data = data[(data['CountItemType'] == 'total') & 
@@ -523,7 +552,7 @@ def assign_anomaly_score(data):
 
 
 def get_most_anomalous(data, n):
-	"""gets the n contests with the highest votes_at_stake score"""
+	"""gets the n contests with the highest margin ratio score"""
 	# get rid of all contest-counttypes with 0 votes
 	# not sure we really want to do this in final version
 	zeros_df = data[['Contest_Id', 'ReportingUnitType_Id', 'CountItemType', 'ReportingUnit_Id', 'Count']]
@@ -534,29 +563,60 @@ def get_most_anomalous(data, n):
 	data.rename(columns={'Count_x':'Count'}, inplace=True)
 	data.drop(columns=['Count_y'], inplace=True)
 
-	# Now do the filtering on most anomalous
-	df = data.groupby('unit_id')['votes_at_stake'].max().reset_index()
-	df.rename(columns={'votes_at_stake': 'max_votes_at_stake'}, inplace=True)
-	data = data.merge(df, on='unit_id')
-	unique_scores = sorted(set(df['max_votes_at_stake']), reverse=True)
-	top_scores = unique_scores[:n]
-	result = data[data['max_votes_at_stake'].isin(top_scores)]
+	margins = list(data['margin_ratio'].unique())
+	margins.sort(reverse=True)
+	top_margins = margins[0:n]
+	data = data[data['margin_ratio'].isin(top_margins)]
 
-	# Eventually we want to return the winner and the most anomalous
-	# for each contest grouping (unit). For now, just 2 random ones
-	ids = result['unit_id'].unique()
+	# now we get the top 8 reporting unit IDs, in terms of anomaly score, of the winner and most anomalous
+	ids = data['unit_id'].unique()
 	df = pd.DataFrame()
 	for id in ids:
-		temp_df = result[result['unit_id'] == id]
-		#unique = temp_df['Candidate_Id'].unique()
-		#candidates = unique[0:2]
-		candidates = temp_df['Candidate_Id'].unique()
-		candidate_df = temp_df[temp_df['Candidate_Id'].isin(candidates)]
-		unique = candidate_df['ReportingUnit_Id'].unique()
-		reporting_units = unique[0:8]
-		df_final = candidate_df[candidate_df['ReportingUnit_Id'].isin(reporting_units)]. \
-			sort_values(['ReportingUnit_Id', 'score'], ascending=False)
+		temp_df = data[data['unit_id'] == id]
+		max_score = temp_df['score'].max()
+		rank = temp_df[temp_df['score'] == max_score].iloc[0]['rank']
+		temp_df = temp_df[temp_df['rank'].isin([1, rank])]
+		scores = list(temp_df['score'].unique())
+		scores.sort(reverse=True)
+		top_scores = scores[0:8]
+		reporting_units = temp_df[temp_df['score'].isin(top_scores)]['ReportingUnit_Id'].unique()
+		df_final = temp_df[temp_df['ReportingUnit_Id'].isin(reporting_units)]
 		df = pd.concat([df, df_final])
+	return df
+	
+
+
+	# # Now do the filtering on most anomalous
+	# df = data.groupby('unit_id')['votes_at_stake'].max().reset_index()
+	# df.rename(columns={'votes_at_stake': 'max_votes_at_stake'}, inplace=True)
+	# data = data.merge(df, on='unit_id')
+	# unique_scores = sorted(set(df['max_votes_at_stake']), reverse=True)
+	# top_scores = unique_scores[:n]
+	# result = data[data['max_votes_at_stake'].isin(top_scores)]
+
+	# # Eventually we want to return the winner and the most anomalous
+	# # for each contest grouping (unit). For now, just 2 random ones
+	# ids = result['unit_id'].unique()
+	# df = pd.DataFrame()
+	# for id in ids:
+	# 	temp_df = result[result['unit_id'] == id]
+	# 	#unique = temp_df['Candidate_Id'].unique()
+	# 	#candidates = unique[0:2]
+	# 	#candidates = temp_df['Candidate_Id'].unique()
+	# 	#candidate_df = temp_df[temp_df['Candidate_Id'].isin(candidates)]
+	# 	#unique = candidate_df['ReportingUnit_Id'].unique()
+	# 	#reporting_units = unique[0:6]
+	# 	#reporting_units = candidate_df['ReportingUnit_Id'].unique() 
+	# 	#df_final = candidate_df[candidate_df['ReportingUnit_Id'].isin(reporting_units)]. \
+	# 	#	sort_values(['ReportingUnit_Id', 'score'], ascending=False)
+
+	# 	# sort by absolute value of the score, descending
+	# 	# This still isn't quite right...votes_at_stake won't directly
+	# 	# correspond to the anomaly score
+	# 	#temp_df['abs_score'] = temp_df['score'].abs()
+	# 	df_final = temp_df.sort_values('score', ascending=False)
+	# 	df_final = df_final.iloc[0:8]
+	# 	df = pd.concat([df, df_final])
 	return df
 
 
