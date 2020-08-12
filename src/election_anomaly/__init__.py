@@ -595,10 +595,10 @@ class JurisdictionPrepper():
 			if missing_params:
 				ui.add_error(error, 'parameter_file', f'Parameters missing from {par_file_name}:{missing_params}')
 			else:
-				error = self.add_elements_from_datafile(elements, error, ** file_dict)
+				error = self.add_elements_from_results_file(elements, error, ** file_dict)
 		return error
 
-	def add_elements_from_datafile(self, elements: iter, error: dict, results_file=None, munger_name=None) -> dict:
+	def add_elements_from_results_file(self, elements: iter, error: dict, results_file=None, munger_name=None) -> dict:
 		"""Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
 		or not already in <element>.txt for each <element> in <elements>"""
 
