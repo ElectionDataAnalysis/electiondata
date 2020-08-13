@@ -1,40 +1,101 @@
 # How to Use the System
 
-## Get Started
- * Create the parameter files you'll need:
-   * `analyzer.par` for Analyzer class if you want it
-   * `new_jurisdiction.par` for the JurisdictionPrepper() class
-   * `run_time.par` if you will be using DataLoader class to look in detail at one file/jurisdiction/munger
-   * `multi.par` if you will be batch loading data. In this case the directory with your results file will need a `.par` file for each results file. See the `results.par` template
+## Installation
+From the root folder of your repository run `python3 setup.py install` (or if `python` is an alias for `python3` on your system, `python setup.py install`).
+
+## Parameter Files
+In the directory from which you will run the system -- which can be outside your local repository-- create the main parameter files you'll need:
+* `analyze.par` for Analyzer class if you want it
+* `jurisdiction_prep.par` for the JurisdictionPrepper() class
+* `multi.par` for loading data. 
+  
+There are templates in `templates/parameter_file_templates`. Make sure that `analyze.par` and `multi.par` are consistent:
+   * `db_paramfile` the same in both
+   * `db_name` the same in both
    
- * In a python interpreter, import the `election_anomaly` module and create a DataLoader() instance.
+In the directory indicated in `multi.par`, create a `.par` file for each results file you want to use. The results files and the `.par` files must both be in that directory. Follow the `templates/parameter_file_templates/results.par` template for the individual `.par` files.
+ 
+## Choose a Munger
+Ensure that the munger files are appropriate for your results file(s). 
+1. If the munger doesn't already exist, pick a name for your munger and create a folder with that name in the `mungers` directory to hold `format.txt` and `cdf_elements.txt`.
+2. Put the appropriate parameters in `format.txt`, following the template in `templates/munger_templates`. For example:
+
+```item	value
+header_row_count	0
+field_name_row	None
+field_names_if_no_field_name_row	County Code,County Name,Election Number,Election Date,Election Name,Unique Precinct Identifier,Precinct Polling Location,Total Registered Voters,Total Registered Republicans,Total Registered Democrats,Total Registered All Other Parties,Contest Name,District,Contest Code,Candidate etc,Candidate Party,Candidate Florida Voter Registration System ID Number,DOE Assigned Number,Vote Total
+count_columns	18
+file_type	txt
+encoding	iso-8859-1
+thousands_separator	None
 ```
->>> import election_anomaly as ea
->>> dl = ea.DataLoader()
+
+3. Put formulas for reading information from the results file into `cdf_elements.txt`. You can reference field names from your file by putting them in angle brackets. E.g., 
+
+```name	raw_identifier_formula	source
+ReportingUnit	<County Name>;Precinct <Unique Precinct Identifier>	row
+Party	<Candidate Party>	row
+CandidateContest	<Contest Name> District <District>	row
+Candidate	<Candidate etc>	row
+BallotMeasureContest	<Contest Name>	row
+BallotMeasureSelection	<DOE Assigned Number>	row
+CountItemType	total	row
 ```
-## Create or Repair a Munger
-If the munger given in `run_time.par` does not exist, `DataLoader()` will create a folder for that munger, with template files and record the error. Then `check_error()` will show the errors. E.g.
-```
->>> import election_anomaly as ea
->>> dl = ea.DataLoader(); dl.check_errors()
-(None, None, None, None, {'newly_created': '/path/to/src/mungers/xx_general2018, cdf_elements.txt, format.txt'})
->>> 
-```
-Before proceeding, edit the munger files appropriately for your data file. The system may detect errors in your munger. E.g.
-```
->>> dl=ea.DataLoader();dl.check_errors()
-(None, None, None, None, {'format.txt': {'format_problems': 'Wrong number of rows in format.txt. \nFirst column must be exactly:\nheader_row_count\nfield_name_row\ncount_columns\nfile_type\nencoding\nthousands_separator'}})
->>> 
-```
-When all errors are fixed, your munger should be able to interpret your data file.
 
 ## Create or Improve a Jurisdiction
-### Order of operations
-1. Choose (or create) the munger for the results file.
-1. Prepare your new_jurisdiction.par file, following the template. (`src/templates/parameter_file_templates/new_jurisdiction.par`)
-2. Initialize a JurisdictionPrepper.
+It's easiest to use the JurisdictionPrepper() object to create or update jurisdiction files. 
+
+1. From the directory containing `jurisdiction_prep.par`, open a python interpreter. Import the package and initialize a JurisdictionPrepper(), e.g.:
+```
+>>> import election_anomaly as ea
+>>> jp = ea.JurisdictionPrepper()
+```
 3. Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
-4. Insert any additional CandidateContests you care about into `CandidateContest.txt`, and the corresponding Offices into `Office.txt`. Note that every CandidateContest must have an Office, and that Office must be in `Office.txt`.
+```
+>>> err = jp.new_juris_files()
+```
+The program will create the necessary files in a folder (at the location `jurisdiction_path` specified in `jurisdiction_prep.par`), and a 'starter dictionary.txt' in your current directory. If something does not work as expected, check the value of `jp.new_juris_files()`, which may contain some helpful information. If the system found no errors, this value will be an empty python dictionary.
+```
+>>> err
+{}
+```
+3. Add all counties to the `ReportingUnit.txt` file. You must obey the semicolon convention so that the system will know that the counties are subunits of the jurisdiction. For example:
+```
+Name	ReportingUnitType
+Florida;Alachua County	county
+Florida;Baker County	county
+Florida;Bay County	county
+Florida;Bradford County	county
+Florida;Brevard County	county
+Florida;Broward County	county
+```
+Currently counties must be added by hand. (NB: in some states, the word 'county' is not used. For instance, Louisiana's major subdivisions are called 'parish'.)
+4. Make any necessary changes to  `Office.txt`.
+ * Ensure the jurisdiction-wide offices are correct, with the jurisdiction listed as the `ElectionDistrict`. The offices added by `new_juris_files()` are quite generic. For instance, your jurisdiction may have a 'Chief Financial Officer' rather than an 'Treasurer'. Use the jurisdiction's official titles, from an official government source. Jurisdiction-level offices should be prefaced with the two-letter postal abbreviation. For example:
+ ```
+Name	ElectionDistrict
+US President (FL)	Florida
+FL Governor	Florida
+US Senate FL	Florida
+FL Attorney General	Florida
+FL Chief Financial Officer	Florida
+FL Commissioner of Agriculture	Florida
+```
+
+
+Note that some judicial elections are retention elections, which are handled as BallotMeasureContests, not CandidateContests.
+ * Add any other offices of interest, with their ElectionDistricts. Any ElectionDistricts that are not already in `ReportingUnit.txt` must be added to that file. 
+
+5. Make any necessary changes to `CandidateContest.txt`.
+ * For each change made in the previous step to `Office.txt`, make the corresponding change to `CandidateContest.txt`. Add the general election CandidateContest for each added Office, leaving the PrimaryParty field blank. (Primaries will be handled below.) For example:
+ ```
+US President (FL)	1	US President (FL)	
+FL Governor	1	FL Governor		
+US Senate FL	1	US Senate FL	
+FL Attorney General	1	FL Attorney General	
+FL Chief Financial Officer	1	FL Chief Financial Officer	
+FL Commissioner of Agriculture	1	FL Commissioner of Agriculture	
+```
 5. Revise `XX_starter_dictionary.txt` so that the raw_identifier_value entries match what will be munged from your datafile via the formulas in `cdf_elements.txt`. 
 13. Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` (or append the entries of `XX_starter_dictionary.txt` to `dictionary.txt` and dedupe). 
 5. Apply the formula from the munger's `cdf_elements.txt` to the results file to identify raw identifiers for the CandidateContests you care about, and modify the corresponding rows in `dictionary.txt`. 
