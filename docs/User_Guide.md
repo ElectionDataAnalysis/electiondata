@@ -154,26 +154,21 @@ These will be added as precincts, unless another reporting unit type is specifie
 {}
 ```
 
-
 6. If you want to add elements (other than ReportingUnits) in bulk from all results files in a directory (with `.par` files in that same directory), use  `add_elements_from_multi_results_file(<list of elements>,<directory>, <error>)`. For example:
 ```
->>> err = jp.add_elements_from_multi_results_file(['Candidate'],'/Users/singer3/Documents/Temp/000_to-be-loaded',err)
+>>> err = jp.add_elements_from_multi_results_file(['Candidate','CandidateContest'],'/Users/singer3/Documents/Temp/000_to-be-loaded',err)
 >>> err
 {}
 ```
 Corresponding entries will be made in `dictionary.txt`, using the munged name for both the `cdf_internal_name` and the `raw_identifier_value`. Note:
     * In every file enhanced this way, look for possible variant names (e.g., 'Fred S. Martin' and 'Fred Martin' for the same candidate in two different counties. If you find variations, pick an internal database name and put a line for each raw_identfier_value variation into `dictionary.txt`.
     * Candidate: sometimes there are non-candidate lines in the file. Take a look at `Candidate.txt` to see if there are lines (such as undervotes) that you may not want included in your final results. Also look for BallotMeasureSelections you might not have noticed before and add them to `dictionary.txt`.
-    * CandidateContest: if new CandidateContests are added you will need to add the corresponding lines to `Office.txt` with 
+    * CandidateContest: Look at the new `CandidateContest.txt` file. Many may be contests you do *not* want to add -- the contests you already have (such as congressional contests) that will have been added with the raw identifier name. Some may be BallotMeasureContests that do not belong in `CandidateContest.txt`. For any new CandidateContest you do want to keep you will need to add the corresponding line to `Office.txt`. 
+    * Open `dictionary.txt` and remove any lines corresponding to items removed in the bullet points above.
 
-    9. If you did not use `add_elements_from_results_file` in the previous step, modify or create the corresponding rows in `dictionary.txt`. (Note: you can omit ReportingUnits such as contest districts from `dictionary.txt` if they aren't needed to specify the vote count in the results file.)
-11. Add any BallotMeasureContests you care about to `BallotMeasureContest.txt` and `dictionary.txt`. 
-    1. Choose raw identifiers for the BallotMeasureContests and modify `dictionary.txt` accordingly.
-    1. Specify the ElectionDistrict, which must be in the `ReportingUnit.txt` file. (If you don't know the ElectionDistrict, nothing will break if you assign it the entire jurisdiction as ElectionDistrict.)
-12. Add Candidates from the contests you care about to `Candidate.txt` and `dictionary.txt`.
-    1. Choose raw identifiers for the Candidates and modify `dictionary.txt`
-12. Add all CountItemTypes to `dictionary.txt`. 
 13. Add any useful info about the jurisdiction (such as the sources for the data) to `remark.txt`.
+
+14. Finally, if you will be munging primary elections, use the `add_primaries_to_candidate_contest()` and `jp.add_primaries_to_dict()` methods
 
 ### The JurisdictionPrepper class details
 There are routines in the `JurisdictionPrepper()` class to help prepare a jurisdiction.
