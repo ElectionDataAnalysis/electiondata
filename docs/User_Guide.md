@@ -169,13 +169,18 @@ Corresponding entries will be made in `dictionary.txt`, using the munged name fo
 13. Add any useful info about the jurisdiction (such as the sources for the data) to `remark.txt`.
 
 14. Finally, if you will be munging primary elections, use the `add_primaries_to_candidate_contest()` and `jp.add_primaries_to_dict()` methods
+```
+>>> jp.add_primaries_to_candidate_contest()
+>>> jp.add_primaries_to_dict()
+
+```
 
 ### The JurisdictionPrepper class details
 There are routines in the `JurisdictionPrepper()` class to help prepare a jurisdiction.
  * `JurisdictionPrepper()` reads parameters from the file (`new_jurisdiction.par`) to create the directories and basic necessary files. 
  * `new_juris_files()` builds a directory for the jurisdiction, including starter files with the standard contests. It calls some methods that may be independently useful:
    * `add_standard_contests()` creates records in `CandidateContest.txt` corresponding to contests that appear in many or most jurisdictions, including all federal offices as well as state house and senate offices. 
-   * `add_primary_contests()` creates a record in `CandidateContest.txt` for every CandidateContest-Party pair that can be created from `CandidateContest.txt` entries with no assigned PrimaryParty and `Party.txt` entries. (Note: records for non-existent primary contests will not break anything.) 
+   * `add_primaries_to_candidate_contest()` creates a record in `CandidateContest.txt` for every CandidateContest-Party pair that can be created from `CandidateContest.txt` entries with no assigned PrimaryParty and `Party.txt` entries. (Note: records for non-existent primary contests will not break anything.) 
    * `starter_dictionary()` creates a `starter_dictionary.txt` file in the current directory. Lines in this starter dictionary will *not* have the correct `raw_identifier_value` entries. Assigning the correct raw identifier values must be done by hand before proceeding.
  * `add_primaries_to_dict()` creates an entry in `dictionary.txt` for every CandidateContest-Party pair that can be created from the CandidateContests and Parties already in `dictioary.txt`. (Note: entries in `dictionary.txt` that never occur in your results file won't break anything.)
  * Adding precincts automatically:
@@ -203,43 +208,6 @@ Some routines in the Analyzer class are useful even in the data-loading process,
 >>> 
 ```
 
-### Load a single file with a single munger via DataLoader()
-The DataLoader class has some checking routines that are useful for ensuring the munger and jurisdiction files are working.
-
-Create a DataLoader instance and check for errors in the Jurisdiction and Munger directories specified in `run_time.par`
-```
->>> dl = ea.DataLoader();dl.check_errors()
-(None, None, None, None, None)
->>> 
-```
-If all errors are `None`, the DataLoader initialization will have loaded information in the Jurisdiction folder (e.g, contest and candidate names) into the database. You are ready to process the results file. The five error categories are: 
-
- 0. parameter errors 
- 1. missing files or consistency errors in existing jurisdiction directory
- 2. errors due to non-existent jurisdiction directory
- 3. errors arising during loading of jurisdiction data to the database
- 4. errors in the munger. 
-
-Insert information about your results file into the database. 
-```
->>> dl.track_results()
->>> 
-```
-The arguments are a shorthand name for your results file and the name of the election. The name of the election must match the name of an election already in the database. To find all available election names, use the analyzer:
-```
->>> an.display_options('election')
-['2018 General', 'none or unknown']
->>> 
-```
-Finally, load results to the database. Even on a fast laptop this may take a few minutes for, say, a 7MB file. 
-```
->>> dl.load_results()
-Datafile contents uploaded to database Engine(postgresql://postgres:***@localhost:5432/Combined_0608)
->>> 
-```
-Note that only lines with data corresponding to contests, selections and reporting units listed in the Jurisdiction directory will be processed. 
-
-### Batch Load Data
 The MultiDataLoader class allows batch uploading of all data in a given directory. That directory should contain the files to be uploaded, as well as a `.par` file for each file to be uploaded. See `templates/parameter_file_templates/results.par`. You can use `make_par_files()` to create parameter files for multiple files when they share values of the following parameters:
  * directory in which the files can be found
  * munger
