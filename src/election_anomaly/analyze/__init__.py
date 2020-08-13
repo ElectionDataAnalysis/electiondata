@@ -111,12 +111,11 @@ def create_scatter(session, jurisdiction_id, subdivision_type_id,
 	dfv = get_data_for_scatter(session, jurisdiction_id, subdivision_type_id, v_election_id, \
 		v_category, v_count_id, v_type)
 	unsummed = pd.concat([dfh, dfv])
-	#return unsummed
 	# package into dictionary
 	if h_count_id == -1:
 		x = f'All {h_type}'
 	else:
-		x = dbr.name_from_id(session, 'Candidate', v_count_id) 
+		x = dbr.name_from_id(session, 'Candidate', h_count_id) 
 	if v_count_id == -1:
 		y = f'All {v_type}'
 	else:
@@ -251,16 +250,20 @@ def short_name(text,sep=';'):
 		ru_children,left_on='ChildReportingUnit_Id',right_index=True).merge(
 		sub_ru,left_on='ParentReportingUnit_Id',right_index=True,suffixes=['','_Parent'])
 	unsummed.rename(columns={'Name_Parent':'ReportingUnit'},inplace=True)
+
 	# add columns with names
 	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'])
 	unsummed = unsummed.merge(contest_selection,how='left',left_on='ContestSelectionJoin_Id',right_index=True)
 
 	# filter based on vote count type
 	unsummed = unsummed[unsummed['CountItemType'] == count_item_type]
+	
+	# filter based on 
 
 	# cleanup for purposes of flexibility
 	#unsummed = unsummed.drop(columns='VoteCount_Id')
-	unsummed = unsummed[['Name', 'Count', 'Selection', 'Contest_Id', 'Candidate_Id']]
+	unsummed = unsummed[['ReportingUnit', 'Count', 'Selection', 'Contest_Id', 'Candidate_Id']]
+	unsummed.rename(columns={'ReportingUnit': 'Name'}, inplace=True)
 
 	# if filter_id is -1, then that means we have all contests or candidates
 	# so we need to group by
@@ -269,8 +272,8 @@ def short_name(text,sep=';'):
 		unsummed['Selection'] = f'All {count_type}'
 		unsummed['Contest_Id'] = filter_id
 		unsummed['Candidate_Id'] = filter_id
-		columns = list(unsummed.drop(columns='Count').columns)
-		unsummed = unsummed.groupby(columns)['Count'].sum().reset_index()
+	columns = list(unsummed.drop(columns='Count').columns)
+	unsummed = unsummed.groupby(columns)['Count'].sum().reset_index()
 
 	return unsummed
 
