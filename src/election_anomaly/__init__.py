@@ -893,13 +893,20 @@ class Analyzer():
         subdivision_type_id = dbr.name_to_id(self.session, 'ReportingUnitType', subdivision_type)
         h_election_id = dbr.name_to_id(self.session, 'Election', h_election)
         v_election_id = dbr.name_to_id(self.session, 'Election', v_election)
-        #results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
-        h_count_id = dbr.name_to_id(self.session, 'Candidate', h_count) 
-        v_count_id = dbr.name_to_id(self.session, 'Candidate', v_count) 
-        h_count_item_type = self.split_category_input(h_category)[0]
-        v_count_item_type = self.split_category_input(v_category)[0]
+        if h_count == 'All Candidates' or h_count == 'All Contests':
+            h_count_id = -1
+        else:
+            h_count_id = dbr.name_to_id(self.session, 'Candidate', h_count) 
+        if v_count == 'All Candidates' or v_count == 'All Contests':
+            v_count_id = -1
+        else:
+            v_count_id = dbr.name_to_id(self.session, 'Candidate', v_count) 
+        # *_type is either candidates or contest
+        h_count_item_type, h_type = self.split_category_input(h_category)
+        v_count_item_type, v_type = self.split_category_input(v_category)
         agg_results = a.create_scatter(self.session, jurisdiction_id, subdivision_type_id, 
-            h_election_id, h_count_item_type, h_count_id, v_election_id, v_count_item_type, v_count_id) 
+            h_election_id, h_count_item_type, h_count_id, h_type, 
+            v_election_id, v_count_item_type, v_count_id, v_type) 
         if fig_type:
             v.plot('scatter', agg_results, fig_type, d['rollup_directory'])
         return agg_results

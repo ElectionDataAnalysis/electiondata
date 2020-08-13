@@ -95,7 +95,8 @@ def create_rollup(
 
 
 def create_scatter(session, jurisdiction_id, subdivision_type_id, 
-            h_election_id, h_category, h_count_id, v_election_id, v_category, v_count_id):
+            h_election_id, h_category, h_count_id, h_type,
+			v_election_id, v_category, v_count_id, v_type):
 	"""<target_dir> is the directory where the resulting rollup will be stored.
 	<election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
 	<top_ru_id> is the internal cdf name of the ReportingUnit whose results will be reported
@@ -106,18 +107,25 @@ def create_scatter(session, jurisdiction_id, subdivision_type_id,
 	(unless 'total' is the only CountItemType)"""
 	# Get name of db for error messages
 	dfh = get_data_for_scatter(session, jurisdiction_id, subdivision_type_id, h_election_id, \
-		h_category, h_count_id)
+		h_category, h_count_id, h_type)
 	dfv = get_data_for_scatter(session, jurisdiction_id, subdivision_type_id, v_election_id, \
-		v_category, v_count_id)
+		v_category, v_count_id, v_type)
 	unsummed = pd.concat([dfh, dfv])
+	#return unsummed
 	# package into dictionary
-	x = dbr.name_from_id(session, 'Candidate', h_count_id)
-	y = dbr.name_from_id(session, 'Candidate', v_count_id) 
+	if h_count_id == -1:
+		x = f'All {h_type}'
+	else:
+		x = dbr.name_from_id(session, 'Candidate', v_count_id) 
+	if v_count_id == -1:
+		y = f'All {v_type}'
+	else:
+		y = dbr.name_from_id(session, 'Candidate', v_count_id) 
 	results = {
 		"x-election": dbr.name_from_id(session, 'Election', h_election_id),
 		"y-election": dbr.name_from_id(session, 'Election', v_election_id),
 		"jurisdiction": dbr.name_from_id(session, 'ReportingUnit', jurisdiction_id),
-		"contest": dbr.name_from_id(session, 'CandidateContest', unsummed.iloc[0]['Contest_Id']),
+		#"contest": dbr.name_from_id(session, 'CandidateContest', unsummed.iloc[0]['Contest_Id']),
 		"subdivision_type": dbr.name_from_id(session, 'ReportingUnitType', subdivision_type_id),
 		"x-count_item_type": h_category,
 		"y-count_item_type": v_category,
@@ -134,12 +142,17 @@ def create_scatter(session, jurisdiction_id, subdivision_type_id,
 			results["counts"][row.Name]["x"] = row.Count
 		elif row.Selection == y:
 			results["counts"][row.Name]["y"] = row.Count
-		
+	# only keep the ones where there are an (x, y) to graph
+	to_keep = {}
+	for key in results['counts']:
+		if len(results['counts'][key]) == 2:
+			to_keep[key] = results['counts'][key]
+	results['counts'] = to_keep
 	return results
 
 
 def get_data_for_scatter(session, jurisdiction_id, subdivision_type_id, 
-	election_id, count_item_type, candidate_id):
+	election_id, count_item_type, filter_id, count_type):
 	"""Since this could be data across 2 elections, grab data one election at a time"""
 	db = session.bind.url.database
 
@@ -187,13 +200,19 @@ def get_data_for_scatter(session, jurisdiction_id, subdivision_type_id,
 	contest_selection = mr.enum_col_from_id_othertext(contest_selection,'ReportingUnitType',df['ReportingUnitType'])
 	contest_selection.rename(columns={'ReportingUnitType':'contest_district_type'},inplace=True)
 
-	# limit to relevant ContestSelection pairs
-	contest_ids = ecj.Contest_Id.unique()
-	csj = contest_selection[contest_selection.Contest_Id.isin(contest_ids)]
-
-	#csj = contest_selection
-	# limit to 
-	csj = csj[csj.Candidate_Id.isin([candidate_id])]
+	# Based on count_type param, we either filter on contest or candidate
+	if count_type == 'candidates':
+		filter_column = 'Candidate_Id'
+	elif count_type == 'contests':
+		filter_column = 'Contest_Id'
+	
+	# if the filter_id is -1, that means we want all of them and we'll do 
+	# a group by later. otherwise, filter on the correct column
+	if filter_id != -1:
+		csj = contest_selection[contest_selection[filter_column].isin([filter_id])]
+	else:
+		csj = contest_selection
+	#csj = csj[csj.Candidate_Id.isin([candidate_id])]
 
 	# find ReportingUnits of the correct type that are subunits of top_ru
 	sub_ru_ids = child_rus_by_id(session,[top_ru_id],ru_type=[subdivision_type_id, ''])
@@ -238,6 +257,21 @@ def short_name(text,sep=';'):
 
 	# filter based on vote count type
 	unsummed = unsummed[unsummed['CountItemType'] == count_item_type]
+
+	# cleanup for purposes of flexibility
+	#unsummed = unsummed.drop(columns='VoteCount_Id')
+	unsummed = unsummed[['Name', 'Count', 'Selection', 'Contest_Id', 'Candidate_Id']]
+
+	# if filter_id is -1, then that means we have all contests or candidates
+	# so we need to group by
+	
+	if filter_id == -1:
+		unsummed['Selection'] = f'All {count_type}'
+		unsummed['Contest_Id'] = filter_id
+		unsummed['Candidate_Id'] = filter_id
+		columns = list(unsummed.drop(columns='Count').columns)
+		unsummed = unsummed.groupby(columns)['Count'].sum().reset_index()
+
 	return unsummed
 
 
