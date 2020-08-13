@@ -83,9 +83,8 @@ FL Chief Financial Officer	Florida
 FL Commissioner of Agriculture	Florida
 ```
 
-
 Note that some judicial elections are retention elections, which are handled as BallotMeasureContests, not CandidateContests.
- * Add any other offices of interest, with their ElectionDistricts. Any ElectionDistricts that are not already in `ReportingUnit.txt` must be added to that file. 
+ * Add any other Offices of interest, with their ElectionDistricts. Any ElectionDistricts that are not already in `ReportingUnit.txt` must be added to that file. NB: If you want to add Offices in bulk from a results file, you can wait and do it more easily following instructions below.
 
 5. Make any necessary changes to `CandidateContest.txt`.
  * For each change made in the previous step to `Office.txt`, make the corresponding change to `CandidateContest.txt`. Add the general election CandidateContest for each added Office, leaving the PrimaryParty field blank. (Primaries will be handled below.) For example:
@@ -98,14 +97,22 @@ FL Chief Financial Officer	1	FL Chief Financial Officer
 FL Commissioner of Agriculture	1	FL Commissioner of Agriculture	
 ```
 
-5. Revise `XX_starter_dictionary.txt` so that it has entries for any of the items created in the steps above. The 'cdf_internal_name' column should match the names in the jurisdiction files. The 'raw_identifier_value' column should hold the corresponding names that will be created from the results file via the munger. 
-    * It is helpful to edit the starter dictionary in an application where you can use formulas, or to manipulate the file with regular expression replacement. If you are not fluent in manipulating text some other way, you may want to use Excel and its various text manipulation formulas (such as =CONCAT())
+5. Make any necessary changes to the more straightforward elements. It's often easier to add these in bulk later directly from the results files (see below) -- unless you want to use internal names that differ from the names in the results file.
+  * `Party.txt`. You may be able to find a list of officially recognized parties on the Board of Election's website.
+  * `Candidate.txt`. 
+  * `BallotMeasure.txt`. If the ElectionDistrict is not the whole jurisdiction, you may need to add these by hand. A BallotMeasure is any yes/no question on the ballot, including judicial retention. Each BallotMeasure must have an ElectionDistrict and an Election matching an entry in the `ReportingUnit.txt` or `Election.txt` file.
+  * `Election.txt`.
+
+5. Revise `XX_starter_dictionary.txt` so that it has entries for any of the items created in the steps above (except that there is no need to add Elections to the dictionary, as they are never munged from the contents of the results file). The 'cdf_internal_name' column should match the names in the jurisdiction files. The 'raw_identifier_value' column should hold the corresponding names that will be created from the results file via the munger. 
+    * It is helpful to edit the starter dictionary in an application where you can use formulas, or to manipulate the file with regular expression replacement. If you are not fluent in manipulating text some other way, you may want to use Excel and its various text manipulation formulas (such as =CONCAT()). However, beware of Excel's tendency to revise formats on the sly. You may want to check `.txt` and `.csv` files manipulated by Excel in a plain text editor if you run into problems. (If you've been curious to learn regex replacement, now's a good time!)
     * For each Office and CandidateContest, look in your results file to see what convention that file uses. For example, using data from official Florida election results files:
 ```
 cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	US President (FL)	President of the United States
 CandidateContest	US House FL District 1	Representative in Congress District 1
 CandidateContest	US House FL District 2	Representative in Congress District 2
- House FL District 1	Representative in Congress District 1
+Office	US President (FL)	President of the United States
+Office	US House FL District 1	Representative in Congress District 1
 Office	US House FL District 2	Representative in Congress District 2
 ```
 
@@ -115,27 +122,51 @@ Make sure to change the raw_identifier_value for both the Offices and the Candid
 12. Add entries to the starter dictionary for CountItemType and BallotMeasureSelection. 
     * Internal database names for the BallotMeasure Selections are 'Yes' and 'No'. There are no alternatives.
     * Some common standard internal database names for CountItemTypes are 'absentee', 'early', 'election-day'provisional' and 'total'. You can look at the CountItemType table in the database to see the full list, and you can use any other name you like.
+```
+cdf_element	cdf_internal_name	raw_identifier_value
+Election	General Election 2018-11-06	11/6/18
+BallotMeasureSelection	No	No
+BallotMeasureSelection	No	Against
+BallotMeasureSelection	Yes	Yes
+BallotMeasureSelection	Yes	For
+CountItemType	election-day	Election Day
+CountItemType	early	One Stop
+CountItemType	absentee-mail	Absentee by Mail
+CountItemType	provisional	Provisional
+CountItemType	total	Total Votes
+CountItemType	total	total
+```
 
-12. Add any existing content from `dictionary.txt` to the starter dictionary. If the jurisdiction is brand new there won't be any existing contest. 
+12. Add any existing content from `dictionary.txt` to the starter dictionary and dedupe. If the jurisdiction is brand new there won't be any existing contest. 
 
-13. Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` (or append the entries of `XX_starter_dictionary.txt` to `dictionary.txt` and dedupe). 
-5. Apply the formula from the munger's `cdf_elements.txt` to the results file to identify raw identifiers for the CandidateContests you care about, and modify the corresponding rows in `dictionary.txt`. 
-6. If your munger is already set up you can use 
+13. Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` . 
 
-         `add_elements_from_results_file(<file_path>,<munger_name>,['Party','ReportingUnit','CandidateContest','Candidate,'BallotMeasureContest'])`
-         
- to enter elements from the file into the jurisdiction files (including `dictionary.txt`). You may have to alter the resulting rows in both files to make sure the internal database names obey any conventions.
-6. Otherwise, add any missing Parties to `Party.txt`. Modify or create the corresponding rows in `dictionary.txt` to match the party names that will be munged from the file.
-8. Add all necessary ReportingUnits to `ReportingUnit.txt` (without creating duplicates). You MUST use the naming conventions with semicolons to indicate nesting of reporting units. The jurisdiction itself (e.g., `North Carolina`) and the districts for the standard district contests will be created by `new_juris_files()`. Typically -- even if you used `add_elements_from_results_file()` -- you will need to add:
-    2. counties (e.g., `North Carolina;Alamance County`)
-    4. any reporting units used in your results file, often precincts, nested within counties (e.g., `North Carolina;Alamance County;Precinct 064`). 
-  and if you haven't used `add_elements_from_results_file()`, you will need to add:
-    1. the jurisdiction itself (e.g., `North Carolina`)
-    2. ElectionDistricts corresponding to Offices or BallotMeasureContests.
-  
-        Note: as of 8/2020, the system does not yet handle nesting of precincts inside contest districts.
+14. Run the JurisdictionPrepper method `add_sub_county_rus_from_multi_results_file(<directory>,<error>)` to add any reporting units in the results files in <directory>. 
+```
+>>> err = jp.add_sub_county_rus_from_multi_results_file('/Users/singer3/Documents/Temp/000_to-be-loaded',err)
+>>> err
+{}
+```
+These will be added as precincts, unless another reporting unit type is specified with the optional argument `sub_ru_type`, e.g.:
+```
+>>> err = jp.add_sub_county_rus_from_multi_results_file('/Users/singer3/Documents/Temp/000_to-be-loaded',err,sub_ru_type='congressional')
+>>> err
+{}
+```
+
+
+6. If you want to add elements (other than ReportingUnits) in bulk from all results files in a directory (with `.par` files in that same directory), use  `add_elements_from_multi_results_file(<list of elements>,<directory>, <error>)`. For example:
+```
+>>> err = jp.add_elements_from_multi_results_file(['Candidate'],'/Users/singer3/Documents/Temp/000_to-be-loaded',err)
+>>> err
+{}
+```
+Corresponding entries will be made in `dictionary.txt`, using the munged name for both the `cdf_internal_name` and the `raw_identifier_value`. Note:
+    * In every file enhanced this way, look for possible variant names (e.g., 'Fred S. Martin' and 'Fred Martin' for the same candidate in two different counties. If you find variations, pick an internal database name and put a line for each raw_identfier_value variation into `dictionary.txt`.
+    * Candidate: sometimes there are non-candidate lines in the file. Take a look at `Candidate.txt` to see if there are lines (such as undervotes) that you may not want included in your final results. Also look for BallotMeasureSelections you might not have noticed before and add them to `dictionary.txt`.
+    * CandidateContest: if new CandidateContests are added you will need to add the corresponding lines to `Office.txt` with 
+
     9. If you did not use `add_elements_from_results_file` in the previous step, modify or create the corresponding rows in `dictionary.txt`. (Note: you can omit ReportingUnits such as contest districts from `dictionary.txt` if they aren't needed to specify the vote count in the results file.)
-10. If necessary, add the relevant election to `Election.txt`.
 11. Add any BallotMeasureContests you care about to `BallotMeasureContest.txt` and `dictionary.txt`. 
     1. Choose raw identifiers for the BallotMeasureContests and modify `dictionary.txt` accordingly.
     1. Specify the ElectionDistrict, which must be in the `ReportingUnit.txt` file. (If you don't know the ElectionDistrict, nothing will break if you assign it the entire jurisdiction as ElectionDistrict.)
