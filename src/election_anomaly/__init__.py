@@ -3,6 +3,7 @@ from election_anomaly import user_interface as ui
 from election_anomaly import munge_routines as mr
 from sqlalchemy.orm import sessionmaker
 import datetime
+from pathlib import Path
 import os
 import pandas as pd
 from pprint import pprint
@@ -412,7 +413,9 @@ class JurisdictionPrepper():
 
 		# Feature create starter dictionary.txt with cdf_internal name
 		#  used as placeholder for raw_identifier_value
-		error['dictionary'] = self.starter_dictionary()
+		e = self.starter_dictionary()
+		if e:
+			ui.add_erro(error,'dictionary',e)
 		return error
 
 	def add_primaries_to_dict(self) -> str:

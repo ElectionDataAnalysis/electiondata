@@ -218,7 +218,7 @@ def ensure_jurisdiction_dir(juris_path,project_root,ignore_empty=False):
     path_output = None
     # create jurisdiction directory
     try:
-        os.mkdir(juris_path)
+        juris_path.mkdir(parents=True)
     except FileExistsError:
         pass
     else:

@@ -96,7 +96,21 @@ FL Attorney General	1	FL Attorney General
 FL Chief Financial Officer	1	FL Chief Financial Officer	
 FL Commissioner of Agriculture	1	FL Commissioner of Agriculture	
 ```
-5. Revise `XX_starter_dictionary.txt` so that the raw_identifier_value entries match what will be munged from your datafile via the formulas in `cdf_elements.txt`. 
+5. Revise `XX_starter_dictionary.txt` so that it has entries for any of the items created in the steps above. The 'cdf_internal_name' column should match the names in the jurisdiction files. The 'raw_identifier_value' column should hold the corresponding names that will be created from the results file via the munger. 
+    * It is helpful to edit the starter dictionary in an application where you can use formulas, or to manipulate the file with regular expression replacement. If you are not fluent in manipulating text some other way, you may want to use Excel and its various text manipulation formulas (such as =CONCAT())
+    * For each Office and CandidateContest, look in your results file to see what convention that file uses. For example, using data from official Florida election results files:
+```
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	US House FL District 1	Representative in Congress District 1
+CandidateContest	US House FL District 2	Representative in Congress District 2
+ House FL District 1	Representative in Congress District 1
+Office	US House FL District 2	Representative in Congress District 2
+```
+
+Make sure to change the raw_identifier_value for both the Offices and the CandidateContests. You may or may not need to change the corresponding ReportingUnits -- if they don't appear explicitly in any of your results files, their raw_identifier_values are irrelevant.
+    * NB: it is perfectly OK to have more than one raw_identifier_value for a single element. This can be necessary if, say, different counties use different names for a single contest.
+
+the raw_identifier_value entries match what will be munged from your datafile via the formulas in `cdf_elements.txt`. 
 13. Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` (or append the entries of `XX_starter_dictionary.txt` to `dictionary.txt` and dedupe). 
 5. Apply the formula from the munger's `cdf_elements.txt` to the results file to identify raw identifiers for the CandidateContests you care about, and modify the corresponding rows in `dictionary.txt`. 
 6. If your munger is already set up you can use 
