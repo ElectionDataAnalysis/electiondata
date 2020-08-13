@@ -125,24 +125,21 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
 	return wr, mu, error
 
 
-def pick_juris_from_filesystem(project_root,juriss_dir='jurisdictions',juris_name=None,check_files=False):
-	"""Returns a State object.
-	If <jurisdiction_name> is given, this just initializes based on info
-	in the folder with that name; """
+def pick_juris_from_filesystem(juris_path,project_root,check_files=False):
+	"""Returns a State object. <juris_path> is the path to the directory containing the
+	defining files for the particular jurisdiction.
+	"""
 
 	missing_values = {}
 
-	path_to_jurisdictions = os.path.join(project_root,juriss_dir)
-
 	if check_files:
-		juris_path = os.path.join(path_to_jurisdictions,juris_name)
 		missing_values = jm.ensure_jurisdiction_dir(juris_path,project_root)
 
 	# initialize the jurisdiction
 	if missing_values:
 		ss = None
 	else:
-		ss = jm.Jurisdiction(juris_name,path_to_jurisdictions)
+		ss = jm.Jurisdiction(juris_path)
 	return ss, missing_values
 
 
@@ -292,7 +289,9 @@ def new_datafile(
 			err['datafile'] = [e]
 		return err
 
-	print(f'Datafile contents uploaded with munger {munger.name} to database {session.bind.engine}')
+	print(f'Results uploaded with munger {munger.name} '
+		  f'to database {session.bind.engine}\nfrom file {raw_path}\n'
+		  f'assuming jurisdiction {juris.path_to_juris_dir}')
 	if err == dict():
 		err = None
 	return err

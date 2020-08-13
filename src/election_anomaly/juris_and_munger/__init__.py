@@ -33,18 +33,9 @@ class Jurisdiction:
             return error
         return None
 
-    def __init__(self,short_name,path_to_parent_dir):
-        """ short_name is the name of the directory containing the jurisdiction info, including data,
-         and is used other places as well.
-         path_to_parent_dir is the parent directory of dir_name
-        """
-        self.short_name = short_name
-        self.path_to_juris_dir = os.path.join(path_to_parent_dir, self.short_name)
-
-        remark_path = os.path.join(self.path_to_juris_dir,'remark.txt')
-        if os.path.exists(remark_path):
-            with open(os.path.join(self.path_to_juris_dir,'remark.txt'),'r') as f:
-                remark = f.read()
+    def __init__(self,path_to_juris_dir):
+        self.short_name = Path(path_to_juris_dir).name
+        self.path_to_juris_dir = path_to_juris_dir
 
 
 class Munger:
@@ -218,7 +209,7 @@ def ensure_jurisdiction_dir(juris_path,project_root,ignore_empty=False):
     path_output = None
     # create jurisdiction directory
     try:
-        os.mkdir(juris_path)
+        Path(juris_path).mkdir(parents=True)
     except FileExistsError:
         pass
     else:
