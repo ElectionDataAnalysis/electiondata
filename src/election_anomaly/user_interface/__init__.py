@@ -289,7 +289,9 @@ def new_datafile(
 			err['datafile'] = [e]
 		return err
 
-	print(f'Datafile contents uploaded with munger {munger.name} to database {session.bind.engine}')
+	print(f'Results uploaded with munger {munger.name} '
+		  f'to database {session.bind.engine}\nfrom file {raw_path}\n'
+		  f'assuming jurisdiction {juris.path_to_juris_dir}')
 	if err == dict():
 		err = None
 	return err

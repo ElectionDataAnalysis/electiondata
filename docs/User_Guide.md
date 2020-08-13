@@ -225,6 +225,14 @@ mdl = ea.MultiDataLoader()
 err = mdl.load_all()
 ```
 
+If something doesn't work, check the value returned by the `load_all()` method. In this example there was an extraneous file `dictionary copy.txt` in the jurisdiction directory.
+```
+>>> mdl = ea.MultiDataLoader()
+>>> err = mdl.load_all()
+>>> err
+{'BAK_PctResults20181106.par': (None, {'extraneous_files_in_juris_directory': ['dictionary copy.txt']}, {'juris_created': False}, None, None), 'ALA_PctResults20181106.par': (None, {'extraneous_files_in_juris_directory': ['dictionary copy.txt']}, {'juris_created': False}, None, None)}
+```
+
 Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.par` file for that results file has `munger_name` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
 
 If every file in your directory will use the same munger(s) -- e.g., if the jurisdiction offers results in a directory of one-county-at-a-time files, such AZ or FL -- then you may want to use `make_par_files()`, whose arguments are:
