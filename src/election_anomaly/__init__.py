@@ -69,9 +69,8 @@ class MultiDataLoader():
 			print('Cannot connect to database. Exiting.')
 			quit()
 
-	def load_all(self) -> dict:
+	def load_all(self, load_jurisdictions: bool=True) -> dict:
 		"""returns a dictionary of any files that threw an error"""
-		err = dict()
 		mungers_path = os.path.join(self.d['project_root'],'mungers')
 
 		# list .par files and pull their jurisdiction_paths
@@ -86,19 +85,22 @@ class MultiDataLoader():
 				single_data_loader_pars, optional_keys=['aux_data_dir'], param_file=par_file)
 			juris_path[f] = params[f]['jurisdiction_path']
 
+		err = dict()
 		# group .par files by jurisdiction_path
 		jurisdiction_paths = {juris_path[f] for f in par_files}
 		files = dict()
 		for jp in jurisdiction_paths:
-			print(f'Loading jurisdiction from {jp} to {self.session.bind}')
-			juris, juris_err = ui.pick_juris_from_filesystem(jp, self.d['project_root'],check_files=True)
-			if juris:
-				juris_load_err = juris.load_juris_to_db(self.session, self.d['project_root'])
-				if juris_load_err:
-					err['juris_load_error'] = juris_load_err
-			else:
-				err['jurisdiction-error'] = juris_err
-				# TODO check that previous line overwrites nothing
+			if load_jurisdictions:
+				juris, juris_err = ui.pick_juris_from_filesystem(jp, self.d['project_root'], check_files=True)
+				if juris is None:
+					err['jurisdiction_error'] = juris_err
+					return err
+				print(f'Loading jurisdiction from {jp} to {self.session.bind}')
+				if juris:
+					juris_load_err = juris.load_juris_to_db(self.session, self.d['project_root'])
+					if juris_load_err:
+						err['juris_load_error'] = juris_load_err
+						return err
 			# process all files from the given jurisdiction
 			files[jp] = [f for f in par_files if juris_path[f]==jp]
 			print(f'Processing results files {files[jp]}')
