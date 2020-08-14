@@ -14,11 +14,6 @@ from election_anomaly import juris_and_munger as jm
 from election_anomaly import preparation as prep
 
 # constants
-data_loader_pars = [
-	'project_root','juris_name','db_paramfile','db_name','munger_name',
-	'results_file', 'results_short_name', 'results_download_date', 'results_source', 'results_note',
-	'top_reporting_unit','election']
-
 single_data_loader_pars = ['jurisdiction_path', 'munger_name', 'results_file',
 	'results_short_name', 'results_download_date', 'results_source', 'results_note',
 	'top_reporting_unit', 'election', 'aux_data_dir']
@@ -571,13 +566,13 @@ class JurisdictionPrepper():
 		self.congressional = int(self.d['count_of_us_house_districts'])
 
 
-def make_par_files(dir: str, munger_name: str, top_ru: str, election: str, download_date: str, source: str,
+def make_par_files(dir: str, munger_name: str, jurisdiction_path: str, top_ru: str, election: str, download_date: str, source: str,
 				   results_note: str=None, aux_data_dir: str=''):
 	"""Utility to create parameter files for multiple files. Makes a parameter file for each file in <dir>,
 	once all other necessary parameters are specified. """
 	data_file_list = os.listdir(dir)
 	for f in data_file_list:
-		par_text = f'[election_anomaly]\nresults_file={f}\njuris_name=Florida\nmunger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\nresults_short_name={top_ru}_{f}\nresults_download_date={download_date}\nresults_source={source}\nresults_note={results_note}\naux_data_dir={aux_data_dir}\n'
+		par_text = f'[election_anomaly]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\nmunger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\nresults_short_name={top_ru}_{f}\nresults_download_date={download_date}\nresults_source={source}\nresults_note={results_note}\naux_data_dir={aux_data_dir}\n'
 		par_name = '.'.join(f.split('.')[:-1]) + '.par'
 		with open(os.path.join(dir,par_name),'w') as p:
 			p.write(par_text)
