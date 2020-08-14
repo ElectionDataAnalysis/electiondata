@@ -90,8 +90,7 @@ class MultiDataLoader():
 		jurisdiction_paths = {juris_path[f] for f in par_files}
 		files = dict()
 		for jp in jurisdiction_paths:
-			print(f'Processing files with jurisdiction {jp}')
-			files[jp] = [f for f in par_files if juris_path[f]==jp]
+			print(f'Loading jurisdiction from {jp} to {self.session.bind}')
 			juris, juris_err = ui.pick_juris_from_filesystem(jp, self.d['project_root'],check_files=True)
 			if juris:
 				juris_load_err = juris.load_juris_to_db(self.session, self.d['project_root'])
@@ -101,6 +100,8 @@ class MultiDataLoader():
 				err['jurisdiction-error'] = juris_err
 				# TODO check that previous line overwrites nothing
 			# process all files from the given jurisdiction
+			files[jp] = [f for f in par_files if juris_path[f]==jp]
+			print(f'Processing results files {files[jp]}')
 			for f in files[jp]:
 				sdl = SingleDataLoader(
 					self.d['results_dir'], f, self.d['project_root'], self.session, mungers_path,
