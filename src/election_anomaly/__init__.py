@@ -98,7 +98,8 @@ class MultiDataLoader():
 				if juris_load_err:
 					err['juris_load_error'] = juris_load_err
 			else:
-				ui.add_error(err,'jurisdiction-error', juris_err)
+				err['jurisdiction-error'] = juris_err
+				# TODO check that previous line overwrites nothing
 			# process all files from the given jurisdiction
 			for f in files[jp]:
 				sdl = SingleDataLoader(
@@ -481,9 +482,11 @@ class JurisdictionPrepper():
 		prep.write_element(self.d['jurisdiction_path'],'dictionary',pd.concat([ru_dict_old,dict_add]))		# TODO test this!!!
 		return error
 
-	def add_sub_county_rus_from_multi_results_file(self, dir: str, error: dict, sub_ru_type: str='precinct') -> dict:
+	def add_sub_county_rus_from_multi_results_file(self, dir: str, error: dict=None, sub_ru_type: str='precinct') -> dict:
 		"""Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
 		for each file in <dir> named (with munger) in a .par file in the directory"""
+		if not error:
+			error = dict()
 		for par_file_name in [x for x in os.listdir(dir) if x[-4:]=='.par']:
 			par_file = os.path.join(dir, par_file_name)
 			file_dict, missing_params = ui.get_runtime_parameters(
