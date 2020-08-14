@@ -893,15 +893,21 @@ class Analyzer():
         subdivision_type_id = dbr.name_to_id(self.session, 'ReportingUnitType', subdivision_type)
         h_election_id = dbr.name_to_id(self.session, 'Election', h_election)
         v_election_id = dbr.name_to_id(self.session, 'Election', v_election)
+        # *_type is either candidates or contests
+        h_count_item_type, h_type = self.split_category_input(h_category)
+        v_count_item_type, v_type = self.split_category_input(v_category)
         if h_count == 'All Candidates' or h_count == 'All Contests':
             h_count_id = -1
-        else:
+        elif h_type == 'candidates':
             h_count_id = dbr.name_to_id(self.session, 'Candidate', h_count) 
+        elif h_type == 'contests':
+            h_count_id = dbr.name_to_id(self.session, 'CandidateContest', h_count) 
         if v_count == 'All Candidates' or v_count == 'All Contests':
             v_count_id = -1
-        else:
+        elif v_type == 'candidates':
             v_count_id = dbr.name_to_id(self.session, 'Candidate', v_count) 
-        # *_type is either candidates or contest
+        elif v_type == 'contests':
+            v_count_id = dbr.name_to_id(self.session, 'CandidateContest', v_count) 
         h_count_item_type, h_type = self.split_category_input(h_category)
         v_count_item_type, v_type = self.split_category_input(v_category)
         agg_results = a.create_scatter(self.session, jurisdiction_id, subdivision_type_id, 

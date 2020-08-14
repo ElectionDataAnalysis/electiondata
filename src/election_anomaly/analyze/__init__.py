@@ -114,12 +114,16 @@ def create_scatter(session, jurisdiction_id, subdivision_type_id,
 	# package into dictionary
 	if h_count_id == -1:
 		x = f'All {h_type}'
-	else:
+	elif h_type == 'candidates':
 		x = dbr.name_from_id(session, 'Candidate', h_count_id) 
+	elif h_type == 'contests':
+		x = dbr.name_from_id(session, 'CandidateContest', h_count_id) 
 	if v_count_id == -1:
 		y = f'All {v_type}'
-	else:
+	elif v_type == 'candidates':
 		y = dbr.name_from_id(session, 'Candidate', v_count_id) 
+	elif v_type == 'contests':
+		y = dbr.name_from_id(session, 'CandidateContest', v_count_id) 
 	results = {
 		"x-election": dbr.name_from_id(session, 'Election', h_election_id),
 		"y-election": dbr.name_from_id(session, 'Election', v_election_id),
@@ -138,9 +142,15 @@ def create_scatter(session, jurisdiction_id, subdivision_type_id,
 
 	for i, row in unsummed.iterrows():
 		if row.Selection == x:
-			results["counts"][row.Name]["x"] = row.Count
+			if x in results["counts"][row.Name]:
+				results["counts"][row.Name]["x"] += row.Count
+			else:
+				results["counts"][row.Name]["x"] = row.Count
 		elif row.Selection == y:
-			results["counts"][row.Name]["y"] = row.Count
+			if y in results["counts"][row.Name]:
+				results["counts"][row.Name]["y"] += row.Count
+			else:
+				results["counts"][row.Name]["y"] = row.Count
 	# only keep the ones where there are an (x, y) to graph
 	to_keep = {}
 	for key in results['counts']:
@@ -267,11 +277,14 @@ def short_name(text,sep=';'):
 
 	# if filter_id is -1, then that means we have all contests or candidates
 	# so we need to group by
-	
 	if filter_id == -1:
 		unsummed['Selection'] = f'All {count_type}'
 		unsummed['Contest_Id'] = filter_id
 		unsummed['Candidate_Id'] = filter_id
+
+	if count_type == 'contests':
+		selection = dbr.name_from_id(session, 'CandidateContest', filter_id)
+		unsummed['Selection'] = selection
 	columns = list(unsummed.drop(columns='Count').columns)
 	unsummed = unsummed.groupby(columns)['Count'].sum().reset_index()
 
