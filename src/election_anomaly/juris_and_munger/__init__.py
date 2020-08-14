@@ -11,7 +11,7 @@ from pathlib import Path
 
 
 class Jurisdiction:
-    def load_juris_to_db(self,session,project_root):
+    def load_juris_to_db(self,session,project_root) -> dict:
         """Load info from each element in the Jurisdiction's directory into the db"""
         # for element in Jurisdiction directory (except dictionary, remark)
         juris_elements = [
@@ -23,10 +23,13 @@ class Jurisdiction:
         juris_elements = leading + [
             x for x in juris_elements if x not in leading and x not in trailing
         ] + trailing
+        error = dict()
         for element in juris_elements:
             # read df from Jurisdiction directory
             error = load_juris_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root,error)
-        return
+        if error == dict():
+            error = None
+        return error
 
     def __init__(self,path_to_juris_dir):
         self.short_name = Path(path_to_juris_dir).name

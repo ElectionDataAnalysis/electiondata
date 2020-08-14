@@ -59,11 +59,15 @@ class MultiDataLoader():
 		error = dbr.establish_connection(paramfile=self.d['db_paramfile'], db_name=self.d['db_name'])
 		if error:
 			dbr.create_new_db(self.d['project_root'], self.d['db_paramfile'],  self.d['db_name'])
-	
+
 		# connect to db
-		self.engine = dbr.sql_alchemy_connect(paramfile=self.d['db_paramfile'],  db_name=self.d['db_name'])
-		Session = sessionmaker(bind=self.engine)
-		self.session = Session()
+		try:
+			self.engine = dbr.sql_alchemy_connect(paramfile=self.d['db_paramfile'],  db_name=self.d['db_name'])
+			Session = sessionmaker(bind=self.engine)
+			self.session = Session()
+		except Exception as e:
+			print('Cannot connect to database. Exiting.')
+			quit()
 
 	def load_all(self) -> dict:
 		"""returns a dictionary of any files that threw an error"""
@@ -90,7 +94,9 @@ class MultiDataLoader():
 			files[jp] = [f for f in par_files if juris_path[f]==jp]
 			juris, juris_err = ui.pick_juris_from_filesystem(jp, self.d['project_root'],check_files=True)
 			if juris:
-				juris.load_juris_to_db(self.session, self.d['project_root'])
+				juris_load_err = juris.load_juris_to_db(self.session, self.d['project_root'])
+				if juris_load_err:
+					err['juris_load_error'] = juris_load_err
 			else:
 				ui.add_error(err,'jurisdiction-error', juris_err)
 			# process all files from the given jurisdiction

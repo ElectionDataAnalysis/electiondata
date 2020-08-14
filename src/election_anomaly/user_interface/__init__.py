@@ -274,11 +274,6 @@ def new_datafile(
 		err['datafile'] = ['Cleaning of datafile failed. Results not loaded to database.']
 		return err
 
-	# NB: info_cols will have suffix added by munger
-
-	# if jurisdiction changed, load to db
-	juris.load_juris_to_db(session,project_root)
-
 	try:
 		err = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,err,ids=results_info)
 	except:
