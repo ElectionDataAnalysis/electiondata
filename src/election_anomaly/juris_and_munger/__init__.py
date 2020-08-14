@@ -23,15 +23,10 @@ class Jurisdiction:
         juris_elements = leading + [
             x for x in juris_elements if x not in leading and x not in trailing
         ] + trailing
-        error = {}
         for element in juris_elements:
             # read df from Jurisdiction directory
-            load_juris_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root,error)
-        if error:
-            for element in juris_elements:
-                dbr.truncate_table(session, element)
-            return error
-        return None
+            error = load_juris_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root,error)
+        return
 
     def __init__(self,path_to_juris_dir):
         self.short_name = Path(path_to_juris_dir).name
@@ -574,7 +569,7 @@ def juris_dependency_dictionary():
 
 # TODO before processing jurisdiction files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
-def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,load_refs=True):
+def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,load_refs=True) -> dict:
     """ TODO
     """
     cdf_schema_def_dir = os.path.join(project_root,'election_anomaly/CDF_schema_def_info')
@@ -585,6 +580,8 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
     df = pd.read_csv(element_fpath,sep='\t',encoding='iso-8859-1') \
         .fillna('none or unknown')
     # TODO check that df has the right format
+
+    error_original = error.copy()
 
     # TODO deal with duplicate 'none or unknown' records
     if element != 'ExternalIdentifier':
@@ -647,9 +644,9 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
             except ForeignKeyException as e:
                 if load_refs:
                     for r in refs:
-                        load_juris_dframe_into_cdf(session,r,juris_path,project_root,error)
+                        error = load_juris_dframe_into_cdf(session,r,juris_path,project_root,error)
                     # try again to load main element (but don't load referred-to again)
-                    load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,load_refs=False)
+                    error = load_juris_dframe_into_cdf(session,element,juris_path,project_root,error_original,load_refs=False)
             except Exception as e:
                 if not element in error:
                     error[element] = {}
@@ -663,7 +660,7 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
         if not element in error:
             error[element] = {}
         error[element]["database"] = err
-    return
+    return error
 
 
 def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,load_refs,error):

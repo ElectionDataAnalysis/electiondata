@@ -65,34 +65,68 @@ class MultiDataLoader():
 		Session = sessionmaker(bind=self.engine)
 		self.session = Session()
 
-	def load_all(self):
+	def load_all(self) -> dict:
 		"""returns a dictionary of any files that threw an error"""
 		err = dict()
-		munger_path = os.path.join(self.d['project_root'],'mungers')
+		mungers_path = os.path.join(self.d['project_root'],'mungers')
+
+		# list .par files and pull their jurisdiction_paths
 		par_files = [f for f in os.listdir(self.d['results_dir']) if f[-4:] == '.par']
+		params = dict()
+		param_err = dict()
+		juris_path = dict()
 		for f in par_files:
-			sdl = SingleDataLoader(self.d['results_dir'], f, self.d['project_root'], self.session, munger_path)
-			errors = sdl.check_errors()
-			if errors == (None,None,None,None,None):
-				# try to load data
-				load_error = sdl.load_results()
-				if load_error:
-					err[f] = load_error
-				else:
-					# move results file and its parameter file to the archive directory
-					ui.archive_results(f, self.d['results_dir'], self.d['archive_dir'])
-					ui.archive_results(sdl.d['results_file'], self.d['results_dir'], self.d['archive_dir'])
+			# grab parameters
+			par_file = os.path.join(self.d['results_dir'], f)
+			params[f], param_err[f] = ui.get_runtime_parameters(
+				single_data_loader_pars, optional_keys=['aux_data_dir'], param_file=par_file)
+			juris_path[f] = params[f]['jurisdiction_path']
+
+		# group .par files by jurisdiction_path
+		jurisdiction_paths = {juris_path[f] for f in par_files}
+		files = dict()
+		for jp in jurisdiction_paths:
+			print(f'Processing files with jurisdiction {jp}')
+			files[jp] = [f for f in par_files if juris_path[f]==jp]
+			juris, juris_err = ui.pick_juris_from_filesystem(jp, self.d['project_root'],check_files=True)
+			if juris:
+				juris.load_juris_to_db(self.session, self.d['project_root'])
 			else:
-				err[f] = errors
+				ui.add_error(err,'jurisdiction-error', juris_err)
+			# process all files from the given jurisdiction
+			for f in files[jp]:
+				sdl = SingleDataLoader(
+					self.d['results_dir'], f, self.d['project_root'], self.session, mungers_path,
+					juris)
+				errors = sdl.check_errors()
+				if errors == (None,None):
+					# try to load data
+					load_error = sdl.load_results()
+
+					# print warnings and return errors
+					key_list = [k for k in load_error.keys()]
+					for k in key_list:
+						if 'warning' in k:
+							print(f'Warning: {load_error.pop(k)}')
+					if load_error:
+						err[f] = load_error
+					else:
+						# move results file and its parameter file to the archive directory
+						ui.archive_results(f, self.d['results_dir'], self.d['archive_dir'])
+						ui.archive_results(sdl.d['results_file'], self.d['results_dir'], self.d['archive_dir'])
+						print(f'\tArchived {f} and its results file')
+				else:
+					err[f] = errors
 		return err
 
 
 class SingleDataLoader():
-	def __init__(self, results_dir, par_file_name, project_root, session, munger_path):
+	def __init__(self, results_dir, par_file_name, project_root, session, munger_path, juris):
 		# adopt passed variables needed in future as attributes
 		self.project_root = project_root
 		self.session = session
 		self.results_dir = results_dir
+		self.juris = juris
 		# grab parameters
 		par_file = os.path.join(results_dir,par_file_name)
 		self.d, self.parameter_err = ui.get_runtime_parameters(
@@ -106,15 +140,6 @@ class SingleDataLoader():
 		if self.d['aux_data_dir'] in ['None','']:
 			self.d['aux_data_dir'] = None
 
-		# pick jurisdiction
-		self.juris, self.juris_err = ui.pick_juris_from_filesystem(
-			self.d['jurisdiction_path'],project_root,check_files=True)
-
-		if self.juris:
-			self.juris_load_err = self.juris.load_juris_to_db(session, project_root)
-		else:
-			self.juris_load_err = None
-
 		# pick mungers
 		self.munger = dict()
 		self.munger_err = dict()
@@ -127,12 +152,7 @@ class SingleDataLoader():
 			self.munger_err = None
 
 	def check_errors(self):
-		juris_exists = None
-		if not self.juris:
-			juris_exists = {"juris_created": False}
-		
-		return self.parameter_err, self.juris_err, juris_exists, \
-			self.juris_load_err, self.munger_err
+		return self.parameter_err, self.munger_err
 
 	def track_results(self):
 		filename = self.d['results_file']
@@ -155,7 +175,7 @@ class SingleDataLoader():
 						 (df['Election_Id']==election_id)]['Id'].to_list()[0]
 			return [datafile_id, election_id], e
 
-	def load_results(self):
+	def load_results(self) -> dict:
 		results_info, e = self.track_results()
 		if e:
 			err = {'database':e}
