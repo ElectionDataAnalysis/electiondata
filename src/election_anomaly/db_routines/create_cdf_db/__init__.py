@@ -90,8 +90,11 @@ def create_table(metadata,id_seq,name,table_type,dirpath,engine,session):
             df[filename] = pd.read_csv(os.path.join(t_path,f'{filename}.txt'),sep='\t')
 
         # define table
+        # content field names
         df['fields']['datatype'].replace({'Encoding':'String'},inplace=True)
         field_col_list = [Column(r['fieldname'],eval(r['datatype'])) for i,r in df['fields'].iterrows()]
+        field_col_names = [r['fieldname'] for i,r in df['fields'].iterrows()]
+
         null_constraint_list = [
             CheckConstraint(
                 f'"{r["not_null_fields"]}" IS NOT NULL',name=f'{short_name}_{r["not_null_fields"]}_not_null')
@@ -100,14 +103,23 @@ def create_table(metadata,id_seq,name,table_type,dirpath,engine,session):
         #  e.g. Contest_Id to BallotMeasureContest and CandidateContest
         foreign_key_list = [Column(r['fieldname'],ForeignKey(f'{r["refers_to"]}.Id'))
                           for i,r in df['foreign_keys'].iterrows() if ';' not in r['refers_to']]
-        # unique constraints
-        df['unique_constraints']['arg_list'] = df['unique_constraints']['unique_constraint'].str.split(',')
-        unique_constraint_list = [UniqueConstraint(*r['arg_list'],name=f'{short_name}_ux{i}')
-                                  for i,r in df['unique_constraints'].iterrows()]
+        foreign_ish_keys = [r['fieldname'] for i,r in df['foreign_keys'].iterrows()]
+
         # enumerations
         enum_id_list = [Column(f'{r["enumeration"]}_Id',ForeignKey(f'{r["enumeration"]}.Id'))
                         for i,r in df['enumerations'].iterrows()]
         enum_other_list = [Column(f'Other{r["enumeration"]}',String) for i,r in df['enumerations'].iterrows()]
+        enum_id_names = [f'{r["enumeration"]}_Id' for i,r in df['enumerations'].iterrows()]
+        enum_other_names = [f'Other{r["enumeration"]}' for i,r in df['enumerations'].iterrows()]
+
+        # specified unique constraints
+        df['unique_constraints']['arg_list'] = df['unique_constraints']['unique_constraint'].str.split(',')
+        unique_constraint_list = [UniqueConstraint(*r['arg_list'],name=f'{short_name}_ux{i}')
+                                  for i,r in df['unique_constraints'].iterrows()]
+
+        # require uniqueness for entire record (except `Id` and `timestamp`)
+        all_content_fields = field_col_names + enum_id_names + enum_other_names + foreign_ish_keys
+        unique_constraint_list.append(UniqueConstraint(*all_content_fields, name = f'{short_name}_no_dupes'))
 
         # add timestamp to _datafile
         if name == '_datafile':
@@ -119,7 +131,6 @@ def create_table(metadata,id_seq,name,table_type,dirpath,engine,session):
               Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
               * field_col_list, * enum_id_list, * enum_other_list,
               * foreign_key_list, * null_constraint_list, * unique_constraint_list, * time_stamp_list)
-
 
     elif table_type == 'enumerations':
         if name == 'BallotMeasureSelection':

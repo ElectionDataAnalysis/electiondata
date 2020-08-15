@@ -278,14 +278,61 @@ def add_foreign_key_name_col(sess,df,foreign_key_col,foreign_key_element,drop_ol
     return df_copy
 
 
+def NEW_dframe_to_sql(dframe: pd.DataFrame, session, element: str, index_col: str= 'Id', flush: bool=True,
+        raw_to_votecount: bool=False, return_records: str='all') -> [pd.DataFrame, str]:
+    """Create working dataframe: Drop columns and add null columns as necessary to <dframe> so that it matches the non-Id columns of the
+    <element> table in the db. Add rows of resulting DataFrame to db (without creating dupes) and append
+    <element>.Id to working dataframe (or if <return_records> == 'all', just pull the whole db table.
+    raw_to_votecount has some columns added, needs special treatment
+    ReportingUnit gets special treatment: needs to process any nesting relationships indicated by semicolons in names """
+
+    #NB: we assume that the <element> table in the database has a uniqueness constraint jointly for all fields
+    # except Id and timestamp.
+
+    working = dframe.copy()
+    # pull structure of <element> table
+    q = "SELECT column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = %s"
+    target_columns = [x for (x,) in raw_query_via_sqlalchemy(session,q,[],[element]) if x not in ['Id','created_at']]
+
+    # TODO alter dframe to match structure [
+    dframe_only_cols = [x for x in working.columns if x not in target_columns]
+    target_only_cols = [x for x in target_columns if x not in working.columns]
+    intersection_cols = [x for x in target_columns if x in working.columns]
+
+    # remove columns that don't exist in target element
+    working = working.drop(dframe_only_cols, axis=1)
+
+    # add columns that exist in target element but are missing from original dframe
+    for c in target_only_cols:
+        working.loc[:,c] = None
+
+    # TODO while processing VoteCount, there may be "dupes" on the real columns
+    #  of VoteCount, because existing records have null ECJ_Id and CSJ_Id.
+    #  Might need to UPSERT these. Maybe don't need to add those extra columns
+    #  to VoteCount after all!
+
+    # TODO insert records to db and pull records (now with Id!) matching dframe, obeying <return_records> flag
+        # TODO "INSERT INTO <element> (<target_columns>) VALUES (<from working>)
+        #  ON CONFLICT DO NOTHING RETURNING *" will get all new (with Id)
+
+        # TODO drop from <working> all rows that were returned.
+
+        #  TODO Get the rest with "SELECT * FROM <element> WHERE <~content matches~>"
+
+    # TODO under construction
+    up_to_date_dframe = pd.DataFrame()
+    error_string = ''
+    return up_to_date_dframe, error_string
+
 def dframe_to_sql(
-        dframe: pd.DataFrame, session, element: str, index_col: str= 'Id', flush: bool=True,
+        dframe: pd.DataFrame, session, element: str,
         raw_to_votecount: bool=False, return_records: str='all') -> [pd.DataFrame, str]:
     """
     Given a dataframe <dframe >and an existing cdf db element <element>>, clean <dframe>
     (i.e., drop any columns that are not in <element>, add null columns to match any missing columns)
     append records any new records to the corresponding element in the db (and commit!)
-    Return the updated dataframe, including all rows from the db and all from the dframe.
+    Return the updated dataframe, including all rows from the db and all from the dframe,
+    and the Id from the database.
     <return_records> is a flag defaulting to "all" (return all records in db)
     but can be set to "original" to return only the records from the input <dframe>.
 
@@ -356,8 +403,8 @@ def dframe_to_sql(
     if raw_to_votecount:
         # need to drop rows that were read originally from target -- these will have null ElectionContestJoin_Id
         up_to_date_dframe=up_to_date_dframe[up_to_date_dframe['ElectionContestJoin_Id'].notnull()]
-    if flush:
-        session.flush()
+
+    session.flush()
     if return_records == 'original':
         # TODO get rid of rows not in dframe by taking inner join
         up_to_date_dframe = dframe.merge(
