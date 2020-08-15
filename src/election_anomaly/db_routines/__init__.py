@@ -278,7 +278,7 @@ def add_foreign_key_name_col(sess,df,foreign_key_col,foreign_key_element,drop_ol
     return df_copy
 
 
-def NEW_dframe_to_sql(dframe: pd.DataFrame, session, element: str, index_col: str= 'Id', flush: bool=True,
+def NEW_dframe_to_sql(dframe: pd.DataFrame, session, element: str,
         raw_to_votecount: bool=False, return_records: str='all') -> [pd.DataFrame, str]:
     """Create working dataframe: Drop columns and add null columns as necessary to <dframe> so that it matches the non-Id columns of the
     <element> table in the db. Add rows of resulting DataFrame to db (without creating dupes) and append
@@ -288,6 +288,10 @@ def NEW_dframe_to_sql(dframe: pd.DataFrame, session, element: str, index_col: st
 
     #NB: we assume that the <element> table in the database has a uniqueness constraint jointly for all fields
     # except Id and timestamp.
+
+    # TODO can we get rid of the return_records='all' flag now? We'll return
+    #  exactly the dframe that was given, but with new Ids attached, no?
+    #  If routine really needs the whole table, it can just pull the whole table separately.
 
     working = dframe.copy()
     # pull structure of <element> table
