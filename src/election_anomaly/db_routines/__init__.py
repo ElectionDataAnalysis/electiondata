@@ -298,15 +298,12 @@ def NEW_dframe_to_sql(dframe: pd.DataFrame, session, element: str,
     q = "SELECT column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = %s"
     target_columns = [x for (x,) in raw_query_via_sqlalchemy(session,q,[],[element]) if x not in ['Id','created_at']]
 
-    # TODO alter dframe to match structure [
+    # alter working to match structure of <elemnt> table
     dframe_only_cols = [x for x in working.columns if x not in target_columns]
     target_only_cols = [x for x in target_columns if x not in working.columns]
     intersection_cols = [x for x in target_columns if x in working.columns]
 
-    # remove columns that don't exist in target element
     working = working.drop(dframe_only_cols, axis=1)
-
-    # add columns that exist in target element but are missing from original dframe
     for c in target_only_cols:
         working.loc[:,c] = None
 
