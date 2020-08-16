@@ -658,7 +658,7 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
                     You may need to make changes to the Jurisdiction directory and try again."""
 
     # commit info in df to corresponding cdf table to db
-    data, err = dbr.dframe_to_sql(df,session,element, return_records='original')
+    err = dbr.insert_to_sql(session.bind,df,element)
     if err:
         if not element in error:
             error[element] = {}

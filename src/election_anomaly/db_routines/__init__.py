@@ -517,9 +517,9 @@ def get_datafile_info(session, results_file):
 		print(f'No record named {results_file} found in _datafile table in {session.bind.url}')
 		return [0,0]
 
-def insert_to_sql(engine, df, table, sep='\t', encoding='iso-8859-1', timestamp=None):
-	"""Inserts any new records in <df> into <table>; if <table> has a timestamp column
-	it must be specified in <timestamp>"""
+def insert_to_sql(engine, df, element, sep='\t', encoding='iso-8859-1', timestamp=None) -> str:
+	"""Inserts any new records in <df> into <element>; if <element> has a timestamp column
+	it must be specified in <timestamp>; <df> must have columns matching <element>, except Id and <timestamp> if any"""
 
 	# initialize connection and cursor
 	working = df.copy()
@@ -531,8 +531,8 @@ def insert_to_sql(engine, df, table, sep='\t', encoding='iso-8859-1', timestamp=
 
 	# create temp table without Id or timestamp column
 	q = sql.SQL(
-		"CREATE TABLE {temp_table} AS TABLE {table} WITH NO DATA; ALTER TABLE {temp_table} DROP COLUMN \"Id\";").format(
-		table=sql.Identifier(table),temp_table=sql.Identifier(temp_table))
+		"CREATE TABLE {temp_table} AS TABLE {element} WITH NO DATA; ALTER TABLE {temp_table} DROP COLUMN \"Id\";").format(
+		element=sql.Identifier(element),temp_table=sql.Identifier(temp_table))
 
 	cursor.execute(q)
 	if timestamp:
@@ -556,13 +556,15 @@ def insert_to_sql(engine, df, table, sep='\t', encoding='iso-8859-1', timestamp=
 		cursor.copy_expert(copy_statement,output)
 		connection.commit()
 		q = sql.SQL("INSERT INTO {t}({fields}) SELECT * FROM {temp_table} ON CONFLICT DO NOTHING").format(
-			t=sql.Identifier(table),fields=sql.SQL(',').join([sql.Identifier(x) for x in temp_columns]),
+			t=sql.Identifier(element),fields=sql.SQL(',').join([sql.Identifier(x) for x in temp_columns]),
 			temp_table=sql.Identifier(temp_table)
 		)
 		cursor.execute(q)
 		connection.commit()
+		error_str = None
 	except Exception as e:
 		print(e)
+		error_str = f'{e}'
 
 	# remove temp table
 	q = sql.SQL("DROP TABLE {temp_table}").format(temp_table=sql.Identifier(temp_table))
@@ -571,10 +573,7 @@ def insert_to_sql(engine, df, table, sep='\t', encoding='iso-8859-1', timestamp=
 	connection.commit()
 	cursor.close()
 
-	# cursor.execute(q,[table])
-	# aa = cursor.fetchall()
-
-	return
+	return error_str
 
 
 def table_named_to_avoid_conflict(engine,prefix: str) -> str:
