@@ -280,7 +280,43 @@ def add_foreign_key_name_col(sess,df,foreign_key_col,foreign_key_element,drop_ol
 	return df_copy
 
 
-def dframe_to_sql(
+def dframe_to_sql(dframe: pd.DataFrame, session, element: str,
+					   raw_to_votecount: bool = False, return_records: str = 'all', timestamp: str = None) -> [
+	pd.DataFrame, str]:
+	"""Create working dataframe: Drop columns and add null columns as necessary to <dframe> so that it matches the non-Id columns of the
+	<element> table in the db. Add rows of resulting DataFrame to db (without creating dupes) and append
+	<element>.Id to working dataframe (or if <return_records> == 'all', just pull the whole db table).
+	raw_to_votecount has some columns added, needs special treatment
+	ReportingUnit gets special treatment: needs to process any nesting relationships indicated by semicolons in names """
+
+	connection = session.bind.raw_connection()
+	cursor = connection.cursor()
+	working = dframe.copy()
+	# pull column names of <element> table
+	target_columns = dbr.get_column_names(cursor, )
+
+	# alter working to match structure of <elemnt> table
+	dframe_only_cols = [x for x in working.columns if x not in target_columns]
+	target_only_cols = [x for x in target_columns if x not in working.columns]
+	intersection_cols = [x for x in target_columns if x in working.columns]
+
+	working = working.drop(dframe_only_cols, axis=1)
+	for c in target_only_cols:
+		working.loc[:, c] = None
+
+	# insert any new rows in working into target table
+	dbr.insert_to_sql(session.bind, working, element, timestamp=timestamp)
+
+	if return_records == 'original':
+		col_map = {c: c for c in intersection_cols}
+		working = dbr.append_id_to_dframe(session.bind, dframe, element, col_map)
+	elif return_records == 'all':
+		working = pd.read_sql_table(element, session.bind, index_col=None).rename(columns={'Id': f'{element}_Id'})
+	error_string = ''
+	return working, error_string
+
+
+def dframe_to_sql_OLD(
 		dframe: pd.DataFrame, session, element: str,
 		raw_to_votecount: bool=False, return_records: str='all') -> [pd.DataFrame, str]:
 	"""
