@@ -280,7 +280,7 @@ def add_foreign_key_name_col(sess,df,foreign_key_col,foreign_key_element,drop_ol
 
 
 def NEW_dframe_to_sql(dframe: pd.DataFrame, session, element: str,
-		raw_to_votecount: bool=False, return_records: str='all') -> [pd.DataFrame, str]:
+		raw_to_votecount: bool=False, return_records: str = 'all', timestamp: str = None) -> [pd.DataFrame, str]:
 	"""Create working dataframe: Drop columns and add null columns as necessary to <dframe> so that it matches the non-Id columns of the
 	<element> table in the db. Add rows of resulting DataFrame to db (without creating dupes) and append
 	<element>.Id to working dataframe (or if <return_records> == 'all', just pull the whole db table.
@@ -308,6 +308,9 @@ def NEW_dframe_to_sql(dframe: pd.DataFrame, session, element: str,
 	for c in target_only_cols:
 		working.loc[:,c] = None
 
+	insert_to_sql(session.bind,working,element,timestamp=timestamp)
+
+
 	# TODO while processing VoteCount, there may be "dupes" on the real columns
 	#  of VoteCount, because existing records have null ECJ_Id and CSJ_Id.
 	#  Might need to UPSERT these. Maybe don't need to add those extra columns
@@ -317,9 +320,6 @@ def NEW_dframe_to_sql(dframe: pd.DataFrame, session, element: str,
 		# TODO "INSERT INTO <element> (<target_columns>) VALUES (<from working>)
 		#  ON CONFLICT DO NOTHING RETURNING *" will get all new (with Id)
 
-		# TODO drop from <working> all rows that were returned.
-
-		#  TODO Get the rest with "SELECT * FROM <element> WHERE <~content matches~>"
 
 	# TODO under construction
 	up_to_date_dframe = pd.DataFrame()
