@@ -515,3 +515,53 @@ def get_datafile_info(session, results_file):
     except IndexError:
         print(f'No record named {results_file} found in _datafile table in {session.bind.url}')
         return [0,0]
+
+def insert_to_sql(engine, df, table, sep='\t', encoding='iso-8859-1', timestamp=None):
+    # initialize connection and cursor
+    working = df.copy()
+    connection = engine.raw_connection()
+    cursor = connection.cursor()
+
+    # create __temp table without Id or timestamp
+    q = sql.SQL("CREATE TABLE __temp AS TABLE {} WITH NO DATA; ALTER TABLE __temp DROP COLUMN \"Id\";").format(
+        sql.Identifier(table))
+    cursor.execute(q)
+    if timestamp:
+        q = sql.SQL("ALTER TABLE __temp DROP COLUMN {}").format(sql.Identifier(timestamp))
+        cursor.execute(q)
+        working = working.drop([timestamp], axis=1)
+    connection.commit()
+    q = sql.SQL(
+        "SELECT column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = '__temp'")
+    cursor.execute(q)
+    temp_columns = [x for (x,) in cursor.fetchall()]
+
+    # Prepare data
+    output = io.StringIO()
+    df.to_csv(output, sep=sep, header=False, encoding=encoding, index=False)
+    output.seek(0)
+
+    # Insert data
+    copy_statement = sql.SQL('COPY __temp FROM STDOUT')
+    try:
+        cursor.copy_expert(copy_statement, output)
+        connection.commit()
+        q = sql.SQL("INSERT INTO {t}({fields}) SELECT * FROM __temp ON CONFLICT DO NOTHING").format(
+            t=sql.Identifier(table), fields=sql.SQL(',').join([sql.Identifier(x) for x in temp_columns])
+        )
+        cursor.execute(q)
+        connection.commit()
+    except Exception as e:
+        print(e)
+
+    # remove temp table
+    q = sql.SQL("DROP TABLE __temp")
+    cursor.execute(q)
+
+    connection.commit()
+    cursor.close()
+
+    # cursor.execute(q,[table])
+    # aa = cursor.fetchall()
+
+    return
