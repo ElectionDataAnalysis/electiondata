@@ -281,7 +281,7 @@ def add_foreign_key_name_col(sess,df,foreign_key_col,foreign_key_element,drop_ol
 
 
 def dframe_to_sql(dframe: pd.DataFrame, session, element: str,
-					   raw_to_votecount: bool = False, return_records: str = 'all', timestamp: str = None) -> [
+		raw_to_votecount: bool = False, return_records: str = 'all', timestamp: str = None) -> [
 	pd.DataFrame, str]:
 	"""Create working dataframe: Drop columns and add null columns as necessary to <dframe> so that it matches the non-Id columns of the
 	<element> table in the db. Add rows of resulting DataFrame to db (without creating dupes) and append
@@ -293,7 +293,7 @@ def dframe_to_sql(dframe: pd.DataFrame, session, element: str,
 	cursor = connection.cursor()
 	working = dframe.copy()
 	# pull column names of <element> table
-	target_columns = dbr.get_column_names(cursor, )
+	target_columns = get_column_names(cursor, )
 
 	# alter working to match structure of <elemnt> table
 	dframe_only_cols = [x for x in working.columns if x not in target_columns]
@@ -305,11 +305,11 @@ def dframe_to_sql(dframe: pd.DataFrame, session, element: str,
 		working.loc[:, c] = None
 
 	# insert any new rows in working into target table
-	dbr.insert_to_sql(session.bind, working, element, timestamp=timestamp)
+	insert_to_sql(session.bind, working, element, timestamp=timestamp)
 
 	if return_records == 'original':
 		col_map = {c: c for c in intersection_cols}
-		working = dbr.append_id_to_dframe(session.bind, dframe, element, col_map)
+		working = append_id_to_dframe(session.bind, dframe, element, col_map)
 	elif return_records == 'all':
 		working = pd.read_sql_table(element, session.bind, index_col=None).rename(columns={'Id': f'{element}_Id'})
 	error_string = ''
@@ -318,7 +318,7 @@ def dframe_to_sql(dframe: pd.DataFrame, session, element: str,
 
 def dframe_to_sql_OLD(
 		dframe: pd.DataFrame, session, element: str,
-		raw_to_votecount: bool=False, return_records: str='all') -> [pd.DataFrame, str]:
+		raw_to_votecount: bool=False, return_records: str='all', index_col=None) -> [pd.DataFrame, str]:
 	"""
 	Given a dataframe <dframe >and an existing cdf db element <element>>, clean <dframe>
 	(i.e., drop any columns that are not in <element>, add null columns to match any missing columns)
