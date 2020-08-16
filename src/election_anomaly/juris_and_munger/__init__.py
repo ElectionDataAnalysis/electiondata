@@ -19,7 +19,7 @@ class Jurisdiction:
             if x != 'remark.txt' and x != 'dictionary.txt' and x[0] != '.']
         # reorder juris_elements for efficiency
         leading = ['ReportingUnit','Office','Party','CandidateContest']
-        trailing = ['ExternalIdentifier']
+        trailing = []
         juris_elements = leading + [
             x for x in juris_elements if x not in leading and x not in trailing
         ] + trailing
@@ -276,9 +276,7 @@ def ensure_juris_files(juris_path,project_root,ignore_empty=False):
                 column_errors.append(f'Columns of {juris_file}.txt need to be (tab-separated):\n '
                                     f' {cols}\n')
 
-            if juris_file == 'ExternalIdentifier':
-                d, dupe =  dedupe(cf_path)
-            elif juris_file == 'dictionary':
+            if juris_file == 'dictionary':
                 d, dupe = dedupe(cf_path)
             else:
                 # run dupe check
@@ -586,23 +584,6 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
 
     error_original = error.copy()
 
-    # TODO deal with duplicate 'none or unknown' records
-    if element != 'ExternalIdentifier':
-        # add 'none or unknown' line to df
-        d = {c:'none or unknown' for c in df.columns}
-        fields_file = os.path.join(cdf_schema_def_dir,'elements',element,'fields.txt')
-        fields = pd.read_csv(fields_file,sep='\t',index_col='fieldname')
-        for f in fields.index:
-            # change any non-string, non-foreign-id fields to default values
-            t = fields.loc[f,'datatype']
-            if t == 'Date':
-                d[f]='1000-01-01'
-            elif t == 'Integer':
-                d[f] = -1
-            elif t != 'String':
-                raise TypeError(f'Datatype {t} not recognized')
-        df = df.append([d])
-
     # dedupe df
     dupes,df = ui.find_dupes(df)
     if not dupes.empty:
@@ -679,24 +660,12 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,load_refs,erro
 
         r_target = pd.read_sql_table(r,session.bind)[['Id',ref_name_field]]
         r_target.rename(columns={'Id':foreign_key,ref_name_field:interim},inplace=True)
-        if element == 'ExternalIdentifier':
-            # add column for cdf_table of referent
-            r_target.loc[:,'cdf_element'] = r
 
         target_list.append(r_target)
 
     target = pd.concat(target_list)
 
-    if element == 'ExternalIdentifier':
-        # join on cdf_element name as well
-        df = df.merge(
-            target,how='left',left_on=['cdf_element','internal_name'],right_on=['cdf_element',interim])
-        # rename 'Foreign_Id' to 'Foreign' for consistency in definition of missing
-        # TODO why is ExternalIdentifier special in this regard?
-        #  Is it that ExternalIdentifier doesn't have a name field?
-        df.rename(columns={foreign_key:foreign_elt},inplace=True)
-    else:
-        df = df.merge(target,how='left',left_on=foreign_elt,right_on=interim)
+    df = df.merge(target,how='left',left_on=foreign_elt,right_on=interim)
 
     missing = df[(df[foreign_elt].notnull()) & (df[interim].isnull())]
     if missing.empty:

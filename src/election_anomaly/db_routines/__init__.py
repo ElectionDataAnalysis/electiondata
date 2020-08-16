@@ -293,7 +293,7 @@ def dframe_to_sql(dframe: pd.DataFrame, session, element: str,
 	cursor = connection.cursor()
 	working = dframe.copy()
 	# pull column names of <element> table
-	target_columns = get_column_names(cursor, )
+	target_columns, type_map = get_column_names(cursor, element)
 
 	# alter working to match structure of <elemnt> table
 	dframe_only_cols = [x for x in working.columns if x not in target_columns]
@@ -533,11 +533,21 @@ def insert_to_sql(engine, df, element, sep='\t', encoding='iso-8859-1', timestam
 	connection.commit()
 	q = sql.SQL("SELECT column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = %s")
 	cursor.execute(q,[temp_table])
-	temp_columns = get_column_names(cursor, element)
+	temp_columns, type_map = get_column_names(cursor, temp_table)
+
+	# make sure datatypes of working match the types of target
+	for c in temp_columns:
+		if c != 'Id' and type_map[c] == 'integer':
+			working[c] = working[c].astype('int64', errors='ignore')
 
 	# Prepare data
 	output = io.StringIO()
-	df.to_csv(output, sep=sep, header=False, encoding=encoding, index=False)
+	temp_only_cols = [c for c in temp_columns if c not in working.columns]
+
+	# add any missing columns needed for temp table to working
+	for c in temp_only_cols:
+		working = mr.add_constant_column(working,c,None)
+	working[temp_columns].to_csv(output, sep=sep, header=False, encoding=encoding, index=False)
 	output.seek(0)
 
 	# Insert data
@@ -605,8 +615,10 @@ def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_
 	return df.join(w[['Id']]).rename(columns={'Id':f'{table}_Id'})
 
 
-def get_column_names(cursor, table: str) -> list:
-	q = sql.SQL("SELECT column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = %s")
+def get_column_names(cursor, table: str) -> (list, dict):
+	q = sql.SQL("SELECT column_name, data_type FROM information_schema.columns WHERE table_schema = 'public' AND table_name = %s")
 	cursor.execute(q,[table])
-	col_list = [x for (x,) in cursor.fetchall()]
-	return col_list
+	results = cursor.fetchall()
+	col_list = [x for (x,y) in results]
+	type_map = {x:y for (x,y) in results}
+	return col_list, type_map

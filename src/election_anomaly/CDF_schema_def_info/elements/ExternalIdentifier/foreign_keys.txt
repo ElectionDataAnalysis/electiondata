@@ -1,2 +1,0 @@
-fieldname	refers_to
-Foreign_Id	Candidate;CandidateContest;Election;ReportingUnit;Office;Party;BallotMeasureContest
