@@ -3,12 +3,13 @@
 
 import psycopg2
 import sqlalchemy
+import io
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 # import the error handling libraries for psycopg2
 from psycopg2 import OperationalError, errorcodes, errors
 from psycopg2 import sql
 import sqlalchemy as db
-import sqlalchemy_utils
+import datetime
 from election_anomaly import user_interface as ui
 from configparser import MissingSectionHeaderError
 import pandas as pd
@@ -286,7 +287,7 @@ def NEW_dframe_to_sql(dframe: pd.DataFrame, session, element: str,
 	raw_to_votecount has some columns added, needs special treatment
 	ReportingUnit gets special treatment: needs to process any nesting relationships indicated by semicolons in names """
 
-	#NB: we assume that the <element> table in the database has a uniqueness constraint jointly for all fields
+	# NB: we assume that the <element> table in the database has a uniqueness constraint jointly for all fields
 	# except Id and timestamp.
 
 	# TODO can we get rid of the return_records='all' flag now? We'll return
@@ -525,11 +526,8 @@ def insert_to_sql(engine, df, table, sep='\t', encoding='iso-8859-1', timestamp=
 	connection = engine.raw_connection()
 	cursor = connection.cursor()
 
-	# name temp table by username and timestampe to avoid conflict
-	p = re.compile('postgresql://([^:]+)')
-	user_name = p.findall(str(engine.url))[0]
-	ts = datetime.datetime.now().strftime("%d_%b_%Y_%H%M%S.%f")
-	temp_table = f'__temp_{user_name}_{ts}'
+	# name temp table by username and timestamp to avoid conflict
+	temp_table = table_named_to_avoid_conflict(engine,'__temp_insert')
 
 	# create temp table without Id or timestamp column
 	q = sql.SQL(
@@ -579,3 +577,40 @@ def insert_to_sql(engine, df, table, sep='\t', encoding='iso-8859-1', timestamp=
 	return
 
 
+def table_named_to_avoid_conflict(engine,prefix: str) -> str:
+	p = re.compile('postgresql://([^:]+)')
+	user_name = p.findall(str(engine.url))[0]
+	ts = datetime.datetime.now().strftime("%d_%b_%Y_%H%M%S.%f")
+	temp_table = f'{prefix}_{user_name}_{ts}'
+	return temp_table
+
+
+def append_id_to_dframe(engine, df: pd.DataFrame, table, col_map):
+	"""Using <col_map> to map columns of <df> onto defining columns of <table>, returns
+	a copy of <df> with appended column <table>_Id"""
+	connection = engine.raw_connection()
+
+	temp_table = table_named_to_avoid_conflict(engine,'__temp_append')
+
+	df_cols = list(col_map.keys())
+	table_cols = [col_map[x] for x in df_cols]
+
+	# create temp db table with info from df, without index
+	df[df_cols].rename(columns=col_map).to_sql(temp_table, engine,index_label='dataframe_index')
+
+	# join <table>_Id
+	on_clause = sql.SQL(' AND ').join([sql.SQL("t.{col} = tt.{col}").format(col=sql.Identifier(c)) for c in table_cols])
+
+	q = sql.SQL("SELECT t.*, tt.dataframe_index FROM {temp_table} tt LEFT JOIN {table} t ON {on_clause}").format(
+		temp_table=sql.Identifier(temp_table),table=sql.Identifier(table),on_clause=on_clause
+	)
+	w = pd.read_sql_query(q, connection).set_index('dataframe_index')
+
+	# drop temp db table
+	q = sql.SQL("DROP TABLE {temp_table}").format(temp_table=sql.Identifier(temp_table))
+	cur = connection.cursor()
+	cur.execute(q)
+	connection.commit()
+
+	connection.close()
+	return df.join(w[['Id']]).rename(columns={'Id':f'{table}_Id'})
