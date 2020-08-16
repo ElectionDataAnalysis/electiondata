@@ -3,6 +3,7 @@
 
 import psycopg2
 import sqlalchemy
+import sqlalchemy.orm
 import io
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 # import the error handling libraries for psycopg2
@@ -137,7 +138,7 @@ def create_new_db(project_root, paramfile, db_name):
 	con.close()
 
 
-def sql_alchemy_connect(paramfile=None,db_name='postgres'):
+def sql_alchemy_connect(paramfile: str = None, db_name: str = 'postgres') -> sqlalchemy.engine:
 	"""Returns an engine and a metadata object"""
 	if not paramfile:
 		paramfile = ui.pick_paramfile()
@@ -278,53 +279,6 @@ def add_foreign_key_name_col(sess,df,foreign_key_col,foreign_key_element,drop_ol
 		df_copy.drop(foreign_key_col,axis=1,inplace=True)
 	return df_copy
 
-
-def NEW_dframe_to_sql(dframe: pd.DataFrame, session, element: str,
-		raw_to_votecount: bool=False, return_records: str = 'all', timestamp: str = None) -> [pd.DataFrame, str]:
-	"""Create working dataframe: Drop columns and add null columns as necessary to <dframe> so that it matches the non-Id columns of the
-	<element> table in the db. Add rows of resulting DataFrame to db (without creating dupes) and append
-	<element>.Id to working dataframe (or if <return_records> == 'all', just pull the whole db table.
-	raw_to_votecount has some columns added, needs special treatment
-	ReportingUnit gets special treatment: needs to process any nesting relationships indicated by semicolons in names """
-
-	# NB: we assume that the <element> table in the database has a uniqueness constraint jointly for all fields
-	# except Id and timestamp.
-
-	# TODO can we get rid of the return_records='all' flag now? We'll return
-	#  exactly the dframe that was given, but with new Ids attached, no?
-	#  If routine really needs the whole table, it can just pull the whole table separately.
-
-	working = dframe.copy()
-	# pull structure of <element> table
-	q = "SELECT column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = %s"
-	target_columns = [x for (x,) in raw_query_via_sqlalchemy(session,q,[],[element]) if x not in ['Id','created_at']]
-
-	# alter working to match structure of <elemnt> table
-	dframe_only_cols = [x for x in working.columns if x not in target_columns]
-	target_only_cols = [x for x in target_columns if x not in working.columns]
-	intersection_cols = [x for x in target_columns if x in working.columns]
-
-	working = working.drop(dframe_only_cols, axis=1)
-	for c in target_only_cols:
-		working.loc[:,c] = None
-
-	insert_to_sql(session.bind,working,element,timestamp=timestamp)
-
-
-	# TODO while processing VoteCount, there may be "dupes" on the real columns
-	#  of VoteCount, because existing records have null ECJ_Id and CSJ_Id.
-	#  Might need to UPSERT these. Maybe don't need to add those extra columns
-	#  to VoteCount after all!
-
-	# TODO insert records to db and pull records (now with Id!) matching dframe, obeying <return_records> flag
-		# TODO "INSERT INTO <element> (<target_columns>) VALUES (<from working>)
-		#  ON CONFLICT DO NOTHING RETURNING *" will get all new (with Id)
-
-
-	# TODO under construction
-	up_to_date_dframe = pd.DataFrame()
-	error_string = ''
-	return up_to_date_dframe, error_string
 
 def dframe_to_sql(
 		dframe: pd.DataFrame, session, element: str,
@@ -543,7 +497,7 @@ def insert_to_sql(engine, df, element, sep='\t', encoding='iso-8859-1', timestam
 	connection.commit()
 	q = sql.SQL("SELECT column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = %s")
 	cursor.execute(q,[temp_table])
-	temp_columns = [x for (x,) in cursor.fetchall()]
+	temp_columns = get_column_names(cursor, element)
 
 	# Prepare data
 	output = io.StringIO()
@@ -584,7 +538,7 @@ def table_named_to_avoid_conflict(engine,prefix: str) -> str:
 	return temp_table
 
 
-def append_id_to_dframe(engine, df: pd.DataFrame, table, col_map):
+def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_map) -> pd.DataFrame:
 	"""Using <col_map> to map columns of <df> onto defining columns of <table>, returns
 	a copy of <df> with appended column <table>_Id"""
 	connection = engine.raw_connection()
@@ -613,3 +567,10 @@ def append_id_to_dframe(engine, df: pd.DataFrame, table, col_map):
 
 	connection.close()
 	return df.join(w[['Id']]).rename(columns={'Id':f'{table}_Id'})
+
+
+def get_column_names(cursor, table: str) -> list:
+	q = sql.SQL("SELECT column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = %s")
+	cursor.execute(q,[table])
+	col_list = [x for (x,) in cursor.fetchall()]
+	return col_list

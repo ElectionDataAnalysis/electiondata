@@ -514,8 +514,8 @@ def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session:
         else:
             drop = False
         try:
-            [working, err] = replace_raw_with_internal_ids(
-                working, juris, df, t, name_field, mu.path_to_munger_dir, err, drop_unmatched=drop)
+            working, err = replace_raw_with_internal_ids(
+                working, juris, df, t, name_field, err, drop_unmatched=drop)
             working.drop(t,axis=1,inplace=True)
         except:
             e = f'Error adding internal ids for {t}.'
