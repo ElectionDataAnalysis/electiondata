@@ -186,14 +186,16 @@ def replace_raw_with_internal_ids(
     raw_ids_for_element = raw_identifiers[raw_identifiers['cdf_element'] == element]
     if drop_unmatched:
         to_be_dropped = row_df[~row_df[f'{element}_raw'].isin(raw_ids_for_element['raw_identifier_value'])]
-        if to_be_dropped.shape[0] == row_df.shape[0]:
+        if to_be_dropped.empty:
+            pass
+        elif to_be_dropped.shape[0] == row_df.shape[0]:
             e =f'No {element} was found in \'dictionary.txt\''
             if 'munge_error' in error.keys():
                 error['munge_error'].append(e)
             else:
                 error['munge_error'] = [e]
             return row_df.drop(row_df.index), error
-        elif not to_be_dropped.empty:
+        else:
             e = f'Warning: Results for {to_be_dropped.shape[0]} rows with unmatched {element}s ' \
                 f'will not be loaded to database.'
             if 'munge_warning' in error.keys():
@@ -275,10 +277,8 @@ def enum_col_to_id_othertext(df,type_col,enum_df,drop_old=True):
         # add two columns
         df[f'{type_col}_Id'] = df[f'Other{type_col}'] = df.iloc[:,0]
     else:
-        assert type_col in df.columns
-        assert 'Txt' in enum_df.columns,'Enumeration dataframe should have a \'Txt\' column'
-
         # ensure Id is a column, not the index, of enum_df (otherwise df index will be lost in merge)
+        assert type_col not in ['Id','Txt'], 'type_col cannot be Id or Txt'
         if 'Id' not in enum_df.columns:
             enum_df['Id'] = enum_df.index
 
@@ -289,9 +289,9 @@ def enum_col_to_id_othertext(df,type_col,enum_df,drop_old=True):
                 df.rename(columns={c:c*3},inplace=True)
         df = df.merge(enum_df,how='left',left_on=type_col,right_on='Txt')
         df.rename(columns={'Id':f'{type_col}_Id'},inplace=True)
-        df.loc[:,f'Other{type_col}']=''
+        add_constant_column(df,f'Other{type_col}','')
 
-        other_id_df = enum_df[enum_df['Txt']=='other']
+        other_id_df = enum_df[enum_df['Txt'] == 'other']
         if not other_id_df.empty:
             other_id = other_id_df.iloc[0]['Id']
             df[f'{type_col}_Id'] = df[f'{type_col}_Id'].fillna(other_id)
@@ -354,36 +354,6 @@ def fk_plaintext_dict_from_db_record(session,element,db_record,excluded=None):
         for i,r in fk_df.iterrows():
             fk_dict[i] = dbr.name_from_id(session,r['foreign_table_name'],db_record[i])
     return fk_dict
-
-
-def enum_plaintext_dict_from_db_record(session,element,db_record):
-    """Return a dictionary of <enum>:<plaintext> for all enumerations in
-    <db_record>, which is itself a dictionary of <field>:<value>"""
-    enum_plaintext_dict = {}
-    element_df_columns = pd.read_sql_table(element,session.bind,index_col='Id').columns
-    # TODO INEFFICIENT don't need all of element_df; just need columns
-    # identify enumerations by existence of `<enum>Other` field
-    enum_list = [x[5:] for x in element_df_columns if x[:5] == 'Other']
-    for e in enum_list:
-        enum_df = pd.read_sql_table(e,session.bind)
-        enum_plaintext_dict[e] = enum_value_from_id_othertext(enum_df,db_record[f'{e}_Id'],db_record[f'Other{e}'])
-    return enum_plaintext_dict
-
-
-def db_record_from_file_record(session,element,file_record):
-    db_record = file_record.copy()
-    enum_list = dbr.get_enumerations(session,element)
-    for e in enum_list:
-        enum_df = pd.read_sql_table(e,session.bind)
-        db_record[f'{e}_Id'],db_record[f'Other{e}'] = \
-            enum_value_to_id_othertext(enum_df,db_record[e])
-        db_record.pop(e)
-    fk_df = dbr.get_foreign_key_df(session,element)
-    for fk in fk_df.index:
-        if fk[:-3] not in enum_list:
-            db_record[fk] = dbr.name_to_id(session,fk_df.loc[fk,'foreign_table_name'],file_record[fk[:-3]])
-            db_record.pop(fk[:-3])
-    return db_record
 
 
 def good_syntax(s):
@@ -599,15 +569,28 @@ def raw_elements_to_cdf(
             drop = True
         else:
             drop = False
-        try:
-            [working, err] = replace_raw_with_internal_ids(
-                working, juris, df, t, name_field, err, drop_unmatched=drop)
-            working.drop(t,axis=1,inplace=True)
-        except:
-            e = f'Error adding internal ids for {t}.'
-            if t == 'CountItemType':
-                e += ' Are CountItemTypes correct in dictionary.txt?'
-            ui.add_error(err, 'munge-error', f'Error adding internal ids for {t}.')
+        if t == 'CountItemType':
+            # munge raw to internal CountItemType
+            r_i = pd.read_csv(
+                os.path.join(juris.path_to_juris_dir, 'dictionary.txt'), sep='\t'
+            )
+            r_i = r_i[r_i.cdf_element == 'CountItemType']
+            working = working.merge(
+                r_i,how='left',left_on='CountItemType_raw',right_on='raw_identifier_value'
+            ).rename(columns={'cdf_internal_name':'CountItemType'})
+
+            # join CountItemType_Id and OtherCountItemType
+            cit = pd.read_sql_table('CountItemType', session.bind)
+            working = enum_col_to_id_othertext(working, 'CountItemType', cit)
+            working = working.drop(['raw_identifier_value','cdf_element'],axis=1)
+        else:
+            try:
+                [working, err] = replace_raw_with_internal_ids(
+                    working, juris, df, t, name_field, err, drop_unmatched=drop)
+                working.drop(t,axis=1,inplace=True)
+            except Exception as exc:
+                e = f'Error adding internal ids for {t}:\n{exc}'
+                ui.add_error(err, 'munge-error', f'Error adding internal ids for {t}.')
 
     working, err = add_selection_id(working, juris, mu, err, session)
     if working.empty:
@@ -624,14 +607,15 @@ def raw_elements_to_cdf(
 
     extra_cols = ['ElectionContestJoin_Id','ContestSelectionJoin_Id','_datafile_Id']
     # upload to VoteCount table, pull  Ids
-    working_fat, e = dbr.dframe_to_sql(working,session,'VoteCount',raw_to_votecount=True)
+    e = dbr.insert_to_sql(session.bind,working,'VoteCount')
     if e:
         ui.add_error(err,'database',e)
     session.commit()
-
+    col_map = {c:c for c in ['Count','CountItemType_Id','OtherCountItemType','ReportingUnit_Id']}
+    working = dbr.append_id_to_dframe(session.bind,working,'VoteCount',col_map=col_map)
     # TODO check that all candidates in munged contests (including write ins!) are munged
     # upload to ElectionContestSelectionVoteCountJoin
-    data, e = dbr.dframe_to_sql(working_fat,session,'ElectionContestSelectionVoteCountJoin')
+    e = dbr.insert_to_sql(session.bind,working,'ElectionContestSelectionVoteCountJoin')
     if e:
         ui.add_error(err,'database',e)
 

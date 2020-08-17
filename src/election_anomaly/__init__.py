@@ -142,6 +142,11 @@ class SingleDataLoader():
 		self.d, self.parameter_err = ui.get_runtime_parameters(
 			single_data_loader_pars, optional_keys=['aux_data_dir'], param_file=par_file)
 
+		# change any blank parameters to 'none'
+		for k in self.d.keys():
+			if self.d[k] == '' and k[:8] == 'results_':
+				self.d[k] = 'none'
+
 		# convert comma-separated list to python list
 		# TODO document
 		self.munger_list = [x.strip() for x in self.d['munger_name'].split(',')]

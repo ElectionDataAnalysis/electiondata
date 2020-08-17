@@ -38,7 +38,7 @@ def create_database(con,cur,db_name):
 	return out1,out2
 
 
-def append_to_composing_reporting_unit_join(session,ru):
+def append_to_composing_reporting_unit_join(engine,ru):
 	"""<ru> is a dframe of reporting units, with cdf internal name in column 'Name'.
 	cdf internal name indicates nesting via semicolons `;`.
 	This routine calculates the nesting relationships from the Names and uploads to db.
@@ -48,7 +48,7 @@ def append_to_composing_reporting_unit_join(session,ru):
 	ru['length'] = ru['split'].apply(len)
 	
 	# pull ReportingUnit to get ids matched to names
-	ru_cdf = pd.read_sql_table('ReportingUnit',session.bind,index_col=None)
+	ru_cdf = pd.read_sql_table('ReportingUnit',engine,index_col=None)
 	ru_static = ru.copy()
 
 	# add db Id column to ru_static, if it's not already there
@@ -71,10 +71,10 @@ def append_to_composing_reporting_unit_join(session,ru):
 			columns={'Id':'ChildReportingUnit_Id',f'Id_{i}':'ParentReportingUnit_Id'}))
 	if cruj_dframe_list:
 		cruj_dframe = pd.concat(cruj_dframe_list)
-		cruj_dframe, e = dframe_to_sql(cruj_dframe,session,'ComposingReportingUnitJoin')
-	else:
-		cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin',session.bind)
-	session.flush()
+		insert_to_sql(engine,cruj_dframe,'ComposingReportingUnitJoin')
+
+	cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin',engine)
+
 	return cruj_dframe
 
 
@@ -308,14 +308,6 @@ def dframe_to_sql(dframe: pd.DataFrame, session, element: str,
 	# create column mapping for appending
 	col_map = {c: c for c in intersection_cols}
 
-	# if there are new ReportingUnits, must enter nesting info in db
-	if element == 'ReportingUnit':
-		# TODO find any new RUs
-		w = append_id_to_dframe(session.bind, working, element, col_map)
-		appendable = w[w[f'{element}_Id'].isnull()]
-		append_to_composing_reporting_unit_join(session,appendable)
-
-
 	# insert any new rows in working into target table
 	insert_to_sql(session.bind, working, element, timestamp=timestamp)
 
@@ -528,6 +520,15 @@ def insert_to_sql(engine, df, element, sep='\t', encoding='iso-8859-1', timestam
 	connection = engine.raw_connection()
 	cursor = connection.cursor()
 
+	# if there are new ReportingUnits, must enter nesting info in db
+	if element == 'ReportingUnit':
+		# find any new RUs
+		col_map = {'Name':'Name'}
+		w = append_id_to_dframe(engine, working, element,col_map=col_map)
+		new_rus = w[w[f'{element}_Id'].isnull()]
+		append_to_composing_reporting_unit_join(engine,new_rus)
+
+
 	# name temp table by username and timestamp to avoid conflict
 	temp_table = table_named_to_avoid_conflict(engine,'__temp_insert')
 
@@ -561,14 +562,14 @@ def insert_to_sql(engine, df, element, sep='\t', encoding='iso-8859-1', timestam
 	# add any missing columns needed for temp table to working
 	for c in temp_only_cols:
 		working = mr.add_constant_column(working,c,None)
-	working[temp_columns].to_csv(
+	working[temp_columns].drop_duplicates().to_csv(
 		output, sep=sep, header=False, encoding=encoding, index=False)
 	# set current position for the StringIO object to the beginning of the string
 	output.seek(0)
 
 	# Insert data
 	q_copy = sql.SQL(
-		"COPY {temp_table} FROM STDOUT WITH NULL AS ''"
+		"COPY {temp_table} FROM STDOUT"
 	).format(temp_table=sql.Identifier(temp_table))
 	try:
 		cursor.copy_expert(q_copy,output)
@@ -600,7 +601,7 @@ def insert_to_sql(engine, df, element, sep='\t', encoding='iso-8859-1', timestam
 
 	connection.commit()
 	cursor.close()
-
+	connection.close()
 	return error_str
 
 
@@ -625,13 +626,18 @@ def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_
 	table_cols = [col_map[x] for x in df_cols]
 
 	# create temp db table with info from df, without index
-	df[df_cols].rename(columns=col_map).to_sql(temp_table, engine,index_label='dataframe_index')
+
+	df[df_cols].fillna('').to_sql(temp_table, engine,index_label='dataframe_index')
 
 	# join <table>_Id
-	on_clause = sql.SQL(' AND ').join([sql.SQL("t.{col} = tt.{col}").format(col=sql.Identifier(c)) for c in table_cols])
+	on_clause = sql.SQL(' AND ').join(
+		[sql.SQL("t.{t_col} = tt.{tt_col}"
+				 ).format(
+			t_col=sql.Identifier(col_map[c]), tt_col=sql.Identifier(c)) for c in df_cols]
+	)
 
-	q = sql.SQL("SELECT t.*, tt.dataframe_index FROM {temp_table} tt LEFT JOIN {table} t ON {on_clause}").format(
-		temp_table=sql.Identifier(temp_table),table=sql.Identifier(table),on_clause=on_clause
+	q = sql.SQL("SELECT t.*, tt.dataframe_index FROM {tt} tt LEFT JOIN {t} t ON {on_clause}").format(
+		tt=sql.Identifier(temp_table),t=sql.Identifier(table),on_clause=on_clause
 	)
 	w = pd.read_sql_query(q, connection).set_index('dataframe_index')
 

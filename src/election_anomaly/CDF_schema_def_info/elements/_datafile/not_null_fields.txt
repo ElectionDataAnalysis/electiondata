@@ -1,7 +1,6 @@
 not_null_fields
 short_name
 file_name
-file_date
 download_date
 source
 note

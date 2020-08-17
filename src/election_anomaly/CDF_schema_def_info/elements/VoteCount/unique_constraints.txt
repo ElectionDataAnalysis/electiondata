@@ -1,1 +1,2 @@
 unique_constraint
+Count,CountItemType_Id,ReportingUnit_Id
