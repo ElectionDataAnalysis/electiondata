@@ -672,6 +672,7 @@ def make_par_files(
 			p.write(par_text)
 	return
 
+
 class DataLoader():
     def __new__(self):
         """ Checks if parameter file exists and is correct. If not, does
@@ -706,7 +707,7 @@ class DataLoader():
 
         # pick jurisdiction
         self.juris, self.juris_err = ui.pick_juris_from_filesystem(
-            self.d['project_root'],juris_name=self.d['juris_name'],check_files=True)
+            self.d['juris_name'],self.d['project_root'],check_files=True)
 
         # create db if it does not already exist
         error = dbr.establish_connection(paramfile=self.d['db_paramfile'], 
@@ -729,9 +730,7 @@ class DataLoader():
 
         # pick munger
         self.munger, self.munger_err = ui.pick_munger(
-            project_root=self.d['project_root'],
-            mungers_dir=os.path.join(self.d['project_root'],'mungers'),
-            session=self.session,munger_name=self.d['munger_name'])
+            project_root=self.d['project_root'], munger_name=self.d['munger_name'])
 
     
     def check_errors(self):
@@ -948,9 +947,5 @@ class Analyzer():
 
 
 def get_filename(path):
-	head, tail = ntpath.split(path)
-	return tail or ntpath.basename(head)
     head, tail = ntpath.split(path)
     return tail or ntpath.basename(head)
-
-

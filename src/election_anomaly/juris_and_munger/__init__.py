@@ -331,6 +331,7 @@ def ensure_juris_files(juris_path,project_root,ignore_empty=False):
                                 sep='\t', encoding='iso=8859-1', quoting=csv.QUOTE_MINIMAL
                                 )
             if set(cf_df.columns) != set(temp.columns):
+                print(juris_file)
                 cols = '\t'.join(temp.columns.to_list())
                 column_errors.append(f'Columns of {juris_file}.txt need to be (tab-separated):\n '
                                     f' {cols}\n')
