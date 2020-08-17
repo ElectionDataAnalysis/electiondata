@@ -555,9 +555,8 @@ def add_selection_id(df: pd.DataFrame, juris: jm.Jurisdiction, mu: jm.Munger, er
         working = add_constant_column(working, 'CandidateSelection_Id', np.nan)
     else:
         working = working.merge(
-            cs_df[['Party_Id','Candidate_Id','Id']],how='left',
+            cs_df,how='left',
             left_on=['Candidate_Id','Party_Id'],right_on=['Candidate_Id','Party_Id'])
-        working.rename(columns={'Id':'CandidateSelection_Id'},inplace=True)
 
     # drop records with a CC_Id but no CS_Id (i.e., keep if CC_Id is null or CS_Id is not null)
     working = working[(working['CandidateContest_Id'].isnull()) | (working['CandidateSelection_Id']).notnull()]
@@ -612,9 +611,6 @@ def raw_elements_to_cdf(
 
     working, err = add_selection_id(working, juris, mu, err, session)
     if working.empty:
-        return err
-    # TODO remove redundancy
-    if working.empty:
         e = 'No contests found, or no selections found for contests.'
         err = ui.add_error(err,'datafile',e)
         return err
@@ -627,16 +623,10 @@ def raw_elements_to_cdf(
     #  add ElectionContestSelectionVoteCountJoin columns to VoteCount
 
     extra_cols = ['ElectionContestJoin_Id','ContestSelectionJoin_Id','_datafile_Id']
-    try:
-        dbr.add_integer_cols(session,'VoteCount',extra_cols)
-    except:
-        print(f'Warning: extra columns not added to VoteCount table.')
-
     # upload to VoteCount table, pull  Ids
     working_fat, e = dbr.dframe_to_sql(working,session,'VoteCount',raw_to_votecount=True)
     if e:
         ui.add_error(err,'database',e)
-    working_fat.rename(columns={'Id':'VoteCount_Id'},inplace=True)
     session.commit()
 
     # TODO check that all candidates in munged contests (including write ins!) are munged
@@ -644,9 +634,6 @@ def raw_elements_to_cdf(
     data, e = dbr.dframe_to_sql(working_fat,session,'ElectionContestSelectionVoteCountJoin')
     if e:
         ui.add_error(err,'database',e)
-
-    # drop extra columns
-    dbr.drop_cols(session,'VoteCount',extra_cols)
 
     return err
 

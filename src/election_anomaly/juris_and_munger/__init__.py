@@ -582,13 +582,10 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
         .fillna('none or unknown')
     # TODO check that df has the right format
 
-    error_original = error.copy()
-
     # dedupe df
     dupes,df = ui.find_dupes(df)
     if not dupes.empty:
         print(f'WARNING: duplicates removed from dataframe, may indicate a problem.\n')
-        #ui.show_sample(dupes,f'lines in {element} source data','are duplicates')
         if not element in error:
             error[element] = {}
         error[element]["found_duplicates"] = True
@@ -606,12 +603,6 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
             # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
             if e in df.columns:
                 df = mr.enum_col_to_id_othertext(df,e,cdf_e)
-        # TODO skipping assignment of CountItemStatus to ReportingUnit for now,
-        #  since we can't assign an ReportingUnit as ElectionDistrict to Office
-        #  (unless Office has a CountItemStatus; can't be right!)
-        #  Note CountItemStatus is weirdly assigned to ReportingUnit in NIST CDF.
-        #  Note also that CountItemStatus is not required, and a single RU can have many CountItemStatuses
-
     # TODO somewhere, check that no CandidateContest & Ballot Measure share a name; ditto for other false foreign keys
 
     # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
@@ -621,22 +612,11 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
         foreign_keys = pd.read_csv(fk_file_path,sep='\t',index_col='fieldname')
 
         for fn in foreign_keys.index:
-            refs = foreign_keys.loc[fn,'refers_to'].split(';')
-
-            try:
-                df = get_ids_for_foreign_keys(session,df,element,fn,refs,load_refs,error)
-            except ForeignKeyException as e:
-                if load_refs:
-                    for r in refs:
-                        error = load_juris_dframe_into_cdf(session,r,juris_path,project_root,error)
-                    # try again to load main element (but don't load referred-to again)
-                    error = load_juris_dframe_into_cdf(session,element,juris_path,project_root,error_original,load_refs=False)
-            except Exception as e:
-                if not element in error:
-                    error[element] = {}
-                error[element]["jurisdiction"] = \
-                    f"""{e}\nThere may be something wrong with the file {element}.txt.
-                    You may need to make changes to the Jurisdiction directory and try again."""
+            ref = foreign_keys.loc[fn,'refers_to']   #NB: juris elements have no multiple referents (as joins may)
+            col_map = {fn[:-3]:dbr.get_name_field(ref)}
+            df = dbr.append_id_to_dframe(
+                session.bind, df, ref, col_map=col_map
+            ).rename(columns={f'{ref}_Id': fn})
 
     # commit info in df to corresponding cdf table to db
     err = dbr.insert_to_sql(session.bind,df,element)

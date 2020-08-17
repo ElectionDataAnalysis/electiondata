@@ -180,9 +180,8 @@ class SingleDataLoader():
 		if e:
 			return [0, 0], e
 		else:
-			datafile_id = df[(df['short_name']== self.d['results_short_name']) &
-						 (df['file_name']==filename) & (df['ReportingUnit_Id']==top_reporting_unit_id) &
-						 (df['Election_Id']==election_id)]['Id'].to_list()[0]
+			datafile_id = df[
+				(df['short_name']== self.d['results_short_name']) & (df['file_name']==filename) & (df['ReportingUnit_Id']==top_reporting_unit_id) & (df['Election_Id']==election_id)]['_datafile_Id'].to_list()[0]
 			return [datafile_id, election_id], e
 
 	def load_results(self) -> dict:
@@ -598,8 +597,10 @@ class JurisdictionPrepper():
 		self.congressional = int(self.d['count_of_us_house_districts'])
 
 
-def make_par_files(dir: str, munger_name: str, jurisdiction_path: str, top_ru: str, election: str, download_date: str, source: str,
-				   results_note: str=None, aux_data_dir: str=''):
+def make_par_files(
+		dir: str, munger_name: str, jurisdiction_path: str, top_ru: str,
+		election: str, download_date: str='1900-01-01',
+		source: str='unknonw',results_note: str='none', aux_data_dir: str=''):
 	"""Utility to create parameter files for multiple files. Makes a parameter file for each file in <dir>,
 	once all other necessary parameters are specified. """
 	data_file_list = os.listdir(dir)

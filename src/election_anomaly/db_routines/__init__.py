@@ -5,6 +5,7 @@ import psycopg2
 import sqlalchemy
 import sqlalchemy.orm
 import io
+import csv
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 # import the error handling libraries for psycopg2
 from psycopg2 import OperationalError, errorcodes, errors
@@ -304,6 +305,17 @@ def dframe_to_sql(dframe: pd.DataFrame, session, element: str,
 	for c in target_only_cols:
 		working.loc[:, c] = None
 
+	# create column mapping for appending
+	col_map = {c: c for c in intersection_cols}
+
+	# if there are new ReportingUnits, must enter nesting info in db
+	if element == 'ReportingUnit':
+		# TODO find any new RUs
+		w = append_id_to_dframe(session.bind, working, element, col_map)
+		appendable = w[w[f'{element}_Id'].isnull()]
+		append_to_composing_reporting_unit_join(session,appendable)
+
+
 	# insert any new rows in working into target table
 	insert_to_sql(session.bind, working, element, timestamp=timestamp)
 
@@ -536,9 +548,11 @@ def insert_to_sql(engine, df, element, sep='\t', encoding='iso-8859-1', timestam
 	temp_columns, type_map = get_column_names(cursor, temp_table)
 
 	# make sure datatypes of working match the types of target
-	for c in temp_columns:
-		if c != 'Id' and type_map[c] == 'integer':
-			working[c] = working[c].astype('int64', errors='ignore')
+	# get set <mixed_int> of cols with integers & nulls and kludge only those
+	mixed_int = [c for c in temp_columns if type_map[c] == 'integer' and working[c].dtype != 'int64']
+	for c in mixed_int:
+		# set nulls to 0 (kludge because pandas can't have NaN in 'int64' column)
+		working[c] = working[c].fillna(0).astype('int64', errors='ignore')
 
 	# Prepare data
 	output = io.StringIO()
@@ -547,14 +561,28 @@ def insert_to_sql(engine, df, element, sep='\t', encoding='iso-8859-1', timestam
 	# add any missing columns needed for temp table to working
 	for c in temp_only_cols:
 		working = mr.add_constant_column(working,c,None)
-	working[temp_columns].to_csv(output, sep=sep, header=False, encoding=encoding, index=False)
+	working[temp_columns].to_csv(
+		output, sep=sep, header=False, encoding=encoding, index=False)
+	# set current position for the StringIO object to the beginning of the string
 	output.seek(0)
 
 	# Insert data
-	copy_statement = sql.SQL("COPY {temp_table} FROM STDOUT").format(temp_table=sql.Identifier(temp_table))
+	q_copy = sql.SQL(
+		"COPY {temp_table} FROM STDOUT WITH NULL AS ''"
+	).format(temp_table=sql.Identifier(temp_table))
 	try:
-		cursor.copy_expert(copy_statement,output)
+		cursor.copy_expert(q_copy,output)
 		connection.commit()
+
+		#  undo kludge (see above) setting 0 values to nulls inside db in temp table
+		for c in mixed_int:
+			q_kludge = sql.SQL(
+				"UPDATE {temp_table} SET {c} = NULL WHERE {c} = 0"
+			).format(temp_table=sql.Identifier(temp_table),c=sql.Identifier(c))
+			cursor.execute(q_kludge)
+		connection.commit()
+
+		# insert records from temp table into <element> table
 		q = sql.SQL("INSERT INTO {t}({fields}) SELECT * FROM {temp_table} ON CONFLICT DO NOTHING").format(
 			t=sql.Identifier(element),fields=sql.SQL(',').join([sql.Identifier(x) for x in temp_columns]),
 			temp_table=sql.Identifier(temp_table)
@@ -584,9 +612,11 @@ def table_named_to_avoid_conflict(engine,prefix: str) -> str:
 	return temp_table
 
 
-def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_map) -> pd.DataFrame:
+def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_map=None) -> pd.DataFrame:
 	"""Using <col_map> to map columns of <df> onto defining columns of <table>, returns
-	a copy of <df> with appended column <table>_Id"""
+	a copy of <df> with appended column <table>_Id. Unmatched items returned with null value for <table>_Id"""
+	if col_map is None:
+		col_map = {table:get_name_field(table)}
 	connection = engine.raw_connection()
 
 	temp_table = table_named_to_avoid_conflict(engine,'__temp_append')
