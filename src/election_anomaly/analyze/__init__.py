@@ -193,10 +193,10 @@ def get_data_for_scatter(session, jurisdiction_id, subdivision_type_id,
 	ecj = df['ElectionContestJoin'][df['ElectionContestJoin'].Election_Id == election_id]
 
 	# create contest_selection dataframe, adding Contest, Selection and ElectionDistrict_Id columns
-	contest_selection = df['CandidateContestSelectionJoin'].merge(
-		df['CandidateContest'],how='left',left_on='CandidateContest_Id',right_index=True).rename(
+	contest_selection = df['ContestSelectionJoin'].merge(
+		df['CandidateContest'],how='left',left_on='Contest_Id',right_index=True).rename(
 		columns={'Name':'Contest','Id':'ContestSelectionJoin_Id'}).merge(
-		df['CandidateSelection'],how='left',left_on='CandidateSelection_Id',right_index=True).merge(
+		df['CandidateSelection'],how='left',left_on='Selection_Id',right_index=True).merge(
 		df['Candidate'],how='left',left_on='Candidate_Id',right_index=True).rename(
 		columns={'BallotName':'Selection','CandidateContest_Id':'Contest_Id',
 				'CandidateSelection_Id':'Selection_Id'}).merge(
@@ -312,16 +312,20 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 	# Get name of db for error messages
 	db = session.bind.url.database
 
-	top_ru_id, top_ru = ui.pick_record_from_db(session,'ReportingUnit',required=True,db_idx=top_ru_id)
-	election_id,election = ui.pick_record_from_db(session,'Election',required=True,db_idx=election_id)
+	#top_ru_id, top_ru = ui.pick_record_from_db(session,'ReportingUnit',required=True,db_idx=top_ru_id)
+	#election_id,election = ui.pick_record_from_db(session,'Election',required=True,db_idx=election_id)
+	# get names from ids
+	top_ru = dbr.name_from_id(session,'ReportingUnit',top_ru_id).replace(" ","-")
+	election = dbr.name_from_id(session,'Election',election_id).replace(" ","-")
+	#sub_rutype = dbr.name_from_id(session, 'ReportingUnitType', subdivision_type_id)
 
 	#sub_rutype = dbr.name_from_id(session, 'ReportingUnitType', sub_rutype_id)
 
 	# pull relevant tables
 	df = {}
 	for element in [
-		'ElectionContestSelectionVoteCountJoin','VoteCount','CandidateContestSelectionJoin',
-		'BallotMeasureContestSelectionJoin','ComposingReportingUnitJoin','Election','ReportingUnit',
+		'ElectionContestSelectionVoteCountJoin','VoteCount','ContestSelectionJoin',
+		'ComposingReportingUnitJoin','Election','ReportingUnit',
 		'ElectionContestJoin','CandidateContest','CandidateSelection','BallotMeasureContest',
 		'BallotMeasureSelection','Office','Candidate']:
 		# pull directly from db, using 'Id' as index
