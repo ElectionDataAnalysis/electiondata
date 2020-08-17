@@ -44,34 +44,35 @@ def append_to_composing_reporting_unit_join(engine,ru):
 	This routine calculates the nesting relationships from the Names and uploads to db.
 	Returns the *all* composing-reporting-unit-join data from the db.
 	By convention, a ReportingUnit is it's own ancestor (ancestor_0)."""
-	ru['split'] = ru['Name'].apply(lambda x:x.split(';'))
-	ru['length'] = ru['split'].apply(len)
-	
-	# pull ReportingUnit to get ids matched to names
-	ru_cdf = pd.read_sql_table('ReportingUnit',engine,index_col=None)
-	ru_static = ru.copy()
+	if not ru.empty:
+		ru['split'] = ru['Name'].apply(lambda x:x.split(';'))
+		ru['length'] = ru['split'].apply(len)
 
-	# add db Id column to ru_static, if it's not already there
-	if 'Id' not in ru.columns:
-		ru_static = ru_static.merge(ru_cdf[['Name','Id']],on='Name',how='left')
+		# pull ReportingUnit to get ids matched to names
+		ru_cdf = pd.read_sql_table('ReportingUnit',engine,index_col=None)
+		ru_static = ru.copy()
 
-	# create a list of rows to append to the ComposingReportingUnitJoin element
-	cruj_dframe_list = []
-	for i in range(ru['length'].max()):
-		# check that all components of all Reporting Units are themselves ReportingUnits
-		ru_for_cruj = ru_static.copy()  # start fresh, without detritus from previous i
+		# add db Id column to ru_static, if it's not already there
+		if 'Id' not in ru.columns:
+			ru_static = ru_static.merge(ru_cdf[['Name','Id']],on='Name',how='left')
 
-		# get name of ith ancestor
-		#  E.g., ancestor_0 is largest ancestor (i.e., shortest string, often the state); ancestor_1 is the second-largest parent, etc.
-		ru_for_cruj[f'ancestor_{i}'] = ru_static['split'].apply(lambda x:';'.join(x[:i+1]))
-		# get Id of ith ancestor
-		ru_for_cruj = ru_for_cruj.merge(ru_cdf,left_on=f'ancestor_{i}',right_on='Name',
-										suffixes=['',f'_{i}'])
-		cruj_dframe_list.append(ru_for_cruj[['Id',f'Id_{i}']].rename(
-			columns={'Id':'ChildReportingUnit_Id',f'Id_{i}':'ParentReportingUnit_Id'}))
-	if cruj_dframe_list:
-		cruj_dframe = pd.concat(cruj_dframe_list)
-		insert_to_sql(engine,cruj_dframe,'ComposingReportingUnitJoin')
+		# create a list of rows to append to the ComposingReportingUnitJoin element
+		cruj_dframe_list = []
+		for i in range(ru['length'].max()):
+			# check that all components of all Reporting Units are themselves ReportingUnits
+			ru_for_cruj = ru_static.copy()  # start fresh, without detritus from previous i
+
+			# get name of ith ancestor
+			#  E.g., ancestor_0 is largest ancestor (i.e., shortest string, often the state); ancestor_1 is the second-largest parent, etc.
+			ru_for_cruj[f'ancestor_{i}'] = ru_static['split'].apply(lambda x:';'.join(x[:i+1]))
+			# get Id of ith ancestor
+			ru_for_cruj = ru_for_cruj.merge(ru_cdf,left_on=f'ancestor_{i}',right_on='Name',
+											suffixes=['',f'_{i}'])
+			cruj_dframe_list.append(ru_for_cruj[['Id',f'Id_{i}']].rename(
+				columns={'Id':'ChildReportingUnit_Id',f'Id_{i}':'ParentReportingUnit_Id'}))
+		if cruj_dframe_list:
+			cruj_dframe = pd.concat(cruj_dframe_list)
+			insert_to_sql(engine,cruj_dframe,'ComposingReportingUnitJoin')
 
 	cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin',engine)
 
@@ -520,13 +521,11 @@ def insert_to_sql(engine, df, element, sep='\t', encoding='iso-8859-1', timestam
 	connection = engine.raw_connection()
 	cursor = connection.cursor()
 
-	# if there are new ReportingUnits, must enter nesting info in db
+	# identify new ReportingUnits, must later enter nesting info in db
 	if element == 'ReportingUnit':
 		# find any new RUs
 		col_map = {'Name':'Name'}
-		w = append_id_to_dframe(engine, working, element,col_map=col_map)
-		new_rus = w[w[f'{element}_Id'].isnull()]
-		append_to_composing_reporting_unit_join(engine,new_rus)
+		matched_with_old = append_id_to_dframe(engine, working, element,col_map=col_map)
 
 
 	# name temp table by username and timestamp to avoid conflict
@@ -599,6 +598,12 @@ def insert_to_sql(engine, df, element, sep='\t', encoding='iso-8859-1', timestam
 	q = sql.SQL("DROP TABLE {temp_table}").format(temp_table=sql.Identifier(temp_table))
 	cursor.execute(q)
 
+	if element == 'ReportingUnit':
+		new_rus = matched_with_old[matched_with_old[f'{element}_Id'].isnull()]
+		if not new_rus.empty:
+			append_to_composing_reporting_unit_join(engine,new_rus)
+
+
 	connection.commit()
 	cursor.close()
 	connection.close()
@@ -623,10 +628,9 @@ def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_
 	temp_table = table_named_to_avoid_conflict(engine,'__temp_append')
 
 	df_cols = list(col_map.keys())
-	table_cols = [col_map[x] for x in df_cols]
+
 
 	# create temp db table with info from df, without index
-
 	df[df_cols].fillna('').to_sql(temp_table, engine,index_label='dataframe_index')
 
 	# join <table>_Id

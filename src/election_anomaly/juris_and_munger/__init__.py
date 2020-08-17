@@ -686,63 +686,6 @@ def check_results_munger_compatibility(mu: Munger, df: pd.DataFrame, error: dict
     return error
 
 
-def check_element_against_raw_results(el,results_df,munger,numerical_columns,d,err=None):
-    mode = munger.cdf_elements.loc[el,'source']
-
-    # restrict to element in question; add row for 'none or unknown'
-    none_series = pd.Series(
-        {'cdf_internal_name':'none or unknown','raw_identifier_value':'none or unknown'},name=el)
-    d_restricted = d[d.index == el].append(none_series)
-
-    translatable = [x for x in d_restricted['raw_identifier_value']]
-
-    if mode == 'row':
-        # add munged column
-        raw_fields = [f'{x}_SOURCE' for x in munger.cdf_elements.loc[el,'fields']]
-        try:
-            relevant = results_df[raw_fields].drop_duplicates()
-        except KeyError:
-            formula = munger.cdf_elements.loc[el,"raw_identifier_formula"]
-            raise mr.MungeError(
-                f'Required column from formula {formula} not found in file columns:\n{results_df.columns}')
-        mr.add_munged_column(relevant,munger,el,err,mode=mode)
-        # check for untranslatable items
-        missing = relevant[~relevant[f'{el}_raw'].isin(translatable)]
-
-    elif mode == 'column':
-        # add munged column
-        formula = munger.cdf_elements.loc[el,'raw_identifier_formula']
-        text_field_list,last_text = mr.text_fragments_and_fields(formula)
-        # create raw element column from formula applied to num col headers
-        val = {}  # holds evaluations of fields
-        raw_val = {}  # holds the raw value for column c
-        for c in numerical_columns:
-            raw_val[c] = ''
-            # evaluate f-th entry in the column whose 0th entry is c
-            for t,f in text_field_list:
-                if int(f) == 0:  # TODO make prettier, assumes first line is col header in df
-                    val[f] = c
-                else:
-                    val[f] = results_df.loc[f - 1,c]
-                raw_val[c] += t + val[f]
-        # TODO check that numerical cols are correctly identified even when more than one header row
-        relevant = pd.DataFrame(pd.Series([raw_val[c] for c in numerical_columns],name=f'{el}_raw'))
-        # check for untranslatable items # TODO code repeated from above
-        if el in d.index:
-            # if there are any items in d corresponding to the element <el>, do left merge and identify nulls
-            # TODO more natural way to do this, without taking cases?
-            relevant = relevant.merge(
-                d.loc[[el]],how='left',left_on=f'{el}_raw',right_on='raw_identifier_value')
-            missing = relevant[relevant.cdf_internal_name.isnull()]
-        else:
-            missing = relevant
-
-    else:
-        missing = pd.DataFrame([])
-        print(f'Not checking {el}, which is not read from the records in the results file.')
-    return missing
-
-
 class ForeignKeyException(Exception):
     pass
 

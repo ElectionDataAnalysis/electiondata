@@ -46,15 +46,6 @@ def cast_cols_as_int(df: pd.DataFrame, col_list: list,mode='name',error_msg='') 
     return df
 
 
-def none_or_unknown(df:pd.DataFrame,cols:list) -> pd.DataFrame:
-    """ change all blanks to 'none or unknown' """
-    df_copy = df.copy()
-    for c in cols:
-        df.loc[:, c] = df[c].apply(str)
-        df.loc[:, c] = df[c].replace('', 'none or unknown')
-    return df_copy
-
-
 def munge_clean(raw: pd.DataFrame, munger: jm.Munger):
     """Drop unnecessary columns.
     Append '_SOURCE' suffix to raw column names to avoid conflicts"""
@@ -498,7 +489,7 @@ def add_selection_id(df: pd.DataFrame, juris: jm.Jurisdiction, mu: jm.Munger, er
     # append BallotMeasureSelection_Id, drop BallotMeasureSelection
     working = df.copy()
     df_selection = pd.read_sql_table(f'BallotMeasureSelection',session.bind)
-    [working, err] = replace_raw_with_internal_ids(
+    working, err = replace_raw_with_internal_ids(
         working,juris,df_selection,'BallotMeasureSelection',dbr.get_name_field('BallotMeasureSelection'),
         err,
         drop_unmatched=False,
@@ -516,17 +507,10 @@ def add_selection_id(df: pd.DataFrame, juris: jm.Jurisdiction, mu: jm.Munger, er
     c_df = working[['Candidate_Id','Party_Id']]
     c_df = c_df.drop_duplicates()
     c_df = c_df[c_df['Candidate_Id'].notnull()]
-    cs_df, e = dbr.dframe_to_sql(c_df,session,'CandidateSelection',return_records='original')
-    if e:
-        ui.add_error(err,'database',e)
+    dbr.insert_to_sql(session.bind,c_df,'CandidateSelection')
     # add CandidateSelection_Id column, merging on Candidate_Id and Party_Id
-
-    if cs_df.empty:
-        working = add_constant_column(working, 'CandidateSelection_Id', np.nan)
-    else:
-        working = working.merge(
-            cs_df,how='left',
-            left_on=['Candidate_Id','Party_Id'],right_on=['Candidate_Id','Party_Id'])
+    col_map = {c:c for c in ['Candidate_Id','Party_Id']}
+    working = dbr.append_id_to_dframe(session.bind,c_df,'CandidateSelection',col_map=col_map)
 
     # drop records with a CC_Id but no CS_Id (i.e., keep if CC_Id is null or CS_Id is not null)
     working = working[(working['CandidateContest_Id'].isnull()) | (working['CandidateSelection_Id']).notnull()]
