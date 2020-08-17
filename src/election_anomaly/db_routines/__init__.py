@@ -728,7 +728,7 @@ def get_datafile_info(session, results_file):
     q = session.execute(f'''
         SELECT "Id", "Election_Id" 
         FROM _datafile 
-        WHERE short_name = '{results_file}'
+        WHERE file_name = '{results_file}'
         ''').fetchall()
     try:
         return q[0]
