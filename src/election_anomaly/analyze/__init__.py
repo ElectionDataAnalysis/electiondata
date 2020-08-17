@@ -165,16 +165,21 @@ def get_data_for_scatter(session, jurisdiction_id, subdivision_type_id,
 	"""Since this could be data across 2 elections, grab data one election at a time"""
 	db = session.bind.url.database
 
-	top_ru_id, top_ru = ui.pick_record_from_db(session,'ReportingUnit',required=True,db_idx=jurisdiction_id)
-	election_id,election = ui.pick_record_from_db(session,'Election',required=True,db_idx=election_id)
+	#top_ru_id, top_ru = ui.pick_record_from_db(session,'ReportingUnit',required=True,db_idx=jurisdiction_id)
+	#election_id,election = ui.pick_record_from_db(session,'Election',required=True,db_idx=election_id)
 
+	#sub_rutype = dbr.name_from_id(session, 'ReportingUnitType', subdivision_type_id)
+
+	# get names from ids
+	top_ru = dbr.name_from_id(session,'ReportingUnit',jurisdiction_id).replace(" ","-")
+	election = dbr.name_from_id(session,'Election',election_id).replace(" ","-")
 	sub_rutype = dbr.name_from_id(session, 'ReportingUnitType', subdivision_type_id)
 
 	# pull relevant tables
 	df = {}
 	for element in [
-		'ElectionContestSelectionVoteCountJoin','VoteCount','CandidateContestSelectionJoin',
-		'BallotMeasureContestSelectionJoin','ComposingReportingUnitJoin','Election','ReportingUnit',
+		'ElectionContestSelectionVoteCountJoin','VoteCount','ContestSelectionJoin',
+		'ComposingReportingUnitJoin','Election','ReportingUnit',
 		'ElectionContestJoin','CandidateContest','CandidateSelection','BallotMeasureContest',
 		'BallotMeasureSelection','Office','Candidate']:
 		# pull directly from db, using 'Id' as index
@@ -221,17 +226,18 @@ def get_data_for_scatter(session, jurisdiction_id, subdivision_type_id,
 		csj = contest_selection[contest_selection[filter_column].isin([filter_id])]
 	else:
 		csj = contest_selection
+
 	#csj = csj[csj.Candidate_Id.isin([candidate_id])]
 
 	# find ReportingUnits of the correct type that are subunits of top_ru
-	sub_ru_ids = child_rus_by_id(session,[top_ru_id],ru_type=[subdivision_type_id, ''])
+	sub_ru_ids = child_rus_by_id(session,[jurisdiction_id],ru_type=[subdivision_type_id, ''])
 	if not sub_ru_ids:
 		# TODO better error handling (while not sub_ru_list....)
 		raise Exception(f'Database {db} shows no ReportingUnits of type {sub_rutype} nested inside {top_ru}')
 	sub_ru = df['ReportingUnit'].loc[sub_ru_ids]
 
 	# find all subReportingUnits of top_ru
-	all_subs_ids = child_rus_by_id(session,[top_ru_id])
+	all_subs_ids = child_rus_by_id(session,[jurisdiction_id])
 
 	# find all children of subReportingUnits
 	children_of_subs_ids = child_rus_by_id(session,sub_ru_ids)
@@ -282,9 +288,12 @@ def short_name(text,sep=';'):
 		unsummed['Contest_Id'] = filter_id
 		unsummed['Candidate_Id'] = filter_id
 
-	if count_type == 'contests':
+	if count_type == 'contests' and filter_id != -1:
 		selection = dbr.name_from_id(session, 'CandidateContest', filter_id)
 		unsummed['Selection'] = selection
+	elif count_type == 'contests' and filter_id == -1:
+		unsummed['Selection'] = 'All contests'
+
 	columns = list(unsummed.drop(columns='Count').columns)
 	unsummed = unsummed.groupby(columns)['Count'].sum().reset_index()
 
@@ -326,10 +335,10 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 	ecj = df['ElectionContestJoin'][df['ElectionContestJoin'].Election_Id == election_id]
 
 	# create contest_selection dataframe, adding Contest, Selection and ElectionDistrict_Id columns
-	contest_selection = df['CandidateContestSelectionJoin'].merge(
-		df['CandidateContest'],how='left',left_on='CandidateContest_Id',right_index=True).rename(
+	contest_selection = df['ContestSelectionJoin'].merge(
+		df['CandidateContest'],how='left',left_on='Contest_Id',right_index=True).rename(
 		columns={'Name':'Contest','Id':'ContestSelectionJoin_Id'}).merge(
-		df['CandidateSelection'],how='left',left_on='CandidateSelection_Id',right_index=True).merge(
+		df['CandidateSelection'],how='left',left_on='Selection_Id',right_index=True).merge(
 		df['Candidate'],how='left',left_on='Candidate_Id',right_index=True).rename(
 		columns={'BallotName':'Selection','CandidateContest_Id':'Contest_Id',
 				'CandidateSelection_Id':'Selection_Id'}).merge(
