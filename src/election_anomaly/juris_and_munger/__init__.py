@@ -582,6 +582,16 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
         .fillna('none or unknown')
     # TODO check that df has the right format
 
+    # TODO add 'none or unknown' record
+    new_row = dict()
+    for c in df.columns:
+        if df[c].dtype == 'O':
+            new_row[c] = 'none or unknown'
+        elif pd.api.types.is_numeric_dtype(df[c]):
+            new_row[c] = 0
+    # append row to the dataframe
+    df = df.append(new_row, ignore_index=True)
+
     # dedupe df
     dupes,df = ui.find_dupes(df)
     if not dupes.empty:
