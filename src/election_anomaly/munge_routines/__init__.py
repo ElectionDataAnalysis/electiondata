@@ -576,7 +576,11 @@ def raw_elements_to_cdf(
                 e = f'Error adding internal ids for {t}:\n{exc}'
                 ui.add_error(err, 'munge-error', f'Error adding internal ids for {t}.')
 
-    working, err = add_selection_id(working, juris, mu, err, session)
+    try:
+        working, err = add_selection_id(working, juris, mu, err, session)
+    except Exception as exc:
+        e = f'Error adding Selection_Id:\n{exc}'
+        err = ui.add_error(err,'munge_error',e)
     if working.empty:
         e = 'No contests found, or no selections found for contests.'
         err = ui.add_error(err,'datafile',e)
@@ -591,17 +595,21 @@ def raw_elements_to_cdf(
 
     extra_cols = ['ElectionContestJoin_Id','ContestSelectionJoin_Id','_datafile_Id']
     # upload to VoteCount table, pull  Ids
-    e = dbr.insert_to_sql(session.bind,working,'VoteCount')
-    if e:
-        ui.add_error(err,'database',e)
-    session.commit()
-    col_map = {c:c for c in ['Count','CountItemType_Id','OtherCountItemType','ReportingUnit_Id']}
-    working = dbr.append_id_to_dframe(session.bind,working,'VoteCount',col_map=col_map)
-    # TODO check that all candidates in munged contests (including write ins!) are munged
-    # upload to ElectionContestSelectionVoteCountJoin
-    e = dbr.insert_to_sql(session.bind,working,'ElectionContestSelectionVoteCountJoin')
-    if e:
-        ui.add_error(err,'database',e)
+    try:
+        e = dbr.insert_to_sql(session.bind,working,'VoteCount')
+        if e:
+            ui.add_error(err,'database',e)
+        session.commit()
+        col_map = {c:c for c in ['Count','CountItemType_Id','OtherCountItemType','ReportingUnit_Id']}
+        working = dbr.append_id_to_dframe(session.bind,working,'VoteCount',col_map=col_map)
+        # TODO check that all candidates in munged contests (including write ins!) are munged
+        # upload to ElectionContestSelectionVoteCountJoin
+        e = dbr.insert_to_sql(session.bind,working,'ElectionContestSelectionVoteCountJoin')
+        if e:
+            ui.add_error(err,'database',e)
+    except Exception as exc:
+        e = f'Error filling VoteCount or ElectionContestSelectionVoteCountJoin:\n{exc}'
+        err = ui.add_error(err,'munge_error',e)
 
     return err
 
