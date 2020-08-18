@@ -20,6 +20,62 @@ import re
 from election_anomaly.db_routines import create_cdf_db as db_cdf
 import os
 
+states = '''Alabama
+Alaska
+Arizona
+Arkansas
+California
+Colorado
+Connecticut
+Delaware
+Florida
+Georgia
+Hawaii
+Idaho
+Illinois
+Indiana
+Iowa
+Kansas
+Kentucky
+Louisiana
+Maine
+Maryland
+Massachusetts
+Michigan
+Minnesota
+Mississippi
+Missouri
+Montana
+Nebraska
+Nevada
+New Hampshire
+New Jersey
+New Mexico
+New York
+North Carolina
+North Dakota
+Ohio
+Oklahoma
+Oregon
+Pennsylvania
+Rhode Island
+South Carolina
+South Dakota
+Tennessee
+Texas
+Utah
+Vermont
+Virginia
+Washington
+West Virginia
+Wisconsin
+Wyoming
+American Samoa
+Guam
+Northern Mariana Islands
+Puerto Rico
+US Virgin Islands'''
+
 
 def get_database_names(con):
 	"""Return dataframe with one column called `datname` """
@@ -708,6 +764,26 @@ def get_input_options(session, input, verbose):
                         JOIN "CandidateContest" cc ON ccsj."CandidateContest_Id" = cc."Id"
                 ORDER BY c."BallotName"
             ''')
+        elif search_str == 'jurisdiction':
+            result = session.execute(f'''
+                WITH states(states) AS (
+                    SELECT  '{states}'
+                )
+                , unnested AS (
+                    SELECT	UNNEST(regexp_split_to_array(states, '\n')) AS states
+                    FROM	states
+                )
+                , ordered AS (
+                    SELECT	*, ROW_NUMBER() OVER() AS order_by
+                    FROM	unnested u
+                )
+                SELECT	CASE WHEN "Id" IS null THEN -1 ELSE "Id" END AS parent_id,
+                        states AS name, order_by, 
+                        CASE WHEN "Id" IS null THEN false ELSE true END AS has_data
+                FROM	ordered o
+                        LEFT JOIN "ReportingUnit" ru ON o.states = ru."Name"
+                ORDER BY order_by
+            ''')
         else:
             # parent_id is candidate_id, type is combo of party and contest name
             result = session.execute(f'''
@@ -760,5 +836,8 @@ def package_display_results(data):
             'name': d[1],
             'type': d[2]
         }
+        # Special case for jurisdictions because we package an extra field
+        if len(d) == 4:
+            temp['has_data'] = d[3]
         results.append(temp)
     return results
