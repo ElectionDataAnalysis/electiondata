@@ -270,66 +270,6 @@ def get_foreign_key_df(session,element):
 	return fk_df
 
 
-def add_foreign_key_name_col(sess,df,foreign_key_col,foreign_key_element,drop_old=False):
-	df_copy = df.copy()
-	fk_element_df = pd.read_sql_table(foreign_key_element,sess.bind,index_col='Id')
-	name_field = get_name_field(foreign_key_element)
-	fk_element_df.rename(columns={name_field:foreign_key_col[:-3]},inplace=True)
-	df_copy = df_copy.merge(
-		fk_element_df[[foreign_key_col[:-3]]],how='left',left_on=foreign_key_col,right_index=True)
-	if drop_old:
-		df_copy.drop(foreign_key_col,axis=1,inplace=True)
-	return df_copy
-
-
-def dframe_to_sql(dframe: pd.DataFrame, session, element: str,
-		raw_to_votecount: bool = False, return_records: str = 'all', timestamp: str = None) -> [
-	pd.DataFrame, str]:
-	"""Create working dataframe: Drop columns and add null columns as necessary to <dframe> so that it matches the non-Id columns of the
-	<element> table in the db. Add rows of resulting DataFrame to db (without creating dupes) and append
-	<element>.Id to working dataframe (or if <return_records> == 'all', just pull the whole db table).
-	raw_to_votecount has some columns added, needs special treatment
-	ReportingUnit gets special treatment: needs to process any nesting relationships indicated by semicolons in names """
-
-	connection = session.bind.raw_connection()
-	cursor = connection.cursor()
-	working = dframe.copy()
-	# pull column names of <element> table
-	target_columns, type_map = get_column_names(cursor, element)
-
-	# alter working to match structure of <elemnt> table
-	dframe_only_cols = [x for x in working.columns if x not in target_columns]
-	target_only_cols = [x for x in target_columns if x not in working.columns]
-	intersection_cols = [x for x in target_columns if x in working.columns]
-
-	working = working.drop(dframe_only_cols, axis=1)
-	for c in target_only_cols:
-		working.loc[:, c] = None
-
-	# create column mapping for appending
-	col_map = {c: c for c in intersection_cols}
-
-	# insert any new rows in working into target table
-	insert_to_sql(session.bind, working, element, timestamp=timestamp)
-
-	if return_records == 'original':
-		col_map = {c: c for c in intersection_cols}
-		working = append_id_to_dframe(session.bind, dframe, element, col_map)
-	elif return_records == 'all':
-		working = pd.read_sql_table(element, session.bind, index_col=None).rename(columns={'Id': f'{element}_Id'})
-	error_string = ''
-	return working, error_string
-
-
-def format_dates(dframe):
-	"""ensure any date columns are pulled in 2020-05-20 format"""
-	df = dframe.copy()
-	# TODO is 'datetime64[ns]' the only thing that will show up?
-	for c in df.columns[df.dtypes=='datetime64[ns]']:
-		df[c] = f'{df[c].dt.date}'
-	return df
-
-
 def name_from_id(session,element,idx):
 	name_field = get_name_field(element)
 	q = f"""SELECT "{name_field}" FROM "{element}" WHERE "Id" = {idx}"""

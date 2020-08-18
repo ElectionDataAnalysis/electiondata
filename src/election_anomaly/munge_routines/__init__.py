@@ -299,55 +299,6 @@ def enum_col_to_id_othertext(df,type_col,enum_df,drop_old=True):
     return df
 
 
-def enum_value_from_id_othertext(enum_df,idx,othertext):
-    """Given an enumeration dframe (with cols 'Id' and 'Txt', or index and column 'Txt'),
-    along with an (<id>,<othertext>) pair, find and return the plain language
-    value for that enumeration (e.g., 'general')."""
-
-    # ensure Id is a column, not the index, of enum_df (otherwise df index will be lost in merge)
-    if 'Id' not in enum_df.columns:
-        enum_df['Id'] = enum_df.index
-
-    if othertext != '':
-        enum_val = othertext
-    else:
-        enum_val = enum_df[enum_df.Id == idx].loc[:,'Txt'].to_list()[0]
-    return enum_val
-
-
-def enum_value_to_id_othertext(enum_df,value):
-    """Given an enumeration dframe,
-        along with a plain language value for that enumeration
-        (e.g., 'general'), return the (<id>,<othertext>) pair."""
-    # ensure Id is in the index of enum_df (otherwise df index will be lost in merge)
-    if 'Id' in enum_df.columns:
-        enum_df = enum_df.set_index('Id')
-
-    if value in enum_df.Txt.to_list():
-        idx = enum_df[enum_df.Txt == value].first_valid_index()
-        other_txt = ''
-    else:
-        idx = enum_df[enum_df.Txt == 'other'].first_valid_index()
-        other_txt = value
-    return idx,other_txt
-
-
-def fk_plaintext_dict_from_db_record(session,element,db_record,excluded=None):
-    """Return a dictionary of <name>:<value> for any <name>_Id that is a foreign key
-    in the <element> table, excluding any foreign key in the list <excluded>"""
-    fk_dict = {}
-    fk_df = dbr.get_foreign_key_df(session,element)
-    if excluded:
-        for i,r in fk_df.iterrows():
-            # TODO normalize: do elts of <excluded> end in '_Id' or not?
-            if i not in excluded and i[:-3] not in excluded:
-                fk_dict[i] = dbr.name_from_id(session,r['foreign_table_name'],db_record[i])
-    else:
-        for i,r in fk_df.iterrows():
-            fk_dict[i] = dbr.name_from_id(session,r['foreign_table_name'],db_record[i])
-    return fk_dict
-
-
 def good_syntax(s):
     """Returns true if formula string <s> passes certain syntax main_routines(s)"""
     good = True
