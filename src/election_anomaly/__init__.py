@@ -112,22 +112,26 @@ class MultiDataLoader():
 				if errors == (None,None):
 					# try to load data
 					load_error = sdl.load_results()
-
-					# print warnings and return errors
-					key_list = [k for k in load_error.keys()]
-					for k in key_list:
-						if 'warning' in k:
-							print(f'Warning: {load_error.pop(k)}')
 					if load_error:
 						err[f] = load_error
-					else:
-						# move results file and its parameter file to the archive directory
-						ui.archive_results(f, self.d['results_dir'], self.d['archive_dir'])
-						ui.archive_results(sdl.d['results_file'], self.d['results_dir'], self.d['archive_dir'])
-						print(f'\tArchived {f} and its results file')
+						self.move_loaded_results_file(sdl,load_error)
+				# print warnings and return errors
 				else:
 					err[f] = errors
 		return err
+
+	def move_loaded_results_file(self,sdl,load_error):
+		key_list = [k for k in load_error.keys()]
+		for k in key_list:
+			if 'warning' in k:
+				print(f'Warning: {load_error.pop(k)}')
+		else:
+			# move results file and its parameter file to the archive directory
+			ui.archive_results(f, self.d['results_dir'], self.d['archive_dir'])
+			ui.archive_results(sdl.d['results_file'], self.d['results_dir'], self.d['archive_dir'])
+			print(f'\tArchived {f} and its results file')
+		# TODO
+		return
 
 
 class SingleDataLoader():
