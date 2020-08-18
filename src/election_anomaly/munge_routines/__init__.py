@@ -546,37 +546,38 @@ def raw_elements_to_cdf(
     element_list = [t for t in mu.cdf_elements.index if
                     (t[-7:] != 'Contest' and t[-9:] != 'Selection')]
     for t in element_list:
-        # capture id from db in new column and erase any now-redundant cols
-        df = pd.read_sql_table(t,session.bind)
-        name_field = dbr.get_name_field(t)
-        # set drop_unmatched = True for fields necessary to BallotMeasure rows,
-        #  drop_unmatched = False otherwise to prevent losing BallotMeasureContests for BM-inessential fields
-        if t == 'ReportingUnit' or t == 'CountItemType':
-            drop = True
-        else:
-            drop = False
-        if t == 'CountItemType':
-            # munge raw to internal CountItemType
-            r_i = pd.read_csv(
-                os.path.join(juris.path_to_juris_dir, 'dictionary.txt'), sep='\t'
-            )
-            r_i = r_i[r_i.cdf_element == 'CountItemType']
-            working = working.merge(
-                r_i,how='left',left_on='CountItemType_raw',right_on='raw_identifier_value'
-            ).rename(columns={'cdf_internal_name':'CountItemType'})
+        try:
+            # capture id from db in new column and erase any now-redundant cols
+            df = pd.read_sql_table(t,session.bind)
+            name_field = dbr.get_name_field(t)
+            # set drop_unmatched = True for fields necessary to BallotMeasure rows,
+            #  drop_unmatched = False otherwise to prevent losing BallotMeasureContests for BM-inessential fields
+            if t == 'ReportingUnit' or t == 'CountItemType':
+                drop = True
+            else:
+                drop = False
+            if t == 'CountItemType':
+                # munge raw to internal CountItemType
+                r_i = pd.read_csv(
+                    os.path.join(juris.path_to_juris_dir, 'dictionary.txt'), sep='\t'
+                )
+                r_i = r_i[r_i.cdf_element == 'CountItemType']
+                working = working.merge(
+                    r_i,how='left',left_on='CountItemType_raw',right_on='raw_identifier_value'
+                ).rename(columns={'cdf_internal_name':'CountItemType'})
 
-            # join CountItemType_Id and OtherCountItemType
-            cit = pd.read_sql_table('CountItemType', session.bind)
-            working = enum_col_to_id_othertext(working, 'CountItemType', cit)
-            working = working.drop(['raw_identifier_value','cdf_element'],axis=1)
-        else:
-            try:
-                working, err = replace_raw_with_internal_ids(
-                    working, juris, df, t, name_field, err, drop_unmatched=drop)
-                working.drop(t,axis=1,inplace=True)
-            except Exception as exc:
+                # join CountItemType_Id and OtherCountItemType
+                cit = pd.read_sql_table('CountItemType', session.bind)
+                working = enum_col_to_id_othertext(working, 'CountItemType', cit)
+                working = working.drop(['raw_identifier_value','cdf_element'],axis=1)
+            else:
+                    working, err = replace_raw_with_internal_ids(
+                        working, juris, df, t, name_field, err, drop_unmatched=drop)
+                    working.drop(t,axis=1,inplace=True)
+        except Exception as exc:
                 e = f'Error adding internal ids for {t}:\n{exc}'
                 ui.add_error(err, 'munge-error', f'Error adding internal ids for {t}.')
+                return err
 
     try:
         working, err = add_selection_id(working, juris, mu, err, session)
@@ -590,14 +591,12 @@ def raw_elements_to_cdf(
         return err
 
     for j in ['ContestSelectionJoin','ElectionContestJoin']:
-        working, err = append_join_id(project_root, session, working, j, err)
+        try:
+            working, err = append_join_id(project_root, session, working, j, err)
+        except Exception as exc:
+            e = f'Error appending {j}_Id:\n{exc}'
 
     # Fill VoteCount and ElectionContestSelectionVoteCountJoin
-    #  To get 'VoteCount_Id' attached to the correct row, temporarily add columns to VoteCount
-    #  add ElectionContestSelectionVoteCountJoin columns to VoteCount
-
-    extra_cols = ['ElectionContestJoin_Id','ContestSelectionJoin_Id','_datafile_Id']
-    # upload to VoteCount table, pull  Ids
     try:
         e = dbr.insert_to_sql(session.bind,working,'VoteCount')
         if e:
@@ -639,26 +638,30 @@ def append_join_id(project_root: str, session, working: pd.DataFrame, j: str, er
     working, err = append_multi_foreign_key(working,ref_d, err)
 
     # remove any join_df rows with any *IMPORTANT* null and load to db
+        # drop unnecessary columns
     unnecessary = [x for x in ref_ids if x not in j_cols]
     join_df.drop(unnecessary,axis=1,inplace=True)
-    # remove any row with a null value in all columns
-    join_df = join_df[join_df.notnull().any(axis=1)]
+        # remove any row with a null or 0 value in any columns
+    join_df = join_df[(join_df!=0 & join_df.notnull()).all(axis=1)]
+
     # warn user of rows with null or blank or 0 value in some columns
-    bad_rows = (join_df.isnull() | join_df == '' | join_df == 0).any(axis=1)
-    if bad_rows.any():
+    bad_rows = join_df[(join_df.isnull() | join_df == 0).any(axis=1)]
+    if bad_rows.any().any():
         ui.add_error(
             err,'munge-warning',
-            f'Warning: there are {bad_rows.shape[0]} rows proposed for {j} that have nulls values. '
+            f'Warning: there are rows proposed for {j} that have null or 0 values. '
             f'These will not be uploaded')
-    # remove any row with a null value in any column
-    join_df = join_df[join_df.notnull().all(axis=1)]
+
     # add column for join id
     if join_df.empty:
         working[f'{j}_Id'] = np.nan
     else:
-        join_df, e = dbr.dframe_to_sql(join_df,session,j)
+        # insert into the join table
+        e = dbr.insert_to_sql(session.bind,join_df,j)
         if e:
             ui.add_error(err,'database',e)
+        # append the join id
+        join_df = dbr.append_id_to_dframe(session.bind,join_df,j)
         working = working.merge(join_df,how='left',left_on=j_cols,right_on=j_cols)
         working.rename(columns={'Id':f'{j}_Id'},inplace=True)
     return working, err

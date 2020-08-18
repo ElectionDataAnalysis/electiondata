@@ -1,7 +1,0 @@
-[election_anomaly]
-db_paramfile=<path/to/database/parameter/file>
-db_name=<name of database holding the counts to be rolled up>
-top_reporting_unit=<internal database name of the jurisdiction, e.g., 'Pennsylvania' or 'Pennsylvania;Philadelphia'>
-sub_reporting_unit_type=<e.g., 'county' or 'ward'>
-rollup_directory=<path/to/directory/to/hold/exports>
-results_file_short_name=<short name of results file in the _datafile table in the database>
