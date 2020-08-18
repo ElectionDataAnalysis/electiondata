@@ -794,14 +794,16 @@ def get_input_options(session, input, verbose):
             # parent_id is candidate_id, type is combo of party and contest name
             result = session.execute(f'''
                 SELECT  c."Id" AS parent_id, c."BallotName" as name, 
-                        p."Name" || ' - ' || cc."Name" AS type
+                        cc."Name" || ' - ' || p."Name" AS type,
+						row_number() over(ORDER BY c."BallotName") as order_by
                 FROM    "Candidate" c
-                        JOIN "Party" p ON c."Party_Id" = p."Id"
                         JOIN "CandidateSelection" cs ON c."Id" = cs."Candidate_Id"
-                        JOIN "CandidateContestSelectionJoin" ccsj 
-                            ON cs."Id" = ccsj."CandidateSelection_Id"
-                        JOIN "CandidateContest" cc ON ccsj."CandidateContest_Id" = cc."Id"
+                        JOIN "ContestSelectionJoin" ccsj 
+                            ON cs."Id" = ccsj."Selection_Id"
+                        JOIN "CandidateContest" cc ON ccsj."Contest_Id" = cc."Id"                        
+						JOIN "Party" p ON cs."Party_Id" = p."Id"
                 WHERE   c."BallotName" ILIKE '%{search_str}%'
+                ORDER BY c."BallotName"
             ''')
         return package_display_results(result)
 
