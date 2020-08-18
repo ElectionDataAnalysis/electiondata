@@ -739,29 +739,34 @@ def get_input_options(session, input, verbose):
     else:
         if search_str == 'BallotMeasureContest':
             result = session.execute(f'''
-                SELECT  ru."Id" AS parent_id, c."Name" AS name, rut."Txt" AS type
+                SELECT  ru."Id" AS parent_id, c."Name" AS name, rut."Txt" AS type,
+                        row_number() over(ORDER BY c."Name")
                 FROM    "BallotMeasureContest" c
                         JOIN "ReportingUnit" ru ON c."ElectionDistrict_Id" = ru."Id"
                         JOIN "ReportingUnitType" rut ON ru."ReportingUnitType_Id" = rut."Id"
+                ORDER BY c."Name"
             ''')
         elif search_str == 'CandidateContest':
             result = session.execute(f'''
-                SELECT  ru."Id" AS parent_id, c."Name" AS name, rut."Txt" AS type
+                SELECT  ru."Id" AS parent_id, c."Name" AS name, rut."Txt" AS type,
+                        row_number() over(ORDER BY c."Name")
                 FROM    "CandidateContest" c
                         JOIN "Office" o ON c."Office_Id" = o."Id"
                         JOIN "ReportingUnit" ru ON o."ElectionDistrict_Id" = ru."Id"
                         JOIN "ReportingUnitType" rut ON ru."ReportingUnitType_Id" = rut."Id"
+                ORDER BY c."Name"
             ''')
         elif search_str == 'Candidate':
             result = session.execute(f'''
                 SELECT  c."Id" AS parent_id, c."BallotName" as name, 
-                        p."Name" || ' - ' || cc."Name" AS type
+                        cc."Name" || ' - ' || p."Name" AS type,
+						row_number() over(ORDER BY c."BallotName") as order_by
                 FROM    "Candidate" c
-                        JOIN "Party" p ON c."Party_Id" = p."Id"
                         JOIN "CandidateSelection" cs ON c."Id" = cs."Candidate_Id"
-                        JOIN "CandidateContestSelectionJoin" ccsj 
-                            ON cs."Id" = ccsj."CandidateSelection_Id"
-                        JOIN "CandidateContest" cc ON ccsj."CandidateContest_Id" = cc."Id"
+                        JOIN "ContestSelectionJoin" ccsj 
+                            ON cs."Id" = ccsj."Selection_Id"
+                        JOIN "CandidateContest" cc ON ccsj."Contest_Id" = cc."Id"                        
+						JOIN "Party" p ON cs."Party_Id" = p."Id"
                 ORDER BY c."BallotName"
             ''')
         elif search_str == 'jurisdiction':
