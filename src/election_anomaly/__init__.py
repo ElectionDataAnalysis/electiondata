@@ -181,13 +181,15 @@ class SingleDataLoader():
 			columns=['short_name', 'file_name',
 					 'download_date', 'source',
 					 'note', 'ReportingUnit_Id', 'Election_Id','created_at'])
-		[df,e] = dbr.dframe_to_sql(data,self.session,'_datafile')
+		e = dbr.insert_to_sql(self.session.bind,data,'_datafile')
 		if e:
 			return [0, 0], e
 		else:
-			datafile_id = df[
-				(df['short_name']== self.d['results_short_name']) & (df['file_name']==filename) & (df['ReportingUnit_Id']==top_reporting_unit_id) & (df['Election_Id']==election_id)]['_datafile_Id'].to_list()[0]
-			return [datafile_id, election_id], e
+			col_map = {'short_name':'short_name'}
+			datafile_id = dbr.append_id_to_dframe(
+				self.session.bind,data,'_datafile',col_map=col_map
+			).loc[0,'_datafile_Id']
+		return [datafile_id, election_id], e
 
 	def load_results(self) -> dict:
 		results_info, e = self.track_results()
