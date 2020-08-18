@@ -514,8 +514,7 @@ def add_selection_id(df: pd.DataFrame, juris: jm.Jurisdiction, mu: jm.Munger, er
     working = dbr.append_id_to_dframe(session.bind,working,'CandidateSelection',col_map=col_map)
 
     # drop records with a CC_Id but no CS_Id (i.e., keep if CC_Id is null or CS_Id is not null)
-    # TODO might have to check for '' or 0 as well as nulls
-    working = working[(working['CandidateContest_Id'].isnull()) | (working['CandidateSelection_Id']).notnull()]
+    working = working[(working['CandidateContest_Id'] == 0) | (working['CandidateSelection_Id']) != 0]
 
     # define Selection_Id based on contest_type,
     working.loc[working['contest_type'] == 'Candidate','Selection_Id'] = working.loc[
