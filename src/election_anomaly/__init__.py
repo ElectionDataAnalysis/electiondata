@@ -112,25 +112,42 @@ class MultiDataLoader():
 				if errors == (None,None):
 					# try to load data
 					load_error = sdl.load_results()
-					if load_error:
-						err[f] = load_error
-						self.move_loaded_results_file(sdl,load_error)
-				# print warnings and return errors
-				else:
-					err[f] = errors
+					self.move_loaded_results_file(sdl,f,load_error)
 		return err
 
-	def move_loaded_results_file(self,sdl,load_error):
-		key_list = [k for k in load_error.keys()]
-		for k in key_list:
-			if 'warning' in k:
-				print(f'Warning: {load_error.pop(k)}')
+	def move_loaded_results_file(self, sdl, f: str, load_error: dict):
+		warnings = []
+		errors = []
+		for mu in load_error.keys():
+			warn_err_keys = [k for k in load_error[mu].keys()].copy()
+			for k in warn_err_keys:
+				msg = load_error[mu].pop(k)
+				if 'warning' in k or 'Warning' in k:
+					print(f'Warning ({mu}): {msg}')
+					warnings.append(msg)
+				elif 'error' in k:
+					print(f'Error ({mu}): {msg}')
+					errors.append(msg)
+		if errors:
+			err_str = '\n\t'.join(errors)
+			if warnings:
+				ws = '\n\t'.join(warnings)
+				warn_str = f'\nWarnings:\n{ws}'
+			print(f'Fatal errors found:\n{err_str}{warn_str}')
 		else:
 			# move results file and its parameter file to the archive directory
-			ui.archive_results(f, self.d['results_dir'], self.d['archive_dir'])
-			ui.archive_results(sdl.d['results_file'], self.d['results_dir'], self.d['archive_dir'])
-			print(f'\tArchived {f} and its results file')
-		# TODO
+			ui.archive(f, self.d['results_dir'], self.d['archive_dir'])
+			ui.archive(sdl.d['results_file'], self.d['results_dir'], self.d['archive_dir'])
+			if warnings:
+				# save warnings in archive directory
+				warn_file = os.path.join(self.d['archive_dir'], f'{f[:-4]}.warn')
+				with open (warn_file, 'w') as wf:
+					wf.write('\n'.join(warnings))
+				warn_str = f'See warnings in {f[:-4]}.warn'
+			else:
+				warn_str = None
+			print(f'\tArchived {f} and its results file. {warn_str}')
+
 		return
 
 

@@ -227,7 +227,7 @@ def read_combine_results(mu: jm.Munger, results_file, project_root, err, aux_dat
 	return working, err
 
 
-def archive_results(file_name: str, current_dir: str, archive_dir: str):
+def archive(file_name: str, current_dir: str, archive_dir: str):
 	"""Move <file_name> from <current_dir> to <archive_dir>. If <archive_dir> already has a file with that name,
 	prefix <prefix> to the file name and try again. If that doesn't work, add prefix and timestamp"""
 	archive = Path(archive_dir)
