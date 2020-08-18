@@ -20,7 +20,7 @@ def generic_clean(df:pd.DataFrame) -> pd.DataFrame:
     working = df.copy()
     for c in working.columns:
         if is_numeric_dtype(working[c]):
-            working[c] = working[c].fillna(0)
+            working[c] = working[c].fillna(0).astype('int64')
         else:
             working[c] = working[c].fillna('')
             try:
@@ -510,7 +510,7 @@ def add_selection_id(df: pd.DataFrame, juris: jm.Jurisdiction, mu: jm.Munger, er
     dbr.insert_to_sql(session.bind,c_df,'CandidateSelection')
     # add CandidateSelection_Id column, merging on Candidate_Id and Party_Id
     col_map = {c:c for c in ['Candidate_Id','Party_Id']}
-    working = dbr.append_id_to_dframe(session.bind,c_df,'CandidateSelection',col_map=col_map)
+    working = dbr.append_id_to_dframe(session.bind,working,'CandidateSelection',col_map=col_map)
 
     # drop records with a CC_Id but no CS_Id (i.e., keep if CC_Id is null or CS_Id is not null)
     working = working[(working['CandidateContest_Id'].isnull()) | (working['CandidateSelection_Id']).notnull()]
@@ -569,7 +569,7 @@ def raw_elements_to_cdf(
             working = working.drop(['raw_identifier_value','cdf_element'],axis=1)
         else:
             try:
-                [working, err] = replace_raw_with_internal_ids(
+                working, err = replace_raw_with_internal_ids(
                     working, juris, df, t, name_field, err, drop_unmatched=drop)
                 working.drop(t,axis=1,inplace=True)
             except Exception as exc:
@@ -581,6 +581,7 @@ def raw_elements_to_cdf(
     except Exception as exc:
         e = f'Error adding Selection_Id:\n{exc}'
         err = ui.add_error(err,'munge_error',e)
+        return err
     if working.empty:
         e = 'No contests found, or no selections found for contests.'
         err = ui.add_error(err,'datafile',e)

@@ -1,11 +1,11 @@
 [election_anomaly]
-results_file=<just the name, not the path. File should be in the same directory as this parameter file>
-juris_path=<path/to/folder/containing/jurisdiction/definition/files>
-munger_name=<comma-separated list of all mungers to be applied to the file.>
-top_reporting_unit=<internal db name from ReportingUnit table>
-election=<internal db name from Election table>
-results_short_name=<short_name from the db _datafile table>
-results_download_date=<date file was downloaded from the source>
-results_source=<usually the State Board of Elections>
+results_file=
+jurisdiction_path=/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/Pennsylvania
+munger_name=pa.gen
+top_reporting_unit=Pennsylvania
+election=2018 General
+results_short_name=pa_18g_by_county
+results_download_date=1900-01-01
+results_source=PA dos
 results_note=
-aux_data_dir=<leave blank if there are no auxiliary data files>
+aux_data_dir=

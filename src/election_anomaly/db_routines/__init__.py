@@ -321,95 +321,6 @@ def dframe_to_sql(dframe: pd.DataFrame, session, element: str,
 	return working, error_string
 
 
-def dframe_to_sql_OLD(
-		dframe: pd.DataFrame, session, element: str,
-		raw_to_votecount: bool=False, return_records: str='all', index_col=None) -> [pd.DataFrame, str]:
-	"""
-	Given a dataframe <dframe >and an existing cdf db element <element>>, clean <dframe>
-	(i.e., drop any columns that are not in <element>, add null columns to match any missing columns)
-	append records any new records to the corresponding element in the db (and commit!)
-	Return the updated dataframe, including all rows from the db and all from the dframe,
-	and the Id from the database.
-	<return_records> is a flag defaulting to "all" (return all records in db)
-	but can be set to "original" to return only the records from the input <dframe>.
-
-	"""
-	# pull copy of existing element
-	target = pd.read_sql_table(element, session.bind, index_col=index_col)
-	# VoteCount element gets added columns during raw data upload, needs special treatment
-
-	if dframe.empty:
-		if return_records == 'original':
-			return dframe, None
-		else:
-			return target, None
-	if raw_to_votecount:
-		# join with ECSVCJ
-		secvcj = pd.read_sql_table('ElectionContestSelectionVoteCountJoin',session.bind,index_col=None)
-		# drop columns that don't belong, but were temporarily created in order
-		#  to get VoteCount_Id correctly into ECSVCJ
-		target=target.drop(['ElectionContestJoin_Id','ContestSelectionJoin_Id','_datafile_Id'],axis=1)
-		target=target.merge(secvcj,left_on='Id',right_on='VoteCount_Id')
-		target=target.drop(['Id','VoteCount_Id'],axis=1)
-	df_to_db = dframe.copy()
-	df_to_db.drop_duplicates(inplace=True)
-	if 'Count' in df_to_db.columns:
-		# catch anything not an integer (e.g., in MD 2018g upload)
-		# TODO is this still necessary, given cast_cols_as_int?
-		df_to_db.loc[:,'Count']=df_to_db['Count'].astype('int64',errors='ignore')
-
-	# partition the columns
-	dframe_only_cols = [x for x in dframe.columns if x not in target.columns]
-	target_only_cols = [x for x in target.columns if x not in dframe.columns]
-	intersection_cols = [x for x in target.columns if x in dframe.columns]
-
-	# remove columns that don't exist in target element
-	df_to_db = df_to_db.drop(dframe_only_cols, axis=1)
-
-	# add columns that exist in target element but are missing from original dframe
-	for c in target_only_cols:
-		df_to_db.loc[:,c] = None
-
-	# make sure datatypes of df_to_db match the types of target
-	for c in intersection_cols:
-		if target[c].dtype != df_to_db[c].dtype:
-			df_to_db[c] = df_to_db[c].astype(target[c].dtype,errors='ignore')
-
-	appendable = pd.concat([target,target,df_to_db],sort=False).drop_duplicates(keep=False)
-	# note: two copies of target ensures none of the original rows will be appended.
-
-	# drop the Id column
-	if 'Id' in appendable.columns:
-		appendable = appendable.drop('Id',axis=1)
-
-	error_string = None
-	try:
-		appendable.to_sql(element, session.bind, if_exists='append', index=False)
-	except sqlalchemy.exc.IntegrityError as e:
-		# FIXME: target, pulled from DB, has datetime, while dframe has date,
-		#  so record might look like same-name-different-date when it isn't really
-		# FIXME: IntegrityError will fail silently because it broke the dataload
-		error_string = f'Error uploading {element} to {session.bind.url}: {e}'
-
-	if element == 'ReportingUnit' and not appendable.empty:
-		append_to_composing_reporting_unit_join(session,appendable)
-
-	up_to_date_dframe = pd.read_sql_table(element, session.bind)
-	up_to_date_dframe = format_dates(up_to_date_dframe)
-
-	if raw_to_votecount:
-		# need to drop rows that were read originally from target -- these will have null ElectionContestJoin_Id
-		up_to_date_dframe=up_to_date_dframe[up_to_date_dframe['ElectionContestJoin_Id'].notnull()]
-
-	session.flush()
-	if return_records == 'original':
-		# TODO get rid of rows not in dframe by taking inner join
-		up_to_date_dframe = dframe.merge(
-			up_to_date_dframe,left_on=intersection_cols,right_on=intersection_cols,how='inner').drop(
-			target_only_cols,axis=1)
-	return up_to_date_dframe, error_string
-
-
 def format_dates(dframe):
 	"""ensure any date columns are pulled in 2020-05-20 format"""
 	df = dframe.copy()
@@ -599,7 +510,7 @@ def insert_to_sql(engine, df, element, sep='\t', encoding='iso-8859-1', timestam
 	cursor.execute(q)
 
 	if element == 'ReportingUnit':
-		new_rus = matched_with_old[matched_with_old[f'{element}_Id'].isnull()]
+		new_rus = matched_with_old[matched_with_old[f'{element}_Id']=='']
 		if not new_rus.empty:
 			append_to_composing_reporting_unit_join(engine,new_rus)
 
@@ -631,7 +542,9 @@ def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_
 
 
 	# create temp db table with info from df, without index
+	df = mr.generic_clean(df)
 	df[df_cols].fillna('').to_sql(temp_table, engine,index_label='dataframe_index')
+	# TODO fillna('') probably redundant
 
 	# join <table>_Id
 	on_clause = sql.SQL(' AND ').join(
@@ -643,7 +556,7 @@ def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_
 	q = sql.SQL("SELECT t.*, tt.dataframe_index FROM {tt} tt LEFT JOIN {t} t ON {on_clause}").format(
 		tt=sql.Identifier(temp_table),t=sql.Identifier(table),on_clause=on_clause
 	)
-	w = pd.read_sql_query(q, connection).set_index('dataframe_index')
+	w = mr.generic_clean(pd.read_sql_query(q, connection).set_index('dataframe_index'))
 
 	# drop temp db table
 	q = sql.SQL("DROP TABLE {temp_table}").format(temp_table=sql.Identifier(temp_table))
