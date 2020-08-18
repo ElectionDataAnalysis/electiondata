@@ -410,6 +410,7 @@ class JurisdictionPrepper():
 
 		# get contests that are not already primaries
 		contests = prep.get_element(self.d['jurisdiction_path'], 'CandidateContest')
+		# TODO might have to check for '' as well as nulls
 		non_p_contests = contests[contests['PrimaryParty'].isnull()]
 		if non_p_contests.empty:
 			error = 'CandidateContest.txt is missing or has no non-primary contests. No primary contests added.'

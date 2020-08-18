@@ -213,6 +213,7 @@ def replace_raw_with_internal_ids(
         # drop rows that melted from unrecognized columns, EVEN IF drop_unmatched=False.
         #  These rows are ALWAYS extraneous. Drop cols where raw_identifier is not null
         #  but no cdf_internal_name was found
+        # TODO might have to check for '' or 0 as well as nulls
         row_df = row_df[(row_df['raw_identifier_value'].isnull()) | (row_df['cdf_internal_name'].notnull())]
         # TODO more efficient to drop these earlier, before melting
 
@@ -513,6 +514,7 @@ def add_selection_id(df: pd.DataFrame, juris: jm.Jurisdiction, mu: jm.Munger, er
     working = dbr.append_id_to_dframe(session.bind,working,'CandidateSelection',col_map=col_map)
 
     # drop records with a CC_Id but no CS_Id (i.e., keep if CC_Id is null or CS_Id is not null)
+    # TODO might have to check for '' or 0 as well as nulls
     working = working[(working['CandidateContest_Id'].isnull()) | (working['CandidateSelection_Id']).notnull()]
 
     # define Selection_Id based on contest_type,
@@ -641,8 +643,8 @@ def append_join_id(project_root: str, session, working: pd.DataFrame, j: str, er
     join_df.drop(unnecessary,axis=1,inplace=True)
     # remove any row with a null value in all columns
     join_df = join_df[join_df.notnull().any(axis=1)]
-    # warn user of rows with null value in some columns
-    bad_rows = join_df.isnull().any(axis=1)
+    # warn user of rows with null or blank or 0 value in some columns
+    bad_rows = (join_df.isnull() | join_df == '' | join_df == 0).any(axis=1)
     if bad_rows.any():
         ui.add_error(
             err,'munge-warning',
@@ -670,6 +672,7 @@ def append_multi_foreign_key(df: pd.DataFrame, references: dict, err: dict) -> (
     # TODO inefficient if only one ref target
     df_copy = df.copy()
     for fn in references.keys():
+        # TODO might have to check for '' or 0 as well as nulls
         if df_copy[references[fn]].isnull().all().all():
             # if everything is null, just add the necessary column with all null values
             df_copy.loc[:, fn] = np.nan

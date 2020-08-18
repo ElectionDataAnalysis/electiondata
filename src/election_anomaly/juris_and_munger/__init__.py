@@ -657,6 +657,7 @@ def get_ids_for_foreign_keys(session,df1,element,foreign_key,refs,load_refs,erro
 
     df = df.merge(target,how='left',left_on=foreign_elt,right_on=interim)
 
+    # TODO might have to check for '' or 0 as well as nulls
     missing = df[(df[foreign_elt].notnull()) & (df[interim].isnull())]
     if missing.empty:
         df.drop([interim],axis=1)
