@@ -629,7 +629,7 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
             ).rename(columns={f'{ref}_Id': fn})
 
     # commit info in df to corresponding cdf table to db
-    err = dbr.insert_to_sql(session.bind,df,element)
+    err = dbr.insert_to_cdf_db(session.bind, df, element)
     if err:
         if not element in error:
             error[element] = {}

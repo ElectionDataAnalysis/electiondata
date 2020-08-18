@@ -459,7 +459,7 @@ def add_selection_id(df: pd.DataFrame, juris: jm.Jurisdiction, mu: jm.Munger, er
     c_df = working[['Candidate_Id','Party_Id']]
     c_df = c_df.drop_duplicates()
     c_df = c_df[c_df['Candidate_Id'].notnull()]
-    dbr.insert_to_sql(session.bind,c_df,'CandidateSelection')
+    dbr.insert_to_cdf_db(session.bind, c_df, 'CandidateSelection')
     # add CandidateSelection_Id column, merging on Candidate_Id and Party_Id
     col_map = {c:c for c in ['Candidate_Id','Party_Id']}
     working = dbr.append_id_to_dframe(session.bind,working,'CandidateSelection',col_map=col_map)
@@ -548,7 +548,7 @@ def raw_elements_to_cdf(
 
     # Fill VoteCount and ElectionContestSelectionVoteCountJoin
     try:
-        e = dbr.insert_to_sql(session.bind,working,'VoteCount')
+        e = dbr.insert_to_cdf_db(session.bind, working, 'VoteCount')
         if e:
             ui.add_error(err,'database',e)
         session.commit()
@@ -556,7 +556,7 @@ def raw_elements_to_cdf(
         working = dbr.append_id_to_dframe(session.bind,working,'VoteCount',col_map=col_map)
         # TODO check that all candidates in munged contests (including write ins!) are munged
         # upload to ElectionContestSelectionVoteCountJoin
-        e = dbr.insert_to_sql(session.bind,working,'ElectionContestSelectionVoteCountJoin')
+        e = dbr.insert_to_cdf_db(session.bind, working, 'ElectionContestSelectionVoteCountJoin')
         if e:
             ui.add_error(err,'database',e)
     except Exception as exc:
@@ -607,7 +607,7 @@ def append_join_id(project_root: str, session, working: pd.DataFrame, j: str, er
         working[f'{j}_Id'] = np.nan
     else:
         # insert into the join table
-        e = dbr.insert_to_sql(session.bind,join_df,j)
+        e = dbr.insert_to_cdf_db(session.bind, join_df, j)
         if e:
             ui.add_error(err,'database',e)
         # append the join id

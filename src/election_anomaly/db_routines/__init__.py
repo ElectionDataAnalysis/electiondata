@@ -72,7 +72,7 @@ def append_to_composing_reporting_unit_join(engine,ru):
 				columns={'Id':'ChildReportingUnit_Id',f'Id_{i}':'ParentReportingUnit_Id'}))
 		if cruj_dframe_list:
 			cruj_dframe = pd.concat(cruj_dframe_list)
-			insert_to_sql(engine,cruj_dframe,'ComposingReportingUnitJoin')
+			insert_to_cdf_db(engine, cruj_dframe, 'ComposingReportingUnitJoin')
 
 	cruj_dframe = pd.read_sql_table('ComposingReportingUnitJoin',engine)
 
@@ -363,7 +363,7 @@ def get_datafile_info(session, results_file):
 		print(f'No record named {results_file} found in _datafile table in {session.bind.url}')
 		return [0,0]
 
-def insert_to_sql(engine, df, element, sep='\t', encoding='iso-8859-1', timestamp=None) -> str:
+def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', timestamp=None) -> str:
 	"""Inserts any new records in <df> into <element>; if <element> has a timestamp column
 	it must be specified in <timestamp>; <df> must have columns matching <element>, except Id and <timestamp> if any"""
 

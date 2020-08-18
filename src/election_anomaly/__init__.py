@@ -181,7 +181,7 @@ class SingleDataLoader():
 			columns=['short_name', 'file_name',
 					 'download_date', 'source',
 					 'note', 'ReportingUnit_Id', 'Election_Id','created_at'])
-		e = dbr.insert_to_sql(self.session.bind,data,'_datafile')
+		e = dbr.insert_to_cdf_db(self.session.bind, data, '_datafile')
 		if e:
 			return [0, 0], e
 		else:
