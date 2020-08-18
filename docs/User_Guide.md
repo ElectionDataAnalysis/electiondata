@@ -225,25 +225,13 @@ mdl = ea.MultiDataLoader()
 err = mdl.load_all()
 ```
 
-If something doesn't work, check the value returned by the `load_all()` method. In this example there was an extraneous file `dictionary copy.txt` in the jurisdiction directory.
-```
->>> mdl = ea.MultiDataLoader()
->>> err = mdl.load_all()
->>> err
-{'BAK_PctResults20181106.par': (None, {'extraneous_files_in_juris_directory': ['dictionary copy.txt']}, {'juris_created': False}, None, None), 'ALA_PctResults20181106.par': (None, {'extraneous_files_in_juris_directory': ['dictionary copy.txt']}, {'juris_created': False}, None, None)}
-```
-Even when the upload has worked, there may be warnings about lines not loaded. The system will ignore lines that cannot be munged. For example, the only contests whose results are uploaded will be those in the `CandidateContest.txt` or `BallotMeasureContest.txt` files that are correctly described in `dictionary.txt`.
+If something doesn't work, error messages will print. Even when the upload has worked, there may be warnings about lines not loaded. The system will ignore lines that cannot be munged. For example, the only contests whose results are uploaded will be those in the `CandidateContest.txt` or `BallotMeasureContest.txt` files that are correctly described in `dictionary.txt`.
 ```
 >>> err
 {'BAK_PctResults20181106.par': {'fl_gen_by_precinct': {'munge_warning': 'Warning: Results for 720 rows with unmatched contests will not be loaded to database.'}}, 'ALA_PctResults20181106.par': {'fl_gen_by_precinct': {'munge_warning': 'Warning: Results for 6174 rows with unmatched contests will not be loaded to database.'}}}
 ```
 
-If there are neither errors nor warnings, the results and their `.par` files will be moved to the archive directory specified in `multi.par`.
-```
->>> err
-{}
-```
-
+If there are no errors, the results and their `.par` files will be moved to the archive directory specified in `multi.par`. Any warnings for the `*.par` will be saved in the archive directory in a file `*.warn`
 
 Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.par` file for that results file has `munger_name` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
 
