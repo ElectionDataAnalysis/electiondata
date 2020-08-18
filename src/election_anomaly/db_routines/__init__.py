@@ -778,8 +778,9 @@ def get_input_options(session, input, verbose):
                     FROM	unnested u
                 )
                 SELECT	CASE WHEN "Id" IS null THEN -1 ELSE "Id" END AS parent_id,
-                        states AS name, order_by, 
-                        CASE WHEN "Id" IS null THEN false ELSE true END AS has_data
+                        states AS name, 
+                        CASE WHEN "Id" IS null THEN false ELSE true END AS has_data,
+                        order_by
                 FROM	ordered o
                         LEFT JOIN "ReportingUnit" ru ON o.states = ru."Name"
                 ORDER BY order_by
@@ -834,10 +835,8 @@ def package_display_results(data):
         temp = {
             'parent_id': d[0],
             'name': d[1],
-            'type': d[2]
+            'type': d[2],
+            'order_by': d[3]
         }
-        # Special case for jurisdictions because we package an extra field
-        if len(d) == 4:
-            temp['has_data'] = d[3]
         results.append(temp)
     return results
