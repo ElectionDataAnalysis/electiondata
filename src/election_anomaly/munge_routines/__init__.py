@@ -661,7 +661,8 @@ def append_join_id(project_root: str, session, working: pd.DataFrame, j: str, er
         if e:
             ui.add_error(err,'database',e)
         # append the join id
-        join_df = dbr.append_id_to_dframe(session.bind,join_df,j)
+        col_map = {c:c for c in join_df.columns}
+        join_df = dbr.append_id_to_dframe(session.bind,join_df,j,col_map)
         working = working.merge(join_df,how='left',left_on=j_cols,right_on=j_cols)
         working.rename(columns={'Id':f'{j}_Id'},inplace=True)
     return working, err
