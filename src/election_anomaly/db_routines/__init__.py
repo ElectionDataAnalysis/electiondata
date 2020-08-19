@@ -855,28 +855,87 @@ def package_display_results(data):
     return results
 
 
-def get_filtered_input_options(session, input, filters):
+def get_filtered_input_options(session, input_str, filters):
     # jurisdiction selection is handled separately because it's the first choice.
     contest_df = get_relevant_contests(session, filters)
     # contest_type is a special case because we don't have a contest_type table.
     # instead, this is the reporting unit type of the election district
-    if input == 'contest_type':
+    if input_str == 'contest_type':
         contest_types = contest_df['type'].unique()
         contest_types.sort()
         data = {
             'parent': [filters[0] for contest_type in contest_types],
             'name': contest_types,
-            'type': [None for contest_type in contest_types],
-            'order_by': [i for i in range(1, len(contest_types)+1)]
+            'type': [None for contest_type in contest_types]
         }
         df = pd.DataFrame(data=data)
-    elif input == 'contest':
-        print(contest_df)
+    elif input_str == 'contest':
         df = contest_df[contest_df['type'].isin(filters)]
     # Assume these others are candidate searching. This is handled differently
     # because the results variable is structured slightly differently
+    elif input_str == 'subdivision_type':
+        # TODO: refactor this ugly mess
+        hierarchy_df = pd.read_sql_table('ComposingReportingUnitJoin', session.bind, index_col='Id')
+        unit_df = pd.read_sql_table('ReportingUnit', session.bind, index_col='Id')
+        hierarchy_df = hierarchy_df.merge(unit_df, how='inner', left_on='ParentReportingUnit_Id',
+            right_on='Id')
+        hierarchy_df = hierarchy_df[hierarchy_df['Name'].isin(filters)]
+        hierarchy_df = hierarchy_df.merge(unit_df, how='inner', left_on='ChildReportingUnit_Id',
+            right_on='Id', suffixes=['_x', None])[unit_df.columns]
+        unit_type_df = pd.read_sql_table('ReportingUnitType', session.bind, index_col='Id')
+        hierarchy_df = hierarchy_df.merge(unit_type_df, how='inner', left_on='ReportingUnitType_Id',
+            right_on='Id')
+        subdivision_types = hierarchy_df['Txt'].unique()
+        subdivision_types.sort()
+        data = {
+            'parent': [filters[0] for subdivision_types in subdivision_types],
+            'name': subdivision_types,
+            'type': [None for subdivision_types in subdivision_types]
+        }
+        df = pd.DataFrame(data=data)
+    elif input_str == 'election':
+        election_df = get_relevant_election(session, filters)
+        elections = list(election_df['Name'].unique())
+        elections.sort(reverse=True)
+        data = {
+            'parent': [filters[0] for election in elections],
+            'name': elections,
+            'type': [None for election in elections]
+        }
+        df = pd.DataFrame(data=data)
+    elif input_str == 'category':
+        election_df = get_relevant_election(session, filters)
+        election_df = election_df[election_df['Name'].isin(filters)]
+        election_join_df = pd.read_sql_table('ElectionContestJoin', session.bind, index_col='Id') \
+            .merge(election_df, how='inner', left_on='Election_Id', right_index=True)
+        vote_count_ids = pd.read_sql_table('ElectionContestSelectionVoteCountJoin', 
+            session.bind, index_col='Id') \
+            .merge(election_join_df, how='inner', left_on='ElectionContestJoin_Id', right_index=True)\
+            ['VoteCount_Id'].unique()
+        vote_count_df = pd.read_sql_table('VoteCount', session.bind, index_col='Id')
+        vote_count_df = vote_count_df[vote_count_df.index.isin(vote_count_ids)]
+        count_types = list(pd.read_sql_table('CountItemType', session.bind, index_col='Id') \
+            .merge(vote_count_df, how='inner', left_index=True, right_on='CountItemType_Id') \
+            ['Txt'].unique())
+        count_types.sort()
+        data = {
+            'parent': [filters[0] for count_type in count_types] + [filters[0] for count_type in count_types],
+            'name': [f'{count_type} candidates' for count_type in count_types] +
+                    [f'{count_type} contests' for count_type in count_types],
+            'type': [None for count_type in count_types] + [None for count_type in count_types]
+        }
+        df = pd.DataFrame(data=data)
+    elif input_str == 'count':
+        election_df = get_relevant_election(session, filters)
+        election_contest_df = pd.read_sql_table('ElectionContestJoin', session.bind, index_col='Id') \
+            .merge(election_df, how='inner', left_on='Election_Id', right_index=True)
+        filtered_contest_df = pd.read_sql_table('CandidateContest', session.bind, index_col='Id') \
+            .merge(election_contest_df, how='inner', left_on='Id', right_on='Contest_Id', 
+            suffixes=[None, '_y'])['Name']
+        df = contest_df.merge(filtered_contest_df, how='inner', left_on='name', 
+            right_on='Name')[contest_df.columns]
     else:
-        candidates = get_input_options(session, input, True)
+        candidates = get_input_options(session, input_str, True)
         candidates_df = pd.DataFrame(candidates)
         candidates_df.columns = candidates.keys() 
         candidates_df = candidates_df.merge(contest_df, how='inner',
@@ -891,6 +950,16 @@ def get_filtered_input_options(session, input, filters):
     #TODO: handle the "All" and "other" options better
     #TODO: handle sorting numbers better
     return package_display_results(df)
+
+
+def get_relevant_election(session, filters):
+    unit_df = pd.read_sql_table('ReportingUnit', session.bind, index_col='Id')
+    unit_df = unit_df[unit_df['Name'].isin(filters)]
+    election_ids = pd.read_sql_table('_datafile', session.bind, index_col='Id') \
+        .merge(unit_df, how='inner', left_on='ReportingUnit_Id', right_on='Id')['Election_Id']
+    election_df = pd.read_sql_table('Election', session.bind, index_col='Id')
+    election_df = election_df[election_df.index.isin(election_ids)]
+    return election_df
 
 
 def get_relevant_contests(session, filters):
