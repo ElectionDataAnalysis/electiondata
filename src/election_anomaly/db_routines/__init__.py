@@ -739,7 +739,8 @@ def get_input_options(session, input, verbose):
     else:
         if search_str == 'BallotMeasureContest':
             result = session.execute(f'''
-                SELECT  ru."Id" AS parent_id, c."Name" AS name, rut."Txt" AS type,
+                SELECT  ru."Id" AS parent_id, c."Id" as id, 
+                        c."Name" AS name, rut."Txt" AS type,
                         row_number() over(ORDER BY c."Name")
                 FROM    "BallotMeasureContest" c
                         JOIN "ReportingUnit" ru ON c."ElectionDistrict_Id" = ru."Id"
@@ -748,7 +749,8 @@ def get_input_options(session, input, verbose):
             ''')
         elif search_str == 'CandidateContest':
             result = session.execute(f'''
-                SELECT  ru."Id" AS parent_id, c."Name" AS name, rut."Txt" AS type,
+                SELECT  ru."Id" AS parent_id, c."Id" as id,
+                        c."Name" AS name, rut."Txt" AS type,
                         row_number() over(ORDER BY c."Name")
                 FROM    "CandidateContest" c
                         JOIN "Office" o ON c."Office_Id" = o."Id"
@@ -758,7 +760,8 @@ def get_input_options(session, input, verbose):
             ''')
         elif search_str == 'Candidate':
             result = session.execute(f'''
-                SELECT  c."Id" AS parent_id, c."BallotName" as name, 
+                SELECT  cc."Contest_Id" AS parent_id, c."Id" as id,
+                        c."BallotName" as name, 
                         cc."Name" || ' - ' || p."Name" AS type,
 						row_number() over(ORDER BY c."BallotName") as order_by
                 FROM    "Candidate" c
@@ -783,6 +786,7 @@ def get_input_options(session, input, verbose):
                     FROM	unnested u
                 )
                 SELECT	CASE WHEN "Id" IS null THEN -1 ELSE "Id" END AS parent_id,
+                        CASE WHEN "Id" IS null THEN -1 ELSE "Id" END AS id,
                         states AS name, 
                         CASE WHEN "Id" IS null THEN false ELSE true END AS has_data,
                         order_by
@@ -793,7 +797,8 @@ def get_input_options(session, input, verbose):
         else:
             # parent_id is candidate_id, type is combo of party and contest name
             result = session.execute(f'''
-                SELECT  c."Id" AS parent_id, c."BallotName" as name, 
+                SELECT  cc."Contest_Id" AS parent_id, c."Id" as id,
+                        c."BallotName" as name, 
                         cc."Name" || ' - ' || p."Name" AS type,
 						row_number() over(ORDER BY c."BallotName") as order_by
                 FROM    "Candidate" c
@@ -805,7 +810,7 @@ def get_input_options(session, input, verbose):
                 WHERE   c."BallotName" ILIKE '%{search_str}%'
                 ORDER BY c."BallotName"
             ''')
-        return package_display_results(result)
+        return result
 
 
 def get_datafile_info(session, results_file):
@@ -838,12 +843,60 @@ def candidate_to_id(session, name):
 def package_display_results(data):
     """takes a result set and packages into JSON to return"""
     results = []
-    for d in data:
+    for i, row in data.iterrows():
         temp = {
-            'parent_id': d[0],
-            'name': d[1],
-            'type': d[2],
-            'order_by': d[3]
+            'parent_id': row[0],
+            'name': row[1],
+            'type': row[2],
+            'order_by': row[3]
         }
         results.append(temp)
     return results
+
+
+def get_filtered_input_options(session, input, filters):
+    contest_df = get_relevant_contests(session, filters)
+    if input == 'contest_type':
+        contest_types = contest_df['type'].unique()
+        contest_types.sort()
+        contest_type_ids = []
+        for contest_type in (contest_types):
+            contest_type_ids.append(name_to_id(session, 'ReportingUnitType', contest_type))
+        data = {
+            'parent_id': contest_type_ids,
+            'name': contest_types,
+            'type': [None for contest_type in contest_types],
+            'order_by': [i for i in range(1, len(contest_types)+1)]
+        }
+        df = pd.DataFrame(data=data)
+    elif input == 'contest':
+        contest_type = None
+        for filter_id in filters:
+            contest_type = name_from_id(session, 'ReportingUnitType', filter_id)
+            if contest_type:
+                break
+        df = contest_df[contest_df['type'].isin([contest_type])]
+    # We can refactor the hierarchy filtering cuz we'll do that with every section DONE!
+    # Also the IDs aren't correct yet on the contest section. I think we should
+    # pull the IDs and the parent IDs in the get input options section above and
+    # have those available. That should avoid all the switching between IDs and names
+    # Then we should handle the "All" and "other" options better
+    return package_display_results(df)
+    
+    result = get_input_options(session, input, True)
+    df = pd.DataFrame(result)
+    df.columns = result.keys()
+    print(df)
+    return "woof"
+
+
+def get_relevant_contests(session, filters):
+    hierarchy_df = pd.read_sql_table('ComposingReportingUnitJoin',
+        session.bind, index_col='Id')
+    hierarchy_df = hierarchy_df[hierarchy_df['ParentReportingUnit_Id'].isin(filters)]
+    hierarchy_ids = hierarchy_df['ChildReportingUnit_Id'].unique()
+    result = get_input_options(session, 'candidate_contest', True) 
+    result_df = pd.DataFrame(result)
+    result_df.columns = result.keys()
+    result_df = result_df[result_df['parent_id'].isin(hierarchy_ids)]
+    return result_df
