@@ -394,10 +394,7 @@ def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session:
     working_temp = working[working['contest_type'] != 'unknown']
     if working_temp.empty:
         e = 'No contests in database matched. No results will be loaded to database.'
-        if 'munge_warning' in err.keys():
-            err['munge_warning'].append(e)
-        else:
-            err['munge_warning'] = [e]
+        ui.add_error(err,'munge_error',e)
         return pd.DataFrame(), err
 
     elif not to_be_dropped.empty:

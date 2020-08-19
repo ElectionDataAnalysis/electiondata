@@ -368,7 +368,7 @@ def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', times
 	it must be specified in <timestamp>; <df> must have columns matching <element>, except Id and <timestamp> if any"""
 
 	# initialize connection and cursor
-	working = df.copy()
+	working = mr.generic_clean(df)
 	connection = engine.raw_connection()
 	cursor = connection.cursor()
 
@@ -450,10 +450,13 @@ def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', times
 	cursor.execute(q)
 
 	if element == 'ReportingUnit':
-		new_rus = matched_with_old[matched_with_old[f'{element}_Id']=='']
+		# check Id column for '' or 0 (indicating not matched)
+		if pd.api.types.is_numeric_dtype(matched_with_old[f'{element}_Id']):
+			new_rus = matched_with_old[matched_with_old[f'{element}_Id'] == 0]
+		else:
+			new_rus = matched_with_old[matched_with_old[f'{element}_Id'] == '']
 		if not new_rus.empty:
 			append_to_composing_reporting_unit_join(engine,new_rus)
-
 
 	connection.commit()
 	cursor.close()

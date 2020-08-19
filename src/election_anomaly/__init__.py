@@ -113,6 +113,8 @@ class MultiDataLoader():
 					# try to load data
 					load_error = sdl.load_results()
 					self.move_loaded_results_file(sdl,f,load_error)
+					if load_error:
+						err[f] = load_error
 		return err
 
 	def move_loaded_results_file(self, sdl, f: str, load_error: dict):
@@ -133,6 +135,8 @@ class MultiDataLoader():
 			if warnings:
 				ws = '\n\t'.join(warnings)
 				warn_str = f'\nWarnings:\n{ws}'
+			else:
+				warn_str = None
 			print(f'Fatal errors found:\n{err_str}{warn_str}')
 		else:
 			# move results file and its parameter file to the archive directory
