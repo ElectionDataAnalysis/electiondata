@@ -705,8 +705,11 @@ class Analyzer():
         self.session = Session()
 
 
-    def display_options(self, input, verbose=False):
-        results = dbr.get_input_options(self.session, input, verbose)
+    def display_options(self, input, verbose=False, filters=None):
+        if not filters:
+            results = dbr.get_input_options(self.session, input, verbose)
+        else:
+            results = dbr.get_filtered_input_options(self.session, input, filters)
         if results:
             return results
         return None

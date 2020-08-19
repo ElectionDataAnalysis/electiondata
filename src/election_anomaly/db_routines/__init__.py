@@ -19,6 +19,7 @@ from election_anomaly import munge_routines as mr
 import re
 from election_anomaly.db_routines import create_cdf_db as db_cdf
 import os
+import numpy as np
 
 states = '''Alabama
 Alaska
@@ -798,7 +799,7 @@ def get_input_options(session, input, verbose):
         else:
             # parent_id is candidate_id, type is combo of party and contest name
             result = session.execute(f'''
-                SELECT  cc."Name" AS parent_id,
+                SELECT  cc."Name" AS parent,
                         c."BallotName" as name, 
                         p."Name" AS type
                 FROM    "Candidate" c
@@ -870,12 +871,25 @@ def get_filtered_input_options(session, input, filters):
         }
         df = pd.DataFrame(data=data)
     elif input == 'contest':
+        print(contest_df)
         df = contest_df[contest_df['type'].isin(filters)]
-    # We can refactor the hierarchy filtering cuz we'll do that with every section DONE!
-    # Also the IDs aren't correct yet on the contest section. I think we should
-    # pull the IDs and the parent IDs in the get input options section above and
-    # have those available. That should avoid all the switching between IDs and names
-    # Then we should handle the "All" and "other" options better
+    # Assume these others are candidate searching. This is handled differently
+    # because the results variable is structured slightly differently
+    else:
+        candidates = get_input_options(session, input, True)
+        candidates_df = pd.DataFrame(candidates)
+        candidates_df.columns = candidates.keys() 
+        candidates_df = candidates_df.merge(contest_df, how='inner',
+            left_on='parent', right_on='name', suffixes=[None, '_y'])
+        df = candidates_df.groupby(['parent', 'type_y'])['name'].apply(list).apply(str) \
+            .reset_index().sort_values('parent')
+        df.columns = ['parent', 'type', 'name']
+        df = df[['parent', 'name', 'type']]
+        # clean the name column
+        df['name'] = df['name'].str.replace('\[\'', '').str.replace('\'\]', '') \
+            .str.replace('\', \'', '; ')
+    #TODO: handle the "All" and "other" options better
+    #TODO: handle sorting numbers better
     return package_display_results(df)
 
 
