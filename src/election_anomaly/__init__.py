@@ -806,7 +806,6 @@ class Analyzer():
             print("Data not created.")
             return
         jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', jurisdiction)
-        print(jurisdiction_id)
         results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
         agg_results = a.create_bar(self.session, jurisdiction_id, contest_type, contest,
                         results_info[1], results_info[0])
