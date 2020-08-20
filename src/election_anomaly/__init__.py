@@ -707,7 +707,7 @@ class Analyzer():
 
     def display_options(self, input, verbose=False, filters=None):
         if not filters:
-            results = dbr.get_input_options(self.session, input, verbose)
+            results = dbr.package_results(dbr.get_input_options(self.session, input, verbose))
         else:
             results = dbr.get_filtered_input_options(self.session, input, filters)
         if results:
@@ -820,6 +820,28 @@ class Analyzer():
         count_item_type = [count_type for count_type in count_item_types if count_type in input_str][0]
         selection_type = input_str[len(count_item_type) + 1:]
         return count_item_type, selection_type
+
+
+    def export_outlier_data(self, jurisdiction, subdivision_type, contest=None):
+        """ Exports data either for a single contest or for all contests ina
+		jurisdiction, broken down by a specific reporting unit type """
+        data = [
+            {
+                "contest": "contest_1",
+                "ballot_type": "total votes",
+                "label": "Jane Doe",
+                "category": "candidate",
+                "votes_at_stake": 32.54
+            },
+            {
+                "contest": "ballot_measure_1",
+                "ballot_type": "total votes",
+                "label": "Yes",
+                "category": "ballot",
+                "votes_at_stake": 54.54
+            }
+        ]
+        return data
 
 
 def get_filename(path):
