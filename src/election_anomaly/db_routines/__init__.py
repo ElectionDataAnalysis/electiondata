@@ -929,11 +929,16 @@ def get_filtered_input_options(session, input_str, filters):
         election_df = get_relevant_election(session, filters)
         election_contest_df = pd.read_sql_table('ElectionContestJoin', session.bind, index_col='Id') \
             .merge(election_df, how='inner', left_on='Election_Id', right_index=True)
-        filtered_contest_df = pd.read_sql_table('CandidateContest', session.bind, index_col='Id') \
-            .merge(election_contest_df, how='inner', left_on='Id', right_on='Contest_Id', 
-            suffixes=[None, '_y'])['Name']
-        df = contest_df.merge(filtered_contest_df, how='inner', left_on='name', 
+        candidate_contest_df = pd.read_sql_table('CandidateContest', session.bind, index_col='Id')
+        candidate_contest_df = candidate_contest_df.merge(election_contest_df, how='inner', 
+            left_on='Id', right_on='Contest_Id', suffixes=[None, '_y'])[candidate_contest_df.columns]
+        contest_df = contest_df.merge(candidate_contest_df, how='inner', left_on='name', 
             right_on='Name')[contest_df.columns]
+        candidates = get_input_options(session, 'candidate', True)  
+        candidates_df = pd.DataFrame(candidates)
+        candidates_df.columns = candidates.keys()
+        df = contest_df.merge(candidates_df, how='inner', left_on='name', right_on='parent',
+            suffixes=['_x', None])[candidates_df.columns]
     else:
         candidates = get_input_options(session, input_str, True)
         candidates_df = pd.DataFrame(candidates)
