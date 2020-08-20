@@ -834,16 +834,22 @@ class Analyzer():
             {
                 "contest": "contest_1",
                 "ballot_type": "total votes",
-                "label": "Jane Doe",
-                "category": "candidate",
-                "votes_at_stake": 32.54
+                "label": "North Carolina;Bladen County",
+                "selection_1": "Jane Doe",
+                "selection_2": "John Smith",
+                "votes_at_stake": 1000,
+                "margin": 0.25,
+                "score": 0.73,
             },
             {
                 "contest": "ballot_measure_1",
-                "ballot_type": "total votes",
-                "label": "Yes",
-                "category": "ballot",
-                "votes_at_stake": 54.54
+                "ballot_type": "absentee-mail",
+                "label": "North Carolina;Chatham County",
+                "selection_1": "Yes",
+                "selection_2": "No",
+                "votes_at_stake": 2400,
+                "margin": 0.1,
+                "score": 0.9,
             }
         ]
         return data
