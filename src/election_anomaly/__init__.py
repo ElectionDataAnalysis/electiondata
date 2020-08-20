@@ -706,10 +706,14 @@ class Analyzer():
 
 
     def display_options(self, input, verbose=False, filters=None):
-        if not filters:
-            results = dbr.get_input_options(self.session, input, verbose)
+        if not verbose:
+            results = dbr.get_input_options(self.session, input, False)
         else:
-            results = dbr.get_filtered_input_options(self.session, input, filters)
+            if not filters:
+                df = pd.DataFrame(dbr.get_input_options(self.session, input, True))
+                results = dbr.package_display_results(df)
+            else:
+                results = dbr.get_filtered_input_options(self.session, input, filters)
         if results:
             return results
         return None
@@ -802,6 +806,7 @@ class Analyzer():
             print("Data not created.")
             return
         jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', jurisdiction)
+        print(jurisdiction_id)
         results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
         agg_results = a.create_bar(self.session, jurisdiction_id, contest_type, contest,
                         results_info[1], results_info[0])
