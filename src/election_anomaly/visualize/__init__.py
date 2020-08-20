@@ -82,8 +82,8 @@ def parse_data(data):
     labels = []
     x = []
     y = []
-    for key in data['counts']:
-        labels.append(key)
-        x.append(data['counts'][key]['x'])
-        y.append(data['counts'][key]['y'])
+    for result in data['counts']:
+        labels.append(result['name'])
+        x.append(result['x'])
+        y.append(result['y'])
     return labels, x, y

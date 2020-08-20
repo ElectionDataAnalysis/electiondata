@@ -134,28 +134,21 @@ def create_scatter(session, jurisdiction_id, subdivision_type_id,
 		"y-count_item_type": v_category,
 		"x": x,
 		"y": y,
-		"counts": {}
+		"counts": []
 	}
-	reporting_units = unsummed.Name.unique()
-	for reporting_unit in reporting_units:
-		results["counts"][reporting_unit] = {}
-
-	for i, row in unsummed.iterrows():
-		if row.Selection == x:
-			if x in results["counts"][row.Name]:
-				results["counts"][row.Name]["x"] += row.Count
-			else:
-				results["counts"][row.Name]["x"] = row.Count
-		elif row.Selection == y:
-			if y in results["counts"][row.Name]:
-				results["counts"][row.Name]["y"] += row.Count
-			else:
-				results["counts"][row.Name]["y"] = row.Count
+	pivot_df = pd.pivot_table(unsummed, values='Count',
+		index=['Name'], columns='Selection').reset_index()
+	for i, row in pivot_df.iterrows():
+		results['counts'].append({
+			'name': row['Name'],
+			'x': row[x],
+			'y': row[y],
+		})			
 	# only keep the ones where there are an (x, y) to graph
-	to_keep = {}
-	for key in results['counts']:
-		if len(results['counts'][key]) == 2:
-			to_keep[key] = results['counts'][key]
+	to_keep = []
+	for result in results['counts']:
+		if len(result) == 3: #need reporting unit, x, and y
+			to_keep.append(result)
 	results['counts'] = to_keep
 	return results
 
@@ -403,17 +396,17 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 			"count_item_type": temp_df.iloc[0]['CountItemType'],
 			"x": x,
 			"y": y,
-			"counts": {}
+			"counts": []
 		}
-		reporting_units = temp_df.Name.unique()
-		for reporting_unit in reporting_units:
-			results["counts"][reporting_unit] = {}
 
-		for i, row in temp_df.iterrows():
-			if row.Selection == x:
-				results["counts"][row.Name]["x"] = row.Count
-			elif row.Selection == y:
-				results["counts"][row.Name]["y"] = row.Count
+		pivot_df = pd.pivot_table(temp_df, values='Count',
+			index=['Name'], columns='Selection').reset_index()
+		for i, row in pivot_df.iterrows():
+			results['counts'].append({
+				'name': row['Name'],
+				'x': row[x],
+				'y': row[y],
+			})			
 		result_list.append(results)
 		
 	return result_list
@@ -468,7 +461,7 @@ def get_most_anomalous(data, n):
 		candidates = unique[0:2]
 		candidate_df = temp_df[temp_df['Candidate_Id'].isin(candidates)]
 		unique = candidate_df['ReportingUnit_Id'].unique()
-		reporting_units = unique[0:6]
+		reporting_units = unique[0:8]
 		df_final = candidate_df[candidate_df['ReportingUnit_Id'].isin(reporting_units)]. \
 			sort_values(['ReportingUnit_Id', 'score'], ascending=False)
 		df = pd.concat([df, df_final])
