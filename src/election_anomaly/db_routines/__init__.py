@@ -467,7 +467,7 @@ def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', times
 def table_named_to_avoid_conflict(engine,prefix: str) -> str:
 	p = re.compile('postgresql://([^:]+)')
 	user_name = p.findall(str(engine.url))[0]
-	ts = datetime.datetime.now().strftime("%d_%b_%Y_%H%M%S.%f")
+	ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S.%f")
 	temp_table = f'{prefix}_{user_name}_{ts}'
 	return temp_table
 

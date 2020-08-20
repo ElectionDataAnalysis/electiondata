@@ -139,19 +139,19 @@ class MultiDataLoader():
 				warn_str = None
 			print(f'Fatal errors found:\n{err_str}{warn_str}')
 		else:
-			# move results file and its parameter file to the archive directory
-			ui.archive(f, self.d['results_dir'], self.d['archive_dir'])
-			ui.archive(sdl.d['results_file'], self.d['results_dir'], self.d['archive_dir'])
+			# move results file and its parameter file to a subfolder of the archive directory
+			#  named for the db
+			new_dir = os.path.join( self.d['archive_dir'],self.d['db_name'])
+			ui.archive(f, self.d['results_dir'], new_dir)
+			ui.archive(sdl.d['results_file'], self.d['results_dir'], new_dir)
+			print_str = f'\tArchived {f} and its results file.'
 			if warnings:
 				# save warnings in archive directory
 				warn_file = os.path.join(self.d['archive_dir'], f'{f[:-4]}.warn')
 				with open (warn_file, 'w') as wf:
 					wf.write('\n'.join(warnings))
-				warn_str = f'See warnings in {f[:-4]}.warn'
-			else:
-				warn_str = None
-			print(f'\tArchived {f} and its results file. {warn_str}')
-
+				print_str += f' See warnings in {f[:-4]}.'
+			print(print_str)
 		return
 
 
@@ -217,6 +217,7 @@ class SingleDataLoader():
 		return [datafile_id, election_id], e
 
 	def load_results(self) -> dict:
+		print(f'Processing {self.d["results_file"]}')
 		results_info, e = self.track_results()
 		if e:
 			err = {'database':e}
@@ -227,7 +228,7 @@ class SingleDataLoader():
 				emu = ui.new_datafile(
 					self.session, self.munger[mu], f_path ,self.project_root,
 					self.juris, results_info=results_info, aux_data_dir=self.d['aux_data_dir'])
-				if emu:
+				if emu != dict():
 					err[mu] = emu
 		if err == dict():
 			err = None

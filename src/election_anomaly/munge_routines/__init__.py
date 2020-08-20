@@ -156,13 +156,15 @@ def compress_whitespace(s:str) -> str:
 
 
 def replace_raw_with_internal_ids(
-        row_df: pd.DataFrame, juris: jm.Jurisdiction, table_df: pd.DataFrame, element: str, internal_name_column: str
-        ,error: dict, drop_unmatched: bool=False, mode: str='row') -> (pd.DataFrame, dict):
-    """replace columns in <row_df> with raw_identifier values by columns with internal names and Ids
+        df: pd.DataFrame, juris: jm.Jurisdiction, table_df: pd.DataFrame, element: str, internal_name_column: str
+        ,error: dict, drop_unmatched: bool=False, mode: str='row',unmatched_id: int=0) -> (pd.DataFrame, dict):
+    """replace columns in <working> with raw_identifier values by columns with internal names and Ids
     from <table_df>, which has structure of a db table for <element>.
     # TODO If <element> is BallotMeasureContest or CandidateContest,
     #  contest_type column is added/updated
+    <unmatched_id> is the id to assign to unmatched records.
     """
+    working = df.copy()
     if drop_unmatched:
         how='inner'
     else:
@@ -172,70 +174,73 @@ def replace_raw_with_internal_ids(
     # use dictionary.txt from jurisdiction
 
     raw_identifiers = pd.read_csv(os.path.join(juris.path_to_juris_dir,'dictionary.txt'),sep='\t')
-
-    # error/warning for unmatched elements to be dropped
     raw_ids_for_element = raw_identifiers[raw_identifiers['cdf_element'] == element]
-    if drop_unmatched:
-        to_be_dropped = row_df[~row_df[f'{element}_raw'].isin(raw_ids_for_element['raw_identifier_value'])]
-        if to_be_dropped.empty:
-            pass
-        elif to_be_dropped.shape[0] == row_df.shape[0]:
-            e =f'No {element} was found in \'dictionary.txt\''
-            if 'munge_error' in error.keys():
-                error['munge_error'].append(e)
-            else:
-                error['munge_error'] = [e]
-            return row_df.drop(row_df.index), error
-        else:
-            e = f'Warning: Results for {to_be_dropped.shape[0]} rows with unmatched {element}s ' \
-                f'will not be loaded to database.'
-            if 'munge_warning' in error.keys():
-                error['munge_warning'].append(e)
-            else:
-                error['munge_warning'] = [e]
 
-    row_df = row_df.merge(raw_ids_for_element,how=how,
-                          left_on=f'{element}_raw',
-                          right_on='raw_identifier_value',suffixes=['',f'_{element}_ei'])
+    working = working.merge(raw_ids_for_element, how=how,
+                            left_on=f'{element}_raw',
+                            right_on='raw_identifier_value', suffixes=['',f'_{element}_ei'])
 
-    if row_df.empty:
+    if working.empty:
         e = f'No raw {element} in \'dictionary.txt\' matched any raw {element} derived from the result file'
-        if 'munge_error' in error.keys():
-            error['munge_error'].append(e)
+        if drop_unmatched:
+            ui.add_error(error,'munge_error',e)
+            return working, error
         else:
-            error['munge_error'] = [e]
-        return row_df, error
-
-    # Note: if how = left, unmatched elements get nan in fields from dictionary table
-    # TODO how do these nans flow through?
+            ui.add_error(error,'munge_warning',e)
 
     if mode == 'column':
         # drop rows that melted from unrecognized columns, EVEN IF drop_unmatched=False.
         #  These rows are ALWAYS extraneous. Drop cols where raw_identifier is not null
-        #  but no cdf_internal_name was found
-        # TODO might have to check for '' or 0 as well as nulls
-        row_df = row_df[(row_df['raw_identifier_value'].isnull()) | (row_df['cdf_internal_name'].notnull())]
+        #  but no cdf_internal_name was found (pd.merge yields nulls)
+        #
+        working = working[(working['raw_identifier_value'].isnull()) | (working['cdf_internal_name'].notnull())]
         # TODO more efficient to drop these earlier, before melting
 
+    # unmatched elements get nan in fields from dictionary table. Change these to "none or unknown"
+    if how == 'left':
+        working['cdf_internal_name'] = working['cdf_internal_name'].fillna('none or unknown')
+        #
+
     # drop extraneous cols from mu.raw_identifier, and drop original raw
-    row_df = row_df.drop(['raw_identifier_value','cdf_element',f'{element}_raw'],axis=1)
+    working = working.drop(['raw_identifier_value', 'cdf_element', f'{element}_raw'], axis=1)
 
     # ensure that there is a column in raw called by the element
     # containing the internal name of the element
-    if f'_{element}_ei' in row_df.columns:
-        row_df.rename(columns={f'_{element}_ei':element},inplace=True)
+    if f'_{element}_ei' in working.columns:
+        working.rename(columns={f'_{element}_ei':element}, inplace=True)
     else:
-        row_df.rename(columns={'cdf_internal_name':element},inplace=True)
+        working.rename(columns={'cdf_internal_name':element}, inplace=True)
 
     # join the element table Id and name columns.
     # This will create two columns with the internal name field,
-    # whose names will be element (from above)
+    # whose names will be <element> (from above)
     # and either internal_name_column or internal_name_column_table_name
-    row_df = row_df.merge(
-        table_df[['Id',internal_name_column]],how='left',left_on=element,right_on=internal_name_column)
-    row_df = row_df.drop([internal_name_column],axis=1)
-    row_df.rename(columns={'Id':f'{element}_Id'},inplace=True)
-    return row_df, error
+    working = working.merge(
+        table_df[['Id',internal_name_column]],how='left',left_on=element,right_on=internal_name_column
+    )
+
+    # error/warning for unmatched elements to be dropped
+    if drop_unmatched:
+        to_be_dropped = working[working.Id.isnull()]
+        if to_be_dropped.empty:
+            pass
+        elif to_be_dropped.shape[0] == working.shape[0]:
+            e =f'No {element} was matched. Either raw values are not in dictionary.txt, or ' \
+               f'the corresponding cdf_internal_names are missing from {element}.txt'
+            ui.add_error(error,'munge_error',e)
+            return working.drop(working.index), error
+        else:
+            e = f'Warning: Results for {to_be_dropped.shape[0]} rows with unmatched {element}s ' \
+                f'will not be loaded to database.'
+            ui.add_error(error,'munge_warning',e)
+    else:
+        # change name of unmatched to 'none or unknown' and assign <unmatched_id> as Id
+        working.loc[working.Id.isnull(),internal_name_column] = 'none or unknown'
+        working['Id'].fillna(unmatched_id,inplace=True)
+
+    working = working.drop([internal_name_column], axis=1)
+    working.rename(columns={'Id': f'{element}_Id'}, inplace=True)
+    return working, error
 
 
 def enum_col_from_id_othertext(df,enum,enum_df,drop_old=True):
@@ -374,33 +379,43 @@ def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session:
     # append ids for BallotMeasureContests and CandidateContests
     for c_type in ['BallotMeasure','Candidate']:
         df_contest = pd.read_sql_table(f'{c_type}Contest',session.bind)
-        [working, err] = replace_raw_with_internal_ids(
+        none_or_unknown_id = dbr.name_to_id(session,f'{c_type}Contest','none or unknown')
+        working, err = replace_raw_with_internal_ids(
             working,
             juris,
             df_contest,
             f'{c_type}Contest',
             dbr.get_name_field(f'{c_type}Contest'),
             err,
-            drop_unmatched=False)
+            drop_unmatched=False, unmatched_id=none_or_unknown_id)
 
         # set contest_type where id was found
-        working.loc[working[f'{c_type}Contest_Id'].notnull(), 'contest_type'] = c_type
+        working.loc[working[f'{c_type}Contest']!='none or unknown', 'contest_type'] = c_type
 
-        # drop column with munged name
-        working.drop(f'{c_type}Contest', axis=1, inplace=True)
+    # fail if actual contest name found for both BallotMeasure and Candidate
+    name_overlap = working[
+        (working.BallotMeasureContest == working.CandidateContest) &
+        (working.CandidateContest != 'none or unknown')
+    ]
+    if not name_overlap.empty:
+        e = f'Contest name(s) recognized as both Candidate and BallotMeasure Contests. {name_overlap.CandidateContest.unique()}'
+        ui.add_error(err,'munge_error',e)
+        return pd.DataFrame(), err
 
     # drop rows with unmatched contests
-    to_be_dropped = working[working['contest_type'] == 'unknown']
+    unknown = working[working['contest_type'] == 'unknown']
     working_temp = working[working['contest_type'] != 'unknown']
+
+    # fail if no contests recognized
     if working_temp.empty:
         e = 'No contests in database matched. No results will be loaded to database.'
         ui.add_error(err,'munge_error',e)
         return pd.DataFrame(), err
 
-    elif not to_be_dropped.empty:
-        ui.add_error(
-            err, 'munge_warning',
-            f'Warning: Results for {to_be_dropped.shape[0]} rows with unmatched contests will not be loaded to database.')
+    # warn of un-munged contests
+    elif not unknown.empty:
+        e = f'Warning: Results for unmatched contests ({unknown.shape[0]} rows) will not be loaded to database.'
+        ui.add_error(err, 'munge_warning',e)
     working = working_temp
 
     # define Contest_Id based on contest_type,
@@ -409,39 +424,22 @@ def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session:
     working.loc[working['contest_type'] == 'BallotMeasure','Contest_Id'] = working.loc[
         working['contest_type'] == 'BallotMeasure','BallotMeasureContest_Id']
 
+    # drop columns with munged name
+    for c_type in ['BallotMeasure', 'Candidate']:
+            working.drop(f'{c_type}Contest', axis=1, inplace=True)
+
     return working, err
-    # get ids for remaining info sourced from rows and columns
-    element_list = [t for t in mu.cdf_elements.index if
-                    (t[-7:] != 'Contest' and t[-9:] != 'Selection')]
-    for t in element_list:
-        # capture id from db in new column and erase any now-redundant cols
-        df = pd.read_sql_table(t,session.bind)
-        name_field = dbr.get_name_field(t)
-        # set drop_unmatched = True for fields necessary to BallotMeasure rows,
-        #  drop_unmatched = False otherwise to prevent losing BallotMeasureContests for BM-inessential fields
-        if t == 'ReportingUnit' or t == 'CountItemType':
-            drop = True
-        else:
-            drop = False
-        try:
-            working, err = replace_raw_with_internal_ids(
-                working, juris, df, t, name_field, err, drop_unmatched=drop)
-            working.drop(t,axis=1,inplace=True)
-        except:
-            e = f'Error adding internal ids for {t}.'
-            if t == 'CountItemType':
-                e += ' Are CountItemTypes correct in dictionary.txt?'
-            ui.add_error(err, 'munge-error', f'Error adding internal ids for {t}.')
 
 
 def add_selection_id(df: pd.DataFrame, juris: jm.Jurisdiction, mu: jm.Munger, err: dict, session: Session) -> (pd.DataFrame, dict):
     # append BallotMeasureSelection_Id, drop BallotMeasureSelection
     working = df.copy()
     df_selection = pd.read_sql_table(f'BallotMeasureSelection',session.bind)
+    none_or_unknown_id = dbr.name_to_id(session,'BallotMeasureSelection','none or unknown')
     working, err = replace_raw_with_internal_ids(
         working,juris,df_selection,'BallotMeasureSelection',dbr.get_name_field('BallotMeasureSelection'),
         err,
-        drop_unmatched=False,
+        drop_unmatched=False, unmatched_id=none_or_unknown_id,
         mode=mu.cdf_elements.loc['BallotMeasureSelection','source'])
     # drop BallotMeasure records without a legitimate BallotMeasureSelection
     # i.e., keep CandidateContest records and records with a legit BallotMeasureSelection
@@ -487,7 +485,7 @@ def raw_elements_to_cdf(
     working, err = add_contest_id(working, juris, err, session)
     if working.empty:
         return err
-    # FIXME use Contest_Id below as necessary
+
 
     # get ids for remaining info sourced from rows and columns
     element_list = [t for t in mu.cdf_elements.index if
@@ -518,8 +516,9 @@ def raw_elements_to_cdf(
                 working = enum_col_to_id_othertext(working, 'CountItemType', cit)
                 working = working.drop(['raw_identifier_value','cdf_element'],axis=1)
             else:
+                    none_or_unknown_id = dbr.name_to_id(session,t,'none or unknown')
                     working, err = replace_raw_with_internal_ids(
-                        working, juris, df, t, name_field, err, drop_unmatched=drop)
+                        working, juris, df, t, name_field, err, drop_unmatched=drop,unmatched_id=none_or_unknown_id)
                     working.drop(t,axis=1,inplace=True)
         except Exception as exc:
                 e = f'Error adding internal ids for {t}:\n{exc}'
