@@ -4,9 +4,11 @@
 #  and ContestSelectionJoin_Id share a contest? Should this happen during the rollup process?
 
 import sqlalchemy as sa
-from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,ForeignKey, TIMESTAMP, Date
+from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,ForeignKey, Index
+from sqlalchemy import Date, TIMESTAMP
 import os
 import pandas as pd
+import db_routines as dbr
 import datetime
 
 
@@ -44,8 +46,16 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
                 break
             except IndexError:
                 pass
+        # create indices for efficiency
+        if element == 'VoteCount':
+            create_indices = [['Count','CountItemType_Id','OtherCountItemType','ReportingUnit_Id']]
+        elif element == 'CandidateSelection':
+            create_indices = [['Candidate_Id', 'Party_Id']]
+        else:
+            create_indices = [[dbr.get_name_field(element)]]
+
         # create db table for element
-        create_table(metadata,id_seq,element,'elements',dirpath)
+        create_table(metadata,id_seq,element,'elements',dirpath, create_indices=create_indices)
         # remove element from list of yet-to-be-processed
         elements_to_process.remove(element)
 
@@ -67,8 +77,16 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
                 break
             except IndexError:
                 pass
+        # define indices for efficiency
+        if j == 'ContestSelectionJoin':
+            create_indices = [['Contest_Id', 'Selection_Id']]
+        elif j == 'ElectionContestJoin':
+            create_indices = [['Election_Id','Contest_Id']]
+        else:
+            create_indices = None     # TODO inelegant
         # create db table for element
-        create_table(metadata,id_seq,j,'joins',dirpath)
+        create_table(metadata,id_seq,j,'joins',dirpath,create_indices=create_indices)
+
         # remove element from list of yet-to-be-processed
         joins_to_process.remove(j)
 
@@ -78,7 +96,9 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
     return metadata
 
 
-def create_table(metadata,id_seq,name,table_type,dirpath):
+def create_table(metadata,id_seq,name,table_type,dirpath, create_indices: list=None):
+    """Each element of the list <create_indices>, should be a list of
+    columns on which an index should be created. """
     t_path = os.path.join(dirpath,table_type,name)
     if table_type == 'elements':
         with open(os.path.join(t_path, 'short_name.txt'), 'r') as f:
@@ -127,7 +147,7 @@ def create_table(metadata,id_seq,name,table_type,dirpath):
         else:
             time_stamp_list = []
 
-        Table(name,metadata,
+        t = Table(name,metadata,
               Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
               * field_col_list, * enum_id_list, * enum_other_list,
               * foreign_key_list, * null_constraint_list, * unique_constraint_list, * time_stamp_list)
@@ -137,7 +157,7 @@ def create_table(metadata,id_seq,name,table_type,dirpath):
             txt_col = 'Selection'
         else:
             txt_col = 'Txt'
-        Table(name,metadata,Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
+        t = Table(name,metadata,Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
               Column(txt_col,String,unique=True))
     
     elif table_type == 'joins':
@@ -158,12 +178,16 @@ def create_table(metadata,id_seq,name,table_type,dirpath):
         true_foreign_key_list = [Column(r['fieldname'],ForeignKey(f'{r["refers_to"]}.Id'))
                           for i,r in fk.iterrows() if ';' not in r['refers_to']]
 
-        Table(name,metadata,
+        t = Table(name,metadata,
               Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
               * col_list,
               * true_foreign_key_list, * null_constraint_list)
     else:
         raise Exception(f'table_type {table_type} not recognized')
+    # create indices for efficiency
+    if create_indices:
+        for li in create_indices:
+            Index(f'{t}_append', *[t.c[x] for x in li])
     return
 
 

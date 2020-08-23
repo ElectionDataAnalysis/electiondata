@@ -295,7 +295,6 @@ def name_to_id(session,element,name):
 
 
 def get_name_field(element):
-	# TODO pull from db or filesystem instead of hard coding
 	if element == 'BallotMeasureSelection':
 		field = 'Selection'
 	elif element == 'Candidate':
@@ -375,8 +374,7 @@ def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', times
 	# identify new ReportingUnits, must later enter nesting info in db
 	if element == 'ReportingUnit':
 		# find any new RUs
-		col_map = {'Name':'Name'}
-		matched_with_old = append_id_to_dframe(engine, working, element,col_map=col_map)
+		matched_with_old = append_id_to_dframe(engine, working, 'ReportingUnit', {'Name':'Name'})
 
 
 	# name temp table by username and timestamp to avoid conflict
@@ -476,7 +474,7 @@ def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_
 	"""Using <col_map> to map columns of <df> onto defining columns of <table>, returns
 	a copy of <df> with appended column <table>_Id. Unmatched items returned with null value for <table>_Id"""
 	if col_map is None:
-		col_map = {table:get_name_field(table)}
+		col_map = {table: get_name_field(table)}
 	connection = engine.raw_connection()
 
 	temp_table = table_named_to_avoid_conflict(engine,'__temp_append')
