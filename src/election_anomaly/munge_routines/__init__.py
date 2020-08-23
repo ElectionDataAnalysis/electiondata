@@ -7,6 +7,7 @@ import re
 import os
 import numpy as np
 from sqlalchemy.orm.session import Session
+import time
 
 
 class MungeError(Exception):
@@ -556,6 +557,7 @@ def raw_elements_to_cdf(
     )
 
     # Fill VoteCount
+    vc_start = time.perf_counter()
     try:
         e = dbr.insert_to_cdf_db(session.bind, working, 'VoteCount')
         if e:
@@ -567,6 +569,8 @@ def raw_elements_to_cdf(
     except Exception as exc:
         e = f'Error filling VoteCount:\n{exc}'
         err = ui.add_error(err, 'munge_error', e)
+    vc_time = time.perf_counter() - vc_start
+    print(f'VoteCount load time in seconds: {vc_time}')
 
     # fill  ElectionContestSelectionVoteCountJoin
     try:

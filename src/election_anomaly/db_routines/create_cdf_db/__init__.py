@@ -25,7 +25,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
     # create enumeration tables 
     e_table_list = enum_table_list(dirpath)
     for t in e_table_list:
-        create_table(metadata,id_seq,t,'enumerations',dirpath,eng,session)
+        create_table(metadata,id_seq,t,'enumerations',dirpath)
     
     # create element tables (cdf and metadata) and push to db
     element_path = os.path.join(dirpath, 'elements')
@@ -45,7 +45,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
             except IndexError:
                 pass
         # create db table for element
-        create_table(metadata,id_seq,element,'elements',dirpath,eng,session)
+        create_table(metadata,id_seq,element,'elements',dirpath)
         # remove element from list of yet-to-be-processed
         elements_to_process.remove(element)
 
@@ -68,7 +68,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
             except IndexError:
                 pass
         # create db table for element
-        create_table(metadata,id_seq,j,'joins',dirpath,eng,session)
+        create_table(metadata,id_seq,j,'joins',dirpath)
         # remove element from list of yet-to-be-processed
         joins_to_process.remove(j)
 
@@ -78,7 +78,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
     return metadata
 
 
-def create_table(metadata,id_seq,name,table_type,dirpath,engine,session):
+def create_table(metadata,id_seq,name,table_type,dirpath):
     t_path = os.path.join(dirpath,table_type,name)
     if table_type == 'elements':
         with open(os.path.join(t_path, 'short_name.txt'), 'r') as f:
