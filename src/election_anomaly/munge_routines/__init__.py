@@ -372,6 +372,9 @@ def add_constant_column(df,col_name,col_value):
 
 def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session: Session) -> (pd.DataFrame, dict):
     working = df.copy()
+    """Append Ids for BMC and CC (both). Add contest_type column and fill it correctly.
+    Fail if there are dupe names between Candidate and BM Contests.
+    Drop rows which match neither BM nor C contest"""
 
     # add column for contest_type
     working = add_constant_column(working,'contest_type','unknown')
@@ -397,6 +400,7 @@ def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session:
         (working.BallotMeasureContest == working.CandidateContest) &
         (working.CandidateContest != 'none or unknown')
     ]
+    # TODO check this also when juris files loaded, to save time for user
     if not name_overlap.empty:
         e = f'Contest name(s) recognized as both Candidate and BallotMeasure Contests. {name_overlap.CandidateContest.unique()}'
         ui.add_error(err,'munge_error',e)
@@ -427,6 +431,11 @@ def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session:
     # drop columns with munged name
     for c_type in ['BallotMeasure', 'Candidate']:
             working.drop(f'{c_type}Contest', axis=1, inplace=True)
+
+    return working, err
+
+
+def add_selection_id_NEW(df: pd.DataFrame) -> (pd.DataFrame, dict):
 
     return working, err
 
@@ -525,6 +534,7 @@ def raw_elements_to_cdf(
                 ui.add_error(err, 'munge-error', f'Error adding internal ids for {t}.')
                 return err
 
+    # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
     try:
         working, err = add_selection_id(working, juris, mu, err, session)
     except Exception as exc:
@@ -536,6 +546,7 @@ def raw_elements_to_cdf(
         err = ui.add_error(err,'datafile',e)
         return err
 
+    # fill some join tables
     for j in ['ContestSelectionJoin','ElectionContestJoin']:
         try:
             working, err = append_join_id(project_root, session, working, j, err)
