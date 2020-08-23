@@ -176,16 +176,11 @@ def read_single_datafile(munger: jm.Munger, f_path: str, err: dict) -> [pd.DataF
 			df = pd.read_excel(f_path, **kwargs)
 		else:
 			e = f'Unrecognized file_type in munger: {munger.file_type}'
-			if 'format.txt' in err.keys():
-				err['format.txt'].append(e)
-			else:
-				err['format.txt'] = [e]
+			add_error(err,'format.txt',e)
+			df = pd.DataFrame()
 		if df.empty:
 			e = f'Nothing read from datafile; file type {munger.file_type} may be inconsistent, or datafile may be empty.'
-			if 'format.txt' in err.keys():
-				err['format.txt'].append(e)
-			else:
-				err['format.txt'] = [e]
+			add_error(err,'format.txt',e)
 		else:
 			df = mr.generic_clean(df)
 			err = jm.check_results_munger_compatibility(munger, df, err)
@@ -196,10 +191,7 @@ def read_single_datafile(munger: jm.Munger, f_path: str, err: dict) -> [pd.DataF
 		# DFs have trouble comparing against None. So we return an empty DF and 
 		# check for emptiness below as an indication of an error.
 		e = f'Error parsing results file.\n{pe}'
-	if 'datafile' in err.keys():
-		err['datafile'].append(e)
-	else:
-		err['datafile'] = [e]
+	add_error(err,'datafile_error',e)
 	return [pd.DataFrame(), err]
 
 
@@ -255,7 +247,7 @@ def new_datafile(
 	raw, err = read_combine_results(munger, raw_path, project_root,err,aux_data_dir=aux_data_dir)
 	if raw.empty:
 		e = f'No data read from datafile {raw_path}.'
-		add_error(err,'datafile',e)
+		add_error(err,'datafile_error',e)
 		return err
 	
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
@@ -263,17 +255,14 @@ def new_datafile(
 	try:
 		raw = mr.munge_clean(raw, munger)
 	except:
-		err['datafile'] = ['Cleaning of datafile failed. Results not loaded to database.']
+		err['datafile_error'] = ['Cleaning of datafile failed. Results not loaded to database.']
 		return err
 
 	try:
 		err = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,err,ids=results_info)
 	except:
 		e = 'Unspecified error during munging. Results not loaded to database.'
-		if 'datafile' in err.keys():
-			err['datafile'].append(e)
-		else:
-			err['datafile'] = [e]
+		add_error(err,'datafile_error',e)
 		return err
 
 	print(f'\n\tResults uploaded with munger {munger.name} '
