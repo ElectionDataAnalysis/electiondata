@@ -147,7 +147,7 @@ class MultiDataLoader():
 			print_str = f'\tArchived {f} and its results file.'
 			if warnings:
 				# save warnings in archive directory
-				warn_file = os.path.join(self.d['archive_dir'], f'{f[:-4]}.warn')
+				warn_file = os.path.join(new_dir, f'{f[:-4]}.warn')
 				with open (warn_file, 'w') as wf:
 					wf.write('\n'.join(warnings))
 				print_str += f' See warnings in {f[:-4]}.'
