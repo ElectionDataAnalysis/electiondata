@@ -156,24 +156,6 @@ def sql_alchemy_connect(paramfile: str = None, db_name: str = 'postgres') -> sql
 	return engine
 
 
-def add_integer_cols(session,table,col_list):
-	add = ','.join([f' ADD COLUMN "{c}" INTEGER' for c in col_list])
-	q = f'ALTER TABLE "{table}" {add}'
-	sql_ids=[]
-	strs = []
-	raw_query_via_sqlalchemy(session,q,sql_ids,strs)
-	return
-
-
-def drop_cols(session,table,col_list):
-	drop = ','.join([f' DROP COLUMN "{c}"' for c in col_list])
-	q = f'ALTER TABLE "{table}" {drop}'
-	sql_ids=[]
-	strs = []
-	raw_query_via_sqlalchemy(session,q,sql_ids,strs)
-	return
-
-
 def get_cdf_db_table_names(eng):
 	"""This is postgresql-specific"""
 	db_columns = pd.read_sql_table('columns',eng,schema='information_schema')
