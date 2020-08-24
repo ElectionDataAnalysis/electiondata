@@ -563,12 +563,16 @@ def raw_elements_to_cdf(
         if e:
             ui.add_error(err,'database',e)
         session.commit()
-        col_map = {c:c for c in ['Count','CountItemType_Id','OtherCountItemType','ReportingUnit_Id']}
-        working = dbr.append_id_to_dframe(session.bind,working,'VoteCount',col_map=col_map)
-        # TODO check that all candidates in munged contests (including write ins!) are munged
     except Exception as exc:
         e = f'Error filling VoteCount:\n{exc}'
         err = ui.add_error(err, 'munge_error', e)
+    try:
+        col_map = {c:c for c in ['Count','CountItemType_Id','OtherCountItemType','ReportingUnit_Id']}
+        working = dbr.append_id_to_dframe(session.bind,working,'VoteCount',col_map=col_map)
+    except Exception as exc:
+        e = f'Error pulling Ids from VoteCount:\n{exc}'
+        err = ui.add_error(err, 'munge_error', e)
+        # TODO check that all candidates in munged contests (including write ins!) are munged
     vc_time = time.perf_counter() - vc_start
     print(f'VoteCount load time in seconds: {vc_time}')
 
