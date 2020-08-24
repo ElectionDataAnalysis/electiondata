@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 def plot(type, data, fig_type, target_dir):
-    labels, x, y, scores = parse_data(data)
+    labels, x, y = parse_data(data)
     fig = go.Figure()
     if type == 'scatter':
         fig.add_trace(go.Scatter(
