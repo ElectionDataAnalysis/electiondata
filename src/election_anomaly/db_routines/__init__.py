@@ -181,15 +181,6 @@ def get_cdf_db_table_names(eng):
 	return cdf_elements, cdf_enumerations, cdf_joins, others
 
 
-def read_enums_from_db_table(sess,element):
-	"""Returns list of enum names (e.g., 'CountItemType') for the given <element>.
-	Identifies enums by the Other{enum} column name (e.g., 'OtherCountItemType)"""
-	df = pd.read_sql_table(element,sess.bind,index_col='Id')
-	other_cols = [x for x in df.columns if x[:5] == 'Other']
-	enums = [x[5:] for x in other_cols]
-	return enums
-
-
 # TODO combine query() and raw_query_via_sqlalchemy()?
 def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to create db and schemas
 	format_args = [sql.Identifier(a) for a in sql_ids]
@@ -215,41 +206,6 @@ def raw_query_via_sqlalchemy(session,q,sql_ids,strs):
 	cur.close()
 	con.close()
 	return return_item
-
-
-def get_enumerations(session,element):
-	"""Returns a list of enumerations referenced in the <element> element"""
-	q = f"""
-		SELECT column_name
-		FROM information_schema.columns
-		WHERE table_name='{element}';
-	"""
-	col_df = pd.read_sql(q,session.bind)
-	maybe_enum_list = [x[:-3] for x in col_df.column_name if x[-3:] == '_Id']
-	enum_list = [x for x in maybe_enum_list if f'Other{x}' in col_df.column_name.unique()]
-	return enum_list
-
-
-def get_foreign_key_df(session,element):
-	"""Returns a dataframe whose index is the name of the field in the <element> element, with columns
-	foreign_table_name and foreign_column_name"""
-	q = f"""
-		SELECT
-		kcu.column_name,
-		ccu.table_name AS foreign_table_name,
-		ccu.column_name AS foreign_column_name
-		FROM
-		information_schema.table_constraints AS tc
-		JOIN information_schema.key_column_usage AS kcu
-		  ON tc.constraint_name = kcu.constraint_name
-		  AND tc.table_schema = kcu.table_schema
-		JOIN information_schema.constraint_column_usage AS ccu
-		  ON ccu.constraint_name = tc.constraint_name
-		  AND ccu.table_schema = tc.table_schema
-		WHERE tc.constraint_type = 'FOREIGN KEY' AND tc.table_name='{element}';
-	"""
-	fk_df = pd.read_sql(q,session.bind,index_col='column_name')
-	return fk_df
 
 
 def name_from_id(session,element,idx):
