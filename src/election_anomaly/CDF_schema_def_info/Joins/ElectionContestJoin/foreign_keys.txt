@@ -1,3 +1,0 @@
-fieldname	refers_to
-Election_Id	Election
-Contest_Id	CandidateContest;BallotMeasureContest
