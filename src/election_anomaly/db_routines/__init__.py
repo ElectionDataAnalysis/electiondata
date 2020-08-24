@@ -246,12 +246,6 @@ def get_name_field(element):
 	return field
 
 
-def truncate_table(session, table_name):
-	session.execute(f'TRUNCATE TABLE "{table_name}" CASCADE')
-	session.commit()
-	return
-
-
 def get_input_options(session, input):
 	"""Returns a list of response options based on the input"""
 	# input comes as a pythonic (snake case) input, need to 
@@ -299,6 +293,7 @@ def get_datafile_info(session, results_file):
 	except IndexError:
 		print(f'No record named {results_file} found in _datafile table in {session.bind.url}')
 		return [0,0]
+
 
 def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', timestamp=None) -> str:
 	"""Inserts any new records in <df> into <element>; if <element> has a timestamp column
