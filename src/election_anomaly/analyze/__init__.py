@@ -127,32 +127,42 @@ def create_scatter(session, jurisdiction_id, subdivision_type_id,
 		y = dbr.name_from_id(session, 'Candidate', v_count_id) 
 	elif v_type == 'contests':
 		y = dbr.name_from_id(session, 'CandidateContest', v_count_id) 
-	results = {
-		"x-election": dbr.name_from_id(session, 'Election', h_election_id),
-		"y-election": dbr.name_from_id(session, 'Election', v_election_id),
-		"jurisdiction": dbr.name_from_id(session, 'ReportingUnit', jurisdiction_id),
-		#"contest": dbr.name_from_id(session, 'CandidateContest', unsummed.iloc[0]['Contest_Id']),
-		"subdivision_type": dbr.name_from_id(session, 'ReportingUnitType', subdivision_type_id),
-		"x-count_item_type": h_category,
-		"y-count_item_type": v_category,
-		"x": x,
-		"y": y,
-		"counts": []
-	}
+	jurisdiction = dbr.name_from_id(session, 'ReportingUnit', jurisdiction_id)
 	pivot_df = pd.pivot_table(unsummed, values='Count',
 		index=['Name'], columns='Selection').reset_index()
-	for i, row in pivot_df.iterrows():
-		results['counts'].append({
-			'name': row['Name'],
-			'x': row[x],
-			'y': row[y],
-		})			
+	
+	# package up results
+	results = package_results(pivot_df, jurisdiction, x, y)
+	results["x-election"] = dbr.name_from_id(session, 'Election', h_election_id)
+	results["y-election"] = dbr.name_from_id(session, 'Election', v_election_id)
+	results["subdivision_type"] = dbr.name_from_id(session, 'ReportingUnitType', subdivision_type_id)
+	results["x-count_item_type"] = h_category
+	results["y-count_item_type"] = v_category
+
 	# only keep the ones where there are an (x, y) to graph
 	to_keep = []
 	for result in results['counts']:
 		if len(result) == 3: #need reporting unit, x, and y
 			to_keep.append(result)
 	results['counts'] = to_keep
+	return results
+
+
+def package_results(data, jurisdiction, x, y, restrict=None):
+	results = {
+		"jurisdiction": jurisdiction,
+		"x": x,
+		"y": y,
+		"counts": []		
+	}
+	for i, row in data.iterrows():
+		results['counts'].append({
+			'name': row['Name'],
+			'x': row[x],
+			'y': row[y],
+		})
+		if restrict and i == (restrict - 1):
+			break
 	return results
 
 
