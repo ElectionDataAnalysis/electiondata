@@ -443,7 +443,7 @@ def assign_anomaly_score(data):
 	######### FOR TESTING PURPOSES ONLY!!!!! ###########
 	#data = data[data['Contest_Id'] == 14949] # only 2 candidates
 	#data = data[data['Contest_Id'] == 14777] # 3 candidates
-	#data = data[(data['Contest_Id'] == 14949) | (data['Contest_Id'] == 14777)]
+	data = data[(data['Contest_Id'] == 14949) | (data['Contest_Id'] == 14777)]
 	#data = data[data['Contest_Id'] == 14917] # this has infinite margins
 
 	# Assign a ranking for each candidate by votes for each contest
