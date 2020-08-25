@@ -1,3 +1,2 @@
 fieldname	datatype
-Name	String
 NumberElected	Integer

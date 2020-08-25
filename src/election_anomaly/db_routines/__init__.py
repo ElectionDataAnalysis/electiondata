@@ -217,12 +217,16 @@ def name_to_id(session,element,name):
 
 
 def get_name_field(element):
-	if element == 'BallotMeasureSelection':
-		field = 'Selection'
-	elif element == 'Candidate':
-		field = 'BallotName'
+	if element == 'Selection':
+		field = 'Name'
 	elif element in ['CountItemType','ElectionType','IdentifierType','ReportingUnitType']:
 		field = 'Txt'
+	elif element in ['CandidateSelection','BallotMeasureSelection']:
+		field = 'Selection_Id'
+	elif element in ['CandidateContest','BallotMeasureContest']:
+		field = 'Contest_Id'
+	elif element == 'Candidate':
+		field = 'BallotName'
 	elif element == '_datafile':
 		field = 'short_name'
 	else:
@@ -433,3 +437,5 @@ def get_column_names(cursor, table: str) -> (list, dict):
 	col_list = [x for (x,y) in results]
 	type_map = {x:y for (x,y) in results}
 	return col_list, type_map
+
+

@@ -10,23 +10,80 @@ import numpy as np
 from pathlib import Path
 
 
+# constants
+bms = ['Yes','No','none or unknown']
+
+
 class Jurisdiction:
+    def load_contests(self, engine, contest_type: str, error: dict) -> dict:
+        # read <contest_type>Contests from jurisdiction folder
+        element_fpath = os.path.join(self.path_to_juris_dir, f'{contest_type}Contest.txt')
+        if not os.path.exists(element_fpath):
+            error[f'{contest_type}Contest.txt'] = "file not found"
+            return error
+        df = pd.read_csv(element_fpath, sep='\t', encoding='iso-8859-1') \
+            .fillna('none or unknown')
+
+        # add 'none or unknown' record
+        df = add_none_or_unknown(df)
+
+        # dedupe df
+        dupes, df = ui.find_dupes(df)
+        if not dupes.empty:
+            print(f'WARNING: duplicates removed from dataframe, may indicate a problem.\n')
+            if not f'{contest_type}Contest' in error:
+                error[f'{contest_type}Contest'] = {}
+            error[f'{contest_type}Contest']["found_duplicates"] = True
+
+        # insert into in Contest table
+        e = dbr.insert_to_cdf_db(engine, df[['Name']], 'Contest')
+
+        # append Contest_Id
+        col_map = {'Name':'Name'}
+        df = dbr.append_id_to_dframe(engine,df,'Contest',col_map=col_map)
+
+        if contest_type == 'BallotMeasure':
+            # append ElectionDistrict_Id
+            col_map = {'ElectionDistrict':'Name'}
+            df = dbr.append_id_to_dframe(
+                engine, df, 'ReportingUnit', col_map=col_map
+            ).rename(columns={'ReportingUnit_Id': 'ElectionDistrict_Id'})
+        else:
+            # append Office_Id, PrimaryParty_Id
+            for fk,ref in [('Office','Office'),('PrimaryParty','Party')]:
+                col_map = {fk:'Name'}
+                df = dbr.append_id_to_dframe(
+                    engine, df, ref, col_map=col_map
+                ).rename(columns={f'{ref}_Id': f'{fk}_Id'})
+
+        # create entries in <contest_type>Contest table
+        # commit info in df to <contest_type>Contest table to db
+        err = dbr.insert_to_cdf_db(engine, df, f'{contest_type}Contest')
+        if err:
+            if f'{contest_type}Contest' not in error:
+                error[f'{contest_type}Contest'] = {}
+            error[f'{contest_type}Contest']["database"] = err
+        return error
+
+
     def load_juris_to_db(self,session,project_root) -> dict:
         """Load info from each element in the Jurisdiction's directory into the db"""
-        # for element in Jurisdiction directory (except dictionary, remark)
-        juris_elements = [
-            x[:-4] for x in os.listdir(self.path_to_juris_dir)
-            if x != 'remark.txt' and x != 'dictionary.txt' and x[0] != '.']
-        # reorder juris_elements for efficiency
-        leading = ['ReportingUnit','Office','Party','CandidateContest']
-        trailing = []
-        juris_elements = leading + [
-            x for x in juris_elements if x not in leading and x not in trailing
-        ] + trailing
+        # Load BallotMeasureSelections
+        load_bms(session.bind, bms)
+
+        # load all from Jurisdiction directory (except Contests, dictionary, remark)
+        juris_elements = ['ReportingUnit','Office','Party','Candidate','Election']
+
         error = dict()
         for element in juris_elements:
             # read df from Jurisdiction directory
             error = load_juris_dframe_into_cdf(session,element,self.path_to_juris_dir,project_root,error)
+
+        # Load CandidateContests and BallotMeasureContests
+        error = dict()
+        for contest_type in ['BallotMeasure','Candidate']:
+            error = self.load_contests(session.bind, contest_type, error)
+
         if error == dict():
             error = None
         return error
@@ -582,26 +639,16 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
         .fillna('none or unknown')
     # TODO check that df has the right format
 
-    # TODO add 'none or unknown' record
-    new_row = dict()
-    for c in df.columns:
-        if df[c].dtype == 'O':
-            new_row[c] = 'none or unknown'
-        elif pd.api.types.is_numeric_dtype(df[c]):
-            new_row[c] = 0
-    # append row to the dataframe
-    df = df.append(new_row, ignore_index=True)
+    # add 'none or unknown' record
+    df = add_none_or_unknown(df)
 
     # dedupe df
-    dupes,df = ui.find_dupes(df)
+    dupes, df = ui.find_dupes(df)
     if not dupes.empty:
         print(f'WARNING: duplicates removed from dataframe, may indicate a problem.\n')
         if not element in error:
             error[element] = {}
         error[element]["found_duplicates"] = True
-
-    # replace nulls with empty strings
-    df.fillna('',inplace=True)
 
     # replace plain text enumerations from file system with id/othertext from db
     enum_file = os.path.join(cdf_schema_def_dir,'elements',element,'enumerations.txt')
@@ -613,7 +660,6 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
             # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
             if e in df.columns:
                 df = mr.enum_col_to_id_othertext(df,e,cdf_e)
-    # TODO somewhere, check that no CandidateContest & Ballot Measure share a name; ditto for other false foreign keys
 
     # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
     fk_file_path = os.path.join(
@@ -631,7 +677,7 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
     # commit info in df to corresponding cdf table to db
     err = dbr.insert_to_cdf_db(session.bind, df, element)
     if err:
-        if not element in error:
+        if element not in error:
             error[element] = {}
         error[element]["database"] = err
     return error
@@ -695,6 +741,33 @@ def check_results_munger_compatibility(mu: Munger, df: pd.DataFrame, error: dict
                     else:
                         error['datafile'] = e
     return error
+
+
+def load_bms(engine, bms_list: list):
+	# Create entries in Selection table, get Ids
+	bms_df = pd.DataFrame([[s] for s in bms_list], columns=['Name'])
+	e = dbr.insert_to_cdf_db(engine, bms_df, 'Selection')
+
+	# Create entries in BallotMeasureSelection table
+	col_map = {'Name':'Name'}
+	bms_df = dbr.append_id_to_dframe(engine,bms_df,'Selection',col_map=col_map)[['Selection_Id']]
+	e = dbr.insert_to_cdf_db(engine, bms_df, 'BallotMeasureSelection')
+	return
+
+
+def add_none_or_unknown(df: pd.DataFrame) -> pd.DataFrame:
+    new_row = dict()
+    for c in df.columns:
+        if df[c].dtype == 'O':
+            new_row[c] = 'none or unknown'
+        elif pd.api.types.is_numeric_dtype(df[c]):
+            new_row[c] = 0
+    # append row to the dataframe
+    df = df.append(new_row, ignore_index=True)
+    return df
+
+
+
 
 
 class ForeignKeyException(Exception):

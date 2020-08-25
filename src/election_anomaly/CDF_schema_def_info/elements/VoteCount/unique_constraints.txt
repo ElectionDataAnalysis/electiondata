@@ -1,2 +1,2 @@
 unique_constraint
-Count,CountItemType_Id,ReportingUnit_Id,Contest_Id,,Election_Id,_datafile_Id
+Count,CountItemType_Id,ReportingUnit_Id,Contest_Id,Election_Id,_datafile_Id
