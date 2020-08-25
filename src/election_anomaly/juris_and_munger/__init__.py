@@ -35,8 +35,11 @@ class Jurisdiction:
                 error[f'{contest_type}Contest'] = {}
             error[f'{contest_type}Contest']["found_duplicates"] = True
 
+        # add contest_type column
+        df = mr.add_constant_column(df,'contest_type',contest_type)
+
         # insert into in Contest table
-        e = dbr.insert_to_cdf_db(engine, df[['Name']], 'Contest')
+        e = dbr.insert_to_cdf_db(engine, df[['Name','contest_type']], 'Contest')
 
         # append Contest_Id
         col_map = {'Name':'Name'}

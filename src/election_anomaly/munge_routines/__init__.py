@@ -373,17 +373,25 @@ def add_constant_column(df,col_name,col_value):
 
 def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session: Session) -> (pd.DataFrame, dict):
     working = df.copy()
-    """Append Ids for BMC and CC (both). Add contest_type column and fill it correctly.
-    Fail if there are dupe names between Candidate and BM Contests.
+    """Append Contest_Id and contest_type. Add contest_type column and fill it correctly.
     Drop rows which match neither BM nor C contest"""
 
-    # add column for contest_type
-    working = add_constant_column(working,'contest_type','unknown')
+    # add Contest_Id and contest_type
+    df_for_type = dict()
+    df_contest = pd.read_sql_table(f'Contest', session.bind)
+    for c_type in ['BallotMeasure','Candidate']:
+        df_for_type[c_type] = df_contest[df_contest.contest_type == c_type]
+        none_or_unknown_id = dbr.name_to_id(
+            session, f'{c_type}Contest', 'none or unknown', contest_type=c_type
+        )
+
 
     # append ids for BallotMeasureContests and CandidateContests
     for c_type in ['BallotMeasure','Candidate']:
         df_contest = pd.read_sql_table(f'{c_type}Contest',session.bind)
-        none_or_unknown_id = dbr.name_to_id(session,f'{c_type}Contest','none or unknown')
+        none_or_unknown_id = dbr.name_to_id(
+            session,f'{c_type}Contest','none or unknown',contest_type=c_type
+        )
         working, err = replace_raw_with_internal_ids(
             working,
             juris,
@@ -400,7 +408,7 @@ def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session:
     name_overlap = working[
         (working.BallotMeasureContest == working.CandidateContest) &
         (working.CandidateContest != 'none or unknown')
-    ]
+        ]
     # TODO check this also when juris files loaded, to save time for user
     if not name_overlap.empty:
         e = f'Contest name(s) recognized as both Candidate and BallotMeasure Contests. {name_overlap.CandidateContest.unique()}'
@@ -431,7 +439,7 @@ def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session:
 
     # drop columns with munged name
     for c_type in ['BallotMeasure', 'Candidate']:
-            working.drop(f'{c_type}Contest', axis=1, inplace=True)
+        working.drop(f'{c_type}Contest', axis=1, inplace=True)
 
     return working, err
 

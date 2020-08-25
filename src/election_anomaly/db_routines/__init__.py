@@ -204,13 +204,22 @@ def name_from_id(session,element,idx):
 	return name
 
 
-def name_to_id(session,element,name):
+def name_to_id(session, element, name, contest_type: str=None) -> int:
+	""" Condition can be a field/value pair, e.g., ('contest_type','Candidate')"""
+	connection = session.bind.raw_connection()
+	cursor = connection.cursor()
 	name_field = get_name_field(element)
-	q = f"""SELECT "Id" FROM "{element}" WHERE "{name_field}" = '{name}' """
-	idx_df = pd.read_sql(q,session.bind)
+	q = sql.SQL(
+		'SELECT "Id" FROM {element} WHERE {name_field} = %s'
+	).format(element=sql.Identifier(element),name_field=sql.Identifier(name_field))
+	strings = [name]
+	if contest_type:
+		q += sql.SQL(' AND contest_type = %s')
+		strings.append(contest_type)
+	cursor.execute(q,strings)
 	try:
-		idx = idx_df.loc[0,'Id']
-	except KeyError:
+		idx = cursor.fetchone()[0]
+	except Exception:
 		# if no record with name <name> was found
 		idx = None
 	return idx
