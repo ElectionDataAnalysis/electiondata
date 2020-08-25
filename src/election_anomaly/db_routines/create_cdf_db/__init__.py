@@ -4,6 +4,7 @@
 #  and ContestSelectionJoin_Id share a contest? Should this happen during the rollup process?
 
 import sqlalchemy as sa
+import db_routines as dbr
 from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,ForeignKey, Index
 from sqlalchemy import Date, TIMESTAMP
 from psycopg2 import sql
@@ -100,7 +101,11 @@ def create_table(metadata,id_seq,name,table_type,dirpath, create_indices: list=N
     """Each element of the list <create_indices>, should be a list of
     columns on which an index should be created. """
     t_path = os.path.join(dirpath,table_type,name)
-    if table_type == 'elements':
+    if name == 'Selection':
+        # Selection table has only Id column
+        t = Table(name, metadata,
+                  Column('Id', Integer, id_seq, server_default=id_seq.next_value(), primary_key=True))
+    elif table_type == 'elements':
         with open(os.path.join(t_path, 'short_name.txt'), 'r') as f:
             short_name=f.read().strip()
 
@@ -223,17 +228,16 @@ def fill_standard_tables(session, schema, dirpath='CDF_schema_def_info'):
 
 
 def load_bms(engine, bms_list: list):
-    # Create entries in Selection table, get Ids
     bms_df = pd.DataFrame([[s] for s in bms_list], columns=['Name'])
-    e = dbr.insert_to_cdf_db(engine, bms_df, 'Selection')
+
+    # Create 3 entries in Selection table
+    id_list = dbr.add_records_to_selection_table(engine, len(bms_list))
 
     # Create entries in BallotMeasureSelection table
-    col_map = {'Name':'Name'}
-    bms_df = dbr.append_id_to_dframe(engine,bms_df,'Selection',col_map=col_map)[['Selection_Id']]
+    bms_df['Id'] = pd.Series(id_list,index=bms_df.index)
+    temp = pd.concat([pd.read_sql_table('Selection',engine),bms_df],axis=1)
+    temp.to_sql('BallotMeasureSelection',engine,if_exists='append',index=False)
 
-    bms_df.rename(
-        columns={'Selection_Id':'Id'}
-    ).to_sql('BallotMeasureSelection',engine,if_exists='append',index=False)
     return
 
 

@@ -429,14 +429,22 @@ def add_selection_id(df: pd.DataFrame, engine, jurisdiction: jm.Jurisdiction, er
     for ct in ['BallotMeasure','Candidate']:
         w[ct] = df[df.contest_type == ct].copy()
 
-    s = pd.read_sql_table(f'Selection', engine)
+    bms = pd.read_sql_table(f'BallotMeasureSelection', engine)
+
     # append BallotMeasureSelection_Id as Selection_Id to w['BallotMeasure']
     w['BallotMeasure'], err = replace_raw_with_internal_ids(
-        w['BallotMeasure'], jurisdiction, bms,'BallotMeasureSelection','Selection',err, drop_unmatched=True)
+        w['BallotMeasure'], jurisdiction, bms,'BallotMeasureSelection','Name',err, drop_unmatched=True)
     w['BallotMeasure'].rename(columns={'BallotMeasureSelection_Id':'Selection_Id'},inplace=True)
     w['BallotMeasure'].drop(['BallotMeasureSelection','Candidate_Id'], axis=1, inplace=True)
-    #  Load CandidateSelection table (not directly munged, not exactly a join either)
+
     c_df = w['Candidate'][['Candidate_Id','Party_Id']].drop_duplicates()
+    c_df = c_df[(c_df.Candidate_Id.notnull()) & c_df.Candidate_Id != 0]
+
+    #  Load CandidateSelections to Selection table
+    id_list = dbr.add_records_to_selection_table(engine,c_df.shape[0])
+
+    # Load CandidateSelection table
+    c_df['Id'] = pd.Series(id_list, index=c_df.index)
     dbr.insert_to_cdf_db(engine, c_df, 'CandidateSelection')
 
     # add CandidateSelection_Id column, merging on Candidate_Id and Party_Id
@@ -518,27 +526,7 @@ def raw_elements_to_cdf(
         err = ui.add_error(err,'datafile_error',e)
         return err
 
-    # fill ContestSelectionJoin
-    csj = working[['Contest_Id','Selection_Id']].drop_duplicates()
-    e = dbr.insert_to_cdf_db(session.bind,csj,'ContestSelectionJoin')
-    if e:
-        ui.add_error(err,'munge_error',f'Error filling ContestSelectionJoin: {e}')
-    col_map = {c:c for c in ['Contest_Id','Selection_Id']}
-    working = dbr.append_id_to_dframe(
-        session.bind, working, 'ContestSelectionJoin', col_map=col_map
-    )
-
-    # fill ElectionContestJoin
-    csj = working[['Election_Id','Contest_Id']].drop_duplicates()
-    e = dbr.insert_to_cdf_db(session.bind,csj,'ElectionContestJoin')
-    if e:
-        ui.add_error(err,'munge_error',f'Error filling ElectionContestJoin: {e}')
-    col_map = {c:c for c in ['Contest_Id','Election_Id']}
-    working = dbr.append_id_to_dframe(
-        session.bind, working, 'ElectionContestJoin', col_map=col_map
-    )
-
-    # Fill VoteCount
+    # TODO Fill VoteCount
     vc_start = time.perf_counter()
     try:
         e = dbr.insert_to_cdf_db(session.bind, working, 'VoteCount')
@@ -548,25 +536,9 @@ def raw_elements_to_cdf(
     except Exception as exc:
         e = f'Error filling VoteCount:\n{exc}'
         err = ui.add_error(err, 'munge_error', e)
-    try:
-        col_map = {c:c for c in ['Count','CountItemType_Id','OtherCountItemType','ReportingUnit_Id']}
-        working = dbr.append_id_to_dframe(session.bind,working,'VoteCount',col_map=col_map)
-    except Exception as exc:
-        e = f'Error pulling Ids from VoteCount:\n{exc}'
-        err = ui.add_error(err, 'munge_error', e)
-        # TODO check that all candidates in munged contests (including write ins!) are munged
     vc_time = time.perf_counter() - vc_start
     print(f'VoteCount load time in seconds: {vc_time}')
 
-    # fill  ElectionContestSelectionVoteCountJoin
-    try:
-        # upload to ElectionContestSelectionVoteCountJoin
-        e = dbr.insert_to_cdf_db(session.bind, working, 'ElectionContestSelectionVoteCountJoin')
-        if e:
-            ui.add_error(err,'database',e)
-    except Exception as exc:
-        e = f'Error filling ElectionContestSelectionVoteCountJoin:\n{exc}'
-        err = ui.add_error(err,'munge_error',e)
     return err
 
 

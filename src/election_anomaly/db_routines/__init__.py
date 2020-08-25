@@ -315,13 +315,20 @@ def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', times
 	# name temp table by username and timestamp to avoid conflict
 	temp_table = table_named_to_avoid_conflict(engine,'__temp_insert')
 
-	# create temp table without Id or timestamp column
-	q = sql.SQL(
-		"CREATE TABLE {temp_table} AS TABLE {element} WITH NO DATA; ALTER TABLE {temp_table} DROP COLUMN \"Id\";").format(
-		element=sql.Identifier(element),temp_table=sql.Identifier(temp_table))
+	if element in ['BallotMeasureSelection','BallotMeasureContest','CandidateSelection','CandidateContest']:
+		# create temp table with Id column
+		q = sql.SQL(
+			"CREATE TABLE {temp_table} AS TABLE {element} WITH NO DATA;").format(
+			element=sql.Identifier(element),temp_table=sql.Identifier(temp_table))
+	else:
+		# create temp table without Id
+		q = sql.SQL(
+			"CREATE TABLE {temp_table} AS TABLE {element} WITH NO DATA; ALTER TABLE {temp_table} DROP COLUMN \"Id\";").format(
+			element=sql.Identifier(element),temp_table=sql.Identifier(temp_table))
 
 	cursor.execute(q)
 	if timestamp:
+		# drop timestamp column
 		q = sql.SQL("ALTER TABLE {temp_table} DROP COLUMN {ts_col}").format(
 			ts_col=sql.Identifier(timestamp),temp_table=temp_table)
 		cursor.execute(q)
@@ -453,6 +460,16 @@ def get_column_names(cursor, table: str) -> (list, dict):
 	return col_list, type_map
 
 
-
-
-
+def add_records_to_selection_table(engine, n: int) -> list:
+	"Returns a list of the Ids of the inserted records"
+	id_list = []
+	connection = engine.raw_connection()
+	cursor = connection.cursor()
+	q = sql.SQL('INSERT INTO "Selection" DEFAULT VALUES RETURNING "Id";')
+	for k in range(n):
+		cursor.execute(q)
+		id_list.append(cursor.fetchall()[0][0])
+	connection.commit()
+	cursor.close()
+	connection.close()
+	return id_list

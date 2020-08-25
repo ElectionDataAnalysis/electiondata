@@ -1,3 +1,4 @@
 fieldname	refers_to
 Id	Contest
 ElectionDistrict_Id	ReportingUnit
+Election_Id	Election

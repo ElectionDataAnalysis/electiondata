@@ -34,7 +34,6 @@ class Jurisdiction:
                 error[f'{contest_type}Contest'] = {}
             error[f'{contest_type}Contest']["found_duplicates"] = True
 
-
         # insert into in Contest table
         e = dbr.insert_to_cdf_db(engine, df[['Name','contest_type']], 'Contest')
 
@@ -43,11 +42,13 @@ class Jurisdiction:
         df = dbr.append_id_to_dframe(engine,df,'Contest',col_map=col_map)
 
         if contest_type == 'BallotMeasure':
-            # append ElectionDistrict_Id
-            col_map = {'ElectionDistrict':'Name'}
-            df = dbr.append_id_to_dframe(
-                engine, df, 'ReportingUnit', col_map=col_map
-            ).rename(columns={'ReportingUnit_Id': 'ElectionDistrict_Id'})
+            # append ElectionDistrict_Id, Election_Id
+            for fk,ref in [('ElectionDistrict','ReportingUnit'),('Election','Election')]:
+                col_map = {fk:'Name'}
+                df = dbr.append_id_to_dframe(
+                    engine, df, ref, col_map=col_map
+                ).rename(columns={f'{ref}_Id': f'{fk}_Id'}).drop(fk,axis=1)
+
         else:
             # append Office_Id, PrimaryParty_Id
             for fk,ref in [('Office','Office'),('PrimaryParty','Party')]:
@@ -58,7 +59,7 @@ class Jurisdiction:
 
         # create entries in <contest_type>Contest table
         # commit info in df to <contest_type>Contest table to db
-        err = dbr.insert_to_cdf_db(engine, df, f'{contest_type}Contest')
+        err = dbr.insert_to_cdf_db(engine, df.rename(columns={'Contest_Id':'Id'}), f'{contest_type}Contest')
         if err:
             if f'{contest_type}Contest' not in error:
                 error[f'{contest_type}Contest'] = {}
