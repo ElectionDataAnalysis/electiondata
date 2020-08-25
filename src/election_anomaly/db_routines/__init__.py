@@ -235,14 +235,10 @@ def name_to_id(session, element, name) -> int:
 
 
 def get_name_field(element):
-	if element == 'Selection':
-		field = 'Name'
-	elif element in ['CountItemType','ElectionType','IdentifierType','ReportingUnitType']:
+	if element in ['CountItemType','ElectionType','IdentifierType','ReportingUnitType']:
 		field = 'Txt'
-	elif element in ['CandidateSelection','BallotMeasureSelection']:
-		field = 'Selection_Id'
-	elif element in ['CandidateContest','BallotMeasureContest']:
-		field = 'Contest_Id'
+	elif element in ['CandidateSelection','BallotMeasureSelection','CandidateContest','BallotMeasureContest']:
+		field = 'Id'
 	elif element == 'Candidate':
 		field = 'BallotName'
 	elif element == '_datafile':
@@ -259,16 +255,16 @@ def get_input_options(session, input):
 	name_parts = input.split('_')
 	search_str = "".join([name_part.capitalize() for name_part in name_parts])
 
-	if search_str in ['BallotMeasureContest', 'CandidateContest', 'Election',
+	if search_str in ['BallotMeasureContest', 'CandidateContest','BallotMeasureSelection','CandidateContest' ]:
+		print(f'Options not available for {input}')
+		return None
+	elif search_str in ['Election',
 		'Office', 'Party', 'ReportingUnit']:
 		column_name = 'Name'
 		table_search = True
 	elif search_str in ['CountItemStatus', 'CountItemType', 'ElectionType',
 		'IdentifierType', 'ReportingUnitType']:
 		column_name = 'Txt'
-		table_search = True
-	elif search_str == 'BallotMeasureSelection':
-		column_name = 'Selection'
 		table_search = True
 	elif search_str == 'Candidate':
 		column_name = 'BallotName'
@@ -277,20 +273,22 @@ def get_input_options(session, input):
 		search_str = search_str.lower()
 		table_search = False
 
+	connection = session.bind.raw_connection()
+	cursor = connection.cursor()
 	if table_search:
 		q1 = sql.SQL('SELECT {column_name} FROM {search_str};').format(
 			column_name=sql.Identifier(column_name),search_str=sql.Identifier(search_str)
 		)
-		result = session.execute(q1)
-		return [r[0] for r in result]
+		cursor.execute(q1)
+		result = cursor.fetchall()
 	else:
-		q2 = sql.SQL("""
-			SELECT "Name" FROM "ReportingUnit" ru 
-			JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" 
-			WHERE rut."Txt" = %s
-		""")
-		result = session.execute(q2,[search_str])
-		return [r[0] for r in result]
+		q2 = sql.SQL(
+			'SELECT "Name" FROM "ReportingUnit" ru JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" WHERE rut."Txt" = %s'
+		)
+		cursor.execute(q2,[search_str])
+		result = cursor.fetchall()
+	connection.close()
+	return [r[0] for r in result]
 
 
 def get_datafile_info(session, results_file):
