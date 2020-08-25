@@ -204,19 +204,24 @@ def name_from_id(session,element,idx):
 	return name
 
 
-def name_to_id(session, element, name, contest_type: str=None) -> int:
+def name_to_id(session, element, name) -> int:
 	""" Condition can be a field/value pair, e.g., ('contest_type','Candidate')"""
 	connection = session.bind.raw_connection()
 	cursor = connection.cursor()
-	name_field = get_name_field(element)
-	q = sql.SQL(
-		'SELECT "Id" FROM {element} WHERE {name_field} = %s'
-	).format(element=sql.Identifier(element),name_field=sql.Identifier(name_field))
-	strings = [name]
-	if contest_type:
-		q += sql.SQL(' AND contest_type = %s')
-		strings.append(contest_type)
-	cursor.execute(q,strings)
+	if element == 'CandidateContest':
+		q = sql.SQL(
+			'SELECT "Id" FROM "Contest" where "Name" = %s AND contest_type = \'Candidate\''
+		)
+	elif element == 'BallotMeasureContest':
+		q = sql.SQL(
+			'SELECT "Id" FROM "Contest" where "Name" = %s AND contest_type = \'BallotMeasureContest\''
+		)
+	else:
+		name_field = get_name_field(element)
+		q = sql.SQL(
+			'SELECT "Id" FROM {element} where {name_field} = %s'
+		).format(element=sql.Identifier(element), name_field=sql.Identifier(name_field))
+	cursor.execute(q,[name])
 	try:
 		idx = cursor.fetchone()[0]
 	except Exception:
