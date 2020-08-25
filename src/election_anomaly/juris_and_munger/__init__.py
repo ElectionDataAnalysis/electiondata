@@ -10,10 +10,6 @@ import numpy as np
 from pathlib import Path
 
 
-# constants
-bms = ['Yes','No','none or unknown']
-
-
 class Jurisdiction:
     def load_contests(self, engine, contest_type: str, error: dict) -> dict:
         # read <contest_type>Contests from jurisdiction folder
@@ -24,8 +20,11 @@ class Jurisdiction:
         df = pd.read_csv(element_fpath, sep='\t', encoding='iso-8859-1') \
             .fillna('none or unknown')
 
+        # add contest_type column
+        df = mr.add_constant_column(df,'contest_type',contest_type)
+
         # add 'none or unknown' record
-        df = add_none_or_unknown(df)
+        df = add_none_or_unknown(df,contest_type=contest_type)
 
         # dedupe df
         dupes, df = ui.find_dupes(df)
@@ -35,8 +34,6 @@ class Jurisdiction:
                 error[f'{contest_type}Contest'] = {}
             error[f'{contest_type}Contest']["found_duplicates"] = True
 
-        # add contest_type column
-        df = mr.add_constant_column(df,'contest_type',contest_type)
 
         # insert into in Contest table
         e = dbr.insert_to_cdf_db(engine, df[['Name','contest_type']], 'Contest')
@@ -71,9 +68,6 @@ class Jurisdiction:
 
     def load_juris_to_db(self,session,project_root) -> dict:
         """Load info from each element in the Jurisdiction's directory into the db"""
-        # Load BallotMeasureSelections
-        load_bms(session.bind, bms)
-
         # load all from Jurisdiction directory (except Contests, dictionary, remark)
         juris_elements = ['ReportingUnit','Office','Party','Candidate','Election']
 
@@ -746,22 +740,12 @@ def check_results_munger_compatibility(mu: Munger, df: pd.DataFrame, error: dict
     return error
 
 
-def load_bms(engine, bms_list: list):
-	# Create entries in Selection table, get Ids
-	bms_df = pd.DataFrame([[s] for s in bms_list], columns=['Name'])
-	e = dbr.insert_to_cdf_db(engine, bms_df, 'Selection')
-
-	# Create entries in BallotMeasureSelection table
-	col_map = {'Name':'Name'}
-	bms_df = dbr.append_id_to_dframe(engine,bms_df,'Selection',col_map=col_map)[['Selection_Id']]
-	e = dbr.insert_to_cdf_db(engine, bms_df, 'BallotMeasureSelection')
-	return
-
-
-def add_none_or_unknown(df: pd.DataFrame) -> pd.DataFrame:
+def add_none_or_unknown(df: pd.DataFrame,contest_type: str = None) -> pd.DataFrame:
     new_row = dict()
     for c in df.columns:
-        if df[c].dtype == 'O':
+        if c == 'contest_type':
+            new_row[c] = contest_type
+        elif df[c].dtype == 'O':
             new_row[c] = 'none or unknown'
         elif pd.api.types.is_numeric_dtype(df[c]):
             new_row[c] = 0

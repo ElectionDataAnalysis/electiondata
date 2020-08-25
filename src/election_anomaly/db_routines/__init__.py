@@ -135,7 +135,7 @@ def create_new_db(project_root, paramfile, db_name):
 	# load cdf tables
 	db_cdf.create_common_data_format_tables(
 		sess,dirpath=os.path.join(project_root,'election_anomaly','CDF_schema_def_info'))
-	db_cdf.fill_cdf_enum_tables(
+	db_cdf.fill_standard_tables(
 		sess,None,dirpath=os.path.join(project_root,'election_anomaly/CDF_schema_def_info/'))
 	con.close()
 
@@ -214,7 +214,7 @@ def name_to_id(session, element, name) -> int:
 		)
 	elif element == 'BallotMeasureContest':
 		q = sql.SQL(
-			'SELECT "Id" FROM "Contest" where "Name" = %s AND contest_type = \'BallotMeasureContest\''
+			'SELECT "Id" FROM "Contest" where "Name" = %s AND contest_type = \'BallotMeasure\''
 		)
 	else:
 		name_field = get_name_field(element)
@@ -329,10 +329,10 @@ def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', times
 	connection.commit()
 	q = sql.SQL("SELECT column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = %s")
 	cursor.execute(q,[temp_table])
-	temp_columns, type_map = get_column_names(cursor, temp_table)
 
 	# make sure datatypes of working match the types of target
 	# get set <mixed_int> of cols with integers & nulls and kludge only those
+	temp_columns, type_map = get_column_names(cursor, temp_table)
 	mixed_int = [c for c in temp_columns if type_map[c] == 'integer' and working[c].dtype != 'int64']
 	for c in mixed_int:
 		# set nulls to 0 (kludge because pandas can't have NaN in 'int64' column)
@@ -451,5 +451,8 @@ def get_column_names(cursor, table: str) -> (list, dict):
 	col_list = [x for (x,y) in results]
 	type_map = {x:y for (x,y) in results}
 	return col_list, type_map
+
+
+
 
 

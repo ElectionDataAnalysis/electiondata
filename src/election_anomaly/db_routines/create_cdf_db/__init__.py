@@ -6,10 +6,15 @@
 import sqlalchemy as sa
 from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,ForeignKey, Index
 from sqlalchemy import Date, TIMESTAMP
+from psycopg2 import sql
 import os
 import pandas as pd
 import db_routines as dbr
 import datetime
+
+
+# constants
+bmselections = ['Yes','No','none or unknown']
 
 
 def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
@@ -52,7 +57,9 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
         elif element == 'CandidateSelection':
             create_indices = [['Candidate_Id', 'Party_Id']]
         else:
-            create_indices = [[dbr.get_name_field(element)]]
+            # create_indices = [[dbr.get_name_field(element)]]
+            create_indices = None
+            # TODO fix for efficiency -- note <contest_type>Contest, <contest_type>Selection may need special treatment
 
         # create db table for element
         create_table(metadata,id_seq,element,'elements',dirpath, create_indices=create_indices)
@@ -77,15 +84,8 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
                 break
             except IndexError:
                 pass
-        # define indices for efficiency
-        if j == 'ContestSelectionJoin':
-            create_indices = [['Contest_Id', 'Selection_Id']]
-        elif j == 'ElectionContestJoin':
-            create_indices = [['Election_Id','Contest_Id']]
-        else:
-            create_indices = None     # TODO inelegant
         # create db table for element
-        create_table(metadata,id_seq,j,'joins',dirpath,create_indices=create_indices)
+        create_table(metadata,id_seq,j,'joins',dirpath)
 
         # remove element from list of yet-to-be-processed
         joins_to_process.remove(j)
@@ -146,17 +146,22 @@ def create_table(metadata,id_seq,name,table_type,dirpath, create_indices: list=N
             time_stamp_list = [Column('created_at', sa.DateTime, default=sa.func.now())]
         else:
             time_stamp_list = []
-
-        t = Table(name,metadata,
-              Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
-              * field_col_list, * enum_id_list, * enum_other_list,
-              * foreign_key_list, * null_constraint_list, * unique_constraint_list, * time_stamp_list)
+        if name in ['CandidateContest','CandidateSelection','BallotMeasureContest','BallotMeasureSelection']:
+            # don't want unique Id for these: they will be filled with value
+            # from Contest or Selection (parent table)
+            t = Table(name,metadata,
+                  * field_col_list, * enum_id_list, * enum_other_list,
+                  * foreign_key_list, * null_constraint_list, * unique_constraint_list, * time_stamp_list)
+            Index(f'{t}_parent',t.c.Id)
+        else:
+            # for all other tables, want Id to be unique throughout database
+            t = Table(name,metadata,
+                  Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
+                  * field_col_list, * enum_id_list, * enum_other_list,
+                  * foreign_key_list, * null_constraint_list, * unique_constraint_list, * time_stamp_list)
 
     elif table_type == 'enumerations':
-        if name == 'BallotMeasureSelection':
-            txt_col = 'Selection'
-        else:
-            txt_col = 'Txt'
+        txt_col = 'Txt'
         t = Table(name,metadata,Column('Id',Integer,id_seq,server_default=id_seq.next_value(),primary_key=True),
               Column(txt_col,String,unique=True))
     
@@ -200,18 +205,36 @@ def enum_table_list(dirpath='CDF_schema_def_info'):
     return e_table_list
 
 
-def fill_cdf_enum_tables(session,schema,dirpath='CDF_schema_def_info'):
-    """takes lines of text from file and inserts each line into the txt field of the enumeration table"""
+def fill_standard_tables(session, schema, dirpath='CDF_schema_def_info'):
+    """Fill enumeration and BallotMeasureSelection tables"""
+    # fill enumeration tables
     e_table_list = enum_table_list(dirpath)
     for f in e_table_list:
-        if f == 'BallotMeasureSelection':
-            txt_col='Selection'
-        else:
-            txt_col='Txt'
+        txt_col='Txt'
+        # takes lines of text from file
         dframe = pd.read_csv(os.path.join(dirpath, 'enumerations', f + '.txt'), header=None, names=[txt_col])
+        # insert to table
         dframe.to_sql(f,session.bind,schema=schema,if_exists='append',index=False)
+
+    # fill BallotMeasureSelection table
+    load_bms(session.bind,bmselections)
     session.flush()
     return e_table_list
+
+
+def load_bms(engine, bms_list: list):
+    # Create entries in Selection table, get Ids
+    bms_df = pd.DataFrame([[s] for s in bms_list], columns=['Name'])
+    e = dbr.insert_to_cdf_db(engine, bms_df, 'Selection')
+
+    # Create entries in BallotMeasureSelection table
+    col_map = {'Name':'Name'}
+    bms_df = dbr.append_id_to_dframe(engine,bms_df,'Selection',col_map=col_map)[['Selection_Id']]
+
+    bms_df.rename(
+        columns={'Selection_Id':'Id'}
+    ).to_sql('BallotMeasureSelection',engine,if_exists='append',index=False)
+    return
 
 
 def reset_db(session, dirpath):

@@ -1,4 +1,4 @@
 fieldname	refers_to
 Candidate_Id	Candidate
 Party_Id	Party
-Selection_Id	Selection
+Id	Selection

@@ -1,2 +1,2 @@
 fieldname	refers_to
-Selection_Id	Selection
+Id	Selection

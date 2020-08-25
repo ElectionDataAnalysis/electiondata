@@ -161,8 +161,6 @@ def replace_raw_with_internal_ids(
         ,error: dict, drop_unmatched: bool=False, mode: str='row',unmatched_id: int=0) -> (pd.DataFrame, dict):
     """replace columns in <working> with raw_identifier values by columns with internal names and Ids
     from <table_df>, which has structure of a db table for <element>.
-    # TODO If <element> is BallotMeasureContest or CandidateContest,
-    #  contest_type column is added/updated
     <unmatched_id> is the id to assign to unmatched records.
     """
     working = df.copy()
@@ -205,7 +203,7 @@ def replace_raw_with_internal_ids(
     # drop extraneous cols from mu.raw_identifier, and drop original raw
     working = working.drop(['raw_identifier_value', 'cdf_element', f'{element}_raw'], axis=1)
 
-    # ensure that there is a column in raw called by the element
+    # ensure that there is a column in working called by the element
     # containing the internal name of the element
     if f'_{element}_ei' in working.columns:
         working.rename(columns={f'_{element}_ei':element}, inplace=True)
@@ -378,68 +376,45 @@ def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session:
 
     # add Contest_Id and contest_type
     df_for_type = dict()
+    w_for_type = dict()
     df_contest = pd.read_sql_table(f'Contest', session.bind)
     for c_type in ['BallotMeasure','Candidate']:
+        # restrict df_contest to the contest_type <c_type> and get the <c_type>Contest_Id
         df_for_type[c_type] = df_contest[df_contest.contest_type == c_type]
-        none_or_unknown_id = dbr.name_to_id(
-            session, f'{c_type}Contest', 'none or unknown', contest_type=c_type
-        )
-
-
-    # append ids for BallotMeasureContests and CandidateContests
-    for c_type in ['BallotMeasure','Candidate']:
-        df_contest = pd.read_sql_table(f'{c_type}Contest',session.bind)
-        none_or_unknown_id = dbr.name_to_id(
-            session,f'{c_type}Contest','none or unknown',contest_type=c_type
-        )
+        none_or_unknown_id = dbr.name_to_id(session, f'{c_type}Contest', 'none or unknown')
         working, err = replace_raw_with_internal_ids(
-            working,
-            juris,
-            df_contest,
-            f'{c_type}Contest',
-            dbr.get_name_field(f'{c_type}Contest'),
-            err,
-            drop_unmatched=False, unmatched_id=none_or_unknown_id)
+            working, juris, df_for_type[c_type], f'{c_type}Contest', 'Name', err,
+            drop_unmatched=False, unmatched_id=none_or_unknown_id
+        )
+        # restrict working to the contest_type <c_type>, add contest_type column
+        w_for_type[c_type] = working[working[f'{c_type}Contest'] != 'none or unknown']
+        w_for_type[c_type] = add_constant_column(
+            w_for_type[c_type],'contest_type',c_type
+        ).rename(columns={f'{c_type}Contest_Id':'Contest_Id'})
 
-        # set contest_type where id was found
-        working.loc[working[f'{c_type}Contest_Id'] != none_or_unknown_id, 'contest_type'] = c_type
+        # drop text column
+        w_for_type[c_type] = w_for_type[c_type].drop(f'{c_type}Contest',axis=1)
 
-    # fail if actual contest name found for both BallotMeasure and Candidate
-    name_overlap = working[
-        (working.BallotMeasureContest == working.CandidateContest) &
-        (working.CandidateContest != 'none or unknown')
-        ]
+        # drop obsolete columns
+    common_cols = [c for c in w_for_type['BallotMeasure'].columns if c in w_for_type['Candidate'].columns]
+    for c_type in ['BallotMeasure','Candidate']:
+        w_for_type[c_type] = w_for_type[c_type][common_cols]
+
+    # FIXME: check somewhere that no name (other than 'none or unknown') is shared by BMContests and CandidateContests
     # TODO check this also when juris files loaded, to save time for user
-    if not name_overlap.empty:
-        e = f'Contest name(s) recognized as both Candidate and BallotMeasure Contests. {name_overlap.CandidateContest.unique()}'
-        ui.add_error(err,'munge_error',e)
-        return pd.DataFrame(), err
 
-    # drop rows with unmatched contests
-    unknown = working[working['contest_type'] == 'unknown']
-    working_temp = working[working['contest_type'] != 'unknown']
-
+    working = pd.concat([w_for_type[ct] for ct in ['BallotMeasure','Candidate']])
+    number_missing = df.shape[0] - working.shape[0]
     # fail if no contests recognized
-    if working_temp.empty:
+    if working.empty:
         e = 'No contests in database matched. No results will be loaded to database.'
         ui.add_error(err,'munge_error',e)
-        return pd.DataFrame(), err
+        return working, err
 
     # warn of un-munged contests
-    elif not unknown.empty:
-        e = f'Warning: Results for unmatched contests ({unknown.shape[0]} rows) will not be loaded to database.'
+    elif number_missing > 0:
+        e = f'Warning: Results for unmatched contests ({number_missing} rows) will not be loaded to database.'
         ui.add_error(err, 'munge_warning',e)
-    working = working_temp
-
-    # define Contest_Id based on contest_type,
-    working.loc[working['contest_type'] == 'Candidate','Contest_Id'] = working.loc[
-        working['contest_type'] == 'Candidate','CandidateContest_Id']
-    working.loc[working['contest_type'] == 'BallotMeasure','Contest_Id'] = working.loc[
-        working['contest_type'] == 'BallotMeasure','BallotMeasureContest_Id']
-
-    # drop columns with munged name
-    for c_type in ['BallotMeasure', 'Candidate']:
-        working.drop(f'{c_type}Contest', axis=1, inplace=True)
 
     return working, err
 
@@ -454,8 +429,8 @@ def add_selection_id(df: pd.DataFrame, engine, jurisdiction: jm.Jurisdiction, er
     for ct in ['BallotMeasure','Candidate']:
         w[ct] = df[df.contest_type == ct].copy()
 
+    s = pd.read_sql_table(f'Selection', engine)
     # append BallotMeasureSelection_Id as Selection_Id to w['BallotMeasure']
-    bms = pd.read_sql_table(f'BallotMeasureSelection', engine)
     w['BallotMeasure'], err = replace_raw_with_internal_ids(
         w['BallotMeasure'], jurisdiction, bms,'BallotMeasureSelection','Selection',err, drop_unmatched=True)
     w['BallotMeasure'].rename(columns={'BallotMeasureSelection_Id':'Selection_Id'},inplace=True)
@@ -492,7 +467,6 @@ def raw_elements_to_cdf(
     working, err = add_contest_id(working, juris, err, session)
     if working.empty:
         return err
-
 
     # get ids for remaining info sourced from rows and columns
     element_list = [t for t in mu.cdf_elements.index if

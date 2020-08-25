@@ -1,2 +1,1 @@
 fieldname	datatype
-Name	String

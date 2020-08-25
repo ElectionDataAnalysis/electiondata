@@ -1,4 +1,4 @@
 fieldname	refers_to
 Office_Id	Office
 PrimaryParty_Id	Party
-Contest_Id	Contest
+Id	Contest
