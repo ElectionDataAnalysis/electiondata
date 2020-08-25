@@ -29,15 +29,28 @@ def get_database_names(con):
 
 def create_database(con,cur,db_name):
 	con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-	q = "DROP DATABASE IF EXISTS {0}"
-	sql_ids = [db_name]
-	out1 = query(q,sql_ids,[],con,cur)
+	q = sql.SQL(
+		"DROP DATABASE IF EXISTS {db_name}"
+	).format(db_name=sql.Identifier(db_name))
+	cur.execute(q)
+	con.commit()
+	if cur.description:
+		out1 = cur.fetchall()
+	else:
+		out1 = None
 
-	q = "CREATE DATABASE {0}"
-	out2 = query(q,sql_ids,[],con,cur)
-	return out1,out2
+	q = sql.SQL(
+		"CREATE DATABASE {db_name}"
+	).format(db_name=sql.Identifier(db_name))
+	cur.execute(q)
+	con.commit()
+	if cur.description:
+		out2 = cur.fetchall()
+	else:
+		out2 = None
+	return out1, out2
 
-
+# TODO move to more appropriate module?
 def append_to_composing_reporting_unit_join(engine,ru):
 	"""<ru> is a dframe of reporting units, with cdf internal name in column 'Name'.
 	cdf internal name indicates nesting via semicolons `;`.
@@ -181,23 +194,14 @@ def get_cdf_db_table_names(eng):
 	return cdf_elements, cdf_enumerations, cdf_joins, others
 
 
-# TODO combine query() and raw_query_via_sqlalchemy()?
-def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to create db and schemas
-	format_args = [sql.Identifier(a) for a in sql_ids]
-	cur.execute(sql.SQL(q).format(*format_args),strs)
-	con.commit()
-	if cur.description:
-		return cur.fetchall()
-	else:
-		return None
-
-
 def name_from_id(session,element,idx):
 	name_field = get_name_field(element)
-	q = f"""SELECT "{name_field}" FROM "{element}" WHERE "Id" = {idx}"""
-	name_df = pd.read_sql(q,session.bind)
+	q = sql.SQL(
+		'SELECT {name_field} FROM {element} WHERE "Id" = %s'
+	).format(name_field=sql.Identifier(name_field),element=sql.Identifier(element))
+
 	try:
-		name = name_df.loc[0,name_field]
+		name = session.execute(q,[idx]).fetchall()[0][0]
 	except KeyError:
 		# if no record with Id = <idx> was found
 		name = None
@@ -274,24 +278,31 @@ def get_input_options(session, input):
 		table_search = False
 
 	if table_search:
-		result = session.execute(f'SELECT "{column_name}" FROM "{search_str}";')
+		q1 = sql.SQL('SELECT {column_name} FROM {search_str};').format(
+			column_name=sql.Identifier(column_name),search_str=sql.Identifier(search_str)
+		)
+		result = session.execute(q1)
 		return [r[0] for r in result]
 	else:
-		result = session.execute(f' \
-			SELECT "Name" FROM "ReportingUnit" ru \
-			JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" \
-			WHERE rut."Txt" = \'{search_str}\'')
+		q2 = sql.SQL("""
+			SELECT "Name" FROM "ReportingUnit" ru 
+			JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" 
+			WHERE rut."Txt" = %s
+		""")
+		result = session.execute(q2,[search_str])
 		return [r[0] for r in result]
 
 
 def get_datafile_info(session, results_file):
-	q = session.execute(f'''
-		SELECT "Id", "Election_Id" 
-		FROM _datafile 
-		WHERE short_name = '{results_file}'
-		''').fetchall()
+	q = sql.SQL(
+		'''SELECT "Id", "Election_Id" 
+				FROM _datafile 
+				WHERE short_name = %s
+				'''
+	)
+	results = session.execute(q,[results_file]).fetchall()
 	try:
-		return q[0]
+		return results[0]
 	except IndexError:
 		print(f'No record named {results_file} found in _datafile table in {session.bind.url}')
 		return [0,0]
@@ -423,7 +434,6 @@ def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_
 
 	df_cols = list(col_map.keys())
 
-
 	# create temp db table with info from df, without index
 	df = mr.generic_clean(df)
 	df[df_cols].fillna('').to_sql(temp_table, engine,index_label='dataframe_index')
@@ -446,13 +456,15 @@ def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_
 	cur = connection.cursor()
 	cur.execute(q)
 	connection.commit()
-
 	connection.close()
 	return df.join(w[['Id']]).rename(columns={'Id':f'{table}_Id'})
 
 
 def get_column_names(cursor, table: str) -> (list, dict):
-	q = sql.SQL("SELECT column_name, data_type FROM information_schema.columns WHERE table_schema = 'public' AND table_name = %s")
+	q = sql.SQL(
+		"""SELECT column_name, data_type FROM information_schema.columns 
+		WHERE table_schema = 'public' AND table_name = %s"""
+	)
 	cursor.execute(q,[table])
 	results = cursor.fetchall()
 	col_list = [x for (x,y) in results]
