@@ -618,7 +618,7 @@ class JurisdictionPrepper():
 def make_par_files(
 		dir: str, munger_name: str, jurisdiction_path: str, top_ru: str,
 		election: str, download_date: str='1900-01-01',
-		source: str='unknonw',results_note: str='none', aux_data_dir: str=''):
+		source: str='unknown',results_note: str='none', aux_data_dir: str=''):
 	"""Utility to create parameter files for multiple files. Makes a parameter file for each file in <dir>,
 	once all other necessary parameters are specified. """
 	data_file_list = os.listdir(dir)
