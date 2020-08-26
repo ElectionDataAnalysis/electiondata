@@ -464,9 +464,19 @@ class JurisdictionPrepper():
 		# read data from file (appending _SOURCE)
 		wr, munger, error = ui.read_results(kwargs,error)
 
+		if wr.empty:
+			ui.add_error(error,'datafile',f'No results read from file. Parameters: {kwargs}')
+			return error
+
 		# reduce <wr> in size
 		fields = [f'{field}_SOURCE' for field in munger.cdf_elements.loc['ReportingUnit','fields']]
 		wr = wr[fields].drop_duplicates()
+
+		# get rid of all-blank rows
+		wr = wr[(wr != '').any(axis=1)]
+		if wr.empty:
+			ui.add_error(error, 'datafile', f'No relevant information read from file. Parameters: {kwargs}')
+			return error
 
 		# get formulas from munger
 		ru_formula = munger.cdf_elements.loc['ReportingUnit', 'raw_identifier_formula']
@@ -499,7 +509,7 @@ class JurisdictionPrepper():
 		# add info to dictionary
 		wr.rename(columns={'Name':'cdf_internal_name'},inplace=True)
 		dict_add = wr[['cdf_element','cdf_internal_name','raw_identifier_value']]
-		prep.write_element(self.d['jurisdiction_path'],'dictionary',pd.concat([ru_dict_old,dict_add]))		# TODO test this!!!
+		prep.write_element(self.d['jurisdiction_path'],'dictionary',pd.concat([ru_dict_old,dict_add]))
 		return error
 
 	def add_sub_county_rus_from_multi_results_file(self, dir: str, error: dict=None, sub_ru_type: str='precinct') -> dict:
@@ -619,9 +629,9 @@ def make_par_files(
 		dir: str, munger_name: str, jurisdiction_path: str, top_ru: str,
 		election: str, download_date: str='1900-01-01',
 		source: str='unknown',results_note: str='none', aux_data_dir: str=''):
-	"""Utility to create parameter files for multiple files. Makes a parameter file for each file in <dir>,
+	"""Utility to create parameter files for multiple files. Makes a parameter file for each (non-.par) file in <dir>,
 	once all other necessary parameters are specified. """
-	data_file_list = os.listdir(dir)
+	data_file_list = [f for f in os.listdir(dir) if f[-4:] != '.par']
 	for f in data_file_list:
 		par_text = f'[election_anomaly]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\nmunger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\nresults_short_name={top_ru}_{f}\nresults_download_date={download_date}\nresults_source={source}\nresults_note={results_note}\naux_data_dir={aux_data_dir}\n'
 		par_name = '.'.join(f.split('.')[:-1]) + '.par'
