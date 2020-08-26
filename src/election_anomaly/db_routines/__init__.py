@@ -29,15 +29,28 @@ def get_database_names(con):
 
 def create_database(con,cur,db_name):
 	con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-	q = "DROP DATABASE IF EXISTS {0}"
-	sql_ids = [db_name]
-	out1 = query(q,sql_ids,[],con,cur)
+	q = sql.SQL(
+		"DROP DATABASE IF EXISTS {db_name}"
+	).format(db_name=sql.Identifier(db_name))
+	cur.execute(q)
+	con.commit()
+	if cur.description:
+		out1 = cur.fetchall()
+	else:
+		out1 = None
 
-	q = "CREATE DATABASE {0}"
-	out2 = query(q,sql_ids,[],con,cur)
-	return out1,out2
+	q = sql.SQL(
+		"CREATE DATABASE {db_name}"
+	).format(db_name=sql.Identifier(db_name))
+	cur.execute(q)
+	con.commit()
+	if cur.description:
+		out2 = cur.fetchall()
+	else:
+		out2 = None
+	return out1, out2
 
-
+# TODO move to more appropriate module?
 def append_to_composing_reporting_unit_join(engine,ru):
 	"""<ru> is a dframe of reporting units, with cdf internal name in column 'Name'.
 	cdf internal name indicates nesting via semicolons `;`.
@@ -181,23 +194,14 @@ def get_cdf_db_table_names(eng):
 	return cdf_elements, cdf_enumerations, cdf_joins, others
 
 
-# TODO combine query() and raw_query_via_sqlalchemy()?
-def query(q,sql_ids,strs,con,cur):  # needed for some raw queries, e.g., to create db and schemas
-	format_args = [sql.Identifier(a) for a in sql_ids]
-	cur.execute(sql.SQL(q).format(*format_args),strs)
-	con.commit()
-	if cur.description:
-		return cur.fetchall()
-	else:
-		return None
-
-
 def name_from_id(session,element,idx):
 	name_field = get_name_field(element)
-	q = f"""SELECT "{name_field}" FROM "{element}" WHERE "Id" = {idx}"""
-	name_df = pd.read_sql(q,session.bind)
+	q = sql.SQL(
+		'SELECT {name_field} FROM {element} WHERE "Id" = %s'
+	).format(name_field=sql.Identifier(name_field),element=sql.Identifier(element))
+
 	try:
-		name = name_df.loc[0,name_field]
+		name = session.execute(q,[idx]).fetchall()[0][0]
 	except KeyError:
 		# if no record with Id = <idx> was found
 		name = None
@@ -231,14 +235,10 @@ def name_to_id(session, element, name) -> int:
 
 
 def get_name_field(element):
-	if element == 'Selection':
-		field = 'Name'
-	elif element in ['CountItemType','ElectionType','IdentifierType','ReportingUnitType']:
+	if element in ['CountItemType','ElectionType','IdentifierType','ReportingUnitType']:
 		field = 'Txt'
-	elif element in ['CandidateSelection','BallotMeasureSelection']:
-		field = 'Selection_Id'
-	elif element in ['CandidateContest','BallotMeasureContest']:
-		field = 'Contest_Id'
+	elif element in ['CandidateSelection','BallotMeasureSelection','CandidateContest','BallotMeasureContest']:
+		field = 'Id'
 	elif element == 'Candidate':
 		field = 'BallotName'
 	elif element == '_datafile':
@@ -255,16 +255,16 @@ def get_input_options(session, input):
 	name_parts = input.split('_')
 	search_str = "".join([name_part.capitalize() for name_part in name_parts])
 
-	if search_str in ['BallotMeasureContest', 'CandidateContest', 'Election',
+	if search_str in ['BallotMeasureContest', 'CandidateContest','BallotMeasureSelection','CandidateContest' ]:
+		print(f'Options not available for {input}')
+		return None
+	elif search_str in ['Election',
 		'Office', 'Party', 'ReportingUnit']:
 		column_name = 'Name'
 		table_search = True
 	elif search_str in ['CountItemStatus', 'CountItemType', 'ElectionType',
 		'IdentifierType', 'ReportingUnitType']:
 		column_name = 'Txt'
-		table_search = True
-	elif search_str == 'BallotMeasureSelection':
-		column_name = 'Selection'
 		table_search = True
 	elif search_str == 'Candidate':
 		column_name = 'BallotName'
@@ -273,25 +273,34 @@ def get_input_options(session, input):
 		search_str = search_str.lower()
 		table_search = False
 
+	connection = session.bind.raw_connection()
+	cursor = connection.cursor()
 	if table_search:
-		result = session.execute(f'SELECT "{column_name}" FROM "{search_str}";')
-		return [r[0] for r in result]
+		q1 = sql.SQL('SELECT {column_name} FROM {search_str};').format(
+			column_name=sql.Identifier(column_name),search_str=sql.Identifier(search_str)
+		)
+		cursor.execute(q1)
+		result = cursor.fetchall()
 	else:
-		result = session.execute(f' \
-			SELECT "Name" FROM "ReportingUnit" ru \
-			JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" \
-			WHERE rut."Txt" = \'{search_str}\'')
-		return [r[0] for r in result]
+		q2 = sql.SQL(
+			'SELECT "Name" FROM "ReportingUnit" ru JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" WHERE rut."Txt" = %s'
+		)
+		cursor.execute(q2,[search_str])
+		result = cursor.fetchall()
+	connection.close()
+	return [r[0] for r in result]
 
 
 def get_datafile_info(session, results_file):
-	q = session.execute(f'''
-		SELECT "Id", "Election_Id" 
-		FROM _datafile 
-		WHERE short_name = '{results_file}'
-		''').fetchall()
+	q = sql.SQL(
+		'''SELECT "Id", "Election_Id" 
+				FROM _datafile 
+				WHERE short_name = %s
+				'''
+	)
+	results = session.execute(q,[results_file]).fetchall()
 	try:
-		return q[0]
+		return results[0]
 	except IndexError:
 		print(f'No record named {results_file} found in _datafile table in {session.bind.url}')
 		return [0,0]
@@ -423,7 +432,6 @@ def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_
 
 	df_cols = list(col_map.keys())
 
-
 	# create temp db table with info from df, without index
 	df = mr.generic_clean(df)
 	df[df_cols].fillna('').to_sql(temp_table, engine,index_label='dataframe_index')
@@ -446,13 +454,15 @@ def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_
 	cur = connection.cursor()
 	cur.execute(q)
 	connection.commit()
-
 	connection.close()
 	return df.join(w[['Id']]).rename(columns={'Id':f'{table}_Id'})
 
 
 def get_column_names(cursor, table: str) -> (list, dict):
-	q = sql.SQL("SELECT column_name, data_type FROM information_schema.columns WHERE table_schema = 'public' AND table_name = %s")
+	q = sql.SQL(
+		"""SELECT column_name, data_type FROM information_schema.columns 
+		WHERE table_schema = 'public' AND table_name = %s"""
+	)
 	cursor.execute(q,[table])
 	results = cursor.fetchall()
 	col_list = [x for (x,y) in results]
@@ -473,3 +483,111 @@ def add_records_to_selection_table(engine, n: int) -> list:
 	cursor.close()
 	connection.close()
 	return id_list
+
+
+def export_rollup_to_csv(engine, top_ru: str, sub_unit_type: str, contest_type: str, datafile_tuple: tuple, out_path: str, sep: str = '\t') -> str:
+	if contest_type == 'Candidate':
+		q = sql.SQL(""" COPY
+			(SELECT
+			   'Candidate' contest_type,
+			   C."Name" "Contest",
+			   EDRUT."Txt" contest_district_type,
+			   Cand."BallotName" "Selection",
+			  IntermediateRU."Name" "ReportingUnit",
+			   CIT."Txt" "CountItemType",
+			   sum(vc."Count") "Count"
+		FROM "VoteCount" vc
+		LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
+		LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
+		LEFT JOIN "CandidateSelection" CS on CS."Id" = vc."Selection_Id"
+		LEFT JOIN "Candidate" Cand on CS."Candidate_Id" = Cand."Id"
+		-- sum over all children
+		LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
+		LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
+		-- roll up to the intermediate RUs
+		LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
+		LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
+		-- intermediate RUs must nest in top RU
+		LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
+		LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
+		LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
+		LEFT JOIN "CandidateContest" on C."Id" = "CandidateContest"."Id"
+		LEFT JOIN "Office" O on "CandidateContest"."Office_Id" = O."Id"
+		LEFT JOIN "ReportingUnit" ED on O."ElectionDistrict_Id" = ED."Id"
+		LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
+		WHERE C.contest_type = 'Candidate'
+			AND TopRU."Name" = %s  -- top RU
+			AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
+			AND d.short_name in %s  -- tuple of datafile short_names
+		GROUP BY
+			   C."Name",
+			   EDRUT."Txt",
+			   Cand."BallotName",
+			  IntermediateRU."Name",
+			   CIT."Txt"
+		ORDER BY
+			   C."Name",
+			   EDRUT."Txt",
+			   Cand."BallotName",
+			  IntermediateRU."Name",
+			   CIT."Txt")
+	TO %s DELIMITER %s CSV HEADER;
+		""")
+	elif contest_type == 'BallotMeasure':
+		q = sql.SQL(""" COPY
+			(SELECT
+			   'Candidate' contest_type,
+			   C."Name" "Contest",
+			   EDRUT."Txt" contest_district_type,
+			   BMS."Name" "Selection",
+			  IntermediateRU."Name" "ReportingUnit",
+			   CIT."Txt" "CountItemType",
+			   sum(vc."Count") "Count"
+		FROM "VoteCount" vc
+		LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
+		LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
+    LEFT JOIN "BallotMeasureContest" BMC on vc."Contest_Id" = BMC."Id"
+    LEFT JOIN "BallotMeasureSelection" BMS on BMS."Id" = vc."Selection_Id"
+		-- sum over all children
+		LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
+		LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
+		-- roll up to the intermediate RUs
+		LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
+		LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
+		-- intermediate RUs must nest in top RU
+		LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
+		LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
+		LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
+    LEFT JOIN "ReportingUnit" ED on BMC."ElectionDistrict_Id" = ED."Id"
+		LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
+		WHERE C.contest_type = 'BallotMeasure'
+			AND TopRU."Name" = %s  -- top RU
+			AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
+			AND d.short_name in %s  -- tuple of datafile short_names
+		GROUP BY
+			   C."Name",
+			   EDRUT."Txt",
+			   BMS."Name",
+			  IntermediateRU."Name",
+			   CIT."Txt"
+		ORDER BY
+			   C."Name",
+			   EDRUT."Txt",
+			   BMS."Name",
+			  IntermediateRU."Name",
+			   CIT."Txt")
+	TO %s DELIMITER %s CSV HEADER;
+		""")
+	else:
+		err_str = f'Unrecognized contest_type: {contest_type}. No results exported'
+		return err_str
+	try:
+		connection = engine.raw_connection()
+		cursor = connection.cursor()
+		cursor.execute(q,[top_ru, sub_unit_type, datafile_tuple,out_path,sep])
+		connection.close()
+		print(f'Results exported to {out_path}')
+		err_str = None
+	except Exception as exc:
+		err_str = f'No results exported due to database error: {exc}'
+	return err_str
