@@ -13,7 +13,20 @@ There are templates in `templates/parameter_file_templates`. Make sure that `ana
    * `db_paramfile` the same in both
    * `db_name` the same in both
    
-In the directory indicated in `multi.par`, create a `.par` file for each results file you want to use. The results files and the `.par` files must both be in that directory. Follow the `templates/parameter_file_templates/results.par` template for the individual `.par` files. If all the files in a single directory use the same munger, you can create these `.par` files in batches 
+In the directory indicated in `multi.par`, create a `.par` file for each results file you want to use. The results files and the `.par` files must both be in that directory. Follow the `templates/parameter_file_templates/results.par` template for the individual `.par` files. If all the files in a single directory will use the same munger, jurisdiction and election, you can create these `.par` files in batches. For example, 
+```
+>>> dir = '/Users/singer3/Documents/Data/Florida/Precinct-Level Election Results/precinctlevelelectionresults2016gen'
+>>> munger = 'fl_gen_by_precinct'
+>>> jurisdiction_path = '/Users/singer3/Documents/Data_Loading/Florida'
+>>> top_ru='Florida'
+>>> election = '2016 General'
+>>> date = '2020-08-09'
+>>> source = 'Florida Board of Elections: https://dos.myflorida.com/elections/data-statistics/elections-data/precinct-level-election-results/'
+>>> note = 'These statewide compiled files are derived from county-specific data submitted by supervisors of elections after each primary election, general election, special primary, and special general election and presidential preference primary election'
+>>> ea.make_par_files(dir,munger, jurisdiction_path, top_ru, election, date, source=source, results_note=note)
+>>> 
+
+```
  
 ## Choose a Munger
 Ensure that the munger files are appropriate for your results file(s). 
@@ -71,6 +84,7 @@ Florida;Brevard County	county
 Florida;Broward County	county
 ```
 Currently counties must be added by hand. (NB: in some states, the word 'county' is not used. For instance, Louisiana's major subdivisions are called 'parish'.)
+
 4. Make any necessary changes to  `Office.txt`.
  * Ensure the jurisdiction-wide offices are correct, with the jurisdiction listed as the `ElectionDistrict`. The offices added by `new_juris_files()` are quite generic. For instance, your jurisdiction may have a 'Chief Financial Officer' rather than an 'Treasurer'. Use the jurisdiction's official titles, from an official government source. Jurisdiction-level offices should be prefaced with the two-letter postal abbreviation. For example:
  ```
