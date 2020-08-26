@@ -483,3 +483,111 @@ def add_records_to_selection_table(engine, n: int) -> list:
 	cursor.close()
 	connection.close()
 	return id_list
+
+
+def export_rollup_to_csv(engine, top_ru: str, sub_unit_type: str, contest_type: str, datafile_tuple: tuple, out_path: str, sep: str = '\t') -> str:
+	if contest_type == 'Candidate':
+		q = sql.SQL(""" COPY
+			(SELECT
+			   'Candidate' contest_type,
+			   C."Name" "Contest",
+			   EDRUT."Txt" contest_district_type,
+			   Cand."BallotName" "Selection",
+			  IntermediateRU."Name" "ReportingUnit",
+			   CIT."Txt" "CountItemType",
+			   sum(vc."Count") "Count"
+		FROM "VoteCount" vc
+		LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
+		LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
+		LEFT JOIN "CandidateSelection" CS on CS."Id" = vc."Selection_Id"
+		LEFT JOIN "Candidate" Cand on CS."Candidate_Id" = Cand."Id"
+		-- sum over all children
+		LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
+		LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
+		-- roll up to the intermediate RUs
+		LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
+		LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
+		-- intermediate RUs must nest in top RU
+		LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
+		LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
+		LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
+		LEFT JOIN "CandidateContest" on C."Id" = "CandidateContest"."Id"
+		LEFT JOIN "Office" O on "CandidateContest"."Office_Id" = O."Id"
+		LEFT JOIN "ReportingUnit" ED on O."ElectionDistrict_Id" = ED."Id"
+		LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
+		WHERE C.contest_type = 'Candidate'
+			AND TopRU."Name" = %s  -- top RU
+			AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
+			AND d.short_name in %s  -- tuple of datafile short_names
+		GROUP BY
+			   C."Name",
+			   EDRUT."Txt",
+			   Cand."BallotName",
+			  IntermediateRU."Name",
+			   CIT."Txt"
+		ORDER BY
+			   C."Name",
+			   EDRUT."Txt",
+			   Cand."BallotName",
+			  IntermediateRU."Name",
+			   CIT."Txt")
+	TO %s DELIMITER %s CSV HEADER;
+		""")
+	elif contest_type == 'BallotMeasure':
+		q = sql.SQL(""" COPY
+			(SELECT
+			   'Candidate' contest_type,
+			   C."Name" "Contest",
+			   EDRUT."Txt" contest_district_type,
+			   BMS."Name" "Selection",
+			  IntermediateRU."Name" "ReportingUnit",
+			   CIT."Txt" "CountItemType",
+			   sum(vc."Count") "Count"
+		FROM "VoteCount" vc
+		LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
+		LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
+    LEFT JOIN "BallotMeasureContest" BMC on vc."Contest_Id" = BMC."Id"
+    LEFT JOIN "BallotMeasureSelection" BMS on BMS."Id" = vc."Selection_Id"
+		-- sum over all children
+		LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
+		LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
+		-- roll up to the intermediate RUs
+		LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
+		LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
+		-- intermediate RUs must nest in top RU
+		LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
+		LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
+		LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
+    LEFT JOIN "ReportingUnit" ED on BMC."ElectionDistrict_Id" = ED."Id"
+		LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
+		WHERE C.contest_type = 'BallotMeasure'
+			AND TopRU."Name" = %s  -- top RU
+			AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
+			AND d.short_name in %s  -- tuple of datafile short_names
+		GROUP BY
+			   C."Name",
+			   EDRUT."Txt",
+			   BMS."Name",
+			  IntermediateRU."Name",
+			   CIT."Txt"
+		ORDER BY
+			   C."Name",
+			   EDRUT."Txt",
+			   BMS."Name",
+			  IntermediateRU."Name",
+			   CIT."Txt")
+	TO %s DELIMITER %s CSV HEADER;
+		""")
+	else:
+		err_str = f'Unrecognized contest_type: {contest_type}. No results exported'
+		return err_str
+	try:
+		connection = engine.raw_connection()
+		cursor = connection.cursor()
+		cursor.execute(q,[top_ru, sub_unit_type, datafile_tuple,out_path,sep])
+		connection.close()
+		print(f'Results exported to {out_path}')
+		err_str = None
+	except Exception as exc:
+		err_str = f'No results exported due to database error: {exc}'
+	return err_str
