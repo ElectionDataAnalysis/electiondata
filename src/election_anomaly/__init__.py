@@ -449,7 +449,7 @@ class JurisdictionPrepper():
 		return error
 
 	def add_sub_county_rus_from_results_file(
-			self, error: dict, sub_ru_type: str='precinct', results_file_path=None, munger_name=None, **kwargs) -> dict:
+			self, error: dict=None, sub_ru_type: str='precinct', results_file_path=None, munger_name=None, **kwargs) -> dict:
 		"""Assumes precincts (or other sub-county reporting units)
 		are munged from row of the results file.
 		Adds corresponding rows to ReportingUnit.txt and dictionary.txt
@@ -563,6 +563,8 @@ class JurisdictionPrepper():
 			wr, error = mr.add_munged_column(
 				wr, mu, element, error, mode=mu.cdf_elements.loc[element, 'source'],
 				inplace=False)
+			if error:
+				return error
 			# find <element>_raw values not in dictionary.txt.raw_identifier_value;
 			#  add corresponding lines to dictionary.txt
 			wd = prep.get_element(self.d['jurisdiction_path'], 'dictionary')
