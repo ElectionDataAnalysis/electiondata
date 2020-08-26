@@ -64,7 +64,7 @@ It's easiest to use the JurisdictionPrepper() object to create or update jurisdi
 >>> import election_anomaly as ea
 >>> jp = ea.JurisdictionPrepper()
 ```
-3. Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
+2. Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
 ```
 >>> err = jp.new_juris_files()
 ```
@@ -111,13 +111,13 @@ FL Chief Financial Officer	1	FL Chief Financial Officer
 FL Commissioner of Agriculture	1	FL Commissioner of Agriculture	
 ```
 
-5. Make any necessary changes to the more straightforward elements. It's often easier to add these in bulk later directly from the results files (see below) -- unless you want to use internal names that differ from the names in the results file.
+6. Make any necessary changes to the more straightforward elements. It's often easier to add these in bulk later directly from the results files (see below) -- unless you want to use internal names that differ from the names in the results file.
   * `Party.txt`. You may be able to find a list of officially recognized parties on the Board of Election's website.
   * `Candidate.txt`. 
   * `BallotMeasure.txt`. If the ElectionDistrict is not the whole jurisdiction, you may need to add these by hand. A BallotMeasure is any yes/no question on the ballot, including judicial retention. Each BallotMeasure must have an ElectionDistrict and an Election matching an entry in the `ReportingUnit.txt` or `Election.txt` file.
   * `Election.txt`.
 
-5. Revise `XX_starter_dictionary.txt` so that it has entries for any of the items created in the steps above (except that there is no need to add Elections to the dictionary, as they are never munged from the contents of the results file). The 'cdf_internal_name' column should match the names in the jurisdiction files. The 'raw_identifier_value' column should hold the corresponding names that will be created from the results file via the munger. 
+7. Revise `XX_starter_dictionary.txt` so that it has entries for any of the items created in the steps above (except that there is no need to add Elections to the dictionary, as they are never munged from the contents of the results file). The 'cdf_internal_name' column should match the names in the jurisdiction files. The 'raw_identifier_value' column should hold the corresponding names that will be created from the results file via the munger. 
     * It is helpful to edit the starter dictionary in an application where you can use formulas, or to manipulate the file with regular expression replacement. If you are not fluent in manipulating text some other way, you may want to use Excel and its various text manipulation formulas (such as =CONCAT()). However, beware of Excel's tendency to revise formats on the sly. You may want to check `.txt` and `.csv` files manipulated by Excel in a plain text editor if you run into problems. (If you've been curious to learn regex replacement, now's a good time!)
     * For each Office and CandidateContest, look in your results file to see what convention that file uses. For example, using data from official Florida election results files:
 ```
@@ -133,7 +133,7 @@ Office	US House FL District 2	Representative in Congress District 2
 Make sure to change the raw_identifier_value for both the Offices and the CandidateContests. You may or may not need to change the corresponding ReportingUnits -- if they don't appear explicitly in any of your results files, their raw_identifier_values are irrelevant.
     * NB: it is perfectly OK to have more than one raw_identifier_value for a single element. This can be necessary if, say, different counties use different names for a single contest.
     
-12. Add entries to the starter dictionary for CountItemType and BallotMeasureSelection. 
+8. Add entries to the starter dictionary for CountItemType and BallotMeasureSelection. 
     * Internal database names for the BallotMeasure Selections are 'Yes' and 'No'. There are no alternatives.
     * Some common standard internal database names for CountItemTypes are 'absentee', 'early', 'election-day'provisional' and 'total'. You can look at the CountItemType table in the database to see the full list, and you can use any other name you like.
 ```
@@ -151,11 +151,11 @@ CountItemType	total	Total Votes
 CountItemType	total	total
 ```
 
-12. Add any existing content from `dictionary.txt` to the starter dictionary and dedupe. If the jurisdiction is brand new there won't be any existing contest. 
+9. Add any existing content from `dictionary.txt` to the starter dictionary and dedupe. If the jurisdiction is brand new there won't be any existing contest. 
 
-13. Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` . 
+10. Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` . 
 
-14. Run the JurisdictionPrepper method `add_sub_county_rus_from_multi_results_file(<directory>,<error>)` to add any reporting units in the results files in <directory>. 
+11. Run the JurisdictionPrepper method `add_sub_county_rus_from_multi_results_file(<directory>,<error>)` to add any reporting units in the results files in <directory>. 
 ```
 >>> err = jp.add_sub_county_rus_from_multi_results_file('/Users/singer3/Documents/Temp/000_to-be-loaded',err)
 >>> err
@@ -168,7 +168,9 @@ These will be added as precincts, unless another reporting unit type is specifie
 {}
 ```
 
-6. If you want to add elements (other than ReportingUnits) in bulk from all results files in a directory (with `.par` files in that same directory), use  `add_elements_from_multi_results_file(<list of elements>,<directory>, <error>)`. For example:
+12. Look at the newly added items in `ReportingUnit.txt` and `dictionary.txt`, and remove or revise as appropriate.
+
+13. If you want to add elements (other than ReportingUnits) in bulk from all results files in a directory (with `.par` files in that same directory), use  `add_elements_from_multi_results_file(<list of elements>,<directory>, <error>)`. For example:
 ```
 >>> err = jp.add_elements_from_multi_results_file(['Candidate','CandidateContest'],'/Users/singer3/Documents/Temp/000_to-be-loaded',err)
 >>> err
@@ -180,9 +182,9 @@ Corresponding entries will be made in `dictionary.txt`, using the munged name fo
     * CandidateContest: Look at the new `CandidateContest.txt` file. Many may be contests you do *not* want to add -- the contests you already have (such as congressional contests) that will have been added with the raw identifier name. Some may be BallotMeasureContests that do not belong in `CandidateContest.txt`. For any new CandidateContest you do want to keep you will need to add the corresponding line to `Office.txt`. 
     * Open `dictionary.txt` and remove any lines corresponding to items removed in the bullet points above.
 
-13. Add any useful info about the jurisdiction (such as the sources for the data) to `remark.txt`.
+14. Add any useful info about the jurisdiction (such as the sources for the data) to `remark.txt`.
 
-14. Finally, if you will be munging primary elections, use the `add_primaries_to_candidate_contest()` and `jp.add_primaries_to_dict()` methods
+15. Finally, if you will be munging primary elections, use the `add_primaries_to_candidate_contest()` and `jp.add_primaries_to_dict()` methods
 ```
 >>> jp.add_primaries_to_candidate_contest()
 >>> jp.add_primaries_to_dict()
