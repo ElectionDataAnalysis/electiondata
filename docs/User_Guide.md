@@ -248,12 +248,6 @@ If every file in your directory will use the same munger(s) -- e.g., if the juri
 ## Pull Data
 The Analyzer class uses parameters in the file `analyze.par`, which should be in the directory from which you are running the program.
 
-There are two options: pulling total vote counts, or pulling vote counts by vote type. To pull totals, use `top_counts()` in the Analyzer class.
-```
->>> an.top_counts('Pennsylvania;Philadelphia','ward')
-Results exported to /Users/user/Documents/rollups/2018 General/Pennsylvania;Philadelphia/by_ward/TYPEall_STATUSunknown.txt
-```
-
 To pull totals by vote type, use `top_counts_by_vote_type()`
 ```
 >>> an.top_counts_by_vote_type('Pennsylvania;Philadelphia','ward')
@@ -261,7 +255,7 @@ Results exported to /Users/singer3/Documents/rollups/2018 General/Pennsylvania;P
 >>> 
 ```
 
-Results are exported to the `rollup_directory` specified in `run_time.par`.
+Results are exported to the `rollup_directory` specified in `analyze.par`.
 
 Note that both arguments -- the name of the top reporting unit ('Pennsylvania;Philadelphia') and the reporting unit type for the breakdown of results ('ward') must be the internal database names. To see the list of options, use `display_options()`:
 ```

@@ -268,38 +268,22 @@ class Analyzer():
 			return results
 		return None
 
-	def top_counts_by_vote_type(self, rollup_unit, sub_unit):
+	def top_counts_by_vote_type(self, election, rollup_unit, sub_unit):
+		# TODO find all datafiles for the given election
 		d, error = ui.get_runtime_parameters(['rollup_directory'], param_file='analyze.par')
 		if error:
-			print("Parameter file missing requirements.")
-			print(error)
-			print("Data not created.")
-			return
+			err_str = f'Parameter file missing requirements.\n{error}\nNo results exported'
+			print(err_str)
 		else:
+			connection = self.session.bind.raw_connection()
+			cursor = connection.cursor()
 			rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
 			sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
-			results_info = dbr.get_datafile_info(self.session, self.d['results_file_short_name'])
-			rollup = avp.create_rollup(self.session, d['rollup_directory'], top_ru_id=rollup_unit_id,
-				sub_rutype_id=sub_unit_id, sub_rutype_othertext='', datafile_id_list=results_info[0], 
-				election_id=results_info[1])
-			return
-
-	def top_counts(self, rollup_unit, sub_unit):
-		d, error = ui.get_runtime_parameters(['rollup_directory'], param_file='analyze.par')
-		if error:
-			print("Parameter file missing requirements.")
-			print(error)
-			print("Data not created.")
-			return
-		else:
-			rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
-			sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
-			results_info = dbr.get_datafile_info(self.session, self.d['results_file_short_name'])
-			rollup = avp.create_rollup(self.session, d['rollup_directory'], top_ru_id=rollup_unit_id,
-				sub_rutype_id=sub_unit_id, sub_rutype_othertext='', datafile_id_list=results_info[0], 
-				election_id=results_info[1], by_vote_type=False)
-			return
-
+			election_id = dbr.name_to_id(self.session, 'Election', election)
+			err_str = avp.create_rollup(self.session, d['rollup_directory'], rollup_unit_id,
+				sub_unit_id, election_id, [self.d['results_file_short_name']],by='short_name')
+			connection.close()
+		return err_str
 
 class JurisdictionPrepper():
 	def __new__(cls):

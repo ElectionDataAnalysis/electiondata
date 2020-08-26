@@ -194,14 +194,15 @@ def get_cdf_db_table_names(eng):
 	return cdf_elements, cdf_enumerations, cdf_joins, others
 
 
-def name_from_id(session,element,idx):
+def name_from_id(cursor,element,idx):
 	name_field = get_name_field(element)
 	q = sql.SQL(
 		'SELECT {name_field} FROM {element} WHERE "Id" = %s'
 	).format(name_field=sql.Identifier(name_field),element=sql.Identifier(element))
 
 	try:
-		name = session.execute(q,[idx]).fetchall()[0][0]
+		cursor.execute(q,[idx])
+		name = cursor.fetchall()[0][0]
 	except KeyError:
 		# if no record with Id = <idx> was found
 		name = None
@@ -289,21 +290,6 @@ def get_input_options(session, input):
 		result = cursor.fetchall()
 	connection.close()
 	return [r[0] for r in result]
-
-
-def get_datafile_info(session, results_file):
-	q = sql.SQL(
-		'''SELECT "Id", "Election_Id" 
-				FROM _datafile 
-				WHERE short_name = %s
-				'''
-	)
-	results = session.execute(q,[results_file]).fetchall()
-	try:
-		return results[0]
-	except IndexError:
-		print(f'No record named {results_file} found in _datafile table in {session.bind.url}')
-		return [0,0]
 
 
 def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', timestamp=None) -> str:
@@ -485,7 +471,14 @@ def add_records_to_selection_table(engine, n: int) -> list:
 	return id_list
 
 
-def export_rollup_to_csv(engine, top_ru: str, sub_unit_type: str, contest_type: str, datafile_tuple: tuple, out_path: str, sep: str = '\t') -> str:
+def export_rollup_to_csv(
+		engine, top_ru: str, sub_unit_type: str, contest_type: str, datafile_list: iter, out_path: str,
+		sep: str = '\t', by: str = 'Id', exclude_total: bool = False) -> str:
+
+	if exclude_total:
+		restrict = """ AND CIT."Txt" != 'total' """
+	else:
+		restrict = ''
 	if contest_type == 'Candidate':
 		q = sql.SQL(""" COPY
 			(SELECT
@@ -518,7 +511,8 @@ def export_rollup_to_csv(engine, top_ru: str, sub_unit_type: str, contest_type: 
 		WHERE C.contest_type = 'Candidate'
 			AND TopRU."Name" = %s  -- top RU
 			AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
-			AND d.short_name in %s  -- tuple of datafile short_names
+			AND d.{by} in %s  -- tuple of datafile short_names
+			{restrict}
 		GROUP BY
 			   C."Name",
 			   EDRUT."Txt",
@@ -532,7 +526,8 @@ def export_rollup_to_csv(engine, top_ru: str, sub_unit_type: str, contest_type: 
 			  IntermediateRU."Name",
 			   CIT."Txt")
 	TO %s DELIMITER %s CSV HEADER;
-		""")
+		""").format(by=sql.Identifier(by), restrict=sql.SQL(restrict))
+
 	elif contest_type == 'BallotMeasure':
 		q = sql.SQL(""" COPY
 			(SELECT
@@ -563,7 +558,8 @@ def export_rollup_to_csv(engine, top_ru: str, sub_unit_type: str, contest_type: 
 		WHERE C.contest_type = 'BallotMeasure'
 			AND TopRU."Name" = %s  -- top RU
 			AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
-			AND d.short_name in %s  -- tuple of datafile short_names
+			AND d.{by} in %s  -- tuple of datafile short_names
+			{restrict}
 		GROUP BY
 			   C."Name",
 			   EDRUT."Txt",
@@ -577,17 +573,35 @@ def export_rollup_to_csv(engine, top_ru: str, sub_unit_type: str, contest_type: 
 			  IntermediateRU."Name",
 			   CIT."Txt")
 	TO %s DELIMITER %s CSV HEADER;
-		""")
+		""").format(by=sql.Identifier(by), restrict=sql.SQL(restrict))
 	else:
 		err_str = f'Unrecognized contest_type: {contest_type}. No results exported'
 		return err_str
 	try:
 		connection = engine.raw_connection()
 		cursor = connection.cursor()
-		cursor.execute(q,[top_ru, sub_unit_type, datafile_tuple,out_path,sep])
+		cursor.execute(q,[top_ru, sub_unit_type, tuple(datafile_list), out_path, sep])
 		connection.close()
 		print(f'Results exported to {out_path}')
 		err_str = None
 	except Exception as exc:
 		err_str = f'No results exported due to database error: {exc}'
 	return err_str
+
+
+def vote_type_list(cursor,datafile_list: list, by: str='Id') -> (list, str):
+	q = sql.SQL("""
+		SELECT distinct CIT."Txt"
+		FROM "VoteCount" VC
+		LEFT JOIN _datafile d on VC."_datafile_Id" = d."Id"
+		LEFT JOIN "CountItemType" CIT on VC."CountItemType_Id" = CIT."Id"
+		WHERE d.{by} in %s
+	""").format(by=sql.Identifier(by))
+	try:
+		cursor.execute(q,[tuple(datafile_list)])
+		vt_list = [x for (x,) in cursor.fetchall()]
+		err_str = None
+	except Exception as exc:
+		err_str = f'Database error pulling list of vote types: {exc}'
+		vt_list = None
+	return vt_list, err_str

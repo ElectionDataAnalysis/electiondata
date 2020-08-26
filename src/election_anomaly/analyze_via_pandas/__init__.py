@@ -30,158 +30,72 @@ def child_rus_by_id(session,parents,ru_type=None):
 
 
 def create_rollup(
-		session,target_dir,top_ru_id,sub_rutype_id=None,sub_rutype_othertext=None,election_id=None,
-		datafile_id_list=None,by_vote_type=True,exclude_total=True):
+		session, target_dir: str, top_ru_id: int, sub_rutype_id: int,
+		election_id: int, datafile_list, by='Id') -> str:
 	"""<target_dir> is the directory where the resulting rollup will be stored.
 	<election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
 	<top_ru_id> is the internal cdf name of the ReportingUnit whose results will be reported
-	<sub_rutype_id>,<sub_rutype_othertext> identifies the ReportingUnitType
+	<sub_rutype_id> identifies the ReportingUnitType
 	of the ReportingUnits used in each line of the results file
 	created by the routine. (E.g., county or ward)
-	If <exclude_total> is True, don't include 'total' CountItemType
-	(unless 'total' is the only CountItemType)"""
-	# Get name of db for error messages
-	db = session.bind.url.database
+	<datafile_list> is the list of files, with entries from field <by> in _datafile table.
+	"""
+
+	connection = session.bind.raw_connection()
+	cursor = connection.cursor()
+
+	# set exclude_total
+	vote_type_list, err_str = dbr.vote_type_list(cursor, datafile_list, by=by)
+	if err_str:
+		return err_str
+	elif len(vote_type_list) == 0:
+		return f'No vote types found for datafiles with {by} in {datafile_list} '
+
+	if len(vote_type_list) > 1 and 'total' in vote_type_list:
+		exclude_total = True
+	else:
+		exclude_total = False
 
 	# get names from ids
-	top_ru = dbr.name_from_id(session,'ReportingUnit',top_ru_id).replace(" ","-")
-	election = dbr.name_from_id(session,'Election',election_id).replace(" ","-")
-	sub_rutype = dbr.name_from_id(session, 'ReportingUnitType', sub_rutype_id)
+	top_ru = dbr.name_from_id(cursor,'ReportingUnit',top_ru_id).replace(" ","-")
+	election = dbr.name_from_id(cursor,'Election',election_id).replace(" ","-")
+	sub_rutype = dbr.name_from_id(cursor, 'ReportingUnitType', sub_rutype_id)
 
-	# pull relevant tables
-	df = {}
-	for element in [
-		'ElectionContestSelectionVoteCountJoin','VoteCount','ContestSelectionJoin',
-		'ComposingReportingUnitJoin','Election','ReportingUnit',
-		'ElectionContestJoin','CandidateContest','CandidateSelection','BallotMeasureContest',
-		'BallotMeasureSelection','Office','Candidate']:
-		# pull directly from db, using 'Id' as index
-		df[element] = pd.read_sql_table(element,session.bind,index_col='Id')
+	# create path to export directory
+	leaf_dir = os.path.join(target_dir, election, top_ru, f'by_{sub_rutype}')
+	Path(leaf_dir).mkdir(parents=True, exist_ok=True)
 
-	# avoid conflict if by chance VoteCount table has extra columns during data upload
-	df['VoteCount'] = df['VoteCount'][['Count','CountItemType_Id','OtherCountItemType','ReportingUnit_Id']]
-
-	# pull enums from db, keeping 'Id as a column, not the index
-	for enum in ["ReportingUnitType","CountItemType"]:
-		df[enum] = pd.read_sql_table(enum,session.bind)
-
-	#  limit to relevant Election-Contest pairs
-	ecj = df['ElectionContestJoin'][df['ElectionContestJoin'].Election_Id == election_id]
-
-	# create contest_selection dataframe, adding Contest, Selection and ElectionDistrict_Id columns
-	cc = df['ContestSelectionJoin'].merge(
-		df['CandidateContest'],how='right',left_on='Contest_Id',right_index=True).rename(
-		columns={'Name':'Contest','Id':'ContestSelectionJoin_Id'}).merge(
-		df['CandidateSelection'],how='left',left_on='Selection_Id',right_index=True).merge(
-		df['Candidate'],how='left',left_on='Candidate_Id',right_index=True).rename(
-		columns={'BallotName':'Selection'}).merge(
-		df['Office'],how='left',left_on='Office_Id',right_index=True)
-	cc = cc[['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id']]
-	if cc.empty:
-		cc['contest_type'] = None
+	# prepare inventory
+	inventory_file = os.path.join(target_dir,'inventory.txt')
+	inv_exists = os.path.isfile(inventory_file)
+	if inv_exists:
+		inv_df = pd.read_csv(inventory_file,sep='\t')
 	else:
-		cc = mr.add_constant_column(cc,'contest_type','Candidate')
+		inv_df = pd.DataFrame()
+	inventory = {'Election': election, 'ReportingUnitType': sub_rutype,
+				 'source_db_url': str(session.bind.url), 'timestamp': datetime.date.today()}
 
-	# create ballotmeasure_selection dataframe
-	bm = df['ContestSelectionJoin'].merge(
-		df['BallotMeasureContest'],how='right',left_on='Contest_Id',right_index=True).rename(
-		columns={'Name':'Contest'}).merge(
-		df['BallotMeasureSelection'],how='left',left_on='Selection_Id',right_index=True)
-	bm = bm[['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id']]
-	if bm.empty:
-		bm['contest_type'] = None
-	else:
-		bm = mr.add_constant_column(bm,'contest_type','BallotMeasure')
+	for contest_type in ['BallotMeasure','Candidate']:
+		# export data
+		rollup_file = f'{contest_type}.txt'
+		while os.path.isfile(os.path.join(leaf_dir, rollup_file)):
+			rollup_file = input(f'There is already a file called {rollup_file}. Pick another name.\n')
 
-	#  combine all contest_selections into one dataframe
-	contest_selection = pd.concat([cc,bm])
+		err = dbr.export_rollup_to_csv(
+			session.bind, top_ru, sub_rutype, contest_type, datafile_list,
+			os.path.join(leaf_dir, rollup_file), by=by, exclude_total=exclude_total
+		)
+		if err:
+			err_str = err
+		else:
+			# create record for inventory.txt
+			inv_df.append(inventory, ignore_index=True).fillna('')
+			err_str = None
 
-	# append contest_district_type column
-	ru = df['ReportingUnit'][['ReportingUnitType_Id','OtherReportingUnitType']]
-	contest_selection = contest_selection.merge(ru,how='left',left_on='ElectionDistrict_Id',right_index=True)
-	contest_selection = mr.enum_col_from_id_othertext(contest_selection,'ReportingUnitType',df['ReportingUnitType'])
-	contest_selection.rename(columns={'ReportingUnitType':'contest_district_type'},inplace=True)
-
-	#  limit to relevant ContestSelection pairs
-	contest_ids = ecj.Contest_Id.unique()
-	csj = contest_selection[contest_selection.Contest_Id.isin(contest_ids)]
-
-	# find ReportingUnits of the correct type that are subunits of top_ru
-	sub_ru_ids = child_rus_by_id(session,[top_ru_id],ru_type=[sub_rutype_id, sub_rutype_othertext])
-	if not sub_ru_ids:
-		# TODO better error handling (while not sub_ru_list....)
-		raise Exception(f'Database {db} shows no ReportingUnits of type {sub_rutype} nested inside {top_ru}')
-	sub_ru = df['ReportingUnit'].loc[sub_ru_ids]
-
-	# find all subReportingUnits of top_ru
-	all_subs_ids = child_rus_by_id(session,[top_ru_id])
-
-	# find all children of subReportingUnits
-	children_of_subs_ids = child_rus_by_id(session,sub_ru_ids)
-	ru_children = df['ReportingUnit'].loc[children_of_subs_ids]
-
-	# check for any reporting units that should be included in roll-up but were missed
-	# TODO list can be long and irrelevant. Instead list ReportingUnitTypes of the missing
-	# missing = [str(x) for x in all_subs_ids if x not in children_of_subs_ids]
-	# if missing:
-	# TODO report these out to the export directory
-
-	# limit to relevant vote counts
-	ecsvcj = df['ElectionContestSelectionVoteCountJoin'][
-		(df['ElectionContestSelectionVoteCountJoin'].ElectionContestJoin_Id.isin(ecj.index)) &
-		(df['ElectionContestSelectionVoteCountJoin'].ContestSelectionJoin_Id.isin(csj.index))]
-
-	# calculate specified dataframe with columns [ReportingUnit,Contest,Selection,VoteCount,CountItemType]
-	#  1. create unsummed dataframe of results
-	unsummed = ecsvcj.merge(
-		df['VoteCount'],left_on='VoteCount_Id',right_index=True).merge(
-		df['ComposingReportingUnitJoin'],left_on='ReportingUnit_Id',right_on='ChildReportingUnit_Id').merge(
-		ru_children,left_on='ChildReportingUnit_Id',right_index=True).merge(
-		sub_ru,left_on='ParentReportingUnit_Id',right_index=True,suffixes=['','_Parent'])
-	unsummed.rename(columns={'Name_Parent':'ReportingUnit'},inplace=True)
-	# add columns with names
-	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'])
-	unsummed = unsummed.merge(contest_selection,how='left',left_on='ContestSelectionJoin_Id',right_index=True)
-
-	cis = 'unknown'  # TODO placeholder while CountItemStatus is unused
-	if by_vote_type:
-		cit_list = unsummed['CountItemType'].unique()
-	else:
-		cit_list = ['all']
-		# if there is a 'total' type as well as other types, need to avoid doubling.
-		# if the only type is 'total', don't rule it out.
-		if exclude_total and [x for x in unsummed['CountItemType'] if x != 'total']:
-			unsummed = unsummed[unsummed.CountItemType != 'total']
-	if len(cit_list) > 1:
-		cit = 'mixed'
-		if exclude_total:
-			unsummed = unsummed[unsummed.CountItemType != 'total']
-	elif len(cit_list) == 1:
-		cit = cit_list[0]
-	else:
-		raise Exception(
-			f'Results dataframe has no CountItemTypes; maybe dataframe is empty?')
-	count_item = f'TYPE{cit}_STATUS{cis}'
-
-	if by_vote_type:
-		index_cols = ['contest_type','Contest','contest_district_type','Selection','ReportingUnit','CountItemType']
-	else:
-		index_cols = ['contest_type','Contest','contest_district_type','Selection','ReportingUnit']
-
-	# sum by groups
-	summed_by_name = unsummed[index_cols + ['Count']].groupby(index_cols).sum()
-
-	inventory_columns = [
-		'Election','ReportingUnitType','CountItemType','CountItemStatus',
-		'source_db_url','timestamp']
-	inventory_values = [
-		election,sub_rutype,cit,cis,
-		str(session.bind.url),datetime.date.today()]
-	sub_dir = os.path.join(election, top_ru, f'by_{sub_rutype}')
-	export_to_inventory_file_tree(
-		target_dir,sub_dir,f'{count_item}.txt',inventory_columns,inventory_values,summed_by_name)
-
-	return summed_by_name
+	# export to inventory file
+	inv_df.to_csv(inventory_file, index=False, sep='\t')
+	connection.close()
+	return err_str
 
 
 def short_name(text,sep=';'):
