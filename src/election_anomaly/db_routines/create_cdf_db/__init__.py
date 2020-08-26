@@ -4,13 +4,12 @@
 #  and ContestSelectionJoin_Id share a contest? Should this happen during the rollup process?
 
 import sqlalchemy as sa
-import db_routines as dbr
 from sqlalchemy import MetaData, Table, Column,CheckConstraint,UniqueConstraint,Integer,String,ForeignKey, Index
 from sqlalchemy import Date, TIMESTAMP
 from psycopg2 import sql
 import os
 import pandas as pd
-import db_routines as dbr
+from election_anomaly import db_routines as dbr
 import datetime
 
 

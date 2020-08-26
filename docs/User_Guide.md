@@ -13,7 +13,7 @@ There are templates in `templates/parameter_file_templates`. Make sure that `ana
    * `db_paramfile` the same in both
    * `db_name` the same in both
    
-In the directory indicated in `multi.par`, create a `.par` file for each results file you want to use. The results files and the `.par` files must both be in that directory. Follow the `templates/parameter_file_templates/results.par` template for the individual `.par` files.
+In the directory indicated in `multi.par`, create a `.par` file for each results file you want to use. The results files and the `.par` files must both be in that directory. Follow the `templates/parameter_file_templates/results.par` template for the individual `.par` files. If all the files in a single directory use the same munger, you can create these `.par` files in batches 
  
 ## Choose a Munger
 Ensure that the munger files are appropriate for your results file(s). 
