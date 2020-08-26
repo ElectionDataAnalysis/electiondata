@@ -20,6 +20,8 @@ import re
 from election_anomaly.db_routines import create_cdf_db as db_cdf
 import os
 import numpy as np
+from sqlalchemy import MetaData, Table, Column, Integer, Float
+from election_anomaly import analyze as a
 
 states = '''Alabama
 Alaska
@@ -977,3 +979,91 @@ def get_relevant_contests(session, filters):
     result_df.columns = result.keys()
     result_df = result_df[result_df['parent'].isin(units)]
     return result_df
+
+
+def create_scoring_table(session):
+    """this table is outside of the CDF, used only for analysis purposes"""
+    eng = session.bind
+    metadata = MetaData(bind=eng)
+    Table('_scoring', 
+        metadata,
+        Column('Election_Id', Integer),
+        Column('ReportingUnit_Id', Integer),
+        Column('ReportingUnitType_Id', Integer),
+        Column('Contest_Id', Integer),
+        Column('CountItemType_Id', Integer),
+        Column('Selection_Id', Integer),
+        Column('Count', Integer),
+        Column('rank', Integer),
+        Column('score', Float),
+        Column('margins', Integer),
+        Column('margin_ratio', Float)
+    )
+    metadata.create_all(checkfirst=True)
+
+
+# TODO: use the injection safe approach
+def load_anomaly_scores(session, election_id, n):
+    """gets n contests with highest margin ratio"""
+    q = f"""
+        with top_margins as (
+            select	distinct margin_ratio
+            from	_scoring
+            where	"Election_Id" = {election_id}
+                    and margin_ratio is not null
+            order by margin_ratio desc
+            limit	{n}
+        )
+        , units as (
+            select	distinct "Contest_Id", 
+                    "ReportingUnitType_Id", "CountItemType_Id"
+            from	_scoring s
+                    join top_margins tm on s.margin_ratio = tm.margin_ratio
+            where	"Election_Id" = {election_id}
+        )
+        , ranked_units as (
+            select	*, row_number() over() as unit_id
+            from	units
+        )
+        select	s.*, r.unit_id
+        from	_scoring s
+                join ranked_units r on 
+                s."ReportingUnitType_Id" = r."ReportingUnitType_Id" and
+                s."Contest_Id" = r."Contest_Id" and
+                s."CountItemType_Id" = r."CountItemType_Id"
+        where	"Election_Id"= {election_id}
+        order by r.unit_id
+    """
+    result = session.execute(q)
+    result_df = pd.DataFrame(result)
+    result_df.columns = result.keys()
+    return result_df
+
+
+def populate_scoring_table(session, jurisdiction_id, election_id):
+	# pull contest data
+	df = a.pull_data_tables(session)
+	ru = a.create_hierarchies(session, df, jurisdiction_id)
+	candidate_columns = ['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id',
+		'Candidate_Id']
+	contest_selection = a.create_contests(df, ru, candidate_columns)
+	#  limit to relevant data
+	ecsvcj = a.create_vote_selections(df, contest_selection, election_id)
+	# Create data frame of all our results
+	unsummed = a.create_vote_counts(df, ecsvcj, contest_selection, df['ReportingUnit'], df['ReportingUnit'])
+	# cleanup: Rename, drop a duplicated column
+	unsummed.drop(columns=['_datafile_Id', 'OtherReportingUnitType', 
+		'ChildReportingUnit_Id', 'ElectionContestJoin_Id','OtherReportingUnitType_Parent', 
+		'ContestSelectionJoin_Id'],
+		inplace=True)
+	unsummed = unsummed[unsummed['ParentReportingUnit_Id'] != jurisdiction_id]
+
+	# Now process data
+	ranked = a.assign_anomaly_score(unsummed)
+	ranked_margin = a.calculate_margins(ranked)
+	votes_at_stake = a.calculate_votes_at_stake(ranked_margin)
+	df = votes_at_stake[['ReportingUnit_Id', 'Contest_Id', 'CountItemType_Id', 
+		'Count', 'Selection_Id', 'ReportingUnitType_Id', 'score', 'rank',
+		'margins', 'margin_ratio']]
+	df['Election_Id'] = election_id
+	df.to_sql('_scoring', con=session.bind, if_exists='append', index=False)

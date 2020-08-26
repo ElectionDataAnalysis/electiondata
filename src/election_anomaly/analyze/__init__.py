@@ -245,32 +245,7 @@ def short_name(text,sep=';'):
 
 
 def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_id_list):
-	# pull contest data
-	df = pull_data_tables(session)
-	ru = create_hierarchies(session, df, top_ru_id)
-	candidate_columns = ['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id',
-		'Candidate_Id']
-	contest_selection = create_contests(df, ru, candidate_columns)
-	#  limit to relevant data
-	if contest_type:
-		contest_selection = contest_selection[contest_selection['contest_district_type'] == contest_type]
-	if contest:
-		contest_selection = contest_selection[contest_selection['Contest'] == contest]
-	ecsvcj = create_vote_selections(df, contest_selection, election_id)
-	# Create data frame of all our results
-	unsummed = create_vote_counts(df, ecsvcj, contest_selection, df['ReportingUnit'], df['ReportingUnit'])
-	# cleanup: Rename, drop a duplicated column
-	unsummed.drop(columns=['_datafile_Id', 'OtherReportingUnitType', 
-		'ChildReportingUnit_Id', 'ElectionContestJoin_Id','OtherReportingUnitType_Parent', 
-		'ContestSelectionJoin_Id'],
-		inplace=True)
-	unsummed = unsummed[unsummed['ParentReportingUnit_Id'] != top_ru_id]
-
-	# Now process data
-	ranked = assign_anomaly_score(unsummed)
-	ranked_margin = calculate_margins(ranked)
-	votes_at_stake = calculate_votes_at_stake(ranked_margin)
-	top_ranked = get_most_anomalous(votes_at_stake, 3)
+	top_ranked = get_most_anomalous(session, election_id, 3)
 
 	# package into list of dictionary
 	result_list = []
@@ -338,7 +313,7 @@ def assign_anomaly_score(data):
 	# Assign a ranking for each candidate by votes for each contest
 	total_data = data[(data['CountItemType'] == 'total') & 
 					(data['ReportingUnit_Id'] == data['ParentReportingUnit_Id'])]
-	ranked_df = total_data.groupby(['Contest_Id', 'Selection'], as_index=False)['Count'] \
+	ranked_df = total_data.groupby(['Contest_Id', 'Selection', 'Selection_Id'], as_index=False)['Count'] \
 				.sum().sort_values(['Contest_Id', 'Count'], ascending=False)
 	ranked_df['rank'] = ranked_df.groupby('Contest_Id')['Count'].rank('dense', ascending=False)
 	ranked_df['contest_total'] = ranked_df['Count'].sum()
@@ -347,7 +322,7 @@ def assign_anomaly_score(data):
 	# Group data by parent info. This works because each child is also its own
 	# parent in the DB table
 	grouped_df = data.groupby(['ParentReportingUnit_Id', 'ParentName', 
-			'ParentReportingUnitType_Id', 'Candidate_Id',
+			'ParentReportingUnitType_Id', 'Candidate_Id', 'CountItemType_Id',
             'CountItemType', 'Contest_Id', 'Contest', 'Selection', 
             'contest_type', 'contest_district_type'], as_index=False)['Count'].sum().reset_index()
 	grouped_df.drop(columns='index', inplace=True)
@@ -403,10 +378,27 @@ def assign_anomaly_score(data):
 	return df
 
 
-def get_most_anomalous(data, n):
+def get_most_anomalous(session, election_id, n):
 	"""gets the n contests with the highest margin ratio score"""
-	# get rid of all contest-counttypes with 0 votes
-	# not sure we really want to do this in final version
+	# TODO maybe all this work should go in one function
+	df = dbr.load_anomaly_scores(session, election_id, n)
+	counts_df = pd.read_sql_table('CountItemType', session.bind, index_col='Id')
+	selection_df = pd.read_sql_table('CandidateSelection', session.bind, \
+		index_col='Id')
+	candidate_df = pd.read_sql_table('Candidate', session.bind, \
+		index_col='Id')
+	reportingunit_df = pd.read_sql_table('ReportingUnit', session.bind, \
+		index_col='Id')
+	data = df.merge(counts_df, how='inner', left_on='CountItemType_Id', 
+		right_index=True)
+	data = data.merge(selection_df, how='inner', left_on='Selection_Id', \
+		right_index=True)
+	data = data.merge(candidate_df, how='inner', left_on='Candidate_Id', \
+		right_index=True)
+	data = data.merge(reportingunit_df, how='inner', left_on='ReportingUnit_Id', \
+		right_index=True, suffixes=[None, '_y'])
+	data.rename(columns={"Txt": "CountItemType", "BallotName": "Selection"}, inplace=True)
+
 	zeros_df = data[['Contest_Id', 'ReportingUnitType_Id', 'CountItemType', 'ReportingUnit_Id', 'Count']]
 	zeros_df = zeros_df.groupby(['Contest_Id', 'ReportingUnitType_Id', 'ReportingUnit_Id', 'CountItemType']).sum()
 	zeros_df = zeros_df.reset_index()
@@ -627,6 +619,6 @@ def create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru):
 	}
 	unsummed.rename(columns=rename, inplace=True)
 	# add columns with names
-	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'])
+	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'],drop_old=False)
 	unsummed = unsummed.merge(contest_selection,how='left',left_on='ContestSelectionJoin_Id',right_index=True)
 	return unsummed

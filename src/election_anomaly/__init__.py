@@ -187,6 +187,36 @@ class MultiDataLoader():
 		return
 
 
+	def populate_scoring_table(self, results_dir):
+		"""takes a list of jurisdictions and updates the anomaly scores table"""
+		# grab all the election/jurisdiction pairs that have been created
+		par_files = [f for f in os.listdir(self.d['results_dir']) if f[-4:] == '.par']
+		elections = []
+		jurisdictions = []
+		for f in par_files:
+			par_file = os.path.join(results_dir, f)
+			params = ui.get_runtime_parameters(['top_reporting_unit', 'election'], param_file=par_file)[0]
+			election_id = dbr.name_to_id(self.session, 'Election', params['election'])
+			jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', params['top_reporting_unit'])
+			if election_id not in elections or jurisdiction_id not in jurisdictions:
+				elections.append(election_id)
+				jurisdictions.append(jurisdiction_id)
+			print(elections, jurisdictions)
+			input()
+		print(par_files)
+		input()
+
+
+		# These are analyzer routines so create an object
+		analyzer = Analyzer()
+		# create the table, if not exists is handled by sqlalchemy
+		analyzer.create_scoring_table()
+		# loop through list of jurisdictions:
+			# remove any data already in this table for that jurisdiction and election
+			# then reinsert 
+
+
+
 class SingleDataLoader():
 	def __init__(self, results_dir, par_file_name, project_root, session, munger_path, juris):
 		# adopt passed variables needed in future as attributes
@@ -853,6 +883,17 @@ class Analyzer():
         ]
         return data
 
+
+    def create_scoring_table(self):
+        dbr.create_scoring_table(self.session)
+
+
+    def populate_scoring_table(self, jurisdiction):
+        jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', jurisdiction)
+        _, election_id = dbr.get_datafile_info(self.session, self.d['results_file_short'])
+        data = a.populate_scoring_table(self.session, jurisdiction_id, election_id)
+        return data
+		
 
 def get_filename(path):
     head, tail = ntpath.split(path)
