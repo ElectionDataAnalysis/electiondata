@@ -39,11 +39,14 @@ def plot(type, data, fig_type, target_dir):
         # labels = list(labels)
         # x = list(x)
         # y = list(y)
+        total = [x + y for x, y in zip(x, y)]
+        x_pct = [x / ttl for x, ttl in zip(x, total)]
+        y_pct = [y / ttl for y, ttl in zip(y, total)]
 
         fig = go.Figure(
             data=[
-                go.Bar(name=data['x'], x=labels, y=x),
-                go.Bar(name=data['y'], x=labels, y=y)
+                go.Bar(name=data['x'], x=labels, y=x_pct),
+                go.Bar(name=data['y'], x=labels, y=y_pct)
             ]
         )
         fig.update_layout(
