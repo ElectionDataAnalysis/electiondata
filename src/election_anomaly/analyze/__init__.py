@@ -245,7 +245,30 @@ def short_name(text,sep=';'):
 
 
 def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_id_list):
-	top_ranked = get_most_anomalous(session, election_id, 3)
+	df = pull_data_tables(session)
+	ru, sub_ru, ru_children = create_hierarchies(session, df, top_ru_id, subdivision_type_id=9)
+	candidate_columns = ['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id',
+		'Candidate_Id']
+	contest_selection = create_contests(df, ru, candidate_columns)
+	ecsvcj = create_vote_selections(df, contest_selection, election_id)
+	unsummed = create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru)
+
+	# cleanup: Rename, drop a duplicated column
+	unsummed.drop(columns=['_datafile_Id', 'OtherReportingUnitType', 
+		'ChildReportingUnit_Id', 'ElectionContestJoin_Id','OtherReportingUnitType_Parent', 
+		'ContestSelectionJoin_Id'],
+		inplace=True)
+	groupby_cols = ['ParentReportingUnit_Id', 'ParentName', 
+		'ParentReportingUnitType_Id', 'Candidate_Id', 'CountItemType_Id',
+		'CountItemType', 'Contest_Id', 'Contest', 'Selection', 'Selection_Id',
+		'contest_type', 'contest_district_type']
+	unsummed = unsummed.groupby(groupby_cols).sum().reset_index()
+
+	# Now process data
+	ranked = assign_anomaly_score(unsummed)
+	ranked_margin = calculate_margins(ranked)
+	votes_at_stake = calculate_votes_at_stake(ranked_margin)
+	top_ranked = get_most_anomalous(votes_at_stake, 3)
 
 	# package into list of dictionary
 	result_list = []
@@ -379,26 +402,12 @@ def assign_anomaly_score(data):
 	return df
 
 
-def get_most_anomalous(session, election_id, n):
+def get_most_anomalous(data, n):
 	"""gets the n contests with the highest margin ratio score"""
-	# TODO maybe all this work should go in one function
-	df = dbr.load_anomaly_scores(session, election_id, n)
-	counts_df = pd.read_sql_table('CountItemType', session.bind, index_col='Id')
-	selection_df = pd.read_sql_table('CandidateSelection', session.bind, \
-		index_col='Id')
-	candidate_df = pd.read_sql_table('Candidate', session.bind, \
-		index_col='Id')
-	reportingunit_df = pd.read_sql_table('ReportingUnit', session.bind, \
-		index_col='Id')
-	data = df.merge(counts_df, how='inner', left_on='CountItemType_Id', 
-		right_index=True)
-	data = data.merge(selection_df, how='inner', left_on='Selection_Id', \
-		right_index=True)
-	data = data.merge(candidate_df, how='inner', left_on='Candidate_Id', \
-		right_index=True)
-	data = data.merge(reportingunit_df, how='inner', left_on='ReportingUnit_Id', \
-		right_index=True, suffixes=[None, '_y'])
-	data.rename(columns={"Txt": "CountItemType", "BallotName": "Selection"}, inplace=True)
+	margins = list(data['margin_ratio'].unique())
+	margins.sort(reverse=True)
+	top_margins = margins[0:3]
+	data = data[data['margin_ratio'].isin(top_margins)]
 
 	zeros_df = data[['Contest_Id', 'ReportingUnitType_Id', 'CountItemType', 'ReportingUnit_Id', 'Count']]
 	zeros_df = zeros_df.groupby(['Contest_Id', 'ReportingUnitType_Id', 'ReportingUnit_Id', 'CountItemType']).sum()
