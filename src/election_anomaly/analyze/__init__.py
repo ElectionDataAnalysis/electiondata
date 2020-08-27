@@ -255,11 +255,13 @@ def create_bar(session, top_ru_id, contest_type, contest, election_id, datafile_
 
 		# some cleaning here to make the pivoting work
 		scores_df = temp_df[temp_df['rank'] != 1]
-		scores_df = scores_df[['ReportingUnit_Id', 'score', 'margins']]
-		scores_df.rename(columns={'score': 'max_score', 'margins': 'max_margins'}, inplace=True)
+		scores_df = scores_df[['ReportingUnit_Id', 'score', 'margins', 'margins_pct']]
+		scores_df.rename(columns={'score': 'max_score', 'margins': 'max_margins',
+			'margins_pct': 'max_margins_pct'}, inplace=True)
 		temp_df = temp_df.merge(scores_df, how='inner', on='ReportingUnit_Id')
-		temp_df.drop(columns=['score', 'margins'], inplace=True)
-		temp_df.rename(columns={'max_score': 'score', 'max_margins': 'margins'}, inplace=True)
+		temp_df.drop(columns=['score', 'margins', 'margins_pct'], inplace=True)
+		temp_df.rename(columns={'max_score': 'score', 'max_margins': 'margins',
+			'max_margins_pct': 'margins_pct'}, inplace=True)
 
 		candidates = temp_df['Candidate_Id'].unique()
 		x = dbr.name_from_id(session, 'Candidate', candidates[0])
@@ -476,6 +478,8 @@ def calculate_margins(data):
 	rank_1_df = rank_1_df.rename(columns={'Count': 'rank_1_total'})
 	data = data.merge(rank_1_df, how='inner', on=['unit_id', 'ReportingUnit_Id'])
 	data['margins'] = data['rank_1_total'] - data['Count']
+	data['margins_pct'] = (data['rank_1_total'] - data['Count'])\
+		/ (data['rank_1_total'] + data['Count'])
 	return data
 
 
@@ -487,22 +491,23 @@ def calculate_votes_at_stake(data):
 	for unit_id in unit_ids:
 		temp_df = data[data['unit_id'] == unit_id]
 		if temp_df.shape[0] > 2:
-			max_margin_score = temp_df['margins'].max() 
-			reporting_unit_id = temp_df[temp_df['margins'] == max_margin_score] \
+			max_margin_score = temp_df['margins_pct'].max() 
+			reporting_unit_id = temp_df[temp_df['margins_pct'] == max_margin_score] \
 				.iloc[0]['ReportingUnit_Id']
-			selection = temp_df.loc[temp_df['margins'] == max_margin_score] \
+			selection = temp_df.loc[temp_df['margins_pct'] == max_margin_score] \
 				.iloc[0]['Selection']
 			anomalous_df = temp_df[(temp_df['ReportingUnit_Id'] == reporting_unit_id) & \
 				(((temp_df['Selection'] == selection)  & \
-					(temp_df['margins'] == max_margin_score)) |
-				(temp_df['rank'] == 1))].sort_values('margins', ascending=False)
-			next_margin_score = temp_df[temp_df['margins'] < max_margin_score]['margins'].max()
-			next_reporting_unit_id = temp_df.loc[temp_df['margins'] == next_margin_score] \
+					(temp_df['margins_pct'] == max_margin_score)) |
+				(temp_df['rank'] == 1))].sort_values('rank', ascending=False)
+			next_margin_score = temp_df[(temp_df['margins_pct'] < max_margin_score) &\
+				(temp_df['rank'] != 1)]['margins_pct'].max()
+			next_reporting_unit_id = temp_df.loc[temp_df['margins_pct'] == next_margin_score] \
 				.iloc[0]['ReportingUnit_Id']
 			next_anomalous_df =temp_df[(temp_df['ReportingUnit_Id'] == next_reporting_unit_id) & \
 				(((temp_df['Selection'] == selection)  & \
-					(temp_df['margins'] == next_margin_score)) |
-				(temp_df['rank'] == 1))].sort_values('margins', ascending=False)
+					(temp_df['margins_pct'] == next_margin_score)) |
+				(temp_df['rank'] == 1))].sort_values('rank', ascending=False)
 			temp_df['margin_ratio'] = (anomalous_df.iloc[0]['margins'] - next_anomalous_df.iloc[0]['margins']) \
 				/ anomalous_df.iloc[0]['margins']
 		else:

@@ -997,6 +997,7 @@ def create_scoring_table(session):
         Column('rank', Integer),
         Column('score', Float),
         Column('margins', Integer),
+        Column('margins_pct', Float),
         Column('margin_ratio', Float)
     )
     metadata.create_all(checkfirst=True)
@@ -1084,6 +1085,6 @@ def populate_scoring_table(session, jurisdiction_id, election_id):
     votes_at_stake = a.calculate_votes_at_stake(ranked_margin)
     df = votes_at_stake[['ReportingUnit_Id', 'Contest_Id', 'CountItemType_Id', 
         'Count', 'Selection_Id', 'ReportingUnitType_Id', 'score', 'rank',
-        'margins', 'margin_ratio']]
+        'margins', 'margins_pct', 'margin_ratio']]
     df['Election_Id'] = election_id
     df.to_sql('_scoring', con=session.bind, if_exists='append', index=False)
