@@ -141,7 +141,7 @@ class MultiDataLoader():
 			warn_file = os.path.join(self.d['results_dir'], f'{f[:-4]}.errors')
 			with open(warn_file, 'w') as wf:
 				wf.write(f'Errors:\n\t{err_str}\n\nWarnings:\n\t{warn_str}')
-			print(f'Fatal errors found. See {f[:-4]}.errors')
+			print(f'Fatal errors found. Results not loaded; file not moved. See {f[:-4]}.errors')
 
 		else:
 			# move results file and its parameter file to a subfolder of the archive directory
