@@ -137,7 +137,12 @@ class MultiDataLoader():
 				warn_str = f'\nWarnings:\n{ws}'
 			else:
 				warn_str = None
-			print(f'Fatal errors found:\n{err_str}{warn_str}')
+			# save errors in current directory
+			warn_file = os.path.join(self.d['results_dir'], f'{f[:-4]}.errors')
+			with open(warn_file, 'w') as wf:
+				wf.write(f'Errors:\n\t{err_str}\n\nWarnings:\n\t{warn_str}')
+			print(f'Fatal errors found. See {f[:-4]}.errors')
+
 		else:
 			# move results file and its parameter file to a subfolder of the archive directory
 			#  named for the db
