@@ -113,7 +113,12 @@ FL Commissioner of Agriculture	1	FL Commissioner of Agriculture
 
 6. Make any necessary changes to the more straightforward elements. It's often easier to add these in bulk later directly from the results files (see below) -- unless you want to use internal names that differ from the names in the results file.
   * `Party.txt`. You may be able to find a list of officially recognized parties on the Board of Election's website.
-  * `Candidate.txt`. 
+  * `Candidate.txt`. Our convention for internal names for multiple-candidate tickets (e.g., 'Trump/Pence' is to use the full name of the top candidate, e.g., 'Donald J. Trump'). Any variations used in the results files should be mapped accordingly. E.g.:
+  ```
+cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	Donald J. Trump	Trump / Pence
+Candidate	Donald J. Trump	Donald J. Trump
+```
   * `BallotMeasure.txt`. If the ElectionDistrict is not the whole jurisdiction, you may need to add these by hand. A BallotMeasure is any yes/no question on the ballot, including judicial retention. Each BallotMeasure must have an ElectionDistrict and an Election matching an entry in the `ReportingUnit.txt` or `Election.txt` file.
   * `Election.txt`.
 
