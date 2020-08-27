@@ -57,21 +57,22 @@ def append_to_composing_reporting_unit_join(engine,ru):
 	This routine calculates the nesting relationships from the Names and uploads to db.
 	Returns the *all* composing-reporting-unit-join data from the db.
 	By convention, a ReportingUnit is it's own ancestor (ancestor_0)."""
-	if not ru.empty:
-		ru['split'] = ru['Name'].apply(lambda x:x.split(';'))
-		ru['length'] = ru['split'].apply(len)
+	working = ru.copy()
+	if not working.empty:
+		working['split'] = working['Name'].apply(lambda x:x.split(';'))
+		working['length'] = working['split'].apply(len)
 
 		# pull ReportingUnit to get ids matched to names
 		ru_cdf = pd.read_sql_table('ReportingUnit',engine,index_col=None)
-		ru_static = ru.copy()
+		ru_static = working.copy()
 
 		# add db Id column to ru_static, if it's not already there
-		if 'Id' not in ru.columns:
-			ru_static = ru_static.merge(ru_cdf[['Name','Id']],on='Name',how='left')
+		if 'Id' not in working.columns:
+			working_static = ru_static.merge(ru_cdf[['Name','Id']],on='Name',how='left')
 
 		# create a list of rows to append to the ComposingReportingUnitJoin element
 		cruj_dframe_list = []
-		for i in range(ru['length'].max()):
+		for i in range(working['length'].max()):
 			# check that all components of all Reporting Units are themselves ReportingUnits
 			ru_for_cruj = ru_static.copy()  # start fresh, without detritus from previous i
 
