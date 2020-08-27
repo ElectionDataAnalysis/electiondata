@@ -799,16 +799,21 @@ class Analyzer():
     
     def bar(self, jurisdiction, contest_type=None, contest=None, fig_type=None):
         """contest_type is one of state, congressional, state-senate, state-house"""
-        d, error = ui.get_runtime_parameters(['rollup_directory'])
+        d, error = ui.get_runtime_parameters(['rollup_directory', 'sub_reporting_unit_type'],
+            param_file='analyze.par')
         if error:
             print("Parameter file missing requirements.")
             print(error)
             print("Data not created.")
             return
         jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', jurisdiction)
+        most_granular_id = dbr.name_to_id(self.session, 'ReportingUnitType', 
+            d['sub_reporting_unit_type'])
+        hierarchy = dbr.get_jurisdiction_hierarchy(self.session, jurisdiction_id, most_granular_id)
         results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
-        agg_results = a.create_bar(self.session, jurisdiction_id, contest_type, contest,
-                        results_info[1], results_info[0])
+		# bar chart always at one level below top reporting unit
+        agg_results = a.create_bar(self.session, jurisdiction_id, hierarchy[1], \
+            contest_type, contest, results_info[1])
         if fig_type:
             for agg_result in agg_results:
                 v.plot('bar', agg_result, fig_type, d['rollup_directory'])
