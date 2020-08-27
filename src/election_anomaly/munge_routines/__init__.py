@@ -158,7 +158,8 @@ def compress_whitespace(s:str) -> str:
 
 def replace_raw_with_internal_ids(
         df: pd.DataFrame, juris: jm.Jurisdiction, table_df: pd.DataFrame, element: str, internal_name_column: str
-        ,error: dict, drop_unmatched: bool=False, mode: str='row',unmatched_id: int=0) -> (pd.DataFrame, dict):
+        ,error: dict, drop_unmatched: bool=False, mode: str='row',unmatched_id: int=0,
+        drop_all_ok: bool = False) -> (pd.DataFrame, dict):
     """replace columns in <working> with raw_identifier values by columns with internal names and Ids
     from <table_df>, which has structure of a db table for <element>.
     <unmatched_id> is the id to assign to unmatched records.
@@ -181,11 +182,11 @@ def replace_raw_with_internal_ids(
 
     if working.empty:
         e = f'No raw {element} in \'dictionary.txt\' matched any raw {element} derived from the result file'
-        if drop_unmatched:
+        if drop_unmatched and not drop_all_ok:
             ui.add_error(error,'munge_error',e)
-            return working, error
         else:
             ui.add_error(error,'munge_warning',e)
+        return working, error
 
     if mode == 'column':
         # drop rows that melted from unrecognized columns, EVEN IF drop_unmatched=False.
@@ -384,7 +385,7 @@ def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session:
         none_or_unknown_id = dbr.name_to_id(session, f'{c_type}Contest', 'none or unknown')
         working, err = replace_raw_with_internal_ids(
             working, juris, df_for_type[c_type], f'{c_type}Contest', 'Name', err,
-            drop_unmatched=False, unmatched_id=none_or_unknown_id
+            drop_unmatched=False, unmatched_id=none_or_unknown_id, drop_all_ok=True
         )
         # restrict working to the contest_type <c_type>, add contest_type column
         w_for_type[c_type] = working[working[f'{c_type}Contest'] != 'none or unknown']
@@ -432,28 +433,41 @@ def add_selection_id(df: pd.DataFrame, engine, jurisdiction: jm.Jurisdiction, er
     bms = pd.read_sql_table(f'BallotMeasureSelection', engine)
 
     # append BallotMeasureSelection_Id as Selection_Id to w['BallotMeasure']
-    w['BallotMeasure'], err = replace_raw_with_internal_ids(
-        w['BallotMeasure'], jurisdiction, bms,'BallotMeasureSelection','Name',err, drop_unmatched=True)
-    w['BallotMeasure'].rename(columns={'BallotMeasureSelection_Id':'Selection_Id'},inplace=True)
-    w['BallotMeasure'].drop(['BallotMeasureSelection','Candidate_Id'], axis=1, inplace=True)
+    if not w['BallotMeasure'].empty:
+        w['BallotMeasure'], err = replace_raw_with_internal_ids(
+            w['BallotMeasure'], jurisdiction, bms,'BallotMeasureSelection','Name',err, drop_unmatched=True, drop_all_ok=True)
+        w['BallotMeasure'].rename(columns={'BallotMeasureSelection_Id':'Selection_Id'},inplace=True)
+        w['BallotMeasure'].drop(['BallotMeasureSelection','Candidate_Id'], axis=1, inplace=True)
 
-    c_df = w['Candidate'][['Candidate_Id','Party_Id']].drop_duplicates()
-    c_df = c_df[(c_df.Candidate_Id.notnull()) & c_df.Candidate_Id != 0]
+    # prepare to append CandidateSelection_Id as Selection_Id
+    if not w['Candidate'].empty:
+        c_df = w['Candidate'][['Candidate_Id','Party_Id']].drop_duplicates()
+        c_df = c_df[(c_df.Candidate_Id.notnull()) & c_df.Candidate_Id != 0]
 
-    #  Load CandidateSelections to Selection table
-    id_list = dbr.add_records_to_selection_table(engine,c_df.shape[0])
+        # pull any existing Ids into a new CandidateSelection_Id column
+        col_map = {c:c for c in ['Party_Id','Candidate_Id']}
+        c_df = dbr.append_id_to_dframe(engine,c_df,'CandidateSelection',col_map=col_map)
 
-    # Load CandidateSelection table
-    c_df['Id'] = pd.Series(id_list, index=c_df.index)
-    dbr.insert_to_cdf_db(engine, c_df, 'CandidateSelection')
+        # find unmatched records
+        c_df_unmatched = c_df[c_df.CandidateSelection_Id.isnull()]
 
-    # add CandidateSelection_Id column, merging on Candidate_Id and Party_Id
-    col_map = {c:c for c in ['Candidate_Id','Party_Id']}
-    w['Candidate'] = dbr.append_id_to_dframe(
-        engine,w['Candidate'],'CandidateSelection',col_map=col_map
-    ).rename(
-        columns={'CandidateSelection_Id':'Selection_Id'}
-    ).drop(['Candidate_Id','BallotMeasureSelection_raw'],axis=1)
+        if not c_df_unmatched.empty:
+            #  Load CandidateSelections to Selection table (for unmatched)
+            id_list = dbr.add_records_to_selection_table(engine,c_df_unmatched.shape[0])
+
+            # Load unmatched records into CandidateSelection table
+            c_df_unmatched['Id'] = pd.Series(id_list, index=c_df_unmatched.index)
+            dbr.insert_to_cdf_db(engine, c_df_unmatched, 'CandidateSelection')
+
+            # update CandidateSelection_Id column for previously unmatched, merging on Candidate_Id and Party_Id
+            # TODO check that this works correctly
+            w['Candidate'].loc[c_df_unmatched.index,'CandidateSelection_Id'] = c_df_unmatched['Id']
+
+        # append CandidateSelection_Id to w['Candidate']
+        w['Candidate'] = w['Candidate'].merge(c_df,how='left',on=['Candidate_Id','Party_Id'])
+        w['Candidate'] = w['Candidate'].rename(
+            columns={'CandidateSelection_Id':'Selection_Id'}
+        ).drop(['Candidate_Id','BallotMeasureSelection_raw'],axis=1)
 
     working = pd.concat([w['BallotMeasure'],w['Candidate']])
 
@@ -526,7 +540,7 @@ def raw_elements_to_cdf(
         err = ui.add_error(err,'datafile_error',e)
         return err
 
-    # TODO Fill VoteCount
+    # Fill VoteCount
     vc_start = time.perf_counter()
     try:
         e = dbr.insert_to_cdf_db(session.bind, working, 'VoteCount')
