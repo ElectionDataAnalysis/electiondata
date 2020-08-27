@@ -442,14 +442,14 @@ def add_selection_id(df: pd.DataFrame, engine, jurisdiction: jm.Jurisdiction, er
     # prepare to append CandidateSelection_Id as Selection_Id
     if not w['Candidate'].empty:
         c_df = w['Candidate'][['Candidate_Id','Party_Id']].drop_duplicates()
-        c_df = c_df[(c_df.Candidate_Id.notnull()) & c_df.Candidate_Id != 0]
+        c_df = c_df[(c_df.Candidate_Id.notnull()) & (c_df.Candidate_Id != 0)]
 
         # pull any existing Ids into a new CandidateSelection_Id column
-        col_map = {c:c for c in ['Party_Id','Candidate_Id']}
+        col_map = {c: c for c in ['Party_Id','Candidate_Id']}
         c_df = dbr.append_id_to_dframe(engine,c_df,'CandidateSelection',col_map=col_map)
 
         # find unmatched records
-        c_df_unmatched = c_df[c_df.CandidateSelection_Id.isnull()]
+        c_df_unmatched = c_df[c_df.CandidateSelection_Id == 0].copy()
 
         if not c_df_unmatched.empty:
             #  Load CandidateSelections to Selection table (for unmatched)
@@ -460,11 +460,12 @@ def add_selection_id(df: pd.DataFrame, engine, jurisdiction: jm.Jurisdiction, er
             dbr.insert_to_cdf_db(engine, c_df_unmatched, 'CandidateSelection')
 
             # update CandidateSelection_Id column for previously unmatched, merging on Candidate_Id and Party_Id
-            # TODO check that this works correctly
-            w['Candidate'].loc[c_df_unmatched.index,'CandidateSelection_Id'] = c_df_unmatched['Id']
+            c_df.loc[c_df_unmatched.index,'CandidateSelection_Id'] = c_df_unmatched['Id']
 
         # append CandidateSelection_Id to w['Candidate']
         w['Candidate'] = w['Candidate'].merge(c_df,how='left',on=['Candidate_Id','Party_Id'])
+
+        # rename to Selection_Id and drop extraneous
         w['Candidate'] = w['Candidate'].rename(
             columns={'CandidateSelection_Id':'Selection_Id'}
         ).drop(['Candidate_Id','BallotMeasureSelection_raw'],axis=1)
