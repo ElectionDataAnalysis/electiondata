@@ -1040,30 +1040,50 @@ def load_anomaly_scores(session, election_id, n):
     return result_df
 
 
-def populate_scoring_table(session, jurisdiction_id, election_id):
-	# pull contest data
-	df = a.pull_data_tables(session)
-	ru = a.create_hierarchies(session, df, jurisdiction_id)
-	candidate_columns = ['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id',
-		'Candidate_Id']
-	contest_selection = a.create_contests(df, ru, candidate_columns)
-	#  limit to relevant data
-	ecsvcj = a.create_vote_selections(df, contest_selection, election_id)
-	# Create data frame of all our results
-	unsummed = a.create_vote_counts(df, ecsvcj, contest_selection, df['ReportingUnit'], df['ReportingUnit'])
-	# cleanup: Rename, drop a duplicated column
-	unsummed.drop(columns=['_datafile_Id', 'OtherReportingUnitType', 
-		'ChildReportingUnit_Id', 'ElectionContestJoin_Id','OtherReportingUnitType_Parent', 
-		'ContestSelectionJoin_Id'],
-		inplace=True)
-	unsummed = unsummed[unsummed['ParentReportingUnit_Id'] != jurisdiction_id]
+def populate_scoring_table(session, jurisdiction_id, election_id): 
+    # pull contest data
+    df = a.pull_data_tables(session)
 
-	# Now process data
-	ranked = a.assign_anomaly_score(unsummed)
-	ranked_margin = a.calculate_margins(ranked)
-	votes_at_stake = a.calculate_votes_at_stake(ranked_margin)
-	df = votes_at_stake[['ReportingUnit_Id', 'Contest_Id', 'CountItemType_Id', 
-		'Count', 'Selection_Id', 'ReportingUnitType_Id', 'score', 'rank',
-		'margins', 'margin_ratio']]
-	df['Election_Id'] = election_id
-	df.to_sql('_scoring', con=session.bind, if_exists='append', index=False)
+    """This commented section is how it was originally"""
+    #ru = a.create_hierarchies(session, df, jurisdiction_id, subdivision_type_id=9)
+    # candidate_columns = ['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id',
+    #     'Candidate_Id']
+    # contest_selection = a.create_contests(df, ru, candidate_columns)
+    # # limit to relevant data
+    # ecsvcj = a.create_vote_selections(df, contest_selection, election_id)
+    # # Create data frame of all our results
+    # unsummed = a.create_vote_counts(df, ecsvcj, contest_selection, df['ReportingUnit'], df['ReportingUnit'])
+
+    """this is using the other approach"""
+    ru, sub_ru, ru_children = a.create_hierarchies(session, df, jurisdiction_id, subdivision_type_id=9)
+    candidate_columns = ['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id',
+        'Candidate_Id']
+    contest_selection = a.create_contests(df, ru, candidate_columns)
+    ecsvcj = a.create_vote_selections(df, contest_selection, election_id)
+    unsummed = a.create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru)
+
+    # cleanup: Rename, drop a duplicated column
+    unsummed.drop(columns=['_datafile_Id', 'OtherReportingUnitType', 
+        'ChildReportingUnit_Id', 'ElectionContestJoin_Id','OtherReportingUnitType_Parent', 
+        'ContestSelectionJoin_Id'],
+        inplace=True)
+    #unsummed = unsummed[unsummed['ParentReportingUnit_Id'] != jurisdiction_id]
+
+
+    """ Also adding this section in """
+    #unsummed = unsummed[unsummed['ReportingUnitType_Id'] == 9] # filter only on counties
+    groupby_cols = ['ParentReportingUnit_Id', 'ParentName', 
+        'ParentReportingUnitType_Id', 'Candidate_Id', 'CountItemType_Id',
+        'CountItemType', 'Contest_Id', 'Contest', 'Selection', 'Selection_Id',
+        'contest_type', 'contest_district_type']
+    unsummed = unsummed.groupby(groupby_cols).sum().reset_index()
+
+    # Now process data
+    ranked = a.assign_anomaly_score(unsummed)
+    ranked_margin = a.calculate_margins(ranked)
+    votes_at_stake = a.calculate_votes_at_stake(ranked_margin)
+    df = votes_at_stake[['ReportingUnit_Id', 'Contest_Id', 'CountItemType_Id', 
+        'Count', 'Selection_Id', 'ReportingUnitType_Id', 'score', 'rank',
+        'margins', 'margin_ratio']]
+    df['Election_Id'] = election_id
+    df.to_sql('_scoring', con=session.bind, if_exists='append', index=False)

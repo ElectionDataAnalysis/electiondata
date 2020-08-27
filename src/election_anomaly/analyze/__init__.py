@@ -307,12 +307,12 @@ def assign_anomaly_score(data):
 	######### FOR TESTING PURPOSES ONLY!!!!! ###########
 	#data = data[data['Contest_Id'] == 14949] # only 2 candidates
 	#data = data[data['Contest_Id'] == 14777] # 3 candidates
-	data = data[(data['Contest_Id'] == 14949) | (data['Contest_Id'] == 14777)]
+	#data = data[(data['Contest_Id'] == 14949) | (data['Contest_Id'] == 14777)]
 	#data = data[data['Contest_Id'] == 14917] # this has infinite margins
+	#data = data[data['Contest_Id'] == 14952]
 
 	# Assign a ranking for each candidate by votes for each contest
-	total_data = data[(data['CountItemType'] == 'total') & 
-					(data['ReportingUnit_Id'] == data['ParentReportingUnit_Id'])]
+	total_data = data[data['CountItemType'] == 'total']
 	ranked_df = total_data.groupby(['Contest_Id', 'Selection', 'Selection_Id'], as_index=False)['Count'] \
 				.sum().sort_values(['Contest_Id', 'Count'], ascending=False)
 	ranked_df['rank'] = ranked_df.groupby('Contest_Id')['Count'].rank('dense', ascending=False)
@@ -353,7 +353,7 @@ def assign_anomaly_score(data):
 		scored_df = pd.DataFrame()
 		for i in range(2, int(temp_df['rank'].max()) + 1):
 			selection_df = temp_df[temp_df['rank'].isin([1, i])]
-			if selection_df.shape[0] >= 5:
+			if selection_df.shape[0] >= 12 and len(selection_df['rank'].unique()) > 1:
 				pivot_df = pd.pivot_table(selection_df, values='Count', \
 					index=['ReportingUnit_Id', 'reporting_unit_total'], \
 					columns='Selection').sort_values('ReportingUnit_Id').reset_index()
@@ -365,15 +365,14 @@ def assign_anomaly_score(data):
 				np.nan_to_num(vote_proportions, copy=False)
 				# assign z score and then add back into final DF
 				scored = euclidean_zscore(vote_proportions.to_numpy())
-				#scored = density_score(vote_proportions)
+				#scored = density_score(vote_proportions.to_numpy())
 				pivot_df['score'] = scored
 				pivot_df = pivot_df[['ReportingUnit_Id', to_drop[1], 'score']]
 				pivot_df['Selection'] = to_drop[1]
 				pivot_df.rename(columns={to_drop[1]: 'Count'}, inplace=True)
-				selection_df = selection_df.merge(pivot_df, how='left', \
+				temp_df = selection_df.merge(pivot_df, how='left', \
 					on=['ReportingUnit_Id', 'Selection', 'Count'])
-				scored_df = pd.concat([scored_df, selection_df])
-		df = pd.concat([df, scored_df])
+				df = pd.concat([df, temp_df])
 	df['score'] = df['score'].fillna(0)
 	return df
 
@@ -407,10 +406,10 @@ def get_most_anomalous(session, election_id, n):
 	data.rename(columns={'Count_x':'Count'}, inplace=True)
 	data.drop(columns=['Count_y'], inplace=True)
 
-	margins = list(data['margin_ratio'].unique())
-	margins.sort(reverse=True)
-	top_margins = margins[0:n]
-	data = data[data['margin_ratio'].isin(top_margins)]
+	# margins = list(data['margin_ratio'].unique())
+	# margins.sort(reverse=True)
+	# top_margins = margins[0:n]
+	# data = data[data['margin_ratio'].isin(top_margins)]
 
 	# now we get the top 8 reporting unit IDs, in terms of anomaly score, of the winner and most anomalous
 	ids = data['unit_id'].unique()
@@ -418,14 +417,15 @@ def get_most_anomalous(session, election_id, n):
 	for id in ids:
 		temp_df = data[data['unit_id'] == id]
 		max_score = temp_df['score'].max()
-		rank = temp_df[temp_df['score'] == max_score].iloc[0]['rank']
-		temp_df = temp_df[temp_df['rank'].isin([1, rank])]
-		scores = list(temp_df['score'].unique())
-		scores.sort(reverse=True)
-		top_scores = scores[0:8]
-		reporting_units = temp_df[temp_df['score'].isin(top_scores)]['ReportingUnit_Id'].unique()
-		df_final = temp_df[temp_df['ReportingUnit_Id'].isin(reporting_units)]
-		df = pd.concat([df, df_final])
+		if max_score > 0:
+			rank = temp_df[temp_df['score'] == max_score].iloc[0]['rank']
+			temp_df = temp_df[temp_df['rank'].isin([1, rank])]
+			scores = list(temp_df['score'].unique())
+			scores.sort(reverse=True)
+			top_scores = scores[0:8]
+			reporting_units = temp_df[temp_df['score'].isin(top_scores)]['ReportingUnit_Id'].unique()
+			df_final = temp_df[temp_df['ReportingUnit_Id'].isin(reporting_units)]
+			df = pd.concat([df, df_final])
 	return df
 
 
@@ -475,9 +475,7 @@ def calculate_margins(data):
 	rank_1_df = data[data['rank'] == 1][['unit_id', 'ReportingUnit_Id', 'Count']]
 	rank_1_df = rank_1_df.rename(columns={'Count': 'rank_1_total'})
 	data = data.merge(rank_1_df, how='inner', on=['unit_id', 'ReportingUnit_Id'])
-	data['margins'] = (data['rank_1_total'] - data['Count']) / data['contest_total']
-	data = data[data['margins'] != math.inf]
-	data = data[data['margins'] != -math.inf]
+	data['margins'] = data['rank_1_total'] - data['Count']
 	return data
 
 
@@ -489,29 +487,27 @@ def calculate_votes_at_stake(data):
 	for unit_id in unit_ids:
 		temp_df = data[data['unit_id'] == unit_id]
 		if temp_df.shape[0] > 2:
-			max_anomaly_score = temp_df['score'].max() 
-			reporting_unit_id = temp_df[temp_df['score'] == max_anomaly_score] \
+			max_margin_score = temp_df['margins'].max() 
+			reporting_unit_id = temp_df[temp_df['margins'] == max_margin_score] \
 				.iloc[0]['ReportingUnit_Id']
-			selection = temp_df.loc[temp_df['score'] == max_anomaly_score] \
+			selection = temp_df.loc[temp_df['margins'] == max_margin_score] \
 				.iloc[0]['Selection']
 			anomalous_df = temp_df[(temp_df['ReportingUnit_Id'] == reporting_unit_id) & \
 				(((temp_df['Selection'] == selection)  & \
-					(temp_df['score'] == max_anomaly_score)) |
-				(temp_df['rank'] == 1))].sort_values('score', ascending=False)
-			next_max_score = temp_df[temp_df['score'] < max_anomaly_score]['score'].max()
-			next_reporting_unit_id = temp_df.loc[temp_df['score'] == next_max_score] \
+					(temp_df['margins'] == max_margin_score)) |
+				(temp_df['rank'] == 1))].sort_values('margins', ascending=False)
+			next_margin_score = temp_df[temp_df['margins'] < max_margin_score]['margins'].max()
+			next_reporting_unit_id = temp_df.loc[temp_df['margins'] == next_margin_score] \
 				.iloc[0]['ReportingUnit_Id']
 			next_anomalous_df =temp_df[(temp_df['ReportingUnit_Id'] == next_reporting_unit_id) & \
 				(((temp_df['Selection'] == selection)  & \
-					(temp_df['score'] == next_max_score)) |
-				(temp_df['rank'] == 1))].sort_values('score', ascending=False)
+					(temp_df['margins'] == next_margin_score)) |
+				(temp_df['rank'] == 1))].sort_values('margins', ascending=False)
 			temp_df['margin_ratio'] = (anomalous_df.iloc[0]['margins'] - next_anomalous_df.iloc[0]['margins']) \
-				/ anomalous_df.iloc[0]['margins'] 
+				/ anomalous_df.iloc[0]['margins']
 		else:
 			temp_df['margin_ratio'] = 0
 		df = pd.concat([df, temp_df])
-	df = df[df['margin_ratio'] != math.inf]
-	df = df[df['margin_ratio'] != -math.inf]
 	return df
 
 

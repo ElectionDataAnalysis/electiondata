@@ -891,7 +891,7 @@ class Analyzer():
     def populate_scoring_table(self, jurisdiction):
         jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', jurisdiction)
         _, election_id = dbr.get_datafile_info(self.session, self.d['results_file_short'])
-        data = a.populate_scoring_table(self.session, jurisdiction_id, election_id)
+        data = dbr.populate_scoring_table(self.session, jurisdiction_id, election_id)
         return data
 		
 
