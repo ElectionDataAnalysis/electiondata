@@ -5,13 +5,10 @@ From the root folder of your repository run `python3 setup.py install` (or if `p
 
 ## Parameter Files
 In the directory from which you will run the system -- which can be outside your local repository-- create the main parameter files you'll need:
-* `analyze.par` for Analyzer class if you want it
 * `jurisdiction_prep.par` for the JurisdictionPrepper() class
-* `multi.par` for loading data. 
+* `multi.par` for loading data (MultiDataLoader() class) and for pulling and analyzing results (the Analyzer()) class)
   
-There are templates in `templates/parameter_file_templates`. Make sure that `analyze.par` and `multi.par` are consistent:
-   * `db_paramfile` the same in both
-   * `db_name` the same in both
+There are templates in `templates/parameter_file_templates`. 
    
 In the directory indicated in `multi.par`, create a `.par` file for each results file you want to use. The results files and the `.par` files must both be in that directory. Follow the `templates/parameter_file_templates/results.par` template for the individual `.par` files. If all the files in a single directory will use the same munger, jurisdiction and election, you can create these `.par` files in batches. For example, 
 ```
@@ -267,7 +264,7 @@ If every file in your directory will use the same munger(s) -- e.g., if the juri
  * aux_data_dir (optional -- use it if your files have all have the same auxiliary data files, which might never happen in practice)
 
 ## Pull Data
-The Analyzer class uses parameters in the file `analyze.par`, which should be in the directory from which you are running the program.
+The Analyzer class uses parameters in the file `multi.par`, which should be in the directory from which you are running the program.
 
 To pull totals by vote type, use `top_counts_by_vote_type()`
 ```
@@ -276,7 +273,7 @@ Results exported to /Users/singer3/Documents/rollups/2018 General/Pennsylvania;P
 >>> 
 ```
 
-Results are exported to the `rollup_directory` specified in `analyze.par`.
+Results are exported to the `rollup_directory` specified in `multi.par`.
 
 Note that both arguments -- the name of the top reporting unit ('Pennsylvania;Philadelphia') and the reporting unit type for the breakdown of results ('ward') must be the internal database names. To see the list of options, use `display_options()`:
 ```

@@ -100,7 +100,6 @@ def create_rollup(
 	inv_df.to_csv(inventory_file, index=False, sep='\t')
 	return err_str
 
-
 def short_name(text,sep=';'):
 	return text.split(sep)[-1]
 
