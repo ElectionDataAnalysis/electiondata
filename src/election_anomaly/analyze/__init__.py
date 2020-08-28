@@ -244,7 +244,8 @@ def short_name(text,sep=';'):
 	return unsummed
 
 
-def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, election_id):
+def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, election_id,
+	for_export):
 	df = pull_data_tables(session)
 	ru, sub_ru, ru_children = create_hierarchies(session, df, top_ru_id, subdivision_type_id)
 	candidate_columns = ['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id',
@@ -252,6 +253,11 @@ def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, e
 	contest_selection = create_contests(df, ru, candidate_columns)
 	ecsvcj = create_vote_selections(df, contest_selection, election_id)
 	unsummed = create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru)
+
+	if contest_type:
+		unsummed = unsummed[unsummed['contest_district_type'] == contest_type]
+	if contest:
+		unsummed = unsummed[unsummed['Contest'] == contest]
 
 	# cleanup: Rename, drop a duplicated column
 	unsummed.drop(columns=['_datafile_Id', 'OtherReportingUnitType', 
@@ -268,7 +274,10 @@ def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, e
 	ranked = assign_anomaly_score(unsummed)
 	ranked_margin = calculate_margins(ranked)
 	votes_at_stake = calculate_votes_at_stake(ranked_margin)
-	top_ranked = get_most_anomalous(votes_at_stake, 3)
+	if not for_export:
+		top_ranked = get_most_anomalous(votes_at_stake, 3)
+	else:
+		top_ranked = votes_at_stake
 
 	# package into list of dictionary
 	result_list = []

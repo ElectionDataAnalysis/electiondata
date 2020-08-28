@@ -813,7 +813,7 @@ class Analyzer():
         results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
 		# bar chart always at one level below top reporting unit
         agg_results = a.create_bar(self.session, jurisdiction_id, hierarchy[1], \
-            contest_type, contest, results_info[1])
+            contest_type, contest, results_info[1], False)
         if fig_type:
             for agg_result in agg_results:
                 v.plot('bar', agg_result, fig_type, d['rollup_directory'])
@@ -831,33 +831,25 @@ class Analyzer():
         return count_item_type, selection_type
 
 
-    def export_outlier_data(self, jurisdiction, subdivision_type, contest=None):
-        """ Exports data either for a single contest or for all contests ina
-		jurisdiction, broken down by a specific reporting unit type """
-        data = [
-            {
-                "contest": "contest_1",
-                "ballot_type": "total votes",
-                "label": "North Carolina;Bladen County",
-                "selection_1": "Jane Doe",
-                "selection_2": "John Smith",
-                "votes_at_stake": 1000,
-                "margin": 0.25,
-                "score": 0.73,
-            },
-            {
-                "contest": "ballot_measure_1",
-                "ballot_type": "absentee-mail",
-                "label": "North Carolina;Chatham County",
-                "selection_1": "Yes",
-                "selection_2": "No",
-                "votes_at_stake": 2400,
-                "margin": 0.1,
-                "score": 0.9,
-            }
-        ]
-        return data
-		
+    def export_outlier_data(self, jurisdiction, contest=None):
+        """contest_type is one of state, congressional, state-senate, state-house"""
+        d, error = ui.get_runtime_parameters(['rollup_directory', 'sub_reporting_unit_type'],
+            param_file='analyze.par')
+        if error:
+            print("Parameter file missing requirements.")
+            print(error)
+            print("Data not created.")
+            return
+        jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', jurisdiction)
+        most_granular_id = dbr.name_to_id(self.session, 'ReportingUnitType', 
+            d['sub_reporting_unit_type'])
+        hierarchy = dbr.get_jurisdiction_hierarchy(self.session, jurisdiction_id, most_granular_id)
+        results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
+		# bar chart always at one level below top reporting unit
+        agg_results = a.create_bar(self.session, jurisdiction_id, hierarchy[1], \
+            None, contest, results_info[1], True)
+        return agg_results
+
 
 def get_filename(path):
     head, tail = ntpath.split(path)
