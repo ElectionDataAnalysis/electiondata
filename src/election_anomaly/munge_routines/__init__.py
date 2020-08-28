@@ -176,9 +176,17 @@ def replace_raw_with_internal_ids(
     raw_identifiers = pd.read_csv(os.path.join(juris.path_to_juris_dir,'dictionary.txt'),sep='\t')
     raw_ids_for_element = raw_identifiers[raw_identifiers['cdf_element'] == element]
 
-    working = working.merge(raw_ids_for_element, how=how,
-                            left_on=f'{element}_raw',
-                            right_on='raw_identifier_value', suffixes=['',f'_{element}_ei'])
+    working = working.merge(raw_ids_for_element, how='left', left_on=f'{element}_raw',
+                            right_on='raw_identifier_value', suffixes=['', f'_{element}_ei']
+                            )
+
+    if drop_unmatched:
+        to_drop = working[working['cdf_internal_name'].isnull()]
+        unmatched_raw = list(to_drop[f'{element}_raw'].unique())
+        if len(unmatched_raw) > 0:
+            e = f'Unmatched {element}s: {unmatched_raw}'
+            ui.add_error(error,'munge_warning',e)
+        working = working[working['cdf_internal_name'].notnull()]
 
     if working.empty:
         e = f'No raw {element} in \'dictionary.txt\' matched any raw {element} derived from the result file'
@@ -532,7 +540,7 @@ def raw_elements_to_cdf(
                 # join CountItemType_Id and OtherCountItemType
                 cit = pd.read_sql_table('CountItemType', session.bind)
                 working = enum_col_to_id_othertext(working, 'CountItemType', cit)
-                working = working.drop(['raw_identifier_value','cdf_element'],axis=1)
+                working = working.drop(['raw_identifier_value','cdf_element','CountItemType_raw'],axis=1)
             else:
                     none_or_unknown_id = dbr.name_to_id(session,t,'none or unknown')
                     working, err = replace_raw_with_internal_ids(
