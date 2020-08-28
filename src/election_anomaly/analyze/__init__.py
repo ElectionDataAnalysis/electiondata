@@ -275,7 +275,6 @@ def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, e
 	ids = top_ranked['unit_id'].unique()
 	for id in ids:
 		temp_df = top_ranked[top_ranked['unit_id'] == id]
-
 		# some cleaning here to make the pivoting work
 		scores_df = temp_df[temp_df['rank'] != 1]
 		scores_df = scores_df[['ReportingUnit_Id', 'score', 'margins', 'margins_pct']]
@@ -289,33 +288,23 @@ def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, e
 		candidates = temp_df['Candidate_Id'].unique()
 		x = dbr.name_from_id(session, 'Candidate', candidates[0])
 		y = dbr.name_from_id(session, 'Candidate', candidates[1]) 
-		results = {
-			"election": dbr.name_from_id(session, 'Election', election_id),
-			"jurisdiction": dbr.name_from_id(session, 'ReportingUnit', top_ru_id),
-			"contest": dbr.name_from_id(session, 'CandidateContest', temp_df.iloc[0]['Contest_Id']),
-			# TODO: remove hard coded subdivision type
-			"subdivision_type": dbr.name_from_id(session, 'ReportingUnitType', 
-				temp_df.iloc[0]['ReportingUnitType_Id']),
-			"count_item_type": temp_df.iloc[0]['CountItemType'],
-			"x": x,
-			"y": y,
-			"margin": temp_df.iloc[0]['margins'],
-			"votes_at_stake": temp_df.iloc[0]['margin_ratio'], 
-			"counts": []
-		}
-		pivot_df = pd.pivot_table(temp_df, values='Count', 
-			index=['ReportingUnit_Id', 'Name', 'score', 'margins'], \
-			columns='Selection', aggfunc=np.mean).sort_values('score', ascending=False).reset_index()
-		for i, row in pivot_df.iterrows():
-			results['counts'].append({
-				'name': row['Name'],
-				'x': row[x],
-				'y': row[y],
-				'score': row['score'],
-				'margin': row['margins']
-			})
-			if i == 7:
-				break
+		jurisdiction = dbr.name_from_id(session, 'ReportingUnit', top_ru_id)
+
+		pivot_df = pd.pivot_table(temp_df, values='Count',
+			index=['Name'], columns='Selection').reset_index()
+		score_df = temp_df.groupby('Name')['score', 'margins', 'margins_pct', 'margin_ratio'].mean()
+		pivot_df = pivot_df.merge(score_df, how='inner', on='Name')\
+			.sort_values('score', ascending=False).reset_index()
+
+		results = package_results(pivot_df, jurisdiction, x, y, restrict=8)
+		results["election"] = dbr.name_from_id(session, 'Election', election_id)
+		results["contest"] = dbr.name_from_id(session, 'CandidateContest', temp_df.iloc[0]['Contest_Id'])
+		results["subdivision_type"] = dbr.name_from_id(session, 'ReportingUnitType', \
+				temp_df.iloc[0]['ReportingUnitType_Id'])
+		results["count_item_type"] = temp_df.iloc[0]['CountItemType']
+		results["votes_at_stake"] = temp_df.iloc[0]['votes_at_stake']
+		results['margin'] = temp_df[temp_df['rank'] == 1].iloc[0]['ind_total']\
+			- temp_df[temp_df['rank'] != 1].iloc[0]['ind_total']
 		result_list.append(results)
 		
 	return result_list
@@ -328,13 +317,6 @@ def assign_anomaly_score(data):
 	distinct combination of contest, reporting unit type, and vote type. Each 
 	combination of those would get assigned an ID. This means rows may get added
 	to the dataframe if needed."""
-
-	######### FOR TESTING PURPOSES ONLY!!!!! ###########
-	#data = data[data['Contest_Id'] == 14949] # only 2 candidates
-	#data = data[data['Contest_Id'] == 14777] # 3 candidates
-	#data = data[(data['Contest_Id'] == 14949) | (data['Contest_Id'] == 14777)]
-	#data = data[data['Contest_Id'] == 14917] # this has infinite margins
-	#data = data[data['Contest_Id'] == 14952]
 
 	# Assign a ranking for each candidate by votes for each contest
 	total_data = data[data['CountItemType'] == 'total']
@@ -435,11 +417,6 @@ def get_most_anomalous(data, n):
 	data.rename(columns={'Count_x':'Count'}, inplace=True)
 	data.drop(columns=['Count_y'], inplace=True)
 
-	# margins = list(data['margin_ratio'].unique())
-	# margins.sort(reverse=True)
-	# top_margins = margins[0:n]
-	# data = data[data['margin_ratio'].isin(top_margins)]
-
 	# now we get the top 8 reporting unit IDs, in terms of anomaly score, of the winner and most anomalous
 	ids = data['unit_id'].unique()
 	df = pd.DataFrame()
@@ -529,6 +506,7 @@ def calculate_votes_at_stake(data):
 				(temp_df['rank'] == 1))].sort_values('rank', ascending=False)
 
 			# get a df of the pairing with closest margin to the most anomalous
+			# Margins could be + or - so need to handle both
 			no_zeros = temp_df[(temp_df['margins_pct'] != 0.0) &
 				(temp_df['margins_pct'] != margin_pct) & 
 				(temp_df['Selection'] == selection)]
@@ -540,36 +518,25 @@ def calculate_votes_at_stake(data):
 				((temp_df['margins_pct'] == next_margin_pct) |
 				(temp_df['rank'] == 1))].sort_values('rank', ascending=False)
 			
-			"""move the most anomalous to the closest and calculate what the 
-			change to the Contest margin would be"""
-
-			# first calculate the Contest margin
+			# move the most anomalous to the closest and calculate what the 
+			# change to the Contest margin would be
 			winner_bucket_total = int(anomalous_df[anomalous_df['rank'] == 1]['Count'])
 			not_winner_bucket_total = int(anomalous_df[anomalous_df['rank'] != 1]['Count'])
-
 			reported_bucket_total = int(anomalous_df['Count'].sum())
 			next_bucket_total = int(next_anomalous_df['Count'].sum()) 
 			adj_margin = next_anomalous_df[next_anomalous_df['rank'] != 1].iloc[0]['Count'] / next_bucket_total
 			not_winner_adj_bucket_total = int(reported_bucket_total * adj_margin)
 			winner_adj_bucket_total = reported_bucket_total - not_winner_adj_bucket_total
 
-			# this does contest margin by raw values
+			# calculate margins by raw numbers
 			contest_margin = winner_bucket_total - not_winner_bucket_total
 			adj_contest_margin = winner_adj_bucket_total - not_winner_adj_bucket_total
-
 			temp_df['margin_ratio'] = (contest_margin - adj_contest_margin) / contest_margin
-
-			# print(temp_df[['Count','Selection','rank','margins','score', 'selection_total', 'ind_total', 'contest_total','CountItemType','Name']])
-			# print('\n')
-			# print(anomalous_df[['Count','Selection','rank','margins','score', 'selection_total', 'ind_total', 'contest_total','CountItemType','Name']])
-			# print('\n')
-			# print(next_anomalous_df[['Count','Selection','rank','margins','score','selection_total', 'ind_total','contest_total','CountItemType','Name']])
-			# print(f"adjusted margin: {adj_contest_margin}, reported margin: {contest_margin}")
-			# print(f"(orig - adjusted) / orig: {temp_df.iloc[0]['margin_ratio']}")
-			# print(f"adj margin: {adj_margin}, winner adj bucket: {winner_adj_bucket_total}, not winner adj bucket: {not_winner_adj_bucket_total}")
-			# input()
+			temp_df['votes_at_stake'] = contest_margin - adj_contest_margin
 		except:
 			temp_df['margin_ratio'] = 0
+			temp_df['votes_at_stake'] = 0
+
 		df = pd.concat([df, temp_df])
 	return df
 
