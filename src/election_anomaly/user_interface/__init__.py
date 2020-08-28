@@ -196,7 +196,11 @@ def read_single_datafile(munger: jm.Munger, f_path: str, err: dict) -> [pd.DataF
 
 
 def read_combine_results(mu: jm.Munger, results_file, project_root, err, aux_data_dir=None):
-	working, err = read_single_datafile(mu, results_file, err)
+	try:
+		working, err = read_single_datafile(mu, results_file, err)
+	except Exception as exc:
+		e = f'Exception while reading file {results_file}: {exc}'
+		add_error(err,'datafile',e)
 	if [k for k in err.keys() if err[k] != None]:
 		return pd.DataFrame(), err
 	else:
@@ -260,8 +264,8 @@ def new_datafile(
 
 	try:
 		err = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,err,ids=results_info)
-	except:
-		e = 'Unspecified error during munging. Results not loaded to database.'
+	except Exception as exc:
+		e = f'Unspecified error during munging: {exc}\nResults not loaded to database.'
 		add_error(err,'datafile_error',e)
 		return err
 

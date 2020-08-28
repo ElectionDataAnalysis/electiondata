@@ -449,7 +449,10 @@ def add_selection_id(df: pd.DataFrame, engine, jurisdiction: jm.Jurisdiction, er
         c_df = dbr.append_id_to_dframe(engine,c_df,'CandidateSelection',col_map=col_map)
 
         # find unmatched records
-        c_df_unmatched = c_df[c_df.CandidateSelection_Id == 0].copy()
+        c_df_unmatched = c_df[
+            (c_df.CandidateSelection_Id == 0) | (c_df.CandidateSelection_Id == '') |
+            (c_df.CandidateSelection_Id.isnull())
+        ].copy()
 
         if not c_df_unmatched.empty:
             #  Load CandidateSelections to Selection table (for unmatched)
@@ -485,10 +488,21 @@ def raw_elements_to_cdf(
     working = add_constant_column(working,'Election_Id',ids[1])
     working = add_constant_column(working,'_datafile_Id',ids[0])
 
-    working, err = munge_and_melt(mu,working,count_cols,err)
-
-    working, err = add_contest_id(working, juris, err, session)
+    try:
+        working, err = munge_and_melt(mu,working,count_cols,err)
+    except Exception as exc:
+        e = f'Error during munge-and-melt: {exc}'
+        ui.add_error(err,'munge_error',e)
+        return  err
+    try:
+        working, err = add_contest_id(working, juris, err, session)
+    except Exception as exc:
+        e = f'Error while adding Contest_Id: {exc}'
+        ui.add_error(err,'munge_error',e)
+        return err
     if working.empty:
+        e = f'No contest ids could be found.'
+        ui.add_error(err,'munge_error',e)
         return err
 
     # get ids for remaining info sourced from rows and columns

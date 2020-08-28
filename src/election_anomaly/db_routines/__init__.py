@@ -68,7 +68,7 @@ def append_to_composing_reporting_unit_join(engine,ru):
 
 		# add db Id column to ru_static, if it's not already there
 		if 'Id' not in working.columns:
-			working_static = ru_static.merge(ru_cdf[['Name','Id']],on='Name',how='left')
+			ru_static = ru_static.merge(ru_cdf[['Name','Id']],on='Name',how='left')
 
 		# create a list of rows to append to the ComposingReportingUnitJoin element
 		cruj_dframe_list = []
@@ -473,7 +473,7 @@ def add_records_to_selection_table(engine, n: int) -> list:
 
 
 def export_rollup_to_csv(
-		engine, top_ru: str, sub_unit_type: str, contest_type: str, datafile_list: iter, out_path: str,
+		cursor, top_ru: str, sub_unit_type: str, contest_type: str, datafile_list: iter, out_path: str,
 		sep: str = '\t', by: str = 'Id', exclude_total: bool = False) -> str:
 
 	if exclude_total:
@@ -579,10 +579,7 @@ def export_rollup_to_csv(
 		err_str = f'Unrecognized contest_type: {contest_type}. No results exported'
 		return err_str
 	try:
-		connection = engine.raw_connection()
-		cursor = connection.cursor()
 		cursor.execute(q,[top_ru, sub_unit_type, tuple(datafile_list), out_path, sep])
-		connection.close()
 		print(f'Results exported to {out_path}')
 		err_str = None
 	except Exception as exc:
@@ -606,3 +603,17 @@ def vote_type_list(cursor,datafile_list: list, by: str='Id') -> (list, str):
 		err_str = f'Database error pulling list of vote types: {exc}'
 		vt_list = None
 	return vt_list, err_str
+
+
+def data_file_list(cursor, election_id_list, by='Id'):
+	q = sql.SQL(
+		"""SELECT distinct d.{by} FROM _datafile d WHERE d."Election_Id" in %s"""
+	).format(by=sql.Identifier(by))
+	try:
+		cursor.execute(q,[tuple(election_id_list)])
+		df_list = [x for (x,) in cursor.fetchall()]
+		err_str = None
+	except Exception as exc:
+		err_str = f'Database error pulling list of datafiles with election id in {election_id_list}: {exc}'
+		df_list = None
+	return df_list, err_str

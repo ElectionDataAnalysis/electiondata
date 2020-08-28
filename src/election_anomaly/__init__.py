@@ -115,6 +115,12 @@ class MultiDataLoader():
 					self.move_loaded_results_file(sdl,f,load_error)
 					if load_error:
 						err[f] = load_error
+				else:
+					print('Error(s) before data loading:')
+					if sdl.parameter_err:
+						print(f'Parameter error: {sdl.parameter_err}\n')
+					if sdl.munger_err:
+						print(f'Munger error: {sdl.munger_err}')
 		return err
 
 	def move_loaded_results_file(self, sdl, f: str, load_error: dict):
@@ -218,7 +224,7 @@ class SingleDataLoader():
 			col_map = {'short_name':'short_name'}
 			datafile_id = dbr.append_id_to_dframe(
 				self.session.bind,data,'_datafile',col_map=col_map
-			).loc[0,'_datafile_Id']
+			).iloc[0]['_datafile_Id']
 		return [datafile_id, election_id], e
 
 	def load_results(self) -> dict:
@@ -285,8 +291,8 @@ class Analyzer():
 			rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
 			sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
 			election_id = dbr.name_to_id(self.session, 'Election', election)
-			err_str = avp.create_rollup(self.session, d['rollup_directory'], rollup_unit_id,
-				sub_unit_id, election_id, [self.d['results_file_short_name']],by='short_name')
+			err_str = avp.create_rollup(cursor, d['rollup_directory'], rollup_unit_id,
+				sub_unit_id, election_id)
 			connection.close()
 		return err_str
 
