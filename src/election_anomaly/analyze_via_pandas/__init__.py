@@ -77,11 +77,11 @@ def create_rollup(
 	else:
 		inv_df = pd.DataFrame()
 	inventory = {'Election': election, 'ReportingUnitType': sub_rutype,
-				 'source_db_url': str(cursor.connection.dsn), 'timestamp': datetime.date.today()}
+				 'source_db_url': cursor.connection.dsn, 'timestamp': datetime.date.today()}
 
 	for contest_type in ['BallotMeasure','Candidate']:
 		# export data
-		rollup_file = f'{contest_type}_results.txt'
+		rollup_file = f'{cursor.connection.info.dbname}_{contest_type}_results.txt'
 		while os.path.isfile(os.path.join(leaf_dir, rollup_file)):
 			rollup_file = input(f'There is already a file called {rollup_file}. Pick another name.\n')
 
@@ -102,38 +102,3 @@ def create_rollup(
 
 def short_name(text,sep=';'):
 	return text.split(sep)[-1]
-
-
-def export_to_inventory_file_tree(target_dir,target_sub_dir,target_file,inventory_columns,inventory_values,df):
-	# TODO standard order for columns
-	# export to file system
-	out_path = os.path.join(
-		target_dir,target_sub_dir)
-	Path(out_path).mkdir(parents=True,exist_ok=True)
-
-	while os.path.isfile(os.path.join(out_path,target_file)):
-		target_file = input(f'There is already a file called {target_file}. Pick another name.\n')
-
-	out_file = os.path.join(out_path,target_file)
-	df.to_csv(out_file,sep='\t')
-
-	# create record in inventory.txt
-	inventory_file = os.path.join(target_dir,'inventory.txt')
-	inv_exists = os.path.isfile(inventory_file)
-	if inv_exists:
-		# check that header matches inventory_columns
-		with open(inventory_file,newline='') as f:
-			reader = csv.reader(f,delimiter='\t')
-			file_header = next(reader)
-			# TODO: offer option to delete inventory file
-			assert file_header == inventory_columns, \
-				f'Header of file {f} is\n{file_header},\ndoesn\'t match\n{inventory_columns}.'
-
-	with open(inventory_file,'a',newline='') as csv_file:
-		wr = csv.writer(csv_file,delimiter='\t')
-		if not inv_exists:
-			wr.writerow(inventory_columns)
-		wr.writerow(inventory_values)
-
-	print(f'Results exported to {out_file}')
-	return
