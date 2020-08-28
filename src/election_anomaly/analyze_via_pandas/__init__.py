@@ -93,7 +93,7 @@ def create_rollup(
 			err_str = err
 		else:
 			# create record for inventory.txt
-			inv_df.append(inventory, ignore_index=True).fillna('')
+			inv_df = inv_df.append(inventory, ignore_index=True).fillna('')
 			err_str = None
 
 	# export to inventory file

@@ -28,7 +28,7 @@ prep_pars = ['project_root', 'jurisdiction_path', 'name', 'abbreviated_name',
 
 optional_prep_pars = ['results_file', 'munger_name']
 
-analyze_pars = ['db_paramfile', 'db_name', 'results_file_short_name']
+analyze_pars = ['db_paramfile', 'db_name']
 
 # classes
 class MultiDataLoader():
@@ -251,7 +251,7 @@ class Analyzer():
 		""" Checks if parameter file exists and is correct. If not, does
 		not create DataLoader object. """
 		try:
-			d, parameter_err = ui.get_runtime_parameters(analyze_pars, param_file='analyze.par')
+			d, parameter_err = ui.get_runtime_parameters(analyze_pars, param_file='multi.par')
 		except FileNotFoundError as e:
 			print("Parameter file not found. Ensure that it is located" \
 				" in the current directory. Analyzer object not created.")
