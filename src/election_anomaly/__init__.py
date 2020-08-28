@@ -266,7 +266,7 @@ class Analyzer():
 		return super().__new__(self)
 
 	def __init__(self):
-		self.d, self.parameter_err = ui.get_runtime_parameters(analyze_pars,param_file='analyze.par')
+		self.d, self.parameter_err = ui.get_runtime_parameters(analyze_pars,param_file='multi.par')
 
 		eng = dbr.sql_alchemy_connect(paramfile=self.d['db_paramfile'],
 			db_name=self.d['db_name'])
@@ -280,8 +280,7 @@ class Analyzer():
 		return None
 
 	def top_counts_by_vote_type(self, election, rollup_unit, sub_unit):
-		# TODO find all datafiles for the given election
-		d, error = ui.get_runtime_parameters(['rollup_directory'], param_file='analyze.par')
+		d, error = ui.get_runtime_parameters(['rollup_directory'], param_file='multi.par')
 		if error:
 			err_str = f'Parameter file missing requirements.\n{error}\nNo results exported'
 			print(err_str)

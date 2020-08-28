@@ -312,7 +312,7 @@ def config(filename=None, section='postgresql',msg='Pick parameter file for conn
 	return d
 
 
-def get_runtime_parameters(required_keys, optional_keys=None,param_file='run_time.par'):
+def get_runtime_parameters(required_keys, optional_keys=None,param_file='multi.par'):
 	d = {}
 	missing_required_params = {'missing':[]}
 
