@@ -438,10 +438,10 @@ def add_selection_id(df: pd.DataFrame, engine, jurisdiction: jm.Jurisdiction, er
     for ct in ['BallotMeasure','Candidate']:
         w[ct] = df[df.contest_type == ct].copy()
 
-    bms = pd.read_sql_table(f'BallotMeasureSelection', engine)
 
     # append BallotMeasureSelection_Id as Selection_Id to w['BallotMeasure']
     if not w['BallotMeasure'].empty:
+        bms = pd.read_sql_table(f'BallotMeasureSelection', engine)
         w['BallotMeasure'], err = replace_raw_with_internal_ids(
             w['BallotMeasure'], jurisdiction, bms,'BallotMeasureSelection','Name',err, drop_unmatched=True, drop_all_ok=True)
         w['BallotMeasure'].rename(columns={'BallotMeasureSelection_Id':'Selection_Id'},inplace=True)
@@ -472,6 +472,9 @@ def add_selection_id(df: pd.DataFrame, engine, jurisdiction: jm.Jurisdiction, er
 
             # update CandidateSelection_Id column for previously unmatched, merging on Candidate_Id and Party_Id
             c_df.loc[c_df_unmatched.index,'CandidateSelection_Id'] = c_df_unmatched['Id']
+        # recast Candidate_Id and Party_Id to int in w['Candidate']; Note that neither should have nulls, but rather the 'none or unknown' Id
+        #  NB: c_df had this recasting done in the append_id_to_dframe routine
+        w['Candidate'] = generic_clean(w['Candidate'])
 
         # append CandidateSelection_Id to w['Candidate']
         w['Candidate'] = w['Candidate'].merge(c_df,how='left',on=['Candidate_Id','Party_Id'])

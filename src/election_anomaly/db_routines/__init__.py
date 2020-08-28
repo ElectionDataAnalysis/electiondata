@@ -330,8 +330,8 @@ def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', times
 		cursor.execute(q)
 		working = working.drop([timestamp], axis=1)
 	connection.commit()
-	q = sql.SQL("SELECT column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = %s")
-	cursor.execute(q,[temp_table])
+
+
 
 	# make sure datatypes of working match the types of target
 	# get set <mixed_int> of cols with integers & nulls and kludge only those
