@@ -625,10 +625,21 @@ def data_file_list(cursor, election_id_list, by='Id'):
 def remove_data(connection,cursor, id: int) -> str:
 	"""Remove all VoteCount data from a particular file, and remove that file from _datafile"""
 	try:
-		q = 'DELETE FROM "VoteCount" where "_datafile_Id"=%s;Delete from _datafile where "Id"=%s;'
-		cursor.execute(q, [id,id])
-		connection.commit()
-		err_str = None
-	except Exception as exc:
-		err_str = f'Error deleting data: {exc}'
+		q = 'SELECT * FROM _datafile WHERE _datafile."Id"=%s;'
+		cursor.execute(q,[id])
+		record = cursor.fetchall()[0]
+	except KeyError as exc:
+		return f'No datafile found with Id = {id}'
+
+	confirm = input(f'Confirm: delete all VoteCount data from this results file: {record} (y/n)?')
+	if confirm == 'y':
+		try:
+			q = 'DELETE FROM "VoteCount" where "_datafile_Id"=%s;Delete from _datafile where "Id"=%s;'
+			cursor.execute(q, [id,id])
+			connection.commit()
+			err_str = None
+		except Exception as exc:
+			err_str = f'Error deleting data: {exc}'
+	else:
+		err_str = 'Deletion not confirmed by user'
 	return err_str
