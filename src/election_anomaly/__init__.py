@@ -54,7 +54,10 @@ class MultiDataLoader():
 	def __init__(self):
 		# grab parameters
 		self.d, self.parameter_err = ui.get_runtime_parameters(multi_data_loader_pars,param_file='multi.par')
-	
+
+		# prepare to track files loaded, dictionary of dictionaries, keys are parameter file paths
+		self.tracker = dict()
+
 		# create db if it does not already exist
 		error = dbr.establish_connection(paramfile=self.d['db_paramfile'], db_name=self.d['db_name'])
 		if error:
@@ -84,6 +87,11 @@ class MultiDataLoader():
 			params[f], param_err[f] = ui.get_runtime_parameters(
 				single_data_loader_pars, optional_keys=['aux_data_dir'], param_file=par_file)
 			juris_path[f] = params[f]['jurisdiction_path']
+			# update file_tracker
+			self.tracker[f] = params[f]
+			self.tracker[f]['status'] = 'not loaded'
+			if param_err[f]:
+				self.tracker['parameter_error'] = param_err[f]
 
 		err = dict()
 		# group .par files by jurisdiction_path
@@ -110,17 +118,23 @@ class MultiDataLoader():
 					juris)
 				errors = sdl.check_errors()
 				if errors == (None,None):
+					self.tracker[f]['status'] = 'loading initialized'
 					# try to load data
 					load_error = sdl.load_results()
 					self.move_loaded_results_file(sdl,f,load_error)
 					if load_error:
 						err[f] = load_error
+						self.tracker[f]['load_error'] = load_error
+						self.tracker[f]['status'] = 'loading failed'
 				else:
+					self.tracker[f]['status'] = 'loading not initialized'
 					print('Error(s) before data loading:')
 					if sdl.parameter_err:
 						print(f'Parameter error: {sdl.parameter_err}\n')
+						self.tracker[f]['SingleDataLoader_parameter_error'] = sdl.parameter_err
 					if sdl.munger_err:
 						print(f'Munger error: {sdl.munger_err}')
+						self.tracker[f]['munger_error'] = sdl.munger_err
 		return err
 
 	def move_loaded_results_file(self, sdl, f: str, load_error: dict):
@@ -137,6 +151,7 @@ class MultiDataLoader():
 					print(f'Error ({mu}): {msg}')
 					errors.append(msg)
 		if errors:
+			self.tracker[f]['status'] = 'loading failed'
 			err_str = '\n\t'.join(errors)
 			if warnings:
 				ws = '\n\t'.join(warnings)
@@ -156,6 +171,7 @@ class MultiDataLoader():
 			ui.archive(f, self.d['results_dir'], new_dir)
 			ui.archive(sdl.d['results_file'], self.d['results_dir'], new_dir)
 			print_str = f'\tArchived {f} and its results file.'
+			self.tracker[f]['status'] = 'loaded and archived'
 			if warnings:
 				# save warnings in archive directory
 				warn_file = os.path.join(new_dir, f'{f[:-4]}.warn')
