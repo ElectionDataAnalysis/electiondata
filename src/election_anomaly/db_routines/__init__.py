@@ -588,6 +588,9 @@ def export_rollup_to_csv(
 
 
 def vote_type_list(cursor,datafile_list: list, by: str='Id') -> (list, str):
+	if len(datafile_list) == 0:
+		return [], 'No vote types found because no datafiles listed'
+
 	q = sql.SQL("""
 		SELECT distinct CIT."Txt"
 		FROM "VoteCount" VC

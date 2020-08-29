@@ -179,7 +179,7 @@ def replace_raw_with_internal_ids(
     unmatched = working[working['cdf_internal_name'].isnull()]
     unmatched_raw = list(unmatched[f'{element}_raw'].unique())
     if len(unmatched_raw) > 0:
-        e = f'Unmatched {element}s: {unmatched_raw}'
+        e = f'{element}s not found in dictionary.txt: {unmatched_raw}'
         ui.add_error(error, 'munge_warning', e)
 
     if drop_unmatched:

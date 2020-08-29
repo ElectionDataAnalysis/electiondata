@@ -47,6 +47,8 @@ def create_rollup(
 		if e:
 			return e
 		by = 'Id'
+		if len(datafile_list) == 0:
+			return f'No datafiles found for Election_Id {election_id}'
 
 	# set exclude_total
 	vote_type_list, err_str = dbr.vote_type_list(cursor, datafile_list, by=by)
