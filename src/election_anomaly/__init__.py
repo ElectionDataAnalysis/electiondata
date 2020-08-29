@@ -126,6 +126,8 @@ class MultiDataLoader():
 						err[f] = load_error
 						self.tracker[f]['load_error'] = load_error
 						self.tracker[f]['status'] = 'loading failed'
+					else:
+						self.tracker[f]['status'] = 'loaded'
 				else:
 					self.tracker[f]['status'] = 'loading not initialized'
 					print('Error(s) before data loading:')
@@ -151,7 +153,6 @@ class MultiDataLoader():
 					print(f'Error ({mu}): {msg}')
 					errors.append(msg)
 		if errors:
-			self.tracker[f]['status'] = 'loading failed'
 			err_str = '\n\t'.join(errors)
 			if warnings:
 				ws = '\n\t'.join(warnings)
@@ -171,7 +172,6 @@ class MultiDataLoader():
 			ui.archive(f, self.d['results_dir'], new_dir)
 			ui.archive(sdl.d['results_file'], self.d['results_dir'], new_dir)
 			print_str = f'\tArchived {f} and its results file.'
-			self.tracker[f]['status'] = 'loaded and archived'
 			if warnings:
 				# save warnings in archive directory
 				warn_file = os.path.join(new_dir, f'{f[:-4]}.warn')

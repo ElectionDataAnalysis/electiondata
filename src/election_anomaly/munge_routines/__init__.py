@@ -178,7 +178,7 @@ def replace_raw_with_internal_ids(
 
     unmatched = working[working['cdf_internal_name'].isnull()]
     unmatched_raw = list(unmatched[f'{element}_raw'].unique())
-    if len(unmatched_raw) > 0:
+    if len(unmatched_raw) > 0 and element != 'BallotMeasureContest':
         e = f'{element}s not found in dictionary.txt: {unmatched_raw}'
         ui.add_error(error, 'munge_warning', e)
 
@@ -226,7 +226,7 @@ def replace_raw_with_internal_ids(
 
     # error/warning for unmatched elements
     working_unmatched = working[working.Id.isnull()]
-    if not working_unmatched.empty:
+    if not working_unmatched.empty and element != 'BallotMeasureContest':
         unmatched_str = '\n\t'.join(working_unmatched[internal_name_column].unique())
         e = f'Warning: Results for {working_unmatched.shape[0]} rows with unmatched {element}s ' \
             f'will not be loaded to database. These elements were found in dictionary.txt, but ' \
