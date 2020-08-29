@@ -206,8 +206,8 @@ def replace_raw_with_internal_ids(
         working['cdf_internal_name'] = working['cdf_internal_name'].fillna('none or unknown')
         #
 
-    # drop extraneous cols from mu.raw_identifier, and drop original raw
-    working = working.drop(['raw_identifier_value', 'cdf_element', f'{element}_raw'], axis=1)
+    # drop extraneous cols from mu.raw_identifier
+    working = working.drop(['raw_identifier_value', 'cdf_element'], axis=1)
 
     # ensure that there is a column in working called by the element
     # containing the internal name of the element
@@ -224,27 +224,28 @@ def replace_raw_with_internal_ids(
         table_df[['Id',internal_name_column]],how='left',left_on=element,right_on=internal_name_column
     )
 
-    # error/warning for unmatched elements to be dropped
+    # error/warning for unmatched elements
+    working_unmatched = working[working.Id.isnull()]
+    if not working_unmatched.empty:
+        unmatched_str = '\n\t'.join(working_unmatched[internal_name_column].unique())
+        e = f'Warning: Results for {working_unmatched.shape[0]} rows with unmatched {element}s ' \
+            f'will not be loaded to database. These elements were found in dictionary.txt, but ' \
+            f'no corresponding record was found in {element}.txt: \n{unmatched_str}'
+        ui.add_error(error, 'munge_warning', e)
+
     if drop_unmatched:
-        to_be_dropped = working[working.Id.isnull()]
-        if to_be_dropped.empty:
-            pass
-        elif to_be_dropped.shape[0] == working.shape[0]:
+        if working_unmatched.shape[0] == working.shape[0]:
             e =f'No {element} was matched. Either raw values are not in dictionary.txt, or ' \
                f'the corresponding cdf_internal_names are missing from {element}.txt'
             ui.add_error(error,'munge_error',e)
             return working.drop(working.index), error
-        else:
-            unmatched_str = '\n\t'.join(to_be_dropped[internal_name_column].unique())
-            e = f'Warning: Results for {to_be_dropped.shape[0]} rows with unmatched {element}s ' \
-                f'will not be loaded to database. {unmatched_str}'
-            ui.add_error(error,'munge_warning',e)
+
     else:
         # change name of unmatched to 'none or unknown' and assign <unmatched_id> as Id
         working.loc[working.Id.isnull(),internal_name_column] = 'none or unknown'
         working['Id'].fillna(unmatched_id,inplace=True)
 
-    working = working.drop([internal_name_column], axis=1)
+    working = working.drop([internal_name_column, f'{element}_raw'], axis=1)
     working.rename(columns={'Id': f'{element}_Id'}, inplace=True)
     return working, error
 

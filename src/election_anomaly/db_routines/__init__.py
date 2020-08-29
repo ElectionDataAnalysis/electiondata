@@ -637,6 +637,7 @@ def remove_vote_counts(connection, cursor, id: int) -> str:
 			q = 'DELETE FROM "VoteCount" where "_datafile_Id"=%s;Delete from _datafile where "Id"=%s;'
 			cursor.execute(q, [id,id])
 			connection.commit()
+			print(f'VoteCounts deleted from results file {record["short_name"]}')
 			err_str = None
 		except Exception as exc:
 			err_str = f'Error deleting data: {exc}'
