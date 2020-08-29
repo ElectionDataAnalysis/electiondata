@@ -165,10 +165,6 @@ def replace_raw_with_internal_ids(
     <unmatched_id> is the id to assign to unmatched records.
     """
     working = df.copy()
-    if drop_unmatched:
-        how='inner'
-    else:
-        how='left'
     # join the 'cdf_internal_name' from the raw_identifier table -- this is the internal name field value,
     # no matter what the name field name is in the internal element table (e.g. 'Name', 'BallotName' or 'Selection')
     # use dictionary.txt from jurisdiction
@@ -180,12 +176,13 @@ def replace_raw_with_internal_ids(
                             right_on='raw_identifier_value', suffixes=['', f'_{element}_ei']
                             )
 
+    unmatched = working[working['cdf_internal_name'].isnull()]
+    unmatched_raw = list(unmatched[f'{element}_raw'].unique())
+    if len(unmatched_raw) > 0:
+        e = f'Unmatched {element}s: {unmatched_raw}'
+        ui.add_error(error, 'munge_warning', e)
+
     if drop_unmatched:
-        to_drop = working[working['cdf_internal_name'].isnull()]
-        unmatched_raw = list(to_drop[f'{element}_raw'].unique())
-        if len(unmatched_raw) > 0:
-            e = f'Unmatched {element}s: {unmatched_raw}'
-            ui.add_error(error,'munge_warning',e)
         working = working[working['cdf_internal_name'].notnull()]
 
     if working.empty:
@@ -205,7 +202,7 @@ def replace_raw_with_internal_ids(
         # TODO more efficient to drop these earlier, before melting
 
     # unmatched elements get nan in fields from dictionary table. Change these to "none or unknown"
-    if how == 'left':
+    if not drop_unmatched:
         working['cdf_internal_name'] = working['cdf_internal_name'].fillna('none or unknown')
         #
 
@@ -238,8 +235,9 @@ def replace_raw_with_internal_ids(
             ui.add_error(error,'munge_error',e)
             return working.drop(working.index), error
         else:
+            unmatched_str = '\n\t'.join(to_be_dropped[internal_name_column].unique())
             e = f'Warning: Results for {to_be_dropped.shape[0]} rows with unmatched {element}s ' \
-                f'will not be loaded to database.'
+                f'will not be loaded to database. {unmatched_str}'
             ui.add_error(error,'munge_warning',e)
     else:
         # change name of unmatched to 'none or unknown' and assign <unmatched_id> as Id
@@ -413,16 +411,20 @@ def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session:
     # TODO check this also when juris files loaded, to save time for user
 
     working = pd.concat([w_for_type[ct] for ct in ['BallotMeasure','Candidate']])
+    missing_idx = [idx for idx in df.index if idx not in working.index]
+    missing = df.loc[missing_idx]
     number_missing = df.shape[0] - working.shape[0]
     # fail if no contests recognized
     if working.empty:
+
         e = 'No contests in database matched. No results will be loaded to database.'
         ui.add_error(err,'munge_error',e)
         return working, err
 
     # warn of un-munged contests
-    elif number_missing > 0:
-        e = f'Warning: Results for unmatched contests ({number_missing} rows) will not be loaded to database.'
+    elif missing.shape[0] > 0:
+        missing_contest_str = '\n\t'.join(missing.CandidateContest_raw.unique())
+        e = f'Warning: Results for unmatched contests ({missing.shape[0]} rows) will not be loaded to database: {missing_contest_str}'
         ui.add_error(err, 'munge_warning',e)
 
     return working, err
@@ -437,7 +439,6 @@ def add_selection_id(df: pd.DataFrame, engine, jurisdiction: jm.Jurisdiction, er
     w = dict()
     for ct in ['BallotMeasure','Candidate']:
         w[ct] = df[df.contest_type == ct].copy()
-
 
     # append BallotMeasureSelection_Id as Selection_Id to w['BallotMeasure']
     if not w['BallotMeasure'].empty:
@@ -512,7 +513,7 @@ def raw_elements_to_cdf(
         ui.add_error(err,'munge_error',e)
         return err
     if working.empty:
-        e = f'No contest ids could be found.'
+        e = f'No contest ids could be found. '
         ui.add_error(err,'munge_error',e)
         return err
 

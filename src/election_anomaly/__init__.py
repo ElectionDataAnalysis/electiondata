@@ -641,9 +641,9 @@ def make_par_files(
 		dir: str, munger_name: str, jurisdiction_path: str, top_ru: str,
 		election: str, download_date: str='1900-01-01',
 		source: str='unknown',results_note: str='none', aux_data_dir: str=''):
-	"""Utility to create parameter files for multiple files. Makes a parameter file for each (non-.par) file in <dir>,
+	"""Utility to create parameter files for multiple files. Makes a parameter file for each (non-.par,non .*) file in <dir>,
 	once all other necessary parameters are specified. """
-	data_file_list = [f for f in os.listdir(dir) if f[-4:] != '.par']
+	data_file_list = [f for f in os.listdir(dir) if (f[-4:] != '.par') & (f[0] != '.')]
 	for f in data_file_list:
 		par_text = f'[election_anomaly]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\nmunger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\nresults_short_name={top_ru}_{f}\nresults_download_date={download_date}\nresults_source={source}\nresults_note={results_note}\naux_data_dir={aux_data_dir}\n'
 		par_name = '.'.join(f.split('.')[:-1]) + '.par'
