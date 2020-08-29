@@ -289,5 +289,11 @@ Lists of reporting units will be quite long, in which case searching by substrin
 ```
 Here we have used the capability of `display_options()` to take as an argument either a general database category ('reporting unit') or a type ('county'). 
 
-```
+## Miscellaneous helpful hints
+Beware of:
+ - Different names for same contest in different counties (if munging from a batch of county-level files)
+ - Different names for candidates, especially candidates with name suffixes or middle/maiden names
+ - Different "party" names for candidates without a party affiliation 
+ - Any item with an internal comma (e.g., 'John Sawyer, III')
+ - A county that uses all caps - (e.g., Seminole County FL)
 
