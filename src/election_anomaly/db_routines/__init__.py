@@ -620,3 +620,15 @@ def data_file_list(cursor, election_id_list, by='Id'):
 		err_str = f'Database error pulling list of datafiles with election id in {election_id_list}: {exc}'
 		df_list = None
 	return df_list, err_str
+
+
+def remove_data(connection,cursor, id: int) -> str:
+	"""Remove all VoteCount data from a particular file, and remove that file from _datafile"""
+	try:
+		q = 'DELETE FROM "VoteCount" where "_datafile_Id"=%s;Delete from _datafile where "Id"=%s;'
+		cursor.execute(q, [id,id])
+		connection.commit()
+		err_str = None
+	except Exception as exc:
+		err_str = f'Error deleting data: {exc}'
+	return err_str
