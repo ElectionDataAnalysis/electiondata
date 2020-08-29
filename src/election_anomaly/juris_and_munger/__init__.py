@@ -303,7 +303,6 @@ def ensure_juris_files(juris_path,project_root,ignore_empty=False):
     file_empty = []
     column_errors =[]
     null_columns_dict = {}
-    duplicate_rows = []
 
     # ensure necessary all files exist
     for juris_file in template_list:
@@ -332,24 +331,20 @@ def ensure_juris_files(juris_path,project_root,ignore_empty=False):
                                     f' {cols}\n')
 
             if juris_file == 'dictionary':
+                # dedupe the dictionary (d records the dupes found)
                 d, dupe = dedupe(cf_path)
             else:
-                # run dupe check
+                # dedupe the file
                 d, dupe = dedupe(cf_path)
                 # check for problematic null entries
                 null_columns = check_nulls(juris_file,cf_path,project_root)
                 if null_columns:
                     null_columns_dict[juris_file] = null_columns
 
-            if dupe != '':
-                duplicate_rows.append(dupe)
-
             if column_errors:
                 error_ensure_juris_files["column_errors"] = column_errors
             if null_columns_dict:
                 error_ensure_juris_files["null_columns"] = null_columns_dict
-            if duplicate_rows:
-                error_ensure_juris_files["duplicate_rows"] = duplicate_rows
 
         if file_empty:
             error_ensure_juris_files["file_empty_errors"] = file_empty
@@ -539,8 +534,7 @@ def dedupe(f_path,warning='There are duplicates'):
     dupe=''
     dupes_df,df = ui.find_dupes(df)
     if not dupes_df.empty:
-        dupe = f'Edit {f_path} to remove the duplication, then hit return to continue'
-        df = pd.read_csv(f_path,sep='\t',encoding='iso-8859-1')
+        df.to_csv(f_path,sep='\t',index=False)
     return df,dupe
 
 
