@@ -622,7 +622,7 @@ def data_file_list(cursor, election_id_list, by='Id'):
 	return df_list, err_str
 
 
-def remove_data(connection,cursor, id: int) -> str:
+def remove_vote_counts(connection, cursor, id: int) -> str:
 	"""Remove all VoteCount data from a particular file, and remove that file from _datafile"""
 	try:
 		q = 'SELECT * FROM _datafile WHERE _datafile."Id"=%s;'
