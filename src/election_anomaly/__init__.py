@@ -125,7 +125,6 @@ class MultiDataLoader():
 					if load_error:
 						err[f] = load_error
 						self.tracker[f]['load_error'] = load_error
-						self.tracker[f]['status'] = 'loading failed'
 					else:
 						self.tracker[f]['status'] = 'loaded'
 				else:
@@ -156,6 +155,7 @@ class MultiDataLoader():
 					print(f'Error ({mu}): {msg}')
 					errors.append(msg)
 		if errors:
+			self.tracker[f]['status'] = 'loading failed'
 			err_str = '\n\t'.join(errors)
 			if warnings:
 				ws = '\n\t'.join(warnings)
@@ -171,6 +171,7 @@ class MultiDataLoader():
 		else:
 			# move results file and its parameter file to a subfolder of the archive directory
 			#  named for the db
+			self.tracker[f]['status'] = 'loaded'
 			new_dir = os.path.join( self.d['archive_dir'],self.d['db_name'])
 			ui.archive(f, self.d['results_dir'], new_dir)
 			ui.archive(sdl.d['results_file'], self.d['results_dir'], new_dir)
