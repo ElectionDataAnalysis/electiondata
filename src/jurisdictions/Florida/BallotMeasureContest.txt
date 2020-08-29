@@ -1,0 +1,2 @@
+Name	ElectionDistrict	Election
+Voting Restoration Amendment	Florida	2018 General

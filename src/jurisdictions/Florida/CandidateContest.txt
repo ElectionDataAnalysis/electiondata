@@ -1,0 +1,966 @@
+Name	NumberElected	Office	PrimaryParty
+FL House District 1	1	FL House District 1	
+FL House District 2	1	FL House District 2	
+FL House District 3	1	FL House District 3	
+FL House District 4	1	FL House District 4	
+FL House District 5	1	FL House District 5	
+FL House District 6	1	FL House District 6	
+FL House District 7	1	FL House District 7	
+FL House District 8	1	FL House District 8	
+FL House District 9	1	FL House District 9	
+FL House District 10	1	FL House District 10	
+FL House District 11	1	FL House District 11	
+FL House District 12	1	FL House District 12	
+FL House District 13	1	FL House District 13	
+FL House District 14	1	FL House District 14	
+FL House District 15	1	FL House District 15	
+FL House District 16	1	FL House District 16	
+FL House District 17	1	FL House District 17	
+FL House District 18	1	FL House District 18	
+FL House District 19	1	FL House District 19	
+FL House District 20	1	FL House District 20	
+FL House District 21	1	FL House District 21	
+FL House District 22	1	FL House District 22	
+FL House District 23	1	FL House District 23	
+FL House District 24	1	FL House District 24	
+FL House District 25	1	FL House District 25	
+FL House District 26	1	FL House District 26	
+FL House District 27	1	FL House District 27	
+FL House District 28	1	FL House District 28	
+FL House District 29	1	FL House District 29	
+FL House District 30	1	FL House District 30	
+FL House District 31	1	FL House District 31	
+FL House District 32	1	FL House District 32	
+FL House District 33	1	FL House District 33	
+FL House District 34	1	FL House District 34	
+FL House District 35	1	FL House District 35	
+FL House District 36	1	FL House District 36	
+FL House District 37	1	FL House District 37	
+FL House District 38	1	FL House District 38	
+FL House District 39	1	FL House District 39	
+FL House District 40	1	FL House District 40	
+FL House District 41	1	FL House District 41	
+FL House District 42	1	FL House District 42	
+FL House District 43	1	FL House District 43	
+FL House District 44	1	FL House District 44	
+FL House District 45	1	FL House District 45	
+FL House District 46	1	FL House District 46	
+FL House District 47	1	FL House District 47	
+FL House District 48	1	FL House District 48	
+FL House District 49	1	FL House District 49	
+FL House District 50	1	FL House District 50	
+FL House District 51	1	FL House District 51	
+FL House District 52	1	FL House District 52	
+FL House District 53	1	FL House District 53	
+FL House District 54	1	FL House District 54	
+FL House District 55	1	FL House District 55	
+FL House District 56	1	FL House District 56	
+FL House District 57	1	FL House District 57	
+FL House District 58	1	FL House District 58	
+FL House District 59	1	FL House District 59	
+FL House District 60	1	FL House District 60	
+FL House District 61	1	FL House District 61	
+FL House District 62	1	FL House District 62	
+FL House District 63	1	FL House District 63	
+FL House District 64	1	FL House District 64	
+FL House District 65	1	FL House District 65	
+FL House District 66	1	FL House District 66	
+FL House District 67	1	FL House District 67	
+FL House District 68	1	FL House District 68	
+FL House District 69	1	FL House District 69	
+FL House District 70	1	FL House District 70	
+FL House District 71	1	FL House District 71	
+FL House District 72	1	FL House District 72	
+FL House District 73	1	FL House District 73	
+FL House District 74	1	FL House District 74	
+FL House District 75	1	FL House District 75	
+FL House District 76	1	FL House District 76	
+FL House District 77	1	FL House District 77	
+FL House District 78	1	FL House District 78	
+FL House District 79	1	FL House District 79	
+FL House District 80	1	FL House District 80	
+FL House District 81	1	FL House District 81	
+FL House District 82	1	FL House District 82	
+FL House District 83	1	FL House District 83	
+FL House District 84	1	FL House District 84	
+FL House District 85	1	FL House District 85	
+FL House District 86	1	FL House District 86	
+FL House District 87	1	FL House District 87	
+FL House District 88	1	FL House District 88	
+FL House District 89	1	FL House District 89	
+FL House District 90	1	FL House District 90	
+FL House District 91	1	FL House District 91	
+FL House District 92	1	FL House District 92	
+FL House District 93	1	FL House District 93	
+FL House District 94	1	FL House District 94	
+FL House District 95	1	FL House District 95	
+FL House District 96	1	FL House District 96	
+FL House District 97	1	FL House District 97	
+FL House District 98	1	FL House District 98	
+FL House District 99	1	FL House District 99	
+FL House District 100	1	FL House District 100	
+FL House District 101	1	FL House District 101	
+FL House District 102	1	FL House District 102	
+FL House District 103	1	FL House District 103	
+FL House District 104	1	FL House District 104	
+FL House District 105	1	FL House District 105	
+FL House District 106	1	FL House District 106	
+FL House District 107	1	FL House District 107	
+FL House District 108	1	FL House District 108	
+FL House District 109	1	FL House District 109	
+FL House District 110	1	FL House District 110	
+FL House District 111	1	FL House District 111	
+FL House District 112	1	FL House District 112	
+FL House District 113	1	FL House District 113	
+FL House District 114	1	FL House District 114	
+FL House District 115	1	FL House District 115	
+FL House District 116	1	FL House District 116	
+FL House District 117	1	FL House District 117	
+FL House District 118	1	FL House District 118	
+FL House District 119	1	FL House District 119	
+FL House District 120	1	FL House District 120	
+FL Senate District 1	1	FL Senate District 1	
+FL Senate District 2	1	FL Senate District 2	
+FL Senate District 3	1	FL Senate District 3	
+FL Senate District 4	1	FL Senate District 4	
+FL Senate District 5	1	FL Senate District 5	
+FL Senate District 6	1	FL Senate District 6	
+FL Senate District 7	1	FL Senate District 7	
+FL Senate District 8	1	FL Senate District 8	
+FL Senate District 9	1	FL Senate District 9	
+FL Senate District 10	1	FL Senate District 10	
+FL Senate District 11	1	FL Senate District 11	
+FL Senate District 12	1	FL Senate District 12	
+FL Senate District 13	1	FL Senate District 13	
+FL Senate District 14	1	FL Senate District 14	
+FL Senate District 15	1	FL Senate District 15	
+FL Senate District 16	1	FL Senate District 16	
+FL Senate District 17	1	FL Senate District 17	
+FL Senate District 18	1	FL Senate District 18	
+FL Senate District 19	1	FL Senate District 19	
+FL Senate District 20	1	FL Senate District 20	
+FL Senate District 21	1	FL Senate District 21	
+FL Senate District 22	1	FL Senate District 22	
+FL Senate District 23	1	FL Senate District 23	
+FL Senate District 24	1	FL Senate District 24	
+FL Senate District 25	1	FL Senate District 25	
+FL Senate District 26	1	FL Senate District 26	
+FL Senate District 27	1	FL Senate District 27	
+FL Senate District 28	1	FL Senate District 28	
+FL Senate District 29	1	FL Senate District 29	
+FL Senate District 30	1	FL Senate District 30	
+FL Senate District 31	1	FL Senate District 31	
+FL Senate District 32	1	FL Senate District 32	
+FL Senate District 33	1	FL Senate District 33	
+FL Senate District 34	1	FL Senate District 34	
+FL Senate District 35	1	FL Senate District 35	
+FL Senate District 36	1	FL Senate District 36	
+FL Senate District 37	1	FL Senate District 37	
+FL Senate District 38	1	FL Senate District 38	
+FL Senate District 39	1	FL Senate District 39	
+FL Senate District 40	1	FL Senate District 40	
+US House FL District 1	1	US House FL District 1	
+US House FL District 2	1	US House FL District 2	
+US House FL District 3	1	US House FL District 3	
+US House FL District 4	1	US House FL District 4	
+US House FL District 5	1	US House FL District 5	
+US House FL District 6	1	US House FL District 6	
+US House FL District 7	1	US House FL District 7	
+US House FL District 8	1	US House FL District 8	
+US House FL District 9	1	US House FL District 9	
+US House FL District 10	1	US House FL District 10	
+US House FL District 11	1	US House FL District 11	
+US House FL District 12	1	US House FL District 12	
+US House FL District 13	1	US House FL District 13	
+US House FL District 14	1	US House FL District 14	
+US House FL District 15	1	US House FL District 15	
+US House FL District 16	1	US House FL District 16	
+US House FL District 17	1	US House FL District 17	
+US House FL District 18	1	US House FL District 18	
+US House FL District 19	1	US House FL District 19	
+US House FL District 20	1	US House FL District 20	
+US House FL District 21	1	US House FL District 21	
+US House FL District 22	1	US House FL District 22	
+US House FL District 23	1	US House FL District 23	
+US House FL District 24	1	US House FL District 24	
+US House FL District 25	1	US House FL District 25	
+US House FL District 26	1	US House FL District 26	
+US House FL District 27	1	US House FL District 27	
+US President (FL)	1	US President (FL)	
+FL Governor	1	FL Governor	
+US Senate FL	1	US Senate FL	
+FL Attorney General	1	FL Attorney General	
+FL Chief Financial Officer	1	FL Chief Financial Officer	
+FL Commissioner of Agriculture	1	FL Commissioner of Agriculture	
+FL House District 1 (Democratic Party)	1	FL House District 1	Democratic Party
+FL House District 2 (Democratic Party)	1	FL House District 2	Democratic Party
+FL House District 3 (Democratic Party)	1	FL House District 3	Democratic Party
+FL House District 4 (Democratic Party)	1	FL House District 4	Democratic Party
+FL House District 5 (Democratic Party)	1	FL House District 5	Democratic Party
+FL House District 6 (Democratic Party)	1	FL House District 6	Democratic Party
+FL House District 7 (Democratic Party)	1	FL House District 7	Democratic Party
+FL House District 8 (Democratic Party)	1	FL House District 8	Democratic Party
+FL House District 9 (Democratic Party)	1	FL House District 9	Democratic Party
+FL House District 10 (Democratic Party)	1	FL House District 10	Democratic Party
+FL House District 11 (Democratic Party)	1	FL House District 11	Democratic Party
+FL House District 12 (Democratic Party)	1	FL House District 12	Democratic Party
+FL House District 13 (Democratic Party)	1	FL House District 13	Democratic Party
+FL House District 14 (Democratic Party)	1	FL House District 14	Democratic Party
+FL House District 15 (Democratic Party)	1	FL House District 15	Democratic Party
+FL House District 16 (Democratic Party)	1	FL House District 16	Democratic Party
+FL House District 17 (Democratic Party)	1	FL House District 17	Democratic Party
+FL House District 18 (Democratic Party)	1	FL House District 18	Democratic Party
+FL House District 19 (Democratic Party)	1	FL House District 19	Democratic Party
+FL House District 20 (Democratic Party)	1	FL House District 20	Democratic Party
+FL House District 21 (Democratic Party)	1	FL House District 21	Democratic Party
+FL House District 22 (Democratic Party)	1	FL House District 22	Democratic Party
+FL House District 23 (Democratic Party)	1	FL House District 23	Democratic Party
+FL House District 24 (Democratic Party)	1	FL House District 24	Democratic Party
+FL House District 25 (Democratic Party)	1	FL House District 25	Democratic Party
+FL House District 26 (Democratic Party)	1	FL House District 26	Democratic Party
+FL House District 27 (Democratic Party)	1	FL House District 27	Democratic Party
+FL House District 28 (Democratic Party)	1	FL House District 28	Democratic Party
+FL House District 29 (Democratic Party)	1	FL House District 29	Democratic Party
+FL House District 30 (Democratic Party)	1	FL House District 30	Democratic Party
+FL House District 31 (Democratic Party)	1	FL House District 31	Democratic Party
+FL House District 32 (Democratic Party)	1	FL House District 32	Democratic Party
+FL House District 33 (Democratic Party)	1	FL House District 33	Democratic Party
+FL House District 34 (Democratic Party)	1	FL House District 34	Democratic Party
+FL House District 35 (Democratic Party)	1	FL House District 35	Democratic Party
+FL House District 36 (Democratic Party)	1	FL House District 36	Democratic Party
+FL House District 37 (Democratic Party)	1	FL House District 37	Democratic Party
+FL House District 38 (Democratic Party)	1	FL House District 38	Democratic Party
+FL House District 39 (Democratic Party)	1	FL House District 39	Democratic Party
+FL House District 40 (Democratic Party)	1	FL House District 40	Democratic Party
+FL House District 41 (Democratic Party)	1	FL House District 41	Democratic Party
+FL House District 42 (Democratic Party)	1	FL House District 42	Democratic Party
+FL House District 43 (Democratic Party)	1	FL House District 43	Democratic Party
+FL House District 44 (Democratic Party)	1	FL House District 44	Democratic Party
+FL House District 45 (Democratic Party)	1	FL House District 45	Democratic Party
+FL House District 46 (Democratic Party)	1	FL House District 46	Democratic Party
+FL House District 47 (Democratic Party)	1	FL House District 47	Democratic Party
+FL House District 48 (Democratic Party)	1	FL House District 48	Democratic Party
+FL House District 49 (Democratic Party)	1	FL House District 49	Democratic Party
+FL House District 50 (Democratic Party)	1	FL House District 50	Democratic Party
+FL House District 51 (Democratic Party)	1	FL House District 51	Democratic Party
+FL House District 52 (Democratic Party)	1	FL House District 52	Democratic Party
+FL House District 53 (Democratic Party)	1	FL House District 53	Democratic Party
+FL House District 54 (Democratic Party)	1	FL House District 54	Democratic Party
+FL House District 55 (Democratic Party)	1	FL House District 55	Democratic Party
+FL House District 56 (Democratic Party)	1	FL House District 56	Democratic Party
+FL House District 57 (Democratic Party)	1	FL House District 57	Democratic Party
+FL House District 58 (Democratic Party)	1	FL House District 58	Democratic Party
+FL House District 59 (Democratic Party)	1	FL House District 59	Democratic Party
+FL House District 60 (Democratic Party)	1	FL House District 60	Democratic Party
+FL House District 61 (Democratic Party)	1	FL House District 61	Democratic Party
+FL House District 62 (Democratic Party)	1	FL House District 62	Democratic Party
+FL House District 63 (Democratic Party)	1	FL House District 63	Democratic Party
+FL House District 64 (Democratic Party)	1	FL House District 64	Democratic Party
+FL House District 65 (Democratic Party)	1	FL House District 65	Democratic Party
+FL House District 66 (Democratic Party)	1	FL House District 66	Democratic Party
+FL House District 67 (Democratic Party)	1	FL House District 67	Democratic Party
+FL House District 68 (Democratic Party)	1	FL House District 68	Democratic Party
+FL House District 69 (Democratic Party)	1	FL House District 69	Democratic Party
+FL House District 70 (Democratic Party)	1	FL House District 70	Democratic Party
+FL House District 71 (Democratic Party)	1	FL House District 71	Democratic Party
+FL House District 72 (Democratic Party)	1	FL House District 72	Democratic Party
+FL House District 73 (Democratic Party)	1	FL House District 73	Democratic Party
+FL House District 74 (Democratic Party)	1	FL House District 74	Democratic Party
+FL House District 75 (Democratic Party)	1	FL House District 75	Democratic Party
+FL House District 76 (Democratic Party)	1	FL House District 76	Democratic Party
+FL House District 77 (Democratic Party)	1	FL House District 77	Democratic Party
+FL House District 78 (Democratic Party)	1	FL House District 78	Democratic Party
+FL House District 79 (Democratic Party)	1	FL House District 79	Democratic Party
+FL House District 80 (Democratic Party)	1	FL House District 80	Democratic Party
+FL House District 81 (Democratic Party)	1	FL House District 81	Democratic Party
+FL House District 82 (Democratic Party)	1	FL House District 82	Democratic Party
+FL House District 83 (Democratic Party)	1	FL House District 83	Democratic Party
+FL House District 84 (Democratic Party)	1	FL House District 84	Democratic Party
+FL House District 85 (Democratic Party)	1	FL House District 85	Democratic Party
+FL House District 86 (Democratic Party)	1	FL House District 86	Democratic Party
+FL House District 87 (Democratic Party)	1	FL House District 87	Democratic Party
+FL House District 88 (Democratic Party)	1	FL House District 88	Democratic Party
+FL House District 89 (Democratic Party)	1	FL House District 89	Democratic Party
+FL House District 90 (Democratic Party)	1	FL House District 90	Democratic Party
+FL House District 91 (Democratic Party)	1	FL House District 91	Democratic Party
+FL House District 92 (Democratic Party)	1	FL House District 92	Democratic Party
+FL House District 93 (Democratic Party)	1	FL House District 93	Democratic Party
+FL House District 94 (Democratic Party)	1	FL House District 94	Democratic Party
+FL House District 95 (Democratic Party)	1	FL House District 95	Democratic Party
+FL House District 96 (Democratic Party)	1	FL House District 96	Democratic Party
+FL House District 97 (Democratic Party)	1	FL House District 97	Democratic Party
+FL House District 98 (Democratic Party)	1	FL House District 98	Democratic Party
+FL House District 99 (Democratic Party)	1	FL House District 99	Democratic Party
+FL House District 100 (Democratic Party)	1	FL House District 100	Democratic Party
+FL House District 101 (Democratic Party)	1	FL House District 101	Democratic Party
+FL House District 102 (Democratic Party)	1	FL House District 102	Democratic Party
+FL House District 103 (Democratic Party)	1	FL House District 103	Democratic Party
+FL House District 104 (Democratic Party)	1	FL House District 104	Democratic Party
+FL House District 105 (Democratic Party)	1	FL House District 105	Democratic Party
+FL House District 106 (Democratic Party)	1	FL House District 106	Democratic Party
+FL House District 107 (Democratic Party)	1	FL House District 107	Democratic Party
+FL House District 108 (Democratic Party)	1	FL House District 108	Democratic Party
+FL House District 109 (Democratic Party)	1	FL House District 109	Democratic Party
+FL House District 110 (Democratic Party)	1	FL House District 110	Democratic Party
+FL House District 111 (Democratic Party)	1	FL House District 111	Democratic Party
+FL House District 112 (Democratic Party)	1	FL House District 112	Democratic Party
+FL House District 113 (Democratic Party)	1	FL House District 113	Democratic Party
+FL House District 114 (Democratic Party)	1	FL House District 114	Democratic Party
+FL House District 115 (Democratic Party)	1	FL House District 115	Democratic Party
+FL House District 116 (Democratic Party)	1	FL House District 116	Democratic Party
+FL House District 117 (Democratic Party)	1	FL House District 117	Democratic Party
+FL House District 118 (Democratic Party)	1	FL House District 118	Democratic Party
+FL House District 119 (Democratic Party)	1	FL House District 119	Democratic Party
+FL House District 120 (Democratic Party)	1	FL House District 120	Democratic Party
+FL Senate District 1 (Democratic Party)	1	FL Senate District 1	Democratic Party
+FL Senate District 2 (Democratic Party)	1	FL Senate District 2	Democratic Party
+FL Senate District 3 (Democratic Party)	1	FL Senate District 3	Democratic Party
+FL Senate District 4 (Democratic Party)	1	FL Senate District 4	Democratic Party
+FL Senate District 5 (Democratic Party)	1	FL Senate District 5	Democratic Party
+FL Senate District 6 (Democratic Party)	1	FL Senate District 6	Democratic Party
+FL Senate District 7 (Democratic Party)	1	FL Senate District 7	Democratic Party
+FL Senate District 8 (Democratic Party)	1	FL Senate District 8	Democratic Party
+FL Senate District 9 (Democratic Party)	1	FL Senate District 9	Democratic Party
+FL Senate District 10 (Democratic Party)	1	FL Senate District 10	Democratic Party
+FL Senate District 11 (Democratic Party)	1	FL Senate District 11	Democratic Party
+FL Senate District 12 (Democratic Party)	1	FL Senate District 12	Democratic Party
+FL Senate District 13 (Democratic Party)	1	FL Senate District 13	Democratic Party
+FL Senate District 14 (Democratic Party)	1	FL Senate District 14	Democratic Party
+FL Senate District 15 (Democratic Party)	1	FL Senate District 15	Democratic Party
+FL Senate District 16 (Democratic Party)	1	FL Senate District 16	Democratic Party
+FL Senate District 17 (Democratic Party)	1	FL Senate District 17	Democratic Party
+FL Senate District 18 (Democratic Party)	1	FL Senate District 18	Democratic Party
+FL Senate District 19 (Democratic Party)	1	FL Senate District 19	Democratic Party
+FL Senate District 20 (Democratic Party)	1	FL Senate District 20	Democratic Party
+FL Senate District 21 (Democratic Party)	1	FL Senate District 21	Democratic Party
+FL Senate District 22 (Democratic Party)	1	FL Senate District 22	Democratic Party
+FL Senate District 23 (Democratic Party)	1	FL Senate District 23	Democratic Party
+FL Senate District 24 (Democratic Party)	1	FL Senate District 24	Democratic Party
+FL Senate District 25 (Democratic Party)	1	FL Senate District 25	Democratic Party
+FL Senate District 26 (Democratic Party)	1	FL Senate District 26	Democratic Party
+FL Senate District 27 (Democratic Party)	1	FL Senate District 27	Democratic Party
+FL Senate District 28 (Democratic Party)	1	FL Senate District 28	Democratic Party
+FL Senate District 29 (Democratic Party)	1	FL Senate District 29	Democratic Party
+FL Senate District 30 (Democratic Party)	1	FL Senate District 30	Democratic Party
+FL Senate District 31 (Democratic Party)	1	FL Senate District 31	Democratic Party
+FL Senate District 32 (Democratic Party)	1	FL Senate District 32	Democratic Party
+FL Senate District 33 (Democratic Party)	1	FL Senate District 33	Democratic Party
+FL Senate District 34 (Democratic Party)	1	FL Senate District 34	Democratic Party
+FL Senate District 35 (Democratic Party)	1	FL Senate District 35	Democratic Party
+FL Senate District 36 (Democratic Party)	1	FL Senate District 36	Democratic Party
+FL Senate District 37 (Democratic Party)	1	FL Senate District 37	Democratic Party
+FL Senate District 38 (Democratic Party)	1	FL Senate District 38	Democratic Party
+FL Senate District 39 (Democratic Party)	1	FL Senate District 39	Democratic Party
+FL Senate District 40 (Democratic Party)	1	FL Senate District 40	Democratic Party
+US House FL District 1 (Democratic Party)	1	US House FL District 1	Democratic Party
+US House FL District 2 (Democratic Party)	1	US House FL District 2	Democratic Party
+US House FL District 3 (Democratic Party)	1	US House FL District 3	Democratic Party
+US House FL District 4 (Democratic Party)	1	US House FL District 4	Democratic Party
+US House FL District 5 (Democratic Party)	1	US House FL District 5	Democratic Party
+US House FL District 6 (Democratic Party)	1	US House FL District 6	Democratic Party
+US House FL District 7 (Democratic Party)	1	US House FL District 7	Democratic Party
+US House FL District 8 (Democratic Party)	1	US House FL District 8	Democratic Party
+US House FL District 9 (Democratic Party)	1	US House FL District 9	Democratic Party
+US House FL District 10 (Democratic Party)	1	US House FL District 10	Democratic Party
+US House FL District 11 (Democratic Party)	1	US House FL District 11	Democratic Party
+US House FL District 12 (Democratic Party)	1	US House FL District 12	Democratic Party
+US House FL District 13 (Democratic Party)	1	US House FL District 13	Democratic Party
+US House FL District 14 (Democratic Party)	1	US House FL District 14	Democratic Party
+US House FL District 15 (Democratic Party)	1	US House FL District 15	Democratic Party
+US House FL District 16 (Democratic Party)	1	US House FL District 16	Democratic Party
+US House FL District 17 (Democratic Party)	1	US House FL District 17	Democratic Party
+US House FL District 18 (Democratic Party)	1	US House FL District 18	Democratic Party
+US House FL District 19 (Democratic Party)	1	US House FL District 19	Democratic Party
+US House FL District 20 (Democratic Party)	1	US House FL District 20	Democratic Party
+US House FL District 21 (Democratic Party)	1	US House FL District 21	Democratic Party
+US House FL District 22 (Democratic Party)	1	US House FL District 22	Democratic Party
+US House FL District 23 (Democratic Party)	1	US House FL District 23	Democratic Party
+US House FL District 24 (Democratic Party)	1	US House FL District 24	Democratic Party
+US House FL District 25 (Democratic Party)	1	US House FL District 25	Democratic Party
+US House FL District 26 (Democratic Party)	1	US House FL District 26	Democratic Party
+US House FL District 27 (Democratic Party)	1	US House FL District 27	Democratic Party
+US President (FL) (Democratic Party)	1	US President (FL)	Democratic Party
+FL Governor (Democratic Party)	1	FL Governor	Democratic Party
+US Senate FL (Democratic Party)	1	US Senate FL	Democratic Party
+FL Attorney General (Democratic Party)	1	FL Attorney General	Democratic Party
+FL Chief Financial Officer (Democratic Party)	1	FL Chief Financial Officer	Democratic Party
+FL Commissioner of Agriculture (Democratic Party)	1	FL Commissioner of Agriculture	Democratic Party
+FL House District 1 (Republican Party)	1	FL House District 1	Republican Party
+FL House District 2 (Republican Party)	1	FL House District 2	Republican Party
+FL House District 3 (Republican Party)	1	FL House District 3	Republican Party
+FL House District 4 (Republican Party)	1	FL House District 4	Republican Party
+FL House District 5 (Republican Party)	1	FL House District 5	Republican Party
+FL House District 6 (Republican Party)	1	FL House District 6	Republican Party
+FL House District 7 (Republican Party)	1	FL House District 7	Republican Party
+FL House District 8 (Republican Party)	1	FL House District 8	Republican Party
+FL House District 9 (Republican Party)	1	FL House District 9	Republican Party
+FL House District 10 (Republican Party)	1	FL House District 10	Republican Party
+FL House District 11 (Republican Party)	1	FL House District 11	Republican Party
+FL House District 12 (Republican Party)	1	FL House District 12	Republican Party
+FL House District 13 (Republican Party)	1	FL House District 13	Republican Party
+FL House District 14 (Republican Party)	1	FL House District 14	Republican Party
+FL House District 15 (Republican Party)	1	FL House District 15	Republican Party
+FL House District 16 (Republican Party)	1	FL House District 16	Republican Party
+FL House District 17 (Republican Party)	1	FL House District 17	Republican Party
+FL House District 18 (Republican Party)	1	FL House District 18	Republican Party
+FL House District 19 (Republican Party)	1	FL House District 19	Republican Party
+FL House District 20 (Republican Party)	1	FL House District 20	Republican Party
+FL House District 21 (Republican Party)	1	FL House District 21	Republican Party
+FL House District 22 (Republican Party)	1	FL House District 22	Republican Party
+FL House District 23 (Republican Party)	1	FL House District 23	Republican Party
+FL House District 24 (Republican Party)	1	FL House District 24	Republican Party
+FL House District 25 (Republican Party)	1	FL House District 25	Republican Party
+FL House District 26 (Republican Party)	1	FL House District 26	Republican Party
+FL House District 27 (Republican Party)	1	FL House District 27	Republican Party
+FL House District 28 (Republican Party)	1	FL House District 28	Republican Party
+FL House District 29 (Republican Party)	1	FL House District 29	Republican Party
+FL House District 30 (Republican Party)	1	FL House District 30	Republican Party
+FL House District 31 (Republican Party)	1	FL House District 31	Republican Party
+FL House District 32 (Republican Party)	1	FL House District 32	Republican Party
+FL House District 33 (Republican Party)	1	FL House District 33	Republican Party
+FL House District 34 (Republican Party)	1	FL House District 34	Republican Party
+FL House District 35 (Republican Party)	1	FL House District 35	Republican Party
+FL House District 36 (Republican Party)	1	FL House District 36	Republican Party
+FL House District 37 (Republican Party)	1	FL House District 37	Republican Party
+FL House District 38 (Republican Party)	1	FL House District 38	Republican Party
+FL House District 39 (Republican Party)	1	FL House District 39	Republican Party
+FL House District 40 (Republican Party)	1	FL House District 40	Republican Party
+FL House District 41 (Republican Party)	1	FL House District 41	Republican Party
+FL House District 42 (Republican Party)	1	FL House District 42	Republican Party
+FL House District 43 (Republican Party)	1	FL House District 43	Republican Party
+FL House District 44 (Republican Party)	1	FL House District 44	Republican Party
+FL House District 45 (Republican Party)	1	FL House District 45	Republican Party
+FL House District 46 (Republican Party)	1	FL House District 46	Republican Party
+FL House District 47 (Republican Party)	1	FL House District 47	Republican Party
+FL House District 48 (Republican Party)	1	FL House District 48	Republican Party
+FL House District 49 (Republican Party)	1	FL House District 49	Republican Party
+FL House District 50 (Republican Party)	1	FL House District 50	Republican Party
+FL House District 51 (Republican Party)	1	FL House District 51	Republican Party
+FL House District 52 (Republican Party)	1	FL House District 52	Republican Party
+FL House District 53 (Republican Party)	1	FL House District 53	Republican Party
+FL House District 54 (Republican Party)	1	FL House District 54	Republican Party
+FL House District 55 (Republican Party)	1	FL House District 55	Republican Party
+FL House District 56 (Republican Party)	1	FL House District 56	Republican Party
+FL House District 57 (Republican Party)	1	FL House District 57	Republican Party
+FL House District 58 (Republican Party)	1	FL House District 58	Republican Party
+FL House District 59 (Republican Party)	1	FL House District 59	Republican Party
+FL House District 60 (Republican Party)	1	FL House District 60	Republican Party
+FL House District 61 (Republican Party)	1	FL House District 61	Republican Party
+FL House District 62 (Republican Party)	1	FL House District 62	Republican Party
+FL House District 63 (Republican Party)	1	FL House District 63	Republican Party
+FL House District 64 (Republican Party)	1	FL House District 64	Republican Party
+FL House District 65 (Republican Party)	1	FL House District 65	Republican Party
+FL House District 66 (Republican Party)	1	FL House District 66	Republican Party
+FL House District 67 (Republican Party)	1	FL House District 67	Republican Party
+FL House District 68 (Republican Party)	1	FL House District 68	Republican Party
+FL House District 69 (Republican Party)	1	FL House District 69	Republican Party
+FL House District 70 (Republican Party)	1	FL House District 70	Republican Party
+FL House District 71 (Republican Party)	1	FL House District 71	Republican Party
+FL House District 72 (Republican Party)	1	FL House District 72	Republican Party
+FL House District 73 (Republican Party)	1	FL House District 73	Republican Party
+FL House District 74 (Republican Party)	1	FL House District 74	Republican Party
+FL House District 75 (Republican Party)	1	FL House District 75	Republican Party
+FL House District 76 (Republican Party)	1	FL House District 76	Republican Party
+FL House District 77 (Republican Party)	1	FL House District 77	Republican Party
+FL House District 78 (Republican Party)	1	FL House District 78	Republican Party
+FL House District 79 (Republican Party)	1	FL House District 79	Republican Party
+FL House District 80 (Republican Party)	1	FL House District 80	Republican Party
+FL House District 81 (Republican Party)	1	FL House District 81	Republican Party
+FL House District 82 (Republican Party)	1	FL House District 82	Republican Party
+FL House District 83 (Republican Party)	1	FL House District 83	Republican Party
+FL House District 84 (Republican Party)	1	FL House District 84	Republican Party
+FL House District 85 (Republican Party)	1	FL House District 85	Republican Party
+FL House District 86 (Republican Party)	1	FL House District 86	Republican Party
+FL House District 87 (Republican Party)	1	FL House District 87	Republican Party
+FL House District 88 (Republican Party)	1	FL House District 88	Republican Party
+FL House District 89 (Republican Party)	1	FL House District 89	Republican Party
+FL House District 90 (Republican Party)	1	FL House District 90	Republican Party
+FL House District 91 (Republican Party)	1	FL House District 91	Republican Party
+FL House District 92 (Republican Party)	1	FL House District 92	Republican Party
+FL House District 93 (Republican Party)	1	FL House District 93	Republican Party
+FL House District 94 (Republican Party)	1	FL House District 94	Republican Party
+FL House District 95 (Republican Party)	1	FL House District 95	Republican Party
+FL House District 96 (Republican Party)	1	FL House District 96	Republican Party
+FL House District 97 (Republican Party)	1	FL House District 97	Republican Party
+FL House District 98 (Republican Party)	1	FL House District 98	Republican Party
+FL House District 99 (Republican Party)	1	FL House District 99	Republican Party
+FL House District 100 (Republican Party)	1	FL House District 100	Republican Party
+FL House District 101 (Republican Party)	1	FL House District 101	Republican Party
+FL House District 102 (Republican Party)	1	FL House District 102	Republican Party
+FL House District 103 (Republican Party)	1	FL House District 103	Republican Party
+FL House District 104 (Republican Party)	1	FL House District 104	Republican Party
+FL House District 105 (Republican Party)	1	FL House District 105	Republican Party
+FL House District 106 (Republican Party)	1	FL House District 106	Republican Party
+FL House District 107 (Republican Party)	1	FL House District 107	Republican Party
+FL House District 108 (Republican Party)	1	FL House District 108	Republican Party
+FL House District 109 (Republican Party)	1	FL House District 109	Republican Party
+FL House District 110 (Republican Party)	1	FL House District 110	Republican Party
+FL House District 111 (Republican Party)	1	FL House District 111	Republican Party
+FL House District 112 (Republican Party)	1	FL House District 112	Republican Party
+FL House District 113 (Republican Party)	1	FL House District 113	Republican Party
+FL House District 114 (Republican Party)	1	FL House District 114	Republican Party
+FL House District 115 (Republican Party)	1	FL House District 115	Republican Party
+FL House District 116 (Republican Party)	1	FL House District 116	Republican Party
+FL House District 117 (Republican Party)	1	FL House District 117	Republican Party
+FL House District 118 (Republican Party)	1	FL House District 118	Republican Party
+FL House District 119 (Republican Party)	1	FL House District 119	Republican Party
+FL House District 120 (Republican Party)	1	FL House District 120	Republican Party
+FL Senate District 1 (Republican Party)	1	FL Senate District 1	Republican Party
+FL Senate District 2 (Republican Party)	1	FL Senate District 2	Republican Party
+FL Senate District 3 (Republican Party)	1	FL Senate District 3	Republican Party
+FL Senate District 4 (Republican Party)	1	FL Senate District 4	Republican Party
+FL Senate District 5 (Republican Party)	1	FL Senate District 5	Republican Party
+FL Senate District 6 (Republican Party)	1	FL Senate District 6	Republican Party
+FL Senate District 7 (Republican Party)	1	FL Senate District 7	Republican Party
+FL Senate District 8 (Republican Party)	1	FL Senate District 8	Republican Party
+FL Senate District 9 (Republican Party)	1	FL Senate District 9	Republican Party
+FL Senate District 10 (Republican Party)	1	FL Senate District 10	Republican Party
+FL Senate District 11 (Republican Party)	1	FL Senate District 11	Republican Party
+FL Senate District 12 (Republican Party)	1	FL Senate District 12	Republican Party
+FL Senate District 13 (Republican Party)	1	FL Senate District 13	Republican Party
+FL Senate District 14 (Republican Party)	1	FL Senate District 14	Republican Party
+FL Senate District 15 (Republican Party)	1	FL Senate District 15	Republican Party
+FL Senate District 16 (Republican Party)	1	FL Senate District 16	Republican Party
+FL Senate District 17 (Republican Party)	1	FL Senate District 17	Republican Party
+FL Senate District 18 (Republican Party)	1	FL Senate District 18	Republican Party
+FL Senate District 19 (Republican Party)	1	FL Senate District 19	Republican Party
+FL Senate District 20 (Republican Party)	1	FL Senate District 20	Republican Party
+FL Senate District 21 (Republican Party)	1	FL Senate District 21	Republican Party
+FL Senate District 22 (Republican Party)	1	FL Senate District 22	Republican Party
+FL Senate District 23 (Republican Party)	1	FL Senate District 23	Republican Party
+FL Senate District 24 (Republican Party)	1	FL Senate District 24	Republican Party
+FL Senate District 25 (Republican Party)	1	FL Senate District 25	Republican Party
+FL Senate District 26 (Republican Party)	1	FL Senate District 26	Republican Party
+FL Senate District 27 (Republican Party)	1	FL Senate District 27	Republican Party
+FL Senate District 28 (Republican Party)	1	FL Senate District 28	Republican Party
+FL Senate District 29 (Republican Party)	1	FL Senate District 29	Republican Party
+FL Senate District 30 (Republican Party)	1	FL Senate District 30	Republican Party
+FL Senate District 31 (Republican Party)	1	FL Senate District 31	Republican Party
+FL Senate District 32 (Republican Party)	1	FL Senate District 32	Republican Party
+FL Senate District 33 (Republican Party)	1	FL Senate District 33	Republican Party
+FL Senate District 34 (Republican Party)	1	FL Senate District 34	Republican Party
+FL Senate District 35 (Republican Party)	1	FL Senate District 35	Republican Party
+FL Senate District 36 (Republican Party)	1	FL Senate District 36	Republican Party
+FL Senate District 37 (Republican Party)	1	FL Senate District 37	Republican Party
+FL Senate District 38 (Republican Party)	1	FL Senate District 38	Republican Party
+FL Senate District 39 (Republican Party)	1	FL Senate District 39	Republican Party
+FL Senate District 40 (Republican Party)	1	FL Senate District 40	Republican Party
+US House FL District 1 (Republican Party)	1	US House FL District 1	Republican Party
+US House FL District 2 (Republican Party)	1	US House FL District 2	Republican Party
+US House FL District 3 (Republican Party)	1	US House FL District 3	Republican Party
+US House FL District 4 (Republican Party)	1	US House FL District 4	Republican Party
+US House FL District 5 (Republican Party)	1	US House FL District 5	Republican Party
+US House FL District 6 (Republican Party)	1	US House FL District 6	Republican Party
+US House FL District 7 (Republican Party)	1	US House FL District 7	Republican Party
+US House FL District 8 (Republican Party)	1	US House FL District 8	Republican Party
+US House FL District 9 (Republican Party)	1	US House FL District 9	Republican Party
+US House FL District 10 (Republican Party)	1	US House FL District 10	Republican Party
+US House FL District 11 (Republican Party)	1	US House FL District 11	Republican Party
+US House FL District 12 (Republican Party)	1	US House FL District 12	Republican Party
+US House FL District 13 (Republican Party)	1	US House FL District 13	Republican Party
+US House FL District 14 (Republican Party)	1	US House FL District 14	Republican Party
+US House FL District 15 (Republican Party)	1	US House FL District 15	Republican Party
+US House FL District 16 (Republican Party)	1	US House FL District 16	Republican Party
+US House FL District 17 (Republican Party)	1	US House FL District 17	Republican Party
+US House FL District 18 (Republican Party)	1	US House FL District 18	Republican Party
+US House FL District 19 (Republican Party)	1	US House FL District 19	Republican Party
+US House FL District 20 (Republican Party)	1	US House FL District 20	Republican Party
+US House FL District 21 (Republican Party)	1	US House FL District 21	Republican Party
+US House FL District 22 (Republican Party)	1	US House FL District 22	Republican Party
+US House FL District 23 (Republican Party)	1	US House FL District 23	Republican Party
+US House FL District 24 (Republican Party)	1	US House FL District 24	Republican Party
+US House FL District 25 (Republican Party)	1	US House FL District 25	Republican Party
+US House FL District 26 (Republican Party)	1	US House FL District 26	Republican Party
+US House FL District 27 (Republican Party)	1	US House FL District 27	Republican Party
+US President (FL) (Republican Party)	1	US President (FL)	Republican Party
+FL Governor (Republican Party)	1	FL Governor	Republican Party
+US Senate FL (Republican Party)	1	US Senate FL	Republican Party
+FL Attorney General (Republican Party)	1	FL Attorney General	Republican Party
+FL Chief Financial Officer (Republican Party)	1	FL Chief Financial Officer	Republican Party
+FL Commissioner of Agriculture (Republican Party)	1	FL Commissioner of Agriculture	Republican Party
+FL House District 1 (Green Party)	1	FL House District 1	Green Party
+FL House District 2 (Green Party)	1	FL House District 2	Green Party
+FL House District 3 (Green Party)	1	FL House District 3	Green Party
+FL House District 4 (Green Party)	1	FL House District 4	Green Party
+FL House District 5 (Green Party)	1	FL House District 5	Green Party
+FL House District 6 (Green Party)	1	FL House District 6	Green Party
+FL House District 7 (Green Party)	1	FL House District 7	Green Party
+FL House District 8 (Green Party)	1	FL House District 8	Green Party
+FL House District 9 (Green Party)	1	FL House District 9	Green Party
+FL House District 10 (Green Party)	1	FL House District 10	Green Party
+FL House District 11 (Green Party)	1	FL House District 11	Green Party
+FL House District 12 (Green Party)	1	FL House District 12	Green Party
+FL House District 13 (Green Party)	1	FL House District 13	Green Party
+FL House District 14 (Green Party)	1	FL House District 14	Green Party
+FL House District 15 (Green Party)	1	FL House District 15	Green Party
+FL House District 16 (Green Party)	1	FL House District 16	Green Party
+FL House District 17 (Green Party)	1	FL House District 17	Green Party
+FL House District 18 (Green Party)	1	FL House District 18	Green Party
+FL House District 19 (Green Party)	1	FL House District 19	Green Party
+FL House District 20 (Green Party)	1	FL House District 20	Green Party
+FL House District 21 (Green Party)	1	FL House District 21	Green Party
+FL House District 22 (Green Party)	1	FL House District 22	Green Party
+FL House District 23 (Green Party)	1	FL House District 23	Green Party
+FL House District 24 (Green Party)	1	FL House District 24	Green Party
+FL House District 25 (Green Party)	1	FL House District 25	Green Party
+FL House District 26 (Green Party)	1	FL House District 26	Green Party
+FL House District 27 (Green Party)	1	FL House District 27	Green Party
+FL House District 28 (Green Party)	1	FL House District 28	Green Party
+FL House District 29 (Green Party)	1	FL House District 29	Green Party
+FL House District 30 (Green Party)	1	FL House District 30	Green Party
+FL House District 31 (Green Party)	1	FL House District 31	Green Party
+FL House District 32 (Green Party)	1	FL House District 32	Green Party
+FL House District 33 (Green Party)	1	FL House District 33	Green Party
+FL House District 34 (Green Party)	1	FL House District 34	Green Party
+FL House District 35 (Green Party)	1	FL House District 35	Green Party
+FL House District 36 (Green Party)	1	FL House District 36	Green Party
+FL House District 37 (Green Party)	1	FL House District 37	Green Party
+FL House District 38 (Green Party)	1	FL House District 38	Green Party
+FL House District 39 (Green Party)	1	FL House District 39	Green Party
+FL House District 40 (Green Party)	1	FL House District 40	Green Party
+FL House District 41 (Green Party)	1	FL House District 41	Green Party
+FL House District 42 (Green Party)	1	FL House District 42	Green Party
+FL House District 43 (Green Party)	1	FL House District 43	Green Party
+FL House District 44 (Green Party)	1	FL House District 44	Green Party
+FL House District 45 (Green Party)	1	FL House District 45	Green Party
+FL House District 46 (Green Party)	1	FL House District 46	Green Party
+FL House District 47 (Green Party)	1	FL House District 47	Green Party
+FL House District 48 (Green Party)	1	FL House District 48	Green Party
+FL House District 49 (Green Party)	1	FL House District 49	Green Party
+FL House District 50 (Green Party)	1	FL House District 50	Green Party
+FL House District 51 (Green Party)	1	FL House District 51	Green Party
+FL House District 52 (Green Party)	1	FL House District 52	Green Party
+FL House District 53 (Green Party)	1	FL House District 53	Green Party
+FL House District 54 (Green Party)	1	FL House District 54	Green Party
+FL House District 55 (Green Party)	1	FL House District 55	Green Party
+FL House District 56 (Green Party)	1	FL House District 56	Green Party
+FL House District 57 (Green Party)	1	FL House District 57	Green Party
+FL House District 58 (Green Party)	1	FL House District 58	Green Party
+FL House District 59 (Green Party)	1	FL House District 59	Green Party
+FL House District 60 (Green Party)	1	FL House District 60	Green Party
+FL House District 61 (Green Party)	1	FL House District 61	Green Party
+FL House District 62 (Green Party)	1	FL House District 62	Green Party
+FL House District 63 (Green Party)	1	FL House District 63	Green Party
+FL House District 64 (Green Party)	1	FL House District 64	Green Party
+FL House District 65 (Green Party)	1	FL House District 65	Green Party
+FL House District 66 (Green Party)	1	FL House District 66	Green Party
+FL House District 67 (Green Party)	1	FL House District 67	Green Party
+FL House District 68 (Green Party)	1	FL House District 68	Green Party
+FL House District 69 (Green Party)	1	FL House District 69	Green Party
+FL House District 70 (Green Party)	1	FL House District 70	Green Party
+FL House District 71 (Green Party)	1	FL House District 71	Green Party
+FL House District 72 (Green Party)	1	FL House District 72	Green Party
+FL House District 73 (Green Party)	1	FL House District 73	Green Party
+FL House District 74 (Green Party)	1	FL House District 74	Green Party
+FL House District 75 (Green Party)	1	FL House District 75	Green Party
+FL House District 76 (Green Party)	1	FL House District 76	Green Party
+FL House District 77 (Green Party)	1	FL House District 77	Green Party
+FL House District 78 (Green Party)	1	FL House District 78	Green Party
+FL House District 79 (Green Party)	1	FL House District 79	Green Party
+FL House District 80 (Green Party)	1	FL House District 80	Green Party
+FL House District 81 (Green Party)	1	FL House District 81	Green Party
+FL House District 82 (Green Party)	1	FL House District 82	Green Party
+FL House District 83 (Green Party)	1	FL House District 83	Green Party
+FL House District 84 (Green Party)	1	FL House District 84	Green Party
+FL House District 85 (Green Party)	1	FL House District 85	Green Party
+FL House District 86 (Green Party)	1	FL House District 86	Green Party
+FL House District 87 (Green Party)	1	FL House District 87	Green Party
+FL House District 88 (Green Party)	1	FL House District 88	Green Party
+FL House District 89 (Green Party)	1	FL House District 89	Green Party
+FL House District 90 (Green Party)	1	FL House District 90	Green Party
+FL House District 91 (Green Party)	1	FL House District 91	Green Party
+FL House District 92 (Green Party)	1	FL House District 92	Green Party
+FL House District 93 (Green Party)	1	FL House District 93	Green Party
+FL House District 94 (Green Party)	1	FL House District 94	Green Party
+FL House District 95 (Green Party)	1	FL House District 95	Green Party
+FL House District 96 (Green Party)	1	FL House District 96	Green Party
+FL House District 97 (Green Party)	1	FL House District 97	Green Party
+FL House District 98 (Green Party)	1	FL House District 98	Green Party
+FL House District 99 (Green Party)	1	FL House District 99	Green Party
+FL House District 100 (Green Party)	1	FL House District 100	Green Party
+FL House District 101 (Green Party)	1	FL House District 101	Green Party
+FL House District 102 (Green Party)	1	FL House District 102	Green Party
+FL House District 103 (Green Party)	1	FL House District 103	Green Party
+FL House District 104 (Green Party)	1	FL House District 104	Green Party
+FL House District 105 (Green Party)	1	FL House District 105	Green Party
+FL House District 106 (Green Party)	1	FL House District 106	Green Party
+FL House District 107 (Green Party)	1	FL House District 107	Green Party
+FL House District 108 (Green Party)	1	FL House District 108	Green Party
+FL House District 109 (Green Party)	1	FL House District 109	Green Party
+FL House District 110 (Green Party)	1	FL House District 110	Green Party
+FL House District 111 (Green Party)	1	FL House District 111	Green Party
+FL House District 112 (Green Party)	1	FL House District 112	Green Party
+FL House District 113 (Green Party)	1	FL House District 113	Green Party
+FL House District 114 (Green Party)	1	FL House District 114	Green Party
+FL House District 115 (Green Party)	1	FL House District 115	Green Party
+FL House District 116 (Green Party)	1	FL House District 116	Green Party
+FL House District 117 (Green Party)	1	FL House District 117	Green Party
+FL House District 118 (Green Party)	1	FL House District 118	Green Party
+FL House District 119 (Green Party)	1	FL House District 119	Green Party
+FL House District 120 (Green Party)	1	FL House District 120	Green Party
+FL Senate District 1 (Green Party)	1	FL Senate District 1	Green Party
+FL Senate District 2 (Green Party)	1	FL Senate District 2	Green Party
+FL Senate District 3 (Green Party)	1	FL Senate District 3	Green Party
+FL Senate District 4 (Green Party)	1	FL Senate District 4	Green Party
+FL Senate District 5 (Green Party)	1	FL Senate District 5	Green Party
+FL Senate District 6 (Green Party)	1	FL Senate District 6	Green Party
+FL Senate District 7 (Green Party)	1	FL Senate District 7	Green Party
+FL Senate District 8 (Green Party)	1	FL Senate District 8	Green Party
+FL Senate District 9 (Green Party)	1	FL Senate District 9	Green Party
+FL Senate District 10 (Green Party)	1	FL Senate District 10	Green Party
+FL Senate District 11 (Green Party)	1	FL Senate District 11	Green Party
+FL Senate District 12 (Green Party)	1	FL Senate District 12	Green Party
+FL Senate District 13 (Green Party)	1	FL Senate District 13	Green Party
+FL Senate District 14 (Green Party)	1	FL Senate District 14	Green Party
+FL Senate District 15 (Green Party)	1	FL Senate District 15	Green Party
+FL Senate District 16 (Green Party)	1	FL Senate District 16	Green Party
+FL Senate District 17 (Green Party)	1	FL Senate District 17	Green Party
+FL Senate District 18 (Green Party)	1	FL Senate District 18	Green Party
+FL Senate District 19 (Green Party)	1	FL Senate District 19	Green Party
+FL Senate District 20 (Green Party)	1	FL Senate District 20	Green Party
+FL Senate District 21 (Green Party)	1	FL Senate District 21	Green Party
+FL Senate District 22 (Green Party)	1	FL Senate District 22	Green Party
+FL Senate District 23 (Green Party)	1	FL Senate District 23	Green Party
+FL Senate District 24 (Green Party)	1	FL Senate District 24	Green Party
+FL Senate District 25 (Green Party)	1	FL Senate District 25	Green Party
+FL Senate District 26 (Green Party)	1	FL Senate District 26	Green Party
+FL Senate District 27 (Green Party)	1	FL Senate District 27	Green Party
+FL Senate District 28 (Green Party)	1	FL Senate District 28	Green Party
+FL Senate District 29 (Green Party)	1	FL Senate District 29	Green Party
+FL Senate District 30 (Green Party)	1	FL Senate District 30	Green Party
+FL Senate District 31 (Green Party)	1	FL Senate District 31	Green Party
+FL Senate District 32 (Green Party)	1	FL Senate District 32	Green Party
+FL Senate District 33 (Green Party)	1	FL Senate District 33	Green Party
+FL Senate District 34 (Green Party)	1	FL Senate District 34	Green Party
+FL Senate District 35 (Green Party)	1	FL Senate District 35	Green Party
+FL Senate District 36 (Green Party)	1	FL Senate District 36	Green Party
+FL Senate District 37 (Green Party)	1	FL Senate District 37	Green Party
+FL Senate District 38 (Green Party)	1	FL Senate District 38	Green Party
+FL Senate District 39 (Green Party)	1	FL Senate District 39	Green Party
+FL Senate District 40 (Green Party)	1	FL Senate District 40	Green Party
+US House FL District 1 (Green Party)	1	US House FL District 1	Green Party
+US House FL District 2 (Green Party)	1	US House FL District 2	Green Party
+US House FL District 3 (Green Party)	1	US House FL District 3	Green Party
+US House FL District 4 (Green Party)	1	US House FL District 4	Green Party
+US House FL District 5 (Green Party)	1	US House FL District 5	Green Party
+US House FL District 6 (Green Party)	1	US House FL District 6	Green Party
+US House FL District 7 (Green Party)	1	US House FL District 7	Green Party
+US House FL District 8 (Green Party)	1	US House FL District 8	Green Party
+US House FL District 9 (Green Party)	1	US House FL District 9	Green Party
+US House FL District 10 (Green Party)	1	US House FL District 10	Green Party
+US House FL District 11 (Green Party)	1	US House FL District 11	Green Party
+US House FL District 12 (Green Party)	1	US House FL District 12	Green Party
+US House FL District 13 (Green Party)	1	US House FL District 13	Green Party
+US House FL District 14 (Green Party)	1	US House FL District 14	Green Party
+US House FL District 15 (Green Party)	1	US House FL District 15	Green Party
+US House FL District 16 (Green Party)	1	US House FL District 16	Green Party
+US House FL District 17 (Green Party)	1	US House FL District 17	Green Party
+US House FL District 18 (Green Party)	1	US House FL District 18	Green Party
+US House FL District 19 (Green Party)	1	US House FL District 19	Green Party
+US House FL District 20 (Green Party)	1	US House FL District 20	Green Party
+US House FL District 21 (Green Party)	1	US House FL District 21	Green Party
+US House FL District 22 (Green Party)	1	US House FL District 22	Green Party
+US House FL District 23 (Green Party)	1	US House FL District 23	Green Party
+US House FL District 24 (Green Party)	1	US House FL District 24	Green Party
+US House FL District 25 (Green Party)	1	US House FL District 25	Green Party
+US House FL District 26 (Green Party)	1	US House FL District 26	Green Party
+US House FL District 27 (Green Party)	1	US House FL District 27	Green Party
+US President (FL) (Green Party)	1	US President (FL)	Green Party
+FL Governor (Green Party)	1	FL Governor	Green Party
+US Senate FL (Green Party)	1	US Senate FL	Green Party
+FL Attorney General (Green Party)	1	FL Attorney General	Green Party
+FL Chief Financial Officer (Green Party)	1	FL Chief Financial Officer	Green Party
+FL Commissioner of Agriculture (Green Party)	1	FL Commissioner of Agriculture	Green Party
+FL House District 1 (Libertarian Party)	1	FL House District 1	Libertarian Party
+FL House District 2 (Libertarian Party)	1	FL House District 2	Libertarian Party
+FL House District 3 (Libertarian Party)	1	FL House District 3	Libertarian Party
+FL House District 4 (Libertarian Party)	1	FL House District 4	Libertarian Party
+FL House District 5 (Libertarian Party)	1	FL House District 5	Libertarian Party
+FL House District 6 (Libertarian Party)	1	FL House District 6	Libertarian Party
+FL House District 7 (Libertarian Party)	1	FL House District 7	Libertarian Party
+FL House District 8 (Libertarian Party)	1	FL House District 8	Libertarian Party
+FL House District 9 (Libertarian Party)	1	FL House District 9	Libertarian Party
+FL House District 10 (Libertarian Party)	1	FL House District 10	Libertarian Party
+FL House District 11 (Libertarian Party)	1	FL House District 11	Libertarian Party
+FL House District 12 (Libertarian Party)	1	FL House District 12	Libertarian Party
+FL House District 13 (Libertarian Party)	1	FL House District 13	Libertarian Party
+FL House District 14 (Libertarian Party)	1	FL House District 14	Libertarian Party
+FL House District 15 (Libertarian Party)	1	FL House District 15	Libertarian Party
+FL House District 16 (Libertarian Party)	1	FL House District 16	Libertarian Party
+FL House District 17 (Libertarian Party)	1	FL House District 17	Libertarian Party
+FL House District 18 (Libertarian Party)	1	FL House District 18	Libertarian Party
+FL House District 19 (Libertarian Party)	1	FL House District 19	Libertarian Party
+FL House District 20 (Libertarian Party)	1	FL House District 20	Libertarian Party
+FL House District 21 (Libertarian Party)	1	FL House District 21	Libertarian Party
+FL House District 22 (Libertarian Party)	1	FL House District 22	Libertarian Party
+FL House District 23 (Libertarian Party)	1	FL House District 23	Libertarian Party
+FL House District 24 (Libertarian Party)	1	FL House District 24	Libertarian Party
+FL House District 25 (Libertarian Party)	1	FL House District 25	Libertarian Party
+FL House District 26 (Libertarian Party)	1	FL House District 26	Libertarian Party
+FL House District 27 (Libertarian Party)	1	FL House District 27	Libertarian Party
+FL House District 28 (Libertarian Party)	1	FL House District 28	Libertarian Party
+FL House District 29 (Libertarian Party)	1	FL House District 29	Libertarian Party
+FL House District 30 (Libertarian Party)	1	FL House District 30	Libertarian Party
+FL House District 31 (Libertarian Party)	1	FL House District 31	Libertarian Party
+FL House District 32 (Libertarian Party)	1	FL House District 32	Libertarian Party
+FL House District 33 (Libertarian Party)	1	FL House District 33	Libertarian Party
+FL House District 34 (Libertarian Party)	1	FL House District 34	Libertarian Party
+FL House District 35 (Libertarian Party)	1	FL House District 35	Libertarian Party
+FL House District 36 (Libertarian Party)	1	FL House District 36	Libertarian Party
+FL House District 37 (Libertarian Party)	1	FL House District 37	Libertarian Party
+FL House District 38 (Libertarian Party)	1	FL House District 38	Libertarian Party
+FL House District 39 (Libertarian Party)	1	FL House District 39	Libertarian Party
+FL House District 40 (Libertarian Party)	1	FL House District 40	Libertarian Party
+FL House District 41 (Libertarian Party)	1	FL House District 41	Libertarian Party
+FL House District 42 (Libertarian Party)	1	FL House District 42	Libertarian Party
+FL House District 43 (Libertarian Party)	1	FL House District 43	Libertarian Party
+FL House District 44 (Libertarian Party)	1	FL House District 44	Libertarian Party
+FL House District 45 (Libertarian Party)	1	FL House District 45	Libertarian Party
+FL House District 46 (Libertarian Party)	1	FL House District 46	Libertarian Party
+FL House District 47 (Libertarian Party)	1	FL House District 47	Libertarian Party
+FL House District 48 (Libertarian Party)	1	FL House District 48	Libertarian Party
+FL House District 49 (Libertarian Party)	1	FL House District 49	Libertarian Party
+FL House District 50 (Libertarian Party)	1	FL House District 50	Libertarian Party
+FL House District 51 (Libertarian Party)	1	FL House District 51	Libertarian Party
+FL House District 52 (Libertarian Party)	1	FL House District 52	Libertarian Party
+FL House District 53 (Libertarian Party)	1	FL House District 53	Libertarian Party
+FL House District 54 (Libertarian Party)	1	FL House District 54	Libertarian Party
+FL House District 55 (Libertarian Party)	1	FL House District 55	Libertarian Party
+FL House District 56 (Libertarian Party)	1	FL House District 56	Libertarian Party
+FL House District 57 (Libertarian Party)	1	FL House District 57	Libertarian Party
+FL House District 58 (Libertarian Party)	1	FL House District 58	Libertarian Party
+FL House District 59 (Libertarian Party)	1	FL House District 59	Libertarian Party
+FL House District 60 (Libertarian Party)	1	FL House District 60	Libertarian Party
+FL House District 61 (Libertarian Party)	1	FL House District 61	Libertarian Party
+FL House District 62 (Libertarian Party)	1	FL House District 62	Libertarian Party
+FL House District 63 (Libertarian Party)	1	FL House District 63	Libertarian Party
+FL House District 64 (Libertarian Party)	1	FL House District 64	Libertarian Party
+FL House District 65 (Libertarian Party)	1	FL House District 65	Libertarian Party
+FL House District 66 (Libertarian Party)	1	FL House District 66	Libertarian Party
+FL House District 67 (Libertarian Party)	1	FL House District 67	Libertarian Party
+FL House District 68 (Libertarian Party)	1	FL House District 68	Libertarian Party
+FL House District 69 (Libertarian Party)	1	FL House District 69	Libertarian Party
+FL House District 70 (Libertarian Party)	1	FL House District 70	Libertarian Party
+FL House District 71 (Libertarian Party)	1	FL House District 71	Libertarian Party
+FL House District 72 (Libertarian Party)	1	FL House District 72	Libertarian Party
+FL House District 73 (Libertarian Party)	1	FL House District 73	Libertarian Party
+FL House District 74 (Libertarian Party)	1	FL House District 74	Libertarian Party
+FL House District 75 (Libertarian Party)	1	FL House District 75	Libertarian Party
+FL House District 76 (Libertarian Party)	1	FL House District 76	Libertarian Party
+FL House District 77 (Libertarian Party)	1	FL House District 77	Libertarian Party
+FL House District 78 (Libertarian Party)	1	FL House District 78	Libertarian Party
+FL House District 79 (Libertarian Party)	1	FL House District 79	Libertarian Party
+FL House District 80 (Libertarian Party)	1	FL House District 80	Libertarian Party
+FL House District 81 (Libertarian Party)	1	FL House District 81	Libertarian Party
+FL House District 82 (Libertarian Party)	1	FL House District 82	Libertarian Party
+FL House District 83 (Libertarian Party)	1	FL House District 83	Libertarian Party
+FL House District 84 (Libertarian Party)	1	FL House District 84	Libertarian Party
+FL House District 85 (Libertarian Party)	1	FL House District 85	Libertarian Party
+FL House District 86 (Libertarian Party)	1	FL House District 86	Libertarian Party
+FL House District 87 (Libertarian Party)	1	FL House District 87	Libertarian Party
+FL House District 88 (Libertarian Party)	1	FL House District 88	Libertarian Party
+FL House District 89 (Libertarian Party)	1	FL House District 89	Libertarian Party
+FL House District 90 (Libertarian Party)	1	FL House District 90	Libertarian Party
+FL House District 91 (Libertarian Party)	1	FL House District 91	Libertarian Party
+FL House District 92 (Libertarian Party)	1	FL House District 92	Libertarian Party
+FL House District 93 (Libertarian Party)	1	FL House District 93	Libertarian Party
+FL House District 94 (Libertarian Party)	1	FL House District 94	Libertarian Party
+FL House District 95 (Libertarian Party)	1	FL House District 95	Libertarian Party
+FL House District 96 (Libertarian Party)	1	FL House District 96	Libertarian Party
+FL House District 97 (Libertarian Party)	1	FL House District 97	Libertarian Party
+FL House District 98 (Libertarian Party)	1	FL House District 98	Libertarian Party
+FL House District 99 (Libertarian Party)	1	FL House District 99	Libertarian Party
+FL House District 100 (Libertarian Party)	1	FL House District 100	Libertarian Party
+FL House District 101 (Libertarian Party)	1	FL House District 101	Libertarian Party
+FL House District 102 (Libertarian Party)	1	FL House District 102	Libertarian Party
+FL House District 103 (Libertarian Party)	1	FL House District 103	Libertarian Party
+FL House District 104 (Libertarian Party)	1	FL House District 104	Libertarian Party
+FL House District 105 (Libertarian Party)	1	FL House District 105	Libertarian Party
+FL House District 106 (Libertarian Party)	1	FL House District 106	Libertarian Party
+FL House District 107 (Libertarian Party)	1	FL House District 107	Libertarian Party
+FL House District 108 (Libertarian Party)	1	FL House District 108	Libertarian Party
+FL House District 109 (Libertarian Party)	1	FL House District 109	Libertarian Party
+FL House District 110 (Libertarian Party)	1	FL House District 110	Libertarian Party
+FL House District 111 (Libertarian Party)	1	FL House District 111	Libertarian Party
+FL House District 112 (Libertarian Party)	1	FL House District 112	Libertarian Party
+FL House District 113 (Libertarian Party)	1	FL House District 113	Libertarian Party
+FL House District 114 (Libertarian Party)	1	FL House District 114	Libertarian Party
+FL House District 115 (Libertarian Party)	1	FL House District 115	Libertarian Party
+FL House District 116 (Libertarian Party)	1	FL House District 116	Libertarian Party
+FL House District 117 (Libertarian Party)	1	FL House District 117	Libertarian Party
+FL House District 118 (Libertarian Party)	1	FL House District 118	Libertarian Party
+FL House District 119 (Libertarian Party)	1	FL House District 119	Libertarian Party
+FL House District 120 (Libertarian Party)	1	FL House District 120	Libertarian Party
+FL Senate District 1 (Libertarian Party)	1	FL Senate District 1	Libertarian Party
+FL Senate District 2 (Libertarian Party)	1	FL Senate District 2	Libertarian Party
+FL Senate District 3 (Libertarian Party)	1	FL Senate District 3	Libertarian Party
+FL Senate District 4 (Libertarian Party)	1	FL Senate District 4	Libertarian Party
+FL Senate District 5 (Libertarian Party)	1	FL Senate District 5	Libertarian Party
+FL Senate District 6 (Libertarian Party)	1	FL Senate District 6	Libertarian Party
+FL Senate District 7 (Libertarian Party)	1	FL Senate District 7	Libertarian Party
+FL Senate District 8 (Libertarian Party)	1	FL Senate District 8	Libertarian Party
+FL Senate District 9 (Libertarian Party)	1	FL Senate District 9	Libertarian Party
+FL Senate District 10 (Libertarian Party)	1	FL Senate District 10	Libertarian Party
+FL Senate District 11 (Libertarian Party)	1	FL Senate District 11	Libertarian Party
+FL Senate District 12 (Libertarian Party)	1	FL Senate District 12	Libertarian Party
+FL Senate District 13 (Libertarian Party)	1	FL Senate District 13	Libertarian Party
+FL Senate District 14 (Libertarian Party)	1	FL Senate District 14	Libertarian Party
+FL Senate District 15 (Libertarian Party)	1	FL Senate District 15	Libertarian Party
+FL Senate District 16 (Libertarian Party)	1	FL Senate District 16	Libertarian Party
+FL Senate District 17 (Libertarian Party)	1	FL Senate District 17	Libertarian Party
+FL Senate District 18 (Libertarian Party)	1	FL Senate District 18	Libertarian Party
+FL Senate District 19 (Libertarian Party)	1	FL Senate District 19	Libertarian Party
+FL Senate District 20 (Libertarian Party)	1	FL Senate District 20	Libertarian Party
+FL Senate District 21 (Libertarian Party)	1	FL Senate District 21	Libertarian Party
+FL Senate District 22 (Libertarian Party)	1	FL Senate District 22	Libertarian Party
+FL Senate District 23 (Libertarian Party)	1	FL Senate District 23	Libertarian Party
+FL Senate District 24 (Libertarian Party)	1	FL Senate District 24	Libertarian Party
+FL Senate District 25 (Libertarian Party)	1	FL Senate District 25	Libertarian Party
+FL Senate District 26 (Libertarian Party)	1	FL Senate District 26	Libertarian Party
+FL Senate District 27 (Libertarian Party)	1	FL Senate District 27	Libertarian Party
+FL Senate District 28 (Libertarian Party)	1	FL Senate District 28	Libertarian Party
+FL Senate District 29 (Libertarian Party)	1	FL Senate District 29	Libertarian Party
+FL Senate District 30 (Libertarian Party)	1	FL Senate District 30	Libertarian Party
+FL Senate District 31 (Libertarian Party)	1	FL Senate District 31	Libertarian Party
+FL Senate District 32 (Libertarian Party)	1	FL Senate District 32	Libertarian Party
+FL Senate District 33 (Libertarian Party)	1	FL Senate District 33	Libertarian Party
+FL Senate District 34 (Libertarian Party)	1	FL Senate District 34	Libertarian Party
+FL Senate District 35 (Libertarian Party)	1	FL Senate District 35	Libertarian Party
+FL Senate District 36 (Libertarian Party)	1	FL Senate District 36	Libertarian Party
+FL Senate District 37 (Libertarian Party)	1	FL Senate District 37	Libertarian Party
+FL Senate District 38 (Libertarian Party)	1	FL Senate District 38	Libertarian Party
+FL Senate District 39 (Libertarian Party)	1	FL Senate District 39	Libertarian Party
+FL Senate District 40 (Libertarian Party)	1	FL Senate District 40	Libertarian Party
+US House FL District 1 (Libertarian Party)	1	US House FL District 1	Libertarian Party
+US House FL District 2 (Libertarian Party)	1	US House FL District 2	Libertarian Party
+US House FL District 3 (Libertarian Party)	1	US House FL District 3	Libertarian Party
+US House FL District 4 (Libertarian Party)	1	US House FL District 4	Libertarian Party
+US House FL District 5 (Libertarian Party)	1	US House FL District 5	Libertarian Party
+US House FL District 6 (Libertarian Party)	1	US House FL District 6	Libertarian Party
+US House FL District 7 (Libertarian Party)	1	US House FL District 7	Libertarian Party
+US House FL District 8 (Libertarian Party)	1	US House FL District 8	Libertarian Party
+US House FL District 9 (Libertarian Party)	1	US House FL District 9	Libertarian Party
+US House FL District 10 (Libertarian Party)	1	US House FL District 10	Libertarian Party
+US House FL District 11 (Libertarian Party)	1	US House FL District 11	Libertarian Party
+US House FL District 12 (Libertarian Party)	1	US House FL District 12	Libertarian Party
+US House FL District 13 (Libertarian Party)	1	US House FL District 13	Libertarian Party
+US House FL District 14 (Libertarian Party)	1	US House FL District 14	Libertarian Party
+US House FL District 15 (Libertarian Party)	1	US House FL District 15	Libertarian Party
+US House FL District 16 (Libertarian Party)	1	US House FL District 16	Libertarian Party
+US House FL District 17 (Libertarian Party)	1	US House FL District 17	Libertarian Party
+US House FL District 18 (Libertarian Party)	1	US House FL District 18	Libertarian Party
+US House FL District 19 (Libertarian Party)	1	US House FL District 19	Libertarian Party
+US House FL District 20 (Libertarian Party)	1	US House FL District 20	Libertarian Party
+US House FL District 21 (Libertarian Party)	1	US House FL District 21	Libertarian Party
+US House FL District 22 (Libertarian Party)	1	US House FL District 22	Libertarian Party
+US House FL District 23 (Libertarian Party)	1	US House FL District 23	Libertarian Party
+US House FL District 24 (Libertarian Party)	1	US House FL District 24	Libertarian Party
+US House FL District 25 (Libertarian Party)	1	US House FL District 25	Libertarian Party
+US House FL District 26 (Libertarian Party)	1	US House FL District 26	Libertarian Party
+US House FL District 27 (Libertarian Party)	1	US House FL District 27	Libertarian Party
+US President (FL) (Libertarian Party)	1	US President (FL)	Libertarian Party
+FL Governor (Libertarian Party)	1	FL Governor	Libertarian Party
+US Senate FL (Libertarian Party)	1	US Senate FL	Libertarian Party
+FL Attorney General (Libertarian Party)	1	FL Attorney General	Libertarian Party
+FL Chief Financial Officer (Libertarian Party)	1	FL Chief Financial Officer	Libertarian Party
+FL Commissioner of Agriculture (Libertarian Party)	1	FL Commissioner of Agriculture	Libertarian Party
