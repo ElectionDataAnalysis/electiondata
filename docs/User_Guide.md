@@ -297,3 +297,7 @@ Beware of:
  - Any item with an internal comma (e.g., 'John Sawyer, III')
  - A county that uses all caps - (e.g., Seminole County FL)
 
+The `db_routines` submodule has a routine to remove all counts from a particular results file, given a connection to the database, a cursor on that connection and the _datafile.Id of the results file:
+```
+remove_vote_counts(connection, cursor, id)
+```
