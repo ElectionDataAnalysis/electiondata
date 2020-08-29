@@ -179,7 +179,8 @@ def replace_raw_with_internal_ids(
     unmatched = working[working['cdf_internal_name'].isnull()]
     unmatched_raw = list(unmatched[f'{element}_raw'].unique())
     if len(unmatched_raw) > 0 and element != 'BallotMeasureContest':
-        e = f'{element}s not found in dictionary.txt: {unmatched_raw}'
+        unmatched_str = '\n'.join(unmatched_raw)
+        e = f'{element}s not found in dictionary.txt:\n{unmatched_str}'
         ui.add_error(error, 'munge_warning', e)
 
     if drop_unmatched:
@@ -225,11 +226,15 @@ def replace_raw_with_internal_ids(
     )
 
     # error/warning for unmatched elements
-    working_unmatched = working[working.Id.isnull()]
+    working_unmatched = working[(working.Id.isnull()) & (working[element].notnull())]
     if not working_unmatched.empty and element != 'BallotMeasureContest':
-        unmatched_str = '\n\t'.join(working_unmatched[internal_name_column].unique())
+        unmatched_pairs = [
+            f'({r[f"{element}_raw"]},{r[element]})' for
+            i,r in working_unmatched[[f"{element}_raw",element]].drop_duplicates().iterrows()
+        ]
+        unmatched_str = '\n\t'.join(unmatched_pairs)
         e = f'Warning: Results for {working_unmatched.shape[0]} rows with unmatched {element}s ' \
-            f'will not be loaded to database. These elements were found in dictionary.txt, but ' \
+            f'will not be loaded to database. These records (raw name, internal name) were found in dictionary.txt, but ' \
             f'no corresponding record was found in {element}.txt: \n{unmatched_str}'
         ui.add_error(error, 'munge_warning', e)
 
@@ -552,9 +557,8 @@ def raw_elements_to_cdf(
                         working, juris, df, t, name_field, err, drop_unmatched=drop,unmatched_id=none_or_unknown_id)
                     working.drop(t,axis=1,inplace=True)
         except Exception as exc:
-                e = f'Error adding internal ids for {t}:\n{exc}'
-                ui.add_error(err, 'munge-error', f'Error adding internal ids for {t}.')
-                return err
+            ui.add_error(err, 'munge-error', f'Error adding internal ids for {t}.')
+            return err
 
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
     try:

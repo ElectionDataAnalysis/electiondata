@@ -143,7 +143,10 @@ class MultiDataLoader():
 		warnings = []
 		errors = []
 		for mu in load_error.keys():
-			warn_err_keys = [k for k in load_error[mu].keys()].copy()
+			if load_error[mu]:
+				warn_err_keys = [k for k in load_error[mu].keys()].copy()
+			else:
+				warn_err_keys = []
 			for k in warn_err_keys:
 				msg = load_error[mu].pop(k)
 				if 'warning' in k or 'Warning' in k:
