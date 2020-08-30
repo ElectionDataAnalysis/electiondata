@@ -201,6 +201,7 @@ PA House District 199	1	PA House District 199
 PA House District 200	1	PA House District 200	
 PA House District 201	1	PA House District 201	
 PA House District 202	1	PA House District 202	
+PA House District 203	1	PA House District 203	
 PA Senate District 1	1	PA Senate District 1	
 PA Senate District 2	1	PA Senate District 2	
 PA Senate District 3	1	PA Senate District 3	
@@ -275,6 +276,7 @@ US Senate PA	1	US Senate PA
 PA Attorney General	1	PA Attorney General	
 PA Lieutenant Governor	1	PA Lieutenant Governor	
 PA Treasurer	1	PA Treasurer	
+PA Auditor General	1	PA Auditor General
 PA House District 1 (Democratic Party)	1	PA House District 1	Democratic Party
 PA House District 2 (Democratic Party)	1	PA House District 2	Democratic Party
 PA House District 3 (Democratic Party)	1	PA House District 3	Democratic Party
@@ -477,6 +479,7 @@ PA House District 199 (Democratic Party)	1	PA House District 199	Democratic Part
 PA House District 200 (Democratic Party)	1	PA House District 200	Democratic Party
 PA House District 201 (Democratic Party)	1	PA House District 201	Democratic Party
 PA House District 202 (Democratic Party)	1	PA House District 202	Democratic Party
+PA House District 203 (Democratic Party)	1	PA House District 203	Democratic Party
 PA Senate District 1 (Democratic Party)	1	PA Senate District 1	Democratic Party
 PA Senate District 2 (Democratic Party)	1	PA Senate District 2	Democratic Party
 PA Senate District 3 (Democratic Party)	1	PA Senate District 3	Democratic Party
@@ -551,6 +554,7 @@ US Senate PA (Democratic Party)	1	US Senate PA	Democratic Party
 PA Attorney General (Democratic Party)	1	PA Attorney General	Democratic Party
 PA Lieutenant Governor (Democratic Party)	1	PA Lieutenant Governor	Democratic Party
 PA Treasurer (Democratic Party)	1	PA Treasurer	Democratic Party
+PA Auditor General (Democratic Party)	1	PA Auditor General	Democratic Party
 PA House District 1 (Republican Party)	1	PA House District 1	Republican Party
 PA House District 2 (Republican Party)	1	PA House District 2	Republican Party
 PA House District 3 (Republican Party)	1	PA House District 3	Republican Party
@@ -753,6 +757,7 @@ PA House District 199 (Republican Party)	1	PA House District 199	Republican Part
 PA House District 200 (Republican Party)	1	PA House District 200	Republican Party
 PA House District 201 (Republican Party)	1	PA House District 201	Republican Party
 PA House District 202 (Republican Party)	1	PA House District 202	Republican Party
+PA House District 203 (Republican Party)	1	PA House District 203	Republican Party
 PA Senate District 1 (Republican Party)	1	PA Senate District 1	Republican Party
 PA Senate District 2 (Republican Party)	1	PA Senate District 2	Republican Party
 PA Senate District 3 (Republican Party)	1	PA Senate District 3	Republican Party
@@ -827,6 +832,7 @@ US Senate PA (Republican Party)	1	US Senate PA	Republican Party
 PA Attorney General (Republican Party)	1	PA Attorney General	Republican Party
 PA Lieutenant Governor (Republican Party)	1	PA Lieutenant Governor	Republican Party
 PA Treasurer (Republican Party)	1	PA Treasurer	Republican Party
+PA Auditor General (Republican Party)	1	PA Auditor General	Republican Party
 PA House District 1 (Green Party)	1	PA House District 1	Green Party
 PA House District 2 (Green Party)	1	PA House District 2	Green Party
 PA House District 3 (Green Party)	1	PA House District 3	Green Party
@@ -1029,6 +1035,7 @@ PA House District 199 (Green Party)	1	PA House District 199	Green Party
 PA House District 200 (Green Party)	1	PA House District 200	Green Party
 PA House District 201 (Green Party)	1	PA House District 201	Green Party
 PA House District 202 (Green Party)	1	PA House District 202	Green Party
+PA House District 203 (Green Party)	1	PA House District 203	Green Party
 PA Senate District 1 (Green Party)	1	PA Senate District 1	Green Party
 PA Senate District 2 (Green Party)	1	PA Senate District 2	Green Party
 PA Senate District 3 (Green Party)	1	PA Senate District 3	Green Party
@@ -1103,6 +1110,7 @@ US Senate PA (Green Party)	1	US Senate PA	Green Party
 PA Attorney General (Green Party)	1	PA Attorney General	Green Party
 PA Lieutenant Governor (Green Party)	1	PA Lieutenant Governor	Green Party
 PA Treasurer (Green Party)	1	PA Treasurer	Green Party
+PA Auditor General (Green Party)	1	PA Auditor General	Green Party
 PA House District 1 (Libertarian Party)	1	PA House District 1	Libertarian Party
 PA House District 2 (Libertarian Party)	1	PA House District 2	Libertarian Party
 PA House District 3 (Libertarian Party)	1	PA House District 3	Libertarian Party
@@ -1305,6 +1313,7 @@ PA House District 199 (Libertarian Party)	1	PA House District 199	Libertarian Pa
 PA House District 200 (Libertarian Party)	1	PA House District 200	Libertarian Party
 PA House District 201 (Libertarian Party)	1	PA House District 201	Libertarian Party
 PA House District 202 (Libertarian Party)	1	PA House District 202	Libertarian Party
+PA House District 203 (Libertarian Party)	1	PA House District 203	Libertarian Party
 PA Senate District 1 (Libertarian Party)	1	PA Senate District 1	Libertarian Party
 PA Senate District 2 (Libertarian Party)	1	PA Senate District 2	Libertarian Party
 PA Senate District 3 (Libertarian Party)	1	PA Senate District 3	Libertarian Party
@@ -1379,3 +1388,4 @@ US Senate PA (Libertarian Party)	1	US Senate PA	Libertarian Party
 PA Attorney General (Libertarian Party)	1	PA Attorney General	Libertarian Party
 PA Lieutenant Governor (Libertarian Party)	1	PA Lieutenant Governor	Libertarian Party
 PA Treasurer (Libertarian Party)	1	PA Treasurer	Libertarian Party
+PA Auditor General (Libertarian Party)	1	PA Auditor General	Libertarian Party

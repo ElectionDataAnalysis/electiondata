@@ -201,6 +201,7 @@ PA House District 199	Pennsylvania;PA House District 199
 PA House District 200	Pennsylvania;PA House District 200
 PA House District 201	Pennsylvania;PA House District 201
 PA House District 202	Pennsylvania;PA House District 202
+PA House District 203	Pennsylvania;PA House District 203
 PA Senate District 1	Pennsylvania;PA Senate District 1
 PA Senate District 2	Pennsylvania;PA Senate District 2
 PA Senate District 3	Pennsylvania;PA Senate District 3
@@ -275,3 +276,4 @@ US Senate PA	Pennsylvania
 PA Attorney General	Pennsylvania
 PA Lieutenant Governor	Pennsylvania
 PA Treasurer	Pennsylvania
+PA Auditor General	Pennsylvania
