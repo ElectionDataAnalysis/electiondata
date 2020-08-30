@@ -185,6 +185,16 @@ class MultiDataLoader():
 			print(print_str)
 		return
 
+	def pull_counts(self, ru_type: str = 'county') -> dict:
+		err = dict()
+		ej_set = {(self.tracker[f]['election'], self.tracker[f]['top_reporting_unit']) for
+		 f in self.tracker.keys() if self.tracker[f]['status'] == 'loaded'}
+		an = Analyzer()
+		for (election, jurisdiction) in ej_set:
+			key = f'{jurisdiction.replace(" ","-")}_{election.replace(" ","-")}'
+			err[key] = an.top_counts_by_vote_type(election, jurisdiction, ru_type)
+		return err
+
 
 class SingleDataLoader():
 	def __init__(self, results_dir, par_file_name, project_root, session, munger_path, juris):
