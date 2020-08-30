@@ -274,8 +274,6 @@ def new_datafile(
 		  f'assuming jurisdiction {juris.path_to_juris_dir}')
 	if err == dict():
 		err = None
-	else:
-		print(f'\tNote:\n{err}')
 	return err
 
 
