@@ -238,12 +238,12 @@ def replace_raw_with_internal_ids(
     working_unmatched = working[(working.Id.isnull()) & (working[element].notnull())]
     if not working_unmatched.empty and element != 'BallotMeasureContest':
         unmatched_pairs = [
-            f'({r[f"{element}_raw"]},{r[element]})' for
+            f'({r[element]},{r[f"{element}_raw"]})' for
             i,r in working_unmatched[[f"{element}_raw",element]].drop_duplicates().iterrows()
         ]
         unmatched_str = '\n\t'.join(unmatched_pairs)
         e = f'Warning: Results for {working_unmatched.shape[0]} rows with unmatched {element}s ' \
-            f'will not be loaded to database. These records (raw name, internal name) were found in dictionary.txt, but ' \
+            f'will not be loaded to database. These records (internal name, raw name) were found in dictionary.txt, but ' \
             f'no corresponding record was found in {element}.txt: \n{unmatched_str}'
         ui.add_error(error, 'munge_warning', e)
 
