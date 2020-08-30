@@ -79,27 +79,44 @@ def create_rollup(
 	inv_exists = os.path.isfile(inventory_file)
 	if inv_exists:
 		inv_df = pd.read_csv(inventory_file,sep='\t')
-		# check that header matches inventory_columns
-		with open(inventory_file,newline='') as f:
-			reader = csv.reader(f,delimiter='\t')
-			file_header = next(reader)
-			# TODO: offer option to delete inventory file
-			assert file_header == inventory_columns, \
-				f'Header of file {f} is\n{file_header},\ndoesn\'t match\n{inventory_columns}.'
+	else:
+		inv_df = pd.DataFrame()
+	inventory = {'Election': election, 'ReportingUnitType': sub_rutype,
+				 'source_db_url': cursor.connection.dsn, 'timestamp': datetime.date.today()}
 
-	with open(inventory_file,'a',newline='') as csv_file:
-		wr = csv.writer(csv_file,delimiter='\t')
-		if not inv_exists:
-			wr.writerow(inventory_columns)
-		wr.writerow(inventory_values)
+	for contest_type in ['BallotMeasure','Candidate']:
+		# export data
+		rollup_file = f'{cursor.connection.info.dbname}_{contest_type}_results.txt'
+		while os.path.isfile(os.path.join(leaf_dir, rollup_file)):
+			rollup_file = input(f'There is already a file called {rollup_file}. Pick another name.\n')
 
-	print(f'Results exported to {out_file}')
-	return
+		err = dbr.export_rollup_to_csv(
+			cursor, top_ru, sub_rutype, contest_type, datafile_list,
+			os.path.join(leaf_dir, rollup_file), by=by, exclude_total=exclude_total
+		)
+		if err:
+			err_str = err
+		else:
+			# create record for inventory.txt
+			inv_df = inv_df.append(inventory, ignore_index=True).fillna('')
+			err_str = None
+
+	# export to inventory file
+	inv_df.to_csv(inventory_file, index=False, sep='\t')
+	return err_str
+
+
+def short_name(text,sep=';'):
+	return text.split(sep)[-1]
 
 
 def create_scatter(session, jurisdiction_id, subdivision_type_id, 
             h_election_id, h_category, h_count_id, h_type,
 			v_election_id, v_category, v_count_id, v_type):
+
+	connection = session.bind.raw_connection()
+	cursor = connection.cursor()
+
 	# Get name of db for error messages
 	dfh = get_data_for_scatter(session, jurisdiction_id, subdivision_type_id, h_election_id, \
 		h_category, h_count_id, h_type)
@@ -110,24 +127,24 @@ def create_scatter(session, jurisdiction_id, subdivision_type_id,
 	if h_count_id == -1:
 		x = f'All {h_type}'
 	elif h_type == 'candidates':
-		x = dbr.name_from_id(session, 'Candidate', h_count_id) 
+		x = dbr.name_from_id(cursor, 'Candidate', h_count_id) 
 	elif h_type == 'contests':
-		x = dbr.name_from_id(session, 'CandidateContest', h_count_id) 
+		x = dbr.name_from_id(cursor, 'CandidateContest', h_count_id) 
 	if v_count_id == -1:
 		y = f'All {v_type}'
 	elif v_type == 'candidates':
-		y = dbr.name_from_id(session, 'Candidate', v_count_id) 
+		y = dbr.name_from_id(cursor, 'Candidate', v_count_id) 
 	elif v_type == 'contests':
-		y = dbr.name_from_id(session, 'CandidateContest', v_count_id) 
-	jurisdiction = dbr.name_from_id(session, 'ReportingUnit', jurisdiction_id)
+		y = dbr.name_from_id(cursor, 'CandidateContest', v_count_id) 
+	jurisdiction = dbr.name_from_id(cursor, 'ReportingUnit', jurisdiction_id)
 	pivot_df = pd.pivot_table(unsummed, values='Count',
 		index=['Name'], columns='Selection').reset_index()
 	
 	# package up results
 	results = package_results(pivot_df, jurisdiction, x, y)
-	results["x-election"] = dbr.name_from_id(session, 'Election', h_election_id)
-	results["y-election"] = dbr.name_from_id(session, 'Election', v_election_id)
-	results["subdivision_type"] = dbr.name_from_id(session, 'ReportingUnitType', subdivision_type_id)
+	results["x-election"] = dbr.name_from_id(cursor, 'Election', h_election_id)
+	results["y-election"] = dbr.name_from_id(cursor, 'Election', v_election_id)
+	results["subdivision_type"] = dbr.name_from_id(cursor, 'ReportingUnitType', subdivision_type_id)
 	results["x-count_item_type"] = h_category
 	results["y-count_item_type"] = v_category
 
@@ -173,50 +190,10 @@ def get_data_for_scatter(session, jurisdiction_id, subdivision_type_id,
 	elif count_type == 'contests':
 		filter_column = 'Contest_Id'
 	if filter_id != -1:
-		csj = contest_selection[contest_selection[filter_column].isin([filter_id])]
-	else:
-		csj = contest_selection
-
-	# find ReportingUnits of the correct type that are subunits of top_ru
-	sub_ru_ids = child_rus_by_id(session,[jurisdiction_id],ru_type=[subdivision_type_id, ''])
-	if not sub_ru_ids:
-		# TODO better error handling (while not sub_ru_list....)
-		raise Exception(f'Database {db} shows no ReportingUnits of type {sub_rutype} nested inside {top_ru}')
-	sub_ru = df['ReportingUnit'].loc[sub_ru_ids]
-
-	# find all subReportingUnits of top_ru
-	all_subs_ids = child_rus_by_id(session,[jurisdiction_id])
-
-	# find all children of subReportingUnits
-	children_of_subs_ids = child_rus_by_id(session,sub_ru_ids)
-	ru_children = df['ReportingUnit'].loc[children_of_subs_ids]
-
-def short_name(text,sep=';'):
-	return text.split(sep)[-1]
-	# check for any reporting units that should be included in roll-up but were missed
-	# TODO list can be long and irrelevant. Instead list ReportingUnitTypes of the missing
-	# missing = [str(x) for x in all_subs_ids if x not in children_of_subs_ids]
-	# if missing:
-	# TODO report these out to the export directory
-	#	ui.report_problems(missing,msg=f'The following reporting units are nested in {top_ru["Name"]} '
-	#							f'but are not nested in any {sub_rutype} nested in {top_ru["Name"]}')
-
-	# limit to relevant vote counts
-	ecsvcj = df['ElectionContestSelectionVoteCountJoin'][
-		(df['ElectionContestSelectionVoteCountJoin'].ElectionContestJoin_Id.isin(ecj.index)) &
-		(df['ElectionContestSelectionVoteCountJoin'].ContestSelectionJoin_Id.isin(csj.index))]
-
-	# calculate specified dataframe with columns [ReportingUnit,Contest,Selection,VoteCount,CountItemType]
-	#  1. create unsummed dataframe of results
-	unsummed = ecsvcj.merge(
-		df['VoteCount'],left_on='VoteCount_Id',right_index=True).merge(
-		df['ComposingReportingUnitJoin'],left_on='ReportingUnit_Id',right_on='ChildReportingUnit_Id').merge(
-		ru_children,left_on='ChildReportingUnit_Id',right_index=True).merge(
-		sub_ru,left_on='ParentReportingUnit_Id',right_index=True,suffixes=['','_Parent'])
-	unsummed.rename(columns={'Name_Parent':'ReportingUnit'},inplace=True)
-	# add columns with names
-	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'])
-	unsummed = unsummed.merge(contest_selection,how='left',left_on='ContestSelectionJoin_Id',right_index=True)
+		contest_selection = contest_selection[contest_selection[filter_column].isin([filter_id])]
+	ecsvcj = create_vote_selections(df, contest_selection, election_id)
+	#  create dataframe of results
+	unsummed = create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru)
 
 	# Now process data	
 	# filter based on vote count type
@@ -246,6 +223,10 @@ def short_name(text,sep=';'):
 
 def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, election_id,
 	for_export):
+
+	connection = session.bind.raw_connection()
+	cursor = connection.cursor()
+
 	df = pull_data_tables(session)
 	ru, sub_ru, ru_children = create_hierarchies(session, df, top_ru_id, subdivision_type_id)
 	candidate_columns = ['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id',
@@ -295,9 +276,9 @@ def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, e
 			'max_margins_pct': 'margins_pct'}, inplace=True)
 
 		candidates = temp_df['Candidate_Id'].unique()
-		x = dbr.name_from_id(session, 'Candidate', candidates[0])
-		y = dbr.name_from_id(session, 'Candidate', candidates[1]) 
-		jurisdiction = dbr.name_from_id(session, 'ReportingUnit', top_ru_id)
+		x = dbr.name_from_id(cursor, 'Candidate', candidates[0])
+		y = dbr.name_from_id(cursor, 'Candidate', candidates[1]) 
+		jurisdiction = dbr.name_from_id(cursor, 'ReportingUnit', top_ru_id)
 
 		pivot_df = pd.pivot_table(temp_df, values='Count',
 			index=['Name'], columns='Selection').reset_index()
@@ -306,10 +287,10 @@ def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, e
 			.sort_values('score', ascending=False).reset_index()
 
 		results = package_results(pivot_df, jurisdiction, x, y, restrict=8)
-		results["election"] = dbr.name_from_id(session, 'Election', election_id)
-		results["contest"] = dbr.name_from_id(session, 'CandidateContest', temp_df.iloc[0]['Contest_Id'])
-		results["subdivision_type"] = dbr.name_from_id(session, 'ReportingUnitType', \
-				temp_df.iloc[0]['ReportingUnitType_Id'])
+		results["election"] = dbr.name_from_id(cursor, 'Election', election_id)
+		results["contest"] = dbr.name_from_id(cursor, 'CandidateContest', int(temp_df.iloc[0]['Contest_Id']))
+		results["subdivision_type"] = dbr.name_from_id(cursor, 'ReportingUnitType', \
+				int(temp_df.iloc[0]['ReportingUnitType_Id']))
 		results["count_item_type"] = temp_df.iloc[0]['CountItemType']
 		results["votes_at_stake"] = temp_df.iloc[0]['votes_at_stake']
 		results['margin'] = temp_df[temp_df['rank'] == 1].iloc[0]['ind_total']\

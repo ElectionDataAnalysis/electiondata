@@ -267,54 +267,54 @@ class SingleDataLoader():
 		return err
 
 
-class Analyzer():
-	def __new__(self):
-		""" Checks if parameter file exists and is correct. If not, does
-		not create DataLoader object. """
-		try:
-			d, parameter_err = ui.get_runtime_parameters(analyze_pars, param_file='multi.par')
-		except FileNotFoundError as e:
-			print("Parameter file not found. Ensure that it is located" \
-				" in the current directory. Analyzer object not created.")
-			return None
+# class Analyzer():
+# 	def __new__(self):
+# 		""" Checks if parameter file exists and is correct. If not, does
+# 		not create DataLoader object. """
+# 		try:
+# 			d, parameter_err = ui.get_runtime_parameters(analyze_pars, param_file='multi.par')
+# 		except FileNotFoundError as e:
+# 			print("Parameter file not found. Ensure that it is located" \
+# 				" in the current directory. Analyzer object not created.")
+# 			return None
 
-		if parameter_err:
-			print("Parameter file missing requirements.")
-			print(parameter_err)
-			print("Analyzer object not created.")
-			return None
+# 		if parameter_err:
+# 			print("Parameter file missing requirements.")
+# 			print(parameter_err)
+# 			print("Analyzer object not created.")
+# 			return None
 
-		return super().__new__(self)
+# 		return super().__new__(self)
 
-	def __init__(self):
-		self.d, self.parameter_err = ui.get_runtime_parameters(analyze_pars,param_file='multi.par')
+# 	def __init__(self):
+# 		self.d, self.parameter_err = ui.get_runtime_parameters(analyze_pars,param_file='multi.par')
 
-		eng = dbr.sql_alchemy_connect(paramfile=self.d['db_paramfile'],
-			db_name=self.d['db_name'])
-		Session = sessionmaker(bind=eng)
-		self.session = Session()
+# 		eng = dbr.sql_alchemy_connect(paramfile=self.d['db_paramfile'],
+# 			db_name=self.d['db_name'])
+# 		Session = sessionmaker(bind=eng)
+# 		self.session = Session()
 
-	def display_options(self, input):
-		results = dbr.get_input_options(self.session, input)
-		if results:
-			return results
-		return None
+# 	def display_options(self, input):
+# 		results = dbr.get_input_options(self.session, input)
+# 		if results:
+# 			return results
+# 		return None
 
-	def top_counts_by_vote_type(self, election, rollup_unit, sub_unit):
-		d, error = ui.get_runtime_parameters(['rollup_directory'], param_file='multi.par')
-		if error:
-			err_str = f'Parameter file missing requirements.\n{error}\nNo results exported'
-			print(err_str)
-		else:
-			connection = self.session.bind.raw_connection()
-			cursor = connection.cursor()
-			rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
-			sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
-			election_id = dbr.name_to_id(self.session, 'Election', election)
-			err_str = avp.create_rollup(cursor, d['rollup_directory'], rollup_unit_id,
-				sub_unit_id, election_id)
-			connection.close()
-		return err_str
+	# def top_counts_by_vote_type(self, election, rollup_unit, sub_unit):
+	# 	d, error = ui.get_runtime_parameters(['rollup_directory'], param_file='multi.par')
+	# 	if error:
+	# 		err_str = f'Parameter file missing requirements.\n{error}\nNo results exported'
+	# 		print(err_str)
+	# 	else:
+	# 		connection = self.session.bind.raw_connection()
+	# 		cursor = connection.cursor()
+	# 		rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
+	# 		sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
+	# 		election_id = dbr.name_to_id(self.session, 'Election', election)
+	# 		err_str = avp.create_rollup(cursor, d['rollup_directory'], rollup_unit_id,
+	# 			sub_unit_id, election_id)
+	# 		connection.close()
+	# 	return err_str
 
 class JurisdictionPrepper():
 	def __new__(cls):
@@ -719,22 +719,37 @@ class Analyzer():
         return None
 
 
-    def top_counts_by_vote_type(self, rollup_unit, sub_unit):
-        d, error = ui.get_runtime_parameters(['rollup_directory'])
+    # def top_counts_by_vote_type(self, rollup_unit, sub_unit):
+    #     d, error = ui.get_runtime_parameters(['rollup_directory'])
+    #     if error:
+    #         print("Parameter file missing requirements.")
+    #         print(error)
+    #         print("Data not created.")
+    #         return
+    #     else:
+    #         rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
+    #         sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
+    #         results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
+    #         rollup = a.create_rollup(self.session, d['rollup_directory'], top_ru_id=rollup_unit_id,
+    #             sub_rutype_id=sub_unit_id, sub_rutype_othertext='', datafile_id_list=results_info[0], 
+    #             election_id=results_info[1])
+    #         return
+
+    def top_counts_by_vote_type(self, election, rollup_unit, sub_unit):
+        d, error = ui.get_runtime_parameters(['rollup_directory'], param_file='multi.par')
         if error:
-            print("Parameter file missing requirements.")
-            print(error)
-            print("Data not created.")
-            return
+            err_str = f'Parameter file missing requirements.\n{error}\nNo results exported'
+            print(err_str)
         else:
+            connection = self.session.bind.raw_connection()
+            cursor = connection.cursor()
             rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
             sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
-            results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
-            rollup = a.create_rollup(self.session, d['rollup_directory'], top_ru_id=rollup_unit_id,
-                sub_rutype_id=sub_unit_id, sub_rutype_othertext='', datafile_id_list=results_info[0], 
-                election_id=results_info[1])
-            return
-
+            election_id = dbr.name_to_id(self.session, 'Election', election)
+            err_str = avp.create_rollup(cursor, d['rollup_directory'], rollup_unit_id,
+                sub_unit_id, election_id)
+            connection.close()
+        return err_str
 
     def top_counts(self, rollup_unit, sub_unit):
         d, error = ui.get_runtime_parameters(['rollup_directory'])
@@ -762,7 +777,7 @@ class Analyzer():
         so any image extension that is supported by plotly is usable here. Currently supports 
         html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
         installed as well."""
-        d, error = ui.get_runtime_parameters(['rollup_directory'])
+        d, error = ui.get_runtime_parameters(['rollup_directory'], param_file='analyze.par')
         if error:
             print("Parameter file missing requirements.")
             print(error)

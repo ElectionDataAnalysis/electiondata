@@ -259,7 +259,6 @@ def name_from_id(cursor,element,idx):
 	q = sql.SQL(
 		'SELECT {name_field} FROM {element} WHERE "Id" = %s'
 	).format(name_field=sql.Identifier(name_field),element=sql.Identifier(element))
-
 	try:
 		cursor.execute(q,[idx])
 		name = cursor.fetchall()[0][0]
@@ -298,7 +297,7 @@ def name_to_id(session, element, name) -> int:
 def get_name_field(element):
 	if element in ['CountItemType','ElectionType','IdentifierType','ReportingUnitType']:
 		field = 'Txt'
-	elif element in ['CandidateSelection','BallotMeasureSelection','CandidateContest','BallotMeasureContest']:
+	elif element in ['CandidateSelection','BallotMeasureSelection']:
 		field = 'Id'
 	elif element == 'Candidate':
 		field = 'BallotName'
