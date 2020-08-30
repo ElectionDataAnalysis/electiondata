@@ -21,10 +21,19 @@ def generic_clean(df:pd.DataFrame) -> pd.DataFrame:
     working = df.copy()
     for c in working.columns:
         if is_numeric_dtype(working[c]):
+            # change nulls to 0
             working[c] = working[c].fillna(0).astype('int64')
-        else:
+        elif working.dtypes[c] == np.object:
+            # change nulls to the empty string
             working[c] = working[c].fillna('')
+            # replace any double quotes with single quotes
             try:
+                mask = working[c].str.contains('"')
+                working.loc[mask,c] = working[c].str.replace('"',"'")
+            except AttributeError or TypeError:
+                pass
+            try:
+                # strip extraneous whitespace
                 working[c] = working[c].apply(lambda x:x.strip())
             except AttributeError:
                 pass

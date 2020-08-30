@@ -349,7 +349,7 @@ def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', times
 	for c in temp_only_cols:
 		working = mr.add_constant_column(working,c,None)
 	working[temp_columns].drop_duplicates().to_csv(
-		output, sep=sep, header=False, encoding=encoding, index=False)
+		output, sep=sep, header=False, encoding=encoding, index=False, quoting=csv.QUOTE_MINIMAL)
 	# set current position for the StringIO object to the beginning of the string
 	output.seek(0)
 
