@@ -417,18 +417,12 @@ def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session:
         # drop text column
         w_for_type[c_type] = w_for_type[c_type].drop(f'{c_type}Contest',axis=1)
 
-        # drop obsolete columns
-    common_cols = [c for c in w_for_type['BallotMeasure'].columns if c in w_for_type['Candidate'].columns]
-    for c_type in ['BallotMeasure','Candidate']:
-        w_for_type[c_type] = w_for_type[c_type][common_cols]
-
     # FIXME: check somewhere that no name (other than 'none or unknown') is shared by BMContests and CandidateContests
     # TODO check this also when juris files loaded, to save time for user
 
     working = pd.concat([w_for_type[ct] for ct in ['BallotMeasure','Candidate']])
     missing_idx = [idx for idx in df.index if idx not in working.index]
     missing = df.loc[missing_idx]
-    number_missing = df.shape[0] - working.shape[0]
     # fail if no contests recognized
     if working.empty:
 
@@ -436,11 +430,10 @@ def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session:
         ui.add_error(err,'munge_error',e)
         return working, err
 
-    # warn of un-munged contests
-    elif missing.shape[0] > 0:
-        missing_contest_str = '\n\t'.join(missing.CandidateContest_raw.unique())
-        e = f'Warning: Results for unmatched contests ({missing.shape[0]} rows) will not be loaded to database: {missing_contest_str}'
-        ui.add_error(err, 'munge_warning',e)
+    # drop obsolete columns
+    common_cols = [c for c in w_for_type['BallotMeasure'].columns if c in w_for_type['Candidate'].columns]
+    for c_type in ['BallotMeasure','Candidate']:
+        w_for_type[c_type] = w_for_type[c_type][common_cols]
 
     return working, err
 
