@@ -612,7 +612,8 @@ def check_dependencies(juris_dir,element):
         else:
             changed_elements.add(element)
             changed_elements.add(target)
-            unmatched_error.append(f'Every {c} must be a {target}. This is not optional!!')
+            m_str = '\n'.join(missing)
+            unmatched_error.append(f'Every {c} must be a {target}. This is not optional!! Offenders:\n{m_str}')
 
     # if dependent:
     #     print('\n\t'.join(report))
