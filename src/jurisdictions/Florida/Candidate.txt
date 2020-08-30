@@ -16,7 +16,7 @@ Jeffrey Marc Siskind
 Jimmy Patronis
 Jeremy Ring
 Matt Caldwell
-"Nicole ""Nikki"" Fried"
+Nicole 'Nikki' Fried
 Chuck Brannan
 Ronald W. Williams II
 Fred S. Martin
@@ -77,8 +77,8 @@ Dexter Barber
 Teddy Eubanks
 Lisa Barclay Fountain
 David Frank
-"James S. ""Jamie"" Chester"
-"Charles ""Boo"" Morris"
+James S. 'Jamie' Chester
+Charles 'Boo' Morris
 Josh Smith
 Sandy Hurst
 Greg Steube
@@ -92,11 +92,11 @@ Donna Storter Long
 Jeff Barnes
 John R Ahern
 Jerri Lynn Schlueter
-"Robert ""Bobby O"" Olszewski"
+Robert 'Bobby O' Olszewski
 Geraldine F. Thompson
 Darryl B. Sheppard
 John W. Mina
-"Jose ""Joe"" Lopez"
+Jose 'Joe' Lopez
 Dean Mosley
 Laura Shaffer
 Sean McQuade
@@ -125,7 +125,7 @@ Ben Griffin
 Carlos Guillermo Smith
 Wayne Liebnitzky
 Darren Soto
-"Rene ""Coach P"" Plasencia"
+Rene 'Coach P' Plasencia
 Pam Dirschka
 Maribel Gomez Cordero
 Susan Makowski
@@ -155,7 +155,7 @@ Toby Overdorf
 Matt Theobald
 Stacey Hetherington
 Joe Banfi
-"Robert ""Bob"" Meadows"
+Robert 'Bob' Meadows
 Nirlaine Smartt
 MaryLynn Magar
 Edward Francis O'Connor
@@ -259,7 +259,7 @@ Kathie D Shepard
 Elizabeth Fetterhoff
 Patrick Henry
 Tommy A. Wright
-"Melissa ""Mel"" Martin"
+Melissa 'Mel' Martin
 Michael J. Arminio
 Deb Denys
 Ruben Colon
@@ -267,8 +267,8 @@ Melody Johnson
 David Santiago
 Carol Lawrence
 Tom Leek
-"Kathleen ""Katie"" Tripp"
-"Joseph ""Joe"" Hannoush"
+Kathleen 'Katie' Tripp
+Joseph 'Joe' Hannoush
 Jackie Toledo
 Debra Bellanti
 Chad Chronister
@@ -278,7 +278,7 @@ Mariella Smith
 Joe Kotvas
 Todd Marks
 Kimberly Overman
-"Kim ""KLARC"" O'Connor"
+Kim 'KLARC' O'Connor
 Robin Fuson
 Jamey Moody
 Lisa Allen
@@ -286,7 +286,7 @@ Greg Green
 Jack Gutman
 E. Michael Isaak
 Karen Perez
-"Henry ""Shake"" Washington"
+Henry 'Shake' Washington
 Joshua Carrasco
 Kathy Eckdahl
 Michael Hegarty
@@ -298,7 +298,7 @@ Andrew Brooks
 Matt Gozdor
 Travis Medling
 Ray Young
-"Dianne ""Ms Dee"" Hart"
+Dianne 'Ms Dee' Hart
 Steve Cona
 William Henry Person
 Shawn Harrison
@@ -321,7 +321,7 @@ James Grant
 Jessica Harrington
 Andy Warrener
 Doris Healey Cockerell
-"Donald ""Don"" Robinson"
+Donald 'Don' Robinson
 Gus Michael Bilirakis
 Chris Hunter
 Angelika Purkis
@@ -361,18 +361,18 @@ Jamey B. Levis
 Joseph A. McGee
 Frank Nocco
 Michael J. Ryan
-"Joseph ""Joe"" Kaufman"
+Joseph 'Joe' Kaufman
 Debbie Wasserman Schultz
 Don Endriss
-"Timothy A. ""Tim"" Canova"
+Timothy A. 'Tim' Canova
 Vivianne del Rio
 Renee Gordon
 Maria Elvira Salazar
 Donna Shalala
 Mayra Joli
-"Jonathan ""J.P."" Parker"
+Jonathan J.P. Parker
 Michael Grieco
-"Rosa Maria ""Rosy"" Palomino"
+Rosa Maria 'Rosy' Palomino
 Nicholas Xavier Duran
 Dotie Joseph
 Riquet Caballero
@@ -452,7 +452,7 @@ Vikki Garrett
 Laura Dortch Edler
 Larry Williams Sr.
 George B. Gainer
-"Mary Jeanne ""Gigi"" Gibson"
+Mary Jeanne 'Gigi' Gibson
 Todd Charles Abbott
 Wesley Scott Griffin
 Will Robinson
@@ -521,7 +521,7 @@ Laurel S. Bennett
 Matt Willhite
 David Silvers
 Samson LeBeau Kpadenou
-"William ""Billy"" Vale"
+William 'Billy' Vale
 Robert S. Weinroth
 Nicolas Kimaz
 Ted Deutch
@@ -562,7 +562,7 @@ Patrick Bengston
 Julie Peluso
 Maryellen Crowder
 Tom McKone
-"Tom ""Steve"" McQueen"
+Tom 'Steve' McQueen
 Peter Nehr
 Randy Burr
 Tom May
@@ -614,7 +614,7 @@ Nicole Haagenson
 Nicole Menz
 Robyn E Stone
 Merchon Green
-"Jacqueline ""Jackie"" Rosario"
+Jacqueline 'Jackie' Rosario
 Teri L. Barenborg
 Stacey Klim
 Lisa Leger Frazier
@@ -625,7 +625,7 @@ Travis Galbraith
 Robert Adair
 Delia Ramirez
 Stephen J. Sczurek
-"Matthew ""Matt"" Erpenbeck"
+Matthew 'Matt' Erpenbeck
 Thomas S. Lowther
 David Rich
 John Nagy
@@ -680,7 +680,7 @@ Wendy Williams
 Otis L. Brown
 Kelley DeMaio
 Sondra L. Moylan
-"Arthur ""AJ"" Green"
+Arthur 'AJ' Green
 Albert Jordan
 Steve Pochis
 Robert B. Waters
@@ -711,7 +711,7 @@ Michael Gottlieb
 Ann Murray
 Jim Silvernale
 Linda Armstrong
-"Juan Carlos ""John"" Solis"
+Juan Carlos 'John' Solis
 William Randolph Cook
 Alex Perez
 Igor Fateyev
@@ -726,7 +726,7 @@ Doug Bryant
 Courtney Stokes
 Jeremy Norton
 Barbara Price
-"Belita ""B"" Grassel"
+Belita 'B' Grassel
 Anthony Sabatini
 Cynthia Brown
 Kelli Stargel
@@ -736,7 +736,7 @@ Roy Craddock
 Claire Murphy
 Gloria Faylor
 Terry D. Snell
-"Daniel C. ""Danny"" Green"
+Daniel C. 'Danny' Green
 Narragansett (Narrie) Smith
 Richard James Crusaw
 Grady VerPlanck
@@ -751,7 +751,7 @@ Janet O. McDonald
 George DeGovanni
 Richard DeMatteis
 John H. Rutherford
-"George ""Ges"" Selmont"
+George 'Ges' Selmont
 Joceline Berrios
 Jason Michael Bulger
 Aaron Bean
@@ -763,7 +763,7 @@ Spencer Roach
 Mark Lipton
 Cecil Pendergrass
 Bill Taylor
-"Gwynetta ""Gwyn"" Gittens"
+Gwynetta 'Gwyn' Gittens
 Pam LaRiviere
 Nicholas Alexander
 Betsy Vaughn
@@ -773,7 +773,7 @@ Robert M Neeld
 Diane Champion
 Chris Hansen
 Randy A Scott
-"Stephen ""Steve"" R Bowen"
+Stephen 'Steve' R Bowen
 Devin Carver
 Justin M Thomas
 Nettie Caro
@@ -797,7 +797,7 @@ William C Lonkart
 James P Murphy
 Jamie Brush
 John E Cammick
-"Alfred ""Mike"" N Lawrence"
+Alfred 'Mike' N Lawrence
 Richard P McCurry
 Andrew S Barron
 Bruce Cochrane
@@ -826,7 +826,7 @@ Cheryl G Hampton
 Jenny A Licht
 Robert Warner
 Deborah M Hooker
-"William ""Bill"" Wallace"
+William 'Bill' Wallace
 Jasmine Ali
 Bill Proctor
 Cara Fleischer
@@ -853,14 +853,14 @@ Kevin Barrington
 James Bradley Knight
 Jay Trumbull
 Robert A Fletcher
-"Calvin ""Bucky"" Starlin"
+Calvin 'Bucky' Starlin
 Rick Watson
 Teresa Ann Martin
 Connie Dykes Polous
 Bert Boldt
 Tamara Allen
 Mark Nobles
-"Joseph ""Smokey"" Parrish"
+Joseph 'Smokey' Parrish
 Howard E. Wesson
 Mia L. Jones
 Jim Overton
@@ -898,7 +898,7 @@ Channing R Dobbs
 Lacey D Cannon
 M Wayne Smith
 Kenny Thompson
-"James ""Jamie"" Clemons"
+James 'Jamie' Clemons
 John F Crawford
 Danny Riddick
 Donald J. Trump
@@ -927,7 +927,7 @@ Tim Murphy
 William (Bill) McCullough
 Robert Rightmyer
 Peyton Grinnell
-"Charles ""Chuck"" Broadway"
+Charles 'Chuck' Broadway
 Alan Hays
 Christopher Flint
 Scott Larson
@@ -1051,7 +1051,7 @@ Jane Kuckel
 Cathleen Morgan
 Chris Quackenbush
 Dewey A. Tyler
-"Michael J. ""Mike"" Welch"
+Michael J. 'Mike' Welch
 Kenneth Knight Thompson
 Mo Yasin
 Katy Hoover
@@ -1111,7 +1111,7 @@ Linda Lea Gibson
 Gregory Grimaudo
 Marcia Johnson
 Althea Penny Sutton
-"A J ""Tony"" Smith"
+A J 'Tony' Smith
 Brad Segree
 Terry M Martin
 Spence Massey
@@ -1135,9 +1135,9 @@ Brandon Caldwell
 John P. Smith
 Charles B Hewett Jr
 Shelia Bates Adams
-"Kenneth ""Ken"" McGurn"
+Kenneth 'Ken' McGurn
 Tom Wells
-"Hubert ""Joe"" Snodgrass"
+Hubert 'Joe' Snodgrass
 Gordon Smith
 John Hodges
 Linda Lee
@@ -1181,7 +1181,7 @@ Todd Barton
 Jim Bender
 Barbara Ford-Coates
 Mike Moran
-"Fredd ""Glossie"" Atkins"
+Fredd 'Glossie' Atkins
 Joseph Anthony (Tony) Sawyer
 Arlene Sweeting
 Donna Barcomb
@@ -1200,10 +1200,10 @@ Susan Tucker
 Cheryl Brandi
 William P. Noonan
 Jody Davenport
-"Delores ""Dee"" McFarland"
+Delores 'Dee' McFarland
 Cori Fournier
-"Wengay ""Newt"" Newton"
-"Alexandra ""Alex"" Miller"
+Wengay 'Newt' Newton
+Alexandra 'Alex' Miller
 Edward James III
 James T. Golden
 Julio Gonzalez
@@ -1235,7 +1235,7 @@ Barbara McQuinn
 Tom Sutterfield
 Matthew Bymaster
 Daniel H. Sohn
-"Patricia ""Pat"" Edmonson"
+Patricia 'Pat' Edmonson
 Jesse Jackson
 Stephen Joseph Jara
 Karl Dickey
@@ -1250,7 +1250,7 @@ Sonny Maken
 Gary Stein
 Paul Spain
 Lois Frankel
-"W Michael ""Mike"" Trout"
+W Michael 'Mike' Trout
 Lori Berman
 Artie Lurie
 Dave Kerner
@@ -1285,7 +1285,7 @@ David Scholl
 Jeffrey David Jones
 Roy Taylor
 Rex Dimmig
-"Flora ""Tonya"" Stewart"
+Flora 'Tonya' Stewart
 Paul Blackman
 Brandon Alan Ball
 Michael J. Rowan
@@ -1303,7 +1303,7 @@ Betsy Benac
 Jack Richardson
 Gina K Messenger
 Edward G Viltz
-"Dave ""Watchdog"" Miner"
+Dave 'Watchdog' Miner
 Henrietta M Larson
 Charles Weidner
 Harry L Blenker
@@ -1399,7 +1399,7 @@ Eliseo Santana
 Larry Ahern
 Lorena Grizzle
 Jack Latvala
-"Bernard ""Bernie"" Fensterwald"
+Bernard 'Bernie' Fensterwald
 Robert Matthew Tager
 Norman Atherton
 Casey Cane
@@ -1417,15 +1417,15 @@ Cody Tuten
 Karen Pickles
 Marcus A. Hawkins Sr.
 Gwendolyn T. Hubbard
-"Jeffrey ""Mr. V"" Veilleux"
-"Thomas ""Tommy"" Hardee"
+Jeffrey 'Mr. V' Veilleux
+Thomas 'Tommy' Hardee
 Jada Woods Williams
 Alston Kelley
 Justin Hamrick
-"Marvin ""Merv"" Mattair"
+Marvin 'Merv' Mattair
 Nancy Moral
 Rick Davis
-"Adrian ""A.D."" Kinsey"
+Adrian 'A.D.' Kinsey
 Antoanet Iotova
 Gary Farmer
 George Moraitis
@@ -1452,15 +1452,15 @@ Nan H Rich
 Dale V C Holness
 Randal Cutter
 Michael Udine
-"Eugene ""Skip"" Carney"
+Eugene 'Skip' Carney
 Steve Greenbaum
 Tina Hagen
 Alan J Kapalka
 Lyle Milstein
 Chuck Lanza
-"Steven A ""Steve"" Geller"
+Steven A 'Steve' Geller
 Oscar Ganem
-"Richard ""Rick"" Stark"
+Richard 'Rick' Stark
 Madeline T DiComo
 Juan Carlos Solis
 Manny Diaz Jr.
@@ -1547,7 +1547,7 @@ Bob Henriquez
 Sandra L. Murman
 Jeff Zampitella
 Tim Schock
-"Patricia ""Pat"" Kemp"
+Patricia 'Pat' Kemp
 Gary Dolgin
 Melissa Polo
 Lynn Gray
@@ -1624,7 +1624,7 @@ Phillip J. Brutus
 Harvey Ruvin
 Mark Blumstein
 Luis Perez-Medina
-"Carol ""Jodie"" Breece"
+Carol 'Jodie' Breece
 Oscar Rodriguez-Fonts
 Carlos Gimenez
 Raquel Regalado
@@ -1636,10 +1636,10 @@ Miguel Diaz de la Portilla
 Jose Javier Rodriguez
 Mercedes Christian
 Nicholas X. Duran
-"Modesto ""Mo"" Abety"
-"Maria Teresa ""Mari Tere"" Rojas"
+Modesto 'Mo' Abety
+Maria Teresa 'Mari Tere' Rojas
 Steve Gallon III
-"Wilbert T. ""Tee"" Holloway"
+Wilbert T. 'Tee' Holloway
 Alina Valdes
 RenÃ© Garcia
 Anabella Grohoski Peralta
@@ -1673,7 +1673,7 @@ Sean Savitt
 Melissa Vazquez
 Bradley Compton
 Juan A. Rosa
-"Maikel ""Mike"" Lopez"
+Maikel 'Mike' Lopez
 Bertha H. Rodriguez
 Heather Caeners
 Shirley A Green
@@ -1695,7 +1695,7 @@ Stephanie N. Blankenship
 Clay Williams
 Gil Carter
 Tray Hawkins
-"Charles ""Eddie"" Brock"
+Charles 'Eddie' Brock
 Ernest A Armstrong
 Steve Joyner
 John Harmon
@@ -1755,11 +1755,11 @@ Darrell Johnson II
 Leo Marlowe
 Cindy Potter Walker
 Hugh C Black
-"Dewayne ""Bubba"" Branch"
+Dewayne 'Bubba' Branch
 Michael Richter
 Jim Johnson
 Mike T Yon
-"Richard ""Rick"" A. Shirley"
+Richard 'Rick' A. Shirley
 Preston Morgan
 Andrew W. Aschmann
 Bill Schikora
@@ -1885,7 +1885,7 @@ Andreas Roth
 David Chapman
 Alan F Hamisch
 John F Johnson
-"Robert ""Rob"" Griffin"
+Robert 'Rob' Griffin
 James M Lang
 Al Duffy
 Jeff Page
@@ -1903,7 +1903,7 @@ Michael R Reno
 John P Nuzzo
 Linda L Viegas
 Richard Peterson
-"Joseph ""Joe"" Schmitt"
+Joseph 'Joe' Schmitt
 Phil Brougham
 James C Robertson
 Gail A Dolan
@@ -1963,12 +1963,12 @@ Michael Dimos, Jr.
 Frances Krause
 A. Russell Hughes
 Mike Davis
-"William ""Bill"" Chapman"
+William 'Bill' Chapman
 Richard Bryan
 Melanie Nipper
 Tony Anderson
 Amy Wise-Coble
-"James ""Jim"" Jaquess"
+James 'Jim' Jaquess
 John J Magee
 Jack Abbit
 Rick Everitt
@@ -2022,7 +2022,7 @@ Hunt Berryman
 Billy Townsend
 Sara Beth Reynolds
 Becky Troutman
-"William ""Bill"" DeHart"
+William 'Bill' DeHart
 Brian Dockery
 Lita Epstein
 David Lane
@@ -2034,7 +2034,7 @@ Dennis A. Carpenter
 Chuck Lockey
 Gina Kent McAllister
 Tony Pumphrey
-"Joseph E. ""Joe"" Smith"
+Joseph E. 'Joe' Smith
 Bobby Hopkins
 Chris Craft
 Howard Fein
@@ -2042,10 +2042,10 @@ Linda Bartz
 Jeffrey Brodzinski
 James H. Huber
 Everett S. Child
-"Viorel ""Mr. Vio"" Mocuta"
+Viorel 'Mr. Vio' Mocuta
 Tony Stachewicz
 Pamela A. Elisofon
-"Catherine ""Cathy"" Powers"
+Catherine 'Cathy' Powers
 Judy J. Wilson
 Diane Smith
 Lisa Bolin
@@ -2074,17 +2074,17 @@ Clint Erickson
 Bill Parish
 Wilburn Baker
 Debbie Kolmetz
-"J.K. ""Jess"" Irby"
+J.K. 'Jess' Irby
 Jack Jacobs
 Sadie Darnell
 Mike Byerly
-"Robert ""Hutch"" Hutchinson"
-"Charles S. ""Chuck"" Chestnut"
+Robert 'Hutch' Hutchinson
+Charles S. 'Chuck' Chestnut
 Marihelen Wheeler
 Carla A Hand
 Renee Attaway Crawford
 Glenn Kimbrel
-"William ""Eddie"" Dalton"
+William 'Eddie' Dalton
 Carla Trickey Peacock
 Kathy Tatum Herrman
 Ralph B. Yoder
@@ -2147,7 +2147,7 @@ Natalie Page
 Bradley S. Gordon
 Sarah Gabel Hall
 Debbie Driscoll
-"Leonard ""Len"" Rucker"
+Leonard 'Len' Rucker
 Jeff Brusoski
 Judy Long
 Duane Keith Fisher
@@ -2166,7 +2166,7 @@ Kathleen Venezia
 Lee Clabots
 Ralph J. DeFranzo
 Joe Quinto
-"Anthony ""Tony"" Giordano"
+Anthony 'Tony' Giordano
 Jeff Riley
 Don Salter
 Aubrey Penton
@@ -2175,7 +2175,7 @@ Annie Mae Murphy
 Wayne Padgett
 Cla Parker
 Danny McLeod
-"Kelly J ""Shakey"" Blaske"
+Kelly J 'Shakey' Blaske
 Roy Dennis Woods
 James K McHargue
 Bruce A Ratliff
@@ -2187,7 +2187,7 @@ James N Cruse
 Lonnie A Houck Jr
 Eddie Cullaro
 Valena Reed Driggers
-"Jeanne ""Jeannie"" Mathis"
+Jeanne 'Jeannie' Mathis
 Thomas Demps
 Junior Dice
 Donna Stacy
@@ -2229,7 +2229,7 @@ Kelvin l Norton
 Glover Jones
 Stephen Gary Fulford
 Max Bilinski
-"Franklin ""Jay"" Brooks"
+Franklin 'Jay' Brooks
 David W Ward
 J.T. Surles
 C.P. Miller
@@ -2257,7 +2257,7 @@ Dimitri A. Delgado
 Kathryn Starkey
 Barry Horvath
 Jack Mariano
-"Sandra ""Sandy"" Applefield"
+Sandra 'Sandy' Applefield
 Jerry A. Wells
 Shanon R. Holm
 Gary W. (Buck) Joiner
@@ -2314,10 +2314,10 @@ Jerrod W. Holton
 Sherrie D. Taylor
 Rontez Phillips
 Scott Watson
-"Dick ""Cowboy"" Locke"
+Dick 'Cowboy' Locke
 Gene Morgan
 Kimblin NeSmith
-"Alton K ""Buddy"" Williams III"
+Alton K 'Buddy' Williams III
 Sam St. John
 Shawn Crocker
 Lamar Jenkins
@@ -2347,3 +2347,434 @@ Marianne Williamson
 Andrew Yang
 Bill Weld
 Joe Walsh
+David PÃÂÃÂ©rez
+"Eugene Skip"" Carney"
+Jeanette M. NuÃÂÃÂ±ez
+Jonathan 'J.P.' Parker
+Kevin J. Foley
+Luis CalderÃÂÃÂ³n
+RenÃÂÃÂ© Garcia
+Steve 'Kahuna' Cates
+Greg Merk
+John Mills
+Kat Cammack
+Ryan D. Chamberlin
+Todd Chase
+Bill Engelbrecht
+Joe Dallas Millado
+Judson Sapp
+James St. George
+David Theus
+Amy Pope Wells
+Adam Christensen
+Philip Dodds
+Erick J. Aguilar
+Gary Adler
+Roger Wagoner
+Albert Chester
+LaShonda L.J. Holloway
+Clint Curtis
+Richard Thripp
+Richard Goble
+Leo Valentin
+Yukong Zhao
+Scott Caine
+Jose Castillo
+"William P. ""Bill"" Olson"
+Sergio E. Ortiz
+Christopher Wright
+Vennia Francois
+Willie J. Montague
+Sheila Griffin
+Anna Paulina Luna
+Amanda Makki
+Sharon Barry Newby
+Paul Sidney Elliott
+Christine Y. Quinn
+Scott Franklin
+Alan Cohn
+Jesse Philippe
+Nick Vessio
+Pam Keith
+Oz Vazquez
+Darren Aquino
+Casey Askar
+William Fig Figlesthaler
+Randy Henderson
+Daniel Kowal
+Christy McLaughlin
+Dan Severson
+Cindy Lyn Banyai
+Vic DeGrammont
+Greg Musselwhite
+Sheila Cherfilus-McCormick
+Christian Acosta
+Elizabeth Felton
+Laura Loomer
+Aaron Scanlan
+Reba Sherrill
+Michael Vilardi
+Guido Weiss
+Fran Flynn
+Jessica Jessi Melton
+James Jim Pruden
+Darlene Swaffar
+Michael Kroske
+Jennifer Jen Perelman
+Ricardo De La Fuente
+Sakinah Lee Lehtola
+Frederica Wilson
+Omar Blanco
+Juan Fiol
+Raymond Molina
+John F. Durrett
+Tina Seifert
+Deborah Lynne Barra
+Belvin Perry
+Ryan Williams
+Monique Worrell
+Katherine Fernandez Rundle
+Melba V. Pearson
+Ed Brodsky
+Lisa Chittaro
+Larry Basford
+Wes Hatcher
+Mark E. Kohl
+David Cannady
+Teresa Fanning-Williams
+Joe Kimok
+James Jimmy Stewart Lewis
+Justin McCormack
+Sarahnell Murphy
+Harold Fernandez Pryor
+Joshua David Rydell
+Andy Thomas
+Jessica Yeary
+George Burden
+Anne Marie Gennusa
+Matt Metz
+Ruby Lenora Green
+Tom Lynch
+Gordon Weekes
+Benjamin Alexander Thaddeus John Horbowy
+Marva Harris Preston
+Jennifer Bradley
+Jason G. Holifield
+Rick Ashby
+Alexis Carter
+Guerdy Remy
+Patricia Sigman
+Jim Boyd
+John Manners Houman
+Corinna Balderramos Robinson
+Reinaldo Daniel Diaz
+Tina Polsky
+Irving Irv Slosberg
+Terry Ann Williams Edden
+Steven Meza
+Shelton A. Pooler
+Perry E. Thurston
+Wilbur Harbin
+Erhabor Ighodaro
+Shevrin Shev Jones
+Cynthia Ann Stafford
+Barbara Watson
+Javier E. Fernandez
+Daniel Dan Horton-Diaz
+Michelle Salzman
+Franscine C. Mathis
+Barbara Scott-Shouse
+Alex Andrade
+Cris Dosev
+Sandra L. Atkinson
+Jeff Hinkle
+Patt Maney
+Jonathan Michael Tallman
+Steven Linne
+Arnitta Jane Grice-Walker
+Allison Tant
+Colin Ross McArthur
+Emmanuel Blimie
+Spyros Speed Chialtas
+Angie Nixon
+Jay McGovern
+Tammyette Thomas
+Rodney Long
+Joe Harding
+Russ Randall
+Cynthia Dela Rosa
+Richard Allen Rowe
+Evans L. Smith
+Erika Benfield
+Zenaida Denizac
+Pasha Baker
+Lee Mangold
+Luther Luke Dowe
+Scott Plakon
+Stevan Novakovic
+Keith Truenow
+Crissy Stile
+Stephanie L. Dukes
+Linda Kero
+Ryan Morales
+Fred Hawkins
+Dianna Liebnitzky
+Gary Scott
+Bienvenido Benny Valentin
+Kristen Arrington
+Alex Barrio
+Carlos L. Irizarry
+Horng Andrew Jeng
+Tamika Lyles
+Ricardo Rangel
+Frank Edel Blanco
+Bruno Portigliatti
+Andy Farrell
+Kevin Morenski
+Jeremy Sisson
+Nelson Pena
+Julio L. Rocha
+Tony Tsonis
+Samuel Vilchez Santiago
+Matt Nye
+Marcelle Marcie Adkins
+Ned Hancock
+Kaylee Tuck
+Eric Bautista
+James Davis
+Danny Kushmer
+Michael Owen
+Dawn Douglas
+"Michael R. ""Mike"" Henkel"
+Keisha Bell
+Michelle Grimsley
+Mark Oliver
+Michele K. Rayner
+Fiona McFarland
+Jason M. Miller
+Adam Botana
+Jason Maughan
+Bryan Blackwell
+Mike Giallombardo
+Roger Lolly
+Charlie Lynch
+Jenna Persons
+Randy Allen-Scott
+Drew-Montez Clark
+Lauren Uhlich Melo
+Saulis Banionis
+Silmo Moura
+Kelly Skidmore
+Michael D. Weinstein
+Carl J. Domino
+Rick Kozell
+John Snyder
+Dana Trabulsy
+Eileen Vargas
+Omari Hardy
+Al Jacquet
+Philippe Bob Louis Jeune
+Sienna Osta
+Cedrick A. Thomas
+Bobby DuBose
+Elijah Manley
+Anika Omphroy
+Jasmen Rogers-Shaw
+Saima Farooqui
+Christine Hunschofsky
+Brian C. Johnson
+Ashira A. Mohammed
+Marie Woodson
+Dennis Hinds
+Felicia Simone Robinson
+Matthew Tisdol
+Tom Fabricio
+Nelson Rodriguez
+Robin Bartleman
+Morey Wright
+Pedro Barrios
+David Borrero
+Bibiana Potestad
+Maureen Porras
+Christopher Benjamin
+Ulysses Buck Harvard
+Georges Bossous
+Roy Hardemon
+Bruno A. Barreiro
+"Rosa Maria ""Rosy"" Palomino"
+Jean-Pierre Bado
+Sue Susi Loyzelle
+Gabriel Garcia
+Daniel A. Perez
+Kevin Chambliss
+Harold Ford
+Jessica Laguerre Hylton
+"James ""Jim"" Vernon Mooney"
+Rhonda Rebman Lopez
+Alexandria Suarez
+Tiffany Baker
+Nina Moody
+Amanda P. Wall
+Kevin Alvarez
+Angela Dempsey
+George G. Angeliadis
+Pam Vergara
+Evan Frayman
+Eva Vergos
+Elizabeth Liz Jack
+Ashley Ward-Singleton
+Anna Handy
+Mike Orfinger
+Joan Anthony
+Dan Hilbert
+MaryEllen Osterndorf
+Bryan Robert Rendzio
+Alicia Washington
+Rhiannon Arnold
+Mikaela Nix
+Alan Apte
+Christy C. Collins
+Mike Kraynick
+Amrita Singh
+Vincent Falcone
+Mark Van Valkenburgh
+Olanike Nike Adebayo
+Joe Perkins
+Carmen Cabarga
+Roderick Rod Vereen
+Denise Martinez-Scanziani
+Thomas J. Rebull
+Marcia Giordano Hansen
+Mavel Ruiz
+Rosy Anette Aponte
+Dava J. Tunis
+Kelly Ayers
+John Schifino
+Ashley Ivanov
+Michael J. Scionti
+Danny Alvarez
+Helene Daniel
+Scott Bonavita
+Wendy Joy DePaul
+Steven Scott Stephens
+Jeffrey Gillen
+Henry Quinn Johnson
+Jaimie Goodman
+Adam Myron
+Caryn Siperstein
+Dennis Daniel Bailey
+Abbe Sheila Rifkin Logan
+George Odom
+Patti Englander Henning
+Kristin Weisberg Padowitz
+Meredith Chaiken-Weiss
+Matthew Isaac Destry
+Frank David Ledee
+Dale C. Cohen
+Linda A. Alley
+Vegina Gina Hawkins
+Tesha Scolaro Ballou
+A. Michael Bross
+Michael Peacock
+Donna M. Goerner
+Marc Jones
+Sam Bookhardt
+Oscar A. Hotusing
+Victoria L. Griffin
+Louis Lou Larsen
+William P. 'Bill' Olson
+Michael R. 'Mike' Henkel
+James 'Jim' Vernon Mooney
+Lateresa L.A. Jones
+Howard Knepper
+Michael S. Levinson
+Charles Frederick Tolbert
+David Weeks
+Danny Murphy
+Luis Saldana
+Alek Bynzar
+Dave Johnson
+Jeffrey G. Rabinowitz
+Pete Pollard
+Jay Bonner
+Darcy G. Richardson
+Piotr Blass
+Hal Johnson
+Joseph Hoffman
+Keasha 'Kay' Gray
+Janet Cruz
+Josh Santos
+Gary M. Farmer
+Richard Hal Sturm
+David Perez
+William Davis
+Cyndi Stevenson
+Jaime D. Perkins
+Charlie Stone
+Bernard Parker
+Carl Griffin
+David Smith
+Tracey Kagan
+Ralph Massullo
+Colleen Kasperek
+Linda Jack
+Ardian Zika
+Tammy Garcia
+Danny Burgess
+David 'TK' Hayes
+Josie Tomkow
+Ricky Shirah
+Barbara Cady
+Melony Bell
+Jeff Mann
+Valion Joyce
+Mark Gotz
+Delores Hogan Johnson
+Yes
+No
+Andrew D. Basiago
+Richard Duncan
+Cherunda Fox
+Zoltan Istvan Gyurko
+Laurence J. Kotlikoff
+Anthony 'Tony' Joseph Valdivia
+Bradley Patrick
+Angela Marie Walls-Windhauser
+Antoine Edward Roberts
+Daniel Murphy
+Mike Plaskon
+Marilyn Holloman
+David Byron
+Timothy John Rossano
+William Vose
+Roland Falcon
+Aaron Matthew Erskine
+Miriam Woods
+Joseph Harris
+Miranda Sherelle Ratcliffe
+Elizabeth Kathryn McNutt
+Katherine Perkins
+Ronald Julian Thomas
+Dakota Austin Eads
+Raymond Mazzie
+Valerie E. Saffran
+Rene Garcia
+Christopher Eugene Schwantz
+Jerry Wyche
+Frantz Millien
+Walter Eugene Haynes
+Jerry B. Steckloff
+Timothy S. Glidden
+George Doran
+Charles F.N. Lowe
+Thomas Sterling Mayerlen
+Ryan Thomas Dyson
+Gilbert A Soule
+Treminasha Holmes
+James Christian Bailey
+Anthony Joseph Cetrangelo
+Kelley Howell
+Connor Maguire
+Jeanette M. Nunez
+Luis Calderon
+'Lou' Luis Delgado
