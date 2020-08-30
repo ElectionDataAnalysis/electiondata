@@ -232,6 +232,20 @@ CandidateContest	PA Senate District 7 (Democratic Party)	Senator in the General 
 CandidateContest	PA Senate District 8 (Democratic Party)	Senator in the General Assembly 8th Senatorial District (Democratic)
 CandidateContest	PA Senate District 9 (Democratic Party)	Senator in the General Assembly 9th Senatorial District (Democratic)
 CandidateContest	PA Senate District 10 (Democratic Party)	Senator in the General Assembly 10th Senatorial District (Democratic)
+CandidateContest	PA Senate District 38 (Democratic Party)	Senator in the General Assembly 38th Senatorial District (Democratic)
+CandidateContest	PA Senate District 42 (Democratic Party)	Senator in the General Assembly 42nd Senatorial District (Democratic)
+CandidateContest	PA Senate District 46 (Democratic Party)	Senator in the General Assembly 46th Senatorial District (Democratic)
+CandidateContest	PA Senate District 44 (Democratic Party)	Senator in the General Assembly 44th Senatorial District (Democratic)
+CandidateContest	PA Senate District 30 (Democratic Party)	Senator in the General Assembly 30th Senatorial District (Democratic)
+CandidateContest	PA Senate District 34 (Democratic Party)	Senator in the General Assembly 34th Senatorial District (Democratic)
+CandidateContest	PA Senate District 26 (Democratic Party)	Senator in the General Assembly 26th Senatorial District (Democratic)
+CandidateContest	PA Senate District 50 (Democratic Party)	Senator in the General Assembly 50th Senatorial District (Democratic)
+CandidateContest	PA Senate District 48 (Democratic Party)	Senator in the General Assembly 48th Senatorial District (Democratic)
+CandidateContest	PA Senate District 32 (Democratic Party)	Senator in the General Assembly 32nd Senatorial District (Democratic)
+CandidateContest	PA Senate District 36 (Democratic Party)	Senator in the General Assembly 36th Senatorial District (Democratic)
+CandidateContest	PA Senate District 40 (Democratic Party)	Senator in the General Assembly 40th Senatorial District (Democratic)
+CandidateContest	PA Senate District 28 (Democratic Party)	Senator in the General Assembly 28th Senatorial District (Democratic)
+
 CandidateContest	PA Senate District 11 (Democratic Party)	Senator in the General Assembly 11th Senatorial District (Democratic)
 CandidateContest	PA Senate District 12 (Democratic Party)	Senator in the General Assembly 12th Senatorial District (Democratic)
 CandidateContest	PA Senate District 13 (Democratic Party)	Senator in the General Assembly 13th Senatorial District (Democratic)
@@ -484,6 +498,20 @@ CandidateContest	PA Senate District 7 (Republican Party)	Senator in the General 
 CandidateContest	PA Senate District 8 (Republican Party)	Senator in the General Assembly 8th Senatorial District (Republican)
 CandidateContest	PA Senate District 9 (Republican Party)	Senator in the General Assembly 9th Senatorial District (Republican)
 CandidateContest	PA Senate District 10 (Republican Party)	Senator in the General Assembly 10th Senatorial District (Republican)
+CandidateContest	PA Senate District 38 (Republican Party)	Senator in the General Assembly 38th Senatorial District (Republican)
+CandidateContest	PA Senate District 42 (Republican Party)	Senator in the General Assembly 42nd Senatorial District (Republican)
+CandidateContest	PA Senate District 46 (Republican Party)	Senator in the General Assembly 46th Senatorial District (Republican)
+CandidateContest	PA Senate District 44 (Republican Party)	Senator in the General Assembly 44th Senatorial District (Republican)
+CandidateContest	PA Senate District 30 (Republican Party)	Senator in the General Assembly 30th Senatorial District (Republican)
+CandidateContest	PA Senate District 34 (Republican Party)	Senator in the General Assembly 34th Senatorial District (Republican)
+CandidateContest	PA Senate District 26 (Republican Party)	Senator in the General Assembly 26th Senatorial District (Republican)
+CandidateContest	PA Senate District 50 (Republican Party)	Senator in the General Assembly 50th Senatorial District (Republican)
+CandidateContest	PA Senate District 48 (Republican Party)	Senator in the General Assembly 48th Senatorial District (Republican)
+CandidateContest	PA Senate District 32 (Republican Party)	Senator in the General Assembly 32nd Senatorial District (Republican)
+CandidateContest	PA Senate District 36 (Republican Party)	Senator in the General Assembly 36th Senatorial District (Republican)
+CandidateContest	PA Senate District 40 (Republican Party)	Senator in the General Assembly 40th Senatorial District (Republican)
+CandidateContest	PA Senate District 28 (Republican Party)	Senator in the General Assembly 28th Senatorial District (Republican)
+
 CandidateContest	PA Senate District 11 (Republican Party)	Senator in the General Assembly 11th Senatorial District (Republican)
 CandidateContest	PA Senate District 12 (Republican Party)	Senator in the General Assembly 12th Senatorial District (Republican)
 CandidateContest	PA Senate District 13 (Republican Party)	Senator in the General Assembly 13th Senatorial District (Republican)
@@ -736,6 +764,20 @@ CandidateContest	PA Senate District 7 (Green Party)	Senator in the General Assem
 CandidateContest	PA Senate District 8 (Green Party)	Senator in the General Assembly 8th Senatorial District (Green)
 CandidateContest	PA Senate District 9 (Green Party)	Senator in the General Assembly 9th Senatorial District (Green)
 CandidateContest	PA Senate District 10 (Green Party)	Senator in the General Assembly 10th Senatorial District (Green)
+CandidateContest	PA Senate District 38 (Green Party)	Senator in the General Assembly 38th Senatorial District (Green)
+CandidateContest	PA Senate District 42 (Green Party)	Senator in the General Assembly 42nd Senatorial District (Green)
+CandidateContest	PA Senate District 46 (Green Party)	Senator in the General Assembly 46th Senatorial District (Green)
+CandidateContest	PA Senate District 44 (Green Party)	Senator in the General Assembly 44th Senatorial District (Green)
+CandidateContest	PA Senate District 30 (Green Party)	Senator in the General Assembly 30th Senatorial District (Green)
+CandidateContest	PA Senate District 34 (Green Party)	Senator in the General Assembly 34th Senatorial District (Green)
+CandidateContest	PA Senate District 26 (Green Party)	Senator in the General Assembly 26th Senatorial District (Green)
+CandidateContest	PA Senate District 50 (Green Party)	Senator in the General Assembly 50th Senatorial District (Green)
+CandidateContest	PA Senate District 48 (Green Party)	Senator in the General Assembly 48th Senatorial District (Green)
+CandidateContest	PA Senate District 32 (Green Party)	Senator in the General Assembly 32nd Senatorial District (Green)
+CandidateContest	PA Senate District 36 (Green Party)	Senator in the General Assembly 36th Senatorial District (Green)
+CandidateContest	PA Senate District 40 (Green Party)	Senator in the General Assembly 40th Senatorial District (Green)
+CandidateContest	PA Senate District 28 (Green Party)	Senator in the General Assembly 28th Senatorial District (Green)
+
 CandidateContest	PA Senate District 11 (Green Party)	Senator in the General Assembly 11th Senatorial District (Green)
 CandidateContest	PA Senate District 12 (Green Party)	Senator in the General Assembly 12th Senatorial District (Green)
 CandidateContest	PA Senate District 13 (Green Party)	Senator in the General Assembly 13th Senatorial District (Green)
@@ -988,6 +1030,20 @@ CandidateContest	PA Senate District 7 (Libertarian Party)	Senator in the General
 CandidateContest	PA Senate District 8 (Libertarian Party)	Senator in the General Assembly 8th Senatorial District (Libertarian)
 CandidateContest	PA Senate District 9 (Libertarian Party)	Senator in the General Assembly 9th Senatorial District (Libertarian)
 CandidateContest	PA Senate District 10 (Libertarian Party)	Senator in the General Assembly 10th Senatorial District (Libertarian)
+CandidateContest	PA Senate District 38 (Libertarian Party)	Senator in the General Assembly 38th Senatorial District (Libertarian)
+CandidateContest	PA Senate District 42 (Libertarian Party)	Senator in the General Assembly 42nd Senatorial District (Libertarian)
+CandidateContest	PA Senate District 46 (Libertarian Party)	Senator in the General Assembly 46th Senatorial District (Libertarian)
+CandidateContest	PA Senate District 44 (Libertarian Party)	Senator in the General Assembly 44th Senatorial District (Libertarian)
+CandidateContest	PA Senate District 30 (Libertarian Party)	Senator in the General Assembly 30th Senatorial District (Libertarian)
+CandidateContest	PA Senate District 34 (Libertarian Party)	Senator in the General Assembly 34th Senatorial District (Libertarian)
+CandidateContest	PA Senate District 26 (Libertarian Party)	Senator in the General Assembly 26th Senatorial District (Libertarian)
+CandidateContest	PA Senate District 50 (Libertarian Party)	Senator in the General Assembly 50th Senatorial District (Libertarian)
+CandidateContest	PA Senate District 48 (Libertarian Party)	Senator in the General Assembly 48th Senatorial District (Libertarian)
+CandidateContest	PA Senate District 32 (Libertarian Party)	Senator in the General Assembly 32nd Senatorial District (Libertarian)
+CandidateContest	PA Senate District 36 (Libertarian Party)	Senator in the General Assembly 36th Senatorial District (Libertarian)
+CandidateContest	PA Senate District 40 (Libertarian Party)	Senator in the General Assembly 40th Senatorial District (Libertarian)
+CandidateContest	PA Senate District 28 (Libertarian Party)	Senator in the General Assembly 28th Senatorial District (Libertarian)
+
 CandidateContest	PA Senate District 11 (Libertarian Party)	Senator in the General Assembly 11th Senatorial District (Libertarian)
 CandidateContest	PA Senate District 12 (Libertarian Party)	Senator in the General Assembly 12th Senatorial District (Libertarian)
 CandidateContest	PA Senate District 13 (Libertarian Party)	Senator in the General Assembly 13th Senatorial District (Libertarian)
@@ -1240,6 +1296,20 @@ CandidateContest	PA Senate District 7 (Democratic / Republican Party)	Senator in
 CandidateContest	PA Senate District 8 (Democratic / Republican Party)	Senator in the General Assembly 8th Senatorial District (Democratic / Republican)
 CandidateContest	PA Senate District 9 (Democratic / Republican Party)	Senator in the General Assembly 9th Senatorial District (Democratic / Republican)
 CandidateContest	PA Senate District 10 (Democratic / Republican Party)	Senator in the General Assembly 10th Senatorial District (Democratic / Republican)
+CandidateContest	PA Senate District 38 (Democratic / Republican Party)	Senator in the General Assembly 38th Senatorial District (Democratic / Republican)
+CandidateContest	PA Senate District 42 (Democratic / Republican Party)	Senator in the General Assembly 42nd Senatorial District (Democratic / Republican)
+CandidateContest	PA Senate District 46 (Democratic / Republican Party)	Senator in the General Assembly 46th Senatorial District (Democratic / Republican)
+CandidateContest	PA Senate District 44 (Democratic / Republican Party)	Senator in the General Assembly 44th Senatorial District (Democratic / Republican)
+CandidateContest	PA Senate District 30 (Democratic / Republican Party)	Senator in the General Assembly 30th Senatorial District (Democratic / Republican)
+CandidateContest	PA Senate District 34 (Democratic / Republican Party)	Senator in the General Assembly 34th Senatorial District (Democratic / Republican)
+CandidateContest	PA Senate District 26 (Democratic / Republican Party)	Senator in the General Assembly 26th Senatorial District (Democratic / Republican)
+CandidateContest	PA Senate District 50 (Democratic / Republican Party)	Senator in the General Assembly 50th Senatorial District (Democratic / Republican)
+CandidateContest	PA Senate District 48 (Democratic / Republican Party)	Senator in the General Assembly 48th Senatorial District (Democratic / Republican)
+CandidateContest	PA Senate District 32 (Democratic / Republican Party)	Senator in the General Assembly 32nd Senatorial District (Democratic / Republican)
+CandidateContest	PA Senate District 36 (Democratic / Republican Party)	Senator in the General Assembly 36th Senatorial District (Democratic / Republican)
+CandidateContest	PA Senate District 40 (Democratic / Republican Party)	Senator in the General Assembly 40th Senatorial District (Democratic / Republican)
+CandidateContest	PA Senate District 28 (Democratic / Republican Party)	Senator in the General Assembly 28th Senatorial District (Democratic / Republican)
+
 CandidateContest	PA Senate District 11 (Democratic / Republican Party)	Senator in the General Assembly 11th Senatorial District (Democratic / Republican)
 CandidateContest	PA Senate District 12 (Democratic / Republican Party)	Senator in the General Assembly 12th Senatorial District (Democratic / Republican)
 CandidateContest	PA Senate District 13 (Democratic / Republican Party)	Senator in the General Assembly 13th Senatorial District (Democratic / Republican)
@@ -1492,6 +1562,20 @@ CandidateContest	PA Senate District 7 (Independent Party)	Senator in the General
 CandidateContest	PA Senate District 8 (Independent Party)	Senator in the General Assembly 8th Senatorial District (Independent)
 CandidateContest	PA Senate District 9 (Independent Party)	Senator in the General Assembly 9th Senatorial District (Independent)
 CandidateContest	PA Senate District 10 (Independent Party)	Senator in the General Assembly 10th Senatorial District (Independent)
+CandidateContest	PA Senate District 38 (Independent Party)	Senator in the General Assembly 38th Senatorial District (Independent)
+CandidateContest	PA Senate District 42 (Independent Party)	Senator in the General Assembly 42nd Senatorial District (Independent)
+CandidateContest	PA Senate District 46 (Independent Party)	Senator in the General Assembly 46th Senatorial District (Independent)
+CandidateContest	PA Senate District 44 (Independent Party)	Senator in the General Assembly 44th Senatorial District (Independent)
+CandidateContest	PA Senate District 30 (Independent Party)	Senator in the General Assembly 30th Senatorial District (Independent)
+CandidateContest	PA Senate District 34 (Independent Party)	Senator in the General Assembly 34th Senatorial District (Independent)
+CandidateContest	PA Senate District 26 (Independent Party)	Senator in the General Assembly 26th Senatorial District (Independent)
+CandidateContest	PA Senate District 50 (Independent Party)	Senator in the General Assembly 50th Senatorial District (Independent)
+CandidateContest	PA Senate District 48 (Independent Party)	Senator in the General Assembly 48th Senatorial District (Independent)
+CandidateContest	PA Senate District 32 (Independent Party)	Senator in the General Assembly 32nd Senatorial District (Independent)
+CandidateContest	PA Senate District 36 (Independent Party)	Senator in the General Assembly 36th Senatorial District (Independent)
+CandidateContest	PA Senate District 40 (Independent Party)	Senator in the General Assembly 40th Senatorial District (Independent)
+CandidateContest	PA Senate District 28 (Independent Party)	Senator in the General Assembly 28th Senatorial District (Independent)
+
 CandidateContest	PA Senate District 11 (Independent Party)	Senator in the General Assembly 11th Senatorial District (Independent)
 CandidateContest	PA Senate District 12 (Independent Party)	Senator in the General Assembly 12th Senatorial District (Independent)
 CandidateContest	PA Senate District 13 (Independent Party)	Senator in the General Assembly 13th Senatorial District (Independent)
@@ -1744,6 +1828,20 @@ CandidateContest	PA Senate District 7 (No Affiliation)	Senator in the General As
 CandidateContest	PA Senate District 8 (No Affiliation)	Senator in the General Assembly 8th Senatorial District (No Affiliation)
 CandidateContest	PA Senate District 9 (No Affiliation)	Senator in the General Assembly 9th Senatorial District (No Affiliation)
 CandidateContest	PA Senate District 10 (No Affiliation)	Senator in the General Assembly 10th Senatorial District (No Affiliation)
+CandidateContest	PA Senate District 38 (No Affiliation)	Senator in the General Assembly 38th Senatorial District (No Affiliation)
+CandidateContest	PA Senate District 42 (No Affiliation)	Senator in the General Assembly 42nd Senatorial District (No Affiliation)
+CandidateContest	PA Senate District 46 (No Affiliation)	Senator in the General Assembly 46th Senatorial District (No Affiliation)
+CandidateContest	PA Senate District 44 (No Affiliation)	Senator in the General Assembly 44th Senatorial District (No Affiliation)
+CandidateContest	PA Senate District 30 (No Affiliation)	Senator in the General Assembly 30th Senatorial District (No Affiliation)
+CandidateContest	PA Senate District 34 (No Affiliation)	Senator in the General Assembly 34th Senatorial District (No Affiliation)
+CandidateContest	PA Senate District 26 (No Affiliation)	Senator in the General Assembly 26th Senatorial District (No Affiliation)
+CandidateContest	PA Senate District 50 (No Affiliation)	Senator in the General Assembly 50th Senatorial District (No Affiliation)
+CandidateContest	PA Senate District 48 (No Affiliation)	Senator in the General Assembly 48th Senatorial District (No Affiliation)
+CandidateContest	PA Senate District 32 (No Affiliation)	Senator in the General Assembly 32nd Senatorial District (No Affiliation)
+CandidateContest	PA Senate District 36 (No Affiliation)	Senator in the General Assembly 36th Senatorial District (No Affiliation)
+CandidateContest	PA Senate District 40 (No Affiliation)	Senator in the General Assembly 40th Senatorial District (No Affiliation)
+CandidateContest	PA Senate District 28 (No Affiliation)	Senator in the General Assembly 28th Senatorial District (No Affiliation)
+
 CandidateContest	PA Senate District 11 (No Affiliation)	Senator in the General Assembly 11th Senatorial District (No Affiliation)
 CandidateContest	PA Senate District 12 (No Affiliation)	Senator in the General Assembly 12th Senatorial District (No Affiliation)
 CandidateContest	PA Senate District 13 (No Affiliation)	Senator in the General Assembly 13th Senatorial District (No Affiliation)
@@ -2003,6 +2101,20 @@ CandidateContest	PA Senate District 7	Senator in the General Assembly 7th Senato
 CandidateContest	PA Senate District 8	Senator in the General Assembly 8th Senatorial District
 CandidateContest	PA Senate District 9	Senator in the General Assembly 9th Senatorial District
 CandidateContest	PA Senate District 10	Senator in the General Assembly 10th Senatorial District
+CandidateContest	PA Senate District 38	Senator in the General Assembly 38th Senatorial District
+CandidateContest	PA Senate District 42	Senator in the General Assembly 42nd Senatorial District
+CandidateContest	PA Senate District 46	Senator in the General Assembly 46th Senatorial District
+CandidateContest	PA Senate District 44	Senator in the General Assembly 44th Senatorial District
+CandidateContest	PA Senate District 30	Senator in the General Assembly 30th Senatorial District
+CandidateContest	PA Senate District 34	Senator in the General Assembly 34th Senatorial District
+CandidateContest	PA Senate District 26	Senator in the General Assembly 26th Senatorial District
+CandidateContest	PA Senate District 50	Senator in the General Assembly 50th Senatorial District
+CandidateContest	PA Senate District 48	Senator in the General Assembly 48th Senatorial District
+CandidateContest	PA Senate District 32	Senator in the General Assembly 32nd Senatorial District
+CandidateContest	PA Senate District 36	Senator in the General Assembly 36th Senatorial District
+CandidateContest	PA Senate District 40	Senator in the General Assembly 40th Senatorial District
+CandidateContest	PA Senate District 28	Senator in the General Assembly 28th Senatorial District
+
 CandidateContest	PA Senate District 11	Senator in the General Assembly 11th Senatorial District
 CandidateContest	PA Senate District 12	Senator in the General Assembly 12th Senatorial District
 CandidateContest	PA Senate District 13	Senator in the General Assembly 13th Senatorial District
@@ -3588,3 +3700,4 @@ Candidate	WALSH, JUSTIN M	WALSH, JUSTIN M
 Candidate	SEARS, JOEL L	SEARS, JOEL L
 Candidate	MARCOCCIO, ROBERT J	MARCOCCIO, ROBERT J
 Candidate	GROVE, SETH	GROVE, SETH
+

@@ -278,283 +278,839 @@ PA Lieutenant Governor	1	PA Lieutenant Governor
 PA Treasurer	1	PA Treasurer	
 PA Auditor General	1	PA Auditor General
 PA House District 1 (Democratic Party)	1	PA House District 1	Democratic Party
+PA House District 1 (Democratic / Republican Party)	1	PA House District 1	Democratic / Republican Party
+PA House District 1 (Independent Party)	1	PA House District 1	Independent Party
 PA House District 2 (Democratic Party)	1	PA House District 2	Democratic Party
+PA House District 2 (Democratic / Republican Party)	1	PA House District 2	Democratic / Republican Party
+PA House District 2 (Independent Party)	1	PA House District 2	Independent Party
 PA House District 3 (Democratic Party)	1	PA House District 3	Democratic Party
+PA House District 3 (Democratic / Republican Party)	1	PA House District 3	Democratic / Republican Party
+PA House District 3 (Independent Party)	1	PA House District 3	Independent Party
 PA House District 4 (Democratic Party)	1	PA House District 4	Democratic Party
+PA House District 4 (Democratic / Republican Party)	1	PA House District 4	Democratic / Republican Party
+PA House District 4 (Independent Party)	1	PA House District 4	Independent Party
 PA House District 5 (Democratic Party)	1	PA House District 5	Democratic Party
+PA House District 5 (Democratic / Republican Party)	1	PA House District 5	Democratic / Republican Party
+PA House District 5 (Independent Party)	1	PA House District 5	Independent Party
 PA House District 6 (Democratic Party)	1	PA House District 6	Democratic Party
+PA House District 6 (Democratic / Republican Party)	1	PA House District 6	Democratic / Republican Party
+PA House District 6 (Independent Party)	1	PA House District 6	Independent Party
 PA House District 7 (Democratic Party)	1	PA House District 7	Democratic Party
+PA House District 7 (Democratic / Republican Party)	1	PA House District 7	Democratic / Republican Party
+PA House District 7 (Independent Party)	1	PA House District 7	Independent Party
 PA House District 8 (Democratic Party)	1	PA House District 8	Democratic Party
+PA House District 8 (Democratic / Republican Party)	1	PA House District 8	Democratic / Republican Party
+PA House District 8 (Independent Party)	1	PA House District 8	Independent Party
 PA House District 9 (Democratic Party)	1	PA House District 9	Democratic Party
+PA House District 9 (Democratic / Republican Party)	1	PA House District 9	Democratic / Republican Party
+PA House District 9 (Independent Party)	1	PA House District 9	Independent Party
 PA House District 10 (Democratic Party)	1	PA House District 10	Democratic Party
+PA House District 10 (Democratic / Republican Party)	1	PA House District 10	Democratic / Republican Party
+PA House District 10 (Independent Party)	1	PA House District 10	Independent Party
 PA House District 11 (Democratic Party)	1	PA House District 11	Democratic Party
+PA House District 11 (Democratic / Republican Party)	1	PA House District 11	Democratic / Republican Party
+PA House District 11 (Independent Party)	1	PA House District 11	Independent Party
 PA House District 12 (Democratic Party)	1	PA House District 12	Democratic Party
+PA House District 12 (Democratic / Republican Party)	1	PA House District 12	Democratic / Republican Party
+PA House District 12 (Independent Party)	1	PA House District 12	Independent Party
 PA House District 13 (Democratic Party)	1	PA House District 13	Democratic Party
+PA House District 13 (Democratic / Republican Party)	1	PA House District 13	Democratic / Republican Party
+PA House District 13 (Independent Party)	1	PA House District 13	Independent Party
 PA House District 14 (Democratic Party)	1	PA House District 14	Democratic Party
+PA House District 14 (Democratic / Republican Party)	1	PA House District 14	Democratic / Republican Party
+PA House District 14 (Independent Party)	1	PA House District 14	Independent Party
 PA House District 15 (Democratic Party)	1	PA House District 15	Democratic Party
+PA House District 15 (Democratic / Republican Party)	1	PA House District 15	Democratic / Republican Party
+PA House District 15 (Independent Party)	1	PA House District 15	Independent Party
 PA House District 16 (Democratic Party)	1	PA House District 16	Democratic Party
+PA House District 16 (Democratic / Republican Party)	1	PA House District 16	Democratic / Republican Party
+PA House District 16 (Independent Party)	1	PA House District 16	Independent Party
 PA House District 17 (Democratic Party)	1	PA House District 17	Democratic Party
+PA House District 17 (Democratic / Republican Party)	1	PA House District 17	Democratic / Republican Party
+PA House District 17 (Independent Party)	1	PA House District 17	Independent Party
 PA House District 18 (Democratic Party)	1	PA House District 18	Democratic Party
+PA House District 18 (Democratic / Republican Party)	1	PA House District 18	Democratic / Republican Party
+PA House District 18 (Independent Party)	1	PA House District 18	Independent Party
 PA House District 19 (Democratic Party)	1	PA House District 19	Democratic Party
+PA House District 19 (Democratic / Republican Party)	1	PA House District 19	Democratic / Republican Party
+PA House District 19 (Independent Party)	1	PA House District 19	Independent Party
 PA House District 20 (Democratic Party)	1	PA House District 20	Democratic Party
+PA House District 20 (Democratic / Republican Party)	1	PA House District 20	Democratic / Republican Party
+PA House District 20 (Independent Party)	1	PA House District 20	Independent Party
 PA House District 21 (Democratic Party)	1	PA House District 21	Democratic Party
+PA House District 21 (Democratic / Republican Party)	1	PA House District 21	Democratic / Republican Party
+PA House District 21 (Independent Party)	1	PA House District 21	Independent Party
 PA House District 22 (Democratic Party)	1	PA House District 22	Democratic Party
+PA House District 22 (Democratic / Republican Party)	1	PA House District 22	Democratic / Republican Party
+PA House District 22 (Independent Party)	1	PA House District 22	Independent Party
 PA House District 23 (Democratic Party)	1	PA House District 23	Democratic Party
+PA House District 23 (Democratic / Republican Party)	1	PA House District 23	Democratic / Republican Party
+PA House District 23 (Independent Party)	1	PA House District 23	Independent Party
 PA House District 24 (Democratic Party)	1	PA House District 24	Democratic Party
+PA House District 24 (Democratic / Republican Party)	1	PA House District 24	Democratic / Republican Party
+PA House District 24 (Independent Party)	1	PA House District 24	Independent Party
 PA House District 25 (Democratic Party)	1	PA House District 25	Democratic Party
+PA House District 25 (Democratic / Republican Party)	1	PA House District 25	Democratic / Republican Party
+PA House District 25 (Independent Party)	1	PA House District 25	Independent Party
 PA House District 26 (Democratic Party)	1	PA House District 26	Democratic Party
+PA House District 26 (Democratic / Republican Party)	1	PA House District 26	Democratic / Republican Party
+PA House District 26 (Independent Party)	1	PA House District 26	Independent Party
 PA House District 27 (Democratic Party)	1	PA House District 27	Democratic Party
+PA House District 27 (Democratic / Republican Party)	1	PA House District 27	Democratic / Republican Party
+PA House District 27 (Independent Party)	1	PA House District 27	Independent Party
 PA House District 28 (Democratic Party)	1	PA House District 28	Democratic Party
+PA House District 28 (Democratic / Republican Party)	1	PA House District 28	Democratic / Republican Party
+PA House District 28 (Independent Party)	1	PA House District 28	Independent Party
 PA House District 29 (Democratic Party)	1	PA House District 29	Democratic Party
+PA House District 29 (Democratic / Republican Party)	1	PA House District 29	Democratic / Republican Party
+PA House District 29 (Independent Party)	1	PA House District 29	Independent Party
 PA House District 30 (Democratic Party)	1	PA House District 30	Democratic Party
+PA House District 30 (Democratic / Republican Party)	1	PA House District 30	Democratic / Republican Party
+PA House District 30 (Independent Party)	1	PA House District 30	Independent Party
 PA House District 31 (Democratic Party)	1	PA House District 31	Democratic Party
+PA House District 31 (Democratic / Republican Party)	1	PA House District 31	Democratic / Republican Party
+PA House District 31 (Independent Party)	1	PA House District 31	Independent Party
 PA House District 32 (Democratic Party)	1	PA House District 32	Democratic Party
+PA House District 32 (Democratic / Republican Party)	1	PA House District 32	Democratic / Republican Party
+PA House District 32 (Independent Party)	1	PA House District 32	Independent Party
 PA House District 33 (Democratic Party)	1	PA House District 33	Democratic Party
+PA House District 33 (Democratic / Republican Party)	1	PA House District 33	Democratic / Republican Party
+PA House District 33 (Independent Party)	1	PA House District 33	Independent Party
 PA House District 34 (Democratic Party)	1	PA House District 34	Democratic Party
+PA House District 34 (Democratic / Republican Party)	1	PA House District 34	Democratic / Republican Party
+PA House District 34 (Independent Party)	1	PA House District 34	Independent Party
 PA House District 35 (Democratic Party)	1	PA House District 35	Democratic Party
+PA House District 35 (Democratic / Republican Party)	1	PA House District 35	Democratic / Republican Party
+PA House District 35 (Independent Party)	1	PA House District 35	Independent Party
 PA House District 36 (Democratic Party)	1	PA House District 36	Democratic Party
+PA House District 36 (Democratic / Republican Party)	1	PA House District 36	Democratic / Republican Party
+PA House District 36 (Independent Party)	1	PA House District 36	Independent Party
 PA House District 37 (Democratic Party)	1	PA House District 37	Democratic Party
+PA House District 37 (Democratic / Republican Party)	1	PA House District 37	Democratic / Republican Party
+PA House District 37 (Independent Party)	1	PA House District 37	Independent Party
 PA House District 38 (Democratic Party)	1	PA House District 38	Democratic Party
+PA House District 38 (Democratic / Republican Party)	1	PA House District 38	Democratic / Republican Party
+PA House District 38 (Independent Party)	1	PA House District 38	Independent Party
 PA House District 39 (Democratic Party)	1	PA House District 39	Democratic Party
+PA House District 39 (Democratic / Republican Party)	1	PA House District 39	Democratic / Republican Party
+PA House District 39 (Independent Party)	1	PA House District 39	Independent Party
 PA House District 40 (Democratic Party)	1	PA House District 40	Democratic Party
+PA House District 40 (Democratic / Republican Party)	1	PA House District 40	Democratic / Republican Party
+PA House District 40 (Independent Party)	1	PA House District 40	Independent Party
 PA House District 41 (Democratic Party)	1	PA House District 41	Democratic Party
+PA House District 41 (Democratic / Republican Party)	1	PA House District 41	Democratic / Republican Party
+PA House District 41 (Independent Party)	1	PA House District 41	Independent Party
 PA House District 42 (Democratic Party)	1	PA House District 42	Democratic Party
+PA House District 42 (Democratic / Republican Party)	1	PA House District 42	Democratic / Republican Party
+PA House District 42 (Independent Party)	1	PA House District 42	Independent Party
 PA House District 43 (Democratic Party)	1	PA House District 43	Democratic Party
+PA House District 43 (Democratic / Republican Party)	1	PA House District 43	Democratic / Republican Party
+PA House District 43 (Independent Party)	1	PA House District 43	Independent Party
 PA House District 44 (Democratic Party)	1	PA House District 44	Democratic Party
+PA House District 44 (Democratic / Republican Party)	1	PA House District 44	Democratic / Republican Party
+PA House District 44 (Independent Party)	1	PA House District 44	Independent Party
 PA House District 45 (Democratic Party)	1	PA House District 45	Democratic Party
+PA House District 45 (Democratic / Republican Party)	1	PA House District 45	Democratic / Republican Party
+PA House District 45 (Independent Party)	1	PA House District 45	Independent Party
 PA House District 46 (Democratic Party)	1	PA House District 46	Democratic Party
+PA House District 46 (Democratic / Republican Party)	1	PA House District 46	Democratic / Republican Party
+PA House District 46 (Independent Party)	1	PA House District 46	Independent Party
 PA House District 47 (Democratic Party)	1	PA House District 47	Democratic Party
+PA House District 47 (Democratic / Republican Party)	1	PA House District 47	Democratic / Republican Party
+PA House District 47 (Independent Party)	1	PA House District 47	Independent Party
 PA House District 48 (Democratic Party)	1	PA House District 48	Democratic Party
+PA House District 48 (Democratic / Republican Party)	1	PA House District 48	Democratic / Republican Party
+PA House District 48 (Independent Party)	1	PA House District 48	Independent Party
 PA House District 49 (Democratic Party)	1	PA House District 49	Democratic Party
+PA House District 49 (Democratic / Republican Party)	1	PA House District 49	Democratic / Republican Party
+PA House District 49 (Independent Party)	1	PA House District 49	Independent Party
 PA House District 50 (Democratic Party)	1	PA House District 50	Democratic Party
+PA House District 50 (Democratic / Republican Party)	1	PA House District 50	Democratic / Republican Party
+PA House District 50 (Independent Party)	1	PA House District 50	Independent Party
 PA House District 51 (Democratic Party)	1	PA House District 51	Democratic Party
+PA House District 51 (Democratic / Republican Party)	1	PA House District 51	Democratic / Republican Party
+PA House District 51 (Independent Party)	1	PA House District 51	Independent Party
 PA House District 52 (Democratic Party)	1	PA House District 52	Democratic Party
+PA House District 52 (Democratic / Republican Party)	1	PA House District 52	Democratic / Republican Party
+PA House District 52 (Independent Party)	1	PA House District 52	Independent Party
 PA House District 53 (Democratic Party)	1	PA House District 53	Democratic Party
+PA House District 53 (Democratic / Republican Party)	1	PA House District 53	Democratic / Republican Party
+PA House District 53 (Independent Party)	1	PA House District 53	Independent Party
 PA House District 54 (Democratic Party)	1	PA House District 54	Democratic Party
+PA House District 54 (Democratic / Republican Party)	1	PA House District 54	Democratic / Republican Party
+PA House District 54 (Independent Party)	1	PA House District 54	Independent Party
 PA House District 55 (Democratic Party)	1	PA House District 55	Democratic Party
+PA House District 55 (Democratic / Republican Party)	1	PA House District 55	Democratic / Republican Party
+PA House District 55 (Independent Party)	1	PA House District 55	Independent Party
 PA House District 56 (Democratic Party)	1	PA House District 56	Democratic Party
+PA House District 56 (Democratic / Republican Party)	1	PA House District 56	Democratic / Republican Party
+PA House District 56 (Independent Party)	1	PA House District 56	Independent Party
 PA House District 57 (Democratic Party)	1	PA House District 57	Democratic Party
+PA House District 57 (Democratic / Republican Party)	1	PA House District 57	Democratic / Republican Party
+PA House District 57 (Independent Party)	1	PA House District 57	Independent Party
 PA House District 58 (Democratic Party)	1	PA House District 58	Democratic Party
+PA House District 58 (Democratic / Republican Party)	1	PA House District 58	Democratic / Republican Party
+PA House District 58 (Independent Party)	1	PA House District 58	Independent Party
 PA House District 59 (Democratic Party)	1	PA House District 59	Democratic Party
+PA House District 59 (Democratic / Republican Party)	1	PA House District 59	Democratic / Republican Party
+PA House District 59 (Independent Party)	1	PA House District 59	Independent Party
 PA House District 60 (Democratic Party)	1	PA House District 60	Democratic Party
+PA House District 60 (Democratic / Republican Party)	1	PA House District 60	Democratic / Republican Party
+PA House District 60 (Independent Party)	1	PA House District 60	Independent Party
 PA House District 61 (Democratic Party)	1	PA House District 61	Democratic Party
+PA House District 61 (Democratic / Republican Party)	1	PA House District 61	Democratic / Republican Party
+PA House District 61 (Independent Party)	1	PA House District 61	Independent Party
 PA House District 62 (Democratic Party)	1	PA House District 62	Democratic Party
+PA House District 62 (Democratic / Republican Party)	1	PA House District 62	Democratic / Republican Party
+PA House District 62 (Independent Party)	1	PA House District 62	Independent Party
 PA House District 63 (Democratic Party)	1	PA House District 63	Democratic Party
+PA House District 63 (Democratic / Republican Party)	1	PA House District 63	Democratic / Republican Party
+PA House District 63 (Independent Party)	1	PA House District 63	Independent Party
 PA House District 64 (Democratic Party)	1	PA House District 64	Democratic Party
+PA House District 64 (Democratic / Republican Party)	1	PA House District 64	Democratic / Republican Party
+PA House District 64 (Independent Party)	1	PA House District 64	Independent Party
 PA House District 65 (Democratic Party)	1	PA House District 65	Democratic Party
+PA House District 65 (Democratic / Republican Party)	1	PA House District 65	Democratic / Republican Party
+PA House District 65 (Independent Party)	1	PA House District 65	Independent Party
 PA House District 66 (Democratic Party)	1	PA House District 66	Democratic Party
+PA House District 66 (Democratic / Republican Party)	1	PA House District 66	Democratic / Republican Party
+PA House District 66 (Independent Party)	1	PA House District 66	Independent Party
 PA House District 67 (Democratic Party)	1	PA House District 67	Democratic Party
+PA House District 67 (Democratic / Republican Party)	1	PA House District 67	Democratic / Republican Party
+PA House District 67 (Independent Party)	1	PA House District 67	Independent Party
 PA House District 68 (Democratic Party)	1	PA House District 68	Democratic Party
+PA House District 68 (Democratic / Republican Party)	1	PA House District 68	Democratic / Republican Party
+PA House District 68 (Independent Party)	1	PA House District 68	Independent Party
 PA House District 69 (Democratic Party)	1	PA House District 69	Democratic Party
+PA House District 69 (Democratic / Republican Party)	1	PA House District 69	Democratic / Republican Party
+PA House District 69 (Independent Party)	1	PA House District 69	Independent Party
 PA House District 70 (Democratic Party)	1	PA House District 70	Democratic Party
+PA House District 70 (Democratic / Republican Party)	1	PA House District 70	Democratic / Republican Party
+PA House District 70 (Independent Party)	1	PA House District 70	Independent Party
 PA House District 71 (Democratic Party)	1	PA House District 71	Democratic Party
+PA House District 71 (Democratic / Republican Party)	1	PA House District 71	Democratic / Republican Party
+PA House District 71 (Independent Party)	1	PA House District 71	Independent Party
 PA House District 72 (Democratic Party)	1	PA House District 72	Democratic Party
+PA House District 72 (Democratic / Republican Party)	1	PA House District 72	Democratic / Republican Party
+PA House District 72 (Independent Party)	1	PA House District 72	Independent Party
 PA House District 73 (Democratic Party)	1	PA House District 73	Democratic Party
+PA House District 73 (Democratic / Republican Party)	1	PA House District 73	Democratic / Republican Party
+PA House District 73 (Independent Party)	1	PA House District 73	Independent Party
 PA House District 74 (Democratic Party)	1	PA House District 74	Democratic Party
+PA House District 74 (Democratic / Republican Party)	1	PA House District 74	Democratic / Republican Party
+PA House District 74 (Independent Party)	1	PA House District 74	Independent Party
 PA House District 75 (Democratic Party)	1	PA House District 75	Democratic Party
+PA House District 75 (Democratic / Republican Party)	1	PA House District 75	Democratic / Republican Party
+PA House District 75 (Independent Party)	1	PA House District 75	Independent Party
 PA House District 76 (Democratic Party)	1	PA House District 76	Democratic Party
+PA House District 76 (Democratic / Republican Party)	1	PA House District 76	Democratic / Republican Party
+PA House District 76 (Independent Party)	1	PA House District 76	Independent Party
 PA House District 77 (Democratic Party)	1	PA House District 77	Democratic Party
+PA House District 77 (Democratic / Republican Party)	1	PA House District 77	Democratic / Republican Party
+PA House District 77 (Independent Party)	1	PA House District 77	Independent Party
 PA House District 78 (Democratic Party)	1	PA House District 78	Democratic Party
+PA House District 78 (Democratic / Republican Party)	1	PA House District 78	Democratic / Republican Party
+PA House District 78 (Independent Party)	1	PA House District 78	Independent Party
 PA House District 79 (Democratic Party)	1	PA House District 79	Democratic Party
+PA House District 79 (Democratic / Republican Party)	1	PA House District 79	Democratic / Republican Party
+PA House District 79 (Independent Party)	1	PA House District 79	Independent Party
 PA House District 80 (Democratic Party)	1	PA House District 80	Democratic Party
+PA House District 80 (Democratic / Republican Party)	1	PA House District 80	Democratic / Republican Party
+PA House District 80 (Independent Party)	1	PA House District 80	Independent Party
 PA House District 81 (Democratic Party)	1	PA House District 81	Democratic Party
+PA House District 81 (Democratic / Republican Party)	1	PA House District 81	Democratic / Republican Party
+PA House District 81 (Independent Party)	1	PA House District 81	Independent Party
 PA House District 82 (Democratic Party)	1	PA House District 82	Democratic Party
+PA House District 82 (Democratic / Republican Party)	1	PA House District 82	Democratic / Republican Party
+PA House District 82 (Independent Party)	1	PA House District 82	Independent Party
 PA House District 83 (Democratic Party)	1	PA House District 83	Democratic Party
+PA House District 83 (Democratic / Republican Party)	1	PA House District 83	Democratic / Republican Party
+PA House District 83 (Independent Party)	1	PA House District 83	Independent Party
 PA House District 84 (Democratic Party)	1	PA House District 84	Democratic Party
+PA House District 84 (Democratic / Republican Party)	1	PA House District 84	Democratic / Republican Party
+PA House District 84 (Independent Party)	1	PA House District 84	Independent Party
 PA House District 85 (Democratic Party)	1	PA House District 85	Democratic Party
+PA House District 85 (Democratic / Republican Party)	1	PA House District 85	Democratic / Republican Party
+PA House District 85 (Independent Party)	1	PA House District 85	Independent Party
 PA House District 86 (Democratic Party)	1	PA House District 86	Democratic Party
+PA House District 86 (Democratic / Republican Party)	1	PA House District 86	Democratic / Republican Party
+PA House District 86 (Independent Party)	1	PA House District 86	Independent Party
 PA House District 87 (Democratic Party)	1	PA House District 87	Democratic Party
+PA House District 87 (Democratic / Republican Party)	1	PA House District 87	Democratic / Republican Party
+PA House District 87 (Independent Party)	1	PA House District 87	Independent Party
 PA House District 88 (Democratic Party)	1	PA House District 88	Democratic Party
+PA House District 88 (Democratic / Republican Party)	1	PA House District 88	Democratic / Republican Party
+PA House District 88 (Independent Party)	1	PA House District 88	Independent Party
 PA House District 89 (Democratic Party)	1	PA House District 89	Democratic Party
+PA House District 89 (Democratic / Republican Party)	1	PA House District 89	Democratic / Republican Party
+PA House District 89 (Independent Party)	1	PA House District 89	Independent Party
 PA House District 90 (Democratic Party)	1	PA House District 90	Democratic Party
+PA House District 90 (Democratic / Republican Party)	1	PA House District 90	Democratic / Republican Party
+PA House District 90 (Independent Party)	1	PA House District 90	Independent Party
 PA House District 91 (Democratic Party)	1	PA House District 91	Democratic Party
+PA House District 91 (Democratic / Republican Party)	1	PA House District 91	Democratic / Republican Party
+PA House District 91 (Independent Party)	1	PA House District 91	Independent Party
 PA House District 92 (Democratic Party)	1	PA House District 92	Democratic Party
+PA House District 92 (Democratic / Republican Party)	1	PA House District 92	Democratic / Republican Party
+PA House District 92 (Independent Party)	1	PA House District 92	Independent Party
 PA House District 93 (Democratic Party)	1	PA House District 93	Democratic Party
+PA House District 93 (Democratic / Republican Party)	1	PA House District 93	Democratic / Republican Party
+PA House District 93 (Independent Party)	1	PA House District 93	Independent Party
 PA House District 94 (Democratic Party)	1	PA House District 94	Democratic Party
+PA House District 94 (Democratic / Republican Party)	1	PA House District 94	Democratic / Republican Party
+PA House District 94 (Independent Party)	1	PA House District 94	Independent Party
 PA House District 95 (Democratic Party)	1	PA House District 95	Democratic Party
+PA House District 95 (Democratic / Republican Party)	1	PA House District 95	Democratic / Republican Party
+PA House District 95 (Independent Party)	1	PA House District 95	Independent Party
 PA House District 96 (Democratic Party)	1	PA House District 96	Democratic Party
+PA House District 96 (Democratic / Republican Party)	1	PA House District 96	Democratic / Republican Party
+PA House District 96 (Independent Party)	1	PA House District 96	Independent Party
 PA House District 97 (Democratic Party)	1	PA House District 97	Democratic Party
+PA House District 97 (Democratic / Republican Party)	1	PA House District 97	Democratic / Republican Party
+PA House District 97 (Independent Party)	1	PA House District 97	Independent Party
 PA House District 98 (Democratic Party)	1	PA House District 98	Democratic Party
+PA House District 98 (Democratic / Republican Party)	1	PA House District 98	Democratic / Republican Party
+PA House District 98 (Independent Party)	1	PA House District 98	Independent Party
 PA House District 99 (Democratic Party)	1	PA House District 99	Democratic Party
+PA House District 99 (Democratic / Republican Party)	1	PA House District 99	Democratic / Republican Party
+PA House District 99 (Independent Party)	1	PA House District 99	Independent Party
 PA House District 100 (Democratic Party)	1	PA House District 100	Democratic Party
+PA House District 100 (Democratic / Republican Party)	1	PA House District 100	Democratic / Republican Party
+PA House District 100 (Independent Party)	1	PA House District 100	Independent Party
 PA House District 101 (Democratic Party)	1	PA House District 101	Democratic Party
+PA House District 101 (Democratic / Republican Party)	1	PA House District 101	Democratic / Republican Party
+PA House District 101 (Independent Party)	1	PA House District 101	Independent Party
 PA House District 102 (Democratic Party)	1	PA House District 102	Democratic Party
+PA House District 102 (Democratic / Republican Party)	1	PA House District 102	Democratic / Republican Party
+PA House District 102 (Independent Party)	1	PA House District 102	Independent Party
 PA House District 103 (Democratic Party)	1	PA House District 103	Democratic Party
+PA House District 103 (Democratic / Republican Party)	1	PA House District 103	Democratic / Republican Party
+PA House District 103 (Independent Party)	1	PA House District 103	Independent Party
 PA House District 104 (Democratic Party)	1	PA House District 104	Democratic Party
+PA House District 104 (Democratic / Republican Party)	1	PA House District 104	Democratic / Republican Party
+PA House District 104 (Independent Party)	1	PA House District 104	Independent Party
 PA House District 105 (Democratic Party)	1	PA House District 105	Democratic Party
+PA House District 105 (Democratic / Republican Party)	1	PA House District 105	Democratic / Republican Party
+PA House District 105 (Independent Party)	1	PA House District 105	Independent Party
 PA House District 106 (Democratic Party)	1	PA House District 106	Democratic Party
+PA House District 106 (Democratic / Republican Party)	1	PA House District 106	Democratic / Republican Party
+PA House District 106 (Independent Party)	1	PA House District 106	Independent Party
 PA House District 107 (Democratic Party)	1	PA House District 107	Democratic Party
+PA House District 107 (Democratic / Republican Party)	1	PA House District 107	Democratic / Republican Party
+PA House District 107 (Independent Party)	1	PA House District 107	Independent Party
 PA House District 108 (Democratic Party)	1	PA House District 108	Democratic Party
+PA House District 108 (Democratic / Republican Party)	1	PA House District 108	Democratic / Republican Party
+PA House District 108 (Independent Party)	1	PA House District 108	Independent Party
 PA House District 109 (Democratic Party)	1	PA House District 109	Democratic Party
+PA House District 109 (Democratic / Republican Party)	1	PA House District 109	Democratic / Republican Party
+PA House District 109 (Independent Party)	1	PA House District 109	Independent Party
 PA House District 110 (Democratic Party)	1	PA House District 110	Democratic Party
+PA House District 110 (Democratic / Republican Party)	1	PA House District 110	Democratic / Republican Party
+PA House District 110 (Independent Party)	1	PA House District 110	Independent Party
 PA House District 111 (Democratic Party)	1	PA House District 111	Democratic Party
+PA House District 111 (Democratic / Republican Party)	1	PA House District 111	Democratic / Republican Party
+PA House District 111 (Independent Party)	1	PA House District 111	Independent Party
 PA House District 112 (Democratic Party)	1	PA House District 112	Democratic Party
+PA House District 112 (Democratic / Republican Party)	1	PA House District 112	Democratic / Republican Party
+PA House District 112 (Independent Party)	1	PA House District 112	Independent Party
 PA House District 113 (Democratic Party)	1	PA House District 113	Democratic Party
+PA House District 113 (Democratic / Republican Party)	1	PA House District 113	Democratic / Republican Party
+PA House District 113 (Independent Party)	1	PA House District 113	Independent Party
 PA House District 114 (Democratic Party)	1	PA House District 114	Democratic Party
+PA House District 114 (Democratic / Republican Party)	1	PA House District 114	Democratic / Republican Party
+PA House District 114 (Independent Party)	1	PA House District 114	Independent Party
 PA House District 115 (Democratic Party)	1	PA House District 115	Democratic Party
+PA House District 115 (Democratic / Republican Party)	1	PA House District 115	Democratic / Republican Party
+PA House District 115 (Independent Party)	1	PA House District 115	Independent Party
 PA House District 116 (Democratic Party)	1	PA House District 116	Democratic Party
+PA House District 116 (Democratic / Republican Party)	1	PA House District 116	Democratic / Republican Party
+PA House District 116 (Independent Party)	1	PA House District 116	Independent Party
 PA House District 117 (Democratic Party)	1	PA House District 117	Democratic Party
+PA House District 117 (Democratic / Republican Party)	1	PA House District 117	Democratic / Republican Party
+PA House District 117 (Independent Party)	1	PA House District 117	Independent Party
 PA House District 118 (Democratic Party)	1	PA House District 118	Democratic Party
+PA House District 118 (Democratic / Republican Party)	1	PA House District 118	Democratic / Republican Party
+PA House District 118 (Independent Party)	1	PA House District 118	Independent Party
 PA House District 119 (Democratic Party)	1	PA House District 119	Democratic Party
+PA House District 119 (Democratic / Republican Party)	1	PA House District 119	Democratic / Republican Party
+PA House District 119 (Independent Party)	1	PA House District 119	Independent Party
 PA House District 120 (Democratic Party)	1	PA House District 120	Democratic Party
+PA House District 120 (Democratic / Republican Party)	1	PA House District 120	Democratic / Republican Party
+PA House District 120 (Independent Party)	1	PA House District 120	Independent Party
 PA House District 121 (Democratic Party)	1	PA House District 121	Democratic Party
+PA House District 121 (Democratic / Republican Party)	1	PA House District 121	Democratic / Republican Party
+PA House District 121 (Independent Party)	1	PA House District 121	Independent Party
 PA House District 122 (Democratic Party)	1	PA House District 122	Democratic Party
+PA House District 122 (Democratic / Republican Party)	1	PA House District 122	Democratic / Republican Party
+PA House District 122 (Independent Party)	1	PA House District 122	Independent Party
 PA House District 123 (Democratic Party)	1	PA House District 123	Democratic Party
+PA House District 123 (Democratic / Republican Party)	1	PA House District 123	Democratic / Republican Party
+PA House District 123 (Independent Party)	1	PA House District 123	Independent Party
 PA House District 124 (Democratic Party)	1	PA House District 124	Democratic Party
+PA House District 124 (Democratic / Republican Party)	1	PA House District 124	Democratic / Republican Party
+PA House District 124 (Independent Party)	1	PA House District 124	Independent Party
 PA House District 125 (Democratic Party)	1	PA House District 125	Democratic Party
+PA House District 125 (Democratic / Republican Party)	1	PA House District 125	Democratic / Republican Party
+PA House District 125 (Independent Party)	1	PA House District 125	Independent Party
 PA House District 126 (Democratic Party)	1	PA House District 126	Democratic Party
+PA House District 126 (Democratic / Republican Party)	1	PA House District 126	Democratic / Republican Party
+PA House District 126 (Independent Party)	1	PA House District 126	Independent Party
 PA House District 127 (Democratic Party)	1	PA House District 127	Democratic Party
+PA House District 127 (Democratic / Republican Party)	1	PA House District 127	Democratic / Republican Party
+PA House District 127 (Independent Party)	1	PA House District 127	Independent Party
 PA House District 128 (Democratic Party)	1	PA House District 128	Democratic Party
+PA House District 128 (Democratic / Republican Party)	1	PA House District 128	Democratic / Republican Party
+PA House District 128 (Independent Party)	1	PA House District 128	Independent Party
 PA House District 129 (Democratic Party)	1	PA House District 129	Democratic Party
+PA House District 129 (Democratic / Republican Party)	1	PA House District 129	Democratic / Republican Party
+PA House District 129 (Independent Party)	1	PA House District 129	Independent Party
 PA House District 130 (Democratic Party)	1	PA House District 130	Democratic Party
+PA House District 130 (Democratic / Republican Party)	1	PA House District 130	Democratic / Republican Party
+PA House District 130 (Independent Party)	1	PA House District 130	Independent Party
 PA House District 131 (Democratic Party)	1	PA House District 131	Democratic Party
+PA House District 131 (Democratic / Republican Party)	1	PA House District 131	Democratic / Republican Party
+PA House District 131 (Independent Party)	1	PA House District 131	Independent Party
 PA House District 132 (Democratic Party)	1	PA House District 132	Democratic Party
+PA House District 132 (Democratic / Republican Party)	1	PA House District 132	Democratic / Republican Party
+PA House District 132 (Independent Party)	1	PA House District 132	Independent Party
 PA House District 133 (Democratic Party)	1	PA House District 133	Democratic Party
+PA House District 133 (Democratic / Republican Party)	1	PA House District 133	Democratic / Republican Party
+PA House District 133 (Independent Party)	1	PA House District 133	Independent Party
 PA House District 134 (Democratic Party)	1	PA House District 134	Democratic Party
+PA House District 134 (Democratic / Republican Party)	1	PA House District 134	Democratic / Republican Party
+PA House District 134 (Independent Party)	1	PA House District 134	Independent Party
 PA House District 135 (Democratic Party)	1	PA House District 135	Democratic Party
+PA House District 135 (Democratic / Republican Party)	1	PA House District 135	Democratic / Republican Party
+PA House District 135 (Independent Party)	1	PA House District 135	Independent Party
 PA House District 136 (Democratic Party)	1	PA House District 136	Democratic Party
+PA House District 136 (Democratic / Republican Party)	1	PA House District 136	Democratic / Republican Party
+PA House District 136 (Independent Party)	1	PA House District 136	Independent Party
 PA House District 137 (Democratic Party)	1	PA House District 137	Democratic Party
+PA House District 137 (Democratic / Republican Party)	1	PA House District 137	Democratic / Republican Party
+PA House District 137 (Independent Party)	1	PA House District 137	Independent Party
 PA House District 138 (Democratic Party)	1	PA House District 138	Democratic Party
+PA House District 138 (Democratic / Republican Party)	1	PA House District 138	Democratic / Republican Party
+PA House District 138 (Independent Party)	1	PA House District 138	Independent Party
 PA House District 139 (Democratic Party)	1	PA House District 139	Democratic Party
+PA House District 139 (Democratic / Republican Party)	1	PA House District 139	Democratic / Republican Party
+PA House District 139 (Independent Party)	1	PA House District 139	Independent Party
 PA House District 140 (Democratic Party)	1	PA House District 140	Democratic Party
+PA House District 140 (Democratic / Republican Party)	1	PA House District 140	Democratic / Republican Party
+PA House District 140 (Independent Party)	1	PA House District 140	Independent Party
 PA House District 141 (Democratic Party)	1	PA House District 141	Democratic Party
+PA House District 141 (Democratic / Republican Party)	1	PA House District 141	Democratic / Republican Party
+PA House District 141 (Independent Party)	1	PA House District 141	Independent Party
 PA House District 142 (Democratic Party)	1	PA House District 142	Democratic Party
+PA House District 142 (Democratic / Republican Party)	1	PA House District 142	Democratic / Republican Party
+PA House District 142 (Independent Party)	1	PA House District 142	Independent Party
 PA House District 143 (Democratic Party)	1	PA House District 143	Democratic Party
+PA House District 143 (Democratic / Republican Party)	1	PA House District 143	Democratic / Republican Party
+PA House District 143 (Independent Party)	1	PA House District 143	Independent Party
 PA House District 144 (Democratic Party)	1	PA House District 144	Democratic Party
+PA House District 144 (Democratic / Republican Party)	1	PA House District 144	Democratic / Republican Party
+PA House District 144 (Independent Party)	1	PA House District 144	Independent Party
 PA House District 145 (Democratic Party)	1	PA House District 145	Democratic Party
+PA House District 145 (Democratic / Republican Party)	1	PA House District 145	Democratic / Republican Party
+PA House District 145 (Independent Party)	1	PA House District 145	Independent Party
 PA House District 146 (Democratic Party)	1	PA House District 146	Democratic Party
+PA House District 146 (Democratic / Republican Party)	1	PA House District 146	Democratic / Republican Party
+PA House District 146 (Independent Party)	1	PA House District 146	Independent Party
 PA House District 147 (Democratic Party)	1	PA House District 147	Democratic Party
+PA House District 147 (Democratic / Republican Party)	1	PA House District 147	Democratic / Republican Party
+PA House District 147 (Independent Party)	1	PA House District 147	Independent Party
 PA House District 148 (Democratic Party)	1	PA House District 148	Democratic Party
+PA House District 148 (Democratic / Republican Party)	1	PA House District 148	Democratic / Republican Party
+PA House District 148 (Independent Party)	1	PA House District 148	Independent Party
 PA House District 149 (Democratic Party)	1	PA House District 149	Democratic Party
+PA House District 149 (Democratic / Republican Party)	1	PA House District 149	Democratic / Republican Party
+PA House District 149 (Independent Party)	1	PA House District 149	Independent Party
 PA House District 150 (Democratic Party)	1	PA House District 150	Democratic Party
+PA House District 150 (Democratic / Republican Party)	1	PA House District 150	Democratic / Republican Party
+PA House District 150 (Independent Party)	1	PA House District 150	Independent Party
 PA House District 151 (Democratic Party)	1	PA House District 151	Democratic Party
+PA House District 151 (Democratic / Republican Party)	1	PA House District 151	Democratic / Republican Party
+PA House District 151 (Independent Party)	1	PA House District 151	Independent Party
 PA House District 152 (Democratic Party)	1	PA House District 152	Democratic Party
+PA House District 152 (Democratic / Republican Party)	1	PA House District 152	Democratic / Republican Party
+PA House District 152 (Independent Party)	1	PA House District 152	Independent Party
 PA House District 153 (Democratic Party)	1	PA House District 153	Democratic Party
+PA House District 153 (Democratic / Republican Party)	1	PA House District 153	Democratic / Republican Party
+PA House District 153 (Independent Party)	1	PA House District 153	Independent Party
 PA House District 154 (Democratic Party)	1	PA House District 154	Democratic Party
+PA House District 154 (Democratic / Republican Party)	1	PA House District 154	Democratic / Republican Party
+PA House District 154 (Independent Party)	1	PA House District 154	Independent Party
 PA House District 155 (Democratic Party)	1	PA House District 155	Democratic Party
+PA House District 155 (Democratic / Republican Party)	1	PA House District 155	Democratic / Republican Party
+PA House District 155 (Independent Party)	1	PA House District 155	Independent Party
 PA House District 156 (Democratic Party)	1	PA House District 156	Democratic Party
+PA House District 156 (Democratic / Republican Party)	1	PA House District 156	Democratic / Republican Party
+PA House District 156 (Independent Party)	1	PA House District 156	Independent Party
 PA House District 157 (Democratic Party)	1	PA House District 157	Democratic Party
+PA House District 157 (Democratic / Republican Party)	1	PA House District 157	Democratic / Republican Party
+PA House District 157 (Independent Party)	1	PA House District 157	Independent Party
 PA House District 158 (Democratic Party)	1	PA House District 158	Democratic Party
+PA House District 158 (Democratic / Republican Party)	1	PA House District 158	Democratic / Republican Party
+PA House District 158 (Independent Party)	1	PA House District 158	Independent Party
 PA House District 159 (Democratic Party)	1	PA House District 159	Democratic Party
+PA House District 159 (Democratic / Republican Party)	1	PA House District 159	Democratic / Republican Party
+PA House District 159 (Independent Party)	1	PA House District 159	Independent Party
 PA House District 160 (Democratic Party)	1	PA House District 160	Democratic Party
+PA House District 160 (Democratic / Republican Party)	1	PA House District 160	Democratic / Republican Party
+PA House District 160 (Independent Party)	1	PA House District 160	Independent Party
 PA House District 161 (Democratic Party)	1	PA House District 161	Democratic Party
+PA House District 161 (Democratic / Republican Party)	1	PA House District 161	Democratic / Republican Party
+PA House District 161 (Independent Party)	1	PA House District 161	Independent Party
 PA House District 162 (Democratic Party)	1	PA House District 162	Democratic Party
+PA House District 162 (Democratic / Republican Party)	1	PA House District 162	Democratic / Republican Party
+PA House District 162 (Independent Party)	1	PA House District 162	Independent Party
 PA House District 163 (Democratic Party)	1	PA House District 163	Democratic Party
+PA House District 163 (Democratic / Republican Party)	1	PA House District 163	Democratic / Republican Party
+PA House District 163 (Independent Party)	1	PA House District 163	Independent Party
 PA House District 164 (Democratic Party)	1	PA House District 164	Democratic Party
+PA House District 164 (Democratic / Republican Party)	1	PA House District 164	Democratic / Republican Party
+PA House District 164 (Independent Party)	1	PA House District 164	Independent Party
 PA House District 165 (Democratic Party)	1	PA House District 165	Democratic Party
+PA House District 165 (Democratic / Republican Party)	1	PA House District 165	Democratic / Republican Party
+PA House District 165 (Independent Party)	1	PA House District 165	Independent Party
 PA House District 166 (Democratic Party)	1	PA House District 166	Democratic Party
+PA House District 166 (Democratic / Republican Party)	1	PA House District 166	Democratic / Republican Party
+PA House District 166 (Independent Party)	1	PA House District 166	Independent Party
 PA House District 167 (Democratic Party)	1	PA House District 167	Democratic Party
+PA House District 167 (Democratic / Republican Party)	1	PA House District 167	Democratic / Republican Party
+PA House District 167 (Independent Party)	1	PA House District 167	Independent Party
 PA House District 168 (Democratic Party)	1	PA House District 168	Democratic Party
+PA House District 168 (Democratic / Republican Party)	1	PA House District 168	Democratic / Republican Party
+PA House District 168 (Independent Party)	1	PA House District 168	Independent Party
 PA House District 169 (Democratic Party)	1	PA House District 169	Democratic Party
+PA House District 169 (Democratic / Republican Party)	1	PA House District 169	Democratic / Republican Party
+PA House District 169 (Independent Party)	1	PA House District 169	Independent Party
 PA House District 170 (Democratic Party)	1	PA House District 170	Democratic Party
+PA House District 170 (Democratic / Republican Party)	1	PA House District 170	Democratic / Republican Party
+PA House District 170 (Independent Party)	1	PA House District 170	Independent Party
 PA House District 171 (Democratic Party)	1	PA House District 171	Democratic Party
+PA House District 171 (Democratic / Republican Party)	1	PA House District 171	Democratic / Republican Party
+PA House District 171 (Independent Party)	1	PA House District 171	Independent Party
 PA House District 172 (Democratic Party)	1	PA House District 172	Democratic Party
+PA House District 172 (Democratic / Republican Party)	1	PA House District 172	Democratic / Republican Party
+PA House District 172 (Independent Party)	1	PA House District 172	Independent Party
 PA House District 173 (Democratic Party)	1	PA House District 173	Democratic Party
+PA House District 173 (Democratic / Republican Party)	1	PA House District 173	Democratic / Republican Party
+PA House District 173 (Independent Party)	1	PA House District 173	Independent Party
 PA House District 174 (Democratic Party)	1	PA House District 174	Democratic Party
+PA House District 174 (Democratic / Republican Party)	1	PA House District 174	Democratic / Republican Party
+PA House District 174 (Independent Party)	1	PA House District 174	Independent Party
 PA House District 175 (Democratic Party)	1	PA House District 175	Democratic Party
+PA House District 175 (Democratic / Republican Party)	1	PA House District 175	Democratic / Republican Party
+PA House District 175 (Independent Party)	1	PA House District 175	Independent Party
 PA House District 176 (Democratic Party)	1	PA House District 176	Democratic Party
+PA House District 176 (Democratic / Republican Party)	1	PA House District 176	Democratic / Republican Party
+PA House District 176 (Independent Party)	1	PA House District 176	Independent Party
 PA House District 177 (Democratic Party)	1	PA House District 177	Democratic Party
+PA House District 177 (Democratic / Republican Party)	1	PA House District 177	Democratic / Republican Party
+PA House District 177 (Independent Party)	1	PA House District 177	Independent Party
 PA House District 178 (Democratic Party)	1	PA House District 178	Democratic Party
+PA House District 178 (Democratic / Republican Party)	1	PA House District 178	Democratic / Republican Party
+PA House District 178 (Independent Party)	1	PA House District 178	Independent Party
 PA House District 179 (Democratic Party)	1	PA House District 179	Democratic Party
+PA House District 179 (Democratic / Republican Party)	1	PA House District 179	Democratic / Republican Party
+PA House District 179 (Independent Party)	1	PA House District 179	Independent Party
 PA House District 180 (Democratic Party)	1	PA House District 180	Democratic Party
+PA House District 180 (Democratic / Republican Party)	1	PA House District 180	Democratic / Republican Party
+PA House District 180 (Independent Party)	1	PA House District 180	Independent Party
 PA House District 181 (Democratic Party)	1	PA House District 181	Democratic Party
+PA House District 181 (Democratic / Republican Party)	1	PA House District 181	Democratic / Republican Party
+PA House District 181 (Independent Party)	1	PA House District 181	Independent Party
 PA House District 182 (Democratic Party)	1	PA House District 182	Democratic Party
+PA House District 182 (Democratic / Republican Party)	1	PA House District 182	Democratic / Republican Party
+PA House District 182 (Independent Party)	1	PA House District 182	Independent Party
 PA House District 183 (Democratic Party)	1	PA House District 183	Democratic Party
+PA House District 183 (Democratic / Republican Party)	1	PA House District 183	Democratic / Republican Party
+PA House District 183 (Independent Party)	1	PA House District 183	Independent Party
 PA House District 184 (Democratic Party)	1	PA House District 184	Democratic Party
+PA House District 184 (Democratic / Republican Party)	1	PA House District 184	Democratic / Republican Party
+PA House District 184 (Independent Party)	1	PA House District 184	Independent Party
 PA House District 185 (Democratic Party)	1	PA House District 185	Democratic Party
+PA House District 185 (Democratic / Republican Party)	1	PA House District 185	Democratic / Republican Party
+PA House District 185 (Independent Party)	1	PA House District 185	Independent Party
 PA House District 186 (Democratic Party)	1	PA House District 186	Democratic Party
+PA House District 186 (Democratic / Republican Party)	1	PA House District 186	Democratic / Republican Party
+PA House District 186 (Independent Party)	1	PA House District 186	Independent Party
 PA House District 187 (Democratic Party)	1	PA House District 187	Democratic Party
+PA House District 187 (Democratic / Republican Party)	1	PA House District 187	Democratic / Republican Party
+PA House District 187 (Independent Party)	1	PA House District 187	Independent Party
 PA House District 188 (Democratic Party)	1	PA House District 188	Democratic Party
+PA House District 188 (Democratic / Republican Party)	1	PA House District 188	Democratic / Republican Party
+PA House District 188 (Independent Party)	1	PA House District 188	Independent Party
 PA House District 189 (Democratic Party)	1	PA House District 189	Democratic Party
+PA House District 189 (Democratic / Republican Party)	1	PA House District 189	Democratic / Republican Party
+PA House District 189 (Independent Party)	1	PA House District 189	Independent Party
 PA House District 190 (Democratic Party)	1	PA House District 190	Democratic Party
+PA House District 190 (Democratic / Republican Party)	1	PA House District 190	Democratic / Republican Party
+PA House District 190 (Independent Party)	1	PA House District 190	Independent Party
 PA House District 191 (Democratic Party)	1	PA House District 191	Democratic Party
+PA House District 191 (Democratic / Republican Party)	1	PA House District 191	Democratic / Republican Party
+PA House District 191 (Independent Party)	1	PA House District 191	Independent Party
 PA House District 192 (Democratic Party)	1	PA House District 192	Democratic Party
+PA House District 192 (Democratic / Republican Party)	1	PA House District 192	Democratic / Republican Party
+PA House District 192 (Independent Party)	1	PA House District 192	Independent Party
 PA House District 193 (Democratic Party)	1	PA House District 193	Democratic Party
+PA House District 193 (Democratic / Republican Party)	1	PA House District 193	Democratic / Republican Party
+PA House District 193 (Independent Party)	1	PA House District 193	Independent Party
 PA House District 194 (Democratic Party)	1	PA House District 194	Democratic Party
+PA House District 194 (Democratic / Republican Party)	1	PA House District 194	Democratic / Republican Party
+PA House District 194 (Independent Party)	1	PA House District 194	Independent Party
 PA House District 195 (Democratic Party)	1	PA House District 195	Democratic Party
+PA House District 195 (Democratic / Republican Party)	1	PA House District 195	Democratic / Republican Party
+PA House District 195 (Independent Party)	1	PA House District 195	Independent Party
 PA House District 196 (Democratic Party)	1	PA House District 196	Democratic Party
+PA House District 196 (Democratic / Republican Party)	1	PA House District 196	Democratic / Republican Party
+PA House District 196 (Independent Party)	1	PA House District 196	Independent Party
 PA House District 197 (Democratic Party)	1	PA House District 197	Democratic Party
+PA House District 197 (Democratic / Republican Party)	1	PA House District 197	Democratic / Republican Party
+PA House District 197 (Independent Party)	1	PA House District 197	Independent Party
 PA House District 198 (Democratic Party)	1	PA House District 198	Democratic Party
+PA House District 198 (Democratic / Republican Party)	1	PA House District 198	Democratic / Republican Party
+PA House District 198 (Independent Party)	1	PA House District 198	Independent Party
 PA House District 199 (Democratic Party)	1	PA House District 199	Democratic Party
+PA House District 199 (Democratic / Republican Party)	1	PA House District 199	Democratic / Republican Party
+PA House District 199 (Independent Party)	1	PA House District 199	Independent Party
 PA House District 200 (Democratic Party)	1	PA House District 200	Democratic Party
+PA House District 200 (Democratic / Republican Party)	1	PA House District 200	Democratic / Republican Party
+PA House District 200 (Independent Party)	1	PA House District 200	Independent Party
 PA House District 201 (Democratic Party)	1	PA House District 201	Democratic Party
+PA House District 201 (Democratic / Republican Party)	1	PA House District 201	Democratic / Republican Party
+PA House District 201 (Independent Party)	1	PA House District 201	Independent Party
 PA House District 202 (Democratic Party)	1	PA House District 202	Democratic Party
+PA House District 202 (Democratic / Republican Party)	1	PA House District 202	Democratic / Republican Party
+PA House District 202 (Independent Party)	1	PA House District 202	Independent Party
 PA House District 203 (Democratic Party)	1	PA House District 203	Democratic Party
+PA House District 203 (Democratic / Republican Party)	1	PA House District 203	Democratic / Republican Party
+PA House District 203 (Independent Party)	1	PA House District 203	Independent Party
 PA Senate District 1 (Democratic Party)	1	PA Senate District 1	Democratic Party
+PA Senate District 1 (Democratic / Republican Party)	1	PA Senate District 1	Democratic / Republican Party
+PA Senate District 1 (Independent Party)	1	PA Senate District 1	Independent Party
 PA Senate District 2 (Democratic Party)	1	PA Senate District 2	Democratic Party
+PA Senate District 2 (Democratic / Republican Party)	1	PA Senate District 2	Democratic / Republican Party
+PA Senate District 2 (Independent Party)	1	PA Senate District 2	Independent Party
 PA Senate District 3 (Democratic Party)	1	PA Senate District 3	Democratic Party
+PA Senate District 3 (Democratic / Republican Party)	1	PA Senate District 3	Democratic / Republican Party
+PA Senate District 3 (Independent Party)	1	PA Senate District 3	Independent Party
 PA Senate District 4 (Democratic Party)	1	PA Senate District 4	Democratic Party
+PA Senate District 4 (Democratic / Republican Party)	1	PA Senate District 4	Democratic / Republican Party
+PA Senate District 4 (Independent Party)	1	PA Senate District 4	Independent Party
 PA Senate District 5 (Democratic Party)	1	PA Senate District 5	Democratic Party
+PA Senate District 5 (Democratic / Republican Party)	1	PA Senate District 5	Democratic / Republican Party
+PA Senate District 5 (Independent Party)	1	PA Senate District 5	Independent Party
 PA Senate District 6 (Democratic Party)	1	PA Senate District 6	Democratic Party
+PA Senate District 6 (Democratic / Republican Party)	1	PA Senate District 6	Democratic / Republican Party
+PA Senate District 6 (Independent Party)	1	PA Senate District 6	Independent Party
 PA Senate District 7 (Democratic Party)	1	PA Senate District 7	Democratic Party
+PA Senate District 7 (Democratic / Republican Party)	1	PA Senate District 7	Democratic / Republican Party
+PA Senate District 7 (Independent Party)	1	PA Senate District 7	Independent Party
 PA Senate District 8 (Democratic Party)	1	PA Senate District 8	Democratic Party
+PA Senate District 8 (Democratic / Republican Party)	1	PA Senate District 8	Democratic / Republican Party
+PA Senate District 8 (Independent Party)	1	PA Senate District 8	Independent Party
 PA Senate District 9 (Democratic Party)	1	PA Senate District 9	Democratic Party
+PA Senate District 9 (Democratic / Republican Party)	1	PA Senate District 9	Democratic / Republican Party
+PA Senate District 9 (Independent Party)	1	PA Senate District 9	Independent Party
 PA Senate District 10 (Democratic Party)	1	PA Senate District 10	Democratic Party
+PA Senate District 10 (Democratic / Republican Party)	1	PA Senate District 10	Democratic / Republican Party
+PA Senate District 10 (Independent Party)	1	PA Senate District 10	Independent Party
 PA Senate District 11 (Democratic Party)	1	PA Senate District 11	Democratic Party
+PA Senate District 11 (Democratic / Republican Party)	1	PA Senate District 11	Democratic / Republican Party
+PA Senate District 11 (Independent Party)	1	PA Senate District 11	Independent Party
 PA Senate District 12 (Democratic Party)	1	PA Senate District 12	Democratic Party
+PA Senate District 12 (Democratic / Republican Party)	1	PA Senate District 12	Democratic / Republican Party
+PA Senate District 12 (Independent Party)	1	PA Senate District 12	Independent Party
 PA Senate District 13 (Democratic Party)	1	PA Senate District 13	Democratic Party
+PA Senate District 13 (Democratic / Republican Party)	1	PA Senate District 13	Democratic / Republican Party
+PA Senate District 13 (Independent Party)	1	PA Senate District 13	Independent Party
 PA Senate District 14 (Democratic Party)	1	PA Senate District 14	Democratic Party
+PA Senate District 14 (Democratic / Republican Party)	1	PA Senate District 14	Democratic / Republican Party
+PA Senate District 14 (Independent Party)	1	PA Senate District 14	Independent Party
 PA Senate District 15 (Democratic Party)	1	PA Senate District 15	Democratic Party
+PA Senate District 15 (Democratic / Republican Party)	1	PA Senate District 15	Democratic / Republican Party
+PA Senate District 15 (Independent Party)	1	PA Senate District 15	Independent Party
 PA Senate District 16 (Democratic Party)	1	PA Senate District 16	Democratic Party
+PA Senate District 16 (Democratic / Republican Party)	1	PA Senate District 16	Democratic / Republican Party
+PA Senate District 16 (Independent Party)	1	PA Senate District 16	Independent Party
 PA Senate District 17 (Democratic Party)	1	PA Senate District 17	Democratic Party
+PA Senate District 17 (Democratic / Republican Party)	1	PA Senate District 17	Democratic / Republican Party
+PA Senate District 17 (Independent Party)	1	PA Senate District 17	Independent Party
 PA Senate District 18 (Democratic Party)	1	PA Senate District 18	Democratic Party
+PA Senate District 18 (Democratic / Republican Party)	1	PA Senate District 18	Democratic / Republican Party
+PA Senate District 18 (Independent Party)	1	PA Senate District 18	Independent Party
 PA Senate District 19 (Democratic Party)	1	PA Senate District 19	Democratic Party
+PA Senate District 19 (Democratic / Republican Party)	1	PA Senate District 19	Democratic / Republican Party
+PA Senate District 19 (Independent Party)	1	PA Senate District 19	Independent Party
 PA Senate District 20 (Democratic Party)	1	PA Senate District 20	Democratic Party
+PA Senate District 20 (Democratic / Republican Party)	1	PA Senate District 20	Democratic / Republican Party
+PA Senate District 20 (Independent Party)	1	PA Senate District 20	Independent Party
 PA Senate District 21 (Democratic Party)	1	PA Senate District 21	Democratic Party
+PA Senate District 21 (Democratic / Republican Party)	1	PA Senate District 21	Democratic / Republican Party
+PA Senate District 21 (Independent Party)	1	PA Senate District 21	Independent Party
 PA Senate District 22 (Democratic Party)	1	PA Senate District 22	Democratic Party
+PA Senate District 22 (Democratic / Republican Party)	1	PA Senate District 22	Democratic / Republican Party
+PA Senate District 22 (Independent Party)	1	PA Senate District 22	Independent Party
 PA Senate District 23 (Democratic Party)	1	PA Senate District 23	Democratic Party
+PA Senate District 23 (Democratic / Republican Party)	1	PA Senate District 23	Democratic / Republican Party
+PA Senate District 23 (Independent Party)	1	PA Senate District 23	Independent Party
 PA Senate District 24 (Democratic Party)	1	PA Senate District 24	Democratic Party
+PA Senate District 24 (Democratic / Republican Party)	1	PA Senate District 24	Democratic / Republican Party
+PA Senate District 24 (Independent Party)	1	PA Senate District 24	Independent Party
 PA Senate District 25 (Democratic Party)	1	PA Senate District 25	Democratic Party
+PA Senate District 25 (Democratic / Republican Party)	1	PA Senate District 25	Democratic / Republican Party
+PA Senate District 25 (Independent Party)	1	PA Senate District 25	Independent Party
 PA Senate District 26 (Democratic Party)	1	PA Senate District 26	Democratic Party
+PA Senate District 26 (Democratic / Republican Party)	1	PA Senate District 26	Democratic / Republican Party
+PA Senate District 26 (Independent Party)	1	PA Senate District 26	Independent Party
 PA Senate District 27 (Democratic Party)	1	PA Senate District 27	Democratic Party
+PA Senate District 27 (Democratic / Republican Party)	1	PA Senate District 27	Democratic / Republican Party
+PA Senate District 27 (Independent Party)	1	PA Senate District 27	Independent Party
 PA Senate District 28 (Democratic Party)	1	PA Senate District 28	Democratic Party
+PA Senate District 28 (Democratic / Republican Party)	1	PA Senate District 28	Democratic / Republican Party
+PA Senate District 28 (Independent Party)	1	PA Senate District 28	Independent Party
 PA Senate District 29 (Democratic Party)	1	PA Senate District 29	Democratic Party
+PA Senate District 29 (Democratic / Republican Party)	1	PA Senate District 29	Democratic / Republican Party
+PA Senate District 29 (Independent Party)	1	PA Senate District 29	Independent Party
 PA Senate District 30 (Democratic Party)	1	PA Senate District 30	Democratic Party
+PA Senate District 30 (Democratic / Republican Party)	1	PA Senate District 30	Democratic / Republican Party
+PA Senate District 30 (Independent Party)	1	PA Senate District 30	Independent Party
 PA Senate District 31 (Democratic Party)	1	PA Senate District 31	Democratic Party
+PA Senate District 31 (Democratic / Republican Party)	1	PA Senate District 31	Democratic / Republican Party
+PA Senate District 31 (Independent Party)	1	PA Senate District 31	Independent Party
 PA Senate District 32 (Democratic Party)	1	PA Senate District 32	Democratic Party
+PA Senate District 32 (Democratic / Republican Party)	1	PA Senate District 32	Democratic / Republican Party
+PA Senate District 32 (Independent Party)	1	PA Senate District 32	Independent Party
 PA Senate District 33 (Democratic Party)	1	PA Senate District 33	Democratic Party
+PA Senate District 33 (Democratic / Republican Party)	1	PA Senate District 33	Democratic / Republican Party
+PA Senate District 33 (Independent Party)	1	PA Senate District 33	Independent Party
 PA Senate District 34 (Democratic Party)	1	PA Senate District 34	Democratic Party
+PA Senate District 34 (Democratic / Republican Party)	1	PA Senate District 34	Democratic / Republican Party
+PA Senate District 34 (Independent Party)	1	PA Senate District 34	Independent Party
 PA Senate District 35 (Democratic Party)	1	PA Senate District 35	Democratic Party
+PA Senate District 35 (Democratic / Republican Party)	1	PA Senate District 35	Democratic / Republican Party
+PA Senate District 35 (Independent Party)	1	PA Senate District 35	Independent Party
 PA Senate District 36 (Democratic Party)	1	PA Senate District 36	Democratic Party
+PA Senate District 36 (Democratic / Republican Party)	1	PA Senate District 36	Democratic / Republican Party
+PA Senate District 36 (Independent Party)	1	PA Senate District 36	Independent Party
 PA Senate District 37 (Democratic Party)	1	PA Senate District 37	Democratic Party
+PA Senate District 37 (Democratic / Republican Party)	1	PA Senate District 37	Democratic / Republican Party
+PA Senate District 37 (Independent Party)	1	PA Senate District 37	Independent Party
 PA Senate District 38 (Democratic Party)	1	PA Senate District 38	Democratic Party
+PA Senate District 38 (Democratic / Republican Party)	1	PA Senate District 38	Democratic / Republican Party
+PA Senate District 38 (Independent Party)	1	PA Senate District 38	Independent Party
 PA Senate District 39 (Democratic Party)	1	PA Senate District 39	Democratic Party
+PA Senate District 39 (Democratic / Republican Party)	1	PA Senate District 39	Democratic / Republican Party
+PA Senate District 39 (Independent Party)	1	PA Senate District 39	Independent Party
 PA Senate District 40 (Democratic Party)	1	PA Senate District 40	Democratic Party
+PA Senate District 40 (Democratic / Republican Party)	1	PA Senate District 40	Democratic / Republican Party
+PA Senate District 40 (Independent Party)	1	PA Senate District 40	Independent Party
 PA Senate District 41 (Democratic Party)	1	PA Senate District 41	Democratic Party
+PA Senate District 41 (Democratic / Republican Party)	1	PA Senate District 41	Democratic / Republican Party
+PA Senate District 41 (Independent Party)	1	PA Senate District 41	Independent Party
 PA Senate District 42 (Democratic Party)	1	PA Senate District 42	Democratic Party
+PA Senate District 42 (Democratic / Republican Party)	1	PA Senate District 42	Democratic / Republican Party
+PA Senate District 42 (Independent Party)	1	PA Senate District 42	Independent Party
 PA Senate District 43 (Democratic Party)	1	PA Senate District 43	Democratic Party
+PA Senate District 43 (Democratic / Republican Party)	1	PA Senate District 43	Democratic / Republican Party
+PA Senate District 43 (Independent Party)	1	PA Senate District 43	Independent Party
 PA Senate District 44 (Democratic Party)	1	PA Senate District 44	Democratic Party
+PA Senate District 44 (Democratic / Republican Party)	1	PA Senate District 44	Democratic / Republican Party
+PA Senate District 44 (Independent Party)	1	PA Senate District 44	Independent Party
 PA Senate District 45 (Democratic Party)	1	PA Senate District 45	Democratic Party
+PA Senate District 45 (Democratic / Republican Party)	1	PA Senate District 45	Democratic / Republican Party
+PA Senate District 45 (Independent Party)	1	PA Senate District 45	Independent Party
 PA Senate District 46 (Democratic Party)	1	PA Senate District 46	Democratic Party
+PA Senate District 46 (Democratic / Republican Party)	1	PA Senate District 46	Democratic / Republican Party
+PA Senate District 46 (Independent Party)	1	PA Senate District 46	Independent Party
 PA Senate District 47 (Democratic Party)	1	PA Senate District 47	Democratic Party
+PA Senate District 47 (Democratic / Republican Party)	1	PA Senate District 47	Democratic / Republican Party
+PA Senate District 47 (Independent Party)	1	PA Senate District 47	Independent Party
 PA Senate District 48 (Democratic Party)	1	PA Senate District 48	Democratic Party
+PA Senate District 48 (Democratic / Republican Party)	1	PA Senate District 48	Democratic / Republican Party
+PA Senate District 48 (Independent Party)	1	PA Senate District 48	Independent Party
 PA Senate District 49 (Democratic Party)	1	PA Senate District 49	Democratic Party
+PA Senate District 49 (Democratic / Republican Party)	1	PA Senate District 49	Democratic / Republican Party
+PA Senate District 49 (Independent Party)	1	PA Senate District 49	Independent Party
 PA Senate District 50 (Democratic Party)	1	PA Senate District 50	Democratic Party
+PA Senate District 50 (Democratic / Republican Party)	1	PA Senate District 50	Democratic / Republican Party
+PA Senate District 50 (Independent Party)	1	PA Senate District 50	Independent Party
 US House PA District 1 (Democratic Party)	1	US House PA District 1	Democratic Party
+US House PA District 1 (Democratic / Republican Party)	1	US House PA District 1	Democratic / Republican Party
+US House PA District 1 (Independent Party)	1	US House PA District 1	Independent Party
 US House PA District 2 (Democratic Party)	1	US House PA District 2	Democratic Party
+US House PA District 2 (Democratic / Republican Party)	1	US House PA District 2	Democratic / Republican Party
+US House PA District 2 (Independent Party)	1	US House PA District 2	Independent Party
 US House PA District 3 (Democratic Party)	1	US House PA District 3	Democratic Party
+US House PA District 3 (Democratic / Republican Party)	1	US House PA District 3	Democratic / Republican Party
+US House PA District 3 (Independent Party)	1	US House PA District 3	Independent Party
 US House PA District 4 (Democratic Party)	1	US House PA District 4	Democratic Party
+US House PA District 4 (Democratic / Republican Party)	1	US House PA District 4	Democratic / Republican Party
+US House PA District 4 (Independent Party)	1	US House PA District 4	Independent Party
 US House PA District 5 (Democratic Party)	1	US House PA District 5	Democratic Party
+US House PA District 5 (Democratic / Republican Party)	1	US House PA District 5	Democratic / Republican Party
+US House PA District 5 (Independent Party)	1	US House PA District 5	Independent Party
 US House PA District 6 (Democratic Party)	1	US House PA District 6	Democratic Party
+US House PA District 6 (Democratic / Republican Party)	1	US House PA District 6	Democratic / Republican Party
+US House PA District 6 (Independent Party)	1	US House PA District 6	Independent Party
 US House PA District 7 (Democratic Party)	1	US House PA District 7	Democratic Party
+US House PA District 7 (Democratic / Republican Party)	1	US House PA District 7	Democratic / Republican Party
+US House PA District 7 (Independent Party)	1	US House PA District 7	Independent Party
 US House PA District 8 (Democratic Party)	1	US House PA District 8	Democratic Party
+US House PA District 8 (Democratic / Republican Party)	1	US House PA District 8	Democratic / Republican Party
+US House PA District 8 (Independent Party)	1	US House PA District 8	Independent Party
 US House PA District 9 (Democratic Party)	1	US House PA District 9	Democratic Party
+US House PA District 9 (Democratic / Republican Party)	1	US House PA District 9	Democratic / Republican Party
+US House PA District 9 (Independent Party)	1	US House PA District 9	Independent Party
 US House PA District 10 (Democratic Party)	1	US House PA District 10	Democratic Party
+US House PA District 10 (Democratic / Republican Party)	1	US House PA District 10	Democratic / Republican Party
+US House PA District 10 (Independent Party)	1	US House PA District 10	Independent Party
 US House PA District 11 (Democratic Party)	1	US House PA District 11	Democratic Party
+US House PA District 11 (Democratic / Republican Party)	1	US House PA District 11	Democratic / Republican Party
+US House PA District 11 (Independent Party)	1	US House PA District 11	Independent Party
 US House PA District 12 (Democratic Party)	1	US House PA District 12	Democratic Party
+US House PA District 12 (Democratic / Republican Party)	1	US House PA District 12	Democratic / Republican Party
+US House PA District 12 (Independent Party)	1	US House PA District 12	Independent Party
 US House PA District 13 (Democratic Party)	1	US House PA District 13	Democratic Party
+US House PA District 13 (Democratic / Republican Party)	1	US House PA District 13	Democratic / Republican Party
+US House PA District 13 (Independent Party)	1	US House PA District 13	Independent Party
 US House PA District 14 (Democratic Party)	1	US House PA District 14	Democratic Party
+US House PA District 14 (Democratic / Republican Party)	1	US House PA District 14	Democratic / Republican Party
+US House PA District 14 (Independent Party)	1	US House PA District 14	Independent Party
 US House PA District 15 (Democratic Party)	1	US House PA District 15	Democratic Party
+US House PA District 15 (Democratic / Republican Party)	1	US House PA District 15	Democratic / Republican Party
+US House PA District 15 (Independent Party)	1	US House PA District 15	Independent Party
 US House PA District 16 (Democratic Party)	1	US House PA District 16	Democratic Party
+US House PA District 16 (Democratic / Republican Party)	1	US House PA District 16	Democratic / Republican Party
+US House PA District 16 (Independent Party)	1	US House PA District 16	Independent Party
 US House PA District 17 (Democratic Party)	1	US House PA District 17	Democratic Party
+US House PA District 17 (Democratic / Republican Party)	1	US House PA District 17	Democratic / Republican Party
+US House PA District 17 (Independent Party)	1	US House PA District 17	Independent Party
 US House PA District 18 (Democratic Party)	1	US House PA District 18	Democratic Party
+US House PA District 18 (Democratic / Republican Party)	1	US House PA District 18	Democratic / Republican Party
+US House PA District 18 (Independent Party)	1	US House PA District 18	Independent Party
 US President (PA) (Democratic Party)	1	US President (PA)	Democratic Party
+US President (PA) (Democratic / Republican Party)	1	US President (PA)	Democratic / Republican Party
+US President (PA) (Independent Party)	1	US President (PA)	Independent Party
 PA Governor (Democratic Party)	1	PA Governor	Democratic Party
+PA Governor (Democratic / Republican Party)	1	PA Governor	Democratic / Republican Party
+PA Governor (Independent Party)	1	PA Governor	Independent Party
 US Senate PA (Democratic Party)	1	US Senate PA	Democratic Party
+US Senate PA (Democratic / Republican Party)	1	US Senate PA	Democratic / Republican Party
+US Senate PA (Independent Party)	1	US Senate PA	Independent Party
 PA Attorney General (Democratic Party)	1	PA Attorney General	Democratic Party
+PA Attorney General (Democratic / Republican Party)	1	PA Attorney General	Democratic / Republican Party
+PA Attorney General (Independent Party)	1	PA Attorney General	Independent Party
 PA Lieutenant Governor (Democratic Party)	1	PA Lieutenant Governor	Democratic Party
+PA Lieutenant Governor (Democratic / Republican Party)	1	PA Lieutenant Governor	Democratic / Republican Party
+PA Lieutenant Governor (Independent Party)	1	PA Lieutenant Governor	Independent Party
 PA Treasurer (Democratic Party)	1	PA Treasurer	Democratic Party
+PA Treasurer (Democratic / Republican Party)	1	PA Treasurer	Democratic / Republican Party
+PA Treasurer (Independent Party)	1	PA Treasurer	Independent Party
 PA Auditor General (Democratic Party)	1	PA Auditor General	Democratic Party
+PA Auditor General (Democratic / Republican Party)	1	PA Auditor General	Democratic / Republican Party
+PA Auditor General (Independent Party)	1	PA Auditor General	Independent Party
 PA House District 1 (Republican Party)	1	PA House District 1	Republican Party
 PA House District 2 (Republican Party)	1	PA House District 2	Republican Party
 PA House District 3 (Republican Party)	1	PA House District 3	Republican Party
