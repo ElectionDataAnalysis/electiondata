@@ -1,11 +1,11 @@
 [election_anomaly]
-results_file=
-jurisdiction_path=/Users/Steph-Airbook/Documents/CampaignScientific/NSF2019/State_Data/results_analysis/src/jurisdictions/Pennsylvania
-munger_name=pa.gen
-top_reporting_unit=Pennsylvania
-election=2018 General
-results_short_name=pa_18g_by_county
-results_download_date=1900-01-01
-results_source=PA dos
+results_file=<name (not path) of file>
+jurisdiction_path=</path/to/jurisdiction/files>
+munger_name=
+top_reporting_unit=<e.g., Pennsylvania>
+election=<Name matching standard in templates/jurisdiction_templates/Election.txt>
+results_short_name=
+results_download_date=
+results_source=
 results_note=
-aux_data_dir=
+aux_data_dir=<optional, unless vote count file relies on auxiliary files>
