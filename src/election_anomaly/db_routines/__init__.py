@@ -880,8 +880,6 @@ def get_filtered_input_options(session, input_str, filters):
             ['CountItemType_Id'].unique()
         count_types_df = pd.read_sql_table('CountItemType', session.bind, index_col='Id')
         count_types = list(count_types_df[count_types_df.index.isin(count_type_ids)]['Txt'].unique())
-            #.merge(vote_count_df, how='inner', left_index=True, right_on='CountItemType_Id') \
-            #['Txt'].unique())
         count_types.sort()
         data = {
             'parent': [filters[0] for count_type in count_types] + [filters[0] for count_type in count_types],
@@ -915,13 +913,7 @@ def get_filtered_input_options(session, input_str, filters):
 			right_on='Candidate_Id')
         candidates_df = candidates_df.merge(candidate_names_df, how='inner', left_on='name',
 			right_on='BallotName')
-        #candidate_contest_df.columns = ['parent', 'name', 'type']
-        # contest_df = contest_df.merge(candidate_contest_df, how='inner', left_on='name', 
-        #     right_on='Name')[contest_df.columns]
-        contests = get_input_options(session, 'candidate_contest', True)  
-        contests_df = pd.DataFrame(contests)
-        contests_df.columns = contests.keys()
-        df = contests_df.merge(candidates_df, how='inner', left_on='name', right_on='parent',
+        df = contest_df.merge(candidates_df, how='inner', left_on='name', right_on='parent',
             suffixes=['_x', None])[candidates_df.columns]
     else:
         candidates = get_input_options(session, input_str, True)
