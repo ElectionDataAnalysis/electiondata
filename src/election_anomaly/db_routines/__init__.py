@@ -308,49 +308,6 @@ def get_name_field(element):
 	return field
 
 
-# def get_input_options(session, input):
-# 	"""Returns a list of response options based on the input"""
-# 	# input comes as a pythonic (snake case) input, need to 
-# 	# change to match DB element naming format
-# 	name_parts = input.split('_')
-# 	search_str = "".join([name_part.capitalize() for name_part in name_parts])
-
-# 	if search_str in ['BallotMeasureContest', 'CandidateContest','BallotMeasureSelection','CandidateContest' ]:
-# 		print(f'Options not available for {input}')
-# 		return None
-# 	elif search_str in ['Election',
-# 		'Office', 'Party', 'ReportingUnit']:
-# 		column_name = 'Name'
-# 		table_search = True
-# 	elif search_str in ['CountItemStatus', 'CountItemType', 'ElectionType',
-# 		'IdentifierType', 'ReportingUnitType']:
-# 		column_name = 'Txt'
-# 		table_search = True
-# 	elif search_str == 'Candidate':
-# 		column_name = 'BallotName'
-# 		table_search = True
-# 	else:
-# 		search_str = search_str.lower()
-# 		table_search = False
-
-# 	connection = session.bind.raw_connection()
-# 	cursor = connection.cursor()
-# 	if table_search:
-# 		q1 = sql.SQL('SELECT {column_name} FROM {search_str};').format(
-# 			column_name=sql.Identifier(column_name),search_str=sql.Identifier(search_str)
-# 		)
-# 		cursor.execute(q1)
-# 		result = cursor.fetchall()
-# 	else:
-# 		q2 = sql.SQL(
-# 			'SELECT "Name" FROM "ReportingUnit" ru JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" WHERE rut."Txt" = %s'
-# 		)
-# 		cursor.execute(q2,[search_str])
-# 		result = cursor.fetchall()
-# 	connection.close()
-# 	return [r[0] for r in result]
-
-
 def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', timestamp=None) -> str:
 	"""Inserts any new records in <df> into <element>; if <element> has a timestamp column
 	it must be specified in <timestamp>; <df> must have columns matching <element>, except Id and <timestamp> if any"""
@@ -731,15 +688,22 @@ def get_input_options(session, input, verbose):
         table_search = False
 
     if not verbose:
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
         if table_search:
-            result = session.execute(f'SELECT "{column_name}" FROM "{search_str}";')
-            return [r[0] for r in result]
+            q1 = sql.SQL('SELECT {column_name} FROM {search_str};').format(
+                column_name=sql.Identifier(column_name),search_str=sql.Identifier(search_str)
+            )
+            cursor.execute(q1)
+            result = cursor.fetchall()
         else:
-            result = session.execute(f' \
-                SELECT "Name" FROM "ReportingUnit" ru \
-                JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" \
-                WHERE rut."Txt" = \'{search_str}\'')
-            return [r[0] for r in result]
+            q2 = sql.SQL(
+                'SELECT "Name" FROM "ReportingUnit" ru JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" WHERE rut."Txt" = %s'
+            )
+            cursor.execute(q2,[search_str])
+            result = cursor.fetchall()
+        connection.close()
+        return [r[0] for r in result]
     else:
         # jurisction result are handled differently than the rest of the flow because 
         # it's the first selection made 
