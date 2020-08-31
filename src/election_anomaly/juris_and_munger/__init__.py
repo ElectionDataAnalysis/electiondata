@@ -3,7 +3,7 @@ import os.path
 from election_anomaly import database as db
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
-from election_anomaly import munge_routines as mr
+from election_anomaly import munge as m
 from election_anomaly import user_interface as ui
 import re
 import numpy as np
@@ -22,7 +22,7 @@ class Jurisdiction:
             .fillna('none or unknown')
 
         # add contest_type column
-        df = mr.add_constant_column(df,'contest_type',contest_type)
+        df = m.add_constant_column(df,'contest_type',contest_type)
 
         # add 'none or unknown' record
         df = add_none_or_unknown(df,contest_type=contest_type)
@@ -125,7 +125,7 @@ class Munger:
 
             # cast primary key(s) as int if possible, and set as (multi-)index
             primary_keys = self.aux_meta.loc[abbrev, 'primary_key'].split(',')
-            df = mr.cast_cols_as_int(df,primary_keys,error_msg=f'In dataframe for {abbrev}')
+            df = m.cast_cols_as_int(df,primary_keys,error_msg=f'In dataframe for {abbrev}')
             df.set_index(primary_keys, inplace=True)
 
             aux_data_dict[abbrev] = df
@@ -151,7 +151,7 @@ class Munger:
             problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
 
         # formulas have good syntax
-        bad_formula = [x for x in self.cdf_elements.raw_identifier_formula.unique() if not mr.good_syntax(x)]
+        bad_formula = [x for x in self.cdf_elements.raw_identifier_formula.unique() if not m.good_syntax(x)]
         if bad_formula:
             f_str = ','.join(bad_formula)
             problems.append(f'''At least one formula in cdf_elements.txt has bad syntax: {f_str} ''')
@@ -228,7 +228,7 @@ def read_munger_info_from_files(dir_path,project_root=None,aux_data_dir=None):
     # add column for list of fields used in formulas
     cdf_elements['fields'] = [[]]*cdf_elements.shape[0]
     for i,r in cdf_elements.iterrows():
-        text_field_list,last_text = mr.text_fragments_and_fields(cdf_elements.loc[i,'raw_identifier_formula'])
+        text_field_list,last_text = m.text_fragments_and_fields(cdf_elements.loc[i,'raw_identifier_formula'])
         cdf_elements.loc[i,'fields'] = [f for t,f in text_field_list]
 
     # read formatting info
@@ -500,7 +500,7 @@ def check_munger_file_contents(munger_name,project_root):
         problems.append(f'''At least one source in cdf_elements.txt is not recognized: {b_str} ''')
 
     # formulas have good syntax
-    bad_formula = [x for x in cdf_elements.raw_identifier_formula.unique() if not mr.good_syntax(x)]
+    bad_formula = [x for x in cdf_elements.raw_identifier_formula.unique() if not m.good_syntax(x)]
     if bad_formula:
         f_str = ','.join(bad_formula)
         problems.append(f'''At least one formula in cdf_elements.txt has bad syntax: {f_str} ''')
@@ -663,7 +663,7 @@ def load_juris_dframe_into_cdf(session,element,juris_path,project_root,error,loa
             cdf_e = pd.read_sql_table(e,session.bind)
             # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
             if e in df.columns:
-                df = mr.enum_col_to_id_othertext(df,e,cdf_e)
+                df = m.enum_col_to_id_othertext(df,e,cdf_e)
 
     # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
     fk_file_path = os.path.join(

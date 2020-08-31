@@ -3,7 +3,7 @@ import os.path
 
 import pandas as pd
 from election_anomaly import user_interface as ui
-from election_anomaly import munge_routines as mr
+from election_anomaly import munge as m
 import datetime
 import os
 import numpy as np
@@ -536,7 +536,7 @@ def create_candidate_contests(df, columns):
 	if contest_df.empty:
 		contest_df['contest_type'] = None
 	else:
-		contest_df = mr.add_constant_column(contest_df,'contest_type','Candidate')
+		contest_df = m.add_constant_column(contest_df,'contest_type','Candidate')
 	return contest_df
 
 
@@ -549,7 +549,7 @@ def create_ballot_measure_contests(df, columns):
 	if ballotmeasure_df.empty:
 		ballotmeasure_df['contest_type'] = None
 	else:
-		ballotmeasure_df = mr.add_constant_column(ballotmeasure_df,'contest_type','BallotMeasure')
+		ballotmeasure_df = m.add_constant_column(ballotmeasure_df,'contest_type','BallotMeasure')
 	return ballotmeasure_df
 
 
@@ -563,7 +563,7 @@ def create_contests(df, reporting_units, candidate_columns=None, ballotmeasure_c
 	contest_selection = pd.concat([c_df, bm_df])
 	contest_selection = contest_selection.merge(reporting_units,
 		how='left', left_on='ElectionDistrict_Id', right_index=True)
-	contest_selection = mr.enum_col_from_id_othertext(contest_selection,'ReportingUnitType',df['ReportingUnitType'])
+	contest_selection = m.enum_col_from_id_othertext(contest_selection,'ReportingUnitType',df['ReportingUnitType'])
 	contest_selection.rename(columns={'ReportingUnitType':'contest_district_type'},inplace=True)
 	return contest_selection
 
@@ -612,6 +612,6 @@ def create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru):
 	}
 	unsummed.rename(columns=rename, inplace=True)
 	# add columns with names
-	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'],drop_old=False)
+	unsummed = m.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'],drop_old=False)
 	unsummed = unsummed.merge(contest_selection,how='left',on=['Selection_Id','Contest_Id'])
 	return unsummed

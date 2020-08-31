@@ -1,7 +1,6 @@
 # Routines to aid in preparing Jurisdiction and Munger files
 import pandas as pd
 import os
-from election_anomaly import munge_routines as mr
 from election_anomaly import user_interface as ui
 from election_anomaly import juris_and_munger as jm
 from pathlib import Path

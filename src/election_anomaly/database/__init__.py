@@ -15,7 +15,7 @@ import datetime
 from election_anomaly import user_interface as ui
 from configparser import MissingSectionHeaderError
 import pandas as pd
-from election_anomaly import munge_routines as mr
+from election_anomaly import munge as m
 import re
 from election_anomaly.database import create_cdf_db as db_cdf
 import os
@@ -314,7 +314,7 @@ def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', times
 	it must be specified in <timestamp>; <df> must have columns matching <element>, except Id and <timestamp> if any"""
 
 	# initialize connection and cursor
-	working = mr.generic_clean(df)
+	working = m.generic_clean(df)
 	connection = engine.raw_connection()
 	cursor = connection.cursor()
 
@@ -363,7 +363,7 @@ def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', times
 
 	# add any missing columns needed for temp table to working
 	for c in temp_only_cols:
-		working = mr.add_constant_column(working,c,None)
+		working = m.add_constant_column(working,c,None)
 	working[temp_columns].drop_duplicates().to_csv(
 		output, sep=sep, header=False, encoding=encoding, index=False, quoting=csv.QUOTE_MINIMAL)
 	# set current position for the StringIO object to the beginning of the string
@@ -436,7 +436,7 @@ def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_
 	df_cols = list(col_map.keys())
 
 	# create temp db table with info from df, without index
-	df = mr.generic_clean(df)
+	df = m.generic_clean(df)
 	df[df_cols].fillna('').to_sql(temp_table, engine,index_label='dataframe_index')
 	# TODO fillna('') probably redundant
 
@@ -450,7 +450,7 @@ def append_id_to_dframe(engine: sqlalchemy.engine, df: pd.DataFrame, table, col_
 	q = sql.SQL("SELECT t.*, tt.dataframe_index FROM {tt} tt LEFT JOIN {t} t ON {on_clause}").format(
 		tt=sql.Identifier(temp_table),t=sql.Identifier(table),on_clause=on_clause
 	)
-	w = mr.generic_clean(pd.read_sql_query(q, connection).set_index('dataframe_index'))
+	w = m.generic_clean(pd.read_sql_query(q, connection).set_index('dataframe_index'))
 
 	# drop temp db table
 	q = sql.SQL("DROP TABLE {temp_table}").format(temp_table=sql.Identifier(temp_table))

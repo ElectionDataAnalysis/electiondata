@@ -1,6 +1,6 @@
 from election_anomaly import database as db
 from election_anomaly import user_interface as ui
-from election_anomaly import munge_routines as mr
+from election_anomaly import munge as m
 from sqlalchemy.orm import sessionmaker
 import datetime
 from pathlib import Path
@@ -469,8 +469,8 @@ class JurisdictionPrepper():
 			return error
 
 		# add columns for county and sub_ru
-		wr, error = mr.add_column_from_formula(wr,county_formula, 'County_raw', error, suffix='_SOURCE')
-		wr, error = mr.add_column_from_formula(wr,sub_ru_formula, 'Sub_County_raw', error, suffix='_SOURCE')
+		wr, error = m.add_column_from_formula(wr,county_formula, 'County_raw', error, suffix='_SOURCE')
+		wr, error = m.add_column_from_formula(wr,sub_ru_formula, 'Sub_County_raw', error, suffix='_SOURCE')
 
 		# add column for county internal name
 		ru_dict_old = prep.get_element(self.d['jurisdiction_path'],'dictionary')
@@ -478,8 +478,8 @@ class JurisdictionPrepper():
 		wr = wr.merge(ru_dict_new,how='left',left_on='County_raw',right_on='raw_identifier_value').rename(columns={'cdf_internal_name':'County_internal'})
 
 		# add required new columns
-		wr = mr.add_constant_column(wr,'ReportingUnitType',sub_ru_type)
-		wr = mr.add_constant_column(wr,'cdf_element','ReportingUnit')
+		wr = m.add_constant_column(wr,'ReportingUnitType',sub_ru_type)
+		wr = m.add_constant_column(wr,'cdf_element','ReportingUnit')
 		wr['Name'] = wr.apply(lambda x: f'{x["County_internal"]};{x["Sub_County_raw"]}',axis=1)
 		wr['raw_identifier_value'] = wr.apply(lambda x: f'{x["County_raw"]};{x["Sub_County_raw"]}',axis=1)
 
@@ -542,7 +542,7 @@ class JurisdictionPrepper():
 		for element in elements:
 			name_field = db.get_name_field(element)
 			# append <element>_raw
-			wr, error = mr.add_munged_column(
+			wr, error = m.add_munged_column(
 				wr, mu, element, error, mode=mu.cdf_elements.loc[element, 'source'],
 				inplace=False)
 			if error:
@@ -584,7 +584,7 @@ class JurisdictionPrepper():
 		for element in elements:
 			w[element] = prep.get_element(self.d['jurisdiction_path'],element)
 			name_field = db.get_name_field(element)
-			w[element] = mr.add_constant_column(w[element],'cdf_element',element)
+			w[element] = m.add_constant_column(w[element],'cdf_element',element)
 			w[element].rename(columns={name_field:'cdf_internal_name'},inplace=True)
 			w[element]['raw_identifier_value'] = w[element]['cdf_internal_name']
 

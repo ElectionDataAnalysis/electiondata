@@ -1,5 +1,5 @@
 from configparser import ConfigParser
-from election_anomaly import munge_routines as mr
+from election_anomaly import munge as m
 import pandas as pd
 from pandas.errors import ParserError, ParserWarning
 import numpy as np
@@ -178,7 +178,7 @@ def read_single_datafile(munger: jm.Munger, f_path: str, err: dict) -> [pd.DataF
 			e = f'Nothing read from datafile; file type {munger.file_type} may be inconsistent, or datafile may be empty.'
 			add_error(err,'format.txt',e)
 		else:
-			df = mr.generic_clean(df)
+			df = m.generic_clean(df)
 			err = jm.check_results_munger_compatibility(munger, df, err)
 		return [df, err]
 	except UnicodeDecodeError as ude:
@@ -200,7 +200,7 @@ def read_combine_results(mu: jm.Munger, results_file, project_root, err, aux_dat
 	if [k for k in err.keys() if err[k] != None]:
 		return pd.DataFrame(), err
 	else:
-		working = mr.cast_cols_as_int(working, mu.count_columns,mode='index')
+		working = m.cast_cols_as_int(working, mu.count_columns,mode='index')
 
 		# merge with auxiliary files (if any)
 		if aux_data_dir is not None:
@@ -209,7 +209,7 @@ def read_combine_results(mu: jm.Munger, results_file, project_root, err, aux_dat
 			for abbrev,r in mu.aux_meta.iterrows():
 				# cast foreign key columns of main results file as int if possible
 				foreign_key = r['foreign_key'].split(',')
-				working = mr.cast_cols_as_int(working,foreign_key)
+				working = m.cast_cols_as_int(working,foreign_key)
 				# rename columns
 				col_rename = {f'{c}':f'{abbrev}[{c}]' for c in aux_data[abbrev].columns}
 				# merge auxiliary info into <working>
@@ -253,13 +253,13 @@ def new_datafile(
 	count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
 
 	try:
-		raw = mr.munge_clean(raw, munger)
+		raw = m.munge_clean(raw, munger)
 	except:
 		err['datafile_error'] = ['Cleaning of datafile failed. Results not loaded to database.']
 		return err
 
 	try:
-		err = mr.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,err,ids=results_info)
+		err = m.raw_elements_to_cdf(session,project_root,juris,munger,raw,count_columns_by_name,err,ids=results_info)
 	except Exception as exc:
 		e = f'Unspecified error during munging: {exc}\nResults not loaded to database.'
 		add_error(err,'datafile_error',e)
