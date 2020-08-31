@@ -515,7 +515,7 @@ def append_id_to_dframe(
 def get_column_names(cursor, table: str) -> (list, dict):
     q = sql.SQL(
         """SELECT column_name, data_type FROM information_schema.columns 
-		WHERE table_schema = 'public' AND table_name = %s"""
+        WHERE table_schema = 'public' AND table_name = %s"""
     )
     cursor.execute(q, [table])
     results = cursor.fetchall()
@@ -558,101 +558,101 @@ def export_rollup_to_csv(
     if contest_type == "Candidate":
         q = sql.SQL(
             """ COPY
-			(SELECT
-			   'Candidate' contest_type,
-			   C."Name" "Contest",
-			   EDRUT."Txt" contest_district_type,
-			   Cand."BallotName" "Selection",
-			  IntermediateRU."Name" "ReportingUnit",
-			   CIT."Txt" "CountItemType",
-			   sum(vc."Count") "Count"
-		FROM "VoteCount" vc
-		LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
-		LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
-		LEFT JOIN "CandidateSelection" CS on CS."Id" = vc."Selection_Id"
-		LEFT JOIN "Candidate" Cand on CS."Candidate_Id" = Cand."Id"
-		-- sum over all children
-		LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
-		LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
-		-- roll up to the intermediate RUs
-		LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
-		LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
-		-- intermediate RUs must nest in top RU
-		LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
-		LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
-		LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
-		LEFT JOIN "CandidateContest" on C."Id" = "CandidateContest"."Id"
-		LEFT JOIN "Office" O on "CandidateContest"."Office_Id" = O."Id"
-		LEFT JOIN "ReportingUnit" ED on O."ElectionDistrict_Id" = ED."Id"
-		LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
-		WHERE C.contest_type = 'Candidate'
-			AND TopRU."Name" = %s  -- top RU
-			AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
-			AND d.{by} in %s  -- tuple of datafile short_names
-			{restrict}
-		GROUP BY
-			   C."Name",
-			   EDRUT."Txt",
-			   Cand."BallotName",
-			  IntermediateRU."Name",
-			   CIT."Txt"
-		ORDER BY
-			   C."Name",
-			   EDRUT."Txt",
-			   Cand."BallotName",
-			  IntermediateRU."Name",
-			   CIT."Txt")
-	TO %s DELIMITER %s CSV HEADER;
-		"""
+            (SELECT
+               'Candidate' contest_type,
+               C."Name" "Contest",
+               EDRUT."Txt" contest_district_type,
+               Cand."BallotName" "Selection",
+              IntermediateRU."Name" "ReportingUnit",
+               CIT."Txt" "CountItemType",
+               sum(vc."Count") "Count"
+        FROM "VoteCount" vc
+        LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
+        LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
+        LEFT JOIN "CandidateSelection" CS on CS."Id" = vc."Selection_Id"
+        LEFT JOIN "Candidate" Cand on CS."Candidate_Id" = Cand."Id"
+        -- sum over all children
+        LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
+        LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
+        -- roll up to the intermediate RUs
+        LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
+        LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
+        -- intermediate RUs must nest in top RU
+        LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
+        LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
+        LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
+        LEFT JOIN "CandidateContest" on C."Id" = "CandidateContest"."Id"
+        LEFT JOIN "Office" O on "CandidateContest"."Office_Id" = O."Id"
+        LEFT JOIN "ReportingUnit" ED on O."ElectionDistrict_Id" = ED."Id"
+        LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
+        WHERE C.contest_type = 'Candidate'
+            AND TopRU."Name" = %s  -- top RU
+            AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
+            AND d.{by} in %s  -- tuple of datafile short_names
+            {restrict}
+        GROUP BY
+               C."Name",
+               EDRUT."Txt",
+               Cand."BallotName",
+              IntermediateRU."Name",
+               CIT."Txt"
+        ORDER BY
+               C."Name",
+               EDRUT."Txt",
+               Cand."BallotName",
+              IntermediateRU."Name",
+               CIT."Txt")
+        TO %s DELIMITER %s CSV HEADER;
+        """
         ).format(by=sql.Identifier(by), restrict=sql.SQL(restrict))
 
     elif contest_type == "BallotMeasure":
         q = sql.SQL(
             """ COPY
-			(SELECT
-			   'Candidate' contest_type,
-			   C."Name" "Contest",
-			   EDRUT."Txt" contest_district_type,
-			   BMS."Name" "Selection",
-			  IntermediateRU."Name" "ReportingUnit",
-			   CIT."Txt" "CountItemType",
-			   sum(vc."Count") "Count"
-		FROM "VoteCount" vc
-		LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
-		LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
-    LEFT JOIN "BallotMeasureContest" BMC on vc."Contest_Id" = BMC."Id"
-    LEFT JOIN "BallotMeasureSelection" BMS on BMS."Id" = vc."Selection_Id"
-		-- sum over all children
-		LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
-		LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
-		-- roll up to the intermediate RUs
-		LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
-		LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
-		-- intermediate RUs must nest in top RU
-		LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
-		LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
-		LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
-    LEFT JOIN "ReportingUnit" ED on BMC."ElectionDistrict_Id" = ED."Id"
-		LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
-		WHERE C.contest_type = 'BallotMeasure'
-			AND TopRU."Name" = %s  -- top RU
-			AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
-			AND d.{by} in %s  -- tuple of datafile short_names
-			{restrict}
-		GROUP BY
-			   C."Name",
-			   EDRUT."Txt",
-			   BMS."Name",
-			  IntermediateRU."Name",
-			   CIT."Txt"
-		ORDER BY
-			   C."Name",
-			   EDRUT."Txt",
-			   BMS."Name",
-			  IntermediateRU."Name",
-			   CIT."Txt")
-	TO %s DELIMITER %s CSV HEADER;
-		"""
+            (SELECT
+               'Candidate' contest_type,
+               C."Name" "Contest",
+               EDRUT."Txt" contest_district_type,
+               BMS."Name" "Selection",
+              IntermediateRU."Name" "ReportingUnit",
+               CIT."Txt" "CountItemType",
+               sum(vc."Count") "Count"
+        FROM "VoteCount" vc
+        LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
+        LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
+        LEFT JOIN "BallotMeasureContest" BMC on vc."Contest_Id" = BMC."Id"
+        LEFT JOIN "BallotMeasureSelection" BMS on BMS."Id" = vc."Selection_Id"
+        -- sum over all children
+        LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
+        LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
+        -- roll up to the intermediate RUs
+        LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
+        LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
+        -- intermediate RUs must nest in top RU
+        LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
+        LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
+        LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
+        LEFT JOIN "ReportingUnit" ED on BMC."ElectionDistrict_Id" = ED."Id"
+        LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
+        WHERE C.contest_type = 'BallotMeasure'
+            AND TopRU."Name" = %s  -- top RU
+            AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
+            AND d.{by} in %s  -- tuple of datafile short_names
+            {restrict}
+        GROUP BY
+               C."Name",
+               EDRUT."Txt",
+               BMS."Name",
+              IntermediateRU."Name",
+               CIT."Txt"
+        ORDER BY
+               C."Name",
+               EDRUT."Txt",
+               BMS."Name",
+              IntermediateRU."Name",
+               CIT."Txt")
+        TO %s DELIMITER %s CSV HEADER;
+        """
         ).format(by=sql.Identifier(by), restrict=sql.SQL(restrict))
     else:
         err_str = f"Unrecognized contest_type: {contest_type}. No results exported"
@@ -672,12 +672,12 @@ def vote_type_list(cursor, datafile_list: list, by: str = "Id") -> (list, str):
 
     q = sql.SQL(
         """
-		SELECT distinct CIT."Txt"
-		FROM "VoteCount" VC
-		LEFT JOIN _datafile d on VC."_datafile_Id" = d."Id"
-		LEFT JOIN "CountItemType" CIT on VC."CountItemType_Id" = CIT."Id"
-		WHERE d.{by} in %s
-	"""
+        SELECT distinct CIT."Txt"
+        FROM "VoteCount" VC
+        LEFT JOIN _datafile d on VC."_datafile_Id" = d."Id"
+        LEFT JOIN "CountItemType" CIT on VC."CountItemType_Id" = CIT."Id"
+        WHERE d.{by} in %s
+    """
     ).format(by=sql.Identifier(by))
     try:
         cursor.execute(q, [tuple(datafile_list)])
@@ -794,17 +794,17 @@ def get_input_options(session, input, verbose):
                     SELECT  '{states}'
                 )
                 , unnested AS (
-                    SELECT	UNNEST(regexp_split_to_array(states, '\n')) AS states
-                    FROM	states
+                    SELECT    UNNEST(regexp_split_to_array(states, '\n')) AS states
+                    FROM    states
                 )
                 , ordered AS (
-                    SELECT	*, ROW_NUMBER() OVER() AS order_by
-                    FROM	unnested u
+                    SELECT    *, ROW_NUMBER() OVER() AS order_by
+                    FROM    unnested u
                 )
-                SELECT	states as parent,
+                SELECT    states as parent,
                         states AS name, 
                         CASE WHEN "Id" IS null THEN false ELSE true END AS type
-                FROM	ordered o
+                FROM    ordered o
                         LEFT JOIN "ReportingUnit" ru ON o.states = ru."Name"
                 ORDER BY order_by
             """
@@ -821,8 +821,8 @@ def get_input_options(session, input, verbose):
                 FROM    "BallotMeasureContest" bmc
                         JOIN "ReportingUnit" ru ON bmc."ElectionDistrict_Id" = ru."Id"
                         JOIN "ReportingUnitType" rut ON ru."ReportingUnitType_Id" = rut."Id"
-						JOIN "Contest" c on bmc."Id" = c."Id"
-				WHERE	contest_type = 'BallotMeasure'
+                        JOIN "Contest" c on bmc."Id" = c."Id"
+                WHERE    contest_type = 'BallotMeasure'
                 ORDER BY c."Name"
             """
             )
@@ -835,8 +835,8 @@ def get_input_options(session, input, verbose):
                         JOIN "Office" o ON cc."Office_Id" = o."Id"
                         JOIN "ReportingUnit" ru ON o."ElectionDistrict_Id" = ru."Id"
                         JOIN "ReportingUnitType" rut ON ru."ReportingUnitType_Id" = rut."Id"
-						JOIN "Contest" c on cc."Id" = c."Id"
-				WHERE	contest_type = 'Candidate'
+                        JOIN "Contest" c on cc."Id" = c."Id"
+                WHERE    contest_type = 'Candidate'
                 ORDER BY c."Name"
             """
             )
@@ -850,7 +850,7 @@ def get_input_options(session, input, verbose):
                         JOIN "Party" p ON cs."Party_Id" = p."Id"
                         JOIN "VoteCount" vc on cs."Id" = vc."Selection_Id"
                         JOIN "CandidateContest" cc ON vc."Contest_Id" = cc."Id"
-						JOIN "Contest" ct on cc."Id" = ct."Id"
+                        JOIN "Contest" ct on cc."Id" = ct."Id"
                 ORDER BY c."BallotName"
             """
             )
@@ -865,7 +865,7 @@ def get_input_options(session, input, verbose):
                         JOIN "Party" p ON cs."Party_Id" = p."Id"
                         JOIN "VoteCount" vc on cs."Id" = vc."Selection_Id"
                         JOIN "CandidateContest" cc ON vc."Contest_Id" = cc."Id"
-						JOIN "Contest" ct on cc."Id" = ct."Id"
+                        JOIN "Contest" ct on cc."Id" = ct."Id"
                 WHERE   c."BallotName" ILIKE '%{search_str}%'
             """
             )
@@ -1134,12 +1134,12 @@ def get_relevant_contests(session, filters):
 def get_jurisdiction_hierarchy(session, jurisdiction_id, subdivision_type_id):
     q = session.execute(
         f"""
-        SELECT	regexp_split_to_array("Name", ';') unit_array
-        FROM	"ComposingReportingUnitJoin" j
+        SELECT  regexp_split_to_array("Name", ';') unit_array
+        FROM    "ComposingReportingUnitJoin" j
                 JOIN "ReportingUnit" ru ON j."ChildReportingUnit_Id" = ru."Id"
-        WHERE	"ParentReportingUnit_Id" = {jurisdiction_id}
+        WHERE   "ParentReportingUnit_Id" = {jurisdiction_id}
                 AND "ReportingUnitType_Id" = {subdivision_type_id} 
-        LIMIT	1
+        LIMIT   1
     """
     ).fetchall()
 
@@ -1149,9 +1149,9 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id, subdivision_type_id):
         unit = ";".join(unit_portions[0 : i + 1])
         q = session.execute(
             f"""
-            SELECT	"ReportingUnitType_Id"
-            FROM	"ReportingUnit"
-            WHERE	"Name" = '{unit}' 
+            SELECT    "ReportingUnitType_Id"
+            FROM    "ReportingUnit"
+            WHERE    "Name" = '{unit}' 
         """
         ).fetchall()
         hierarchy.append(q[0][0])
@@ -1160,38 +1160,38 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id, subdivision_type_id):
 
 def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_id):
     q = f"""
-	SELECT	vc."Id" as "VoteCount_Id", "Count", "CountItemType_Id",
-			vc."ReportingUnit_Id", "Contest_Id", "Selection_Id",
-			vc."Election_Id", "_datafile_Id", IntermediateRU."Id" as "ParentReportingUnit_Id",
-			ChildRU."Name", ChildRU."ReportingUnitType_Id",
-			IntermediateRU."Name" as "ParentName", IntermediateRU."ReportingUnitType_Id" as "ParentReportingUnitType_Id",
-			CIT."Txt" as "CountItemType", C."Name" as "Contest",
-			Cand."BallotName" as "Selection", "ElectionDistrict_Id", Cand."Id" as "Candidate_Id", "contest_type",
-			EDRUT."Txt" as "contest_district_type"
-			FROM "VoteCount" vc
-			LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
-			LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
-			LEFT JOIN "CandidateSelection" CS on CS."Id" = vc."Selection_Id"
-			LEFT JOIN "Candidate" Cand on CS."Candidate_Id" = Cand."Id"
-			-- sum over all children
-			LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
-			LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
-			-- roll up to the intermediate RUs
-			LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
-			LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
-			-- intermediate RUs must nest in top RU
-			LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
-			LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
-			LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
-			LEFT JOIN "CandidateContest" on C."Id" = "CandidateContest"."Id"
-			LEFT JOIN "Office" O on "CandidateContest"."Office_Id" = O."Id"
-			LEFT JOIN "ReportingUnit" ED on O."ElectionDistrict_Id" = ED."Id"
-			LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
-			WHERE C.contest_type = 'Candidate'
-				AND TopRU."Id" = {top_ru_id}
-				AND IntermediateRU."ReportingUnitType_Id" = {subdivision_type_id}
-				AND vc."Election_Id" = {election_id}
-	"""
+    SELECT  vc."Id" as "VoteCount_Id", "Count", "CountItemType_Id",
+            vc."ReportingUnit_Id", "Contest_Id", "Selection_Id",
+            vc."Election_Id", "_datafile_Id", IntermediateRU."Id" as "ParentReportingUnit_Id",
+            ChildRU."Name", ChildRU."ReportingUnitType_Id",
+            IntermediateRU."Name" as "ParentName", IntermediateRU."ReportingUnitType_Id" as "ParentReportingUnitType_Id",
+            CIT."Txt" as "CountItemType", C."Name" as "Contest",
+            Cand."BallotName" as "Selection", "ElectionDistrict_Id", Cand."Id" as "Candidate_Id", "contest_type",
+            EDRUT."Txt" as "contest_district_type"
+            FROM "VoteCount" vc
+            LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
+            LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
+            LEFT JOIN "CandidateSelection" CS on CS."Id" = vc."Selection_Id"
+            LEFT JOIN "Candidate" Cand on CS."Candidate_Id" = Cand."Id"
+            -- sum over all children
+            LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
+            LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
+            -- roll up to the intermediate RUs
+            LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
+            LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
+            -- intermediate RUs must nest in top RU
+            LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
+            LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
+            LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
+            LEFT JOIN "CandidateContest" on C."Id" = "CandidateContest"."Id"
+            LEFT JOIN "Office" O on "CandidateContest"."Office_Id" = O."Id"
+            LEFT JOIN "ReportingUnit" ED on O."ElectionDistrict_Id" = ED."Id"
+            LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
+            WHERE C.contest_type = 'Candidate'
+                AND TopRU."Id" = {top_ru_id}
+                AND IntermediateRU."ReportingUnitType_Id" = {subdivision_type_id}
+                AND vc."Election_Id" = {election_id}
+    """
     result = session.execute(q)
     result_df = pd.DataFrame(result)
     result_df.columns = result.keys()
