@@ -932,7 +932,7 @@ class Analyzer:
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
-    def display_options(self, input, verbose=False, filters=None):
+    def display_options(self, input: str, verbose: bool=False, filters: list=None):
         if not verbose:
             results = db.get_input_options(self.session, input, False)
         else:
@@ -945,7 +945,7 @@ class Analyzer:
             return results
         return None
 
-    def top_counts_by_vote_type(self, election, rollup_unit, sub_unit):
+    def top_counts_by_vote_type(self, election: str, rollup_unit: str, sub_unit: str) -> str:
         d, error = ui.get_runtime_parameters(
             ["rollup_directory"], param_file="multi.par"
         )
@@ -966,7 +966,7 @@ class Analyzer:
             connection.close()
         return err_str
 
-    def top_counts(self, rollup_unit, sub_unit):
+    def top_counts(self, rollup_unit: str , sub_unit: str):
         d, error = ui.get_runtime_parameters(["rollup_directory"])
         if error:
             print("Parameter file missing requirements.")
@@ -993,16 +993,16 @@ class Analyzer:
 
     def scatter(
         self,
-        jurisdiction,
-        subdivision_type,
-        h_election,
-        h_category,
-        h_count,  # horizontal axis params
-        v_election,
-        v_category,
-        v_count,  # vertical axis params
-        fig_type=None,
-    ):
+        jurisdiction: str,
+        subdivision_type: str,
+        h_election: str,
+        h_category: str,
+        h_count: str,  # horizontal axis params
+        v_election: str,
+        v_category: str,
+        v_count: str,  # vertical axis params
+        fig_type: str = None,
+    ) -> list:
         """Used to create a scatter plot based on selected inputs. The fig_type parameter
         is used when the user wants to actually create the visualization; this uses plotly
         so any image extension that is supported by plotly is usable here. Currently supports
@@ -1056,7 +1056,13 @@ class Analyzer:
             v.plot("scatter", agg_results, fig_type, d["rollup_directory"])
         return agg_results
 
-    def bar(self, jurisdiction, contest_type=None, contest=None, fig_type=None):
+    def bar(
+        self,
+        jurisdiction: str, 
+        contest_type: str = None, 
+        contest: str = None, 
+        fig_type: str = None
+    ) -> list:
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
             ["rollup_directory", "sub_reporting_unit_type"], param_file="analyze.par"
@@ -1089,7 +1095,7 @@ class Analyzer:
                 v.plot("bar", agg_result, fig_type, d["rollup_directory"])
         return agg_results
 
-    def split_category_input(self, input_str):
+    def split_category_input(self, input_str: str):
         """Helper function. Takes an input from the front end that is the cartesian
         product of the CountItemType and {'Candidate', 'Contest'}. So something like:
         Total Candidates or Absentee Contests. Cleans this and returns
@@ -1101,7 +1107,7 @@ class Analyzer:
         selection_type = input_str[len(count_item_type) + 1 :]
         return count_item_type, selection_type
 
-    def export_outlier_data(self, jurisdiction, contest=None):
+    def export_outlier_data(self, jurisdiction: str, contest: str=None):
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
             ["rollup_directory", "sub_reporting_unit_type"], param_file="analyze.par"
@@ -1132,6 +1138,6 @@ class Analyzer:
         return agg_results
 
 
-def get_filename(path):
+def get_filename(path: str) -> str:
     head, tail = ntpath.split(path)
     return tail or ntpath.basename(head)
