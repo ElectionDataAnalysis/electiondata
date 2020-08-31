@@ -1,6 +1,0 @@
-[postgresql]
-host=<url for your postgresql server>
-port=<port for your postgresql server>
-dbname=<name of your election data database>
-user=<your user name>
-password=<your password>

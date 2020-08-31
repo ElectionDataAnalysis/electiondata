@@ -588,7 +588,12 @@ def config(
     return d
 
 
-def get_runtime_parameters(required_keys, optional_keys=None, param_file="multi.par"):
+def get_runtime_parameters(
+    required_keys: list, 
+    param_file: str,
+    header: str,
+    optional_keys: list = None, 
+):
     d = {}
     missing_required_params = {"missing": []}
 
@@ -600,7 +605,7 @@ def get_runtime_parameters(required_keys, optional_keys=None, param_file="multi.
 
     for k in required_keys:
         try:
-            d[k] = parser["election_anomaly"][k]
+            d[k] = parser[header][k]
         except KeyError:
             missing_required_params["missing"].append(k)
 
@@ -608,7 +613,7 @@ def get_runtime_parameters(required_keys, optional_keys=None, param_file="multi.
         optional_keys = []
     for k in optional_keys:
         try:
-            d[k] = parser["election_anomaly"][k]
+            d[k] = parser[header][k]
         except KeyError:
             d[k] = None
 
