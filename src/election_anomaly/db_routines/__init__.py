@@ -291,6 +291,7 @@ def name_to_id(session, element, name) -> int:
 	except Exception:
 		# if no record with name <name> was found
 		idx = None
+	connection.close()
 	return idx
 
 

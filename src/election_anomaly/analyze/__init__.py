@@ -153,6 +153,7 @@ def create_scatter(session, jurisdiction_id, subdivision_type_id,
 		if len(result) == 3: #need reporting unit, x, and y
 			to_keep.append(result)
 	results['counts'] = to_keep
+	connection.close()
 	return results
 
 
@@ -273,7 +274,7 @@ def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, e
 		results['margin'] = temp_df[temp_df['rank'] == 1].iloc[0]['ind_total']\
 			- temp_df[temp_df['rank'] != 1].iloc[0]['ind_total']
 		result_list.append(results)
-		
+	connection.close()	
 	return result_list
 
 
