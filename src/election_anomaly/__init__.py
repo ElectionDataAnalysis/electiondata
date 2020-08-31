@@ -32,16 +32,16 @@ optional_prep_pars = ['results_file', 'munger_name']
 analyze_pars = ['db_paramfile', 'db_name']
 
 # classes
-class MultiDataLoader():
+class DataLoader():
 	def __new__(self):
 		""" Checks if parameter file exists and is correct. If not, does
-		not create MultiDataLoader object. """
+		not create DataLoader object. """
 		try:
 			d, parameter_err = ui.get_runtime_parameters(
 				multi_data_loader_pars,param_file='multi.par')
 		except FileNotFoundError as e:
 			print("Parameter file multi.par not found. Ensure that it is located" \
-				  " in the current directory. MultiDataLoader object not created.")
+				  " in the current directory. DataLoader object not created.")
 			return None
 
 		if parameter_err:

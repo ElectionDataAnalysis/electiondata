@@ -6,7 +6,7 @@ From the root folder of your repository run `python3 setup.py install` (or if `p
 ## Parameter Files
 In the directory from which you will run the system -- which can be outside your local repository-- create the main parameter files you'll need:
 * `jurisdiction_prep.par` for the JurisdictionPrepper() class
-* `multi.par` for loading data (MultiDataLoader() class) and for pulling and analyzing results (the Analyzer()) class)
+* `multi.par` for loading data (DataLoader() class) and for pulling and analyzing results (the Analyzer()) class)
   
 There are templates in `templates/parameter_file_templates`. 
    
@@ -226,7 +226,7 @@ Some routines in the Analyzer class are useful even in the data-loading process,
 >>> 
 ```
 
-The MultiDataLoader class allows batch uploading of all data in a given directory. That directory should contain the files to be uploaded, as well as a `.par` file for each file to be uploaded. See `templates/parameter_file_templates/results.par`. You can use `make_par_files()` to create parameter files for multiple files when they share values of the following parameters:
+The DataLoader class allows batch uploading of all data in a given directory. That directory should contain the files to be uploaded, as well as a `.par` file for each file to be uploaded. See `templates/parameter_file_templates/results.par`. You can use `make_par_files()` to create parameter files for multiple files when they share values of the following parameters:
  * directory in which the files can be found
  * munger
  * jurisdiction
@@ -239,8 +239,8 @@ The `load_all()` method will read each `.par` file and make the corresponding up
 From a directory containing a `multi.par` parameter file, run
 ```
 import election_anomaly as ea
-mdl = ea.MultiDataLoader()
-err = mdl.load_all()
+dl = ea.DataLoader()
+err = dl.load_all()
 ```
 
 If something doesn't work, error messages will print. Even when the upload has worked, there may be warnings about lines not loaded. The system will ignore lines that cannot be munged. For example, the only contests whose results are uploaded will be those in the `CandidateContest.txt` or `BallotMeasureContest.txt` files that are correctly described in `dictionary.txt`.
