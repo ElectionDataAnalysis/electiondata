@@ -1,4 +1,4 @@
-from election_anomaly import database as db
+from election_anomaly import db_routines as dbr
 from election_anomaly import user_interface as ui
 from election_anomaly import juris_and_munger as jm
 import pandas as pd
