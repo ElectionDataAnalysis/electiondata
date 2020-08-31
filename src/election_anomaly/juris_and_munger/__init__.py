@@ -9,6 +9,7 @@ import re
 import numpy as np
 from pathlib import Path
 import csv
+import sys
 
 
 class Jurisdiction:
@@ -210,7 +211,7 @@ class Munger:
             self.field_list = self.field_list.union(r['fields'])
 
 
-def read_munger_info_from_files(dir_path,project_root=None,aux_data_dir=None):
+def read_munger_info_from_files(dir_path):
     """<aux_data_dir> is required if there are auxiliary data files"""
     # create auxiliary dataframe
     if 'aux_meta.txt' in os.listdir(dir_path):
@@ -232,30 +233,37 @@ def read_munger_info_from_files(dir_path,project_root=None,aux_data_dir=None):
         cdf_elements.loc[i,'fields'] = [f for t,f in text_field_list]
 
     # read formatting info
-    format_info = pd.read_csv(os.path.join(dir_path,'format.txt'),sep='\t',index_col='item',encoding='iso-8859-1')
+    required_keys = ['header_row_count','file_type']
+    optional_keys = ['field_name_row','field_names_if_no_field_name_row','count_columns','thousands_separator','encoding']
+    # TODO check that either field_name_row or 'field_names_if_no_field_name_row' is included, etc.
+    d, missing_required_params = ui.get_runtime_parameters(required_keys,optional_keys=optional_keys,param_file=os.path.join(dir_path,'format.par'))
+    if missing_required_params:
+        sys.exit(f'Munger format.par file is missing required parameters:\n{missing_required_params}')
+    elif 'field_name_row' not in d.keys() and 'field_names_if_no_field_name_row' not in d.keys():
+        sys.exit(f'Munger format.par file has neither field_name_row nor field_names_if_no_field_name_row.')
     try:
         # if field_name_row can be interpreted as an integer, use it
-        field_name_row = int(format_info.loc['field_name_row','value'])
+        field_name_row = int(d['field_name_row'])
         field_names_if_no_field_name_row = None
-    except:
+    except Exception:
         # otherwise assume no field_name_row
         field_name_row = None
-        field_names_if_no_field_name_row = format_info.loc['field_names_if_no_field_name_row','value'].split(',')
+        field_names_if_no_field_name_row = d['field_names_if_no_field_name_row'].split(',')
 
-    header_row_count = int(format_info.loc['header_row_count','value'])
-    if format_info.loc['count_columns','value'] == 'None' or (
-            type(format_info.loc['count_columns','value']) == float
-            and np.isnan(format_info.loc['count_columns','value'])
-    ) or format_info.loc['count_columns','value'] == '':
+    header_row_count = int(d['header_row_count'])
+    if 'count_columns' not in d.keys() or d['count_columns'] in ['','None']:
         count_columns = []
     else:
-        count_columns = [int(x) for x in format_info.loc['count_columns','value'].split(',')]
-    file_type = format_info.loc['file_type','value']
-    encoding = format_info.loc['encoding','value']
-    thousands_separator = format_info.loc['thousands_separator','value']
-    if thousands_separator in ['None','',np.nan]:
+        count_columns = [int(x) for x in d['count_columns'].split(',')]
+    file_type = d['file_type']
+    if 'encoding' in d.keys():
+        encoding = d['encoding']
+    else:
+        encoding = 'iso-8859-1'
+    if 'thousands_saparator' in d.keys() and d['thousands_separator'] not in ['','None']:
+        thousands_separator = d['thousands_separator']
+    else:
         thousands_separator = None
-    # TODO warn if encoding not recognized
 
     return [cdf_elements,header_row_count,field_name_row,field_names_if_no_field_name_row,count_columns,file_type,
             encoding,thousands_separator,aux_meta]
