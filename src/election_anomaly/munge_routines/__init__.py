@@ -1,4 +1,4 @@
-from election_anomaly import db_routines as dbr
+from election_anomaly import database as db
 from election_anomaly import user_interface as ui
 from election_anomaly import juris_and_munger as jm
 import pandas as pd
@@ -403,7 +403,7 @@ def add_contest_id(df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session:
     for c_type in ['BallotMeasure','Candidate']:
         # restrict df_contest to the contest_type <c_type> and get the <c_type>Contest_Id
         df_for_type[c_type] = df_contest[df_contest.contest_type == c_type]
-        none_or_unknown_id = dbr.name_to_id(session, f'{c_type}Contest', 'none or unknown')
+        none_or_unknown_id = db.name_to_id(session, f'{c_type}Contest', 'none or unknown')
         working, err = replace_raw_with_internal_ids(
             working, juris, df_for_type[c_type], f'{c_type}Contest', 'Name', err,
             drop_unmatched=False, unmatched_id=none_or_unknown_id, drop_all_ok=True
@@ -463,7 +463,7 @@ def add_selection_id(df: pd.DataFrame, engine, jurisdiction: jm.Jurisdiction, er
 
         # pull any existing Ids into a new CandidateSelection_Id column
         col_map = {c: c for c in ['Party_Id','Candidate_Id']}
-        c_df = dbr.append_id_to_dframe(engine,c_df,'CandidateSelection',col_map=col_map)
+        c_df = db.append_id_to_dframe(engine,c_df,'CandidateSelection',col_map=col_map)
 
         # find unmatched records
         c_df_unmatched = c_df[
@@ -473,11 +473,11 @@ def add_selection_id(df: pd.DataFrame, engine, jurisdiction: jm.Jurisdiction, er
 
         if not c_df_unmatched.empty:
             #  Load CandidateSelections to Selection table (for unmatched)
-            id_list = dbr.add_records_to_selection_table(engine,c_df_unmatched.shape[0])
+            id_list = db.add_records_to_selection_table(engine,c_df_unmatched.shape[0])
 
             # Load unmatched records into CandidateSelection table
             c_df_unmatched['Id'] = pd.Series(id_list, index=c_df_unmatched.index)
-            dbr.insert_to_cdf_db(engine, c_df_unmatched, 'CandidateSelection')
+            db.insert_to_cdf_db(engine, c_df_unmatched, 'CandidateSelection')
 
             # update CandidateSelection_Id column for previously unmatched, merging on Candidate_Id and Party_Id
             c_df.loc[c_df_unmatched.index,'CandidateSelection_Id'] = c_df_unmatched['Id']
@@ -532,7 +532,7 @@ def raw_elements_to_cdf(
         try:
             # capture id from db in new column and erase any now-redundant cols
             df = pd.read_sql_table(t,session.bind)
-            name_field = dbr.get_name_field(t)
+            name_field = db.get_name_field(t)
             # set drop_unmatched = True for fields necessary to BallotMeasure rows,
             #  drop_unmatched = False otherwise to prevent losing BallotMeasureContests for BM-inessential fields
             if t == 'ReportingUnit' or t == 'CountItemType':
@@ -554,7 +554,7 @@ def raw_elements_to_cdf(
                 working = enum_col_to_id_othertext(working, 'CountItemType', cit)
                 working = working.drop(['raw_identifier_value','cdf_element','CountItemType_raw'],axis=1)
             else:
-                    none_or_unknown_id = dbr.name_to_id(session,t,'none or unknown')
+                    none_or_unknown_id = db.name_to_id(session,t,'none or unknown')
                     working, err = replace_raw_with_internal_ids(
                         working, juris, df, t, name_field, err, drop_unmatched=drop,unmatched_id=none_or_unknown_id)
                     working.drop(t,axis=1,inplace=True)
@@ -577,7 +577,7 @@ def raw_elements_to_cdf(
     # Fill VoteCount
     vc_start = time.perf_counter()
     try:
-        e = dbr.insert_to_cdf_db(session.bind, working, 'VoteCount')
+        e = db.insert_to_cdf_db(session.bind, working, 'VoteCount')
         if e:
             ui.add_error(err,'database',e)
         session.commit()

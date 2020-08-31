@@ -1,8 +1,4 @@
 from configparser import ConfigParser
-
-from election_anomaly import db_routines
-from election_anomaly import db_routines as dbr
-from election_anomaly.db_routines import create_cdf_db as db_cdf
 from election_anomaly import munge_routines as mr
 import pandas as pd
 from pandas.errors import ParserError, ParserWarning

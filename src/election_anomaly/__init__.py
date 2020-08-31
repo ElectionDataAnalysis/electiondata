@@ -1,4 +1,4 @@
-from election_anomaly import db_routines as dbr
+from election_anomaly import database as db
 from election_anomaly import user_interface as ui
 from election_anomaly import munge_routines as mr
 from sqlalchemy.orm import sessionmaker
@@ -60,13 +60,13 @@ class MultiDataLoader():
 		self.tracker = dict()
 
 		# create db if it does not already exist
-		error = dbr.establish_connection(paramfile=self.d['db_paramfile'], db_name=self.d['db_name'])
+		error = db.establish_connection(paramfile=self.d['db_paramfile'], db_name=self.d['db_name'])
 		if error:
-			dbr.create_new_db(self.d['project_root'], self.d['db_paramfile'],  self.d['db_name'])
+			db.create_new_db(self.d['project_root'], self.d['db_paramfile'],  self.d['db_name'])
 
 		# connect to db
 		try:
-			self.engine = dbr.sql_alchemy_connect(paramfile=self.d['db_paramfile'],  db_name=self.d['db_name'])
+			self.engine = db.sql_alchemy_connect(paramfile=self.d['db_paramfile'],  db_name=self.d['db_name'])
 			Session = sessionmaker(bind=self.engine)
 			self.session = Session()
 		except Exception as e:
@@ -228,8 +228,8 @@ class SingleDataLoader():
 
 	def track_results(self):
 		filename = self.d['results_file']
-		top_reporting_unit_id = dbr.name_to_id(self.session,'ReportingUnit', self.d['top_reporting_unit'])
-		election_id = dbr.name_to_id(self.session,'Election',self.d['election'])
+		top_reporting_unit_id = db.name_to_id(self.session,'ReportingUnit', self.d['top_reporting_unit'])
+		election_id = db.name_to_id(self.session,'Election',self.d['election'])
 
 		data = pd.DataFrame(
 			[[self.d['results_short_name'],filename,
@@ -238,12 +238,12 @@ class SingleDataLoader():
 			columns=['short_name', 'file_name',
 					 'download_date', 'source',
 					 'note', 'ReportingUnit_Id', 'Election_Id','created_at'])
-		e = dbr.insert_to_cdf_db(self.session.bind, data, '_datafile')
+		e = db.insert_to_cdf_db(self.session.bind, data, '_datafile')
 		if e:
 			return [0, 0], e
 		else:
 			col_map = {'short_name':'short_name'}
-			datafile_id = dbr.append_id_to_dframe(
+			datafile_id = db.append_id_to_dframe(
 				self.session.bind,data,'_datafile',col_map=col_map
 			).iloc[0]['_datafile_Id']
 		return [datafile_id, election_id], e
@@ -540,7 +540,7 @@ class JurisdictionPrepper():
 		wr, mu, error = ui.read_results(kwargs,error)
 
 		for element in elements:
-			name_field = dbr.get_name_field(element)
+			name_field = db.get_name_field(element)
 			# append <element>_raw
 			wr, error = mr.add_munged_column(
 				wr, mu, element, error, mode=mu.cdf_elements.loc[element, 'source'],
@@ -583,7 +583,7 @@ class JurisdictionPrepper():
 			old.drop()
 		for element in elements:
 			w[element] = prep.get_element(self.d['jurisdiction_path'],element)
-			name_field = dbr.get_name_field(element)
+			name_field = db.get_name_field(element)
 			w[element] = mr.add_constant_column(w[element],'cdf_element',element)
 			w[element].rename(columns={name_field:'cdf_internal_name'},inplace=True)
 			w[element]['raw_identifier_value'] = w[element]['cdf_internal_name']
@@ -650,7 +650,7 @@ class Analyzer():
             'db_name', 'results_file'])
         self.d['results_file_short'] = get_filename(self.d['results_file'])
 
-        eng = dbr.sql_alchemy_connect(paramfile=self.d['db_paramfile'],
+        eng = db.sql_alchemy_connect(paramfile=self.d['db_paramfile'],
             db_name=self.d['db_name'])
         Session = sessionmaker(bind=eng)
         self.session = Session()
@@ -658,13 +658,13 @@ class Analyzer():
 
     def display_options(self, input, verbose=False, filters=None):
         if not verbose:
-            results = dbr.get_input_options(self.session, input, False)
+            results = db.get_input_options(self.session, input, False)
         else:
             if not filters:
-                df = pd.DataFrame(dbr.get_input_options(self.session, input, True))
-                results = dbr.package_display_results(df)
+                df = pd.DataFrame(db.get_input_options(self.session, input, True))
+                results = db.package_display_results(df)
             else:
-                results = dbr.get_filtered_input_options(self.session, input, filters)
+                results = db.get_filtered_input_options(self.session, input, filters)
         if results:
             return results
         return None
@@ -678,9 +678,9 @@ class Analyzer():
         else:
             connection = self.session.bind.raw_connection()
             cursor = connection.cursor()
-            rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
-            sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
-            election_id = dbr.name_to_id(self.session, 'Election', election)
+            rollup_unit_id = db.name_to_id(self.session, 'ReportingUnit', rollup_unit)
+            sub_unit_id = db.name_to_id(self.session, 'ReportingUnitType', sub_unit)
+            election_id = db.name_to_id(self.session, 'Election', election)
             err_str = a.create_rollup(cursor, d['rollup_directory'], rollup_unit_id,
                 sub_unit_id, election_id)
             connection.close()
@@ -694,9 +694,9 @@ class Analyzer():
             print("Data not created.")
             return
         else:
-            rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
-            sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
-            results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
+            rollup_unit_id = db.name_to_id(self.session, 'ReportingUnit', rollup_unit)
+            sub_unit_id = db.name_to_id(self.session, 'ReportingUnitType', sub_unit)
+            results_info = db.get_datafile_info(self.session, self.d['results_file_short'])
             rollup = a.create_rollup(self.session, d['rollup_directory'], top_ru_id=rollup_unit_id,
                 sub_rutype_id=sub_unit_id, sub_rutype_othertext='', datafile_id_list=results_info[0], 
                 election_id=results_info[1], by_vote_type=False)
@@ -718,25 +718,25 @@ class Analyzer():
             print(error)
             print("Data not created.")
             return
-        jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', jurisdiction)
-        subdivision_type_id = dbr.name_to_id(self.session, 'ReportingUnitType', subdivision_type)
-        h_election_id = dbr.name_to_id(self.session, 'Election', h_election)
-        v_election_id = dbr.name_to_id(self.session, 'Election', v_election)
+        jurisdiction_id = db.name_to_id(self.session, 'ReportingUnit', jurisdiction)
+        subdivision_type_id = db.name_to_id(self.session, 'ReportingUnitType', subdivision_type)
+        h_election_id = db.name_to_id(self.session, 'Election', h_election)
+        v_election_id = db.name_to_id(self.session, 'Election', v_election)
         # *_type is either candidates or contests
         h_count_item_type, h_type = self.split_category_input(h_category)
         v_count_item_type, v_type = self.split_category_input(v_category)
         if h_count == 'All Candidates' or h_count == 'All Contests':
             h_count_id = -1
         elif h_type == 'candidates':
-            h_count_id = dbr.name_to_id(self.session, 'Candidate', h_count) 
+            h_count_id = db.name_to_id(self.session, 'Candidate', h_count) 
         elif h_type == 'contests':
-            h_count_id = dbr.name_to_id(self.session, 'CandidateContest', h_count) 
+            h_count_id = db.name_to_id(self.session, 'CandidateContest', h_count) 
         if v_count == 'All Candidates' or v_count == 'All Contests':
             v_count_id = -1
         elif v_type == 'candidates':
-            v_count_id = dbr.name_to_id(self.session, 'Candidate', v_count) 
+            v_count_id = db.name_to_id(self.session, 'Candidate', v_count) 
         elif v_type == 'contests':
-            v_count_id = dbr.name_to_id(self.session, 'CandidateContest', v_count) 
+            v_count_id = db.name_to_id(self.session, 'CandidateContest', v_count) 
         h_count_item_type, h_type = self.split_category_input(h_category)
         v_count_item_type, v_type = self.split_category_input(v_category)
         agg_results = a.create_scatter(self.session, jurisdiction_id, subdivision_type_id, 
@@ -756,11 +756,11 @@ class Analyzer():
             print(error)
             print("Data not created.")
             return
-        jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', jurisdiction)
-        most_granular_id = dbr.name_to_id(self.session, 'ReportingUnitType', 
+        jurisdiction_id = db.name_to_id(self.session, 'ReportingUnit', jurisdiction)
+        most_granular_id = db.name_to_id(self.session, 'ReportingUnitType', 
             d['sub_reporting_unit_type'])
-        hierarchy = dbr.get_jurisdiction_hierarchy(self.session, jurisdiction_id, most_granular_id)
-        results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
+        hierarchy = db.get_jurisdiction_hierarchy(self.session, jurisdiction_id, most_granular_id)
+        results_info = db.get_datafile_info(self.session, self.d['results_file_short'])
 		# bar chart always at one level below top reporting unit
         agg_results = a.create_bar(self.session, jurisdiction_id, hierarchy[1], \
             contest_type, contest, results_info[1], False)
@@ -790,11 +790,11 @@ class Analyzer():
             print(error)
             print("Data not created.")
             return
-        jurisdiction_id = dbr.name_to_id(self.session, 'ReportingUnit', jurisdiction)
-        most_granular_id = dbr.name_to_id(self.session, 'ReportingUnitType', 
+        jurisdiction_id = db.name_to_id(self.session, 'ReportingUnit', jurisdiction)
+        most_granular_id = db.name_to_id(self.session, 'ReportingUnitType', 
             d['sub_reporting_unit_type'])
-        hierarchy = dbr.get_jurisdiction_hierarchy(self.session, jurisdiction_id, most_granular_id)
-        results_info = dbr.get_datafile_info(self.session, self.d['results_file_short'])
+        hierarchy = db.get_jurisdiction_hierarchy(self.session, jurisdiction_id, most_granular_id)
+        results_info = db.get_datafile_info(self.session, self.d['results_file_short'])
 		# bar chart always at one level below top reporting unit
         agg_results = a.create_bar(self.session, jurisdiction_id, hierarchy[1], \
             None, contest, results_info[1], True)

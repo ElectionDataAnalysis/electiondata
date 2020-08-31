@@ -9,7 +9,7 @@ from sqlalchemy import Date, TIMESTAMP
 from psycopg2 import sql
 import os
 import pandas as pd
-from election_anomaly import db_routines as dbr
+from election_anomaly import database as db
 import datetime
 
 
@@ -57,7 +57,7 @@ def create_common_data_format_tables(session,dirpath='CDF_schema_def_info/'):
         elif element == 'CandidateSelection':
             create_indices = [['Candidate_Id', 'Party_Id']]
         else:
-            # create_indices = [[dbr.get_name_field(element)]]
+            # create_indices = [[db.get_name_field(element)]]
             create_indices = None
             # TODO fix for efficiency -- note <contest_type>Contest, <contest_type>Selection may need special treatment
 
@@ -230,7 +230,7 @@ def load_bms(engine, bms_list: list):
     bms_df = pd.DataFrame([[s] for s in bms_list], columns=['Name'])
 
     # Create 3 entries in Selection table
-    id_list = dbr.add_records_to_selection_table(engine, len(bms_list))
+    id_list = db.add_records_to_selection_table(engine, len(bms_list))
 
     # Create entries in BallotMeasureSelection table
     bms_df['Id'] = pd.Series(id_list,index=bms_df.index)

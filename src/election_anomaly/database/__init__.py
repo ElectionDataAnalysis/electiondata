@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# db_routines/__init__.py
+# database/__init__.py
 
 import psycopg2
 import sqlalchemy
@@ -17,7 +17,7 @@ from configparser import MissingSectionHeaderError
 import pandas as pd
 from election_anomaly import munge_routines as mr
 import re
-from election_anomaly.db_routines import create_cdf_db as db_cdf
+from election_anomaly.database import create_cdf_db as db_cdf
 import os
 import numpy as np
 from sqlalchemy import MetaData, Table, Column, Integer, Float

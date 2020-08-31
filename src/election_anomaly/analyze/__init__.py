@@ -10,7 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 from pandas.api.types import is_numeric_dtype
-from election_anomaly import db_routines as dbr
+from election_anomaly import database as db
 import scipy.spatial.distance as dist
 from scipy import stats
 import math
@@ -46,14 +46,14 @@ def create_rollup(
 	"""
 
 	if not datafile_list:
-		datafile_list, e = dbr.data_file_list(cursor, [election_id], by='Id')
+		datafile_list, e = db.data_file_list(cursor, [election_id], by='Id')
 		if e:
 			return e
 		by = 'Id'
 		if len(datafile_list) == 0:
 			return f'No datafiles found for Election_Id {election_id}'
 	# set exclude_total
-	vote_type_list, err_str = dbr.vote_type_list(cursor, datafile_list, by=by)
+	vote_type_list, err_str = db.vote_type_list(cursor, datafile_list, by=by)
 	if err_str:
 		return err_str
 	elif len(vote_type_list) == 0:
@@ -65,9 +65,9 @@ def create_rollup(
 		exclude_total = False
 
 	# get names from ids
-	top_ru = dbr.name_from_id(cursor,'ReportingUnit',top_ru_id)#.replace(" ","-")
-	election = dbr.name_from_id(cursor,'Election',election_id)#.replace(" ","-")
-	sub_rutype = dbr.name_from_id(cursor, 'ReportingUnitType', sub_rutype_id)
+	top_ru = db.name_from_id(cursor,'ReportingUnit',top_ru_id)#.replace(" ","-")
+	election = db.name_from_id(cursor,'Election',election_id)#.replace(" ","-")
+	sub_rutype = db.name_from_id(cursor, 'ReportingUnitType', sub_rutype_id)
 
 	# create path to export directory
 	leaf_dir = os.path.join(target_dir, election, top_ru, f'by_{sub_rutype}')
@@ -89,7 +89,7 @@ def create_rollup(
 		while os.path.isfile(os.path.join(leaf_dir, rollup_file)):
 			rollup_file = input(f'There is already a file called {rollup_file}. Pick another name.\n')
 
-		err = dbr.export_rollup_to_csv(
+		err = db.export_rollup_to_csv(
 			cursor, top_ru, sub_rutype, contest_type, datafile_list,
 			os.path.join(leaf_dir, rollup_file), by=by, exclude_total=exclude_total
 		)
@@ -126,24 +126,24 @@ def create_scatter(session, jurisdiction_id, subdivision_type_id,
 	if h_count_id == -1:
 		x = f'All {h_type}'
 	elif h_type == 'candidates':
-		x = dbr.name_from_id(cursor, 'Candidate', h_count_id) 
+		x = db.name_from_id(cursor, 'Candidate', h_count_id) 
 	elif h_type == 'contests':
-		x = dbr.name_from_id(cursor, 'CandidateContest', h_count_id) 
+		x = db.name_from_id(cursor, 'CandidateContest', h_count_id) 
 	if v_count_id == -1:
 		y = f'All {v_type}'
 	elif v_type == 'candidates':
-		y = dbr.name_from_id(cursor, 'Candidate', v_count_id) 
+		y = db.name_from_id(cursor, 'Candidate', v_count_id) 
 	elif v_type == 'contests':
-		y = dbr.name_from_id(cursor, 'CandidateContest', v_count_id) 
-	jurisdiction = dbr.name_from_id(cursor, 'ReportingUnit', jurisdiction_id)
+		y = db.name_from_id(cursor, 'CandidateContest', v_count_id) 
+	jurisdiction = db.name_from_id(cursor, 'ReportingUnit', jurisdiction_id)
 	pivot_df = pd.pivot_table(unsummed, values='Count',
 		index=['Name'], columns='Selection').reset_index()
 	
 	# package up results
 	results = package_results(pivot_df, jurisdiction, x, y)
-	results["x-election"] = dbr.name_from_id(cursor, 'Election', h_election_id)
-	results["y-election"] = dbr.name_from_id(cursor, 'Election', v_election_id)
-	results["subdivision_type"] = dbr.name_from_id(cursor, 'ReportingUnitType', subdivision_type_id)
+	results["x-election"] = db.name_from_id(cursor, 'Election', h_election_id)
+	results["y-election"] = db.name_from_id(cursor, 'Election', v_election_id)
+	results["subdivision_type"] = db.name_from_id(cursor, 'ReportingUnitType', subdivision_type_id)
 	results["x-count_item_type"] = h_category
 	results["y-count_item_type"] = v_category
 
@@ -178,7 +178,7 @@ def package_results(data, jurisdiction, x, y, restrict=None):
 def get_data_for_scatter(session, jurisdiction_id, subdivision_type_id, 
 	election_id, count_item_type, filter_id, count_type):
 	"""Since this could be data across 2 elections, grab data one election at a time"""
-	unsummed = dbr.get_candidate_votecounts(session, election_id, jurisdiction_id, subdivision_type_id)
+	unsummed = db.get_candidate_votecounts(session, election_id, jurisdiction_id, subdivision_type_id)
 	#  limit to relevant data
 	if count_type == 'candidates':
 		filter_column = 'Candidate_Id'
@@ -199,7 +199,7 @@ def get_data_for_scatter(session, jurisdiction_id, subdivision_type_id,
 		unsummed['Candidate_Id'] = filter_id
 
 	if count_type == 'contests' and filter_id != -1:
-		selection = dbr.name_from_id(session, 'CandidateContest', filter_id)
+		selection = db.name_from_id(session, 'CandidateContest', filter_id)
 		unsummed['Selection'] = selection
 	elif count_type == 'contests' and filter_id == -1:
 		unsummed['Selection'] = 'All contests'
@@ -216,7 +216,7 @@ def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, e
 	connection = session.bind.raw_connection()
 	cursor = connection.cursor()
 
-	unsummed = dbr.get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_id)
+	unsummed = db.get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_id)
 
 	if contest_type:
 		unsummed = unsummed[unsummed['contest_district_type'] == contest_type]
@@ -254,9 +254,9 @@ def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, e
 			'max_margins_pct': 'margins_pct'}, inplace=True)
 
 		candidates = temp_df['Candidate_Id'].unique()
-		x = dbr.name_from_id(cursor, 'Candidate', int(candidates[0]))
-		y = dbr.name_from_id(cursor, 'Candidate', int(candidates[1])) 
-		jurisdiction = dbr.name_from_id(cursor, 'ReportingUnit', top_ru_id)
+		x = db.name_from_id(cursor, 'Candidate', int(candidates[0]))
+		y = db.name_from_id(cursor, 'Candidate', int(candidates[1])) 
+		jurisdiction = db.name_from_id(cursor, 'ReportingUnit', top_ru_id)
 
 		pivot_df = pd.pivot_table(temp_df, values='Count',
 			index=['Name'], columns='Selection').reset_index()
@@ -265,9 +265,9 @@ def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, e
 			.sort_values('score', ascending=False).reset_index()
 
 		results = package_results(pivot_df, jurisdiction, x, y, restrict=8)
-		results["election"] = dbr.name_from_id(cursor, 'Election', election_id)
-		results["contest"] = dbr.name_from_id(cursor, 'Contest', int(temp_df.iloc[0]['Contest_Id']))
-		results["subdivision_type"] = dbr.name_from_id(cursor, 'ReportingUnitType', \
+		results["election"] = db.name_from_id(cursor, 'Election', election_id)
+		results["contest"] = db.name_from_id(cursor, 'Contest', int(temp_df.iloc[0]['Contest_Id']))
+		results["subdivision_type"] = db.name_from_id(cursor, 'ReportingUnitType', \
 				int(temp_df.iloc[0]['ReportingUnitType_Id']))
 		results["count_item_type"] = temp_df.iloc[0]['CountItemType']
 		results["votes_at_stake"] = temp_df.iloc[0]['votes_at_stake']

@@ -4,7 +4,6 @@ import os
 from election_anomaly import munge_routines as mr
 from election_anomaly import user_interface as ui
 from election_anomaly import juris_and_munger as jm
-from election_anomaly import db_routines as db
 from pathlib import Path
 
 
