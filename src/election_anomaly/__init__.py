@@ -1050,7 +1050,7 @@ class Analyzer:
         hierarchy = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id, most_granular_id
         )
-        results_info = db.get_datafile_info(self.session, self.d["results_file_short"])
+        election_id = db.most_recent_election(self.session, jurisdiction_id)
         # bar chart always at one level below top reporting unit
         agg_results = a.create_bar(
             self.session,
@@ -1058,7 +1058,7 @@ class Analyzer:
             hierarchy[1],
             contest_type,
             contest,
-            results_info[1],
+            election_id,
             False,
         )
         if fig_type:
