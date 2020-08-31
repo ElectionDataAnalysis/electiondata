@@ -1044,9 +1044,9 @@ class Analyzer:
             print("Data not created.")
             return
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        most_granular_id = db.name_to_id(
-            self.session, "ReportingUnitType", d["sub_reporting_unit_type"]
-        )
+        # for now, bar charts can only handle jurisdictions where county is one level
+        # down from the jurisdiction
+        most_granular_id = db.name_to_id( self.session, "ReportingUnitType", "county")
         hierarchy = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id, most_granular_id
         )
