@@ -185,3 +185,192 @@ North Carolina;US Congress;Senate	1	North Carolina;US Congress;Senate
 North Carolina; Bertie County;Board of Commissioners District 3	1	North Carolina; Bertie County;Board of Commissioners District 3	
 North Carolina;District Court Judge District 22B Seat 2	1	North Carolina;District Court Judge District 22B Seat 2	
 North Carolina;General Assembly House of Representatives District 1	1	North Carolina;General Assembly House of Representatives District 1	
+NC House District 1	1	NC House District 1	
+NC House District 2	1	NC House District 2	
+NC House District 3	1	NC House District 3	
+NC House District 4	1	NC House District 4	
+NC House District 5	1	NC House District 5	
+NC House District 6	1	NC House District 6	
+NC House District 7	1	NC House District 7	
+NC House District 8	1	NC House District 8	
+NC House District 9	1	NC House District 9	
+NC House District 10	1	NC House District 10	
+NC House District 11	1	NC House District 11	
+NC House District 12	1	NC House District 12	
+NC House District 13	1	NC House District 13	
+NC House District 14	1	NC House District 14	
+NC House District 15	1	NC House District 15	
+NC House District 16	1	NC House District 16	
+NC House District 17	1	NC House District 17	
+NC House District 18	1	NC House District 18	
+NC House District 19	1	NC House District 19	
+NC House District 20	1	NC House District 20	
+NC House District 21	1	NC House District 21	
+NC House District 22	1	NC House District 22	
+NC House District 23	1	NC House District 23	
+NC House District 24	1	NC House District 24	
+NC House District 25	1	NC House District 25	
+NC House District 26	1	NC House District 26	
+NC House District 27	1	NC House District 27	
+NC House District 28	1	NC House District 28	
+NC House District 29	1	NC House District 29	
+NC House District 30	1	NC House District 30	
+NC House District 31	1	NC House District 31	
+NC House District 32	1	NC House District 32	
+NC House District 33	1	NC House District 33	
+NC House District 34	1	NC House District 34	
+NC House District 35	1	NC House District 35	
+NC House District 36	1	NC House District 36	
+NC House District 37	1	NC House District 37	
+NC House District 38	1	NC House District 38	
+NC House District 39	1	NC House District 39	
+NC House District 40	1	NC House District 40	
+NC House District 41	1	NC House District 41	
+NC House District 42	1	NC House District 42	
+NC House District 43	1	NC House District 43	
+NC House District 44	1	NC House District 44	
+NC House District 45	1	NC House District 45	
+NC House District 46	1	NC House District 46	
+NC House District 47	1	NC House District 47	
+NC House District 48	1	NC House District 48	
+NC House District 49	1	NC House District 49	
+NC House District 50	1	NC House District 50	
+NC House District 51	1	NC House District 51	
+NC House District 52	1	NC House District 52	
+NC House District 53	1	NC House District 53	
+NC House District 54	1	NC House District 54	
+NC House District 55	1	NC House District 55	
+NC House District 56	1	NC House District 56	
+NC House District 57	1	NC House District 57	
+NC House District 58	1	NC House District 58	
+NC House District 59	1	NC House District 59	
+NC House District 60	1	NC House District 60	
+NC House District 61	1	NC House District 61	
+NC House District 62	1	NC House District 62	
+NC House District 63	1	NC House District 63	
+NC House District 64	1	NC House District 64	
+NC House District 65	1	NC House District 65	
+NC House District 66	1	NC House District 66	
+NC House District 67	1	NC House District 67	
+NC House District 68	1	NC House District 68	
+NC House District 69	1	NC House District 69	
+NC House District 70	1	NC House District 70	
+NC House District 71	1	NC House District 71	
+NC House District 72	1	NC House District 72	
+NC House District 73	1	NC House District 73	
+NC House District 74	1	NC House District 74	
+NC House District 75	1	NC House District 75	
+NC House District 76	1	NC House District 76	
+NC House District 77	1	NC House District 77	
+NC House District 78	1	NC House District 78	
+NC House District 79	1	NC House District 79	
+NC House District 80	1	NC House District 80	
+NC House District 81	1	NC House District 81	
+NC House District 82	1	NC House District 82	
+NC House District 83	1	NC House District 83	
+NC House District 84	1	NC House District 84	
+NC House District 85	1	NC House District 85	
+NC House District 86	1	NC House District 86	
+NC House District 87	1	NC House District 87	
+NC House District 88	1	NC House District 88	
+NC House District 89	1	NC House District 89	
+NC House District 90	1	NC House District 90	
+NC House District 91	1	NC House District 91	
+NC House District 92	1	NC House District 92	
+NC House District 93	1	NC House District 93	
+NC House District 94	1	NC House District 94	
+NC House District 95	1	NC House District 95	
+NC House District 96	1	NC House District 96	
+NC House District 97	1	NC House District 97	
+NC House District 98	1	NC House District 98	
+NC House District 99	1	NC House District 99	
+NC House District 100	1	NC House District 100	
+NC House District 101	1	NC House District 101	
+NC House District 102	1	NC House District 102	
+NC House District 103	1	NC House District 103	
+NC House District 104	1	NC House District 104	
+NC House District 105	1	NC House District 105	
+NC House District 106	1	NC House District 106	
+NC House District 107	1	NC House District 107	
+NC House District 108	1	NC House District 108	
+NC House District 109	1	NC House District 109	
+NC House District 110	1	NC House District 110	
+NC House District 111	1	NC House District 111	
+NC House District 112	1	NC House District 112	
+NC House District 113	1	NC House District 113	
+NC House District 114	1	NC House District 114	
+NC House District 115	1	NC House District 115	
+NC House District 116	1	NC House District 116	
+NC House District 117	1	NC House District 117	
+NC House District 118	1	NC House District 118	
+NC House District 119	1	NC House District 119	
+NC House District 120	1	NC House District 120	
+NC Senate District 1	1	NC Senate District 1	
+NC Senate District 2	1	NC Senate District 2	
+NC Senate District 3	1	NC Senate District 3	
+NC Senate District 4	1	NC Senate District 4	
+NC Senate District 5	1	NC Senate District 5	
+NC Senate District 6	1	NC Senate District 6	
+NC Senate District 7	1	NC Senate District 7	
+NC Senate District 8	1	NC Senate District 8	
+NC Senate District 9	1	NC Senate District 9	
+NC Senate District 10	1	NC Senate District 10	
+NC Senate District 11	1	NC Senate District 11	
+NC Senate District 12	1	NC Senate District 12	
+NC Senate District 13	1	NC Senate District 13	
+NC Senate District 14	1	NC Senate District 14	
+NC Senate District 15	1	NC Senate District 15	
+NC Senate District 16	1	NC Senate District 16	
+NC Senate District 17	1	NC Senate District 17	
+NC Senate District 18	1	NC Senate District 18	
+NC Senate District 19	1	NC Senate District 19	
+NC Senate District 20	1	NC Senate District 20	
+NC Senate District 21	1	NC Senate District 21	
+NC Senate District 22	1	NC Senate District 22	
+NC Senate District 23	1	NC Senate District 23	
+NC Senate District 24	1	NC Senate District 24	
+NC Senate District 25	1	NC Senate District 25	
+NC Senate District 26	1	NC Senate District 26	
+NC Senate District 27	1	NC Senate District 27	
+NC Senate District 28	1	NC Senate District 28	
+NC Senate District 29	1	NC Senate District 29	
+NC Senate District 30	1	NC Senate District 30	
+NC Senate District 31	1	NC Senate District 31	
+NC Senate District 32	1	NC Senate District 32	
+NC Senate District 33	1	NC Senate District 33	
+NC Senate District 34	1	NC Senate District 34	
+NC Senate District 35	1	NC Senate District 35	
+NC Senate District 36	1	NC Senate District 36	
+NC Senate District 37	1	NC Senate District 37	
+NC Senate District 38	1	NC Senate District 38	
+NC Senate District 39	1	NC Senate District 39	
+NC Senate District 40	1	NC Senate District 40	
+NC Senate District 41	1	NC Senate District 41	
+NC Senate District 42	1	NC Senate District 42	
+NC Senate District 43	1	NC Senate District 43	
+NC Senate District 44	1	NC Senate District 44	
+NC Senate District 45	1	NC Senate District 45	
+NC Senate District 46	1	NC Senate District 46	
+NC Senate District 47	1	NC Senate District 47	
+NC Senate District 48	1	NC Senate District 48	
+NC Senate District 49	1	NC Senate District 49	
+NC Senate District 50	1	NC Senate District 50	
+US House NC District 1	1	US House NC District 1	
+US House NC District 2	1	US House NC District 2	
+US House NC District 3	1	US House NC District 3	
+US House NC District 4	1	US House NC District 4	
+US House NC District 5	1	US House NC District 5	
+US House NC District 6	1	US House NC District 6	
+US House NC District 7	1	US House NC District 7	
+US House NC District 8	1	US House NC District 8	
+US House NC District 9	1	US House NC District 9	
+US House NC District 10	1	US House NC District 10	
+US House NC District 11	1	US House NC District 11	
+US House NC District 12	1	US House NC District 12	
+US House NC District 13	1	US House NC District 13	
+US President (NC)	1	US President (NC)	
+NC Governor	1	NC Governor	
+US Senate NC	1	US Senate NC	
+NC Attorney General	1	NC Attorney General	
+NC Lieutenant Governor	1	NC Lieutenant Governor	
+NC Treasurer	1	NC Treasurer	

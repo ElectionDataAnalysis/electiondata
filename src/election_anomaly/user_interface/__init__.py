@@ -408,34 +408,34 @@ def read_single_datafile(
         else:
             kwargs["header"] = list(range(munger.header_row_count))
 
-        if munger.file_type in ["txt", "csv"]:
-            kwargs["encoding"] = munger.encoding
-            kwargs["quoting"] = csv.QUOTE_MINIMAL
-            kwargs["index_col"] = None
-            if munger.file_type == "txt":
-                kwargs["sep"] = "\t"
-            df = pd.read_csv(f_path, **kwargs)
-        elif munger.file_type in ["xls", "xlsx"]:
-            df = pd.read_excel(f_path, **kwargs)
-        else:
-            e = f"Unrecognized file_type in munger: {munger.file_type}"
-            add_error(err, "format.txt", e)
-            df = pd.DataFrame()
-        if df.empty:
-            e = f"Nothing read from datafile; file type {munger.file_type} may be inconsistent, or datafile may be empty."
-            add_error(err, "format.txt", e)
-        else:
-            df = m.generic_clean(df)
-            err = jm.check_results_munger_compatibility(munger, df, err)
-        return [df, err]
-    except UnicodeDecodeError as ude:
-        e = f"Encoding error. Datafile not read completely.\n{ude}"
-    except ParserError as pe:
-        # DFs have trouble comparing against None. So we return an empty DF and
-        # check for emptiness below as an indication of an error.
-        e = f"Error parsing results file.\n{pe}"
-    add_error(err, "datafile_error", e)
-    return [pd.DataFrame(), err]
+		if munger.file_type in ['txt', 'csv']:
+			kwargs['encoding'] = munger.encoding
+			kwargs['quoting'] = csv.QUOTE_MINIMAL
+			kwargs['index_col'] = None
+			if munger.file_type == 'txt':
+				kwargs['sep'] = '\t'
+			df = pd.read_csv(f_path, **kwargs)
+		elif munger.file_type in ['xls', 'xlsx']:
+			df = pd.read_excel(f_path, **kwargs)
+		else:
+			e = f'Unrecognized file_type in munger: {munger.file_type}'
+			add_error(err,'format.ini',e)
+			df = pd.DataFrame()
+		if df.empty:
+			e = f'Nothing read from datafile; file type {munger.file_type} may be inconsistent, or datafile may be empty.'
+			add_error(err,'format.ini',e)
+		else:
+			df = mr.generic_clean(df)
+			err = jm.check_results_munger_compatibility(munger, df, err)
+		return [df, err]
+	except UnicodeDecodeError as ude:
+		e = f'Encoding error. Datafile not read completely.\n{ude}'
+	except ParserError as pe:
+		# DFs have trouble comparing against None. So we return an empty DF and 
+		# check for emptiness below as an indication of an error.
+		e = f'Error parsing results file.\n{pe}'
+	add_error(err,'datafile_error',e)
+	return [pd.DataFrame(), err]
 
 
 def read_combine_results(
@@ -588,9 +588,9 @@ def config(
     return d
 
 
-def get_runtime_parameters(required_keys, optional_keys=None, param_file="multi.par"):
-    d = {}
-    missing_required_params = {"missing": []}
+def get_runtime_parameters(required_keys, optional_keys=None,param_file='multi.par',section='election_anomaly'):
+	d = {}
+	missing_required_params = {'missing':[]}
 
     parser = ConfigParser()
     p = parser.read(param_file)
@@ -598,19 +598,19 @@ def get_runtime_parameters(required_keys, optional_keys=None, param_file="multi.
     if len(p) == 0:
         raise FileNotFoundError
 
-    for k in required_keys:
-        try:
-            d[k] = parser["election_anomaly"][k]
-        except KeyError:
-            missing_required_params["missing"].append(k)
+	for k in required_keys:
+		try:
+			d[k] = parser[section][k]
+		except KeyError:
+			missing_required_params['missing'].append(k)
 
-    if optional_keys is None:
-        optional_keys = []
-    for k in optional_keys:
-        try:
-            d[k] = parser["election_anomaly"][k]
-        except KeyError:
-            d[k] = None
+	if optional_keys is None:
+		optional_keys = []
+	for k in optional_keys:
+		try:
+			d[k] = parser[section][k]
+		except KeyError:
+			d[k] = None
 
     if not missing_required_params["missing"]:
         missing_required_params = None

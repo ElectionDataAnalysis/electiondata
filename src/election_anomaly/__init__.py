@@ -128,61 +128,51 @@ class DataLoader:
             if param_err[f]:
                 self.tracker["parameter_error"] = param_err[f]
 
-        err = dict()
-        # group .par files by jurisdiction_path
-        jurisdiction_paths = {juris_path[f] for f in par_files}
-        files = dict()
-        for jp in jurisdiction_paths:
-            if load_jurisdictions:
-                juris, juris_err = ui.pick_juris_from_filesystem(
-                    jp, self.d["project_root"], check_files=True
-                )
-                if juris is None:
-                    err["jurisdiction_error"] = juris_err
-                    return err
-                print(f"Loading jurisdiction from {jp} to {self.session.bind}")
-                if juris:
-                    juris_load_err = juris.load_juris_to_db(
-                        self.session, self.d["project_root"]
-                    )
-                    if juris_load_err:
-                        err["juris_load_error"] = juris_load_err
-                        return err
-            # process all files from the given jurisdiction
-            files[jp] = [f for f in par_files if juris_path[f] == jp]
-            print(f"Processing results files {files[jp]}")
-            for f in files[jp]:
-                sdl = SingleDataLoader(
-                    self.d["results_dir"],
-                    f,
-                    self.d["project_root"],
-                    self.session,
-                    mungers_path,
-                    juris,
-                )
-                errors = sdl.check_errors()
-                if errors == (None, None):
-                    self.tracker[f]["status"] = "loading initialized"
-                    # try to load data
-                    load_error = sdl.load_results()
-                    self.move_loaded_results_file(sdl, f, load_error)
-                    if load_error:
-                        err[f] = load_error
-                        self.tracker[f]["load_error"] = load_error
-                    else:
-                        self.tracker[f]["status"] = "loaded"
-                else:
-                    self.tracker[f]["status"] = "loading not initialized"
-                    print("Error(s) before data loading:")
-                    if sdl.parameter_err:
-                        print(f"Parameter error: {sdl.parameter_err}\n")
-                        self.tracker[f][
-                            "SingleDataLoader_parameter_error"
-                        ] = sdl.parameter_err
-                    if sdl.munger_err:
-                        print(f"Munger error: {sdl.munger_err}")
-                        self.tracker[f]["munger_error"] = sdl.munger_err
-        return err
+		err = dict()
+		# group .par files by jurisdiction_path
+		jurisdiction_paths = {juris_path[f] for f in par_files}
+		files = dict()
+		for jp in jurisdiction_paths:
+			if load_jurisdictions:
+				juris, juris_err = ui.pick_juris_from_filesystem(jp, self.d['project_root'], check_files=True)
+				if juris is None:
+					err['jurisdiction_error'] = juris_err
+					return err
+				print(f'Loading jurisdiction from {jp} to {self.session.bind}')
+				if juris:
+					juris_load_err = juris.load_juris_to_db(self.session, self.d['project_root'])
+					if juris_load_err:
+						err['juris_load_error'] = juris_load_err
+						return err
+			# process all files from the given jurisdiction
+			files[jp] = [f for f in par_files if juris_path[f]==jp]
+			print(f'Processing results files {files[jp]}')
+			for f in files[jp]:
+				sdl = SingleDataLoader(
+					self.d['results_dir'], f, self.d['project_root'], self.session, mungers_path,
+					juris)
+				errors = sdl.check_errors()
+				if errors == (None,None):
+					self.tracker[f]['status'] = 'loading initialized'
+					# try to load data
+					load_error = sdl.load_results()
+					self.move_loaded_results_file(sdl,f,load_error)
+					if load_error:
+						err[f] = load_error
+						self.tracker[f]['load_error'] = load_error
+					else:
+						self.tracker[f]['status'] = 'loaded'
+				else:
+					self.tracker[f]['status'] = 'loading not initialized'
+					e = ['Error(s) before data loading: ']
+					if sdl.parameter_err:
+						e.append(f'Parameter error: {sdl.parameter_err}')
+						self.tracker[f]['SingleDataLoader_parameter_error'] = sdl.parameter_err
+					if sdl.munger_err:
+						e.append(f' Munger error: {sdl.munger_err}')
+						self.tracker[f]['munger_error'] = sdl.munger_err
+					ui.add_error(err,'initialization', ''.join(e))
+		return err
 
     def move_loaded_results_file(self, sdl, f: str, load_error: dict):
         warnings = []
@@ -232,6 +222,16 @@ class DataLoader:
                 print_str += f" See warnings in {f[:-4]}."
             print(print_str)
         return
+
+	def pull_counts(self, ru_type: str = 'county') -> dict:
+		err = dict()
+		ej_set = {(self.tracker[f]['election'], self.tracker[f]['top_reporting_unit']) for
+		 f in self.tracker.keys() if self.tracker[f]['status'] == 'loaded'}
+		an = Analyzer()
+		for (election, jurisdiction) in ej_set:
+			key = f'{jurisdiction.replace(" ","-")}_{election.replace(" ","-")}'
+			err[key] = an.top_counts_by_vote_type(election, jurisdiction, ru_type)
+		return err
 
 
 class SingleDataLoader:
@@ -1058,9 +1058,9 @@ class Analyzer:
 
     def bar(
         self,
-        jurisdiction: str, 
-        contest_type: str = None, 
-        contest: str = None, 
+        jurisdiction: str,
+        contest_type: str = None,
+        contest: str = None,
         fig_type: str = None
     ) -> list:
         """contest_type is one of state, congressional, state-senate, state-house"""
