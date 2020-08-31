@@ -129,13 +129,14 @@ class MultiDataLoader():
 						self.tracker[f]['status'] = 'loaded'
 				else:
 					self.tracker[f]['status'] = 'loading not initialized'
-					print('Error(s) before data loading:')
+					e = ['Error(s) before data loading: ']
 					if sdl.parameter_err:
-						print(f'Parameter error: {sdl.parameter_err}\n')
+						e.append(f'Parameter error: {sdl.parameter_err}')
 						self.tracker[f]['SingleDataLoader_parameter_error'] = sdl.parameter_err
 					if sdl.munger_err:
-						print(f'Munger error: {sdl.munger_err}')
+						e.append(f' Munger error: {sdl.munger_err}')
 						self.tracker[f]['munger_error'] = sdl.munger_err
+					ui.add_error(err,'initialization', ''.join(e))
 		return err
 
 	def move_loaded_results_file(self, sdl, f: str, load_error: dict):

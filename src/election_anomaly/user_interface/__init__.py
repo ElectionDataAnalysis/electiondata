@@ -176,11 +176,11 @@ def read_single_datafile(munger: jm.Munger, f_path: str, err: dict) -> [pd.DataF
 			df = pd.read_excel(f_path, **kwargs)
 		else:
 			e = f'Unrecognized file_type in munger: {munger.file_type}'
-			add_error(err,'format.txt',e)
+			add_error(err,'format.ini',e)
 			df = pd.DataFrame()
 		if df.empty:
 			e = f'Nothing read from datafile; file type {munger.file_type} may be inconsistent, or datafile may be empty.'
-			add_error(err,'format.txt',e)
+			add_error(err,'format.ini',e)
 		else:
 			df = mr.generic_clean(df)
 			err = jm.check_results_munger_compatibility(munger, df, err)
@@ -310,7 +310,7 @@ def config(filename=None, section='postgresql',msg='Pick parameter file for conn
 	return d
 
 
-def get_runtime_parameters(required_keys, optional_keys=None,param_file='multi.par'):
+def get_runtime_parameters(required_keys, optional_keys=None,param_file='multi.par',section='election_anomaly'):
 	d = {}
 	missing_required_params = {'missing':[]}
 
@@ -321,7 +321,7 @@ def get_runtime_parameters(required_keys, optional_keys=None,param_file='multi.p
 
 	for k in required_keys:
 		try:
-			d[k] = parser['election_anomaly'][k]
+			d[k] = parser[section][k]
 		except KeyError:
 			missing_required_params['missing'].append(k)
 
@@ -329,7 +329,7 @@ def get_runtime_parameters(required_keys, optional_keys=None,param_file='multi.p
 		optional_keys = []
 	for k in optional_keys:
 		try:
-			d[k] = parser['election_anomaly'][k]
+			d[k] = parser[section][k]
 		except KeyError:
 			d[k] = None
 
