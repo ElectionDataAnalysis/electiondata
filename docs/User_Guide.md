@@ -28,16 +28,17 @@ In the directory indicated in `multi.par`, create a `.par` file for each results
 ## Choose a Munger
 Ensure that the munger files are appropriate for your results file(s). 
 1. If the munger doesn't already exist, pick a name for your munger and create a folder with that name in the `mungers` directory to hold `format.txt` and `cdf_elements.txt`.
-2. Put the appropriate parameters in `format.txt`, following the template in `templates/munger_templates`. For example:
+2. Put the appropriate parameters in `format.ini`, following the template in `templates/munger_templates`. For example:
 
-```item	value
-header_row_count	0
-field_name_row	None
-field_names_if_no_field_name_row	County Code,County Name,Election Number,Election Date,Election Name,Unique Precinct Identifier,Precinct Polling Location,Total Registered Voters,Total Registered Republicans,Total Registered Democrats,Total Registered All Other Parties,Contest Name,District,Contest Code,Candidate etc,Candidate Party,Candidate Florida Voter Registration System ID Number,DOE Assigned Number,Vote Total
-count_columns	18
-file_type	txt
-encoding	iso-8859-1
-thousands_separator	None
+```
+[format]
+header_row_count=1
+field_name_row=0
+field_names_if_no_field_name_row=None
+count_columns=6,7,8
+file_type=csv
+encoding=iso-8859-1
+thousands_separator=,
 ```
 
 3. Put formulas for reading information from the results file into `cdf_elements.txt`. You can reference field names from your file by putting them in angle brackets. E.g., 
@@ -243,7 +244,7 @@ dl = ea.DataLoader()
 err = dl.load_all()
 ```
 
-If something doesn't work, error messages will print. Even when the upload has worked, there may be warnings about lines not loaded. The system will ignore lines that cannot be munged. For example, the only contests whose results are uploaded will be those in the `CandidateContest.txt` or `BallotMeasureContest.txt` files that are correctly described in `dictionary.txt`.
+If there are errors that interfere with loading a results file, the system will create a corresponding `*.error` file. Even when the upload has worked, there may be warnings about lines not loaded. The system will ignore lines that cannot be munged. For example, the only contests whose results are uploaded will be those in the `CandidateContest.txt` or `BallotMeasureContest.txt` files that are correctly described in `dictionary.txt`.
 ```
 >>> err
 {'BAK_PctResults20181106.par': {'fl_gen_by_precinct': {'munge_warning': 'Warning: Results for 720 rows with unmatched contests will not be loaded to database.'}}, 'ALA_PctResults20181106.par': {'fl_gen_by_precinct': {'munge_warning': 'Warning: Results for 6174 rows with unmatched contests will not be loaded to database.'}}}
