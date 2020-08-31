@@ -52,7 +52,6 @@ def create_rollup(
 		by = 'Id'
 		if len(datafile_list) == 0:
 			return f'No datafiles found for Election_Id {election_id}'
-
 	# set exclude_total
 	vote_type_list, err_str = dbr.vote_type_list(cursor, datafile_list, by=by)
 	if err_str:
@@ -66,8 +65,8 @@ def create_rollup(
 		exclude_total = False
 
 	# get names from ids
-	top_ru = dbr.name_from_id(cursor,'ReportingUnit',top_ru_id).replace(" ","-")
-	election = dbr.name_from_id(cursor,'Election',election_id).replace(" ","-")
+	top_ru = dbr.name_from_id(cursor,'ReportingUnit',top_ru_id)#.replace(" ","-")
+	election = dbr.name_from_id(cursor,'Election',election_id)#.replace(" ","-")
 	sub_rutype = dbr.name_from_id(cursor, 'ReportingUnitType', sub_rutype_id)
 
 	# create path to export directory
@@ -178,25 +177,14 @@ def package_results(data, jurisdiction, x, y, restrict=None):
 def get_data_for_scatter(session, jurisdiction_id, subdivision_type_id, 
 	election_id, count_item_type, filter_id, count_type):
 	"""Since this could be data across 2 elections, grab data one election at a time"""
-	df = pull_data_tables(session)
-	ru, sub_ru, ru_children = create_hierarchies(session, df, jurisdiction_id, subdivision_type_id)
-	candidate_columns = ['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id',
-		'Candidate_Id']
-	contest_selection = create_contests(df, ru, candidate_columns)
+	unsummed = dbr.get_candidate_votecounts(session, election_id, jurisdiction_id, subdivision_type_id)
 	#  limit to relevant data
-	# Based on count_type param, we either filter on contest or candidate
 	if count_type == 'candidates':
 		filter_column = 'Candidate_Id'
 	elif count_type == 'contests':
 		filter_column = 'Contest_Id'
 	if filter_id != -1:
-		contest_selection = contest_selection[contest_selection[filter_column].isin([filter_id])]
-	ecsvcj = create_vote_selections(df, contest_selection, election_id)
-	#  create dataframe of results
-	unsummed = create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru)
-
-	# Now process data	
-	# filter based on vote count type
+		unsummed = unsummed[unsummed[filter_column].isin([filter_id])]
 	unsummed = unsummed[unsummed['CountItemType'] == count_item_type]
 
 	# cleanup for purposes of flexibility
@@ -227,24 +215,13 @@ def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, e
 	connection = session.bind.raw_connection()
 	cursor = connection.cursor()
 
-	df = pull_data_tables(session)
-	ru, sub_ru, ru_children = create_hierarchies(session, df, top_ru_id, subdivision_type_id)
-	candidate_columns = ['Contest_Id','Contest','Selection_Id','Selection','ElectionDistrict_Id',
-		'Candidate_Id']
-	contest_selection = create_contests(df, ru, candidate_columns)
-	ecsvcj = create_vote_selections(df, contest_selection, election_id)
-	unsummed = create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru)
+	unsummed = dbr.get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_id)
 
 	if contest_type:
 		unsummed = unsummed[unsummed['contest_district_type'] == contest_type]
 	if contest:
 		unsummed = unsummed[unsummed['Contest'] == contest]
 
-	# cleanup: Rename, drop a duplicated column
-	unsummed.drop(columns=['_datafile_Id', 'OtherReportingUnitType', 
-		'ChildReportingUnit_Id', 'ElectionContestJoin_Id','OtherReportingUnitType_Parent', 
-		'ContestSelectionJoin_Id'],
-		inplace=True)
 	groupby_cols = ['ParentReportingUnit_Id', 'ParentName', 
 		'ParentReportingUnitType_Id', 'Candidate_Id', 'CountItemType_Id',
 		'CountItemType', 'Contest_Id', 'Contest', 'Selection', 'Selection_Id',
@@ -276,8 +253,8 @@ def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, e
 			'max_margins_pct': 'margins_pct'}, inplace=True)
 
 		candidates = temp_df['Candidate_Id'].unique()
-		x = dbr.name_from_id(cursor, 'Candidate', candidates[0])
-		y = dbr.name_from_id(cursor, 'Candidate', candidates[1]) 
+		x = dbr.name_from_id(cursor, 'Candidate', int(candidates[0]))
+		y = dbr.name_from_id(cursor, 'Candidate', int(candidates[1])) 
 		jurisdiction = dbr.name_from_id(cursor, 'ReportingUnit', top_ru_id)
 
 		pivot_df = pd.pivot_table(temp_df, values='Count',
@@ -288,7 +265,7 @@ def create_bar(session, top_ru_id, subdivision_type_id, contest_type, contest, e
 
 		results = package_results(pivot_df, jurisdiction, x, y, restrict=8)
 		results["election"] = dbr.name_from_id(cursor, 'Election', election_id)
-		results["contest"] = dbr.name_from_id(cursor, 'CandidateContest', int(temp_df.iloc[0]['Contest_Id']))
+		results["contest"] = dbr.name_from_id(cursor, 'Contest', int(temp_df.iloc[0]['Contest_Id']))
 		results["subdivision_type"] = dbr.name_from_id(cursor, 'ReportingUnitType', \
 				int(temp_df.iloc[0]['ReportingUnitType_Id']))
 		results["count_item_type"] = temp_df.iloc[0]['CountItemType']
@@ -371,9 +348,9 @@ def assign_anomaly_score(data):
 				pivot_df = pivot_df[['ReportingUnit_Id', to_drop[1], 'score']]
 				pivot_df['Selection'] = to_drop[1]
 				pivot_df.rename(columns={to_drop[1]: 'Count'}, inplace=True)
-				temp_df = selection_df.merge(pivot_df, how='left', \
+				scored_df = selection_df.merge(pivot_df, how='left', \
 					on=['ReportingUnit_Id', 'Selection', 'Count'])
-				df = pd.concat([df, temp_df])
+				df = pd.concat([df, scored_df])
 	df['score'] = df['score'].fillna(0)
 	return df
 
@@ -507,7 +484,7 @@ def calculate_votes_at_stake(data):
 			next_anomalous_df = temp_df[(temp_df['ReportingUnit_Id'] == next_reporting_unit_id) & \
 				((temp_df['margins_pct'] == next_margin_pct) |
 				(temp_df['rank'] == 1))].sort_values('rank', ascending=False)
-			
+
 			# move the most anomalous to the closest and calculate what the 
 			# change to the Contest margin would be
 			winner_bucket_total = int(anomalous_df[anomalous_df['rank'] == 1]['Count'])
@@ -535,27 +512,24 @@ def pull_data_tables(session):
 	# pull relevant tables
 	df = {}
 	for element in [
-		'ElectionContestSelectionVoteCountJoin','VoteCount','ContestSelectionJoin',
-		'ComposingReportingUnitJoin','Election','ReportingUnit',
-		'ElectionContestJoin','CandidateContest','CandidateSelection','BallotMeasureContest',
-		'BallotMeasureSelection','Office','Candidate']:
+		'VoteCount', 'ComposingReportingUnitJoin','Election','ReportingUnit',
+		'CandidateContest','CandidateSelection','BallotMeasureContest',
+		'BallotMeasureSelection','Office','Candidate','Contest']:
 		# pull directly from db, using 'Id' as index
 		df[element] = pd.read_sql_table(element,session.bind,index_col='Id')
-	# avoid conflict if by chance VoteCount table has extra columns during data upload
-	df['VoteCount'] = df['VoteCount'][['Count','CountItemType_Id','OtherCountItemType','ReportingUnit_Id']]
-	# pull enums from db, keeping 'Id as a column, not the index
 	for enum in ["ReportingUnitType","CountItemType"]:
 		df[enum] = pd.read_sql_table(enum,session.bind)
 	return df
 
 
 def create_candidate_contests(df, columns):
-	contest_df = df['ContestSelectionJoin'].merge(
-		df['CandidateContest'],how='right',left_on='Contest_Id',right_index=True).rename(
+	contest_df = df['VoteCount'].merge(
+		df['Contest'],how='left',left_on='Contest_Id',right_index=True).rename(
 		columns={'Name':'Contest','Id':'ContestSelectionJoin_Id'}).merge(
 		df['CandidateSelection'],how='left',left_on='Selection_Id',right_index=True).merge(
 		df['Candidate'],how='left',left_on='Candidate_Id',right_index=True).rename(
 		columns={'BallotName':'Selection'}).merge(
+		df['CandidateContest'],how='left',left_on='Contest_Id',right_index=True).merge(
 		df['Office'],how='left',left_on='Office_Id',right_index=True)
 	contest_df = contest_df[columns]
 	if contest_df.empty:
@@ -614,13 +588,15 @@ def create_hierarchies(session, df, jurisdiction_id, subdivision_type_id=None,
 
 
 def create_vote_selections(df, contest_selection, election_id):
-	ecj = df['ElectionContestJoin'][df['ElectionContestJoin'].Election_Id == election_id]
+	votecount_df = df['VoteCount'].reset_index()
+	ecj = votecount_df[votecount_df.Election_Id == election_id]
 	contest_ids = ecj.Contest_Id.unique()
 	csj = contest_selection[contest_selection.Contest_Id.isin(contest_ids)]
-	ecsvcj = df['ElectionContestSelectionVoteCountJoin'][
-		(df['ElectionContestSelectionVoteCountJoin'].ElectionContestJoin_Id.isin(ecj.index)) &
-		(df['ElectionContestSelectionVoteCountJoin'].ContestSelectionJoin_Id.isin(csj.index))]
-	return ecsvcj
+	ecsvcj = votecount_df[
+		(votecount_df.Id.isin(ecj.index)) &
+		(votecount_df.Id.isin(csj.index))]
+	ecsvcj.rename(columns={"Id": "VoteCount_Id"}, inplace=True)
+	return ecsvcj['VoteCount_Id'].reset_index()
 
 
 def create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru):
@@ -636,5 +612,5 @@ def create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru):
 	unsummed.rename(columns=rename, inplace=True)
 	# add columns with names
 	unsummed = mr.enum_col_from_id_othertext(unsummed,'CountItemType',df['CountItemType'],drop_old=False)
-	unsummed = unsummed.merge(contest_selection,how='left',left_on='ContestSelectionJoin_Id',right_index=True)
+	unsummed = unsummed.merge(contest_selection,how='left',on=['Selection_Id','Contest_Id'])
 	return unsummed

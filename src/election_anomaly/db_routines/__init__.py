@@ -308,47 +308,47 @@ def get_name_field(element):
 	return field
 
 
-def get_input_options(session, input):
-	"""Returns a list of response options based on the input"""
-	# input comes as a pythonic (snake case) input, need to 
-	# change to match DB element naming format
-	name_parts = input.split('_')
-	search_str = "".join([name_part.capitalize() for name_part in name_parts])
+# def get_input_options(session, input):
+# 	"""Returns a list of response options based on the input"""
+# 	# input comes as a pythonic (snake case) input, need to 
+# 	# change to match DB element naming format
+# 	name_parts = input.split('_')
+# 	search_str = "".join([name_part.capitalize() for name_part in name_parts])
 
-	if search_str in ['BallotMeasureContest', 'CandidateContest','BallotMeasureSelection','CandidateContest' ]:
-		print(f'Options not available for {input}')
-		return None
-	elif search_str in ['Election',
-		'Office', 'Party', 'ReportingUnit']:
-		column_name = 'Name'
-		table_search = True
-	elif search_str in ['CountItemStatus', 'CountItemType', 'ElectionType',
-		'IdentifierType', 'ReportingUnitType']:
-		column_name = 'Txt'
-		table_search = True
-	elif search_str == 'Candidate':
-		column_name = 'BallotName'
-		table_search = True
-	else:
-		search_str = search_str.lower()
-		table_search = False
+# 	if search_str in ['BallotMeasureContest', 'CandidateContest','BallotMeasureSelection','CandidateContest' ]:
+# 		print(f'Options not available for {input}')
+# 		return None
+# 	elif search_str in ['Election',
+# 		'Office', 'Party', 'ReportingUnit']:
+# 		column_name = 'Name'
+# 		table_search = True
+# 	elif search_str in ['CountItemStatus', 'CountItemType', 'ElectionType',
+# 		'IdentifierType', 'ReportingUnitType']:
+# 		column_name = 'Txt'
+# 		table_search = True
+# 	elif search_str == 'Candidate':
+# 		column_name = 'BallotName'
+# 		table_search = True
+# 	else:
+# 		search_str = search_str.lower()
+# 		table_search = False
 
-	connection = session.bind.raw_connection()
-	cursor = connection.cursor()
-	if table_search:
-		q1 = sql.SQL('SELECT {column_name} FROM {search_str};').format(
-			column_name=sql.Identifier(column_name),search_str=sql.Identifier(search_str)
-		)
-		cursor.execute(q1)
-		result = cursor.fetchall()
-	else:
-		q2 = sql.SQL(
-			'SELECT "Name" FROM "ReportingUnit" ru JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" WHERE rut."Txt" = %s'
-		)
-		cursor.execute(q2,[search_str])
-		result = cursor.fetchall()
-	connection.close()
-	return [r[0] for r in result]
+# 	connection = session.bind.raw_connection()
+# 	cursor = connection.cursor()
+# 	if table_search:
+# 		q1 = sql.SQL('SELECT {column_name} FROM {search_str};').format(
+# 			column_name=sql.Identifier(column_name),search_str=sql.Identifier(search_str)
+# 		)
+# 		cursor.execute(q1)
+# 		result = cursor.fetchall()
+# 	else:
+# 		q2 = sql.SQL(
+# 			'SELECT "Name" FROM "ReportingUnit" ru JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" WHERE rut."Txt" = %s'
+# 		)
+# 		cursor.execute(q2,[search_str])
+# 		result = cursor.fetchall()
+# 	connection.close()
+# 	return [r[0] for r in result]
 
 
 def insert_to_cdf_db(engine, df, element, sep='\t', encoding='iso-8859-1', timestamp=None) -> str:
@@ -702,6 +702,8 @@ def remove_vote_counts(connection, cursor, id: int) -> str:
 	else:
 		err_str = 'Deletion not confirmed by user'
 	return err_str
+
+
 def get_input_options(session, input, verbose):
     """Returns a list of response options based on the input"""
     # input comes as a pythonic (snake case) input, need to 
@@ -769,35 +771,51 @@ def get_input_options(session, input, verbose):
             result = session.execute(f'''
                 SELECT  ru."Name" AS parent,
                         c."Name" AS name, rut."Txt" AS type
-                FROM    "BallotMeasureContest" c
-                        JOIN "ReportingUnit" ru ON c."ElectionDistrict_Id" = ru."Id"
+                FROM    "BallotMeasureContest" bmc
+                        JOIN "ReportingUnit" ru ON bmc."ElectionDistrict_Id" = ru."Id"
                         JOIN "ReportingUnitType" rut ON ru."ReportingUnitType_Id" = rut."Id"
+						JOIN "Contest" c on bmc."Id" = c."Id"
+				WHERE	contest_type = 'BallotMeasure'
                 ORDER BY c."Name"
             ''')
         elif search_str == 'CandidateContest':
             result = session.execute(f'''
                 SELECT  ru."Name" AS parent,
                         c."Name" AS name, rut."Txt" AS type
-                FROM    "CandidateContest" c
-                        JOIN "Office" o ON c."Office_Id" = o."Id"
+                FROM    "CandidateContest" cc
+                        JOIN "Office" o ON cc."Office_Id" = o."Id"
                         JOIN "ReportingUnit" ru ON o."ElectionDistrict_Id" = ru."Id"
                         JOIN "ReportingUnitType" rut ON ru."ReportingUnitType_Id" = rut."Id"
+						JOIN "Contest" c on cc."Id" = c."Id"
+				WHERE	contest_type = 'Candidate'
                 ORDER BY c."Name"
+            ''')
+        elif search_str == 'Candidate':
+            result = session.execute(f'''
+                SELECT  DISTINCT ct."Name" AS parent, c."BallotName" as name, 
+                        p."Name" as type
+                FROM    "Candidate" c
+                        JOIN "CandidateSelection" cs ON c."Id" = cs."Candidate_Id"
+                        JOIN "Party" p ON cs."Party_Id" = p."Id"
+                        JOIN "VoteCount" vc on cs."Id" = vc."Selection_Id"
+                        JOIN "CandidateContest" cc ON vc."Contest_Id" = cc."Id"
+						JOIN "Contest" ct on cc."Id" = ct."Id"
+                ORDER BY c."BallotName"
             ''')
         else:
             # parent_id is candidate_id, type is combo of party and contest name
             result = session.execute(f'''
-                SELECT  c."Id" AS parent_id, c."BallotName" as name, 
-                        p."Name" || ' - ' || cc."Name" AS type
+                SELECT  DISTINCT ct."Name" AS parent, c."BallotName" as name, 
+                        p."Name" as type
                 FROM    "Candidate" c
-                        JOIN "Party" p ON c."Party_Id" = p."Id"
                         JOIN "CandidateSelection" cs ON c."Id" = cs."Candidate_Id"
-                        JOIN "CandidateContestSelectionJoin" ccsj 
-                            ON cs."Id" = ccsj."CandidateSelection_Id"
-                        JOIN "CandidateContest" cc ON ccsj."CandidateContest_Id" = cc."Id"
+                        JOIN "Party" p ON cs."Party_Id" = p."Id"
+                        JOIN "VoteCount" vc on cs."Id" = vc."Selection_Id"
+                        JOIN "CandidateContest" cc ON vc."Contest_Id" = cc."Id"
+						JOIN "Contest" ct on cc."Id" = ct."Id"
                 WHERE   c."BallotName" ILIKE '%{search_str}%'
             ''')
-        return package_display_results(result)
+        return result
 
 
 def get_datafile_info(session, results_file):
@@ -892,17 +910,13 @@ def get_filtered_input_options(session, input_str, filters):
     elif input_str == 'category':
         election_df = get_relevant_election(session, filters)
         election_df = election_df[election_df['Name'].isin(filters)]
-        election_join_df = pd.read_sql_table('ElectionContestJoin', session.bind, index_col='Id') \
-            .merge(election_df, how='inner', left_on='Election_Id', right_index=True)
-        vote_count_ids = pd.read_sql_table('ElectionContestSelectionVoteCountJoin', 
-            session.bind, index_col='Id') \
-            .merge(election_join_df, how='inner', left_on='ElectionContestJoin_Id', right_index=True)\
-            ['VoteCount_Id'].unique()
-        vote_count_df = pd.read_sql_table('VoteCount', session.bind, index_col='Id')
-        vote_count_df = vote_count_df[vote_count_df.index.isin(vote_count_ids)]
-        count_types = list(pd.read_sql_table('CountItemType', session.bind, index_col='Id') \
-            .merge(vote_count_df, how='inner', left_index=True, right_on='CountItemType_Id') \
-            ['Txt'].unique())
+        count_type_ids = pd.read_sql_table('VoteCount', session.bind, index_col='Id') \
+            .merge(election_df, how='inner', left_on='Election_Id', right_index=True)\
+            ['CountItemType_Id'].unique()
+        count_types_df = pd.read_sql_table('CountItemType', session.bind, index_col='Id')
+        count_types = list(count_types_df[count_types_df.index.isin(count_type_ids)]['Txt'].unique())
+            #.merge(vote_count_df, how='inner', left_index=True, right_on='CountItemType_Id') \
+            #['Txt'].unique())
         count_types.sort()
         data = {
             'parent': [filters[0] for count_type in count_types] + [filters[0] for count_type in count_types],
@@ -913,25 +927,44 @@ def get_filtered_input_options(session, input_str, filters):
         df = pd.DataFrame(data=data)
     elif input_str == 'count':
         election_df = get_relevant_election(session, filters)
-        election_contest_df = pd.read_sql_table('ElectionContestJoin', session.bind, index_col='Id') \
-            .merge(election_df, how='inner', left_on='Election_Id', right_index=True)
-        candidate_contest_df = pd.read_sql_table('CandidateContest', session.bind, index_col='Id')
-        candidate_contest_df = candidate_contest_df.merge(election_contest_df, how='inner', 
-            left_on='Id', right_on='Contest_Id', suffixes=[None, '_y'])[candidate_contest_df.columns]
-        contest_df = contest_df.merge(candidate_contest_df, how='inner', left_on='name', 
-            right_on='Name')[contest_df.columns]
-        candidates = get_input_options(session, 'candidate', True)  
+        hierarchy_df = pd.read_sql_table('ComposingReportingUnitJoin', session.bind, index_col='Id')
+        unit_df = pd.read_sql_table('ReportingUnit', session.bind, index_col='Id')
+        hierarchy_df = hierarchy_df.merge(unit_df, how='inner', left_on='ParentReportingUnit_Id',
+            right_on='Id')
+        hierarchy_df = hierarchy_df[hierarchy_df['Name'].isin(filters)]
+        selection_ids = pd.read_sql_table('VoteCount', session.bind, index_col='Id') \
+            .merge(election_df, how='inner', left_on='Election_Id', right_index=True)\
+            .merge(hierarchy_df, how='inner', left_on='ReportingUnit_Id', right_on='ChildReportingUnit_Id')\
+            ['Selection_Id'].unique()
+        candidate_selection_df = pd.read_sql_table('CandidateSelection', session.bind, index_col='Id')
+		# this has candidate IDs and contest IDs
+        candidate_contest_df = candidate_selection_df[candidate_selection_df.index.isin(selection_ids)]\
+            [candidate_selection_df.columns].reset_index()
+		# then we get the cnadidate names themselves
+        candidate_names_df = pd.read_sql_table('Candidate', session.bind, index_col='Id')
+		# and this has candidates, but in name form
+        candidates = get_input_options(session, 'candidate', True)
         candidates_df = pd.DataFrame(candidates)
         candidates_df.columns = candidates.keys()
-        df = contest_df.merge(candidates_df, how='inner', left_on='name', right_on='parent',
+        candidate_names_df = candidate_names_df.merge(candidate_contest_df, how='inner', left_index=True,
+			right_on='Candidate_Id')
+        candidates_df = candidates_df.merge(candidate_names_df, how='inner', left_on='name',
+			right_on='BallotName')
+        #candidate_contest_df.columns = ['parent', 'name', 'type']
+        # contest_df = contest_df.merge(candidate_contest_df, how='inner', left_on='name', 
+        #     right_on='Name')[contest_df.columns]
+        contests = get_input_options(session, 'candidate_contest', True)  
+        contests_df = pd.DataFrame(contests)
+        contests_df.columns = contests.keys()
+        df = contests_df.merge(candidates_df, how='inner', left_on='name', right_on='parent',
             suffixes=['_x', None])[candidates_df.columns]
     else:
         candidates = get_input_options(session, input_str, True)
         candidates_df = pd.DataFrame(candidates)
-        candidates_df.columns = candidates.keys() 
+        candidates_df.columns = candidates.keys()
         candidates_df = candidates_df.merge(contest_df, how='inner',
             left_on='parent', right_on='name', suffixes=[None, '_y'])
-        df = candidates_df.groupby(['parent', 'type_y'])['name'].apply(list).apply(str) \
+        df = candidates_df.groupby(['parent', 'type'])['name'].apply(list).apply(str) \
             .reset_index().sort_values('parent')
         df.columns = ['parent', 'type', 'name']
         df = df[['parent', 'name', 'type']]
@@ -1001,3 +1034,43 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id, subdivision_type_id):
         ''').fetchall()
         hierarchy.append(q[0][0])
     return hierarchy
+
+
+def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_id):
+	q = f"""
+	SELECT	vc."Id" as "VoteCount_Id", "Count", "CountItemType_Id",
+			vc."ReportingUnit_Id", "Contest_Id", "Selection_Id",
+			vc."Election_Id", "_datafile_Id", IntermediateRU."Id" as "ParentReportingUnit_Id",
+			ChildRU."Name", ChildRU."ReportingUnitType_Id",
+			IntermediateRU."Name" as "ParentName", IntermediateRU."ReportingUnitType_Id" as "ParentReportingUnitType_Id",
+			CIT."Txt" as "CountItemType", C."Name" as "Contest",
+			Cand."BallotName" as "Selection", "ElectionDistrict_Id", Cand."Id" as "Candidate_Id", "contest_type",
+			EDRUT."Txt" as "contest_district_type"
+			FROM "VoteCount" vc
+			LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
+			LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
+			LEFT JOIN "CandidateSelection" CS on CS."Id" = vc."Selection_Id"
+			LEFT JOIN "Candidate" Cand on CS."Candidate_Id" = Cand."Id"
+			-- sum over all children
+			LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
+			LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
+			-- roll up to the intermediate RUs
+			LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
+			LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
+			-- intermediate RUs must nest in top RU
+			LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
+			LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
+			LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
+			LEFT JOIN "CandidateContest" on C."Id" = "CandidateContest"."Id"
+			LEFT JOIN "Office" O on "CandidateContest"."Office_Id" = O."Id"
+			LEFT JOIN "ReportingUnit" ED on O."ElectionDistrict_Id" = ED."Id"
+			LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
+			WHERE C.contest_type = 'Candidate'
+				AND TopRU."Id" = {top_ru_id}
+				AND IntermediateRU."ReportingUnitType_Id" = {subdivision_type_id}
+				AND vc."Election_Id" = {election_id}
+	"""
+	result =  session.execute(q)
+	result_df = pd.DataFrame(result)
+	result_df.columns = result.keys()
+	return result_df

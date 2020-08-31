@@ -746,7 +746,7 @@ class Analyzer():
             rollup_unit_id = dbr.name_to_id(self.session, 'ReportingUnit', rollup_unit)
             sub_unit_id = dbr.name_to_id(self.session, 'ReportingUnitType', sub_unit)
             election_id = dbr.name_to_id(self.session, 'Election', election)
-            err_str = avp.create_rollup(cursor, d['rollup_directory'], rollup_unit_id,
+            err_str = a.create_rollup(cursor, d['rollup_directory'], rollup_unit_id,
                 sub_unit_id, election_id)
             connection.close()
         return err_str
