@@ -258,7 +258,6 @@ class Munger:
             self.field_list = self.field_list.union(r["fields"])
 
 
-def read_munger_info_from_files(dir_path, project_root=None, aux_data_dir=None):
 def read_munger_info_from_files(dir_path):
     """<aux_data_dir> is required if there are auxiliary data files"""
     # create auxiliary dataframe
