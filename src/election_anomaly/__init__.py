@@ -941,27 +941,6 @@ class Analyzer:
             return results
         return None
 
-    def top_counts_by_vote_type(self, election: str, rollup_unit: str, sub_unit: str) -> str:
-        d, error = ui.get_runtime_parameters(
-            ["rollup_directory"], param_file="run_time.ini", header="election_anomaly"
-        )
-        if error:
-            err_str = (
-                f"Parameter file missing requirements.\n{error}\nNo results exported"
-            )
-            print(err_str)
-        else:
-            connection = self.session.bind.raw_connection()
-            cursor = connection.cursor()
-            rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
-            sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
-            election_id = db.name_to_id(self.session, "Election", election)
-            err_str = a.create_rollup(
-                cursor, d["rollup_directory"], rollup_unit_id, sub_unit_id, election_id
-            )
-            connection.close()
-        return err_str
-
     def scatter(
         self,
         jurisdiction: str,
