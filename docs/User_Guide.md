@@ -5,12 +5,12 @@ From the root folder of your repository run `python3 setup.py install` (or if `p
 
 ## Parameter Files
 In the directory from which you will run the system -- which can be outside your local repository-- create the main parameter files you'll need:
-* `jurisdiction_prep.par` for the JurisdictionPrepper() class
-* `multi.par` for loading data (DataLoader() class) and for pulling and analyzing results (the Analyzer()) class)
+* `jurisdiction_prep.ini` for the JurisdictionPrepper() class
+* `run_time.ini` for loading data (DataLoader() class) and for pulling and analyzing results (the Analyzer()) class)
   
-There are templates in `templates/parameter_file_templates`. 
+There are templates with the suffix `.template` in `templates/parameter_file_templates`. These will need be renamed with the extension `.ini`. For example, from the `src` directory, running `cp templates/parameter_file_templates/run_time.ini.template ./run_time.ini` will create the `run_time.ini` parameter file with all the required fields to load analyze data.
    
-In the directory indicated in `multi.par`, create a `.par` file for each results file you want to use. The results files and the `.par` files must both be in that directory. Follow the `templates/parameter_file_templates/results.par` template for the individual `.par` files. If all the files in a single directory will use the same munger, jurisdiction and election, you can create these `.par` files in batches. For example, 
+In the directory indicated in `run_time.ini`, create a `.ini` file for each results file you want to use. The results files and the `.ini` files must both be in that directory. Follow the `templates/parameter_file_templates/results.ini.template` template for the individual `.ini` files. If all the files in a single directory will use the same munger, jurisdiction and election, you can create these `.ini` files in batches. For example, 
 ```
 >>> dir = '/Users/singer3/Documents/Data/Florida/Precinct-Level Election Results/precinctlevelelectionresults2016gen'
 >>> munger = 'fl_gen_by_precinct'
@@ -56,7 +56,7 @@ NB: for constants (like the CountItemType 'total' in this example), use 'row' fo
 ## Create or Improve a Jurisdiction
 It's easiest to use the JurisdictionPrepper() object to create or update jurisdiction files. 
 
-1. From the directory containing `jurisdiction_prep.par`, open a python interpreter. Import the package and initialize a JurisdictionPrepper(), e.g.:
+1. From the directory containing `jurisdiction_prep.ini`, open a python interpreter. Import the package and initialize a JurisdictionPrepper(), e.g.:
 ```
 >>> import election_anomaly as ea
 >>> jp = ea.JurisdictionPrepper()
@@ -65,7 +65,7 @@ It's easiest to use the JurisdictionPrepper() object to create or update jurisdi
 ```
 >>> err = jp.new_juris_files()
 ```
-The program will create the necessary files in a folder (at the location `jurisdiction_path` specified in `jurisdiction_prep.par`), and a 'starter dictionary.txt' in your current directory. If something does not work as expected, check the value of `jp.new_juris_files()`, which may contain some helpful information. If the system found no errors, this value will be an empty python dictionary.
+The program will create the necessary files in a folder (at the location `jurisdiction_path` specified in `jurisdiction_prep.ini`), and a 'starter dictionary.txt' in your current directory. If something does not work as expected, check the value of `jp.new_juris_files()`, which may contain some helpful information. If the system found no errors, this value will be an empty python dictionary.
 ```
 >>> err
 {}
@@ -172,7 +172,7 @@ These will be added as precincts, unless another reporting unit type is specifie
 
 12. Look at the newly added items in `ReportingUnit.txt` and `dictionary.txt`, and remove or revise as appropriate.
 
-13. If you want to add elements (other than ReportingUnits) in bulk from all results files in a directory (with `.par` files in that same directory), use  `add_elements_from_multi_results_file(<list of elements>,<directory>, <error>)`. For example:
+13. If you want to add elements (other than ReportingUnits) in bulk from all results files in a directory (with `.ini` files in that same directory), use  `add_elements_from_multi_results_file(<list of elements>,<directory>, <error>)`. For example:
 ```
 >>> err = jp.add_elements_from_multi_results_file(['Candidate','CandidateContest'],'/Users/singer3/Documents/Temp/000_to-be-loaded',err)
 >>> err
@@ -195,7 +195,7 @@ Corresponding entries will be made in `dictionary.txt`, using the munged name fo
 
 ### The JurisdictionPrepper class details
 There are routines in the `JurisdictionPrepper()` class to help prepare a jurisdiction.
- * `JurisdictionPrepper()` reads parameters from the file (`new_jurisdiction.par`) to create the directories and basic necessary files. 
+ * `JurisdictionPrepper()` reads parameters from the file (`jurisdiction_prep.ini`) to create the directories and basic necessary files. 
  * `new_juris_files()` builds a directory for the jurisdiction, including starter files with the standard contests. It calls some methods that may be independently useful:
    * `add_standard_contests()` creates records in `CandidateContest.txt` corresponding to contests that appear in many or most jurisdictions, including all federal offices as well as state house and senate offices. 
    * `add_primaries_to_candidate_contest()` creates a record in `CandidateContest.txt` for every CandidateContest-Party pair that can be created from `CandidateContest.txt` entries with no assigned PrimaryParty and `Party.txt` entries. (Note: records for non-existent primary contests will not break anything.) 
@@ -214,10 +214,10 @@ There are routines in the `JurisdictionPrepper()` class to help prepare a jurisd
          then:
          * `Florida;Alachua County;Precinct 1\tprecinct` will be added to `ReportingUnit.txt`
          * `ReportingUnit\tFlorida;Alachua County;Precinct 1\tAlachua;Precinct 1` will be added to `dictionary.txt`
-     * `add_sub_county_rus_from_multi_results_file(directory,error)` does the same for every results file/munger in the directory named in a `.par` file in the directory.
+     * `add_sub_county_rus_from_multi_results_file(directory,error)` does the same for every results file/munger in the directory named in a `.ini` file in the directory.
  * adding other elements automatically:
      * `add_elements_from_results_file(result_file,munger,element`) pulls raw identifiers for all instances of the element from the datafile and inserts corresponding rows in `<element>.txt` and `dictionary.txt`. These rows may have to be edited by hand to make sure the internal database names match any conventions (e.g., for ReportingUnits or CandidateContests, but maybe not for Candidates or BallotMeasureContests.)
-     * `add_elements_from_multi_results_file(directory, error)` does the same for every file/munger in the directory named in a `.par` file in the directory
+     * `add_elements_from_multi_results_file(directory, error)` does the same for every file/munger in the directory named in a `.ini` file in the directory
  
 ## Load Data
 Some routines in the Analyzer class are useful even in the data-loading process, so  create an analyzer before you start loading data.
@@ -226,7 +226,7 @@ Some routines in the Analyzer class are useful even in the data-loading process,
 >>> 
 ```
 
-The DataLoader class allows batch uploading of all data in a given directory. That directory should contain the files to be uploaded, as well as a `.par` file for each file to be uploaded. See `templates/parameter_file_templates/results.par`. You can use `make_par_files()` to create parameter files for multiple files when they share values of the following parameters:
+The DataLoader class allows batch uploading of all data in a given directory. That directory should contain the files to be uploaded, as well as a `.ini` file for each file to be uploaded. See `templates/parameter_file_templates/results.ini.tempate`. You can use `make_par_files()` to create parameter files for multiple files when they share values of the following parameters:
  * directory in which the files can be found
  * munger
  * jurisdiction
@@ -235,8 +235,8 @@ The DataLoader class allows batch uploading of all data in a given directory. Th
  * source
  * note
  * auxiliary data directory (if any)
-The `load_all()` method will read each `.par` file and make the corresponding upload.
-From a directory containing a `multi.par` parameter file, run
+The `load_all()` method will read each `.ini` file and make the corresponding upload.
+From a directory containing a `run_time.ini` parameter file, run
 ```
 import election_anomaly as ea
 dl = ea.DataLoader()
@@ -246,12 +246,12 @@ err = dl.load_all()
 If something doesn't work, error messages will print. Even when the upload has worked, there may be warnings about lines not loaded. The system will ignore lines that cannot be munged. For example, the only contests whose results are uploaded will be those in the `CandidateContest.txt` or `BallotMeasureContest.txt` files that are correctly described in `dictionary.txt`.
 ```
 >>> err
-{'BAK_PctResults20181106.par': {'fl_gen_by_precinct': {'munge_warning': 'Warning: Results for 720 rows with unmatched contests will not be loaded to database.'}}, 'ALA_PctResults20181106.par': {'fl_gen_by_precinct': {'munge_warning': 'Warning: Results for 6174 rows with unmatched contests will not be loaded to database.'}}}
+{'BAK_PctResults20181106.ini': {'fl_gen_by_precinct': {'munge_warning': 'Warning: Results for 720 rows with unmatched contests will not be loaded to database.'}}, 'ALA_PctResults20181106.ini': {'fl_gen_by_precinct': {'munge_warning': 'Warning: Results for 6174 rows with unmatched contests will not be loaded to database.'}}}
 ```
 
-If there are no errors, the results and their `.par` files will be moved to the archive directory specified in `multi.par`. Any warnings for the `*.par` will be saved in the archive directory in a file `*.warn`
+If there are no errors, the results and their `.ini` files will be moved to the archive directory specified in `run_time.ini`. Any warnings for the `*.ini` will be saved in the archive directory in a file `*.warn`
 
-Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.par` file for that results file has `munger_name` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
+Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.ini` file for that results file has `munger_name` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
 
 If every file in your directory will use the same munger(s) -- e.g., if the jurisdiction offers results in a directory of one-county-at-a-time files, such AZ or FL -- then you may want to use `make_par_files()`, whose arguments are:
  * the directory holding the results files,
@@ -264,7 +264,7 @@ If every file in your directory will use the same munger(s) -- e.g., if the juri
  * aux_data_dir (optional -- use it if your files have all have the same auxiliary data files, which might never happen in practice)
 
 ## Pull Data
-The Analyzer class uses parameters in the file `multi.par`, which should be in the directory from which you are running the program.
+The Analyzer class uses parameters in the file `run_time.ini`, which should be in the directory from which you are running the program.
 
 To pull totals by vote type, use `top_counts_by_vote_type()`
 ```
@@ -273,7 +273,7 @@ Results exported to /Users/singer3/Documents/rollups/2018 General/Pennsylvania;P
 >>> 
 ```
 
-Results are exported to the `rollup_directory` specified in `multi.par`.
+Results are exported to the `rollup_directory` specified in `run_time.ini`.
 
 Note that both arguments -- the name of the top reporting unit ('Pennsylvania;Philadelphia') and the reporting unit type for the breakdown of results ('ward') must be the internal database names. To see the list of options, use `display_options()`:
 ```

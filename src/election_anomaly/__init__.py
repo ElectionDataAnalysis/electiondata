@@ -30,8 +30,6 @@ single_data_loader_pars = [
 
 multi_data_loader_pars = [
     "project_root",
-    "db_paramfile",
-    "db_name",
     "results_dir",
     "archive_dir",
 ]
@@ -58,11 +56,11 @@ class DataLoader:
         not create DataLoader object."""
         try:
             d, parameter_err = ui.get_runtime_parameters(
-                multi_data_loader_pars, param_file="multi.par"
+                multi_data_loader_pars, param_file="run_time.ini", header="election_anomaly"
             )
         except FileNotFoundError as e:
             print(
-                "Parameter file multi.par not found. Ensure that it is located"
+                "Parameter file run_time.ini not found. Ensure that it is located"
                 " in the current directory. DataLoader object not created."
             )
             return None
@@ -78,26 +76,20 @@ class DataLoader:
     def __init__(self):
         # grab parameters
         self.d, self.parameter_err = ui.get_runtime_parameters(
-            multi_data_loader_pars, param_file="multi.par"
+            multi_data_loader_pars, param_file="run_time.ini", header="election_anomaly"
         )
 
         # prepare to track files loaded, dictionary of dictionaries, keys are parameter file paths
         self.tracker = dict()
 
         # create db if it does not already exist
-        error = db.establish_connection(
-            paramfile=self.d["db_paramfile"], db_name=self.d["db_name"]
-        )
+        error = db.establish_connection()
         if error:
-            db.create_new_db(
-                self.d["project_root"], self.d["db_paramfile"], self.d["db_name"]
-            )
+            db.create_new_db(self.d["project_root"])
 
         # connect to db
         try:
-            self.engine = db.sql_alchemy_connect(
-                paramfile=self.d["db_paramfile"], db_name=self.d["db_name"]
-            )
+            self.engine = db.sql_alchemy_connect()
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
         except Exception as e:
@@ -108,8 +100,8 @@ class DataLoader:
         """returns a dictionary of any files that threw an error"""
         mungers_path = os.path.join(self.d["project_root"], "mungers")
 
-        # list .par files and pull their jurisdiction_paths
-        par_files = [f for f in os.listdir(self.d["results_dir"]) if f[-4:] == ".par"]
+        # list .ini files and pull their jurisdiction_paths
+        par_files = [f for f in os.listdir(self.d["results_dir"]) if f[-4:] == ".ini"]
         params = dict()
         param_err = dict()
         juris_path = dict()
@@ -120,6 +112,7 @@ class DataLoader:
                 single_data_loader_pars,
                 optional_keys=["aux_data_dir"],
                 param_file=par_file,
+                header="election_anomaly"
             )
             juris_path[f] = params[f]["jurisdiction_path"]
             # update file_tracker
@@ -129,7 +122,7 @@ class DataLoader:
                 self.tracker["parameter_error"] = param_err[f]
 
         err = dict()
-        # group .par files by jurisdiction_path
+        # group .ini files by jurisdiction_path
         jurisdiction_paths = {juris_path[f] for f in par_files}
         files = dict()
         for jp in jurisdiction_paths:
@@ -219,8 +212,9 @@ class DataLoader:
         else:
             # move results file and its parameter file to a subfolder of the archive directory
             #  named for the db
+            db_param = ui.get_runtime_parameters(["dbname"], "run_time.ini", "postgresql")[0]
             self.tracker[f]["status"] = "loaded"
-            new_dir = os.path.join(self.d["archive_dir"], self.d["db_name"])
+            new_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
             ui.archive(f, self.d["results_dir"], new_dir)
             ui.archive(sdl.d["results_file"], self.d["results_dir"], new_dir)
             print_str = f"\tArchived {f} and its results file."
@@ -246,7 +240,10 @@ class SingleDataLoader:
         # grab parameters
         par_file = os.path.join(results_dir, par_file_name)
         self.d, self.parameter_err = ui.get_runtime_parameters(
-            single_data_loader_pars, optional_keys=["aux_data_dir"], param_file=par_file
+            single_data_loader_pars,
+            optional_keys=["aux_data_dir"],
+            param_file=par_file,
+            header="election_anomaly"
         )
 
         # change any blank parameters to 'none'
@@ -346,10 +343,10 @@ class JurisdictionPrepper:
     def __new__(cls):
         """Checks if parameter file exists and is correct. If not, does
         not create JurisdictionPrepper object."""
-        param_file = "jurisdiction_prep.par"
+        param_file = "jurisdiction_prep.ini"
         try:
             d, parameter_err = ui.get_runtime_parameters(
-                prep_pars, param_file="jurisdiction_prep.par"
+                prep_pars, param_file=param_file, header="election_anomaly"
             )
         except FileNotFoundError as e:
             print(
@@ -699,10 +696,10 @@ class JurisdictionPrepper:
         self, dir: str, error: dict = None, sub_ru_type: str = "precinct"
     ) -> dict:
         """Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
-        for each file in <dir> named (with munger) in a .par file in the directory"""
+        for each file in <dir> named (with munger) in a .ini file in the directory"""
         if not error:
             error = dict()
-        for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".par"]:
+        for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
             par_file = os.path.join(dir, par_file_name)
             file_dict, missing_params = ui.get_runtime_parameters(
                 ["results_file", "munger_name"],
@@ -727,8 +724,8 @@ class JurisdictionPrepper:
         self, elements: iter, dir: str, error: dict
     ):
         """Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
-        for each file in <dir> named (with munger) in a .par file in the directory"""
-        for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".par"]:
+        for each file in <dir> named (with munger) in a .ini file in the directory"""
+        for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
             par_file = os.path.join(dir, par_file_name)
             file_dict, missing_params = ui.get_runtime_parameters(
                 ["results_file", "munger_name"],
@@ -868,7 +865,8 @@ class JurisdictionPrepper:
         self.d, self.parameter_err = ui.get_runtime_parameters(
             prep_pars,
             optional_keys=optional_prep_pars,
-            param_file="jurisdiction_prep" ".par",
+            param_file="jurisdiction_prep.ini",
+            header="election_anomaly"
         )
         self.state_house = int(self.d["count_of_state_house_districts"])
         self.state_senate = int(self.d["count_of_state_senate_districts"])
@@ -886,12 +884,12 @@ def make_par_files(
     results_note: str = "none",
     aux_data_dir: str = "",
 ):
-    """Utility to create parameter files for multiple files. Makes a parameter file for each (non-.par,non .*) file in <dir>,
+    """Utility to create parameter files for multiple files. Makes a parameter file for each (non-.ini,non .*) file in <dir>,
     once all other necessary parameters are specified."""
-    data_file_list = [f for f in os.listdir(dir) if (f[-4:] != ".par") & (f[0] != ".")]
+    data_file_list = [f for f in os.listdir(dir) if (f[-4:] != ".ini") & (f[0] != ".")]
     for f in data_file_list:
         par_text = f"[election_anomaly]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\nmunger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\nresults_short_name={top_ru}_{f}\nresults_download_date={download_date}\nresults_source={source}\nresults_note={results_note}\naux_data_dir={aux_data_dir}\n"
-        par_name = ".".join(f.split(".")[:-1]) + ".par"
+        par_name = ".".join(f.split(".")[:-1]) + ".ini"
         with open(os.path.join(dir, par_name), "w") as p:
             p.write(par_text)
     return
@@ -903,7 +901,7 @@ class Analyzer:
         not create DataLoader object."""
         try:
             d, parameter_err = ui.get_runtime_parameters(
-                ["db_paramfile", "db_name", "results_file"]
+                ["dbname"], "run_time.ini", "postgresql"
             )
         except FileNotFoundError as e:
             print(
@@ -921,14 +919,12 @@ class Analyzer:
         return super().__new__(self)
 
     def __init__(self):
-        self.d, self.parameter_err = ui.get_runtime_parameters(
-            ["db_paramfile", "db_name", "results_file"]
-        )
-        self.d["results_file_short"] = get_filename(self.d["results_file"])
+        # self.d, self.parameter_err = ui.get_runtime_parameters(
+        #     ["db_paramfile", "db_name", "results_file"]
+        # )
+        # self.d["results_file_short"] = get_filename(self.d["results_file"])
 
-        eng = db.sql_alchemy_connect(
-            paramfile=self.d["db_paramfile"], db_name=self.d["db_name"]
-        )
+        eng = db.sql_alchemy_connect("run_time.ini")
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
@@ -944,52 +940,6 @@ class Analyzer:
         if results:
             return results
         return None
-
-    def top_counts_by_vote_type(self, election: str, rollup_unit: str, sub_unit: str) -> str:
-        d, error = ui.get_runtime_parameters(
-            ["rollup_directory"], param_file="multi.par"
-        )
-        if error:
-            err_str = (
-                f"Parameter file missing requirements.\n{error}\nNo results exported"
-            )
-            print(err_str)
-        else:
-            connection = self.session.bind.raw_connection()
-            cursor = connection.cursor()
-            rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
-            sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
-            election_id = db.name_to_id(self.session, "Election", election)
-            err_str = a.create_rollup(
-                cursor, d["rollup_directory"], rollup_unit_id, sub_unit_id, election_id
-            )
-            connection.close()
-        return err_str
-
-    def top_counts(self, rollup_unit: str , sub_unit: str):
-        d, error = ui.get_runtime_parameters(["rollup_directory"])
-        if error:
-            print("Parameter file missing requirements.")
-            print(error)
-            print("Data not created.")
-            return
-        else:
-            rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
-            sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
-            results_info = db.get_datafile_info(
-                self.session, self.d["results_file_short"]
-            )
-            rollup = a.create_rollup(
-                self.session,
-                d["rollup_directory"],
-                top_ru_id=rollup_unit_id,
-                sub_rutype_id=sub_unit_id,
-                sub_rutype_othertext="",
-                datafile_id_list=results_info[0],
-                election_id=results_info[1],
-                by_vote_type=False,
-            )
-            return
 
     def scatter(
         self,
@@ -1009,7 +959,7 @@ class Analyzer:
         html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
         installed as well."""
         d, error = ui.get_runtime_parameters(
-            ["rollup_directory"], param_file="analyze.par"
+            ["rollup_directory"], param_file="run_time.ini", header="election_anomaly"
         )
         if error:
             print("Parameter file missing requirements.")
@@ -1065,7 +1015,7 @@ class Analyzer:
     ) -> list:
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
-            ["rollup_directory", "sub_reporting_unit_type"], param_file="analyze.par"
+            ["rollup_directory"], param_file="run_time.ini", header="election_anomaly"
         )
         if error:
             print("Parameter file missing requirements.")
@@ -1073,13 +1023,13 @@ class Analyzer:
             print("Data not created.")
             return
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        most_granular_id = db.name_to_id(
-            self.session, "ReportingUnitType", d["sub_reporting_unit_type"]
-        )
+        # for now, bar charts can only handle jurisdictions where county is one level
+        # down from the jurisdiction
+        most_granular_id = db.name_to_id( self.session, "ReportingUnitType", "county")
         hierarchy = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id, most_granular_id
         )
-        results_info = db.get_datafile_info(self.session, self.d["results_file_short"])
+        election_id = db.most_recent_election(self.session, jurisdiction_id)
         # bar chart always at one level below top reporting unit
         agg_results = a.create_bar(
             self.session,
@@ -1087,7 +1037,7 @@ class Analyzer:
             hierarchy[1],
             contest_type,
             contest,
-            results_info[1],
+            election_id,
             False,
         )
         if fig_type:
@@ -1110,7 +1060,7 @@ class Analyzer:
     def export_outlier_data(self, jurisdiction: str, contest: str=None):
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
-            ["rollup_directory", "sub_reporting_unit_type"], param_file="analyze.par"
+            ["rollup_directory"], param_file="run_time.ini", header="election_anomaly"
         )
         if error:
             print("Parameter file missing requirements.")

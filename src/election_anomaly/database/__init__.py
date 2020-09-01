@@ -80,6 +80,13 @@ Northern Mariana Islands
 Puerto Rico
 US Virgin Islands"""
 
+db_pars = [
+    "host",
+    "port",
+    "dbname",
+    "user",
+    "password"
+]
 
 def get_database_names(con):
     """Return dataframe with one column called `datname` """
@@ -163,21 +170,24 @@ def append_to_composing_reporting_unit_join(engine, ru):
     return cruj_dframe
 
 
-def establish_connection(paramfile, db_name="postgres"):
+def establish_connection(paramfile="run_time.ini", dbname=None):
     """Check for DB and relevant tables; if they don't exist, return
     error message"""
     try:
-        params = ui.config(paramfile)
+        params = ui.get_runtime_parameters(
+            db_pars, param_file=paramfile, header="postgresql"
+        )[0]
     except MissingSectionHeaderError as e:
         return {"message": "database.ini file not found suggested location."}
-    params["dbname"] = db_name
+    if dbname:
+        params["dbname"] = dbname
     try:
         con = psycopg2.connect(**params)
     except psycopg2.OperationalError as e:
         return {"message": "Unable to establish connection to database."}
 
     # Look for tables
-    engine = sql_alchemy_connect(paramfile, db_name)
+    engine = sql_alchemy_connect(paramfile)
     elems, enums, joins, o = get_cdf_db_table_names(engine)
 
     # All tables except "Others" must be created. Essentially looks for
@@ -189,10 +199,11 @@ def establish_connection(paramfile, db_name="postgres"):
     return None
 
 
-def create_new_db(project_root, paramfile, db_name):
+def create_new_db(project_root, param_file="run_time.ini"):
     # get connection to default postgres DB to create new one
     try:
-        params = ui.config(paramfile)
+        params = ui.get_runtime_parameters(db_pars, param_file, "postgresql")[0]
+        db_name = params["dbname"] 
         params["dbname"] = "postgres"
         con = psycopg2.connect(**params)
     except:
@@ -203,7 +214,7 @@ def create_new_db(project_root, paramfile, db_name):
     cur = con.cursor()
     db_df = get_database_names(con)
 
-    eng = sql_alchemy_connect(paramfile=paramfile, db_name=db_name)
+    eng = sql_alchemy_connect(param_file, dbname=params["dbname"])
     Session = sqlalchemy.orm.sessionmaker(bind=eng)
     sess = Session()
 
@@ -231,14 +242,14 @@ def create_new_db(project_root, paramfile, db_name):
 
 
 def sql_alchemy_connect(
-    paramfile: str = None, db_name: str = "postgres"
+    paramfile: str = "run_time.ini", dbname: str = "postgres"
 ) -> sqlalchemy.engine:
     """Returns an engine and a metadata object"""
-    if not paramfile:
-        paramfile = ui.pick_paramfile()
-    params = ui.config(paramfile)
-    if db_name != "postgres":
-        params["dbname"] = db_name
+    params = ui.get_runtime_parameters(
+        db_pars, param_file=paramfile, header="postgresql"
+    )[0]
+    if dbname != "postgres":
+        params["dbname"] = dbname
     # We connect with the help of the PostgreSQL URL
     url = "postgresql://{user}:{password}@{host}:{port}/{dbname}"
     url = url.format(**params)
@@ -1196,3 +1207,17 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
     result_df = pd.DataFrame(result)
     result_df.columns = result.keys()
     return result_df
+
+
+def most_recent_election(session, jurisdiction_id):
+    q = session.execute(
+        f"""
+        SELECT  "Election_Id"
+        FROM    _datafile d
+                JOIN "Election" e on d."Election_Id" = e."Id"
+        WHERE   "ReportingUnit_Id" = 274
+        ORDER BY "Name" desc
+        LIMIT   1
+    """
+    ).fetchall()
+    return q[0][0]

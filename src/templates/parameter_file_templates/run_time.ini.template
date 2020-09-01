@@ -1,0 +1,12 @@
+[election_anomaly]
+project_root=</path/to/src/>
+results_dir=</path/to/folder/containing/result/and/parameter/files/for/batch/upload>
+archive_dir=</path/to/folder/for/archiving/uploaded/files>
+rollup_directory=</path/to/folder/for/storing/rolled-up/results>
+
+[postgresql]
+host=<url for your postgresql server>
+port=<port for your postgresql server>
+dbname=<name of your election data database>
+user=<your user name>
+password=<your password>
