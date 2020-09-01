@@ -2,15 +2,15 @@ import csv
 import os.path
 
 import pandas as pd
-from election_anomaly import user_interface as ui
-from election_anomaly import munge as m
+from election_data_analysis import user_interface as ui
+from election_data_analysis import munge as m
 import datetime
 import os
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 from pandas.api.types import is_numeric_dtype
-from election_anomaly import database as db
+from election_data_analysis import database as db
 import scipy.spatial.distance as dist
 from scipy import stats
 import math

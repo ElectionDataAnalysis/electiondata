@@ -19,7 +19,7 @@ from sqlalchemy import Date, TIMESTAMP
 from psycopg2 import sql
 import os
 import pandas as pd
-from election_anomaly import database as db
+from election_data_analysis import database as db
 import datetime
 
 

@@ -1,10 +1,10 @@
 import os.path
 
-from election_anomaly import database as db
+from election_data_analysis import database as db
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
-from election_anomaly import munge as m
-from election_anomaly import user_interface as ui
+from election_data_analysis import munge as m
+from election_data_analysis import user_interface as ui
 import re
 import numpy as np
 from pathlib import Path
@@ -683,7 +683,7 @@ def check_nulls(element, f_path, project_root):
     # TODO automatically drop null rows
     nn_path = os.path.join(
         project_root,
-        "election_anomaly/CDF_schema_def_info/elements",
+        "election_data_analysis/CDF_schema_def_info/elements",
         element,
         "not_null_fields.txt",
     )
@@ -797,7 +797,7 @@ def load_juris_dframe_into_cdf(
 ) -> dict:
     """TODO"""
     cdf_schema_def_dir = os.path.join(
-        project_root, "election_anomaly/CDF_schema_def_info"
+        project_root, "election_data_analysis/CDF_schema_def_info"
     )
     element_fpath = os.path.join(juris_path, f"{element}.txt")
     if not os.path.exists(element_fpath):

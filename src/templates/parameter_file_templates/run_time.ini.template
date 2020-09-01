@@ -1,4 +1,4 @@
-[election_anomaly]
+[election_data_analysis]
 project_root=</path/to/src/>
 results_dir=</path/to/folder/containing/result/and/parameter/files/for/batch/upload>
 archive_dir=</path/to/folder/for/archiving/uploaded/files>

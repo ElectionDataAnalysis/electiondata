@@ -58,7 +58,7 @@ It's easiest to use the JurisdictionPrepper() object to create or update jurisdi
 
 1. From the directory containing `jurisdiction_prep.ini`, open a python interpreter. Import the package and initialize a JurisdictionPrepper(), e.g.:
 ```
->>> import election_anomaly as ea
+>>> import election_data_analysis as ea
 >>> jp = ea.JurisdictionPrepper()
 ```
 2. Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
@@ -238,7 +238,7 @@ The DataLoader class allows batch uploading of all data in a given directory. Th
 The `load_all()` method will read each `.ini` file and make the corresponding upload.
 From a directory containing a `run_time.ini` parameter file, run
 ```
-import election_anomaly as ea
+import election_data_analysis as ea
 dl = ea.DataLoader()
 err = dl.load_all()
 ```

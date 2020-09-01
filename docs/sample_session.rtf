@@ -18,21 +18,21 @@
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \fs28 \cf0 % 
-\f1\b mkdir my_election_anomaly_finder\
+\f1\b mkdir my_election_data_analysis_finder\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f0\i\b0 \cf0 \
-	Navigate to directory and clone repository. This creates a repository subdirectory called 'election_anomaly'
+	Navigate to directory and clone repository. This creates a repository subdirectory called 'election_data_analysis'
 \f2\i0\fs24 . 
 \fs28 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \cf0  % 
-\f1\b cd my_election_anomaly_finder
+\f1\b cd my_election_data_analysis_finder
 \f2\b0  \
- my_election_anomaly_finder % 
-\f1\b git clone https://github.com/sfsinger19103/election_anomaly.git
+ my_election_data_analysis_finder % 
+\f1\b git clone https://github.com/sfsinger19103/election_data_analysis.git
 \f2\b0\fs24 \
-Cloning into 'election_anomaly'...\
+Cloning into 'election_data_analysis'...\
 remote: Enumerating objects: 431, done.\
 remote: Counting objects: 100% (431/431), done.\
 remote: Compressing objects: 100% (235/235), done.\
@@ -46,7 +46,7 @@ Resolving deltas: 100% (5546/5546), done.\
 \f2\i0\fs24 .\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\fs28 \cf0  my_election_anomaly_finder % 
+\fs28 \cf0  my_election_data_analysis_finder % 
 \f1\b wget https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2018_11_06/provisional_20181106.txt
 \f2\b0 \
 
@@ -67,10 +67,10 @@ provisional_20181106. 100%[========================>]  12.21M  5.04MB/s    in 2.
 \f2\i0\fs24 .\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\fs28 \cf0 my_election_anomaly_finder % 
-\f1\b cd election_anomaly
+\fs28 \cf0 my_election_data_analysis_finder % 
+\f1\b cd election_data_analysis
 \f2\b0          \
- election_anomaly % 
+ election_data_analysis % 
 \f1\b python3 setup.py install
 \f2\b0 \
 
@@ -85,15 +85,15 @@ running egg_info\
 Using /usr/local/lib/python3.7/site-packages\
 Finished processing dependencies for election-anomaly==0.1\
 
-\fs28  election_anomaly % 
+\fs28  election_data_analysis % 
 \f1\b cd ..
 \f2\b0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f0\i \cf0 \
-	Using whatever editor you like, create a file called 'run_time.ini` in the 'election_anomaly' directory using 'election_anomaly/src/templates/parameter_file_templates/run_time.ini' as a template. For instance, replace '<path to project root>' with the path to your current directory, so the line will look like this:\
+	Using whatever editor you like, create a file called 'run_time.ini` in the 'election_data_analysis' directory using 'election_data_analysis/src/templates/parameter_file_templates/run_time.ini' as a template. For instance, replace '<path to project root>' with the path to your current directory, so the line will look like this:\
 				
-\f2\i0 project_root=/Users/sfsinger/Temp/my_election_anomaly_finder
+\f2\i0 project_root=/Users/sfsinger/Temp/my_election_data_analysis_finder
 \fs24 \
 
 \f0\i\fs28 Do not use spaces or quotes.
@@ -104,8 +104,8 @@ Finished processing dependencies for election-anomaly==0.1\
 \f2\i0\fs24  \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\fs28 \cf0  my_election_anomaly_finder % 
-\f1\b python3 election_anomaly/src/election_anomaly/main_routines/050_load_datafile.py
+\fs28 \cf0  my_election_data_analysis_finder % 
+\f1\b python3 election_data_analysis/src/election_data_analysis/main_routines/050_load_datafile.py
 \f2\b0  \
 
 \fs24 \

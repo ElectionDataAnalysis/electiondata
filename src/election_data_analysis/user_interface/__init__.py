@@ -1,5 +1,5 @@
 from configparser import ConfigParser
-from election_anomaly import munge as m
+from election_data_analysis import munge as m
 import pandas as pd
 from pandas.errors import ParserError, ParserWarning
 import numpy as np
@@ -10,7 +10,7 @@ from pathlib import Path
 import ntpath
 import re
 import datetime
-from election_anomaly import juris_and_munger as jm
+from election_data_analysis import juris_and_munger as jm
 import random
 from tkinter import filedialog
 from configparser import MissingSectionHeaderError

@@ -1,6 +1,6 @@
-from election_anomaly import database as db
-from election_anomaly import user_interface as ui
-from election_anomaly import munge as m
+from election_data_analysis import database as db
+from election_data_analysis import user_interface as ui
+from election_data_analysis import munge as m
 from sqlalchemy.orm import sessionmaker
 import datetime
 from pathlib import Path
@@ -9,10 +9,10 @@ import pandas as pd
 from pprint import pprint
 import sys
 import ntpath
-from election_anomaly import analyze as a
-from election_anomaly import visualize as v
-from election_anomaly import juris_and_munger as jm
-from election_anomaly import preparation as prep
+from election_data_analysis import analyze as a
+from election_data_analysis import visualize as v
+from election_data_analysis import juris_and_munger as jm
+from election_data_analysis import preparation as prep
 
 # constants
 single_data_loader_pars = [
@@ -56,7 +56,7 @@ class DataLoader:
         not create DataLoader object."""
         try:
             d, parameter_err = ui.get_runtime_parameters(
-                multi_data_loader_pars, param_file="run_time.ini", header="election_anomaly"
+                multi_data_loader_pars, param_file="run_time.ini", header="election_data_analysis"
             )
         except FileNotFoundError as e:
             print(
@@ -76,7 +76,7 @@ class DataLoader:
     def __init__(self):
         # grab parameters
         self.d, self.parameter_err = ui.get_runtime_parameters(
-            multi_data_loader_pars, param_file="run_time.ini", header="election_anomaly"
+            multi_data_loader_pars, param_file="run_time.ini", header="election_data_analysis"
         )
 
         # prepare to track files loaded, dictionary of dictionaries, keys are parameter file paths
@@ -112,7 +112,7 @@ class DataLoader:
                 single_data_loader_pars,
                 optional_keys=["aux_data_dir"],
                 param_file=par_file,
-                header="election_anomaly"
+                header="election_data_analysis"
             )
             juris_path[f] = params[f]["jurisdiction_path"]
             # update file_tracker
@@ -243,7 +243,7 @@ class SingleDataLoader:
             single_data_loader_pars,
             optional_keys=["aux_data_dir"],
             param_file=par_file,
-            header="election_anomaly"
+            header="election_data_analysis"
         )
 
         # change any blank parameters to 'none'
@@ -346,7 +346,7 @@ class JurisdictionPrepper:
         param_file = "jurisdiction_prep.ini"
         try:
             d, parameter_err = ui.get_runtime_parameters(
-                prep_pars, param_file=param_file, header="election_anomaly"
+                prep_pars, param_file=param_file, header="election_data_analysis"
             )
         except FileNotFoundError as e:
             print(
@@ -866,7 +866,7 @@ class JurisdictionPrepper:
             prep_pars,
             optional_keys=optional_prep_pars,
             param_file="jurisdiction_prep.ini",
-            header="election_anomaly"
+            header="election_data_analysis"
         )
         self.state_house = int(self.d["count_of_state_house_districts"])
         self.state_senate = int(self.d["count_of_state_senate_districts"])
@@ -888,7 +888,7 @@ def make_par_files(
     once all other necessary parameters are specified."""
     data_file_list = [f for f in os.listdir(dir) if (f[-4:] != ".ini") & (f[0] != ".")]
     for f in data_file_list:
-        par_text = f"[election_anomaly]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\nmunger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\nresults_short_name={top_ru}_{f}\nresults_download_date={download_date}\nresults_source={source}\nresults_note={results_note}\naux_data_dir={aux_data_dir}\n"
+        par_text = f"[election_data_analysis]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\nmunger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\nresults_short_name={top_ru}_{f}\nresults_download_date={download_date}\nresults_source={source}\nresults_note={results_note}\naux_data_dir={aux_data_dir}\n"
         par_name = ".".join(f.split(".")[:-1]) + ".ini"
         with open(os.path.join(dir, par_name), "w") as p:
             p.write(par_text)
@@ -959,7 +959,7 @@ class Analyzer:
         html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
         installed as well."""
         d, error = ui.get_runtime_parameters(
-            ["rollup_directory"], param_file="run_time.ini", header="election_anomaly"
+            ["rollup_directory"], param_file="run_time.ini", header="election_data_analysis"
         )
         if error:
             print("Parameter file missing requirements.")
@@ -1015,7 +1015,7 @@ class Analyzer:
     ) -> list:
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
-            ["rollup_directory"], param_file="run_time.ini", header="election_anomaly"
+            ["rollup_directory"], param_file="run_time.ini", header="election_data_analysis"
         )
         if error:
             print("Parameter file missing requirements.")
@@ -1060,7 +1060,7 @@ class Analyzer:
     def export_outlier_data(self, jurisdiction: str, contest: str=None):
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
-            ["rollup_directory"], param_file="run_time.ini", header="election_anomaly"
+            ["rollup_directory"], param_file="run_time.ini", header="election_data_analysis"
         )
         if error:
             print("Parameter file missing requirements.")

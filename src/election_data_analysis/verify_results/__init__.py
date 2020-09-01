@@ -3,7 +3,7 @@
 
 import pandas as pd
 import ntpath
-from election_anomaly import user_interface as ui
+from election_data_analysis import user_interface as ui
 import os
 import time
 import pandas.io.common as pderror

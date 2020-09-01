@@ -1,6 +1,6 @@
-from election_anomaly import database as db
-from election_anomaly import user_interface as ui
-from election_anomaly import juris_and_munger as jm
+from election_data_analysis import database as db
+from election_data_analysis import user_interface as ui
+from election_data_analysis import juris_and_munger as jm
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
 import re

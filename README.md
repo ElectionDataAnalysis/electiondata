@@ -24,10 +24,10 @@ If you are a potential end user -- an election official, political scientist or 
 If you are interested in contributing, or just staying updated on the progress of this project, please [contact Stephanie Singer](http://symmetrysinger.com/index.php?id=contact). 
 
 # How to run the app
-Clone the repository to a local machine. Navigate to `/path/to/repo/election_anomaly` and run `python3 setup.py install`. 
+Clone the repository to a local machine. Navigate to `/path/to/repo/election_data_analysis` and run `python3 setup.py install`. 
 
 # How to use the app
-Detailed instructions can be found [here](https://github.com/sfsinger19103/election_anomaly/blob/master/docs/User_Guide.md).
+Detailed instructions can be found [here](https://github.com/sfsinger19103/election_data_analysis/blob/master/docs/User_Guide.md).
 
 ## Environment
 ### Database

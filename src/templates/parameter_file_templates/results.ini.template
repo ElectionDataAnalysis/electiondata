@@ -1,4 +1,4 @@
-[election_anomaly]
+[election_data_analysis]
 results_file=<just the name, not the path. File should be in the same directory as this parameter file>
 jurisdiction_path=<path/to/folder/containing/jurisdiction/definition/files>
 munger_name=<comma-separated list of all mungers to be applied to the file.>

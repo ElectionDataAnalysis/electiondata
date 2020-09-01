@@ -13,16 +13,16 @@ from psycopg2 import OperationalError, errorcodes, errors
 from psycopg2 import sql
 import sqlalchemy as db
 import datetime
-from election_anomaly import user_interface as ui
+from election_data_analysis import user_interface as ui
 from configparser import MissingSectionHeaderError
 import pandas as pd
-from election_anomaly import munge as m
+from election_data_analysis import munge as m
 import re
-from election_anomaly.database import create_cdf_db as db_cdf
+from election_data_analysis.database import create_cdf_db as db_cdf
 import os
 import numpy as np
 from sqlalchemy import MetaData, Table, Column, Integer, Float
-from election_anomaly import analyze as a
+from election_data_analysis import analyze as a
 
 states = """Alabama
 Alaska
@@ -223,7 +223,7 @@ def create_new_db(project_root, param_file="run_time.ini"):
     if db_name in db_df.datname.unique():
         # Clean out DB
         db_cdf.reset_db(
-            sess, os.path.join(project_root, "election_anomaly", "CDF_schema_def_info")
+            sess, os.path.join(project_root, "election_data_analysis", "CDF_schema_def_info")
         )
     else:
         create_database(con, cur, db_name)
@@ -231,12 +231,12 @@ def create_new_db(project_root, param_file="run_time.ini"):
     # load cdf tables
     db_cdf.create_common_data_format_tables(
         sess,
-        dirpath=os.path.join(project_root, "election_anomaly", "CDF_schema_def_info"),
+        dirpath=os.path.join(project_root, "election_data_analysis", "CDF_schema_def_info"),
     )
     db_cdf.fill_standard_tables(
         sess,
         None,
-        dirpath=os.path.join(project_root, "election_anomaly/CDF_schema_def_info/"),
+        dirpath=os.path.join(project_root, "election_data_analysis/CDF_schema_def_info/"),
     )
     con.close()
 

@@ -1,4 +1,4 @@
-[election_anomaly]
+[election_data_analysis]
 project_root=</path/to/src/>
 jurisdiction_path=<path/to/folder/containing/jurisdiction/definition/files>
 name=<internal db name from ReportingUnit table>
