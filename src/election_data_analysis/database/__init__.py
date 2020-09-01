@@ -1215,7 +1215,7 @@ def most_recent_election(session, jurisdiction_id):
         SELECT  "Election_Id"
         FROM    _datafile d
                 JOIN "Election" e on d."Election_Id" = e."Id"
-        WHERE   "ReportingUnit_Id" = 274
+        WHERE   "ReportingUnit_Id" = {jurisdiction_id}
         ORDER BY "Name" desc
         LIMIT   1
     """
