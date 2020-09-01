@@ -80,13 +80,8 @@ Northern Mariana Islands
 Puerto Rico
 US Virgin Islands"""
 
-db_pars = [
-    "host",
-    "port",
-    "dbname",
-    "user",
-    "password"
-]
+db_pars = ["host", "port", "dbname", "user", "password"]
+
 
 def get_database_names(con):
     """Return dataframe with one column called `datname` """
@@ -203,7 +198,7 @@ def create_new_db(project_root, param_file="run_time.ini"):
     # get connection to default postgres DB to create new one
     try:
         params = ui.get_runtime_parameters(db_pars, param_file, "postgresql")[0]
-        db_name = params["dbname"] 
+        db_name = params["dbname"]
         params["dbname"] = "postgres"
         con = psycopg2.connect(**params)
     except:
@@ -223,7 +218,8 @@ def create_new_db(project_root, param_file="run_time.ini"):
     if db_name in db_df.datname.unique():
         # Clean out DB
         db_cdf.reset_db(
-            sess, os.path.join(project_root, "election_data_analysis", "CDF_schema_def_info")
+            sess,
+            os.path.join(project_root, "election_data_analysis", "CDF_schema_def_info"),
         )
     else:
         create_database(con, cur, db_name)
@@ -231,12 +227,16 @@ def create_new_db(project_root, param_file="run_time.ini"):
     # load cdf tables
     db_cdf.create_common_data_format_tables(
         sess,
-        dirpath=os.path.join(project_root, "election_data_analysis", "CDF_schema_def_info"),
+        dirpath=os.path.join(
+            project_root, "election_data_analysis", "CDF_schema_def_info"
+        ),
     )
     db_cdf.fill_standard_tables(
         sess,
         None,
-        dirpath=os.path.join(project_root, "election_data_analysis/CDF_schema_def_info/"),
+        dirpath=os.path.join(
+            project_root, "election_data_analysis/CDF_schema_def_info/"
+        ),
     )
     con.close()
 
