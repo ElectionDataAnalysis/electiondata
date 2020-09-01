@@ -242,6 +242,7 @@ class Munger:
             self.encoding,
             self.thousands_separator,
             self.aux_meta,
+            self.options
         ] = read_munger_info_from_files(
             self.path_to_munger_dir
         )
@@ -291,7 +292,7 @@ def read_munger_info_from_files(dir_path):
     # read formatting info
     required_keys = munger_pars_req
     optional_keys = munger_pars_opt
-    d, missing_required_params = ui.get_runtime_parameters(
+    options, missing_required_params = ui.get_runtime_parameters(
         required_keys,
         optional_keys=optional_keys,
         param_file=os.path.join(dir_path,'format.ini'),
@@ -299,28 +300,29 @@ def read_munger_info_from_files(dir_path):
     )
     try:
         # if field_name_row can be interpreted as an integer, use it
-        field_name_row = int(d['field_name_row'])
+        field_name_row = int(options['field_name_row'])
         field_names_if_no_field_name_row = None
     except Exception:
         # otherwise assume no field_name_row
         field_name_row = None
-        field_names_if_no_field_name_row = d['field_names_if_no_field_name_row'].split(',')
+        field_names_if_no_field_name_row = options['field_names_if_no_field_name_row'].split(',')
 
-    header_row_count = int(d['header_row_count'])
-    if 'count_columns' not in d.keys() or d['count_columns'] in ['','None']:
+    header_row_count = int(options['header_row_count'])
+    if 'count_columns' not in options.keys() or options['count_columns'] in ['','None']:
         count_columns = []
     else:
-        count_columns = [int(x) for x in d['count_columns'].split(',')]
-    file_type = d['file_type']
-    if 'encoding' in d.keys():
-        encoding = d['encoding']
+        count_columns = [int(x) for x in options['count_columns'].split(',')]
+    file_type = options['file_type']
+    if 'encoding' in options.keys():
+        encoding = options['encoding']
     else:
         encoding = 'iso-8859-1'
-    if 'thousands_separator' in d.keys() and d['thousands_separator'] not in ['','None']:
-        thousands_separator = d['thousands_separator']
+    if 'thousands_separator' in options.keys() and options['thousands_separator'] not in ['','None']:
+        thousands_separator = options['thousands_separator']
     else:
         thousands_separator = None
-
+    # TODO have options hold all optional parameters (and maybe even all parameters)
+    #  and remove explicit attributes entirely?
     return [
         cdf_elements,
         header_row_count,
@@ -331,6 +333,7 @@ def read_munger_info_from_files(dir_path):
         encoding,
         thousands_separator,
         aux_meta,
+        options
     ]
 
 
