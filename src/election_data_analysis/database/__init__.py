@@ -796,9 +796,22 @@ def get_input_options(session, input, verbose):
         connection.close()
         return [r[0] for r in result]
     else:
-        # jurisction result are handled differently than the rest of the flow because
+        # election result are handled differently than the rest of the flow because
         # it's the first selection made
-        if search_str == "jurisdiction":
+        if search_str == 'Election':
+            result = session.execute(
+                f"""
+                SELECT  e."Id" AS parent, "Name" AS name, "Txt" as type
+                FROM    "Election" e
+                        JOIN "ElectionType" et on e."ElectionType_Id" = et."Id"
+                WHERE   "Name" != 'none or unknown'
+                ORDER BY LEFT("Name", 4) DESC, RIGHT("Name", LENGTH("Name") - 5)
+            """
+            )
+            result_df = pd.DataFrame(result)
+            result_df.columns = result.keys()
+            return package_display_results(result_df)
+        elif search_str == "jurisdiction":
             result = session.execute(
                 f"""
                 WITH states(states) AS (
@@ -812,7 +825,7 @@ def get_input_options(session, input, verbose):
                     SELECT    *, ROW_NUMBER() OVER() AS order_by
                     FROM    unnested u
                 )
-                SELECT    states as parent,
+                SELECT  states as parent,
                         states AS name, 
                         CASE WHEN "Id" IS null THEN false ELSE true END AS type
                 FROM    ordered o
