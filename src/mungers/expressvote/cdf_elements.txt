@@ -1,0 +1,8 @@
+name	raw_identifier_formula	source
+ReportingUnit	<ReportingUnit>	row
+Party		row
+CandidateContest	<Contest>	row
+Candidate	<Candidate>	row
+BallotMeasureContest	<Contest>	row
+BallotMeasureSelection	<Candidate>	row
+CountItemType	<CountItemType>	row

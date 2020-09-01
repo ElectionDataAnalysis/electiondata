@@ -2,22 +2,7 @@ import pandas as pd
 import io
 from election_anomaly import munge as m
 from election_anomaly import juris_and_munger as jm
-
-
-def factor_list(li: list) -> (list, int):
-    """Finds the smallest prefix list p such that li is a multiple of p"""
-    prefix = list()
-    multiple = 0
-    n = len(li)
-    for k in range(1,n+1):
-        # if k is a factor of n
-        if n % k == 0:
-            # see if prefix of length k generates list
-            prefix = li[:k]
-            if prefix * int(n/k) == li:
-                multiple = int(n/k)
-                break
-    return prefix, multiple
+from election_anomaly import user_interface as ui
 
 
 def strip_empties(li: list) -> list:
@@ -42,69 +27,85 @@ def extract_items (line: str, w: int) -> list:
     return item_list
 
 
-def process_expressvote(f_path: str, munger: jm.Munger, w: int, empty_top_line_count) -> pd.DataFrame:
-    with open(f_path,'r') as f:
-        data = f.readlines()
+def process_expressvote(f_path: str, munger: jm.Munger, err: dict) -> (pd.DataFrame, dict):
+    """Assumes first column of each block is ReportingUnit, last column is contest total"""
+    try:
+        with open(f_path,'r') as f:
+            data = f.readlines()
+    except Exception as exc:
+        err = ui.add_error(err,'datafile_error',f'Datafile not read:\n{exc}')
+        return pd.DataFrame(), err
 
-    for i in range(empty_top_line_count):
-        # get rid of spurious top lines
+    w = int(munger.options['column_width'])
+
+    for i in range(munger.options['empty_top_line_count']-1):
+        # get rid of spurious top lines, leaving one blank line at top
         data.pop(0)
 
     df = dict()
-    while len(data) > 3:
-        # pop the blank line
-        blank = data.pop(0)
+    try:
+        while len(data) > 3:
+            # pop the blank line
+            data.pop(0)
 
-        # get the contest line, candidate line and csv-header line
-        contest = data.pop(0).strip()
-        candidate_line = data.pop(0)
-        header_line = data.pop(0)
+            # get the contest line, candidate line and csv-header line
+            contest = data.pop(0).strip()
+            candidate_line = data.pop(0)
+            header_line = data.pop(0)
 
-        #  create multi-index from the candidate and votetype, with first index 'county/county'
-        #  and last index 'Total/Total'
-        field_list = extract_items(header_line, w)
-        votetype, candidate_count = factor_list(field_list[1:-1])
-        candidate_list = extract_items(candidate_line,w * len(votetype))
+            # get info from header line
+            field_list = extract_items(header_line, w)
+            ru_title = field_list[0]
+            v_t_cc = int(munger.options['vote_type_column_count'])
+            vote_type = field_list[1: 1 + v_t_cc]
+            assert (len(field_list) - 2) % v_t_cc == 0
 
-        index_array = [
-            [field_list[0]] + [y for z in [[cand] * len(votetype) for cand in candidate_list] for y in z] + ['Total'],
-            [field_list[0]] + votetype * len(candidate_list) + ['Total']
-        ]
-        multi_index = pd.MultiIndex.from_arrays(index_array)
+            candidate_list = extract_items(candidate_line, w * v_t_cc)
 
-        # create df from next batch of lines, with that multi-index
-        # find idx of next empty line
-        next_empty = next(idx for idx in range(len(data)) if data[idx] == '\n')
+            #  create multi-index from the candidate and votetype, with first index 'county/county'
+            #  and last index 'Total/Total'
+            index_array = [
+                [field_list[0]] + [y for z in [[cand] * v_t_cc for cand in candidate_list] for y in z] + ['Total'],
+                [field_list[0]] + vote_type * len(candidate_list) + ['Total']
+            ]
+            multi_index = pd.MultiIndex.from_arrays(index_array)
 
-        # create io
-        vote_count_block = io.StringIO()
-        vote_count_block.write(''.join(data[:next_empty]))
-        vote_count_block.seek(0)
+            # create df from next batch of lines, with that multi-index
+            # find idx of next empty line
+            next_empty = next(idx for idx in range(len(data)) if data[idx] == '\n')
 
-        df[contest] = pd.read_fwf(vote_count_block,colspecs='infer',index=False)
-        df[contest].columns = multi_index
+            # create io
+            vote_count_block = io.StringIO()
+            vote_count_block.write(''.join(data[:next_empty]))
+            vote_count_block.seek(0)
 
-        # Drop contest-total column
-        df[contest].drop('Total',axis=1,level=1,inplace=True)
+            df[contest] = pd.read_fwf(vote_count_block,colspecs='infer',index=False)
+            df[contest].columns = multi_index
 
-        # move candidate & votetype info to columns
-        df[contest] = pd.melt(df[contest],col_level=1,id_vars=['County'],var_name='Count',value_name='CountItemType_raw').rename(columns={'County':'ReportingUnit_raw'})
+            # Drop contest-total column
+            df[contest].drop('Total',axis=1,level=1,inplace=True)
 
-        # Add columns for contest
-        df[contest] = m.add_constant_column(df[contest],'Contest_raw',contest)
+            # move candidate & votetype info to columns
+            df[contest] = pd.melt(df[contest],col_level=1,id_vars=[ru_title],var_name='Count',value_name='CountItemType').rename(columns={ru_title:'ReportingUnit'})
 
-        # remove processed lines from data
-        data = data[next_empty:]
+            # Add columns for contest
+            df[contest] = m.add_constant_column(df[contest],'Contest',contest)
 
-        # TODO deal with any garbage at bottom of file.
+            # remove processed lines from data
+            data = data[next_empty:]
+
+            # TODO deal with any garbage at bottom of file.
+    except Exception as exc:
+        err = ui.add_error(err,'datafile_error',f'Datafile parsing error:\n{exc}')
+        return pd.DataFrame(), err
 
     raw_results = pd.concat(list(df.values()))
-    return raw_results
+    return raw_results, err
 
 if __name__ == '__main__':
     f_path = '/Users/singer3/Documents/Data-Office-Mac/Georgia/2020-Primary/Georgia_20200609_Primary.txt'
     mu = jm.Munger(
-        '/Users/singer3/PycharmProjects/results_analysis/src/mungers/ga_pri',
+        '/mungers/expressvote',
         project_root='/Users/singer3/PycharmProjects/results_analysis/src'
     )
     width = 30

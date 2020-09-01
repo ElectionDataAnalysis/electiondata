@@ -1,5 +1,6 @@
 from configparser import ConfigParser
 from election_anomaly import munge as m
+from election_anomaly import special_formats as sf
 import pandas as pd
 from pandas.errors import ParserError, ParserWarning
 import numpy as np
@@ -445,7 +446,7 @@ def read_combine_results(
         working, err = read_single_datafile(mu, results_file, err)
     except Exception as exc:
         e = f"Exception while reading file {results_file}: {exc}"
-        add_error(err, "datafile", e)
+        add_error(err, "datafile_error", e)
     if [k for k in err.keys() if err[k] != None]:
         return pd.DataFrame(), err
     else:
@@ -505,16 +506,22 @@ def new_datafile(
     into common data format.
     Assumes cdf db exists already"""
     err = dict()
-    raw, err = read_combine_results(
-        munger, raw_path, project_root, err, aux_data_dir=aux_data_dir
-    )
-    if raw.empty:
+
+    # read results from file
+    if munger.name == "expressvote":
+        raw, err = sf.process_expressvote(raw_path, munger, err)
+    else:
+        raw, err = read_combine_results(
+            munger, raw_path, project_root, err, aux_data_dir=aux_data_dir
+        )
+    if "datafile_error" in err.keys():
+        return err
+    elif raw.empty:
         e = f"No data read from datafile {raw_path}."
         add_error(err, "datafile_error", e)
         return err
 
-    count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
-
+    # clean the data
     try:
         raw = m.munge_clean(raw, munger)
     except:
@@ -523,14 +530,14 @@ def new_datafile(
         ]
         return err
 
+    # munge and upload
+
     try:
         err = m.raw_elements_to_cdf(
             session,
-            project_root,
             juris,
             munger,
             raw,
-            count_columns_by_name,
             err,
             ids=results_info,
         )

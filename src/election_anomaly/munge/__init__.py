@@ -64,14 +64,18 @@ def munge_clean(raw: pd.DataFrame, munger: jm.Munger):
     working = raw.copy()
     # drop columns that are neither count columns nor used in munger formulas
     #  define columns named in munger formulas
-    if munger.header_row_count > 1:
+    if munger.name == 'expressvote':
+        munger_formula_columns = ['ReportingUnit','Contest','Candidate','CountItemType']
+    elif munger.header_row_count > 1:
         munger_formula_columns = [
             x for x in working.columns if x[munger.field_name_row] in munger.field_list
         ]
     else:
         munger_formula_columns = [x for x in working.columns if x in munger.field_list]
 
-    if munger.field_name_row is None:
+    if munger.name == 'expressvote':
+        count_columns_by_name = ['Count']
+    elif munger.field_name_row is None:
         count_columns_by_name = [
             munger.field_names_if_no_field_name_row[idx] for idx in munger.count_columns
         ]
@@ -590,11 +594,9 @@ def add_selection_id(
 
 def raw_elements_to_cdf(
     session,
-    project_root: str,
     juris: jm.Jurisdiction,
     mu: jm.Munger,
     raw: pd.DataFrame,
-    count_cols: list,
     err: dict,
     ids=None,
 ) -> dict:
@@ -606,6 +608,7 @@ def raw_elements_to_cdf(
     working = add_constant_column(working, "_datafile_Id", ids[0])
 
     try:
+        count_cols = [raw.columns[x] for x in mu.count_columns]
         working, err = munge_and_melt(mu, working, count_cols, err)
     except Exception as exc:
         e = f"Error during munge-and-melt: {exc}"
