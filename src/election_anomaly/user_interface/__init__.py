@@ -425,7 +425,7 @@ def read_single_datafile(
             e = f'Nothing read from datafile; file type {munger.file_type} may be inconsistent, or datafile may be empty.'
             add_error(err,'format.ini',e)
         else:
-            df = mr.generic_clean(df)
+            df = m.generic_clean(df)
             err = jm.check_results_munger_compatibility(munger, df, err)
         return [df, err]
     except UnicodeDecodeError as ude:
