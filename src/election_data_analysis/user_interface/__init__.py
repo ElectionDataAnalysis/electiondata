@@ -589,10 +589,10 @@ def config(
 
 
 def get_runtime_parameters(
-    required_keys: list, 
+    required_keys: list,
     param_file: str,
     header: str,
-    optional_keys: list = None, 
+    optional_keys: list = None,
 ):
     d = {}
     missing_required_params = {"missing": []}

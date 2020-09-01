@@ -56,7 +56,9 @@ class DataLoader:
         not create DataLoader object."""
         try:
             d, parameter_err = ui.get_runtime_parameters(
-                multi_data_loader_pars, param_file="run_time.ini", header="election_data_analysis"
+                multi_data_loader_pars,
+                param_file="run_time.ini",
+                header="election_data_analysis",
             )
         except FileNotFoundError as e:
             print(
@@ -76,7 +78,9 @@ class DataLoader:
     def __init__(self):
         # grab parameters
         self.d, self.parameter_err = ui.get_runtime_parameters(
-            multi_data_loader_pars, param_file="run_time.ini", header="election_data_analysis"
+            multi_data_loader_pars,
+            param_file="run_time.ini",
+            header="election_data_analysis",
         )
 
         # prepare to track files loaded, dictionary of dictionaries, keys are parameter file paths
@@ -112,7 +116,7 @@ class DataLoader:
                 single_data_loader_pars,
                 optional_keys=["aux_data_dir"],
                 param_file=par_file,
-                header="election_data_analysis"
+                header="election_data_analysis",
             )
             juris_path[f] = params[f]["jurisdiction_path"]
             # update file_tracker
@@ -212,7 +216,9 @@ class DataLoader:
         else:
             # move results file and its parameter file to a subfolder of the archive directory
             #  named for the db
-            db_param = ui.get_runtime_parameters(["dbname"], "run_time.ini", "postgresql")[0]
+            db_param = ui.get_runtime_parameters(
+                ["dbname"], "run_time.ini", "postgresql"
+            )[0]
             self.tracker[f]["status"] = "loaded"
             new_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
             ui.archive(f, self.d["results_dir"], new_dir)
@@ -243,7 +249,7 @@ class SingleDataLoader:
             single_data_loader_pars,
             optional_keys=["aux_data_dir"],
             param_file=par_file,
-            header="election_data_analysis"
+            header="election_data_analysis",
         )
 
         # change any blank parameters to 'none'
@@ -866,7 +872,7 @@ class JurisdictionPrepper:
             prep_pars,
             optional_keys=optional_prep_pars,
             param_file="jurisdiction_prep.ini",
-            header="election_data_analysis"
+            header="election_data_analysis",
         )
         self.state_house = int(self.d["count_of_state_house_districts"])
         self.state_senate = int(self.d["count_of_state_senate_districts"])
@@ -928,7 +934,7 @@ class Analyzer:
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
-    def display_options(self, input: str, verbose: bool=False, filters: list=None):
+    def display_options(self, input: str, verbose: bool = False, filters: list = None):
         if not verbose:
             results = db.get_input_options(self.session, input, False)
         else:
@@ -959,7 +965,9 @@ class Analyzer:
         html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
         installed as well."""
         d, error = ui.get_runtime_parameters(
-            ["rollup_directory"], param_file="run_time.ini", header="election_data_analysis"
+            ["rollup_directory"],
+            param_file="run_time.ini",
+            header="election_data_analysis",
         )
         if error:
             print("Parameter file missing requirements.")
@@ -1008,14 +1016,16 @@ class Analyzer:
 
     def bar(
         self,
-        jurisdiction: str, 
-        contest_type: str = None, 
-        contest: str = None, 
-        fig_type: str = None
+        jurisdiction: str,
+        contest_type: str = None,
+        contest: str = None,
+        fig_type: str = None,
     ) -> list:
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
-            ["rollup_directory"], param_file="run_time.ini", header="election_data_analysis"
+            ["rollup_directory"],
+            param_file="run_time.ini",
+            header="election_data_analysis",
         )
         if error:
             print("Parameter file missing requirements.")
@@ -1025,7 +1035,7 @@ class Analyzer:
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         # for now, bar charts can only handle jurisdictions where county is one level
         # down from the jurisdiction
-        most_granular_id = db.name_to_id( self.session, "ReportingUnitType", "county")
+        most_granular_id = db.name_to_id(self.session, "ReportingUnitType", "county")
         hierarchy = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id, most_granular_id
         )
@@ -1057,10 +1067,12 @@ class Analyzer:
         selection_type = input_str[len(count_item_type) + 1 :]
         return count_item_type, selection_type
 
-    def export_outlier_data(self, jurisdiction: str, contest: str=None):
+    def export_outlier_data(self, jurisdiction: str, contest: str = None):
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
-            ["rollup_directory"], param_file="run_time.ini", header="election_data_analysis"
+            ["rollup_directory"],
+            param_file="run_time.ini",
+            header="election_data_analysis",
         )
         if error:
             print("Parameter file missing requirements.")
