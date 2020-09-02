@@ -303,7 +303,7 @@ def create_bar(
         "contest_district_type",
     ]
     unsummed = unsummed.groupby(groupby_cols).sum().reset_index()
-    multiple_ballot_types = len(unsummed['CountItemType'].unique()) > 1
+    multiple_ballot_types = len(unsummed["CountItemType"].unique()) > 1
 
     # Now process data
     ranked = assign_anomaly_score(unsummed)
@@ -373,7 +373,9 @@ def create_bar(
             - temp_df[temp_df["rank"] != 1].iloc[0]["ind_total"]
         )
         if multiple_ballot_types:
-            results["ballot_types"] = f"""{results["jurisdiction"]} provides data by vote type"""
+            results[
+                "ballot_types"
+            ] = f"""{results["jurisdiction"]} provides data by vote type"""
         else:
             results["ballot_types"] = "Data unavailable by vote type"
         result_list.append(results)

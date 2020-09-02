@@ -798,7 +798,7 @@ def get_input_options(session, input, verbose):
     else:
         # election result are handled differently than the rest of the flow because
         # it's the first selection made
-        if search_str == 'Election':
+        if search_str == "Election":
             result = session.execute(
                 f"""
                 SELECT  e."Id" AS parent, "Name" AS name, "Txt" as type
@@ -950,11 +950,11 @@ def package_display_results(data):
 
 def get_filtered_input_options(session, input_str, filters):
     # election selection is handled separately because it's the first choice.
-    if input_str == 'jurisdiction':
-        result = get_input_options(session, 'jurisdiction', verbose=True)
+    if input_str == "jurisdiction":
+        result = get_input_options(session, "jurisdiction", verbose=True)
         result_df = pd.DataFrame(result)
         result_df.columns = result.keys()
-        df = result_df[result_df['parent'].isin(filters)]
+        df = result_df[result_df["parent"].isin(filters)]
     # contest_type is a special case because we don't have a contest_type table.
     # instead, this is the reporting unit type of the election district
     elif input_str == "contest_type":
@@ -1157,15 +1157,17 @@ def get_relevant_contests(session, filters):
     )
 
     # get info for elections we have
-    elections = get_input_options(session, 'jurisdiction', True)
+    elections = get_input_options(session, "jurisdiction", True)
     elections_df = pd.DataFrame(elections)
     elections_df.columns = elections.keys()
     elections_df = elections_df[
-        (elections_df['parent'].isin(filters)) & (elections_df['type'] == True)
+        (elections_df["parent"].isin(filters)) & (elections_df["type"] == True)
     ]
 
-    #filter hierarchy on states that we have elections for
-    hierarchy_df = hierarchy_df.merge(elections_df, how='inner', left_on="Name", right_on="name")
+    # filter hierarchy on states that we have elections for
+    hierarchy_df = hierarchy_df.merge(
+        elections_df, how="inner", left_on="Name", right_on="name"
+    )
 
     hierarchy_df = hierarchy_df.merge(
         unit_df, how="inner", left_on="ChildReportingUnit_Id", right_on="Id"
