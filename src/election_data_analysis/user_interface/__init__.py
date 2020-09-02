@@ -428,6 +428,8 @@ def read_single_datafile(
             df = m.generic_clean(df)
             err = jm.check_results_munger_compatibility(munger, df, err)
         return [df, err]
+    except FileNotFoundError as fnfe:
+        e = fnfe
     except UnicodeDecodeError as ude:
         e = f"Encoding error. Datafile not read completely.\n{ude}"
     except ParserError as pe:
