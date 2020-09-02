@@ -796,33 +796,58 @@ def get_input_options(session, input, verbose):
         connection.close()
         return [r[0] for r in result]
     else:
-        # jurisction result are handled differently than the rest of the flow because
+        # election result are handled differently than the rest of the flow because
         # it's the first selection made
-        if search_str == "jurisdiction":
+        if search_str == "Election":
+            result = session.execute(
+                f"""
+                SELECT  e."Id" AS parent, "Name" AS name, "Txt" as type
+                FROM    "Election" e
+                        JOIN "ElectionType" et on e."ElectionType_Id" = et."Id"
+                WHERE   "Name" != 'none or unknown'
+                ORDER BY LEFT("Name", 4) DESC, RIGHT("Name", LENGTH("Name") - 5)
+            """
+            )
+            result_df = pd.DataFrame(result)
+            result_df.columns = result.keys()
+            return package_display_results(result_df)
+        elif search_str == "jurisdiction":
             result = session.execute(
                 f"""
                 WITH states(states) AS (
                     SELECT  '{states}'
                 )
                 , unnested AS (
-                    SELECT    UNNEST(regexp_split_to_array(states, '\n')) AS states
+                    SELECT    UNNEST(regexp_split_to_array(states, '\n')) AS jurisdiction
                     FROM    states
                 )
+
                 , ordered AS (
-                    SELECT    *, ROW_NUMBER() OVER() AS order_by
+                    SELECT  *, ROW_NUMBER() OVER() AS order_by
                     FROM    unnested u
                 )
-                SELECT    states as parent,
-                        states AS name, 
-                        CASE WHEN "Id" IS null THEN false ELSE true END AS type
-                FROM    ordered o
-                        LEFT JOIN "ReportingUnit" ru ON o.states = ru."Name"
-                ORDER BY order_by
+ 				, crossed AS (
+					SELECT	"Id", "Name", jurisdiction, order_by
+                    FROM	"Election" e
+                    		CROSS JOIN ordered o
+                    WHERE	"Name" != 'none or unknown'
+                    ORDER BY e."Name", order_by
+                    
+                )
+                , crossed_with_state_id as (
+                	SELECT	c.*, ru."Id" as jurisdiction_id
+                	FROM	crossed c
+                    		LEFT JOIN "ReportingUnit" ru ON c.jurisdiction = ru."Name"
+                )
+                SELECT  "Name" as parent,
+                        jurisdiction AS name, 
+                        CASE WHEN d."ReportingUnit_Id" IS null THEN false ELSE true END AS type
+                FROM    crossed_with_state_id s
+                        LEFT JOIN "_datafile" d ON s."Id" = d."Election_Id"
+                       	AND s.jurisdiction_id = d."ReportingUnit_Id"
+                ORDER BY "Name", order_by
             """
             )
-            result_df = pd.DataFrame(result)
-            result_df.columns = result.keys()
-            return package_display_results(result_df)
         elif search_str == "BallotMeasureContest":
             # parent_id is reporting unit, type is reporting unit type
             result = session.execute(
@@ -924,11 +949,16 @@ def package_display_results(data):
 
 
 def get_filtered_input_options(session, input_str, filters):
-    # jurisdiction selection is handled separately because it's the first choice.
-    contest_df = get_relevant_contests(session, filters)
+    # election selection is handled separately because it's the first choice.
+    if input_str == "jurisdiction":
+        result = get_input_options(session, "jurisdiction", verbose=True)
+        result_df = pd.DataFrame(result)
+        result_df.columns = result.keys()
+        df = result_df[result_df["parent"].isin(filters)]
     # contest_type is a special case because we don't have a contest_type table.
     # instead, this is the reporting unit type of the election district
-    if input_str == "contest_type":
+    elif input_str == "contest_type":
+        contest_df = get_relevant_contests(session, filters)
         contest_types = contest_df["type"].unique()
         contest_types.sort()
         data = {
@@ -938,6 +968,7 @@ def get_filtered_input_options(session, input_str, filters):
         }
         df = pd.DataFrame(data=data)
     elif input_str == "contest":
+        contest_df = get_relevant_contests(session, filters)
         df = contest_df[contest_df["type"].isin(filters)]
     # Assume these others are candidate searching. This is handled differently
     # because the results variable is structured slightly differently
@@ -1058,32 +1089,36 @@ def get_filtered_input_options(session, input_str, filters):
             suffixes=["_x", None],
         )[candidates_df.columns]
     else:
-        candidates = get_input_options(session, input_str, True)
-        candidates_df = pd.DataFrame(candidates)
-        candidates_df.columns = candidates.keys()
-        candidates_df = candidates_df.merge(
-            contest_df,
-            how="inner",
-            left_on="parent",
-            right_on="name",
-            suffixes=[None, "_y"],
-        )
-        df = (
-            candidates_df.groupby(["parent", "type"])["name"]
-            .apply(list)
-            .apply(str)
-            .reset_index()
-            .sort_values("parent")
-        )
-        df.columns = ["parent", "type", "name"]
-        df = df[["parent", "name", "type"]]
-        # clean the name column
-        df["name"] = (
-            df["name"]
-            .str.replace("\['", "")
-            .str.replace("'\]", "")
-            .str.replace("', '", "; ")
-        )
+        try:
+            contest_df = get_relevant_contests(session, filters)
+            candidates = get_input_options(session, input_str, True)
+            candidates_df = pd.DataFrame(candidates)
+            candidates_df.columns = candidates.keys()
+            candidates_df = candidates_df.merge(
+                contest_df,
+                how="inner",
+                left_on="parent",
+                right_on="name",
+                suffixes=[None, "_y"],
+            )
+            df = (
+                candidates_df.groupby(["parent", "type"])["name"]
+                .apply(list)
+                .apply(str)
+                .reset_index()
+                .sort_values("parent")
+            )
+            df.columns = ["parent", "type", "name"]
+            df = df[["parent", "name", "type"]]
+            # clean the name column
+            df["name"] = (
+                df["name"]
+                .str.replace("\['", "")
+                .str.replace("'\]", "")
+                .str.replace("', '", "; ")
+            )
+        except:
+            df = pd.DataFrame()
     # TODO: handle the "All" and "other" options better
     # TODO: handle sorting numbers better
     return package_display_results(df)
@@ -1115,12 +1150,25 @@ def get_relevant_contests(session, filters):
     hierarchy_df = hierarchy_df[hierarchy_df["Name"].isin(filters)]
     hierarchy_df.drop(
         columns=[
-            "ParentReportingUnit_Id",
             "ReportingUnitType_Id",
             "OtherReportingUnitType",
         ],
         inplace=True,
     )
+
+    # get info for elections we have
+    elections = get_input_options(session, "jurisdiction", True)
+    elections_df = pd.DataFrame(elections)
+    elections_df.columns = elections.keys()
+    elections_df = elections_df[
+        (elections_df["parent"].isin(filters)) & (elections_df["type"] == True)
+    ]
+
+    # filter hierarchy on states that we have elections for
+    hierarchy_df = hierarchy_df.merge(
+        elections_df, how="inner", left_on="Name", right_on="name"
+    )
+
     hierarchy_df = hierarchy_df.merge(
         unit_df, how="inner", left_on="ChildReportingUnit_Id", right_on="Id"
     )
@@ -1139,6 +1187,7 @@ def get_relevant_contests(session, filters):
     result_df = pd.DataFrame(result)
     result_df.columns = result.keys()
     result_df = result_df[result_df["parent"].isin(units)]
+    print()
     return result_df
 
 
@@ -1207,17 +1256,3 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
     result_df = pd.DataFrame(result)
     result_df.columns = result.keys()
     return result_df
-
-
-def most_recent_election(session, jurisdiction_id):
-    q = session.execute(
-        f"""
-        SELECT  "Election_Id"
-        FROM    _datafile d
-                JOIN "Election" e on d."Election_Id" = e."Id"
-        WHERE   "ReportingUnit_Id" = {jurisdiction_id}
-        ORDER BY "Name" desc
-        LIMIT   1
-    """
-    ).fetchall()
-    return q[0][0]

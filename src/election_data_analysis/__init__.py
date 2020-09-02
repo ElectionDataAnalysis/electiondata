@@ -1016,6 +1016,7 @@ class Analyzer:
 
     def bar(
         self,
+        election: str,
         jurisdiction: str,
         contest_type: str = None,
         contest: str = None,
@@ -1032,6 +1033,7 @@ class Analyzer:
             print(error)
             print("Data not created.")
             return
+        election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         # for now, bar charts can only handle jurisdictions where county is one level
         # down from the jurisdiction
@@ -1039,7 +1041,6 @@ class Analyzer:
         hierarchy = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id, most_granular_id
         )
-        election_id = db.most_recent_election(self.session, jurisdiction_id)
         # bar chart always at one level below top reporting unit
         agg_results = a.create_bar(
             self.session,
