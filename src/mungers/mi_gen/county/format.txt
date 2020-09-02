@@ -1,8 +1,0 @@
-item	value
-header_row_count	0
-field_name_row	None
-field_names_if_no_field_name_row	County Code,County Name
-count_columns	None
-file_type	txt
-encoding	iso-8859-1
-thousands_separator	None
