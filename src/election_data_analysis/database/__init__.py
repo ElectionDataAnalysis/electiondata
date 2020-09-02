@@ -1254,17 +1254,3 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
     result_df = pd.DataFrame(result)
     result_df.columns = result.keys()
     return result_df
-
-
-def most_recent_election(session, jurisdiction_id):
-    q = session.execute(
-        f"""
-        SELECT  "Election_Id"
-        FROM    _datafile d
-                JOIN "Election" e on d."Election_Id" = e."Id"
-        WHERE   "ReportingUnit_Id" = {jurisdiction_id}
-        ORDER BY "Name" desc
-        LIMIT   1
-    """
-    ).fetchall()
-    return q[0][0]
