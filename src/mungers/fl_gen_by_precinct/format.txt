@@ -1,8 +1,0 @@
-item	value
-header_row_count	0
-field_name_row	None
-field_names_if_no_field_name_row	County Code,County Name,Election Number,Election Date,Election Name,Unique Precinct Identifier,Precinct Polling Location,Total Registered Voters,Total Registered Republicans,Total Registered Democrats,Total Registered All Other Parties,Contest Name,District,Contest Code,Candidate etc,Candidate Party,Candidate Florida Voter Registration System ID Number,DOE Assigned Number,Vote Total
-count_columns	18
-file_type	txt
-encoding	iso-8859-1
-thousands_separator	None

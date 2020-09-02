@@ -1,8 +1,0 @@
-item	value
-header_row_count	0
-field_name_row	None
-field_names_if_no_field_name_row	Election Year,Election Type,Office Code,District Code,Status Code,Candidate ID#,Candidate Last Name,Candidate First Name,Candidate Middle Name,Candidate Party Name
-count_columns	
-file_type	txt
-encoding	iso-8859-1
-thousands_separator	None

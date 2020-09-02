@@ -1,8 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit	<LocalityName>;<PrecinctName>	row
-Party	<Party>	row
-CandidateContest	<OfficeTitle> District <DistrictName>	row
-Candidate	<FirstName> <MiddleName> <LastName> <Suffix>	row
-BallotMeasureContest	placeholder	row
-BallotMeasureSelection	placeholder	row
-CountItemType	election-day	row

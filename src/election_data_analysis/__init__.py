@@ -229,7 +229,7 @@ class DataLoader:
                 warn_file = os.path.join(new_dir, f"{f[:-4]}.warn")
                 with open(warn_file, "w") as wf:
                     wf.write("\n".join(warnings))
-                print_str += f" See warnings in {f[:-4]}."
+                print_str += f" See warnings in {f[:-4]}.warn"
             print(print_str)
         return
 
