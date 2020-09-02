@@ -419,11 +419,11 @@ def read_single_datafile(
             df = pd.read_excel(f_path, **kwargs)
         else:
             e = f"Unrecognized file_type in munger: {munger.file_type}"
-            add_error(err, "format.txt", e)
+            add_error(err, "format.config", e)
             df = pd.DataFrame()
         if df.empty:
             e = f"Nothing read from datafile; file type {munger.file_type} may be inconsistent, or datafile may be empty."
-            add_error(err, "format.txt", e)
+            add_error(err, "format.config", e)
         else:
             df = m.generic_clean(df)
             err = jm.check_results_munger_compatibility(munger, df, err)

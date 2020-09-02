@@ -293,9 +293,9 @@ def read_munger_info_from_files(dir_path):
     optional_keys = munger_pars_opt
     options, missing_required_params = ui.get_runtime_parameters(
         required_keys,
-        optional_keys=optional_keys,
-        param_file=os.path.join(dir_path,'format.config'),
-        section='format'
+        os.path.join(dir_path,'format.config'),
+        'format',
+        optional_keys=optional_keys
     )
     try:
         # if field_name_row can be interpreted as an integer, use it
@@ -539,7 +539,12 @@ def check_munger_file_format(munger_path, munger_file, templates):
                             f'First error is at row {first_error}: {cf_df.loc[first_error]}')
 
     elif munger_file == "format.config":
-        d, missing = ui.get_runtime_parameters(munger_pars_req,munger_pars_opt,os.path.join(munger_path,munger_file),"format")
+        d, missing = ui.get_runtime_parameters(
+            munger_pars_req,
+            os.path.join(munger_path,munger_file),
+            "format",
+            optional_keys=munger_pars_opt
+        )
         if missing:
             problems.append(f'Missing parameters in {munger_file}:\n{missing}')
         if 'field_names_if_no_field_name_row' not in d.keys() and 'field_name_row' not in d.keys():
@@ -565,7 +570,12 @@ def check_munger_file_contents(munger_name, project_root):
     cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),
                                sep='\t',encoding='iso-8859-1'
                                ).fillna('')
-    format_d, missing = ui.get_runtime_parameters(munger_pars_req,munger_pars_opt,os.path.join(munger_dir,'format.ini'), section='format')
+    format_d, missing = ui.get_runtime_parameters(
+        munger_pars_req,
+        os.path.join(munger_dir,'format.config'),
+        'format',
+        optional_keys=munger_pars_opt
+    )
 
     # Either field_name_row is a number, or field_names_if_no_field_name_row is not the empty string
     if (not format_d['field_name_row'].isnumeric()) and len(format_d['field_names_if_no_field_name_row']) == 0:
