@@ -617,9 +617,15 @@ def get_runtime_parameters(
     if len(p) == 0:
         raise FileNotFoundError
 
+    try:
+        h = parser[header]
+    except KeyError as ke:
+        missing_required_params["header"] = f"Header not found in file {param_file}: {ke}"
+        return dict(), missing_required_params
+
     for k in required_keys:
         try:
-            d[k] = parser[header][k]
+            d[k] = h[k]
         except KeyError:
             missing_required_params["missing"].append(k)
 
