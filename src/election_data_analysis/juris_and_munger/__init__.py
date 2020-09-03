@@ -19,7 +19,7 @@ munger_pars_opt = ['header_row_count',
                    'count_columns',
                    'thousands_separator',
                    'encoding',
-                   'empty_top_line_count',
+                   'top_lines_to_skip',
                    'last_header_column_count',
                    'column_width',
                    ]
@@ -630,7 +630,7 @@ def check_munger_file_contents(munger_name, project_root):
 
     # check all parameters for concatenated blocks (e.g., Georgia ExpressVote output)
     elif format_d["file_type"] in ["concatenated-blocks"]:
-        for key in ['empty_top_line_count','last_header_column_count','column_width']:
+        for key in ['top_lines_to_skip','last_header_column_count','column_width']:
             try:
                 int(format_d[key])
             except ValueError or TypeError:

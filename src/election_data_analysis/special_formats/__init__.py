@@ -38,10 +38,13 @@ def read_concatenated_blocks(f_path: str, munger: jm.Munger, err: dict) -> (pd.D
 
     # get integers from munger parameters
     w = int(munger.options['column_width'])
-    etlc = int(munger.options['empty_top_line_count'])
+    tlts = int(munger.options['top_lines_to_skip'])
     v_t_cc = int(munger.options['last_header_column_count'])
 
     df = dict()
+
+    # skip lines at top
+    data = data[tlts:]
 
     try:
         while len(data) > 3:
