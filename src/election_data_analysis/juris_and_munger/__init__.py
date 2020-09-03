@@ -58,7 +58,7 @@ class Jurisdiction:
         e = db.insert_to_cdf_db(engine, df[["Name", "contest_type"]], "Contest")
 
         # append Contest_Id
-        col_map = {"Name": "Name"}
+        col_map = {"Name": "Name","contest_type":"contest_type"}
         df = db.append_id_to_dframe(engine, df, "Contest", col_map=col_map)
 
         if contest_type == "BallotMeasure":
