@@ -287,7 +287,6 @@ def read_munger_info_from_files(dir_path):
     ).fillna("")
 
     # add column for list of fields used in formulas
-    # add column to identify fields needing regex analysis
     cdf_elements["fields"] = [[]] * cdf_elements.shape[0]
     for i, r in cdf_elements.iterrows():
         text_field_list, last_text = m.text_fragments_and_fields(

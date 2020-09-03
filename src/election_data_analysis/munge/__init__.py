@@ -111,13 +111,13 @@ def add_column_from_formula(
 ) -> (pd.DataFrame, dict):
     """If <suffix> is given, add it to each field in the formula
     If formula is enclosed in braces, parse first entry as formula, second as a
-    regex and third as a recipe for pulling the value via regex analysis
+    regex (with one parenthesized group) as a recipe for pulling the value via regex analysis
     """
 
     # set regex_flag (True if regex analysis is needed beyond concatenation formula)
     if formula[0] == "{" and formula[-1] == "}":
         regex_flag = True
-        concat_formula, pattern, final = formula[1:-1].split(",")
+        concat_formula, pattern = formula[1:-1].split(",")
     else:
         regex_flag = False
         pattern = final = None
@@ -143,9 +143,10 @@ def add_column_from_formula(
         except KeyError:
             ui.add_error(err, "munge-error", f"missing column {f}")
 
-    # TODO use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
+    # use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
     if regex_flag:
-        working[new_col] = working[new_col].str.replace(pattern,final)
+        # TODO figure out how to allow more general manipulations. This can only pull out one part of the pattern
+        working[new_col] = working[new_col].str.replace(pattern,'\\1')
 
     return working, err
 
