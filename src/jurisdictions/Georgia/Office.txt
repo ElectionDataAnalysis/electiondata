@@ -259,4 +259,4 @@ GA Secretary of State	Georgia
 GA State School Superintendent	Georgia
 GA Commissioner of Agriculture	Georgia
 GA Commissioner of Labor	Georgia
-GA GA Commissioner of Insurance	Georgia
+GA Commissioner of Insurance	Georgia

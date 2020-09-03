@@ -409,4 +409,3 @@ Georgia;Wilcox County	county
 Georgia;Wilkes County	county
 Georgia;Wilkinson County	county
 Georgia;Worth County	county
-Totals
