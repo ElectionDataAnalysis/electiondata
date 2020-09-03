@@ -735,6 +735,7 @@ class JurisdictionPrepper:
             par_file = os.path.join(dir, par_file_name)
             file_dict, missing_params = ui.get_runtime_parameters(
                 ["results_file", "munger_name"],
+                header="election_data_analysis",
                 optional_keys=["aux_data_dir"],
                 param_file=par_file,
             )
