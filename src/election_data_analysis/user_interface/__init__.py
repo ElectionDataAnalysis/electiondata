@@ -1,5 +1,6 @@
 from configparser import ConfigParser
 from election_data_analysis import munge as m
+from election_data_analysis import special_formats as sf
 import pandas as pd
 from pandas.errors import ParserError, ParserWarning
 import numpy as np
@@ -349,9 +350,12 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
         aux_data_dir=aux_data_dir,
         project_root=params["project_root"],
     )
-    wr, error = read_combine_results(
-        mu, params["results_file"], params["project_root"], error
-    )
+    if mu.options["file_type"] in ["concatenated-blocks"]:
+        wr, error = sf.read_concatenated_blocks(params["results_file"], mu, error)
+    else:
+        wr, error = read_combine_results(
+            mu, params["results_file"], params["project_root"], error
+        )
     wr.columns = [f"{x}_SOURCE" for x in wr.columns]
     return wr, mu, error
 

@@ -27,7 +27,7 @@ def extract_items (line: str, w: int) -> list:
     return item_list
 
 
-def process_expressvote(f_path: str, munger: jm.Munger, err: dict) -> (pd.DataFrame, dict):
+def read_concatenated_blocks(f_path: str, munger: jm.Munger, err: dict) -> (pd.DataFrame, dict):
     """Assumes first column of each block is ReportingUnit, last column is contest total"""
     try:
         with open(f_path,'r') as f:
