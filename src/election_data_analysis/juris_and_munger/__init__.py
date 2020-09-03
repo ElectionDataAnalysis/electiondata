@@ -285,13 +285,17 @@ def read_munger_info_from_files(dir_path):
         encoding="iso-8859-1",
         quoting=csv.QUOTE_MINIMAL,
     ).fillna("")
+
     # add column for list of fields used in formulas
+    # add column to identify fields needing regex analysis
     cdf_elements["fields"] = [[]] * cdf_elements.shape[0]
     for i, r in cdf_elements.iterrows():
         text_field_list, last_text = m.text_fragments_and_fields(
             cdf_elements.loc[i, "raw_identifier_formula"]
         )
         cdf_elements.loc[i, "fields"] = [f for t, f in text_field_list]
+
+
 
     # read formatting info
     required_keys = munger_pars_req

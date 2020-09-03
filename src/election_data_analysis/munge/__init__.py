@@ -109,13 +109,27 @@ def text_fragments_and_fields(formula):
 def add_column_from_formula(
     working: pd.DataFrame, formula: str, new_col: str, err: dict, suffix=None
 ) -> (pd.DataFrame, dict):
-    """If <suffix> is given, add it to each field in the formula"""
-    text_field_list, last_text = text_fragments_and_fields(formula)
+    """If <suffix> is given, add it to each field in the formula
+    If formula is enclosed in braces, parse first entry as formula, second as a
+    regex and third as a recipe for pulling the value via regex analysis
+    """
+
+    # set regex_flag (True if regex analysis is needed beyond concatenation formula)
+    if formula[0] == "{" and formula[-1] == "}":
+        regex_flag = True
+        concat_formula, pattern, final = formula[1:-1].split(",")
+    else:
+        regex_flag = False
+        pattern = final = None
+        concat_formula = formula
+
+    text_field_list, last_text = text_fragments_and_fields(concat_formula)
 
     # add suffix, if required
     if suffix:
         text_field_list = [(t, f"{f}{suffix}") for (t, f) in text_field_list]
 
+    # add column to <working> dataframe via the concatenation formula
     if last_text:
         working.loc[:, new_col] = last_text[0]
     else:
@@ -128,6 +142,11 @@ def add_column_from_formula(
             )
         except KeyError:
             ui.add_error(err, "munge-error", f"missing column {f}")
+
+    # TODO use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
+    if regex_flag:
+        working[new_col] = working[new_col].str.replace(pattern,final)
+
     return working, err
 
 
