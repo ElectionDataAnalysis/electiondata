@@ -64,19 +64,19 @@ def munge_clean(raw: pd.DataFrame, munger: jm.Munger):
     working = raw.copy()
     # drop columns that are neither count columns nor used in munger formulas
     #  define columns named in munger formulas
-    if munger.header_row_count > 1:
+    if munger.options["header_row_count"] > 1:
         munger_formula_columns = [
-            x for x in working.columns if x[munger.field_name_row] in munger.field_list
+            x for x in working.columns if x[munger.options["field_name_row"]] in munger.field_list
         ]
     else:
         munger_formula_columns = [x for x in working.columns if x in munger.field_list]
 
-    if munger.field_name_row is None:
+    if munger.options["field_name_row"] is None:
         count_columns_by_name = [
-            munger.field_names_if_no_field_name_row[idx] for idx in munger.count_columns
+            munger.options["field_names_if_no_field_name_row"][idx] for idx in munger.options["count_columns"]
         ]
     else:
-        count_columns_by_name = [working.columns[idx] for idx in munger.count_columns]
+        count_columns_by_name = [working.columns[idx] for idx in munger.options["count_columns"]]
     # TODO error check- what if cols_to_munge is missing something from munger.field_list?
 
     # keep columns named in munger formulas; keep count columns; drop all else.
@@ -417,7 +417,7 @@ def good_syntax(s):
     return good
 
 
-def munge_and_melt(mu, raw, count_cols, err):
+def munge_and_melt(mu: jm.Munger, raw: pd.DataFrame, count_cols: list, err: dict) -> (pd.DataFrame, dict):
     """Does not alter raw; returns Transformation of raw:
      all row- and column-sourced mungeable info into columns (but doesn't translate via dictionary)
     new column names are, e.g., ReportingUnit_raw, Candidate_raw, etc.
@@ -452,7 +452,7 @@ def munge_and_melt(mu, raw, count_cols, err):
         working, err = add_munged_column(working, mu, t, err, mode="column")
 
     # remove unnecessary columns
-    not_needed = [f"variable_{i}" for i in range(mu.header_row_count)]
+    not_needed = [f"variable_{i}" for i in range(mu.options["header_row_count"])]
     working.drop(not_needed, axis=1, inplace=True)
 
     return working, err
