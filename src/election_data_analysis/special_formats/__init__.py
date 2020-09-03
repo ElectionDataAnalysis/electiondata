@@ -39,7 +39,7 @@ def process_expressvote(f_path: str, munger: jm.Munger, err: dict) -> (pd.DataFr
     # get integers from munger parameters
     w = int(munger.options['column_width'])
     etlc = int(munger.options['empty_top_line_count'])
-    v_t_cc = int(munger.options['vote_type_column_count'])
+    v_t_cc = int(munger.options['last_header_column_count'])
 
     for i in range(etlc-1):
         # get rid of spurious top lines, leaving one blank line at top
@@ -51,24 +51,26 @@ def process_expressvote(f_path: str, munger: jm.Munger, err: dict) -> (pd.DataFr
             # pop the blank line
             data.pop(0)
 
-            # get the contest line, candidate line and csv-header line
-            contest = data.pop(0).strip()
-            candidate_line = data.pop(0)
+            # TODO allow number & interps of headers to vary?
+            # get the header lines
+            header_0 = data.pop(0).strip()
+            header_1 = data.pop(0)
             header_line = data.pop(0)
 
             # get info from header line
             field_list = extract_items(header_line, w)
-            ru_title = field_list[0]
-            vote_type = field_list[1: 1 + v_t_cc]
+            first_column = field_list[0]
+            last_header = field_list[1: 1 + v_t_cc]
             assert (len(field_list) - 2) % v_t_cc == 0
 
-            candidate_list = extract_items(candidate_line, w * v_t_cc)
+            header_1_list = extract_items(header_1, w * v_t_cc)
 
-            #  create multi-index from the candidate and votetype, with first index 'county/county'
+            # TODO get column with header_1 (Candidate, for Georgia)
+            #  create multi-index from the header_1 and votetype, with first index 'county/county'
             #  and last index 'Total/Total'
             index_array = [
-                [field_list[0]] + [y for z in [[cand] * v_t_cc for cand in candidate_list] for y in z] + ['Total'],
-                [field_list[0]] + vote_type * len(candidate_list) + ['Total']
+                [field_list[0]] + [y for z in [[cand] * v_t_cc for cand in header_1_list] for y in z] + ['Total'],
+                [field_list[0]] + last_header * len(header_1_list) + ['Total']
             ]
             multi_index = pd.MultiIndex.from_arrays(index_array)
 
@@ -81,17 +83,23 @@ def process_expressvote(f_path: str, munger: jm.Munger, err: dict) -> (pd.DataFr
             vote_count_block.write(''.join(data[:next_empty]))
             vote_count_block.seek(0)
 
-            df[contest] = pd.read_fwf(vote_count_block,colspecs='infer',index=False)
-            df[contest].columns = multi_index
+            df[header_0] = pd.read_fwf(vote_count_block,colspecs='infer',index=False)
+            df[header_0].columns = multi_index
 
-            # Drop contest-total column
-            df[contest].drop('Total',axis=1,level=1,inplace=True)
+            # Drop total column at far right
+            df[header_0].drop('Total',axis=1,level=1,inplace=True)
 
-            # move candidate & votetype info to columns
-            df[contest] = pd.melt(df[contest],col_level=1,id_vars=[ru_title],var_name='Count',value_name='CountItemType').rename(columns={ru_title:'ReportingUnit'})
+            # move header_1 & votetype info to columns
+            df[header_0] = pd.melt(
+                df[header_0],
+                col_level=1,
+                id_vars=[first_column],
+                var_name='Count',
+                value_name='header_2'
+            ).rename(columns={first_column:'first_column'})
 
-            # Add columns for contest
-            df[contest] = m.add_constant_column(df[contest],'Contest',contest)
+            # Add columns for header_0
+            df[header_0] = m.add_constant_column(df[header_0],'header_0',header_0)
 
             # remove processed lines from data
             data = data[next_empty:]
