@@ -1,6 +1,6 @@
 name	raw_identifier_formula	source
 ReportingUnit	<first_column>	row
-Party	{<header_0>,^([a-zA-Z]{3}),$1}	row
+Party	{<header_0>,^([a-zA-Z]{3}).*$}	row
 CandidateContest	<header_0>	row
 Candidate	<header_1>	row
 BallotMeasureContest	<header_0>	row
