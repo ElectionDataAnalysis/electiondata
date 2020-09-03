@@ -1,0 +1,412 @@
+Name	ReportingUnitType
+Georgia;GA House District 1	state-house
+Georgia;GA House District 2	state-house
+Georgia;GA House District 3	state-house
+Georgia;GA House District 4	state-house
+Georgia;GA House District 5	state-house
+Georgia;GA House District 6	state-house
+Georgia;GA House District 7	state-house
+Georgia;GA House District 8	state-house
+Georgia;GA House District 9	state-house
+Georgia;GA House District 10	state-house
+Georgia;GA House District 11	state-house
+Georgia;GA House District 12	state-house
+Georgia;GA House District 13	state-house
+Georgia;GA House District 14	state-house
+Georgia;GA House District 15	state-house
+Georgia;GA House District 16	state-house
+Georgia;GA House District 17	state-house
+Georgia;GA House District 18	state-house
+Georgia;GA House District 19	state-house
+Georgia;GA House District 20	state-house
+Georgia;GA House District 21	state-house
+Georgia;GA House District 22	state-house
+Georgia;GA House District 23	state-house
+Georgia;GA House District 24	state-house
+Georgia;GA House District 25	state-house
+Georgia;GA House District 26	state-house
+Georgia;GA House District 27	state-house
+Georgia;GA House District 28	state-house
+Georgia;GA House District 29	state-house
+Georgia;GA House District 30	state-house
+Georgia;GA House District 31	state-house
+Georgia;GA House District 32	state-house
+Georgia;GA House District 33	state-house
+Georgia;GA House District 34	state-house
+Georgia;GA House District 35	state-house
+Georgia;GA House District 36	state-house
+Georgia;GA House District 37	state-house
+Georgia;GA House District 38	state-house
+Georgia;GA House District 39	state-house
+Georgia;GA House District 40	state-house
+Georgia;GA House District 41	state-house
+Georgia;GA House District 42	state-house
+Georgia;GA House District 43	state-house
+Georgia;GA House District 44	state-house
+Georgia;GA House District 45	state-house
+Georgia;GA House District 46	state-house
+Georgia;GA House District 47	state-house
+Georgia;GA House District 48	state-house
+Georgia;GA House District 49	state-house
+Georgia;GA House District 50	state-house
+Georgia;GA House District 51	state-house
+Georgia;GA House District 52	state-house
+Georgia;GA House District 53	state-house
+Georgia;GA House District 54	state-house
+Georgia;GA House District 55	state-house
+Georgia;GA House District 56	state-house
+Georgia;GA House District 57	state-house
+Georgia;GA House District 58	state-house
+Georgia;GA House District 59	state-house
+Georgia;GA House District 60	state-house
+Georgia;GA House District 61	state-house
+Georgia;GA House District 62	state-house
+Georgia;GA House District 63	state-house
+Georgia;GA House District 64	state-house
+Georgia;GA House District 65	state-house
+Georgia;GA House District 66	state-house
+Georgia;GA House District 67	state-house
+Georgia;GA House District 68	state-house
+Georgia;GA House District 69	state-house
+Georgia;GA House District 70	state-house
+Georgia;GA House District 71	state-house
+Georgia;GA House District 72	state-house
+Georgia;GA House District 73	state-house
+Georgia;GA House District 74	state-house
+Georgia;GA House District 75	state-house
+Georgia;GA House District 76	state-house
+Georgia;GA House District 77	state-house
+Georgia;GA House District 78	state-house
+Georgia;GA House District 79	state-house
+Georgia;GA House District 80	state-house
+Georgia;GA House District 81	state-house
+Georgia;GA House District 82	state-house
+Georgia;GA House District 83	state-house
+Georgia;GA House District 84	state-house
+Georgia;GA House District 85	state-house
+Georgia;GA House District 86	state-house
+Georgia;GA House District 87	state-house
+Georgia;GA House District 88	state-house
+Georgia;GA House District 89	state-house
+Georgia;GA House District 90	state-house
+Georgia;GA House District 91	state-house
+Georgia;GA House District 92	state-house
+Georgia;GA House District 93	state-house
+Georgia;GA House District 94	state-house
+Georgia;GA House District 95	state-house
+Georgia;GA House District 96	state-house
+Georgia;GA House District 97	state-house
+Georgia;GA House District 98	state-house
+Georgia;GA House District 99	state-house
+Georgia;GA House District 100	state-house
+Georgia;GA House District 101	state-house
+Georgia;GA House District 102	state-house
+Georgia;GA House District 103	state-house
+Georgia;GA House District 104	state-house
+Georgia;GA House District 105	state-house
+Georgia;GA House District 106	state-house
+Georgia;GA House District 107	state-house
+Georgia;GA House District 108	state-house
+Georgia;GA House District 109	state-house
+Georgia;GA House District 110	state-house
+Georgia;GA House District 111	state-house
+Georgia;GA House District 112	state-house
+Georgia;GA House District 113	state-house
+Georgia;GA House District 114	state-house
+Georgia;GA House District 115	state-house
+Georgia;GA House District 116	state-house
+Georgia;GA House District 117	state-house
+Georgia;GA House District 118	state-house
+Georgia;GA House District 119	state-house
+Georgia;GA House District 120	state-house
+Georgia;GA House District 121	state-house
+Georgia;GA House District 122	state-house
+Georgia;GA House District 123	state-house
+Georgia;GA House District 124	state-house
+Georgia;GA House District 125	state-house
+Georgia;GA House District 126	state-house
+Georgia;GA House District 127	state-house
+Georgia;GA House District 128	state-house
+Georgia;GA House District 129	state-house
+Georgia;GA House District 130	state-house
+Georgia;GA House District 131	state-house
+Georgia;GA House District 132	state-house
+Georgia;GA House District 133	state-house
+Georgia;GA House District 134	state-house
+Georgia;GA House District 135	state-house
+Georgia;GA House District 136	state-house
+Georgia;GA House District 137	state-house
+Georgia;GA House District 138	state-house
+Georgia;GA House District 139	state-house
+Georgia;GA House District 140	state-house
+Georgia;GA House District 141	state-house
+Georgia;GA House District 142	state-house
+Georgia;GA House District 143	state-house
+Georgia;GA House District 144	state-house
+Georgia;GA House District 145	state-house
+Georgia;GA House District 146	state-house
+Georgia;GA House District 147	state-house
+Georgia;GA House District 148	state-house
+Georgia;GA House District 149	state-house
+Georgia;GA House District 150	state-house
+Georgia;GA House District 151	state-house
+Georgia;GA House District 152	state-house
+Georgia;GA House District 153	state-house
+Georgia;GA House District 154	state-house
+Georgia;GA House District 155	state-house
+Georgia;GA House District 156	state-house
+Georgia;GA House District 157	state-house
+Georgia;GA House District 158	state-house
+Georgia;GA House District 159	state-house
+Georgia;GA House District 160	state-house
+Georgia;GA House District 161	state-house
+Georgia;GA House District 162	state-house
+Georgia;GA House District 163	state-house
+Georgia;GA House District 164	state-house
+Georgia;GA House District 165	state-house
+Georgia;GA House District 166	state-house
+Georgia;GA House District 167	state-house
+Georgia;GA House District 168	state-house
+Georgia;GA House District 169	state-house
+Georgia;GA House District 170	state-house
+Georgia;GA House District 171	state-house
+Georgia;GA House District 172	state-house
+Georgia;GA House District 173	state-house
+Georgia;GA House District 174	state-house
+Georgia;GA House District 175	state-house
+Georgia;GA House District 176	state-house
+Georgia;GA House District 177	state-house
+Georgia;GA House District 178	state-house
+Georgia;GA House District 179	state-house
+Georgia;GA House District 180	state-house
+Georgia;GA Senate District 1	state-senate
+Georgia;GA Senate District 2	state-senate
+Georgia;GA Senate District 3	state-senate
+Georgia;GA Senate District 4	state-senate
+Georgia;GA Senate District 5	state-senate
+Georgia;GA Senate District 6	state-senate
+Georgia;GA Senate District 7	state-senate
+Georgia;GA Senate District 8	state-senate
+Georgia;GA Senate District 9	state-senate
+Georgia;GA Senate District 10	state-senate
+Georgia;GA Senate District 11	state-senate
+Georgia;GA Senate District 12	state-senate
+Georgia;GA Senate District 13	state-senate
+Georgia;GA Senate District 14	state-senate
+Georgia;GA Senate District 15	state-senate
+Georgia;GA Senate District 16	state-senate
+Georgia;GA Senate District 17	state-senate
+Georgia;GA Senate District 18	state-senate
+Georgia;GA Senate District 19	state-senate
+Georgia;GA Senate District 20	state-senate
+Georgia;GA Senate District 21	state-senate
+Georgia;GA Senate District 22	state-senate
+Georgia;GA Senate District 23	state-senate
+Georgia;GA Senate District 24	state-senate
+Georgia;GA Senate District 25	state-senate
+Georgia;GA Senate District 26	state-senate
+Georgia;GA Senate District 27	state-senate
+Georgia;GA Senate District 28	state-senate
+Georgia;GA Senate District 29	state-senate
+Georgia;GA Senate District 30	state-senate
+Georgia;GA Senate District 31	state-senate
+Georgia;GA Senate District 32	state-senate
+Georgia;GA Senate District 33	state-senate
+Georgia;GA Senate District 34	state-senate
+Georgia;GA Senate District 35	state-senate
+Georgia;GA Senate District 36	state-senate
+Georgia;GA Senate District 37	state-senate
+Georgia;GA Senate District 38	state-senate
+Georgia;GA Senate District 39	state-senate
+Georgia;GA Senate District 40	state-senate
+Georgia;GA Senate District 41	state-senate
+Georgia;GA Senate District 42	state-senate
+Georgia;GA Senate District 43	state-senate
+Georgia;GA Senate District 44	state-senate
+Georgia;GA Senate District 45	state-senate
+Georgia;GA Senate District 46	state-senate
+Georgia;GA Senate District 47	state-senate
+Georgia;GA Senate District 48	state-senate
+Georgia;GA Senate District 49	state-senate
+Georgia;GA Senate District 50	state-senate
+Georgia;GA Senate District 51	state-senate
+Georgia;GA Senate District 52	state-senate
+Georgia;GA Senate District 53	state-senate
+Georgia;GA Senate District 54	state-senate
+Georgia;GA Senate District 55	state-senate
+Georgia;GA Senate District 56	state-senate
+Georgia;US House GA District 1	congressional
+Georgia;US House GA District 2	congressional
+Georgia;US House GA District 3	congressional
+Georgia;US House GA District 4	congressional
+Georgia;US House GA District 5	congressional
+Georgia;US House GA District 6	congressional
+Georgia;US House GA District 7	congressional
+Georgia;US House GA District 8	congressional
+Georgia;US House GA District 9	congressional
+Georgia;US House GA District 10	congressional
+Georgia;US House GA District 11	congressional
+Georgia;US House GA District 12	congressional
+Georgia;US House GA District 13	congressional
+Georgia;US House GA District 14	congressional
+Georgia	state
+Georgia;Appling County	county
+Georgia;Atkinson County	county
+Georgia;Bacon County	county
+Georgia;Baker County	county
+Georgia;Baldwin County	county
+Georgia;Banks County	county
+Georgia;Barrow County	county
+Georgia;Bartow County	county
+Georgia;Ben County	county
+Georgia;Berrien County	county
+Georgia;Bibb County	county
+Georgia;Bleckley County	county
+Georgia;Brantley County	county
+Georgia;Brooks County	county
+Georgia;Bryan County	county
+Georgia;Bulloch County	county
+Georgia;Burke County	county
+Georgia;Butts County	county
+Georgia;Calhoun County	county
+Georgia;Camden County	county
+Georgia;Candler County	county
+Georgia;Carroll County	county
+Georgia;Catoosa County	county
+Georgia;Charlton County	county
+Georgia;Chatham County	county
+Georgia;Chattahoochee County	county
+Georgia;Chattooga County	county
+Georgia;Cherokee County	county
+Georgia;Clarke County	county
+Georgia;Clay County	county
+Georgia;Clayton County	county
+Georgia;Clinch County	county
+Georgia;Cobb County	county
+Georgia;Coffee County	county
+Georgia;Colquitt County	county
+Georgia;Columbia County	county
+Georgia;Cook County	county
+Georgia;Coweta County	county
+Georgia;Crawford County	county
+Georgia;Crisp County	county
+Georgia;Dade County	county
+Georgia;Dawson County	county
+Georgia;Decatur County	county
+Georgia;DeKalb County	county
+Georgia;Dodge County	county
+Georgia;Dooly County	county
+Georgia;Dougherty County	county
+Georgia;Douglas County	county
+Georgia;Early County	county
+Georgia;Echols County	county
+Georgia;Effingham County	county
+Georgia;Elbert County	county
+Georgia;Emanuel County	county
+Georgia;Evans County	county
+Georgia;Fannin County	county
+Georgia;Fayette County	county
+Georgia;Floyd County	county
+Georgia;Forsyth County	county
+Georgia;Franklin County	county
+Georgia;Fulton County	county
+Georgia;Gilmer County	county
+Georgia;Glascock County	county
+Georgia;Glynn County	county
+Georgia;Gordon County	county
+Georgia;Grady County	county
+Georgia;Greene County	county
+Georgia;Gwinnett County	county
+Georgia;Habersham County	county
+Georgia;Hall County	county
+Georgia;Hancock County	county
+Georgia;Haralson County	county
+Georgia;Harris County	county
+Georgia;Hart County	county
+Georgia;Heard County	county
+Georgia;Henry County	county
+Georgia;Houston County	county
+Georgia;Irwin County	county
+Georgia;Jackson County	county
+Georgia;Jasper County	county
+Georgia;Jeff County	county
+Georgia;Jefferson County	county
+Georgia;Jenkins County	county
+Georgia;Johnson County	county
+Georgia;Jones County	county
+Georgia;Lamar County	county
+Georgia;Lanier County	county
+Georgia;Laurens County	county
+Georgia;Lee County	county
+Georgia;Liberty County	county
+Georgia;Lincoln County	county
+Georgia;Long County	county
+Georgia;Lowndes County	county
+Georgia;Lumpkin County	county
+Georgia;Macon County	county
+Georgia;Madison County	county
+Georgia;Marion County	county
+Georgia;McDuffie County	county
+Georgia;McIntosh County	county
+Georgia;Meriwether County	county
+Georgia;Miller County	county
+Georgia;Mitchell County	county
+Georgia;Monroe County	county
+Georgia;Montgomery County	county
+Georgia;Morgan County	county
+Georgia;Murray County	county
+Georgia;Muscogee County	county
+Georgia;Newton County	county
+Georgia;Oconee County	county
+Georgia;Oglethorpe County	county
+Georgia;Paulding County	county
+Georgia;Peach County	county
+Georgia;Pickens County	county
+Georgia;Pierce County	county
+Georgia;Pike County	county
+Georgia;Polk County	county
+Georgia;Pulaski County	county
+Georgia;Putnam County	county
+Georgia;Quitman County	county
+Georgia;Rabun County	county
+Georgia;Randolph County	county
+Georgia;Richmond County	county
+Georgia;Rockdale County	county
+Georgia;Schley County	county
+Georgia;Screven County	county
+Georgia;Seminole County	county
+Georgia;Spalding County	county
+Georgia;Stephens County	county
+Georgia;Stewart County	county
+Georgia;Sumter County	county
+Georgia;Talbot County	county
+Georgia;Taliaferro County	county
+Georgia;Tattnall County	county
+Georgia;Taylor County	county
+Georgia;Telfair County	county
+Georgia;Terrell County	county
+Georgia;Thomas County	county
+Georgia;Tift County	county
+Georgia;Toombs County	county
+Georgia;Towns County	county
+Georgia;Treutlen County	county
+Georgia;Troup County	county
+Georgia;Turner County	county
+Georgia;Twiggs County	county
+Georgia;Union County	county
+Georgia;Upson County	county
+Georgia;Walker County	county
+Georgia;Walton County	county
+Georgia;Ware County	county
+Georgia;Warren County	county
+Georgia;Washington County	county
+Georgia;Wayne County	county
+Georgia;Webster County	county
+Georgia;Wheeler County	county
+Georgia;White County	county
+Georgia;Whitfield County	county
+Georgia;Wilcox County	county
+Georgia;Wilkes County	county
+Georgia;Wilkinson County	county
+Georgia;Worth County	county
+Totals
