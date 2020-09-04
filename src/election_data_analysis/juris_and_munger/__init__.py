@@ -12,17 +12,18 @@ import csv
 
 
 # constants
-munger_pars_req = ['file_type']
-munger_pars_opt = ['header_row_count',
-                   'field_name_row',
-                   'field_names_if_no_field_name_row',
-                   'count_columns',
-                   'thousands_separator',
-                   'encoding',
-                   'top_lines_to_skip',
-                   'last_header_column_count',
-                   'column_width',
-                   ]
+munger_pars_req = ["file_type"]
+munger_pars_opt = [
+    "header_row_count",
+    "field_name_row",
+    "field_names_if_no_field_name_row",
+    "count_columns",
+    "thousands_separator",
+    "encoding",
+    "top_lines_to_skip",
+    "last_header_column_count",
+    "column_width",
+]
 
 
 class Jurisdiction:
@@ -58,7 +59,7 @@ class Jurisdiction:
         e = db.insert_to_cdf_db(engine, df[["Name", "contest_type"]], "Contest")
 
         # append Contest_Id
-        col_map = {"Name": "Name","contest_type":"contest_type"}
+        col_map = {"Name": "Name", "contest_type": "contest_type"}
         df = db.append_id_to_dframe(engine, df, "Contest", col_map=col_map)
 
         if contest_type == "BallotMeasure":
@@ -246,10 +247,8 @@ class Munger:
             self.encoding,
             self.thousands_separator,
             self.aux_meta,
-            self.options
-        ] = read_munger_info_from_files(
-            self.path_to_munger_dir
-        )
+            self.options,
+        ] = read_munger_info_from_files(self.path_to_munger_dir)
 
         if aux_data_dir:
             self.aux_data = self.get_aux_data(aux_data_dir, project_root=project_root)
@@ -294,53 +293,51 @@ def read_munger_info_from_files(dir_path):
         )
         cdf_elements.loc[i, "fields"] = [f for t, f in text_field_list]
 
-
-
     # read formatting info
     required_keys = munger_pars_req
     optional_keys = munger_pars_opt
     options, missing_required_params = ui.get_runtime_parameters(
         required_keys,
-        os.path.join(dir_path,'format.config'),
-        'format',
-        optional_keys=optional_keys
+        os.path.join(dir_path, "format.config"),
+        "format",
+        optional_keys=optional_keys,
     )
     file_type = options["file_type"]
-    if 'encoding' in options.keys():
-        encoding = options['encoding']
+    if "encoding" in options.keys():
+        encoding = options["encoding"]
     else:
-        encoding = 'iso-8859-1'
-    if 'thousands_separator' in options.keys() and options['thousands_separator'] not in ['','None']:
-        thousands_separator = options['thousands_separator']
+        encoding = "iso-8859-1"
+    if "thousands_separator" in options.keys() and options[
+        "thousands_separator"
+    ] not in ["", "None"]:
+        thousands_separator = options["thousands_separator"]
     else:
         thousands_separator = None
 
-    if file_type in ["txt","csv","xls"]:
+    if file_type in ["txt", "csv", "xls"]:
         try:
             # if field_name_row can be interpreted as an integer, use it
-            field_name_row = int(options['field_name_row'])
+            field_name_row = int(options["field_name_row"])
             field_names_if_no_field_name_row = None
         except Exception:
             # otherwise assume no field_name_row
             field_name_row = None
-            field_names_if_no_field_name_row = options['field_names_if_no_field_name_row'].split(',')
+            field_names_if_no_field_name_row = options[
+                "field_names_if_no_field_name_row"
+            ].split(",")
 
-        header_row_count = int(options['header_row_count'])
-        if 'count_columns' not in options.keys() or options['count_columns'] in ['','None']:
+        header_row_count = int(options["header_row_count"])
+        if "count_columns" not in options.keys() or options["count_columns"] in [
+            "",
+            "None",
+        ]:
             count_columns = []
         else:
-            count_columns = [int(x) for x in options['count_columns'].split(',')]
-        file_type = options['file_type']
+            count_columns = [int(x) for x in options["count_columns"].split(",")]
+        file_type = options["file_type"]
     # TODO have options hold all optional parameters (and maybe even all parameters)
     #  and remove explicit attributes entirely?
-    return [
-        cdf_elements,
-        file_type,
-        encoding,
-        thousands_separator,
-        aux_meta,
-        options
-    ]
+    return [cdf_elements, file_type, encoding, thousands_separator, aux_meta, options]
 
 
 # TODO combine ensure_jurisdiction_dir with ensure_juris_files
@@ -492,13 +489,15 @@ def ensure_munger_files(munger_path, project_root=None):
     # create each file if necessary
     for munger_file in template_with_extension_list:
         # TODO create optional template for auxiliary.txt
-        cf_path = os.path.join(munger_path,munger_file)
+        cf_path = os.path.join(munger_path, munger_file)
         # if file does not already exist in munger dir, create from template and invite user to fill
         file_exists = os.path.isfile(cf_path)
         if not file_exists:
-            temp = pd.read_csv(os.path.join(templates,munger_file),sep='\t',encoding='iso-8859-1')
+            temp = pd.read_csv(
+                os.path.join(templates, munger_file), sep="\t", encoding="iso-8859-1"
+            )
             created.append(munger_file)
-            temp.to_csv(cf_path,sep='\t',index=False)
+            temp.to_csv(cf_path, sep="\t", index=False)
 
         # if file exists, check format against template
         if file_exists:
@@ -525,39 +524,52 @@ def check_munger_file_format(munger_path, munger_file, templates):
     error = dict()
     problems = list()
     if munger_file[-4:] == ".txt":
-        cf_df = pd.read_csv(os.path.join(munger_path,munger_file),sep='\t',encoding='iso-8859-1')
-        temp = pd.read_csv(os.path.join(templates,munger_file),sep='\t',encoding='iso-8859-1')
+        cf_df = pd.read_csv(
+            os.path.join(munger_path, munger_file), sep="\t", encoding="iso-8859-1"
+        )
+        temp = pd.read_csv(
+            os.path.join(templates, munger_file), sep="\t", encoding="iso-8859-1"
+        )
         # check column names are correct
         if set(cf_df.columns) != set(temp.columns):
-            cols = '\t'.join(temp.columns.to_list())
-            problems.append(f"Columns of {munger_file} need to be (tab-separated):\n"
-                f' {cols}\n')
+            cols = "\t".join(temp.columns.to_list())
+            problems.append(
+                f"Columns of {munger_file} need to be (tab-separated):\n" f" {cols}\n"
+            )
 
         # check first column matches template
         #  check same number of rows
         elif cf_df.shape[0] != temp.shape[0]:
-            first_col = '\n'.join(list(temp.iloc[:,0]))
+            first_col = "\n".join(list(temp.iloc[:, 0]))
             problems.append(
-                f'Wrong number of rows in {munger_file}. \nFirst column must be exactly:\n{first_col}')
-        elif set(cf_df.iloc[:,0]) != set(temp.iloc[:,0]):
-            first_error = (cf_df.iloc[:,0] != temp.iloc[:,0]).index.to_list()[0]
-            first_col = '\n'.join(list(temp.iloc[:,0]))
-            problems.append(f'First column of {munger_file}.txt must be exactly:\n{first_col}\n'
-                            f'First error is at row {first_error}: {cf_df.loc[first_error]}')
+                f"Wrong number of rows in {munger_file}. \nFirst column must be exactly:\n{first_col}"
+            )
+        elif set(cf_df.iloc[:, 0]) != set(temp.iloc[:, 0]):
+            first_error = (cf_df.iloc[:, 0] != temp.iloc[:, 0]).index.to_list()[0]
+            first_col = "\n".join(list(temp.iloc[:, 0]))
+            problems.append(
+                f"First column of {munger_file}.txt must be exactly:\n{first_col}\n"
+                f"First error is at row {first_error}: {cf_df.loc[first_error]}"
+            )
 
     elif munger_file == "format.config":
         d, missing = ui.get_runtime_parameters(
             munger_pars_req,
-            os.path.join(munger_path,munger_file),
+            os.path.join(munger_path, munger_file),
             "format",
-            optional_keys=munger_pars_opt
+            optional_keys=munger_pars_opt,
         )
         if missing:
-            problems.append(f'Missing parameters in {munger_file}:\n{missing}')
-        if 'field_names_if_no_field_name_row' not in d.keys() and 'field_name_row' not in d.keys():
-            problems.append(f'Parameter file {munger_file} fails to have one of these: field_names_if_no_field_name_row, field_name_row')
+            problems.append(f"Missing parameters in {munger_file}:\n{missing}")
+        if (
+            "field_names_if_no_field_name_row" not in d.keys()
+            and "field_name_row" not in d.keys()
+        ):
+            problems.append(
+                f"Parameter file {munger_file} fails to have one of these: field_names_if_no_field_name_row, field_name_row"
+            )
     else:
-        problems.append(f'Unrecognized file in munger: {munger_file}')
+        problems.append(f"Unrecognized file in munger: {munger_file}")
     if problems:
         problems = ", ".join(problems)
         error = {}
@@ -574,12 +586,12 @@ def check_munger_file_contents(munger_name, project_root):
     warns = []
 
     # read cdf_elements and format from files
-    cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),
-                               sep='\t',encoding='iso-8859-1'
-                               ).fillna('')
+    cdf_elements = pd.read_csv(
+        os.path.join(munger_dir, "cdf_elements.txt"), sep="\t", encoding="iso-8859-1"
+    ).fillna("")
 
     # every source in cdf_elements is either row, column or other
-    bad_source = [x for x in cdf_elements.source if x not in ['row','column']]
+    bad_source = [x for x in cdf_elements.source if x not in ["row", "column"]]
     if bad_source:
         b_str = ",".join(bad_source)
         problems.append(
@@ -603,38 +615,48 @@ def check_munger_file_contents(munger_name, project_root):
 
     format_d, missing = ui.get_runtime_parameters(
         munger_pars_req,
-        os.path.join(munger_dir,'format.config'),
-        'format',
-        optional_keys=munger_pars_opt
+        os.path.join(munger_dir, "format.config"),
+        "format",
+        optional_keys=munger_pars_opt,
     )
 
     # warn if encoding missing or is not recognized
     if "encoding" not in format_d.keys():
         warns.append(f"No encoding specified; iso-8859-1 will be used")
-    elif not format_d['encoding'] in ui.recognized_encodings:
-        warns.append(f'Encoding {format_d["encoding"]} in format file is not recognized.')
+    elif not format_d["encoding"] in ui.recognized_encodings:
+        warns.append(
+            f'Encoding {format_d["encoding"]} in format file is not recognized.'
+        )
 
     # check all parameters for flat files
-    if format_d['file_type'] in ['txt','csv','xls']:
+    if format_d["file_type"] in ["txt", "csv", "xls"]:
         # Either field_name_row is a number, or field_names_if_no_field_name_row is not the empty string
-        if (not format_d['field_name_row'].isnumeric()) and len(format_d['field_names_if_no_field_name_row']) == 0:
-            problems.append(f'In format file, field_name_row is not an integer, '
-                            f'but no field names are give in field_names_if_no_field_name_row.')
+        if (not format_d["field_name_row"].isnumeric()) and len(
+            format_d["field_names_if_no_field_name_row"]
+        ) == 0:
+            problems.append(
+                f"In format file, field_name_row is not an integer, "
+                f"but no field names are give in field_names_if_no_field_name_row."
+            )
 
         # other entries in format.config are of correct type
         try:
-            int(format_d['header_row_count'])
+            int(format_d["header_row_count"])
         except TypeError or ValueError:
-            problems.append(f'header_row_count in format.config must be an integer but isn\'t: '
-                            f'{format_d["header_row_count"]}')
+            problems.append(
+                f"header_row_count in format.config must be an integer but isn't: "
+                f'{format_d["header_row_count"]}'
+            )
 
     # check all parameters for concatenated blocks (e.g., Georgia ExpressVote output)
     elif format_d["file_type"] in ["concatenated-blocks"]:
-        for key in ['top_lines_to_skip','last_header_column_count','column_width']:
+        for key in ["top_lines_to_skip", "last_header_column_count", "column_width"]:
             try:
                 int(format_d[key])
             except ValueError or TypeError:
-                problems.append(f"{key} in format.config must be an integer: {format_d[key]} is not.")
+                problems.append(
+                    f"{key} in format.config must be an integer: {format_d[key]} is not."
+                )
 
     # problems found above may cause this block of code to error out, so this is
     # wrapped in a try block since it returns a general error message
@@ -646,7 +668,10 @@ def check_munger_file_contents(munger_name, project_root):
                 int(x) for x in p_catch_digits.findall(r["raw_identifier_formula"])
             ]
             bad_integer_list = [
-                x for x in integer_list if (x > int(format_d['header_row_count'])-1 or x < 0)]
+                x
+                for x in integer_list
+                if (x > int(format_d["header_row_count"]) - 1 or x < 0)
+            ]
             if bad_integer_list:
                 bad_column_formula.add(r["raw_identifier_formula"])
     if bad_column_formula:
@@ -765,8 +790,10 @@ def check_dependencies(juris_dir, element):
         else:
             changed_elements.add(element)
             changed_elements.add(target)
-            m_str = '\n'.join(missing)
-            unmatched_error.append(f'Every {c} must be a {target}. This is not optional!! Offenders:\n{m_str}')
+            m_str = "\n".join(missing)
+            unmatched_error.append(
+                f"Every {c} must be a {target}. This is not optional!! Offenders:\n{m_str}"
+            )
 
     # if dependent:
     #     print('\n\t'.join(report))
@@ -903,9 +930,9 @@ def check_results_munger_compatibility(
     # check that count columns exist
     missing = [i for i in mu.count_columns if i >= df.shape[1]]
     if missing:
-        e = f'Only {df.shape[1]} columns read from file. Check file_type in format.ini'
-        if 'datafile' in error.keys():
-            error['datafile'].append(e)
+        e = f"Only {df.shape[1]} columns read from file. Check file_type in format.ini"
+        if "datafile" in error.keys():
+            error["datafile"].append(e)
         else:
             error["datafile"] = e
     else:

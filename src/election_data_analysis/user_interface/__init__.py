@@ -446,9 +446,9 @@ def read_combine_results(
 ):
     if mu.options["file_type"] in ["concatenated-blocks"]:
         working, err = sf.read_concatenated_blocks(results_file, mu, err)
-        
+
         # set options that will be needed for going forward
-        mu.options["count_columns"] = [working.columns.to_list().index('count')]
+        mu.options["count_columns"] = [working.columns.to_list().index("count")]
         mu.options["header_row_count"] = 1
         mu.options["field_name_row"] = 0
     else:
@@ -461,7 +461,9 @@ def read_combine_results(
         if [k for k in err.keys() if err[k] != None]:
             return pd.DataFrame(), err
         else:
-            working = m.cast_cols_as_int(working, mu.options["count_columns"], mode="index")
+            working = m.cast_cols_as_int(
+                working, mu.options["count_columns"], mode="index"
+            )
 
             # merge with auxiliary files (if any)
             if aux_data_dir is not None:

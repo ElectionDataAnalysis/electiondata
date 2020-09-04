@@ -66,17 +66,22 @@ def munge_clean(raw: pd.DataFrame, munger: jm.Munger):
     #  define columns named in munger formulas
     if munger.options["header_row_count"] > 1:
         munger_formula_columns = [
-            x for x in working.columns if x[munger.options["field_name_row"]] in munger.field_list
+            x
+            for x in working.columns
+            if x[munger.options["field_name_row"]] in munger.field_list
         ]
     else:
         munger_formula_columns = [x for x in working.columns if x in munger.field_list]
 
     if munger.options["field_name_row"] is None:
         count_columns_by_name = [
-            munger.options["field_names_if_no_field_name_row"][idx] for idx in munger.options["count_columns"]
+            munger.options["field_names_if_no_field_name_row"][idx]
+            for idx in munger.options["count_columns"]
         ]
     else:
-        count_columns_by_name = [working.columns[idx] for idx in munger.options["count_columns"]]
+        count_columns_by_name = [
+            working.columns[idx] for idx in munger.options["count_columns"]
+        ]
     # TODO error check- what if cols_to_munge is missing something from munger.field_list?
 
     # keep columns named in munger formulas; keep count columns; drop all else.
@@ -146,7 +151,7 @@ def add_column_from_formula(
     # use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
     if regex_flag:
         # TODO figure out how to allow more general manipulations. This can only pull out one part of the pattern
-        working[new_col] = working[new_col].str.replace(pattern,'\\1')
+        working[new_col] = working[new_col].str.replace(pattern, "\\1")
 
     return working, err
 
@@ -417,7 +422,9 @@ def good_syntax(s):
     return good
 
 
-def munge_and_melt(mu: jm.Munger, raw: pd.DataFrame, count_cols: list, err: dict) -> (pd.DataFrame, dict):
+def munge_and_melt(
+    mu: jm.Munger, raw: pd.DataFrame, count_cols: list, err: dict
+) -> (pd.DataFrame, dict):
     """Does not alter raw; returns Transformation of raw:
      all row- and column-sourced mungeable info into columns (but doesn't translate via dictionary)
     new column names are, e.g., ReportingUnit_raw, Candidate_raw, etc.
