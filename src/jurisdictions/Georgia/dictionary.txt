@@ -5165,3 +5165,77 @@ Candidate	Bill Doupe	BILL DOUPE
 Candidate	Ken Mauldin	KEN MAULDIN (I)
 Candidate	Penny A Penn	PENNY A PENN (I)
 Candidate	Jonathan Adams	JONATHAN ADAMS
+Candidate	Geoff Duncan	GEOFF DUNCAN
+Candidate	Sarah Riggs Amico	SARAH RIGGS AMICO
+Candidate	Brad Raffensperger	BRAD RAFFENSPERGER
+Candidate	John Barrow	JOHN BARROW
+Candidate	Smythe Duval	SMYTHE DUVAL
+Candidate	Chris Carr	CHRIS CARR
+Candidate	Charlie Bailey	CHARLIE BAILEY
+Candidate	Gary Black	GARY BLACK
+Candidate	Fred Swann	FRED SWANN
+Candidate	Jim Beck	JIM BECK
+Candidate	Janice Laws	JANICE LAWS
+Candidate	Donnie Foster	DONNIE FOSTER
+Candidate	Mark Butler	MARK BUTLER
+Candidate	Richard Keatley	RICHARD KEATLEY
+Candidate	Earl L. 'Buddy' Carter	EARL L. "BUDDY" CARTER
+Candidate	Lisa M. Ring	LISA M. RING
+Candidate	Herman West Jr	HERMAN WEST JR
+Candidate	Drew Ferguson	DREW FERGUSON
+Candidate	Chuck Enderlin	CHUCK ENDERLIN
+Candidate	Joe Profit	JOE PROFIT
+Candidate	Henry C 'Hank' Johnson Jr	HENRY C "HANK" JOHNSON JR
+Candidate	Karen Handel	KAREN HANDEL
+Candidate	Lucy Mcbath	LUCY MCBATH
+Candidate	Carolyn Bourdeaux	CAROLYN BOURDEAUX
+Candidate	Josh Mccall	JOSH MCCALL
+Candidate	Sandra Workman	SANDRA WORKMAN
+Candidate	Lester G. Jackson Iii	LESTER G. JACKSON III
+Candidate	William T. Ligon Jr	WILLIAM T. LIGON JR
+Candidate	Jerrold Dagen	JERROLD DAGEN
+Candidate	Sheikh Rahman	SHEIKH RAHMAN
+Candidate	Leah Aldridge	LEAH ALDRIDGE
+Candidate	Jen Jordan	JEN JORDAN
+Candidate	P. K. Martin Iv	P. K. MARTIN IV
+Candidate	Cheryle R. Moses	CHERYLE R. MOSES
+Candidate	Rachel A. Kinsey	RACHEL A. KINSEY
+Candidate	Bill Lightle	BILL LIGHTLE
+Candidate	Phyllis D. Hatcher	PHYLLIS D. HATCHER
+Candidate	Blake Tillery	BLAKE TILLERY
+Candidate	Nicole B. Nash	NICOLE B. NASH
+Candidate	Lee Anderson	LEE ANDERSON
+Candidate	David E. Lucas Sr	DAVID E. LUCAS SR
+Candidate	Greg Dolezal	GREG DOLEZAL
+Candidate	Steve Smith	STEVE SMITH
+Candidate	Matt Brass	MATT BRASS
+Candidate	Randy Robertson	RANDY ROBERTSON
+Candidate	Valerie Haskins	VALERIE HASKINS
+Candidate	Kay Kirkpatrick	KAY KIRKPATRICK
+Candidate	Christine Triebsch	CHRISTINE TRIEBSCH
+Candidate	Tommy Smith	TOMMY SMITH
+Candidate	Andy Clark	ANDY CLARK
+Candidate	Travis Klavohn	TRAVIS KLAVOHN
+Candidate	Nikema Williams	NIKEMA WILLIAMS
+Candidate	Sally Harrell	SALLY HARRELL
+Candidate	Tonya P. Anderson	TONYA P. ANDERSON
+Candidate	Renee S. Unterman	RENEE S. UNTERMAN
+Candidate	Jana Rodgers	JANA RODGERS
+Candidate	Marisue Hilliard	MARISUE HILLIARD
+Candidate	Dawn Johnson	DAWN JOHNSON
+Candidate	Matt Reeves	MATT REEVES
+Candidate	Zahra Karinshak	ZAHRA KARINSHAK
+Candidate	Cecil T. 'Butch' Miller	CECIL T. "BUTCH" MILLER
+Candidate	John K. Wilkinson	JOHN K. WILKINSON
+Candidate	Evan Ross	EVAN ROSS
+Candidate	Chuck Payne	CHUCK PAYNE
+Candidate	Michael S. Morgan	MICHAEL S. MORGAN
+Candidate	Gloria S. Butler	GLORIA S. BUTLER
+Candidate	Ellyn Jeager	ELLYN JEAGER
+Candidate	Colton Moore	COLTON MOORE
+Candidate	Dewayne Hill	DEWAYNE HILL
+Candidate	Kasey Carpenter	KASEY CARPENTER
+Candidate	Brian Rosser	BRIAN ROSSER
+Candidate	Jason T. Ridley	JASON T. RIDLEY
+Candidate	Rick D. Day	RICK D. DAY
+Candidate	Matt Gurtler	MATT GURTLER
