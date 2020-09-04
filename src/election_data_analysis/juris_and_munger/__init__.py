@@ -961,6 +961,8 @@ def add_none_or_unknown(df: pd.DataFrame, contest_type: str = None) -> pd.DataFr
     for c in df.columns:
         if c == "contest_type":
             new_row[c] = contest_type
+        elif c == "NumberElected":
+            new_row[c] = 0
         elif df[c].dtype == "O":
             new_row[c] = "none or unknown"
         elif pd.api.types.is_numeric_dtype(df[c]):
