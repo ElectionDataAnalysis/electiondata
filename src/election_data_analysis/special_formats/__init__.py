@@ -40,11 +40,11 @@ def read_concatenated_blocks(
         err = ui.add_error(err, "datafile_error", f"Datafile not read:\n{exc}")
         return pd.DataFrame(), err
 
-    # get integers from munger parameters
-    w = int(munger.options["column_width"])
-    tlts = int(munger.options["count_of_top_lines_to_skip"])
-    v_t_cc = int(munger.options["last_header_column_count"])
-    skip_cols = [int(x) for x in munger.options["columns_to_skip"].split(",")]
+    # get  munger parameters
+    w = munger.options["column_width"]
+    tlts = munger.options["count_of_top_lines_to_skip"]
+    v_t_cc = munger.options["last_header_column_count"]
+    skip_cols = munger.options["columns_to_skip"]
 
     df = dict()
 

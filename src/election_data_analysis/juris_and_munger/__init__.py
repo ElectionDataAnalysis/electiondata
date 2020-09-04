@@ -13,18 +13,46 @@ import csv
 
 # constants
 munger_pars_req = ["file_type"]
-munger_pars_opt = [
-    "header_row_count",
-    "field_name_row",
-    "field_names_if_no_field_name_row",
-    "count_columns",
-    "thousands_separator",
-    "encoding",
-    "count_of_top_lines_to_skip",
-    "columns_to_skip",
-    "last_header_column_count",
-    "column_width",
-]
+munger_pars_opt = {
+    "header_row_count": "int",
+    "field_name_row": "int",
+    "field_names_if_no_field_name_row": "list-of-strings",
+    "count_columns": "list-of-integers",
+    "thousands_separator": "str",
+    "encoding": "str",
+    "count_of_top_lines_to_skip": "int",
+    "columns_to_skip": "list-of-integers",
+    "last_header_column_count": "int",
+    "column_width": "int",
+}
+
+
+def recast_options(options: dict, types: dict) -> dict:
+    keys = {k for k in options.keys() if k in types.keys()}
+    for k in keys:
+        if types[k] == "int":
+            try:
+                options[k] = int(options[k])
+            except:
+                options[k] = None
+        if types[k] == "list-of-integers":
+            try:
+                options[k] = [int(s) for s in options[k].split(",")]
+            except:
+                options[k] = None
+        if types[k] == "str":
+            pass
+        if types[k] == "list-of-strings":
+            try:
+                options[k] = [s for s in options[k].split(",")]
+            except:
+                options[k] = None
+        if types[k] == "int":
+            try:
+                options[k] = int(options[k])
+            except:
+                options[k] = None
+    return options
 
 
 class Jurisdiction:
@@ -209,7 +237,7 @@ class Munger:
                     int(x) for x in p_catch_digits.findall(r["raw_identifier_formula"])
                 ]
                 bad_integer_list = [
-                    x for x in integer_list if (x > int(self.options["header_row_count"]) - 1 or x < 0)
+                    x for x in integer_list if (x > self.options["header_row_count"] - 1 or x < 0)
                 ]
                 if bad_integer_list:
                     bad_column_formula.add(r["raw_identifier_formula"])
@@ -296,13 +324,15 @@ def read_munger_info_from_files(dir_path):
 
     # read formatting info
     required_keys = munger_pars_req
-    optional_keys = munger_pars_opt
+    optional_keys = list(munger_pars_opt.keys())
     options, missing_required_params = ui.get_runtime_parameters(
         required_keys,
         os.path.join(dir_path, "format.config"),
         "format",
         optional_keys=optional_keys,
     )
+    options = recast_options(options,munger_pars_opt)
+
     file_type = options["file_type"]
     if "encoding" in options.keys():
         encoding = options["encoding"]
@@ -563,7 +593,7 @@ def check_munger_file_format(munger_path, munger_file, templates):
             munger_pars_req,
             os.path.join(munger_path, munger_file),
             "format",
-            optional_keys=munger_pars_opt,
+            optional_keys=list(munger_pars_opt.keys()),
         )
         if missing:
             problems.append(f"Missing parameters in {munger_file}:\n{missing}")
@@ -623,7 +653,7 @@ def check_munger_file_contents(munger_name, project_root):
         munger_pars_req,
         os.path.join(munger_dir, "format.config"),
         "format",
-        optional_keys=munger_pars_opt,
+        optional_keys=list(munger_pars_opt.keys()),
     )
 
     # warn if encoding missing or is not recognized
