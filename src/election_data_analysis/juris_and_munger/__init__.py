@@ -209,7 +209,7 @@ class Munger:
                     int(x) for x in p_catch_digits.findall(r["raw_identifier_formula"])
                 ]
                 bad_integer_list = [
-                    x for x in integer_list if (x > self.options["header_row_count"] - 1 or x < 0)
+                    x for x in integer_list if (x > int(self.options["header_row_count"]) - 1 or x < 0)
                 ]
                 if bad_integer_list:
                     bad_column_formula.add(r["raw_identifier_formula"])
