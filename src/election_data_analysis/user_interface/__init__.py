@@ -403,11 +403,11 @@ def read_single_datafile(
         dtype = {c: str for c in munger.field_list}
         kwargs = {"thousands": munger.thousands_separator, "dtype": dtype}
 
-        if munger.field_name_row is None:
+        if munger.options["field_name_row"] is None:
             kwargs["header"] = None
-            kwargs["names"] = munger.field_names_if_no_field_name_row
+            kwargs["names"] = munger.options["field_names_if_no_field_name_row"]
         else:
-            kwargs["header"] = list(range(munger.header_row_count))
+            kwargs["header"] = list(range(munger.options["header_row_count"]))
 
         if munger.file_type in ["txt", "csv"]:
             kwargs["encoding"] = munger.encoding

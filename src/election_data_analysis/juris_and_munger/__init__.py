@@ -209,7 +209,7 @@ class Munger:
                     int(x) for x in p_catch_digits.findall(r["raw_identifier_formula"])
                 ]
                 bad_integer_list = [
-                    x for x in integer_list if (x > self.header_row_count - 1 or x < 0)
+                    x for x in integer_list if (x > self.options["header_row_count"] - 1 or x < 0)
                 ]
                 if bad_integer_list:
                     bad_column_formula.add(r["raw_identifier_formula"])
@@ -934,7 +934,7 @@ def check_results_munger_compatibility(
     mu: Munger, df: pd.DataFrame, error: dict
 ) -> dict:
     # check that count columns exist
-    missing = [i for i in mu.count_columns if i >= df.shape[1]]
+    missing = [i for i in mu.options["count_columns"] if i >= df.shape[1]]
     if missing:
         e = f"Only {df.shape[1]} columns read from file. Check file_type in format.ini"
         if "datafile" in error.keys():
@@ -943,7 +943,7 @@ def check_results_munger_compatibility(
             error["datafile"] = e
     else:
         # check that count cols are numeric
-        for i in mu.count_columns:
+        for i in mu.options["count_columns"]:
             if not is_numeric_dtype(df.iloc[:, i]):
                 try:
                     df.iloc[:, i] = df.iloc[:, i].astype(int)

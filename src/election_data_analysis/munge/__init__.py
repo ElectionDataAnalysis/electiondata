@@ -182,7 +182,7 @@ def add_munged_column(
             for field in munger.field_list:
                 formula = formula.replace(f"<{field}>", f"<{field}_SOURCE>")
         elif mode == "column":
-            for i in range(munger.header_row_count):
+            for i in range(munger.options["header_row_count"]):
                 formula = formula.replace(f"<{i}>", f"<variable_{i}>")
 
         working, err = add_column_from_formula(working, formula, f"{element}_raw", err)
