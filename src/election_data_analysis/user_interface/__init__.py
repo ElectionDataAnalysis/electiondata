@@ -443,15 +443,26 @@ def read_single_datafile(
 def read_combine_results(
     mu: jm.Munger, results_file, project_root, err, aux_data_dir=None
 ):
-    try:
-        working, err = read_single_datafile(mu, results_file, err)
-    except Exception as exc:
-        e = f"Exception while reading file {results_file}: {exc}"
-        add_error(err, "datafile", e)
-    if [k for k in err.keys() if err[k] != None]:
-        return pd.DataFrame(), err
+    if mu.options["file_type"] in ["concatenated-blocks"]:
+        working, err = sf.read_concatenated_blocks(results_file, mu, err)
+
+        # set options that will be needed for going forward
+        mu.options["count_columns"] = [working.columns.to_list().index("count")]
+        mu.options["header_row_count"] = 1
+        mu.options["field_name_row"] = 0
     else:
-        working = m.cast_cols_as_int(working, mu.count_columns, mode="index")
+        try:
+            working, err = read_single_datafile(mu, results_file, err)
+        except Exception as exc:
+            e = f"Exception while reading file {results_file}: {exc}"
+            add_error(err, "datafile", e)
+            return pd.DataFrame(), err
+        if [k for k in err.keys() if err[k] != None]:
+            return pd.DataFrame(), err
+        else:
+            working = m.cast_cols_as_int(
+                working, mu.options["count_columns"], mode="index"
+            )
 
         # merge with auxiliary files (if any)
         if aux_data_dir is not None:
@@ -515,7 +526,7 @@ def new_datafile(
         add_error(err, "datafile_error", e)
         return err
 
-    count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
+    count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"]]
 
     try:
         raw = m.munge_clean(raw, munger)
