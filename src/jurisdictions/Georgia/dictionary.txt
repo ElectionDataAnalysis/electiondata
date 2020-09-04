@@ -3865,7 +3865,7 @@ Candidate	Daniel Blackman	Daniel Blackman
 Candidate	John Noel	John Noel
 Candidate	Jason Shaw	Jason Shaw (I)
 Candidate	Robert G. Bryant	Robert G. Bryant
-Candidate	Earl L. 'Buddy' Carter	Earl L. ""Buddy"" Carter (I)
+Candidate	Earl L. 'Buddy' Carter	"Earl L. """"Buddy"""" Carter (I)"
 Candidate	Danny Merritt	Danny Merritt
 Candidate	Ken Yasger	Ken Yasger
 Candidate	Joyce Marie Griggs	Joyce Marie Griggs
@@ -3878,7 +3878,7 @@ Candidate	Drew Ferguson	Drew Ferguson (I)
 Candidate	Val Almonord	Val Almonord
 Candidate	Johsie Cruz Ezammudeen	Johsie Cruz Ezammudeen
 Candidate	William Haston	William Haston
-Candidate	Henry C. 'Hank' Johnson, Jr.	Henry C. "Hank" Johnson, Jr. (I)
+Candidate	Henry C. 'Hank' Johnson, Jr.	"Henry C. ""Hank"" Johnson, Jr. (I)"
 Candidate	Elaine Amankwah Nietmann	Elaine Amankwah Nietmann
 Candidate	Angela Stanton-King	Angela Stanton-King
 Candidate	John R. Lewis	John R. Lewis (I)
@@ -3955,7 +3955,7 @@ Candidate	Stephen Jared Sammons	Stephen Jared Sammons
 Candidate	Neil Singleton	Neil Singleton
 Candidate	Sheikh Rahman	Sheikh Rahman (I)
 Candidate	Harrison Lance	Harrison Lance
-Candidate	Jennifer 'Jen' Jordan	Jennifer ""Jen"" Jordan (I)
+Candidate	Jennifer 'Jen' Jordan	"Jennifer """"Jen"""" Jordan (I)"
 Candidate	Tyler Harper	Tyler Harper (I)
 Candidate	Russ Goodman	Russ Goodman
 Candidate	Treva Gear	Treva Gear
@@ -4007,7 +4007,7 @@ Candidate	Afoma Eguh-Okafor	Afoma Eguh-Okafor
 Candidate	Triana Arnold James	Triana Arnold James
 Candidate	Jason Anavitarte	Jason Anavitarte
 Candidate	Boyd Austin	Boyd Austin
-Candidate	Robert 'Bobby' Mehan	Robert ""Bobby"" Mehan
+Candidate	Robert 'Bobby' Mehan	"Robert """"Bobby"""" Mehan"
 Candidate	Bobby Wilson	Bobby Wilson
 Candidate	Tianna Smith	Tianna Smith
 Candidate	Kay Kirkpatrick	Kay Kirkpatrick (I)
@@ -4053,7 +4053,7 @@ Candidate	Dawn Johnson	Dawn Johnson
 Candidate	Matt Reeves	Matt Reeves
 Candidate	Michelle Au	Michelle Au
 Candidate	Josh Uddin	Josh Uddin
-Candidate	Cecil T. 'Butch' Miller	Cecil T. ""Butch"" Miller (I)
+Candidate	Cecil T. 'Butch' Miller	"Cecil T. """"Butch"""" Miller (I)"
 Candidate	Andy Garrison	Andy Garrison
 Candidate	Dan Gasaway	Dan Gasaway
 Candidate	Stacy Hall	Stacy Hall
@@ -4125,7 +4125,7 @@ Candidate	Jordan Ridley	Jordan Ridley
 Candidate	Katrina Singletary	Katrina Singletary
 Candidate	Ginny Lennox	Ginny Lennox
 Candidate	Bill Fincher	Bill Fincher
-Candidate	Rajpal 'Raj' Sagoo	Rajpal ""Raj' Sagoo
+Candidate	Rajpal 'Raj' Sagoo	"Rajpal """"Raj' Sagoo"
 Candidate	Brad Thomas	Brad Thomas
 Candidate	William D. Hughes	William D. Hughes
 Candidate	Wes Cantrell	Wes Cantrell (I)
@@ -4185,7 +4185,7 @@ Candidate	Jan Jones	Jan Jones (I)
 Candidate	Anthia Owens Carter	Anthia Owens Carter
 Candidate	Betty Price	Betty Price
 Candidate	Mary Robichaux	Mary Robichaux (I)
-Candidate	Charles E. 'Chuck' Martin	Charles E. ""Chuck"" Martin (I)
+Candidate	Charles E. 'Chuck' Martin	"Charles E. """"Chuck"""" Martin (I)"
 Candidate	Jason T. Hayes	Jason T. Hayes
 Candidate	Ken Lawler	Ken Lawler
 Candidate	Jay Lin	Jay Lin
@@ -4213,7 +4213,7 @@ Candidate	Roger Bruce	Roger Bruce (I)
 Candidate	William K. Boddie, Jr.	William K. Boddie, Jr. (I)
 Candidate	David Callahan	David Callahan
 Candidate	Debra Bazemore	Debra Bazemore (I)
-Candidate	Kenneth 'Ken' Kincaid	Kenneth ""Ken"" Kincaid
+Candidate	Kenneth 'Ken' Kincaid	"Kenneth """"Ken"""" Kincaid"
 Candidate	Derrick L. Jackson	Derrick L. Jackson (I)
 Candidate	Sharon Beasley-Teague	Sharon Beasley-Teague (I)
 Candidate	Amber Doss-Hunter	Amber Doss-Hunter
@@ -4249,7 +4249,7 @@ Candidate	Scott Holcomb	Scott Holcomb (I)
 Candidate	Mary Margaret Oliver	Mary Margaret Oliver (I)
 Candidate	Becky Evans	Becky Evans (I)
 Candidate	Audrey Maloof	Audrey Maloof
-Candidate	Harmel 'Mel' Codi	Harmel ""Mel"" Codi
+Candidate	Harmel 'Mel' Codi	"Harmel """"Mel"""" Codi"
 Candidate	Renitta Shannon	Renitta Shannon (I)
 Candidate	Karla Drenner	Karla Drenner (I)
 Candidate	Ladena Bolton	Ladena Bolton
@@ -4313,7 +4313,7 @@ Candidate	Bruce Williamson	Bruce Williamson (I)
 Candidate	Debbie Reed	Debbie Reed
 Candidate	Terry England	Terry England (I)
 Candidate	Houston Gaines	Houston Gaines (I)
-Candidate	'Mokah' Jasmine Johnson	""Mokah"" Jasmine Johnson
+Candidate	'Mokah' Jasmine Johnson	"Mokah"""" Jasmine Johnson"
 Candidate	Spencer Frye	Spencer Frye (I)
 Candidate	Marcus A Wiedower	Marcus A Wiedower (I)
 Candidate	Jonathan Wallace	Jonathan Wallace
@@ -4322,12 +4322,12 @@ Candidate	Barry Fleming	Barry Fleming (I)
 Candidate	Jodi Lott	Jodi Lott (I)
 Candidate	Doris O. Crutchfield	Doris O. Crutchfield
 Candidate	Mark Newton	Mark Newton (I)
-Candidate	Henry 'Wayne' Howard	Henry ""Wayne"" Howard (I)
+Candidate	Henry 'Wayne' Howard	"Henry """"Wayne"""" Howard (I)"
 Candidate	Sheila Clark Nelson	Sheila Clark Nelson (I)
 Candidate	Gloria Frazier	Gloria Frazier (I)
 Candidate	Brian L. Prince	Brian L. Prince (I)
 Candidate	Mack Jackson	Mack Jackson (I)
-Candidate	Daniel 'Danny' Thomas, Jr.	Daniel "Danny" Thomas, Jr.
+Candidate	Daniel 'Danny' Thomas, Jr.	"Daniel ""Danny"" Thomas, Jr."
 Candidate	Susan Holmes	Susan Holmes (I)
 Candidate	Sharonda Bell	Sharonda Bell
 Candidate	David Knight	David Knight (I)
@@ -4355,7 +4355,7 @@ Candidate	Miriam Paris	Miriam Paris (I)
 Candidate	James Beverly	James Beverly (I)
 Candidate	Danny Mathis	Danny Mathis (I)
 Candidate	Mary Whipple-Lue	Mary Whipple-Lue
-Candidate	Ricky 'Rick' Williams	Ricky ""Rick"" Williams (I)
+Candidate	Ricky 'Rick' Williams	"Ricky """"Rick"""" Williams (I)"
 Candidate	Nincoe Byrd	Nincoe Byrd
 Candidate	Quentin T. Howell	Quentin T. Howell
 Candidate	Shaw Blackmon	Shaw Blackmon (I)
@@ -4377,7 +4377,7 @@ Candidate	Winfred Dukes	Winfred Dukes (I)
 Candidate	Clay Pirkle	Clay Pirkle (I)
 Candidate	Lethia Jones Kittrell	Lethia Jones Kittrell
 Candidate	Greg Morris	Greg Morris (I)
-Candidate	William 'Bill' Werkheiser	William ""Bill"" Werkheiser (I)
+Candidate	William 'Bill' Werkheiser	"William """"Bill"""" Werkheiser (I)"
 Candidate	Butch Parrish	Butch Parrish (I)
 Candidate	Ann P.D. Gleason	Ann P.D. Gleason
 Candidate	Jon G. Burns	Jon G. Burns (I)
@@ -4400,7 +4400,7 @@ Candidate	Buddy Deloach	Buddy Deloach
 Candidate	Jeff Jones	Jeff Jones (I)
 Candidate	Al Williams	Al Williams (I)
 Candidate	Dominic LaRiccia	Dominic LaRiccia (I)
-Candidate	Michael 'Buckle' Moore	Michael ""Buckle"" Moore
+Candidate	Michael 'Buckle' Moore	"Michael """"Buckle"""" Moore"
 Candidate	Penny Houston	Penny Houston (I)
 Candidate	Andre Oliver	Andre Oliver
 Candidate	Joe Campbell	Joe Campbell (I)
@@ -4805,3 +4805,361 @@ ReportingUnit	Georgia;Wilcox County	Wilcox
 ReportingUnit	Georgia;Wilkes County	Wilkes
 ReportingUnit	Georgia;Wilkinson County	Wilkinson
 ReportingUnit	Georgia;Worth County	Worth
+Candidate	DONALD J. TRUMP	DONALD J. TRUMP
+Candidate	HILLARY CLINTON	HILLARY CLINTON
+Candidate	GARY JOHNSON	GARY JOHNSON
+Candidate	JOHNNY ISAKSON (I)	JOHNNY ISAKSON (I)
+Candidate	JIM BARKSDALE	JIM BARKSDALE
+Candidate	ALLEN BUCKLEY	ALLEN BUCKLEY
+Candidate	TIM ECHOLS (I)	TIM ECHOLS (I)
+Candidate	ERIC HOSKINS	ERIC HOSKINS
+Candidate	EARL “BUDDY” CARTER (I)	EARL “BUDDY” CARTER (I)
+Candidate	GREG DUKE	GREG DUKE
+Candidate	SANFORD BISHOP (I)	SANFORD BISHOP (I)
+Candidate	DREW FERGUSON	DREW FERGUSON
+Candidate	ANGELA PENDLEY	ANGELA PENDLEY
+Candidate	VICTOR ARMENDARIZ	VICTOR ARMENDARIZ
+Candidate	HENRY C “HANK” JOHNSON JR (I)	HENRY C “HANK” JOHNSON JR (I)
+Candidate	DOUGLAS BELL	DOUGLAS BELL
+Candidate	JOHN R. LEWIS (I)	JOHN R. LEWIS (I)
+Candidate	TOM PRICE (I)	TOM PRICE (I)
+Candidate	RODNEY STOOKSBURY	RODNEY STOOKSBURY
+Candidate	ROB WOODALL (I)	ROB WOODALL (I)
+Candidate	RASHID MALIK	RASHID MALIK
+Candidate	AUSTIN SCOTT (I)	AUSTIN SCOTT (I)
+Candidate	JAMES NEAL HARRIS	JAMES NEAL HARRIS
+Candidate	DOUG COLLINS (I)	DOUG COLLINS (I)
+Candidate	JODY HICE (I)	JODY HICE (I)
+Candidate	BARRY LOUDERMILK (I)	BARRY LOUDERMILK (I)
+Candidate	DON WILSON	DON WILSON
+Candidate	RICK ALLEN (I)	RICK ALLEN (I)
+Candidate	PATRICIA C. MCCRACKEN	PATRICIA C. MCCRACKEN
+Candidate	DAVID SCOTT (I)	DAVID SCOTT (I)
+Candidate	TOM GRAVES (I)	TOM GRAVES (I)
+Candidate	BEN WATSON (I)	BEN WATSON (I)
+Candidate	LESTER JACKSON (I)	LESTER JACKSON (I)
+Candidate	WILLIAM LIGON JR (I)	WILLIAM LIGON JR (I)
+Candidate	JACK HILL (I)	JACK HILL (I)
+Candidate	CURT THOMPSON (I)	CURT THOMPSON (I)
+Candidate	HUNTER HILL (I)	HUNTER HILL (I)
+Candidate	JAHA HOWARD	JAHA HOWARD
+Candidate	TYLER HARPER (I)	TYLER HARPER (I)
+Candidate	ELLIS BLACK (I)	ELLIS BLACK (I)
+Candidate	GREGORY WILLIAMS	GREGORY WILLIAMS
+Candidate	P. K. MARTIN (I)	P. K. MARTIN (I)
+Candidate	EMANUEL JONES (I)	EMANUEL JONES (I)
+Candidate	DEAN BURKE (I)	DEAN BURKE (I)
+Candidate	FREDDIE POWELL SIMS (I)	FREDDIE POWELL SIMS (I)
+Candidate	GREG KIRK (I)	GREG KIRK (I)
+Candidate	RUENETTE MELTON	RUENETTE MELTON
+Candidate	BRUCE THOMPSON (I)	BRUCE THOMPSON (I)
+Candidate	ED HARBISON (I)	ED HARBISON (I)
+Candidate	MARTY HARBIN (I)	MARTY HARBIN (I)
+Candidate	RICHARD JEFFARES (I)	RICHARD JEFFARES (I)
+Candidate	BILL BLACKMON	BILL BLACKMON
+Candidate	JOHN F. KENNEDY (I)	JOHN F. KENNEDY (I)
+Candidate	BLAKE TILLERY	BLAKE TILLERY
+Candidate	LARRY WALKER (I)	LARRY WALKER (I)
+Candidate	BRANDON BEACH (I)	BRANDON BEACH (I)
+Candidate	HAROLD V. JONES II (I)	HAROLD V. JONES II (I)
+Candidate	JESSE STONE (I)	JESSE STONE (I)
+Candidate	LEE ANDERSON	LEE ANDERSON
+Candidate	BRENDA J. JORDAN	BRENDA J. JORDAN
+Candidate	BURT JONES (I)	BURT JONES (I)
+Candidate	DAVID LUCAS SR (I)	DAVID LUCAS SR (I)
+Candidate	MICHAEL WILLIAMS (I)	MICHAEL WILLIAMS (I)
+Candidate	DANIEL BLACKMAN	DANIEL BLACKMAN
+Candidate	MATT BRASS	MATT BRASS
+Candidate	JOSH MCKOON (I)	JOSH MCKOON (I)
+Candidate	BEN ANDERSON	BEN ANDERSON
+Candidate	MICHAEL DUGAN (I)	MICHAEL DUGAN (I)
+Candidate	BILL HEATH (I)	BILL HEATH (I)
+Candidate	JUDSON HILL (I)	JUDSON HILL (I)
+Candidate	MICHAEL RHETT (I)	MICHAEL RHETT (I)
+Candidate	VALENCIA SEAY (I)	VALENCIA SEAY (I)
+Candidate	DONZELLA JAMES (I)	DONZELLA JAMES (I)
+Candidate	NAN ORROCK (I)	NAN ORROCK (I)
+Candidate	LINDSEY TIPPINS (I)	LINDSEY TIPPINS (I)
+Candidate	JAMES (J. W.) MORROW JR	JAMES (J. W.) MORROW JR
+Candidate	HORACENA TATE (I)	HORACENA TATE (I)
+Candidate	VINCENT FORT (I)	VINCENT FORT (I)
+Candidate	FRAN MILLAR (I)	FRAN MILLAR (I)
+Candidate	TAMARA JOHNSON-SHEALEY	TAMARA JOHNSON-SHEALEY
+Candidate	STEVE HENSON (I)	STEVE HENSON (I)
+Candidate	KENNETH BRETT QUARTERMAN	KENNETH BRETT QUARTERMAN
+Candidate	ELENA PARENT (I)	ELENA PARENT (I)
+Candidate	JANICE VAN NESS (I)	JANICE VAN NESS (I)
+Candidate	TONYA P. ANDERSON	TONYA P. ANDERSON
+Candidate	GAIL DAVENPORT (I)	GAIL DAVENPORT (I)
+Candidate	RENEE UNTERMAN (I)	RENEE UNTERMAN (I)
+Candidate	BILL COWSERT (I)	BILL COWSERT (I)
+Candidate	FRANK GINN (I)	FRANK GINN (I)
+Candidate	DAVID SHAFER (I)	DAVID SHAFER (I)
+Candidate	CECIL T. BUTCH MILLER (I)	CECIL T. BUTCH MILLER (I)
+Candidate	JOHN K WILKINSON (I)	JOHN K WILKINSON (I)
+Candidate	STEVE GOOCH (I)	STEVE GOOCH (I)
+Candidate	CHUCK HUFSTETLER (I)	CHUCK HUFSTETLER (I)
+Candidate	JEFF MULLIS (I)	JEFF MULLIS (I)
+Candidate	CHARLIE BETHEL (I)	CHARLIE BETHEL (I)
+Candidate	ANNETTE DAVIS JACKSON	ANNETTE DAVIS JACKSON
+Candidate	GLORIA BUTLER (I)	GLORIA BUTLER (I)
+Candidate	JOHN ALBERS (I)	JOHN ALBERS (I)
+Candidate	PATRICK THOMPSON	PATRICK THOMPSON
+Candidate	JOHN DEFFENBAUGH (I)	JOHN DEFFENBAUGH (I)
+Candidate	STEVE TARVIN (I)	STEVE TARVIN (I)
+Candidate	DEWAYNE HILL	DEWAYNE HILL
+Candidate	BRUCE BROADRICK SR (I)	BRUCE BROADRICK SR (I)
+Candidate	JOHN MEADOWS (I)	JOHN MEADOWS (I)
+Candidate	JASON T. RIDLEY	JASON T. RIDLEY
+Candidate	DAVID RALSTON (I)	DAVID RALSTON (I)
+Candidate	MATT GURTLER	MATT GURTLER
+Candidate	KEVIN TANNER (I)	KEVIN TANNER (I)
+Candidate	TERRY ROGERS (I)	TERRY ROGERS (I)
+Candidate	RICK JASPERSE (I)	RICK JASPERSE (I)
+Candidate	BRANDON D CRISP	BRANDON D CRISP
+Candidate	EDDIE LUMSDEN (I)	EDDIE LUMSDEN (I)
+Candidate	KATIE DEMPSEY (I)	KATIE DEMPSEY (I)
+Candidate	CHRISTIAN COOMER (I)	CHRISTIAN COOMER (I)
+Candidate	PAUL BATTLES (I)	PAUL BATTLES (I)
+Candidate	STEPHANIE F LUJAN	STEPHANIE F LUJAN
+Candidate	TREY KELLEY (I)	TREY KELLEY (I)
+Candidate	HOWARD MAXWELL (I)	HOWARD MAXWELL (I)
+Candidate	KEVIN COOKE (I)	KEVIN COOKE (I)
+Candidate	PAULETTE RAKESTRAW (I)	PAULETTE RAKESTRAW (I)
+Candidate	MICHAEL CALDWELL (I)	MICHAEL CALDWELL (I)
+Candidate	SCOT TURNER (I)	SCOT TURNER (I)
+Candidate	WES CANTRELL (I)	WES CANTRELL (I)
+Candidate	"OSCAR ""ASGHAR"" HAJLOO"	"OSCAR ""ASGHAR"" HAJLOO"
+Candidate	MANDI BALLINGER (I)	MANDI BALLINGER (I)
+Candidate	SHERI SMALLWOOD GILLIGAN (I)	SHERI SMALLWOOD GILLIGAN (I)
+Candidate	TODD JONES	TODD JONES
+Candidate	GEOFF DUNCAN (I)	GEOFF DUNCAN (I)
+Candidate	LEE HAWKINS (I)	LEE HAWKINS (I)
+Candidate	DAN GASAWAY (I)	DAN GASAWAY (I)
+Candidate	MATT DUBNIK	MATT DUBNIK
+Candidate	EMORY DUNAHOO JR (I)	EMORY DUNAHOO JR (I)
+Candidate	MICHELLE JONES	MICHELLE JONES
+Candidate	TOMMY BENTON (I)	TOMMY BENTON (I)
+Candidate	ALAN POWELL (I)	ALAN POWELL (I)
+Candidate	TOM MCCALL (I)	TOM MCCALL (I)
+Candidate	BERT REEVES (I)	BERT REEVES (I)
+Candidate	JUSTIN HOLSOMBACK	JUSTIN HOLSOMBACK
+Candidate	ED SETZLER (I)	ED SETZLER (I)
+Candidate	EARL EHRHART (I)	EARL EHRHART (I)
+Candidate	SAM TEASLEY (I)	SAM TEASLEY (I)
+Candidate	BILL BOLTON	BILL BOLTON
+Candidate	DAVID WILKERSON (I)	DAVID WILKERSON (I)
+Candidate	ERICA THOMAS (I)	ERICA THOMAS (I)
+Candidate	RICH GOLICK (I)	RICH GOLICK (I)
+Candidate	ERICK E. ALLEN	ERICK E. ALLEN
+Candidate	MICHAEL SMITH (I)	MICHAEL SMITH (I)
+Candidate	MATT VAUGHN	MATT VAUGHN
+Candidate	STACEY EVANS (I)	STACEY EVANS (I)
+Candidate	SHARON COOPER (I)	SHARON COOPER (I)
+Candidate	DON L. PARSONS (I)	DON L. PARSONS (I)
+Candidate	MATT DOLLAR (I)	MATT DOLLAR (I)
+Candidate	JOHN CARSON (I)	JOHN CARSON (I)
+Candidate	JAN JONES (I)	JAN JONES (I)
+Candidate	BETTY PRICE (I)	BETTY PRICE (I)
+Candidate	CHARLES E. CHUCK MARTIN (I)	CHARLES E. CHUCK MARTIN (I)
+Candidate	BRAD RAFFENSPERGER (I)	BRAD RAFFENSPERGER (I)
+Candidate	WENDELL WILLARD (I)	WENDELL WILLARD (I)
+Candidate	DEBORAH SILCOX	DEBORAH SILCOX
+Candidate	SHEILA JONES (I)	SHEILA JONES (I)
+Candidate	BETH BESKIN (I)	BETH BESKIN (I)
+Candidate	ROBERT BOB GIBELING	ROBERT BOB GIBELING
+Candidate	MARIE METZE (I)	MARIE METZE (I)
+Candidate	ABLE MABLE THOMAS (I)	ABLE MABLE THOMAS (I)
+Candidate	PAT GARDNER (I)	PAT GARDNER (I)
+Candidate	PARK CANNON (I)	PARK CANNON (I)
+Candidate	DAVID DREYER	DAVID DREYER
+Candidate	RALPH NOBLES	RALPH NOBLES
+Candidate	KEISHA WAITES (I)	KEISHA WAITES (I)
+Candidate	ROGER BRUCE (I)	ROGER BRUCE (I)
+Candidate	WILLIAM K. BODDIE JR	WILLIAM K. BODDIE JR
+Candidate	DEBRA BAZEMORE	DEBRA BAZEMORE
+Candidate	DERRICK L. JACKSON	DERRICK L. JACKSON
+Candidate	GORDON ROLLE JR	GORDON ROLLE JR
+Candidate	SHARON BEASLEY-TEAGUE (I)	SHARON BEASLEY-TEAGUE (I)
+Candidate	BRUCE EMORY	BRUCE EMORY
+Candidate	KIMBERLY ALEXANDER (I)	KIMBERLY ALEXANDER (I)
+Candidate	MICAH GRAVLEY (I)	MICAH GRAVLEY (I)
+Candidate	J. COLLINS	J. COLLINS
+Candidate	RANDY NIX (I)	RANDY NIX (I)
+Candidate	LYNN SMITH (I)	LYNN SMITH (I)
+Candidate	DAVID STOVER (I)	DAVID STOVER (I)
+Candidate	CYNTHIA C. BENNETT	CYNTHIA C. BENNETT
+Candidate	JOSH BONNER	JOSH BONNER
+Candidate	KAREN MATHIAK	KAREN MATHIAK
+Candidate	RAHIM TALLEY	RAHIM TALLEY
+Candidate	VALENCIA STOVALL (I)	VALENCIA STOVALL (I)
+Candidate	MIKE GLANTON (I)	MIKE GLANTON (I)
+Candidate	SANDRA SCOTT (I)	SANDRA SCOTT (I)
+Candidate	RHONDA BURNOUGH	RHONDA BURNOUGH
+Candidate	DEMETRIUS DOUGLAS (I)	DEMETRIUS DOUGLAS (I)
+Candidate	TOM TAYLOR (I)	TOM TAYLOR (I)
+Candidate	MEAGAN HANSON	MEAGAN HANSON
+Candidate	TAYLOR BENNETT (I)	TAYLOR BENNETT (I)
+Candidate	LANE FLYNN	LANE FLYNN
+Candidate	SCOTT HOLCOMB (I)	SCOTT HOLCOMB (I)
+Candidate	MARY MARGARET OLIVER (I)	MARY MARGARET OLIVER (I)
+Candidate	HOWARD MOSBY (I)	HOWARD MOSBY (I)
+Candidate	RENITTA SHANNON	RENITTA SHANNON
+Candidate	KARLA DRENNER (I)	KARLA DRENNER (I)
+Candidate	MICHELE HENSON (I)	MICHELE HENSON (I)
+Candidate	"EARNEST ""COACH"" WILLIAMS (I)"	"EARNEST ""COACH"" WILLIAMS (I)"
+Candidate	BILLY MITCHELL (I)	BILLY MITCHELL (I)
+Candidate	STACEY Y ABRAMS (I)	STACEY Y ABRAMS (I)
+Candidate	PAM STEPHENSON (I)	PAM STEPHENSON (I)
+Candidate	CARL ANUSZCZYK	CARL ANUSZCZYK
+Candidate	VERNON JONES	VERNON JONES
+Candidate	DOREEN CARTER (I)	DOREEN CARTER (I)
+Candidate	DARSHUN KENDRICK (I)	DARSHUN KENDRICK (I)
+Candidate	KAREN BENNETT (I)	KAREN BENNETT (I)
+Candidate	SCOTT HILTON	SCOTT HILTON
+Candidate	"RICHARD ""RICK"" UNDERWOOD"	"RICHARD ""RICK"" UNDERWOOD"
+Candidate	"PEDRO ""PETE"" MARIN (I)"	"PEDRO ""PETE"" MARIN (I)"
+Candidate	BROOKS COLEMAN (I)	BROOKS COLEMAN (I)
+Candidate	DAVID CLARK (I)	DAVID CLARK (I)
+Candidate	BRENDA LOPEZ	BRENDA LOPEZ
+Candidate	DEWEY MCCLAIN (I)	DEWEY MCCLAIN (I)
+Candidate	VALERIE CLARK (I)	VALERIE CLARK (I)
+Candidate	SAMUEL PARK	SAMUEL PARK
+Candidate	BUZZ BROCKWAY (I)	BUZZ BROCKWAY (I)
+Candidate	KAREN T. RIDGEWAY	KAREN T. RIDGEWAY
+Candidate	TIMOTHY BARR (I)	TIMOTHY BARR (I)
+Candidate	CHUCK EFSTRATION (I)	CHUCK EFSTRATION (I)
+Candidate	JOYCE CHANDLER (I)	JOYCE CHANDLER (I)
+Candidate	DONNA MCLEOD	DONNA MCLEOD
+Candidate	BRETT HARRELL (I)	BRETT HARRELL (I)
+Candidate	DAVID CASAS (I)	DAVID CASAS (I)
+Candidate	CLAY COX	CLAY COX
+Candidate	"TOKHIR ""T.R."" RADJABOV"	"TOKHIR ""T.R."" RADJABOV"
+Candidate	DALE RUTLEDGE (I)	DALE RUTLEDGE (I)
+Candidate	JANE ASKEW RUTLEDGE	JANE ASKEW RUTLEDGE
+Candidate	ANDY WELCH (I)	ANDY WELCH (I)
+Candidate	BRIAN STRICKLAND (I)	BRIAN STRICKLAND (I)
+Candidate	I. DARRYL PAYTON	I. DARRYL PAYTON
+Candidate	DAVE BELTON (I)	DAVE BELTON (I)
+Candidate	"PAMELA ""PAM"" DICKERSON (I)"	"PAMELA ""PAM"" DICKERSON (I)"
+Candidate	TOM KIRBY (I)	TOM KIRBY (I)
+Candidate	BRUCE WILLIAMSON (I)	BRUCE WILLIAMSON (I)
+Candidate	TERRY ENGLAND (I)	TERRY ENGLAND (I)
+Candidate	REGINA QUICK (I)	REGINA QUICK (I)
+Candidate	SPENCER FRYE (I)	SPENCER FRYE (I)
+Candidate	CHUCK WILLIAMS (I)	CHUCK WILLIAMS (I)
+Candidate	TREY RHODES (I)	TREY RHODES (I)
+Candidate	BARRY FLEMING (I)	BARRY FLEMING (I)
+Candidate	JODI LOTT (I)	JODI LOTT (I)
+Candidate	MARK NEWTON	MARK NEWTON
+Candidate	"HENRY ""WAYNE"" HOWARD (I)"	"HENRY ""WAYNE"" HOWARD (I)"
+Candidate	SHEILA CLARK NELSON	SHEILA CLARK NELSON
+Candidate	GLORIA FRAZIER (I)	GLORIA FRAZIER (I)
+Candidate	BRIAN L. PRINCE (I)	BRIAN L. PRINCE (I)
+Candidate	MACK JACKSON (I)	MACK JACKSON (I)
+Candidate	SUSAN HOLMES (I)	SUSAN HOLMES (I)
+Candidate	DAVID KNIGHT (I)	DAVID KNIGHT (I)
+Candidate	JOHNNIE CALDWELL (I)	JOHNNIE CALDWELL (I)
+Candidate	GENE KING	GENE KING
+Candidate	BOB TRAMMELL JR (I)	BOB TRAMMELL JR (I)
+Candidate	JOHN PEZOLD (I)	JOHN PEZOLD (I)
+Candidate	RICHARD SMITH (I)	RICHARD SMITH (I)
+Candidate	CALVIN SMYRE (I)	CALVIN SMYRE (I)
+Candidate	CAROLYN HUGLEY (I)	CAROLYN HUGLEY (I)
+Candidate	DEBBIE G. BUCKNER (I)	DEBBIE G. BUCKNER (I)
+Candidate	MIKE CHEOKAS (I)	MIKE CHEOKAS (I)
+Candidate	BILL MCGOWAN	BILL MCGOWAN
+Candidate	PATTY J. BENTLEY (I)	PATTY J. BENTLEY (I)
+Candidate	ROBERT DICKEY (I)	ROBERT DICKEY (I)
+Candidate	ALLEN PEAKE (I)	ALLEN PEAKE (I)
+Candidate	MIRIAM PARIS	MIRIAM PARIS
+Candidate	JAMES BEVERLY (I)	JAMES BEVERLY (I)
+Candidate	JAMES BUBBER EPPS (I)	JAMES BUBBER EPPS (I)
+Candidate	JOYCE DENSON	JOYCE DENSON
+Candidate	RICKY A WILLIAMS	RICKY A WILLIAMS
+Candidate	FLOYD GRIFFIN	FLOYD GRIFFIN
+Candidate	SHAW BLACKMON (I)	SHAW BLACKMON (I)
+Candidate	HEATH CLARK (I)	HEATH CLARK (I)
+Candidate	BUDDY HARDEN (I)	BUDDY HARDEN (I)
+Candidate	JIMMY PRUETT (I)	JIMMY PRUETT (I)
+Candidate	MATT HATCHETT (I)	MATT HATCHETT (I)
+Candidate	GERALD GREENE (I)	GERALD GREENE (I)
+Candidate	KENNETH ZACHARY JR	KENNETH ZACHARY JR
+Candidate	ED RYNDERS (I)	ED RYNDERS (I)
+Candidate	DARREL EALUM (I)	DARREL EALUM (I)
+Candidate	WINFRED DUKES (I)	WINFRED DUKES (I)
+Candidate	CLAY PIRKLE (I)	CLAY PIRKLE (I)
+Candidate	GREG MORRIS (I)	GREG MORRIS (I)
+Candidate	"WILLIAM ""BILL"" WERKHEISER (I)"	"WILLIAM ""BILL"" WERKHEISER (I)"
+Candidate	BUTCH PARRISH (I)	BUTCH PARRISH (I)
+Candidate	JON G. BURNS (I)	JON G. BURNS (I)
+Candidate	JAN TANKERSLEY (I)	JAN TANKERSLEY (I)
+Candidate	JAMES WOODALL	JAMES WOODALL
+Candidate	BILL HITCHENS (I)	BILL HITCHENS (I)
+Candidate	CARL GILLIARD	CARL GILLIARD
+Candidate	J. CRAIG GORDON (I)	J. CRAIG GORDON (I)
+Candidate	RON STEPHENS (I)	RON STEPHENS (I)
+Candidate	MICKEY STEPHENS (I)	MICKEY STEPHENS (I)
+Candidate	JESSE PETREA (I)	JESSE PETREA (I)
+Candidate	JEFF JONES (I)	JEFF JONES (I)
+Candidate	AL WILLIAMS (I)	AL WILLIAMS (I)
+Candidate	DOMINIC LARICCIA (I)	DOMINIC LARICCIA (I)
+Candidate	PENNY HOUSTON (I)	PENNY HOUSTON (I)
+Candidate	JAY POWELL (I)	JAY POWELL (I)
+Candidate	SAM WATSON (I)	SAM WATSON (I)
+Candidate	DARLENE TAYLOR (I)	DARLENE TAYLOR (I)
+Candidate	"TOMMY ""TC"" HILL"	"TOMMY ""TC"" HILL"
+Candidate	JOHN CORBETT (I)	JOHN CORBETT (I)
+Candidate	AMY A. CARTER (I)	AMY A. CARTER (I)
+Candidate	JASON SHAW (I)	JASON SHAW (I)
+Candidate	DEIDRA A WHITE	DEIDRA A WHITE
+Candidate	DEXTER SHARPER (I)	DEXTER SHARPER (I)
+Candidate	CHAD NIMMER (I)	CHAD NIMMER (I)
+Candidate	DON HOGAN	DON HOGAN
+Candidate	JASON SPENCER (I)	JASON SPENCER (I)
+Candidate	DICK PERRYMAN (I)	DICK PERRYMAN (I)
+Candidate	LAYLA ZON (I)	LAYLA ZON (I)
+Candidate	B ALISON SOSEBEE (I)	B ALISON SOSEBEE (I)
+Candidate	PAUL HOWARD JR. (I)	PAUL HOWARD JR. (I)
+Candidate	ASHLEY WRIGHT (I)	ASHLEY WRIGHT (I)
+Candidate	SHANNON WALLACE (I)	SHANNON WALLACE (I)
+Candidate	JACKIE JOHNSON (I)	JACKIE JOHNSON (I)
+Candidate	JULIA SLATER (I)	JULIA SLATER (I)
+Candidate	ROSEMARY M GREENE (I)	ROSEMARY M GREENE (I)
+Candidate	TRACY GRAHAM-LAWSON (I)	TRACY GRAHAM-LAWSON (I)
+Candidate	VIC REYNOLDS (I)	VIC REYNOLDS (I)
+Candidate	BERT POSTON (I)	BERT POSTON (I)
+Candidate	BRADFORD L RIGBY	BRADFORD L RIGBY
+Candidate	PETE SKANDALAKIS (I)	PETE SKANDALAKIS (I)
+Candidate	GREGORY EDWARDS (I)	GREGORY EDWARDS (I)
+Candidate	CRAIG FRASER (I)	CRAIG FRASER (I)
+Candidate	MEG DALY HEAP (I)	MEG DALY HEAP (I)
+Candidate	DARIUS PATTILLO	DARIUS PATTILLO
+Candidate	BEN COKER	BEN COKER
+Candidate	"DANIEL J ""DANNY"" PORTER (I)"	"DANIEL J ""DANNY"" PORTER (I)"
+Candidate	GEORGE HARTWIG (I)	GEORGE HARTWIG (I)
+Candidate	HERBERT (BUZZ) FRANKLIN (I)	HERBERT (BUZZ) FRANKLIN (I)
+Candidate	DAVID COOKE (I)	DAVID COOKE (I)
+Candidate	HAYWARD ALTMAN (I)	HAYWARD ALTMAN (I)
+Candidate	GEORGE R. CHRISTIAN (I)	GEORGE R. CHRISTIAN (I)
+Candidate	PARKS WHITE (I)	PARKS WHITE (I)
+Candidate	STEPHEN BRADLEY (I)	STEPHEN BRADLEY (I)
+Candidate	TIMOTHY G. VAUGHN (I)	TIMOTHY G. VAUGHN (I)
+Candidate	RICHARD A MALLARD (I)	RICHARD A MALLARD (I)
+Candidate	T.CRAIG EARNEST (I)	T.CRAIG EARNEST (I)
+Candidate	BRAD SMITH (I)	BRAD SMITH (I)
+Candidate	LEIGH E PATTERSON (I)	LEIGH E PATTERSON (I)
+Candidate	W. JEREMY SALTER	W. JEREMY SALTER
+Candidate	JOE MULHOLLAND (I)	JOE MULHOLLAND (I)
+Candidate	BRAD SHEALY	BRAD SHEALY
+Candidate	PLEZ H. HARDIN (I)	PLEZ H. HARDIN (I)
+Candidate	SHERRY BOSTON	SHERRY BOSTON
+Candidate	JACK BROWNING (I)	JACK BROWNING (I)
+Candidate	PAUL BOWDEN (I)	PAUL BOWDEN (I)
+Candidate	"DURWOOD R. ""WOODY"" DAVIS"	"DURWOOD R. ""WOODY"" DAVIS"
+Candidate	BILL DOUPE	BILL DOUPE
+Candidate	KEN MAULDIN (I)	KEN MAULDIN (I)
+Candidate	PENNY A PENN (I)	PENNY A PENN (I)
+Candidate	JONATHAN ADAMS	JONATHAN ADAMS
+Candidate	YES	YES
+Candidate	NO	NO

@@ -42,8 +42,9 @@ def read_concatenated_blocks(
 
     # get integers from munger parameters
     w = int(munger.options["column_width"])
-    tlts = int(munger.options["top_lines_to_skip"])
+    tlts = int(munger.options["count_of_top_lines_to_skip"])
     v_t_cc = int(munger.options["last_header_column_count"])
+    skip_cols = [int(x) for x in munger.options["columns_to_skip"].split(",")]
 
     df = dict()
 
@@ -65,7 +66,8 @@ def read_concatenated_blocks(
             # get info from header line
             field_list = extract_items(header_line, w)
             last_header = field_list[1 : 1 + v_t_cc]
-            assert (len(field_list) - 2) % v_t_cc == 0
+            assert (len(field_list) - len(skip_cols) - 1) % v_t_cc == 0, \
+                f"Count of last header ({v_t_cc}) does not evenly divide the number of count columns ({len(field_list) - len(skip_cols) - 1})"
 
             header_1_list = extract_items(header_1, w * v_t_cc)
 
@@ -84,8 +86,8 @@ def read_concatenated_blocks(
                 vote_count_block, colspecs="infer", index=False, header=None
             )
 
-            # Drop column at far right (total over all contests)
-            df[header_0].drop(df[header_0].columns[-1], axis=1, inplace=True)
+            # Drop extraneous columns (per munger). Negative numbers count from right side
+            df[header_0].drop(df[header_0].columns[skip_cols], axis=1, inplace=True)
 
             # make first column into an index
             df[header_0].set_index(keys=[0], inplace=True)
@@ -117,7 +119,13 @@ def read_concatenated_blocks(
         )
 
     # consolidate all into one dataframe
-    raw_results = pd.concat(list(df.values()))
+    try:
+        raw_results = pd.concat(list(df.values()))
+    except ValueError as e:
+        err = ui.add_error(
+            err,"datafile_error",f"Error concatenating data from blocks: {e}"
+        )
+        return pd.DataFrame, err
 
     # Make row index (from first column of blocks) into a column called 'first_column'
     raw_results.reset_index(inplace=True)
