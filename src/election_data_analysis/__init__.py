@@ -107,7 +107,9 @@ class DataLoader:
         # list .ini files and pull their jurisdiction_paths
         par_files = [f for f in os.listdir(self.d["results_dir"]) if f[-4:] == ".ini"]
         if not par_files:
-            err = {"ini_file": f"No ini files found in {self.d['results_dir']}"}
+            e = f"No ini files found in {self.d['results_dir']}"
+            print(e)
+            err = {"ini_file": e}
             return err
         params = dict()
         param_err = dict()
