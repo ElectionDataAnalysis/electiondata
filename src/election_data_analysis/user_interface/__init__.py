@@ -1,5 +1,6 @@
 from configparser import ConfigParser
 from election_data_analysis import munge as m
+from election_data_analysis import special_formats as sf
 import pandas as pd
 from pandas.errors import ParserError, ParserWarning
 import numpy as np
@@ -443,35 +444,44 @@ def read_single_datafile(
 def read_combine_results(
     mu: jm.Munger, results_file, project_root, err, aux_data_dir=None
 ):
-    try:
-        working, err = read_single_datafile(mu, results_file, err)
-    except Exception as exc:
-        e = f"Exception while reading file {results_file}: {exc}"
-        add_error(err, "datafile", e)
-    if [k for k in err.keys() if err[k] != None]:
-        return pd.DataFrame(), err
+    if mu.options["file_type"] in ["concatenated-blocks"]:
+        working, err = sf.read_concatenated_blocks(results_file, mu, err)
+        
+        # set options that will be needed for going forward
+        mu.options["count_columns"] = [working.columns.to_list().index('count')]
+        mu.options["header_row_count"] = 1
+        mu.options["field_name_row"] = 0
     else:
-        working = m.cast_cols_as_int(working, mu.count_columns, mode="index")
+        try:
+            working, err = read_single_datafile(mu, results_file, err)
+        except Exception as exc:
+            e = f"Exception while reading file {results_file}: {exc}"
+            add_error(err, "datafile", e)
+            return pd.DataFrame(), err
+        if [k for k in err.keys() if err[k] != None]:
+            return pd.DataFrame(), err
+        else:
+            working = m.cast_cols_as_int(working, mu.options["count_columns"], mode="index")
 
-        # merge with auxiliary files (if any)
-        if aux_data_dir is not None:
-            # get auxiliary data (includes cleaning and setting (multi-)index of primary key column(s))
-            aux_data, err = mu.get_aux_data(
-                aux_data_dir, err, project_root=project_root
-            )
-            for abbrev, r in mu.aux_meta.iterrows():
-                # cast foreign key columns of main results file as int if possible
-                foreign_key = r["foreign_key"].split(",")
-                working = m.cast_cols_as_int(working, foreign_key)
-                # rename columns
-                col_rename = {
-                    f"{c}": f"{abbrev}[{c}]" for c in aux_data[abbrev].columns
-                }
-                # merge auxiliary info into <working>
-                a_d = aux_data[abbrev].rename(columns=col_rename)
-                working = working.merge(
-                    a_d, how="left", left_on=foreign_key, right_index=True
+            # merge with auxiliary files (if any)
+            if aux_data_dir is not None:
+                # get auxiliary data (includes cleaning and setting (multi-)index of primary key column(s))
+                aux_data, err = mu.get_aux_data(
+                    aux_data_dir, err, project_root=project_root
                 )
+                for abbrev, r in mu.aux_meta.iterrows():
+                    # cast foreign key columns of main results file as int if possible
+                    foreign_key = r["foreign_key"].split(",")
+                    working = m.cast_cols_as_int(working, foreign_key)
+                    # rename columns
+                    col_rename = {
+                        f"{c}": f"{abbrev}[{c}]" for c in aux_data[abbrev].columns
+                    }
+                    # merge auxiliary info into <working>
+                    a_d = aux_data[abbrev].rename(columns=col_rename)
+                    working = working.merge(
+                        a_d, how="left", left_on=foreign_key, right_index=True
+                    )
 
     return working, err
 
@@ -515,7 +525,7 @@ def new_datafile(
         add_error(err, "datafile_error", e)
         return err
 
-    count_columns_by_name = [raw.columns[x] for x in munger.count_columns]
+    count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"]]
 
     try:
         raw = m.munge_clean(raw, munger)

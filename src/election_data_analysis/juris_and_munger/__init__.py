@@ -13,7 +13,16 @@ import csv
 
 # constants
 munger_pars_req = ['file_type']
-munger_pars_opt = ['header_row_count','field_name_row','field_names_if_no_field_name_row','count_columns','thousands_separator','encoding']
+munger_pars_opt = ['header_row_count',
+                   'field_name_row',
+                   'field_names_if_no_field_name_row',
+                   'count_columns',
+                   'thousands_separator',
+                   'encoding',
+                   'top_lines_to_skip',
+                   'last_header_column_count',
+                   'column_width',
+                   ]
 
 
 class Jurisdiction:
@@ -49,7 +58,7 @@ class Jurisdiction:
         e = db.insert_to_cdf_db(engine, df[["Name", "contest_type"]], "Contest")
 
         # append Contest_Id
-        col_map = {"Name": "Name"}
+        col_map = {"Name": "Name","contest_type":"contest_type"}
         df = db.append_id_to_dframe(engine, df, "Contest", col_map=col_map)
 
         if contest_type == "BallotMeasure":
@@ -233,10 +242,6 @@ class Munger:
             ensure_munger_files(dir_path, project_root=project_root)
         [
             self.cdf_elements,
-            self.header_row_count,
-            self.field_name_row,
-            self.field_names_if_no_field_name_row,
-            self.count_columns,
             self.file_type,
             self.encoding,
             self.thousands_separator,
@@ -280,6 +285,7 @@ def read_munger_info_from_files(dir_path):
         encoding="iso-8859-1",
         quoting=csv.QUOTE_MINIMAL,
     ).fillna("")
+
     # add column for list of fields used in formulas
     cdf_elements["fields"] = [[]] * cdf_elements.shape[0]
     for i, r in cdf_elements.iterrows():
@@ -287,6 +293,8 @@ def read_munger_info_from_files(dir_path):
             cdf_elements.loc[i, "raw_identifier_formula"]
         )
         cdf_elements.loc[i, "fields"] = [f for t, f in text_field_list]
+
+
 
     # read formatting info
     required_keys = munger_pars_req
@@ -297,21 +305,7 @@ def read_munger_info_from_files(dir_path):
         'format',
         optional_keys=optional_keys
     )
-    try:
-        # if field_name_row can be interpreted as an integer, use it
-        field_name_row = int(options['field_name_row'])
-        field_names_if_no_field_name_row = None
-    except Exception:
-        # otherwise assume no field_name_row
-        field_name_row = None
-        field_names_if_no_field_name_row = options['field_names_if_no_field_name_row'].split(',')
-
-    header_row_count = int(options['header_row_count'])
-    if 'count_columns' not in options.keys() or options['count_columns'] in ['','None']:
-        count_columns = []
-    else:
-        count_columns = [int(x) for x in options['count_columns'].split(',')]
-    file_type = options['file_type']
+    file_type = options["file_type"]
     if 'encoding' in options.keys():
         encoding = options['encoding']
     else:
@@ -320,14 +314,27 @@ def read_munger_info_from_files(dir_path):
         thousands_separator = options['thousands_separator']
     else:
         thousands_separator = None
+
+    if file_type in ["txt","csv","xls"]:
+        try:
+            # if field_name_row can be interpreted as an integer, use it
+            field_name_row = int(options['field_name_row'])
+            field_names_if_no_field_name_row = None
+        except Exception:
+            # otherwise assume no field_name_row
+            field_name_row = None
+            field_names_if_no_field_name_row = options['field_names_if_no_field_name_row'].split(',')
+
+        header_row_count = int(options['header_row_count'])
+        if 'count_columns' not in options.keys() or options['count_columns'] in ['','None']:
+            count_columns = []
+        else:
+            count_columns = [int(x) for x in options['count_columns'].split(',')]
+        file_type = options['file_type']
     # TODO have options hold all optional parameters (and maybe even all parameters)
     #  and remove explicit attributes entirely?
     return [
         cdf_elements,
-        header_row_count,
-        field_name_row,
-        field_names_if_no_field_name_row,
-        count_columns,
         file_type,
         encoding,
         thousands_separator,
@@ -570,27 +577,6 @@ def check_munger_file_contents(munger_name, project_root):
     cdf_elements = pd.read_csv(os.path.join(munger_dir,'cdf_elements.txt'),
                                sep='\t',encoding='iso-8859-1'
                                ).fillna('')
-    format_d, missing = ui.get_runtime_parameters(
-        munger_pars_req,
-        os.path.join(munger_dir,'format.config'),
-        'format',
-        optional_keys=munger_pars_opt
-    )
-
-    # Either field_name_row is a number, or field_names_if_no_field_name_row is not the empty string
-    if (not format_d['field_name_row'].isnumeric()) and len(format_d['field_names_if_no_field_name_row']) == 0:
-        problems.append(f'In format file, field_name_row is not an integer, '
-                        f'but no field names are give in field_names_if_no_field_name_row.')
-
-    # other entries in format.config are of correct type
-    try:
-        int(format_d['header_row_count'])
-    except:
-        problems.append(f'In format file, header_row_count must be an integer'
-                        f'({format_d["header_row_count"]} is not.)')
-
-    if not format_d['encoding'] in ui.recognized_encodings:
-        warns.append(f'Encoding {format_d["field_name_row"]} in format file is not recognized.')
 
     # every source in cdf_elements is either row, column or other
     bad_source = [x for x in cdf_elements.source if x not in ['row','column']]
@@ -615,6 +601,41 @@ def check_munger_file_contents(munger_name, project_root):
     p_catch_digits = re.compile(r"<(\d+)>")
     bad_column_formula = set()
 
+    format_d, missing = ui.get_runtime_parameters(
+        munger_pars_req,
+        os.path.join(munger_dir,'format.config'),
+        'format',
+        optional_keys=munger_pars_opt
+    )
+
+    # warn if encoding missing or is not recognized
+    if "encoding" not in format_d.keys():
+        warns.append(f"No encoding specified; iso-8859-1 will be used")
+    elif not format_d['encoding'] in ui.recognized_encodings:
+        warns.append(f'Encoding {format_d["encoding"]} in format file is not recognized.')
+
+    # check all parameters for flat files
+    if format_d['file_type'] in ['txt','csv','xls']:
+        # Either field_name_row is a number, or field_names_if_no_field_name_row is not the empty string
+        if (not format_d['field_name_row'].isnumeric()) and len(format_d['field_names_if_no_field_name_row']) == 0:
+            problems.append(f'In format file, field_name_row is not an integer, '
+                            f'but no field names are give in field_names_if_no_field_name_row.')
+
+        # other entries in format.config are of correct type
+        try:
+            int(format_d['header_row_count'])
+        except TypeError or ValueError:
+            problems.append(f'header_row_count in format.config must be an integer but isn\'t: '
+                            f'{format_d["header_row_count"]}')
+
+    # check all parameters for concatenated blocks (e.g., Georgia ExpressVote output)
+    elif format_d["file_type"] in ["concatenated-blocks"]:
+        for key in ['top_lines_to_skip','last_header_column_count','column_width']:
+            try:
+                int(format_d[key])
+            except ValueError or TypeError:
+                problems.append(f"{key} in format.config must be an integer: {format_d[key]} is not.")
+
     # problems found above may cause this block of code to error out, so this is
     # wrapped in a try block since it returns a general error message
     for i, r in cdf_elements[cdf_elements.source == "column"].iterrows():
@@ -634,8 +655,6 @@ def check_munger_file_contents(munger_name, project_root):
             f"""At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} """
         )
 
-    # TODO if field in formula matches an element self.cdf_element.index,
-    #  check that rename is not also a column
     error = {}
     if problems:
         error["problems"] = "\n\t".join(problems)
