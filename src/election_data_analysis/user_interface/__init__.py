@@ -1,5 +1,6 @@
 from configparser import ConfigParser
 from election_data_analysis import munge as m
+from election_data_analysis import special_formats as sf
 import pandas as pd
 from pandas.errors import ParserError, ParserWarning
 import numpy as np
