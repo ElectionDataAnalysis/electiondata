@@ -39,14 +39,14 @@ def recast_options(options: dict, types: dict) -> dict:
             try:
                 options[k] = [int(s) for s in options[k].split(",")]
             except:
-                options[k] = None
+                options[k] = list()
         if types[k] == "str":
             pass
         if types[k] == "list-of-strings":
             try:
                 options[k] = [s for s in options[k].split(",")]
             except:
-                options[k] = None
+                options[k] = list()
         if types[k] == "int":
             try:
                 options[k] = int(options[k])
@@ -345,27 +345,6 @@ def read_munger_info_from_files(dir_path):
     else:
         thousands_separator = None
 
-    if file_type in ["txt", "csv", "xls"]:
-        try:
-            # if field_name_row can be interpreted as an integer, use it
-            field_name_row = int(options["field_name_row"])
-            field_names_if_no_field_name_row = None
-        except Exception:
-            # otherwise assume no field_name_row
-            field_name_row = None
-            field_names_if_no_field_name_row = options[
-                "field_names_if_no_field_name_row"
-            ].split(",")
-
-        header_row_count = int(options["header_row_count"])
-        if "count_columns" not in options.keys() or options["count_columns"] in [
-            "",
-            "None",
-        ]:
-            count_columns = []
-        else:
-            count_columns = [int(x) for x in options["count_columns"].split(",")]
-        file_type = options["file_type"]
     # TODO have options hold all optional parameters (and maybe even all parameters)
     #  and remove explicit attributes entirely?
     return [cdf_elements,
