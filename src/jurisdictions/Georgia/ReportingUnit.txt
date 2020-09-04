@@ -258,7 +258,7 @@ Georgia;Baldwin County	county
 Georgia;Banks County	county
 Georgia;Barrow County	county
 Georgia;Bartow County	county
-Georgia;Ben County	county
+Georgia;Ben Hill County	county
 Georgia;Berrien County	county
 Georgia;Bibb County	county
 Georgia;Bleckley County	county
@@ -329,7 +329,7 @@ Georgia;Houston County	county
 Georgia;Irwin County	county
 Georgia;Jackson County	county
 Georgia;Jasper County	county
-Georgia;Jeff County	county
+Georgia;Jeff Davis County	county
 Georgia;Jefferson County	county
 Georgia;Jenkins County	county
 Georgia;Johnson County	county
