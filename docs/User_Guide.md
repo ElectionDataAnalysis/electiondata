@@ -8,9 +8,13 @@ In the directory from which you will run the system -- which can be outside your
 * `jurisdiction_prep.ini` for the JurisdictionPrepper() class
 * `run_time.ini` for loading data (DataLoader() class) and for pulling and analyzing results (the Analyzer()) class)
   
-There are templates with the suffix `.template` in `templates/parameter_file_templates`. These will need be renamed with the extension `.ini`. For example, from the `src` directory, running `cp templates/parameter_file_templates/run_time.ini.template ./run_time.ini` will create the `run_time.ini` parameter file with all the required fields to load analyze data.
+There are templates with the suffix `.template` in `templates/parameter_file_templates`. These will need be renamed with the extension `.ini`, and edited to reflect the paths in your own environment. For example, from the `src` directory, running 
+```cp templates/parameter_file_templates/run_time.ini.template ./run_time.ini``` 
+will create the `run_time.ini` parameter file with all the required fields to load analyze data. 
    
-In the directory indicated in `run_time.ini`, create a `.ini` file for each results file you want to use. The results files and the `.ini` files must both be in that directory. Follow the `templates/parameter_file_templates/results.ini.template` template for the individual `.ini` files. If all the files in a single directory will use the same munger, jurisdiction and election, you can create these `.ini` files in batches. For example, 
+In the `results_dir` directory indicated in `run_time.ini`, create a `.ini` file for each results file you want to use. Follow the `templates/parameter_file_templates/results.ini.template` template for the individual `.ini` files.  The results files and the `.ini` files must both be in that directory. The files can have arbitrary names; note that the name of the results file must be correct in its associated `.ini` file.
+
+If all the files in a single directory will use the same munger, jurisdiction and election, you can create these `.ini` files in batches. For example, 
 ```
 >>> dir = '/Users/singer3/Documents/Data/Florida/Precinct-Level Election Results/precinctlevelelectionresults2016gen'
 >>> munger = 'fl_gen_by_precinct'
@@ -22,36 +26,60 @@ In the directory indicated in `run_time.ini`, create a `.ini` file for each resu
 >>> note = 'These statewide compiled files are derived from county-specific data submitted by supervisors of elections after each primary election, general election, special primary, and special general election and presidential preference primary election'
 >>> ea.make_par_files(dir,munger, jurisdiction_path, top_ru, election, date, source=source, results_note=note)
 >>> 
-
 ```
  
 ## Choose a Munger
 Ensure that the munger files are appropriate for your results file(s). 
-1. If the munger doesn't already exist, pick a name for your munger and create a folder with that name in the `mungers` directory to hold `format.txt` and `cdf_elements.txt`.
-2. Put the appropriate parameters in `format.txt`, following the template in `templates/munger_templates`. For example:
+1. If the munger doesn't already exist, pick a name for your munger and create a directory with that name in the `mungers` directory to hold `format.txt` and `cdf_elements.txt`.
+2. Copy the templates from `templates/munger_templates` to your munger directory. Every munger must have a value for `file_type` and `encoding`; depending your `file_type` other parameters may be required. Types currently supported are `txt`, `csv`, `xls` (which handles both `.xls` and `.xlsx` files)
+ * Required for `txt`, `csv` or `xls` type:
+   * header_row_count
+   * field_name_row
+   * field_names_if_no_field_name_row
+   * count_columns
+ * Required for `concatenated-blocks` type:
+   * count_of_top_lines_to_skip
+   * columns_to_skip
+   * last_header_column_count
+   * column_width
+ * Available if appropriate for any file type:
+   * thousands_separator
+Definitions and formats for these are in the template file. Do not use quotes or angle brackets.
 
-```item	value
-header_row_count	0
-field_name_row	None
-field_names_if_no_field_name_row	County Code,County Name,Election Number,Election Date,Election Name,Unique Precinct Identifier,Precinct Polling Location,Total Registered Voters,Total Registered Republicans,Total Registered Democrats,Total Registered All Other Parties,Contest Name,District,Contest Code,Candidate etc,Candidate Party,Candidate Florida Voter Registration System ID Number,DOE Assigned Number,Vote Total
-count_columns	18
-file_type	txt
-encoding	iso-8859-1
-thousands_separator	None
+
+
+3. Put formulas for reading information from the results file into `cdf_elements.txt`. You may find it helpful to follow the example of the mungers in the repository.
+
+You can create concatenation formulas, referencing field names from your file by putting them in angle brackets. 
+
+For `txt`, `csv` and `xls` file types, here is an example.
 ```
-
-3. Put formulas for reading information from the results file into `cdf_elements.txt`. You can reference field names from your file by putting them in angle brackets. E.g., 
-
-```name	raw_identifier_formula	source
-ReportingUnit	<County Name>;Precinct <Unique Precinct Identifier>	row
-Party	<Candidate Party>	row
-CandidateContest	<Contest Name> District <District>	row
-Candidate	<Candidate etc>	row
-BallotMeasureContest	<Contest Name>	row
-BallotMeasureSelection	<DOE Assigned Number>	row
+name	raw_identifier_formula	source
+ReportingUnit	<County Name>	row
+Party	<Party Name>	row
+CandidateContest	<Office Name> <District Name>	row
+Candidate	<Candidate Name>	row
+BallotMeasureContest	<Office Name> <District Name>	row
+BallotMeasureSelection	<0>	column
 CountItemType	total	row
 ```
-NB: for constants (like the CountItemType 'total' in this example), use 'row' for the source.
+NB: for constants (like the CountItemType 'total' in this example), use 'row' for the source. Row-source fields should be the field names from the header row or, if there is no header row, from `format.config`. Column-source fields should be identified by the number of the row in which the information is found. Our convention is that the top row is 0.
+
+For the `concatenated-blocks` file type, here is an example (with regular expressions for Party and Candidate -- see below:
+```
+name	raw_identifier_formula	source
+ReportingUnit	<first_column>	row
+Party	{<header_1>,^.*\(([a-zA-Z]{3})\)$}	row
+CandidateContest	<header_0>	row
+Candidate	{<header_1>,^(.*)\([a-zA-Z]{3}\)$}	row
+BallotMeasureContest	<header_0>	row
+BallotMeasureSelection	<header_1>	row
+CountItemType	<header_2>	row
+```
+you can refer to the field that appears in the first column by `first_column`
+
+Some jurisdictions require regular expression (regex) analysis to extract information from the data. For example, in a primary both the Party and the Candidate may be in the same string (e.g., "Robin Perez (DEM)"). Curly brackets indicate that regex analysis is needed. Inside the curly brackets there are two parts, separated by a comma. The first part is the concatenation formula for creating a string from the data in the file. The second is a python regex formula whose first group (enclosed by parentheses) marks the desired substring.
+```Party	{<header_1>,^.*\(([a-zA-Z]{3})\)$}	row```
 
 ## Create or Improve a Jurisdiction
 It's easiest to use the JurisdictionPrepper() object to create or update jurisdiction files. 
