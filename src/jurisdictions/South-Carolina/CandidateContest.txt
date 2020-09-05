@@ -1,0 +1,189 @@
+Name	NumberElected	Office	PrimaryParty
+SC House District 1	1	SC House District 1	
+SC House District 2	1	SC House District 2	
+SC House District 3	1	SC House District 3	
+SC House District 4	1	SC House District 4	
+SC House District 5	1	SC House District 5	
+SC House District 6	1	SC House District 6	
+SC House District 7	1	SC House District 7	
+SC House District 8	1	SC House District 8	
+SC House District 9	1	SC House District 9	
+SC House District 10	1	SC House District 10	
+SC House District 11	1	SC House District 11	
+SC House District 12	1	SC House District 12	
+SC House District 13	1	SC House District 13	
+SC House District 14	1	SC House District 14	
+SC House District 15	1	SC House District 15	
+SC House District 16	1	SC House District 16	
+SC House District 17	1	SC House District 17	
+SC House District 18	1	SC House District 18	
+SC House District 19	1	SC House District 19	
+SC House District 20	1	SC House District 20	
+SC House District 21	1	SC House District 21	
+SC House District 22	1	SC House District 22	
+SC House District 23	1	SC House District 23	
+SC House District 24	1	SC House District 24	
+SC House District 25	1	SC House District 25	
+SC House District 26	1	SC House District 26	
+SC House District 27	1	SC House District 27	
+SC House District 28	1	SC House District 28	
+SC House District 29	1	SC House District 29	
+SC House District 30	1	SC House District 30	
+SC House District 31	1	SC House District 31	
+SC House District 32	1	SC House District 32	
+SC House District 33	1	SC House District 33	
+SC House District 34	1	SC House District 34	
+SC House District 35	1	SC House District 35	
+SC House District 36	1	SC House District 36	
+SC House District 37	1	SC House District 37	
+SC House District 38	1	SC House District 38	
+SC House District 39	1	SC House District 39	
+SC House District 40	1	SC House District 40	
+SC House District 41	1	SC House District 41	
+SC House District 42	1	SC House District 42	
+SC House District 43	1	SC House District 43	
+SC House District 44	1	SC House District 44	
+SC House District 45	1	SC House District 45	
+SC House District 46	1	SC House District 46	
+SC House District 47	1	SC House District 47	
+SC House District 48	1	SC House District 48	
+SC House District 49	1	SC House District 49	
+SC House District 50	1	SC House District 50	
+SC House District 51	1	SC House District 51	
+SC House District 52	1	SC House District 52	
+SC House District 53	1	SC House District 53	
+SC House District 54	1	SC House District 54	
+SC House District 55	1	SC House District 55	
+SC House District 56	1	SC House District 56	
+SC House District 57	1	SC House District 57	
+SC House District 58	1	SC House District 58	
+SC House District 59	1	SC House District 59	
+SC House District 60	1	SC House District 60	
+SC House District 61	1	SC House District 61	
+SC House District 62	1	SC House District 62	
+SC House District 63	1	SC House District 63	
+SC House District 64	1	SC House District 64	
+SC House District 65	1	SC House District 65	
+SC House District 66	1	SC House District 66	
+SC House District 67	1	SC House District 67	
+SC House District 68	1	SC House District 68	
+SC House District 69	1	SC House District 69	
+SC House District 70	1	SC House District 70	
+SC House District 71	1	SC House District 71	
+SC House District 72	1	SC House District 72	
+SC House District 73	1	SC House District 73	
+SC House District 74	1	SC House District 74	
+SC House District 75	1	SC House District 75	
+SC House District 76	1	SC House District 76	
+SC House District 77	1	SC House District 77	
+SC House District 78	1	SC House District 78	
+SC House District 79	1	SC House District 79	
+SC House District 80	1	SC House District 80	
+SC House District 81	1	SC House District 81	
+SC House District 82	1	SC House District 82	
+SC House District 83	1	SC House District 83	
+SC House District 84	1	SC House District 84	
+SC House District 85	1	SC House District 85	
+SC House District 86	1	SC House District 86	
+SC House District 87	1	SC House District 87	
+SC House District 88	1	SC House District 88	
+SC House District 89	1	SC House District 89	
+SC House District 90	1	SC House District 90	
+SC House District 91	1	SC House District 91	
+SC House District 92	1	SC House District 92	
+SC House District 93	1	SC House District 93	
+SC House District 94	1	SC House District 94	
+SC House District 95	1	SC House District 95	
+SC House District 96	1	SC House District 96	
+SC House District 97	1	SC House District 97	
+SC House District 98	1	SC House District 98	
+SC House District 99	1	SC House District 99	
+SC House District 100	1	SC House District 100	
+SC House District 101	1	SC House District 101	
+SC House District 102	1	SC House District 102	
+SC House District 103	1	SC House District 103	
+SC House District 104	1	SC House District 104	
+SC House District 105	1	SC House District 105	
+SC House District 106	1	SC House District 106	
+SC House District 107	1	SC House District 107	
+SC House District 108	1	SC House District 108	
+SC House District 109	1	SC House District 109	
+SC House District 110	1	SC House District 110	
+SC House District 111	1	SC House District 111	
+SC House District 112	1	SC House District 112	
+SC House District 113	1	SC House District 113	
+SC House District 114	1	SC House District 114	
+SC House District 115	1	SC House District 115	
+SC House District 116	1	SC House District 116	
+SC House District 117	1	SC House District 117	
+SC House District 118	1	SC House District 118	
+SC House District 119	1	SC House District 119	
+SC House District 120	1	SC House District 120	
+SC House District 121	1	SC House District 121	
+SC House District 122	1	SC House District 122	
+SC House District 123	1	SC House District 123	
+SC House District 124	1	SC House District 124	
+SC Senate District 1	1	SC Senate District 1	
+SC Senate District 2	1	SC Senate District 2	
+SC Senate District 3	1	SC Senate District 3	
+SC Senate District 4	1	SC Senate District 4	
+SC Senate District 5	1	SC Senate District 5	
+SC Senate District 6	1	SC Senate District 6	
+SC Senate District 7	1	SC Senate District 7	
+SC Senate District 8	1	SC Senate District 8	
+SC Senate District 9	1	SC Senate District 9	
+SC Senate District 10	1	SC Senate District 10	
+SC Senate District 11	1	SC Senate District 11	
+SC Senate District 12	1	SC Senate District 12	
+SC Senate District 13	1	SC Senate District 13	
+SC Senate District 14	1	SC Senate District 14	
+SC Senate District 15	1	SC Senate District 15	
+SC Senate District 16	1	SC Senate District 16	
+SC Senate District 17	1	SC Senate District 17	
+SC Senate District 18	1	SC Senate District 18	
+SC Senate District 19	1	SC Senate District 19	
+SC Senate District 20	1	SC Senate District 20	
+SC Senate District 21	1	SC Senate District 21	
+SC Senate District 22	1	SC Senate District 22	
+SC Senate District 23	1	SC Senate District 23	
+SC Senate District 24	1	SC Senate District 24	
+SC Senate District 25	1	SC Senate District 25	
+SC Senate District 26	1	SC Senate District 26	
+SC Senate District 27	1	SC Senate District 27	
+SC Senate District 28	1	SC Senate District 28	
+SC Senate District 29	1	SC Senate District 29	
+SC Senate District 30	1	SC Senate District 30	
+SC Senate District 31	1	SC Senate District 31	
+SC Senate District 32	1	SC Senate District 32	
+SC Senate District 33	1	SC Senate District 33	
+SC Senate District 34	1	SC Senate District 34	
+SC Senate District 35	1	SC Senate District 35	
+SC Senate District 36	1	SC Senate District 36	
+SC Senate District 37	1	SC Senate District 37	
+SC Senate District 38	1	SC Senate District 38	
+SC Senate District 39	1	SC Senate District 39	
+SC Senate District 40	1	SC Senate District 40	
+SC Senate District 41	1	SC Senate District 41	
+SC Senate District 42	1	SC Senate District 42	
+SC Senate District 43	1	SC Senate District 43	
+SC Senate District 44	1	SC Senate District 44	
+SC Senate District 45	1	SC Senate District 45	
+SC Senate District 46	1	SC Senate District 46	
+US House SC District 1	1	US House SC District 1	
+US House SC District 2	1	US House SC District 2	
+US House SC District 3	1	US House SC District 3	
+US House SC District 4	1	US House SC District 4	
+US House SC District 5	1	US House SC District 5	
+US House SC District 6	1	US House SC District 6	
+US House SC District 7	1	US House SC District 7	
+US President (SC)	1	US President (SC)	
+SC Governor	1	SC Governor	
+US Senate SC	1	US Senate SC	
+SC Attorney General	1	SC Attorney General	
+SC Lieutenant Governor	1	SC Lieutenant Governor	
+SC Treasurer	1	SC Treasurer	
+SC Adjutant General	1	SC Adjutant General
+SC Commissioner of Agriculture	1	SC Commissioner of Agriculture
+SC State Superintendent of Education	1	SC State Superintendent of Education
+SC Comptroller General	1	SC Comptroller General
+

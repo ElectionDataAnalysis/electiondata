@@ -1,0 +1,225 @@
+Name	ReportingUnitType
+South Carolina;SC House District 1	state-house
+South Carolina;SC House District 2	state-house
+South Carolina;SC House District 3	state-house
+South Carolina;SC House District 4	state-house
+South Carolina;SC House District 5	state-house
+South Carolina;SC House District 6	state-house
+South Carolina;SC House District 7	state-house
+South Carolina;SC House District 8	state-house
+South Carolina;SC House District 9	state-house
+South Carolina;SC House District 10	state-house
+South Carolina;SC House District 11	state-house
+South Carolina;SC House District 12	state-house
+South Carolina;SC House District 13	state-house
+South Carolina;SC House District 14	state-house
+South Carolina;SC House District 15	state-house
+South Carolina;SC House District 16	state-house
+South Carolina;SC House District 17	state-house
+South Carolina;SC House District 18	state-house
+South Carolina;SC House District 19	state-house
+South Carolina;SC House District 20	state-house
+South Carolina;SC House District 21	state-house
+South Carolina;SC House District 22	state-house
+South Carolina;SC House District 23	state-house
+South Carolina;SC House District 24	state-house
+South Carolina;SC House District 25	state-house
+South Carolina;SC House District 26	state-house
+South Carolina;SC House District 27	state-house
+South Carolina;SC House District 28	state-house
+South Carolina;SC House District 29	state-house
+South Carolina;SC House District 30	state-house
+South Carolina;SC House District 31	state-house
+South Carolina;SC House District 32	state-house
+South Carolina;SC House District 33	state-house
+South Carolina;SC House District 34	state-house
+South Carolina;SC House District 35	state-house
+South Carolina;SC House District 36	state-house
+South Carolina;SC House District 37	state-house
+South Carolina;SC House District 38	state-house
+South Carolina;SC House District 39	state-house
+South Carolina;SC House District 40	state-house
+South Carolina;SC House District 41	state-house
+South Carolina;SC House District 42	state-house
+South Carolina;SC House District 43	state-house
+South Carolina;SC House District 44	state-house
+South Carolina;SC House District 45	state-house
+South Carolina;SC House District 46	state-house
+South Carolina;SC House District 47	state-house
+South Carolina;SC House District 48	state-house
+South Carolina;SC House District 49	state-house
+South Carolina;SC House District 50	state-house
+South Carolina;SC House District 51	state-house
+South Carolina;SC House District 52	state-house
+South Carolina;SC House District 53	state-house
+South Carolina;SC House District 54	state-house
+South Carolina;SC House District 55	state-house
+South Carolina;SC House District 56	state-house
+South Carolina;SC House District 57	state-house
+South Carolina;SC House District 58	state-house
+South Carolina;SC House District 59	state-house
+South Carolina;SC House District 60	state-house
+South Carolina;SC House District 61	state-house
+South Carolina;SC House District 62	state-house
+South Carolina;SC House District 63	state-house
+South Carolina;SC House District 64	state-house
+South Carolina;SC House District 65	state-house
+South Carolina;SC House District 66	state-house
+South Carolina;SC House District 67	state-house
+South Carolina;SC House District 68	state-house
+South Carolina;SC House District 69	state-house
+South Carolina;SC House District 70	state-house
+South Carolina;SC House District 71	state-house
+South Carolina;SC House District 72	state-house
+South Carolina;SC House District 73	state-house
+South Carolina;SC House District 74	state-house
+South Carolina;SC House District 75	state-house
+South Carolina;SC House District 76	state-house
+South Carolina;SC House District 77	state-house
+South Carolina;SC House District 78	state-house
+South Carolina;SC House District 79	state-house
+South Carolina;SC House District 80	state-house
+South Carolina;SC House District 81	state-house
+South Carolina;SC House District 82	state-house
+South Carolina;SC House District 83	state-house
+South Carolina;SC House District 84	state-house
+South Carolina;SC House District 85	state-house
+South Carolina;SC House District 86	state-house
+South Carolina;SC House District 87	state-house
+South Carolina;SC House District 88	state-house
+South Carolina;SC House District 89	state-house
+South Carolina;SC House District 90	state-house
+South Carolina;SC House District 91	state-house
+South Carolina;SC House District 92	state-house
+South Carolina;SC House District 93	state-house
+South Carolina;SC House District 94	state-house
+South Carolina;SC House District 95	state-house
+South Carolina;SC House District 96	state-house
+South Carolina;SC House District 97	state-house
+South Carolina;SC House District 98	state-house
+South Carolina;SC House District 99	state-house
+South Carolina;SC House District 100	state-house
+South Carolina;SC House District 101	state-house
+South Carolina;SC House District 102	state-house
+South Carolina;SC House District 103	state-house
+South Carolina;SC House District 104	state-house
+South Carolina;SC House District 105	state-house
+South Carolina;SC House District 106	state-house
+South Carolina;SC House District 107	state-house
+South Carolina;SC House District 108	state-house
+South Carolina;SC House District 109	state-house
+South Carolina;SC House District 110	state-house
+South Carolina;SC House District 111	state-house
+South Carolina;SC House District 112	state-house
+South Carolina;SC House District 113	state-house
+South Carolina;SC House District 114	state-house
+South Carolina;SC House District 115	state-house
+South Carolina;SC House District 116	state-house
+South Carolina;SC House District 117	state-house
+South Carolina;SC House District 118	state-house
+South Carolina;SC House District 119	state-house
+South Carolina;SC House District 120	state-house
+South Carolina;SC House District 121	state-house
+South Carolina;SC House District 122	state-house
+South Carolina;SC House District 123	state-house
+South Carolina;SC House District 124	state-house
+South Carolina;SC Senate District 1	state-senate
+South Carolina;SC Senate District 2	state-senate
+South Carolina;SC Senate District 3	state-senate
+South Carolina;SC Senate District 4	state-senate
+South Carolina;SC Senate District 5	state-senate
+South Carolina;SC Senate District 6	state-senate
+South Carolina;SC Senate District 7	state-senate
+South Carolina;SC Senate District 8	state-senate
+South Carolina;SC Senate District 9	state-senate
+South Carolina;SC Senate District 10	state-senate
+South Carolina;SC Senate District 11	state-senate
+South Carolina;SC Senate District 12	state-senate
+South Carolina;SC Senate District 13	state-senate
+South Carolina;SC Senate District 14	state-senate
+South Carolina;SC Senate District 15	state-senate
+South Carolina;SC Senate District 16	state-senate
+South Carolina;SC Senate District 17	state-senate
+South Carolina;SC Senate District 18	state-senate
+South Carolina;SC Senate District 19	state-senate
+South Carolina;SC Senate District 20	state-senate
+South Carolina;SC Senate District 21	state-senate
+South Carolina;SC Senate District 22	state-senate
+South Carolina;SC Senate District 23	state-senate
+South Carolina;SC Senate District 24	state-senate
+South Carolina;SC Senate District 25	state-senate
+South Carolina;SC Senate District 26	state-senate
+South Carolina;SC Senate District 27	state-senate
+South Carolina;SC Senate District 28	state-senate
+South Carolina;SC Senate District 29	state-senate
+South Carolina;SC Senate District 30	state-senate
+South Carolina;SC Senate District 31	state-senate
+South Carolina;SC Senate District 32	state-senate
+South Carolina;SC Senate District 33	state-senate
+South Carolina;SC Senate District 34	state-senate
+South Carolina;SC Senate District 35	state-senate
+South Carolina;SC Senate District 36	state-senate
+South Carolina;SC Senate District 37	state-senate
+South Carolina;SC Senate District 38	state-senate
+South Carolina;SC Senate District 39	state-senate
+South Carolina;SC Senate District 40	state-senate
+South Carolina;SC Senate District 41	state-senate
+South Carolina;SC Senate District 42	state-senate
+South Carolina;SC Senate District 43	state-senate
+South Carolina;SC Senate District 44	state-senate
+South Carolina;SC Senate District 45	state-senate
+South Carolina;SC Senate District 46	state-senate
+South Carolina;US House SC District 1	congressional
+South Carolina;US House SC District 2	congressional
+South Carolina;US House SC District 3	congressional
+South Carolina;US House SC District 4	congressional
+South Carolina;US House SC District 5	congressional
+South Carolina;US House SC District 6	congressional
+South Carolina;US House SC District 7	congressional
+South Carolina	state
+South Carolina;Abbeville County	county
+South Carolina;Aiken County	county
+South Carolina;Allendale County	county
+South Carolina;Anderson County	county
+South Carolina;Bamberg County	county
+South Carolina;Barnwell County	county
+South Carolina;Beaufort County	county
+South Carolina;Berkeley County	county
+South Carolina;Calhoun County	county
+South Carolina;Charleston County	county
+South Carolina;Cherokee County	county
+South Carolina;Chester County	county
+South Carolina;Chesterfield County	county
+South Carolina;Clarendon County	county
+South Carolina;Colleton County	county
+South Carolina;Darlington County	county
+South Carolina;Dillon County	county
+South Carolina;Dorchester County	county
+South Carolina;Edgefield County	county
+South Carolina;Fairfield County	county
+South Carolina;Florence County	county
+South Carolina;Georgetown County	county
+South Carolina;Greenville County	county
+South Carolina;Greenwood County	county
+South Carolina;Hampton County	county
+South Carolina;Horry County	county
+South Carolina;Jasper County	county
+South Carolina;Kershaw County	county
+South Carolina;Lancaster County	county
+South Carolina;Laurens County	county
+South Carolina;Lee County	county
+South Carolina;Lexington County	county
+South Carolina;Marion County	county
+South Carolina;Marlboro County	county
+South Carolina;McCormick County	county
+South Carolina;Newberry County	county
+South Carolina;Oconee County	county
+South Carolina;Orangeburg County	county
+South Carolina;Pickens County	county
+South Carolina;Richland County	county
+South Carolina;Saluda County	county
+South Carolina;Spartanburg County	county
+South Carolina;Sumter County	county
+South Carolina;Union County	county
+South Carolina;Williamsburg County	county
+South Carolina;York County	county
