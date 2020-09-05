@@ -66,8 +66,10 @@ def read_concatenated_blocks(
             # get info from header line
             field_list = extract_items(header_line, w)
             last_header = field_list[1 : 1 + v_t_cc]
-            assert (len(field_list) - len(skip_cols) - 1) % v_t_cc == 0, \
-                f"Count of last header ({v_t_cc}) does not evenly divide the number of count columns ({len(field_list) - len(skip_cols) - 1})"
+            if (len(field_list) - len(skip_cols) - 1) % v_t_cc != 0:
+                e = f"Count of last header ({v_t_cc}) does not evenly divide the number of count columns ({len(field_list) - len(skip_cols) - 1})"
+                ui.add_error(err,"munge_error",e)
+                return pd.DataFrame(), err
 
             header_1_list = extract_items(header_1, w * v_t_cc)
 

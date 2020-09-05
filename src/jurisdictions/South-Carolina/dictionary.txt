@@ -617,3 +617,5 @@ CountItemType	total	Choice Total
 CountItemType	election-day	Election Day
 CountItemType	election-day	Election Day
 CountItemType	election-day	Election Day
+BallotMeasureSelection	Yes	Yes
+BallotMeasureSelection	No	No
