@@ -354,6 +354,7 @@ CandidateContest	US House SC District 6	U.S. House of Representatives, District 
 CandidateContest	US House SC District 7	US House SC District 7
 CandidateContest	US House SC District 7	U.S. House of Representatives, District 7
 CandidateContest	US President (SC)	US President (SC)
+CandidateContest	US President (SC)	President
 CandidateContest	SC Governor	SC Governor
 CandidateContest	SC Governor	Governor and Lieutenant Governor
 CandidateContest	US Senate SC	US Senate SC
@@ -792,3 +793,15 @@ Candidate	R Jackson Cooper	R Jackson Cooper
 Candidate	Bill Weeks	Bill Weeks
 Candidate	Yes	Yes
 Candidate	No	No
+Candidate	Michael Bennet - WITHDREW	Michael Bennet - WITHDREW
+Candidate	Joseph R Biden	Joseph R Biden
+Candidate	Cory Booker - WITHDREW	Cory Booker - WITHDREW
+Candidate	Pete Buttigieg	Pete Buttigieg
+Candidate	John K Delaney - WITHDREW	John K Delaney - WITHDREW
+Candidate	Tulsi Gabbard	Tulsi Gabbard
+Candidate	Amy Klobuchar	Amy Klobuchar
+Candidate	Deval Patrick - WITHDREW	Deval Patrick - WITHDREW
+Candidate	Bernie Sanders	Bernie Sanders
+Candidate	Tom Steyer	Tom Steyer
+Candidate	Elizabeth Warren	Elizabeth Warren
+Candidate	Andrew Yang - WITHDREW	Andrew Yang - WITHDREW
