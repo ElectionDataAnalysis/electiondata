@@ -379,8 +379,10 @@ Election	2018 Primary	2018 Primary
 Election	2016 General	2016 General
 Election	2016 Primary	2016 Primary
 Party	Democratic Party	Democratic Party
+Party	Democratic Party	DEM
 Party	United Citizens Party	United Citizens Party
 Party	Republican Party	Republican Party
+Party	Republican Party	REP
 Party	Independence Party	Independence Party
 Party	Constitution Party	Constitution Party
 Party	Alliance Party	Alliance Party
