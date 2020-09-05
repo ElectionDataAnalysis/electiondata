@@ -614,8 +614,179 @@ ReportingUnit	South Carolina;Williamsburg County	Williamsburg
 ReportingUnit	South Carolina;York County	York
 CountItemType	election-day	Election Day
 CountItemType	total	Choice Total
-CountItemType	election-day	Election Day
-CountItemType	election-day	Election Day
-CountItemType	election-day	Election Day
+CountItemType	absentee-in-person	In-Person Absentee
+CountItemType	absentee-mail	Absentee By Mail
+CountItemType	failsafe	Failsafe
+CountItemType	provisional	Provisional
+CountItemType	failsafe-provisional	Failsafe Provisional
 BallotMeasureSelection	Yes	Yes
 BallotMeasureSelection	No	No
+Candidate	Duke Buckner	Duke Buckner
+Candidate	Lindsey Graham	Lindsey Graham
+Candidate	Michael LaPierre	Michael LaPierre
+Candidate	Joe Reynolds	Joe Reynolds
+Candidate	Chris Cox	Chris Cox
+Candidate	Kathy Landing	Kathy Landing
+Candidate	Nancy Mace	Nancy Mace
+Candidate	Brad Mole	Brad Mole
+Candidate	Michael Bishop	Michael Bishop
+Candidate	Joe Wilson	Joe Wilson
+Candidate	Hosea Cleveland	Hosea Cleveland
+Candidate	Mark D Welch	Mark D Welch
+Candidate	Moe Brown	Moe Brown
+Candidate	Sidney A Moore	Sidney A Moore
+Candidate	Melissa Ward Watson	Melissa Ward Watson
+Candidate	Robert Williams	Robert Williams
+Candidate	William H Cowboy Williams	William H Cowboy Williams
+Candidate	Richard Cash	Richard Cash
+Candidate	Craig Wooten	Craig Wooten
+Candidate	Tom Corbin	Tom Corbin
+Candidate	Dave Edwards	Dave Edwards
+Candidate	Karl B Allen	Karl B Allen
+Candidate	Fletcher Smith	Fletcher Smith
+Candidate	Janice S Curtis	Janice S Curtis
+Candidate	Ross Turner	Ross Turner
+Candidate	Billy Garrett	Billy Garrett
+Candidate	Bryan Hope	Bryan Hope
+Candidate	Mark Lynch	Mark Lynch
+Candidate	Scott Talley	Scott Talley
+Candidate	Kristen Blanchard	Kristen Blanchard
+Candidate	Michael Johnson	Michael Johnson
+Candidate	Mike Neese	Mike Neese
+Candidate	Tom Nichols	Tom Nichols
+Candidate	MaryGail Douglas	MaryGail Douglas
+Candidate	Mike Fanning	Mike Fanning
+Candidate	Charles Bumgardner	Charles Bumgardner
+Candidate	Ronnie Cromer	Ronnie Cromer
+Candidate	Randy Dickey	Randy Dickey
+Candidate	Benjamin Dunn	Benjamin Dunn
+Candidate	Lee Blatt	Lee Blatt
+Candidate	David Larsen	David Larsen
+Candidate	Shane Massey	Shane Massey
+Candidate	Susan J Swanson	Susan J Swanson
+Candidate	Perry Finch	Perry Finch
+Candidate	Chris Smith	Chris Smith
+Candidate	J D Chaplin	J D Chaplin
+Candidate	Ronald Reese Page	Ronald Reese Page
+Candidate	Patrick Richardson	Patrick Richardson
+Candidate	Kent M Williams	Kent M Williams
+Candidate	Ted Brown	Ted Brown
+Candidate	Manley Marvell Collins	Manley Marvell Collins
+Candidate	Ronnie A Sabb	Ronnie A Sabb
+Candidate	Kelly Spann	Kelly Spann
+Candidate	John Gallman	John Gallman
+Candidate	Luke A Rankin	Luke A Rankin
+Candidate	Carter Smith	Carter Smith
+Candidate	Eleazer Leazer Carter	Eleazer Leazer Carter
+Candidate	Kevin L Johnson	Kevin L Johnson
+Candidate	Cindy Evans	Cindy Evans
+Candidate	William R Johnson	William R Johnson
+Candidate	Jerry Montgomery	Jerry Montgomery
+Candidate	Vernon Stephens	Vernon Stephens
+Candidate	Michael Addison	Michael Addison
+Candidate	Brad Hutto	Brad Hutto
+Candidate	Jason Mills	Jason Mills
+Candidate	Sam Skardon	Sam Skardon
+Candidate	Debbie Chatman Bryant	Debbie Chatman Bryant
+Candidate	Kris DeLorme	Kris DeLorme
+Candidate	Brian Adams	Brian Adams
+Candidate	Gayla McSwain	Gayla McSwain
+Candidate	Phillip Bowers	Phillip Bowers
+Candidate	Jerry Carter	Jerry Carter
+Candidate	William Masters	William Masters
+Candidate	Neal Collins	Neal Collins
+Candidate	David Cox	David Cox
+Candidate	Allan Quinn	Allan Quinn
+Candidate	Jonathon Hill	Jonathon Hill
+Candidate	Vaughn D Parfitt	Vaughn D Parfitt
+Candidate	West Cox	West Cox
+Candidate	Mark Durham	Mark Durham
+Candidate	Sam Manley	Sam Manley
+Candidate	Tommy Stringer	Tommy Stringer
+Candidate	Adriene Atkinson	Adriene Atkinson
+Candidate	Leola Simpson	Leola Simpson
+Candidate	Bruce Wilson	Bruce Wilson
+Candidate	Travis Moore	Travis Moore
+Candidate	Jarred Spencer	Jarred Spencer
+Candidate	Chris Bennett	Chris Bennett
+Candidate	Bill Chumley	Bill Chumley
+Candidate	Garey Collins	Garey Collins
+Candidate	Charlene Herring	Charlene Herring
+Candidate	Annie E McDaniel	Annie E McDaniel
+Candidate	Melinda Inman Butler	Melinda Inman Butler
+Candidate	Doug Gilliam	Doug Gilliam
+Candidate	Lucas Atkinson	Lucas Atkinson
+Candidate	Miko Pickett	Miko Pickett
+Candidate	Teresa McGill Cain	Teresa McGill Cain
+Candidate	Lasha McClain	Lasha McClain
+Candidate	Jack Furse	Jack Furse
+Candidate	Kimberly O Johnson	Kimberly O Johnson
+Candidate	Robert A McFadden Sr	Robert A McFadden Sr
+Candidate	Hal Cercopely	Hal Cercopely
+Candidate	Cindy Risher	Cindy Risher
+Candidate	Heather Ammons Crawford	Heather Ammons Crawford
+Candidate	Mark W Epps	Mark W Epps
+Candidate	Rhodes Bailey	Rhodes Bailey
+Candidate	Heather Bauer	Heather Bauer
+Candidate	Jimmy Bales	Jimmy Bales
+Candidate	Jermaine Johnson	Jermaine Johnson
+Candidate	Bart T Blackwell	Bart T Blackwell
+Candidate	Brian Duncan	Brian Duncan
+Candidate	John Lastinger	John Lastinger
+Candidate	RJ May	RJ May
+Candidate	Eddie McCain	Eddie McCain
+Candidate	Mike Sturkie	Mike Sturkie
+Candidate	Justin Bamberg	Justin Bamberg
+Candidate	Evert Comer Jr	Evert Comer Jr
+Candidate	Patricia Cannon	Patricia Cannon
+Candidate	Damian Daly	Damian Daly
+Candidate	Gil Gatch	Gil Gatch
+Candidate	Evan Guthrie	Evan Guthrie
+Candidate	Jerry Govan	Jerry Govan
+Candidate	Kevin Ray	Kevin Ray
+Candidate	D Ryan McCabe	D Ryan McCabe
+Candidate	Kit Spires	Kit Spires
+Candidate	Jen Gibson	Jen Gibson
+Candidate	Donna Brown Newton	Donna Brown Newton
+Candidate	David Herndon	David Herndon
+Candidate	Shawn Pinkston	Shawn Pinkston
+Candidate	Mark Smith	Mark Smith
+Candidate	Chris Staubes	Chris Staubes
+Candidate	Sylleste Davis	Sylleste Davis
+Candidate	Tom Fernandez	Tom Fernandez
+Candidate	Kevin Hardee	Kevin Hardee
+Candidate	Steve Robertson	Steve Robertson
+Candidate	Case Brittain	Case Brittain
+Candidate	Alan Clemmons	Alan Clemmons
+Candidate	James Johnson	James Johnson
+Candidate	Deon Tedder	Deon Tedder
+Candidate	Jeff Wilder	Jeff Wilder
+Candidate	William Cogswell	William Cogswell
+Candidate	Rouzy Vafaie	Rouzy Vafaie
+Candidate	Regina Duggins	Regina Duggins
+Candidate	Wendell G Gilliard	Wendell G Gilliard
+Candidate	Daniel Brownstein	Daniel Brownstein
+Candidate	David Quick	David Quick
+Candidate	Ryan Buckhannon	Ryan Buckhannon
+Candidate	Joe Bustos	Joe Bustos
+Candidate	Raneisha J Holmes	Raneisha J Holmes
+Candidate	Marvin R Pendarvis	Marvin R Pendarvis
+Candidate	Eileen Dougherty	Eileen Dougherty
+Candidate	Carol Tempel	Carol Tempel
+Candidate	Spencer Wetmore	Spencer Wetmore
+Candidate	Josh Stokes	Josh Stokes
+Candidate	Kathleen G Wilson	Kathleen G Wilson
+Candidate	Charles A Glover Sr	Charles A Glover Sr
+Candidate	Millicent Traeye Middleton	Millicent Traeye Middleton
+Candidate	Chardale Murray	Chardale Murray
+Candidate	John R Prioleau Sr	John R Prioleau Sr
+Candidate	Bill Crosby	Bill Crosby
+Candidate	Jordan Pace	Jordan Pace
+Candidate	Michael E Covert	Michael E Covert
+Candidate	Bill Herbkersman	Bill Herbkersman
+Candidate	Jeff Bradley	Jeff Bradley
+Candidate	Phil W Hartman	Phil W Hartman
+Candidate	R Jackson Cooper	R Jackson Cooper
+Candidate	Bill Weeks	Bill Weeks
+Candidate	Yes	Yes
+Candidate	No	No
