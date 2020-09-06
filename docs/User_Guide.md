@@ -93,22 +93,42 @@ It's easiest to use the JurisdictionPrepper() object to create or update jurisdi
 ```
 >>> err = jp.new_juris_files()
 ```
-The program will create the necessary files in a folder (at the location `jurisdiction_path` specified in `jurisdiction_prep.ini`), and a 'starter dictionary.txt' in your current directory. If something does not work as expected, check the value of `jp.new_juris_files()`, which may contain some helpful information. If the system found no errors, this value will be an empty python dictionary.
+The routine `new_juris_files` creates the necessary files in a folder (at the location `jurisdiction_path` specified in `jurisdiction_prep.ini`). Several of these files are seeded with information that can be deduced from the other information in `jurisdiction_prep.ini`.
+ 
+In addition, `new_juri_files` creates a starter dictionary `XX_starter_dictionary.txt` in your current directory. Eventually the `dictionary.txt` file in your jurisdiction directory will need to contain all the mappings necessary for the system to match the data read from the results file ("raw_identifiers") with the internal database names specified in the other `.txt` files in the jurisdiction directory. The starter dictionary maps the internal database names to themselves, which is usually not helpful. In the steps below, you will correct (or add) lines to `dictionary.txt` following the conventions in the file. The system does not try to guess how internal database names are related to names in the files.
+
+If something does not work as expected, check the value of `jp.new_juris_files()`, which may contain some helpful information. If the system found no errors, this value will be an empty python dictionary.
 ```
 >>> err
 {}
 ```
-3. Add all counties to the `ReportingUnit.txt` file. You must obey the semicolon convention so that the system will know that the counties are subunits of the jurisdiction. For example:
+3. Add all counties to the `ReportingUnit.txt` file and `XX_starter_dictionary.txt`. You must obey the semicolon convention so that the system will know that the counties are subunits of the jurisdiction. For example:
 ```
 Name	ReportingUnitType
-Florida;Alachua County	county
-Florida;Baker County	county
-Florida;Bay County	county
-Florida;Bradford County	county
-Florida;Brevard County	county
-Florida;Broward County	county
+Texas;Angelina County	county
+Texas;Gregg County	county
+Texas;Harrison County	county
 ```
 Currently counties must be added by hand. (NB: in some states, the word 'county' is not used. For instance, Louisiana's major subdivisions are called 'parish'.)
+
+To find the raw_identifiers for the dictionary, look in your results files to see how counties are written. For example, if your results file looks like this (example from Texas):
+```
+ELECTION DATE-NAME	OFFICE NAME	CANDIDATE NAME	COUNTY NAME	TOTAL VOTES PER OFFICE PER COUNTY
+03/03/2020 - 2020 MARCH 3RD REPUBLICAN PRIMARY	U. S. REPRESENTATIVE DISTRICT 1	JOHNATHAN KYLE DAVIDSON	ANGELINA	1,660
+03/03/2020 - 2020 MARCH 3RD REPUBLICAN PRIMARY	U. S. REPRESENTATIVE DISTRICT 1	LOUIE GOHMERT	ANGELINA	10,968
+03/03/2020 - 2020 MARCH 3RD REPUBLICAN PRIMARY	U. S. REPRESENTATIVE DISTRICT 1	JOHNATHAN KYLE DAVIDSON	GREGG	914
+03/03/2020 - 2020 MARCH 3RD REPUBLICAN PRIMARY	U. S. REPRESENTATIVE DISTRICT 1	LOUIE GOHMERT	GREGG	9,944
+03/03/2020 - 2020 MARCH 3RD REPUBLICAN PRIMARY	U. S. REPRESENTATIVE DISTRICT 1	JOHNATHAN KYLE DAVIDSON	HARRISON	774
+03/03/2020 - 2020 MARCH 3RD REPUBLICAN PRIMARY	U. S. REPRESENTATIVE DISTRICT 1	LOUIE GOHMERT	HARRISON	7,449
+```
+you would want lines in your dictionary file like this:
+```
+cdf_element	cdf_internal_name	raw_identifier_value
+ReportingUnit	Texas;Angelina County	ANGELINA
+ReportingUnit	Texas;Gregg County	GREGG
+ReportingUnit	Texas;Harrison County	HARRISON
+```
+Note that the entries in the `cdf_internal_name` column exactly match the entries in the `Name` column in `ReportingUnit.txt`.
 
 4. Make any necessary changes to  `Office.txt`.
  * Ensure the jurisdiction-wide offices are correct, with the jurisdiction listed as the `ElectionDistrict`. The offices added by `new_juris_files()` are quite generic. For instance, your jurisdiction may have a 'Chief Financial Officer' rather than an 'Treasurer'. Use the jurisdiction's official titles, from an official government source. Jurisdiction-level offices should be prefaced with the two-letter postal abbreviation. For example:
