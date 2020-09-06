@@ -1,0 +1,385 @@
+BallotName
+Michael Bennet
+Joseph R. Biden
+Michael R. Bloomberg
+Cory Booker
+Mosie Boyd
+Steve Bullock
+Pete Buttigieg
+Julian Castro
+John K. Delaney
+Tulsi Gabbard
+Kamala Harris
+Amy Klobuchar
+Bernie Sanders
+Joe Sestak
+Tom Steyer
+Elizabeth Warren
+Marianne Williamson
+Andrew Yang
+Roque 'Rocky' De La Fuente
+Donald J. Trump
+Bill Weld
+Senator Alan Clark
+Jeff Crow
+State Senator John Cooper
+Representative Dan Sullivan
+Efrem Elliott
+Senator Stephanie Flowers
+Bill Dunklin
+Ben Gilmore
+Keidra Burrell
+Garry L. Smith
+Jim Reynolds
+Representative Marcus Richmond
+Justice of the Peace Richard McGrew
+Richard Alvin Midkiff
+Jack Wells
+Judy Bowers
+Rick McClure
+Lorna Nobles
+Tony Furman
+Marietta McClure
+Keith Brooks
+Councilman RJ Hawk
+Ryan D. Davis
+Lee D. Miller
+Joy C. Springer
+State Representative Denise Ennett
+Russell Williams III
+Karyn Maynard
+David Ray
+Jannie M. Cotton
+Zach Randall
+Councilman Bobby Long
+Mayor Jon Milligan
+Cole Peck
+Representative Brandt Smith
+Ken Yarbrough
+Shawn Bates
+Representative Jon S. Eubanks
+Curtis J. Varnell
+State Representative Jana Della Rosa
+Chris Latimer
+Kendon Underwood
+Jorge Becker
+Delia Haak
+Scott Richardson
+John P. Carr
+Adrienne Woods
+Paige Dillard Evans
+Representative Nelda Speaks
+Barbara Womack Webb
+Judge Morgan 'Chip' Welch
+Prosecuting Attorney Stephanie Potter Barrett
+Emily White
+Court of Appeals Judge Mark Klappenbach
+James McMenis
+Gary J. Mitchusson
+Judge Christopher Morledge
+Judge David Carruth
+Andrew Coleman
+Kathie Hess
+Skip Mooney Jr.
+Tom Young
+Mary Lile Broadaway
+R. Scott Troutt
+Kimberly Boling Bibb
+Matthew Coe
+Prosecuting Attorney Scott Ellington
+Scott Willhite
+Joe Grider
+Timothy F. Watson, Sr.
+Judge Adam Weeks
+Hollie Wilson
+Robert L. Depper III
+Judge Stacey Zimmerman
+Mieka Hatcher
+Brian Hogue
+Conrad Odom
+Tim Snively
+Diane Warren
+James Dunham
+Judge William 'Bill' Pearson
+Hugh Finkelstein
+Casey Tucker
+Tjuana Byrd
+Suzanne Lumpkin
+LaTonya Laird Austin
+Judge Andy Gill
+Shanice Johnson
+Lott Rolfe
+Jonathan Q. Warren
+Andrew 'Andy' Ballard
+Tom Barron
+Shawn Johnson
+Amy Dunn Johnson
+Gary Rogers
+Jay Shue
+Margaret Dobson
+Stephen Shirron
+City Attorney James A. Hamilton
+Tim Leonard
+Crews Puryear
+Laurie Bridewell
+Priscilla Copelin-Abernathy
+Frank Spain
+Therese Free
+Mac Norton
+Tom Owens
+Greg Magness
+Phil Milligan
+Rita Howard Watkins
+Dianna Hewitt Ladd
+Sam Terry
+Daniel Brock
+Carla Fuller
+Shane Ethridge
+Judge Ralph Ohm
+Cecilia Dyer
+Brian Johnson
+Judge Wade Naramore
+Patrick McDaniel
+Prosecuting Attorney Andy Riner
+Christine Horwart
+Tony Noblin
+Bobby Digby
+City Attorney Josh Farmer
+City Attorney Brent Houston
+Josh Newton
+Rinda Baker
+Kevin R. Holmes
+A.J. Anglin
+David Bailey
+David Dero Phillips
+Mark N. Scalise
+Terra Stephenson
+Amy Grimes
+Judge Jim O'Hern
+Just Josh Bugeja
+Jason Hunter
+Wendy Sharum
+Judge Claire Borengasser
+Michael Gean Pierce
+R. Kevin Barham
+State Representative Sarah Capp
+Judge Paul A. Efurd
+Beth Wright
+District Judge Chris Carnahan
+Lorie Mason Jordan
+Chris Jester
+Judge Mark R. Johnson
+Judge Carol Collins
+Judge Dale Lipsmeyer
+District Judge Brian Mueller
+Prosecuting Attorney Henry Boyce
+Judge Barbara A. Griffin
+Judge Donald Betterton
+Catherine Palmer Dean
+Kandice Bell
+Judge John Kearney
+Efrem Neely
+Peggy (Margaret) Egan
+Judge Vic Fleming
+Clay Ford
+Brent Standridge
+Amburr Drury
+Billy Jack Gibson
+Jace Roberts
+Tommy Potter
+Jeffery C. Sams
+Judge David Graham
+Ebony Gulley
+Mark Steven Fraiser
+Meredith Switzer
+Congressman Rick Crawford
+Chintan Desai
+Elvis Presley
+Congressman French Hill
+Joe Ryne Swafford
+Representative Clarke Tucker
+Michael J. Kalagias
+Josh Mahony
+Congressman Steve Womack
+Write-In
+Tom Canada
+Hayden Catherine Shamel
+Representative Bruce Westerman
+Jared K. Henderson
+Governor Asa Hutchinson
+Mark West
+Kerry Hicks
+Mike Lee
+Attorney General Leslie Rutledge
+David E. Dinwiddie
+Auditor Andrea Lea
+T.J. Campbell
+Tommy Land
+Larry Williams
+Anthony Bland
+Frank Gilbert
+Lt. Governor Tim Griffin
+Susan Inman
+Christopher Olson
+John Thurston Commissioner of State Lands
+Ashley Ewald
+Treasurer of State Dennis Milligan
+Senator Cecile Bledsoe
+Jon Comstock
+Dawn Clemence
+Rep. Greg Leding
+Representative Bob Ballinger
+Lee Evans
+Jim Wallace
+William Whitfield Hyman
+Representative Mathew Pitsch
+Bobbi Hicks
+Senator Larry Teague
+Michael Colgrove
+Senator Bill Sample
+Senator Scott Flippo
+Kevin Vornheder
+Susi Epperson
+Representative James Sturch
+Melissa Fults
+Representative Kim Hammer
+Senator Jason Rapert
+Maureen Skinner
+Wade Andrews
+State Representative David Fielding
+Don Glover
+Ricky E. Lattimore, Sr.
+Representative Mark McElroy
+Jason Dobson
+Representative Chris Richey
+Representative Ken Bragg
+Wayne Willems
+Representative Vivian Flowers
+Gregory Maxwell
+Representative Justin Gonzales
+Jeremy Ross
+Stele Wayne James
+Representative Marcus E. Richmond
+Representative Mickey Gates
+Kevin Rogers
+Representative Bruce Cozart
+J. Kent Percefull
+Kallen K. Peret
+Alan Bruce Hughes
+Representative Laurie Rushing
+Jasen Kelly
+Dustin M. Parsons
+Rep. Fred Allen
+Mitchell Fenton
+Representative Andy Davis
+Randy S. Haun
+Jess Mallett
+Representative Jim Sorvillo
+William J. Barger
+Andrew Collins
+Judith Goodson
+Chase Mangiapane
+Representative Carlton Wing
+Monica D. Ball
+State Representative Mark Lowery
+Representative Karilyn Brown
+Jonathan Wayne Crossley
+Linda Dyson
+Mark W. Perry
+Representative Les Eaves
+Drew Tanner
+Craig Christiansen
+Representative Michael John Gray
+Representative Steve Hollowell
+Howard (Jr.) Smith, II
+Austin W. Jones
+Representative Johnny Rye
+Representative Monte Hodges
+Gary Tobar
+Ryan Carter
+Representative Joe Jett
+Representative Scott Baltz
+Marsh Davis
+Representative Rick Beck
+Michael J. Roetzel
+Representative Stephen Meeks
+Sandra Richter
+Eddie L. King
+Representative Aaron Pilkington
+Alderman Andy Hawkins
+Justice of the Peace Spencer Hawks
+Joe Cloud
+Nathan George
+State Representative Mary Bentley
+Dana Bonham
+Representative Justin Boyd
+Stephen Edwards
+Luke Pruitt
+Casey D. Copeland
+Representative Charlene Fite
+Lou Reed Sharp
+Representative Bruce Coleman
+Donald R. McKinney
+Representative Charlie Collins
+Denise Garner
+Representative Robin Lundstrum
+Kelly Scott Unger
+Megan Godfrey
+Representative Jeff Williams
+Representative Jana Della Rosa
+Kati McFarland
+Chris Birch
+Gayla Hendren McKenzie
+Gayatri Jane Agnew
+State Representative Jim Dotson
+Jene Huffman-Gilreath
+Representative Rebecca Petty
+Representative Austin McCollum
+Celeste Williams
+Christie Craig
+Representative Grant Hodges
+Harlan Breaux
+Gary L. Morris
+State Supreme Court Justice Courtney Goodson
+David Sterling
+Carol Crews
+Zach Throneberry
+Margaret 'Peggy' Egan
+Melanie Martin
+Billy E. Blann
+Robert Henderson
+Patrick D. Frazier
+Paul D. Choate
+Penny Owens
+Amy Linder
+Cheryl E. Cochran-Wilson
+Martavious Carrigan
+Stormey Primm
+Shannon County Clerk Phillips
+Goldie Hilburn
+Mike Loftin
+Cliff Justice of the Peace Preston
+Mike Dumas
+Steven Ward
+Jesse M. Amason
+Bill Yutzy
+Herman Curley
+BIll Luther
+Trang My Lu
+Veronica Smith-Creer
+Mary Seymore
+Linda J. Newbury
+David Lee
+Tony Cole
+Larry Hodge
+Larry New
+Allen Simmons
+Jim Crotty
+Donald R. Hopkins Jr.
+Bobby Neal
+Daryell Howell
+Danny Paul Farley
+Jeffrey D. Hedges
+"Margaret ""Peggy"" Egan"
+FOR
+AGAINST
