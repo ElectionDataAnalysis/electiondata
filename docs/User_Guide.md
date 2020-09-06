@@ -8,9 +8,13 @@ In the directory from which you will run the system -- which can be outside your
 * `jurisdiction_prep.ini` for the JurisdictionPrepper() class
 * `run_time.ini` for loading data (DataLoader() class) and for pulling and analyzing results (the Analyzer()) class)
   
-There are templates with the suffix `.template` in `templates/parameter_file_templates`. These will need be renamed with the extension `.ini`. For example, from the `src` directory, running `cp templates/parameter_file_templates/run_time.ini.template ./run_time.ini` will create the `run_time.ini` parameter file with all the required fields to load analyze data.
+There are templates with the suffix `.template` in `templates/parameter_file_templates`. These will need be renamed with the extension `.ini`, and edited to reflect the paths in your own environment. For example, from the `src` directory, running 
+```cp templates/parameter_file_templates/run_time.ini.template ./run_time.ini``` 
+will create the `run_time.ini` parameter file with all the required fields to load analyze data. 
    
-In the directory indicated in `run_time.ini`, create a `.ini` file for each results file you want to use. The results files and the `.ini` files must both be in that directory. Follow the `templates/parameter_file_templates/results.ini.template` template for the individual `.ini` files. If all the files in a single directory will use the same munger, jurisdiction and election, you can create these `.ini` files in batches. For example, 
+In the `results_dir` directory indicated in `run_time.ini`, create a `.ini` file for each results file you want to use. Follow the `templates/parameter_file_templates/results.ini.template` template for the individual `.ini` files.  The results files and the `.ini` files must both be in that directory. The files can have arbitrary names; note that the name of the results file must be correct in its associated `.ini` file.
+
+If all the files in a single directory will use the same munger, jurisdiction and election, you can create these `.ini` files in batches. For example, 
 ```
 >>> dir = '/Users/singer3/Documents/Data/Florida/Precinct-Level Election Results/precinctlevelelectionresults2016gen'
 >>> munger = 'fl_gen_by_precinct'
@@ -22,69 +26,113 @@ In the directory indicated in `run_time.ini`, create a `.ini` file for each resu
 >>> note = 'These statewide compiled files are derived from county-specific data submitted by supervisors of elections after each primary election, general election, special primary, and special general election and presidential preference primary election'
 >>> ea.make_par_files(dir,munger, jurisdiction_path, top_ru, election, date, source=source, results_note=note)
 >>> 
-
 ```
  
 ## Choose a Munger
 Ensure that the munger files are appropriate for your results file(s). 
-1. If the munger doesn't already exist, pick a name for your munger and create a folder with that name in the `mungers` directory to hold `format.txt` and `cdf_elements.txt`.
-2. Put the appropriate parameters in `format.txt`, following the template in `templates/munger_templates`. For example:
+ (1) If the munger doesn't already exist, pick a name for your munger and create a directory with that name in the `mungers` directory to hold `format.txt` and `cdf_elements.txt`.
+ (2) Copy the templates from `templates/munger_templates` to your munger directory. Every munger must have a value for `file_type` and `encoding`; depending your `file_type` other parameters may be required. Types currently supported are `txt`, `csv`, `xls` (which handles both `.xls` and `.xlsx` files)
+ * Required for `txt`, `csv` or `xls` type:
+   * header_row_count
+   * field_name_row
+   * field_names_if_no_field_name_row
+   * count_columns
+ * Required for `concatenated-blocks` type:
+   * count_of_top_lines_to_skip
+   * columns_to_skip
+   * last_header_column_count
+   * column_width
+ * Available if appropriate for any file type:
+   * thousands_separator
+Definitions and formats for these are in the template file. Do not use quotes or angle brackets.
 
-```item	value
-header_row_count	0
-field_name_row	None
-field_names_if_no_field_name_row	County Code,County Name,Election Number,Election Date,Election Name,Unique Precinct Identifier,Precinct Polling Location,Total Registered Voters,Total Registered Republicans,Total Registered Democrats,Total Registered All Other Parties,Contest Name,District,Contest Code,Candidate etc,Candidate Party,Candidate Florida Voter Registration System ID Number,DOE Assigned Number,Vote Total
-count_columns	18
-file_type	txt
-encoding	iso-8859-1
-thousands_separator	None
+ (3) Put formulas for reading information from the results file into `cdf_elements.txt`. You may find it helpful to follow the example of the mungers in the repository.
+
+You can create concatenation formulas, referencing field names from your file by putting them in angle brackets. 
+
+For `txt`, `csv` and `xls` file types, here is an example.
 ```
-
-3. Put formulas for reading information from the results file into `cdf_elements.txt`. You can reference field names from your file by putting them in angle brackets. E.g., 
-
-```name	raw_identifier_formula	source
-ReportingUnit	<County Name>;Precinct <Unique Precinct Identifier>	row
-Party	<Candidate Party>	row
-CandidateContest	<Contest Name> District <District>	row
-Candidate	<Candidate etc>	row
-BallotMeasureContest	<Contest Name>	row
-BallotMeasureSelection	<DOE Assigned Number>	row
+name	raw_identifier_formula	source
+ReportingUnit	<County Name>	row
+Party	<Party Name>	row
+CandidateContest	<Office Name> <District Name>	row
+Candidate	<Candidate Name>	row
+BallotMeasureContest	<Office Name> <District Name>	row
+BallotMeasureSelection	<0>	column
 CountItemType	total	row
 ```
-NB: for constants (like the CountItemType 'total' in this example), use 'row' for the source.
+NB: for constants (like the CountItemType 'total' in this example), use 'row' for the source. Row-source fields should be the field names from the header row or, if there is no header row, from `format.config`. Column-source fields should be identified by the number of the row in which the information is found. Our convention is that the top row is 0.
+
+For the `concatenated-blocks` file type, here is an example (with regular expressions for Party and Candidate -- see below:
+```
+name	raw_identifier_formula	source
+ReportingUnit	<first_column>	row
+Party	{<header_1>,^.*\(([a-zA-Z]{3})\)$}	row
+CandidateContest	<header_0>	row
+Candidate	{<header_1>,^(.*)\([a-zA-Z]{3}\)$}	row
+BallotMeasureContest	<header_0>	row
+BallotMeasureSelection	<header_1>	row
+CountItemType	<header_2>	row
+```
+you can refer to the field that appears in the first column by `first_column`
+
+Some jurisdictions require regular expression (regex) analysis to extract information from the data. For example, in a primary both the Party and the Candidate may be in the same string (e.g., "Robin Perez (DEM)"). Curly brackets indicate that regex analysis is needed. Inside the curly brackets there are two parts, separated by a comma. The first part is the concatenation formula for creating a string from the data in the file. The second is a python regex formula whose first group (enclosed by parentheses) marks the desired substring.
+```Party	{<header_1>,^.*\(([a-zA-Z]{3})\)$}	row```
 
 ## Create or Improve a Jurisdiction
 It's easiest to use the JurisdictionPrepper() object to create or update jurisdiction files. 
 
-1. From the directory containing `jurisdiction_prep.ini`, open a python interpreter. Import the package and initialize a JurisdictionPrepper(), e.g.:
+ (1) From the directory containing `jurisdiction_prep.ini`, open a python interpreter. Import the package and initialize a JurisdictionPrepper(), e.g.:
 ```
 >>> import election_data_analysis as ea
 >>> jp = ea.JurisdictionPrepper()
 ```
-2. Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
+ (2) Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
 ```
 >>> err = jp.new_juris_files()
 ```
-The program will create the necessary files in a folder (at the location `jurisdiction_path` specified in `jurisdiction_prep.ini`), and a 'starter dictionary.txt' in your current directory. If something does not work as expected, check the value of `jp.new_juris_files()`, which may contain some helpful information. If the system found no errors, this value will be an empty python dictionary.
+The routine `new_juris_files` creates the necessary files in a folder (at the location `jurisdiction_path` specified in `jurisdiction_prep.ini`). Several of these files are seeded with information that can be deduced from the other information in `jurisdiction_prep.ini`.
+ 
+In addition, `new_juris_files` creates a starter dictionary `XX_starter_dictionary.txt` in your current directory. Eventually the `dictionary.txt` file in your jurisdiction directory will need to contain all the mappings necessary for the system to match the data read from the results file ("raw_identifiers") with the internal database names specified in the other `.txt` files in the jurisdiction directory. The starter dictionary maps the internal database names to themselves, which is usually not helpful. In the steps below, you will correct (or add) lines to `dictionary.txt` following the conventions in the file. The system does not try to guess how internal database names are related to names in the files. 
+
+NB: it is perfectly OK to have more than one raw_identifier_value for a single element. This can be necessary if, say, different counties use different names for a single contest. What can cause problems are lines with the same cdf_element and same raw_identifier_value, but different cdf_internal_names.
+
+If something does not work as expected, check the value of `jp.new_juris_files()`, which may contain some helpful information. If the system found no errors, this value will be an empty python dictionary.
 ```
 >>> err
 {}
 ```
-3. Add all counties to the `ReportingUnit.txt` file. You must obey the semicolon convention so that the system will know that the counties are subunits of the jurisdiction. For example:
+ (3) Add all counties to the `ReportingUnit.txt` file and `XX_starter_dictionary.txt`. You must obey the semicolon convention so that the system will know that the counties are subunits of the jurisdiction. For example:
 ```
 Name	ReportingUnitType
-Florida;Alachua County	county
-Florida;Baker County	county
-Florida;Bay County	county
-Florida;Bradford County	county
-Florida;Brevard County	county
-Florida;Broward County	county
+Texas;Angelina County	county
+Texas;Gregg County	county
+Texas;Harrison County	county
 ```
 Currently counties must be added by hand. (NB: in some states, the word 'county' is not used. For instance, Louisiana's major subdivisions are called 'parish'.)
 
-4. Make any necessary changes to  `Office.txt`.
- * Ensure the jurisdiction-wide offices are correct, with the jurisdiction listed as the `ElectionDistrict`. The offices added by `new_juris_files()` are quite generic. For instance, your jurisdiction may have a 'Chief Financial Officer' rather than an 'Treasurer'. Use the jurisdiction's official titles, from an official government source. Jurisdiction-level offices should be prefaced with the two-letter postal abbreviation. For example:
- ```
+To find the raw_identifiers for the dictionary, look in your results files to see how counties are written. For example, if your results file looks like this (example from Texas):
+```
+ELECTION DATE-NAME	OFFICE NAME	CANDIDATE NAME	COUNTY NAME	TOTAL VOTES PER OFFICE PER COUNTY
+03/03/2020 - 2020 MARCH 3RD REPUBLICAN PRIMARY	U. S. REPRESENTATIVE DISTRICT 1	JOHNATHAN KYLE DAVIDSON	ANGELINA	1,660
+03/03/2020 - 2020 MARCH 3RD REPUBLICAN PRIMARY	U. S. REPRESENTATIVE DISTRICT 1	LOUIE GOHMERT	ANGELINA	10,968
+03/03/2020 - 2020 MARCH 3RD REPUBLICAN PRIMARY	U. S. REPRESENTATIVE DISTRICT 1	JOHNATHAN KYLE DAVIDSON	GREGG	914
+03/03/2020 - 2020 MARCH 3RD REPUBLICAN PRIMARY	U. S. REPRESENTATIVE DISTRICT 1	LOUIE GOHMERT	GREGG	9,944
+03/03/2020 - 2020 MARCH 3RD REPUBLICAN PRIMARY	U. S. REPRESENTATIVE DISTRICT 1	JOHNATHAN KYLE DAVIDSON	HARRISON	774
+03/03/2020 - 2020 MARCH 3RD REPUBLICAN PRIMARY	U. S. REPRESENTATIVE DISTRICT 1	LOUIE GOHMERT	HARRISON	7,449
+```
+you would want lines in your dictionary file like this:
+```
+cdf_element	cdf_internal_name	raw_identifier_value
+ReportingUnit	Texas;Angelina County	ANGELINA
+ReportingUnit	Texas;Gregg County	GREGG
+ReportingUnit	Texas;Harrison County	HARRISON
+```
+Note that the entries in the `cdf_internal_name` column exactly match the entries in the `Name` column in `ReportingUnit.txt`.
+
+ (4) As necessary, revise `CandidateContest.txt` (along with `Office.txt` and `XX_starter_dictionary.txt`). 
+ * The offices and candidate-contests added by `new_juris_files()` are quite generic. For instance, your jurisdiction may have a 'Chief Financial Officer' rather than an 'Treasurer'. Use the jurisdiction's official titles, from an official government source. Add any missing offices. Our convention is to preface state, district or territory offices with the two-letter postal abbreviation. For example (in `Office.txt`):
+```
 Name	ElectionDistrict
 US President (FL)	Florida
 FL Governor	Florida
@@ -93,12 +141,9 @@ FL Attorney General	Florida
 FL Chief Financial Officer	Florida
 FL Commissioner of Agriculture	Florida
 ```
+If you are interested in local contests offices (such as County Commissioner), you will need to add them. If the ElectionDistrict for any added contest is not already in `ReportingUnit.txt`, you will need to add it. Note that judicial retention elections are yes/no, so they should be handled as BallotMeasureContests, not CandidateContests. NB: If you want to add Offices in bulk from a results file, you can wait and do it more easily following instructions below.
 
-Note that some judicial elections are retention elections, which are handled as BallotMeasureContests, not CandidateContests.
- * Add any other Offices of interest, with their ElectionDistricts. Any ElectionDistricts that are not already in `ReportingUnit.txt` must be added to that file. NB: If you want to add Offices in bulk from a results file, you can wait and do it more easily following instructions below.
-
-5. Make any necessary changes to `CandidateContest.txt`.
- * For each change made in the previous step to `Office.txt`, make the corresponding change to `CandidateContest.txt`. Add the general election CandidateContest for each added Office, leaving the PrimaryParty field blank. (Primaries will be handled below.) For example:
+For each new or revised Office, add or revise entries in `CandidateContest.txt`. Leave the PrimaryParty column empty. Do not add primaries at this point -- they can be added in bulk below.  For example (in `CandidateContest.txt`):
  ```
 US President (FL)	1	US President (FL)	
 FL Governor	1	FL Governor		
@@ -108,36 +153,25 @@ FL Chief Financial Officer	1	FL Chief Financial Officer
 FL Commissioner of Agriculture	1	FL Commissioner of Agriculture	
 ```
 
-6. Make any necessary changes to the more straightforward elements. It's often easier to add these in bulk later directly from the results files (see below) -- unless you want to use internal names that differ from the names in the results file.
-  * `Party.txt`. You may be able to find a list of officially recognized parties on the Board of Election's website.
-  * `Candidate.txt`. Our convention for internal names for multiple-candidate tickets (e.g., 'Trump/Pence' is to use the full name of the top candidate, e.g., 'Donald J. Trump'). Any variations used in the results files should be mapped accordingly. E.g.:
-  ```
-cdf_element	cdf_internal_name	raw_identifier_value
-Candidate	Donald J. Trump	Trump / Pence
-Candidate	Donald J. Trump	Donald J. Trump
-```
-  * `BallotMeasure.txt`. If the ElectionDistrict is not the whole jurisdiction, you may need to add these by hand. A BallotMeasure is any yes/no question on the ballot, including judicial retention. Each BallotMeasure must have an ElectionDistrict and an Election matching an entry in the `ReportingUnit.txt` or `Election.txt` file.
-  * `Election.txt`.
-
-7. Revise `XX_starter_dictionary.txt` so that it has entries for any of the items created in the steps above (except that there is no need to add Elections to the dictionary, as they are never munged from the contents of the results file). The 'cdf_internal_name' column should match the names in the jurisdiction files. The 'raw_identifier_value' column should hold the corresponding names that will be created from the results file via the munger. 
-    * It is helpful to edit the starter dictionary in an application where you can use formulas, or to manipulate the file with regular expression replacement. If you are not fluent in manipulating text some other way, you may want to use Excel and its various text manipulation formulas (such as =CONCAT()). However, beware of Excel's tendency to revise formats on the sly. You may want to check `.txt` and `.csv` files manipulated by Excel in a plain text editor if you run into problems. (If you've been curious to learn regex replacement, now's a good time!)
-    * For each Office and CandidateContest, look in your results file to see what convention that file uses. For example, using data from official Florida election results files:
+Finally, look in your results files to see what naming conventions are used for candidate contests. Add lines to the starter dictionary. For example, using data from official Florida election results files:
 ```
 cdf_element	cdf_internal_name	raw_identifier_value
 CandidateContest	US President (FL)	President of the United States
 CandidateContest	US House FL District 1	Representative in Congress District 1
 CandidateContest	US House FL District 2	Representative in Congress District 2
-Office	US President (FL)	President of the United States
-Office	US House FL District 1	Representative in Congress District 1
-Office	US House FL District 2	Representative in Congress District 2
 ```
 
-Make sure to change the raw_identifier_value for both the Offices and the CandidateContests. You may or may not need to change the corresponding ReportingUnits -- if they don't appear explicitly in any of your results files, their raw_identifier_values are irrelevant.
-    * NB: it is perfectly OK to have more than one raw_identifier_value for a single element. This can be necessary if, say, different counties use different names for a single contest.
-    
-8. Add entries to the starter dictionary for CountItemType and BallotMeasureSelection. 
+ (5) Make any necessary additions or changes to the more straightforward elements. It's often easier to add these in bulk later directly from the results files (see below) -- unless you want to use internal names that differ from the names in the results file.
+  * `Party.txt`. You may be able to find a list of officially recognized parties on the Board of Election's website.
+  * `BallotMeasure.txt`. If the ElectionDistrict is not the whole jurisdiction, you may need to add these by hand. A BallotMeasure is any yes/no question on the ballot, including judicial retention. Each BallotMeasure must have an ElectionDistrict and an Election matching an entry in the `ReportingUnit.txt` or `Election.txt` file.
+  * `Election.txt`.
+
+ (6) Revise `XX_starter_dictionary.txt` so that it has entries for any of the items created in the steps above (except that there is no need to add Elections to the dictionary, as they are never munged from the contents of the results file). The 'cdf_internal_name' column should match the names in the jurisdiction files. The 'raw_identifier_value' column should hold the corresponding names that will be created from the results file via the munger. 
+    * It is helpful to edit the starter dictionary in an application where you can use formulas, or to manipulate the file with regular expression replacement. If you are not fluent in manipulating text some other way, you may want to use Excel and its various text manipulation formulas (such as =CONCAT()). However, beware of Excel's tendency to revise formats on the sly. You may want to check `.txt` and `.csv` files manipulated by Excel in a plain text editor if you run into problems. (If you've been curious to learn regex replacement, now's a good time!)
+ 
+ (7) Add entries to the starter dictionary for CountItemType and BallotMeasureSelection. 
     * Internal database names for the BallotMeasure Selections are 'Yes' and 'No'. There are no alternatives.
-    * Some common standard internal database names for CountItemTypes are 'absentee', 'early', 'election-day'provisional' and 'total'. You can look at the CountItemType table in the database to see the full list, and you can use any other name you like.
+    * Some common standard internal database names for CountItemTypes are 'absentee', 'early', 'election-day', 'provisional' and 'total'. You can look at the CountItemType table in the database to see the full list, and you can use any other name you like.
 ```
 cdf_element	cdf_internal_name	raw_identifier_value
 Election	General Election 2018-11-06	11/6/18
@@ -153,11 +187,11 @@ CountItemType	total	Total Votes
 CountItemType	total	total
 ```
 
-9. Add any existing content from `dictionary.txt` to the starter dictionary and dedupe. If the jurisdiction is brand new there won't be any existing contest. 
+ (8) Add any existing content from `dictionary.txt` to the starter dictionary and dedupe. If the jurisdiction is brand new there won't be any existing contest. 
 
-10. Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` . 
+ (9) Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` . 
 
-11. Run the JurisdictionPrepper method `add_sub_county_rus_from_multi_results_file(<directory>,<error>)` to add any reporting units in the results files in <directory>. 
+ (10) If your results file is precinct based instead of county based, run `add_sub_county_rus_from_multi_results_file(<directory>,<error>)` to add any reporting units in the results files in <directory>. E.g.: 
 ```
 >>> err = jp.add_sub_county_rus_from_multi_results_file('/Users/singer3/Documents/Temp/000_to-be-loaded',err)
 >>> err
@@ -170,23 +204,33 @@ These will be added as precincts, unless another reporting unit type is specifie
 {}
 ```
 
-12. Look at the newly added items in `ReportingUnit.txt` and `dictionary.txt`, and remove or revise as appropriate.
+ (11) Look at the newly added items in `ReportingUnit.txt` and `dictionary.txt`, and remove or revise as appropriate.
 
-13. If you want to add elements (other than ReportingUnits) in bulk from all results files in a directory (with `.ini` files in that same directory), use  `add_elements_from_multi_results_file(<list of elements>,<directory>, <error>)`. For example:
+ (12) If you want to add elements (other than ReportingUnits) in bulk from all results files in a directory (with `.ini` files in that same directory), use  `add_elements_from_multi_results_file(<list of elements>,<directory>, <error>)`. For example:
 ```
->>> err = jp.add_elements_from_multi_results_file(['Candidate','CandidateContest'],'/Users/singer3/Documents/Temp/000_to-be-loaded',err)
+>>> err = jp.add_elements_from_multi_results_file(['Candidate'],'/Users/singer3/Documents/Temp/000_to-be-loaded',err)
 >>> err
 {}
 ```
 Corresponding entries will be made in `dictionary.txt`, using the munged name for both the `cdf_internal_name` and the `raw_identifier_value`. Note:
-    * In every file enhanced this way, look for possible variant names (e.g., 'Fred S. Martin' and 'Fred Martin' for the same candidate in two different counties. If you find variations, pick an internal database name and put a line for each raw_identfier_value variation into `dictionary.txt`.
-    * Candidate: sometimes there are non-candidate lines in the file. Take a look at `Candidate.txt` to see if there are lines (such as undervotes) that you may not want included in your final results. Also look for BallotMeasureSelections you might not have noticed before and add them to `dictionary.txt`.
-    * CandidateContest: Look at the new `CandidateContest.txt` file. Many may be contests you do *not* want to add -- the contests you already have (such as congressional contests) that will have been added with the raw identifier name. Some may be BallotMeasureContests that do not belong in `CandidateContest.txt`. For any new CandidateContest you do want to keep you will need to add the corresponding line to `Office.txt`. 
-    * Open `dictionary.txt` and remove any lines corresponding to items removed in the bullet points above.
 
-14. Add any useful info about the jurisdiction (such as the sources for the data) to `remark.txt`.
+   * Candidate
+      * In every file enhanced this way, look for possible variant names (e.g., 'Fred S. Martin' and 'Fred Martin' for the same candidate in two different counties. If you find variations, pick an internal database name and put a line for each raw_identfier_value variation into `dictionary.txt`.
+      * Look for non-candidate lines in the file. Take a look at `Candidate.txt` to see if there are lines (such as undervotes) that you may not want included in your final results. 
+      * Look in `Candidate.txt` for BallotMeasureSelections you might not have noticed before. Remove these from `Candidate.txt` and revise their lines in `dictionary.txt`.   
+      * Our convention for internal names for candidates with quoted nicknames is to use single quotes. Make sure there are no double-quotes in the Name column in `Candidate.txt` and none in the cdf_internal_name column of `dictionary.txt`. E.g., use `Rosa Maria 'Rosy' Palomino`, not `Rosa Maria "Rosy" Palomino`. However, if your results file has `Rosa Maria "Rosy" Palomino`, you will need double-quotes in the raw_identifier column in `dictionary.txt`:
+      * Our convention for internal names for multiple-candidate tickets (e.g., 'Trump/Pence' is to use the full name of the top candidate, e.g., 'Donald J. Trump'). There should be a line in `dictionary.txt` for each variation used in the results files. E.g.:
+```
+cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	Donald J. Trump	Trump / Pence
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Rosa Maria 'Rosy' Palomino	Rosa Maria "Rosy" Palomino
+```
 
-15. Finally, if you will be munging primary elections, use the `add_primaries_to_candidate_contest()` and `jp.add_primaries_to_dict()` methods
+   * CandidateContest: Look at the new `CandidateContest.txt` file. Many may be contests you do *not* want to add -- the contests you already have (such as congressional contests) that will have been added with the raw identifier name. Some may be BallotMeasureContests that do not belong in `CandidateContest.txt`. For any new CandidateContest you do want to keep you will need to add the corresponding line to `Office.txt` (and the ElectionDistrict to `ReportingUnit.txt` if it is not already there). 
+    * You may want to remove from `dictionary.txt` any lines corresponding to items removed in the bullet points above.
+
+ (13) Finally, if you will be munging primary elections, and if you are confident that your `CandidateContest.txt`, `Party.txt` and associated lines in `dictionary.txt` are correct, use the `add_primaries_to_candidate_contest()` and `jp.add_primaries_to_dict()` methods
 ```
 >>> jp.add_primaries_to_candidate_contest()
 >>> jp.add_primaries_to_dict()
