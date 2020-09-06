@@ -1,0 +1,1716 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	AR House District 1 (Democratic Party)	State House District 1 (DEM)
+CandidateContest	AR House District 1 (Democratic Party)	State House District 1 - DEM
+CandidateContest	AR House District 2 (Democratic Party)	State House District 2 (DEM)
+CandidateContest	AR House District 2 (Democratic Party)	State House District 2 - DEM
+CandidateContest	AR House District 3 (Democratic Party)	State House District 3 (DEM)
+CandidateContest	AR House District 3 (Democratic Party)	State House District 3 - DEM
+CandidateContest	AR House District 4 (Democratic Party)	State House District 4 (DEM)
+CandidateContest	AR House District 4 (Democratic Party)	State House District 4 - DEM
+CandidateContest	AR House District 5 (Democratic Party)	State House District 5 (DEM)
+CandidateContest	AR House District 5 (Democratic Party)	State House District 5 - DEM
+CandidateContest	AR House District 6 (Democratic Party)	State House District 6 (DEM)
+CandidateContest	AR House District 6 (Democratic Party)	State House District 6 - DEM
+CandidateContest	AR House District 7 (Democratic Party)	State House District 7 (DEM)
+CandidateContest	AR House District 7 (Democratic Party)	State House District 7 - DEM
+CandidateContest	AR House District 8 (Democratic Party)	State House District 8 (DEM)
+CandidateContest	AR House District 8 (Democratic Party)	State House District 8 - DEM
+CandidateContest	AR House District 9 (Democratic Party)	State House District 9 (DEM)
+CandidateContest	AR House District 9 (Democratic Party)	State House District 9 - DEM
+CandidateContest	AR House District 10 (Democratic Party)	State House District 10 (DEM)
+CandidateContest	AR House District 10 (Democratic Party)	State House District 10 - DEM
+CandidateContest	AR House District 11 (Democratic Party)	State House District 11 (DEM)
+CandidateContest	AR House District 11 (Democratic Party)	State House District 11 - DEM
+CandidateContest	AR House District 12 (Democratic Party)	State House District 12 (DEM)
+CandidateContest	AR House District 12 (Democratic Party)	State House District 12 - DEM
+CandidateContest	AR House District 13 (Democratic Party)	State House District 13 (DEM)
+CandidateContest	AR House District 13 (Democratic Party)	State House District 13 - DEM
+CandidateContest	AR House District 14 (Democratic Party)	State House District 14 (DEM)
+CandidateContest	AR House District 14 (Democratic Party)	State House District 14 - DEM
+CandidateContest	AR House District 15 (Democratic Party)	State House District 15 (DEM)
+CandidateContest	AR House District 15 (Democratic Party)	State House District 15 - DEM
+CandidateContest	AR House District 16 (Democratic Party)	State House District 16 (DEM)
+CandidateContest	AR House District 16 (Democratic Party)	State House District 16 - DEM
+CandidateContest	AR House District 17 (Democratic Party)	State House District 17 (DEM)
+CandidateContest	AR House District 17 (Democratic Party)	State House District 17 - DEM
+CandidateContest	AR House District 18 (Democratic Party)	State House District 18 (DEM)
+CandidateContest	AR House District 18 (Democratic Party)	State House District 18 - DEM
+CandidateContest	AR House District 19 (Democratic Party)	State House District 19 (DEM)
+CandidateContest	AR House District 19 (Democratic Party)	State House District 19 - DEM
+CandidateContest	AR House District 20 (Democratic Party)	State House District 20 (DEM)
+CandidateContest	AR House District 20 (Democratic Party)	State House District 20 - DEM
+CandidateContest	AR House District 21 (Democratic Party)	State House District 21 (DEM)
+CandidateContest	AR House District 21 (Democratic Party)	State House District 21 - DEM
+CandidateContest	AR House District 22 (Democratic Party)	State House District 22 (DEM)
+CandidateContest	AR House District 22 (Democratic Party)	State House District 22 - DEM
+CandidateContest	AR House District 23 (Democratic Party)	State House District 23 (DEM)
+CandidateContest	AR House District 23 (Democratic Party)	State House District 23 - DEM
+CandidateContest	AR House District 24 (Democratic Party)	State House District 24 (DEM)
+CandidateContest	AR House District 24 (Democratic Party)	State House District 24 - DEM
+CandidateContest	AR House District 25 (Democratic Party)	State House District 25 (DEM)
+CandidateContest	AR House District 25 (Democratic Party)	State House District 25 - DEM
+CandidateContest	AR House District 26 (Democratic Party)	State House District 26 (DEM)
+CandidateContest	AR House District 26 (Democratic Party)	State House District 26 - DEM
+CandidateContest	AR House District 27 (Democratic Party)	State House District 27 (DEM)
+CandidateContest	AR House District 27 (Democratic Party)	State House District 27 - DEM
+CandidateContest	AR House District 28 (Democratic Party)	State House District 28 (DEM)
+CandidateContest	AR House District 28 (Democratic Party)	State House District 28 - DEM
+CandidateContest	AR House District 29 (Democratic Party)	State House District 29 (DEM)
+CandidateContest	AR House District 29 (Democratic Party)	State House District 29 - DEM
+CandidateContest	AR House District 30 (Democratic Party)	State House District 30 (DEM)
+CandidateContest	AR House District 30 (Democratic Party)	State House District 30 - DEM
+CandidateContest	AR House District 31 (Democratic Party)	State House District 31 (DEM)
+CandidateContest	AR House District 31 (Democratic Party)	State House District 31 - DEM
+CandidateContest	AR House District 32 (Democratic Party)	State House District 32 (DEM)
+CandidateContest	AR House District 32 (Democratic Party)	State House District 32 - DEM
+CandidateContest	AR House District 33 (Democratic Party)	State House District 33 (DEM)
+CandidateContest	AR House District 33 (Democratic Party)	State House District 33 - DEM
+CandidateContest	AR House District 34 (Democratic Party)	State House District 34 (DEM)
+CandidateContest	AR House District 34 (Democratic Party)	State House District 34 - DEM
+CandidateContest	AR House District 35 (Democratic Party)	State House District 35 (DEM)
+CandidateContest	AR House District 35 (Democratic Party)	State House District 35 - DEM
+CandidateContest	AR House District 36 (Democratic Party)	State House District 36 (DEM)
+CandidateContest	AR House District 36 (Democratic Party)	State House District 36 - DEM
+CandidateContest	AR House District 37 (Democratic Party)	State House District 37 (DEM)
+CandidateContest	AR House District 37 (Democratic Party)	State House District 37 - DEM
+CandidateContest	AR House District 38 (Democratic Party)	State House District 38 (DEM)
+CandidateContest	AR House District 38 (Democratic Party)	State House District 38 - DEM
+CandidateContest	AR House District 39 (Democratic Party)	State House District 39 (DEM)
+CandidateContest	AR House District 39 (Democratic Party)	State House District 39 - DEM
+CandidateContest	AR House District 40 (Democratic Party)	State House District 40 (DEM)
+CandidateContest	AR House District 40 (Democratic Party)	State House District 40 - DEM
+CandidateContest	AR House District 41 (Democratic Party)	State House District 41 (DEM)
+CandidateContest	AR House District 41 (Democratic Party)	State House District 41 - DEM
+CandidateContest	AR House District 42 (Democratic Party)	State House District 42 (DEM)
+CandidateContest	AR House District 42 (Democratic Party)	State House District 42 - DEM
+CandidateContest	AR House District 43 (Democratic Party)	State House District 43 (DEM)
+CandidateContest	AR House District 43 (Democratic Party)	State House District 43 - DEM
+CandidateContest	AR House District 44 (Democratic Party)	State House District 44 (DEM)
+CandidateContest	AR House District 44 (Democratic Party)	State House District 44 - DEM
+CandidateContest	AR House District 45 (Democratic Party)	State House District 45 (DEM)
+CandidateContest	AR House District 45 (Democratic Party)	State House District 45 - DEM
+CandidateContest	AR House District 46 (Democratic Party)	State House District 46 (DEM)
+CandidateContest	AR House District 46 (Democratic Party)	State House District 46 - DEM
+CandidateContest	AR House District 47 (Democratic Party)	State House District 47 (DEM)
+CandidateContest	AR House District 47 (Democratic Party)	State House District 47 - DEM
+CandidateContest	AR House District 48 (Democratic Party)	State House District 48 (DEM)
+CandidateContest	AR House District 48 (Democratic Party)	State House District 48 - DEM
+CandidateContest	AR House District 49 (Democratic Party)	State House District 49 (DEM)
+CandidateContest	AR House District 49 (Democratic Party)	State House District 49 - DEM
+CandidateContest	AR House District 50 (Democratic Party)	State House District 50 (DEM)
+CandidateContest	AR House District 50 (Democratic Party)	State House District 50 - DEM
+CandidateContest	AR House District 51 (Democratic Party)	State House District 51 (DEM)
+CandidateContest	AR House District 51 (Democratic Party)	State House District 51 - DEM
+CandidateContest	AR House District 52 (Democratic Party)	State House District 52 (DEM)
+CandidateContest	AR House District 52 (Democratic Party)	State House District 52 - DEM
+CandidateContest	AR House District 53 (Democratic Party)	State House District 53 (DEM)
+CandidateContest	AR House District 53 (Democratic Party)	State House District 53 - DEM
+CandidateContest	AR House District 54 (Democratic Party)	State House District 54 (DEM)
+CandidateContest	AR House District 54 (Democratic Party)	State House District 54 - DEM
+CandidateContest	AR House District 55 (Democratic Party)	State House District 55 (DEM)
+CandidateContest	AR House District 55 (Democratic Party)	State House District 55 - DEM
+CandidateContest	AR House District 56 (Democratic Party)	State House District 56 (DEM)
+CandidateContest	AR House District 56 (Democratic Party)	State House District 56 - DEM
+CandidateContest	AR House District 57 (Democratic Party)	State House District 57 (DEM)
+CandidateContest	AR House District 57 (Democratic Party)	State House District 57 - DEM
+CandidateContest	AR House District 58 (Democratic Party)	State House District 58 (DEM)
+CandidateContest	AR House District 58 (Democratic Party)	State House District 58 - DEM
+CandidateContest	AR House District 59 (Democratic Party)	State House District 59 (DEM)
+CandidateContest	AR House District 59 (Democratic Party)	State House District 59 - DEM
+CandidateContest	AR House District 60 (Democratic Party)	State House District 60 (DEM)
+CandidateContest	AR House District 60 (Democratic Party)	State House District 60 - DEM
+CandidateContest	AR House District 61 (Democratic Party)	State House District 61 (DEM)
+CandidateContest	AR House District 61 (Democratic Party)	State House District 61 - DEM
+CandidateContest	AR House District 62 (Democratic Party)	State House District 62 (DEM)
+CandidateContest	AR House District 62 (Democratic Party)	State House District 62 - DEM
+CandidateContest	AR House District 63 (Democratic Party)	State House District 63 (DEM)
+CandidateContest	AR House District 63 (Democratic Party)	State House District 63 - DEM
+CandidateContest	AR House District 64 (Democratic Party)	State House District 64 (DEM)
+CandidateContest	AR House District 64 (Democratic Party)	State House District 64 - DEM
+CandidateContest	AR House District 65 (Democratic Party)	State House District 65 (DEM)
+CandidateContest	AR House District 65 (Democratic Party)	State House District 65 - DEM
+CandidateContest	AR House District 66 (Democratic Party)	State House District 66 (DEM)
+CandidateContest	AR House District 66 (Democratic Party)	State House District 66 - DEM
+CandidateContest	AR House District 67 (Democratic Party)	State House District 67 (DEM)
+CandidateContest	AR House District 67 (Democratic Party)	State House District 67 - DEM
+CandidateContest	AR House District 68 (Democratic Party)	State House District 68 (DEM)
+CandidateContest	AR House District 68 (Democratic Party)	State House District 68 - DEM
+CandidateContest	AR House District 69 (Democratic Party)	State House District 69 (DEM)
+CandidateContest	AR House District 69 (Democratic Party)	State House District 69 - DEM
+CandidateContest	AR House District 70 (Democratic Party)	State House District 70 (DEM)
+CandidateContest	AR House District 70 (Democratic Party)	State House District 70 - DEM
+CandidateContest	AR House District 71 (Democratic Party)	State House District 71 (DEM)
+CandidateContest	AR House District 71 (Democratic Party)	State House District 71 - DEM
+CandidateContest	AR House District 72 (Democratic Party)	State House District 72 (DEM)
+CandidateContest	AR House District 72 (Democratic Party)	State House District 72 - DEM
+CandidateContest	AR House District 73 (Democratic Party)	State House District 73 (DEM)
+CandidateContest	AR House District 73 (Democratic Party)	State House District 73 - DEM
+CandidateContest	AR House District 74 (Democratic Party)	State House District 74 (DEM)
+CandidateContest	AR House District 74 (Democratic Party)	State House District 74 - DEM
+CandidateContest	AR House District 75 (Democratic Party)	State House District 75 (DEM)
+CandidateContest	AR House District 75 (Democratic Party)	State House District 75 - DEM
+CandidateContest	AR House District 76 (Democratic Party)	State House District 76 (DEM)
+CandidateContest	AR House District 76 (Democratic Party)	State House District 76 - DEM
+CandidateContest	AR House District 77 (Democratic Party)	State House District 77 (DEM)
+CandidateContest	AR House District 77 (Democratic Party)	State House District 77 - DEM
+CandidateContest	AR House District 78 (Democratic Party)	State House District 78 (DEM)
+CandidateContest	AR House District 78 (Democratic Party)	State House District 78 - DEM
+CandidateContest	AR House District 79 (Democratic Party)	State House District 79 (DEM)
+CandidateContest	AR House District 79 (Democratic Party)	State House District 79 - DEM
+CandidateContest	AR House District 80 (Democratic Party)	State House District 80 (DEM)
+CandidateContest	AR House District 80 (Democratic Party)	State House District 80 - DEM
+CandidateContest	AR House District 81 (Democratic Party)	State House District 81 (DEM)
+CandidateContest	AR House District 81 (Democratic Party)	State House District 81 - DEM
+CandidateContest	AR House District 82 (Democratic Party)	State House District 82 (DEM)
+CandidateContest	AR House District 82 (Democratic Party)	State House District 82 - DEM
+CandidateContest	AR House District 83 (Democratic Party)	State House District 83 (DEM)
+CandidateContest	AR House District 83 (Democratic Party)	State House District 83 - DEM
+CandidateContest	AR House District 84 (Democratic Party)	State House District 84 (DEM)
+CandidateContest	AR House District 84 (Democratic Party)	State House District 84 - DEM
+CandidateContest	AR House District 85 (Democratic Party)	State House District 85 (DEM)
+CandidateContest	AR House District 85 (Democratic Party)	State House District 85 - DEM
+CandidateContest	AR House District 86 (Democratic Party)	State House District 86 (DEM)
+CandidateContest	AR House District 86 (Democratic Party)	State House District 86 - DEM
+CandidateContest	AR House District 87 (Democratic Party)	State House District 87 (DEM)
+CandidateContest	AR House District 87 (Democratic Party)	State House District 87 - DEM
+CandidateContest	AR House District 88 (Democratic Party)	State House District 88 (DEM)
+CandidateContest	AR House District 88 (Democratic Party)	State House District 88 - DEM
+CandidateContest	AR House District 89 (Democratic Party)	State House District 89 (DEM)
+CandidateContest	AR House District 89 (Democratic Party)	State House District 89 - DEM
+CandidateContest	AR House District 90 (Democratic Party)	State House District 90 (DEM)
+CandidateContest	AR House District 90 (Democratic Party)	State House District 90 - DEM
+CandidateContest	AR House District 91 (Democratic Party)	State House District 91 (DEM)
+CandidateContest	AR House District 91 (Democratic Party)	State House District 91 - DEM
+CandidateContest	AR House District 92 (Democratic Party)	State House District 92 (DEM)
+CandidateContest	AR House District 92 (Democratic Party)	State House District 92 - DEM
+CandidateContest	AR House District 93 (Democratic Party)	State House District 93 (DEM)
+CandidateContest	AR House District 93 (Democratic Party)	State House District 93 - DEM
+CandidateContest	AR House District 94 (Democratic Party)	State House District 94 (DEM)
+CandidateContest	AR House District 94 (Democratic Party)	State House District 94 - DEM
+CandidateContest	AR House District 95 (Democratic Party)	State House District 95 (DEM)
+CandidateContest	AR House District 95 (Democratic Party)	State House District 95 - DEM
+CandidateContest	AR House District 96 (Democratic Party)	State House District 96 (DEM)
+CandidateContest	AR House District 96 (Democratic Party)	State House District 96 - DEM
+CandidateContest	AR House District 97 (Democratic Party)	State House District 97 (DEM)
+CandidateContest	AR House District 97 (Democratic Party)	State House District 97 - DEM
+CandidateContest	AR House District 98 (Democratic Party)	State House District 98 (DEM)
+CandidateContest	AR House District 98 (Democratic Party)	State House District 98 - DEM
+CandidateContest	AR House District 99 (Democratic Party)	State House District 99 (DEM)
+CandidateContest	AR House District 99 (Democratic Party)	State House District 99 - DEM
+CandidateContest	AR House District 100 (Democratic Party)	State House District 100 (DEM)
+CandidateContest	AR House District 100 (Democratic Party)	State House District 100 - DEM
+CandidateContest	AR Senate District 1 (Democratic Party)	State Senate District 1 (DEM)
+CandidateContest	AR Senate District 1 (Democratic Party)	State Senate District 1 - DEM
+CandidateContest	AR Senate District 2 (Democratic Party)	State Senate District 2 (DEM)
+CandidateContest	AR Senate District 2 (Democratic Party)	State Senate District 2 - DEM
+CandidateContest	AR Senate District 3 (Democratic Party)	State Senate District 3 (DEM)
+CandidateContest	AR Senate District 3 (Democratic Party)	State Senate District 3 - DEM
+CandidateContest	AR Senate District 4 (Democratic Party)	State Senate District 4 (DEM)
+CandidateContest	AR Senate District 4 (Democratic Party)	State Senate District 4 - DEM
+CandidateContest	AR Senate District 5 (Democratic Party)	State Senate District 5 (DEM)
+CandidateContest	AR Senate District 5 (Democratic Party)	State Senate District 5 - DEM
+CandidateContest	AR Senate District 6 (Democratic Party)	State Senate District 6 (DEM)
+CandidateContest	AR Senate District 6 (Democratic Party)	State Senate District 6 - DEM
+CandidateContest	AR Senate District 7 (Democratic Party)	State Senate District 7 (DEM)
+CandidateContest	AR Senate District 7 (Democratic Party)	State Senate District 7 - DEM
+CandidateContest	AR Senate District 8 (Democratic Party)	State Senate District 8 (DEM)
+CandidateContest	AR Senate District 8 (Democratic Party)	State Senate District 8 - DEM
+CandidateContest	AR Senate District 9 (Democratic Party)	State Senate District 9 (DEM)
+CandidateContest	AR Senate District 9 (Democratic Party)	State Senate District 9 - DEM
+CandidateContest	AR Senate District 10 (Democratic Party)	State Senate District 10 (DEM)
+CandidateContest	AR Senate District 10 (Democratic Party)	State Senate District 10 - DEM
+CandidateContest	AR Senate District 11 (Democratic Party)	State Senate District 11 (DEM)
+CandidateContest	AR Senate District 11 (Democratic Party)	State Senate District 11 - DEM
+CandidateContest	AR Senate District 12 (Democratic Party)	State Senate District 12 (DEM)
+CandidateContest	AR Senate District 12 (Democratic Party)	State Senate District 12 - DEM
+CandidateContest	AR Senate District 13 (Democratic Party)	State Senate District 13 (DEM)
+CandidateContest	AR Senate District 13 (Democratic Party)	State Senate District 13 - DEM
+CandidateContest	AR Senate District 14 (Democratic Party)	State Senate District 14 (DEM)
+CandidateContest	AR Senate District 14 (Democratic Party)	State Senate District 14 - DEM
+CandidateContest	AR Senate District 15 (Democratic Party)	State Senate District 15 (DEM)
+CandidateContest	AR Senate District 15 (Democratic Party)	State Senate District 15 - DEM
+CandidateContest	AR Senate District 16 (Democratic Party)	State Senate District 16 (DEM)
+CandidateContest	AR Senate District 16 (Democratic Party)	State Senate District 16 - DEM
+CandidateContest	AR Senate District 17 (Democratic Party)	State Senate District 17 (DEM)
+CandidateContest	AR Senate District 17 (Democratic Party)	State Senate District 17 - DEM
+CandidateContest	AR Senate District 18 (Democratic Party)	State Senate District 18 (DEM)
+CandidateContest	AR Senate District 18 (Democratic Party)	State Senate District 18 - DEM
+CandidateContest	AR Senate District 19 (Democratic Party)	State Senate District 19 (DEM)
+CandidateContest	AR Senate District 19 (Democratic Party)	State Senate District 19 - DEM
+CandidateContest	AR Senate District 20 (Democratic Party)	State Senate District 20 (DEM)
+CandidateContest	AR Senate District 20 (Democratic Party)	State Senate District 20 - DEM
+CandidateContest	AR Senate District 21 (Democratic Party)	State Senate District 21 (DEM)
+CandidateContest	AR Senate District 21 (Democratic Party)	State Senate District 21 - DEM
+CandidateContest	AR Senate District 22 (Democratic Party)	State Senate District 22 (DEM)
+CandidateContest	AR Senate District 22 (Democratic Party)	State Senate District 22 - DEM
+CandidateContest	AR Senate District 23 (Democratic Party)	State Senate District 23 (DEM)
+CandidateContest	AR Senate District 23 (Democratic Party)	State Senate District 23 - DEM
+CandidateContest	AR Senate District 24 (Democratic Party)	State Senate District 24 (DEM)
+CandidateContest	AR Senate District 24 (Democratic Party)	State Senate District 24 - DEM
+CandidateContest	AR Senate District 25 (Democratic Party)	State Senate District 25 (DEM)
+CandidateContest	AR Senate District 25 (Democratic Party)	State Senate District 25 - DEM
+CandidateContest	AR Senate District 26 (Democratic Party)	State Senate District 26 (DEM)
+CandidateContest	AR Senate District 26 (Democratic Party)	State Senate District 26 - DEM
+CandidateContest	AR Senate District 27 (Democratic Party)	State Senate District 27 (DEM)
+CandidateContest	AR Senate District 27 (Democratic Party)	State Senate District 27 - DEM
+CandidateContest	AR Senate District 28 (Democratic Party)	State Senate District 28 (DEM)
+CandidateContest	AR Senate District 28 (Democratic Party)	State Senate District 28 - DEM
+CandidateContest	AR Senate District 29 (Democratic Party)	State Senate District 29 (DEM)
+CandidateContest	AR Senate District 29 (Democratic Party)	State Senate District 29 - DEM
+CandidateContest	AR Senate District 30 (Democratic Party)	State Senate District 30 (DEM)
+CandidateContest	AR Senate District 30 (Democratic Party)	State Senate District 30 - DEM
+CandidateContest	AR Senate District 31 (Democratic Party)	State Senate District 31 (DEM)
+CandidateContest	AR Senate District 31 (Democratic Party)	State Senate District 31 - DEM
+CandidateContest	AR Senate District 32 (Democratic Party)	State Senate District 32 (DEM)
+CandidateContest	AR Senate District 32 (Democratic Party)	State Senate District 32 - DEM
+CandidateContest	AR Senate District 33 (Democratic Party)	State Senate District 33 (DEM)
+CandidateContest	AR Senate District 33 (Democratic Party)	State Senate District 33 - DEM
+CandidateContest	AR Senate District 34 (Democratic Party)	State Senate District 34 (DEM)
+CandidateContest	AR Senate District 34 (Democratic Party)	State Senate District 34 - DEM
+CandidateContest	AR Senate District 35 (Democratic Party)	State Senate District 35 (DEM)
+CandidateContest	AR Senate District 35 (Democratic Party)	State Senate District 35 - DEM
+CandidateContest	US House AR District 1 (Democratic Party)	U.S. Congress District 1
+CandidateContest	US House AR District 2 (Democratic Party)	U.S. Congress District 2
+CandidateContest	US House AR District 3 (Democratic Party)	U.S. Congress District 3
+CandidateContest	US House AR District 4 (Democratic Party)	U.S. Congress District 4
+CandidateContest	AR House District 1 (Republican Party)	State House District 1 (REP)
+CandidateContest	AR House District 1 (Republican Party)	State House District 1 - REP
+CandidateContest	AR House District 2 (Republican Party)	State House District 2 (REP)
+CandidateContest	AR House District 2 (Republican Party)	State House District 2 - REP
+CandidateContest	AR House District 3 (Republican Party)	State House District 3 (REP)
+CandidateContest	AR House District 3 (Republican Party)	State House District 3 - REP
+CandidateContest	AR House District 4 (Republican Party)	State House District 4 (REP)
+CandidateContest	AR House District 4 (Republican Party)	State House District 4 - REP
+CandidateContest	AR House District 5 (Republican Party)	State House District 5 (REP)
+CandidateContest	AR House District 5 (Republican Party)	State House District 5 - REP
+CandidateContest	AR House District 6 (Republican Party)	State House District 6 (REP)
+CandidateContest	AR House District 6 (Republican Party)	State House District 6 - REP
+CandidateContest	AR House District 7 (Republican Party)	State House District 7 (REP)
+CandidateContest	AR House District 7 (Republican Party)	State House District 7 - REP
+CandidateContest	AR House District 8 (Republican Party)	State House District 8 (REP)
+CandidateContest	AR House District 8 (Republican Party)	State House District 8 - REP
+CandidateContest	AR House District 9 (Republican Party)	State House District 9 (REP)
+CandidateContest	AR House District 9 (Republican Party)	State House District 9 - REP
+CandidateContest	AR House District 10 (Republican Party)	State House District 10 (REP)
+CandidateContest	AR House District 10 (Republican Party)	State House District 10 - REP
+CandidateContest	AR House District 11 (Republican Party)	State House District 11 (REP)
+CandidateContest	AR House District 11 (Republican Party)	State House District 11 - REP
+CandidateContest	AR House District 12 (Republican Party)	State House District 12 (REP)
+CandidateContest	AR House District 12 (Republican Party)	State House District 12 - REP
+CandidateContest	AR House District 13 (Republican Party)	State House District 13 (REP)
+CandidateContest	AR House District 13 (Republican Party)	State House District 13 - REP
+CandidateContest	AR House District 14 (Republican Party)	State House District 14 (REP)
+CandidateContest	AR House District 14 (Republican Party)	State House District 14 - REP
+CandidateContest	AR House District 15 (Republican Party)	State House District 15 (REP)
+CandidateContest	AR House District 15 (Republican Party)	State House District 15 - REP
+CandidateContest	AR House District 16 (Republican Party)	State House District 16 (REP)
+CandidateContest	AR House District 16 (Republican Party)	State House District 16 - REP
+CandidateContest	AR House District 17 (Republican Party)	State House District 17 (REP)
+CandidateContest	AR House District 17 (Republican Party)	State House District 17 - REP
+CandidateContest	AR House District 18 (Republican Party)	State House District 18 (REP)
+CandidateContest	AR House District 18 (Republican Party)	State House District 18 - REP
+CandidateContest	AR House District 19 (Republican Party)	State House District 19 (REP)
+CandidateContest	AR House District 19 (Republican Party)	State House District 19 - REP
+CandidateContest	AR House District 20 (Republican Party)	State House District 20 (REP)
+CandidateContest	AR House District 20 (Republican Party)	State House District 20 - REP
+CandidateContest	AR House District 21 (Republican Party)	State House District 21 (REP)
+CandidateContest	AR House District 21 (Republican Party)	State House District 21 - REP
+CandidateContest	AR House District 22 (Republican Party)	State House District 22 (REP)
+CandidateContest	AR House District 22 (Republican Party)	State House District 22 - REP
+CandidateContest	AR House District 23 (Republican Party)	State House District 23 (REP)
+CandidateContest	AR House District 23 (Republican Party)	State House District 23 - REP
+CandidateContest	AR House District 24 (Republican Party)	State House District 24 (REP)
+CandidateContest	AR House District 24 (Republican Party)	State House District 24 - REP
+CandidateContest	AR House District 25 (Republican Party)	State House District 25 (REP)
+CandidateContest	AR House District 25 (Republican Party)	State House District 25 - REP
+CandidateContest	AR House District 26 (Republican Party)	State House District 26 (REP)
+CandidateContest	AR House District 26 (Republican Party)	State House District 26 - REP
+CandidateContest	AR House District 27 (Republican Party)	State House District 27 (REP)
+CandidateContest	AR House District 27 (Republican Party)	State House District 27 - REP
+CandidateContest	AR House District 28 (Republican Party)	State House District 28 (REP)
+CandidateContest	AR House District 28 (Republican Party)	State House District 28 - REP
+CandidateContest	AR House District 29 (Republican Party)	State House District 29 (REP)
+CandidateContest	AR House District 29 (Republican Party)	State House District 29 - REP
+CandidateContest	AR House District 30 (Republican Party)	State House District 30 (REP)
+CandidateContest	AR House District 30 (Republican Party)	State House District 30 - REP
+CandidateContest	AR House District 31 (Republican Party)	State House District 31 (REP)
+CandidateContest	AR House District 31 (Republican Party)	State House District 31 - REP
+CandidateContest	AR House District 32 (Republican Party)	State House District 32 (REP)
+CandidateContest	AR House District 32 (Republican Party)	State House District 32 - REP
+CandidateContest	AR House District 33 (Republican Party)	State House District 33 (REP)
+CandidateContest	AR House District 33 (Republican Party)	State House District 33 - REP
+CandidateContest	AR House District 34 (Republican Party)	State House District 34 (REP)
+CandidateContest	AR House District 34 (Republican Party)	State House District 34 - REP
+CandidateContest	AR House District 35 (Republican Party)	State House District 35 (REP)
+CandidateContest	AR House District 35 (Republican Party)	State House District 35 - REP
+CandidateContest	AR House District 36 (Republican Party)	State House District 36 (REP)
+CandidateContest	AR House District 36 (Republican Party)	State House District 36 - REP
+CandidateContest	AR House District 37 (Republican Party)	State House District 37 (REP)
+CandidateContest	AR House District 37 (Republican Party)	State House District 37 - REP
+CandidateContest	AR House District 38 (Republican Party)	State House District 38 (REP)
+CandidateContest	AR House District 38 (Republican Party)	State House District 38 - REP
+CandidateContest	AR House District 39 (Republican Party)	State House District 39 (REP)
+CandidateContest	AR House District 39 (Republican Party)	State House District 39 - REP
+CandidateContest	AR House District 40 (Republican Party)	State House District 40 (REP)
+CandidateContest	AR House District 40 (Republican Party)	State House District 40 - REP
+CandidateContest	AR House District 41 (Republican Party)	State House District 41 (REP)
+CandidateContest	AR House District 41 (Republican Party)	State House District 41 - REP
+CandidateContest	AR House District 42 (Republican Party)	State House District 42 (REP)
+CandidateContest	AR House District 42 (Republican Party)	State House District 42 - REP
+CandidateContest	AR House District 43 (Republican Party)	State House District 43 (REP)
+CandidateContest	AR House District 43 (Republican Party)	State House District 43 - REP
+CandidateContest	AR House District 44 (Republican Party)	State House District 44 (REP)
+CandidateContest	AR House District 44 (Republican Party)	State House District 44 - REP
+CandidateContest	AR House District 45 (Republican Party)	State House District 45 (REP)
+CandidateContest	AR House District 45 (Republican Party)	State House District 45 - REP
+CandidateContest	AR House District 46 (Republican Party)	State House District 46 (REP)
+CandidateContest	AR House District 46 (Republican Party)	State House District 46 - REP
+CandidateContest	AR House District 47 (Republican Party)	State House District 47 (REP)
+CandidateContest	AR House District 47 (Republican Party)	State House District 47 - REP
+CandidateContest	AR House District 48 (Republican Party)	State House District 48 (REP)
+CandidateContest	AR House District 48 (Republican Party)	State House District 48 - REP
+CandidateContest	AR House District 49 (Republican Party)	State House District 49 (REP)
+CandidateContest	AR House District 49 (Republican Party)	State House District 49 - REP
+CandidateContest	AR House District 50 (Republican Party)	State House District 50 (REP)
+CandidateContest	AR House District 50 (Republican Party)	State House District 50 - REP
+CandidateContest	AR House District 51 (Republican Party)	State House District 51 (REP)
+CandidateContest	AR House District 51 (Republican Party)	State House District 51 - REP
+CandidateContest	AR House District 52 (Republican Party)	State House District 52 (REP)
+CandidateContest	AR House District 52 (Republican Party)	State House District 52 - REP
+CandidateContest	AR House District 53 (Republican Party)	State House District 53 (REP)
+CandidateContest	AR House District 53 (Republican Party)	State House District 53 - REP
+CandidateContest	AR House District 54 (Republican Party)	State House District 54 (REP)
+CandidateContest	AR House District 54 (Republican Party)	State House District 54 - REP
+CandidateContest	AR House District 55 (Republican Party)	State House District 55 (REP)
+CandidateContest	AR House District 55 (Republican Party)	State House District 55 - REP
+CandidateContest	AR House District 56 (Republican Party)	State House District 56 (REP)
+CandidateContest	AR House District 56 (Republican Party)	State House District 56 - REP
+CandidateContest	AR House District 57 (Republican Party)	State House District 57 (REP)
+CandidateContest	AR House District 57 (Republican Party)	State House District 57 - REP
+CandidateContest	AR House District 58 (Republican Party)	State House District 58 (REP)
+CandidateContest	AR House District 58 (Republican Party)	State House District 58 - REP
+CandidateContest	AR House District 59 (Republican Party)	State House District 59 (REP)
+CandidateContest	AR House District 59 (Republican Party)	State House District 59 - REP
+CandidateContest	AR House District 60 (Republican Party)	State House District 60 (REP)
+CandidateContest	AR House District 60 (Republican Party)	State House District 60 - REP
+CandidateContest	AR House District 61 (Republican Party)	State House District 61 (REP)
+CandidateContest	AR House District 61 (Republican Party)	State House District 61 - REP
+CandidateContest	AR House District 62 (Republican Party)	State House District 62 (REP)
+CandidateContest	AR House District 62 (Republican Party)	State House District 62 - REP
+CandidateContest	AR House District 63 (Republican Party)	State House District 63 (REP)
+CandidateContest	AR House District 63 (Republican Party)	State House District 63 - REP
+CandidateContest	AR House District 64 (Republican Party)	State House District 64 (REP)
+CandidateContest	AR House District 64 (Republican Party)	State House District 64 - REP
+CandidateContest	AR House District 65 (Republican Party)	State House District 65 (REP)
+CandidateContest	AR House District 65 (Republican Party)	State House District 65 - REP
+CandidateContest	AR House District 66 (Republican Party)	State House District 66 (REP)
+CandidateContest	AR House District 66 (Republican Party)	State House District 66 - REP
+CandidateContest	AR House District 67 (Republican Party)	State House District 67 (REP)
+CandidateContest	AR House District 67 (Republican Party)	State House District 67 - REP
+CandidateContest	AR House District 68 (Republican Party)	State House District 68 (REP)
+CandidateContest	AR House District 68 (Republican Party)	State House District 68 - REP
+CandidateContest	AR House District 69 (Republican Party)	State House District 69 (REP)
+CandidateContest	AR House District 69 (Republican Party)	State House District 69 - REP
+CandidateContest	AR House District 70 (Republican Party)	State House District 70 (REP)
+CandidateContest	AR House District 70 (Republican Party)	State House District 70 - REP
+CandidateContest	AR House District 71 (Republican Party)	State House District 71 (REP)
+CandidateContest	AR House District 71 (Republican Party)	State House District 71 - REP
+CandidateContest	AR House District 72 (Republican Party)	State House District 72 (REP)
+CandidateContest	AR House District 72 (Republican Party)	State House District 72 - REP
+CandidateContest	AR House District 73 (Republican Party)	State House District 73 (REP)
+CandidateContest	AR House District 73 (Republican Party)	State House District 73 - REP
+CandidateContest	AR House District 74 (Republican Party)	State House District 74 (REP)
+CandidateContest	AR House District 74 (Republican Party)	State House District 74 - REP
+CandidateContest	AR House District 75 (Republican Party)	State House District 75 (REP)
+CandidateContest	AR House District 75 (Republican Party)	State House District 75 - REP
+CandidateContest	AR House District 76 (Republican Party)	State House District 76 (REP)
+CandidateContest	AR House District 76 (Republican Party)	State House District 76 - REP
+CandidateContest	AR House District 77 (Republican Party)	State House District 77 (REP)
+CandidateContest	AR House District 77 (Republican Party)	State House District 77 - REP
+CandidateContest	AR House District 78 (Republican Party)	State House District 78 (REP)
+CandidateContest	AR House District 78 (Republican Party)	State House District 78 - REP
+CandidateContest	AR House District 79 (Republican Party)	State House District 79 (REP)
+CandidateContest	AR House District 79 (Republican Party)	State House District 79 - REP
+CandidateContest	AR House District 80 (Republican Party)	State House District 80 (REP)
+CandidateContest	AR House District 80 (Republican Party)	State House District 80 - REP
+CandidateContest	AR House District 81 (Republican Party)	State House District 81 (REP)
+CandidateContest	AR House District 81 (Republican Party)	State House District 81 - REP
+CandidateContest	AR House District 82 (Republican Party)	State House District 82 (REP)
+CandidateContest	AR House District 82 (Republican Party)	State House District 82 - REP
+CandidateContest	AR House District 83 (Republican Party)	State House District 83 (REP)
+CandidateContest	AR House District 83 (Republican Party)	State House District 83 - REP
+CandidateContest	AR House District 84 (Republican Party)	State House District 84 (REP)
+CandidateContest	AR House District 84 (Republican Party)	State House District 84 - REP
+CandidateContest	AR House District 85 (Republican Party)	State House District 85 (REP)
+CandidateContest	AR House District 85 (Republican Party)	State House District 85 - REP
+CandidateContest	AR House District 86 (Republican Party)	State House District 86 (REP)
+CandidateContest	AR House District 86 (Republican Party)	State House District 86 - REP
+CandidateContest	AR House District 87 (Republican Party)	State House District 87 (REP)
+CandidateContest	AR House District 87 (Republican Party)	State House District 87 - REP
+CandidateContest	AR House District 88 (Republican Party)	State House District 88 (REP)
+CandidateContest	AR House District 88 (Republican Party)	State House District 88 - REP
+CandidateContest	AR House District 89 (Republican Party)	State House District 89 (REP)
+CandidateContest	AR House District 89 (Republican Party)	State House District 89 - REP
+CandidateContest	AR House District 90 (Republican Party)	State House District 90 (REP)
+CandidateContest	AR House District 90 (Republican Party)	State House District 90 - REP
+CandidateContest	AR House District 91 (Republican Party)	State House District 91 (REP)
+CandidateContest	AR House District 91 (Republican Party)	State House District 91 - REP
+CandidateContest	AR House District 92 (Republican Party)	State House District 92 (REP)
+CandidateContest	AR House District 92 (Republican Party)	State House District 92 - REP
+CandidateContest	AR House District 93 (Republican Party)	State House District 93 (REP)
+CandidateContest	AR House District 93 (Republican Party)	State House District 93 - REP
+CandidateContest	AR House District 94 (Republican Party)	State House District 94 (REP)
+CandidateContest	AR House District 94 (Republican Party)	State House District 94 - REP
+CandidateContest	AR House District 95 (Republican Party)	State House District 95 (REP)
+CandidateContest	AR House District 95 (Republican Party)	State House District 95 - REP
+CandidateContest	AR House District 96 (Republican Party)	State House District 96 (REP)
+CandidateContest	AR House District 96 (Republican Party)	State House District 96 - REP
+CandidateContest	AR House District 97 (Republican Party)	State House District 97 (REP)
+CandidateContest	AR House District 97 (Republican Party)	State House District 97 - REP
+CandidateContest	AR House District 98 (Republican Party)	State House District 98 (REP)
+CandidateContest	AR House District 98 (Republican Party)	State House District 98 - REP
+CandidateContest	AR House District 99 (Republican Party)	State House District 99 (REP)
+CandidateContest	AR House District 99 (Republican Party)	State House District 99 - REP
+CandidateContest	AR House District 100 (Republican Party)	State House District 100 (REP)
+CandidateContest	AR House District 100 (Republican Party)	State House District 100 - REP
+CandidateContest	AR Senate District 1 (Republican Party)	State Senate District 1 (REP)
+CandidateContest	AR Senate District 1 (Republican Party)	State Senate District 1 - REP
+CandidateContest	AR Senate District 2 (Republican Party)	State Senate District 2 (REP)
+CandidateContest	AR Senate District 2 (Republican Party)	State Senate District 2 - REP
+CandidateContest	AR Senate District 3 (Republican Party)	State Senate District 3 (REP)
+CandidateContest	AR Senate District 3 (Republican Party)	State Senate District 3 - REP
+CandidateContest	AR Senate District 4 (Republican Party)	State Senate District 4 (REP)
+CandidateContest	AR Senate District 4 (Republican Party)	State Senate District 4 - REP
+CandidateContest	AR Senate District 5 (Republican Party)	State Senate District 5 (REP)
+CandidateContest	AR Senate District 5 (Republican Party)	State Senate District 5 - REP
+CandidateContest	AR Senate District 6 (Republican Party)	State Senate District 6 (REP)
+CandidateContest	AR Senate District 6 (Republican Party)	State Senate District 6 - REP
+CandidateContest	AR Senate District 7 (Republican Party)	State Senate District 7 (REP)
+CandidateContest	AR Senate District 7 (Republican Party)	State Senate District 7 - REP
+CandidateContest	AR Senate District 8 (Republican Party)	State Senate District 8 (REP)
+CandidateContest	AR Senate District 8 (Republican Party)	State Senate District 8 - REP
+CandidateContest	AR Senate District 9 (Republican Party)	State Senate District 9 (REP)
+CandidateContest	AR Senate District 9 (Republican Party)	State Senate District 9 - REP
+CandidateContest	AR Senate District 10 (Republican Party)	State Senate District 10 (REP)
+CandidateContest	AR Senate District 10 (Republican Party)	State Senate District 10 - REP
+CandidateContest	AR Senate District 11 (Republican Party)	State Senate District 11 (REP)
+CandidateContest	AR Senate District 11 (Republican Party)	State Senate District 11 - REP
+CandidateContest	AR Senate District 12 (Republican Party)	State Senate District 12 (REP)
+CandidateContest	AR Senate District 12 (Republican Party)	State Senate District 12 - REP
+CandidateContest	AR Senate District 13 (Republican Party)	State Senate District 13 (REP)
+CandidateContest	AR Senate District 13 (Republican Party)	State Senate District 13 - REP
+CandidateContest	AR Senate District 14 (Republican Party)	State Senate District 14 (REP)
+CandidateContest	AR Senate District 14 (Republican Party)	State Senate District 14 - REP
+CandidateContest	AR Senate District 15 (Republican Party)	State Senate District 15 (REP)
+CandidateContest	AR Senate District 15 (Republican Party)	State Senate District 15 - REP
+CandidateContest	AR Senate District 16 (Republican Party)	State Senate District 16 (REP)
+CandidateContest	AR Senate District 16 (Republican Party)	State Senate District 16 - REP
+CandidateContest	AR Senate District 17 (Republican Party)	State Senate District 17 (REP)
+CandidateContest	AR Senate District 17 (Republican Party)	State Senate District 17 - REP
+CandidateContest	AR Senate District 18 (Republican Party)	State Senate District 18 (REP)
+CandidateContest	AR Senate District 18 (Republican Party)	State Senate District 18 - REP
+CandidateContest	AR Senate District 19 (Republican Party)	State Senate District 19 (REP)
+CandidateContest	AR Senate District 19 (Republican Party)	State Senate District 19 - REP
+CandidateContest	AR Senate District 20 (Republican Party)	State Senate District 20 (REP)
+CandidateContest	AR Senate District 20 (Republican Party)	State Senate District 20 - REP
+CandidateContest	AR Senate District 21 (Republican Party)	State Senate District 21 (REP)
+CandidateContest	AR Senate District 21 (Republican Party)	State Senate District 21 - REP
+CandidateContest	AR Senate District 22 (Republican Party)	State Senate District 22 (REP)
+CandidateContest	AR Senate District 22 (Republican Party)	State Senate District 22 - REP
+CandidateContest	AR Senate District 23 (Republican Party)	State Senate District 23 (REP)
+CandidateContest	AR Senate District 23 (Republican Party)	State Senate District 23 - REP
+CandidateContest	AR Senate District 24 (Republican Party)	State Senate District 24 (REP)
+CandidateContest	AR Senate District 24 (Republican Party)	State Senate District 24 - REP
+CandidateContest	AR Senate District 25 (Republican Party)	State Senate District 25 (REP)
+CandidateContest	AR Senate District 25 (Republican Party)	State Senate District 25 - REP
+CandidateContest	AR Senate District 26 (Republican Party)	State Senate District 26 (REP)
+CandidateContest	AR Senate District 26 (Republican Party)	State Senate District 26 - REP
+CandidateContest	AR Senate District 27 (Republican Party)	State Senate District 27 (REP)
+CandidateContest	AR Senate District 27 (Republican Party)	State Senate District 27 - REP
+CandidateContest	AR Senate District 28 (Republican Party)	State Senate District 28 (REP)
+CandidateContest	AR Senate District 28 (Republican Party)	State Senate District 28 - REP
+CandidateContest	AR Senate District 29 (Republican Party)	State Senate District 29 (REP)
+CandidateContest	AR Senate District 29 (Republican Party)	State Senate District 29 - REP
+CandidateContest	AR Senate District 30 (Republican Party)	State Senate District 30 (REP)
+CandidateContest	AR Senate District 30 (Republican Party)	State Senate District 30 - REP
+CandidateContest	AR Senate District 31 (Republican Party)	State Senate District 31 (REP)
+CandidateContest	AR Senate District 31 (Republican Party)	State Senate District 31 - REP
+CandidateContest	AR Senate District 32 (Republican Party)	State Senate District 32 (REP)
+CandidateContest	AR Senate District 32 (Republican Party)	State Senate District 32 - REP
+CandidateContest	AR Senate District 33 (Republican Party)	State Senate District 33 (REP)
+CandidateContest	AR Senate District 33 (Republican Party)	State Senate District 33 - REP
+CandidateContest	AR Senate District 34 (Republican Party)	State Senate District 34 (REP)
+CandidateContest	AR Senate District 34 (Republican Party)	State Senate District 34 - REP
+CandidateContest	AR Senate District 35 (Republican Party)	State Senate District 35 (REP)
+CandidateContest	AR Senate District 35 (Republican Party)	State Senate District 35 - REP
+CandidateContest	US House AR District 1 (Republican Party)	U.S. Congress District 1
+CandidateContest	US House AR District 2 (Republican Party)	U.S. Congress District 2
+CandidateContest	US House AR District 3 (Republican Party)	U.S. Congress District 3
+CandidateContest	US House AR District 4 (Republican Party)	U.S. Congress District 4
+CandidateContest	AR House District 1 (Libertarian Party)	State House District 1 (LIB)
+CandidateContest	AR House District 1 (Libertarian Party)	State House District 1 - LIB
+CandidateContest	AR House District 2 (Libertarian Party)	State House District 2 (LIB)
+CandidateContest	AR House District 2 (Libertarian Party)	State House District 2 - LIB
+CandidateContest	AR House District 3 (Libertarian Party)	State House District 3 (LIB)
+CandidateContest	AR House District 3 (Libertarian Party)	State House District 3 - LIB
+CandidateContest	AR House District 4 (Libertarian Party)	State House District 4 (LIB)
+CandidateContest	AR House District 4 (Libertarian Party)	State House District 4 - LIB
+CandidateContest	AR House District 5 (Libertarian Party)	State House District 5 (LIB)
+CandidateContest	AR House District 5 (Libertarian Party)	State House District 5 - LIB
+CandidateContest	AR House District 6 (Libertarian Party)	State House District 6 (LIB)
+CandidateContest	AR House District 6 (Libertarian Party)	State House District 6 - LIB
+CandidateContest	AR House District 7 (Libertarian Party)	State House District 7 (LIB)
+CandidateContest	AR House District 7 (Libertarian Party)	State House District 7 - LIB
+CandidateContest	AR House District 8 (Libertarian Party)	State House District 8 (LIB)
+CandidateContest	AR House District 8 (Libertarian Party)	State House District 8 - LIB
+CandidateContest	AR House District 9 (Libertarian Party)	State House District 9 (LIB)
+CandidateContest	AR House District 9 (Libertarian Party)	State House District 9 - LIB
+CandidateContest	AR House District 10 (Libertarian Party)	State House District 10 (LIB)
+CandidateContest	AR House District 10 (Libertarian Party)	State House District 10 - LIB
+CandidateContest	AR House District 11 (Libertarian Party)	State House District 11 (LIB)
+CandidateContest	AR House District 11 (Libertarian Party)	State House District 11 - LIB
+CandidateContest	AR House District 12 (Libertarian Party)	State House District 12 (LIB)
+CandidateContest	AR House District 12 (Libertarian Party)	State House District 12 - LIB
+CandidateContest	AR House District 13 (Libertarian Party)	State House District 13 (LIB)
+CandidateContest	AR House District 13 (Libertarian Party)	State House District 13 - LIB
+CandidateContest	AR House District 14 (Libertarian Party)	State House District 14 (LIB)
+CandidateContest	AR House District 14 (Libertarian Party)	State House District 14 - LIB
+CandidateContest	AR House District 15 (Libertarian Party)	State House District 15 (LIB)
+CandidateContest	AR House District 15 (Libertarian Party)	State House District 15 - LIB
+CandidateContest	AR House District 16 (Libertarian Party)	State House District 16 (LIB)
+CandidateContest	AR House District 16 (Libertarian Party)	State House District 16 - LIB
+CandidateContest	AR House District 17 (Libertarian Party)	State House District 17 (LIB)
+CandidateContest	AR House District 17 (Libertarian Party)	State House District 17 - LIB
+CandidateContest	AR House District 18 (Libertarian Party)	State House District 18 (LIB)
+CandidateContest	AR House District 18 (Libertarian Party)	State House District 18 - LIB
+CandidateContest	AR House District 19 (Libertarian Party)	State House District 19 (LIB)
+CandidateContest	AR House District 19 (Libertarian Party)	State House District 19 - LIB
+CandidateContest	AR House District 20 (Libertarian Party)	State House District 20 (LIB)
+CandidateContest	AR House District 20 (Libertarian Party)	State House District 20 - LIB
+CandidateContest	AR House District 21 (Libertarian Party)	State House District 21 (LIB)
+CandidateContest	AR House District 21 (Libertarian Party)	State House District 21 - LIB
+CandidateContest	AR House District 22 (Libertarian Party)	State House District 22 (LIB)
+CandidateContest	AR House District 22 (Libertarian Party)	State House District 22 - LIB
+CandidateContest	AR House District 23 (Libertarian Party)	State House District 23 (LIB)
+CandidateContest	AR House District 23 (Libertarian Party)	State House District 23 - LIB
+CandidateContest	AR House District 24 (Libertarian Party)	State House District 24 (LIB)
+CandidateContest	AR House District 24 (Libertarian Party)	State House District 24 - LIB
+CandidateContest	AR House District 25 (Libertarian Party)	State House District 25 (LIB)
+CandidateContest	AR House District 25 (Libertarian Party)	State House District 25 - LIB
+CandidateContest	AR House District 26 (Libertarian Party)	State House District 26 (LIB)
+CandidateContest	AR House District 26 (Libertarian Party)	State House District 26 - LIB
+CandidateContest	AR House District 27 (Libertarian Party)	State House District 27 (LIB)
+CandidateContest	AR House District 27 (Libertarian Party)	State House District 27 - LIB
+CandidateContest	AR House District 28 (Libertarian Party)	State House District 28 (LIB)
+CandidateContest	AR House District 28 (Libertarian Party)	State House District 28 - LIB
+CandidateContest	AR House District 29 (Libertarian Party)	State House District 29 (LIB)
+CandidateContest	AR House District 29 (Libertarian Party)	State House District 29 - LIB
+CandidateContest	AR House District 30 (Libertarian Party)	State House District 30 (LIB)
+CandidateContest	AR House District 30 (Libertarian Party)	State House District 30 - LIB
+CandidateContest	AR House District 31 (Libertarian Party)	State House District 31 (LIB)
+CandidateContest	AR House District 31 (Libertarian Party)	State House District 31 - LIB
+CandidateContest	AR House District 32 (Libertarian Party)	State House District 32 (LIB)
+CandidateContest	AR House District 32 (Libertarian Party)	State House District 32 - LIB
+CandidateContest	AR House District 33 (Libertarian Party)	State House District 33 (LIB)
+CandidateContest	AR House District 33 (Libertarian Party)	State House District 33 - LIB
+CandidateContest	AR House District 34 (Libertarian Party)	State House District 34 (LIB)
+CandidateContest	AR House District 34 (Libertarian Party)	State House District 34 - LIB
+CandidateContest	AR House District 35 (Libertarian Party)	State House District 35 (LIB)
+CandidateContest	AR House District 35 (Libertarian Party)	State House District 35 - LIB
+CandidateContest	AR House District 36 (Libertarian Party)	State House District 36 (LIB)
+CandidateContest	AR House District 36 (Libertarian Party)	State House District 36 - LIB
+CandidateContest	AR House District 37 (Libertarian Party)	State House District 37 (LIB)
+CandidateContest	AR House District 37 (Libertarian Party)	State House District 37 - LIB
+CandidateContest	AR House District 38 (Libertarian Party)	State House District 38 (LIB)
+CandidateContest	AR House District 38 (Libertarian Party)	State House District 38 - LIB
+CandidateContest	AR House District 39 (Libertarian Party)	State House District 39 (LIB)
+CandidateContest	AR House District 39 (Libertarian Party)	State House District 39 - LIB
+CandidateContest	AR House District 40 (Libertarian Party)	State House District 40 (LIB)
+CandidateContest	AR House District 40 (Libertarian Party)	State House District 40 - LIB
+CandidateContest	AR House District 41 (Libertarian Party)	State House District 41 (LIB)
+CandidateContest	AR House District 41 (Libertarian Party)	State House District 41 - LIB
+CandidateContest	AR House District 42 (Libertarian Party)	State House District 42 (LIB)
+CandidateContest	AR House District 42 (Libertarian Party)	State House District 42 - LIB
+CandidateContest	AR House District 43 (Libertarian Party)	State House District 43 (LIB)
+CandidateContest	AR House District 43 (Libertarian Party)	State House District 43 - LIB
+CandidateContest	AR House District 44 (Libertarian Party)	State House District 44 (LIB)
+CandidateContest	AR House District 44 (Libertarian Party)	State House District 44 - LIB
+CandidateContest	AR House District 45 (Libertarian Party)	State House District 45 (LIB)
+CandidateContest	AR House District 45 (Libertarian Party)	State House District 45 - LIB
+CandidateContest	AR House District 46 (Libertarian Party)	State House District 46 (LIB)
+CandidateContest	AR House District 46 (Libertarian Party)	State House District 46 - LIB
+CandidateContest	AR House District 47 (Libertarian Party)	State House District 47 (LIB)
+CandidateContest	AR House District 47 (Libertarian Party)	State House District 47 - LIB
+CandidateContest	AR House District 48 (Libertarian Party)	State House District 48 (LIB)
+CandidateContest	AR House District 48 (Libertarian Party)	State House District 48 - LIB
+CandidateContest	AR House District 49 (Libertarian Party)	State House District 49 (LIB)
+CandidateContest	AR House District 49 (Libertarian Party)	State House District 49 - LIB
+CandidateContest	AR House District 50 (Libertarian Party)	State House District 50 (LIB)
+CandidateContest	AR House District 50 (Libertarian Party)	State House District 50 - LIB
+CandidateContest	AR House District 51 (Libertarian Party)	State House District 51 (LIB)
+CandidateContest	AR House District 51 (Libertarian Party)	State House District 51 - LIB
+CandidateContest	AR House District 52 (Libertarian Party)	State House District 52 (LIB)
+CandidateContest	AR House District 52 (Libertarian Party)	State House District 52 - LIB
+CandidateContest	AR House District 53 (Libertarian Party)	State House District 53 (LIB)
+CandidateContest	AR House District 53 (Libertarian Party)	State House District 53 - LIB
+CandidateContest	AR House District 54 (Libertarian Party)	State House District 54 (LIB)
+CandidateContest	AR House District 54 (Libertarian Party)	State House District 54 - LIB
+CandidateContest	AR House District 55 (Libertarian Party)	State House District 55 (LIB)
+CandidateContest	AR House District 55 (Libertarian Party)	State House District 55 - LIB
+CandidateContest	AR House District 56 (Libertarian Party)	State House District 56 (LIB)
+CandidateContest	AR House District 56 (Libertarian Party)	State House District 56 - LIB
+CandidateContest	AR House District 57 (Libertarian Party)	State House District 57 (LIB)
+CandidateContest	AR House District 57 (Libertarian Party)	State House District 57 - LIB
+CandidateContest	AR House District 58 (Libertarian Party)	State House District 58 (LIB)
+CandidateContest	AR House District 58 (Libertarian Party)	State House District 58 - LIB
+CandidateContest	AR House District 59 (Libertarian Party)	State House District 59 (LIB)
+CandidateContest	AR House District 59 (Libertarian Party)	State House District 59 - LIB
+CandidateContest	AR House District 60 (Libertarian Party)	State House District 60 (LIB)
+CandidateContest	AR House District 60 (Libertarian Party)	State House District 60 - LIB
+CandidateContest	AR House District 61 (Libertarian Party)	State House District 61 (LIB)
+CandidateContest	AR House District 61 (Libertarian Party)	State House District 61 - LIB
+CandidateContest	AR House District 62 (Libertarian Party)	State House District 62 (LIB)
+CandidateContest	AR House District 62 (Libertarian Party)	State House District 62 - LIB
+CandidateContest	AR House District 63 (Libertarian Party)	State House District 63 (LIB)
+CandidateContest	AR House District 63 (Libertarian Party)	State House District 63 - LIB
+CandidateContest	AR House District 64 (Libertarian Party)	State House District 64 (LIB)
+CandidateContest	AR House District 64 (Libertarian Party)	State House District 64 - LIB
+CandidateContest	AR House District 65 (Libertarian Party)	State House District 65 (LIB)
+CandidateContest	AR House District 65 (Libertarian Party)	State House District 65 - LIB
+CandidateContest	AR House District 66 (Libertarian Party)	State House District 66 (LIB)
+CandidateContest	AR House District 66 (Libertarian Party)	State House District 66 - LIB
+CandidateContest	AR House District 67 (Libertarian Party)	State House District 67 (LIB)
+CandidateContest	AR House District 67 (Libertarian Party)	State House District 67 - LIB
+CandidateContest	AR House District 68 (Libertarian Party)	State House District 68 (LIB)
+CandidateContest	AR House District 68 (Libertarian Party)	State House District 68 - LIB
+CandidateContest	AR House District 69 (Libertarian Party)	State House District 69 (LIB)
+CandidateContest	AR House District 69 (Libertarian Party)	State House District 69 - LIB
+CandidateContest	AR House District 70 (Libertarian Party)	State House District 70 (LIB)
+CandidateContest	AR House District 70 (Libertarian Party)	State House District 70 - LIB
+CandidateContest	AR House District 71 (Libertarian Party)	State House District 71 (LIB)
+CandidateContest	AR House District 71 (Libertarian Party)	State House District 71 - LIB
+CandidateContest	AR House District 72 (Libertarian Party)	State House District 72 (LIB)
+CandidateContest	AR House District 72 (Libertarian Party)	State House District 72 - LIB
+CandidateContest	AR House District 73 (Libertarian Party)	State House District 73 (LIB)
+CandidateContest	AR House District 73 (Libertarian Party)	State House District 73 - LIB
+CandidateContest	AR House District 74 (Libertarian Party)	State House District 74 (LIB)
+CandidateContest	AR House District 74 (Libertarian Party)	State House District 74 - LIB
+CandidateContest	AR House District 75 (Libertarian Party)	State House District 75 (LIB)
+CandidateContest	AR House District 75 (Libertarian Party)	State House District 75 - LIB
+CandidateContest	AR House District 76 (Libertarian Party)	State House District 76 (LIB)
+CandidateContest	AR House District 76 (Libertarian Party)	State House District 76 - LIB
+CandidateContest	AR House District 77 (Libertarian Party)	State House District 77 (LIB)
+CandidateContest	AR House District 77 (Libertarian Party)	State House District 77 - LIB
+CandidateContest	AR House District 78 (Libertarian Party)	State House District 78 (LIB)
+CandidateContest	AR House District 78 (Libertarian Party)	State House District 78 - LIB
+CandidateContest	AR House District 79 (Libertarian Party)	State House District 79 (LIB)
+CandidateContest	AR House District 79 (Libertarian Party)	State House District 79 - LIB
+CandidateContest	AR House District 80 (Libertarian Party)	State House District 80 (LIB)
+CandidateContest	AR House District 80 (Libertarian Party)	State House District 80 - LIB
+CandidateContest	AR House District 81 (Libertarian Party)	State House District 81 (LIB)
+CandidateContest	AR House District 81 (Libertarian Party)	State House District 81 - LIB
+CandidateContest	AR House District 82 (Libertarian Party)	State House District 82 (LIB)
+CandidateContest	AR House District 82 (Libertarian Party)	State House District 82 - LIB
+CandidateContest	AR House District 83 (Libertarian Party)	State House District 83 (LIB)
+CandidateContest	AR House District 83 (Libertarian Party)	State House District 83 - LIB
+CandidateContest	AR House District 84 (Libertarian Party)	State House District 84 (LIB)
+CandidateContest	AR House District 84 (Libertarian Party)	State House District 84 - LIB
+CandidateContest	AR House District 85 (Libertarian Party)	State House District 85 (LIB)
+CandidateContest	AR House District 85 (Libertarian Party)	State House District 85 - LIB
+CandidateContest	AR House District 86 (Libertarian Party)	State House District 86 (LIB)
+CandidateContest	AR House District 86 (Libertarian Party)	State House District 86 - LIB
+CandidateContest	AR House District 87 (Libertarian Party)	State House District 87 (LIB)
+CandidateContest	AR House District 87 (Libertarian Party)	State House District 87 - LIB
+CandidateContest	AR House District 88 (Libertarian Party)	State House District 88 (LIB)
+CandidateContest	AR House District 88 (Libertarian Party)	State House District 88 - LIB
+CandidateContest	AR House District 89 (Libertarian Party)	State House District 89 (LIB)
+CandidateContest	AR House District 89 (Libertarian Party)	State House District 89 - LIB
+CandidateContest	AR House District 90 (Libertarian Party)	State House District 90 (LIB)
+CandidateContest	AR House District 90 (Libertarian Party)	State House District 90 - LIB
+CandidateContest	AR House District 91 (Libertarian Party)	State House District 91 (LIB)
+CandidateContest	AR House District 91 (Libertarian Party)	State House District 91 - LIB
+CandidateContest	AR House District 92 (Libertarian Party)	State House District 92 (LIB)
+CandidateContest	AR House District 92 (Libertarian Party)	State House District 92 - LIB
+CandidateContest	AR House District 93 (Libertarian Party)	State House District 93 (LIB)
+CandidateContest	AR House District 93 (Libertarian Party)	State House District 93 - LIB
+CandidateContest	AR House District 94 (Libertarian Party)	State House District 94 (LIB)
+CandidateContest	AR House District 94 (Libertarian Party)	State House District 94 - LIB
+CandidateContest	AR House District 95 (Libertarian Party)	State House District 95 (LIB)
+CandidateContest	AR House District 95 (Libertarian Party)	State House District 95 - LIB
+CandidateContest	AR House District 96 (Libertarian Party)	State House District 96 (LIB)
+CandidateContest	AR House District 96 (Libertarian Party)	State House District 96 - LIB
+CandidateContest	AR House District 97 (Libertarian Party)	State House District 97 (LIB)
+CandidateContest	AR House District 97 (Libertarian Party)	State House District 97 - LIB
+CandidateContest	AR House District 98 (Libertarian Party)	State House District 98 (LIB)
+CandidateContest	AR House District 98 (Libertarian Party)	State House District 98 - LIB
+CandidateContest	AR House District 99 (Libertarian Party)	State House District 99 (LIB)
+CandidateContest	AR House District 99 (Libertarian Party)	State House District 99 - LIB
+CandidateContest	AR House District 100 (Libertarian Party)	State House District 100 (LIB)
+CandidateContest	AR House District 100 (Libertarian Party)	State House District 100 - LIB
+CandidateContest	AR Senate District 1 (Libertarian Party)	State Senate District 1 (LIB)
+CandidateContest	AR Senate District 1 (Libertarian Party)	State Senate District 1 - LIB
+CandidateContest	AR Senate District 2 (Libertarian Party)	State Senate District 2 (LIB)
+CandidateContest	AR Senate District 2 (Libertarian Party)	State Senate District 2 - LIB
+CandidateContest	AR Senate District 3 (Libertarian Party)	State Senate District 3 (LIB)
+CandidateContest	AR Senate District 3 (Libertarian Party)	State Senate District 3 - LIB
+CandidateContest	AR Senate District 4 (Libertarian Party)	State Senate District 4 (LIB)
+CandidateContest	AR Senate District 4 (Libertarian Party)	State Senate District 4 - LIB
+CandidateContest	AR Senate District 5 (Libertarian Party)	State Senate District 5 (LIB)
+CandidateContest	AR Senate District 5 (Libertarian Party)	State Senate District 5 - LIB
+CandidateContest	AR Senate District 6 (Libertarian Party)	State Senate District 6 (LIB)
+CandidateContest	AR Senate District 6 (Libertarian Party)	State Senate District 6 - LIB
+CandidateContest	AR Senate District 7 (Libertarian Party)	State Senate District 7 (LIB)
+CandidateContest	AR Senate District 7 (Libertarian Party)	State Senate District 7 - LIB
+CandidateContest	AR Senate District 8 (Libertarian Party)	State Senate District 8 (LIB)
+CandidateContest	AR Senate District 8 (Libertarian Party)	State Senate District 8 - LIB
+CandidateContest	AR Senate District 9 (Libertarian Party)	State Senate District 9 (LIB)
+CandidateContest	AR Senate District 9 (Libertarian Party)	State Senate District 9 - LIB
+CandidateContest	AR Senate District 10 (Libertarian Party)	State Senate District 10 (LIB)
+CandidateContest	AR Senate District 10 (Libertarian Party)	State Senate District 10 - LIB
+CandidateContest	AR Senate District 11 (Libertarian Party)	State Senate District 11 (LIB)
+CandidateContest	AR Senate District 11 (Libertarian Party)	State Senate District 11 - LIB
+CandidateContest	AR Senate District 12 (Libertarian Party)	State Senate District 12 (LIB)
+CandidateContest	AR Senate District 12 (Libertarian Party)	State Senate District 12 - LIB
+CandidateContest	AR Senate District 13 (Libertarian Party)	State Senate District 13 (LIB)
+CandidateContest	AR Senate District 13 (Libertarian Party)	State Senate District 13 - LIB
+CandidateContest	AR Senate District 14 (Libertarian Party)	State Senate District 14 (LIB)
+CandidateContest	AR Senate District 14 (Libertarian Party)	State Senate District 14 - LIB
+CandidateContest	AR Senate District 15 (Libertarian Party)	State Senate District 15 (LIB)
+CandidateContest	AR Senate District 15 (Libertarian Party)	State Senate District 15 - LIB
+CandidateContest	AR Senate District 16 (Libertarian Party)	State Senate District 16 (LIB)
+CandidateContest	AR Senate District 16 (Libertarian Party)	State Senate District 16 - LIB
+CandidateContest	AR Senate District 17 (Libertarian Party)	State Senate District 17 (LIB)
+CandidateContest	AR Senate District 17 (Libertarian Party)	State Senate District 17 - LIB
+CandidateContest	AR Senate District 18 (Libertarian Party)	State Senate District 18 (LIB)
+CandidateContest	AR Senate District 18 (Libertarian Party)	State Senate District 18 - LIB
+CandidateContest	AR Senate District 19 (Libertarian Party)	State Senate District 19 (LIB)
+CandidateContest	AR Senate District 19 (Libertarian Party)	State Senate District 19 - LIB
+CandidateContest	AR Senate District 20 (Libertarian Party)	State Senate District 20 (LIB)
+CandidateContest	AR Senate District 20 (Libertarian Party)	State Senate District 20 - LIB
+CandidateContest	AR Senate District 21 (Libertarian Party)	State Senate District 21 (LIB)
+CandidateContest	AR Senate District 21 (Libertarian Party)	State Senate District 21 - LIB
+CandidateContest	AR Senate District 22 (Libertarian Party)	State Senate District 22 (LIB)
+CandidateContest	AR Senate District 22 (Libertarian Party)	State Senate District 22 - LIB
+CandidateContest	AR Senate District 23 (Libertarian Party)	State Senate District 23 (LIB)
+CandidateContest	AR Senate District 23 (Libertarian Party)	State Senate District 23 - LIB
+CandidateContest	AR Senate District 24 (Libertarian Party)	State Senate District 24 (LIB)
+CandidateContest	AR Senate District 24 (Libertarian Party)	State Senate District 24 - LIB
+CandidateContest	AR Senate District 25 (Libertarian Party)	State Senate District 25 (LIB)
+CandidateContest	AR Senate District 25 (Libertarian Party)	State Senate District 25 - LIB
+CandidateContest	AR Senate District 26 (Libertarian Party)	State Senate District 26 (LIB)
+CandidateContest	AR Senate District 26 (Libertarian Party)	State Senate District 26 - LIB
+CandidateContest	AR Senate District 27 (Libertarian Party)	State Senate District 27 (LIB)
+CandidateContest	AR Senate District 27 (Libertarian Party)	State Senate District 27 - LIB
+CandidateContest	AR Senate District 28 (Libertarian Party)	State Senate District 28 (LIB)
+CandidateContest	AR Senate District 28 (Libertarian Party)	State Senate District 28 - LIB
+CandidateContest	AR Senate District 29 (Libertarian Party)	State Senate District 29 (LIB)
+CandidateContest	AR Senate District 29 (Libertarian Party)	State Senate District 29 - LIB
+CandidateContest	AR Senate District 30 (Libertarian Party)	State Senate District 30 (LIB)
+CandidateContest	AR Senate District 30 (Libertarian Party)	State Senate District 30 - LIB
+CandidateContest	AR Senate District 31 (Libertarian Party)	State Senate District 31 (LIB)
+CandidateContest	AR Senate District 31 (Libertarian Party)	State Senate District 31 - LIB
+CandidateContest	AR Senate District 32 (Libertarian Party)	State Senate District 32 (LIB)
+CandidateContest	AR Senate District 32 (Libertarian Party)	State Senate District 32 - LIB
+CandidateContest	AR Senate District 33 (Libertarian Party)	State Senate District 33 (LIB)
+CandidateContest	AR Senate District 33 (Libertarian Party)	State Senate District 33 - LIB
+CandidateContest	AR Senate District 34 (Libertarian Party)	State Senate District 34 (LIB)
+CandidateContest	AR Senate District 34 (Libertarian Party)	State Senate District 34 - LIB
+CandidateContest	AR Senate District 35 (Libertarian Party)	State Senate District 35 (LIB)
+CandidateContest	AR Senate District 35 (Libertarian Party)	State Senate District 35 - LIB
+CandidateContest	US House AR District 1 (Libertarian Party)	U.S. Congress District 1
+CandidateContest	US House AR District 2 (Libertarian Party)	U.S. Congress District 2
+CandidateContest	US House AR District 3 (Libertarian Party)	U.S. Congress District 3
+CandidateContest	US House AR District 4 (Libertarian Party)	U.S. Congress District 4
+CandidateContest	AR House District 1	State House District 1
+CandidateContest	AR House District 2	State House District 2
+CandidateContest	AR House District 3	State House District 3
+CandidateContest	AR House District 4	State House District 4
+CandidateContest	AR House District 5	State House District 5
+CandidateContest	AR House District 6	State House District 6
+CandidateContest	AR House District 7	State House District 7
+CandidateContest	AR House District 8	State House District 8
+CandidateContest	AR House District 9	State House District 9
+CandidateContest	AR House District 10	State House District 10
+CandidateContest	AR House District 11	State House District 11
+CandidateContest	AR House District 12	State House District 12
+CandidateContest	AR House District 13	State House District 13
+CandidateContest	AR House District 14	State House District 14
+CandidateContest	AR House District 15	State House District 15
+CandidateContest	AR House District 16	State House District 16
+CandidateContest	AR House District 17	State House District 17
+CandidateContest	AR House District 18	State House District 18
+CandidateContest	AR House District 19	State House District 19
+CandidateContest	AR House District 20	State House District 20
+CandidateContest	AR House District 21	State House District 21
+CandidateContest	AR House District 22	State House District 22
+CandidateContest	AR House District 23	State House District 23
+CandidateContest	AR House District 24	State House District 24
+CandidateContest	AR House District 25	State House District 25
+CandidateContest	AR House District 26	State House District 26
+CandidateContest	AR House District 27	State House District 27
+CandidateContest	AR House District 28	State House District 28
+CandidateContest	AR House District 29	State House District 29
+CandidateContest	AR House District 30	State House District 30
+CandidateContest	AR House District 31	State House District 31
+CandidateContest	AR House District 32	State House District 32
+CandidateContest	AR House District 33	State House District 33
+CandidateContest	AR House District 34	State House District 34
+CandidateContest	AR House District 35	State House District 35
+CandidateContest	AR House District 36	State House District 36
+CandidateContest	AR House District 37	State House District 37
+CandidateContest	AR House District 38	State House District 38
+CandidateContest	AR House District 39	State House District 39
+CandidateContest	AR House District 40	State House District 40
+CandidateContest	AR House District 41	State House District 41
+CandidateContest	AR House District 42	State House District 42
+CandidateContest	AR House District 43	State House District 43
+CandidateContest	AR House District 44	State House District 44
+CandidateContest	AR House District 45	State House District 45
+CandidateContest	AR House District 46	State House District 46
+CandidateContest	AR House District 47	State House District 47
+CandidateContest	AR House District 48	State House District 48
+CandidateContest	AR House District 49	State House District 49
+CandidateContest	AR House District 50	State House District 50
+CandidateContest	AR House District 51	State House District 51
+CandidateContest	AR House District 52	State House District 52
+CandidateContest	AR House District 53	State House District 53
+CandidateContest	AR House District 54	State House District 54
+CandidateContest	AR House District 55	State House District 55
+CandidateContest	AR House District 56	State House District 56
+CandidateContest	AR House District 57	State House District 57
+CandidateContest	AR House District 58	State House District 58
+CandidateContest	AR House District 59	State House District 59
+CandidateContest	AR House District 60	State House District 60
+CandidateContest	AR House District 61	State House District 61
+CandidateContest	AR House District 62	State House District 62
+CandidateContest	AR House District 63	State House District 63
+CandidateContest	AR House District 64	State House District 64
+CandidateContest	AR House District 65	State House District 65
+CandidateContest	AR House District 66	State House District 66
+CandidateContest	AR House District 67	State House District 67
+CandidateContest	AR House District 68	State House District 68
+CandidateContest	AR House District 69	State House District 69
+CandidateContest	AR House District 70	State House District 70
+CandidateContest	AR House District 71	State House District 71
+CandidateContest	AR House District 72	State House District 72
+CandidateContest	AR House District 73	State House District 73
+CandidateContest	AR House District 74	State House District 74
+CandidateContest	AR House District 75	State House District 75
+CandidateContest	AR House District 76	State House District 76
+CandidateContest	AR House District 77	State House District 77
+CandidateContest	AR House District 78	State House District 78
+CandidateContest	AR House District 79	State House District 79
+CandidateContest	AR House District 80	State House District 80
+CandidateContest	AR House District 81	State House District 81
+CandidateContest	AR House District 82	State House District 82
+CandidateContest	AR House District 83	State House District 83
+CandidateContest	AR House District 84	State House District 84
+CandidateContest	AR House District 85	State House District 85
+CandidateContest	AR House District 86	State House District 86
+CandidateContest	AR House District 87	State House District 87
+CandidateContest	AR House District 88	State House District 88
+CandidateContest	AR House District 89	State House District 89
+CandidateContest	AR House District 90	State House District 90
+CandidateContest	AR House District 91	State House District 91
+CandidateContest	AR House District 92	State House District 92
+CandidateContest	AR House District 93	State House District 93
+CandidateContest	AR House District 94	State House District 94
+CandidateContest	AR House District 95	State House District 95
+CandidateContest	AR House District 96	State House District 96
+CandidateContest	AR House District 97	State House District 97
+CandidateContest	AR House District 98	State House District 98
+CandidateContest	AR House District 99	State House District 99
+CandidateContest	AR House District 100	State House District 100
+CandidateContest	AR Senate District 1	State Senate District 1
+CandidateContest	AR Senate District 2	State Senate District 2
+CandidateContest	AR Senate District 3	State Senate District 3
+CandidateContest	AR Senate District 4	State Senate District 4
+CandidateContest	AR Senate District 5	State Senate District 5
+CandidateContest	AR Senate District 6	State Senate District 6
+CandidateContest	AR Senate District 7	State Senate District 7
+CandidateContest	AR Senate District 8	State Senate District 8
+CandidateContest	AR Senate District 9	State Senate District 9
+CandidateContest	AR Senate District 10	State Senate District 10
+CandidateContest	AR Senate District 11	State Senate District 11
+CandidateContest	AR Senate District 12	State Senate District 12
+CandidateContest	AR Senate District 13	State Senate District 13
+CandidateContest	AR Senate District 14	State Senate District 14
+CandidateContest	AR Senate District 15	State Senate District 15
+CandidateContest	AR Senate District 16	State Senate District 16
+CandidateContest	AR Senate District 17	State Senate District 17
+CandidateContest	AR Senate District 18	State Senate District 18
+CandidateContest	AR Senate District 19	State Senate District 19
+CandidateContest	AR Senate District 20	State Senate District 20
+CandidateContest	AR Senate District 21	State Senate District 21
+CandidateContest	AR Senate District 22	State Senate District 22
+CandidateContest	AR Senate District 23	State Senate District 23
+CandidateContest	AR Senate District 24	State Senate District 24
+CandidateContest	AR Senate District 25	State Senate District 25
+CandidateContest	AR Senate District 26	State Senate District 26
+CandidateContest	AR Senate District 27	State Senate District 27
+CandidateContest	AR Senate District 28	State Senate District 28
+CandidateContest	AR Senate District 29	State Senate District 29
+CandidateContest	AR Senate District 30	State Senate District 30
+CandidateContest	AR Senate District 31	State Senate District 31
+CandidateContest	AR Senate District 32	State Senate District 32
+CandidateContest	AR Senate District 33	State Senate District 33
+CandidateContest	AR Senate District 34	State Senate District 34
+CandidateContest	AR Senate District 35	State Senate District 35
+CandidateContest	US House AR District 1	U.S. Congress District 1
+CandidateContest	US House AR District 2	U.S. Congress District 2
+CandidateContest	US House AR District 3	U.S. Congress District 3
+CandidateContest	US House AR District 4	U.S. Congress District 4
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
+Election	2018 General	2018 General
+Election	2018 Primary	2018 Primary
+Election	2016 General	2016 General
+Election	2016 Primary	2016 Primary
+Office	AR House District 1	State House District 1
+Office	AR House District 2	State House District 2
+Office	AR House District 3	State House District 3
+Office	AR House District 4	State House District 4
+Office	AR House District 5	State House District 5
+Office	AR House District 6	State House District 6
+Office	AR House District 7	State House District 7
+Office	AR House District 8	State House District 8
+Office	AR House District 9	State House District 9
+Office	AR House District 10	State House District 10
+Office	AR House District 11	State House District 11
+Office	AR House District 12	State House District 12
+Office	AR House District 13	State House District 13
+Office	AR House District 14	State House District 14
+Office	AR House District 15	State House District 15
+Office	AR House District 16	State House District 16
+Office	AR House District 17	State House District 17
+Office	AR House District 18	State House District 18
+Office	AR House District 19	State House District 19
+Office	AR House District 20	State House District 20
+Office	AR House District 21	State House District 21
+Office	AR House District 22	State House District 22
+Office	AR House District 23	State House District 23
+Office	AR House District 24	State House District 24
+Office	AR House District 25	State House District 25
+Office	AR House District 26	State House District 26
+Office	AR House District 27	State House District 27
+Office	AR House District 28	State House District 28
+Office	AR House District 29	State House District 29
+Office	AR House District 30	State House District 30
+Office	AR House District 31	State House District 31
+Office	AR House District 32	State House District 32
+Office	AR House District 33	State House District 33
+Office	AR House District 34	State House District 34
+Office	AR House District 35	State House District 35
+Office	AR House District 36	State House District 36
+Office	AR House District 37	State House District 37
+Office	AR House District 38	State House District 38
+Office	AR House District 39	State House District 39
+Office	AR House District 40	State House District 40
+Office	AR House District 41	State House District 41
+Office	AR House District 42	State House District 42
+Office	AR House District 43	State House District 43
+Office	AR House District 44	State House District 44
+Office	AR House District 45	State House District 45
+Office	AR House District 46	State House District 46
+Office	AR House District 47	State House District 47
+Office	AR House District 48	State House District 48
+Office	AR House District 49	State House District 49
+Office	AR House District 50	State House District 50
+Office	AR House District 51	State House District 51
+Office	AR House District 52	State House District 52
+Office	AR House District 53	State House District 53
+Office	AR House District 54	State House District 54
+Office	AR House District 55	State House District 55
+Office	AR House District 56	State House District 56
+Office	AR House District 57	State House District 57
+Office	AR House District 58	State House District 58
+Office	AR House District 59	State House District 59
+Office	AR House District 60	State House District 60
+Office	AR House District 61	State House District 61
+Office	AR House District 62	State House District 62
+Office	AR House District 63	State House District 63
+Office	AR House District 64	State House District 64
+Office	AR House District 65	State House District 65
+Office	AR House District 66	State House District 66
+Office	AR House District 67	State House District 67
+Office	AR House District 68	State House District 68
+Office	AR House District 69	State House District 69
+Office	AR House District 70	State House District 70
+Office	AR House District 71	State House District 71
+Office	AR House District 72	State House District 72
+Office	AR House District 73	State House District 73
+Office	AR House District 74	State House District 74
+Office	AR House District 75	State House District 75
+Office	AR House District 76	State House District 76
+Office	AR House District 77	State House District 77
+Office	AR House District 78	State House District 78
+Office	AR House District 79	State House District 79
+Office	AR House District 80	State House District 80
+Office	AR House District 81	State House District 81
+Office	AR House District 82	State House District 82
+Office	AR House District 83	State House District 83
+Office	AR House District 84	State House District 84
+Office	AR House District 85	State House District 85
+Office	AR House District 86	State House District 86
+Office	AR House District 87	State House District 87
+Office	AR House District 88	State House District 88
+Office	AR House District 89	State House District 89
+Office	AR House District 90	State House District 90
+Office	AR House District 91	State House District 91
+Office	AR House District 92	State House District 92
+Office	AR House District 93	State House District 93
+Office	AR House District 94	State House District 94
+Office	AR House District 95	State House District 95
+Office	AR House District 96	State House District 96
+Office	AR House District 97	State House District 97
+Office	AR House District 98	State House District 98
+Office	AR House District 99	State House District 99
+Office	AR House District 100	State House District 100
+Office	AR Senate District 1	State Senate District 1
+Office	AR Senate District 2	State Senate District 2
+Office	AR Senate District 3	State Senate District 3
+Office	AR Senate District 4	State Senate District 4
+Office	AR Senate District 5	State Senate District 5
+Office	AR Senate District 6	State Senate District 6
+Office	AR Senate District 7	State Senate District 7
+Office	AR Senate District 8	State Senate District 8
+Office	AR Senate District 9	State Senate District 9
+Office	AR Senate District 10	State Senate District 10
+Office	AR Senate District 11	State Senate District 11
+Office	AR Senate District 12	State Senate District 12
+Office	AR Senate District 13	State Senate District 13
+Office	AR Senate District 14	State Senate District 14
+Office	AR Senate District 15	State Senate District 15
+Office	AR Senate District 16	State Senate District 16
+Office	AR Senate District 17	State Senate District 17
+Office	AR Senate District 18	State Senate District 18
+Office	AR Senate District 19	State Senate District 19
+Office	AR Senate District 20	State Senate District 20
+Office	AR Senate District 21	State Senate District 21
+Office	AR Senate District 22	State Senate District 22
+Office	AR Senate District 23	State Senate District 23
+Office	AR Senate District 24	State Senate District 24
+Office	AR Senate District 25	State Senate District 25
+Office	AR Senate District 26	State Senate District 26
+Office	AR Senate District 27	State Senate District 27
+Office	AR Senate District 28	State Senate District 28
+Office	AR Senate District 29	State Senate District 29
+Office	AR Senate District 30	State Senate District 30
+Office	AR Senate District 31	State Senate District 31
+Office	AR Senate District 32	State Senate District 32
+Office	AR Senate District 33	State Senate District 33
+Office	AR Senate District 34	State Senate District 34
+Office	AR Senate District 35	State Senate District 35
+Office	US House AR District 1	U.S. Congress District 1
+Office	US House AR District 2	U.S. Congress District 2
+Office	US House AR District 3	U.S. Congress District 3
+Office	US House AR District 4	U.S. Congress District 4
+ReportingUnit	Arkansas;AR House District 1	State House District 1
+ReportingUnit	Arkansas;AR House District 2	State House District 2
+ReportingUnit	Arkansas;AR House District 3	State House District 3
+ReportingUnit	Arkansas;AR House District 4	State House District 4
+ReportingUnit	Arkansas;AR House District 5	State House District 5
+ReportingUnit	Arkansas;AR House District 6	State House District 6
+ReportingUnit	Arkansas;AR House District 7	State House District 7
+ReportingUnit	Arkansas;AR House District 8	State House District 8
+ReportingUnit	Arkansas;AR House District 9	State House District 9
+ReportingUnit	Arkansas;AR House District 10	State House District 10
+ReportingUnit	Arkansas;AR House District 11	State House District 11
+ReportingUnit	Arkansas;AR House District 12	State House District 12
+ReportingUnit	Arkansas;AR House District 13	State House District 13
+ReportingUnit	Arkansas;AR House District 14	State House District 14
+ReportingUnit	Arkansas;AR House District 15	State House District 15
+ReportingUnit	Arkansas;AR House District 16	State House District 16
+ReportingUnit	Arkansas;AR House District 17	State House District 17
+ReportingUnit	Arkansas;AR House District 18	State House District 18
+ReportingUnit	Arkansas;AR House District 19	State House District 19
+ReportingUnit	Arkansas;AR House District 20	State House District 20
+ReportingUnit	Arkansas;AR House District 21	State House District 21
+ReportingUnit	Arkansas;AR House District 22	State House District 22
+ReportingUnit	Arkansas;AR House District 23	State House District 23
+ReportingUnit	Arkansas;AR House District 24	State House District 24
+ReportingUnit	Arkansas;AR House District 25	State House District 25
+ReportingUnit	Arkansas;AR House District 26	State House District 26
+ReportingUnit	Arkansas;AR House District 27	State House District 27
+ReportingUnit	Arkansas;AR House District 28	State House District 28
+ReportingUnit	Arkansas;AR House District 29	State House District 29
+ReportingUnit	Arkansas;AR House District 30	State House District 30
+ReportingUnit	Arkansas;AR House District 31	State House District 31
+ReportingUnit	Arkansas;AR House District 32	State House District 32
+ReportingUnit	Arkansas;AR House District 33	State House District 33
+ReportingUnit	Arkansas;AR House District 34	State House District 34
+ReportingUnit	Arkansas;AR House District 35	State House District 35
+ReportingUnit	Arkansas;AR House District 36	State House District 36
+ReportingUnit	Arkansas;AR House District 37	State House District 37
+ReportingUnit	Arkansas;AR House District 38	State House District 38
+ReportingUnit	Arkansas;AR House District 39	State House District 39
+ReportingUnit	Arkansas;AR House District 40	State House District 40
+ReportingUnit	Arkansas;AR House District 41	State House District 41
+ReportingUnit	Arkansas;AR House District 42	State House District 42
+ReportingUnit	Arkansas;AR House District 43	State House District 43
+ReportingUnit	Arkansas;AR House District 44	State House District 44
+ReportingUnit	Arkansas;AR House District 45	State House District 45
+ReportingUnit	Arkansas;AR House District 46	State House District 46
+ReportingUnit	Arkansas;AR House District 47	State House District 47
+ReportingUnit	Arkansas;AR House District 48	State House District 48
+ReportingUnit	Arkansas;AR House District 49	State House District 49
+ReportingUnit	Arkansas;AR House District 50	State House District 50
+ReportingUnit	Arkansas;AR House District 51	State House District 51
+ReportingUnit	Arkansas;AR House District 52	State House District 52
+ReportingUnit	Arkansas;AR House District 53	State House District 53
+ReportingUnit	Arkansas;AR House District 54	State House District 54
+ReportingUnit	Arkansas;AR House District 55	State House District 55
+ReportingUnit	Arkansas;AR House District 56	State House District 56
+ReportingUnit	Arkansas;AR House District 57	State House District 57
+ReportingUnit	Arkansas;AR House District 58	State House District 58
+ReportingUnit	Arkansas;AR House District 59	State House District 59
+ReportingUnit	Arkansas;AR House District 60	State House District 60
+ReportingUnit	Arkansas;AR House District 61	State House District 61
+ReportingUnit	Arkansas;AR House District 62	State House District 62
+ReportingUnit	Arkansas;AR House District 63	State House District 63
+ReportingUnit	Arkansas;AR House District 64	State House District 64
+ReportingUnit	Arkansas;AR House District 65	State House District 65
+ReportingUnit	Arkansas;AR House District 66	State House District 66
+ReportingUnit	Arkansas;AR House District 67	State House District 67
+ReportingUnit	Arkansas;AR House District 68	State House District 68
+ReportingUnit	Arkansas;AR House District 69	State House District 69
+ReportingUnit	Arkansas;AR House District 70	State House District 70
+ReportingUnit	Arkansas;AR House District 71	State House District 71
+ReportingUnit	Arkansas;AR House District 72	State House District 72
+ReportingUnit	Arkansas;AR House District 73	State House District 73
+ReportingUnit	Arkansas;AR House District 74	State House District 74
+ReportingUnit	Arkansas;AR House District 75	State House District 75
+ReportingUnit	Arkansas;AR House District 76	State House District 76
+ReportingUnit	Arkansas;AR House District 77	State House District 77
+ReportingUnit	Arkansas;AR House District 78	State House District 78
+ReportingUnit	Arkansas;AR House District 79	State House District 79
+ReportingUnit	Arkansas;AR House District 80	State House District 80
+ReportingUnit	Arkansas;AR House District 81	State House District 81
+ReportingUnit	Arkansas;AR House District 82	State House District 82
+ReportingUnit	Arkansas;AR House District 83	State House District 83
+ReportingUnit	Arkansas;AR House District 84	State House District 84
+ReportingUnit	Arkansas;AR House District 85	State House District 85
+ReportingUnit	Arkansas;AR House District 86	State House District 86
+ReportingUnit	Arkansas;AR House District 87	State House District 87
+ReportingUnit	Arkansas;AR House District 88	State House District 88
+ReportingUnit	Arkansas;AR House District 89	State House District 89
+ReportingUnit	Arkansas;AR House District 90	State House District 90
+ReportingUnit	Arkansas;AR House District 91	State House District 91
+ReportingUnit	Arkansas;AR House District 92	State House District 92
+ReportingUnit	Arkansas;AR House District 93	State House District 93
+ReportingUnit	Arkansas;AR House District 94	State House District 94
+ReportingUnit	Arkansas;AR House District 95	State House District 95
+ReportingUnit	Arkansas;AR House District 96	State House District 96
+ReportingUnit	Arkansas;AR House District 97	State House District 97
+ReportingUnit	Arkansas;AR House District 98	State House District 98
+ReportingUnit	Arkansas;AR House District 99	State House District 99
+ReportingUnit	Arkansas;AR House District 100	State House District 100
+ReportingUnit	Arkansas;AR Senate District 1	State House District 1
+ReportingUnit	Arkansas;AR Senate District 2	State House District 2
+ReportingUnit	Arkansas;AR Senate District 3	State House District 3
+ReportingUnit	Arkansas;AR Senate District 4	State House District 4
+ReportingUnit	Arkansas;AR Senate District 5	State House District 5
+ReportingUnit	Arkansas;AR Senate District 6	State House District 6
+ReportingUnit	Arkansas;AR Senate District 7	State House District 7
+ReportingUnit	Arkansas;AR Senate District 8	State House District 8
+ReportingUnit	Arkansas;AR Senate District 9	State House District 9
+ReportingUnit	Arkansas;AR Senate District 10	State House District 10
+ReportingUnit	Arkansas;AR Senate District 11	State House District 11
+ReportingUnit	Arkansas;AR Senate District 12	State House District 12
+ReportingUnit	Arkansas;AR Senate District 13	State House District 13
+ReportingUnit	Arkansas;AR Senate District 14	State House District 14
+ReportingUnit	Arkansas;AR Senate District 15	State House District 15
+ReportingUnit	Arkansas;AR Senate District 16	State House District 16
+ReportingUnit	Arkansas;AR Senate District 17	State House District 17
+ReportingUnit	Arkansas;AR Senate District 18	State House District 18
+ReportingUnit	Arkansas;AR Senate District 19	State House District 19
+ReportingUnit	Arkansas;AR Senate District 20	State House District 20
+ReportingUnit	Arkansas;AR Senate District 21	State House District 21
+ReportingUnit	Arkansas;AR Senate District 22	State House District 22
+ReportingUnit	Arkansas;AR Senate District 23	State House District 23
+ReportingUnit	Arkansas;AR Senate District 24	State House District 24
+ReportingUnit	Arkansas;AR Senate District 25	State House District 25
+ReportingUnit	Arkansas;AR Senate District 26	State House District 26
+ReportingUnit	Arkansas;AR Senate District 27	State House District 27
+ReportingUnit	Arkansas;AR Senate District 28	State House District 28
+ReportingUnit	Arkansas;AR Senate District 29	State House District 29
+ReportingUnit	Arkansas;AR Senate District 30	State House District 30
+ReportingUnit	Arkansas;AR Senate District 31	State House District 31
+ReportingUnit	Arkansas;AR Senate District 32	State House District 32
+ReportingUnit	Arkansas;AR Senate District 33	State House District 33
+ReportingUnit	Arkansas;AR Senate District 34	State House District 34
+ReportingUnit	Arkansas;AR Senate District 35	State House District 35
+ReportingUnit	Arkansas;US House AR District 1	State House District 1
+ReportingUnit	Arkansas;US House AR District 2	State House District 2
+ReportingUnit	Arkansas;US House AR District 3	State House District 3
+ReportingUnit	Arkansas;US House AR District 4	State House District 4
+ReportingUnit	Arkansas	Arkansas
+ReportingUnit	Arkansas;Arkansas County	Arkansas
+ReportingUnit	Arkansas;Ashley County	Ashley
+ReportingUnit	Arkansas;Baxter County	Baxter
+ReportingUnit	Arkansas;Benton County	Benton
+ReportingUnit	Arkansas;Boone County	Boone
+ReportingUnit	Arkansas;Bradley County	Bradley
+ReportingUnit	Arkansas;Calhoun County	Calhoun
+ReportingUnit	Arkansas;Carroll County	Carroll
+ReportingUnit	Arkansas;Chicot County	Chicot
+ReportingUnit	Arkansas;Clark County	Clark
+ReportingUnit	Arkansas;Clay County	Clay
+ReportingUnit	Arkansas;Cleburne County	Cleburne
+ReportingUnit	Arkansas;Cleveland County	Cleveland
+ReportingUnit	Arkansas;Columbia County	Columbia
+ReportingUnit	Arkansas;Conway County	Conway
+ReportingUnit	Arkansas;Craighead County	Craighead
+ReportingUnit	Arkansas;Crawford County	Crawford
+ReportingUnit	Arkansas;Crittenden County	Crittenden
+ReportingUnit	Arkansas;Cross County	Cross
+ReportingUnit	Arkansas;Dallas County	Dallas
+ReportingUnit	Arkansas;Desha County	Desha
+ReportingUnit	Arkansas;Drew County	Drew
+ReportingUnit	Arkansas;Faulkner County	Faulkner
+ReportingUnit	Arkansas;Franklin County	Franklin
+ReportingUnit	Arkansas;Fulton County	Fulton
+ReportingUnit	Arkansas;Garland County	Garland
+ReportingUnit	Arkansas;Grant County	Grant
+ReportingUnit	Arkansas;Greene County	Greene
+ReportingUnit	Arkansas;Hempstead County	Hempstead
+ReportingUnit	Arkansas;Hot Spring County	Hot Spring
+ReportingUnit	Arkansas;Howard County	Howard
+ReportingUnit	Arkansas;Independence County	Independence
+ReportingUnit	Arkansas;Izard County	Izard
+ReportingUnit	Arkansas;Jackson County	Jackson
+ReportingUnit	Arkansas;Jefferson County	Jefferson
+ReportingUnit	Arkansas;Johnson County	Johnson
+ReportingUnit	Arkansas;Lafayette County	Lafayette
+ReportingUnit	Arkansas;Lawrence County	Lawrence
+ReportingUnit	Arkansas;Lee County	Lee
+ReportingUnit	Arkansas;Lincoln County	Lincoln
+ReportingUnit	Arkansas;Little River County	Little River
+ReportingUnit	Arkansas;Logan County	Logan
+ReportingUnit	Arkansas;Lonoke County	Lonoke
+ReportingUnit	Arkansas;Madison County	Madison
+ReportingUnit	Arkansas;Marion County	Marion
+ReportingUnit	Arkansas;Miller County	Miller
+ReportingUnit	Arkansas;Mississippi County	Mississippi
+ReportingUnit	Arkansas;Monroe County	Monroe
+ReportingUnit	Arkansas;Montgomery County	Montgomery
+ReportingUnit	Arkansas;Nevada County	Nevada
+ReportingUnit	Arkansas;Newton County	Newton
+ReportingUnit	Arkansas;Ouachita County	Ouachita
+ReportingUnit	Arkansas;Perry County	Perry
+ReportingUnit	Arkansas;Phillips County	Phillips
+ReportingUnit	Arkansas;Pike County	Pike
+ReportingUnit	Arkansas;Poinsett County	Poinsett
+ReportingUnit	Arkansas;Polk County	Polk
+ReportingUnit	Arkansas;Pope County	Pope
+ReportingUnit	Arkansas;Prairie County	Prairie
+ReportingUnit	Arkansas;Pulaski County	Pulaski
+ReportingUnit	Arkansas;Randolph County	Randolph
+ReportingUnit	Arkansas;Saline County	Saline
+ReportingUnit	Arkansas;Scott County	Scott
+ReportingUnit	Arkansas;Searcy County	Searcy
+ReportingUnit	Arkansas;Sebastian County	Sebastian
+ReportingUnit	Arkansas;Sevier County	Sevier
+ReportingUnit	Arkansas;Sharp County	Sharp
+ReportingUnit	Arkansas;St Francis County	St Francis
+ReportingUnit	Arkansas;Stone County	Stone
+ReportingUnit	Arkansas;Union County	Union
+ReportingUnit	Arkansas;Van Buren County	Van Buren
+ReportingUnit	Arkansas;Washington County	Washington
+ReportingUnit	Arkansas;White County	White
+ReportingUnit	Arkansas;Woodruff County	Woodruff
+ReportingUnit	Arkansas;Yell County	Yell
+CountItemType	election-day	Election Day
+CountItemType	early	Early Vote
+CountItemType	absentee	Absentee
+CountItemType	provisional	Provisional
+CountItemType	total	Total
+BallotMeasureSelection	Yes	FOR
+BallotMeasureSelection	No	AGAINST
+Candidate	Congressman Rick Crawford	Congressman Rick Crawford
+Candidate	Chintan Desai	Chintan Desai
+Candidate	Elvis Presley	Elvis Presley
+Candidate	Congressman French Hill	Congressman French Hill
+Candidate	Joe Ryne Swafford	Joe Ryne Swafford
+Candidate	Representative Clarke Tucker	Representative Clarke Tucker
+Candidate	Michael J. Kalagias	Michael J. Kalagias
+Candidate	Josh Mahony	Josh Mahony
+Candidate	Congressman Steve Womack	Congressman Steve Womack
+Candidate	Write-In	Write-In
+Candidate	Tom Canada	Tom Canada
+Candidate	Hayden Catherine Shamel	Hayden Catherine Shamel
+Candidate	Representative Bruce Westerman	Representative Bruce Westerman
+Candidate	Jared K. Henderson	Jared K. Henderson
+Candidate	Governor Asa Hutchinson	Governor Asa Hutchinson
+Candidate	Mark West	Mark West
+Candidate	Kerry Hicks	Kerry Hicks
+Candidate	Mike Lee	Mike Lee
+Candidate	Attorney General Leslie Rutledge	Attorney General Leslie Rutledge
+Candidate	David E. Dinwiddie	David E. Dinwiddie
+Candidate	Auditor Andrea Lea	Auditor Andrea Lea
+Candidate	T.J. Campbell	T.J. Campbell
+Candidate	Tommy Land	Tommy Land
+Candidate	Larry Williams	Larry Williams
+Candidate	Anthony Bland	Anthony Bland
+Candidate	Frank Gilbert	Frank Gilbert
+Candidate	Lt. Governor Tim Griffin	Lt. Governor Tim Griffin
+Candidate	Susan Inman	Susan Inman
+Candidate	Christopher Olson	Christopher Olson
+Candidate	John Thurston Commissioner of State Lands	John Thurston Commissioner of State Lands
+Candidate	Ashley Ewald	Ashley Ewald
+Candidate	Treasurer of State Dennis Milligan	Treasurer of State Dennis Milligan
+Candidate	Senator Cecile Bledsoe	Senator Cecile Bledsoe
+Candidate	Jon Comstock	Jon Comstock
+Candidate	Dawn Clemence	Dawn Clemence
+Candidate	Rep. Greg Leding	Rep. Greg Leding
+Candidate	Representative Bob Ballinger	Representative Bob Ballinger
+Candidate	Lee Evans	Lee Evans
+Candidate	Jim Wallace	Jim Wallace
+Candidate	William Whitfield Hyman	William Whitfield Hyman
+Candidate	Representative Mathew Pitsch	Representative Mathew Pitsch
+Candidate	Bobbi Hicks	Bobbi Hicks
+Candidate	Senator Larry Teague	Senator Larry Teague
+Candidate	Michael Colgrove	Michael Colgrove
+Candidate	Senator Bill Sample	Senator Bill Sample
+Candidate	Senator Scott Flippo	Senator Scott Flippo
+Candidate	Kevin Vornheder	Kevin Vornheder
+Candidate	Susi Epperson	Susi Epperson
+Candidate	Representative James Sturch	Representative James Sturch
+Candidate	Melissa Fults	Melissa Fults
+Candidate	Representative Kim Hammer	Representative Kim Hammer
+Candidate	Senator Jason Rapert	Senator Jason Rapert
+Candidate	Maureen Skinner	Maureen Skinner
+Candidate	Wade Andrews	Wade Andrews
+Candidate	State Representative David Fielding	State Representative David Fielding
+Candidate	Don Glover	Don Glover
+Candidate	Ricky E. Lattimore, Sr.	Ricky E. Lattimore, Sr.
+Candidate	Representative Mark McElroy	Representative Mark McElroy
+Candidate	Jason Dobson	Jason Dobson
+Candidate	Representative Chris Richey	Representative Chris Richey
+Candidate	Representative Ken Bragg	Representative Ken Bragg
+Candidate	Wayne Willems	Wayne Willems
+Candidate	Representative Vivian Flowers	Representative Vivian Flowers
+Candidate	Gregory Maxwell	Gregory Maxwell
+Candidate	Representative Justin Gonzales	Representative Justin Gonzales
+Candidate	Jeremy Ross	Jeremy Ross
+Candidate	Stele Wayne James	Stele Wayne James
+Candidate	Representative Marcus E. Richmond	Representative Marcus E. Richmond
+Candidate	Representative Mickey Gates	Representative Mickey Gates
+Candidate	Kevin Rogers	Kevin Rogers
+Candidate	Representative Bruce Cozart	Representative Bruce Cozart
+Candidate	J. Kent Percefull	J. Kent Percefull
+Candidate	Kallen K. Peret	Kallen K. Peret
+Candidate	Alan Bruce Hughes	Alan Bruce Hughes
+Candidate	Representative Laurie Rushing	Representative Laurie Rushing
+Candidate	Jasen Kelly	Jasen Kelly
+Candidate	Dustin M. Parsons	Dustin M. Parsons
+Candidate	Rep. Fred Allen	Rep. Fred Allen
+Candidate	Mitchell Fenton	Mitchell Fenton
+Candidate	Representative Andy Davis	Representative Andy Davis
+Candidate	Randy S. Haun	Randy S. Haun
+Candidate	Jess Mallett	Jess Mallett
+Candidate	Representative Jim Sorvillo	Representative Jim Sorvillo
+Candidate	William J. Barger	William J. Barger
+Candidate	Andrew Collins	Andrew Collins
+Candidate	Judith Goodson	Judith Goodson
+Candidate	Chase Mangiapane	Chase Mangiapane
+Candidate	Representative Carlton Wing	Representative Carlton Wing
+Candidate	Monica D. Ball	Monica D. Ball
+Candidate	State Representative Mark Lowery	State Representative Mark Lowery
+Candidate	Representative Karilyn Brown	Representative Karilyn Brown
+Candidate	Jonathan Wayne Crossley	Jonathan Wayne Crossley
+Candidate	Linda Dyson	Linda Dyson
+Candidate	Mark W. Perry	Mark W. Perry
+Candidate	Representative Les Eaves	Representative Les Eaves
+Candidate	Drew Tanner	Drew Tanner
+Candidate	Craig Christiansen	Craig Christiansen
+Candidate	Representative Michael John Gray	Representative Michael John Gray
+Candidate	Representative Steve Hollowell	Representative Steve Hollowell
+Candidate	Howard (Jr.) Smith, II	Howard (Jr.) Smith, II
+Candidate	Austin W. Jones	Austin W. Jones
+Candidate	Representative Johnny Rye	Representative Johnny Rye
+Candidate	Representative Monte Hodges	Representative Monte Hodges
+Candidate	Gary Tobar	Gary Tobar
+Candidate	Ryan Carter	Ryan Carter
+Candidate	Representative Joe Jett	Representative Joe Jett
+Candidate	Representative Scott Baltz	Representative Scott Baltz
+Candidate	Marsh Davis	Marsh Davis
+Candidate	Representative Rick Beck	Representative Rick Beck
+Candidate	Michael J. Roetzel	Michael J. Roetzel
+Candidate	Representative Stephen Meeks	Representative Stephen Meeks
+Candidate	Sandra Richter	Sandra Richter
+Candidate	Eddie L. King	Eddie L. King
+Candidate	Representative Aaron Pilkington	Representative Aaron Pilkington
+Candidate	Alderman Andy Hawkins	Alderman Andy Hawkins
+Candidate	Justice of the Peace Spencer Hawks	Justice of the Peace Spencer Hawks
+Candidate	Joe Cloud	Joe Cloud
+Candidate	Nathan George	Nathan George
+Candidate	State Representative Mary Bentley	State Representative Mary Bentley
+Candidate	Dana Bonham	Dana Bonham
+Candidate	Representative Justin Boyd	Representative Justin Boyd
+Candidate	Stephen Edwards	Stephen Edwards
+Candidate	Luke Pruitt	Luke Pruitt
+Candidate	Casey D. Copeland	Casey D. Copeland
+Candidate	Representative Charlene Fite	Representative Charlene Fite
+Candidate	Lou Reed Sharp	Lou Reed Sharp
+Candidate	Representative Bruce Coleman	Representative Bruce Coleman
+Candidate	Donald R. McKinney	Donald R. McKinney
+Candidate	Representative Charlie Collins	Representative Charlie Collins
+Candidate	Denise Garner	Denise Garner
+Candidate	Representative Robin Lundstrum	Representative Robin Lundstrum
+Candidate	Kelly Scott Unger	Kelly Scott Unger
+Candidate	Megan Godfrey	Megan Godfrey
+Candidate	Representative Jeff Williams	Representative Jeff Williams
+Candidate	Representative Jana Della Rosa	Representative Jana Della Rosa
+Candidate	Kati McFarland	Kati McFarland
+Candidate	Chris Birch	Chris Birch
+Candidate	Gayla Hendren McKenzie	Gayla Hendren McKenzie
+Candidate	Gayatri Jane Agnew	Gayatri Jane Agnew
+Candidate	State Representative Jim Dotson	State Representative Jim Dotson
+Candidate	Jene Huffman-Gilreath	Jene Huffman-Gilreath
+Candidate	Representative Rebecca Petty	Representative Rebecca Petty
+Candidate	Representative Austin McCollum	Representative Austin McCollum
+Candidate	Celeste Williams	Celeste Williams
+Candidate	Christie Craig	Christie Craig
+Candidate	Representative Grant Hodges	Representative Grant Hodges
+Candidate	Harlan Breaux	Harlan Breaux
+Candidate	Gary L. Morris	Gary L. Morris
+Candidate	State Supreme Court Justice Courtney Goodson	State Supreme Court Justice Courtney Goodson
+Candidate	David Sterling	David Sterling
+Candidate	Carol Crews	Carol Crews
+Candidate	Zach Throneberry	Zach Throneberry
+Candidate	"Margaret ""Peggy"" Egan"	"Margaret ""Peggy"" Egan"
+Candidate	Melanie Martin	Melanie Martin
+Candidate	FOR	FOR
+Candidate	AGAINST	AGAINST
+Candidate	Billy E. Blann	Billy E. Blann
+Candidate	Robert Henderson	Robert Henderson
+Candidate	Patrick D. Frazier	Patrick D. Frazier
+Candidate	Paul D. Choate	Paul D. Choate
+Candidate	Penny Owens	Penny Owens
+Candidate	Amy Linder	Amy Linder
+Candidate	Cheryl E. Cochran-Wilson	Cheryl E. Cochran-Wilson
+Candidate	Martavious Carrigan	Martavious Carrigan
+Candidate	Stormey Primm	Stormey Primm
+Candidate	Shannon County Clerk Phillips	Shannon County Clerk Phillips
+Candidate	Goldie Hilburn	Goldie Hilburn
+Candidate	Mike Loftin	Mike Loftin
+Candidate	Cliff Justice of the Peace Preston	Cliff Justice of the Peace Preston
+Candidate	Mike Dumas	Mike Dumas
+Candidate	Steven Ward	Steven Ward
+Candidate	Jesse M. Amason	Jesse M. Amason
+Candidate	Bill Yutzy	Bill Yutzy
+Candidate	Herman Curley	Herman Curley
+Candidate	BIll Luther	BIll Luther
+Candidate	Trang My Lu	Trang My Lu
+Candidate	Veronica Smith-Creer	Veronica Smith-Creer
+Candidate	Mary Seymore	Mary Seymore
+Candidate	Linda J. Newbury	Linda J. Newbury
+Candidate	David Lee	David Lee
+Candidate	Tony Cole	Tony Cole
+Candidate	Larry Hodge	Larry Hodge
+Candidate	Larry New	Larry New
+Candidate	Allen Simmons	Allen Simmons
+Candidate	Jim Crotty	Jim Crotty
+Candidate	Donald R. Hopkins Jr.	Donald R. Hopkins Jr.
+Candidate	Bobby Neal	Bobby Neal
+Candidate	Daryell Howell	Daryell Howell
+Candidate	Danny Paul Farley	Danny Paul Farley
+Candidate	Jeffrey D. Hedges	Jeffrey D. Hedges
+Candidate	Michael Bennet	Michael Bennet
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Michael R. Bloomberg	Michael R. Bloomberg
+Candidate	Cory Booker	Cory Booker
+Candidate	Mosie Boyd	Mosie Boyd
+Candidate	Steve Bullock	Steve Bullock
+Candidate	Pete Buttigieg	Pete Buttigieg
+Candidate	Julian Castro	Julian Castro
+Candidate	John K. Delaney	John K. Delaney
+Candidate	Tulsi Gabbard	Tulsi Gabbard
+Candidate	Kamala Harris	Kamala Harris
+Candidate	Amy Klobuchar	Amy Klobuchar
+Candidate	Bernie Sanders	Bernie Sanders
+Candidate	Joe Sestak	Joe Sestak
+Candidate	Tom Steyer	Tom Steyer
+Candidate	Elizabeth Warren	Elizabeth Warren
+Candidate	Marianne Williamson	Marianne Williamson
+Candidate	Andrew Yang	Andrew Yang
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Bill Weld	Bill Weld
+Candidate	Senator Alan Clark	Senator Alan Clark
+Candidate	Jeff Crow	Jeff Crow
+Candidate	State Senator John Cooper	State Senator John Cooper
+Candidate	Representative Dan Sullivan	Representative Dan Sullivan
+Candidate	Efrem Elliott	Efrem Elliott
+Candidate	Senator Stephanie Flowers	Senator Stephanie Flowers
+Candidate	Bill Dunklin	Bill Dunklin
+Candidate	Ben Gilmore	Ben Gilmore
+Candidate	Keidra Burrell	Keidra Burrell
+Candidate	Garry L. Smith	Garry L. Smith
+Candidate	Jim Reynolds	Jim Reynolds
+Candidate	Representative Marcus Richmond	Representative Marcus Richmond
+Candidate	Justice of the Peace Richard McGrew	Justice of the Peace Richard McGrew
+Candidate	Richard Alvin Midkiff	Richard Alvin Midkiff
+Candidate	Jack Wells	Jack Wells
+Candidate	Judy Bowers	Judy Bowers
+Candidate	Rick McClure	Rick McClure
+Candidate	Lorna Nobles	Lorna Nobles
+Candidate	Tony Furman	Tony Furman
+Candidate	Marietta McClure	Marietta McClure
+Candidate	Keith Brooks	Keith Brooks
+Candidate	Councilman RJ Hawk	Councilman RJ Hawk
+Candidate	Ryan D. Davis	Ryan D. Davis
+Candidate	Lee D. Miller	Lee D. Miller
+Candidate	Joy C. Springer	Joy C. Springer
+Candidate	State Representative Denise Ennett	State Representative Denise Ennett
+Candidate	Russell Williams III	Russell Williams III
+Candidate	Karyn Maynard	Karyn Maynard
+Candidate	David Ray	David Ray
+Candidate	Jannie M. Cotton	Jannie M. Cotton
+Candidate	Zach Randall	Zach Randall
+Candidate	Councilman Bobby Long	Councilman Bobby Long
+Candidate	Mayor Jon Milligan	Mayor Jon Milligan
+Candidate	Cole Peck	Cole Peck
+Candidate	Representative Brandt Smith	Representative Brandt Smith
+Candidate	Ken Yarbrough	Ken Yarbrough
+Candidate	Shawn Bates	Shawn Bates
+Candidate	Representative Jon S. Eubanks	Representative Jon S. Eubanks
+Candidate	Curtis J. Varnell	Curtis J. Varnell
+Candidate	State Representative Jana Della Rosa	State Representative Jana Della Rosa
+Candidate	Chris Latimer	Chris Latimer
+Candidate	Kendon Underwood	Kendon Underwood
+Candidate	Jorge Becker	Jorge Becker
+Candidate	Delia Haak	Delia Haak
+Candidate	Scott Richardson	Scott Richardson
+Candidate	John P. Carr	John P. Carr
+Candidate	Adrienne Woods	Adrienne Woods
+Candidate	Paige Dillard Evans	Paige Dillard Evans
+Candidate	Representative Nelda Speaks	Representative Nelda Speaks
+Candidate	Barbara Womack Webb	Barbara Womack Webb
+Candidate	Judge Morgan 'Chip' Welch	Judge Morgan 'Chip' Welch
+Candidate	Prosecuting Attorney Stephanie Potter Barrett	Prosecuting Attorney Stephanie Potter Barrett
+Candidate	Emily White	Emily White
+Candidate	Court of Appeals Judge Mark Klappenbach	Court of Appeals Judge Mark Klappenbach
+Candidate	James McMenis	James McMenis
+Candidate	Gary J. Mitchusson	Gary J. Mitchusson
+Candidate	Judge Christopher Morledge	Judge Christopher Morledge
+Candidate	Judge David Carruth	Judge David Carruth
+Candidate	Andrew Coleman	Andrew Coleman
+Candidate	Kathie Hess	Kathie Hess
+Candidate	Skip Mooney Jr.	Skip Mooney Jr.
+Candidate	Tom Young	Tom Young
+Candidate	Mary Lile Broadaway	Mary Lile Broadaway
+Candidate	R. Scott Troutt	R. Scott Troutt
+Candidate	Kimberly Boling Bibb	Kimberly Boling Bibb
+Candidate	Matthew Coe	Matthew Coe
+Candidate	Prosecuting Attorney Scott Ellington	Prosecuting Attorney Scott Ellington
+Candidate	Scott Willhite	Scott Willhite
+Candidate	Joe Grider	Joe Grider
+Candidate	Timothy F. Watson, Sr.	Timothy F. Watson, Sr.
+Candidate	Judge Adam Weeks	Judge Adam Weeks
+Candidate	Hollie Wilson	Hollie Wilson
+Candidate	Robert L. Depper III	Robert L. Depper III
+Candidate	Judge Stacey Zimmerman	Judge Stacey Zimmerman
+Candidate	Mieka Hatcher	Mieka Hatcher
+Candidate	Brian Hogue	Brian Hogue
+Candidate	Conrad Odom	Conrad Odom
+Candidate	Tim Snively	Tim Snively
+Candidate	Diane Warren	Diane Warren
+Candidate	James Dunham	James Dunham
+Candidate	Judge William 'Bill' Pearson	Judge William 'Bill' Pearson
+Candidate	Hugh Finkelstein	Hugh Finkelstein
+Candidate	Casey Tucker	Casey Tucker
+Candidate	Tjuana Byrd	Tjuana Byrd
+Candidate	Suzanne Lumpkin	Suzanne Lumpkin
+Candidate	LaTonya Laird Austin	LaTonya Laird Austin
+Candidate	Judge Andy Gill	Judge Andy Gill
+Candidate	Shanice Johnson	Shanice Johnson
+Candidate	Lott Rolfe	Lott Rolfe
+Candidate	Jonathan Q. Warren	Jonathan Q. Warren
+Candidate	Andrew 'Andy' Ballard	Andrew 'Andy' Ballard
+Candidate	Tom Barron	Tom Barron
+Candidate	Shawn Johnson	Shawn Johnson
+Candidate	Amy Dunn Johnson	Amy Dunn Johnson
+Candidate	Gary Rogers	Gary Rogers
+Candidate	Jay Shue	Jay Shue
+Candidate	Margaret Dobson	Margaret Dobson
+Candidate	Stephen Shirron	Stephen Shirron
+Candidate	City Attorney James A. Hamilton	City Attorney James A. Hamilton
+Candidate	Tim Leonard	Tim Leonard
+Candidate	Crews Puryear	Crews Puryear
+Candidate	Laurie Bridewell	Laurie Bridewell
+Candidate	Priscilla Copelin-Abernathy	Priscilla Copelin-Abernathy
+Candidate	Frank Spain	Frank Spain
+Candidate	Therese Free	Therese Free
+Candidate	Mac Norton	Mac Norton
+Candidate	Tom Owens	Tom Owens
+Candidate	Greg Magness	Greg Magness
+Candidate	Phil Milligan	Phil Milligan
+Candidate	Rita Howard Watkins	Rita Howard Watkins
+Candidate	Dianna Hewitt Ladd	Dianna Hewitt Ladd
+Candidate	Sam Terry	Sam Terry
+Candidate	Daniel Brock	Daniel Brock
+Candidate	Carla Fuller	Carla Fuller
+Candidate	Shane Ethridge	Shane Ethridge
+Candidate	Judge Ralph Ohm	Judge Ralph Ohm
+Candidate	Cecilia Dyer	Cecilia Dyer
+Candidate	Brian Johnson	Brian Johnson
+Candidate	Judge Wade Naramore	Judge Wade Naramore
+Candidate	Patrick McDaniel	Patrick McDaniel
+Candidate	Prosecuting Attorney Andy Riner	Prosecuting Attorney Andy Riner
+Candidate	Christine Horwart	Christine Horwart
+Candidate	Tony Noblin	Tony Noblin
+Candidate	Bobby Digby	Bobby Digby
+Candidate	City Attorney Josh Farmer	City Attorney Josh Farmer
+Candidate	City Attorney Brent Houston	City Attorney Brent Houston
+Candidate	Josh Newton	Josh Newton
+Candidate	Rinda Baker	Rinda Baker
+Candidate	Kevin R. Holmes	Kevin R. Holmes
+Candidate	A.J. Anglin	A.J. Anglin
+Candidate	David Bailey	David Bailey
+Candidate	David Dero Phillips	David Dero Phillips
+Candidate	Mark N. Scalise	Mark N. Scalise
+Candidate	Terra Stephenson	Terra Stephenson
+Candidate	Amy Grimes	Amy Grimes
+Candidate	Judge Jim O'Hern	Judge Jim O'Hern
+Candidate	Just Josh Bugeja	Just Josh Bugeja
+Candidate	Jason Hunter	Jason Hunter
+Candidate	Wendy Sharum	Wendy Sharum
+Candidate	Judge Claire Borengasser	Judge Claire Borengasser
+Candidate	Michael Gean Pierce	Michael Gean Pierce
+Candidate	R. Kevin Barham	R. Kevin Barham
+Candidate	State Representative Sarah Capp	State Representative Sarah Capp
+Candidate	Judge Paul A. Efurd	Judge Paul A. Efurd
+Candidate	Beth Wright	Beth Wright
+Candidate	District Judge Chris Carnahan	District Judge Chris Carnahan
+Candidate	Lorie Mason Jordan	Lorie Mason Jordan
+Candidate	Chris Jester	Chris Jester
+Candidate	Judge Mark R. Johnson	Judge Mark R. Johnson
+Candidate	Judge Carol Collins	Judge Carol Collins
+Candidate	Judge Dale Lipsmeyer	Judge Dale Lipsmeyer
+Candidate	District Judge Brian Mueller	District Judge Brian Mueller
+Candidate	Prosecuting Attorney Henry Boyce	Prosecuting Attorney Henry Boyce
+Candidate	Judge Barbara A. Griffin	Judge Barbara A. Griffin
+Candidate	Judge Donald Betterton	Judge Donald Betterton
+Candidate	Catherine Palmer Dean	Catherine Palmer Dean
+Candidate	Kandice Bell	Kandice Bell
+Candidate	Judge John Kearney	Judge John Kearney
+Candidate	Efrem Neely	Efrem Neely
+Candidate	Peggy (Margaret) Egan	Peggy (Margaret) Egan
+Candidate	Judge Vic Fleming	Judge Vic Fleming
+Candidate	Clay Ford	Clay Ford
+Candidate	Brent Standridge	Brent Standridge
+Candidate	Amburr Drury	Amburr Drury
+Candidate	Billy Jack Gibson	Billy Jack Gibson
+Candidate	Jace Roberts	Jace Roberts
+Candidate	Tommy Potter	Tommy Potter
+Candidate	Jeffery C. Sams	Jeffery C. Sams
+Candidate	Judge David Graham	Judge David Graham
+Candidate	Ebony Gulley	Ebony Gulley
+Candidate	Mark Steven Fraiser	Mark Steven Fraiser
+Candidate	Meredith Switzer	Meredith Switzer
+Party	Democratic Party	DEM
+Party	Republican Party	REP
+Party	Libertarian Party	LIB

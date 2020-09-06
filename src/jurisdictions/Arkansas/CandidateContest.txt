@@ -1,0 +1,593 @@
+Name	NumberElected	Office	PrimaryParty
+AR House District 1	1	AR House District 1	
+AR House District 2	1	AR House District 2	
+AR House District 3	1	AR House District 3	
+AR House District 4	1	AR House District 4	
+AR House District 5	1	AR House District 5	
+AR House District 6	1	AR House District 6	
+AR House District 7	1	AR House District 7	
+AR House District 8	1	AR House District 8	
+AR House District 9	1	AR House District 9	
+AR House District 10	1	AR House District 10	
+AR House District 11	1	AR House District 11	
+AR House District 12	1	AR House District 12	
+AR House District 13	1	AR House District 13	
+AR House District 14	1	AR House District 14	
+AR House District 15	1	AR House District 15	
+AR House District 16	1	AR House District 16	
+AR House District 17	1	AR House District 17	
+AR House District 18	1	AR House District 18	
+AR House District 19	1	AR House District 19	
+AR House District 20	1	AR House District 20	
+AR House District 21	1	AR House District 21	
+AR House District 22	1	AR House District 22	
+AR House District 23	1	AR House District 23	
+AR House District 24	1	AR House District 24	
+AR House District 25	1	AR House District 25	
+AR House District 26	1	AR House District 26	
+AR House District 27	1	AR House District 27	
+AR House District 28	1	AR House District 28	
+AR House District 29	1	AR House District 29	
+AR House District 30	1	AR House District 30	
+AR House District 31	1	AR House District 31	
+AR House District 32	1	AR House District 32	
+AR House District 33	1	AR House District 33	
+AR House District 34	1	AR House District 34	
+AR House District 35	1	AR House District 35	
+AR House District 36	1	AR House District 36	
+AR House District 37	1	AR House District 37	
+AR House District 38	1	AR House District 38	
+AR House District 39	1	AR House District 39	
+AR House District 40	1	AR House District 40	
+AR House District 41	1	AR House District 41	
+AR House District 42	1	AR House District 42	
+AR House District 43	1	AR House District 43	
+AR House District 44	1	AR House District 44	
+AR House District 45	1	AR House District 45	
+AR House District 46	1	AR House District 46	
+AR House District 47	1	AR House District 47	
+AR House District 48	1	AR House District 48	
+AR House District 49	1	AR House District 49	
+AR House District 50	1	AR House District 50	
+AR House District 51	1	AR House District 51	
+AR House District 52	1	AR House District 52	
+AR House District 53	1	AR House District 53	
+AR House District 54	1	AR House District 54	
+AR House District 55	1	AR House District 55	
+AR House District 56	1	AR House District 56	
+AR House District 57	1	AR House District 57	
+AR House District 58	1	AR House District 58	
+AR House District 59	1	AR House District 59	
+AR House District 60	1	AR House District 60	
+AR House District 61	1	AR House District 61	
+AR House District 62	1	AR House District 62	
+AR House District 63	1	AR House District 63	
+AR House District 64	1	AR House District 64	
+AR House District 65	1	AR House District 65	
+AR House District 66	1	AR House District 66	
+AR House District 67	1	AR House District 67	
+AR House District 68	1	AR House District 68	
+AR House District 69	1	AR House District 69	
+AR House District 70	1	AR House District 70	
+AR House District 71	1	AR House District 71	
+AR House District 72	1	AR House District 72	
+AR House District 73	1	AR House District 73	
+AR House District 74	1	AR House District 74	
+AR House District 75	1	AR House District 75	
+AR House District 76	1	AR House District 76	
+AR House District 77	1	AR House District 77	
+AR House District 78	1	AR House District 78	
+AR House District 79	1	AR House District 79	
+AR House District 80	1	AR House District 80	
+AR House District 81	1	AR House District 81	
+AR House District 82	1	AR House District 82	
+AR House District 83	1	AR House District 83	
+AR House District 84	1	AR House District 84	
+AR House District 85	1	AR House District 85	
+AR House District 86	1	AR House District 86	
+AR House District 87	1	AR House District 87	
+AR House District 88	1	AR House District 88	
+AR House District 89	1	AR House District 89	
+AR House District 90	1	AR House District 90	
+AR House District 91	1	AR House District 91	
+AR House District 92	1	AR House District 92	
+AR House District 93	1	AR House District 93	
+AR House District 94	1	AR House District 94	
+AR House District 95	1	AR House District 95	
+AR House District 96	1	AR House District 96	
+AR House District 97	1	AR House District 97	
+AR House District 98	1	AR House District 98	
+AR House District 99	1	AR House District 99	
+AR House District 100	1	AR House District 100	
+AR Senate District 1	1	AR Senate District 1	
+AR Senate District 2	1	AR Senate District 2	
+AR Senate District 3	1	AR Senate District 3	
+AR Senate District 4	1	AR Senate District 4	
+AR Senate District 5	1	AR Senate District 5	
+AR Senate District 6	1	AR Senate District 6	
+AR Senate District 7	1	AR Senate District 7	
+AR Senate District 8	1	AR Senate District 8	
+AR Senate District 9	1	AR Senate District 9	
+AR Senate District 10	1	AR Senate District 10	
+AR Senate District 11	1	AR Senate District 11	
+AR Senate District 12	1	AR Senate District 12	
+AR Senate District 13	1	AR Senate District 13	
+AR Senate District 14	1	AR Senate District 14	
+AR Senate District 15	1	AR Senate District 15	
+AR Senate District 16	1	AR Senate District 16	
+AR Senate District 17	1	AR Senate District 17	
+AR Senate District 18	1	AR Senate District 18	
+AR Senate District 19	1	AR Senate District 19	
+AR Senate District 20	1	AR Senate District 20	
+AR Senate District 21	1	AR Senate District 21	
+AR Senate District 22	1	AR Senate District 22	
+AR Senate District 23	1	AR Senate District 23	
+AR Senate District 24	1	AR Senate District 24	
+AR Senate District 25	1	AR Senate District 25	
+AR Senate District 26	1	AR Senate District 26	
+AR Senate District 27	1	AR Senate District 27	
+AR Senate District 28	1	AR Senate District 28	
+AR Senate District 29	1	AR Senate District 29	
+AR Senate District 30	1	AR Senate District 30	
+AR Senate District 31	1	AR Senate District 31	
+AR Senate District 32	1	AR Senate District 32	
+AR Senate District 33	1	AR Senate District 33	
+AR Senate District 34	1	AR Senate District 34	
+AR Senate District 35	1	AR Senate District 35	
+US House AR District 1	1	US House AR District 1	
+US House AR District 2	1	US House AR District 2	
+US House AR District 3	1	US House AR District 3	
+US House AR District 4	1	US House AR District 4	
+US President (AR)	1	US President (AR)	
+AR Governor	1	AR Governor	
+US Senate AR	1	US Senate AR	
+AR Attorney General	1	AR Attorney General	
+AR Lieutenant Governor	1	AR Lieutenant Governor	
+AR State Treasurer	1	AR State Treasurer	
+AR Secretary of State	1	AR Secretary of State	
+AR Commissioner of State Lands	1	AR Commissioner of State Lands	
+AR Auditor of State	1	AR Auditor of State	
+AR House District 1 (Democratic Party)	1	AR House District 1	Democratic Party
+AR House District 2 (Democratic Party)	1	AR House District 2	Democratic Party
+AR House District 3 (Democratic Party)	1	AR House District 3	Democratic Party
+AR House District 4 (Democratic Party)	1	AR House District 4	Democratic Party
+AR House District 5 (Democratic Party)	1	AR House District 5	Democratic Party
+AR House District 6 (Democratic Party)	1	AR House District 6	Democratic Party
+AR House District 7 (Democratic Party)	1	AR House District 7	Democratic Party
+AR House District 8 (Democratic Party)	1	AR House District 8	Democratic Party
+AR House District 9 (Democratic Party)	1	AR House District 9	Democratic Party
+AR House District 10 (Democratic Party)	1	AR House District 10	Democratic Party
+AR House District 11 (Democratic Party)	1	AR House District 11	Democratic Party
+AR House District 12 (Democratic Party)	1	AR House District 12	Democratic Party
+AR House District 13 (Democratic Party)	1	AR House District 13	Democratic Party
+AR House District 14 (Democratic Party)	1	AR House District 14	Democratic Party
+AR House District 15 (Democratic Party)	1	AR House District 15	Democratic Party
+AR House District 16 (Democratic Party)	1	AR House District 16	Democratic Party
+AR House District 17 (Democratic Party)	1	AR House District 17	Democratic Party
+AR House District 18 (Democratic Party)	1	AR House District 18	Democratic Party
+AR House District 19 (Democratic Party)	1	AR House District 19	Democratic Party
+AR House District 20 (Democratic Party)	1	AR House District 20	Democratic Party
+AR House District 21 (Democratic Party)	1	AR House District 21	Democratic Party
+AR House District 22 (Democratic Party)	1	AR House District 22	Democratic Party
+AR House District 23 (Democratic Party)	1	AR House District 23	Democratic Party
+AR House District 24 (Democratic Party)	1	AR House District 24	Democratic Party
+AR House District 25 (Democratic Party)	1	AR House District 25	Democratic Party
+AR House District 26 (Democratic Party)	1	AR House District 26	Democratic Party
+AR House District 27 (Democratic Party)	1	AR House District 27	Democratic Party
+AR House District 28 (Democratic Party)	1	AR House District 28	Democratic Party
+AR House District 29 (Democratic Party)	1	AR House District 29	Democratic Party
+AR House District 30 (Democratic Party)	1	AR House District 30	Democratic Party
+AR House District 31 (Democratic Party)	1	AR House District 31	Democratic Party
+AR House District 32 (Democratic Party)	1	AR House District 32	Democratic Party
+AR House District 33 (Democratic Party)	1	AR House District 33	Democratic Party
+AR House District 34 (Democratic Party)	1	AR House District 34	Democratic Party
+AR House District 35 (Democratic Party)	1	AR House District 35	Democratic Party
+AR House District 36 (Democratic Party)	1	AR House District 36	Democratic Party
+AR House District 37 (Democratic Party)	1	AR House District 37	Democratic Party
+AR House District 38 (Democratic Party)	1	AR House District 38	Democratic Party
+AR House District 39 (Democratic Party)	1	AR House District 39	Democratic Party
+AR House District 40 (Democratic Party)	1	AR House District 40	Democratic Party
+AR House District 41 (Democratic Party)	1	AR House District 41	Democratic Party
+AR House District 42 (Democratic Party)	1	AR House District 42	Democratic Party
+AR House District 43 (Democratic Party)	1	AR House District 43	Democratic Party
+AR House District 44 (Democratic Party)	1	AR House District 44	Democratic Party
+AR House District 45 (Democratic Party)	1	AR House District 45	Democratic Party
+AR House District 46 (Democratic Party)	1	AR House District 46	Democratic Party
+AR House District 47 (Democratic Party)	1	AR House District 47	Democratic Party
+AR House District 48 (Democratic Party)	1	AR House District 48	Democratic Party
+AR House District 49 (Democratic Party)	1	AR House District 49	Democratic Party
+AR House District 50 (Democratic Party)	1	AR House District 50	Democratic Party
+AR House District 51 (Democratic Party)	1	AR House District 51	Democratic Party
+AR House District 52 (Democratic Party)	1	AR House District 52	Democratic Party
+AR House District 53 (Democratic Party)	1	AR House District 53	Democratic Party
+AR House District 54 (Democratic Party)	1	AR House District 54	Democratic Party
+AR House District 55 (Democratic Party)	1	AR House District 55	Democratic Party
+AR House District 56 (Democratic Party)	1	AR House District 56	Democratic Party
+AR House District 57 (Democratic Party)	1	AR House District 57	Democratic Party
+AR House District 58 (Democratic Party)	1	AR House District 58	Democratic Party
+AR House District 59 (Democratic Party)	1	AR House District 59	Democratic Party
+AR House District 60 (Democratic Party)	1	AR House District 60	Democratic Party
+AR House District 61 (Democratic Party)	1	AR House District 61	Democratic Party
+AR House District 62 (Democratic Party)	1	AR House District 62	Democratic Party
+AR House District 63 (Democratic Party)	1	AR House District 63	Democratic Party
+AR House District 64 (Democratic Party)	1	AR House District 64	Democratic Party
+AR House District 65 (Democratic Party)	1	AR House District 65	Democratic Party
+AR House District 66 (Democratic Party)	1	AR House District 66	Democratic Party
+AR House District 67 (Democratic Party)	1	AR House District 67	Democratic Party
+AR House District 68 (Democratic Party)	1	AR House District 68	Democratic Party
+AR House District 69 (Democratic Party)	1	AR House District 69	Democratic Party
+AR House District 70 (Democratic Party)	1	AR House District 70	Democratic Party
+AR House District 71 (Democratic Party)	1	AR House District 71	Democratic Party
+AR House District 72 (Democratic Party)	1	AR House District 72	Democratic Party
+AR House District 73 (Democratic Party)	1	AR House District 73	Democratic Party
+AR House District 74 (Democratic Party)	1	AR House District 74	Democratic Party
+AR House District 75 (Democratic Party)	1	AR House District 75	Democratic Party
+AR House District 76 (Democratic Party)	1	AR House District 76	Democratic Party
+AR House District 77 (Democratic Party)	1	AR House District 77	Democratic Party
+AR House District 78 (Democratic Party)	1	AR House District 78	Democratic Party
+AR House District 79 (Democratic Party)	1	AR House District 79	Democratic Party
+AR House District 80 (Democratic Party)	1	AR House District 80	Democratic Party
+AR House District 81 (Democratic Party)	1	AR House District 81	Democratic Party
+AR House District 82 (Democratic Party)	1	AR House District 82	Democratic Party
+AR House District 83 (Democratic Party)	1	AR House District 83	Democratic Party
+AR House District 84 (Democratic Party)	1	AR House District 84	Democratic Party
+AR House District 85 (Democratic Party)	1	AR House District 85	Democratic Party
+AR House District 86 (Democratic Party)	1	AR House District 86	Democratic Party
+AR House District 87 (Democratic Party)	1	AR House District 87	Democratic Party
+AR House District 88 (Democratic Party)	1	AR House District 88	Democratic Party
+AR House District 89 (Democratic Party)	1	AR House District 89	Democratic Party
+AR House District 90 (Democratic Party)	1	AR House District 90	Democratic Party
+AR House District 91 (Democratic Party)	1	AR House District 91	Democratic Party
+AR House District 92 (Democratic Party)	1	AR House District 92	Democratic Party
+AR House District 93 (Democratic Party)	1	AR House District 93	Democratic Party
+AR House District 94 (Democratic Party)	1	AR House District 94	Democratic Party
+AR House District 95 (Democratic Party)	1	AR House District 95	Democratic Party
+AR House District 96 (Democratic Party)	1	AR House District 96	Democratic Party
+AR House District 97 (Democratic Party)	1	AR House District 97	Democratic Party
+AR House District 98 (Democratic Party)	1	AR House District 98	Democratic Party
+AR House District 99 (Democratic Party)	1	AR House District 99	Democratic Party
+AR House District 100 (Democratic Party)	1	AR House District 100	Democratic Party
+AR Senate District 1 (Democratic Party)	1	AR Senate District 1	Democratic Party
+AR Senate District 2 (Democratic Party)	1	AR Senate District 2	Democratic Party
+AR Senate District 3 (Democratic Party)	1	AR Senate District 3	Democratic Party
+AR Senate District 4 (Democratic Party)	1	AR Senate District 4	Democratic Party
+AR Senate District 5 (Democratic Party)	1	AR Senate District 5	Democratic Party
+AR Senate District 6 (Democratic Party)	1	AR Senate District 6	Democratic Party
+AR Senate District 7 (Democratic Party)	1	AR Senate District 7	Democratic Party
+AR Senate District 8 (Democratic Party)	1	AR Senate District 8	Democratic Party
+AR Senate District 9 (Democratic Party)	1	AR Senate District 9	Democratic Party
+AR Senate District 10 (Democratic Party)	1	AR Senate District 10	Democratic Party
+AR Senate District 11 (Democratic Party)	1	AR Senate District 11	Democratic Party
+AR Senate District 12 (Democratic Party)	1	AR Senate District 12	Democratic Party
+AR Senate District 13 (Democratic Party)	1	AR Senate District 13	Democratic Party
+AR Senate District 14 (Democratic Party)	1	AR Senate District 14	Democratic Party
+AR Senate District 15 (Democratic Party)	1	AR Senate District 15	Democratic Party
+AR Senate District 16 (Democratic Party)	1	AR Senate District 16	Democratic Party
+AR Senate District 17 (Democratic Party)	1	AR Senate District 17	Democratic Party
+AR Senate District 18 (Democratic Party)	1	AR Senate District 18	Democratic Party
+AR Senate District 19 (Democratic Party)	1	AR Senate District 19	Democratic Party
+AR Senate District 20 (Democratic Party)	1	AR Senate District 20	Democratic Party
+AR Senate District 21 (Democratic Party)	1	AR Senate District 21	Democratic Party
+AR Senate District 22 (Democratic Party)	1	AR Senate District 22	Democratic Party
+AR Senate District 23 (Democratic Party)	1	AR Senate District 23	Democratic Party
+AR Senate District 24 (Democratic Party)	1	AR Senate District 24	Democratic Party
+AR Senate District 25 (Democratic Party)	1	AR Senate District 25	Democratic Party
+AR Senate District 26 (Democratic Party)	1	AR Senate District 26	Democratic Party
+AR Senate District 27 (Democratic Party)	1	AR Senate District 27	Democratic Party
+AR Senate District 28 (Democratic Party)	1	AR Senate District 28	Democratic Party
+AR Senate District 29 (Democratic Party)	1	AR Senate District 29	Democratic Party
+AR Senate District 30 (Democratic Party)	1	AR Senate District 30	Democratic Party
+AR Senate District 31 (Democratic Party)	1	AR Senate District 31	Democratic Party
+AR Senate District 32 (Democratic Party)	1	AR Senate District 32	Democratic Party
+AR Senate District 33 (Democratic Party)	1	AR Senate District 33	Democratic Party
+AR Senate District 34 (Democratic Party)	1	AR Senate District 34	Democratic Party
+AR Senate District 35 (Democratic Party)	1	AR Senate District 35	Democratic Party
+US House AR District 1 (Democratic Party)	1	US House AR District 1	Democratic Party
+US House AR District 2 (Democratic Party)	1	US House AR District 2	Democratic Party
+US House AR District 3 (Democratic Party)	1	US House AR District 3	Democratic Party
+US House AR District 4 (Democratic Party)	1	US House AR District 4	Democratic Party
+US President (AR) (Democratic Party)	1	US President (AR)	Democratic Party
+AR Governor (Democratic Party)	1	AR Governor	Democratic Party
+US Senate AR (Democratic Party)	1	US Senate AR	Democratic Party
+AR Attorney General (Democratic Party)	1	AR Attorney General	Democratic Party
+AR Lieutenant Governor (Democratic Party)	1	AR Lieutenant Governor	Democratic Party
+AR State Treasurer (Democratic Party)	1	AR State Treasurer	Democratic Party
+AR Secretary of State (Democratic Party)	1	AR Secretary of State	Democratic Party
+AR Commissioner of State Lands (Democratic Party)	1	AR Commissioner of State Lands	Democratic Party
+AR Auditor of State (Democratic Party)	1	AR Auditor of State	Democratic Party
+AR House District 1 (Republican Party)	1	AR House District 1	Republican Party
+AR House District 2 (Republican Party)	1	AR House District 2	Republican Party
+AR House District 3 (Republican Party)	1	AR House District 3	Republican Party
+AR House District 4 (Republican Party)	1	AR House District 4	Republican Party
+AR House District 5 (Republican Party)	1	AR House District 5	Republican Party
+AR House District 6 (Republican Party)	1	AR House District 6	Republican Party
+AR House District 7 (Republican Party)	1	AR House District 7	Republican Party
+AR House District 8 (Republican Party)	1	AR House District 8	Republican Party
+AR House District 9 (Republican Party)	1	AR House District 9	Republican Party
+AR House District 10 (Republican Party)	1	AR House District 10	Republican Party
+AR House District 11 (Republican Party)	1	AR House District 11	Republican Party
+AR House District 12 (Republican Party)	1	AR House District 12	Republican Party
+AR House District 13 (Republican Party)	1	AR House District 13	Republican Party
+AR House District 14 (Republican Party)	1	AR House District 14	Republican Party
+AR House District 15 (Republican Party)	1	AR House District 15	Republican Party
+AR House District 16 (Republican Party)	1	AR House District 16	Republican Party
+AR House District 17 (Republican Party)	1	AR House District 17	Republican Party
+AR House District 18 (Republican Party)	1	AR House District 18	Republican Party
+AR House District 19 (Republican Party)	1	AR House District 19	Republican Party
+AR House District 20 (Republican Party)	1	AR House District 20	Republican Party
+AR House District 21 (Republican Party)	1	AR House District 21	Republican Party
+AR House District 22 (Republican Party)	1	AR House District 22	Republican Party
+AR House District 23 (Republican Party)	1	AR House District 23	Republican Party
+AR House District 24 (Republican Party)	1	AR House District 24	Republican Party
+AR House District 25 (Republican Party)	1	AR House District 25	Republican Party
+AR House District 26 (Republican Party)	1	AR House District 26	Republican Party
+AR House District 27 (Republican Party)	1	AR House District 27	Republican Party
+AR House District 28 (Republican Party)	1	AR House District 28	Republican Party
+AR House District 29 (Republican Party)	1	AR House District 29	Republican Party
+AR House District 30 (Republican Party)	1	AR House District 30	Republican Party
+AR House District 31 (Republican Party)	1	AR House District 31	Republican Party
+AR House District 32 (Republican Party)	1	AR House District 32	Republican Party
+AR House District 33 (Republican Party)	1	AR House District 33	Republican Party
+AR House District 34 (Republican Party)	1	AR House District 34	Republican Party
+AR House District 35 (Republican Party)	1	AR House District 35	Republican Party
+AR House District 36 (Republican Party)	1	AR House District 36	Republican Party
+AR House District 37 (Republican Party)	1	AR House District 37	Republican Party
+AR House District 38 (Republican Party)	1	AR House District 38	Republican Party
+AR House District 39 (Republican Party)	1	AR House District 39	Republican Party
+AR House District 40 (Republican Party)	1	AR House District 40	Republican Party
+AR House District 41 (Republican Party)	1	AR House District 41	Republican Party
+AR House District 42 (Republican Party)	1	AR House District 42	Republican Party
+AR House District 43 (Republican Party)	1	AR House District 43	Republican Party
+AR House District 44 (Republican Party)	1	AR House District 44	Republican Party
+AR House District 45 (Republican Party)	1	AR House District 45	Republican Party
+AR House District 46 (Republican Party)	1	AR House District 46	Republican Party
+AR House District 47 (Republican Party)	1	AR House District 47	Republican Party
+AR House District 48 (Republican Party)	1	AR House District 48	Republican Party
+AR House District 49 (Republican Party)	1	AR House District 49	Republican Party
+AR House District 50 (Republican Party)	1	AR House District 50	Republican Party
+AR House District 51 (Republican Party)	1	AR House District 51	Republican Party
+AR House District 52 (Republican Party)	1	AR House District 52	Republican Party
+AR House District 53 (Republican Party)	1	AR House District 53	Republican Party
+AR House District 54 (Republican Party)	1	AR House District 54	Republican Party
+AR House District 55 (Republican Party)	1	AR House District 55	Republican Party
+AR House District 56 (Republican Party)	1	AR House District 56	Republican Party
+AR House District 57 (Republican Party)	1	AR House District 57	Republican Party
+AR House District 58 (Republican Party)	1	AR House District 58	Republican Party
+AR House District 59 (Republican Party)	1	AR House District 59	Republican Party
+AR House District 60 (Republican Party)	1	AR House District 60	Republican Party
+AR House District 61 (Republican Party)	1	AR House District 61	Republican Party
+AR House District 62 (Republican Party)	1	AR House District 62	Republican Party
+AR House District 63 (Republican Party)	1	AR House District 63	Republican Party
+AR House District 64 (Republican Party)	1	AR House District 64	Republican Party
+AR House District 65 (Republican Party)	1	AR House District 65	Republican Party
+AR House District 66 (Republican Party)	1	AR House District 66	Republican Party
+AR House District 67 (Republican Party)	1	AR House District 67	Republican Party
+AR House District 68 (Republican Party)	1	AR House District 68	Republican Party
+AR House District 69 (Republican Party)	1	AR House District 69	Republican Party
+AR House District 70 (Republican Party)	1	AR House District 70	Republican Party
+AR House District 71 (Republican Party)	1	AR House District 71	Republican Party
+AR House District 72 (Republican Party)	1	AR House District 72	Republican Party
+AR House District 73 (Republican Party)	1	AR House District 73	Republican Party
+AR House District 74 (Republican Party)	1	AR House District 74	Republican Party
+AR House District 75 (Republican Party)	1	AR House District 75	Republican Party
+AR House District 76 (Republican Party)	1	AR House District 76	Republican Party
+AR House District 77 (Republican Party)	1	AR House District 77	Republican Party
+AR House District 78 (Republican Party)	1	AR House District 78	Republican Party
+AR House District 79 (Republican Party)	1	AR House District 79	Republican Party
+AR House District 80 (Republican Party)	1	AR House District 80	Republican Party
+AR House District 81 (Republican Party)	1	AR House District 81	Republican Party
+AR House District 82 (Republican Party)	1	AR House District 82	Republican Party
+AR House District 83 (Republican Party)	1	AR House District 83	Republican Party
+AR House District 84 (Republican Party)	1	AR House District 84	Republican Party
+AR House District 85 (Republican Party)	1	AR House District 85	Republican Party
+AR House District 86 (Republican Party)	1	AR House District 86	Republican Party
+AR House District 87 (Republican Party)	1	AR House District 87	Republican Party
+AR House District 88 (Republican Party)	1	AR House District 88	Republican Party
+AR House District 89 (Republican Party)	1	AR House District 89	Republican Party
+AR House District 90 (Republican Party)	1	AR House District 90	Republican Party
+AR House District 91 (Republican Party)	1	AR House District 91	Republican Party
+AR House District 92 (Republican Party)	1	AR House District 92	Republican Party
+AR House District 93 (Republican Party)	1	AR House District 93	Republican Party
+AR House District 94 (Republican Party)	1	AR House District 94	Republican Party
+AR House District 95 (Republican Party)	1	AR House District 95	Republican Party
+AR House District 96 (Republican Party)	1	AR House District 96	Republican Party
+AR House District 97 (Republican Party)	1	AR House District 97	Republican Party
+AR House District 98 (Republican Party)	1	AR House District 98	Republican Party
+AR House District 99 (Republican Party)	1	AR House District 99	Republican Party
+AR House District 100 (Republican Party)	1	AR House District 100	Republican Party
+AR Senate District 1 (Republican Party)	1	AR Senate District 1	Republican Party
+AR Senate District 2 (Republican Party)	1	AR Senate District 2	Republican Party
+AR Senate District 3 (Republican Party)	1	AR Senate District 3	Republican Party
+AR Senate District 4 (Republican Party)	1	AR Senate District 4	Republican Party
+AR Senate District 5 (Republican Party)	1	AR Senate District 5	Republican Party
+AR Senate District 6 (Republican Party)	1	AR Senate District 6	Republican Party
+AR Senate District 7 (Republican Party)	1	AR Senate District 7	Republican Party
+AR Senate District 8 (Republican Party)	1	AR Senate District 8	Republican Party
+AR Senate District 9 (Republican Party)	1	AR Senate District 9	Republican Party
+AR Senate District 10 (Republican Party)	1	AR Senate District 10	Republican Party
+AR Senate District 11 (Republican Party)	1	AR Senate District 11	Republican Party
+AR Senate District 12 (Republican Party)	1	AR Senate District 12	Republican Party
+AR Senate District 13 (Republican Party)	1	AR Senate District 13	Republican Party
+AR Senate District 14 (Republican Party)	1	AR Senate District 14	Republican Party
+AR Senate District 15 (Republican Party)	1	AR Senate District 15	Republican Party
+AR Senate District 16 (Republican Party)	1	AR Senate District 16	Republican Party
+AR Senate District 17 (Republican Party)	1	AR Senate District 17	Republican Party
+AR Senate District 18 (Republican Party)	1	AR Senate District 18	Republican Party
+AR Senate District 19 (Republican Party)	1	AR Senate District 19	Republican Party
+AR Senate District 20 (Republican Party)	1	AR Senate District 20	Republican Party
+AR Senate District 21 (Republican Party)	1	AR Senate District 21	Republican Party
+AR Senate District 22 (Republican Party)	1	AR Senate District 22	Republican Party
+AR Senate District 23 (Republican Party)	1	AR Senate District 23	Republican Party
+AR Senate District 24 (Republican Party)	1	AR Senate District 24	Republican Party
+AR Senate District 25 (Republican Party)	1	AR Senate District 25	Republican Party
+AR Senate District 26 (Republican Party)	1	AR Senate District 26	Republican Party
+AR Senate District 27 (Republican Party)	1	AR Senate District 27	Republican Party
+AR Senate District 28 (Republican Party)	1	AR Senate District 28	Republican Party
+AR Senate District 29 (Republican Party)	1	AR Senate District 29	Republican Party
+AR Senate District 30 (Republican Party)	1	AR Senate District 30	Republican Party
+AR Senate District 31 (Republican Party)	1	AR Senate District 31	Republican Party
+AR Senate District 32 (Republican Party)	1	AR Senate District 32	Republican Party
+AR Senate District 33 (Republican Party)	1	AR Senate District 33	Republican Party
+AR Senate District 34 (Republican Party)	1	AR Senate District 34	Republican Party
+AR Senate District 35 (Republican Party)	1	AR Senate District 35	Republican Party
+US House AR District 1 (Republican Party)	1	US House AR District 1	Republican Party
+US House AR District 2 (Republican Party)	1	US House AR District 2	Republican Party
+US House AR District 3 (Republican Party)	1	US House AR District 3	Republican Party
+US House AR District 4 (Republican Party)	1	US House AR District 4	Republican Party
+US President (AR) (Republican Party)	1	US President (AR)	Republican Party
+AR Governor (Republican Party)	1	AR Governor	Republican Party
+US Senate AR (Republican Party)	1	US Senate AR	Republican Party
+AR Attorney General (Republican Party)	1	AR Attorney General	Republican Party
+AR Lieutenant Governor (Republican Party)	1	AR Lieutenant Governor	Republican Party
+AR State Treasurer (Republican Party)	1	AR State Treasurer	Republican Party
+AR Secretary of State (Republican Party)	1	AR Secretary of State	Republican Party
+AR Commissioner of State Lands (Republican Party)	1	AR Commissioner of State Lands	Republican Party
+AR Auditor of State (Republican Party)	1	AR Auditor of State	Republican Party
+AR House District 1 (Libertarian Party)	1	AR House District 1	Libertarian Party
+AR House District 2 (Libertarian Party)	1	AR House District 2	Libertarian Party
+AR House District 3 (Libertarian Party)	1	AR House District 3	Libertarian Party
+AR House District 4 (Libertarian Party)	1	AR House District 4	Libertarian Party
+AR House District 5 (Libertarian Party)	1	AR House District 5	Libertarian Party
+AR House District 6 (Libertarian Party)	1	AR House District 6	Libertarian Party
+AR House District 7 (Libertarian Party)	1	AR House District 7	Libertarian Party
+AR House District 8 (Libertarian Party)	1	AR House District 8	Libertarian Party
+AR House District 9 (Libertarian Party)	1	AR House District 9	Libertarian Party
+AR House District 10 (Libertarian Party)	1	AR House District 10	Libertarian Party
+AR House District 11 (Libertarian Party)	1	AR House District 11	Libertarian Party
+AR House District 12 (Libertarian Party)	1	AR House District 12	Libertarian Party
+AR House District 13 (Libertarian Party)	1	AR House District 13	Libertarian Party
+AR House District 14 (Libertarian Party)	1	AR House District 14	Libertarian Party
+AR House District 15 (Libertarian Party)	1	AR House District 15	Libertarian Party
+AR House District 16 (Libertarian Party)	1	AR House District 16	Libertarian Party
+AR House District 17 (Libertarian Party)	1	AR House District 17	Libertarian Party
+AR House District 18 (Libertarian Party)	1	AR House District 18	Libertarian Party
+AR House District 19 (Libertarian Party)	1	AR House District 19	Libertarian Party
+AR House District 20 (Libertarian Party)	1	AR House District 20	Libertarian Party
+AR House District 21 (Libertarian Party)	1	AR House District 21	Libertarian Party
+AR House District 22 (Libertarian Party)	1	AR House District 22	Libertarian Party
+AR House District 23 (Libertarian Party)	1	AR House District 23	Libertarian Party
+AR House District 24 (Libertarian Party)	1	AR House District 24	Libertarian Party
+AR House District 25 (Libertarian Party)	1	AR House District 25	Libertarian Party
+AR House District 26 (Libertarian Party)	1	AR House District 26	Libertarian Party
+AR House District 27 (Libertarian Party)	1	AR House District 27	Libertarian Party
+AR House District 28 (Libertarian Party)	1	AR House District 28	Libertarian Party
+AR House District 29 (Libertarian Party)	1	AR House District 29	Libertarian Party
+AR House District 30 (Libertarian Party)	1	AR House District 30	Libertarian Party
+AR House District 31 (Libertarian Party)	1	AR House District 31	Libertarian Party
+AR House District 32 (Libertarian Party)	1	AR House District 32	Libertarian Party
+AR House District 33 (Libertarian Party)	1	AR House District 33	Libertarian Party
+AR House District 34 (Libertarian Party)	1	AR House District 34	Libertarian Party
+AR House District 35 (Libertarian Party)	1	AR House District 35	Libertarian Party
+AR House District 36 (Libertarian Party)	1	AR House District 36	Libertarian Party
+AR House District 37 (Libertarian Party)	1	AR House District 37	Libertarian Party
+AR House District 38 (Libertarian Party)	1	AR House District 38	Libertarian Party
+AR House District 39 (Libertarian Party)	1	AR House District 39	Libertarian Party
+AR House District 40 (Libertarian Party)	1	AR House District 40	Libertarian Party
+AR House District 41 (Libertarian Party)	1	AR House District 41	Libertarian Party
+AR House District 42 (Libertarian Party)	1	AR House District 42	Libertarian Party
+AR House District 43 (Libertarian Party)	1	AR House District 43	Libertarian Party
+AR House District 44 (Libertarian Party)	1	AR House District 44	Libertarian Party
+AR House District 45 (Libertarian Party)	1	AR House District 45	Libertarian Party
+AR House District 46 (Libertarian Party)	1	AR House District 46	Libertarian Party
+AR House District 47 (Libertarian Party)	1	AR House District 47	Libertarian Party
+AR House District 48 (Libertarian Party)	1	AR House District 48	Libertarian Party
+AR House District 49 (Libertarian Party)	1	AR House District 49	Libertarian Party
+AR House District 50 (Libertarian Party)	1	AR House District 50	Libertarian Party
+AR House District 51 (Libertarian Party)	1	AR House District 51	Libertarian Party
+AR House District 52 (Libertarian Party)	1	AR House District 52	Libertarian Party
+AR House District 53 (Libertarian Party)	1	AR House District 53	Libertarian Party
+AR House District 54 (Libertarian Party)	1	AR House District 54	Libertarian Party
+AR House District 55 (Libertarian Party)	1	AR House District 55	Libertarian Party
+AR House District 56 (Libertarian Party)	1	AR House District 56	Libertarian Party
+AR House District 57 (Libertarian Party)	1	AR House District 57	Libertarian Party
+AR House District 58 (Libertarian Party)	1	AR House District 58	Libertarian Party
+AR House District 59 (Libertarian Party)	1	AR House District 59	Libertarian Party
+AR House District 60 (Libertarian Party)	1	AR House District 60	Libertarian Party
+AR House District 61 (Libertarian Party)	1	AR House District 61	Libertarian Party
+AR House District 62 (Libertarian Party)	1	AR House District 62	Libertarian Party
+AR House District 63 (Libertarian Party)	1	AR House District 63	Libertarian Party
+AR House District 64 (Libertarian Party)	1	AR House District 64	Libertarian Party
+AR House District 65 (Libertarian Party)	1	AR House District 65	Libertarian Party
+AR House District 66 (Libertarian Party)	1	AR House District 66	Libertarian Party
+AR House District 67 (Libertarian Party)	1	AR House District 67	Libertarian Party
+AR House District 68 (Libertarian Party)	1	AR House District 68	Libertarian Party
+AR House District 69 (Libertarian Party)	1	AR House District 69	Libertarian Party
+AR House District 70 (Libertarian Party)	1	AR House District 70	Libertarian Party
+AR House District 71 (Libertarian Party)	1	AR House District 71	Libertarian Party
+AR House District 72 (Libertarian Party)	1	AR House District 72	Libertarian Party
+AR House District 73 (Libertarian Party)	1	AR House District 73	Libertarian Party
+AR House District 74 (Libertarian Party)	1	AR House District 74	Libertarian Party
+AR House District 75 (Libertarian Party)	1	AR House District 75	Libertarian Party
+AR House District 76 (Libertarian Party)	1	AR House District 76	Libertarian Party
+AR House District 77 (Libertarian Party)	1	AR House District 77	Libertarian Party
+AR House District 78 (Libertarian Party)	1	AR House District 78	Libertarian Party
+AR House District 79 (Libertarian Party)	1	AR House District 79	Libertarian Party
+AR House District 80 (Libertarian Party)	1	AR House District 80	Libertarian Party
+AR House District 81 (Libertarian Party)	1	AR House District 81	Libertarian Party
+AR House District 82 (Libertarian Party)	1	AR House District 82	Libertarian Party
+AR House District 83 (Libertarian Party)	1	AR House District 83	Libertarian Party
+AR House District 84 (Libertarian Party)	1	AR House District 84	Libertarian Party
+AR House District 85 (Libertarian Party)	1	AR House District 85	Libertarian Party
+AR House District 86 (Libertarian Party)	1	AR House District 86	Libertarian Party
+AR House District 87 (Libertarian Party)	1	AR House District 87	Libertarian Party
+AR House District 88 (Libertarian Party)	1	AR House District 88	Libertarian Party
+AR House District 89 (Libertarian Party)	1	AR House District 89	Libertarian Party
+AR House District 90 (Libertarian Party)	1	AR House District 90	Libertarian Party
+AR House District 91 (Libertarian Party)	1	AR House District 91	Libertarian Party
+AR House District 92 (Libertarian Party)	1	AR House District 92	Libertarian Party
+AR House District 93 (Libertarian Party)	1	AR House District 93	Libertarian Party
+AR House District 94 (Libertarian Party)	1	AR House District 94	Libertarian Party
+AR House District 95 (Libertarian Party)	1	AR House District 95	Libertarian Party
+AR House District 96 (Libertarian Party)	1	AR House District 96	Libertarian Party
+AR House District 97 (Libertarian Party)	1	AR House District 97	Libertarian Party
+AR House District 98 (Libertarian Party)	1	AR House District 98	Libertarian Party
+AR House District 99 (Libertarian Party)	1	AR House District 99	Libertarian Party
+AR House District 100 (Libertarian Party)	1	AR House District 100	Libertarian Party
+AR Senate District 1 (Libertarian Party)	1	AR Senate District 1	Libertarian Party
+AR Senate District 2 (Libertarian Party)	1	AR Senate District 2	Libertarian Party
+AR Senate District 3 (Libertarian Party)	1	AR Senate District 3	Libertarian Party
+AR Senate District 4 (Libertarian Party)	1	AR Senate District 4	Libertarian Party
+AR Senate District 5 (Libertarian Party)	1	AR Senate District 5	Libertarian Party
+AR Senate District 6 (Libertarian Party)	1	AR Senate District 6	Libertarian Party
+AR Senate District 7 (Libertarian Party)	1	AR Senate District 7	Libertarian Party
+AR Senate District 8 (Libertarian Party)	1	AR Senate District 8	Libertarian Party
+AR Senate District 9 (Libertarian Party)	1	AR Senate District 9	Libertarian Party
+AR Senate District 10 (Libertarian Party)	1	AR Senate District 10	Libertarian Party
+AR Senate District 11 (Libertarian Party)	1	AR Senate District 11	Libertarian Party
+AR Senate District 12 (Libertarian Party)	1	AR Senate District 12	Libertarian Party
+AR Senate District 13 (Libertarian Party)	1	AR Senate District 13	Libertarian Party
+AR Senate District 14 (Libertarian Party)	1	AR Senate District 14	Libertarian Party
+AR Senate District 15 (Libertarian Party)	1	AR Senate District 15	Libertarian Party
+AR Senate District 16 (Libertarian Party)	1	AR Senate District 16	Libertarian Party
+AR Senate District 17 (Libertarian Party)	1	AR Senate District 17	Libertarian Party
+AR Senate District 18 (Libertarian Party)	1	AR Senate District 18	Libertarian Party
+AR Senate District 19 (Libertarian Party)	1	AR Senate District 19	Libertarian Party
+AR Senate District 20 (Libertarian Party)	1	AR Senate District 20	Libertarian Party
+AR Senate District 21 (Libertarian Party)	1	AR Senate District 21	Libertarian Party
+AR Senate District 22 (Libertarian Party)	1	AR Senate District 22	Libertarian Party
+AR Senate District 23 (Libertarian Party)	1	AR Senate District 23	Libertarian Party
+AR Senate District 24 (Libertarian Party)	1	AR Senate District 24	Libertarian Party
+AR Senate District 25 (Libertarian Party)	1	AR Senate District 25	Libertarian Party
+AR Senate District 26 (Libertarian Party)	1	AR Senate District 26	Libertarian Party
+AR Senate District 27 (Libertarian Party)	1	AR Senate District 27	Libertarian Party
+AR Senate District 28 (Libertarian Party)	1	AR Senate District 28	Libertarian Party
+AR Senate District 29 (Libertarian Party)	1	AR Senate District 29	Libertarian Party
+AR Senate District 30 (Libertarian Party)	1	AR Senate District 30	Libertarian Party
+AR Senate District 31 (Libertarian Party)	1	AR Senate District 31	Libertarian Party
+AR Senate District 32 (Libertarian Party)	1	AR Senate District 32	Libertarian Party
+AR Senate District 33 (Libertarian Party)	1	AR Senate District 33	Libertarian Party
+AR Senate District 34 (Libertarian Party)	1	AR Senate District 34	Libertarian Party
+AR Senate District 35 (Libertarian Party)	1	AR Senate District 35	Libertarian Party
+US House AR District 1 (Libertarian Party)	1	US House AR District 1	Libertarian Party
+US House AR District 2 (Libertarian Party)	1	US House AR District 2	Libertarian Party
+US House AR District 3 (Libertarian Party)	1	US House AR District 3	Libertarian Party
+US House AR District 4 (Libertarian Party)	1	US House AR District 4	Libertarian Party
+US President (AR) (Libertarian Party)	1	US President (AR)	Libertarian Party
+AR Governor (Libertarian Party)	1	AR Governor	Libertarian Party
+US Senate AR (Libertarian Party)	1	US Senate AR	Libertarian Party
+AR Attorney General (Libertarian Party)	1	AR Attorney General	Libertarian Party
+AR Lieutenant Governor (Libertarian Party)	1	AR Lieutenant Governor	Libertarian Party
+AR State Treasurer (Libertarian Party)	1	AR State Treasurer	Libertarian Party
+AR Secretary of State (Libertarian Party)	1	AR Secretary of State	Libertarian Party
+AR Commissioner of State Lands (Libertarian Party)	1	AR Commissioner of State Lands	Libertarian Party
+AR Auditor of State (Libertarian Party)	1	AR Auditor of State	Libertarian Party

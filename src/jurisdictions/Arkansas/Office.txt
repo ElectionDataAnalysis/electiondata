@@ -1,0 +1,149 @@
+Name	ElectionDistrict
+AR House District 1	Arkansas;AR House District 1
+AR House District 2	Arkansas;AR House District 2
+AR House District 3	Arkansas;AR House District 3
+AR House District 4	Arkansas;AR House District 4
+AR House District 5	Arkansas;AR House District 5
+AR House District 6	Arkansas;AR House District 6
+AR House District 7	Arkansas;AR House District 7
+AR House District 8	Arkansas;AR House District 8
+AR House District 9	Arkansas;AR House District 9
+AR House District 10	Arkansas;AR House District 10
+AR House District 11	Arkansas;AR House District 11
+AR House District 12	Arkansas;AR House District 12
+AR House District 13	Arkansas;AR House District 13
+AR House District 14	Arkansas;AR House District 14
+AR House District 15	Arkansas;AR House District 15
+AR House District 16	Arkansas;AR House District 16
+AR House District 17	Arkansas;AR House District 17
+AR House District 18	Arkansas;AR House District 18
+AR House District 19	Arkansas;AR House District 19
+AR House District 20	Arkansas;AR House District 20
+AR House District 21	Arkansas;AR House District 21
+AR House District 22	Arkansas;AR House District 22
+AR House District 23	Arkansas;AR House District 23
+AR House District 24	Arkansas;AR House District 24
+AR House District 25	Arkansas;AR House District 25
+AR House District 26	Arkansas;AR House District 26
+AR House District 27	Arkansas;AR House District 27
+AR House District 28	Arkansas;AR House District 28
+AR House District 29	Arkansas;AR House District 29
+AR House District 30	Arkansas;AR House District 30
+AR House District 31	Arkansas;AR House District 31
+AR House District 32	Arkansas;AR House District 32
+AR House District 33	Arkansas;AR House District 33
+AR House District 34	Arkansas;AR House District 34
+AR House District 35	Arkansas;AR House District 35
+AR House District 36	Arkansas;AR House District 36
+AR House District 37	Arkansas;AR House District 37
+AR House District 38	Arkansas;AR House District 38
+AR House District 39	Arkansas;AR House District 39
+AR House District 40	Arkansas;AR House District 40
+AR House District 41	Arkansas;AR House District 41
+AR House District 42	Arkansas;AR House District 42
+AR House District 43	Arkansas;AR House District 43
+AR House District 44	Arkansas;AR House District 44
+AR House District 45	Arkansas;AR House District 45
+AR House District 46	Arkansas;AR House District 46
+AR House District 47	Arkansas;AR House District 47
+AR House District 48	Arkansas;AR House District 48
+AR House District 49	Arkansas;AR House District 49
+AR House District 50	Arkansas;AR House District 50
+AR House District 51	Arkansas;AR House District 51
+AR House District 52	Arkansas;AR House District 52
+AR House District 53	Arkansas;AR House District 53
+AR House District 54	Arkansas;AR House District 54
+AR House District 55	Arkansas;AR House District 55
+AR House District 56	Arkansas;AR House District 56
+AR House District 57	Arkansas;AR House District 57
+AR House District 58	Arkansas;AR House District 58
+AR House District 59	Arkansas;AR House District 59
+AR House District 60	Arkansas;AR House District 60
+AR House District 61	Arkansas;AR House District 61
+AR House District 62	Arkansas;AR House District 62
+AR House District 63	Arkansas;AR House District 63
+AR House District 64	Arkansas;AR House District 64
+AR House District 65	Arkansas;AR House District 65
+AR House District 66	Arkansas;AR House District 66
+AR House District 67	Arkansas;AR House District 67
+AR House District 68	Arkansas;AR House District 68
+AR House District 69	Arkansas;AR House District 69
+AR House District 70	Arkansas;AR House District 70
+AR House District 71	Arkansas;AR House District 71
+AR House District 72	Arkansas;AR House District 72
+AR House District 73	Arkansas;AR House District 73
+AR House District 74	Arkansas;AR House District 74
+AR House District 75	Arkansas;AR House District 75
+AR House District 76	Arkansas;AR House District 76
+AR House District 77	Arkansas;AR House District 77
+AR House District 78	Arkansas;AR House District 78
+AR House District 79	Arkansas;AR House District 79
+AR House District 80	Arkansas;AR House District 80
+AR House District 81	Arkansas;AR House District 81
+AR House District 82	Arkansas;AR House District 82
+AR House District 83	Arkansas;AR House District 83
+AR House District 84	Arkansas;AR House District 84
+AR House District 85	Arkansas;AR House District 85
+AR House District 86	Arkansas;AR House District 86
+AR House District 87	Arkansas;AR House District 87
+AR House District 88	Arkansas;AR House District 88
+AR House District 89	Arkansas;AR House District 89
+AR House District 90	Arkansas;AR House District 90
+AR House District 91	Arkansas;AR House District 91
+AR House District 92	Arkansas;AR House District 92
+AR House District 93	Arkansas;AR House District 93
+AR House District 94	Arkansas;AR House District 94
+AR House District 95	Arkansas;AR House District 95
+AR House District 96	Arkansas;AR House District 96
+AR House District 97	Arkansas;AR House District 97
+AR House District 98	Arkansas;AR House District 98
+AR House District 99	Arkansas;AR House District 99
+AR House District 100	Arkansas;AR House District 100
+AR Senate District 1	Arkansas;AR Senate District 1
+AR Senate District 2	Arkansas;AR Senate District 2
+AR Senate District 3	Arkansas;AR Senate District 3
+AR Senate District 4	Arkansas;AR Senate District 4
+AR Senate District 5	Arkansas;AR Senate District 5
+AR Senate District 6	Arkansas;AR Senate District 6
+AR Senate District 7	Arkansas;AR Senate District 7
+AR Senate District 8	Arkansas;AR Senate District 8
+AR Senate District 9	Arkansas;AR Senate District 9
+AR Senate District 10	Arkansas;AR Senate District 10
+AR Senate District 11	Arkansas;AR Senate District 11
+AR Senate District 12	Arkansas;AR Senate District 12
+AR Senate District 13	Arkansas;AR Senate District 13
+AR Senate District 14	Arkansas;AR Senate District 14
+AR Senate District 15	Arkansas;AR Senate District 15
+AR Senate District 16	Arkansas;AR Senate District 16
+AR Senate District 17	Arkansas;AR Senate District 17
+AR Senate District 18	Arkansas;AR Senate District 18
+AR Senate District 19	Arkansas;AR Senate District 19
+AR Senate District 20	Arkansas;AR Senate District 20
+AR Senate District 21	Arkansas;AR Senate District 21
+AR Senate District 22	Arkansas;AR Senate District 22
+AR Senate District 23	Arkansas;AR Senate District 23
+AR Senate District 24	Arkansas;AR Senate District 24
+AR Senate District 25	Arkansas;AR Senate District 25
+AR Senate District 26	Arkansas;AR Senate District 26
+AR Senate District 27	Arkansas;AR Senate District 27
+AR Senate District 28	Arkansas;AR Senate District 28
+AR Senate District 29	Arkansas;AR Senate District 29
+AR Senate District 30	Arkansas;AR Senate District 30
+AR Senate District 31	Arkansas;AR Senate District 31
+AR Senate District 32	Arkansas;AR Senate District 32
+AR Senate District 33	Arkansas;AR Senate District 33
+AR Senate District 34	Arkansas;AR Senate District 34
+AR Senate District 35	Arkansas;AR Senate District 35
+US House AR District 1	Arkansas;US House AR District 1
+US House AR District 2	Arkansas;US House AR District 2
+US House AR District 3	Arkansas;US House AR District 3
+US House AR District 4	Arkansas;US House AR District 4
+US President (AR)	Arkansas
+AR Governor	Arkansas
+AR Lieutenant Governor	Arkansas
+US Senate AR	Arkansas
+AR Attorney General	Arkansas
+AR State Treasurer	Arkansas
+AR Auditor of State	Arkansas
+AR Secretary of State	Arkansas
+AR Commissioner of State Lands	Arkansas
