@@ -32,7 +32,7 @@ If all the files in a single directory will use the same munger, jurisdiction an
 Ensure that the munger files are appropriate for your results file(s). 
  (1) If the munger doesn't already exist, pick a name for your munger and create a directory with that name in the `mungers` directory to hold `format.txt` and `cdf_elements.txt`.
  (2) Copy the templates from `templates/munger_templates` to your munger directory. Every munger must have a value for `file_type` and `encoding`; depending your `file_type` other parameters may be required. Types currently supported are `txt`, `csv`, `xls` (which handles both `.xls` and `.xlsx` files)
- * Required for `txt`, `csv` or `xls` type:
+ * Required for `txt`, `csv` or `xls` (flat file) type:
    * header_row_count
    * field_name_row
    * field_names_if_no_field_name_row
@@ -78,6 +78,18 @@ you can refer to the field that appears in the first column by `first_column`
 
 Some jurisdictions require regular expression (regex) analysis to extract information from the data. For example, in a primary both the Party and the Candidate may be in the same string (e.g., "Robin Perez (DEM)"). Curly brackets indicate that regex analysis is needed. Inside the curly brackets there are two parts, separated by a comma. The first part is the concatenation formula for creating a string from the data in the file. The second is a python regex formula whose first group (enclosed by parentheses) marks the desired substring.
 ```Party	{<header_1>,^.*\(([a-zA-Z]{3})\)$}	row```
+
+### The concatenated-blocks file type
+As of 2020, states using ExpressVote state wide have text files with a series of blocks of data, one for each contest. A sample of one such file:
+```
+                                                                                                                                                                                                                                                       Governor
+                                                            BRIAN KEMP  (REP)                                                                                                                                     STACEY ABRAMS  (DEM)                                                                                                                                  TED METZ (LIB)                                                                                                                                        
+County                        Registered Voters             Election Day                  Absentee by Mail              Advance in Person             Provisional                   Choice Total                  Election Day                  Absentee by Mail              Advance in Person             Provisional                   Choice Total                  Election Day                  Absentee by Mail              Advance in Person             Provisional                   Choice Total                  Total                         
+Appling                       10613                         2334                          357                           2735                          2                             5428                          630                           170                           557                           1                             1358                          14                            3                             6                             0                             23                            6809                          
+Atkinson                      4252                          808                           45                            1022                          1                             1876                          333                           43                            260                           1                             637                           6                             0                             3                             0                             9                             2522                          
+
+```
+Note that the columns are fixed-width. 
 
 ## Create or Improve a Jurisdiction
 It's easiest to use the JurisdictionPrepper() object to create or update jurisdiction files. 
