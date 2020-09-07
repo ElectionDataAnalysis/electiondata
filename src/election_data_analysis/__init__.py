@@ -56,7 +56,7 @@ class DataLoader:
         not create DataLoader object."""
         try:
             d, parameter_err = ui.get_runtime_parameters(
-                multi_data_loader_pars,
+                required_keys=multi_data_loader_pars,
                 param_file="run_time.ini",
                 header="election_data_analysis",
             )
@@ -78,7 +78,7 @@ class DataLoader:
     def __init__(self):
         # grab parameters
         self.d, self.parameter_err = ui.get_runtime_parameters(
-            multi_data_loader_pars,
+            required_keys=multi_data_loader_pars,
             param_file="run_time.ini",
             header="election_data_analysis",
         )
@@ -222,7 +222,9 @@ class DataLoader:
             # move results file and its parameter file to a subfolder of the archive directory
             #  named for the db
             db_param = ui.get_runtime_parameters(
-                ["dbname"], "run_time.ini", "postgresql"
+                required_keys=["dbname"],
+                param_file="run_time.ini",
+                header="postgresql"
             )[0]
             self.tracker[f]["status"] = "loaded"
             new_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
@@ -251,7 +253,7 @@ class SingleDataLoader:
         # grab parameters
         par_file = os.path.join(results_dir, par_file_name)
         self.d, self.parameter_err = ui.get_runtime_parameters(
-            single_data_loader_pars,
+            required_keys=single_data_loader_pars,
             optional_keys=["aux_data_dir"],
             param_file=par_file,
             header="election_data_analysis",
@@ -357,7 +359,9 @@ class JurisdictionPrepper:
         param_file = "jurisdiction_prep.ini"
         try:
             d, parameter_err = ui.get_runtime_parameters(
-                prep_pars, param_file=param_file, header="election_data_analysis"
+                required_keys=prep_pars,
+                param_file=param_file,
+                header="election_data_analysis"
             )
         except FileNotFoundError as e:
             print(
@@ -713,7 +717,7 @@ class JurisdictionPrepper:
         for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
             par_file = os.path.join(dir, par_file_name)
             file_dict, missing_params = ui.get_runtime_parameters(
-                ["results_file", "munger_name"],
+                required_keys=["results_file", "munger_name"],
                 optional_keys=["aux_data_dir"],
                 param_file=par_file,
             )
@@ -739,7 +743,7 @@ class JurisdictionPrepper:
         for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
             par_file = os.path.join(dir, par_file_name)
             file_dict, missing_params = ui.get_runtime_parameters(
-                ["results_file", "munger_name"],
+                required_keys=["results_file", "munger_name"],
                 header="election_data_analysis",
                 optional_keys=["aux_data_dir"],
                 param_file=par_file,
@@ -875,7 +879,7 @@ class JurisdictionPrepper:
 
     def __init__(self):
         self.d, self.parameter_err = ui.get_runtime_parameters(
-            prep_pars,
+            required_keys=prep_pars,
             optional_keys=optional_prep_pars,
             param_file="jurisdiction_prep.ini",
             header="election_data_analysis",
@@ -913,11 +917,13 @@ class Analyzer:
         not create DataLoader object."""
         try:
             d, parameter_err = ui.get_runtime_parameters(
-                ["dbname"], "run_time.ini", "postgresql"
+                required_keys=["dbname"],
+                param_file="run_time.ini",
+                header="postgresql",
             )
         except FileNotFoundError as e:
             print(
-                "Parameter file not found. Ensure that it is located"
+                "Parameter file 'run_time.ini' not found. Ensure that it is located"
                 " in the current directory. Analyzer object not created."
             )
             return None
@@ -931,11 +937,6 @@ class Analyzer:
         return super().__new__(self)
 
     def __init__(self):
-        # self.d, self.parameter_err = ui.get_runtime_parameters(
-        #     ["db_paramfile", "db_name", "results_file"]
-        # )
-        # self.d["results_file_short"] = get_filename(self.d["results_file"])
-
         eng = db.sql_alchemy_connect("run_time.ini")
         Session = sessionmaker(bind=eng)
         self.session = Session()
@@ -971,7 +972,7 @@ class Analyzer:
         html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
         installed as well."""
         d, error = ui.get_runtime_parameters(
-            ["rollup_directory"],
+            required_keys=["rollup_directory"],
             param_file="run_time.ini",
             header="election_data_analysis",
         )
@@ -1030,7 +1031,7 @@ class Analyzer:
     ) -> list:
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
-            ["rollup_directory"],
+            required_keys=["rollup_directory"],
             param_file="run_time.ini",
             header="election_data_analysis",
         )
@@ -1077,7 +1078,7 @@ class Analyzer:
     def export_outlier_data(self, jurisdiction: str, contest: str = None):
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
-            ["rollup_directory"],
+            required_keys=["rollup_directory"],
             param_file="run_time.ini",
             header="election_data_analysis",
         )
