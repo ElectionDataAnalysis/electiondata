@@ -322,29 +322,6 @@ If every file in your directory will use the same munger(s) -- e.g., if the juri
 ## Pull Data
 The Analyzer class uses parameters in the file `run_time.ini`, which should be in the directory from which you are running the program.
 
-To pull totals by vote type, use `top_counts_by_vote_type()`
-```
->>> an.top_counts_by_vote_type('Pennsylvania;Philadelphia','ward')
-Results exported to /Users/singer3/Documents/rollups/2018 General/Pennsylvania;Philadelphia/by_ward/TYPEmixed_STATUSunknown.txt
->>> 
-```
-
-Results are exported to the `rollup_directory` specified in `run_time.ini`.
-
-Note that both arguments -- the name of the top reporting unit ('Pennsylvania;Philadelphia') and the reporting unit type for the breakdown of results ('ward') must be the internal database names. To see the list of options, use `display_options()`:
-```
->>> an.display_options('reporting_unit_type')
-['ballot-batch', 'ballot-style-area', 'borough', 'city', 'city-council', 'combined-precinct', 'congressional', 'country', 'county', 'county-council', 'drop-box', 'judicial', 'municipality', 'polling-place', 'precinct', 'school', 'special', 'split-precinct', 'state', 'state-house', 'state-senate', 'town', 'township', 'utility', 'village', 'vote-center', 'ward', 'water', 'other']
-```
-Lists of reporting units will be quite long, in which case searching by substring can be useful.
-```
->>> counties = an.display_options('county')
->>> [x for x in counties if 'Phila' in x]
-['Pennsylvania;Philadelphia']
->>> 
-```
-Here we have used the capability of `display_options()` to take as an argument either a general database category ('reporting unit') or a type ('county'). 
-
 ## Miscellaneous helpful hints
 Beware of:
  - Different names for same contest in different counties (if munging from a batch of county-level files)
