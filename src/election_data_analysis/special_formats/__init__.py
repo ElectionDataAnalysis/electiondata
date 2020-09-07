@@ -88,10 +88,10 @@ def read_concatenated_blocks(
             last_header = remove_by_index(field_list,[0] + skip_cols)
 
             # check that the size of the side-to-side repeated block is consistent
-            if (len(field_list) - len(skip_cols) - 1) % v_t_cc != 0:
-                e = f"Count of last header ({v_t_cc}) " \
-                    f"does not evenly divide the number of count columns " \
-                    f"({len(field_list) - len(skip_cols) - 1})"
+            if len(last_header) % v_t_cc != 0:
+                e = f"Count of last header (per munger) ({v_t_cc}) " \
+                    f"does not evenly divide the number of count columns in the results file " \
+                    f"({len(last_header)})"
                 ui.add_error(err,"munge_error",e)
                 return pd.DataFrame(), err
 
@@ -121,7 +121,7 @@ def read_concatenated_blocks(
             # add multi-index with header_1 and header_2 info
             index_array = [
                 [y for z in [[cand] * v_t_cc for cand in header_1_list] for y in z],
-                last_header * len(header_1_list),
+                last_header,
             ]
             df[header_0].columns = pd.MultiIndex.from_arrays(index_array)
 
