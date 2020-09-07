@@ -20,9 +20,7 @@ from election_data_analysis import munge as m
 import re
 from election_data_analysis.database import create_cdf_db as db_cdf
 import os
-import numpy as np
 from sqlalchemy import MetaData, Table, Column, Integer, Float
-from election_data_analysis import analyze as a
 
 states = """Alabama
 Alaska

@@ -2,8 +2,6 @@
 import pandas as pd
 import os
 from election_data_analysis import user_interface as ui
-from election_data_analysis import juris_and_munger as jm
-from pathlib import Path
 
 
 # TODO: routine to add precincts from a results file to both ReportingUnit.txt and dictionary.txt,

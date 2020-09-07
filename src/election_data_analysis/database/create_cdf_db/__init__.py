@@ -20,7 +20,6 @@ from psycopg2 import sql
 import os
 import pandas as pd
 from election_data_analysis import database as db
-import datetime
 
 
 # constants
