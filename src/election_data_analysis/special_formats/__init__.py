@@ -19,6 +19,24 @@ def strip_empties(li: list) -> list:
     return li
 
 
+def remove_by_index(main_list: list, idx_list: list):
+    """creates new list by removing from <new_list> indices indicated in <idx_list>.
+    Indices in <idx_list> can be negative or positive. Positive indices are
+    removed first. """
+    # TODO error checking for overlapping neg & pos indices
+    new_list = main_list.copy()
+    not_neg = [idx for idx in idx_list if idx >=0]
+    not_neg.sort()
+    not_neg.reverse()
+    for idx in not_neg:
+        new_list.pop(idx)
+    neg = [idx for idx in idx_list if idx < 0]
+    neg.sort()
+    for idx in neg:
+        new_list.pop(idx)
+    return new_list
+
+
 def extract_items(line: str, w: int) -> list:
     """assume line ends in \n.
     drops any trailing empty strings from list"""
@@ -65,9 +83,15 @@ def read_concatenated_blocks(
 
             # get info from header line
             field_list = extract_items(header_line, w)
-            last_header = field_list[1 : 1 + v_t_cc]
+
+            # remove first column header and headers of any columns to be skipped
+            last_header = remove_by_index(field_list,[0] + skip_cols)
+
+            # check that the size of the side-to-side repeated block is consistent
             if (len(field_list) - len(skip_cols) - 1) % v_t_cc != 0:
-                e = f"Count of last header ({v_t_cc}) does not evenly divide the number of count columns ({len(field_list) - len(skip_cols) - 1})"
+                e = f"Count of last header ({v_t_cc}) " \
+                    f"does not evenly divide the number of count columns " \
+                    f"({len(field_list) - len(skip_cols) - 1})"
                 ui.add_error(err,"munge_error",e)
                 return pd.DataFrame(), err
 
