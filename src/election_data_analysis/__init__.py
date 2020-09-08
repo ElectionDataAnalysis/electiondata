@@ -534,6 +534,7 @@ class JurisdictionPrepper:
                 f"{abbr} Attorney General",
                 f"{abbr} Lieutenant Governor",
                 f"{abbr} Treasurer",
+                f"{abbr} Secretary of State",
             ]
         # append jurisdiction-wide offices
         jw_off = pd.DataFrame(
