@@ -299,13 +299,15 @@ dl = ea.DataLoader()
 err = dl.load_all()
 ```
 
-If something doesn't work, error messages will print. Even when the upload has worked, there may be warnings about lines not loaded. The system will ignore lines that cannot be munged. For example, the only contests whose results are uploaded will be those in the `CandidateContest.txt` or `BallotMeasureContest.txt` files that are correctly described in `dictionary.txt`.
+Fatal errors will be noted in a file `*.errors` named after the results `*.ini` file. 
+
+Even when the upload has worked, there may be warnings about lines not loaded. The system will ignore lines that cannot be munged. For example, the only contests whose results are uploaded will be those in the `CandidateContest.txt` or `BallotMeasureContest.txt` files that are correctly described in `dictionary.txt`.
 ```
 >>> err
 {'BAK_PctResults20181106.ini': {'fl_gen_by_precinct': {'munge_warning': 'Warning: Results for 720 rows with unmatched contests will not be loaded to database.'}}, 'ALA_PctResults20181106.ini': {'fl_gen_by_precinct': {'munge_warning': 'Warning: Results for 6174 rows with unmatched contests will not be loaded to database.'}}}
 ```
 
-If there are no errors, the results and their `.ini` files will be moved to the archive directory specified in `run_time.ini`. Any warnings for the `*.ini` will be saved in the archive directory in a file `*.warn`
+If there are no errors, the results and their `.ini` files will be moved to the archive directory specified in `run_time.ini`. Any warnings for the `*.ini` will be saved in the archive directory in a file `*.warn`.
 
 Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.ini` file for that results file has `munger_name` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
 
