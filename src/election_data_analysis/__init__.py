@@ -3,11 +3,8 @@ from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
 from sqlalchemy.orm import sessionmaker
 import datetime
-from pathlib import Path
 import os
 import pandas as pd
-from pprint import pprint
-import sys
 import ntpath
 from election_data_analysis import analyze as a
 from election_data_analysis import visualize as v
