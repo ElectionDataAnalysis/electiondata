@@ -1,1 +1,2 @@
 unique_constraint
+_datafile_Id,Election_Id,Contest_Id,Selection_Id,CountItemType_Id,ReportingUnit_Id,OtherCountItemType
