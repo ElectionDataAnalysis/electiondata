@@ -352,7 +352,7 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
 
 
 def pick_juris_from_filesystem(juris_path, project_root, check_files=False):
-    """Returns a State object. <juris_path> is the path to the directory containing the
+    """Returns a Jurisdiction object. <juris_path> is the path to the directory containing the
     defining files for the particular jurisdiction.
     """
 
