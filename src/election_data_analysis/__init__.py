@@ -171,8 +171,8 @@ class DataLoader:
 
                     # if there is a genuine error (not just a warning), add it to err
                     if true_error:
-                        err[f] = load_error
-                        self.tracker[f]["load_error"] = load_error
+                        err[f] = true_error
+                        self.tracker[f]["load_error"] = true_error
                     else:
                         self.tracker[f]["status"] = "loaded"
                 else:
@@ -205,7 +205,7 @@ class DataLoader:
                 elif "error" in k:
                     print(f"Error ({mu}): {msg}")
                     errors.append(msg)
-                    true_error[k] = load_error[k]
+                    true_error[mu] = msg
         if errors:
             self.tracker[f]["status"] = "loading failed"
             err_str = "\n\t".join(errors)
