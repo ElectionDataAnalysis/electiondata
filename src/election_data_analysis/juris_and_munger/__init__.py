@@ -357,6 +357,8 @@ def read_munger_info_from_files(dir_path):
 
 # TODO combine ensure_jurisdiction_dir with ensure_juris_files
 def ensure_jurisdiction_dir(juris_path, project_root, ignore_empty=False):
+    """Creates jurisdiction directory (if it doesn't already exist).
+    Checks files in the directory for correctness and completeness."""
     path_output = None
     # create jurisdiction directory
     try:
