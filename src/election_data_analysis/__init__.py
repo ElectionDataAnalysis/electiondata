@@ -164,10 +164,12 @@ class DataLoader:
                     self.tracker[f]["status"] = "loading initialized"
                     # try to load data
                     load_error = sdl.load_results()
-                    self.move_loaded_results_file(sdl, f, load_error)
-                    if load_error:
-                        err[f] = load_error
-                        self.tracker[f]["load_error"] = load_error
+                    true_error = self.move_loaded_results_file(sdl, f, load_error)
+
+                    # if there is a genuine error (not just a warning), add it to err
+                    if true_error:
+                        err[f] = true_error
+                        self.tracker[f]["load_error"] = true_error
                     else:
                         self.tracker[f]["status"] = "loaded"
                 else:
@@ -183,9 +185,10 @@ class DataLoader:
                         self.tracker[f]["munger_error"] = sdl.munger_err
         return err
 
-    def move_loaded_results_file(self, sdl, f: str, load_error: dict):
-        warnings = []
-        errors = []
+    def move_loaded_results_file(self, sdl, f: str, load_error: dict) -> dict:
+        warnings = list()
+        errors = list()
+        true_error = dict()
         for mu in load_error.keys():
             if load_error[mu]:
                 warn_err_keys = [k for k in load_error[mu].keys()].copy()
@@ -199,6 +202,7 @@ class DataLoader:
                 elif "error" in k:
                     print(f"Error ({mu}): {msg}")
                     errors.append(msg)
+                    true_error[mu] = msg
         if errors:
             self.tracker[f]["status"] = "loading failed"
             err_str = "\n\t".join(errors)
@@ -235,7 +239,7 @@ class DataLoader:
                     wf.write("\n".join(warnings))
                 print_str += f" See warnings in {f[:-4]}.warn"
             print(print_str)
-        return
+        return true_error
 
 
 class SingleDataLoader:
