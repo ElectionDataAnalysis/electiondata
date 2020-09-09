@@ -146,7 +146,12 @@ def add_column_from_formula(
                 working.loc[:, f].apply(lambda x: f"{t}{x}") + working.loc[:, new_col]
             )
         except KeyError:
-            ui.add_error(err, "munge-error", f"missing column {f}")
+            err = ui.add_new_error(
+                err,
+                "munger",
+                # TODO pass munger name to function so it can be reported here??
+                concat_formula,
+                f"missing column {f}")
 
     # use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
     if regex_flag:
@@ -248,7 +253,12 @@ def replace_raw_with_internal_ids(
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
         unmatched_str = "\n".join(unmatched_raw)
         e = f"{element}s not found in dictionary.txt:\n{unmatched_str}"
-        ui.add_error(error, "munge_warning", e)
+        error = ui.add_new_error(
+            error,
+            "jurisdiction_warn",
+            juris.short_name,
+            e
+        )
 
     if drop_unmatched:
         working = working[working["cdf_internal_name"].notnull()]
@@ -256,9 +266,19 @@ def replace_raw_with_internal_ids(
     if working.empty:
         e = f"No raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file"
         if drop_unmatched and not drop_all_ok:
-            ui.add_error(error, "munge_error", e)
+            error = ui.add_new_error(
+                error,
+                "jurisdiction",
+                juris.short_name,
+                e
+            )
         else:
-            ui.add_error(error, "munge_warning", e)
+            error = ui.add_new_error(
+                error,
+                "jurisdiction-warn",
+                juris.short_name,
+                e
+            )
         return working, error
 
     if mode == "column":
@@ -315,15 +335,24 @@ def replace_raw_with_internal_ids(
             f"will not be loaded to database. These records (raw name, internal name) were found in dictionary.txt, but "
             f"no corresponding record was found in {element}.txt: \n{unmatched_str}"
         )
-        ui.add_error(error, "munge_warning", e)
+        error = ui.add_new_error(
+            error,
+            "jurisdiction-warn",
+            juris.short_name,
+            e,
+        )
 
     if drop_unmatched:
         if working_unmatched.shape[0] == working.shape[0]:
-            e = (
-                f"No {element} was matched. Either raw values are not in dictionary.txt, or "
-                f"the corresponding cdf_internal_names are missing from {element}.txt"
+            error = ui.add_new_error(
+                error,
+                "jurisdiction",
+                juris.short_name,
+                (
+                    f"No {element} was matched. Either raw values are not in dictionary.txt, or "
+                    f"the corresponding cdf_internal_names are missing from {element}.txt"
+                 ),
             )
-            ui.add_error(error, "munge_error", e)
             return working.drop(working.index), error
 
     else:
@@ -515,9 +544,6 @@ def add_contest_id(
     missing = df.loc[missing_idx]
     # fail if no contests recognized
     if working.empty:
-
-        e = "No contests in database matched. No results will be loaded to database."
-        ui.add_error(err, "munge_error", e)
         return working, err
 
     # drop obsolete columns
@@ -635,18 +661,30 @@ def raw_elements_to_cdf(
     try:
         working, err = munge_and_melt(mu, working, count_cols, err)
     except Exception as exc:
-        e = f"Error during munge-and-melt: {exc}"
-        ui.add_error(err, "munge_error", e)
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.raw_elements_to_cdf",
+            f"Unexpected exception during munge_and_melt: {exc}"
+        )
         return err
     try:
         working, err = add_contest_id(working, juris, err, session)
     except Exception as exc:
-        e = f"Error while adding Contest_Id: {exc}"
-        ui.add_error(err, "munge_error", e)
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.raw_elements_to_cdf",
+            f"Unexpected exception while adding Contest_Id: {exc}"
+        )
         return err
     if working.empty:
-        e = f"No contest ids could be found. "
-        ui.add_error(err, "munge_error", e)
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            juris.short_name,
+            "No database contests matched to results"
+        )
         return err
 
     # get ids for remaining info sourced from rows and columns
