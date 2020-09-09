@@ -595,10 +595,9 @@ def check_munger_file_format(munger_path, munger_file, templates):
 def check_munger_file_contents(munger_name, project_root):
     """check that munger files are internally consistent; offer user chance to correct"""
     # define path to munger's directory
-    munger_dir = os.path.join(project_root, "mungers", munger_name)
 
-    problems = []
-    warns = []
+    err = None
+    munger_dir = os.path.join(project_root, "mungers", munger_name)
 
     # read cdf_elements and format from files
     cdf_elements = pd.read_csv(
@@ -628,19 +627,31 @@ def check_munger_file_contents(munger_name, project_root):
     p_catch_digits = re.compile(r"<(\d+)>")
     bad_column_formula = set()
 
-    format_d, missing = ui.get_runtime_parameters(
+    format_d, err = ui.get_runtime_parameters(
         required_keys=munger_pars_req,
         param_file=os.path.join(munger_dir, "format.config"),
         header="format",
+        err=err,
         optional_keys=list(munger_pars_opt.keys()),
     )
 
     # warn if encoding missing or is not recognized
     if "encoding" not in format_d.keys():
-        warns.append(f"No encoding specified; iso-8859-1 will be used")
+        err = ui.add_new_error(
+            err,
+            "munger-warn",
+            munger_name,
+            f"No encoding specified; iso-8859-1 will be used",
+        )
     elif not format_d["encoding"] in ui.recognized_encodings:
-        warns.append(
-            f'Encoding {format_d["encoding"]} in format file is not recognized.'
+        err = ui.add_new_error(
+            err,
+            "munger-warn",
+            munger_name,
+            (
+                f"Encoding {format_d['encoding']} in format file is not recognized;"
+                f"iso-8859-1 will be used"
+            ),
         )
 
     # check all parameters for flat files
@@ -649,18 +660,25 @@ def check_munger_file_contents(munger_name, project_root):
         if (not format_d["field_name_row"].isnumeric()) and len(
             format_d["field_names_if_no_field_name_row"]
         ) == 0:
-            problems.append(
-                f"In format file, field_name_row is not an integer, "
-                f"but no field names are give in field_names_if_no_field_name_row."
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                (
+                    f"field_name_row is not an integer, "
+                    f"but no field names are give in field_names_if_no_field_name_row."
+                ),
             )
 
         # other entries in format.config are of correct type
         try:
             int(format_d["header_row_count"])
         except TypeError or ValueError:
-            problems.append(
-                f"header_row_count in format.config must be an integer but isn't: "
-                f'{format_d["header_row_count"]}'
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f'header_row_count is not an integer:  {format_d["header_row_count"]}',
             )
 
     # check all parameters for concatenated blocks (e.g., Georgia ExpressVote output)
@@ -669,12 +687,15 @@ def check_munger_file_contents(munger_name, project_root):
             try:
                 int(format_d[key])
             except ValueError or TypeError:
-                problems.append(
-                    f"{key} in format.config must be an integer: {format_d[key]} is not."
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f'{key} is not an integer:  {format_d[key]}',
                 )
+    if err:
+        return err
 
-    # problems found above may cause this block of code to error out, so this is
-    # wrapped in a try block since it returns a general error message
     for i, r in cdf_elements[cdf_elements.source == "column"].iterrows():
         if p_not_just_digits.search(r["raw_identifier_formula"]):
             bad_column_formula.add(r["raw_identifier_formula"])
@@ -691,19 +712,14 @@ def check_munger_file_contents(munger_name, project_root):
                 bad_column_formula.add(r["raw_identifier_formula"])
     if bad_column_formula:
         cf_str = ",".join(bad_column_formula)
-        problems.append(
-            f"""At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str} """
+        err = ui.add_new_error(
+            err,
+            "munger",
+            munger_name,
+            f"At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str}"
         )
 
-    error = {}
-    if problems:
-        error["problems"] = "\n\t".join(problems)
-    if warns:
-        error["warnings"] = "\n\t".join(warns)
-
-    if error:
-        return error
-    return None
+    return err
 
 
 def dedupe(f_path, warning="There are duplicates"):
