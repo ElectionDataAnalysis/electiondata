@@ -543,29 +543,53 @@ def get_runtime_parameters(
     required_keys: list,
     param_file: str,
     header: str,
+    err: dict,
     optional_keys: list = None,
-):
+) -> (dict, dict):
     d = {}
-    missing_required_params = {"missing": []}
 
+    # read info from file
     parser = ConfigParser()
     p = parser.read(param_file)
-
     if len(p) == 0:
-        raise FileNotFoundError
+        err = add_new_error(
+            err,
+            "file",
+            param_file,
+            "File not found"
+        )
+        return d, err
 
+    # find header
     try:
         h = parser[header]
     except KeyError as ke:
-        missing_required_params["header"] = f"Header not found in file {param_file}: {ke}"
-        return dict(), missing_required_params
+        err = add_new_error(
+            err,
+            "ini",
+            param_file,
+            f"Missing header: {ke}"
+        )
+        return d, err
 
+    # read required info
+    missing_required_params = list()
     for k in required_keys:
         try:
             d[k] = h[k]
         except KeyError:
-            missing_required_params["missing"].append(k)
+            missing_required_params.append(k)
+    if missing_required_params:
+        mrp = ",".join(missing_required_params)
+        err = add_new_error(
+            err,
+            "ini",
+            param_file,
+            f"Missing required parameters: {mrp}"
+        )
+        return d, err
 
+    # read optional info
     if optional_keys is None:
         optional_keys = []
     for k in optional_keys:
@@ -574,10 +598,7 @@ def get_runtime_parameters(
         except KeyError:
             d[k] = None
 
-    if not missing_required_params["missing"]:
-        missing_required_params = None
-
-    return d, missing_required_params
+    return d, err
 
 
 def add_new_error(
