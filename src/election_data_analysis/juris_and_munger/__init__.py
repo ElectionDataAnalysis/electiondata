@@ -608,8 +608,11 @@ def check_munger_file_contents(munger_name, project_root):
     bad_source = [x for x in cdf_elements.source if x not in ["row", "column"]]
     if bad_source:
         b_str = ",".join(bad_source)
-        problems.append(
-            f"""At least one source in cdf_elements.txt is not recognized: {b_str} """
+        err = ui.add_new_error(
+            err,
+            "munger-warn",
+            munger_name,
+            f"At least one source in cdf_elements.txt is not recognized: {b_str}",
         )
 
     # formulas have good syntax
@@ -618,8 +621,11 @@ def check_munger_file_contents(munger_name, project_root):
     ]
     if bad_formula:
         f_str = ",".join(bad_formula)
-        problems.append(
-            f"""At least one formula in cdf_elements.txt has bad syntax: {f_str} """
+        err = ui.add_new_error(
+            err,
+            "munger-warn",
+            munger_name,
+            f"At least one formula in cdf_elements.txt has bad syntax: {f_str}",
         )
 
     # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows
