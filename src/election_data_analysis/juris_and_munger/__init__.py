@@ -520,12 +520,10 @@ def ensure_munger_files(munger_path, project_root=None):
             if err:
                 error[munger_file] = err
 
-    # check contents of each file if they were not newly created and
+    # check contents of all files if they were not newly created and
     # if they have successfully been checked for the format
     if file_exists and not error:
-        err = check_munger_file_contents(munger_path, project_root=project_root)
-        if err:
-            error["contents"] = err
+        error = check_munger_file_contents(munger_path, error, project_root=project_root)
 
     if created:
         created = ", ".join(created)
@@ -535,8 +533,12 @@ def ensure_munger_files(munger_path, project_root=None):
     return None
 
 
-def check_munger_file_format(munger_path, munger_file, templates):
-    error = dict()
+def check_munger_file_format(
+        munger_path: str,
+        munger_file: str,
+        templates:str,
+        error: dict
+) -> dict:
     problems = list()
     if munger_file[-4:] == ".txt":
         cf_df = pd.read_csv(
@@ -592,11 +594,9 @@ def check_munger_file_format(munger_path, munger_file, templates):
     return error
 
 
-def check_munger_file_contents(munger_name, project_root):
-    """check that munger files are internally consistent; offer user chance to correct"""
+def check_munger_file_contents(munger_name, err, project_root):
+    """check whether munger files are internally consistent"""
     # define path to munger's directory
-
-    err = None
     munger_dir = os.path.join(project_root, "mungers", munger_name)
 
     # read cdf_elements and format from files
@@ -699,9 +699,8 @@ def check_munger_file_contents(munger_name, project_root):
                     munger_name,
                     f'{key} is not an integer:  {format_d[key]}',
                 )
-    if err:
-        return err
 
+    # TODO check: can this error out now?
     for i, r in cdf_elements[cdf_elements.source == "column"].iterrows():
         if p_not_just_digits.search(r["raw_identifier_formula"]):
             bad_column_formula.add(r["raw_identifier_formula"])
