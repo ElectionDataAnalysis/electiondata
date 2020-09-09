@@ -43,9 +43,9 @@ def create_rollup(
     top_ru_id: int,
     sub_rutype_id: int,
     election_id: int,
-    datafile_list: list=None,
-    by: str="Id",
-    by_vote_type: bool=False
+    datafile_list: list = None,
+    by: str = "Id",
+    by_vote_type: bool = False,
 ) -> str:
     """<target_dir> is the directory where the resulting rollup will be stored.
     <election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
@@ -117,7 +117,7 @@ def create_rollup(
             datafile_list,
             by=by,
             exclude_total=exclude_total,
-            by_vote_type=by_vote_type
+            by_vote_type=by_vote_type,
         )
         if not err_str:
             # create record for inventory.txt

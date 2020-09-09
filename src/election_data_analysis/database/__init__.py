@@ -166,13 +166,13 @@ def append_to_composing_reporting_unit_join(engine, ru):
 
 def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
     """Check for DB and relevant tables; if they don't exist, return
-    False and error dictionary"""
-    # get postgresql parameters
-    params, err = ui.get_runtime_parameters(
-        required_keys=db_pars, param_file=paramfile, header="postgresql"
-    )
-    if err:
-        return False, err
+    error message"""
+    try:
+        params = ui.get_runtime_parameters(
+            required_keys=db_pars, param_file=paramfile, header="postgresql"
+        )[0]
+    except MissingSectionHeaderError as e:
+        return {"message": "database.ini file not found suggested location."}
     if dbname:
         params["dbname"] = dbname
 
@@ -744,8 +744,8 @@ def data_file_list(cursor, election_id, by="Id"):
         df_list = [x for (x,) in cursor.fetchall()]
         err_str = None
     except Exception as exc:
-       err_str = f"Database error pulling list of datafiles with election id in {election_id}: {exc}"
-       df_list = None
+        err_str = f"Database error pulling list of datafiles with election id in {election_id}: {exc}"
+        df_list = None
     return df_list, err_str
 
 
@@ -1301,7 +1301,7 @@ def export_rollup_from_db(
     datafile_list: iter,
     by: str = "Id",
     exclude_total: bool = False,
-    by_vote_type: bool = False
+    by_vote_type: bool = False,
 ):
     if by_vote_type:
         restrict = """ AND CIT."Txt" = 'total' """
@@ -1309,7 +1309,7 @@ def export_rollup_from_db(
         restrict = """ AND CIT."Txt" != 'total' """
     else:
         restrict = ""
-    
+
     columns = [
         "contest_type",
         "contest",
@@ -1317,10 +1317,11 @@ def export_rollup_from_db(
         "selection",
         "reporting_unit",
         "count_item_type",
-        "count"
+        "count",
     ]
     if contest_type == "Candidate":
-        q = sql.SQL("""
+        q = sql.SQL(
+            """
         SELECT 'Candidate' contest_type,
             C."Name" "Contest",
             EDRUT."Txt" contest_district_type,
@@ -1368,7 +1369,8 @@ def export_rollup_from_db(
         ).format(by=sql.Identifier(by), restrict=sql.SQL(restrict))
 
     elif contest_type == "BallotMeasure":
-        q = sql.SQL("""
+        q = sql.SQL(
+            """
         SELECT 'Candidate' contest_type,
             C."Name" "Contest",
             EDRUT."Txt" contest_district_type,

@@ -1241,11 +1241,8 @@ class Analyzer:
         )
         return agg_results
 
-    def top_counts(self, 
-        election: str, 
-        rollup_unit: str, 
-        sub_unit: str,
-        by_vote_type: bool
+    def top_counts(
+        self, election: str, rollup_unit: str, sub_unit: str, by_vote_type: bool
     ) -> str:
         d, error = ui.get_runtime_parameters(
             required_keys=["rollup_directory"],
@@ -1258,12 +1255,17 @@ class Analyzer:
             print("Data not created.")
             return
         else:
-            rollup_unit_id = db.name_to_id(self.session, 'ReportingUnit', rollup_unit)
-            sub_unit_id = db.name_to_id(self.session, 'ReportingUnitType', sub_unit)
+            rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
+            sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
             election_id = db.name_to_id(self.session, "Election", election)
-            err = a.create_rollup(self.session, d['rollup_directory'], top_ru_id=rollup_unit_id,
-                sub_rutype_id=sub_unit_id, 
-                election_id=election_id, by_vote_type=by_vote_type)
+            err = a.create_rollup(
+                self.session,
+                d["rollup_directory"],
+                top_ru_id=rollup_unit_id,
+                sub_rutype_id=sub_unit_id,
+                election_id=election_id,
+                by_vote_type=by_vote_type,
+            )
             return err
 
 
