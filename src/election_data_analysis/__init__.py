@@ -223,9 +223,7 @@ class DataLoader:
             # move results file and its parameter file to a subfolder of the archive directory
             #  named for the db
             db_param = ui.get_runtime_parameters(
-                required_keys=["dbname"],
-                param_file="run_time.ini",
-                header="postgresql"
+                required_keys=["dbname"], param_file="run_time.ini", header="postgresql"
             )[0]
             self.tracker[f]["status"] = "loaded"
             new_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
@@ -362,7 +360,7 @@ class JurisdictionPrepper:
             d, parameter_err = ui.get_runtime_parameters(
                 required_keys=prep_pars,
                 param_file=param_file,
-                header="election_data_analysis"
+                header="election_data_analysis",
             )
         except FileNotFoundError as e:
             print(
@@ -1109,11 +1107,8 @@ class Analyzer:
         )
         return agg_results
 
-    def top_counts(self, 
-        election: str, 
-        rollup_unit: str, 
-        sub_unit: str,
-        by_vote_type: bool
+    def top_counts(
+        self, election: str, rollup_unit: str, sub_unit: str, by_vote_type: bool
     ) -> str:
         d, error = ui.get_runtime_parameters(
             required_keys=["rollup_directory"],
@@ -1126,12 +1121,17 @@ class Analyzer:
             print("Data not created.")
             return
         else:
-            rollup_unit_id = db.name_to_id(self.session, 'ReportingUnit', rollup_unit)
-            sub_unit_id = db.name_to_id(self.session, 'ReportingUnitType', sub_unit)
+            rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
+            sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
             election_id = db.name_to_id(self.session, "Election", election)
-            err = a.create_rollup(self.session, d['rollup_directory'], top_ru_id=rollup_unit_id,
-                sub_rutype_id=sub_unit_id, 
-                election_id=election_id, by_vote_type=by_vote_type)
+            err = a.create_rollup(
+                self.session,
+                d["rollup_directory"],
+                top_ru_id=rollup_unit_id,
+                sub_rutype_id=sub_unit_id,
+                election_id=election_id,
+                by_vote_type=by_vote_type,
+            )
             return err
 
 
