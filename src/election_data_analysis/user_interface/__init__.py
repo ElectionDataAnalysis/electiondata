@@ -413,12 +413,20 @@ def read_single_datafile(
         elif munger.file_type in ["xls", "xlsx"]:
             df = pd.read_excel(f_path, **kwargs)
         else:
-            e = f"Unrecognized file_type in munger: {munger.file_type}"
-            add_error(err, "format.config", e)
+            err = add_new_error(
+                err,
+                "munger",
+                munger.name,
+                f"Unrecognized file_type: {munger.file_type}",
+            )
             df = pd.DataFrame()
         if df.empty:
-            e = f"Nothing read from datafile; file type {munger.file_type} may be inconsistent, or datafile may be empty."
-            add_error(err, "format.config", e)
+            err = add_new_error(
+                err,
+                "munger",
+                munger.name,
+                f"Nothing read from datafile. Munger may be inconsistent, or datafile may be empty.",
+            )
         else:
             df = m.generic_clean(df)
             err = jm.check_results_munger_compatibility(munger, df, err)
@@ -431,7 +439,12 @@ def read_single_datafile(
         # DFs have trouble comparing against None. So we return an empty DF and
         # check for emptiness below as an indication of an error.
         e = f"Error parsing results file.\n{pe}"
-    add_error(err, "datafile_error", e)
+    err = add_new_error(
+        err,
+        "file",
+        f_path,
+        e,
+    )
     return [pd.DataFrame(), err]
 
 
@@ -450,8 +463,12 @@ def read_combine_results(
         try:
             working, err = read_single_datafile(mu, results_file, err)
         except Exception as exc:
-            e = f"Exception while reading file {results_file}: {exc}"
-            add_error(err, "datafile", e)
+            err = add_new_error(
+                err,
+                "file",
+                results_file,
+                f"Unexpected exception while reading file: {exc}",
+            )
             return pd.DataFrame(), err
         if [k for k in err.keys() if err[k] != None]:
             return pd.DataFrame(), err
@@ -518,8 +535,12 @@ def new_datafile(
         munger, raw_path, project_root, err, aux_data_dir=aux_data_dir
     )
     if raw.empty:
-        e = f"No data read from datafile {raw_path}."
-        add_error(err, "datafile_error", e)
+        err = add_new_error(
+            err,
+            "file",
+            raw_path,
+            f"No data read from file",
+        )
         return err
 
     count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"]]
@@ -544,8 +565,12 @@ def new_datafile(
             ids=results_info,
         )
     except Exception as exc:
-        e = f"Unspecified error during munging: {exc}\nResults not loaded to database."
-        add_error(err, "datafile_error", e)
+        err = add_new_error(
+            err,
+            "system",
+            "user_interface.new_datafile",
+            f"Unexpected error during munging: {exc}",
+        )
         return err
 
     print(
