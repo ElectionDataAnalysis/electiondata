@@ -699,19 +699,32 @@ def raw_elements_to_cdf(
                 )
                 working.drop(t, axis=1, inplace=True)
         except Exception as exc:
-            ui.add_error(err, "munge-error", f"Error adding internal ids for {t}.")
+            err = ui.add_new_error(
+                err,
+                "system",
+                "munge.raw_elements_to_cdf",
+                f"Exception while adding internal ids for {t}.",
+            )
             return err
 
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
     try:
         working, err = add_selection_id(working, session.bind, juris, err)
     except Exception as exc:
-        e = f"Error adding Selection_Id:\n{exc}"
-        err = ui.add_error(err, "munge_error", e)
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.raw_elements_to_cdf",
+            f"Unexpected exception while adding Selection_Id:\n{exc}",
+        )
         return err
     if working.empty:
-        e = "No contests found, or no selections found for contests."
-        err = ui.add_error(err, "datafile_error", e)
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            juris.short_name,
+            "No contests found, or no selections found for contests.",
+        )
         return err
 
     # Fill VoteCount
@@ -719,11 +732,18 @@ def raw_elements_to_cdf(
     try:
         e = db.insert_to_cdf_db(session.bind, working, "VoteCount")
         if e:
-            ui.add_error(err, "database", e)
+            err = ui.add_new_error(
+                err,
+                "system",
+                "munge.raw_elements_to_cdf",
+                f"database insertion error {e}"
+            )
         session.commit()
     except Exception as exc:
-        e = f"Error filling VoteCount:\n{exc}"
-        err = ui.add_error(err, "munge_error", e)
+        err = ui.add_new_error(err,
+                               "system",
+                               "munge.raw_elements_to_cdf",
+                               f"Error filling VoteCount:\n{exc}")
     vc_time = time.perf_counter() - vc_start
     print(f"VoteCount load time in seconds: {vc_time}")
 
