@@ -678,6 +678,11 @@ def add_new_error(
             "jurisdiction":{},
             "file":{},
             "system":{},
+            "warn-ini":{},
+            "warn-munger":{},
+            "warn-jurisdiction":{},
+            "warn-file":{},
+            "warn-system":{},
         }
     if err_type not in err.keys():
         err = add_new_error(
