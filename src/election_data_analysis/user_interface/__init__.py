@@ -672,6 +672,7 @@ def add_new_error(
     """err is a dictionary of dictionaries, one for each err_type.
     This function return err, augmented by the error specified in <err_type>,<key> and <msg>"""
     if err is None:
+        print ("Initializing error dictionary")
         err = {
             "ini":{},
             "munger":{},
