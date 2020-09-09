@@ -168,7 +168,9 @@ def establish_connection(paramfile="run_time.ini", dbname=None):
     error message"""
     try:
         params = ui.get_runtime_parameters(
-            db_pars, param_file=paramfile, header="postgresql"
+            required_keys=db_pars,
+            param_file=paramfile,
+            header="postgresql"
         )[0]
     except MissingSectionHeaderError as e:
         return {"message": "database.ini file not found suggested location."}
@@ -195,7 +197,11 @@ def establish_connection(paramfile="run_time.ini", dbname=None):
 def create_new_db(project_root, param_file="run_time.ini"):
     # get connection to default postgres DB to create new one
     try:
-        params = ui.get_runtime_parameters(db_pars, param_file, "postgresql")[0]
+        params = ui.get_runtime_parameters(
+            required_keys=db_pars,
+            param_file=param_file,
+            header="postgresql"
+        )[0]
         db_name = params["dbname"]
         params["dbname"] = "postgres"
         con = psycopg2.connect(**params)
@@ -244,7 +250,9 @@ def sql_alchemy_connect(
 ) -> sqlalchemy.engine:
     """Returns an engine and a metadata object"""
     params = ui.get_runtime_parameters(
-        db_pars, param_file=paramfile, header="postgresql"
+        required_keys=db_pars,
+        param_file=paramfile,
+        header="postgresql"
     )[0]
     if dbname != "postgres":
         params["dbname"] = dbname

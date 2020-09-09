@@ -326,9 +326,9 @@ def read_munger_info_from_files(dir_path):
     required_keys = munger_pars_req
     optional_keys = list(munger_pars_opt.keys())
     options, missing_required_params = ui.get_runtime_parameters(
-        required_keys,
-        os.path.join(dir_path, "format.config"),
-        "format",
+        required_keys=required_keys,
+        param_file=os.path.join(dir_path, "format.config"),
+        header="format",
         optional_keys=optional_keys,
     )
     options = recast_options(options,munger_pars_opt)
@@ -569,9 +569,9 @@ def check_munger_file_format(munger_path, munger_file, templates):
 
     elif munger_file == "format.config":
         d, missing = ui.get_runtime_parameters(
-            munger_pars_req,
-            os.path.join(munger_path, munger_file),
-            "format",
+            required_keys=munger_pars_req,
+            param_file=os.path.join(munger_path, munger_file),
+            header="format",
             optional_keys=list(munger_pars_opt.keys()),
         )
         if missing:
@@ -629,9 +629,9 @@ def check_munger_file_contents(munger_name, project_root):
     bad_column_formula = set()
 
     format_d, missing = ui.get_runtime_parameters(
-        munger_pars_req,
-        os.path.join(munger_dir, "format.config"),
-        "format",
+        required_keys=munger_pars_req,
+        param_file=os.path.join(munger_dir, "format.config"),
+        header="format",
         optional_keys=list(munger_pars_opt.keys()),
     )
 
