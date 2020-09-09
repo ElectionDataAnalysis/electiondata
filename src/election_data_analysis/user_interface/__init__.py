@@ -638,10 +638,35 @@ def get_runtime_parameters(
     return d, missing_required_params
 
 
-def add_error(err: dict, key: str, msg: str) -> dict:
-    if msg:
-        if msg in err.keys():
-            err[key].append(msg)
-        else:
-            err[key] = msg
+def add_new_error(
+        err: dict,
+        err_type: str,
+        key: str,
+        msg: str
+) -> dict:
+    """err is a dictionary of dictionaries, one for each err_type.
+    This function return err, augmented by the error specified in <err_type>,<key> and <msg>"""
+    if err is None:
+        err = {
+            "ini":{},
+            "munger":{},
+            "jurisdiction":{},
+            "file":{},
+            "system":{},
+        }
+    if err_type not in err.keys():
+        err = add_new_error(
+            err,
+            "system",
+            "user_interface.add_new_error",
+            f"{err_type}: {msg}")
+        return err
+    if key in err[err_type].keys():
+        err[err_type][key].append(f"|{msg}")
+    else:
+        err[err_type][key] = msg
     return err
+
+# TODO remove this diagnostic
+def add_error():
+    return
