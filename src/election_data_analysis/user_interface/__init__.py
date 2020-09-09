@@ -273,52 +273,6 @@ recognized_encodings = {
 }
 
 
-def pick_path(initialdir="~/", mode="file"):
-    """Creates pop-up window for user to choose a <mode>, starting from <initialdir>.
-    Returns chosen file path or directory path (depending on <mode>"""
-
-    while True:
-        fpath = input(
-            f"Enter path to {mode} (or hit return to use pop-up window to find it).\n"
-        ).strip()
-        if not fpath:
-            print(f"Use pop-up window to pick your {mode}.")
-            if mode == "file":
-                fpath = filedialog.askopenfilename(
-                    initialdir=initialdir,
-                    title=f"Select {mode}",
-                    filetypes=(
-                        ("text files", "*.txt"),
-                        ("csv files", "*.csv"),
-                        ("ini files", "*.ini"),
-                        ("all files", "*.*"),
-                    ),
-                )
-            elif mode == "directory":
-                fpath = filedialog.askdirectory(
-                    initialdir=initialdir, title=f"Select {mode}"
-                )
-            else:
-                print(f"Mode {mode} not recognized")
-                return None
-
-            print(f"The {mode} you chose is:\n\t{fpath}")
-            break
-        elif (mode == "file" and not os.path.isfile(fpath)) or (
-            mode == "directory" and not os.path.isdir(fpath)
-        ):
-            print(f"This is not a {mode}: {fpath}\nTry again.")
-        else:
-            break
-    return fpath
-
-
-def pick_paramfile(msg="Locate the parameter file for your postgreSQL database."):
-    print(msg)
-    fpath = pick_path()
-    return fpath
-
-
 def get_params_to_read_results(d: dict, results_file, munger_name) -> (dict, list):
     kwargs = d
     if results_file:
@@ -583,43 +537,6 @@ def new_datafile(
     else:
         print(f"\tNote:\n{err}")
     return err
-
-
-def config(
-    filename=None,
-    section="postgresql",
-    msg="Pick parameter file for connecting to the database",
-):
-    """
-    Creates a parameter dictionary <d> from the section <section> in <filename>
-    default section is info needed to log into our db
-    """
-    d = {}
-    if not filename:
-        # if parameter file is not provided, ask for it
-        # initialize root widget for tkinter
-        filename = pick_paramfile(msg=msg)
-
-    # create a parser
-    parser = ConfigParser()
-    # read config file
-
-    try:
-        parser.read(filename)
-    except MissingSectionHeaderError as e:
-        print(e)
-        d = config(filename=None, section=section)
-        return d
-
-    # get section, default to postgresql
-    if parser.has_section(section):
-        params = parser.items(section)
-        for param in params:
-            d[param[0]] = param[1]
-    else:
-        print(f"Section {section} not found in the {filename} file. Try again.")
-        d = config(section=section, msg=msg)
-    return d
 
 
 def get_runtime_parameters(
