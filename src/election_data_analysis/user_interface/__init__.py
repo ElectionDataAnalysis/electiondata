@@ -288,7 +288,7 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
     and initiates munger. <params> must include these keys:
     'project_root', 'munger_name', 'results_file'"""
 
-    project_root = Path(os.getcwd()).parents[2]
+    project_root = Path(__file__).parents[2].absolute()
     dir_of_all_mungers = os.path.join(project_root, "mungers")
     my_munger_path = os.path.join(dir_of_all_mungers,params["munger_name"])
     if "aux_data_dir" in params.keys():

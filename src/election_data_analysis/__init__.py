@@ -322,7 +322,7 @@ class SingleDataLoader:
         # TODO document
         self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
         for mu in self.munger_list:
-            self.munger[mu], m_err[mu] = jm.Munger(munger_path, project_root=project_root)
+            self.munger[mu], m_err[mu] = jm.Munger(munger_path)
 
         # if no munger throws an error:
         if all([x is None for x in self.munger_err.values()]):

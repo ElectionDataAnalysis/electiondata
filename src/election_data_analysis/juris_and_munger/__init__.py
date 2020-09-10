@@ -150,29 +150,7 @@ class Jurisdiction:
 
 
 class Munger:
-    def __new__(cls, dir_path, err=None, aux_data_dir=None, project_root=None):
-        munger_name = Path(dir_path).name
-        # if directory does not exist, do not create the Munger
-        if not os.path.isdir(dir_path):
-            mu = None
-            err = ui.add_new_error(
-                err,
-                "munger",
-                munger_name,
-                f"Directory does not exist: {dir_path}"
-            )
-            return mu, err
-
-        # if munger files throw error, do not create the Munger
-        new_err = check_munger_files(dir_path)
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            mu = None
-        else:
-            mu = super().__new__(cls, dir_path, aux_data_dir=None, project_root=None)
-        return mu, err
-
-    def get_aux_data(self, aux_data_dir, err, project_root=None) -> dict:
+    def get_aux_data(self, aux_data_dir, err, project_root=None) -> (dict, dict):
         """creates dictionary of dataframes, one for each auxiliary datafile.
         DataFrames returned are (multi-)indexed by the primary key(s)"""
         aux_data_dict = {}  # will hold dataframe for each abbreviated file name
@@ -180,10 +158,13 @@ class Munger:
         field_list = list(set([x[0] for x in self.auxiliary_fields()]))
         for abbrev in field_list:
             # get munger for the auxiliary file
-            aux_mu = Munger(
-                os.path.join(self.path_to_munger_dir, abbrev),
-                project_root=project_root
-            )
+            munger_path = os.path.join(self.path_to_munger_dir, abbrev)
+            mu_err = check_munger_files(munger_path)
+            if ui.fatal_error(mu_err):
+                err = ui.consolidate_errors([err, mu_err])
+                return dict(), err
+            else:
+                aux_mu = Munger(munger_path)
 
             # find file in aux_data_dir whose name contains the string <afn>
             aux_filename_list = [x for x in os.listdir(aux_data_dir) if abbrev in x]
@@ -231,7 +212,7 @@ class Munger:
     ):
         """<dir_path> is the directory for the munger. If munger deals with auxiliary data files,
         <aux_data_dir> is the directory holding those files."""
-        project_root = Path(os.getcwd()).parents[2]
+        project_root = Path(__file__).parents[2].absolute()
         self.name = os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir = dir_path
         # TODO make handling of these directories consistent
@@ -352,7 +333,7 @@ def ensure_juris_files(juris_path, ignore_empty=False):
     # package possible errors from this function into a dictionary and return them
     error_ensure_juris_files = {}
 
-    project_root = Path(os.getcwd()).parents[2]
+    project_root = Path(__file__).parents[2].absolute()
     templates_dir = os.path.join(project_root, "templates/jurisdiction_templates")
     # notify user of any extraneous files
     extraneous = [
@@ -458,7 +439,7 @@ def check_munger_files(munger_path):
     <munger_path> is the path to the directory of the particular munger"""
 
     err = None
-    project_root = Path(os.getcwd()).parents[2]
+    project_root = Path(__file__).parents[2].absolute()
     munger_name = Path(munger_path).name
 
     # check whether directory exists
@@ -485,8 +466,8 @@ def check_munger_files(munger_path):
             err = check_munger_file_format(munger_path, munger_file, templates, err)
 
             # if no errors found so far, check contents
-            if ("munger" not in err.keys()) or (munger_name in err["munger"].keys()):
-                err = check_munger_file_contents(munger_path, munger_file, err, project_root=project_root)
+            if not ui.fatal_error(err,error_type_list=["munger"],name_key_list=[munger_file]):
+                err = check_munger_file_contents(munger_path, munger_file, err)
         else:
             err = ui.add_new_error(
                 err,
@@ -562,9 +543,9 @@ def check_munger_file_format(
     return err
 
 
-def check_munger_file_contents(munger_path, munger_name, munger_file, err, project_root):
+def check_munger_file_contents(munger_path, munger_file, err):
     """check whether munger files are internally consistent"""
-
+    munger_name = Path(munger_path).name
     if munger_file == "cdf_elements.txt":
         # read cdf_elements and format from files
         cdf_elements = pd.read_csv(
@@ -831,7 +812,7 @@ def load_juris_dframe_into_cdf(
     session, element, juris_path, error
 ) -> dict:
     """TODO"""
-    project_root = Path(os.getcwd()).parents[2]
+    project_root = Path(__file__).parents[2].absolute()
     cdf_schema_def_dir = os.path.join(
         project_root,
         "election_data_analysis/CDF_schema_def_info",
