@@ -84,17 +84,17 @@ class DataLoader:
         self.tracker = dict()
 
         # create db if it does not already exist
-        error = db.test_connection()
+        error = db.establish_connection()
         if error:
             db.create_new_db(self.d["project_root"])
 
         # connect to db
         try:
-            self.engine, err = db.sql_alchemy_connect()
+            self.engine = db.sql_alchemy_connect()
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
         except Exception as e:
-            print(f"Cannot connect to database. Exiting. {e}")
+            print("Cannot connect to database. Exiting.")
             quit()
 
     def load_all(self, load_jurisdictions: bool = True) -> dict:
@@ -107,7 +107,7 @@ class DataLoader:
         # list .ini files and pull their jurisdiction_paths
         par_files = [f for f in os.listdir(self.d["results_dir"]) if f[-4:] == ".ini"]
         if not par_files:
-            err = ui.append_error(
+            err = ui.add_new_error(
                 err,
                 "file",
                 self.d['results_dir'],
@@ -380,7 +380,7 @@ class SingleDataLoader:
         print(f'Processing {self.d["results_file"]}')
         results_info, e = self.track_results()
         if e:
-            err = ui.append_error(
+            err = ui.add_new_error(
                 err,
                 "system",
                 "SingleDataLoader.load_results"
@@ -673,7 +673,7 @@ class JurisdictionPrepper:
             self.d, results_file, munger_name
         )
         if missing:
-            error = ui.append_error(
+            error = ui.add_new_error(
                 error,
                 "ini",
                 "jurisdiction_prep.ini"
@@ -685,7 +685,7 @@ class JurisdictionPrepper:
         wr, munger, error = ui.read_results(kwargs, error)
 
         if wr.empty:
-            error = ui.append_error(
+            error = ui.add_new_error(
                 error,
                 "file",
 
@@ -703,7 +703,7 @@ class JurisdictionPrepper:
         # get rid of all-blank rows
         wr = wr[(wr != "").any(axis=1)]
         if wr.empty:
-            ui.append_error(
+            ui.add_new_error(
                 error,
                 "ini",
                 "jurisdiction_prep.ini"
@@ -716,7 +716,7 @@ class JurisdictionPrepper:
         try:
             [county_formula, sub_ru_formula] = ru_formula.split(";")
         except ValueError:
-            ui.append_error(
+            ui.add_new_error(
                 error,
                 "munger",
                 munger.name,
@@ -788,7 +788,7 @@ class JurisdictionPrepper:
                 dir, file_dict["results_file"]
             )
             if missing_params:
-                ui.append_error(
+                ui.add_new_error(
                     error,
                     "ini",
                     par_file_name,
@@ -839,7 +839,7 @@ class JurisdictionPrepper:
             self.d, results_file_path, munger_name
         )
         if missing:
-            error = ui.append_error(
+            error = ui.add_new_error(
                 error,
                 "ini"
                 "datafile",
@@ -892,7 +892,7 @@ class JurisdictionPrepper:
             prep.write_element(self.d["jurisdiction_path"], element, we)
             # if <element>.txt has columns other than <name_field>, notify user
             if we.shape[1] > 1 and not new_internal_df.empty:
-                error = ui.append_error(
+                error = ui.add_new_error(
                     error,
                     "jurisdiction-warn",
                     self.d["jurisdiction_path"],
@@ -999,7 +999,7 @@ class Analyzer:
         return super().__new__(self)
 
     def __init__(self):
-        eng, err = db.sql_alchemy_connect("run_time.ini")
+        eng = db.sql_alchemy_connect("run_time.ini")
         Session = sessionmaker(bind=eng)
         self.session = Session()
 

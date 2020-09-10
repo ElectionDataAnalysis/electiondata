@@ -150,6 +150,29 @@ class Jurisdiction:
 
 
 class Munger:
+    def __new__(cls, dir_path, err=None, aux_data_dir=None, project_root=None):
+        mungers_dir = Path(dir_path).parent
+        munger_name = Path(dir_path).name
+        # if directory does not exist, do not create the Munger
+        if not os.path.isdir(dir_path):
+            mu = None
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"Directory does not exist: {dir_path}"
+            )
+            return mu, err
+
+        # if munger files throw error, do not create the Munger
+        new_err = check_munger_files(mungers_dir, munger_name, project_root=project_root)
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            mu = None
+        else:
+            mu = super().__new__(cls, dir_path, aux_data_dir=None, project_root=None)
+        return mu, err
+
     def get_aux_data(self, aux_data_dir, err, project_root=None) -> dict:
         """creates dictionary of dataframes, one for each auxiliary datafile.
         DataFrames returned are (multi-)indexed by the primary key(s)"""
@@ -158,9 +181,9 @@ class Munger:
         field_list = list(set([x[0] for x in self.auxiliary_fields()]))
         for abbrev in field_list:
             # get munger for the auxiliary file
-            mu_err = check_munger_files()
-            aux_mu, mu_err = Munger(
+            aux_mu = Munger(
                 os.path.join(self.path_to_munger_dir, abbrev),
+                project_root=project_root
             )
 
             # find file in aux_data_dir whose name contains the string <afn>
@@ -209,7 +232,6 @@ class Munger:
         <aux_data_dir> is the directory holding those files."""
         self.name = os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir = dir_path
-        self.foo_err = err
         # TODO make handling of these directories consistent
 
         [
@@ -267,11 +289,10 @@ def read_munger_info_from_files(dir_path):
     # read formatting info
     required_keys = munger_pars_req
     optional_keys = list(munger_pars_opt.keys())
-    options, dummy_err = ui.get_runtime_parameters(
+    options, missing_required_params = ui.get_runtime_parameters(
         required_keys=required_keys,
         param_file=os.path.join(dir_path, "format.config"),
         header="format",
-        err=None,
         optional_keys=optional_keys,
     )
     options = recast_options(options,munger_pars_opt)
@@ -428,16 +449,17 @@ def ensure_juris_files(juris_path, project_root, ignore_empty=False):
         return {}
 
 
-def check_munger_files(munger_path,template_path):
+def check_munger_files(dir_of_all_mungers, munger_name, project_root=None):
     """Check that the munger files are complete and consistent with one another.
-    <munger_path> is the path to the directory of the particular munger.
-    <template_path> is the path to the directory of template files"""
+    Assumes munger directory exists. Assumes dictionary.txt is in the template file.
+    <munger_path> is the path to the directory of the particular munger"""
 
     err = None
+    munger_path = os.path.join(dir_of_all_mungers,munger_name)
 
     # check whether directory exists
     if not os.path.isdir(munger_path):
-        err = ui.append_error(
+        err = ui.add_new_error(
             err,
             "munger",
             munger_path,
@@ -446,7 +468,8 @@ def check_munger_files(munger_path,template_path):
         return err
 
     # check whether all files exist
-    template_with_extension_list = os.listdir(template_path)
+    templates = os.path.join(project_root, "templates/munger_templates")
+    template_with_extension_list = os.listdir(templates)
     for munger_file in template_with_extension_list:
         # TODO create optional template for auxiliary.txt
         cf_path = os.path.join(munger_path, munger_file)
@@ -455,18 +478,13 @@ def check_munger_files(munger_path,template_path):
 
         # if file exists, check format against template and then contents
         if file_exists:
-            # check format
-            new_err = check_munger_file_format(munger_path, munger_file, template_path, err)
-            if new_err and "munger" in new_err.keys():
-                err = ui.consolidate_errors(err,new_err)
-                return err
-            # if no errors found so far, check contents
-            else:
-                new_err = check_munger_file_contents(munger_path, munger_file, None)
-                if new_err and "munger" in new_err.keys():
+            err = check_munger_file_format(munger_path, munger_file, templates, err)
 
+            # if no errors found so far, check contents
+            if ("munger" not in err.keys()) or (munger_name in err["munger"].keys()):
+                err = check_munger_file_contents(munger_path, munger_file, err, project_root=project_root)
         else:
-            err = ui.append_error(
+            err = ui.add_new_error(
                 err,
                 "munger",
                 munger_name,
@@ -478,11 +496,11 @@ def check_munger_files(munger_path,template_path):
 def check_munger_file_format(
         munger_path: str,
         munger_file: str,
-        templates: str,
+        templates:str,
         err: dict
 ) -> dict:
 
-    munger_name = Path(munger_path).name
+    problems = list()
     if munger_file[-4:] == ".txt":
         cf_df = pd.read_csv(
             os.path.join(munger_path, munger_file), sep="\t", encoding="iso-8859-1"
@@ -494,10 +512,10 @@ def check_munger_file_format(
         # check column names are correct
         if set(cf_df.columns) != set(temp.columns):
             cols = "\t".join(temp.columns.to_list())
-            err = ui.append_error(
+            err = ui.add_new_error(
                 err,
                 "munger",
-                munger_name,
+                munger_path,
                 f"Columns in {munger_file} need to be (tab-separated):\n" f" {cols}\n",
             )
 
@@ -505,19 +523,19 @@ def check_munger_file_format(
         #  check same number of rows
         elif cf_df.shape[0] != temp.shape[0]:
             first_col = "\n".join(list(temp.iloc[:, 0]))
-            err = ui.append_error(
+            err = ui.add_new_error(
                 err,
                 "munger",
-                munger_name,
+                munger_path,
                 f"Wrong number of rows in {munger_file}. \nFirst column must be exactly:\n{first_col}",
             )
         elif set(cf_df.iloc[:, 0]) != set(temp.iloc[:, 0]):
             first_error = (cf_df.iloc[:, 0] != temp.iloc[:, 0]).index.to_list()[0]
             first_col = "\n".join(list(temp.iloc[:, 0]))
-            err = ui.append_error(
+            err = ui.add_new_error(
                 err,
                 "munger",
-                munger_name,
+                munger_path,
                 f"First column of {munger_file}.txt must be exactly:\n{first_col}\n"
                 f"First error is at row {first_error}: {cf_df.loc[first_error]}",
             )
@@ -531,19 +549,18 @@ def check_munger_file_format(
             optional_keys=list(munger_pars_opt.keys()),
         )
     else:
-        err = ui.append_error(
+        err = ui.add_new_error(
             err,
             "munger",
-            munger_name,
+            munger_path,
             f"Unrecognized file in munger: {munger_file}",
         )
     return err
 
 
-def check_munger_file_contents(munger_path, munger_file, err):
+def check_munger_file_contents(munger_path, munger_name, munger_file, err, project_root):
     """check whether munger files are internally consistent"""
 
-    munger_name = Path(munger_path).name
     if munger_file == "cdf_elements.txt":
         # read cdf_elements and format from files
         cdf_elements = pd.read_csv(
@@ -554,7 +571,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
         bad_source = [x for x in cdf_elements.source if x not in ["row", "column"]]
         if bad_source:
             b_str = ",".join(bad_source)
-            err = ui.append_error(
+            err = ui.add_new_error(
                 err,
                 "munger-warn",
                 munger_name,
@@ -567,7 +584,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
         ]
         if bad_formula:
             f_str = ",".join(bad_formula)
-            err = ui.append_error(
+            err = ui.add_new_error(
                 err,
                 "munger-warn",
                 munger_name,
@@ -596,7 +613,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
                     bad_column_formula.add(r["raw_identifier_formula"])
         if bad_column_formula:
             cf_str = ",".join(bad_column_formula)
-            err = ui.append_error(
+            err = ui.add_new_error(
                 err,
                 "munger",
                 munger_name,
@@ -614,14 +631,14 @@ def check_munger_file_contents(munger_path, munger_file, err):
 
         # warn if encoding missing or is not recognized
         if "encoding" not in format_d.keys():
-            err = ui.append_error(
+            err = ui.add_new_error(
                 err,
                 "munger-warn",
                 munger_name,
                 f"No encoding specified; iso-8859-1 will be used",
             )
         elif not format_d["encoding"] in ui.recognized_encodings:
-            err = ui.append_error(
+            err = ui.add_new_error(
                 err,
                 "munger-warn",
                 munger_name,
@@ -637,7 +654,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
             if (not format_d["field_name_row"].isnumeric()) and len(
                 format_d["field_names_if_no_field_name_row"]
             ) == 0:
-                err = ui.append_error(
+                err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
@@ -651,7 +668,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
             try:
                 int(format_d["header_row_count"])
             except TypeError or ValueError:
-                err = ui.append_error(
+                err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
@@ -664,14 +681,14 @@ def check_munger_file_contents(munger_path, munger_file, err):
                 try:
                     int(format_d[key])
                 except ValueError or TypeError:
-                    err = ui.append_error(
+                    err = ui.add_new_error(
                         err,
                         "munger",
                         munger_name,
                         f'{key} is not an integer:  {format_d[key]}',
                     )
     else:
-        err = ui.append_error(
+        err = ui.add_new_error(
             err,
             "system",
             "juris_and_munger.check_munger_file_contents",
