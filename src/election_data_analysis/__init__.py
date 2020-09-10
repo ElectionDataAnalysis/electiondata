@@ -443,7 +443,7 @@ class JurisdictionPrepper:
         error = dict()
         # create directory if it doesn't exist
         jm.ensure_jurisdiction_dir(
-            self.d["jurisdiction_path"], self.d["project_root"], ignore_empty=True
+            self.d["jurisdiction_path"], ignore_empty=True
         )
 
         # add default entries
@@ -849,6 +849,7 @@ class JurisdictionPrepper:
 
         # read data from file (appending _SOURCE)
         wr, mu, error = ui.read_results(kwargs, error)
+
 
         for element in elements:
             name_field = db.get_name_field(element)

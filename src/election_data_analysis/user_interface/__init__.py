@@ -287,19 +287,26 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
     """Reads results (appending '_SOURCE' to the columns)
     and initiates munger. <params> must include these keys:
     'project_root', 'munger_name', 'results_file'"""
+
+    project_root = Path(os.getcwd()).parents[2]
+    dir_of_all_mungers = os.path.join(project_root, "mungers")
+    my_munger_path = os.path.join(dir_of_all_mungers,params["munger_name"])
     if "aux_data_dir" in params.keys():
         aux_data_dir = params["aux_data_dir"]
     else:
         aux_data_dir = None
-    mu, mu_err = jm.Munger(
-        os.path.join(params["project_root"], "mungers", params["munger_name"]),
-        aux_data_dir=aux_data_dir,
-        project_root=params["project_root"],
-    )
-    if mu_err and ("munger" in mu_err.keys()) and (params["munger_name"] in mu_err["munger"][params["munger_name"]]):
+
+    # check munger files and (if no error) create munger
+    mu_err = jm.check_munger_files(my_munger_path)
+    if fatal_error(mu_err):
         error = consolidate_errors([error,mu_err])
         wr = pd.DataFrame()
+        mu = None
     else:
+        mu = jm.Munger(
+            my_munger_path,
+            aux_data_dir=aux_data_dir,
+        )
         wr, error = read_combine_results(
             mu,
             params["results_file"],
@@ -316,7 +323,7 @@ def pick_juris_from_filesystem(juris_path, project_root, err, check_files=False)
     """
 
     if check_files:
-        missing_values = jm.ensure_jurisdiction_dir(juris_path, project_root)
+        missing_values = jm.ensure_jurisdiction_dir(juris_path)
 
     # initialize the jurisdiction
     if missing_values:
@@ -599,7 +606,7 @@ def consolidate_errors(list_of_err: list) -> Optional[Dict[Any, dict]]:
     If all dictionaries are None, return None"""
 
     # take union of all error-types appearing
-    err_types = set().union(*[x.keys() for x in list_of_err])
+    err_types = set().union(*[x.keys() for x in list_of_err if x])
     # if errs are all empty or none
     if err_types == set():
         return None
@@ -609,7 +616,7 @@ def consolidate_errors(list_of_err: list) -> Optional[Dict[Any, dict]]:
         # initialize
         d[et] = dict()
         # find errs that have the error-type
-        err_list = [x[et] for x in list_of_err if et in x.keys()]
+        err_list = [x[et] for x in list_of_err if x and (et in x.keys())]
         # take union of all name-keys appearing for this error-type
         name_keys = set().union(*[y.keys() for y in err_list])
         for nk in name_keys:
@@ -658,4 +665,26 @@ def add_new_error(
     else:
         err[err_type][key] = msg
     return err
+
+
+def fatal_error(err,error_type_list=None,name_key_list=None) -> bool:
+    """Returns true if there is a fatal error in the error dictionary <err>
+    matching all given criteria"""
+    if not err:
+        return False
+    # if no error types are given, use them all
+    if not error_type_list:
+        error_type_list = err.keys()
+    # warnings are not fatal
+    fatal_et_list = [x for x in error_type_list if "warn" not in x]
+    for et in fatal_et_list:
+        if not name_key_list:
+            bad = err[et].keys()
+        else:
+            bad = [x for x in name_key_list if x in err[et].keys()]
+        if bad:
+            return False
+        else:
+            return True
+
 

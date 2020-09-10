@@ -132,7 +132,7 @@ class Jurisdiction:
         for element in juris_elements:
             # read df from Jurisdiction directory
             error = load_juris_dframe_into_cdf(
-                session, element, self.path_to_juris_dir, project_root, error
+                session, element, self.path_to_juris_dir, error
             )
 
         # Load CandidateContests and BallotMeasureContests
@@ -151,7 +151,6 @@ class Jurisdiction:
 
 class Munger:
     def __new__(cls, dir_path, err=None, aux_data_dir=None, project_root=None):
-        mungers_dir = Path(dir_path).parent
         munger_name = Path(dir_path).name
         # if directory does not exist, do not create the Munger
         if not os.path.isdir(dir_path):
@@ -165,7 +164,7 @@ class Munger:
             return mu, err
 
         # if munger files throw error, do not create the Munger
-        new_err = check_munger_files(mungers_dir, munger_name, project_root=project_root)
+        new_err = check_munger_files(dir_path)
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             mu = None
@@ -226,10 +225,13 @@ class Munger:
         return aux_field_list
 
     def __init__(
-        self, dir_path, aux_data_dir=None, project_root=None
+            self,
+            dir_path,
+            aux_data_dir=None,
     ):
         """<dir_path> is the directory for the munger. If munger deals with auxiliary data files,
         <aux_data_dir> is the directory holding those files."""
+        project_root = Path(os.getcwd()).parents[2]
         self.name = os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir = dir_path
         # TODO make handling of these directories consistent
@@ -320,7 +322,7 @@ def read_munger_info_from_files(dir_path):
 
 
 # TODO combine ensure_jurisdiction_dir with ensure_juris_files
-def ensure_jurisdiction_dir(juris_path, project_root, ignore_empty=False):
+def ensure_jurisdiction_dir(juris_path, ignore_empty=False):
     path_output = None
     # create jurisdiction directory
     try:
@@ -332,7 +334,7 @@ def ensure_jurisdiction_dir(juris_path, project_root, ignore_empty=False):
 
     # ensure the contents of the jurisdiction directory are correct
     juris_file_error = ensure_juris_files(
-        juris_path, project_root, ignore_empty=ignore_empty
+        juris_path, ignore_empty=ignore_empty
     )
     if path_output:
         juris_file_error["directory_status"] = path_output
@@ -342,7 +344,7 @@ def ensure_jurisdiction_dir(juris_path, project_root, ignore_empty=False):
         return None
 
 
-def ensure_juris_files(juris_path, project_root, ignore_empty=False):
+def ensure_juris_files(juris_path, ignore_empty=False):
     """Check that the jurisdiction files are complete and consistent with one another.
     Check for extraneous files in Jurisdiction directory.
     Assumes Jurisdiction directory exists. Assumes dictionary.txt is in the template file"""
@@ -350,6 +352,7 @@ def ensure_juris_files(juris_path, project_root, ignore_empty=False):
     # package possible errors from this function into a dictionary and return them
     error_ensure_juris_files = {}
 
+    project_root = Path(os.getcwd()).parents[2]
     templates_dir = os.path.join(project_root, "templates/jurisdiction_templates")
     # notify user of any extraneous files
     extraneous = [
@@ -417,10 +420,10 @@ def ensure_juris_files(juris_path, project_root, ignore_empty=False):
 
             if juris_file == "dictionary":
                 # dedupe the dictionary (d records the dupes found)
-                d, dupe = dedupe(cf_path)
+                dedupe(cf_path)
             else:
                 # dedupe the file
-                d, dupe = dedupe(cf_path)
+                dedupe(cf_path)
                 # check for problematic null entries
                 null_columns = check_nulls(juris_file, cf_path, project_root)
                 if null_columns:
@@ -449,13 +452,14 @@ def ensure_juris_files(juris_path, project_root, ignore_empty=False):
         return {}
 
 
-def check_munger_files(dir_of_all_mungers, munger_name, project_root=None):
+def check_munger_files(munger_path):
     """Check that the munger files are complete and consistent with one another.
     Assumes munger directory exists. Assumes dictionary.txt is in the template file.
     <munger_path> is the path to the directory of the particular munger"""
 
     err = None
-    munger_path = os.path.join(dir_of_all_mungers,munger_name)
+    project_root = Path(os.getcwd()).parents[2]
+    munger_name = Path(munger_path).name
 
     # check whether directory exists
     if not os.path.isdir(munger_path):
@@ -824,11 +828,13 @@ def juris_dependency_dictionary():
 # TODO before processing jurisdiction files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
 def load_juris_dframe_into_cdf(
-    session, element, juris_path, project_root, error, load_refs=True
+    session, element, juris_path, error
 ) -> dict:
     """TODO"""
+    project_root = Path(os.getcwd()).parents[2]
     cdf_schema_def_dir = os.path.join(
-        project_root, "election_data_analysis/CDF_schema_def_info"
+        project_root,
+        "election_data_analysis/CDF_schema_def_info",
     )
     element_fpath = os.path.join(juris_path, f"{element}.txt")
     if not os.path.exists(element_fpath):
