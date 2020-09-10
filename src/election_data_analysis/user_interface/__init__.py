@@ -7,7 +7,7 @@ import csv
 import os
 from pathlib import Path
 from election_data_analysis import juris_and_munger as jm
-from typing import Optional, Dict
+from typing import Optional, Dict, Any
 
 recognized_encodings = {
     "iso2022jp",
@@ -291,15 +291,22 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
         aux_data_dir = params["aux_data_dir"]
     else:
         aux_data_dir = None
-    mu = jm.Munger(
+    mu, mu_err = jm.Munger(
         os.path.join(params["project_root"], "mungers", params["munger_name"]),
         aux_data_dir=aux_data_dir,
         project_root=params["project_root"],
     )
-    wr, error = read_combine_results(
-        mu, params["results_file"], params["project_root"], error
-    )
-    wr.columns = [f"{x}_SOURCE" for x in wr.columns]
+    if mu_err and ("munger" in mu_err.keys()) and (params["munger_name"] in mu_err["munger"][params["munger_name"]]):
+        error = consolidate_errors([error,mu_err])
+        wr = pd.DataFrame()
+    else:
+        wr, error = read_combine_results(
+            mu,
+            params["results_file"],
+            params["project_root"],
+            error
+        )
+        wr.columns = [f"{x}_SOURCE" for x in wr.columns]
     return wr, mu, error
 
 
@@ -472,7 +479,7 @@ def new_datafile(
     """Guide user through process of uploading data in <raw_file>
     into common data format.
     Assumes cdf db exists already"""
-    err = dict()
+    err = None
     raw, err = read_combine_results(
         munger, raw_path, project_root, err, aux_data_dir=aux_data_dir
     )
@@ -520,10 +527,6 @@ def new_datafile(
         f"to database {session.bind.engine}\nfrom file {raw_path}\n"
         f"assuming jurisdiction {juris.path_to_juris_dir}"
     )
-    if err == dict():
-        err = None
-    else:
-        print(f"\tNote:\n{err}")
     return err
 
 
@@ -531,7 +534,7 @@ def get_runtime_parameters(
     required_keys: list,
     param_file: str,
     header: str,
-    err: dict,
+    err: Optional[Dict[Any, dict]],
     optional_keys: list = None,
 ) -> (dict, dict):
     d = {}
@@ -615,8 +618,13 @@ def consolidate_errors(list_of_err: list) -> Optional[Dict[Any, dict]]:
             d[et][nk] = "|".join(msg_list)
     return d
 
+
+def report(err):
+    # TODO
+    return
+
 def add_new_error(
-        err: dict,
+        err: Optional[Dict[Any, dict]],
         err_type: str,
         key: str,
         msg: str
@@ -626,6 +634,7 @@ def add_new_error(
     if err is None:
         print ("Initializing error dictionary")
         err = {
+            # TODO document. Problems with results file are reported in .ini
             "ini":{},
             "munger":{},
             "jurisdiction":{},
@@ -650,7 +659,3 @@ def add_new_error(
         err[err_type][key] = msg
     return err
 
-
-# TODO remove this diagnostic
-def add_error():
-    return
