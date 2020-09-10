@@ -289,10 +289,11 @@ def read_munger_info_from_files(dir_path):
     # read formatting info
     required_keys = munger_pars_req
     optional_keys = list(munger_pars_opt.keys())
-    options, missing_required_params = ui.get_runtime_parameters(
+    options, dummy_err = ui.get_runtime_parameters(
         required_keys=required_keys,
         param_file=os.path.join(dir_path, "format.config"),
         header="format",
+        err=None,
         optional_keys=optional_keys,
     )
     options = recast_options(options,munger_pars_opt)
@@ -481,8 +482,8 @@ def check_munger_files(dir_of_all_mungers, munger_name, project_root=None):
             err = check_munger_file_format(munger_path, munger_file, templates, err)
 
             # if no errors found so far, check contents
-            if ("munger" not in err.keys()) or (munger_name in err["munger"].keys()):
-                err = check_munger_file_contents(munger_path, munger_file, err, project_root=project_root)
+            if (not err) or ("munger" not in err.keys()) or (munger_name in err["munger"].keys()):
+                err = check_munger_file_contents(munger_path, munger_name, munger_file, err, project_root=project_root)
         else:
             err = ui.add_new_error(
                 err,

@@ -163,57 +163,82 @@ def append_to_composing_reporting_unit_join(engine, ru):
     return cruj_dframe
 
 
-def establish_connection(paramfile="run_time.ini", dbname=None):
+def test_connection(paramfile="run_time.ini", dbname=None):
     """Check for DB and relevant tables; if they don't exist, return
     error message"""
-    try:
-        params = ui.get_runtime_parameters(
-            required_keys=db_pars,
-            param_file=paramfile,
-            header="postgresql"
-        )[0]
-    except MissingSectionHeaderError as e:
-        return {"message": "database.ini file not found suggested location."}
+    # get postgresql parameters
+    params, err = ui.get_runtime_parameters(
+        required_keys=db_pars,
+        param_file=paramfile,
+        header="postgresql"
+    )
+    if err:
+        return err
     if dbname:
         params["dbname"] = dbname
+
+    # check connection before proceeding
     try:
         con = psycopg2.connect(**params)
+        con.close()
     except psycopg2.OperationalError as e:
-        return {"message": "Unable to establish connection to database."}
+        return err
 
     # Look for tables
-    engine = sql_alchemy_connect(paramfile)
-    elems, enums, joins, o = get_cdf_db_table_names(engine)
+    try:
+        engine, new_err = sql_alchemy_connect(paramfile)
+        if new_err:
+            err = ui.consolidate_errors(err, new_err)
+            return err
+        elems, enums, joins, o = get_cdf_db_table_names(engine)
+        # All tables except "Others" must be created. Essentially looks for
+        # a "complete" database.
+        if not elems or not enums or not joins:
+            return {"message": "Required tables not found."}
+        engine.dispose()
 
-    # All tables except "Others" must be created. Essentially looks for
-    # a "complete" database.
-    if not elems or not enums or not joins:
-        return {"message": "Required tables not found."}
-
-    con.close()
+    except Exception as e:
+        err = ui.add_new_error(
+            err,
+            "system",
+            "database.test_connection"
+            f"Unexpected exception while connecting to database: {e}"
+        )
+        return err
+    # if no errors found, return None
     return None
 
 
 def create_new_db(project_root, param_file="run_time.ini"):
-    # get connection to default postgres DB to create new one
+    params, err = ui.get_runtime_parameters(
+        required_keys=db_pars,
+        param_file=param_file,
+        header="postgresql"
+    )
+    if err:
+        return err
+    db_name = params["dbname"]
+    params["dbname"] = "postgres"
+
+    # get connection to default postgres DB to create new DB
     try:
-        params = ui.get_runtime_parameters(
-            required_keys=db_pars,
-            param_file=param_file,
-            header="postgresql"
-        )[0]
-        db_name = params["dbname"]
-        params["dbname"] = "postgres"
         con = psycopg2.connect(**params)
-    except:
+    except Exception as e:
         # Can't connect to the default postgres database, so there
         # seems to be something wrong with connection. Fail here.
-        print("Unable to find database. Exiting.")
-        quit()
+        print(f"Error connecting to database. Exiting.")
+        err = ui.add_new_error(
+            err,
+            "system",
+            "database.create_new_db",
+            f"Error connecting to database",
+        )
+        return err
+
     cur = con.cursor()
     db_df = get_database_names(con)
 
-    eng = sql_alchemy_connect(param_file, dbname=params["dbname"])
+    eng, err = sql_alchemy_connect(param_file, dbname=params["dbname"])
     Session = sqlalchemy.orm.sessionmaker(bind=eng)
     sess = Session()
 
@@ -243,17 +268,21 @@ def create_new_db(project_root, param_file="run_time.ini"):
         ),
     )
     con.close()
+    return err
 
 
 def sql_alchemy_connect(
     paramfile: str = "run_time.ini", dbname: str = "postgres"
-) -> sqlalchemy.engine:
+) -> (sqlalchemy.engine, dict):
     """Returns an engine and a metadata object"""
-    params = ui.get_runtime_parameters(
+    params, err = ui.get_runtime_parameters(
         required_keys=db_pars,
         param_file=paramfile,
         header="postgresql"
-    )[0]
+    )
+    if err:
+        return None, err
+
     if dbname != "postgres":
         params["dbname"] = dbname
     # We connect with the help of the PostgreSQL URL
@@ -262,7 +291,7 @@ def sql_alchemy_connect(
 
     # The return value of create_engine() is our connection object
     engine = db.create_engine(url, client_encoding="utf8")
-    return engine
+    return engine, err
 
 
 def get_cdf_db_table_names(eng):

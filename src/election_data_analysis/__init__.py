@@ -84,17 +84,17 @@ class DataLoader:
         self.tracker = dict()
 
         # create db if it does not already exist
-        error = db.establish_connection()
+        error = db.test_connection()
         if error:
             db.create_new_db(self.d["project_root"])
 
         # connect to db
         try:
-            self.engine = db.sql_alchemy_connect()
+            self.engine, err = db.sql_alchemy_connect()
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
         except Exception as e:
-            print("Cannot connect to database. Exiting.")
+            print(f"Cannot connect to database. Exiting. {e}")
             quit()
 
     def load_all(self, load_jurisdictions: bool = True) -> dict:
@@ -999,7 +999,7 @@ class Analyzer:
         return super().__new__(self)
 
     def __init__(self):
-        eng = db.sql_alchemy_connect("run_time.ini")
+        eng, err = db.sql_alchemy_connect("run_time.ini")
         Session = sessionmaker(bind=eng)
         self.session = Session()
 

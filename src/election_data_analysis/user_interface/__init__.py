@@ -534,7 +534,7 @@ def get_runtime_parameters(
     required_keys: list,
     param_file: str,
     header: str,
-    err: Optional[Dict[Any, dict]],
+    err: Optional[Dict[Any, dict]] = None,
     optional_keys: list = None,
 ) -> (dict, dict):
     d = {}
