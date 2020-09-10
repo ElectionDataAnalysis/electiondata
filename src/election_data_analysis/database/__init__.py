@@ -1303,7 +1303,7 @@ def export_rollup_from_db(
     exclude_total: bool = False,
     by_vote_type: bool = False,
 ):
-    if by_vote_type:
+    if not by_vote_type:
         restrict = """ AND CIT."Txt" = 'total' """
     elif exclude_total:
         restrict = """ AND CIT."Txt" != 'total' """
