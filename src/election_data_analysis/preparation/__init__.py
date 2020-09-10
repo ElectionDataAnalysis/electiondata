@@ -62,18 +62,20 @@ def write_element(
     """<juris> is path to jurisdiction directory. Info taken
     from <element>.txt file in that directory.
     <element>.txt is overwritten with info in <df>"""
+    err = None
     if not file_name:
         file_name = f"{element}.txt"
     dupes_df, deduped = ui.find_dupes(df)
     if element == "dictionary":
         deduped = remove_empty_lines(deduped, element)
-    deduped.drop_duplicates().fillna("").to_csv(
-        os.path.join(juris_path, file_name), index=False, sep="\t"
-    )
-    if dupes_df.empty:
-        err = None
-    else:
-        err = f"Duplicate lines:\n{dupes_df}"
+    try:
+        deduped.drop_duplicates().fillna("").to_csv(
+            os.path.join(juris_path, file_name),
+            index=False,
+            sep="\t",
+        )
+    except Exception as e:
+        err = f"Unexpected exception writing to file: {e}"
     return err
 
 

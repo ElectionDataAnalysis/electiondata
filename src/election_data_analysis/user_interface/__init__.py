@@ -310,7 +310,6 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
         wr, error = read_combine_results(
             mu,
             params["results_file"],
-            params["project_root"],
             error
         )
         wr.columns = [f"{x}_SOURCE" for x in wr.columns]
@@ -405,11 +404,15 @@ def read_single_datafile(
 
 
 def read_combine_results(
-    mu: jm.Munger, results_file, project_root, err, aux_data_dir=None
-):
+        mu: jm.Munger,
+        results_file: str,
+        err: dict,
+        aux_data_dir: str = None,
+) -> (pd.DataFrame, dict):
     if mu.options["file_type"] in ["concatenated-blocks"]:
-        working, err = sf.read_concatenated_blocks(results_file, mu, err)
-        if working.empty or [x for x in err.keys() if 'error' in x]:
+        working, new_err = sf.read_concatenated_blocks(results_file, mu, None)
+        if working.empty or fatal_error(new_err):
+            err = consolidate_errors([err,new_err])
             return working, err
         # set options that will be needed for going forward
         mu.options["count_columns"] = [working.columns.to_list().index("count")]
@@ -417,7 +420,7 @@ def read_combine_results(
         mu.options["field_name_row"] = 0
     else:
         try:
-            working, err = read_single_datafile(mu, results_file, err)
+            working, new_err = read_single_datafile(mu, results_file, None)
         except Exception as exc:
             err = add_new_error(
                 err,
@@ -426,8 +429,12 @@ def read_combine_results(
                 f"Unexpected exception while reading file: {exc}",
             )
             return pd.DataFrame(), err
-        if [k for k in err.keys() if err[k] != None]:
-            return pd.DataFrame(), err
+
+        if new_err:
+            err = consolidate_errors([err,new_err])
+            if fatal_error(new_err):
+                return pd.DataFrame(), err
+
         else:
             working = m.cast_cols_as_int(
                 working, mu.options["count_columns"], mode="index"
@@ -436,9 +443,14 @@ def read_combine_results(
         # merge with auxiliary files (if any)
         if aux_data_dir is not None:
             # get auxiliary data (includes cleaning and setting (multi-)index of primary key column(s))
-            aux_data, err = mu.get_aux_data(
-                aux_data_dir, err, project_root=project_root
+            aux_data, new_err = mu.get_aux_data(
+                aux_data_dir,
+                None,
             )
+            if new_err:
+                err = consolidate_errors([err,new_err])
+                if fatal_error(new_err):
+                    return pd.DataFrame(), err
             for abbrev, r in mu.aux_meta.iterrows():
                 # cast foreign key columns of main results file as int if possible
                 foreign_key = r["foreign_key"].split(",")
@@ -488,7 +500,7 @@ def new_datafile(
     Assumes cdf db exists already"""
     err = None
     raw, err = read_combine_results(
-        munger, raw_path, project_root, err, aux_data_dir=aux_data_dir
+        munger, raw_path, err, aux_data_dir=aux_data_dir
     )
     if raw.empty:
         err = add_new_error(
@@ -541,7 +553,7 @@ def get_runtime_parameters(
     required_keys: list,
     param_file: str,
     header: str,
-    err: Optional[Dict[Any, dict]],
+    err: Optional[Dict[Any, dict]] = None,
     optional_keys: list = None,
 ) -> (dict, dict):
     d = {}
@@ -663,7 +675,7 @@ def add_new_error(
     if key in err[err_type].keys():
         err[err_type][key].append(f"|{msg}")
     else:
-        err[err_type][key] = msg
+        err[err_type][key] = [msg]
     return err
 
 

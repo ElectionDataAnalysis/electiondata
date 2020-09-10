@@ -6,6 +6,7 @@ import datetime
 import os
 import pandas as pd
 import ntpath
+from pathlib import Path
 from election_data_analysis import analyze as a
 from election_data_analysis import visualize as v
 from election_data_analysis import juris_and_munger as jm
@@ -441,14 +442,20 @@ class JurisdictionPrepper:
         """
         # TODO Feature: allow other districts to be set in paramfile
         error = dict()
+
         # create directory if it doesn't exist
-        jm.ensure_jurisdiction_dir(
-            self.d["jurisdiction_path"], ignore_empty=True
-        )
+        try:
+            Path(self.d["jurisdiction_path"]).mkdir(parents=True)
+        except FileExistsError:
+            print(f"Directory {self.d['jurisdiction_path']} already exists")
+        else:
+            print(f"Directory {self.d['jurisdiction_path']} created.")
 
         # add default entries
+        project_root = Path(__file__).absolute().parents[1]
         templates = os.path.join(
-            self.d["project_root"], "templates/jurisdiction_templates"
+            project_root,
+            "templates/jurisdiction_templates"
         )
         for element in ["Party", "Election"]:
             prep.add_defaults(self.d["jurisdiction_path"], templates, element)
@@ -460,7 +467,12 @@ class JurisdictionPrepper:
         #  used as placeholder for raw_identifier_value
         e = self.starter_dictionary()
         if e:
-            ui.add_erro(error, "dictionary", e)
+            error = ui.add_new_error(
+                error,
+                "jurisdiction",
+                "dictionary.txt",
+                e
+            )
         return error
 
     def add_primaries_to_dict(self) -> str:
@@ -842,14 +854,21 @@ class JurisdictionPrepper:
             error = ui.add_new_error(
                 error,
                 "ini"
-                "datafile",
+                "jurisdiction_prep.ini",
                 f"Parameters missing: {missing}. Results file cannot be processed.",
+            )
+            return error
+        elif ("results_file" in kwargs.keys()) and not (os.path.isfile(kwargs["results_file"])):
+            error = ui.add_new_error(
+                error,
+                "ini",
+                "jurisdiction_prep.ini",
+                f"results_file not found: {kwargs['results_file']}"
             )
             return error
 
         # read data from file (appending _SOURCE)
         wr, mu, error = ui.read_results(kwargs, error)
-
 
         for element in elements:
             name_field = db.get_name_field(element)

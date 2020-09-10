@@ -150,7 +150,7 @@ class Jurisdiction:
 
 
 class Munger:
-    def get_aux_data(self, aux_data_dir, err, project_root=None) -> (dict, dict):
+    def get_aux_data(self, aux_data_dir, err) -> (dict, dict):
         """creates dictionary of dataframes, one for each auxiliary datafile.
         DataFrames returned are (multi-)indexed by the primary key(s)"""
         aux_data_dict = {}  # will hold dataframe for each abbreviated file name
@@ -227,7 +227,7 @@ class Munger:
         ] = read_munger_info_from_files(self.path_to_munger_dir)
 
         if aux_data_dir:
-            self.aux_data = self.get_aux_data(aux_data_dir, project_root=project_root)
+            self.aux_data = self.get_aux_data(aux_data_dir)
         else:
             self.aux_data = {}
         self.aux_data_dir = aux_data_dir
