@@ -466,7 +466,7 @@ def ensure_munger_files(dir_of_all_mungers, munger_name, project_root=None):
             err = check_munger_file_format(munger_path, munger_file, templates, err)
 
             # if no errors found so far, check contents
-            if "munger" not in err.keys() or ("munger" in err.keys() and munger_name in err["munger"].keys()):
+            if ("munger" not in err.keys()) or (munger_name in err["munger"].keys()):
                 err = check_munger_file_contents(munger_path, munger_file, err, project_root=project_root)
         else:
             err = ui.add_new_error(
