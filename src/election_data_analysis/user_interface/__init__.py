@@ -335,13 +335,12 @@ def pick_munger(mungers_dir="mungers", project_root=None, munger_name=None):
     # if a munger error was found
     if "munger" in error.keys():
         return None, error
+
     else:
         munger_path = os.path.join(mungers_dir, munger_name)
         munger = jm.Munger(munger_path, project_root=project_root)
 
-        # munger_error is None unless internal inconsistency found
-        munger_error = munger.check_against_self()
-        return munger, munger_error
+        return munger, error
 
 
 def read_single_datafile(
