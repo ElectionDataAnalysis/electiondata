@@ -7,9 +7,7 @@ import csv
 import os
 from pathlib import Path
 from election_data_analysis import juris_and_munger as jm
-from tkinter import filedialog
-from configparser import MissingSectionHeaderError
-
+from typing import Optional, Dict
 
 recognized_encodings = {
     "iso2022jp",
@@ -334,20 +332,6 @@ def find_dupes(df):
     return dupes_df, deduped
 
 
-def pick_munger(mungers_dir="mungers", project_root=None, munger_name=None):
-    error = jm.ensure_munger_files(mungers_dir, munger_name, project_root=project_root)
-
-    # if a munger error was found
-    if "munger" in error.keys():
-        return None, error
-
-    else:
-        munger_path = os.path.join(mungers_dir, munger_name)
-        munger = jm.Munger(munger_path, project_root=project_root)
-
-        return munger, error
-
-
 def read_single_datafile(
     munger: jm.Munger, f_path: str, err: dict
 ) -> [pd.DataFrame, dict]:
@@ -605,28 +589,31 @@ def get_runtime_parameters(
     return d, err
 
 
-def consolidate_errors(err1: dict, err2: dict) -> dict:
+def consolidate_errors(list_of_err: list) -> Optional[Dict[Any, dict]]:
     """Takes two error dictionaries (assumed to have same bottom-level keys)
     and consolidates them, concatenating the error messages"""
-    d = dict()
-    err_types = err1.keys()
-    assert set(err_types) == set(err2.keys())
-    for et in err_types:
-        d[et] = dict()
-        allkeys = set(err1[et].keys()).union(set(err2[et].keys()))
-        for k in allkeys:
-            # if k in both
-            if k in err2[et].keys() and k in err1[et].keys():
-                # concatenate the string values
-                d[et][k] = f"{err1[et][k]}|{err2[et][k]}"
-            # if k only in err2[et]
-            elif k in err2[et].keys():
-                d[et][k] = err2[et][k]
-            # if k only in err1[et]
-            else:
-                d[et][k] = err1[et][k]
-    return d
+    """Consolidate the error dictionaries in <list_of_err>. If any dictionary is None, ignore it.
+    If all dictionaries are None, return None"""
 
+    # take union of all error-types appearing
+    err_types = set().union(*[x.keys() for x in list_of_err])
+    # if errs are all empty or none
+    if err_types == set():
+        return None
+
+    d = dict()
+    for et in err_types:
+        # initialize
+        d[et] = dict()
+        # find errs that have the error-type
+        err_list = [x[et] for x in list_of_err if et in x.keys()]
+        # take union of all name-keys appearing for this error-type
+        name_keys = set().union(*[y.keys() for y in err_list])
+        for nk in name_keys:
+            msg_list = [y[nk] for y in err_list if nk in y.keys()]
+            # assign concatenation of all messages
+            d[et][nk] = "|".join(msg_list)
+    return d
 
 def add_new_error(
         err: dict,
