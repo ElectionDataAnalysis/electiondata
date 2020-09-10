@@ -606,18 +606,21 @@ def get_runtime_parameters(
 
 
 def consolidate_errors(err1: dict, err2: dict) -> dict:
+    """Takes two error dictionaries (assumed to have same bottom-level keys)
+    and consolidates them, concatenating the error messages"""
     d = dict()
     err_types = err1.keys()
     assert set(err_types) == set(err2.keys())
     for et in err_types:
+        d[et] = dict()
         allkeys = set(err1[et].keys()).union(set(err2[et].keys()))
         for k in allkeys:
             # if k in both
-            if k in err2.keys() and k in err1.keys():
+            if k in err2[et].keys() and k in err1[et].keys():
                 # concatenate the string values
                 d[et][k] = f"{err1[et][k]}|{err2[et][k]}"
             # if k only in err2[et]
-            elif k in err2.keys():
+            elif k in err2[et].keys():
                 d[et][k] = err2[et][k]
             # if k only in err1[et]
             else:
