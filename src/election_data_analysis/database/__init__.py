@@ -1113,9 +1113,9 @@ def get_filtered_input_options(session, input_str, filters):
             # clean the name column
             df["name"] = (
                 df["name"]
-                .str.replace("\['", "")
-                .str.replace("'\]", "")
-                .str.replace("', '", "; ")
+                .str.replace(r"\['", "")
+                .str.replace(r"'\]", "")
+                .str.replace(r"', '", "; ")
             )
         except:
             df = pd.DataFrame()
