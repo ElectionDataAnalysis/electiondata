@@ -67,10 +67,20 @@ def create_common_data_format_tables(session, dirpath="CDF_schema_def_info/"):
         # create indices for efficiency
         if element == "VoteCount":
             create_indices = [
-                ["Count", "CountItemType_Id", "OtherCountItemType", "ReportingUnit_Id"]
+                "CountItemType_Id",
+                "OtherCountItemType",
+                "ReportingUnit_Id",
+                "Contest_Id",
+                "Selection_Id",
+                "Election_Id",
+                "_datafile_Id",
             ]
         elif element == "CandidateSelection":
-            create_indices = [["Candidate_Id", "Party_Id"]]
+            create_indices = ["Candidate_Id", "Party_Id"]
+        elif element == "ComposingReportingUnitJoin":
+            create_indices = ["ParentReportingUnit_Id", "ChildReportingUnit_Id"]
+        elif element == "ReportingUnit":
+            create_indices = ["ReportingUnitType_Id"]
         else:
             # create_indices = [[db.get_name_field(element)]]
             create_indices = None
@@ -320,7 +330,7 @@ def create_table(
     # create indices for efficiency
     if create_indices:
         for li in create_indices:
-            Index(f"{t}_append", *[t.c[x] for x in li])
+            Index(f"{t}_{li}_idx", t.c[li])
     return
 
 
