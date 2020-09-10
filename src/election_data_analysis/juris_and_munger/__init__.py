@@ -150,6 +150,14 @@ class Jurisdiction:
 
 
 class Munger:
+    def __new__(self, dir_path, aux_data_dir=None, project_root=None):
+        # if directory does not exist, do not create the Munger object
+        # TODO report error to user?
+        if not os.path.isdir(dir_path):
+            return None
+
+        return super().__new__(self, dir_path, aux_data_dir=None, project_root=None)
+
     def get_aux_data(self, aux_data_dir, err, project_root=None) -> dict:
         """creates dictionary of dataframes, one for each auxiliary datafile.
         DataFrames returned are (multi-)indexed by the primary key(s)"""
@@ -159,7 +167,8 @@ class Munger:
         for abbrev in field_list:
             # get munger for the auxiliary file
             aux_mu = Munger(
-                os.path.join(self.path_to_munger_dir, abbrev), project_root=project_root
+                os.path.join(self.path_to_munger_dir, abbrev),
+                project_root=project_root
             )
 
             # find file in aux_data_dir whose name contains the string <afn>
@@ -257,19 +266,14 @@ class Munger:
             return None
 
     def __init__(
-        self, dir_path, aux_data_dir=None, project_root=None, check_files=True
+        self, dir_path, aux_data_dir=None, project_root=None
     ):
         """<dir_path> is the directory for the munger. If munger deals with auxiliary data files,
         <aux_data_dir> is the directory holding those files."""
         self.name = os.path.basename(dir_path)  # e.g., 'nc_general'
         self.path_to_munger_dir = dir_path
+        # TODO make handling of these directories consistent
 
-        # create dir if necessary
-        if not os.path.isdir(dir_path):
-            Path(dir_path).mkdir(parents=True, exist_ok=True)
-
-        if check_files:
-            ensure_munger_files(dir_path, project_root=project_root)
         [
             self.cdf_elements,
             self.file_type,

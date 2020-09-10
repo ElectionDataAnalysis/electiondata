@@ -330,18 +330,18 @@ def find_dupes(df):
 
 
 def pick_munger(mungers_dir="mungers", project_root=None, munger_name=None):
-    munger_path = os.path.join(project_root, mungers_dir, munger_name)
-    error = jm.ensure_munger_files(munger_path, project_root=project_root)
+    error = jm.ensure_munger_files(mungers_dir, munger_name, project_root=project_root)
 
-    munger_path = os.path.join(mungers_dir, munger_name)
+    # if a munger error was found
+    if "munger" in error.keys():
+        return None, error
+    else:
+        munger_path = os.path.join(mungers_dir, munger_name)
+        munger = jm.Munger(munger_path, project_root=project_root)
 
-    if not error:
-        munger = jm.Munger(munger_path, project_root=project_root, check_files=False)
         # munger_error is None unless internal inconsistency found
         munger_error = munger.check_against_self()
         return munger, munger_error
-    else:
-        return None, error
 
 
 def read_single_datafile(
@@ -635,6 +635,7 @@ def add_new_error(
     else:
         err[err_type][key] = msg
     return err
+
 
 # TODO remove this diagnostic
 def add_error():

@@ -777,13 +777,13 @@ class JurisdictionPrepper:
         or not already in <element>.txt for each <element> in <elements>"""
 
         # get parameters from arguments; otherwise from self.d; otherwise throw error
-        # get parameters from arguments; otherwise from self.d; otherwise throw error
         kwargs, missing = ui.get_params_to_read_results(
             self.d, results_file_path, munger_name
         )
         if missing:
-            ui.add_error(
+            error = ui.add_error(
                 error,
+                "ini"
                 "datafile",
                 f"Parameters missing: {missing}. Results file cannot be processed.",
             )
@@ -834,9 +834,10 @@ class JurisdictionPrepper:
             prep.write_element(self.d["jurisdiction_path"], element, we)
             # if <element>.txt has columns other than <name_field>, notify user
             if we.shape[1] > 1 and not new_internal_df.empty:
-                ui.add_error(
+                error = ui.add_new_error(
                     error,
-                    "preparation",
+                    "jurisdiction-warn",
+                    self.d["jurisdiction_path"],
                     f"New rows added to {element}.txt, but data may be missing from some fields in those rows.",
                 )
         return error
