@@ -80,7 +80,7 @@ class DataLoader:
             header="election_data_analysis",
         )
 
-        # prepare to track files loaded, dictionary of dictionaries, keys are parameter file paths
+        # prepare to track files loaded, dictionary status, keys are parameter file paths
         self.tracker = dict()
 
         # create db if it does not already exist
@@ -98,15 +98,21 @@ class DataLoader:
             quit()
 
     def load_all(self, load_jurisdictions: bool = True) -> dict:
-        """returns a dictionary of any files that threw an error"""
+        """returns an error dictionary"""
+        # initialize error dictionary
+        err = None
+
         mungers_path = os.path.join(self.d["project_root"], "mungers")
 
         # list .ini files and pull their jurisdiction_paths
         par_files = [f for f in os.listdir(self.d["results_dir"]) if f[-4:] == ".ini"]
         if not par_files:
-            e = f"No ini files found in {self.d['results_dir']}"
-            print(e)
-            err = {"ini_file": e}
+            err = ui.add_new_error(
+                err,
+                "file",
+                self.d['results_dir'],
+                f"No ini files found. No files will be processed.",
+            )
             return err
         params = dict()
         param_err = dict()
@@ -114,75 +120,75 @@ class DataLoader:
         for f in par_files:
             # grab parameters
             par_file = os.path.join(self.d["results_dir"], f)
-            params[f], param_err[f] = ui.get_runtime_parameters(
+            params[f], err = ui.get_runtime_parameters(
                 required_keys=single_data_loader_pars,
                 optional_keys=["aux_data_dir"],
                 param_file=par_file,
                 header="election_data_analysis",
+                err=err
             )
             juris_path[f] = params[f]["jurisdiction_path"]
             # update file_tracker
-            self.tracker[f] = params[f]
-            self.tracker[f]["status"] = "not loaded"
-            if param_err[f]:
-                self.tracker["parameter_error"] = param_err[f]
+            self.tracker[f] = "not loaded"
 
-        err = dict()
         # group .ini files by jurisdiction_path
         jurisdiction_paths = {juris_path[f] for f in par_files}
         files = dict()
         for jp in jurisdiction_paths:
             if load_jurisdictions:
-                juris, juris_err = ui.pick_juris_from_filesystem(
-                    jp, self.d["project_root"], check_files=True
-                )
-                if juris is None:
-                    err["jurisdiction_error"] = juris_err
-                    return err
-                print(f"Loading jurisdiction from {jp} to {self.session.bind}")
-                if juris:
-                    juris_load_err = juris.load_juris_to_db(
-                        self.session, self.d["project_root"]
-                    )
-                    if juris_load_err:
-                        err["juris_load_error"] = juris_load_err
-                        return err
-            # process all files from the given jurisdiction
-            files[jp] = [f for f in par_files if juris_path[f] == jp]
-            print(f"Processing results files {files[jp]}")
-            for f in files[jp]:
-                sdl = SingleDataLoader(
-                    self.d["results_dir"],
-                    f,
+                # create jurisdiction
+                juris, err = ui.pick_juris_from_filesystem(
+                    jp,
                     self.d["project_root"],
-                    self.session,
-                    mungers_path,
-                    juris,
+                    err,
+                    check_files=True,
                 )
-                errors = sdl.check_errors()
-                if errors == (None, None):
-                    self.tracker[f]["status"] = "loading initialized"
-                    # try to load data
-                    load_error = sdl.load_results()
-                    true_error = self.move_loaded_results_file(sdl, f, load_error)
+                # if jurisdiction was created successfully, load it to db
+                if juris:
+                    print(f"Loading jurisdiction from {jp} to {self.session.bind}")
+                    err = juris.load_juris_to_db(
+                        self.session,
+                        self.d["project_root"],
+                        err,
+                    )
 
-                    # if there is a genuine error (not just a warning), add it to err
-                    if true_error:
-                        err[f] = true_error
-                        self.tracker[f]["load_error"] = true_error
+            # if jurisdiction didn't throw a fatal error, process all files from the given jurisdiction
+            if ("jurisdiction" not in err.keys()) or (juris.short_name not in err["jurisdiction"].keys()):
+                files[jp] = [f for f in par_files if juris_path[f] == jp]
+                print(f"Processing results files {files[jp]}")
+                for f in files[jp]:
+                    sdl = SingleDataLoader(
+                        self.d["results_dir"],
+                        f,
+                        self.d["project_root"],
+                        self.session,
+                        mungers_path,
+                        juris,
+                    )
+                    errors = sdl.check_errors()
+                    if errors == (None, None):
+                        self.tracker[f]["status"] = "loading initialized"
+                        # try to load data
+                        load_error = sdl.load_results()
+                        true_error = self.move_loaded_results_file(sdl, f, load_error)
+
+                        # if there is a genuine error (not just a warning), add it to err
+                        if true_error:
+                            err[f] = true_error
+                            self.tracker[f]["load_error"] = true_error
+                        else:
+                            self.tracker[f]["status"] = "loaded"
                     else:
-                        self.tracker[f]["status"] = "loaded"
-                else:
-                    self.tracker[f]["status"] = "loading not initialized"
-                    print("Error(s) before data loading:")
-                    if sdl.parameter_err:
-                        print(f"Parameter error: {sdl.parameter_err}\n")
-                        self.tracker[f][
-                            "SingleDataLoader_parameter_error"
-                        ] = sdl.parameter_err
-                    if sdl.munger_err:
-                        print(f"Munger error: {sdl.munger_err}")
-                        self.tracker[f]["munger_error"] = sdl.munger_err
+                        self.tracker[f]["status"] = "loading not initialized"
+                        print("Error(s) before data loading:")
+                        if sdl.parameter_err:
+                            print(f"Parameter error: {sdl.parameter_err}\n")
+                            self.tracker[f][
+                                "SingleDataLoader_parameter_error"
+                            ] = sdl.parameter_err
+                        if sdl.munger_err:
+                            print(f"Munger error: {sdl.munger_err}")
+                            self.tracker[f]["munger_error"] = sdl.munger_err
         return err
 
     def move_loaded_results_file(self, sdl, f: str, load_error: dict) -> dict:
@@ -251,6 +257,7 @@ class SingleDataLoader:
         self.session = session
         self.results_dir = results_dir
         self.juris = juris
+
         # grab parameters
         par_file = os.path.join(results_dir, par_file_name)
         self.d, self.parameter_err = ui.get_runtime_parameters(

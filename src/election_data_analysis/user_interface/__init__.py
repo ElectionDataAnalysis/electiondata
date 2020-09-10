@@ -305,22 +305,27 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
     return wr, mu, error
 
 
-def pick_juris_from_filesystem(juris_path, project_root, check_files=False):
+def pick_juris_from_filesystem(juris_path, project_root, err, check_files=False):
     """Returns a State object. <juris_path> is the path to the directory containing the
     defining files for the particular jurisdiction.
     """
-
-    missing_values = {}
 
     if check_files:
         missing_values = jm.ensure_jurisdiction_dir(juris_path, project_root)
 
     # initialize the jurisdiction
     if missing_values:
+        err = add_new_error(
+            err,
+            "jurisdiction",
+            juris_path,
+            # TODO check missing_values -- what kind of object?
+            f"Missing values: {missing_values}",
+        )
         ss = None
     else:
         ss = jm.Jurisdiction(juris_path)
-    return ss, missing_values
+    return ss, err
 
 
 def find_dupes(df):
