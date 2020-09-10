@@ -624,6 +624,7 @@ def consolidate_errors(err1: dict, err2: dict) -> dict:
                 d[et][k] = err1[et][k]
     return d
 
+
 def add_new_error(
         err: dict,
         err_type: str,
