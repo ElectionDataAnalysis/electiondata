@@ -267,7 +267,7 @@ class SingleDataLoader:
             header="election_data_analysis",
         )
 
-        # change any blank parameters to 'none'
+        # change any blank parameters describing the results file to 'none'
         for k in self.d.keys():
             if self.d[k] == "" and k[:8] == "results_":
                 self.d[k] = "none"
