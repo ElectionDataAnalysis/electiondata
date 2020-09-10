@@ -537,8 +537,9 @@ def check_munger_file_format(
         munger_path: str,
         munger_file: str,
         templates:str,
-        error: dict
+        err: dict
 ) -> dict:
+
     problems = list()
     if munger_file[-4:] == ".txt":
         cf_df = pd.read_csv(
@@ -547,51 +548,54 @@ def check_munger_file_format(
         temp = pd.read_csv(
             os.path.join(templates, munger_file), sep="\t", encoding="iso-8859-1"
         )
+
         # check column names are correct
         if set(cf_df.columns) != set(temp.columns):
             cols = "\t".join(temp.columns.to_list())
-            problems.append(
-                f"Columns of {munger_file} need to be (tab-separated):\n" f" {cols}\n"
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_path,
+                f"Columns in {munger_file} need to be (tab-separated):\n" f" {cols}\n",
             )
 
         # check first column matches template
         #  check same number of rows
         elif cf_df.shape[0] != temp.shape[0]:
             first_col = "\n".join(list(temp.iloc[:, 0]))
-            problems.append(
-                f"Wrong number of rows in {munger_file}. \nFirst column must be exactly:\n{first_col}"
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_path,
+                f"Wrong number of rows in {munger_file}. \nFirst column must be exactly:\n{first_col}",
             )
         elif set(cf_df.iloc[:, 0]) != set(temp.iloc[:, 0]):
             first_error = (cf_df.iloc[:, 0] != temp.iloc[:, 0]).index.to_list()[0]
             first_col = "\n".join(list(temp.iloc[:, 0]))
-            problems.append(
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_path,
                 f"First column of {munger_file}.txt must be exactly:\n{first_col}\n"
-                f"First error is at row {first_error}: {cf_df.loc[first_error]}"
+                f"First error is at row {first_error}: {cf_df.loc[first_error]}",
             )
 
     elif munger_file == "format.config":
-        d, missing = ui.get_runtime_parameters(
+        d, err = ui.get_runtime_parameters(
             required_keys=munger_pars_req,
             param_file=os.path.join(munger_path, munger_file),
             header="format",
+            err=err,
             optional_keys=list(munger_pars_opt.keys()),
         )
-        if missing:
-            problems.append(f"Missing parameters in {munger_file}:\n{missing}")
-        if (
-            "field_names_if_no_field_name_row" not in d.keys()
-            and "field_name_row" not in d.keys()
-        ):
-            problems.append(
-                f"Parameter file {munger_file} fails to have one of these: field_names_if_no_field_name_row, field_name_row"
-            )
     else:
-        problems.append(f"Unrecognized file in munger: {munger_file}")
-    if problems:
-        problems = ", ".join(problems)
-        error = {}
-        error["format_problems"] = problems
-    return error
+        err = ui.add_new_error(
+            err,
+            "munger",
+            munger_path,
+            f"Unrecognized file in munger: {munger_file}",
+        )
+    return err
 
 
 def check_munger_file_contents(munger_name, err, project_root):
