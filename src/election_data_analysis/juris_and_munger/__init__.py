@@ -150,13 +150,28 @@ class Jurisdiction:
 
 
 class Munger:
-    def __new__(self, dir_path, aux_data_dir=None, project_root=None):
-        # if directory does not exist, do not create the Munger object
-        # TODO report error to user?
+    def __new__(cls, dir_path, err=None, aux_data_dir=None, project_root=None):
+        mungers_dir = Path(dir_path).parent
+        munger_name = Path(dir_path).name
+        # if directory does not exist, do not create the Munger
         if not os.path.isdir(dir_path):
-            return None
+            mu = None
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"Directory does not exist: {dir_path}"
+            )
+            return mu, err
 
-        return super().__new__(self, dir_path, aux_data_dir=None, project_root=None)
+        # if munger files throw error, do not create the Munger
+        new_err = check_munger_files(mungers_dir, munger_name, project_root=project_root)
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            mu = None
+        else:
+            mu = super().__new__(cls, dir_path, aux_data_dir=None, project_root=None)
+        return mu, err
 
     def get_aux_data(self, aux_data_dir, err, project_root=None) -> dict:
         """creates dictionary of dataframes, one for each auxiliary datafile.
@@ -434,7 +449,7 @@ def ensure_juris_files(juris_path, project_root, ignore_empty=False):
         return {}
 
 
-def ensure_munger_files(dir_of_all_mungers, munger_name, project_root=None):
+def check_munger_files(dir_of_all_mungers, munger_name, project_root=None):
     """Check that the munger files are complete and consistent with one another.
     Assumes munger directory exists. Assumes dictionary.txt is in the template file.
     <munger_path> is the path to the directory of the particular munger"""

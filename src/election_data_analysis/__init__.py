@@ -131,7 +131,7 @@ class DataLoader:
                 err=None
             )
             if new_err:
-                err = ui.consolidate_errors(err, new_err)
+                err = ui.consolidate_errors([err, new_err])
                 self.tracker[f] = 'loading failed'
             else:
                 good_par_files.append(f)
@@ -152,7 +152,7 @@ class DataLoader:
                 check_files=load_jurisdictions,
             )
             if new_err:
-                err = ui.consolidate_errors(err,new_err)
+                err = ui.consolidate_errors([err, new_err])
             else:
                 if load_jurisdictions:
                     print(f"Loading jurisdiction from {jp} to {self.session.bind}")
@@ -162,7 +162,7 @@ class DataLoader:
                         err=None,
                     )
                     if new_err:
-                        err = ui.consolidate_errors(err,new_err)
+                        err = ui.consolidate_errors([err, new_err])
                     else:
                         good_jurisdictions.append(jp)
                 else:
@@ -266,6 +266,32 @@ class DataLoader:
 
 
 class SingleDataLoader:
+    def __new__(
+            self,
+            results_dir: str,
+            par_file_name: str,
+            project_root: str,
+            session,
+            munger_path: str,
+            juris: jm.Jurisdiction
+        ):
+
+        # test parameters
+        par_file = os.path.join(results_dir, par_file_name)
+        d, err = ui.get_runtime_parameters(
+            required_keys=single_data_loader_pars,
+            optional_keys=["aux_data_dir"],
+            param_file=par_file,
+            header="election_data_analysis",
+            err=dict()
+        )
+        if err:
+            sdl = None
+        else:
+            sdl = super().__new__(self)
+
+        return sdl, err
+
     def __init__(
             self,
             results_dir: str,
@@ -295,24 +321,23 @@ class SingleDataLoader:
             if self.d[k] == "" and k[:8] == "results_":
                 self.d[k] = "none"
 
-        # convert comma-separated list to python list
-        # TODO document
-        self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
-
         # set aux_data_dir to None if appropriate
         if self.d["aux_data_dir"] in ["None", ""]:
             self.d["aux_data_dir"] = None
 
-        # pick mungers
+        # pick mungers (Note: munger_name is comma-separated list of munger names)
         self.munger = dict()
-        self.munger_err = dict()
+        m_err = dict()
+        # TODO document
+        self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
         for mu in self.munger_list:
-            self.munger[mu], self.munger_err[mu] = ui.pick_munger(
-                mungers_dir=munger_path, project_root=project_root, munger_name=mu
-            )
+            self.munger[mu], m_err[mu] = jm.Munger(munger_path, project_root=project_root)
+
         # if no munger throws an error:
         if all([x is None for x in self.munger_err.values()]):
             self.munger_err = None
+        else:
+            self.munger_err = ui.consolidate_errors([m_err[mu] for mu in self.munger_list])
 
     def check_errors(self):
         return self.parameter_err, self.munger_err
