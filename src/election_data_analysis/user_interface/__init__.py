@@ -291,10 +291,12 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
         aux_data_dir = params["aux_data_dir"]
     else:
         aux_data_dir = None
-    mu, mu_err = jm.Munger(
-        os.path.join(params["project_root"], "mungers", params["munger_name"]),
+    munger_path = os.path.join(params["project_root"], "mungers", params["munger_name"])
+    mu_err = jm.check_munger_files(munger_path,template_path)
+    mu = jm.Munger(
+        munger_path,
+        None,
         aux_data_dir=aux_data_dir,
-        project_root=params["project_root"],
     )
     if mu_err and ("munger" in mu_err.keys()) and (params["munger_name"] in mu_err["munger"][params["munger_name"]]):
         error = consolidate_errors([error,mu_err])
@@ -320,7 +322,7 @@ def pick_juris_from_filesystem(juris_path, project_root, err, check_files=False)
 
     # initialize the jurisdiction
     if missing_values:
-        err = add_new_error(
+        err = append_error(
             err,
             "jurisdiction",
             juris_path,
@@ -362,7 +364,7 @@ def read_single_datafile(
         elif munger.file_type in ["xls", "xlsx"]:
             df = pd.read_excel(f_path, **kwargs)
         else:
-            err = add_new_error(
+            err = append_error(
                 err,
                 "munger",
                 munger.name,
@@ -370,7 +372,7 @@ def read_single_datafile(
             )
             df = pd.DataFrame()
         if df.empty:
-            err = add_new_error(
+            err = append_error(
                 err,
                 "munger",
                 munger.name,
@@ -388,7 +390,7 @@ def read_single_datafile(
         # DFs have trouble comparing against None. So we return an empty DF and
         # check for emptiness below as an indication of an error.
         e = f"Error parsing results file.\n{pe}"
-    err = add_new_error(
+    err = append_error(
         err,
         "file",
         f_path,
@@ -412,7 +414,7 @@ def read_combine_results(
         try:
             working, err = read_single_datafile(mu, results_file, err)
         except Exception as exc:
-            err = add_new_error(
+            err = append_error(
                 err,
                 "file",
                 results_file,
@@ -484,7 +486,7 @@ def new_datafile(
         munger, raw_path, project_root, err, aux_data_dir=aux_data_dir
     )
     if raw.empty:
-        err = add_new_error(
+        err = append_error(
             err,
             "file",
             raw_path,
@@ -514,7 +516,7 @@ def new_datafile(
             ids=results_info,
         )
     except Exception as exc:
-        err = add_new_error(
+        err = append_error(
             err,
             "system",
             "user_interface.new_datafile",
@@ -543,7 +545,7 @@ def get_runtime_parameters(
     parser = ConfigParser()
     p = parser.read(param_file)
     if len(p) == 0:
-        err = add_new_error(
+        err = append_error(
             err,
             "file",
             param_file,
@@ -555,7 +557,7 @@ def get_runtime_parameters(
     try:
         h = parser[header]
     except KeyError as ke:
-        err = add_new_error(
+        err = append_error(
             err,
             "ini",
             param_file,
@@ -572,7 +574,7 @@ def get_runtime_parameters(
             missing_required_params.append(k)
     if missing_required_params:
         mrp = ",".join(missing_required_params)
-        err = add_new_error(
+        err = append_error(
             err,
             "ini",
             param_file,
@@ -623,7 +625,7 @@ def report(err):
     # TODO
     return
 
-def add_new_error(
+def append_error(
         err: Optional[Dict[Any, dict]],
         err_type: str,
         key: str,
@@ -647,10 +649,10 @@ def add_new_error(
             "warn-system":{},
         }
     if err_type not in err.keys():
-        err = add_new_error(
+        err = append_error(
             err,
             "system",
-            "user_interface.add_new_error",
+            "user_interface.append_error",
             f"{err_type}: {msg}")
         return err
     if key in err[err_type].keys():
@@ -659,3 +661,20 @@ def add_new_error(
         err[err_type][key] = msg
     return err
 
+
+def fatal_error(err: dict, error_type: str, name_key:str = None) -> bool:
+    """Is there a fatal error of the given error type?
+    If name_key is given, is there a fatal error of the given <error_type> for the given <name_key>?"""
+    if err and error_type in err.keys():
+        if name_key:
+            if "warn" in name_key:
+                # warnings are never fatal
+                return False
+            elif name_key in err[error_type].keys():
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False

@@ -146,7 +146,7 @@ def add_column_from_formula(
                 working.loc[:, f].apply(lambda x: f"{t}{x}") + working.loc[:, new_col]
             )
         except KeyError:
-            err = ui.add_new_error(
+            err = ui.append_error(
                 err,
                 "munger",
                 # TODO pass munger name to function so it can be reported here??
@@ -253,7 +253,7 @@ def replace_raw_with_internal_ids(
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
         unmatched_str = "\n".join(unmatched_raw)
         e = f"{element}s not found in dictionary.txt:\n{unmatched_str}"
-        error = ui.add_new_error(
+        error = ui.append_error(
             error,
             "jurisdiction_warn",
             juris.short_name,
@@ -266,14 +266,14 @@ def replace_raw_with_internal_ids(
     if working.empty:
         e = f"No raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file"
         if drop_unmatched and not drop_all_ok:
-            error = ui.add_new_error(
+            error = ui.append_error(
                 error,
                 "jurisdiction",
                 juris.short_name,
                 e
             )
         else:
-            error = ui.add_new_error(
+            error = ui.append_error(
                 error,
                 "jurisdiction-warn",
                 juris.short_name,
@@ -335,7 +335,7 @@ def replace_raw_with_internal_ids(
             f"will not be loaded to database. These records (raw name, internal name) were found in dictionary.txt, but "
             f"no corresponding record was found in {element}.txt: \n{unmatched_str}"
         )
-        error = ui.add_new_error(
+        error = ui.append_error(
             error,
             "jurisdiction-warn",
             juris.short_name,
@@ -344,7 +344,7 @@ def replace_raw_with_internal_ids(
 
     if drop_unmatched:
         if working_unmatched.shape[0] == working.shape[0]:
-            error = ui.add_new_error(
+            error = ui.append_error(
                 error,
                 "jurisdiction",
                 juris.short_name,
@@ -661,7 +661,7 @@ def raw_elements_to_cdf(
     try:
         working, err = munge_and_melt(mu, working, count_cols, err)
     except Exception as exc:
-        err = ui.add_new_error(
+        err = ui.append_error(
             err,
             "system",
             "munge.raw_elements_to_cdf",
@@ -671,7 +671,7 @@ def raw_elements_to_cdf(
     try:
         working, err = add_contest_id(working, juris, err, session)
     except Exception as exc:
-        err = ui.add_new_error(
+        err = ui.append_error(
             err,
             "system",
             "munge.raw_elements_to_cdf",
@@ -679,7 +679,7 @@ def raw_elements_to_cdf(
         )
         return err
     if working.empty:
-        err = ui.add_new_error(
+        err = ui.append_error(
             err,
             "jurisdiction",
             juris.short_name,
@@ -737,7 +737,7 @@ def raw_elements_to_cdf(
                 )
                 working.drop(t, axis=1, inplace=True)
         except Exception as exc:
-            err = ui.add_new_error(
+            err = ui.append_error(
                 err,
                 "system",
                 "munge.raw_elements_to_cdf",
@@ -749,7 +749,7 @@ def raw_elements_to_cdf(
     try:
         working, err = add_selection_id(working, session.bind, juris, err)
     except Exception as exc:
-        err = ui.add_new_error(
+        err = ui.append_error(
             err,
             "system",
             "munge.raw_elements_to_cdf",
@@ -757,7 +757,7 @@ def raw_elements_to_cdf(
         )
         return err
     if working.empty:
-        err = ui.add_new_error(
+        err = ui.append_error(
             err,
             "jurisdiction",
             juris.short_name,
@@ -770,7 +770,7 @@ def raw_elements_to_cdf(
     try:
         e = db.insert_to_cdf_db(session.bind, working, "VoteCount")
         if e:
-            err = ui.add_new_error(
+            err = ui.append_error(
                 err,
                 "system",
                 "munge.raw_elements_to_cdf",
@@ -778,7 +778,7 @@ def raw_elements_to_cdf(
             )
         session.commit()
     except Exception as exc:
-        err = ui.add_new_error(err,
+        err = ui.append_error(err,
                                "system",
                                "munge.raw_elements_to_cdf",
                                f"Error filling VoteCount:\n{exc}")

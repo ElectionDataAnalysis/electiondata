@@ -198,7 +198,7 @@ def test_connection(paramfile="run_time.ini", dbname=None):
         engine.dispose()
 
     except Exception as e:
-        err = ui.add_new_error(
+        err = ui.append_error(
             err,
             "system",
             "database.test_connection"
@@ -227,7 +227,7 @@ def create_new_db(project_root, param_file="run_time.ini"):
         # Can't connect to the default postgres database, so there
         # seems to be something wrong with connection. Fail here.
         print(f"Error connecting to database. Exiting.")
-        err = ui.add_new_error(
+        err = ui.append_error(
             err,
             "system",
             "database.create_new_db",
