@@ -1046,13 +1046,15 @@ def make_par_files(
 
 
 class Analyzer:
-    def __new__(self):
+    def __new__(self, param_file=None):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
         try:
+            if not param_file:
+                param_file = "run_time.ini"
             d, parameter_err = ui.get_runtime_parameters(
                 required_keys=["dbname"],
-                param_file="run_time.ini",
+                param_file=param_file,
                 header="postgresql",
             )
         except FileNotFoundError as e:
@@ -1070,8 +1072,12 @@ class Analyzer:
 
         return super().__new__(self)
 
-    def __init__(self):
-        eng, err = db.sql_alchemy_connect("run_time.ini")
+    def __init__(self, param_file=None):
+        if param_file:
+            self.param_file = param_file
+        else:
+            self.param_file = "run_time.ini"
+        eng, err = db.sql_alchemy_connect(self.param_file)
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
@@ -1107,7 +1113,7 @@ class Analyzer:
         installed as well."""
         d, error = ui.get_runtime_parameters(
             required_keys=["rollup_directory"],
-            param_file="run_time.ini",
+            param_file=self.param_file,
             header="election_data_analysis",
         )
         if error:
@@ -1166,7 +1172,7 @@ class Analyzer:
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
             required_keys=["rollup_directory"],
-            param_file="run_time.ini",
+            param_file=self.param_file,
             header="election_data_analysis",
         )
         if error:
@@ -1213,7 +1219,7 @@ class Analyzer:
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
             required_keys=["rollup_directory"],
-            param_file="run_time.ini",
+            param_file=self.param_file,
             header="election_data_analysis",
         )
         if error:
@@ -1246,7 +1252,7 @@ class Analyzer:
     ) -> str:
         d, error = ui.get_runtime_parameters(
             required_keys=["rollup_directory"],
-            param_file="run_time.ini",
+            param_file=self.param_file,
             header="election_data_analysis",
         )
         if error:
