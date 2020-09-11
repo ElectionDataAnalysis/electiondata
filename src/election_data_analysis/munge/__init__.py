@@ -253,7 +253,6 @@ def replace_raw_with_internal_ids(
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
         unmatched_str = "\n".join(unmatched_raw)
         e = f"{element}s not found in dictionary.txt:\n{unmatched_str}"
-# TODO check this error
         error = ui.add_new_error(
             error,
             "warn-jurisdiction",
