@@ -237,7 +237,9 @@ class Munger:
                     int(x) for x in p_catch_digits.findall(r["raw_identifier_formula"])
                 ]
                 bad_integer_list = [
-                    x for x in integer_list if (x > self.options["header_row_count"] - 1 or x < 0)
+                    x
+                    for x in integer_list
+                    if (x > self.options["header_row_count"] - 1 or x < 0)
                 ]
                 if bad_integer_list:
                     bad_column_formula.add(r["raw_identifier_formula"])
@@ -331,7 +333,7 @@ def read_munger_info_from_files(dir_path):
         header="format",
         optional_keys=optional_keys,
     )
-    options = recast_options(options,munger_pars_opt)
+    options = recast_options(options, munger_pars_opt)
 
     file_type = options["file_type"]
     if "encoding" in options.keys():
@@ -347,12 +349,7 @@ def read_munger_info_from_files(dir_path):
 
     # TODO have options hold all optional parameters (and maybe even all parameters)
     #  and remove explicit attributes entirely?
-    return [cdf_elements,
-            file_type,
-            encoding,
-            thousands_separator,
-            aux_meta,
-            options]
+    return [cdf_elements, file_type, encoding, thousands_separator, aux_meta, options]
 
 
 # TODO combine ensure_jurisdiction_dir with ensure_juris_files
@@ -665,7 +662,11 @@ def check_munger_file_contents(munger_name, project_root):
 
     # check all parameters for concatenated blocks (e.g., Georgia ExpressVote output)
     elif format_d["file_type"] in ["concatenated-blocks"]:
-        for key in ["count_of_top_lines_to_skip", "last_header_column_count", "column_width"]:
+        for key in [
+            "count_of_top_lines_to_skip",
+            "last_header_column_count",
+            "column_width",
+        ]:
             try:
                 int(format_d[key])
             except ValueError or TypeError:

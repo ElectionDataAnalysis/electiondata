@@ -22,10 +22,10 @@ def strip_empties(li: list) -> list:
 def remove_by_index(main_list: list, idx_list: list):
     """creates new list by removing from <new_list> indices indicated in <idx_list>.
     Indices in <idx_list> can be negative or positive. Positive indices are
-    removed first. """
+    removed first."""
     # TODO error checking for overlapping neg & pos indices
     new_list = main_list.copy()
-    not_neg = [idx for idx in idx_list if idx >=0]
+    not_neg = [idx for idx in idx_list if idx >= 0]
     not_neg.sort()
     not_neg.reverse()
     for idx in not_neg:
@@ -85,14 +85,16 @@ def read_concatenated_blocks(
             field_list = extract_items(header_line, w)
 
             # remove first column header and headers of any columns to be skipped
-            last_header = remove_by_index(field_list,[0] + skip_cols)
+            last_header = remove_by_index(field_list, [0] + skip_cols)
 
             # check that the size of the side-to-side repeated block is consistent
             if len(last_header) % v_t_cc != 0:
-                e = f"Count of last header (per munger) ({v_t_cc}) " \
-                    f"does not evenly divide the number of count columns in the results file " \
+                e = (
+                    f"Count of last header (per munger) ({v_t_cc}) "
+                    f"does not evenly divide the number of count columns in the results file "
                     f"({len(last_header)})"
-                ui.add_error(err,"munge_error",e)
+                )
+                ui.add_error(err, "munge_error", e)
                 return pd.DataFrame(), err
 
             header_1_list = extract_items(header_1, w * v_t_cc)
@@ -149,7 +151,7 @@ def read_concatenated_blocks(
         raw_results = pd.concat(list(df.values()))
     except ValueError as e:
         err = ui.add_error(
-            err,"datafile_error",f"Error concatenating data from blocks: {e}"
+            err, "datafile_error", f"Error concatenating data from blocks: {e}"
         )
         return pd.DataFrame, err
 
