@@ -258,7 +258,7 @@ class SingleDataLoader:
 
         # pick mungers (Note: munger_name is comma-separated list of munger names)
         self.munger = dict()
-        m_err = dict()
+        self.munger_err = dict()
         # TODO document
         self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
         for mu in self.munger_list:
@@ -325,25 +325,22 @@ class SingleDataLoader:
                 err,
                 "system",
                 "SingleDataLoader.load_results"
-                "database error: {e}"
+                f"database error: {e}"
             )
 
         else:
             for mu in self.munger_list:
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
-                emu = ui.new_datafile(
+                new_err = ui.new_datafile(
                     self.session,
                     self.munger[mu],
                     f_path,
-                    self.project_root,
                     self.juris,
                     results_info=results_info,
                     aux_data_dir=self.d["aux_data_dir"],
                 )
-                if emu != dict():
-                    err[mu] = emu
-        if err == dict():
-            err = None
+                if new_err:
+                    err = ui.consolidate_errors([err,new_err])
         return err
 
 

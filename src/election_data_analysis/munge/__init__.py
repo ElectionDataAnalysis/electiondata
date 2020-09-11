@@ -649,7 +649,6 @@ def add_selection_id(
 
 def raw_elements_to_cdf(
     session,
-    project_root: str,
     juris: jm.Jurisdiction,
     mu: jm.Munger,
     raw: pd.DataFrame,

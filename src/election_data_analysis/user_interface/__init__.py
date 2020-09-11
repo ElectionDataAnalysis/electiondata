@@ -508,7 +508,6 @@ def new_datafile(
     session,
     munger: jm.Munger,
     raw_path: str,
-    project_root: str,
     juris: jm.Jurisdiction,
     results_info: list = None,
     aux_data_dir: str = None,
@@ -543,7 +542,6 @@ def new_datafile(
     try:
         err = m.raw_elements_to_cdf(
             session,
-            project_root,
             juris,
             munger,
             raw,
@@ -655,7 +653,8 @@ def consolidate_errors(list_of_err: list) -> Optional[Dict[Any, dict]]:
         # take union of all name-keys appearing for this error-type
         name_keys = set().union(*[y.keys() for y in err_list])
         for nk in name_keys:
-            msg_list = [y[nk] for y in err_list if nk in y.keys()]
+            msg_list_of_lists = [y[nk] for y in err_list if nk in y.keys()]
+            msg_list = [y for x in msg_list_of_lists for y in x]
             # assign concatenation of all messages
             d[et][nk] = "|".join(msg_list)
     return d
@@ -712,7 +711,7 @@ def add_new_error(
     """err is a dictionary of dictionaries, one for each err_type.
     This function return err, augmented by the error specified in <err_type>,<key> and <msg>"""
     if err is None:
-        print ("Initializing error dictionary")
+        print ("Initializing error/warning dictionary")
         err = {k:{} for k in warning_keys.union(error_keys)}
             # TODO document. Problems with results file are reported with "ini" key
     if err_type not in err.keys():
@@ -720,7 +719,6 @@ def add_new_error(
         err = add_new_error(
             err,
             "system",
-# TODO check this error
             "user_interface.add_new_error",
             f"{err_type}: {msg}")
         return err
