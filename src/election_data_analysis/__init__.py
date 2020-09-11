@@ -49,29 +49,20 @@ analyze_pars = ["db_paramfile", "db_name"]
 
 # classes
 class DataLoader:
-    def __new__(self):
+    def __new__(cls):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
-        try:
-            d, parameter_err = ui.get_runtime_parameters(
-                required_keys=multi_data_loader_pars,
-                param_file="run_time.ini",
-                header="election_data_analysis",
-            )
-        except FileNotFoundError as e:
-            print(
-                "Parameter file run_time.ini not found. Ensure that it is located"
-                " in the current directory. DataLoader object not created."
-            )
-            return None
-
-        if parameter_err:
-            print("Parameter file missing requirements.")
-            print(parameter_err)
+        d, err = ui.get_runtime_parameters(
+            required_keys=multi_data_loader_pars,
+            param_file="run_time.ini",
+            header="election_data_analysis",
+        )
+        if err:
             print("DataLoader object not created.")
+            ui.report(err)
             return None
 
-        return super().__new__(self)
+        return super().__new__(cls)
 
     def __init__(self):
         # grab parameters
@@ -102,11 +93,13 @@ class DataLoader:
         """returns an error dictionary"""
         # initialize error dictionary
         err = None
-
-        mungers_path = os.path.join(self.d["project_root"], "mungers")
+        project_root = Path(__file__).absolute().parents[1]
+        mungers_path = os.path.join(project_root, "mungers")
 
         # list .ini files and pull their jurisdiction_paths
         par_files = [f for f in os.listdir(self.d["results_dir"]) if f[-4:] == ".ini"]
+
+        # no .ini files found, return error
         if not par_files:
             err = ui.add_new_error(
                 err,
@@ -115,10 +108,11 @@ class DataLoader:
                 f"No .ini files found. No files will be processed.",
             )
             return err
+
         params = dict()
         juris_path = dict()
 
-        # For each par_files get params or throw error
+        # For each par_file get params or throw error
         good_par_files = list()
         for f in par_files:
             # grab parameters
@@ -128,7 +122,6 @@ class DataLoader:
                 optional_keys=["aux_data_dir"],
                 param_file=par_file,
                 header="election_data_analysis",
-                err=None
             )
             if new_err:
                 err = ui.consolidate_errors([err, new_err])
@@ -142,6 +135,7 @@ class DataLoader:
         # group .ini files by jurisdiction_path
         jurisdiction_paths = {juris_path[f] for f in good_par_files}
 
+        # for each jurisdiction, create Jurisdiction or throw error
         good_jurisdictions = list()
         juris = dict()
         for jp in jurisdiction_paths:
@@ -275,7 +269,6 @@ class SingleDataLoader:
             optional_keys=["aux_data_dir"],
             param_file=par_file,
             header="election_data_analysis",
-            err=dict()
         )
         if err:
             sdl = None
@@ -417,7 +410,6 @@ class JurisdictionPrepper:
                 required_keys=prep_pars,
                 param_file=param_file,
                 header="election_data_analysis",
-                err=None
             )
         except FileNotFoundError as e:
             print(
@@ -786,28 +778,24 @@ class JurisdictionPrepper:
     ) -> dict:
         """Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
         for each file in <dir> named (with munger) in a .ini file in the directory"""
-        if not error:
-            error = dict()
         for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
             par_file = os.path.join(dir, par_file_name)
-            file_dict, missing_params = ui.get_runtime_parameters(
+            file_dict, new_err = ui.get_runtime_parameters(
                 required_keys=["results_file", "munger_name"],
+                header="election_data_analysis",
                 optional_keys=["aux_data_dir"],
                 param_file=par_file,
             )
+            if new_err:
+                error = ui.consolidate_errors([error,new_err])
+                if ui.fatal_error(new_err):
+                    return error
+
             file_dict["sub_ru_type"] = sub_ru_type
             file_dict["results_file"] = os.path.join(
                 dir, file_dict["results_file"]
             )
-            if missing_params:
-                ui.add_new_error(
-                    error,
-                    "ini",
-                    par_file_name,
-                    f"Parameters missing: {missing_params}",
-                )
-            else:
-                error = self.add_sub_county_rus_from_results_file(error, **file_dict)
+            error = self.add_sub_county_rus_from_results_file(error, **file_dict)
         return error
 
     def add_elements_from_multi_results_file(

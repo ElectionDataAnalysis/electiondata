@@ -9,6 +9,7 @@ from pathlib import Path
 from election_data_analysis import juris_and_munger as jm
 from typing import Optional, Dict, Any
 
+# constants
 recognized_encodings = {
     "iso2022jp",
     "arabic",
@@ -270,6 +271,23 @@ recognized_encodings = {
     "ks_c-5601-1987",
 }
 
+# keys for error- and warning-tracking dictionary
+error_keys = {
+            "ini",
+            "munger",
+            "jurisdiction",
+            "file",
+            "system",
+}
+
+warning_keys = {
+    "warn-ini",
+    "warn-munger",
+    "warn-jurisdiction",
+    "warn-file",
+    "warn-system",
+}
+
 
 def get_params_to_read_results(d: dict, results_file, munger_name) -> (dict, list):
     kwargs = d
@@ -317,7 +335,7 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
 
 
 def pick_juris_from_filesystem(juris_path, project_root, err, check_files=False):
-    """Returns a State object. <juris_path> is the path to the directory containing the
+    """Returns a Jurisdiction object. <juris_path> is the path to the directory containing the
     defining files for the particular jurisdiction.
     """
 
@@ -638,9 +656,46 @@ def consolidate_errors(list_of_err: list) -> Optional[Dict[Any, dict]]:
     return d
 
 
-def report(err):
-    # TODO
+def report(
+        err_warn: Optional[Dict[Any, dict]],
+        loc_dict: Optional[Dict[Any, dict]] = None,
+):
+    """unpacks error dictionary <err> for reporting.
+    Keys of <location_dict> are error_types;
+    values of <loc_dict> are directories for writing error files"""
+    if not loc_dict:
+        loc_dict = dict()
+
+    # create error/warning messages for each error_type/name_key pair
+    if err_warn:
+        # create all et-nk tuples
+        tuples = set()
+        for et in err_warn.keys():
+            tuples = tuples.union(set(err_warn[et].keys()))
+        # map each tuple to its message
+        msg = {(et,nk): "\n".join(err_warn[et][nk]) for et,nk in tuples}
+
+        # write errors to error files
+        for et in err_warn.keys():
+            if et in error_keys:
+                ext = "errors"
+            else:
+                ext = "warnings"
+            for nk in err_warn[et].keys():
+                if et in loc_dict.keys():
+                    # write info to a .errors or .errors file named for the name_key <nk>
+                    nk_name = Path(nk).name
+                    out_path = os.path.join(loc_dict[et], f"{nk_name}.{ext}")
+                    with open(out_path,"a") as f:
+                        f.write(f"{et} errors\n" + msg[(et,nk)] + "\n\n")
+                    print(f"{et} {ext} written to {out_path}")
+                else:
+                    # print for user
+                    print(f"{et} {ext}:\n" + msg[(et,nk)] + "\n\n")
+    else:
+        print("No errors or warnings")
     return
+
 
 def add_new_error(
         err: Optional[Dict[Any, dict]],
@@ -652,19 +707,8 @@ def add_new_error(
     This function return err, augmented by the error specified in <err_type>,<key> and <msg>"""
     if err is None:
         print ("Initializing error dictionary")
-        err = {
-            # TODO document. Problems with results file are reported in .ini
-            "ini":{},
-            "munger":{},
-            "jurisdiction":{},
-            "file":{},
-            "system":{},
-            "warn-ini":{},
-            "warn-munger":{},
-            "warn-jurisdiction":{},
-            "warn-file":{},
-            "warn-system":{},
-        }
+        err = {k:{} for k in warning_keys.union(error_keys)}
+            # TODO document. Problems with results file are reported with "ini" key
     if err_type not in err.keys():
         err = add_new_error(
             err,
