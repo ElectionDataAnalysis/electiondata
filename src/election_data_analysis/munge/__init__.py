@@ -149,13 +149,15 @@ def add_column_from_formula(
             working.loc[:, new_col] = (
                 working.loc[:, f].apply(lambda x: f"{t}{x}") + working.loc[:, new_col]
             )
-        except KeyError:
-# TODO check this error
+        except KeyError as ke:
             err = ui.add_new_error(
                 err,
                 "munger",
                 munger_name,
-                f"missing column {f}")
+                f"Expected transformed column '{f}' not found, "
+                f"probably because of mismatch between munger and results file."
+            )
+            return working, err
 
     # use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
     if regex_flag:
@@ -192,14 +194,19 @@ def add_munged_column(
             for i in range(munger.options["header_row_count"]):
                 formula = formula.replace(f"<{i}>", f"<variable_{i}>")
 
-        working, err = add_column_from_formula(working, formula, f"{element}_raw", err, munger.name)
-
-    except:
-        e = f"Error munging {element}. Check raw_identifier_formula for {element} in cdf_elements.txt"
-        if "cdf_elements.txt" in err.keys():
-            err["cdf_elements.txt"].append(e)
-        else:
-            err["cdf_elements.txt"] = [e]
+        working, new_err = add_column_from_formula(working, formula, f"{element}_raw", err, munger.name)
+        if new_err:
+            err = ui.consolidate_errors([err,new_err])
+            if ui.fatal_error(new_err):
+                return working, err
+    except Exception as e:
+        err = ui.add_new_error(
+            err,
+            "munger",
+            munger.name,
+            f"Error interpreting formula for {element} in cdf_element.txt. {e}"
+        )
+        return working, err
 
     # compress whitespace for <element>_raw
     working.loc[:, f"{element}_raw"] = working[f"{element}_raw"].apply(
@@ -273,7 +280,7 @@ def replace_raw_with_internal_ids(
                 error,
                 "jurisdiction",
                 juris.short_name,
-                e
+                e,
             )
         else:
 # TODO -----------checking this error
@@ -468,7 +475,11 @@ def munge_and_melt(
 
     # apply munging formula from row sources (after renaming fields in raw formula as necessary)
     for t in mu.cdf_elements[mu.cdf_elements.source == "row"].index:
-        working, err = add_munged_column(working, mu, t, err, mode="row")
+        working, new_err = add_munged_column(working, mu, t, None, mode="row")
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return working, err
 
     # remove original row-munge columns
     munged = [x for x in working.columns if x[-7:] == "_SOURCE"]
@@ -491,7 +502,11 @@ def munge_and_melt(
 
     # apply munge formulas for column sources
     for t in mu.cdf_elements[mu.cdf_elements.source == "column"].index:
-        working, err = add_munged_column(working, mu, t, err, mode="column")
+        working, new_err = add_munged_column(working, mu, t, None, mode="column")
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return working, err
 
     # remove unnecessary columns
     not_needed = [f"variable_{i}" for i in range(mu.options["header_row_count"])]
@@ -522,7 +537,7 @@ def add_contest_id(
         none_or_unknown_id = db.name_to_id(
             session, f"{c_type}Contest", "none or unknown"
         )
-        working, err = replace_raw_with_internal_ids(
+        working, new_err = replace_raw_with_internal_ids(
             working,
             juris,
             df_for_type[c_type],
@@ -533,7 +548,8 @@ def add_contest_id(
             unmatched_id=none_or_unknown_id,
             drop_all_ok=True,
         )
-        # TODO check for fatal errors here?
+        if new_err:
+            err = ui.consolidate_errors([err,new_err])
         # restrict working to the contest_type <c_type>, add contest_type column
         w_for_type[c_type] = working[working[f"{c_type}Contest"] != "none or unknown"]
         w_for_type[c_type] = add_constant_column(
@@ -547,13 +563,20 @@ def add_contest_id(
     # TODO check this also when juris files loaded, to save time for user
 
     working = pd.concat([w_for_type[ct] for ct in ["BallotMeasure", "Candidate"]])
-    missing_idx = [idx for idx in df.index if idx not in working.index]
-    missing = df.loc[missing_idx]
-    # fail if no contests recognized
+
+    # fail if fatal errors or no contests recognized
     if working.empty:
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            juris.short_name,
+            "No contests recognized."
+        )
+    if ui.fatal_error(err):
         return working, err
 
     # drop obsolete columns
+    # TODO code below (here to return) is dead. Revive it?
     common_cols = [
         c
         for c in w_for_type["BallotMeasure"].columns
@@ -684,13 +707,7 @@ def raw_elements_to_cdf(
             f"Unexpected exception while adding Contest_Id: {exc}"
         )
         return err
-    if working.empty:
-        err = ui.add_new_error(
-            err,
-            "jurisdiction",
-            juris.short_name,
-            "No database contests matched to results"
-        )
+    if ui.fatal_error(err):
         return err
 
     # get ids for remaining info sourced from rows and columns

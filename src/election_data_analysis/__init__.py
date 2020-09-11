@@ -845,7 +845,7 @@ class JurisdictionPrepper:
         for element in elements:
             name_field = db.get_name_field(element)
             # append <element>_raw
-            wr, error = m.add_munged_column(
+            wr, new_err = m.add_munged_column(
                 wr,
                 mu,
                 element,
@@ -853,8 +853,10 @@ class JurisdictionPrepper:
                 mode=mu.cdf_elements.loc[element, "source"],
                 inplace=False,
             )
-            if error:
-                return error
+            if new_err:
+                error = ui.consolidate_errors([error, new_err])
+                if ui.fatal_error(new_err):
+                    return error
             # find <element>_raw values not in dictionary.txt.raw_identifier_value;
             #  add corresponding lines to dictionary.txt
             wd = prep.get_element(self.d["jurisdiction_path"], "dictionary")
