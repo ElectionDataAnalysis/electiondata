@@ -172,8 +172,6 @@ def add_munged_column(
     """Alters dataframe <raw>, adding or redefining <element>_raw column
     via the <formula>. Assumes "_SOURCE" has been appended to all columns of raw
     Does not alter row count."""
-    if not err:
-        err = {}
     if raw.empty:
         return raw, err
     if inplace:
@@ -274,7 +272,7 @@ def replace_raw_with_internal_ids(
                 e
             )
         else:
-# TODO check this error
+# TODO -----------checking this error
             error = ui.add_new_error(
                 error,
                 "warn-jurisdiction",
@@ -531,6 +529,7 @@ def add_contest_id(
             unmatched_id=none_or_unknown_id,
             drop_all_ok=True,
         )
+        # TODO check for fatal errors here?
         # restrict working to the contest_type <c_type>, add contest_type column
         w_for_type[c_type] = working[working[f"{c_type}Contest"] != "none or unknown"]
         w_for_type[c_type] = add_constant_column(
@@ -675,7 +674,6 @@ def raw_elements_to_cdf(
     try:
         working, err = add_contest_id(working, juris, err, session)
     except Exception as exc:
-# TODO check this error
         err = ui.add_new_error(
             err,
             "system",
@@ -684,7 +682,6 @@ def raw_elements_to_cdf(
         )
         return err
     if working.empty:
-# TODO check this error
         err = ui.add_new_error(
             err,
             "jurisdiction",

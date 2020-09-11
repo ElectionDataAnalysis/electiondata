@@ -668,35 +668,72 @@ def report(
     values of <loc_dict> are directories for writing error files"""
     if not loc_dict:
         loc_dict = dict()
-
+    # list keys with content
+    active_keys = [k for k in err_warn.keys() if err_warn[k] != {}]
     # create error/warning messages for each error_type/name_key pair
     if err_warn:
+        # create working list of ets to process
+        ets_to_process = [
+            et for et in error_keys if (et in active_keys) or (f"warn-{et}" in active_keys)
+        ]
+
         # create all et-nk tuples
         tuples = set()
-        for et in err_warn.keys():
+        for et in active_keys:
             tuples = tuples.union({(et,nk) for nk in err_warn[et].keys()})
+
         # map each tuple to its message
         msg = {(et,nk): "\n".join(err_warn[et][nk]) for et,nk in tuples}
 
-        # write errors to error files
-        for et in err_warn.keys():
-            if et in error_keys:
-                ext = "errors"
-                et_string = f"{et.title()} errors"
-            else:
-                ext = "warnings"
-                et_string = f"{et[5:].title()} warnings"
-            for nk in err_warn[et].keys():
-                nk_name = Path(nk).name
-                if et in loc_dict.keys():
-                    # write info to a .errors or .errors file named for the name_key <nk>
-                    out_path = os.path.join(loc_dict[et], f"{nk_name}.{ext}")
-                    with open(out_path,"a") as f:
-                        f.write(f"{et_string} ({nk_name}):\n" + msg[(et,nk)] + "\n\n")
-                    print(f"\n{et} {ext} written to {out_path}")
-                else:
-                    # print for user
-                    print(f"\n{et_string} {ext} ({nk_name}):\n" + msg[(et,nk)] + "\n\n")
+        # write errors/warns to error files
+        while ets_to_process:
+            et = ets_to_process.pop()
+            # et is an error type. <et> might be a key of err_warn,
+            # or warn-<et> might be a key, or both
+
+            # if et has any errors
+            if et in active_keys:
+                # process name keys with actual errors
+                for nk in err_warn[et].keys():
+                    # prepare output string (errors and warns if any)
+                    nk_name = Path(nk).name
+                    if (f"warn-{et}" in active_keys) and (nk in err_warn[f"warn-{et}"].keys()):
+                        warn_str = f"\n{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n\n"
+                        and_warns = " and warnings"
+                    else:
+                        warn_str = and_warns = None
+                    out_str = f"\n{et.title()} errors ({nk_name}):\n{msg[(et, nk)]}\n\n{warn_str}"
+
+                    # print/write output
+                    if et in loc_dict.keys():
+                        # write info to a .errors or .errors file named for the name_key <nk>
+                        out_path = os.path.join(loc_dict[et], f"{nk_name}.errors")
+                        with open(out_path,"a") as f:
+                            f.write(out_str)
+                        print(f"\n{et.title()} errors{and_warns} written to {out_path}")
+                    else:
+                        # print for user
+                        print(out_str)
+
+                # process name keys with only warnings
+                only_warns = [
+                    nk for nk in err_warn[f"warn-{et}"].keys() if nk not in err_warn[et].keys()
+                ]
+                for nk in only_warns:
+                    # prepare output string
+                    nk_name = Path(nk).name
+                    out_str = f"\n{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n\n"
+
+                    # print/write output
+                    if f"warn-{et}" in loc_dict.keys():
+                        # write info to a .errors or .errors file named for the name_key <nk>
+                        out_path = os.path.join(loc_dict[et], f"{nk_name}.warnings")
+                        with open(out_path,"a") as f:
+                            f.write(out_str)
+                        print(f"\n{et.title()} warnings written to {out_path}")
+                    else:
+                        # print for user
+                        print(out_str)
     else:
         print("No errors or warnings")
     return
