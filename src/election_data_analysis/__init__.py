@@ -151,6 +151,7 @@ class DataLoader:
 
             # if no fatal errors thrown, continue to process jp
             if not ui.fatal_error(new_err):
+                # if asked to load the jurisdiction, load it.
                 if load_jurisdictions:
                     print(f"Loading jurisdiction from {jp} to {self.session.bind}")
                     new_err = juris[jp].load_juris_to_db(
@@ -160,17 +161,18 @@ class DataLoader:
                     )
                     if new_err:
                         err = ui.consolidate_errors([err, new_err])
-                    else:
+                    if not ui.fatal_error(new_err):
                         good_jurisdictions.append(jp)
+                # if not asked to load jurisdiction, assume it's loaded
                 else:
+                    print(f"Jurisdiction {juris[jp].name} assumed to be loaded to database already")
                     good_jurisdictions.append(jp)
 
         # process all good files from good jurisdictions
-        good_files = dict()
         for jp in good_jurisdictions:
-            good_files[jp] = [f for f in good_par_files if juris_path[f] == jp]
-            print(f"Processing results files {good_files[jp]}")
-            for f in good_files[jp]:
+            good_files = [f for f in good_par_files if juris_path[f] == jp]
+            print(f"Processing results files {good_files}")
+            for f in good_files:
                 sdl, new_err = SingleDataLoader(
                     self.d["results_dir"],
                     f,
