@@ -745,8 +745,7 @@ def fatal_error(err,error_type_list=None,name_key_list=None) -> bool:
         else:
             bad = [x for x in name_key_list if x in err[et].keys()]
         if bad:
-            return False
-        else:
             return True
+    return False
 
 

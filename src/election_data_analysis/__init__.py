@@ -148,7 +148,7 @@ class DataLoader:
             )
             if new_err:
                 err = ui.consolidate_errors([err, new_err])
-            else:
+            if not ui.fatal_error(new_err):
                 good_par_files.append(f)
                 juris_path[f] = params[f]["jurisdiction_path"]
 
