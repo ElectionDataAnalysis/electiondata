@@ -139,7 +139,7 @@ class DataLoader:
         good_jurisdictions = list()
         juris = dict()
         for jp in jurisdiction_paths:
-            # create and load jurisdiction or throw error; if juris is to be loaded, check its files
+            # create and load jurisdiction or throw error
             juris[jp], new_err = ui.pick_juris_from_filesystem(
                 juris_path=jp,
                 project_root=self.d["project_root"],
@@ -148,12 +148,14 @@ class DataLoader:
             )
             if new_err:
                 err = ui.consolidate_errors([err, new_err])
-            else:
+
+            # if no fatal errors thrown, continue to process jp
+            if not ui.fatal_error(new_err):
                 if load_jurisdictions:
                     print(f"Loading jurisdiction from {jp} to {self.session.bind}")
-                    new_err = juris.load_juris_to_db(
+                    new_err = juris[jp].load_juris_to_db(
                         self.session,
-                        self.d["project_root"],
+                        project_root,
                         err=None,
                     )
                     if new_err:
