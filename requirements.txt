@@ -5,4 +5,3 @@ psycopg2==2.8.4
 scipy==1.4.1
 SQLAlchemy==1.3.12
 plotly
-pytest
