@@ -654,9 +654,8 @@ def consolidate_errors(list_of_err: list) -> Optional[Dict[Any, dict]]:
         name_keys = set().union(*[y.keys() for y in err_list])
         for nk in name_keys:
             msg_list_of_lists = [y[nk] for y in err_list if nk in y.keys()]
-            msg_list = [y for x in msg_list_of_lists for y in x]
-            # assign concatenation of all messages
-            d[et][nk] = "|".join(msg_list)
+            # assign list of all messages
+            d[et][nk] = [y for x in msg_list_of_lists for y in x]
     return d
 
 
@@ -683,19 +682,21 @@ def report(
         for et in err_warn.keys():
             if et in error_keys:
                 ext = "errors"
+                et_string = f"{et.title()} errors"
             else:
                 ext = "warnings"
+                et_string = f"{et[5:].title()} warnings"
             for nk in err_warn[et].keys():
                 nk_name = Path(nk).name
                 if et in loc_dict.keys():
                     # write info to a .errors or .errors file named for the name_key <nk>
                     out_path = os.path.join(loc_dict[et], f"{nk_name}.{ext}")
                     with open(out_path,"a") as f:
-                        f.write(f"{et} errors ({nk_name}):\n" + msg[(et,nk)] + "\n\n")
+                        f.write(f"{et_string} ({nk_name}):\n" + msg[(et,nk)] + "\n\n")
                     print(f"\n{et} {ext} written to {out_path}")
                 else:
                     # print for user
-                    print(f"\n{et} {ext} ({nk_name}):\n" + msg[(et,nk)] + "\n\n")
+                    print(f"\n{et_string} {ext} ({nk_name}):\n" + msg[(et,nk)] + "\n\n")
     else:
         print("No errors or warnings")
     return
@@ -723,7 +724,7 @@ def add_new_error(
             f"{err_type}: {msg}")
         return err
     if key in err[err_type].keys():
-        err[err_type][key].append(f"|{msg}")
+        err[err_type][key].append(msg)
     else:
         err[err_type][key] = [msg]
     return err

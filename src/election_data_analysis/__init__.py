@@ -206,9 +206,9 @@ class DataLoader:
                     # try to load data
                     load_error = sdl.load_results()
                     if load_error:
-                        ui.consolidate_errors([err, load_error])
+                        err = ui.consolidate_errors([err, load_error])
 
-                    # if no fatal error, archive files
+                    # if no fatal load error, archive files
                     if not ui.fatal_error(load_error):
                         ui.archive(f,self.d["results_dir"],success_dir)
                         ui.archive(sdl.d["results_file"], self.d["results_dir"], success_dir)
