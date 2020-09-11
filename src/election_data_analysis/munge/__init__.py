@@ -111,7 +111,12 @@ def text_fragments_and_fields(formula):
 
 
 def add_column_from_formula(
-    working: pd.DataFrame, formula: str, new_col: str, err: dict, suffix=None
+    working: pd.DataFrame,
+        formula: str,
+        new_col: str,
+        err: dict,
+        munger_name: str,
+        suffix=None,
 ) -> (pd.DataFrame, dict):
     """If <suffix> is given, add it to each field in the formula
     If formula is enclosed in braces, parse first entry as formula, second as a
@@ -149,8 +154,7 @@ def add_column_from_formula(
             err = ui.add_new_error(
                 err,
                 "munger",
-                # TODO pass munger name to function so it can be reported here??
-                concat_formula,
+                munger_name,
                 f"missing column {f}")
 
     # use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
@@ -188,7 +192,7 @@ def add_munged_column(
             for i in range(munger.options["header_row_count"]):
                 formula = formula.replace(f"<{i}>", f"<variable_{i}>")
 
-        working, err = add_column_from_formula(working, formula, f"{element}_raw", err)
+        working, err = add_column_from_formula(working, formula, f"{element}_raw", err, munger.name)
 
     except:
         e = f"Error munging {element}. Check raw_identifier_formula for {element} in cdf_elements.txt"
@@ -663,7 +667,6 @@ def raw_elements_to_cdf(
     try:
         working, err = munge_and_melt(mu, working, count_cols, err)
     except Exception as exc:
-# TODO check this error
         err = ui.add_new_error(
             err,
             "system",
@@ -740,7 +743,6 @@ def raw_elements_to_cdf(
                 )
                 working.drop(t, axis=1, inplace=True)
         except Exception as exc:
-# TODO check this error
             err = ui.add_new_error(
                 err,
                 "system",
@@ -753,7 +755,6 @@ def raw_elements_to_cdf(
     try:
         working, err = add_selection_id(working, session.bind, juris, err)
     except Exception as exc:
-# TODO check this error
         err = ui.add_new_error(
             err,
             "system",
@@ -762,7 +763,6 @@ def raw_elements_to_cdf(
         )
         return err
     if working.empty:
-# TODO check this error
         err = ui.add_new_error(
             err,
             "jurisdiction",
@@ -775,16 +775,14 @@ def raw_elements_to_cdf(
     try:
         e = db.insert_to_cdf_db(session.bind, working, "VoteCount")
         if e:
-# TODO check this error
             err = ui.add_new_error(
                 err,
                 "system",
                 "munge.raw_elements_to_cdf",
                 f"database insertion error {e}"
             )
-        session.commit()
+            return err
     except Exception as exc:
-# TODO check this error
         err = ui.add_new_error(err,
                                "system",
                                "munge.raw_elements_to_cdf",

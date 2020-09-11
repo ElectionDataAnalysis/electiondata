@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 from election_data_analysis import juris_and_munger as jm
 from typing import Optional, Dict, Any
+import datetime
 
 # constants
 recognized_encodings = {
@@ -540,7 +541,7 @@ def new_datafile(
         return err
 
     try:
-        err = m.raw_elements_to_cdf(
+        new_err = m.raw_elements_to_cdf(
             session,
             juris,
             munger,
@@ -549,6 +550,10 @@ def new_datafile(
             err,
             ids=results_info,
         )
+        if new_err:
+            err = consolidate_errors([err,new_err])
+            if fatal_error(new_err):
+                return err
     except Exception as exc:
 # TODO check this error
         err = add_new_error(
@@ -701,13 +706,15 @@ def report(
                         warn_str = f"\n{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n\n"
                         and_warns = " and warnings"
                     else:
-                        warn_str = and_warns = None
+                        warn_str = and_warns = ""
                     out_str = f"\n{et.title()} errors ({nk_name}):\n{msg[(et, nk)]}\n\n{warn_str}"
 
                     # print/write output
                     if et in loc_dict.keys():
+                        # get timestamp
+                        ts = datetime.datetime.now().strftime("%m%d_%H%M")
                         # write info to a .errors or .errors file named for the name_key <nk>
-                        out_path = os.path.join(loc_dict[et], f"{nk_name}.errors")
+                        out_path = os.path.join(loc_dict[et], f"{nk_name}_{ts}.errors")
                         with open(out_path,"a") as f:
                             f.write(out_str)
                         print(f"\n{et.title()} errors{and_warns} written to {out_path}")
@@ -715,25 +722,27 @@ def report(
                         # print for user
                         print(out_str)
 
-                # process name keys with only warnings
-                only_warns = [
-                    nk for nk in err_warn[f"warn-{et}"].keys() if nk not in err_warn[et].keys()
-                ]
-                for nk in only_warns:
-                    # prepare output string
-                    nk_name = Path(nk).name
-                    out_str = f"\n{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n\n"
+            # process name keys with only warnings
+            only_warns = [
+                nk for nk in err_warn[f"warn-{et}"].keys() if nk not in err_warn[et].keys()
+            ]
+            for nk in only_warns:
+                # prepare output string
+                nk_name = Path(nk).name
+                out_str = f"\n{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n\n"
 
-                    # print/write output
-                    if f"warn-{et}" in loc_dict.keys():
-                        # write info to a .errors or .errors file named for the name_key <nk>
-                        out_path = os.path.join(loc_dict[et], f"{nk_name}.warnings")
-                        with open(out_path,"a") as f:
-                            f.write(out_str)
-                        print(f"\n{et.title()} warnings written to {out_path}")
-                    else:
-                        # print for user
-                        print(out_str)
+                # print/write output
+                if f"warn-{et}" in loc_dict.keys():
+                    # get timestamp
+                    ts = datetime.datetime.now().strftime("%m%d_%H%M")
+                    # write info to a .errors or .errors file named for the name_key <nk>
+                    out_path = os.path.join(loc_dict[et], f"{nk_name}_{ts}.warnings")
+                    with open(out_path,"a") as f:
+                        f.write(out_str)
+                    print(f"\n{et.title()} warnings written to {out_path}")
+                else:
+                    # print for user
+                    print(out_str)
     else:
         print("No errors or warnings")
     return

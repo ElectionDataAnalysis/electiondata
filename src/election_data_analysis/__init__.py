@@ -213,6 +213,8 @@ class DataLoader:
                         ui.archive(f,self.d["results_dir"],success_dir)
                         ui.archive(sdl.d["results_file"], self.d["results_dir"], success_dir)
                         print(f"\tArchived {f} and its results file after successful load.")
+                    else:
+                        print(f"\t{f} and its results file not archived due to errors")
 
         # report errors
         loc_dict = {
@@ -708,10 +710,12 @@ class JurisdictionPrepper:
 
         # add columns for county and sub_ru
         wr, error = m.add_column_from_formula(
-            wr, county_formula, "County_raw", error, suffix="_SOURCE"
+            wr, county_formula, "County_raw", error, munger_name,
+            suffix="_SOURCE"
         )
         wr, error = m.add_column_from_formula(
-            wr, sub_ru_formula, "Sub_County_raw", error, suffix="_SOURCE"
+            wr, sub_ru_formula, "Sub_County_raw", error, munger_name,
+            suffix="_SOURCE"
         )
 
         # add column for county internal name
