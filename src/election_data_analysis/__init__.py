@@ -73,9 +73,9 @@ class DataLoader:
         )
 
         # create db if it does not already exist
-        error = db.establish_connection()
+        error = db.test_connection()
         if error:
-            db.create_new_db(self.d["project_root"])
+            db.create_new_db()
 
         # connect to db
         try:

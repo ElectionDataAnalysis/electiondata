@@ -7,6 +7,7 @@ import sqlalchemy.orm
 import io
 import csv
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
+from pathlib import Path
 
 # import the error handling libraries for psycopg2
 from psycopg2 import OperationalError, errorcodes, errors
@@ -209,7 +210,9 @@ def test_connection(paramfile="run_time.ini", dbname=None):
     return None
 
 
-def create_new_db(project_root, param_file="run_time.ini"):
+def create_new_db(param_file="run_time.ini"):
+
+    project_root = Path(__file__).absolute().parents[2]
     params, err = ui.get_runtime_parameters(
         required_keys=db_pars,
         param_file=param_file,

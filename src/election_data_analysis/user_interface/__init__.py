@@ -671,7 +671,7 @@ def report(
         # create all et-nk tuples
         tuples = set()
         for et in err_warn.keys():
-            tuples = tuples.union(set(err_warn[et].keys()))
+            tuples = tuples.union({(et,nk) for nk in err_warn[et].keys()})
         # map each tuple to its message
         msg = {(et,nk): "\n".join(err_warn[et][nk]) for et,nk in tuples}
 
