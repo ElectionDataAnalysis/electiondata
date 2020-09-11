@@ -7,7 +7,6 @@ import re
 import os
 import numpy as np
 from sqlalchemy.orm.session import Session
-import time
 
 
 class MungeError(Exception):
@@ -257,7 +256,7 @@ def replace_raw_with_internal_ids(
 # TODO check this error
         error = ui.add_new_error(
             error,
-            "jurisdiction_warn",
+            "warn-jurisdiction",
             juris.short_name,
             e
         )
@@ -279,7 +278,7 @@ def replace_raw_with_internal_ids(
 # TODO check this error
             error = ui.add_new_error(
                 error,
-                "jurisdiction-warn",
+                "warn-jurisdiction",
                 juris.short_name,
                 e
             )
@@ -342,7 +341,7 @@ def replace_raw_with_internal_ids(
 # TODO check this error
         error = ui.add_new_error(
             error,
-            "jurisdiction-warn",
+            "warn-jurisdiction",
             juris.short_name,
             e,
         )
@@ -777,7 +776,6 @@ def raw_elements_to_cdf(
         return err
 
     # Fill VoteCount
-    vc_start = time.perf_counter()
     try:
         e = db.insert_to_cdf_db(session.bind, working, "VoteCount")
         if e:
@@ -795,8 +793,6 @@ def raw_elements_to_cdf(
                                "system",
                                "munge.raw_elements_to_cdf",
                                f"Error filling VoteCount:\n{exc}")
-    vc_time = time.perf_counter() - vc_start
-    print(f"VoteCount load time in seconds: {vc_time}")
 
     return err
 

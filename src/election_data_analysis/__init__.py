@@ -72,21 +72,22 @@ class DataLoader:
             header="election_data_analysis",
         )
 
-        # create db if it does not already exist
-        error = db.test_connection()
-        if error:
+        # create db if it does not already exist and have right tables
+        ok, err = db.test_connection()
+        if not ok:
             db.create_new_db()
 
         # connect to db
         try:
-            self.engine, err = db.sql_alchemy_connect()
+            self.engine, new_err = db.sql_alchemy_connect()
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
         except Exception as e:
             print("Cannot connect to database. Exiting.")
             quit()
-        if err:
+        if new_err:
             print("Unexpected error connecting to database.")
+            err = ui.consolidate_errors([err,new_err])
             ui.report(err)
             print("Exiting")
             quit()

@@ -710,7 +710,7 @@ def add_new_error(
 ) -> dict:
     """err is a dictionary of dictionaries, one for each err_type.
     This function return err, augmented by the error specified in <err_type>,<key> and <msg>"""
-    if err is None:
+    if err is None or err == dict():
         print ("Initializing error/warning dictionary")
         err = {k:{} for k in warning_keys.union(error_keys)}
             # TODO document. Problems with results file are reported with "ini" key

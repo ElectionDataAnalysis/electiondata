@@ -164,9 +164,12 @@ def append_to_composing_reporting_unit_join(engine, ru):
     return cruj_dframe
 
 
-def test_connection(paramfile="run_time.ini", dbname=None):
+def test_connection(
+        paramfile="run_time.ini",
+        dbname=None
+) -> (bool, dict):
     """Check for DB and relevant tables; if they don't exist, return
-    error message"""
+    False and error dictionary"""
     # get postgresql parameters
     params, err = ui.get_runtime_parameters(
         required_keys=db_pars,
@@ -174,7 +177,7 @@ def test_connection(paramfile="run_time.ini", dbname=None):
         header="postgresql"
     )
     if err:
-        return err
+        return False, err
     if dbname:
         params["dbname"] = dbname
 
@@ -183,34 +186,42 @@ def test_connection(paramfile="run_time.ini", dbname=None):
         con = psycopg2.connect(**params)
         con.close()
     except psycopg2.OperationalError as e:
-        return err
+        return False, err
 
     # Look for tables
     try:
         engine, new_err = sql_alchemy_connect(paramfile)
         if new_err:
             err = ui.consolidate_errors(err, new_err)
-            return err
+            engine.dispose()
+            return False, err
         elems, enums, joins, o = get_cdf_db_table_names(engine)
         # All tables except "Others" must be created. Essentially looks for
         # a "complete" database.
         if not elems or not enums or not joins:
-            return {"message": "Required tables not found."}
+            err = ui.add_new_error(
+                err,
+                "system",
+                "database.test_connection",
+                "Required tables not found in database"
+            )
+            engine.dispose()
+            return False,err
         engine.dispose()
 
     except Exception as e:
-        err = ui.append_error(
+        err = ui.add_new_error(
             err,
             "system",
             "database.test_connection"
             f"Unexpected exception while connecting to database: {e}"
         )
-        return err
-    # if no errors found, return None
-    return None
+        return False, err
+    # if no errors found, return True
+    return True, err
 
 
-def create_new_db(param_file="run_time.ini"):
+def create_new_db(param_file="run_time.ini") -> dict:
 
     project_root = Path(__file__).absolute().parents[2]
     params, err = ui.get_runtime_parameters(
@@ -230,13 +241,7 @@ def create_new_db(param_file="run_time.ini"):
         # Can't connect to the default postgres database, so there
         # seems to be something wrong with connection. Fail here.
         print(f"Error connecting to database. Exiting.")
-        err = ui.append_error(
-            err,
-            "system",
-            "database.create_new_db",
-            f"Error connecting to database",
-        )
-        return err
+        quit()
 
     cur = con.cursor()
     db_df = get_database_names(con)
