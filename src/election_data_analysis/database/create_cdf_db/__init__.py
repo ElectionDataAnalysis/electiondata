@@ -77,8 +77,6 @@ def create_common_data_format_tables(session, dirpath="CDF_schema_def_info/"):
             ]
         elif element == "CandidateSelection":
             create_indices = ["Candidate_Id", "Party_Id"]
-        elif element == "ComposingReportingUnitJoin":
-            create_indices = ["ParentReportingUnit_Id", "ChildReportingUnit_Id"]
         elif element == "ReportingUnit":
             create_indices = ["ReportingUnitType_Id"]
         else:
@@ -105,6 +103,10 @@ def create_common_data_format_tables(session, dirpath="CDF_schema_def_info/"):
     joins_to_process = [f for f in os.listdir(join_path) if f[0] != "."]
     while joins_to_process:
         j = joins_to_process[0]
+        if j == "ComposingReportingUnitJoin":
+            create_indices = ["ParentReportingUnit_Id", "ChildReportingUnit_Id"]
+        else:
+            create_indices = None
         # check foreign keys; if any refers to an elt yet to be processed, change to that elt
         #  note that any foreign keys for elements are to other elements, so it's OK to do this without considering
         #  joins first or concurrently.
@@ -121,7 +123,7 @@ def create_common_data_format_tables(session, dirpath="CDF_schema_def_info/"):
             except IndexError:
                 pass
         # create db table for element
-        create_table(metadata, id_seq, j, "joins", dirpath)
+        create_table(metadata, id_seq, j, "joins", dirpath, create_indices)
 
         # remove element from list of yet-to-be-processed
         joins_to_process.remove(j)
@@ -151,6 +153,7 @@ def create_table(
                 primary_key=True,
             ),
         )
+        Index(f"{t}_parent", t.c.Id)
     elif table_type == "elements":
         with open(os.path.join(t_path, "short_name.txt"), "r") as f:
             short_name = f.read().strip()
@@ -271,6 +274,7 @@ def create_table(
                 *unique_constraint_list,
                 *time_stamp_list,
             )
+            Index(f"{t}_parent", t.c.Id)
 
     elif table_type == "enumerations":
         txt_col = "Txt"
@@ -286,6 +290,7 @@ def create_table(
             ),
             Column(txt_col, String, unique=True),
         )
+        Index(f"{t}_parent", t.c.Id)
 
     elif table_type == "joins":
         with open(os.path.join(t_path, "short_name.txt"), "r") as f:
@@ -325,6 +330,7 @@ def create_table(
             *true_foreign_key_list,
             *null_constraint_list,
         )
+        Index(f"{t}_parent", t.c.Id)
     else:
         raise Exception(f"table_type {table_type} not recognized")
     # create indices for efficiency
