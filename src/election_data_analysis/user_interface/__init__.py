@@ -440,7 +440,7 @@ def read_combine_results(
 ):
     if mu.options["file_type"] in ["concatenated-blocks"]:
         working, err = sf.read_concatenated_blocks(results_file, mu, err)
-        if working.empty or [x for x in err.keys() if "error" in x]:
+        if working.empty or [x for x in err.keys() if 'error' in x]:
             return working, err
         # set options that will be needed for going forward
         mu.options["count_columns"] = [working.columns.to_list().index("count")]
@@ -615,9 +615,7 @@ def get_runtime_parameters(
     try:
         h = parser[header]
     except KeyError as ke:
-        missing_required_params[
-            "header"
-        ] = f"Header not found in file {param_file}: {ke}"
+        missing_required_params["header"] = f"Header not found in file {param_file}: {ke}"
         return dict(), missing_required_params
 
     for k in required_keys:
