@@ -1,1 +1,807 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	SC House District 1	SC House District 1
+CandidateContest	SC House District 1	State House of Representatives, District 1
+CandidateContest	SC House District 2	SC House District 2
+CandidateContest	SC House District 2	State House of Representatives, District 2
+CandidateContest	SC House District 3	SC House District 3
+CandidateContest	SC House District 3	State House of Representatives, District 3
+CandidateContest	SC House District 4	SC House District 4
+CandidateContest	SC House District 4	State House of Representatives, District 4
+CandidateContest	SC House District 5	SC House District 5
+CandidateContest	SC House District 5	State House of Representatives, District 5
+CandidateContest	SC House District 6	SC House District 6
+CandidateContest	SC House District 6	State House of Representatives, District 6
+CandidateContest	SC House District 7	SC House District 7
+CandidateContest	SC House District 7	State House of Representatives, District 7
+CandidateContest	SC House District 8	SC House District 8
+CandidateContest	SC House District 8	State House of Representatives, District 8
+CandidateContest	SC House District 9	SC House District 9
+CandidateContest	SC House District 9	State House of Representatives, District 9
+CandidateContest	SC House District 10	SC House District 10
+CandidateContest	SC House District 10	State House of Representatives, District 10
+CandidateContest	SC House District 11	SC House District 11
+CandidateContest	SC House District 11	State House of Representatives, District 11
+CandidateContest	SC House District 12	SC House District 12
+CandidateContest	SC House District 12	State House of Representatives, District 12
+CandidateContest	SC House District 13	SC House District 13
+CandidateContest	SC House District 13	State House of Representatives, District 13
+CandidateContest	SC House District 14	SC House District 14
+CandidateContest	SC House District 14	State House of Representatives, District 14
+CandidateContest	SC House District 15	SC House District 15
+CandidateContest	SC House District 15	State House of Representatives, District 15
+CandidateContest	SC House District 16	SC House District 16
+CandidateContest	SC House District 16	State House of Representatives, District 16
+CandidateContest	SC House District 17	SC House District 17
+CandidateContest	SC House District 17	State House of Representatives, District 17
+CandidateContest	SC House District 18	SC House District 18
+CandidateContest	SC House District 18	State House of Representatives, District 18
+CandidateContest	SC House District 19	SC House District 19
+CandidateContest	SC House District 19	State House of Representatives, District 19
+CandidateContest	SC House District 20	SC House District 20
+CandidateContest	SC House District 20	State House of Representatives, District 20
+CandidateContest	SC House District 21	SC House District 21
+CandidateContest	SC House District 21	State House of Representatives, District 21
+CandidateContest	SC House District 22	SC House District 22
+CandidateContest	SC House District 22	State House of Representatives, District 22
+CandidateContest	SC House District 23	SC House District 23
+CandidateContest	SC House District 23	State House of Representatives, District 23
+CandidateContest	SC House District 24	SC House District 24
+CandidateContest	SC House District 24	State House of Representatives, District 24
+CandidateContest	SC House District 25	SC House District 25
+CandidateContest	SC House District 25	State House of Representatives, District 25
+CandidateContest	SC House District 26	SC House District 26
+CandidateContest	SC House District 26	State House of Representatives, District 26
+CandidateContest	SC House District 27	SC House District 27
+CandidateContest	SC House District 27	State House of Representatives, District 27
+CandidateContest	SC House District 28	SC House District 28
+CandidateContest	SC House District 28	State House of Representatives, District 28
+CandidateContest	SC House District 29	SC House District 29
+CandidateContest	SC House District 29	State House of Representatives, District 29
+CandidateContest	SC House District 30	SC House District 30
+CandidateContest	SC House District 30	State House of Representatives, District 30
+CandidateContest	SC House District 31	SC House District 31
+CandidateContest	SC House District 31	State House of Representatives, District 31
+CandidateContest	SC House District 32	SC House District 32
+CandidateContest	SC House District 32	State House of Representatives, District 32
+CandidateContest	SC House District 33	SC House District 33
+CandidateContest	SC House District 33	State House of Representatives, District 33
+CandidateContest	SC House District 34	SC House District 34
+CandidateContest	SC House District 34	State House of Representatives, District 34
+CandidateContest	SC House District 35	SC House District 35
+CandidateContest	SC House District 35	State House of Representatives, District 35
+CandidateContest	SC House District 36	SC House District 36
+CandidateContest	SC House District 36	State House of Representatives, District 36
+CandidateContest	SC House District 37	SC House District 37
+CandidateContest	SC House District 37	State House of Representatives, District 37
+CandidateContest	SC House District 38	SC House District 38
+CandidateContest	SC House District 38	State House of Representatives, District 38
+CandidateContest	SC House District 39	SC House District 39
+CandidateContest	SC House District 39	State House of Representatives, District 39
+CandidateContest	SC House District 40	SC House District 40
+CandidateContest	SC House District 40	State House of Representatives, District 40
+CandidateContest	SC House District 41	SC House District 41
+CandidateContest	SC House District 41	State House of Representatives, District 41
+CandidateContest	SC House District 42	SC House District 42
+CandidateContest	SC House District 42	State House of Representatives, District 42
+CandidateContest	SC House District 43	SC House District 43
+CandidateContest	SC House District 43	State House of Representatives, District 43
+CandidateContest	SC House District 44	SC House District 44
+CandidateContest	SC House District 44	State House of Representatives, District 44
+CandidateContest	SC House District 45	SC House District 45
+CandidateContest	SC House District 45	State House of Representatives, District 45
+CandidateContest	SC House District 46	SC House District 46
+CandidateContest	SC House District 46	State House of Representatives, District 46
+CandidateContest	SC House District 47	SC House District 47
+CandidateContest	SC House District 47	State House of Representatives, District 47
+CandidateContest	SC House District 48	SC House District 48
+CandidateContest	SC House District 48	State House of Representatives, District 48
+CandidateContest	SC House District 49	SC House District 49
+CandidateContest	SC House District 49	State House of Representatives, District 49
+CandidateContest	SC House District 50	SC House District 50
+CandidateContest	SC House District 50	State House of Representatives, District 50
+CandidateContest	SC House District 51	SC House District 51
+CandidateContest	SC House District 51	State House of Representatives, District 51
+CandidateContest	SC House District 52	SC House District 52
+CandidateContest	SC House District 52	State House of Representatives, District 52
+CandidateContest	SC House District 53	SC House District 53
+CandidateContest	SC House District 53	State House of Representatives, District 53
+CandidateContest	SC House District 54	SC House District 54
+CandidateContest	SC House District 54	State House of Representatives, District 54
+CandidateContest	SC House District 55	SC House District 55
+CandidateContest	SC House District 55	State House of Representatives, District 55
+CandidateContest	SC House District 56	SC House District 56
+CandidateContest	SC House District 56	State House of Representatives, District 56
+CandidateContest	SC House District 57	SC House District 57
+CandidateContest	SC House District 57	State House of Representatives, District 57
+CandidateContest	SC House District 58	SC House District 58
+CandidateContest	SC House District 58	State House of Representatives, District 58
+CandidateContest	SC House District 59	SC House District 59
+CandidateContest	SC House District 59	State House of Representatives, District 59
+CandidateContest	SC House District 60	SC House District 60
+CandidateContest	SC House District 60	State House of Representatives, District 60
+CandidateContest	SC House District 61	SC House District 61
+CandidateContest	SC House District 61	State House of Representatives, District 61
+CandidateContest	SC House District 62	SC House District 62
+CandidateContest	SC House District 62	State House of Representatives, District 62
+CandidateContest	SC House District 63	SC House District 63
+CandidateContest	SC House District 63	State House of Representatives, District 63
+CandidateContest	SC House District 64	SC House District 64
+CandidateContest	SC House District 64	State House of Representatives, District 64
+CandidateContest	SC House District 65	SC House District 65
+CandidateContest	SC House District 65	State House of Representatives, District 65
+CandidateContest	SC House District 66	SC House District 66
+CandidateContest	SC House District 66	State House of Representatives, District 66
+CandidateContest	SC House District 67	SC House District 67
+CandidateContest	SC House District 67	State House of Representatives, District 67
+CandidateContest	SC House District 68	SC House District 68
+CandidateContest	SC House District 68	State House of Representatives, District 68
+CandidateContest	SC House District 69	SC House District 69
+CandidateContest	SC House District 69	State House of Representatives, District 69
+CandidateContest	SC House District 70	SC House District 70
+CandidateContest	SC House District 70	State House of Representatives, District 70
+CandidateContest	SC House District 71	SC House District 71
+CandidateContest	SC House District 71	State House of Representatives, District 71
+CandidateContest	SC House District 72	SC House District 72
+CandidateContest	SC House District 72	State House of Representatives, District 72
+CandidateContest	SC House District 73	SC House District 73
+CandidateContest	SC House District 73	State House of Representatives, District 73
+CandidateContest	SC House District 74	SC House District 74
+CandidateContest	SC House District 74	State House of Representatives, District 74
+CandidateContest	SC House District 75	SC House District 75
+CandidateContest	SC House District 75	State House of Representatives, District 75
+CandidateContest	SC House District 76	SC House District 76
+CandidateContest	SC House District 76	State House of Representatives, District 76
+CandidateContest	SC House District 77	SC House District 77
+CandidateContest	SC House District 77	State House of Representatives, District 77
+CandidateContest	SC House District 78	SC House District 78
+CandidateContest	SC House District 78	State House of Representatives, District 78
+CandidateContest	SC House District 79	SC House District 79
+CandidateContest	SC House District 79	State House of Representatives, District 79
+CandidateContest	SC House District 80	SC House District 80
+CandidateContest	SC House District 80	State House of Representatives, District 80
+CandidateContest	SC House District 81	SC House District 81
+CandidateContest	SC House District 81	State House of Representatives, District 81
+CandidateContest	SC House District 82	SC House District 82
+CandidateContest	SC House District 82	State House of Representatives, District 82
+CandidateContest	SC House District 83	SC House District 83
+CandidateContest	SC House District 83	State House of Representatives, District 83
+CandidateContest	SC House District 84	SC House District 84
+CandidateContest	SC House District 84	State House of Representatives, District 84
+CandidateContest	SC House District 85	SC House District 85
+CandidateContest	SC House District 85	State House of Representatives, District 85
+CandidateContest	SC House District 86	SC House District 86
+CandidateContest	SC House District 86	State House of Representatives, District 86
+CandidateContest	SC House District 87	SC House District 87
+CandidateContest	SC House District 87	State House of Representatives, District 87
+CandidateContest	SC House District 88	SC House District 88
+CandidateContest	SC House District 88	State House of Representatives, District 88
+CandidateContest	SC House District 89	SC House District 89
+CandidateContest	SC House District 89	State House of Representatives, District 89
+CandidateContest	SC House District 90	SC House District 90
+CandidateContest	SC House District 90	State House of Representatives, District 90
+CandidateContest	SC House District 91	SC House District 91
+CandidateContest	SC House District 91	State House of Representatives, District 91
+CandidateContest	SC House District 92	SC House District 92
+CandidateContest	SC House District 92	State House of Representatives, District 92
+CandidateContest	SC House District 93	SC House District 93
+CandidateContest	SC House District 93	State House of Representatives, District 93
+CandidateContest	SC House District 94	SC House District 94
+CandidateContest	SC House District 94	State House of Representatives, District 94
+CandidateContest	SC House District 95	SC House District 95
+CandidateContest	SC House District 95	State House of Representatives, District 95
+CandidateContest	SC House District 96	SC House District 96
+CandidateContest	SC House District 96	State House of Representatives, District 96
+CandidateContest	SC House District 97	SC House District 97
+CandidateContest	SC House District 97	State House of Representatives, District 97
+CandidateContest	SC House District 98	SC House District 98
+CandidateContest	SC House District 98	State House of Representatives, District 98
+CandidateContest	SC House District 99	SC House District 99
+CandidateContest	SC House District 99	State House of Representatives, District 99
+CandidateContest	SC House District 100	SC House District 100
+CandidateContest	SC House District 100	State House of Representatives, District 100
+CandidateContest	SC House District 101	SC House District 101
+CandidateContest	SC House District 101	State House of Representatives, District 101
+CandidateContest	SC House District 102	SC House District 102
+CandidateContest	SC House District 102	State House of Representatives, District 102
+CandidateContest	SC House District 103	SC House District 103
+CandidateContest	SC House District 103	State House of Representatives, District 103
+CandidateContest	SC House District 104	SC House District 104
+CandidateContest	SC House District 104	State House of Representatives, District 104
+CandidateContest	SC House District 105	SC House District 105
+CandidateContest	SC House District 105	State House of Representatives, District 105
+CandidateContest	SC House District 106	SC House District 106
+CandidateContest	SC House District 106	State House of Representatives, District 106
+CandidateContest	SC House District 107	SC House District 107
+CandidateContest	SC House District 107	State House of Representatives, District 107
+CandidateContest	SC House District 108	SC House District 108
+CandidateContest	SC House District 108	State House of Representatives, District 108
+CandidateContest	SC House District 109	SC House District 109
+CandidateContest	SC House District 109	State House of Representatives, District 109
+CandidateContest	SC House District 110	SC House District 110
+CandidateContest	SC House District 110	State House of Representatives, District 110
+CandidateContest	SC House District 111	SC House District 111
+CandidateContest	SC House District 111	State House of Representatives, District 111
+CandidateContest	SC House District 112	SC House District 112
+CandidateContest	SC House District 112	State House of Representatives, District 112
+CandidateContest	SC House District 113	SC House District 113
+CandidateContest	SC House District 113	State House of Representatives, District 113
+CandidateContest	SC House District 114	SC House District 114
+CandidateContest	SC House District 114	State House of Representatives, District 114
+CandidateContest	SC House District 115	SC House District 115
+CandidateContest	SC House District 115	State House of Representatives, District 115
+CandidateContest	SC House District 116	SC House District 116
+CandidateContest	SC House District 116	State House of Representatives, District 116
+CandidateContest	SC House District 117	SC House District 117
+CandidateContest	SC House District 117	State House of Representatives, District 117
+CandidateContest	SC House District 118	SC House District 118
+CandidateContest	SC House District 118	State House of Representatives, District 118
+CandidateContest	SC House District 119	SC House District 119
+CandidateContest	SC House District 119	State House of Representatives, District 119
+CandidateContest	SC House District 120	SC House District 120
+CandidateContest	SC House District 120	State House of Representatives, District 120
+CandidateContest	SC House District 121	SC House District 121
+CandidateContest	SC House District 121	State House of Representatives, District 121
+CandidateContest	SC House District 122	SC House District 122
+CandidateContest	SC House District 122	State House of Representatives, District 122
+CandidateContest	SC House District 123	SC House District 123
+CandidateContest	SC House District 123	State House of Representatives, District 123
+CandidateContest	SC House District 124	SC House District 124
+CandidateContest	SC House District 124	State House of Representatives, District 124
+CandidateContest	SC Senate District 1	SC Senate District 1
+CandidateContest	SC Senate District 1	State Senate, District 1
+CandidateContest	SC Senate District 2	SC Senate District 2
+CandidateContest	SC Senate District 2	State Senate, District 2
+CandidateContest	SC Senate District 3	SC Senate District 3
+CandidateContest	SC Senate District 3	State Senate, District 3
+CandidateContest	SC Senate District 4	SC Senate District 4
+CandidateContest	SC Senate District 4	State Senate, District 4
+CandidateContest	SC Senate District 5	SC Senate District 5
+CandidateContest	SC Senate District 5	State Senate, District 5
+CandidateContest	SC Senate District 6	SC Senate District 6
+CandidateContest	SC Senate District 6	State Senate, District 6
+CandidateContest	SC Senate District 7	SC Senate District 7
+CandidateContest	SC Senate District 7	State Senate, District 7
+CandidateContest	SC Senate District 8	SC Senate District 8
+CandidateContest	SC Senate District 8	State Senate, District 8
+CandidateContest	SC Senate District 9	SC Senate District 9
+CandidateContest	SC Senate District 9	State Senate, District 9
+CandidateContest	SC Senate District 10	SC Senate District 10
+CandidateContest	SC Senate District 10	State Senate, District 10
+CandidateContest	SC Senate District 11	SC Senate District 11
+CandidateContest	SC Senate District 11	State Senate, District 11
+CandidateContest	SC Senate District 12	SC Senate District 12
+CandidateContest	SC Senate District 12	State Senate, District 12
+CandidateContest	SC Senate District 13	SC Senate District 13
+CandidateContest	SC Senate District 13	State Senate, District 13
+CandidateContest	SC Senate District 14	SC Senate District 14
+CandidateContest	SC Senate District 14	State Senate, District 14
+CandidateContest	SC Senate District 15	SC Senate District 15
+CandidateContest	SC Senate District 15	State Senate, District 15
+CandidateContest	SC Senate District 16	SC Senate District 16
+CandidateContest	SC Senate District 16	State Senate, District 16
+CandidateContest	SC Senate District 17	SC Senate District 17
+CandidateContest	SC Senate District 17	State Senate, District 17
+CandidateContest	SC Senate District 18	SC Senate District 18
+CandidateContest	SC Senate District 18	State Senate, District 18
+CandidateContest	SC Senate District 19	SC Senate District 19
+CandidateContest	SC Senate District 19	State Senate, District 19
+CandidateContest	SC Senate District 20	SC Senate District 20
+CandidateContest	SC Senate District 20	State Senate, District 20
+CandidateContest	SC Senate District 21	SC Senate District 21
+CandidateContest	SC Senate District 21	State Senate, District 21
+CandidateContest	SC Senate District 22	SC Senate District 22
+CandidateContest	SC Senate District 22	State Senate, District 22
+CandidateContest	SC Senate District 23	SC Senate District 23
+CandidateContest	SC Senate District 23	State Senate, District 23
+CandidateContest	SC Senate District 24	SC Senate District 24
+CandidateContest	SC Senate District 24	State Senate, District 24
+CandidateContest	SC Senate District 25	SC Senate District 25
+CandidateContest	SC Senate District 25	State Senate, District 25
+CandidateContest	SC Senate District 26	SC Senate District 26
+CandidateContest	SC Senate District 26	State Senate, District 26
+CandidateContest	SC Senate District 27	SC Senate District 27
+CandidateContest	SC Senate District 27	State Senate, District 27
+CandidateContest	SC Senate District 28	SC Senate District 28
+CandidateContest	SC Senate District 28	State Senate, District 28
+CandidateContest	SC Senate District 29	SC Senate District 29
+CandidateContest	SC Senate District 29	State Senate, District 29
+CandidateContest	SC Senate District 30	SC Senate District 30
+CandidateContest	SC Senate District 30	State Senate, District 30
+CandidateContest	SC Senate District 31	SC Senate District 31
+CandidateContest	SC Senate District 31	State Senate, District 31
+CandidateContest	SC Senate District 32	SC Senate District 32
+CandidateContest	SC Senate District 32	State Senate, District 32
+CandidateContest	SC Senate District 33	SC Senate District 33
+CandidateContest	SC Senate District 33	State Senate, District 33
+CandidateContest	SC Senate District 34	SC Senate District 34
+CandidateContest	SC Senate District 34	State Senate, District 34
+CandidateContest	SC Senate District 35	SC Senate District 35
+CandidateContest	SC Senate District 35	State Senate, District 35
+CandidateContest	SC Senate District 36	SC Senate District 36
+CandidateContest	SC Senate District 36	State Senate, District 36
+CandidateContest	SC Senate District 37	SC Senate District 37
+CandidateContest	SC Senate District 37	State Senate, District 37
+CandidateContest	SC Senate District 38	SC Senate District 38
+CandidateContest	SC Senate District 38	State Senate, District 38
+CandidateContest	SC Senate District 39	SC Senate District 39
+CandidateContest	SC Senate District 39	State Senate, District 39
+CandidateContest	SC Senate District 40	SC Senate District 40
+CandidateContest	SC Senate District 40	State Senate, District 40
+CandidateContest	SC Senate District 41	SC Senate District 41
+CandidateContest	SC Senate District 41	State Senate, District 41
+CandidateContest	SC Senate District 42	SC Senate District 42
+CandidateContest	SC Senate District 42	State Senate, District 42
+CandidateContest	SC Senate District 43	SC Senate District 43
+CandidateContest	SC Senate District 43	State Senate, District 43
+CandidateContest	SC Senate District 44	SC Senate District 44
+CandidateContest	SC Senate District 44	State Senate, District 44
+CandidateContest	SC Senate District 45	SC Senate District 45
+CandidateContest	SC Senate District 45	State Senate, District 45
+CandidateContest	SC Senate District 46	SC Senate District 46
+CandidateContest	SC Senate District 46	State Senate, District 46
+CandidateContest	US House SC District 1	US House SC District 1
+CandidateContest	US House SC District 1	U.S. House of Representatives, District 1
+CandidateContest	US House SC District 2	US House SC District 2
+CandidateContest	US House SC District 2	U.S. House of Representatives, District 2
+CandidateContest	US House SC District 3	US House SC District 3
+CandidateContest	US House SC District 3	U.S. House of Representatives, District 3
+CandidateContest	US House SC District 4	US House SC District 4
+CandidateContest	US House SC District 4	U.S. House of Representatives, District 4
+CandidateContest	US House SC District 5	US House SC District 5
+CandidateContest	US House SC District 5	U.S. House of Representatives, District 5
+CandidateContest	US House SC District 6	US House SC District 6
+CandidateContest	US House SC District 6	U.S. House of Representatives, District 6
+CandidateContest	US House SC District 7	US House SC District 7
+CandidateContest	US House SC District 7	U.S. House of Representatives, District 7
+CandidateContest	US President (SC)	US President (SC)
+CandidateContest	US President (SC)	President
+CandidateContest	SC Governor	SC Governor
+CandidateContest	SC Governor	Governor and Lieutenant Governor
+CandidateContest	US Senate SC	U.S. Senate
+CandidateContest	SC Attorney General	SC Attorney General
+CandidateContest	SC Attorney General	Attorney General
+CandidateContest	SC Secretary of State	SC Secretary of State
+CandidateContest	SC Secretary of State	Secretary of State
+CandidateContest	SC Lieutenant Governor	SC Lieutenant Governor
+CandidateContest	SC Treasurer	SC Treasurer
+CandidateContest	SC Treasurer	State Treasurer (Vote For 1)
+CandidateContest	SC Adjutant General	SC Adjutant General
+CandidateContest	SC Commissioner of Agriculture	SC Commissioner of Agriculture
+CandidateContest	SC Commissioner of Agriculture	Commissioner of Agriculture
+CandidateContest	SC State Superintendent of Education	SC State Superintendent of Education
+CandidateContest	SC State Superintendent of Education	State Superintendent of Education
+CandidateContest	SC Comptroller General	SC Treasurer
+CandidateContest	SC Comptroller General	Comptroller General
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
+Election	2018 General	2018 General
+Election	2018 Primary	2018 Primary
+Election	2016 General	2016 General
+Election	2016 Primary	2016 Primary
+Party	Democratic Party	Democratic Party
+Party	Democratic Party	DEM
+Party	United Citizens Party	United Citizens Party
+Party	Republican Party	Republican Party
+Party	Republican Party	REP
+Party	Independence Party	Independence Party
+Party	Constitution Party	Constitution Party
+Party	Alliance Party	Alliance Party
+Party	Labor Party	Labor Party
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+Party	Working Families Party	Working Families Party
+ReportingUnit	South Carolina;SC House District 1	South Carolina;SC House District 1
+ReportingUnit	South Carolina;SC House District 2	South Carolina;SC House District 2
+ReportingUnit	South Carolina;SC House District 3	South Carolina;SC House District 3
+ReportingUnit	South Carolina;SC House District 4	South Carolina;SC House District 4
+ReportingUnit	South Carolina;SC House District 5	South Carolina;SC House District 5
+ReportingUnit	South Carolina;SC House District 6	South Carolina;SC House District 6
+ReportingUnit	South Carolina;SC House District 7	South Carolina;SC House District 7
+ReportingUnit	South Carolina;SC House District 8	South Carolina;SC House District 8
+ReportingUnit	South Carolina;SC House District 9	South Carolina;SC House District 9
+ReportingUnit	South Carolina;SC House District 10	South Carolina;SC House District 10
+ReportingUnit	South Carolina;SC House District 11	South Carolina;SC House District 11
+ReportingUnit	South Carolina;SC House District 12	South Carolina;SC House District 12
+ReportingUnit	South Carolina;SC House District 13	South Carolina;SC House District 13
+ReportingUnit	South Carolina;SC House District 14	South Carolina;SC House District 14
+ReportingUnit	South Carolina;SC House District 15	South Carolina;SC House District 15
+ReportingUnit	South Carolina;SC House District 16	South Carolina;SC House District 16
+ReportingUnit	South Carolina;SC House District 17	South Carolina;SC House District 17
+ReportingUnit	South Carolina;SC House District 18	South Carolina;SC House District 18
+ReportingUnit	South Carolina;SC House District 19	South Carolina;SC House District 19
+ReportingUnit	South Carolina;SC House District 20	South Carolina;SC House District 20
+ReportingUnit	South Carolina;SC House District 21	South Carolina;SC House District 21
+ReportingUnit	South Carolina;SC House District 22	South Carolina;SC House District 22
+ReportingUnit	South Carolina;SC House District 23	South Carolina;SC House District 23
+ReportingUnit	South Carolina;SC House District 24	South Carolina;SC House District 24
+ReportingUnit	South Carolina;SC House District 25	South Carolina;SC House District 25
+ReportingUnit	South Carolina;SC House District 26	South Carolina;SC House District 26
+ReportingUnit	South Carolina;SC House District 27	South Carolina;SC House District 27
+ReportingUnit	South Carolina;SC House District 28	South Carolina;SC House District 28
+ReportingUnit	South Carolina;SC House District 29	South Carolina;SC House District 29
+ReportingUnit	South Carolina;SC House District 30	South Carolina;SC House District 30
+ReportingUnit	South Carolina;SC House District 31	South Carolina;SC House District 31
+ReportingUnit	South Carolina;SC House District 32	South Carolina;SC House District 32
+ReportingUnit	South Carolina;SC House District 33	South Carolina;SC House District 33
+ReportingUnit	South Carolina;SC House District 34	South Carolina;SC House District 34
+ReportingUnit	South Carolina;SC House District 35	South Carolina;SC House District 35
+ReportingUnit	South Carolina;SC House District 36	South Carolina;SC House District 36
+ReportingUnit	South Carolina;SC House District 37	South Carolina;SC House District 37
+ReportingUnit	South Carolina;SC House District 38	South Carolina;SC House District 38
+ReportingUnit	South Carolina;SC House District 39	South Carolina;SC House District 39
+ReportingUnit	South Carolina;SC House District 40	South Carolina;SC House District 40
+ReportingUnit	South Carolina;SC House District 41	South Carolina;SC House District 41
+ReportingUnit	South Carolina;SC House District 42	South Carolina;SC House District 42
+ReportingUnit	South Carolina;SC House District 43	South Carolina;SC House District 43
+ReportingUnit	South Carolina;SC House District 44	South Carolina;SC House District 44
+ReportingUnit	South Carolina;SC House District 45	South Carolina;SC House District 45
+ReportingUnit	South Carolina;SC House District 46	South Carolina;SC House District 46
+ReportingUnit	South Carolina;SC House District 47	South Carolina;SC House District 47
+ReportingUnit	South Carolina;SC House District 48	South Carolina;SC House District 48
+ReportingUnit	South Carolina;SC House District 49	South Carolina;SC House District 49
+ReportingUnit	South Carolina;SC House District 50	South Carolina;SC House District 50
+ReportingUnit	South Carolina;SC House District 51	South Carolina;SC House District 51
+ReportingUnit	South Carolina;SC House District 52	South Carolina;SC House District 52
+ReportingUnit	South Carolina;SC House District 53	South Carolina;SC House District 53
+ReportingUnit	South Carolina;SC House District 54	South Carolina;SC House District 54
+ReportingUnit	South Carolina;SC House District 55	South Carolina;SC House District 55
+ReportingUnit	South Carolina;SC House District 56	South Carolina;SC House District 56
+ReportingUnit	South Carolina;SC House District 57	South Carolina;SC House District 57
+ReportingUnit	South Carolina;SC House District 58	South Carolina;SC House District 58
+ReportingUnit	South Carolina;SC House District 59	South Carolina;SC House District 59
+ReportingUnit	South Carolina;SC House District 60	South Carolina;SC House District 60
+ReportingUnit	South Carolina;SC House District 61	South Carolina;SC House District 61
+ReportingUnit	South Carolina;SC House District 62	South Carolina;SC House District 62
+ReportingUnit	South Carolina;SC House District 63	South Carolina;SC House District 63
+ReportingUnit	South Carolina;SC House District 64	South Carolina;SC House District 64
+ReportingUnit	South Carolina;SC House District 65	South Carolina;SC House District 65
+ReportingUnit	South Carolina;SC House District 66	South Carolina;SC House District 66
+ReportingUnit	South Carolina;SC House District 67	South Carolina;SC House District 67
+ReportingUnit	South Carolina;SC House District 68	South Carolina;SC House District 68
+ReportingUnit	South Carolina;SC House District 69	South Carolina;SC House District 69
+ReportingUnit	South Carolina;SC House District 70	South Carolina;SC House District 70
+ReportingUnit	South Carolina;SC House District 71	South Carolina;SC House District 71
+ReportingUnit	South Carolina;SC House District 72	South Carolina;SC House District 72
+ReportingUnit	South Carolina;SC House District 73	South Carolina;SC House District 73
+ReportingUnit	South Carolina;SC House District 74	South Carolina;SC House District 74
+ReportingUnit	South Carolina;SC House District 75	South Carolina;SC House District 75
+ReportingUnit	South Carolina;SC House District 76	South Carolina;SC House District 76
+ReportingUnit	South Carolina;SC House District 77	South Carolina;SC House District 77
+ReportingUnit	South Carolina;SC House District 78	South Carolina;SC House District 78
+ReportingUnit	South Carolina;SC House District 79	South Carolina;SC House District 79
+ReportingUnit	South Carolina;SC House District 80	South Carolina;SC House District 80
+ReportingUnit	South Carolina;SC House District 81	South Carolina;SC House District 81
+ReportingUnit	South Carolina;SC House District 82	South Carolina;SC House District 82
+ReportingUnit	South Carolina;SC House District 83	South Carolina;SC House District 83
+ReportingUnit	South Carolina;SC House District 84	South Carolina;SC House District 84
+ReportingUnit	South Carolina;SC House District 85	South Carolina;SC House District 85
+ReportingUnit	South Carolina;SC House District 86	South Carolina;SC House District 86
+ReportingUnit	South Carolina;SC House District 87	South Carolina;SC House District 87
+ReportingUnit	South Carolina;SC House District 88	South Carolina;SC House District 88
+ReportingUnit	South Carolina;SC House District 89	South Carolina;SC House District 89
+ReportingUnit	South Carolina;SC House District 90	South Carolina;SC House District 90
+ReportingUnit	South Carolina;SC House District 91	South Carolina;SC House District 91
+ReportingUnit	South Carolina;SC House District 92	South Carolina;SC House District 92
+ReportingUnit	South Carolina;SC House District 93	South Carolina;SC House District 93
+ReportingUnit	South Carolina;SC House District 94	South Carolina;SC House District 94
+ReportingUnit	South Carolina;SC House District 95	South Carolina;SC House District 95
+ReportingUnit	South Carolina;SC House District 96	South Carolina;SC House District 96
+ReportingUnit	South Carolina;SC House District 97	South Carolina;SC House District 97
+ReportingUnit	South Carolina;SC House District 98	South Carolina;SC House District 98
+ReportingUnit	South Carolina;SC House District 99	South Carolina;SC House District 99
+ReportingUnit	South Carolina;SC House District 100	South Carolina;SC House District 100
+ReportingUnit	South Carolina;SC House District 101	South Carolina;SC House District 101
+ReportingUnit	South Carolina;SC House District 102	South Carolina;SC House District 102
+ReportingUnit	South Carolina;SC House District 103	South Carolina;SC House District 103
+ReportingUnit	South Carolina;SC House District 104	South Carolina;SC House District 104
+ReportingUnit	South Carolina;SC House District 105	South Carolina;SC House District 105
+ReportingUnit	South Carolina;SC House District 106	South Carolina;SC House District 106
+ReportingUnit	South Carolina;SC House District 107	South Carolina;SC House District 107
+ReportingUnit	South Carolina;SC House District 108	South Carolina;SC House District 108
+ReportingUnit	South Carolina;SC House District 109	South Carolina;SC House District 109
+ReportingUnit	South Carolina;SC House District 110	South Carolina;SC House District 110
+ReportingUnit	South Carolina;SC House District 111	South Carolina;SC House District 111
+ReportingUnit	South Carolina;SC House District 112	South Carolina;SC House District 112
+ReportingUnit	South Carolina;SC House District 113	South Carolina;SC House District 113
+ReportingUnit	South Carolina;SC House District 114	South Carolina;SC House District 114
+ReportingUnit	South Carolina;SC House District 115	South Carolina;SC House District 115
+ReportingUnit	South Carolina;SC House District 116	South Carolina;SC House District 116
+ReportingUnit	South Carolina;SC House District 117	South Carolina;SC House District 117
+ReportingUnit	South Carolina;SC House District 118	South Carolina;SC House District 118
+ReportingUnit	South Carolina;SC House District 119	South Carolina;SC House District 119
+ReportingUnit	South Carolina;SC House District 120	South Carolina;SC House District 120
+ReportingUnit	South Carolina;SC House District 121	South Carolina;SC House District 121
+ReportingUnit	South Carolina;SC House District 122	South Carolina;SC House District 122
+ReportingUnit	South Carolina;SC House District 123	South Carolina;SC House District 123
+ReportingUnit	South Carolina;SC House District 124	South Carolina;SC House District 124
+ReportingUnit	South Carolina;SC Senate District 1	South Carolina;SC Senate District 1
+ReportingUnit	South Carolina;SC Senate District 2	South Carolina;SC Senate District 2
+ReportingUnit	South Carolina;SC Senate District 3	South Carolina;SC Senate District 3
+ReportingUnit	South Carolina;SC Senate District 4	South Carolina;SC Senate District 4
+ReportingUnit	South Carolina;SC Senate District 5	South Carolina;SC Senate District 5
+ReportingUnit	South Carolina;SC Senate District 6	South Carolina;SC Senate District 6
+ReportingUnit	South Carolina;SC Senate District 7	South Carolina;SC Senate District 7
+ReportingUnit	South Carolina;SC Senate District 8	South Carolina;SC Senate District 8
+ReportingUnit	South Carolina;SC Senate District 9	South Carolina;SC Senate District 9
+ReportingUnit	South Carolina;SC Senate District 10	South Carolina;SC Senate District 10
+ReportingUnit	South Carolina;SC Senate District 11	South Carolina;SC Senate District 11
+ReportingUnit	South Carolina;SC Senate District 12	South Carolina;SC Senate District 12
+ReportingUnit	South Carolina;SC Senate District 13	South Carolina;SC Senate District 13
+ReportingUnit	South Carolina;SC Senate District 14	South Carolina;SC Senate District 14
+ReportingUnit	South Carolina;SC Senate District 15	South Carolina;SC Senate District 15
+ReportingUnit	South Carolina;SC Senate District 16	South Carolina;SC Senate District 16
+ReportingUnit	South Carolina;SC Senate District 17	South Carolina;SC Senate District 17
+ReportingUnit	South Carolina;SC Senate District 18	South Carolina;SC Senate District 18
+ReportingUnit	South Carolina;SC Senate District 19	South Carolina;SC Senate District 19
+ReportingUnit	South Carolina;SC Senate District 20	South Carolina;SC Senate District 20
+ReportingUnit	South Carolina;SC Senate District 21	South Carolina;SC Senate District 21
+ReportingUnit	South Carolina;SC Senate District 22	South Carolina;SC Senate District 22
+ReportingUnit	South Carolina;SC Senate District 23	South Carolina;SC Senate District 23
+ReportingUnit	South Carolina;SC Senate District 24	South Carolina;SC Senate District 24
+ReportingUnit	South Carolina;SC Senate District 25	South Carolina;SC Senate District 25
+ReportingUnit	South Carolina;SC Senate District 26	South Carolina;SC Senate District 26
+ReportingUnit	South Carolina;SC Senate District 27	South Carolina;SC Senate District 27
+ReportingUnit	South Carolina;SC Senate District 28	South Carolina;SC Senate District 28
+ReportingUnit	South Carolina;SC Senate District 29	South Carolina;SC Senate District 29
+ReportingUnit	South Carolina;SC Senate District 30	South Carolina;SC Senate District 30
+ReportingUnit	South Carolina;SC Senate District 31	South Carolina;SC Senate District 31
+ReportingUnit	South Carolina;SC Senate District 32	South Carolina;SC Senate District 32
+ReportingUnit	South Carolina;SC Senate District 33	South Carolina;SC Senate District 33
+ReportingUnit	South Carolina;SC Senate District 34	South Carolina;SC Senate District 34
+ReportingUnit	South Carolina;SC Senate District 35	South Carolina;SC Senate District 35
+ReportingUnit	South Carolina;SC Senate District 36	South Carolina;SC Senate District 36
+ReportingUnit	South Carolina;SC Senate District 37	South Carolina;SC Senate District 37
+ReportingUnit	South Carolina;SC Senate District 38	South Carolina;SC Senate District 38
+ReportingUnit	South Carolina;SC Senate District 39	South Carolina;SC Senate District 39
+ReportingUnit	South Carolina;SC Senate District 40	South Carolina;SC Senate District 40
+ReportingUnit	South Carolina;SC Senate District 41	South Carolina;SC Senate District 41
+ReportingUnit	South Carolina;SC Senate District 42	South Carolina;SC Senate District 42
+ReportingUnit	South Carolina;SC Senate District 43	South Carolina;SC Senate District 43
+ReportingUnit	South Carolina;SC Senate District 44	South Carolina;SC Senate District 44
+ReportingUnit	South Carolina;SC Senate District 45	South Carolina;SC Senate District 45
+ReportingUnit	South Carolina;SC Senate District 46	South Carolina;SC Senate District 46
+ReportingUnit	South Carolina;US House SC District 1	South Carolina;US House SC District 1
+ReportingUnit	South Carolina;US House SC District 2	South Carolina;US House SC District 2
+ReportingUnit	South Carolina;US House SC District 3	South Carolina;US House SC District 3
+ReportingUnit	South Carolina;US House SC District 4	South Carolina;US House SC District 4
+ReportingUnit	South Carolina;US House SC District 5	South Carolina;US House SC District 5
+ReportingUnit	South Carolina;US House SC District 6	South Carolina;US House SC District 6
+ReportingUnit	South Carolina;US House SC District 7	South Carolina;US House SC District 7
+ReportingUnit	South Carolina	South Carolina
+ReportingUnit	South Carolina;Abbeville County	Abbeville
+ReportingUnit	South Carolina;Aiken County	Aiken
+ReportingUnit	South Carolina;Allendale County	Allendale
+ReportingUnit	South Carolina;Anderson County	Anderson
+ReportingUnit	South Carolina;Bamberg County	Bamberg
+ReportingUnit	South Carolina;Barnwell County	Barnwell
+ReportingUnit	South Carolina;Beaufort County	Beaufort
+ReportingUnit	South Carolina;Berkeley County	Berkeley
+ReportingUnit	South Carolina;Calhoun County	Calhoun
+ReportingUnit	South Carolina;Charleston County	Charleston
+ReportingUnit	South Carolina;Cherokee County	Cherokee
+ReportingUnit	South Carolina;Chester County	Chester
+ReportingUnit	South Carolina;Chesterfield County	Chesterfield
+ReportingUnit	South Carolina;Clarendon County	Clarendon
+ReportingUnit	South Carolina;Colleton County	Colleton
+ReportingUnit	South Carolina;Darlington County	Darlington
+ReportingUnit	South Carolina;Dillon County	Dillon
+ReportingUnit	South Carolina;Dorchester County	Dorchester
+ReportingUnit	South Carolina;Edgefield County	Edgefield
+ReportingUnit	South Carolina;Fairfield County	Fairfield
+ReportingUnit	South Carolina;Florence County	Florence
+ReportingUnit	South Carolina;Georgetown County	Georgetown
+ReportingUnit	South Carolina;Greenville County	Greenville
+ReportingUnit	South Carolina;Greenwood County	Greenwood
+ReportingUnit	South Carolina;Hampton County	Hampton
+ReportingUnit	South Carolina;Horry County	Horry
+ReportingUnit	South Carolina;Jasper County	Jasper
+ReportingUnit	South Carolina;Kershaw County	Kershaw
+ReportingUnit	South Carolina;Lancaster County	Lancaster
+ReportingUnit	South Carolina;Laurens County	Laurens
+ReportingUnit	South Carolina;Lee County	Lee
+ReportingUnit	South Carolina;Lexington County	Lexington
+ReportingUnit	South Carolina;Marion County	Marion
+ReportingUnit	South Carolina;Marlboro County	Marlboro
+ReportingUnit	South Carolina;McCormick County	McCormick
+ReportingUnit	South Carolina;Newberry County	Newberry
+ReportingUnit	South Carolina;Oconee County	Oconee
+ReportingUnit	South Carolina;Orangeburg County	Orangeburg
+ReportingUnit	South Carolina;Pickens County	Pickens
+ReportingUnit	South Carolina;Richland County	Richland
+ReportingUnit	South Carolina;Saluda County	Saluda
+ReportingUnit	South Carolina;Spartanburg County	Spartanburg
+ReportingUnit	South Carolina;Sumter County	Sumter
+ReportingUnit	South Carolina;Union County	Union
+ReportingUnit	South Carolina;Williamsburg County	Williamsburg
+ReportingUnit	South Carolina;York County	York
+CountItemType	election-day	Election Day
+CountItemType	total	Choice Total
+CountItemType	absentee-in-person	In-Person Absentee
+CountItemType	absentee-mail	Absentee By Mail
+CountItemType	failsafe	Failsafe
+CountItemType	provisional	Provisional
+CountItemType	failsafe-provisional	Failsafe Provisional
+BallotMeasureSelection	Yes	Yes
+BallotMeasureSelection	No	No
+Candidate	Duke Buckner	Duke Buckner
+Candidate	Lindsey Graham	Lindsey Graham
+Candidate	Michael LaPierre	Michael LaPierre
+Candidate	Joe Reynolds	Joe Reynolds
+Candidate	Chris Cox	Chris Cox
+Candidate	Kathy Landing	Kathy Landing
+Candidate	Nancy Mace	Nancy Mace
+Candidate	Brad Mole	Brad Mole
+Candidate	Michael Bishop	Michael Bishop
+Candidate	Joe Wilson	Joe Wilson
+Candidate	Hosea Cleveland	Hosea Cleveland
+Candidate	Mark D Welch	Mark D Welch
+Candidate	Moe Brown	Moe Brown
+Candidate	Sidney A Moore	Sidney A Moore
+Candidate	Melissa Ward Watson	Melissa Ward Watson
+Candidate	Robert Williams	Robert Williams
+Candidate	William H Cowboy Williams	William H Cowboy Williams
+Candidate	Richard Cash	Richard Cash
+Candidate	Craig Wooten	Craig Wooten
+Candidate	Tom Corbin	Tom Corbin
+Candidate	Dave Edwards	Dave Edwards
+Candidate	Karl B Allen	Karl B Allen
+Candidate	Fletcher Smith	Fletcher Smith
+Candidate	Janice S Curtis	Janice S Curtis
+Candidate	Ross Turner	Ross Turner
+Candidate	Billy Garrett	Billy Garrett
+Candidate	Bryan Hope	Bryan Hope
+Candidate	Mark Lynch	Mark Lynch
+Candidate	Scott Talley	Scott Talley
+Candidate	Kristen Blanchard	Kristen Blanchard
+Candidate	Michael Johnson	Michael Johnson
+Candidate	Mike Neese	Mike Neese
+Candidate	Tom Nichols	Tom Nichols
+Candidate	MaryGail Douglas	MaryGail Douglas
+Candidate	Mike Fanning	Mike Fanning
+Candidate	Charles Bumgardner	Charles Bumgardner
+Candidate	Ronnie Cromer	Ronnie Cromer
+Candidate	Randy Dickey	Randy Dickey
+Candidate	Benjamin Dunn	Benjamin Dunn
+Candidate	Lee Blatt	Lee Blatt
+Candidate	David Larsen	David Larsen
+Candidate	Shane Massey	Shane Massey
+Candidate	Susan J Swanson	Susan J Swanson
+Candidate	Perry Finch	Perry Finch
+Candidate	Chris Smith	Chris Smith
+Candidate	J D Chaplin	J D Chaplin
+Candidate	Ronald Reese Page	Ronald Reese Page
+Candidate	Patrick Richardson	Patrick Richardson
+Candidate	Kent M Williams	Kent M Williams
+Candidate	Ted Brown	Ted Brown
+Candidate	Manley Marvell Collins	Manley Marvell Collins
+Candidate	Ronnie A Sabb	Ronnie A Sabb
+Candidate	Kelly Spann	Kelly Spann
+Candidate	John Gallman	John Gallman
+Candidate	Luke A Rankin	Luke A Rankin
+Candidate	Carter Smith	Carter Smith
+Candidate	Eleazer Leazer Carter	Eleazer Leazer Carter
+Candidate	Kevin L Johnson	Kevin L Johnson
+Candidate	Cindy Evans	Cindy Evans
+Candidate	William R Johnson	William R Johnson
+Candidate	Jerry Montgomery	Jerry Montgomery
+Candidate	Vernon Stephens	Vernon Stephens
+Candidate	Michael Addison	Michael Addison
+Candidate	Brad Hutto	Brad Hutto
+Candidate	Jason Mills	Jason Mills
+Candidate	Sam Skardon	Sam Skardon
+Candidate	Debbie Chatman Bryant	Debbie Chatman Bryant
+Candidate	Kris DeLorme	Kris DeLorme
+Candidate	Brian Adams	Brian Adams
+Candidate	Gayla McSwain	Gayla McSwain
+Candidate	Phillip Bowers	Phillip Bowers
+Candidate	Jerry Carter	Jerry Carter
+Candidate	William Masters	William Masters
+Candidate	Neal Collins	Neal Collins
+Candidate	David Cox	David Cox
+Candidate	Allan Quinn	Allan Quinn
+Candidate	Jonathon Hill	Jonathon Hill
+Candidate	Vaughn D Parfitt	Vaughn D Parfitt
+Candidate	West Cox	West Cox
+Candidate	Mark Durham	Mark Durham
+Candidate	Sam Manley	Sam Manley
+Candidate	Tommy Stringer	Tommy Stringer
+Candidate	Adriene Atkinson	Adriene Atkinson
+Candidate	Leola Simpson	Leola Simpson
+Candidate	Bruce Wilson	Bruce Wilson
+Candidate	Travis Moore	Travis Moore
+Candidate	Jarred Spencer	Jarred Spencer
+Candidate	Chris Bennett	Chris Bennett
+Candidate	Bill Chumley	Bill Chumley
+Candidate	Garey Collins	Garey Collins
+Candidate	Charlene Herring	Charlene Herring
+Candidate	Annie E McDaniel	Annie E McDaniel
+Candidate	Melinda Inman Butler	Melinda Inman Butler
+Candidate	Doug Gilliam	Doug Gilliam
+Candidate	Lucas Atkinson	Lucas Atkinson
+Candidate	Miko Pickett	Miko Pickett
+Candidate	Teresa McGill Cain	Teresa McGill Cain
+Candidate	Lasha McClain	Lasha McClain
+Candidate	Jack Furse	Jack Furse
+Candidate	Kimberly O Johnson	Kimberly O Johnson
+Candidate	Robert A McFadden Sr	Robert A McFadden Sr
+Candidate	Hal Cercopely	Hal Cercopely
+Candidate	Cindy Risher	Cindy Risher
+Candidate	Heather Ammons Crawford	Heather Ammons Crawford
+Candidate	Mark W Epps	Mark W Epps
+Candidate	Rhodes Bailey	Rhodes Bailey
+Candidate	Heather Bauer	Heather Bauer
+Candidate	Jimmy Bales	Jimmy Bales
+Candidate	Jermaine Johnson	Jermaine Johnson
+Candidate	Bart T Blackwell	Bart T Blackwell
+Candidate	Brian Duncan	Brian Duncan
+Candidate	John Lastinger	John Lastinger
+Candidate	RJ May	RJ May
+Candidate	Eddie McCain	Eddie McCain
+Candidate	Mike Sturkie	Mike Sturkie
+Candidate	Justin Bamberg	Justin Bamberg
+Candidate	Evert Comer Jr	Evert Comer Jr
+Candidate	Patricia Cannon	Patricia Cannon
+Candidate	Damian Daly	Damian Daly
+Candidate	Gil Gatch	Gil Gatch
+Candidate	Evan Guthrie	Evan Guthrie
+Candidate	Jerry Govan	Jerry Govan
+Candidate	Kevin Ray	Kevin Ray
+Candidate	D Ryan McCabe	D Ryan McCabe
+Candidate	Kit Spires	Kit Spires
+Candidate	Jen Gibson	Jen Gibson
+Candidate	Donna Brown Newton	Donna Brown Newton
+Candidate	David Herndon	David Herndon
+Candidate	Shawn Pinkston	Shawn Pinkston
+Candidate	Mark Smith	Mark Smith
+Candidate	Chris Staubes	Chris Staubes
+Candidate	Sylleste Davis	Sylleste Davis
+Candidate	Tom Fernandez	Tom Fernandez
+Candidate	Kevin Hardee	Kevin Hardee
+Candidate	Steve Robertson	Steve Robertson
+Candidate	Case Brittain	Case Brittain
+Candidate	Alan Clemmons	Alan Clemmons
+Candidate	James Johnson	James Johnson
+Candidate	Deon Tedder	Deon Tedder
+Candidate	Jeff Wilder	Jeff Wilder
+Candidate	William Cogswell	William Cogswell
+Candidate	Rouzy Vafaie	Rouzy Vafaie
+Candidate	Regina Duggins	Regina Duggins
+Candidate	Wendell G Gilliard	Wendell G Gilliard
+Candidate	Daniel Brownstein	Daniel Brownstein
+Candidate	David Quick	David Quick
+Candidate	Ryan Buckhannon	Ryan Buckhannon
+Candidate	Joe Bustos	Joe Bustos
+Candidate	Raneisha J Holmes	Raneisha J Holmes
+Candidate	Marvin R Pendarvis	Marvin R Pendarvis
+Candidate	Eileen Dougherty	Eileen Dougherty
+Candidate	Carol Tempel	Carol Tempel
+Candidate	Spencer Wetmore	Spencer Wetmore
+Candidate	Josh Stokes	Josh Stokes
+Candidate	Kathleen G Wilson	Kathleen G Wilson
+Candidate	Charles A Glover Sr	Charles A Glover Sr
+Candidate	Millicent Traeye Middleton	Millicent Traeye Middleton
+Candidate	Chardale Murray	Chardale Murray
+Candidate	John R Prioleau Sr	John R Prioleau Sr
+Candidate	Bill Crosby	Bill Crosby
+Candidate	Jordan Pace	Jordan Pace
+Candidate	Michael E Covert	Michael E Covert
+Candidate	Bill Herbkersman	Bill Herbkersman
+Candidate	Jeff Bradley	Jeff Bradley
+Candidate	Phil W Hartman	Phil W Hartman
+Candidate	R Jackson Cooper	R Jackson Cooper
+Candidate	Bill Weeks	Bill Weeks
+Candidate	Yes	Yes
+Candidate	No	No
+Candidate	Michael Bennet - WITHDREW	Michael Bennet - WITHDREW
+Candidate	Joseph R Biden	Joseph R Biden
+Candidate	Cory Booker - WITHDREW	Cory Booker - WITHDREW
+Candidate	Pete Buttigieg	Pete Buttigieg
+Candidate	John K Delaney - WITHDREW	John K Delaney - WITHDREW
+Candidate	Tulsi Gabbard	Tulsi Gabbard
+Candidate	Amy Klobuchar	Amy Klobuchar
+Candidate	Deval Patrick - WITHDREW	Deval Patrick - WITHDREW
+Candidate	Bernie Sanders	Bernie Sanders
+Candidate	Tom Steyer	Tom Steyer
+Candidate	Elizabeth Warren	Elizabeth Warren
+Candidate	Andrew Yang - WITHDREW	Andrew Yang - WITHDREW
