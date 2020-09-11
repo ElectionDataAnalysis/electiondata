@@ -35,13 +35,6 @@ def aggregate_results(election, jurisdiction, contest_type, by_vote_type):
     return df
 
 
-def check_totals(election, jurisdiction):
-    df_candidate = aggregate_results(election, jurisdiction, "Candidate", False)
-    df_ballot = aggregate_results(election, jurisdiction, "BallotMeasure", False)
-    df = pd.concat([df_candidate, df_ballot])
-    return df["count"].sum()
-
-
 def check_totals_match_vote_types(election, jurisdiction):
     df_candidate = aggregate_results(election, jurisdiction, "Candidate", False)
     df_ballot = aggregate_results(election, jurisdiction, "BallotMeasure", False)
@@ -53,6 +46,7 @@ def check_totals_match_vote_types(election, jurisdiction):
     return df_by_ttl["count"].sum() == df_by_type["count"].sum()
 
 
+# A couple random contests
 def check_contest_totals(election, jurisdiction, contest):
     df_candidate = aggregate_results(election, jurisdiction, "Candidate", False)
     df_ballot = aggregate_results(election, jurisdiction, "BallotMeasure", False)
@@ -61,26 +55,54 @@ def check_contest_totals(election, jurisdiction, contest):
     return df["count"].sum()
 
 
-def check_count_type_totals(election, jurisdiction, count_item_type):
+def check_count_type_totals(election, jurisdiction, contest, count_item_type):
     df_candidate = aggregate_results(election, jurisdiction, "Candidate", False)
     df_ballot = aggregate_results(election, jurisdiction, "BallotMeasure", False)
     df = pd.concat([df_candidate, df_ballot])
+    df = df[df["contest"] == contest]
     df = df[df["count_item_type"] == count_item_type]
     return df["count"].sum()
 
 
-""" North Carolina Data Loading Tests """
+# #### Tests start below #### #
+# For each state, run at least 6 tests:
+# 1. Presidential
+# 2. One statewide chosen at random
+# 3. One senate
+# 4. One rep
+# 5. If vote type is available, slice one of the above by vote type
+# 6. If vote type is avaiable, check that totals match vote type sums
 
 
-def test_nc_totals():
-    assert check_totals("2018 General", "North Carolina") == 14756973
+### North Carolina Data Loading Tests ###
+def test_nc_presidential():
+    # No presidential contests in 2018
+    assert True == True
 
 
-def test_nc_totals_match_vote_type():
-    assert check_totals_match_vote_types("2018 General", "North Carolina") == True
+def test_nc_statewide_totals():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "North Carolina",
+            "North Carolina;US Congress House of Representatives District 3",
+        )
+        == 187901
+    )
 
 
-def test_nc_contest_totals():
+def test_nc_senate_totals():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "North Carolina",
+            "North Carolina;General Assembly Senate District 15",
+        )
+        == 83175
+    )
+
+
+def test_nc_house_totals():
     assert (
         check_contest_totals(
             "2018 General",
@@ -91,12 +113,17 @@ def test_nc_contest_totals():
     )
 
 
-def test_nc_count_type_totals():
+def test_nc_contest_by_vote_type():
     assert (
-        check_count_type_totals("2018 General", "North Carolina", "absentee-mail")
-        == 380688
+        check_count_type_totals(
+            "2018 General",
+            "North Carolina",
+            "North Carolina;US Congress House of Representatives District 4",
+            "absentee-mail",
+        )
+        == 10778
     )
 
 
-def test_nc_totals_fail():
-    assert check_totals("2018 General", "North Carolina") == 1
+def test_nc_totals_match_vote_type():
+    assert check_totals_match_vote_types("2018 General", "North Carolina") == True
