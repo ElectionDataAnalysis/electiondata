@@ -315,16 +315,11 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
         aux_data_dir = None
 
     # check munger files and (if no error) create munger
-    mu_err = jm.check_munger_files(my_munger_path)
+    mu, mu_err = jm.check_and_init_munger(my_munger_path)
     if fatal_error(mu_err):
         error = consolidate_errors([error,mu_err])
         wr = pd.DataFrame()
-        mu = None
     else:
-        mu = jm.Munger(
-            my_munger_path,
-            aux_data_dir=aux_data_dir,
-        )
         wr, error = read_combine_results(
             mu,
             params["results_file"],
@@ -344,6 +339,7 @@ def pick_juris_from_filesystem(juris_path, project_root, err, check_files=False)
 
     # initialize the jurisdiction
     if missing_values:
+# TODO check this error
         err = add_new_error(
             err,
             "jurisdiction",
@@ -386,6 +382,7 @@ def read_single_datafile(
         elif munger.file_type in ["xls", "xlsx"]:
             df = pd.read_excel(f_path, **kwargs)
         else:
+# TODO check this error
             err = add_new_error(
                 err,
                 "munger",
@@ -394,6 +391,7 @@ def read_single_datafile(
             )
             df = pd.DataFrame()
         if df.empty:
+# TODO check this error
             err = add_new_error(
                 err,
                 "munger",
@@ -412,6 +410,7 @@ def read_single_datafile(
         # DFs have trouble comparing against None. So we return an empty DF and
         # check for emptiness below as an indication of an error.
         e = f"Error parsing results file.\n{pe}"
+# TODO check this error
     err = add_new_error(
         err,
         "file",
@@ -440,6 +439,7 @@ def read_combine_results(
         try:
             working, new_err = read_single_datafile(mu, results_file, None)
         except Exception as exc:
+# TODO check this error
             err = add_new_error(
                 err,
                 "file",
@@ -521,6 +521,7 @@ def new_datafile(
         munger, raw_path, err, aux_data_dir=aux_data_dir
     )
     if raw.empty:
+# TODO check this error
         err = add_new_error(
             err,
             "file",
@@ -551,6 +552,7 @@ def new_datafile(
             ids=results_info,
         )
     except Exception as exc:
+# TODO check this error
         err = add_new_error(
             err,
             "system",
@@ -580,6 +582,7 @@ def get_runtime_parameters(
     parser = ConfigParser()
     p = parser.read(param_file)
     if len(p) == 0:
+# TODO check this error
         err = add_new_error(
             err,
             "file",
@@ -592,6 +595,7 @@ def get_runtime_parameters(
     try:
         h = parser[header]
     except KeyError as ke:
+# TODO check this error
         err = add_new_error(
             err,
             "ini",
@@ -609,6 +613,7 @@ def get_runtime_parameters(
             missing_required_params.append(k)
     if missing_required_params:
         mrp = ",".join(missing_required_params)
+# TODO check this error
         err = add_new_error(
             err,
             "ini",
@@ -682,21 +687,22 @@ def report(
             else:
                 ext = "warnings"
             for nk in err_warn[et].keys():
+                nk_name = Path(nk).name
                 if et in loc_dict.keys():
                     # write info to a .errors or .errors file named for the name_key <nk>
-                    nk_name = Path(nk).name
                     out_path = os.path.join(loc_dict[et], f"{nk_name}.{ext}")
                     with open(out_path,"a") as f:
-                        f.write(f"{et} errors\n" + msg[(et,nk)] + "\n\n")
-                    print(f"{et} {ext} written to {out_path}")
+                        f.write(f"{et} errors ({nk_name}):\n" + msg[(et,nk)] + "\n\n")
+                    print(f"\n{et} {ext} written to {out_path}")
                 else:
                     # print for user
-                    print(f"{et} {ext}:\n" + msg[(et,nk)] + "\n\n")
+                    print(f"\n{et} {ext} ({nk_name}):\n" + msg[(et,nk)] + "\n\n")
     else:
         print("No errors or warnings")
     return
 
 
+# TODO check this error
 def add_new_error(
         err: Optional[Dict[Any, dict]],
         err_type: str,
@@ -710,9 +716,11 @@ def add_new_error(
         err = {k:{} for k in warning_keys.union(error_keys)}
             # TODO document. Problems with results file are reported with "ini" key
     if err_type not in err.keys():
+# TODO check this error
         err = add_new_error(
             err,
             "system",
+# TODO check this error
             "user_interface.add_new_error",
             f"{err_type}: {msg}")
         return err

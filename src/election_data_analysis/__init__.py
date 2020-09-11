@@ -79,11 +79,16 @@ class DataLoader:
 
         # connect to db
         try:
-            self.engine = db.sql_alchemy_connect()
+            self.engine, err = db.sql_alchemy_connect()
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
         except Exception as e:
             print("Cannot connect to database. Exiting.")
+            quit()
+        if err:
+            print("Unexpected error connecting to database.")
+            ui.report(err)
+            print("Exiting")
             quit()
 
     def load_all(self, load_jurisdictions: bool = True) -> dict:
@@ -102,6 +107,7 @@ class DataLoader:
         if new_err:
             err = ui.consolidate_errors([err,new_err])
         if ui.fatal_error(new_err):
+# TODO check this error
             err = ui.add_new_error(
                 err,
                 "system",
@@ -120,7 +126,7 @@ class DataLoader:
                 err,
                 "file",
                 self.d['results_dir'],
-                f"No .ini files found. No files will be processed.",
+                f"No <results>.ini files found in directory. No results files will be processed.",
             )
             ui.report(err)
             return err
@@ -169,8 +175,6 @@ class DataLoader:
                     print(f"Loading jurisdiction from {jp} to {self.session.bind}")
                     new_err = juris[jp].load_juris_to_db(
                         self.session,
-                        project_root,
-                        err=None,
                     )
                     if new_err:
                         err = ui.consolidate_errors([err, new_err])
@@ -258,7 +262,7 @@ class SingleDataLoader:
         # TODO document
         self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
         for mu in self.munger_list:
-            self.munger[mu], m_err[mu] = jm.Munger(munger_path)
+            self.munger[mu], self.munger_err[mu] = jm.check_and_init_munger(os.path.join(munger_path, mu))
 
         # if no munger throws an error:
         if all([x is None for x in self.munger_err.values()]):
@@ -316,6 +320,7 @@ class SingleDataLoader:
         print(f'Processing {self.d["results_file"]}')
         results_info, e = self.track_results()
         if e:
+# TODO check this error
             err = ui.add_new_error(
                 err,
                 "system",
@@ -429,6 +434,7 @@ class JurisdictionPrepper:
         #  used as placeholder for raw_identifier_value
         e = self.starter_dictionary()
         if e:
+# TODO check this error
             error = ui.add_new_error(
                 error,
                 "jurisdiction",
@@ -647,6 +653,7 @@ class JurisdictionPrepper:
             self.d, results_file, munger_name
         )
         if missing:
+# TODO check this error
             error = ui.add_new_error(
                 error,
                 "ini",
@@ -659,6 +666,7 @@ class JurisdictionPrepper:
         wr, munger, error = ui.read_results(kwargs, error)
 
         if wr.empty:
+# TODO check this error
             error = ui.add_new_error(
                 error,
                 "file",
@@ -677,6 +685,7 @@ class JurisdictionPrepper:
         # get rid of all-blank rows
         wr = wr[(wr != "").any(axis=1)]
         if wr.empty:
+# TODO check this error
             ui.add_new_error(
                 error,
                 "ini",
@@ -690,6 +699,7 @@ class JurisdictionPrepper:
         try:
             [county_formula, sub_ru_formula] = ru_formula.split(";")
         except ValueError:
+# TODO check this error
             ui.add_new_error(
                 error,
                 "munger",
@@ -809,6 +819,7 @@ class JurisdictionPrepper:
             self.d, results_file_path, munger_name
         )
         if missing:
+# TODO check this error
             error = ui.add_new_error(
                 error,
                 "ini"
@@ -817,6 +828,7 @@ class JurisdictionPrepper:
             )
             return error
         elif ("results_file" in kwargs.keys()) and not (os.path.isfile(kwargs["results_file"])):
+# TODO check this error
             error = ui.add_new_error(
                 error,
                 "ini",
@@ -870,6 +882,7 @@ class JurisdictionPrepper:
             prep.write_element(self.d["jurisdiction_path"], element, we)
             # if <element>.txt has columns other than <name_field>, notify user
             if we.shape[1] > 1 and not new_internal_df.empty:
+# TODO check this error
                 error = ui.add_new_error(
                     error,
                     "jurisdiction-warn",

@@ -146,6 +146,7 @@ def add_column_from_formula(
                 working.loc[:, f].apply(lambda x: f"{t}{x}") + working.loc[:, new_col]
             )
         except KeyError:
+# TODO check this error
             err = ui.add_new_error(
                 err,
                 "munger",
@@ -253,6 +254,7 @@ def replace_raw_with_internal_ids(
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
         unmatched_str = "\n".join(unmatched_raw)
         e = f"{element}s not found in dictionary.txt:\n{unmatched_str}"
+# TODO check this error
         error = ui.add_new_error(
             error,
             "jurisdiction_warn",
@@ -266,6 +268,7 @@ def replace_raw_with_internal_ids(
     if working.empty:
         e = f"No raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file"
         if drop_unmatched and not drop_all_ok:
+# TODO check this error
             error = ui.add_new_error(
                 error,
                 "jurisdiction",
@@ -273,6 +276,7 @@ def replace_raw_with_internal_ids(
                 e
             )
         else:
+# TODO check this error
             error = ui.add_new_error(
                 error,
                 "jurisdiction-warn",
@@ -335,6 +339,7 @@ def replace_raw_with_internal_ids(
             f"will not be loaded to database. These records (raw name, internal name) were found in dictionary.txt, but "
             f"no corresponding record was found in {element}.txt: \n{unmatched_str}"
         )
+# TODO check this error
         error = ui.add_new_error(
             error,
             "jurisdiction-warn",
@@ -344,6 +349,7 @@ def replace_raw_with_internal_ids(
 
     if drop_unmatched:
         if working_unmatched.shape[0] == working.shape[0]:
+# TODO check this error
             error = ui.add_new_error(
                 error,
                 "jurisdiction",
@@ -661,6 +667,7 @@ def raw_elements_to_cdf(
     try:
         working, err = munge_and_melt(mu, working, count_cols, err)
     except Exception as exc:
+# TODO check this error
         err = ui.add_new_error(
             err,
             "system",
@@ -671,6 +678,7 @@ def raw_elements_to_cdf(
     try:
         working, err = add_contest_id(working, juris, err, session)
     except Exception as exc:
+# TODO check this error
         err = ui.add_new_error(
             err,
             "system",
@@ -679,6 +687,7 @@ def raw_elements_to_cdf(
         )
         return err
     if working.empty:
+# TODO check this error
         err = ui.add_new_error(
             err,
             "jurisdiction",
@@ -737,6 +746,7 @@ def raw_elements_to_cdf(
                 )
                 working.drop(t, axis=1, inplace=True)
         except Exception as exc:
+# TODO check this error
             err = ui.add_new_error(
                 err,
                 "system",
@@ -749,6 +759,7 @@ def raw_elements_to_cdf(
     try:
         working, err = add_selection_id(working, session.bind, juris, err)
     except Exception as exc:
+# TODO check this error
         err = ui.add_new_error(
             err,
             "system",
@@ -757,6 +768,7 @@ def raw_elements_to_cdf(
         )
         return err
     if working.empty:
+# TODO check this error
         err = ui.add_new_error(
             err,
             "jurisdiction",
@@ -770,6 +782,7 @@ def raw_elements_to_cdf(
     try:
         e = db.insert_to_cdf_db(session.bind, working, "VoteCount")
         if e:
+# TODO check this error
             err = ui.add_new_error(
                 err,
                 "system",
@@ -778,6 +791,7 @@ def raw_elements_to_cdf(
             )
         session.commit()
     except Exception as exc:
+# TODO check this error
         err = ui.add_new_error(err,
                                "system",
                                "munge.raw_elements_to_cdf",

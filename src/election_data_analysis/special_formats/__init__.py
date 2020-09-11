@@ -55,6 +55,7 @@ def read_concatenated_blocks(
         with open(f_path, "r") as f:
             data = f.readlines()
     except Exception as exc:
+# TODO check this error
         err = ui.add_new_error(
             err,
             "file",
@@ -96,6 +97,7 @@ def read_concatenated_blocks(
                 e = f"Count of last header (per munger) ({v_t_cc}) " \
                     f"does not evenly divide the number of count columns in the results file " \
                     f"({len(last_header)})"
+# TODO check this error
                 ui.add_new_error(err,
                                  "munger",
                                  munger.name,
@@ -148,6 +150,7 @@ def read_concatenated_blocks(
             # remove processed lines from data
             data = data[next_empty:]
     except Exception as exc:
+# TODO check this error
         err = ui.add_new_error(
             err,
             "munger-warn",
@@ -159,6 +162,7 @@ def read_concatenated_blocks(
     try:
         raw_results = pd.concat(list(df.values()))
     except ValueError as e:
+# TODO check this error
         err = ui.add_new_error(
             err,
             "munger",
