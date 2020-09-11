@@ -72,9 +72,6 @@ class DataLoader:
             header="election_data_analysis",
         )
 
-        # prepare to track files loaded, dictionary status, keys are parameter file paths
-        self.tracker = dict()
-
         # create db if it does not already exist
         error = db.establish_connection()
         if error:
@@ -96,6 +93,24 @@ class DataLoader:
         project_root = Path(__file__).absolute().parents[1]
         mungers_path = os.path.join(project_root, "mungers")
 
+        # define directory for archiving successfully loaded files (and storing warnings)
+        db_param, new_err = ui.get_runtime_parameters(
+            required_keys=["dbname"],
+            param_file="run_time.ini",
+            header="postgresql"
+        )
+        if new_err:
+            err = ui.consolidate_errors([err,new_err])
+        if ui.fatal_error(new_err):
+            err = ui.add_new_error(
+                err,
+                "system",
+                "DataLoader.load_all",
+                "Unexpected error while getting db name from run_time_ini"
+            )
+        success_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
+
+
         # list .ini files and pull their jurisdiction_paths
         par_files = [f for f in os.listdir(self.d["results_dir"]) if f[-4:] == ".ini"]
 
@@ -107,6 +122,7 @@ class DataLoader:
                 self.d['results_dir'],
                 f"No .ini files found. No files will be processed.",
             )
+            ui.report(err)
             return err
 
         params = dict()
@@ -125,12 +141,9 @@ class DataLoader:
             )
             if new_err:
                 err = ui.consolidate_errors([err, new_err])
-                self.tracker[f] = '99-loading failed'
             else:
                 good_par_files.append(f)
                 juris_path[f] = params[f]["jurisdiction_path"]
-                # update file_tracker
-                self.tracker[f] = "1-parameters read"
 
         # group .ini files by jurisdiction_path
         jurisdiction_paths = {juris_path[f] for f in good_par_files}
@@ -173,125 +186,50 @@ class DataLoader:
             good_files = [f for f in good_par_files if juris_path[f] == jp]
             print(f"Processing results files {good_files}")
             for f in good_files:
-                sdl, new_err = SingleDataLoader(
+                sdl, new_err = check_and_init_singledataloader(
                     self.d["results_dir"],
                     f,
-                    self.d["project_root"],
                     self.session,
                     mungers_path,
                     juris[jp],
                 )
                 if new_err or sdl.munger_err:
                     err = ui.consolidate_errors([err,new_err,sdl.munger_err])
-                    self.tracker[f]["status"] = "loading not initialized"
-                else:
-                    self.tracker[f]["status"] = "loading initialized"
+
+                # if no fatal error, continue
+                if (not ui.fatal_error(new_err)) and (not ui.fatal_error(sdl.munger_err)):
                     # try to load data
                     load_error = sdl.load_results()
-                    true_error = self.move_loaded_results_file(sdl, f, load_error)
+                    if load_error:
+                        ui.consolidate_errors([err, load_error])
 
-                    # if there is a genuine error (not just a warning), add it to err
-                    if true_error:
-                        err[f] = true_error
-                        self.tracker[f]["load_error"] = true_error
-                    else:
-                        self.tracker[f]["status"] = "loaded"
+                    # if no fatal error, archive files
+                    if not ui.fatal_error(load_error):
+                        ui.archive(f,self.d["results_dir"],success_dir)
+                        ui.archive(sdl.d["results_file"], self.d["results_dir"], success_dir)
+                        print(f"\tArchived {f} and its results file after successful load.")
+
+        # report errors
+        loc_dict = {
+            "munger": self.d["results_dir"],
+            "jurisdiction": self.d["results_dir"],
+            "warn-munger": success_dir,
+            "warn-jurisdiction": success_dir,
+        }
+        ui.report(err, loc_dict)
         return err
-
-    def move_loaded_results_file(self, sdl, f: str, load_error: dict) -> dict:
-        warnings = list()
-        errors = list()
-        true_error = dict()
-        for mu in load_error.keys():
-            if load_error[mu]:
-                warn_err_keys = [k for k in load_error[mu].keys()].copy()
-            else:
-                warn_err_keys = []
-            for k in warn_err_keys:
-                msg = load_error[mu].pop(k)
-                if "warning" in k or "Warning" in k:
-                    print(f"Warning ({mu}): {msg}")
-                    warnings.append(msg)
-                elif "error" in k:
-                    print(f"Error ({mu}): {msg}")
-                    errors.append(msg)
-                    true_error[mu] = msg
-        if errors:
-            self.tracker[f]["status"] = "loading failed"
-            err_str = "\n\t".join(errors)
-            if warnings:
-                ws = "\n\t".join(warnings)
-                warn_str = f"\nWarnings:\n{ws}"
-            else:
-                warn_str = None
-            # save errors in current directory
-            warn_file = os.path.join(self.d["results_dir"], f"{f[:-4]}.errors")
-            with open(warn_file, "w") as wf:
-                wf.write(f"Errors:\n\t{err_str}\n\nWarnings:\n\t{warn_str}")
-            print(
-                f"Fatal errors found. Results not loaded; file not moved. See {f[:-4]}.errors"
-            )
-
-        else:
-            # move results file and its parameter file to a subfolder of the archive directory
-            #  named for the db
-            db_param = ui.get_runtime_parameters(
-                required_keys=["dbname"],
-                param_file="run_time.ini",
-                header="postgresql"
-            )[0]
-            self.tracker[f]["status"] = "loaded"
-            new_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
-            ui.archive(f, self.d["results_dir"], new_dir)
-            ui.archive(sdl.d["results_file"], self.d["results_dir"], new_dir)
-            print_str = f"\tArchived {f} and its results file."
-            if warnings:
-                # save warnings in archive directory
-                warn_file = os.path.join(new_dir, f"{f[:-4]}.warn")
-                with open(warn_file, "w") as wf:
-                    wf.write("\n".join(warnings))
-                print_str += f" See warnings in {f[:-4]}.warn"
-            print(print_str)
-        return true_error
 
 
 class SingleDataLoader:
-    def __new__(
-            self,
-            results_dir: str,
-            par_file_name: str,
-            project_root: str,
-            session,
-            munger_path: str,
-            juris: jm.Jurisdiction
-        ):
-
-        # test parameters
-        par_file = os.path.join(results_dir, par_file_name)
-        d, err = ui.get_runtime_parameters(
-            required_keys=single_data_loader_pars,
-            optional_keys=["aux_data_dir"],
-            param_file=par_file,
-            header="election_data_analysis",
-        )
-        if err:
-            sdl = None
-        else:
-            sdl = super().__new__(self)
-
-        return sdl, err
-
     def __init__(
             self,
             results_dir: str,
             par_file_name: str,
-            project_root: str,
             session,
             munger_path: str,
             juris: jm.Jurisdiction
     ):
         # adopt passed variables needed in future as attributes
-        self.project_root = project_root
         self.session = session
         self.results_dir = results_dir
         self.juris = juris
@@ -402,6 +340,34 @@ class SingleDataLoader:
         if err == dict():
             err = None
         return err
+
+
+def check_and_init_singledataloader(
+        results_dir: str,
+        par_file_name: str,
+        session,
+        munger_path: str,
+        juris: jm.Jurisdiction
+) -> (SingleDataLoader, dict):
+    # test parameters
+    par_file = os.path.join(results_dir, par_file_name)
+    d, err = ui.get_runtime_parameters(
+        required_keys=single_data_loader_pars,
+        optional_keys=["aux_data_dir"],
+        param_file=par_file,
+        header="election_data_analysis",
+    )
+    if err:
+        sdl = None
+    else:
+        sdl = SingleDataLoader(
+            results_dir,
+            par_file_name,
+            session,
+            munger_path,
+            juris,
+        )
+    return sdl, err,
 
 
 class JurisdictionPrepper:
