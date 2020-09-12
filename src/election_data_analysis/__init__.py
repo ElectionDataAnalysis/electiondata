@@ -192,11 +192,11 @@ class DataLoader:
                     mungers_path,
                     juris[jp],
                 )
-                if new_err or sdl.munger_err:
-                    err = ui.consolidate_errors([err,new_err,sdl.munger_err])
+                if new_err:
+                    err = ui.consolidate_errors([err,new_err])
 
-                # if no fatal error, continue
-                if (not ui.fatal_error(new_err)) and (not ui.fatal_error(sdl.munger_err)):
+                # if no fatal error from SDL initialization, continue
+                if not ui.fatal_error(new_err):
                     # try to load data
                     load_error = sdl.load_results()
                     if load_error:
@@ -258,17 +258,13 @@ class SingleDataLoader:
         self.munger_err = dict()
         # TODO document
         self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
+
+        # initialize each munger (or collect error)
+        m_err = dict()
         for mu in self.munger_list:
-            self.munger[mu], self.munger_err[mu] = jm.check_and_init_munger(os.path.join(munger_path, mu))
+            self.munger[mu], m_err[mu] = jm.check_and_init_munger(os.path.join(munger_path, mu))
 
-        # if no munger throws an error:
-        if all([x is None for x in self.munger_err.values()]):
-            self.munger_err = None
-        else:
-            self.munger_err = ui.consolidate_errors([m_err[mu] for mu in self.munger_list])
-
-    def check_errors(self):
-        return self.parameter_err, self.munger_err
+        self.munger_err = ui.consolidate_errors([m_err[mu] for mu in self.munger_list])
 
     def track_results(self):
         """insert a record for the _datafile, recording any error string <e>.
@@ -350,6 +346,8 @@ def check_and_init_singledataloader(
         munger_path: str,
         juris: jm.Jurisdiction
 ) -> (SingleDataLoader, dict):
+    """Return SDL if it could be successfully initialized, and
+    error dictionary (including munger errors noted in SDL initialization)"""
     # test parameters
     par_file = os.path.join(results_dir, par_file_name)
     d, err = ui.get_runtime_parameters(
@@ -368,7 +366,8 @@ def check_and_init_singledataloader(
             munger_path,
             juris,
         )
-    return sdl, err,
+        err = ui.consolidate_errors([err,sdl.munger_err])
+    return sdl, err
 
 
 class JurisdictionPrepper:

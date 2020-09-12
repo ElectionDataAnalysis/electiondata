@@ -237,7 +237,7 @@ class Munger:
 
 def check_and_init_munger(munger_path: str, aux_data_dir: str = None) -> (Munger, dict):
     err = check_munger_files(munger_path)
-    if err:
+    if ui.fatal_error(err):
         munger = None
     else:
         munger = Munger(munger_path,aux_data_dir=aux_data_dir)
@@ -440,8 +440,8 @@ def check_munger_files(munger_path: str) -> dict:
         err = ui.add_new_error(
             err,
             "munger",
-            munger_path,
-            "Directory does not exist"
+            munger_name,
+            f"Directory does not exist: {munger_path}"
         )
         return err
 
