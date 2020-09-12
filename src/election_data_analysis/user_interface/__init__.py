@@ -751,7 +751,6 @@ def report(
     return
 
 
-# TODO check this error
 def add_new_error(
         err: Optional[Dict[Any, dict]],
         err_type: str,
