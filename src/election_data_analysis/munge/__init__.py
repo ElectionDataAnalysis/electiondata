@@ -275,7 +275,6 @@ def replace_raw_with_internal_ids(
     if working.empty:
         e = f"No raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file"
         if drop_unmatched and not drop_all_ok:
-# TODO check this error
             error = ui.add_new_error(
                 error,
                 "jurisdiction",
@@ -283,32 +282,43 @@ def replace_raw_with_internal_ids(
                 e,
             )
         else:
-# TODO -----------checking this error
             error = ui.add_new_error(
                 error,
                 "warn-jurisdiction",
                 juris.short_name,
                 e
             )
-        return working, error
+        # give working the proper columns and return
+        new_cols = [
+            c for c in working.columns if (
+                    c not in ["raw_identifier_value",
+                              "cdf_element",
+                              f"_{element}_ei",
+                              "cdf_internal_name",
+                              ]
+            )
+        ] + [f"{element}_Id",element]
+        working = pd.DataFrame(columns=new_cols)
 
-    if mode == "column":
-        # drop rows that melted from unrecognized columns, EVEN IF drop_unmatched=False.
-        #  These rows are ALWAYS extraneous. Drop cols where raw_identifier is not null
-        #  but no cdf_internal_name was found (pd.merge yields nulls)
-        #
-        working = working[
-            (working["raw_identifier_value"].isnull())
-            | (working["cdf_internal_name"].notnull())
-        ]
-        # TODO more efficient to drop these earlier, before melting
+        return working, error
+    else:
+        if mode == "column":
+            # drop rows that melted from unrecognized columns, EVEN IF drop_unmatched=False.
+            #  These rows are ALWAYS extraneous. Drop cols where raw_identifier is not null
+            #  but no cdf_internal_name was found (pd.merge yields nulls)
+            #
+            working = working[
+                (working["raw_identifier_value"].isnull())
+                | (working["cdf_internal_name"].notnull())
+            ]
+            # TODO more efficient to drop these earlier, before melting
 
     # unmatched elements get nan in fields from dictionary table. Change these to "none or unknown"
     if not drop_unmatched:
         working["cdf_internal_name"] = working["cdf_internal_name"].fillna(
             "none or unknown"
         )
-        #
+
 
     # drop extraneous cols from mu.raw_identifier
     working = working.drop(["raw_identifier_value", "cdf_element"], axis=1)
@@ -751,7 +761,7 @@ def raw_elements_to_cdf(
                 )
             else:
                 none_or_unknown_id = db.name_to_id(session, t, "none or unknown")
-                working, err = replace_raw_with_internal_ids(
+                working, new_err = replace_raw_with_internal_ids(
                     working,
                     juris,
                     df,
@@ -761,6 +771,9 @@ def raw_elements_to_cdf(
                     drop_unmatched=drop,
                     unmatched_id=none_or_unknown_id,
                 )
+                err = ui.consolidate_errors([err,new_err])
+                if ui.fatal_error(new_err):
+                    return err
                 working.drop(t, axis=1, inplace=True)
         except Exception as exc:
             err = ui.add_new_error(

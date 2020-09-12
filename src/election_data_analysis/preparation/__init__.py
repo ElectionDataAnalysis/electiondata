@@ -75,7 +75,6 @@ def write_element(
             sep="\t",
         )
     except Exception as e:
-# TODO check this error
         err = ui.add_new_error(
             err,
             "system",
