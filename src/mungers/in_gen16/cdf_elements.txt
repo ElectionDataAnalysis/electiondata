@@ -1,0 +1,8 @@
+name	raw_identifier_formula	source
+ReportingUnit	<Reporting County Name>;<Jurisdiction Name>	row
+Party	<Political Party>	row
+CandidateContest	<Office>	row
+Candidate	<Name on Ballot>	row
+BallotMeasureContest	<Office>	row
+BallotMeasureSelection	<Name on Ballot>	row
+CountItemType	total	row
