@@ -11541,3 +11541,514 @@ ReportingUnit	nan;Warsaw 3	Kosciusko;Warsaw 3
 ReportingUnit	nan;Warsaw 4	Kosciusko;Warsaw 4
 ReportingUnit	nan;Warsaw 6	Kosciusko;Warsaw 6
 ReportingUnit	nan;West Clark 1,west Clark 2,west Clark 3	Clark;West Clark 1,west Clark 2,west Clark 3
+CandidateContest	IN House District 1	State Representative, District 001
+CandidateContest	IN House District 2	State Representative, District 002
+CandidateContest	IN House District 3	State Representative, District 003
+CandidateContest	IN House District 4	State Representative, District 004
+CandidateContest	IN House District 5	State Representative, District 005
+CandidateContest	IN House District 6	State Representative, District 006
+CandidateContest	IN House District 7	State Representative, District 007
+CandidateContest	IN House District 8	State Representative, District 008
+CandidateContest	IN House District 9	State Representative, District 009
+CandidateContest	IN House District 10	State Representative, District 010
+CandidateContest	IN House District 11	State Representative, District 011
+CandidateContest	IN House District 12	State Representative, District 012
+CandidateContest	IN House District 13	State Representative, District 013
+CandidateContest	IN House District 14	State Representative, District 014
+CandidateContest	IN House District 15	State Representative, District 015
+CandidateContest	IN House District 16	State Representative, District 016
+CandidateContest	IN House District 17	State Representative, District 017
+CandidateContest	IN House District 18	State Representative, District 018
+CandidateContest	IN House District 19	State Representative, District 019
+CandidateContest	IN House District 20	State Representative, District 020
+CandidateContest	IN House District 21	State Representative, District 021
+CandidateContest	IN House District 22	State Representative, District 022
+CandidateContest	IN House District 23	State Representative, District 023
+CandidateContest	IN House District 24	State Representative, District 024
+CandidateContest	IN House District 25	State Representative, District 025
+CandidateContest	IN House District 26	State Representative, District 026
+CandidateContest	IN House District 27	State Representative, District 027
+CandidateContest	IN House District 28	State Representative, District 028
+CandidateContest	IN House District 29	State Representative, District 029
+CandidateContest	IN House District 30	State Representative, District 030
+CandidateContest	IN House District 31	State Representative, District 031
+CandidateContest	IN House District 32	State Representative, District 032
+CandidateContest	IN House District 33	State Representative, District 033
+CandidateContest	IN House District 34	State Representative, District 034
+CandidateContest	IN House District 35	State Representative, District 035
+CandidateContest	IN House District 36	State Representative, District 036
+CandidateContest	IN House District 37	State Representative, District 037
+CandidateContest	IN House District 38	State Representative, District 038
+CandidateContest	IN House District 39	State Representative, District 039
+CandidateContest	IN House District 40	State Representative, District 040
+CandidateContest	IN House District 41	State Representative, District 041
+CandidateContest	IN House District 42	State Representative, District 042
+CandidateContest	IN House District 43	State Representative, District 043
+CandidateContest	IN House District 44	State Representative, District 044
+CandidateContest	IN House District 45	State Representative, District 045
+CandidateContest	IN House District 46	State Representative, District 046
+CandidateContest	IN House District 47	State Representative, District 047
+CandidateContest	IN House District 48	State Representative, District 048
+CandidateContest	IN House District 49	State Representative, District 049
+CandidateContest	IN House District 50	State Representative, District 050
+CandidateContest	IN House District 51	State Representative, District 051
+CandidateContest	IN House District 52	State Representative, District 052
+CandidateContest	IN House District 53	State Representative, District 053
+CandidateContest	IN House District 54	State Representative, District 054
+CandidateContest	IN House District 55	State Representative, District 055
+CandidateContest	IN House District 56	State Representative, District 056
+CandidateContest	IN House District 57	State Representative, District 057
+CandidateContest	IN House District 58	State Representative, District 058
+CandidateContest	IN House District 59	State Representative, District 059
+CandidateContest	IN House District 60	State Representative, District 060
+CandidateContest	IN House District 61	State Representative, District 061
+CandidateContest	IN House District 62	State Representative, District 062
+CandidateContest	IN House District 63	State Representative, District 063
+CandidateContest	IN House District 64	State Representative, District 064
+CandidateContest	IN House District 65	State Representative, District 065
+CandidateContest	IN House District 66	State Representative, District 066
+CandidateContest	IN House District 67	State Representative, District 067
+CandidateContest	IN House District 68	State Representative, District 068
+CandidateContest	IN House District 69	State Representative, District 069
+CandidateContest	IN House District 70	State Representative, District 070
+CandidateContest	IN House District 71	State Representative, District 071
+CandidateContest	IN House District 72	State Representative, District 072
+CandidateContest	IN House District 73	State Representative, District 073
+CandidateContest	IN House District 74	State Representative, District 074
+CandidateContest	IN House District 75	State Representative, District 075
+CandidateContest	IN House District 76	State Representative, District 076
+CandidateContest	IN House District 77	State Representative, District 077
+CandidateContest	IN House District 78	State Representative, District 078
+CandidateContest	IN House District 79	State Representative, District 079
+CandidateContest	IN House District 80	State Representative, District 080
+CandidateContest	IN House District 81	State Representative, District 081
+CandidateContest	IN House District 82	State Representative, District 082
+CandidateContest	IN House District 83	State Representative, District 083
+CandidateContest	IN House District 84	State Representative, District 084
+CandidateContest	IN House District 85	State Representative, District 085
+CandidateContest	IN House District 86	State Representative, District 086
+CandidateContest	IN House District 87	State Representative, District 087
+CandidateContest	IN House District 88	State Representative, District 088
+CandidateContest	IN House District 89	State Representative, District 089
+CandidateContest	IN House District 90	State Representative, District 090
+CandidateContest	IN House District 91	State Representative, District 091
+CandidateContest	IN House District 92	State Representative, District 092
+CandidateContest	IN House District 93	State Representative, District 093
+CandidateContest	IN House District 94	State Representative, District 094
+CandidateContest	IN House District 95	State Representative, District 095
+CandidateContest	IN House District 96	State Representative, District 096
+CandidateContest	IN House District 97	State Representative, District 097
+CandidateContest	IN House District 98	State Representative, District 098
+CandidateContest	IN House District 99	State Representative, District 099
+CandidateContest	IN House District 100	State Representative, District 100
+CandidateContest	IN Senate District 1	IN Senate District 1
+CandidateContest	IN Senate District 2	IN Senate District 2
+CandidateContest	IN Senate District 3	IN Senate District 3
+CandidateContest	IN Senate District 4	IN Senate District 4
+CandidateContest	IN Senate District 5	IN Senate District 5
+CandidateContest	IN Senate District 6	IN Senate District 6
+CandidateContest	IN Senate District 7	IN Senate District 7
+CandidateContest	IN Senate District 8	IN Senate District 8
+CandidateContest	IN Senate District 9	IN Senate District 9
+CandidateContest	IN Senate District 10	IN Senate District 10
+CandidateContest	IN Senate District 11	IN Senate District 11
+CandidateContest	IN Senate District 12	IN Senate District 12
+CandidateContest	IN Senate District 13	IN Senate District 13
+CandidateContest	IN Senate District 14	IN Senate District 14
+CandidateContest	IN Senate District 15	IN Senate District 15
+CandidateContest	IN Senate District 16	IN Senate District 16
+CandidateContest	IN Senate District 17	IN Senate District 17
+CandidateContest	IN Senate District 18	IN Senate District 18
+CandidateContest	IN Senate District 19	IN Senate District 19
+CandidateContest	IN Senate District 20	IN Senate District 20
+CandidateContest	IN Senate District 21	IN Senate District 21
+CandidateContest	IN Senate District 22	IN Senate District 22
+CandidateContest	IN Senate District 23	IN Senate District 23
+CandidateContest	IN Senate District 24	IN Senate District 24
+CandidateContest	IN Senate District 25	IN Senate District 25
+CandidateContest	IN Senate District 26	IN Senate District 26
+CandidateContest	IN Senate District 27	IN Senate District 27
+CandidateContest	IN Senate District 28	IN Senate District 28
+CandidateContest	IN Senate District 29	IN Senate District 29
+CandidateContest	IN Senate District 30	IN Senate District 30
+CandidateContest	IN Senate District 31	IN Senate District 31
+CandidateContest	IN Senate District 32	IN Senate District 32
+CandidateContest	IN Senate District 33	IN Senate District 33
+CandidateContest	IN Senate District 34	IN Senate District 34
+CandidateContest	IN Senate District 35	IN Senate District 35
+CandidateContest	IN Senate District 36	IN Senate District 36
+CandidateContest	IN Senate District 37	IN Senate District 37
+CandidateContest	IN Senate District 38	IN Senate District 38
+CandidateContest	IN Senate District 39	IN Senate District 39
+CandidateContest	IN Senate District 40	IN Senate District 40
+CandidateContest	IN Senate District 41	IN Senate District 41
+CandidateContest	IN Senate District 42	IN Senate District 42
+CandidateContest	IN Senate District 43	IN Senate District 43
+CandidateContest	IN Senate District 44	IN Senate District 44
+CandidateContest	IN Senate District 45	IN Senate District 45
+CandidateContest	IN Senate District 46	IN Senate District 46
+CandidateContest	IN Senate District 47	IN Senate District 47
+CandidateContest	IN Senate District 48	IN Senate District 48
+CandidateContest	IN Senate District 49	IN Senate District 49
+CandidateContest	IN Senate District 50	IN Senate District 50
+CandidateContest	US House IN District 1	United States Representative, First District
+CandidateContest	US House IN District 2	United States Representative, Second District
+CandidateContest	US House IN District 3	United States Representative, Third District
+CandidateContest	US House IN District 4	United States Representative, Fourth District
+CandidateContest	US House IN District 5	United States Representative, Fifth District
+CandidateContest	US House IN District 6	United States Representative, Sixth District
+CandidateContest	US House IN District 7	United States Representative, Seventh District
+CandidateContest	US House IN District 8	United States Representative, Eighth District
+CandidateContest	US House IN District 9	United States Representative, Ninth District
+CandidateContest	US President (IN)	US President
+CandidateContest	US President (IN)	US President & Vice President
+CandidateContest	IN Governor	Governor & Lt. Governor
+CandidateContest	US Senate IN	United States Senator From Indiana
+CandidateContest	IN Attorney General	Attorney General
+CandidateContest	IN Treasurer	Treasurer Of State
+CandidateContest	IN Auditor	Auditor Of State
+CandidateContest	IN Secretary of State	Secretary Of State
+CandidateContest	IN Superintendent of Public Instruction	Superintendent Of Public Instruction
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
+Election	2018 General	2018 General
+Election	2018 Primary	2018 Primary
+Election	2016 General	2016 General
+Election	2016 Primary	2016 Primary
+Office	IN House District 1	IN House District 1
+Office	IN House District 2	IN House District 2
+Office	IN House District 3	IN House District 3
+Office	IN House District 4	IN House District 4
+Office	IN House District 5	IN House District 5
+Office	IN House District 6	IN House District 6
+Office	IN House District 7	IN House District 7
+Office	IN House District 8	IN House District 8
+Office	IN House District 9	IN House District 9
+Office	IN House District 10	IN House District 10
+Office	IN House District 11	IN House District 11
+Office	IN House District 12	IN House District 12
+Office	IN House District 13	IN House District 13
+Office	IN House District 14	IN House District 14
+Office	IN House District 15	IN House District 15
+Office	IN House District 16	IN House District 16
+Office	IN House District 17	IN House District 17
+Office	IN House District 18	IN House District 18
+Office	IN House District 19	IN House District 19
+Office	IN House District 20	IN House District 20
+Office	IN House District 21	IN House District 21
+Office	IN House District 22	IN House District 22
+Office	IN House District 23	IN House District 23
+Office	IN House District 24	IN House District 24
+Office	IN House District 25	IN House District 25
+Office	IN House District 26	IN House District 26
+Office	IN House District 27	IN House District 27
+Office	IN House District 28	IN House District 28
+Office	IN House District 29	IN House District 29
+Office	IN House District 30	IN House District 30
+Office	IN House District 31	IN House District 31
+Office	IN House District 32	IN House District 32
+Office	IN House District 33	IN House District 33
+Office	IN House District 34	IN House District 34
+Office	IN House District 35	IN House District 35
+Office	IN House District 36	IN House District 36
+Office	IN House District 37	IN House District 37
+Office	IN House District 38	IN House District 38
+Office	IN House District 39	IN House District 39
+Office	IN House District 40	IN House District 40
+Office	IN House District 41	IN House District 41
+Office	IN House District 42	IN House District 42
+Office	IN House District 43	IN House District 43
+Office	IN House District 44	IN House District 44
+Office	IN House District 45	IN House District 45
+Office	IN House District 46	IN House District 46
+Office	IN House District 47	IN House District 47
+Office	IN House District 48	IN House District 48
+Office	IN House District 49	IN House District 49
+Office	IN House District 50	IN House District 50
+Office	IN House District 51	IN House District 51
+Office	IN House District 52	IN House District 52
+Office	IN House District 53	IN House District 53
+Office	IN House District 54	IN House District 54
+Office	IN House District 55	IN House District 55
+Office	IN House District 56	IN House District 56
+Office	IN House District 57	IN House District 57
+Office	IN House District 58	IN House District 58
+Office	IN House District 59	IN House District 59
+Office	IN House District 60	IN House District 60
+Office	IN House District 61	IN House District 61
+Office	IN House District 62	IN House District 62
+Office	IN House District 63	IN House District 63
+Office	IN House District 64	IN House District 64
+Office	IN House District 65	IN House District 65
+Office	IN House District 66	IN House District 66
+Office	IN House District 67	IN House District 67
+Office	IN House District 68	IN House District 68
+Office	IN House District 69	IN House District 69
+Office	IN House District 70	IN House District 70
+Office	IN House District 71	IN House District 71
+Office	IN House District 72	IN House District 72
+Office	IN House District 73	IN House District 73
+Office	IN House District 74	IN House District 74
+Office	IN House District 75	IN House District 75
+Office	IN House District 76	IN House District 76
+Office	IN House District 77	IN House District 77
+Office	IN House District 78	IN House District 78
+Office	IN House District 79	IN House District 79
+Office	IN House District 80	IN House District 80
+Office	IN House District 81	IN House District 81
+Office	IN House District 82	IN House District 82
+Office	IN House District 83	IN House District 83
+Office	IN House District 84	IN House District 84
+Office	IN House District 85	IN House District 85
+Office	IN House District 86	IN House District 86
+Office	IN House District 87	IN House District 87
+Office	IN House District 88	IN House District 88
+Office	IN House District 89	IN House District 89
+Office	IN House District 90	IN House District 90
+Office	IN House District 91	IN House District 91
+Office	IN House District 92	IN House District 92
+Office	IN House District 93	IN House District 93
+Office	IN House District 94	IN House District 94
+Office	IN House District 95	IN House District 95
+Office	IN House District 96	IN House District 96
+Office	IN House District 97	IN House District 97
+Office	IN House District 98	IN House District 98
+Office	IN House District 99	IN House District 99
+Office	IN House District 100	IN House District 100
+Office	IN Senate District 1	IN Senate District 1
+Office	IN Senate District 2	IN Senate District 2
+Office	IN Senate District 3	IN Senate District 3
+Office	IN Senate District 4	IN Senate District 4
+Office	IN Senate District 5	IN Senate District 5
+Office	IN Senate District 6	IN Senate District 6
+Office	IN Senate District 7	IN Senate District 7
+Office	IN Senate District 8	IN Senate District 8
+Office	IN Senate District 9	IN Senate District 9
+Office	IN Senate District 10	IN Senate District 10
+Office	IN Senate District 11	IN Senate District 11
+Office	IN Senate District 12	IN Senate District 12
+Office	IN Senate District 13	IN Senate District 13
+Office	IN Senate District 14	IN Senate District 14
+Office	IN Senate District 15	IN Senate District 15
+Office	IN Senate District 16	IN Senate District 16
+Office	IN Senate District 17	IN Senate District 17
+Office	IN Senate District 18	IN Senate District 18
+Office	IN Senate District 19	IN Senate District 19
+Office	IN Senate District 20	IN Senate District 20
+Office	IN Senate District 21	IN Senate District 21
+Office	IN Senate District 22	IN Senate District 22
+Office	IN Senate District 23	IN Senate District 23
+Office	IN Senate District 24	IN Senate District 24
+Office	IN Senate District 25	IN Senate District 25
+Office	IN Senate District 26	IN Senate District 26
+Office	IN Senate District 27	IN Senate District 27
+Office	IN Senate District 28	IN Senate District 28
+Office	IN Senate District 29	IN Senate District 29
+Office	IN Senate District 30	IN Senate District 30
+Office	IN Senate District 31	IN Senate District 31
+Office	IN Senate District 32	IN Senate District 32
+Office	IN Senate District 33	IN Senate District 33
+Office	IN Senate District 34	IN Senate District 34
+Office	IN Senate District 35	IN Senate District 35
+Office	IN Senate District 36	IN Senate District 36
+Office	IN Senate District 37	IN Senate District 37
+Office	IN Senate District 38	IN Senate District 38
+Office	IN Senate District 39	IN Senate District 39
+Office	IN Senate District 40	IN Senate District 40
+Office	IN Senate District 41	IN Senate District 41
+Office	IN Senate District 42	IN Senate District 42
+Office	IN Senate District 43	IN Senate District 43
+Office	IN Senate District 44	IN Senate District 44
+Office	IN Senate District 45	IN Senate District 45
+Office	IN Senate District 46	IN Senate District 46
+Office	IN Senate District 47	IN Senate District 47
+Office	IN Senate District 48	IN Senate District 48
+Office	IN Senate District 49	IN Senate District 49
+Office	IN Senate District 50	IN Senate District 50
+Office	US House IN District 1	US House IN District 1
+Office	US House IN District 2	US House IN District 2
+Office	US House IN District 3	US House IN District 3
+Office	US House IN District 4	US House IN District 4
+Office	US House IN District 5	US House IN District 5
+Office	US House IN District 6	US House IN District 6
+Office	US House IN District 7	US House IN District 7
+Office	US House IN District 8	US House IN District 8
+Office	US House IN District 9	US House IN District 9
+Office	US President (IN)	US President (IN)
+Office	IN Governor	IN Governor
+Office	US Senate IN	US Senate IN
+Office	IN Attorney General	IN Attorney General
+Office	IN Lieutenant Governor	IN Lieutenant Governor
+Office	IN Treasurer	IN Treasurer
+Office	IN Secretary of State	IN Secretary of State
+Party	Democratic Party	Democratic
+Party	Republican Party	Republican
+Party	Constitution Party	Constitution
+Party	Green Party	Green
+Party	Independent Party	Independent
+Party	Libertarian Party	Libertarian
+Party	Non Partisan	Non Partisan
+Party	Other	Other
+Party	Socialist Party	Socialist Party Usa
+WorkersLibertarian Party	Libertarian Party
+ReportingUnit	Indiana;IN House District 1	Indiana;IN House District 1
+ReportingUnit	Indiana;IN House District 2	Indiana;IN House District 2
+ReportingUnit	Indiana;IN House District 3	Indiana;IN House District 3
+ReportingUnit	Indiana;IN House District 4	Indiana;IN House District 4
+ReportingUnit	Indiana;IN House District 5	Indiana;IN House District 5
+ReportingUnit	Indiana;IN House District 6	Indiana;IN House District 6
+ReportingUnit	Indiana;IN House District 7	Indiana;IN House District 7
+ReportingUnit	Indiana;IN House District 8	Indiana;IN House District 8
+ReportingUnit	Indiana;IN House District 9	Indiana;IN House District 9
+ReportingUnit	Indiana;IN House District 10	Indiana;IN House District 10
+ReportingUnit	Indiana;IN House District 11	Indiana;IN House District 11
+ReportingUnit	Indiana;IN House District 12	Indiana;IN House District 12
+ReportingUnit	Indiana;IN House District 13	Indiana;IN House District 13
+ReportingUnit	Indiana;IN House District 14	Indiana;IN House District 14
+ReportingUnit	Indiana;IN House District 15	Indiana;IN House District 15
+ReportingUnit	Indiana;IN House District 16	Indiana;IN House District 16
+ReportingUnit	Indiana;IN House District 17	Indiana;IN House District 17
+ReportingUnit	Indiana;IN House District 18	Indiana;IN House District 18
+ReportingUnit	Indiana;IN House District 19	Indiana;IN House District 19
+ReportingUnit	Indiana;IN House District 20	Indiana;IN House District 20
+ReportingUnit	Indiana;IN House District 21	Indiana;IN House District 21
+ReportingUnit	Indiana;IN House District 22	Indiana;IN House District 22
+ReportingUnit	Indiana;IN House District 23	Indiana;IN House District 23
+ReportingUnit	Indiana;IN House District 24	Indiana;IN House District 24
+ReportingUnit	Indiana;IN House District 25	Indiana;IN House District 25
+ReportingUnit	Indiana;IN House District 26	Indiana;IN House District 26
+ReportingUnit	Indiana;IN House District 27	Indiana;IN House District 27
+ReportingUnit	Indiana;IN House District 28	Indiana;IN House District 28
+ReportingUnit	Indiana;IN House District 29	Indiana;IN House District 29
+ReportingUnit	Indiana;IN House District 30	Indiana;IN House District 30
+ReportingUnit	Indiana;IN House District 31	Indiana;IN House District 31
+ReportingUnit	Indiana;IN House District 32	Indiana;IN House District 32
+ReportingUnit	Indiana;IN House District 33	Indiana;IN House District 33
+ReportingUnit	Indiana;IN House District 34	Indiana;IN House District 34
+ReportingUnit	Indiana;IN House District 35	Indiana;IN House District 35
+ReportingUnit	Indiana;IN House District 36	Indiana;IN House District 36
+ReportingUnit	Indiana;IN House District 37	Indiana;IN House District 37
+ReportingUnit	Indiana;IN House District 38	Indiana;IN House District 38
+ReportingUnit	Indiana;IN House District 39	Indiana;IN House District 39
+ReportingUnit	Indiana;IN House District 40	Indiana;IN House District 40
+ReportingUnit	Indiana;IN House District 41	Indiana;IN House District 41
+ReportingUnit	Indiana;IN House District 42	Indiana;IN House District 42
+ReportingUnit	Indiana;IN House District 43	Indiana;IN House District 43
+ReportingUnit	Indiana;IN House District 44	Indiana;IN House District 44
+ReportingUnit	Indiana;IN House District 45	Indiana;IN House District 45
+ReportingUnit	Indiana;IN House District 46	Indiana;IN House District 46
+ReportingUnit	Indiana;IN House District 47	Indiana;IN House District 47
+ReportingUnit	Indiana;IN House District 48	Indiana;IN House District 48
+ReportingUnit	Indiana;IN House District 49	Indiana;IN House District 49
+ReportingUnit	Indiana;IN House District 50	Indiana;IN House District 50
+ReportingUnit	Indiana;IN House District 51	Indiana;IN House District 51
+ReportingUnit	Indiana;IN House District 52	Indiana;IN House District 52
+ReportingUnit	Indiana;IN House District 53	Indiana;IN House District 53
+ReportingUnit	Indiana;IN House District 54	Indiana;IN House District 54
+ReportingUnit	Indiana;IN House District 55	Indiana;IN House District 55
+ReportingUnit	Indiana;IN House District 56	Indiana;IN House District 56
+ReportingUnit	Indiana;IN House District 57	Indiana;IN House District 57
+ReportingUnit	Indiana;IN House District 58	Indiana;IN House District 58
+ReportingUnit	Indiana;IN House District 59	Indiana;IN House District 59
+ReportingUnit	Indiana;IN House District 60	Indiana;IN House District 60
+ReportingUnit	Indiana;IN House District 61	Indiana;IN House District 61
+ReportingUnit	Indiana;IN House District 62	Indiana;IN House District 62
+ReportingUnit	Indiana;IN House District 63	Indiana;IN House District 63
+ReportingUnit	Indiana;IN House District 64	Indiana;IN House District 64
+ReportingUnit	Indiana;IN House District 65	Indiana;IN House District 65
+ReportingUnit	Indiana;IN House District 66	Indiana;IN House District 66
+ReportingUnit	Indiana;IN House District 67	Indiana;IN House District 67
+ReportingUnit	Indiana;IN House District 68	Indiana;IN House District 68
+ReportingUnit	Indiana;IN House District 69	Indiana;IN House District 69
+ReportingUnit	Indiana;IN House District 70	Indiana;IN House District 70
+ReportingUnit	Indiana;IN House District 71	Indiana;IN House District 71
+ReportingUnit	Indiana;IN House District 72	Indiana;IN House District 72
+ReportingUnit	Indiana;IN House District 73	Indiana;IN House District 73
+ReportingUnit	Indiana;IN House District 74	Indiana;IN House District 74
+ReportingUnit	Indiana;IN House District 75	Indiana;IN House District 75
+ReportingUnit	Indiana;IN House District 76	Indiana;IN House District 76
+ReportingUnit	Indiana;IN House District 77	Indiana;IN House District 77
+ReportingUnit	Indiana;IN House District 78	Indiana;IN House District 78
+ReportingUnit	Indiana;IN House District 79	Indiana;IN House District 79
+ReportingUnit	Indiana;IN House District 80	Indiana;IN House District 80
+ReportingUnit	Indiana;IN House District 81	Indiana;IN House District 81
+ReportingUnit	Indiana;IN House District 82	Indiana;IN House District 82
+ReportingUnit	Indiana;IN House District 83	Indiana;IN House District 83
+ReportingUnit	Indiana;IN House District 84	Indiana;IN House District 84
+ReportingUnit	Indiana;IN House District 85	Indiana;IN House District 85
+ReportingUnit	Indiana;IN House District 86	Indiana;IN House District 86
+ReportingUnit	Indiana;IN House District 87	Indiana;IN House District 87
+ReportingUnit	Indiana;IN House District 88	Indiana;IN House District 88
+ReportingUnit	Indiana;IN House District 89	Indiana;IN House District 89
+ReportingUnit	Indiana;IN House District 90	Indiana;IN House District 90
+ReportingUnit	Indiana;IN House District 91	Indiana;IN House District 91
+ReportingUnit	Indiana;IN House District 92	Indiana;IN House District 92
+ReportingUnit	Indiana;IN House District 93	Indiana;IN House District 93
+ReportingUnit	Indiana;IN House District 94	Indiana;IN House District 94
+ReportingUnit	Indiana;IN House District 95	Indiana;IN House District 95
+ReportingUnit	Indiana;IN House District 96	Indiana;IN House District 96
+ReportingUnit	Indiana;IN House District 97	Indiana;IN House District 97
+ReportingUnit	Indiana;IN House District 98	Indiana;IN House District 98
+ReportingUnit	Indiana;IN House District 99	Indiana;IN House District 99
+ReportingUnit	Indiana;IN House District 100	Indiana;IN House District 100
+ReportingUnit	Indiana;IN Senate District 1	Indiana;IN Senate District 1
+ReportingUnit	Indiana;IN Senate District 2	Indiana;IN Senate District 2
+ReportingUnit	Indiana;IN Senate District 3	Indiana;IN Senate District 3
+ReportingUnit	Indiana;IN Senate District 4	Indiana;IN Senate District 4
+ReportingUnit	Indiana;IN Senate District 5	Indiana;IN Senate District 5
+ReportingUnit	Indiana;IN Senate District 6	Indiana;IN Senate District 6
+ReportingUnit	Indiana;IN Senate District 7	Indiana;IN Senate District 7
+ReportingUnit	Indiana;IN Senate District 8	Indiana;IN Senate District 8
+ReportingUnit	Indiana;IN Senate District 9	Indiana;IN Senate District 9
+ReportingUnit	Indiana;IN Senate District 10	Indiana;IN Senate District 10
+ReportingUnit	Indiana;IN Senate District 11	Indiana;IN Senate District 11
+ReportingUnit	Indiana;IN Senate District 12	Indiana;IN Senate District 12
+ReportingUnit	Indiana;IN Senate District 13	Indiana;IN Senate District 13
+ReportingUnit	Indiana;IN Senate District 14	Indiana;IN Senate District 14
+ReportingUnit	Indiana;IN Senate District 15	Indiana;IN Senate District 15
+ReportingUnit	Indiana;IN Senate District 16	Indiana;IN Senate District 16
+ReportingUnit	Indiana;IN Senate District 17	Indiana;IN Senate District 17
+ReportingUnit	Indiana;IN Senate District 18	Indiana;IN Senate District 18
+ReportingUnit	Indiana;IN Senate District 19	Indiana;IN Senate District 19
+ReportingUnit	Indiana;IN Senate District 20	Indiana;IN Senate District 20
+ReportingUnit	Indiana;IN Senate District 21	Indiana;IN Senate District 21
+ReportingUnit	Indiana;IN Senate District 22	Indiana;IN Senate District 22
+ReportingUnit	Indiana;IN Senate District 23	Indiana;IN Senate District 23
+ReportingUnit	Indiana;IN Senate District 24	Indiana;IN Senate District 24
+ReportingUnit	Indiana;IN Senate District 25	Indiana;IN Senate District 25
+ReportingUnit	Indiana;IN Senate District 26	Indiana;IN Senate District 26
+ReportingUnit	Indiana;IN Senate District 27	Indiana;IN Senate District 27
+ReportingUnit	Indiana;IN Senate District 28	Indiana;IN Senate District 28
+ReportingUnit	Indiana;IN Senate District 29	Indiana;IN Senate District 29
+ReportingUnit	Indiana;IN Senate District 30	Indiana;IN Senate District 30
+ReportingUnit	Indiana;IN Senate District 31	Indiana;IN Senate District 31
+ReportingUnit	Indiana;IN Senate District 32	Indiana;IN Senate District 32
+ReportingUnit	Indiana;IN Senate District 33	Indiana;IN Senate District 33
+ReportingUnit	Indiana;IN Senate District 34	Indiana;IN Senate District 34
+ReportingUnit	Indiana;IN Senate District 35	Indiana;IN Senate District 35
+ReportingUnit	Indiana;IN Senate District 36	Indiana;IN Senate District 36
+ReportingUnit	Indiana;IN Senate District 37	Indiana;IN Senate District 37
+ReportingUnit	Indiana;IN Senate District 38	Indiana;IN Senate District 38
+ReportingUnit	Indiana;IN Senate District 39	Indiana;IN Senate District 39
+ReportingUnit	Indiana;IN Senate District 40	Indiana;IN Senate District 40
+ReportingUnit	Indiana;IN Senate District 41	Indiana;IN Senate District 41
+ReportingUnit	Indiana;IN Senate District 42	Indiana;IN Senate District 42
+ReportingUnit	Indiana;IN Senate District 43	Indiana;IN Senate District 43
+ReportingUnit	Indiana;IN Senate District 44	Indiana;IN Senate District 44
+ReportingUnit	Indiana;IN Senate District 45	Indiana;IN Senate District 45
+ReportingUnit	Indiana;IN Senate District 46	Indiana;IN Senate District 46
+ReportingUnit	Indiana;IN Senate District 47	Indiana;IN Senate District 47
+ReportingUnit	Indiana;IN Senate District 48	Indiana;IN Senate District 48
+ReportingUnit	Indiana;IN Senate District 49	Indiana;IN Senate District 49
+ReportingUnit	Indiana;IN Senate District 50	Indiana;IN Senate District 50
+ReportingUnit	Indiana;US House IN District 1	Indiana;US House IN District 1
+ReportingUnit	Indiana;US House IN District 2	Indiana;US House IN District 2
+ReportingUnit	Indiana;US House IN District 3	Indiana;US House IN District 3
+ReportingUnit	Indiana;US House IN District 4	Indiana;US House IN District 4
+ReportingUnit	Indiana;US House IN District 5	Indiana;US House IN District 5
+ReportingUnit	Indiana;US House IN District 6	Indiana;US House IN District 6
+ReportingUnit	Indiana;US House IN District 7	Indiana;US House IN District 7
+ReportingUnit	Indiana;US House IN District 8	Indiana;US House IN District 8
+ReportingUnit	Indiana;US House IN District 9	Indiana;US House IN District 9
+ReportingUnit	Indiana	Indiana
