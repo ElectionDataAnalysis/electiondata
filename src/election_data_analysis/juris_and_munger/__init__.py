@@ -309,13 +309,14 @@ def read_munger_info_from_files(dir_path):
 
 
 # TODO combine ensure_jurisdiction_dir with ensure_juris_files
-def ensure_jurisdiction_dir(juris_path, ignore_empty=False):
-    # create jurisdiction directory
+def ensure_jurisdiction_dir(juris_path, ignore_empty=False) -> dict:
+    # create directory if it doesn't exist
     try:
         Path(juris_path).mkdir(parents=True)
-        print(f"Directory {juris_path} created.")
     except FileExistsError:
-        pass
+        print(f"Directory already exists: {juris_path} ")
+    else:
+        print(f"Directory created: {juris_path}")
 
     # ensure the contents of the jurisdiction directory are correct
     err = ensure_juris_files(
@@ -436,7 +437,6 @@ def check_munger_files(munger_path: str) -> dict:
 
     # check whether directory exists
     if not os.path.isdir(munger_path):
-# TODO check this error
         err = ui.add_new_error(
             err,
             "munger",
@@ -557,7 +557,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
 # TODO check this error
             err = ui.add_new_error(
                 err,
-                "munger-warn",
+                "warn-munger",
                 munger_name,
                 f"At least one source in cdf_elements.txt is not recognized: {b_str}",
             )
@@ -568,10 +568,9 @@ def check_munger_file_contents(munger_path, munger_file, err):
         ]
         if bad_formula:
             f_str = ",".join(bad_formula)
-# TODO check this error
             err = ui.add_new_error(
                 err,
-                "munger-warn",
+                "warn-munger",
                 munger_name,
                 f"At least one formula in cdf_elements.txt has bad syntax: {f_str}",
             )
@@ -620,7 +619,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
 # TODO check this error
             err = ui.add_new_error(
                 err,
-                "munger-warn",
+                "warn-munger",
                 munger_name,
                 f"No encoding specified; iso-8859-1 will be used",
             )
@@ -628,7 +627,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
 # TODO check this error
             err = ui.add_new_error(
                 err,
-                "munger-warn",
+                "warn-munger",
                 munger_name,
                 (
                     f"Encoding {format_d['encoding']} in format file is not recognized;"

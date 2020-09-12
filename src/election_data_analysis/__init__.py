@@ -395,7 +395,7 @@ class JurisdictionPrepper:
             return None
         return super().__new__(cls)
 
-    def new_juris_files(self, other_districts: dict = None):
+    def new_juris_files(self):
         """<juris_path> identifies the directory where the files will live.
         <abbr> is the two-letter abbreviation for state/district/territory.
         <state_house>, etc., gives the number of districts;
@@ -403,16 +403,7 @@ class JurisdictionPrepper:
         {'Circuit Court':{'ReportingUnitType':'judicial','count':5}}
         """
         # TODO Feature: allow other districts to be set in paramfile
-        error = dict()
-
-        # create directory if it doesn't exist
-        try:
-            Path(self.d["jurisdiction_path"]).mkdir(parents=True)
-        except FileExistsError:
-            print(f"Directory {self.d['jurisdiction_path']} already exists")
-        else:
-            print(f"Directory {self.d['jurisdiction_path']} created.")
-
+        error = jm.ensure_jurisdiction_dir(self.d["jurisdiction_path"])
         # add default entries
         project_root = Path(__file__).absolute().parents[1]
         templates = os.path.join(
@@ -423,29 +414,22 @@ class JurisdictionPrepper:
             new_err = prep.add_defaults(self.d["jurisdiction_path"], templates, element)
             if new_err:
                 error = ui.consolidate_errors([error,new_err])
-                if ui.fatal_error(new_err):
-                    return error
-
 
         # add all standard Offices/RUs/CandidateContests
-        self.add_standard_contests()
+        asc_err = self.add_standard_contests()
 
         # Feature create starter dictionary.txt with cdf_internal name
         #  used as placeholder for raw_identifier_value
-        e = self.starter_dictionary()
-        if e:
-# TODO check this error
-            error = ui.add_new_error(
-                error,
-                "jurisdiction",
-                "dictionary.txt",
-                e
-            )
+        dict_err = self.starter_dictionary()
+
+        error = ui.consolidate_errors([error,asc_err,dict_err])
+        ui.report(error)
         return error
 
-    def add_primaries_to_dict(self) -> str:
+    def add_primaries_to_dict(self) -> dict:
+        """Return error dictionary"""
         error = None
-        # TODO add real error handling
+
         primaries = {}
         # read CandidateContest.txt, Party.txt and dictionary.txt
         cc = prep.get_element(self.d["jurisdiction_path"], "CandidateContest")
@@ -495,6 +479,7 @@ class JurisdictionPrepper:
             new_dictionary = d
         new_err = prep.write_element(self.d["jurisdiction_path"], "dictionary", new_dictionary)
         ui.consolidate_errors([error,new_err])
+        ui.report(error)
         return error
 
     def add_standard_contests(
@@ -658,7 +643,7 @@ class JurisdictionPrepper:
         self,
         error: dict = None,
         sub_ru_type: str = "precinct",
-        results_file=None,
+        results_file_path=None,
         munger_name=None,
         **kwargs,
     ) -> dict:
@@ -669,9 +654,13 @@ class JurisdictionPrepper:
 
         # get parameters from arguments; otherwise from self.d; otherwise throw error
         kwargs, missing = ui.get_params_to_read_results(
-            self.d, results_file, munger_name
+            self.d, results_file_path, munger_name
         )
         if missing:
+            if results_file_path:
+                results_file = Path(results_file_path).name
+            else:
+                results_file = None
 # TODO check this error
             error = ui.add_new_error(
                 error,
@@ -798,7 +787,7 @@ class JurisdictionPrepper:
                     return error
 
             file_dict["sub_ru_type"] = sub_ru_type
-            file_dict["results_file"] = os.path.join(
+            file_dict["results_file_path"] = os.path.join(
                 dir, file_dict["results_file"]
             )
             error = self.add_sub_county_rus_from_results_file(error, **file_dict)
@@ -806,10 +795,11 @@ class JurisdictionPrepper:
 
     def add_elements_from_multi_results_file(
         self, elements: iter, dir: str, error: dict
-    ):
+    ) -> dict:
         """Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
         for each file in <dir> named (with munger) in a .ini file in the directory"""
         for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
+            # pull parameters from file
             par_file = os.path.join(dir, par_file_name)
             file_dict, new_err = ui.get_runtime_parameters(
                 required_keys=["results_file", "munger_name"],
@@ -818,15 +808,17 @@ class JurisdictionPrepper:
                 param_file=par_file,
                 err=None
             )
-            file_dict["results_file"] = os.path.join(
+            # redefine the results_file_path parameter to a full path ?!
+            file_dict["results_file_path"] = os.path.join(
                 dir, file_dict["results_file"]
             )
             if new_err:
                 error = ui.consolidate_errors([error,new_err])
-            else:
+            if not ui.fatal_error(error):
                 error = self.add_elements_from_results_file(
                     elements, error, **file_dict
                 )
+        ui.report(error)
         return error
 
     def add_elements_from_results_file(
@@ -853,7 +845,7 @@ class JurisdictionPrepper:
                 f"Parameters missing: {missing}. Results file cannot be processed.",
             )
             return error
-        elif ("results_file" in kwargs.keys()) and not (os.path.isfile(kwargs["results_file"])):
+        elif ("results_file_ath" in kwargs.keys()) and not (os.path.isfile(kwargs["results_file_path"])):
 # TODO check this error
             error = ui.add_new_error(
                 error,
@@ -929,7 +921,7 @@ class JurisdictionPrepper:
 
     def starter_dictionary(self, include_existing=True) -> dict:
         """Creates a starter file for dictionary.txt, assuming raw_identifiers are the same as cdf_internal names.
-        Puts file in the current directory"""
+        Puts file in the current directory. Returns error dictionary"""
         w = dict()
         elements = [
             "BallotMeasureContest",

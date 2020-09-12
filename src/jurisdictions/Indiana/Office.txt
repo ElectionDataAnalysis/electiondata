@@ -1,0 +1,167 @@
+Name	ElectionDistrict
+IN House District 1	Indiana;IN House District 1
+IN House District 2	Indiana;IN House District 2
+IN House District 3	Indiana;IN House District 3
+IN House District 4	Indiana;IN House District 4
+IN House District 5	Indiana;IN House District 5
+IN House District 6	Indiana;IN House District 6
+IN House District 7	Indiana;IN House District 7
+IN House District 8	Indiana;IN House District 8
+IN House District 9	Indiana;IN House District 9
+IN House District 10	Indiana;IN House District 10
+IN House District 11	Indiana;IN House District 11
+IN House District 12	Indiana;IN House District 12
+IN House District 13	Indiana;IN House District 13
+IN House District 14	Indiana;IN House District 14
+IN House District 15	Indiana;IN House District 15
+IN House District 16	Indiana;IN House District 16
+IN House District 17	Indiana;IN House District 17
+IN House District 18	Indiana;IN House District 18
+IN House District 19	Indiana;IN House District 19
+IN House District 20	Indiana;IN House District 20
+IN House District 21	Indiana;IN House District 21
+IN House District 22	Indiana;IN House District 22
+IN House District 23	Indiana;IN House District 23
+IN House District 24	Indiana;IN House District 24
+IN House District 25	Indiana;IN House District 25
+IN House District 26	Indiana;IN House District 26
+IN House District 27	Indiana;IN House District 27
+IN House District 28	Indiana;IN House District 28
+IN House District 29	Indiana;IN House District 29
+IN House District 30	Indiana;IN House District 30
+IN House District 31	Indiana;IN House District 31
+IN House District 32	Indiana;IN House District 32
+IN House District 33	Indiana;IN House District 33
+IN House District 34	Indiana;IN House District 34
+IN House District 35	Indiana;IN House District 35
+IN House District 36	Indiana;IN House District 36
+IN House District 37	Indiana;IN House District 37
+IN House District 38	Indiana;IN House District 38
+IN House District 39	Indiana;IN House District 39
+IN House District 40	Indiana;IN House District 40
+IN House District 41	Indiana;IN House District 41
+IN House District 42	Indiana;IN House District 42
+IN House District 43	Indiana;IN House District 43
+IN House District 44	Indiana;IN House District 44
+IN House District 45	Indiana;IN House District 45
+IN House District 46	Indiana;IN House District 46
+IN House District 47	Indiana;IN House District 47
+IN House District 48	Indiana;IN House District 48
+IN House District 49	Indiana;IN House District 49
+IN House District 50	Indiana;IN House District 50
+IN House District 51	Indiana;IN House District 51
+IN House District 52	Indiana;IN House District 52
+IN House District 53	Indiana;IN House District 53
+IN House District 54	Indiana;IN House District 54
+IN House District 55	Indiana;IN House District 55
+IN House District 56	Indiana;IN House District 56
+IN House District 57	Indiana;IN House District 57
+IN House District 58	Indiana;IN House District 58
+IN House District 59	Indiana;IN House District 59
+IN House District 60	Indiana;IN House District 60
+IN House District 61	Indiana;IN House District 61
+IN House District 62	Indiana;IN House District 62
+IN House District 63	Indiana;IN House District 63
+IN House District 64	Indiana;IN House District 64
+IN House District 65	Indiana;IN House District 65
+IN House District 66	Indiana;IN House District 66
+IN House District 67	Indiana;IN House District 67
+IN House District 68	Indiana;IN House District 68
+IN House District 69	Indiana;IN House District 69
+IN House District 70	Indiana;IN House District 70
+IN House District 71	Indiana;IN House District 71
+IN House District 72	Indiana;IN House District 72
+IN House District 73	Indiana;IN House District 73
+IN House District 74	Indiana;IN House District 74
+IN House District 75	Indiana;IN House District 75
+IN House District 76	Indiana;IN House District 76
+IN House District 77	Indiana;IN House District 77
+IN House District 78	Indiana;IN House District 78
+IN House District 79	Indiana;IN House District 79
+IN House District 80	Indiana;IN House District 80
+IN House District 81	Indiana;IN House District 81
+IN House District 82	Indiana;IN House District 82
+IN House District 83	Indiana;IN House District 83
+IN House District 84	Indiana;IN House District 84
+IN House District 85	Indiana;IN House District 85
+IN House District 86	Indiana;IN House District 86
+IN House District 87	Indiana;IN House District 87
+IN House District 88	Indiana;IN House District 88
+IN House District 89	Indiana;IN House District 89
+IN House District 90	Indiana;IN House District 90
+IN House District 91	Indiana;IN House District 91
+IN House District 92	Indiana;IN House District 92
+IN House District 93	Indiana;IN House District 93
+IN House District 94	Indiana;IN House District 94
+IN House District 95	Indiana;IN House District 95
+IN House District 96	Indiana;IN House District 96
+IN House District 97	Indiana;IN House District 97
+IN House District 98	Indiana;IN House District 98
+IN House District 99	Indiana;IN House District 99
+IN House District 100	Indiana;IN House District 100
+IN Senate District 1	Indiana;IN Senate District 1
+IN Senate District 2	Indiana;IN Senate District 2
+IN Senate District 3	Indiana;IN Senate District 3
+IN Senate District 4	Indiana;IN Senate District 4
+IN Senate District 5	Indiana;IN Senate District 5
+IN Senate District 6	Indiana;IN Senate District 6
+IN Senate District 7	Indiana;IN Senate District 7
+IN Senate District 8	Indiana;IN Senate District 8
+IN Senate District 9	Indiana;IN Senate District 9
+IN Senate District 10	Indiana;IN Senate District 10
+IN Senate District 11	Indiana;IN Senate District 11
+IN Senate District 12	Indiana;IN Senate District 12
+IN Senate District 13	Indiana;IN Senate District 13
+IN Senate District 14	Indiana;IN Senate District 14
+IN Senate District 15	Indiana;IN Senate District 15
+IN Senate District 16	Indiana;IN Senate District 16
+IN Senate District 17	Indiana;IN Senate District 17
+IN Senate District 18	Indiana;IN Senate District 18
+IN Senate District 19	Indiana;IN Senate District 19
+IN Senate District 20	Indiana;IN Senate District 20
+IN Senate District 21	Indiana;IN Senate District 21
+IN Senate District 22	Indiana;IN Senate District 22
+IN Senate District 23	Indiana;IN Senate District 23
+IN Senate District 24	Indiana;IN Senate District 24
+IN Senate District 25	Indiana;IN Senate District 25
+IN Senate District 26	Indiana;IN Senate District 26
+IN Senate District 27	Indiana;IN Senate District 27
+IN Senate District 28	Indiana;IN Senate District 28
+IN Senate District 29	Indiana;IN Senate District 29
+IN Senate District 30	Indiana;IN Senate District 30
+IN Senate District 31	Indiana;IN Senate District 31
+IN Senate District 32	Indiana;IN Senate District 32
+IN Senate District 33	Indiana;IN Senate District 33
+IN Senate District 34	Indiana;IN Senate District 34
+IN Senate District 35	Indiana;IN Senate District 35
+IN Senate District 36	Indiana;IN Senate District 36
+IN Senate District 37	Indiana;IN Senate District 37
+IN Senate District 38	Indiana;IN Senate District 38
+IN Senate District 39	Indiana;IN Senate District 39
+IN Senate District 40	Indiana;IN Senate District 40
+IN Senate District 41	Indiana;IN Senate District 41
+IN Senate District 42	Indiana;IN Senate District 42
+IN Senate District 43	Indiana;IN Senate District 43
+IN Senate District 44	Indiana;IN Senate District 44
+IN Senate District 45	Indiana;IN Senate District 45
+IN Senate District 46	Indiana;IN Senate District 46
+IN Senate District 47	Indiana;IN Senate District 47
+IN Senate District 48	Indiana;IN Senate District 48
+IN Senate District 49	Indiana;IN Senate District 49
+IN Senate District 50	Indiana;IN Senate District 50
+US House IN District 1	Indiana;US House IN District 1
+US House IN District 2	Indiana;US House IN District 2
+US House IN District 3	Indiana;US House IN District 3
+US House IN District 4	Indiana;US House IN District 4
+US House IN District 5	Indiana;US House IN District 5
+US House IN District 6	Indiana;US House IN District 6
+US House IN District 7	Indiana;US House IN District 7
+US House IN District 8	Indiana;US House IN District 8
+US House IN District 9	Indiana;US House IN District 9
+US President (IN)	Indiana
+IN Governor	Indiana
+US Senate IN	Indiana
+IN Attorney General	Indiana
+IN Lieutenant Governor	Indiana
+IN Treasurer	Indiana
+IN Secretary of State	Indiana

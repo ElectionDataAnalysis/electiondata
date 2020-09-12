@@ -290,14 +290,16 @@ warning_keys = {
 }
 
 
-def get_params_to_read_results(d: dict, results_file, munger_name) -> (dict, list):
+def get_params_to_read_results(d: dict, results_file_path=None, munger_name=None) -> (dict, list):
+    """get parameters from arguments; otherwise from self.d;
+    return dictionary of parameters, and list of missing parameters"""
     kwargs = d
-    if results_file:
-        kwargs["results_file"] = results_file
+    if results_file_path:
+        kwargs["results_file_path"] = results_file_path
     if munger_name:
         kwargs["munger_name"] = munger_name
     missing = [
-        x for x in ["results_file", "munger_name", "project_root"] if kwargs[x] is None
+        x for x in ["results_file_path", "munger_name", "project_root"] if kwargs[x] is None
     ]
     return kwargs, missing
 
@@ -423,12 +425,12 @@ def read_single_datafile(
 
 def read_combine_results(
         mu: jm.Munger,
-        results_file: str,
+        results_file_path: str,
         err: dict,
         aux_data_dir: str = None,
 ) -> (pd.DataFrame, dict):
     if mu.options["file_type"] in ["concatenated-blocks"]:
-        working, new_err = sf.read_concatenated_blocks(results_file, mu, None)
+        working, new_err = sf.read_concatenated_blocks(results_file_path, mu, None)
         if working.empty or fatal_error(new_err):
             err = consolidate_errors([err,new_err])
             return working, err
@@ -438,13 +440,13 @@ def read_combine_results(
         mu.options["field_name_row"] = 0
     else:
         try:
-            working, new_err = read_single_datafile(mu, results_file, None)
+            working, new_err = read_single_datafile(mu, results_file_path, None)
         except Exception as exc:
 # TODO check this error
             err = add_new_error(
                 err,
                 "file",
-                results_file,
+                results_file_path,
                 f"Unexpected exception while reading file: {exc}",
             )
             return pd.DataFrame(), err
@@ -673,10 +675,11 @@ def report(
     values of <loc_dict> are directories for writing error files"""
     if not loc_dict:
         loc_dict = dict()
-    # list keys with content
-    active_keys = [k for k in err_warn.keys() if err_warn[k] != {}]
     # create error/warning messages for each error_type/name_key pair
     if err_warn:
+        # list keys with content
+        active_keys = [k for k in err_warn.keys() if err_warn[k] != {}]
+
         # create working list of ets to process
         ets_to_process = [
             et for et in error_keys if (et in active_keys) or (f"warn-{et}" in active_keys)

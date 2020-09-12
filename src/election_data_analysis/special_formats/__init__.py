@@ -153,7 +153,7 @@ def read_concatenated_blocks(
 # TODO check this error
         err = ui.add_new_error(
             err,
-            "munger-warn",
+            "warn-munger",
             munger.name,
             f"unparsed lines at bottom of file:\n{data}\n",
         )
