@@ -21,7 +21,9 @@ recognized_encodings = {
     "IBM775",
     "IBM861",
     "shift_jis",
+    "shift-jis",
     "euc_jp",
+    "euc-jp",
     "ibm1026",
     "ascii",
     "IBM437",
@@ -40,6 +42,7 @@ recognized_encodings = {
     "iso8859_14",
     "cp949",
     "utf_16",
+    "utf-16",
     "932",
     "cp737",
     "iso2022_jp_2004",
@@ -77,6 +80,7 @@ recognized_encodings = {
     "cp1257",
     "latin1",
     "mac_roman",
+    "mac-roman",
     "euckr",
     "latin3",
     "eucjis2004",
@@ -151,9 +155,11 @@ recognized_encodings = {
     "euc-cn",
     "latin5",
     "utf_8",
+    "utf-8",
     "ibm1140",
     "cp862",
     "euc_kr",
+    "euc-kr",
     "iso8859_8",
     "iso-8859-9",
     "utf8",
@@ -172,6 +178,7 @@ recognized_encodings = {
     "iso8859_7",
     "koi8_u",
     "mac_greek",
+    "mac-greek",
     "windows-1251",
     "cp775",
     "IBM860",
@@ -184,6 +191,7 @@ recognized_encodings = {
     "sjis2004",
     "cp1256",
     "sjis_2004",
+    "sjis-2004",
     "852",
     "windows-1250",
     "latin4",
@@ -193,6 +201,7 @@ recognized_encodings = {
     "latin6",
     "latin2",
     "mac_turkish",
+    "mac-turkish",
     "IBM862",
     "iso8859-1",
     "cp1026",
@@ -216,6 +225,7 @@ recognized_encodings = {
     "cp866",
     "CP-IS",
     "latin_1",
+    "latin-1",
     "L4",
     "euccn",
     "cyrillic",
@@ -223,6 +233,7 @@ recognized_encodings = {
     "cp863",
     "UTF-16LE",
     "mac_cyrillic",
+    "mac-cyrillic",
     "iso8859_10",
     "L8",
     "IBM869",
@@ -233,6 +244,7 @@ recognized_encodings = {
     "UTF",
     "utf8ascii",
     "utf_7",
+    "utf-7",
     "cp936",
     "euc_jis_2004",
     "iso-ir-58",
@@ -246,6 +258,7 @@ recognized_encodings = {
     "U8",
     "cp1254",
     "s_jis",
+    "s-jis",
     "gbk",
     "hebrew",
     "U16",
@@ -265,6 +278,7 @@ recognized_encodings = {
     "cp869",
     "cp875",
     "mac_iceland",
+    "mac-iceland",
     "iso8859_15",
     "maciceland",
     "utf_16_le",
@@ -319,8 +333,8 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
 
     # check munger files and (if no error) create munger
     mu, mu_err = jm.check_and_init_munger(my_munger_path)
+    error = consolidate_errors([error, mu_err])
     if fatal_error(mu_err):
-        error = consolidate_errors([error,mu_err])
         wr = pd.DataFrame()
     else:
         wr, error = read_combine_results(
@@ -338,20 +352,12 @@ def pick_juris_from_filesystem(juris_path, project_root, err, check_files=False)
     """
 
     if check_files:
-        missing_values = jm.ensure_jurisdiction_dir(juris_path)
-
-    # initialize the jurisdiction
-    if missing_values:
-# TODO check this error
-        err = add_new_error(
-            err,
-            "jurisdiction",
-            juris_path,
-            # TODO check missing_values -- what kind of object?
-            f"Missing values: {missing_values}",
-        )
+        new_err = jm.ensure_jurisdiction_dir(juris_path)
+    err = consolidate_errors([err,new_err])
+    if fatal_error(new_err):
         ss = None
     else:
+    # initialize the jurisdiction
         ss = jm.Jurisdiction(juris_path)
     return ss, err
 
@@ -364,7 +370,7 @@ def find_dupes(df):
 
 def read_single_datafile(
     munger: jm.Munger, f_path: str, err: dict
-) -> [pd.DataFrame, dict]:
+) -> (pd.DataFrame, dict):
     try:
         dtype = {c: str for c in munger.field_list}
         kwargs = {"thousands": munger.thousands_separator, "dtype": dtype}
@@ -384,17 +390,23 @@ def read_single_datafile(
             df = pd.read_csv(f_path, **kwargs)
         elif munger.file_type in ["xls", "xlsx"]:
             df = pd.read_excel(f_path, **kwargs)
+        elif munger.file_type in ['concatenated-blocks']:
+            err = add_new_error(
+                err,
+                "system",
+                "user_interface.read_single_datafile",
+                f"Munger ({munger.name}) with file_type {munger.file_type} should not have reached this part of the code."
+            )
+            return pd.DataFrame(), err
         else:
-# TODO check this error
             err = add_new_error(
                 err,
                 "munger",
                 munger.name,
                 f"Unrecognized file_type: {munger.file_type}",
             )
-            df = pd.DataFrame()
+            return pd.DataFrame(), err
         if df.empty:
-# TODO check this error
             err = add_new_error(
                 err,
                 "munger",
@@ -403,24 +415,23 @@ def read_single_datafile(
             )
         else:
             df = m.generic_clean(df)
-            err = jm.check_results_munger_compatibility(munger, df, err)
-        return [df, err]
+            err = jm.check_results_munger_compatibility(munger, df, Path(f_path).name, err)
+        return df, err
     except FileNotFoundError as fnfe:
-        e = fnfe
+        e = f"File not found: {f_path}"
     except UnicodeDecodeError as ude:
         e = f"Encoding error. Datafile not read completely.\n{ude}"
     except ParserError as pe:
         # DFs have trouble comparing against None. So we return an empty DF and
         # check for emptiness below as an indication of an error.
         e = f"Error parsing results file.\n{pe}"
-# TODO check this error
     err = add_new_error(
         err,
         "file",
-        f_path,
+        Path(f_path).name,
         e,
     )
-    return [pd.DataFrame(), err]
+    return pd.DataFrame(), err
 
 
 def read_combine_results(
@@ -431,8 +442,8 @@ def read_combine_results(
 ) -> (pd.DataFrame, dict):
     if mu.options["file_type"] in ["concatenated-blocks"]:
         working, new_err = sf.read_concatenated_blocks(results_file_path, mu, None)
+        err = consolidate_errors([err,new_err])
         if working.empty or fatal_error(new_err):
-            err = consolidate_errors([err,new_err])
             return working, err
         # set options that will be needed for going forward
         mu.options["count_columns"] = [working.columns.to_list().index("count")]
@@ -442,7 +453,6 @@ def read_combine_results(
         try:
             working, new_err = read_single_datafile(mu, results_file_path, None)
         except Exception as exc:
-# TODO check this error
             err = add_new_error(
                 err,
                 "file",
@@ -522,8 +532,9 @@ def new_datafile(
     raw, err = read_combine_results(
         munger, raw_path, err, aux_data_dir=aux_data_dir
     )
-    if raw.empty:
-# TODO check this error
+    if fatal_error(err):
+        return err
+    elif raw.empty:
         err = add_new_error(
             err,
             "file",
@@ -557,7 +568,6 @@ def new_datafile(
             if fatal_error(new_err):
                 return err
     except Exception as exc:
-# TODO check this error
         err = add_new_error(
             err,
             "system",
@@ -587,7 +597,6 @@ def get_runtime_parameters(
     parser = ConfigParser()
     p = parser.read(param_file)
     if len(p) == 0:
-# TODO check this error
         err = add_new_error(
             err,
             "file",
@@ -600,7 +609,6 @@ def get_runtime_parameters(
     try:
         h = parser[header]
     except KeyError as ke:
-# TODO check this error
         err = add_new_error(
             err,
             "ini",
@@ -617,13 +625,11 @@ def get_runtime_parameters(
         except KeyError:
             missing_required_params.append(k)
     if missing_required_params:
-        mrp = ",".join(missing_required_params)
-# TODO check this error
         err = add_new_error(
             err,
             "ini",
             param_file,
-            f"Missing required parameters: {mrp}"
+            f"Missing required parameters: {missing_required_params}"
         )
         return d, err
 
@@ -720,7 +726,7 @@ def report(
                         out_path = os.path.join(loc_dict[et], f"{nk_name}_{ts}.errors")
                         with open(out_path,"a") as f:
                             f.write(out_str)
-                        print(f"\n{et.title()} errors{and_warns} written to {out_path}")
+                        print(f"{et.title()} errors{and_warns} written to {out_path}")
                     else:
                         # print for user
                         print(out_str)
@@ -732,7 +738,7 @@ def report(
             for nk in only_warns:
                 # prepare output string
                 nk_name = Path(nk).name
-                out_str = f"\n{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n\n"
+                out_str = f"{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n"
 
                 # print/write output
                 if f"warn-{et}" in loc_dict.keys():
@@ -742,7 +748,7 @@ def report(
                     out_path = os.path.join(loc_dict[et], f"{nk_name}_{ts}.warnings")
                     with open(out_path,"a") as f:
                         f.write(out_str)
-                    print(f"\n{et.title()} warnings written to {out_path}")
+                    print(f"{et.title()} warnings written to {out_path}")
                 else:
                     # print for user
                     print(out_str)
@@ -760,7 +766,6 @@ def add_new_error(
     """err is a dictionary of dictionaries, one for each err_type.
     This function return err, augmented by the error specified in <err_type>,<key> and <msg>"""
     if err is None or err == dict():
-        print ("Initializing error/warning dictionary")
         err = {k:{} for k in warning_keys.union(error_keys)}
             # TODO document. Problems with results file are reported with "ini" key
     if err_type not in err.keys():

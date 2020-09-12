@@ -6,6 +6,7 @@ import datetime
 import os
 import pandas as pd
 import ntpath
+import inspect
 from pathlib import Path
 from election_data_analysis import analyze as a
 from election_data_analysis import visualize as v
@@ -403,6 +404,7 @@ class JurisdictionPrepper:
         {'Circuit Court':{'ReportingUnitType':'judicial','count':5}}
         """
         # TODO Feature: allow other districts to be set in paramfile
+        print(f"\nStarting {inspect.currentframe().f_code.co_name}")
         error = jm.ensure_jurisdiction_dir(self.d["jurisdiction_path"])
         # add default entries
         project_root = Path(__file__).absolute().parents[1]
@@ -428,6 +430,7 @@ class JurisdictionPrepper:
 
     def add_primaries_to_dict(self) -> dict:
         """Return error dictionary"""
+        print("\nStarting new_juris_files")
         error = None
 
         primaries = {}
@@ -602,6 +605,9 @@ class JurisdictionPrepper:
         return err
 
     def add_primaries_to_candidate_contest(self):
+
+        print(f"\nStarting {inspect.currentframe().f_code.co_name}")
+
         primaries = {}
         error = None
 
@@ -670,7 +676,11 @@ class JurisdictionPrepper:
             return error
 
         # read data from file (appending _SOURCE)
-        wr, munger, error = ui.read_results(kwargs, error)
+        wr, munger, new_err = ui.read_results(kwargs, error)
+        if new_err:
+            error = ui.consolidate_errors([error,new_err])
+            if ui.fatal_error(new_err):
+                return error
 
         if wr.empty:
             error = ui.add_new_error(
@@ -686,6 +696,18 @@ class JurisdictionPrepper:
             f"{field}_SOURCE"
             for field in munger.cdf_elements.loc["ReportingUnit", "fields"]
         ]
+        bad_fields = [f for f in fields if f not in wr.columns]
+        if bad_fields:
+            error = ui.add_new_error(
+                error,
+                "munger",
+                munger.name,
+                f"\n(ignore _SOURCE suffix below)\n"
+                f"ReportingUnit formula fields not found in file ({Path(results_file_path).name}): "
+                f"{bad_fields}\n"
+                f"file fields are:\n{wr.columns}",
+            )
+            return error
         wr = wr[fields].drop_duplicates()
 
         # get rid of all-blank rows
@@ -708,7 +730,9 @@ class JurisdictionPrepper:
                 error,
                 "munger",
                 munger.name,
-                f"ReportingUnit formula has wrong format (should have two parts separated by ;)",
+                f"ReportingUnit formula has wrong format for adding sub-county units. "
+                f"If counties and sub-county units can be identified by this munger, "
+                f"they should be separated by ;",
             )
             return error
 
@@ -769,6 +793,8 @@ class JurisdictionPrepper:
     ) -> dict:
         """Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
         for each file in <dir> named (with munger) in a .ini file in the directory"""
+        print(f"\nStarting {inspect.currentframe().f_code.co_name}")
+
         for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
             par_file = os.path.join(dir, par_file_name)
             file_dict, new_err = ui.get_runtime_parameters(
@@ -786,7 +812,9 @@ class JurisdictionPrepper:
             file_dict["results_file_path"] = os.path.join(
                 dir, file_dict["results_file"]
             )
-            error = self.add_sub_county_rus_from_results_file(error, **file_dict)
+            new_err = self.add_sub_county_rus_from_results_file(None, **file_dict)
+            if new_err:
+                error = ui.consolidate_errors([error,new_err])
         ui.report(error)
         return error
 
@@ -795,6 +823,9 @@ class JurisdictionPrepper:
     ) -> dict:
         """Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
         for each file in <dir> named (with munger) in a .ini file in the directory"""
+
+        print(f"\nStarting {inspect.currentframe().f_code.co_name}")
+
         for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
             # pull parameters from file
             par_file = os.path.join(dir, par_file_name)

@@ -167,17 +167,21 @@ class Munger:
             # find file in aux_data_dir whose name contains the string <afn>
             aux_filename_list = [x for x in os.listdir(aux_data_dir) if abbrev in x]
             if len(aux_filename_list) == 0:
-                e = f"No file found with name containing {abbrev} in the directory {aux_data_dir}"
-                if "datafile" in err.keys():
-                    err["datafile"].append(e)
-                else:
-                    err["datafile"] = [e]
+# TODO check this error
+                err = ui.add_new_error(
+                    err,
+                    "file",
+                    aux_data_dir,
+                    f"No file found with name containing {abbrev}",
+                )
             elif len(aux_filename_list) > 1:
-                e = f"Too many files found with name containing {abbrev} in the directory {aux_data_dir}"
-                if "datafile" in err.keys():
-                    err["datafile"].append(e)
-                else:
-                    err["datafile"] = [e]
+# TODO check this error
+                err = ui.add_new_error(
+                    err,
+                    "file",
+                    aux_data_dir,
+                    f"Too many files found with name containing {abbrev}",
+                )
             else:
                 aux_path = os.path.join(aux_data_dir, aux_filename_list[0])
 
@@ -462,7 +466,6 @@ def check_munger_files(munger_path: str) -> dict:
             if not ui.fatal_error(err,error_type_list=["munger"],name_key_list=[munger_file]):
                 err = check_munger_file_contents(munger_path, munger_file, err)
         else:
-# TODO check this error
             err = ui.add_new_error(
                 err,
                 "munger",
@@ -490,36 +493,13 @@ def check_munger_file_format(
 
         # check column names are correct
         if set(cf_df.columns) != set(temp.columns):
-            cols = "\t".join(temp.columns.to_list())
-# TODO check this error
             err = ui.add_new_error(
                 err,
                 "munger",
                 munger_path,
-                f"Columns in {munger_file} need to be (tab-separated):\n" f" {cols}\n",
-            )
-
-        # check first column matches template
-        #  check same number of rows
-        elif cf_df.shape[0] != temp.shape[0]:
-            first_col = "\n".join(list(temp.iloc[:, 0]))
-# TODO check this error
-            err = ui.add_new_error(
-                err,
-                "munger",
-                munger_path,
-                f"Wrong number of rows in {munger_file}. \nFirst column must be exactly:\n{first_col}",
-            )
-        elif set(cf_df.iloc[:, 0]) != set(temp.iloc[:, 0]):
-            first_error = (cf_df.iloc[:, 0] != temp.iloc[:, 0]).index.to_list()[0]
-            first_col = "\n".join(list(temp.iloc[:, 0]))
-# TODO check this error
-            err = ui.add_new_error(
-                err,
-                "munger",
-                munger_path,
-                f"First column of {munger_file}.txt must be exactly:\n{first_col}\n"
-                f"First error is at row {first_error}: {cf_df.loc[first_error]}",
+                f"Columns in {munger_file} do not match template.:\n" 
+                f"Columns of {munger_file}: {cf_df.columns}\n"
+                f"Columns of template: {temp.columns}",
             )
 
     elif munger_file == "format.config":
@@ -531,7 +511,6 @@ def check_munger_file_format(
             optional_keys=list(munger_pars_opt.keys()),
         )
     else:
-# TODO check this error
         err = ui.add_new_error(
             err,
             "munger",
@@ -553,13 +532,11 @@ def check_munger_file_contents(munger_path, munger_file, err):
         # every source in cdf_elements is either row, column or other
         bad_source = [x for x in cdf_elements.source if x not in ["row", "column"]]
         if bad_source:
-            b_str = ",".join(bad_source)
-# TODO check this error
             err = ui.add_new_error(
                 err,
                 "warn-munger",
                 munger_name,
-                f"At least one source in cdf_elements.txt is not recognized: {b_str}",
+                f"Source(s) in cdf_elements.txt not recognized: {bad_source}",
             )
 
         # formulas have good syntax
@@ -596,13 +573,11 @@ def check_munger_file_contents(munger_path, munger_file, err):
                 if bad_integer_list:
                     bad_column_formula.add(r["raw_identifier_formula"])
         if bad_column_formula:
-            cf_str = ",".join(bad_column_formula)
-# TODO check this error
             err = ui.add_new_error(
                 err,
                 "munger",
                 munger_name,
-                f"At least one column-source formula in cdf_elements.txt has bad syntax: {cf_str}"
+                f"At least one column-source formula in cdf_elements.txt has bad syntax: {bad_column_formula}"
             )
 
     elif munger_file == "format.config":
@@ -616,7 +591,6 @@ def check_munger_file_contents(munger_path, munger_file, err):
 
         # warn if encoding missing or is not recognized
         if "encoding" not in format_d.keys():
-# TODO check this error
             err = ui.add_new_error(
                 err,
                 "warn-munger",
@@ -624,7 +598,6 @@ def check_munger_file_contents(munger_path, munger_file, err):
                 f"No encoding specified; iso-8859-1 will be used",
             )
         elif not format_d["encoding"] in ui.recognized_encodings:
-# TODO check this error
             err = ui.add_new_error(
                 err,
                 "warn-munger",
@@ -637,11 +610,16 @@ def check_munger_file_contents(munger_path, munger_file, err):
 
         # check all parameters for flat files
         if format_d["file_type"] in ["txt", "csv", "xls"]:
-            # Either field_name_row is a number, or field_names_if_no_field_name_row is not the empty string
-            if (not format_d["field_name_row"].isnumeric()) and len(
-                format_d["field_names_if_no_field_name_row"]
-            ) == 0:
-# TODO check this error
+            # Either field_name_row is a number, or field_names_if_no_field_name_row is a non-empty list
+            if (
+                    (not format_d["field_name_row"])
+                    or
+                    (not format_d["field_name_row"].isnumeric())
+                 and (
+                    (not format_d["field_names_if_no_field_name_row"])
+                    or
+                    len(format_d["field_names_if_no_field_name_row"]) == 0)
+            ):
                 err = ui.add_new_error(
                     err,
                     "munger",
@@ -655,8 +633,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
             # other entries in format.config are of correct type
             try:
                 int(format_d["header_row_count"])
-            except TypeError or ValueError:
-# TODO check this error
+            except (TypeError,ValueError):
                 err = ui.add_new_error(
                     err,
                     "munger",
@@ -669,8 +646,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
             for key in ["count_of_top_lines_to_skip", "last_header_column_count", "column_width"]:
                 try:
                     int(format_d[key])
-                except ValueError or TypeError:
-# TODO check this error
+                except (ValueError,TypeError):
                     err = ui.add_new_error(
                         err,
                         "munger",
@@ -678,7 +654,6 @@ def check_munger_file_contents(munger_path, munger_file, err):
                         f'{key} is not an integer:  {format_d[key]}',
                     )
     else:
-# TODO check this error
         err = ui.add_new_error(
             err,
             "system",
@@ -753,7 +728,6 @@ def check_dependencies(juris_dir, element) -> (list, dict):
     # Find all dependent columns
     dependent = [c for c in element_df if c in d.keys()]
     changed_elements = set()
-    report = [f"In {element}.txt:"]
     for c in dependent:
         target = d[c]
         ed = (
@@ -788,8 +762,14 @@ def check_dependencies(juris_dir, element) -> (list, dict):
         missing = [x for x in ed if x not in ru]
         # if the only missing is null or blank
         if len(missing) == 1 and missing == [""]:
-            # TODO some dependencies are ok with null (eg. PrimaryParty) and some are not
-            report.append(f"Some {c} are null, and every non-null {c} is a {target}.")
+            # exclude PrimaryParty, which isn't required to be not-null
+            if c != 'PrimaryParty':
+                err = ui.add_new_error(
+                    err,
+                    "jurisdiction",
+                    juris_name,
+                    f"Some {c} are null."
+                )
         elif missing:
             changed_elements.add(element)
             changed_elements.add(target)
@@ -930,16 +910,17 @@ def get_ids_for_foreign_keys(
 
 
 def check_results_munger_compatibility(
-    mu: Munger, df: pd.DataFrame, error: dict
+    mu: Munger, df: pd.DataFrame, file_name, error: dict
 ) -> dict:
     # check that count columns exist
     missing = [i for i in mu.options["count_columns"] if i >= df.shape[1]]
     if missing:
-        e = f"Only {df.shape[1]} columns read from file. Check file_type in format.ini"
-        if "datafile" in error.keys():
-            error["datafile"].append(e)
-        else:
-            error["datafile"] = e
+        error = ui.add_new_error(
+            error,
+            "munger",
+            mu.name,
+            f"Only {df.shape[1]} columns read from results file {file_name}. Check file_type in format.config",
+        )
     else:
         # check that count cols are numeric
         for i in mu.options["count_columns"]:
@@ -947,11 +928,12 @@ def check_results_munger_compatibility(
                 try:
                     df.iloc[:, i] = df.iloc[:, i].astype(int)
                 except ValueError as ve:
-                    e = f"Column {i} ({df.columns[i]}) cannot be parsed as an integer.\n{ve}"
-                    if "datafile" in error.keys():
-                        error["datafile"].append(e)
-                    else:
-                        error["datafile"] = e
+                    error = ui.add_new_error(
+                        error,
+                        "munger",
+                        mu.name,
+                        f"Column {i} ({df.columns[i]}) cannot be parsed as an integer.\n{ve}",
+                    )
     return error
 
 
