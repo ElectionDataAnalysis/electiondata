@@ -108,13 +108,7 @@ class DataLoader:
         if new_err:
             err = ui.consolidate_errors([err,new_err])
         if ui.fatal_error(new_err):
-# TODO check this error
-            err = ui.add_new_error(
-                err,
-                "system",
-                "DataLoader.load_all",
-                "Unexpected error while getting db name from run_time_ini"
-            )
+            return err
         success_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
 
 
@@ -277,6 +271,8 @@ class SingleDataLoader:
         return self.parameter_err, self.munger_err
 
     def track_results(self):
+        """insert a record for the _datafile, recording any error string <e>.
+        Return Id of _datafile.Id and Election.Id """
         filename = self.d["results_file"]
         top_reporting_unit_id = db.name_to_id(
             self.session, "ReportingUnit", self.d["top_reporting_unit"]
@@ -323,13 +319,13 @@ class SingleDataLoader:
         print(f'Processing {self.d["results_file"]}')
         results_info, e = self.track_results()
         if e:
-# TODO check this error
             err = ui.add_new_error(
                 err,
                 "system",
-                "SingleDataLoader.load_results"
+                "SingleDataLoader.load_results",
                 f"database error: {e}"
             )
+            return err
 
         else:
             for mu in self.munger_list:
@@ -425,7 +421,12 @@ class JurisdictionPrepper:
             "templates/jurisdiction_templates"
         )
         for element in ["Party", "Election"]:
-            prep.add_defaults(self.d["jurisdiction_path"], templates, element)
+            new_err = prep.add_defaults(self.d["jurisdiction_path"], templates, element)
+            if new_err:
+                error = ui.consolidate_errors([error,new_err])
+                if ui.fatal_error(new_err):
+                    return error
+
 
         # add all standard Offices/RUs/CandidateContests
         self.add_standard_contests()
@@ -493,13 +494,18 @@ class JurisdictionPrepper:
             new_dictionary = pd.concat(df_list)
         else:
             new_dictionary = d
-        prep.write_element(self.d["jurisdiction_path"], "dictionary", new_dictionary)
+        new_err = prep.write_element(self.d["jurisdiction_path"], "dictionary", new_dictionary)
+        ui.consolidate_errors([error,new_err])
         return error
 
     def add_standard_contests(
         self, juriswide_contests: list = None, other_districts: dict = None
-    ):
-        """If <juriswide_contest> is None, use standard list hard-coded."""
+    ) -> dict:
+        """If <juriswide_contest> is None, use standard list hard-coded.
+        Returns error dictionary"""
+        #initialize error dictionary
+        err = None
+
         name = self.d["name"]
         abbr = self.d["abbreviated_name"]
         count = {
@@ -587,16 +593,29 @@ class JurisdictionPrepper:
         )
         w_cc = w_cc.append(jw_cc, ignore_index=True)
 
-        prep.write_element(
+        new_err = prep.write_element(
             self.d["jurisdiction_path"], "Office", w_office.drop_duplicates()
         )
-        prep.write_element(
+        if new_err:
+            err = ui.consolidate_errors([err,new_err])
+            if ui.fatal_error(new_err):
+                return err
+
+        new_err = prep.write_element(
             self.d["jurisdiction_path"], "ReportingUnit", w_ru.drop_duplicates()
         )
-        prep.write_element(
+        if new_err:
+            err = ui.consolidate_errors([err,new_err])
+            if ui.fatal_error(new_err):
+                return err
+        new_err = prep.write_element(
             self.d["jurisdiction_path"], "CandidateContest", w_cc.drop_duplicates()
         )
-        return
+        if new_err:
+            err = ui.consolidate_errors([err,new_err])
+            if ui.fatal_error(new_err):
+                return err
+        return err
 
     def add_primaries_to_candidate_contest(self):
         primaries = {}
@@ -628,11 +647,12 @@ class JurisdictionPrepper:
             primaries[p]["PrimaryParty"] = p
 
         all_primaries = [primaries[p] for p in parties.Name.unique()]
-        prep.write_element(
+        new_err = prep.write_element(
             self.d["jurisdiction_path"],
             "CandidateContest",
             pd.concat([contests] + all_primaries),
         )
+        error = ui.consolidate_errors([error,new_err])
         return error
 
     def add_sub_county_rus_from_results_file(
@@ -741,18 +761,23 @@ class JurisdictionPrepper:
         # add info to ReportingUnit.txt
         ru_add = wr[["Name", "ReportingUnitType"]]
         ru_old = prep.get_element(self.d["jurisdiction_path"], "ReportingUnit")
-        prep.write_element(
+        new_err = prep.write_element(
             self.d["jurisdiction_path"], "ReportingUnit", pd.concat([ru_old, ru_add])
         )
+        if new_err:
+            error = ui.consolidate_errors([error,new_err])
+            if ui.fatal_error(new_err):
+                return error
 
         # add info to dictionary
         wr.rename(columns={"Name": "cdf_internal_name"}, inplace=True)
         dict_add = wr[["cdf_element", "cdf_internal_name", "raw_identifier_value"]]
-        prep.write_element(
+        new_err = prep.write_element(
             self.d["jurisdiction_path"],
             "dictionary",
             pd.concat([ru_dict_old, dict_add]),
         )
+        error = ui.consolidate_errors([error,new_err])
         return error
 
     def add_sub_county_rus_from_multi_results_file(
@@ -867,7 +892,11 @@ class JurisdictionPrepper:
                 columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
             )
             wd = pd.concat([wd, new_raw_df]).drop_duplicates()
-            prep.write_element(self.d["jurisdiction_path"], "dictionary", wd)
+            new_err = prep.write_element(self.d["jurisdiction_path"], "dictionary", wd)
+            if new_err:
+                error = ui.consolidate_errors([error, new_err])
+                if ui.fatal_error(new_err):
+                    return error
 
             # find cdf_internal_names that are not in <element>.txt and add them to <element>.txt
             we = prep.get_element(self.d["jurisdiction_path"], element)
@@ -883,7 +912,11 @@ class JurisdictionPrepper:
                 [[x] for x in new_internal], columns=[name_field]
             )
             we = pd.concat([we, new_internal_df]).drop_duplicates()
-            prep.write_element(self.d["jurisdiction_path"], element, we)
+            new_err = prep.write_element(self.d["jurisdiction_path"], element, we)
+            if new_err:
+                ui.consolidate_errors([error,new_err])
+                if ui.fatal_error(new_err):
+                    return error
             # if <element>.txt has columns other than <name_field>, notify user
             if we.shape[1] > 1 and not new_internal_df.empty:
 # TODO check this error
@@ -895,7 +928,7 @@ class JurisdictionPrepper:
                 )
         return error
 
-    def starter_dictionary(self, include_existing=True) -> str:
+    def starter_dictionary(self, include_existing=True) -> dict:
         """Creates a starter file for dictionary.txt, assuming raw_identifiers are the same as cdf_internal names.
         Puts file in the current directory"""
         w = dict()
@@ -926,7 +959,10 @@ class JurisdictionPrepper:
             ]
         ).drop_duplicates()
         err = prep.write_element(
-            ".", "dictionary", starter, file_name=starter_file_name
+            ".",
+            "dictionary",
+            starter,
+            file_name=starter_file_name
         )
         print(
             f"Starter dictionary created in current directory (not in jurisdiction directory):\n{starter_file_name}"

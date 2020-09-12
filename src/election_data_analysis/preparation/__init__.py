@@ -58,7 +58,7 @@ def remove_empty_lines(df: pd.DataFrame, element: str) -> pd.DataFrame:
 
 def write_element(
     juris_path: str, element: str, df: pd.DataFrame, file_name=None
-) -> str:
+) -> dict:
     """<juris> is path to jurisdiction directory. Info taken
     from <element>.txt file in that directory.
     <element>.txt is overwritten with info in <df>"""
@@ -75,12 +75,18 @@ def write_element(
             sep="\t",
         )
     except Exception as e:
-        err = f"Unexpected exception writing to file: {e}"
+# TODO check this error
+        err = ui.add_new_error(
+            err,
+            "system",
+            "preparation.write_element",
+            f"Unexpected exception writing to file: {e}",
+        )
     return err
 
 
-def add_defaults(juris_path: str, juris_template_dir: str, element: str):
+def add_defaults(juris_path: str, juris_template_dir: str, element: str) -> dict:
     old = get_element(juris_path, element)
     new = get_element(juris_template_dir, element)
-    write_element(juris_path, element, pd.concat([old, new]).drop_duplicates())
-    return
+    err = write_element(juris_path, element, pd.concat([old, new]).drop_duplicates())
+    return err
