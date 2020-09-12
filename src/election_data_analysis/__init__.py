@@ -661,7 +661,6 @@ class JurisdictionPrepper:
                 results_file = Path(results_file_path).name
             else:
                 results_file = None
-# TODO check this error
             error = ui.add_new_error(
                 error,
                 "ini",
@@ -674,11 +673,10 @@ class JurisdictionPrepper:
         wr, munger, error = ui.read_results(kwargs, error)
 
         if wr.empty:
-# TODO check this error
             error = ui.add_new_error(
                 error,
                 "file",
-
+                Path(results_file_path).name,
                 f"No results read from file. Parameters: {kwargs}"
             )
             return error
@@ -693,12 +691,11 @@ class JurisdictionPrepper:
         # get rid of all-blank rows
         wr = wr[(wr != "").any(axis=1)]
         if wr.empty:
-# TODO check this error
-            ui.add_new_error(
+            error = ui.add_new_error(
                 error,
                 "ini",
-                "jurisdiction_prep.ini"
-                f"No relevant information read from results file. Parameters: {kwargs}",
+                "jurisdiction_prep.ini",
+                f"No relevant information read from results file ({Path(results_file_path).name}). Parameters: {kwargs}",
             )
             return error
 
@@ -707,8 +704,7 @@ class JurisdictionPrepper:
         try:
             [county_formula, sub_ru_formula] = ru_formula.split(";")
         except ValueError:
-# TODO check this error
-            ui.add_new_error(
+            error = ui.add_new_error(
                 error,
                 "munger",
                 munger.name,
@@ -791,6 +787,7 @@ class JurisdictionPrepper:
                 dir, file_dict["results_file"]
             )
             error = self.add_sub_county_rus_from_results_file(error, **file_dict)
+        ui.report(error)
         return error
 
     def add_elements_from_multi_results_file(
@@ -838,21 +835,19 @@ class JurisdictionPrepper:
             self.d, results_file_path, munger_name
         )
         if missing:
-# TODO check this error
-            error = ui.add_new_error(
-                error,
-                "ini"
-                "jurisdiction_prep.ini",
-                f"Parameters missing: {missing}. Results file cannot be processed.",
-            )
-            return error
-        elif ("results_file_ath" in kwargs.keys()) and not (os.path.isfile(kwargs["results_file_path"])):
-# TODO check this error
             error = ui.add_new_error(
                 error,
                 "ini",
                 "jurisdiction_prep.ini",
-                f"results_file not found: {kwargs['results_file']}"
+                f"Parameters missing: {missing}. Results file cannot be processed.",
+            )
+            return error
+        elif ("results_file_path" in kwargs.keys()) and not (os.path.isfile(kwargs["results_file_path"])):
+            error = ui.add_new_error(
+                error,
+                "file",
+                Path(kwargs['results_file_path']).name,
+                f"File not found: {kwargs['results_file_path']}"
             )
             return error
 

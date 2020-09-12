@@ -98,7 +98,7 @@ def read_concatenated_blocks(
                     f"does not evenly divide the number of count columns in the results file " \
                     f"({len(last_header)})"
 # TODO check this error
-                ui.add_new_error(err,
+                err = ui.add_new_error(err,
                                  "munger",
                                  munger.name,
                                  e,
