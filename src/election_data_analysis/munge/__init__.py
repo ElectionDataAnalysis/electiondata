@@ -346,7 +346,6 @@ def replace_raw_with_internal_ids(
             f"will not be loaded to database. These records (raw name, internal name) were found in dictionary.txt, but "
             f"no corresponding record was found in {element}.txt: \n{unmatched_str}"
         )
-# TODO check this error
         error = ui.add_new_error(
             error,
             "warn-jurisdiction",
@@ -355,6 +354,7 @@ def replace_raw_with_internal_ids(
         )
 
     if drop_unmatched:
+        # if all are unmatched
         if working_unmatched.shape[0] == working.shape[0]:
             error = ui.add_new_error(
                 error,
@@ -366,6 +366,10 @@ def replace_raw_with_internal_ids(
                  ),
             )
             return working.drop(working.index), error
+        # if only some are unmatched
+        else:
+            # drop the unmatched ones
+            working.drop(labels=working_unmatched.index, inplace=True)
 
     else:
         # change name of unmatched to 'none or unknown' and assign <unmatched_id> as Id
