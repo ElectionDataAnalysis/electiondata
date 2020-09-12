@@ -356,7 +356,6 @@ def replace_raw_with_internal_ids(
 
     if drop_unmatched:
         if working_unmatched.shape[0] == working.shape[0]:
-# TODO check this error
             error = ui.add_new_error(
                 error,
                 "jurisdiction",
@@ -562,6 +561,16 @@ def add_contest_id(
     # FIXME: check somewhere that no name (other than 'none or unknown') is shared by BMContests and CandidateContests
     # TODO check this also when juris files loaded, to save time for user
 
+    # drop obsolete columns
+    common_cols = [
+        c
+        for c in w_for_type["BallotMeasure"].columns
+        if c in w_for_type["Candidate"].columns
+    ]
+    for c_type in ["BallotMeasure", "Candidate"]:
+        w_for_type[c_type] = w_for_type[c_type][common_cols]
+
+    # assemble working from the two pieces
     working = pd.concat([w_for_type[ct] for ct in ["BallotMeasure", "Candidate"]])
 
     # fail if fatal errors or no contests recognized
@@ -574,16 +583,6 @@ def add_contest_id(
         )
     if ui.fatal_error(err):
         return working, err
-
-    # drop obsolete columns
-    # TODO code below (here to return) is dead. Revive it?
-    common_cols = [
-        c
-        for c in w_for_type["BallotMeasure"].columns
-        if c in w_for_type["Candidate"].columns
-    ]
-    for c_type in ["BallotMeasure", "Candidate"]:
-        w_for_type[c_type] = w_for_type[c_type][common_cols]
 
     return working, err
 
