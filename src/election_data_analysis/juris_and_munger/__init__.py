@@ -310,34 +310,28 @@ def read_munger_info_from_files(dir_path):
 
 # TODO combine ensure_jurisdiction_dir with ensure_juris_files
 def ensure_jurisdiction_dir(juris_path, ignore_empty=False):
-    path_output = None
     # create jurisdiction directory
     try:
         Path(juris_path).mkdir(parents=True)
+        print(f"Directory {juris_path} created.")
     except FileExistsError:
         pass
-    else:
-        path_output = f"Directory {juris_path} created."
 
     # ensure the contents of the jurisdiction directory are correct
-    juris_file_error = ensure_juris_files(
+    err = ensure_juris_files(
         juris_path, ignore_empty=ignore_empty
     )
-    if path_output:
-        juris_file_error["directory_status"] = path_output
-    if juris_file_error:
-        return juris_file_error
-    else:
-        return None
+    return err
 
 
-def ensure_juris_files(juris_path, ignore_empty=False):
+def ensure_juris_files(juris_path, ignore_empty=False) -> dict:
     """Check that the jurisdiction files are complete and consistent with one another.
     Check for extraneous files in Jurisdiction directory.
     Assumes Jurisdiction directory exists. Assumes dictionary.txt is in the template file"""
 
     # package possible errors from this function into a dictionary and return them
-    error_ensure_juris_files = {}
+    err = None
+    juris_name = Path(juris_path).name
 
     project_root = Path(__file__).parents[2].absolute()
     templates_dir = os.path.join(project_root, "templates/jurisdiction_templates")
@@ -345,21 +339,21 @@ def ensure_juris_files(juris_path, ignore_empty=False):
     extraneous = [
         f
         for f in os.listdir(juris_path)
-        if f != "remark.txt" and f not in os.listdir(templates_dir) and f[0] != "."
+        if f not in os.listdir(templates_dir) and f[0] != "."
     ]
     if extraneous:
-        error_ensure_juris_files["extraneous_files_in_juris_directory"] = extraneous
-        extraneous = []
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            juris_name,
+            f"extraneous_files_in_juris_directory {extraneous}"
+        )
 
     template_list = [x[:-4] for x in os.listdir(templates_dir)]
 
     # reorder template_list, so that first things are created first
     ordered_list = ["dictionary", "ReportingUnit", "Office", "CandidateContest"]
     template_list = ordered_list + [x for x in template_list if x not in ordered_list]
-
-    file_empty = []
-    column_errors = []
-    null_columns_dict = {}
 
     # ensure necessary all files exist
     for juris_file in template_list:
@@ -375,18 +369,17 @@ def ensure_juris_files(juris_path, ignore_empty=False):
             )
         except pd.errors.EmptyDataError:
             if not ignore_empty:
-                file_empty.append(
-                    "Template file {" + juris_file + "}.txt has no contents"
+                err = ui.add_new_error(
+                    err,
+                    "system",
+                    "juris_and_munger.ensure_juris_files",
+                    "Template file {" + juris_file + "}.txt has no contents",
                 )
-                # print(f'Template file {juris_file}.txt has no contents')
             temp = pd.DataFrame()
+        # if file does not exist
         if not os.path.isfile(cf_path):
+            # create the file
             temp.to_csv(cf_path, sep="\t", index=False)
-            file_empty.append(
-                "File {"
-                + juris_file
-                + "}.txt has just been created. Enter information in the file"
-            )
             created = True
 
         # if file exists, check format against template
@@ -400,13 +393,15 @@ def ensure_juris_files(juris_path, ignore_empty=False):
             if set(cf_df.columns) != set(temp.columns):
                 print(juris_file)
                 cols = "\t".join(temp.columns.to_list())
-                column_errors.append(
-                    f"Columns of {juris_file}.txt need to be (tab-separated):\n "
-                    f" {cols}\n"
+                err = ui.add_new_error(
+                    err,
+                    "jurisdiction",
+                    juris_name,
+                    f"Columns of {juris_file}.txt need to be (tab-separated):\n {cols}\n",
                 )
 
             if juris_file == "dictionary":
-                # dedupe the dictionary (d records the dupes found)
+                # dedupe the dictionary
                 dedupe(cf_path)
             else:
                 # dedupe the file
@@ -414,30 +409,20 @@ def ensure_juris_files(juris_path, ignore_empty=False):
                 # check for problematic null entries
                 null_columns = check_nulls(juris_file, cf_path, project_root)
                 if null_columns:
-                    null_columns_dict[juris_file] = null_columns
-
-            if column_errors:
-                error_ensure_juris_files["column_errors"] = column_errors
-            if null_columns_dict:
-                error_ensure_juris_files["null_columns"] = null_columns_dict
-
-        if file_empty:
-            error_ensure_juris_files["file_empty_errors"] = file_empty
+                    err = ui.add_new_error(
+                        err,
+                        "jurisdiction",
+                        juris_name,
+                        f"Null entries in {juris_file} in columns {null_columns}"
+                    )
 
     # check dependencies
-    dependency_error = []
     for juris_file in [x for x in template_list if x != "remark" and x != "dictionary"]:
         # check dependencies
-        d, dep_error = check_dependencies(juris_path, juris_file)
-        if dep_error:
-            dependency_error.append(dep_error)
-    if dependency_error:
-        error_ensure_juris_files["failed_dependencies"] = dependency_error
-    if error_ensure_juris_files:
-        return error_ensure_juris_files
-    else:
-        return {}
-
+        d, new_err = check_dependencies(juris_path, juris_file)
+        if new_err:
+            err = ui.consolidate_errors([err,new_err])
+    return err
 
 def check_munger_files(munger_path: str) -> dict:
     """Check that the munger files are complete and consistent with one another.
@@ -705,14 +690,14 @@ def check_munger_file_contents(munger_path, munger_file, err):
     return err
 
 
-def dedupe(f_path, warning="There are duplicates"):
+def dedupe(f_path):
     # TODO allow specification of unique constraints
     df = pd.read_csv(f_path, sep="\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL)
     dupe = ""
     dupes_df, df = ui.find_dupes(df)
     if not dupes_df.empty:
         df.to_csv(f_path, sep="\t", index=False)
-    return df, dupe
+    return
 
 
 def check_nulls(element, f_path, project_root):
@@ -742,21 +727,29 @@ def check_nulls(element, f_path, project_root):
     return problem_columns
 
 
-def check_dependencies(juris_dir, element):
+def check_dependencies(juris_dir, element) -> (list, dict):
     """Looks in <juris_dir> to check that every dependent column in <element>.txt
     is listed in the corresponding jurisdiction file. Note: <juris_dir> assumed to exist.
     """
+    err = None
+    juris_name = Path(juris_dir).name
     d = juris_dependency_dictionary()
     f_path = os.path.join(juris_dir, f"{element}.txt")
-    assert os.path.isdir(juris_dir)
-    element_df = pd.read_csv(
-        f_path,
-        sep="\t",
-        index_col=None,
-        encoding="iso-8859-1",
-        quoting=csv.QUOTE_MINIMAL,
-    )
-    unmatched_error = []
+    try:
+        element_df = pd.read_csv(
+            f_path,
+            sep="\t",
+            index_col=None,
+            encoding="iso-8859-1",
+            quoting=csv.QUOTE_MINIMAL,
+        )
+    except FileNotFoundError:
+        err = ui.add_new_error(
+            err,
+            "system",
+            "juris_and_munger.check_dependencies",
+            f"file doesn't exist: {f_path}",
+        )
 
     # Find all dependent columns
     dependent = [c for c in element_df if c in d.keys()]
@@ -794,25 +787,22 @@ def check_dependencies(juris_dir, element):
             pass
 
         missing = [x for x in ed if x not in ru]
-        if len(missing) == 0:
-            report.append(f"Every {c} in {element}.txt is a {target}.")
-        elif len(missing) == 1 and missing == [
-            ""
-        ]:  # if the only missing is null or blank
+        # if the only missing is null or blank
+        if len(missing) == 1 and missing == [""]:
             # TODO some dependencies are ok with null (eg. PrimaryParty) and some are not
             report.append(f"Some {c} are null, and every non-null {c} is a {target}.")
-        else:
+        elif missing:
             changed_elements.add(element)
             changed_elements.add(target)
             m_str = "\n".join(missing)
-            unmatched_error.append(
-                f"Every {c} must be a {target}. This is not optional!! Offenders:\n{m_str}"
+            err = ui.add_new_error(
+                err,
+                "jurisdiction",
+                juris_name,
+                f"Every {c} must be a {target}. This is not optional!! Offenders:\n{m_str}",
             )
 
-    # if dependent:
-    #     print('\n\t'.join(report))
-
-    return changed_elements, unmatched_error
+    return changed_elements, err
 
 
 def juris_dependency_dictionary():

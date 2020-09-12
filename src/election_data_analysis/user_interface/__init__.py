@@ -762,12 +762,11 @@ def add_new_error(
         err = {k:{} for k in warning_keys.union(error_keys)}
             # TODO document. Problems with results file are reported with "ini" key
     if err_type not in err.keys():
-# TODO check this error
         err = add_new_error(
             err,
             "system",
             "user_interface.add_new_error",
-            f"{err_type}: {msg}")
+            f"Unrecognized key ({err_type}) for message {msg}")
         return err
     if key in err[err_type].keys():
         err[err_type][key].append(msg)
