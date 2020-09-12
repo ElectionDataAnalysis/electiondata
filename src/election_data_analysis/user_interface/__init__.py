@@ -325,7 +325,7 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
     else:
         wr, error = read_combine_results(
             mu,
-            params["results_file"],
+            params["results_file_path"],
             error
         )
         wr.columns = [f"{x}_SOURCE" for x in wr.columns]

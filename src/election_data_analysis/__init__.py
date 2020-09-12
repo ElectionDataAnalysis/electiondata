@@ -665,7 +665,7 @@ class JurisdictionPrepper:
             error = ui.add_new_error(
                 error,
                 "ini",
-                "jurisdiction_prep.ini"
+                "jurisdiction_prep.ini",
                 f"Parameters missing for processing {results_file or self.d['results_file']}: {missing}.",
             )
             return error
@@ -815,9 +815,10 @@ class JurisdictionPrepper:
             if new_err:
                 error = ui.consolidate_errors([error,new_err])
             if not ui.fatal_error(error):
-                error = self.add_elements_from_results_file(
+                new_err = self.add_elements_from_results_file(
                     elements, error, **file_dict
                 )
+                error = ui.consolidate_errors([error,new_err])
         ui.report(error)
         return error
 
@@ -856,7 +857,11 @@ class JurisdictionPrepper:
             return error
 
         # read data from file (appending _SOURCE)
-        wr, mu, error = ui.read_results(kwargs, error)
+        wr, mu, new_err = ui.read_results(kwargs, error)
+        if new_err:
+            error = ui.consolidate_errors([error,new_err])
+            if ui.fatal_error(new_err):
+                return error
 
         for element in elements:
             name_field = db.get_name_field(element)
@@ -910,11 +915,10 @@ class JurisdictionPrepper:
                     return error
             # if <element>.txt has columns other than <name_field>, notify user
             if we.shape[1] > 1 and not new_internal_df.empty:
-# TODO check this error
                 error = ui.add_new_error(
                     error,
-                    "jurisdiction-warn",
-                    self.d["jurisdiction_path"],
+                    "warn-jurisdiction",
+                    Path(self.d["jurisdiction_path"]).name,
                     f"New rows added to {element}.txt, but data may be missing from some fields in those rows.",
                 )
         return error
