@@ -332,7 +332,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> dict:
     juris_name = Path(juris_path).name
 
     project_root = Path(__file__).parents[1].absolute()
-    templates_dir = os.path.join(project_root, "templates", "jurisdiction_templates")
+    templates_dir = os.path.join(project_root, "juris_and_munger", "jurisdiction_templates")
     # notify user of any extraneous files
     extraneous = [
         f
@@ -441,7 +441,7 @@ def check_munger_files(munger_path: str) -> dict:
         return err
 
     # check whether all files exist
-    templates = os.path.join(project_root, "templates", "munger_templates")
+    templates = os.path.join(project_root, "juris_and_munger", "munger_templates")
     template_with_extension_list = os.listdir(templates)
     for munger_file in template_with_extension_list:
         # TODO create optional template for auxiliary.txt

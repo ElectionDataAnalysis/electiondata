@@ -435,7 +435,7 @@ class JurisdictionPrepper:
         error = jm.ensure_jurisdiction_dir(self.d["jurisdiction_path"])
         # add default entries
         project_root = Path(__file__).absolute().parents[1]
-        templates = os.path.join(project_root, "templates", "jurisdiction_templates")
+        templates = os.path.join(project_root, "juris_and_munger", "jurisdiction_templates")
         for element in ["Party", "Election"]:
             new_err = prep.add_defaults(self.d["jurisdiction_path"], templates, element)
             if new_err:

@@ -1,4 +1,5 @@
 [election_data_analysis]
+mungers_dir=</path/to/directory/holding/individual/munger/directories>
 jurisdiction_path=<path/to/folder/containing/jurisdiction/definition/files>
 name=<internal db name from ReportingUnit table>
 reporting_unit_type=<type of reporting unit named above, typically state>
