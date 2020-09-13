@@ -313,7 +313,7 @@ def get_params_to_read_results(d: dict, results_file_path=None, munger_name=None
     if munger_name:
         kwargs["munger_name"] = munger_name
     missing = [
-        x for x in ["results_file_path", "munger_name", "project_root"] if kwargs[x] is None
+        x for x in ["results_file_path", "munger_name"] if kwargs[x] is None
     ]
     return kwargs, missing
 
@@ -321,7 +321,7 @@ def get_params_to_read_results(d: dict, results_file_path=None, munger_name=None
 def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
     """Reads results (appending '_SOURCE' to the columns)
     and initiates munger. <params> must include these keys:
-    'project_root', 'munger_name', 'results_file'"""
+     'munger_name', 'results_file'"""
 
     project_root = Path(__file__).parents[2].absolute()
     dir_of_all_mungers = os.path.join(project_root, "mungers")
@@ -346,7 +346,7 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
     return wr, mu, error
 
 
-def pick_juris_from_filesystem(juris_path, project_root, err, check_files=False):
+def pick_juris_from_filesystem(juris_path, err, check_files=False):
     """Returns a Jurisdiction object. <juris_path> is the path to the directory containing the
     defining files for the particular jurisdiction.
     """

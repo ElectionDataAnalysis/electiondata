@@ -28,13 +28,11 @@ single_data_loader_pars = [
 ]
 
 multi_data_loader_pars = [
-    "project_root",
     "results_dir",
     "archive_dir",
 ]
 
 prep_pars = [
-    "project_root",
     "jurisdiction_path",
     "name",
     "abbreviated_name",
@@ -167,7 +165,6 @@ class DataLoader:
             # create and load jurisdiction or throw error
             juris[jp], new_err = ui.pick_juris_from_filesystem(
                 juris_path=jp,
-                project_root=self.d["project_root"],
                 err=None,
                 check_files=load_jurisdictions,
             )
