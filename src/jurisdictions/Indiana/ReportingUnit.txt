@@ -636,6 +636,7 @@ Indiana;Bartholomew County;Wayne - 5500	precinct
 Indiana;Bartholomew County;Wayne - 5600	precinct
 Indiana;Bartholomew County;Wayne - 5700	precinct
 Indiana;Bartholomew County;Wayne - 5800	precinct
+Indiana;Benton County;Benton	precinct
 Indiana;Blackford County;Harrison 1	precinct
 Indiana;Blackford County;Harrison 2	precinct
 Indiana;Blackford County;Jackson 1	precinct
@@ -648,6 +649,7 @@ Indiana;Blackford County;Licking 5	precinct
 Indiana;Blackford County;Licking 6	precinct
 Indiana;Blackford County;Washington 1	precinct
 Indiana;Blackford County;Washington 2	precinct
+Indiana;Boone County;Boone	precinct
 Indiana;Boone County;Center 01	precinct
 Indiana;Boone County;Center 02	precinct
 Indiana;Boone County;Center 03	precinct
@@ -782,6 +784,7 @@ Indiana;Clark County;Chas 05	precinct
 Indiana;Clark County;Chas 06	precinct
 Indiana;Clark County;Chas 07	precinct
 Indiana;Clark County;Chas 08	precinct
+Indiana;Clark County;Clark	precinct
 Indiana;Clark County;Jeff 01	precinct
 Indiana;Clark County;Jeff 02	precinct
 Indiana;Clark County;Jeff 03	precinct
@@ -844,6 +847,7 @@ Indiana;Clark County;Wash 01	precinct
 Indiana;Clark County;Wood 01	precinct
 Indiana;Clark County;Wood 02	precinct
 Indiana;Clark County;Wood 03	precinct
+Indiana;Clay County;Clay	precinct
 Indiana;Clinton County;Precinct 01	precinct
 Indiana;Clinton County;Precinct 02	precinct
 Indiana;Clinton County;Precinct 03	precinct
@@ -883,6 +887,9 @@ Indiana;Clinton County;Precinct 36	precinct
 Indiana;Clinton County;Precinct 37	precinct
 Indiana;Clinton County;Precinct 38	precinct
 Indiana;Clinton County;Precinct 39	precinct
+Indiana;Crawford County;Crawford	precinct
+Indiana;Daviess County;Daviess	precinct
+Indiana;Dearborn County;Dearborn	precinct
 Indiana;Decatur County;Adams	precinct
 Indiana;Decatur County;Clay	precinct
 Indiana;Decatur County;Clinton	precinct
@@ -944,6 +951,8 @@ Indiana;Dekalb County;Wilmington 1	precinct
 Indiana;Dekalb County;Wilmington 2	precinct
 Indiana;Dekalb County;Wilmington 3	precinct
 Indiana;Dekalb County;Wilmington 4	precinct
+Indiana;Delaware County;Delaware	precinct
+Indiana;Dubois County;Dubois	precinct
 Indiana;Elkhart County;Baugo 01	precinct
 Indiana;Elkhart County;Baugo 02	precinct
 Indiana;Elkhart County;Baugo 03	precinct
@@ -1062,12 +1071,18 @@ Indiana;Elkhart County;Washington 03	precinct
 Indiana;Elkhart County;Washington 04	precinct
 Indiana;Elkhart County;York 01	precinct
 Indiana;Elkhart County;York 02	precinct
+Indiana;Fayette County;Fayette	precinct
+Indiana;Floyd County;Floyd	precinct
+Indiana;Fountain County;Fountain	precinct
+Indiana;Franklin County;Franklin	precinct
+Indiana;Fulton County;Fulton	precinct
 Indiana;Gibson County;Barton 01	precinct
 Indiana;Gibson County;Barton 02	precinct
 Indiana;Gibson County;Center 01	precinct
 Indiana;Gibson County;Columbia 01	precinct
 Indiana;Gibson County;Columbia 02	precinct
 Indiana;Gibson County;Columbia 05	precinct
+Indiana;Gibson County;Gibson	precinct
 Indiana;Gibson County;Johnson 01	precinct
 Indiana;Gibson County;Johnson 02	precinct
 Indiana;Gibson County;Johnson 03	precinct
@@ -1096,6 +1111,8 @@ Indiana;Gibson County;Wabash 01	precinct
 Indiana;Gibson County;Washington 01	precinct
 Indiana;Gibson County;White River 01	precinct
 Indiana;Gibson County;White River 02	precinct
+Indiana;Grant County;Grant	precinct
+Indiana;Greene County;Greene	precinct
 Indiana;Hamilton County;Arbors	precinct
 Indiana;Hamilton County;Arcadia	precinct
 Indiana;Hamilton County;Aroma	precinct
@@ -1406,6 +1423,7 @@ Indiana;Harrison County;West Harrison	precinct
 Indiana;Harrison County;West Heth	precinct
 Indiana;Harrison County;West Posey	precinct
 Indiana;Harrison County;West Webster	precinct
+Indiana;Hendricks County;Hendricks	precinct
 Indiana;Henry County;Blue River	precinct
 Indiana;Henry County;Dudley	precinct
 Indiana;Henry County;Fall Creek 1	precinct
@@ -1563,6 +1581,9 @@ Indiana;Huntington County;Salamonie Twp 2	precinct
 Indiana;Huntington County;Union Twp	precinct
 Indiana;Huntington County;Warren Twp	precinct
 Indiana;Huntington County;Wayne Twp	precinct
+Indiana;Jackson County;Jackson	precinct
+Indiana;Jasper County;Jasper	precinct
+Indiana;Jay County;Jay	precinct
 Indiana;Jefferson County;1-Jan	precinct
 Indiana;Jefferson County;2-Jan	precinct
 Indiana;Jefferson County;1-Feb	precinct
@@ -2228,6 +2249,8 @@ Indiana;Lake County;Wt 07	precinct
 Indiana;Lake County;Wt 08	precinct
 Indiana;Lake County;Wt 09	precinct
 Indiana;Lake County;Wt 10	precinct
+Indiana;Laporte County;Laporte	precinct
+Indiana;Lawrence County;Lawrence	precinct
 Indiana;Madison County;01 001	precinct
 Indiana;Madison County;01 002	precinct
 Indiana;Madison County;01 003	precinct
@@ -2939,6 +2962,7 @@ Indiana;Marion County;Way 057	precinct
 Indiana;Marion County;Way 058	precinct
 Indiana;Marion County;Way 059	precinct
 Indiana;Marion County;Way 060	precinct
+Indiana;Marshall County;Marshall	precinct
 Indiana;Martin County;Crane	precinct
 Indiana;Martin County;East Memphis	precinct
 Indiana;Martin County;Lost River	precinct
@@ -3063,6 +3087,15 @@ Indiana;Monroe County;Van Buren 4	precinct
 Indiana;Monroe County;Van Buren 5	precinct
 Indiana;Monroe County;Van Buren 6	precinct
 Indiana;Monroe County;Washington	precinct
+Indiana;Montgomery County;Montgomery	precinct
+Indiana;Morgan County;Morgan	precinct
+Indiana;Newton County;Newton	precinct
+Indiana;Noble County;Noble	precinct
+Indiana;Ohio County;Ohio	precinct
+Indiana;Orange County;Orange	precinct
+Indiana;Owen County;Owen	precinct
+Indiana;Parke County;Parke	precinct
+Indiana;Perry County;Perry	precinct
 Indiana;Pike County;Clay	precinct
 Indiana;Pike County;Jefferson 1	precinct
 Indiana;Pike County;Jefferson 2	precinct
@@ -3238,6 +3271,7 @@ Indiana;Posey County;Robinson 2	precinct
 Indiana;Posey County;Robinson 3	precinct
 Indiana;Posey County;Smith East	precinct
 Indiana;Posey County;Smith West	precinct
+Indiana;Pulaski County;Pulaski	precinct
 Indiana;Putnam County;Clinton	precinct
 Indiana;Putnam County;Cloverdale 1	precinct
 Indiana;Putnam County;Cloverdale 2	precinct
@@ -3269,6 +3303,8 @@ Indiana;Putnam County;Third West	precinct
 Indiana;Putnam County;Warren	precinct
 Indiana;Putnam County;Washington North	precinct
 Indiana;Putnam County;Washington South	precinct
+Indiana;Randolph County;Randolph	precinct
+Indiana;Ripley County;Ripley	precinct
 Indiana;Rush County;Anderson 14	precinct
 Indiana;Rush County;Center 16	precinct
 Indiana;Rush County;Jackson 15	precinct
@@ -3286,6 +3322,12 @@ Indiana;Rush County;Rushville Township 8	precinct
 Indiana;Rush County;Union 18	precinct
 Indiana;Rush County;Walker 12	precinct
 Indiana;Rush County;Washington 17	precinct
+Indiana;Scott County;Scott	precinct
+Indiana;Shelby County;Shelby	precinct
+Indiana;Spencer County;Spencer	precinct
+Indiana;St. Joseph County;St. Joseph	precinct
+Indiana;Starke County;Starke	precinct
+Indiana;Steuben County;Steuben	precinct
 Indiana;Sullivan County;Cass 1	precinct
 Indiana;Sullivan County;Cass 2	precinct
 Indiana;Sullivan County;Curry 1	precinct
@@ -3307,6 +3349,9 @@ Indiana;Sullivan County;Jackson 1	precinct
 Indiana;Sullivan County;Jackson 2	precinct
 Indiana;Sullivan County;Jefferson	precinct
 Indiana;Sullivan County;Turman	precinct
+Indiana;Switzerland County;Switzerland	precinct
+Indiana;Tippecanoe County;Tippecanoe	precinct
+Indiana;Tipton County;Tipton	precinct
 Indiana;Union County;Brownsville	precinct
 Indiana;Union County;Center	precinct
 Indiana;Union County;Center I	precinct
@@ -3315,6 +3360,7 @@ Indiana;Union County;Center III	precinct
 Indiana;Union County;Harmony	precinct
 Indiana;Union County;Harrison	precinct
 Indiana;Union County;Liberty	precinct
+Indiana;Union County;Union	precinct
 Indiana;Union County;West College Corner	precinct
 Indiana;Vanderburgh County;Armstrong Precinct 1	precinct
 Indiana;Vanderburgh County;Center Precinct 01	precinct
@@ -3452,6 +3498,8 @@ Indiana;Vanderburgh County;Ward 6 Precinct 14	precinct
 Indiana;Vanderburgh County;Ward 6 Precinct 15	precinct
 Indiana;Vanderburgh County;Ward 6 Precinct 16	precinct
 Indiana;Vanderburgh County;Ward 6 Precinct 17	precinct
+Indiana;Vermillion County;Vermillion	precinct
+Indiana;Vigo County;Vigo	precinct
 Indiana;Wabash County;Chester 1	precinct
 Indiana;Wabash County;Chester 2	precinct
 Indiana;Wabash County;Chester 3	precinct
@@ -3478,6 +3526,8 @@ Indiana;Wabash County;Paw Paw	precinct
 Indiana;Wabash County;Pleasant 1	precinct
 Indiana;Wabash County;Pleasant 2	precinct
 Indiana;Wabash County;Waltz	precinct
+Indiana;Warren County;Warren	precinct
+Indiana;Warrick County;Warrick	precinct
 Indiana;Washington County;Brown	precinct
 Indiana;Washington County;Franklin	precinct
 Indiana;Washington County;Gibson	precinct
@@ -3600,6 +3650,7 @@ Indiana;White County;Union 5	precinct
 Indiana;White County;Union 6	precinct
 Indiana;White County;Union 7	precinct
 Indiana;White County;West Point	precinct
+Indiana;White County;White	precinct
 Indiana;Whitley County;Cleveland Northeast	precinct
 Indiana;Whitley County;Cleveland Northwest	precinct
 Indiana;Whitley County;Cleveland South	precinct
@@ -3652,95 +3703,3 @@ Indiana;Newton County;Lincoln 2	precinct
 Indiana;Newton County;Lincoln 3	precinct
 Indiana;Newton County;Mcclellan	precinct
 Indiana;Newton County;Washington	precinct
-Indiana;Benton County;Benton	precinct
-Indiana;Boone County;Boone	precinct
-Indiana;Clark County;Clark	precinct
-Indiana;Clay County;Clay	precinct
-Indiana;Crawford County;Crawford	precinct
-Indiana;Daviess County;Daviess	precinct
-Indiana;Dearborn County;Dearborn	precinct
-Indiana;Delaware County;Delaware	precinct
-Indiana;Dubois County;Dubois	precinct
-Indiana;Fayette County;Fayette	precinct
-Indiana;Floyd County;Floyd	precinct
-Indiana;Fountain County;Fountain	precinct
-Indiana;Franklin County;Franklin	precinct
-Indiana;Fulton County;Fulton	precinct
-Indiana;Gibson County;Gibson	precinct
-Indiana;Grant County;Grant	precinct
-Indiana;Greene County;Greene	precinct
-Indiana;Hendricks County;Hendricks	precinct
-Indiana;Jackson County;Jackson	precinct
-Indiana;Jasper County;Jasper	precinct
-Indiana;Jay County;Jay	precinct
-Indiana;Laporte County;Laporte	precinct
-Indiana;Lawrence County;Lawrence	precinct
-Indiana;Marshall County;Marshall	precinct
-Indiana;Montgomery County;Montgomery	precinct
-Indiana;Morgan County;Morgan	precinct
-Indiana;Newton County;Newton	precinct
-Indiana;Noble County;Noble	precinct
-Indiana;Ohio County;Ohio	precinct
-Indiana;Orange County;Orange	precinct
-Indiana;Owen County;Owen	precinct
-Indiana;Parke County;Parke	precinct
-Indiana;Perry County;Perry	precinct
-Indiana;Pulaski County;Pulaski	precinct
-Indiana;Randolph County;Randolph	precinct
-Indiana;Ripley County;Ripley	precinct
-Indiana;Scott County;Scott	precinct
-Indiana;Shelby County;Shelby	precinct
-Indiana;Spencer County;Spencer	precinct
-Indiana;St. Joseph County;St. Joseph	precinct
-Indiana;Starke County;Starke	precinct
-Indiana;Steuben County;Steuben	precinct
-Indiana;Switzerland County;Switzerland	precinct
-Indiana;Tippecanoe County;Tippecanoe	precinct
-Indiana;Tipton County;Tipton	precinct
-Indiana;Union County;Union	precinct
-Indiana;Vermillion County;Vermillion	precinct
-Indiana;Vigo County;Vigo	precinct
-Indiana;Warren County;Warren	precinct
-Indiana;Warrick County;Warrick	precinct
-Indiana;White County;White	precinct
-Indiana;Adams County;Adams	precinct
-Indiana;Allen County;Allen	precinct
-Indiana;Bartholomew County;Bartholomew	precinct
-Indiana;Blackford County;Blackford	precinct
-Indiana;Brown County;Brown	precinct
-Indiana;Carroll County;Carroll	precinct
-Indiana;Cass County;Cass	precinct
-Indiana;Clinton County;Clinton	precinct
-Indiana;Decatur County;Decatur	precinct
-Indiana;Dekalb County;Dekalb	precinct
-Indiana;Elkhart County;Elkhart	precinct
-Indiana;Hamilton County;Hamilton	precinct
-Indiana;Hancock County;Hancock	precinct
-Indiana;Harrison County;Harrison	precinct
-Indiana;Henry County;Henry	precinct
-Indiana;Howard County;Howard	precinct
-Indiana;Huntington County;Huntington	precinct
-Indiana;Jefferson County;Jefferson	precinct
-Indiana;Jennings County;Jennings	precinct
-Indiana;Johnson County;Johnson	precinct
-Indiana;Knox County;Knox	precinct
-Indiana;Kosciusko County;Kosciusko	precinct
-Indiana;Lagrange County;Lagrange	precinct
-Indiana;Lake County;Lake	precinct
-Indiana;Madison County;Madison	precinct
-Indiana;Marion County;Marion	precinct
-Indiana;Martin County;Martin	precinct
-Indiana;Miami County;Miami	precinct
-Indiana;Monroe County;Monroe	precinct
-Indiana;Pike County;Pike	precinct
-Indiana;Porter County;Porter	precinct
-Indiana;Posey County;Posey	precinct
-Indiana;Putnam County;Putnam	precinct
-Indiana;Rush County;Rush	precinct
-Indiana;Sullivan County;Sullivan	precinct
-Indiana;Vanderburgh County;Vanderburgh	precinct
-Indiana;Wabash County;Wabash	precinct
-Indiana;Washington County;Washington	precinct
-Indiana;Wayne County;Wayne	precinct
-Indiana;Wells County;Wells	precinct
-Indiana;Whitley County;Whitley	precinct

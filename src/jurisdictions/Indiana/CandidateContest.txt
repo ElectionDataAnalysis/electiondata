@@ -331,7 +331,7 @@ IN Governor (Democratic Party)	1	IN Governor	Democratic Party
 US Senate IN (Democratic Party)	1	US Senate IN	Democratic Party
 IN Attorney General (Democratic Party)	1	IN Attorney General	Democratic Party
 IN Lieutenant Governor (Democratic Party)	1	IN Lieutenant Governor	Democratic Party
-IN Treasurer (Democratic Party)	1	IN Treasurer	
+IN Treasurer (Democratic Party)	1	IN Treasurer	Democratic Party
 IN Superintendent of Public Instruction (Democratic Party)	1	IN Superintendent of Public Instruction	Democratic Party
 IN Auditor (Democratic Party)	1	IN Auditor	Democratic Party
 IN Secretary of State (Democratic Party)	1	IN Secretary of State	Democratic Party
@@ -499,7 +499,7 @@ IN Governor (Republican Party)	1	IN Governor	Republican Party
 US Senate IN (Republican Party)	1	US Senate IN	Republican Party
 IN Attorney General (Republican Party)	1	IN Attorney General	Republican Party
 IN Lieutenant Governor (Republican Party)	1	IN Lieutenant Governor	Republican Party
-IN Treasurer (Republican Party)	1	IN Treasurer	
+IN Treasurer (Republican Party)	1	IN Treasurer	Republican Party
 IN Superintendent of Public Instruction (Republican Party)	1	IN Superintendent of Public Instruction	Republican Party
 IN Auditor (Republican Party)	1	IN Auditor	Republican Party
 IN Secretary of State (Republican Party)	1	IN Secretary of State	Republican Party
@@ -667,7 +667,7 @@ IN Governor (Green Party)	1	IN Governor	Green Party
 US Senate IN (Green Party)	1	US Senate IN	Green Party
 IN Attorney General (Green Party)	1	IN Attorney General	Green Party
 IN Lieutenant Governor (Green Party)	1	IN Lieutenant Governor	Green Party
-IN Treasurer (Green Party)	1	IN Treasurer	
+IN Treasurer (Green Party)	1	IN Treasurer	Green Party
 IN Superintendent of Public Instruction (Green Party)	1	IN Superintendent of Public Instruction	Green Party
 IN Auditor (Green Party)	1	IN Auditor	Green Party
 IN Secretary of State (Green Party)	1	IN Secretary of State	Green Party
@@ -835,7 +835,7 @@ IN Governor (Libertarian Party)	1	IN Governor	Libertarian Party
 US Senate IN (Libertarian Party)	1	US Senate IN	Libertarian Party
 IN Attorney General (Libertarian Party)	1	IN Attorney General	Libertarian Party
 IN Lieutenant Governor (Libertarian Party)	1	IN Lieutenant Governor	Libertarian Party
-IN Treasurer (Libertarian Party)	1	IN Treasurer	
+IN Treasurer (Libertarian Party)	1	IN Treasurer	Libertarian Party
 IN Superintendent of Public Instruction (Libertarian Party)	1	IN Superintendent of Public Instruction	Libertarian Party
 IN Auditor (Libertarian Party)	1	IN Auditor	Libertarian Party
 IN Secretary of State (Libertarian Party)	1	IN Secretary of State	Libertarian Party
@@ -1003,7 +1003,7 @@ IN Governor (Constitution Party)	1	IN Governor	Constitution Party
 US Senate IN (Constitution Party)	1	US Senate IN	Constitution Party
 IN Attorney General (Constitution Party)	1	IN Attorney General	Constitution Party
 IN Lieutenant Governor (Constitution Party)	1	IN Lieutenant Governor	Constitution Party
-IN Treasurer (Constitution Party)	1	IN Treasurer	
+IN Treasurer (Constitution Party)	1	IN Treasurer	Constitution Party
 IN Superintendent of Public Instruction (Constitution Party)	1	IN Superintendent of Public Instruction	Constitution Party
 IN Auditor (Constitution Party)	1	IN Auditor	Constitution Party
 IN Secretary of State (Constitution Party)	1	IN Secretary of State	Constitution Party
@@ -1171,7 +1171,7 @@ IN Governor (Independent Party)	1	IN Governor	Independent Party
 US Senate IN (Independent Party)	1	US Senate IN	Independent Party
 IN Attorney General (Independent Party)	1	IN Attorney General	Independent Party
 IN Lieutenant Governor (Independent Party)	1	IN Lieutenant Governor	Independent Party
-IN Treasurer (Independent Party)	1	IN Treasurer	
+IN Treasurer (Independent Party)	1	IN Treasurer	Independent Party
 IN Superintendent of Public Instruction (Independent Party)	1	IN Superintendent of Public Instruction	Independent Party
 IN Auditor (Independent Party)	1	IN Auditor	Independent Party
 IN Secretary of State (Independent Party)	1	IN Secretary of State	Independent Party
@@ -1339,7 +1339,7 @@ IN Governor (Non Partisan)	1	IN Governor	Non Partisan
 US Senate IN (Non Partisan)	1	US Senate IN	Non Partisan
 IN Attorney General (Non Partisan)	1	IN Attorney General	Non Partisan
 IN Lieutenant Governor (Non Partisan)	1	IN Lieutenant Governor	Non Partisan
-IN Treasurer (Non Partisan)	1	IN Treasurer	
+IN Treasurer (Non Partisan)	1	IN Treasurer	Non Partisan
 IN Superintendent of Public Instruction (Non Partisan)	1	IN Superintendent of Public Instruction	Non Partisan
 IN Auditor (Non Partisan)	1	IN Auditor	Non Partisan
 IN Secretary of State (Non Partisan)	1	IN Secretary of State	Non Partisan
@@ -1507,7 +1507,7 @@ IN Governor (Other Party)	1	IN Governor	Other Party
 US Senate IN (Other Party)	1	US Senate IN	Other Party
 IN Attorney General (Other Party)	1	IN Attorney General	Other Party
 IN Lieutenant Governor (Other Party)	1	IN Lieutenant Governor	Other Party
-IN Treasurer (Other Party)	1	IN Treasurer	
+IN Treasurer (Other Party)	1	IN Treasurer	Other Party
 IN Superintendent of Public Instruction (Other Party)	1	IN Superintendent of Public Instruction	Other Party
 IN Auditor (Other Party)	1	IN Auditor	Other Party
 IN Secretary of State (Other Party)	1	IN Secretary of State	Other Party
@@ -1675,7 +1675,7 @@ IN Governor (Socialist Party)	1	IN Governor	Socialist Party
 US Senate IN (Socialist Party)	1	US Senate IN	Socialist Party
 IN Attorney General (Socialist Party)	1	IN Attorney General	Socialist Party
 IN Lieutenant Governor (Socialist Party)	1	IN Lieutenant Governor	Socialist Party
-IN Treasurer (Socialist Party)	1	IN Treasurer	
+IN Treasurer (Socialist Party)	1	IN Treasurer	Socialist Party
 IN Superintendent of Public Instruction (Socialist Party)	1	IN Superintendent of Public Instruction	Socialist Party
 IN Auditor (Socialist Party)	1	IN Auditor	Socialist Party
 IN Secretary of State (Socialist Party)	1	IN Secretary of State	Socialist Party
@@ -1843,120 +1843,10 @@ IN Governor (Workers Party)	1	IN Governor	Workers Party
 US Senate IN (Workers Party)	1	US Senate IN	Workers Party
 IN Attorney General (Workers Party)	1	IN Attorney General	Workers Party
 IN Lieutenant Governor (Workers Party)	1	IN Lieutenant Governor	Workers Party
-IN Treasurer (Workers Party)	1	IN Treasurer	
+IN Treasurer (Workers Party)	1	IN Treasurer	Workers Party
 IN Superintendent of Public Instruction (Workers Party)	1	IN Superintendent of Public Instruction	Workers Party
 IN Auditor (Workers Party)	1	IN Auditor	Workers Party
 IN Secretary of State (Workers Party)	1	IN Secretary of State	Workers Party
-IN Treasurer (Democratic Party)	1	IN Treasurer	Democratic Party
-IN Treasurer (Democratic Party) (Democratic Party)	1	IN Treasurer	Democratic Party
-IN Treasurer (Republican Party) (Democratic Party)	1	IN Treasurer	Democratic Party
-IN Treasurer (Green Party) (Democratic Party)	1	IN Treasurer	Democratic Party
-IN Treasurer (Libertarian Party) (Democratic Party)	1	IN Treasurer	Democratic Party
-IN Treasurer (Constitution Party) (Democratic Party)	1	IN Treasurer	Democratic Party
-IN Treasurer (Independent Party) (Democratic Party)	1	IN Treasurer	Democratic Party
-IN Treasurer (Non Partisan) (Democratic Party)	1	IN Treasurer	Democratic Party
-IN Treasurer (Other Party) (Democratic Party)	1	IN Treasurer	Democratic Party
-IN Treasurer (Socialist Party) (Democratic Party)	1	IN Treasurer	Democratic Party
-IN Treasurer (Workers Party) (Democratic Party)	1	IN Treasurer	Democratic Party
-IN Treasurer (Republican Party)	1	IN Treasurer	Republican Party
-IN Treasurer (Democratic Party) (Republican Party)	1	IN Treasurer	Republican Party
-IN Treasurer (Republican Party) (Republican Party)	1	IN Treasurer	Republican Party
-IN Treasurer (Green Party) (Republican Party)	1	IN Treasurer	Republican Party
-IN Treasurer (Libertarian Party) (Republican Party)	1	IN Treasurer	Republican Party
-IN Treasurer (Constitution Party) (Republican Party)	1	IN Treasurer	Republican Party
-IN Treasurer (Independent Party) (Republican Party)	1	IN Treasurer	Republican Party
-IN Treasurer (Non Partisan) (Republican Party)	1	IN Treasurer	Republican Party
-IN Treasurer (Other Party) (Republican Party)	1	IN Treasurer	Republican Party
-IN Treasurer (Socialist Party) (Republican Party)	1	IN Treasurer	Republican Party
-IN Treasurer (Workers Party) (Republican Party)	1	IN Treasurer	Republican Party
-IN Treasurer (Green Party)	1	IN Treasurer	Green Party
-IN Treasurer (Democratic Party) (Green Party)	1	IN Treasurer	Green Party
-IN Treasurer (Republican Party) (Green Party)	1	IN Treasurer	Green Party
-IN Treasurer (Green Party) (Green Party)	1	IN Treasurer	Green Party
-IN Treasurer (Libertarian Party) (Green Party)	1	IN Treasurer	Green Party
-IN Treasurer (Constitution Party) (Green Party)	1	IN Treasurer	Green Party
-IN Treasurer (Independent Party) (Green Party)	1	IN Treasurer	Green Party
-IN Treasurer (Non Partisan) (Green Party)	1	IN Treasurer	Green Party
-IN Treasurer (Other Party) (Green Party)	1	IN Treasurer	Green Party
-IN Treasurer (Socialist Party) (Green Party)	1	IN Treasurer	Green Party
-IN Treasurer (Workers Party) (Green Party)	1	IN Treasurer	Green Party
-IN Treasurer (Libertarian Party)	1	IN Treasurer	Libertarian Party
-IN Treasurer (Democratic Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
-IN Treasurer (Republican Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
-IN Treasurer (Green Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
-IN Treasurer (Libertarian Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
-IN Treasurer (Constitution Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
-IN Treasurer (Independent Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
-IN Treasurer (Non Partisan) (Libertarian Party)	1	IN Treasurer	Libertarian Party
-IN Treasurer (Other Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
-IN Treasurer (Socialist Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
-IN Treasurer (Workers Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
-IN Treasurer (Constitution Party)	1	IN Treasurer	Constitution Party
-IN Treasurer (Democratic Party) (Constitution Party)	1	IN Treasurer	Constitution Party
-IN Treasurer (Republican Party) (Constitution Party)	1	IN Treasurer	Constitution Party
-IN Treasurer (Green Party) (Constitution Party)	1	IN Treasurer	Constitution Party
-IN Treasurer (Libertarian Party) (Constitution Party)	1	IN Treasurer	Constitution Party
-IN Treasurer (Constitution Party) (Constitution Party)	1	IN Treasurer	Constitution Party
-IN Treasurer (Independent Party) (Constitution Party)	1	IN Treasurer	Constitution Party
-IN Treasurer (Non Partisan) (Constitution Party)	1	IN Treasurer	Constitution Party
-IN Treasurer (Other Party) (Constitution Party)	1	IN Treasurer	Constitution Party
-IN Treasurer (Socialist Party) (Constitution Party)	1	IN Treasurer	Constitution Party
-IN Treasurer (Workers Party) (Constitution Party)	1	IN Treasurer	Constitution Party
-IN Treasurer (Independent Party)	1	IN Treasurer	Independent Party
-IN Treasurer (Democratic Party) (Independent Party)	1	IN Treasurer	Independent Party
-IN Treasurer (Republican Party) (Independent Party)	1	IN Treasurer	Independent Party
-IN Treasurer (Green Party) (Independent Party)	1	IN Treasurer	Independent Party
-IN Treasurer (Libertarian Party) (Independent Party)	1	IN Treasurer	Independent Party
-IN Treasurer (Constitution Party) (Independent Party)	1	IN Treasurer	Independent Party
-IN Treasurer (Independent Party) (Independent Party)	1	IN Treasurer	Independent Party
-IN Treasurer (Non Partisan) (Independent Party)	1	IN Treasurer	Independent Party
-IN Treasurer (Other Party) (Independent Party)	1	IN Treasurer	Independent Party
-IN Treasurer (Socialist Party) (Independent Party)	1	IN Treasurer	Independent Party
-IN Treasurer (Workers Party) (Independent Party)	1	IN Treasurer	Independent Party
-IN Treasurer (Non Partisan)	1	IN Treasurer	Non Partisan
-IN Treasurer (Democratic Party) (Non Partisan)	1	IN Treasurer	Non Partisan
-IN Treasurer (Republican Party) (Non Partisan)	1	IN Treasurer	Non Partisan
-IN Treasurer (Green Party) (Non Partisan)	1	IN Treasurer	Non Partisan
-IN Treasurer (Libertarian Party) (Non Partisan)	1	IN Treasurer	Non Partisan
-IN Treasurer (Constitution Party) (Non Partisan)	1	IN Treasurer	Non Partisan
-IN Treasurer (Independent Party) (Non Partisan)	1	IN Treasurer	Non Partisan
-IN Treasurer (Non Partisan) (Non Partisan)	1	IN Treasurer	Non Partisan
-IN Treasurer (Other Party) (Non Partisan)	1	IN Treasurer	Non Partisan
-IN Treasurer (Socialist Party) (Non Partisan)	1	IN Treasurer	Non Partisan
-IN Treasurer (Workers Party) (Non Partisan)	1	IN Treasurer	Non Partisan
-IN Treasurer (Other Party)	1	IN Treasurer	Other Party
-IN Treasurer (Democratic Party) (Other Party)	1	IN Treasurer	Other Party
-IN Treasurer (Republican Party) (Other Party)	1	IN Treasurer	Other Party
-IN Treasurer (Green Party) (Other Party)	1	IN Treasurer	Other Party
-IN Treasurer (Libertarian Party) (Other Party)	1	IN Treasurer	Other Party
-IN Treasurer (Constitution Party) (Other Party)	1	IN Treasurer	Other Party
-IN Treasurer (Independent Party) (Other Party)	1	IN Treasurer	Other Party
-IN Treasurer (Non Partisan) (Other Party)	1	IN Treasurer	Other Party
-IN Treasurer (Other Party) (Other Party)	1	IN Treasurer	Other Party
-IN Treasurer (Socialist Party) (Other Party)	1	IN Treasurer	Other Party
-IN Treasurer (Workers Party) (Other Party)	1	IN Treasurer	Other Party
-IN Treasurer (Socialist Party)	1	IN Treasurer	Socialist Party
-IN Treasurer (Democratic Party) (Socialist Party)	1	IN Treasurer	Socialist Party
-IN Treasurer (Republican Party) (Socialist Party)	1	IN Treasurer	Socialist Party
-IN Treasurer (Green Party) (Socialist Party)	1	IN Treasurer	Socialist Party
-IN Treasurer (Libertarian Party) (Socialist Party)	1	IN Treasurer	Socialist Party
-IN Treasurer (Constitution Party) (Socialist Party)	1	IN Treasurer	Socialist Party
-IN Treasurer (Independent Party) (Socialist Party)	1	IN Treasurer	Socialist Party
-IN Treasurer (Non Partisan) (Socialist Party)	1	IN Treasurer	Socialist Party
-IN Treasurer (Other Party) (Socialist Party)	1	IN Treasurer	Socialist Party
-IN Treasurer (Socialist Party) (Socialist Party)	1	IN Treasurer	Socialist Party
-IN Treasurer (Workers Party) (Socialist Party)	1	IN Treasurer	Socialist Party
-IN Treasurer (Workers Party)	1	IN Treasurer	Workers Party
-IN Treasurer (Democratic Party) (Workers Party)	1	IN Treasurer	Workers Party
-IN Treasurer (Republican Party) (Workers Party)	1	IN Treasurer	Workers Party
-IN Treasurer (Green Party) (Workers Party)	1	IN Treasurer	Workers Party
-IN Treasurer (Libertarian Party) (Workers Party)	1	IN Treasurer	Workers Party
-IN Treasurer (Constitution Party) (Workers Party)	1	IN Treasurer	Workers Party
-IN Treasurer (Independent Party) (Workers Party)	1	IN Treasurer	Workers Party
-IN Treasurer (Non Partisan) (Workers Party)	1	IN Treasurer	Workers Party
-IN Treasurer (Other Party) (Workers Party)	1	IN Treasurer	Workers Party
-IN Treasurer (Socialist Party) (Workers Party)	1	IN Treasurer	Workers Party
-IN Treasurer (Workers Party) (Workers Party)	1	IN Treasurer	Workers Party
 IN House District 1 (Pirate Party)	1	IN House District 1	Pirate Party
 IN House District 2 (Pirate Party)	1	IN House District 2	Pirate Party
 IN House District 3 (Pirate Party)	1	IN House District 3	Pirate Party
@@ -2125,13 +2015,3 @@ IN Treasurer (Pirate Party)	1	IN Treasurer	Pirate Party
 IN Superintendent of Public Instruction (Pirate Party)	1	IN Superintendent of Public Instruction	Pirate Party
 IN Auditor (Pirate Party)	1	IN Auditor	Pirate Party
 IN Secretary of State (Pirate Party)	1	IN Secretary of State	Pirate Party
-IN Treasurer (Democratic Party) (Pirate Party)	1	IN Treasurer	Pirate Party
-IN Treasurer (Republican Party) (Pirate Party)	1	IN Treasurer	Pirate Party
-IN Treasurer (Green Party) (Pirate Party)	1	IN Treasurer	Pirate Party
-IN Treasurer (Libertarian Party) (Pirate Party)	1	IN Treasurer	Pirate Party
-IN Treasurer (Constitution Party) (Pirate Party)	1	IN Treasurer	Pirate Party
-IN Treasurer (Independent Party) (Pirate Party)	1	IN Treasurer	Pirate Party
-IN Treasurer (Non Partisan) (Pirate Party)	1	IN Treasurer	Pirate Party
-IN Treasurer (Other Party) (Pirate Party)	1	IN Treasurer	Pirate Party
-IN Treasurer (Socialist Party) (Pirate Party)	1	IN Treasurer	Pirate Party
-IN Treasurer (Workers Party) (Pirate Party)	1	IN Treasurer	Pirate Party
