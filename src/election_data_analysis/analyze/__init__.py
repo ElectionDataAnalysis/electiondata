@@ -392,7 +392,13 @@ def assign_anomaly_score(data):
     to the dataframe if needed."""
 
     # Assign a ranking for each candidate by votes for each contest
-    total_data = data[data["CountItemType"] == "total"]
+    if "total" not in data["CountItemType"].unique():
+        groupby_cols = list(data.columns)
+        groupby_cols.remove("Count")
+        total_data = data.groupby(groupby_cols).sum().reset_index()
+    else:
+        total_data = data[data["CountItemType"] == "total"]
+
     ranked_df = (
         total_data.groupby(["Contest_Id", "Selection", "Selection_Id"], as_index=False)[
             "Count"
