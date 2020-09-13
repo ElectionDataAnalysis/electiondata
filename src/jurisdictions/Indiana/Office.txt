@@ -164,4 +164,6 @@ US Senate IN	Indiana
 IN Attorney General	Indiana
 IN Lieutenant Governor	Indiana
 IN Treasurer	Indiana
+IN Auditor	Indiana
 IN Secretary of State	Indiana
+IN Superintendent of Public Instruction	Indiana
