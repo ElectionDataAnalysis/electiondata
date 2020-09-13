@@ -86,7 +86,7 @@ class DataLoader:
             quit()
         if new_err:
             print("Unexpected error connecting to database.")
-            err = ui.consolidate_errors([err,new_err])
+            err = ui.consolidate_errors([err, new_err])
             ui.report(err)
             print("Exiting")
             quit()
@@ -102,12 +102,10 @@ class DataLoader:
 
         # define directory for archiving successfully loaded files (and storing warnings)
         db_param, new_err = ui.get_runtime_parameters(
-            required_keys=["dbname"],
-            param_file="run_time.ini",
-            header="postgresql"
+            required_keys=["dbname"], param_file="run_time.ini", header="postgresql"
         )
         if new_err:
-            err = ui.consolidate_errors([err,new_err])
+            err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
             err = ui.report(err)
             return err
@@ -129,7 +127,7 @@ class DataLoader:
             err = ui.add_new_error(
                 err,
                 "file",
-                self.d['results_dir'],
+                self.d["results_dir"],
                 f"No <results>.ini files found in directory. No results files will be processed.",
             )
             err = ui.report(err)
@@ -185,7 +183,9 @@ class DataLoader:
                         good_jurisdictions.append(jp)
                 # if not asked to load jurisdiction, assume it's loaded
                 else:
-                    print(f"Jurisdiction {juris[jp].name} assumed to be loaded to database already")
+                    print(
+                        f"Jurisdiction {juris[jp].name} assumed to be loaded to database already"
+                    )
                     good_jurisdictions.append(jp)
 
         # process all good parameter files with good jurisdictions
@@ -201,7 +201,7 @@ class DataLoader:
                     juris[jp],
                 )
                 if new_err:
-                    err = ui.consolidate_errors([err,new_err])
+                    err = ui.consolidate_errors([err, new_err])
 
                 # if no fatal error from SDL initialization, continue
                 if not ui.fatal_error(new_err):
@@ -213,17 +213,28 @@ class DataLoader:
                     # if no fatal load error, archive files
 
                     if not ui.fatal_error(load_error):
-                        ui.archive(f,self.d["results_dir"],success_dir)
-                        ui.archive(sdl.d["results_file"], self.d["results_dir"], success_dir)
-                        print(f"\tArchived {f} and its results file after successful load.")
+                        ui.archive(f, self.d["results_dir"], success_dir)
+                        ui.archive(
+                            sdl.d["results_file"], self.d["results_dir"], success_dir
+                        )
+                        print(
+                            f"\tArchived {f} and its results file after successful load."
+                        )
                     else:
                         print(f"\t{f} and its results file not archived due to errors")
                 # TODO report munger, jurisdiction and file errors & warnings
                 err = ui.report(
                     err,
                     loc_dict=loc_dict,
-                    key_list=["munger","jurisdiction","file","warn-munger","warn-jurisdiction","warn-file"],
-                    file_prefix=f"{f[:-4]}_"
+                    key_list=[
+                        "munger",
+                        "jurisdiction",
+                        "file",
+                        "warn-munger",
+                        "warn-jurisdiction",
+                        "warn-file",
+                    ],
+                    file_prefix=f"{f[:-4]}_",
                 )
         # report remaining errors
         loc_dict = {
@@ -238,12 +249,12 @@ class DataLoader:
 
 class SingleDataLoader:
     def __init__(
-            self,
-            results_dir: str,
-            par_file_name: str,
-            session,
-            munger_path: str,
-            juris: jm.Jurisdiction
+        self,
+        results_dir: str,
+        par_file_name: str,
+        session,
+        munger_path: str,
+        juris: jm.Jurisdiction,
     ):
         # adopt passed variables needed in future as attributes
         self.session = session
@@ -277,13 +288,15 @@ class SingleDataLoader:
         # initialize each munger (or collect error)
         m_err = dict()
         for mu in self.munger_list:
-            self.munger[mu], m_err[mu] = jm.check_and_init_munger(os.path.join(munger_path, mu))
+            self.munger[mu], m_err[mu] = jm.check_and_init_munger(
+                os.path.join(munger_path, mu)
+            )
 
         self.munger_err = ui.consolidate_errors([m_err[mu] for mu in self.munger_list])
 
     def track_results(self):
         """insert a record for the _datafile, recording any error string <e>.
-        Return Id of _datafile.Id and Election.Id """
+        Return Id of _datafile.Id and Election.Id"""
         filename = self.d["results_file"]
         top_reporting_unit_id = db.name_to_id(
             self.session, "ReportingUnit", self.d["top_reporting_unit"]
@@ -331,10 +344,7 @@ class SingleDataLoader:
         results_info, e = self.track_results()
         if e:
             err = ui.add_new_error(
-                err,
-                "system",
-                "SingleDataLoader.load_results",
-                f"database error: {e}"
+                err, "system", "SingleDataLoader.load_results", f"database error: {e}"
             )
             return err
 
@@ -350,16 +360,16 @@ class SingleDataLoader:
                     aux_data_dir=self.d["aux_data_dir"],
                 )
                 if new_err:
-                    err = ui.consolidate_errors([err,new_err])
+                    err = ui.consolidate_errors([err, new_err])
         return err
 
 
 def check_and_init_singledataloader(
-        results_dir: str,
-        par_file_name: str,
-        session,
-        munger_path: str,
-        juris: jm.Jurisdiction
+    results_dir: str,
+    par_file_name: str,
+    session,
+    munger_path: str,
+    juris: jm.Jurisdiction,
 ) -> (SingleDataLoader, dict):
     """Return SDL if it could be successfully initialized, and
     error dictionary (including munger errors noted in SDL initialization)"""
@@ -381,7 +391,7 @@ def check_and_init_singledataloader(
             munger_path,
             juris,
         )
-        err = ui.consolidate_errors([err,sdl.munger_err])
+        err = ui.consolidate_errors([err, sdl.munger_err])
     return sdl, err
 
 
@@ -422,14 +432,11 @@ class JurisdictionPrepper:
         error = jm.ensure_jurisdiction_dir(self.d["jurisdiction_path"])
         # add default entries
         project_root = Path(__file__).absolute().parents[1]
-        templates = os.path.join(
-            project_root,
-            "templates/jurisdiction_templates"
-        )
+        templates = os.path.join(project_root, "templates/jurisdiction_templates")
         for element in ["Party", "Election"]:
             new_err = prep.add_defaults(self.d["jurisdiction_path"], templates, element)
             if new_err:
-                error = ui.consolidate_errors([error,new_err])
+                error = ui.consolidate_errors([error, new_err])
 
         # add all standard Offices/RUs/CandidateContests
         asc_err = self.add_standard_contests()
@@ -438,7 +445,7 @@ class JurisdictionPrepper:
         #  used as placeholder for raw_identifier_value
         dict_err = self.starter_dictionary()
 
-        error = ui.consolidate_errors([error,asc_err,dict_err])
+        error = ui.consolidate_errors([error, asc_err, dict_err])
         ui.report(error)
         return error
 
@@ -494,8 +501,10 @@ class JurisdictionPrepper:
             new_dictionary = pd.concat(df_list)
         else:
             new_dictionary = d
-        new_err = prep.write_element(self.d["jurisdiction_path"], "dictionary", new_dictionary)
-        ui.consolidate_errors([error,new_err])
+        new_err = prep.write_element(
+            self.d["jurisdiction_path"], "dictionary", new_dictionary
+        )
+        ui.consolidate_errors([error, new_err])
         ui.report(error)
         return error
 
@@ -504,7 +513,7 @@ class JurisdictionPrepper:
     ) -> dict:
         """If <juriswide_contest> is None, use standard list hard-coded.
         Returns error dictionary"""
-        #initialize error dictionary
+        # initialize error dictionary
         err = None
 
         name = self.d["name"]
@@ -598,7 +607,7 @@ class JurisdictionPrepper:
             self.d["jurisdiction_path"], "Office", w_office.drop_duplicates()
         )
         if new_err:
-            err = ui.consolidate_errors([err,new_err])
+            err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
                 return err
 
@@ -606,14 +615,14 @@ class JurisdictionPrepper:
             self.d["jurisdiction_path"], "ReportingUnit", w_ru.drop_duplicates()
         )
         if new_err:
-            err = ui.consolidate_errors([err,new_err])
+            err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
                 return err
         new_err = prep.write_element(
             self.d["jurisdiction_path"], "CandidateContest", w_cc.drop_duplicates()
         )
         if new_err:
-            err = ui.consolidate_errors([err,new_err])
+            err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
                 return err
         return err
@@ -656,7 +665,7 @@ class JurisdictionPrepper:
             "CandidateContest",
             pd.concat([contests] + all_primaries),
         )
-        error = ui.consolidate_errors([error,new_err])
+        error = ui.consolidate_errors([error, new_err])
         return error
 
     def add_sub_county_rus_from_results_file(
@@ -692,7 +701,7 @@ class JurisdictionPrepper:
         # read data from file (appending _SOURCE)
         wr, munger, new_err = ui.read_results(kwargs, error)
         if new_err:
-            error = ui.consolidate_errors([error,new_err])
+            error = ui.consolidate_errors([error, new_err])
             if ui.fatal_error(new_err):
                 return error
 
@@ -701,7 +710,7 @@ class JurisdictionPrepper:
                 error,
                 "file",
                 Path(results_file_path).name,
-                f"No results read from file. Parameters: {kwargs}"
+                f"No results read from file. Parameters: {kwargs}",
             )
             return error
 
@@ -752,12 +761,10 @@ class JurisdictionPrepper:
 
         # add columns for county and sub_ru
         wr, error = m.add_column_from_formula(
-            wr, county_formula, "County_raw", error, munger_name,
-            suffix="_SOURCE"
+            wr, county_formula, "County_raw", error, munger_name, suffix="_SOURCE"
         )
         wr, error = m.add_column_from_formula(
-            wr, sub_ru_formula, "Sub_County_raw", error, munger_name,
-            suffix="_SOURCE"
+            wr, sub_ru_formula, "Sub_County_raw", error, munger_name, suffix="_SOURCE"
         )
 
         # add column for county internal name
@@ -787,7 +794,7 @@ class JurisdictionPrepper:
             self.d["jurisdiction_path"], "ReportingUnit", pd.concat([ru_old, ru_add])
         )
         if new_err:
-            error = ui.consolidate_errors([error,new_err])
+            error = ui.consolidate_errors([error, new_err])
             if ui.fatal_error(new_err):
                 return error
 
@@ -799,7 +806,7 @@ class JurisdictionPrepper:
             "dictionary",
             pd.concat([ru_dict_old, dict_add]),
         )
-        error = ui.consolidate_errors([error,new_err])
+        error = ui.consolidate_errors([error, new_err])
         return error
 
     def add_sub_county_rus_from_multi_results_file(
@@ -818,7 +825,7 @@ class JurisdictionPrepper:
                 param_file=par_file,
             )
             if new_err:
-                error = ui.consolidate_errors([error,new_err])
+                error = ui.consolidate_errors([error, new_err])
                 if ui.fatal_error(new_err):
                     return error
 
@@ -828,7 +835,7 @@ class JurisdictionPrepper:
             )
             new_err = self.add_sub_county_rus_from_results_file(None, **file_dict)
             if new_err:
-                error = ui.consolidate_errors([error,new_err])
+                error = ui.consolidate_errors([error, new_err])
         ui.report(error)
         return error
 
@@ -848,19 +855,19 @@ class JurisdictionPrepper:
                 header="election_data_analysis",
                 optional_keys=["aux_data_dir"],
                 param_file=par_file,
-                err=None
+                err=None,
             )
             # redefine the results_file_path parameter to a full path ?!
             file_dict["results_file_path"] = os.path.join(
                 dir, file_dict["results_file"]
             )
             if new_err:
-                error = ui.consolidate_errors([error,new_err])
+                error = ui.consolidate_errors([error, new_err])
             if not ui.fatal_error(error):
                 new_err = self.add_elements_from_results_file(
                     elements, error, **file_dict
                 )
-                error = ui.consolidate_errors([error,new_err])
+                error = ui.consolidate_errors([error, new_err])
         ui.report(error)
         return error
 
@@ -887,19 +894,21 @@ class JurisdictionPrepper:
                 f"Parameters missing: {missing}. Results file cannot be processed.",
             )
             return error
-        elif ("results_file_path" in kwargs.keys()) and not (os.path.isfile(kwargs["results_file_path"])):
+        elif ("results_file_path" in kwargs.keys()) and not (
+            os.path.isfile(kwargs["results_file_path"])
+        ):
             error = ui.add_new_error(
                 error,
                 "file",
-                Path(kwargs['results_file_path']).name,
-                f"File not found: {kwargs['results_file_path']}"
+                Path(kwargs["results_file_path"]).name,
+                f"File not found: {kwargs['results_file_path']}",
             )
             return error
 
         # read data from file (appending _SOURCE)
         wr, mu, new_err = ui.read_results(kwargs, error)
         if new_err:
-            error = ui.consolidate_errors([error,new_err])
+            error = ui.consolidate_errors([error, new_err])
             if ui.fatal_error(new_err):
                 return error
 
@@ -950,7 +959,7 @@ class JurisdictionPrepper:
             we = pd.concat([we, new_internal_df]).drop_duplicates()
             new_err = prep.write_element(self.d["jurisdiction_path"], element, we)
             if new_err:
-                ui.consolidate_errors([error,new_err])
+                ui.consolidate_errors([error, new_err])
                 if ui.fatal_error(new_err):
                     return error
             # if <element>.txt has columns other than <name_field>, notify user
@@ -994,10 +1003,7 @@ class JurisdictionPrepper:
             ]
         ).drop_duplicates()
         err = prep.write_element(
-            ".",
-            "dictionary",
-            starter,
-            file_name=starter_file_name
+            ".", "dictionary", starter, file_name=starter_file_name
         )
         print(
             f"Starter dictionary created in current directory (not in jurisdiction directory):\n{starter_file_name}"

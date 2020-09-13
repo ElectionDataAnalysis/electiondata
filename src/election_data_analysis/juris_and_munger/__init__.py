@@ -167,7 +167,7 @@ class Munger:
             # find file in aux_data_dir whose name contains the string <afn>
             aux_filename_list = [x for x in os.listdir(aux_data_dir) if abbrev in x]
             if len(aux_filename_list) == 0:
-# TODO check this error
+                # TODO check this error
                 err = ui.add_new_error(
                     err,
                     "file",
@@ -175,7 +175,7 @@ class Munger:
                     f"No file found with name containing {abbrev}",
                 )
             elif len(aux_filename_list) > 1:
-# TODO check this error
+                # TODO check this error
                 err = ui.add_new_error(
                     err,
                     "file",
@@ -208,9 +208,9 @@ class Munger:
         return aux_field_list
 
     def __init__(
-            self,
-            dir_path,
-            aux_data_dir=None,
+        self,
+        dir_path,
+        aux_data_dir=None,
     ):
         """<dir_path> is the directory for the munger. If munger deals with auxiliary data files,
         <aux_data_dir> is the directory holding those files."""
@@ -244,7 +244,7 @@ def check_and_init_munger(munger_path: str, aux_data_dir: str = None) -> (Munger
     if ui.fatal_error(err):
         munger = None
     else:
-        munger = Munger(munger_path,aux_data_dir=aux_data_dir)
+        munger = Munger(munger_path, aux_data_dir=aux_data_dir)
     return munger, err
 
 
@@ -288,7 +288,7 @@ def read_munger_info_from_files(dir_path):
         header="format",
         optional_keys=optional_keys,
     )
-    options = recast_options(options,munger_pars_opt)
+    options = recast_options(options, munger_pars_opt)
 
     file_type = options["file_type"]
     if "encoding" in options.keys():
@@ -304,12 +304,7 @@ def read_munger_info_from_files(dir_path):
 
     # TODO have options hold all optional parameters (and maybe even all parameters)
     #  and remove explicit attributes entirely?
-    return [cdf_elements,
-            file_type,
-            encoding,
-            thousands_separator,
-            aux_meta,
-            options]
+    return [cdf_elements, file_type, encoding, thousands_separator, aux_meta, options]
 
 
 # TODO combine ensure_jurisdiction_dir with ensure_juris_files
@@ -323,9 +318,7 @@ def ensure_jurisdiction_dir(juris_path, ignore_empty=False) -> dict:
         print(f"Directory created: {juris_path}")
 
     # ensure the contents of the jurisdiction directory are correct
-    err = ensure_juris_files(
-        juris_path, ignore_empty=ignore_empty
-    )
+    err = ensure_juris_files(juris_path, ignore_empty=ignore_empty)
     return err
 
 
@@ -351,7 +344,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> dict:
             err,
             "jurisdiction",
             juris_name,
-            f"extraneous_files_in_juris_directory {extraneous}"
+            f"extraneous_files_in_juris_directory {extraneous}",
         )
 
     template_list = [x[:-4] for x in os.listdir(templates_dir)]
@@ -418,7 +411,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> dict:
                         err,
                         "jurisdiction",
                         juris_name,
-                        f"Null entries in {juris_file} in columns {null_columns}"
+                        f"Null entries in {juris_file} in columns {null_columns}",
                     )
 
     # check dependencies
@@ -426,8 +419,9 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> dict:
         # check dependencies
         d, new_err = check_dependencies(juris_path, juris_file)
         if new_err:
-            err = ui.consolidate_errors([err,new_err])
+            err = ui.consolidate_errors([err, new_err])
     return err
+
 
 def check_munger_files(munger_path: str) -> dict:
     """Check that the munger files are complete and consistent with one another.
@@ -442,10 +436,7 @@ def check_munger_files(munger_path: str) -> dict:
     # check whether directory exists
     if not os.path.isdir(munger_path):
         err = ui.add_new_error(
-            err,
-            "munger",
-            munger_name,
-            f"Directory does not exist: {munger_path}"
+            err, "munger", munger_name, f"Directory does not exist: {munger_path}"
         )
         return err
 
@@ -463,23 +454,17 @@ def check_munger_files(munger_path: str) -> dict:
             err = check_munger_file_format(munger_path, munger_file, templates, err)
 
             # if no errors found so far, check contents
-            if not ui.fatal_error(err,error_type_list=["munger"],name_key_list=[munger_file]):
+            if not ui.fatal_error(
+                err, error_type_list=["munger"], name_key_list=[munger_file]
+            ):
                 err = check_munger_file_contents(munger_path, munger_file, err)
         else:
-            err = ui.add_new_error(
-                err,
-                "munger",
-                munger_name,
-                "File does not exist"
-            )
+            err = ui.add_new_error(err, "munger", munger_name, "File does not exist")
     return err
 
 
 def check_munger_file_format(
-        munger_path: str,
-        munger_file: str,
-        templates:str,
-        err: dict
+    munger_path: str, munger_file: str, templates: str, err: dict
 ) -> dict:
 
     problems = list()
@@ -497,7 +482,7 @@ def check_munger_file_format(
                 err,
                 "munger",
                 munger_path,
-                f"Columns in {munger_file} do not match template.:\n" 
+                f"Columns in {munger_file} do not match template.:\n"
                 f"Columns of {munger_file}: {cf_df.columns}\n"
                 f"Columns of template: {temp.columns}",
             )
@@ -526,7 +511,9 @@ def check_munger_file_contents(munger_path, munger_file, err):
     if munger_file == "cdf_elements.txt":
         # read cdf_elements and format from files
         cdf_elements = pd.read_csv(
-            os.path.join(munger_path, "cdf_elements.txt"), sep="\t", encoding="iso-8859-1"
+            os.path.join(munger_path, "cdf_elements.txt"),
+            sep="\t",
+            encoding="iso-8859-1",
         ).fillna("")
 
         # every source in cdf_elements is either row, column or other
@@ -541,7 +528,9 @@ def check_munger_file_contents(munger_path, munger_file, err):
 
         # formulas have good syntax
         bad_formula = [
-            x for x in cdf_elements.raw_identifier_formula.unique() if not m.good_syntax(x)
+            x
+            for x in cdf_elements.raw_identifier_formula.unique()
+            if not m.good_syntax(x)
         ]
         if bad_formula:
             f_str = ",".join(bad_formula)
@@ -577,7 +566,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
                 err,
                 "munger",
                 munger_name,
-                f"At least one column-source formula in cdf_elements.txt has bad syntax: {bad_column_formula}"
+                f"At least one column-source formula in cdf_elements.txt has bad syntax: {bad_column_formula}",
             )
 
     elif munger_file == "format.config":
@@ -612,13 +601,12 @@ def check_munger_file_contents(munger_path, munger_file, err):
         if format_d["file_type"] in ["txt", "csv", "xls"]:
             # Either field_name_row is a number, or field_names_if_no_field_name_row is a non-empty list
             if (
-                    (not format_d["field_name_row"])
-                    or
-                    (not format_d["field_name_row"].isnumeric())
-                 and (
+                (not format_d["field_name_row"])
+                or (not format_d["field_name_row"].isnumeric())
+                and (
                     (not format_d["field_names_if_no_field_name_row"])
-                    or
-                    len(format_d["field_names_if_no_field_name_row"]) == 0)
+                    or len(format_d["field_names_if_no_field_name_row"]) == 0
+                )
             ):
                 err = ui.add_new_error(
                     err,
@@ -633,7 +621,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
             # other entries in format.config are of correct type
             try:
                 int(format_d["header_row_count"])
-            except (TypeError,ValueError):
+            except (TypeError, ValueError):
                 err = ui.add_new_error(
                     err,
                     "munger",
@@ -643,22 +631,26 @@ def check_munger_file_contents(munger_path, munger_file, err):
 
         # check all parameters for concatenated blocks (e.g., Georgia ExpressVote output)
         elif format_d["file_type"] in ["concatenated-blocks"]:
-            for key in ["count_of_top_lines_to_skip", "last_header_column_count", "column_width"]:
+            for key in [
+                "count_of_top_lines_to_skip",
+                "last_header_column_count",
+                "column_width",
+            ]:
                 try:
                     int(format_d[key])
-                except (ValueError,TypeError):
+                except (ValueError, TypeError):
                     err = ui.add_new_error(
                         err,
                         "munger",
                         munger_name,
-                        f'{key} is not an integer:  {format_d[key]}',
+                        f"{key} is not an integer:  {format_d[key]}",
                     )
     else:
         err = ui.add_new_error(
             err,
             "system",
             "juris_and_munger.check_munger_file_contents",
-            f"Munger template file not recognized: {munger_file}"
+            f"Munger template file not recognized: {munger_file}",
         )
 
     return err
@@ -763,12 +755,9 @@ def check_dependencies(juris_dir, element) -> (list, dict):
         # if the only missing is null or blank
         if len(missing) == 1 and missing == [""]:
             # exclude PrimaryParty, which isn't required to be not-null
-            if c != 'PrimaryParty':
+            if c != "PrimaryParty":
                 err = ui.add_new_error(
-                    err,
-                    "jurisdiction",
-                    juris_name,
-                    f"Some {c} are null."
+                    err, "jurisdiction", juris_name, f"Some {c} are null."
                 )
         elif missing:
             changed_elements.add(element)
@@ -799,9 +788,7 @@ def juris_dependency_dictionary():
 
 # TODO before processing jurisdiction files into db, alert user to any duplicate names.
 #  Enforce name change? Or just suggest?
-def load_juris_dframe_into_cdf(
-    session, element, juris_path, error
-) -> dict:
+def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
     """TODO"""
     project_root = Path(__file__).parents[2].absolute()
     cdf_schema_def_dir = os.path.join(

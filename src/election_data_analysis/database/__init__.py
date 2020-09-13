@@ -164,17 +164,12 @@ def append_to_composing_reporting_unit_join(engine, ru):
     return cruj_dframe
 
 
-def test_connection(
-        paramfile="run_time.ini",
-        dbname=None
-) -> (bool, dict):
+def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
     """Check for DB and relevant tables; if they don't exist, return
     False and error dictionary"""
     # get postgresql parameters
     params, err = ui.get_runtime_parameters(
-        required_keys=db_pars,
-        param_file=paramfile,
-        header="postgresql"
+        required_keys=db_pars, param_file=paramfile, header="postgresql"
     )
     if err:
         return False, err
@@ -203,10 +198,10 @@ def test_connection(
                 err,
                 "system",
                 "database.test_connection",
-                "Required tables not found in database"
+                "Required tables not found in database",
             )
             engine.dispose()
-            return False,err
+            return False, err
         engine.dispose()
 
     except Exception as e:
@@ -214,7 +209,7 @@ def test_connection(
             err,
             "system",
             "database.test_connection"
-            f"Unexpected exception while connecting to database: {e}"
+            f"Unexpected exception while connecting to database: {e}",
         )
         return False, err
     # if no errors found, return True
@@ -225,9 +220,7 @@ def create_new_db(param_file="run_time.ini") -> dict:
 
     project_root = Path(__file__).absolute().parents[2]
     params, err = ui.get_runtime_parameters(
-        required_keys=db_pars,
-        param_file=param_file,
-        header="postgresql"
+        required_keys=db_pars, param_file=param_file, header="postgresql"
     )
     if err:
         return err
@@ -284,9 +277,7 @@ def sql_alchemy_connect(
 ) -> (sqlalchemy.engine, dict):
     """Returns an engine and a metadata object"""
     params, err = ui.get_runtime_parameters(
-        required_keys=db_pars,
-        param_file=paramfile,
-        header="postgresql"
+        required_keys=db_pars, param_file=paramfile, header="postgresql"
     )
     if err:
         return None, err
