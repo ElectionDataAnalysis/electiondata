@@ -97,6 +97,8 @@ class DataLoader:
         """returns an error dictionary"""
         # initialize error dictionary
         err = None
+
+        # set locations for error reporting
         project_root = Path(__file__).absolute().parents[1]
         mungers_path = os.path.join(project_root, "mungers")
 
@@ -109,9 +111,17 @@ class DataLoader:
         if new_err:
             err = ui.consolidate_errors([err,new_err])
         if ui.fatal_error(new_err):
+            err = ui.report(err)
             return err
-        success_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
 
+        # specify directories for archiving and reporting warnings
+        success_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
+        loc_dict = {
+            "munger": self.d["results_dir"],
+            "jurisdiction": self.d["results_dir"],
+            "warn-munger": success_dir,
+            "warn-jurisdiction": success_dir,
+        }
 
         # list .ini files and pull their jurisdiction_paths
         par_files = [f for f in os.listdir(self.d["results_dir"]) if f[-4:] == ".ini"]
@@ -124,7 +134,7 @@ class DataLoader:
                 self.d['results_dir'],
                 f"No <results>.ini files found in directory. No results files will be processed.",
             )
-            ui.report(err)
+            err = ui.report(err)
             return err
 
         params = dict()
@@ -211,8 +221,14 @@ class DataLoader:
                         print(f"\tArchived {f} and its results file after successful load.")
                     else:
                         print(f"\t{f} and its results file not archived due to errors")
-
-        # report errors
+                # TODO report munger, jurisdiction and file errors & warnings
+                err = ui.report(
+                    err,
+                    loc_dict=loc_dict,
+                    key_list=["munger","jurisdiction","file","warn-munger","warn-jurisdiction","warn-file"],
+                    file_prefix=f"{f[:-4]}_"
+                )
+        # report remaining errors
         loc_dict = {
             "munger": self.d["results_dir"],
             "jurisdiction": self.d["results_dir"],

@@ -778,7 +778,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
                 err,
                 "jurisdiction",
                 juris_name,
-                f"Every {c} must be a {target}. This is not optional!! Offenders:\n{m_str}",
+                f"Every {c} in {element}.txt must be in {target}.txt. Offenders are:\n{m_str}",
             )
 
     return changed_elements, err

@@ -7,7 +7,7 @@ import csv
 import os
 from pathlib import Path
 from election_data_analysis import juris_and_munger as jm
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 import datetime
 
 # constants
@@ -675,16 +675,23 @@ def consolidate_errors(list_of_err: list) -> Optional[Dict[Any, dict]]:
 def report(
         err_warn: Optional[Dict[Any, dict]],
         loc_dict: Optional[Dict[Any, dict]] = None,
-):
+        key_list: list = None,
+        file_prefix: str = "",
+) -> dict:
     """unpacks error dictionary <err> for reporting.
     Keys of <location_dict> are error_types;
-    values of <loc_dict> are directories for writing error files"""
+    values of <loc_dict> are directories for writing error files.
+    Use <key_list> to report only on some keys, and return a copy of err_warn with those keys removed"""
     if not loc_dict:
         loc_dict = dict()
-    # create error/warning messages for each error_type/name_key pair
     if err_warn:
+        if not key_list:
+            # report all keys (otherwise report only key-list keys)
+            key_list = err_warn.keys()
+
+        # create error/warning messages for each error_type/name_key pair
         # list keys with content
-        active_keys = [k for k in err_warn.keys() if err_warn[k] != {}]
+        active_keys = [k for k in key_list if err_warn[k] != {}]
 
         # create working list of ets to process
         ets_to_process = [
@@ -723,7 +730,7 @@ def report(
                         # get timestamp
                         ts = datetime.datetime.now().strftime("%m%d_%H%M")
                         # write info to a .errors or .errors file named for the name_key <nk>
-                        out_path = os.path.join(loc_dict[et], f"{nk_name}_{ts}.errors")
+                        out_path = os.path.join(loc_dict[et], f"{file_prefix}{nk_name}_{ts}.errors")
                         with open(out_path,"a") as f:
                             f.write(out_str)
                         print(f"{et.title()} errors{and_warns} written to {out_path}")
@@ -745,16 +752,23 @@ def report(
                     # get timestamp
                     ts = datetime.datetime.now().strftime("%m%d_%H%M")
                     # write info to a .errors or .errors file named for the name_key <nk>
-                    out_path = os.path.join(f"warn-{et}", f"{nk_name}_{ts}.warnings")
+                    out_path = os.path.join(loc_dict[f"warn-{et}"], f"{file_prefix}{nk_name}_{ts}.warnings")
                     with open(out_path,"a") as f:
                         f.write(out_str)
                     print(f"{et.title()} warnings written to {out_path}")
                 else:
                     # print for user
                     print(out_str)
+
+        # define return dictionary with reported keys set to {} and othe keys preserved
+        remaining = {k: v for k, v in err_warn.items() if k not in key_list}
+        for k in key_list:
+            remaining[k] = {}
     else:
         print("No errors or warnings")
-    return
+        remaining = None
+
+    return remaining
 
 
 def add_new_error(
