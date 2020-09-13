@@ -181,7 +181,7 @@ class DataLoader:
                     print(f"Jurisdiction {juris[jp].name} assumed to be loaded to database already")
                     good_jurisdictions.append(jp)
 
-        # process all good files from good jurisdictions
+        # process all good parameter files with good jurisdictions
         for jp in good_jurisdictions:
             good_files = [f for f in good_par_files if juris_path[f] == jp]
             print(f"Processing results files {good_files}")
@@ -204,6 +204,7 @@ class DataLoader:
                         err = ui.consolidate_errors([err, load_error])
 
                     # if no fatal load error, archive files
+
                     if not ui.fatal_error(load_error):
                         ui.archive(f,self.d["results_dir"],success_dir)
                         ui.archive(sdl.d["results_file"], self.d["results_dir"], success_dir)
@@ -1051,7 +1052,7 @@ class Analyzer:
         return super().__new__(self)
 
     def __init__(self):
-        eng = db.sql_alchemy_connect("run_time.ini")
+        eng, err = db.sql_alchemy_connect("run_time.ini")
         Session = sessionmaker(bind=eng)
         self.session = Session()
 

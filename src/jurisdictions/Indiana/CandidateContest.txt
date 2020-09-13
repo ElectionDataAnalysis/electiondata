@@ -164,6 +164,7 @@ US Senate IN	1	US Senate IN
 IN Attorney General	1	IN Attorney General	
 IN Lieutenant Governor	1	IN Lieutenant Governor	
 IN Treasurer	1	IN Treasurer	
+IN Auditor	1	IN Auditor
 IN Secretary of State	1	IN Secretary of State	
 IN House District 1 (Democratic Party)	1	IN House District 1	Democratic Party
 IN House District 2 (Democratic Party)	1	IN House District 2	Democratic Party
@@ -330,6 +331,7 @@ US Senate IN (Democratic Party)	1	US Senate IN	Democratic Party
 IN Attorney General (Democratic Party)	1	IN Attorney General	Democratic Party
 IN Lieutenant Governor (Democratic Party)	1	IN Lieutenant Governor	Democratic Party
 IN Treasurer (Democratic Party)	1	IN Treasurer	Democratic Party
+IN Auditor (Democratic Party)	1	IN Auditor	Democratic Party
 IN Secretary of State (Democratic Party)	1	IN Secretary of State	Democratic Party
 IN House District 1 (Republican Party)	1	IN House District 1	Republican Party
 IN House District 2 (Republican Party)	1	IN House District 2	Republican Party
@@ -496,6 +498,7 @@ US Senate IN (Republican Party)	1	US Senate IN	Republican Party
 IN Attorney General (Republican Party)	1	IN Attorney General	Republican Party
 IN Lieutenant Governor (Republican Party)	1	IN Lieutenant Governor	Republican Party
 IN Treasurer (Republican Party)	1	IN Treasurer	Republican Party
+IN Auditor (Republican Party)	1	IN Auditor	Republican Party
 IN Secretary of State (Republican Party)	1	IN Secretary of State	Republican Party
 IN House District 1 (Green Party)	1	IN House District 1	Green Party
 IN House District 2 (Green Party)	1	IN House District 2	Green Party
@@ -662,6 +665,7 @@ US Senate IN (Green Party)	1	US Senate IN	Green Party
 IN Attorney General (Green Party)	1	IN Attorney General	Green Party
 IN Lieutenant Governor (Green Party)	1	IN Lieutenant Governor	Green Party
 IN Treasurer (Green Party)	1	IN Treasurer	Green Party
+IN Auditor (Green Party)	1	IN Auditor	Green Party
 IN Secretary of State (Green Party)	1	IN Secretary of State	Green Party
 IN House District 1 (Libertarian Party)	1	IN House District 1	Libertarian Party
 IN House District 2 (Libertarian Party)	1	IN House District 2	Libertarian Party
@@ -828,6 +832,7 @@ US Senate IN (Libertarian Party)	1	US Senate IN	Libertarian Party
 IN Attorney General (Libertarian Party)	1	IN Attorney General	Libertarian Party
 IN Lieutenant Governor (Libertarian Party)	1	IN Lieutenant Governor	Libertarian Party
 IN Treasurer (Libertarian Party)	1	IN Treasurer	Libertarian Party
+IN Auditor (Libertarian Party)	1	IN Auditor	Libertarian Party
 IN Secretary of State (Libertarian Party)	1	IN Secretary of State	Libertarian Party
 IN House District 1 (Constitution Party)	1	IN House District 1	Constitution Party
 IN House District 2 (Constitution Party)	1	IN House District 2	Constitution Party
@@ -994,6 +999,7 @@ US Senate IN (Constitution Party)	1	US Senate IN	Constitution Party
 IN Attorney General (Constitution Party)	1	IN Attorney General	Constitution Party
 IN Lieutenant Governor (Constitution Party)	1	IN Lieutenant Governor	Constitution Party
 IN Treasurer (Constitution Party)	1	IN Treasurer	Constitution Party
+IN Auditor (Constitution Party)	1	IN Auditor	Constitution Party
 IN Secretary of State (Constitution Party)	1	IN Secretary of State	Constitution Party
 IN House District 1 (Independent Party)	1	IN House District 1	Independent Party
 IN House District 2 (Independent Party)	1	IN House District 2	Independent Party
@@ -1160,6 +1166,7 @@ US Senate IN (Independent Party)	1	US Senate IN	Independent Party
 IN Attorney General (Independent Party)	1	IN Attorney General	Independent Party
 IN Lieutenant Governor (Independent Party)	1	IN Lieutenant Governor	Independent Party
 IN Treasurer (Independent Party)	1	IN Treasurer	Independent Party
+IN Auditor (Independent Party)	1	IN Auditor	Independent Party
 IN Secretary of State (Independent Party)	1	IN Secretary of State	Independent Party
 IN House District 1 (Non Partisan)	1	IN House District 1	Non Partisan
 IN House District 2 (Non Partisan)	1	IN House District 2	Non Partisan
@@ -1326,6 +1333,7 @@ US Senate IN (Non Partisan)	1	US Senate IN	Non Partisan
 IN Attorney General (Non Partisan)	1	IN Attorney General	Non Partisan
 IN Lieutenant Governor (Non Partisan)	1	IN Lieutenant Governor	Non Partisan
 IN Treasurer (Non Partisan)	1	IN Treasurer	Non Partisan
+IN Auditor (Non Partisan)	1	IN Auditor	Non Partisan
 IN Secretary of State (Non Partisan)	1	IN Secretary of State	Non Partisan
 IN House District 1 (Other Party)	1	IN House District 1	Other Party
 IN House District 2 (Other Party)	1	IN House District 2	Other Party
@@ -1492,6 +1500,7 @@ US Senate IN (Other Party)	1	US Senate IN	Other Party
 IN Attorney General (Other Party)	1	IN Attorney General	Other Party
 IN Lieutenant Governor (Other Party)	1	IN Lieutenant Governor	Other Party
 IN Treasurer (Other Party)	1	IN Treasurer	Other Party
+IN Auditor (Other Party)	1	IN Auditor	Other Party
 IN Secretary of State (Other Party)	1	IN Secretary of State	Other Party
 IN House District 1 (Socialist Party)	1	IN House District 1	Socialist Party
 IN House District 2 (Socialist Party)	1	IN House District 2	Socialist Party
@@ -1658,6 +1667,7 @@ US Senate IN (Socialist Party)	1	US Senate IN	Socialist Party
 IN Attorney General (Socialist Party)	1	IN Attorney General	Socialist Party
 IN Lieutenant Governor (Socialist Party)	1	IN Lieutenant Governor	Socialist Party
 IN Treasurer (Socialist Party)	1	IN Treasurer	Socialist Party
+IN Auditor (Socialist Party)	1	IN Auditor	Socialist Party
 IN Secretary of State (Socialist Party)	1	IN Secretary of State	Socialist Party
 IN House District 1 (Workers Party)	1	IN House District 1	Workers Party
 IN House District 2 (Workers Party)	1	IN House District 2	Workers Party
@@ -1824,4 +1834,5 @@ US Senate IN (Workers Party)	1	US Senate IN	Workers Party
 IN Attorney General (Workers Party)	1	IN Attorney General	Workers Party
 IN Lieutenant Governor (Workers Party)	1	IN Lieutenant Governor	Workers Party
 IN Treasurer (Workers Party)	1	IN Treasurer	Workers Party
+IN Auditor (Workers Party)	1	IN Auditor	Workers Party
 IN Secretary of State (Workers Party)	1	IN Secretary of State	Workers Party

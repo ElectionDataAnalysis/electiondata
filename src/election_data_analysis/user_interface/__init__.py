@@ -745,7 +745,7 @@ def report(
                     # get timestamp
                     ts = datetime.datetime.now().strftime("%m%d_%H%M")
                     # write info to a .errors or .errors file named for the name_key <nk>
-                    out_path = os.path.join(loc_dict[et], f"{nk_name}_{ts}.warnings")
+                    out_path = os.path.join(f"warn-{et}", f"{nk_name}_{ts}.warnings")
                     with open(out_path,"a") as f:
                         f.write(out_str)
                     print(f"{et.title()} warnings written to {out_path}")
