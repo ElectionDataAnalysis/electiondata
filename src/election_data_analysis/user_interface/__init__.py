@@ -288,11 +288,11 @@ recognized_encodings = {
 
 # keys for error- and warning-tracking dictionary
 error_keys = {
-            "ini",
-            "munger",
-            "jurisdiction",
-            "file",
-            "system",
+    "ini",
+    "munger",
+    "jurisdiction",
+    "file",
+    "system",
 }
 
 warning_keys = {
@@ -304,7 +304,9 @@ warning_keys = {
 }
 
 
-def get_params_to_read_results(d: dict, results_file_path=None, munger_name=None) -> (dict, list):
+def get_params_to_read_results(
+    d: dict, results_file_path=None, munger_name=None
+) -> (dict, list):
     """get parameters from arguments; otherwise from self.d;
     return dictionary of parameters, and list of missing parameters"""
     kwargs = d
@@ -312,9 +314,7 @@ def get_params_to_read_results(d: dict, results_file_path=None, munger_name=None
         kwargs["results_file_path"] = results_file_path
     if munger_name:
         kwargs["munger_name"] = munger_name
-    missing = [
-        x for x in ["results_file_path", "munger_name"] if kwargs[x] is None
-    ]
+    missing = [x for x in ["results_file_path", "munger_name"] if kwargs[x] is None]
     return kwargs, missing
 
 
@@ -325,7 +325,7 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
 
     project_root = Path(__file__).parents[2].absolute()
     dir_of_all_mungers = os.path.join(project_root, "mungers")
-    my_munger_path = os.path.join(dir_of_all_mungers,params["munger_name"])
+    my_munger_path = os.path.join(dir_of_all_mungers, params["munger_name"])
     if "aux_data_dir" in params.keys():
         aux_data_dir = params["aux_data_dir"]
     else:
@@ -337,11 +337,7 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
     if fatal_error(mu_err):
         wr = pd.DataFrame()
     else:
-        wr, error = read_combine_results(
-            mu,
-            params["results_file_path"],
-            error
-        )
+        wr, error = read_combine_results(mu, params["results_file_path"], error)
         wr.columns = [f"{x}_SOURCE" for x in wr.columns]
     return wr, mu, error
 
@@ -353,11 +349,11 @@ def pick_juris_from_filesystem(juris_path, err, check_files=False):
 
     if check_files:
         new_err = jm.ensure_jurisdiction_dir(juris_path)
-    err = consolidate_errors([err,new_err])
+    err = consolidate_errors([err, new_err])
     if fatal_error(new_err):
         ss = None
     else:
-    # initialize the jurisdiction
+        # initialize the jurisdiction
         ss = jm.Jurisdiction(juris_path)
     return ss, err
 
@@ -390,12 +386,12 @@ def read_single_datafile(
             df = pd.read_csv(f_path, **kwargs)
         elif munger.file_type in ["xls", "xlsx"]:
             df = pd.read_excel(f_path, **kwargs)
-        elif munger.file_type in ['concatenated-blocks']:
+        elif munger.file_type in ["concatenated-blocks"]:
             err = add_new_error(
                 err,
                 "system",
                 "user_interface.read_single_datafile",
-                f"Munger ({munger.name}) with file_type {munger.file_type} should not have reached this part of the code."
+                f"Munger ({munger.name}) with file_type {munger.file_type} should not have reached this part of the code.",
             )
             return pd.DataFrame(), err
         else:
@@ -415,7 +411,9 @@ def read_single_datafile(
             )
         else:
             df = m.generic_clean(df)
-            err = jm.check_results_munger_compatibility(munger, df, Path(f_path).name, err)
+            err = jm.check_results_munger_compatibility(
+                munger, df, Path(f_path).name, err
+            )
         return df, err
     except FileNotFoundError as fnfe:
         e = f"File not found: {f_path}"
@@ -435,14 +433,14 @@ def read_single_datafile(
 
 
 def read_combine_results(
-        mu: jm.Munger,
-        results_file_path: str,
-        err: dict,
-        aux_data_dir: str = None,
+    mu: jm.Munger,
+    results_file_path: str,
+    err: dict,
+    aux_data_dir: str = None,
 ) -> (pd.DataFrame, dict):
     if mu.options["file_type"] in ["concatenated-blocks"]:
         working, new_err = sf.read_concatenated_blocks(results_file_path, mu, None)
-        err = consolidate_errors([err,new_err])
+        err = consolidate_errors([err, new_err])
         if working.empty or fatal_error(new_err):
             return working, err
         # set options that will be needed for going forward
@@ -462,7 +460,7 @@ def read_combine_results(
             return pd.DataFrame(), err
 
         if new_err:
-            err = consolidate_errors([err,new_err])
+            err = consolidate_errors([err, new_err])
             if fatal_error(new_err):
                 return pd.DataFrame(), err
 
@@ -479,7 +477,7 @@ def read_combine_results(
                 None,
             )
             if new_err:
-                err = consolidate_errors([err,new_err])
+                err = consolidate_errors([err, new_err])
                 if fatal_error(new_err):
                     return pd.DataFrame(), err
             for abbrev, r in mu.aux_meta.iterrows():
@@ -529,9 +527,7 @@ def new_datafile(
     into common data format.
     Assumes cdf db exists already"""
     err = None
-    raw, err = read_combine_results(
-        munger, raw_path, err, aux_data_dir=aux_data_dir
-    )
+    raw, err = read_combine_results(munger, raw_path, err, aux_data_dir=aux_data_dir)
     if fatal_error(err):
         return err
     elif raw.empty:
@@ -564,7 +560,7 @@ def new_datafile(
             ids=results_info,
         )
         if new_err:
-            err = consolidate_errors([err,new_err])
+            err = consolidate_errors([err, new_err])
             if fatal_error(new_err):
                 return err
     except Exception as exc:
@@ -597,24 +593,14 @@ def get_runtime_parameters(
     parser = ConfigParser()
     p = parser.read(param_file)
     if len(p) == 0:
-        err = add_new_error(
-            err,
-            "file",
-            param_file,
-            "File not found"
-        )
+        err = add_new_error(err, "file", param_file, "File not found")
         return d, err
 
     # find header
     try:
         h = parser[header]
     except KeyError as ke:
-        err = add_new_error(
-            err,
-            "ini",
-            param_file,
-            f"Missing header: {ke}"
-        )
+        err = add_new_error(err, "ini", param_file, f"Missing header: {ke}")
         return d, err
 
     # read required info
@@ -629,7 +615,7 @@ def get_runtime_parameters(
             err,
             "ini",
             param_file,
-            f"Missing required parameters: {missing_required_params}"
+            f"Missing required parameters: {missing_required_params}",
         )
         return d, err
 
@@ -673,10 +659,10 @@ def consolidate_errors(list_of_err: list) -> Optional[Dict[Any, dict]]:
 
 
 def report(
-        err_warn: Optional[Dict[Any, dict]],
-        loc_dict: Optional[Dict[Any, dict]] = None,
-        key_list: list = None,
-        file_prefix: str = "",
+    err_warn: Optional[Dict[Any, dict]],
+    loc_dict: Optional[Dict[Any, dict]] = None,
+    key_list: list = None,
+    file_prefix: str = "",
 ) -> dict:
     """unpacks error dictionary <err> for reporting.
     Keys of <location_dict> are error_types;
@@ -695,16 +681,18 @@ def report(
 
         # create working list of ets to process
         ets_to_process = [
-            et for et in error_keys if (et in active_keys) or (f"warn-{et}" in active_keys)
+            et
+            for et in error_keys
+            if (et in active_keys) or (f"warn-{et}" in active_keys)
         ]
 
         # create all et-nk tuples
         tuples = set()
         for et in active_keys:
-            tuples = tuples.union({(et,nk) for nk in err_warn[et].keys()})
+            tuples = tuples.union({(et, nk) for nk in err_warn[et].keys()})
 
         # map each tuple to its message
-        msg = {(et,nk): "\n".join(err_warn[et][nk]) for et,nk in tuples}
+        msg = {(et, nk): "\n".join(err_warn[et][nk]) for et, nk in tuples}
 
         # write errors/warns to error files
         while ets_to_process:
@@ -718,7 +706,9 @@ def report(
                 for nk in err_warn[et].keys():
                     # prepare output string (errors and warns if any)
                     nk_name = Path(nk).name
-                    if (f"warn-{et}" in active_keys) and (nk in err_warn[f"warn-{et}"].keys()):
+                    if (f"warn-{et}" in active_keys) and (
+                        nk in err_warn[f"warn-{et}"].keys()
+                    ):
                         warn_str = f"\n{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n\n"
                         and_warns = " and warnings"
                     else:
@@ -730,8 +720,10 @@ def report(
                         # get timestamp
                         ts = datetime.datetime.now().strftime("%m%d_%H%M")
                         # write info to a .errors or .errors file named for the name_key <nk>
-                        out_path = os.path.join(loc_dict[et], f"{file_prefix}{nk_name}_{ts}.errors")
-                        with open(out_path,"a") as f:
+                        out_path = os.path.join(
+                            loc_dict[et], f"{file_prefix}{nk_name}_{ts}.errors"
+                        )
+                        with open(out_path, "a") as f:
                             f.write(out_str)
                         print(f"{et.title()} errors{and_warns} written to {out_path}")
                     else:
@@ -740,20 +732,26 @@ def report(
 
             # process name keys with only warnings
             only_warns = [
-                nk for nk in err_warn[f"warn-{et}"].keys() if nk not in err_warn[et].keys()
+                nk
+                for nk in err_warn[f"warn-{et}"].keys()
+                if nk not in err_warn[et].keys()
             ]
             for nk in only_warns:
                 # prepare output string
                 nk_name = Path(nk).name
-                out_str = f"{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n"
+                out_str = (
+                    f"{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n"
+                )
 
                 # print/write output
                 if f"warn-{et}" in loc_dict.keys():
                     # get timestamp
                     ts = datetime.datetime.now().strftime("%m%d_%H%M")
                     # write info to a .errors or .errors file named for the name_key <nk>
-                    out_path = os.path.join(loc_dict[f"warn-{et}"], f"{file_prefix}{nk_name}_{ts}.warnings")
-                    with open(out_path,"a") as f:
+                    out_path = os.path.join(
+                        loc_dict[f"warn-{et}"], f"{file_prefix}{nk_name}_{ts}.warnings"
+                    )
+                    with open(out_path, "a") as f:
                         f.write(out_str)
                     print(f"{et.title()} warnings written to {out_path}")
                 else:
@@ -772,22 +770,20 @@ def report(
 
 
 def add_new_error(
-        err: Optional[Dict[Any, dict]],
-        err_type: str,
-        key: str,
-        msg: str
+    err: Optional[Dict[Any, dict]], err_type: str, key: str, msg: str
 ) -> dict:
     """err is a dictionary of dictionaries, one for each err_type.
     This function return err, augmented by the error specified in <err_type>,<key> and <msg>"""
     if err is None or err == dict():
-        err = {k:{} for k in warning_keys.union(error_keys)}
-            # TODO document. Problems with results file are reported with "ini" key
+        err = {k: {} for k in warning_keys.union(error_keys)}
+        # TODO document. Problems with results file are reported with "ini" key
     if err_type not in err.keys():
         err = add_new_error(
             err,
             "system",
             "user_interface.add_new_error",
-            f"Unrecognized key ({err_type}) for message {msg}")
+            f"Unrecognized key ({err_type}) for message {msg}",
+        )
         return err
     if key in err[err_type].keys():
         err[err_type][key].append(msg)
@@ -796,7 +792,7 @@ def add_new_error(
     return err
 
 
-def fatal_error(err,error_type_list=None,name_key_list=None) -> bool:
+def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
     """Returns true if there is a fatal error in the error dictionary <err>
     matching all given criteria"""
     if not err:
@@ -814,5 +810,3 @@ def fatal_error(err,error_type_list=None,name_key_list=None) -> bool:
         if bad:
             return True
     return False
-
-
