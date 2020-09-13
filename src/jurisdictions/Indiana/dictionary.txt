@@ -32,7 +32,6 @@ Candidate	Heather Leigh Meloy (W/I)	Heather Leigh Meloy (W/I)
 Candidate	Jeannine Lee Lake	Jeannine Lee Lake
 Candidate	John Miller (W/I)	John Miller (W/I)
 Candidate	Tom Ferkinhoff	Tom Ferkinhoff
-Candidate	AndrÃÂ© D. Carson	AndrÃÂ© D. Carson
 Candidate	Wayne 'Gunny' Harmon	Wayne 'Gunny' Harmon
 Candidate	Larry D. Bucshon	Larry D. Bucshon
 Candidate	William Tanoos	William Tanoos
@@ -9394,8 +9393,8 @@ ReportingUnit	Indiana;Hancock County;Jackson 1	Hancock;Jackson 1
 ReportingUnit	Indiana;Hancock County;M-1	Hancock;M-1
 ReportingUnit	Indiana;Hancock County;M-1 Southeast	Hancock;M-1 Southeast
 ReportingUnit	Indiana;Hancock County;M-2	Hancock;M-2
-ReportingUnit	Indiana;Hancock County;Nv-1  Nv	Hancock;Nv-1  Nv
-ReportingUnit	Indiana;Hancock County;Nv-2  Nv	Hancock;Nv-2  Nv
+ReportingUnit	Indiana;Hancock County;Nv-1 Nv	Hancock;Nv-1 Nv
+ReportingUnit	Indiana;Hancock County;Nv-2 Nv	Hancock;Nv-2 Nv
 ReportingUnit	Indiana;Hancock County;Nv-3	Hancock;Nv-3
 ReportingUnit	Indiana;Hancock County;Sugar Creek 1-E	Hancock;Sugar Creek 1-E
 ReportingUnit	Indiana;Hancock County;Sugar Creek 1-W	Hancock;Sugar Creek 1-W
@@ -9592,7 +9591,7 @@ ReportingUnit	Indiana;Huntington County;Huntington 11	Huntington;Huntington 11
 ReportingUnit	Indiana;Huntington County;Huntington 11a	Huntington;Huntington 11a
 ReportingUnit	Indiana;Huntington County;Huntington 12	Huntington;Huntington 12
 ReportingUnit	Indiana;Huntington County;Huntington 12a	Huntington;Huntington 12a
-ReportingUnit	Indiana;Huntington County;Huntington 13  Nv	Huntington;Huntington 13  Nv
+ReportingUnit	Indiana;Huntington County;Huntington 13 Nv	Huntington;Huntington 13 Nv
 ReportingUnit	Indiana;Huntington County;Jackson Twp 1	Huntington;Jackson Twp 1
 ReportingUnit	Indiana;Huntington County;Jackson Twp 2	Huntington;Jackson Twp 2
 ReportingUnit	Indiana;Huntington County;Jackson Twp 3	Huntington;Jackson Twp 3
@@ -9998,58 +9997,58 @@ ReportingUnit	Indiana;Lake County;Ec 33	Lake;Ec 33
 ReportingUnit	Indiana;Lake County;Ec 35	Lake;Ec 35
 ReportingUnit	Indiana;Lake County;Ec 36	Lake;Ec 36
 ReportingUnit	Indiana;Lake County;Ect 01	Lake;Ect 01
-ReportingUnit	Indiana;Lake County;G1  03	Lake;G1  03
-ReportingUnit	Indiana;Lake County;G1  08	Lake;G1  08
-ReportingUnit	Indiana;Lake County;G1  10	Lake;G1  10
-ReportingUnit	Indiana;Lake County;G1  16	Lake;G1  16
-ReportingUnit	Indiana;Lake County;G1  18	Lake;G1  18
-ReportingUnit	Indiana;Lake County;G1  20	Lake;G1  20
-ReportingUnit	Indiana;Lake County;G1  22	Lake;G1  22
-ReportingUnit	Indiana;Lake County;G1  24	Lake;G1  24
-ReportingUnit	Indiana;Lake County;G2  01	Lake;G2  01
-ReportingUnit	Indiana;Lake County;G2  03	Lake;G2  03
-ReportingUnit	Indiana;Lake County;G2  04	Lake;G2  04
-ReportingUnit	Indiana;Lake County;G2  10	Lake;G2  10
-ReportingUnit	Indiana;Lake County;G2  11	Lake;G2  11
-ReportingUnit	Indiana;Lake County;G2  12	Lake;G2  12
-ReportingUnit	Indiana;Lake County;G2  17	Lake;G2  17
-ReportingUnit	Indiana;Lake County;G2  20	Lake;G2  20
-ReportingUnit	Indiana;Lake County;G2  24	Lake;G2  24
-ReportingUnit	Indiana;Lake County;G3  03	Lake;G3  03
-ReportingUnit	Indiana;Lake County;G3  11	Lake;G3  11
-ReportingUnit	Indiana;Lake County;G3  15	Lake;G3  15
-ReportingUnit	Indiana;Lake County;G3  16	Lake;G3  16
-ReportingUnit	Indiana;Lake County;G3  17	Lake;G3  17
-ReportingUnit	Indiana;Lake County;G3  19	Lake;G3  19
-ReportingUnit	Indiana;Lake County;G3  21	Lake;G3  21
-ReportingUnit	Indiana;Lake County;G3  26	Lake;G3  26
-ReportingUnit	Indiana;Lake County;G4  03	Lake;G4  03
-ReportingUnit	Indiana;Lake County;G4  05	Lake;G4  05
-ReportingUnit	Indiana;Lake County;G4  10	Lake;G4  10
-ReportingUnit	Indiana;Lake County;G4  14	Lake;G4  14
-ReportingUnit	Indiana;Lake County;G4  16	Lake;G4  16
-ReportingUnit	Indiana;Lake County;G4  22	Lake;G4  22
-ReportingUnit	Indiana;Lake County;G4  23	Lake;G4  23
-ReportingUnit	Indiana;Lake County;G4  25	Lake;G4  25
-ReportingUnit	Indiana;Lake County;G4  28	Lake;G4  28
-ReportingUnit	Indiana;Lake County;G5  01	Lake;G5  01
-ReportingUnit	Indiana;Lake County;G5  02	Lake;G5  02
-ReportingUnit	Indiana;Lake County;G5  03	Lake;G5  03
-ReportingUnit	Indiana;Lake County;G5  04	Lake;G5  04
-ReportingUnit	Indiana;Lake County;G5  06	Lake;G5  06
-ReportingUnit	Indiana;Lake County;G5  13	Lake;G5  13
-ReportingUnit	Indiana;Lake County;G5  14	Lake;G5  14
-ReportingUnit	Indiana;Lake County;G5  16	Lake;G5  16
-ReportingUnit	Indiana;Lake County;G5  20	Lake;G5  20
+ReportingUnit	Indiana;Lake County;G1 03	Lake;G1 03
+ReportingUnit	Indiana;Lake County;G1 08	Lake;G1 08
+ReportingUnit	Indiana;Lake County;G1 10	Lake;G1 10
+ReportingUnit	Indiana;Lake County;G1 16	Lake;G1 16
+ReportingUnit	Indiana;Lake County;G1 18	Lake;G1 18
+ReportingUnit	Indiana;Lake County;G1 20	Lake;G1 20
+ReportingUnit	Indiana;Lake County;G1 22	Lake;G1 22
+ReportingUnit	Indiana;Lake County;G1 24	Lake;G1 24
+ReportingUnit	Indiana;Lake County;G2 01	Lake;G2 01
+ReportingUnit	Indiana;Lake County;G2 03	Lake;G2 03
+ReportingUnit	Indiana;Lake County;G2 04	Lake;G2 04
+ReportingUnit	Indiana;Lake County;G2 10	Lake;G2 10
+ReportingUnit	Indiana;Lake County;G2 11	Lake;G2 11
+ReportingUnit	Indiana;Lake County;G2 12	Lake;G2 12
+ReportingUnit	Indiana;Lake County;G2 17	Lake;G2 17
+ReportingUnit	Indiana;Lake County;G2 20	Lake;G2 20
+ReportingUnit	Indiana;Lake County;G2 24	Lake;G2 24
+ReportingUnit	Indiana;Lake County;G3 03	Lake;G3 03
+ReportingUnit	Indiana;Lake County;G3 11	Lake;G3 11
+ReportingUnit	Indiana;Lake County;G3 15	Lake;G3 15
+ReportingUnit	Indiana;Lake County;G3 16	Lake;G3 16
+ReportingUnit	Indiana;Lake County;G3 17	Lake;G3 17
+ReportingUnit	Indiana;Lake County;G3 19	Lake;G3 19
+ReportingUnit	Indiana;Lake County;G3 21	Lake;G3 21
+ReportingUnit	Indiana;Lake County;G3 26	Lake;G3 26
+ReportingUnit	Indiana;Lake County;G4 03	Lake;G4 03
+ReportingUnit	Indiana;Lake County;G4 05	Lake;G4 05
+ReportingUnit	Indiana;Lake County;G4 10	Lake;G4 10
+ReportingUnit	Indiana;Lake County;G4 14	Lake;G4 14
+ReportingUnit	Indiana;Lake County;G4 16	Lake;G4 16
+ReportingUnit	Indiana;Lake County;G4 22	Lake;G4 22
+ReportingUnit	Indiana;Lake County;G4 23	Lake;G4 23
+ReportingUnit	Indiana;Lake County;G4 25	Lake;G4 25
+ReportingUnit	Indiana;Lake County;G4 28	Lake;G4 28
+ReportingUnit	Indiana;Lake County;G5 01	Lake;G5 01
+ReportingUnit	Indiana;Lake County;G5 02	Lake;G5 02
+ReportingUnit	Indiana;Lake County;G5 03	Lake;G5 03
+ReportingUnit	Indiana;Lake County;G5 04	Lake;G5 04
+ReportingUnit	Indiana;Lake County;G5 06	Lake;G5 06
+ReportingUnit	Indiana;Lake County;G5 13	Lake;G5 13
+ReportingUnit	Indiana;Lake County;G5 14	Lake;G5 14
+ReportingUnit	Indiana;Lake County;G5 16	Lake;G5 16
+ReportingUnit	Indiana;Lake County;G5 20	Lake;G5 20
 ReportingUnit	Indiana;Lake County;G5 24 N.v.	Lake;G5 24 N.v.
-ReportingUnit	Indiana;Lake County;G6  02	Lake;G6  02
-ReportingUnit	Indiana;Lake County;G6  05	Lake;G6  05
-ReportingUnit	Indiana;Lake County;G6  07	Lake;G6  07
-ReportingUnit	Indiana;Lake County;G6  10	Lake;G6  10
-ReportingUnit	Indiana;Lake County;G6  12	Lake;G6  12
-ReportingUnit	Indiana;Lake County;G6  14	Lake;G6  14
-ReportingUnit	Indiana;Lake County;G6  16	Lake;G6  16
-ReportingUnit	Indiana;Lake County;G6  18	Lake;G6  18
+ReportingUnit	Indiana;Lake County;G6 02	Lake;G6 02
+ReportingUnit	Indiana;Lake County;G6 05	Lake;G6 05
+ReportingUnit	Indiana;Lake County;G6 07	Lake;G6 07
+ReportingUnit	Indiana;Lake County;G6 10	Lake;G6 10
+ReportingUnit	Indiana;Lake County;G6 12	Lake;G6 12
+ReportingUnit	Indiana;Lake County;G6 14	Lake;G6 14
+ReportingUnit	Indiana;Lake County;G6 16	Lake;G6 16
+ReportingUnit	Indiana;Lake County;G6 18	Lake;G6 18
 ReportingUnit	Indiana;Lake County;Gr 01	Lake;Gr 01
 ReportingUnit	Indiana;Lake County;Gr 02	Lake;Gr 02
 ReportingUnit	Indiana;Lake County;Gr 03	Lake;Gr 03
@@ -10064,52 +10063,52 @@ ReportingUnit	Indiana;Lake County;Gr 15	Lake;Gr 15
 ReportingUnit	Indiana;Lake County;Gr 16	Lake;Gr 16
 ReportingUnit	Indiana;Lake County;Gr 17	Lake;Gr 17
 ReportingUnit	Indiana;Lake County;Gr 18	Lake;Gr 18
-ReportingUnit	Indiana;Lake County;H1  01	Lake;H1  01
-ReportingUnit	Indiana;Lake County;H1  03	Lake;H1  03
-ReportingUnit	Indiana;Lake County;H1  05	Lake;H1  05
-ReportingUnit	Indiana;Lake County;H1  07	Lake;H1  07
-ReportingUnit	Indiana;Lake County;H1  08	Lake;H1  08
-ReportingUnit	Indiana;Lake County;H1  10	Lake;H1  10
-ReportingUnit	Indiana;Lake County;H1  12	Lake;H1  12
-ReportingUnit	Indiana;Lake County;H1  16	Lake;H1  16
-ReportingUnit	Indiana;Lake County;H2  03	Lake;H2  03
-ReportingUnit	Indiana;Lake County;H2  05	Lake;H2  05
-ReportingUnit	Indiana;Lake County;H2  06	Lake;H2  06
-ReportingUnit	Indiana;Lake County;H2  11	Lake;H2  11
-ReportingUnit	Indiana;Lake County;H2  12	Lake;H2  12
-ReportingUnit	Indiana;Lake County;H2  14	Lake;H2  14
-ReportingUnit	Indiana;Lake County;H3  03	Lake;H3  03
-ReportingUnit	Indiana;Lake County;H3  04	Lake;H3  04
-ReportingUnit	Indiana;Lake County;H3  05	Lake;H3  05
-ReportingUnit	Indiana;Lake County;H3  07	Lake;H3  07
-ReportingUnit	Indiana;Lake County;H3  09	Lake;H3  09
-ReportingUnit	Indiana;Lake County;H3  11	Lake;H3  11
-ReportingUnit	Indiana;Lake County;H3  16	Lake;H3  16
-ReportingUnit	Indiana;Lake County;H4  05	Lake;H4  05
-ReportingUnit	Indiana;Lake County;H4  06	Lake;H4  06
-ReportingUnit	Indiana;Lake County;H4  07	Lake;H4  07
-ReportingUnit	Indiana;Lake County;H4  09	Lake;H4  09
-ReportingUnit	Indiana;Lake County;H4  11	Lake;H4  11
-ReportingUnit	Indiana;Lake County;H4  12	Lake;H4  12
-ReportingUnit	Indiana;Lake County;H4  14	Lake;H4  14
-ReportingUnit	Indiana;Lake County;H4  18	Lake;H4  18
-ReportingUnit	Indiana;Lake County;H5  04	Lake;H5  04
-ReportingUnit	Indiana;Lake County;H5  08	Lake;H5  08
-ReportingUnit	Indiana;Lake County;H5  12	Lake;H5  12
-ReportingUnit	Indiana;Lake County;H5  13	Lake;H5  13
-ReportingUnit	Indiana;Lake County;H5  14	Lake;H5  14
-ReportingUnit	Indiana;Lake County;H5  15	Lake;H5  15
-ReportingUnit	Indiana;Lake County;H5  17	Lake;H5  17
-ReportingUnit	Indiana;Lake County;H6  01	Lake;H6  01
-ReportingUnit	Indiana;Lake County;H6  04	Lake;H6  04
-ReportingUnit	Indiana;Lake County;H6  05	Lake;H6  05
-ReportingUnit	Indiana;Lake County;H6  07	Lake;H6  07
-ReportingUnit	Indiana;Lake County;H6  08	Lake;H6  08
-ReportingUnit	Indiana;Lake County;H6  09	Lake;H6  09
-ReportingUnit	Indiana;Lake County;H6  10	Lake;H6  10
-ReportingUnit	Indiana;Lake County;H6  12	Lake;H6  12
-ReportingUnit	Indiana;Lake County;H6  13	Lake;H6  13
-ReportingUnit	Indiana;Lake County;H6  15	Lake;H6  15
+ReportingUnit	Indiana;Lake County;H1 01	Lake;H1 01
+ReportingUnit	Indiana;Lake County;H1 03	Lake;H1 03
+ReportingUnit	Indiana;Lake County;H1 05	Lake;H1 05
+ReportingUnit	Indiana;Lake County;H1 07	Lake;H1 07
+ReportingUnit	Indiana;Lake County;H1 08	Lake;H1 08
+ReportingUnit	Indiana;Lake County;H1 10	Lake;H1 10
+ReportingUnit	Indiana;Lake County;H1 12	Lake;H1 12
+ReportingUnit	Indiana;Lake County;H1 16	Lake;H1 16
+ReportingUnit	Indiana;Lake County;H2 03	Lake;H2 03
+ReportingUnit	Indiana;Lake County;H2 05	Lake;H2 05
+ReportingUnit	Indiana;Lake County;H2 06	Lake;H2 06
+ReportingUnit	Indiana;Lake County;H2 11	Lake;H2 11
+ReportingUnit	Indiana;Lake County;H2 12	Lake;H2 12
+ReportingUnit	Indiana;Lake County;H2 14	Lake;H2 14
+ReportingUnit	Indiana;Lake County;H3 03	Lake;H3 03
+ReportingUnit	Indiana;Lake County;H3 04	Lake;H3 04
+ReportingUnit	Indiana;Lake County;H3 05	Lake;H3 05
+ReportingUnit	Indiana;Lake County;H3 07	Lake;H3 07
+ReportingUnit	Indiana;Lake County;H3 09	Lake;H3 09
+ReportingUnit	Indiana;Lake County;H3 11	Lake;H3 11
+ReportingUnit	Indiana;Lake County;H3 16	Lake;H3 16
+ReportingUnit	Indiana;Lake County;H4 05	Lake;H4 05
+ReportingUnit	Indiana;Lake County;H4 06	Lake;H4 06
+ReportingUnit	Indiana;Lake County;H4 07	Lake;H4 07
+ReportingUnit	Indiana;Lake County;H4 09	Lake;H4 09
+ReportingUnit	Indiana;Lake County;H4 11	Lake;H4 11
+ReportingUnit	Indiana;Lake County;H4 12	Lake;H4 12
+ReportingUnit	Indiana;Lake County;H4 14	Lake;H4 14
+ReportingUnit	Indiana;Lake County;H4 18	Lake;H4 18
+ReportingUnit	Indiana;Lake County;H5 04	Lake;H5 04
+ReportingUnit	Indiana;Lake County;H5 08	Lake;H5 08
+ReportingUnit	Indiana;Lake County;H5 12	Lake;H5 12
+ReportingUnit	Indiana;Lake County;H5 13	Lake;H5 13
+ReportingUnit	Indiana;Lake County;H5 14	Lake;H5 14
+ReportingUnit	Indiana;Lake County;H5 15	Lake;H5 15
+ReportingUnit	Indiana;Lake County;H5 17	Lake;H5 17
+ReportingUnit	Indiana;Lake County;H6 01	Lake;H6 01
+ReportingUnit	Indiana;Lake County;H6 04	Lake;H6 04
+ReportingUnit	Indiana;Lake County;H6 05	Lake;H6 05
+ReportingUnit	Indiana;Lake County;H6 07	Lake;H6 07
+ReportingUnit	Indiana;Lake County;H6 08	Lake;H6 08
+ReportingUnit	Indiana;Lake County;H6 09	Lake;H6 09
+ReportingUnit	Indiana;Lake County;H6 10	Lake;H6 10
+ReportingUnit	Indiana;Lake County;H6 12	Lake;H6 12
+ReportingUnit	Indiana;Lake County;H6 13	Lake;H6 13
+ReportingUnit	Indiana;Lake County;H6 15	Lake;H6 15
 ReportingUnit	Indiana;Lake County;Hl 03	Lake;Hl 03
 ReportingUnit	Indiana;Lake County;Hl 04	Lake;Hl 04
 ReportingUnit	Indiana;Lake County;Hl 05	Lake;Hl 05
@@ -10166,7 +10165,7 @@ ReportingUnit	Indiana;Lake County;Ls 08	Lake;Ls 08
 ReportingUnit	Indiana;Lake County;Ls 10	Lake;Ls 10
 ReportingUnit	Indiana;Lake County;Ls 11	Lake;Ls 11
 ReportingUnit	Indiana;Lake County;Ls 13	Lake;Ls 13
-ReportingUnit	Indiana;Lake County;Ls 14  Nv	Lake;Ls 14  Nv
+ReportingUnit	Indiana;Lake County;Ls 14 Nv	Lake;Ls 14 Nv
 ReportingUnit	Indiana;Lake County;M 01	Lake;M 01
 ReportingUnit	Indiana;Lake County;M 02	Lake;M 02
 ReportingUnit	Indiana;Lake County;M 04	Lake;M 04
@@ -11583,7 +11582,7 @@ ReportingUnit	Indiana;Wayne County;Center 4a Nv	Wayne;Center 4a Nv
 ReportingUnit	Indiana;Wayne County;Center 5	Wayne;Center 5
 ReportingUnit	Indiana;Wayne County;Center 6	Wayne;Center 6
 ReportingUnit	Indiana;Wayne County;Clay 1	Wayne;Clay 1
-ReportingUnit	Indiana;Wayne County;Dalton  1	Wayne;Dalton  1
+ReportingUnit	Indiana;Wayne County;Dalton 1	Wayne;Dalton 1
 ReportingUnit	Indiana;Wayne County;Franklin 1	Wayne;Franklin 1
 ReportingUnit	Indiana;Wayne County;Greene 1	Wayne;Greene 1
 ReportingUnit	Indiana;Wayne County;Harrison 1	Wayne;Harrison 1
@@ -11769,7 +11768,7 @@ ReportingUnit	Indiana;Washington County	Washington;Washington
 ReportingUnit	Indiana;Wayne County	Wayne;Wayne
 ReportingUnit	Indiana;Wells County	Wells;Wells
 ReportingUnit	Indiana;Whitley County	Whitley;Whitley
-Candidate	AndrÃ© D. Carson	AndrÃ© D. Carson
+Candidate	André D. Carson	André D. Carson
 Candidate	Amy Klobuchar	Amy Klobuchar
 Candidate	Andrew Yang	Andrew Yang
 Candidate	Bernie Sanders	Bernie Sanders
@@ -11831,7 +11830,7 @@ Candidate	Victoria Spartz	Victoria Spartz
 Candidate	Barry Welsh	Barry Welsh
 Candidate	George T. Holland	George T. Holland
 Candidate	Mike Campbell	Mike Campbell
-Candidate	AndrÃ© Carson	AndrÃ© Carson
+Candidate	André Carson	André Carson
 Candidate	Douglas L. (Doug) Merrill	Douglas L. (Doug) Merrill
 Candidate	Gerald Walters	Gerald Walters
 Candidate	J.d. Miniear	J.d. Miniear
@@ -12047,7 +12046,7 @@ Candidate	Angela Demaree	Angela Demaree
 Candidate	Matthew Wittlief	Matthew Wittlief
 Candidate	Luke Messer	Luke Messer
 Candidate	Rich Turvey	Rich Turvey
-Candidate	Andre D. Carson	Andre D. Carson
+Candidate	André D. Carson	Andre D. Carson
 Candidate	Catherine (Cat) Ping	Catherine (Cat) Ping
 Candidate	Drew Thompson	Drew Thompson
 Candidate	Andrew Horning	Andrew Horning
