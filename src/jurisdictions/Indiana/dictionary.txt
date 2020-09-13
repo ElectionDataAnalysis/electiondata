@@ -12166,3 +12166,5 @@ Candidate	Gregory A. R(Greg) Athnow	Gregory A. R(Greg) Athnow
 Candidate	Nathanael L. Ginn	Nathanael L. Ginn
 Candidate	Dale Nye	Dale Nye
 Candidate	Gary Whitmore	Gary Whitmore
+CountItemType	total	total
+
