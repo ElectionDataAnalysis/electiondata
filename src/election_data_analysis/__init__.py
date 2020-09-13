@@ -30,9 +30,12 @@ single_data_loader_pars = [
 multi_data_loader_pars = [
     "results_dir",
     "archive_dir",
+    "jurisdictions_dir",
+    "mungers_dir",
 ]
 
 prep_pars = [
+    "mungers_dir",
     "jurisdiction_path",
     "name",
     "abbreviated_name",
@@ -97,8 +100,8 @@ class DataLoader:
         err = None
 
         # set locations for error reporting
-        project_root = Path(__file__).absolute().parents[1]
-        mungers_path = os.path.join(project_root, "mungers")
+        # TODO get rid of mungers_path variable, use self.d directly
+        mungers_path = self.d["mungers_dir"]
 
         # define directory for archiving successfully loaded files (and storing warnings)
         db_param, new_err = ui.get_runtime_parameters(
@@ -432,7 +435,7 @@ class JurisdictionPrepper:
         error = jm.ensure_jurisdiction_dir(self.d["jurisdiction_path"])
         # add default entries
         project_root = Path(__file__).absolute().parents[1]
-        templates = os.path.join(project_root, "templates/jurisdiction_templates")
+        templates = os.path.join(project_root, "templates", "jurisdiction_templates")
         for element in ["Party", "Election"]:
             new_err = prep.add_defaults(self.d["jurisdiction_path"], templates, element)
             if new_err:
@@ -451,7 +454,7 @@ class JurisdictionPrepper:
 
     def add_primaries_to_dict(self) -> dict:
         """Return error dictionary"""
-        print("\nStarting new_juris_files")
+        print("\nStarting add_primaries_to_dict")
         error = None
 
         primaries = {}

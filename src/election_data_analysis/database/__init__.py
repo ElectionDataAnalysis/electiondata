@@ -218,7 +218,7 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
 
 def create_new_db(param_file="run_time.ini") -> dict:
 
-    project_root = Path(__file__).absolute().parents[2]
+    project_root = Path(__file__).absolute().parents[1]
     params, err = ui.get_runtime_parameters(
         required_keys=db_pars, param_file=param_file, header="postgresql"
     )
@@ -249,7 +249,7 @@ def create_new_db(param_file="run_time.ini") -> dict:
         # Clean out DB
         db_cdf.reset_db(
             sess,
-            os.path.join(project_root, "election_data_analysis", "CDF_schema_def_info"),
+            os.path.join(project_root, "CDF_schema_def_info"),
         )
     else:
         create_database(con, cur, db_name)
@@ -258,14 +258,14 @@ def create_new_db(param_file="run_time.ini") -> dict:
     db_cdf.create_common_data_format_tables(
         sess,
         dirpath=os.path.join(
-            project_root, "election_data_analysis", "CDF_schema_def_info"
+            project_root, "CDF_schema_def_info"
         ),
     )
     db_cdf.fill_standard_tables(
         sess,
         None,
         dirpath=os.path.join(
-            project_root, "election_data_analysis/CDF_schema_def_info/"
+            project_root, "CDF_schema_def_info"
         ),
     )
     con.close()
