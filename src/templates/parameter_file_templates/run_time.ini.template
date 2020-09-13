@@ -1,5 +1,4 @@
 [election_data_analysis]
-project_root=</path/to/src/>
 results_dir=</path/to/folder/containing/result/and/parameter/files/for/batch/upload>
 archive_dir=</path/to/folder/for/archiving/uploaded/files>
 rollup_directory=</path/to/folder/for/storing/rolled-up/results>

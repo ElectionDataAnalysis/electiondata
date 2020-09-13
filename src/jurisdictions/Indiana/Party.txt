@@ -1,0 +1,12 @@
+Name
+Democratic Party
+Republican Party
+Green Party
+Libertarian Party
+Constitution Party
+Independent Party
+Non Partisan
+Other Party
+Socialist Party
+Workers Party
+Pirate Party

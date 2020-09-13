@@ -7,7 +7,6 @@ import re
 import os
 import numpy as np
 from sqlalchemy.orm.session import Session
-import time
 
 
 class MungeError(Exception):
@@ -112,7 +111,12 @@ def text_fragments_and_fields(formula):
 
 
 def add_column_from_formula(
-    working: pd.DataFrame, formula: str, new_col: str, err: dict, suffix=None
+    working: pd.DataFrame,
+        formula: str,
+        new_col: str,
+        err: dict,
+        munger_name: str,
+        suffix=None,
 ) -> (pd.DataFrame, dict):
     """If <suffix> is given, add it to each field in the formula
     If formula is enclosed in braces, parse first entry as formula, second as a
@@ -145,8 +149,15 @@ def add_column_from_formula(
             working.loc[:, new_col] = (
                 working.loc[:, f].apply(lambda x: f"{t}{x}") + working.loc[:, new_col]
             )
-        except KeyError:
-            ui.add_error(err, "munge-error", f"missing column {f}")
+        except KeyError as ke:
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"Expected transformed column '{f}' not found, "
+                f"probably because of mismatch between munger and results file."
+            )
+            return working, err
 
     # use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
     if regex_flag:
@@ -167,8 +178,6 @@ def add_munged_column(
     """Alters dataframe <raw>, adding or redefining <element>_raw column
     via the <formula>. Assumes "_SOURCE" has been appended to all columns of raw
     Does not alter row count."""
-    if not err:
-        err = {}
     if raw.empty:
         return raw, err
     if inplace:
@@ -185,14 +194,19 @@ def add_munged_column(
             for i in range(munger.options["header_row_count"]):
                 formula = formula.replace(f"<{i}>", f"<variable_{i}>")
 
-        working, err = add_column_from_formula(working, formula, f"{element}_raw", err)
-
-    except:
-        e = f"Error munging {element}. Check raw_identifier_formula for {element} in cdf_elements.txt"
-        if "cdf_elements.txt" in err.keys():
-            err["cdf_elements.txt"].append(e)
-        else:
-            err["cdf_elements.txt"] = [e]
+        working, new_err = add_column_from_formula(working, formula, f"{element}_raw", err, munger.name)
+        if new_err:
+            err = ui.consolidate_errors([err,new_err])
+            if ui.fatal_error(new_err):
+                return working, err
+    except Exception as e:
+        err = ui.add_new_error(
+            err,
+            "munger",
+            munger.name,
+            f"Error interpreting formula for {element} in cdf_element.txt. {e}"
+        )
+        return working, err
 
     # compress whitespace for <element>_raw
     working.loc[:, f"{element}_raw"] = working[f"{element}_raw"].apply(
@@ -248,7 +262,12 @@ def replace_raw_with_internal_ids(
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
         unmatched_str = "\n".join(unmatched_raw)
         e = f"{element}s not found in dictionary.txt:\n{unmatched_str}"
-        ui.add_error(error, "munge_warning", e)
+        error = ui.add_new_error(
+            error,
+            "warn-jurisdiction",
+            juris.short_name,
+            e
+        )
 
     if drop_unmatched:
         working = working[working["cdf_internal_name"].notnull()]
@@ -256,28 +275,50 @@ def replace_raw_with_internal_ids(
     if working.empty:
         e = f"No raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file"
         if drop_unmatched and not drop_all_ok:
-            ui.add_error(error, "munge_error", e)
+            error = ui.add_new_error(
+                error,
+                "jurisdiction",
+                juris.short_name,
+                e,
+            )
         else:
-            ui.add_error(error, "munge_warning", e)
-        return working, error
+            error = ui.add_new_error(
+                error,
+                "warn-jurisdiction",
+                juris.short_name,
+                e
+            )
+        # give working the proper columns and return
+        new_cols = [
+            c for c in working.columns if (
+                    c not in ["raw_identifier_value",
+                              "cdf_element",
+                              f"_{element}_ei",
+                              "cdf_internal_name",
+                              ]
+            )
+        ] + [f"{element}_Id",element]
+        working = pd.DataFrame(columns=new_cols)
 
-    if mode == "column":
-        # drop rows that melted from unrecognized columns, EVEN IF drop_unmatched=False.
-        #  These rows are ALWAYS extraneous. Drop cols where raw_identifier is not null
-        #  but no cdf_internal_name was found (pd.merge yields nulls)
-        #
-        working = working[
-            (working["raw_identifier_value"].isnull())
-            | (working["cdf_internal_name"].notnull())
-        ]
-        # TODO more efficient to drop these earlier, before melting
+        return working, error
+    else:
+        if mode == "column":
+            # drop rows that melted from unrecognized columns, EVEN IF drop_unmatched=False.
+            #  These rows are ALWAYS extraneous. Drop cols where raw_identifier is not null
+            #  but no cdf_internal_name was found (pd.merge yields nulls)
+            #
+            working = working[
+                (working["raw_identifier_value"].isnull())
+                | (working["cdf_internal_name"].notnull())
+            ]
+            # TODO more efficient to drop these earlier, before melting
 
     # unmatched elements get nan in fields from dictionary table. Change these to "none or unknown"
     if not drop_unmatched:
         working["cdf_internal_name"] = working["cdf_internal_name"].fillna(
             "none or unknown"
         )
-        #
+
 
     # drop extraneous cols from mu.raw_identifier
     working = working.drop(["raw_identifier_value", "cdf_element"], axis=1)
@@ -313,18 +354,32 @@ def replace_raw_with_internal_ids(
         e = (
             f"Warning: Results for {working_unmatched.shape[0]} rows with unmatched {element}s "
             f"will not be loaded to database. These records (raw name, internal name) were found in dictionary.txt, but "
-            f"no corresponding record was found in {element}.txt: \n{unmatched_str}"
+            f"no corresponding record was found in the {element} table in the database: \n{unmatched_str}"
         )
-        ui.add_error(error, "munge_warning", e)
+        error = ui.add_new_error(
+            error,
+            "warn-jurisdiction",
+            juris.short_name,
+            e,
+        )
 
     if drop_unmatched:
+        # if all are unmatched
         if working_unmatched.shape[0] == working.shape[0]:
-            e = (
-                f"No {element} was matched. Either raw values are not in dictionary.txt, or "
-                f"the corresponding cdf_internal_names are missing from {element}.txt"
+            error = ui.add_new_error(
+                error,
+                "jurisdiction",
+                juris.short_name,
+                (
+                    f"No {element} was matched. Either raw values are not in dictionary.txt, or "
+                    f"the corresponding cdf_internal_names are missing from {element}.txt"
+                 ),
             )
-            ui.add_error(error, "munge_error", e)
             return working.drop(working.index), error
+        # if only some are unmatched
+        else:
+            # drop the unmatched ones
+            working.drop(labels=working_unmatched.index, inplace=True)
 
     else:
         # change name of unmatched to 'none or unknown' and assign <unmatched_id> as Id
@@ -433,7 +488,11 @@ def munge_and_melt(
 
     # apply munging formula from row sources (after renaming fields in raw formula as necessary)
     for t in mu.cdf_elements[mu.cdf_elements.source == "row"].index:
-        working, err = add_munged_column(working, mu, t, err, mode="row")
+        working, new_err = add_munged_column(working, mu, t, None, mode="row")
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return working, err
 
     # remove original row-munge columns
     munged = [x for x in working.columns if x[-7:] == "_SOURCE"]
@@ -456,7 +515,11 @@ def munge_and_melt(
 
     # apply munge formulas for column sources
     for t in mu.cdf_elements[mu.cdf_elements.source == "column"].index:
-        working, err = add_munged_column(working, mu, t, err, mode="column")
+        working, new_err = add_munged_column(working, mu, t, None, mode="column")
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return working, err
 
     # remove unnecessary columns
     not_needed = [f"variable_{i}" for i in range(mu.options["header_row_count"])]
@@ -487,7 +550,7 @@ def add_contest_id(
         none_or_unknown_id = db.name_to_id(
             session, f"{c_type}Contest", "none or unknown"
         )
-        working, err = replace_raw_with_internal_ids(
+        working, new_err = replace_raw_with_internal_ids(
             working,
             juris,
             df_for_type[c_type],
@@ -498,6 +561,8 @@ def add_contest_id(
             unmatched_id=none_or_unknown_id,
             drop_all_ok=True,
         )
+        if new_err:
+            err = ui.consolidate_errors([err,new_err])
         # restrict working to the contest_type <c_type>, add contest_type column
         w_for_type[c_type] = working[working[f"{c_type}Contest"] != "none or unknown"]
         w_for_type[c_type] = add_constant_column(
@@ -510,16 +575,6 @@ def add_contest_id(
     # FIXME: check somewhere that no name (other than 'none or unknown') is shared by BMContests and CandidateContests
     # TODO check this also when juris files loaded, to save time for user
 
-    working = pd.concat([w_for_type[ct] for ct in ["BallotMeasure", "Candidate"]])
-    missing_idx = [idx for idx in df.index if idx not in working.index]
-    missing = df.loc[missing_idx]
-    # fail if no contests recognized
-    if working.empty:
-
-        e = "No contests in database matched. No results will be loaded to database."
-        ui.add_error(err, "munge_error", e)
-        return working, err
-
     # drop obsolete columns
     common_cols = [
         c
@@ -528,6 +583,20 @@ def add_contest_id(
     ]
     for c_type in ["BallotMeasure", "Candidate"]:
         w_for_type[c_type] = w_for_type[c_type][common_cols]
+
+    # assemble working from the two pieces
+    working = pd.concat([w_for_type[ct] for ct in ["BallotMeasure", "Candidate"]])
+
+    # fail if fatal errors or no contests recognized
+    if working.empty:
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            juris.short_name,
+            "No contests recognized."
+        )
+    if ui.fatal_error(err):
+        return working, err
 
     return working, err
 
@@ -617,7 +686,6 @@ def add_selection_id(
 
 def raw_elements_to_cdf(
     session,
-    project_root: str,
     juris: jm.Jurisdiction,
     mu: jm.Munger,
     raw: pd.DataFrame,
@@ -635,18 +703,24 @@ def raw_elements_to_cdf(
     try:
         working, err = munge_and_melt(mu, working, count_cols, err)
     except Exception as exc:
-        e = f"Error during munge-and-melt: {exc}"
-        ui.add_error(err, "munge_error", e)
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.raw_elements_to_cdf",
+            f"Unexpected exception during munge_and_melt: {exc}"
+        )
         return err
     try:
         working, err = add_contest_id(working, juris, err, session)
     except Exception as exc:
-        e = f"Error while adding Contest_Id: {exc}"
-        ui.add_error(err, "munge_error", e)
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.raw_elements_to_cdf",
+            f"Unexpected exception while adding Contest_Id: {exc}"
+        )
         return err
-    if working.empty:
-        e = f"No contest ids could be found. "
-        ui.add_error(err, "munge_error", e)
+    if ui.fatal_error(err):
         return err
 
     # get ids for remaining info sourced from rows and columns
@@ -687,7 +761,7 @@ def raw_elements_to_cdf(
                 )
             else:
                 none_or_unknown_id = db.name_to_id(session, t, "none or unknown")
-                working, err = replace_raw_with_internal_ids(
+                working, new_err = replace_raw_with_internal_ids(
                     working,
                     juris,
                     df,
@@ -697,35 +771,55 @@ def raw_elements_to_cdf(
                     drop_unmatched=drop,
                     unmatched_id=none_or_unknown_id,
                 )
+                err = ui.consolidate_errors([err,new_err])
+                if ui.fatal_error(new_err):
+                    return err
                 working.drop(t, axis=1, inplace=True)
         except Exception as exc:
-            ui.add_error(err, "munge-error", f"Error adding internal ids for {t}.")
+            err = ui.add_new_error(
+                err,
+                "system",
+                "munge.raw_elements_to_cdf",
+                f"Exception while adding internal ids for {t}.",
+            )
             return err
 
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
     try:
         working, err = add_selection_id(working, session.bind, juris, err)
     except Exception as exc:
-        e = f"Error adding Selection_Id:\n{exc}"
-        err = ui.add_error(err, "munge_error", e)
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.raw_elements_to_cdf",
+            f"Unexpected exception while adding Selection_Id:\n{exc}",
+        )
         return err
     if working.empty:
-        e = "No contests found, or no selections found for contests."
-        err = ui.add_error(err, "datafile_error", e)
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            juris.short_name,
+            "No contests found, or no selections found for contests.",
+        )
         return err
 
     # Fill VoteCount
-    vc_start = time.perf_counter()
     try:
         e = db.insert_to_cdf_db(session.bind, working, "VoteCount")
         if e:
-            ui.add_error(err, "database", e)
-        session.commit()
+            err = ui.add_new_error(
+                err,
+                "system",
+                "munge.raw_elements_to_cdf",
+                f"database insertion error {e}"
+            )
+            return err
     except Exception as exc:
-        e = f"Error filling VoteCount:\n{exc}"
-        err = ui.add_error(err, "munge_error", e)
-    vc_time = time.perf_counter() - vc_start
-    print(f"VoteCount load time in seconds: {vc_time}")
+        err = ui.add_new_error(err,
+                               "system",
+                               "munge.raw_elements_to_cdf",
+                               f"Error filling VoteCount:\n{exc}")
 
     return err
 

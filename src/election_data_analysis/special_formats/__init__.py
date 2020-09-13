@@ -1,5 +1,6 @@
 import pandas as pd
 import io
+from pathlib import Path
 from election_data_analysis import munge as m
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import user_interface as ui
@@ -55,7 +56,11 @@ def read_concatenated_blocks(
         with open(f_path, "r") as f:
             data = f.readlines()
     except Exception as exc:
-        err = ui.add_error(err, "datafile_error", f"Datafile not read:\n{exc}")
+        err = ui.add_new_error(
+            err,
+            "file",
+            f_path,
+            f"Datafile not read:\n{exc}\n")
         return pd.DataFrame(), err
 
     # get  munger parameters
@@ -92,7 +97,11 @@ def read_concatenated_blocks(
                 e = f"Count of last header (per munger) ({v_t_cc}) " \
                     f"does not evenly divide the number of count columns in the results file " \
                     f"({len(last_header)})"
-                ui.add_error(err,"munge_error",e)
+                err = ui.add_new_error(err,
+                                 "munger",
+                                 munger.name,
+                                 e,
+                                 )
                 return pd.DataFrame(), err
 
             header_1_list = extract_items(header_1, w * v_t_cc)
@@ -140,16 +149,22 @@ def read_concatenated_blocks(
             # remove processed lines from data
             data = data[next_empty:]
     except Exception as exc:
-        err = ui.add_error(
-            err, "datafile_warning", f"unparsed lines at bottom of file:\n{data}"
+        err = ui.add_new_error(
+            err,
+            "warn-munger",
+            munger.name,
+            f"unparsed lines at bottom of file ({Path(f_path).name}):\n{data}\n",
         )
 
     # consolidate all into one dataframe
     try:
         raw_results = pd.concat(list(df.values()))
     except ValueError as e:
-        err = ui.add_error(
-            err,"datafile_error",f"Error concatenating data from blocks: {e}"
+        err = ui.add_new_error(
+            err,
+            "munger",
+            munger.name,
+            f"Error concatenating data from blocks: {e}",
         )
         return pd.DataFrame, err
 

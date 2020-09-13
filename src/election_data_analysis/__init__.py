@@ -6,6 +6,8 @@ import datetime
 import os
 import pandas as pd
 import ntpath
+import inspect
+from pathlib import Path
 from election_data_analysis import analyze as a
 from election_data_analysis import visualize as v
 from election_data_analysis import juris_and_munger as jm
@@ -26,13 +28,11 @@ single_data_loader_pars = [
 ]
 
 multi_data_loader_pars = [
-    "project_root",
     "results_dir",
     "archive_dir",
 ]
 
 prep_pars = [
-    "project_root",
     "jurisdiction_path",
     "name",
     "abbreviated_name",
@@ -48,29 +48,20 @@ analyze_pars = ["db_paramfile", "db_name"]
 
 # classes
 class DataLoader:
-    def __new__(self):
+    def __new__(cls):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
-        try:
-            d, parameter_err = ui.get_runtime_parameters(
-                required_keys=multi_data_loader_pars,
-                param_file="run_time.ini",
-                header="election_data_analysis",
-            )
-        except FileNotFoundError as e:
-            print(
-                "Parameter file run_time.ini not found. Ensure that it is located"
-                " in the current directory. DataLoader object not created."
-            )
-            return None
-
-        if parameter_err:
-            print("Parameter file missing requirements.")
-            print(parameter_err)
+        d, err = ui.get_runtime_parameters(
+            required_keys=multi_data_loader_pars,
+            param_file="run_time.ini",
+            header="election_data_analysis",
+        )
+        if err:
             print("DataLoader object not created.")
+            ui.report(err)
             return None
 
-        return super().__new__(self)
+        return super().__new__(cls)
 
     def __init__(self):
         # grab parameters
@@ -80,214 +71,219 @@ class DataLoader:
             header="election_data_analysis",
         )
 
-        # prepare to track files loaded, dictionary of dictionaries, keys are parameter file paths
-        self.tracker = dict()
-
-        # create db if it does not already exist
-        error = db.establish_connection()
-        if error:
-            db.create_new_db(self.d["project_root"])
+        # create db if it does not already exist and have right tables
+        ok, err = db.test_connection()
+        if not ok:
+            db.create_new_db()
 
         # connect to db
         try:
-            self.engine = db.sql_alchemy_connect()
+            self.engine, new_err = db.sql_alchemy_connect()
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
         except Exception as e:
             print("Cannot connect to database. Exiting.")
             quit()
+        if new_err:
+            print("Unexpected error connecting to database.")
+            err = ui.consolidate_errors([err,new_err])
+            ui.report(err)
+            print("Exiting")
+            quit()
 
     def load_all(self, load_jurisdictions: bool = True) -> dict:
-        """returns a dictionary of any files that threw an error"""
-        mungers_path = os.path.join(self.d["project_root"], "mungers")
+        """returns an error dictionary"""
+        # initialize error dictionary
+        err = None
+
+        # set locations for error reporting
+        project_root = Path(__file__).absolute().parents[1]
+        mungers_path = os.path.join(project_root, "mungers")
+
+        # define directory for archiving successfully loaded files (and storing warnings)
+        db_param, new_err = ui.get_runtime_parameters(
+            required_keys=["dbname"],
+            param_file="run_time.ini",
+            header="postgresql"
+        )
+        if new_err:
+            err = ui.consolidate_errors([err,new_err])
+        if ui.fatal_error(new_err):
+            err = ui.report(err)
+            return err
+
+        # specify directories for archiving and reporting warnings
+        success_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
+        loc_dict = {
+            "munger": self.d["results_dir"],
+            "jurisdiction": self.d["results_dir"],
+            "warn-munger": success_dir,
+            "warn-jurisdiction": success_dir,
+        }
 
         # list .ini files and pull their jurisdiction_paths
         par_files = [f for f in os.listdir(self.d["results_dir"]) if f[-4:] == ".ini"]
+
+        # no .ini files found, return error
         if not par_files:
-            e = f"No ini files found in {self.d['results_dir']}"
-            print(e)
-            err = {"ini_file": e}
+            err = ui.add_new_error(
+                err,
+                "file",
+                self.d['results_dir'],
+                f"No <results>.ini files found in directory. No results files will be processed.",
+            )
+            err = ui.report(err)
             return err
+
         params = dict()
-        param_err = dict()
         juris_path = dict()
+
+        # For each par_file get params or throw error
+        good_par_files = list()
         for f in par_files:
             # grab parameters
             par_file = os.path.join(self.d["results_dir"], f)
-            params[f], param_err[f] = ui.get_runtime_parameters(
+            params[f], new_err = ui.get_runtime_parameters(
                 required_keys=single_data_loader_pars,
                 optional_keys=["aux_data_dir"],
                 param_file=par_file,
                 header="election_data_analysis",
             )
-            juris_path[f] = params[f]["jurisdiction_path"]
-            # update file_tracker
-            self.tracker[f] = params[f]
-            self.tracker[f]["status"] = "not loaded"
-            if param_err[f]:
-                self.tracker["parameter_error"] = param_err[f]
+            if new_err:
+                err = ui.consolidate_errors([err, new_err])
+            if not ui.fatal_error(new_err):
+                good_par_files.append(f)
+                juris_path[f] = params[f]["jurisdiction_path"]
 
-        err = dict()
         # group .ini files by jurisdiction_path
-        jurisdiction_paths = {juris_path[f] for f in par_files}
-        files = dict()
+        jurisdiction_paths = {juris_path[f] for f in good_par_files}
+
+        # for each jurisdiction, create Jurisdiction or throw error
+        good_jurisdictions = list()
+        juris = dict()
         for jp in jurisdiction_paths:
-            if load_jurisdictions:
-                juris, juris_err = ui.pick_juris_from_filesystem(
-                    jp, self.d["project_root"], check_files=True
-                )
-                if juris is None:
-                    err["jurisdiction_error"] = juris_err
-                    return err
-                print(f"Loading jurisdiction from {jp} to {self.session.bind}")
-                if juris:
-                    juris_load_err = juris.load_juris_to_db(
-                        self.session, self.d["project_root"]
+            # create and load jurisdiction or throw error
+            juris[jp], new_err = ui.pick_juris_from_filesystem(
+                juris_path=jp,
+                err=None,
+                check_files=load_jurisdictions,
+            )
+            if new_err:
+                err = ui.consolidate_errors([err, new_err])
+
+            # if no fatal errors thrown, continue to process jp
+            if not ui.fatal_error(new_err):
+                # if asked to load the jurisdiction, load it.
+                if load_jurisdictions:
+                    print(f"Loading jurisdiction from {jp} to {self.session.bind}")
+                    new_err = juris[jp].load_juris_to_db(
+                        self.session,
                     )
-                    if juris_load_err:
-                        err["juris_load_error"] = juris_load_err
-                        return err
-            # process all files from the given jurisdiction
-            files[jp] = [f for f in par_files if juris_path[f] == jp]
-            print(f"Processing results files {files[jp]}")
-            for f in files[jp]:
-                sdl = SingleDataLoader(
+                    if new_err:
+                        err = ui.consolidate_errors([err, new_err])
+                    if not ui.fatal_error(new_err):
+                        good_jurisdictions.append(jp)
+                # if not asked to load jurisdiction, assume it's loaded
+                else:
+                    print(f"Jurisdiction {juris[jp].name} assumed to be loaded to database already")
+                    good_jurisdictions.append(jp)
+
+        # process all good parameter files with good jurisdictions
+        for jp in good_jurisdictions:
+            good_files = [f for f in good_par_files if juris_path[f] == jp]
+            print(f"Processing results files {good_files}")
+            for f in good_files:
+                sdl, new_err = check_and_init_singledataloader(
                     self.d["results_dir"],
                     f,
-                    self.d["project_root"],
                     self.session,
                     mungers_path,
-                    juris,
+                    juris[jp],
                 )
-                errors = sdl.check_errors()
-                if errors == (None, None):
-                    self.tracker[f]["status"] = "loading initialized"
+                if new_err:
+                    err = ui.consolidate_errors([err,new_err])
+
+                # if no fatal error from SDL initialization, continue
+                if not ui.fatal_error(new_err):
                     # try to load data
                     load_error = sdl.load_results()
-                    true_error = self.move_loaded_results_file(sdl, f, load_error)
+                    if load_error:
+                        err = ui.consolidate_errors([err, load_error])
 
-                    # if there is a genuine error (not just a warning), add it to err
-                    if true_error:
-                        err[f] = true_error
-                        self.tracker[f]["load_error"] = true_error
+                    # if no fatal load error, archive files
+
+                    if not ui.fatal_error(load_error):
+                        ui.archive(f,self.d["results_dir"],success_dir)
+                        ui.archive(sdl.d["results_file"], self.d["results_dir"], success_dir)
+                        print(f"\tArchived {f} and its results file after successful load.")
                     else:
-                        self.tracker[f]["status"] = "loaded"
-                else:
-                    self.tracker[f]["status"] = "loading not initialized"
-                    print("Error(s) before data loading:")
-                    if sdl.parameter_err:
-                        print(f"Parameter error: {sdl.parameter_err}\n")
-                        self.tracker[f][
-                            "SingleDataLoader_parameter_error"
-                        ] = sdl.parameter_err
-                    if sdl.munger_err:
-                        print(f"Munger error: {sdl.munger_err}")
-                        self.tracker[f]["munger_error"] = sdl.munger_err
+                        print(f"\t{f} and its results file not archived due to errors")
+                # TODO report munger, jurisdiction and file errors & warnings
+                err = ui.report(
+                    err,
+                    loc_dict=loc_dict,
+                    key_list=["munger","jurisdiction","file","warn-munger","warn-jurisdiction","warn-file"],
+                    file_prefix=f"{f[:-4]}_"
+                )
+        # report remaining errors
+        loc_dict = {
+            "munger": self.d["results_dir"],
+            "jurisdiction": self.d["results_dir"],
+            "warn-munger": success_dir,
+            "warn-jurisdiction": success_dir,
+        }
+        ui.report(err, loc_dict)
         return err
-
-    def move_loaded_results_file(self, sdl, f: str, load_error: dict) -> dict:
-        warnings = list()
-        errors = list()
-        true_error = dict()
-        for mu in load_error.keys():
-            if load_error[mu]:
-                warn_err_keys = [k for k in load_error[mu].keys()].copy()
-            else:
-                warn_err_keys = []
-            for k in warn_err_keys:
-                msg = load_error[mu].pop(k)
-                if "warning" in k or "Warning" in k:
-                    print(f"Warning ({mu}): {msg}")
-                    warnings.append(msg)
-                elif "error" in k:
-                    print(f"Error ({mu}): {msg}")
-                    errors.append(msg)
-                    true_error[mu] = msg
-        if errors:
-            self.tracker[f]["status"] = "loading failed"
-            err_str = "\n\t".join(errors)
-            if warnings:
-                ws = "\n\t".join(warnings)
-                warn_str = f"\nWarnings:\n{ws}"
-            else:
-                warn_str = None
-            # save errors in current directory
-            warn_file = os.path.join(self.d["results_dir"], f"{f[:-4]}.errors")
-            with open(warn_file, "w") as wf:
-                wf.write(f"Errors:\n\t{err_str}\n\nWarnings:\n\t{warn_str}")
-            print(
-                f"Fatal errors found. Results not loaded; file not moved. See {f[:-4]}.errors"
-            )
-
-        else:
-            # move results file and its parameter file to a subfolder of the archive directory
-            #  named for the db
-            db_param = ui.get_runtime_parameters(
-                required_keys=["dbname"],
-                param_file="run_time.ini",
-                header="postgresql"
-            )[0]
-            self.tracker[f]["status"] = "loaded"
-            new_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
-            ui.archive(f, self.d["results_dir"], new_dir)
-            ui.archive(sdl.d["results_file"], self.d["results_dir"], new_dir)
-            print_str = f"\tArchived {f} and its results file."
-            if warnings:
-                # save warnings in archive directory
-                warn_file = os.path.join(new_dir, f"{f[:-4]}.warn")
-                with open(warn_file, "w") as wf:
-                    wf.write("\n".join(warnings))
-                print_str += f" See warnings in {f[:-4]}.warn"
-            print(print_str)
-        return true_error
 
 
 class SingleDataLoader:
     def __init__(
-        self, results_dir, par_file_name, project_root, session, munger_path, juris
+            self,
+            results_dir: str,
+            par_file_name: str,
+            session,
+            munger_path: str,
+            juris: jm.Jurisdiction
     ):
         # adopt passed variables needed in future as attributes
-        self.project_root = project_root
         self.session = session
         self.results_dir = results_dir
         self.juris = juris
-        # grab parameters
+
+        # grab parameters (known to exist from __new__, so can ignore error variable)
         par_file = os.path.join(results_dir, par_file_name)
-        self.d, self.parameter_err = ui.get_runtime_parameters(
+        self.d, dummy_err = ui.get_runtime_parameters(
             required_keys=single_data_loader_pars,
             optional_keys=["aux_data_dir"],
             param_file=par_file,
             header="election_data_analysis",
         )
 
-        # change any blank parameters to 'none'
+        # change any blank parameters describing the results file to 'none'
         for k in self.d.keys():
             if self.d[k] == "" and k[:8] == "results_":
                 self.d[k] = "none"
-
-        # convert comma-separated list to python list
-        # TODO document
-        self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
 
         # set aux_data_dir to None if appropriate
         if self.d["aux_data_dir"] in ["None", ""]:
             self.d["aux_data_dir"] = None
 
-        # pick mungers
+        # pick mungers (Note: munger_name is comma-separated list of munger names)
         self.munger = dict()
         self.munger_err = dict()
-        for mu in self.munger_list:
-            self.munger[mu], self.munger_err[mu] = ui.pick_munger(
-                mungers_dir=munger_path, project_root=project_root, munger_name=mu
-            )
-        # if no munger throws an error:
-        if all([x is None for x in self.munger_err.values()]):
-            self.munger_err = None
+        # TODO document
+        self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
 
-    def check_errors(self):
-        return self.parameter_err, self.munger_err
+        # initialize each munger (or collect error)
+        m_err = dict()
+        for mu in self.munger_list:
+            self.munger[mu], m_err[mu] = jm.check_and_init_munger(os.path.join(munger_path, mu))
+
+        self.munger_err = ui.consolidate_errors([m_err[mu] for mu in self.munger_list])
 
     def track_results(self):
+        """insert a record for the _datafile, recording any error string <e>.
+        Return Id of _datafile.Id and Election.Id """
         filename = self.d["results_file"]
         top_reporting_unit_id = db.name_to_id(
             self.session, "ReportingUnit", self.d["top_reporting_unit"]
@@ -329,28 +325,64 @@ class SingleDataLoader:
         return [datafile_id, election_id], e
 
     def load_results(self) -> dict:
+        """Load results, returning error (or None, if load successful)"""
+        err = None
         print(f'Processing {self.d["results_file"]}')
         results_info, e = self.track_results()
         if e:
-            err = {"database": e}
+            err = ui.add_new_error(
+                err,
+                "system",
+                "SingleDataLoader.load_results",
+                f"database error: {e}"
+            )
+            return err
+
         else:
-            err = dict()
             for mu in self.munger_list:
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
-                emu = ui.new_datafile(
+                new_err = ui.new_datafile(
                     self.session,
                     self.munger[mu],
                     f_path,
-                    self.project_root,
                     self.juris,
                     results_info=results_info,
                     aux_data_dir=self.d["aux_data_dir"],
                 )
-                if emu != dict():
-                    err[mu] = emu
-        if err == dict():
-            err = None
+                if new_err:
+                    err = ui.consolidate_errors([err,new_err])
         return err
+
+
+def check_and_init_singledataloader(
+        results_dir: str,
+        par_file_name: str,
+        session,
+        munger_path: str,
+        juris: jm.Jurisdiction
+) -> (SingleDataLoader, dict):
+    """Return SDL if it could be successfully initialized, and
+    error dictionary (including munger errors noted in SDL initialization)"""
+    # test parameters
+    par_file = os.path.join(results_dir, par_file_name)
+    d, err = ui.get_runtime_parameters(
+        required_keys=single_data_loader_pars,
+        optional_keys=["aux_data_dir"],
+        param_file=par_file,
+        header="election_data_analysis",
+    )
+    if err:
+        sdl = None
+    else:
+        sdl = SingleDataLoader(
+            results_dir,
+            par_file_name,
+            session,
+            munger_path,
+            juris,
+        )
+        err = ui.consolidate_errors([err,sdl.munger_err])
+    return sdl, err
 
 
 class JurisdictionPrepper:
@@ -362,7 +394,7 @@ class JurisdictionPrepper:
             d, parameter_err = ui.get_runtime_parameters(
                 required_keys=prep_pars,
                 param_file=param_file,
-                header="election_data_analysis"
+                header="election_data_analysis",
             )
         except FileNotFoundError as e:
             print(
@@ -378,7 +410,7 @@ class JurisdictionPrepper:
             return None
         return super().__new__(cls)
 
-    def new_juris_files(self, other_districts: dict = None):
+    def new_juris_files(self):
         """<juris_path> identifies the directory where the files will live.
         <abbr> is the two-letter abbreviation for state/district/territory.
         <state_house>, etc., gives the number of districts;
@@ -386,32 +418,35 @@ class JurisdictionPrepper:
         {'Circuit Court':{'ReportingUnitType':'judicial','count':5}}
         """
         # TODO Feature: allow other districts to be set in paramfile
-        error = dict()
-        # create directory if it doesn't exist
-        jm.ensure_jurisdiction_dir(
-            self.d["jurisdiction_path"], self.d["project_root"], ignore_empty=True
-        )
-
+        print(f"\nStarting {inspect.currentframe().f_code.co_name}")
+        error = jm.ensure_jurisdiction_dir(self.d["jurisdiction_path"])
         # add default entries
+        project_root = Path(__file__).absolute().parents[1]
         templates = os.path.join(
-            self.d["project_root"], "templates/jurisdiction_templates"
+            project_root,
+            "templates/jurisdiction_templates"
         )
         for element in ["Party", "Election"]:
-            prep.add_defaults(self.d["jurisdiction_path"], templates, element)
+            new_err = prep.add_defaults(self.d["jurisdiction_path"], templates, element)
+            if new_err:
+                error = ui.consolidate_errors([error,new_err])
 
         # add all standard Offices/RUs/CandidateContests
-        self.add_standard_contests()
+        asc_err = self.add_standard_contests()
 
         # Feature create starter dictionary.txt with cdf_internal name
         #  used as placeholder for raw_identifier_value
-        e = self.starter_dictionary()
-        if e:
-            ui.add_erro(error, "dictionary", e)
+        dict_err = self.starter_dictionary()
+
+        error = ui.consolidate_errors([error,asc_err,dict_err])
+        ui.report(error)
         return error
 
-    def add_primaries_to_dict(self) -> str:
+    def add_primaries_to_dict(self) -> dict:
+        """Return error dictionary"""
+        print("\nStarting new_juris_files")
         error = None
-        # TODO add real error handling
+
         primaries = {}
         # read CandidateContest.txt, Party.txt and dictionary.txt
         cc = prep.get_element(self.d["jurisdiction_path"], "CandidateContest")
@@ -459,13 +494,19 @@ class JurisdictionPrepper:
             new_dictionary = pd.concat(df_list)
         else:
             new_dictionary = d
-        prep.write_element(self.d["jurisdiction_path"], "dictionary", new_dictionary)
+        new_err = prep.write_element(self.d["jurisdiction_path"], "dictionary", new_dictionary)
+        ui.consolidate_errors([error,new_err])
+        ui.report(error)
         return error
 
     def add_standard_contests(
         self, juriswide_contests: list = None, other_districts: dict = None
-    ):
-        """If <juriswide_contest> is None, use standard list hard-coded."""
+    ) -> dict:
+        """If <juriswide_contest> is None, use standard list hard-coded.
+        Returns error dictionary"""
+        #initialize error dictionary
+        err = None
+
         name = self.d["name"]
         abbr = self.d["abbreviated_name"]
         count = {
@@ -553,18 +594,34 @@ class JurisdictionPrepper:
         )
         w_cc = w_cc.append(jw_cc, ignore_index=True)
 
-        prep.write_element(
+        new_err = prep.write_element(
             self.d["jurisdiction_path"], "Office", w_office.drop_duplicates()
         )
-        prep.write_element(
+        if new_err:
+            err = ui.consolidate_errors([err,new_err])
+            if ui.fatal_error(new_err):
+                return err
+
+        new_err = prep.write_element(
             self.d["jurisdiction_path"], "ReportingUnit", w_ru.drop_duplicates()
         )
-        prep.write_element(
+        if new_err:
+            err = ui.consolidate_errors([err,new_err])
+            if ui.fatal_error(new_err):
+                return err
+        new_err = prep.write_element(
             self.d["jurisdiction_path"], "CandidateContest", w_cc.drop_duplicates()
         )
-        return
+        if new_err:
+            err = ui.consolidate_errors([err,new_err])
+            if ui.fatal_error(new_err):
+                return err
+        return err
 
     def add_primaries_to_candidate_contest(self):
+
+        print(f"\nStarting {inspect.currentframe().f_code.co_name}")
+
         primaries = {}
         error = None
 
@@ -594,11 +651,12 @@ class JurisdictionPrepper:
             primaries[p]["PrimaryParty"] = p
 
         all_primaries = [primaries[p] for p in parties.Name.unique()]
-        prep.write_element(
+        new_err = prep.write_element(
             self.d["jurisdiction_path"],
             "CandidateContest",
             pd.concat([contests] + all_primaries),
         )
+        error = ui.consolidate_errors([error,new_err])
         return error
 
     def add_sub_county_rus_from_results_file(
@@ -619,19 +677,31 @@ class JurisdictionPrepper:
             self.d, results_file_path, munger_name
         )
         if missing:
-            ui.add_error(
+            if results_file_path:
+                results_file = Path(results_file_path).name
+            else:
+                results_file = None
+            error = ui.add_new_error(
                 error,
-                "datafile",
-                f"Parameters missing: {missing}. Results file cannot be processed.",
+                "ini",
+                "jurisdiction_prep.ini",
+                f"Parameters missing for processing {results_file or self.d['results_file']}: {missing}.",
             )
             return error
 
         # read data from file (appending _SOURCE)
-        wr, munger, error = ui.read_results(kwargs, error)
+        wr, munger, new_err = ui.read_results(kwargs, error)
+        if new_err:
+            error = ui.consolidate_errors([error,new_err])
+            if ui.fatal_error(new_err):
+                return error
 
         if wr.empty:
-            ui.add_error(
-                error, "datafile", f"No results read from file. Parameters: {kwargs}"
+            error = ui.add_new_error(
+                error,
+                "file",
+                Path(results_file_path).name,
+                f"No results read from file. Parameters: {kwargs}"
             )
             return error
 
@@ -640,15 +710,28 @@ class JurisdictionPrepper:
             f"{field}_SOURCE"
             for field in munger.cdf_elements.loc["ReportingUnit", "fields"]
         ]
+        bad_fields = [f for f in fields if f not in wr.columns]
+        if bad_fields:
+            error = ui.add_new_error(
+                error,
+                "munger",
+                munger.name,
+                f"\n(ignore _SOURCE suffix below)\n"
+                f"ReportingUnit formula fields not found in file ({Path(results_file_path).name}): "
+                f"{bad_fields}\n"
+                f"file fields are:\n{wr.columns}",
+            )
+            return error
         wr = wr[fields].drop_duplicates()
 
         # get rid of all-blank rows
         wr = wr[(wr != "").any(axis=1)]
         if wr.empty:
-            ui.add_error(
+            error = ui.add_new_error(
                 error,
-                "datafile",
-                f"No relevant information read from file. Parameters: {kwargs}",
+                "ini",
+                "jurisdiction_prep.ini",
+                f"No relevant information read from results file ({Path(results_file_path).name}). Parameters: {kwargs}",
             )
             return error
 
@@ -657,19 +740,24 @@ class JurisdictionPrepper:
         try:
             [county_formula, sub_ru_formula] = ru_formula.split(";")
         except ValueError:
-            ui.add_error(
+            error = ui.add_new_error(
                 error,
-                "munge_error",
-                f"ReportingUnit formula in munger {munger.name} has wrong format (should have two parts separated by ;)",
+                "munger",
+                munger.name,
+                f"ReportingUnit formula has wrong format for adding sub-county units. "
+                f"If counties and sub-county units can be identified by this munger, "
+                f"they should be separated by ;",
             )
             return error
 
         # add columns for county and sub_ru
         wr, error = m.add_column_from_formula(
-            wr, county_formula, "County_raw", error, suffix="_SOURCE"
+            wr, county_formula, "County_raw", error, munger_name,
+            suffix="_SOURCE"
         )
         wr, error = m.add_column_from_formula(
-            wr, sub_ru_formula, "Sub_County_raw", error, suffix="_SOURCE"
+            wr, sub_ru_formula, "Sub_County_raw", error, munger_name,
+            suffix="_SOURCE"
         )
 
         # add column for county internal name
@@ -695,18 +783,23 @@ class JurisdictionPrepper:
         # add info to ReportingUnit.txt
         ru_add = wr[["Name", "ReportingUnitType"]]
         ru_old = prep.get_element(self.d["jurisdiction_path"], "ReportingUnit")
-        prep.write_element(
+        new_err = prep.write_element(
             self.d["jurisdiction_path"], "ReportingUnit", pd.concat([ru_old, ru_add])
         )
+        if new_err:
+            error = ui.consolidate_errors([error,new_err])
+            if ui.fatal_error(new_err):
+                return error
 
         # add info to dictionary
         wr.rename(columns={"Name": "cdf_internal_name"}, inplace=True)
         dict_add = wr[["cdf_element", "cdf_internal_name", "raw_identifier_value"]]
-        prep.write_element(
+        new_err = prep.write_element(
             self.d["jurisdiction_path"],
             "dictionary",
             pd.concat([ru_dict_old, dict_add]),
         )
+        error = ui.consolidate_errors([error,new_err])
         return error
 
     def add_sub_county_rus_from_multi_results_file(
@@ -714,55 +807,61 @@ class JurisdictionPrepper:
     ) -> dict:
         """Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
         for each file in <dir> named (with munger) in a .ini file in the directory"""
-        if not error:
-            error = dict()
-        for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
-            par_file = os.path.join(dir, par_file_name)
-            file_dict, missing_params = ui.get_runtime_parameters(
-                required_keys=["results_file", "munger_name"],
-                optional_keys=["aux_data_dir"],
-                param_file=par_file,
-            )
-            file_dict["sub_ru_type"] = sub_ru_type
-            file_dict["results_file_path"] = os.path.join(
-                dir, file_dict["results_file"]
-            )
-            if missing_params:
-                ui.add_error(
-                    error,
-                    "parameter_file",
-                    f"Parameters missing from {par_file_name}:{missing_params}",
-                )
-            else:
-                error = self.add_sub_county_rus_from_results_file(error, **file_dict)
-        return error
+        print(f"\nStarting {inspect.currentframe().f_code.co_name}")
 
-    def add_elements_from_multi_results_file(
-        self, elements: iter, dir: str, error: dict
-    ):
-        """Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
-        for each file in <dir> named (with munger) in a .ini file in the directory"""
         for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
             par_file = os.path.join(dir, par_file_name)
-            file_dict, missing_params = ui.get_runtime_parameters(
+            file_dict, new_err = ui.get_runtime_parameters(
                 required_keys=["results_file", "munger_name"],
                 header="election_data_analysis",
                 optional_keys=["aux_data_dir"],
                 param_file=par_file,
             )
+            if new_err:
+                error = ui.consolidate_errors([error,new_err])
+                if ui.fatal_error(new_err):
+                    return error
+
+            file_dict["sub_ru_type"] = sub_ru_type
             file_dict["results_file_path"] = os.path.join(
                 dir, file_dict["results_file"]
             )
-            if missing_params:
-                ui.add_error(
-                    error,
-                    "parameter_file",
-                    f"Parameters missing from {par_file_name}:{missing_params}",
-                )
-            else:
-                error = self.add_elements_from_results_file(
+            new_err = self.add_sub_county_rus_from_results_file(None, **file_dict)
+            if new_err:
+                error = ui.consolidate_errors([error,new_err])
+        ui.report(error)
+        return error
+
+    def add_elements_from_multi_results_file(
+        self, elements: iter, dir: str, error: dict
+    ) -> dict:
+        """Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
+        for each file in <dir> named (with munger) in a .ini file in the directory"""
+
+        print(f"\nStarting {inspect.currentframe().f_code.co_name}")
+
+        for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
+            # pull parameters from file
+            par_file = os.path.join(dir, par_file_name)
+            file_dict, new_err = ui.get_runtime_parameters(
+                required_keys=["results_file", "munger_name"],
+                header="election_data_analysis",
+                optional_keys=["aux_data_dir"],
+                param_file=par_file,
+                err=None
+            )
+            # redefine the results_file_path parameter to a full path ?!
+            file_dict["results_file_path"] = os.path.join(
+                dir, file_dict["results_file"]
+            )
+            if new_err:
+                error = ui.consolidate_errors([error,new_err])
+            if not ui.fatal_error(error):
+                new_err = self.add_elements_from_results_file(
                     elements, error, **file_dict
                 )
+                error = ui.consolidate_errors([error,new_err])
+        ui.report(error)
         return error
 
     def add_elements_from_results_file(
@@ -777,25 +876,37 @@ class JurisdictionPrepper:
         or not already in <element>.txt for each <element> in <elements>"""
 
         # get parameters from arguments; otherwise from self.d; otherwise throw error
-        # get parameters from arguments; otherwise from self.d; otherwise throw error
         kwargs, missing = ui.get_params_to_read_results(
             self.d, results_file_path, munger_name
         )
         if missing:
-            ui.add_error(
+            error = ui.add_new_error(
                 error,
-                "datafile",
+                "ini",
+                "jurisdiction_prep.ini",
                 f"Parameters missing: {missing}. Results file cannot be processed.",
+            )
+            return error
+        elif ("results_file_path" in kwargs.keys()) and not (os.path.isfile(kwargs["results_file_path"])):
+            error = ui.add_new_error(
+                error,
+                "file",
+                Path(kwargs['results_file_path']).name,
+                f"File not found: {kwargs['results_file_path']}"
             )
             return error
 
         # read data from file (appending _SOURCE)
-        wr, mu, error = ui.read_results(kwargs, error)
+        wr, mu, new_err = ui.read_results(kwargs, error)
+        if new_err:
+            error = ui.consolidate_errors([error,new_err])
+            if ui.fatal_error(new_err):
+                return error
 
         for element in elements:
             name_field = db.get_name_field(element)
             # append <element>_raw
-            wr, error = m.add_munged_column(
+            wr, new_err = m.add_munged_column(
                 wr,
                 mu,
                 element,
@@ -803,8 +914,10 @@ class JurisdictionPrepper:
                 mode=mu.cdf_elements.loc[element, "source"],
                 inplace=False,
             )
-            if error:
-                return error
+            if new_err:
+                error = ui.consolidate_errors([error, new_err])
+                if ui.fatal_error(new_err):
+                    return error
             # find <element>_raw values not in dictionary.txt.raw_identifier_value;
             #  add corresponding lines to dictionary.txt
             wd = prep.get_element(self.d["jurisdiction_path"], "dictionary")
@@ -815,7 +928,11 @@ class JurisdictionPrepper:
                 columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
             )
             wd = pd.concat([wd, new_raw_df]).drop_duplicates()
-            prep.write_element(self.d["jurisdiction_path"], "dictionary", wd)
+            new_err = prep.write_element(self.d["jurisdiction_path"], "dictionary", wd)
+            if new_err:
+                error = ui.consolidate_errors([error, new_err])
+                if ui.fatal_error(new_err):
+                    return error
 
             # find cdf_internal_names that are not in <element>.txt and add them to <element>.txt
             we = prep.get_element(self.d["jurisdiction_path"], element)
@@ -831,19 +948,24 @@ class JurisdictionPrepper:
                 [[x] for x in new_internal], columns=[name_field]
             )
             we = pd.concat([we, new_internal_df]).drop_duplicates()
-            prep.write_element(self.d["jurisdiction_path"], element, we)
+            new_err = prep.write_element(self.d["jurisdiction_path"], element, we)
+            if new_err:
+                ui.consolidate_errors([error,new_err])
+                if ui.fatal_error(new_err):
+                    return error
             # if <element>.txt has columns other than <name_field>, notify user
             if we.shape[1] > 1 and not new_internal_df.empty:
-                ui.add_error(
+                error = ui.add_new_error(
                     error,
-                    "preparation",
+                    "warn-jurisdiction",
+                    Path(self.d["jurisdiction_path"]).name,
                     f"New rows added to {element}.txt, but data may be missing from some fields in those rows.",
                 )
         return error
 
-    def starter_dictionary(self, include_existing=True) -> str:
+    def starter_dictionary(self, include_existing=True) -> dict:
         """Creates a starter file for dictionary.txt, assuming raw_identifiers are the same as cdf_internal names.
-        Puts file in the current directory"""
+        Puts file in the current directory. Returns error dictionary"""
         w = dict()
         elements = [
             "BallotMeasureContest",
@@ -872,7 +994,10 @@ class JurisdictionPrepper:
             ]
         ).drop_duplicates()
         err = prep.write_element(
-            ".", "dictionary", starter, file_name=starter_file_name
+            ".",
+            "dictionary",
+            starter,
+            file_name=starter_file_name
         )
         print(
             f"Starter dictionary created in current directory (not in jurisdiction directory):\n{starter_file_name}"
@@ -885,6 +1010,7 @@ class JurisdictionPrepper:
             optional_keys=optional_prep_pars,
             param_file="jurisdiction_prep.ini",
             header="election_data_analysis",
+            err=None,
         )
         self.state_house = int(self.d["count_of_state_house_districts"])
         self.state_senate = int(self.d["count_of_state_senate_districts"])
@@ -939,7 +1065,7 @@ class Analyzer:
         return super().__new__(self)
 
     def __init__(self):
-        eng = db.sql_alchemy_connect("run_time.ini")
+        eng, err = db.sql_alchemy_connect("run_time.ini")
         Session = sessionmaker(bind=eng)
         self.session = Session()
 

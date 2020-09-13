@@ -58,27 +58,34 @@ def remove_empty_lines(df: pd.DataFrame, element: str) -> pd.DataFrame:
 
 def write_element(
     juris_path: str, element: str, df: pd.DataFrame, file_name=None
-) -> str:
+) -> dict:
     """<juris> is path to jurisdiction directory. Info taken
     from <element>.txt file in that directory.
     <element>.txt is overwritten with info in <df>"""
+    err = None
     if not file_name:
         file_name = f"{element}.txt"
     dupes_df, deduped = ui.find_dupes(df)
     if element == "dictionary":
         deduped = remove_empty_lines(deduped, element)
-    deduped.drop_duplicates().fillna("").to_csv(
-        os.path.join(juris_path, file_name), index=False, sep="\t"
-    )
-    if dupes_df.empty:
-        err = None
-    else:
-        err = f"Duplicate lines:\n{dupes_df}"
+    try:
+        deduped.drop_duplicates().fillna("").to_csv(
+            os.path.join(juris_path, file_name),
+            index=False,
+            sep="\t",
+        )
+    except Exception as e:
+        err = ui.add_new_error(
+            err,
+            "system",
+            "preparation.write_element",
+            f"Unexpected exception writing to file: {e}",
+        )
     return err
 
 
-def add_defaults(juris_path: str, juris_template_dir: str, element: str):
+def add_defaults(juris_path: str, juris_template_dir: str, element: str) -> dict:
     old = get_element(juris_path, element)
     new = get_element(juris_template_dir, element)
-    write_element(juris_path, element, pd.concat([old, new]).drop_duplicates())
-    return
+    err = write_element(juris_path, element, pd.concat([old, new]).drop_duplicates())
+    return err

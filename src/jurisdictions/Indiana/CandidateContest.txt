@@ -1,0 +1,2137 @@
+Name	NumberElected	Office	PrimaryParty
+IN House District 1	1	IN House District 1	
+IN House District 2	1	IN House District 2	
+IN House District 3	1	IN House District 3	
+IN House District 4	1	IN House District 4	
+IN House District 5	1	IN House District 5	
+IN House District 6	1	IN House District 6	
+IN House District 7	1	IN House District 7	
+IN House District 8	1	IN House District 8	
+IN House District 9	1	IN House District 9	
+IN House District 10	1	IN House District 10	
+IN House District 11	1	IN House District 11	
+IN House District 12	1	IN House District 12	
+IN House District 13	1	IN House District 13	
+IN House District 14	1	IN House District 14	
+IN House District 15	1	IN House District 15	
+IN House District 16	1	IN House District 16	
+IN House District 17	1	IN House District 17	
+IN House District 18	1	IN House District 18	
+IN House District 19	1	IN House District 19	
+IN House District 20	1	IN House District 20	
+IN House District 21	1	IN House District 21	
+IN House District 22	1	IN House District 22	
+IN House District 23	1	IN House District 23	
+IN House District 24	1	IN House District 24	
+IN House District 25	1	IN House District 25	
+IN House District 26	1	IN House District 26	
+IN House District 27	1	IN House District 27	
+IN House District 28	1	IN House District 28	
+IN House District 29	1	IN House District 29	
+IN House District 30	1	IN House District 30	
+IN House District 31	1	IN House District 31	
+IN House District 32	1	IN House District 32	
+IN House District 33	1	IN House District 33	
+IN House District 34	1	IN House District 34	
+IN House District 35	1	IN House District 35	
+IN House District 36	1	IN House District 36	
+IN House District 37	1	IN House District 37	
+IN House District 38	1	IN House District 38	
+IN House District 39	1	IN House District 39	
+IN House District 40	1	IN House District 40	
+IN House District 41	1	IN House District 41	
+IN House District 42	1	IN House District 42	
+IN House District 43	1	IN House District 43	
+IN House District 44	1	IN House District 44	
+IN House District 45	1	IN House District 45	
+IN House District 46	1	IN House District 46	
+IN House District 47	1	IN House District 47	
+IN House District 48	1	IN House District 48	
+IN House District 49	1	IN House District 49	
+IN House District 50	1	IN House District 50	
+IN House District 51	1	IN House District 51	
+IN House District 52	1	IN House District 52	
+IN House District 53	1	IN House District 53	
+IN House District 54	1	IN House District 54	
+IN House District 55	1	IN House District 55	
+IN House District 56	1	IN House District 56	
+IN House District 57	1	IN House District 57	
+IN House District 58	1	IN House District 58	
+IN House District 59	1	IN House District 59	
+IN House District 60	1	IN House District 60	
+IN House District 61	1	IN House District 61	
+IN House District 62	1	IN House District 62	
+IN House District 63	1	IN House District 63	
+IN House District 64	1	IN House District 64	
+IN House District 65	1	IN House District 65	
+IN House District 66	1	IN House District 66	
+IN House District 67	1	IN House District 67	
+IN House District 68	1	IN House District 68	
+IN House District 69	1	IN House District 69	
+IN House District 70	1	IN House District 70	
+IN House District 71	1	IN House District 71	
+IN House District 72	1	IN House District 72	
+IN House District 73	1	IN House District 73	
+IN House District 74	1	IN House District 74	
+IN House District 75	1	IN House District 75	
+IN House District 76	1	IN House District 76	
+IN House District 77	1	IN House District 77	
+IN House District 78	1	IN House District 78	
+IN House District 79	1	IN House District 79	
+IN House District 80	1	IN House District 80	
+IN House District 81	1	IN House District 81	
+IN House District 82	1	IN House District 82	
+IN House District 83	1	IN House District 83	
+IN House District 84	1	IN House District 84	
+IN House District 85	1	IN House District 85	
+IN House District 86	1	IN House District 86	
+IN House District 87	1	IN House District 87	
+IN House District 88	1	IN House District 88	
+IN House District 89	1	IN House District 89	
+IN House District 90	1	IN House District 90	
+IN House District 91	1	IN House District 91	
+IN House District 92	1	IN House District 92	
+IN House District 93	1	IN House District 93	
+IN House District 94	1	IN House District 94	
+IN House District 95	1	IN House District 95	
+IN House District 96	1	IN House District 96	
+IN House District 97	1	IN House District 97	
+IN House District 98	1	IN House District 98	
+IN House District 99	1	IN House District 99	
+IN House District 100	1	IN House District 100	
+IN Senate District 1	1	IN Senate District 1	
+IN Senate District 2	1	IN Senate District 2	
+IN Senate District 3	1	IN Senate District 3	
+IN Senate District 4	1	IN Senate District 4	
+IN Senate District 5	1	IN Senate District 5	
+IN Senate District 6	1	IN Senate District 6	
+IN Senate District 7	1	IN Senate District 7	
+IN Senate District 8	1	IN Senate District 8	
+IN Senate District 9	1	IN Senate District 9	
+IN Senate District 10	1	IN Senate District 10	
+IN Senate District 11	1	IN Senate District 11	
+IN Senate District 12	1	IN Senate District 12	
+IN Senate District 13	1	IN Senate District 13	
+IN Senate District 14	1	IN Senate District 14	
+IN Senate District 15	1	IN Senate District 15	
+IN Senate District 16	1	IN Senate District 16	
+IN Senate District 17	1	IN Senate District 17	
+IN Senate District 18	1	IN Senate District 18	
+IN Senate District 19	1	IN Senate District 19	
+IN Senate District 20	1	IN Senate District 20	
+IN Senate District 21	1	IN Senate District 21	
+IN Senate District 22	1	IN Senate District 22	
+IN Senate District 23	1	IN Senate District 23	
+IN Senate District 24	1	IN Senate District 24	
+IN Senate District 25	1	IN Senate District 25	
+IN Senate District 26	1	IN Senate District 26	
+IN Senate District 27	1	IN Senate District 27	
+IN Senate District 28	1	IN Senate District 28	
+IN Senate District 29	1	IN Senate District 29	
+IN Senate District 30	1	IN Senate District 30	
+IN Senate District 31	1	IN Senate District 31	
+IN Senate District 32	1	IN Senate District 32	
+IN Senate District 33	1	IN Senate District 33	
+IN Senate District 34	1	IN Senate District 34	
+IN Senate District 35	1	IN Senate District 35	
+IN Senate District 36	1	IN Senate District 36	
+IN Senate District 37	1	IN Senate District 37	
+IN Senate District 38	1	IN Senate District 38	
+IN Senate District 39	1	IN Senate District 39	
+IN Senate District 40	1	IN Senate District 40	
+IN Senate District 41	1	IN Senate District 41	
+IN Senate District 42	1	IN Senate District 42	
+IN Senate District 43	1	IN Senate District 43	
+IN Senate District 44	1	IN Senate District 44	
+IN Senate District 45	1	IN Senate District 45	
+IN Senate District 46	1	IN Senate District 46	
+IN Senate District 47	1	IN Senate District 47	
+IN Senate District 48	1	IN Senate District 48	
+IN Senate District 49	1	IN Senate District 49	
+IN Senate District 50	1	IN Senate District 50	
+US House IN District 1	1	US House IN District 1	
+US House IN District 2	1	US House IN District 2	
+US House IN District 3	1	US House IN District 3	
+US House IN District 4	1	US House IN District 4	
+US House IN District 5	1	US House IN District 5	
+US House IN District 6	1	US House IN District 6	
+US House IN District 7	1	US House IN District 7	
+US House IN District 8	1	US House IN District 8	
+US House IN District 9	1	US House IN District 9	
+US President (IN)	1	US President (IN)	
+IN Governor	1	IN Governor	
+US Senate IN	1	US Senate IN	
+IN Attorney General	1	IN Attorney General	
+IN Lieutenant Governor	1	IN Lieutenant Governor	
+IN Treasurer	1	IN Treasurer	
+IN Superintendent of Public Instruction	1	IN Superintendent of Public Instruction	
+IN Auditor	1	IN Auditor	
+IN Secretary of State	1	IN Secretary of State	
+IN House District 1 (Democratic Party)	1	IN House District 1	Democratic Party
+IN House District 2 (Democratic Party)	1	IN House District 2	Democratic Party
+IN House District 3 (Democratic Party)	1	IN House District 3	Democratic Party
+IN House District 4 (Democratic Party)	1	IN House District 4	Democratic Party
+IN House District 5 (Democratic Party)	1	IN House District 5	Democratic Party
+IN House District 6 (Democratic Party)	1	IN House District 6	Democratic Party
+IN House District 7 (Democratic Party)	1	IN House District 7	Democratic Party
+IN House District 8 (Democratic Party)	1	IN House District 8	Democratic Party
+IN House District 9 (Democratic Party)	1	IN House District 9	Democratic Party
+IN House District 10 (Democratic Party)	1	IN House District 10	Democratic Party
+IN House District 11 (Democratic Party)	1	IN House District 11	Democratic Party
+IN House District 12 (Democratic Party)	1	IN House District 12	Democratic Party
+IN House District 13 (Democratic Party)	1	IN House District 13	Democratic Party
+IN House District 14 (Democratic Party)	1	IN House District 14	Democratic Party
+IN House District 15 (Democratic Party)	1	IN House District 15	Democratic Party
+IN House District 16 (Democratic Party)	1	IN House District 16	Democratic Party
+IN House District 17 (Democratic Party)	1	IN House District 17	Democratic Party
+IN House District 18 (Democratic Party)	1	IN House District 18	Democratic Party
+IN House District 19 (Democratic Party)	1	IN House District 19	Democratic Party
+IN House District 20 (Democratic Party)	1	IN House District 20	Democratic Party
+IN House District 21 (Democratic Party)	1	IN House District 21	Democratic Party
+IN House District 22 (Democratic Party)	1	IN House District 22	Democratic Party
+IN House District 23 (Democratic Party)	1	IN House District 23	Democratic Party
+IN House District 24 (Democratic Party)	1	IN House District 24	Democratic Party
+IN House District 25 (Democratic Party)	1	IN House District 25	Democratic Party
+IN House District 26 (Democratic Party)	1	IN House District 26	Democratic Party
+IN House District 27 (Democratic Party)	1	IN House District 27	Democratic Party
+IN House District 28 (Democratic Party)	1	IN House District 28	Democratic Party
+IN House District 29 (Democratic Party)	1	IN House District 29	Democratic Party
+IN House District 30 (Democratic Party)	1	IN House District 30	Democratic Party
+IN House District 31 (Democratic Party)	1	IN House District 31	Democratic Party
+IN House District 32 (Democratic Party)	1	IN House District 32	Democratic Party
+IN House District 33 (Democratic Party)	1	IN House District 33	Democratic Party
+IN House District 34 (Democratic Party)	1	IN House District 34	Democratic Party
+IN House District 35 (Democratic Party)	1	IN House District 35	Democratic Party
+IN House District 36 (Democratic Party)	1	IN House District 36	Democratic Party
+IN House District 37 (Democratic Party)	1	IN House District 37	Democratic Party
+IN House District 38 (Democratic Party)	1	IN House District 38	Democratic Party
+IN House District 39 (Democratic Party)	1	IN House District 39	Democratic Party
+IN House District 40 (Democratic Party)	1	IN House District 40	Democratic Party
+IN House District 41 (Democratic Party)	1	IN House District 41	Democratic Party
+IN House District 42 (Democratic Party)	1	IN House District 42	Democratic Party
+IN House District 43 (Democratic Party)	1	IN House District 43	Democratic Party
+IN House District 44 (Democratic Party)	1	IN House District 44	Democratic Party
+IN House District 45 (Democratic Party)	1	IN House District 45	Democratic Party
+IN House District 46 (Democratic Party)	1	IN House District 46	Democratic Party
+IN House District 47 (Democratic Party)	1	IN House District 47	Democratic Party
+IN House District 48 (Democratic Party)	1	IN House District 48	Democratic Party
+IN House District 49 (Democratic Party)	1	IN House District 49	Democratic Party
+IN House District 50 (Democratic Party)	1	IN House District 50	Democratic Party
+IN House District 51 (Democratic Party)	1	IN House District 51	Democratic Party
+IN House District 52 (Democratic Party)	1	IN House District 52	Democratic Party
+IN House District 53 (Democratic Party)	1	IN House District 53	Democratic Party
+IN House District 54 (Democratic Party)	1	IN House District 54	Democratic Party
+IN House District 55 (Democratic Party)	1	IN House District 55	Democratic Party
+IN House District 56 (Democratic Party)	1	IN House District 56	Democratic Party
+IN House District 57 (Democratic Party)	1	IN House District 57	Democratic Party
+IN House District 58 (Democratic Party)	1	IN House District 58	Democratic Party
+IN House District 59 (Democratic Party)	1	IN House District 59	Democratic Party
+IN House District 60 (Democratic Party)	1	IN House District 60	Democratic Party
+IN House District 61 (Democratic Party)	1	IN House District 61	Democratic Party
+IN House District 62 (Democratic Party)	1	IN House District 62	Democratic Party
+IN House District 63 (Democratic Party)	1	IN House District 63	Democratic Party
+IN House District 64 (Democratic Party)	1	IN House District 64	Democratic Party
+IN House District 65 (Democratic Party)	1	IN House District 65	Democratic Party
+IN House District 66 (Democratic Party)	1	IN House District 66	Democratic Party
+IN House District 67 (Democratic Party)	1	IN House District 67	Democratic Party
+IN House District 68 (Democratic Party)	1	IN House District 68	Democratic Party
+IN House District 69 (Democratic Party)	1	IN House District 69	Democratic Party
+IN House District 70 (Democratic Party)	1	IN House District 70	Democratic Party
+IN House District 71 (Democratic Party)	1	IN House District 71	Democratic Party
+IN House District 72 (Democratic Party)	1	IN House District 72	Democratic Party
+IN House District 73 (Democratic Party)	1	IN House District 73	Democratic Party
+IN House District 74 (Democratic Party)	1	IN House District 74	Democratic Party
+IN House District 75 (Democratic Party)	1	IN House District 75	Democratic Party
+IN House District 76 (Democratic Party)	1	IN House District 76	Democratic Party
+IN House District 77 (Democratic Party)	1	IN House District 77	Democratic Party
+IN House District 78 (Democratic Party)	1	IN House District 78	Democratic Party
+IN House District 79 (Democratic Party)	1	IN House District 79	Democratic Party
+IN House District 80 (Democratic Party)	1	IN House District 80	Democratic Party
+IN House District 81 (Democratic Party)	1	IN House District 81	Democratic Party
+IN House District 82 (Democratic Party)	1	IN House District 82	Democratic Party
+IN House District 83 (Democratic Party)	1	IN House District 83	Democratic Party
+IN House District 84 (Democratic Party)	1	IN House District 84	Democratic Party
+IN House District 85 (Democratic Party)	1	IN House District 85	Democratic Party
+IN House District 86 (Democratic Party)	1	IN House District 86	Democratic Party
+IN House District 87 (Democratic Party)	1	IN House District 87	Democratic Party
+IN House District 88 (Democratic Party)	1	IN House District 88	Democratic Party
+IN House District 89 (Democratic Party)	1	IN House District 89	Democratic Party
+IN House District 90 (Democratic Party)	1	IN House District 90	Democratic Party
+IN House District 91 (Democratic Party)	1	IN House District 91	Democratic Party
+IN House District 92 (Democratic Party)	1	IN House District 92	Democratic Party
+IN House District 93 (Democratic Party)	1	IN House District 93	Democratic Party
+IN House District 94 (Democratic Party)	1	IN House District 94	Democratic Party
+IN House District 95 (Democratic Party)	1	IN House District 95	Democratic Party
+IN House District 96 (Democratic Party)	1	IN House District 96	Democratic Party
+IN House District 97 (Democratic Party)	1	IN House District 97	Democratic Party
+IN House District 98 (Democratic Party)	1	IN House District 98	Democratic Party
+IN House District 99 (Democratic Party)	1	IN House District 99	Democratic Party
+IN House District 100 (Democratic Party)	1	IN House District 100	Democratic Party
+IN Senate District 1 (Democratic Party)	1	IN Senate District 1	Democratic Party
+IN Senate District 2 (Democratic Party)	1	IN Senate District 2	Democratic Party
+IN Senate District 3 (Democratic Party)	1	IN Senate District 3	Democratic Party
+IN Senate District 4 (Democratic Party)	1	IN Senate District 4	Democratic Party
+IN Senate District 5 (Democratic Party)	1	IN Senate District 5	Democratic Party
+IN Senate District 6 (Democratic Party)	1	IN Senate District 6	Democratic Party
+IN Senate District 7 (Democratic Party)	1	IN Senate District 7	Democratic Party
+IN Senate District 8 (Democratic Party)	1	IN Senate District 8	Democratic Party
+IN Senate District 9 (Democratic Party)	1	IN Senate District 9	Democratic Party
+IN Senate District 10 (Democratic Party)	1	IN Senate District 10	Democratic Party
+IN Senate District 11 (Democratic Party)	1	IN Senate District 11	Democratic Party
+IN Senate District 12 (Democratic Party)	1	IN Senate District 12	Democratic Party
+IN Senate District 13 (Democratic Party)	1	IN Senate District 13	Democratic Party
+IN Senate District 14 (Democratic Party)	1	IN Senate District 14	Democratic Party
+IN Senate District 15 (Democratic Party)	1	IN Senate District 15	Democratic Party
+IN Senate District 16 (Democratic Party)	1	IN Senate District 16	Democratic Party
+IN Senate District 17 (Democratic Party)	1	IN Senate District 17	Democratic Party
+IN Senate District 18 (Democratic Party)	1	IN Senate District 18	Democratic Party
+IN Senate District 19 (Democratic Party)	1	IN Senate District 19	Democratic Party
+IN Senate District 20 (Democratic Party)	1	IN Senate District 20	Democratic Party
+IN Senate District 21 (Democratic Party)	1	IN Senate District 21	Democratic Party
+IN Senate District 22 (Democratic Party)	1	IN Senate District 22	Democratic Party
+IN Senate District 23 (Democratic Party)	1	IN Senate District 23	Democratic Party
+IN Senate District 24 (Democratic Party)	1	IN Senate District 24	Democratic Party
+IN Senate District 25 (Democratic Party)	1	IN Senate District 25	Democratic Party
+IN Senate District 26 (Democratic Party)	1	IN Senate District 26	Democratic Party
+IN Senate District 27 (Democratic Party)	1	IN Senate District 27	Democratic Party
+IN Senate District 28 (Democratic Party)	1	IN Senate District 28	Democratic Party
+IN Senate District 29 (Democratic Party)	1	IN Senate District 29	Democratic Party
+IN Senate District 30 (Democratic Party)	1	IN Senate District 30	Democratic Party
+IN Senate District 31 (Democratic Party)	1	IN Senate District 31	Democratic Party
+IN Senate District 32 (Democratic Party)	1	IN Senate District 32	Democratic Party
+IN Senate District 33 (Democratic Party)	1	IN Senate District 33	Democratic Party
+IN Senate District 34 (Democratic Party)	1	IN Senate District 34	Democratic Party
+IN Senate District 35 (Democratic Party)	1	IN Senate District 35	Democratic Party
+IN Senate District 36 (Democratic Party)	1	IN Senate District 36	Democratic Party
+IN Senate District 37 (Democratic Party)	1	IN Senate District 37	Democratic Party
+IN Senate District 38 (Democratic Party)	1	IN Senate District 38	Democratic Party
+IN Senate District 39 (Democratic Party)	1	IN Senate District 39	Democratic Party
+IN Senate District 40 (Democratic Party)	1	IN Senate District 40	Democratic Party
+IN Senate District 41 (Democratic Party)	1	IN Senate District 41	Democratic Party
+IN Senate District 42 (Democratic Party)	1	IN Senate District 42	Democratic Party
+IN Senate District 43 (Democratic Party)	1	IN Senate District 43	Democratic Party
+IN Senate District 44 (Democratic Party)	1	IN Senate District 44	Democratic Party
+IN Senate District 45 (Democratic Party)	1	IN Senate District 45	Democratic Party
+IN Senate District 46 (Democratic Party)	1	IN Senate District 46	Democratic Party
+IN Senate District 47 (Democratic Party)	1	IN Senate District 47	Democratic Party
+IN Senate District 48 (Democratic Party)	1	IN Senate District 48	Democratic Party
+IN Senate District 49 (Democratic Party)	1	IN Senate District 49	Democratic Party
+IN Senate District 50 (Democratic Party)	1	IN Senate District 50	Democratic Party
+US House IN District 1 (Democratic Party)	1	US House IN District 1	Democratic Party
+US House IN District 2 (Democratic Party)	1	US House IN District 2	Democratic Party
+US House IN District 3 (Democratic Party)	1	US House IN District 3	Democratic Party
+US House IN District 4 (Democratic Party)	1	US House IN District 4	Democratic Party
+US House IN District 5 (Democratic Party)	1	US House IN District 5	Democratic Party
+US House IN District 6 (Democratic Party)	1	US House IN District 6	Democratic Party
+US House IN District 7 (Democratic Party)	1	US House IN District 7	Democratic Party
+US House IN District 8 (Democratic Party)	1	US House IN District 8	Democratic Party
+US House IN District 9 (Democratic Party)	1	US House IN District 9	Democratic Party
+US President (IN) (Democratic Party)	1	US President (IN)	Democratic Party
+IN Governor (Democratic Party)	1	IN Governor	Democratic Party
+US Senate IN (Democratic Party)	1	US Senate IN	Democratic Party
+IN Attorney General (Democratic Party)	1	IN Attorney General	Democratic Party
+IN Lieutenant Governor (Democratic Party)	1	IN Lieutenant Governor	Democratic Party
+IN Treasurer (Democratic Party)	1	IN Treasurer	
+IN Superintendent of Public Instruction (Democratic Party)	1	IN Superintendent of Public Instruction	Democratic Party
+IN Auditor (Democratic Party)	1	IN Auditor	Democratic Party
+IN Secretary of State (Democratic Party)	1	IN Secretary of State	Democratic Party
+IN House District 1 (Republican Party)	1	IN House District 1	Republican Party
+IN House District 2 (Republican Party)	1	IN House District 2	Republican Party
+IN House District 3 (Republican Party)	1	IN House District 3	Republican Party
+IN House District 4 (Republican Party)	1	IN House District 4	Republican Party
+IN House District 5 (Republican Party)	1	IN House District 5	Republican Party
+IN House District 6 (Republican Party)	1	IN House District 6	Republican Party
+IN House District 7 (Republican Party)	1	IN House District 7	Republican Party
+IN House District 8 (Republican Party)	1	IN House District 8	Republican Party
+IN House District 9 (Republican Party)	1	IN House District 9	Republican Party
+IN House District 10 (Republican Party)	1	IN House District 10	Republican Party
+IN House District 11 (Republican Party)	1	IN House District 11	Republican Party
+IN House District 12 (Republican Party)	1	IN House District 12	Republican Party
+IN House District 13 (Republican Party)	1	IN House District 13	Republican Party
+IN House District 14 (Republican Party)	1	IN House District 14	Republican Party
+IN House District 15 (Republican Party)	1	IN House District 15	Republican Party
+IN House District 16 (Republican Party)	1	IN House District 16	Republican Party
+IN House District 17 (Republican Party)	1	IN House District 17	Republican Party
+IN House District 18 (Republican Party)	1	IN House District 18	Republican Party
+IN House District 19 (Republican Party)	1	IN House District 19	Republican Party
+IN House District 20 (Republican Party)	1	IN House District 20	Republican Party
+IN House District 21 (Republican Party)	1	IN House District 21	Republican Party
+IN House District 22 (Republican Party)	1	IN House District 22	Republican Party
+IN House District 23 (Republican Party)	1	IN House District 23	Republican Party
+IN House District 24 (Republican Party)	1	IN House District 24	Republican Party
+IN House District 25 (Republican Party)	1	IN House District 25	Republican Party
+IN House District 26 (Republican Party)	1	IN House District 26	Republican Party
+IN House District 27 (Republican Party)	1	IN House District 27	Republican Party
+IN House District 28 (Republican Party)	1	IN House District 28	Republican Party
+IN House District 29 (Republican Party)	1	IN House District 29	Republican Party
+IN House District 30 (Republican Party)	1	IN House District 30	Republican Party
+IN House District 31 (Republican Party)	1	IN House District 31	Republican Party
+IN House District 32 (Republican Party)	1	IN House District 32	Republican Party
+IN House District 33 (Republican Party)	1	IN House District 33	Republican Party
+IN House District 34 (Republican Party)	1	IN House District 34	Republican Party
+IN House District 35 (Republican Party)	1	IN House District 35	Republican Party
+IN House District 36 (Republican Party)	1	IN House District 36	Republican Party
+IN House District 37 (Republican Party)	1	IN House District 37	Republican Party
+IN House District 38 (Republican Party)	1	IN House District 38	Republican Party
+IN House District 39 (Republican Party)	1	IN House District 39	Republican Party
+IN House District 40 (Republican Party)	1	IN House District 40	Republican Party
+IN House District 41 (Republican Party)	1	IN House District 41	Republican Party
+IN House District 42 (Republican Party)	1	IN House District 42	Republican Party
+IN House District 43 (Republican Party)	1	IN House District 43	Republican Party
+IN House District 44 (Republican Party)	1	IN House District 44	Republican Party
+IN House District 45 (Republican Party)	1	IN House District 45	Republican Party
+IN House District 46 (Republican Party)	1	IN House District 46	Republican Party
+IN House District 47 (Republican Party)	1	IN House District 47	Republican Party
+IN House District 48 (Republican Party)	1	IN House District 48	Republican Party
+IN House District 49 (Republican Party)	1	IN House District 49	Republican Party
+IN House District 50 (Republican Party)	1	IN House District 50	Republican Party
+IN House District 51 (Republican Party)	1	IN House District 51	Republican Party
+IN House District 52 (Republican Party)	1	IN House District 52	Republican Party
+IN House District 53 (Republican Party)	1	IN House District 53	Republican Party
+IN House District 54 (Republican Party)	1	IN House District 54	Republican Party
+IN House District 55 (Republican Party)	1	IN House District 55	Republican Party
+IN House District 56 (Republican Party)	1	IN House District 56	Republican Party
+IN House District 57 (Republican Party)	1	IN House District 57	Republican Party
+IN House District 58 (Republican Party)	1	IN House District 58	Republican Party
+IN House District 59 (Republican Party)	1	IN House District 59	Republican Party
+IN House District 60 (Republican Party)	1	IN House District 60	Republican Party
+IN House District 61 (Republican Party)	1	IN House District 61	Republican Party
+IN House District 62 (Republican Party)	1	IN House District 62	Republican Party
+IN House District 63 (Republican Party)	1	IN House District 63	Republican Party
+IN House District 64 (Republican Party)	1	IN House District 64	Republican Party
+IN House District 65 (Republican Party)	1	IN House District 65	Republican Party
+IN House District 66 (Republican Party)	1	IN House District 66	Republican Party
+IN House District 67 (Republican Party)	1	IN House District 67	Republican Party
+IN House District 68 (Republican Party)	1	IN House District 68	Republican Party
+IN House District 69 (Republican Party)	1	IN House District 69	Republican Party
+IN House District 70 (Republican Party)	1	IN House District 70	Republican Party
+IN House District 71 (Republican Party)	1	IN House District 71	Republican Party
+IN House District 72 (Republican Party)	1	IN House District 72	Republican Party
+IN House District 73 (Republican Party)	1	IN House District 73	Republican Party
+IN House District 74 (Republican Party)	1	IN House District 74	Republican Party
+IN House District 75 (Republican Party)	1	IN House District 75	Republican Party
+IN House District 76 (Republican Party)	1	IN House District 76	Republican Party
+IN House District 77 (Republican Party)	1	IN House District 77	Republican Party
+IN House District 78 (Republican Party)	1	IN House District 78	Republican Party
+IN House District 79 (Republican Party)	1	IN House District 79	Republican Party
+IN House District 80 (Republican Party)	1	IN House District 80	Republican Party
+IN House District 81 (Republican Party)	1	IN House District 81	Republican Party
+IN House District 82 (Republican Party)	1	IN House District 82	Republican Party
+IN House District 83 (Republican Party)	1	IN House District 83	Republican Party
+IN House District 84 (Republican Party)	1	IN House District 84	Republican Party
+IN House District 85 (Republican Party)	1	IN House District 85	Republican Party
+IN House District 86 (Republican Party)	1	IN House District 86	Republican Party
+IN House District 87 (Republican Party)	1	IN House District 87	Republican Party
+IN House District 88 (Republican Party)	1	IN House District 88	Republican Party
+IN House District 89 (Republican Party)	1	IN House District 89	Republican Party
+IN House District 90 (Republican Party)	1	IN House District 90	Republican Party
+IN House District 91 (Republican Party)	1	IN House District 91	Republican Party
+IN House District 92 (Republican Party)	1	IN House District 92	Republican Party
+IN House District 93 (Republican Party)	1	IN House District 93	Republican Party
+IN House District 94 (Republican Party)	1	IN House District 94	Republican Party
+IN House District 95 (Republican Party)	1	IN House District 95	Republican Party
+IN House District 96 (Republican Party)	1	IN House District 96	Republican Party
+IN House District 97 (Republican Party)	1	IN House District 97	Republican Party
+IN House District 98 (Republican Party)	1	IN House District 98	Republican Party
+IN House District 99 (Republican Party)	1	IN House District 99	Republican Party
+IN House District 100 (Republican Party)	1	IN House District 100	Republican Party
+IN Senate District 1 (Republican Party)	1	IN Senate District 1	Republican Party
+IN Senate District 2 (Republican Party)	1	IN Senate District 2	Republican Party
+IN Senate District 3 (Republican Party)	1	IN Senate District 3	Republican Party
+IN Senate District 4 (Republican Party)	1	IN Senate District 4	Republican Party
+IN Senate District 5 (Republican Party)	1	IN Senate District 5	Republican Party
+IN Senate District 6 (Republican Party)	1	IN Senate District 6	Republican Party
+IN Senate District 7 (Republican Party)	1	IN Senate District 7	Republican Party
+IN Senate District 8 (Republican Party)	1	IN Senate District 8	Republican Party
+IN Senate District 9 (Republican Party)	1	IN Senate District 9	Republican Party
+IN Senate District 10 (Republican Party)	1	IN Senate District 10	Republican Party
+IN Senate District 11 (Republican Party)	1	IN Senate District 11	Republican Party
+IN Senate District 12 (Republican Party)	1	IN Senate District 12	Republican Party
+IN Senate District 13 (Republican Party)	1	IN Senate District 13	Republican Party
+IN Senate District 14 (Republican Party)	1	IN Senate District 14	Republican Party
+IN Senate District 15 (Republican Party)	1	IN Senate District 15	Republican Party
+IN Senate District 16 (Republican Party)	1	IN Senate District 16	Republican Party
+IN Senate District 17 (Republican Party)	1	IN Senate District 17	Republican Party
+IN Senate District 18 (Republican Party)	1	IN Senate District 18	Republican Party
+IN Senate District 19 (Republican Party)	1	IN Senate District 19	Republican Party
+IN Senate District 20 (Republican Party)	1	IN Senate District 20	Republican Party
+IN Senate District 21 (Republican Party)	1	IN Senate District 21	Republican Party
+IN Senate District 22 (Republican Party)	1	IN Senate District 22	Republican Party
+IN Senate District 23 (Republican Party)	1	IN Senate District 23	Republican Party
+IN Senate District 24 (Republican Party)	1	IN Senate District 24	Republican Party
+IN Senate District 25 (Republican Party)	1	IN Senate District 25	Republican Party
+IN Senate District 26 (Republican Party)	1	IN Senate District 26	Republican Party
+IN Senate District 27 (Republican Party)	1	IN Senate District 27	Republican Party
+IN Senate District 28 (Republican Party)	1	IN Senate District 28	Republican Party
+IN Senate District 29 (Republican Party)	1	IN Senate District 29	Republican Party
+IN Senate District 30 (Republican Party)	1	IN Senate District 30	Republican Party
+IN Senate District 31 (Republican Party)	1	IN Senate District 31	Republican Party
+IN Senate District 32 (Republican Party)	1	IN Senate District 32	Republican Party
+IN Senate District 33 (Republican Party)	1	IN Senate District 33	Republican Party
+IN Senate District 34 (Republican Party)	1	IN Senate District 34	Republican Party
+IN Senate District 35 (Republican Party)	1	IN Senate District 35	Republican Party
+IN Senate District 36 (Republican Party)	1	IN Senate District 36	Republican Party
+IN Senate District 37 (Republican Party)	1	IN Senate District 37	Republican Party
+IN Senate District 38 (Republican Party)	1	IN Senate District 38	Republican Party
+IN Senate District 39 (Republican Party)	1	IN Senate District 39	Republican Party
+IN Senate District 40 (Republican Party)	1	IN Senate District 40	Republican Party
+IN Senate District 41 (Republican Party)	1	IN Senate District 41	Republican Party
+IN Senate District 42 (Republican Party)	1	IN Senate District 42	Republican Party
+IN Senate District 43 (Republican Party)	1	IN Senate District 43	Republican Party
+IN Senate District 44 (Republican Party)	1	IN Senate District 44	Republican Party
+IN Senate District 45 (Republican Party)	1	IN Senate District 45	Republican Party
+IN Senate District 46 (Republican Party)	1	IN Senate District 46	Republican Party
+IN Senate District 47 (Republican Party)	1	IN Senate District 47	Republican Party
+IN Senate District 48 (Republican Party)	1	IN Senate District 48	Republican Party
+IN Senate District 49 (Republican Party)	1	IN Senate District 49	Republican Party
+IN Senate District 50 (Republican Party)	1	IN Senate District 50	Republican Party
+US House IN District 1 (Republican Party)	1	US House IN District 1	Republican Party
+US House IN District 2 (Republican Party)	1	US House IN District 2	Republican Party
+US House IN District 3 (Republican Party)	1	US House IN District 3	Republican Party
+US House IN District 4 (Republican Party)	1	US House IN District 4	Republican Party
+US House IN District 5 (Republican Party)	1	US House IN District 5	Republican Party
+US House IN District 6 (Republican Party)	1	US House IN District 6	Republican Party
+US House IN District 7 (Republican Party)	1	US House IN District 7	Republican Party
+US House IN District 8 (Republican Party)	1	US House IN District 8	Republican Party
+US House IN District 9 (Republican Party)	1	US House IN District 9	Republican Party
+US President (IN) (Republican Party)	1	US President (IN)	Republican Party
+IN Governor (Republican Party)	1	IN Governor	Republican Party
+US Senate IN (Republican Party)	1	US Senate IN	Republican Party
+IN Attorney General (Republican Party)	1	IN Attorney General	Republican Party
+IN Lieutenant Governor (Republican Party)	1	IN Lieutenant Governor	Republican Party
+IN Treasurer (Republican Party)	1	IN Treasurer	
+IN Superintendent of Public Instruction (Republican Party)	1	IN Superintendent of Public Instruction	Republican Party
+IN Auditor (Republican Party)	1	IN Auditor	Republican Party
+IN Secretary of State (Republican Party)	1	IN Secretary of State	Republican Party
+IN House District 1 (Green Party)	1	IN House District 1	Green Party
+IN House District 2 (Green Party)	1	IN House District 2	Green Party
+IN House District 3 (Green Party)	1	IN House District 3	Green Party
+IN House District 4 (Green Party)	1	IN House District 4	Green Party
+IN House District 5 (Green Party)	1	IN House District 5	Green Party
+IN House District 6 (Green Party)	1	IN House District 6	Green Party
+IN House District 7 (Green Party)	1	IN House District 7	Green Party
+IN House District 8 (Green Party)	1	IN House District 8	Green Party
+IN House District 9 (Green Party)	1	IN House District 9	Green Party
+IN House District 10 (Green Party)	1	IN House District 10	Green Party
+IN House District 11 (Green Party)	1	IN House District 11	Green Party
+IN House District 12 (Green Party)	1	IN House District 12	Green Party
+IN House District 13 (Green Party)	1	IN House District 13	Green Party
+IN House District 14 (Green Party)	1	IN House District 14	Green Party
+IN House District 15 (Green Party)	1	IN House District 15	Green Party
+IN House District 16 (Green Party)	1	IN House District 16	Green Party
+IN House District 17 (Green Party)	1	IN House District 17	Green Party
+IN House District 18 (Green Party)	1	IN House District 18	Green Party
+IN House District 19 (Green Party)	1	IN House District 19	Green Party
+IN House District 20 (Green Party)	1	IN House District 20	Green Party
+IN House District 21 (Green Party)	1	IN House District 21	Green Party
+IN House District 22 (Green Party)	1	IN House District 22	Green Party
+IN House District 23 (Green Party)	1	IN House District 23	Green Party
+IN House District 24 (Green Party)	1	IN House District 24	Green Party
+IN House District 25 (Green Party)	1	IN House District 25	Green Party
+IN House District 26 (Green Party)	1	IN House District 26	Green Party
+IN House District 27 (Green Party)	1	IN House District 27	Green Party
+IN House District 28 (Green Party)	1	IN House District 28	Green Party
+IN House District 29 (Green Party)	1	IN House District 29	Green Party
+IN House District 30 (Green Party)	1	IN House District 30	Green Party
+IN House District 31 (Green Party)	1	IN House District 31	Green Party
+IN House District 32 (Green Party)	1	IN House District 32	Green Party
+IN House District 33 (Green Party)	1	IN House District 33	Green Party
+IN House District 34 (Green Party)	1	IN House District 34	Green Party
+IN House District 35 (Green Party)	1	IN House District 35	Green Party
+IN House District 36 (Green Party)	1	IN House District 36	Green Party
+IN House District 37 (Green Party)	1	IN House District 37	Green Party
+IN House District 38 (Green Party)	1	IN House District 38	Green Party
+IN House District 39 (Green Party)	1	IN House District 39	Green Party
+IN House District 40 (Green Party)	1	IN House District 40	Green Party
+IN House District 41 (Green Party)	1	IN House District 41	Green Party
+IN House District 42 (Green Party)	1	IN House District 42	Green Party
+IN House District 43 (Green Party)	1	IN House District 43	Green Party
+IN House District 44 (Green Party)	1	IN House District 44	Green Party
+IN House District 45 (Green Party)	1	IN House District 45	Green Party
+IN House District 46 (Green Party)	1	IN House District 46	Green Party
+IN House District 47 (Green Party)	1	IN House District 47	Green Party
+IN House District 48 (Green Party)	1	IN House District 48	Green Party
+IN House District 49 (Green Party)	1	IN House District 49	Green Party
+IN House District 50 (Green Party)	1	IN House District 50	Green Party
+IN House District 51 (Green Party)	1	IN House District 51	Green Party
+IN House District 52 (Green Party)	1	IN House District 52	Green Party
+IN House District 53 (Green Party)	1	IN House District 53	Green Party
+IN House District 54 (Green Party)	1	IN House District 54	Green Party
+IN House District 55 (Green Party)	1	IN House District 55	Green Party
+IN House District 56 (Green Party)	1	IN House District 56	Green Party
+IN House District 57 (Green Party)	1	IN House District 57	Green Party
+IN House District 58 (Green Party)	1	IN House District 58	Green Party
+IN House District 59 (Green Party)	1	IN House District 59	Green Party
+IN House District 60 (Green Party)	1	IN House District 60	Green Party
+IN House District 61 (Green Party)	1	IN House District 61	Green Party
+IN House District 62 (Green Party)	1	IN House District 62	Green Party
+IN House District 63 (Green Party)	1	IN House District 63	Green Party
+IN House District 64 (Green Party)	1	IN House District 64	Green Party
+IN House District 65 (Green Party)	1	IN House District 65	Green Party
+IN House District 66 (Green Party)	1	IN House District 66	Green Party
+IN House District 67 (Green Party)	1	IN House District 67	Green Party
+IN House District 68 (Green Party)	1	IN House District 68	Green Party
+IN House District 69 (Green Party)	1	IN House District 69	Green Party
+IN House District 70 (Green Party)	1	IN House District 70	Green Party
+IN House District 71 (Green Party)	1	IN House District 71	Green Party
+IN House District 72 (Green Party)	1	IN House District 72	Green Party
+IN House District 73 (Green Party)	1	IN House District 73	Green Party
+IN House District 74 (Green Party)	1	IN House District 74	Green Party
+IN House District 75 (Green Party)	1	IN House District 75	Green Party
+IN House District 76 (Green Party)	1	IN House District 76	Green Party
+IN House District 77 (Green Party)	1	IN House District 77	Green Party
+IN House District 78 (Green Party)	1	IN House District 78	Green Party
+IN House District 79 (Green Party)	1	IN House District 79	Green Party
+IN House District 80 (Green Party)	1	IN House District 80	Green Party
+IN House District 81 (Green Party)	1	IN House District 81	Green Party
+IN House District 82 (Green Party)	1	IN House District 82	Green Party
+IN House District 83 (Green Party)	1	IN House District 83	Green Party
+IN House District 84 (Green Party)	1	IN House District 84	Green Party
+IN House District 85 (Green Party)	1	IN House District 85	Green Party
+IN House District 86 (Green Party)	1	IN House District 86	Green Party
+IN House District 87 (Green Party)	1	IN House District 87	Green Party
+IN House District 88 (Green Party)	1	IN House District 88	Green Party
+IN House District 89 (Green Party)	1	IN House District 89	Green Party
+IN House District 90 (Green Party)	1	IN House District 90	Green Party
+IN House District 91 (Green Party)	1	IN House District 91	Green Party
+IN House District 92 (Green Party)	1	IN House District 92	Green Party
+IN House District 93 (Green Party)	1	IN House District 93	Green Party
+IN House District 94 (Green Party)	1	IN House District 94	Green Party
+IN House District 95 (Green Party)	1	IN House District 95	Green Party
+IN House District 96 (Green Party)	1	IN House District 96	Green Party
+IN House District 97 (Green Party)	1	IN House District 97	Green Party
+IN House District 98 (Green Party)	1	IN House District 98	Green Party
+IN House District 99 (Green Party)	1	IN House District 99	Green Party
+IN House District 100 (Green Party)	1	IN House District 100	Green Party
+IN Senate District 1 (Green Party)	1	IN Senate District 1	Green Party
+IN Senate District 2 (Green Party)	1	IN Senate District 2	Green Party
+IN Senate District 3 (Green Party)	1	IN Senate District 3	Green Party
+IN Senate District 4 (Green Party)	1	IN Senate District 4	Green Party
+IN Senate District 5 (Green Party)	1	IN Senate District 5	Green Party
+IN Senate District 6 (Green Party)	1	IN Senate District 6	Green Party
+IN Senate District 7 (Green Party)	1	IN Senate District 7	Green Party
+IN Senate District 8 (Green Party)	1	IN Senate District 8	Green Party
+IN Senate District 9 (Green Party)	1	IN Senate District 9	Green Party
+IN Senate District 10 (Green Party)	1	IN Senate District 10	Green Party
+IN Senate District 11 (Green Party)	1	IN Senate District 11	Green Party
+IN Senate District 12 (Green Party)	1	IN Senate District 12	Green Party
+IN Senate District 13 (Green Party)	1	IN Senate District 13	Green Party
+IN Senate District 14 (Green Party)	1	IN Senate District 14	Green Party
+IN Senate District 15 (Green Party)	1	IN Senate District 15	Green Party
+IN Senate District 16 (Green Party)	1	IN Senate District 16	Green Party
+IN Senate District 17 (Green Party)	1	IN Senate District 17	Green Party
+IN Senate District 18 (Green Party)	1	IN Senate District 18	Green Party
+IN Senate District 19 (Green Party)	1	IN Senate District 19	Green Party
+IN Senate District 20 (Green Party)	1	IN Senate District 20	Green Party
+IN Senate District 21 (Green Party)	1	IN Senate District 21	Green Party
+IN Senate District 22 (Green Party)	1	IN Senate District 22	Green Party
+IN Senate District 23 (Green Party)	1	IN Senate District 23	Green Party
+IN Senate District 24 (Green Party)	1	IN Senate District 24	Green Party
+IN Senate District 25 (Green Party)	1	IN Senate District 25	Green Party
+IN Senate District 26 (Green Party)	1	IN Senate District 26	Green Party
+IN Senate District 27 (Green Party)	1	IN Senate District 27	Green Party
+IN Senate District 28 (Green Party)	1	IN Senate District 28	Green Party
+IN Senate District 29 (Green Party)	1	IN Senate District 29	Green Party
+IN Senate District 30 (Green Party)	1	IN Senate District 30	Green Party
+IN Senate District 31 (Green Party)	1	IN Senate District 31	Green Party
+IN Senate District 32 (Green Party)	1	IN Senate District 32	Green Party
+IN Senate District 33 (Green Party)	1	IN Senate District 33	Green Party
+IN Senate District 34 (Green Party)	1	IN Senate District 34	Green Party
+IN Senate District 35 (Green Party)	1	IN Senate District 35	Green Party
+IN Senate District 36 (Green Party)	1	IN Senate District 36	Green Party
+IN Senate District 37 (Green Party)	1	IN Senate District 37	Green Party
+IN Senate District 38 (Green Party)	1	IN Senate District 38	Green Party
+IN Senate District 39 (Green Party)	1	IN Senate District 39	Green Party
+IN Senate District 40 (Green Party)	1	IN Senate District 40	Green Party
+IN Senate District 41 (Green Party)	1	IN Senate District 41	Green Party
+IN Senate District 42 (Green Party)	1	IN Senate District 42	Green Party
+IN Senate District 43 (Green Party)	1	IN Senate District 43	Green Party
+IN Senate District 44 (Green Party)	1	IN Senate District 44	Green Party
+IN Senate District 45 (Green Party)	1	IN Senate District 45	Green Party
+IN Senate District 46 (Green Party)	1	IN Senate District 46	Green Party
+IN Senate District 47 (Green Party)	1	IN Senate District 47	Green Party
+IN Senate District 48 (Green Party)	1	IN Senate District 48	Green Party
+IN Senate District 49 (Green Party)	1	IN Senate District 49	Green Party
+IN Senate District 50 (Green Party)	1	IN Senate District 50	Green Party
+US House IN District 1 (Green Party)	1	US House IN District 1	Green Party
+US House IN District 2 (Green Party)	1	US House IN District 2	Green Party
+US House IN District 3 (Green Party)	1	US House IN District 3	Green Party
+US House IN District 4 (Green Party)	1	US House IN District 4	Green Party
+US House IN District 5 (Green Party)	1	US House IN District 5	Green Party
+US House IN District 6 (Green Party)	1	US House IN District 6	Green Party
+US House IN District 7 (Green Party)	1	US House IN District 7	Green Party
+US House IN District 8 (Green Party)	1	US House IN District 8	Green Party
+US House IN District 9 (Green Party)	1	US House IN District 9	Green Party
+US President (IN) (Green Party)	1	US President (IN)	Green Party
+IN Governor (Green Party)	1	IN Governor	Green Party
+US Senate IN (Green Party)	1	US Senate IN	Green Party
+IN Attorney General (Green Party)	1	IN Attorney General	Green Party
+IN Lieutenant Governor (Green Party)	1	IN Lieutenant Governor	Green Party
+IN Treasurer (Green Party)	1	IN Treasurer	
+IN Superintendent of Public Instruction (Green Party)	1	IN Superintendent of Public Instruction	Green Party
+IN Auditor (Green Party)	1	IN Auditor	Green Party
+IN Secretary of State (Green Party)	1	IN Secretary of State	Green Party
+IN House District 1 (Libertarian Party)	1	IN House District 1	Libertarian Party
+IN House District 2 (Libertarian Party)	1	IN House District 2	Libertarian Party
+IN House District 3 (Libertarian Party)	1	IN House District 3	Libertarian Party
+IN House District 4 (Libertarian Party)	1	IN House District 4	Libertarian Party
+IN House District 5 (Libertarian Party)	1	IN House District 5	Libertarian Party
+IN House District 6 (Libertarian Party)	1	IN House District 6	Libertarian Party
+IN House District 7 (Libertarian Party)	1	IN House District 7	Libertarian Party
+IN House District 8 (Libertarian Party)	1	IN House District 8	Libertarian Party
+IN House District 9 (Libertarian Party)	1	IN House District 9	Libertarian Party
+IN House District 10 (Libertarian Party)	1	IN House District 10	Libertarian Party
+IN House District 11 (Libertarian Party)	1	IN House District 11	Libertarian Party
+IN House District 12 (Libertarian Party)	1	IN House District 12	Libertarian Party
+IN House District 13 (Libertarian Party)	1	IN House District 13	Libertarian Party
+IN House District 14 (Libertarian Party)	1	IN House District 14	Libertarian Party
+IN House District 15 (Libertarian Party)	1	IN House District 15	Libertarian Party
+IN House District 16 (Libertarian Party)	1	IN House District 16	Libertarian Party
+IN House District 17 (Libertarian Party)	1	IN House District 17	Libertarian Party
+IN House District 18 (Libertarian Party)	1	IN House District 18	Libertarian Party
+IN House District 19 (Libertarian Party)	1	IN House District 19	Libertarian Party
+IN House District 20 (Libertarian Party)	1	IN House District 20	Libertarian Party
+IN House District 21 (Libertarian Party)	1	IN House District 21	Libertarian Party
+IN House District 22 (Libertarian Party)	1	IN House District 22	Libertarian Party
+IN House District 23 (Libertarian Party)	1	IN House District 23	Libertarian Party
+IN House District 24 (Libertarian Party)	1	IN House District 24	Libertarian Party
+IN House District 25 (Libertarian Party)	1	IN House District 25	Libertarian Party
+IN House District 26 (Libertarian Party)	1	IN House District 26	Libertarian Party
+IN House District 27 (Libertarian Party)	1	IN House District 27	Libertarian Party
+IN House District 28 (Libertarian Party)	1	IN House District 28	Libertarian Party
+IN House District 29 (Libertarian Party)	1	IN House District 29	Libertarian Party
+IN House District 30 (Libertarian Party)	1	IN House District 30	Libertarian Party
+IN House District 31 (Libertarian Party)	1	IN House District 31	Libertarian Party
+IN House District 32 (Libertarian Party)	1	IN House District 32	Libertarian Party
+IN House District 33 (Libertarian Party)	1	IN House District 33	Libertarian Party
+IN House District 34 (Libertarian Party)	1	IN House District 34	Libertarian Party
+IN House District 35 (Libertarian Party)	1	IN House District 35	Libertarian Party
+IN House District 36 (Libertarian Party)	1	IN House District 36	Libertarian Party
+IN House District 37 (Libertarian Party)	1	IN House District 37	Libertarian Party
+IN House District 38 (Libertarian Party)	1	IN House District 38	Libertarian Party
+IN House District 39 (Libertarian Party)	1	IN House District 39	Libertarian Party
+IN House District 40 (Libertarian Party)	1	IN House District 40	Libertarian Party
+IN House District 41 (Libertarian Party)	1	IN House District 41	Libertarian Party
+IN House District 42 (Libertarian Party)	1	IN House District 42	Libertarian Party
+IN House District 43 (Libertarian Party)	1	IN House District 43	Libertarian Party
+IN House District 44 (Libertarian Party)	1	IN House District 44	Libertarian Party
+IN House District 45 (Libertarian Party)	1	IN House District 45	Libertarian Party
+IN House District 46 (Libertarian Party)	1	IN House District 46	Libertarian Party
+IN House District 47 (Libertarian Party)	1	IN House District 47	Libertarian Party
+IN House District 48 (Libertarian Party)	1	IN House District 48	Libertarian Party
+IN House District 49 (Libertarian Party)	1	IN House District 49	Libertarian Party
+IN House District 50 (Libertarian Party)	1	IN House District 50	Libertarian Party
+IN House District 51 (Libertarian Party)	1	IN House District 51	Libertarian Party
+IN House District 52 (Libertarian Party)	1	IN House District 52	Libertarian Party
+IN House District 53 (Libertarian Party)	1	IN House District 53	Libertarian Party
+IN House District 54 (Libertarian Party)	1	IN House District 54	Libertarian Party
+IN House District 55 (Libertarian Party)	1	IN House District 55	Libertarian Party
+IN House District 56 (Libertarian Party)	1	IN House District 56	Libertarian Party
+IN House District 57 (Libertarian Party)	1	IN House District 57	Libertarian Party
+IN House District 58 (Libertarian Party)	1	IN House District 58	Libertarian Party
+IN House District 59 (Libertarian Party)	1	IN House District 59	Libertarian Party
+IN House District 60 (Libertarian Party)	1	IN House District 60	Libertarian Party
+IN House District 61 (Libertarian Party)	1	IN House District 61	Libertarian Party
+IN House District 62 (Libertarian Party)	1	IN House District 62	Libertarian Party
+IN House District 63 (Libertarian Party)	1	IN House District 63	Libertarian Party
+IN House District 64 (Libertarian Party)	1	IN House District 64	Libertarian Party
+IN House District 65 (Libertarian Party)	1	IN House District 65	Libertarian Party
+IN House District 66 (Libertarian Party)	1	IN House District 66	Libertarian Party
+IN House District 67 (Libertarian Party)	1	IN House District 67	Libertarian Party
+IN House District 68 (Libertarian Party)	1	IN House District 68	Libertarian Party
+IN House District 69 (Libertarian Party)	1	IN House District 69	Libertarian Party
+IN House District 70 (Libertarian Party)	1	IN House District 70	Libertarian Party
+IN House District 71 (Libertarian Party)	1	IN House District 71	Libertarian Party
+IN House District 72 (Libertarian Party)	1	IN House District 72	Libertarian Party
+IN House District 73 (Libertarian Party)	1	IN House District 73	Libertarian Party
+IN House District 74 (Libertarian Party)	1	IN House District 74	Libertarian Party
+IN House District 75 (Libertarian Party)	1	IN House District 75	Libertarian Party
+IN House District 76 (Libertarian Party)	1	IN House District 76	Libertarian Party
+IN House District 77 (Libertarian Party)	1	IN House District 77	Libertarian Party
+IN House District 78 (Libertarian Party)	1	IN House District 78	Libertarian Party
+IN House District 79 (Libertarian Party)	1	IN House District 79	Libertarian Party
+IN House District 80 (Libertarian Party)	1	IN House District 80	Libertarian Party
+IN House District 81 (Libertarian Party)	1	IN House District 81	Libertarian Party
+IN House District 82 (Libertarian Party)	1	IN House District 82	Libertarian Party
+IN House District 83 (Libertarian Party)	1	IN House District 83	Libertarian Party
+IN House District 84 (Libertarian Party)	1	IN House District 84	Libertarian Party
+IN House District 85 (Libertarian Party)	1	IN House District 85	Libertarian Party
+IN House District 86 (Libertarian Party)	1	IN House District 86	Libertarian Party
+IN House District 87 (Libertarian Party)	1	IN House District 87	Libertarian Party
+IN House District 88 (Libertarian Party)	1	IN House District 88	Libertarian Party
+IN House District 89 (Libertarian Party)	1	IN House District 89	Libertarian Party
+IN House District 90 (Libertarian Party)	1	IN House District 90	Libertarian Party
+IN House District 91 (Libertarian Party)	1	IN House District 91	Libertarian Party
+IN House District 92 (Libertarian Party)	1	IN House District 92	Libertarian Party
+IN House District 93 (Libertarian Party)	1	IN House District 93	Libertarian Party
+IN House District 94 (Libertarian Party)	1	IN House District 94	Libertarian Party
+IN House District 95 (Libertarian Party)	1	IN House District 95	Libertarian Party
+IN House District 96 (Libertarian Party)	1	IN House District 96	Libertarian Party
+IN House District 97 (Libertarian Party)	1	IN House District 97	Libertarian Party
+IN House District 98 (Libertarian Party)	1	IN House District 98	Libertarian Party
+IN House District 99 (Libertarian Party)	1	IN House District 99	Libertarian Party
+IN House District 100 (Libertarian Party)	1	IN House District 100	Libertarian Party
+IN Senate District 1 (Libertarian Party)	1	IN Senate District 1	Libertarian Party
+IN Senate District 2 (Libertarian Party)	1	IN Senate District 2	Libertarian Party
+IN Senate District 3 (Libertarian Party)	1	IN Senate District 3	Libertarian Party
+IN Senate District 4 (Libertarian Party)	1	IN Senate District 4	Libertarian Party
+IN Senate District 5 (Libertarian Party)	1	IN Senate District 5	Libertarian Party
+IN Senate District 6 (Libertarian Party)	1	IN Senate District 6	Libertarian Party
+IN Senate District 7 (Libertarian Party)	1	IN Senate District 7	Libertarian Party
+IN Senate District 8 (Libertarian Party)	1	IN Senate District 8	Libertarian Party
+IN Senate District 9 (Libertarian Party)	1	IN Senate District 9	Libertarian Party
+IN Senate District 10 (Libertarian Party)	1	IN Senate District 10	Libertarian Party
+IN Senate District 11 (Libertarian Party)	1	IN Senate District 11	Libertarian Party
+IN Senate District 12 (Libertarian Party)	1	IN Senate District 12	Libertarian Party
+IN Senate District 13 (Libertarian Party)	1	IN Senate District 13	Libertarian Party
+IN Senate District 14 (Libertarian Party)	1	IN Senate District 14	Libertarian Party
+IN Senate District 15 (Libertarian Party)	1	IN Senate District 15	Libertarian Party
+IN Senate District 16 (Libertarian Party)	1	IN Senate District 16	Libertarian Party
+IN Senate District 17 (Libertarian Party)	1	IN Senate District 17	Libertarian Party
+IN Senate District 18 (Libertarian Party)	1	IN Senate District 18	Libertarian Party
+IN Senate District 19 (Libertarian Party)	1	IN Senate District 19	Libertarian Party
+IN Senate District 20 (Libertarian Party)	1	IN Senate District 20	Libertarian Party
+IN Senate District 21 (Libertarian Party)	1	IN Senate District 21	Libertarian Party
+IN Senate District 22 (Libertarian Party)	1	IN Senate District 22	Libertarian Party
+IN Senate District 23 (Libertarian Party)	1	IN Senate District 23	Libertarian Party
+IN Senate District 24 (Libertarian Party)	1	IN Senate District 24	Libertarian Party
+IN Senate District 25 (Libertarian Party)	1	IN Senate District 25	Libertarian Party
+IN Senate District 26 (Libertarian Party)	1	IN Senate District 26	Libertarian Party
+IN Senate District 27 (Libertarian Party)	1	IN Senate District 27	Libertarian Party
+IN Senate District 28 (Libertarian Party)	1	IN Senate District 28	Libertarian Party
+IN Senate District 29 (Libertarian Party)	1	IN Senate District 29	Libertarian Party
+IN Senate District 30 (Libertarian Party)	1	IN Senate District 30	Libertarian Party
+IN Senate District 31 (Libertarian Party)	1	IN Senate District 31	Libertarian Party
+IN Senate District 32 (Libertarian Party)	1	IN Senate District 32	Libertarian Party
+IN Senate District 33 (Libertarian Party)	1	IN Senate District 33	Libertarian Party
+IN Senate District 34 (Libertarian Party)	1	IN Senate District 34	Libertarian Party
+IN Senate District 35 (Libertarian Party)	1	IN Senate District 35	Libertarian Party
+IN Senate District 36 (Libertarian Party)	1	IN Senate District 36	Libertarian Party
+IN Senate District 37 (Libertarian Party)	1	IN Senate District 37	Libertarian Party
+IN Senate District 38 (Libertarian Party)	1	IN Senate District 38	Libertarian Party
+IN Senate District 39 (Libertarian Party)	1	IN Senate District 39	Libertarian Party
+IN Senate District 40 (Libertarian Party)	1	IN Senate District 40	Libertarian Party
+IN Senate District 41 (Libertarian Party)	1	IN Senate District 41	Libertarian Party
+IN Senate District 42 (Libertarian Party)	1	IN Senate District 42	Libertarian Party
+IN Senate District 43 (Libertarian Party)	1	IN Senate District 43	Libertarian Party
+IN Senate District 44 (Libertarian Party)	1	IN Senate District 44	Libertarian Party
+IN Senate District 45 (Libertarian Party)	1	IN Senate District 45	Libertarian Party
+IN Senate District 46 (Libertarian Party)	1	IN Senate District 46	Libertarian Party
+IN Senate District 47 (Libertarian Party)	1	IN Senate District 47	Libertarian Party
+IN Senate District 48 (Libertarian Party)	1	IN Senate District 48	Libertarian Party
+IN Senate District 49 (Libertarian Party)	1	IN Senate District 49	Libertarian Party
+IN Senate District 50 (Libertarian Party)	1	IN Senate District 50	Libertarian Party
+US House IN District 1 (Libertarian Party)	1	US House IN District 1	Libertarian Party
+US House IN District 2 (Libertarian Party)	1	US House IN District 2	Libertarian Party
+US House IN District 3 (Libertarian Party)	1	US House IN District 3	Libertarian Party
+US House IN District 4 (Libertarian Party)	1	US House IN District 4	Libertarian Party
+US House IN District 5 (Libertarian Party)	1	US House IN District 5	Libertarian Party
+US House IN District 6 (Libertarian Party)	1	US House IN District 6	Libertarian Party
+US House IN District 7 (Libertarian Party)	1	US House IN District 7	Libertarian Party
+US House IN District 8 (Libertarian Party)	1	US House IN District 8	Libertarian Party
+US House IN District 9 (Libertarian Party)	1	US House IN District 9	Libertarian Party
+US President (IN) (Libertarian Party)	1	US President (IN)	Libertarian Party
+IN Governor (Libertarian Party)	1	IN Governor	Libertarian Party
+US Senate IN (Libertarian Party)	1	US Senate IN	Libertarian Party
+IN Attorney General (Libertarian Party)	1	IN Attorney General	Libertarian Party
+IN Lieutenant Governor (Libertarian Party)	1	IN Lieutenant Governor	Libertarian Party
+IN Treasurer (Libertarian Party)	1	IN Treasurer	
+IN Superintendent of Public Instruction (Libertarian Party)	1	IN Superintendent of Public Instruction	Libertarian Party
+IN Auditor (Libertarian Party)	1	IN Auditor	Libertarian Party
+IN Secretary of State (Libertarian Party)	1	IN Secretary of State	Libertarian Party
+IN House District 1 (Constitution Party)	1	IN House District 1	Constitution Party
+IN House District 2 (Constitution Party)	1	IN House District 2	Constitution Party
+IN House District 3 (Constitution Party)	1	IN House District 3	Constitution Party
+IN House District 4 (Constitution Party)	1	IN House District 4	Constitution Party
+IN House District 5 (Constitution Party)	1	IN House District 5	Constitution Party
+IN House District 6 (Constitution Party)	1	IN House District 6	Constitution Party
+IN House District 7 (Constitution Party)	1	IN House District 7	Constitution Party
+IN House District 8 (Constitution Party)	1	IN House District 8	Constitution Party
+IN House District 9 (Constitution Party)	1	IN House District 9	Constitution Party
+IN House District 10 (Constitution Party)	1	IN House District 10	Constitution Party
+IN House District 11 (Constitution Party)	1	IN House District 11	Constitution Party
+IN House District 12 (Constitution Party)	1	IN House District 12	Constitution Party
+IN House District 13 (Constitution Party)	1	IN House District 13	Constitution Party
+IN House District 14 (Constitution Party)	1	IN House District 14	Constitution Party
+IN House District 15 (Constitution Party)	1	IN House District 15	Constitution Party
+IN House District 16 (Constitution Party)	1	IN House District 16	Constitution Party
+IN House District 17 (Constitution Party)	1	IN House District 17	Constitution Party
+IN House District 18 (Constitution Party)	1	IN House District 18	Constitution Party
+IN House District 19 (Constitution Party)	1	IN House District 19	Constitution Party
+IN House District 20 (Constitution Party)	1	IN House District 20	Constitution Party
+IN House District 21 (Constitution Party)	1	IN House District 21	Constitution Party
+IN House District 22 (Constitution Party)	1	IN House District 22	Constitution Party
+IN House District 23 (Constitution Party)	1	IN House District 23	Constitution Party
+IN House District 24 (Constitution Party)	1	IN House District 24	Constitution Party
+IN House District 25 (Constitution Party)	1	IN House District 25	Constitution Party
+IN House District 26 (Constitution Party)	1	IN House District 26	Constitution Party
+IN House District 27 (Constitution Party)	1	IN House District 27	Constitution Party
+IN House District 28 (Constitution Party)	1	IN House District 28	Constitution Party
+IN House District 29 (Constitution Party)	1	IN House District 29	Constitution Party
+IN House District 30 (Constitution Party)	1	IN House District 30	Constitution Party
+IN House District 31 (Constitution Party)	1	IN House District 31	Constitution Party
+IN House District 32 (Constitution Party)	1	IN House District 32	Constitution Party
+IN House District 33 (Constitution Party)	1	IN House District 33	Constitution Party
+IN House District 34 (Constitution Party)	1	IN House District 34	Constitution Party
+IN House District 35 (Constitution Party)	1	IN House District 35	Constitution Party
+IN House District 36 (Constitution Party)	1	IN House District 36	Constitution Party
+IN House District 37 (Constitution Party)	1	IN House District 37	Constitution Party
+IN House District 38 (Constitution Party)	1	IN House District 38	Constitution Party
+IN House District 39 (Constitution Party)	1	IN House District 39	Constitution Party
+IN House District 40 (Constitution Party)	1	IN House District 40	Constitution Party
+IN House District 41 (Constitution Party)	1	IN House District 41	Constitution Party
+IN House District 42 (Constitution Party)	1	IN House District 42	Constitution Party
+IN House District 43 (Constitution Party)	1	IN House District 43	Constitution Party
+IN House District 44 (Constitution Party)	1	IN House District 44	Constitution Party
+IN House District 45 (Constitution Party)	1	IN House District 45	Constitution Party
+IN House District 46 (Constitution Party)	1	IN House District 46	Constitution Party
+IN House District 47 (Constitution Party)	1	IN House District 47	Constitution Party
+IN House District 48 (Constitution Party)	1	IN House District 48	Constitution Party
+IN House District 49 (Constitution Party)	1	IN House District 49	Constitution Party
+IN House District 50 (Constitution Party)	1	IN House District 50	Constitution Party
+IN House District 51 (Constitution Party)	1	IN House District 51	Constitution Party
+IN House District 52 (Constitution Party)	1	IN House District 52	Constitution Party
+IN House District 53 (Constitution Party)	1	IN House District 53	Constitution Party
+IN House District 54 (Constitution Party)	1	IN House District 54	Constitution Party
+IN House District 55 (Constitution Party)	1	IN House District 55	Constitution Party
+IN House District 56 (Constitution Party)	1	IN House District 56	Constitution Party
+IN House District 57 (Constitution Party)	1	IN House District 57	Constitution Party
+IN House District 58 (Constitution Party)	1	IN House District 58	Constitution Party
+IN House District 59 (Constitution Party)	1	IN House District 59	Constitution Party
+IN House District 60 (Constitution Party)	1	IN House District 60	Constitution Party
+IN House District 61 (Constitution Party)	1	IN House District 61	Constitution Party
+IN House District 62 (Constitution Party)	1	IN House District 62	Constitution Party
+IN House District 63 (Constitution Party)	1	IN House District 63	Constitution Party
+IN House District 64 (Constitution Party)	1	IN House District 64	Constitution Party
+IN House District 65 (Constitution Party)	1	IN House District 65	Constitution Party
+IN House District 66 (Constitution Party)	1	IN House District 66	Constitution Party
+IN House District 67 (Constitution Party)	1	IN House District 67	Constitution Party
+IN House District 68 (Constitution Party)	1	IN House District 68	Constitution Party
+IN House District 69 (Constitution Party)	1	IN House District 69	Constitution Party
+IN House District 70 (Constitution Party)	1	IN House District 70	Constitution Party
+IN House District 71 (Constitution Party)	1	IN House District 71	Constitution Party
+IN House District 72 (Constitution Party)	1	IN House District 72	Constitution Party
+IN House District 73 (Constitution Party)	1	IN House District 73	Constitution Party
+IN House District 74 (Constitution Party)	1	IN House District 74	Constitution Party
+IN House District 75 (Constitution Party)	1	IN House District 75	Constitution Party
+IN House District 76 (Constitution Party)	1	IN House District 76	Constitution Party
+IN House District 77 (Constitution Party)	1	IN House District 77	Constitution Party
+IN House District 78 (Constitution Party)	1	IN House District 78	Constitution Party
+IN House District 79 (Constitution Party)	1	IN House District 79	Constitution Party
+IN House District 80 (Constitution Party)	1	IN House District 80	Constitution Party
+IN House District 81 (Constitution Party)	1	IN House District 81	Constitution Party
+IN House District 82 (Constitution Party)	1	IN House District 82	Constitution Party
+IN House District 83 (Constitution Party)	1	IN House District 83	Constitution Party
+IN House District 84 (Constitution Party)	1	IN House District 84	Constitution Party
+IN House District 85 (Constitution Party)	1	IN House District 85	Constitution Party
+IN House District 86 (Constitution Party)	1	IN House District 86	Constitution Party
+IN House District 87 (Constitution Party)	1	IN House District 87	Constitution Party
+IN House District 88 (Constitution Party)	1	IN House District 88	Constitution Party
+IN House District 89 (Constitution Party)	1	IN House District 89	Constitution Party
+IN House District 90 (Constitution Party)	1	IN House District 90	Constitution Party
+IN House District 91 (Constitution Party)	1	IN House District 91	Constitution Party
+IN House District 92 (Constitution Party)	1	IN House District 92	Constitution Party
+IN House District 93 (Constitution Party)	1	IN House District 93	Constitution Party
+IN House District 94 (Constitution Party)	1	IN House District 94	Constitution Party
+IN House District 95 (Constitution Party)	1	IN House District 95	Constitution Party
+IN House District 96 (Constitution Party)	1	IN House District 96	Constitution Party
+IN House District 97 (Constitution Party)	1	IN House District 97	Constitution Party
+IN House District 98 (Constitution Party)	1	IN House District 98	Constitution Party
+IN House District 99 (Constitution Party)	1	IN House District 99	Constitution Party
+IN House District 100 (Constitution Party)	1	IN House District 100	Constitution Party
+IN Senate District 1 (Constitution Party)	1	IN Senate District 1	Constitution Party
+IN Senate District 2 (Constitution Party)	1	IN Senate District 2	Constitution Party
+IN Senate District 3 (Constitution Party)	1	IN Senate District 3	Constitution Party
+IN Senate District 4 (Constitution Party)	1	IN Senate District 4	Constitution Party
+IN Senate District 5 (Constitution Party)	1	IN Senate District 5	Constitution Party
+IN Senate District 6 (Constitution Party)	1	IN Senate District 6	Constitution Party
+IN Senate District 7 (Constitution Party)	1	IN Senate District 7	Constitution Party
+IN Senate District 8 (Constitution Party)	1	IN Senate District 8	Constitution Party
+IN Senate District 9 (Constitution Party)	1	IN Senate District 9	Constitution Party
+IN Senate District 10 (Constitution Party)	1	IN Senate District 10	Constitution Party
+IN Senate District 11 (Constitution Party)	1	IN Senate District 11	Constitution Party
+IN Senate District 12 (Constitution Party)	1	IN Senate District 12	Constitution Party
+IN Senate District 13 (Constitution Party)	1	IN Senate District 13	Constitution Party
+IN Senate District 14 (Constitution Party)	1	IN Senate District 14	Constitution Party
+IN Senate District 15 (Constitution Party)	1	IN Senate District 15	Constitution Party
+IN Senate District 16 (Constitution Party)	1	IN Senate District 16	Constitution Party
+IN Senate District 17 (Constitution Party)	1	IN Senate District 17	Constitution Party
+IN Senate District 18 (Constitution Party)	1	IN Senate District 18	Constitution Party
+IN Senate District 19 (Constitution Party)	1	IN Senate District 19	Constitution Party
+IN Senate District 20 (Constitution Party)	1	IN Senate District 20	Constitution Party
+IN Senate District 21 (Constitution Party)	1	IN Senate District 21	Constitution Party
+IN Senate District 22 (Constitution Party)	1	IN Senate District 22	Constitution Party
+IN Senate District 23 (Constitution Party)	1	IN Senate District 23	Constitution Party
+IN Senate District 24 (Constitution Party)	1	IN Senate District 24	Constitution Party
+IN Senate District 25 (Constitution Party)	1	IN Senate District 25	Constitution Party
+IN Senate District 26 (Constitution Party)	1	IN Senate District 26	Constitution Party
+IN Senate District 27 (Constitution Party)	1	IN Senate District 27	Constitution Party
+IN Senate District 28 (Constitution Party)	1	IN Senate District 28	Constitution Party
+IN Senate District 29 (Constitution Party)	1	IN Senate District 29	Constitution Party
+IN Senate District 30 (Constitution Party)	1	IN Senate District 30	Constitution Party
+IN Senate District 31 (Constitution Party)	1	IN Senate District 31	Constitution Party
+IN Senate District 32 (Constitution Party)	1	IN Senate District 32	Constitution Party
+IN Senate District 33 (Constitution Party)	1	IN Senate District 33	Constitution Party
+IN Senate District 34 (Constitution Party)	1	IN Senate District 34	Constitution Party
+IN Senate District 35 (Constitution Party)	1	IN Senate District 35	Constitution Party
+IN Senate District 36 (Constitution Party)	1	IN Senate District 36	Constitution Party
+IN Senate District 37 (Constitution Party)	1	IN Senate District 37	Constitution Party
+IN Senate District 38 (Constitution Party)	1	IN Senate District 38	Constitution Party
+IN Senate District 39 (Constitution Party)	1	IN Senate District 39	Constitution Party
+IN Senate District 40 (Constitution Party)	1	IN Senate District 40	Constitution Party
+IN Senate District 41 (Constitution Party)	1	IN Senate District 41	Constitution Party
+IN Senate District 42 (Constitution Party)	1	IN Senate District 42	Constitution Party
+IN Senate District 43 (Constitution Party)	1	IN Senate District 43	Constitution Party
+IN Senate District 44 (Constitution Party)	1	IN Senate District 44	Constitution Party
+IN Senate District 45 (Constitution Party)	1	IN Senate District 45	Constitution Party
+IN Senate District 46 (Constitution Party)	1	IN Senate District 46	Constitution Party
+IN Senate District 47 (Constitution Party)	1	IN Senate District 47	Constitution Party
+IN Senate District 48 (Constitution Party)	1	IN Senate District 48	Constitution Party
+IN Senate District 49 (Constitution Party)	1	IN Senate District 49	Constitution Party
+IN Senate District 50 (Constitution Party)	1	IN Senate District 50	Constitution Party
+US House IN District 1 (Constitution Party)	1	US House IN District 1	Constitution Party
+US House IN District 2 (Constitution Party)	1	US House IN District 2	Constitution Party
+US House IN District 3 (Constitution Party)	1	US House IN District 3	Constitution Party
+US House IN District 4 (Constitution Party)	1	US House IN District 4	Constitution Party
+US House IN District 5 (Constitution Party)	1	US House IN District 5	Constitution Party
+US House IN District 6 (Constitution Party)	1	US House IN District 6	Constitution Party
+US House IN District 7 (Constitution Party)	1	US House IN District 7	Constitution Party
+US House IN District 8 (Constitution Party)	1	US House IN District 8	Constitution Party
+US House IN District 9 (Constitution Party)	1	US House IN District 9	Constitution Party
+US President (IN) (Constitution Party)	1	US President (IN)	Constitution Party
+IN Governor (Constitution Party)	1	IN Governor	Constitution Party
+US Senate IN (Constitution Party)	1	US Senate IN	Constitution Party
+IN Attorney General (Constitution Party)	1	IN Attorney General	Constitution Party
+IN Lieutenant Governor (Constitution Party)	1	IN Lieutenant Governor	Constitution Party
+IN Treasurer (Constitution Party)	1	IN Treasurer	
+IN Superintendent of Public Instruction (Constitution Party)	1	IN Superintendent of Public Instruction	Constitution Party
+IN Auditor (Constitution Party)	1	IN Auditor	Constitution Party
+IN Secretary of State (Constitution Party)	1	IN Secretary of State	Constitution Party
+IN House District 1 (Independent Party)	1	IN House District 1	Independent Party
+IN House District 2 (Independent Party)	1	IN House District 2	Independent Party
+IN House District 3 (Independent Party)	1	IN House District 3	Independent Party
+IN House District 4 (Independent Party)	1	IN House District 4	Independent Party
+IN House District 5 (Independent Party)	1	IN House District 5	Independent Party
+IN House District 6 (Independent Party)	1	IN House District 6	Independent Party
+IN House District 7 (Independent Party)	1	IN House District 7	Independent Party
+IN House District 8 (Independent Party)	1	IN House District 8	Independent Party
+IN House District 9 (Independent Party)	1	IN House District 9	Independent Party
+IN House District 10 (Independent Party)	1	IN House District 10	Independent Party
+IN House District 11 (Independent Party)	1	IN House District 11	Independent Party
+IN House District 12 (Independent Party)	1	IN House District 12	Independent Party
+IN House District 13 (Independent Party)	1	IN House District 13	Independent Party
+IN House District 14 (Independent Party)	1	IN House District 14	Independent Party
+IN House District 15 (Independent Party)	1	IN House District 15	Independent Party
+IN House District 16 (Independent Party)	1	IN House District 16	Independent Party
+IN House District 17 (Independent Party)	1	IN House District 17	Independent Party
+IN House District 18 (Independent Party)	1	IN House District 18	Independent Party
+IN House District 19 (Independent Party)	1	IN House District 19	Independent Party
+IN House District 20 (Independent Party)	1	IN House District 20	Independent Party
+IN House District 21 (Independent Party)	1	IN House District 21	Independent Party
+IN House District 22 (Independent Party)	1	IN House District 22	Independent Party
+IN House District 23 (Independent Party)	1	IN House District 23	Independent Party
+IN House District 24 (Independent Party)	1	IN House District 24	Independent Party
+IN House District 25 (Independent Party)	1	IN House District 25	Independent Party
+IN House District 26 (Independent Party)	1	IN House District 26	Independent Party
+IN House District 27 (Independent Party)	1	IN House District 27	Independent Party
+IN House District 28 (Independent Party)	1	IN House District 28	Independent Party
+IN House District 29 (Independent Party)	1	IN House District 29	Independent Party
+IN House District 30 (Independent Party)	1	IN House District 30	Independent Party
+IN House District 31 (Independent Party)	1	IN House District 31	Independent Party
+IN House District 32 (Independent Party)	1	IN House District 32	Independent Party
+IN House District 33 (Independent Party)	1	IN House District 33	Independent Party
+IN House District 34 (Independent Party)	1	IN House District 34	Independent Party
+IN House District 35 (Independent Party)	1	IN House District 35	Independent Party
+IN House District 36 (Independent Party)	1	IN House District 36	Independent Party
+IN House District 37 (Independent Party)	1	IN House District 37	Independent Party
+IN House District 38 (Independent Party)	1	IN House District 38	Independent Party
+IN House District 39 (Independent Party)	1	IN House District 39	Independent Party
+IN House District 40 (Independent Party)	1	IN House District 40	Independent Party
+IN House District 41 (Independent Party)	1	IN House District 41	Independent Party
+IN House District 42 (Independent Party)	1	IN House District 42	Independent Party
+IN House District 43 (Independent Party)	1	IN House District 43	Independent Party
+IN House District 44 (Independent Party)	1	IN House District 44	Independent Party
+IN House District 45 (Independent Party)	1	IN House District 45	Independent Party
+IN House District 46 (Independent Party)	1	IN House District 46	Independent Party
+IN House District 47 (Independent Party)	1	IN House District 47	Independent Party
+IN House District 48 (Independent Party)	1	IN House District 48	Independent Party
+IN House District 49 (Independent Party)	1	IN House District 49	Independent Party
+IN House District 50 (Independent Party)	1	IN House District 50	Independent Party
+IN House District 51 (Independent Party)	1	IN House District 51	Independent Party
+IN House District 52 (Independent Party)	1	IN House District 52	Independent Party
+IN House District 53 (Independent Party)	1	IN House District 53	Independent Party
+IN House District 54 (Independent Party)	1	IN House District 54	Independent Party
+IN House District 55 (Independent Party)	1	IN House District 55	Independent Party
+IN House District 56 (Independent Party)	1	IN House District 56	Independent Party
+IN House District 57 (Independent Party)	1	IN House District 57	Independent Party
+IN House District 58 (Independent Party)	1	IN House District 58	Independent Party
+IN House District 59 (Independent Party)	1	IN House District 59	Independent Party
+IN House District 60 (Independent Party)	1	IN House District 60	Independent Party
+IN House District 61 (Independent Party)	1	IN House District 61	Independent Party
+IN House District 62 (Independent Party)	1	IN House District 62	Independent Party
+IN House District 63 (Independent Party)	1	IN House District 63	Independent Party
+IN House District 64 (Independent Party)	1	IN House District 64	Independent Party
+IN House District 65 (Independent Party)	1	IN House District 65	Independent Party
+IN House District 66 (Independent Party)	1	IN House District 66	Independent Party
+IN House District 67 (Independent Party)	1	IN House District 67	Independent Party
+IN House District 68 (Independent Party)	1	IN House District 68	Independent Party
+IN House District 69 (Independent Party)	1	IN House District 69	Independent Party
+IN House District 70 (Independent Party)	1	IN House District 70	Independent Party
+IN House District 71 (Independent Party)	1	IN House District 71	Independent Party
+IN House District 72 (Independent Party)	1	IN House District 72	Independent Party
+IN House District 73 (Independent Party)	1	IN House District 73	Independent Party
+IN House District 74 (Independent Party)	1	IN House District 74	Independent Party
+IN House District 75 (Independent Party)	1	IN House District 75	Independent Party
+IN House District 76 (Independent Party)	1	IN House District 76	Independent Party
+IN House District 77 (Independent Party)	1	IN House District 77	Independent Party
+IN House District 78 (Independent Party)	1	IN House District 78	Independent Party
+IN House District 79 (Independent Party)	1	IN House District 79	Independent Party
+IN House District 80 (Independent Party)	1	IN House District 80	Independent Party
+IN House District 81 (Independent Party)	1	IN House District 81	Independent Party
+IN House District 82 (Independent Party)	1	IN House District 82	Independent Party
+IN House District 83 (Independent Party)	1	IN House District 83	Independent Party
+IN House District 84 (Independent Party)	1	IN House District 84	Independent Party
+IN House District 85 (Independent Party)	1	IN House District 85	Independent Party
+IN House District 86 (Independent Party)	1	IN House District 86	Independent Party
+IN House District 87 (Independent Party)	1	IN House District 87	Independent Party
+IN House District 88 (Independent Party)	1	IN House District 88	Independent Party
+IN House District 89 (Independent Party)	1	IN House District 89	Independent Party
+IN House District 90 (Independent Party)	1	IN House District 90	Independent Party
+IN House District 91 (Independent Party)	1	IN House District 91	Independent Party
+IN House District 92 (Independent Party)	1	IN House District 92	Independent Party
+IN House District 93 (Independent Party)	1	IN House District 93	Independent Party
+IN House District 94 (Independent Party)	1	IN House District 94	Independent Party
+IN House District 95 (Independent Party)	1	IN House District 95	Independent Party
+IN House District 96 (Independent Party)	1	IN House District 96	Independent Party
+IN House District 97 (Independent Party)	1	IN House District 97	Independent Party
+IN House District 98 (Independent Party)	1	IN House District 98	Independent Party
+IN House District 99 (Independent Party)	1	IN House District 99	Independent Party
+IN House District 100 (Independent Party)	1	IN House District 100	Independent Party
+IN Senate District 1 (Independent Party)	1	IN Senate District 1	Independent Party
+IN Senate District 2 (Independent Party)	1	IN Senate District 2	Independent Party
+IN Senate District 3 (Independent Party)	1	IN Senate District 3	Independent Party
+IN Senate District 4 (Independent Party)	1	IN Senate District 4	Independent Party
+IN Senate District 5 (Independent Party)	1	IN Senate District 5	Independent Party
+IN Senate District 6 (Independent Party)	1	IN Senate District 6	Independent Party
+IN Senate District 7 (Independent Party)	1	IN Senate District 7	Independent Party
+IN Senate District 8 (Independent Party)	1	IN Senate District 8	Independent Party
+IN Senate District 9 (Independent Party)	1	IN Senate District 9	Independent Party
+IN Senate District 10 (Independent Party)	1	IN Senate District 10	Independent Party
+IN Senate District 11 (Independent Party)	1	IN Senate District 11	Independent Party
+IN Senate District 12 (Independent Party)	1	IN Senate District 12	Independent Party
+IN Senate District 13 (Independent Party)	1	IN Senate District 13	Independent Party
+IN Senate District 14 (Independent Party)	1	IN Senate District 14	Independent Party
+IN Senate District 15 (Independent Party)	1	IN Senate District 15	Independent Party
+IN Senate District 16 (Independent Party)	1	IN Senate District 16	Independent Party
+IN Senate District 17 (Independent Party)	1	IN Senate District 17	Independent Party
+IN Senate District 18 (Independent Party)	1	IN Senate District 18	Independent Party
+IN Senate District 19 (Independent Party)	1	IN Senate District 19	Independent Party
+IN Senate District 20 (Independent Party)	1	IN Senate District 20	Independent Party
+IN Senate District 21 (Independent Party)	1	IN Senate District 21	Independent Party
+IN Senate District 22 (Independent Party)	1	IN Senate District 22	Independent Party
+IN Senate District 23 (Independent Party)	1	IN Senate District 23	Independent Party
+IN Senate District 24 (Independent Party)	1	IN Senate District 24	Independent Party
+IN Senate District 25 (Independent Party)	1	IN Senate District 25	Independent Party
+IN Senate District 26 (Independent Party)	1	IN Senate District 26	Independent Party
+IN Senate District 27 (Independent Party)	1	IN Senate District 27	Independent Party
+IN Senate District 28 (Independent Party)	1	IN Senate District 28	Independent Party
+IN Senate District 29 (Independent Party)	1	IN Senate District 29	Independent Party
+IN Senate District 30 (Independent Party)	1	IN Senate District 30	Independent Party
+IN Senate District 31 (Independent Party)	1	IN Senate District 31	Independent Party
+IN Senate District 32 (Independent Party)	1	IN Senate District 32	Independent Party
+IN Senate District 33 (Independent Party)	1	IN Senate District 33	Independent Party
+IN Senate District 34 (Independent Party)	1	IN Senate District 34	Independent Party
+IN Senate District 35 (Independent Party)	1	IN Senate District 35	Independent Party
+IN Senate District 36 (Independent Party)	1	IN Senate District 36	Independent Party
+IN Senate District 37 (Independent Party)	1	IN Senate District 37	Independent Party
+IN Senate District 38 (Independent Party)	1	IN Senate District 38	Independent Party
+IN Senate District 39 (Independent Party)	1	IN Senate District 39	Independent Party
+IN Senate District 40 (Independent Party)	1	IN Senate District 40	Independent Party
+IN Senate District 41 (Independent Party)	1	IN Senate District 41	Independent Party
+IN Senate District 42 (Independent Party)	1	IN Senate District 42	Independent Party
+IN Senate District 43 (Independent Party)	1	IN Senate District 43	Independent Party
+IN Senate District 44 (Independent Party)	1	IN Senate District 44	Independent Party
+IN Senate District 45 (Independent Party)	1	IN Senate District 45	Independent Party
+IN Senate District 46 (Independent Party)	1	IN Senate District 46	Independent Party
+IN Senate District 47 (Independent Party)	1	IN Senate District 47	Independent Party
+IN Senate District 48 (Independent Party)	1	IN Senate District 48	Independent Party
+IN Senate District 49 (Independent Party)	1	IN Senate District 49	Independent Party
+IN Senate District 50 (Independent Party)	1	IN Senate District 50	Independent Party
+US House IN District 1 (Independent Party)	1	US House IN District 1	Independent Party
+US House IN District 2 (Independent Party)	1	US House IN District 2	Independent Party
+US House IN District 3 (Independent Party)	1	US House IN District 3	Independent Party
+US House IN District 4 (Independent Party)	1	US House IN District 4	Independent Party
+US House IN District 5 (Independent Party)	1	US House IN District 5	Independent Party
+US House IN District 6 (Independent Party)	1	US House IN District 6	Independent Party
+US House IN District 7 (Independent Party)	1	US House IN District 7	Independent Party
+US House IN District 8 (Independent Party)	1	US House IN District 8	Independent Party
+US House IN District 9 (Independent Party)	1	US House IN District 9	Independent Party
+US President (IN) (Independent Party)	1	US President (IN)	Independent Party
+IN Governor (Independent Party)	1	IN Governor	Independent Party
+US Senate IN (Independent Party)	1	US Senate IN	Independent Party
+IN Attorney General (Independent Party)	1	IN Attorney General	Independent Party
+IN Lieutenant Governor (Independent Party)	1	IN Lieutenant Governor	Independent Party
+IN Treasurer (Independent Party)	1	IN Treasurer	
+IN Superintendent of Public Instruction (Independent Party)	1	IN Superintendent of Public Instruction	Independent Party
+IN Auditor (Independent Party)	1	IN Auditor	Independent Party
+IN Secretary of State (Independent Party)	1	IN Secretary of State	Independent Party
+IN House District 1 (Non Partisan)	1	IN House District 1	Non Partisan
+IN House District 2 (Non Partisan)	1	IN House District 2	Non Partisan
+IN House District 3 (Non Partisan)	1	IN House District 3	Non Partisan
+IN House District 4 (Non Partisan)	1	IN House District 4	Non Partisan
+IN House District 5 (Non Partisan)	1	IN House District 5	Non Partisan
+IN House District 6 (Non Partisan)	1	IN House District 6	Non Partisan
+IN House District 7 (Non Partisan)	1	IN House District 7	Non Partisan
+IN House District 8 (Non Partisan)	1	IN House District 8	Non Partisan
+IN House District 9 (Non Partisan)	1	IN House District 9	Non Partisan
+IN House District 10 (Non Partisan)	1	IN House District 10	Non Partisan
+IN House District 11 (Non Partisan)	1	IN House District 11	Non Partisan
+IN House District 12 (Non Partisan)	1	IN House District 12	Non Partisan
+IN House District 13 (Non Partisan)	1	IN House District 13	Non Partisan
+IN House District 14 (Non Partisan)	1	IN House District 14	Non Partisan
+IN House District 15 (Non Partisan)	1	IN House District 15	Non Partisan
+IN House District 16 (Non Partisan)	1	IN House District 16	Non Partisan
+IN House District 17 (Non Partisan)	1	IN House District 17	Non Partisan
+IN House District 18 (Non Partisan)	1	IN House District 18	Non Partisan
+IN House District 19 (Non Partisan)	1	IN House District 19	Non Partisan
+IN House District 20 (Non Partisan)	1	IN House District 20	Non Partisan
+IN House District 21 (Non Partisan)	1	IN House District 21	Non Partisan
+IN House District 22 (Non Partisan)	1	IN House District 22	Non Partisan
+IN House District 23 (Non Partisan)	1	IN House District 23	Non Partisan
+IN House District 24 (Non Partisan)	1	IN House District 24	Non Partisan
+IN House District 25 (Non Partisan)	1	IN House District 25	Non Partisan
+IN House District 26 (Non Partisan)	1	IN House District 26	Non Partisan
+IN House District 27 (Non Partisan)	1	IN House District 27	Non Partisan
+IN House District 28 (Non Partisan)	1	IN House District 28	Non Partisan
+IN House District 29 (Non Partisan)	1	IN House District 29	Non Partisan
+IN House District 30 (Non Partisan)	1	IN House District 30	Non Partisan
+IN House District 31 (Non Partisan)	1	IN House District 31	Non Partisan
+IN House District 32 (Non Partisan)	1	IN House District 32	Non Partisan
+IN House District 33 (Non Partisan)	1	IN House District 33	Non Partisan
+IN House District 34 (Non Partisan)	1	IN House District 34	Non Partisan
+IN House District 35 (Non Partisan)	1	IN House District 35	Non Partisan
+IN House District 36 (Non Partisan)	1	IN House District 36	Non Partisan
+IN House District 37 (Non Partisan)	1	IN House District 37	Non Partisan
+IN House District 38 (Non Partisan)	1	IN House District 38	Non Partisan
+IN House District 39 (Non Partisan)	1	IN House District 39	Non Partisan
+IN House District 40 (Non Partisan)	1	IN House District 40	Non Partisan
+IN House District 41 (Non Partisan)	1	IN House District 41	Non Partisan
+IN House District 42 (Non Partisan)	1	IN House District 42	Non Partisan
+IN House District 43 (Non Partisan)	1	IN House District 43	Non Partisan
+IN House District 44 (Non Partisan)	1	IN House District 44	Non Partisan
+IN House District 45 (Non Partisan)	1	IN House District 45	Non Partisan
+IN House District 46 (Non Partisan)	1	IN House District 46	Non Partisan
+IN House District 47 (Non Partisan)	1	IN House District 47	Non Partisan
+IN House District 48 (Non Partisan)	1	IN House District 48	Non Partisan
+IN House District 49 (Non Partisan)	1	IN House District 49	Non Partisan
+IN House District 50 (Non Partisan)	1	IN House District 50	Non Partisan
+IN House District 51 (Non Partisan)	1	IN House District 51	Non Partisan
+IN House District 52 (Non Partisan)	1	IN House District 52	Non Partisan
+IN House District 53 (Non Partisan)	1	IN House District 53	Non Partisan
+IN House District 54 (Non Partisan)	1	IN House District 54	Non Partisan
+IN House District 55 (Non Partisan)	1	IN House District 55	Non Partisan
+IN House District 56 (Non Partisan)	1	IN House District 56	Non Partisan
+IN House District 57 (Non Partisan)	1	IN House District 57	Non Partisan
+IN House District 58 (Non Partisan)	1	IN House District 58	Non Partisan
+IN House District 59 (Non Partisan)	1	IN House District 59	Non Partisan
+IN House District 60 (Non Partisan)	1	IN House District 60	Non Partisan
+IN House District 61 (Non Partisan)	1	IN House District 61	Non Partisan
+IN House District 62 (Non Partisan)	1	IN House District 62	Non Partisan
+IN House District 63 (Non Partisan)	1	IN House District 63	Non Partisan
+IN House District 64 (Non Partisan)	1	IN House District 64	Non Partisan
+IN House District 65 (Non Partisan)	1	IN House District 65	Non Partisan
+IN House District 66 (Non Partisan)	1	IN House District 66	Non Partisan
+IN House District 67 (Non Partisan)	1	IN House District 67	Non Partisan
+IN House District 68 (Non Partisan)	1	IN House District 68	Non Partisan
+IN House District 69 (Non Partisan)	1	IN House District 69	Non Partisan
+IN House District 70 (Non Partisan)	1	IN House District 70	Non Partisan
+IN House District 71 (Non Partisan)	1	IN House District 71	Non Partisan
+IN House District 72 (Non Partisan)	1	IN House District 72	Non Partisan
+IN House District 73 (Non Partisan)	1	IN House District 73	Non Partisan
+IN House District 74 (Non Partisan)	1	IN House District 74	Non Partisan
+IN House District 75 (Non Partisan)	1	IN House District 75	Non Partisan
+IN House District 76 (Non Partisan)	1	IN House District 76	Non Partisan
+IN House District 77 (Non Partisan)	1	IN House District 77	Non Partisan
+IN House District 78 (Non Partisan)	1	IN House District 78	Non Partisan
+IN House District 79 (Non Partisan)	1	IN House District 79	Non Partisan
+IN House District 80 (Non Partisan)	1	IN House District 80	Non Partisan
+IN House District 81 (Non Partisan)	1	IN House District 81	Non Partisan
+IN House District 82 (Non Partisan)	1	IN House District 82	Non Partisan
+IN House District 83 (Non Partisan)	1	IN House District 83	Non Partisan
+IN House District 84 (Non Partisan)	1	IN House District 84	Non Partisan
+IN House District 85 (Non Partisan)	1	IN House District 85	Non Partisan
+IN House District 86 (Non Partisan)	1	IN House District 86	Non Partisan
+IN House District 87 (Non Partisan)	1	IN House District 87	Non Partisan
+IN House District 88 (Non Partisan)	1	IN House District 88	Non Partisan
+IN House District 89 (Non Partisan)	1	IN House District 89	Non Partisan
+IN House District 90 (Non Partisan)	1	IN House District 90	Non Partisan
+IN House District 91 (Non Partisan)	1	IN House District 91	Non Partisan
+IN House District 92 (Non Partisan)	1	IN House District 92	Non Partisan
+IN House District 93 (Non Partisan)	1	IN House District 93	Non Partisan
+IN House District 94 (Non Partisan)	1	IN House District 94	Non Partisan
+IN House District 95 (Non Partisan)	1	IN House District 95	Non Partisan
+IN House District 96 (Non Partisan)	1	IN House District 96	Non Partisan
+IN House District 97 (Non Partisan)	1	IN House District 97	Non Partisan
+IN House District 98 (Non Partisan)	1	IN House District 98	Non Partisan
+IN House District 99 (Non Partisan)	1	IN House District 99	Non Partisan
+IN House District 100 (Non Partisan)	1	IN House District 100	Non Partisan
+IN Senate District 1 (Non Partisan)	1	IN Senate District 1	Non Partisan
+IN Senate District 2 (Non Partisan)	1	IN Senate District 2	Non Partisan
+IN Senate District 3 (Non Partisan)	1	IN Senate District 3	Non Partisan
+IN Senate District 4 (Non Partisan)	1	IN Senate District 4	Non Partisan
+IN Senate District 5 (Non Partisan)	1	IN Senate District 5	Non Partisan
+IN Senate District 6 (Non Partisan)	1	IN Senate District 6	Non Partisan
+IN Senate District 7 (Non Partisan)	1	IN Senate District 7	Non Partisan
+IN Senate District 8 (Non Partisan)	1	IN Senate District 8	Non Partisan
+IN Senate District 9 (Non Partisan)	1	IN Senate District 9	Non Partisan
+IN Senate District 10 (Non Partisan)	1	IN Senate District 10	Non Partisan
+IN Senate District 11 (Non Partisan)	1	IN Senate District 11	Non Partisan
+IN Senate District 12 (Non Partisan)	1	IN Senate District 12	Non Partisan
+IN Senate District 13 (Non Partisan)	1	IN Senate District 13	Non Partisan
+IN Senate District 14 (Non Partisan)	1	IN Senate District 14	Non Partisan
+IN Senate District 15 (Non Partisan)	1	IN Senate District 15	Non Partisan
+IN Senate District 16 (Non Partisan)	1	IN Senate District 16	Non Partisan
+IN Senate District 17 (Non Partisan)	1	IN Senate District 17	Non Partisan
+IN Senate District 18 (Non Partisan)	1	IN Senate District 18	Non Partisan
+IN Senate District 19 (Non Partisan)	1	IN Senate District 19	Non Partisan
+IN Senate District 20 (Non Partisan)	1	IN Senate District 20	Non Partisan
+IN Senate District 21 (Non Partisan)	1	IN Senate District 21	Non Partisan
+IN Senate District 22 (Non Partisan)	1	IN Senate District 22	Non Partisan
+IN Senate District 23 (Non Partisan)	1	IN Senate District 23	Non Partisan
+IN Senate District 24 (Non Partisan)	1	IN Senate District 24	Non Partisan
+IN Senate District 25 (Non Partisan)	1	IN Senate District 25	Non Partisan
+IN Senate District 26 (Non Partisan)	1	IN Senate District 26	Non Partisan
+IN Senate District 27 (Non Partisan)	1	IN Senate District 27	Non Partisan
+IN Senate District 28 (Non Partisan)	1	IN Senate District 28	Non Partisan
+IN Senate District 29 (Non Partisan)	1	IN Senate District 29	Non Partisan
+IN Senate District 30 (Non Partisan)	1	IN Senate District 30	Non Partisan
+IN Senate District 31 (Non Partisan)	1	IN Senate District 31	Non Partisan
+IN Senate District 32 (Non Partisan)	1	IN Senate District 32	Non Partisan
+IN Senate District 33 (Non Partisan)	1	IN Senate District 33	Non Partisan
+IN Senate District 34 (Non Partisan)	1	IN Senate District 34	Non Partisan
+IN Senate District 35 (Non Partisan)	1	IN Senate District 35	Non Partisan
+IN Senate District 36 (Non Partisan)	1	IN Senate District 36	Non Partisan
+IN Senate District 37 (Non Partisan)	1	IN Senate District 37	Non Partisan
+IN Senate District 38 (Non Partisan)	1	IN Senate District 38	Non Partisan
+IN Senate District 39 (Non Partisan)	1	IN Senate District 39	Non Partisan
+IN Senate District 40 (Non Partisan)	1	IN Senate District 40	Non Partisan
+IN Senate District 41 (Non Partisan)	1	IN Senate District 41	Non Partisan
+IN Senate District 42 (Non Partisan)	1	IN Senate District 42	Non Partisan
+IN Senate District 43 (Non Partisan)	1	IN Senate District 43	Non Partisan
+IN Senate District 44 (Non Partisan)	1	IN Senate District 44	Non Partisan
+IN Senate District 45 (Non Partisan)	1	IN Senate District 45	Non Partisan
+IN Senate District 46 (Non Partisan)	1	IN Senate District 46	Non Partisan
+IN Senate District 47 (Non Partisan)	1	IN Senate District 47	Non Partisan
+IN Senate District 48 (Non Partisan)	1	IN Senate District 48	Non Partisan
+IN Senate District 49 (Non Partisan)	1	IN Senate District 49	Non Partisan
+IN Senate District 50 (Non Partisan)	1	IN Senate District 50	Non Partisan
+US House IN District 1 (Non Partisan)	1	US House IN District 1	Non Partisan
+US House IN District 2 (Non Partisan)	1	US House IN District 2	Non Partisan
+US House IN District 3 (Non Partisan)	1	US House IN District 3	Non Partisan
+US House IN District 4 (Non Partisan)	1	US House IN District 4	Non Partisan
+US House IN District 5 (Non Partisan)	1	US House IN District 5	Non Partisan
+US House IN District 6 (Non Partisan)	1	US House IN District 6	Non Partisan
+US House IN District 7 (Non Partisan)	1	US House IN District 7	Non Partisan
+US House IN District 8 (Non Partisan)	1	US House IN District 8	Non Partisan
+US House IN District 9 (Non Partisan)	1	US House IN District 9	Non Partisan
+US President (IN) (Non Partisan)	1	US President (IN)	Non Partisan
+IN Governor (Non Partisan)	1	IN Governor	Non Partisan
+US Senate IN (Non Partisan)	1	US Senate IN	Non Partisan
+IN Attorney General (Non Partisan)	1	IN Attorney General	Non Partisan
+IN Lieutenant Governor (Non Partisan)	1	IN Lieutenant Governor	Non Partisan
+IN Treasurer (Non Partisan)	1	IN Treasurer	
+IN Superintendent of Public Instruction (Non Partisan)	1	IN Superintendent of Public Instruction	Non Partisan
+IN Auditor (Non Partisan)	1	IN Auditor	Non Partisan
+IN Secretary of State (Non Partisan)	1	IN Secretary of State	Non Partisan
+IN House District 1 (Other Party)	1	IN House District 1	Other Party
+IN House District 2 (Other Party)	1	IN House District 2	Other Party
+IN House District 3 (Other Party)	1	IN House District 3	Other Party
+IN House District 4 (Other Party)	1	IN House District 4	Other Party
+IN House District 5 (Other Party)	1	IN House District 5	Other Party
+IN House District 6 (Other Party)	1	IN House District 6	Other Party
+IN House District 7 (Other Party)	1	IN House District 7	Other Party
+IN House District 8 (Other Party)	1	IN House District 8	Other Party
+IN House District 9 (Other Party)	1	IN House District 9	Other Party
+IN House District 10 (Other Party)	1	IN House District 10	Other Party
+IN House District 11 (Other Party)	1	IN House District 11	Other Party
+IN House District 12 (Other Party)	1	IN House District 12	Other Party
+IN House District 13 (Other Party)	1	IN House District 13	Other Party
+IN House District 14 (Other Party)	1	IN House District 14	Other Party
+IN House District 15 (Other Party)	1	IN House District 15	Other Party
+IN House District 16 (Other Party)	1	IN House District 16	Other Party
+IN House District 17 (Other Party)	1	IN House District 17	Other Party
+IN House District 18 (Other Party)	1	IN House District 18	Other Party
+IN House District 19 (Other Party)	1	IN House District 19	Other Party
+IN House District 20 (Other Party)	1	IN House District 20	Other Party
+IN House District 21 (Other Party)	1	IN House District 21	Other Party
+IN House District 22 (Other Party)	1	IN House District 22	Other Party
+IN House District 23 (Other Party)	1	IN House District 23	Other Party
+IN House District 24 (Other Party)	1	IN House District 24	Other Party
+IN House District 25 (Other Party)	1	IN House District 25	Other Party
+IN House District 26 (Other Party)	1	IN House District 26	Other Party
+IN House District 27 (Other Party)	1	IN House District 27	Other Party
+IN House District 28 (Other Party)	1	IN House District 28	Other Party
+IN House District 29 (Other Party)	1	IN House District 29	Other Party
+IN House District 30 (Other Party)	1	IN House District 30	Other Party
+IN House District 31 (Other Party)	1	IN House District 31	Other Party
+IN House District 32 (Other Party)	1	IN House District 32	Other Party
+IN House District 33 (Other Party)	1	IN House District 33	Other Party
+IN House District 34 (Other Party)	1	IN House District 34	Other Party
+IN House District 35 (Other Party)	1	IN House District 35	Other Party
+IN House District 36 (Other Party)	1	IN House District 36	Other Party
+IN House District 37 (Other Party)	1	IN House District 37	Other Party
+IN House District 38 (Other Party)	1	IN House District 38	Other Party
+IN House District 39 (Other Party)	1	IN House District 39	Other Party
+IN House District 40 (Other Party)	1	IN House District 40	Other Party
+IN House District 41 (Other Party)	1	IN House District 41	Other Party
+IN House District 42 (Other Party)	1	IN House District 42	Other Party
+IN House District 43 (Other Party)	1	IN House District 43	Other Party
+IN House District 44 (Other Party)	1	IN House District 44	Other Party
+IN House District 45 (Other Party)	1	IN House District 45	Other Party
+IN House District 46 (Other Party)	1	IN House District 46	Other Party
+IN House District 47 (Other Party)	1	IN House District 47	Other Party
+IN House District 48 (Other Party)	1	IN House District 48	Other Party
+IN House District 49 (Other Party)	1	IN House District 49	Other Party
+IN House District 50 (Other Party)	1	IN House District 50	Other Party
+IN House District 51 (Other Party)	1	IN House District 51	Other Party
+IN House District 52 (Other Party)	1	IN House District 52	Other Party
+IN House District 53 (Other Party)	1	IN House District 53	Other Party
+IN House District 54 (Other Party)	1	IN House District 54	Other Party
+IN House District 55 (Other Party)	1	IN House District 55	Other Party
+IN House District 56 (Other Party)	1	IN House District 56	Other Party
+IN House District 57 (Other Party)	1	IN House District 57	Other Party
+IN House District 58 (Other Party)	1	IN House District 58	Other Party
+IN House District 59 (Other Party)	1	IN House District 59	Other Party
+IN House District 60 (Other Party)	1	IN House District 60	Other Party
+IN House District 61 (Other Party)	1	IN House District 61	Other Party
+IN House District 62 (Other Party)	1	IN House District 62	Other Party
+IN House District 63 (Other Party)	1	IN House District 63	Other Party
+IN House District 64 (Other Party)	1	IN House District 64	Other Party
+IN House District 65 (Other Party)	1	IN House District 65	Other Party
+IN House District 66 (Other Party)	1	IN House District 66	Other Party
+IN House District 67 (Other Party)	1	IN House District 67	Other Party
+IN House District 68 (Other Party)	1	IN House District 68	Other Party
+IN House District 69 (Other Party)	1	IN House District 69	Other Party
+IN House District 70 (Other Party)	1	IN House District 70	Other Party
+IN House District 71 (Other Party)	1	IN House District 71	Other Party
+IN House District 72 (Other Party)	1	IN House District 72	Other Party
+IN House District 73 (Other Party)	1	IN House District 73	Other Party
+IN House District 74 (Other Party)	1	IN House District 74	Other Party
+IN House District 75 (Other Party)	1	IN House District 75	Other Party
+IN House District 76 (Other Party)	1	IN House District 76	Other Party
+IN House District 77 (Other Party)	1	IN House District 77	Other Party
+IN House District 78 (Other Party)	1	IN House District 78	Other Party
+IN House District 79 (Other Party)	1	IN House District 79	Other Party
+IN House District 80 (Other Party)	1	IN House District 80	Other Party
+IN House District 81 (Other Party)	1	IN House District 81	Other Party
+IN House District 82 (Other Party)	1	IN House District 82	Other Party
+IN House District 83 (Other Party)	1	IN House District 83	Other Party
+IN House District 84 (Other Party)	1	IN House District 84	Other Party
+IN House District 85 (Other Party)	1	IN House District 85	Other Party
+IN House District 86 (Other Party)	1	IN House District 86	Other Party
+IN House District 87 (Other Party)	1	IN House District 87	Other Party
+IN House District 88 (Other Party)	1	IN House District 88	Other Party
+IN House District 89 (Other Party)	1	IN House District 89	Other Party
+IN House District 90 (Other Party)	1	IN House District 90	Other Party
+IN House District 91 (Other Party)	1	IN House District 91	Other Party
+IN House District 92 (Other Party)	1	IN House District 92	Other Party
+IN House District 93 (Other Party)	1	IN House District 93	Other Party
+IN House District 94 (Other Party)	1	IN House District 94	Other Party
+IN House District 95 (Other Party)	1	IN House District 95	Other Party
+IN House District 96 (Other Party)	1	IN House District 96	Other Party
+IN House District 97 (Other Party)	1	IN House District 97	Other Party
+IN House District 98 (Other Party)	1	IN House District 98	Other Party
+IN House District 99 (Other Party)	1	IN House District 99	Other Party
+IN House District 100 (Other Party)	1	IN House District 100	Other Party
+IN Senate District 1 (Other Party)	1	IN Senate District 1	Other Party
+IN Senate District 2 (Other Party)	1	IN Senate District 2	Other Party
+IN Senate District 3 (Other Party)	1	IN Senate District 3	Other Party
+IN Senate District 4 (Other Party)	1	IN Senate District 4	Other Party
+IN Senate District 5 (Other Party)	1	IN Senate District 5	Other Party
+IN Senate District 6 (Other Party)	1	IN Senate District 6	Other Party
+IN Senate District 7 (Other Party)	1	IN Senate District 7	Other Party
+IN Senate District 8 (Other Party)	1	IN Senate District 8	Other Party
+IN Senate District 9 (Other Party)	1	IN Senate District 9	Other Party
+IN Senate District 10 (Other Party)	1	IN Senate District 10	Other Party
+IN Senate District 11 (Other Party)	1	IN Senate District 11	Other Party
+IN Senate District 12 (Other Party)	1	IN Senate District 12	Other Party
+IN Senate District 13 (Other Party)	1	IN Senate District 13	Other Party
+IN Senate District 14 (Other Party)	1	IN Senate District 14	Other Party
+IN Senate District 15 (Other Party)	1	IN Senate District 15	Other Party
+IN Senate District 16 (Other Party)	1	IN Senate District 16	Other Party
+IN Senate District 17 (Other Party)	1	IN Senate District 17	Other Party
+IN Senate District 18 (Other Party)	1	IN Senate District 18	Other Party
+IN Senate District 19 (Other Party)	1	IN Senate District 19	Other Party
+IN Senate District 20 (Other Party)	1	IN Senate District 20	Other Party
+IN Senate District 21 (Other Party)	1	IN Senate District 21	Other Party
+IN Senate District 22 (Other Party)	1	IN Senate District 22	Other Party
+IN Senate District 23 (Other Party)	1	IN Senate District 23	Other Party
+IN Senate District 24 (Other Party)	1	IN Senate District 24	Other Party
+IN Senate District 25 (Other Party)	1	IN Senate District 25	Other Party
+IN Senate District 26 (Other Party)	1	IN Senate District 26	Other Party
+IN Senate District 27 (Other Party)	1	IN Senate District 27	Other Party
+IN Senate District 28 (Other Party)	1	IN Senate District 28	Other Party
+IN Senate District 29 (Other Party)	1	IN Senate District 29	Other Party
+IN Senate District 30 (Other Party)	1	IN Senate District 30	Other Party
+IN Senate District 31 (Other Party)	1	IN Senate District 31	Other Party
+IN Senate District 32 (Other Party)	1	IN Senate District 32	Other Party
+IN Senate District 33 (Other Party)	1	IN Senate District 33	Other Party
+IN Senate District 34 (Other Party)	1	IN Senate District 34	Other Party
+IN Senate District 35 (Other Party)	1	IN Senate District 35	Other Party
+IN Senate District 36 (Other Party)	1	IN Senate District 36	Other Party
+IN Senate District 37 (Other Party)	1	IN Senate District 37	Other Party
+IN Senate District 38 (Other Party)	1	IN Senate District 38	Other Party
+IN Senate District 39 (Other Party)	1	IN Senate District 39	Other Party
+IN Senate District 40 (Other Party)	1	IN Senate District 40	Other Party
+IN Senate District 41 (Other Party)	1	IN Senate District 41	Other Party
+IN Senate District 42 (Other Party)	1	IN Senate District 42	Other Party
+IN Senate District 43 (Other Party)	1	IN Senate District 43	Other Party
+IN Senate District 44 (Other Party)	1	IN Senate District 44	Other Party
+IN Senate District 45 (Other Party)	1	IN Senate District 45	Other Party
+IN Senate District 46 (Other Party)	1	IN Senate District 46	Other Party
+IN Senate District 47 (Other Party)	1	IN Senate District 47	Other Party
+IN Senate District 48 (Other Party)	1	IN Senate District 48	Other Party
+IN Senate District 49 (Other Party)	1	IN Senate District 49	Other Party
+IN Senate District 50 (Other Party)	1	IN Senate District 50	Other Party
+US House IN District 1 (Other Party)	1	US House IN District 1	Other Party
+US House IN District 2 (Other Party)	1	US House IN District 2	Other Party
+US House IN District 3 (Other Party)	1	US House IN District 3	Other Party
+US House IN District 4 (Other Party)	1	US House IN District 4	Other Party
+US House IN District 5 (Other Party)	1	US House IN District 5	Other Party
+US House IN District 6 (Other Party)	1	US House IN District 6	Other Party
+US House IN District 7 (Other Party)	1	US House IN District 7	Other Party
+US House IN District 8 (Other Party)	1	US House IN District 8	Other Party
+US House IN District 9 (Other Party)	1	US House IN District 9	Other Party
+US President (IN) (Other Party)	1	US President (IN)	Other Party
+IN Governor (Other Party)	1	IN Governor	Other Party
+US Senate IN (Other Party)	1	US Senate IN	Other Party
+IN Attorney General (Other Party)	1	IN Attorney General	Other Party
+IN Lieutenant Governor (Other Party)	1	IN Lieutenant Governor	Other Party
+IN Treasurer (Other Party)	1	IN Treasurer	
+IN Superintendent of Public Instruction (Other Party)	1	IN Superintendent of Public Instruction	Other Party
+IN Auditor (Other Party)	1	IN Auditor	Other Party
+IN Secretary of State (Other Party)	1	IN Secretary of State	Other Party
+IN House District 1 (Socialist Party)	1	IN House District 1	Socialist Party
+IN House District 2 (Socialist Party)	1	IN House District 2	Socialist Party
+IN House District 3 (Socialist Party)	1	IN House District 3	Socialist Party
+IN House District 4 (Socialist Party)	1	IN House District 4	Socialist Party
+IN House District 5 (Socialist Party)	1	IN House District 5	Socialist Party
+IN House District 6 (Socialist Party)	1	IN House District 6	Socialist Party
+IN House District 7 (Socialist Party)	1	IN House District 7	Socialist Party
+IN House District 8 (Socialist Party)	1	IN House District 8	Socialist Party
+IN House District 9 (Socialist Party)	1	IN House District 9	Socialist Party
+IN House District 10 (Socialist Party)	1	IN House District 10	Socialist Party
+IN House District 11 (Socialist Party)	1	IN House District 11	Socialist Party
+IN House District 12 (Socialist Party)	1	IN House District 12	Socialist Party
+IN House District 13 (Socialist Party)	1	IN House District 13	Socialist Party
+IN House District 14 (Socialist Party)	1	IN House District 14	Socialist Party
+IN House District 15 (Socialist Party)	1	IN House District 15	Socialist Party
+IN House District 16 (Socialist Party)	1	IN House District 16	Socialist Party
+IN House District 17 (Socialist Party)	1	IN House District 17	Socialist Party
+IN House District 18 (Socialist Party)	1	IN House District 18	Socialist Party
+IN House District 19 (Socialist Party)	1	IN House District 19	Socialist Party
+IN House District 20 (Socialist Party)	1	IN House District 20	Socialist Party
+IN House District 21 (Socialist Party)	1	IN House District 21	Socialist Party
+IN House District 22 (Socialist Party)	1	IN House District 22	Socialist Party
+IN House District 23 (Socialist Party)	1	IN House District 23	Socialist Party
+IN House District 24 (Socialist Party)	1	IN House District 24	Socialist Party
+IN House District 25 (Socialist Party)	1	IN House District 25	Socialist Party
+IN House District 26 (Socialist Party)	1	IN House District 26	Socialist Party
+IN House District 27 (Socialist Party)	1	IN House District 27	Socialist Party
+IN House District 28 (Socialist Party)	1	IN House District 28	Socialist Party
+IN House District 29 (Socialist Party)	1	IN House District 29	Socialist Party
+IN House District 30 (Socialist Party)	1	IN House District 30	Socialist Party
+IN House District 31 (Socialist Party)	1	IN House District 31	Socialist Party
+IN House District 32 (Socialist Party)	1	IN House District 32	Socialist Party
+IN House District 33 (Socialist Party)	1	IN House District 33	Socialist Party
+IN House District 34 (Socialist Party)	1	IN House District 34	Socialist Party
+IN House District 35 (Socialist Party)	1	IN House District 35	Socialist Party
+IN House District 36 (Socialist Party)	1	IN House District 36	Socialist Party
+IN House District 37 (Socialist Party)	1	IN House District 37	Socialist Party
+IN House District 38 (Socialist Party)	1	IN House District 38	Socialist Party
+IN House District 39 (Socialist Party)	1	IN House District 39	Socialist Party
+IN House District 40 (Socialist Party)	1	IN House District 40	Socialist Party
+IN House District 41 (Socialist Party)	1	IN House District 41	Socialist Party
+IN House District 42 (Socialist Party)	1	IN House District 42	Socialist Party
+IN House District 43 (Socialist Party)	1	IN House District 43	Socialist Party
+IN House District 44 (Socialist Party)	1	IN House District 44	Socialist Party
+IN House District 45 (Socialist Party)	1	IN House District 45	Socialist Party
+IN House District 46 (Socialist Party)	1	IN House District 46	Socialist Party
+IN House District 47 (Socialist Party)	1	IN House District 47	Socialist Party
+IN House District 48 (Socialist Party)	1	IN House District 48	Socialist Party
+IN House District 49 (Socialist Party)	1	IN House District 49	Socialist Party
+IN House District 50 (Socialist Party)	1	IN House District 50	Socialist Party
+IN House District 51 (Socialist Party)	1	IN House District 51	Socialist Party
+IN House District 52 (Socialist Party)	1	IN House District 52	Socialist Party
+IN House District 53 (Socialist Party)	1	IN House District 53	Socialist Party
+IN House District 54 (Socialist Party)	1	IN House District 54	Socialist Party
+IN House District 55 (Socialist Party)	1	IN House District 55	Socialist Party
+IN House District 56 (Socialist Party)	1	IN House District 56	Socialist Party
+IN House District 57 (Socialist Party)	1	IN House District 57	Socialist Party
+IN House District 58 (Socialist Party)	1	IN House District 58	Socialist Party
+IN House District 59 (Socialist Party)	1	IN House District 59	Socialist Party
+IN House District 60 (Socialist Party)	1	IN House District 60	Socialist Party
+IN House District 61 (Socialist Party)	1	IN House District 61	Socialist Party
+IN House District 62 (Socialist Party)	1	IN House District 62	Socialist Party
+IN House District 63 (Socialist Party)	1	IN House District 63	Socialist Party
+IN House District 64 (Socialist Party)	1	IN House District 64	Socialist Party
+IN House District 65 (Socialist Party)	1	IN House District 65	Socialist Party
+IN House District 66 (Socialist Party)	1	IN House District 66	Socialist Party
+IN House District 67 (Socialist Party)	1	IN House District 67	Socialist Party
+IN House District 68 (Socialist Party)	1	IN House District 68	Socialist Party
+IN House District 69 (Socialist Party)	1	IN House District 69	Socialist Party
+IN House District 70 (Socialist Party)	1	IN House District 70	Socialist Party
+IN House District 71 (Socialist Party)	1	IN House District 71	Socialist Party
+IN House District 72 (Socialist Party)	1	IN House District 72	Socialist Party
+IN House District 73 (Socialist Party)	1	IN House District 73	Socialist Party
+IN House District 74 (Socialist Party)	1	IN House District 74	Socialist Party
+IN House District 75 (Socialist Party)	1	IN House District 75	Socialist Party
+IN House District 76 (Socialist Party)	1	IN House District 76	Socialist Party
+IN House District 77 (Socialist Party)	1	IN House District 77	Socialist Party
+IN House District 78 (Socialist Party)	1	IN House District 78	Socialist Party
+IN House District 79 (Socialist Party)	1	IN House District 79	Socialist Party
+IN House District 80 (Socialist Party)	1	IN House District 80	Socialist Party
+IN House District 81 (Socialist Party)	1	IN House District 81	Socialist Party
+IN House District 82 (Socialist Party)	1	IN House District 82	Socialist Party
+IN House District 83 (Socialist Party)	1	IN House District 83	Socialist Party
+IN House District 84 (Socialist Party)	1	IN House District 84	Socialist Party
+IN House District 85 (Socialist Party)	1	IN House District 85	Socialist Party
+IN House District 86 (Socialist Party)	1	IN House District 86	Socialist Party
+IN House District 87 (Socialist Party)	1	IN House District 87	Socialist Party
+IN House District 88 (Socialist Party)	1	IN House District 88	Socialist Party
+IN House District 89 (Socialist Party)	1	IN House District 89	Socialist Party
+IN House District 90 (Socialist Party)	1	IN House District 90	Socialist Party
+IN House District 91 (Socialist Party)	1	IN House District 91	Socialist Party
+IN House District 92 (Socialist Party)	1	IN House District 92	Socialist Party
+IN House District 93 (Socialist Party)	1	IN House District 93	Socialist Party
+IN House District 94 (Socialist Party)	1	IN House District 94	Socialist Party
+IN House District 95 (Socialist Party)	1	IN House District 95	Socialist Party
+IN House District 96 (Socialist Party)	1	IN House District 96	Socialist Party
+IN House District 97 (Socialist Party)	1	IN House District 97	Socialist Party
+IN House District 98 (Socialist Party)	1	IN House District 98	Socialist Party
+IN House District 99 (Socialist Party)	1	IN House District 99	Socialist Party
+IN House District 100 (Socialist Party)	1	IN House District 100	Socialist Party
+IN Senate District 1 (Socialist Party)	1	IN Senate District 1	Socialist Party
+IN Senate District 2 (Socialist Party)	1	IN Senate District 2	Socialist Party
+IN Senate District 3 (Socialist Party)	1	IN Senate District 3	Socialist Party
+IN Senate District 4 (Socialist Party)	1	IN Senate District 4	Socialist Party
+IN Senate District 5 (Socialist Party)	1	IN Senate District 5	Socialist Party
+IN Senate District 6 (Socialist Party)	1	IN Senate District 6	Socialist Party
+IN Senate District 7 (Socialist Party)	1	IN Senate District 7	Socialist Party
+IN Senate District 8 (Socialist Party)	1	IN Senate District 8	Socialist Party
+IN Senate District 9 (Socialist Party)	1	IN Senate District 9	Socialist Party
+IN Senate District 10 (Socialist Party)	1	IN Senate District 10	Socialist Party
+IN Senate District 11 (Socialist Party)	1	IN Senate District 11	Socialist Party
+IN Senate District 12 (Socialist Party)	1	IN Senate District 12	Socialist Party
+IN Senate District 13 (Socialist Party)	1	IN Senate District 13	Socialist Party
+IN Senate District 14 (Socialist Party)	1	IN Senate District 14	Socialist Party
+IN Senate District 15 (Socialist Party)	1	IN Senate District 15	Socialist Party
+IN Senate District 16 (Socialist Party)	1	IN Senate District 16	Socialist Party
+IN Senate District 17 (Socialist Party)	1	IN Senate District 17	Socialist Party
+IN Senate District 18 (Socialist Party)	1	IN Senate District 18	Socialist Party
+IN Senate District 19 (Socialist Party)	1	IN Senate District 19	Socialist Party
+IN Senate District 20 (Socialist Party)	1	IN Senate District 20	Socialist Party
+IN Senate District 21 (Socialist Party)	1	IN Senate District 21	Socialist Party
+IN Senate District 22 (Socialist Party)	1	IN Senate District 22	Socialist Party
+IN Senate District 23 (Socialist Party)	1	IN Senate District 23	Socialist Party
+IN Senate District 24 (Socialist Party)	1	IN Senate District 24	Socialist Party
+IN Senate District 25 (Socialist Party)	1	IN Senate District 25	Socialist Party
+IN Senate District 26 (Socialist Party)	1	IN Senate District 26	Socialist Party
+IN Senate District 27 (Socialist Party)	1	IN Senate District 27	Socialist Party
+IN Senate District 28 (Socialist Party)	1	IN Senate District 28	Socialist Party
+IN Senate District 29 (Socialist Party)	1	IN Senate District 29	Socialist Party
+IN Senate District 30 (Socialist Party)	1	IN Senate District 30	Socialist Party
+IN Senate District 31 (Socialist Party)	1	IN Senate District 31	Socialist Party
+IN Senate District 32 (Socialist Party)	1	IN Senate District 32	Socialist Party
+IN Senate District 33 (Socialist Party)	1	IN Senate District 33	Socialist Party
+IN Senate District 34 (Socialist Party)	1	IN Senate District 34	Socialist Party
+IN Senate District 35 (Socialist Party)	1	IN Senate District 35	Socialist Party
+IN Senate District 36 (Socialist Party)	1	IN Senate District 36	Socialist Party
+IN Senate District 37 (Socialist Party)	1	IN Senate District 37	Socialist Party
+IN Senate District 38 (Socialist Party)	1	IN Senate District 38	Socialist Party
+IN Senate District 39 (Socialist Party)	1	IN Senate District 39	Socialist Party
+IN Senate District 40 (Socialist Party)	1	IN Senate District 40	Socialist Party
+IN Senate District 41 (Socialist Party)	1	IN Senate District 41	Socialist Party
+IN Senate District 42 (Socialist Party)	1	IN Senate District 42	Socialist Party
+IN Senate District 43 (Socialist Party)	1	IN Senate District 43	Socialist Party
+IN Senate District 44 (Socialist Party)	1	IN Senate District 44	Socialist Party
+IN Senate District 45 (Socialist Party)	1	IN Senate District 45	Socialist Party
+IN Senate District 46 (Socialist Party)	1	IN Senate District 46	Socialist Party
+IN Senate District 47 (Socialist Party)	1	IN Senate District 47	Socialist Party
+IN Senate District 48 (Socialist Party)	1	IN Senate District 48	Socialist Party
+IN Senate District 49 (Socialist Party)	1	IN Senate District 49	Socialist Party
+IN Senate District 50 (Socialist Party)	1	IN Senate District 50	Socialist Party
+US House IN District 1 (Socialist Party)	1	US House IN District 1	Socialist Party
+US House IN District 2 (Socialist Party)	1	US House IN District 2	Socialist Party
+US House IN District 3 (Socialist Party)	1	US House IN District 3	Socialist Party
+US House IN District 4 (Socialist Party)	1	US House IN District 4	Socialist Party
+US House IN District 5 (Socialist Party)	1	US House IN District 5	Socialist Party
+US House IN District 6 (Socialist Party)	1	US House IN District 6	Socialist Party
+US House IN District 7 (Socialist Party)	1	US House IN District 7	Socialist Party
+US House IN District 8 (Socialist Party)	1	US House IN District 8	Socialist Party
+US House IN District 9 (Socialist Party)	1	US House IN District 9	Socialist Party
+US President (IN) (Socialist Party)	1	US President (IN)	Socialist Party
+IN Governor (Socialist Party)	1	IN Governor	Socialist Party
+US Senate IN (Socialist Party)	1	US Senate IN	Socialist Party
+IN Attorney General (Socialist Party)	1	IN Attorney General	Socialist Party
+IN Lieutenant Governor (Socialist Party)	1	IN Lieutenant Governor	Socialist Party
+IN Treasurer (Socialist Party)	1	IN Treasurer	
+IN Superintendent of Public Instruction (Socialist Party)	1	IN Superintendent of Public Instruction	Socialist Party
+IN Auditor (Socialist Party)	1	IN Auditor	Socialist Party
+IN Secretary of State (Socialist Party)	1	IN Secretary of State	Socialist Party
+IN House District 1 (Workers Party)	1	IN House District 1	Workers Party
+IN House District 2 (Workers Party)	1	IN House District 2	Workers Party
+IN House District 3 (Workers Party)	1	IN House District 3	Workers Party
+IN House District 4 (Workers Party)	1	IN House District 4	Workers Party
+IN House District 5 (Workers Party)	1	IN House District 5	Workers Party
+IN House District 6 (Workers Party)	1	IN House District 6	Workers Party
+IN House District 7 (Workers Party)	1	IN House District 7	Workers Party
+IN House District 8 (Workers Party)	1	IN House District 8	Workers Party
+IN House District 9 (Workers Party)	1	IN House District 9	Workers Party
+IN House District 10 (Workers Party)	1	IN House District 10	Workers Party
+IN House District 11 (Workers Party)	1	IN House District 11	Workers Party
+IN House District 12 (Workers Party)	1	IN House District 12	Workers Party
+IN House District 13 (Workers Party)	1	IN House District 13	Workers Party
+IN House District 14 (Workers Party)	1	IN House District 14	Workers Party
+IN House District 15 (Workers Party)	1	IN House District 15	Workers Party
+IN House District 16 (Workers Party)	1	IN House District 16	Workers Party
+IN House District 17 (Workers Party)	1	IN House District 17	Workers Party
+IN House District 18 (Workers Party)	1	IN House District 18	Workers Party
+IN House District 19 (Workers Party)	1	IN House District 19	Workers Party
+IN House District 20 (Workers Party)	1	IN House District 20	Workers Party
+IN House District 21 (Workers Party)	1	IN House District 21	Workers Party
+IN House District 22 (Workers Party)	1	IN House District 22	Workers Party
+IN House District 23 (Workers Party)	1	IN House District 23	Workers Party
+IN House District 24 (Workers Party)	1	IN House District 24	Workers Party
+IN House District 25 (Workers Party)	1	IN House District 25	Workers Party
+IN House District 26 (Workers Party)	1	IN House District 26	Workers Party
+IN House District 27 (Workers Party)	1	IN House District 27	Workers Party
+IN House District 28 (Workers Party)	1	IN House District 28	Workers Party
+IN House District 29 (Workers Party)	1	IN House District 29	Workers Party
+IN House District 30 (Workers Party)	1	IN House District 30	Workers Party
+IN House District 31 (Workers Party)	1	IN House District 31	Workers Party
+IN House District 32 (Workers Party)	1	IN House District 32	Workers Party
+IN House District 33 (Workers Party)	1	IN House District 33	Workers Party
+IN House District 34 (Workers Party)	1	IN House District 34	Workers Party
+IN House District 35 (Workers Party)	1	IN House District 35	Workers Party
+IN House District 36 (Workers Party)	1	IN House District 36	Workers Party
+IN House District 37 (Workers Party)	1	IN House District 37	Workers Party
+IN House District 38 (Workers Party)	1	IN House District 38	Workers Party
+IN House District 39 (Workers Party)	1	IN House District 39	Workers Party
+IN House District 40 (Workers Party)	1	IN House District 40	Workers Party
+IN House District 41 (Workers Party)	1	IN House District 41	Workers Party
+IN House District 42 (Workers Party)	1	IN House District 42	Workers Party
+IN House District 43 (Workers Party)	1	IN House District 43	Workers Party
+IN House District 44 (Workers Party)	1	IN House District 44	Workers Party
+IN House District 45 (Workers Party)	1	IN House District 45	Workers Party
+IN House District 46 (Workers Party)	1	IN House District 46	Workers Party
+IN House District 47 (Workers Party)	1	IN House District 47	Workers Party
+IN House District 48 (Workers Party)	1	IN House District 48	Workers Party
+IN House District 49 (Workers Party)	1	IN House District 49	Workers Party
+IN House District 50 (Workers Party)	1	IN House District 50	Workers Party
+IN House District 51 (Workers Party)	1	IN House District 51	Workers Party
+IN House District 52 (Workers Party)	1	IN House District 52	Workers Party
+IN House District 53 (Workers Party)	1	IN House District 53	Workers Party
+IN House District 54 (Workers Party)	1	IN House District 54	Workers Party
+IN House District 55 (Workers Party)	1	IN House District 55	Workers Party
+IN House District 56 (Workers Party)	1	IN House District 56	Workers Party
+IN House District 57 (Workers Party)	1	IN House District 57	Workers Party
+IN House District 58 (Workers Party)	1	IN House District 58	Workers Party
+IN House District 59 (Workers Party)	1	IN House District 59	Workers Party
+IN House District 60 (Workers Party)	1	IN House District 60	Workers Party
+IN House District 61 (Workers Party)	1	IN House District 61	Workers Party
+IN House District 62 (Workers Party)	1	IN House District 62	Workers Party
+IN House District 63 (Workers Party)	1	IN House District 63	Workers Party
+IN House District 64 (Workers Party)	1	IN House District 64	Workers Party
+IN House District 65 (Workers Party)	1	IN House District 65	Workers Party
+IN House District 66 (Workers Party)	1	IN House District 66	Workers Party
+IN House District 67 (Workers Party)	1	IN House District 67	Workers Party
+IN House District 68 (Workers Party)	1	IN House District 68	Workers Party
+IN House District 69 (Workers Party)	1	IN House District 69	Workers Party
+IN House District 70 (Workers Party)	1	IN House District 70	Workers Party
+IN House District 71 (Workers Party)	1	IN House District 71	Workers Party
+IN House District 72 (Workers Party)	1	IN House District 72	Workers Party
+IN House District 73 (Workers Party)	1	IN House District 73	Workers Party
+IN House District 74 (Workers Party)	1	IN House District 74	Workers Party
+IN House District 75 (Workers Party)	1	IN House District 75	Workers Party
+IN House District 76 (Workers Party)	1	IN House District 76	Workers Party
+IN House District 77 (Workers Party)	1	IN House District 77	Workers Party
+IN House District 78 (Workers Party)	1	IN House District 78	Workers Party
+IN House District 79 (Workers Party)	1	IN House District 79	Workers Party
+IN House District 80 (Workers Party)	1	IN House District 80	Workers Party
+IN House District 81 (Workers Party)	1	IN House District 81	Workers Party
+IN House District 82 (Workers Party)	1	IN House District 82	Workers Party
+IN House District 83 (Workers Party)	1	IN House District 83	Workers Party
+IN House District 84 (Workers Party)	1	IN House District 84	Workers Party
+IN House District 85 (Workers Party)	1	IN House District 85	Workers Party
+IN House District 86 (Workers Party)	1	IN House District 86	Workers Party
+IN House District 87 (Workers Party)	1	IN House District 87	Workers Party
+IN House District 88 (Workers Party)	1	IN House District 88	Workers Party
+IN House District 89 (Workers Party)	1	IN House District 89	Workers Party
+IN House District 90 (Workers Party)	1	IN House District 90	Workers Party
+IN House District 91 (Workers Party)	1	IN House District 91	Workers Party
+IN House District 92 (Workers Party)	1	IN House District 92	Workers Party
+IN House District 93 (Workers Party)	1	IN House District 93	Workers Party
+IN House District 94 (Workers Party)	1	IN House District 94	Workers Party
+IN House District 95 (Workers Party)	1	IN House District 95	Workers Party
+IN House District 96 (Workers Party)	1	IN House District 96	Workers Party
+IN House District 97 (Workers Party)	1	IN House District 97	Workers Party
+IN House District 98 (Workers Party)	1	IN House District 98	Workers Party
+IN House District 99 (Workers Party)	1	IN House District 99	Workers Party
+IN House District 100 (Workers Party)	1	IN House District 100	Workers Party
+IN Senate District 1 (Workers Party)	1	IN Senate District 1	Workers Party
+IN Senate District 2 (Workers Party)	1	IN Senate District 2	Workers Party
+IN Senate District 3 (Workers Party)	1	IN Senate District 3	Workers Party
+IN Senate District 4 (Workers Party)	1	IN Senate District 4	Workers Party
+IN Senate District 5 (Workers Party)	1	IN Senate District 5	Workers Party
+IN Senate District 6 (Workers Party)	1	IN Senate District 6	Workers Party
+IN Senate District 7 (Workers Party)	1	IN Senate District 7	Workers Party
+IN Senate District 8 (Workers Party)	1	IN Senate District 8	Workers Party
+IN Senate District 9 (Workers Party)	1	IN Senate District 9	Workers Party
+IN Senate District 10 (Workers Party)	1	IN Senate District 10	Workers Party
+IN Senate District 11 (Workers Party)	1	IN Senate District 11	Workers Party
+IN Senate District 12 (Workers Party)	1	IN Senate District 12	Workers Party
+IN Senate District 13 (Workers Party)	1	IN Senate District 13	Workers Party
+IN Senate District 14 (Workers Party)	1	IN Senate District 14	Workers Party
+IN Senate District 15 (Workers Party)	1	IN Senate District 15	Workers Party
+IN Senate District 16 (Workers Party)	1	IN Senate District 16	Workers Party
+IN Senate District 17 (Workers Party)	1	IN Senate District 17	Workers Party
+IN Senate District 18 (Workers Party)	1	IN Senate District 18	Workers Party
+IN Senate District 19 (Workers Party)	1	IN Senate District 19	Workers Party
+IN Senate District 20 (Workers Party)	1	IN Senate District 20	Workers Party
+IN Senate District 21 (Workers Party)	1	IN Senate District 21	Workers Party
+IN Senate District 22 (Workers Party)	1	IN Senate District 22	Workers Party
+IN Senate District 23 (Workers Party)	1	IN Senate District 23	Workers Party
+IN Senate District 24 (Workers Party)	1	IN Senate District 24	Workers Party
+IN Senate District 25 (Workers Party)	1	IN Senate District 25	Workers Party
+IN Senate District 26 (Workers Party)	1	IN Senate District 26	Workers Party
+IN Senate District 27 (Workers Party)	1	IN Senate District 27	Workers Party
+IN Senate District 28 (Workers Party)	1	IN Senate District 28	Workers Party
+IN Senate District 29 (Workers Party)	1	IN Senate District 29	Workers Party
+IN Senate District 30 (Workers Party)	1	IN Senate District 30	Workers Party
+IN Senate District 31 (Workers Party)	1	IN Senate District 31	Workers Party
+IN Senate District 32 (Workers Party)	1	IN Senate District 32	Workers Party
+IN Senate District 33 (Workers Party)	1	IN Senate District 33	Workers Party
+IN Senate District 34 (Workers Party)	1	IN Senate District 34	Workers Party
+IN Senate District 35 (Workers Party)	1	IN Senate District 35	Workers Party
+IN Senate District 36 (Workers Party)	1	IN Senate District 36	Workers Party
+IN Senate District 37 (Workers Party)	1	IN Senate District 37	Workers Party
+IN Senate District 38 (Workers Party)	1	IN Senate District 38	Workers Party
+IN Senate District 39 (Workers Party)	1	IN Senate District 39	Workers Party
+IN Senate District 40 (Workers Party)	1	IN Senate District 40	Workers Party
+IN Senate District 41 (Workers Party)	1	IN Senate District 41	Workers Party
+IN Senate District 42 (Workers Party)	1	IN Senate District 42	Workers Party
+IN Senate District 43 (Workers Party)	1	IN Senate District 43	Workers Party
+IN Senate District 44 (Workers Party)	1	IN Senate District 44	Workers Party
+IN Senate District 45 (Workers Party)	1	IN Senate District 45	Workers Party
+IN Senate District 46 (Workers Party)	1	IN Senate District 46	Workers Party
+IN Senate District 47 (Workers Party)	1	IN Senate District 47	Workers Party
+IN Senate District 48 (Workers Party)	1	IN Senate District 48	Workers Party
+IN Senate District 49 (Workers Party)	1	IN Senate District 49	Workers Party
+IN Senate District 50 (Workers Party)	1	IN Senate District 50	Workers Party
+US House IN District 1 (Workers Party)	1	US House IN District 1	Workers Party
+US House IN District 2 (Workers Party)	1	US House IN District 2	Workers Party
+US House IN District 3 (Workers Party)	1	US House IN District 3	Workers Party
+US House IN District 4 (Workers Party)	1	US House IN District 4	Workers Party
+US House IN District 5 (Workers Party)	1	US House IN District 5	Workers Party
+US House IN District 6 (Workers Party)	1	US House IN District 6	Workers Party
+US House IN District 7 (Workers Party)	1	US House IN District 7	Workers Party
+US House IN District 8 (Workers Party)	1	US House IN District 8	Workers Party
+US House IN District 9 (Workers Party)	1	US House IN District 9	Workers Party
+US President (IN) (Workers Party)	1	US President (IN)	Workers Party
+IN Governor (Workers Party)	1	IN Governor	Workers Party
+US Senate IN (Workers Party)	1	US Senate IN	Workers Party
+IN Attorney General (Workers Party)	1	IN Attorney General	Workers Party
+IN Lieutenant Governor (Workers Party)	1	IN Lieutenant Governor	Workers Party
+IN Treasurer (Workers Party)	1	IN Treasurer	
+IN Superintendent of Public Instruction (Workers Party)	1	IN Superintendent of Public Instruction	Workers Party
+IN Auditor (Workers Party)	1	IN Auditor	Workers Party
+IN Secretary of State (Workers Party)	1	IN Secretary of State	Workers Party
+IN Treasurer (Democratic Party)	1	IN Treasurer	Democratic Party
+IN Treasurer (Democratic Party) (Democratic Party)	1	IN Treasurer	Democratic Party
+IN Treasurer (Republican Party) (Democratic Party)	1	IN Treasurer	Democratic Party
+IN Treasurer (Green Party) (Democratic Party)	1	IN Treasurer	Democratic Party
+IN Treasurer (Libertarian Party) (Democratic Party)	1	IN Treasurer	Democratic Party
+IN Treasurer (Constitution Party) (Democratic Party)	1	IN Treasurer	Democratic Party
+IN Treasurer (Independent Party) (Democratic Party)	1	IN Treasurer	Democratic Party
+IN Treasurer (Non Partisan) (Democratic Party)	1	IN Treasurer	Democratic Party
+IN Treasurer (Other Party) (Democratic Party)	1	IN Treasurer	Democratic Party
+IN Treasurer (Socialist Party) (Democratic Party)	1	IN Treasurer	Democratic Party
+IN Treasurer (Workers Party) (Democratic Party)	1	IN Treasurer	Democratic Party
+IN Treasurer (Republican Party)	1	IN Treasurer	Republican Party
+IN Treasurer (Democratic Party) (Republican Party)	1	IN Treasurer	Republican Party
+IN Treasurer (Republican Party) (Republican Party)	1	IN Treasurer	Republican Party
+IN Treasurer (Green Party) (Republican Party)	1	IN Treasurer	Republican Party
+IN Treasurer (Libertarian Party) (Republican Party)	1	IN Treasurer	Republican Party
+IN Treasurer (Constitution Party) (Republican Party)	1	IN Treasurer	Republican Party
+IN Treasurer (Independent Party) (Republican Party)	1	IN Treasurer	Republican Party
+IN Treasurer (Non Partisan) (Republican Party)	1	IN Treasurer	Republican Party
+IN Treasurer (Other Party) (Republican Party)	1	IN Treasurer	Republican Party
+IN Treasurer (Socialist Party) (Republican Party)	1	IN Treasurer	Republican Party
+IN Treasurer (Workers Party) (Republican Party)	1	IN Treasurer	Republican Party
+IN Treasurer (Green Party)	1	IN Treasurer	Green Party
+IN Treasurer (Democratic Party) (Green Party)	1	IN Treasurer	Green Party
+IN Treasurer (Republican Party) (Green Party)	1	IN Treasurer	Green Party
+IN Treasurer (Green Party) (Green Party)	1	IN Treasurer	Green Party
+IN Treasurer (Libertarian Party) (Green Party)	1	IN Treasurer	Green Party
+IN Treasurer (Constitution Party) (Green Party)	1	IN Treasurer	Green Party
+IN Treasurer (Independent Party) (Green Party)	1	IN Treasurer	Green Party
+IN Treasurer (Non Partisan) (Green Party)	1	IN Treasurer	Green Party
+IN Treasurer (Other Party) (Green Party)	1	IN Treasurer	Green Party
+IN Treasurer (Socialist Party) (Green Party)	1	IN Treasurer	Green Party
+IN Treasurer (Workers Party) (Green Party)	1	IN Treasurer	Green Party
+IN Treasurer (Libertarian Party)	1	IN Treasurer	Libertarian Party
+IN Treasurer (Democratic Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
+IN Treasurer (Republican Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
+IN Treasurer (Green Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
+IN Treasurer (Libertarian Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
+IN Treasurer (Constitution Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
+IN Treasurer (Independent Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
+IN Treasurer (Non Partisan) (Libertarian Party)	1	IN Treasurer	Libertarian Party
+IN Treasurer (Other Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
+IN Treasurer (Socialist Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
+IN Treasurer (Workers Party) (Libertarian Party)	1	IN Treasurer	Libertarian Party
+IN Treasurer (Constitution Party)	1	IN Treasurer	Constitution Party
+IN Treasurer (Democratic Party) (Constitution Party)	1	IN Treasurer	Constitution Party
+IN Treasurer (Republican Party) (Constitution Party)	1	IN Treasurer	Constitution Party
+IN Treasurer (Green Party) (Constitution Party)	1	IN Treasurer	Constitution Party
+IN Treasurer (Libertarian Party) (Constitution Party)	1	IN Treasurer	Constitution Party
+IN Treasurer (Constitution Party) (Constitution Party)	1	IN Treasurer	Constitution Party
+IN Treasurer (Independent Party) (Constitution Party)	1	IN Treasurer	Constitution Party
+IN Treasurer (Non Partisan) (Constitution Party)	1	IN Treasurer	Constitution Party
+IN Treasurer (Other Party) (Constitution Party)	1	IN Treasurer	Constitution Party
+IN Treasurer (Socialist Party) (Constitution Party)	1	IN Treasurer	Constitution Party
+IN Treasurer (Workers Party) (Constitution Party)	1	IN Treasurer	Constitution Party
+IN Treasurer (Independent Party)	1	IN Treasurer	Independent Party
+IN Treasurer (Democratic Party) (Independent Party)	1	IN Treasurer	Independent Party
+IN Treasurer (Republican Party) (Independent Party)	1	IN Treasurer	Independent Party
+IN Treasurer (Green Party) (Independent Party)	1	IN Treasurer	Independent Party
+IN Treasurer (Libertarian Party) (Independent Party)	1	IN Treasurer	Independent Party
+IN Treasurer (Constitution Party) (Independent Party)	1	IN Treasurer	Independent Party
+IN Treasurer (Independent Party) (Independent Party)	1	IN Treasurer	Independent Party
+IN Treasurer (Non Partisan) (Independent Party)	1	IN Treasurer	Independent Party
+IN Treasurer (Other Party) (Independent Party)	1	IN Treasurer	Independent Party
+IN Treasurer (Socialist Party) (Independent Party)	1	IN Treasurer	Independent Party
+IN Treasurer (Workers Party) (Independent Party)	1	IN Treasurer	Independent Party
+IN Treasurer (Non Partisan)	1	IN Treasurer	Non Partisan
+IN Treasurer (Democratic Party) (Non Partisan)	1	IN Treasurer	Non Partisan
+IN Treasurer (Republican Party) (Non Partisan)	1	IN Treasurer	Non Partisan
+IN Treasurer (Green Party) (Non Partisan)	1	IN Treasurer	Non Partisan
+IN Treasurer (Libertarian Party) (Non Partisan)	1	IN Treasurer	Non Partisan
+IN Treasurer (Constitution Party) (Non Partisan)	1	IN Treasurer	Non Partisan
+IN Treasurer (Independent Party) (Non Partisan)	1	IN Treasurer	Non Partisan
+IN Treasurer (Non Partisan) (Non Partisan)	1	IN Treasurer	Non Partisan
+IN Treasurer (Other Party) (Non Partisan)	1	IN Treasurer	Non Partisan
+IN Treasurer (Socialist Party) (Non Partisan)	1	IN Treasurer	Non Partisan
+IN Treasurer (Workers Party) (Non Partisan)	1	IN Treasurer	Non Partisan
+IN Treasurer (Other Party)	1	IN Treasurer	Other Party
+IN Treasurer (Democratic Party) (Other Party)	1	IN Treasurer	Other Party
+IN Treasurer (Republican Party) (Other Party)	1	IN Treasurer	Other Party
+IN Treasurer (Green Party) (Other Party)	1	IN Treasurer	Other Party
+IN Treasurer (Libertarian Party) (Other Party)	1	IN Treasurer	Other Party
+IN Treasurer (Constitution Party) (Other Party)	1	IN Treasurer	Other Party
+IN Treasurer (Independent Party) (Other Party)	1	IN Treasurer	Other Party
+IN Treasurer (Non Partisan) (Other Party)	1	IN Treasurer	Other Party
+IN Treasurer (Other Party) (Other Party)	1	IN Treasurer	Other Party
+IN Treasurer (Socialist Party) (Other Party)	1	IN Treasurer	Other Party
+IN Treasurer (Workers Party) (Other Party)	1	IN Treasurer	Other Party
+IN Treasurer (Socialist Party)	1	IN Treasurer	Socialist Party
+IN Treasurer (Democratic Party) (Socialist Party)	1	IN Treasurer	Socialist Party
+IN Treasurer (Republican Party) (Socialist Party)	1	IN Treasurer	Socialist Party
+IN Treasurer (Green Party) (Socialist Party)	1	IN Treasurer	Socialist Party
+IN Treasurer (Libertarian Party) (Socialist Party)	1	IN Treasurer	Socialist Party
+IN Treasurer (Constitution Party) (Socialist Party)	1	IN Treasurer	Socialist Party
+IN Treasurer (Independent Party) (Socialist Party)	1	IN Treasurer	Socialist Party
+IN Treasurer (Non Partisan) (Socialist Party)	1	IN Treasurer	Socialist Party
+IN Treasurer (Other Party) (Socialist Party)	1	IN Treasurer	Socialist Party
+IN Treasurer (Socialist Party) (Socialist Party)	1	IN Treasurer	Socialist Party
+IN Treasurer (Workers Party) (Socialist Party)	1	IN Treasurer	Socialist Party
+IN Treasurer (Workers Party)	1	IN Treasurer	Workers Party
+IN Treasurer (Democratic Party) (Workers Party)	1	IN Treasurer	Workers Party
+IN Treasurer (Republican Party) (Workers Party)	1	IN Treasurer	Workers Party
+IN Treasurer (Green Party) (Workers Party)	1	IN Treasurer	Workers Party
+IN Treasurer (Libertarian Party) (Workers Party)	1	IN Treasurer	Workers Party
+IN Treasurer (Constitution Party) (Workers Party)	1	IN Treasurer	Workers Party
+IN Treasurer (Independent Party) (Workers Party)	1	IN Treasurer	Workers Party
+IN Treasurer (Non Partisan) (Workers Party)	1	IN Treasurer	Workers Party
+IN Treasurer (Other Party) (Workers Party)	1	IN Treasurer	Workers Party
+IN Treasurer (Socialist Party) (Workers Party)	1	IN Treasurer	Workers Party
+IN Treasurer (Workers Party) (Workers Party)	1	IN Treasurer	Workers Party
+IN House District 1 (Pirate Party)	1	IN House District 1	Pirate Party
+IN House District 2 (Pirate Party)	1	IN House District 2	Pirate Party
+IN House District 3 (Pirate Party)	1	IN House District 3	Pirate Party
+IN House District 4 (Pirate Party)	1	IN House District 4	Pirate Party
+IN House District 5 (Pirate Party)	1	IN House District 5	Pirate Party
+IN House District 6 (Pirate Party)	1	IN House District 6	Pirate Party
+IN House District 7 (Pirate Party)	1	IN House District 7	Pirate Party
+IN House District 8 (Pirate Party)	1	IN House District 8	Pirate Party
+IN House District 9 (Pirate Party)	1	IN House District 9	Pirate Party
+IN House District 10 (Pirate Party)	1	IN House District 10	Pirate Party
+IN House District 11 (Pirate Party)	1	IN House District 11	Pirate Party
+IN House District 12 (Pirate Party)	1	IN House District 12	Pirate Party
+IN House District 13 (Pirate Party)	1	IN House District 13	Pirate Party
+IN House District 14 (Pirate Party)	1	IN House District 14	Pirate Party
+IN House District 15 (Pirate Party)	1	IN House District 15	Pirate Party
+IN House District 16 (Pirate Party)	1	IN House District 16	Pirate Party
+IN House District 17 (Pirate Party)	1	IN House District 17	Pirate Party
+IN House District 18 (Pirate Party)	1	IN House District 18	Pirate Party
+IN House District 19 (Pirate Party)	1	IN House District 19	Pirate Party
+IN House District 20 (Pirate Party)	1	IN House District 20	Pirate Party
+IN House District 21 (Pirate Party)	1	IN House District 21	Pirate Party
+IN House District 22 (Pirate Party)	1	IN House District 22	Pirate Party
+IN House District 23 (Pirate Party)	1	IN House District 23	Pirate Party
+IN House District 24 (Pirate Party)	1	IN House District 24	Pirate Party
+IN House District 25 (Pirate Party)	1	IN House District 25	Pirate Party
+IN House District 26 (Pirate Party)	1	IN House District 26	Pirate Party
+IN House District 27 (Pirate Party)	1	IN House District 27	Pirate Party
+IN House District 28 (Pirate Party)	1	IN House District 28	Pirate Party
+IN House District 29 (Pirate Party)	1	IN House District 29	Pirate Party
+IN House District 30 (Pirate Party)	1	IN House District 30	Pirate Party
+IN House District 31 (Pirate Party)	1	IN House District 31	Pirate Party
+IN House District 32 (Pirate Party)	1	IN House District 32	Pirate Party
+IN House District 33 (Pirate Party)	1	IN House District 33	Pirate Party
+IN House District 34 (Pirate Party)	1	IN House District 34	Pirate Party
+IN House District 35 (Pirate Party)	1	IN House District 35	Pirate Party
+IN House District 36 (Pirate Party)	1	IN House District 36	Pirate Party
+IN House District 37 (Pirate Party)	1	IN House District 37	Pirate Party
+IN House District 38 (Pirate Party)	1	IN House District 38	Pirate Party
+IN House District 39 (Pirate Party)	1	IN House District 39	Pirate Party
+IN House District 40 (Pirate Party)	1	IN House District 40	Pirate Party
+IN House District 41 (Pirate Party)	1	IN House District 41	Pirate Party
+IN House District 42 (Pirate Party)	1	IN House District 42	Pirate Party
+IN House District 43 (Pirate Party)	1	IN House District 43	Pirate Party
+IN House District 44 (Pirate Party)	1	IN House District 44	Pirate Party
+IN House District 45 (Pirate Party)	1	IN House District 45	Pirate Party
+IN House District 46 (Pirate Party)	1	IN House District 46	Pirate Party
+IN House District 47 (Pirate Party)	1	IN House District 47	Pirate Party
+IN House District 48 (Pirate Party)	1	IN House District 48	Pirate Party
+IN House District 49 (Pirate Party)	1	IN House District 49	Pirate Party
+IN House District 50 (Pirate Party)	1	IN House District 50	Pirate Party
+IN House District 51 (Pirate Party)	1	IN House District 51	Pirate Party
+IN House District 52 (Pirate Party)	1	IN House District 52	Pirate Party
+IN House District 53 (Pirate Party)	1	IN House District 53	Pirate Party
+IN House District 54 (Pirate Party)	1	IN House District 54	Pirate Party
+IN House District 55 (Pirate Party)	1	IN House District 55	Pirate Party
+IN House District 56 (Pirate Party)	1	IN House District 56	Pirate Party
+IN House District 57 (Pirate Party)	1	IN House District 57	Pirate Party
+IN House District 58 (Pirate Party)	1	IN House District 58	Pirate Party
+IN House District 59 (Pirate Party)	1	IN House District 59	Pirate Party
+IN House District 60 (Pirate Party)	1	IN House District 60	Pirate Party
+IN House District 61 (Pirate Party)	1	IN House District 61	Pirate Party
+IN House District 62 (Pirate Party)	1	IN House District 62	Pirate Party
+IN House District 63 (Pirate Party)	1	IN House District 63	Pirate Party
+IN House District 64 (Pirate Party)	1	IN House District 64	Pirate Party
+IN House District 65 (Pirate Party)	1	IN House District 65	Pirate Party
+IN House District 66 (Pirate Party)	1	IN House District 66	Pirate Party
+IN House District 67 (Pirate Party)	1	IN House District 67	Pirate Party
+IN House District 68 (Pirate Party)	1	IN House District 68	Pirate Party
+IN House District 69 (Pirate Party)	1	IN House District 69	Pirate Party
+IN House District 70 (Pirate Party)	1	IN House District 70	Pirate Party
+IN House District 71 (Pirate Party)	1	IN House District 71	Pirate Party
+IN House District 72 (Pirate Party)	1	IN House District 72	Pirate Party
+IN House District 73 (Pirate Party)	1	IN House District 73	Pirate Party
+IN House District 74 (Pirate Party)	1	IN House District 74	Pirate Party
+IN House District 75 (Pirate Party)	1	IN House District 75	Pirate Party
+IN House District 76 (Pirate Party)	1	IN House District 76	Pirate Party
+IN House District 77 (Pirate Party)	1	IN House District 77	Pirate Party
+IN House District 78 (Pirate Party)	1	IN House District 78	Pirate Party
+IN House District 79 (Pirate Party)	1	IN House District 79	Pirate Party
+IN House District 80 (Pirate Party)	1	IN House District 80	Pirate Party
+IN House District 81 (Pirate Party)	1	IN House District 81	Pirate Party
+IN House District 82 (Pirate Party)	1	IN House District 82	Pirate Party
+IN House District 83 (Pirate Party)	1	IN House District 83	Pirate Party
+IN House District 84 (Pirate Party)	1	IN House District 84	Pirate Party
+IN House District 85 (Pirate Party)	1	IN House District 85	Pirate Party
+IN House District 86 (Pirate Party)	1	IN House District 86	Pirate Party
+IN House District 87 (Pirate Party)	1	IN House District 87	Pirate Party
+IN House District 88 (Pirate Party)	1	IN House District 88	Pirate Party
+IN House District 89 (Pirate Party)	1	IN House District 89	Pirate Party
+IN House District 90 (Pirate Party)	1	IN House District 90	Pirate Party
+IN House District 91 (Pirate Party)	1	IN House District 91	Pirate Party
+IN House District 92 (Pirate Party)	1	IN House District 92	Pirate Party
+IN House District 93 (Pirate Party)	1	IN House District 93	Pirate Party
+IN House District 94 (Pirate Party)	1	IN House District 94	Pirate Party
+IN House District 95 (Pirate Party)	1	IN House District 95	Pirate Party
+IN House District 96 (Pirate Party)	1	IN House District 96	Pirate Party
+IN House District 97 (Pirate Party)	1	IN House District 97	Pirate Party
+IN House District 98 (Pirate Party)	1	IN House District 98	Pirate Party
+IN House District 99 (Pirate Party)	1	IN House District 99	Pirate Party
+IN House District 100 (Pirate Party)	1	IN House District 100	Pirate Party
+IN Senate District 1 (Pirate Party)	1	IN Senate District 1	Pirate Party
+IN Senate District 2 (Pirate Party)	1	IN Senate District 2	Pirate Party
+IN Senate District 3 (Pirate Party)	1	IN Senate District 3	Pirate Party
+IN Senate District 4 (Pirate Party)	1	IN Senate District 4	Pirate Party
+IN Senate District 5 (Pirate Party)	1	IN Senate District 5	Pirate Party
+IN Senate District 6 (Pirate Party)	1	IN Senate District 6	Pirate Party
+IN Senate District 7 (Pirate Party)	1	IN Senate District 7	Pirate Party
+IN Senate District 8 (Pirate Party)	1	IN Senate District 8	Pirate Party
+IN Senate District 9 (Pirate Party)	1	IN Senate District 9	Pirate Party
+IN Senate District 10 (Pirate Party)	1	IN Senate District 10	Pirate Party
+IN Senate District 11 (Pirate Party)	1	IN Senate District 11	Pirate Party
+IN Senate District 12 (Pirate Party)	1	IN Senate District 12	Pirate Party
+IN Senate District 13 (Pirate Party)	1	IN Senate District 13	Pirate Party
+IN Senate District 14 (Pirate Party)	1	IN Senate District 14	Pirate Party
+IN Senate District 15 (Pirate Party)	1	IN Senate District 15	Pirate Party
+IN Senate District 16 (Pirate Party)	1	IN Senate District 16	Pirate Party
+IN Senate District 17 (Pirate Party)	1	IN Senate District 17	Pirate Party
+IN Senate District 18 (Pirate Party)	1	IN Senate District 18	Pirate Party
+IN Senate District 19 (Pirate Party)	1	IN Senate District 19	Pirate Party
+IN Senate District 20 (Pirate Party)	1	IN Senate District 20	Pirate Party
+IN Senate District 21 (Pirate Party)	1	IN Senate District 21	Pirate Party
+IN Senate District 22 (Pirate Party)	1	IN Senate District 22	Pirate Party
+IN Senate District 23 (Pirate Party)	1	IN Senate District 23	Pirate Party
+IN Senate District 24 (Pirate Party)	1	IN Senate District 24	Pirate Party
+IN Senate District 25 (Pirate Party)	1	IN Senate District 25	Pirate Party
+IN Senate District 26 (Pirate Party)	1	IN Senate District 26	Pirate Party
+IN Senate District 27 (Pirate Party)	1	IN Senate District 27	Pirate Party
+IN Senate District 28 (Pirate Party)	1	IN Senate District 28	Pirate Party
+IN Senate District 29 (Pirate Party)	1	IN Senate District 29	Pirate Party
+IN Senate District 30 (Pirate Party)	1	IN Senate District 30	Pirate Party
+IN Senate District 31 (Pirate Party)	1	IN Senate District 31	Pirate Party
+IN Senate District 32 (Pirate Party)	1	IN Senate District 32	Pirate Party
+IN Senate District 33 (Pirate Party)	1	IN Senate District 33	Pirate Party
+IN Senate District 34 (Pirate Party)	1	IN Senate District 34	Pirate Party
+IN Senate District 35 (Pirate Party)	1	IN Senate District 35	Pirate Party
+IN Senate District 36 (Pirate Party)	1	IN Senate District 36	Pirate Party
+IN Senate District 37 (Pirate Party)	1	IN Senate District 37	Pirate Party
+IN Senate District 38 (Pirate Party)	1	IN Senate District 38	Pirate Party
+IN Senate District 39 (Pirate Party)	1	IN Senate District 39	Pirate Party
+IN Senate District 40 (Pirate Party)	1	IN Senate District 40	Pirate Party
+IN Senate District 41 (Pirate Party)	1	IN Senate District 41	Pirate Party
+IN Senate District 42 (Pirate Party)	1	IN Senate District 42	Pirate Party
+IN Senate District 43 (Pirate Party)	1	IN Senate District 43	Pirate Party
+IN Senate District 44 (Pirate Party)	1	IN Senate District 44	Pirate Party
+IN Senate District 45 (Pirate Party)	1	IN Senate District 45	Pirate Party
+IN Senate District 46 (Pirate Party)	1	IN Senate District 46	Pirate Party
+IN Senate District 47 (Pirate Party)	1	IN Senate District 47	Pirate Party
+IN Senate District 48 (Pirate Party)	1	IN Senate District 48	Pirate Party
+IN Senate District 49 (Pirate Party)	1	IN Senate District 49	Pirate Party
+IN Senate District 50 (Pirate Party)	1	IN Senate District 50	Pirate Party
+US House IN District 1 (Pirate Party)	1	US House IN District 1	Pirate Party
+US House IN District 2 (Pirate Party)	1	US House IN District 2	Pirate Party
+US House IN District 3 (Pirate Party)	1	US House IN District 3	Pirate Party
+US House IN District 4 (Pirate Party)	1	US House IN District 4	Pirate Party
+US House IN District 5 (Pirate Party)	1	US House IN District 5	Pirate Party
+US House IN District 6 (Pirate Party)	1	US House IN District 6	Pirate Party
+US House IN District 7 (Pirate Party)	1	US House IN District 7	Pirate Party
+US House IN District 8 (Pirate Party)	1	US House IN District 8	Pirate Party
+US House IN District 9 (Pirate Party)	1	US House IN District 9	Pirate Party
+US President (IN) (Pirate Party)	1	US President (IN)	Pirate Party
+IN Governor (Pirate Party)	1	IN Governor	Pirate Party
+US Senate IN (Pirate Party)	1	US Senate IN	Pirate Party
+IN Attorney General (Pirate Party)	1	IN Attorney General	Pirate Party
+IN Lieutenant Governor (Pirate Party)	1	IN Lieutenant Governor	Pirate Party
+IN Treasurer (Pirate Party)	1	IN Treasurer	Pirate Party
+IN Superintendent of Public Instruction (Pirate Party)	1	IN Superintendent of Public Instruction	Pirate Party
+IN Auditor (Pirate Party)	1	IN Auditor	Pirate Party
+IN Secretary of State (Pirate Party)	1	IN Secretary of State	Pirate Party
+IN Treasurer (Democratic Party) (Pirate Party)	1	IN Treasurer	Pirate Party
+IN Treasurer (Republican Party) (Pirate Party)	1	IN Treasurer	Pirate Party
+IN Treasurer (Green Party) (Pirate Party)	1	IN Treasurer	Pirate Party
+IN Treasurer (Libertarian Party) (Pirate Party)	1	IN Treasurer	Pirate Party
+IN Treasurer (Constitution Party) (Pirate Party)	1	IN Treasurer	Pirate Party
+IN Treasurer (Independent Party) (Pirate Party)	1	IN Treasurer	Pirate Party
+IN Treasurer (Non Partisan) (Pirate Party)	1	IN Treasurer	Pirate Party
+IN Treasurer (Other Party) (Pirate Party)	1	IN Treasurer	Pirate Party
+IN Treasurer (Socialist Party) (Pirate Party)	1	IN Treasurer	Pirate Party
+IN Treasurer (Workers Party) (Pirate Party)	1	IN Treasurer	Pirate Party

@@ -357,7 +357,7 @@ CandidateContest	US President (SC)	US President (SC)
 CandidateContest	US President (SC)	President
 CandidateContest	SC Governor	SC Governor
 CandidateContest	SC Governor	Governor and Lieutenant Governor
-CandidateContest	US Senate SC	US Senate SC
+CandidateContest	US Senate SC	U.S. Senate
 CandidateContest	SC Attorney General	SC Attorney General
 CandidateContest	SC Attorney General	Attorney General
 CandidateContest	SC Secretary of State	SC Secretary of State
