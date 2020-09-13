@@ -354,7 +354,7 @@ def replace_raw_with_internal_ids(
         e = (
             f"Warning: Results for {working_unmatched.shape[0]} rows with unmatched {element}s "
             f"will not be loaded to database. These records (raw name, internal name) were found in dictionary.txt, but "
-            f"no corresponding record was found in {element}.txt: \n{unmatched_str}"
+            f"no corresponding record was found in the {element} table in the database: \n{unmatched_str}"
         )
         error = ui.add_new_error(
             error,
