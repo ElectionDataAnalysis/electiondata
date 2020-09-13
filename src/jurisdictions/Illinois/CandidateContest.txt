@@ -1,0 +1,202 @@
+Name	NumberElected	Office	PrimaryParty
+IL House District 1	1	IL House District 1	
+IL House District 2	1	IL House District 2	
+IL House District 3	1	IL House District 3	
+IL House District 4	1	IL House District 4	
+IL House District 5	1	IL House District 5	
+IL House District 6	1	IL House District 6	
+IL House District 7	1	IL House District 7	
+IL House District 8	1	IL House District 8	
+IL House District 9	1	IL House District 9	
+IL House District 10	1	IL House District 10	
+IL House District 11	1	IL House District 11	
+IL House District 12	1	IL House District 12	
+IL House District 13	1	IL House District 13	
+IL House District 14	1	IL House District 14	
+IL House District 15	1	IL House District 15	
+IL House District 16	1	IL House District 16	
+IL House District 17	1	IL House District 17	
+IL House District 18	1	IL House District 18	
+IL House District 19	1	IL House District 19	
+IL House District 20	1	IL House District 20	
+IL House District 21	1	IL House District 21	
+IL House District 22	1	IL House District 22	
+IL House District 23	1	IL House District 23	
+IL House District 24	1	IL House District 24	
+IL House District 25	1	IL House District 25	
+IL House District 26	1	IL House District 26	
+IL House District 27	1	IL House District 27	
+IL House District 28	1	IL House District 28	
+IL House District 29	1	IL House District 29	
+IL House District 30	1	IL House District 30	
+IL House District 31	1	IL House District 31	
+IL House District 32	1	IL House District 32	
+IL House District 33	1	IL House District 33	
+IL House District 34	1	IL House District 34	
+IL House District 35	1	IL House District 35	
+IL House District 36	1	IL House District 36	
+IL House District 37	1	IL House District 37	
+IL House District 38	1	IL House District 38	
+IL House District 39	1	IL House District 39	
+IL House District 40	1	IL House District 40	
+IL House District 41	1	IL House District 41	
+IL House District 42	1	IL House District 42	
+IL House District 43	1	IL House District 43	
+IL House District 44	1	IL House District 44	
+IL House District 45	1	IL House District 45	
+IL House District 46	1	IL House District 46	
+IL House District 47	1	IL House District 47	
+IL House District 48	1	IL House District 48	
+IL House District 49	1	IL House District 49	
+IL House District 50	1	IL House District 50	
+IL House District 51	1	IL House District 51	
+IL House District 52	1	IL House District 52	
+IL House District 53	1	IL House District 53	
+IL House District 54	1	IL House District 54	
+IL House District 55	1	IL House District 55	
+IL House District 56	1	IL House District 56	
+IL House District 57	1	IL House District 57	
+IL House District 58	1	IL House District 58	
+IL House District 59	1	IL House District 59	
+IL House District 60	1	IL House District 60	
+IL House District 61	1	IL House District 61	
+IL House District 62	1	IL House District 62	
+IL House District 63	1	IL House District 63	
+IL House District 64	1	IL House District 64	
+IL House District 65	1	IL House District 65	
+IL House District 66	1	IL House District 66	
+IL House District 67	1	IL House District 67	
+IL House District 68	1	IL House District 68	
+IL House District 69	1	IL House District 69	
+IL House District 70	1	IL House District 70	
+IL House District 71	1	IL House District 71	
+IL House District 72	1	IL House District 72	
+IL House District 73	1	IL House District 73	
+IL House District 74	1	IL House District 74	
+IL House District 75	1	IL House District 75	
+IL House District 76	1	IL House District 76	
+IL House District 77	1	IL House District 77	
+IL House District 78	1	IL House District 78	
+IL House District 79	1	IL House District 79	
+IL House District 80	1	IL House District 80	
+IL House District 81	1	IL House District 81	
+IL House District 82	1	IL House District 82	
+IL House District 83	1	IL House District 83	
+IL House District 84	1	IL House District 84	
+IL House District 85	1	IL House District 85	
+IL House District 86	1	IL House District 86	
+IL House District 87	1	IL House District 87	
+IL House District 88	1	IL House District 88	
+IL House District 89	1	IL House District 89	
+IL House District 90	1	IL House District 90	
+IL House District 91	1	IL House District 91	
+IL House District 92	1	IL House District 92	
+IL House District 93	1	IL House District 93	
+IL House District 94	1	IL House District 94	
+IL House District 95	1	IL House District 95	
+IL House District 96	1	IL House District 96	
+IL House District 97	1	IL House District 97	
+IL House District 98	1	IL House District 98	
+IL House District 99	1	IL House District 99	
+IL House District 100	1	IL House District 100	
+IL House District 101	1	IL House District 101	
+IL House District 102	1	IL House District 102	
+IL House District 103	1	IL House District 103	
+IL House District 104	1	IL House District 104	
+IL House District 105	1	IL House District 105	
+IL House District 106	1	IL House District 106	
+IL House District 107	1	IL House District 107	
+IL House District 108	1	IL House District 108	
+IL House District 109	1	IL House District 109	
+IL House District 110	1	IL House District 110	
+IL House District 111	1	IL House District 111	
+IL House District 112	1	IL House District 112	
+IL House District 113	1	IL House District 113	
+IL House District 114	1	IL House District 114	
+IL House District 115	1	IL House District 115	
+IL House District 116	1	IL House District 116	
+IL House District 117	1	IL House District 117	
+IL House District 118	1	IL House District 118	
+IL Senate District 1	1	IL Senate District 1	
+IL Senate District 2	1	IL Senate District 2	
+IL Senate District 3	1	IL Senate District 3	
+IL Senate District 4	1	IL Senate District 4	
+IL Senate District 5	1	IL Senate District 5	
+IL Senate District 6	1	IL Senate District 6	
+IL Senate District 7	1	IL Senate District 7	
+IL Senate District 8	1	IL Senate District 8	
+IL Senate District 9	1	IL Senate District 9	
+IL Senate District 10	1	IL Senate District 10	
+IL Senate District 11	1	IL Senate District 11	
+IL Senate District 12	1	IL Senate District 12	
+IL Senate District 13	1	IL Senate District 13	
+IL Senate District 14	1	IL Senate District 14	
+IL Senate District 15	1	IL Senate District 15	
+IL Senate District 16	1	IL Senate District 16	
+IL Senate District 17	1	IL Senate District 17	
+IL Senate District 18	1	IL Senate District 18	
+IL Senate District 19	1	IL Senate District 19	
+IL Senate District 20	1	IL Senate District 20	
+IL Senate District 21	1	IL Senate District 21	
+IL Senate District 22	1	IL Senate District 22	
+IL Senate District 23	1	IL Senate District 23	
+IL Senate District 24	1	IL Senate District 24	
+IL Senate District 25	1	IL Senate District 25	
+IL Senate District 26	1	IL Senate District 26	
+IL Senate District 27	1	IL Senate District 27	
+IL Senate District 28	1	IL Senate District 28	
+IL Senate District 29	1	IL Senate District 29	
+IL Senate District 30	1	IL Senate District 30	
+IL Senate District 31	1	IL Senate District 31	
+IL Senate District 32	1	IL Senate District 32	
+IL Senate District 33	1	IL Senate District 33	
+IL Senate District 34	1	IL Senate District 34	
+IL Senate District 35	1	IL Senate District 35	
+IL Senate District 36	1	IL Senate District 36	
+IL Senate District 37	1	IL Senate District 37	
+IL Senate District 38	1	IL Senate District 38	
+IL Senate District 39	1	IL Senate District 39	
+IL Senate District 40	1	IL Senate District 40	
+IL Senate District 41	1	IL Senate District 41	
+IL Senate District 42	1	IL Senate District 42	
+IL Senate District 43	1	IL Senate District 43	
+IL Senate District 44	1	IL Senate District 44	
+IL Senate District 45	1	IL Senate District 45	
+IL Senate District 46	1	IL Senate District 46	
+IL Senate District 47	1	IL Senate District 47	
+IL Senate District 48	1	IL Senate District 48	
+IL Senate District 49	1	IL Senate District 49	
+IL Senate District 50	1	IL Senate District 50	
+IL Senate District 51	1	IL Senate District 51	
+IL Senate District 52	1	IL Senate District 52	
+IL Senate District 53	1	IL Senate District 53	
+IL Senate District 54	1	IL Senate District 54	
+IL Senate District 55	1	IL Senate District 55	
+IL Senate District 56	1	IL Senate District 56	
+IL Senate District 57	1	IL Senate District 57	
+IL Senate District 58	1	IL Senate District 58	
+IL Senate District 59	1	IL Senate District 59	
+US House IL District 1	1	US House IL District 1	
+US House IL District 2	1	US House IL District 2	
+US House IL District 3	1	US House IL District 3	
+US House IL District 4	1	US House IL District 4	
+US House IL District 5	1	US House IL District 5	
+US House IL District 6	1	US House IL District 6	
+US House IL District 7	1	US House IL District 7	
+US House IL District 8	1	US House IL District 8	
+US House IL District 9	1	US House IL District 9	
+US House IL District 10	1	US House IL District 10	
+US House IL District 11	1	US House IL District 11	
+US House IL District 12	1	US House IL District 12	
+US House IL District 13	1	US House IL District 13	
+US House IL District 14	1	US House IL District 14	
+US House IL District 15	1	US House IL District 15	
+US House IL District 16	1	US House IL District 16	
+US House IL District 17	1	US House IL District 17	
+US House IL District 18	1	US House IL District 18	
+US President (IL)	1	US President (IL)	
+IL Governor	1	IL Governor	
+US Senate IL	1	US Senate IL	
+IL Attorney General	1	IL Attorney General	
+IL Lieutenant Governor	1	IL Lieutenant Governor	
+IL Treasurer	1	IL Treasurer	
