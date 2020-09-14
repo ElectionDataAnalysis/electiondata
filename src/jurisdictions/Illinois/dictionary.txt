@@ -197,8 +197,12 @@ CandidateContest	US House IL District 18	18th CONGRESS
 CandidateContest	US President (IL)	PRESIDENT AND VICE PRESIDENT
 CandidateContest	US Senate IL	UNITED STATES SENATOR
 CandidateContest	IL Comptroller	COMPTROLLER
-
-
+Election	2016 General	GE 2016
+Party	Republican Party	REPUBLICAN
+Party	Democratic Party	DEMOCRATIC
+Party	Green Party	GREEN
+Party	Independent Party	INDEPENDENT
+Party	Libertarian Party	LIBERTARIAN
 
 Candidate	CHRISTOPHER "C.D."DAVIDSMEYER	CHRISTOPHER "C.D.";DAVIDSMEYER
 Candidate	CHRISTINELAW	CHRISTINE;LAW
