@@ -1,4 +1,205 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	IL House District 1	1ST REPRESENTATIVE
+CandidateContest	IL House District 2	2ND REPRESENTATIVE
+CandidateContest	IL House District 3	3RD REPRESENTATIVE
+CandidateContest	IL House District 4	4TH REPRESENTATIVE
+CandidateContest	IL House District 5	5TH REPRESENTATIVE
+CandidateContest	IL House District 6	6TH REPRESENTATIVE
+CandidateContest	IL House District 7	7TH REPRESENTATIVE
+CandidateContest	IL House District 8	8TH REPRESENTATIVE
+CandidateContest	IL House District 9	9TH REPRESENTATIVE
+CandidateContest	IL House District 10	10TH REPRESENTATIVE
+CandidateContest	IL House District 11	11TH REPRESENTATIVE
+CandidateContest	IL House District 12	12TH REPRESENTATIVE
+CandidateContest	IL House District 13	13TH REPRESENTATIVE
+CandidateContest	IL House District 14	14TH REPRESENTATIVE
+CandidateContest	IL House District 15	15TH REPRESENTATIVE
+CandidateContest	IL House District 16	16TH REPRESENTATIVE
+CandidateContest	IL House District 17	17TH REPRESENTATIVE
+CandidateContest	IL House District 18	18TH REPRESENTATIVE
+CandidateContest	IL House District 19	19TH REPRESENTATIVE
+CandidateContest	IL House District 20	20TH REPRESENTATIVE
+CandidateContest	IL House District 21	21ST REPRESENTATIVE
+CandidateContest	IL House District 22	22ND REPRESENTATIVE
+CandidateContest	IL House District 23	23RD REPRESENTATIVE
+CandidateContest	IL House District 24	24TH REPRESENTATIVE
+CandidateContest	IL House District 25	25TH REPRESENTATIVE
+CandidateContest	IL House District 26	26TH REPRESENTATIVE
+CandidateContest	IL House District 27	27TH REPRESENTATIVE
+CandidateContest	IL House District 28	28TH REPRESENTATIVE
+CandidateContest	IL House District 29	29TH REPRESENTATIVE
+CandidateContest	IL House District 30	30TH REPRESENTATIVE
+CandidateContest	IL House District 31	31ST REPRESENTATIVE
+CandidateContest	IL House District 32	32ND REPRESENTATIVE
+CandidateContest	IL House District 33	33RD REPRESENTATIVE
+CandidateContest	IL House District 34	34TH REPRESENTATIVE
+CandidateContest	IL House District 35	35TH REPRESENTATIVE
+CandidateContest	IL House District 36	36TH REPRESENTATIVE
+CandidateContest	IL House District 37	37TH REPRESENTATIVE
+CandidateContest	IL House District 38	38TH REPRESENTATIVE
+CandidateContest	IL House District 39	39TH REPRESENTATIVE
+CandidateContest	IL House District 40	40TH REPRESENTATIVE
+CandidateContest	IL House District 41	41ST REPRESENTATIVE
+CandidateContest	IL House District 42	42ND REPRESENTATIVE
+CandidateContest	IL House District 43	43RD REPRESENTATIVE
+CandidateContest	IL House District 44	44TH REPRESENTATIVE
+CandidateContest	IL House District 45	45TH REPRESENTATIVE
+CandidateContest	IL House District 46	46TH REPRESENTATIVE
+CandidateContest	IL House District 47	47TH REPRESENTATIVE
+CandidateContest	IL House District 48	48TH REPRESENTATIVE
+CandidateContest	IL House District 49	49TH REPRESENTATIVE
+CandidateContest	IL House District 50	50TH REPRESENTATIVE
+CandidateContest	IL House District 51	51ST REPRESENTATIVE
+CandidateContest	IL House District 52	52ND REPRESENTATIVE
+CandidateContest	IL House District 53	53RD REPRESENTATIVE
+CandidateContest	IL House District 54	54TH REPRESENTATIVE
+CandidateContest	IL House District 55	55TH REPRESENTATIVE
+CandidateContest	IL House District 56	56TH REPRESENTATIVE
+CandidateContest	IL House District 57	57TH REPRESENTATIVE
+CandidateContest	IL House District 58	58TH REPRESENTATIVE
+CandidateContest	IL House District 59	59TH REPRESENTATIVE
+CandidateContest	IL House District 60	60TH REPRESENTATIVE
+CandidateContest	IL House District 61	61ST REPRESENTATIVE
+CandidateContest	IL House District 62	62ND REPRESENTATIVE
+CandidateContest	IL House District 63	63RD REPRESENTATIVE
+CandidateContest	IL House District 64	64TH REPRESENTATIVE
+CandidateContest	IL House District 65	65TH REPRESENTATIVE
+CandidateContest	IL House District 66	66TH REPRESENTATIVE
+CandidateContest	IL House District 67	67TH REPRESENTATIVE
+CandidateContest	IL House District 68	68TH REPRESENTATIVE
+CandidateContest	IL House District 69	69TH REPRESENTATIVE
+CandidateContest	IL House District 70	70TH REPRESENTATIVE
+CandidateContest	IL House District 71	71ST REPRESENTATIVE
+CandidateContest	IL House District 72	72ND REPRESENTATIVE
+CandidateContest	IL House District 73	73RD REPRESENTATIVE
+CandidateContest	IL House District 74	74TH REPRESENTATIVE
+CandidateContest	IL House District 75	75TH REPRESENTATIVE
+CandidateContest	IL House District 76	76TH REPRESENTATIVE
+CandidateContest	IL House District 77	77TH REPRESENTATIVE
+CandidateContest	IL House District 78	78TH REPRESENTATIVE
+CandidateContest	IL House District 79	79TH REPRESENTATIVE
+CandidateContest	IL House District 80	80TH REPRESENTATIVE
+CandidateContest	IL House District 81	81ST REPRESENTATIVE
+CandidateContest	IL House District 82	82ND REPRESENTATIVE
+CandidateContest	IL House District 83	83RD REPRESENTATIVE
+CandidateContest	IL House District 84	84TH REPRESENTATIVE
+CandidateContest	IL House District 85	85TH REPRESENTATIVE
+CandidateContest	IL House District 86	86TH REPRESENTATIVE
+CandidateContest	IL House District 87	87TH REPRESENTATIVE
+CandidateContest	IL House District 88	88TH REPRESENTATIVE
+CandidateContest	IL House District 89	89TH REPRESENTATIVE
+CandidateContest	IL House District 90	90TH REPRESENTATIVE
+CandidateContest	IL House District 91	91ST REPRESENTATIVE
+CandidateContest	IL House District 92	92ND REPRESENTATIVE
+CandidateContest	IL House District 93	93RD REPRESENTATIVE
+CandidateContest	IL House District 94	94TH REPRESENTATIVE
+CandidateContest	IL House District 95	95TH REPRESENTATIVE
+CandidateContest	IL House District 96	96TH REPRESENTATIVE
+CandidateContest	IL House District 97	97TH REPRESENTATIVE
+CandidateContest	IL House District 98	98TH REPRESENTATIVE
+CandidateContest	IL House District 99	99TH REPRESENTATIVE
+CandidateContest	IL House District 100	100TH REPRESENTATIVE
+CandidateContest	IL House District 101	101ST REPRESENTATIVE
+CandidateContest	IL House District 102	102ND REPRESENTATIVE
+CandidateContest	IL House District 103	103RD REPRESENTATIVE
+CandidateContest	IL House District 104	104TH REPRESENTATIVE
+CandidateContest	IL House District 105	105TH REPRESENTATIVE
+CandidateContest	IL House District 106	106TH REPRESENTATIVE
+CandidateContest	IL House District 107	107TH REPRESENTATIVE
+CandidateContest	IL House District 108	108TH REPRESENTATIVE
+CandidateContest	IL House District 109	109TH REPRESENTATIVE
+CandidateContest	IL House District 110	110TH REPRESENTATIVE
+CandidateContest	IL House District 111	111TH REPRESENTATIVE
+CandidateContest	IL House District 112	112TH REPRESENTATIVE
+CandidateContest	IL House District 113	113TH REPRESENTATIVE
+CandidateContest	IL House District 114	114TH REPRESENTATIVE
+CandidateContest	IL House District 115	115TH REPRESENTATIVE
+CandidateContest	IL House District 116	116TH REPRESENTATIVE
+CandidateContest	IL House District 117	117TH REPRESENTATIVE
+CandidateContest	IL House District 118	118TH REPRESENTATIVE
+CandidateContest	IL Senate District 1	1ST SENATE
+CandidateContest	IL Senate District 2	2nd SENATE
+CandidateContest	IL Senate District 3	3rd SENATE
+CandidateContest	IL Senate District 4	4th SENATE
+CandidateContest	IL Senate District 5	5th SENATE
+CandidateContest	IL Senate District 6	6th SENATE
+CandidateContest	IL Senate District 7	7th SENATE
+CandidateContest	IL Senate District 8	8th SENATE
+CandidateContest	IL Senate District 9	9th SENATE
+CandidateContest	IL Senate District 10	10th SENATE
+CandidateContest	IL Senate District 11	11th SENATE
+CandidateContest	IL Senate District 12	12th SENATE
+CandidateContest	IL Senate District 13	13th SENATE
+CandidateContest	IL Senate District 14	14th SENATE
+CandidateContest	IL Senate District 15	15th SENATE
+CandidateContest	IL Senate District 16	16th SENATE
+CandidateContest	IL Senate District 17	17th SENATE
+CandidateContest	IL Senate District 18	18th SENATE
+CandidateContest	IL Senate District 19	19th SENATE
+CandidateContest	IL Senate District 20	20th SENATE
+CandidateContest	IL Senate District 21	21st SENATE
+CandidateContest	IL Senate District 22	22nd SENATE
+CandidateContest	IL Senate District 23	23rd SENATE
+CandidateContest	IL Senate District 24	24th SENATE
+CandidateContest	IL Senate District 25	25th SENATE
+CandidateContest	IL Senate District 26	26th SENATE
+CandidateContest	IL Senate District 27	27th SENATE
+CandidateContest	IL Senate District 28	28th SENATE
+CandidateContest	IL Senate District 29	29th SENATE
+CandidateContest	IL Senate District 30	30th SENATE
+CandidateContest	IL Senate District 31	31st SENATE
+CandidateContest	IL Senate District 32	32nd SENATE
+CandidateContest	IL Senate District 33	33rd SENATE
+CandidateContest	IL Senate District 34	34th SENATE
+CandidateContest	IL Senate District 35	35th SENATE
+CandidateContest	IL Senate District 36	36th SENATE
+CandidateContest	IL Senate District 37	37th SENATE
+CandidateContest	IL Senate District 38	38th SENATE
+CandidateContest	IL Senate District 39	39th SENATE
+CandidateContest	IL Senate District 40	40th SENATE
+CandidateContest	IL Senate District 41	41st SENATE
+CandidateContest	IL Senate District 42	42nd SENATE
+CandidateContest	IL Senate District 43	43rd SENATE
+CandidateContest	IL Senate District 44	44th SENATE
+CandidateContest	IL Senate District 45	45th SENATE
+CandidateContest	IL Senate District 46	46th SENATE
+CandidateContest	IL Senate District 47	47th SENATE
+CandidateContest	IL Senate District 48	48th SENATE
+CandidateContest	IL Senate District 49	49th SENATE
+CandidateContest	IL Senate District 50	50th SENATE
+CandidateContest	IL Senate District 51	51st SENATE
+CandidateContest	IL Senate District 52	52nd SENATE
+CandidateContest	IL Senate District 53	53rd SENATE
+CandidateContest	IL Senate District 54	54th SENATE
+CandidateContest	IL Senate District 55	55th SENATE
+CandidateContest	IL Senate District 56	56th SENATE
+CandidateContest	IL Senate District 57	57th SENATE
+CandidateContest	IL Senate District 58	58th SENATE
+CandidateContest	IL Senate District 59	59th SENATE
+CandidateContest	US House IL District 1	1ST CONGRESS
+CandidateContest	US House IL District 2	2nd CONGRESS
+CandidateContest	US House IL District 3	3rd CONGRESS
+CandidateContest	US House IL District 4	4th CONGRESS
+CandidateContest	US House IL District 5	5th CONGRESS
+CandidateContest	US House IL District 6	6th CONGRESS
+CandidateContest	US House IL District 7	7th CONGRESS
+CandidateContest	US House IL District 8	8th CONGRESS
+CandidateContest	US House IL District 9	9th CONGRESS
+CandidateContest	US House IL District 10	10th CONGRESS
+CandidateContest	US House IL District 11	11th CONGRESS
+CandidateContest	US House IL District 12	12th CONGRESS
+CandidateContest	US House IL District 13	13th CONGRESS
+CandidateContest	US House IL District 14	14th CONGRESS
+CandidateContest	US House IL District 15	15th CONGRESS
+CandidateContest	US House IL District 16	16th CONGRESS
+CandidateContest	US House IL District 17	17th CONGRESS
+CandidateContest	US House IL District 18	18th CONGRESS
+CandidateContest	US President (IL)	PRESIDENT AND VICE PRESIDENT
+CandidateContest	US Senate IL	UNITED STATES SENATOR
+CandidateContest	IL Comptroller	COMPTROLLER
+
+
+
 Candidate	CHRISTOPHER "C.D."DAVIDSMEYER	CHRISTOPHER "C.D.";DAVIDSMEYER
 Candidate	CHRISTINELAW	CHRISTINE;LAW
 Candidate	BILLMITCHELL	BILL;MITCHELL

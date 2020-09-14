@@ -200,3 +200,4 @@ US Senate IL	1	US Senate IL
 IL Attorney General	1	IL Attorney General	
 IL Lieutenant Governor	1	IL Lieutenant Governor	
 IL Treasurer	1	IL Treasurer	
+IL Comptroller	1	IL Comptroller
