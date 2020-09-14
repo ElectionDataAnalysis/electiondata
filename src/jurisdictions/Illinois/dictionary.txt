@@ -195,7 +195,9 @@ CandidateContest	US House IL District 16	16th CONGRESS
 CandidateContest	US House IL District 17	17th CONGRESS
 CandidateContest	US House IL District 18	18th CONGRESS
 CandidateContest	US President (IL)	PRESIDENT AND VICE PRESIDENT
+CandidateContest	US President (IL)	PRESIDENT
 CandidateContest	IL Governor	GOVERNOR AND LIEUTENANT GOVERNOR
+CandidateContest	IL Governor	GOVERNOR
 CandidateContest	US Senate IL	UNITED STATES SENATOR
 CandidateContest	IL Attorney General	ATTORNEY GENERAL
 CandidateContest	IL Comptroller	COMPTROLLER
@@ -203,6 +205,7 @@ CandidateContest	IL Treasurer	TREASURER
 CandidateContest	IL Secretary of State	SECRETARY OF STATE
 Election	2016 General	GE 2016
 Election	2018 General	GE 2018
+Election	2020 Primary	G9 2020
 Party	Republican Party	REPUBLICAN
 Party	Democratic Party	DEMOCRATIC
 Party	Green Party	GREEN
