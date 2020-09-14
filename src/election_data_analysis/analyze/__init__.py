@@ -38,13 +38,14 @@ def child_rus_by_id(session, parents, ru_type=None):
 
 
 def create_rollup(
-    cursor,
+    session,
     target_dir: str,
     top_ru_id: int,
     sub_rutype_id: int,
     election_id: int,
-    datafile_list=None,
-    by="Id",
+    datafile_list: list = None,
+    by: str = "Id",
+    by_vote_type: bool = False,
 ) -> str:
     """<target_dir> is the directory where the resulting rollup will be stored.
     <election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
@@ -56,8 +57,10 @@ def create_rollup(
     If no <datafile_list> is given, return all results for the given election.
     """
 
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
     if not datafile_list:
-        datafile_list, e = db.data_file_list(cursor, [election_id], by="Id")
+        datafile_list, e = db.data_file_list(cursor, election_id, by="Id")
         if e:
             return e
         by = "Id"
@@ -106,22 +109,21 @@ def create_rollup(
                 f"There is already a file called {rollup_file}. Pick another name.\n"
             )
 
-        err = db.export_rollup_to_csv(
+        df, err_str = db.export_rollup_from_db(
             cursor,
             top_ru,
             sub_rutype,
             contest_type,
             datafile_list,
-            os.path.join(leaf_dir, rollup_file),
             by=by,
             exclude_total=exclude_total,
+            by_vote_type=by_vote_type,
         )
-        if err:
-            err_str = err
-        else:
+        if not err_str:
             # create record for inventory.txt
             inv_df = inv_df.append(inventory, ignore_index=True).fillna("")
             err_str = None
+            df.to_csv(os.path.join(leaf_dir, rollup_file), index=False, sep="\t")
 
     # export to inventory file
     inv_df.to_csv(inventory_file, index=False, sep="\t")
