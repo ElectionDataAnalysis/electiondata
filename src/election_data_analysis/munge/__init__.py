@@ -14,7 +14,7 @@ class MungeError(Exception):
 
 
 def generic_clean(df: pd.DataFrame) -> pd.DataFrame:
-    """Replaces nulls, strips whitespace."""
+    """Replaces nulls, strips external whitespace, compresses any internal whitespace."""
     # TODO put all info about data cleaning into README.md (e.g., whitespace strip)
     # TODO return error if cleaning fails, including dtypes of columns
     working = df.copy()
@@ -33,8 +33,10 @@ def generic_clean(df: pd.DataFrame) -> pd.DataFrame:
                 pass
             try:
                 # strip extraneous whitespace
-                working[c] = working[c].apply(lambda x: x.strip())
-            except AttributeError:
+                working[c] = working[c].apply(
+                    compress_whitespace
+                )
+            except (AttributeError,TypeError):
                 pass
     return working
 

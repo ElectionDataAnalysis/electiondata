@@ -331,8 +331,8 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> dict:
     err = None
     juris_name = Path(juris_path).name
 
-    project_root = Path(__file__).parents[2].absolute()
-    templates_dir = os.path.join(project_root, "templates/jurisdiction_templates")
+    project_root = Path(__file__).parents[1].absolute()
+    templates_dir = os.path.join(project_root, "juris_and_munger", "jurisdiction_templates")
     # notify user of any extraneous files
     extraneous = [
         f
@@ -430,7 +430,7 @@ def check_munger_files(munger_path: str) -> dict:
     """
 
     err = None
-    project_root = Path(__file__).parents[2].absolute()
+    project_root = Path(__file__).parents[1].absolute()
     munger_name = Path(munger_path).name
 
     # check whether directory exists
@@ -441,7 +441,7 @@ def check_munger_files(munger_path: str) -> dict:
         return err
 
     # check whether all files exist
-    templates = os.path.join(project_root, "templates/munger_templates")
+    templates = os.path.join(project_root, "juris_and_munger", "munger_templates")
     template_with_extension_list = os.listdir(templates)
     for munger_file in template_with_extension_list:
         # TODO create optional template for auxiliary.txt
@@ -671,7 +671,7 @@ def check_nulls(element, f_path, project_root):
     # TODO automatically drop null rows
     nn_path = os.path.join(
         project_root,
-        "election_data_analysis/CDF_schema_def_info/elements",
+        "CDF_schema_def_info","elements",
         element,
         "not_null_fields.txt",
     )
@@ -790,15 +790,20 @@ def juris_dependency_dictionary():
 #  Enforce name change? Or just suggest?
 def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
     """TODO"""
-    project_root = Path(__file__).parents[2].absolute()
+    project_root = Path(__file__).parents[1].absolute()
     cdf_schema_def_dir = os.path.join(
         project_root,
-        "election_data_analysis/CDF_schema_def_info",
+        "CDF_schema_def_info",
     )
     element_fpath = os.path.join(juris_path, f"{element}.txt")
     if not os.path.exists(element_fpath):
-        error[f"{element}.txt"] = "file not found"
-        return
+        error = ui.add_new_error(
+            error,
+            "jurisdiction",
+            Path(juris_path).name,
+            f"File {element}.txt not found"
+        )
+        return error
     df = pd.read_csv(
         element_fpath, sep="\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL
     ).fillna("none or unknown")
@@ -810,10 +815,12 @@ def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
     # dedupe df
     dupes, df = ui.find_dupes(df)
     if not dupes.empty:
-        print(f"WARNING: duplicates removed from dataframe, may indicate a problem.\n")
-        if not element in error:
-            error[element] = {}
-        error[element]["found_duplicates"] = True
+        error = ui.add_new_error(
+            error,
+            "warn-jurisdiction",
+            Path(juris_path).name,
+            f"Duplicates were found in {element}.txt"
+        )
 
     # replace plain text enumerations from file system with id/othertext from db
     enum_file = os.path.join(
@@ -845,11 +852,14 @@ def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
             )
 
     # commit info in df to corresponding cdf table to db
-    err = db.insert_to_cdf_db(session.bind, df, element)
-    if err:
-        if element not in error:
-            error[element] = {}
-        error[element]["database"] = err
+    err_string = db.insert_to_cdf_db(session.bind, df, element)
+    if err_string:
+        error = ui.add_new_error(
+            error,
+            "system",
+            "juris_and_munger.load_juris_dframe_into_cdf",
+            f"Error loading {element} to database: {e}"
+        )
     return error
 
 
@@ -889,10 +899,12 @@ def get_ids_for_foreign_keys(
             )
         else:
             if not element in error:
-                error[element] = {}
-            error[element][
-                "foreign_key"
-            ] = f"For some {element} records, {foreign_elt} was not found"
+                error = ui.add_new_error(
+                    error,
+                    "system",
+                    "juris_and_munger.get_ids_for_foreign_keys",
+                    f"For some {element} records, {foreign_elt} was not found",
+                )
     return df
 
 
