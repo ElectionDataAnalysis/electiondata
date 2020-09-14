@@ -488,6 +488,7 @@ def assign_anomaly_score(data):
                     .sort_values("ReportingUnit_Id")
                     .reset_index()
                 )
+                pivot_df = pivot_df[pivot_df["reporting_unit_total"] > 0]
                 pivot_df_values = pivot_df.drop(
                     columns=["ReportingUnit_Id", "reporting_unit_total"]
                 )
@@ -621,9 +622,10 @@ def density_score(points):
 def calculate_margins(data):
     """Takes a dataframe with an anomaly score and assigns
     a margin score"""
-    rank_1_df = data[data["rank"] == 1][["unit_id", "ReportingUnit_Id", "Count"]]
+    rank_1_df = data[data["rank"] == 1][["unit_id", "ReportingUnit_Id", "CountItemType", "Count"]]
+    rank_1_df = rank_1_df.drop_duplicates() 
     rank_1_df = rank_1_df.rename(columns={"Count": "rank_1_total"})
-    data = data.merge(rank_1_df, how="inner", on=["unit_id", "ReportingUnit_Id"])
+    data = data.merge(rank_1_df, how="inner", on=["unit_id", "ReportingUnit_Id", "CountItemType"])
     data["margins"] = data["rank_1_total"] - data["Count"]
     data["margins_pct"] = (data["rank_1_total"] - data["Count"]) / (
         data["rank_1_total"] + data["Count"]
@@ -648,7 +650,7 @@ def calculate_votes_at_stake(data):
             anomalous_df = temp_df[
                 (temp_df["ReportingUnit_Id"] == reporting_unit_id)
                 & ((temp_df["score"] == max_score) | (temp_df["rank"] == 1))
-            ].sort_values("rank", ascending=False)
+            ].sort_values("rank", ascending=False).drop_duplicates()
 
             # get a df of the pairing with closest margin to the most anomalous
             # Margins could be + or - so need to handle both
