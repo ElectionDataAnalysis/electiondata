@@ -35,7 +35,7 @@ You will need `python3`. If you use the alias `python`, make sure it points to `
 
 The system runs out of the box with a postgresql database; to use other varieties of SQL, you will need to modify the routines in the `db_routines` module. 
 
-Store your database login credentials stored in a file (template is `src/templates/parameter_file_templates/database.par`)
+Store your database login credentials stored in a file (template is `src/parameter_file_templates/run_time.ini.template`)
   
 ### Jurisdiction information
 Because each original raw results file comes from a particular election agency, and each election agency has a fixed jurisdiction, it is natural to organize information by jurisdiction. 
