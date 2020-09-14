@@ -14,3 +14,4 @@ easygui
 xlrd
 sqlalchemy_utils
 plotly
+pytest
