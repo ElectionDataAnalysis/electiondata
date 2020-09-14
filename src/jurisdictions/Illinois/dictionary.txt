@@ -203,6 +203,306 @@ Party	Democratic Party	DEMOCRATIC
 Party	Green Party	GREEN
 Party	Independent Party	INDEPENDENT
 Party	Libertarian Party	LIBERTARIAN
+ReportingUnit	Illinois;IL House District 1	Illinois;IL House District 1
+ReportingUnit	Illinois;IL House District 2	Illinois;IL House District 2
+ReportingUnit	Illinois;IL House District 3	Illinois;IL House District 3
+ReportingUnit	Illinois;IL House District 4	Illinois;IL House District 4
+ReportingUnit	Illinois;IL House District 5	Illinois;IL House District 5
+ReportingUnit	Illinois;IL House District 6	Illinois;IL House District 6
+ReportingUnit	Illinois;IL House District 7	Illinois;IL House District 7
+ReportingUnit	Illinois;IL House District 8	Illinois;IL House District 8
+ReportingUnit	Illinois;IL House District 9	Illinois;IL House District 9
+ReportingUnit	Illinois;IL House District 10	Illinois;IL House District 10
+ReportingUnit	Illinois;IL House District 11	Illinois;IL House District 11
+ReportingUnit	Illinois;IL House District 12	Illinois;IL House District 12
+ReportingUnit	Illinois;IL House District 13	Illinois;IL House District 13
+ReportingUnit	Illinois;IL House District 14	Illinois;IL House District 14
+ReportingUnit	Illinois;IL House District 15	Illinois;IL House District 15
+ReportingUnit	Illinois;IL House District 16	Illinois;IL House District 16
+ReportingUnit	Illinois;IL House District 17	Illinois;IL House District 17
+ReportingUnit	Illinois;IL House District 18	Illinois;IL House District 18
+ReportingUnit	Illinois;IL House District 19	Illinois;IL House District 19
+ReportingUnit	Illinois;IL House District 20	Illinois;IL House District 20
+ReportingUnit	Illinois;IL House District 21	Illinois;IL House District 21
+ReportingUnit	Illinois;IL House District 22	Illinois;IL House District 22
+ReportingUnit	Illinois;IL House District 23	Illinois;IL House District 23
+ReportingUnit	Illinois;IL House District 24	Illinois;IL House District 24
+ReportingUnit	Illinois;IL House District 25	Illinois;IL House District 25
+ReportingUnit	Illinois;IL House District 26	Illinois;IL House District 26
+ReportingUnit	Illinois;IL House District 27	Illinois;IL House District 27
+ReportingUnit	Illinois;IL House District 28	Illinois;IL House District 28
+ReportingUnit	Illinois;IL House District 29	Illinois;IL House District 29
+ReportingUnit	Illinois;IL House District 30	Illinois;IL House District 30
+ReportingUnit	Illinois;IL House District 31	Illinois;IL House District 31
+ReportingUnit	Illinois;IL House District 32	Illinois;IL House District 32
+ReportingUnit	Illinois;IL House District 33	Illinois;IL House District 33
+ReportingUnit	Illinois;IL House District 34	Illinois;IL House District 34
+ReportingUnit	Illinois;IL House District 35	Illinois;IL House District 35
+ReportingUnit	Illinois;IL House District 36	Illinois;IL House District 36
+ReportingUnit	Illinois;IL House District 37	Illinois;IL House District 37
+ReportingUnit	Illinois;IL House District 38	Illinois;IL House District 38
+ReportingUnit	Illinois;IL House District 39	Illinois;IL House District 39
+ReportingUnit	Illinois;IL House District 40	Illinois;IL House District 40
+ReportingUnit	Illinois;IL House District 41	Illinois;IL House District 41
+ReportingUnit	Illinois;IL House District 42	Illinois;IL House District 42
+ReportingUnit	Illinois;IL House District 43	Illinois;IL House District 43
+ReportingUnit	Illinois;IL House District 44	Illinois;IL House District 44
+ReportingUnit	Illinois;IL House District 45	Illinois;IL House District 45
+ReportingUnit	Illinois;IL House District 46	Illinois;IL House District 46
+ReportingUnit	Illinois;IL House District 47	Illinois;IL House District 47
+ReportingUnit	Illinois;IL House District 48	Illinois;IL House District 48
+ReportingUnit	Illinois;IL House District 49	Illinois;IL House District 49
+ReportingUnit	Illinois;IL House District 50	Illinois;IL House District 50
+ReportingUnit	Illinois;IL House District 51	Illinois;IL House District 51
+ReportingUnit	Illinois;IL House District 52	Illinois;IL House District 52
+ReportingUnit	Illinois;IL House District 53	Illinois;IL House District 53
+ReportingUnit	Illinois;IL House District 54	Illinois;IL House District 54
+ReportingUnit	Illinois;IL House District 55	Illinois;IL House District 55
+ReportingUnit	Illinois;IL House District 56	Illinois;IL House District 56
+ReportingUnit	Illinois;IL House District 57	Illinois;IL House District 57
+ReportingUnit	Illinois;IL House District 58	Illinois;IL House District 58
+ReportingUnit	Illinois;IL House District 59	Illinois;IL House District 59
+ReportingUnit	Illinois;IL House District 60	Illinois;IL House District 60
+ReportingUnit	Illinois;IL House District 61	Illinois;IL House District 61
+ReportingUnit	Illinois;IL House District 62	Illinois;IL House District 62
+ReportingUnit	Illinois;IL House District 63	Illinois;IL House District 63
+ReportingUnit	Illinois;IL House District 64	Illinois;IL House District 64
+ReportingUnit	Illinois;IL House District 65	Illinois;IL House District 65
+ReportingUnit	Illinois;IL House District 66	Illinois;IL House District 66
+ReportingUnit	Illinois;IL House District 67	Illinois;IL House District 67
+ReportingUnit	Illinois;IL House District 68	Illinois;IL House District 68
+ReportingUnit	Illinois;IL House District 69	Illinois;IL House District 69
+ReportingUnit	Illinois;IL House District 70	Illinois;IL House District 70
+ReportingUnit	Illinois;IL House District 71	Illinois;IL House District 71
+ReportingUnit	Illinois;IL House District 72	Illinois;IL House District 72
+ReportingUnit	Illinois;IL House District 73	Illinois;IL House District 73
+ReportingUnit	Illinois;IL House District 74	Illinois;IL House District 74
+ReportingUnit	Illinois;IL House District 75	Illinois;IL House District 75
+ReportingUnit	Illinois;IL House District 76	Illinois;IL House District 76
+ReportingUnit	Illinois;IL House District 77	Illinois;IL House District 77
+ReportingUnit	Illinois;IL House District 78	Illinois;IL House District 78
+ReportingUnit	Illinois;IL House District 79	Illinois;IL House District 79
+ReportingUnit	Illinois;IL House District 80	Illinois;IL House District 80
+ReportingUnit	Illinois;IL House District 81	Illinois;IL House District 81
+ReportingUnit	Illinois;IL House District 82	Illinois;IL House District 82
+ReportingUnit	Illinois;IL House District 83	Illinois;IL House District 83
+ReportingUnit	Illinois;IL House District 84	Illinois;IL House District 84
+ReportingUnit	Illinois;IL House District 85	Illinois;IL House District 85
+ReportingUnit	Illinois;IL House District 86	Illinois;IL House District 86
+ReportingUnit	Illinois;IL House District 87	Illinois;IL House District 87
+ReportingUnit	Illinois;IL House District 88	Illinois;IL House District 88
+ReportingUnit	Illinois;IL House District 89	Illinois;IL House District 89
+ReportingUnit	Illinois;IL House District 90	Illinois;IL House District 90
+ReportingUnit	Illinois;IL House District 91	Illinois;IL House District 91
+ReportingUnit	Illinois;IL House District 92	Illinois;IL House District 92
+ReportingUnit	Illinois;IL House District 93	Illinois;IL House District 93
+ReportingUnit	Illinois;IL House District 94	Illinois;IL House District 94
+ReportingUnit	Illinois;IL House District 95	Illinois;IL House District 95
+ReportingUnit	Illinois;IL House District 96	Illinois;IL House District 96
+ReportingUnit	Illinois;IL House District 97	Illinois;IL House District 97
+ReportingUnit	Illinois;IL House District 98	Illinois;IL House District 98
+ReportingUnit	Illinois;IL House District 99	Illinois;IL House District 99
+ReportingUnit	Illinois;IL House District 100	Illinois;IL House District 100
+ReportingUnit	Illinois;IL House District 101	Illinois;IL House District 101
+ReportingUnit	Illinois;IL House District 102	Illinois;IL House District 102
+ReportingUnit	Illinois;IL House District 103	Illinois;IL House District 103
+ReportingUnit	Illinois;IL House District 104	Illinois;IL House District 104
+ReportingUnit	Illinois;IL House District 105	Illinois;IL House District 105
+ReportingUnit	Illinois;IL House District 106	Illinois;IL House District 106
+ReportingUnit	Illinois;IL House District 107	Illinois;IL House District 107
+ReportingUnit	Illinois;IL House District 108	Illinois;IL House District 108
+ReportingUnit	Illinois;IL House District 109	Illinois;IL House District 109
+ReportingUnit	Illinois;IL House District 110	Illinois;IL House District 110
+ReportingUnit	Illinois;IL House District 111	Illinois;IL House District 111
+ReportingUnit	Illinois;IL House District 112	Illinois;IL House District 112
+ReportingUnit	Illinois;IL House District 113	Illinois;IL House District 113
+ReportingUnit	Illinois;IL House District 114	Illinois;IL House District 114
+ReportingUnit	Illinois;IL House District 115	Illinois;IL House District 115
+ReportingUnit	Illinois;IL House District 116	Illinois;IL House District 116
+ReportingUnit	Illinois;IL House District 117	Illinois;IL House District 117
+ReportingUnit	Illinois;IL House District 118	Illinois;IL House District 118
+ReportingUnit	Illinois;IL Senate District 1	Illinois;IL Senate District 1
+ReportingUnit	Illinois;IL Senate District 2	Illinois;IL Senate District 2
+ReportingUnit	Illinois;IL Senate District 3	Illinois;IL Senate District 3
+ReportingUnit	Illinois;IL Senate District 4	Illinois;IL Senate District 4
+ReportingUnit	Illinois;IL Senate District 5	Illinois;IL Senate District 5
+ReportingUnit	Illinois;IL Senate District 6	Illinois;IL Senate District 6
+ReportingUnit	Illinois;IL Senate District 7	Illinois;IL Senate District 7
+ReportingUnit	Illinois;IL Senate District 8	Illinois;IL Senate District 8
+ReportingUnit	Illinois;IL Senate District 9	Illinois;IL Senate District 9
+ReportingUnit	Illinois;IL Senate District 10	Illinois;IL Senate District 10
+ReportingUnit	Illinois;IL Senate District 11	Illinois;IL Senate District 11
+ReportingUnit	Illinois;IL Senate District 12	Illinois;IL Senate District 12
+ReportingUnit	Illinois;IL Senate District 13	Illinois;IL Senate District 13
+ReportingUnit	Illinois;IL Senate District 14	Illinois;IL Senate District 14
+ReportingUnit	Illinois;IL Senate District 15	Illinois;IL Senate District 15
+ReportingUnit	Illinois;IL Senate District 16	Illinois;IL Senate District 16
+ReportingUnit	Illinois;IL Senate District 17	Illinois;IL Senate District 17
+ReportingUnit	Illinois;IL Senate District 18	Illinois;IL Senate District 18
+ReportingUnit	Illinois;IL Senate District 19	Illinois;IL Senate District 19
+ReportingUnit	Illinois;IL Senate District 20	Illinois;IL Senate District 20
+ReportingUnit	Illinois;IL Senate District 21	Illinois;IL Senate District 21
+ReportingUnit	Illinois;IL Senate District 22	Illinois;IL Senate District 22
+ReportingUnit	Illinois;IL Senate District 23	Illinois;IL Senate District 23
+ReportingUnit	Illinois;IL Senate District 24	Illinois;IL Senate District 24
+ReportingUnit	Illinois;IL Senate District 25	Illinois;IL Senate District 25
+ReportingUnit	Illinois;IL Senate District 26	Illinois;IL Senate District 26
+ReportingUnit	Illinois;IL Senate District 27	Illinois;IL Senate District 27
+ReportingUnit	Illinois;IL Senate District 28	Illinois;IL Senate District 28
+ReportingUnit	Illinois;IL Senate District 29	Illinois;IL Senate District 29
+ReportingUnit	Illinois;IL Senate District 30	Illinois;IL Senate District 30
+ReportingUnit	Illinois;IL Senate District 31	Illinois;IL Senate District 31
+ReportingUnit	Illinois;IL Senate District 32	Illinois;IL Senate District 32
+ReportingUnit	Illinois;IL Senate District 33	Illinois;IL Senate District 33
+ReportingUnit	Illinois;IL Senate District 34	Illinois;IL Senate District 34
+ReportingUnit	Illinois;IL Senate District 35	Illinois;IL Senate District 35
+ReportingUnit	Illinois;IL Senate District 36	Illinois;IL Senate District 36
+ReportingUnit	Illinois;IL Senate District 37	Illinois;IL Senate District 37
+ReportingUnit	Illinois;IL Senate District 38	Illinois;IL Senate District 38
+ReportingUnit	Illinois;IL Senate District 39	Illinois;IL Senate District 39
+ReportingUnit	Illinois;IL Senate District 40	Illinois;IL Senate District 40
+ReportingUnit	Illinois;IL Senate District 41	Illinois;IL Senate District 41
+ReportingUnit	Illinois;IL Senate District 42	Illinois;IL Senate District 42
+ReportingUnit	Illinois;IL Senate District 43	Illinois;IL Senate District 43
+ReportingUnit	Illinois;IL Senate District 44	Illinois;IL Senate District 44
+ReportingUnit	Illinois;IL Senate District 45	Illinois;IL Senate District 45
+ReportingUnit	Illinois;IL Senate District 46	Illinois;IL Senate District 46
+ReportingUnit	Illinois;IL Senate District 47	Illinois;IL Senate District 47
+ReportingUnit	Illinois;IL Senate District 48	Illinois;IL Senate District 48
+ReportingUnit	Illinois;IL Senate District 49	Illinois;IL Senate District 49
+ReportingUnit	Illinois;IL Senate District 50	Illinois;IL Senate District 50
+ReportingUnit	Illinois;IL Senate District 51	Illinois;IL Senate District 51
+ReportingUnit	Illinois;IL Senate District 52	Illinois;IL Senate District 52
+ReportingUnit	Illinois;IL Senate District 53	Illinois;IL Senate District 53
+ReportingUnit	Illinois;IL Senate District 54	Illinois;IL Senate District 54
+ReportingUnit	Illinois;IL Senate District 55	Illinois;IL Senate District 55
+ReportingUnit	Illinois;IL Senate District 56	Illinois;IL Senate District 56
+ReportingUnit	Illinois;IL Senate District 57	Illinois;IL Senate District 57
+ReportingUnit	Illinois;IL Senate District 58	Illinois;IL Senate District 58
+ReportingUnit	Illinois;IL Senate District 59	Illinois;IL Senate District 59
+ReportingUnit	Illinois;US House IL District 1	Illinois;US House IL District 1
+ReportingUnit	Illinois;US House IL District 2	Illinois;US House IL District 2
+ReportingUnit	Illinois;US House IL District 3	Illinois;US House IL District 3
+ReportingUnit	Illinois;US House IL District 4	Illinois;US House IL District 4
+ReportingUnit	Illinois;US House IL District 5	Illinois;US House IL District 5
+ReportingUnit	Illinois;US House IL District 6	Illinois;US House IL District 6
+ReportingUnit	Illinois;US House IL District 7	Illinois;US House IL District 7
+ReportingUnit	Illinois;US House IL District 8	Illinois;US House IL District 8
+ReportingUnit	Illinois;US House IL District 9	Illinois;US House IL District 9
+ReportingUnit	Illinois;US House IL District 10	Illinois;US House IL District 10
+ReportingUnit	Illinois;US House IL District 11	Illinois;US House IL District 11
+ReportingUnit	Illinois;US House IL District 12	Illinois;US House IL District 12
+ReportingUnit	Illinois;US House IL District 13	Illinois;US House IL District 13
+ReportingUnit	Illinois;US House IL District 14	Illinois;US House IL District 14
+ReportingUnit	Illinois;US House IL District 15	Illinois;US House IL District 15
+ReportingUnit	Illinois;US House IL District 16	Illinois;US House IL District 16
+ReportingUnit	Illinois;US House IL District 17	Illinois;US House IL District 17
+ReportingUnit	Illinois;US House IL District 18	Illinois;US House IL District 18
+ReportingUnit	Illinois	Illinois
+ReportingUnit	Illinois;Edwards County	EDWARDS
+ReportingUnit	Illinois;Stark County	STARK
+ReportingUnit	Illinois;Richland County	RICHLAND
+ReportingUnit	Illinois;Pope County	POPE
+ReportingUnit	Illinois;Clay County	CLAY
+ReportingUnit	Illinois;Douglas County	DOUGLAS
+ReportingUnit	Illinois;Kane County	KANE
+ReportingUnit	Illinois;Kendall County	KENDALL
+ReportingUnit	Illinois;St. Clair County	ST. CLAIR
+ReportingUnit	Illinois;Union County	UNION
+ReportingUnit	Illinois;Alexander County	ALEXANDER
+ReportingUnit	Illinois;Hardin County	HARDIN
+ReportingUnit	Illinois;Jasper County	JASPER
+ReportingUnit	Illinois;Lake County	LAKE
+ReportingUnit	Illinois;Rock Island County	ROCK ISLAND
+ReportingUnit	Illinois;Franklin County	FRANKLIN
+ReportingUnit	Illinois;Dewitt County	DeWITT
+ReportingUnit	Illinois;Will County	WILL
+ReportingUnit	Illinois;Knox County	KNOX
+ReportingUnit	Illinois;Winnebago County	WINNEBAGO
+ReportingUnit	Illinois;Clinton County	CLINTON
+ReportingUnit	Illinois;Cook County	COOK
+ReportingUnit	Illinois;Mclean County	McLEAN
+ReportingUnit	Illinois;Hamilton County	HAMILTON
+ReportingUnit	Illinois;Putnam County	PUTNAM
+ReportingUnit	Illinois;Randolph County	RANDOLPH
+ReportingUnit	Illinois;Schuyler County	SCHUYLER
+ReportingUnit	Illinois;Warren County	WARREN
+ReportingUnit	Illinois;Wayne County	WAYNE
+ReportingUnit	Illinois;Vermilion County	VERMILION
+ReportingUnit	Illinois;Marion County	MARION
+ReportingUnit	Illinois;Massac County	MASSAC
+ReportingUnit	Illinois;Mercer County	MERCER
+ReportingUnit	Illinois;Monroe County	MONROE
+ReportingUnit	Illinois;Ogle County	OGLE
+ReportingUnit	Illinois;Pulaski County	PULASKI
+ReportingUnit	Illinois;Ford County	FORD
+ReportingUnit	Illinois;Grundy County	GRUNDY
+ReportingUnit	Illinois;Lasalle County	LaSALLE
+ReportingUnit	Illinois;Lee County	LEE
+ReportingUnit	Illinois;Logan County	LOGAN
+ReportingUnit	Illinois;Madison County	MADISON
+ReportingUnit	Illinois;Perry County	PERRY
+ReportingUnit	Illinois;Scott County	SCOTT
+ReportingUnit	Illinois;Whiteside County	WHITESIDE
+ReportingUnit	Illinois;Hancock County	HANCOCK
+ReportingUnit	Illinois;Macon County	MACON
+ReportingUnit	Illinois;Fayette County	FAYETTE
+ReportingUnit	Illinois;Dekalb County	DeKALB
+ReportingUnit	Illinois;Dupage County	DuPAGE
+ReportingUnit	Illinois;Edgar County	EDGAR
+ReportingUnit	Illinois;Gallatin County	GALLATIN
+ReportingUnit	Illinois;Henderson County	HENDERSON
+ReportingUnit	Illinois;Mcdonough County	McDONOUGH
+ReportingUnit	Illinois;Carroll County	CARROLL
+ReportingUnit	Illinois;Cass County	CASS
+ReportingUnit	Illinois;Champaign County	CHAMPAIGN
+ReportingUnit	Illinois;Christian County	CHRISTIAN
+ReportingUnit	Illinois;Clark County	CLARK
+ReportingUnit	Illinois;Cumberland County	CUMBERLAND
+ReportingUnit	Illinois;Peoria County	PEORIA
+ReportingUnit	Illinois;Washington County	WASHINGTON
+ReportingUnit	Illinois;Adams County	ADAMS
+ReportingUnit	Illinois;Bond County	BOND
+ReportingUnit	Illinois;Brown County	BROWN
+ReportingUnit	Illinois;Calhoun County	CALHOUN
+ReportingUnit	Illinois;Mchenry County	McHENRY
+ReportingUnit	Illinois;Montgomery County	MONTGOMERY
+ReportingUnit	Illinois;Moultrie County	MOULTRIE
+ReportingUnit	Illinois;Saline County	SALINE
+ReportingUnit	Illinois;Stephenson County	STEPHENSON
+ReportingUnit	Illinois;Wabash County	WABASH
+ReportingUnit	Illinois;Boone County	BOONE
+ReportingUnit	Illinois;Effingham County	EFFINGHAM
+ReportingUnit	Illinois;Fulton County	FULTON
+ReportingUnit	Illinois;Kankakee County	KANKAKEE
+ReportingUnit	Illinois;Livingston County	LIVINGSTON
+ReportingUnit	Illinois;Marshall County	MARSHALL
+ReportingUnit	Illinois;Mason County	MASON
+ReportingUnit	Illinois;Morgan County	MORGAN
+ReportingUnit	Illinois;Piatt County	PIATT
+ReportingUnit	Illinois;Pike County	PIKE
+ReportingUnit	Illinois;Shelby County	SHELBY
+ReportingUnit	Illinois;Tazewell County	TAZEWELL
+ReportingUnit	Illinois;Coles County	COLES
+ReportingUnit	Illinois;Crawford County	CRAWFORD
+ReportingUnit	Illinois;Iroquois County	IROQUOIS
+ReportingUnit	Illinois;Jefferson County	JEFFERSON
+ReportingUnit	Illinois;Johnson County	JOHNSON
+ReportingUnit	Illinois;Macoupin County	MACOUPIN
+ReportingUnit	Illinois;Woodford County	WOODFORD
+ReportingUnit	Illinois;Greene County	GREENE
+ReportingUnit	Illinois;Henry County	HENRY
+ReportingUnit	Illinois;Jodaviess County	JoDAVIESS
+ReportingUnit	Illinois;Menard County	MENARD
+ReportingUnit	Illinois;Bureau County	BUREAU
+ReportingUnit	Illinois;Jackson County	JACKSON
+ReportingUnit	Illinois;Jersey County	JERSEY
+ReportingUnit	Illinois;Lawrence County	LAWRENCE
+ReportingUnit	Illinois;Sangamon County	SANGAMON
+ReportingUnit	Illinois;White County	WHITE
+ReportingUnit	Illinois;Williamson County	WILLIAMSON
+
+
 
 Candidate	CHRISTOPHER "C.D."DAVIDSMEYER	CHRISTOPHER "C.D.";DAVIDSMEYER
 Candidate	CHRISTINELAW	CHRISTINE;LAW
