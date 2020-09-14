@@ -202,11 +202,14 @@ CandidateContest	IL Comptroller	COMPTROLLER
 CandidateContest	IL Treasurer	TREASURER
 CandidateContest	IL Secretary of State	SECRETARY OF STATE
 Election	2016 General	GE 2016
+Election	2018 General	GE 2018
 Party	Republican Party	REPUBLICAN
 Party	Democratic Party	DEMOCRATIC
 Party	Green Party	GREEN
 Party	Independent Party	INDEPENDENT
+Party	Downstate United Party	DOWNSTATE UNITED
 Party	Libertarian Party	LIBERTARIAN
+Party	Conservative Party	CONSERVATIVE
 ReportingUnit	Illinois;IL House District 1	Illinois;IL House District 1
 ReportingUnit	Illinois;IL House District 2	Illinois;IL House District 2
 ReportingUnit	Illinois;IL House District 3	Illinois;IL House District 3
