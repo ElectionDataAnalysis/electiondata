@@ -201,3 +201,4 @@ IL Attorney General	1	IL Attorney General
 IL Lieutenant Governor	1	IL Lieutenant Governor	
 IL Treasurer	1	IL Treasurer	
 IL Comptroller	1	IL Comptroller
+IL Secretary of State	1	IL Secretary of State
