@@ -236,7 +236,7 @@ class Munger:
         ] = read_munger_info_from_files(self.path_to_munger_dir)
 
         if aux_data_dir:
-            self.aux_data = self.get_aux_data(aux_data_dir)
+            self.aux_data, err = self.get_aux_data(aux_data_dir, err=dict())
         else:
             self.aux_data = {}
         self.aux_data_dir = aux_data_dir
@@ -248,7 +248,7 @@ class Munger:
 
 
 def check_and_init_munger(munger_path: str, aux_data_dir: str = None) -> (Munger, dict):
-    err = check_munger_files(munger_path)
+    err = check_munger_files(munger_path, aux_data_dir)
     if ui.fatal_error(err):
         munger = None
     else:
@@ -431,7 +431,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> dict:
     return err
 
 
-def check_munger_files(munger_path: str) -> dict:
+def check_munger_files(munger_path: str, aux_data_dir: str) -> dict:
     """Check that the munger files are complete and consistent with one another.
     Assumes munger directory exists. Assumes dictionary.txt is in the template file.
     <munger_path> is the path to the directory of the particular munger
@@ -468,6 +468,13 @@ def check_munger_files(munger_path: str) -> dict:
                 err = check_munger_file_contents(munger_path, munger_file, err)
         else:
             err = ui.add_new_error(err, "munger", munger_name, "File does not exist")
+    if aux_data_dir:
+        # check sub-mungers (in sub-directories of munger)
+        for f in os.listdir(munger_path):
+            if os.path.isdir(f):
+                new_err = check_munger_files(f, aux_data_dir=None)
+                if new_err:
+                    ui.add_new_error([err,new_err])
     return err
 
 
@@ -475,7 +482,6 @@ def check_munger_file_format(
     munger_path: str, munger_file: str, templates: str, err: dict
 ) -> dict:
 
-    problems = list()
     if munger_file[-4:] == ".txt":
         cf_df = pd.read_csv(
             os.path.join(munger_path, munger_file), sep="\t", encoding="iso-8859-1"

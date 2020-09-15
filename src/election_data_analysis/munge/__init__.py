@@ -593,12 +593,16 @@ def add_contest_id(
         w_for_type[c_type] = w_for_type[c_type][common_cols]
 
     # assemble working from the two pieces
-    working = pd.concat([w_for_type[ct] for ct in ["BallotMeasure", "Candidate"]])
+    working_temp = pd.concat([w_for_type[ct] for ct in ["BallotMeasure", "Candidate"]])
 
     # fail if fatal errors or no contests recognized
-    if working.empty:
+    if working_temp.empty:
+        cc_list = "\n\t".join(working.CandidateContest_raw.to_list())
+        bmc_list = "\n\t".join(working.BallotMeasureContest_raw.to_list())
+        contest_list = f"Raw CandidateContests:\n{cc_list}\n\nRaw BallotMeasureContests:\n{bmc_list}"
+
         err = ui.add_new_error(
-            err, "jurisdiction", juris.short_name, "No contests recognized."
+            err, "jurisdiction", juris.short_name, f"No contests recognized.\n{contest_list}"
         )
     if ui.fatal_error(err):
         return working, err

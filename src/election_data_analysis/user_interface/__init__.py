@@ -305,15 +305,17 @@ warning_keys = {
 
 
 def get_params_to_read_results(
-    d: dict, results_file_path=None, munger_name=None
+    d: dict, results_file_path=None, munger_name=None, aux_data_dir=None
 ) -> (dict, list):
-    """get parameters from arguments; otherwise from self.d;
+    """get parameters from arguments; otherwise from d;
     return dictionary of parameters, and list of missing parameters"""
     kwargs = d
     if results_file_path:
         kwargs["results_file_path"] = results_file_path
     if munger_name:
         kwargs["munger_name"] = munger_name
+    if aux_data_dir:
+        kwargs["aux_data_dir"] = aux_data_dir
     missing = [x for x in ["results_file_path", "munger_name"] if kwargs[x] is None]
     return kwargs, missing
 
@@ -330,12 +332,12 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
         aux_data_dir = None
 
     # check munger files and (if no error) create munger
-    mu, mu_err = jm.check_and_init_munger(my_munger_path)
+    mu, mu_err = jm.check_and_init_munger(my_munger_path,aux_data_dir=aux_data_dir)
     error = consolidate_errors([error, mu_err])
     if fatal_error(mu_err):
         wr = pd.DataFrame()
     else:
-        wr, error = read_combine_results(mu, params["results_file_path"], error)
+        wr, error = read_combine_results(mu, params["results_file_path"], error, aux_data_dir=aux_data_dir)
         wr.columns = [f"{x}_SOURCE" for x in wr.columns]
     return wr, mu, error
 
