@@ -1,1 +1,0 @@
-Historical election results files can be downloaded from https://apps.elections.virginia.gov/SBE_CSV/ELECTIONS/ELECTIONRESULTS/
