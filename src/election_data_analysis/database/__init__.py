@@ -167,6 +167,7 @@ def append_to_composing_reporting_unit_join(engine, ru):
 def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
     """Check for DB and relevant tables; if they don't exist, return
     error message"""
+    err = None
     try:
         params = ui.get_runtime_parameters(
             required_keys=db_pars, param_file=paramfile, header="postgresql"
