@@ -1,0 +1,247 @@
+Name	ReportingUnitType
+Michigan;MI House District 1	state-house
+Michigan;MI House District 2	state-house
+Michigan;MI House District 3	state-house
+Michigan;MI House District 4	state-house
+Michigan;MI House District 5	state-house
+Michigan;MI House District 6	state-house
+Michigan;MI House District 7	state-house
+Michigan;MI House District 8	state-house
+Michigan;MI House District 9	state-house
+Michigan;MI House District 10	state-house
+Michigan;MI House District 11	state-house
+Michigan;MI House District 12	state-house
+Michigan;MI House District 13	state-house
+Michigan;MI House District 14	state-house
+Michigan;MI House District 15	state-house
+Michigan;MI House District 16	state-house
+Michigan;MI House District 17	state-house
+Michigan;MI House District 18	state-house
+Michigan;MI House District 19	state-house
+Michigan;MI House District 20	state-house
+Michigan;MI House District 21	state-house
+Michigan;MI House District 22	state-house
+Michigan;MI House District 23	state-house
+Michigan;MI House District 24	state-house
+Michigan;MI House District 25	state-house
+Michigan;MI House District 26	state-house
+Michigan;MI House District 27	state-house
+Michigan;MI House District 28	state-house
+Michigan;MI House District 29	state-house
+Michigan;MI House District 30	state-house
+Michigan;MI House District 31	state-house
+Michigan;MI House District 32	state-house
+Michigan;MI House District 33	state-house
+Michigan;MI House District 34	state-house
+Michigan;MI House District 35	state-house
+Michigan;MI House District 36	state-house
+Michigan;MI House District 37	state-house
+Michigan;MI House District 38	state-house
+Michigan;MI House District 39	state-house
+Michigan;MI House District 40	state-house
+Michigan;MI House District 41	state-house
+Michigan;MI House District 42	state-house
+Michigan;MI House District 43	state-house
+Michigan;MI House District 44	state-house
+Michigan;MI House District 45	state-house
+Michigan;MI House District 46	state-house
+Michigan;MI House District 47	state-house
+Michigan;MI House District 48	state-house
+Michigan;MI House District 49	state-house
+Michigan;MI House District 50	state-house
+Michigan;MI House District 51	state-house
+Michigan;MI House District 52	state-house
+Michigan;MI House District 53	state-house
+Michigan;MI House District 54	state-house
+Michigan;MI House District 55	state-house
+Michigan;MI House District 56	state-house
+Michigan;MI House District 57	state-house
+Michigan;MI House District 58	state-house
+Michigan;MI House District 59	state-house
+Michigan;MI House District 60	state-house
+Michigan;MI House District 61	state-house
+Michigan;MI House District 62	state-house
+Michigan;MI House District 63	state-house
+Michigan;MI House District 64	state-house
+Michigan;MI House District 65	state-house
+Michigan;MI House District 66	state-house
+Michigan;MI House District 67	state-house
+Michigan;MI House District 68	state-house
+Michigan;MI House District 69	state-house
+Michigan;MI House District 70	state-house
+Michigan;MI House District 71	state-house
+Michigan;MI House District 72	state-house
+Michigan;MI House District 73	state-house
+Michigan;MI House District 74	state-house
+Michigan;MI House District 75	state-house
+Michigan;MI House District 76	state-house
+Michigan;MI House District 77	state-house
+Michigan;MI House District 78	state-house
+Michigan;MI House District 79	state-house
+Michigan;MI House District 80	state-house
+Michigan;MI House District 81	state-house
+Michigan;MI House District 82	state-house
+Michigan;MI House District 83	state-house
+Michigan;MI House District 84	state-house
+Michigan;MI House District 85	state-house
+Michigan;MI House District 86	state-house
+Michigan;MI House District 87	state-house
+Michigan;MI House District 88	state-house
+Michigan;MI House District 89	state-house
+Michigan;MI House District 90	state-house
+Michigan;MI House District 91	state-house
+Michigan;MI House District 92	state-house
+Michigan;MI House District 93	state-house
+Michigan;MI House District 94	state-house
+Michigan;MI House District 95	state-house
+Michigan;MI House District 96	state-house
+Michigan;MI House District 97	state-house
+Michigan;MI House District 98	state-house
+Michigan;MI House District 99	state-house
+Michigan;MI House District 100	state-house
+Michigan;MI House District 101	state-house
+Michigan;MI House District 102	state-house
+Michigan;MI House District 103	state-house
+Michigan;MI House District 104	state-house
+Michigan;MI House District 105	state-house
+Michigan;MI House District 106	state-house
+Michigan;MI House District 107	state-house
+Michigan;MI House District 108	state-house
+Michigan;MI House District 109	state-house
+Michigan;MI House District 110	state-house
+Michigan;MI Senate District 1	state-senate
+Michigan;MI Senate District 2	state-senate
+Michigan;MI Senate District 3	state-senate
+Michigan;MI Senate District 4	state-senate
+Michigan;MI Senate District 5	state-senate
+Michigan;MI Senate District 6	state-senate
+Michigan;MI Senate District 7	state-senate
+Michigan;MI Senate District 8	state-senate
+Michigan;MI Senate District 9	state-senate
+Michigan;MI Senate District 10	state-senate
+Michigan;MI Senate District 11	state-senate
+Michigan;MI Senate District 12	state-senate
+Michigan;MI Senate District 13	state-senate
+Michigan;MI Senate District 14	state-senate
+Michigan;MI Senate District 15	state-senate
+Michigan;MI Senate District 16	state-senate
+Michigan;MI Senate District 17	state-senate
+Michigan;MI Senate District 18	state-senate
+Michigan;MI Senate District 19	state-senate
+Michigan;MI Senate District 20	state-senate
+Michigan;MI Senate District 21	state-senate
+Michigan;MI Senate District 22	state-senate
+Michigan;MI Senate District 23	state-senate
+Michigan;MI Senate District 24	state-senate
+Michigan;MI Senate District 25	state-senate
+Michigan;MI Senate District 26	state-senate
+Michigan;MI Senate District 27	state-senate
+Michigan;MI Senate District 28	state-senate
+Michigan;MI Senate District 29	state-senate
+Michigan;MI Senate District 30	state-senate
+Michigan;MI Senate District 31	state-senate
+Michigan;MI Senate District 32	state-senate
+Michigan;MI Senate District 33	state-senate
+Michigan;MI Senate District 34	state-senate
+Michigan;MI Senate District 35	state-senate
+Michigan;MI Senate District 36	state-senate
+Michigan;MI Senate District 37	state-senate
+Michigan;MI Senate District 38	state-senate
+Michigan;US House MI District 1	congressional
+Michigan;US House MI District 2	congressional
+Michigan;US House MI District 3	congressional
+Michigan;US House MI District 4	congressional
+Michigan;US House MI District 5	congressional
+Michigan;US House MI District 6	congressional
+Michigan;US House MI District 7	congressional
+Michigan;US House MI District 8	congressional
+Michigan;US House MI District 9	congressional
+Michigan;US House MI District 10	congressional
+Michigan;US House MI District 11	congressional
+Michigan;US House MI District 12	congressional
+Michigan;US House MI District 13	congressional
+Michigan;US House MI District 14	congressional
+Michigan	state
+Michigan;Alcona County	county
+Michigan;Alger County	county
+Michigan;Allegan County	county
+Michigan;Alpena County	county
+Michigan;Antrim County	county
+Michigan;Arenac County	county
+Michigan;Baraga County	county
+Michigan;Barry County	county
+Michigan;Bay County	county
+Michigan;Benzie County	county
+Michigan;Berrien County	county
+Michigan;Branch County	county
+Michigan;Calhoun County	county
+Michigan;Cass County	county
+Michigan;Charlevoix County	county
+Michigan;Cheboygan County	county
+Michigan;Chippewa County	county
+Michigan;Clare County	county
+Michigan;Clinton County	county
+Michigan;Crawford County	county
+Michigan;Delta County	county
+Michigan;Dickinson County	county
+Michigan;Eaton County	county
+Michigan;Emmet County	county
+Michigan;Gd. Traverse County	county
+Michigan;Genesee County	county
+Michigan;Gladwin County	county
+Michigan;Gogebic County	county
+Michigan;Gratiot County	county
+Michigan;Hillsdale County	county
+Michigan;Houghton County	county
+Michigan;Huron County	county
+Michigan;Ingham County	county
+Michigan;Ionia County	county
+Michigan;Iosco County	county
+Michigan;Iron County	county
+Michigan;Isabella County	county
+Michigan;Jackson County	county
+Michigan;Kalamazoo County	county
+Michigan;Kalkaska County	county
+Michigan;Kent County	county
+Michigan;Keweenaw County	county
+Michigan;Lake County	county
+Michigan;Lapeer County	county
+Michigan;Leelanau County	county
+Michigan;Lenawee County	county
+Michigan;Livingston County	county
+Michigan;Luce County	county
+Michigan;Mackinac County	county
+Michigan;Macomb County	county
+Michigan;Manistee County	county
+Michigan;Marquette County	county
+Michigan;Mason County	county
+Michigan;Mecosta County	county
+Michigan;Menominee County	county
+Michigan;Midland County	county
+Michigan;Missaukee County	county
+Michigan;Monroe County	county
+Michigan;Montcalm County	county
+Michigan;Montmorency County	county
+Michigan;Muskegon County	county
+Michigan;Newaygo County	county
+Michigan;Oakland County	county
+Michigan;Oceana County	county
+Michigan;Ogemaw County	county
+Michigan;Ontonagon County	county
+Michigan;Osceola County	county
+Michigan;Oscoda County	county
+Michigan;Otsego County	county
+Michigan;Ottawa County	county
+Michigan;Presque Isle County	county
+Michigan;Roscommon County	county
+Michigan;Saginaw County	county
+Michigan;Sanilac County	county
+Michigan;Schoolcraft County	county
+Michigan;Shiawassee County	county
+Michigan;St. Clair County	county
+Michigan;St. Joseph County	county
+Michigan;Tuscola County	county
+Michigan;Van Buren County	county
+Michigan;Washtenaw County	county
+Michigan;Wayne County	county
+Michigan;Wexford County	county

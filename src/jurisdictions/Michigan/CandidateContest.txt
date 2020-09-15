@@ -1,0 +1,1043 @@
+Name	NumberElected	Office	PrimaryParty
+MI House District 1	1	MI House District 1	
+MI House District 2	1	MI House District 2	
+MI House District 3	1	MI House District 3	
+MI House District 4	1	MI House District 4	
+MI House District 5	1	MI House District 5	
+MI House District 6	1	MI House District 6	
+MI House District 7	1	MI House District 7	
+MI House District 8	1	MI House District 8	
+MI House District 9	1	MI House District 9	
+MI House District 10	1	MI House District 10	
+MI House District 11	1	MI House District 11	
+MI House District 12	1	MI House District 12	
+MI House District 13	1	MI House District 13	
+MI House District 14	1	MI House District 14	
+MI House District 15	1	MI House District 15	
+MI House District 16	1	MI House District 16	
+MI House District 17	1	MI House District 17	
+MI House District 18	1	MI House District 18	
+MI House District 19	1	MI House District 19	
+MI House District 20	1	MI House District 20	
+MI House District 21	1	MI House District 21	
+MI House District 22	1	MI House District 22	
+MI House District 23	1	MI House District 23	
+MI House District 24	1	MI House District 24	
+MI House District 25	1	MI House District 25	
+MI House District 26	1	MI House District 26	
+MI House District 27	1	MI House District 27	
+MI House District 28	1	MI House District 28	
+MI House District 29	1	MI House District 29	
+MI House District 30	1	MI House District 30	
+MI House District 31	1	MI House District 31	
+MI House District 32	1	MI House District 32	
+MI House District 33	1	MI House District 33	
+MI House District 34	1	MI House District 34	
+MI House District 35	1	MI House District 35	
+MI House District 36	1	MI House District 36	
+MI House District 37	1	MI House District 37	
+MI House District 38	1	MI House District 38	
+MI House District 39	1	MI House District 39	
+MI House District 40	1	MI House District 40	
+MI House District 41	1	MI House District 41	
+MI House District 42	1	MI House District 42	
+MI House District 43	1	MI House District 43	
+MI House District 44	1	MI House District 44	
+MI House District 45	1	MI House District 45	
+MI House District 46	1	MI House District 46	
+MI House District 47	1	MI House District 47	
+MI House District 48	1	MI House District 48	
+MI House District 49	1	MI House District 49	
+MI House District 50	1	MI House District 50	
+MI House District 51	1	MI House District 51	
+MI House District 52	1	MI House District 52	
+MI House District 53	1	MI House District 53	
+MI House District 54	1	MI House District 54	
+MI House District 55	1	MI House District 55	
+MI House District 56	1	MI House District 56	
+MI House District 57	1	MI House District 57	
+MI House District 58	1	MI House District 58	
+MI House District 59	1	MI House District 59	
+MI House District 60	1	MI House District 60	
+MI House District 61	1	MI House District 61	
+MI House District 62	1	MI House District 62	
+MI House District 63	1	MI House District 63	
+MI House District 64	1	MI House District 64	
+MI House District 65	1	MI House District 65	
+MI House District 66	1	MI House District 66	
+MI House District 67	1	MI House District 67	
+MI House District 68	1	MI House District 68	
+MI House District 69	1	MI House District 69	
+MI House District 70	1	MI House District 70	
+MI House District 71	1	MI House District 71	
+MI House District 72	1	MI House District 72	
+MI House District 73	1	MI House District 73	
+MI House District 74	1	MI House District 74	
+MI House District 75	1	MI House District 75	
+MI House District 76	1	MI House District 76	
+MI House District 77	1	MI House District 77	
+MI House District 78	1	MI House District 78	
+MI House District 79	1	MI House District 79	
+MI House District 80	1	MI House District 80	
+MI House District 81	1	MI House District 81	
+MI House District 82	1	MI House District 82	
+MI House District 83	1	MI House District 83	
+MI House District 84	1	MI House District 84	
+MI House District 85	1	MI House District 85	
+MI House District 86	1	MI House District 86	
+MI House District 87	1	MI House District 87	
+MI House District 88	1	MI House District 88	
+MI House District 89	1	MI House District 89	
+MI House District 90	1	MI House District 90	
+MI House District 91	1	MI House District 91	
+MI House District 92	1	MI House District 92	
+MI House District 93	1	MI House District 93	
+MI House District 94	1	MI House District 94	
+MI House District 95	1	MI House District 95	
+MI House District 96	1	MI House District 96	
+MI House District 97	1	MI House District 97	
+MI House District 98	1	MI House District 98	
+MI House District 99	1	MI House District 99	
+MI House District 100	1	MI House District 100	
+MI House District 101	1	MI House District 101	
+MI House District 102	1	MI House District 102	
+MI House District 103	1	MI House District 103	
+MI House District 104	1	MI House District 104	
+MI House District 105	1	MI House District 105	
+MI House District 106	1	MI House District 106	
+MI House District 107	1	MI House District 107	
+MI House District 108	1	MI House District 108	
+MI House District 109	1	MI House District 109	
+MI House District 110	1	MI House District 110	
+MI Senate District 1	1	MI Senate District 1	
+MI Senate District 2	1	MI Senate District 2	
+MI Senate District 3	1	MI Senate District 3	
+MI Senate District 4	1	MI Senate District 4	
+MI Senate District 5	1	MI Senate District 5	
+MI Senate District 6	1	MI Senate District 6	
+MI Senate District 7	1	MI Senate District 7	
+MI Senate District 8	1	MI Senate District 8	
+MI Senate District 9	1	MI Senate District 9	
+MI Senate District 10	1	MI Senate District 10	
+MI Senate District 11	1	MI Senate District 11	
+MI Senate District 12	1	MI Senate District 12	
+MI Senate District 13	1	MI Senate District 13	
+MI Senate District 14	1	MI Senate District 14	
+MI Senate District 15	1	MI Senate District 15	
+MI Senate District 16	1	MI Senate District 16	
+MI Senate District 17	1	MI Senate District 17	
+MI Senate District 18	1	MI Senate District 18	
+MI Senate District 19	1	MI Senate District 19	
+MI Senate District 20	1	MI Senate District 20	
+MI Senate District 21	1	MI Senate District 21	
+MI Senate District 22	1	MI Senate District 22	
+MI Senate District 23	1	MI Senate District 23	
+MI Senate District 24	1	MI Senate District 24	
+MI Senate District 25	1	MI Senate District 25	
+MI Senate District 26	1	MI Senate District 26	
+MI Senate District 27	1	MI Senate District 27	
+MI Senate District 28	1	MI Senate District 28	
+MI Senate District 29	1	MI Senate District 29	
+MI Senate District 30	1	MI Senate District 30	
+MI Senate District 31	1	MI Senate District 31	
+MI Senate District 32	1	MI Senate District 32	
+MI Senate District 33	1	MI Senate District 33	
+MI Senate District 34	1	MI Senate District 34	
+MI Senate District 35	1	MI Senate District 35	
+MI Senate District 36	1	MI Senate District 36	
+MI Senate District 37	1	MI Senate District 37	
+MI Senate District 38	1	MI Senate District 38	
+US House MI District 1	1	US House MI District 1	
+US House MI District 2	1	US House MI District 2	
+US House MI District 3	1	US House MI District 3	
+US House MI District 4	1	US House MI District 4	
+US House MI District 5	1	US House MI District 5	
+US House MI District 6	1	US House MI District 6	
+US House MI District 7	1	US House MI District 7	
+US House MI District 8	1	US House MI District 8	
+US House MI District 9	1	US House MI District 9	
+US House MI District 10	1	US House MI District 10	
+US House MI District 11	1	US House MI District 11	
+US House MI District 12	1	US House MI District 12	
+US House MI District 13	1	US House MI District 13	
+US House MI District 14	1	US House MI District 14	
+US President (MI)	1	US President (MI)	
+MI Governor	1	MI Governor	
+US Senate MI	1	US Senate MI	
+MI Attorney General	1	MI Attorney General	
+MI Lieutenant Governor	1	MI Lieutenant Governor	
+MI Treasurer	1	MI Treasurer	
+MI Secretary of State	1	MI Secretary of State	
+MI House District 1 (Democratic Party)	1	MI House District 1	Democratic Party
+MI House District 2 (Democratic Party)	1	MI House District 2	Democratic Party
+MI House District 3 (Democratic Party)	1	MI House District 3	Democratic Party
+MI House District 4 (Democratic Party)	1	MI House District 4	Democratic Party
+MI House District 5 (Democratic Party)	1	MI House District 5	Democratic Party
+MI House District 6 (Democratic Party)	1	MI House District 6	Democratic Party
+MI House District 7 (Democratic Party)	1	MI House District 7	Democratic Party
+MI House District 8 (Democratic Party)	1	MI House District 8	Democratic Party
+MI House District 9 (Democratic Party)	1	MI House District 9	Democratic Party
+MI House District 10 (Democratic Party)	1	MI House District 10	Democratic Party
+MI House District 11 (Democratic Party)	1	MI House District 11	Democratic Party
+MI House District 12 (Democratic Party)	1	MI House District 12	Democratic Party
+MI House District 13 (Democratic Party)	1	MI House District 13	Democratic Party
+MI House District 14 (Democratic Party)	1	MI House District 14	Democratic Party
+MI House District 15 (Democratic Party)	1	MI House District 15	Democratic Party
+MI House District 16 (Democratic Party)	1	MI House District 16	Democratic Party
+MI House District 17 (Democratic Party)	1	MI House District 17	Democratic Party
+MI House District 18 (Democratic Party)	1	MI House District 18	Democratic Party
+MI House District 19 (Democratic Party)	1	MI House District 19	Democratic Party
+MI House District 20 (Democratic Party)	1	MI House District 20	Democratic Party
+MI House District 21 (Democratic Party)	1	MI House District 21	Democratic Party
+MI House District 22 (Democratic Party)	1	MI House District 22	Democratic Party
+MI House District 23 (Democratic Party)	1	MI House District 23	Democratic Party
+MI House District 24 (Democratic Party)	1	MI House District 24	Democratic Party
+MI House District 25 (Democratic Party)	1	MI House District 25	Democratic Party
+MI House District 26 (Democratic Party)	1	MI House District 26	Democratic Party
+MI House District 27 (Democratic Party)	1	MI House District 27	Democratic Party
+MI House District 28 (Democratic Party)	1	MI House District 28	Democratic Party
+MI House District 29 (Democratic Party)	1	MI House District 29	Democratic Party
+MI House District 30 (Democratic Party)	1	MI House District 30	Democratic Party
+MI House District 31 (Democratic Party)	1	MI House District 31	Democratic Party
+MI House District 32 (Democratic Party)	1	MI House District 32	Democratic Party
+MI House District 33 (Democratic Party)	1	MI House District 33	Democratic Party
+MI House District 34 (Democratic Party)	1	MI House District 34	Democratic Party
+MI House District 35 (Democratic Party)	1	MI House District 35	Democratic Party
+MI House District 36 (Democratic Party)	1	MI House District 36	Democratic Party
+MI House District 37 (Democratic Party)	1	MI House District 37	Democratic Party
+MI House District 38 (Democratic Party)	1	MI House District 38	Democratic Party
+MI House District 39 (Democratic Party)	1	MI House District 39	Democratic Party
+MI House District 40 (Democratic Party)	1	MI House District 40	Democratic Party
+MI House District 41 (Democratic Party)	1	MI House District 41	Democratic Party
+MI House District 42 (Democratic Party)	1	MI House District 42	Democratic Party
+MI House District 43 (Democratic Party)	1	MI House District 43	Democratic Party
+MI House District 44 (Democratic Party)	1	MI House District 44	Democratic Party
+MI House District 45 (Democratic Party)	1	MI House District 45	Democratic Party
+MI House District 46 (Democratic Party)	1	MI House District 46	Democratic Party
+MI House District 47 (Democratic Party)	1	MI House District 47	Democratic Party
+MI House District 48 (Democratic Party)	1	MI House District 48	Democratic Party
+MI House District 49 (Democratic Party)	1	MI House District 49	Democratic Party
+MI House District 50 (Democratic Party)	1	MI House District 50	Democratic Party
+MI House District 51 (Democratic Party)	1	MI House District 51	Democratic Party
+MI House District 52 (Democratic Party)	1	MI House District 52	Democratic Party
+MI House District 53 (Democratic Party)	1	MI House District 53	Democratic Party
+MI House District 54 (Democratic Party)	1	MI House District 54	Democratic Party
+MI House District 55 (Democratic Party)	1	MI House District 55	Democratic Party
+MI House District 56 (Democratic Party)	1	MI House District 56	Democratic Party
+MI House District 57 (Democratic Party)	1	MI House District 57	Democratic Party
+MI House District 58 (Democratic Party)	1	MI House District 58	Democratic Party
+MI House District 59 (Democratic Party)	1	MI House District 59	Democratic Party
+MI House District 60 (Democratic Party)	1	MI House District 60	Democratic Party
+MI House District 61 (Democratic Party)	1	MI House District 61	Democratic Party
+MI House District 62 (Democratic Party)	1	MI House District 62	Democratic Party
+MI House District 63 (Democratic Party)	1	MI House District 63	Democratic Party
+MI House District 64 (Democratic Party)	1	MI House District 64	Democratic Party
+MI House District 65 (Democratic Party)	1	MI House District 65	Democratic Party
+MI House District 66 (Democratic Party)	1	MI House District 66	Democratic Party
+MI House District 67 (Democratic Party)	1	MI House District 67	Democratic Party
+MI House District 68 (Democratic Party)	1	MI House District 68	Democratic Party
+MI House District 69 (Democratic Party)	1	MI House District 69	Democratic Party
+MI House District 70 (Democratic Party)	1	MI House District 70	Democratic Party
+MI House District 71 (Democratic Party)	1	MI House District 71	Democratic Party
+MI House District 72 (Democratic Party)	1	MI House District 72	Democratic Party
+MI House District 73 (Democratic Party)	1	MI House District 73	Democratic Party
+MI House District 74 (Democratic Party)	1	MI House District 74	Democratic Party
+MI House District 75 (Democratic Party)	1	MI House District 75	Democratic Party
+MI House District 76 (Democratic Party)	1	MI House District 76	Democratic Party
+MI House District 77 (Democratic Party)	1	MI House District 77	Democratic Party
+MI House District 78 (Democratic Party)	1	MI House District 78	Democratic Party
+MI House District 79 (Democratic Party)	1	MI House District 79	Democratic Party
+MI House District 80 (Democratic Party)	1	MI House District 80	Democratic Party
+MI House District 81 (Democratic Party)	1	MI House District 81	Democratic Party
+MI House District 82 (Democratic Party)	1	MI House District 82	Democratic Party
+MI House District 83 (Democratic Party)	1	MI House District 83	Democratic Party
+MI House District 84 (Democratic Party)	1	MI House District 84	Democratic Party
+MI House District 85 (Democratic Party)	1	MI House District 85	Democratic Party
+MI House District 86 (Democratic Party)	1	MI House District 86	Democratic Party
+MI House District 87 (Democratic Party)	1	MI House District 87	Democratic Party
+MI House District 88 (Democratic Party)	1	MI House District 88	Democratic Party
+MI House District 89 (Democratic Party)	1	MI House District 89	Democratic Party
+MI House District 90 (Democratic Party)	1	MI House District 90	Democratic Party
+MI House District 91 (Democratic Party)	1	MI House District 91	Democratic Party
+MI House District 92 (Democratic Party)	1	MI House District 92	Democratic Party
+MI House District 93 (Democratic Party)	1	MI House District 93	Democratic Party
+MI House District 94 (Democratic Party)	1	MI House District 94	Democratic Party
+MI House District 95 (Democratic Party)	1	MI House District 95	Democratic Party
+MI House District 96 (Democratic Party)	1	MI House District 96	Democratic Party
+MI House District 97 (Democratic Party)	1	MI House District 97	Democratic Party
+MI House District 98 (Democratic Party)	1	MI House District 98	Democratic Party
+MI House District 99 (Democratic Party)	1	MI House District 99	Democratic Party
+MI House District 100 (Democratic Party)	1	MI House District 100	Democratic Party
+MI House District 101 (Democratic Party)	1	MI House District 101	Democratic Party
+MI House District 102 (Democratic Party)	1	MI House District 102	Democratic Party
+MI House District 103 (Democratic Party)	1	MI House District 103	Democratic Party
+MI House District 104 (Democratic Party)	1	MI House District 104	Democratic Party
+MI House District 105 (Democratic Party)	1	MI House District 105	Democratic Party
+MI House District 106 (Democratic Party)	1	MI House District 106	Democratic Party
+MI House District 107 (Democratic Party)	1	MI House District 107	Democratic Party
+MI House District 108 (Democratic Party)	1	MI House District 108	Democratic Party
+MI House District 109 (Democratic Party)	1	MI House District 109	Democratic Party
+MI House District 110 (Democratic Party)	1	MI House District 110	Democratic Party
+MI Senate District 1 (Democratic Party)	1	MI Senate District 1	Democratic Party
+MI Senate District 2 (Democratic Party)	1	MI Senate District 2	Democratic Party
+MI Senate District 3 (Democratic Party)	1	MI Senate District 3	Democratic Party
+MI Senate District 4 (Democratic Party)	1	MI Senate District 4	Democratic Party
+MI Senate District 5 (Democratic Party)	1	MI Senate District 5	Democratic Party
+MI Senate District 6 (Democratic Party)	1	MI Senate District 6	Democratic Party
+MI Senate District 7 (Democratic Party)	1	MI Senate District 7	Democratic Party
+MI Senate District 8 (Democratic Party)	1	MI Senate District 8	Democratic Party
+MI Senate District 9 (Democratic Party)	1	MI Senate District 9	Democratic Party
+MI Senate District 10 (Democratic Party)	1	MI Senate District 10	Democratic Party
+MI Senate District 11 (Democratic Party)	1	MI Senate District 11	Democratic Party
+MI Senate District 12 (Democratic Party)	1	MI Senate District 12	Democratic Party
+MI Senate District 13 (Democratic Party)	1	MI Senate District 13	Democratic Party
+MI Senate District 14 (Democratic Party)	1	MI Senate District 14	Democratic Party
+MI Senate District 15 (Democratic Party)	1	MI Senate District 15	Democratic Party
+MI Senate District 16 (Democratic Party)	1	MI Senate District 16	Democratic Party
+MI Senate District 17 (Democratic Party)	1	MI Senate District 17	Democratic Party
+MI Senate District 18 (Democratic Party)	1	MI Senate District 18	Democratic Party
+MI Senate District 19 (Democratic Party)	1	MI Senate District 19	Democratic Party
+MI Senate District 20 (Democratic Party)	1	MI Senate District 20	Democratic Party
+MI Senate District 21 (Democratic Party)	1	MI Senate District 21	Democratic Party
+MI Senate District 22 (Democratic Party)	1	MI Senate District 22	Democratic Party
+MI Senate District 23 (Democratic Party)	1	MI Senate District 23	Democratic Party
+MI Senate District 24 (Democratic Party)	1	MI Senate District 24	Democratic Party
+MI Senate District 25 (Democratic Party)	1	MI Senate District 25	Democratic Party
+MI Senate District 26 (Democratic Party)	1	MI Senate District 26	Democratic Party
+MI Senate District 27 (Democratic Party)	1	MI Senate District 27	Democratic Party
+MI Senate District 28 (Democratic Party)	1	MI Senate District 28	Democratic Party
+MI Senate District 29 (Democratic Party)	1	MI Senate District 29	Democratic Party
+MI Senate District 30 (Democratic Party)	1	MI Senate District 30	Democratic Party
+MI Senate District 31 (Democratic Party)	1	MI Senate District 31	Democratic Party
+MI Senate District 32 (Democratic Party)	1	MI Senate District 32	Democratic Party
+MI Senate District 33 (Democratic Party)	1	MI Senate District 33	Democratic Party
+MI Senate District 34 (Democratic Party)	1	MI Senate District 34	Democratic Party
+MI Senate District 35 (Democratic Party)	1	MI Senate District 35	Democratic Party
+MI Senate District 36 (Democratic Party)	1	MI Senate District 36	Democratic Party
+MI Senate District 37 (Democratic Party)	1	MI Senate District 37	Democratic Party
+MI Senate District 38 (Democratic Party)	1	MI Senate District 38	Democratic Party
+US House MI District 1 (Democratic Party)	1	US House MI District 1	Democratic Party
+US House MI District 2 (Democratic Party)	1	US House MI District 2	Democratic Party
+US House MI District 3 (Democratic Party)	1	US House MI District 3	Democratic Party
+US House MI District 4 (Democratic Party)	1	US House MI District 4	Democratic Party
+US House MI District 5 (Democratic Party)	1	US House MI District 5	Democratic Party
+US House MI District 6 (Democratic Party)	1	US House MI District 6	Democratic Party
+US House MI District 7 (Democratic Party)	1	US House MI District 7	Democratic Party
+US House MI District 8 (Democratic Party)	1	US House MI District 8	Democratic Party
+US House MI District 9 (Democratic Party)	1	US House MI District 9	Democratic Party
+US House MI District 10 (Democratic Party)	1	US House MI District 10	Democratic Party
+US House MI District 11 (Democratic Party)	1	US House MI District 11	Democratic Party
+US House MI District 12 (Democratic Party)	1	US House MI District 12	Democratic Party
+US House MI District 13 (Democratic Party)	1	US House MI District 13	Democratic Party
+US House MI District 14 (Democratic Party)	1	US House MI District 14	Democratic Party
+US President (MI) (Democratic Party)	1	US President (MI)	Democratic Party
+MI Governor (Democratic Party)	1	MI Governor	Democratic Party
+US Senate MI (Democratic Party)	1	US Senate MI	Democratic Party
+MI Attorney General (Democratic Party)	1	MI Attorney General	Democratic Party
+MI Lieutenant Governor (Democratic Party)	1	MI Lieutenant Governor	Democratic Party
+MI Treasurer (Democratic Party)	1	MI Treasurer	Democratic Party
+MI Secretary of State (Democratic Party)	1	MI Secretary of State	Democratic Party
+MI House District 1 (Republican Party)	1	MI House District 1	Republican Party
+MI House District 2 (Republican Party)	1	MI House District 2	Republican Party
+MI House District 3 (Republican Party)	1	MI House District 3	Republican Party
+MI House District 4 (Republican Party)	1	MI House District 4	Republican Party
+MI House District 5 (Republican Party)	1	MI House District 5	Republican Party
+MI House District 6 (Republican Party)	1	MI House District 6	Republican Party
+MI House District 7 (Republican Party)	1	MI House District 7	Republican Party
+MI House District 8 (Republican Party)	1	MI House District 8	Republican Party
+MI House District 9 (Republican Party)	1	MI House District 9	Republican Party
+MI House District 10 (Republican Party)	1	MI House District 10	Republican Party
+MI House District 11 (Republican Party)	1	MI House District 11	Republican Party
+MI House District 12 (Republican Party)	1	MI House District 12	Republican Party
+MI House District 13 (Republican Party)	1	MI House District 13	Republican Party
+MI House District 14 (Republican Party)	1	MI House District 14	Republican Party
+MI House District 15 (Republican Party)	1	MI House District 15	Republican Party
+MI House District 16 (Republican Party)	1	MI House District 16	Republican Party
+MI House District 17 (Republican Party)	1	MI House District 17	Republican Party
+MI House District 18 (Republican Party)	1	MI House District 18	Republican Party
+MI House District 19 (Republican Party)	1	MI House District 19	Republican Party
+MI House District 20 (Republican Party)	1	MI House District 20	Republican Party
+MI House District 21 (Republican Party)	1	MI House District 21	Republican Party
+MI House District 22 (Republican Party)	1	MI House District 22	Republican Party
+MI House District 23 (Republican Party)	1	MI House District 23	Republican Party
+MI House District 24 (Republican Party)	1	MI House District 24	Republican Party
+MI House District 25 (Republican Party)	1	MI House District 25	Republican Party
+MI House District 26 (Republican Party)	1	MI House District 26	Republican Party
+MI House District 27 (Republican Party)	1	MI House District 27	Republican Party
+MI House District 28 (Republican Party)	1	MI House District 28	Republican Party
+MI House District 29 (Republican Party)	1	MI House District 29	Republican Party
+MI House District 30 (Republican Party)	1	MI House District 30	Republican Party
+MI House District 31 (Republican Party)	1	MI House District 31	Republican Party
+MI House District 32 (Republican Party)	1	MI House District 32	Republican Party
+MI House District 33 (Republican Party)	1	MI House District 33	Republican Party
+MI House District 34 (Republican Party)	1	MI House District 34	Republican Party
+MI House District 35 (Republican Party)	1	MI House District 35	Republican Party
+MI House District 36 (Republican Party)	1	MI House District 36	Republican Party
+MI House District 37 (Republican Party)	1	MI House District 37	Republican Party
+MI House District 38 (Republican Party)	1	MI House District 38	Republican Party
+MI House District 39 (Republican Party)	1	MI House District 39	Republican Party
+MI House District 40 (Republican Party)	1	MI House District 40	Republican Party
+MI House District 41 (Republican Party)	1	MI House District 41	Republican Party
+MI House District 42 (Republican Party)	1	MI House District 42	Republican Party
+MI House District 43 (Republican Party)	1	MI House District 43	Republican Party
+MI House District 44 (Republican Party)	1	MI House District 44	Republican Party
+MI House District 45 (Republican Party)	1	MI House District 45	Republican Party
+MI House District 46 (Republican Party)	1	MI House District 46	Republican Party
+MI House District 47 (Republican Party)	1	MI House District 47	Republican Party
+MI House District 48 (Republican Party)	1	MI House District 48	Republican Party
+MI House District 49 (Republican Party)	1	MI House District 49	Republican Party
+MI House District 50 (Republican Party)	1	MI House District 50	Republican Party
+MI House District 51 (Republican Party)	1	MI House District 51	Republican Party
+MI House District 52 (Republican Party)	1	MI House District 52	Republican Party
+MI House District 53 (Republican Party)	1	MI House District 53	Republican Party
+MI House District 54 (Republican Party)	1	MI House District 54	Republican Party
+MI House District 55 (Republican Party)	1	MI House District 55	Republican Party
+MI House District 56 (Republican Party)	1	MI House District 56	Republican Party
+MI House District 57 (Republican Party)	1	MI House District 57	Republican Party
+MI House District 58 (Republican Party)	1	MI House District 58	Republican Party
+MI House District 59 (Republican Party)	1	MI House District 59	Republican Party
+MI House District 60 (Republican Party)	1	MI House District 60	Republican Party
+MI House District 61 (Republican Party)	1	MI House District 61	Republican Party
+MI House District 62 (Republican Party)	1	MI House District 62	Republican Party
+MI House District 63 (Republican Party)	1	MI House District 63	Republican Party
+MI House District 64 (Republican Party)	1	MI House District 64	Republican Party
+MI House District 65 (Republican Party)	1	MI House District 65	Republican Party
+MI House District 66 (Republican Party)	1	MI House District 66	Republican Party
+MI House District 67 (Republican Party)	1	MI House District 67	Republican Party
+MI House District 68 (Republican Party)	1	MI House District 68	Republican Party
+MI House District 69 (Republican Party)	1	MI House District 69	Republican Party
+MI House District 70 (Republican Party)	1	MI House District 70	Republican Party
+MI House District 71 (Republican Party)	1	MI House District 71	Republican Party
+MI House District 72 (Republican Party)	1	MI House District 72	Republican Party
+MI House District 73 (Republican Party)	1	MI House District 73	Republican Party
+MI House District 74 (Republican Party)	1	MI House District 74	Republican Party
+MI House District 75 (Republican Party)	1	MI House District 75	Republican Party
+MI House District 76 (Republican Party)	1	MI House District 76	Republican Party
+MI House District 77 (Republican Party)	1	MI House District 77	Republican Party
+MI House District 78 (Republican Party)	1	MI House District 78	Republican Party
+MI House District 79 (Republican Party)	1	MI House District 79	Republican Party
+MI House District 80 (Republican Party)	1	MI House District 80	Republican Party
+MI House District 81 (Republican Party)	1	MI House District 81	Republican Party
+MI House District 82 (Republican Party)	1	MI House District 82	Republican Party
+MI House District 83 (Republican Party)	1	MI House District 83	Republican Party
+MI House District 84 (Republican Party)	1	MI House District 84	Republican Party
+MI House District 85 (Republican Party)	1	MI House District 85	Republican Party
+MI House District 86 (Republican Party)	1	MI House District 86	Republican Party
+MI House District 87 (Republican Party)	1	MI House District 87	Republican Party
+MI House District 88 (Republican Party)	1	MI House District 88	Republican Party
+MI House District 89 (Republican Party)	1	MI House District 89	Republican Party
+MI House District 90 (Republican Party)	1	MI House District 90	Republican Party
+MI House District 91 (Republican Party)	1	MI House District 91	Republican Party
+MI House District 92 (Republican Party)	1	MI House District 92	Republican Party
+MI House District 93 (Republican Party)	1	MI House District 93	Republican Party
+MI House District 94 (Republican Party)	1	MI House District 94	Republican Party
+MI House District 95 (Republican Party)	1	MI House District 95	Republican Party
+MI House District 96 (Republican Party)	1	MI House District 96	Republican Party
+MI House District 97 (Republican Party)	1	MI House District 97	Republican Party
+MI House District 98 (Republican Party)	1	MI House District 98	Republican Party
+MI House District 99 (Republican Party)	1	MI House District 99	Republican Party
+MI House District 100 (Republican Party)	1	MI House District 100	Republican Party
+MI House District 101 (Republican Party)	1	MI House District 101	Republican Party
+MI House District 102 (Republican Party)	1	MI House District 102	Republican Party
+MI House District 103 (Republican Party)	1	MI House District 103	Republican Party
+MI House District 104 (Republican Party)	1	MI House District 104	Republican Party
+MI House District 105 (Republican Party)	1	MI House District 105	Republican Party
+MI House District 106 (Republican Party)	1	MI House District 106	Republican Party
+MI House District 107 (Republican Party)	1	MI House District 107	Republican Party
+MI House District 108 (Republican Party)	1	MI House District 108	Republican Party
+MI House District 109 (Republican Party)	1	MI House District 109	Republican Party
+MI House District 110 (Republican Party)	1	MI House District 110	Republican Party
+MI Senate District 1 (Republican Party)	1	MI Senate District 1	Republican Party
+MI Senate District 2 (Republican Party)	1	MI Senate District 2	Republican Party
+MI Senate District 3 (Republican Party)	1	MI Senate District 3	Republican Party
+MI Senate District 4 (Republican Party)	1	MI Senate District 4	Republican Party
+MI Senate District 5 (Republican Party)	1	MI Senate District 5	Republican Party
+MI Senate District 6 (Republican Party)	1	MI Senate District 6	Republican Party
+MI Senate District 7 (Republican Party)	1	MI Senate District 7	Republican Party
+MI Senate District 8 (Republican Party)	1	MI Senate District 8	Republican Party
+MI Senate District 9 (Republican Party)	1	MI Senate District 9	Republican Party
+MI Senate District 10 (Republican Party)	1	MI Senate District 10	Republican Party
+MI Senate District 11 (Republican Party)	1	MI Senate District 11	Republican Party
+MI Senate District 12 (Republican Party)	1	MI Senate District 12	Republican Party
+MI Senate District 13 (Republican Party)	1	MI Senate District 13	Republican Party
+MI Senate District 14 (Republican Party)	1	MI Senate District 14	Republican Party
+MI Senate District 15 (Republican Party)	1	MI Senate District 15	Republican Party
+MI Senate District 16 (Republican Party)	1	MI Senate District 16	Republican Party
+MI Senate District 17 (Republican Party)	1	MI Senate District 17	Republican Party
+MI Senate District 18 (Republican Party)	1	MI Senate District 18	Republican Party
+MI Senate District 19 (Republican Party)	1	MI Senate District 19	Republican Party
+MI Senate District 20 (Republican Party)	1	MI Senate District 20	Republican Party
+MI Senate District 21 (Republican Party)	1	MI Senate District 21	Republican Party
+MI Senate District 22 (Republican Party)	1	MI Senate District 22	Republican Party
+MI Senate District 23 (Republican Party)	1	MI Senate District 23	Republican Party
+MI Senate District 24 (Republican Party)	1	MI Senate District 24	Republican Party
+MI Senate District 25 (Republican Party)	1	MI Senate District 25	Republican Party
+MI Senate District 26 (Republican Party)	1	MI Senate District 26	Republican Party
+MI Senate District 27 (Republican Party)	1	MI Senate District 27	Republican Party
+MI Senate District 28 (Republican Party)	1	MI Senate District 28	Republican Party
+MI Senate District 29 (Republican Party)	1	MI Senate District 29	Republican Party
+MI Senate District 30 (Republican Party)	1	MI Senate District 30	Republican Party
+MI Senate District 31 (Republican Party)	1	MI Senate District 31	Republican Party
+MI Senate District 32 (Republican Party)	1	MI Senate District 32	Republican Party
+MI Senate District 33 (Republican Party)	1	MI Senate District 33	Republican Party
+MI Senate District 34 (Republican Party)	1	MI Senate District 34	Republican Party
+MI Senate District 35 (Republican Party)	1	MI Senate District 35	Republican Party
+MI Senate District 36 (Republican Party)	1	MI Senate District 36	Republican Party
+MI Senate District 37 (Republican Party)	1	MI Senate District 37	Republican Party
+MI Senate District 38 (Republican Party)	1	MI Senate District 38	Republican Party
+US House MI District 1 (Republican Party)	1	US House MI District 1	Republican Party
+US House MI District 2 (Republican Party)	1	US House MI District 2	Republican Party
+US House MI District 3 (Republican Party)	1	US House MI District 3	Republican Party
+US House MI District 4 (Republican Party)	1	US House MI District 4	Republican Party
+US House MI District 5 (Republican Party)	1	US House MI District 5	Republican Party
+US House MI District 6 (Republican Party)	1	US House MI District 6	Republican Party
+US House MI District 7 (Republican Party)	1	US House MI District 7	Republican Party
+US House MI District 8 (Republican Party)	1	US House MI District 8	Republican Party
+US House MI District 9 (Republican Party)	1	US House MI District 9	Republican Party
+US House MI District 10 (Republican Party)	1	US House MI District 10	Republican Party
+US House MI District 11 (Republican Party)	1	US House MI District 11	Republican Party
+US House MI District 12 (Republican Party)	1	US House MI District 12	Republican Party
+US House MI District 13 (Republican Party)	1	US House MI District 13	Republican Party
+US House MI District 14 (Republican Party)	1	US House MI District 14	Republican Party
+US President (MI) (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 1 (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 1 (Democratic Party)	1	US President (MI)	Democratic Party
+US President (MI) Congressional District 2 (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 2 (Democratic Party)	1	US President (MI)	Democratic Party
+US President (MI) Congressional District 3 (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 3 (Democratic Party)	1	US President (MI)	Democratic Party
+US President (MI) Congressional District 4 (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 4 (Democratic Party)	1	US President (MI)	Democratic Party
+US President (MI) Congressional District 5 (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 5 (Democratic Party)	1	US President (MI)	Democratic Party
+US President (MI) Congressional District 6 (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 6 (Democratic Party)	1	US President (MI)	Democratic Party
+US President (MI) Congressional District 7 (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 7 (Democratic Party)	1	US President (MI)	Democratic Party
+US President (MI) Congressional District 8 (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 8 (Democratic Party)	1	US President (MI)	Democratic Party
+US President (MI) Congressional District 9 (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 9 (Democratic Party)	1	US President (MI)	Democratic Party
+US President (MI) Congressional District 10 (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 10 (Democratic Party)	1	US President (MI)	Democratic Party
+US President (MI) Congressional District 11 (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 11 (Democratic Party)	1	US President (MI)	Democratic Party
+US President (MI) Congressional District 12 (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 12 (Democratic Party)	1	US President (MI)	Democratic Party
+US President (MI) Congressional District 13 (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 13 (Democratic Party)	1	US President (MI)	Democratic Party
+US President (MI) Congressional District 14 (Republican Party)	1	US President (MI)	Republican Party
+US President (MI) Congressional District 14 (Democratic Party)	1	US President (MI)	Democratic Party
+MI Governor (Republican Party)	1	MI Governor	Republican Party
+US Senate MI (Republican Party)	1	US Senate MI	Republican Party
+MI Attorney General (Republican Party)	1	MI Attorney General	Republican Party
+MI Lieutenant Governor (Republican Party)	1	MI Lieutenant Governor	Republican Party
+MI Treasurer (Republican Party)	1	MI Treasurer	Republican Party
+MI Secretary of State (Republican Party)	1	MI Secretary of State	Republican Party
+MI House District 1 (Green Party)	1	MI House District 1	Green Party
+MI House District 2 (Green Party)	1	MI House District 2	Green Party
+MI House District 3 (Green Party)	1	MI House District 3	Green Party
+MI House District 4 (Green Party)	1	MI House District 4	Green Party
+MI House District 5 (Green Party)	1	MI House District 5	Green Party
+MI House District 6 (Green Party)	1	MI House District 6	Green Party
+MI House District 7 (Green Party)	1	MI House District 7	Green Party
+MI House District 8 (Green Party)	1	MI House District 8	Green Party
+MI House District 9 (Green Party)	1	MI House District 9	Green Party
+MI House District 10 (Green Party)	1	MI House District 10	Green Party
+MI House District 11 (Green Party)	1	MI House District 11	Green Party
+MI House District 12 (Green Party)	1	MI House District 12	Green Party
+MI House District 13 (Green Party)	1	MI House District 13	Green Party
+MI House District 14 (Green Party)	1	MI House District 14	Green Party
+MI House District 15 (Green Party)	1	MI House District 15	Green Party
+MI House District 16 (Green Party)	1	MI House District 16	Green Party
+MI House District 17 (Green Party)	1	MI House District 17	Green Party
+MI House District 18 (Green Party)	1	MI House District 18	Green Party
+MI House District 19 (Green Party)	1	MI House District 19	Green Party
+MI House District 20 (Green Party)	1	MI House District 20	Green Party
+MI House District 21 (Green Party)	1	MI House District 21	Green Party
+MI House District 22 (Green Party)	1	MI House District 22	Green Party
+MI House District 23 (Green Party)	1	MI House District 23	Green Party
+MI House District 24 (Green Party)	1	MI House District 24	Green Party
+MI House District 25 (Green Party)	1	MI House District 25	Green Party
+MI House District 26 (Green Party)	1	MI House District 26	Green Party
+MI House District 27 (Green Party)	1	MI House District 27	Green Party
+MI House District 28 (Green Party)	1	MI House District 28	Green Party
+MI House District 29 (Green Party)	1	MI House District 29	Green Party
+MI House District 30 (Green Party)	1	MI House District 30	Green Party
+MI House District 31 (Green Party)	1	MI House District 31	Green Party
+MI House District 32 (Green Party)	1	MI House District 32	Green Party
+MI House District 33 (Green Party)	1	MI House District 33	Green Party
+MI House District 34 (Green Party)	1	MI House District 34	Green Party
+MI House District 35 (Green Party)	1	MI House District 35	Green Party
+MI House District 36 (Green Party)	1	MI House District 36	Green Party
+MI House District 37 (Green Party)	1	MI House District 37	Green Party
+MI House District 38 (Green Party)	1	MI House District 38	Green Party
+MI House District 39 (Green Party)	1	MI House District 39	Green Party
+MI House District 40 (Green Party)	1	MI House District 40	Green Party
+MI House District 41 (Green Party)	1	MI House District 41	Green Party
+MI House District 42 (Green Party)	1	MI House District 42	Green Party
+MI House District 43 (Green Party)	1	MI House District 43	Green Party
+MI House District 44 (Green Party)	1	MI House District 44	Green Party
+MI House District 45 (Green Party)	1	MI House District 45	Green Party
+MI House District 46 (Green Party)	1	MI House District 46	Green Party
+MI House District 47 (Green Party)	1	MI House District 47	Green Party
+MI House District 48 (Green Party)	1	MI House District 48	Green Party
+MI House District 49 (Green Party)	1	MI House District 49	Green Party
+MI House District 50 (Green Party)	1	MI House District 50	Green Party
+MI House District 51 (Green Party)	1	MI House District 51	Green Party
+MI House District 52 (Green Party)	1	MI House District 52	Green Party
+MI House District 53 (Green Party)	1	MI House District 53	Green Party
+MI House District 54 (Green Party)	1	MI House District 54	Green Party
+MI House District 55 (Green Party)	1	MI House District 55	Green Party
+MI House District 56 (Green Party)	1	MI House District 56	Green Party
+MI House District 57 (Green Party)	1	MI House District 57	Green Party
+MI House District 58 (Green Party)	1	MI House District 58	Green Party
+MI House District 59 (Green Party)	1	MI House District 59	Green Party
+MI House District 60 (Green Party)	1	MI House District 60	Green Party
+MI House District 61 (Green Party)	1	MI House District 61	Green Party
+MI House District 62 (Green Party)	1	MI House District 62	Green Party
+MI House District 63 (Green Party)	1	MI House District 63	Green Party
+MI House District 64 (Green Party)	1	MI House District 64	Green Party
+MI House District 65 (Green Party)	1	MI House District 65	Green Party
+MI House District 66 (Green Party)	1	MI House District 66	Green Party
+MI House District 67 (Green Party)	1	MI House District 67	Green Party
+MI House District 68 (Green Party)	1	MI House District 68	Green Party
+MI House District 69 (Green Party)	1	MI House District 69	Green Party
+MI House District 70 (Green Party)	1	MI House District 70	Green Party
+MI House District 71 (Green Party)	1	MI House District 71	Green Party
+MI House District 72 (Green Party)	1	MI House District 72	Green Party
+MI House District 73 (Green Party)	1	MI House District 73	Green Party
+MI House District 74 (Green Party)	1	MI House District 74	Green Party
+MI House District 75 (Green Party)	1	MI House District 75	Green Party
+MI House District 76 (Green Party)	1	MI House District 76	Green Party
+MI House District 77 (Green Party)	1	MI House District 77	Green Party
+MI House District 78 (Green Party)	1	MI House District 78	Green Party
+MI House District 79 (Green Party)	1	MI House District 79	Green Party
+MI House District 80 (Green Party)	1	MI House District 80	Green Party
+MI House District 81 (Green Party)	1	MI House District 81	Green Party
+MI House District 82 (Green Party)	1	MI House District 82	Green Party
+MI House District 83 (Green Party)	1	MI House District 83	Green Party
+MI House District 84 (Green Party)	1	MI House District 84	Green Party
+MI House District 85 (Green Party)	1	MI House District 85	Green Party
+MI House District 86 (Green Party)	1	MI House District 86	Green Party
+MI House District 87 (Green Party)	1	MI House District 87	Green Party
+MI House District 88 (Green Party)	1	MI House District 88	Green Party
+MI House District 89 (Green Party)	1	MI House District 89	Green Party
+MI House District 90 (Green Party)	1	MI House District 90	Green Party
+MI House District 91 (Green Party)	1	MI House District 91	Green Party
+MI House District 92 (Green Party)	1	MI House District 92	Green Party
+MI House District 93 (Green Party)	1	MI House District 93	Green Party
+MI House District 94 (Green Party)	1	MI House District 94	Green Party
+MI House District 95 (Green Party)	1	MI House District 95	Green Party
+MI House District 96 (Green Party)	1	MI House District 96	Green Party
+MI House District 97 (Green Party)	1	MI House District 97	Green Party
+MI House District 98 (Green Party)	1	MI House District 98	Green Party
+MI House District 99 (Green Party)	1	MI House District 99	Green Party
+MI House District 100 (Green Party)	1	MI House District 100	Green Party
+MI House District 101 (Green Party)	1	MI House District 101	Green Party
+MI House District 102 (Green Party)	1	MI House District 102	Green Party
+MI House District 103 (Green Party)	1	MI House District 103	Green Party
+MI House District 104 (Green Party)	1	MI House District 104	Green Party
+MI House District 105 (Green Party)	1	MI House District 105	Green Party
+MI House District 106 (Green Party)	1	MI House District 106	Green Party
+MI House District 107 (Green Party)	1	MI House District 107	Green Party
+MI House District 108 (Green Party)	1	MI House District 108	Green Party
+MI House District 109 (Green Party)	1	MI House District 109	Green Party
+MI House District 110 (Green Party)	1	MI House District 110	Green Party
+MI Senate District 1 (Green Party)	1	MI Senate District 1	Green Party
+MI Senate District 2 (Green Party)	1	MI Senate District 2	Green Party
+MI Senate District 3 (Green Party)	1	MI Senate District 3	Green Party
+MI Senate District 4 (Green Party)	1	MI Senate District 4	Green Party
+MI Senate District 5 (Green Party)	1	MI Senate District 5	Green Party
+MI Senate District 6 (Green Party)	1	MI Senate District 6	Green Party
+MI Senate District 7 (Green Party)	1	MI Senate District 7	Green Party
+MI Senate District 8 (Green Party)	1	MI Senate District 8	Green Party
+MI Senate District 9 (Green Party)	1	MI Senate District 9	Green Party
+MI Senate District 10 (Green Party)	1	MI Senate District 10	Green Party
+MI Senate District 11 (Green Party)	1	MI Senate District 11	Green Party
+MI Senate District 12 (Green Party)	1	MI Senate District 12	Green Party
+MI Senate District 13 (Green Party)	1	MI Senate District 13	Green Party
+MI Senate District 14 (Green Party)	1	MI Senate District 14	Green Party
+MI Senate District 15 (Green Party)	1	MI Senate District 15	Green Party
+MI Senate District 16 (Green Party)	1	MI Senate District 16	Green Party
+MI Senate District 17 (Green Party)	1	MI Senate District 17	Green Party
+MI Senate District 18 (Green Party)	1	MI Senate District 18	Green Party
+MI Senate District 19 (Green Party)	1	MI Senate District 19	Green Party
+MI Senate District 20 (Green Party)	1	MI Senate District 20	Green Party
+MI Senate District 21 (Green Party)	1	MI Senate District 21	Green Party
+MI Senate District 22 (Green Party)	1	MI Senate District 22	Green Party
+MI Senate District 23 (Green Party)	1	MI Senate District 23	Green Party
+MI Senate District 24 (Green Party)	1	MI Senate District 24	Green Party
+MI Senate District 25 (Green Party)	1	MI Senate District 25	Green Party
+MI Senate District 26 (Green Party)	1	MI Senate District 26	Green Party
+MI Senate District 27 (Green Party)	1	MI Senate District 27	Green Party
+MI Senate District 28 (Green Party)	1	MI Senate District 28	Green Party
+MI Senate District 29 (Green Party)	1	MI Senate District 29	Green Party
+MI Senate District 30 (Green Party)	1	MI Senate District 30	Green Party
+MI Senate District 31 (Green Party)	1	MI Senate District 31	Green Party
+MI Senate District 32 (Green Party)	1	MI Senate District 32	Green Party
+MI Senate District 33 (Green Party)	1	MI Senate District 33	Green Party
+MI Senate District 34 (Green Party)	1	MI Senate District 34	Green Party
+MI Senate District 35 (Green Party)	1	MI Senate District 35	Green Party
+MI Senate District 36 (Green Party)	1	MI Senate District 36	Green Party
+MI Senate District 37 (Green Party)	1	MI Senate District 37	Green Party
+MI Senate District 38 (Green Party)	1	MI Senate District 38	Green Party
+US House MI District 1 (Green Party)	1	US House MI District 1	Green Party
+US House MI District 2 (Green Party)	1	US House MI District 2	Green Party
+US House MI District 3 (Green Party)	1	US House MI District 3	Green Party
+US House MI District 4 (Green Party)	1	US House MI District 4	Green Party
+US House MI District 5 (Green Party)	1	US House MI District 5	Green Party
+US House MI District 6 (Green Party)	1	US House MI District 6	Green Party
+US House MI District 7 (Green Party)	1	US House MI District 7	Green Party
+US House MI District 8 (Green Party)	1	US House MI District 8	Green Party
+US House MI District 9 (Green Party)	1	US House MI District 9	Green Party
+US House MI District 10 (Green Party)	1	US House MI District 10	Green Party
+US House MI District 11 (Green Party)	1	US House MI District 11	Green Party
+US House MI District 12 (Green Party)	1	US House MI District 12	Green Party
+US House MI District 13 (Green Party)	1	US House MI District 13	Green Party
+US House MI District 14 (Green Party)	1	US House MI District 14	Green Party
+US President (MI) (Green Party)	1	US President (MI)	Green Party
+MI Governor (Green Party)	1	MI Governor	Green Party
+US Senate MI (Green Party)	1	US Senate MI	Green Party
+MI Attorney General (Green Party)	1	MI Attorney General	Green Party
+MI Lieutenant Governor (Green Party)	1	MI Lieutenant Governor	Green Party
+MI Treasurer (Green Party)	1	MI Treasurer	Green Party
+MI Secretary of State (Green Party)	1	MI Secretary of State	Green Party
+MI House District 1 (Libertarian Party)	1	MI House District 1	Libertarian Party
+MI House District 2 (Libertarian Party)	1	MI House District 2	Libertarian Party
+MI House District 3 (Libertarian Party)	1	MI House District 3	Libertarian Party
+MI House District 4 (Libertarian Party)	1	MI House District 4	Libertarian Party
+MI House District 5 (Libertarian Party)	1	MI House District 5	Libertarian Party
+MI House District 6 (Libertarian Party)	1	MI House District 6	Libertarian Party
+MI House District 7 (Libertarian Party)	1	MI House District 7	Libertarian Party
+MI House District 8 (Libertarian Party)	1	MI House District 8	Libertarian Party
+MI House District 9 (Libertarian Party)	1	MI House District 9	Libertarian Party
+MI House District 10 (Libertarian Party)	1	MI House District 10	Libertarian Party
+MI House District 11 (Libertarian Party)	1	MI House District 11	Libertarian Party
+MI House District 12 (Libertarian Party)	1	MI House District 12	Libertarian Party
+MI House District 13 (Libertarian Party)	1	MI House District 13	Libertarian Party
+MI House District 14 (Libertarian Party)	1	MI House District 14	Libertarian Party
+MI House District 15 (Libertarian Party)	1	MI House District 15	Libertarian Party
+MI House District 16 (Libertarian Party)	1	MI House District 16	Libertarian Party
+MI House District 17 (Libertarian Party)	1	MI House District 17	Libertarian Party
+MI House District 18 (Libertarian Party)	1	MI House District 18	Libertarian Party
+MI House District 19 (Libertarian Party)	1	MI House District 19	Libertarian Party
+MI House District 20 (Libertarian Party)	1	MI House District 20	Libertarian Party
+MI House District 21 (Libertarian Party)	1	MI House District 21	Libertarian Party
+MI House District 22 (Libertarian Party)	1	MI House District 22	Libertarian Party
+MI House District 23 (Libertarian Party)	1	MI House District 23	Libertarian Party
+MI House District 24 (Libertarian Party)	1	MI House District 24	Libertarian Party
+MI House District 25 (Libertarian Party)	1	MI House District 25	Libertarian Party
+MI House District 26 (Libertarian Party)	1	MI House District 26	Libertarian Party
+MI House District 27 (Libertarian Party)	1	MI House District 27	Libertarian Party
+MI House District 28 (Libertarian Party)	1	MI House District 28	Libertarian Party
+MI House District 29 (Libertarian Party)	1	MI House District 29	Libertarian Party
+MI House District 30 (Libertarian Party)	1	MI House District 30	Libertarian Party
+MI House District 31 (Libertarian Party)	1	MI House District 31	Libertarian Party
+MI House District 32 (Libertarian Party)	1	MI House District 32	Libertarian Party
+MI House District 33 (Libertarian Party)	1	MI House District 33	Libertarian Party
+MI House District 34 (Libertarian Party)	1	MI House District 34	Libertarian Party
+MI House District 35 (Libertarian Party)	1	MI House District 35	Libertarian Party
+MI House District 36 (Libertarian Party)	1	MI House District 36	Libertarian Party
+MI House District 37 (Libertarian Party)	1	MI House District 37	Libertarian Party
+MI House District 38 (Libertarian Party)	1	MI House District 38	Libertarian Party
+MI House District 39 (Libertarian Party)	1	MI House District 39	Libertarian Party
+MI House District 40 (Libertarian Party)	1	MI House District 40	Libertarian Party
+MI House District 41 (Libertarian Party)	1	MI House District 41	Libertarian Party
+MI House District 42 (Libertarian Party)	1	MI House District 42	Libertarian Party
+MI House District 43 (Libertarian Party)	1	MI House District 43	Libertarian Party
+MI House District 44 (Libertarian Party)	1	MI House District 44	Libertarian Party
+MI House District 45 (Libertarian Party)	1	MI House District 45	Libertarian Party
+MI House District 46 (Libertarian Party)	1	MI House District 46	Libertarian Party
+MI House District 47 (Libertarian Party)	1	MI House District 47	Libertarian Party
+MI House District 48 (Libertarian Party)	1	MI House District 48	Libertarian Party
+MI House District 49 (Libertarian Party)	1	MI House District 49	Libertarian Party
+MI House District 50 (Libertarian Party)	1	MI House District 50	Libertarian Party
+MI House District 51 (Libertarian Party)	1	MI House District 51	Libertarian Party
+MI House District 52 (Libertarian Party)	1	MI House District 52	Libertarian Party
+MI House District 53 (Libertarian Party)	1	MI House District 53	Libertarian Party
+MI House District 54 (Libertarian Party)	1	MI House District 54	Libertarian Party
+MI House District 55 (Libertarian Party)	1	MI House District 55	Libertarian Party
+MI House District 56 (Libertarian Party)	1	MI House District 56	Libertarian Party
+MI House District 57 (Libertarian Party)	1	MI House District 57	Libertarian Party
+MI House District 58 (Libertarian Party)	1	MI House District 58	Libertarian Party
+MI House District 59 (Libertarian Party)	1	MI House District 59	Libertarian Party
+MI House District 60 (Libertarian Party)	1	MI House District 60	Libertarian Party
+MI House District 61 (Libertarian Party)	1	MI House District 61	Libertarian Party
+MI House District 62 (Libertarian Party)	1	MI House District 62	Libertarian Party
+MI House District 63 (Libertarian Party)	1	MI House District 63	Libertarian Party
+MI House District 64 (Libertarian Party)	1	MI House District 64	Libertarian Party
+MI House District 65 (Libertarian Party)	1	MI House District 65	Libertarian Party
+MI House District 66 (Libertarian Party)	1	MI House District 66	Libertarian Party
+MI House District 67 (Libertarian Party)	1	MI House District 67	Libertarian Party
+MI House District 68 (Libertarian Party)	1	MI House District 68	Libertarian Party
+MI House District 69 (Libertarian Party)	1	MI House District 69	Libertarian Party
+MI House District 70 (Libertarian Party)	1	MI House District 70	Libertarian Party
+MI House District 71 (Libertarian Party)	1	MI House District 71	Libertarian Party
+MI House District 72 (Libertarian Party)	1	MI House District 72	Libertarian Party
+MI House District 73 (Libertarian Party)	1	MI House District 73	Libertarian Party
+MI House District 74 (Libertarian Party)	1	MI House District 74	Libertarian Party
+MI House District 75 (Libertarian Party)	1	MI House District 75	Libertarian Party
+MI House District 76 (Libertarian Party)	1	MI House District 76	Libertarian Party
+MI House District 77 (Libertarian Party)	1	MI House District 77	Libertarian Party
+MI House District 78 (Libertarian Party)	1	MI House District 78	Libertarian Party
+MI House District 79 (Libertarian Party)	1	MI House District 79	Libertarian Party
+MI House District 80 (Libertarian Party)	1	MI House District 80	Libertarian Party
+MI House District 81 (Libertarian Party)	1	MI House District 81	Libertarian Party
+MI House District 82 (Libertarian Party)	1	MI House District 82	Libertarian Party
+MI House District 83 (Libertarian Party)	1	MI House District 83	Libertarian Party
+MI House District 84 (Libertarian Party)	1	MI House District 84	Libertarian Party
+MI House District 85 (Libertarian Party)	1	MI House District 85	Libertarian Party
+MI House District 86 (Libertarian Party)	1	MI House District 86	Libertarian Party
+MI House District 87 (Libertarian Party)	1	MI House District 87	Libertarian Party
+MI House District 88 (Libertarian Party)	1	MI House District 88	Libertarian Party
+MI House District 89 (Libertarian Party)	1	MI House District 89	Libertarian Party
+MI House District 90 (Libertarian Party)	1	MI House District 90	Libertarian Party
+MI House District 91 (Libertarian Party)	1	MI House District 91	Libertarian Party
+MI House District 92 (Libertarian Party)	1	MI House District 92	Libertarian Party
+MI House District 93 (Libertarian Party)	1	MI House District 93	Libertarian Party
+MI House District 94 (Libertarian Party)	1	MI House District 94	Libertarian Party
+MI House District 95 (Libertarian Party)	1	MI House District 95	Libertarian Party
+MI House District 96 (Libertarian Party)	1	MI House District 96	Libertarian Party
+MI House District 97 (Libertarian Party)	1	MI House District 97	Libertarian Party
+MI House District 98 (Libertarian Party)	1	MI House District 98	Libertarian Party
+MI House District 99 (Libertarian Party)	1	MI House District 99	Libertarian Party
+MI House District 100 (Libertarian Party)	1	MI House District 100	Libertarian Party
+MI House District 101 (Libertarian Party)	1	MI House District 101	Libertarian Party
+MI House District 102 (Libertarian Party)	1	MI House District 102	Libertarian Party
+MI House District 103 (Libertarian Party)	1	MI House District 103	Libertarian Party
+MI House District 104 (Libertarian Party)	1	MI House District 104	Libertarian Party
+MI House District 105 (Libertarian Party)	1	MI House District 105	Libertarian Party
+MI House District 106 (Libertarian Party)	1	MI House District 106	Libertarian Party
+MI House District 107 (Libertarian Party)	1	MI House District 107	Libertarian Party
+MI House District 108 (Libertarian Party)	1	MI House District 108	Libertarian Party
+MI House District 109 (Libertarian Party)	1	MI House District 109	Libertarian Party
+MI House District 110 (Libertarian Party)	1	MI House District 110	Libertarian Party
+MI Senate District 1 (Libertarian Party)	1	MI Senate District 1	Libertarian Party
+MI Senate District 2 (Libertarian Party)	1	MI Senate District 2	Libertarian Party
+MI Senate District 3 (Libertarian Party)	1	MI Senate District 3	Libertarian Party
+MI Senate District 4 (Libertarian Party)	1	MI Senate District 4	Libertarian Party
+MI Senate District 5 (Libertarian Party)	1	MI Senate District 5	Libertarian Party
+MI Senate District 6 (Libertarian Party)	1	MI Senate District 6	Libertarian Party
+MI Senate District 7 (Libertarian Party)	1	MI Senate District 7	Libertarian Party
+MI Senate District 8 (Libertarian Party)	1	MI Senate District 8	Libertarian Party
+MI Senate District 9 (Libertarian Party)	1	MI Senate District 9	Libertarian Party
+MI Senate District 10 (Libertarian Party)	1	MI Senate District 10	Libertarian Party
+MI Senate District 11 (Libertarian Party)	1	MI Senate District 11	Libertarian Party
+MI Senate District 12 (Libertarian Party)	1	MI Senate District 12	Libertarian Party
+MI Senate District 13 (Libertarian Party)	1	MI Senate District 13	Libertarian Party
+MI Senate District 14 (Libertarian Party)	1	MI Senate District 14	Libertarian Party
+MI Senate District 15 (Libertarian Party)	1	MI Senate District 15	Libertarian Party
+MI Senate District 16 (Libertarian Party)	1	MI Senate District 16	Libertarian Party
+MI Senate District 17 (Libertarian Party)	1	MI Senate District 17	Libertarian Party
+MI Senate District 18 (Libertarian Party)	1	MI Senate District 18	Libertarian Party
+MI Senate District 19 (Libertarian Party)	1	MI Senate District 19	Libertarian Party
+MI Senate District 20 (Libertarian Party)	1	MI Senate District 20	Libertarian Party
+MI Senate District 21 (Libertarian Party)	1	MI Senate District 21	Libertarian Party
+MI Senate District 22 (Libertarian Party)	1	MI Senate District 22	Libertarian Party
+MI Senate District 23 (Libertarian Party)	1	MI Senate District 23	Libertarian Party
+MI Senate District 24 (Libertarian Party)	1	MI Senate District 24	Libertarian Party
+MI Senate District 25 (Libertarian Party)	1	MI Senate District 25	Libertarian Party
+MI Senate District 26 (Libertarian Party)	1	MI Senate District 26	Libertarian Party
+MI Senate District 27 (Libertarian Party)	1	MI Senate District 27	Libertarian Party
+MI Senate District 28 (Libertarian Party)	1	MI Senate District 28	Libertarian Party
+MI Senate District 29 (Libertarian Party)	1	MI Senate District 29	Libertarian Party
+MI Senate District 30 (Libertarian Party)	1	MI Senate District 30	Libertarian Party
+MI Senate District 31 (Libertarian Party)	1	MI Senate District 31	Libertarian Party
+MI Senate District 32 (Libertarian Party)	1	MI Senate District 32	Libertarian Party
+MI Senate District 33 (Libertarian Party)	1	MI Senate District 33	Libertarian Party
+MI Senate District 34 (Libertarian Party)	1	MI Senate District 34	Libertarian Party
+MI Senate District 35 (Libertarian Party)	1	MI Senate District 35	Libertarian Party
+MI Senate District 36 (Libertarian Party)	1	MI Senate District 36	Libertarian Party
+MI Senate District 37 (Libertarian Party)	1	MI Senate District 37	Libertarian Party
+MI Senate District 38 (Libertarian Party)	1	MI Senate District 38	Libertarian Party
+US House MI District 1 (Libertarian Party)	1	US House MI District 1	Libertarian Party
+US House MI District 2 (Libertarian Party)	1	US House MI District 2	Libertarian Party
+US House MI District 3 (Libertarian Party)	1	US House MI District 3	Libertarian Party
+US House MI District 4 (Libertarian Party)	1	US House MI District 4	Libertarian Party
+US House MI District 5 (Libertarian Party)	1	US House MI District 5	Libertarian Party
+US House MI District 6 (Libertarian Party)	1	US House MI District 6	Libertarian Party
+US House MI District 7 (Libertarian Party)	1	US House MI District 7	Libertarian Party
+US House MI District 8 (Libertarian Party)	1	US House MI District 8	Libertarian Party
+US House MI District 9 (Libertarian Party)	1	US House MI District 9	Libertarian Party
+US House MI District 10 (Libertarian Party)	1	US House MI District 10	Libertarian Party
+US House MI District 11 (Libertarian Party)	1	US House MI District 11	Libertarian Party
+US House MI District 12 (Libertarian Party)	1	US House MI District 12	Libertarian Party
+US House MI District 13 (Libertarian Party)	1	US House MI District 13	Libertarian Party
+US House MI District 14 (Libertarian Party)	1	US House MI District 14	Libertarian Party
+US President (MI) (Libertarian Party)	1	US President (MI)	Libertarian Party
+MI Governor (Libertarian Party)	1	MI Governor	Libertarian Party
+US Senate MI (Libertarian Party)	1	US Senate MI	Libertarian Party
+MI Attorney General (Libertarian Party)	1	MI Attorney General	Libertarian Party
+MI Lieutenant Governor (Libertarian Party)	1	MI Lieutenant Governor	Libertarian Party
+MI Treasurer (Libertarian Party)	1	MI Treasurer	Libertarian Party
+MI Secretary of State (Libertarian Party)	1	MI Secretary of State	Libertarian Party
+MI House District 1 (No Affiliation)	1	MI House District 1	No Affiliation
+MI House District 2 (No Affiliation)	1	MI House District 2	No Affiliation
+MI House District 3 (No Affiliation)	1	MI House District 3	No Affiliation
+MI House District 4 (No Affiliation)	1	MI House District 4	No Affiliation
+MI House District 5 (No Affiliation)	1	MI House District 5	No Affiliation
+MI House District 6 (No Affiliation)	1	MI House District 6	No Affiliation
+MI House District 7 (No Affiliation)	1	MI House District 7	No Affiliation
+MI House District 8 (No Affiliation)	1	MI House District 8	No Affiliation
+MI House District 9 (No Affiliation)	1	MI House District 9	No Affiliation
+MI House District 10 (No Affiliation)	1	MI House District 10	No Affiliation
+MI House District 11 (No Affiliation)	1	MI House District 11	No Affiliation
+MI House District 12 (No Affiliation)	1	MI House District 12	No Affiliation
+MI House District 13 (No Affiliation)	1	MI House District 13	No Affiliation
+MI House District 14 (No Affiliation)	1	MI House District 14	No Affiliation
+MI House District 15 (No Affiliation)	1	MI House District 15	No Affiliation
+MI House District 16 (No Affiliation)	1	MI House District 16	No Affiliation
+MI House District 17 (No Affiliation)	1	MI House District 17	No Affiliation
+MI House District 18 (No Affiliation)	1	MI House District 18	No Affiliation
+MI House District 19 (No Affiliation)	1	MI House District 19	No Affiliation
+MI House District 20 (No Affiliation)	1	MI House District 20	No Affiliation
+MI House District 21 (No Affiliation)	1	MI House District 21	No Affiliation
+MI House District 22 (No Affiliation)	1	MI House District 22	No Affiliation
+MI House District 23 (No Affiliation)	1	MI House District 23	No Affiliation
+MI House District 24 (No Affiliation)	1	MI House District 24	No Affiliation
+MI House District 25 (No Affiliation)	1	MI House District 25	No Affiliation
+MI House District 26 (No Affiliation)	1	MI House District 26	No Affiliation
+MI House District 27 (No Affiliation)	1	MI House District 27	No Affiliation
+MI House District 28 (No Affiliation)	1	MI House District 28	No Affiliation
+MI House District 29 (No Affiliation)	1	MI House District 29	No Affiliation
+MI House District 30 (No Affiliation)	1	MI House District 30	No Affiliation
+MI House District 31 (No Affiliation)	1	MI House District 31	No Affiliation
+MI House District 32 (No Affiliation)	1	MI House District 32	No Affiliation
+MI House District 33 (No Affiliation)	1	MI House District 33	No Affiliation
+MI House District 34 (No Affiliation)	1	MI House District 34	No Affiliation
+MI House District 35 (No Affiliation)	1	MI House District 35	No Affiliation
+MI House District 36 (No Affiliation)	1	MI House District 36	No Affiliation
+MI House District 37 (No Affiliation)	1	MI House District 37	No Affiliation
+MI House District 38 (No Affiliation)	1	MI House District 38	No Affiliation
+MI House District 39 (No Affiliation)	1	MI House District 39	No Affiliation
+MI House District 40 (No Affiliation)	1	MI House District 40	No Affiliation
+MI House District 41 (No Affiliation)	1	MI House District 41	No Affiliation
+MI House District 42 (No Affiliation)	1	MI House District 42	No Affiliation
+MI House District 43 (No Affiliation)	1	MI House District 43	No Affiliation
+MI House District 44 (No Affiliation)	1	MI House District 44	No Affiliation
+MI House District 45 (No Affiliation)	1	MI House District 45	No Affiliation
+MI House District 46 (No Affiliation)	1	MI House District 46	No Affiliation
+MI House District 47 (No Affiliation)	1	MI House District 47	No Affiliation
+MI House District 48 (No Affiliation)	1	MI House District 48	No Affiliation
+MI House District 49 (No Affiliation)	1	MI House District 49	No Affiliation
+MI House District 50 (No Affiliation)	1	MI House District 50	No Affiliation
+MI House District 51 (No Affiliation)	1	MI House District 51	No Affiliation
+MI House District 52 (No Affiliation)	1	MI House District 52	No Affiliation
+MI House District 53 (No Affiliation)	1	MI House District 53	No Affiliation
+MI House District 54 (No Affiliation)	1	MI House District 54	No Affiliation
+MI House District 55 (No Affiliation)	1	MI House District 55	No Affiliation
+MI House District 56 (No Affiliation)	1	MI House District 56	No Affiliation
+MI House District 57 (No Affiliation)	1	MI House District 57	No Affiliation
+MI House District 58 (No Affiliation)	1	MI House District 58	No Affiliation
+MI House District 59 (No Affiliation)	1	MI House District 59	No Affiliation
+MI House District 60 (No Affiliation)	1	MI House District 60	No Affiliation
+MI House District 61 (No Affiliation)	1	MI House District 61	No Affiliation
+MI House District 62 (No Affiliation)	1	MI House District 62	No Affiliation
+MI House District 63 (No Affiliation)	1	MI House District 63	No Affiliation
+MI House District 64 (No Affiliation)	1	MI House District 64	No Affiliation
+MI House District 65 (No Affiliation)	1	MI House District 65	No Affiliation
+MI House District 66 (No Affiliation)	1	MI House District 66	No Affiliation
+MI House District 67 (No Affiliation)	1	MI House District 67	No Affiliation
+MI House District 68 (No Affiliation)	1	MI House District 68	No Affiliation
+MI House District 69 (No Affiliation)	1	MI House District 69	No Affiliation
+MI House District 70 (No Affiliation)	1	MI House District 70	No Affiliation
+MI House District 71 (No Affiliation)	1	MI House District 71	No Affiliation
+MI House District 72 (No Affiliation)	1	MI House District 72	No Affiliation
+MI House District 73 (No Affiliation)	1	MI House District 73	No Affiliation
+MI House District 74 (No Affiliation)	1	MI House District 74	No Affiliation
+MI House District 75 (No Affiliation)	1	MI House District 75	No Affiliation
+MI House District 76 (No Affiliation)	1	MI House District 76	No Affiliation
+MI House District 77 (No Affiliation)	1	MI House District 77	No Affiliation
+MI House District 78 (No Affiliation)	1	MI House District 78	No Affiliation
+MI House District 79 (No Affiliation)	1	MI House District 79	No Affiliation
+MI House District 80 (No Affiliation)	1	MI House District 80	No Affiliation
+MI House District 81 (No Affiliation)	1	MI House District 81	No Affiliation
+MI House District 82 (No Affiliation)	1	MI House District 82	No Affiliation
+MI House District 83 (No Affiliation)	1	MI House District 83	No Affiliation
+MI House District 84 (No Affiliation)	1	MI House District 84	No Affiliation
+MI House District 85 (No Affiliation)	1	MI House District 85	No Affiliation
+MI House District 86 (No Affiliation)	1	MI House District 86	No Affiliation
+MI House District 87 (No Affiliation)	1	MI House District 87	No Affiliation
+MI House District 88 (No Affiliation)	1	MI House District 88	No Affiliation
+MI House District 89 (No Affiliation)	1	MI House District 89	No Affiliation
+MI House District 90 (No Affiliation)	1	MI House District 90	No Affiliation
+MI House District 91 (No Affiliation)	1	MI House District 91	No Affiliation
+MI House District 92 (No Affiliation)	1	MI House District 92	No Affiliation
+MI House District 93 (No Affiliation)	1	MI House District 93	No Affiliation
+MI House District 94 (No Affiliation)	1	MI House District 94	No Affiliation
+MI House District 95 (No Affiliation)	1	MI House District 95	No Affiliation
+MI House District 96 (No Affiliation)	1	MI House District 96	No Affiliation
+MI House District 97 (No Affiliation)	1	MI House District 97	No Affiliation
+MI House District 98 (No Affiliation)	1	MI House District 98	No Affiliation
+MI House District 99 (No Affiliation)	1	MI House District 99	No Affiliation
+MI House District 100 (No Affiliation)	1	MI House District 100	No Affiliation
+MI House District 101 (No Affiliation)	1	MI House District 101	No Affiliation
+MI House District 102 (No Affiliation)	1	MI House District 102	No Affiliation
+MI House District 103 (No Affiliation)	1	MI House District 103	No Affiliation
+MI House District 104 (No Affiliation)	1	MI House District 104	No Affiliation
+MI House District 105 (No Affiliation)	1	MI House District 105	No Affiliation
+MI House District 106 (No Affiliation)	1	MI House District 106	No Affiliation
+MI House District 107 (No Affiliation)	1	MI House District 107	No Affiliation
+MI House District 108 (No Affiliation)	1	MI House District 108	No Affiliation
+MI House District 109 (No Affiliation)	1	MI House District 109	No Affiliation
+MI House District 110 (No Affiliation)	1	MI House District 110	No Affiliation
+MI Senate District 1 (No Affiliation)	1	MI Senate District 1	No Affiliation
+MI Senate District 2 (No Affiliation)	1	MI Senate District 2	No Affiliation
+MI Senate District 3 (No Affiliation)	1	MI Senate District 3	No Affiliation
+MI Senate District 4 (No Affiliation)	1	MI Senate District 4	No Affiliation
+MI Senate District 5 (No Affiliation)	1	MI Senate District 5	No Affiliation
+MI Senate District 6 (No Affiliation)	1	MI Senate District 6	No Affiliation
+MI Senate District 7 (No Affiliation)	1	MI Senate District 7	No Affiliation
+MI Senate District 8 (No Affiliation)	1	MI Senate District 8	No Affiliation
+MI Senate District 9 (No Affiliation)	1	MI Senate District 9	No Affiliation
+MI Senate District 10 (No Affiliation)	1	MI Senate District 10	No Affiliation
+MI Senate District 11 (No Affiliation)	1	MI Senate District 11	No Affiliation
+MI Senate District 12 (No Affiliation)	1	MI Senate District 12	No Affiliation
+MI Senate District 13 (No Affiliation)	1	MI Senate District 13	No Affiliation
+MI Senate District 14 (No Affiliation)	1	MI Senate District 14	No Affiliation
+MI Senate District 15 (No Affiliation)	1	MI Senate District 15	No Affiliation
+MI Senate District 16 (No Affiliation)	1	MI Senate District 16	No Affiliation
+MI Senate District 17 (No Affiliation)	1	MI Senate District 17	No Affiliation
+MI Senate District 18 (No Affiliation)	1	MI Senate District 18	No Affiliation
+MI Senate District 19 (No Affiliation)	1	MI Senate District 19	No Affiliation
+MI Senate District 20 (No Affiliation)	1	MI Senate District 20	No Affiliation
+MI Senate District 21 (No Affiliation)	1	MI Senate District 21	No Affiliation
+MI Senate District 22 (No Affiliation)	1	MI Senate District 22	No Affiliation
+MI Senate District 23 (No Affiliation)	1	MI Senate District 23	No Affiliation
+MI Senate District 24 (No Affiliation)	1	MI Senate District 24	No Affiliation
+MI Senate District 25 (No Affiliation)	1	MI Senate District 25	No Affiliation
+MI Senate District 26 (No Affiliation)	1	MI Senate District 26	No Affiliation
+MI Senate District 27 (No Affiliation)	1	MI Senate District 27	No Affiliation
+MI Senate District 28 (No Affiliation)	1	MI Senate District 28	No Affiliation
+MI Senate District 29 (No Affiliation)	1	MI Senate District 29	No Affiliation
+MI Senate District 30 (No Affiliation)	1	MI Senate District 30	No Affiliation
+MI Senate District 31 (No Affiliation)	1	MI Senate District 31	No Affiliation
+MI Senate District 32 (No Affiliation)	1	MI Senate District 32	No Affiliation
+MI Senate District 33 (No Affiliation)	1	MI Senate District 33	No Affiliation
+MI Senate District 34 (No Affiliation)	1	MI Senate District 34	No Affiliation
+MI Senate District 35 (No Affiliation)	1	MI Senate District 35	No Affiliation
+MI Senate District 36 (No Affiliation)	1	MI Senate District 36	No Affiliation
+MI Senate District 37 (No Affiliation)	1	MI Senate District 37	No Affiliation
+MI Senate District 38 (No Affiliation)	1	MI Senate District 38	No Affiliation
+US House MI District 1 (No Affiliation)	1	US House MI District 1	No Affiliation
+US House MI District 2 (No Affiliation)	1	US House MI District 2	No Affiliation
+US House MI District 3 (No Affiliation)	1	US House MI District 3	No Affiliation
+US House MI District 4 (No Affiliation)	1	US House MI District 4	No Affiliation
+US House MI District 5 (No Affiliation)	1	US House MI District 5	No Affiliation
+US House MI District 6 (No Affiliation)	1	US House MI District 6	No Affiliation
+US House MI District 7 (No Affiliation)	1	US House MI District 7	No Affiliation
+US House MI District 8 (No Affiliation)	1	US House MI District 8	No Affiliation
+US House MI District 9 (No Affiliation)	1	US House MI District 9	No Affiliation
+US House MI District 10 (No Affiliation)	1	US House MI District 10	No Affiliation
+US House MI District 11 (No Affiliation)	1	US House MI District 11	No Affiliation
+US House MI District 12 (No Affiliation)	1	US House MI District 12	No Affiliation
+US House MI District 13 (No Affiliation)	1	US House MI District 13	No Affiliation
+US House MI District 14 (No Affiliation)	1	US House MI District 14	No Affiliation
+US President (MI) (No Affiliation)	1	US President (MI)	No Affiliation
+MI Governor (No Affiliation)	1	MI Governor	No Affiliation
+US Senate MI (No Affiliation)	1	US Senate MI	No Affiliation
+MI Attorney General (No Affiliation)	1	MI Attorney General	No Affiliation
+MI Lieutenant Governor (No Affiliation)	1	MI Lieutenant Governor	No Affiliation
+MI Treasurer (No Affiliation)	1	MI Treasurer	No Affiliation
+MI Secretary of State (No Affiliation)	1	MI Secretary of State	No Affiliation
