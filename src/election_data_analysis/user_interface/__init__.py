@@ -548,8 +548,17 @@ def new_datafile(
             f"No data read from file",
         )
         return err
-
-    count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"]]
+    # ensure that there is at least one count column
+    if not munger.options["count_columns"]:
+        err = add_new_error(
+            err,
+            "munger",
+            munger.name,
+            f"No count_columns specified for top-level munger"
+        )
+        return err
+    else:
+        count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"]]
 
     try:
         raw = m.munge_clean(raw, munger)
