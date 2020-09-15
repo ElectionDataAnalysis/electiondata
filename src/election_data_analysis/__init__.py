@@ -14,8 +14,7 @@ from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
 
 # constants
-single_data_loader_pars = [
-    "jurisdiction_path",
+sdl_pars_req = [
     "munger_name",
     "results_file",
     "results_short_name",
@@ -25,6 +24,13 @@ single_data_loader_pars = [
     "top_reporting_unit",
     "election",
     "aux_data_dir",
+]
+
+# nb: jurisdiction_path is for backward compatibility
+sdl_pars_opt = [
+    "aux_data_dir",
+    "jurisdiction_path",
+    "jurisdiction_directory"
 ]
 
 multi_data_loader_pars = [
@@ -137,7 +143,7 @@ class DataLoader:
             return err
 
         params = dict()
-        juris_path = dict()
+        juris_directory = dict()
 
         # For each par_file get params or throw error
         good_par_files = list()
@@ -145,27 +151,32 @@ class DataLoader:
             # grab parameters
             par_file = os.path.join(self.d["results_dir"], f)
             params[f], new_err = ui.get_runtime_parameters(
-                required_keys=single_data_loader_pars,
-                optional_keys=["aux_data_dir"],
+                required_keys=sdl_pars_req,
+                optional_keys=sdl_pars_opt,
                 param_file=par_file,
                 header="election_data_analysis",
             )
             if new_err:
                 err = ui.consolidate_errors([err, new_err])
             if not ui.fatal_error(new_err):
+                ###########
+                # for backwards compatibility
+                if "jurisdiction_directory" not in params[f].keys():
+                    params[f]["jurisdiction_directory"] = Path(params[f]["jurisdiction_path"]).name
+                ###########
                 good_par_files.append(f)
-                juris_path[f] = params[f]["jurisdiction_path"]
+                juris_directory[f] = params[f]["jurisdiction_directory"]
 
-        # group .ini files by jurisdiction_path
-        jurisdiction_paths = {juris_path[f] for f in good_par_files}
+        # group .ini files by jurisdiction_directory name
+        jurisdiction_dirs = {juris_directory[f] for f in good_par_files}
 
         # for each jurisdiction, create Jurisdiction or throw error
         good_jurisdictions = list()
         juris = dict()
-        for jp in jurisdiction_paths:
+        for jp in jurisdiction_dirs:
             # create and load jurisdiction or throw error
             juris[jp], new_err = ui.pick_juris_from_filesystem(
-                juris_path=jp,
+                juris_path=os.path.join(self.d["jurisdictions_dir"], jp),
                 err=None,
                 check_files=load_jurisdictions,
             )
@@ -193,7 +204,7 @@ class DataLoader:
 
         # process all good parameter files with good jurisdictions
         for jp in good_jurisdictions:
-            good_files = [f for f in good_par_files if juris_path[f] == jp]
+            good_files = [f for f in good_par_files if juris_directory[f] == jp]
             print(f"Processing results files {good_files}")
             for f in good_files:
                 sdl, new_err = check_and_init_singledataloader(
@@ -225,7 +236,7 @@ class DataLoader:
                         )
                     else:
                         print(f"\t{f} and its results file not archived due to errors")
-                # TODO report munger, jurisdiction and file errors & warnings
+                #  report munger, jurisdiction and file errors & warnings
                 err = ui.report(
                     err,
                     loc_dict=loc_dict,
@@ -267,8 +278,8 @@ class SingleDataLoader:
         # grab parameters (known to exist from __new__, so can ignore error variable)
         par_file = os.path.join(results_dir, par_file_name)
         self.d, dummy_err = ui.get_runtime_parameters(
-            required_keys=single_data_loader_pars,
-            optional_keys=["aux_data_dir"],
+            required_keys=sdl_pars_req,
+            optional_keys=sdl_pars_opt,
             param_file=par_file,
             header="election_data_analysis",
         )
@@ -379,13 +390,23 @@ def check_and_init_singledataloader(
     # test parameters
     par_file = os.path.join(results_dir, par_file_name)
     d, err = ui.get_runtime_parameters(
-        required_keys=single_data_loader_pars,
-        optional_keys=["aux_data_dir"],
+        required_keys=sdl_pars_req,
+        optional_keys=sdl_pars_opt,
         param_file=par_file,
         header="election_data_analysis",
     )
     if err:
         sdl = None
+    # for backward compatibility
+    elif () and ():
+        sdl = None
+        err = ui.add_new_error(
+            dict(),
+            "ini",
+            par_file_name,
+            f"Neither jurisdiction_directory nor jurisdiction_path specified"
+        )
+
     else:
         sdl = SingleDataLoader(
             results_dir,

@@ -1,6 +1,6 @@
 [election_data_analysis]
 results_file=<just the name, not the path. File should be in the same directory as this parameter file>
-jurisdiction_path=<path/to/folder/containing/jurisdiction/definition/files>
+jurisdiction_directory=<just the name, not the path>
 munger_name=<comma-separated list of all mungers to be applied to the file.>
 top_reporting_unit=<internal db name from ReportingUnit table>
 election=<internal db name from Election table>

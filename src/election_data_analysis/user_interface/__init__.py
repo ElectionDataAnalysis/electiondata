@@ -26,6 +26,7 @@ recognized_encodings = {
     "euc-jp",
     "ibm1026",
     "ascii",
+    "ASCII",
     "IBM437",
     "EBCDIC-CP-BE",
     "csshiftjis",
@@ -651,8 +652,8 @@ def consolidate_errors(list_of_err: list) -> Optional[Dict[Any, dict]]:
         name_keys = set().union(*[y.keys() for y in err_list])
         for nk in name_keys:
             msg_list_of_lists = [y[nk] for y in err_list if nk in y.keys()]
-            # assign list of all messages
-            d[et][nk] = [y for x in msg_list_of_lists for y in x]
+            # assign list of all messages (avoiding duplicates)
+            d[et][nk] = list({y for x in msg_list_of_lists for y in x})
     return d
 
 
