@@ -167,6 +167,11 @@ def append_to_composing_reporting_unit_join(engine, ru):
 def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
     """Check for DB and relevant tables; if they don't exist, return
     error message"""
+
+    # initialize error dictionary
+    err = None
+
+
     try:
         params = ui.get_runtime_parameters(
             required_keys=db_pars, param_file=paramfile, header="postgresql"
@@ -181,7 +186,7 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
         con = psycopg2.connect(**params)
         con.close()
     except psycopg2.OperationalError as e:
-        return False, err
+        return False, e
 
     # Look for tables
     try:
