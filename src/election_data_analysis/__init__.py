@@ -45,7 +45,7 @@ prep_pars = [
     "reporting_unit_type",
 ]
 
-optional_prep_pars = ["results_file", "munger_name"]
+optional_prep_pars = ["results_file", "munger_name","aux_data_dir"]
 
 analyze_pars = ["db_paramfile", "db_name"]
 
@@ -860,13 +860,13 @@ class JurisdictionPrepper:
                 param_file=par_file,
                 err=None,
             )
-            # redefine the results_file_path parameter to a full path ?!
             file_dict["results_file_path"] = os.path.join(
                 dir, file_dict["results_file"]
             )
             if new_err:
                 error = ui.consolidate_errors([error, new_err])
             if not ui.fatal_error(error):
+                # add elements
                 new_err = self.add_elements_from_results_file(
                     elements, error, **file_dict
                 )
@@ -879,15 +879,16 @@ class JurisdictionPrepper:
         elements: iter,
         error: dict,
         results_file_path=None,
+        results_file=None,
         munger_name=None,
-        **kwargs,
+        aux_data_dir=None
     ) -> dict:
         """Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
         or not already in <element>.txt for each <element> in <elements>"""
 
         # get parameters from arguments; otherwise from self.d; otherwise throw error
         kwargs, missing = ui.get_params_to_read_results(
-            self.d, results_file_path, munger_name
+            self.d, results_file_path, munger_name, aux_data_dir=aux_data_dir
         )
         if missing:
             error = ui.add_new_error(
