@@ -42,21 +42,32 @@ def generic_clean(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def cast_cols_as_int(
-    df: pd.DataFrame, col_list: list, mode="name", error_msg=""
+    df: pd.DataFrame, col_list: list, mode="name", error_msg="",munger_name="unknown",
 ) -> pd.DataFrame:
     """recast columns as integer where possible, leaving columns with text entries as non-numeric)"""
+    err = None
     if mode == "index":
         num_columns = [df.columns[idx] for idx in col_list]
     elif mode == "name":
         num_columns = [c for c in df.columns if c in col_list]
     else:
-        raise ValueError(f"Mode {mode} not recognized")
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.cast_cols_as_int",
+            f"Mode {mode} not recognized",
+        )
     for c in num_columns:
         try:
             df[c] = df[c].astype("int64", errors="raise")
         except ValueError as e:
-            print(f"{error_msg}\nColumn {c} cannot be cast as integer:\n{e}")
-    return df
+            err = ui.add_new_error(
+                err,
+                "warn-munger",
+                munger_name,
+                f"{error_msg}\nColumn {c} cannot be cast as integer:\n{e}"
+            )
+    return df, err
 
 
 def munge_clean(raw: pd.DataFrame, munger: jm.Munger):

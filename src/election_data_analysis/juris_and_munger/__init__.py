@@ -190,9 +190,17 @@ class Munger:
 
             # cast primary key(s) as int if possible, and set as (multi-)index
             primary_keys = self.aux_meta.loc[abbrev, "primary_key"].split(",")
-            df = m.cast_cols_as_int(
-                df, primary_keys, error_msg=f"In dataframe for {abbrev}"
+            df, new_err = m.cast_cols_as_int(
+                df,
+                primary_keys,
+                error_msg=f"In dataframe for {abbrev}",
+                munger_name=aux_mu.name,
             )
+            if new_err:
+                err = ui.consolidate_errors([err, new_err])
+                if ui.fatal_error(new_err):
+                    return aux_data_dict, err
+
             df.set_index(primary_keys, inplace=True)
 
             aux_data_dict[abbrev] = df
@@ -567,6 +575,10 @@ def check_munger_file_contents(munger_path, munger_file, err):
             optional_keys=list(munger_pars_opt.keys()),
         )
 
+        # stop and return error if fatal
+        if ui.fatal_error(err):
+            return err
+
         # warn if encoding missing or is not recognized
         if "encoding" not in format_d.keys():
             err = ui.add_new_error(
@@ -589,23 +601,17 @@ def check_munger_file_contents(munger_path, munger_file, err):
         # check all parameters for flat files
         if format_d["file_type"] in ["txt", "csv", "xls"]:
             # Either field_name_row is a number, or field_names_if_no_field_name_row is a non-empty list
-            if (
-                (not format_d["field_name_row"])
-                or (not format_d["field_name_row"].isnumeric())
-                and (
-                    (not format_d["field_names_if_no_field_name_row"])
-                    or len(format_d["field_names_if_no_field_name_row"]) == 0
-                )
-            ):
-                err = ui.add_new_error(
-                    err,
-                    "munger",
-                    munger_name,
-                    (
-                        f"field_name_row is not an integer, "
-                        f"but no field names are give in field_names_if_no_field_name_row."
-                    ),
-                )
+            if (not format_d["field_name_row"]) or (not format_d["field_name_row"].isnumeric()):
+                if (not format_d["field_names_if_no_field_name_row"]) or (len(format_d["field_names_if_no_field_name_row"]) == 0):
+                    err = ui.add_new_error(
+                        err,
+                        "munger",
+                        munger_name,
+                        (
+                            f"field_name_row is not an integer, "
+                            f"but no field names are given in field_names_if_no_field_name_row."
+                        ),
+                    )
 
             # other entries in format.config are of correct type
             try:
