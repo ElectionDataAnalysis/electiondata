@@ -1,4 +1,4 @@
-from configparser import ConfigParser
+from configparser import ConfigParser, MissingSectionHeaderError
 from election_data_analysis import munge as m
 from election_data_analysis import special_formats as sf
 import pandas as pd
@@ -369,16 +369,17 @@ def read_single_datafile(
         dtype = {c: str for c in munger.field_list}
         kwargs = {"thousands": munger.thousands_separator, "dtype": dtype}
 
-        if munger.options["field_name_row"] is None:
+        if not munger.options["field_name_row"]:
             kwargs["header"] = None
             kwargs["names"] = munger.options["field_names_if_no_field_name_row"]
+            kwargs["index_col"] = False
         else:
             kwargs["header"] = list(range(munger.options["header_row_count"]))
+            kwargs["index_col"] = None
 
         if munger.file_type in ["txt", "csv"]:
             kwargs["encoding"] = munger.encoding
             kwargs["quoting"] = csv.QUOTE_MINIMAL
-            kwargs["index_col"] = None
             if munger.file_type == "txt":
                 kwargs["sep"] = "\t"
             df = pd.read_csv(f_path, **kwargs)
@@ -463,9 +464,13 @@ def read_combine_results(
                 return pd.DataFrame(), err
 
         else:
-            working = m.cast_cols_as_int(
-                working, mu.options["count_columns"], mode="index"
+            working, new_err = m.cast_cols_as_int(
+                working, mu.options["count_columns"], mode="index", munger_name=mu.name,
             )
+            if new_err:
+                err = consolidate_errors([err, new_err])
+                if fatal_error(new_err):
+                    return working, err
 
         # merge with auxiliary files (if any)
         if aux_data_dir is not None:
@@ -481,7 +486,12 @@ def read_combine_results(
             for abbrev, r in mu.aux_meta.iterrows():
                 # cast foreign key columns of main results file as int if possible
                 foreign_key = r["foreign_key"].split(",")
-                working = m.cast_cols_as_int(working, foreign_key)
+                working, new_err = m.cast_cols_as_int(working, foreign_key, munger_name=mu.name)
+                if new_err:
+                    err = consolidate_errors([err,new_err])
+                    if fatal_error(new_err):
+                        return working, err
+
                 # rename columns
                 col_rename = {
                     f"{c}": f"{abbrev}[{c}]" for c in aux_data[abbrev].columns
@@ -589,15 +599,15 @@ def get_runtime_parameters(
 
     # read info from file
     parser = ConfigParser()
-    p = parser.read(param_file)
-    if len(p) == 0:
-        err = add_new_error(err, "file", param_file, "File not found")
-        return d, err
-
     # find header
     try:
+        p = parser.read(param_file)
+        if len(p) == 0:
+            err = add_new_error(err, "file", param_file, "File not found")
+            return d, err
+
         h = parser[header]
-    except KeyError as ke:
+    except (KeyError,MissingSectionHeaderError) as ke:
         err = add_new_error(err, "ini", param_file, f"Missing header: {ke}")
         return d, err
 
