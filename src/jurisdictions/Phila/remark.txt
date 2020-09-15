@@ -1,6 +1,0 @@
-Philadelphia, Pennsylvania is classified as a 'county' (even though it's also a 'city').
-
-The smallest reporting unit in Philadelphia is classified as a 'precinct'
-(even though it is often called a 'division' in Philadelphia).
-
-

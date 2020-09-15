@@ -1,2 +1,0 @@
-The election results download link https://www.sos.state.co.us/pubs/elections/Results/archive2000.html
-As far as we know, CO data source does not say what type of votes; we assume for now that the files contain vote totals.
