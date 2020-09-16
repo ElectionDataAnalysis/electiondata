@@ -604,6 +604,8 @@ def add_contest_id(
         err = ui.add_new_error(
             err, "jurisdiction", juris.short_name, f"No contests recognized.\n{contest_list}"
         )
+    else:
+        working = working_temp
     if ui.fatal_error(err):
         return working, err
 
