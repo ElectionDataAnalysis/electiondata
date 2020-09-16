@@ -677,6 +677,7 @@ class JurisdictionPrepper:
         sub_ru_type: str = "precinct",
         results_file_path=None,
         munger_name=None,
+        aux_data_dir=None,
         **kwargs,
     ) -> dict:
         """Assumes precincts (or other sub-county reporting units)
@@ -686,7 +687,7 @@ class JurisdictionPrepper:
 
         # get parameters from arguments; otherwise from self.d; otherwise throw error
         kwargs, missing = ui.get_params_to_read_results(
-            self.d, results_file_path, munger_name
+            self.d, results_file_path, munger_name, aux_data_dir=aux_data_dir
         )
         if missing:
             if results_file_path:
@@ -722,6 +723,7 @@ class JurisdictionPrepper:
             f"{field}_SOURCE"
             for field in munger.cdf_elements.loc["ReportingUnit", "fields"]
         ]
+        # TODO generalize to mungers with aux_data
         bad_fields = [f for f in fields if f not in wr.columns]
         if bad_fields:
             error = ui.add_new_error(
@@ -750,7 +752,12 @@ class JurisdictionPrepper:
         # get formulas from munger
         ru_formula = munger.cdf_elements.loc["ReportingUnit", "raw_identifier_formula"]
         try:
-            [county_formula, sub_ru_formula] = ru_formula.split(";")
+            # text up to first ; is the County -- the part following is the sub_ru
+            ru_parts = ru_formula.split(";")
+            county_formula = ru_parts[0]
+            sub_list = ru_parts[1:]
+            sub_ru_formula = ";".join(sub_list)
+
         except ValueError:
             error = ui.add_new_error(
                 error,
