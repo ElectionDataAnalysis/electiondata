@@ -232,7 +232,7 @@ class DataLoader:
                             sdl.d["results_file"], self.d["results_dir"], success_dir
                         )
                         print(
-                            f"\tArchived {f} and its results file after successful load."
+                            f"\tArchived {f} and its results file after successful load.\n"
                         )
                     else:
                         print(f"\t{f} and its results file not archived due to errors")
@@ -354,7 +354,7 @@ class SingleDataLoader:
     def load_results(self) -> dict:
         """Load results, returning error (or None, if load successful)"""
         err = None
-        print(f'Processing {self.d["results_file"]}')
+        print(f'\n\nProcessing {self.d["results_file"]}')
         results_info, e = self.track_results()
         if e:
             err = ui.add_new_error(
