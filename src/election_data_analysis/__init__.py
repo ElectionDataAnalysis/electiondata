@@ -161,7 +161,7 @@ class DataLoader:
             if not ui.fatal_error(new_err):
                 ###########
                 # for backwards compatibility
-                if "jurisdiction_directory" not in params[f].keys():
+                if not params[f]["jurisdiction_directory"]:
                     params[f]["jurisdiction_directory"] = Path(params[f]["jurisdiction_path"]).name
                 ###########
                 good_par_files.append(f)
