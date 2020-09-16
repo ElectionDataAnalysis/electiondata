@@ -5339,3 +5339,122 @@ Michigan;Wayne County;{Statistical Adjustments};Ward 0;Precinct 9999 Label	preci
 Michigan;Wexford County;{Statistical Adjustments};Ward 0;Precinct 9999 Label	precinct
 Michigan;Lake County;{Statistical Adjustments};Ward 0;Precinct 9999 Label	precinct
 Michigan;St. Joseph County;{Statistical Adjustments};Ward 0;Precinct 9999 Label	precinct
+Michigan;Dickinson County;{Statistical Adjustments};Ward 0;Precinct 9999 Label	precinct
+Michigan;Genesee County;MOUNT MORRIS TOWNSHIP;Ward 0;Precinct 5 Label	precinct
+Michigan;Genesee County;MOUNT MORRIS TOWNSHIP;Ward 0;Precinct 7 Label	precinct
+Michigan;Ionia County;PORTLAND TOWNSHIP;Ward 0;Precinct 2 Label	precinct
+Michigan;Kent County;CALEDONIA TOWNSHIP;Ward 0;Precinct 6 Label	precinct
+Michigan;Kent County;CASCADE TOWNSHIP;Ward 0;Precinct 9 Label	precinct
+Michigan;Kent County;CASCADE TOWNSHIP;Ward 0;Precinct 10 Label	precinct
+Michigan;Kent County;KENTWOOD CITY;Ward 0;Precinct 17 Label	precinct
+Michigan;Kent County;KENTWOOD CITY;Ward 0;Precinct 18 Label	precinct
+Michigan;Lapeer County;ELBA TOWNSHIP;Ward 0;Precinct 0 Label AVCB	precinct
+Michigan;Lapeer County;LAPEER TOWNSHIP;Ward 0;Precinct 0 Label AVCB	precinct
+Michigan;Lapeer County;OREGON TOWNSHIP;Ward 0;Precinct 0 Label AVBC	precinct
+Michigan;Lapeer County;{Statistical Adjustments};Ward 0;Precinct 9999 Label	precinct
+Michigan;Lenawee County;RAISIN TOWNSHIP;Ward 0;Precinct 3 Label	precinct
+Michigan;Macomb County;MACOMB TOWNSHIP;Ward 0;Precinct 36 Label	precinct
+Michigan;Macomb County;MACOMB TOWNSHIP;Ward 0;Precinct 37 Label	precinct
+Michigan;Macomb County;SHELBY TOWNSHIP;Ward 0;Precinct 30 Label	precinct
+Michigan;Macomb County;EASTPOINTE CITY;Ward 0;Precinct 13 Label	precinct
+Michigan;Macomb County;EASTPOINTE CITY;Ward 0;Precinct 14 Label	precinct
+Michigan;Midland County;MIDLAND CITY;Ward 1;Precinct 6 Label	precinct
+Michigan;Oakland County;LYON TOWNSHIP;Ward 0;Precinct 7 Label	precinct
+Michigan;Oakland County;LYON TOWNSHIP;Ward 0;Precinct 8 Label	precinct
+Michigan;Oakland County;LYON TOWNSHIP;Ward 0;Precinct 9 Label	precinct
+Michigan;Oakland County;FARMINGTON CITY;Ward 0;Precinct 1 Label	precinct
+Michigan;Oakland County;FARMINGTON CITY;Ward 0;Precinct 2 Label	precinct
+Michigan;Oakland County;FARMINGTON CITY;Ward 0;Precinct 3 Label	precinct
+Michigan;Oakland County;FARMINGTON CITY;Ward 0;Precinct 4 Label	precinct
+Michigan;Oakland County;FARMINGTON CITY;Ward 0;Precinct 5 Label	precinct
+Michigan;Oakland County;FARMINGTON CITY;Ward 0;Precinct 6 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 1 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 2 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 3 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 4 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 5 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 6 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 7 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 8 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 9 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 10 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 11 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 12 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 13 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 14 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 15 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 16 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 17 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 18 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 19 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 20 Label	precinct
+Michigan;Oakland County;PONTIAC CITY;Ward 0;Precinct 21 Label	precinct
+Michigan;Oakland County;ROCHESTER CITY;Ward 0;Precinct 6 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 1 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 2 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 3 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 4 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 5 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 6 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 7 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 8 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 9 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 10 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 11 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 12 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 13 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 14 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 15 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 16 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 17 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 18 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 19 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 20 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 21 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 22 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 23 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 24 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 25 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 26 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 27 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 28 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 29 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 30 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 31 Label	precinct
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0;Precinct 32 Label	precinct
+Michigan;Ottawa County;GEORGETOWN TOWNSHIP;Ward 0;Precinct 17 Label	precinct
+Michigan;St. Clair County;MARYSVILLE CITY;Ward 0;Precinct 4 Label	precinct
+Michigan;St. Clair County;MARYSVILLE CITY;Ward 0;Precinct 904 Label AVCB	precinct
+Michigan;Van Buren County;SOUTH HAVEN CITY;Ward 3;Precinct 2 Label	precinct
+Michigan;Washtenaw County;LIMA TOWNSHIP;Ward 0;Precinct 2 Label	precinct
+Michigan;Washtenaw County;PITTSFIELD TOWNSHIP;Ward 0;Precinct 11 Label	precinct
+Michigan;Washtenaw County;PITTSFIELD TOWNSHIP;Ward 0;Precinct 12 Label	precinct
+Michigan;Washtenaw County;PITTSFIELD TOWNSHIP;Ward 0;Precinct 13 Label	precinct
+Michigan;Washtenaw County;SCIO TOWNSHIP;Ward 0;Precinct 1 Label	precinct
+Michigan;Washtenaw County;ANN ARBOR CITY;Ward 1;Precinct 11 Label	precinct
+Michigan;Washtenaw County;ANN ARBOR CITY;Ward 1;Precinct 12 Label	precinct
+Michigan;Washtenaw County;ANN ARBOR CITY;Ward 3;Precinct 10 Label	precinct
+Michigan;Washtenaw County;ANN ARBOR CITY;Ward 5;Precinct 12 Label	precinct
+Michigan;Washtenaw County;DEXTER CITY;Ward 1;Precinct 3 Label	precinct
+Michigan;Wayne County;BROWNSTOWN TOWNSHIP;Ward 0;Precinct 12 Label	precinct
+Michigan;Wayne County;DETROIT CITY;Ward 0;Precinct 491 Label	precinct
+Michigan;Wayne County;DETROIT CITY;Ward 0;Precinct 492 Label	precinct
+Michigan;Wayne County;DETROIT CITY;Ward 0;Precinct 493 Label	precinct
+Michigan;Wayne County;DETROIT CITY;Ward 0;Precinct 494 Label	precinct
+Michigan;Wayne County;DETROIT CITY;Ward 0;Precinct 495 Label	precinct
+Michigan;Wayne County;DETROIT CITY;Ward 0;Precinct 496 Label	precinct
+Michigan;Wayne County;DETROIT CITY;Ward 0;Precinct 497 Label	precinct
+Michigan;Wayne County;DETROIT CITY;Ward 0;Precinct 498 Label	precinct
+Michigan;Wayne County;DETROIT CITY;Ward 0;Precinct 499 Label	precinct
+Michigan;Wayne County;DETROIT CITY;Ward 0;Precinct 500 Label	precinct
+Michigan;Wayne County;DETROIT CITY;Ward 0;Precinct 501 Label	precinct
+Michigan;Wayne County;DETROIT CITY;Ward 0;Precinct 502 Label	precinct
+Michigan;Wayne County;DETROIT CITY;Ward 0;Precinct 503 Label	precinct
+Michigan;Bay County;BANGOR TOWNSHIP;Ward 0;Precinct 9999 Label	precinct
+Michigan;Clare County;{Statistical Adjustments};Ward 0;Precinct 9999 Label	precinct
+Michigan;Gladwin County;{Statistical Adjustments};Ward 0;Precinct 9999 Label	precinct
+Michigan;Lapeer County;OREGON TOWNSHIP;Ward 0;Precinct 0 Label AVCB	precinct
+Michigan;Lenawee County;TECUMSEH TOWNSHIP;Ward 0;Precinct 3 Label	precinct
+Michigan;Livingston County;{Statistical Adjustments};Ward 0;Precinct 9999 Label	precinct
+Michigan;Muskegon County;{Statistical Adjustments};Ward 0;Precinct 9999 Label	precinct
+Michigan;Lenawee County;TECUMSEH CITY;Ward 0;Precinct 3 Label	precinct
