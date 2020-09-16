@@ -372,7 +372,7 @@ def read_single_datafile(
         dtype = {c: str for c in munger.field_list}
         kwargs = {"thousands": munger.thousands_separator, "dtype": dtype}
 
-        if not munger.options["field_name_row"]:
+        if munger.options["field_name_row"] is None:
             kwargs["header"] = None
             kwargs["names"] = munger.options["field_names_if_no_field_name_row"]
             kwargs["index_col"] = False
