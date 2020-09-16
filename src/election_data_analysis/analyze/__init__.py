@@ -38,13 +38,14 @@ def child_rus_by_id(session, parents, ru_type=None):
 
 
 def create_rollup(
-    cursor,
+    session,
     target_dir: str,
     top_ru_id: int,
     sub_rutype_id: int,
     election_id: int,
-    datafile_list=None,
-    by="Id",
+    datafile_list: list = None,
+    by: str = "Id",
+    by_vote_type: bool = False,
 ) -> str:
     """<target_dir> is the directory where the resulting rollup will be stored.
     <election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
@@ -56,8 +57,10 @@ def create_rollup(
     If no <datafile_list> is given, return all results for the given election.
     """
 
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
     if not datafile_list:
-        datafile_list, e = db.data_file_list(cursor, [election_id], by="Id")
+        datafile_list, e = db.data_file_list(cursor, election_id, by="Id")
         if e:
             return e
         by = "Id"
@@ -106,22 +109,21 @@ def create_rollup(
                 f"There is already a file called {rollup_file}. Pick another name.\n"
             )
 
-        err = db.export_rollup_to_csv(
+        df, err_str = db.export_rollup_from_db(
             cursor,
             top_ru,
             sub_rutype,
             contest_type,
             datafile_list,
-            os.path.join(leaf_dir, rollup_file),
             by=by,
             exclude_total=exclude_total,
+            by_vote_type=by_vote_type,
         )
-        if err:
-            err_str = err
-        else:
+        if not err_str:
             # create record for inventory.txt
             inv_df = inv_df.append(inventory, ignore_index=True).fillna("")
             err_str = None
+            df.to_csv(os.path.join(leaf_dir, rollup_file), index=False, sep="\t")
 
     # export to inventory file
     inv_df.to_csv(inventory_file, index=False, sep="\t")
@@ -486,6 +488,7 @@ def assign_anomaly_score(data):
                     .sort_values("ReportingUnit_Id")
                     .reset_index()
                 )
+                pivot_df = pivot_df[pivot_df["reporting_unit_total"] > 0]
                 pivot_df_values = pivot_df.drop(
                     columns=["ReportingUnit_Id", "reporting_unit_total"]
                 )
@@ -619,9 +622,10 @@ def density_score(points):
 def calculate_margins(data):
     """Takes a dataframe with an anomaly score and assigns
     a margin score"""
-    rank_1_df = data[data["rank"] == 1][["unit_id", "ReportingUnit_Id", "Count"]]
+    rank_1_df = data[data["rank"] == 1][["unit_id", "ReportingUnit_Id", "CountItemType", "Count"]]
+    rank_1_df = rank_1_df.drop_duplicates() 
     rank_1_df = rank_1_df.rename(columns={"Count": "rank_1_total"})
-    data = data.merge(rank_1_df, how="inner", on=["unit_id", "ReportingUnit_Id"])
+    data = data.merge(rank_1_df, how="inner", on=["unit_id", "ReportingUnit_Id", "CountItemType"])
     data["margins"] = data["rank_1_total"] - data["Count"]
     data["margins_pct"] = (data["rank_1_total"] - data["Count"]) / (
         data["rank_1_total"] + data["Count"]
@@ -646,7 +650,7 @@ def calculate_votes_at_stake(data):
             anomalous_df = temp_df[
                 (temp_df["ReportingUnit_Id"] == reporting_unit_id)
                 & ((temp_df["score"] == max_score) | (temp_df["rank"] == 1))
-            ].sort_values("rank", ascending=False)
+            ].sort_values("rank", ascending=False).drop_duplicates()
 
             # get a df of the pairing with closest margin to the most anomalous
             # Margins could be + or - so need to handle both

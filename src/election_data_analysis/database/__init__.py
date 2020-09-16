@@ -166,13 +166,17 @@ def append_to_composing_reporting_unit_join(engine, ru):
 
 def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
     """Check for DB and relevant tables; if they don't exist, return
-    False and error dictionary"""
-    # get postgresql parameters
-    params, err = ui.get_runtime_parameters(
-        required_keys=db_pars, param_file=paramfile, header="postgresql"
-    )
-    if err:
-        return False, err
+    error message"""
+
+    # initialize error dictionary
+    err = None
+
+    try:
+        params = ui.get_runtime_parameters(
+            required_keys=db_pars, param_file=paramfile, header="postgresql"
+        )[0]
+    except MissingSectionHeaderError as e:
+        return {"message": "database.ini file not found suggested location."}
     if dbname:
         params["dbname"] = dbname
 
@@ -181,6 +185,12 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
         con = psycopg2.connect(**params)
         con.close()
     except psycopg2.OperationalError as e:
+        err = ui.add_new_error(
+            err,
+            "system",
+            "database.test_connection",
+            f"Error connecting to database: {e}"
+        )
         return False, err
 
     # Look for tables
@@ -735,16 +745,16 @@ def vote_type_list(cursor, datafile_list: list, by: str = "Id") -> (list, str):
     return vt_list, err_str
 
 
-def data_file_list(cursor, election_id_list, by="Id"):
+def data_file_list(cursor, election_id, by="Id"):
     q = sql.SQL(
-        """SELECT distinct d.{by} FROM _datafile d WHERE d."Election_Id" in %s"""
+        """SELECT distinct d.{by} FROM _datafile d WHERE d."Election_Id" = %s"""
     ).format(by=sql.Identifier(by))
     try:
-        cursor.execute(q, [tuple(election_id_list)])
+        cursor.execute(q, (election_id,))
         df_list = [x for (x,) in cursor.fetchall()]
         err_str = None
     except Exception as exc:
-        err_str = f"Database error pulling list of datafiles with election id in {election_id_list}: {exc}"
+        err_str = f"Database error pulling list of datafiles with election id in {election_id}: {exc}"
         df_list = None
     return df_list, err_str
 
@@ -1148,9 +1158,9 @@ def get_filtered_input_options(session, input_str, filters):
             # clean the name column
             df["name"] = (
                 df["name"]
-                .str.replace("\['", "")
-                .str.replace("'\]", "")
-                .str.replace("', '", "; ")
+                .str.replace(r"\['", "")
+                .str.replace(r"'\]", "")
+                .str.replace(r"', '", "; ")
             )
         except:
             df = pd.DataFrame()
@@ -1291,3 +1301,139 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
     result_df = pd.DataFrame(result)
     result_df.columns = result.keys()
     return result_df
+
+
+def export_rollup_from_db(
+    cursor,
+    top_ru: str,
+    sub_unit_type: str,
+    contest_type: str,
+    datafile_list: iter,
+    by: str = "Id",
+    exclude_total: bool = False,
+    by_vote_type: bool = False,
+):
+    if not by_vote_type:
+        restrict = """ AND CIT."Txt" = 'total' """
+    elif exclude_total:
+        restrict = """ AND CIT."Txt" != 'total' """
+    else:
+        restrict = ""
+
+    columns = [
+        "contest_type",
+        "contest",
+        "contest_district_type",
+        "selection",
+        "reporting_unit",
+        "count_item_type",
+        "count",
+    ]
+    if contest_type == "Candidate":
+        q = sql.SQL(
+            """
+        SELECT 'Candidate' contest_type,
+            C."Name" "Contest",
+            EDRUT."Txt" contest_district_type,
+            Cand."BallotName" "Selection",
+            IntermediateRU."Name" "ReportingUnit",
+            CIT."Txt" "CountItemType",
+            sum(vc."Count") "Count"
+        FROM "VoteCount" vc
+        LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
+        LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
+        LEFT JOIN "CandidateSelection" CS on CS."Id" = vc."Selection_Id"
+        LEFT JOIN "Candidate" Cand on CS."Candidate_Id" = Cand."Id"
+        -- sum over all children
+        LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
+        LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
+        -- roll up to the intermediate RUs
+        LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
+        LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
+        -- intermediate RUs must nest in top RU
+        LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
+        LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
+        LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
+        LEFT JOIN "CandidateContest" on C."Id" = "CandidateContest"."Id"
+        LEFT JOIN "Office" O on "CandidateContest"."Office_Id" = O."Id"
+        LEFT JOIN "ReportingUnit" ED on O."ElectionDistrict_Id" = ED."Id"
+        LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
+        WHERE C.contest_type = 'Candidate'
+            AND TopRU."Name" = %s  -- top RU
+            AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
+            AND d.{by} in %s  -- tuple of datafile short_names
+            {restrict}
+        GROUP BY
+               C."Name",
+               EDRUT."Txt",
+               Cand."BallotName",
+              IntermediateRU."Name",
+               CIT."Txt"
+        ORDER BY
+               C."Name",
+               EDRUT."Txt",
+               Cand."BallotName",
+              IntermediateRU."Name",
+               CIT."Txt";
+        """
+        ).format(by=sql.Identifier(by), restrict=sql.SQL(restrict))
+
+    elif contest_type == "BallotMeasure":
+        q = sql.SQL(
+            """
+        SELECT 'Candidate' contest_type,
+            C."Name" "Contest",
+            EDRUT."Txt" contest_district_type,
+            BMS."Name" "Selection",
+            IntermediateRU."Name" "ReportingUnit",
+            CIT."Txt" "CountItemType",
+            sum(vc."Count") "Count"
+        FROM "VoteCount" vc
+        LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
+        LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
+        LEFT JOIN "BallotMeasureContest" BMC on vc."Contest_Id" = BMC."Id"
+        LEFT JOIN "BallotMeasureSelection" BMS on BMS."Id" = vc."Selection_Id"
+        -- sum over all children
+        LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
+        LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
+        -- roll up to the intermediate RUs
+        LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
+        LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
+        -- intermediate RUs must nest in top RU
+        LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
+        LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
+        LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
+        LEFT JOIN "ReportingUnit" ED on BMC."ElectionDistrict_Id" = ED."Id"
+        LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
+        WHERE C.contest_type = 'BallotMeasure'
+            AND TopRU."Name" = %s  -- top RU
+            AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
+            AND d.{by} in %s  -- tuple of datafile short_names
+            {restrict}
+        GROUP BY
+               C."Name",
+               EDRUT."Txt",
+               BMS."Name",
+              IntermediateRU."Name",
+               CIT."Txt"
+        ORDER BY
+               C."Name",
+               EDRUT."Txt",
+               BMS."Name",
+              IntermediateRU."Name",
+               CIT."Txt";
+        """
+        ).format(by=sql.Identifier(by), restrict=sql.SQL(restrict))
+    else:
+        err_str = f"Unrecognized contest_type: {contest_type}. No results exported"
+        return err_str
+    try:
+        cursor.execute(q, [top_ru, sub_unit_type, tuple(datafile_list)])
+        results = cursor.fetchall()
+        results_df = pd.DataFrame(results)
+        results_df.columns = columns
+        err_str = None
+    except Exception as exc:
+        results_df = pd.DataFrame()
+        err_str = f"No results exported due to database error: {exc}"
+    return results_df, err_str

@@ -1,0 +1,917 @@
+BallotName
+Gary Peters
+John James
+Dana Ferguson
+Linda O'Dell
+Jack Bergman
+Bryan Berghoef
+Bill Huizenga
+Hillary Scholten
+Lynn Afendoulis
+Joe Farrington
+Peter Meijer
+Thomas J. Norton
+Emily Rafi
+Anthony D Feig
+Jerry Hilliard
+John Moolenaar
+Daniel T. Kildee
+Tim Kelly
+Earl Lackie
+Jon Hoadley
+Jen Richardson
+Elena Oelke
+Fred Upton
+Gretchen D. Driskell
+Tim Walberg
+Elissa Slotkin
+Mike Detmer
+Alan T. Hoover
+Paul Junge
+Kristina Lyke
+Andy Levin
+Gabi Grossbard
+Charles J. Langworthy
+Kimberly Bizon
+Kelly L. Noland
+Shane Hernandez
+Lisa McClain
+Doug Slocum
+Haley Stevens
+Frank Acosta
+Kerry Bentivolio
+Eric S. Esshaki
+Carmelita Greco
+Whittney Williams
+Debbie Dingell
+Solomon Rajput
+Jeff Jones
+Brenda Jones
+Rashida Tlaib
+David Dudenhoefer
+Al Lemmo
+Linda Sawyer
+Brenda Lawrence
+Terrance Morrison
+Daryle F. Houston II
+Robert Vance Patrick
+Tenisha R. Yancey
+Latricia Ann Lanier
+Taylor Harrell
+Joe Tate
+Mayra Rodriguez
+China Cochran
+John Cromer
+Steven Lett
+Donavan McKinney
+Keith McMurtry
+Shri Thanedar
+Art Tyus
+Al Williams
+Anita Vinson
+Shahab Ahmed
+Abraham Aiyash
+Anthony Ali
+Christopher L. Collins
+Delorean Holmes
+Frazier H. Kimpson
+Darwood Navarro
+Michele Oberholtzer
+Tonya Myers Phillips
+Gregory W. Reyner
+Abraham D. Shaw
+Tawanna Simpson
+Sigmunt John Szczepkowski, Jr.
+Howard Weathington
+Cynthia A. Johnson
+Rita Ross
+Jermaine R. Tobey
+Harold M. Day
+Tyrone Carter
+Ivy Nichole Neal
+David Palmer
+Nyda Bentley
+Elene Robinson
+Helena Scott
+Anistia Thomas
+Bernard Thompson
+Cynthia L. Thornton
+Lee Yancy
+Ronald Cole
+Anthony Bradford
+Reggie Reg Davis
+George Etheridge
+Stephanie A. Young
+Miroslawa Teresa Gorak
+Marc Cummings
+Nicole Elcock
+Roslyn M. Ogburn
+Karen Whitsett
+James Stephens
+Mary Cavanagh
+Marcus A. Cummings
+Kevin Lamont Harris
+Brenda Hill
+Steele P. Hughes
+Tyson Kelley
+Diajah Ruffin
+Valli Smith
+Cathy L. Alcorn
+Jewell Jones
+James C. Townsend
+Alex Garza
+Derrick A. Gyorkos
+Ed Martell
+Michelle Bailey
+Bill Colovos
+Timothy O. Estheimer
+Tullio Liberati
+Megan Frump
+Cara A. Clemente
+Senan Saleh
+Darrell Stasik
+Abdullah Hammoud
+Carla O'Neill
+Kevin Coleman
+Emily Bauman
+Josephine Brown
+Scott Cramton
+Christopher Slat
+Joe Bellino, Jr.
+Patrick Biange
+Kevin Hertel
+Christopher Jeffery
+Michael Babat
+Brian K. Hakola
+Christine Timmon
+Laurie Pohutsky
+Penny Crider
+Regina Gargus
+Martha Ptashnik
+Matt Koleszar
+John Lacny
+Laura Roush
+Ethan Petzold
+Ranjeev Puri
+Harold Bullock
+James F. Chapman
+Laurel Hess
+James Nangle
+Jessica Sohoza
+Michael James Anderson
+Ryan Nelson
+Richard M. Steenland
+Jeff Bonnell
+Steven G. Warner
+Darrin Camilleri
+John Poe
+Alex Bronson
+Michelle Woodman
+Steve Marino
+William J. Revoir
+Nate Shannon
+Jazmine M. Early
+Paul M. Smith
+Adam Wiley
+Jim Ellison
+Barbara Barber
+Chris Meister
+Crystal Bailey
+Kevin Kresch
+Robert B. Lathrop
+Matt Stoel
+Dan Tuck
+Martin C. Tutwiler
+Regina Weiss
+Kelli N. Williams
+Elizabeth Goss
+William S. Massad
+Lori M. Stone
+Stephen Colegio
+Clifford Frost
+Brenda Carter
+Vernon Molnar
+S. Dave Sullivan
+Michael A. Chehab
+Diana Farrington
+Michelle Robertson
+William J. Sowerby
+Austin James Negipe
+Lisa Valerio-Nowc
+Justin Boucher
+Pamela Hornberger
+Brandon J. Mikula
+Olu Jabari
+Jeff Yaroch
+DelTonya Burns
+Cynthia R. Neeley
+Claudia Perkins-Milton
+Diana A. Phillips
+Arthur Woodson
+James Miraglia
+Kyra Harris Bolden
+Shadia Martini
+Daniela Davis
+Robert Murphy
+Douglas C. Wozniak
+Michael Bridges
+Randy Bruce
+Samantha Steckloff
+Mitch Swoboda
+Kelly A. Breen
+Megan McAllister
+Sreenivas Cherukuri
+Krista Spencer
+Chase Turner
+Julia Pulver
+Ryan Berman
+Mari Manoogian
+Kendra Cleary
+Padma Kuppa
+Evan Agnello
+Andrew J. Sosnoski
+Donnie Bettes
+Ann Bollin
+Nicole Breadon
+Andrea K. Schroeder
+Denise Forrest
+Matt Maddock
+Barb Anness
+Brendan Johnson
+Mark Tisdel
+Jody LaMacchia
+John Reilly
+Adam Smiddy
+Robert J. Bezotte
+Yvonne Black
+Zachary Dyba
+Meghan Reckling
+Sheryl Y. Kennedy
+Andalib Odulate
+Sherri J. Cross
+David W. Martin
+John D. Cherry
+Bryan Lutz
+Raymond Freiberger
+Tim Sneller
+Christina Fitchett-Hickson
+Lynne Freiberger
+Lynn S. Hukee
+Brad May
+Conner Wallace
+Mike Mueller
+Donna Lasinski
+Greg Marquis
+Melanie Weidmayer
+Sam Larson
+Yousef Rabhi
+Jean E. Holland
+Ronnie Dean Peterson
+Martin A. Church
+Felicia Brabec
+Stephen Kurant
+Bob Baird
+Keith W. Kitchens
+Ernie Whiteside
+Austin Blaine
+TC Clements
+Will Garcia
+Jesse Ryan Reynolds
+Bronna Kahle
+Tamara C. Barnes
+Steven Sowards
+Andrew Fink
+Adam Stockford
+Andy Welden
+Daren Wiseley
+Amy L. East
+Allen J. Balog
+Steve Carra
+Jack Coleman
+Daniel Hinkle
+Larry Walton
+Stephanie Moore
+Julie M. Rogers
+Gary Mitchell
+Christine Morse
+Tom Graham
+Bronwyn Haltom
+Jim Haadsma
+Chad Baase
+Michelle Gregoire
+Dave Morgan
+Ron Hawkins
+Luke Howell
+Matt Hall
+Sandra Hofman-Kingston
+Julie Alexander
+Dave Rowland
+Nancy Smith
+Sarah L. Lightner
+Abigail Wheeler
+Beth Griffin
+Kara Hope
+Nate J. Ross
+Clyde L. Thomas
+Sarah Anthony
+Robert J. Atkinson
+Julie Brixie
+Grace S. Norris
+Karen Garvey
+Greg Alexander
+Christopher Comden
+Pat Outman
+Arturo Puckerin
+Martin Ross
+Angela Witwer
+Christine Barnes
+Gina Johnsen
+Lily Cheng-Schulting
+Cade Wilson
+Steven Johnson
+Bill Saxton
+John Inhulsen
+Bryan Posthumus
+Robert Regan
+Meagan L. Hintz
+Mark Huizenga
+Brock Story
+David LaGrand
+James McKeiver
+Rachel Hood
+Doug Zandstra
+Bob Smith
+Tommy Brann
+Dan VandenHeede
+Brad Paquette
+Chokwe Pitchford
+Jacquie Gnodtke Blackwell
+Pauline Wendzel
+Erik Almquist
+Nevin P. Cooper-Keel
+Mary Whiteford
+Debbie Bourgois
+Gary R. Eisen
+John W. Mahaney
+Kurt Hausauer
+Jerry Tkach
+Gary Howell
+Stephanie Armstrong-Helton
+Gregory L. Alexander
+Charles Richard Armstrong II
+Andrew Beeler
+Tim Keller
+Joseph M. O'Mara
+Douglas P. Marker
+Patrick J. Wood
+Phil Green
+Andrea Kelly Garrison
+Ben Frederick
+Sue Hayes
+Jeff Merritt
+Thomas A. Albert
+Jay Molette
+Julie A. Calley
+Franklin Cornielle
+Luke Meerman
+Anita Marie Brown
+Erik E. Nordman
+Jim Lilly
+Christopher P. Banks
+Mark Northrup
+Bradley Slagh
+Brian Hosticka
+Greg VanWoerkom
+Terry J. Sabo
+Michael Del Percio
+Michael L. Haueisen
+Muhammad Salman Rais
+Graham Filler
+Kevin C. Seamon
+Demond L. Tibbs
+Rodney Wakeman
+Brandell Cortez Adams
+Clint Bryant
+James M. Graham
+Carly Rose Hammond
+Amos O'Neal
+Charlotte DeMaet
+Brian K. Elder
+Allen Bauer
+Timothy Beson
+Martin Blank
+Shane Atwell
+Celia Young-Wenkel
+Jason Wentworth
+Sarah Schulz
+Annette Glenn
+Randall Doyle
+John Zang
+Roger Hauck
+Sandy Clarke
+Andrew Sebolt
+Scott A. VanSingel
+Beth McGill-Rizer
+Cary L. Urka
+Carolyn Cater
+Jack O'Malley
+Amanda Siggins
+Michele Hoitenga
+Zach Larson
+Daire Rendon
+Gary F. Stefanko
+Dan O'Neil
+Heather Cerone
+John R. Roth
+Jonathan Burke
+Ken Borton
+Tony Cutler
+Jimmy Schmidt
+LeeAnn Johnson
+Sue Allor
+Jim Page
+Kurt Perron
+Tana Baldwin
+John N. Damoose
+Sue Fisher
+Terry Lamb
+David James Laughbaum
+Damon Lieurance
+Kathy Twardy
+Renee Richer
+Beau Matthew LaFave
+Sara Cambensy
+Matthew Goss
+Melody Wagner
+Lawrence Dale
+Janet Metsa
+Casey VerBerkmoes
+Gregory Markkanen
+Chandra W. Baker
+Deana Beard
+Nicholas John Hathaway
+Shakira Lynn Hawkins
+Mary Beth Kelly
+Frank Simone
+Clarence Dass
+Maura Battersby Murphy
+Lorie Savin
+Chris Christenson
+Herman Marable, Jr.
+Stephanie Witucki
+Amy Reiser
+Nick Roumel
+Tracy E. Van den Bergh
+Mark E. Davidson
+Scott A. Radloff
+Timothy C. Wrathell
+Catherine M. Bostick
+Mike Hodges
+Byron J. Konschuh
+Kimm Burger
+Brendan Sanger
+Megan R.M. Stiverson
+Allison L. Bates
+Jake Dickerson
+Craig T. Pappin
+Robert P. Coutts
+John R. Day
+Lisa Martin
+David M. Parrott
+Alexandria Taylor
+Kelly Collins
+Brian Christian Hartwell
+Michael G. Mitchell
+Jim Osak
+Rudy Serra
+Dennis G. Whittie
+Darren Grow
+Richard Halprin
+Jaimie Powell Horowitz
+Diana L. McClain
+Gil Whitney McRipley
+Brenda Richard
+Marc Curtis
+Matthew Kacel
+Jason D. Kolkema
+Paula Baker Mathes
+Keeley Blanchard
+Adam Eggleston
+Tom Ginster
+Heather Burnash
+Glenn Cotton
+Torchio W. Feaster
+Tabitha M. Marsh
+Kathryn A. George
+Lynn M. Maison
+Armand Velardo
+Michael Bennet
+Joe Biden
+Michael R. Bloomberg
+Cory Booker
+Pete Buttigieg
+Julian Castro
+John Delaney
+Tulsi Gabbard
+Amy Klobuchar
+Bernie Sanders
+Joe Sestak
+Tom Steyer
+Elizabeth Warren
+Marianne Williamson
+Andrew Yang
+Uncommitted
+Mark Sanford
+Donald J. Trump
+Joe Walsh
+Bill Weld
+TOM HOEFLING
+MICHAEL A. MATUREN
+MONICA MOOREHEAD
+EVAN MCMULLIN
+LAURENCE KOTLIKOFF
+BEN HARTNELL
+CHERUNDA FOX
+JILL STEIN
+HILLARY CLINTON
+EMIDIO MIMI SOLTYSIK
+DONALD J. TRUMP
+DARRELL L. CASTLE
+GARY JOHNSON
+ELLIS BOAL
+DIANE BOSTOW
+LON JOHNSON
+JACK BERGMAN
+MATTHEW A. BRADY
+RONALD E. GRAESER
+ERWIN J. HAAS
+DENNIS B. MURPHY
+BILL HUIZENGA
+JOSHUA ARNOLD
+TED GERRARD
+DOUGLAS SMITH
+JUSTIN AMASH
+JORDAN SALVI
+KEITH BUTKOVICH
+GEORGE M. ZIMMER
+DEBRA WIRTH
+LEONARD SCHWARTZ
+JOHN MOOLENAAR
+HARLEY MIKKELSON
+STEVE SLUKA
+AL HARDWICK
+DANIEL T. KILDEE
+RICHARD MILLER OVERTON
+LORENCE WENKE
+FRED UPTON
+PAUL CLEMENTS
+KEN PROCTOR
+GRETCHEN D. DRISKELL
+TIM WALBERG
+SUZANNA SHKRELI
+MARIA GREEN
+JEREMY BURGESS
+JEFF WOOD
+MIKE BISHOP
+JOHN V. MCDERMOTT
+MATTHEW ORLANDO
+SANDER LEVIN
+CHRISTOPHER R. MORSE
+BENJAMIN NOFS
+LISA LANE GIOIA
+FRANK ACCAVITTI, JR.
+PAUL MITCHELL
+KERRY BENTIVOLIO
+JONATHAN RAY OSMENT
+ANIL KUMAR
+DAVID A. TROTT
+EJAZ VIRK
+GARY WALKOWICZ
+DYLAN CALEWARTS
+TOM BAGWELL
+JEFF JONES
+DEBBIE DINGELL
+SAM JOHNSON
+CLYDE DARNELL LYNCH
+TIFFANY HAYDEN
+JEFF GORMAN
+JOHN CONYERS, JR.
+MARCIA SQUIER
+GREGORY CRESWELL
+HOWARD KLAUSNER
+BRENDA L. LAWRENCE
+IAN CONYERS
+KEITH FRANKLIN
+BRIAN R. BANKS
+WILLIAM BROMAN
+ANTHONY MATTHEW MURRAY
+DANETTA L. SIMPSON
+BETTIE COOK SCOTT
+WENDELL L. BYRD
+JOHN BRODERSEN
+ROSE MARY C. ROBINSON
+MATT SCHONERT
+DAN FINN
+FRED DURHAL
+DORTHY PATTERSON
+STEPHANIE CHANG
+ATTIE POLLARD
+LATANYA GARRETT
+GINA ALICIA BARR
+SHERRY GAY-DAGNOGO
+DESHAWN WILKINS
+JENNIFER RYNICKI
+SYLVIA SANTANA
+JAMES STEPHENS
+LESLIE LOVE
+WILLIAM BRANG
+JEREMY MORGAN
+ROBERT POPE
+JEWELL JONES
+ROBERT E. POPE
+LAUREN PLAWECKI
+MARC JOSEPH SOSNOWSKI
+ERIKA GEISS
+ERIK SODERQUIST
+FRANK LIBERATI
+ANNIE L. SPENCER
+CARA CLEMENTE
+DARRELL STASIK
+LOEL R. GNADT
+ABDULLAH HAMMOUD
+TERRANCE GUIDO GERIN
+ROBERT L. KOSOWSKI
+MATTHEW MORROW
+BILL LAVOY
+JOSEPH BELLINO, JR.
+JEFF ANDRING
+KEVIN HERTEL
+RENATA POLONAISE
+STEVE KING
+LAURA COX
+JEFF NOBLE
+COLLEEN POBUR
+KRISTY PAGAN
+DEREK MOSS
+JOHN CHIRKUN
+JEFF BONNELL
+LES TOWNSEND
+DARRIN CAMILLERI
+BOB HOWEY
+DANA CAMPHOUS-PETERSON
+STEVE MARINO
+HENRY YANEZ
+STEVE NAUMOVSKI
+JIM ELLISON
+RANDY LEVASSEUR
+ROBERT WITTENBERG
+KYLE FORREST
+PATRICK GREEN
+ANTOINE M. DAVISON
+TIM GREIMEL
+GARREN W. GRIFFITH
+ARTELIA MARIE LEAK
+DIANA FARRINGTON
+MICHAEL R. NOTTE
+WILLIAM J. SOWERBY
+LISA VALERIO-NOWC
+MIKE SALIBA
+PAMELA HORNBERGER
+PAUL MANLEY
+JEFF YAROCH
+YANI WARDA
+SHELDON A. NEELEY
+PAGE BROUSSEAU
+JEREMY MOSS
+ROBERT BRIM
+PETER J. LUCIDO
+DIANE YOUNG
+JAMES K. YOUNG
+CHRISTINE GREIG
+MITCH SWOBODA
+KATHY S. CRAWFORD
+AMY MCCUSKER
+KLINT KESTO
+MICHAEL STACK
+BETH MCGRATH
+MICHAEL D. MCCREADY
+NICOLE BEDI
+MARTIN HOWRYLAK
+CYNDI PELTONEN
+LANA L. THEIS
+TIMOTHY JOHNSON
+JONATHAN ELGAS
+JIM TEDDER
+TED VILLELLA
+JIM RUNESTAD
+MARK VENIE
+MICHAEL WEBBER
+TED GOLDEN
+DAVID LILLIS
+JOHN REILLY
+HANK VAUPEL
+KEITH VAN HOUTEN
+RODGER YOUNG
+PAM FARIS
+JOSEPH RENO
+PHIL PHELPS
+JEREMY A. BAKER
+TIM SNELLER
+MICHAEL N. MATHENY
+JOSEPH GRAVES
+RYAN BLADZIK
+MARK L. SANBORN
+DONNA LASINSKI
+ERIC BORREGARD
+RANDY CLARK
+YOUSEF RABHI
+SAMUEL BISSELL
+JOSEPH STEVENS
+KEVIN JARDINE
+RONNIE D. PETERSON
+ADAM F. ZEMKE
+BOB BAIRD
+JASON M. SHEPPARD
+TOM REDMOND
+R. AL BAIN
+HARVEY SCHMIDT
+BRONNA KAHLE
+ERIC LEUTHEUSER
+MARY HAMATY
+AARON MILLER
+CAROL L. HIGGINS
+JON HOADLEY
+ALEXANDER ROSS
+LOGAN FLECKENSTEIN
+BRANDT IDEN
+JOHN FISHER
+RYAN WINFIELD
+JOHN BIZON
+JIM HAADSMA
+MICHELLE GREGOIRE
+DAVID C. MATUREN
+LYNN SHIFLEA
+JOHN ANTHONY LA PIETRA
+JULIE ALEXANDER
+RON BROOKS
+BRETT ROBERTS
+BONNIE JOHNSON
+RONALD A. MUSZYNSKI
+ANNIE BROWN
+BETH GRIFFIN
+TOM COCHRAN
+LEON R. CLARK
+ANDY SCHOR
+RANDY PILON
+ROBERT POWELL
+SAM SINGH
+GEORGE NASTAS
+KEN HART
+JAMES A. LOWER
+MICHAEL ANDERSON
+THERESA ABED
+TOM BARRETT
+MARC LORD
+STEVEN JOHNSON
+STEVE SHOEMAKER
+CHRIS AFENDOULIS
+DEB HAVENS
+RON HEEREN
+ROB VERHEULEN
+ROBIN BIGGER
+BILL GELINEAU
+DAVID LAGRAND
+CHAD C. ROSSITER
+WINNIE BRINKS
+CASEY J. O'NEILL
+JOHN GEORGE
+BRANDON HOEZEE
+TOMMY BRANN
+DANA J. KNIGHT
+DAVE PAGEL
+DEAN E. HILL
+MARLETTA SEATS
+KIM LASATA
+CARL G. OEHLING
+MARY WHITEFORD
+ARNIE DAVIDSONS
+JOHN ANDRYSIAK
+DAN LAUWERS
+STEWART STERNBERG
+MARGARET GUERRERO DELUCA
+GARY HOWELL
+SHANE HERNANDEZ
+JIM FRANK
+DEENA MARIE BRUDERICK
+EDWARD J. CANFIELD
+JAMES L. WENCEL
+CHUCK STADLER
+MATTHEW SHEPARD
+BEN FREDERICK
+ROBERT COTTRELL
+ANTHONY DAVID KARHOFF
+ROGER L. SNYDER
+LYNN MASON
+THOMAS A. ALBERT
+CLIFF YANKOVICH
+JULIE CALLEY
+ERIC ANDERSON
+JOSEPH P. GILLOTTE
+ROGER VICTORY
+KIM NAGY
+JIM LILLY
+TIM MEYER
+MARY BUZUMA
+DANIELA GARCIA
+MARY M. YEDINAK
+HOLLY HUGHES
+COLLENE LAMONTE
+MAX RIEKSE
+TERRY J. SABO
+MARSHALL DAVIS
+TOM LEONARD
+JOSH DERKE
+TYLER D. PALMER
+TIM KELLY
+KEVIN C. SEAMON
+VANESSA GUERRA
+DOROTHY TANNER
+BRIAN K. ELDER
+DAVID SCHOLL
+JASON WENTWORTH
+ROBERT TOWNSEND
+GARY GLENN
+GEOFF MALICOAT
+BRYAN MIELKE
+ROGER HAUCK
+SCOTT A. VANSINGEL
+SANDY CLARKE
+DAN SCRIPPS
+CURT VANDERWALL
+MICHELE HOITENGA
+DOUGLAS GABERT
+JORDAN STANCIL
+DAIRE L. RENDON
+BETSY COFFIA
+LARRY C. INMAN
+KELLY J. CLARK
+TRISTON S. COLE
+WYATT KNIGHT
+ROBERT KENNEDY
+SUE ALLOR
+DANA CARVER
+JOHN CAPLIS
+LEE CHATFIELD
+PHIL BELLFY
+SCOTT A. CELELLO
+BEAU MATTHEW LAFAVE
+JOHN KIVELA
+KEVIN W. PFISTER
+WADE ROBERTS
+SCOTT DIANDA
+GREGORY MARKKANEN
+JOHN AUSTIN
+TOM MCMILLIN
+ISH AHMED
+SCOTTY BOMAN
+BILL HALL
+NIKKI SNYDER
+DOUGLAS LEVESQUE
+KAREN ADAMS
+DEREK M. GRIGSBY
+SHERRY A. WELLS
+MARY ANNE HERING
+LAURENCE B. DEITCH
+DENISE ILITCH
+CARL MEYERS
+RON WEISER
+JOHN JASCOB
+JAMES LEWIS HUDLER
+AUDRA DRISCOLL
+RICHARD A. HEWER
+BRIDGETTE ABRAHAM-GUZMAN
+LATHAM REDDING
+DIANNE BYRUM
+DIANN WOODARD
+DAN KELLY
+WILLIAM DEARY
+JUSTIN BURNS
+GREGORY SCOTT STEMPFLE
+ANGELA GRANDY
+WILL TYLER WHITE
+AL SEDER
+BHAGWAN DASHAIRYA
+KIMBERLY SHMINA
+ROBERT GALE
+WENDY GOOSSEN
+MARGARET GUTTSHALL
+FRAN SHOR
+MICHAEL J. BUSUITO
+MARK GAFFNEY
+YVETTE MCELROY ANDERSON
+DOUG DERN
+DAVID VIVIANO
+FRANK SZYMANSKI
+JOAN LARSEN
+KERRY L. MORGAN
+DEBORAH THOMAS

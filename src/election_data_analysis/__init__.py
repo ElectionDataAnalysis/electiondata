@@ -51,7 +51,7 @@ prep_pars = [
     "reporting_unit_type",
 ]
 
-optional_prep_pars = ["results_file", "munger_name"]
+optional_prep_pars = ["results_file", "munger_name","aux_data_dir"]
 
 analyze_pars = ["db_paramfile", "db_name"]
 
@@ -698,6 +698,7 @@ class JurisdictionPrepper:
         sub_ru_type: str = "precinct",
         results_file_path=None,
         munger_name=None,
+        aux_data_dir=None,
         **kwargs,
     ) -> dict:
         """Assumes precincts (or other sub-county reporting units)
@@ -707,7 +708,7 @@ class JurisdictionPrepper:
 
         # get parameters from arguments; otherwise from self.d; otherwise throw error
         kwargs, missing = ui.get_params_to_read_results(
-            self.d, results_file_path, munger_name
+            self.d, results_file_path, munger_name, aux_data_dir=aux_data_dir
         )
         if missing:
             if results_file_path:
@@ -738,11 +739,14 @@ class JurisdictionPrepper:
             )
             return error
 
+        # clean the dataframe read from the results
+        wr = m.generic_clean(wr)
         # reduce <wr> in size
         fields = [
             f"{field}_SOURCE"
             for field in munger.cdf_elements.loc["ReportingUnit", "fields"]
         ]
+        # TODO generalize to mungers with aux_data
         bad_fields = [f for f in fields if f not in wr.columns]
         if bad_fields:
             error = ui.add_new_error(
@@ -771,7 +775,12 @@ class JurisdictionPrepper:
         # get formulas from munger
         ru_formula = munger.cdf_elements.loc["ReportingUnit", "raw_identifier_formula"]
         try:
-            [county_formula, sub_ru_formula] = ru_formula.split(";")
+            # text up to first ; is the County -- the part following is the sub_ru
+            ru_parts = ru_formula.split(";")
+            county_formula = ru_parts[0]
+            sub_list = ru_parts[1:]
+            sub_ru_formula = ";".join(sub_list)
+
         except ValueError:
             error = ui.add_new_error(
                 error,
@@ -881,13 +890,13 @@ class JurisdictionPrepper:
                 param_file=par_file,
                 err=None,
             )
-            # redefine the results_file_path parameter to a full path ?!
             file_dict["results_file_path"] = os.path.join(
                 dir, file_dict["results_file"]
             )
             if new_err:
                 error = ui.consolidate_errors([error, new_err])
             if not ui.fatal_error(error):
+                # add elements
                 new_err = self.add_elements_from_results_file(
                     elements, error, **file_dict
                 )
@@ -900,15 +909,16 @@ class JurisdictionPrepper:
         elements: iter,
         error: dict,
         results_file_path=None,
+        results_file=None,
         munger_name=None,
-        **kwargs,
+        aux_data_dir=None
     ) -> dict:
         """Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
         or not already in <element>.txt for each <element> in <elements>"""
 
         # get parameters from arguments; otherwise from self.d; otherwise throw error
         kwargs, missing = ui.get_params_to_read_results(
-            self.d, results_file_path, munger_name
+            self.d, results_file_path, munger_name, aux_data_dir=aux_data_dir
         )
         if missing:
             error = ui.add_new_error(
@@ -1070,13 +1080,15 @@ def make_par_files(
 
 
 class Analyzer:
-    def __new__(self):
+    def __new__(self, param_file=None):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
         try:
+            if not param_file:
+                param_file = "run_time.ini"
             d, parameter_err = ui.get_runtime_parameters(
                 required_keys=["dbname"],
-                param_file="run_time.ini",
+                param_file=param_file,
                 header="postgresql",
             )
         except FileNotFoundError as e:
@@ -1094,8 +1106,12 @@ class Analyzer:
 
         return super().__new__(self)
 
-    def __init__(self):
-        eng, err = db.sql_alchemy_connect("run_time.ini")
+    def __init__(self, param_file=None):
+        if param_file:
+            self.param_file = param_file
+        else:
+            self.param_file = "run_time.ini"
+        eng, err = db.sql_alchemy_connect(self.param_file)
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
@@ -1131,7 +1147,7 @@ class Analyzer:
         installed as well."""
         d, error = ui.get_runtime_parameters(
             required_keys=["rollup_directory"],
-            param_file="run_time.ini",
+            param_file=self.param_file,
             header="election_data_analysis",
         )
         if error:
@@ -1190,7 +1206,7 @@ class Analyzer:
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
             required_keys=["rollup_directory"],
-            param_file="run_time.ini",
+            param_file=self.param_file,
             header="election_data_analysis",
         )
         if error:
@@ -1237,7 +1253,7 @@ class Analyzer:
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
             required_keys=["rollup_directory"],
-            param_file="run_time.ini",
+            param_file=self.param_file,
             header="election_data_analysis",
         )
         if error:
@@ -1264,6 +1280,33 @@ class Analyzer:
             True,
         )
         return agg_results
+
+    def top_counts(
+        self, election: str, rollup_unit: str, sub_unit: str, by_vote_type: bool
+    ) -> str:
+        d, error = ui.get_runtime_parameters(
+            required_keys=["rollup_directory"],
+            param_file=self.param_file,
+            header="election_data_analysis",
+        )
+        if error:
+            print("Parameter file missing requirements.")
+            print(error)
+            print("Data not created.")
+            return
+        else:
+            rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
+            sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
+            election_id = db.name_to_id(self.session, "Election", election)
+            err = a.create_rollup(
+                self.session,
+                d["rollup_directory"],
+                top_ru_id=rollup_unit_id,
+                sub_rutype_id=sub_unit_id,
+                election_id=election_id,
+                by_vote_type=by_vote_type,
+            )
+            return err
 
 
 def get_filename(path: str) -> str:

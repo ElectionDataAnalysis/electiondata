@@ -322,7 +322,13 @@ If every file in your directory will use the same munger(s) -- e.g., if the juri
  * aux_data_dir (optional -- use it if your files have all have the same auxiliary data files, which might never happen in practice)
 
 ## Pull Data
-The Analyzer class uses parameters in the file `run_time.ini`, which should be in the directory from which you are running the program.
+The Analyzer class uses parameters in the file `run_time.ini`, which should be in the directory from which you are running the program. This class has a number of functions that allow you to aggregate the data for analysis purposes. For example, running the `.top_counts()` function exports files into your rollup directory which with counts summed up at a particular reporting unit level. This function expects 4 arguments: the election, the jurisdiction, the reporting unit level at which the aggregation will occur, and a boolean variable indicating whether you would like the data aggregated by vote count type. For example:
+```
+from election_data_analysis import Analyzer
+analyzer = Analyzer()
+analyzer.top_counts('2018 General', 'North Carolina', 'county', True)
+```
+This code will produce all North Carolina data from the 2018 general election, grouped by contest, county, and vote type (total, early, absentee, etc).
 
 ## Miscellaneous helpful hints
 Beware of:
