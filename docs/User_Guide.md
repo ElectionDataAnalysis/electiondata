@@ -3,35 +3,22 @@
 ## Installation
 From the root folder of your repository run `python3 setup.py install` (or if `python` is an alias for `python3` on your system, `python setup.py install`).
 
-## Parameter Files
-In the directory from which you will run the system -- which can be outside your local repository-- create the main parameter files you'll need:
-* `jurisdiction_prep.ini` for the JurisdictionPrepper() class
+## Setting up
+In the directory from which you will run the system -- which can be outside your local repository-- create the main parameter files you will need to specify paths and database connection information specific to your local computing environment:
 * `run_time.ini` for loading data (DataLoader() class) and for pulling and analyzing results (the Analyzer()) class)
   
-There are templates with the suffix `.template` in `templates/parameter_file_templates`. These will need be renamed with the extension `.ini`, and edited to reflect the paths in your own environment. For example, from the `src` directory, running 
-```cp templates/parameter_file_templates/run_time.ini.template ./run_time.ini``` 
-will create the `run_time.ini` parameter file with all the required fields to load analyze data. 
+See the template file (`src/parameter_file_templates/run_time.ini.template`). 
    
-In the `results_dir` directory indicated in `run_time.ini`, create a `.ini` file for each results file you want to use. Follow the `templates/parameter_file_templates/results.ini.template` template for the individual `.ini` files.  The results files and the `.ini` files must both be in that directory. The files can have arbitrary names; note that the name of the results file must be correct in its associated `.ini` file.
-
-If all the files in a single directory will use the same munger, jurisdiction and election, you can create these `.ini` files in batches. For example, 
-```
->>> dir = '/Users/singer3/Documents/Data/Florida/Precinct-Level Election Results/precinctlevelelectionresults2016gen'
->>> munger = 'fl_gen_by_precinct'
->>> jurisdiction_path = '/Users/singer3/Documents/Data_Loading/Florida'
->>> top_ru='Florida'
->>> election = '2016 General'
->>> date = '2020-08-09'
->>> source = 'Florida Board of Elections: https://dos.myflorida.com/elections/data-statistics/elections-data/precinct-level-election-results/'
->>> note = 'These statewide compiled files are derived from county-specific data submitted by supervisors of elections after each primary election, general election, special primary, and special general election and presidential preference primary election'
->>> ea.make_par_files(dir,munger, jurisdiction_path, top_ru, election, date, source=source, results_note=note)
->>> 
-```
- 
 ## Choose a Munger
 Ensure that the munger files are appropriate for your results file(s). 
- (1) If the munger doesn't already exist, pick a name for your munger and create a directory with that name in the `mungers` directory to hold `format.txt` and `cdf_elements.txt`.
- (2) Copy the templates from `templates/munger_templates` to your munger directory. Every munger must have a value for `file_type` and `encoding`; depending your `file_type` other parameters may be required. Types currently supported are `txt`, `csv`, `xls` (which handles both `.xls` and `.xlsx` files)
+ (1) If the munger doesn't already exist, pick a name for your munger and create a directory with that name in the `mungers` directory to hold `format.config` and `cdf_elements.txt`.
+ (2) Copy the templates from `templates/munger_templates` to your munger directory. Every munger must have a value for `file_type`; depending your `file_type` other parameters may be required. Types currently supported are:
+  * `txt`
+  * `csv`
+  * `xls` (which handles both `.xls` and `.xlsx` files)
+  * `concatenated-blocks` (for the format produced by Clarity results reporting system, e.g. for South Carolina.)
+
+Different file types need different parameters to be specified.
  * Required for `txt`, `csv` or `xls` (flat file) type:
    * header_row_count
    * field_name_row
@@ -44,13 +31,15 @@ Ensure that the munger files are appropriate for your results file(s).
    * column_width
  * Available if appropriate for any file type:
    * thousands_separator
-Definitions and formats for these are in the template file. Do not use quotes or angle brackets.
+   * encoding (if not specified, `iso-8859-1` will be used). 
 
- (3) Put formulas for reading information from the results file into `cdf_elements.txt`. You may find it helpful to follow the example of the mungers in the repository.
 
-You can create concatenation formulas, referencing field names from your file by putting them in angle brackets. 
+ (3) Put formulas for parsing information from the results file into `cdf_elements.txt`. You may find it helpful to follow the example of the mungers in the repository.
 
-For `txt`, `csv` and `xls` file types, here is an example.
+### Formulas for parsing information
+For many data formats, it is enough to create concatenation formulas, referencing field names from your file by putting them in angle brackets. 
+
+For simple `txt`, `csv` and `xls` file types, here is an example.
 ```
 name	raw_identifier_formula	source
 ReportingUnit	<County Name>	row
@@ -62,6 +51,8 @@ BallotMeasureSelection	<0>	column
 CountItemType	total	row
 ```
 NB: for constants (like the CountItemType 'total' in this example), use 'row' for the source. Row-source fields should be the field names from the header row or, if there is no header row, from `format.config`. Column-source fields should be identified by the number of the row in which the information is found. Our convention is that the top row is 0.
+
+Sometimes it is necessary to use regular expressions to extract information from fields in the results file. For example, a single field might hold a candidate name along with the candidate's party ()
 
 For the `concatenated-blocks` file type, here is an example (with regular expressions for Party and Candidate -- see below:
 ```
@@ -101,7 +92,7 @@ It's easiest to use the JurisdictionPrepper() object to create or update jurisdi
 ```
  (2) Call new_juris_files(), which will create the necessary files in the jurisdiction directory, as well as a starter dictionary file (`XX_starter_dictionary.txt`) in the current directory.
 ```
->>> err = jp.new_juris_files()
+>>> jp.new_juris_files()
 ```
 The routine `new_juris_files` creates the necessary files in a folder (at the location `jurisdiction_path` specified in `jurisdiction_prep.ini`). Several of these files are seeded with information that can be deduced from the other information in `jurisdiction_prep.ini`.
  
@@ -109,11 +100,6 @@ In addition, `new_juris_files` creates a starter dictionary `XX_starter_dictiona
 
 NB: it is perfectly OK to have more than one raw_identifier_value for a single element. This can be necessary if, say, different counties use different names for a single contest. What can cause problems are lines with the same cdf_element and same raw_identifier_value, but different cdf_internal_names.
 
-If something does not work as expected, check the value of `jp.new_juris_files()`, which may contain some helpful information. If the system found no errors, this value will be an empty python dictionary.
-```
->>> err
-{}
-```
  (3) Add all counties to the `ReportingUnit.txt` file and `XX_starter_dictionary.txt`. You must obey the semicolon convention so that the system will know that the counties are subunits of the jurisdiction. For example:
 ```
 Name	ReportingUnitType
@@ -205,24 +191,18 @@ CountItemType	total	total
 
  (10) If your results file is precinct based instead of county based, run `add_sub_county_rus_from_multi_results_file(<directory>,<error>)` to add any reporting units in the results files in <directory>. E.g.: 
 ```
->>> err = jp.add_sub_county_rus_from_multi_results_file('/Users/singer3/Documents/Temp/000_to-be-loaded',err)
->>> err
-{}
+>>> jp.add_sub_county_rus_from_multi_results_file('/Users/singer3/Documents/Temp/000_to-be-loaded')
 ```
 These will be added as precincts, unless another reporting unit type is specified with the optional argument `sub_ru_type`, e.g.:
 ```
->>> err = jp.add_sub_county_rus_from_multi_results_file('/Users/singer3/Documents/Temp/000_to-be-loaded',err,sub_ru_type='congressional')
->>> err
-{}
+>>> jp.add_sub_county_rus_from_multi_results_file('/Users/singer3/Documents/Temp/000_to-be-loaded',sub_ru_type='congressional')
 ```
 
  (11) Look at the newly added items in `ReportingUnit.txt` and `dictionary.txt`, and remove or revise as appropriate.
 
  (12) If you want to add elements (other than ReportingUnits) in bulk from all results files in a directory (with `.ini` files in that same directory), use  `add_elements_from_multi_results_file(<list of elements>,<directory>, <error>)`. For example:
 ```
->>> err = jp.add_elements_from_multi_results_file(['Candidate'],'/Users/singer3/Documents/Temp/000_to-be-loaded',err)
->>> err
-{}
+>>> jp.add_elements_from_multi_results_file(['Candidate'],'/Users/singer3/Documents/Temp/000_to-be-loaded',err)
 ```
 Corresponding entries will be made in `dictionary.txt`, using the munged name for both the `cdf_internal_name` and the `raw_identifier_value`. Note:
 
@@ -246,7 +226,6 @@ Candidate	Rosa Maria 'Rosy' Palomino	Rosa Maria "Rosy" Palomino
 ```
 >>> jp.add_primaries_to_candidate_contest()
 >>> jp.add_primaries_to_dict()
-
 ```
 
 ### The JurisdictionPrepper class details
@@ -258,7 +237,7 @@ There are routines in the `JurisdictionPrepper()` class to help prepare a jurisd
    * `starter_dictionary()` creates a `starter_dictionary.txt` file in the current directory. Lines in this starter dictionary will *not* have the correct `raw_identifier_value` entries. Assigning the correct raw identifier values must be done by hand before proceeding.
  * `add_primaries_to_dict()` creates an entry in `dictionary.txt` for every CandidateContest-Party pair that can be created from the CandidateContests and Parties already in `dictioary.txt`. (Note: entries in `dictionary.txt` that never occur in your results file won't break anything.)
  * Adding precincts automatically:
-     *`add_sub_county_rus_from_results_file(error)` is useful when:
+     *`add_sub_county_rus_from_results_file()` is useful when:
          * county names can be munged from the rows
          * precinct (or other sub-county reporting unit) names can be munged from the rows
          * all counties are already in `dictionary.txt`
@@ -270,18 +249,28 @@ There are routines in the `JurisdictionPrepper()` class to help prepare a jurisd
          then:
          * `Florida;Alachua County;Precinct 1\tprecinct` will be added to `ReportingUnit.txt`
          * `ReportingUnit\tFlorida;Alachua County;Precinct 1\tAlachua;Precinct 1` will be added to `dictionary.txt`
-     * `add_sub_county_rus_from_multi_results_file(directory,error)` does the same for every results file/munger in the directory named in a `.ini` file in the directory.
+     * `add_sub_county_rus_from_multi_results_file(directory)` does the same for every results file/munger in the directory named in a `.ini` file in the directory.
  * adding other elements automatically:
-     * `add_elements_from_results_file(result_file,munger,element`) pulls raw identifiers for all instances of the element from the datafile and inserts corresponding rows in `<element>.txt` and `dictionary.txt`. These rows may have to be edited by hand to make sure the internal database names match any conventions (e.g., for ReportingUnits or CandidateContests, but maybe not for Candidates or BallotMeasureContests.)
-     * `add_elements_from_multi_results_file(directory, error)` does the same for every file/munger in the directory named in a `.ini` file in the directory
+     * `add_elements_from_results_file(result_file,munger)` pulls raw identifiers for all instances of the element from the datafile and inserts corresponding rows in `<element>.txt` and `dictionary.txt`. These rows may have to be edited by hand to make sure the internal database names match any conventions (e.g., for ReportingUnits or CandidateContests, but maybe not for Candidates or BallotMeasureContests.)
+     * `add_elements_from_multi_results_file(directory)` does the same for every file/munger in the directory named in a `.ini` file in the directory
  
 ## Load Data
-Some routines in the Analyzer class are useful even in the data-loading process, so  create an analyzer before you start loading data.
+In the `results_dir` directory indicated in `run_time.ini`, create a `.ini` file for each results file you want to use. The file `src/parameter_file_templates/results.ini.template` is a template for the individual `.ini` files.  The results files and the `.ini` files must both be in the directory specified in the 'results_dir' parameter in `run_time.ini`. The files can have arbitrary names.
+
+If all the `.ini` files in a single directory will use the same munger, jurisdiction and election, you can use `make_par_files` to create these `.ini` files in batches. For example, 
 ```
->>> an = ea.Analyzer()
+>>> dir = '/Users/singer3/Documents/Data/Florida/Precinct-Level Election Results/precinctlevelelectionresults2016gen'
+>>> munger = 'fl_gen_by_precinct'
+>>> jurisdiction_path = '/Users/singer3/Documents/Data_Loading/Florida'
+>>> top_ru='Florida'
+>>> election = '2016 General'
+>>> date = '2020-08-09'
+>>> source = 'Florida Board of Elections: https://dos.myflorida.com/elections/data-statistics/elections-data/precinct-level-election-results/'
+>>> note = 'These statewide compiled files are derived from county-specific data submitted by supervisors of elections after each primary election, general election, special primary, and special general election and presidential preference primary election'
+>>> ea.make_par_files(dir,munger, jurisdiction_path, top_ru, election, date, source=source, results_note=note)
 >>> 
 ```
-
+  
 The DataLoader class allows batch uploading of all data in a given directory. That directory should contain the files to be uploaded, as well as a `.ini` file for each file to be uploaded. See `templates/parameter_file_templates/results.ini.tempate`. You can use `make_par_files()` to create parameter files for multiple files when they share values of the following parameters:
  * directory in which the files can be found
  * munger
@@ -299,16 +288,6 @@ dl = ea.DataLoader()
 err = dl.load_all()
 ```
 
-Fatal errors will be noted in a file `*.errors` named after the results `*.ini` file. 
-
-Even when the upload has worked, there may be warnings about lines not loaded. The system will ignore lines that cannot be munged. For example, the only contests whose results are uploaded will be those in the `CandidateContest.txt` or `BallotMeasureContest.txt` files that are correctly described in `dictionary.txt`.
-```
->>> err
-{'BAK_PctResults20181106.ini': {'fl_gen_by_precinct': {'munge_warning': 'Warning: Results for 720 rows with unmatched contests will not be loaded to database.'}}, 'ALA_PctResults20181106.ini': {'fl_gen_by_precinct': {'munge_warning': 'Warning: Results for 6174 rows with unmatched contests will not be loaded to database.'}}}
-```
-
-If there are no errors, the results and their `.ini` files will be moved to the archive directory specified in `run_time.ini`. Any warnings for the `*.ini` will be saved in the archive directory in a file `*.warn`.
-
 Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.ini` file for that results file has `munger_name` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
 
 If every file in your directory will use the same munger(s) -- e.g., if the jurisdiction offers results in a directory of one-county-at-a-time files, such AZ or FL -- then you may want to use `make_par_files()`, whose arguments are:
@@ -320,6 +299,16 @@ If every file in your directory will use the same munger(s) -- e.g., if the juri
  * source
  * note (optional)
  * aux_data_dir (optional -- use it if your files have all have the same auxiliary data files, which might never happen in practice)
+
+
+### Error reporting
+System errors will be printed as the system runs.
+
+Fatal errors related to the jurisdiction or the munger will be noted in a file `*.errors` named after the results `*.ini` file. 
+
+Even when the upload has worked, there may be warnings about lines not loaded. The system will ignore lines that cannot be munged. For example, the only contests whose results are uploaded will be those in the `CandidateContest.txt` or `BallotMeasureContest.txt` files that are correctly described in `dictionary.txt`.
+
+If there are no errors, the results and their `.ini` files will be moved to the archive directory specified in `run_time.ini`. Any warnings for the `*.ini` will be saved in the archive directory in a file `*.warn`.
 
 ## Pull Data
 The Analyzer class uses parameters in the file `run_time.ini`, which should be in the directory from which you are running the program. This class has a number of functions that allow you to aggregate the data for analysis purposes. For example, running the `.top_counts()` function exports files into your rollup directory which with counts summed up at a particular reporting unit level. This function expects 4 arguments: the election, the jurisdiction, the reporting unit level at which the aggregation will occur, and a boolean variable indicating whether you would like the data aggregated by vote count type. For example:
