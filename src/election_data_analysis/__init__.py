@@ -14,8 +14,7 @@ from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
 
 # constants
-single_data_loader_pars = [
-    "jurisdiction_path",
+sdl_pars_req = [
     "munger_name",
     "results_file",
     "results_short_name",
@@ -25,6 +24,13 @@ single_data_loader_pars = [
     "top_reporting_unit",
     "election",
     "aux_data_dir",
+]
+
+# nb: jurisdiction_path is for backward compatibility
+sdl_pars_opt = [
+    "aux_data_dir",
+    "jurisdiction_path",
+    "jurisdiction_directory"
 ]
 
 multi_data_loader_pars = [
@@ -45,7 +51,7 @@ prep_pars = [
     "reporting_unit_type",
 ]
 
-optional_prep_pars = ["results_file", "munger_name"]
+optional_prep_pars = ["results_file", "munger_name","aux_data_dir"]
 
 analyze_pars = ["db_paramfile", "db_name"]
 
@@ -137,7 +143,7 @@ class DataLoader:
             return err
 
         params = dict()
-        juris_path = dict()
+        juris_directory = dict()
 
         # For each par_file get params or throw error
         good_par_files = list()
@@ -145,27 +151,32 @@ class DataLoader:
             # grab parameters
             par_file = os.path.join(self.d["results_dir"], f)
             params[f], new_err = ui.get_runtime_parameters(
-                required_keys=single_data_loader_pars,
-                optional_keys=["aux_data_dir"],
+                required_keys=sdl_pars_req,
+                optional_keys=sdl_pars_opt,
                 param_file=par_file,
                 header="election_data_analysis",
             )
             if new_err:
                 err = ui.consolidate_errors([err, new_err])
             if not ui.fatal_error(new_err):
+                ###########
+                # for backwards compatibility
+                if not params[f]["jurisdiction_directory"]:
+                    params[f]["jurisdiction_directory"] = Path(params[f]["jurisdiction_path"]).name
+                ###########
                 good_par_files.append(f)
-                juris_path[f] = params[f]["jurisdiction_path"]
+                juris_directory[f] = params[f]["jurisdiction_directory"]
 
-        # group .ini files by jurisdiction_path
-        jurisdiction_paths = {juris_path[f] for f in good_par_files}
+        # group .ini files by jurisdiction_directory name
+        jurisdiction_dirs = {juris_directory[f] for f in good_par_files}
 
         # for each jurisdiction, create Jurisdiction or throw error
         good_jurisdictions = list()
         juris = dict()
-        for jp in jurisdiction_paths:
+        for jp in jurisdiction_dirs:
             # create and load jurisdiction or throw error
             juris[jp], new_err = ui.pick_juris_from_filesystem(
-                juris_path=jp,
+                juris_path=os.path.join(self.d["jurisdictions_dir"], jp),
                 err=None,
                 check_files=load_jurisdictions,
             )
@@ -193,7 +204,7 @@ class DataLoader:
 
         # process all good parameter files with good jurisdictions
         for jp in good_jurisdictions:
-            good_files = [f for f in good_par_files if juris_path[f] == jp]
+            good_files = [f for f in good_par_files if juris_directory[f] == jp]
             print(f"Processing results files {good_files}")
             for f in good_files:
                 sdl, new_err = check_and_init_singledataloader(
@@ -221,11 +232,11 @@ class DataLoader:
                             sdl.d["results_file"], self.d["results_dir"], success_dir
                         )
                         print(
-                            f"\tArchived {f} and its results file after successful load."
+                            f"\tArchived {f} and its results file after successful load.\n"
                         )
                     else:
                         print(f"\t{f} and its results file not archived due to errors")
-                # TODO report munger, jurisdiction and file errors & warnings
+                #  report munger, jurisdiction and file errors & warnings
                 err = ui.report(
                     err,
                     loc_dict=loc_dict,
@@ -267,8 +278,8 @@ class SingleDataLoader:
         # grab parameters (known to exist from __new__, so can ignore error variable)
         par_file = os.path.join(results_dir, par_file_name)
         self.d, dummy_err = ui.get_runtime_parameters(
-            required_keys=single_data_loader_pars,
-            optional_keys=["aux_data_dir"],
+            required_keys=sdl_pars_req,
+            optional_keys=sdl_pars_opt,
             param_file=par_file,
             header="election_data_analysis",
         )
@@ -343,7 +354,7 @@ class SingleDataLoader:
     def load_results(self) -> dict:
         """Load results, returning error (or None, if load successful)"""
         err = None
-        print(f'Processing {self.d["results_file"]}')
+        print(f'\n\nProcessing {self.d["results_file"]}')
         results_info, e = self.track_results()
         if e:
             err = ui.add_new_error(
@@ -379,13 +390,23 @@ def check_and_init_singledataloader(
     # test parameters
     par_file = os.path.join(results_dir, par_file_name)
     d, err = ui.get_runtime_parameters(
-        required_keys=single_data_loader_pars,
-        optional_keys=["aux_data_dir"],
+        required_keys=sdl_pars_req,
+        optional_keys=sdl_pars_opt,
         param_file=par_file,
         header="election_data_analysis",
     )
     if err:
         sdl = None
+    # for backward compatibility
+    elif () and ():
+        sdl = None
+        err = ui.add_new_error(
+            dict(),
+            "ini",
+            par_file_name,
+            f"Neither jurisdiction_directory nor jurisdiction_path specified"
+        )
+
     else:
         sdl = SingleDataLoader(
             results_dir,
@@ -677,6 +698,7 @@ class JurisdictionPrepper:
         sub_ru_type: str = "precinct",
         results_file_path=None,
         munger_name=None,
+        aux_data_dir=None,
         **kwargs,
     ) -> dict:
         """Assumes precincts (or other sub-county reporting units)
@@ -686,7 +708,7 @@ class JurisdictionPrepper:
 
         # get parameters from arguments; otherwise from self.d; otherwise throw error
         kwargs, missing = ui.get_params_to_read_results(
-            self.d, results_file_path, munger_name
+            self.d, results_file_path, munger_name, aux_data_dir=aux_data_dir
         )
         if missing:
             if results_file_path:
@@ -717,11 +739,14 @@ class JurisdictionPrepper:
             )
             return error
 
+        # clean the dataframe read from the results
+        wr = m.generic_clean(wr)
         # reduce <wr> in size
         fields = [
             f"{field}_SOURCE"
             for field in munger.cdf_elements.loc["ReportingUnit", "fields"]
         ]
+        # TODO generalize to mungers with aux_data
         bad_fields = [f for f in fields if f not in wr.columns]
         if bad_fields:
             error = ui.add_new_error(
@@ -750,7 +775,12 @@ class JurisdictionPrepper:
         # get formulas from munger
         ru_formula = munger.cdf_elements.loc["ReportingUnit", "raw_identifier_formula"]
         try:
-            [county_formula, sub_ru_formula] = ru_formula.split(";")
+            # text up to first ; is the County -- the part following is the sub_ru
+            ru_parts = ru_formula.split(";")
+            county_formula = ru_parts[0]
+            sub_list = ru_parts[1:]
+            sub_ru_formula = ";".join(sub_list)
+
         except ValueError:
             error = ui.add_new_error(
                 error,
@@ -860,13 +890,13 @@ class JurisdictionPrepper:
                 param_file=par_file,
                 err=None,
             )
-            # redefine the results_file_path parameter to a full path ?!
             file_dict["results_file_path"] = os.path.join(
                 dir, file_dict["results_file"]
             )
             if new_err:
                 error = ui.consolidate_errors([error, new_err])
             if not ui.fatal_error(error):
+                # add elements
                 new_err = self.add_elements_from_results_file(
                     elements, error, **file_dict
                 )
@@ -879,15 +909,16 @@ class JurisdictionPrepper:
         elements: iter,
         error: dict,
         results_file_path=None,
+        results_file=None,
         munger_name=None,
-        **kwargs,
+        aux_data_dir=None
     ) -> dict:
         """Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
         or not already in <element>.txt for each <element> in <elements>"""
 
         # get parameters from arguments; otherwise from self.d; otherwise throw error
         kwargs, missing = ui.get_params_to_read_results(
-            self.d, results_file_path, munger_name
+            self.d, results_file_path, munger_name, aux_data_dir=aux_data_dir
         )
         if missing:
             error = ui.add_new_error(

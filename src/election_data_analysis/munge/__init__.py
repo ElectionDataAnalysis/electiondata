@@ -42,21 +42,32 @@ def generic_clean(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def cast_cols_as_int(
-    df: pd.DataFrame, col_list: list, mode="name", error_msg=""
+    df: pd.DataFrame, col_list: list, mode="name", error_msg="",munger_name="unknown",
 ) -> pd.DataFrame:
     """recast columns as integer where possible, leaving columns with text entries as non-numeric)"""
+    err = None
     if mode == "index":
         num_columns = [df.columns[idx] for idx in col_list]
     elif mode == "name":
         num_columns = [c for c in df.columns if c in col_list]
     else:
-        raise ValueError(f"Mode {mode} not recognized")
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.cast_cols_as_int",
+            f"Mode {mode} not recognized",
+        )
     for c in num_columns:
         try:
             df[c] = df[c].astype("int64", errors="raise")
         except ValueError as e:
-            print(f"{error_msg}\nColumn {c} cannot be cast as integer:\n{e}")
-    return df
+            err = ui.add_new_error(
+                err,
+                "warn-munger",
+                munger_name,
+                f"{error_msg}\nColumn {c} cannot be cast as integer:\n{e}"
+            )
+    return df, err
 
 
 def munge_clean(raw: pd.DataFrame, munger: jm.Munger):
@@ -582,13 +593,19 @@ def add_contest_id(
         w_for_type[c_type] = w_for_type[c_type][common_cols]
 
     # assemble working from the two pieces
-    working = pd.concat([w_for_type[ct] for ct in ["BallotMeasure", "Candidate"]])
+    working_temp = pd.concat([w_for_type[ct] for ct in ["BallotMeasure", "Candidate"]])
 
     # fail if fatal errors or no contests recognized
-    if working.empty:
+    if working_temp.empty:
+        cc_list = "\n\t".join(working.CandidateContest_raw.to_list())
+        bmc_list = "\n\t".join(working.BallotMeasureContest_raw.to_list())
+        contest_list = f"Raw CandidateContests:\n{cc_list}\n\nRaw BallotMeasureContests:\n{bmc_list}"
+
         err = ui.add_new_error(
-            err, "jurisdiction", juris.short_name, "No contests recognized."
+            err, "jurisdiction", juris.short_name, f"No contests recognized.\n{contest_list}"
         )
+    else:
+        working = working_temp
     if ui.fatal_error(err):
         return working, err
 

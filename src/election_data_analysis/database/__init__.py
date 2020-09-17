@@ -171,7 +171,6 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
     # initialize error dictionary
     err = None
 
-
     try:
         params = ui.get_runtime_parameters(
             required_keys=db_pars, param_file=paramfile, header="postgresql"
@@ -186,7 +185,13 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
         con = psycopg2.connect(**params)
         con.close()
     except psycopg2.OperationalError as e:
-        return False, e
+        err = ui.add_new_error(
+            err,
+            "system",
+            "database.test_connection",
+            f"Error connecting to database: {e}"
+        )
+        return False, err
 
     # Look for tables
     try:

@@ -1,0 +1,5 @@
+abbreviated_file_name	primary_key	foreign_key
+name	Election Year,Election Type,Office Code,District Code,Status Code,Candidate ID#	Election Year,Election Type,Office Code,District Code,Status Code,Candidate ID#
+off	Election Year,Election Type,Office Code,District Code,Status Code	Election Year,Election Type,Office Code,District Code,Status Code
+cit	Election Year,Election Type,County Code,City/Township Code	Election Year,Election Type,County Code,City/Town Code
+county	County Code	County Code

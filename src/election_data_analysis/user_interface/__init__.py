@@ -1,4 +1,4 @@
-from configparser import ConfigParser
+from configparser import ConfigParser, MissingSectionHeaderError
 from election_data_analysis import munge as m
 from election_data_analysis import special_formats as sf
 import pandas as pd
@@ -26,6 +26,7 @@ recognized_encodings = {
     "euc-jp",
     "ibm1026",
     "ascii",
+    "ASCII",
     "IBM437",
     "EBCDIC-CP-BE",
     "csshiftjis",
@@ -305,15 +306,17 @@ warning_keys = {
 
 
 def get_params_to_read_results(
-    d: dict, results_file_path=None, munger_name=None
+    d: dict, results_file_path=None, munger_name=None, aux_data_dir=None
 ) -> (dict, list):
-    """get parameters from arguments; otherwise from self.d;
+    """get parameters from arguments; otherwise from d;
     return dictionary of parameters, and list of missing parameters"""
     kwargs = d
     if results_file_path:
         kwargs["results_file_path"] = results_file_path
     if munger_name:
         kwargs["munger_name"] = munger_name
+    if aux_data_dir:
+        kwargs["aux_data_dir"] = aux_data_dir
     missing = [x for x in ["results_file_path", "munger_name"] if kwargs[x] is None]
     return kwargs, missing
 
@@ -330,12 +333,12 @@ def read_results(params, error: dict) -> (pd.DataFrame, jm.Munger, dict):
         aux_data_dir = None
 
     # check munger files and (if no error) create munger
-    mu, mu_err = jm.check_and_init_munger(my_munger_path)
+    mu, mu_err = jm.check_and_init_munger(my_munger_path,aux_data_dir=aux_data_dir)
     error = consolidate_errors([error, mu_err])
     if fatal_error(mu_err):
         wr = pd.DataFrame()
     else:
-        wr, error = read_combine_results(mu, params["results_file_path"], error)
+        wr, error = read_combine_results(mu, params["results_file_path"], error, aux_data_dir=aux_data_dir)
         wr.columns = [f"{x}_SOURCE" for x in wr.columns]
     return wr, mu, error
 
@@ -372,13 +375,14 @@ def read_single_datafile(
         if munger.options["field_name_row"] is None:
             kwargs["header"] = None
             kwargs["names"] = munger.options["field_names_if_no_field_name_row"]
+            kwargs["index_col"] = False
         else:
             kwargs["header"] = list(range(munger.options["header_row_count"]))
+            kwargs["index_col"] = None
 
         if munger.file_type in ["txt", "csv"]:
             kwargs["encoding"] = munger.encoding
             kwargs["quoting"] = csv.QUOTE_MINIMAL
-            kwargs["index_col"] = None
             if munger.file_type == "txt":
                 kwargs["sep"] = "\t"
             df = pd.read_csv(f_path, **kwargs)
@@ -463,9 +467,13 @@ def read_combine_results(
                 return pd.DataFrame(), err
 
         else:
-            working = m.cast_cols_as_int(
-                working, mu.options["count_columns"], mode="index"
+            working, new_err = m.cast_cols_as_int(
+                working, mu.options["count_columns"], mode="index", munger_name=mu.name,
             )
+            if new_err:
+                err = consolidate_errors([err, new_err])
+                if fatal_error(new_err):
+                    return working, err
 
         # merge with auxiliary files (if any)
         if aux_data_dir is not None:
@@ -481,7 +489,12 @@ def read_combine_results(
             for abbrev, r in mu.aux_meta.iterrows():
                 # cast foreign key columns of main results file as int if possible
                 foreign_key = r["foreign_key"].split(",")
-                working = m.cast_cols_as_int(working, foreign_key)
+                working, new_err = m.cast_cols_as_int(working, foreign_key, munger_name=mu.name)
+                if new_err:
+                    err = consolidate_errors([err,new_err])
+                    if fatal_error(new_err):
+                        return working, err
+
                 # rename columns
                 col_rename = {
                     f"{c}": f"{abbrev}[{c}]" for c in aux_data[abbrev].columns
@@ -536,8 +549,17 @@ def new_datafile(
             f"No data read from file",
         )
         return err
-
-    count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"]]
+    # ensure that there is at least one count column
+    if not munger.options["count_columns"]:
+        err = add_new_error(
+            err,
+            "munger",
+            munger.name,
+            f"No count_columns specified for top-level munger"
+        )
+        return err
+    else:
+        count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"]]
 
     try:
         raw = m.munge_clean(raw, munger)
@@ -589,15 +611,15 @@ def get_runtime_parameters(
 
     # read info from file
     parser = ConfigParser()
-    p = parser.read(param_file)
-    if len(p) == 0:
-        err = add_new_error(err, "file", param_file, "File not found")
-        return d, err
-
     # find header
     try:
+        p = parser.read(param_file)
+        if len(p) == 0:
+            err = add_new_error(err, "file", param_file, "File not found")
+            return d, err
+
         h = parser[header]
-    except KeyError as ke:
+    except (KeyError,MissingSectionHeaderError) as ke:
         err = add_new_error(err, "ini", param_file, f"Missing header: {ke}")
         return d, err
 
@@ -651,8 +673,8 @@ def consolidate_errors(list_of_err: list) -> Optional[Dict[Any, dict]]:
         name_keys = set().union(*[y.keys() for y in err_list])
         for nk in name_keys:
             msg_list_of_lists = [y[nk] for y in err_list if nk in y.keys()]
-            # assign list of all messages
-            d[et][nk] = [y for x in msg_list_of_lists for y in x]
+            # assign list of all messages (avoiding duplicates)
+            d[et][nk] = list({y for x in msg_list_of_lists for y in x})
     return d
 
 
