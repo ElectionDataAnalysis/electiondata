@@ -23,14 +23,13 @@ sdl_pars_req = [
     "results_note",
     "top_reporting_unit",
     "election",
-    "aux_data_dir",
 ]
 
 # nb: jurisdiction_path is for backward compatibility
 sdl_pars_opt = [
-    "aux_data_dir",
     "jurisdiction_path",
-    "jurisdiction_directory"
+    "jurisdiction_directory",
+    "aux_data_directory",
 ]
 
 multi_data_loader_pars = [
@@ -267,7 +266,7 @@ class SingleDataLoader:
         results_dir: str,
         par_file_name: str,
         session,
-        munger_path: str,
+        mungers_path: str,
         juris: jm.Jurisdiction,
     ):
         # adopt passed variables needed in future as attributes
@@ -303,7 +302,7 @@ class SingleDataLoader:
         m_err = dict()
         for mu in self.munger_list:
             self.munger[mu], m_err[mu] = jm.check_and_init_munger(
-                os.path.join(munger_path, mu)
+                os.path.join(mungers_path, mu)
             )
 
         self.munger_err = ui.consolidate_errors([m_err[mu] for mu in self.munger_list])
@@ -382,7 +381,7 @@ def check_and_init_singledataloader(
     results_dir: str,
     par_file_name: str,
     session,
-    munger_path: str,
+    mungers_path: str,
     juris: jm.Jurisdiction,
 ) -> (SingleDataLoader, dict):
     """Return SDL if it could be successfully initialized, and
@@ -397,25 +396,61 @@ def check_and_init_singledataloader(
     )
     if err:
         sdl = None
+        return sdl, err
+
+    # if aux_data_directory is given
+    if "aux_data_directory" in d.keys() and d["aux_data_directory"] is not None:
+        # check that it is a bona fide subdirectory of the results directory
+        if not os.path.isdir(os.path.join(results_dir,d["aux_data_directory"])):
+            # TODO test this error
+            err = ui.add_new_error(
+                err,
+                "ini",
+                par_file_name,
+                f"Specified aux_data_directory ({d['aux_data_directory']}) is not a subdirectory of {results_dir}"
+            )
+            sdl = None
+            return sdl, err
+    # and if aux_data_directory is not given
+    else:
+        # check that no munger expects an aux_data_directory
+        for m_name in d["munger_name"].split(","):
+            if not os.path.isfile(os.path.join(mungers_path, m_name, "aux_meta.txt")):
+                # TODO check this error
+                err = ui.add_new_error(
+                    err,
+                    "ini",
+                    par_file_name,
+                    f"Munger {m_name} has an aux_meta.txt file, "
+                    f"indicating that an auxiliary data directory is expected, but "
+                    f"no aux_data_directory is given"
+                )
+            if ui.fatal_error(err):
+                sdl = None
+                return sdl, err
+
+    ##################
     # for backward compatibility
-    elif () and ():
+    if ("jurisdiction_directory" not in d.keys()) and ("jurisdiction_path" not in d.keys()):
         sdl = None
         err = ui.add_new_error(
             dict(),
             "ini",
             par_file_name,
-            f"Neither jurisdiction_directory nor jurisdiction_path specified"
+            f"Neither jurisdiction_directory nor jurisdiction_path specified",
         )
+        sdl = None
+        return sdl, err
+    ######################
 
-    else:
-        sdl = SingleDataLoader(
-            results_dir,
-            par_file_name,
-            session,
-            munger_path,
-            juris,
-        )
-        err = ui.consolidate_errors([err, sdl.munger_err])
+    sdl = SingleDataLoader(
+        results_dir,
+        par_file_name,
+        session,
+        mungers_path,
+        juris,
+    )
+    err = ui.consolidate_errors([err, sdl.munger_err])
     return sdl, err
 
 
