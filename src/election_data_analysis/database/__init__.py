@@ -595,33 +595,41 @@ def add_records_to_selection_table(engine, n: int) -> list:
     return id_list
 
 
-def export_rollup_to_csv(
+def export_rollup_from_db(
     cursor,
     top_ru: str,
     sub_unit_type: str,
     contest_type: str,
     datafile_list: iter,
-    out_path: str,
-    sep: str = "\t",
     by: str = "Id",
     exclude_total: bool = False,
-) -> str:
-
-    if exclude_total:
+    by_vote_type: bool = False
+):
+    if by_vote_type:
+        restrict = """ AND CIT."Txt" = 'total' """
+    elif exclude_total:
         restrict = """ AND CIT."Txt" != 'total' """
     else:
         restrict = ""
+
+    columns = [
+        "contest_type",
+        "contest",
+        "contest_district_type",
+        "selection",
+        "reporting_unit",
+        "count_item_type",
+        "count"
+    ]
     if contest_type == "Candidate":
-        q = sql.SQL(
-            """ COPY
-            (SELECT
-               'Candidate' contest_type,
-               C."Name" "Contest",
-               EDRUT."Txt" contest_district_type,
-               Cand."BallotName" "Selection",
-              IntermediateRU."Name" "ReportingUnit",
-               CIT."Txt" "CountItemType",
-               sum(vc."Count") "Count"
+        q = sql.SQL("""
+        SELECT 'Candidate' contest_type,
+            C."Name" "Contest",
+            EDRUT."Txt" contest_district_type,
+            Cand."BallotName" "Selection",
+            IntermediateRU."Name" "ReportingUnit",
+            CIT."Txt" "CountItemType",
+            sum(vc."Count") "Count"
         FROM "VoteCount" vc
         LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
         LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
@@ -657,22 +665,19 @@ def export_rollup_to_csv(
                EDRUT."Txt",
                Cand."BallotName",
               IntermediateRU."Name",
-               CIT."Txt")
-        TO %s DELIMITER %s CSV HEADER;
+               CIT."Txt";
         """
         ).format(by=sql.Identifier(by), restrict=sql.SQL(restrict))
 
     elif contest_type == "BallotMeasure":
-        q = sql.SQL(
-            """ COPY
-            (SELECT
-               'Candidate' contest_type,
-               C."Name" "Contest",
-               EDRUT."Txt" contest_district_type,
-               BMS."Name" "Selection",
-              IntermediateRU."Name" "ReportingUnit",
-               CIT."Txt" "CountItemType",
-               sum(vc."Count") "Count"
+        q = sql.SQL("""
+        SELECT 'Candidate' contest_type,
+            C."Name" "Contest",
+            EDRUT."Txt" contest_district_type,
+            BMS."Name" "Selection",
+            IntermediateRU."Name" "ReportingUnit",
+            CIT."Txt" "CountItemType",
+            sum(vc."Count") "Count"
         FROM "VoteCount" vc
         LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
         LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
@@ -706,20 +711,22 @@ def export_rollup_to_csv(
                EDRUT."Txt",
                BMS."Name",
               IntermediateRU."Name",
-               CIT."Txt")
-        TO %s DELIMITER %s CSV HEADER;
+               CIT."Txt";
         """
         ).format(by=sql.Identifier(by), restrict=sql.SQL(restrict))
     else:
         err_str = f"Unrecognized contest_type: {contest_type}. No results exported"
         return err_str
     try:
-        cursor.execute(q, [top_ru, sub_unit_type, tuple(datafile_list), out_path, sep])
-        print(f"Results exported to {out_path}")
+        cursor.execute(q, [top_ru, sub_unit_type, tuple(datafile_list)])
+        results = cursor.fetchall()
+        results_df = pd.DataFrame(results)
+        results_df.columns = columns
         err_str = None
     except Exception as exc:
+        results_df = pd.DataFrame()
         err_str = f"No results exported due to database error: {exc}"
-    return err_str
+    return results_df, err_str 
 
 
 def vote_type_list(cursor, datafile_list: list, by: str = "Id") -> (list, str):
