@@ -448,11 +448,29 @@ def check_munger_files(munger_path: str, aux_data_dir: str) -> dict:
         )
         return err
 
+    # if aux_meta.txt exists, check that aux_data_dir is given, and vice versa
+    if aux_data_dir is None and os.path.isfile(os.path.join(munger_path,'aux_meta.txt')) and aux_data_dir is None:
+        err = ui.add_new_error(
+            err,
+            "munger",
+            munger_name,
+            f"Munger has aux_meta.txt file, but no aux_data_dir was given in the results *.ini file"
+        )
+        return err
+    elif aux_data_dir is not None and not os.path.isfile(os.path.join(munger_path,'aux_meta.txt')):
+        err = ui.add_new_error(
+            err,
+            "munger",
+            munger_name,
+            f"An aux_data_dir was given in the results *.ini file, but munger lacks necessary aux_meta.txt file"
+        )
+        return err
+
     # check whether all files exist
     templates = os.path.join(project_root, "juris_and_munger", "munger_templates")
     template_with_extension_list = os.listdir(templates)
     for munger_file in template_with_extension_list:
-        # TODO create optional template for auxiliary.txt
+        # TODO create optional template for aux_meta.txt
         cf_path = os.path.join(munger_path, munger_file)
         # if file does not already exist in munger dir, throw error
         file_exists = os.path.isfile(cf_path)
