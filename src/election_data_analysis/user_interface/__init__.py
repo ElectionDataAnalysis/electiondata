@@ -512,13 +512,13 @@ def new_datafile(
     raw_path: str,
     juris: jm.Jurisdiction,
     results_info: list = None,
-    aux_data_directory: str = None,
+    aux_data_path: str = None,
 ) -> dict:
     """Guide user through process of uploading data in <raw_file>
     into common data format.
     Assumes cdf db exists already"""
     err = None
-    raw, err = read_combine_results(munger, raw_path, err, aux_data_directory=aux_data_directory)
+    raw, err = read_combine_results(munger, raw_path, err, aux_data_path=aux_data_path)
     if fatal_error(err):
         return err
     elif raw.empty:

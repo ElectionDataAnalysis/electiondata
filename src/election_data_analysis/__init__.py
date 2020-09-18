@@ -370,7 +370,7 @@ class SingleDataLoader:
                     f_path,
                     self.juris,
                     results_info=results_info,
-                    aux_data_path=self.d["aux_data_path"],
+                    aux_data_path=os.path.join(self.results_dir,self.d["aux_data_directory"]),
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
@@ -924,7 +924,7 @@ class JurisdictionPrepper:
                     error=None,
                     sub_ru_type=sub_ru_type,
                     results_file_path=os.path.join(dir, d["results_file"]),
-                    munger_path=os.path.join(environment_d["munger_path"],m_name),
+                    munger_path=os.path.join(environment_d["mungers_dir"],m_name),
                     aux_data_path=aux_data_path,
                 )
                 if new_err:
