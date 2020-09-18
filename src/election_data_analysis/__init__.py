@@ -362,6 +362,10 @@ class SingleDataLoader:
             return err
 
         else:
+            if self.d["aux_data_directory"] is None:
+                aux_data_path = None
+            else:
+                aux_data_path = os.path.join(self.results_dir,self.d["aux_data_directory"])
             for mu in self.munger_list:
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
                 new_err = ui.new_datafile(
@@ -370,7 +374,7 @@ class SingleDataLoader:
                     f_path,
                     self.juris,
                     results_info=results_info,
-                    aux_data_path=os.path.join(self.results_dir,self.d["aux_data_directory"]),
+                    aux_data_path=aux_data_path,
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
@@ -402,8 +406,7 @@ def check_aux_data_setup(
     else:
         # check that no munger expects an aux_data_directory
         for m_name in params["munger_name"].split(","):
-            if not os.path.isfile(os.path.join(mungers_path, m_name, "aux_meta.txt")):
-                # TODO check this error
+            if os.path.isfile(os.path.join(mungers_path, m_name, "aux_meta.txt")):
                 err = ui.add_new_error(
                     err,
                     "ini",
