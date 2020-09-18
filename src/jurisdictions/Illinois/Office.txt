@@ -200,3 +200,5 @@ US Senate IL	Illinois
 IL Attorney General	Illinois
 IL Lieutenant Governor	Illinois
 IL Treasurer	Illinois
+IL Comptroller	Illinois
+IL Secretary of State	Illinois
