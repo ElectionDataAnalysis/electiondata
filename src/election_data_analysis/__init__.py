@@ -50,7 +50,7 @@ prep_pars = [
     "reporting_unit_type",
 ]
 
-optional_prep_pars = ["results_file", "munger_name","aux_data_dir"]
+optional_prep_pars = []
 
 analyze_pars = ["db_paramfile", "db_name"]
 
@@ -283,14 +283,14 @@ class SingleDataLoader:
             header="election_data_analysis",
         )
 
+        # assign None to aux_data_directory if necessary
+        if "aux_data_directory" not in self.d.keys():
+            self.d["aux_data_directory"] = None
+
         # change any blank parameters describing the results file to 'none'
         for k in self.d.keys():
             if self.d[k] == "" and k[:8] == "results_":
                 self.d[k] = "none"
-
-        # set aux_data_dir to None if appropriate
-        if self.d["aux_data_dir"] in ["None", ""]:
-            self.d["aux_data_dir"] = None
 
         # pick mungers (Note: munger_name is comma-separated list of munger names)
         self.munger = dict()
@@ -370,12 +370,49 @@ class SingleDataLoader:
                     f_path,
                     self.juris,
                     results_info=results_info,
-                    aux_data_dir=self.d["aux_data_dir"],
+                    aux_data_path=self.d["aux_data_path"],
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
         return err
 
+
+def check_aux_data_setup(
+        params,
+        aux_data_dir_parent,
+        mungers_path,
+        par_file_name
+) -> dict:
+
+    err = None
+    # if aux_data_directory is given
+    if "aux_data_directory" in params.keys() and params["aux_data_directory"] is not None:
+        # check that it is a bona fide subdirectory of the results directory
+        if not os.path.isdir(os.path.join(aux_data_dir_parent,params["aux_data_directory"])):
+            # TODO test this error
+            err = ui.add_new_error(
+                err,
+                "ini",
+                par_file_name,
+                f"Specified aux_data_directory ({params['aux_data_directory']}) is not a subdirectory of {aux_data_dir_parent}"
+            )
+            sdl = None
+            return sdl, err
+    # and if aux_data_directory is not given
+    else:
+        # check that no munger expects an aux_data_directory
+        for m_name in params["munger_name"].split(","):
+            if not os.path.isfile(os.path.join(mungers_path, m_name, "aux_meta.txt")):
+                # TODO check this error
+                err = ui.add_new_error(
+                    err,
+                    "ini",
+                    par_file_name,
+                    f"Munger {m_name} has an aux_meta.txt file, "
+                    f"indicating that an auxiliary data directory is expected, but "
+                    f"no aux_data_directory is given"
+                )
+    return err
 
 def check_and_init_singledataloader(
     results_dir: str,
@@ -398,36 +435,13 @@ def check_and_init_singledataloader(
         sdl = None
         return sdl, err
 
-    # if aux_data_directory is given
-    if "aux_data_directory" in d.keys() and d["aux_data_directory"] is not None:
-        # check that it is a bona fide subdirectory of the results directory
-        if not os.path.isdir(os.path.join(results_dir,d["aux_data_directory"])):
-            # TODO test this error
-            err = ui.add_new_error(
-                err,
-                "ini",
-                par_file_name,
-                f"Specified aux_data_directory ({d['aux_data_directory']}) is not a subdirectory of {results_dir}"
-            )
-            sdl = None
-            return sdl, err
-    # and if aux_data_directory is not given
-    else:
-        # check that no munger expects an aux_data_directory
-        for m_name in d["munger_name"].split(","):
-            if not os.path.isfile(os.path.join(mungers_path, m_name, "aux_meta.txt")):
-                # TODO check this error
-                err = ui.add_new_error(
-                    err,
-                    "ini",
-                    par_file_name,
-                    f"Munger {m_name} has an aux_meta.txt file, "
-                    f"indicating that an auxiliary data directory is expected, but "
-                    f"no aux_data_directory is given"
-                )
-            if ui.fatal_error(err):
-                sdl = None
-                return sdl, err
+    # check consistency of munger and .ini file regarding aux data
+    new_err = check_aux_data_setup(d,results_dir,mungers_path,par_file_name)
+
+    if ui.fatal_error(new_err):
+        err = ui.consolidate_errors([err, new_err])
+        sdl = None
+        return sdl, err
 
     ##################
     # for backward compatibility
@@ -729,37 +743,26 @@ class JurisdictionPrepper:
 
     def add_sub_county_rus_from_results_file(
         self,
-        error: dict = None,
+        results_file_path,
+        munger_path,
+        aux_data_path=None,
         sub_ru_type: str = "precinct",
-        results_file_path=None,
-        munger_name=None,
-        aux_data_dir=None,
-        **kwargs,
+        error: dict = None,
     ) -> dict:
         """Assumes precincts (or other sub-county reporting units)
         are munged from row of the results file.
         Adds corresponding rows to ReportingUnit.txt and dictionary.txt
         using internal County name correctly"""
 
-        # get parameters from arguments; otherwise from self.d; otherwise throw error
-        kwargs, missing = ui.get_params_to_read_results(
-            self.d, results_file_path, munger_name, aux_data_dir=aux_data_dir
-        )
-        if missing:
-            if results_file_path:
-                results_file = Path(results_file_path).name
-            else:
-                results_file = None
-            error = ui.add_new_error(
-                error,
-                "ini",
-                "jurisdiction_prep.ini",
-                f"Parameters missing for processing {results_file or self.d['results_file']}: {missing}.",
-            )
-            return error
+        munger_name = Path(munger_path).name
 
         # read data from file (appending _SOURCE)
-        wr, munger, new_err = ui.read_results(kwargs, error)
+        wr, munger, new_err = ui.read_results(
+            results_file_path=results_file_path,
+            munger_path=munger_path,
+            aux_data_path=aux_data_path,
+            error=None,
+        )
         if new_err:
             error = ui.consolidate_errors([error, new_err])
             if ui.fatal_error(new_err):
@@ -770,7 +773,7 @@ class JurisdictionPrepper:
                 error,
                 "file",
                 Path(results_file_path).name,
-                f"No results read from file. Parameters: {kwargs}",
+                f"No results read via munger {Path(munger_path).name}",
             )
             return error
 
@@ -801,9 +804,9 @@ class JurisdictionPrepper:
         if wr.empty:
             error = ui.add_new_error(
                 error,
-                "ini",
-                "jurisdiction_prep.ini",
-                f"No relevant information read from results file ({Path(results_file_path).name}). Parameters: {kwargs}",
+                "file",
+                Path(results_file_path).name,
+                f"No relevant information read from results file.",
             )
             return error
 
@@ -880,30 +883,52 @@ class JurisdictionPrepper:
     def add_sub_county_rus_from_multi_results_file(
         self, dir: str, error: dict = None, sub_ru_type: str = "precinct"
     ) -> dict:
-        """Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
+        """For each .ini file in <dir>, finds specified results file.
+        For each results file, adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
         for each file in <dir> named (with munger) in a .ini file in the directory"""
         print(f"\nStarting {inspect.currentframe().f_code.co_name}")
 
+        environment_d, new_err = ui.get_runtime_parameters(
+            required_keys=["mungers_dir"],
+            param_file="run_time.ini",
+            header="election_data_analysis",
+            err=None,
+        )
+        if new_err:
+            error = ui.consolidate_errors([error, new_err])
+            if ui.fatal_error(new_err):
+                return error
+
         for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
             par_file = os.path.join(dir, par_file_name)
-            file_dict, new_err = ui.get_runtime_parameters(
-                required_keys=["results_file", "munger_name"],
-                header="election_data_analysis",
-                optional_keys=["aux_data_dir"],
+            d, new_err = ui.get_runtime_parameters(
+                required_keys=sdl_pars_req,
                 param_file=par_file,
+                header='election_data_analysis',
+                err=None,
+                optional_keys=sdl_pars_opt,
             )
             if new_err:
                 error = ui.consolidate_errors([error, new_err])
                 if ui.fatal_error(new_err):
                     return error
 
-            file_dict["sub_ru_type"] = sub_ru_type
-            file_dict["results_file_path"] = os.path.join(
-                dir, file_dict["results_file"]
-            )
-            new_err = self.add_sub_county_rus_from_results_file(None, **file_dict)
-            if new_err:
-                error = ui.consolidate_errors([error, new_err])
+            # set aux_data_path
+            if "aux_data_directory" in d.keys() and d["aux_data_directory"] is not None:
+                aux_data_path = os.path.join(dir, d["aux_data_directory"])
+            else:
+                aux_data_path = None
+
+            for m_name in d["munger_name"].split(","):
+                new_err = self.add_sub_county_rus_from_results_file(
+                    error=None,
+                    sub_ru_type=sub_ru_type,
+                    results_file_path=os.path.join(dir, d["results_file"]),
+                    munger_path=os.path.join(environment_d["munger_path"],m_name),
+                    aux_data_path=aux_data_path,
+                )
+                if new_err:
+                    error = ui.consolidate_errors([error, new_err])
         ui.report(error)
         return error
 
@@ -914,68 +939,66 @@ class JurisdictionPrepper:
         for each file in <dir> named (with munger) in a .ini file in the directory"""
 
         print(f"\nStarting {inspect.currentframe().f_code.co_name}")
+        # get path to mungers directory
+        environment_d, new_err = ui.get_runtime_parameters(
+            required_keys=["mungers_dir"],
+            param_file="run_time.ini",
+            header="election_data_analysis",
+            err=None,
+        )
+        if new_err:
+            ui.consolidate_errors([error, new_err])
 
         for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
-            # pull parameters from file
+            # pull parameters for results file
             par_file = os.path.join(dir, par_file_name)
-            file_dict, new_err = ui.get_runtime_parameters(
+            d, new_err = ui.get_runtime_parameters(
                 required_keys=["results_file", "munger_name"],
                 header="election_data_analysis",
-                optional_keys=["aux_data_dir"],
+                optional_keys=["aux_data_directory"],
                 param_file=par_file,
                 err=None,
             )
-            file_dict["results_file_path"] = os.path.join(
-                dir, file_dict["results_file"]
-            )
             if new_err:
                 error = ui.consolidate_errors([error, new_err])
+
             if not ui.fatal_error(error):
-                # add elements
-                new_err = self.add_elements_from_results_file(
-                    elements, error, **file_dict
-                )
-                error = ui.consolidate_errors([error, new_err])
+                if d["aux_data_directory"] is None:
+                    aux_data_path = None
+                else:
+                    aux_data_path = os.path.join(dir,d["aux_data_directory"])
+                # loop through mungers in the "munger_name" list
+                for m_name in d["munger_name"].split(","):
+                    # add elements
+                    new_err = self.add_elements_from_results_file(
+                        elements=elements,
+                        results_file_path=os.path.join(dir,d["results_file"]),
+                        munger_path=os.path.join(environment_d["mungers_dir"],m_name),
+                        aux_data_path=aux_data_path,
+                        error=None,
+                    )
+                    error = ui.consolidate_errors([error, new_err])
         ui.report(error)
         return error
 
     def add_elements_from_results_file(
         self,
         elements: iter,
-        error: dict,
-        results_file_path=None,
-        results_file=None,
-        munger_name=None,
-        aux_data_dir=None
+        results_file_path: str,
+        munger_path: str,
+        aux_data_path: str = None,
+        error: dict = None,
     ) -> dict:
-        """Add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
+        """For a single munger, add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
         or not already in <element>.txt for each <element> in <elements>"""
 
-        # get parameters from arguments; otherwise from self.d; otherwise throw error
-        kwargs, missing = ui.get_params_to_read_results(
-            self.d, results_file_path, munger_name, aux_data_dir=aux_data_dir
-        )
-        if missing:
-            error = ui.add_new_error(
-                error,
-                "ini",
-                "jurisdiction_prep.ini",
-                f"Parameters missing: {missing}. Results file cannot be processed.",
-            )
-            return error
-        elif ("results_file_path" in kwargs.keys()) and not (
-            os.path.isfile(kwargs["results_file_path"])
-        ):
-            error = ui.add_new_error(
-                error,
-                "file",
-                Path(kwargs["results_file_path"]).name,
-                f"File not found: {kwargs['results_file_path']}",
-            )
-            return error
-
         # read data from file (appending _SOURCE)
-        wr, mu, new_err = ui.read_results(kwargs, error)
+        wr, mu, new_err = ui.read_results(
+            results_file_path=results_file_path,
+            munger_path=munger_path,
+            aux_data_path=aux_data_path,
+            error=dict(),
+        )
         if new_err:
             error = ui.consolidate_errors([error, new_err])
             if ui.fatal_error(new_err):
@@ -1101,13 +1124,15 @@ def make_par_files(
     download_date: str = "1900-01-01",
     source: str = "unknown",
     results_note: str = "none",
-    aux_data_dir: str = "",
 ):
     """Utility to create parameter files for multiple files. Makes a parameter file for each (non-.ini,non .*) file in <dir>,
     once all other necessary parameters are specified."""
     data_file_list = [f for f in os.listdir(dir) if (f[-4:] != ".ini") & (f[0] != ".")]
     for f in data_file_list:
-        par_text = f"[election_data_analysis]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\nmunger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\nresults_short_name={top_ru}_{f}\nresults_download_date={download_date}\nresults_source={source}\nresults_note={results_note}\naux_data_dir={aux_data_dir}\n"
+        par_text = f"[election_data_analysis]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\n" \
+                   f"munger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\n" \
+                   f"results_short_name={top_ru}_{f}\nresults_download_date={download_date}\n" \
+                   f"results_source={source}\nresults_note={results_note}\n"
         par_name = ".".join(f.split(".")[:-1]) + ".ini"
         with open(os.path.join(dir, par_name), "w") as p:
             p.write(par_text)
