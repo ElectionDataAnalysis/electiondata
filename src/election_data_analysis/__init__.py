@@ -284,7 +284,7 @@ class SingleDataLoader:
         )
 
         # assign None to aux_data_dir if necessary
-        if "aux_data_dir" not in self.d.keys():
+        if "aux_data_dir" not in self.d.keys() or self.d["aux_data_dir"] in ["", "None", "none"]:
             self.d["aux_data_dir"] = None
 
         # change any blank parameters describing the results file to 'none'
