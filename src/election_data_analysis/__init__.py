@@ -29,7 +29,7 @@ sdl_pars_req = [
 sdl_pars_opt = [
     "jurisdiction_path",
     "jurisdiction_directory",
-    "aux_data_directory",
+    "aux_data_dir",
 ]
 
 multi_data_loader_pars = [
@@ -283,9 +283,9 @@ class SingleDataLoader:
             header="election_data_analysis",
         )
 
-        # assign None to aux_data_directory if necessary
-        if "aux_data_directory" not in self.d.keys():
-            self.d["aux_data_directory"] = None
+        # assign None to aux_data_dir if necessary
+        if "aux_data_dir" not in self.d.keys():
+            self.d["aux_data_dir"] = None
 
         # change any blank parameters describing the results file to 'none'
         for k in self.d.keys():
@@ -362,10 +362,10 @@ class SingleDataLoader:
             return err
 
         else:
-            if self.d["aux_data_directory"] is None:
+            if self.d["aux_data_dir"] is None:
                 aux_data_path = None
             else:
-                aux_data_path = os.path.join(self.results_dir,self.d["aux_data_directory"])
+                aux_data_path = os.path.join(self.results_dir,self.d["aux_data_dir"])
             for mu in self.munger_list:
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
                 new_err = ui.new_datafile(
@@ -389,22 +389,22 @@ def check_aux_data_setup(
 ) -> dict:
 
     err = None
-    # if aux_data_directory is given
-    if "aux_data_directory" in params.keys() and params["aux_data_directory"] is not None:
+    # if aux_data_dir is given
+    if "aux_data_dir" in params.keys() and params["aux_data_dir"] is not None:
         # check that it is a bona fide subdirectory of the results directory
-        if not os.path.isdir(os.path.join(aux_data_dir_parent,params["aux_data_directory"])):
+        if not os.path.isdir(os.path.join(aux_data_dir_parent,params["aux_data_dir"])):
             # TODO test this error
             err = ui.add_new_error(
                 err,
                 "ini",
                 par_file_name,
-                f"Specified aux_data_directory ({params['aux_data_directory']}) is not a subdirectory of {aux_data_dir_parent}"
+                f"Specified aux_data_dir ({params['aux_data_dir']}) is not a subdirectory of {aux_data_dir_parent}"
             )
             sdl = None
             return sdl, err
-    # and if aux_data_directory is not given
+    # and if aux_data_dir is not given
     else:
-        # check that no munger expects an aux_data_directory
+        # check that no munger expects an aux_data_dir
         for m_name in params["munger_name"].split(","):
             if os.path.isfile(os.path.join(mungers_path, m_name, "aux_meta.txt")):
                 err = ui.add_new_error(
@@ -413,7 +413,7 @@ def check_aux_data_setup(
                     par_file_name,
                     f"Munger {m_name} has an aux_meta.txt file, "
                     f"indicating that an auxiliary data directory is expected, but "
-                    f"no aux_data_directory is given"
+                    f"no aux_data_dir is given"
                 )
     return err
 
@@ -917,8 +917,8 @@ class JurisdictionPrepper:
                     return error
 
             # set aux_data_path
-            if "aux_data_directory" in d.keys() and d["aux_data_directory"] is not None:
-                aux_data_path = os.path.join(dir, d["aux_data_directory"])
+            if "aux_data_dir" in d.keys() and d["aux_data_dir"] is not None:
+                aux_data_path = os.path.join(dir, d["aux_data_dir"])
             else:
                 aux_data_path = None
 
@@ -958,7 +958,7 @@ class JurisdictionPrepper:
             d, new_err = ui.get_runtime_parameters(
                 required_keys=["results_file", "munger_name"],
                 header="election_data_analysis",
-                optional_keys=["aux_data_directory"],
+                optional_keys=["aux_data_dir"],
                 param_file=par_file,
                 err=None,
             )
@@ -966,10 +966,10 @@ class JurisdictionPrepper:
                 error = ui.consolidate_errors([error, new_err])
 
             if not ui.fatal_error(error):
-                if d["aux_data_directory"] is None:
+                if d["aux_data_dir"] is None:
                     aux_data_path = None
                 else:
-                    aux_data_path = os.path.join(dir,d["aux_data_directory"])
+                    aux_data_path = os.path.join(dir,d["aux_data_dir"])
                 # loop through mungers in the "munger_name" list
                 for m_name in d["munger_name"].split(","):
                     # add elements
