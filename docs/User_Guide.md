@@ -279,7 +279,6 @@ The DataLoader class allows batch uploading of all data in a given directory. Th
  * download_date
  * source
  * note
- * auxiliary data directory (if any)
 The `load_all()` method will read each `.ini` file and make the corresponding upload.
 From a directory containing a `run_time.ini` parameter file, run
 ```

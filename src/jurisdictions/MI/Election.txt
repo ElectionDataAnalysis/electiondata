@@ -1,7 +1,0 @@
-Name	ElectionType
-2020 General	general
-2020 Primary	primary
-2018 General	general
-2018 Primary	primary
-2016 General	general
-2016 Primary	primary

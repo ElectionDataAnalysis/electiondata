@@ -150,7 +150,7 @@ class Jurisdiction:
 
 
 class Munger:
-    def get_aux_data(self, aux_data_dir, err) -> (dict, dict):
+    def get_aux_data(self, aux_data_path, err) -> (dict, dict):
         """creates dictionary of dataframes, one for each auxiliary datafile.
         DataFrames returned are (multi-)indexed by the primary key(s)"""
         aux_data_dict = {}  # will hold dataframe for each abbreviated file name
@@ -164,14 +164,14 @@ class Munger:
                 err = ui.consolidate_errors([err, mu_err])
                 return dict(), err
 
-            # find file in aux_data_dir whose name contains the string <afn>
-            aux_filename_list = [x for x in os.listdir(aux_data_dir) if abbrev in x]
+            # find file in aux_data_path whose name contains the string <afn>
+            aux_filename_list = [x for x in os.listdir(aux_data_path) if abbrev in x]
             if len(aux_filename_list) == 0:
                 # TODO check this error
                 err = ui.add_new_error(
                     err,
                     "file",
-                    aux_data_dir,
+                    aux_data_path,
                     f"No file found with name containing {abbrev}",
                 )
             elif len(aux_filename_list) > 1:
@@ -179,11 +179,11 @@ class Munger:
                 err = ui.add_new_error(
                     err,
                     "file",
-                    aux_data_dir,
+                    aux_data_path,
                     f"Too many files found with name containing {abbrev}",
                 )
             else:
-                aux_path = os.path.join(aux_data_dir, aux_filename_list[0])
+                aux_path = os.path.join(aux_data_path, aux_filename_list[0])
 
             # read and clean the auxiliary data file, including setting primary key columns as int
             df, err = ui.read_single_datafile(aux_mu, aux_path, err)
@@ -217,15 +217,13 @@ class Munger:
 
     def __init__(
         self,
-        dir_path,
-        aux_data_dir=None,
+        munger_path,
+        aux_data_path=None,
     ):
         """<dir_path> is the directory for the munger. If munger deals with auxiliary data files,
-        <aux_data_dir> is the directory holding those files."""
-        self.name = os.path.basename(dir_path)  # e.g., 'nc_general'
-        self.path_to_munger_dir = dir_path
-        # TODO make handling of these directories consistent
-
+        <aux_data_path> is the absolute path of the directory holding those files."""
+        self.name = os.path.basename(munger_path)  # e.g., 'nc_general'
+        self.path_to_munger_dir = munger_path
         [
             self.cdf_elements,
             self.file_type,
@@ -235,11 +233,12 @@ class Munger:
             self.options,
         ] = read_munger_info_from_files(self.path_to_munger_dir)
 
-        if aux_data_dir:
-            self.aux_data, err = self.get_aux_data(aux_data_dir, err=dict())
+        if aux_data_path:
+            # NB err is not used here, but was checked in check_and_init routine
+            self.aux_data, err = self.get_aux_data(aux_data_path, err=dict())
         else:
             self.aux_data = {}
-        self.aux_data_dir = aux_data_dir
+        self.aux_data_path = aux_data_path
 
         # used repeatedly, so calculated once for convenience
         self.field_list = set()
@@ -247,17 +246,17 @@ class Munger:
             self.field_list = self.field_list.union(r["fields"])
 
 
-def check_and_init_munger(munger_path: str, aux_data_dir: str = None) -> (Munger, dict):
-    err = check_munger_files(munger_path, aux_data_dir)
+def check_and_init_munger(munger_path: str, aux_data_path: str = None) -> (Munger, dict):
+    err = check_munger_files(munger_path)
     if ui.fatal_error(err):
         munger = None
     else:
-        munger = Munger(munger_path, aux_data_dir=aux_data_dir)
+        munger = Munger(munger_path, aux_data_path=aux_data_path)
     return munger, err
 
 
 def read_munger_info_from_files(dir_path):
-    """<aux_data_dir> is required if there are auxiliary data files"""
+    """"""
     # create auxiliary dataframe
     if "aux_meta.txt" in os.listdir(dir_path):
         # if some elements are reported in separate files per auxilliary.txt file, read from file
@@ -431,7 +430,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> dict:
     return err
 
 
-def check_munger_files(munger_path: str, aux_data_dir: str) -> dict:
+def check_munger_files(munger_path: str) -> dict:
     """Check that the munger files are complete and consistent with one another.
     Assumes munger directory exists. Assumes dictionary.txt is in the template file.
     <munger_path> is the path to the directory of the particular munger
@@ -445,24 +444,6 @@ def check_munger_files(munger_path: str, aux_data_dir: str) -> dict:
     if not os.path.isdir(munger_path):
         err = ui.add_new_error(
             err, "munger", munger_name, f"Directory does not exist: {munger_path}"
-        )
-        return err
-
-    # if aux_meta.txt exists, check that aux_data_dir is given, and vice versa
-    if aux_data_dir is None and os.path.isfile(os.path.join(munger_path,'aux_meta.txt')) and aux_data_dir is None:
-        err = ui.add_new_error(
-            err,
-            "munger",
-            munger_name,
-            f"Munger has aux_meta.txt file, but no aux_data_dir was given in the results *.ini file"
-        )
-        return err
-    elif aux_data_dir is not None and not os.path.isfile(os.path.join(munger_path,'aux_meta.txt')):
-        err = ui.add_new_error(
-            err,
-            "munger",
-            munger_name,
-            f"An aux_data_dir was given in the results *.ini file, but munger lacks necessary aux_meta.txt file"
         )
         return err
 
@@ -486,13 +467,17 @@ def check_munger_files(munger_path: str, aux_data_dir: str) -> dict:
                 err = check_munger_file_contents(munger_path, munger_file, err)
         else:
             err = ui.add_new_error(err, "munger", munger_name, "File does not exist")
-    if aux_data_dir:
+
+    # if the munger requires auxiliary data
+    if os.path.isfile(os.path.join(munger_path,"aux_meta.txt")):
+        # TODO check that each abbrev in aux_meta.txt has an associated sub_munger
         # check sub-mungers (in sub-directories of munger)
-        for f in os.listdir(munger_path):
+        sub_mungers = os.listdir(munger_path)
+        for f in sub_mungers:
             if os.path.isdir(f):
-                new_err = check_munger_files(f, aux_data_dir=None)
+                new_err = check_munger_files(f)
                 if new_err:
-                    ui.add_new_error([err,new_err])
+                    ui.add_new_error([err, new_err])
     return err
 
 
