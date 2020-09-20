@@ -173,3 +173,62 @@ US House CA District 51	congressional
 US House CA District 52	congressional
 US House CA District 53	congressional
 California	state
+California;Alameda County	county
+California;Alpine County	county
+California;Amador County	county
+California;Butte County	county
+California;Calaveras County	county
+California;Colusa County	county
+California;Contra Costa County	county
+California;Del Norte County	county
+California;El Dorado County	county
+California;Fresno County	county
+California;Glenn County	county
+California;Humboldt County	county
+California;Imperial County	county
+California;Inyo County	county
+California;Kern County	county
+California;Kings County	county
+California;Lake County	county
+California;Lassen County	county
+California;Los Angeles County	county
+California;Madera County	county
+California;Marin County	county
+California;Mariposa County	county
+California;Mendocino County	county
+California;Merced County	county
+California;Modoc County	county
+California;Mono County	county
+California;Monterey County	county
+California;Napa County	county
+California;Nevada County	county
+California;Orange County	county
+California;Placer County	county
+California;Plumas County	county
+California;Riverside County	county
+California;Sacramento County	county
+California;San Benito County	county
+California;San Bernardino County	county
+California;San Diego County	county
+California;San Francisco County	county
+California;San Joaquin County	county
+California;San Luis Obispo County	county
+California;San Mateo County	county
+California;Santa Barbara County	county
+California;Santa Clara County	county
+California;Santa Cruz County	county
+California;Shasta County	county
+California;Sierra County	county
+California;Siskiyou County	county
+California;Solano County	county
+California;Sonoma County	county
+California;Stanislaus County	county
+California;Sutter County	county
+California;Tehama County	county
+California;Trinity County	county
+California;Tulare County	county
+California;Tuolumne County	county
+California;Ventura County	county
+California;Yolo County	county
+California;Yuba County	county
+California;State Totals County	county
