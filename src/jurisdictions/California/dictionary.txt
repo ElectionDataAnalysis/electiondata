@@ -451,7 +451,7 @@ Candidate	Ro Khanna	Ro Khanna
 Candidate	Joseph Alexander Rubay	Joseph Alexander Rubay
 Candidate	Steve Glazer	Steve Glazer
 Candidate	Nancy Skinner	Nancy Skinner
-Candidate	Sandré R. Swanson	Sandré R. Swanson
+Candidate	SandrÃ© R. Swanson	SandrÃ© R. Swanson
 Candidate	Tony Thurmond	Tony Thurmond
 Candidate	Claire Chiara	Claire Chiara
 Candidate	Cheryl Cook-Kallio	Cheryl Cook-Kallio
@@ -489,7 +489,7 @@ Candidate	Bill Dodd	Bill Dodd
 Candidate	Dave Miller	Dave Miller
 Candidate	Jim Frazier	Jim Frazier
 Candidate	Tim Grayson	Tim Grayson
-Candidate	Mae Cendaña Torlakson	Mae Cendaña Torlakson
+Candidate	Mae CendaÃ±a Torlakson	Mae CendaÃ±a Torlakson
 Candidate	Jared W. Huffman	Jared W. Huffman
 Candidate	Dale K. Mensing	Dale K. Mensing
 Candidate	Jim Wood	Jim Wood
@@ -534,7 +534,7 @@ Candidate	Richard Alarcon	Richard Alarcon
 Candidate	Brad Sherman	Brad Sherman
 Candidate	Mark Reed	Mark Reed
 Candidate	Grace F. Napolitano	Grace F. Napolitano
-Candidate	Roger Hernández	Roger Hernández
+Candidate	Roger HernÃ¡ndez	Roger HernÃ¡ndez
 Candidate	Ted W. Lieu	Ted W. Lieu
 Candidate	Kenneth W. Wright	Kenneth W. Wright
 Candidate	Adrienne Nicole Edwards	Adrienne Nicole Edwards
@@ -543,7 +543,7 @@ Candidate	Norma J. Torres	Norma J. Torres
 Candidate	Tyler Fischella	Tyler Fischella
 Candidate	Karen Bass	Karen Bass
 Candidate	Chris Blake Wiggins	Chris Blake Wiggins
-Candidate	Linda T. Sánchez	Linda T. Sánchez
+Candidate	Linda T. SÃ¡nchez	Linda T. SÃ¡nchez
 Candidate	Ryan Downing	Ryan Downing
 Candidate	Ed Royce	Ed Royce
 Candidate	Brett Murdock	Brett Murdock
@@ -552,7 +552,7 @@ Candidate	Roman Gabriel Gonzalez	Roman Gabriel Gonzalez
 Candidate	Maxine Waters	Maxine Waters
 Candidate	Omar Navarro	Omar Navarro
 Candidate	Isadore Hall, III	Isadore Hall, III
-Candidate	Nanette Diaz Barragán	Nanette Diaz Barragán
+Candidate	Nanette Diaz BarragÃ¡n	Nanette Diaz BarragÃ¡n
 Candidate	Alan Lowenthal	Alan Lowenthal
 Candidate	Andy Whallon	Andy Whallon
 Candidate	Johnathon Levar Ervin	Johnathon Levar Ervin
@@ -700,7 +700,7 @@ Candidate	John Renison	John Renison
 Candidate	Rocky Chavez	Rocky Chavez
 Candidate	Thomas E. Krouse	Thomas E. Krouse
 Candidate	Brian Maienschein	Brian Maienschein
-Candidate	Melinda K. Vásquez	Melinda K. Vásquez
+Candidate	Melinda K. VÃ¡squez	Melinda K. VÃ¡squez
 Candidate	Todd Gloria	Todd Gloria
 Candidate	Kevin D. Melton	Kevin D. Melton
 Candidate	Shirley N. Weber	Shirley N. Weber
@@ -727,7 +727,7 @@ Candidate	Salud Carbajal	Salud Carbajal
 Candidate	Justin Donald Fareed	Justin Donald Fareed
 Candidate	Dawn Ortiz-Legg	Dawn Ortiz-Legg
 Candidate	Jordan Cunningham	Jordan Cunningham
-Candidate	S. Monique Limón	S. Monique Limón
+Candidate	S. Monique LimÃ³n	S. Monique LimÃ³n
 Candidate	Edward Fuller	Edward Fuller
 Candidate	Anna G. Eshoo	Anna G. Eshoo
 Candidate	Richard B. Fox	Richard B. Fox
@@ -758,142 +758,82 @@ Candidate	Betty T. Yee	Betty T. Yee
 Candidate	Fiona Ma	Fiona Ma
 Candidate	Greg Conlon	Greg Conlon
 Candidate	Steven C Bailey	Steven C Bailey
-Candidate	Xavier Becerra	Xavier Becerra
 Candidate	Steve Poizner	Steve Poizner
-Candidate	Ricardo Lara	Ricardo Lara
 Candidate	Mark Burns	Mark Burns
 Candidate	Malia Cohen	Malia Cohen
 Candidate	Kevin De Leon	Kevin De Leon
 Candidate	Dianne Feinstein	Dianne Feinstein
-Candidate	Barbara Lee	Barbara Lee
 Candidate	Laura Wells	Laura Wells
-Candidate	Eric Swalwell	Eric Swalwell
 Candidate	Rudy L. Peters Jr.	Rudy L. Peters Jr.
 Candidate	Ron Cohen	Ron Cohen
-Candidate	Ro Khanna	Ro Khanna
 Candidate	Bob Wieckowski	Bob Wieckowski
 Candidate	Victor G. San Vicente	Victor G. San Vicente
 Candidate	Buffy Wicks	Buffy Wicks
 Candidate	Jovanka Beckles	Jovanka Beckles
-Candidate	Catharine Baker	Catharine Baker
 Candidate	Rebecca Bauer-Kahan	Rebecca Bauer-Kahan
 Candidate	Stephen Slauson	Stephen Slauson
-Candidate	Rob Bonta	Rob Bonta
-Candidate	Bill Quirk	Bill Quirk
 Candidate	Joseph Grcar	Joseph Grcar
-Candidate	Bob Brunton	Bob Brunton
-Candidate	Kansen Chu	Kansen Chu
 Candidate	Marshall Tuck	Marshall Tuck
 Candidate	Tony K. Thurmond	Tony K. Thurmond
 Candidate	Tom Hallinan	Tom Hallinan
-Candidate	Ted Gaines	Ted Gaines
 Candidate	Jessica Morse	Jessica Morse
-Candidate	Tom McClintock	Tom McClintock
 Candidate	Carla J. Neal	Carla J. Neal
-Candidate	Frank Bigelow	Frank Bigelow
 Candidate	Andreas Borgeas	Andreas Borgeas
 Candidate	Paulina Miranda	Paulina Miranda
-Candidate	Doug La Malfa	Doug La Malfa
 Candidate	Audrey Denney	Audrey Denney
 Candidate	James Nielsen	James Nielsen
 Candidate	Phillip Kim	Phillip Kim
 Candidate	Caleen Sisk	Caleen Sisk
-Candidate	Brian Dahle	Brian Dahle
-Candidate	James Gallagher	James Gallagher
 Candidate	Sonia Aery	Sonia Aery
-Candidate	John Garamendi	John Garamendi
-Candidate	Charlie Schaupp	Charlie Schaupp
 Candidate	Cecilia Aguiar-Curry	Cecilia Aguiar-Curry
 Candidate	Brandon Z. Nelson	Brandon Z. Nelson
-Candidate	Mike Thompson	Mike Thompson
 Candidate	Anthony Mills	Anthony Mills
-Candidate	Jerry McNerney	Jerry McNerney
 Candidate	Marla Livengood	Marla Livengood
-Candidate	Mark DeSaulnier	Mark DeSaulnier
 Candidate	John Fitzgerald	John Fitzgerald
 Candidate	Lisa Romero	Lisa Romero
-Candidate	Jim Frazier	Jim Frazier
-Candidate	Tim Grayson	Tim Grayson
 Candidate	Aasim Yahya	Aasim Yahya
 Candidate	Jared Huffman	Jared Huffman
-Candidate	Dale K. Mensing	Dale K. Mensing
 Candidate	Mike McGuire	Mike McGuire
-Candidate	Veronica 'Roni' Jacobi	Veronica 'Roni' Jacobi
-Candidate	Jim Wood	Jim Wood
 Candidate	Matt Heath	Matt Heath
 Candidate	Jacalyn 'Jackie' Smith	Jacalyn 'Jackie' Smith
-Candidate	Kevin Kiley	Kevin Kiley
-Candidate	Jim Costa	Jim Costa
 Candidate	Elizabeth Heng	Elizabeth Heng
 Candidate	David G. Valadao	David G. Valadao
 Candidate	TJ Cox	TJ Cox
 Candidate	Andrew Janz	Andrew Janz
-Candidate	Devin G. Nunes	Devin G. Nunes
 Candidate	Rob Poythress	Rob Poythress
-Candidate	Anna Caballero	Anna Caballero
 Candidate	Melissa Hurtado	Melissa Hurtado
 Candidate	Andy Vidak	Andy Vidak
 Candidate	Aileen Rizo	Aileen Rizo
-Candidate	Jim Patterson	Jim Patterson
 Candidate	Lupe Espinoza	Lupe Espinoza
-Candidate	Joaquin Arambula	Joaquin Arambula
 Candidate	Joel Anderson	Joel Anderson
 Candidate	Mike Schaefer	Mike Schaefer
-Candidate	Juan Vargas	Juan Vargas
-Candidate	Juan M. Hidalgo Jr.	Juan M. Hidalgo Jr.
 Candidate	Ben Hueso	Ben Hueso
 Candidate	Luis R. Vargas	Luis R. Vargas
 Candidate	Jeff Gonzalez	Jeff Gonzalez
-Candidate	Eduardo Garcia	Eduardo Garcia
-Candidate	Paul Cook	Paul Cook
 Candidate	Tim Donnelly	Tim Donnelly
 Candidate	Jose Sigala	Jose Sigala
-Candidate	Devon Mathis	Devon Mathis
 Candidate	Tatiana Matta	Tatiana Matta
-Candidate	Kevin McCarthy	Kevin McCarthy
 Candidate	Ruth Musser-Lopez	Ruth Musser-Lopez
 Candidate	Shannon Grove	Shannon Grove
-Candidate	Rudy Salas	Rudy Salas
 Candidate	Justin Mendes	Justin Mendes
 Candidate	Nick Nicita	Nick Nicita
-Candidate	Vince Fong	Vince Fong
-Candidate	Tom Lackey	Tom Lackey
-Candidate	Steve Fox	Steve Fox
 Candidate	Tony Vazquez	Tony Vazquez
 Candidate	G. Rick Marshall	G. Rick Marshall
 Candidate	Katie Hill	Katie Hill
-Candidate	Steve Knight	Steve Knight
 Candidate	Antonio Sabato, Jr.	Antonio Sabato, Jr.
-Candidate	Julia Brownley	Julia Brownley
 Candidate	Bryan Witt	Bryan Witt
-Candidate	Judy Chu	Judy Chu
-Candidate	Adam B. Schiff	Adam B. Schiff
 Candidate	Johnny J. Nalbandian	Johnny J. Nalbandian
-Candidate	Tony Cardenas	Tony Cardenas
 Candidate	Benito Benny Bernal	Benito Benny Bernal
-Candidate	Brad Sherman	Brad Sherman
 Candidate	Mark S. Reed	Mark S. Reed
 Candidate	Grace Flores Napolitano	Grace Flores Napolitano
 Candidate	Joshua M. Scott	Joshua M. Scott
 Candidate	Kenneth Weston Wright	Kenneth Weston Wright
-Candidate	Ted W. Lieu	Ted W. Lieu
-Candidate	Jimmy Gomez	Jimmy Gomez
 Candidate	Kenneth Mejia	Kenneth Mejia
-Candidate	Norma J. Torres	Norma J. Torres
 Candidate	Christian Leonel Valiente	Christian Leonel Valiente
 Candidate	Ron J. Bassilian	Ron J. Bassilian
-Candidate	Karen Bass	Karen Bass
-Candidate	Linda T. Sánchez	Linda T. Sánchez
-Candidate	Ryan Downing	Ryan Downing
-Candidate	Young Kim	Young Kim
 Candidate	Gil Cisneros	Gil Cisneros
-Candidate	Lucille Roybal-Allard	Lucille Roybal-Allard
 Candidate	Rodolfo Cortes Barragan	Rodolfo Cortes Barragan
-Candidate	Maxine Waters	Maxine Waters
-Candidate	Omar Navarro	Omar Navarro
-Candidate	Nanette Diaz Barragán	Nanette Diaz Barragán
 Candidate	Aja L. Brown	Aja L. Brown
-Candidate	Alan Lowenthal	Alan Lowenthal
 Candidate	John Briscoe	John Briscoe
 Candidate	Bob Hertzberg	Bob Hertzberg
 Candidate	Rudy Melendez	Rudy Melendez
@@ -904,176 +844,96 @@ Candidate	Susan Rubio	Susan Rubio
 Candidate	Maria Elena Durazo	Maria Elena Durazo
 Candidate	Peter Choi	Peter Choi
 Candidate	Ben Allen	Ben Allen
-Candidate	Baron Bruno	Baron Bruno
 Candidate	Holly J. Mitchell	Holly J. Mitchell
 Candidate	Bob J. Archuleta	Bob J. Archuleta
-Candidate	Rita Topalian	Rita Topalian
 Candidate	Janet Nguyen	Janet Nguyen
 Candidate	Tom Umberg	Tom Umberg
-Candidate	Christy Smith	Christy Smith
-Candidate	Dante Acosta	Dante Acosta
 Candidate	Ricardo Antonio Benitez	Ricardo Antonio Benitez
 Candidate	Luz Maria Rivas	Luz Maria Rivas
-Candidate	Chris Holden	Chris Holden
 Candidate	Alan S. Reynolds	Alan S. Reynolds
-Candidate	Laura Friedman	Laura Friedman
-Candidate	Jacqui Irwin	Jacqui Irwin
 Candidate	Ronda Baldwin-Kennedy	Ronda Baldwin-Kennedy
 Candidate	Justin M. Clark	Justin M. Clark
 Candidate	Jesse Gabriel	Jesse Gabriel
-Candidate	Adrin Nazarian	Adrin Nazarian
 Candidate	Roxanne Beckford Hoge	Roxanne Beckford Hoge
-Candidate	Blanca E. Rubio	Blanca E. Rubio
 Candidate	Burton Brink	Burton Brink
-Candidate	Ed Chau	Ed Chau
-Candidate	Richard Bloom	Richard Bloom
 Candidate	Wendy Carrillo	Wendy Carrillo
 Candidate	Christopher Stare	Christopher Stare
 Candidate	Toni Holle	Toni Holle
-Candidate	Freddie Rodriguez	Freddie Rodriguez
-Candidate	Miguel Santiago	Miguel Santiago
 Candidate	Kevin Hee Young Jang	Kevin Hee Young Jang
 Candidate	Tepring Michelle Piquado	Tepring Michelle Piquado
 Candidate	Sydney K. Kamlager	Sydney K. Kamlager
-Candidate	Gregg D. Fritchle	Gregg D. Fritchle
-Candidate	Phillip Chen	Phillip Chen
 Candidate	Jessica Martinez	Jessica Martinez
-Candidate	Ian C. Calderon	Ian C. Calderon
-Candidate	Cristina Garcia	Cristina Garcia
 Candidate	Mike Simpfenderfer	Mike Simpfenderfer
 Candidate	Reggie Jones-Sawyer	Reggie Jones-Sawyer
 Candidate	Leslie Hagan-Morgan	Leslie Hagan-Morgan
-Candidate	Autumn Burke	Autumn Burke
 Candidate	Al L. Hernandez	Al L. Hernandez
-Candidate	Anthony Rendon	Anthony Rendon
 Candidate	Maria D. Estrada	Maria D. Estrada
-Candidate	Mike A. Gipson	Mike A. Gipson
-Candidate	Theresa Sanford	Theresa Sanford
-Candidate	Al Muratsuchi	Al Muratsuchi
 Candidate	Frank A. Scotto	Frank A. Scotto
 Candidate	Honor 'Mimi' Robson	Honor 'Mimi' Robson
-Candidate	Patrick O'Donnell	Patrick O'Donnell
 Candidate	Dan Monte	Dan Monte
-Candidate	Marc Levine	Marc Levine
 Candidate	Adam C. Gray	Adam C. Gray
 Candidate	Justin Ryan Quigley	Justin Ryan Quigley
-Candidate	Jimmy Panetta	Jimmy Panetta
 Candidate	Ronald Paul Kabat	Ronald Paul Kabat
 Candidate	Vicki L. Nohrden	Vicki L. Nohrden
-Candidate	Mark Stone	Mark Stone
 Candidate	Robert Rivas	Robert Rivas
 Candidate	Neil G. Kitchens	Neil G. Kitchens
-Candidate	Mimi Walters	Mimi Walters
 Candidate	Katie Porter	Katie Porter
-Candidate	Lou Correa	Lou Correa
 Candidate	Russell Rene Lambert	Russell Rene Lambert
-Candidate	Dana Rohrabacher	Dana Rohrabacher
 Candidate	Harley Rouda	Harley Rouda
 Candidate	Mike Levin	Mike Levin
 Candidate	Diane L. Harkey	Diane L. Harkey
 Candidate	Patricia C. 'Pat' Bates	Patricia C. 'Pat' Bates
 Candidate	Marggie Castellano	Marggie Castellano
-Candidate	Sharon Quirk-Silva	Sharon Quirk-Silva
 Candidate	Alexandria 'Alex' Coronado	Alexandria 'Alex' Coronado
-Candidate	Steven S. Choi	Steven S. Choi
 Candidate	Michelle Duman	Michelle Duman
-Candidate	Tom Daly	Tom Daly
 Candidate	Autumn Browne	Autumn Browne
 Candidate	Josh Lowenthal	Josh Lowenthal
 Candidate	Tyler Diep	Tyler Diep
-Candidate	William (Bill) Brough	William (Bill) Brough
 Candidate	Scott Rhinehart	Scott Rhinehart
 Candidate	Cottie Petrie-Norris	Cottie Petrie-Norris
-Candidate	Matthew Harper	Matthew Harper
-Candidate	Raul Ruiz	Raul Ruiz
 Candidate	Kimberlin Brown Pelzer	Kimberlin Brown Pelzer
-Candidate	Mark Takano	Mark Takano
 Candidate	Aja Smith	Aja Smith
-Candidate	Ken Calvert	Ken Calvert
 Candidate	Julia C Peacock	Julia C Peacock
 Candidate	Ammar Campa-Najjar	Ammar Campa-Najjar
-Candidate	Duncan Hunter	Duncan Hunter
 Candidate	Joy Silver	Joy Silver
-Candidate	Jeff Stone	Jeff Stone
 Candidate	DeniAntionette Mazingo	DeniAntionette Mazingo
-Candidate	Chad Mayes	Chad Mayes
 Candidate	Bill Essayli	Bill Essayli
-Candidate	Sabrina Cervantes	Sabrina Cervantes
-Candidate	Jose Medina	Jose Medina
 Candidate	Mohammad-Ali Mazarei	Mohammad-Ali Mazarei
 Candidate	Michelle Singleton	Michelle Singleton
-Candidate	Melissa Melendez	Melissa Melendez
 Candidate	James Elia	James Elia
-Candidate	Randy Voepel	Randy Voepel
 Candidate	Alan Geraci	Alan Geraci
-Candidate	Marie Waldron	Marie Waldron
-Candidate	Doris Matsui	Doris Matsui
 Candidate	Jrmar Jefferson	Jrmar Jefferson
-Candidate	Ami Bera	Ami Bera
 Candidate	Andrew Grant	Andrew Grant
 Candidate	Eric Frame	Eric Frame
 Candidate	Richard Pan	Richard Pan
-Candidate	Kevin McCarty	Kevin McCarty
 Candidate	Scott Schmidt	Scott Schmidt
-Candidate	Ken Cooley	Ken Cooley
 Candidate	Melinda Avey	Melinda Avey
 Candidate	Harry He	Harry He
-Candidate	Jim Cooper	Jim Cooper
-Candidate	Pete Aguilar	Pete Aguilar
 Candidate	Sean Flynn	Sean Flynn
 Candidate	Socorro Cisneros	Socorro Cisneros
-Candidate	Jay Obernolte	Jay Obernolte
 Candidate	James C. Ramos	James C. Ramos
 Candidate	Henry Gomez Nickel	Henry Gomez Nickel
-Candidate	Eloise Reyes	Eloise Reyes
-Candidate	Scott Peters	Scott Peters
 Candidate	Omar Qudrat	Omar Qudrat
-Candidate	Susan A. Davis	Susan A. Davis
 Candidate	Morgan Murtaugh	Morgan Murtaugh
 Candidate	Brian W. Jones	Brian W. Jones
 Candidate	Jeff Griffith	Jeff Griffith
 Candidate	Elizabeth Warren	Elizabeth Warren
 Candidate	Tasha Boerner Horvath	Tasha Boerner Horvath
 Candidate	Sunday Gover	Sunday Gover
-Candidate	Brian Maienschein	Brian Maienschein
 Candidate	Maggie J. Campbell	Maggie J. Campbell
-Candidate	Todd Gloria	Todd Gloria
-Candidate	Shirley N. Weber	Shirley N. Weber
-Candidate	John Moore	John Moore
-Candidate	Lincoln Pickard	Lincoln Pickard
 Candidate	Lorena Gonzalez Fletcher	Lorena Gonzalez Fletcher
-Candidate	Nancy Pelosi	Nancy Pelosi
 Candidate	Lisa Remmer	Lisa Remmer
-Candidate	Cristina Osmeña	Cristina Osmeña
-Candidate	Jackie Speier	Jackie Speier
+Candidate	Cristina OsmeÃ±a	Cristina OsmeÃ±a
 Candidate	Alejandro Fernandez	Alejandro Fernandez
-Candidate	David Chiu	David Chiu
-Candidate	Phil Ting	Phil Ting
 Candidate	Keith Bogdon	Keith Bogdon
-Candidate	Jeff Denham	Jeff Denham
 Candidate	Josh Harder	Josh Harder
-Candidate	Heath Flora	Heath Flora
 Candidate	Robert D. Chase	Robert D. Chase
-Candidate	Susan Talamantes Eggman	Susan Talamantes Eggman
 Candidate	Antonio M. Garcia	Antonio M. Garcia
 Candidate	Justin Fareed	Justin Fareed
-Candidate	Salud Carbajal	Salud Carbajal
 Candidate	Bill Ostrander	Bill Ostrander
-Candidate	Jordan Cunningham	Jordan Cunningham
-Candidate	S. Monique Limón	S. Monique Limón
 Candidate	David L. Norrdin	David L. Norrdin
 Candidate	Christine Russell	Christine Russell
-Candidate	Anna G. Eshoo	Anna G. Eshoo
 Candidate	Christina Laskowski	Christina Laskowski
-Candidate	Kevin Mullin	Kevin Mullin
-Candidate	Marc Berman	Marc Berman
 Candidate	Alex Glew	Alex Glew
-Candidate	Zoe Lofgren	Zoe Lofgren
 Candidate	Justin James Aguilera	Justin James Aguilera
-Candidate	Ash Kalra	Ash Kalra
-Candidate	G. Burt Lancaster	G. Burt Lancaster
 Candidate	Michael L. Snyder	Michael L. Snyder
-Candidate	Evan Low	Evan Low
-
-
-
