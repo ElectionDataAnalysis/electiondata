@@ -961,25 +961,6 @@ def get_input_options(session, input, verbose):
         return result
 
 
-# TODO: remove when the data export functionality is worked on
-def get_datafile_info(session, results_file):
-    q = session.execute(
-        f"""
-        SELECT "Id", "Election_Id" 
-        FROM _datafile 
-        WHERE file_name = '{results_file}'
-        """
-    ).fetchall()
-    try:
-        return q[0]
-    except IndexError:
-        print(
-            f"No record named {results_file} found in _datafile table in {session.bind.url}"
-        )
-        return [0, 0]
-    return q[0]
-
-
 def candidate_to_id(session, name):
     """fuzzy string matching on name field, may return multiple results"""
     name_field = get_name_field("Candidate")
