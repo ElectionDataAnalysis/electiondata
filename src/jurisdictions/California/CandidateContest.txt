@@ -172,6 +172,7 @@ US House CA District 50	1	US House CA District 50
 US House CA District 51	1	US House CA District 51	
 US House CA District 52	1	US House CA District 52	
 US House CA District 53	1	US House CA District 53	
+US President (CA)	1	US President (CA)
 CA Governor	1	CA Governor	
 US Senate CA	1	US Senate CA	
 CA Attorney General	1	CA Attorney General	

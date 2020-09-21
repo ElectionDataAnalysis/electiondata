@@ -173,6 +173,7 @@ CandidateContest	US House CA District 50	United States Representative District 5
 CandidateContest	US House CA District 51	United States Representative District 51
 CandidateContest	US House CA District 52	United States Representative District 52
 CandidateContest	US House CA District 53	United States Representative District 53
+CandidateContest	US President (CA)	2020 Presidential Primary
 CandidateContest	US Senate CA	US Senate - 1
 CandidateContest	US Senate CA	US Senate - 2
 CandidateContest	CA Governor	Governor
