@@ -184,7 +184,7 @@ CandidateContest	CA Treasurer	Treasurer
 CandidateContest	CA Insurance Commissioner	Insurance Commissioner
 CandidateContest	CA Superintendent of Public Instruction	Superintendent of Public Instruction
 Election	2016 General	2016 Presidential General
-Election	2018 General	GE 2018
+Election	2018 General	General
 Election	2020 Primary	G9 2020
 Party	Democratic Party	Democratic
 Party	Republican Party	Republican
@@ -194,6 +194,7 @@ Party	Peace and Freedom Party	Peace and Freedom
 Party	Republican, American Independent Party	Republican,AmericanIndependent
 Party	None Party	Blank
 Party	None Party	No Party Preference
+Party	None Party	Nonpartisan
 ReportingUnit	CA House District 1	CA House District 1
 ReportingUnit	CA House District 2	CA House District 2
 ReportingUnit	CA House District 3	CA House District 3
