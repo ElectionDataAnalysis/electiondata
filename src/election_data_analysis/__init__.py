@@ -1282,14 +1282,14 @@ class Analyzer:
         # for now, bar charts can only handle jurisdictions where county is one level
         # down from the jurisdiction
         most_granular_id = db.name_to_id(self.session, "ReportingUnitType", "county")
-        hierarchy = db.get_jurisdiction_hierarchy(
-            self.session, jurisdiction_id, most_granular_id
+        subdivision_type_id = db.get_jurisdiction_hierarchy(
+            self.session, jurisdiction_id
         )
         # bar chart always at one level below top reporting unit
         agg_results = a.create_bar(
             self.session,
             jurisdiction_id,
-            hierarchy[1],
+            subdivision_type_id,
             contest_type,
             contest,
             election_id,
