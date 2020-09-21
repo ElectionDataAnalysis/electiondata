@@ -177,6 +177,10 @@ US Senate CA	1	US Senate CA
 CA Attorney General	1	CA Attorney General	
 CA Lieutenant Governor	1	CA Lieutenant Governor	
 CA Treasurer	1	CA Treasurer	
+CA Controller	1	CA Controller
+CA Secretary of State	1	CA Secretary of State
+CA Insurance Commissioner	1	CA Insurance Commissioner
+CA Superintendent of Public Instruction	1	CA Superintendent of Public Instruction
 CA House District 1 (Democratic Party Primary)	1	CA House District 1	Democratic Party
 CA House District 2 (Democratic Party Primary)	1	CA House District 2	Democratic Party
 CA House District 3 (Democratic Party Primary)	1	CA House District 3	Democratic Party

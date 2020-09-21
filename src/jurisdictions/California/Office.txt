@@ -177,3 +177,7 @@ US Senate CA	California
 CA Attorney General	California
 CA Lieutenant Governor	California
 CA Treasurer	California
+CA Controller	California
+CA Secretary of State	California
+CA Insurance Commissioner	California
+CA Superintendent of Public Instruction	California
