@@ -589,35 +589,6 @@ def euclidean_zscore(li):
         return list(stats.zscore(distance_list))
 
 
-def density_score(points):
-    """Take a list of vectors -- all in the same R^k,
-    return a list of comparison of density with or without the anomaly"""
-    density_list = [0] * len(points)
-    x_order = list(points[:, 0])
-    xs = points[:, 0]
-    xs.sort()
-    head, *tail = xs
-    density = (tail[-2] - tail[0]) / (len(tail) - 1)
-    total_density = (xs[-2] - xs[0]) / (len(xs) - 1)
-    density_asc = total_density / density
-    density_asc_xval = xs[0]
-
-    # Sort in reverse order
-    xs = xs[::-1]
-    head, *tail = xs
-    density = (tail[-2] - tail[0]) / (len(tail) - 1)
-    total_density = (xs[-2] - xs[0]) / (len(xs) - 1)
-    density_desc = total_density / density
-    density_desc_xval = xs[0]
-    if density_asc > density_desc:
-        i = x_order.index(density_asc_xval)
-        density_list[i] = density_asc
-    else:
-        i = x_order.index(density_desc_xval)
-        density_list[i] = density_desc
-    return density_list
-
-
 def calculate_margins(data):
     """Takes a dataframe with an anomaly score and assigns
     a margin score"""
