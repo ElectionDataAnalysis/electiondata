@@ -1227,32 +1227,35 @@ def get_relevant_contests(session, filters):
     return result_df
 
 
-# TODO: fix SQL when the hierarchy work is done 
-def get_jurisdiction_hierarchy(session, jurisdiction_id, subdivision_type_id):
-    q = session.execute(
-        f"""
-        SELECT  regexp_split_to_array("Name", ';') unit_array
-        FROM    "ComposingReportingUnitJoin" j
-                JOIN "ReportingUnit" ru ON j."ChildReportingUnit_Id" = ru."Id"
-        WHERE   "ParentReportingUnit_Id" = {jurisdiction_id}
-                AND "ReportingUnitType_Id" = {subdivision_type_id} 
+def get_jurisdiction_hierarchy(session, jurisdiction_id):
+    """get type of reporting unit one level down from jurisdiction.
+    Omit particular types that are contest types, not true reporting unit types"""
+    q = sql.SQL("""
+        SELECT  rut."Id"
+        FROM    "ComposingReportingUnitJoin" cruj
+                JOIN "ReportingUnit" ru on cruj."ChildReportingUnit_Id" = ru."Id"
+                JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id"
+        WHERE   rut."Txt" not in (
+                    'congressional', 
+                    'judicial', 
+                    'state-house', 
+                    'state-senate'
+                )
+                AND ARRAY_LENGTH(regexp_split_to_array("Name", ';'), 1) = 2
+                AND "ParentReportingUnit_Id" = %s
         LIMIT   1
     """
-    ).fetchall()
-
-    unit_portions = q[0][0]
-    hierarchy = []
-    for i in range(len(unit_portions)):
-        unit = ";".join(unit_portions[0 : i + 1])
-        q = session.execute(
-            f"""
-            SELECT    "ReportingUnitType_Id"
-            FROM    "ReportingUnit"
-            WHERE    "Name" = '{unit}' 
-        """
-        ).fetchall()
-        hierarchy.append(q[0][0])
-    return hierarchy
+    )
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    try:
+        cursor.execute(q, [jurisdiction_id])
+        result = cursor.fetchall()
+        subdivision_type_id = result[0][0]
+    except:
+        subdivision_type_id = None
+    cursor.close()
+    return subdivision_type_id
 
 
 def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_id):

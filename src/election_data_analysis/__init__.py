@@ -1312,7 +1312,12 @@ class Analyzer:
         selection_type = input_str[len(count_item_type) + 1 :]
         return count_item_type, selection_type
 
-    def export_outlier_data(self, jurisdiction: str, contest: str = None):
+    def export_outlier_data(
+        self,
+        election: str,
+        jurisdiction: str,
+        contest: str=None,
+    ) -> list:
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
             required_keys=["rollup_directory"],
@@ -1324,22 +1329,19 @@ class Analyzer:
             print(error)
             print("Data not created.")
             return
+        election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        most_granular_id = db.name_to_id(
-            self.session, "ReportingUnitType", d["sub_reporting_unit_type"]
+        subdivision_type_id = db.get_jurisdiction_hierarchy(
+            self.session, jurisdiction_id
         )
-        hierarchy = db.get_jurisdiction_hierarchy(
-            self.session, jurisdiction_id, most_granular_id
-        )
-        results_info = db.get_datafile_info(self.session, self.d["results_file_short"])
         # bar chart always at one level below top reporting unit
         agg_results = a.create_bar(
             self.session,
             jurisdiction_id,
-            hierarchy[1],
+            subdivision_type_id,
             None,
             contest,
-            results_info[1],
+            election_id,
             True,
         )
         return agg_results
