@@ -503,7 +503,6 @@ def assign_anomaly_score(data):
                 np.nan_to_num(vote_proportions, copy=False)
                 # assign z score and then add back into final DF
                 scored = euclidean_zscore(vote_proportions.to_numpy())
-                # scored = density_score(vote_proportions.to_numpy())
                 pivot_df["score"] = scored
                 pivot_df = pivot_df[["ReportingUnit_Id", to_drop[1], "score"]]
                 pivot_df["Selection"] = to_drop[1]
@@ -623,7 +622,7 @@ def calculate_margins(data):
     """Takes a dataframe with an anomaly score and assigns
     a margin score"""
     rank_1_df = data[data["rank"] == 1][["unit_id", "ReportingUnit_Id", "CountItemType", "Count"]]
-    rank_1_df = rank_1_df.drop_duplicates() 
+    rank_1_df = rank_1_df.drop_duplicates()
     rank_1_df = rank_1_df.rename(columns={"Count": "rank_1_total"})
     data = data.merge(rank_1_df, how="inner", on=["unit_id", "ReportingUnit_Id", "CountItemType"])
     data["margins"] = data["rank_1_total"] - data["Count"]
