@@ -821,6 +821,11 @@ def get_input_options(session, input, verbose):
     elif search_str == "Candidate":
         column_name = "BallotName"
         table_search = True
+    elif search_str in [
+        "CandidateContest",
+        "BallotMeasureContest",
+    ]:
+        pass
     # TODO: do we need a subdivision_type?
     else:
         search_str = search_str.lower()
@@ -947,9 +952,9 @@ def get_input_options(session, input, verbose):
                         JOIN "VoteCount" vc on cs."Id" = vc."Selection_Id"
                         JOIN "CandidateContest" cc ON vc."Contest_Id" = cc."Id"
                         JOIN "Contest" ct on cc."Id" = ct."Id"
-                WHERE   c."BallotName" ~* '%s'
+                WHERE   c."BallotName" ~* {candidate}
             """
-            ).format(sql.Literal(search_str))
+            ).format(candidate=sql.Literal(search_str))
         cursor.execute(q)
         result = cursor.fetchall()
         cursor.close()
