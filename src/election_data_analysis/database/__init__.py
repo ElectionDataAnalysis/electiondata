@@ -800,12 +800,12 @@ def get_input_options(session, input, verbose):
     search_str = "".join([name_part.capitalize() for name_part in name_parts])
 
     if search_str in [
-        "BallotMeasureContest",
-        "CandidateContest",
+        "Contest",
         "Election",
         "Office",
         "Party",
         "ReportingUnit",
+        "BallotMeasureSelection",
     ]:
         column_name = "Name"
         table_search = True
@@ -818,33 +818,37 @@ def get_input_options(session, input, verbose):
     ]:
         column_name = "Txt"
         table_search = True
-    elif search_str == "BallotMeasureSelection":
-        column_name = "Selection"
-        table_search = True
     elif search_str == "Candidate":
         column_name = "BallotName"
         table_search = True
+    elif search_str in [
+        "CandidateContest",
+        "BallotMeasureContest",
+    ]:
+        pass
     # TODO: do we need a subdivision_type?
     else:
         search_str = search_str.lower()
         table_search = False
 
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
     if not verbose:
-        connection = session.bind.raw_connection()
-        cursor = connection.cursor()
         if table_search:
-            q1 = sql.SQL("SELECT {column_name} FROM {search_str};").format(
+            q = sql.SQL("SELECT {column_name} FROM {search_str};").format(
                 column_name=sql.Identifier(column_name),
                 search_str=sql.Identifier(search_str),
             )
-            cursor.execute(q1)
-            result = cursor.fetchall()
+            cursor.execute(q)
         else:
-            q2 = sql.SQL(
-                'SELECT "Name" FROM "ReportingUnit" ru JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id" WHERE rut."Txt" = %s'
+            q = sql.SQL("""
+                SELECT "BallotName" 
+                FROM "Candidate"
+                WHERE "BallotName" ~* %s
+            """
             )
-            cursor.execute(q2, [search_str])
-            result = cursor.fetchall()
+            cursor.execute(q, [search_str])
+        result = cursor.fetchall()
         connection.close()
         return [r[0] for r in result]
     else:
@@ -864,10 +868,9 @@ def get_input_options(session, input, verbose):
             result_df.columns = result.keys()
             return package_display_results(result_df)
         elif search_str == "jurisdiction":
-            result = session.execute(
-                f"""
+            q = sql.SQL("""
                 WITH states(states) AS (
-                    SELECT  '{states}'
+                    SELECT {states} 
                 )
                 , unnested AS (
                     SELECT    UNNEST(regexp_split_to_array(states, '\n')) AS jurisdiction
@@ -898,12 +901,10 @@ def get_input_options(session, input, verbose):
                         LEFT JOIN "_datafile" d ON s."Id" = d."Election_Id"
                        	AND s.jurisdiction_id = d."ReportingUnit_Id"
                 ORDER BY "Name", order_by
-            """
-            )
+            """).format(states=sql.Literal(states))
         elif search_str == "BallotMeasureContest":
             # parent_id is reporting unit, type is reporting unit type
-            result = session.execute(
-                f"""
+            q = sql.SQL("""
                 SELECT  ru."Name" AS parent,
                         c."Name" AS name, rut."Txt" AS type
                 FROM    "BallotMeasureContest" bmc
@@ -915,8 +916,7 @@ def get_input_options(session, input, verbose):
             """
             )
         elif search_str == "CandidateContest":
-            result = session.execute(
-                f"""
+            q = sql.SQL("""
                 SELECT  ru."Name" AS parent,
                         c."Name" AS name, rut."Txt" AS type
                 FROM    "CandidateContest" cc
@@ -929,8 +929,7 @@ def get_input_options(session, input, verbose):
             """
             )
         elif search_str == "Candidate":
-            result = session.execute(
-                f"""
+            q = sql.SQL("""
                 SELECT  DISTINCT ct."Name" AS parent, c."BallotName" as name, 
                         p."Name" as type
                 FROM    "Candidate" c
@@ -944,8 +943,7 @@ def get_input_options(session, input, verbose):
             )
         else:
             # parent_id is candidate_id, type is combo of party and contest name
-            result = session.execute(
-                f"""
+            q = sql.SQL("""
                 SELECT  DISTINCT ct."Name" AS parent, c."BallotName" as name, 
                         p."Name" as type
                 FROM    "Candidate" c
@@ -954,12 +952,16 @@ def get_input_options(session, input, verbose):
                         JOIN "VoteCount" vc on cs."Id" = vc."Selection_Id"
                         JOIN "CandidateContest" cc ON vc."Contest_Id" = cc."Id"
                         JOIN "Contest" ct on cc."Id" = ct."Id"
-                WHERE   c."BallotName" ILIKE '%{search_str}%'
+                WHERE   c."BallotName" ~* {candidate}
             """
-            )
+            ).format(candidate=sql.Literal(search_str))
+        cursor.execute(q)
+        result = cursor.fetchall()
+        cursor.close()
         return result
 
 
+# TODO: remove when the data export functionality is worked on
 def get_datafile_info(session, results_file):
     q = session.execute(
         f"""
@@ -1001,11 +1003,12 @@ def package_display_results(data):
 
 
 def get_filtered_input_options(session, input_str, filters):
+    df_cols = ["parent", "name", "type"]
     # election selection is handled separately because it's the first choice.
     if input_str == "jurisdiction":
         result = get_input_options(session, "jurisdiction", verbose=True)
         result_df = pd.DataFrame(result)
-        result_df.columns = result.keys()
+        result_df.columns = df_cols
         df = result_df[result_df["parent"].isin(filters)]
     # contest_type is a special case because we don't have a contest_type table.
     # instead, this is the reporting unit type of the election district
@@ -1092,6 +1095,7 @@ def get_filtered_input_options(session, input_str, filters):
         }
         df = pd.DataFrame(data=data)
     elif input_str == "count":
+        contest_df = get_relevant_contests(session, filters)
         election_df = get_relevant_election(session, filters)
         hierarchy_df = pd.read_sql_table(
             "ComposingReportingUnitJoin", session.bind, index_col="Id"
@@ -1126,7 +1130,7 @@ def get_filtered_input_options(session, input_str, filters):
         # and this has candidates, but in name form
         candidates = get_input_options(session, "candidate", True)
         candidates_df = pd.DataFrame(candidates)
-        candidates_df.columns = candidates.keys()
+        candidates_df.columns = df_cols
         candidate_names_df = candidate_names_df.merge(
             candidate_contest_df, how="inner", left_index=True, right_on="Candidate_Id"
         )
@@ -1145,7 +1149,7 @@ def get_filtered_input_options(session, input_str, filters):
             contest_df = get_relevant_contests(session, filters)
             candidates = get_input_options(session, input_str, True)
             candidates_df = pd.DataFrame(candidates)
-            candidates_df.columns = candidates.keys()
+            candidates_df.columns = df_cols
             candidates_df = candidates_df.merge(
                 contest_df,
                 how="inner",
@@ -1189,7 +1193,7 @@ def get_relevant_election(session, filters):
 
 def get_relevant_contests(session, filters):
     """Gets all contests for a selected jurisdiction, held in filters"""
-
+    df_cols = ["parent", "name", "type"]
     # Get a DF of parent, child reporting Units, filtered on the jurisdiciton
     # selected by the user
     hierarchy_df = pd.read_sql_table(
@@ -1211,7 +1215,7 @@ def get_relevant_contests(session, filters):
     # get info for elections we have
     elections = get_input_options(session, "jurisdiction", True)
     elections_df = pd.DataFrame(elections)
-    elections_df.columns = elections.keys()
+    elections_df.columns = df_cols
     elections_df = elections_df[
         (elections_df["parent"].isin(filters)) & (elections_df["type"] == True)
     ]
@@ -1237,12 +1241,12 @@ def get_relevant_contests(session, filters):
     units = hierarchy_df["child"].unique()
     result = get_input_options(session, "candidate_contest", True)
     result_df = pd.DataFrame(result)
-    result_df.columns = result.keys()
+    result_df.columns = ["parent", "name", "type"]
     result_df = result_df[result_df["parent"].isin(units)]
-    print()
     return result_df
 
 
+# TODO: fix SQL when the hierarchy work is done 
 def get_jurisdiction_hierarchy(session, jurisdiction_id, subdivision_type_id):
     q = session.execute(
         f"""
@@ -1271,7 +1275,9 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id, subdivision_type_id):
 
 
 def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_id):
-    q = f"""
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    q = sql.SQL("""
     SELECT  vc."Id" as "VoteCount_Id", "Count", "CountItemType_Id",
             vc."ReportingUnit_Id", "Contest_Id", "Selection_Id",
             vc."Election_Id", "_datafile_Id", IntermediateRU."Id" as "ParentReportingUnit_Id",
@@ -1300,13 +1306,35 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
             LEFT JOIN "ReportingUnit" ED on O."ElectionDistrict_Id" = ED."Id"
             LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
             WHERE C.contest_type = 'Candidate'
-                AND TopRU."Id" = {top_ru_id}
-                AND IntermediateRU."ReportingUnitType_Id" = {subdivision_type_id}
-                AND vc."Election_Id" = {election_id}
-    """
-    result = session.execute(q)
+                AND TopRU."Id" = %s
+                AND IntermediateRU."ReportingUnitType_Id" = %s
+                AND vc."Election_Id" = %s
+    """)
+    cursor.execute(q, [top_ru_id, subdivision_type_id, election_id])
+    result = cursor.fetchall()
     result_df = pd.DataFrame(result)
-    result_df.columns = result.keys()
+    result_df.columns = [
+        "VoteCount_Id", 
+        "Count", 
+        "CountItemType_Id",
+        "ReportingUnit_Id",
+        "Contest_Id",
+        "Selection_Id",
+        "Election_Id",
+        "_datafile_Id",
+        "ParentReportingUnit_Id",
+        "Name",
+        "ReportingUnitType_Id",
+        "ParentName",
+        "ParentReportingUnitType_Id",
+        "CountItemType",
+        "Contest",
+        "Selection",
+        "ElectionDistrict_Id",
+        "Candidate_Id",
+        "contest_type",
+        "contest_district_type"
+    ]
     return result_df
 
 
