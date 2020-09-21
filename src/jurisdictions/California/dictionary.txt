@@ -191,7 +191,8 @@ Party	Republican Party	Republican
 Party	Green Party	Green
 Party	Libertarian Party	Libertarian
 Party	Peace and Freedom Party	Peace and Freedom
-Party	Republican, American Independent Party	Republican,AmericanIndependent
+Party	American Independent Party	Republican,AmericanIndependent
+Party	American Independent Party	American Independent
 Party	None Party	Blank
 Party	None Party	No Party Preference
 Party	None Party	Nonpartisan
