@@ -316,3 +316,330 @@ Madison Nguyen
 Ash Kalra
 Evan Low
 Nicholas Sclavos
+John H. Cox
+Gavin Newsom
+Ed Hernandez
+Eleni Kounalakis
+Mark P. Meuser
+Alex Padilla
+Konstantinos Roditis
+Betty T. Yee
+Fiona Ma
+Greg Conlon
+Steven C Bailey
+Xavier Becerra
+Steve Poizner
+Ricardo Lara
+Mark Burns
+Malia Cohen
+Kevin De Leon
+Dianne Feinstein
+Barbara Lee
+Laura Wells
+Eric Swalwell
+Rudy L. Peters Jr.
+Ron Cohen
+Ro Khanna
+Bob Wieckowski
+Victor G. San Vicente
+Buffy Wicks
+Jovanka Beckles
+Catharine Baker
+Rebecca Bauer-Kahan
+Stephen Slauson
+Rob Bonta
+Bill Quirk
+Joseph Grcar
+Bob Brunton
+Kansen Chu
+Marshall Tuck
+Tony K. Thurmond
+Tom Hallinan
+Ted Gaines
+Jessica Morse
+Tom McClintock
+Carla J. Neal
+Frank Bigelow
+Andreas Borgeas
+Paulina Miranda
+Doug La Malfa
+Audrey Denney
+James Nielsen
+Phillip Kim
+Caleen Sisk
+Brian Dahle
+James Gallagher
+Sonia Aery
+John Garamendi
+Charlie Schaupp
+Cecilia Aguiar-Curry
+Brandon Z. Nelson
+Mike Thompson
+Anthony Mills
+Jerry McNerney
+Marla Livengood
+Mark DeSaulnier
+John Fitzgerald
+Lisa Romero
+Jim Frazier
+Tim Grayson
+Aasim Yahya
+Jared Huffman
+Dale K. Mensing
+Mike McGuire
+Veronica 'Roni' Jacobi
+Jim Wood
+Matt Heath
+Jacalyn 'Jackie' Smith
+Kevin Kiley
+Jim Costa
+Elizabeth Heng
+David G. Valadao
+TJ Cox
+Andrew Janz
+Devin G. Nunes
+Rob Poythress
+Anna Caballero
+Melissa Hurtado
+Andy Vidak
+Aileen Rizo
+Jim Patterson
+Lupe Espinoza
+Joaquin Arambula
+Joel Anderson
+Mike Schaefer
+Juan Vargas
+Juan M. Hidalgo Jr.
+Ben Hueso
+Luis R. Vargas
+Jeff Gonzalez
+Eduardo Garcia
+Paul Cook
+Tim Donnelly
+Jose Sigala
+Devon Mathis
+Tatiana Matta
+Kevin McCarthy
+Ruth Musser-Lopez
+Shannon Grove
+Rudy Salas
+Justin Mendes
+Nick Nicita
+Vince Fong
+Tom Lackey
+Steve Fox
+Tony Vazquez
+G. Rick Marshall
+Katie Hill
+Steve Knight
+Antonio Sabato, Jr.
+Julia Brownley
+Bryan Witt
+Judy Chu
+Adam B. Schiff
+Johnny J. Nalbandian
+Tony Cardenas
+Benito Benny Bernal
+Brad Sherman
+Mark S. Reed
+Grace Flores Napolitano
+Joshua M. Scott
+Kenneth Weston Wright
+Ted W. Lieu
+Jimmy Gomez
+Kenneth Mejia
+Norma J. Torres
+Christian Leonel Valiente
+Ron J. Bassilian
+Karen Bass
+Linda T. Sánchez
+Ryan Downing
+Young Kim
+Gil Cisneros
+Lucille Roybal-Allard
+Rodolfo Cortes Barragan
+Maxine Waters
+Omar Navarro
+Nanette Diaz Barragán
+Aja L. Brown
+Alan Lowenthal
+John Briscoe
+Bob Hertzberg
+Rudy Melendez
+Matthew Munson
+Connie Leyva
+Mike Eng
+Susan Rubio
+Maria Elena Durazo
+Peter Choi
+Ben Allen
+Baron Bruno
+Holly J. Mitchell
+Bob J. Archuleta
+Rita Topalian
+Janet Nguyen
+Tom Umberg
+Christy Smith
+Dante Acosta
+Ricardo Antonio Benitez
+Luz Maria Rivas
+Chris Holden
+Alan S. Reynolds
+Laura Friedman
+Jacqui Irwin
+Ronda Baldwin-Kennedy
+Justin M. Clark
+Jesse Gabriel
+Adrin Nazarian
+Roxanne Beckford Hoge
+Blanca E. Rubio
+Burton Brink
+Ed Chau
+Richard Bloom
+Wendy Carrillo
+Christopher Stare
+Toni Holle
+Freddie Rodriguez
+Miguel Santiago
+Kevin Hee Young Jang
+Tepring Michelle Piquado
+Sydney K. Kamlager
+Gregg D. Fritchle
+Phillip Chen
+Jessica Martinez
+Ian C. Calderon
+Cristina Garcia
+Mike Simpfenderfer
+Reggie Jones-Sawyer
+Leslie Hagan-Morgan
+Autumn Burke
+Al L. Hernandez
+Anthony Rendon
+Maria D. Estrada
+Mike A. Gipson
+Theresa Sanford
+Al Muratsuchi
+Frank A. Scotto
+Honor 'Mimi' Robson
+Patrick O'Donnell
+Dan Monte
+Marc Levine
+Adam C. Gray
+Justin Ryan Quigley
+Jimmy Panetta
+Ronald Paul Kabat
+Vicki L. Nohrden
+Mark Stone
+Robert Rivas
+Neil G. Kitchens
+Mimi Walters
+Katie Porter
+Lou Correa
+Russell Rene Lambert
+Dana Rohrabacher
+Harley Rouda
+Mike Levin
+Diane L. Harkey
+Patricia C. 'Pat' Bates
+Marggie Castellano
+Sharon Quirk-Silva
+Alexandria 'Alex' Coronado
+Steven S. Choi
+Michelle Duman
+Tom Daly
+Autumn Browne
+Josh Lowenthal
+Tyler Diep
+William (Bill) Brough
+Scott Rhinehart
+Cottie Petrie-Norris
+Matthew Harper
+Raul Ruiz
+Kimberlin Brown Pelzer
+Mark Takano
+Aja Smith
+Ken Calvert
+Julia C Peacock
+Ammar Campa-Najjar
+Duncan Hunter
+Joy Silver
+Jeff Stone
+DeniAntionette Mazingo
+Chad Mayes
+Bill Essayli
+Sabrina Cervantes
+Jose Medina
+Mohammad-Ali Mazarei
+Michelle Singleton
+Melissa Melendez
+James Elia
+Randy Voepel
+Alan Geraci
+Marie Waldron
+Doris Matsui
+Jrmar Jefferson
+Ami Bera
+Andrew Grant
+Eric Frame
+Richard Pan
+Kevin McCarty
+Scott Schmidt
+Ken Cooley
+Melinda Avey
+Harry He
+Jim Cooper
+Pete Aguilar
+Sean Flynn
+Socorro Cisneros
+Jay Obernolte
+James C. Ramos
+Henry Gomez Nickel
+Eloise Reyes
+Scott Peters
+Omar Qudrat
+Susan A. Davis
+Morgan Murtaugh
+Brian W. Jones
+Jeff Griffith
+Elizabeth Warren
+Tasha Boerner Horvath
+Sunday Gover
+Brian Maienschein
+Maggie J. Campbell
+Todd Gloria
+Shirley N. Weber
+John Moore
+Lincoln Pickard
+Lorena Gonzalez Fletcher
+Nancy Pelosi
+Lisa Remmer
+Cristina Osmeña
+Jackie Speier
+Alejandro Fernandez
+David Chiu
+Phil Ting
+Keith Bogdon
+Jeff Denham
+Josh Harder
+Heath Flora
+Robert D. Chase
+Susan Talamantes Eggman
+Antonio M. Garcia
+Justin Fareed
+Salud Carbajal
+Bill Ostrander
+Jordan Cunningham
+S. Monique Limón
+David L. Norrdin
+Christine Russell
+Anna G. Eshoo
+Christina Laskowski
+Kevin Mullin
+Marc Berman
+Alex Glew
+Zoe Lofgren
+Justin James Aguilera
+Ash Kalra
+G. Burt Lancaster
+Michael L. Snyder
+Evan Low
