@@ -172,3 +172,35 @@ def read_concatenated_blocks(
     raw_results.rename(columns={0: "first_column"}, inplace=True)
 
     return raw_results, err
+
+
+def read_multi_sheet_excel(
+    f_path: str,
+    # munger: jm.Munger,
+    # err: dict,
+) -> (pd.DataFrame, dict):
+    sheets_to_ignore = ["Document map"]
+    header_rows = [4,5]
+    constant_locations = [(2,0)]
+
+    df = pd.read_excel(f_path,sheet_name=None)
+    sheets_to_read = [k for k in df.keys() if k not in sheets_to_ignore]
+
+    constants = {}
+    for sh in sheets_to_read:
+        # read constant info from header rows
+        for c in constant_locations:
+            constants[c] = df[sh].iloc[c]
+
+        # pull columns labels from header info
+        col_multi_index = pd.MultiIndex.from_frame(df[sh].iloc[header_rows].transpose())
+
+        # remove header rows from data
+        first_data_row = max(header_rows) + 1
+        data = df[sh].iloc[first_data_row:]
+        data.columns = col_multi_index
+
+        # TODO
+    raw_results = pd.DataFrame()
+    err = dict()
+    return raw_results, err
