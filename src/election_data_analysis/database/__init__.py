@@ -1084,6 +1084,7 @@ def get_filtered_input_options(session, input_str, filters):
     elif input_str == "count":
         contest_df = get_relevant_contests(session, filters)
         election_df = get_relevant_election(session, filters)
+        election_df = election_df[election_df["Name"].isin(filters)]
         hierarchy_df = pd.read_sql_table(
             "ComposingReportingUnitJoin", session.bind, index_col="Id"
         )
@@ -1175,7 +1176,6 @@ def get_relevant_election(session, filters):
     )["Election_Id"]
     election_df = pd.read_sql_table("Election", session.bind, index_col="Id")
     election_df = election_df[election_df.index.isin(election_ids)]
-    election_df = election_df[election_df["Name"].isin(filters)]
     return election_df
 
 
