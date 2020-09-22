@@ -8,6 +8,7 @@ import io
 import csv
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from pathlib import Path
+import numpy as np
 
 # import the error handling libraries for psycopg2
 from psycopg2 import OperationalError, errorcodes, errors
@@ -1032,6 +1033,12 @@ def get_filtered_input_options(session, input_str, filters):
             unit_type_df, how="inner", left_on="ReportingUnitType_Id", right_on="Id"
         )
         subdivision_types = hierarchy_df["Txt"].unique()
+        contest_types = [
+            "congressional",
+            "state",
+            "state-house",
+            "state-senate"
+        ]
         subdivision_types.sort()
         data = {
             "parent": [filters[0] for subdivision_types in subdivision_types],
@@ -1169,6 +1176,7 @@ def get_relevant_election(session, filters):
     )["Election_Id"]
     election_df = pd.read_sql_table("Election", session.bind, index_col="Id")
     election_df = election_df[election_df.index.isin(election_ids)]
+    election_df = election_df[election_df["Name"].isin(filters)]
     return election_df
 
 
