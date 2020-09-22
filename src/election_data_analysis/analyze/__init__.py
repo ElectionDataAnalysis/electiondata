@@ -516,7 +516,6 @@ def assign_anomaly_score(data):
                 np.nan_to_num(vote_proportions, copy=False)
                 # assign z score and then add back into final DF
                 scored = euclidean_zscore(vote_proportions.to_numpy())
-                # scored = density_score(vote_proportions.to_numpy())
                 pivot_df["score"] = scored
                 pivot_df = pivot_df[["ReportingUnit_Id", to_drop[1], "score"]]
                 pivot_df["Selection"] = to_drop[1]
@@ -604,40 +603,11 @@ def euclidean_zscore(li):
         return list(stats.zscore(distance_list))
 
 
-def density_score(points):
-    """Take a list of vectors -- all in the same R^k,
-    return a list of comparison of density with or without the anomaly"""
-    density_list = [0] * len(points)
-    x_order = list(points[:, 0])
-    xs = points[:, 0]
-    xs.sort()
-    head, *tail = xs
-    density = (tail[-2] - tail[0]) / (len(tail) - 1)
-    total_density = (xs[-2] - xs[0]) / (len(xs) - 1)
-    density_asc = total_density / density
-    density_asc_xval = xs[0]
-
-    # Sort in reverse order
-    xs = xs[::-1]
-    head, *tail = xs
-    density = (tail[-2] - tail[0]) / (len(tail) - 1)
-    total_density = (xs[-2] - xs[0]) / (len(xs) - 1)
-    density_desc = total_density / density
-    density_desc_xval = xs[0]
-    if density_asc > density_desc:
-        i = x_order.index(density_asc_xval)
-        density_list[i] = density_asc
-    else:
-        i = x_order.index(density_desc_xval)
-        density_list[i] = density_desc
-    return density_list
-
-
 def calculate_margins(data):
     """Takes a dataframe with an anomaly score and assigns
     a margin score"""
     rank_1_df = data[data["rank"] == 1][["unit_id", "ReportingUnit_Id", "CountItemType", "Count"]]
-    rank_1_df = rank_1_df.drop_duplicates() 
+    rank_1_df = rank_1_df.drop_duplicates()
     rank_1_df = rank_1_df.rename(columns={"Count": "rank_1_total"})
     data = data.merge(rank_1_df, how="inner", on=["unit_id", "ReportingUnit_Id", "CountItemType"])
     data["margins"] = data["rank_1_total"] - data["Count"]
