@@ -212,11 +212,14 @@ def create_scatter(
 def package_results(data, jurisdiction, x, y, restrict=None):
     results = {"jurisdiction": jurisdiction, "x": x, "y": y, "counts": []}
     for i, row in data.iterrows():
+        total = row[x] + row[y]
         results["counts"].append(
             {
                 "name": row["Name"],
                 "x": row[x],
                 "y": row[y],
+                "x_pct": row[x] / total,
+                "y_pct": row[y] / total
             }
         )
         if restrict and i == (restrict - 1):
