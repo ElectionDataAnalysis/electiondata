@@ -309,6 +309,9 @@ def create_bar(
 
     # Now process data
     ranked = assign_anomaly_score(unsummed)
+    # No anomalies could be detected
+    if ranked.empty:
+        return None
     ranked_margin = calculate_margins(ranked)
     votes_at_stake = calculate_votes_at_stake(ranked_margin)
     if not for_export:
@@ -512,7 +515,8 @@ def assign_anomaly_score(data):
                     pivot_df, how="left", on=["ReportingUnit_Id", "Selection", "Count"]
                 )
                 df = pd.concat([df, scored_df])
-    df["score"] = df["score"].fillna(0)
+    if "score" in df.columns:
+        df["score"] = df["score"].fillna(0)
     return df
 
 
