@@ -1032,13 +1032,12 @@ def get_filtered_input_options(session, input_str, filters):
         hierarchy_df = hierarchy_df.merge(
             unit_type_df, how="inner", left_on="ReportingUnitType_Id", right_on="Id"
         )
-        subdivision_types = hierarchy_df["Txt"].unique()
-        contest_types = [
-            "congressional",
-            "state",
-            "state-house",
-            "state-senate"
-        ]
+        subdivision_types = list(hierarchy_df["Txt"].unique())
+        # Currently we don't distinguish between "location" RU types (like county)
+        # and "office" RU types (like state-senate, judicial). For now, we're
+        # hard-coding the location types to keep, though this may change in the future.
+        types_to_keep = ["county", "precinct", "ward"]
+        subdivision_types = list(set(subdivision_types) & set(types_to_keep))
         subdivision_types.sort()
         data = {
             "parent": [filters[0] for subdivision_types in subdivision_types],
