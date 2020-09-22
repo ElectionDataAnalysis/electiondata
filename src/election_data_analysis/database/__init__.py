@@ -8,6 +8,7 @@ import io
 import csv
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from pathlib import Path
+import numpy as np
 
 # import the error handling libraries for psycopg2
 from psycopg2 import OperationalError, errorcodes, errors
@@ -1031,7 +1032,12 @@ def get_filtered_input_options(session, input_str, filters):
         hierarchy_df = hierarchy_df.merge(
             unit_type_df, how="inner", left_on="ReportingUnitType_Id", right_on="Id"
         )
-        subdivision_types = hierarchy_df["Txt"].unique()
+        subdivision_types = list(hierarchy_df["Txt"].unique())
+        # Currently we don't distinguish between "location" RU types (like county)
+        # and "office" RU types (like state-senate, judicial). For now, we're
+        # hard-coding the location types to keep, though this may change in the future.
+        types_to_keep = ["county", "precinct", "ward"]
+        subdivision_types = list(set(subdivision_types) & set(types_to_keep))
         subdivision_types.sort()
         data = {
             "parent": [filters[0] for subdivision_types in subdivision_types],
@@ -1078,6 +1084,7 @@ def get_filtered_input_options(session, input_str, filters):
     elif input_str == "count":
         contest_df = get_relevant_contests(session, filters)
         election_df = get_relevant_election(session, filters)
+        election_df = election_df[election_df["Name"].isin(filters)]
         hierarchy_df = pd.read_sql_table(
             "ComposingReportingUnitJoin", session.bind, index_col="Id"
         )

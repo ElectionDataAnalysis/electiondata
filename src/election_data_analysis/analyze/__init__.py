@@ -202,7 +202,9 @@ def create_scatter(
     # only keep the ones where there are an (x, y) to graph
     to_keep = []
     for result in results["counts"]:
-        if len(result) == 3:  # need reporting unit, x, and y
+        # need reporting unit, x, y, and x_ y_ pcts
+        # otherwise it's invalid
+        if len(result) == 5:
             to_keep.append(result)
     results["counts"] = to_keep
     connection.close()
@@ -212,11 +214,19 @@ def create_scatter(
 def package_results(data, jurisdiction, x, y, restrict=None):
     results = {"jurisdiction": jurisdiction, "x": x, "y": y, "counts": []}
     for i, row in data.iterrows():
+        total = row[x] + row[y]
+        if total == 0:
+            x_pct = y_pct = 0
+        else:
+            x_pct = row[x] / total
+            y_pct = row[y] / total
         results["counts"].append(
             {
                 "name": row["Name"],
                 "x": row[x],
                 "y": row[y],
+                "x_pct": x_pct,
+                "y_pct": y_pct
             }
         )
         if restrict and i == (restrict - 1):
@@ -309,6 +319,9 @@ def create_bar(
 
     # Now process data
     ranked = assign_anomaly_score(unsummed)
+    # No anomalies could be detected
+    if ranked.empty:
+        return None
     ranked_margin = calculate_margins(ranked)
     votes_at_stake = calculate_votes_at_stake(ranked_margin)
     if not for_export:
@@ -512,7 +525,8 @@ def assign_anomaly_score(data):
                     pivot_df, how="left", on=["ReportingUnit_Id", "Selection", "Count"]
                 )
                 df = pd.concat([df, scored_df])
-    df["score"] = df["score"].fillna(0)
+    if "score" in df.columns:
+        df["score"] = df["score"].fillna(0)
     return df
 
 
