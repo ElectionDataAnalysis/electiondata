@@ -595,10 +595,10 @@ def add_contest_id(
     # assemble working from the two pieces
     working_temp = pd.concat([w_for_type[ct] for ct in ["BallotMeasure", "Candidate"]])
 
-    # fail if fatal errors or no contests recognized
+    # fail if fatal errors or no contests recognized (in reverse order, just for fun
     if working_temp.empty:
-        cc_list = "\n\t".join(sorted(working.CandidateContest_raw.to_list(),reverse=True))
-        bmc_list = "\n\t".join(sorted(working.BallotMeasureContest_raw.to_list(),reverse=True))
+        cc_list = "\n\t".join(sorted(df.CandidateContest_raw.unique(),reverse=True))
+        bmc_list = "\n\t".join(sorted(df.CandidateContest_raw.unique(),reverse=True))
         contest_list = f"Raw CandidateContests:\n{cc_list}\n\nRaw BallotMeasureContests:\n{bmc_list}"
 
         err = ui.add_new_error(
