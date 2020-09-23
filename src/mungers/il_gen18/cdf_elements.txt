@@ -1,4 +1,4 @@
-name  raw_identifier_formula  source
+name	raw_identifier_formula	source
 ReportingUnit	<County>	row
 Party	<PartyName>	row
 CandidateContest	<OfficeName>	row
