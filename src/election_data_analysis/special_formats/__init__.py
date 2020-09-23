@@ -216,10 +216,10 @@ def read_multi_sheet_excel(
             Path(f_path).name,
             f"Error reading file: {e}"
         )
-    if new_err:
-        err = ui.consolidate_errors([err,new_err])
-        if ui.fatal_error(new_err):
-            return pd.DataFrame(), err
+        if new_err:
+            err = ui.consolidate_errors([err,new_err])
+            if ui.fatal_error(new_err):
+                return pd.DataFrame(), err
 
     sheets_to_read = [k for k in df.keys() if k not in sheets_to_skip]
 
