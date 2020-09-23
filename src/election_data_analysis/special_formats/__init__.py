@@ -179,28 +179,69 @@ def read_multi_sheet_excel(
     # munger: jm.Munger,
     # err: dict,
 ) -> (pd.DataFrame, dict):
+    # get munger parameters
+    # TODO remove hard-coding here
     sheets_to_ignore = ["Document map"]
-    header_rows = [4,5]
-    constant_locations = [(2,0)]
+    lines_to_ignore_at_top_count = 2
+    constant_line_count = 1
+    header_row_count = 2
+    skip_cols = [2]
 
     df = pd.read_excel(f_path,sheet_name=None)
     sheets_to_read = [k for k in df.keys() if k not in sheets_to_ignore]
 
     constants = {}
+
+    raw_results = pd.DataFrame()
     for sh in sheets_to_read:
-        # read constant info from header rows
-        for c in constant_locations:
-            constants[c] = df[sh].iloc[c]
+        data = df[sh].copy()
 
-        # pull columns labels from header info
-        col_multi_index = pd.MultiIndex.from_frame(df[sh].iloc[header_rows].transpose())
+        # remove lines designated ignorable
+        data = data.iloc[lines_to_ignore_at_top_count-1:]
 
-        # remove header rows from data
-        first_data_row = max(header_rows) + 1
-        data = df[sh].iloc[first_data_row:]
+        # remove any all-null rows
+        data.dropna(how="all",inplace=True)
+
+        # read constant info from first non-null entries of constant-header rows
+        # then drop those rows
+        constants = data.iloc[:constant_line_count].fillna(method="bfill", axis=1).iloc[:,0]
+
+        data = data.iloc[constant_line_count:]
+
+        # add multi-index for actual header rows
+        header_variable_names = [f"header_{j}" for j in range(header_row_count)]
+        col_multi_index = pd.MultiIndex.from_frame(
+            data.iloc[range(header_row_count),:].transpose(),
+            names=header_variable_names,
+        )
         data.columns = col_multi_index
 
-        # TODO
-    raw_results = pd.DataFrame()
+        # remove header rows from data
+        data = data.iloc[header_row_count:]
+
+        # Drop extraneous columns per munger, and columns without data
+        data.drop(data.columns[skip_cols], axis=1, inplace=True)
+        data.dropna(axis=1, how="all", inplace=True)
+
+        # make first column into an index
+        data.set_index(keys=data.columns[0], inplace=True)
+
+        # move header info to columns
+        data = pd.melt(
+            data,
+            ignore_index=False,
+            value_name="count",
+            var_name=header_variable_names,
+        )
+
+        # add column(s) for constant info
+        for j in range(constant_line_count):
+            data = m.add_constant_column(data,f"constant_{j}",constants.iloc[j])
+
+        # Make row index (from first column of blocks) into a column called 'first_column'
+        data.reset_index(inplace=True)
+        data.rename(columns={data.columns[0]: "first_column"}, inplace=True)
+
+        raw_results = pd.concat([raw_results,data])
     err = dict()
     return raw_results, err
