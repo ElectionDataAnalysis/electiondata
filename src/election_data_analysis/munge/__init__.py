@@ -597,8 +597,8 @@ def add_contest_id(
 
     # fail if fatal errors or no contests recognized
     if working_temp.empty:
-        cc_list = "\n\t".join(working.CandidateContest_raw.to_list())
-        bmc_list = "\n\t".join(working.BallotMeasureContest_raw.to_list())
+        cc_list = "\n\t".join(sorted(working.CandidateContest_raw.to_list(),reverse=True))
+        bmc_list = "\n\t".join(sorted(working.BallotMeasureContest_raw.to_list(),reverse=True))
         contest_list = f"Raw CandidateContests:\n{cc_list}\n\nRaw BallotMeasureContests:\n{bmc_list}"
 
         err = ui.add_new_error(
