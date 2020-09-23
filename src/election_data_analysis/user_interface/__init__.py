@@ -420,7 +420,7 @@ def read_combine_results(
     err: dict,
     aux_data_path: str = None,
 ) -> (pd.DataFrame, dict):
-    if mu.options["file_type"] in ["concatenated-blocks", "xls_multi"]:
+    if mu.options["file_type"] in ["concatenated-blocks", "xls-multi"]:
         working, new_err = sf.read_alternate_munger(
             mu.options["file_type"],
             results_file_path,
@@ -752,6 +752,11 @@ def report(
 
                 # print/write output
                 if f"warn-{et}" in loc_dict.keys():
+                    # ensure directory exists
+                    # TODO error handline: what if the path is a file?
+                    if not os.path.exists(loc_dict[f"warn-{et}"]):
+                            Path(loc_dict[f"warn-{et}"]).mkdir(parents=True, exist_ok=True)
+
                     # get timestamp
                     ts = datetime.datetime.now().strftime("%m%d_%H%M")
                     # write info to a .errors or .errors file named for the name_key <nk>
