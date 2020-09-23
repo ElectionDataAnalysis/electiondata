@@ -48,6 +48,27 @@ def extract_items(line: str, w: int) -> list:
     return item_list
 
 
+def read_alternate_munger(
+        file_type: str,
+        f_path: str,
+        munger: jm.Munger,
+        err: dict
+) -> (pd.DataFrame, dict):
+    if file_type in ["concatenated-blocks"]:
+        raw_results, err = read_concatenated_blocks(f_path, munger, err)
+    elif file_type in ["xls-multi"]:
+        raw_results, err = read_multi_sheet_excel(f_path, munger, err)
+    else:
+        err = ui.add_new_error(
+            err,
+            "munger",
+            munger.name,
+            f"file type not recognized: {file_type}"
+        )
+        raw_results = pd.DataFrame()
+    return raw_results, err
+
+
 def read_concatenated_blocks(
     f_path: str, munger: jm.Munger, err: dict
 ) -> (pd.DataFrame, dict):
@@ -176,72 +197,89 @@ def read_concatenated_blocks(
 
 def read_multi_sheet_excel(
     f_path: str,
-    # munger: jm.Munger,
-    # err: dict,
+    munger: jm.Munger,
+    err: dict,
 ) -> (pd.DataFrame, dict):
     # get munger parameters
-    # TODO remove hard-coding here
-    sheets_to_ignore = ["Document map"]
-    lines_to_ignore_at_top_count = 2
-    constant_line_count = 1
-    header_row_count = 2
-    skip_cols = [2]
+    sheets_to_skip = munger.options["sheets_to_skip"]
+    count_of_top_lines_to_skip = munger.options["count_of_top_lines_to_skip"]
+    constant_line_count = munger.options["constant_line_count"]
+    header_row_count = munger.options["header_row_count"]
+    columns_to_skip = munger.options["columns_to_skip"]
 
-    df = pd.read_excel(f_path,sheet_name=None)
-    sheets_to_read = [k for k in df.keys() if k not in sheets_to_ignore]
+    try:
+        df = pd.read_excel(f_path,sheet_name=None)
+    except Exception as e:
+        new_err = ui.add_new_error(
+            err,
+            "file",
+            Path(f_path).name,
+            f"Error reading file: {e}"
+        )
+    if new_err:
+        err = ui.consolidate_errors([err,new_err])
+        if ui.fatal_error(new_err):
+            return pd.DataFrame(), err
 
-    constants = {}
+    sheets_to_read = [k for k in df.keys() if k not in sheets_to_skip]
 
     raw_results = pd.DataFrame()
     for sh in sheets_to_read:
-        data = df[sh].copy()
+        try:
+            data = df[sh].copy()
 
-        # remove lines designated ignorable
-        data = data.iloc[lines_to_ignore_at_top_count-1:]
+            # remove lines designated ignorable
+            data = data.iloc[count_of_top_lines_to_skip-1:]
 
-        # remove any all-null rows
-        data.dropna(how="all",inplace=True)
+            # remove any all-null rows
+            data.dropna(how="all",inplace=True)
 
-        # read constant info from first non-null entries of constant-header rows
-        # then drop those rows
-        constants = data.iloc[:constant_line_count].fillna(method="bfill", axis=1).iloc[:,0]
+            # read constant info from first non-null entries of constant-header rows
+            # then drop those rows
+            constants = data.iloc[:constant_line_count].fillna(method="bfill", axis=1).iloc[:,0]
 
-        data = data.iloc[constant_line_count:]
+            data = data.iloc[constant_line_count:]
 
-        # add multi-index for actual header rows
-        header_variable_names = [f"header_{j}" for j in range(header_row_count)]
-        col_multi_index = pd.MultiIndex.from_frame(
-            data.iloc[range(header_row_count),:].transpose(),
-            names=header_variable_names,
-        )
-        data.columns = col_multi_index
+            # add multi-index for actual header rows
+            header_variable_names = [f"header_{j}" for j in range(header_row_count)]
+            col_multi_index = pd.MultiIndex.from_frame(
+                data.iloc[range(header_row_count),:].transpose(),
+                names=header_variable_names,
+            )
+            data.columns = col_multi_index
 
-        # remove header rows from data
-        data = data.iloc[header_row_count:]
+            # remove header rows from data
+            data = data.iloc[header_row_count:]
 
-        # Drop extraneous columns per munger, and columns without data
-        data.drop(data.columns[skip_cols], axis=1, inplace=True)
-        data.dropna(axis=1, how="all", inplace=True)
+            # Drop extraneous columns per munger, and columns without data
+            data.drop(data.columns[columns_to_skip], axis=1, inplace=True)
+            data.dropna(axis=1, how="all", inplace=True)
 
-        # make first column into an index
-        data.set_index(keys=data.columns[0], inplace=True)
+            # make first column into an index
+            data.set_index(keys=data.columns[0], inplace=True)
 
-        # move header info to columns
-        data = pd.melt(
-            data,
-            ignore_index=False,
-            value_name="count",
-            var_name=header_variable_names,
-        )
+            # move header info to columns
+            data = pd.melt(
+                data,
+                ignore_index=False,
+                value_name="count",
+                var_name=header_variable_names,
+            )
 
-        # add column(s) for constant info
-        for j in range(constant_line_count):
-            data = m.add_constant_column(data,f"constant_{j}",constants.iloc[j])
+            # add column(s) for constant info
+            for j in range(constant_line_count):
+                data = m.add_constant_column(data,f"constant_{j}",constants.iloc[j])
 
-        # Make row index (from first column of blocks) into a column called 'first_column'
-        data.reset_index(inplace=True)
-        data.rename(columns={data.columns[0]: "first_column"}, inplace=True)
+            # Make row index (from first column of blocks) into a column called 'first_column'
+            data.reset_index(inplace=True)
+            data.rename(columns={data.columns[0]: "first_column"}, inplace=True)
 
-        raw_results = pd.concat([raw_results,data])
-    err = dict()
+            raw_results = pd.concat([raw_results,data])
+        except Exception as e:
+            err = ui.add_new_error(
+                err,
+                "system",
+                "special_formats.read_multi_sheet_excel",
+                f"Unexpected exception while processing sheet {sh}: {e}"
+            )
     return raw_results, err
