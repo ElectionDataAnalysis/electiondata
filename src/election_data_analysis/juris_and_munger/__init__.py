@@ -651,6 +651,25 @@ def check_munger_file_contents(munger_path, munger_file, err):
                         munger_name,
                         f"{key} is not an integer:  {format_d[key]}",
                     )
+        # TODO get rid of duplicated code in these checks
+        # check all parameters for the multi-sheet excel format
+        elif format_d["file_type"] in ["xls-multi"]:
+            for key in [
+                "count_of_top_lines_to_skip",
+                "constant_line_count",
+                "header_row_count",
+                "columns_to_skip",
+            ]:
+                try:
+                    int(format_d[key])
+                except (ValueError, TypeError):
+                    err = ui.add_new_error(
+                        err,
+                        "munger",
+                        munger_name,
+                        f"{key} is not an integer:  {format_d[key]}",
+                    )
+
     else:
         err = ui.add_new_error(
             err,
