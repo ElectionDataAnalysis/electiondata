@@ -24,6 +24,8 @@ munger_pars_opt = {
     "columns_to_skip": "list-of-integers",
     "last_header_column_count": "int",
     "column_width": "int",
+    "sheets_to_skip": "list-of-strings",
+    "constant_line_count": "int",
 }
 
 
