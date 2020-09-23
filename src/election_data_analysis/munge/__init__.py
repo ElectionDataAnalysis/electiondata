@@ -273,7 +273,7 @@ def replace_raw_with_internal_ids(
     )
 
     unmatched = working[working["cdf_internal_name"].isnull()]
-    unmatched_raw = list(unmatched[f"{element}_raw"].unique())
+    unmatched_raw = sorted(unmatched[f"{element}_raw"].unique(),reverse=True)
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
         unmatched_str = "\n".join(unmatched_raw)
         e = f"{element}s not found in dictionary.txt:\n{unmatched_str}"
@@ -602,7 +602,7 @@ def add_contest_id(
         contest_list = f"Raw CandidateContests:\n{cc_list}\n\nRaw BallotMeasureContests:\n{bmc_list}"
 
         err = ui.add_new_error(
-            err, "jurisdiction", juris.short_name, f"No contests recognized.\n{contest_list}"
+            err, "jurisdiction", juris.short_name, f"No contests recognized."
         )
     else:
         working = working_temp
