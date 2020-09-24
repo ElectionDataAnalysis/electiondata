@@ -1,0 +1,1366 @@
+Name	NumberElected	Office	PrimaryParty
+NC House District 1	1	NC House District 1	
+NC House District 2	1	NC House District 2	
+NC House District 3	1	NC House District 3	
+NC House District 4	1	NC House District 4	
+NC House District 5	1	NC House District 5	
+NC House District 6	1	NC House District 6	
+NC House District 7	1	NC House District 7	
+NC House District 8	1	NC House District 8	
+NC House District 9	1	NC House District 9	
+NC House District 10	1	NC House District 10	
+NC House District 11	1	NC House District 11	
+NC House District 12	1	NC House District 12	
+NC House District 13	1	NC House District 13	
+NC House District 14	1	NC House District 14	
+NC House District 15	1	NC House District 15	
+NC House District 16	1	NC House District 16	
+NC House District 17	1	NC House District 17	
+NC House District 18	1	NC House District 18	
+NC House District 19	1	NC House District 19	
+NC House District 20	1	NC House District 20	
+NC House District 21	1	NC House District 21	
+NC House District 22	1	NC House District 22	
+NC House District 23	1	NC House District 23	
+NC House District 24	1	NC House District 24	
+NC House District 25	1	NC House District 25	
+NC House District 26	1	NC House District 26	
+NC House District 27	1	NC House District 27	
+NC House District 28	1	NC House District 28	
+NC House District 29	1	NC House District 29	
+NC House District 30	1	NC House District 30	
+NC House District 31	1	NC House District 31	
+NC House District 32	1	NC House District 32	
+NC House District 33	1	NC House District 33	
+NC House District 34	1	NC House District 34	
+NC House District 35	1	NC House District 35	
+NC House District 36	1	NC House District 36	
+NC House District 37	1	NC House District 37	
+NC House District 38	1	NC House District 38	
+NC House District 39	1	NC House District 39	
+NC House District 40	1	NC House District 40	
+NC House District 41	1	NC House District 41	
+NC House District 42	1	NC House District 42	
+NC House District 43	1	NC House District 43	
+NC House District 44	1	NC House District 44	
+NC House District 45	1	NC House District 45	
+NC House District 46	1	NC House District 46	
+NC House District 47	1	NC House District 47	
+NC House District 48	1	NC House District 48	
+NC House District 49	1	NC House District 49	
+NC House District 50	1	NC House District 50	
+NC House District 51	1	NC House District 51	
+NC House District 52	1	NC House District 52	
+NC House District 53	1	NC House District 53	
+NC House District 54	1	NC House District 54	
+NC House District 55	1	NC House District 55	
+NC House District 56	1	NC House District 56	
+NC House District 57	1	NC House District 57	
+NC House District 58	1	NC House District 58	
+NC House District 59	1	NC House District 59	
+NC House District 60	1	NC House District 60	
+NC House District 61	1	NC House District 61	
+NC House District 62	1	NC House District 62	
+NC House District 63	1	NC House District 63	
+NC House District 64	1	NC House District 64	
+NC House District 65	1	NC House District 65	
+NC House District 66	1	NC House District 66	
+NC House District 67	1	NC House District 67	
+NC House District 68	1	NC House District 68	
+NC House District 69	1	NC House District 69	
+NC House District 70	1	NC House District 70	
+NC House District 71	1	NC House District 71	
+NC House District 72	1	NC House District 72	
+NC House District 73	1	NC House District 73	
+NC House District 74	1	NC House District 74	
+NC House District 75	1	NC House District 75	
+NC House District 76	1	NC House District 76	
+NC House District 77	1	NC House District 77	
+NC House District 78	1	NC House District 78	
+NC House District 79	1	NC House District 79	
+NC House District 80	1	NC House District 80	
+NC House District 81	1	NC House District 81	
+NC House District 82	1	NC House District 82	
+NC House District 83	1	NC House District 83	
+NC House District 84	1	NC House District 84	
+NC House District 85	1	NC House District 85	
+NC House District 86	1	NC House District 86	
+NC House District 87	1	NC House District 87	
+NC House District 88	1	NC House District 88	
+NC House District 89	1	NC House District 89	
+NC House District 90	1	NC House District 90	
+NC House District 91	1	NC House District 91	
+NC House District 92	1	NC House District 92	
+NC House District 93	1	NC House District 93	
+NC House District 94	1	NC House District 94	
+NC House District 95	1	NC House District 95	
+NC House District 96	1	NC House District 96	
+NC House District 97	1	NC House District 97	
+NC House District 98	1	NC House District 98	
+NC House District 99	1	NC House District 99	
+NC House District 100	1	NC House District 100	
+NC House District 101	1	NC House District 101	
+NC House District 102	1	NC House District 102	
+NC House District 103	1	NC House District 103	
+NC House District 104	1	NC House District 104	
+NC House District 105	1	NC House District 105	
+NC House District 106	1	NC House District 106	
+NC House District 107	1	NC House District 107	
+NC House District 108	1	NC House District 108	
+NC House District 109	1	NC House District 109	
+NC House District 110	1	NC House District 110	
+NC House District 111	1	NC House District 111	
+NC House District 112	1	NC House District 112	
+NC House District 113	1	NC House District 113	
+NC House District 114	1	NC House District 114	
+NC House District 115	1	NC House District 115	
+NC House District 116	1	NC House District 116	
+NC House District 117	1	NC House District 117	
+NC House District 118	1	NC House District 118	
+NC House District 119	1	NC House District 119	
+NC House District 120	1	NC House District 120	
+NC Senate District 1	1	NC Senate District 1	
+NC Senate District 2	1	NC Senate District 2	
+NC Senate District 3	1	NC Senate District 3	
+NC Senate District 4	1	NC Senate District 4	
+NC Senate District 5	1	NC Senate District 5	
+NC Senate District 6	1	NC Senate District 6	
+NC Senate District 7	1	NC Senate District 7	
+NC Senate District 8	1	NC Senate District 8	
+NC Senate District 9	1	NC Senate District 9	
+NC Senate District 10	1	NC Senate District 10	
+NC Senate District 11	1	NC Senate District 11	
+NC Senate District 12	1	NC Senate District 12	
+NC Senate District 13	1	NC Senate District 13	
+NC Senate District 14	1	NC Senate District 14	
+NC Senate District 15	1	NC Senate District 15	
+NC Senate District 16	1	NC Senate District 16	
+NC Senate District 17	1	NC Senate District 17	
+NC Senate District 18	1	NC Senate District 18	
+NC Senate District 19	1	NC Senate District 19	
+NC Senate District 20	1	NC Senate District 20	
+NC Senate District 21	1	NC Senate District 21	
+NC Senate District 22	1	NC Senate District 22	
+NC Senate District 23	1	NC Senate District 23	
+NC Senate District 24	1	NC Senate District 24	
+NC Senate District 25	1	NC Senate District 25	
+NC Senate District 26	1	NC Senate District 26	
+NC Senate District 27	1	NC Senate District 27	
+NC Senate District 28	1	NC Senate District 28	
+NC Senate District 29	1	NC Senate District 29	
+NC Senate District 30	1	NC Senate District 30	
+NC Senate District 31	1	NC Senate District 31	
+NC Senate District 32	1	NC Senate District 32	
+NC Senate District 33	1	NC Senate District 33	
+NC Senate District 34	1	NC Senate District 34	
+NC Senate District 35	1	NC Senate District 35	
+NC Senate District 36	1	NC Senate District 36	
+NC Senate District 37	1	NC Senate District 37	
+NC Senate District 38	1	NC Senate District 38	
+NC Senate District 39	1	NC Senate District 39	
+NC Senate District 40	1	NC Senate District 40	
+NC Senate District 41	1	NC Senate District 41	
+NC Senate District 42	1	NC Senate District 42	
+NC Senate District 43	1	NC Senate District 43	
+NC Senate District 44	1	NC Senate District 44	
+NC Senate District 45	1	NC Senate District 45	
+NC Senate District 46	1	NC Senate District 46	
+NC Senate District 47	1	NC Senate District 47	
+NC Senate District 48	1	NC Senate District 48	
+NC Senate District 49	1	NC Senate District 49	
+NC Senate District 50	1	NC Senate District 50	
+US House NC District 1	1	US House NC District 1	
+US House NC District 2	1	US House NC District 2	
+US House NC District 3	1	US House NC District 3	
+US House NC District 4	1	US House NC District 4	
+US House NC District 5	1	US House NC District 5	
+US House NC District 6	1	US House NC District 6	
+US House NC District 7	1	US House NC District 7	
+US House NC District 8	1	US House NC District 8	
+US House NC District 9	1	US House NC District 9	
+US House NC District 10	1	US House NC District 10	
+US House NC District 11	1	US House NC District 11	
+US House NC District 12	1	US House NC District 12	
+US House NC District 13	1	US House NC District 13	
+US President (NC)	1	US President (NC)	
+NC Governor	1	NC Governor	
+US Senate NC	1	US Senate NC	
+NC Attorney General	1	NC Attorney General	
+NC Lieutenant Governor	1	NC Lieutenant Governor	
+NC Treasurer	1	NC Treasurer	
+NC Secretary of State	1	NC Secretary of State	
+NC Superintendent of Public Instruction	1	NC Superintendent of Public Instruction	
+NC Commissioner of Insurance	1	NC Commissioner of Insurance	
+NC Commissioner of Agriculture	1	NC Commissioner of Agriculture	
+NC Commissioner of Labor	1	NC Commissioner of Labor	
+NC Auditor	1	NC Auditor	
+NC House District 1 (Democratic Party)	1	NC House District 1	Democratic Party
+NC House District 2 (Democratic Party)	1	NC House District 2	Democratic Party
+NC House District 3 (Democratic Party)	1	NC House District 3	Democratic Party
+NC House District 4 (Democratic Party)	1	NC House District 4	Democratic Party
+NC House District 5 (Democratic Party)	1	NC House District 5	Democratic Party
+NC House District 6 (Democratic Party)	1	NC House District 6	Democratic Party
+NC House District 7 (Democratic Party)	1	NC House District 7	Democratic Party
+NC House District 8 (Democratic Party)	1	NC House District 8	Democratic Party
+NC House District 9 (Democratic Party)	1	NC House District 9	Democratic Party
+NC House District 10 (Democratic Party)	1	NC House District 10	Democratic Party
+NC House District 11 (Democratic Party)	1	NC House District 11	Democratic Party
+NC House District 12 (Democratic Party)	1	NC House District 12	Democratic Party
+NC House District 13 (Democratic Party)	1	NC House District 13	Democratic Party
+NC House District 14 (Democratic Party)	1	NC House District 14	Democratic Party
+NC House District 15 (Democratic Party)	1	NC House District 15	Democratic Party
+NC House District 16 (Democratic Party)	1	NC House District 16	Democratic Party
+NC House District 17 (Democratic Party)	1	NC House District 17	Democratic Party
+NC House District 18 (Democratic Party)	1	NC House District 18	Democratic Party
+NC House District 19 (Democratic Party)	1	NC House District 19	Democratic Party
+NC House District 20 (Democratic Party)	1	NC House District 20	Democratic Party
+NC House District 21 (Democratic Party)	1	NC House District 21	Democratic Party
+NC House District 22 (Democratic Party)	1	NC House District 22	Democratic Party
+NC House District 23 (Democratic Party)	1	NC House District 23	Democratic Party
+NC House District 24 (Democratic Party)	1	NC House District 24	Democratic Party
+NC House District 25 (Democratic Party)	1	NC House District 25	Democratic Party
+NC House District 26 (Democratic Party)	1	NC House District 26	Democratic Party
+NC House District 27 (Democratic Party)	1	NC House District 27	Democratic Party
+NC House District 28 (Democratic Party)	1	NC House District 28	Democratic Party
+NC House District 29 (Democratic Party)	1	NC House District 29	Democratic Party
+NC House District 30 (Democratic Party)	1	NC House District 30	Democratic Party
+NC House District 31 (Democratic Party)	1	NC House District 31	Democratic Party
+NC House District 32 (Democratic Party)	1	NC House District 32	Democratic Party
+NC House District 33 (Democratic Party)	1	NC House District 33	Democratic Party
+NC House District 34 (Democratic Party)	1	NC House District 34	Democratic Party
+NC House District 35 (Democratic Party)	1	NC House District 35	Democratic Party
+NC House District 36 (Democratic Party)	1	NC House District 36	Democratic Party
+NC House District 37 (Democratic Party)	1	NC House District 37	Democratic Party
+NC House District 38 (Democratic Party)	1	NC House District 38	Democratic Party
+NC House District 39 (Democratic Party)	1	NC House District 39	Democratic Party
+NC House District 40 (Democratic Party)	1	NC House District 40	Democratic Party
+NC House District 41 (Democratic Party)	1	NC House District 41	Democratic Party
+NC House District 42 (Democratic Party)	1	NC House District 42	Democratic Party
+NC House District 43 (Democratic Party)	1	NC House District 43	Democratic Party
+NC House District 44 (Democratic Party)	1	NC House District 44	Democratic Party
+NC House District 45 (Democratic Party)	1	NC House District 45	Democratic Party
+NC House District 46 (Democratic Party)	1	NC House District 46	Democratic Party
+NC House District 47 (Democratic Party)	1	NC House District 47	Democratic Party
+NC House District 48 (Democratic Party)	1	NC House District 48	Democratic Party
+NC House District 49 (Democratic Party)	1	NC House District 49	Democratic Party
+NC House District 50 (Democratic Party)	1	NC House District 50	Democratic Party
+NC House District 51 (Democratic Party)	1	NC House District 51	Democratic Party
+NC House District 52 (Democratic Party)	1	NC House District 52	Democratic Party
+NC House District 53 (Democratic Party)	1	NC House District 53	Democratic Party
+NC House District 54 (Democratic Party)	1	NC House District 54	Democratic Party
+NC House District 55 (Democratic Party)	1	NC House District 55	Democratic Party
+NC House District 56 (Democratic Party)	1	NC House District 56	Democratic Party
+NC House District 57 (Democratic Party)	1	NC House District 57	Democratic Party
+NC House District 58 (Democratic Party)	1	NC House District 58	Democratic Party
+NC House District 59 (Democratic Party)	1	NC House District 59	Democratic Party
+NC House District 60 (Democratic Party)	1	NC House District 60	Democratic Party
+NC House District 61 (Democratic Party)	1	NC House District 61	Democratic Party
+NC House District 62 (Democratic Party)	1	NC House District 62	Democratic Party
+NC House District 63 (Democratic Party)	1	NC House District 63	Democratic Party
+NC House District 64 (Democratic Party)	1	NC House District 64	Democratic Party
+NC House District 65 (Democratic Party)	1	NC House District 65	Democratic Party
+NC House District 66 (Democratic Party)	1	NC House District 66	Democratic Party
+NC House District 67 (Democratic Party)	1	NC House District 67	Democratic Party
+NC House District 68 (Democratic Party)	1	NC House District 68	Democratic Party
+NC House District 69 (Democratic Party)	1	NC House District 69	Democratic Party
+NC House District 70 (Democratic Party)	1	NC House District 70	Democratic Party
+NC House District 71 (Democratic Party)	1	NC House District 71	Democratic Party
+NC House District 72 (Democratic Party)	1	NC House District 72	Democratic Party
+NC House District 73 (Democratic Party)	1	NC House District 73	Democratic Party
+NC House District 74 (Democratic Party)	1	NC House District 74	Democratic Party
+NC House District 75 (Democratic Party)	1	NC House District 75	Democratic Party
+NC House District 76 (Democratic Party)	1	NC House District 76	Democratic Party
+NC House District 77 (Democratic Party)	1	NC House District 77	Democratic Party
+NC House District 78 (Democratic Party)	1	NC House District 78	Democratic Party
+NC House District 79 (Democratic Party)	1	NC House District 79	Democratic Party
+NC House District 80 (Democratic Party)	1	NC House District 80	Democratic Party
+NC House District 81 (Democratic Party)	1	NC House District 81	Democratic Party
+NC House District 82 (Democratic Party)	1	NC House District 82	Democratic Party
+NC House District 83 (Democratic Party)	1	NC House District 83	Democratic Party
+NC House District 84 (Democratic Party)	1	NC House District 84	Democratic Party
+NC House District 85 (Democratic Party)	1	NC House District 85	Democratic Party
+NC House District 86 (Democratic Party)	1	NC House District 86	Democratic Party
+NC House District 87 (Democratic Party)	1	NC House District 87	Democratic Party
+NC House District 88 (Democratic Party)	1	NC House District 88	Democratic Party
+NC House District 89 (Democratic Party)	1	NC House District 89	Democratic Party
+NC House District 90 (Democratic Party)	1	NC House District 90	Democratic Party
+NC House District 91 (Democratic Party)	1	NC House District 91	Democratic Party
+NC House District 92 (Democratic Party)	1	NC House District 92	Democratic Party
+NC House District 93 (Democratic Party)	1	NC House District 93	Democratic Party
+NC House District 94 (Democratic Party)	1	NC House District 94	Democratic Party
+NC House District 95 (Democratic Party)	1	NC House District 95	Democratic Party
+NC House District 96 (Democratic Party)	1	NC House District 96	Democratic Party
+NC House District 97 (Democratic Party)	1	NC House District 97	Democratic Party
+NC House District 98 (Democratic Party)	1	NC House District 98	Democratic Party
+NC House District 99 (Democratic Party)	1	NC House District 99	Democratic Party
+NC House District 100 (Democratic Party)	1	NC House District 100	Democratic Party
+NC House District 101 (Democratic Party)	1	NC House District 101	Democratic Party
+NC House District 102 (Democratic Party)	1	NC House District 102	Democratic Party
+NC House District 103 (Democratic Party)	1	NC House District 103	Democratic Party
+NC House District 104 (Democratic Party)	1	NC House District 104	Democratic Party
+NC House District 105 (Democratic Party)	1	NC House District 105	Democratic Party
+NC House District 106 (Democratic Party)	1	NC House District 106	Democratic Party
+NC House District 107 (Democratic Party)	1	NC House District 107	Democratic Party
+NC House District 108 (Democratic Party)	1	NC House District 108	Democratic Party
+NC House District 109 (Democratic Party)	1	NC House District 109	Democratic Party
+NC House District 110 (Democratic Party)	1	NC House District 110	Democratic Party
+NC House District 111 (Democratic Party)	1	NC House District 111	Democratic Party
+NC House District 112 (Democratic Party)	1	NC House District 112	Democratic Party
+NC House District 113 (Democratic Party)	1	NC House District 113	Democratic Party
+NC House District 114 (Democratic Party)	1	NC House District 114	Democratic Party
+NC House District 115 (Democratic Party)	1	NC House District 115	Democratic Party
+NC House District 116 (Democratic Party)	1	NC House District 116	Democratic Party
+NC House District 117 (Democratic Party)	1	NC House District 117	Democratic Party
+NC House District 118 (Democratic Party)	1	NC House District 118	Democratic Party
+NC House District 119 (Democratic Party)	1	NC House District 119	Democratic Party
+NC House District 120 (Democratic Party)	1	NC House District 120	Democratic Party
+NC Senate District 1 (Democratic Party)	1	NC Senate District 1	Democratic Party
+NC Senate District 2 (Democratic Party)	1	NC Senate District 2	Democratic Party
+NC Senate District 3 (Democratic Party)	1	NC Senate District 3	Democratic Party
+NC Senate District 4 (Democratic Party)	1	NC Senate District 4	Democratic Party
+NC Senate District 5 (Democratic Party)	1	NC Senate District 5	Democratic Party
+NC Senate District 6 (Democratic Party)	1	NC Senate District 6	Democratic Party
+NC Senate District 7 (Democratic Party)	1	NC Senate District 7	Democratic Party
+NC Senate District 8 (Democratic Party)	1	NC Senate District 8	Democratic Party
+NC Senate District 9 (Democratic Party)	1	NC Senate District 9	Democratic Party
+NC Senate District 10 (Democratic Party)	1	NC Senate District 10	Democratic Party
+NC Senate District 11 (Democratic Party)	1	NC Senate District 11	Democratic Party
+NC Senate District 12 (Democratic Party)	1	NC Senate District 12	Democratic Party
+NC Senate District 13 (Democratic Party)	1	NC Senate District 13	Democratic Party
+NC Senate District 14 (Democratic Party)	1	NC Senate District 14	Democratic Party
+NC Senate District 15 (Democratic Party)	1	NC Senate District 15	Democratic Party
+NC Senate District 16 (Democratic Party)	1	NC Senate District 16	Democratic Party
+NC Senate District 17 (Democratic Party)	1	NC Senate District 17	Democratic Party
+NC Senate District 18 (Democratic Party)	1	NC Senate District 18	Democratic Party
+NC Senate District 19 (Democratic Party)	1	NC Senate District 19	Democratic Party
+NC Senate District 20 (Democratic Party)	1	NC Senate District 20	Democratic Party
+NC Senate District 21 (Democratic Party)	1	NC Senate District 21	Democratic Party
+NC Senate District 22 (Democratic Party)	1	NC Senate District 22	Democratic Party
+NC Senate District 23 (Democratic Party)	1	NC Senate District 23	Democratic Party
+NC Senate District 24 (Democratic Party)	1	NC Senate District 24	Democratic Party
+NC Senate District 25 (Democratic Party)	1	NC Senate District 25	Democratic Party
+NC Senate District 26 (Democratic Party)	1	NC Senate District 26	Democratic Party
+NC Senate District 27 (Democratic Party)	1	NC Senate District 27	Democratic Party
+NC Senate District 28 (Democratic Party)	1	NC Senate District 28	Democratic Party
+NC Senate District 29 (Democratic Party)	1	NC Senate District 29	Democratic Party
+NC Senate District 30 (Democratic Party)	1	NC Senate District 30	Democratic Party
+NC Senate District 31 (Democratic Party)	1	NC Senate District 31	Democratic Party
+NC Senate District 32 (Democratic Party)	1	NC Senate District 32	Democratic Party
+NC Senate District 33 (Democratic Party)	1	NC Senate District 33	Democratic Party
+NC Senate District 34 (Democratic Party)	1	NC Senate District 34	Democratic Party
+NC Senate District 35 (Democratic Party)	1	NC Senate District 35	Democratic Party
+NC Senate District 36 (Democratic Party)	1	NC Senate District 36	Democratic Party
+NC Senate District 37 (Democratic Party)	1	NC Senate District 37	Democratic Party
+NC Senate District 38 (Democratic Party)	1	NC Senate District 38	Democratic Party
+NC Senate District 39 (Democratic Party)	1	NC Senate District 39	Democratic Party
+NC Senate District 40 (Democratic Party)	1	NC Senate District 40	Democratic Party
+NC Senate District 41 (Democratic Party)	1	NC Senate District 41	Democratic Party
+NC Senate District 42 (Democratic Party)	1	NC Senate District 42	Democratic Party
+NC Senate District 43 (Democratic Party)	1	NC Senate District 43	Democratic Party
+NC Senate District 44 (Democratic Party)	1	NC Senate District 44	Democratic Party
+NC Senate District 45 (Democratic Party)	1	NC Senate District 45	Democratic Party
+NC Senate District 46 (Democratic Party)	1	NC Senate District 46	Democratic Party
+NC Senate District 47 (Democratic Party)	1	NC Senate District 47	Democratic Party
+NC Senate District 48 (Democratic Party)	1	NC Senate District 48	Democratic Party
+NC Senate District 49 (Democratic Party)	1	NC Senate District 49	Democratic Party
+NC Senate District 50 (Democratic Party)	1	NC Senate District 50	Democratic Party
+US House NC District 1 (Democratic Party)	1	US House NC District 1	Democratic Party
+US House NC District 2 (Democratic Party)	1	US House NC District 2	Democratic Party
+US House NC District 3 (Democratic Party)	1	US House NC District 3	Democratic Party
+US House NC District 4 (Democratic Party)	1	US House NC District 4	Democratic Party
+US House NC District 5 (Democratic Party)	1	US House NC District 5	Democratic Party
+US House NC District 6 (Democratic Party)	1	US House NC District 6	Democratic Party
+US House NC District 7 (Democratic Party)	1	US House NC District 7	Democratic Party
+US House NC District 8 (Democratic Party)	1	US House NC District 8	Democratic Party
+US House NC District 9 (Democratic Party)	1	US House NC District 9	Democratic Party
+US House NC District 10 (Democratic Party)	1	US House NC District 10	Democratic Party
+US House NC District 11 (Democratic Party)	1	US House NC District 11	Democratic Party
+US House NC District 12 (Democratic Party)	1	US House NC District 12	Democratic Party
+US House NC District 13 (Democratic Party)	1	US House NC District 13	Democratic Party
+US President (NC) (Democratic Party)	1	US President (NC)	Democratic Party
+NC Governor (Democratic Party)	1	NC Governor	Democratic Party
+US Senate NC (Democratic Party)	1	US Senate NC	Democratic Party
+NC Attorney General (Democratic Party)	1	NC Attorney General	Democratic Party
+NC Lieutenant Governor (Democratic Party)	1	NC Lieutenant Governor	Democratic Party
+NC Treasurer (Democratic Party)	1	NC Treasurer	Democratic Party
+NC Secretary of State (Democratic Party)	1	NC Secretary of State	Democratic Party
+NC Superintendent of Public Instruction (Democratic Party)	1	NC Superintendent of Public Instruction	Democratic Party
+NC Commissioner of Insurance (Democratic Party)	1	NC Commissioner of Insurance	Democratic Party
+NC Commissioner of Agriculture (Democratic Party)	1	NC Commissioner of Agriculture	Democratic Party
+NC Commissioner of Labor (Democratic Party)	1	NC Commissioner of Labor	Democratic Party
+NC Auditor (Democratic Party)	1	NC Auditor	Democratic Party
+NC House District 1 (Republican Party)	1	NC House District 1	Republican Party
+NC House District 2 (Republican Party)	1	NC House District 2	Republican Party
+NC House District 3 (Republican Party)	1	NC House District 3	Republican Party
+NC House District 4 (Republican Party)	1	NC House District 4	Republican Party
+NC House District 5 (Republican Party)	1	NC House District 5	Republican Party
+NC House District 6 (Republican Party)	1	NC House District 6	Republican Party
+NC House District 7 (Republican Party)	1	NC House District 7	Republican Party
+NC House District 8 (Republican Party)	1	NC House District 8	Republican Party
+NC House District 9 (Republican Party)	1	NC House District 9	Republican Party
+NC House District 10 (Republican Party)	1	NC House District 10	Republican Party
+NC House District 11 (Republican Party)	1	NC House District 11	Republican Party
+NC House District 12 (Republican Party)	1	NC House District 12	Republican Party
+NC House District 13 (Republican Party)	1	NC House District 13	Republican Party
+NC House District 14 (Republican Party)	1	NC House District 14	Republican Party
+NC House District 15 (Republican Party)	1	NC House District 15	Republican Party
+NC House District 16 (Republican Party)	1	NC House District 16	Republican Party
+NC House District 17 (Republican Party)	1	NC House District 17	Republican Party
+NC House District 18 (Republican Party)	1	NC House District 18	Republican Party
+NC House District 19 (Republican Party)	1	NC House District 19	Republican Party
+NC House District 20 (Republican Party)	1	NC House District 20	Republican Party
+NC House District 21 (Republican Party)	1	NC House District 21	Republican Party
+NC House District 22 (Republican Party)	1	NC House District 22	Republican Party
+NC House District 23 (Republican Party)	1	NC House District 23	Republican Party
+NC House District 24 (Republican Party)	1	NC House District 24	Republican Party
+NC House District 25 (Republican Party)	1	NC House District 25	Republican Party
+NC House District 26 (Republican Party)	1	NC House District 26	Republican Party
+NC House District 27 (Republican Party)	1	NC House District 27	Republican Party
+NC House District 28 (Republican Party)	1	NC House District 28	Republican Party
+NC House District 29 (Republican Party)	1	NC House District 29	Republican Party
+NC House District 30 (Republican Party)	1	NC House District 30	Republican Party
+NC House District 31 (Republican Party)	1	NC House District 31	Republican Party
+NC House District 32 (Republican Party)	1	NC House District 32	Republican Party
+NC House District 33 (Republican Party)	1	NC House District 33	Republican Party
+NC House District 34 (Republican Party)	1	NC House District 34	Republican Party
+NC House District 35 (Republican Party)	1	NC House District 35	Republican Party
+NC House District 36 (Republican Party)	1	NC House District 36	Republican Party
+NC House District 37 (Republican Party)	1	NC House District 37	Republican Party
+NC House District 38 (Republican Party)	1	NC House District 38	Republican Party
+NC House District 39 (Republican Party)	1	NC House District 39	Republican Party
+NC House District 40 (Republican Party)	1	NC House District 40	Republican Party
+NC House District 41 (Republican Party)	1	NC House District 41	Republican Party
+NC House District 42 (Republican Party)	1	NC House District 42	Republican Party
+NC House District 43 (Republican Party)	1	NC House District 43	Republican Party
+NC House District 44 (Republican Party)	1	NC House District 44	Republican Party
+NC House District 45 (Republican Party)	1	NC House District 45	Republican Party
+NC House District 46 (Republican Party)	1	NC House District 46	Republican Party
+NC House District 47 (Republican Party)	1	NC House District 47	Republican Party
+NC House District 48 (Republican Party)	1	NC House District 48	Republican Party
+NC House District 49 (Republican Party)	1	NC House District 49	Republican Party
+NC House District 50 (Republican Party)	1	NC House District 50	Republican Party
+NC House District 51 (Republican Party)	1	NC House District 51	Republican Party
+NC House District 52 (Republican Party)	1	NC House District 52	Republican Party
+NC House District 53 (Republican Party)	1	NC House District 53	Republican Party
+NC House District 54 (Republican Party)	1	NC House District 54	Republican Party
+NC House District 55 (Republican Party)	1	NC House District 55	Republican Party
+NC House District 56 (Republican Party)	1	NC House District 56	Republican Party
+NC House District 57 (Republican Party)	1	NC House District 57	Republican Party
+NC House District 58 (Republican Party)	1	NC House District 58	Republican Party
+NC House District 59 (Republican Party)	1	NC House District 59	Republican Party
+NC House District 60 (Republican Party)	1	NC House District 60	Republican Party
+NC House District 61 (Republican Party)	1	NC House District 61	Republican Party
+NC House District 62 (Republican Party)	1	NC House District 62	Republican Party
+NC House District 63 (Republican Party)	1	NC House District 63	Republican Party
+NC House District 64 (Republican Party)	1	NC House District 64	Republican Party
+NC House District 65 (Republican Party)	1	NC House District 65	Republican Party
+NC House District 66 (Republican Party)	1	NC House District 66	Republican Party
+NC House District 67 (Republican Party)	1	NC House District 67	Republican Party
+NC House District 68 (Republican Party)	1	NC House District 68	Republican Party
+NC House District 69 (Republican Party)	1	NC House District 69	Republican Party
+NC House District 70 (Republican Party)	1	NC House District 70	Republican Party
+NC House District 71 (Republican Party)	1	NC House District 71	Republican Party
+NC House District 72 (Republican Party)	1	NC House District 72	Republican Party
+NC House District 73 (Republican Party)	1	NC House District 73	Republican Party
+NC House District 74 (Republican Party)	1	NC House District 74	Republican Party
+NC House District 75 (Republican Party)	1	NC House District 75	Republican Party
+NC House District 76 (Republican Party)	1	NC House District 76	Republican Party
+NC House District 77 (Republican Party)	1	NC House District 77	Republican Party
+NC House District 78 (Republican Party)	1	NC House District 78	Republican Party
+NC House District 79 (Republican Party)	1	NC House District 79	Republican Party
+NC House District 80 (Republican Party)	1	NC House District 80	Republican Party
+NC House District 81 (Republican Party)	1	NC House District 81	Republican Party
+NC House District 82 (Republican Party)	1	NC House District 82	Republican Party
+NC House District 83 (Republican Party)	1	NC House District 83	Republican Party
+NC House District 84 (Republican Party)	1	NC House District 84	Republican Party
+NC House District 85 (Republican Party)	1	NC House District 85	Republican Party
+NC House District 86 (Republican Party)	1	NC House District 86	Republican Party
+NC House District 87 (Republican Party)	1	NC House District 87	Republican Party
+NC House District 88 (Republican Party)	1	NC House District 88	Republican Party
+NC House District 89 (Republican Party)	1	NC House District 89	Republican Party
+NC House District 90 (Republican Party)	1	NC House District 90	Republican Party
+NC House District 91 (Republican Party)	1	NC House District 91	Republican Party
+NC House District 92 (Republican Party)	1	NC House District 92	Republican Party
+NC House District 93 (Republican Party)	1	NC House District 93	Republican Party
+NC House District 94 (Republican Party)	1	NC House District 94	Republican Party
+NC House District 95 (Republican Party)	1	NC House District 95	Republican Party
+NC House District 96 (Republican Party)	1	NC House District 96	Republican Party
+NC House District 97 (Republican Party)	1	NC House District 97	Republican Party
+NC House District 98 (Republican Party)	1	NC House District 98	Republican Party
+NC House District 99 (Republican Party)	1	NC House District 99	Republican Party
+NC House District 100 (Republican Party)	1	NC House District 100	Republican Party
+NC House District 101 (Republican Party)	1	NC House District 101	Republican Party
+NC House District 102 (Republican Party)	1	NC House District 102	Republican Party
+NC House District 103 (Republican Party)	1	NC House District 103	Republican Party
+NC House District 104 (Republican Party)	1	NC House District 104	Republican Party
+NC House District 105 (Republican Party)	1	NC House District 105	Republican Party
+NC House District 106 (Republican Party)	1	NC House District 106	Republican Party
+NC House District 107 (Republican Party)	1	NC House District 107	Republican Party
+NC House District 108 (Republican Party)	1	NC House District 108	Republican Party
+NC House District 109 (Republican Party)	1	NC House District 109	Republican Party
+NC House District 110 (Republican Party)	1	NC House District 110	Republican Party
+NC House District 111 (Republican Party)	1	NC House District 111	Republican Party
+NC House District 112 (Republican Party)	1	NC House District 112	Republican Party
+NC House District 113 (Republican Party)	1	NC House District 113	Republican Party
+NC House District 114 (Republican Party)	1	NC House District 114	Republican Party
+NC House District 115 (Republican Party)	1	NC House District 115	Republican Party
+NC House District 116 (Republican Party)	1	NC House District 116	Republican Party
+NC House District 117 (Republican Party)	1	NC House District 117	Republican Party
+NC House District 118 (Republican Party)	1	NC House District 118	Republican Party
+NC House District 119 (Republican Party)	1	NC House District 119	Republican Party
+NC House District 120 (Republican Party)	1	NC House District 120	Republican Party
+NC Senate District 1 (Republican Party)	1	NC Senate District 1	Republican Party
+NC Senate District 2 (Republican Party)	1	NC Senate District 2	Republican Party
+NC Senate District 3 (Republican Party)	1	NC Senate District 3	Republican Party
+NC Senate District 4 (Republican Party)	1	NC Senate District 4	Republican Party
+NC Senate District 5 (Republican Party)	1	NC Senate District 5	Republican Party
+NC Senate District 6 (Republican Party)	1	NC Senate District 6	Republican Party
+NC Senate District 7 (Republican Party)	1	NC Senate District 7	Republican Party
+NC Senate District 8 (Republican Party)	1	NC Senate District 8	Republican Party
+NC Senate District 9 (Republican Party)	1	NC Senate District 9	Republican Party
+NC Senate District 10 (Republican Party)	1	NC Senate District 10	Republican Party
+NC Senate District 11 (Republican Party)	1	NC Senate District 11	Republican Party
+NC Senate District 12 (Republican Party)	1	NC Senate District 12	Republican Party
+NC Senate District 13 (Republican Party)	1	NC Senate District 13	Republican Party
+NC Senate District 14 (Republican Party)	1	NC Senate District 14	Republican Party
+NC Senate District 15 (Republican Party)	1	NC Senate District 15	Republican Party
+NC Senate District 16 (Republican Party)	1	NC Senate District 16	Republican Party
+NC Senate District 17 (Republican Party)	1	NC Senate District 17	Republican Party
+NC Senate District 18 (Republican Party)	1	NC Senate District 18	Republican Party
+NC Senate District 19 (Republican Party)	1	NC Senate District 19	Republican Party
+NC Senate District 20 (Republican Party)	1	NC Senate District 20	Republican Party
+NC Senate District 21 (Republican Party)	1	NC Senate District 21	Republican Party
+NC Senate District 22 (Republican Party)	1	NC Senate District 22	Republican Party
+NC Senate District 23 (Republican Party)	1	NC Senate District 23	Republican Party
+NC Senate District 24 (Republican Party)	1	NC Senate District 24	Republican Party
+NC Senate District 25 (Republican Party)	1	NC Senate District 25	Republican Party
+NC Senate District 26 (Republican Party)	1	NC Senate District 26	Republican Party
+NC Senate District 27 (Republican Party)	1	NC Senate District 27	Republican Party
+NC Senate District 28 (Republican Party)	1	NC Senate District 28	Republican Party
+NC Senate District 29 (Republican Party)	1	NC Senate District 29	Republican Party
+NC Senate District 30 (Republican Party)	1	NC Senate District 30	Republican Party
+NC Senate District 31 (Republican Party)	1	NC Senate District 31	Republican Party
+NC Senate District 32 (Republican Party)	1	NC Senate District 32	Republican Party
+NC Senate District 33 (Republican Party)	1	NC Senate District 33	Republican Party
+NC Senate District 34 (Republican Party)	1	NC Senate District 34	Republican Party
+NC Senate District 35 (Republican Party)	1	NC Senate District 35	Republican Party
+NC Senate District 36 (Republican Party)	1	NC Senate District 36	Republican Party
+NC Senate District 37 (Republican Party)	1	NC Senate District 37	Republican Party
+NC Senate District 38 (Republican Party)	1	NC Senate District 38	Republican Party
+NC Senate District 39 (Republican Party)	1	NC Senate District 39	Republican Party
+NC Senate District 40 (Republican Party)	1	NC Senate District 40	Republican Party
+NC Senate District 41 (Republican Party)	1	NC Senate District 41	Republican Party
+NC Senate District 42 (Republican Party)	1	NC Senate District 42	Republican Party
+NC Senate District 43 (Republican Party)	1	NC Senate District 43	Republican Party
+NC Senate District 44 (Republican Party)	1	NC Senate District 44	Republican Party
+NC Senate District 45 (Republican Party)	1	NC Senate District 45	Republican Party
+NC Senate District 46 (Republican Party)	1	NC Senate District 46	Republican Party
+NC Senate District 47 (Republican Party)	1	NC Senate District 47	Republican Party
+NC Senate District 48 (Republican Party)	1	NC Senate District 48	Republican Party
+NC Senate District 49 (Republican Party)	1	NC Senate District 49	Republican Party
+NC Senate District 50 (Republican Party)	1	NC Senate District 50	Republican Party
+US House NC District 1 (Republican Party)	1	US House NC District 1	Republican Party
+US House NC District 2 (Republican Party)	1	US House NC District 2	Republican Party
+US House NC District 3 (Republican Party)	1	US House NC District 3	Republican Party
+US House NC District 4 (Republican Party)	1	US House NC District 4	Republican Party
+US House NC District 5 (Republican Party)	1	US House NC District 5	Republican Party
+US House NC District 6 (Republican Party)	1	US House NC District 6	Republican Party
+US House NC District 7 (Republican Party)	1	US House NC District 7	Republican Party
+US House NC District 8 (Republican Party)	1	US House NC District 8	Republican Party
+US House NC District 9 (Republican Party)	1	US House NC District 9	Republican Party
+US House NC District 10 (Republican Party)	1	US House NC District 10	Republican Party
+US House NC District 11 (Republican Party)	1	US House NC District 11	Republican Party
+US House NC District 12 (Republican Party)	1	US House NC District 12	Republican Party
+US House NC District 13 (Republican Party)	1	US House NC District 13	Republican Party
+US President (NC) (Republican Party)	1	US President (NC)	Republican Party
+NC Governor (Republican Party)	1	NC Governor	Republican Party
+US Senate NC (Republican Party)	1	US Senate NC	Republican Party
+NC Attorney General (Republican Party)	1	NC Attorney General	Republican Party
+NC Lieutenant Governor (Republican Party)	1	NC Lieutenant Governor	Republican Party
+NC Treasurer (Republican Party)	1	NC Treasurer	Republican Party
+NC Secretary of State (Republican Party)	1	NC Secretary of State	Republican Party
+NC Superintendent of Public Instruction (Republican Party)	1	NC Superintendent of Public Instruction	Republican Party
+NC Commissioner of Insurance (Republican Party)	1	NC Commissioner of Insurance	Republican Party
+NC Commissioner of Agriculture (Republican Party)	1	NC Commissioner of Agriculture	Republican Party
+NC Commissioner of Labor (Republican Party)	1	NC Commissioner of Labor	Republican Party
+NC Auditor (Republican Party)	1	NC Auditor	Republican Party
+NC House District 1 (Green Party)	1	NC House District 1	Green Party
+NC House District 2 (Green Party)	1	NC House District 2	Green Party
+NC House District 3 (Green Party)	1	NC House District 3	Green Party
+NC House District 4 (Green Party)	1	NC House District 4	Green Party
+NC House District 5 (Green Party)	1	NC House District 5	Green Party
+NC House District 6 (Green Party)	1	NC House District 6	Green Party
+NC House District 7 (Green Party)	1	NC House District 7	Green Party
+NC House District 8 (Green Party)	1	NC House District 8	Green Party
+NC House District 9 (Green Party)	1	NC House District 9	Green Party
+NC House District 10 (Green Party)	1	NC House District 10	Green Party
+NC House District 11 (Green Party)	1	NC House District 11	Green Party
+NC House District 12 (Green Party)	1	NC House District 12	Green Party
+NC House District 13 (Green Party)	1	NC House District 13	Green Party
+NC House District 14 (Green Party)	1	NC House District 14	Green Party
+NC House District 15 (Green Party)	1	NC House District 15	Green Party
+NC House District 16 (Green Party)	1	NC House District 16	Green Party
+NC House District 17 (Green Party)	1	NC House District 17	Green Party
+NC House District 18 (Green Party)	1	NC House District 18	Green Party
+NC House District 19 (Green Party)	1	NC House District 19	Green Party
+NC House District 20 (Green Party)	1	NC House District 20	Green Party
+NC House District 21 (Green Party)	1	NC House District 21	Green Party
+NC House District 22 (Green Party)	1	NC House District 22	Green Party
+NC House District 23 (Green Party)	1	NC House District 23	Green Party
+NC House District 24 (Green Party)	1	NC House District 24	Green Party
+NC House District 25 (Green Party)	1	NC House District 25	Green Party
+NC House District 26 (Green Party)	1	NC House District 26	Green Party
+NC House District 27 (Green Party)	1	NC House District 27	Green Party
+NC House District 28 (Green Party)	1	NC House District 28	Green Party
+NC House District 29 (Green Party)	1	NC House District 29	Green Party
+NC House District 30 (Green Party)	1	NC House District 30	Green Party
+NC House District 31 (Green Party)	1	NC House District 31	Green Party
+NC House District 32 (Green Party)	1	NC House District 32	Green Party
+NC House District 33 (Green Party)	1	NC House District 33	Green Party
+NC House District 34 (Green Party)	1	NC House District 34	Green Party
+NC House District 35 (Green Party)	1	NC House District 35	Green Party
+NC House District 36 (Green Party)	1	NC House District 36	Green Party
+NC House District 37 (Green Party)	1	NC House District 37	Green Party
+NC House District 38 (Green Party)	1	NC House District 38	Green Party
+NC House District 39 (Green Party)	1	NC House District 39	Green Party
+NC House District 40 (Green Party)	1	NC House District 40	Green Party
+NC House District 41 (Green Party)	1	NC House District 41	Green Party
+NC House District 42 (Green Party)	1	NC House District 42	Green Party
+NC House District 43 (Green Party)	1	NC House District 43	Green Party
+NC House District 44 (Green Party)	1	NC House District 44	Green Party
+NC House District 45 (Green Party)	1	NC House District 45	Green Party
+NC House District 46 (Green Party)	1	NC House District 46	Green Party
+NC House District 47 (Green Party)	1	NC House District 47	Green Party
+NC House District 48 (Green Party)	1	NC House District 48	Green Party
+NC House District 49 (Green Party)	1	NC House District 49	Green Party
+NC House District 50 (Green Party)	1	NC House District 50	Green Party
+NC House District 51 (Green Party)	1	NC House District 51	Green Party
+NC House District 52 (Green Party)	1	NC House District 52	Green Party
+NC House District 53 (Green Party)	1	NC House District 53	Green Party
+NC House District 54 (Green Party)	1	NC House District 54	Green Party
+NC House District 55 (Green Party)	1	NC House District 55	Green Party
+NC House District 56 (Green Party)	1	NC House District 56	Green Party
+NC House District 57 (Green Party)	1	NC House District 57	Green Party
+NC House District 58 (Green Party)	1	NC House District 58	Green Party
+NC House District 59 (Green Party)	1	NC House District 59	Green Party
+NC House District 60 (Green Party)	1	NC House District 60	Green Party
+NC House District 61 (Green Party)	1	NC House District 61	Green Party
+NC House District 62 (Green Party)	1	NC House District 62	Green Party
+NC House District 63 (Green Party)	1	NC House District 63	Green Party
+NC House District 64 (Green Party)	1	NC House District 64	Green Party
+NC House District 65 (Green Party)	1	NC House District 65	Green Party
+NC House District 66 (Green Party)	1	NC House District 66	Green Party
+NC House District 67 (Green Party)	1	NC House District 67	Green Party
+NC House District 68 (Green Party)	1	NC House District 68	Green Party
+NC House District 69 (Green Party)	1	NC House District 69	Green Party
+NC House District 70 (Green Party)	1	NC House District 70	Green Party
+NC House District 71 (Green Party)	1	NC House District 71	Green Party
+NC House District 72 (Green Party)	1	NC House District 72	Green Party
+NC House District 73 (Green Party)	1	NC House District 73	Green Party
+NC House District 74 (Green Party)	1	NC House District 74	Green Party
+NC House District 75 (Green Party)	1	NC House District 75	Green Party
+NC House District 76 (Green Party)	1	NC House District 76	Green Party
+NC House District 77 (Green Party)	1	NC House District 77	Green Party
+NC House District 78 (Green Party)	1	NC House District 78	Green Party
+NC House District 79 (Green Party)	1	NC House District 79	Green Party
+NC House District 80 (Green Party)	1	NC House District 80	Green Party
+NC House District 81 (Green Party)	1	NC House District 81	Green Party
+NC House District 82 (Green Party)	1	NC House District 82	Green Party
+NC House District 83 (Green Party)	1	NC House District 83	Green Party
+NC House District 84 (Green Party)	1	NC House District 84	Green Party
+NC House District 85 (Green Party)	1	NC House District 85	Green Party
+NC House District 86 (Green Party)	1	NC House District 86	Green Party
+NC House District 87 (Green Party)	1	NC House District 87	Green Party
+NC House District 88 (Green Party)	1	NC House District 88	Green Party
+NC House District 89 (Green Party)	1	NC House District 89	Green Party
+NC House District 90 (Green Party)	1	NC House District 90	Green Party
+NC House District 91 (Green Party)	1	NC House District 91	Green Party
+NC House District 92 (Green Party)	1	NC House District 92	Green Party
+NC House District 93 (Green Party)	1	NC House District 93	Green Party
+NC House District 94 (Green Party)	1	NC House District 94	Green Party
+NC House District 95 (Green Party)	1	NC House District 95	Green Party
+NC House District 96 (Green Party)	1	NC House District 96	Green Party
+NC House District 97 (Green Party)	1	NC House District 97	Green Party
+NC House District 98 (Green Party)	1	NC House District 98	Green Party
+NC House District 99 (Green Party)	1	NC House District 99	Green Party
+NC House District 100 (Green Party)	1	NC House District 100	Green Party
+NC House District 101 (Green Party)	1	NC House District 101	Green Party
+NC House District 102 (Green Party)	1	NC House District 102	Green Party
+NC House District 103 (Green Party)	1	NC House District 103	Green Party
+NC House District 104 (Green Party)	1	NC House District 104	Green Party
+NC House District 105 (Green Party)	1	NC House District 105	Green Party
+NC House District 106 (Green Party)	1	NC House District 106	Green Party
+NC House District 107 (Green Party)	1	NC House District 107	Green Party
+NC House District 108 (Green Party)	1	NC House District 108	Green Party
+NC House District 109 (Green Party)	1	NC House District 109	Green Party
+NC House District 110 (Green Party)	1	NC House District 110	Green Party
+NC House District 111 (Green Party)	1	NC House District 111	Green Party
+NC House District 112 (Green Party)	1	NC House District 112	Green Party
+NC House District 113 (Green Party)	1	NC House District 113	Green Party
+NC House District 114 (Green Party)	1	NC House District 114	Green Party
+NC House District 115 (Green Party)	1	NC House District 115	Green Party
+NC House District 116 (Green Party)	1	NC House District 116	Green Party
+NC House District 117 (Green Party)	1	NC House District 117	Green Party
+NC House District 118 (Green Party)	1	NC House District 118	Green Party
+NC House District 119 (Green Party)	1	NC House District 119	Green Party
+NC House District 120 (Green Party)	1	NC House District 120	Green Party
+NC Senate District 1 (Green Party)	1	NC Senate District 1	Green Party
+NC Senate District 2 (Green Party)	1	NC Senate District 2	Green Party
+NC Senate District 3 (Green Party)	1	NC Senate District 3	Green Party
+NC Senate District 4 (Green Party)	1	NC Senate District 4	Green Party
+NC Senate District 5 (Green Party)	1	NC Senate District 5	Green Party
+NC Senate District 6 (Green Party)	1	NC Senate District 6	Green Party
+NC Senate District 7 (Green Party)	1	NC Senate District 7	Green Party
+NC Senate District 8 (Green Party)	1	NC Senate District 8	Green Party
+NC Senate District 9 (Green Party)	1	NC Senate District 9	Green Party
+NC Senate District 10 (Green Party)	1	NC Senate District 10	Green Party
+NC Senate District 11 (Green Party)	1	NC Senate District 11	Green Party
+NC Senate District 12 (Green Party)	1	NC Senate District 12	Green Party
+NC Senate District 13 (Green Party)	1	NC Senate District 13	Green Party
+NC Senate District 14 (Green Party)	1	NC Senate District 14	Green Party
+NC Senate District 15 (Green Party)	1	NC Senate District 15	Green Party
+NC Senate District 16 (Green Party)	1	NC Senate District 16	Green Party
+NC Senate District 17 (Green Party)	1	NC Senate District 17	Green Party
+NC Senate District 18 (Green Party)	1	NC Senate District 18	Green Party
+NC Senate District 19 (Green Party)	1	NC Senate District 19	Green Party
+NC Senate District 20 (Green Party)	1	NC Senate District 20	Green Party
+NC Senate District 21 (Green Party)	1	NC Senate District 21	Green Party
+NC Senate District 22 (Green Party)	1	NC Senate District 22	Green Party
+NC Senate District 23 (Green Party)	1	NC Senate District 23	Green Party
+NC Senate District 24 (Green Party)	1	NC Senate District 24	Green Party
+NC Senate District 25 (Green Party)	1	NC Senate District 25	Green Party
+NC Senate District 26 (Green Party)	1	NC Senate District 26	Green Party
+NC Senate District 27 (Green Party)	1	NC Senate District 27	Green Party
+NC Senate District 28 (Green Party)	1	NC Senate District 28	Green Party
+NC Senate District 29 (Green Party)	1	NC Senate District 29	Green Party
+NC Senate District 30 (Green Party)	1	NC Senate District 30	Green Party
+NC Senate District 31 (Green Party)	1	NC Senate District 31	Green Party
+NC Senate District 32 (Green Party)	1	NC Senate District 32	Green Party
+NC Senate District 33 (Green Party)	1	NC Senate District 33	Green Party
+NC Senate District 34 (Green Party)	1	NC Senate District 34	Green Party
+NC Senate District 35 (Green Party)	1	NC Senate District 35	Green Party
+NC Senate District 36 (Green Party)	1	NC Senate District 36	Green Party
+NC Senate District 37 (Green Party)	1	NC Senate District 37	Green Party
+NC Senate District 38 (Green Party)	1	NC Senate District 38	Green Party
+NC Senate District 39 (Green Party)	1	NC Senate District 39	Green Party
+NC Senate District 40 (Green Party)	1	NC Senate District 40	Green Party
+NC Senate District 41 (Green Party)	1	NC Senate District 41	Green Party
+NC Senate District 42 (Green Party)	1	NC Senate District 42	Green Party
+NC Senate District 43 (Green Party)	1	NC Senate District 43	Green Party
+NC Senate District 44 (Green Party)	1	NC Senate District 44	Green Party
+NC Senate District 45 (Green Party)	1	NC Senate District 45	Green Party
+NC Senate District 46 (Green Party)	1	NC Senate District 46	Green Party
+NC Senate District 47 (Green Party)	1	NC Senate District 47	Green Party
+NC Senate District 48 (Green Party)	1	NC Senate District 48	Green Party
+NC Senate District 49 (Green Party)	1	NC Senate District 49	Green Party
+NC Senate District 50 (Green Party)	1	NC Senate District 50	Green Party
+US House NC District 1 (Green Party)	1	US House NC District 1	Green Party
+US House NC District 2 (Green Party)	1	US House NC District 2	Green Party
+US House NC District 3 (Green Party)	1	US House NC District 3	Green Party
+US House NC District 4 (Green Party)	1	US House NC District 4	Green Party
+US House NC District 5 (Green Party)	1	US House NC District 5	Green Party
+US House NC District 6 (Green Party)	1	US House NC District 6	Green Party
+US House NC District 7 (Green Party)	1	US House NC District 7	Green Party
+US House NC District 8 (Green Party)	1	US House NC District 8	Green Party
+US House NC District 9 (Green Party)	1	US House NC District 9	Green Party
+US House NC District 10 (Green Party)	1	US House NC District 10	Green Party
+US House NC District 11 (Green Party)	1	US House NC District 11	Green Party
+US House NC District 12 (Green Party)	1	US House NC District 12	Green Party
+US House NC District 13 (Green Party)	1	US House NC District 13	Green Party
+US President (NC) (Green Party)	1	US President (NC)	Green Party
+NC Governor (Green Party)	1	NC Governor	Green Party
+US Senate NC (Green Party)	1	US Senate NC	Green Party
+NC Attorney General (Green Party)	1	NC Attorney General	Green Party
+NC Lieutenant Governor (Green Party)	1	NC Lieutenant Governor	Green Party
+NC Treasurer (Green Party)	1	NC Treasurer	Green Party
+NC Secretary of State (Green Party)	1	NC Secretary of State	Green Party
+NC Superintendent of Public Instruction (Green Party)	1	NC Superintendent of Public Instruction	Green Party
+NC Commissioner of Insurance (Green Party)	1	NC Commissioner of Insurance	Green Party
+NC Commissioner of Agriculture (Green Party)	1	NC Commissioner of Agriculture	Green Party
+NC Commissioner of Labor (Green Party)	1	NC Commissioner of Labor	Green Party
+NC Auditor (Green Party)	1	NC Auditor	Green Party
+NC House District 1 (Libertarian Party)	1	NC House District 1	Libertarian Party
+NC House District 2 (Libertarian Party)	1	NC House District 2	Libertarian Party
+NC House District 3 (Libertarian Party)	1	NC House District 3	Libertarian Party
+NC House District 4 (Libertarian Party)	1	NC House District 4	Libertarian Party
+NC House District 5 (Libertarian Party)	1	NC House District 5	Libertarian Party
+NC House District 6 (Libertarian Party)	1	NC House District 6	Libertarian Party
+NC House District 7 (Libertarian Party)	1	NC House District 7	Libertarian Party
+NC House District 8 (Libertarian Party)	1	NC House District 8	Libertarian Party
+NC House District 9 (Libertarian Party)	1	NC House District 9	Libertarian Party
+NC House District 10 (Libertarian Party)	1	NC House District 10	Libertarian Party
+NC House District 11 (Libertarian Party)	1	NC House District 11	Libertarian Party
+NC House District 12 (Libertarian Party)	1	NC House District 12	Libertarian Party
+NC House District 13 (Libertarian Party)	1	NC House District 13	Libertarian Party
+NC House District 14 (Libertarian Party)	1	NC House District 14	Libertarian Party
+NC House District 15 (Libertarian Party)	1	NC House District 15	Libertarian Party
+NC House District 16 (Libertarian Party)	1	NC House District 16	Libertarian Party
+NC House District 17 (Libertarian Party)	1	NC House District 17	Libertarian Party
+NC House District 18 (Libertarian Party)	1	NC House District 18	Libertarian Party
+NC House District 19 (Libertarian Party)	1	NC House District 19	Libertarian Party
+NC House District 20 (Libertarian Party)	1	NC House District 20	Libertarian Party
+NC House District 21 (Libertarian Party)	1	NC House District 21	Libertarian Party
+NC House District 22 (Libertarian Party)	1	NC House District 22	Libertarian Party
+NC House District 23 (Libertarian Party)	1	NC House District 23	Libertarian Party
+NC House District 24 (Libertarian Party)	1	NC House District 24	Libertarian Party
+NC House District 25 (Libertarian Party)	1	NC House District 25	Libertarian Party
+NC House District 26 (Libertarian Party)	1	NC House District 26	Libertarian Party
+NC House District 27 (Libertarian Party)	1	NC House District 27	Libertarian Party
+NC House District 28 (Libertarian Party)	1	NC House District 28	Libertarian Party
+NC House District 29 (Libertarian Party)	1	NC House District 29	Libertarian Party
+NC House District 30 (Libertarian Party)	1	NC House District 30	Libertarian Party
+NC House District 31 (Libertarian Party)	1	NC House District 31	Libertarian Party
+NC House District 32 (Libertarian Party)	1	NC House District 32	Libertarian Party
+NC House District 33 (Libertarian Party)	1	NC House District 33	Libertarian Party
+NC House District 34 (Libertarian Party)	1	NC House District 34	Libertarian Party
+NC House District 35 (Libertarian Party)	1	NC House District 35	Libertarian Party
+NC House District 36 (Libertarian Party)	1	NC House District 36	Libertarian Party
+NC House District 37 (Libertarian Party)	1	NC House District 37	Libertarian Party
+NC House District 38 (Libertarian Party)	1	NC House District 38	Libertarian Party
+NC House District 39 (Libertarian Party)	1	NC House District 39	Libertarian Party
+NC House District 40 (Libertarian Party)	1	NC House District 40	Libertarian Party
+NC House District 41 (Libertarian Party)	1	NC House District 41	Libertarian Party
+NC House District 42 (Libertarian Party)	1	NC House District 42	Libertarian Party
+NC House District 43 (Libertarian Party)	1	NC House District 43	Libertarian Party
+NC House District 44 (Libertarian Party)	1	NC House District 44	Libertarian Party
+NC House District 45 (Libertarian Party)	1	NC House District 45	Libertarian Party
+NC House District 46 (Libertarian Party)	1	NC House District 46	Libertarian Party
+NC House District 47 (Libertarian Party)	1	NC House District 47	Libertarian Party
+NC House District 48 (Libertarian Party)	1	NC House District 48	Libertarian Party
+NC House District 49 (Libertarian Party)	1	NC House District 49	Libertarian Party
+NC House District 50 (Libertarian Party)	1	NC House District 50	Libertarian Party
+NC House District 51 (Libertarian Party)	1	NC House District 51	Libertarian Party
+NC House District 52 (Libertarian Party)	1	NC House District 52	Libertarian Party
+NC House District 53 (Libertarian Party)	1	NC House District 53	Libertarian Party
+NC House District 54 (Libertarian Party)	1	NC House District 54	Libertarian Party
+NC House District 55 (Libertarian Party)	1	NC House District 55	Libertarian Party
+NC House District 56 (Libertarian Party)	1	NC House District 56	Libertarian Party
+NC House District 57 (Libertarian Party)	1	NC House District 57	Libertarian Party
+NC House District 58 (Libertarian Party)	1	NC House District 58	Libertarian Party
+NC House District 59 (Libertarian Party)	1	NC House District 59	Libertarian Party
+NC House District 60 (Libertarian Party)	1	NC House District 60	Libertarian Party
+NC House District 61 (Libertarian Party)	1	NC House District 61	Libertarian Party
+NC House District 62 (Libertarian Party)	1	NC House District 62	Libertarian Party
+NC House District 63 (Libertarian Party)	1	NC House District 63	Libertarian Party
+NC House District 64 (Libertarian Party)	1	NC House District 64	Libertarian Party
+NC House District 65 (Libertarian Party)	1	NC House District 65	Libertarian Party
+NC House District 66 (Libertarian Party)	1	NC House District 66	Libertarian Party
+NC House District 67 (Libertarian Party)	1	NC House District 67	Libertarian Party
+NC House District 68 (Libertarian Party)	1	NC House District 68	Libertarian Party
+NC House District 69 (Libertarian Party)	1	NC House District 69	Libertarian Party
+NC House District 70 (Libertarian Party)	1	NC House District 70	Libertarian Party
+NC House District 71 (Libertarian Party)	1	NC House District 71	Libertarian Party
+NC House District 72 (Libertarian Party)	1	NC House District 72	Libertarian Party
+NC House District 73 (Libertarian Party)	1	NC House District 73	Libertarian Party
+NC House District 74 (Libertarian Party)	1	NC House District 74	Libertarian Party
+NC House District 75 (Libertarian Party)	1	NC House District 75	Libertarian Party
+NC House District 76 (Libertarian Party)	1	NC House District 76	Libertarian Party
+NC House District 77 (Libertarian Party)	1	NC House District 77	Libertarian Party
+NC House District 78 (Libertarian Party)	1	NC House District 78	Libertarian Party
+NC House District 79 (Libertarian Party)	1	NC House District 79	Libertarian Party
+NC House District 80 (Libertarian Party)	1	NC House District 80	Libertarian Party
+NC House District 81 (Libertarian Party)	1	NC House District 81	Libertarian Party
+NC House District 82 (Libertarian Party)	1	NC House District 82	Libertarian Party
+NC House District 83 (Libertarian Party)	1	NC House District 83	Libertarian Party
+NC House District 84 (Libertarian Party)	1	NC House District 84	Libertarian Party
+NC House District 85 (Libertarian Party)	1	NC House District 85	Libertarian Party
+NC House District 86 (Libertarian Party)	1	NC House District 86	Libertarian Party
+NC House District 87 (Libertarian Party)	1	NC House District 87	Libertarian Party
+NC House District 88 (Libertarian Party)	1	NC House District 88	Libertarian Party
+NC House District 89 (Libertarian Party)	1	NC House District 89	Libertarian Party
+NC House District 90 (Libertarian Party)	1	NC House District 90	Libertarian Party
+NC House District 91 (Libertarian Party)	1	NC House District 91	Libertarian Party
+NC House District 92 (Libertarian Party)	1	NC House District 92	Libertarian Party
+NC House District 93 (Libertarian Party)	1	NC House District 93	Libertarian Party
+NC House District 94 (Libertarian Party)	1	NC House District 94	Libertarian Party
+NC House District 95 (Libertarian Party)	1	NC House District 95	Libertarian Party
+NC House District 96 (Libertarian Party)	1	NC House District 96	Libertarian Party
+NC House District 97 (Libertarian Party)	1	NC House District 97	Libertarian Party
+NC House District 98 (Libertarian Party)	1	NC House District 98	Libertarian Party
+NC House District 99 (Libertarian Party)	1	NC House District 99	Libertarian Party
+NC House District 100 (Libertarian Party)	1	NC House District 100	Libertarian Party
+NC House District 101 (Libertarian Party)	1	NC House District 101	Libertarian Party
+NC House District 102 (Libertarian Party)	1	NC House District 102	Libertarian Party
+NC House District 103 (Libertarian Party)	1	NC House District 103	Libertarian Party
+NC House District 104 (Libertarian Party)	1	NC House District 104	Libertarian Party
+NC House District 105 (Libertarian Party)	1	NC House District 105	Libertarian Party
+NC House District 106 (Libertarian Party)	1	NC House District 106	Libertarian Party
+NC House District 107 (Libertarian Party)	1	NC House District 107	Libertarian Party
+NC House District 108 (Libertarian Party)	1	NC House District 108	Libertarian Party
+NC House District 109 (Libertarian Party)	1	NC House District 109	Libertarian Party
+NC House District 110 (Libertarian Party)	1	NC House District 110	Libertarian Party
+NC House District 111 (Libertarian Party)	1	NC House District 111	Libertarian Party
+NC House District 112 (Libertarian Party)	1	NC House District 112	Libertarian Party
+NC House District 113 (Libertarian Party)	1	NC House District 113	Libertarian Party
+NC House District 114 (Libertarian Party)	1	NC House District 114	Libertarian Party
+NC House District 115 (Libertarian Party)	1	NC House District 115	Libertarian Party
+NC House District 116 (Libertarian Party)	1	NC House District 116	Libertarian Party
+NC House District 117 (Libertarian Party)	1	NC House District 117	Libertarian Party
+NC House District 118 (Libertarian Party)	1	NC House District 118	Libertarian Party
+NC House District 119 (Libertarian Party)	1	NC House District 119	Libertarian Party
+NC House District 120 (Libertarian Party)	1	NC House District 120	Libertarian Party
+NC Senate District 1 (Libertarian Party)	1	NC Senate District 1	Libertarian Party
+NC Senate District 2 (Libertarian Party)	1	NC Senate District 2	Libertarian Party
+NC Senate District 3 (Libertarian Party)	1	NC Senate District 3	Libertarian Party
+NC Senate District 4 (Libertarian Party)	1	NC Senate District 4	Libertarian Party
+NC Senate District 5 (Libertarian Party)	1	NC Senate District 5	Libertarian Party
+NC Senate District 6 (Libertarian Party)	1	NC Senate District 6	Libertarian Party
+NC Senate District 7 (Libertarian Party)	1	NC Senate District 7	Libertarian Party
+NC Senate District 8 (Libertarian Party)	1	NC Senate District 8	Libertarian Party
+NC Senate District 9 (Libertarian Party)	1	NC Senate District 9	Libertarian Party
+NC Senate District 10 (Libertarian Party)	1	NC Senate District 10	Libertarian Party
+NC Senate District 11 (Libertarian Party)	1	NC Senate District 11	Libertarian Party
+NC Senate District 12 (Libertarian Party)	1	NC Senate District 12	Libertarian Party
+NC Senate District 13 (Libertarian Party)	1	NC Senate District 13	Libertarian Party
+NC Senate District 14 (Libertarian Party)	1	NC Senate District 14	Libertarian Party
+NC Senate District 15 (Libertarian Party)	1	NC Senate District 15	Libertarian Party
+NC Senate District 16 (Libertarian Party)	1	NC Senate District 16	Libertarian Party
+NC Senate District 17 (Libertarian Party)	1	NC Senate District 17	Libertarian Party
+NC Senate District 18 (Libertarian Party)	1	NC Senate District 18	Libertarian Party
+NC Senate District 19 (Libertarian Party)	1	NC Senate District 19	Libertarian Party
+NC Senate District 20 (Libertarian Party)	1	NC Senate District 20	Libertarian Party
+NC Senate District 21 (Libertarian Party)	1	NC Senate District 21	Libertarian Party
+NC Senate District 22 (Libertarian Party)	1	NC Senate District 22	Libertarian Party
+NC Senate District 23 (Libertarian Party)	1	NC Senate District 23	Libertarian Party
+NC Senate District 24 (Libertarian Party)	1	NC Senate District 24	Libertarian Party
+NC Senate District 25 (Libertarian Party)	1	NC Senate District 25	Libertarian Party
+NC Senate District 26 (Libertarian Party)	1	NC Senate District 26	Libertarian Party
+NC Senate District 27 (Libertarian Party)	1	NC Senate District 27	Libertarian Party
+NC Senate District 28 (Libertarian Party)	1	NC Senate District 28	Libertarian Party
+NC Senate District 29 (Libertarian Party)	1	NC Senate District 29	Libertarian Party
+NC Senate District 30 (Libertarian Party)	1	NC Senate District 30	Libertarian Party
+NC Senate District 31 (Libertarian Party)	1	NC Senate District 31	Libertarian Party
+NC Senate District 32 (Libertarian Party)	1	NC Senate District 32	Libertarian Party
+NC Senate District 33 (Libertarian Party)	1	NC Senate District 33	Libertarian Party
+NC Senate District 34 (Libertarian Party)	1	NC Senate District 34	Libertarian Party
+NC Senate District 35 (Libertarian Party)	1	NC Senate District 35	Libertarian Party
+NC Senate District 36 (Libertarian Party)	1	NC Senate District 36	Libertarian Party
+NC Senate District 37 (Libertarian Party)	1	NC Senate District 37	Libertarian Party
+NC Senate District 38 (Libertarian Party)	1	NC Senate District 38	Libertarian Party
+NC Senate District 39 (Libertarian Party)	1	NC Senate District 39	Libertarian Party
+NC Senate District 40 (Libertarian Party)	1	NC Senate District 40	Libertarian Party
+NC Senate District 41 (Libertarian Party)	1	NC Senate District 41	Libertarian Party
+NC Senate District 42 (Libertarian Party)	1	NC Senate District 42	Libertarian Party
+NC Senate District 43 (Libertarian Party)	1	NC Senate District 43	Libertarian Party
+NC Senate District 44 (Libertarian Party)	1	NC Senate District 44	Libertarian Party
+NC Senate District 45 (Libertarian Party)	1	NC Senate District 45	Libertarian Party
+NC Senate District 46 (Libertarian Party)	1	NC Senate District 46	Libertarian Party
+NC Senate District 47 (Libertarian Party)	1	NC Senate District 47	Libertarian Party
+NC Senate District 48 (Libertarian Party)	1	NC Senate District 48	Libertarian Party
+NC Senate District 49 (Libertarian Party)	1	NC Senate District 49	Libertarian Party
+NC Senate District 50 (Libertarian Party)	1	NC Senate District 50	Libertarian Party
+US House NC District 1 (Libertarian Party)	1	US House NC District 1	Libertarian Party
+US House NC District 2 (Libertarian Party)	1	US House NC District 2	Libertarian Party
+US House NC District 3 (Libertarian Party)	1	US House NC District 3	Libertarian Party
+US House NC District 4 (Libertarian Party)	1	US House NC District 4	Libertarian Party
+US House NC District 5 (Libertarian Party)	1	US House NC District 5	Libertarian Party
+US House NC District 6 (Libertarian Party)	1	US House NC District 6	Libertarian Party
+US House NC District 7 (Libertarian Party)	1	US House NC District 7	Libertarian Party
+US House NC District 8 (Libertarian Party)	1	US House NC District 8	Libertarian Party
+US House NC District 9 (Libertarian Party)	1	US House NC District 9	Libertarian Party
+US House NC District 10 (Libertarian Party)	1	US House NC District 10	Libertarian Party
+US House NC District 11 (Libertarian Party)	1	US House NC District 11	Libertarian Party
+US House NC District 12 (Libertarian Party)	1	US House NC District 12	Libertarian Party
+US House NC District 13 (Libertarian Party)	1	US House NC District 13	Libertarian Party
+US President (NC) (Libertarian Party)	1	US President (NC)	Libertarian Party
+NC Governor (Libertarian Party)	1	NC Governor	Libertarian Party
+US Senate NC (Libertarian Party)	1	US Senate NC	Libertarian Party
+NC Attorney General (Libertarian Party)	1	NC Attorney General	Libertarian Party
+NC Lieutenant Governor (Libertarian Party)	1	NC Lieutenant Governor	Libertarian Party
+NC Treasurer (Libertarian Party)	1	NC Treasurer	Libertarian Party
+NC Secretary of State (Libertarian Party)	1	NC Secretary of State	Libertarian Party
+NC Superintendent of Public Instruction (Libertarian Party)	1	NC Superintendent of Public Instruction	Libertarian Party
+NC Commissioner of Insurance (Libertarian Party)	1	NC Commissioner of Insurance	Libertarian Party
+NC Commissioner of Agriculture (Libertarian Party)	1	NC Commissioner of Agriculture	Libertarian Party
+NC Commissioner of Labor (Libertarian Party)	1	NC Commissioner of Labor	Libertarian Party
+NC Auditor (Libertarian Party)	1	NC Auditor	Libertarian Party
+NC House District 1 (Unaffiliated)	1	NC House District 1	Unaffiliated
+NC House District 2 (Unaffiliated)	1	NC House District 2	Unaffiliated
+NC House District 3 (Unaffiliated)	1	NC House District 3	Unaffiliated
+NC House District 4 (Unaffiliated)	1	NC House District 4	Unaffiliated
+NC House District 5 (Unaffiliated)	1	NC House District 5	Unaffiliated
+NC House District 6 (Unaffiliated)	1	NC House District 6	Unaffiliated
+NC House District 7 (Unaffiliated)	1	NC House District 7	Unaffiliated
+NC House District 8 (Unaffiliated)	1	NC House District 8	Unaffiliated
+NC House District 9 (Unaffiliated)	1	NC House District 9	Unaffiliated
+NC House District 10 (Unaffiliated)	1	NC House District 10	Unaffiliated
+NC House District 11 (Unaffiliated)	1	NC House District 11	Unaffiliated
+NC House District 12 (Unaffiliated)	1	NC House District 12	Unaffiliated
+NC House District 13 (Unaffiliated)	1	NC House District 13	Unaffiliated
+NC House District 14 (Unaffiliated)	1	NC House District 14	Unaffiliated
+NC House District 15 (Unaffiliated)	1	NC House District 15	Unaffiliated
+NC House District 16 (Unaffiliated)	1	NC House District 16	Unaffiliated
+NC House District 17 (Unaffiliated)	1	NC House District 17	Unaffiliated
+NC House District 18 (Unaffiliated)	1	NC House District 18	Unaffiliated
+NC House District 19 (Unaffiliated)	1	NC House District 19	Unaffiliated
+NC House District 20 (Unaffiliated)	1	NC House District 20	Unaffiliated
+NC House District 21 (Unaffiliated)	1	NC House District 21	Unaffiliated
+NC House District 22 (Unaffiliated)	1	NC House District 22	Unaffiliated
+NC House District 23 (Unaffiliated)	1	NC House District 23	Unaffiliated
+NC House District 24 (Unaffiliated)	1	NC House District 24	Unaffiliated
+NC House District 25 (Unaffiliated)	1	NC House District 25	Unaffiliated
+NC House District 26 (Unaffiliated)	1	NC House District 26	Unaffiliated
+NC House District 27 (Unaffiliated)	1	NC House District 27	Unaffiliated
+NC House District 28 (Unaffiliated)	1	NC House District 28	Unaffiliated
+NC House District 29 (Unaffiliated)	1	NC House District 29	Unaffiliated
+NC House District 30 (Unaffiliated)	1	NC House District 30	Unaffiliated
+NC House District 31 (Unaffiliated)	1	NC House District 31	Unaffiliated
+NC House District 32 (Unaffiliated)	1	NC House District 32	Unaffiliated
+NC House District 33 (Unaffiliated)	1	NC House District 33	Unaffiliated
+NC House District 34 (Unaffiliated)	1	NC House District 34	Unaffiliated
+NC House District 35 (Unaffiliated)	1	NC House District 35	Unaffiliated
+NC House District 36 (Unaffiliated)	1	NC House District 36	Unaffiliated
+NC House District 37 (Unaffiliated)	1	NC House District 37	Unaffiliated
+NC House District 38 (Unaffiliated)	1	NC House District 38	Unaffiliated
+NC House District 39 (Unaffiliated)	1	NC House District 39	Unaffiliated
+NC House District 40 (Unaffiliated)	1	NC House District 40	Unaffiliated
+NC House District 41 (Unaffiliated)	1	NC House District 41	Unaffiliated
+NC House District 42 (Unaffiliated)	1	NC House District 42	Unaffiliated
+NC House District 43 (Unaffiliated)	1	NC House District 43	Unaffiliated
+NC House District 44 (Unaffiliated)	1	NC House District 44	Unaffiliated
+NC House District 45 (Unaffiliated)	1	NC House District 45	Unaffiliated
+NC House District 46 (Unaffiliated)	1	NC House District 46	Unaffiliated
+NC House District 47 (Unaffiliated)	1	NC House District 47	Unaffiliated
+NC House District 48 (Unaffiliated)	1	NC House District 48	Unaffiliated
+NC House District 49 (Unaffiliated)	1	NC House District 49	Unaffiliated
+NC House District 50 (Unaffiliated)	1	NC House District 50	Unaffiliated
+NC House District 51 (Unaffiliated)	1	NC House District 51	Unaffiliated
+NC House District 52 (Unaffiliated)	1	NC House District 52	Unaffiliated
+NC House District 53 (Unaffiliated)	1	NC House District 53	Unaffiliated
+NC House District 54 (Unaffiliated)	1	NC House District 54	Unaffiliated
+NC House District 55 (Unaffiliated)	1	NC House District 55	Unaffiliated
+NC House District 56 (Unaffiliated)	1	NC House District 56	Unaffiliated
+NC House District 57 (Unaffiliated)	1	NC House District 57	Unaffiliated
+NC House District 58 (Unaffiliated)	1	NC House District 58	Unaffiliated
+NC House District 59 (Unaffiliated)	1	NC House District 59	Unaffiliated
+NC House District 60 (Unaffiliated)	1	NC House District 60	Unaffiliated
+NC House District 61 (Unaffiliated)	1	NC House District 61	Unaffiliated
+NC House District 62 (Unaffiliated)	1	NC House District 62	Unaffiliated
+NC House District 63 (Unaffiliated)	1	NC House District 63	Unaffiliated
+NC House District 64 (Unaffiliated)	1	NC House District 64	Unaffiliated
+NC House District 65 (Unaffiliated)	1	NC House District 65	Unaffiliated
+NC House District 66 (Unaffiliated)	1	NC House District 66	Unaffiliated
+NC House District 67 (Unaffiliated)	1	NC House District 67	Unaffiliated
+NC House District 68 (Unaffiliated)	1	NC House District 68	Unaffiliated
+NC House District 69 (Unaffiliated)	1	NC House District 69	Unaffiliated
+NC House District 70 (Unaffiliated)	1	NC House District 70	Unaffiliated
+NC House District 71 (Unaffiliated)	1	NC House District 71	Unaffiliated
+NC House District 72 (Unaffiliated)	1	NC House District 72	Unaffiliated
+NC House District 73 (Unaffiliated)	1	NC House District 73	Unaffiliated
+NC House District 74 (Unaffiliated)	1	NC House District 74	Unaffiliated
+NC House District 75 (Unaffiliated)	1	NC House District 75	Unaffiliated
+NC House District 76 (Unaffiliated)	1	NC House District 76	Unaffiliated
+NC House District 77 (Unaffiliated)	1	NC House District 77	Unaffiliated
+NC House District 78 (Unaffiliated)	1	NC House District 78	Unaffiliated
+NC House District 79 (Unaffiliated)	1	NC House District 79	Unaffiliated
+NC House District 80 (Unaffiliated)	1	NC House District 80	Unaffiliated
+NC House District 81 (Unaffiliated)	1	NC House District 81	Unaffiliated
+NC House District 82 (Unaffiliated)	1	NC House District 82	Unaffiliated
+NC House District 83 (Unaffiliated)	1	NC House District 83	Unaffiliated
+NC House District 84 (Unaffiliated)	1	NC House District 84	Unaffiliated
+NC House District 85 (Unaffiliated)	1	NC House District 85	Unaffiliated
+NC House District 86 (Unaffiliated)	1	NC House District 86	Unaffiliated
+NC House District 87 (Unaffiliated)	1	NC House District 87	Unaffiliated
+NC House District 88 (Unaffiliated)	1	NC House District 88	Unaffiliated
+NC House District 89 (Unaffiliated)	1	NC House District 89	Unaffiliated
+NC House District 90 (Unaffiliated)	1	NC House District 90	Unaffiliated
+NC House District 91 (Unaffiliated)	1	NC House District 91	Unaffiliated
+NC House District 92 (Unaffiliated)	1	NC House District 92	Unaffiliated
+NC House District 93 (Unaffiliated)	1	NC House District 93	Unaffiliated
+NC House District 94 (Unaffiliated)	1	NC House District 94	Unaffiliated
+NC House District 95 (Unaffiliated)	1	NC House District 95	Unaffiliated
+NC House District 96 (Unaffiliated)	1	NC House District 96	Unaffiliated
+NC House District 97 (Unaffiliated)	1	NC House District 97	Unaffiliated
+NC House District 98 (Unaffiliated)	1	NC House District 98	Unaffiliated
+NC House District 99 (Unaffiliated)	1	NC House District 99	Unaffiliated
+NC House District 100 (Unaffiliated)	1	NC House District 100	Unaffiliated
+NC House District 101 (Unaffiliated)	1	NC House District 101	Unaffiliated
+NC House District 102 (Unaffiliated)	1	NC House District 102	Unaffiliated
+NC House District 103 (Unaffiliated)	1	NC House District 103	Unaffiliated
+NC House District 104 (Unaffiliated)	1	NC House District 104	Unaffiliated
+NC House District 105 (Unaffiliated)	1	NC House District 105	Unaffiliated
+NC House District 106 (Unaffiliated)	1	NC House District 106	Unaffiliated
+NC House District 107 (Unaffiliated)	1	NC House District 107	Unaffiliated
+NC House District 108 (Unaffiliated)	1	NC House District 108	Unaffiliated
+NC House District 109 (Unaffiliated)	1	NC House District 109	Unaffiliated
+NC House District 110 (Unaffiliated)	1	NC House District 110	Unaffiliated
+NC House District 111 (Unaffiliated)	1	NC House District 111	Unaffiliated
+NC House District 112 (Unaffiliated)	1	NC House District 112	Unaffiliated
+NC House District 113 (Unaffiliated)	1	NC House District 113	Unaffiliated
+NC House District 114 (Unaffiliated)	1	NC House District 114	Unaffiliated
+NC House District 115 (Unaffiliated)	1	NC House District 115	Unaffiliated
+NC House District 116 (Unaffiliated)	1	NC House District 116	Unaffiliated
+NC House District 117 (Unaffiliated)	1	NC House District 117	Unaffiliated
+NC House District 118 (Unaffiliated)	1	NC House District 118	Unaffiliated
+NC House District 119 (Unaffiliated)	1	NC House District 119	Unaffiliated
+NC House District 120 (Unaffiliated)	1	NC House District 120	Unaffiliated
+NC Senate District 1 (Unaffiliated)	1	NC Senate District 1	Unaffiliated
+NC Senate District 2 (Unaffiliated)	1	NC Senate District 2	Unaffiliated
+NC Senate District 3 (Unaffiliated)	1	NC Senate District 3	Unaffiliated
+NC Senate District 4 (Unaffiliated)	1	NC Senate District 4	Unaffiliated
+NC Senate District 5 (Unaffiliated)	1	NC Senate District 5	Unaffiliated
+NC Senate District 6 (Unaffiliated)	1	NC Senate District 6	Unaffiliated
+NC Senate District 7 (Unaffiliated)	1	NC Senate District 7	Unaffiliated
+NC Senate District 8 (Unaffiliated)	1	NC Senate District 8	Unaffiliated
+NC Senate District 9 (Unaffiliated)	1	NC Senate District 9	Unaffiliated
+NC Senate District 10 (Unaffiliated)	1	NC Senate District 10	Unaffiliated
+NC Senate District 11 (Unaffiliated)	1	NC Senate District 11	Unaffiliated
+NC Senate District 12 (Unaffiliated)	1	NC Senate District 12	Unaffiliated
+NC Senate District 13 (Unaffiliated)	1	NC Senate District 13	Unaffiliated
+NC Senate District 14 (Unaffiliated)	1	NC Senate District 14	Unaffiliated
+NC Senate District 15 (Unaffiliated)	1	NC Senate District 15	Unaffiliated
+NC Senate District 16 (Unaffiliated)	1	NC Senate District 16	Unaffiliated
+NC Senate District 17 (Unaffiliated)	1	NC Senate District 17	Unaffiliated
+NC Senate District 18 (Unaffiliated)	1	NC Senate District 18	Unaffiliated
+NC Senate District 19 (Unaffiliated)	1	NC Senate District 19	Unaffiliated
+NC Senate District 20 (Unaffiliated)	1	NC Senate District 20	Unaffiliated
+NC Senate District 21 (Unaffiliated)	1	NC Senate District 21	Unaffiliated
+NC Senate District 22 (Unaffiliated)	1	NC Senate District 22	Unaffiliated
+NC Senate District 23 (Unaffiliated)	1	NC Senate District 23	Unaffiliated
+NC Senate District 24 (Unaffiliated)	1	NC Senate District 24	Unaffiliated
+NC Senate District 25 (Unaffiliated)	1	NC Senate District 25	Unaffiliated
+NC Senate District 26 (Unaffiliated)	1	NC Senate District 26	Unaffiliated
+NC Senate District 27 (Unaffiliated)	1	NC Senate District 27	Unaffiliated
+NC Senate District 28 (Unaffiliated)	1	NC Senate District 28	Unaffiliated
+NC Senate District 29 (Unaffiliated)	1	NC Senate District 29	Unaffiliated
+NC Senate District 30 (Unaffiliated)	1	NC Senate District 30	Unaffiliated
+NC Senate District 31 (Unaffiliated)	1	NC Senate District 31	Unaffiliated
+NC Senate District 32 (Unaffiliated)	1	NC Senate District 32	Unaffiliated
+NC Senate District 33 (Unaffiliated)	1	NC Senate District 33	Unaffiliated
+NC Senate District 34 (Unaffiliated)	1	NC Senate District 34	Unaffiliated
+NC Senate District 35 (Unaffiliated)	1	NC Senate District 35	Unaffiliated
+NC Senate District 36 (Unaffiliated)	1	NC Senate District 36	Unaffiliated
+NC Senate District 37 (Unaffiliated)	1	NC Senate District 37	Unaffiliated
+NC Senate District 38 (Unaffiliated)	1	NC Senate District 38	Unaffiliated
+NC Senate District 39 (Unaffiliated)	1	NC Senate District 39	Unaffiliated
+NC Senate District 40 (Unaffiliated)	1	NC Senate District 40	Unaffiliated
+NC Senate District 41 (Unaffiliated)	1	NC Senate District 41	Unaffiliated
+NC Senate District 42 (Unaffiliated)	1	NC Senate District 42	Unaffiliated
+NC Senate District 43 (Unaffiliated)	1	NC Senate District 43	Unaffiliated
+NC Senate District 44 (Unaffiliated)	1	NC Senate District 44	Unaffiliated
+NC Senate District 45 (Unaffiliated)	1	NC Senate District 45	Unaffiliated
+NC Senate District 46 (Unaffiliated)	1	NC Senate District 46	Unaffiliated
+NC Senate District 47 (Unaffiliated)	1	NC Senate District 47	Unaffiliated
+NC Senate District 48 (Unaffiliated)	1	NC Senate District 48	Unaffiliated
+NC Senate District 49 (Unaffiliated)	1	NC Senate District 49	Unaffiliated
+NC Senate District 50 (Unaffiliated)	1	NC Senate District 50	Unaffiliated
+US House NC District 1 (Unaffiliated)	1	US House NC District 1	Unaffiliated
+US House NC District 2 (Unaffiliated)	1	US House NC District 2	Unaffiliated
+US House NC District 3 (Unaffiliated)	1	US House NC District 3	Unaffiliated
+US House NC District 4 (Unaffiliated)	1	US House NC District 4	Unaffiliated
+US House NC District 5 (Unaffiliated)	1	US House NC District 5	Unaffiliated
+US House NC District 6 (Unaffiliated)	1	US House NC District 6	Unaffiliated
+US House NC District 7 (Unaffiliated)	1	US House NC District 7	Unaffiliated
+US House NC District 8 (Unaffiliated)	1	US House NC District 8	Unaffiliated
+US House NC District 9 (Unaffiliated)	1	US House NC District 9	Unaffiliated
+US House NC District 10 (Unaffiliated)	1	US House NC District 10	Unaffiliated
+US House NC District 11 (Unaffiliated)	1	US House NC District 11	Unaffiliated
+US House NC District 12 (Unaffiliated)	1	US House NC District 12	Unaffiliated
+US House NC District 13 (Unaffiliated)	1	US House NC District 13	Unaffiliated
+US President (NC) (Unaffiliated)	1	US President (NC)	Unaffiliated
+NC Governor (Unaffiliated)	1	NC Governor	Unaffiliated
+US Senate NC (Unaffiliated)	1	US Senate NC	Unaffiliated
+NC Attorney General (Unaffiliated)	1	NC Attorney General	Unaffiliated
+NC Lieutenant Governor (Unaffiliated)	1	NC Lieutenant Governor	Unaffiliated
+NC Treasurer (Unaffiliated)	1	NC Treasurer	Unaffiliated
+NC Secretary of State (Unaffiliated)	1	NC Secretary of State	Unaffiliated
+NC Superintendent of Public Instruction (Unaffiliated)	1	NC Superintendent of Public Instruction	Unaffiliated
+NC Commissioner of Insurance (Unaffiliated)	1	NC Commissioner of Insurance	Unaffiliated
+NC Commissioner of Agriculture (Unaffiliated)	1	NC Commissioner of Agriculture	Unaffiliated
+NC Commissioner of Labor (Unaffiliated)	1	NC Commissioner of Labor	Unaffiliated
+NC Auditor (Unaffiliated)	1	NC Auditor	Unaffiliated
+NC House District 1 (Constitution Party)	1	NC House District 1	Constitution Party
+NC House District 2 (Constitution Party)	1	NC House District 2	Constitution Party
+NC House District 3 (Constitution Party)	1	NC House District 3	Constitution Party
+NC House District 4 (Constitution Party)	1	NC House District 4	Constitution Party
+NC House District 5 (Constitution Party)	1	NC House District 5	Constitution Party
+NC House District 6 (Constitution Party)	1	NC House District 6	Constitution Party
+NC House District 7 (Constitution Party)	1	NC House District 7	Constitution Party
+NC House District 8 (Constitution Party)	1	NC House District 8	Constitution Party
+NC House District 9 (Constitution Party)	1	NC House District 9	Constitution Party
+NC House District 10 (Constitution Party)	1	NC House District 10	Constitution Party
+NC House District 11 (Constitution Party)	1	NC House District 11	Constitution Party
+NC House District 12 (Constitution Party)	1	NC House District 12	Constitution Party
+NC House District 13 (Constitution Party)	1	NC House District 13	Constitution Party
+NC House District 14 (Constitution Party)	1	NC House District 14	Constitution Party
+NC House District 15 (Constitution Party)	1	NC House District 15	Constitution Party
+NC House District 16 (Constitution Party)	1	NC House District 16	Constitution Party
+NC House District 17 (Constitution Party)	1	NC House District 17	Constitution Party
+NC House District 18 (Constitution Party)	1	NC House District 18	Constitution Party
+NC House District 19 (Constitution Party)	1	NC House District 19	Constitution Party
+NC House District 20 (Constitution Party)	1	NC House District 20	Constitution Party
+NC House District 21 (Constitution Party)	1	NC House District 21	Constitution Party
+NC House District 22 (Constitution Party)	1	NC House District 22	Constitution Party
+NC House District 23 (Constitution Party)	1	NC House District 23	Constitution Party
+NC House District 24 (Constitution Party)	1	NC House District 24	Constitution Party
+NC House District 25 (Constitution Party)	1	NC House District 25	Constitution Party
+NC House District 26 (Constitution Party)	1	NC House District 26	Constitution Party
+NC House District 27 (Constitution Party)	1	NC House District 27	Constitution Party
+NC House District 28 (Constitution Party)	1	NC House District 28	Constitution Party
+NC House District 29 (Constitution Party)	1	NC House District 29	Constitution Party
+NC House District 30 (Constitution Party)	1	NC House District 30	Constitution Party
+NC House District 31 (Constitution Party)	1	NC House District 31	Constitution Party
+NC House District 32 (Constitution Party)	1	NC House District 32	Constitution Party
+NC House District 33 (Constitution Party)	1	NC House District 33	Constitution Party
+NC House District 34 (Constitution Party)	1	NC House District 34	Constitution Party
+NC House District 35 (Constitution Party)	1	NC House District 35	Constitution Party
+NC House District 36 (Constitution Party)	1	NC House District 36	Constitution Party
+NC House District 37 (Constitution Party)	1	NC House District 37	Constitution Party
+NC House District 38 (Constitution Party)	1	NC House District 38	Constitution Party
+NC House District 39 (Constitution Party)	1	NC House District 39	Constitution Party
+NC House District 40 (Constitution Party)	1	NC House District 40	Constitution Party
+NC House District 41 (Constitution Party)	1	NC House District 41	Constitution Party
+NC House District 42 (Constitution Party)	1	NC House District 42	Constitution Party
+NC House District 43 (Constitution Party)	1	NC House District 43	Constitution Party
+NC House District 44 (Constitution Party)	1	NC House District 44	Constitution Party
+NC House District 45 (Constitution Party)	1	NC House District 45	Constitution Party
+NC House District 46 (Constitution Party)	1	NC House District 46	Constitution Party
+NC House District 47 (Constitution Party)	1	NC House District 47	Constitution Party
+NC House District 48 (Constitution Party)	1	NC House District 48	Constitution Party
+NC House District 49 (Constitution Party)	1	NC House District 49	Constitution Party
+NC House District 50 (Constitution Party)	1	NC House District 50	Constitution Party
+NC House District 51 (Constitution Party)	1	NC House District 51	Constitution Party
+NC House District 52 (Constitution Party)	1	NC House District 52	Constitution Party
+NC House District 53 (Constitution Party)	1	NC House District 53	Constitution Party
+NC House District 54 (Constitution Party)	1	NC House District 54	Constitution Party
+NC House District 55 (Constitution Party)	1	NC House District 55	Constitution Party
+NC House District 56 (Constitution Party)	1	NC House District 56	Constitution Party
+NC House District 57 (Constitution Party)	1	NC House District 57	Constitution Party
+NC House District 58 (Constitution Party)	1	NC House District 58	Constitution Party
+NC House District 59 (Constitution Party)	1	NC House District 59	Constitution Party
+NC House District 60 (Constitution Party)	1	NC House District 60	Constitution Party
+NC House District 61 (Constitution Party)	1	NC House District 61	Constitution Party
+NC House District 62 (Constitution Party)	1	NC House District 62	Constitution Party
+NC House District 63 (Constitution Party)	1	NC House District 63	Constitution Party
+NC House District 64 (Constitution Party)	1	NC House District 64	Constitution Party
+NC House District 65 (Constitution Party)	1	NC House District 65	Constitution Party
+NC House District 66 (Constitution Party)	1	NC House District 66	Constitution Party
+NC House District 67 (Constitution Party)	1	NC House District 67	Constitution Party
+NC House District 68 (Constitution Party)	1	NC House District 68	Constitution Party
+NC House District 69 (Constitution Party)	1	NC House District 69	Constitution Party
+NC House District 70 (Constitution Party)	1	NC House District 70	Constitution Party
+NC House District 71 (Constitution Party)	1	NC House District 71	Constitution Party
+NC House District 72 (Constitution Party)	1	NC House District 72	Constitution Party
+NC House District 73 (Constitution Party)	1	NC House District 73	Constitution Party
+NC House District 74 (Constitution Party)	1	NC House District 74	Constitution Party
+NC House District 75 (Constitution Party)	1	NC House District 75	Constitution Party
+NC House District 76 (Constitution Party)	1	NC House District 76	Constitution Party
+NC House District 77 (Constitution Party)	1	NC House District 77	Constitution Party
+NC House District 78 (Constitution Party)	1	NC House District 78	Constitution Party
+NC House District 79 (Constitution Party)	1	NC House District 79	Constitution Party
+NC House District 80 (Constitution Party)	1	NC House District 80	Constitution Party
+NC House District 81 (Constitution Party)	1	NC House District 81	Constitution Party
+NC House District 82 (Constitution Party)	1	NC House District 82	Constitution Party
+NC House District 83 (Constitution Party)	1	NC House District 83	Constitution Party
+NC House District 84 (Constitution Party)	1	NC House District 84	Constitution Party
+NC House District 85 (Constitution Party)	1	NC House District 85	Constitution Party
+NC House District 86 (Constitution Party)	1	NC House District 86	Constitution Party
+NC House District 87 (Constitution Party)	1	NC House District 87	Constitution Party
+NC House District 88 (Constitution Party)	1	NC House District 88	Constitution Party
+NC House District 89 (Constitution Party)	1	NC House District 89	Constitution Party
+NC House District 90 (Constitution Party)	1	NC House District 90	Constitution Party
+NC House District 91 (Constitution Party)	1	NC House District 91	Constitution Party
+NC House District 92 (Constitution Party)	1	NC House District 92	Constitution Party
+NC House District 93 (Constitution Party)	1	NC House District 93	Constitution Party
+NC House District 94 (Constitution Party)	1	NC House District 94	Constitution Party
+NC House District 95 (Constitution Party)	1	NC House District 95	Constitution Party
+NC House District 96 (Constitution Party)	1	NC House District 96	Constitution Party
+NC House District 97 (Constitution Party)	1	NC House District 97	Constitution Party
+NC House District 98 (Constitution Party)	1	NC House District 98	Constitution Party
+NC House District 99 (Constitution Party)	1	NC House District 99	Constitution Party
+NC House District 100 (Constitution Party)	1	NC House District 100	Constitution Party
+NC House District 101 (Constitution Party)	1	NC House District 101	Constitution Party
+NC House District 102 (Constitution Party)	1	NC House District 102	Constitution Party
+NC House District 103 (Constitution Party)	1	NC House District 103	Constitution Party
+NC House District 104 (Constitution Party)	1	NC House District 104	Constitution Party
+NC House District 105 (Constitution Party)	1	NC House District 105	Constitution Party
+NC House District 106 (Constitution Party)	1	NC House District 106	Constitution Party
+NC House District 107 (Constitution Party)	1	NC House District 107	Constitution Party
+NC House District 108 (Constitution Party)	1	NC House District 108	Constitution Party
+NC House District 109 (Constitution Party)	1	NC House District 109	Constitution Party
+NC House District 110 (Constitution Party)	1	NC House District 110	Constitution Party
+NC House District 111 (Constitution Party)	1	NC House District 111	Constitution Party
+NC House District 112 (Constitution Party)	1	NC House District 112	Constitution Party
+NC House District 113 (Constitution Party)	1	NC House District 113	Constitution Party
+NC House District 114 (Constitution Party)	1	NC House District 114	Constitution Party
+NC House District 115 (Constitution Party)	1	NC House District 115	Constitution Party
+NC House District 116 (Constitution Party)	1	NC House District 116	Constitution Party
+NC House District 117 (Constitution Party)	1	NC House District 117	Constitution Party
+NC House District 118 (Constitution Party)	1	NC House District 118	Constitution Party
+NC House District 119 (Constitution Party)	1	NC House District 119	Constitution Party
+NC House District 120 (Constitution Party)	1	NC House District 120	Constitution Party
+NC Senate District 1 (Constitution Party)	1	NC Senate District 1	Constitution Party
+NC Senate District 2 (Constitution Party)	1	NC Senate District 2	Constitution Party
+NC Senate District 3 (Constitution Party)	1	NC Senate District 3	Constitution Party
+NC Senate District 4 (Constitution Party)	1	NC Senate District 4	Constitution Party
+NC Senate District 5 (Constitution Party)	1	NC Senate District 5	Constitution Party
+NC Senate District 6 (Constitution Party)	1	NC Senate District 6	Constitution Party
+NC Senate District 7 (Constitution Party)	1	NC Senate District 7	Constitution Party
+NC Senate District 8 (Constitution Party)	1	NC Senate District 8	Constitution Party
+NC Senate District 9 (Constitution Party)	1	NC Senate District 9	Constitution Party
+NC Senate District 10 (Constitution Party)	1	NC Senate District 10	Constitution Party
+NC Senate District 11 (Constitution Party)	1	NC Senate District 11	Constitution Party
+NC Senate District 12 (Constitution Party)	1	NC Senate District 12	Constitution Party
+NC Senate District 13 (Constitution Party)	1	NC Senate District 13	Constitution Party
+NC Senate District 14 (Constitution Party)	1	NC Senate District 14	Constitution Party
+NC Senate District 15 (Constitution Party)	1	NC Senate District 15	Constitution Party
+NC Senate District 16 (Constitution Party)	1	NC Senate District 16	Constitution Party
+NC Senate District 17 (Constitution Party)	1	NC Senate District 17	Constitution Party
+NC Senate District 18 (Constitution Party)	1	NC Senate District 18	Constitution Party
+NC Senate District 19 (Constitution Party)	1	NC Senate District 19	Constitution Party
+NC Senate District 20 (Constitution Party)	1	NC Senate District 20	Constitution Party
+NC Senate District 21 (Constitution Party)	1	NC Senate District 21	Constitution Party
+NC Senate District 22 (Constitution Party)	1	NC Senate District 22	Constitution Party
+NC Senate District 23 (Constitution Party)	1	NC Senate District 23	Constitution Party
+NC Senate District 24 (Constitution Party)	1	NC Senate District 24	Constitution Party
+NC Senate District 25 (Constitution Party)	1	NC Senate District 25	Constitution Party
+NC Senate District 26 (Constitution Party)	1	NC Senate District 26	Constitution Party
+NC Senate District 27 (Constitution Party)	1	NC Senate District 27	Constitution Party
+NC Senate District 28 (Constitution Party)	1	NC Senate District 28	Constitution Party
+NC Senate District 29 (Constitution Party)	1	NC Senate District 29	Constitution Party
+NC Senate District 30 (Constitution Party)	1	NC Senate District 30	Constitution Party
+NC Senate District 31 (Constitution Party)	1	NC Senate District 31	Constitution Party
+NC Senate District 32 (Constitution Party)	1	NC Senate District 32	Constitution Party
+NC Senate District 33 (Constitution Party)	1	NC Senate District 33	Constitution Party
+NC Senate District 34 (Constitution Party)	1	NC Senate District 34	Constitution Party
+NC Senate District 35 (Constitution Party)	1	NC Senate District 35	Constitution Party
+NC Senate District 36 (Constitution Party)	1	NC Senate District 36	Constitution Party
+NC Senate District 37 (Constitution Party)	1	NC Senate District 37	Constitution Party
+NC Senate District 38 (Constitution Party)	1	NC Senate District 38	Constitution Party
+NC Senate District 39 (Constitution Party)	1	NC Senate District 39	Constitution Party
+NC Senate District 40 (Constitution Party)	1	NC Senate District 40	Constitution Party
+NC Senate District 41 (Constitution Party)	1	NC Senate District 41	Constitution Party
+NC Senate District 42 (Constitution Party)	1	NC Senate District 42	Constitution Party
+NC Senate District 43 (Constitution Party)	1	NC Senate District 43	Constitution Party
+NC Senate District 44 (Constitution Party)	1	NC Senate District 44	Constitution Party
+NC Senate District 45 (Constitution Party)	1	NC Senate District 45	Constitution Party
+NC Senate District 46 (Constitution Party)	1	NC Senate District 46	Constitution Party
+NC Senate District 47 (Constitution Party)	1	NC Senate District 47	Constitution Party
+NC Senate District 48 (Constitution Party)	1	NC Senate District 48	Constitution Party
+NC Senate District 49 (Constitution Party)	1	NC Senate District 49	Constitution Party
+NC Senate District 50 (Constitution Party)	1	NC Senate District 50	Constitution Party
+US House NC District 1 (Constitution Party)	1	US House NC District 1	Constitution Party
+US House NC District 2 (Constitution Party)	1	US House NC District 2	Constitution Party
+US House NC District 3 (Constitution Party)	1	US House NC District 3	Constitution Party
+US House NC District 4 (Constitution Party)	1	US House NC District 4	Constitution Party
+US House NC District 5 (Constitution Party)	1	US House NC District 5	Constitution Party
+US House NC District 6 (Constitution Party)	1	US House NC District 6	Constitution Party
+US House NC District 7 (Constitution Party)	1	US House NC District 7	Constitution Party
+US House NC District 8 (Constitution Party)	1	US House NC District 8	Constitution Party
+US House NC District 9 (Constitution Party)	1	US House NC District 9	Constitution Party
+US House NC District 10 (Constitution Party)	1	US House NC District 10	Constitution Party
+US House NC District 11 (Constitution Party)	1	US House NC District 11	Constitution Party
+US House NC District 12 (Constitution Party)	1	US House NC District 12	Constitution Party
+US House NC District 13 (Constitution Party)	1	US House NC District 13	Constitution Party
+US President (NC) (Constitution Party)	1	US President (NC)	Constitution Party
+NC Governor (Constitution Party)	1	NC Governor	Constitution Party
+US Senate NC (Constitution Party)	1	US Senate NC	Constitution Party
+NC Attorney General (Constitution Party)	1	NC Attorney General	Constitution Party
+NC Lieutenant Governor (Constitution Party)	1	NC Lieutenant Governor	Constitution Party
+NC Treasurer (Constitution Party)	1	NC Treasurer	Constitution Party
+NC Secretary of State (Constitution Party)	1	NC Secretary of State	Constitution Party
+NC Superintendent of Public Instruction (Constitution Party)	1	NC Superintendent of Public Instruction	Constitution Party
+NC Commissioner of Insurance (Constitution Party)	1	NC Commissioner of Insurance	Constitution Party
+NC Commissioner of Agriculture (Constitution Party)	1	NC Commissioner of Agriculture	Constitution Party
+NC Commissioner of Labor (Constitution Party)	1	NC Commissioner of Labor	Constitution Party
+NC Auditor (Constitution Party)	1	NC Auditor	Constitution Party
