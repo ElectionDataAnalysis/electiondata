@@ -19,7 +19,6 @@ def aggregate_results(election, jurisdiction, contest_type, by_vote_type):
     datafile_list, e = db.data_file_list(cursor, election_id, by="Id")
     if e:
         return e
-    by = "Id"
     if len(datafile_list) == 0:
         return f"No datafiles found for Election_Id {election_id}"
 
