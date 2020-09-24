@@ -406,7 +406,6 @@ def assign_anomaly_score(data):
     distinct combination of contest, reporting unit type, and vote type. Each
     combination of those would get assigned an ID. This means rows may get added
     to the dataframe if needed."""
-    data = data[data["Contest_Id"] == 15603]
 
     # Assign a ranking for each candidate by votes for each contest
     if "total" not in data["CountItemType"].unique():
@@ -468,30 +467,32 @@ def assign_anomaly_score(data):
         ranked_df, how="inner", on=["Contest_Id", "Selection"]
     )
 
-    # assign unit_ids to unique combination of contest, ru_type, and count type
+    # assign temporary unit_ids to unique combination of contest, 
+    # ru_type, and count type. These will be updated later to account
+    # for 2 candidate pairings
     df_unit = grouped_df[
         ["Contest_Id", "ReportingUnitType_Id", "CountItemType"]
     ].drop_duplicates()
     df_unit = df_unit.reset_index()
-    df_unit["unit_id"] = df_unit.index
+    df_unit["unit_id_tmp"] = df_unit.index
     df_with_units = grouped_df.merge(
         df_unit, how="left", on=["Contest_Id", "ReportingUnitType_Id", "CountItemType"]
     )
 
     # loop through each unit ID and assign anomaly scores
-    unit_ids = df_with_units["unit_id"].unique()
+    # also update the "real" unit_id which takes into account pairing of candidates
+    unit_ids_tmp = df_with_units["unit_id_tmp"].unique()
+    unit_id = 0
     df = pd.DataFrame()
     # for each unit ID
-    for unit_id in unit_ids:
+    for unit_id_tmp in unit_ids_tmp:
         # grab all the data there
-        temp_df = df_with_units[df_with_units["unit_id"] == unit_id]
-        #total = temp_df.groupby("ReportingUnit_Id")["Count"].sum().reset_index()
-        #total.rename(columns={"Count": "reporting_unit_total"}, inplace=True)
-        #temp_df = temp_df.merge(total, how="inner", on="ReportingUnit_Id")
-        # pivot so each candidate gets own column
+        temp_df = df_with_units[df_with_units["unit_id_tmp"] == unit_id_tmp]
         scored_df = pd.DataFrame()
         for i in range(2, int(temp_df["rank"].max()) + 1):
             selection_df = temp_df[temp_df["rank"].isin([1, i])]
+            selection_df["unit_id"] = unit_id
+            unit_id += 1
             total = selection_df.groupby("ReportingUnit_Id")["Count"].sum().reset_index()
             total.rename(columns={"Count": "reporting_unit_total"}, inplace=True)
             selection_df = selection_df.merge(total, how="inner", on="ReportingUnit_Id")
@@ -536,26 +537,27 @@ def assign_anomaly_score(data):
 
 def get_most_anomalous(data, n):
     """gets the n contests with the highest margin ratio score"""
-    data["abs_margins"] = data["margin_ratio"].abs()
-    margins = list(data["abs_margins"].unique())
+    data = data[data["votes_at_stake"] > 0]
+    margin_data = data[data["score"] > 2.3]
+    margins = list(margin_data["margin_ratio"].unique())
     margins.sort(reverse=True)
     top_margins = margins[0:n]
-    data_by_margin = data[data["abs_margins"].isin(top_margins)]
+    by_margin = margin_data[margin_data["margin_ratio"].isin(top_margins)]
+    units_by_margin = by_margin["unit_id"].unique()
+    data_by_margin = data[data["unit_id"].isin(units_by_margin)]
 
     scores = list(data["score"].unique())
     scores.sort(reverse=True)
-    top_scores = scores[0:3]
-    #unit_id = data[data["score"].isin(top_scores)].iloc[0]["unit_id"]
-    #data_by_score = data[data["unit_id"] == unit_id]
+    top_scores = scores[0:1]
+    unit_id = data[data["score"].isin(top_scores)].iloc[0]["unit_id"]
+    data_by_score = data[data["unit_id"] == unit_id]
 
-    # if data_by_score.iloc[0]["unit_id"] in set(data_by_margin["unit_id"].unique()):
-    #     data = data_by_margin
-    # else:
-    #     min_score = data_by_margin["abs_margins"].min()
-    #     data_by_margin = data_by_margin[data_by_margin["abs_margins"] != min_score]
-    #     data = pd.concat([data_by_margin, data_by_score])
-    unit_ids = data[data["score"].isin(top_scores)]["unit_id"]
-    data = data[data["unit_id"].isin(unit_ids)]
+    if data_by_score.iloc[0]["unit_id"] in set(data_by_margin["unit_id"].unique()):
+        data = data_by_margin
+    else:
+        min_score = data_by_margin["margin_ratio"].min()
+        data_by_margin = data_by_margin[data_by_margin["margin_ratio"] != min_score]
+        data = pd.concat([data_by_margin, data_by_score])
 
     zeros_df = data[
         [
@@ -679,13 +681,20 @@ def calculate_votes_at_stake(data):
                 reported_bucket_total - not_winner_adj_bucket_total
             )
 
-            # calculate margins by raw numbers
+            # calculate margins by raw numbers for the bucket
             contest_margin = winner_bucket_total - not_winner_bucket_total
             adj_contest_margin = winner_adj_bucket_total - not_winner_adj_bucket_total
-            temp_df["margin_ratio"] = (
-                contest_margin - adj_contest_margin
-            ) / contest_margin
+
+            # calculate margins by raw numbers for the entire contest
+            contest_margin_ttl = (
+                anomalous_df[anomalous_df["rank"] == 1].iloc[0]["ind_total"]
+                 - anomalous_df[anomalous_df["rank"] != 1].iloc[0]["ind_total"]
+            )
+            # temp_df["margin_ratio"] = (
+            #     contest_margin - adj_contest_margin
+            # ) / contest_margin
             temp_df["votes_at_stake"] = contest_margin - adj_contest_margin
+            temp_df["margin_ratio"] = temp_df["votes_at_stake"] / contest_margin_ttl
         except:
             temp_df["margin_ratio"] = 0
             temp_df["votes_at_stake"] = 0
