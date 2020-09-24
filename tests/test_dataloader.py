@@ -85,7 +85,7 @@ def test_nc_statewide_totals():
         check_contest_totals(
             "2018 General",
             "North Carolina",
-            "North Carolina;US Congress House of Representatives District 3",
+            "US House NC District 3",
         )
         == 187901
     )
@@ -96,7 +96,7 @@ def test_nc_senate_totals():
         check_contest_totals(
             "2018 General",
             "North Carolina",
-            "North Carolina;General Assembly Senate District 15",
+            "NC Senate District 15",
         )
         == 83175
     )
@@ -107,7 +107,7 @@ def test_nc_house_totals():
         check_contest_totals(
             "2018 General",
             "North Carolina",
-            "North Carolina;General Assembly House of Representatives District 1",
+            "NC House District 1",
         )
         == 27775
     )
@@ -118,7 +118,7 @@ def test_nc_contest_by_vote_type():
         check_count_type_totals(
             "2018 General",
             "North Carolina",
-            "North Carolina;US Congress House of Representatives District 4",
+            "US House NC District 4",
             "absentee-mail",
         )
         == 10778
