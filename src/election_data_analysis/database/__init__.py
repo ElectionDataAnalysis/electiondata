@@ -119,7 +119,7 @@ def remove_database(params: dict) -> dict:
             err,
             "system",
             "database.remove_database",
-            f"Error while dropping database {dbname}: {e}"
+            f"Error while dropping database {params['dbname']}: {e}"
         )
     return err
 
