@@ -365,7 +365,7 @@ def create_bar(
             temp_df, values="Count", index=["Name"], columns="Selection"
         ).reset_index()
         score_df = temp_df.groupby("Name")[
-            "score", "margins", "margins_pct", "margin_ratio"
+            ["score", "margins", "margins_pct", "margin_ratio"]
         ].mean()
         pivot_df = (
             pivot_df.merge(score_df, how="inner", on="Name")
@@ -490,7 +490,7 @@ def assign_anomaly_score(data):
         temp_df = df_with_units[df_with_units["unit_id_tmp"] == unit_id_tmp]
         scored_df = pd.DataFrame()
         for i in range(2, int(temp_df["rank"].max()) + 1):
-            selection_df = temp_df[temp_df["rank"].isin([1, i])]
+            selection_df = temp_df[temp_df["rank"].isin([1, i])].copy()
             selection_df["unit_id"] = unit_id
             unit_id += 1
             total = selection_df.groupby("ReportingUnit_Id")["Count"].sum().reset_index()
@@ -632,7 +632,7 @@ def calculate_votes_at_stake(data):
     df = pd.DataFrame()
     unit_ids = data["unit_id"].unique()
     for unit_id in unit_ids:
-        temp_df = data[data["unit_id"] == unit_id]
+        temp_df = data[data["unit_id"] == unit_id].copy()
         try:
             # get a df of the most anomalous pairing
             max_score = temp_df["score"].max()
@@ -690,9 +690,6 @@ def calculate_votes_at_stake(data):
                 anomalous_df[anomalous_df["rank"] == 1].iloc[0]["ind_total"]
                  - anomalous_df[anomalous_df["rank"] != 1].iloc[0]["ind_total"]
             )
-            # temp_df["margin_ratio"] = (
-            #     contest_margin - adj_contest_margin
-            # ) / contest_margin
             temp_df["votes_at_stake"] = contest_margin - adj_contest_margin
             temp_df["margin_ratio"] = temp_df["votes_at_stake"] / contest_margin_ttl
         except:
