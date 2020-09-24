@@ -1,4 +1,5 @@
 from election_data_analysis import database as db
+from election_data_analysis import user_interface as ui
 from election_data_analysis import Analyzer
 import pandas as pd
 import os
@@ -10,8 +11,8 @@ def aggregate_results(election, jurisdiction, contest_type, by_vote_type):
     param_file = os.path.join(one_up, "src", "run_time.ini")
     a = Analyzer(param_file)
     election_id = db.name_to_id(a.session, "Election", election)
-    jurisdiction_id = db.name_to_id(a.session, "ReportingUnit", election)
-
+    if not election_id:
+        return f"No Election record found in database for {election}"
     connection = a.session.bind.raw_connection()
     cursor = connection.cursor()
 
@@ -32,6 +33,8 @@ def aggregate_results(election, jurisdiction, contest_type, by_vote_type):
         exclude_total=True,
         by_vote_type=True,
     )
+    if ui.fatal_error(err):
+        return f"Error(s) rolling up results from database:\n{err}"
     return df
 
 
@@ -71,7 +74,7 @@ def check_count_type_totals(election, jurisdiction, contest, count_item_type):
 # 3. One senate
 # 4. One rep
 # 5. If vote type is available, slice one of the above by vote type
-# 6. If vote type is avaiable, check that totals match vote type sums
+# 6. If vote type is available, check that totals match vote type sums
 
 
 ### North Carolina Data Loading Tests ###
