@@ -536,28 +536,19 @@ def assign_anomaly_score(data):
 
 
 def get_most_anomalous(data, n):
-    """gets the n contests with the highest margin ratio score"""
+    """ Gets n contest, with 2 from largest votes at stake ratio
+    and 1 with largest score. If 2 from votes at stake cannot be found
+    (bc of threshold for score) then we fill in the top n from scores"""
     data = data[data["votes_at_stake"] > 0]
     margin_data = data[data["score"] > 2.3]
-    margins = list(margin_data["margin_ratio"].unique())
-    margins.sort(reverse=True)
-    top_margins = margins[0:n]
-    by_margin = margin_data[margin_data["margin_ratio"].isin(top_margins)]
-    units_by_margin = by_margin["unit_id"].unique()
-    data_by_margin = data[data["unit_id"].isin(units_by_margin)]
 
-    scores = list(data["score"].unique())
-    scores.sort(reverse=True)
-    top_scores = scores[0:1]
-    unit_id = data[data["score"].isin(top_scores)].iloc[0]["unit_id"]
-    data_by_score = data[data["unit_id"] == unit_id]
-
-    if data_by_score.iloc[0]["unit_id"] in set(data_by_margin["unit_id"].unique()):
-        data = data_by_margin
-    else:
-        min_score = data_by_margin["margin_ratio"].min()
-        data_by_margin = data_by_margin[data_by_margin["margin_ratio"] != min_score]
-        data = pd.concat([data_by_margin, data_by_score])
+    # get data for n deduped unit_ids, with n-1 from margin data, filling
+    # in from score data if margin data is unavailable
+    unit_by_margin = get_unit_by_column(margin_data, "margin_ratio")
+    unit_by_score = get_unit_by_column(data, "score")
+    unit_ids_all = unit_by_margin + unit_by_score
+    unit_ids = list(dict.fromkeys(unit_ids_all).keys())[0:n]
+    data = data[data["unit_id"].isin(unit_ids)]
 
     zeros_df = data[
         [
@@ -865,3 +856,12 @@ def create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru):
         contest_selection, how="left", on=["Selection_Id", "Contest_Id"]
     )
     return unsummed
+
+
+def get_unit_by_column(data, column):
+    """ Given a dataframe of results, return a list of unique unit_ids
+    that are sorted in desc order by the column's value"""
+    data = data[["unit_id", column]]
+    data = data.groupby("unit_id").max(column).sort_values(by=column, ascending=False)
+    data = data.reset_index()
+    return list(data["unit_id"].unique())
