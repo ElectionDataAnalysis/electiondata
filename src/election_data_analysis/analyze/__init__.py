@@ -485,16 +485,12 @@ def assign_anomaly_score(data):
     for unit_id in unit_ids:
         # grab all the data there
         temp_df = df_with_units[df_with_units["unit_id"] == unit_id]
-        #print(temp_df[["Name", "CountItemType", "Selection", "Count", "ind_total", "contest_total", "rank"]])
-        #print(temp_df.columns)
-        #input()
         #total = temp_df.groupby("ReportingUnit_Id")["Count"].sum().reset_index()
         #total.rename(columns={"Count": "reporting_unit_total"}, inplace=True)
         #temp_df = temp_df.merge(total, how="inner", on="ReportingUnit_Id")
         # pivot so each candidate gets own column
         scored_df = pd.DataFrame()
-        #for i in range(2, int(temp_df["rank"].max()) + 1):
-        for i in range(2, 3):
+        for i in range(2, int(temp_df["rank"].max()) + 1):
             selection_df = temp_df[temp_df["rank"].isin([1, i])]
             total = selection_df.groupby("ReportingUnit_Id")["Count"].sum().reset_index()
             total.rename(columns={"Count": "reporting_unit_total"}, inplace=True)
@@ -548,16 +544,18 @@ def get_most_anomalous(data, n):
 
     scores = list(data["score"].unique())
     scores.sort(reverse=True)
-    top_scores = scores[0:1]
-    unit_id = data[data["score"].isin(top_scores)].iloc[0]["unit_id"]
-    data_by_score = data[data["unit_id"] == unit_id]
+    top_scores = scores[0:3]
+    #unit_id = data[data["score"].isin(top_scores)].iloc[0]["unit_id"]
+    #data_by_score = data[data["unit_id"] == unit_id]
 
-    if data_by_score.iloc[0]["unit_id"] in set(data_by_margin["unit_id"].unique()):
-        data = data_by_margin
-    else:
-        min_score = data_by_margin["abs_margins"].min()
-        data_by_margin = data_by_margin[data_by_margin["abs_margins"] != min_score]
-        data = pd.concat([data_by_margin, data_by_score])
+    # if data_by_score.iloc[0]["unit_id"] in set(data_by_margin["unit_id"].unique()):
+    #     data = data_by_margin
+    # else:
+    #     min_score = data_by_margin["abs_margins"].min()
+    #     data_by_margin = data_by_margin[data_by_margin["abs_margins"] != min_score]
+    #     data = pd.concat([data_by_margin, data_by_score])
+    unit_ids = data[data["score"].isin(top_scores)]["unit_id"]
+    data = data[data["unit_id"].isin(unit_ids)]
 
     zeros_df = data[
         [
@@ -658,13 +656,12 @@ def calculate_votes_at_stake(data):
             ].index[0]
             next_reporting_unit_id = temp_df.loc[next_index, "ReportingUnit_Id"]
             next_margin_pct = temp_df.loc[next_index, "margins_pct"]
-            next_reporting_unit_total = temp_df.loc[index, "reporting_unit_total"]
+            next_reporting_unit_total = temp_df.loc[next_index, "reporting_unit_total"]
             next_anomalous_df = temp_df[
                 (temp_df["ReportingUnit_Id"] == next_reporting_unit_id)
-                & ((temp_df["margins_pct"] == next_margin_pct) | (temp_df["rank"] == 1))
-                #& (temp_df["reporting_unit_total"] == next_reporting_unit_total))
+                & ((temp_df["margins_pct"] == next_margin_pct) | (temp_df["rank"] == 1)
+                & (temp_df["reporting_unit_total"] == next_reporting_unit_total))
             ].sort_values("rank", ascending=False)
-
             # move the most anomalous to the closest and calculate what the
             # change to the Contest margin would be
             winner_bucket_total = int(anomalous_df[anomalous_df["rank"] == 1]["Count"])
