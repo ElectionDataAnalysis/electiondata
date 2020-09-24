@@ -127,3 +127,360 @@ def test_nc_contest_by_vote_type():
 
 def test_nc_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "North Carolina") == True
+
+### Florida Data Loading Tests ###
+def test_fl_presidential():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Florida",
+            "US President (FL)",
+        )
+        == 9420039
+    )
+
+
+def test_fl_statewide_totals():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Florida",
+            "US Senate FL",
+        )
+        == 9301820
+    )
+
+
+def test_fl_senate_totals():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Florida",
+            "FL Senate District 3",
+        )
+        == 236480
+    )
+
+
+def test_fl_house_totals():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Florida",
+            "US House FL District 10",
+        )
+        == 305989
+    )
+
+
+def test_fl_contest_by_vote_type():
+    # Vote type not available
+    assert True == True
+
+
+def test_fl_totals_match_vote_type():
+    # Vote type not available
+    assert True == True
+
+
+
+### Pennsylvania Data Loading Tests ###
+def test_pa_presidential():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Pennsylvania",
+            "US President (PA)",
+        )
+        == 6115402
+    )
+
+
+def test_pa_statewide_totals():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Pennsylvania",
+            "PA Attorney General",
+        )
+        == 5916931
+    )
+
+
+def test_pa_senate_totals():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Pennsylvania",
+            "PA Senate District 41",
+        )
+        == 112283
+    )
+
+
+def test_pa_house_totals():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Pennsylvania",
+            "PA House District 21",
+        )
+        == 26453
+    )
+
+
+def test_pa_contest_by_vote_type():
+    # Vote type not available
+    assert True == True
+
+
+def test_pa_totals_match_vote_type():
+    # Vote type not available
+    assert True == True
+
+
+
+### Georgia Data Loading Tests ###
+def test_ga_presidential():
+    #no presidential contests in 2018
+    assert True == True
+
+
+def test_ga_statewide_totals():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Georgia",
+            "GA Governor",
+        )
+        == 3939328
+    )
+
+
+def test_ga_senate_totals():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Georgia",
+            "GA Senate District 5",
+        )
+        == 34429
+    )
+    
+
+def test_ga_house_totals():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Georgia",
+            "US House GA District 2",
+        )
+        == 229171
+    )
+
+
+def test_ga_contest_by_vote_type():
+    assert (
+        check_count_type_totals(
+            "2018 General",
+            "Georgia",
+            "GA Senate District 5",
+            "Absentee by Mail",
+        )
+        == 2335
+    )
+
+
+def test_ga_totals_match_vote_type():
+    assert check_totals_match_vote_types("2018 General", "Georgia") == True
+
+
+
+### South Carolina Data Loading Tests ###
+def test_sc_presidential():
+    #only 2020 democratic presidental primary results loaded
+    assert True == True
+
+
+def test_sc_statewide_totals():
+    #only 2020 democratic presidental primary results loaded
+    assert True == True
+
+def test_sc_senate_totals():
+    #only 2020 democratic presidental primary results loaded
+    assert True == True
+    
+
+def test_sc_house_totals():
+    #only 2020 democratic presidental primary results loaded
+    assert True == True
+
+
+def test_sc_contest_by_vote_type():
+    #only 2020 democratic presidental primary results loaded
+    assert True == True
+
+
+def test_sc_totals_match_vote_type():
+    #only 2020 democratic presidental primary results loaded
+    assert True == True
+
+
+### Indiana Data Loading Tests ###
+def test_in_presidential():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Indiana",
+            "US President (IN)",
+        )
+        == 2728138
+    )
+
+
+def test_in_statewide_totals():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Indiana",
+            "IN Attorney General",
+        )
+        == 2635832
+    )
+
+
+def test_in_senate_totals():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Indiana",
+            "IN Senate District 7",
+        )
+        == 50622
+    )
+
+
+def test_in_house_totals():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Indiana",
+            "IN House District 13",
+        )
+        == 26712
+    )
+
+
+def test_in_contest_by_vote_type():
+    # Vote type not available
+    assert True == True
+
+
+def test_in_totals_match_vote_type():
+    # Vote type not available
+    assert True == True
+
+
+### Arkansas Data Loading Tests ###
+def test_ar_presidential():
+    #no presidential contests in 2018
+    assert True == True
+
+
+def test_ar_statewide_totals():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Arkansas",
+            "AR Governor",
+        )
+        == 891509
+    )
+
+
+def test_ar_senate_totals():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Arkansas",
+            "AR Senate District 5",
+        )
+        == 27047
+    )
+    
+
+def test_ar_house_totals():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Arkansas",
+            "AR House District 19",
+        )
+        == 7927
+    )
+
+
+def test_ar_contest_by_vote_type():
+    assert (
+        check_count_type_totals(
+            "2018 General",
+            "Arkansas",
+            "AR Senate District 5",
+            "Absentee",
+        )
+        == 453
+    )
+
+
+def test_ar_totals_match_vote_type():
+    assert check_totals_match_vote_types("2018 General", "Arkansas") == True
+
+
+### Michigan Data Loading Tests ###
+def test_ar_presidential():
+    #no presidential contests in 2018
+    assert True == True
+
+
+def test_mi_statewide_totals():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Michigan",
+            "MI Governor",
+        )
+        == 4250585
+    )
+
+
+def test_mi_senate_totals():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Michigan",
+            "MI Senate District 37",
+        )
+        == 124414
+    )
+    
+
+def test_mi_house_totals():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Michigan",
+            "MI House District 8",
+        )
+        == 341593
+    )
+
+
+def test_mi_contest_by_vote_type():
+    # Vote type not available
+    assert True == True
+    
+
+
+def test_mi_totals_match_vote_type():
+    # Vote type not available
+    assert True == True
