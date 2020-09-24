@@ -89,6 +89,41 @@ def get_database_names(con):
     return names
 
 
+def remove_database(params: dict) -> dict:
+    # initialize error dictionary
+    err = dict()
+
+    # connect to default postgres DB
+    postgres_params = params.copy()
+    postgres_params["dbname"] = "postgres"
+    try:
+        con = psycopg2.connect(**postgres_params)
+    except Exception as e:
+        err = ui.add_new_error(
+            err,
+            "system",
+            "database.remove_database",
+            f"Error connecting to postgres via {postgres_params}: {e}"
+        )
+        return err
+
+    # delete the database given in params
+    cur = con.cursor()
+    q = sql.SQL("DROP DATABASE {dbname}").format(
+        dbname=sql.Identifier(params["dbname"])
+    )
+    try:
+        cur.execute(q)
+    except Exception as e:
+        err = ui.add_new_error(
+            err,
+            "system",
+            "database.remove_database",
+            f"Error while dropping database {dbname}: {e}"
+        )
+    return err
+
+
 def create_database(con, cur, db_name):
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     q = sql.SQL("DROP DATABASE IF EXISTS {db_name}").format(
