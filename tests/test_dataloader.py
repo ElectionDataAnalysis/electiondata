@@ -364,7 +364,6 @@ def test_sc_senate_totals():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
-
 def test_sc_house_totals():
     #only 2020 democratic presidental primary results loaded
     assert True == True
@@ -517,7 +516,6 @@ def test_mi_senate_totals():
         == 124414
     )
 
-
 def test_mi_house_totals():
     assert (
         check_contest_totals(
@@ -532,7 +530,6 @@ def test_mi_house_totals():
 def test_mi_contest_by_vote_type():
     # Vote type not available
     assert True == True
-
 
 
 def test_mi_totals_match_vote_type():
