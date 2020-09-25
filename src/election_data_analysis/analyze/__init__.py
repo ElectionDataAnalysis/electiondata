@@ -79,8 +79,8 @@ def create_rollup(
         exclude_total = False
 
     # get names from ids
-    top_ru = db.name_from_id(cursor, "ReportingUnit", top_ru_id)  # .replace(" ","-")
-    election = db.name_from_id(cursor, "Election", election_id)  # .replace(" ","-")
+    top_ru = db.name_from_id(cursor, "ReportingUnit", top_ru_id)
+    election = db.name_from_id(cursor, "Election", election_id)
     sub_rutype = db.name_from_id(cursor, "ReportingUnitType", sub_rutype_id)
 
     # create path to export directory
@@ -128,10 +128,6 @@ def create_rollup(
     # export to inventory file
     inv_df.to_csv(inventory_file, index=False, sep="\t")
     return err_str
-
-
-def short_name(text, sep=";"):
-    return text.split(sep)[-1]
 
 
 def create_scatter(
@@ -226,7 +222,7 @@ def package_results(data, jurisdiction, x, y, restrict=None):
                 "x": row[x],
                 "y": row[y],
                 "x_pct": x_pct,
-                "y_pct": y_pct
+                "y_pct": y_pct,
             }
         )
         if restrict and i == (restrict - 1):
@@ -243,7 +239,7 @@ def get_data_for_scatter(
     filter_id,
     count_type,
 ):
-    """Since this could be data across 2 elections, grab data one election at a time"""
+    # Since this could be data across 2 elections, grab data one election at a time
     unsummed = db.get_candidate_votecounts(
         session, election_id, jurisdiction_id, subdivision_type_id
     )
@@ -322,7 +318,8 @@ def create_bar(
     # No anomalies could be detected
     if ranked.empty:
         return None
-    ranked_margin = calculate_margins(ranked)
+    ranked["margins_pct"] = ranked["Count"] / ranked["reporting_unit_total"]
+    ranked_margin = ranked
     votes_at_stake = calculate_votes_at_stake(ranked_margin)
     if not for_export:
         top_ranked = get_most_anomalous(votes_at_stake, 3)
@@ -336,21 +333,19 @@ def create_bar(
         temp_df = top_ranked[top_ranked["unit_id"] == id]
         # some cleaning here to make the pivoting work
         scores_df = temp_df[temp_df["rank"] != 1]
-        scores_df = scores_df[["ReportingUnit_Id", "score", "margins", "margins_pct"]]
+        scores_df = scores_df[["ReportingUnit_Id", "score", "margins_pct"]]
         scores_df.rename(
             columns={
                 "score": "max_score",
-                "margins": "max_margins",
                 "margins_pct": "max_margins_pct",
             },
             inplace=True,
         )
         temp_df = temp_df.merge(scores_df, how="inner", on="ReportingUnit_Id")
-        temp_df.drop(columns=["score", "margins", "margins_pct"], inplace=True)
+        temp_df.drop(columns=["score", "margins_pct"], inplace=True)
         temp_df.rename(
             columns={
                 "max_score": "score",
-                "max_margins": "margins",
                 "max_margins_pct": "margins_pct",
             },
             inplace=True,
@@ -365,7 +360,7 @@ def create_bar(
             temp_df, values="Count", index=["Name"], columns="Selection"
         ).reset_index()
         score_df = temp_df.groupby("Name")[
-            "score", "margins", "margins_pct", "margin_ratio"
+            ["score", "margins_pct", "margin_ratio"]
         ].mean()
         pivot_df = (
             pivot_df.merge(score_df, how="inner", on="Name")
@@ -393,6 +388,7 @@ def create_bar(
             ] = f"""{results["jurisdiction"]} provides data by vote type"""
         else:
             results["ballot_types"] = "Data unavailable by vote type"
+        results["score"] = temp_df["score"].max()
         result_list.append(results)
     connection.close()
     return result_list
@@ -466,30 +462,37 @@ def assign_anomaly_score(data):
         ranked_df, how="inner", on=["Contest_Id", "Selection"]
     )
 
-    # assign unit_ids to unique combination of contest, ru_type, and count type
+    # assign temporary unit_ids to unique combination of contest,
+    # ru_type, and count type. These will be updated later to account
+    # for 2 candidate pairings
     df_unit = grouped_df[
         ["Contest_Id", "ReportingUnitType_Id", "CountItemType"]
     ].drop_duplicates()
     df_unit = df_unit.reset_index()
-    df_unit["unit_id"] = df_unit.index
+    df_unit["unit_id_tmp"] = df_unit.index
     df_with_units = grouped_df.merge(
         df_unit, how="left", on=["Contest_Id", "ReportingUnitType_Id", "CountItemType"]
     )
 
     # loop through each unit ID and assign anomaly scores
-    unit_ids = df_with_units["unit_id"].unique()
+    # also update the "real" unit_id which takes into account pairing of candidates
+    unit_ids_tmp = df_with_units["unit_id_tmp"].unique()
+    unit_id = 0
     df = pd.DataFrame()
     # for each unit ID
-    for unit_id in unit_ids:
+    for unit_id_tmp in unit_ids_tmp:
         # grab all the data there
-        temp_df = df_with_units[df_with_units["unit_id"] == unit_id]
-        total = temp_df.groupby("ReportingUnit_Id")["Count"].sum().reset_index()
-        total.rename(columns={"Count": "reporting_unit_total"}, inplace=True)
-        temp_df = temp_df.merge(total, how="inner", on="ReportingUnit_Id")
-        # pivot so each candidate gets own column
+        temp_df = df_with_units[df_with_units["unit_id_tmp"] == unit_id_tmp]
         scored_df = pd.DataFrame()
         for i in range(2, int(temp_df["rank"].max()) + 1):
-            selection_df = temp_df[temp_df["rank"].isin([1, i])]
+            selection_df = temp_df[temp_df["rank"].isin([1, i])].copy()
+            selection_df["unit_id"] = unit_id
+            unit_id += 1
+            total = (
+                selection_df.groupby("ReportingUnit_Id")["Count"].sum().reset_index()
+            )
+            total.rename(columns={"Count": "reporting_unit_total"}, inplace=True)
+            selection_df = selection_df.merge(total, how="inner", on="ReportingUnit_Id")
             if selection_df.shape[0] >= 12 and len(selection_df["rank"].unique()) > 1:
                 pivot_df = (
                     pd.pivot_table(
@@ -530,25 +533,19 @@ def assign_anomaly_score(data):
 
 
 def get_most_anomalous(data, n):
-    """gets the n contests with the highest margin ratio score"""
-    data["abs_margins"] = data["margin_ratio"].abs()
-    margins = list(data["abs_margins"].unique())
-    margins.sort(reverse=True)
-    top_margins = margins[0:n]
-    data_by_margin = data[data["abs_margins"].isin(top_margins)]
+    """Gets n contest, with 2 from largest votes at stake ratio
+    and 1 with largest score. If 2 from votes at stake cannot be found
+    (bc of threshold for score) then we fill in the top n from scores"""
+    data = data[data["votes_at_stake"] > 0]
+    margin_data = data[data["score"] > 2.3]
 
-    scores = list(data["score"].unique())
-    scores.sort(reverse=True)
-    top_scores = scores[0:1]
-    unit_id = data[data["score"].isin(top_scores)].iloc[0]["unit_id"]
-    data_by_score = data[data["unit_id"] == unit_id]
-
-    if data_by_score.iloc[0]["unit_id"] in set(data_by_margin["unit_id"].unique()):
-        data = data_by_margin
-    else:
-        min_score = data_by_margin["abs_margins"].min()
-        data_by_margin = data_by_margin[data_by_margin["abs_margins"] != min_score]
-        data = pd.concat([data_by_margin, data_by_score])
+    # get data for n deduped unit_ids, with n-1 from margin data, filling
+    # in from score data if margin data is unavailable
+    unit_by_margin = get_unit_by_column(margin_data, "margin_ratio")
+    unit_by_score = get_unit_by_column(data, "score")
+    unit_ids_all = unit_by_margin + unit_by_score
+    unit_ids = list(dict.fromkeys(unit_ids_all).keys())[0:n]
+    data = data[data["unit_id"].isin(unit_ids)]
 
     zeros_df = data[
         [
@@ -603,27 +600,13 @@ def euclidean_zscore(li):
         return list(stats.zscore(distance_list))
 
 
-def calculate_margins(data):
-    """Takes a dataframe with an anomaly score and assigns
-    a margin score"""
-    rank_1_df = data[data["rank"] == 1][["unit_id", "ReportingUnit_Id", "CountItemType", "Count"]]
-    rank_1_df = rank_1_df.drop_duplicates()
-    rank_1_df = rank_1_df.rename(columns={"Count": "rank_1_total"})
-    data = data.merge(rank_1_df, how="inner", on=["unit_id", "ReportingUnit_Id", "CountItemType"])
-    data["margins"] = data["rank_1_total"] - data["Count"]
-    data["margins_pct"] = (data["rank_1_total"] - data["Count"]) / (
-        data["rank_1_total"] + data["Count"]
-    )
-    return data
-
-
 def calculate_votes_at_stake(data):
     """Move the most anomalous pairing to the equivalent of the second-most anomalous
     and calculate the differences in votes that would be returned"""
     df = pd.DataFrame()
     unit_ids = data["unit_id"].unique()
     for unit_id in unit_ids:
-        temp_df = data[data["unit_id"] == unit_id]
+        temp_df = data[data["unit_id"] == unit_id].copy()
         try:
             # get a df of the most anomalous pairing
             max_score = temp_df["score"].max()
@@ -631,27 +614,44 @@ def calculate_votes_at_stake(data):
             reporting_unit_id = temp_df.loc[index, "ReportingUnit_Id"]
             selection = temp_df.loc[index, "Selection"]
             margin_pct = temp_df.loc[index, "margins_pct"]
-            anomalous_df = temp_df[
-                (temp_df["ReportingUnit_Id"] == reporting_unit_id)
-                & ((temp_df["score"] == max_score) | (temp_df["rank"] == 1))
-            ].sort_values("rank", ascending=False).drop_duplicates()
+            reporting_unit_total = temp_df.loc[index, "reporting_unit_total"]
+            anomalous_df = (
+                temp_df[
+                    (temp_df["ReportingUnit_Id"] == reporting_unit_id)
+                    & (
+                        (temp_df["score"] == max_score)
+                        | (temp_df["rank"] == 1)
+                        & (temp_df["reporting_unit_total"] == reporting_unit_total)
+                    )
+                ]
+                .sort_values("rank", ascending=False)
+                .drop_duplicates()
+            )
 
-            # get a df of the pairing with closest margin to the most anomalous
-            # Margins could be + or - so need to handle both
-            no_zeros = temp_df[
-                (temp_df["margins_pct"] != 0.0)
-                & (temp_df["margins_pct"] != margin_pct)
+            # Identify the next closest RU in terms of margins
+            filtered_df = temp_df[
+                (temp_df["ReportingUnit_Id"] != reporting_unit_id)
                 & (temp_df["Selection"] == selection)
             ]
-            next_index = no_zeros.iloc[
-                (no_zeros["margins_pct"] - margin_pct).abs().argsort()[:1]
+            # this finds the closest margin on either side (+/-)
+            next_index = filtered_df.iloc[
+                (filtered_df["margins_pct"] - margin_pct).abs().argsort()[:1]
             ].index[0]
             next_reporting_unit_id = temp_df.loc[next_index, "ReportingUnit_Id"]
             next_margin_pct = temp_df.loc[next_index, "margins_pct"]
-            next_anomalous_df = temp_df[
-                (temp_df["ReportingUnit_Id"] == next_reporting_unit_id)
-                & ((temp_df["margins_pct"] == next_margin_pct) | (temp_df["rank"] == 1))
-            ].sort_values("rank", ascending=False)
+            next_reporting_unit_total = temp_df.loc[next_index, "reporting_unit_total"]
+            next_anomalous_df = (
+                temp_df[
+                    (temp_df["ReportingUnit_Id"] == next_reporting_unit_id)
+                    & (
+                        (temp_df["margins_pct"] == next_margin_pct)
+                        | (temp_df["rank"] == 1)
+                        & (temp_df["reporting_unit_total"] == next_reporting_unit_total)
+                    )
+                ]
+                .sort_values("rank", ascending=False)
+                .drop_duplicates()
+            )
 
             # move the most anomalous to the closest and calculate what the
             # change to the Contest margin would be
@@ -670,13 +670,17 @@ def calculate_votes_at_stake(data):
                 reported_bucket_total - not_winner_adj_bucket_total
             )
 
-            # calculate margins by raw numbers
+            # calculate margins by raw numbers for the bucket
             contest_margin = winner_bucket_total - not_winner_bucket_total
             adj_contest_margin = winner_adj_bucket_total - not_winner_adj_bucket_total
-            temp_df["margin_ratio"] = (
-                contest_margin - adj_contest_margin
-            ) / contest_margin
+
+            # calculate margins by raw numbers for the entire contest
+            contest_margin_ttl = (
+                anomalous_df[anomalous_df["rank"] == 1].iloc[0]["ind_total"]
+                - anomalous_df[anomalous_df["rank"] != 1].iloc[0]["ind_total"]
+            )
             temp_df["votes_at_stake"] = contest_margin - adj_contest_margin
+            temp_df["margin_ratio"] = temp_df["votes_at_stake"] / contest_margin_ttl
         except:
             temp_df["margin_ratio"] = 0
             temp_df["votes_at_stake"] = 0
@@ -850,3 +854,12 @@ def create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru):
         contest_selection, how="left", on=["Selection_Id", "Contest_Id"]
     )
     return unsummed
+
+
+def get_unit_by_column(data, column):
+    """Given a dataframe of results, return a list of unique unit_ids
+    that are sorted in desc order by the column's value"""
+    data = data[["unit_id", column]]
+    data = data.groupby("unit_id").max(column).sort_values(by=column, ascending=False)
+    data = data.reset_index()
+    return list(data["unit_id"].unique())
