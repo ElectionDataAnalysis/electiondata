@@ -339,7 +339,7 @@ def test_ga_contest_by_vote_type():
             "2018 General",
             "Georgia",
             "GA Senate District 5",
-            "Absentee by Mail",
+            "absentee-mail",
         )
         == 2335
     )
@@ -479,7 +479,7 @@ def test_ar_contest_by_vote_type():
             "2018 General",
             "Arkansas",
             "AR Senate District 5",
-            "Absentee",
+            "absentee",
         )
         == 453
     )
@@ -523,7 +523,7 @@ def test_mi_house_totals():
             "Michigan",
             "MI House District 8",
         )
-        == 341593
+        == 28017
     )
 
 
