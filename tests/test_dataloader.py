@@ -3,26 +3,38 @@ from election_data_analysis import user_interface as ui
 from election_data_analysis import Analyzer
 import pandas as pd
 import os
+from psycopg2 import sql
+import pytest
+
+def get_analyzer(p_path: str = None):
+    one_up = os.path.dirname(os.getcwd())
+    if p_path:
+        param_file = p_path
+    else:
+        param_file = os.path.join(one_up, "src", "run_time.ini")
+    a = Analyzer(param_file)
+    return a
 
 
 def aggregate_results(election, jurisdiction, contest_type, by_vote_type):
     # using the analyzer gives us access to DB session
-    one_up = os.path.dirname(os.getcwd())
-    param_file = os.path.join(one_up, "src", "run_time.ini")
-    a = Analyzer(param_file)
+    empty_df_with_good_cols = pd.DataFrame(columns=['contest','count'])
+    a = get_analyzer()
     election_id = db.name_to_id(a.session, "Election", election)
     if not election_id:
-        return f"No Election record found in database for {election}"
+        return empty_df_with_good_cols
     connection = a.session.bind.raw_connection()
     cursor = connection.cursor()
 
     datafile_list, e = db.data_file_list(cursor, election_id, by="Id")
     if e:
-        return e
+        print(e)
+        return empty_df_with_good_cols
     if len(datafile_list) == 0:
-        return f"No datafiles found for Election_Id {election_id}"
+        print(f"No datafiles found for Election_Id {election_id}")
+        return empty_df_with_good_cols
 
-    df, err = db.export_rollup_from_db(
+    df, err_str = db.export_rollup_from_db(
         cursor,
         jurisdiction,
         "county",
@@ -32,9 +44,38 @@ def aggregate_results(election, jurisdiction, contest_type, by_vote_type):
         exclude_total=True,
         by_vote_type=True,
     )
-    if ui.fatal_error(err):
-        return f"Error(s) rolling up results from database:\n{err}"
+    if df.empty:
+        # TODO better logic? This is like throwing spaghetti at the wall
+        # try without excluding total
+        df, err_str = db.export_rollup_from_db(
+            cursor,
+            jurisdiction,
+            "county",
+            contest_type,
+            datafile_list,
+            by="Id",
+            exclude_total=False,
+            by_vote_type=True,
+        )
+    if err_str:
+        return empty_df_with_good_cols
     return df
+
+
+def data_exists(election, jurisdiction, p_path=None):
+    a = get_analyzer(p_path=p_path)
+    election_id = db.name_to_id(a.session, "Election", election)
+    jurisdiction_id = db.name_to_id(a.session, "ReportingUnit", jurisdiction)
+    con = a.session.bind.raw_connection()
+    cur = con.cursor()
+    q = sql.SQL('SELECT "Id" FROM _datafile WHERE "Election_Id" = %s AND "ReportingUnit_Id" = %s')
+    cur.execute(q,(election_id,jurisdiction_id))
+
+    answer = cur.fetchall()
+    if len(answer) > 0:
+        return True
+    else:
+        return False
 
 
 def check_totals_match_vote_types(election, jurisdiction):
@@ -77,11 +118,18 @@ def check_count_type_totals(election, jurisdiction, contest, count_item_type):
 
 
 ### North Carolina Data Loading Tests ###
+#constants
+ok = {"nc": data_exists('2018 General','North Carolina')}
+
+print(ok)
+
+@pytest.mark.skipif(not ok["nc"], reason="No NC data")
 def test_nc_presidential():
     # No presidential contests in 2018
     assert True == True
 
 
+@pytest.mark.skipif(not ok["nc"], reason="No NC data")
 def test_nc_statewide_totals():
     assert (
         check_contest_totals(
@@ -93,6 +141,7 @@ def test_nc_statewide_totals():
     )
 
 
+# @pytest.mark.skipif(not ok["nc"],"No NC data")
 def test_nc_senate_totals():
     assert (
         check_contest_totals(
@@ -104,6 +153,7 @@ def test_nc_senate_totals():
     )
 
 
+@pytest.mark.skipif(not ok["nc"], reason="No NC data")
 def test_nc_house_totals():
     assert (
         check_contest_totals(
@@ -115,6 +165,7 @@ def test_nc_house_totals():
     )
 
 
+@pytest.mark.skipif(not ok["nc"], reason="No NC data")
 def test_nc_contest_by_vote_type():
     assert (
         check_count_type_totals(
@@ -127,6 +178,7 @@ def test_nc_contest_by_vote_type():
     )
 
 
+@pytest.mark.skipif(not ok["nc"], reason="No NC data")
 def test_nc_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "North Carolina") == True
 
@@ -203,7 +255,7 @@ def test_pa_statewide_totals():
         check_contest_totals(
             "2016 General",
             "Pennsylvania",
-            "PA Attorney General",
+            "PA Auditor General",
         )
         == 5916931
     )
