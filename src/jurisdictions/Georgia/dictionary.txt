@@ -3834,8 +3834,7 @@ ReportingUnit	Georgia	Georgia
 CountItemType	election-day	Election Day
 CountItemType	absentee-mail	Absentee by Mail
 CountItemType	early	Advance in Person
-CountItemType	election-day	Provisional
-CountItemType	provisional	Election Day
+CountItemType	provisional	Provisional
 CountItemType	total	Choice Total
 BallotMeasureSelection	Yes	YES
 BallotMeasureSelection	No	NO

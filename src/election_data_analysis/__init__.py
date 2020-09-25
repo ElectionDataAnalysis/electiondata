@@ -99,7 +99,7 @@ class DataLoader:
             print("Exiting")
             quit()
 
-    def load_all(self, load_jurisdictions: bool = True) -> dict:
+    def load_all(self, load_jurisdictions: bool = True, move_files: bool = False) -> dict:
         """returns an error dictionary"""
         # initialize error dictionary
         err = None
@@ -225,7 +225,7 @@ class DataLoader:
 
                     # if no fatal load error, archive files
 
-                    if not ui.fatal_error(load_error):
+                    if move_files and not ui.fatal_error(load_error):
                         ui.archive(f, self.d["results_dir"], success_dir)
                         ui.archive(
                             sdl.d["results_file"], self.d["results_dir"], success_dir
