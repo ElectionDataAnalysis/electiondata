@@ -273,7 +273,7 @@ def replace_raw_with_internal_ids(
     )
 
     unmatched = working[working["cdf_internal_name"].isnull()]
-    unmatched_raw = list(unmatched[f"{element}_raw"].unique())
+    unmatched_raw = sorted(unmatched[f"{element}_raw"].unique(),reverse=True)
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
         unmatched_str = "\n".join(unmatched_raw)
         e = f"{element}s not found in dictionary.txt:\n{unmatched_str}"
@@ -362,7 +362,7 @@ def replace_raw_with_internal_ids(
         e = (
             f"Warning: Results for {working_unmatched.shape[0]} rows with unmatched {element}s "
             f"will not be loaded to database. These records (raw name, internal name) were found in dictionary.txt, but "
-            f"no corresponding record was found in the {element} table in the database: \n{unmatched_str}"
+            f"no corresponding record was found in the {element} table in the database: \n\t{unmatched_str}"
         )
         error = ui.add_new_error(
             error,
@@ -595,14 +595,14 @@ def add_contest_id(
     # assemble working from the two pieces
     working_temp = pd.concat([w_for_type[ct] for ct in ["BallotMeasure", "Candidate"]])
 
-    # fail if fatal errors or no contests recognized
+    # fail if fatal errors or no contests recognized (in reverse order, just for fun
     if working_temp.empty:
-        cc_list = "\n\t".join(working.CandidateContest_raw.to_list())
-        bmc_list = "\n\t".join(working.BallotMeasureContest_raw.to_list())
+        cc_list = "\n\t".join(sorted(df.CandidateContest_raw.unique(),reverse=True))
+        bmc_list = "\n\t".join(sorted(df.CandidateContest_raw.unique(),reverse=True))
         contest_list = f"Raw CandidateContests:\n{cc_list}\n\nRaw BallotMeasureContests:\n{bmc_list}"
 
         err = ui.add_new_error(
-            err, "jurisdiction", juris.short_name, f"No contests recognized.\n{contest_list}"
+            err, "jurisdiction", juris.short_name, f"No contests recognized."
         )
     else:
         working = working_temp

@@ -368,7 +368,7 @@ def read_single_datafile(
             df = pd.read_csv(f_path, **kwargs)
         elif munger.file_type in ["xls", "xlsx"]:
             df = pd.read_excel(f_path, **kwargs)
-        elif munger.file_type in ["concatenated-blocks"]:
+        elif munger.file_type in ["concatenated-blocks", "xls-multi"]:
             err = add_new_error(
                 err,
                 "system",
@@ -420,11 +420,18 @@ def read_combine_results(
     err: dict,
     aux_data_path: str = None,
 ) -> (pd.DataFrame, dict):
-    if mu.options["file_type"] in ["concatenated-blocks"]:
-        working, new_err = sf.read_concatenated_blocks(results_file_path, mu, None)
-        err = consolidate_errors([err, new_err])
+    if mu.options["file_type"] in ["concatenated-blocks", "xls-multi"]:
+        working, new_err = sf.read_alternate_munger(
+            mu.options["file_type"],
+            results_file_path,
+            mu,
+            None,
+        )
+        if new_err:
+            err = consolidate_errors([err, new_err])
         if working.empty or fatal_error(new_err):
             return working, err
+
         # set options that will be needed for going forward
         mu.options["count_columns"] = [working.columns.to_list().index("count")]
         mu.options["header_row_count"] = 1
@@ -745,6 +752,11 @@ def report(
 
                 # print/write output
                 if f"warn-{et}" in loc_dict.keys():
+                    # ensure directory exists
+                    # TODO error handline: what if the path is a file?
+                    if not os.path.exists(loc_dict[f"warn-{et}"]):
+                            Path(loc_dict[f"warn-{et}"]).mkdir(parents=True, exist_ok=True)
+
                     # get timestamp
                     ts = datetime.datetime.now().strftime("%m%d_%H%M")
                     # write info to a .errors or .errors file named for the name_key <nk>
