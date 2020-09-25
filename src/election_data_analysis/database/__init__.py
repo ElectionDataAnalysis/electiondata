@@ -1422,7 +1422,7 @@ def export_rollup_from_db(
         WHERE C.contest_type = 'Candidate'
             AND TopRU."Name" = %s  -- top RU
             AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
-            AND d.{by} in %s  -- tuple of datafile short_names
+            AND d.{by} in %s  -- tuple of datafile short_names (if by='short_name) or Ids (if by="Id")
             {restrict}
         GROUP BY
                C."Name",
