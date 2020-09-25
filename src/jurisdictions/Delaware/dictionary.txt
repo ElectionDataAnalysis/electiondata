@@ -1,0 +1,582 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	DE House District 1	State Representative District 1
+CandidateContest	DE House District 2	State Representative District 2
+CandidateContest	DE House District 3	State Representative District 3
+CandidateContest	DE House District 4	State Representative District 4
+CandidateContest	DE House District 5	State Representative District 5
+CandidateContest	DE House District 6	State Representative District 6
+CandidateContest	DE House District 7	State Representative District 7
+CandidateContest	DE House District 8	State Representative District 8
+CandidateContest	DE House District 9	State Representative District 9
+CandidateContest	DE House District 10	State Representative District 10
+CandidateContest	DE House District 11	State Representative District 11
+CandidateContest	DE House District 12	State Representative District 12
+CandidateContest	DE House District 13	State Representative District 13
+CandidateContest	DE House District 14	State Representative District 14
+CandidateContest	DE House District 15	State Representative District 15
+CandidateContest	DE House District 16	State Representative District 16
+CandidateContest	DE House District 17	State Representative District 17
+CandidateContest	DE House District 18	State Representative District 18
+CandidateContest	DE House District 19	State Representative District 19
+CandidateContest	DE House District 20	State Representative District 20
+CandidateContest	DE House District 21	State Representative District 21
+CandidateContest	DE House District 22	State Representative District 22
+CandidateContest	DE House District 23	State Representative District 23
+CandidateContest	DE House District 24	State Representative District 24
+CandidateContest	DE House District 25	State Representative District 25
+CandidateContest	DE House District 26	State Representative District 26
+CandidateContest	DE House District 27	State Representative District 27
+CandidateContest	DE House District 28	State Representative District 28
+CandidateContest	DE House District 29	State Representative District 29
+CandidateContest	DE House District 30	State Representative District 30
+CandidateContest	DE House District 31	State Representative District 31
+CandidateContest	DE House District 32	State Representative District 32
+CandidateContest	DE House District 33	State Representative District 33
+CandidateContest	DE House District 34	State Representative District 34
+CandidateContest	DE House District 35	State Representative District 35
+CandidateContest	DE House District 36	State Representative District 36
+CandidateContest	DE House District 37	State Representative District 37
+CandidateContest	DE House District 38	State Representative District 38
+CandidateContest	DE House District 39	State Representative District 39
+CandidateContest	DE House District 40	State Representative District 40
+CandidateContest	DE House District 41	State Representative District 41
+CandidateContest	DE Senate District 1	State Senator District 1
+CandidateContest	DE Senate District 2	State Senator District 2
+CandidateContest	DE Senate District 3	State Senator District 3
+CandidateContest	DE Senate District 4	State Senator District 4
+CandidateContest	DE Senate District 5	State Senator District 5
+CandidateContest	DE Senate District 6	State Senator District 6
+CandidateContest	DE Senate District 7	State Senator District 7
+CandidateContest	DE Senate District 8	State Senator District 8
+CandidateContest	DE Senate District 9	State Senator District 9
+CandidateContest	DE Senate District 10	State Senator District 10
+CandidateContest	DE Senate District 11	State Senator District 11
+CandidateContest	DE Senate District 12	State Senator District 12
+CandidateContest	DE Senate District 13	State Senator District 13
+CandidateContest	DE Senate District 14	State Senator District 14
+CandidateContest	DE Senate District 15	State Senator District 15
+CandidateContest	DE Senate District 16	State Senator District 16
+CandidateContest	DE Senate District 17	State Senator District 17
+CandidateContest	DE Senate District 18	State Senator District 18
+CandidateContest	DE Senate District 19	State Senator District 19
+CandidateContest	DE Senate District 20	State Senator District 20
+CandidateContest	DE Senate District 21	State Senator District 21
+CandidateContest	US House DE District 1	US House DE District 1
+CandidateContest	US President (DE)	President
+CandidateContest	DE Governor	Governor
+CandidateContest	US Senate DE	U.S. Senator
+CandidateContest	DE Attorney General	DE Attorney General
+CandidateContest	DE Lieutenant Governor	DE Lieutenant Governor
+CandidateContest	DE Treasurer	DE Treasurer
+CandidateContest	DE Secretary of State	DE Secretary of State
+CandidateContest	DE Insurance Commissioner	Insurance Commissioner
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
+Election	2018 General	2018 General
+Election	2018 Primary	2018 Primary
+Election	2016 General	2016 General
+Election	2016 Primary	2016 Primary
+Party	Democratic Party	Democratic
+Party	Republican Party	Republican
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+ReportingUnit	Delaware;DE House District 1	Delaware;DE House District 1
+ReportingUnit	Delaware;DE House District 2	Delaware;DE House District 2
+ReportingUnit	Delaware;DE House District 3	Delaware;DE House District 3
+ReportingUnit	Delaware;DE House District 4	Delaware;DE House District 4
+ReportingUnit	Delaware;DE House District 5	Delaware;DE House District 5
+ReportingUnit	Delaware;DE House District 6	Delaware;DE House District 6
+ReportingUnit	Delaware;DE House District 7	Delaware;DE House District 7
+ReportingUnit	Delaware;DE House District 8	Delaware;DE House District 8
+ReportingUnit	Delaware;DE House District 9	Delaware;DE House District 9
+ReportingUnit	Delaware;DE House District 10	Delaware;DE House District 10
+ReportingUnit	Delaware;DE House District 11	Delaware;DE House District 11
+ReportingUnit	Delaware;DE House District 12	Delaware;DE House District 12
+ReportingUnit	Delaware;DE House District 13	Delaware;DE House District 13
+ReportingUnit	Delaware;DE House District 14	Delaware;DE House District 14
+ReportingUnit	Delaware;DE House District 15	Delaware;DE House District 15
+ReportingUnit	Delaware;DE House District 16	Delaware;DE House District 16
+ReportingUnit	Delaware;DE House District 17	Delaware;DE House District 17
+ReportingUnit	Delaware;DE House District 18	Delaware;DE House District 18
+ReportingUnit	Delaware;DE House District 19	Delaware;DE House District 19
+ReportingUnit	Delaware;DE House District 20	Delaware;DE House District 20
+ReportingUnit	Delaware;DE House District 21	Delaware;DE House District 21
+ReportingUnit	Delaware;DE House District 22	Delaware;DE House District 22
+ReportingUnit	Delaware;DE House District 23	Delaware;DE House District 23
+ReportingUnit	Delaware;DE House District 24	Delaware;DE House District 24
+ReportingUnit	Delaware;DE House District 25	Delaware;DE House District 25
+ReportingUnit	Delaware;DE House District 26	Delaware;DE House District 26
+ReportingUnit	Delaware;DE House District 27	Delaware;DE House District 27
+ReportingUnit	Delaware;DE House District 28	Delaware;DE House District 28
+ReportingUnit	Delaware;DE House District 29	Delaware;DE House District 29
+ReportingUnit	Delaware;DE House District 30	Delaware;DE House District 30
+ReportingUnit	Delaware;DE House District 31	Delaware;DE House District 31
+ReportingUnit	Delaware;DE House District 32	Delaware;DE House District 32
+ReportingUnit	Delaware;DE House District 33	Delaware;DE House District 33
+ReportingUnit	Delaware;DE House District 34	Delaware;DE House District 34
+ReportingUnit	Delaware;DE House District 35	Delaware;DE House District 35
+ReportingUnit	Delaware;DE House District 36	Delaware;DE House District 36
+ReportingUnit	Delaware;DE House District 37	Delaware;DE House District 37
+ReportingUnit	Delaware;DE House District 38	Delaware;DE House District 38
+ReportingUnit	Delaware;DE House District 39	Delaware;DE House District 39
+ReportingUnit	Delaware;DE House District 40	Delaware;DE House District 40
+ReportingUnit	Delaware;DE House District 41	Delaware;DE House District 41
+ReportingUnit	Delaware;DE Senate District 1	Delaware;DE Senate District 1
+ReportingUnit	Delaware;DE Senate District 2	Delaware;DE Senate District 2
+ReportingUnit	Delaware;DE Senate District 3	Delaware;DE Senate District 3
+ReportingUnit	Delaware;DE Senate District 4	Delaware;DE Senate District 4
+ReportingUnit	Delaware;DE Senate District 5	Delaware;DE Senate District 5
+ReportingUnit	Delaware;DE Senate District 6	Delaware;DE Senate District 6
+ReportingUnit	Delaware;DE Senate District 7	Delaware;DE Senate District 7
+ReportingUnit	Delaware;DE Senate District 8	Delaware;DE Senate District 8
+ReportingUnit	Delaware;DE Senate District 9	Delaware;DE Senate District 9
+ReportingUnit	Delaware;DE Senate District 10	Delaware;DE Senate District 10
+ReportingUnit	Delaware;DE Senate District 11	Delaware;DE Senate District 11
+ReportingUnit	Delaware;DE Senate District 12	Delaware;DE Senate District 12
+ReportingUnit	Delaware;DE Senate District 13	Delaware;DE Senate District 13
+ReportingUnit	Delaware;DE Senate District 14	Delaware;DE Senate District 14
+ReportingUnit	Delaware;DE Senate District 15	Delaware;DE Senate District 15
+ReportingUnit	Delaware;DE Senate District 16	Delaware;DE Senate District 16
+ReportingUnit	Delaware;DE Senate District 17	Delaware;DE Senate District 17
+ReportingUnit	Delaware;DE Senate District 18	Delaware;DE Senate District 18
+ReportingUnit	Delaware;DE Senate District 19	Delaware;DE Senate District 19
+ReportingUnit	Delaware;DE Senate District 20	Delaware;DE Senate District 20
+ReportingUnit	Delaware;DE Senate District 21	Delaware;DE Senate District 21
+ReportingUnit	Delaware	Delaware
+ReportingUnit	Delaware;New Castle County;01-01	Election District 01-01
+ReportingUnit	Delaware;Kent County;11-05	Election District 11-05
+ReportingUnit	Delaware;Sussex County;14-01	Election District 14-01
+ReportingUnit	Delaware;New Castle County;01-02	Election District 01-02
+ReportingUnit	Delaware;Kent County;11-06	Election District 11-06
+ReportingUnit	Delaware;Sussex County;14-02	Election District 14-02
+ReportingUnit	Delaware;New Castle County;01-03	Election District 01-03
+ReportingUnit	Delaware;Kent County;11-07	Election District 11-07
+ReportingUnit	Delaware;Sussex County;14-03	Election District 14-03
+ReportingUnit	Delaware;New Castle County;01-04	Election District 01-04
+ReportingUnit	Delaware;Kent County;11-08	Election District 11-08
+ReportingUnit	Delaware;Sussex County;14-04	Election District 14-04
+ReportingUnit	Delaware;New Castle County;01-05	Election District 01-05
+ReportingUnit	Delaware;Kent County;11-09	Election District 11-09
+ReportingUnit	Delaware;Sussex County;14-05	Election District 14-05
+ReportingUnit	Delaware;New Castle County;01-06	Election District 01-06
+ReportingUnit	Delaware;Kent County;11-10	Election District 11-10
+ReportingUnit	Delaware;Sussex County;14-06	Election District 14-06
+ReportingUnit	Delaware;New Castle County;01-07	Election District 01-07
+ReportingUnit	Delaware;Kent County;28-01	Election District 28-01
+ReportingUnit	Delaware;Sussex County;14-07	Election District 14-07
+ReportingUnit	Delaware;New Castle County;01-08	Election District 01-08
+ReportingUnit	Delaware;Kent County;28-02	Election District 28-02
+ReportingUnit	Delaware;Sussex County;20-01	Election District 20-01
+ReportingUnit	Delaware;New Castle County;01-09	Election District 01-09
+ReportingUnit	Delaware;Kent County;28-03	Election District 28-03
+ReportingUnit	Delaware;Sussex County;20-02	Election District 20-02
+ReportingUnit	Delaware;New Castle County;01-10	Election District 01-10
+ReportingUnit	Delaware;Kent County;28-04	Election District 28-04
+ReportingUnit	Delaware;Sussex County;20-03	Election District 20-03
+ReportingUnit	Delaware;New Castle County;01-11	Election District 01-11
+ReportingUnit	Delaware;Kent County;28-05	Election District 28-05
+ReportingUnit	Delaware;Sussex County;20-04	Election District 20-04
+ReportingUnit	Delaware;New Castle County;01-12	Election District 01-12
+ReportingUnit	Delaware;Kent County;28-06	Election District 28-06
+ReportingUnit	Delaware;Sussex County;20-05	Election District 20-05
+ReportingUnit	Delaware;New Castle County;01-13	Election District 01-13
+ReportingUnit	Delaware;Kent County;28-07	Election District 28-07
+ReportingUnit	Delaware;Sussex County;20-06	Election District 20-06
+ReportingUnit	Delaware;New Castle County;01-14	Election District 01-14
+ReportingUnit	Delaware;Kent County;28-08	Election District 28-08
+ReportingUnit	Delaware;Sussex County;20-07	Election District 20-07
+ReportingUnit	Delaware;New Castle County;02-01	Election District 02-01
+ReportingUnit	Delaware;Kent County;28-09	Election District 28-09
+ReportingUnit	Delaware;Sussex County;20-08	Election District 20-08
+ReportingUnit	Delaware;New Castle County;02-02	Election District 02-02
+ReportingUnit	Delaware;Kent County;28-10	Election District 28-10
+ReportingUnit	Delaware;Sussex County;20-09	Election District 20-09
+ReportingUnit	Delaware;New Castle County;02-03	Election District 02-03
+ReportingUnit	Delaware;Kent County;28-11	Election District 28-11
+ReportingUnit	Delaware;Sussex County;20-10	Election District 20-10
+ReportingUnit	Delaware;New Castle County;02-04	Election District 02-04
+ReportingUnit	Delaware;Kent County;28-12	Election District 28-12
+ReportingUnit	Delaware;Sussex County;35-01	Election District 35-01
+ReportingUnit	Delaware;New Castle County;02-05	Election District 02-05
+ReportingUnit	Delaware;Kent County;28-13	Election District 28-13
+ReportingUnit	Delaware;Sussex County;35-02	Election District 35-02
+ReportingUnit	Delaware;New Castle County;02-06	Election District 02-06
+ReportingUnit	Delaware;Kent County;28-14	Election District 28-14
+ReportingUnit	Delaware;Sussex County;35-03	Election District 35-03
+ReportingUnit	Delaware;New Castle County;02-07	Election District 02-07
+ReportingUnit	Delaware;Kent County;29-01	Election District 29-01
+ReportingUnit	Delaware;Sussex County;35-04	Election District 35-04
+ReportingUnit	Delaware;New Castle County;02-08	Election District 02-08
+ReportingUnit	Delaware;Kent County;29-02	Election District 29-02
+ReportingUnit	Delaware;Sussex County;35-05	Election District 35-05
+ReportingUnit	Delaware;New Castle County;02-09	Election District 02-09
+ReportingUnit	Delaware;Kent County;29-03	Election District 29-03
+ReportingUnit	Delaware;Sussex County;35-06	Election District 35-06
+ReportingUnit	Delaware;New Castle County;02-10	Election District 02-10
+ReportingUnit	Delaware;Kent County;29-04	Election District 29-04
+ReportingUnit	Delaware;Sussex County;35-07	Election District 35-07
+ReportingUnit	Delaware;New Castle County;02-11	Election District 02-11
+ReportingUnit	Delaware;Kent County;29-05	Election District 29-05
+ReportingUnit	Delaware;Sussex County;36-01	Election District 36-01
+ReportingUnit	Delaware;New Castle County;02-12	Election District 02-12
+ReportingUnit	Delaware;Kent County;29-06	Election District 29-06
+ReportingUnit	Delaware;Sussex County;36-02	Election District 36-02
+ReportingUnit	Delaware;New Castle County;03-01	Election District 03-01
+ReportingUnit	Delaware;Kent County;29-07	Election District 29-07
+ReportingUnit	Delaware;Sussex County;36-03	Election District 36-03
+ReportingUnit	Delaware;New Castle County;03-02	Election District 03-02
+ReportingUnit	Delaware;Kent County;29-08	Election District 29-08
+ReportingUnit	Delaware;Sussex County;36-04	Election District 36-04
+ReportingUnit	Delaware;New Castle County;03-03	Election District 03-03
+ReportingUnit	Delaware;Kent County;29-09	Election District 29-09
+ReportingUnit	Delaware;Sussex County;36-05	Election District 36-05
+ReportingUnit	Delaware;New Castle County;03-04	Election District 03-04
+ReportingUnit	Delaware;Kent County;29-10	Election District 29-10
+ReportingUnit	Delaware;Sussex County;36-06	Election District 36-06
+ReportingUnit	Delaware;New Castle County;03-05	Election District 03-05
+ReportingUnit	Delaware;Kent County;29-11	Election District 29-11
+ReportingUnit	Delaware;Sussex County;36-07	Election District 36-07
+ReportingUnit	Delaware;New Castle County;03-06	Election District 03-06
+ReportingUnit	Delaware;Kent County;29-12	Election District 29-12
+ReportingUnit	Delaware;Sussex County;36-08	Election District 36-08
+ReportingUnit	Delaware;New Castle County;03-07	Election District 03-07
+ReportingUnit	Delaware;Kent County;29-13	Election District 29-13
+ReportingUnit	Delaware;Sussex County;36-09	Election District 36-09
+ReportingUnit	Delaware;New Castle County;03-08	Election District 03-08
+ReportingUnit	Delaware;Kent County;30-01	Election District 30-01
+ReportingUnit	Delaware;Sussex County;36-10	Election District 36-10
+ReportingUnit	Delaware;New Castle County;03-09	Election District 03-09
+ReportingUnit	Delaware;Kent County;30-02	Election District 30-02
+ReportingUnit	Delaware;Sussex County;36-11	Election District 36-11
+ReportingUnit	Delaware;New Castle County;03-10	Election District 03-10
+ReportingUnit	Delaware;Kent County;30-03	Election District 30-03
+ReportingUnit	Delaware;Sussex County;37-01	Election District 37-01
+ReportingUnit	Delaware;New Castle County;04-01	Election District 04-01
+ReportingUnit	Delaware;Kent County;30-04	Election District 30-04
+ReportingUnit	Delaware;Sussex County;37-02	Election District 37-02
+ReportingUnit	Delaware;New Castle County;04-02	Election District 04-02
+ReportingUnit	Delaware;Kent County;30-05	Election District 30-05
+ReportingUnit	Delaware;Sussex County;37-03	Election District 37-03
+ReportingUnit	Delaware;New Castle County;04-03	Election District 04-03
+ReportingUnit	Delaware;Kent County;30-06	Election District 30-06
+ReportingUnit	Delaware;Sussex County;37-04	Election District 37-04
+ReportingUnit	Delaware;New Castle County;04-04	Election District 04-04
+ReportingUnit	Delaware;Kent County;30-07	Election District 30-07
+ReportingUnit	Delaware;Sussex County;37-05	Election District 37-05
+ReportingUnit	Delaware;New Castle County;04-05	Election District 04-05
+ReportingUnit	Delaware;Kent County;30-08	Election District 30-08
+ReportingUnit	Delaware;Sussex County;37-06	Election District 37-06
+ReportingUnit	Delaware;New Castle County;04-06	Election District 04-06
+ReportingUnit	Delaware;Kent County;30-09	Election District 30-09
+ReportingUnit	Delaware;Sussex County;37-07	Election District 37-07
+ReportingUnit	Delaware;New Castle County;04-07	Election District 04-07
+ReportingUnit	Delaware;Kent County;30-10	Election District 30-10
+ReportingUnit	Delaware;Sussex County;38-01	Election District 38-01
+ReportingUnit	Delaware;New Castle County;04-08	Election District 04-08
+ReportingUnit	Delaware;Kent County;30-11	Election District 30-11
+ReportingUnit	Delaware;Sussex County;38-02	Election District 38-02
+ReportingUnit	Delaware;New Castle County;04-09	Election District 04-09
+ReportingUnit	Delaware;Kent County;30-12	Election District 30-12
+ReportingUnit	Delaware;Sussex County;38-03	Election District 38-03
+ReportingUnit	Delaware;New Castle County;04-10	Election District 04-10
+ReportingUnit	Delaware;Kent County;31-01	Election District 31-01
+ReportingUnit	Delaware;Sussex County;38-04	Election District 38-04
+ReportingUnit	Delaware;New Castle County;04-11	Election District 04-11
+ReportingUnit	Delaware;Kent County;31-02	Election District 31-02
+ReportingUnit	Delaware;Sussex County;38-05	Election District 38-05
+ReportingUnit	Delaware;New Castle County;04-12	Election District 04-12
+ReportingUnit	Delaware;Kent County;31-03	Election District 31-03
+ReportingUnit	Delaware;Sussex County;38-06	Election District 38-06
+ReportingUnit	Delaware;New Castle County;04-13	Election District 04-13
+ReportingUnit	Delaware;Kent County;31-04	Election District 31-04
+ReportingUnit	Delaware;Sussex County;38-07	Election District 38-07
+ReportingUnit	Delaware;New Castle County;04-14	Election District 04-14
+ReportingUnit	Delaware;Kent County;31-05	Election District 31-05
+ReportingUnit	Delaware;Sussex County;38-08	Election District 38-08
+ReportingUnit	Delaware;New Castle County;04-15	Election District 04-15
+ReportingUnit	Delaware;Kent County;31-06	Election District 31-06
+ReportingUnit	Delaware;Sussex County;39-01	Election District 39-01
+ReportingUnit	Delaware;New Castle County;04-16	Election District 04-16
+ReportingUnit	Delaware;Kent County;31-07	Election District 31-07
+ReportingUnit	Delaware;Sussex County;39-02	Election District 39-02
+ReportingUnit	Delaware;New Castle County;05-01	Election District 05-01
+ReportingUnit	Delaware;Kent County;31-08	Election District 31-08
+ReportingUnit	Delaware;Sussex County;39-03	Election District 39-03
+ReportingUnit	Delaware;New Castle County;05-02	Election District 05-02
+ReportingUnit	Delaware;Kent County;31-09	Election District 31-09
+ReportingUnit	Delaware;Sussex County;39-04	Election District 39-04
+ReportingUnit	Delaware;New Castle County;05-03	Election District 05-03
+ReportingUnit	Delaware;Kent County;31-10	Election District 31-10
+ReportingUnit	Delaware;Sussex County;39-05	Election District 39-05
+ReportingUnit	Delaware;New Castle County;05-04	Election District 05-04
+ReportingUnit	Delaware;Kent County;31-11	Election District 31-11
+ReportingUnit	Delaware;Sussex County;39-06	Election District 39-06
+ReportingUnit	Delaware;New Castle County;05-05	Election District 05-05
+ReportingUnit	Delaware;Kent County;32-01	Election District 32-01
+ReportingUnit	Delaware;Sussex County;39-07	Election District 39-07
+ReportingUnit	Delaware;New Castle County;05-06	Election District 05-06
+ReportingUnit	Delaware;Kent County;32-02	Election District 32-02
+ReportingUnit	Delaware;Sussex County;40-01	Election District 40-01
+ReportingUnit	Delaware;New Castle County;05-07	Election District 05-07
+ReportingUnit	Delaware;Kent County;32-03	Election District 32-03
+ReportingUnit	Delaware;Sussex County;40-02	Election District 40-02
+ReportingUnit	Delaware;New Castle County;05-08	Election District 05-08
+ReportingUnit	Delaware;Kent County;32-04	Election District 32-04
+ReportingUnit	Delaware;Sussex County;40-03	Election District 40-03
+ReportingUnit	Delaware;New Castle County;05-09	Election District 05-09
+ReportingUnit	Delaware;Kent County;32-05	Election District 32-05
+ReportingUnit	Delaware;Sussex County;40-04	Election District 40-04
+ReportingUnit	Delaware;New Castle County;05-10	Election District 05-10
+ReportingUnit	Delaware;Kent County;32-06	Election District 32-06
+ReportingUnit	Delaware;Sussex County;40-05	Election District 40-05
+ReportingUnit	Delaware;New Castle County;06-01	Election District 06-01
+ReportingUnit	Delaware;Kent County;32-07	Election District 32-07
+ReportingUnit	Delaware;Sussex County;40-06	Election District 40-06
+ReportingUnit	Delaware;New Castle County;06-02	Election District 06-02
+ReportingUnit	Delaware;Kent County;32-08	Election District 32-08
+ReportingUnit	Delaware;Sussex County;40-07	Election District 40-07
+ReportingUnit	Delaware;New Castle County;06-03	Election District 06-03
+ReportingUnit	Delaware;Kent County;32-09	Election District 32-09
+ReportingUnit	Delaware;Sussex County;40-08	Election District 40-08
+ReportingUnit	Delaware;New Castle County;06-04	Election District 06-04
+ReportingUnit	Delaware;Kent County;32-10	Election District 32-10
+ReportingUnit	Delaware;Sussex County;41-01	Election District 41-01
+ReportingUnit	Delaware;New Castle County;06-05	Election District 06-05
+ReportingUnit	Delaware;Kent County;32-11	Election District 32-11
+ReportingUnit	Delaware;Sussex County;41-02	Election District 41-02
+ReportingUnit	Delaware;New Castle County;06-06	Election District 06-06
+ReportingUnit	Delaware;Kent County;32-12	Election District 32-12
+ReportingUnit	Delaware;Sussex County;41-03	Election District 41-03
+ReportingUnit	Delaware;New Castle County;06-07	Election District 06-07
+ReportingUnit	Delaware;Kent County;33-01	Election District 33-01
+ReportingUnit	Delaware;Sussex County;41-04	Election District 41-04
+ReportingUnit	Delaware;New Castle County;06-08	Election District 06-08
+ReportingUnit	Delaware;Kent County;33-02	Election District 33-02
+ReportingUnit	Delaware;Sussex County;41-05	Election District 41-05
+ReportingUnit	Delaware;New Castle County;06-09	Election District 06-09
+ReportingUnit	Delaware;Kent County;33-03	Election District 33-03
+ReportingUnit	Delaware;Sussex County;41-06	Election District 41-06
+ReportingUnit	Delaware;New Castle County;06-10	Election District 06-10
+ReportingUnit	Delaware;Kent County;33-04	Election District 33-04
+ReportingUnit	Delaware;Sussex County;41-07	Election District 41-07
+ReportingUnit	Delaware;New Castle County;06-11	Election District 06-11
+ReportingUnit	Delaware;Kent County;33-05	Election District 33-05
+ReportingUnit	Delaware;Sussex County;41-08	Election District 41-08
+ReportingUnit	Delaware;New Castle County;06-12	Election District 06-12
+ReportingUnit	Delaware;Kent County;33-06	Election District 33-06
+ReportingUnit	Delaware;Sussex County;41-16	Election District 41-16
+ReportingUnit	Delaware;New Castle County;07-01	Election District 07-01
+ReportingUnit	Delaware;Kent County;33-07	Election District 33-07
+ReportingUnit	Delaware;New Castle County;07-02	Election District 07-02
+ReportingUnit	Delaware;Kent County;33-08	Election District 33-08
+ReportingUnit	Delaware;New Castle County;07-03	Election District 07-03
+ReportingUnit	Delaware;Kent County;33-09	Election District 33-09
+ReportingUnit	Delaware;New Castle County;07-04	Election District 07-04
+ReportingUnit	Delaware;Kent County;33-10	Election District 33-10
+ReportingUnit	Delaware;New Castle County;07-05	Election District 07-05
+ReportingUnit	Delaware;Kent County;34-01	Election District 34-01
+ReportingUnit	Delaware;New Castle County;07-06	Election District 07-06
+ReportingUnit	Delaware;Kent County;34-02	Election District 34-02
+ReportingUnit	Delaware;New Castle County;07-07	Election District 07-07
+ReportingUnit	Delaware;Kent County;34-03	Election District 34-03
+ReportingUnit	Delaware;New Castle County;07-08	Election District 07-08
+ReportingUnit	Delaware;Kent County;34-04	Election District 34-04
+ReportingUnit	Delaware;New Castle County;07-09	Election District 07-09
+ReportingUnit	Delaware;Kent County;34-05	Election District 34-05
+ReportingUnit	Delaware;New Castle County;07-10	Election District 07-10
+ReportingUnit	Delaware;Kent County;34-06	Election District 34-06
+ReportingUnit	Delaware;New Castle County;08-01	Election District 08-01
+ReportingUnit	Delaware;Kent County;34-07	Election District 34-07
+ReportingUnit	Delaware;New Castle County;08-02	Election District 08-02
+ReportingUnit	Delaware;Kent County;34-08	Election District 34-08
+ReportingUnit	Delaware;New Castle County;08-03	Election District 08-03
+ReportingUnit	Delaware;Kent County;34-09	Election District 34-09
+ReportingUnit	Delaware;New Castle County;08-04	Election District 08-04
+ReportingUnit	Delaware;Kent County;34-10	Election District 34-10
+ReportingUnit	Delaware;New Castle County;08-05	Election District 08-05
+ReportingUnit	Delaware;Kent County;34-11	Election District 34-11
+ReportingUnit	Delaware;New Castle County;08-06	Election District 08-06
+ReportingUnit	Delaware;New Castle County;08-07	Election District 08-07
+ReportingUnit	Delaware;New Castle County;08-08	Election District 08-08
+ReportingUnit	Delaware;New Castle County;08-09	Election District 08-09
+ReportingUnit	Delaware;New Castle County;08-10	Election District 08-10
+ReportingUnit	Delaware;New Castle County;09-01	Election District 09-01
+ReportingUnit	Delaware;New Castle County;09-02	Election District 09-02
+ReportingUnit	Delaware;New Castle County;09-03	Election District 09-03
+ReportingUnit	Delaware;New Castle County;09-04	Election District 09-04
+ReportingUnit	Delaware;New Castle County;09-05	Election District 09-05
+ReportingUnit	Delaware;New Castle County;09-06	Election District 09-06
+ReportingUnit	Delaware;New Castle County;09-07	Election District 09-07
+ReportingUnit	Delaware;New Castle County;09-08	Election District 09-08
+ReportingUnit	Delaware;New Castle County;09-09	Election District 09-09
+ReportingUnit	Delaware;New Castle County;09-10	Election District 09-10
+ReportingUnit	Delaware;New Castle County;09-11	Election District 09-11
+ReportingUnit	Delaware;New Castle County;09-12	Election District 09-12
+ReportingUnit	Delaware;New Castle County;09-13	Election District 09-13
+ReportingUnit	Delaware;New Castle County;10-01	Election District 10-01
+ReportingUnit	Delaware;New Castle County;10-02	Election District 10-02
+ReportingUnit	Delaware;New Castle County;10-03	Election District 10-03
+ReportingUnit	Delaware;New Castle County;10-04	Election District 10-04
+ReportingUnit	Delaware;New Castle County;10-05	Election District 10-05
+ReportingUnit	Delaware;New Castle County;10-06	Election District 10-06
+ReportingUnit	Delaware;New Castle County;10-07	Election District 10-07
+ReportingUnit	Delaware;New Castle County;10-08	Election District 10-08
+ReportingUnit	Delaware;New Castle County;10-09	Election District 10-09
+ReportingUnit	Delaware;New Castle County;10-10	Election District 10-10
+ReportingUnit	Delaware;New Castle County;11-01	Election District 11-01
+ReportingUnit	Delaware;New Castle County;11-02	Election District 11-02
+ReportingUnit	Delaware;New Castle County;11-03	Election District 11-03
+ReportingUnit	Delaware;New Castle County;11-04	Election District 11-04
+ReportingUnit	Delaware;New Castle County;12-01	Election District 12-01
+ReportingUnit	Delaware;New Castle County;12-02	Election District 12-02
+ReportingUnit	Delaware;New Castle County;12-03	Election District 12-03
+ReportingUnit	Delaware;New Castle County;12-04	Election District 12-04
+ReportingUnit	Delaware;New Castle County;12-05	Election District 12-05
+ReportingUnit	Delaware;New Castle County;12-06	Election District 12-06
+ReportingUnit	Delaware;New Castle County;12-07	Election District 12-07
+ReportingUnit	Delaware;New Castle County;12-08	Election District 12-08
+ReportingUnit	Delaware;New Castle County;12-09	Election District 12-09
+ReportingUnit	Delaware;New Castle County;12-10	Election District 12-10
+ReportingUnit	Delaware;New Castle County;12-11	Election District 12-11
+ReportingUnit	Delaware;New Castle County;12-12	Election District 12-12
+ReportingUnit	Delaware;New Castle County;12-13	Election District 12-13
+ReportingUnit	Delaware;New Castle County;12-14	Election District 12-14
+ReportingUnit	Delaware;New Castle County;13-01	Election District 13-01
+ReportingUnit	Delaware;New Castle County;13-02	Election District 13-02
+ReportingUnit	Delaware;New Castle County;13-03	Election District 13-03
+ReportingUnit	Delaware;New Castle County;13-04	Election District 13-04
+ReportingUnit	Delaware;New Castle County;13-05	Election District 13-05
+ReportingUnit	Delaware;New Castle County;13-06	Election District 13-06
+ReportingUnit	Delaware;New Castle County;13-07	Election District 13-07
+ReportingUnit	Delaware;New Castle County;13-08	Election District 13-08
+ReportingUnit	Delaware;New Castle County;13-09	Election District 13-09
+ReportingUnit	Delaware;New Castle County;13-10	Election District 13-10
+ReportingUnit	Delaware;New Castle County;13-11	Election District 13-11
+ReportingUnit	Delaware;New Castle County;13-12	Election District 13-12
+ReportingUnit	Delaware;New Castle County;13-13	Election District 13-13
+ReportingUnit	Delaware;New Castle County;13-14	Election District 13-14
+ReportingUnit	Delaware;New Castle County;15-01	Election District 15-01
+ReportingUnit	Delaware;New Castle County;15-02	Election District 15-02
+ReportingUnit	Delaware;New Castle County;15-03	Election District 15-03
+ReportingUnit	Delaware;New Castle County;15-04	Election District 15-04
+ReportingUnit	Delaware;New Castle County;15-05	Election District 15-05
+ReportingUnit	Delaware;New Castle County;15-06	Election District 15-06
+ReportingUnit	Delaware;New Castle County;15-07	Election District 15-07
+ReportingUnit	Delaware;New Castle County;15-08	Election District 15-08
+ReportingUnit	Delaware;New Castle County;15-09	Election District 15-09
+ReportingUnit	Delaware;New Castle County;15-10	Election District 15-10
+ReportingUnit	Delaware;New Castle County;16-01	Election District 16-01
+ReportingUnit	Delaware;New Castle County;16-02	Election District 16-02
+ReportingUnit	Delaware;New Castle County;16-03	Election District 16-03
+ReportingUnit	Delaware;New Castle County;16-04	Election District 16-04
+ReportingUnit	Delaware;New Castle County;16-05	Election District 16-05
+ReportingUnit	Delaware;New Castle County;16-06	Election District 16-06
+ReportingUnit	Delaware;New Castle County;16-07	Election District 16-07
+ReportingUnit	Delaware;New Castle County;16-08	Election District 16-08
+ReportingUnit	Delaware;New Castle County;16-09	Election District 16-09
+ReportingUnit	Delaware;New Castle County;16-10	Election District 16-10
+ReportingUnit	Delaware;New Castle County;17-01	Election District 17-01
+ReportingUnit	Delaware;New Castle County;17-02	Election District 17-02
+ReportingUnit	Delaware;New Castle County;17-03	Election District 17-03
+ReportingUnit	Delaware;New Castle County;17-04	Election District 17-04
+ReportingUnit	Delaware;New Castle County;17-05	Election District 17-05
+ReportingUnit	Delaware;New Castle County;17-06	Election District 17-06
+ReportingUnit	Delaware;New Castle County;17-07	Election District 17-07
+ReportingUnit	Delaware;New Castle County;17-08	Election District 17-08
+ReportingUnit	Delaware;New Castle County;17-09	Election District 17-09
+ReportingUnit	Delaware;New Castle County;17-10	Election District 17-10
+ReportingUnit	Delaware;New Castle County;17-11	Election District 17-11
+ReportingUnit	Delaware;New Castle County;18-01	Election District 18-01
+ReportingUnit	Delaware;New Castle County;18-02	Election District 18-02
+ReportingUnit	Delaware;New Castle County;18-03	Election District 18-03
+ReportingUnit	Delaware;New Castle County;18-04	Election District 18-04
+ReportingUnit	Delaware;New Castle County;18-05	Election District 18-05
+ReportingUnit	Delaware;New Castle County;18-06	Election District 18-06
+ReportingUnit	Delaware;New Castle County;18-07	Election District 18-07
+ReportingUnit	Delaware;New Castle County;18-08	Election District 18-08
+ReportingUnit	Delaware;New Castle County;18-09	Election District 18-09
+ReportingUnit	Delaware;New Castle County;18-10	Election District 18-10
+ReportingUnit	Delaware;New Castle County;19-01	Election District 19-01
+ReportingUnit	Delaware;New Castle County;19-02	Election District 19-02
+ReportingUnit	Delaware;New Castle County;19-03	Election District 19-03
+ReportingUnit	Delaware;New Castle County;19-04	Election District 19-04
+ReportingUnit	Delaware;New Castle County;19-05	Election District 19-05
+ReportingUnit	Delaware;New Castle County;19-06	Election District 19-06
+ReportingUnit	Delaware;New Castle County;19-07	Election District 19-07
+ReportingUnit	Delaware;New Castle County;19-08	Election District 19-08
+ReportingUnit	Delaware;New Castle County;19-09	Election District 19-09
+ReportingUnit	Delaware;New Castle County;19-10	Election District 19-10
+ReportingUnit	Delaware;New Castle County;19-11	Election District 19-11
+ReportingUnit	Delaware;New Castle County;19-12	Election District 19-12
+ReportingUnit	Delaware;New Castle County;21-01	Election District 21-01
+ReportingUnit	Delaware;New Castle County;21-02	Election District 21-02
+ReportingUnit	Delaware;New Castle County;21-03	Election District 21-03
+ReportingUnit	Delaware;New Castle County;21-04	Election District 21-04
+ReportingUnit	Delaware;New Castle County;21-05	Election District 21-05
+ReportingUnit	Delaware;New Castle County;21-06	Election District 21-06
+ReportingUnit	Delaware;New Castle County;21-07	Election District 21-07
+ReportingUnit	Delaware;New Castle County;21-08	Election District 21-08
+ReportingUnit	Delaware;New Castle County;21-09	Election District 21-09
+ReportingUnit	Delaware;New Castle County;21-10	Election District 21-10
+ReportingUnit	Delaware;New Castle County;21-11	Election District 21-11
+ReportingUnit	Delaware;New Castle County;22-01	Election District 22-01
+ReportingUnit	Delaware;New Castle County;22-02	Election District 22-02
+ReportingUnit	Delaware;New Castle County;22-03	Election District 22-03
+ReportingUnit	Delaware;New Castle County;22-04	Election District 22-04
+ReportingUnit	Delaware;New Castle County;22-05	Election District 22-05
+ReportingUnit	Delaware;New Castle County;22-06	Election District 22-06
+ReportingUnit	Delaware;New Castle County;22-07	Election District 22-07
+ReportingUnit	Delaware;New Castle County;22-08	Election District 22-08
+ReportingUnit	Delaware;New Castle County;22-09	Election District 22-09
+ReportingUnit	Delaware;New Castle County;22-10	Election District 22-10
+ReportingUnit	Delaware;New Castle County;22-11	Election District 22-11
+ReportingUnit	Delaware;New Castle County;22-12	Election District 22-12
+ReportingUnit	Delaware;New Castle County;23-01	Election District 23-01
+ReportingUnit	Delaware;New Castle County;23-02	Election District 23-02
+ReportingUnit	Delaware;New Castle County;23-03	Election District 23-03
+ReportingUnit	Delaware;New Castle County;23-04	Election District 23-04
+ReportingUnit	Delaware;New Castle County;23-05	Election District 23-05
+ReportingUnit	Delaware;New Castle County;23-06	Election District 23-06
+ReportingUnit	Delaware;New Castle County;23-07	Election District 23-07
+ReportingUnit	Delaware;New Castle County;23-08	Election District 23-08
+ReportingUnit	Delaware;New Castle County;23-09	Election District 23-09
+ReportingUnit	Delaware;New Castle County;24-01	Election District 24-01
+ReportingUnit	Delaware;New Castle County;24-02	Election District 24-02
+ReportingUnit	Delaware;New Castle County;24-03	Election District 24-03
+ReportingUnit	Delaware;New Castle County;24-04	Election District 24-04
+ReportingUnit	Delaware;New Castle County;24-05	Election District 24-05
+ReportingUnit	Delaware;New Castle County;24-06	Election District 24-06
+ReportingUnit	Delaware;New Castle County;24-07	Election District 24-07
+ReportingUnit	Delaware;New Castle County;24-08	Election District 24-08
+ReportingUnit	Delaware;New Castle County;24-09	Election District 24-09
+ReportingUnit	Delaware;New Castle County;24-10	Election District 24-10
+ReportingUnit	Delaware;New Castle County;25-01	Election District 25-01
+ReportingUnit	Delaware;New Castle County;25-02	Election District 25-02
+ReportingUnit	Delaware;New Castle County;25-03	Election District 25-03
+ReportingUnit	Delaware;New Castle County;25-04	Election District 25-04
+ReportingUnit	Delaware;New Castle County;25-05	Election District 25-05
+ReportingUnit	Delaware;New Castle County;25-06	Election District 25-06
+ReportingUnit	Delaware;New Castle County;25-07	Election District 25-07
+ReportingUnit	Delaware;New Castle County;25-08	Election District 25-08
+ReportingUnit	Delaware;New Castle County;26-01	Election District 26-01
+ReportingUnit	Delaware;New Castle County;26-02	Election District 26-02
+ReportingUnit	Delaware;New Castle County;26-03	Election District 26-03
+ReportingUnit	Delaware;New Castle County;26-04	Election District 26-04
+ReportingUnit	Delaware;New Castle County;26-05	Election District 26-05
+ReportingUnit	Delaware;New Castle County;26-06	Election District 26-06
+ReportingUnit	Delaware;New Castle County;26-07	Election District 26-07
+ReportingUnit	Delaware;New Castle County;26-08	Election District 26-08
+ReportingUnit	Delaware;New Castle County;26-09	Election District 26-09
+ReportingUnit	Delaware;New Castle County;27-01	Election District 27-01
+ReportingUnit	Delaware;New Castle County;27-02	Election District 27-02
+ReportingUnit	Delaware;New Castle County;27-03	Election District 27-03
+ReportingUnit	Delaware;New Castle County;27-04	Election District 27-04
+ReportingUnit	Delaware;New Castle County;27-05	Election District 27-05
+ReportingUnit	Delaware;New Castle County;27-06	Election District 27-06
+ReportingUnit	Delaware;New Castle County;27-07	Election District 27-07
+ReportingUnit	Delaware;New Castle County;27-08	Election District 27-08
+ReportingUnit	Delaware;New Castle County;27-09	Election District 27-09
+ReportingUnit	Delaware;New Castle County;27-10	Election District 27-10
+CountItemType	election-day	Machine Votes
+CountItemType	absentee	Absentee Votes

@@ -1,0 +1,72 @@
+Name	NumberElected	Office	PrimaryParty
+DE House District 1	1	DE House District 1	
+DE House District 2	1	DE House District 2	
+DE House District 3	1	DE House District 3	
+DE House District 4	1	DE House District 4	
+DE House District 5	1	DE House District 5	
+DE House District 6	1	DE House District 6	
+DE House District 7	1	DE House District 7	
+DE House District 8	1	DE House District 8	
+DE House District 9	1	DE House District 9	
+DE House District 10	1	DE House District 10	
+DE House District 11	1	DE House District 11	
+DE House District 12	1	DE House District 12	
+DE House District 13	1	DE House District 13	
+DE House District 14	1	DE House District 14	
+DE House District 15	1	DE House District 15	
+DE House District 16	1	DE House District 16	
+DE House District 17	1	DE House District 17	
+DE House District 18	1	DE House District 18	
+DE House District 19	1	DE House District 19	
+DE House District 20	1	DE House District 20	
+DE House District 21	1	DE House District 21	
+DE House District 22	1	DE House District 22	
+DE House District 23	1	DE House District 23	
+DE House District 24	1	DE House District 24	
+DE House District 25	1	DE House District 25	
+DE House District 26	1	DE House District 26	
+DE House District 27	1	DE House District 27	
+DE House District 28	1	DE House District 28	
+DE House District 29	1	DE House District 29	
+DE House District 30	1	DE House District 30	
+DE House District 31	1	DE House District 31	
+DE House District 32	1	DE House District 32	
+DE House District 33	1	DE House District 33	
+DE House District 34	1	DE House District 34	
+DE House District 35	1	DE House District 35	
+DE House District 36	1	DE House District 36	
+DE House District 37	1	DE House District 37	
+DE House District 38	1	DE House District 38	
+DE House District 39	1	DE House District 39	
+DE House District 40	1	DE House District 40	
+DE House District 41	1	DE House District 41	
+DE Senate District 1	1	DE Senate District 1	
+DE Senate District 2	1	DE Senate District 2	
+DE Senate District 3	1	DE Senate District 3	
+DE Senate District 4	1	DE Senate District 4	
+DE Senate District 5	1	DE Senate District 5	
+DE Senate District 6	1	DE Senate District 6	
+DE Senate District 7	1	DE Senate District 7	
+DE Senate District 8	1	DE Senate District 8	
+DE Senate District 9	1	DE Senate District 9	
+DE Senate District 10	1	DE Senate District 10	
+DE Senate District 11	1	DE Senate District 11	
+DE Senate District 12	1	DE Senate District 12	
+DE Senate District 13	1	DE Senate District 13	
+DE Senate District 14	1	DE Senate District 14	
+DE Senate District 15	1	DE Senate District 15	
+DE Senate District 16	1	DE Senate District 16	
+DE Senate District 17	1	DE Senate District 17	
+DE Senate District 18	1	DE Senate District 18	
+DE Senate District 19	1	DE Senate District 19	
+DE Senate District 20	1	DE Senate District 20	
+DE Senate District 21	1	DE Senate District 21	
+US House DE District 1	1	US House DE District 1	
+US President (DE)	1	US President (DE)	
+DE Governor	1	DE Governor	
+US Senate DE	1	US Senate DE	
+DE Attorney General	1	DE Attorney General	
+DE Lieutenant Governor	1	DE Lieutenant Governor	
+DE Treasurer	1	DE Treasurer	
+DE Secretary of State	1	DE Secretary of State	
+DE Insurance Commissioner	1	DE Insurance Commissioner

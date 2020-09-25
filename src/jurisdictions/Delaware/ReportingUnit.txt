@@ -1,0 +1,501 @@
+Name	ReportingUnitType
+Delaware;DE House District 1	state-house
+Delaware;DE House District 2	state-house
+Delaware;DE House District 3	state-house
+Delaware;DE House District 4	state-house
+Delaware;DE House District 5	state-house
+Delaware;DE House District 6	state-house
+Delaware;DE House District 7	state-house
+Delaware;DE House District 8	state-house
+Delaware;DE House District 9	state-house
+Delaware;DE House District 10	state-house
+Delaware;DE House District 11	state-house
+Delaware;DE House District 12	state-house
+Delaware;DE House District 13	state-house
+Delaware;DE House District 14	state-house
+Delaware;DE House District 15	state-house
+Delaware;DE House District 16	state-house
+Delaware;DE House District 17	state-house
+Delaware;DE House District 18	state-house
+Delaware;DE House District 19	state-house
+Delaware;DE House District 20	state-house
+Delaware;DE House District 21	state-house
+Delaware;DE House District 22	state-house
+Delaware;DE House District 23	state-house
+Delaware;DE House District 24	state-house
+Delaware;DE House District 25	state-house
+Delaware;DE House District 26	state-house
+Delaware;DE House District 27	state-house
+Delaware;DE House District 28	state-house
+Delaware;DE House District 29	state-house
+Delaware;DE House District 30	state-house
+Delaware;DE House District 31	state-house
+Delaware;DE House District 32	state-house
+Delaware;DE House District 33	state-house
+Delaware;DE House District 34	state-house
+Delaware;DE House District 35	state-house
+Delaware;DE House District 36	state-house
+Delaware;DE House District 37	state-house
+Delaware;DE House District 38	state-house
+Delaware;DE House District 39	state-house
+Delaware;DE House District 40	state-house
+Delaware;DE House District 41	state-house
+Delaware;DE Senate District 1	state-senate
+Delaware;DE Senate District 2	state-senate
+Delaware;DE Senate District 3	state-senate
+Delaware;DE Senate District 4	state-senate
+Delaware;DE Senate District 5	state-senate
+Delaware;DE Senate District 6	state-senate
+Delaware;DE Senate District 7	state-senate
+Delaware;DE Senate District 8	state-senate
+Delaware;DE Senate District 9	state-senate
+Delaware;DE Senate District 10	state-senate
+Delaware;DE Senate District 11	state-senate
+Delaware;DE Senate District 12	state-senate
+Delaware;DE Senate District 13	state-senate
+Delaware;DE Senate District 14	state-senate
+Delaware;DE Senate District 15	state-senate
+Delaware;DE Senate District 16	state-senate
+Delaware;DE Senate District 17	state-senate
+Delaware;DE Senate District 18	state-senate
+Delaware;DE Senate District 19	state-senate
+Delaware;DE Senate District 20	state-senate
+Delaware;DE Senate District 21	state-senate
+Delaware	state
+Delaware;New Castle County;01-01	precinct
+Delaware;Kent County;11-05	precinct
+Delaware;Sussex County;14-01	precinct
+Delaware;New Castle County;01-02	precinct
+Delaware;Kent County;11-06	precinct
+Delaware;Sussex County;14-02	precinct
+Delaware;New Castle County;01-03	precinct
+Delaware;Kent County;11-07	precinct
+Delaware;Sussex County;14-03	precinct
+Delaware;New Castle County;01-04	precinct
+Delaware;Kent County;11-08	precinct
+Delaware;Sussex County;14-04	precinct
+Delaware;New Castle County;01-05	precinct
+Delaware;Kent County;11-09	precinct
+Delaware;Sussex County;14-05	precinct
+Delaware;New Castle County;01-06	precinct
+Delaware;Kent County;11-10	precinct
+Delaware;Sussex County;14-06	precinct
+Delaware;New Castle County;01-07	precinct
+Delaware;Kent County;28-01	precinct
+Delaware;Sussex County;14-07	precinct
+Delaware;New Castle County;01-08	precinct
+Delaware;Kent County;28-02	precinct
+Delaware;Sussex County;20-01	precinct
+Delaware;New Castle County;01-09	precinct
+Delaware;Kent County;28-03	precinct
+Delaware;Sussex County;20-02	precinct
+Delaware;New Castle County;01-10	precinct
+Delaware;Kent County;28-04	precinct
+Delaware;Sussex County;20-03	precinct
+Delaware;New Castle County;01-11	precinct
+Delaware;Kent County;28-05	precinct
+Delaware;Sussex County;20-04	precinct
+Delaware;New Castle County;01-12	precinct
+Delaware;Kent County;28-06	precinct
+Delaware;Sussex County;20-05	precinct
+Delaware;New Castle County;01-13	precinct
+Delaware;Kent County;28-07	precinct
+Delaware;Sussex County;20-06	precinct
+Delaware;New Castle County;01-14	precinct
+Delaware;Kent County;28-08	precinct
+Delaware;Sussex County;20-07	precinct
+Delaware;New Castle County;02-01	precinct
+Delaware;Kent County;28-09	precinct
+Delaware;Sussex County;20-08	precinct
+Delaware;New Castle County;02-02	precinct
+Delaware;Kent County;28-10	precinct
+Delaware;Sussex County;20-09	precinct
+Delaware;New Castle County;02-03	precinct
+Delaware;Kent County;28-11	precinct
+Delaware;Sussex County;20-10	precinct
+Delaware;New Castle County;02-04	precinct
+Delaware;Kent County;28-12	precinct
+Delaware;Sussex County;35-01	precinct
+Delaware;New Castle County;02-05	precinct
+Delaware;Kent County;28-13	precinct
+Delaware;Sussex County;35-02	precinct
+Delaware;New Castle County;02-06	precinct
+Delaware;Kent County;28-14	precinct
+Delaware;Sussex County;35-03	precinct
+Delaware;New Castle County;02-07	precinct
+Delaware;Kent County;29-01	precinct
+Delaware;Sussex County;35-04	precinct
+Delaware;New Castle County;02-08	precinct
+Delaware;Kent County;29-02	precinct
+Delaware;Sussex County;35-05	precinct
+Delaware;New Castle County;02-09	precinct
+Delaware;Kent County;29-03	precinct
+Delaware;Sussex County;35-06	precinct
+Delaware;New Castle County;02-10	precinct
+Delaware;Kent County;29-04	precinct
+Delaware;Sussex County;35-07	precinct
+Delaware;New Castle County;02-11	precinct
+Delaware;Kent County;29-05	precinct
+Delaware;Sussex County;36-01	precinct
+Delaware;New Castle County;02-12	precinct
+Delaware;Kent County;29-06	precinct
+Delaware;Sussex County;36-02	precinct
+Delaware;New Castle County;03-01	precinct
+Delaware;Kent County;29-07	precinct
+Delaware;Sussex County;36-03	precinct
+Delaware;New Castle County;03-02	precinct
+Delaware;Kent County;29-08	precinct
+Delaware;Sussex County;36-04	precinct
+Delaware;New Castle County;03-03	precinct
+Delaware;Kent County;29-09	precinct
+Delaware;Sussex County;36-05	precinct
+Delaware;New Castle County;03-04	precinct
+Delaware;Kent County;29-10	precinct
+Delaware;Sussex County;36-06	precinct
+Delaware;New Castle County;03-05	precinct
+Delaware;Kent County;29-11	precinct
+Delaware;Sussex County;36-07	precinct
+Delaware;New Castle County;03-06	precinct
+Delaware;Kent County;29-12	precinct
+Delaware;Sussex County;36-08	precinct
+Delaware;New Castle County;03-07	precinct
+Delaware;Kent County;29-13	precinct
+Delaware;Sussex County;36-09	precinct
+Delaware;New Castle County;03-08	precinct
+Delaware;Kent County;30-01	precinct
+Delaware;Sussex County;36-10	precinct
+Delaware;New Castle County;03-09	precinct
+Delaware;Kent County;30-02	precinct
+Delaware;Sussex County;36-11	precinct
+Delaware;New Castle County;03-10	precinct
+Delaware;Kent County;30-03	precinct
+Delaware;Sussex County;37-01	precinct
+Delaware;New Castle County;04-01	precinct
+Delaware;Kent County;30-04	precinct
+Delaware;Sussex County;37-02	precinct
+Delaware;New Castle County;04-02	precinct
+Delaware;Kent County;30-05	precinct
+Delaware;Sussex County;37-03	precinct
+Delaware;New Castle County;04-03	precinct
+Delaware;Kent County;30-06	precinct
+Delaware;Sussex County;37-04	precinct
+Delaware;New Castle County;04-04	precinct
+Delaware;Kent County;30-07	precinct
+Delaware;Sussex County;37-05	precinct
+Delaware;New Castle County;04-05	precinct
+Delaware;Kent County;30-08	precinct
+Delaware;Sussex County;37-06	precinct
+Delaware;New Castle County;04-06	precinct
+Delaware;Kent County;30-09	precinct
+Delaware;Sussex County;37-07	precinct
+Delaware;New Castle County;04-07	precinct
+Delaware;Kent County;30-10	precinct
+Delaware;Sussex County;38-01	precinct
+Delaware;New Castle County;04-08	precinct
+Delaware;Kent County;30-11	precinct
+Delaware;Sussex County;38-02	precinct
+Delaware;New Castle County;04-09	precinct
+Delaware;Kent County;30-12	precinct
+Delaware;Sussex County;38-03	precinct
+Delaware;New Castle County;04-10	precinct
+Delaware;Kent County;31-01	precinct
+Delaware;Sussex County;38-04	precinct
+Delaware;New Castle County;04-11	precinct
+Delaware;Kent County;31-02	precinct
+Delaware;Sussex County;38-05	precinct
+Delaware;New Castle County;04-12	precinct
+Delaware;Kent County;31-03	precinct
+Delaware;Sussex County;38-06	precinct
+Delaware;New Castle County;04-13	precinct
+Delaware;Kent County;31-04	precinct
+Delaware;Sussex County;38-07	precinct
+Delaware;New Castle County;04-14	precinct
+Delaware;Kent County;31-05	precinct
+Delaware;Sussex County;38-08	precinct
+Delaware;New Castle County;04-15	precinct
+Delaware;Kent County;31-06	precinct
+Delaware;Sussex County;39-01	precinct
+Delaware;New Castle County;04-16	precinct
+Delaware;Kent County;31-07	precinct
+Delaware;Sussex County;39-02	precinct
+Delaware;New Castle County;05-01	precinct
+Delaware;Kent County;31-08	precinct
+Delaware;Sussex County;39-03	precinct
+Delaware;New Castle County;05-02	precinct
+Delaware;Kent County;31-09	precinct
+Delaware;Sussex County;39-04	precinct
+Delaware;New Castle County;05-03	precinct
+Delaware;Kent County;31-10	precinct
+Delaware;Sussex County;39-05	precinct
+Delaware;New Castle County;05-04	precinct
+Delaware;Kent County;31-11	precinct
+Delaware;Sussex County;39-06	precinct
+Delaware;New Castle County;05-05	precinct
+Delaware;Kent County;32-01	precinct
+Delaware;Sussex County;39-07	precinct
+Delaware;New Castle County;05-06	precinct
+Delaware;Kent County;32-02	precinct
+Delaware;Sussex County;40-01	precinct
+Delaware;New Castle County;05-07	precinct
+Delaware;Kent County;32-03	precinct
+Delaware;Sussex County;40-02	precinct
+Delaware;New Castle County;05-08	precinct
+Delaware;Kent County;32-04	precinct
+Delaware;Sussex County;40-03	precinct
+Delaware;New Castle County;05-09	precinct
+Delaware;Kent County;32-05	precinct
+Delaware;Sussex County;40-04	precinct
+Delaware;New Castle County;05-10	precinct
+Delaware;Kent County;32-06	precinct
+Delaware;Sussex County;40-05	precinct
+Delaware;New Castle County;06-01	precinct
+Delaware;Kent County;32-07	precinct
+Delaware;Sussex County;40-06	precinct
+Delaware;New Castle County;06-02	precinct
+Delaware;Kent County;32-08	precinct
+Delaware;Sussex County;40-07	precinct
+Delaware;New Castle County;06-03	precinct
+Delaware;Kent County;32-09	precinct
+Delaware;Sussex County;40-08	precinct
+Delaware;New Castle County;06-04	precinct
+Delaware;Kent County;32-10	precinct
+Delaware;Sussex County;41-01	precinct
+Delaware;New Castle County;06-05	precinct
+Delaware;Kent County;32-11	precinct
+Delaware;Sussex County;41-02	precinct
+Delaware;New Castle County;06-06	precinct
+Delaware;Kent County;32-12	precinct
+Delaware;Sussex County;41-03	precinct
+Delaware;New Castle County;06-07	precinct
+Delaware;Kent County;33-01	precinct
+Delaware;Sussex County;41-04	precinct
+Delaware;New Castle County;06-08	precinct
+Delaware;Kent County;33-02	precinct
+Delaware;Sussex County;41-05	precinct
+Delaware;New Castle County;06-09	precinct
+Delaware;Kent County;33-03	precinct
+Delaware;Sussex County;41-06	precinct
+Delaware;New Castle County;06-10	precinct
+Delaware;Kent County;33-04	precinct
+Delaware;Sussex County;41-07	precinct
+Delaware;New Castle County;06-11	precinct
+Delaware;Kent County;33-05	precinct
+Delaware;Sussex County;41-08	precinct
+Delaware;New Castle County;06-12	precinct
+Delaware;Kent County;33-06	precinct
+Delaware;Sussex County;41-16	precinct
+Delaware;New Castle County;07-01	precinct
+Delaware;Kent County;33-07	precinct
+Delaware;New Castle County;07-02	precinct
+Delaware;Kent County;33-08	precinct
+Delaware;New Castle County;07-03	precinct
+Delaware;Kent County;33-09	precinct
+Delaware;New Castle County;07-04	precinct
+Delaware;Kent County;33-10	precinct
+Delaware;New Castle County;07-05	precinct
+Delaware;Kent County;34-01	precinct
+Delaware;New Castle County;07-06	precinct
+Delaware;Kent County;34-02	precinct
+Delaware;New Castle County;07-07	precinct
+Delaware;Kent County;34-03	precinct
+Delaware;New Castle County;07-08	precinct
+Delaware;Kent County;34-04	precinct
+Delaware;New Castle County;07-09	precinct
+Delaware;Kent County;34-05	precinct
+Delaware;New Castle County;07-10	precinct
+Delaware;Kent County;34-06	precinct
+Delaware;New Castle County;08-01	precinct
+Delaware;Kent County;34-07	precinct
+Delaware;New Castle County;08-02	precinct
+Delaware;Kent County;34-08	precinct
+Delaware;New Castle County;08-03	precinct
+Delaware;Kent County;34-09	precinct
+Delaware;New Castle County;08-04	precinct
+Delaware;Kent County;34-10	precinct
+Delaware;New Castle County;08-05	precinct
+Delaware;Kent County;34-11	precinct
+Delaware;New Castle County;08-06	precinct
+Delaware;New Castle County;08-07	precinct
+Delaware;New Castle County;08-08	precinct
+Delaware;New Castle County;08-09	precinct
+Delaware;New Castle County;08-10	precinct
+Delaware;New Castle County;09-01	precinct
+Delaware;New Castle County;09-02	precinct
+Delaware;New Castle County;09-03	precinct
+Delaware;New Castle County;09-04	precinct
+Delaware;New Castle County;09-05	precinct
+Delaware;New Castle County;09-06	precinct
+Delaware;New Castle County;09-07	precinct
+Delaware;New Castle County;09-08	precinct
+Delaware;New Castle County;09-09	precinct
+Delaware;New Castle County;09-10	precinct
+Delaware;New Castle County;09-11	precinct
+Delaware;New Castle County;09-12	precinct
+Delaware;New Castle County;09-13	precinct
+Delaware;New Castle County;10-01	precinct
+Delaware;New Castle County;10-02	precinct
+Delaware;New Castle County;10-03	precinct
+Delaware;New Castle County;10-04	precinct
+Delaware;New Castle County;10-05	precinct
+Delaware;New Castle County;10-06	precinct
+Delaware;New Castle County;10-07	precinct
+Delaware;New Castle County;10-08	precinct
+Delaware;New Castle County;10-09	precinct
+Delaware;New Castle County;10-10	precinct
+Delaware;New Castle County;11-01	precinct
+Delaware;New Castle County;11-02	precinct
+Delaware;New Castle County;11-03	precinct
+Delaware;New Castle County;11-04	precinct
+Delaware;New Castle County;12-01	precinct
+Delaware;New Castle County;12-02	precinct
+Delaware;New Castle County;12-03	precinct
+Delaware;New Castle County;12-04	precinct
+Delaware;New Castle County;12-05	precinct
+Delaware;New Castle County;12-06	precinct
+Delaware;New Castle County;12-07	precinct
+Delaware;New Castle County;12-08	precinct
+Delaware;New Castle County;12-09	precinct
+Delaware;New Castle County;12-10	precinct
+Delaware;New Castle County;12-11	precinct
+Delaware;New Castle County;12-12	precinct
+Delaware;New Castle County;12-13	precinct
+Delaware;New Castle County;12-14	precinct
+Delaware;New Castle County;13-01	precinct
+Delaware;New Castle County;13-02	precinct
+Delaware;New Castle County;13-03	precinct
+Delaware;New Castle County;13-04	precinct
+Delaware;New Castle County;13-05	precinct
+Delaware;New Castle County;13-06	precinct
+Delaware;New Castle County;13-07	precinct
+Delaware;New Castle County;13-08	precinct
+Delaware;New Castle County;13-09	precinct
+Delaware;New Castle County;13-10	precinct
+Delaware;New Castle County;13-11	precinct
+Delaware;New Castle County;13-12	precinct
+Delaware;New Castle County;13-13	precinct
+Delaware;New Castle County;13-14	precinct
+Delaware;New Castle County;15-01	precinct
+Delaware;New Castle County;15-02	precinct
+Delaware;New Castle County;15-03	precinct
+Delaware;New Castle County;15-04	precinct
+Delaware;New Castle County;15-05	precinct
+Delaware;New Castle County;15-06	precinct
+Delaware;New Castle County;15-07	precinct
+Delaware;New Castle County;15-08	precinct
+Delaware;New Castle County;15-09	precinct
+Delaware;New Castle County;15-10	precinct
+Delaware;New Castle County;16-01	precinct
+Delaware;New Castle County;16-02	precinct
+Delaware;New Castle County;16-03	precinct
+Delaware;New Castle County;16-04	precinct
+Delaware;New Castle County;16-05	precinct
+Delaware;New Castle County;16-06	precinct
+Delaware;New Castle County;16-07	precinct
+Delaware;New Castle County;16-08	precinct
+Delaware;New Castle County;16-09	precinct
+Delaware;New Castle County;16-10	precinct
+Delaware;New Castle County;17-01	precinct
+Delaware;New Castle County;17-02	precinct
+Delaware;New Castle County;17-03	precinct
+Delaware;New Castle County;17-04	precinct
+Delaware;New Castle County;17-05	precinct
+Delaware;New Castle County;17-06	precinct
+Delaware;New Castle County;17-07	precinct
+Delaware;New Castle County;17-08	precinct
+Delaware;New Castle County;17-09	precinct
+Delaware;New Castle County;17-10	precinct
+Delaware;New Castle County;17-11	precinct
+Delaware;New Castle County;18-01	precinct
+Delaware;New Castle County;18-02	precinct
+Delaware;New Castle County;18-03	precinct
+Delaware;New Castle County;18-04	precinct
+Delaware;New Castle County;18-05	precinct
+Delaware;New Castle County;18-06	precinct
+Delaware;New Castle County;18-07	precinct
+Delaware;New Castle County;18-08	precinct
+Delaware;New Castle County;18-09	precinct
+Delaware;New Castle County;18-10	precinct
+Delaware;New Castle County;19-01	precinct
+Delaware;New Castle County;19-02	precinct
+Delaware;New Castle County;19-03	precinct
+Delaware;New Castle County;19-04	precinct
+Delaware;New Castle County;19-05	precinct
+Delaware;New Castle County;19-06	precinct
+Delaware;New Castle County;19-07	precinct
+Delaware;New Castle County;19-08	precinct
+Delaware;New Castle County;19-09	precinct
+Delaware;New Castle County;19-10	precinct
+Delaware;New Castle County;19-11	precinct
+Delaware;New Castle County;19-12	precinct
+Delaware;New Castle County;21-01	precinct
+Delaware;New Castle County;21-02	precinct
+Delaware;New Castle County;21-03	precinct
+Delaware;New Castle County;21-04	precinct
+Delaware;New Castle County;21-05	precinct
+Delaware;New Castle County;21-06	precinct
+Delaware;New Castle County;21-07	precinct
+Delaware;New Castle County;21-08	precinct
+Delaware;New Castle County;21-09	precinct
+Delaware;New Castle County;21-10	precinct
+Delaware;New Castle County;21-11	precinct
+Delaware;New Castle County;22-01	precinct
+Delaware;New Castle County;22-02	precinct
+Delaware;New Castle County;22-03	precinct
+Delaware;New Castle County;22-04	precinct
+Delaware;New Castle County;22-05	precinct
+Delaware;New Castle County;22-06	precinct
+Delaware;New Castle County;22-07	precinct
+Delaware;New Castle County;22-08	precinct
+Delaware;New Castle County;22-09	precinct
+Delaware;New Castle County;22-10	precinct
+Delaware;New Castle County;22-11	precinct
+Delaware;New Castle County;22-12	precinct
+Delaware;New Castle County;23-01	precinct
+Delaware;New Castle County;23-02	precinct
+Delaware;New Castle County;23-03	precinct
+Delaware;New Castle County;23-04	precinct
+Delaware;New Castle County;23-05	precinct
+Delaware;New Castle County;23-06	precinct
+Delaware;New Castle County;23-07	precinct
+Delaware;New Castle County;23-08	precinct
+Delaware;New Castle County;23-09	precinct
+Delaware;New Castle County;24-01	precinct
+Delaware;New Castle County;24-02	precinct
+Delaware;New Castle County;24-03	precinct
+Delaware;New Castle County;24-04	precinct
+Delaware;New Castle County;24-05	precinct
+Delaware;New Castle County;24-06	precinct
+Delaware;New Castle County;24-07	precinct
+Delaware;New Castle County;24-08	precinct
+Delaware;New Castle County;24-09	precinct
+Delaware;New Castle County;24-10	precinct
+Delaware;New Castle County;25-01	precinct
+Delaware;New Castle County;25-02	precinct
+Delaware;New Castle County;25-03	precinct
+Delaware;New Castle County;25-04	precinct
+Delaware;New Castle County;25-05	precinct
+Delaware;New Castle County;25-06	precinct
+Delaware;New Castle County;25-07	precinct
+Delaware;New Castle County;25-08	precinct
+Delaware;New Castle County;26-01	precinct
+Delaware;New Castle County;26-02	precinct
+Delaware;New Castle County;26-03	precinct
+Delaware;New Castle County;26-04	precinct
+Delaware;New Castle County;26-05	precinct
+Delaware;New Castle County;26-06	precinct
+Delaware;New Castle County;26-07	precinct
+Delaware;New Castle County;26-08	precinct
+Delaware;New Castle County;26-09	precinct
+Delaware;New Castle County;27-01	precinct
+Delaware;New Castle County;27-02	precinct
+Delaware;New Castle County;27-03	precinct
+Delaware;New Castle County;27-04	precinct
+Delaware;New Castle County;27-05	precinct
+Delaware;New Castle County;27-06	precinct
+Delaware;New Castle County;27-07	precinct
+Delaware;New Castle County;27-08	precinct
+Delaware;New Castle County;27-09	precinct
+Delaware;New Castle County;27-10	precinct
+Delaware;New Castle County	county
+Delaware;Kent County	county
+Delaware;Sussex County	county

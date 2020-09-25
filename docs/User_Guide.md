@@ -224,7 +224,7 @@ These will be added as precincts, unless another reporting unit type is specifie
 
  (11) Look at the newly added items in `ReportingUnit.txt` and `dictionary.txt`, and remove or revise as appropriate.
 
- (12) If you want to add elements (other than ReportingUnits) in bulk from all results files in a directory (with `.ini` files in that same directory), use  `add_elements_from_multi_results_file(<list of elements>,<directory>, <error>)`. For example:
+ (12) If you want to add elements (other than ReportingUnits) in bulk from all results files in a directory (with `.ini` files in that same directory -- see Load Data below), use  `add_elements_from_multi_results_file(<list of elements>,<directory>, <error>)`. For example:
 ```
 >>> jp.add_elements_from_multi_results_file(['Candidate'],'/Users/singer3/Documents/Temp/000_to-be-loaded',err)
 ```
