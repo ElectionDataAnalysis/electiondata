@@ -16,6 +16,8 @@ Ensure that the munger files are appropriate for your results file(s).
   * `txt`
   * `csv`
   * `xls` (which handles both `.xls` and `.xlsx` files)
+  * `xls-multi` (which handles both `.xls` and `.xlsx` files with multiple sheets, and some variation in the structure of each sheet)
+  * `json`
   * `concatenated-blocks` (for the format produced by Clarity results reporting system, e.g. for South Carolina.)
 
 Different file types need different parameters to be specified.
@@ -29,6 +31,14 @@ Different file types need different parameters to be specified.
    * columns_to_skip
    * last_header_column_count
    * column_width
+ * Required for `xls-multi`:
+   * sheets_to_skip
+   * count_of_top_lines_to_skip
+   * constant_line_count
+   * header_row_count
+   * columns_to_skip
+ * Required for `json`:
+   * count_column_field_names
  * Available if appropriate for any file type:
    * thousands_separator
    * encoding (if not specified, `iso-8859-1` will be used). 
@@ -80,10 +90,25 @@ Appling                       10613                         2334                
 Atkinson                      4252                          808                           45                            1022                          1                             1876                          333                           43                            260                           1                             637                           6                             0                             3                             0                             9                             2522                          
 
 ```
-Note that the columns are fixed-width. 
+Note that the columns are fixed-width.
+
+### The json file type
+To see the field names in a json file -- and to check that it can be read by the program -- use `read_json` from the python pandas package. E.g.:
+```
+>>> import pandas as pd
+>>> b = pd.read_json('/Users/singer3/Documents/Temp/DE_2020p.json')
+>>> b.columns
+Index(['Election Id', 'Election Name', 'Results Type', 'Election District',
+       'Party Name', 'Contest Sorting Order', 'Contest Title',
+       'Candidate Name', 'Pos', 'Machine Votes', 'Absentee Votes',
+       'Total Votes', 'Percentage'],
+      dtype='object')
+```
 
 ## Create or Improve a Jurisdiction
-It's easiest to use the JurisdictionPrepper() object to create or update jurisdiction files. 
+It's easiest to use the JurisdictionPrepper() object to create or update jurisdiction files.
+
+ (0) Create a `jurisdiction_prep.ini` file, following the example in `src/parameter_file_templates/jurisdiction_prep.ini.template`. You will need to specify the number of congressional, state house and state senate districts.
 
  (1) From the directory containing `jurisdiction_prep.ini`, open a python interpreter. Import the package and initialize a JurisdictionPrepper(), e.g.:
 ```
@@ -200,7 +225,7 @@ These will be added as precincts, unless another reporting unit type is specifie
 
  (11) Look at the newly added items in `ReportingUnit.txt` and `dictionary.txt`, and remove or revise as appropriate.
 
- (12) If you want to add elements (other than ReportingUnits) in bulk from all results files in a directory (with `.ini` files in that same directory), use  `add_elements_from_multi_results_file(<list of elements>,<directory>, <error>)`. For example:
+ (12) If you want to add elements (other than ReportingUnits) in bulk from all results files in a directory (with `.ini` files in that same directory -- see Load Data below), use  `add_elements_from_multi_results_file(<list of elements>,<directory>, <error>)`. For example:
 ```
 >>> jp.add_elements_from_multi_results_file(['Candidate'],'/Users/singer3/Documents/Temp/000_to-be-loaded',err)
 ```

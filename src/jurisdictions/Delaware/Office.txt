@@ -1,0 +1,72 @@
+Name	ElectionDistrict
+DE House District 1	Delaware;DE House District 1
+DE House District 2	Delaware;DE House District 2
+DE House District 3	Delaware;DE House District 3
+DE House District 4	Delaware;DE House District 4
+DE House District 5	Delaware;DE House District 5
+DE House District 6	Delaware;DE House District 6
+DE House District 7	Delaware;DE House District 7
+DE House District 8	Delaware;DE House District 8
+DE House District 9	Delaware;DE House District 9
+DE House District 10	Delaware;DE House District 10
+DE House District 11	Delaware;DE House District 11
+DE House District 12	Delaware;DE House District 12
+DE House District 13	Delaware;DE House District 13
+DE House District 14	Delaware;DE House District 14
+DE House District 15	Delaware;DE House District 15
+DE House District 16	Delaware;DE House District 16
+DE House District 17	Delaware;DE House District 17
+DE House District 18	Delaware;DE House District 18
+DE House District 19	Delaware;DE House District 19
+DE House District 20	Delaware;DE House District 20
+DE House District 21	Delaware;DE House District 21
+DE House District 22	Delaware;DE House District 22
+DE House District 23	Delaware;DE House District 23
+DE House District 24	Delaware;DE House District 24
+DE House District 25	Delaware;DE House District 25
+DE House District 26	Delaware;DE House District 26
+DE House District 27	Delaware;DE House District 27
+DE House District 28	Delaware;DE House District 28
+DE House District 29	Delaware;DE House District 29
+DE House District 30	Delaware;DE House District 30
+DE House District 31	Delaware;DE House District 31
+DE House District 32	Delaware;DE House District 32
+DE House District 33	Delaware;DE House District 33
+DE House District 34	Delaware;DE House District 34
+DE House District 35	Delaware;DE House District 35
+DE House District 36	Delaware;DE House District 36
+DE House District 37	Delaware;DE House District 37
+DE House District 38	Delaware;DE House District 38
+DE House District 39	Delaware;DE House District 39
+DE House District 40	Delaware;DE House District 40
+DE House District 41	Delaware;DE House District 41
+DE Senate District 1	Delaware;DE Senate District 1
+DE Senate District 2	Delaware;DE Senate District 2
+DE Senate District 3	Delaware;DE Senate District 3
+DE Senate District 4	Delaware;DE Senate District 4
+DE Senate District 5	Delaware;DE Senate District 5
+DE Senate District 6	Delaware;DE Senate District 6
+DE Senate District 7	Delaware;DE Senate District 7
+DE Senate District 8	Delaware;DE Senate District 8
+DE Senate District 9	Delaware;DE Senate District 9
+DE Senate District 10	Delaware;DE Senate District 10
+DE Senate District 11	Delaware;DE Senate District 11
+DE Senate District 12	Delaware;DE Senate District 12
+DE Senate District 13	Delaware;DE Senate District 13
+DE Senate District 14	Delaware;DE Senate District 14
+DE Senate District 15	Delaware;DE Senate District 15
+DE Senate District 16	Delaware;DE Senate District 16
+DE Senate District 17	Delaware;DE Senate District 17
+DE Senate District 18	Delaware;DE Senate District 18
+DE Senate District 19	Delaware;DE Senate District 19
+DE Senate District 20	Delaware;DE Senate District 20
+DE Senate District 21	Delaware;DE Senate District 21
+US House DE District 1	Delaware
+US President (DE)	Delaware
+DE Governor	Delaware
+US Senate DE	Delaware
+DE Attorney General	Delaware
+DE Lieutenant Governor	Delaware
+DE Treasurer	Delaware
+DE Secretary of State	Delaware
+DE Insurance Commissioner	Delaware
