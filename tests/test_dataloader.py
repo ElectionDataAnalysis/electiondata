@@ -535,3 +535,60 @@ def test_mi_contest_by_vote_type():
 def test_mi_totals_match_vote_type():
     # Vote type not available
     assert True == True
+
+### Delaware 2020 Primary Data Loading Tests ###
+def test_de_presidential():
+    # no presidential contests in 2018
+    assert (
+        check_contest_totals(
+            "2020 Presidential Preference Primary",
+            "Delaware",
+            "US President (DE) (Democratic Party)",
+        )
+        == 91682
+    )
+
+def test_de_statewide_totals():
+    assert (
+            check_contest_totals(
+                "2020 Primary",
+                "Delaware",
+                "DE Governor (Republican Party)",
+            )
+            == 55447
+    )
+
+def test_de_senate_totals():
+    assert (
+            check_contest_totals(
+                "2020 Primary",
+                "Delaware",
+                "DE Senate District 13 (Democratic Party)",
+            )
+            == 5940
+    )
+
+def test_de_house_totals():
+    assert (
+            check_contest_totals(
+                "2020 Primary",
+                "Delaware",
+                "DE House District 26",
+            )
+            == 2990
+    )
+
+def test_de_contest_by_vote_type():
+    assert (
+        check_count_type_totals(
+            "2020 Primary",
+            "Delaware",
+            "DE State Senate District 14 (Republican Party)",
+            "absentee",
+        )
+        == 559
+    )
+
+
+def test_de_totals_match_vote_type():
+    assert check_totals_match_vote_types("2020 Presidential Preference Primary", "Delaware") == True
