@@ -69,4 +69,288 @@ DE Attorney General	1	DE Attorney General
 DE Lieutenant Governor	1	DE Lieutenant Governor	
 DE Treasurer	1	DE Treasurer	
 DE Secretary of State	1	DE Secretary of State	
-DE Insurance Commissioner	1	DE Insurance Commissioner
+DE Insurance Commissioner	1	DE Insurance Commissioner	
+DE House District 1 (Democratic Party)	1	DE House District 1	Democratic Party
+DE House District 2 (Democratic Party)	1	DE House District 2	Democratic Party
+DE House District 3 (Democratic Party)	1	DE House District 3	Democratic Party
+DE House District 4 (Democratic Party)	1	DE House District 4	Democratic Party
+DE House District 5 (Democratic Party)	1	DE House District 5	Democratic Party
+DE House District 6 (Democratic Party)	1	DE House District 6	Democratic Party
+DE House District 7 (Democratic Party)	1	DE House District 7	Democratic Party
+DE House District 8 (Democratic Party)	1	DE House District 8	Democratic Party
+DE House District 9 (Democratic Party)	1	DE House District 9	Democratic Party
+DE House District 10 (Democratic Party)	1	DE House District 10	Democratic Party
+DE House District 11 (Democratic Party)	1	DE House District 11	Democratic Party
+DE House District 12 (Democratic Party)	1	DE House District 12	Democratic Party
+DE House District 13 (Democratic Party)	1	DE House District 13	Democratic Party
+DE House District 14 (Democratic Party)	1	DE House District 14	Democratic Party
+DE House District 15 (Democratic Party)	1	DE House District 15	Democratic Party
+DE House District 16 (Democratic Party)	1	DE House District 16	Democratic Party
+DE House District 17 (Democratic Party)	1	DE House District 17	Democratic Party
+DE House District 18 (Democratic Party)	1	DE House District 18	Democratic Party
+DE House District 19 (Democratic Party)	1	DE House District 19	Democratic Party
+DE House District 20 (Democratic Party)	1	DE House District 20	Democratic Party
+DE House District 21 (Democratic Party)	1	DE House District 21	Democratic Party
+DE House District 22 (Democratic Party)	1	DE House District 22	Democratic Party
+DE House District 23 (Democratic Party)	1	DE House District 23	Democratic Party
+DE House District 24 (Democratic Party)	1	DE House District 24	Democratic Party
+DE House District 25 (Democratic Party)	1	DE House District 25	Democratic Party
+DE House District 26 (Democratic Party)	1	DE House District 26	Democratic Party
+DE House District 27 (Democratic Party)	1	DE House District 27	Democratic Party
+DE House District 28 (Democratic Party)	1	DE House District 28	Democratic Party
+DE House District 29 (Democratic Party)	1	DE House District 29	Democratic Party
+DE House District 30 (Democratic Party)	1	DE House District 30	Democratic Party
+DE House District 31 (Democratic Party)	1	DE House District 31	Democratic Party
+DE House District 32 (Democratic Party)	1	DE House District 32	Democratic Party
+DE House District 33 (Democratic Party)	1	DE House District 33	Democratic Party
+DE House District 34 (Democratic Party)	1	DE House District 34	Democratic Party
+DE House District 35 (Democratic Party)	1	DE House District 35	Democratic Party
+DE House District 36 (Democratic Party)	1	DE House District 36	Democratic Party
+DE House District 37 (Democratic Party)	1	DE House District 37	Democratic Party
+DE House District 38 (Democratic Party)	1	DE House District 38	Democratic Party
+DE House District 39 (Democratic Party)	1	DE House District 39	Democratic Party
+DE House District 40 (Democratic Party)	1	DE House District 40	Democratic Party
+DE House District 41 (Democratic Party)	1	DE House District 41	Democratic Party
+DE Senate District 1 (Democratic Party)	1	DE Senate District 1	Democratic Party
+DE Senate District 2 (Democratic Party)	1	DE Senate District 2	Democratic Party
+DE Senate District 3 (Democratic Party)	1	DE Senate District 3	Democratic Party
+DE Senate District 4 (Democratic Party)	1	DE Senate District 4	Democratic Party
+DE Senate District 5 (Democratic Party)	1	DE Senate District 5	Democratic Party
+DE Senate District 6 (Democratic Party)	1	DE Senate District 6	Democratic Party
+DE Senate District 7 (Democratic Party)	1	DE Senate District 7	Democratic Party
+DE Senate District 8 (Democratic Party)	1	DE Senate District 8	Democratic Party
+DE Senate District 9 (Democratic Party)	1	DE Senate District 9	Democratic Party
+DE Senate District 10 (Democratic Party)	1	DE Senate District 10	Democratic Party
+DE Senate District 11 (Democratic Party)	1	DE Senate District 11	Democratic Party
+DE Senate District 12 (Democratic Party)	1	DE Senate District 12	Democratic Party
+DE Senate District 13 (Democratic Party)	1	DE Senate District 13	Democratic Party
+DE Senate District 14 (Democratic Party)	1	DE Senate District 14	Democratic Party
+DE Senate District 15 (Democratic Party)	1	DE Senate District 15	Democratic Party
+DE Senate District 16 (Democratic Party)	1	DE Senate District 16	Democratic Party
+DE Senate District 17 (Democratic Party)	1	DE Senate District 17	Democratic Party
+DE Senate District 18 (Democratic Party)	1	DE Senate District 18	Democratic Party
+DE Senate District 19 (Democratic Party)	1	DE Senate District 19	Democratic Party
+DE Senate District 20 (Democratic Party)	1	DE Senate District 20	Democratic Party
+DE Senate District 21 (Democratic Party)	1	DE Senate District 21	Democratic Party
+US House DE District 1 (Democratic Party)	1	US House DE District 1	Democratic Party
+US President (DE) (Democratic Party)	1	US President (DE)	Democratic Party
+DE Governor (Democratic Party)	1	DE Governor	Democratic Party
+US Senate DE (Democratic Party)	1	US Senate DE	Democratic Party
+DE Attorney General (Democratic Party)	1	DE Attorney General	Democratic Party
+DE Lieutenant Governor (Democratic Party)	1	DE Lieutenant Governor	Democratic Party
+DE Treasurer (Democratic Party)	1	DE Treasurer	Democratic Party
+DE Secretary of State (Democratic Party)	1	DE Secretary of State	Democratic Party
+DE Insurance Commissioner (Democratic Party)	1	DE Insurance Commissioner	Democratic Party
+DE House District 1 (Republican Party)	1	DE House District 1	Republican Party
+DE House District 2 (Republican Party)	1	DE House District 2	Republican Party
+DE House District 3 (Republican Party)	1	DE House District 3	Republican Party
+DE House District 4 (Republican Party)	1	DE House District 4	Republican Party
+DE House District 5 (Republican Party)	1	DE House District 5	Republican Party
+DE House District 6 (Republican Party)	1	DE House District 6	Republican Party
+DE House District 7 (Republican Party)	1	DE House District 7	Republican Party
+DE House District 8 (Republican Party)	1	DE House District 8	Republican Party
+DE House District 9 (Republican Party)	1	DE House District 9	Republican Party
+DE House District 10 (Republican Party)	1	DE House District 10	Republican Party
+DE House District 11 (Republican Party)	1	DE House District 11	Republican Party
+DE House District 12 (Republican Party)	1	DE House District 12	Republican Party
+DE House District 13 (Republican Party)	1	DE House District 13	Republican Party
+DE House District 14 (Republican Party)	1	DE House District 14	Republican Party
+DE House District 15 (Republican Party)	1	DE House District 15	Republican Party
+DE House District 16 (Republican Party)	1	DE House District 16	Republican Party
+DE House District 17 (Republican Party)	1	DE House District 17	Republican Party
+DE House District 18 (Republican Party)	1	DE House District 18	Republican Party
+DE House District 19 (Republican Party)	1	DE House District 19	Republican Party
+DE House District 20 (Republican Party)	1	DE House District 20	Republican Party
+DE House District 21 (Republican Party)	1	DE House District 21	Republican Party
+DE House District 22 (Republican Party)	1	DE House District 22	Republican Party
+DE House District 23 (Republican Party)	1	DE House District 23	Republican Party
+DE House District 24 (Republican Party)	1	DE House District 24	Republican Party
+DE House District 25 (Republican Party)	1	DE House District 25	Republican Party
+DE House District 26 (Republican Party)	1	DE House District 26	Republican Party
+DE House District 27 (Republican Party)	1	DE House District 27	Republican Party
+DE House District 28 (Republican Party)	1	DE House District 28	Republican Party
+DE House District 29 (Republican Party)	1	DE House District 29	Republican Party
+DE House District 30 (Republican Party)	1	DE House District 30	Republican Party
+DE House District 31 (Republican Party)	1	DE House District 31	Republican Party
+DE House District 32 (Republican Party)	1	DE House District 32	Republican Party
+DE House District 33 (Republican Party)	1	DE House District 33	Republican Party
+DE House District 34 (Republican Party)	1	DE House District 34	Republican Party
+DE House District 35 (Republican Party)	1	DE House District 35	Republican Party
+DE House District 36 (Republican Party)	1	DE House District 36	Republican Party
+DE House District 37 (Republican Party)	1	DE House District 37	Republican Party
+DE House District 38 (Republican Party)	1	DE House District 38	Republican Party
+DE House District 39 (Republican Party)	1	DE House District 39	Republican Party
+DE House District 40 (Republican Party)	1	DE House District 40	Republican Party
+DE House District 41 (Republican Party)	1	DE House District 41	Republican Party
+DE Senate District 1 (Republican Party)	1	DE Senate District 1	Republican Party
+DE Senate District 2 (Republican Party)	1	DE Senate District 2	Republican Party
+DE Senate District 3 (Republican Party)	1	DE Senate District 3	Republican Party
+DE Senate District 4 (Republican Party)	1	DE Senate District 4	Republican Party
+DE Senate District 5 (Republican Party)	1	DE Senate District 5	Republican Party
+DE Senate District 6 (Republican Party)	1	DE Senate District 6	Republican Party
+DE Senate District 7 (Republican Party)	1	DE Senate District 7	Republican Party
+DE Senate District 8 (Republican Party)	1	DE Senate District 8	Republican Party
+DE Senate District 9 (Republican Party)	1	DE Senate District 9	Republican Party
+DE Senate District 10 (Republican Party)	1	DE Senate District 10	Republican Party
+DE Senate District 11 (Republican Party)	1	DE Senate District 11	Republican Party
+DE Senate District 12 (Republican Party)	1	DE Senate District 12	Republican Party
+DE Senate District 13 (Republican Party)	1	DE Senate District 13	Republican Party
+DE Senate District 14 (Republican Party)	1	DE Senate District 14	Republican Party
+DE Senate District 15 (Republican Party)	1	DE Senate District 15	Republican Party
+DE Senate District 16 (Republican Party)	1	DE Senate District 16	Republican Party
+DE Senate District 17 (Republican Party)	1	DE Senate District 17	Republican Party
+DE Senate District 18 (Republican Party)	1	DE Senate District 18	Republican Party
+DE Senate District 19 (Republican Party)	1	DE Senate District 19	Republican Party
+DE Senate District 20 (Republican Party)	1	DE Senate District 20	Republican Party
+DE Senate District 21 (Republican Party)	1	DE Senate District 21	Republican Party
+US House DE District 1 (Republican Party)	1	US House DE District 1	Republican Party
+US President (DE) (Republican Party)	1	US President (DE)	Republican Party
+DE Governor (Republican Party)	1	DE Governor	Republican Party
+US Senate DE (Republican Party)	1	US Senate DE	Republican Party
+DE Attorney General (Republican Party)	1	DE Attorney General	Republican Party
+DE Lieutenant Governor (Republican Party)	1	DE Lieutenant Governor	Republican Party
+DE Treasurer (Republican Party)	1	DE Treasurer	Republican Party
+DE Secretary of State (Republican Party)	1	DE Secretary of State	Republican Party
+DE Insurance Commissioner (Republican Party)	1	DE Insurance Commissioner	Republican Party
+DE House District 1 (Green Party)	1	DE House District 1	Green Party
+DE House District 2 (Green Party)	1	DE House District 2	Green Party
+DE House District 3 (Green Party)	1	DE House District 3	Green Party
+DE House District 4 (Green Party)	1	DE House District 4	Green Party
+DE House District 5 (Green Party)	1	DE House District 5	Green Party
+DE House District 6 (Green Party)	1	DE House District 6	Green Party
+DE House District 7 (Green Party)	1	DE House District 7	Green Party
+DE House District 8 (Green Party)	1	DE House District 8	Green Party
+DE House District 9 (Green Party)	1	DE House District 9	Green Party
+DE House District 10 (Green Party)	1	DE House District 10	Green Party
+DE House District 11 (Green Party)	1	DE House District 11	Green Party
+DE House District 12 (Green Party)	1	DE House District 12	Green Party
+DE House District 13 (Green Party)	1	DE House District 13	Green Party
+DE House District 14 (Green Party)	1	DE House District 14	Green Party
+DE House District 15 (Green Party)	1	DE House District 15	Green Party
+DE House District 16 (Green Party)	1	DE House District 16	Green Party
+DE House District 17 (Green Party)	1	DE House District 17	Green Party
+DE House District 18 (Green Party)	1	DE House District 18	Green Party
+DE House District 19 (Green Party)	1	DE House District 19	Green Party
+DE House District 20 (Green Party)	1	DE House District 20	Green Party
+DE House District 21 (Green Party)	1	DE House District 21	Green Party
+DE House District 22 (Green Party)	1	DE House District 22	Green Party
+DE House District 23 (Green Party)	1	DE House District 23	Green Party
+DE House District 24 (Green Party)	1	DE House District 24	Green Party
+DE House District 25 (Green Party)	1	DE House District 25	Green Party
+DE House District 26 (Green Party)	1	DE House District 26	Green Party
+DE House District 27 (Green Party)	1	DE House District 27	Green Party
+DE House District 28 (Green Party)	1	DE House District 28	Green Party
+DE House District 29 (Green Party)	1	DE House District 29	Green Party
+DE House District 30 (Green Party)	1	DE House District 30	Green Party
+DE House District 31 (Green Party)	1	DE House District 31	Green Party
+DE House District 32 (Green Party)	1	DE House District 32	Green Party
+DE House District 33 (Green Party)	1	DE House District 33	Green Party
+DE House District 34 (Green Party)	1	DE House District 34	Green Party
+DE House District 35 (Green Party)	1	DE House District 35	Green Party
+DE House District 36 (Green Party)	1	DE House District 36	Green Party
+DE House District 37 (Green Party)	1	DE House District 37	Green Party
+DE House District 38 (Green Party)	1	DE House District 38	Green Party
+DE House District 39 (Green Party)	1	DE House District 39	Green Party
+DE House District 40 (Green Party)	1	DE House District 40	Green Party
+DE House District 41 (Green Party)	1	DE House District 41	Green Party
+DE Senate District 1 (Green Party)	1	DE Senate District 1	Green Party
+DE Senate District 2 (Green Party)	1	DE Senate District 2	Green Party
+DE Senate District 3 (Green Party)	1	DE Senate District 3	Green Party
+DE Senate District 4 (Green Party)	1	DE Senate District 4	Green Party
+DE Senate District 5 (Green Party)	1	DE Senate District 5	Green Party
+DE Senate District 6 (Green Party)	1	DE Senate District 6	Green Party
+DE Senate District 7 (Green Party)	1	DE Senate District 7	Green Party
+DE Senate District 8 (Green Party)	1	DE Senate District 8	Green Party
+DE Senate District 9 (Green Party)	1	DE Senate District 9	Green Party
+DE Senate District 10 (Green Party)	1	DE Senate District 10	Green Party
+DE Senate District 11 (Green Party)	1	DE Senate District 11	Green Party
+DE Senate District 12 (Green Party)	1	DE Senate District 12	Green Party
+DE Senate District 13 (Green Party)	1	DE Senate District 13	Green Party
+DE Senate District 14 (Green Party)	1	DE Senate District 14	Green Party
+DE Senate District 15 (Green Party)	1	DE Senate District 15	Green Party
+DE Senate District 16 (Green Party)	1	DE Senate District 16	Green Party
+DE Senate District 17 (Green Party)	1	DE Senate District 17	Green Party
+DE Senate District 18 (Green Party)	1	DE Senate District 18	Green Party
+DE Senate District 19 (Green Party)	1	DE Senate District 19	Green Party
+DE Senate District 20 (Green Party)	1	DE Senate District 20	Green Party
+DE Senate District 21 (Green Party)	1	DE Senate District 21	Green Party
+US House DE District 1 (Green Party)	1	US House DE District 1	Green Party
+US President (DE) (Green Party)	1	US President (DE)	Green Party
+DE Governor (Green Party)	1	DE Governor	Green Party
+US Senate DE (Green Party)	1	US Senate DE	Green Party
+DE Attorney General (Green Party)	1	DE Attorney General	Green Party
+DE Lieutenant Governor (Green Party)	1	DE Lieutenant Governor	Green Party
+DE Treasurer (Green Party)	1	DE Treasurer	Green Party
+DE Secretary of State (Green Party)	1	DE Secretary of State	Green Party
+DE Insurance Commissioner (Green Party)	1	DE Insurance Commissioner	Green Party
+DE House District 1 (Libertarian Party)	1	DE House District 1	Libertarian Party
+DE House District 2 (Libertarian Party)	1	DE House District 2	Libertarian Party
+DE House District 3 (Libertarian Party)	1	DE House District 3	Libertarian Party
+DE House District 4 (Libertarian Party)	1	DE House District 4	Libertarian Party
+DE House District 5 (Libertarian Party)	1	DE House District 5	Libertarian Party
+DE House District 6 (Libertarian Party)	1	DE House District 6	Libertarian Party
+DE House District 7 (Libertarian Party)	1	DE House District 7	Libertarian Party
+DE House District 8 (Libertarian Party)	1	DE House District 8	Libertarian Party
+DE House District 9 (Libertarian Party)	1	DE House District 9	Libertarian Party
+DE House District 10 (Libertarian Party)	1	DE House District 10	Libertarian Party
+DE House District 11 (Libertarian Party)	1	DE House District 11	Libertarian Party
+DE House District 12 (Libertarian Party)	1	DE House District 12	Libertarian Party
+DE House District 13 (Libertarian Party)	1	DE House District 13	Libertarian Party
+DE House District 14 (Libertarian Party)	1	DE House District 14	Libertarian Party
+DE House District 15 (Libertarian Party)	1	DE House District 15	Libertarian Party
+DE House District 16 (Libertarian Party)	1	DE House District 16	Libertarian Party
+DE House District 17 (Libertarian Party)	1	DE House District 17	Libertarian Party
+DE House District 18 (Libertarian Party)	1	DE House District 18	Libertarian Party
+DE House District 19 (Libertarian Party)	1	DE House District 19	Libertarian Party
+DE House District 20 (Libertarian Party)	1	DE House District 20	Libertarian Party
+DE House District 21 (Libertarian Party)	1	DE House District 21	Libertarian Party
+DE House District 22 (Libertarian Party)	1	DE House District 22	Libertarian Party
+DE House District 23 (Libertarian Party)	1	DE House District 23	Libertarian Party
+DE House District 24 (Libertarian Party)	1	DE House District 24	Libertarian Party
+DE House District 25 (Libertarian Party)	1	DE House District 25	Libertarian Party
+DE House District 26 (Libertarian Party)	1	DE House District 26	Libertarian Party
+DE House District 27 (Libertarian Party)	1	DE House District 27	Libertarian Party
+DE House District 28 (Libertarian Party)	1	DE House District 28	Libertarian Party
+DE House District 29 (Libertarian Party)	1	DE House District 29	Libertarian Party
+DE House District 30 (Libertarian Party)	1	DE House District 30	Libertarian Party
+DE House District 31 (Libertarian Party)	1	DE House District 31	Libertarian Party
+DE House District 32 (Libertarian Party)	1	DE House District 32	Libertarian Party
+DE House District 33 (Libertarian Party)	1	DE House District 33	Libertarian Party
+DE House District 34 (Libertarian Party)	1	DE House District 34	Libertarian Party
+DE House District 35 (Libertarian Party)	1	DE House District 35	Libertarian Party
+DE House District 36 (Libertarian Party)	1	DE House District 36	Libertarian Party
+DE House District 37 (Libertarian Party)	1	DE House District 37	Libertarian Party
+DE House District 38 (Libertarian Party)	1	DE House District 38	Libertarian Party
+DE House District 39 (Libertarian Party)	1	DE House District 39	Libertarian Party
+DE House District 40 (Libertarian Party)	1	DE House District 40	Libertarian Party
+DE House District 41 (Libertarian Party)	1	DE House District 41	Libertarian Party
+DE Senate District 1 (Libertarian Party)	1	DE Senate District 1	Libertarian Party
+DE Senate District 2 (Libertarian Party)	1	DE Senate District 2	Libertarian Party
+DE Senate District 3 (Libertarian Party)	1	DE Senate District 3	Libertarian Party
+DE Senate District 4 (Libertarian Party)	1	DE Senate District 4	Libertarian Party
+DE Senate District 5 (Libertarian Party)	1	DE Senate District 5	Libertarian Party
+DE Senate District 6 (Libertarian Party)	1	DE Senate District 6	Libertarian Party
+DE Senate District 7 (Libertarian Party)	1	DE Senate District 7	Libertarian Party
+DE Senate District 8 (Libertarian Party)	1	DE Senate District 8	Libertarian Party
+DE Senate District 9 (Libertarian Party)	1	DE Senate District 9	Libertarian Party
+DE Senate District 10 (Libertarian Party)	1	DE Senate District 10	Libertarian Party
+DE Senate District 11 (Libertarian Party)	1	DE Senate District 11	Libertarian Party
+DE Senate District 12 (Libertarian Party)	1	DE Senate District 12	Libertarian Party
+DE Senate District 13 (Libertarian Party)	1	DE Senate District 13	Libertarian Party
+DE Senate District 14 (Libertarian Party)	1	DE Senate District 14	Libertarian Party
+DE Senate District 15 (Libertarian Party)	1	DE Senate District 15	Libertarian Party
+DE Senate District 16 (Libertarian Party)	1	DE Senate District 16	Libertarian Party
+DE Senate District 17 (Libertarian Party)	1	DE Senate District 17	Libertarian Party
+DE Senate District 18 (Libertarian Party)	1	DE Senate District 18	Libertarian Party
+DE Senate District 19 (Libertarian Party)	1	DE Senate District 19	Libertarian Party
+DE Senate District 20 (Libertarian Party)	1	DE Senate District 20	Libertarian Party
+DE Senate District 21 (Libertarian Party)	1	DE Senate District 21	Libertarian Party
+US House DE District 1 (Libertarian Party)	1	US House DE District 1	Libertarian Party
+US President (DE) (Libertarian Party)	1	US President (DE)	Libertarian Party
+DE Governor (Libertarian Party)	1	DE Governor	Libertarian Party
+US Senate DE (Libertarian Party)	1	US Senate DE	Libertarian Party
+DE Attorney General (Libertarian Party)	1	DE Attorney General	Libertarian Party
+DE Lieutenant Governor (Libertarian Party)	1	DE Lieutenant Governor	Libertarian Party
+DE Treasurer (Libertarian Party)	1	DE Treasurer	Libertarian Party
+DE Secretary of State (Libertarian Party)	1	DE Secretary of State	Libertarian Party
+DE Insurance Commissioner (Libertarian Party)	1	DE Insurance Commissioner	Libertarian Party

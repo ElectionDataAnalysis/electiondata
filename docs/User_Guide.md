@@ -37,7 +37,8 @@ Different file types need different parameters to be specified.
    * constant_line_count
    * header_row_count
    * columns_to_skip
- * Required for `json`: None!
+ * Required for `json`:
+   * count_column_field_names
  * Available if appropriate for any file type:
    * thousands_separator
    * encoding (if not specified, `iso-8859-1` will be used). 
