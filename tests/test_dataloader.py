@@ -580,7 +580,7 @@ def test_de_house_totals():
             check_contest_totals(
                 "2020 Primary",
                 "Delaware",
-                "DE House District 26",
+                "DE House District 26 (Democratic Party)",
             )
             == 2990
     )
@@ -591,7 +591,7 @@ def test_de_contest_by_vote_type():
         check_count_type_totals(
             "2020 Primary",
             "Delaware",
-            "DE State Senate District 14 (Republican Party)",
+            "DE Senate District 14 (Republican Party)",
             "absentee",
         )
         == 559
