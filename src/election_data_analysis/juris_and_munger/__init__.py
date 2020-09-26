@@ -312,6 +312,9 @@ def read_munger_info_from_files(dir_path):
     else:
         thousands_separator = None
 
+    # json files act like one-header-row flat files as soon as they are read in
+    if options["file_type"] == "json":
+        options["header_row_count"] = 1
     # TODO have options hold all optional parameters (and maybe even all parameters)
     #  and remove explicit attributes entirely?
     return [cdf_elements, file_type, encoding, thousands_separator, aux_meta, options]
@@ -591,24 +594,17 @@ def check_munger_file_contents(munger_path, munger_file, err):
         if ui.fatal_error(err):
             return err
 
-        # warn if encoding missing or is not recognized
+        # print (but don't store) warning if encoding missing or is not recognized
+        # because it happens often with no real problem
         if "encoding" not in format_d.keys():
-            err = ui.add_new_error(
-                err,
-                "warn-munger",
-                munger_name,
+            print(
                 f"No encoding specified; iso-8859-1 will be used",
             )
         elif not format_d["encoding"] in ui.recognized_encodings:
-            err = ui.add_new_error(
-                err,
-                "warn-munger",
-                munger_name,
-                (
+            print (
                     f"Encoding {format_d['encoding']} in format file is not recognized;"
                     f"iso-8859-1 will be used"
-                ),
-            )
+                )
 
         # check all parameters for flat files
         if format_d["file_type"] in ["txt", "csv", "xls"]:
@@ -670,7 +666,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
                         munger_name,
                         f"{key} is not an integer:  {format_d[key]}",
                     )
-        # note: json has no extra parameters to test!
+        # note: json has no numeric parameters to test!
 
     else:
         err = ui.add_new_error(

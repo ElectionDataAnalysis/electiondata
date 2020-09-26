@@ -233,8 +233,11 @@ class DataLoader:
                         print(
                             f"\tArchived {f} and its results file after successful load.\n"
                         )
-                    else:
+                    elif move_files and ui.fatal_error(load_error):
                         print(f"\t{f} and its results file not archived due to errors")
+
+                    else:
+                        print(f"{f} and its results file loaded successfully.")
                 #  report munger, jurisdiction and file errors & warnings
                 err = ui.report(
                     err,
