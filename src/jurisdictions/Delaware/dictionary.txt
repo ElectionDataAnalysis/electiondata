@@ -504,6 +504,7 @@ ReportingUnit	Delaware;New Castle County;02-11	Election District 02-11
 ReportingUnit	Delaware;Kent County;29-05	Election District 29-05
 ReportingUnit	Delaware;Sussex County;36-01	Election District 36-01
 ReportingUnit	Delaware;New Castle County;02-12	Election District 02-12
+ReportingUnit	Delaware;New Castle County;02-17	Election District 02-17
 ReportingUnit	Delaware;Kent County;29-06	Election District 29-06
 ReportingUnit	Delaware;Sussex County;36-02	Election District 36-02
 ReportingUnit	Delaware;New Castle County;03-01	Election District 03-01
@@ -595,6 +596,7 @@ ReportingUnit	Delaware;Kent County;31-10	Election District 31-10
 ReportingUnit	Delaware;Sussex County;39-05	Election District 39-05
 ReportingUnit	Delaware;New Castle County;05-04	Election District 05-04
 ReportingUnit	Delaware;Kent County;31-11	Election District 31-11
+ReportingUnit	Delaware;Kent County;31-16	Election District 31-16
 ReportingUnit	Delaware;Sussex County;39-06	Election District 39-06
 ReportingUnit	Delaware;New Castle County;05-05	Election District 05-05
 ReportingUnit	Delaware;Kent County;32-01	Election District 32-01

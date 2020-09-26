@@ -138,6 +138,7 @@ Delaware;New Castle County;02-11	precinct
 Delaware;Kent County;29-05	precinct
 Delaware;Sussex County;36-01	precinct
 Delaware;New Castle County;02-12	precinct
+Delaware;New Castle County;02-17	precinct
 Delaware;Kent County;29-06	precinct
 Delaware;Sussex County;36-02	precinct
 Delaware;New Castle County;03-01	precinct
@@ -229,6 +230,7 @@ Delaware;Kent County;31-10	precinct
 Delaware;Sussex County;39-05	precinct
 Delaware;New Castle County;05-04	precinct
 Delaware;Kent County;31-11	precinct
+Delaware;Kent County;31-16	precinct
 Delaware;Sussex County;39-06	precinct
 Delaware;New Castle County;05-05	precinct
 Delaware;Kent County;32-01	precinct
