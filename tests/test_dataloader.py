@@ -119,17 +119,21 @@ def check_count_type_totals(election, jurisdiction, contest, count_item_type):
 
 ### North Carolina Data Loading Tests ###
 #constants
-ok = {"nc": data_exists('2018 General','North Carolina')}
+ok = {
+    "nc18g": data_exists('2018 General','North Carolina'),
+    "de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
+    "de20pri": data_exists('2020 Primary','Delaware'),
+}
 
 print(ok)
 
-@pytest.mark.skipif(not ok["nc"], reason="No NC data")
+@pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
 def test_nc_presidential():
     # No presidential contests in 2018
     assert True == True
 
 
-@pytest.mark.skipif(not ok["nc"], reason="No NC data")
+@pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
 def test_nc_statewide_totals():
     assert (
         check_contest_totals(
@@ -141,7 +145,7 @@ def test_nc_statewide_totals():
     )
 
 
-# @pytest.mark.skipif(not ok["nc"],"No NC data")
+# @pytest.mark.skipif(not ok["nc18g"],"No NC 2018 General data")
 def test_nc_senate_totals():
     assert (
         check_contest_totals(
@@ -153,7 +157,7 @@ def test_nc_senate_totals():
     )
 
 
-@pytest.mark.skipif(not ok["nc"], reason="No NC data")
+@pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
 def test_nc_house_totals():
     assert (
         check_contest_totals(
@@ -165,7 +169,7 @@ def test_nc_house_totals():
     )
 
 
-@pytest.mark.skipif(not ok["nc"], reason="No NC data")
+@pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
 def test_nc_contest_by_vote_type():
     assert (
         check_count_type_totals(
@@ -178,7 +182,7 @@ def test_nc_contest_by_vote_type():
     )
 
 
-@pytest.mark.skipif(not ok["nc"], reason="No NC data")
+@pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
 def test_nc_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "North Carolina") == True
 
@@ -537,8 +541,8 @@ def test_mi_totals_match_vote_type():
     assert True == True
 
 ### Delaware 2020 Primary Data Loading Tests ###
+@pytest.mark.skipif(not ok["de20ppp"], reason="No DE 2020 Presidential Preference Primary data")
 def test_de_presidential():
-    # no presidential contests in 2018
     assert (
         check_contest_totals(
             "2020 Presidential Preference Primary",
@@ -548,6 +552,7 @@ def test_de_presidential():
         == 91682
     )
 
+@pytest.mark.skipif(not ok["de20pri"], reason="No DE 2020 Primary data")
 def test_de_statewide_totals():
     assert (
             check_contest_totals(
@@ -558,6 +563,7 @@ def test_de_statewide_totals():
             == 55447
     )
 
+@pytest.mark.skipif(not ok["de20pri"], reason="No DE 2020 Primary data")
 def test_de_senate_totals():
     assert (
             check_contest_totals(
@@ -568,6 +574,7 @@ def test_de_senate_totals():
             == 5940
     )
 
+@pytest.mark.skipif(not ok["de20pri"], reason="No DE 2020 Primary data")
 def test_de_house_totals():
     assert (
             check_contest_totals(
@@ -578,6 +585,7 @@ def test_de_house_totals():
             == 2990
     )
 
+@pytest.mark.skipif(not ok["de20pri"], reason="No DE 2020 Primary data")
 def test_de_contest_by_vote_type():
     assert (
         check_count_type_totals(
@@ -589,6 +597,6 @@ def test_de_contest_by_vote_type():
         == 559
     )
 
-
+@pytest.mark.skipif(not ok["de20ppp"], reason="No DE 2020 Presidential Preference Primary data")
 def test_de_totals_match_vote_type():
     assert check_totals_match_vote_types("2020 Presidential Preference Primary", "Delaware") == True

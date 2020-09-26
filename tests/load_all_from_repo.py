@@ -55,6 +55,9 @@ def run(load_data: bool = True, dbname: str = None):
     # move back to original directory
     os.chdir(original_dir)
 
+    # allow user to inspect database if desired
+    input(f"Hit return to continue (and remove test db {dbname} and test data)")
+
     # remove database
     new_params, err = ui.get_runtime_parameters(
         required_keys=["host","port","user","password","dbname"],
