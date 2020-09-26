@@ -19,8 +19,9 @@ def run(load_data: bool = True, dbname: str = None):
             # create a copy of the git directory in current directory
             cmd = 'git clone https://github.com/ElectionDataAnalysis/TestingData.git'
             os.system(cmd)
+            print(f"New directory created: {Path('TestingData').absolute()}")
         else:
-            print(f"directory TestingData already exists")
+            print(f"Directory already exists: {Path('TestingData').absolute()}")
 
     if dbname is None:
         # create unique name for test database
