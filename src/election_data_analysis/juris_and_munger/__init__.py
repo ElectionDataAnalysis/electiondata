@@ -17,6 +17,7 @@ munger_pars_opt = {
     "header_row_count": "int",
     "field_name_row": "int",
     "field_names_if_no_field_name_row": "list-of-strings",
+    "count_columns_by_name": "list-of-strings",
     "count_columns": "list-of-integers",
     "thousands_separator": "str",
     "encoding": "str",
@@ -669,6 +670,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
                         munger_name,
                         f"{key} is not an integer:  {format_d[key]}",
                     )
+        # note: json has no extra parameters to test!
 
     else:
         err = ui.add_new_error(

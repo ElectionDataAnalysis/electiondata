@@ -350,9 +350,13 @@ def read_single_datafile(
 ) -> (pd.DataFrame, dict):
     try:
         dtype = {c: str for c in munger.field_list}
-        kwargs = {"thousands": munger.thousands_separator, "dtype": dtype}
+        kwargs = {"dtype": dtype}
+        if munger.thousands_separator is not None:
+            kwargs["thousands"] = munger.thousands_separator
 
-        if munger.options["field_name_row"] is None:
+        if munger.options["file_type"] in ["json"]:
+            pass
+        elif munger.options["field_name_row"] is None:
             kwargs["header"] = None
             kwargs["names"] = munger.options["field_names_if_no_field_name_row"]
             kwargs["index_col"] = False
@@ -368,6 +372,9 @@ def read_single_datafile(
             df = pd.read_csv(f_path, **kwargs)
         elif munger.file_type in ["xls", "xlsx"]:
             df = pd.read_excel(f_path, **kwargs)
+        elif munger.file_type in ["json"]:
+            kwargs["encoding"] = munger.encoding
+            df= pd.read_json(f_path, **kwargs)
         elif munger.file_type in ["concatenated-blocks", "xls-multi"]:
             err = add_new_error(
                 err,
@@ -420,6 +427,7 @@ def read_combine_results(
     err: dict,
     aux_data_path: str = None,
 ) -> (pd.DataFrame, dict):
+    # if results are not a flat file type or json
     if mu.options["file_type"] in ["concatenated-blocks", "xls-multi"]:
         working, new_err = sf.read_alternate_munger(
             mu.options["file_type"],
@@ -436,6 +444,8 @@ def read_combine_results(
         mu.options["count_columns"] = [working.columns.to_list().index("count")]
         mu.options["header_row_count"] = 1
         mu.options["field_name_row"] = 0
+
+    # if results are a flat file or json
     else:
         try:
             working, new_err = read_single_datafile(mu, results_file_path, None)
@@ -454,6 +464,12 @@ def read_combine_results(
                 return pd.DataFrame(), err
 
         else:
+            # if json
+            if mu.options["file_type"] in ["json"]:
+                # get numbers of count columns (now that we've read in the data)
+                mu.options["count_columns"] = [
+                    working.columns.to_list().index(c) for c in mu.options["count_columns_by_name"]
+                ]
             working, new_err = m.cast_cols_as_int(
                 working, mu.options["count_columns"], mode="index", munger_name=mu.name,
             )

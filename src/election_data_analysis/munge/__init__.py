@@ -76,7 +76,7 @@ def munge_clean(raw: pd.DataFrame, munger: jm.Munger):
     working = raw.copy()
     # drop columns that are neither count columns nor used in munger formulas
     #  define columns named in munger formulas
-    if munger.options["header_row_count"] > 1:
+    if munger.options["header_row_count"] is not None and munger.options["header_row_count"] > 1:
         munger_formula_columns = [
             x
             for x in working.columns
@@ -85,7 +85,9 @@ def munge_clean(raw: pd.DataFrame, munger: jm.Munger):
     else:
         munger_formula_columns = [x for x in working.columns if x in munger.field_list]
 
-    if munger.options["field_name_row"] is None:
+    if munger.options["count_columns_by_name"] is not None:
+        count_columns_by_name = munger.options["count_columns_by_name"]
+    elif munger.options["field_name_row"] is None:
         count_columns_by_name = [
             munger.options["field_names_if_no_field_name_row"][idx]
             for idx in munger.options["count_columns"]
