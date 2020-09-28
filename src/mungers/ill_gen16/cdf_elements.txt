@@ -3,6 +3,6 @@ ReportingUnit	<County>	row
 Party	<PartyName>	row
 CandidateContest	<OfficeName>	row
 Candidate	<CanFirstName> <CanLastName>	row
-BallotMeasureContest	<None>	row
-BallotMeasureSelection	<None>	row
+BallotMeasureContest	None	row
+BallotMeasureSelection	None	row
 CountItemType	total	row
