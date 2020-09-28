@@ -1,0 +1,300 @@
+Name	ReportingUnitType
+Illinois;IL House District 1	state-house
+Illinois;IL House District 2	state-house
+Illinois;IL House District 3	state-house
+Illinois;IL House District 4	state-house
+Illinois;IL House District 5	state-house
+Illinois;IL House District 6	state-house
+Illinois;IL House District 7	state-house
+Illinois;IL House District 8	state-house
+Illinois;IL House District 9	state-house
+Illinois;IL House District 10	state-house
+Illinois;IL House District 11	state-house
+Illinois;IL House District 12	state-house
+Illinois;IL House District 13	state-house
+Illinois;IL House District 14	state-house
+Illinois;IL House District 15	state-house
+Illinois;IL House District 16	state-house
+Illinois;IL House District 17	state-house
+Illinois;IL House District 18	state-house
+Illinois;IL House District 19	state-house
+Illinois;IL House District 20	state-house
+Illinois;IL House District 21	state-house
+Illinois;IL House District 22	state-house
+Illinois;IL House District 23	state-house
+Illinois;IL House District 24	state-house
+Illinois;IL House District 25	state-house
+Illinois;IL House District 26	state-house
+Illinois;IL House District 27	state-house
+Illinois;IL House District 28	state-house
+Illinois;IL House District 29	state-house
+Illinois;IL House District 30	state-house
+Illinois;IL House District 31	state-house
+Illinois;IL House District 32	state-house
+Illinois;IL House District 33	state-house
+Illinois;IL House District 34	state-house
+Illinois;IL House District 35	state-house
+Illinois;IL House District 36	state-house
+Illinois;IL House District 37	state-house
+Illinois;IL House District 38	state-house
+Illinois;IL House District 39	state-house
+Illinois;IL House District 40	state-house
+Illinois;IL House District 41	state-house
+Illinois;IL House District 42	state-house
+Illinois;IL House District 43	state-house
+Illinois;IL House District 44	state-house
+Illinois;IL House District 45	state-house
+Illinois;IL House District 46	state-house
+Illinois;IL House District 47	state-house
+Illinois;IL House District 48	state-house
+Illinois;IL House District 49	state-house
+Illinois;IL House District 50	state-house
+Illinois;IL House District 51	state-house
+Illinois;IL House District 52	state-house
+Illinois;IL House District 53	state-house
+Illinois;IL House District 54	state-house
+Illinois;IL House District 55	state-house
+Illinois;IL House District 56	state-house
+Illinois;IL House District 57	state-house
+Illinois;IL House District 58	state-house
+Illinois;IL House District 59	state-house
+Illinois;IL House District 60	state-house
+Illinois;IL House District 61	state-house
+Illinois;IL House District 62	state-house
+Illinois;IL House District 63	state-house
+Illinois;IL House District 64	state-house
+Illinois;IL House District 65	state-house
+Illinois;IL House District 66	state-house
+Illinois;IL House District 67	state-house
+Illinois;IL House District 68	state-house
+Illinois;IL House District 69	state-house
+Illinois;IL House District 70	state-house
+Illinois;IL House District 71	state-house
+Illinois;IL House District 72	state-house
+Illinois;IL House District 73	state-house
+Illinois;IL House District 74	state-house
+Illinois;IL House District 75	state-house
+Illinois;IL House District 76	state-house
+Illinois;IL House District 77	state-house
+Illinois;IL House District 78	state-house
+Illinois;IL House District 79	state-house
+Illinois;IL House District 80	state-house
+Illinois;IL House District 81	state-house
+Illinois;IL House District 82	state-house
+Illinois;IL House District 83	state-house
+Illinois;IL House District 84	state-house
+Illinois;IL House District 85	state-house
+Illinois;IL House District 86	state-house
+Illinois;IL House District 87	state-house
+Illinois;IL House District 88	state-house
+Illinois;IL House District 89	state-house
+Illinois;IL House District 90	state-house
+Illinois;IL House District 91	state-house
+Illinois;IL House District 92	state-house
+Illinois;IL House District 93	state-house
+Illinois;IL House District 94	state-house
+Illinois;IL House District 95	state-house
+Illinois;IL House District 96	state-house
+Illinois;IL House District 97	state-house
+Illinois;IL House District 98	state-house
+Illinois;IL House District 99	state-house
+Illinois;IL House District 100	state-house
+Illinois;IL House District 101	state-house
+Illinois;IL House District 102	state-house
+Illinois;IL House District 103	state-house
+Illinois;IL House District 104	state-house
+Illinois;IL House District 105	state-house
+Illinois;IL House District 106	state-house
+Illinois;IL House District 107	state-house
+Illinois;IL House District 108	state-house
+Illinois;IL House District 109	state-house
+Illinois;IL House District 110	state-house
+Illinois;IL House District 111	state-house
+Illinois;IL House District 112	state-house
+Illinois;IL House District 113	state-house
+Illinois;IL House District 114	state-house
+Illinois;IL House District 115	state-house
+Illinois;IL House District 116	state-house
+Illinois;IL House District 117	state-house
+Illinois;IL House District 118	state-house
+Illinois;IL Senate District 1	state-senate
+Illinois;IL Senate District 2	state-senate
+Illinois;IL Senate District 3	state-senate
+Illinois;IL Senate District 4	state-senate
+Illinois;IL Senate District 5	state-senate
+Illinois;IL Senate District 6	state-senate
+Illinois;IL Senate District 7	state-senate
+Illinois;IL Senate District 8	state-senate
+Illinois;IL Senate District 9	state-senate
+Illinois;IL Senate District 10	state-senate
+Illinois;IL Senate District 11	state-senate
+Illinois;IL Senate District 12	state-senate
+Illinois;IL Senate District 13	state-senate
+Illinois;IL Senate District 14	state-senate
+Illinois;IL Senate District 15	state-senate
+Illinois;IL Senate District 16	state-senate
+Illinois;IL Senate District 17	state-senate
+Illinois;IL Senate District 18	state-senate
+Illinois;IL Senate District 19	state-senate
+Illinois;IL Senate District 20	state-senate
+Illinois;IL Senate District 21	state-senate
+Illinois;IL Senate District 22	state-senate
+Illinois;IL Senate District 23	state-senate
+Illinois;IL Senate District 24	state-senate
+Illinois;IL Senate District 25	state-senate
+Illinois;IL Senate District 26	state-senate
+Illinois;IL Senate District 27	state-senate
+Illinois;IL Senate District 28	state-senate
+Illinois;IL Senate District 29	state-senate
+Illinois;IL Senate District 30	state-senate
+Illinois;IL Senate District 31	state-senate
+Illinois;IL Senate District 32	state-senate
+Illinois;IL Senate District 33	state-senate
+Illinois;IL Senate District 34	state-senate
+Illinois;IL Senate District 35	state-senate
+Illinois;IL Senate District 36	state-senate
+Illinois;IL Senate District 37	state-senate
+Illinois;IL Senate District 38	state-senate
+Illinois;IL Senate District 39	state-senate
+Illinois;IL Senate District 40	state-senate
+Illinois;IL Senate District 41	state-senate
+Illinois;IL Senate District 42	state-senate
+Illinois;IL Senate District 43	state-senate
+Illinois;IL Senate District 44	state-senate
+Illinois;IL Senate District 45	state-senate
+Illinois;IL Senate District 46	state-senate
+Illinois;IL Senate District 47	state-senate
+Illinois;IL Senate District 48	state-senate
+Illinois;IL Senate District 49	state-senate
+Illinois;IL Senate District 50	state-senate
+Illinois;IL Senate District 51	state-senate
+Illinois;IL Senate District 52	state-senate
+Illinois;IL Senate District 53	state-senate
+Illinois;IL Senate District 54	state-senate
+Illinois;IL Senate District 55	state-senate
+Illinois;IL Senate District 56	state-senate
+Illinois;IL Senate District 57	state-senate
+Illinois;IL Senate District 58	state-senate
+Illinois;IL Senate District 59	state-senate
+Illinois;US House IL District 1	congressional
+Illinois;US House IL District 2	congressional
+Illinois;US House IL District 3	congressional
+Illinois;US House IL District 4	congressional
+Illinois;US House IL District 5	congressional
+Illinois;US House IL District 6	congressional
+Illinois;US House IL District 7	congressional
+Illinois;US House IL District 8	congressional
+Illinois;US House IL District 9	congressional
+Illinois;US House IL District 10	congressional
+Illinois;US House IL District 11	congressional
+Illinois;US House IL District 12	congressional
+Illinois;US House IL District 13	congressional
+Illinois;US House IL District 14	congressional
+Illinois;US House IL District 15	congressional
+Illinois;US House IL District 16	congressional
+Illinois;US House IL District 17	congressional
+Illinois;US House IL District 18	congressional
+Illinois	state
+Illinois;Edwards County	county
+Illinois;Stark County	county
+Illinois;Richland County	county
+Illinois;Pope County	county
+Illinois;Clay County	county
+Illinois;Douglas County	county
+Illinois;Kane County	county
+Illinois;Kendall County	county
+Illinois;St. Clair County	county
+Illinois;Union County	county
+Illinois;Alexander County	county
+Illinois;Hardin County	county
+Illinois;Jasper County	county
+Illinois;Lake County	county
+Illinois;Rock Island County	county
+Illinois;Franklin County	county
+Illinois;Dewitt County	county
+Illinois;Will County	county
+Illinois;Knox County	county
+Illinois;Winnebago County	county
+Illinois;Clinton County	county
+Illinois;Cook County	county
+Illinois;Mclean County	county
+Illinois;Hamilton County	county
+Illinois;Putnam County	county
+Illinois;Randolph County	county
+Illinois;Schuyler County	county
+Illinois;Warren County	county
+Illinois;Wayne County	county
+Illinois;Vermilion County	county
+Illinois;Marion County	county
+Illinois;Massac County	county
+Illinois;Mercer County	county
+Illinois;Monroe County	county
+Illinois;Ogle County	county
+Illinois;Pulaski County	county
+Illinois;Ford County	county
+Illinois;Grundy County	county
+Illinois;Lasalle County	county
+Illinois;Lee County	county
+Illinois;Logan County	county
+Illinois;Madison County	county
+Illinois;Perry County	county
+Illinois;Scott County	county
+Illinois;Whiteside County	county
+Illinois;Hancock County	county
+Illinois;Macon County	county
+Illinois;Fayette County	county
+Illinois;Dekalb County	county
+Illinois;Dupage County	county
+Illinois;Edgar County	county
+Illinois;Gallatin County	county
+Illinois;Henderson County	county
+Illinois;Mcdonough County	county
+Illinois;Carroll County	county
+Illinois;Cass County	county
+Illinois;Champaign County	county
+Illinois;Christian County	county
+Illinois;Clark County	county
+Illinois;Cumberland County	county
+Illinois;Peoria County	county
+Illinois;Washington County	county
+Illinois;Adams County	county
+Illinois;Bond County	county
+Illinois;Brown County	county
+Illinois;Calhoun County	county
+Illinois;Mchenry County	county
+Illinois;Montgomery County	county
+Illinois;Moultrie County	county
+Illinois;Saline County	county
+Illinois;Stephenson County	county
+Illinois;Wabash County	county
+Illinois;Boone County	county
+Illinois;Effingham County	county
+Illinois;Fulton County	county
+Illinois;Kankakee County	county
+Illinois;Livingston County	county
+Illinois;Marshall County	county
+Illinois;Mason County	county
+Illinois;Morgan County	county
+Illinois;Piatt County	county
+Illinois;Pike County	county
+Illinois;Shelby County	county
+Illinois;Tazewell County	county
+Illinois;Coles County	county
+Illinois;Crawford County	county
+Illinois;Iroquois County	county
+Illinois;Jefferson County	county
+Illinois;Johnson County	county
+Illinois;Macoupin County	county
+Illinois;Woodford County	county
+Illinois;Greene County	county
+Illinois;Henry County	county
+Illinois;Jodaviess County	county
+Illinois;Menard County	county
+Illinois;Bureau County	county
+Illinois;Jackson County	county
+Illinois;Jersey County	county
+Illinois;Lawrence County	county
+Illinois;Sangamon County	county
+Illinois;White County	county
+Illinois;Williamson County	county
+

@@ -1,0 +1,2657 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	IL House District 1	1ST REPRESENTATIVE
+CandidateContest	IL House District 2	2ND REPRESENTATIVE
+CandidateContest	IL House District 3	3RD REPRESENTATIVE
+CandidateContest	IL House District 4	4TH REPRESENTATIVE
+CandidateContest	IL House District 5	5TH REPRESENTATIVE
+CandidateContest	IL House District 6	6TH REPRESENTATIVE
+CandidateContest	IL House District 7	7TH REPRESENTATIVE
+CandidateContest	IL House District 8	8TH REPRESENTATIVE
+CandidateContest	IL House District 9	9TH REPRESENTATIVE
+CandidateContest	IL House District 10	10TH REPRESENTATIVE
+CandidateContest	IL House District 11	11TH REPRESENTATIVE
+CandidateContest	IL House District 12	12TH REPRESENTATIVE
+CandidateContest	IL House District 13	13TH REPRESENTATIVE
+CandidateContest	IL House District 14	14TH REPRESENTATIVE
+CandidateContest	IL House District 15	15TH REPRESENTATIVE
+CandidateContest	IL House District 16	16TH REPRESENTATIVE
+CandidateContest	IL House District 17	17TH REPRESENTATIVE
+CandidateContest	IL House District 18	18TH REPRESENTATIVE
+CandidateContest	IL House District 19	19TH REPRESENTATIVE
+CandidateContest	IL House District 20	20TH REPRESENTATIVE
+CandidateContest	IL House District 21	21ST REPRESENTATIVE
+CandidateContest	IL House District 22	22ND REPRESENTATIVE
+CandidateContest	IL House District 23	23RD REPRESENTATIVE
+CandidateContest	IL House District 24	24TH REPRESENTATIVE
+CandidateContest	IL House District 25	25TH REPRESENTATIVE
+CandidateContest	IL House District 26	26TH REPRESENTATIVE
+CandidateContest	IL House District 27	27TH REPRESENTATIVE
+CandidateContest	IL House District 28	28TH REPRESENTATIVE
+CandidateContest	IL House District 29	29TH REPRESENTATIVE
+CandidateContest	IL House District 30	30TH REPRESENTATIVE
+CandidateContest	IL House District 31	31ST REPRESENTATIVE
+CandidateContest	IL House District 32	32ND REPRESENTATIVE
+CandidateContest	IL House District 33	33RD REPRESENTATIVE
+CandidateContest	IL House District 34	34TH REPRESENTATIVE
+CandidateContest	IL House District 35	35TH REPRESENTATIVE
+CandidateContest	IL House District 36	36TH REPRESENTATIVE
+CandidateContest	IL House District 37	37TH REPRESENTATIVE
+CandidateContest	IL House District 38	38TH REPRESENTATIVE
+CandidateContest	IL House District 39	39TH REPRESENTATIVE
+CandidateContest	IL House District 40	40TH REPRESENTATIVE
+CandidateContest	IL House District 41	41ST REPRESENTATIVE
+CandidateContest	IL House District 42	42ND REPRESENTATIVE
+CandidateContest	IL House District 43	43RD REPRESENTATIVE
+CandidateContest	IL House District 44	44TH REPRESENTATIVE
+CandidateContest	IL House District 45	45TH REPRESENTATIVE
+CandidateContest	IL House District 46	46TH REPRESENTATIVE
+CandidateContest	IL House District 47	47TH REPRESENTATIVE
+CandidateContest	IL House District 48	48TH REPRESENTATIVE
+CandidateContest	IL House District 49	49TH REPRESENTATIVE
+CandidateContest	IL House District 50	50TH REPRESENTATIVE
+CandidateContest	IL House District 51	51ST REPRESENTATIVE
+CandidateContest	IL House District 52	52ND REPRESENTATIVE
+CandidateContest	IL House District 53	53RD REPRESENTATIVE
+CandidateContest	IL House District 54	54TH REPRESENTATIVE
+CandidateContest	IL House District 55	55TH REPRESENTATIVE
+CandidateContest	IL House District 56	56TH REPRESENTATIVE
+CandidateContest	IL House District 57	57TH REPRESENTATIVE
+CandidateContest	IL House District 58	58TH REPRESENTATIVE
+CandidateContest	IL House District 59	59TH REPRESENTATIVE
+CandidateContest	IL House District 60	60TH REPRESENTATIVE
+CandidateContest	IL House District 61	61ST REPRESENTATIVE
+CandidateContest	IL House District 62	62ND REPRESENTATIVE
+CandidateContest	IL House District 63	63RD REPRESENTATIVE
+CandidateContest	IL House District 64	64TH REPRESENTATIVE
+CandidateContest	IL House District 65	65TH REPRESENTATIVE
+CandidateContest	IL House District 66	66TH REPRESENTATIVE
+CandidateContest	IL House District 67	67TH REPRESENTATIVE
+CandidateContest	IL House District 68	68TH REPRESENTATIVE
+CandidateContest	IL House District 69	69TH REPRESENTATIVE
+CandidateContest	IL House District 70	70TH REPRESENTATIVE
+CandidateContest	IL House District 71	71ST REPRESENTATIVE
+CandidateContest	IL House District 72	72ND REPRESENTATIVE
+CandidateContest	IL House District 73	73RD REPRESENTATIVE
+CandidateContest	IL House District 74	74TH REPRESENTATIVE
+CandidateContest	IL House District 75	75TH REPRESENTATIVE
+CandidateContest	IL House District 76	76TH REPRESENTATIVE
+CandidateContest	IL House District 77	77TH REPRESENTATIVE
+CandidateContest	IL House District 78	78TH REPRESENTATIVE
+CandidateContest	IL House District 79	79TH REPRESENTATIVE
+CandidateContest	IL House District 80	80TH REPRESENTATIVE
+CandidateContest	IL House District 81	81ST REPRESENTATIVE
+CandidateContest	IL House District 82	82ND REPRESENTATIVE
+CandidateContest	IL House District 83	83RD REPRESENTATIVE
+CandidateContest	IL House District 84	84TH REPRESENTATIVE
+CandidateContest	IL House District 85	85TH REPRESENTATIVE
+CandidateContest	IL House District 86	86TH REPRESENTATIVE
+CandidateContest	IL House District 87	87TH REPRESENTATIVE
+CandidateContest	IL House District 88	88TH REPRESENTATIVE
+CandidateContest	IL House District 89	89TH REPRESENTATIVE
+CandidateContest	IL House District 90	90TH REPRESENTATIVE
+CandidateContest	IL House District 91	91ST REPRESENTATIVE
+CandidateContest	IL House District 92	92ND REPRESENTATIVE
+CandidateContest	IL House District 93	93RD REPRESENTATIVE
+CandidateContest	IL House District 94	94TH REPRESENTATIVE
+CandidateContest	IL House District 95	95TH REPRESENTATIVE
+CandidateContest	IL House District 96	96TH REPRESENTATIVE
+CandidateContest	IL House District 97	97TH REPRESENTATIVE
+CandidateContest	IL House District 98	98TH REPRESENTATIVE
+CandidateContest	IL House District 99	99TH REPRESENTATIVE
+CandidateContest	IL House District 100	100TH REPRESENTATIVE
+CandidateContest	IL House District 101	101ST REPRESENTATIVE
+CandidateContest	IL House District 102	102ND REPRESENTATIVE
+CandidateContest	IL House District 103	103RD REPRESENTATIVE
+CandidateContest	IL House District 104	104TH REPRESENTATIVE
+CandidateContest	IL House District 105	105TH REPRESENTATIVE
+CandidateContest	IL House District 106	106TH REPRESENTATIVE
+CandidateContest	IL House District 107	107TH REPRESENTATIVE
+CandidateContest	IL House District 108	108TH REPRESENTATIVE
+CandidateContest	IL House District 109	109TH REPRESENTATIVE
+CandidateContest	IL House District 110	110TH REPRESENTATIVE
+CandidateContest	IL House District 111	111TH REPRESENTATIVE
+CandidateContest	IL House District 112	112TH REPRESENTATIVE
+CandidateContest	IL House District 113	113TH REPRESENTATIVE
+CandidateContest	IL House District 114	114TH REPRESENTATIVE
+CandidateContest	IL House District 115	115TH REPRESENTATIVE
+CandidateContest	IL House District 116	116TH REPRESENTATIVE
+CandidateContest	IL House District 117	117TH REPRESENTATIVE
+CandidateContest	IL House District 118	118TH REPRESENTATIVE
+CandidateContest	IL Senate District 1	1ST SENATE
+CandidateContest	IL Senate District 2	2nd SENATE
+CandidateContest	IL Senate District 3	3rd SENATE
+CandidateContest	IL Senate District 4	4th SENATE
+CandidateContest	IL Senate District 5	5th SENATE
+CandidateContest	IL Senate District 6	6th SENATE
+CandidateContest	IL Senate District 7	7th SENATE
+CandidateContest	IL Senate District 8	8th SENATE
+CandidateContest	IL Senate District 9	9th SENATE
+CandidateContest	IL Senate District 10	10th SENATE
+CandidateContest	IL Senate District 11	11th SENATE
+CandidateContest	IL Senate District 12	12th SENATE
+CandidateContest	IL Senate District 13	13th SENATE
+CandidateContest	IL Senate District 14	14th SENATE
+CandidateContest	IL Senate District 15	15th SENATE
+CandidateContest	IL Senate District 16	16th SENATE
+CandidateContest	IL Senate District 17	17th SENATE
+CandidateContest	IL Senate District 18	18th SENATE
+CandidateContest	IL Senate District 19	19th SENATE
+CandidateContest	IL Senate District 20	20th SENATE
+CandidateContest	IL Senate District 21	21st SENATE
+CandidateContest	IL Senate District 22	22nd SENATE
+CandidateContest	IL Senate District 23	23rd SENATE
+CandidateContest	IL Senate District 24	24th SENATE
+CandidateContest	IL Senate District 25	25th SENATE
+CandidateContest	IL Senate District 26	26th SENATE
+CandidateContest	IL Senate District 27	27th SENATE
+CandidateContest	IL Senate District 28	28th SENATE
+CandidateContest	IL Senate District 29	29th SENATE
+CandidateContest	IL Senate District 30	30th SENATE
+CandidateContest	IL Senate District 31	31st SENATE
+CandidateContest	IL Senate District 32	32nd SENATE
+CandidateContest	IL Senate District 33	33rd SENATE
+CandidateContest	IL Senate District 34	34th SENATE
+CandidateContest	IL Senate District 35	35th SENATE
+CandidateContest	IL Senate District 36	36th SENATE
+CandidateContest	IL Senate District 37	37th SENATE
+CandidateContest	IL Senate District 38	38th SENATE
+CandidateContest	IL Senate District 39	39th SENATE
+CandidateContest	IL Senate District 40	40th SENATE
+CandidateContest	IL Senate District 41	41st SENATE
+CandidateContest	IL Senate District 42	42nd SENATE
+CandidateContest	IL Senate District 43	43rd SENATE
+CandidateContest	IL Senate District 44	44th SENATE
+CandidateContest	IL Senate District 45	45th SENATE
+CandidateContest	IL Senate District 46	46th SENATE
+CandidateContest	IL Senate District 47	47th SENATE
+CandidateContest	IL Senate District 48	48th SENATE
+CandidateContest	IL Senate District 49	49th SENATE
+CandidateContest	IL Senate District 50	50th SENATE
+CandidateContest	IL Senate District 51	51st SENATE
+CandidateContest	IL Senate District 52	52nd SENATE
+CandidateContest	IL Senate District 53	53rd SENATE
+CandidateContest	IL Senate District 54	54th SENATE
+CandidateContest	IL Senate District 55	55th SENATE
+CandidateContest	IL Senate District 56	56th SENATE
+CandidateContest	IL Senate District 57	57th SENATE
+CandidateContest	IL Senate District 58	58th SENATE
+CandidateContest	IL Senate District 59	59th SENATE
+CandidateContest	US House IL District 1	1ST CONGRESS
+CandidateContest	US House IL District 2	2nd CONGRESS
+CandidateContest	US House IL District 3	3rd CONGRESS
+CandidateContest	US House IL District 4	4th CONGRESS
+CandidateContest	US House IL District 5	5th CONGRESS
+CandidateContest	US House IL District 6	6th CONGRESS
+CandidateContest	US House IL District 7	7th CONGRESS
+CandidateContest	US House IL District 8	8th CONGRESS
+CandidateContest	US House IL District 9	9th CONGRESS
+CandidateContest	US House IL District 10	10th CONGRESS
+CandidateContest	US House IL District 11	11th CONGRESS
+CandidateContest	US House IL District 12	12th CONGRESS
+CandidateContest	US House IL District 13	13th CONGRESS
+CandidateContest	US House IL District 14	14th CONGRESS
+CandidateContest	US House IL District 15	15th CONGRESS
+CandidateContest	US House IL District 16	16th CONGRESS
+CandidateContest	US House IL District 17	17th CONGRESS
+CandidateContest	US House IL District 18	18th CONGRESS
+CandidateContest	US President (IL)	PRESIDENT AND VICE PRESIDENT
+CandidateContest	US President (IL)	PRESIDENT
+CandidateContest	IL Governor	GOVERNOR AND LIEUTENANT GOVERNOR
+CandidateContest	IL Governor	GOVERNOR
+CandidateContest	US Senate IL	UNITED STATES SENATOR
+CandidateContest	IL Attorney General	ATTORNEY GENERAL
+CandidateContest	IL Comptroller	COMPTROLLER
+CandidateContest	IL Treasurer	TREASURER
+CandidateContest	IL Secretary of State	SECRETARY OF STATE
+Election	2016 General	GE 2016
+Election	2018 General	GE 2018
+Election	2020 Primary	G9 2020
+Party	Republican Party	REPUBLICAN
+Party	Democratic Party	DEMOCRATIC
+Party	Green Party	GREEN
+Party	Independent Party	INDEPENDENT
+Party	Downstate United Party	DOWNSTATE UNITED
+Party	Libertarian Party	LIBERTARIAN
+Party	Conservative Party	CONSERVATIVE
+ReportingUnit	Illinois;IL House District 1	Illinois;IL House District 1
+ReportingUnit	Illinois;IL House District 2	Illinois;IL House District 2
+ReportingUnit	Illinois;IL House District 3	Illinois;IL House District 3
+ReportingUnit	Illinois;IL House District 4	Illinois;IL House District 4
+ReportingUnit	Illinois;IL House District 5	Illinois;IL House District 5
+ReportingUnit	Illinois;IL House District 6	Illinois;IL House District 6
+ReportingUnit	Illinois;IL House District 7	Illinois;IL House District 7
+ReportingUnit	Illinois;IL House District 8	Illinois;IL House District 8
+ReportingUnit	Illinois;IL House District 9	Illinois;IL House District 9
+ReportingUnit	Illinois;IL House District 10	Illinois;IL House District 10
+ReportingUnit	Illinois;IL House District 11	Illinois;IL House District 11
+ReportingUnit	Illinois;IL House District 12	Illinois;IL House District 12
+ReportingUnit	Illinois;IL House District 13	Illinois;IL House District 13
+ReportingUnit	Illinois;IL House District 14	Illinois;IL House District 14
+ReportingUnit	Illinois;IL House District 15	Illinois;IL House District 15
+ReportingUnit	Illinois;IL House District 16	Illinois;IL House District 16
+ReportingUnit	Illinois;IL House District 17	Illinois;IL House District 17
+ReportingUnit	Illinois;IL House District 18	Illinois;IL House District 18
+ReportingUnit	Illinois;IL House District 19	Illinois;IL House District 19
+ReportingUnit	Illinois;IL House District 20	Illinois;IL House District 20
+ReportingUnit	Illinois;IL House District 21	Illinois;IL House District 21
+ReportingUnit	Illinois;IL House District 22	Illinois;IL House District 22
+ReportingUnit	Illinois;IL House District 23	Illinois;IL House District 23
+ReportingUnit	Illinois;IL House District 24	Illinois;IL House District 24
+ReportingUnit	Illinois;IL House District 25	Illinois;IL House District 25
+ReportingUnit	Illinois;IL House District 26	Illinois;IL House District 26
+ReportingUnit	Illinois;IL House District 27	Illinois;IL House District 27
+ReportingUnit	Illinois;IL House District 28	Illinois;IL House District 28
+ReportingUnit	Illinois;IL House District 29	Illinois;IL House District 29
+ReportingUnit	Illinois;IL House District 30	Illinois;IL House District 30
+ReportingUnit	Illinois;IL House District 31	Illinois;IL House District 31
+ReportingUnit	Illinois;IL House District 32	Illinois;IL House District 32
+ReportingUnit	Illinois;IL House District 33	Illinois;IL House District 33
+ReportingUnit	Illinois;IL House District 34	Illinois;IL House District 34
+ReportingUnit	Illinois;IL House District 35	Illinois;IL House District 35
+ReportingUnit	Illinois;IL House District 36	Illinois;IL House District 36
+ReportingUnit	Illinois;IL House District 37	Illinois;IL House District 37
+ReportingUnit	Illinois;IL House District 38	Illinois;IL House District 38
+ReportingUnit	Illinois;IL House District 39	Illinois;IL House District 39
+ReportingUnit	Illinois;IL House District 40	Illinois;IL House District 40
+ReportingUnit	Illinois;IL House District 41	Illinois;IL House District 41
+ReportingUnit	Illinois;IL House District 42	Illinois;IL House District 42
+ReportingUnit	Illinois;IL House District 43	Illinois;IL House District 43
+ReportingUnit	Illinois;IL House District 44	Illinois;IL House District 44
+ReportingUnit	Illinois;IL House District 45	Illinois;IL House District 45
+ReportingUnit	Illinois;IL House District 46	Illinois;IL House District 46
+ReportingUnit	Illinois;IL House District 47	Illinois;IL House District 47
+ReportingUnit	Illinois;IL House District 48	Illinois;IL House District 48
+ReportingUnit	Illinois;IL House District 49	Illinois;IL House District 49
+ReportingUnit	Illinois;IL House District 50	Illinois;IL House District 50
+ReportingUnit	Illinois;IL House District 51	Illinois;IL House District 51
+ReportingUnit	Illinois;IL House District 52	Illinois;IL House District 52
+ReportingUnit	Illinois;IL House District 53	Illinois;IL House District 53
+ReportingUnit	Illinois;IL House District 54	Illinois;IL House District 54
+ReportingUnit	Illinois;IL House District 55	Illinois;IL House District 55
+ReportingUnit	Illinois;IL House District 56	Illinois;IL House District 56
+ReportingUnit	Illinois;IL House District 57	Illinois;IL House District 57
+ReportingUnit	Illinois;IL House District 58	Illinois;IL House District 58
+ReportingUnit	Illinois;IL House District 59	Illinois;IL House District 59
+ReportingUnit	Illinois;IL House District 60	Illinois;IL House District 60
+ReportingUnit	Illinois;IL House District 61	Illinois;IL House District 61
+ReportingUnit	Illinois;IL House District 62	Illinois;IL House District 62
+ReportingUnit	Illinois;IL House District 63	Illinois;IL House District 63
+ReportingUnit	Illinois;IL House District 64	Illinois;IL House District 64
+ReportingUnit	Illinois;IL House District 65	Illinois;IL House District 65
+ReportingUnit	Illinois;IL House District 66	Illinois;IL House District 66
+ReportingUnit	Illinois;IL House District 67	Illinois;IL House District 67
+ReportingUnit	Illinois;IL House District 68	Illinois;IL House District 68
+ReportingUnit	Illinois;IL House District 69	Illinois;IL House District 69
+ReportingUnit	Illinois;IL House District 70	Illinois;IL House District 70
+ReportingUnit	Illinois;IL House District 71	Illinois;IL House District 71
+ReportingUnit	Illinois;IL House District 72	Illinois;IL House District 72
+ReportingUnit	Illinois;IL House District 73	Illinois;IL House District 73
+ReportingUnit	Illinois;IL House District 74	Illinois;IL House District 74
+ReportingUnit	Illinois;IL House District 75	Illinois;IL House District 75
+ReportingUnit	Illinois;IL House District 76	Illinois;IL House District 76
+ReportingUnit	Illinois;IL House District 77	Illinois;IL House District 77
+ReportingUnit	Illinois;IL House District 78	Illinois;IL House District 78
+ReportingUnit	Illinois;IL House District 79	Illinois;IL House District 79
+ReportingUnit	Illinois;IL House District 80	Illinois;IL House District 80
+ReportingUnit	Illinois;IL House District 81	Illinois;IL House District 81
+ReportingUnit	Illinois;IL House District 82	Illinois;IL House District 82
+ReportingUnit	Illinois;IL House District 83	Illinois;IL House District 83
+ReportingUnit	Illinois;IL House District 84	Illinois;IL House District 84
+ReportingUnit	Illinois;IL House District 85	Illinois;IL House District 85
+ReportingUnit	Illinois;IL House District 86	Illinois;IL House District 86
+ReportingUnit	Illinois;IL House District 87	Illinois;IL House District 87
+ReportingUnit	Illinois;IL House District 88	Illinois;IL House District 88
+ReportingUnit	Illinois;IL House District 89	Illinois;IL House District 89
+ReportingUnit	Illinois;IL House District 90	Illinois;IL House District 90
+ReportingUnit	Illinois;IL House District 91	Illinois;IL House District 91
+ReportingUnit	Illinois;IL House District 92	Illinois;IL House District 92
+ReportingUnit	Illinois;IL House District 93	Illinois;IL House District 93
+ReportingUnit	Illinois;IL House District 94	Illinois;IL House District 94
+ReportingUnit	Illinois;IL House District 95	Illinois;IL House District 95
+ReportingUnit	Illinois;IL House District 96	Illinois;IL House District 96
+ReportingUnit	Illinois;IL House District 97	Illinois;IL House District 97
+ReportingUnit	Illinois;IL House District 98	Illinois;IL House District 98
+ReportingUnit	Illinois;IL House District 99	Illinois;IL House District 99
+ReportingUnit	Illinois;IL House District 100	Illinois;IL House District 100
+ReportingUnit	Illinois;IL House District 101	Illinois;IL House District 101
+ReportingUnit	Illinois;IL House District 102	Illinois;IL House District 102
+ReportingUnit	Illinois;IL House District 103	Illinois;IL House District 103
+ReportingUnit	Illinois;IL House District 104	Illinois;IL House District 104
+ReportingUnit	Illinois;IL House District 105	Illinois;IL House District 105
+ReportingUnit	Illinois;IL House District 106	Illinois;IL House District 106
+ReportingUnit	Illinois;IL House District 107	Illinois;IL House District 107
+ReportingUnit	Illinois;IL House District 108	Illinois;IL House District 108
+ReportingUnit	Illinois;IL House District 109	Illinois;IL House District 109
+ReportingUnit	Illinois;IL House District 110	Illinois;IL House District 110
+ReportingUnit	Illinois;IL House District 111	Illinois;IL House District 111
+ReportingUnit	Illinois;IL House District 112	Illinois;IL House District 112
+ReportingUnit	Illinois;IL House District 113	Illinois;IL House District 113
+ReportingUnit	Illinois;IL House District 114	Illinois;IL House District 114
+ReportingUnit	Illinois;IL House District 115	Illinois;IL House District 115
+ReportingUnit	Illinois;IL House District 116	Illinois;IL House District 116
+ReportingUnit	Illinois;IL House District 117	Illinois;IL House District 117
+ReportingUnit	Illinois;IL House District 118	Illinois;IL House District 118
+ReportingUnit	Illinois;IL Senate District 1	Illinois;IL Senate District 1
+ReportingUnit	Illinois;IL Senate District 2	Illinois;IL Senate District 2
+ReportingUnit	Illinois;IL Senate District 3	Illinois;IL Senate District 3
+ReportingUnit	Illinois;IL Senate District 4	Illinois;IL Senate District 4
+ReportingUnit	Illinois;IL Senate District 5	Illinois;IL Senate District 5
+ReportingUnit	Illinois;IL Senate District 6	Illinois;IL Senate District 6
+ReportingUnit	Illinois;IL Senate District 7	Illinois;IL Senate District 7
+ReportingUnit	Illinois;IL Senate District 8	Illinois;IL Senate District 8
+ReportingUnit	Illinois;IL Senate District 9	Illinois;IL Senate District 9
+ReportingUnit	Illinois;IL Senate District 10	Illinois;IL Senate District 10
+ReportingUnit	Illinois;IL Senate District 11	Illinois;IL Senate District 11
+ReportingUnit	Illinois;IL Senate District 12	Illinois;IL Senate District 12
+ReportingUnit	Illinois;IL Senate District 13	Illinois;IL Senate District 13
+ReportingUnit	Illinois;IL Senate District 14	Illinois;IL Senate District 14
+ReportingUnit	Illinois;IL Senate District 15	Illinois;IL Senate District 15
+ReportingUnit	Illinois;IL Senate District 16	Illinois;IL Senate District 16
+ReportingUnit	Illinois;IL Senate District 17	Illinois;IL Senate District 17
+ReportingUnit	Illinois;IL Senate District 18	Illinois;IL Senate District 18
+ReportingUnit	Illinois;IL Senate District 19	Illinois;IL Senate District 19
+ReportingUnit	Illinois;IL Senate District 20	Illinois;IL Senate District 20
+ReportingUnit	Illinois;IL Senate District 21	Illinois;IL Senate District 21
+ReportingUnit	Illinois;IL Senate District 22	Illinois;IL Senate District 22
+ReportingUnit	Illinois;IL Senate District 23	Illinois;IL Senate District 23
+ReportingUnit	Illinois;IL Senate District 24	Illinois;IL Senate District 24
+ReportingUnit	Illinois;IL Senate District 25	Illinois;IL Senate District 25
+ReportingUnit	Illinois;IL Senate District 26	Illinois;IL Senate District 26
+ReportingUnit	Illinois;IL Senate District 27	Illinois;IL Senate District 27
+ReportingUnit	Illinois;IL Senate District 28	Illinois;IL Senate District 28
+ReportingUnit	Illinois;IL Senate District 29	Illinois;IL Senate District 29
+ReportingUnit	Illinois;IL Senate District 30	Illinois;IL Senate District 30
+ReportingUnit	Illinois;IL Senate District 31	Illinois;IL Senate District 31
+ReportingUnit	Illinois;IL Senate District 32	Illinois;IL Senate District 32
+ReportingUnit	Illinois;IL Senate District 33	Illinois;IL Senate District 33
+ReportingUnit	Illinois;IL Senate District 34	Illinois;IL Senate District 34
+ReportingUnit	Illinois;IL Senate District 35	Illinois;IL Senate District 35
+ReportingUnit	Illinois;IL Senate District 36	Illinois;IL Senate District 36
+ReportingUnit	Illinois;IL Senate District 37	Illinois;IL Senate District 37
+ReportingUnit	Illinois;IL Senate District 38	Illinois;IL Senate District 38
+ReportingUnit	Illinois;IL Senate District 39	Illinois;IL Senate District 39
+ReportingUnit	Illinois;IL Senate District 40	Illinois;IL Senate District 40
+ReportingUnit	Illinois;IL Senate District 41	Illinois;IL Senate District 41
+ReportingUnit	Illinois;IL Senate District 42	Illinois;IL Senate District 42
+ReportingUnit	Illinois;IL Senate District 43	Illinois;IL Senate District 43
+ReportingUnit	Illinois;IL Senate District 44	Illinois;IL Senate District 44
+ReportingUnit	Illinois;IL Senate District 45	Illinois;IL Senate District 45
+ReportingUnit	Illinois;IL Senate District 46	Illinois;IL Senate District 46
+ReportingUnit	Illinois;IL Senate District 47	Illinois;IL Senate District 47
+ReportingUnit	Illinois;IL Senate District 48	Illinois;IL Senate District 48
+ReportingUnit	Illinois;IL Senate District 49	Illinois;IL Senate District 49
+ReportingUnit	Illinois;IL Senate District 50	Illinois;IL Senate District 50
+ReportingUnit	Illinois;IL Senate District 51	Illinois;IL Senate District 51
+ReportingUnit	Illinois;IL Senate District 52	Illinois;IL Senate District 52
+ReportingUnit	Illinois;IL Senate District 53	Illinois;IL Senate District 53
+ReportingUnit	Illinois;IL Senate District 54	Illinois;IL Senate District 54
+ReportingUnit	Illinois;IL Senate District 55	Illinois;IL Senate District 55
+ReportingUnit	Illinois;IL Senate District 56	Illinois;IL Senate District 56
+ReportingUnit	Illinois;IL Senate District 57	Illinois;IL Senate District 57
+ReportingUnit	Illinois;IL Senate District 58	Illinois;IL Senate District 58
+ReportingUnit	Illinois;IL Senate District 59	Illinois;IL Senate District 59
+ReportingUnit	Illinois;US House IL District 1	Illinois;US House IL District 1
+ReportingUnit	Illinois;US House IL District 2	Illinois;US House IL District 2
+ReportingUnit	Illinois;US House IL District 3	Illinois;US House IL District 3
+ReportingUnit	Illinois;US House IL District 4	Illinois;US House IL District 4
+ReportingUnit	Illinois;US House IL District 5	Illinois;US House IL District 5
+ReportingUnit	Illinois;US House IL District 6	Illinois;US House IL District 6
+ReportingUnit	Illinois;US House IL District 7	Illinois;US House IL District 7
+ReportingUnit	Illinois;US House IL District 8	Illinois;US House IL District 8
+ReportingUnit	Illinois;US House IL District 9	Illinois;US House IL District 9
+ReportingUnit	Illinois;US House IL District 10	Illinois;US House IL District 10
+ReportingUnit	Illinois;US House IL District 11	Illinois;US House IL District 11
+ReportingUnit	Illinois;US House IL District 12	Illinois;US House IL District 12
+ReportingUnit	Illinois;US House IL District 13	Illinois;US House IL District 13
+ReportingUnit	Illinois;US House IL District 14	Illinois;US House IL District 14
+ReportingUnit	Illinois;US House IL District 15	Illinois;US House IL District 15
+ReportingUnit	Illinois;US House IL District 16	Illinois;US House IL District 16
+ReportingUnit	Illinois;US House IL District 17	Illinois;US House IL District 17
+ReportingUnit	Illinois;US House IL District 18	Illinois;US House IL District 18
+ReportingUnit	Illinois	Illinois
+ReportingUnit	Illinois;Edwards County	EDWARDS
+ReportingUnit	Illinois;Stark County	STARK
+ReportingUnit	Illinois;Richland County	RICHLAND
+ReportingUnit	Illinois;Pope County	POPE
+ReportingUnit	Illinois;Clay County	CLAY
+ReportingUnit	Illinois;Douglas County	DOUGLAS
+ReportingUnit	Illinois;Kane County	KANE
+ReportingUnit	Illinois;Kendall County	KENDALL
+ReportingUnit	Illinois;St. Clair County	ST. CLAIR
+ReportingUnit	Illinois;Union County	UNION
+ReportingUnit	Illinois;Alexander County	ALEXANDER
+ReportingUnit	Illinois;Hardin County	HARDIN
+ReportingUnit	Illinois;Jasper County	JASPER
+ReportingUnit	Illinois;Lake County	LAKE
+ReportingUnit	Illinois;Rock Island County	ROCK ISLAND
+ReportingUnit	Illinois;Franklin County	FRANKLIN
+ReportingUnit	Illinois;Dewitt County	DeWITT
+ReportingUnit	Illinois;Will County	WILL
+ReportingUnit	Illinois;Knox County	KNOX
+ReportingUnit	Illinois;Winnebago County	WINNEBAGO
+ReportingUnit	Illinois;Clinton County	CLINTON
+ReportingUnit	Illinois;Cook County	COOK
+ReportingUnit	Illinois;Mclean County	McLEAN
+ReportingUnit	Illinois;Hamilton County	HAMILTON
+ReportingUnit	Illinois;Putnam County	PUTNAM
+ReportingUnit	Illinois;Randolph County	RANDOLPH
+ReportingUnit	Illinois;Schuyler County	SCHUYLER
+ReportingUnit	Illinois;Warren County	WARREN
+ReportingUnit	Illinois;Wayne County	WAYNE
+ReportingUnit	Illinois;Vermilion County	VERMILION
+ReportingUnit	Illinois;Marion County	MARION
+ReportingUnit	Illinois;Massac County	MASSAC
+ReportingUnit	Illinois;Mercer County	MERCER
+ReportingUnit	Illinois;Monroe County	MONROE
+ReportingUnit	Illinois;Ogle County	OGLE
+ReportingUnit	Illinois;Pulaski County	PULASKI
+ReportingUnit	Illinois;Ford County	FORD
+ReportingUnit	Illinois;Grundy County	GRUNDY
+ReportingUnit	Illinois;Lasalle County	LaSALLE
+ReportingUnit	Illinois;Lee County	LEE
+ReportingUnit	Illinois;Logan County	LOGAN
+ReportingUnit	Illinois;Madison County	MADISON
+ReportingUnit	Illinois;Perry County	PERRY
+ReportingUnit	Illinois;Scott County	SCOTT
+ReportingUnit	Illinois;Whiteside County	WHITESIDE
+ReportingUnit	Illinois;Hancock County	HANCOCK
+ReportingUnit	Illinois;Macon County	MACON
+ReportingUnit	Illinois;Fayette County	FAYETTE
+ReportingUnit	Illinois;Dekalb County	DeKALB
+ReportingUnit	Illinois;Dupage County	DuPAGE
+ReportingUnit	Illinois;Edgar County	EDGAR
+ReportingUnit	Illinois;Gallatin County	GALLATIN
+ReportingUnit	Illinois;Henderson County	HENDERSON
+ReportingUnit	Illinois;Mcdonough County	McDONOUGH
+ReportingUnit	Illinois;Carroll County	CARROLL
+ReportingUnit	Illinois;Cass County	CASS
+ReportingUnit	Illinois;Champaign County	CHAMPAIGN
+ReportingUnit	Illinois;Christian County	CHRISTIAN
+ReportingUnit	Illinois;Clark County	CLARK
+ReportingUnit	Illinois;Cumberland County	CUMBERLAND
+ReportingUnit	Illinois;Peoria County	PEORIA
+ReportingUnit	Illinois;Washington County	WASHINGTON
+ReportingUnit	Illinois;Adams County	ADAMS
+ReportingUnit	Illinois;Bond County	BOND
+ReportingUnit	Illinois;Brown County	BROWN
+ReportingUnit	Illinois;Calhoun County	CALHOUN
+ReportingUnit	Illinois;Mchenry County	McHENRY
+ReportingUnit	Illinois;Montgomery County	MONTGOMERY
+ReportingUnit	Illinois;Moultrie County	MOULTRIE
+ReportingUnit	Illinois;Saline County	SALINE
+ReportingUnit	Illinois;Stephenson County	STEPHENSON
+ReportingUnit	Illinois;Wabash County	WABASH
+ReportingUnit	Illinois;Boone County	BOONE
+ReportingUnit	Illinois;Effingham County	EFFINGHAM
+ReportingUnit	Illinois;Fulton County	FULTON
+ReportingUnit	Illinois;Kankakee County	KANKAKEE
+ReportingUnit	Illinois;Livingston County	LIVINGSTON
+ReportingUnit	Illinois;Marshall County	MARSHALL
+ReportingUnit	Illinois;Mason County	MASON
+ReportingUnit	Illinois;Morgan County	MORGAN
+ReportingUnit	Illinois;Piatt County	PIATT
+ReportingUnit	Illinois;Pike County	PIKE
+ReportingUnit	Illinois;Shelby County	SHELBY
+ReportingUnit	Illinois;Tazewell County	TAZEWELL
+ReportingUnit	Illinois;Coles County	COLES
+ReportingUnit	Illinois;Crawford County	CRAWFORD
+ReportingUnit	Illinois;Iroquois County	IROQUOIS
+ReportingUnit	Illinois;Jefferson County	JEFFERSON
+ReportingUnit	Illinois;Johnson County	JOHNSON
+ReportingUnit	Illinois;Macoupin County	MACOUPIN
+ReportingUnit	Illinois;Woodford County	WOODFORD
+ReportingUnit	Illinois;Greene County	GREENE
+ReportingUnit	Illinois;Henry County	HENRY
+ReportingUnit	Illinois;Jodaviess County	JoDAVIESS
+ReportingUnit	Illinois;Menard County	MENARD
+ReportingUnit	Illinois;Bureau County	BUREAU
+ReportingUnit	Illinois;Jackson County	JACKSON
+ReportingUnit	Illinois;Jersey County	JERSEY
+ReportingUnit	Illinois;Lawrence County	LAWRENCE
+ReportingUnit	Illinois;Sangamon County	SANGAMON
+ReportingUnit	Illinois;White County	WHITE
+ReportingUnit	Illinois;Williamson County	WILLIAMSON
+Candidate	CHRISTOPHER 'C.D.' DAVIDSMEYER	CHRISTOPHER 'C.D.' DAVIDSMEYER
+Candidate	CHRISTINE LAW	CHRISTINE LAW
+Candidate	BILL MITCHELL	BILL MITCHELL
+Candidate	BRAD HALBROOK	BRAD HALBROOK
+Candidate	CAROL AMMONS	CAROL AMMONS
+Candidate	CHAD HAYS	CHAD HAYS
+Candidate	DAN BRADY	DAN BRADY
+Candidate	THOMAS M. BENNETT	THOMAS M. BENNETT
+Candidate	JOHN CAVALETTO	JOHN CAVALETTO
+Candidate	CHARLES MEIER	CHARLES MEIER
+Candidate	DAVID B. REIS	DAVID B. REIS
+Candidate	TIM CUSACK	TIM CUSACK
+Candidate	JODI M. HOOS	JODI M. HOOS
+Candidate	MICHAEL P. McCUSKEY	MICHAEL P. McCUSKEY
+Candidate	ROBERT DOLD	ROBERT DOLD
+Candidate	JOSEPH WILLIAM KOPSICK	JOSEPH WILLIAM KOPSICK
+Candidate	BRAD SCHNEIDER	BRAD SCHNEIDER
+Candidate	MARK SPOGNARDI	MARK SPOGNARDI
+Candidate	MELISSA CONYEARS	MELISSA CONYEARS
+Candidate	JONATHON LUERS	JONATHON LUERS
+Candidate	JOHN G. MULROE	JOHN G. MULROE
+Candidate	DENNIS F. MALAK	DENNIS F. MALAK
+Candidate	REGINALD 'REGGIE' PHILLIPS	REGINALD 'REGGIE' PHILLIPS
+Candidate	MIKE BABCOCK	MIKE BABCOCK
+Candidate	DANIEL V. BEISER	DANIEL V. BEISER
+Candidate	DWIGHT KAY	DWIGHT KAY
+Candidate	KATIE STUART	KATIE STUART
+Candidate	KATHERINE L. RUOCCO	KATHERINE L. RUOCCO
+Candidate	JAY HOFFMAN	JAY HOFFMAN
+Candidate	BOB ROMANIK	BOB ROMANIK
+Candidate	LaTOYA N. GREENWOOD	LaTOYA N. GREENWOOD
+Candidate	MARSHA GRIFFIN	MARSHA GRIFFIN
+Candidate	TERRI BRYANT	TERRI BRYANT
+Candidate	JERRY COSTELLO II	JERRY COSTELLO II
+Candidate	JOHN BRADLEY	JOHN BRADLEY
+Candidate	DAVE SEVERIN	DAVE SEVERIN
+Candidate	JASON V. KASIAR	JASON V. KASIAR
+Candidate	BRANDON W. PHELPS	BRANDON W. PHELPS
+Candidate	CHARLES M. FEENEY, III	CHARLES M. FEENEY, III
+Candidate	MARK A. FELLHEIMER	MARK A. FELLHEIMER
+Candidate	CASEY COSTIGAN	CASEY COSTIGAN
+Candidate	TONIA KHOURI	TONIA KHOURI
+Candidate	BILL FOSTER	BILL FOSTER
+Candidate	GARY MANDELL	GARY MANDELL
+Candidate	ANN M. WILLIAMS	ANN M. WILLIAMS
+Candidate	MARTIN A. SANDOVAL	MARTIN A. SANDOVAL
+Candidate	PAULA BRADSHAW	PAULA BRADSHAW
+Candidate	CHARLES 'C.J.' BARICEVIC	CHARLES 'C.J.' BARICEVIC
+Candidate	MICHAEL BOST	MICHAEL BOST
+Candidate	GENE WITT	GENE WITT
+Candidate	SARA FEIGENHOLTZ	SARA FEIGENHOLTZ
+Candidate	MARK D. WICKLUND	MARK D. WICKLUND
+Candidate	RODNEY DAVIS	RODNEY DAVIS
+Candidate	GREGORY HARRIS	GREGORY HARRIS
+Candidate	KWAME RAOUL	KWAME RAOUL
+Candidate	KATHLEEN MESICH	KATHLEEN MESICH
+Candidate	JIM WALZ	JIM WALZ
+Candidate	RANDALL M. 'RANDY' HULTGREN	RANDALL M. 'RANDY' HULTGREN
+Candidate	ARTHUR NOAH SIEGEL	ARTHUR NOAH SIEGEL
+Candidate	KELLY M. CASSIDY	KELLY M. CASSIDY
+Candidate	EMIL JONES III	EMIL JONES III
+Candidate	JAMES M. HAUSER	JAMES M. HAUSER
+Candidate	JOHN M. SHIMKUS	JOHN M. SHIMKUS
+Candidate	JONATHAN EDELMAN	JONATHAN EDELMAN
+Candidate	JOHN C. D'AMICO	JOHN C. D'AMICO
+Candidate	JOHN F. BURCHARDT	JOHN F. BURCHARDT
+Candidate	ADAM KINZINGER	ADAM KINZINGER
+Candidate	LOU LANG	LOU LANG
+Candidate	JACQUELINE 'JACQUI' COLLINS	JACQUELINE 'JACQUI' COLLINS
+Candidate	PATRICK HARLAN	PATRICK HARLAN
+Candidate	CHERI BUSTOS	CHERI BUSTOS
+Candidate	LAURA FINE	LAURA FINE
+Candidate	DONNE E. TROTTER	DONNE E. TROTTER
+Candidate	BRIAN F. TELANDER	BRIAN F. TELANDER
+Candidate	JENNIFER SHILAKIS WIESNER	JENNIFER SHILAKIS WIESNER
+Candidate	LIAM CHRISTOPHER BRENNAN	LIAM CHRISTOPHER BRENNAN
+Candidate	PAUL MICHAEL FULLERTON	PAUL MICHAEL FULLERTON
+Candidate	JUNIUS RODRIGUEZ	JUNIUS RODRIGUEZ
+Candidate	DON VANCE	DON VANCE
+Candidate	DARIN LaHOOD	DARIN LaHOOD
+Candidate	JESSICA TUCKER	JESSICA TUCKER
+Candidate	ROBYN GABEL	ROBYN GABEL
+Candidate	MITCHELL L. HOFFMAN	MITCHELL L. HOFFMAN
+Candidate	ROBERT MARTWICK	ROBERT MARTWICK
+Candidate	MICHAEL E. HASTINGS	MICHAEL E. HASTINGS
+Candidate	EILEEN O'NEILL BURKE	EILEEN O'NEILL BURKE
+Candidate	BERTINA E. LAMPKIN	BERTINA E. LAMPKIN
+Candidate	JEFFERY B. FARRIS	JEFFERY B. FARRIS
+Candidate	AUGUST (O'NEILL) DEUSER	AUGUST (O'NEILL) DEUSER
+Candidate	TABITHA CARSON	TABITHA CARSON
+Candidate	BOBBY L. RUSH	BOBBY L. RUSH
+Candidate	DANIEL J. BURKE	DANIEL J. BURKE
+Candidate	ANTONIO 'TONY' MUNOZ	ANTONIO 'TONY' MUNOZ
+Candidate	ROBERT B. HAIDA	ROBERT B. HAIDA
+Candidate	JOHN BARICEVIC	JOHN BARICEVIC
+Candidate	RONALD R. DUEBBERT	RONALD R. DUEBBERT
+Candidate	LANINYA A. CASON	LANINYA A. CASON
+Candidate	ROBERT P. LeCHIEN	ROBERT P. LeCHIEN
+Candidate	MERRY MARWIG	MERRY MARWIG
+Candidate	MICHAEL P. McAULIFFE	MICHAEL P. McAULIFFE
+Candidate	IRIS Y. MARTINEZ	IRIS Y. MARTINEZ
+Candidate	JAMES B. KINZER	JAMES B. KINZER
+Candidate	MICHAEL D. KRAMER	MICHAEL D. KRAMER
+Candidate	SILVANA TABARES	SILVANA TABARES
+Candidate	JAMES S. COWLIN	JAMES S. COWLIN
+Candidate	MICHAEL J. MADIGAN	MICHAEL J. MADIGAN
+Candidate	TRACY SMODILLA	TRACY SMODILLA
+Candidate	CRISTINA CASTRO	CRISTINA CASTRO
+Candidate	SHANNON STOKER	SHANNON STOKER
+Candidate	BRADLEY J. WALLER	BRADLEY J. WALLER
+Candidate	STEPHEN L. KRENTZ	STEPHEN L. KRENTZ
+Candidate	MICHAEL J. ZALEWSKI	MICHAEL J. ZALEWSKI
+Candidate	SETH LEWIS	SETH LEWIS
+Candidate	THOMAS E. CULLERTON	THOMAS E. CULLERTON
+Candidate	ANDY KIRCHOFF	ANDY KIRCHOFF
+Candidate	ELIZABETH 'LISA' HERNANDEZ	ELIZABETH 'LISA' HERNANDEZ
+Candidate	BARBARA FLYNN CURRIE	BARBARA FLYNN CURRIE
+Candidate	CORINNE M. PIEROG	CORINNE M. PIEROG
+Candidate	JIM OBERWEIS	JIM OBERWEIS
+Candidate	CHRISTIAN L. MITCHELL	CHRISTIAN L. MITCHELL
+Candidate	KELLY MAZESKI	KELLY MAZESKI
+Candidate	DAN McCONCHIE	DAN McCONCHIE
+Candidate	MONIQUE D. DAVIS	MONIQUE D. DAVIS
+Candidate	ROBERT 'BOB' RITA	ROBERT 'BOB' RITA
+Candidate	MEL THILLENS	MEL THILLENS
+Candidate	LAURA MURPHY	LAURA MURPHY
+Candidate	THADDEUS JONES	THADDEUS JONES
+Candidate	BENJAMIN SALZBERG	BENJAMIN SALZBERG
+Candidate	JULIE A. MORRISON	JULIE A. MORRISON
+Candidate	BRIAN T. SHINKLE	BRIAN T. SHINKLE
+Candidate	MICHAEL J. VALENTINE	MICHAEL J. VALENTINE
+Candidate	JOHN F MORROW	JOHN F MORROW
+Candidate	JAMES REYNOLDS	JAMES REYNOLDS
+Candidate	ROBIN KELLY	ROBIN KELLY
+Candidate	THERESA MAH	THERESA MAH
+Candidate	OMAR AQUINO	OMAR AQUINO
+Candidate	WILLIAM 'WILL' DAVIS	WILLIAM 'WILL' DAVIS
+Candidate	MARY E. FLOWERS	MARY E. FLOWERS
+Candidate	MICHAEL AMROZOWICZ	MICHAEL AMROZOWICZ
+Candidate	MELINDA BUSH	MELINDA BUSH
+Candidate	ANDRÃ THAPEDI	ANDRÃ THAPEDI
+Candidate	MELISSA COYNE	MELISSA COYNE
+Candidate	PAMELA ALTHOFF	PAMELA ALTHOFF
+Candidate	MARCUS C. EVANS, JR.	MARCUS C. EVANS, JR.
+Candidate	ELGIE R. SIMS, JR.	ELGIE R. SIMS, JR.
+Candidate	STEVE STADELMAN	STEVE STADELMAN
+Candidate	VICTOR HORNE	VICTOR HORNE
+Candidate	FRANCES ANN HURLEY	FRANCES ANN HURLEY
+Candidate	DAVE SYVERSON	DAVE SYVERSON
+Candidate	KELLY M. BURKE	KELLY M. BURKE
+Candidate	MARGO McDERMED	MARGO McDERMED
+Candidate	CHUCK WEAVER	CHUCK WEAVER
+Candidate	AL RILEY	AL RILEY
+Candidate	CHRISTINE BENSON	CHRISTINE BENSON
+Candidate	SUE REZIN	SUE REZIN
+Candidate	WILL GUZZARDI	WILL GUZZARDI
+Candidate	DIANE HARRIS	DIANE HARRIS
+Candidate	DANIEL WILLIAM LIPINSKI	DANIEL WILLIAM LIPINSKI
+Candidate	LUIS ARROYO	LUIS ARROYO
+Candidate	JAIME M. ANDRADE, JR.	JAIME M. ANDRADE, JR.
+Candidate	TOI W. HUTCHINSON	TOI W. HUTCHINSON
+Candidate	GRANT WEHRLI	GRANT WEHRLI
+Candidate	CHRISTINE RADOGNO	CHRISTINE RADOGNO
+Candidate	KATHLEEN V. CARRIER	KATHLEEN V. CARRIER
+Candidate	JEANNE M. IVES	JEANNE M. IVES
+Candidate	RICHARD EVANS	RICHARD EVANS
+Candidate	ANNA MOELLER	ANNA MOELLER
+Candidate	PAT McGUIRE	PAT McGUIRE
+Candidate	KATY DOLAN BAUMER	KATY DOLAN BAUMER
+Candidate	FRED CRESPO	FRED CRESPO
+Candidate	BILL BRADY	BILL BRADY
+Candidate	CYNTHIA BORBAS	CYNTHIA BORBAS
+Candidate	CHRISTINE JENNIFER WINGER	CHRISTINE JENNIFER WINGER
+Candidate	DEB CONROY	DEB CONROY
+Candidate	HEIDI HOLAN	HEIDI HOLAN
+Candidate	DAVE KOEHLER	DAVE KOEHLER
+Candidate	PATRICIA R. 'PATTI' BELLOCK	PATRICIA R. 'PATTI' BELLOCK
+Candidate	KURT FOWLER	KURT FOWLER
+Candidate	JIL TRACY	JIL TRACY
+Candidate	STEVE SWANSON	STEVE SWANSON
+Candidate	PETER BREEN	PETER BREEN
+Candidate	MIKE FORTNER	MIKE FORTNER
+Candidate	MICHELLE SMITH	MICHELLE SMITH
+Candidate	JENNIFER BERTINO-TARRANT	JENNIFER BERTINO-TARRANT
+Candidate	DON SHEAFOR JR.	DON SHEAFOR JR.
+Candidate	BRAD PAISLEY	BRAD PAISLEY
+Candidate	LUIS V. GUTIERREZ	LUIS V. GUTIERREZ
+Candidate	CYNTHIA SOTO	CYNTHIA SOTO
+Candidate	KIMBERLY A. LIGHTFORD	KIMBERLY A. LIGHTFORD
+Candidate	VALERIE L. BURD	VALERIE L. BURD
+Candidate	KEITH R. WHEELER	KEITH R. WHEELER
+Candidate	WILLIAM 'SAM' McCANN	WILLIAM 'SAM' McCANN
+Candidate	NICK SAUER	NICK SAUER
+Candidate	CHRIS BAUMAN	CHRIS BAUMAN
+Candidate	DAVID McSWEENEY	DAVID McSWEENEY
+Candidate	MICHAEL P. MADIGAN	MICHAEL P. MADIGAN
+Candidate	SCOTT M. BENNETT	SCOTT M. BENNETT
+Candidate	DAVID HARRIS	DAVID HARRIS
+Candidate	JASON BARICKMAN	JASON BARICKMAN
+Candidate	TOM MORRISON	TOM MORRISON
+Candidate	DAN GOTT	DAN GOTT
+Candidate	MARTIN J. MOYLAN	MARTIN J. MOYLAN
+Candidate	DALE A. RIGHTER	DALE A. RIGHTER
+Candidate	JILLIAN ROSE BERNAS	JILLIAN ROSE BERNAS
+Candidate	MICHELLE MUSSMAN	MICHELLE MUSSMAN
+Candidate	WILLIAM 'BILL' HAINE	WILLIAM 'BILL' HAINE
+Candidate	ELAINE NEKRITZ	ELAINE NEKRITZ
+Candidate	MARTIN (Marty) BLUMENTHAL	MARTIN (Marty) BLUMENTHAL
+Candidate	SCOTT DRURY	SCOTT DRURY
+Candidate	SHEILA SIMON	SHEILA SIMON
+Candidate	PAUL SCHIMPF	PAUL SCHIMPF
+Candidate	DAWN ABERNATHY	DAWN ABERNATHY
+Candidate	CAROL SENTE	CAROL SENTE
+Candidate	GARY FORBY	GARY FORBY
+Candidate	DALE FOWLER	DALE FOWLER
+Candidate	BRAD K. BLEYER	BRAD K. BLEYER
+Candidate	JOHN B. BARBERIS, JR.	JOHN B. BARBERIS, JR.
+Candidate	JO BETH WEBER	JO BETH WEBER
+Candidate	JAMES R. 'RANDY' MOORE	JAMES R. 'RANDY' MOORE
+Candidate	JOHN L. BARGER	JOHN L. BARGER
+Candidate	JONATHAN T. BRADEN	JONATHAN T. BRADEN
+Candidate	ROB SHERMAN	ROB SHERMAN
+Candidate	VINCE KOLBER	VINCE KOLBER
+Candidate	MICHAEL KRYNSKI	MICHAEL KRYNSKI
+Candidate	MIKE QUIGLEY	MIKE QUIGLEY
+Candidate	JULIANA STRATTON	JULIANA STRATTON
+Candidate	PATRICIA VAN PELT	PATRICIA VAN PELT
+Candidate	ROBERT L. OCHSNER	ROBERT L. OCHSNER
+Candidate	RITA MAYFIELD	RITA MAYFIELD
+Candidate	NICK CIKO	NICK CIKO
+Candidate	SHERI JESIEL	SHERI JESIEL
+Candidate	ROD DROBINSKI	ROD DROBINSKI
+Candidate	SAM YINGLING	SAM YINGLING
+Candidate	JOHN M. BARTMAN	JOHN M. BARTMAN
+Candidate	STEVEN REICK	STEVEN REICK
+Candidate	BARBARA WHEELER	BARBARA WHEELER
+Candidate	STEVEN A. ANDERSSON	STEVEN A. ANDERSSON
+Candidate	NANCY A. ZETTLER	NANCY A. ZETTLER
+Candidate	ALLEN SKILLICORN	ALLEN SKILLICORN
+Candidate	LITESA E. WALLACE	LITESA E. WALLACE
+Candidate	TRICIA SWEENEY	TRICIA SWEENEY
+Candidate	JOHN M. CABELLO	JOHN M. CABELLO
+Candidate	ANGELIQUE A. BODINE	ANGELIQUE A. BODINE
+Candidate	JOE SOSNOWSKI	JOE SOSNOWSKI
+Candidate	KARLE E. KORITZ	KARLE E. KORITZ
+Candidate	THOMAS E. LITTLE	THOMAS E. LITTLE
+Candidate	AMANDA HOWLAND	AMANDA HOWLAND
+Candidate	PETER J. ROSKAM	PETER J. ROSKAM
+Candidate	SONYA MARIE HARPER	SONYA MARIE HARPER
+Candidate	BRIAN SOLAR	BRIAN SOLAR
+Candidate	ROBERT W. PRITCHARD	ROBERT W. PRITCHARD
+Candidate	MIKE SMIDDY	MIKE SMIDDY
+Candidate	TONY M. McCOMBIE	TONY M. McCOMBIE
+Candidate	BRANDI McGUIRE	BRANDI McGUIRE
+Candidate	MICHAEL W. HALPIN	MICHAEL W. HALPIN
+Candidate	RYAN SPAIN	RYAN SPAIN
+Candidate	BILL BUTTS	BILL BUTTS
+Candidate	DANIEL M. SWANSON	DANIEL M. SWANSON
+Candidate	WILLARD H. HARPER, JR.	WILLARD H. HARPER, JR.
+Candidate	DAVID ALLEN WELTER	DAVID ALLEN WELTER
+Candidate	MARTHA J. SHUGART	MARTHA J. SHUGART
+Candidate	ANDY SKOOG	ANDY SKOOG
+Candidate	JERRY LEE LONG	JERRY LEE LONG
+Candidate	ANTHONY AIRDO	ANTHONY AIRDO
+Candidate	KATHLEEN WILLIS	KATHLEEN WILLIS
+Candidate	CAMILLE LILLY	CAMILLE LILLY
+Candidate	KATHERINE 'KATE' CLOONEN	KATHERINE 'KATE' CLOONEN
+Candidate	LINDSAY PARKHURST	LINDSAY PARKHURST
+Candidate	RICK VERTICCHIO	RICK VERTICCHIO
+Candidate	RYAN CADAGIN	RYAN CADAGIN
+Candidate	DAVID REID	DAVID REID
+Candidate	APRIL TROEMPER	APRIL TROEMPER
+Candidate	JEFFREY A. LEEF	JEFFREY A. LEEF
+Candidate	DANNY K. DAVIS	DANNY K. DAVIS
+Candidate	EMANUEL 'CHRIS' WELCH	EMANUEL 'CHRIS' WELCH
+Candidate	HEATHER A. STEANS	HEATHER A. STEANS
+Candidate	ANTHONY DeLUCA	ANTHONY DeLUCA
+Candidate	GREG HOSE	GREG HOSE
+Candidate	DAVID S. OLSEN	DAVID S. OLSEN
+Candidate	JIM DURKIN	JIM DURKIN
+Candidate	LINDA CHAPA LaVIA	LINDA CHAPA LaVIA
+Candidate	MIKE STRICK	MIKE STRICK
+Candidate	STEPHANIE A. KIFOWIT	STEPHANIE A. KIFOWIT
+Candidate	EMILY McASEY	EMILY McASEY
+Candidate	LAWRENCE 'LARRY' WALSH, JR.	LAWRENCE 'LARRY' WALSH, JR.
+Candidate	TIM BUTLER	TIM BUTLER
+Candidate	KEITH P. SOMMER	KEITH P. SOMMER
+Candidate	BRIAN W. STEWART	BRIAN W. STEWART
+Candidate	SCOTT J. BUTLER	SCOTT J. BUTLER
+Candidate	SCOTT D. LARSON	SCOTT D. LARSON
+Candidate	PETER 'PETE' DiCIANNI	PETER 'PETE' DiCIANNI
+Candidate	RAJA KRISHNAMOORTHI	RAJA KRISHNAMOORTHI
+Candidate	LA SHAWN K. FORD	LA SHAWN K. FORD
+Candidate	IRA I. SILVERSTEIN	IRA I. SILVERSTEIN
+Candidate	TOM DEMMER	TOM DEMMER
+Candidate	MICHAEL D. UNES	MICHAEL D. UNES
+Candidate	JEHAN GORDON-BOOTH	JEHAN GORDON-BOOTH
+Candidate	JOHN CURTIS	JOHN CURTIS
+Candidate	NORINE K. HAMMOND	NORINE K. HAMMOND
+Candidate	BOBBY PRITCHETT	BOBBY PRITCHETT
+Candidate	ROGER DAVIS	ROGER DAVIS
+Candidate	RANDY E. FRESE	RANDY E. FRESE
+Candidate	JAKE LEONARD	JAKE LEONARD
+Candidate	AVERY BOURNE	AVERY BOURNE
+Candidate	MIKE MATHIS	MIKE MATHIS
+Candidate	SUE SCHERER	SUE SCHERER
+Candidate	MARK BATINICK	MARK BATINICK
+Candidate	NATALIE A. MANLEY	NATALIE A. MANLEY
+Candidate	ANTHONY 'TONY' DelGIORNO	ANTHONY 'TONY' DelGIORNO
+Candidate	SARA WOJCICKI JIMENEZ	SARA WOJCICKI JIMENEZ
+Candidate	JIM HARRELL	JIM HARRELL
+Candidate	RAYMOND A. CAVANAUGH	RAYMOND A. CAVANAUGH
+Candidate	DAVID M. HANSEN	DAVID M. HANSEN
+Candidate	HEIDI A. BENSON	HEIDI A. BENSON
+Candidate	JOAN McCARTHY LASONDE	JOAN McCARTHY LASONDE
+Candidate	SUSANNE ATANUS	SUSANNE ATANUS
+Candidate	DAVID WILLIAMS	DAVID WILLIAMS
+Candidate	JANICE D. SCHAKOWSKY	JANICE D. SCHAKOWSKY
+Candidate	ARTHUR TURNER	ARTHUR TURNER
+Candidate	JILL REIS	JILL REIS
+Candidate	MICHELLE MUELLER	MICHELLE MUELLER
+Candidate	LESLIE GEISSLER MUNGER	LESLIE GEISSLER MUNGER
+Candidate	CLAIRE BALL	CLAIRE BALL
+Candidate	TIM CURTIN	TIM CURTIN
+Candidate	SUSANA MENDOZA	SUSANA MENDOZA
+Candidate	EVE MARIE REILLY	EVE MARIE REILLY
+Candidate	CATHERINE ANN SCHNEIDER	CATHERINE ANN SCHNEIDER
+Candidate	WILLIAM B. SULLIVAN	WILLIAM B. SULLIVAN
+Candidate	JAMES EDWARD HANLON, JR.	JAMES EDWARD HANLON, JR.
+Candidate	STEVEN A. KOZICKI	STEVEN A. KOZICKI
+Candidate	THOMAS WILLIAM FLANNIGAN	THOMAS WILLIAM FLANNIGAN
+Candidate	MARGUERITE ANNE QUINN	MARGUERITE ANNE QUINN
+Candidate	JANET CRONIN MAHONEY	JANET CRONIN MAHONEY
+Candidate	JAMES LEONARD ALLEGRETTI	JAMES LEONARD ALLEGRETTI
+Candidate	DAVID STUDENROTH	DAVID STUDENROTH
+Candidate	CARRIE HAMILTON	CARRIE HAMILTON
+Candidate	KETKI 'KAY' STEFFEN	KETKI 'KAY' STEFFEN
+Candidate	KEVIN MICHAEL O'DONNELL	KEVIN MICHAEL O'DONNELL
+Candidate	MATTHEW LINK	MATTHEW LINK
+Candidate	JESSE OUTLAW	JESSE OUTLAW
+Candidate	MARYAM AHMAD	MARYAM AHMAD
+Candidate	RHONDA CRAWFORD	RHONDA CRAWFORD
+Candidate	D. RENEE JACKSON	D. RENEE JACKSON
+Candidate	EDWARD J. KING	EDWARD J. KING
+Candidate	LEONARD MURRAY	LEONARD MURRAY
+Candidate	FREDDRENNA M. LYLE	FREDDRENNA M. LYLE
+Candidate	DARYL JONES	DARYL JONES
+Candidate	ANNA LOFTUS	ANNA LOFTUS
+Candidate	LAIO MORRIS	LAIO MORRIS
+Candidate	EULALIA 'EVIE' De La ROSA	EULALIA 'EVIE' De La ROSA
+Candidate	RICHARD C. COOKE	RICHARD C. COOKE
+Candidate	MARIANNE JACKSON	MARIANNE JACKSON
+Candidate	PATRICIA 'PAT' S. SPRATT	PATRICIA 'PAT' S. SPRATT
+Candidate	JERRY ESRIG	JERRY ESRIG
+Candidate	JOHN FITZGERALD LYKE, JR.	JOHN FITZGERALD LYKE, JR.
+Candidate	ROSSANA PATRICIA FERNANDEZ	ROSSANA PATRICIA FERNANDEZ
+Candidate	ALISON C. CONLON	ALISON C. CONLON
+Candidate	ALEKSANDRA 'ALEX' GILLESPIE	ALEKSANDRA 'ALEX' GILLESPIE
+Candidate	CAROLYN J. GALLAGHER	CAROLYN J. GALLAGHER
+Candidate	MARY KATHLEEN McHUGH	MARY KATHLEEN McHUGH
+Candidate	BRENDAN A. O'BRIEN	BRENDAN A. O'BRIEN
+Candidate	MAUREEN O'DONOGHUE HANNON	MAUREEN O'DONOGHUE HANNON
+Candidate	SUSANA L. ORTIZ	SUSANA L. ORTIZ
+Candidate	DANIEL PATRICK DUFFY	DANIEL PATRICK DUFFY
+Candidate	PATRICK JOSEPH POWERS	PATRICK JOSEPH POWERS
+Candidate	MICHAEL SULLIVAN	MICHAEL SULLIVAN
+Candidate	JULE LEVIN	JULE LEVIN
+Candidate	MICHAEL H. LINDHORST	MICHAEL H. LINDHORST
+Candidate	RANDY C. BOLLE	RANDY C. BOLLE
+Candidate	DAVID WALSTER	DAVID WALSTER
+Candidate	DONALD J. TRUMP	DONALD J. TRUMP
+Candidate	HILLARY RODHAM CLINTON	HILLARY RODHAM CLINTON
+Candidate	GARY JOHNSON	GARY JOHNSON
+Candidate	JILL STEIN	JILL STEIN
+Candidate	TOM HOEFLING	TOM HOEFLING
+Candidate	JOSEPH A. MALDONADO	JOSEPH A. MALDONADO
+Candidate	ROY WAYNE TYREE	ROY WAYNE TYREE
+Candidate	JOANN BREIVOGEL	JOANN BREIVOGEL
+Candidate	DUFF COOPER SMITH	DUFF COOPER SMITH
+Candidate	CHERUNDA FOX	CHERUNDA FOX
+Candidate	BEN HARTNELL	BEN HARTNELL
+Candidate	JAMES ANDERSON	JAMES ANDERSON
+Candidate	JONATHAN LEE	JONATHAN LEE
+Candidate	DAVID FORMHALS	DAVID FORMHALS
+Candidate	JIM BROWN	JIM BROWN
+Candidate	SHELIA MARIE BOLAR	SHELIA MARIE BOLAR
+Candidate	NATHAN JOHNSON	NATHAN JOHNSON
+Candidate	DAVID G. STACK	DAVID G. STACK
+Candidate	DEM J. WYSINGER	DEM J. WYSINGER
+Candidate	KEVIN MCKEE	KEVIN MCKEE
+Candidate	MATTHEW ROBERTS	MATTHEW ROBERTS
+Candidate	PHILLIP SEEBERG	PHILLIP SEEBERG
+Candidate	AUTHOR C. BRUMFIELD	AUTHOR C. BRUMFIELD
+Candidate	LINZEY D. JONES	LINZEY D. JONES - YES
+Candidate	TERRY MacCARTHY 	TERRY MacCARTHY  - NO
+Candidate	TERRY MacCARTHY 	TERRY MacCARTHY  - YES
+Candidate	SANDRA G. RAMOS 	SANDRA G. RAMOS  - NO
+Candidate	SANDRA G. RAMOS 	SANDRA G. RAMOS  - YES
+Candidate	SUSAN KENNEDY SULLIVAN 	SUSAN KENNEDY SULLIVAN  - NO
+Candidate	SUSAN KENNEDY SULLIVAN 	SUSAN KENNEDY SULLIVAN  - YES
+Candidate	PATRICK DURLEY	PATRICK DURLEY
+Candidate	 NO	 NO
+Candidate	 YES	 YES
+Candidate	JAMES T. STRUCK	JAMES T. STRUCK
+Candidate	MARK J. HARPER	MARK J. HARPER
+Candidate	TIMOTHY B. MELUCH	TIMOTHY B. MELUCH
+Candidate	LAURENCE KOTLIKOFF	LAURENCE KOTLIKOFF
+Candidate	EVAN MCMULLIN	EVAN MCMULLIN
+Candidate	DARRELL CASTLE	DARRELL CASTLE
+Candidate	MARSHALL ROY SCHOENKE	MARSHALL ROY SCHOENKE
+Candidate	KENTON McMILLEN	KENTON McMILLEN
+Candidate	SCOTT SUMMERS	SCOTT SUMMERS
+Candidate	SUSANA SANDOVAL	SUSANA SANDOVAL
+Candidate	CHAD KOPPIE	CHAD KOPPIE
+Candidate	CHRISTOPHER AGUAYO	CHRISTOPHER AGUAYO
+Candidate	ERIC KUFI JAMES STEWART	ERIC KUFI JAMES STEWART
+Candidate	PATRICIA BEARD	PATRICIA BEARD
+Candidate	TAMMY DUCKWORTH	TAMMY DUCKWORTH
+Candidate	MARK STEVEN KIRK	MARK STEVEN KIRK
+Candidate	JOY VIRGINIA CUNNINGHAM	JOY VIRGINIA CUNNINGHAM - NO
+Candidate	JOY VIRGINIA CUNNINGHAM	JOY VIRGINIA CUNNINGHAM - YES
+Candidate	VICKI R. WRIGHT	VICKI R. WRIGHT - NO
+Candidate	VICKI R. WRIGHT	VICKI R. WRIGHT - YES
+Candidate	JAMES A. KNECHT	JAMES A. KNECHT - NO
+Candidate	JAMES A. KNECHT	JAMES A. KNECHT - YES
+Candidate	WILLIAM G. SCHWARTZ	WILLIAM G. SCHWARTZ - NO
+Candidate	WILLIAM G. SCHWARTZ	WILLIAM G. SCHWARTZ - YES
+Candidate	W. CHARLES GRACE	W. CHARLES GRACE - NO
+Candidate	W. CHARLES GRACE	W. CHARLES GRACE - YES
+Candidate	ROBERT M. HOPKINS	ROBERT M. HOPKINS - NO
+Candidate	ROBERT M. HOPKINS	ROBERT M. HOPKINS - YES
+Candidate	LARRY D. DUNN	LARRY D. DUNN - NO
+Candidate	LARRY D. DUNN	LARRY D. DUNN - YES
+Candidate	PAUL W. LAMAR	PAUL W. LAMAR - NO
+Candidate	PAUL W. LAMAR	PAUL W. LAMAR - YES
+Candidate	A. ANDREAS 'ANDY' MATOESIAN	A. ANDREAS 'ANDY' MATOESIAN - NO
+Candidate	A. ANDREAS 'ANDY' MATOESIAN	A. ANDREAS 'ANDY' MATOESIAN - YES
+Candidate	WILLIAM A. MUDGE	WILLIAM A. MUDGE - NO
+Candidate	WILLIAM A. MUDGE	WILLIAM A. MUDGE - YES
+Candidate	WM. ROBIN TODD	WM. ROBIN TODD - NO
+Candidate	WM. ROBIN TODD	WM. ROBIN TODD - YES
+Candidate	DOUGLAS L. JARMAN	DOUGLAS L. JARMAN - NO
+Candidate	DOUGLAS L. JARMAN	DOUGLAS L. JARMAN - YES
+Candidate	MIKE McHANEY	MIKE McHANEY - NO
+Candidate	MIKE McHANEY	MIKE McHANEY - YES
+Candidate	MARK W. STEDELIN	MARK W. STEDELIN - NO
+Candidate	MARK W. STEDELIN	MARK W. STEDELIN - YES
+Candidate	JAMES R. GLENN	JAMES R. GLENN - NO
+Candidate	JAMES R. GLENN	JAMES R. GLENN - YES
+Candidate	TERESA K. RIGHTER	TERESA K. RIGHTER - NO
+Candidate	TERESA K. RIGHTER	TERESA K. RIGHTER - YES
+Candidate	MATT SULLIVAN	MATT SULLIVAN - NO
+Candidate	MATT SULLIVAN	MATT SULLIVAN - YES
+Candidate	HEIDI LADD	HEIDI LADD - NO
+Candidate	HEIDI LADD	HEIDI LADD - YES
+Candidate	PETER C. CAVANAGH	PETER C. CAVANAGH - NO
+Candidate	PETER C. CAVANAGH	PETER C. CAVANAGH - YES
+Candidate	MARK A. DRUMMOND	MARK A. DRUMMOND - NO
+Candidate	MARK A. DRUMMOND	MARK A. DRUMMOND - YES
+Candidate	ALAN D. TUCKER	ALAN D. TUCKER - NO
+Candidate	ALAN D. TUCKER	ALAN D. TUCKER - YES
+Candidate	ROBERT ADRIAN	ROBERT ADRIAN - NO
+Candidate	ROBERT ADRIAN	ROBERT ADRIAN - YES
+Candidate	WILLIAM E. PONCIN	WILLIAM E. PONCIN - NO
+Candidate	WILLIAM E. PONCIN	WILLIAM E. PONCIN - YES
+Candidate	MICHAEL D. RISINGER	MICHAEL D. RISINGER - NO
+Candidate	MICHAEL D. RISINGER	MICHAEL D. RISINGER - YES
+Candidate	JOHN P. VESPA	JOHN P. VESPA - NO
+Candidate	JOHN P. VESPA	JOHN P. VESPA - YES
+Candidate	SCOTT DRAZEWSKI	SCOTT DRAZEWSKI - NO
+Candidate	SCOTT DRAZEWSKI	SCOTT DRAZEWSKI - YES
+Candidate	CARMEN GOODMAN	CARMEN GOODMAN - NO
+Candidate	CARMEN GOODMAN	CARMEN GOODMAN - YES
+Candidate	JOHN C. ANDERSON	JOHN C. ANDERSON - NO
+Candidate	JOHN C. ANDERSON	JOHN C. ANDERSON - YES
+Candidate	BARBARA 'BOBBI' N. PETRUNGARO	BARBARA 'BOBBI' N. PETRUNGARO - NO
+Candidate	BARBARA 'BOBBI' N. PETRUNGARO	BARBARA 'BOBBI' N. PETRUNGARO - YES
+Candidate	MICHAEL J. POWERS	MICHAEL J. POWERS - NO
+Candidate	MICHAEL J. POWERS	MICHAEL J. POWERS - YES
+Candidate	RAYMOND (RAY) E. ROSSI	RAYMOND (RAY) E. ROSSI - NO
+Candidate	RAYMOND (RAY) E. ROSSI	RAYMOND (RAY) E. ROSSI - YES
+Candidate	HOWARD CHRIS RYAN, JR.	HOWARD CHRIS RYAN, JR. - NO
+Candidate	HOWARD CHRIS RYAN, JR.	HOWARD CHRIS RYAN, JR. - YES
+Candidate	MARC P. BERNABEI	MARC P. BERNABEI - NO
+Candidate	MARC P. BERNABEI	MARC P. BERNABEI - YES
+Candidate	LANCE R. PETERSON	LANCE R. PETERSON - NO
+Candidate	LANCE R. PETERSON	LANCE R. PETERSON - YES
+Candidate	LORI R. LEFSTEIN	LORI R. LEFSTEIN - NO
+Candidate	LORI R. LEFSTEIN	LORI R. LEFSTEIN - YES
+Candidate	JAMES G. CONWAY, JR.	JAMES G. CONWAY, JR. - NO
+Candidate	JAMES G. CONWAY, JR.	JAMES G. CONWAY, JR. - YES
+Candidate	CLARENCE 'MIKE' DARROW	CLARENCE 'MIKE' DARROW - NO
+Candidate	CLARENCE 'MIKE' DARROW	CLARENCE 'MIKE' DARROW - YES
+Candidate	FRANK FUHR	FRANK FUHR - NO
+Candidate	FRANK FUHR	FRANK FUHR - YES
+Candidate	ROBERT B. SPENCE	ROBERT B. SPENCE - NO
+Candidate	ROBERT B. SPENCE	ROBERT B. SPENCE - YES
+Candidate	SUSAN CLANCY BOLES	SUSAN CLANCY BOLES - NO
+Candidate	SUSAN CLANCY BOLES	SUSAN CLANCY BOLES - YES
+Candidate	DAVID R. AKEMANN	DAVID R. AKEMANN - NO
+Candidate	DAVID R. AKEMANN	DAVID R. AKEMANN - YES
+Candidate	KEVIN T. BUSCH	KEVIN T. BUSCH - NO
+Candidate	KEVIN T. BUSCH	KEVIN T. BUSCH - YES
+Candidate	KATHRYN E. ZENOFF	KATHRYN E. ZENOFF - NO
+Candidate	KATHRYN E. ZENOFF	KATHRYN E. ZENOFF - YES
+Candidate	JANET R. HOLMGREN	JANET R. HOLMGREN - NO
+Candidate	JANET R. HOLMGREN	JANET R. HOLMGREN - YES
+Candidate	ROB TOBIN	ROB TOBIN - NO
+Candidate	ROB TOBIN	ROB TOBIN - YES
+Candidate	BONNIE M. WHEATON	BONNIE M. WHEATON - NO
+Candidate	BONNIE M. WHEATON	BONNIE M. WHEATON - YES
+Candidate	KENNETH L. POPEJOY	KENNETH L. POPEJOY - NO
+Candidate	KENNETH L. POPEJOY	KENNETH L. POPEJOY - YES
+Candidate	DANIEL P. GUERIN	DANIEL P. GUERIN - NO
+Candidate	DANIEL P. GUERIN	DANIEL P. GUERIN - YES
+Candidate	DOROTHY FRENCH MALLEN	DOROTHY FRENCH MALLEN - NO
+Candidate	DOROTHY FRENCH MALLEN	DOROTHY FRENCH MALLEN - YES
+Candidate	RONALD D. SUTTER	RONALD D. SUTTER - NO
+Candidate	RONALD D. SUTTER	RONALD D. SUTTER - YES
+Candidate	MARGARET J. MULLEN	MARGARET J. MULLEN - NO
+Candidate	MARGARET J. MULLEN	MARGARET J. MULLEN - YES
+Candidate	VICTORIA A. ROSSETTI	VICTORIA A. ROSSETTI - NO
+Candidate	VICTORIA A. ROSSETTI	VICTORIA A. ROSSETTI - YES
+Candidate	JORGE L. ORTIZ	JORGE L. ORTIZ - NO
+Candidate	JORGE L. ORTIZ	JORGE L. ORTIZ - YES
+Candidate	DIANE E. WINTER	DIANE E. WINTER - NO
+Candidate	DIANE E. WINTER	DIANE E. WINTER - YES
+Candidate	MARK L. LEVITT	MARK L. LEVITT - NO
+Candidate	MARK L. LEVITT	MARK L. LEVITT - YES
+Candidate	RICHARD A. BROWN	RICHARD A. BROWN - NO
+Candidate	RICHARD A. BROWN	RICHARD A. BROWN - YES
+Candidate	KATHY BRADSHAW ELLIOTT	KATHY BRADSHAW ELLIOTT - NO
+Candidate	KATHY BRADSHAW ELLIOTT	KATHY BRADSHAW ELLIOTT - YES
+Candidate	ROBBIN J. STUCKERT	ROBBIN J. STUCKERT - NO
+Candidate	ROBBIN J. STUCKERT	ROBBIN J. STUCKERT - YES
+Candidate	TIMOTHY J. McCANN	TIMOTHY J. McCANN - NO
+Candidate	TIMOTHY J. McCANN	TIMOTHY J. McCANN - YES
+Candidate	THOMAS L. DOHERTY	THOMAS L. DOHERTY - NO
+Candidate	THOMAS L. DOHERTY	THOMAS L. DOHERTY - YES
+Candidate	ROBERT P. (BOB) PILMER	ROBERT P. (BOB) PILMER - NO
+Candidate	ROBERT P. (BOB) PILMER	ROBERT P. (BOB) PILMER - YES
+Candidate	SOPHIA H. HALL	SOPHIA H. HALL - NO
+Candidate	SOPHIA H. HALL	SOPHIA H. HALL - YES
+Candidate	IRWIN J. SOLGANICK	IRWIN J. SOLGANICK - NO
+Candidate	IRWIN J. SOLGANICK	IRWIN J. SOLGANICK - YES
+Candidate	ALEXANDER PATRICK WHITE	ALEXANDER PATRICK WHITE - NO
+Candidate	ALEXANDER PATRICK WHITE	ALEXANDER PATRICK WHITE - YES
+Candidate	VINCENT MICHAEL GAUGHAN	VINCENT MICHAEL GAUGHAN - NO
+Candidate	VINCENT MICHAEL GAUGHAN	VINCENT MICHAEL GAUGHAN - YES
+Candidate	ROBERT W. BERTUCCI	ROBERT W. BERTUCCI - NO
+Candidate	ROBERT W. BERTUCCI	ROBERT W. BERTUCCI - YES
+Candidate	DEBORAH MARY DOOLING	DEBORAH MARY DOOLING - NO
+Candidate	DEBORAH MARY DOOLING	DEBORAH MARY DOOLING - YES
+Candidate	TIMOTHY C. EVANS	TIMOTHY C. EVANS - NO
+Candidate	TIMOTHY C. EVANS	TIMOTHY C. EVANS - YES
+Candidate	CHEYRL D. INGRAM	CHEYRL D. INGRAM - NO
+Candidate	CHEYRL D. INGRAM	CHEYRL D. INGRAM - YES
+Candidate	RAYMOND L. JAGIELSKI	RAYMOND L. JAGIELSKI - NO
+Candidate	RAYMOND L. JAGIELSKI	RAYMOND L. JAGIELSKI - YES
+Candidate	BERTINA E. LAMPKIN	BERTINA E. LAMPKIN - NO
+Candidate	BERTINA E. LAMPKIN	BERTINA E. LAMPKIN - YES
+Candidate	WILLIAM MAKI	WILLIAM MAKI - NO
+Candidate	WILLIAM MAKI	WILLIAM MAKI - YES
+Candidate	SHARON MARIE SULLIVAN	SHARON MARIE SULLIVAN - NO
+Candidate	SHARON MARIE SULLIVAN	SHARON MARIE SULLIVAN - YES
+Candidate	JAMES PATRICK McCARTHY	JAMES PATRICK McCARTHY - NO
+Candidate	JAMES PATRICK McCARTHY	JAMES PATRICK McCARTHY - YES
+Candidate	ARNETTE R. HUBBARD	ARNETTE R. HUBBARD - NO
+Candidate	ARNETTE R. HUBBARD	ARNETTE R. HUBBARD - YES
+Candidate	NICHOLAS R. FORD	NICHOLAS R. FORD - NO
+Candidate	NICHOLAS R. FORD	NICHOLAS R. FORD - YES
+Candidate	CHARLES PATRICK BURNS	CHARLES PATRICK BURNS - NO
+Candidate	CHARLES PATRICK BURNS	CHARLES PATRICK BURNS - YES
+Candidate	DENISE KATHLEEN FILAN	DENISE KATHLEEN FILAN - NO
+Candidate	DENISE KATHLEEN FILAN	DENISE KATHLEEN FILAN - YES
+Candidate	JOHN PATRICK KIRBY	JOHN PATRICK KIRBY - NO
+Candidate	JOHN PATRICK KIRBY	JOHN PATRICK KIRBY - YES
+Candidate	DIANE JOAN LARSEN	DIANE JOAN LARSEN - NO
+Candidate	DIANE JOAN LARSEN	DIANE JOAN LARSEN - YES
+Candidate	DANIEL JOSEPH LYNCH	DANIEL JOSEPH LYNCH - NO
+Candidate	DANIEL JOSEPH LYNCH	DANIEL JOSEPH LYNCH - YES
+Candidate	KATHLEEN MARY PANTLE	KATHLEEN MARY PANTLE - NO
+Candidate	KATHLEEN MARY PANTLE	KATHLEEN MARY PANTLE - YES
+Candidate	KEVIN MICHAEL SHEEHAN	KEVIN MICHAEL SHEEHAN - NO
+Candidate	KEVIN MICHAEL SHEEHAN	KEVIN MICHAEL SHEEHAN - YES
+Candidate	JOHN D. TURNER, JR.	JOHN D. TURNER, JR. - NO
+Candidate	JOHN D. TURNER, JR.	JOHN D. TURNER, JR. - YES
+Candidate	LeROY K. MARTIN, JR.	LeROY K. MARTIN, JR. - NO
+Candidate	LeROY K. MARTIN, JR.	LeROY K. MARTIN, JR. - YES
+Candidate	PAULA MARIE DALEO	PAULA MARIE DALEO - NO
+Candidate	PAULA MARIE DALEO	PAULA MARIE DALEO - YES
+Candidate	LAURENCE J. DUNFORD	LAURENCE J. DUNFORD - NO
+Candidate	LAURENCE J. DUNFORD	LAURENCE J. DUNFORD - YES
+Candidate	ROBERT BALANOFF	ROBERT BALANOFF - NO
+Candidate	ROBERT BALANOFF	ROBERT BALANOFF - YES
+Candidate	JEANNE R. CLEVELAND BERNSTEIN 	JEANNE R. CLEVELAND BERNSTEIN  - NO
+Candidate	JEANNE R. CLEVELAND BERNSTEIN	JEANNE R. CLEVELAND BERNSTEIN - YES
+Candidate	KATHLEEN MARIE BURKE	KATHLEEN MARIE BURKE - NO
+Candidate	KATHLEEN MARIE BURKE	KATHLEEN MARIE BURKE - YES
+Candidate	KAY MARIE HANLON	KAY MARIE HANLON - NO
+Candidate	KAY MARIE HANLON	KAY MARIE HANLON - YES
+Candidate	THOMAS J. KELLEY	THOMAS J. KELLEY - NO
+Candidate	THOMAS J. KELLEY	THOMAS J. KELLEY - YES
+Candidate	CLARE ELIZABETH McWILLIAMS	CLARE ELIZABETH McWILLIAMS - NO
+Candidate	CLARE ELIZABETH McWILLIAMS	CLARE ELIZABETH McWILLIAMS - YES
+Candidate	MARY LANE MIKVA	MARY LANE MIKVA - NO
+Candidate	MARY LANE MIKVA	MARY LANE MIKVA - YES
+Candidate	PATRICK T. MURPHY	PATRICK T. MURPHY - NO
+Candidate	PATRICK T. MURPHY	PATRICK T. MURPHY - YES
+Candidate	TIMOTHY PATRICK MURPHY	TIMOTHY PATRICK MURPHY - NO
+Candidate	TIMOTHY PATRICK MURPHY	TIMOTHY PATRICK MURPHY - YES
+Candidate	JIM RYAN	JIM RYAN - NO
+Candidate	JIM RYAN	JIM RYAN - YES
+Candidate	EDWARD 'ED' WASHINGTON, II	EDWARD 'ED' WASHINGTON, II - NO
+Candidate	EDWARD 'ED' WASHINGTON, II	EDWARD 'ED' WASHINGTON, II - YES
+Candidate	THADDEUS L. WILSON	THADDEUS L. WILSON - NO
+Candidate	THADDEUS L. WILSON	THADDEUS L. WILSON - YES
+Candidate	JOHN C. GRIFFIN	JOHN C. GRIFFIN - NO
+Candidate	JOHN C. GRIFFIN	JOHN C. GRIFFIN - YES
+Candidate	DANIEL JAMES PIERCE	DANIEL JAMES PIERCE - NO
+Candidate	DANIEL JAMES PIERCE	DANIEL JAMES PIERCE - YES
+Candidate	WILLIAM H. HOOKS	WILLIAM H. HOOKS - NO
+Candidate	WILLIAM H. HOOKS	WILLIAM H. HOOKS - YES
+Candidate	THOMAS V. LYONS	THOMAS V. LYONS - NO
+Candidate	THOMAS V. LYONS	THOMAS V. LYONS - YES
+Candidate	RAYMOND W. MITCHELL	RAYMOND W. MITCHELL - NO
+Candidate	RAYMOND W. MITCHELL	RAYMOND W. MITCHELL - YES
+Candidate	EDWARD HARMENING	EDWARD HARMENING - NO
+Candidate	EDWARD HARMENING	EDWARD HARMENING - YES
+Candidate	ALLEN F. MURPHY	ALLEN F. MURPHY - NO
+Candidate	ALLEN F. MURPHY	ALLEN F. MURPHY - YES
+Candidate	DANIEL MALONE	DANIEL MALONE - NO
+Candidate	DANIEL MALONE	DANIEL MALONE - YES
+Candidate	GEARY W. KULL	GEARY W. KULL - NO
+Candidate	GEARY W. KULL	GEARY W. KULL - YES
+Candidate	JOHN P. CALLAHAN, JR.	JOHN P. CALLAHAN, JR. - NO
+Candidate	JOHN P. CALLAHAN, JR.	JOHN P. CALLAHAN, JR. - YES
+Candidate	STEVEN JAMES BERNSTEIN	STEVEN JAMES BERNSTEIN - NO
+Candidate	STEVEN JAMES BERNSTEIN	STEVEN JAMES BERNSTEIN - YES
+Candidate	BONITA COLEMAN	BONITA COLEMAN - NO
+Candidate	BONITA COLEMAN	BONITA COLEMAN - YES
+Candidate	ANN FINLEY COLLINS	ANN FINLEY COLLINS - NO
+Candidate	ANN FINLEY COLLINS	ANN FINLEY COLLINS - YES
+Candidate	DANIEL J. GALLAGHER	DANIEL J. GALLAGHER - NO
+Candidate	DANIEL J. GALLAGHER	DANIEL J. GALLAGHER - YES
+Candidate	SHARON O. JOHNSON	SHARON O. JOHNSON - NO
+Candidate	SHARON O. JOHNSON	SHARON O. JOHNSON - YES
+Candidate	LINZEY D. JONES	LINZEY D. JONES - NO
+Candidate	PAMELA M. LEEMING	PAMELA M. LEEMING - NO
+Candidate	PAMELA M. LEEMING	PAMELA M. LEEMING - YES
+Candidate	CAROL M. HOWARD	CAROL M. HOWARD - NO
+Candidate	CAROL M. HOWARD	CAROL M. HOWARD - YES
+Candidate	MARCIA MARAS	MARCIA MARAS - NO
+Candidate	MARCIA MARAS	MARCIA MARAS - YES
+Candidate	CARL ANTHONY WALKER	CARL ANTHONY WALKER - NO
+Candidate	CARL ANTHONY WALKER	CARL ANTHONY WALKER - YES
+Candidate	CARL B. BOYD	CARL B. BOYD - NO
+Candidate	CARL B. BOYD	CARL B. BOYD - YES
+Candidate	RAMON OCASIO, III	RAMON OCASIO, III - NO
+Candidate	RAMON OCASIO, III	RAMON OCASIO, III - YES
+Candidate	MOSHE JACOBIUS	MOSHE JACOBIUS - NO
+Candidate	MOSHE JACOBIUS	MOSHE JACOBIUS - YES
+Candidate	JAMES MICHAEL MCGING	JAMES MICHAEL MCGING - NO
+Candidate	JAMES MICHAEL MCGING	JAMES MICHAEL MCGING - YES
+Candidate	MICHAEL R. CLANCY	MICHAEL R. CLANCY - NO
+Candidate	MICHAEL R. CLANCY	MICHAEL R. CLANCY - YES
+Candidate	ELLEN L. FLANNIGAN	ELLEN L. FLANNIGAN - NO
+Candidate	ELLEN L. FLANNIGAN	ELLEN L. FLANNIGAN - YES
+Candidate	MIKE MCHALE	MIKE MCHALE - NO
+Candidate	MIKE MCHALE	MIKE MCHALE - YES
+Candidate	MARY COLLEEN ROBERTS	MARY COLLEEN ROBERTS - NO
+Candidate	MARY COLLEEN ROBERTS	MARY COLLEEN ROBERTS - YES
+Candidate	MICHAEL TULLY MULLEN	MICHAEL TULLY MULLEN - NO
+Candidate	MICHAEL TULLY MULLEN	MICHAEL TULLY MULLEN - YES
+Candidate	JOYCE MARIE MURPHY GORMAN	JOYCE MARIE MURPHY GORMAN - NO
+Candidate	JOYCE MARIE MURPHY GORMAN	JOYCE MARIE MURPHY GORMAN - YES
+Candidate	KAREN LYNN OâMALLEY	KAREN LYNN OâMALLEY - NO
+Candidate	KAREN LYNN OâMALLEY	KAREN LYNN OâMALLEY - YES
+Candidate	PETER FLYNN	PETER FLYNN - NO
+Candidate	PETER FLYNN	PETER FLYNN - YES
+Candidate	MARTIN S. AGRAN	MARTIN S. AGRAN - NO
+Candidate	MARTIN S. AGRAN	MARTIN S. AGRAN - YES
+Candidate	MARTIN C. KELLEY	MARTIN C. KELLEY - NO
+Candidate	MARTIN C. KELLEY	MARTIN C. KELLEY - YES
+Candidate	CYNTHIA RAMIREZ	CYNTHIA RAMIREZ - NO
+Candidate	CYNTHIA RAMIREZ	CYNTHIA RAMIREZ - YES
+Candidate	THOMAS DAVID ROTI	THOMAS DAVID ROTI - NO
+Candidate	THOMAS DAVID ROTI	THOMAS DAVID ROTI - YES
+Candidate	DANIEL R. DEGNAN	DANIEL R. DEGNAN - NO
+Candidate	DANIEL R. DEGNAN	DANIEL R. DEGNAN - YES
+Candidate	DANIEL PATRICK BRENNAN	DANIEL PATRICK BRENNAN - NO
+Candidate	DANIEL PATRICK BRENNAN	DANIEL PATRICK BRENNAN - YES
+Candidate	THOMAS KUNA (JACOB)	THOMAS KUNA (JACOB)
+Candidate	JENNIFER McMILLIN	JENNIFER McMILLIN
+Candidate	DAN CAULKINS	DAN CAULKINS
+Candidate	CYNTHIA E. CUNNINGHAM	CYNTHIA E. CUNNINGHAM
+Candidate	MIKE MARRON	MIKE MARRON
+Candidate	BENJAMIN WEBB	BENJAMIN WEBB
+Candidate	DAVID J. SEILER	DAVID J. SEILER
+Candidate	BLAINE WILHOUR	BLAINE WILHOUR
+Candidate	CYNTHIA GIVEN	CYNTHIA GIVEN
+Candidate	DARREN BAILEY	DARREN BAILEY
+Candidate	BRUCE FEHRENBACHER	BRUCE FEHRENBACHER
+Candidate	DOUGLAS R. BENNETT	DOUGLAS R. BENNETT
+Candidate	MELISSA CONYEARS-ERVIN	MELISSA CONYEARS-ERVIN
+Candidate	SHIRLEY A. BELL	SHIRLEY A. BELL
+Candidate	CHRIS MILLER	CHRIS MILLER
+Candidate	MONICA BRISTOW	MONICA BRISTOW
+Candidate	DWIGHT D. KAY	DWIGHT D. KAY
+Candidate	DOUG JAMESON	DOUG JAMESON
+Candidate	JASON MADLOCK	JASON MADLOCK
+Candidate	DAVID FRIESS	DAVID FRIESS
+Candidate	JASON WOOLARD	JASON WOOLARD
+Candidate	NATALIE PHELPS FINNIE	NATALIE PHELPS FINNIE
+Candidate	PATRICK WINDHORST	PATRICK WINDHORST
+Candidate	WILLIAM A. YODER	WILLIAM A. YODER
+Candidate	NICK STELLA	NICK STELLA
+Candidate	VICTORIA McKAY KENNISON	VICTORIA McKAY KENNISON
+Candidate	VINCENT F. CORNELIUS	VINCENT F. CORNELIUS
+Candidate	BEN BRAUN	BEN BRAUN
+Candidate	DAVID GARCIA	DAVID GARCIA
+Candidate	BRENDAN KELLY	BRENDAN KELLY
+Candidate	MIKE BOST	MIKE BOST
+Candidate	RANDY AUXIER	RANDY AUXIER
+Candidate	STEVEN LANDEK	STEVEN LANDEK
+Candidate	BETSY DIRKSEN LONDRIGAN	BETSY DIRKSEN LONDRIGAN
+Candidate	THOMAS J. KUNA (JACOB)	THOMAS J. KUNA (JACOB)
+Candidate	TRISH JOYCE	TRISH JOYCE
+Candidate	LAUREN UNDERWOOD	LAUREN UNDERWOOD
+Candidate	EMIL JONES, III	EMIL JONES, III
+Candidate	JACQUELYN D. ACKERT	JACQUELYN D. ACKERT
+Candidate	KEVIN GAITHER	KEVIN GAITHER
+Candidate	TIM E. BUCKNER	TIM E. BUCKNER
+Candidate	AMANDA BIELA	AMANDA BIELA
+Candidate	NAPOLEON B. HARRIS, III	NAPOLEON B. HARRIS, III
+Candidate	RENE CRUZ	RENE CRUZ
+Candidate	CLINT HULL	CLINT HULL
+Candidate	THOMAS M. ('TOM') HARTWELL	THOMAS M. ('TOM') HARTWELL
+Candidate	MICHAEL J NOLAND	MICHAEL J NOLAND
+Candidate	SARA DADY	SARA DADY
+Candidate	JOHN M. STASSI	JOHN M. STASSI
+Candidate	DONNA HONZEL	DONNA HONZEL
+Candidate	JOSEPH P. 'JOE' BRUSCATO	JOSEPH P. 'JOE' BRUSCATO
+Candidate	ANN DEMPSEY	ANN DEMPSEY
+Candidate	JOHN LOWRY	JOHN LOWRY
+Candidate	WILLIAM W. 'BILL' FAWELL	WILLIAM W. 'BILL' FAWELL
+Candidate	PETER LEE	PETER LEE
+Candidate	JENNIFER GONG-GERSHOWITZ	JENNIFER GONG-GERSHOWITZ
+Candidate	MARY ARLINE VANN-METCALF	MARY ARLINE VANN-METCALF
+Candidate	JEFF MACKAY	JEFF MACKAY
+Candidate	LINDA E. DAVENPORT	LINDA E. DAVENPORT
+Candidate	JEFFREY M. JACOBSON	JEFFREY M. JACOBSON
+Candidate	KAREN M. WILSON	KAREN M. WILSON
+Candidate	JULIE CHO	JULIE CHO
+Candidate	BILL CUNNINGHAM	BILL CUNNINGHAM
+Candidate	CHARLES 'CHUCK' SMITH	CHARLES 'CHUCK' SMITH
+Candidate	JOSEPH V. SALVI	JOSEPH V. SALVI
+Candidate	CHRISTOPHER R. STRIDE	CHRISTOPHER R. STRIDE
+Candidate	CHRISTEN L. BISHOP	CHRISTEN L. BISHOP
+Candidate	AMMIE KESSEM	AMMIE KESSEM
+Candidate	TYLER R. EDMONDS	TYLER R. EDMONDS
+Candidate	AMANDA BYASSEE GOTT	AMANDA BYASSEE GOTT
+Candidate	CORD ZACHARY WITTIG	CORD ZACHARY WITTIG
+Candidate	JASON A. OLSON	JASON A. OLSON
+Candidate	CAREY C. GILL	CAREY C. GILL
+Candidate	DAVID W. LAWLER	DAVID W. LAWLER
+Candidate	STEPHEN R GREEN	STEPHEN R GREEN
+Candidate	STEVEN M.J. BOST	STEVEN M.J. BOST
+Candidate	CHRISTY W. SOLVERSON	CHRISTY W. SOLVERSON
+Candidate	E. RYAN HALL	E. RYAN HALL
+Candidate	JOHN W. SANDERS	JOHN W. SANDERS
+Candidate	JIMMY LEE TILLMAN, II	JIMMY LEE TILLMAN, II
+Candidate	THOMAS RUDBECK	THOMAS RUDBECK
+Candidate	AARON M. ORTIZ	AARON M. ORTIZ
+Candidate	KATHERINE RUOCCO	KATHERINE RUOCCO
+Candidate	HEINZ RUDOLF	HEINZ RUDOLF
+Candidate	CHRIS KOLKER	CHRIS KOLKER
+Candidate	PAUL J. EVANS	PAUL J. EVANS
+Candidate	JOHN J. O'GARA	JOHN J. O'GARA
+Candidate	THOMAS W. CUNNINGTON	THOMAS W. CUNNINGTON
+Candidate	CELINA VILLANUEVA	CELINA VILLANUEVA
+Candidate	MICHAEL G. CONNELLY	MICHAEL G. CONNELLY
+Candidate	LAURA ELLMAN	LAURA ELLMAN
+Candidate	TIFFANY DAVIS	TIFFANY DAVIS
+Candidate	ROBERT WILBRANDT	ROBERT WILBRANDT
+Candidate	THOMAS CULLERTON	THOMAS CULLERTON
+Candidate	CHRIS NYBO	CHRIS NYBO
+Candidate	SUZANNE 'SUZY' GLOWIAK	SUZANNE 'SUZY' GLOWIAK
+Candidate	DENISE ANITA HILL	DENISE ANITA HILL
+Candidate	CURTIS J. TARVER II	CURTIS J. TARVER II
+Candidate	TOM GEORGES	TOM GEORGES
+Candidate	JUSTIN Q. SLAUGHTER	JUSTIN Q. SLAUGHTER
+Candidate	TOM ROONEY	TOM ROONEY
+Candidate	ANN GILLESPIE	ANN GILLESPIE
+Candidate	BARRETT DAVIE	BARRETT DAVIE
+Candidate	DAVID MERKLE	DAVID MERKLE
+Candidate	SOOJAE LEE	SOOJAE LEE
+Candidate	TERRY LINK	TERRY LINK
+Candidate	MARY MAHADY	MARY MAHADY
+Candidate	CRAIG WILCOX	CRAIG WILCOX
+Candidate	NANCY ZETTLER	NANCY ZETTLER
+Candidate	DONALD P. DeWITTE	DONALD P. DeWITTE
+Candidate	NICHOLAS 'NICK' SMITH	NICHOLAS 'NICK' SMITH
+Candidate	HERBERT HEBEIN	HERBERT HEBEIN
+Candidate	GREGG JOHNSON	GREGG JOHNSON
+Candidate	NEIL ANDERSON	NEIL ANDERSON
+Candidate	MATTHEW J. HUNT	MATTHEW J. HUNT
+Candidate	DEBBIE MEYERS-MARTIN	DEBBIE MEYERS-MARTIN
+Candidate	HEIDI HENRY	HEIDI HENRY
+Candidate	DON HARMON	DON HARMON
+Candidate	MARC PARKER	MARC PARKER
+Candidate	DAVID W. DUGAN	DAVID W. DUGAN
+Candidate	MARK D. RABE	MARK D. RABE
+Candidate	SARAH SMITH	SARAH SMITH
+Candidate	CHRIS BAUER	CHRIS BAUER
+Candidate	ARTHUR J. JONES	ARTHUR J. JONES
+Candidate	JUSTIN HANSON	JUSTIN HANSON
+Candidate	KENNETH YERKES	KENNETH YERKES
+Candidate	RICHARD MAYERS	RICHARD MAYERS
+Candidate	MATTIE HUNTER	MATTIE HUNTER
+Candidate	WILLIAM CADE	WILLIAM CADE
+Candidate	VAL MONTGOMERY	VAL MONTGOMERY
+Candidate	BRIDGET M. FITZGERALD	BRIDGET M. FITZGERALD
+Candidate	JOHN CURRAN	JOHN CURRAN
+Candidate	AMY L. GRANT	AMY L. GRANT
+Candidate	LINDA HOLMES	LINDA HOLMES
+Candidate	ANDREW R. CUMING	ANDREW R. CUMING
+Candidate	DIANE PAPPAS	DIANE PAPPAS
+Candidate	DAVID SIMPSON	DAVID SIMPSON
+Candidate	GORDON (JAY) KINZLER	GORDON (JAY) KINZLER
+Candidate	JAMES M. 'JIM' CAFFREY	JAMES M. 'JIM' CAFFREY
+Candidate	DEANNE MARIE MAZZOCHI	DEANNE MARIE MAZZOCHI
+Candidate	KURT (SANTA) FOWLER	KURT (SANTA) FOWLER
+Candidate	TERRA COSTA HOWARD	TERRA COSTA HOWARD
+Candidate	SETH McMILLAN	SETH McMILLAN
+Candidate	ANDY MANAR	ANDY MANAR
+Candidate	MICHAEL GRAGG	MICHAEL GRAGG
+Candidate	TONIA JANE KHOURI	TONIA JANE KHOURI
+Candidate	KARINA VILLA	KARINA VILLA
+Candidate	PETE CAVANAGH	PETE CAVANAGH
+Candidate	THOMAS M. HARRIS, JR.	THOMAS M. HARRIS, JR.
+Candidate	GINA VONDERHEIDE	GINA VONDERHEIDE
+Candidate	AMANDA S. ADE-HARLOW	AMANDA S. ADE-HARLOW
+Candidate	MARK WAYNE LORCH	MARK WAYNE LORCH
+Candidate	JESUS 'CHUY' GARCIA	JESUS 'CHUY' GARCIA
+Candidate	JUSTIN TUCKER	JUSTIN TUCKER
+Candidate	DELIA C. RAMIREZ	DELIA C. RAMIREZ
+Candidate	JAMES G. LESLIE	JAMES G. LESLIE
+Candidate	STEVE McCLURE	STEVE McCLURE
+Candidate	HELENE MILLER WALSH	HELENE MILLER WALSH
+Candidate	MARY EDLY-ALLEN	MARY EDLY-ALLEN
+Candidate	CHAPIN ROSE	CHAPIN ROSE
+Candidate	EDDIE CORRIGAN	EDDIE CORRIGAN
+Candidate	MARK L. WALKER	MARK L. WALKER
+Candidate	MAGGIE TREVOR	MAGGIE TREVOR
+Candidate	BRIAN STOUT	BRIAN STOUT
+Candidate	JASON PLUMMER	JASON PLUMMER
+Candidate	MARILYN SMOLENSKI	MARILYN SMOLENSKI
+Candidate	HAL PATTON	HAL PATTON
+Candidate	RACHELLE AUD CROWE	RACHELLE AUD CROWE
+Candidate	JONATHAN CARROLL	JONATHAN CARROLL
+Candidate	TANYA HILDENBRAND	TANYA HILDENBRAND
+Candidate	CHRISTOPHER BELT	CHRISTOPHER BELT
+Candidate	FREDRIC BRYAN 'RICK' LESSER	FREDRIC BRYAN 'RICK' LESSER
+Candidate	BOB MORGAN	BOB MORGAN
+Candidate	KAREN FELDMAN	KAREN FELDMAN
+Candidate	DANIEL DIDECH	DANIEL DIDECH
+Candidate	STEVE WEBB	STEVE WEBB
+Candidate	KEVIN T. HOERNER	KEVIN T. HOERNER
+Candidate	DAVID K. OVERSTREET	DAVID K. OVERSTREET
+Candidate	CHARLES 'CHARLIE' HALL	CHARLES 'CHARLIE' HALL
+Candidate	MARK E. BOVARD	MARK E. BOVARD
+Candidate	TOM HANSON	TOM HANSON
+Candidate	FRANK ROWDER	FRANK ROWDER
+Candidate	LAMONT J. ROBINSON, JR.	LAMONT J. ROBINSON, JR.
+Candidate	JOYCE MASON	JOYCE MASON
+Candidate	KEN IDSTEIN	KEN IDSTEIN
+Candidate	TRISHA ZUBERT	TRISHA ZUBERT
+Candidate	TOM WEBER	TOM WEBER
+Candidate	RICHARD JOHNSON	RICHARD JOHNSON
+Candidate	DAN UGASTE	DAN UGASTE
+Candidate	MAURICE A. WEST II	MAURICE A. WEST II
+Candidate	JAKE CASTANZA	JAKE CASTANZA
+Candidate	ANGELIQUE 'ANGIE' BODINE	ANGELIQUE 'ANGIE' BODINE
+Candidate	RAMONA SULLIVAN	RAMONA SULLIVAN
+Candidate	ROGER B. WEBBER	ROGER B. WEBBER
+Candidate	CHAD BECKETT	CHAD BECKETT
+Candidate	RANDY ROSENBAUM	RANDY ROSENBAUM
+Candidate	JEREMY RICHEY	JEREMY RICHEY
+Candidate	EDMOND KELLY, JR.	EDMOND KELLY, JR.
+Candidate	SEAN CASTEN	SEAN CASTEN
+Candidate	JOHN J. CULLERTON	JOHN J. CULLERTON
+Candidate	PAUL STODDARD	PAUL STODDARD
+Candidate	JEFF KEICHER	JEFF KEICHER
+Candidate	JOAN PADILLA	JOAN PADILLA
+Candidate	GLEN EVANS SR.	GLEN EVANS SR.
+Candidate	DAN SWANSON	DAN SWANSON
+Candidate	LANCE YEDNOCK	LANCE YEDNOCK
+Candidate	LISA M. DUGAN	LISA M. DUGAN
+Candidate	CRAIG CAMERON	CRAIG CAMERON
+Candidate	ANNE M. STAVA-MURRAY	ANNE M. STAVA-MURRAY
+Candidate	TOM CHLYSTEK	TOM CHLYSTEK
+Candidate	PATTY SMITH	PATTY SMITH
+Candidate	JOHN CONNOR	JOHN CONNOR
+Candidate	RICK LAIB	RICK LAIB
+Candidate	JILL BLAIR	JILL BLAIR
+Candidate	NICHOLAS P. HYDE	NICHOLAS P. HYDE
+Candidate	ANDREW S. CHESNEY	ANDREW S. CHESNEY
+Candidate	LUKE ALLEN THOMAS	LUKE ALLEN THOMAS
+Candidate	TIMOTHY J. 'T.J.' WESSEL	TIMOTHY J. 'T.J.' WESSEL
+Candidate	JERRY J. HOOKER	JERRY J. HOOKER
+Candidate	AMY LANNERD	AMY LANNERD
+Candidate	JITENDRA 'JD' DIGANVKER	JITENDRA 'JD' DIGANVKER
+Candidate	RAM VILLIVALAM	RAM VILLIVALAM
+Candidate	AMY DAVIS	AMY DAVIS
+Candidate	CAROLYN BLODGETT	CAROLYN BLODGETT
+Candidate	RICHARD G. CRAMSEY	RICHARD G. CRAMSEY
+Candidate	DILLON CLARK	DILLON CLARK
+Candidate	CRAIG BARNSTABLE	CRAIG BARNSTABLE
+Candidate	HERMAN SENOR	HERMAN SENOR
+Candidate	GARY PIERCE	GARY PIERCE
+Candidate	MICA FREEMAN	MICA FREEMAN
+Candidate	ALYSSIA BENFORD	ALYSSIA BENFORD
+Candidate	MARC BELL	MARC BELL
+Candidate	MIKE MURPHY	MIKE MURPHY
+Candidate	BRUCE C BEAL	BRUCE C BEAL
+Candidate	JOHN D. ELLESON	JOHN D. ELLESON
+Candidate	JOAN MCCARTHY LASONDE	JOAN MCCARTHY LASONDE
+Candidate	CHERYL R. GRAFF	CHERYL R. GRAFF
+Candidate	BUBBA HARSY	BUBBA HARSY
+Candidate	ERIKA HAROLD	ERIKA HAROLD
+Candidate	JULIE WOLLERMAN	JULIE WOLLERMAN
+Candidate	SCOTT BLOOMQUIST	SCOTT BLOOMQUIST
+Candidate	ANGELA ZARVELL	ANGELA ZARVELL
+Candidate	AARON MERCIER	AARON MERCIER
+Candidate	GARY LEWIS	GARY LEWIS
+Candidate	KYLE THOMPSON	KYLE THOMPSON
+Candidate	MONTE A. NEWLIN	MONTE A. NEWLIN
+Candidate	BRIAN P. GUTHRIE	BRIAN P. GUTHRIE
+Candidate	RON DANIELS	RON DANIELS
+Candidate	DARLENE SENGER	DARLENE SENGER
+Candidate	SUSANA A. MENDOZA	SUSANA A. MENDOZA
+Candidate	STEPHANIE SALTOUROS	STEPHANIE SALTOUROS
+Candidate	COLLEEN REARDON DALY	COLLEEN REARDON DALY
+Candidate	JOANNE F. ROSADO	JOANNE F. ROSADO
+Candidate	JOEL CHUPACK	JOEL CHUPACK
+Candidate	GARY WILLIAM SEYRING	GARY WILLIAM SEYRING
+Candidate	DANIEL PATRICK FITZGERALD	DANIEL PATRICK FITZGERALD
+Candidate	SHANNON P. O'MALLEY	SHANNON P. O'MALLEY
+Candidate	CHRISTINE SVENSON	CHRISTINE SVENSON
+Candidate	SAMUEL J. BETAR III	SAMUEL J. BETAR III
+Candidate	BEATRIZ A. FRAUSTO-SANDOVAL	BEATRIZ A. FRAUSTO-SANDOVAL
+Candidate	MICHAEL B. BARRETT	MICHAEL B. BARRETT
+Candidate	KARLA MARIE FIAONI	KARLA MARIE FIAONI
+Candidate	SCOTT McKENNA	SCOTT McKENNA
+Candidate	ERIKA ORR	ERIKA ORR
+Candidate	TIANA ELLIS BLAKELY	TIANA ELLIS BLAKELY
+Candidate	ADRIENNE ELAINE DAVIS	ADRIENNE ELAINE DAVIS
+Candidate	TOYA T. HARVEY	TOYA T. HARVEY
+Candidate	ARTHUR WESLEY WILLIS	ARTHUR WESLEY WILLIS
+Candidate	IESHIA GRAY	IESHIA GRAY
+Candidate	DEBRA A. SEATON	DEBRA A. SEATON
+Candidate	KEVIN PATRICK CUNNINGHAM	KEVIN PATRICK CUNNINGHAM
+Candidate	DAVID R. NAVARRO	DAVID R. NAVARRO
+Candidate	ELIZABETH CIACCIA-LEZZA	ELIZABETH CIACCIA-LEZZA
+Candidate	H YVONNE COLEMAN	H YVONNE COLEMAN
+Candidate	MARIAN EMILY PERKINS	MARIAN EMILY PERKINS
+Candidate	ROBERT HARRIS	ROBERT HARRIS
+Candidate	KENT DELGADO	KENT DELGADO
+Candidate	ANDREA MICHELLE WEBBER	ANDREA MICHELLE WEBBER
+Candidate	LINDA PEREZ	LINDA PEREZ
+Candidate	JAMES 'JAMIE' SHAPIRO	JAMES 'JAMIE' SHAPIRO
+Candidate	LINDSAY HUGE	LINDSAY HUGE
+Candidate	JEANNE MARIE WRENN	JEANNE MARIE WRENN
+Candidate	KATHRYN MALONEY VAHEY	KATHRYN MALONEY VAHEY
+Candidate	KATHALEEN THERESA LANAHAN	KATHALEEN THERESA LANAHAN
+Candidate	TOM SAM SIANIS	TOM SAM SIANIS
+Candidate	THOMAS F. McGUIRE	THOMAS F. McGUIRE
+Candidate	ROSA MARIA SILVA	ROSA MARIA SILVA
+Candidate	PRESTON JONES JR.	PRESTON JONES JR.
+Candidate	CECILIA ANNE HORAN	CECILIA ANNE HORAN
+Candidate	CLARE JOYCE QUISH	CLARE JOYCE QUISH
+Candidate	PETER MICHAEL GONZALEZ	PETER MICHAEL GONZALEZ
+Candidate	JACK HAGERTY	JACK HAGERTY
+Candidate	MARK EUGENE JONTRY	MARK EUGENE JONTRY
+Candidate	ELIZABETH ('BETH') RISTER	ELIZABETH ('BETH') RISTER
+Candidate	LORIE LAKSO LeQUATTE	LORIE LAKSO LeQUATTE
+Candidate	JOHN MEIXNER	JOHN MEIXNER
+Candidate	GREG MOORE	GREG MOORE
+Candidate	BRUCE RAUNER	BRUCE RAUNER
+Candidate	GRAYSON KASH JACKSON	GRAYSON KASH JACKSON
+Candidate	JB PRITZKER	JB PRITZKER
+Candidate	DAVID THOLIN	DAVID THOLIN
+Candidate	KEVIN D. RYAN	KEVIN D. RYAN
+Candidate	ROBERT F. CANFIELD	ROBERT F. CANFIELD
+Candidate	NANCY FOSTER	NANCY FOSTER
+Candidate	MICHAEL W SCRUGGS	MICHAEL W SCRUGGS
+Candidate	JO 753	JO 753
+Candidate	CHRISTOPHER D MEHOCHKO	CHRISTOPHER D MEHOCHKO
+Candidate	JODI L. SCOTT	JODI L. SCOTT
+Candidate	GREGG MURPHY	GREGG MURPHY
+Candidate	CHRISTOPHER B. DVORAK	CHRISTOPHER B. DVORAK
+Candidate	ROBERT SONDGEROTH	ROBERT SONDGEROTH
+Candidate	MATTHEW T. SNYDER	MATTHEW T. SNYDER
+Candidate	JEFF VOSE	JEFF VOSE
+Candidate	KELTON DAVIS	KELTON DAVIS
+Candidate	JASON HELLAND	JASON HELLAND
+Candidate	JESSE WHITE	JESSE WHITE
+Candidate	STEVE DUTNER	STEVE DUTNER
+Candidate	JIM DODGE	JIM DODGE
+Candidate	MICHAEL W. FRERICHS	MICHAEL W. FRERICHS
+Candidate	MICHAEL LEHENEY	MICHAEL LEHENEY
+Candidate	ANNE M. BURKE	ANNE M. BURKE - NO
+Candidate	ANNE M. BURKE	ANNE M. BURKE - YES
+Candidate	ROBERT D. MCLAREN	ROBERT D. MCLAREN - NO
+Candidate	ROBERT D. MCLAREN	ROBERT D. MCLAREN - YES
+Candidate	MARK M. BOIE	MARK M. BOIE - NO
+Candidate	MARK M. BOIE	MARK M. BOIE - YES
+Candidate	ERIC J. DIRNBECK	ERIC J. DIRNBECK - NO
+Candidate	ERIC J. DIRNBECK	ERIC J. DIRNBECK - YES
+Candidate	MELISSA MORGAN	MELISSA MORGAN - NO
+Candidate	MELISSA MORGAN	MELISSA MORGAN - YES
+Candidate	CHRISTOPHER L. WEBER	CHRISTOPHER L. WEBER - NO
+Candidate	CHRISTOPHER L. WEBER	CHRISTOPHER L. WEBER - YES
+Candidate	DAVE HYLLA	DAVE HYLLA - NO
+Candidate	DAVE HYLLA	DAVE HYLLA - YES
+Candidate	KYLE ANNE NAPP	KYLE ANNE NAPP - YES
+Candidate	KYLE ANNE NAPP	KYLE ANNE NAPP - NO
+Candidate	DANIEL E. HARTIGAN	DANIEL E. HARTIGAN - NO
+Candidate	DANIEL E. HARTIGAN	DANIEL E. HARTIGAN - YES
+Candidate	KIMBERLY G. KOESTER	KIMBERLY G. KOESTER - NO
+Candidate	KIMBERLY G. KOESTER	KIMBERLY G. KOESTER - YES
+Candidate	NANCY S. FAHEY	NANCY S. FAHEY - NO
+Candidate	NANCY S. FAHEY	NANCY S. FAHEY - YES
+Candidate	BRIEN J. O'BRIEN	BRIEN J. O'BRIEN - NO
+Candidate	BRIEN J. O'BRIEN	BRIEN J. O'BRIEN - YES
+Candidate	THOMAS E. GRIFFITH	THOMAS E. GRIFFITH - NO
+Candidate	THOMAS E. GRIFFITH	THOMAS E. GRIFFITH - YES
+Candidate	JOHN BELZ -  NO	JOHN BELZ -  NO
+Candidate	JOHN BELZ	JOHN BELZ - YES
+Candidate	DAVID R. CHERRY	DAVID R. CHERRY - NO
+Candidate	DAVID R. CHERRY	DAVID R. CHERRY - YES
+Candidate	KENNETH R. DEIHL	KENNETH R. DEIHL - NO
+Candidate	KENNETH R. DEIHL	KENNETH R. DEIHL - YES
+Candidate	ERIC S. PISTORIUS	ERIC S. PISTORIUS - NO
+Candidate	ERIC S. PISTORIUS	ERIC S. PISTORIUS - YES
+Candidate	JAMES STANDARD	JAMES STANDARD - NO
+Candidate	JAMES STANDARD	JAMES STANDARD - YES
+Candidate	PAUL GILFILLAN	PAUL GILFILLAN - NO
+Candidate	PAUL GILFILLAN	PAUL GILFILLAN - YES
+Candidate	KATE GORMAN	KATE GORMAN - NO
+Candidate	KATE GORMAN	KATE GORMAN - YES
+Candidate	JEFFREY W. OâCONNOR	JEFFREY W. OâCONNOR - NO
+Candidate	JEFFREY W. OâCONNOR	JEFFREY W. OâCONNOR - YES
+Candidate	STANLEY B. STEINES	STANLEY B. STEINES - NO
+Candidate	STANLEY B. STEINES	STANLEY B. STEINES - YES
+Candidate	ROBERT T. HANSON	ROBERT T. HANSON - NO
+Candidate	ROBERT T. HANSON	ROBERT T. HANSON - YES
+Candidate	DONALD C. HUDSON	DONALD C. HUDSON - NO
+Candidate	DONALD C. HUDSON	DONALD C. HUDSON - YES
+Candidate	JOHN G. DALTON	JOHN G. DALTON - NO
+Candidate	JOHN G. DALTON	JOHN G. DALTON - YES
+Candidate	PATRICK J. OâSHEA	PATRICK J. OâSHEA - NO
+Candidate	PATRICK J. OâSHEA	PATRICK J. OâSHEA - YES
+Candidate	PATRICIA S. FIX	PATRICIA S. FIX - NO
+Candidate	PATRICIA S. FIX	PATRICIA S. FIX - YES
+Candidate	THOMAS SCHIPPERS	THOMAS SCHIPPERS - NO
+Candidate	THOMAS SCHIPPERS	THOMAS SCHIPPERS - YES
+Candidate	DANIEL B. SHANES	DANIEL B. SHANES - NO
+Candidate	DANIEL B. SHANES	DANIEL B. SHANES - YES
+Candidate	ZINA R. CRUSE	ZINA R. CRUSE - NO
+Candidate	ZINA R. CRUSE	ZINA R. CRUSE - YES
+Candidate	DANIEL J. EMGE	DANIEL J. EMGE - NO
+Candidate	DANIEL J. EMGE	DANIEL J. EMGE - YES
+Candidate	ANDREW J. GLEESON	ANDREW J. GLEESON - NO
+Candidate	ANDREW J. GLEESON	ANDREW J. GLEESON - YES
+Candidate	MARGARET STANTON MCBRIDE	MARGARET STANTON MCBRIDE - NO
+Candidate	MARGARET STANTON MCBRIDE	MARGARET STANTON MCBRIDE - YES
+Candidate	CRAIG H. DeARMOND	CRAIG H. DeARMOND - NO
+Candidate	CRAIG H. DeARMOND	CRAIG H. DeARMOND - YES
+Candidate	KEVIN W. LYONS	KEVIN W. LYONS - NO
+Candidate	KEVIN W. LYONS	KEVIN W. LYONS - YES
+Candidate	PAUL LAWRENCE	PAUL LAWRENCE - NO
+Candidate	PAUL LAWRENCE	PAUL LAWRENCE - YES
+Candidate	TROY HOLLAND	TROY HOLLAND - NO
+Candidate	TROY HOLLAND	TROY HOLLAND - YES
+Candidate	CYNTHIA M. RACCUGLIA	CYNTHIA M. RACCUGLIA - NO
+Candidate	CYNTHIA M. RACCUGLIA	CYNTHIA M. RACCUGLIA - YES
+Candidate	JOHN A. BARSANTI	JOHN A. BARSANTI - NO
+Candidate	JOHN A. BARSANTI	JOHN A. BARSANTI - YES
+Candidate	BRENDAN MAHER	BRENDAN MAHER - NO
+Candidate	BRENDAN MAHER	BRENDAN MAHER - YES
+Candidate	MICHAEL J. CHMIEL	MICHAEL J. CHMIEL - NO
+Candidate	MICHAEL J. CHMIEL	MICHAEL J. CHMIEL - YES
+Candidate	MELISSA S. BARNHART	MELISSA S. BARNHART - NO
+Candidate	MELISSA S. BARNHART	MELISSA S. BARNHART - YES
+Candidate	MARY MARGARET BROSNAHAN	MARY MARGARET BROSNAHAN - NO
+Candidate	MARY MARGARET BROSNAHAN	MARY MARGARET BROSNAHAN - YES
+Candidate	MATTHEW E. COGHLAN	MATTHEW E. COGHLAN - YES
+Candidate	MATTHEW E. COGHLAN	MATTHEW E. COGHLAN - NO
+Candidate	KATHY M. FLANAGAN	KATHY M. FLANAGAN - NO
+Candidate	KATHY M. FLANAGAN	KATHY M. FLANAGAN - YES
+Candidate	CATHERINE MARIE HABERKORN	CATHERINE MARIE HABERKORN - NO
+Candidate	CATHERINE MARIE HABERKORN	CATHERINE MARIE HABERKORN - YES
+Candidate	ELIZABETH MARY HAYES	ELIZABETH MARY HAYES - NO
+Candidate	ELIZABETH MARY HAYES	ELIZABETH MARY HAYES - YES
+Candidate	PAUL A. KARKULA	PAUL A. KARKULA - NO
+Candidate	PAUL A. KARKULA	PAUL A. KARKULA - YES
+Candidate	STUART F. LUBIN	STUART F. LUBIN - NO
+Candidate	STUART F. LUBIN	STUART F. LUBIN - YES
+Candidate	DIANN KAREN MARSALEK	DIANN KAREN MARSALEK - NO
+Candidate	DIANN KAREN MARSALEK	DIANN KAREN MARSALEK - YES
+Candidate	JAMES PATRICK MURPHY	JAMES PATRICK MURPHY - NO
+Candidate	JAMES PATRICK MURPHY	JAMES PATRICK MURPHY - YES
+Candidate	JOAN MARGARET OâBRIEN	JOAN MARGARET OâBRIEN - NO
+Candidate	JOAN MARGARET OâBRIEN	JOAN MARGARET OâBRIEN - YES
+Candidate	LORNA ELLEN PROPES	LORNA ELLEN PROPES - NO
+Candidate	LORNA ELLEN PROPES	LORNA ELLEN PROPES - YES
+Candidate	THOMAS W. MURPHY	THOMAS W. MURPHY - NO
+Candidate	THOMAS W. MURPHY	THOMAS W. MURPHY - YES
+Candidate	TERRY GALLAGHER	TERRY GALLAGHER - NO
+Candidate	TERRY GALLAGHER	TERRY GALLAGHER - YES
+Candidate	EDWARD M. MALONEY	EDWARD M. MALONEY - NO
+Candidate	EDWARD M. MALONEY	EDWARD M. MALONEY - YES
+Candidate	JAMES M. VARGA	JAMES M. VARGA - NO
+Candidate	JAMES M. VARGA	JAMES M. VARGA - YES
+Candidate	DIANE M. SHELLEY	DIANE M. SHELLEY - NO
+Candidate	DIANE M. SHELLEY	DIANE M. SHELLEY - YES
+Candidate	BEATRIZ SANTIAGO	BEATRIZ SANTIAGO - NO
+Candidate	BEATRIZ SANTIAGO	BEATRIZ SANTIAGO - YES
+Candidate	TOMMY BREWER	TOMMY BREWER - NO
+Candidate	TOMMY BREWER	TOMMY BREWER - YES
+Candidate	KIMBERLY D. LEWIS	KIMBERLY D. LEWIS - NO
+Candidate	KIMBERLY D. LEWIS	KIMBERLY D. LEWIS - YES
+Candidate	JOHN H. EHRLICH	JOHN H. EHRLICH - NO
+Candidate	JOHN H. EHRLICH	JOHN H. EHRLICH - YES
+Candidate	CELIA LOUISE GAMRATH	CELIA LOUISE GAMRATH - NO
+Candidate	CELIA LOUISE GAMRATH	CELIA LOUISE GAMRATH - YES
+Candidate	LARRY G. AXELROOD	LARRY G. AXELROOD - NO
+Candidate	LARRY G. AXELROOD	LARRY G. AXELROOD - YES
+Candidate	LIONEL JEAN-BAPTISTE	LIONEL JEAN-BAPTISTE - NO
+Candidate	LIONEL JEAN-BAPTISTE	LIONEL JEAN-BAPTISTE - YES
+Candidate	THOMAS R. ALLEN	THOMAS R. ALLEN - NO
+Candidate	THOMAS R. ALLEN	THOMAS R. ALLEN - YES
+Candidate	RONALD F. BARTKOWICZ	RONALD F. BARTKOWICZ - NO
+Candidate	RONALD F. BARTKOWICZ	RONALD F. BARTKOWICZ - YES
+Candidate	LISA ANN MARINO	LISA ANN MARINO - NO
+Candidate	LISA ANN MARINO	LISA ANN MARINO - YES
+Candidate	GRACE G. DICKLER	GRACE G. DICKLER - NO
+Candidate	GRACE G. DICKLER	GRACE G. DICKLER - YES
+Candidate	ANDREA M. SCHLEIFER	ANDREA M. SCHLEIFER - NO
+Candidate	ANDREA M. SCHLEIFER	ANDREA M. SCHLEIFER - YES
+Candidate	JILL C. MARISIE	JILL C. MARISIE - NO
+Candidate	JILL C. MARISIE	JILL C. MARISIE - YES
+Candidate	PAUL S. PAVLUS	PAUL S. PAVLUS - NO
+Candidate	PAUL S. PAVLUS	PAUL S. PAVLUS - YES
+Candidate	REGINA ANN SCANNICCHIO	REGINA ANN SCANNICCHIO - NO
+Candidate	REGINA ANN SCANNICCHIO	REGINA ANN SCANNICCHIO - YES
+Candidate	MAURA SLATTERY BOYLE	MAURA SLATTERY BOYLE - NO
+Candidate	MAURA SLATTERY BOYLE	MAURA SLATTERY BOYLE - YES
+Candidate	BRAD K. BLEYER	BRAD K. BLEYER - NO
+Candidate	BRAD K. BLEYER	BRAD K. BLEYER - YES
+Candidate	T. SCOTT WEBB	T. SCOTT WEBB - NO
+Candidate	T. SCOTT WEBB	T. SCOTT WEBB - YES
+Candidate	JO BETH WEBER	JO BETH WEBER - NO
+Candidate	JO BETH WEBER	JO BETH WEBER - YES
+Candidate	JEFFREY B. âJEFFâ FORD	JEFFREY B. âJEFFâ FORD - NO
+Candidate	JEFFREY B. âJEFFâ FORD	JEFFREY B. âJEFFâ FORD - YES
+Candidate	J. FRANK McCARTNEY	J. FRANK McCARTNEY - NO
+Candidate	J. FRANK McCARTNEY	J. FRANK McCARTNEY - YES
+Candidate	RODNEY G. CLARK	RODNEY G. CLARK - NO
+Candidate	RODNEY G. CLARK	RODNEY G. CLARK - YES
+Candidate	SCOTT SHIPPLETT	SCOTT SHIPPLETT - NO
+Candidate	SCOTT SHIPPLETT	SCOTT SHIPPLETT - YES
+Candidate	REBECCA SIMMONS FOLEY	REBECCA SIMMONS FOLEY - NO
+Candidate	REBECCA SIMMONS FOLEY	REBECCA SIMMONS FOLEY - YES
+Candidate	MARK A. VANDEWIELE	MARK A. VANDEWIELE - NO
+Candidate	MARK A. VANDEWIELE	MARK A. VANDEWIELE - YES
+Candidate	MICHAEL P. BALD	MICHAEL P. BALD - NO
+Candidate	MICHAEL P. BALD	MICHAEL P. BALD - YES
+Candidate	RONALD G. MATEKAITIS	RONALD G. MATEKAITIS - NO
+Candidate	RONALD G. MATEKAITIS	RONALD G. MATEKAITIS - YES
+Candidate	ERICA L. REDDICK	ERICA L. REDDICK - NO
+Candidate	ERICA L. REDDICK	ERICA L. REDDICK - YES
+Candidate	COLLEEN F. SHEEHAN	COLLEEN F. SHEEHAN - NO
+Candidate	COLLEEN F. SHEEHAN	COLLEEN F. SHEEHAN - YES
+Candidate	E. KENNETH WRIGHT, JR.	E. KENNETH WRIGHT, JR. - NO
+Candidate	E. KENNETH WRIGHT, JR.	E. KENNETH WRIGHT, JR. - YES
+Candidate	WILLIAM G. GAMBONEY	WILLIAM G. GAMBONEY - NO
+Candidate	WILLIAM G. GAMBONEY	WILLIAM G. GAMBONEY - YES
+Candidate	AICHA MARIE MACCARTHY	AICHA MARIE MACCARTHY - NO
+Candidate	AICHA MARIE MACCARTHY	AICHA MARIE MACCARTHY - YES
+Candidate	ALICIA ELENA MARTINEZ	ALICIA ELENA MARTINEZ
+Candidate	BOBBY MARTINEZ OLSON	BOBBY MARTINEZ OLSON
+Candidate	KENNETH M. KOZLAR	KENNETH M. KOZLAR
+Candidate	NIDIA CARRANZA	NIDIA CARRANZA
+Candidate	EVA DINA DELGADO	EVA DINA DELGADO
+Candidate	LAMONT J. ROBINSON	LAMONT J. ROBINSON
+Candidate	NICOLE L. 'NIKKI' HARVEY	NICOLE L. 'NIKKI' HARVEY
+Candidate	LAKESIA COLLINS	LAKESIA COLLINS
+Candidate	TYJUAN 'TY' CRATIC	TYJUAN 'TY' CRATIC
+Candidate	TRINA MANGRUM	TRINA MANGRUM
+Candidate	AARON TURNER	AARON TURNER
+Candidate	MAURICE EDWARDS	MAURICE EDWARDS
+Candidate	SANDRA SCHNELLER	SANDRA SCHNELLER
+Candidate	GERARD C. MOORER	GERARD C. MOORER
+Candidate	GINA ZUCCARO	GINA ZUCCARO
+Candidate	JAWAHARIAL 'OMAR' WILLIAMS	JAWAHARIAL 'OMAR' WILLIAMS
+Candidate	RYAN PODGES	RYAN PODGES
+Candidate	JAMES A. 'JIMMY' GARFIELD	JAMES A. 'JIMMY' GARFIELD
+Candidate	MARTY MALONE	MARTY MALONE
+Candidate	JONATHAN A. 'YONI' PIZER	JONATHAN A. 'YONI' PIZER
+Candidate	MARGARET CROKE	MARGARET CROKE
+Candidate	GREG HARRIS	GREG HARRIS
+Candidate	YEHIEL 'MARK' KALISH	YEHIEL 'MARK' KALISH
+Candidate	KEVIN OLICKAL	KEVIN OLICKAL
+Candidate	BRIAN LEE O'DONNELL	BRIAN LEE O'DONNELL
+Candidate	DENYSE WANG STONEBACK	DENYSE WANG STONEBACK
+Candidate	YESOE YOON	YESOE YOON
+Candidate	JOE DUPLECHIN	JOE DUPLECHIN
+Candidate	PATRICIA D. 'PATTI VASQUEZ' BONNIN	PATRICIA D. 'PATTI VASQUEZ' BONNIN
+Candidate	LINDSEY LaPOINTE	LINDSEY LaPOINTE
+Candidate	JEFF MUEHLFELDER	JEFF MUEHLFELDER
+Candidate	R. CARY CAPPARELLI	R. CARY CAPPARELLI
+Candidate	MICHELLE DARBRO	MICHELLE DARBRO
+Candidate	BRAD STEPHENS	BRAD STEPHENS
+Candidate	EDGAR GONZALEZ, JR.	EDGAR GONZALEZ, JR.
+Candidate	KAM BUCKNER	KAM BUCKNER
+Candidate	MARLO BARNETT	MARLO BARNETT
+Candidate	DeANDRE TILLMAN	DeANDRE TILLMAN
+Candidate	SAMANTHA SIMPSON	SAMANTHA SIMPSON
+Candidate	RICKY GANDHI	RICKY GANDHI
+Candidate	ANDRâ THAPEDI	ANDRâ THAPEDI
+Candidate	MICHELLE FADELEY	MICHELLE FADELEY
+Candidate	TIM OZINGA	TIM OZINGA
+Candidate	MAX SOLOMON	MAX SOLOMON
+Candidate	SYAMALA KRISHNAMSETTY	SYAMALA KRISHNAMSETTY
+Candidate	DENIKA McMILLEN	DENIKA McMILLEN
+Candidate	JANET YANG ROHR	JANET YANG ROHR
+Candidate	KEN MEJIA-BEAL	KEN MEJIA-BEAL
+Candidate	ALFREDO 'AL' MANZO	ALFREDO 'AL' MANZO
+Candidate	RANDY RAMEY	RANDY RAMEY
+Candidate	MICHAEL E. CAMERER	MICHAEL E. CAMERER
+Candidate	JENNIFER ZORDANI	JENNIFER ZORDANI
+Candidate	MAURA HIRSCHAUER	MAURA HIRSCHAUER
+Candidate	LAURA CURTIS	LAURA CURTIS
+Candidate	CHRIS BOS	CHRIS BOS
+Candidate	MARTIN McLAUGHLIN	MARTIN McLAUGHLIN
+Candidate	RYAN HUFFMAN	RYAN HUFFMAN
+Candidate	THOMAS R. 'TOM' MORRISON	THOMAS R. 'TOM' MORRISON
+Candidate	DIANA BURDETTE	DIANA BURDETTE
+Candidate	MARK B. LUND	MARK B. LUND
+Candidate	DAN YOST	DAN YOST
+Candidate	JIM WALSH	JIM WALSH
+Candidate	PETER JANKO	PETER JANKO
+Candidate	BRIAN SAGER	BRIAN SAGER
+Candidate	LESLIE ARMSTRONG-McLEOD	LESLIE ARMSTRONG-McLEOD
+Candidate	MOHAMMAD 'MO' IQBAL	MOHAMMAD 'MO' IQBAL
+Candidate	MARTHA PASCHKE	MARTHA PASCHKE
+Candidate	JIM MALONE	JIM MALONE
+Candidate	CAROLYN SCHOFIELD	CAROLYN SCHOFIELD
+Candidate	SUZANNE M NESS	SUZANNE M NESS
+Candidate	DAVE VELLA	DAVE VELLA
+Candidate	CHRISTOPHER DEMINK	CHRISTOPHER DEMINK
+Candidate	TRAVIS S BREEDEN	TRAVIS S BREEDEN
+Candidate	ROBERT S. ELLINGTON-SNIPES	ROBERT S. ELLINGTON-SNIPES
+Candidate	CHARLENE EADS	CHARLENE EADS
+Candidate	JACKIE HAAS	JACKIE HAAS
+Candidate	ANNE STAVA-MURRAY	ANNE STAVA-MURRAY
+Candidate	LAURA HOIS	LAURA HOIS
+Candidate	KASSEM MOUKAHAL	KASSEM MOUKAHAL
+Candidate	JUAN THOMAS	JUAN THOMAS
+Candidate	BARBARA HERNANDEZ	BARBARA HERNANDEZ
+Candidate	DONALD R WALTER	DONALD R WALTER
+Candidate	DAGMARA 'DEE' AVELAR	DAGMARA 'DEE' AVELAR
+Candidate	RON DOWEIDT	RON DOWEIDT
+Candidate	KARLA BAILEY-SMITH	KARLA BAILEY-SMITH
+Candidate	SETH WIGGINS	SETH WIGGINS
+Candidate	JOSH GRYS	JOSH GRYS
+Candidate	MARK A. LUFT	MARK A. LUFT
+Candidate	EMILIANO VERA	EMILIANO VERA
+Candidate	SCOTT STOLL	SCOTT STOLL
+Candidate	ANGEL SMITH	ANGEL SMITH
+Candidate	LAWRENCE L. OLIVER	LAWRENCE L. OLIVER
+Candidate	CHASE WILHELM	CHASE WILHELM
+Candidate	HARRY BENTON	HARRY BENTON
+Candidate	DAVID PAUL BLUMENSHINE	DAVID PAUL BLUMENSHINE
+Candidate	CHEMBERLY CUMMINGS	CHEMBERLY CUMMINGS
+Candidate	KACIE WEICHERDING	KACIE WEICHERDING
+Candidate	ANDREW R. (ANDY) HIRES	ANDREW R. (ANDY) HIRES
+Candidate	JOHN SPENCER	JOHN SPENCER
+Candidate	ADAM M NIEMERG	ADAM M NIEMERG
+Candidate	MONICA J. BRISTOW	MONICA J. BRISTOW
+Candidate	AMY ELIK	AMY ELIK
+Candidate	DAVE BARNES	DAVE BARNES
+Candidate	JOHNNIE RAY SMITH II	JOHNNIE RAY SMITH II
+Candidate	JOHN R. HOWARD	JOHN R. HOWARD
+Candidate	CLIFFORD LINDEMANN	CLIFFORD LINDEMANN
+Candidate	ZACHARY A. MEYER	ZACHARY A. MEYER
+Candidate	PAUL JACOBS	PAUL JACOBS
+Candidate	DAVID M HOLDER	DAVID M HOLDER
+Candidate	KEVIN SCHMIDT	KEVIN SCHMIDT
+Candidate	NATHAN REITZ	NATHAN REITZ
+Candidate	TIMOTHY CECIL ARVIEW	TIMOTHY CECIL ARVIEW
+Candidate	FROYLAN 'FROY' JIMENEZ	FROYLAN 'FROY' JIMENEZ
+Candidate	DANIEL 'DANNY' O'TOOLE	DANIEL 'DANNY' O'TOOLE
+Candidate	ANTHONY BECKMAN	ANTHONY BECKMAN
+Candidate	KEN THOMAS	KEN THOMAS
+Candidate	ROBERT PETERS	ROBERT PETERS
+Candidate	AUGUST DEUSER	AUGUST DEUSER
+Candidate	RAE YAWER	RAE YAWER
+Candidate	BETH GONCHER	BETH GONCHER
+Candidate	JEANETTE WARD	JEANETTE WARD
+Candidate	PETER DOMBROWSKI	PETER DOMBROWSKI
+Candidate	CHRISTOPHER KASPERSKI	CHRISTOPHER KASPERSKI
+Candidate	WIN STOLLER	WIN STOLLER
+Candidate	LORI WILCOX	LORI WILCOX
+Candidate	MONICA M. GORDON	MONICA M. GORDON
+Candidate	MARTA PERALES	MARTA PERALES
+Candidate	PATRICK J. JOYCE	PATRICK J. JOYCE
+Candidate	ERIC M. WALLACE	ERIC M. WALLACE
+Candidate	BEN BIERLY	BEN BIERLY
+Candidate	MARY BURRESS	MARY BURRESS
+Candidate	MICHAEL CROWNER	MICHAEL CROWNER
+Candidate	LARRY E. HUG	LARRY E. HUG
+Candidate	MEG LOUGHRAN CAPPEL	MEG LOUGHRAN CAPPEL
+Candidate	THOMAS McCULLAGH	THOMAS McCULLAGH
+Candidate	SCOTT BENNETT	SCOTT BENNETT
+Candidate	JEFFREY E. (JEFF) FLEMING	JEFFREY E. (JEFF) FLEMING
+Candidate	ROBERT EMMONS, JR.	ROBERT EMMONS, JR.
+Candidate	SARAH GAD	SARAH GAD
+Candidate	AMEENA NUUR MATTHEWS	AMEENA NUUR MATTHEWS
+Candidate	PHILANISE WHITE	PHILANISE WHITE
+Candidate	MARCUS LEWIS	MARCUS LEWIS
+Candidate	THERESA J. RABORN	THERESA J. RABORN
+Candidate	RUSH DARWISH	RUSH DARWISH
+Candidate	CATHERINE A. O'SHEA	CATHERINE A. O'SHEA
+Candidate	CHARLES M. HUGHES	CHARLES M. HUGHES
+Candidate	MARIE NEWMAN	MARIE NEWMAN
+Candidate	MIKE FRICILONE	MIKE FRICILONE
+Candidate	CHRISTOPHER LASKY	CHRISTOPHER LASKY
+Candidate	KIMBALL LADIEN	KIMBALL LADIEN
+Candidate	TOMMY HANSON	TOMMY HANSON
+Candidate	BRIAN BURNS	BRIAN BURNS
+Candidate	JEANNE IVES	JEANNE IVES
+Candidate	KINA COLLINS	KINA COLLINS
+Candidate	ANTHONY CLARK	ANTHONY CLARK
+Candidate	KRISTINE SCHANBACHER	KRISTINE SCHANBACHER
+Candidate	WILLIAM OLSON	WILLIAM OLSON
+Candidate	INAM HUSSAIN	INAM HUSSAIN
+Candidate	JOSEPH J HANTSCH	JOSEPH J HANTSCH
+Candidate	ANDREW HELDUT	ANDREW HELDUT
+Candidate	SARGIS SANGARI	SARGIS SANGARI
+Candidate	ADAM BROAD	ADAM BROAD
+Candidate	VALERIE RAMIREZ MUKHERJEE	VALERIE RAMIREZ MUKHERJEE
+Candidate	RACHEL VENTURA	RACHEL VENTURA
+Candidate	KRISHNA K. BANSAL	KRISHNA K. BANSAL
+Candidate	JOEL D. FUNK	JOEL D. FUNK
+Candidate	RAYMOND C. LENZI	RAYMOND C. LENZI
+Candidate	STEFANIE SMITH	STEFANIE SMITH
+Candidate	ANTHONY CATELLA	ANTHONY CATELLA
+Candidate	CATALINA LAUF	CATALINA LAUF
+Candidate	JERRY EVANS	JERRY EVANS
+Candidate	TED GRADEL	TED GRADEL
+Candidate	JAMES T. 'JIM' MARTER	JAMES T. 'JIM' MARTER
+Candidate	CRAIG MORTON	CRAIG MORTON
+Candidate	JOHN W. HURSEY, JR	JOHN W. HURSEY, JR
+Candidate	DARREN E. DUNCAN	DARREN E. DUNCAN
+Candidate	KERRY A. WOLFF	KERRY A. WOLFF
+Candidate	CHUCK ELLINGTON	CHUCK ELLINGTON
+Candidate	ERIKA C. WEAVER	ERIKA C. WEAVER
+Candidate	MARY MILLER	MARY MILLER
+Candidate	DANI BRZOZOWSKI	DANI BRZOZOWSKI
+Candidate	WILLIAM W FAWELL	WILLIAM W FAWELL
+Candidate	SPANKY EDWARDS	SPANKY EDWARDS
+Candidate	ESTHER JOY KING	ESTHER JOY KING
+Candidate	TOM TARTER	TOM TARTER
+Candidate	CASEY CHLEBEK	CASEY CHLEBEK
+Candidate	PEGGY HUBBARD	PEGGY HUBBARD
+Candidate	ROBERT MARSHALL	ROBERT MARSHALL
+Candidate	RICHARD J. DURBIN	RICHARD J. DURBIN
+Candidate	MARK C. CURRAN JR.	MARK C. CURRAN JR.
+Candidate	ELIZABETH WARREN	ELIZABETH WARREN
+Candidate	ANDREW YANG	ANDREW YANG
+Candidate	MICHAEL BENNET	MICHAEL BENNET
+Candidate	JOHN K. DELANEY	JOHN K. DELANEY
+Candidate	TULSI GABBARD	TULSI GABBARD
+Candidate	CORY BOOKER	CORY BOOKER
+Candidate	ROQUE 'ROCKY' De La FUENTE	ROQUE 'ROCKY' De La FUENTE
+Candidate	DONALD J TRUMP	DONALD J TRUMP
+Candidate	JOSEPH R. BIDEN	JOSEPH R. BIDEN
+Candidate	MICHAEL R. BLOOMBERG	MICHAEL R. BLOOMBERG
+Candidate	PETE BUTTIGIEG	PETE BUTTIGIEG
+Candidate	DEVAL PATRICK	DEVAL PATRICK
+Candidate	BERNIE SANDERS	BERNIE SANDERS
+Candidate	TOM STEYER	TOM STEYER
+Candidate	JEFFREY EKENA	JEFFREY EKENA
+Candidate	MICHAEL E SULLIVAN	MICHAEL E SULLIVAN
+Candidate	DENNIS E. FOUTCH	DENNIS E. FOUTCH
+Candidate	DAVID E. WALSTER	DAVID E. WALSTER
+Candidate	SHELLY A. HARRIS	SHELLY A. HARRIS
+Candidate	MARGARET STANTON McBRIDE	MARGARET STANTON McBRIDE
+Candidate	JESSE G REYES	JESSE G REYES
+Candidate	NATHANIEL ROOSEVELT HOWSE	NATHANIEL ROOSEVELT HOWSE
+Candidate	CYNTHIA Y. COBBS	CYNTHIA Y. COBBS
+Candidate	DANIEL EPSTEIN	DANIEL EPSTEIN
+Candidate	P. SCOTT NEVILLE, JR.	P. SCOTT NEVILLE, JR.
+Candidate	MAUREEN PATRICIA O'LEARY	MAUREEN PATRICIA O'LEARY
+Candidate	SANDRA GISELA RAMOS	SANDRA GISELA RAMOS
+Candidate	MICHAEL B. HYMAN	MICHAEL B. HYMAN
+Candidate	JAMES LAWRENCE SANDERS	JAMES LAWRENCE SANDERS
+Candidate	D. BRIAN TRAMBLEY	D. BRIAN TRAMBLEY
+Candidate	SARAH TRIPP	SARAH TRIPP
+Candidate	JOHN GRIFFIN	JOHN GRIFFIN
+Candidate	SHARON O. JOHNSON	SHARON O. JOHNSON
+Candidate	SCOTT QUINN	SCOTT QUINN
+Candidate	COURTNEY COX	COURTNEY COX
+Candidate	MATTHEW J. HARTRICH	MATTHEW J. HARTRICH
+Candidate	DANIEL K. COCKRUM	DANIEL K. COCKRUM
+Candidate	TARA R. WALLACE	TARA R. WALLACE
+Candidate	CHELSEY E. CLARK	CHELSEY E. CLARK
+Candidate	RAY W. VAUGHN	RAY W. VAUGHN
+Candidate	STEVE STOBBS	STEVE STOBBS
+Candidate	LESLIE ANN WOOD	LESLIE ANN WOOD
+Candidate	JOEL J.C. POWLESS	JOEL J.C. POWLESS
+Candidate	SCOTT A. LERNER	SCOTT A. LERNER
+Candidate	JASON BOHM	JASON BOHM
+Candidate	JEFFREY S. GEISLER	JEFFREY S. GEISLER
+Candidate	TROY LOZAR	TROY LOZAR
+Candidate	RUTH E. WYMAN	RUTH E. WYMAN
+Candidate	DAVID R. MOORE	DAVID R. MOORE
+Candidate	CHERALYN (CHERIE) KESLER	CHERALYN (CHERIE) KESLER
+Candidate	DANA RHOADES	DANA RHOADES
+Candidate	GAIL NOLL	GAIL NOLL
+Candidate	ADAM GIGANTI	ADAM GIGANTI
+Candidate	MARK M. BOIE	MARK M. BOIE
+Candidate	ELLIOTT L. TURPIN	ELLIOTT L. TURPIN
+Candidate	JOHN WAYNE GUNTREN	JOHN WAYNE GUNTREN
+Candidate	MATT GOETTEN	MATT GOETTEN
+Candidate	ZACHARY A. SCHMIDT	ZACHARY A. SCHMIDT
+Candidate	RAYLENE GRISCHOW	RAYLENE GRISCHOW
+Candidate	DREW ERWIN	DREW ERWIN
+Candidate	TAD BRENNER	TAD BRENNER
+Candidate	EMILY S. SUTTON	EMILY S. SUTTON
+Candidate	ANDREW J. DOYLE	ANDREW J. DOYLE
+Candidate	CHRIS DOSCOTCH	CHRIS DOSCOTCH
+Candidate	KERRIE MALONEY LAYTIN	KERRIE MALONEY LAYTIN
+Candidate	CRISTIN KEELY McDONALD DUFFY	CRISTIN KEELY McDONALD DUFFY
+Candidate	TIESHA L. SMITH	TIESHA L. SMITH
+Candidate	JASON CHAMBERS	JASON CHAMBERS
+Candidate	JAMES T. DERICO, JR.	JAMES T. DERICO, JR.
+Candidate	ELIZABETH 'BETH' RYAN	ELIZABETH 'BETH' RYAN
+Candidate	AILEEN BHANDARI	AILEEN BHANDARI
+Candidate	KELLY MARIE McCARTHY	KELLY MARIE McCARTHY
+Candidate	WILLIAM G. WORKMAN	WILLIAM G. WORKMAN
+Candidate	JONATHAN C. WRIGHT	JONATHAN C. WRIGHT
+Candidate	JOHN O'MEARA	JOHN O'MEARA
+Candidate	U. O'NEAL	U. O'NEAL
+Candidate	LAURA AYALA-GONZALEZ	LAURA AYALA-GONZALEZ
+Candidate	JACQUELINE MARIE GRIFFIN	JACQUELINE MARIE GRIFFIN
+Candidate	MARY THERESE QUINN	MARY THERESE QUINN
+Candidate	DANIEL L. COLLINS	DANIEL L. COLLINS
+Candidate	CELESTIA L. MAYS	CELESTIA L. MAYS
+Candidate	SUZANNE THERESE McENEELY	SUZANNE THERESE McENEELY
+Candidate	MEGAN KATHLEEN MULAY	MEGAN KATHLEEN MULAY
+Candidate	LEVANDER 'VAN' SMITH, JR.	LEVANDER 'VAN' SMITH, JR.
+Candidate	JENNIFER PATRICIA CALLAHAN	JENNIFER PATRICIA CALLAHAN
+Candidate	JOSEPH CHICO	JOSEPH CHICO
+Candidate	BONNIE CAROL McGRATH	BONNIE CAROL McGRATH
+Candidate	JOY E. TOLBERT NELSON	JOY E. TOLBERT NELSON
+Candidate	ARTHUR D. SUTTON	ARTHUR D. SUTTON
+Candidate	CHRIS STACEY	CHRIS STACEY
+Candidate	MICHAEL O'MALLEY	MICHAEL O'MALLEY
+Candidate	TERESA MOLINA	TERESA MOLINA
+Candidate	KEELY PATRICIA HILLISON	KEELY PATRICIA HILLISON
+Candidate	AMANDA 'MANDY' PILLSBURY	AMANDA 'MANDY' PILLSBURY
+Candidate	DAN WALSH	DAN WALSH
+Candidate	SHEREE DESIREE HENRY	SHEREE DESIREE HENRY
+Candidate	LLOYD JAMES BROOKS	LLOYD JAMES BROOKS
+Candidate	HEATHER ANNE KENT	HEATHER ANNE KENT
+Candidate	ELIZABETH ANNE WALSH	ELIZABETH ANNE WALSH
+Candidate	LYNN WEAVER BOYLE	LYNN WEAVER BOYLE
+Candidate	LORRAINE MARY MURPHY	LORRAINE MARY MURPHY
+Candidate	JAMES PATRICK CRAWLEY	JAMES PATRICK CRAWLEY
+Candidate	ARACELI REYES DE LA CRUZ	ARACELI REYES DE LA CRUZ
+Candidate	DEIDRE BAUMANN	DEIDRE BAUMANN
+Candidate	RUSSELL W. HARTIGAN	RUSSELL W. HARTIGAN
+Candidate	MAURA McMAHON ZELLER	MAURA McMAHON ZELLER
+Candidate	JILL ROSE QUINN	JILL ROSE QUINN
+Candidate	WENDELIN 'WENDI' DeLOACH	WENDELIN 'WENDI' DeLOACH
+Candidate	JAMES SAMUEL WORLEY	JAMES SAMUEL WORLEY
+Candidate	KRISTA D. BUTLER	KRISTA D. BUTLER
+Candidate	TYRIA B. WALTON	TYRIA B. WALTON
+Candidate	CHELSEY R. ROBINSON	CHELSEY R. ROBINSON
+Candidate	FELICIA H. SIMMONS-STOVALL	FELICIA H. SIMMONS-STOVALL
+Candidate	SONDRA NICOLE DENMARK	SONDRA NICOLE DENMARK
+Candidate	PETER W. CHURCH	PETER W. CHURCH
+Candidate	JOHN McGEHEE	JOHN McGEHEE
+Candidate	DOUGLAS E. LEE	DOUGLAS E. LEE
+Candidate	J. JERRY KANE	J. JERRY KANE
+Candidate	BETSY SHAULIS	BETSY SHAULIS
+Candidate	KEVIN J. WARD	KEVIN J. WARD
+Candidate	BRITTANY MICHELLE PEDERSEN	BRITTANY MICHELLE PEDERSEN
+Candidate	ELIZABETH FLOOD	ELIZABETH FLOOD
+Candidate	ROBERT K. VILLA	ROBERT K. VILLA
+Candidate	MARGARET 'PEGGY' O'CONNELL	MARGARET 'PEGGY' O'CONNELL
+Candidate	JAMES F. McCLUSKEY	JAMES F. McCLUSKEY
+Candidate	DAVID GUY STEVENS	DAVID GUY STEVENS
+Candidate	GREG ABBOTT	GREG ABBOTT
+Candidate	JOHN JOSEPH PCOLINSKI, JR.	JOHN JOSEPH PCOLINSKI, JR.
+Candidate	RICHARD J. 'RICK' VEENSTRA	RICHARD J. 'RICK' VEENSTRA
+Candidate	AZAM NIZAMUDDIN	AZAM NIZAMUDDIN
+Candidate	RICHARD D. FELICE	RICHARD D. FELICE
+Candidate	ALICE WILSON	ALICE WILSON
+Candidate	JILL OTTE	JILL OTTE
+Candidate	ANN CELINE WALSH	ANN CELINE WALSH
+Candidate	MONIQUE O'TOOLE	MONIQUE O'TOOLE
+Candidate	RHONDA KIND BRUNO	RHONDA KIND BRUNO
+Candidate	DANIELLE M. PASCUCCI	DANIELLE M. PASCUCCI
+Candidate	DONALD R. TYER	DONALD R. TYER
+Candidate	MARNIE MICHELLE SLAVIN	MARNIE MICHELLE SLAVIN
+Candidate	CHRISTOPHER MOROZIN	CHRISTOPHER MOROZIN
+Candidate	MICHAEL C. SABOL	MICHAEL C. SABOL
+Candidate	ELIZABETH 'BETH' VONAU	ELIZABETH 'BETH' VONAU
+Candidate	DAVID GERVAIS	DAVID GERVAIS
+Candidate	MARY ELIZABETH McCLELLAN	MARY ELIZABETH McCLELLAN
+Candidate	DONALD R. BREWER	DONALD R. BREWER
+Candidate	JEANNIE RIDINGS	JEANNIE RIDINGS
+Candidate	JUSTIN HANSEN	JUSTIN HANSEN
+Candidate	KIMBERLEY CRUM KLEIN	KIMBERLEY CRUM KLEIN
+Candidate	MARK GERHARDT	MARK GERHARDT
+Candidate	JODY GLEASON	JODY GLEASON
+Candidate	TIMOTHY WRIGHT III	TIMOTHY WRIGHT III
+Candidate	ANDREA ZOPP	ANDREA ZOPP
+Candidate	ERTHARIN COUSIN	ERTHARIN COUSIN
+Candidate	NAOMI DAVIS	NAOMI DAVIS
+Candidate	PATRICIA L. GUINN	PATRICIA L. GUINN
+Candidate	RODNEY GIPSON	RODNEY GIPSON
+Candidate	RAHEEM UQDAH	RAHEEM UQDAH
+Candidate	LARRY GILMAN	LARRY GILMAN
+Candidate	JOHN HART	JOHN HART
+Candidate	MYRA HART	MYRA HART
+Candidate	NORENE SHADER	NORENE SHADER
+Candidate	PRESTON BROWN JR	PRESTON BROWN JR
+Candidate	EVAJAMANIA BROWN	EVAJAMANIA BROWN
+Candidate	LINDA HUDSON	LINDA HUDSON
+Candidate	DARREN FULLER	DARREN FULLER
+Candidate	CAROL HORTON	CAROL HORTON
+Candidate	BEN SILVIAN	BEN SILVIAN
+Candidate	LAURA SIEH	LAURA SIEH
+Candidate	CHAKENA SIMS	CHAKENA SIMS
+Candidate	ALLEN LOUIS LINTON, II	ALLEN LOUIS LINTON, II
+Candidate	GRACE CHAN McKIBBEN	GRACE CHAN McKIBBEN
+Candidate	WILLIAM E. HALL	WILLIAM E. HALL
+Candidate	SHELLEY DAVIS	SHELLEY DAVIS
+Candidate	NICHOLAS 'NICK' SHIELDS	NICHOLAS 'NICK' SHIELDS
+Candidate	REBECCA ZORACH	REBECCA ZORACH
+Candidate	DEVLIN JOSEPH SCHOOP	DEVLIN JOSEPH SCHOOP
+Candidate	JEANETTE TAYLOR	JEANETTE TAYLOR
+Candidate	MARIA R. BELL	MARIA R. BELL
+Candidate	DEBORAH LANE	DEBORAH LANE
+Candidate	KOURI C. MARSHALL	KOURI C. MARSHALL
+Candidate	MICHELLE A. HARRIS	MICHELLE A. HARRIS
+Candidate	RODERICK T. SAWYER	RODERICK T. SAWYER
+Candidate	KEVIN SUGGS	KEVIN SUGGS
+Candidate	LORI YOKOYAMA	LORI YOKOYAMA
+Candidate	AUDREY TANCOS	AUDREY TANCOS
+Candidate	GREG FLETCHER	GREG FLETCHER
+Candidate	LYNN FRANCO	LYNN FRANCO
+Candidate	SYMEON BROWN	SYMEON BROWN
+Candidate	JAYLIN McCLINTON	JAYLIN McCLINTON
+Candidate	AMANDA JO GREEP	AMANDA JO GREEP
+Candidate	DAVID BONNER	DAVID BONNER
+Candidate	MICAELA G. SMITH	MICAELA G. SMITH
+Candidate	KRISTAL HUDSON-DAVIS	KRISTAL HUDSON-DAVIS
+Candidate	AISHA EL-AMIN	AISHA EL-AMIN
+Candidate	SUKARI CAMPBELL	SUKARI CAMPBELL
+Candidate	ABDUL MALIK MUJAHID	ABDUL MALIK MUJAHID
+Candidate	JOHN WILLARD	JOHN WILLARD
+Candidate	LYLE C. EVANS, JR.	LYLE C. EVANS, JR.
+Candidate	KENNETH HENDERSON	KENNETH HENDERSON
+Candidate	SANOVIA REYNOLDS-PARKS	SANOVIA REYNOLDS-PARKS
+Candidate	JUAN JUAREZ	JUAN JUAREZ
+Candidate	PAULA WILSON	PAULA WILSON
+Candidate	REGGIE GREENWOOD	REGGIE GREENWOOD
+Candidate	MONIQUE WILLIAMS	MONIQUE WILLIAMS
+Candidate	KYLE SUMMERS	KYLE SUMMERS
+Candidate	EMILY HIGGS	EMILY HIGGS
+Candidate	RANDALL KRAUSE-VINSON	RANDALL KRAUSE-VINSON
+Candidate	SHERRY NEWQUIST	SHERRY NEWQUIST
+Candidate	ALFRED SAUCEDO	ALFRED SAUCEDO
+Candidate	ANDRâ J. WASHINGTON	ANDRâ J. WASHINGTON
+Candidate	HOPE ZAWASKI	HOPE ZAWASKI
+Candidate	CLEOPATRA WATSON	CLEOPATRA WATSON
+Candidate	MARRICE COVERSON	MARRICE COVERSON
+Candidate	CORY THAMES	CORY THAMES
+Candidate	MICHAEL W. SMITH	MICHAEL W. SMITH
+Candidate	SHEILA CHALMERS-CURRIN	SHEILA CHALMERS-CURRIN
+Candidate	LAMAR C. BROWN	LAMAR C. BROWN
+Candidate	VERNARD ALSBERRY	VERNARD ALSBERRY
+Candidate	KENNETH FRANKLIN	KENNETH FRANKLIN
+Candidate	MAUREEN FORTE	MAUREEN FORTE
+Candidate	JUDY DIEKELMAN	JUDY DIEKELMAN
+Candidate	NICHOLAS AFRICANO	NICHOLAS AFRICANO
+Candidate	JAYNE RAEF	JAYNE RAEF
+Candidate	JACK McINERNEY	JACK McINERNEY
+Candidate	GEORGE PEARSON	GEORGE PEARSON
+Candidate	WAYLAND JOHNSON JR	WAYLAND JOHNSON JR
+Candidate	DELIAH ODEH	DELIAH ODEH
+Candidate	JOSE REQUENA	JOSE REQUENA
+Candidate	KYLE KILLACKY	KYLE KILLACKY
+Candidate	NEEL JHOBALIA	NEEL JHOBALIA
+Candidate	BRIAN PIOPPO	BRIAN PIOPPO
+Candidate	KATE WU	KATE WU
+Candidate	KATHLEEN 'KATHY' SHAEVEL	KATHLEEN 'KATHY' SHAEVEL
+Candidate	ADAM FLORES	ADAM FLORES
+Candidate	ANGELA ROBERTSON	ANGELA ROBERTSON
+Candidate	JOSE LUIS TORREZ	JOSE LUIS TORREZ
+Candidate	TAMMY GEORGIOU	TAMMY GEORGIOU
+Candidate	CHRISTIAN D. PERRY	CHRISTIAN D. PERRY
+Candidate	LYNN BARKER	LYNN BARKER
+Candidate	KEVIN E. O'GORMAN	KEVIN E. O'GORMAN
+Candidate	ADRIANA D. OLSON	ADRIANA D. OLSON
+Candidate	PATRICK DALEY THOMPSON	PATRICK DALEY THOMPSON
+Candidate	DONNA HUGHES	DONNA HUGHES
+Candidate	KYLE R. HASTINGS	KYLE R. HASTINGS
+Candidate	MAUREEN SULLIVAN	MAUREEN SULLIVAN
+Candidate	DANIEL GUZMAN	DANIEL GUZMAN
+Candidate	AMALIA DEJESUS	AMALIA DEJESUS
+Candidate	KEITH PEKAU	KEITH PEKAU
+Candidate	CYNTHIA NELSON KATSENES	CYNTHIA NELSON KATSENES
+Candidate	JESUS SOLORIO	JESUS SOLORIO
+Candidate	STEPHEN BALICH	STEPHEN BALICH
+Candidate	MADELYN D FLAHERTY	MADELYN D FLAHERTY
+Candidate	MICHAEL SHACKEL	MICHAEL SHACKEL
+Candidate	JESUS AYALA, JR.	JESUS AYALA, JR.
+Candidate	BRIDGET FLYNN	BRIDGET FLYNN
+Candidate	MELISSA STRUBE	MELISSA STRUBE
+Candidate	PETER GARIEPY	PETER GARIEPY
+Candidate	SOPHIA OLAZABA	SOPHIA OLAZABA
+Candidate	VENU GUPTA	VENU GUPTA
+Candidate	ABBY WITT	ABBY WITT
+Candidate	ANGELICA ALFARO	ANGELICA ALFARO
+Candidate	SHANA EAST	SHANA EAST
+Candidate	COLIN BIRD-MARTINEZ	COLIN BIRD-MARTINEZ
+Candidate	ALMA ANAYA	ALMA ANAYA
+Candidate	MELISSA RUBIO	MELISSA RUBIO
+Candidate	BYRON SIGCHO-LOPEZ	BYRON SIGCHO-LOPEZ
+Candidate	CLAUDIA P. RODRIGUEZ	CLAUDIA P. RODRIGUEZ
+Candidate	JUAN JOSE GONZALEZ	JUAN JOSE GONZALEZ
+Candidate	JULIAN AGUILAR	JULIAN AGUILAR
+Candidate	DOROTHY HATHAWAY	DOROTHY HATHAWAY
+Candidate	ANAYANZI MENDEZ	ANAYANZI MENDEZ
+Candidate	TIMOTHY HEILENBACH	TIMOTHY HEILENBACH
+Candidate	BRIAN HATHAWAY	BRIAN HATHAWAY
+Candidate	NICHOLAS GRIGOLETTI	NICHOLAS GRIGOLETTI
+Candidate	ZACH KOUTSKY	ZACH KOUTSKY
+Candidate	KAITLIN 'KADY' McFADDEN	KAITLIN 'KADY' McFADDEN
+Candidate	MICHAEL NEGRON	MICHAEL NEGRON
+Candidate	EILEEN DORDEK	EILEEN DORDEK
+Candidate	CARTER HARMS	CARTER HARMS
+Candidate	ETHAN COX	ETHAN COX
+Candidate	LUCY MOOG	LUCY MOOG
+Candidate	RYAN DUNIGAN	RYAN DUNIGAN
+Candidate	CYNTHIA M. SANTOS	CYNTHIA M. SANTOS
+Candidate	PATRICK O'CONNOR	PATRICK O'CONNOR
+Candidate	MARIYANA T. SPYROPOULOS	MARIYANA T. SPYROPOULOS
+Candidate	CHRISTOPHER TALIAFERRO	CHRISTOPHER TALIAFERRO
+Candidate	ABIGAIL SCHULTZ	ABIGAIL SCHULTZ
+Candidate	SANTOS MORENO	SANTOS MORENO
+Candidate	WILLIAM BIANCHI	WILLIAM BIANCHI
+Candidate	PATRICK MALONEY	PATRICK MALONEY
+Candidate	WILLIAM RUDNICK	WILLIAM RUDNICK
+Candidate	VIVIEN JOY LAMADRID	VIVIEN JOY LAMADRID
+Candidate	NOAH BRANT	NOAH BRANT
+Candidate	EDUARDO FERNANDEZ dE GARAYALDE GONZALEZ	EDUARDO FERNANDEZ dE GARAYALDE GONZALEZ
+Candidate	ROSS D. SECLER	ROSS D. SECLER
+Candidate	COLETTE HOLT	COLETTE HOLT
+Candidate	DENISE K. MARX	DENISE K. MARX
+Candidate	RYAN O'DONNELL	RYAN O'DONNELL
+Candidate	DAVID A. ZULKEY	DAVID A. ZULKEY
+Candidate	RIO DIAZ	RIO DIAZ
+Candidate	DIANA HELT	DIANA HELT
+Candidate	DAVID JACOBSON	DAVID JACOBSON
+Candidate	KEVIN JOHNSON	KEVIN JOHNSON
+Candidate	BRAD LIPPITZ	BRAD LIPPITZ
+Candidate	JONATHAN PIZER	JONATHAN PIZER
+Candidate	AMANDA PENABAD	AMANDA PENABAD
+Candidate	LEE GREENHOUSE	LEE GREENHOUSE
+Candidate	MATTHEW MARTIN	MATTHEW MARTIN
+Candidate	ANDREA McPIKE	ANDREA McPIKE
+Candidate	MARY COLLERAN	MARY COLLERAN
+Candidate	TERI GIDWITZ	TERI GIDWITZ
+Candidate	PATRICK MULCHRONE	PATRICK MULCHRONE
+Candidate	DAVE TEMKIN	DAVE TEMKIN
+Candidate	JARED ZINGSHEIM	JARED ZINGSHEIM
+Candidate	AMBER FUDACZ	AMBER FUDACZ
+Candidate	DAVID DI SANTI	DAVID DI SANTI
+Candidate	ALAN SPITZ	ALAN SPITZ
+Candidate	GRAEME JACK	GRAEME JACK
+Candidate	ANTHONY HINSBERGER	ANTHONY HINSBERGER
+Candidate	DEANNA (DEE) DARLING	DEANNA (DEE) DARLING
+Candidate	GERALD STAPLETON	GERALD STAPLETON
+Candidate	PATRICK WATSON	PATRICK WATSON
+Candidate	MARGARET DE LA ROSA	MARGARET DE LA ROSA
+Candidate	SIK SON	SIK SON
+Candidate	ERICA BRAY-PARKER	ERICA BRAY-PARKER
+Candidate	REID McCOLLUM	REID McCOLLUM
+Candidate	LYNN CASEY-MAHER	LYNN CASEY-MAHER
+Candidate	SONIA DESAI BHAGWAKAR	SONIA DESAI BHAGWAKAR
+Candidate	STEVEN M. SHETSKY	STEVEN M. SHETSKY
+Candidate	ELIZABETH PENESIS	ELIZABETH PENESIS
+Candidate	BRIAN J. McPARTLIN	BRIAN J. McPARTLIN
+Candidate	ELISA DEVLIN	ELISA DEVLIN
+Candidate	DAN BAILEY	DAN BAILEY
+Candidate	DAVID R. ANDALCIO	DAVID R. ANDALCIO
+Candidate	SHEILA RAWAT	SHEILA RAWAT
+Candidate	GEORGE J. KIEBALA	GEORGE J. KIEBALA
+Candidate	JEREMY DYSON	JEREMY DYSON
+Candidate	LISA POCIUS	LISA POCIUS
+Candidate	GABRIEL EDWARDS	GABRIEL EDWARDS
+Candidate	KIMBERLY WOODSON	KIMBERLY WOODSON
+Candidate	CHRISTOPHER ESPINOZA	CHRISTOPHER ESPINOZA
+Candidate	JULIAN MORGEN	JULIAN MORGEN
+Candidate	MARIA PETERSON	MARIA PETERSON
+Candidate	NANCY SHEPHERDSON	NANCY SHEPHERDSON
+Candidate	MARYANN VAZQUEZ	MARYANN VAZQUEZ
+Candidate	BRIAN ZHENG	BRIAN ZHENG
+Candidate	KYLE CARLSON	KYLE CARLSON
+Candidate	MIKE ZANILLO	MIKE ZANILLO
+Candidate	KATHRYN VLAHOS	KATHRYN VLAHOS
+Candidate	PATRICE RONCZKOWSKI	PATRICE RONCZKOWSKI
+Candidate	AARON DEL MAR	AARON DEL MAR
+Candidate	WILLIAM MERCHANTZ	WILLIAM MERCHANTZ
+Candidate	KAREN DOWLING	KAREN DOWLING
+Candidate	RICHARD JANOR	RICHARD JANOR
+Candidate	SCOTT SEAMAN	SCOTT SEAMAN
+Candidate	RONALD LAWLESS	RONALD LAWLESS
+Candidate	AMALIA MAHONEY	AMALIA MAHONEY
+Candidate	CRISTAL THOMAS GARY	CRISTAL THOMAS GARY
+Candidate	BRANDON JOHNSON	BRANDON JOHNSON
+Candidate	JAMIE BROWN	JAMIE BROWN
+Candidate	FREDERICK 'FRITZ' KAEGI	FREDERICK 'FRITZ' KAEGI
+Candidate	MONY RUIZ VELASCO	MONY RUIZ VELASCO
+Candidate	MARLON D. HARRIS	MARLON D. HARRIS
+Candidate	HARLENE ELLIN	HARLENE ELLIN
+Candidate	MIHIR GARUD	MIHIR GARUD
+Candidate	BENETTA MANSFIELD	BENETTA MANSFIELD
+Candidate	TIM THOMAS	TIM THOMAS
+Candidate	BARTON MOY	BARTON MOY
+Candidate	GAIL M. SILVER	GAIL M. SILVER
+Candidate	JOAN L. LONG	JOAN L. LONG
+Candidate	ADDISON WOODWARD	ADDISON WOODWARD
+Candidate	ANN HENSTRAND	ANN HENSTRAND
+Candidate	JENNIFER VINCENT	JENNIFER VINCENT
+Candidate	MARKAYLE TOLLIVER	MARKAYLE TOLLIVER
+Candidate	THOMAS A. (TOM) CIAVARELLA	THOMAS A. (TOM) CIAVARELLA
+Candidate	MARY ANN ABBOTT	MARY ANN ABBOTT
+Candidate	DAVID HERNANDEZ	DAVID HERNANDEZ
+Candidate	ELIZABETH HENRICKS	ELIZABETH HENRICKS
+Candidate	STEVEN DYME	STEVEN DYME
+Candidate	YVONNE O'CONNOR	YVONNE O'CONNOR
+Candidate	PETER WOJDA IV	PETER WOJDA IV
+Candidate	RUDYARD 'RUDY' URIAN	RUDYARD 'RUDY' URIAN
+Candidate	MARTY CASTRO	MARTY CASTRO
+Candidate	ERIC DAVIS	ERIC DAVIS
+Candidate	THOMAS GARY	THOMAS GARY
+Candidate	MARLA IZBICKY	MARLA IZBICKY
+Candidate	JULIE LEHRMAN	JULIE LEHRMAN
+Candidate	MARTESE LUZETTE CHISM	MARTESE LUZETTE CHISM
+Candidate	OJUS KHANOLKAR	OJUS KHANOLKAR
+Candidate	PAT QUINN	PAT QUINN
+Candidate	MARCELINO GARCIA	MARCELINO GARCIA
+Candidate	EMMA M. MITTS	EMMA M. MITTS
+Candidate	PATRICIA DOWELL	PATRICIA DOWELL
+Candidate	BARBARA McGOWAN	BARBARA McGOWAN
+Candidate	BRENDAN REILLY	BRENDAN REILLY
+Candidate	RORY HOSKINS	RORY HOSKINS
+Candidate	CLAUDIA MORENO-NUNEZ	CLAUDIA MORENO-NUNEZ
+Candidate	DOMINIQUE CORONEL	DOMINIQUE CORONEL
+Candidate	MIGUEL BAUTISTA	MIGUEL BAUTISTA
+Candidate	MARK HOSTY	MARK HOSTY
+Candidate	ELOISE GERSON	ELOISE GERSON
+Candidate	ADRIAN WRIGHT	ADRIAN WRIGHT
+Candidate	KRISTINE FARRA	KRISTINE FARRA
+Candidate	ERIC PULIA	ERIC PULIA
+Candidate	JOHN BERGHOLZ	JOHN BERGHOLZ
+Candidate	PAUL FASSE	PAUL FASSE
+Candidate	BUNHENG LAI	BUNHENG LAI
+Candidate	KEVIN MORRISON	KEVIN MORRISON
+Candidate	MATTHEW STEWARD	MATTHEW STEWARD
+Candidate	LYNNE STORNELLO	LYNNE STORNELLO
+Candidate	MATT SUTTON	MATT SUTTON
+Candidate	MOHAMMED MORTOJA	MOHAMMED MORTOJA
+Candidate	JOSEPH WENTZEL	JOSEPH WENTZEL
+Candidate	MARIA VESEY	MARIA VESEY
+Candidate	DEMETRIUS GIBSON	DEMETRIUS GIBSON
+Candidate	B. IVONNE HOPKINS	B. IVONNE HOPKINS
+Candidate	KATHLEEN GRIFFIN	KATHLEEN GRIFFIN
+Candidate	NAZNEEN HASHMI	NAZNEEN HASHMI
+Candidate	ADRIANA BARRIGA-GREEN	ADRIANA BARRIGA-GREEN
+Candidate	PATRICK GORDON	PATRICK GORDON
+Candidate	BRENDA RODGERS	BRENDA RODGERS
+Candidate	COLLEEN LaVIGNE	COLLEEN LaVIGNE
+Candidate	GARY KLEPPE	GARY KLEPPE
+Candidate	NASIR JAHANGIR	NASIR JAHANGIR
+Candidate	HANNA HYMAN	HANNA HYMAN
+Candidate	THEODORE 'TED' J. MASON	THEODORE 'TED' J. MASON
+Candidate	JOSEPH FOLISI	JOSEPH FOLISI
+Candidate	ANTHONY IOSCO	ANTHONY IOSCO
+Candidate	NICK PERIC	NICK PERIC
+Candidate	PETER KOPSAFTIS	PETER KOPSAFTIS
+Candidate	NIMISH JANI	NIMISH JANI
+Candidate	JOE SHEPHERD	JOE SHEPHERD
+Candidate	JOHN FITZGERALD	JOHN FITZGERALD
+Candidate	HOPE R. GREEN	HOPE R. GREEN
+Candidate	CATHERINE MARQUIS	CATHERINE MARQUIS
+Candidate	CHRISTIE ANN HEFNER	CHRISTIE ANN HEFNER
+Candidate	JACOB (JAKE) RILEY	JACOB (JAKE) RILEY
+Candidate	JANICE BERMAN-KRAUTWALD	JANICE BERMAN-KRAUTWALD
+Candidate	JOHN LEE BINGHAM	JOHN LEE BINGHAM
+Candidate	MOLLY BOSI	MOLLY BOSI
+Candidate	STUART REID	STUART REID
+Candidate	CHASE RAWLINS	CHASE RAWLINS
+Candidate	VASILIOS STEFANIS	VASILIOS STEFANIS
+Candidate	DANIEL BISS	DANIEL BISS
+Candidate	JOSINA MORITA	JOSINA MORITA
+Candidate	DANIEL J. MONTGOMERY	DANIEL J. MONTGOMERY
+Candidate	ILYA SHEYMAN	ILYA SHEYMAN
+Candidate	MIGUEL MORENO	MIGUEL MORENO
+Candidate	LEO SMITH	LEO SMITH
+Candidate	LENI MANAA-HOPPENWORTH	LENI MANAA-HOPPENWORTH
+Candidate	STEVE HAGERTY	STEVE HAGERTY
+Candidate	MARKUS PITCHFORD	MARKUS PITCHFORD
+Candidate	KOSTAS POULAKIDAS	KOSTAS POULAKIDAS
+Candidate	GREG SCHWEIZER	GREG SCHWEIZER
+Candidate	DEBRA SHORE	DEBRA SHORE
+Candidate	CORTNEY RITSEMA	CORTNEY RITSEMA
+Candidate	MICHELLE L. OXMAN	MICHELLE L. OXMAN
+Candidate	MICHAEL J. HARRINGTON	MICHAEL J. HARRINGTON
+Candidate	RYAN McINTYRE	RYAN McINTYRE
+Candidate	JANE HANNEMANN	JANE HANNEMANN
+Candidate	DAVID CAMPBELL	DAVID CAMPBELL
+Candidate	JILL WINE-BANKS	JILL WINE-BANKS
+Candidate	AURORA AUSTRIACO	AURORA AUSTRIACO
+Candidate	DAVID Y. KO	DAVID Y. KO
+Candidate	CHRISTOPHER J. DUNN	CHRISTOPHER J. DUNN
+Candidate	MARTIN MOYLAN	MARTIN MOYLAN
+Candidate	MARCIA BLUMENTHAL FIELDS	MARCIA BLUMENTHAL FIELDS
+Candidate	CAROLYN TOWNSEND	CAROLYN TOWNSEND
+Candidate	MARGARET Ã¶MEGÃ´ WELCH	MARGARET Ã¶MEGÃ´ WELCH
+Candidate	AMARZAYA MAKHBAL	AMARZAYA MAKHBAL
+Candidate	ANUB ABRAHAM	ANUB ABRAHAM
+Candidate	SUSAN SWEENEY	SUSAN SWEENEY
+Candidate	CHARLENE FOSS-EGGEMANN	CHARLENE FOSS-EGGEMANN
+Candidate	KENNETH JOCHUM	KENNETH JOCHUM
+Candidate	PETE BEST	PETE BEST
+Candidate	BETHANY FEELEY	BETHANY FEELEY
+Candidate	JASMINE HAUSER	JASMINE HAUSER
+Candidate	PHILIP AROUCA	PHILIP AROUCA
+Candidate	ZACHARY EL GHATIT	ZACHARY EL GHATIT
+Candidate	ELLIOTT HARTSTEIN	ELLIOTT HARTSTEIN
+Candidate	HOLLY KIM	HOLLY KIM
+Candidate	PAUL LAW	PAUL LAW
+Candidate	ESTEBAN CARBAJAL	ESTEBAN CARBAJAL
+Candidate	DULCE ORTIZ	DULCE ORTIZ
+Candidate	MARC JONES	MARC JONES
+Candidate	GERI WASSERMAN	GERI WASSERMAN
+Candidate	BRIAN DUPUIS	BRIAN DUPUIS
+Candidate	ANN SUNNY ELENGICAL	ANN SUNNY ELENGICAL
+Candidate	BRIAN SHIELDS	BRIAN SHIELDS
+Candidate	ARUN POOKOTE	ARUN POOKOTE
+Candidate	PATRICIA A. (PAT) BAMFORD	PATRICIA A. (PAT) BAMFORD
+Candidate	KARI AROUCA	KARI AROUCA
+Candidate	LAWRENCE (LARRY) FEDER	LAWRENCE (LARRY) FEDER
+Candidate	JONATHAN SWANN	JONATHAN SWANN
+Candidate	SYERRA CUNNINGHAM	SYERRA CUNNINGHAM
+Candidate	THOMAS MAILLARD	THOMAS MAILLARD
+Candidate	JULIE MORRISON	JULIE MORRISON
+Candidate	VICTOR SHI	VICTOR SHI
+Candidate	JEANNE MARIE DAURAY	JEANNE MARIE DAURAY
+Candidate	ANDRES CARRASCO	ANDRES CARRASCO
+Candidate	MARK SHAW	MARK SHAW
+Candidate	JENNIFER NEUBAUER	JENNIFER NEUBAUER
+Candidate	CINDY GOOD	CINDY GOOD
+Candidate	ROBERT BEDNAR	ROBERT BEDNAR
+Candidate	MICHELLE PARNELL	MICHELLE PARNELL
+Candidate	MARGARET SIEBERT	MARGARET SIEBERT
+Candidate	ALEX ARROYO	ALEX ARROYO
+Candidate	JOHN ATKINSON	JOHN ATKINSON
+Candidate	JULIA BECKMAN	JULIA BECKMAN
+Candidate	TOM BRAXTON	TOM BRAXTON
+Candidate	STEPHANIE KIFOWIT	STEPHANIE KIFOWIT
+Candidate	RUTHMONY HONG BRININGER	RUTHMONY HONG BRININGER
+Candidate	DONALD ISHMAEL	DONALD ISHMAEL
+Candidate	JING YUAN MA	JING YUAN MA
+Candidate	MICHAEL DE ASIS	MICHAEL DE ASIS
+Candidate	DIANE HEWITT	DIANE HEWITT
+Candidate	CLINT V. BROWN	CLINT V. BROWN
+Candidate	BRIGETTE FIDAY	BRIGETTE FIDAY
+Candidate	DAVID GLORIA	DAVID GLORIA
+Candidate	KILY MALDEN ADAMS	KILY MALDEN ADAMS
+Candidate	JEFFREY CROWELL	JEFFREY CROWELL
+Candidate	CAROL DI COLA	CAROL DI COLA
+Candidate	LOUISE M. MILLER	LOUISE M. MILLER
+Candidate	NANCY L. STASZAK	NANCY L. STASZAK
+Candidate	MAGGIE WUNDERLY	MAGGIE WUNDERLY
+Candidate	MARY ANNE CUMMINGS	MARY ANNE CUMMINGS
+Candidate	CASILDO 'CASEY' CUEVAS	CASILDO 'CASEY' CUEVAS
+Candidate	EMMANUEL S. LlAMAS	EMMANUEL S. LlAMAS
+Candidate	MARJORIE LOGMAN	MARJORIE LOGMAN
+Candidate	GEORGINA POOLE	GEORGINA POOLE
+Candidate	KEN HARRIS	KEN HARRIS
+Candidate	LAUREN STALEY FERRY	LAUREN STALEY FERRY
+Candidate	KRYSTAL GARCIA CENTENO	KRYSTAL GARCIA CENTENO
+Candidate	RICHARD RODRIGUEZ	RICHARD RODRIGUEZ
+Candidate	DANIEL EDWARD MALONEY	DANIEL EDWARD MALONEY
+Candidate	ROGER CLAAR	ROGER CLAAR
+Candidate	RAQUEL MITCHELL	RAQUEL MITCHELL
+Candidate	LAURA KOCHAN	LAURA KOCHAN
+Candidate	CARL MILLER	CARL MILLER
+Candidate	DOMINICK STELLA	DOMINICK STELLA
+Candidate	THOMAS G. O'BRIEN	THOMAS G. O'BRIEN
+Candidate	ERIN HAGGERTY ANTONIETTI	ERIN HAGGERTY ANTONIETTI
+Candidate	LYNNE SCHWARTZHOFF	LYNNE SCHWARTZHOFF
+Candidate	MATT WELSER	MATT WELSER
+Candidate	NATHANIEL M. KEENER	NATHANIEL M. KEENER
+Candidate	PHILLIP MATTHEWS	PHILLIP MATTHEWS
+Candidate	KERRY WARREN-COUCH	KERRY WARREN-COUCH
+Candidate	ANDREW LOPINOT	ANDREW LOPINOT
+Candidate	ELIZABETH HUNTER	ELIZABETH HUNTER
+Candidate	CHRISTOPHER BAKER	CHRISTOPHER BAKER
+Candidate	LINDA YORK	LINDA YORK
+Candidate	BARBARA BRUMFIELD	BARBARA BRUMFIELD
+Candidate	ALLAN BLESSING	ALLAN BLESSING
+Candidate	SHERRY TITE	SHERRY TITE
+Candidate	JOHN GULLEY	JOHN GULLEY
+Candidate	LaTOYA GREENWOOD	LaTOYA GREENWOOD
+Candidate	CHRIS BELT	CHRIS BELT
+Candidate	GEORGIA L. de la GARZA	GEORGIA L. de la GARZA
+Candidate	KEN SHARKEY	KEN SHARKEY
+Candidate	THOMAS McRAE	THOMAS McRAE
+Candidate	GLORIA CAMPOS	GLORIA CAMPOS
+Candidate	BARBARA VIVIANO	BARBARA VIVIANO
+Candidate	JEFFREY DIEDERICH	JEFFREY DIEDERICH
+Candidate	MORRIS 'LANE' HARVEY	MORRIS 'LANE' HARVEY
+Candidate	GEORGE OBERNAGEL	GEORGE OBERNAGEL
+Candidate	DAVID A. BONOMA	DAVID A. BONOMA
+Candidate	JAMES JOHN KNIBBS	JAMES JOHN KNIBBS
+Candidate	BRAD S. TELANDER	BRAD S. TELANDER
+Candidate	SCOTT EDWARD LIPINSKI	SCOTT EDWARD LIPINSKI
+Candidate	THOMAS J. CONDON, JR.	THOMAS J. CONDON, JR.
+Candidate	LAUREN BROUGHAM GLENNON	LAUREN BROUGHAM GLENNON
+Candidate	REGINA ANN MESCALL	REGINA ANN MESCALL
+Candidate	TERESA BRENNAN	TERESA BRENNAN
+Candidate	GABRIELA ROMERO	GABRIELA ROMERO
+Candidate	KHALED MESSAI	KHALED MESSAI
+Candidate	MICHELLE PAUL	MICHELLE PAUL
+Candidate	MICHAEL FRERICHS	MICHAEL FRERICHS
+Candidate	EMMA TODD	EMMA TODD
+Candidate	CRAIG COLBROOK	CRAIG COLBROOK
+Candidate	LISA M. STANLEY	LISA M. STANLEY
+Candidate	JENN CARRILLO	JENN CARRILLO
+Candidate	PAMELLA GRONEMEYER	PAMELLA GRONEMEYER
+Candidate	BRIAN WILENS	BRIAN WILENS
+Candidate	CAROL McCLAINE	CAROL McCLAINE
+Candidate	JOHN BERGEE	JOHN BERGEE
+Candidate	ANNE M. HEILES	ANNE M. HEILES
+Candidate	CARL ERNEST KASTEN	CARL ERNEST KASTEN
+Candidate	MARK ROBERT MADDOCK	MARK ROBERT MADDOCK
+Candidate	ADA OWENS	ADA OWENS
+Candidate	ELLEN SCHANZLE-HASKINS	ELLEN SCHANZLE-HASKINS
+Candidate	CHUCK NAPIER	CHUCK NAPIER
+Candidate	ALLAN M. AXELROD	ALLAN M. AXELROD
+Candidate	ANNE SHAW	ANNE SHAW
+Candidate	JAMIE GUERRA DICKLER	JAMIE GUERRA DICKLER
+Candidate	MARTIN DAVIS	MARTIN DAVIS
+Candidate	SUSAN GANT REYNOLDS	SUSAN GANT REYNOLDS
+Candidate	MARIA VASQUEZ	MARIA VASQUEZ
+Candidate	CORY ELI OSHITA	CORY ELI OSHITA
+Candidate	ANTHONY LUCAFO	ANTHONY LUCAFO
+Candidate	EILEEN MARIE O'CONNOR	EILEEN MARIE O'CONNOR
+Candidate	MARCIA O'BRIEN CONWAY	MARCIA O'BRIEN CONWAY
+Candidate	OWENS 'JOE' SHELBY	OWENS 'JOE' SHELBY
+Candidate	MABLE TAYLOR	MABLE TAYLOR
+Candidate	KRISTEN MARIE LYONS	KRISTEN MARIE LYONS
+Candidate	PAMELA REAVES-HARRIS	PAMELA REAVES-HARRIS
+Candidate	DON TRACY	DON TRACY
+Candidate	KEVIN BREHENY	KEVIN BREHENY
+Candidate	DAVID LOWITZKI	DAVID LOWITZKI
+Candidate	GWYN CIESLA	GWYN CIESLA
+Candidate	MARK PIETROWSKI JR.	MARK PIETROWSKI JR.
+Candidate	ANGELA PRICE	ANGELA PRICE
+Candidate	STEPHEN BRUESEWITZ	STEPHEN BRUESEWITZ
+Candidate	KATHARINE CUNEO	KATHARINE CUNEO
+Candidate	ANDREW G. McKAY	ANDREW G. McKAY
+Candidate	NATHANIEL A. BIRR	NATHANIEL A. BIRR
+Candidate	MICHAEL LEONE	MICHAEL LEONE
+Candidate	NICHOLAS (NICK) DAGGERS	NICHOLAS (NICK) DAGGERS
+Candidate	MAURY GOODMAN	MAURY GOODMAN
+Candidate	NANCY GLISSMAN	NANCY GLISSMAN
+Candidate	ANTHONY MAGLIARI	ANTHONY MAGLIARI
+Candidate	LAUREN WAGNER	LAUREN WAGNER
+Candidate	SANDRA ENRIQUEZ	SANDRA ENRIQUEZ
+Candidate	RANDALL LAWRENCE	RANDALL LAWRENCE
+Candidate	TRACEE STEELE	TRACEE STEELE
+Candidate	JIMMY CHAU	JIMMY CHAU
+Candidate	MIRIAM SMITH	MIRIAM SMITH
+Candidate	MARK GUETHLE	MARK GUETHLE
+Candidate	MARC POULOS	MARC POULOS
+Candidate	ALISON SQUIRES	ALISON SQUIRES
+Candidate	LUIS ERIC AGUILAR	LUIS ERIC AGUILAR
+Candidate	CHARLES 'CHUCK' WHEELER	CHARLES 'CHUCK' WHEELER
+Candidate	LAURA POLLASTRINI	LAURA POLLASTRINI
+Candidate	NICOLE PRATER	NICOLE PRATER
+Candidate	JOHN 'JACK' LYNCH	JOHN 'JACK' LYNCH
+Candidate	TIM BAGBY	TIM BAGBY
+Candidate	CORNELIUS SHANAHAN	CORNELIUS SHANAHAN
+Candidate	BRADLEY R. TROWBRIDGE	BRADLEY R. TROWBRIDGE
+Candidate	JONATHAN CLARK GREEN	JONATHAN CLARK GREEN
+Candidate	MICHAEL A. FORTI	MICHAEL A. FORTI
+Candidate	GERMAINE LIGHT	GERMAINE LIGHT
+Candidate	MITCHELL ESSLINGER	MITCHELL ESSLINGER
+Candidate	SAMUEL REISS	SAMUEL REISS
+Candidate	RACHEL SMITH-BOLTON	RACHEL SMITH-BOLTON
+Candidate	VIVIAN ROBINSON	VIVIAN ROBINSON
+Candidate	PATRICK H. SCATES	PATRICK H. SCATES
+Candidate	AMANDA BENEFIEL	AMANDA BENEFIEL
+Candidate	PAMELA 'PAM' STRATIGAKIS	PAMELA 'PAM' STRATIGAKIS
+Candidate	TIMOTHY PATRICK CARTER	TIMOTHY PATRICK CARTER
+Candidate	THOMAS M. CUSHING	THOMAS M. CUSHING
+Candidate	BASILEIOS 'BILL' FOUTRIS	BASILEIOS 'BILL' FOUTRIS
+Candidate	THOMAS PETER KOUGIAS	THOMAS PETER KOUGIAS
+Candidate	MICHAEL ALAN STROM	MICHAEL ALAN STROM
+Candidate	JULIE BESS AIMEN	JULIE BESS AIMEN
+Candidate	THOMAS 'CHAPIN' ROSE	THOMAS 'CHAPIN' ROSE
+Candidate	RHONDA BELFORD	RHONDA BELFORD
+Candidate	SUSAN PETTY	SUSAN PETTY
+Candidate	JOHN GARRIDO	JOHN GARRIDO
+Candidate	JON STROMSTA	JON STROMSTA
+Candidate	MAIRE AILEEN DEMPSEY	MAIRE AILEEN DEMPSEY
+Candidate	HOWARD J. WISE	HOWARD J. WISE
+Candidate	CARMINE TROMBETTA	CARMINE TROMBETTA
+Candidate	PATRICIA M. FALLON	PATRICIA M. FALLON
+Candidate	FRANK R. DiFRANCO	FRANK R. DiFRANCO
+Candidate	ELSA VON HUBEN	ELSA VON HUBEN
+Candidate	EDWARD CAPUTO	EDWARD CAPUTO
+Candidate	QUINTON ROSSER	QUINTON ROSSER
+Candidate	JASON ROCKFORD	JASON ROCKFORD
+Candidate	JAMES K. RILEY	JAMES K. RILEY
+Candidate	ANGIE BODINE	ANGIE BODINE
+Candidate	CAROLYN MOORE	CAROLYN MOORE
+Candidate	CHARLES GENTERT	CHARLES GENTERT
+Candidate	AMY SIPOVIC BOYLES	AMY SIPOVIC BOYLES
+Candidate	ASHWIN PURI	ASHWIN PURI
+Candidate	WENDY LaFAUCE	WENDY LaFAUCE
+Candidate	JOAN GARNIER	JOAN GARNIER
+Candidate	ART BARDSLEY	ART BARDSLEY
+Candidate	TIMOTHY BRADLEY	TIMOTHY BRADLEY
+Candidate	JOHN REIS	JOHN REIS
+Candidate	MICHAEL SOTO	MICHAEL SOTO
+Candidate	JUSTINE TROUT	JUSTINE TROUT
+Candidate	JJ WETT	JJ WETT
+Candidate	ELIZABETH LINDQUIST	ELIZABETH LINDQUIST
+Candidate	JOHN GEDNEY	JOHN GEDNEY
+Candidate	ELAINE PANNELL	ELAINE PANNELL
+Candidate	COURTNEY 'COURT' SCHUETT	COURTNEY 'COURT' SCHUETT
+Candidate	MATT FLAMM	MATT FLAMM
+Candidate	JOE GUMP	JOE GUMP
+Candidate	MICHAEL HARRY MINTON	MICHAEL HARRY MINTON
+Candidate	ANGEL GARCIA	ANGEL GARCIA
+Candidate	MICHAEL P. GERBER	MICHAEL P. GERBER
+Candidate	SUSANNE MICHELE GROEBNER	SUSANNE MICHELE GROEBNER
+Candidate	JOHN CABELLO	JOHN CABELLO
+Candidate	JAN KLAAS	JAN KLAAS
+Candidate	SUSAN WYNN BENCE	SUSAN WYNN BENCE
+Candidate	LARRY SMITH	LARRY SMITH
+Candidate	JUDITH WOOTEN	JUDITH WOOTEN
+Candidate	MARY GIBSON	MARY GIBSON
+Candidate	GENERAL PARKER	GENERAL PARKER
+Candidate	ORA PALMER	ORA PALMER
+Candidate	PHIL SALZER	PHIL SALZER
+Candidate	LAURA HEPP KESSEL	LAURA HEPP KESSEL
+Candidate	PAM DAVIDSON	PAM DAVIDSON
+Candidate	JEFFREY D. DEPPE	JEFFREY D. DEPPE
+Candidate	CHRISTINE WINICK	CHRISTINE WINICK
+Candidate	DOUG JOHNSON	DOUG JOHNSON
+Candidate	JENNIFER MARIE ANDERSON	JENNIFER MARIE ANDERSON
+Candidate	ANDREW COOPER	ANDREW COOPER
+Candidate	MICHAEL DEAN ANDERSON, SR.	MICHAEL DEAN ANDERSON, SR.
+Candidate	MIKAYLA DIANE ANDERSON	MIKAYLA DIANE ANDERSON
+Candidate	SANGEETHA RAYAPATI	SANGEETHA RAYAPATI
+Candidate	SUE ANN KORTKAMP	SUE ANN KORTKAMP
+Candidate	GREGG C. JOHNSON	GREGG C. JOHNSON
+Candidate	KIMBERLY S. THRUSH	KIMBERLY S. THRUSH
+Candidate	GEORGIA DREYER	GEORGIA DREYER
+Candidate	ANDREW CHESNEY	ANDREW CHESNEY
+Candidate	JAN WEBER	JAN WEBER
+Candidate	COLBY HATHAWAY	COLBY HATHAWAY
+Candidate	SHARON DIEKMAN	SHARON DIEKMAN
+Candidate	JOHN ADKINS	JOHN ADKINS
+Candidate	STEVE DEMITRO	STEVE DEMITRO
+Candidate	GERARDO TRISTAN, JR.	GERARDO TRISTAN, JR.
+Candidate	ERIN C. BROWN	ERIN C. BROWN
+Candidate	KELSEY HARMS	KELSEY HARMS
+Candidate	JODI BROWN	JODI BROWN
+Candidate	LAURA CORDELL	LAURA CORDELL
+Candidate	PATRICK CORTESI	PATRICK CORTESI
+Candidate	JENNIFER FRAY	JENNIFER FRAY
+Candidate	BRYEN JOHNSON	BRYEN JOHNSON
+Candidate	BEN ISABEL	BEN ISABEL
+Candidate	RADIANCE CAMPBELL	RADIANCE CAMPBELL
+Candidate	KIM KELLEY	KIM KELLEY
+Candidate	AMBRA HAAKE	AMBRA HAAKE
+Candidate	LAWRENCE (LARRY) RUEMMLER	LAWRENCE (LARRY) RUEMMLER
+Candidate	KATHLEEN CLARK KIMMEL	KATHLEEN CLARK KIMMEL
+Candidate	JAY BRINEY	JAY BRINEY
+Candidate	LIZ BROWN-REEVES	LIZ BROWN-REEVES
+Candidate	BILLY HALSTEAD	BILLY HALSTEAD
+Candidate	CHERRI A. MONTGOMERY	CHERRI A. MONTGOMERY
+Candidate	ANDREW SPIRO	ANDREW SPIRO
+Candidate	DANIEL O. TIERNAN	DANIEL O. TIERNAN
+Candidate	PERLA TIRADO	PERLA TIRADO
+Candidate	SALLY BOMKE	SALLY BOMKE
+Candidate	KATHRYN SPARROW	KATHRYN SPARROW
+Candidate	HEATHER MULLIGAN BEGLEY	HEATHER MULLIGAN BEGLEY
+Candidate	NICHOLE C. PATTON	NICHOLE C. PATTON
+Candidate	LORI McKEE	LORI McKEE
+Candidate	CHRISTIAN GRAMM	CHRISTIAN GRAMM
+Candidate	MATTHEW MAU	MATTHEW MAU
+Candidate	JUDY CATES	JUDY CATES
+Candidate	ALLISON LORTON	ALLISON LORTON
+Candidate	DONALD R. SCHAAF, JR.	DONALD R. SCHAAF, JR.
+Candidate	CHRIS HITZEMANN	CHRIS HITZEMANN
+Candidate	DANIEL ALEXANDER TREVINO	DANIEL ALEXANDER TREVINO
+Candidate	JOHN HOURIHANE	JOHN HOURIHANE
+Candidate	AUDREY VICTORIA COSGROVE	AUDREY VICTORIA COSGROVE
+Candidate	LIAM KELLY	LIAM KELLY
+Candidate	MARY CATHERINE MARUBIO	MARY CATHERINE MARUBIO
+Candidate	TOM GIBBONS	TOM GIBBONS
+Candidate	AMY MAHER	AMY MAHER
+Candidate	SHELDON R. SOBOL	SHELDON R. SOBOL
+Candidate	KENNETH WRIGHT	KENNETH WRIGHT
+Candidate	WILLIAM S. DICKENSON	WILLIAM S. DICKENSON

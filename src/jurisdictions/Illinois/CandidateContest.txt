@@ -1,0 +1,1422 @@
+Name	NumberElected	Office	PrimaryParty
+IL House District 1	1	IL House District 1	
+IL House District 2	1	IL House District 2	
+IL House District 3	1	IL House District 3	
+IL House District 4	1	IL House District 4	
+IL House District 5	1	IL House District 5	
+IL House District 6	1	IL House District 6	
+IL House District 7	1	IL House District 7	
+IL House District 8	1	IL House District 8	
+IL House District 9	1	IL House District 9	
+IL House District 10	1	IL House District 10	
+IL House District 11	1	IL House District 11	
+IL House District 12	1	IL House District 12	
+IL House District 13	1	IL House District 13	
+IL House District 14	1	IL House District 14	
+IL House District 15	1	IL House District 15	
+IL House District 16	1	IL House District 16	
+IL House District 17	1	IL House District 17	
+IL House District 18	1	IL House District 18	
+IL House District 19	1	IL House District 19	
+IL House District 20	1	IL House District 20	
+IL House District 21	1	IL House District 21	
+IL House District 22	1	IL House District 22	
+IL House District 23	1	IL House District 23	
+IL House District 24	1	IL House District 24	
+IL House District 25	1	IL House District 25	
+IL House District 26	1	IL House District 26	
+IL House District 27	1	IL House District 27	
+IL House District 28	1	IL House District 28	
+IL House District 29	1	IL House District 29	
+IL House District 30	1	IL House District 30	
+IL House District 31	1	IL House District 31	
+IL House District 32	1	IL House District 32	
+IL House District 33	1	IL House District 33	
+IL House District 34	1	IL House District 34	
+IL House District 35	1	IL House District 35	
+IL House District 36	1	IL House District 36	
+IL House District 37	1	IL House District 37	
+IL House District 38	1	IL House District 38	
+IL House District 39	1	IL House District 39	
+IL House District 40	1	IL House District 40	
+IL House District 41	1	IL House District 41	
+IL House District 42	1	IL House District 42	
+IL House District 43	1	IL House District 43	
+IL House District 44	1	IL House District 44	
+IL House District 45	1	IL House District 45	
+IL House District 46	1	IL House District 46	
+IL House District 47	1	IL House District 47	
+IL House District 48	1	IL House District 48	
+IL House District 49	1	IL House District 49	
+IL House District 50	1	IL House District 50	
+IL House District 51	1	IL House District 51	
+IL House District 52	1	IL House District 52	
+IL House District 53	1	IL House District 53	
+IL House District 54	1	IL House District 54	
+IL House District 55	1	IL House District 55	
+IL House District 56	1	IL House District 56	
+IL House District 57	1	IL House District 57	
+IL House District 58	1	IL House District 58	
+IL House District 59	1	IL House District 59	
+IL House District 60	1	IL House District 60	
+IL House District 61	1	IL House District 61	
+IL House District 62	1	IL House District 62	
+IL House District 63	1	IL House District 63	
+IL House District 64	1	IL House District 64	
+IL House District 65	1	IL House District 65	
+IL House District 66	1	IL House District 66	
+IL House District 67	1	IL House District 67	
+IL House District 68	1	IL House District 68	
+IL House District 69	1	IL House District 69	
+IL House District 70	1	IL House District 70	
+IL House District 71	1	IL House District 71	
+IL House District 72	1	IL House District 72	
+IL House District 73	1	IL House District 73	
+IL House District 74	1	IL House District 74	
+IL House District 75	1	IL House District 75	
+IL House District 76	1	IL House District 76	
+IL House District 77	1	IL House District 77	
+IL House District 78	1	IL House District 78	
+IL House District 79	1	IL House District 79	
+IL House District 80	1	IL House District 80	
+IL House District 81	1	IL House District 81	
+IL House District 82	1	IL House District 82	
+IL House District 83	1	IL House District 83	
+IL House District 84	1	IL House District 84	
+IL House District 85	1	IL House District 85	
+IL House District 86	1	IL House District 86	
+IL House District 87	1	IL House District 87	
+IL House District 88	1	IL House District 88	
+IL House District 89	1	IL House District 89	
+IL House District 90	1	IL House District 90	
+IL House District 91	1	IL House District 91	
+IL House District 92	1	IL House District 92	
+IL House District 93	1	IL House District 93	
+IL House District 94	1	IL House District 94	
+IL House District 95	1	IL House District 95	
+IL House District 96	1	IL House District 96	
+IL House District 97	1	IL House District 97	
+IL House District 98	1	IL House District 98	
+IL House District 99	1	IL House District 99	
+IL House District 100	1	IL House District 100	
+IL House District 101	1	IL House District 101	
+IL House District 102	1	IL House District 102	
+IL House District 103	1	IL House District 103	
+IL House District 104	1	IL House District 104	
+IL House District 105	1	IL House District 105	
+IL House District 106	1	IL House District 106	
+IL House District 107	1	IL House District 107	
+IL House District 108	1	IL House District 108	
+IL House District 109	1	IL House District 109	
+IL House District 110	1	IL House District 110	
+IL House District 111	1	IL House District 111	
+IL House District 112	1	IL House District 112	
+IL House District 113	1	IL House District 113	
+IL House District 114	1	IL House District 114	
+IL House District 115	1	IL House District 115	
+IL House District 116	1	IL House District 116	
+IL House District 117	1	IL House District 117	
+IL House District 118	1	IL House District 118	
+IL Senate District 1	1	IL Senate District 1	
+IL Senate District 2	1	IL Senate District 2	
+IL Senate District 3	1	IL Senate District 3	
+IL Senate District 4	1	IL Senate District 4	
+IL Senate District 5	1	IL Senate District 5	
+IL Senate District 6	1	IL Senate District 6	
+IL Senate District 7	1	IL Senate District 7	
+IL Senate District 8	1	IL Senate District 8	
+IL Senate District 9	1	IL Senate District 9	
+IL Senate District 10	1	IL Senate District 10	
+IL Senate District 11	1	IL Senate District 11	
+IL Senate District 12	1	IL Senate District 12	
+IL Senate District 13	1	IL Senate District 13	
+IL Senate District 14	1	IL Senate District 14	
+IL Senate District 15	1	IL Senate District 15	
+IL Senate District 16	1	IL Senate District 16	
+IL Senate District 17	1	IL Senate District 17	
+IL Senate District 18	1	IL Senate District 18	
+IL Senate District 19	1	IL Senate District 19	
+IL Senate District 20	1	IL Senate District 20	
+IL Senate District 21	1	IL Senate District 21	
+IL Senate District 22	1	IL Senate District 22	
+IL Senate District 23	1	IL Senate District 23	
+IL Senate District 24	1	IL Senate District 24	
+IL Senate District 25	1	IL Senate District 25	
+IL Senate District 26	1	IL Senate District 26	
+IL Senate District 27	1	IL Senate District 27	
+IL Senate District 28	1	IL Senate District 28	
+IL Senate District 29	1	IL Senate District 29	
+IL Senate District 30	1	IL Senate District 30	
+IL Senate District 31	1	IL Senate District 31	
+IL Senate District 32	1	IL Senate District 32	
+IL Senate District 33	1	IL Senate District 33	
+IL Senate District 34	1	IL Senate District 34	
+IL Senate District 35	1	IL Senate District 35	
+IL Senate District 36	1	IL Senate District 36	
+IL Senate District 37	1	IL Senate District 37	
+IL Senate District 38	1	IL Senate District 38	
+IL Senate District 39	1	IL Senate District 39	
+IL Senate District 40	1	IL Senate District 40	
+IL Senate District 41	1	IL Senate District 41	
+IL Senate District 42	1	IL Senate District 42	
+IL Senate District 43	1	IL Senate District 43	
+IL Senate District 44	1	IL Senate District 44	
+IL Senate District 45	1	IL Senate District 45	
+IL Senate District 46	1	IL Senate District 46	
+IL Senate District 47	1	IL Senate District 47	
+IL Senate District 48	1	IL Senate District 48	
+IL Senate District 49	1	IL Senate District 49	
+IL Senate District 50	1	IL Senate District 50	
+IL Senate District 51	1	IL Senate District 51	
+IL Senate District 52	1	IL Senate District 52	
+IL Senate District 53	1	IL Senate District 53	
+IL Senate District 54	1	IL Senate District 54	
+IL Senate District 55	1	IL Senate District 55	
+IL Senate District 56	1	IL Senate District 56	
+IL Senate District 57	1	IL Senate District 57	
+IL Senate District 58	1	IL Senate District 58	
+IL Senate District 59	1	IL Senate District 59	
+US House IL District 1	1	US House IL District 1	
+US House IL District 2	1	US House IL District 2	
+US House IL District 3	1	US House IL District 3	
+US House IL District 4	1	US House IL District 4	
+US House IL District 5	1	US House IL District 5	
+US House IL District 6	1	US House IL District 6	
+US House IL District 7	1	US House IL District 7	
+US House IL District 8	1	US House IL District 8	
+US House IL District 9	1	US House IL District 9	
+US House IL District 10	1	US House IL District 10	
+US House IL District 11	1	US House IL District 11	
+US House IL District 12	1	US House IL District 12	
+US House IL District 13	1	US House IL District 13	
+US House IL District 14	1	US House IL District 14	
+US House IL District 15	1	US House IL District 15	
+US House IL District 16	1	US House IL District 16	
+US House IL District 17	1	US House IL District 17	
+US House IL District 18	1	US House IL District 18	
+US President (IL)	1	US President (IL)	
+IL Governor	1	IL Governor	
+US Senate IL	1	US Senate IL	
+IL Attorney General	1	IL Attorney General	
+IL Lieutenant Governor	1	IL Lieutenant Governor	
+IL Treasurer	1	IL Treasurer	
+IL Comptroller	1	IL Comptroller
+IL Secretary of State	1	IL Secretary of State
+IL House District 1 (Democratic Party)	1	IL House District 1	Democratic Party
+IL House District 2 (Democratic Party)	1	IL House District 2	Democratic Party
+IL House District 3 (Democratic Party)	1	IL House District 3	Democratic Party
+IL House District 4 (Democratic Party)	1	IL House District 4	Democratic Party
+IL House District 5 (Democratic Party)	1	IL House District 5	Democratic Party
+IL House District 6 (Democratic Party)	1	IL House District 6	Democratic Party
+IL House District 7 (Democratic Party)	1	IL House District 7	Democratic Party
+IL House District 8 (Democratic Party)	1	IL House District 8	Democratic Party
+IL House District 9 (Democratic Party)	1	IL House District 9	Democratic Party
+IL House District 10 (Democratic Party)	1	IL House District 10	Democratic Party
+IL House District 11 (Democratic Party)	1	IL House District 11	Democratic Party
+IL House District 12 (Democratic Party)	1	IL House District 12	Democratic Party
+IL House District 13 (Democratic Party)	1	IL House District 13	Democratic Party
+IL House District 14 (Democratic Party)	1	IL House District 14	Democratic Party
+IL House District 15 (Democratic Party)	1	IL House District 15	Democratic Party
+IL House District 16 (Democratic Party)	1	IL House District 16	Democratic Party
+IL House District 17 (Democratic Party)	1	IL House District 17	Democratic Party
+IL House District 18 (Democratic Party)	1	IL House District 18	Democratic Party
+IL House District 19 (Democratic Party)	1	IL House District 19	Democratic Party
+IL House District 20 (Democratic Party)	1	IL House District 20	Democratic Party
+IL House District 21 (Democratic Party)	1	IL House District 21	Democratic Party
+IL House District 22 (Democratic Party)	1	IL House District 22	Democratic Party
+IL House District 23 (Democratic Party)	1	IL House District 23	Democratic Party
+IL House District 24 (Democratic Party)	1	IL House District 24	Democratic Party
+IL House District 25 (Democratic Party)	1	IL House District 25	Democratic Party
+IL House District 26 (Democratic Party)	1	IL House District 26	Democratic Party
+IL House District 27 (Democratic Party)	1	IL House District 27	Democratic Party
+IL House District 28 (Democratic Party)	1	IL House District 28	Democratic Party
+IL House District 29 (Democratic Party)	1	IL House District 29	Democratic Party
+IL House District 30 (Democratic Party)	1	IL House District 30	Democratic Party
+IL House District 31 (Democratic Party)	1	IL House District 31	Democratic Party
+IL House District 32 (Democratic Party)	1	IL House District 32	Democratic Party
+IL House District 33 (Democratic Party)	1	IL House District 33	Democratic Party
+IL House District 34 (Democratic Party)	1	IL House District 34	Democratic Party
+IL House District 35 (Democratic Party)	1	IL House District 35	Democratic Party
+IL House District 36 (Democratic Party)	1	IL House District 36	Democratic Party
+IL House District 37 (Democratic Party)	1	IL House District 37	Democratic Party
+IL House District 38 (Democratic Party)	1	IL House District 38	Democratic Party
+IL House District 39 (Democratic Party)	1	IL House District 39	Democratic Party
+IL House District 40 (Democratic Party)	1	IL House District 40	Democratic Party
+IL House District 41 (Democratic Party)	1	IL House District 41	Democratic Party
+IL House District 42 (Democratic Party)	1	IL House District 42	Democratic Party
+IL House District 43 (Democratic Party)	1	IL House District 43	Democratic Party
+IL House District 44 (Democratic Party)	1	IL House District 44	Democratic Party
+IL House District 45 (Democratic Party)	1	IL House District 45	Democratic Party
+IL House District 46 (Democratic Party)	1	IL House District 46	Democratic Party
+IL House District 47 (Democratic Party)	1	IL House District 47	Democratic Party
+IL House District 48 (Democratic Party)	1	IL House District 48	Democratic Party
+IL House District 49 (Democratic Party)	1	IL House District 49	Democratic Party
+IL House District 50 (Democratic Party)	1	IL House District 50	Democratic Party
+IL House District 51 (Democratic Party)	1	IL House District 51	Democratic Party
+IL House District 52 (Democratic Party)	1	IL House District 52	Democratic Party
+IL House District 53 (Democratic Party)	1	IL House District 53	Democratic Party
+IL House District 54 (Democratic Party)	1	IL House District 54	Democratic Party
+IL House District 55 (Democratic Party)	1	IL House District 55	Democratic Party
+IL House District 56 (Democratic Party)	1	IL House District 56	Democratic Party
+IL House District 57 (Democratic Party)	1	IL House District 57	Democratic Party
+IL House District 58 (Democratic Party)	1	IL House District 58	Democratic Party
+IL House District 59 (Democratic Party)	1	IL House District 59	Democratic Party
+IL House District 60 (Democratic Party)	1	IL House District 60	Democratic Party
+IL House District 61 (Democratic Party)	1	IL House District 61	Democratic Party
+IL House District 62 (Democratic Party)	1	IL House District 62	Democratic Party
+IL House District 63 (Democratic Party)	1	IL House District 63	Democratic Party
+IL House District 64 (Democratic Party)	1	IL House District 64	Democratic Party
+IL House District 65 (Democratic Party)	1	IL House District 65	Democratic Party
+IL House District 66 (Democratic Party)	1	IL House District 66	Democratic Party
+IL House District 67 (Democratic Party)	1	IL House District 67	Democratic Party
+IL House District 68 (Democratic Party)	1	IL House District 68	Democratic Party
+IL House District 69 (Democratic Party)	1	IL House District 69	Democratic Party
+IL House District 70 (Democratic Party)	1	IL House District 70	Democratic Party
+IL House District 71 (Democratic Party)	1	IL House District 71	Democratic Party
+IL House District 72 (Democratic Party)	1	IL House District 72	Democratic Party
+IL House District 73 (Democratic Party)	1	IL House District 73	Democratic Party
+IL House District 74 (Democratic Party)	1	IL House District 74	Democratic Party
+IL House District 75 (Democratic Party)	1	IL House District 75	Democratic Party
+IL House District 76 (Democratic Party)	1	IL House District 76	Democratic Party
+IL House District 77 (Democratic Party)	1	IL House District 77	Democratic Party
+IL House District 78 (Democratic Party)	1	IL House District 78	Democratic Party
+IL House District 79 (Democratic Party)	1	IL House District 79	Democratic Party
+IL House District 80 (Democratic Party)	1	IL House District 80	Democratic Party
+IL House District 81 (Democratic Party)	1	IL House District 81	Democratic Party
+IL House District 82 (Democratic Party)	1	IL House District 82	Democratic Party
+IL House District 83 (Democratic Party)	1	IL House District 83	Democratic Party
+IL House District 84 (Democratic Party)	1	IL House District 84	Democratic Party
+IL House District 85 (Democratic Party)	1	IL House District 85	Democratic Party
+IL House District 86 (Democratic Party)	1	IL House District 86	Democratic Party
+IL House District 87 (Democratic Party)	1	IL House District 87	Democratic Party
+IL House District 88 (Democratic Party)	1	IL House District 88	Democratic Party
+IL House District 89 (Democratic Party)	1	IL House District 89	Democratic Party
+IL House District 90 (Democratic Party)	1	IL House District 90	Democratic Party
+IL House District 91 (Democratic Party)	1	IL House District 91	Democratic Party
+IL House District 92 (Democratic Party)	1	IL House District 92	Democratic Party
+IL House District 93 (Democratic Party)	1	IL House District 93	Democratic Party
+IL House District 94 (Democratic Party)	1	IL House District 94	Democratic Party
+IL House District 95 (Democratic Party)	1	IL House District 95	Democratic Party
+IL House District 96 (Democratic Party)	1	IL House District 96	Democratic Party
+IL House District 97 (Democratic Party)	1	IL House District 97	Democratic Party
+IL House District 98 (Democratic Party)	1	IL House District 98	Democratic Party
+IL House District 99 (Democratic Party)	1	IL House District 99	Democratic Party
+IL House District 100 (Democratic Party)	1	IL House District 100	Democratic Party
+IL House District 101 (Democratic Party)	1	IL House District 101	Democratic Party
+IL House District 102 (Democratic Party)	1	IL House District 102	Democratic Party
+IL House District 103 (Democratic Party)	1	IL House District 103	Democratic Party
+IL House District 104 (Democratic Party)	1	IL House District 104	Democratic Party
+IL House District 105 (Democratic Party)	1	IL House District 105	Democratic Party
+IL House District 106 (Democratic Party)	1	IL House District 106	Democratic Party
+IL House District 107 (Democratic Party)	1	IL House District 107	Democratic Party
+IL House District 108 (Democratic Party)	1	IL House District 108	Democratic Party
+IL House District 109 (Democratic Party)	1	IL House District 109	Democratic Party
+IL House District 110 (Democratic Party)	1	IL House District 110	Democratic Party
+IL House District 111 (Democratic Party)	1	IL House District 111	Democratic Party
+IL House District 112 (Democratic Party)	1	IL House District 112	Democratic Party
+IL House District 113 (Democratic Party)	1	IL House District 113	Democratic Party
+IL House District 114 (Democratic Party)	1	IL House District 114	Democratic Party
+IL House District 115 (Democratic Party)	1	IL House District 115	Democratic Party
+IL House District 116 (Democratic Party)	1	IL House District 116	Democratic Party
+IL House District 117 (Democratic Party)	1	IL House District 117	Democratic Party
+IL House District 118 (Democratic Party)	1	IL House District 118	Democratic Party
+IL Senate District 1 (Democratic Party)	1	IL Senate District 1	Democratic Party
+IL Senate District 2 (Democratic Party)	1	IL Senate District 2	Democratic Party
+IL Senate District 3 (Democratic Party)	1	IL Senate District 3	Democratic Party
+IL Senate District 4 (Democratic Party)	1	IL Senate District 4	Democratic Party
+IL Senate District 5 (Democratic Party)	1	IL Senate District 5	Democratic Party
+IL Senate District 6 (Democratic Party)	1	IL Senate District 6	Democratic Party
+IL Senate District 7 (Democratic Party)	1	IL Senate District 7	Democratic Party
+IL Senate District 8 (Democratic Party)	1	IL Senate District 8	Democratic Party
+IL Senate District 9 (Democratic Party)	1	IL Senate District 9	Democratic Party
+IL Senate District 10 (Democratic Party)	1	IL Senate District 10	Democratic Party
+IL Senate District 11 (Democratic Party)	1	IL Senate District 11	Democratic Party
+IL Senate District 12 (Democratic Party)	1	IL Senate District 12	Democratic Party
+IL Senate District 13 (Democratic Party)	1	IL Senate District 13	Democratic Party
+IL Senate District 14 (Democratic Party)	1	IL Senate District 14	Democratic Party
+IL Senate District 15 (Democratic Party)	1	IL Senate District 15	Democratic Party
+IL Senate District 16 (Democratic Party)	1	IL Senate District 16	Democratic Party
+IL Senate District 17 (Democratic Party)	1	IL Senate District 17	Democratic Party
+IL Senate District 18 (Democratic Party)	1	IL Senate District 18	Democratic Party
+IL Senate District 19 (Democratic Party)	1	IL Senate District 19	Democratic Party
+IL Senate District 20 (Democratic Party)	1	IL Senate District 20	Democratic Party
+IL Senate District 21 (Democratic Party)	1	IL Senate District 21	Democratic Party
+IL Senate District 22 (Democratic Party)	1	IL Senate District 22	Democratic Party
+IL Senate District 23 (Democratic Party)	1	IL Senate District 23	Democratic Party
+IL Senate District 24 (Democratic Party)	1	IL Senate District 24	Democratic Party
+IL Senate District 25 (Democratic Party)	1	IL Senate District 25	Democratic Party
+IL Senate District 26 (Democratic Party)	1	IL Senate District 26	Democratic Party
+IL Senate District 27 (Democratic Party)	1	IL Senate District 27	Democratic Party
+IL Senate District 28 (Democratic Party)	1	IL Senate District 28	Democratic Party
+IL Senate District 29 (Democratic Party)	1	IL Senate District 29	Democratic Party
+IL Senate District 30 (Democratic Party)	1	IL Senate District 30	Democratic Party
+IL Senate District 31 (Democratic Party)	1	IL Senate District 31	Democratic Party
+IL Senate District 32 (Democratic Party)	1	IL Senate District 32	Democratic Party
+IL Senate District 33 (Democratic Party)	1	IL Senate District 33	Democratic Party
+IL Senate District 34 (Democratic Party)	1	IL Senate District 34	Democratic Party
+IL Senate District 35 (Democratic Party)	1	IL Senate District 35	Democratic Party
+IL Senate District 36 (Democratic Party)	1	IL Senate District 36	Democratic Party
+IL Senate District 37 (Democratic Party)	1	IL Senate District 37	Democratic Party
+IL Senate District 38 (Democratic Party)	1	IL Senate District 38	Democratic Party
+IL Senate District 39 (Democratic Party)	1	IL Senate District 39	Democratic Party
+IL Senate District 40 (Democratic Party)	1	IL Senate District 40	Democratic Party
+IL Senate District 41 (Democratic Party)	1	IL Senate District 41	Democratic Party
+IL Senate District 42 (Democratic Party)	1	IL Senate District 42	Democratic Party
+IL Senate District 43 (Democratic Party)	1	IL Senate District 43	Democratic Party
+IL Senate District 44 (Democratic Party)	1	IL Senate District 44	Democratic Party
+IL Senate District 45 (Democratic Party)	1	IL Senate District 45	Democratic Party
+IL Senate District 46 (Democratic Party)	1	IL Senate District 46	Democratic Party
+IL Senate District 47 (Democratic Party)	1	IL Senate District 47	Democratic Party
+IL Senate District 48 (Democratic Party)	1	IL Senate District 48	Democratic Party
+IL Senate District 49 (Democratic Party)	1	IL Senate District 49	Democratic Party
+IL Senate District 50 (Democratic Party)	1	IL Senate District 50	Democratic Party
+IL Senate District 51 (Democratic Party)	1	IL Senate District 51	Democratic Party
+IL Senate District 52 (Democratic Party)	1	IL Senate District 52	Democratic Party
+IL Senate District 53 (Democratic Party)	1	IL Senate District 53	Democratic Party
+IL Senate District 54 (Democratic Party)	1	IL Senate District 54	Democratic Party
+IL Senate District 55 (Democratic Party)	1	IL Senate District 55	Democratic Party
+IL Senate District 56 (Democratic Party)	1	IL Senate District 56	Democratic Party
+IL Senate District 57 (Democratic Party)	1	IL Senate District 57	Democratic Party
+IL Senate District 58 (Democratic Party)	1	IL Senate District 58	Democratic Party
+IL Senate District 59 (Democratic Party)	1	IL Senate District 59	Democratic Party
+US House IL District 1 (Democratic Party)	1	US House IL District 1	Democratic Party
+US House IL District 2 (Democratic Party)	1	US House IL District 2	Democratic Party
+US House IL District 3 (Democratic Party)	1	US House IL District 3	Democratic Party
+US House IL District 4 (Democratic Party)	1	US House IL District 4	Democratic Party
+US House IL District 5 (Democratic Party)	1	US House IL District 5	Democratic Party
+US House IL District 6 (Democratic Party)	1	US House IL District 6	Democratic Party
+US House IL District 7 (Democratic Party)	1	US House IL District 7	Democratic Party
+US House IL District 8 (Democratic Party)	1	US House IL District 8	Democratic Party
+US House IL District 9 (Democratic Party)	1	US House IL District 9	Democratic Party
+US House IL District 10 (Democratic Party)	1	US House IL District 10	Democratic Party
+US House IL District 11 (Democratic Party)	1	US House IL District 11	Democratic Party
+US House IL District 12 (Democratic Party)	1	US House IL District 12	Democratic Party
+US House IL District 13 (Democratic Party)	1	US House IL District 13	Democratic Party
+US House IL District 14 (Democratic Party)	1	US House IL District 14	Democratic Party
+US House IL District 15 (Democratic Party)	1	US House IL District 15	Democratic Party
+US House IL District 16 (Democratic Party)	1	US House IL District 16	Democratic Party
+US House IL District 17 (Democratic Party)	1	US House IL District 17	Democratic Party
+US House IL District 18 (Democratic Party)	1	US House IL District 18	Democratic Party
+US President (IL) (Democratic Party)	1	US President (IL)	Democratic Party
+IL Governor (Democratic Party)	1	IL Governor	Democratic Party
+US Senate IL (Democratic Party)	1	US Senate IL	Democratic Party
+IL Attorney General (Democratic Party)	1	IL Attorney General	Democratic Party
+IL Lieutenant Governor (Democratic Party)	1	IL Lieutenant Governor	Democratic Party
+IL Treasurer (Democratic Party)	1	IL Treasurer	Democratic Party
+IL Comptroller (Democratic Party)	1	IL Comptroller	Democratic Party
+IL Secretary of State (Democratic Party)	1	IL Secretary of State	Democratic Party
+IL House District 1 (Republican Party)	1	IL House District 1	Republican Party
+IL House District 2 (Republican Party)	1	IL House District 2	Republican Party
+IL House District 3 (Republican Party)	1	IL House District 3	Republican Party
+IL House District 4 (Republican Party)	1	IL House District 4	Republican Party
+IL House District 5 (Republican Party)	1	IL House District 5	Republican Party
+IL House District 6 (Republican Party)	1	IL House District 6	Republican Party
+IL House District 7 (Republican Party)	1	IL House District 7	Republican Party
+IL House District 8 (Republican Party)	1	IL House District 8	Republican Party
+IL House District 9 (Republican Party)	1	IL House District 9	Republican Party
+IL House District 10 (Republican Party)	1	IL House District 10	Republican Party
+IL House District 11 (Republican Party)	1	IL House District 11	Republican Party
+IL House District 12 (Republican Party)	1	IL House District 12	Republican Party
+IL House District 13 (Republican Party)	1	IL House District 13	Republican Party
+IL House District 14 (Republican Party)	1	IL House District 14	Republican Party
+IL House District 15 (Republican Party)	1	IL House District 15	Republican Party
+IL House District 16 (Republican Party)	1	IL House District 16	Republican Party
+IL House District 17 (Republican Party)	1	IL House District 17	Republican Party
+IL House District 18 (Republican Party)	1	IL House District 18	Republican Party
+IL House District 19 (Republican Party)	1	IL House District 19	Republican Party
+IL House District 20 (Republican Party)	1	IL House District 20	Republican Party
+IL House District 21 (Republican Party)	1	IL House District 21	Republican Party
+IL House District 22 (Republican Party)	1	IL House District 22	Republican Party
+IL House District 23 (Republican Party)	1	IL House District 23	Republican Party
+IL House District 24 (Republican Party)	1	IL House District 24	Republican Party
+IL House District 25 (Republican Party)	1	IL House District 25	Republican Party
+IL House District 26 (Republican Party)	1	IL House District 26	Republican Party
+IL House District 27 (Republican Party)	1	IL House District 27	Republican Party
+IL House District 28 (Republican Party)	1	IL House District 28	Republican Party
+IL House District 29 (Republican Party)	1	IL House District 29	Republican Party
+IL House District 30 (Republican Party)	1	IL House District 30	Republican Party
+IL House District 31 (Republican Party)	1	IL House District 31	Republican Party
+IL House District 32 (Republican Party)	1	IL House District 32	Republican Party
+IL House District 33 (Republican Party)	1	IL House District 33	Republican Party
+IL House District 34 (Republican Party)	1	IL House District 34	Republican Party
+IL House District 35 (Republican Party)	1	IL House District 35	Republican Party
+IL House District 36 (Republican Party)	1	IL House District 36	Republican Party
+IL House District 37 (Republican Party)	1	IL House District 37	Republican Party
+IL House District 38 (Republican Party)	1	IL House District 38	Republican Party
+IL House District 39 (Republican Party)	1	IL House District 39	Republican Party
+IL House District 40 (Republican Party)	1	IL House District 40	Republican Party
+IL House District 41 (Republican Party)	1	IL House District 41	Republican Party
+IL House District 42 (Republican Party)	1	IL House District 42	Republican Party
+IL House District 43 (Republican Party)	1	IL House District 43	Republican Party
+IL House District 44 (Republican Party)	1	IL House District 44	Republican Party
+IL House District 45 (Republican Party)	1	IL House District 45	Republican Party
+IL House District 46 (Republican Party)	1	IL House District 46	Republican Party
+IL House District 47 (Republican Party)	1	IL House District 47	Republican Party
+IL House District 48 (Republican Party)	1	IL House District 48	Republican Party
+IL House District 49 (Republican Party)	1	IL House District 49	Republican Party
+IL House District 50 (Republican Party)	1	IL House District 50	Republican Party
+IL House District 51 (Republican Party)	1	IL House District 51	Republican Party
+IL House District 52 (Republican Party)	1	IL House District 52	Republican Party
+IL House District 53 (Republican Party)	1	IL House District 53	Republican Party
+IL House District 54 (Republican Party)	1	IL House District 54	Republican Party
+IL House District 55 (Republican Party)	1	IL House District 55	Republican Party
+IL House District 56 (Republican Party)	1	IL House District 56	Republican Party
+IL House District 57 (Republican Party)	1	IL House District 57	Republican Party
+IL House District 58 (Republican Party)	1	IL House District 58	Republican Party
+IL House District 59 (Republican Party)	1	IL House District 59	Republican Party
+IL House District 60 (Republican Party)	1	IL House District 60	Republican Party
+IL House District 61 (Republican Party)	1	IL House District 61	Republican Party
+IL House District 62 (Republican Party)	1	IL House District 62	Republican Party
+IL House District 63 (Republican Party)	1	IL House District 63	Republican Party
+IL House District 64 (Republican Party)	1	IL House District 64	Republican Party
+IL House District 65 (Republican Party)	1	IL House District 65	Republican Party
+IL House District 66 (Republican Party)	1	IL House District 66	Republican Party
+IL House District 67 (Republican Party)	1	IL House District 67	Republican Party
+IL House District 68 (Republican Party)	1	IL House District 68	Republican Party
+IL House District 69 (Republican Party)	1	IL House District 69	Republican Party
+IL House District 70 (Republican Party)	1	IL House District 70	Republican Party
+IL House District 71 (Republican Party)	1	IL House District 71	Republican Party
+IL House District 72 (Republican Party)	1	IL House District 72	Republican Party
+IL House District 73 (Republican Party)	1	IL House District 73	Republican Party
+IL House District 74 (Republican Party)	1	IL House District 74	Republican Party
+IL House District 75 (Republican Party)	1	IL House District 75	Republican Party
+IL House District 76 (Republican Party)	1	IL House District 76	Republican Party
+IL House District 77 (Republican Party)	1	IL House District 77	Republican Party
+IL House District 78 (Republican Party)	1	IL House District 78	Republican Party
+IL House District 79 (Republican Party)	1	IL House District 79	Republican Party
+IL House District 80 (Republican Party)	1	IL House District 80	Republican Party
+IL House District 81 (Republican Party)	1	IL House District 81	Republican Party
+IL House District 82 (Republican Party)	1	IL House District 82	Republican Party
+IL House District 83 (Republican Party)	1	IL House District 83	Republican Party
+IL House District 84 (Republican Party)	1	IL House District 84	Republican Party
+IL House District 85 (Republican Party)	1	IL House District 85	Republican Party
+IL House District 86 (Republican Party)	1	IL House District 86	Republican Party
+IL House District 87 (Republican Party)	1	IL House District 87	Republican Party
+IL House District 88 (Republican Party)	1	IL House District 88	Republican Party
+IL House District 89 (Republican Party)	1	IL House District 89	Republican Party
+IL House District 90 (Republican Party)	1	IL House District 90	Republican Party
+IL House District 91 (Republican Party)	1	IL House District 91	Republican Party
+IL House District 92 (Republican Party)	1	IL House District 92	Republican Party
+IL House District 93 (Republican Party)	1	IL House District 93	Republican Party
+IL House District 94 (Republican Party)	1	IL House District 94	Republican Party
+IL House District 95 (Republican Party)	1	IL House District 95	Republican Party
+IL House District 96 (Republican Party)	1	IL House District 96	Republican Party
+IL House District 97 (Republican Party)	1	IL House District 97	Republican Party
+IL House District 98 (Republican Party)	1	IL House District 98	Republican Party
+IL House District 99 (Republican Party)	1	IL House District 99	Republican Party
+IL House District 100 (Republican Party)	1	IL House District 100	Republican Party
+IL House District 101 (Republican Party)	1	IL House District 101	Republican Party
+IL House District 102 (Republican Party)	1	IL House District 102	Republican Party
+IL House District 103 (Republican Party)	1	IL House District 103	Republican Party
+IL House District 104 (Republican Party)	1	IL House District 104	Republican Party
+IL House District 105 (Republican Party)	1	IL House District 105	Republican Party
+IL House District 106 (Republican Party)	1	IL House District 106	Republican Party
+IL House District 107 (Republican Party)	1	IL House District 107	Republican Party
+IL House District 108 (Republican Party)	1	IL House District 108	Republican Party
+IL House District 109 (Republican Party)	1	IL House District 109	Republican Party
+IL House District 110 (Republican Party)	1	IL House District 110	Republican Party
+IL House District 111 (Republican Party)	1	IL House District 111	Republican Party
+IL House District 112 (Republican Party)	1	IL House District 112	Republican Party
+IL House District 113 (Republican Party)	1	IL House District 113	Republican Party
+IL House District 114 (Republican Party)	1	IL House District 114	Republican Party
+IL House District 115 (Republican Party)	1	IL House District 115	Republican Party
+IL House District 116 (Republican Party)	1	IL House District 116	Republican Party
+IL House District 117 (Republican Party)	1	IL House District 117	Republican Party
+IL House District 118 (Republican Party)	1	IL House District 118	Republican Party
+IL Senate District 1 (Republican Party)	1	IL Senate District 1	Republican Party
+IL Senate District 2 (Republican Party)	1	IL Senate District 2	Republican Party
+IL Senate District 3 (Republican Party)	1	IL Senate District 3	Republican Party
+IL Senate District 4 (Republican Party)	1	IL Senate District 4	Republican Party
+IL Senate District 5 (Republican Party)	1	IL Senate District 5	Republican Party
+IL Senate District 6 (Republican Party)	1	IL Senate District 6	Republican Party
+IL Senate District 7 (Republican Party)	1	IL Senate District 7	Republican Party
+IL Senate District 8 (Republican Party)	1	IL Senate District 8	Republican Party
+IL Senate District 9 (Republican Party)	1	IL Senate District 9	Republican Party
+IL Senate District 10 (Republican Party)	1	IL Senate District 10	Republican Party
+IL Senate District 11 (Republican Party)	1	IL Senate District 11	Republican Party
+IL Senate District 12 (Republican Party)	1	IL Senate District 12	Republican Party
+IL Senate District 13 (Republican Party)	1	IL Senate District 13	Republican Party
+IL Senate District 14 (Republican Party)	1	IL Senate District 14	Republican Party
+IL Senate District 15 (Republican Party)	1	IL Senate District 15	Republican Party
+IL Senate District 16 (Republican Party)	1	IL Senate District 16	Republican Party
+IL Senate District 17 (Republican Party)	1	IL Senate District 17	Republican Party
+IL Senate District 18 (Republican Party)	1	IL Senate District 18	Republican Party
+IL Senate District 19 (Republican Party)	1	IL Senate District 19	Republican Party
+IL Senate District 20 (Republican Party)	1	IL Senate District 20	Republican Party
+IL Senate District 21 (Republican Party)	1	IL Senate District 21	Republican Party
+IL Senate District 22 (Republican Party)	1	IL Senate District 22	Republican Party
+IL Senate District 23 (Republican Party)	1	IL Senate District 23	Republican Party
+IL Senate District 24 (Republican Party)	1	IL Senate District 24	Republican Party
+IL Senate District 25 (Republican Party)	1	IL Senate District 25	Republican Party
+IL Senate District 26 (Republican Party)	1	IL Senate District 26	Republican Party
+IL Senate District 27 (Republican Party)	1	IL Senate District 27	Republican Party
+IL Senate District 28 (Republican Party)	1	IL Senate District 28	Republican Party
+IL Senate District 29 (Republican Party)	1	IL Senate District 29	Republican Party
+IL Senate District 30 (Republican Party)	1	IL Senate District 30	Republican Party
+IL Senate District 31 (Republican Party)	1	IL Senate District 31	Republican Party
+IL Senate District 32 (Republican Party)	1	IL Senate District 32	Republican Party
+IL Senate District 33 (Republican Party)	1	IL Senate District 33	Republican Party
+IL Senate District 34 (Republican Party)	1	IL Senate District 34	Republican Party
+IL Senate District 35 (Republican Party)	1	IL Senate District 35	Republican Party
+IL Senate District 36 (Republican Party)	1	IL Senate District 36	Republican Party
+IL Senate District 37 (Republican Party)	1	IL Senate District 37	Republican Party
+IL Senate District 38 (Republican Party)	1	IL Senate District 38	Republican Party
+IL Senate District 39 (Republican Party)	1	IL Senate District 39	Republican Party
+IL Senate District 40 (Republican Party)	1	IL Senate District 40	Republican Party
+IL Senate District 41 (Republican Party)	1	IL Senate District 41	Republican Party
+IL Senate District 42 (Republican Party)	1	IL Senate District 42	Republican Party
+IL Senate District 43 (Republican Party)	1	IL Senate District 43	Republican Party
+IL Senate District 44 (Republican Party)	1	IL Senate District 44	Republican Party
+IL Senate District 45 (Republican Party)	1	IL Senate District 45	Republican Party
+IL Senate District 46 (Republican Party)	1	IL Senate District 46	Republican Party
+IL Senate District 47 (Republican Party)	1	IL Senate District 47	Republican Party
+IL Senate District 48 (Republican Party)	1	IL Senate District 48	Republican Party
+IL Senate District 49 (Republican Party)	1	IL Senate District 49	Republican Party
+IL Senate District 50 (Republican Party)	1	IL Senate District 50	Republican Party
+IL Senate District 51 (Republican Party)	1	IL Senate District 51	Republican Party
+IL Senate District 52 (Republican Party)	1	IL Senate District 52	Republican Party
+IL Senate District 53 (Republican Party)	1	IL Senate District 53	Republican Party
+IL Senate District 54 (Republican Party)	1	IL Senate District 54	Republican Party
+IL Senate District 55 (Republican Party)	1	IL Senate District 55	Republican Party
+IL Senate District 56 (Republican Party)	1	IL Senate District 56	Republican Party
+IL Senate District 57 (Republican Party)	1	IL Senate District 57	Republican Party
+IL Senate District 58 (Republican Party)	1	IL Senate District 58	Republican Party
+IL Senate District 59 (Republican Party)	1	IL Senate District 59	Republican Party
+US House IL District 1 (Republican Party)	1	US House IL District 1	Republican Party
+US House IL District 2 (Republican Party)	1	US House IL District 2	Republican Party
+US House IL District 3 (Republican Party)	1	US House IL District 3	Republican Party
+US House IL District 4 (Republican Party)	1	US House IL District 4	Republican Party
+US House IL District 5 (Republican Party)	1	US House IL District 5	Republican Party
+US House IL District 6 (Republican Party)	1	US House IL District 6	Republican Party
+US House IL District 7 (Republican Party)	1	US House IL District 7	Republican Party
+US House IL District 8 (Republican Party)	1	US House IL District 8	Republican Party
+US House IL District 9 (Republican Party)	1	US House IL District 9	Republican Party
+US House IL District 10 (Republican Party)	1	US House IL District 10	Republican Party
+US House IL District 11 (Republican Party)	1	US House IL District 11	Republican Party
+US House IL District 12 (Republican Party)	1	US House IL District 12	Republican Party
+US House IL District 13 (Republican Party)	1	US House IL District 13	Republican Party
+US House IL District 14 (Republican Party)	1	US House IL District 14	Republican Party
+US House IL District 15 (Republican Party)	1	US House IL District 15	Republican Party
+US House IL District 16 (Republican Party)	1	US House IL District 16	Republican Party
+US House IL District 17 (Republican Party)	1	US House IL District 17	Republican Party
+US House IL District 18 (Republican Party)	1	US House IL District 18	Republican Party
+US President (IL) (Republican Party)	1	US President (IL)	Republican Party
+IL Governor (Republican Party)	1	IL Governor	Republican Party
+US Senate IL (Republican Party)	1	US Senate IL	Republican Party
+IL Attorney General (Republican Party)	1	IL Attorney General	Republican Party
+IL Lieutenant Governor (Republican Party)	1	IL Lieutenant Governor	Republican Party
+IL Treasurer (Republican Party)	1	IL Treasurer	Republican Party
+IL Comptroller (Republican Party)	1	IL Comptroller	Republican Party
+IL Secretary of State (Republican Party)	1	IL Secretary of State	Republican Party
+IL House District 1 (Green Party)	1	IL House District 1	Green Party
+IL House District 2 (Green Party)	1	IL House District 2	Green Party
+IL House District 3 (Green Party)	1	IL House District 3	Green Party
+IL House District 4 (Green Party)	1	IL House District 4	Green Party
+IL House District 5 (Green Party)	1	IL House District 5	Green Party
+IL House District 6 (Green Party)	1	IL House District 6	Green Party
+IL House District 7 (Green Party)	1	IL House District 7	Green Party
+IL House District 8 (Green Party)	1	IL House District 8	Green Party
+IL House District 9 (Green Party)	1	IL House District 9	Green Party
+IL House District 10 (Green Party)	1	IL House District 10	Green Party
+IL House District 11 (Green Party)	1	IL House District 11	Green Party
+IL House District 12 (Green Party)	1	IL House District 12	Green Party
+IL House District 13 (Green Party)	1	IL House District 13	Green Party
+IL House District 14 (Green Party)	1	IL House District 14	Green Party
+IL House District 15 (Green Party)	1	IL House District 15	Green Party
+IL House District 16 (Green Party)	1	IL House District 16	Green Party
+IL House District 17 (Green Party)	1	IL House District 17	Green Party
+IL House District 18 (Green Party)	1	IL House District 18	Green Party
+IL House District 19 (Green Party)	1	IL House District 19	Green Party
+IL House District 20 (Green Party)	1	IL House District 20	Green Party
+IL House District 21 (Green Party)	1	IL House District 21	Green Party
+IL House District 22 (Green Party)	1	IL House District 22	Green Party
+IL House District 23 (Green Party)	1	IL House District 23	Green Party
+IL House District 24 (Green Party)	1	IL House District 24	Green Party
+IL House District 25 (Green Party)	1	IL House District 25	Green Party
+IL House District 26 (Green Party)	1	IL House District 26	Green Party
+IL House District 27 (Green Party)	1	IL House District 27	Green Party
+IL House District 28 (Green Party)	1	IL House District 28	Green Party
+IL House District 29 (Green Party)	1	IL House District 29	Green Party
+IL House District 30 (Green Party)	1	IL House District 30	Green Party
+IL House District 31 (Green Party)	1	IL House District 31	Green Party
+IL House District 32 (Green Party)	1	IL House District 32	Green Party
+IL House District 33 (Green Party)	1	IL House District 33	Green Party
+IL House District 34 (Green Party)	1	IL House District 34	Green Party
+IL House District 35 (Green Party)	1	IL House District 35	Green Party
+IL House District 36 (Green Party)	1	IL House District 36	Green Party
+IL House District 37 (Green Party)	1	IL House District 37	Green Party
+IL House District 38 (Green Party)	1	IL House District 38	Green Party
+IL House District 39 (Green Party)	1	IL House District 39	Green Party
+IL House District 40 (Green Party)	1	IL House District 40	Green Party
+IL House District 41 (Green Party)	1	IL House District 41	Green Party
+IL House District 42 (Green Party)	1	IL House District 42	Green Party
+IL House District 43 (Green Party)	1	IL House District 43	Green Party
+IL House District 44 (Green Party)	1	IL House District 44	Green Party
+IL House District 45 (Green Party)	1	IL House District 45	Green Party
+IL House District 46 (Green Party)	1	IL House District 46	Green Party
+IL House District 47 (Green Party)	1	IL House District 47	Green Party
+IL House District 48 (Green Party)	1	IL House District 48	Green Party
+IL House District 49 (Green Party)	1	IL House District 49	Green Party
+IL House District 50 (Green Party)	1	IL House District 50	Green Party
+IL House District 51 (Green Party)	1	IL House District 51	Green Party
+IL House District 52 (Green Party)	1	IL House District 52	Green Party
+IL House District 53 (Green Party)	1	IL House District 53	Green Party
+IL House District 54 (Green Party)	1	IL House District 54	Green Party
+IL House District 55 (Green Party)	1	IL House District 55	Green Party
+IL House District 56 (Green Party)	1	IL House District 56	Green Party
+IL House District 57 (Green Party)	1	IL House District 57	Green Party
+IL House District 58 (Green Party)	1	IL House District 58	Green Party
+IL House District 59 (Green Party)	1	IL House District 59	Green Party
+IL House District 60 (Green Party)	1	IL House District 60	Green Party
+IL House District 61 (Green Party)	1	IL House District 61	Green Party
+IL House District 62 (Green Party)	1	IL House District 62	Green Party
+IL House District 63 (Green Party)	1	IL House District 63	Green Party
+IL House District 64 (Green Party)	1	IL House District 64	Green Party
+IL House District 65 (Green Party)	1	IL House District 65	Green Party
+IL House District 66 (Green Party)	1	IL House District 66	Green Party
+IL House District 67 (Green Party)	1	IL House District 67	Green Party
+IL House District 68 (Green Party)	1	IL House District 68	Green Party
+IL House District 69 (Green Party)	1	IL House District 69	Green Party
+IL House District 70 (Green Party)	1	IL House District 70	Green Party
+IL House District 71 (Green Party)	1	IL House District 71	Green Party
+IL House District 72 (Green Party)	1	IL House District 72	Green Party
+IL House District 73 (Green Party)	1	IL House District 73	Green Party
+IL House District 74 (Green Party)	1	IL House District 74	Green Party
+IL House District 75 (Green Party)	1	IL House District 75	Green Party
+IL House District 76 (Green Party)	1	IL House District 76	Green Party
+IL House District 77 (Green Party)	1	IL House District 77	Green Party
+IL House District 78 (Green Party)	1	IL House District 78	Green Party
+IL House District 79 (Green Party)	1	IL House District 79	Green Party
+IL House District 80 (Green Party)	1	IL House District 80	Green Party
+IL House District 81 (Green Party)	1	IL House District 81	Green Party
+IL House District 82 (Green Party)	1	IL House District 82	Green Party
+IL House District 83 (Green Party)	1	IL House District 83	Green Party
+IL House District 84 (Green Party)	1	IL House District 84	Green Party
+IL House District 85 (Green Party)	1	IL House District 85	Green Party
+IL House District 86 (Green Party)	1	IL House District 86	Green Party
+IL House District 87 (Green Party)	1	IL House District 87	Green Party
+IL House District 88 (Green Party)	1	IL House District 88	Green Party
+IL House District 89 (Green Party)	1	IL House District 89	Green Party
+IL House District 90 (Green Party)	1	IL House District 90	Green Party
+IL House District 91 (Green Party)	1	IL House District 91	Green Party
+IL House District 92 (Green Party)	1	IL House District 92	Green Party
+IL House District 93 (Green Party)	1	IL House District 93	Green Party
+IL House District 94 (Green Party)	1	IL House District 94	Green Party
+IL House District 95 (Green Party)	1	IL House District 95	Green Party
+IL House District 96 (Green Party)	1	IL House District 96	Green Party
+IL House District 97 (Green Party)	1	IL House District 97	Green Party
+IL House District 98 (Green Party)	1	IL House District 98	Green Party
+IL House District 99 (Green Party)	1	IL House District 99	Green Party
+IL House District 100 (Green Party)	1	IL House District 100	Green Party
+IL House District 101 (Green Party)	1	IL House District 101	Green Party
+IL House District 102 (Green Party)	1	IL House District 102	Green Party
+IL House District 103 (Green Party)	1	IL House District 103	Green Party
+IL House District 104 (Green Party)	1	IL House District 104	Green Party
+IL House District 105 (Green Party)	1	IL House District 105	Green Party
+IL House District 106 (Green Party)	1	IL House District 106	Green Party
+IL House District 107 (Green Party)	1	IL House District 107	Green Party
+IL House District 108 (Green Party)	1	IL House District 108	Green Party
+IL House District 109 (Green Party)	1	IL House District 109	Green Party
+IL House District 110 (Green Party)	1	IL House District 110	Green Party
+IL House District 111 (Green Party)	1	IL House District 111	Green Party
+IL House District 112 (Green Party)	1	IL House District 112	Green Party
+IL House District 113 (Green Party)	1	IL House District 113	Green Party
+IL House District 114 (Green Party)	1	IL House District 114	Green Party
+IL House District 115 (Green Party)	1	IL House District 115	Green Party
+IL House District 116 (Green Party)	1	IL House District 116	Green Party
+IL House District 117 (Green Party)	1	IL House District 117	Green Party
+IL House District 118 (Green Party)	1	IL House District 118	Green Party
+IL Senate District 1 (Green Party)	1	IL Senate District 1	Green Party
+IL Senate District 2 (Green Party)	1	IL Senate District 2	Green Party
+IL Senate District 3 (Green Party)	1	IL Senate District 3	Green Party
+IL Senate District 4 (Green Party)	1	IL Senate District 4	Green Party
+IL Senate District 5 (Green Party)	1	IL Senate District 5	Green Party
+IL Senate District 6 (Green Party)	1	IL Senate District 6	Green Party
+IL Senate District 7 (Green Party)	1	IL Senate District 7	Green Party
+IL Senate District 8 (Green Party)	1	IL Senate District 8	Green Party
+IL Senate District 9 (Green Party)	1	IL Senate District 9	Green Party
+IL Senate District 10 (Green Party)	1	IL Senate District 10	Green Party
+IL Senate District 11 (Green Party)	1	IL Senate District 11	Green Party
+IL Senate District 12 (Green Party)	1	IL Senate District 12	Green Party
+IL Senate District 13 (Green Party)	1	IL Senate District 13	Green Party
+IL Senate District 14 (Green Party)	1	IL Senate District 14	Green Party
+IL Senate District 15 (Green Party)	1	IL Senate District 15	Green Party
+IL Senate District 16 (Green Party)	1	IL Senate District 16	Green Party
+IL Senate District 17 (Green Party)	1	IL Senate District 17	Green Party
+IL Senate District 18 (Green Party)	1	IL Senate District 18	Green Party
+IL Senate District 19 (Green Party)	1	IL Senate District 19	Green Party
+IL Senate District 20 (Green Party)	1	IL Senate District 20	Green Party
+IL Senate District 21 (Green Party)	1	IL Senate District 21	Green Party
+IL Senate District 22 (Green Party)	1	IL Senate District 22	Green Party
+IL Senate District 23 (Green Party)	1	IL Senate District 23	Green Party
+IL Senate District 24 (Green Party)	1	IL Senate District 24	Green Party
+IL Senate District 25 (Green Party)	1	IL Senate District 25	Green Party
+IL Senate District 26 (Green Party)	1	IL Senate District 26	Green Party
+IL Senate District 27 (Green Party)	1	IL Senate District 27	Green Party
+IL Senate District 28 (Green Party)	1	IL Senate District 28	Green Party
+IL Senate District 29 (Green Party)	1	IL Senate District 29	Green Party
+IL Senate District 30 (Green Party)	1	IL Senate District 30	Green Party
+IL Senate District 31 (Green Party)	1	IL Senate District 31	Green Party
+IL Senate District 32 (Green Party)	1	IL Senate District 32	Green Party
+IL Senate District 33 (Green Party)	1	IL Senate District 33	Green Party
+IL Senate District 34 (Green Party)	1	IL Senate District 34	Green Party
+IL Senate District 35 (Green Party)	1	IL Senate District 35	Green Party
+IL Senate District 36 (Green Party)	1	IL Senate District 36	Green Party
+IL Senate District 37 (Green Party)	1	IL Senate District 37	Green Party
+IL Senate District 38 (Green Party)	1	IL Senate District 38	Green Party
+IL Senate District 39 (Green Party)	1	IL Senate District 39	Green Party
+IL Senate District 40 (Green Party)	1	IL Senate District 40	Green Party
+IL Senate District 41 (Green Party)	1	IL Senate District 41	Green Party
+IL Senate District 42 (Green Party)	1	IL Senate District 42	Green Party
+IL Senate District 43 (Green Party)	1	IL Senate District 43	Green Party
+IL Senate District 44 (Green Party)	1	IL Senate District 44	Green Party
+IL Senate District 45 (Green Party)	1	IL Senate District 45	Green Party
+IL Senate District 46 (Green Party)	1	IL Senate District 46	Green Party
+IL Senate District 47 (Green Party)	1	IL Senate District 47	Green Party
+IL Senate District 48 (Green Party)	1	IL Senate District 48	Green Party
+IL Senate District 49 (Green Party)	1	IL Senate District 49	Green Party
+IL Senate District 50 (Green Party)	1	IL Senate District 50	Green Party
+IL Senate District 51 (Green Party)	1	IL Senate District 51	Green Party
+IL Senate District 52 (Green Party)	1	IL Senate District 52	Green Party
+IL Senate District 53 (Green Party)	1	IL Senate District 53	Green Party
+IL Senate District 54 (Green Party)	1	IL Senate District 54	Green Party
+IL Senate District 55 (Green Party)	1	IL Senate District 55	Green Party
+IL Senate District 56 (Green Party)	1	IL Senate District 56	Green Party
+IL Senate District 57 (Green Party)	1	IL Senate District 57	Green Party
+IL Senate District 58 (Green Party)	1	IL Senate District 58	Green Party
+IL Senate District 59 (Green Party)	1	IL Senate District 59	Green Party
+US House IL District 1 (Green Party)	1	US House IL District 1	Green Party
+US House IL District 2 (Green Party)	1	US House IL District 2	Green Party
+US House IL District 3 (Green Party)	1	US House IL District 3	Green Party
+US House IL District 4 (Green Party)	1	US House IL District 4	Green Party
+US House IL District 5 (Green Party)	1	US House IL District 5	Green Party
+US House IL District 6 (Green Party)	1	US House IL District 6	Green Party
+US House IL District 7 (Green Party)	1	US House IL District 7	Green Party
+US House IL District 8 (Green Party)	1	US House IL District 8	Green Party
+US House IL District 9 (Green Party)	1	US House IL District 9	Green Party
+US House IL District 10 (Green Party)	1	US House IL District 10	Green Party
+US House IL District 11 (Green Party)	1	US House IL District 11	Green Party
+US House IL District 12 (Green Party)	1	US House IL District 12	Green Party
+US House IL District 13 (Green Party)	1	US House IL District 13	Green Party
+US House IL District 14 (Green Party)	1	US House IL District 14	Green Party
+US House IL District 15 (Green Party)	1	US House IL District 15	Green Party
+US House IL District 16 (Green Party)	1	US House IL District 16	Green Party
+US House IL District 17 (Green Party)	1	US House IL District 17	Green Party
+US House IL District 18 (Green Party)	1	US House IL District 18	Green Party
+US President (IL) (Green Party)	1	US President (IL)	Green Party
+IL Governor (Green Party)	1	IL Governor	Green Party
+US Senate IL (Green Party)	1	US Senate IL	Green Party
+IL Attorney General (Green Party)	1	IL Attorney General	Green Party
+IL Lieutenant Governor (Green Party)	1	IL Lieutenant Governor	Green Party
+IL Treasurer (Green Party)	1	IL Treasurer	Green Party
+IL Comptroller (Green Party)	1	IL Comptroller	Green Party
+IL Secretary of State (Green Party)	1	IL Secretary of State	Green Party
+IL House District 1 (Libertarian Party)	1	IL House District 1	Libertarian Party
+IL House District 2 (Libertarian Party)	1	IL House District 2	Libertarian Party
+IL House District 3 (Libertarian Party)	1	IL House District 3	Libertarian Party
+IL House District 4 (Libertarian Party)	1	IL House District 4	Libertarian Party
+IL House District 5 (Libertarian Party)	1	IL House District 5	Libertarian Party
+IL House District 6 (Libertarian Party)	1	IL House District 6	Libertarian Party
+IL House District 7 (Libertarian Party)	1	IL House District 7	Libertarian Party
+IL House District 8 (Libertarian Party)	1	IL House District 8	Libertarian Party
+IL House District 9 (Libertarian Party)	1	IL House District 9	Libertarian Party
+IL House District 10 (Libertarian Party)	1	IL House District 10	Libertarian Party
+IL House District 11 (Libertarian Party)	1	IL House District 11	Libertarian Party
+IL House District 12 (Libertarian Party)	1	IL House District 12	Libertarian Party
+IL House District 13 (Libertarian Party)	1	IL House District 13	Libertarian Party
+IL House District 14 (Libertarian Party)	1	IL House District 14	Libertarian Party
+IL House District 15 (Libertarian Party)	1	IL House District 15	Libertarian Party
+IL House District 16 (Libertarian Party)	1	IL House District 16	Libertarian Party
+IL House District 17 (Libertarian Party)	1	IL House District 17	Libertarian Party
+IL House District 18 (Libertarian Party)	1	IL House District 18	Libertarian Party
+IL House District 19 (Libertarian Party)	1	IL House District 19	Libertarian Party
+IL House District 20 (Libertarian Party)	1	IL House District 20	Libertarian Party
+IL House District 21 (Libertarian Party)	1	IL House District 21	Libertarian Party
+IL House District 22 (Libertarian Party)	1	IL House District 22	Libertarian Party
+IL House District 23 (Libertarian Party)	1	IL House District 23	Libertarian Party
+IL House District 24 (Libertarian Party)	1	IL House District 24	Libertarian Party
+IL House District 25 (Libertarian Party)	1	IL House District 25	Libertarian Party
+IL House District 26 (Libertarian Party)	1	IL House District 26	Libertarian Party
+IL House District 27 (Libertarian Party)	1	IL House District 27	Libertarian Party
+IL House District 28 (Libertarian Party)	1	IL House District 28	Libertarian Party
+IL House District 29 (Libertarian Party)	1	IL House District 29	Libertarian Party
+IL House District 30 (Libertarian Party)	1	IL House District 30	Libertarian Party
+IL House District 31 (Libertarian Party)	1	IL House District 31	Libertarian Party
+IL House District 32 (Libertarian Party)	1	IL House District 32	Libertarian Party
+IL House District 33 (Libertarian Party)	1	IL House District 33	Libertarian Party
+IL House District 34 (Libertarian Party)	1	IL House District 34	Libertarian Party
+IL House District 35 (Libertarian Party)	1	IL House District 35	Libertarian Party
+IL House District 36 (Libertarian Party)	1	IL House District 36	Libertarian Party
+IL House District 37 (Libertarian Party)	1	IL House District 37	Libertarian Party
+IL House District 38 (Libertarian Party)	1	IL House District 38	Libertarian Party
+IL House District 39 (Libertarian Party)	1	IL House District 39	Libertarian Party
+IL House District 40 (Libertarian Party)	1	IL House District 40	Libertarian Party
+IL House District 41 (Libertarian Party)	1	IL House District 41	Libertarian Party
+IL House District 42 (Libertarian Party)	1	IL House District 42	Libertarian Party
+IL House District 43 (Libertarian Party)	1	IL House District 43	Libertarian Party
+IL House District 44 (Libertarian Party)	1	IL House District 44	Libertarian Party
+IL House District 45 (Libertarian Party)	1	IL House District 45	Libertarian Party
+IL House District 46 (Libertarian Party)	1	IL House District 46	Libertarian Party
+IL House District 47 (Libertarian Party)	1	IL House District 47	Libertarian Party
+IL House District 48 (Libertarian Party)	1	IL House District 48	Libertarian Party
+IL House District 49 (Libertarian Party)	1	IL House District 49	Libertarian Party
+IL House District 50 (Libertarian Party)	1	IL House District 50	Libertarian Party
+IL House District 51 (Libertarian Party)	1	IL House District 51	Libertarian Party
+IL House District 52 (Libertarian Party)	1	IL House District 52	Libertarian Party
+IL House District 53 (Libertarian Party)	1	IL House District 53	Libertarian Party
+IL House District 54 (Libertarian Party)	1	IL House District 54	Libertarian Party
+IL House District 55 (Libertarian Party)	1	IL House District 55	Libertarian Party
+IL House District 56 (Libertarian Party)	1	IL House District 56	Libertarian Party
+IL House District 57 (Libertarian Party)	1	IL House District 57	Libertarian Party
+IL House District 58 (Libertarian Party)	1	IL House District 58	Libertarian Party
+IL House District 59 (Libertarian Party)	1	IL House District 59	Libertarian Party
+IL House District 60 (Libertarian Party)	1	IL House District 60	Libertarian Party
+IL House District 61 (Libertarian Party)	1	IL House District 61	Libertarian Party
+IL House District 62 (Libertarian Party)	1	IL House District 62	Libertarian Party
+IL House District 63 (Libertarian Party)	1	IL House District 63	Libertarian Party
+IL House District 64 (Libertarian Party)	1	IL House District 64	Libertarian Party
+IL House District 65 (Libertarian Party)	1	IL House District 65	Libertarian Party
+IL House District 66 (Libertarian Party)	1	IL House District 66	Libertarian Party
+IL House District 67 (Libertarian Party)	1	IL House District 67	Libertarian Party
+IL House District 68 (Libertarian Party)	1	IL House District 68	Libertarian Party
+IL House District 69 (Libertarian Party)	1	IL House District 69	Libertarian Party
+IL House District 70 (Libertarian Party)	1	IL House District 70	Libertarian Party
+IL House District 71 (Libertarian Party)	1	IL House District 71	Libertarian Party
+IL House District 72 (Libertarian Party)	1	IL House District 72	Libertarian Party
+IL House District 73 (Libertarian Party)	1	IL House District 73	Libertarian Party
+IL House District 74 (Libertarian Party)	1	IL House District 74	Libertarian Party
+IL House District 75 (Libertarian Party)	1	IL House District 75	Libertarian Party
+IL House District 76 (Libertarian Party)	1	IL House District 76	Libertarian Party
+IL House District 77 (Libertarian Party)	1	IL House District 77	Libertarian Party
+IL House District 78 (Libertarian Party)	1	IL House District 78	Libertarian Party
+IL House District 79 (Libertarian Party)	1	IL House District 79	Libertarian Party
+IL House District 80 (Libertarian Party)	1	IL House District 80	Libertarian Party
+IL House District 81 (Libertarian Party)	1	IL House District 81	Libertarian Party
+IL House District 82 (Libertarian Party)	1	IL House District 82	Libertarian Party
+IL House District 83 (Libertarian Party)	1	IL House District 83	Libertarian Party
+IL House District 84 (Libertarian Party)	1	IL House District 84	Libertarian Party
+IL House District 85 (Libertarian Party)	1	IL House District 85	Libertarian Party
+IL House District 86 (Libertarian Party)	1	IL House District 86	Libertarian Party
+IL House District 87 (Libertarian Party)	1	IL House District 87	Libertarian Party
+IL House District 88 (Libertarian Party)	1	IL House District 88	Libertarian Party
+IL House District 89 (Libertarian Party)	1	IL House District 89	Libertarian Party
+IL House District 90 (Libertarian Party)	1	IL House District 90	Libertarian Party
+IL House District 91 (Libertarian Party)	1	IL House District 91	Libertarian Party
+IL House District 92 (Libertarian Party)	1	IL House District 92	Libertarian Party
+IL House District 93 (Libertarian Party)	1	IL House District 93	Libertarian Party
+IL House District 94 (Libertarian Party)	1	IL House District 94	Libertarian Party
+IL House District 95 (Libertarian Party)	1	IL House District 95	Libertarian Party
+IL House District 96 (Libertarian Party)	1	IL House District 96	Libertarian Party
+IL House District 97 (Libertarian Party)	1	IL House District 97	Libertarian Party
+IL House District 98 (Libertarian Party)	1	IL House District 98	Libertarian Party
+IL House District 99 (Libertarian Party)	1	IL House District 99	Libertarian Party
+IL House District 100 (Libertarian Party)	1	IL House District 100	Libertarian Party
+IL House District 101 (Libertarian Party)	1	IL House District 101	Libertarian Party
+IL House District 102 (Libertarian Party)	1	IL House District 102	Libertarian Party
+IL House District 103 (Libertarian Party)	1	IL House District 103	Libertarian Party
+IL House District 104 (Libertarian Party)	1	IL House District 104	Libertarian Party
+IL House District 105 (Libertarian Party)	1	IL House District 105	Libertarian Party
+IL House District 106 (Libertarian Party)	1	IL House District 106	Libertarian Party
+IL House District 107 (Libertarian Party)	1	IL House District 107	Libertarian Party
+IL House District 108 (Libertarian Party)	1	IL House District 108	Libertarian Party
+IL House District 109 (Libertarian Party)	1	IL House District 109	Libertarian Party
+IL House District 110 (Libertarian Party)	1	IL House District 110	Libertarian Party
+IL House District 111 (Libertarian Party)	1	IL House District 111	Libertarian Party
+IL House District 112 (Libertarian Party)	1	IL House District 112	Libertarian Party
+IL House District 113 (Libertarian Party)	1	IL House District 113	Libertarian Party
+IL House District 114 (Libertarian Party)	1	IL House District 114	Libertarian Party
+IL House District 115 (Libertarian Party)	1	IL House District 115	Libertarian Party
+IL House District 116 (Libertarian Party)	1	IL House District 116	Libertarian Party
+IL House District 117 (Libertarian Party)	1	IL House District 117	Libertarian Party
+IL House District 118 (Libertarian Party)	1	IL House District 118	Libertarian Party
+IL Senate District 1 (Libertarian Party)	1	IL Senate District 1	Libertarian Party
+IL Senate District 2 (Libertarian Party)	1	IL Senate District 2	Libertarian Party
+IL Senate District 3 (Libertarian Party)	1	IL Senate District 3	Libertarian Party
+IL Senate District 4 (Libertarian Party)	1	IL Senate District 4	Libertarian Party
+IL Senate District 5 (Libertarian Party)	1	IL Senate District 5	Libertarian Party
+IL Senate District 6 (Libertarian Party)	1	IL Senate District 6	Libertarian Party
+IL Senate District 7 (Libertarian Party)	1	IL Senate District 7	Libertarian Party
+IL Senate District 8 (Libertarian Party)	1	IL Senate District 8	Libertarian Party
+IL Senate District 9 (Libertarian Party)	1	IL Senate District 9	Libertarian Party
+IL Senate District 10 (Libertarian Party)	1	IL Senate District 10	Libertarian Party
+IL Senate District 11 (Libertarian Party)	1	IL Senate District 11	Libertarian Party
+IL Senate District 12 (Libertarian Party)	1	IL Senate District 12	Libertarian Party
+IL Senate District 13 (Libertarian Party)	1	IL Senate District 13	Libertarian Party
+IL Senate District 14 (Libertarian Party)	1	IL Senate District 14	Libertarian Party
+IL Senate District 15 (Libertarian Party)	1	IL Senate District 15	Libertarian Party
+IL Senate District 16 (Libertarian Party)	1	IL Senate District 16	Libertarian Party
+IL Senate District 17 (Libertarian Party)	1	IL Senate District 17	Libertarian Party
+IL Senate District 18 (Libertarian Party)	1	IL Senate District 18	Libertarian Party
+IL Senate District 19 (Libertarian Party)	1	IL Senate District 19	Libertarian Party
+IL Senate District 20 (Libertarian Party)	1	IL Senate District 20	Libertarian Party
+IL Senate District 21 (Libertarian Party)	1	IL Senate District 21	Libertarian Party
+IL Senate District 22 (Libertarian Party)	1	IL Senate District 22	Libertarian Party
+IL Senate District 23 (Libertarian Party)	1	IL Senate District 23	Libertarian Party
+IL Senate District 24 (Libertarian Party)	1	IL Senate District 24	Libertarian Party
+IL Senate District 25 (Libertarian Party)	1	IL Senate District 25	Libertarian Party
+IL Senate District 26 (Libertarian Party)	1	IL Senate District 26	Libertarian Party
+IL Senate District 27 (Libertarian Party)	1	IL Senate District 27	Libertarian Party
+IL Senate District 28 (Libertarian Party)	1	IL Senate District 28	Libertarian Party
+IL Senate District 29 (Libertarian Party)	1	IL Senate District 29	Libertarian Party
+IL Senate District 30 (Libertarian Party)	1	IL Senate District 30	Libertarian Party
+IL Senate District 31 (Libertarian Party)	1	IL Senate District 31	Libertarian Party
+IL Senate District 32 (Libertarian Party)	1	IL Senate District 32	Libertarian Party
+IL Senate District 33 (Libertarian Party)	1	IL Senate District 33	Libertarian Party
+IL Senate District 34 (Libertarian Party)	1	IL Senate District 34	Libertarian Party
+IL Senate District 35 (Libertarian Party)	1	IL Senate District 35	Libertarian Party
+IL Senate District 36 (Libertarian Party)	1	IL Senate District 36	Libertarian Party
+IL Senate District 37 (Libertarian Party)	1	IL Senate District 37	Libertarian Party
+IL Senate District 38 (Libertarian Party)	1	IL Senate District 38	Libertarian Party
+IL Senate District 39 (Libertarian Party)	1	IL Senate District 39	Libertarian Party
+IL Senate District 40 (Libertarian Party)	1	IL Senate District 40	Libertarian Party
+IL Senate District 41 (Libertarian Party)	1	IL Senate District 41	Libertarian Party
+IL Senate District 42 (Libertarian Party)	1	IL Senate District 42	Libertarian Party
+IL Senate District 43 (Libertarian Party)	1	IL Senate District 43	Libertarian Party
+IL Senate District 44 (Libertarian Party)	1	IL Senate District 44	Libertarian Party
+IL Senate District 45 (Libertarian Party)	1	IL Senate District 45	Libertarian Party
+IL Senate District 46 (Libertarian Party)	1	IL Senate District 46	Libertarian Party
+IL Senate District 47 (Libertarian Party)	1	IL Senate District 47	Libertarian Party
+IL Senate District 48 (Libertarian Party)	1	IL Senate District 48	Libertarian Party
+IL Senate District 49 (Libertarian Party)	1	IL Senate District 49	Libertarian Party
+IL Senate District 50 (Libertarian Party)	1	IL Senate District 50	Libertarian Party
+IL Senate District 51 (Libertarian Party)	1	IL Senate District 51	Libertarian Party
+IL Senate District 52 (Libertarian Party)	1	IL Senate District 52	Libertarian Party
+IL Senate District 53 (Libertarian Party)	1	IL Senate District 53	Libertarian Party
+IL Senate District 54 (Libertarian Party)	1	IL Senate District 54	Libertarian Party
+IL Senate District 55 (Libertarian Party)	1	IL Senate District 55	Libertarian Party
+IL Senate District 56 (Libertarian Party)	1	IL Senate District 56	Libertarian Party
+IL Senate District 57 (Libertarian Party)	1	IL Senate District 57	Libertarian Party
+IL Senate District 58 (Libertarian Party)	1	IL Senate District 58	Libertarian Party
+IL Senate District 59 (Libertarian Party)	1	IL Senate District 59	Libertarian Party
+US House IL District 1 (Libertarian Party)	1	US House IL District 1	Libertarian Party
+US House IL District 2 (Libertarian Party)	1	US House IL District 2	Libertarian Party
+US House IL District 3 (Libertarian Party)	1	US House IL District 3	Libertarian Party
+US House IL District 4 (Libertarian Party)	1	US House IL District 4	Libertarian Party
+US House IL District 5 (Libertarian Party)	1	US House IL District 5	Libertarian Party
+US House IL District 6 (Libertarian Party)	1	US House IL District 6	Libertarian Party
+US House IL District 7 (Libertarian Party)	1	US House IL District 7	Libertarian Party
+US House IL District 8 (Libertarian Party)	1	US House IL District 8	Libertarian Party
+US House IL District 9 (Libertarian Party)	1	US House IL District 9	Libertarian Party
+US House IL District 10 (Libertarian Party)	1	US House IL District 10	Libertarian Party
+US House IL District 11 (Libertarian Party)	1	US House IL District 11	Libertarian Party
+US House IL District 12 (Libertarian Party)	1	US House IL District 12	Libertarian Party
+US House IL District 13 (Libertarian Party)	1	US House IL District 13	Libertarian Party
+US House IL District 14 (Libertarian Party)	1	US House IL District 14	Libertarian Party
+US House IL District 15 (Libertarian Party)	1	US House IL District 15	Libertarian Party
+US House IL District 16 (Libertarian Party)	1	US House IL District 16	Libertarian Party
+US House IL District 17 (Libertarian Party)	1	US House IL District 17	Libertarian Party
+US House IL District 18 (Libertarian Party)	1	US House IL District 18	Libertarian Party
+US President (IL) (Libertarian Party)	1	US President (IL)	Libertarian Party
+IL Governor (Libertarian Party)	1	IL Governor	Libertarian Party
+US Senate IL (Libertarian Party)	1	US Senate IL	Libertarian Party
+IL Attorney General (Libertarian Party)	1	IL Attorney General	Libertarian Party
+IL Lieutenant Governor (Libertarian Party)	1	IL Lieutenant Governor	Libertarian Party
+IL Treasurer (Libertarian Party)	1	IL Treasurer	Libertarian Party
+IL Comptroller (Libertarian Party)	1	IL Comptroller	Libertarian Party
+IL Secretary of State (Libertarian Party)	1	IL Secretary of State	Libertarian Party
+IL House District 1 (Independent Party)	1	IL House District 1	Independent Party
+IL House District 2 (Independent Party)	1	IL House District 2	Independent Party
+IL House District 3 (Independent Party)	1	IL House District 3	Independent Party
+IL House District 4 (Independent Party)	1	IL House District 4	Independent Party
+IL House District 5 (Independent Party)	1	IL House District 5	Independent Party
+IL House District 6 (Independent Party)	1	IL House District 6	Independent Party
+IL House District 7 (Independent Party)	1	IL House District 7	Independent Party
+IL House District 8 (Independent Party)	1	IL House District 8	Independent Party
+IL House District 9 (Independent Party)	1	IL House District 9	Independent Party
+IL House District 10 (Independent Party)	1	IL House District 10	Independent Party
+IL House District 11 (Independent Party)	1	IL House District 11	Independent Party
+IL House District 12 (Independent Party)	1	IL House District 12	Independent Party
+IL House District 13 (Independent Party)	1	IL House District 13	Independent Party
+IL House District 14 (Independent Party)	1	IL House District 14	Independent Party
+IL House District 15 (Independent Party)	1	IL House District 15	Independent Party
+IL House District 16 (Independent Party)	1	IL House District 16	Independent Party
+IL House District 17 (Independent Party)	1	IL House District 17	Independent Party
+IL House District 18 (Independent Party)	1	IL House District 18	Independent Party
+IL House District 19 (Independent Party)	1	IL House District 19	Independent Party
+IL House District 20 (Independent Party)	1	IL House District 20	Independent Party
+IL House District 21 (Independent Party)	1	IL House District 21	Independent Party
+IL House District 22 (Independent Party)	1	IL House District 22	Independent Party
+IL House District 23 (Independent Party)	1	IL House District 23	Independent Party
+IL House District 24 (Independent Party)	1	IL House District 24	Independent Party
+IL House District 25 (Independent Party)	1	IL House District 25	Independent Party
+IL House District 26 (Independent Party)	1	IL House District 26	Independent Party
+IL House District 27 (Independent Party)	1	IL House District 27	Independent Party
+IL House District 28 (Independent Party)	1	IL House District 28	Independent Party
+IL House District 29 (Independent Party)	1	IL House District 29	Independent Party
+IL House District 30 (Independent Party)	1	IL House District 30	Independent Party
+IL House District 31 (Independent Party)	1	IL House District 31	Independent Party
+IL House District 32 (Independent Party)	1	IL House District 32	Independent Party
+IL House District 33 (Independent Party)	1	IL House District 33	Independent Party
+IL House District 34 (Independent Party)	1	IL House District 34	Independent Party
+IL House District 35 (Independent Party)	1	IL House District 35	Independent Party
+IL House District 36 (Independent Party)	1	IL House District 36	Independent Party
+IL House District 37 (Independent Party)	1	IL House District 37	Independent Party
+IL House District 38 (Independent Party)	1	IL House District 38	Independent Party
+IL House District 39 (Independent Party)	1	IL House District 39	Independent Party
+IL House District 40 (Independent Party)	1	IL House District 40	Independent Party
+IL House District 41 (Independent Party)	1	IL House District 41	Independent Party
+IL House District 42 (Independent Party)	1	IL House District 42	Independent Party
+IL House District 43 (Independent Party)	1	IL House District 43	Independent Party
+IL House District 44 (Independent Party)	1	IL House District 44	Independent Party
+IL House District 45 (Independent Party)	1	IL House District 45	Independent Party
+IL House District 46 (Independent Party)	1	IL House District 46	Independent Party
+IL House District 47 (Independent Party)	1	IL House District 47	Independent Party
+IL House District 48 (Independent Party)	1	IL House District 48	Independent Party
+IL House District 49 (Independent Party)	1	IL House District 49	Independent Party
+IL House District 50 (Independent Party)	1	IL House District 50	Independent Party
+IL House District 51 (Independent Party)	1	IL House District 51	Independent Party
+IL House District 52 (Independent Party)	1	IL House District 52	Independent Party
+IL House District 53 (Independent Party)	1	IL House District 53	Independent Party
+IL House District 54 (Independent Party)	1	IL House District 54	Independent Party
+IL House District 55 (Independent Party)	1	IL House District 55	Independent Party
+IL House District 56 (Independent Party)	1	IL House District 56	Independent Party
+IL House District 57 (Independent Party)	1	IL House District 57	Independent Party
+IL House District 58 (Independent Party)	1	IL House District 58	Independent Party
+IL House District 59 (Independent Party)	1	IL House District 59	Independent Party
+IL House District 60 (Independent Party)	1	IL House District 60	Independent Party
+IL House District 61 (Independent Party)	1	IL House District 61	Independent Party
+IL House District 62 (Independent Party)	1	IL House District 62	Independent Party
+IL House District 63 (Independent Party)	1	IL House District 63	Independent Party
+IL House District 64 (Independent Party)	1	IL House District 64	Independent Party
+IL House District 65 (Independent Party)	1	IL House District 65	Independent Party
+IL House District 66 (Independent Party)	1	IL House District 66	Independent Party
+IL House District 67 (Independent Party)	1	IL House District 67	Independent Party
+IL House District 68 (Independent Party)	1	IL House District 68	Independent Party
+IL House District 69 (Independent Party)	1	IL House District 69	Independent Party
+IL House District 70 (Independent Party)	1	IL House District 70	Independent Party
+IL House District 71 (Independent Party)	1	IL House District 71	Independent Party
+IL House District 72 (Independent Party)	1	IL House District 72	Independent Party
+IL House District 73 (Independent Party)	1	IL House District 73	Independent Party
+IL House District 74 (Independent Party)	1	IL House District 74	Independent Party
+IL House District 75 (Independent Party)	1	IL House District 75	Independent Party
+IL House District 76 (Independent Party)	1	IL House District 76	Independent Party
+IL House District 77 (Independent Party)	1	IL House District 77	Independent Party
+IL House District 78 (Independent Party)	1	IL House District 78	Independent Party
+IL House District 79 (Independent Party)	1	IL House District 79	Independent Party
+IL House District 80 (Independent Party)	1	IL House District 80	Independent Party
+IL House District 81 (Independent Party)	1	IL House District 81	Independent Party
+IL House District 82 (Independent Party)	1	IL House District 82	Independent Party
+IL House District 83 (Independent Party)	1	IL House District 83	Independent Party
+IL House District 84 (Independent Party)	1	IL House District 84	Independent Party
+IL House District 85 (Independent Party)	1	IL House District 85	Independent Party
+IL House District 86 (Independent Party)	1	IL House District 86	Independent Party
+IL House District 87 (Independent Party)	1	IL House District 87	Independent Party
+IL House District 88 (Independent Party)	1	IL House District 88	Independent Party
+IL House District 89 (Independent Party)	1	IL House District 89	Independent Party
+IL House District 90 (Independent Party)	1	IL House District 90	Independent Party
+IL House District 91 (Independent Party)	1	IL House District 91	Independent Party
+IL House District 92 (Independent Party)	1	IL House District 92	Independent Party
+IL House District 93 (Independent Party)	1	IL House District 93	Independent Party
+IL House District 94 (Independent Party)	1	IL House District 94	Independent Party
+IL House District 95 (Independent Party)	1	IL House District 95	Independent Party
+IL House District 96 (Independent Party)	1	IL House District 96	Independent Party
+IL House District 97 (Independent Party)	1	IL House District 97	Independent Party
+IL House District 98 (Independent Party)	1	IL House District 98	Independent Party
+IL House District 99 (Independent Party)	1	IL House District 99	Independent Party
+IL House District 100 (Independent Party)	1	IL House District 100	Independent Party
+IL House District 101 (Independent Party)	1	IL House District 101	Independent Party
+IL House District 102 (Independent Party)	1	IL House District 102	Independent Party
+IL House District 103 (Independent Party)	1	IL House District 103	Independent Party
+IL House District 104 (Independent Party)	1	IL House District 104	Independent Party
+IL House District 105 (Independent Party)	1	IL House District 105	Independent Party
+IL House District 106 (Independent Party)	1	IL House District 106	Independent Party
+IL House District 107 (Independent Party)	1	IL House District 107	Independent Party
+IL House District 108 (Independent Party)	1	IL House District 108	Independent Party
+IL House District 109 (Independent Party)	1	IL House District 109	Independent Party
+IL House District 110 (Independent Party)	1	IL House District 110	Independent Party
+IL House District 111 (Independent Party)	1	IL House District 111	Independent Party
+IL House District 112 (Independent Party)	1	IL House District 112	Independent Party
+IL House District 113 (Independent Party)	1	IL House District 113	Independent Party
+IL House District 114 (Independent Party)	1	IL House District 114	Independent Party
+IL House District 115 (Independent Party)	1	IL House District 115	Independent Party
+IL House District 116 (Independent Party)	1	IL House District 116	Independent Party
+IL House District 117 (Independent Party)	1	IL House District 117	Independent Party
+IL House District 118 (Independent Party)	1	IL House District 118	Independent Party
+IL Senate District 1 (Independent Party)	1	IL Senate District 1	Independent Party
+IL Senate District 2 (Independent Party)	1	IL Senate District 2	Independent Party
+IL Senate District 3 (Independent Party)	1	IL Senate District 3	Independent Party
+IL Senate District 4 (Independent Party)	1	IL Senate District 4	Independent Party
+IL Senate District 5 (Independent Party)	1	IL Senate District 5	Independent Party
+IL Senate District 6 (Independent Party)	1	IL Senate District 6	Independent Party
+IL Senate District 7 (Independent Party)	1	IL Senate District 7	Independent Party
+IL Senate District 8 (Independent Party)	1	IL Senate District 8	Independent Party
+IL Senate District 9 (Independent Party)	1	IL Senate District 9	Independent Party
+IL Senate District 10 (Independent Party)	1	IL Senate District 10	Independent Party
+IL Senate District 11 (Independent Party)	1	IL Senate District 11	Independent Party
+IL Senate District 12 (Independent Party)	1	IL Senate District 12	Independent Party
+IL Senate District 13 (Independent Party)	1	IL Senate District 13	Independent Party
+IL Senate District 14 (Independent Party)	1	IL Senate District 14	Independent Party
+IL Senate District 15 (Independent Party)	1	IL Senate District 15	Independent Party
+IL Senate District 16 (Independent Party)	1	IL Senate District 16	Independent Party
+IL Senate District 17 (Independent Party)	1	IL Senate District 17	Independent Party
+IL Senate District 18 (Independent Party)	1	IL Senate District 18	Independent Party
+IL Senate District 19 (Independent Party)	1	IL Senate District 19	Independent Party
+IL Senate District 20 (Independent Party)	1	IL Senate District 20	Independent Party
+IL Senate District 21 (Independent Party)	1	IL Senate District 21	Independent Party
+IL Senate District 22 (Independent Party)	1	IL Senate District 22	Independent Party
+IL Senate District 23 (Independent Party)	1	IL Senate District 23	Independent Party
+IL Senate District 24 (Independent Party)	1	IL Senate District 24	Independent Party
+IL Senate District 25 (Independent Party)	1	IL Senate District 25	Independent Party
+IL Senate District 26 (Independent Party)	1	IL Senate District 26	Independent Party
+IL Senate District 27 (Independent Party)	1	IL Senate District 27	Independent Party
+IL Senate District 28 (Independent Party)	1	IL Senate District 28	Independent Party
+IL Senate District 29 (Independent Party)	1	IL Senate District 29	Independent Party
+IL Senate District 30 (Independent Party)	1	IL Senate District 30	Independent Party
+IL Senate District 31 (Independent Party)	1	IL Senate District 31	Independent Party
+IL Senate District 32 (Independent Party)	1	IL Senate District 32	Independent Party
+IL Senate District 33 (Independent Party)	1	IL Senate District 33	Independent Party
+IL Senate District 34 (Independent Party)	1	IL Senate District 34	Independent Party
+IL Senate District 35 (Independent Party)	1	IL Senate District 35	Independent Party
+IL Senate District 36 (Independent Party)	1	IL Senate District 36	Independent Party
+IL Senate District 37 (Independent Party)	1	IL Senate District 37	Independent Party
+IL Senate District 38 (Independent Party)	1	IL Senate District 38	Independent Party
+IL Senate District 39 (Independent Party)	1	IL Senate District 39	Independent Party
+IL Senate District 40 (Independent Party)	1	IL Senate District 40	Independent Party
+IL Senate District 41 (Independent Party)	1	IL Senate District 41	Independent Party
+IL Senate District 42 (Independent Party)	1	IL Senate District 42	Independent Party
+IL Senate District 43 (Independent Party)	1	IL Senate District 43	Independent Party
+IL Senate District 44 (Independent Party)	1	IL Senate District 44	Independent Party
+IL Senate District 45 (Independent Party)	1	IL Senate District 45	Independent Party
+IL Senate District 46 (Independent Party)	1	IL Senate District 46	Independent Party
+IL Senate District 47 (Independent Party)	1	IL Senate District 47	Independent Party
+IL Senate District 48 (Independent Party)	1	IL Senate District 48	Independent Party
+IL Senate District 49 (Independent Party)	1	IL Senate District 49	Independent Party
+IL Senate District 50 (Independent Party)	1	IL Senate District 50	Independent Party
+IL Senate District 51 (Independent Party)	1	IL Senate District 51	Independent Party
+IL Senate District 52 (Independent Party)	1	IL Senate District 52	Independent Party
+IL Senate District 53 (Independent Party)	1	IL Senate District 53	Independent Party
+IL Senate District 54 (Independent Party)	1	IL Senate District 54	Independent Party
+IL Senate District 55 (Independent Party)	1	IL Senate District 55	Independent Party
+IL Senate District 56 (Independent Party)	1	IL Senate District 56	Independent Party
+IL Senate District 57 (Independent Party)	1	IL Senate District 57	Independent Party
+IL Senate District 58 (Independent Party)	1	IL Senate District 58	Independent Party
+IL Senate District 59 (Independent Party)	1	IL Senate District 59	Independent Party
+US House IL District 1 (Independent Party)	1	US House IL District 1	Independent Party
+US House IL District 2 (Independent Party)	1	US House IL District 2	Independent Party
+US House IL District 3 (Independent Party)	1	US House IL District 3	Independent Party
+US House IL District 4 (Independent Party)	1	US House IL District 4	Independent Party
+US House IL District 5 (Independent Party)	1	US House IL District 5	Independent Party
+US House IL District 6 (Independent Party)	1	US House IL District 6	Independent Party
+US House IL District 7 (Independent Party)	1	US House IL District 7	Independent Party
+US House IL District 8 (Independent Party)	1	US House IL District 8	Independent Party
+US House IL District 9 (Independent Party)	1	US House IL District 9	Independent Party
+US House IL District 10 (Independent Party)	1	US House IL District 10	Independent Party
+US House IL District 11 (Independent Party)	1	US House IL District 11	Independent Party
+US House IL District 12 (Independent Party)	1	US House IL District 12	Independent Party
+US House IL District 13 (Independent Party)	1	US House IL District 13	Independent Party
+US House IL District 14 (Independent Party)	1	US House IL District 14	Independent Party
+US House IL District 15 (Independent Party)	1	US House IL District 15	Independent Party
+US House IL District 16 (Independent Party)	1	US House IL District 16	Independent Party
+US House IL District 17 (Independent Party)	1	US House IL District 17	Independent Party
+US House IL District 18 (Independent Party)	1	US House IL District 18	Independent Party
+US President (IL) (Independent Party)	1	US President (IL)	Independent Party
+IL Governor (Independent Party)	1	IL Governor	Independent Party
+US Senate IL (Independent Party)	1	US Senate IL	Independent Party
+IL Attorney General (Independent Party)	1	IL Attorney General	Independent Party
+IL Lieutenant Governor (Independent Party)	1	IL Lieutenant Governor	Independent Party
+IL Treasurer (Independent Party)	1	IL Treasurer	Independent Party
+IL Comptroller (Independent Party)	1	IL Comptroller	Independent Party
+IL Secretary of State (Independent Party)	1	IL Secretary of State	Independent Party
+IL House District 1 (Downstate United Party)	1	IL House District 1	Downstate United Party
+IL House District 2 (Downstate United Party)	1	IL House District 2	Downstate United Party
+IL House District 3 (Downstate United Party)	1	IL House District 3	Downstate United Party
+IL House District 4 (Downstate United Party)	1	IL House District 4	Downstate United Party
+IL House District 5 (Downstate United Party)	1	IL House District 5	Downstate United Party
+IL House District 6 (Downstate United Party)	1	IL House District 6	Downstate United Party
+IL House District 7 (Downstate United Party)	1	IL House District 7	Downstate United Party
+IL House District 8 (Downstate United Party)	1	IL House District 8	Downstate United Party
+IL House District 9 (Downstate United Party)	1	IL House District 9	Downstate United Party
+IL House District 10 (Downstate United Party)	1	IL House District 10	Downstate United Party
+IL House District 11 (Downstate United Party)	1	IL House District 11	Downstate United Party
+IL House District 12 (Downstate United Party)	1	IL House District 12	Downstate United Party
+IL House District 13 (Downstate United Party)	1	IL House District 13	Downstate United Party
+IL House District 14 (Downstate United Party)	1	IL House District 14	Downstate United Party
+IL House District 15 (Downstate United Party)	1	IL House District 15	Downstate United Party
+IL House District 16 (Downstate United Party)	1	IL House District 16	Downstate United Party
+IL House District 17 (Downstate United Party)	1	IL House District 17	Downstate United Party
+IL House District 18 (Downstate United Party)	1	IL House District 18	Downstate United Party
+IL House District 19 (Downstate United Party)	1	IL House District 19	Downstate United Party
+IL House District 20 (Downstate United Party)	1	IL House District 20	Downstate United Party
+IL House District 21 (Downstate United Party)	1	IL House District 21	Downstate United Party
+IL House District 22 (Downstate United Party)	1	IL House District 22	Downstate United Party
+IL House District 23 (Downstate United Party)	1	IL House District 23	Downstate United Party
+IL House District 24 (Downstate United Party)	1	IL House District 24	Downstate United Party
+IL House District 25 (Downstate United Party)	1	IL House District 25	Downstate United Party
+IL House District 26 (Downstate United Party)	1	IL House District 26	Downstate United Party
+IL House District 27 (Downstate United Party)	1	IL House District 27	Downstate United Party
+IL House District 28 (Downstate United Party)	1	IL House District 28	Downstate United Party
+IL House District 29 (Downstate United Party)	1	IL House District 29	Downstate United Party
+IL House District 30 (Downstate United Party)	1	IL House District 30	Downstate United Party
+IL House District 31 (Downstate United Party)	1	IL House District 31	Downstate United Party
+IL House District 32 (Downstate United Party)	1	IL House District 32	Downstate United Party
+IL House District 33 (Downstate United Party)	1	IL House District 33	Downstate United Party
+IL House District 34 (Downstate United Party)	1	IL House District 34	Downstate United Party
+IL House District 35 (Downstate United Party)	1	IL House District 35	Downstate United Party
+IL House District 36 (Downstate United Party)	1	IL House District 36	Downstate United Party
+IL House District 37 (Downstate United Party)	1	IL House District 37	Downstate United Party
+IL House District 38 (Downstate United Party)	1	IL House District 38	Downstate United Party
+IL House District 39 (Downstate United Party)	1	IL House District 39	Downstate United Party
+IL House District 40 (Downstate United Party)	1	IL House District 40	Downstate United Party
+IL House District 41 (Downstate United Party)	1	IL House District 41	Downstate United Party
+IL House District 42 (Downstate United Party)	1	IL House District 42	Downstate United Party
+IL House District 43 (Downstate United Party)	1	IL House District 43	Downstate United Party
+IL House District 44 (Downstate United Party)	1	IL House District 44	Downstate United Party
+IL House District 45 (Downstate United Party)	1	IL House District 45	Downstate United Party
+IL House District 46 (Downstate United Party)	1	IL House District 46	Downstate United Party
+IL House District 47 (Downstate United Party)	1	IL House District 47	Downstate United Party
+IL House District 48 (Downstate United Party)	1	IL House District 48	Downstate United Party
+IL House District 49 (Downstate United Party)	1	IL House District 49	Downstate United Party
+IL House District 50 (Downstate United Party)	1	IL House District 50	Downstate United Party
+IL House District 51 (Downstate United Party)	1	IL House District 51	Downstate United Party
+IL House District 52 (Downstate United Party)	1	IL House District 52	Downstate United Party
+IL House District 53 (Downstate United Party)	1	IL House District 53	Downstate United Party
+IL House District 54 (Downstate United Party)	1	IL House District 54	Downstate United Party
+IL House District 55 (Downstate United Party)	1	IL House District 55	Downstate United Party
+IL House District 56 (Downstate United Party)	1	IL House District 56	Downstate United Party
+IL House District 57 (Downstate United Party)	1	IL House District 57	Downstate United Party
+IL House District 58 (Downstate United Party)	1	IL House District 58	Downstate United Party
+IL House District 59 (Downstate United Party)	1	IL House District 59	Downstate United Party
+IL House District 60 (Downstate United Party)	1	IL House District 60	Downstate United Party
+IL House District 61 (Downstate United Party)	1	IL House District 61	Downstate United Party
+IL House District 62 (Downstate United Party)	1	IL House District 62	Downstate United Party
+IL House District 63 (Downstate United Party)	1	IL House District 63	Downstate United Party
+IL House District 64 (Downstate United Party)	1	IL House District 64	Downstate United Party
+IL House District 65 (Downstate United Party)	1	IL House District 65	Downstate United Party
+IL House District 66 (Downstate United Party)	1	IL House District 66	Downstate United Party
+IL House District 67 (Downstate United Party)	1	IL House District 67	Downstate United Party
+IL House District 68 (Downstate United Party)	1	IL House District 68	Downstate United Party
+IL House District 69 (Downstate United Party)	1	IL House District 69	Downstate United Party
+IL House District 70 (Downstate United Party)	1	IL House District 70	Downstate United Party
+IL House District 71 (Downstate United Party)	1	IL House District 71	Downstate United Party
+IL House District 72 (Downstate United Party)	1	IL House District 72	Downstate United Party
+IL House District 73 (Downstate United Party)	1	IL House District 73	Downstate United Party
+IL House District 74 (Downstate United Party)	1	IL House District 74	Downstate United Party
+IL House District 75 (Downstate United Party)	1	IL House District 75	Downstate United Party
+IL House District 76 (Downstate United Party)	1	IL House District 76	Downstate United Party
+IL House District 77 (Downstate United Party)	1	IL House District 77	Downstate United Party
+IL House District 78 (Downstate United Party)	1	IL House District 78	Downstate United Party
+IL House District 79 (Downstate United Party)	1	IL House District 79	Downstate United Party
+IL House District 80 (Downstate United Party)	1	IL House District 80	Downstate United Party
+IL House District 81 (Downstate United Party)	1	IL House District 81	Downstate United Party
+IL House District 82 (Downstate United Party)	1	IL House District 82	Downstate United Party
+IL House District 83 (Downstate United Party)	1	IL House District 83	Downstate United Party
+IL House District 84 (Downstate United Party)	1	IL House District 84	Downstate United Party
+IL House District 85 (Downstate United Party)	1	IL House District 85	Downstate United Party
+IL House District 86 (Downstate United Party)	1	IL House District 86	Downstate United Party
+IL House District 87 (Downstate United Party)	1	IL House District 87	Downstate United Party
+IL House District 88 (Downstate United Party)	1	IL House District 88	Downstate United Party
+IL House District 89 (Downstate United Party)	1	IL House District 89	Downstate United Party
+IL House District 90 (Downstate United Party)	1	IL House District 90	Downstate United Party
+IL House District 91 (Downstate United Party)	1	IL House District 91	Downstate United Party
+IL House District 92 (Downstate United Party)	1	IL House District 92	Downstate United Party
+IL House District 93 (Downstate United Party)	1	IL House District 93	Downstate United Party
+IL House District 94 (Downstate United Party)	1	IL House District 94	Downstate United Party
+IL House District 95 (Downstate United Party)	1	IL House District 95	Downstate United Party
+IL House District 96 (Downstate United Party)	1	IL House District 96	Downstate United Party
+IL House District 97 (Downstate United Party)	1	IL House District 97	Downstate United Party
+IL House District 98 (Downstate United Party)	1	IL House District 98	Downstate United Party
+IL House District 99 (Downstate United Party)	1	IL House District 99	Downstate United Party
+IL House District 100 (Downstate United Party)	1	IL House District 100	Downstate United Party
+IL House District 101 (Downstate United Party)	1	IL House District 101	Downstate United Party
+IL House District 102 (Downstate United Party)	1	IL House District 102	Downstate United Party
+IL House District 103 (Downstate United Party)	1	IL House District 103	Downstate United Party
+IL House District 104 (Downstate United Party)	1	IL House District 104	Downstate United Party
+IL House District 105 (Downstate United Party)	1	IL House District 105	Downstate United Party
+IL House District 106 (Downstate United Party)	1	IL House District 106	Downstate United Party
+IL House District 107 (Downstate United Party)	1	IL House District 107	Downstate United Party
+IL House District 108 (Downstate United Party)	1	IL House District 108	Downstate United Party
+IL House District 109 (Downstate United Party)	1	IL House District 109	Downstate United Party
+IL House District 110 (Downstate United Party)	1	IL House District 110	Downstate United Party
+IL House District 111 (Downstate United Party)	1	IL House District 111	Downstate United Party
+IL House District 112 (Downstate United Party)	1	IL House District 112	Downstate United Party
+IL House District 113 (Downstate United Party)	1	IL House District 113	Downstate United Party
+IL House District 114 (Downstate United Party)	1	IL House District 114	Downstate United Party
+IL House District 115 (Downstate United Party)	1	IL House District 115	Downstate United Party
+IL House District 116 (Downstate United Party)	1	IL House District 116	Downstate United Party
+IL House District 117 (Downstate United Party)	1	IL House District 117	Downstate United Party
+IL House District 118 (Downstate United Party)	1	IL House District 118	Downstate United Party
+IL Senate District 1 (Downstate United Party)	1	IL Senate District 1	Downstate United Party
+IL Senate District 2 (Downstate United Party)	1	IL Senate District 2	Downstate United Party
+IL Senate District 3 (Downstate United Party)	1	IL Senate District 3	Downstate United Party
+IL Senate District 4 (Downstate United Party)	1	IL Senate District 4	Downstate United Party
+IL Senate District 5 (Downstate United Party)	1	IL Senate District 5	Downstate United Party
+IL Senate District 6 (Downstate United Party)	1	IL Senate District 6	Downstate United Party
+IL Senate District 7 (Downstate United Party)	1	IL Senate District 7	Downstate United Party
+IL Senate District 8 (Downstate United Party)	1	IL Senate District 8	Downstate United Party
+IL Senate District 9 (Downstate United Party)	1	IL Senate District 9	Downstate United Party
+IL Senate District 10 (Downstate United Party)	1	IL Senate District 10	Downstate United Party
+IL Senate District 11 (Downstate United Party)	1	IL Senate District 11	Downstate United Party
+IL Senate District 12 (Downstate United Party)	1	IL Senate District 12	Downstate United Party
+IL Senate District 13 (Downstate United Party)	1	IL Senate District 13	Downstate United Party
+IL Senate District 14 (Downstate United Party)	1	IL Senate District 14	Downstate United Party
+IL Senate District 15 (Downstate United Party)	1	IL Senate District 15	Downstate United Party
+IL Senate District 16 (Downstate United Party)	1	IL Senate District 16	Downstate United Party
+IL Senate District 17 (Downstate United Party)	1	IL Senate District 17	Downstate United Party
+IL Senate District 18 (Downstate United Party)	1	IL Senate District 18	Downstate United Party
+IL Senate District 19 (Downstate United Party)	1	IL Senate District 19	Downstate United Party
+IL Senate District 20 (Downstate United Party)	1	IL Senate District 20	Downstate United Party
+IL Senate District 21 (Downstate United Party)	1	IL Senate District 21	Downstate United Party
+IL Senate District 22 (Downstate United Party)	1	IL Senate District 22	Downstate United Party
+IL Senate District 23 (Downstate United Party)	1	IL Senate District 23	Downstate United Party
+IL Senate District 24 (Downstate United Party)	1	IL Senate District 24	Downstate United Party
+IL Senate District 25 (Downstate United Party)	1	IL Senate District 25	Downstate United Party
+IL Senate District 26 (Downstate United Party)	1	IL Senate District 26	Downstate United Party
+IL Senate District 27 (Downstate United Party)	1	IL Senate District 27	Downstate United Party
+IL Senate District 28 (Downstate United Party)	1	IL Senate District 28	Downstate United Party
+IL Senate District 29 (Downstate United Party)	1	IL Senate District 29	Downstate United Party
+IL Senate District 30 (Downstate United Party)	1	IL Senate District 30	Downstate United Party
+IL Senate District 31 (Downstate United Party)	1	IL Senate District 31	Downstate United Party
+IL Senate District 32 (Downstate United Party)	1	IL Senate District 32	Downstate United Party
+IL Senate District 33 (Downstate United Party)	1	IL Senate District 33	Downstate United Party
+IL Senate District 34 (Downstate United Party)	1	IL Senate District 34	Downstate United Party
+IL Senate District 35 (Downstate United Party)	1	IL Senate District 35	Downstate United Party
+IL Senate District 36 (Downstate United Party)	1	IL Senate District 36	Downstate United Party
+IL Senate District 37 (Downstate United Party)	1	IL Senate District 37	Downstate United Party
+IL Senate District 38 (Downstate United Party)	1	IL Senate District 38	Downstate United Party
+IL Senate District 39 (Downstate United Party)	1	IL Senate District 39	Downstate United Party
+IL Senate District 40 (Downstate United Party)	1	IL Senate District 40	Downstate United Party
+IL Senate District 41 (Downstate United Party)	1	IL Senate District 41	Downstate United Party
+IL Senate District 42 (Downstate United Party)	1	IL Senate District 42	Downstate United Party
+IL Senate District 43 (Downstate United Party)	1	IL Senate District 43	Downstate United Party
+IL Senate District 44 (Downstate United Party)	1	IL Senate District 44	Downstate United Party
+IL Senate District 45 (Downstate United Party)	1	IL Senate District 45	Downstate United Party
+IL Senate District 46 (Downstate United Party)	1	IL Senate District 46	Downstate United Party
+IL Senate District 47 (Downstate United Party)	1	IL Senate District 47	Downstate United Party
+IL Senate District 48 (Downstate United Party)	1	IL Senate District 48	Downstate United Party
+IL Senate District 49 (Downstate United Party)	1	IL Senate District 49	Downstate United Party
+IL Senate District 50 (Downstate United Party)	1	IL Senate District 50	Downstate United Party
+IL Senate District 51 (Downstate United Party)	1	IL Senate District 51	Downstate United Party
+IL Senate District 52 (Downstate United Party)	1	IL Senate District 52	Downstate United Party
+IL Senate District 53 (Downstate United Party)	1	IL Senate District 53	Downstate United Party
+IL Senate District 54 (Downstate United Party)	1	IL Senate District 54	Downstate United Party
+IL Senate District 55 (Downstate United Party)	1	IL Senate District 55	Downstate United Party
+IL Senate District 56 (Downstate United Party)	1	IL Senate District 56	Downstate United Party
+IL Senate District 57 (Downstate United Party)	1	IL Senate District 57	Downstate United Party
+IL Senate District 58 (Downstate United Party)	1	IL Senate District 58	Downstate United Party
+IL Senate District 59 (Downstate United Party)	1	IL Senate District 59	Downstate United Party
+US House IL District 1 (Downstate United Party)	1	US House IL District 1	Downstate United Party
+US House IL District 2 (Downstate United Party)	1	US House IL District 2	Downstate United Party
+US House IL District 3 (Downstate United Party)	1	US House IL District 3	Downstate United Party
+US House IL District 4 (Downstate United Party)	1	US House IL District 4	Downstate United Party
+US House IL District 5 (Downstate United Party)	1	US House IL District 5	Downstate United Party
+US House IL District 6 (Downstate United Party)	1	US House IL District 6	Downstate United Party
+US House IL District 7 (Downstate United Party)	1	US House IL District 7	Downstate United Party
+US House IL District 8 (Downstate United Party)	1	US House IL District 8	Downstate United Party
+US House IL District 9 (Downstate United Party)	1	US House IL District 9	Downstate United Party
+US House IL District 10 (Downstate United Party)	1	US House IL District 10	Downstate United Party
+US House IL District 11 (Downstate United Party)	1	US House IL District 11	Downstate United Party
+US House IL District 12 (Downstate United Party)	1	US House IL District 12	Downstate United Party
+US House IL District 13 (Downstate United Party)	1	US House IL District 13	Downstate United Party
+US House IL District 14 (Downstate United Party)	1	US House IL District 14	Downstate United Party
+US House IL District 15 (Downstate United Party)	1	US House IL District 15	Downstate United Party
+US House IL District 16 (Downstate United Party)	1	US House IL District 16	Downstate United Party
+US House IL District 17 (Downstate United Party)	1	US House IL District 17	Downstate United Party
+US House IL District 18 (Downstate United Party)	1	US House IL District 18	Downstate United Party
+US President (IL) (Downstate United Party)	1	US President (IL)	Downstate United Party
+IL Governor (Downstate United Party)	1	IL Governor	Downstate United Party
+US Senate IL (Downstate United Party)	1	US Senate IL	Downstate United Party
+IL Attorney General (Downstate United Party)	1	IL Attorney General	Downstate United Party
+IL Lieutenant Governor (Downstate United Party)	1	IL Lieutenant Governor	Downstate United Party
+IL Treasurer (Downstate United Party)	1	IL Treasurer	Downstate United Party
+IL Comptroller (Downstate United Party)	1	IL Comptroller	Downstate United Party
+IL Secretary of State (Downstate United Party)	1	IL Secretary of State	Downstate United Party
