@@ -99,7 +99,7 @@ def create_common_data_format_tables(session, dirpath="CDF_schema_def_info/"):
     # create join tables
     # TODO check for foreign keys, as above
     # check for foreign keys
-    join_path = os.path.join(dirpath, "joins")
+    join_path = os.path.join(dirpath, "Joins")
     joins_to_process = [f for f in os.listdir(join_path) if f[0] != "."]
     while joins_to_process:
         j = joins_to_process[0]
@@ -408,7 +408,7 @@ def reset_db(session, dirpath):
         conn.execute(f'DROP TABLE IF EXISTS "{table}" CASCADE;')
         session.commit()
 
-    join_path = os.path.join(dirpath, "joins")
+    join_path = os.path.join(dirpath, "Joins")
     joins_to_process = [f for f in os.listdir(join_path) if f[0] != "."]
     for table in joins_to_process:
         conn.execute(f'DROP TABLE IF EXISTS "{table}" CASCADE;')
