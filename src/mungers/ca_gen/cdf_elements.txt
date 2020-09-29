@@ -3,6 +3,6 @@ ReportingUnit	<COUNTY_NAME>	<row>
 Party	<PARTY_NAME>	<row>
 CandidateContest	<CONTEST_NAME>	<row>
 Candidate	<CANDIDATE_NAME>	<row>
-BallotMeasureContest	<None>
-BallotMeasureSelection	<None>
-CountItemType	<VOTE_TOTAL>	<row>
+BallotMeasureContest	None
+BallotMeasureSelection	None
+CountItemType	total	row
