@@ -123,7 +123,7 @@ def create_common_data_format_tables(session, dirpath="CDF_schema_def_info/"):
             except IndexError:
                 pass
         # create db table for element
-        create_table(metadata, id_seq, j, "joins", dirpath, create_indices)
+        create_table(metadata, id_seq, j, "Joins", dirpath, create_indices)
 
         # remove element from list of yet-to-be-processed
         joins_to_process.remove(j)
@@ -292,7 +292,7 @@ def create_table(
         )
         Index(f"{t}_parent", t.c.Id)
 
-    elif table_type == "joins":
+    elif table_type == "Joins":
         with open(os.path.join(t_path, "short_name.txt"), "r") as f:
             short_name = f.read().strip()
         # read info from files into dataframes
