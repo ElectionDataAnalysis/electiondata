@@ -1499,4 +1499,67 @@ Candidate	G. Burt Lancaster	G. Burt Lancaster
 Candidate	Carlos Rafael Cruz	Carlos Rafael Cruz
 Candidate	Evan Low	Evan Low
 Candidate	Sam Ross	Sam Ross
-
+Candidate	Michael Bennet	Michael Bennet
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Michael R. Bloomberg	Michael R. Bloomberg
+Candidate	Cory Booker	Cory Booker
+Candidate	Mosie Boyd	Mosie Boyd
+Candidate	Pete Buttigieg	Pete Buttigieg
+Candidate	Julián Castro	Julián Castro
+Candidate	Roque 'Rocky' De La Fuente III	Roque 'Rocky' De La Fuente III
+Candidate	John K. Delaney	John K. Delaney
+Candidate	Michael A. Ellinger	Michael A. Ellinger
+Candidate	Tulsi Gabbard	Tulsi Gabbard
+Candidate	Mark Stewart Greenstein	Mark Stewart Greenstein
+Candidate	Amy Klobuchar	Amy Klobuchar
+Candidate	Deval Patrick	Deval Patrick
+Candidate	Bernie Sanders	Bernie Sanders
+Candidate	Joe Sestak	Joe Sestak
+Candidate	Tom Steyer	Tom Steyer
+Candidate	Elizabeth Warren	Elizabeth Warren
+Candidate	Marianne Williamson	Marianne Williamson
+Candidate	Andrew Yang	Andrew Yang
+Candidate	Heather Marie Stagg	Heather Marie Stagg
+Candidate	Robert Jordan	Robert Jordan
+Candidate	Jeffrey H. Drobman	Jeffrey H. Drobman
+Candidate	Michael Dename	Michael Dename
+Candidate	Daphne Denise Bradford	Daphne Denise Bradford
+Candidate	Willie Felix Carter	Willie Felix Carter
+Candidate	Nakia L. Anthony	Nakia L. Anthony
+Candidate	Robert Ardini	Robert Ardini
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
+Candidate	Zoltan G. Istvan	Zoltan G. Istvan
+Candidate	Matthew John Matern	Matthew John Matern
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Joe Walsh	Joe Walsh
+Candidate	Bill Weld	Bill Weld
+Candidate	Denis C. Grasska	Denis C. Grasska
+Candidate	Robert Lee Manning Jr.	Robert Lee Manning Jr.
+Candidate	Don Blankenship	Don Blankenship
+Candidate	Phil Collins	Phil Collins
+Candidate	Charles Kraut	Charles Kraut
+Candidate	J.R. Myers	J.R. Myers
+Candidate	Howie Hawkins	Howie Hawkins
+Candidate	Dario Hunter	Dario Hunter
+Candidate	Dennis Lambert	Dennis Lambert
+Candidate	Sedinam Moyowasifza-Curry	Sedinam Moyowasifza-Curry
+Candidate	David Rolde	David Rolde
+Candidate	Kent Mesplay	Kent Mesplay
+Candidate	Max Abramson	Max Abramson
+Candidate	Ken Armstrong	Ken Armstrong
+Candidate	Dan Behrman	Dan Behrman
+Candidate	Keenan Wallace Dunham	Keenan Wallace Dunham
+Candidate	Souraya Faas	Souraya Faas
+Candidate	Erik Chase Gerhardt	Erik Chase Gerhardt
+Candidate	Jacob Hornberger	Jacob Hornberger
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	Adam Kokesh	Adam Kokesh
+Candidate	Steven A Richey	Steven A Richey
+Candidate	Sam Robb	Sam Robb
+Candidate	Kim Ruff	Kim Ruff
+Candidate	Vermin Supreme	Vermin Supreme
+Candidate	Geby Eva Espínosa	Geby Eva Espínosa
+Candidate	James Orlando Ogle	James Orlando Ogle
+Candidate	Nicholas D'Artagnan Dumas	Nicholas D'Artagnan Dumas
+Candidate	Sorinne Ardeleanu	Sorinne Ardeleanu
+Candidate	Gloria La Riva	Gloria La Riva
