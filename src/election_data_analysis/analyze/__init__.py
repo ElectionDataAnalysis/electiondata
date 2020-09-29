@@ -325,6 +325,8 @@ def create_bar(
         top_ranked = get_most_anomalous(votes_at_stake, 3)
     else:
         top_ranked = votes_at_stake
+    if top_ranked.empty:
+        return None
 
     # package into list of dictionary
     result_list = []
