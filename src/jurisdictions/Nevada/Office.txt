@@ -1,0 +1,74 @@
+Name	ElectionDistrict
+NV House District 1	Nevada;NV House District 1
+NV House District 2	Nevada;NV House District 2
+NV House District 3	Nevada;NV House District 3
+NV House District 4	Nevada;NV House District 4
+NV House District 5	Nevada;NV House District 5
+NV House District 6	Nevada;NV House District 6
+NV House District 7	Nevada;NV House District 7
+NV House District 8	Nevada;NV House District 8
+NV House District 9	Nevada;NV House District 9
+NV House District 10	Nevada;NV House District 10
+NV House District 11	Nevada;NV House District 11
+NV House District 12	Nevada;NV House District 12
+NV House District 13	Nevada;NV House District 13
+NV House District 14	Nevada;NV House District 14
+NV House District 15	Nevada;NV House District 15
+NV House District 16	Nevada;NV House District 16
+NV House District 17	Nevada;NV House District 17
+NV House District 18	Nevada;NV House District 18
+NV House District 19	Nevada;NV House District 19
+NV House District 20	Nevada;NV House District 20
+NV House District 21	Nevada;NV House District 21
+NV House District 22	Nevada;NV House District 22
+NV House District 23	Nevada;NV House District 23
+NV House District 24	Nevada;NV House District 24
+NV House District 25	Nevada;NV House District 25
+NV House District 26	Nevada;NV House District 26
+NV House District 27	Nevada;NV House District 27
+NV House District 28	Nevada;NV House District 28
+NV House District 29	Nevada;NV House District 29
+NV House District 30	Nevada;NV House District 30
+NV House District 31	Nevada;NV House District 31
+NV House District 32	Nevada;NV House District 32
+NV House District 33	Nevada;NV House District 33
+NV House District 34	Nevada;NV House District 34
+NV House District 35	Nevada;NV House District 35
+NV House District 36	Nevada;NV House District 36
+NV House District 37	Nevada;NV House District 37
+NV House District 38	Nevada;NV House District 38
+NV House District 39	Nevada;NV House District 39
+NV House District 40	Nevada;NV House District 40
+NV House District 41	Nevada;NV House District 41
+NV House District 42	Nevada;NV House District 42
+NV Senate District 1	Nevada;NV Senate District 1
+NV Senate District 2	Nevada;NV Senate District 2
+NV Senate District 3	Nevada;NV Senate District 3
+NV Senate District 4	Nevada;NV Senate District 4
+NV Senate District 5	Nevada;NV Senate District 5
+NV Senate District 6	Nevada;NV Senate District 6
+NV Senate District 7	Nevada;NV Senate District 7
+NV Senate District 8	Nevada;NV Senate District 8
+NV Senate District 9	Nevada;NV Senate District 9
+NV Senate District 10	Nevada;NV Senate District 10
+NV Senate District 11	Nevada;NV Senate District 11
+NV Senate District 12	Nevada;NV Senate District 12
+NV Senate District 13	Nevada;NV Senate District 13
+NV Senate District 14	Nevada;NV Senate District 14
+NV Senate District 15	Nevada;NV Senate District 15
+NV Senate District 16	Nevada;NV Senate District 16
+NV Senate District 17	Nevada;NV Senate District 17
+NV Senate District 18	Nevada;NV Senate District 18
+NV Senate District 19	Nevada;NV Senate District 19
+NV Senate District 20	Nevada;NV Senate District 20
+NV Senate District 21	Nevada;NV Senate District 21
+US House NV District 1	Nevada;US House NV District 1
+US House NV District 2	Nevada;US House NV District 2
+US House NV District 3	Nevada;US House NV District 3
+US House NV District 4	Nevada;US House NV District 4
+US President (NV)	Nevada
+NV Governor	Nevada
+US Senate NV	Nevada
+NV Attorney General	Nevada
+NV Lieutenant Governor	Nevada
+NV Treasurer	Nevada

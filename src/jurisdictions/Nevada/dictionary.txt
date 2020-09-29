@@ -1,0 +1,2851 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	NV House District 1	"State Assembly, District 1"
+CandidateContest	NV House District 2	"State Assembly, District 2"
+CandidateContest	NV House District 3	"State Assembly, District 3"
+CandidateContest	NV House District 4	"State Assembly, District 4"
+CandidateContest	NV House District 5	"State Assembly, District 5"
+CandidateContest	NV House District 6	"State Assembly, District 6"
+CandidateContest	NV House District 7	"State Assembly, District 7"
+CandidateContest	NV House District 8	"State Assembly, District 8"
+CandidateContest	NV House District 9	"State Assembly, District 9"
+CandidateContest	NV House District 10	"State Assembly, District 10"
+CandidateContest	NV House District 11	"State Assembly, District 11"
+CandidateContest	NV House District 12	"State Assembly, District 12"
+CandidateContest	NV House District 13	"State Assembly, District 13"
+CandidateContest	NV House District 14	"State Assembly, District 14"
+CandidateContest	NV House District 15	"State Assembly, District 15"
+CandidateContest	NV House District 16	"State Assembly, District 16"
+CandidateContest	NV House District 17	"State Assembly, District 17"
+CandidateContest	NV House District 18	"State Assembly, District 18"
+CandidateContest	NV House District 19	"State Assembly, District 19"
+CandidateContest	NV House District 20	"State Assembly, District 20"
+CandidateContest	NV House District 21	"State Assembly, District 21"
+CandidateContest	NV House District 22	"State Assembly, District 22"
+CandidateContest	NV House District 23	"State Assembly, District 23"
+CandidateContest	NV House District 24	"State Assembly, District 24"
+CandidateContest	NV House District 25	"State Assembly, District 25"
+CandidateContest	NV House District 26	"State Assembly, District 26"
+CandidateContest	NV House District 27	"State Assembly, District 27"
+CandidateContest	NV House District 28	"State Assembly, District 28"
+CandidateContest	NV House District 29	"State Assembly, District 29"
+CandidateContest	NV House District 30	"State Assembly, District 30"
+CandidateContest	NV House District 31	"State Assembly, District 31"
+CandidateContest	NV House District 32	"State Assembly, District 32"
+CandidateContest	NV House District 33	"State Assembly, District 33"
+CandidateContest	NV House District 34	"State Assembly, District 34"
+CandidateContest	NV House District 35	"State Assembly, District 35"
+CandidateContest	NV House District 36	"State Assembly, District 36"
+CandidateContest	NV House District 37	"State Assembly, District 37"
+CandidateContest	NV House District 38	"State Assembly, District 38"
+CandidateContest	NV House District 39	"State Assembly, District 39"
+CandidateContest	NV House District 40	"State Assembly, District 40"
+CandidateContest	NV House District 41	"State Assembly, District 41"
+CandidateContest	NV House District 42	"State Assembly, District 42"
+CandidateContest	NV Senate District 1	"State Senate, District 1"
+CandidateContest	NV Senate District 2	"State Senate, District 2"
+CandidateContest	NV Senate District 3	"State Senate, District 3"
+CandidateContest	NV Senate District 4	"State Senate, District 4"
+CandidateContest	NV Senate District 5	"State Senate, District 5"
+CandidateContest	NV Senate District 6	"State Senate, District 6"
+CandidateContest	NV Senate District 7	"State Senate, District 7"
+CandidateContest	NV Senate District 8	"State Senate, District 8"
+CandidateContest	NV Senate District 9	"State Senate, District 9"
+CandidateContest	NV Senate District 10	"State Senate, District 10"
+CandidateContest	NV Senate District 11	"State Senate, District 11"
+CandidateContest	NV Senate District 12	"State Senate, District 12"
+CandidateContest	NV Senate District 13	"State Senate, District 13"
+CandidateContest	NV Senate District 14	"State Senate, District 14"
+CandidateContest	NV Senate District 15	"State Senate, District 15"
+CandidateContest	NV Senate District 16	"State Senate, District 16"
+CandidateContest	NV Senate District 17	"State Senate, District 17"
+CandidateContest	NV Senate District 18	"State Senate, District 18"
+CandidateContest	NV Senate District 19	"State Senate, District 19"
+CandidateContest	NV Senate District 20	"State Senate, District 20"
+CandidateContest	NV Senate District 21	"State Senate, District 21"
+CandidateContest	US House NV District 1	"U.S. Representative in Congress, Dist. 1"
+CandidateContest	US House NV District 2	"U.S. Representative in Congress, Dist. 2"
+CandidateContest	US House NV District 3	"U.S. Representative in Congress, Dist. 3"
+CandidateContest	US House NV District 4	"U.S. Representative in Congress, Dist. 4"
+CandidateContest	NV Governor	Governor
+CandidateContest	US Senate NV	United States Senator
+CandidateContest	NV Attorney General	Attorney General
+CandidateContest	NV Lieutenant Governor	Lieutenant Governor
+CandidateContest	NV Treasurer	State Treasurer
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
+Election	2018 General	2018 General
+Election	2018 Primary	2018 Primary
+Election	2016 General	2016 General
+Election	2016 Primary	2016 Primary
+Office	NV House District 1	"State Assembly, District 1"
+Office	NV House District 2	"State Assembly, District 2"
+Office	NV House District 3	"State Assembly, District 3"
+Office	NV House District 4	"State Assembly, District 4"
+Office	NV House District 5	"State Assembly, District 5"
+Office	NV House District 6	"State Assembly, District 6"
+Office	NV House District 7	"State Assembly, District 7"
+Office	NV House District 8	"State Assembly, District 8"
+Office	NV House District 9	"State Assembly, District 9"
+Office	NV House District 10	"State Assembly, District 10"
+Office	NV House District 11	"State Assembly, District 11"
+Office	NV House District 12	"State Assembly, District 12"
+Office	NV House District 13	"State Assembly, District 13"
+Office	NV House District 14	"State Assembly, District 14"
+Office	NV House District 15	"State Assembly, District 15"
+Office	NV House District 16	"State Assembly, District 16"
+Office	NV House District 17	"State Assembly, District 17"
+Office	NV House District 18	"State Assembly, District 18"
+Office	NV House District 19	"State Assembly, District 19"
+Office	NV House District 20	"State Assembly, District 20"
+Office	NV House District 21	"State Assembly, District 21"
+Office	NV House District 22	"State Assembly, District 22"
+Office	NV House District 23	"State Assembly, District 23"
+Office	NV House District 24	"State Assembly, District 24"
+Office	NV House District 25	"State Assembly, District 25"
+Office	NV House District 26	"State Assembly, District 26"
+Office	NV House District 27	"State Assembly, District 27"
+Office	NV House District 28	"State Assembly, District 28"
+Office	NV House District 29	"State Assembly, District 29"
+Office	NV House District 30	"State Assembly, District 30"
+Office	NV House District 31	"State Assembly, District 31"
+Office	NV House District 32	"State Assembly, District 32"
+Office	NV House District 33	"State Assembly, District 33"
+Office	NV House District 34	"State Assembly, District 34"
+Office	NV House District 35	"State Assembly, District 35"
+Office	NV House District 36	"State Assembly, District 36"
+Office	NV House District 37	"State Assembly, District 37"
+Office	NV House District 38	"State Assembly, District 38"
+Office	NV House District 39	"State Assembly, District 39"
+Office	NV House District 40	"State Assembly, District 40"
+Office	NV House District 41	"State Assembly, District 41"
+Office	NV House District 42	"State Assembly, District 42"
+Office	NV Senate District 1	"State Senate, District 1"
+Office	NV Senate District 2	"State Senate, District 2"
+Office	NV Senate District 3	"State Senate, District 3"
+Office	NV Senate District 4	"State Senate, District 4"
+Office	NV Senate District 5	"State Senate, District 5"
+Office	NV Senate District 6	"State Senate, District 6"
+Office	NV Senate District 7	"State Senate, District 7"
+Office	NV Senate District 8	"State Senate, District 8"
+Office	NV Senate District 9	"State Senate, District 9"
+Office	NV Senate District 10	"State Senate, District 10"
+Office	NV Senate District 11	"State Senate, District 11"
+Office	NV Senate District 12	"State Senate, District 12"
+Office	NV Senate District 13	"State Senate, District 13"
+Office	NV Senate District 14	"State Senate, District 14"
+Office	NV Senate District 15	"State Senate, District 15"
+Office	NV Senate District 16	"State Senate, District 16"
+Office	NV Senate District 17	"State Senate, District 17"
+Office	NV Senate District 18	"State Senate, District 18"
+Office	NV Senate District 19	"State Senate, District 19"
+Office	NV Senate District 20	"State Senate, District 20"
+Office	NV Senate District 21	"State Senate, District 21"
+Office	US House NV District 1	"U.S. Representative in Congress, Dist. 1"
+Office	US House NV District 2	"U.S. Representative in Congress, Dist. 2"
+Office	US House NV District 3	"U.S. Representative in Congress, Dist. 3"
+Office	US House NV District 4	"U.S. Representative in Congress, Dist. 4"
+Office	NV Governor	Governor
+Office	US Senate NV	United States Senator
+Office	NV Attorney General	Attorney General
+Office	NV Lieutenant Governor	Lieutenant Governor
+Office	NV Treasurer	State Treasurer
+ReportingUnit	Nevada;NV House District 1	Nevada;NV House District 1
+ReportingUnit	Nevada;NV House District 2	Nevada;NV House District 2
+ReportingUnit	Nevada;NV House District 3	Nevada;NV House District 3
+ReportingUnit	Nevada;NV House District 4	Nevada;NV House District 4
+ReportingUnit	Nevada;NV House District 5	Nevada;NV House District 5
+ReportingUnit	Nevada;NV House District 6	Nevada;NV House District 6
+ReportingUnit	Nevada;NV House District 7	Nevada;NV House District 7
+ReportingUnit	Nevada;NV House District 8	Nevada;NV House District 8
+ReportingUnit	Nevada;NV House District 9	Nevada;NV House District 9
+ReportingUnit	Nevada;NV House District 10	Nevada;NV House District 10
+ReportingUnit	Nevada;NV House District 11	Nevada;NV House District 11
+ReportingUnit	Nevada;NV House District 12	Nevada;NV House District 12
+ReportingUnit	Nevada;NV House District 13	Nevada;NV House District 13
+ReportingUnit	Nevada;NV House District 14	Nevada;NV House District 14
+ReportingUnit	Nevada;NV House District 15	Nevada;NV House District 15
+ReportingUnit	Nevada;NV House District 16	Nevada;NV House District 16
+ReportingUnit	Nevada;NV House District 17	Nevada;NV House District 17
+ReportingUnit	Nevada;NV House District 18	Nevada;NV House District 18
+ReportingUnit	Nevada;NV House District 19	Nevada;NV House District 19
+ReportingUnit	Nevada;NV House District 20	Nevada;NV House District 20
+ReportingUnit	Nevada;NV House District 21	Nevada;NV House District 21
+ReportingUnit	Nevada;NV House District 22	Nevada;NV House District 22
+ReportingUnit	Nevada;NV House District 23	Nevada;NV House District 23
+ReportingUnit	Nevada;NV House District 24	Nevada;NV House District 24
+ReportingUnit	Nevada;NV House District 25	Nevada;NV House District 25
+ReportingUnit	Nevada;NV House District 26	Nevada;NV House District 26
+ReportingUnit	Nevada;NV House District 27	Nevada;NV House District 27
+ReportingUnit	Nevada;NV House District 28	Nevada;NV House District 28
+ReportingUnit	Nevada;NV House District 29	Nevada;NV House District 29
+ReportingUnit	Nevada;NV House District 30	Nevada;NV House District 30
+ReportingUnit	Nevada;NV House District 31	Nevada;NV House District 31
+ReportingUnit	Nevada;NV House District 32	Nevada;NV House District 32
+ReportingUnit	Nevada;NV House District 33	Nevada;NV House District 33
+ReportingUnit	Nevada;NV House District 34	Nevada;NV House District 34
+ReportingUnit	Nevada;NV House District 35	Nevada;NV House District 35
+ReportingUnit	Nevada;NV House District 36	Nevada;NV House District 36
+ReportingUnit	Nevada;NV House District 37	Nevada;NV House District 37
+ReportingUnit	Nevada;NV House District 38	Nevada;NV House District 38
+ReportingUnit	Nevada;NV House District 39	Nevada;NV House District 39
+ReportingUnit	Nevada;NV House District 40	Nevada;NV House District 40
+ReportingUnit	Nevada;NV House District 41	Nevada;NV House District 41
+ReportingUnit	Nevada;NV House District 42	Nevada;NV House District 42
+ReportingUnit	Nevada;NV Senate District 1	Nevada;NV Senate District 1
+ReportingUnit	Nevada;NV Senate District 2	Nevada;NV Senate District 2
+ReportingUnit	Nevada;NV Senate District 3	Nevada;NV Senate District 3
+ReportingUnit	Nevada;NV Senate District 4	Nevada;NV Senate District 4
+ReportingUnit	Nevada;NV Senate District 5	Nevada;NV Senate District 5
+ReportingUnit	Nevada;NV Senate District 6	Nevada;NV Senate District 6
+ReportingUnit	Nevada;NV Senate District 7	Nevada;NV Senate District 7
+ReportingUnit	Nevada;NV Senate District 8	Nevada;NV Senate District 8
+ReportingUnit	Nevada;NV Senate District 9	Nevada;NV Senate District 9
+ReportingUnit	Nevada;NV Senate District 10	Nevada;NV Senate District 10
+ReportingUnit	Nevada;NV Senate District 11	Nevada;NV Senate District 11
+ReportingUnit	Nevada;NV Senate District 12	Nevada;NV Senate District 12
+ReportingUnit	Nevada;NV Senate District 13	Nevada;NV Senate District 13
+ReportingUnit	Nevada;NV Senate District 14	Nevada;NV Senate District 14
+ReportingUnit	Nevada;NV Senate District 15	Nevada;NV Senate District 15
+ReportingUnit	Nevada;NV Senate District 16	Nevada;NV Senate District 16
+ReportingUnit	Nevada;NV Senate District 17	Nevada;NV Senate District 17
+ReportingUnit	Nevada;NV Senate District 18	Nevada;NV Senate District 18
+ReportingUnit	Nevada;NV Senate District 19	Nevada;NV Senate District 19
+ReportingUnit	Nevada;NV Senate District 20	Nevada;NV Senate District 20
+ReportingUnit	Nevada;NV Senate District 21	Nevada;NV Senate District 21
+ReportingUnit	Nevada;US House NV District 1	Nevada;US House NV District 1
+ReportingUnit	Nevada;US House NV District 2	Nevada;US House NV District 2
+ReportingUnit	Nevada;US House NV District 3	Nevada;US House NV District 3
+ReportingUnit	Nevada;US House NV District 4	Nevada;US House NV District 4
+ReportingUnit	Nevada	Nevada
+ReportingUnit	Nevada;Carson City	Carson City
+ReportingUnit	Nevada;Churchill	Churchill
+ReportingUnit	Nevada;Clark	Clark
+ReportingUnit	Nevada;Douglas	Douglas
+ReportingUnit	Nevada;Elko	Elko
+ReportingUnit	Nevada;Esmeralda	Esmeralda
+ReportingUnit	Nevada;Eureka	Eureka
+ReportingUnit	Nevada;Humboldt	Humboldt
+ReportingUnit	Nevada;Lander	Lander
+ReportingUnit	Nevada;Lincoln	Lincoln
+ReportingUnit	Nevada;Lyon	Lyon
+ReportingUnit	Nevada;Mineral	Mineral
+ReportingUnit	Nevada;Nye	Nye
+ReportingUnit	Nevada;Pershing	Pershing
+ReportingUnit	Nevada;Storey	Storey
+ReportingUnit	Nevada;Washoe	Washoe
+ReportingUnit	Nevada;White Pine	White Pine
+ReportingUnit	Nevada;Carson City;101	Carson City;101
+ReportingUnit	Nevada;Carson City;103	Carson City;103
+ReportingUnit	Nevada;Carson City;105	Carson City;105
+ReportingUnit	Nevada;Carson City;107	Carson City;107
+ReportingUnit	Nevada;Carson City;109	Carson City;109
+ReportingUnit	Nevada;Carson City;111	Carson City;111
+ReportingUnit	Nevada;Carson City;113	Carson City;113
+ReportingUnit	Nevada;Carson City;201	Carson City;201
+ReportingUnit	Nevada;Carson City;203	Carson City;203
+ReportingUnit	Nevada;Carson City;205	Carson City;205
+ReportingUnit	Nevada;Carson City;207	Carson City;207
+ReportingUnit	Nevada;Carson City;209	Carson City;209
+ReportingUnit	Nevada;Carson City;211	Carson City;211
+ReportingUnit	Nevada;Carson City;301	Carson City;301
+ReportingUnit	Nevada;Carson City;303	Carson City;303
+ReportingUnit	Nevada;Carson City;305	Carson City;305
+ReportingUnit	Nevada;Carson City;307	Carson City;307
+ReportingUnit	Nevada;Carson City;309	Carson City;309
+ReportingUnit	Nevada;Carson City;401	Carson City;401
+ReportingUnit	Nevada;Carson City;403	Carson City;403
+ReportingUnit	Nevada;Carson City;405	Carson City;405
+ReportingUnit	Nevada;Carson City;407	Carson City;407
+ReportingUnit	Nevada;Carson City;409	Carson City;409
+ReportingUnit	Nevada;Carson City;411	Carson City;411
+ReportingUnit	Nevada;Carson City;997	Carson City;997
+ReportingUnit	Nevada;Churchill;Precinct 01	Churchill;Precinct 01
+ReportingUnit	Nevada;Churchill;Precinct 02	Churchill;Precinct 02
+ReportingUnit	Nevada;Churchill;Precinct 03	Churchill;Precinct 03
+ReportingUnit	Nevada;Churchill;Precinct 04	Churchill;Precinct 04
+ReportingUnit	Nevada;Churchill;Precinct 05	Churchill;Precinct 05
+ReportingUnit	Nevada;Churchill;Precinct 06	Churchill;Precinct 06
+ReportingUnit	Nevada;Churchill;Precinct 07	Churchill;Precinct 07
+ReportingUnit	Nevada;Churchill;Precinct 08	Churchill;Precinct 08
+ReportingUnit	Nevada;Churchill;Precinct 09	Churchill;Precinct 09
+ReportingUnit	Nevada;Churchill;Precinct 10	Churchill;Precinct 10
+ReportingUnit	Nevada;Churchill;Precinct 11	Churchill;Precinct 11
+ReportingUnit	Nevada;Churchill;Precinct 12	Churchill;Precinct 12
+ReportingUnit	Nevada;Churchill;Precinct 13	Churchill;Precinct 13
+ReportingUnit	Nevada;Churchill;Precinct 14	Churchill;Precinct 14
+ReportingUnit	Nevada;Churchill;Precinct 15	Churchill;Precinct 15
+ReportingUnit	Nevada;Churchill;Precinct 16	Churchill;Precinct 16
+ReportingUnit	Nevada;Churchill;Precinct 17	Churchill;Precinct 17
+ReportingUnit	Nevada;Churchill;Precinct 18	Churchill;Precinct 18
+ReportingUnit	Nevada;Churchill;Precinct 19	Churchill;Precinct 19
+ReportingUnit	Nevada;Churchill;Precinct 99	Churchill;Precinct 99
+ReportingUnit	Nevada;Clark;1038	Clark;1038
+ReportingUnit	Nevada;Clark;1039	Clark;1039
+ReportingUnit	Nevada;Clark;1063	Clark;1063
+ReportingUnit	Nevada;Clark;1067	Clark;1067
+ReportingUnit	Nevada;Clark;1072	Clark;1072
+ReportingUnit	Nevada;Clark;1074	Clark;1074
+ReportingUnit	Nevada;Clark;1137	Clark;1137
+ReportingUnit	Nevada;Clark;1302	Clark;1302
+ReportingUnit	Nevada;Clark;1303	Clark;1303
+ReportingUnit	Nevada;Clark;1304	Clark;1304
+ReportingUnit	Nevada;Clark;1307	Clark;1307
+ReportingUnit	Nevada;Clark;1309	Clark;1309
+ReportingUnit	Nevada;Clark;1318	Clark;1318
+ReportingUnit	Nevada;Clark;1327	Clark;1327
+ReportingUnit	Nevada;Clark;1328	Clark;1328
+ReportingUnit	Nevada;Clark;1330	Clark;1330
+ReportingUnit	Nevada;Clark;1331	Clark;1331
+ReportingUnit	Nevada;Clark;1332	Clark;1332
+ReportingUnit	Nevada;Clark;1333	Clark;1333
+ReportingUnit	Nevada;Clark;1334	Clark;1334
+ReportingUnit	Nevada;Clark;1335	Clark;1335
+ReportingUnit	Nevada;Clark;1336	Clark;1336
+ReportingUnit	Nevada;Clark;1337	Clark;1337
+ReportingUnit	Nevada;Clark;1340	Clark;1340
+ReportingUnit	Nevada;Clark;1341	Clark;1341
+ReportingUnit	Nevada;Clark;1342	Clark;1342
+ReportingUnit	Nevada;Clark;1343	Clark;1343
+ReportingUnit	Nevada;Clark;1344	Clark;1344
+ReportingUnit	Nevada;Clark;1345	Clark;1345
+ReportingUnit	Nevada;Clark;1346	Clark;1346
+ReportingUnit	Nevada;Clark;1348	Clark;1348
+ReportingUnit	Nevada;Clark;1349	Clark;1349
+ReportingUnit	Nevada;Clark;1351	Clark;1351
+ReportingUnit	Nevada;Clark;1352	Clark;1352
+ReportingUnit	Nevada;Clark;1353	Clark;1353
+ReportingUnit	Nevada;Clark;1354	Clark;1354
+ReportingUnit	Nevada;Clark;1356	Clark;1356
+ReportingUnit	Nevada;Clark;1361	Clark;1361
+ReportingUnit	Nevada;Clark;1363	Clark;1363
+ReportingUnit	Nevada;Clark;1365	Clark;1365
+ReportingUnit	Nevada;Clark;1367	Clark;1367
+ReportingUnit	Nevada;Clark;1368	Clark;1368
+ReportingUnit	Nevada;Clark;1370	Clark;1370
+ReportingUnit	Nevada;Clark;1371	Clark;1371
+ReportingUnit	Nevada;Clark;1374	Clark;1374
+ReportingUnit	Nevada;Clark;1375	Clark;1375
+ReportingUnit	Nevada;Clark;1376	Clark;1376
+ReportingUnit	Nevada;Clark;1377	Clark;1377
+ReportingUnit	Nevada;Clark;1378	Clark;1378
+ReportingUnit	Nevada;Clark;1379	Clark;1379
+ReportingUnit	Nevada;Clark;1380	Clark;1380
+ReportingUnit	Nevada;Clark;1381	Clark;1381
+ReportingUnit	Nevada;Clark;1382	Clark;1382
+ReportingUnit	Nevada;Clark;1384	Clark;1384
+ReportingUnit	Nevada;Clark;1385	Clark;1385
+ReportingUnit	Nevada;Clark;1386	Clark;1386
+ReportingUnit	Nevada;Clark;1387	Clark;1387
+ReportingUnit	Nevada;Clark;1389	Clark;1389
+ReportingUnit	Nevada;Clark;1390	Clark;1390
+ReportingUnit	Nevada;Clark;1391	Clark;1391
+ReportingUnit	Nevada;Clark;1394	Clark;1394
+ReportingUnit	Nevada;Clark;1395	Clark;1395
+ReportingUnit	Nevada;Clark;1396	Clark;1396
+ReportingUnit	Nevada;Clark;1410	Clark;1410
+ReportingUnit	Nevada;Clark;1411	Clark;1411
+ReportingUnit	Nevada;Clark;1509	Clark;1509
+ReportingUnit	Nevada;Clark;1510	Clark;1510
+ReportingUnit	Nevada;Clark;1511	Clark;1511
+ReportingUnit	Nevada;Clark;1513	Clark;1513
+ReportingUnit	Nevada;Clark;1514	Clark;1514
+ReportingUnit	Nevada;Clark;1517	Clark;1517
+ReportingUnit	Nevada;Clark;1518	Clark;1518
+ReportingUnit	Nevada;Clark;1519	Clark;1519
+ReportingUnit	Nevada;Clark;1520	Clark;1520
+ReportingUnit	Nevada;Clark;1521	Clark;1521
+ReportingUnit	Nevada;Clark;1525	Clark;1525
+ReportingUnit	Nevada;Clark;1528	Clark;1528
+ReportingUnit	Nevada;Clark;1533	Clark;1533
+ReportingUnit	Nevada;Clark;1543	Clark;1543
+ReportingUnit	Nevada;Clark;1550	Clark;1550
+ReportingUnit	Nevada;Clark;1552	Clark;1552
+ReportingUnit	Nevada;Clark;1553	Clark;1553
+ReportingUnit	Nevada;Clark;1601	Clark;1601
+ReportingUnit	Nevada;Clark;1602	Clark;1602
+ReportingUnit	Nevada;Clark;1603	Clark;1603
+ReportingUnit	Nevada;Clark;1604	Clark;1604
+ReportingUnit	Nevada;Clark;1605	Clark;1605
+ReportingUnit	Nevada;Clark;1606	Clark;1606
+ReportingUnit	Nevada;Clark;1607	Clark;1607
+ReportingUnit	Nevada;Clark;1608	Clark;1608
+ReportingUnit	Nevada;Clark;1609	Clark;1609
+ReportingUnit	Nevada;Clark;1611	Clark;1611
+ReportingUnit	Nevada;Clark;1612	Clark;1612
+ReportingUnit	Nevada;Clark;1613	Clark;1613
+ReportingUnit	Nevada;Clark;1614	Clark;1614
+ReportingUnit	Nevada;Clark;1615	Clark;1615
+ReportingUnit	Nevada;Clark;1616	Clark;1616
+ReportingUnit	Nevada;Clark;1617	Clark;1617
+ReportingUnit	Nevada;Clark;1618	Clark;1618
+ReportingUnit	Nevada;Clark;1619	Clark;1619
+ReportingUnit	Nevada;Clark;1621	Clark;1621
+ReportingUnit	Nevada;Clark;1623	Clark;1623
+ReportingUnit	Nevada;Clark;1624	Clark;1624
+ReportingUnit	Nevada;Clark;1625	Clark;1625
+ReportingUnit	Nevada;Clark;1631	Clark;1631
+ReportingUnit	Nevada;Clark;1632	Clark;1632
+ReportingUnit	Nevada;Clark;1633	Clark;1633
+ReportingUnit	Nevada;Clark;1634	Clark;1634
+ReportingUnit	Nevada;Clark;1635	Clark;1635
+ReportingUnit	Nevada;Clark;1641	Clark;1641
+ReportingUnit	Nevada;Clark;1642	Clark;1642
+ReportingUnit	Nevada;Clark;1643	Clark;1643
+ReportingUnit	Nevada;Clark;1644	Clark;1644
+ReportingUnit	Nevada;Clark;1645	Clark;1645
+ReportingUnit	Nevada;Clark;1651	Clark;1651
+ReportingUnit	Nevada;Clark;1652	Clark;1652
+ReportingUnit	Nevada;Clark;1653	Clark;1653
+ReportingUnit	Nevada;Clark;1655	Clark;1655
+ReportingUnit	Nevada;Clark;1661	Clark;1661
+ReportingUnit	Nevada;Clark;1662	Clark;1662
+ReportingUnit	Nevada;Clark;1664	Clark;1664
+ReportingUnit	Nevada;Clark;1665	Clark;1665
+ReportingUnit	Nevada;Clark;1668	Clark;1668
+ReportingUnit	Nevada;Clark;1669	Clark;1669
+ReportingUnit	Nevada;Clark;1670	Clark;1670
+ReportingUnit	Nevada;Clark;1671	Clark;1671
+ReportingUnit	Nevada;Clark;1672	Clark;1672
+ReportingUnit	Nevada;Clark;1673	Clark;1673
+ReportingUnit	Nevada;Clark;1674	Clark;1674
+ReportingUnit	Nevada;Clark;1675	Clark;1675
+ReportingUnit	Nevada;Clark;1676	Clark;1676
+ReportingUnit	Nevada;Clark;1677	Clark;1677
+ReportingUnit	Nevada;Clark;1678	Clark;1678
+ReportingUnit	Nevada;Clark;1679	Clark;1679
+ReportingUnit	Nevada;Clark;1680	Clark;1680
+ReportingUnit	Nevada;Clark;1681	Clark;1681
+ReportingUnit	Nevada;Clark;1682	Clark;1682
+ReportingUnit	Nevada;Clark;1683	Clark;1683
+ReportingUnit	Nevada;Clark;1684	Clark;1684
+ReportingUnit	Nevada;Clark;1685	Clark;1685
+ReportingUnit	Nevada;Clark;1686	Clark;1686
+ReportingUnit	Nevada;Clark;1687	Clark;1687
+ReportingUnit	Nevada;Clark;1688	Clark;1688
+ReportingUnit	Nevada;Clark;1689	Clark;1689
+ReportingUnit	Nevada;Clark;1691	Clark;1691
+ReportingUnit	Nevada;Clark;1692	Clark;1692
+ReportingUnit	Nevada;Clark;1693	Clark;1693
+ReportingUnit	Nevada;Clark;1694	Clark;1694
+ReportingUnit	Nevada;Clark;1695	Clark;1695
+ReportingUnit	Nevada;Clark;1702	Clark;1702
+ReportingUnit	Nevada;Clark;1703	Clark;1703
+ReportingUnit	Nevada;Clark;1704	Clark;1704
+ReportingUnit	Nevada;Clark;1711	Clark;1711
+ReportingUnit	Nevada;Clark;1712	Clark;1712
+ReportingUnit	Nevada;Clark;1713	Clark;1713
+ReportingUnit	Nevada;Clark;1715	Clark;1715
+ReportingUnit	Nevada;Clark;1717	Clark;1717
+ReportingUnit	Nevada;Clark;1718	Clark;1718
+ReportingUnit	Nevada;Clark;1719	Clark;1719
+ReportingUnit	Nevada;Clark;1720	Clark;1720
+ReportingUnit	Nevada;Clark;1721	Clark;1721
+ReportingUnit	Nevada;Clark;1722	Clark;1722
+ReportingUnit	Nevada;Clark;1727	Clark;1727
+ReportingUnit	Nevada;Clark;1732	Clark;1732
+ReportingUnit	Nevada;Clark;1750	Clark;1750
+ReportingUnit	Nevada;Clark;1751	Clark;1751
+ReportingUnit	Nevada;Clark;1753	Clark;1753
+ReportingUnit	Nevada;Clark;2008	Clark;2008
+ReportingUnit	Nevada;Clark;2037	Clark;2037
+ReportingUnit	Nevada;Clark;2044	Clark;2044
+ReportingUnit	Nevada;Clark;2078	Clark;2078
+ReportingUnit	Nevada;Clark;2126	Clark;2126
+ReportingUnit	Nevada;Clark;2352	Clark;2352
+ReportingUnit	Nevada;Clark;2353	Clark;2353
+ReportingUnit	Nevada;Clark;2354	Clark;2354
+ReportingUnit	Nevada;Clark;2356	Clark;2356
+ReportingUnit	Nevada;Clark;2360	Clark;2360
+ReportingUnit	Nevada;Clark;2366	Clark;2366
+ReportingUnit	Nevada;Clark;2371	Clark;2371
+ReportingUnit	Nevada;Clark;2372	Clark;2372
+ReportingUnit	Nevada;Clark;2373	Clark;2373
+ReportingUnit	Nevada;Clark;2380	Clark;2380
+ReportingUnit	Nevada;Clark;2381	Clark;2381
+ReportingUnit	Nevada;Clark;2382	Clark;2382
+ReportingUnit	Nevada;Clark;2383	Clark;2383
+ReportingUnit	Nevada;Clark;2384	Clark;2384
+ReportingUnit	Nevada;Clark;2385	Clark;2385
+ReportingUnit	Nevada;Clark;2386	Clark;2386
+ReportingUnit	Nevada;Clark;2387	Clark;2387
+ReportingUnit	Nevada;Clark;2390	Clark;2390
+ReportingUnit	Nevada;Clark;2391	Clark;2391
+ReportingUnit	Nevada;Clark;2392	Clark;2392
+ReportingUnit	Nevada;Clark;2393	Clark;2393
+ReportingUnit	Nevada;Clark;2394	Clark;2394
+ReportingUnit	Nevada;Clark;2399	Clark;2399
+ReportingUnit	Nevada;Clark;2400	Clark;2400
+ReportingUnit	Nevada;Clark;2401	Clark;2401
+ReportingUnit	Nevada;Clark;2405	Clark;2405
+ReportingUnit	Nevada;Clark;2406	Clark;2406
+ReportingUnit	Nevada;Clark;2407	Clark;2407
+ReportingUnit	Nevada;Clark;2408	Clark;2408
+ReportingUnit	Nevada;Clark;2409	Clark;2409
+ReportingUnit	Nevada;Clark;2417	Clark;2417
+ReportingUnit	Nevada;Clark;2430	Clark;2430
+ReportingUnit	Nevada;Clark;2436	Clark;2436
+ReportingUnit	Nevada;Clark;2440	Clark;2440
+ReportingUnit	Nevada;Clark;2444	Clark;2444
+ReportingUnit	Nevada;Clark;2445	Clark;2445
+ReportingUnit	Nevada;Clark;2446	Clark;2446
+ReportingUnit	Nevada;Clark;2447	Clark;2447
+ReportingUnit	Nevada;Clark;2449	Clark;2449
+ReportingUnit	Nevada;Clark;2456	Clark;2456
+ReportingUnit	Nevada;Clark;2457	Clark;2457
+ReportingUnit	Nevada;Clark;2458	Clark;2458
+ReportingUnit	Nevada;Clark;2463	Clark;2463
+ReportingUnit	Nevada;Clark;2464	Clark;2464
+ReportingUnit	Nevada;Clark;2465	Clark;2465
+ReportingUnit	Nevada;Clark;2466	Clark;2466
+ReportingUnit	Nevada;Clark;2468	Clark;2468
+ReportingUnit	Nevada;Clark;2469	Clark;2469
+ReportingUnit	Nevada;Clark;2473	Clark;2473
+ReportingUnit	Nevada;Clark;2476	Clark;2476
+ReportingUnit	Nevada;Clark;2477	Clark;2477
+ReportingUnit	Nevada;Clark;2478	Clark;2478
+ReportingUnit	Nevada;Clark;2479	Clark;2479
+ReportingUnit	Nevada;Clark;2480	Clark;2480
+ReportingUnit	Nevada;Clark;2481	Clark;2481
+ReportingUnit	Nevada;Clark;2483	Clark;2483
+ReportingUnit	Nevada;Clark;2484	Clark;2484
+ReportingUnit	Nevada;Clark;2486	Clark;2486
+ReportingUnit	Nevada;Clark;2487	Clark;2487
+ReportingUnit	Nevada;Clark;2488	Clark;2488
+ReportingUnit	Nevada;Clark;2489	Clark;2489
+ReportingUnit	Nevada;Clark;2500	Clark;2500
+ReportingUnit	Nevada;Clark;2501	Clark;2501
+ReportingUnit	Nevada;Clark;2503	Clark;2503
+ReportingUnit	Nevada;Clark;2600	Clark;2600
+ReportingUnit	Nevada;Clark;2601	Clark;2601
+ReportingUnit	Nevada;Clark;2602	Clark;2602
+ReportingUnit	Nevada;Clark;2603	Clark;2603
+ReportingUnit	Nevada;Clark;2604	Clark;2604
+ReportingUnit	Nevada;Clark;2605	Clark;2605
+ReportingUnit	Nevada;Clark;2606	Clark;2606
+ReportingUnit	Nevada;Clark;2607	Clark;2607
+ReportingUnit	Nevada;Clark;2608	Clark;2608
+ReportingUnit	Nevada;Clark;2609	Clark;2609
+ReportingUnit	Nevada;Clark;2611	Clark;2611
+ReportingUnit	Nevada;Clark;2612	Clark;2612
+ReportingUnit	Nevada;Clark;2613	Clark;2613
+ReportingUnit	Nevada;Clark;2614	Clark;2614
+ReportingUnit	Nevada;Clark;2615	Clark;2615
+ReportingUnit	Nevada;Clark;2616	Clark;2616
+ReportingUnit	Nevada;Clark;2617	Clark;2617
+ReportingUnit	Nevada;Clark;2621	Clark;2621
+ReportingUnit	Nevada;Clark;2622	Clark;2622
+ReportingUnit	Nevada;Clark;2623	Clark;2623
+ReportingUnit	Nevada;Clark;2624	Clark;2624
+ReportingUnit	Nevada;Clark;2625	Clark;2625
+ReportingUnit	Nevada;Clark;2631	Clark;2631
+ReportingUnit	Nevada;Clark;2632	Clark;2632
+ReportingUnit	Nevada;Clark;2633	Clark;2633
+ReportingUnit	Nevada;Clark;2634	Clark;2634
+ReportingUnit	Nevada;Clark;2635	Clark;2635
+ReportingUnit	Nevada;Clark;2640	Clark;2640
+ReportingUnit	Nevada;Clark;2641	Clark;2641
+ReportingUnit	Nevada;Clark;2642	Clark;2642
+ReportingUnit	Nevada;Clark;2643	Clark;2643
+ReportingUnit	Nevada;Clark;2644	Clark;2644
+ReportingUnit	Nevada;Clark;2645	Clark;2645
+ReportingUnit	Nevada;Clark;2646	Clark;2646
+ReportingUnit	Nevada;Clark;2650	Clark;2650
+ReportingUnit	Nevada;Clark;2651	Clark;2651
+ReportingUnit	Nevada;Clark;2652	Clark;2652
+ReportingUnit	Nevada;Clark;2653	Clark;2653
+ReportingUnit	Nevada;Clark;2654	Clark;2654
+ReportingUnit	Nevada;Clark;2655	Clark;2655
+ReportingUnit	Nevada;Clark;2660	Clark;2660
+ReportingUnit	Nevada;Clark;2661	Clark;2661
+ReportingUnit	Nevada;Clark;2662	Clark;2662
+ReportingUnit	Nevada;Clark;2663	Clark;2663
+ReportingUnit	Nevada;Clark;2664	Clark;2664
+ReportingUnit	Nevada;Clark;2665	Clark;2665
+ReportingUnit	Nevada;Clark;2666	Clark;2666
+ReportingUnit	Nevada;Clark;2671	Clark;2671
+ReportingUnit	Nevada;Clark;2672	Clark;2672
+ReportingUnit	Nevada;Clark;2673	Clark;2673
+ReportingUnit	Nevada;Clark;2674	Clark;2674
+ReportingUnit	Nevada;Clark;2675	Clark;2675
+ReportingUnit	Nevada;Clark;2676	Clark;2676
+ReportingUnit	Nevada;Clark;2681	Clark;2681
+ReportingUnit	Nevada;Clark;2682	Clark;2682
+ReportingUnit	Nevada;Clark;2683	Clark;2683
+ReportingUnit	Nevada;Clark;2684	Clark;2684
+ReportingUnit	Nevada;Clark;2685	Clark;2685
+ReportingUnit	Nevada;Clark;2691	Clark;2691
+ReportingUnit	Nevada;Clark;2692	Clark;2692
+ReportingUnit	Nevada;Clark;2693	Clark;2693
+ReportingUnit	Nevada;Clark;2694	Clark;2694
+ReportingUnit	Nevada;Clark;2695	Clark;2695
+ReportingUnit	Nevada;Clark;2696	Clark;2696
+ReportingUnit	Nevada;Clark;2700	Clark;2700
+ReportingUnit	Nevada;Clark;2701	Clark;2701
+ReportingUnit	Nevada;Clark;2702	Clark;2702
+ReportingUnit	Nevada;Clark;2703	Clark;2703
+ReportingUnit	Nevada;Clark;2704	Clark;2704
+ReportingUnit	Nevada;Clark;2705	Clark;2705
+ReportingUnit	Nevada;Clark;2706	Clark;2706
+ReportingUnit	Nevada;Clark;2709	Clark;2709
+ReportingUnit	Nevada;Clark;2710	Clark;2710
+ReportingUnit	Nevada;Clark;2711	Clark;2711
+ReportingUnit	Nevada;Clark;2712	Clark;2712
+ReportingUnit	Nevada;Clark;2713	Clark;2713
+ReportingUnit	Nevada;Clark;2714	Clark;2714
+ReportingUnit	Nevada;Clark;2715	Clark;2715
+ReportingUnit	Nevada;Clark;2716	Clark;2716
+ReportingUnit	Nevada;Clark;2717	Clark;2717
+ReportingUnit	Nevada;Clark;2720	Clark;2720
+ReportingUnit	Nevada;Clark;2721	Clark;2721
+ReportingUnit	Nevada;Clark;2722	Clark;2722
+ReportingUnit	Nevada;Clark;2723	Clark;2723
+ReportingUnit	Nevada;Clark;2724	Clark;2724
+ReportingUnit	Nevada;Clark;2725	Clark;2725
+ReportingUnit	Nevada;Clark;2726	Clark;2726
+ReportingUnit	Nevada;Clark;2727	Clark;2727
+ReportingUnit	Nevada;Clark;2729	Clark;2729
+ReportingUnit	Nevada;Clark;2730	Clark;2730
+ReportingUnit	Nevada;Clark;2731	Clark;2731
+ReportingUnit	Nevada;Clark;2732	Clark;2732
+ReportingUnit	Nevada;Clark;2733	Clark;2733
+ReportingUnit	Nevada;Clark;2734	Clark;2734
+ReportingUnit	Nevada;Clark;2735	Clark;2735
+ReportingUnit	Nevada;Clark;2736	Clark;2736
+ReportingUnit	Nevada;Clark;2737	Clark;2737
+ReportingUnit	Nevada;Clark;2738	Clark;2738
+ReportingUnit	Nevada;Clark;2740	Clark;2740
+ReportingUnit	Nevada;Clark;2742	Clark;2742
+ReportingUnit	Nevada;Clark;2743	Clark;2743
+ReportingUnit	Nevada;Clark;2745	Clark;2745
+ReportingUnit	Nevada;Clark;2746	Clark;2746
+ReportingUnit	Nevada;Clark;2751	Clark;2751
+ReportingUnit	Nevada;Clark;2752	Clark;2752
+ReportingUnit	Nevada;Clark;2770	Clark;2770
+ReportingUnit	Nevada;Clark;2775	Clark;2775
+ReportingUnit	Nevada;Clark;2776	Clark;2776
+ReportingUnit	Nevada;Clark;3036	Clark;3036
+ReportingUnit	Nevada;Clark;3037	Clark;3037
+ReportingUnit	Nevada;Clark;3040	Clark;3040
+ReportingUnit	Nevada;Clark;3151	Clark;3151
+ReportingUnit	Nevada;Clark;3152	Clark;3152
+ReportingUnit	Nevada;Clark;3191	Clark;3191
+ReportingUnit	Nevada;Clark;3217	Clark;3217
+ReportingUnit	Nevada;Clark;3361	Clark;3361
+ReportingUnit	Nevada;Clark;3363	Clark;3363
+ReportingUnit	Nevada;Clark;3364	Clark;3364
+ReportingUnit	Nevada;Clark;3365	Clark;3365
+ReportingUnit	Nevada;Clark;3366	Clark;3366
+ReportingUnit	Nevada;Clark;3370	Clark;3370
+ReportingUnit	Nevada;Clark;3371	Clark;3371
+ReportingUnit	Nevada;Clark;3372	Clark;3372
+ReportingUnit	Nevada;Clark;3373	Clark;3373
+ReportingUnit	Nevada;Clark;3374	Clark;3374
+ReportingUnit	Nevada;Clark;3375	Clark;3375
+ReportingUnit	Nevada;Clark;3380	Clark;3380
+ReportingUnit	Nevada;Clark;3381	Clark;3381
+ReportingUnit	Nevada;Clark;3382	Clark;3382
+ReportingUnit	Nevada;Clark;3383	Clark;3383
+ReportingUnit	Nevada;Clark;3385	Clark;3385
+ReportingUnit	Nevada;Clark;3386	Clark;3386
+ReportingUnit	Nevada;Clark;3391	Clark;3391
+ReportingUnit	Nevada;Clark;3392	Clark;3392
+ReportingUnit	Nevada;Clark;3393	Clark;3393
+ReportingUnit	Nevada;Clark;3395	Clark;3395
+ReportingUnit	Nevada;Clark;3413	Clark;3413
+ReportingUnit	Nevada;Clark;3414	Clark;3414
+ReportingUnit	Nevada;Clark;3416	Clark;3416
+ReportingUnit	Nevada;Clark;3417	Clark;3417
+ReportingUnit	Nevada;Clark;3418	Clark;3418
+ReportingUnit	Nevada;Clark;3430	Clark;3430
+ReportingUnit	Nevada;Clark;3431	Clark;3431
+ReportingUnit	Nevada;Clark;3433	Clark;3433
+ReportingUnit	Nevada;Clark;3435	Clark;3435
+ReportingUnit	Nevada;Clark;3439	Clark;3439
+ReportingUnit	Nevada;Clark;3457	Clark;3457
+ReportingUnit	Nevada;Clark;3464	Clark;3464
+ReportingUnit	Nevada;Clark;3465	Clark;3465
+ReportingUnit	Nevada;Clark;3518	Clark;3518
+ReportingUnit	Nevada;Clark;3532	Clark;3532
+ReportingUnit	Nevada;Clark;3535	Clark;3535
+ReportingUnit	Nevada;Clark;3537	Clark;3537
+ReportingUnit	Nevada;Clark;3540	Clark;3540
+ReportingUnit	Nevada;Clark;3544	Clark;3544
+ReportingUnit	Nevada;Clark;3545	Clark;3545
+ReportingUnit	Nevada;Clark;3546	Clark;3546
+ReportingUnit	Nevada;Clark;3547	Clark;3547
+ReportingUnit	Nevada;Clark;3552	Clark;3552
+ReportingUnit	Nevada;Clark;3553	Clark;3553
+ReportingUnit	Nevada;Clark;3557	Clark;3557
+ReportingUnit	Nevada;Clark;3559	Clark;3559
+ReportingUnit	Nevada;Clark;3562	Clark;3562
+ReportingUnit	Nevada;Clark;3564	Clark;3564
+ReportingUnit	Nevada;Clark;3565	Clark;3565
+ReportingUnit	Nevada;Clark;3566	Clark;3566
+ReportingUnit	Nevada;Clark;3571	Clark;3571
+ReportingUnit	Nevada;Clark;3574	Clark;3574
+ReportingUnit	Nevada;Clark;3576	Clark;3576
+ReportingUnit	Nevada;Clark;3578	Clark;3578
+ReportingUnit	Nevada;Clark;3579	Clark;3579
+ReportingUnit	Nevada;Clark;3580	Clark;3580
+ReportingUnit	Nevada;Clark;3581	Clark;3581
+ReportingUnit	Nevada;Clark;3582	Clark;3582
+ReportingUnit	Nevada;Clark;3583	Clark;3583
+ReportingUnit	Nevada;Clark;3584	Clark;3584
+ReportingUnit	Nevada;Clark;3585	Clark;3585
+ReportingUnit	Nevada;Clark;3586	Clark;3586
+ReportingUnit	Nevada;Clark;3602	Clark;3602
+ReportingUnit	Nevada;Clark;3604	Clark;3604
+ReportingUnit	Nevada;Clark;3605	Clark;3605
+ReportingUnit	Nevada;Clark;3606	Clark;3606
+ReportingUnit	Nevada;Clark;3607	Clark;3607
+ReportingUnit	Nevada;Clark;3608	Clark;3608
+ReportingUnit	Nevada;Clark;3609	Clark;3609
+ReportingUnit	Nevada;Clark;3610	Clark;3610
+ReportingUnit	Nevada;Clark;3611	Clark;3611
+ReportingUnit	Nevada;Clark;3612	Clark;3612
+ReportingUnit	Nevada;Clark;3613	Clark;3613
+ReportingUnit	Nevada;Clark;3700	Clark;3700
+ReportingUnit	Nevada;Clark;3701	Clark;3701
+ReportingUnit	Nevada;Clark;3702	Clark;3702
+ReportingUnit	Nevada;Clark;3703	Clark;3703
+ReportingUnit	Nevada;Clark;3704	Clark;3704
+ReportingUnit	Nevada;Clark;3705	Clark;3705
+ReportingUnit	Nevada;Clark;3706	Clark;3706
+ReportingUnit	Nevada;Clark;3707	Clark;3707
+ReportingUnit	Nevada;Clark;3708	Clark;3708
+ReportingUnit	Nevada;Clark;3709	Clark;3709
+ReportingUnit	Nevada;Clark;3710	Clark;3710
+ReportingUnit	Nevada;Clark;3711	Clark;3711
+ReportingUnit	Nevada;Clark;3712	Clark;3712
+ReportingUnit	Nevada;Clark;3713	Clark;3713
+ReportingUnit	Nevada;Clark;3714	Clark;3714
+ReportingUnit	Nevada;Clark;3715	Clark;3715
+ReportingUnit	Nevada;Clark;3716	Clark;3716
+ReportingUnit	Nevada;Clark;3717	Clark;3717
+ReportingUnit	Nevada;Clark;3718	Clark;3718
+ReportingUnit	Nevada;Clark;3719	Clark;3719
+ReportingUnit	Nevada;Clark;3720	Clark;3720
+ReportingUnit	Nevada;Clark;3721	Clark;3721
+ReportingUnit	Nevada;Clark;3722	Clark;3722
+ReportingUnit	Nevada;Clark;3723	Clark;3723
+ReportingUnit	Nevada;Clark;3724	Clark;3724
+ReportingUnit	Nevada;Clark;3725	Clark;3725
+ReportingUnit	Nevada;Clark;3726	Clark;3726
+ReportingUnit	Nevada;Clark;3727	Clark;3727
+ReportingUnit	Nevada;Clark;3728	Clark;3728
+ReportingUnit	Nevada;Clark;3729	Clark;3729
+ReportingUnit	Nevada;Clark;3730	Clark;3730
+ReportingUnit	Nevada;Clark;3731	Clark;3731
+ReportingUnit	Nevada;Clark;3732	Clark;3732
+ReportingUnit	Nevada;Clark;3733	Clark;3733
+ReportingUnit	Nevada;Clark;3734	Clark;3734
+ReportingUnit	Nevada;Clark;3735	Clark;3735
+ReportingUnit	Nevada;Clark;3736	Clark;3736
+ReportingUnit	Nevada;Clark;3737	Clark;3737
+ReportingUnit	Nevada;Clark;3738	Clark;3738
+ReportingUnit	Nevada;Clark;3739	Clark;3739
+ReportingUnit	Nevada;Clark;3740	Clark;3740
+ReportingUnit	Nevada;Clark;3741	Clark;3741
+ReportingUnit	Nevada;Clark;3742	Clark;3742
+ReportingUnit	Nevada;Clark;3743	Clark;3743
+ReportingUnit	Nevada;Clark;3744	Clark;3744
+ReportingUnit	Nevada;Clark;3745	Clark;3745
+ReportingUnit	Nevada;Clark;3746	Clark;3746
+ReportingUnit	Nevada;Clark;3747	Clark;3747
+ReportingUnit	Nevada;Clark;3748	Clark;3748
+ReportingUnit	Nevada;Clark;3749	Clark;3749
+ReportingUnit	Nevada;Clark;3750	Clark;3750
+ReportingUnit	Nevada;Clark;3751	Clark;3751
+ReportingUnit	Nevada;Clark;3752	Clark;3752
+ReportingUnit	Nevada;Clark;3753	Clark;3753
+ReportingUnit	Nevada;Clark;3754	Clark;3754
+ReportingUnit	Nevada;Clark;3755	Clark;3755
+ReportingUnit	Nevada;Clark;3756	Clark;3756
+ReportingUnit	Nevada;Clark;3757	Clark;3757
+ReportingUnit	Nevada;Clark;3758	Clark;3758
+ReportingUnit	Nevada;Clark;3759	Clark;3759
+ReportingUnit	Nevada;Clark;3760	Clark;3760
+ReportingUnit	Nevada;Clark;3761	Clark;3761
+ReportingUnit	Nevada;Clark;3762	Clark;3762
+ReportingUnit	Nevada;Clark;3763	Clark;3763
+ReportingUnit	Nevada;Clark;3764	Clark;3764
+ReportingUnit	Nevada;Clark;3765	Clark;3765
+ReportingUnit	Nevada;Clark;3766	Clark;3766
+ReportingUnit	Nevada;Clark;3767	Clark;3767
+ReportingUnit	Nevada;Clark;3768	Clark;3768
+ReportingUnit	Nevada;Clark;3769	Clark;3769
+ReportingUnit	Nevada;Clark;3770	Clark;3770
+ReportingUnit	Nevada;Clark;3771	Clark;3771
+ReportingUnit	Nevada;Clark;3772	Clark;3772
+ReportingUnit	Nevada;Clark;3773	Clark;3773
+ReportingUnit	Nevada;Clark;3774	Clark;3774
+ReportingUnit	Nevada;Clark;3775	Clark;3775
+ReportingUnit	Nevada;Clark;3776	Clark;3776
+ReportingUnit	Nevada;Clark;3777	Clark;3777
+ReportingUnit	Nevada;Clark;3780	Clark;3780
+ReportingUnit	Nevada;Clark;3782	Clark;3782
+ReportingUnit	Nevada;Clark;3783	Clark;3783
+ReportingUnit	Nevada;Clark;3784	Clark;3784
+ReportingUnit	Nevada;Clark;3785	Clark;3785
+ReportingUnit	Nevada;Clark;3786	Clark;3786
+ReportingUnit	Nevada;Clark;3787	Clark;3787
+ReportingUnit	Nevada;Clark;3788	Clark;3788
+ReportingUnit	Nevada;Clark;3789	Clark;3789
+ReportingUnit	Nevada;Clark;3790	Clark;3790
+ReportingUnit	Nevada;Clark;3791	Clark;3791
+ReportingUnit	Nevada;Clark;3792	Clark;3792
+ReportingUnit	Nevada;Clark;3794	Clark;3794
+ReportingUnit	Nevada;Clark;3795	Clark;3795
+ReportingUnit	Nevada;Clark;3796	Clark;3796
+ReportingUnit	Nevada;Clark;3800	Clark;3800
+ReportingUnit	Nevada;Clark;3801	Clark;3801
+ReportingUnit	Nevada;Clark;3802	Clark;3802
+ReportingUnit	Nevada;Clark;3803	Clark;3803
+ReportingUnit	Nevada;Clark;3804	Clark;3804
+ReportingUnit	Nevada;Clark;3805	Clark;3805
+ReportingUnit	Nevada;Clark;3806	Clark;3806
+ReportingUnit	Nevada;Clark;3807	Clark;3807
+ReportingUnit	Nevada;Clark;3808	Clark;3808
+ReportingUnit	Nevada;Clark;3809	Clark;3809
+ReportingUnit	Nevada;Clark;3811	Clark;3811
+ReportingUnit	Nevada;Clark;3812	Clark;3812
+ReportingUnit	Nevada;Clark;3813	Clark;3813
+ReportingUnit	Nevada;Clark;3814	Clark;3814
+ReportingUnit	Nevada;Clark;3815	Clark;3815
+ReportingUnit	Nevada;Clark;3821	Clark;3821
+ReportingUnit	Nevada;Clark;3822	Clark;3822
+ReportingUnit	Nevada;Clark;3823	Clark;3823
+ReportingUnit	Nevada;Clark;3824	Clark;3824
+ReportingUnit	Nevada;Clark;3825	Clark;3825
+ReportingUnit	Nevada;Clark;3826	Clark;3826
+ReportingUnit	Nevada;Clark;3831	Clark;3831
+ReportingUnit	Nevada;Clark;3832	Clark;3832
+ReportingUnit	Nevada;Clark;3833	Clark;3833
+ReportingUnit	Nevada;Clark;3834	Clark;3834
+ReportingUnit	Nevada;Clark;3841	Clark;3841
+ReportingUnit	Nevada;Clark;3842	Clark;3842
+ReportingUnit	Nevada;Clark;3843	Clark;3843
+ReportingUnit	Nevada;Clark;3844	Clark;3844
+ReportingUnit	Nevada;Clark;3845	Clark;3845
+ReportingUnit	Nevada;Clark;3851	Clark;3851
+ReportingUnit	Nevada;Clark;3852	Clark;3852
+ReportingUnit	Nevada;Clark;3853	Clark;3853
+ReportingUnit	Nevada;Clark;3854	Clark;3854
+ReportingUnit	Nevada;Clark;3855	Clark;3855
+ReportingUnit	Nevada;Clark;3863	Clark;3863
+ReportingUnit	Nevada;Clark;3864	Clark;3864
+ReportingUnit	Nevada;Clark;3866	Clark;3866
+ReportingUnit	Nevada;Clark;3875	Clark;3875
+ReportingUnit	Nevada;Clark;3881	Clark;3881
+ReportingUnit	Nevada;Clark;4017	Clark;4017
+ReportingUnit	Nevada;Clark;4028	Clark;4028
+ReportingUnit	Nevada;Clark;4066	Clark;4066
+ReportingUnit	Nevada;Clark;4069	Clark;4069
+ReportingUnit	Nevada;Clark;4073	Clark;4073
+ReportingUnit	Nevada;Clark;4075	Clark;4075
+ReportingUnit	Nevada;Clark;4076	Clark;4076
+ReportingUnit	Nevada;Clark;4304	Clark;4304
+ReportingUnit	Nevada;Clark;4305	Clark;4305
+ReportingUnit	Nevada;Clark;4306	Clark;4306
+ReportingUnit	Nevada;Clark;4307	Clark;4307
+ReportingUnit	Nevada;Clark;4309	Clark;4309
+ReportingUnit	Nevada;Clark;4310	Clark;4310
+ReportingUnit	Nevada;Clark;4381	Clark;4381
+ReportingUnit	Nevada;Clark;4384	Clark;4384
+ReportingUnit	Nevada;Clark;4387	Clark;4387
+ReportingUnit	Nevada;Clark;4415	Clark;4415
+ReportingUnit	Nevada;Clark;4434	Clark;4434
+ReportingUnit	Nevada;Clark;4454	Clark;4454
+ReportingUnit	Nevada;Clark;4461	Clark;4461
+ReportingUnit	Nevada;Clark;4463	Clark;4463
+ReportingUnit	Nevada;Clark;4467	Clark;4467
+ReportingUnit	Nevada;Clark;4500	Clark;4500
+ReportingUnit	Nevada;Clark;4501	Clark;4501
+ReportingUnit	Nevada;Clark;4502	Clark;4502
+ReportingUnit	Nevada;Clark;4504	Clark;4504
+ReportingUnit	Nevada;Clark;4505	Clark;4505
+ReportingUnit	Nevada;Clark;4506	Clark;4506
+ReportingUnit	Nevada;Clark;4507	Clark;4507
+ReportingUnit	Nevada;Clark;4508	Clark;4508
+ReportingUnit	Nevada;Clark;4510	Clark;4510
+ReportingUnit	Nevada;Clark;4511	Clark;4511
+ReportingUnit	Nevada;Clark;4512	Clark;4512
+ReportingUnit	Nevada;Clark;4513	Clark;4513
+ReportingUnit	Nevada;Clark;4514	Clark;4514
+ReportingUnit	Nevada;Clark;4522	Clark;4522
+ReportingUnit	Nevada;Clark;4523	Clark;4523
+ReportingUnit	Nevada;Clark;4525	Clark;4525
+ReportingUnit	Nevada;Clark;4526	Clark;4526
+ReportingUnit	Nevada;Clark;4527	Clark;4527
+ReportingUnit	Nevada;Clark;4528	Clark;4528
+ReportingUnit	Nevada;Clark;4529	Clark;4529
+ReportingUnit	Nevada;Clark;4530	Clark;4530
+ReportingUnit	Nevada;Clark;4531	Clark;4531
+ReportingUnit	Nevada;Clark;4532	Clark;4532
+ReportingUnit	Nevada;Clark;4535	Clark;4535
+ReportingUnit	Nevada;Clark;4536	Clark;4536
+ReportingUnit	Nevada;Clark;4540	Clark;4540
+ReportingUnit	Nevada;Clark;4541	Clark;4541
+ReportingUnit	Nevada;Clark;4543	Clark;4543
+ReportingUnit	Nevada;Clark;4546	Clark;4546
+ReportingUnit	Nevada;Clark;4547	Clark;4547
+ReportingUnit	Nevada;Clark;4548	Clark;4548
+ReportingUnit	Nevada;Clark;4549	Clark;4549
+ReportingUnit	Nevada;Clark;4550	Clark;4550
+ReportingUnit	Nevada;Clark;4551	Clark;4551
+ReportingUnit	Nevada;Clark;4552	Clark;4552
+ReportingUnit	Nevada;Clark;4553	Clark;4553
+ReportingUnit	Nevada;Clark;4554	Clark;4554
+ReportingUnit	Nevada;Clark;4555	Clark;4555
+ReportingUnit	Nevada;Clark;4556	Clark;4556
+ReportingUnit	Nevada;Clark;4557	Clark;4557
+ReportingUnit	Nevada;Clark;4559	Clark;4559
+ReportingUnit	Nevada;Clark;4560	Clark;4560
+ReportingUnit	Nevada;Clark;4561	Clark;4561
+ReportingUnit	Nevada;Clark;4562	Clark;4562
+ReportingUnit	Nevada;Clark;4563	Clark;4563
+ReportingUnit	Nevada;Clark;4564	Clark;4564
+ReportingUnit	Nevada;Clark;4565	Clark;4565
+ReportingUnit	Nevada;Clark;4566	Clark;4566
+ReportingUnit	Nevada;Clark;4567	Clark;4567
+ReportingUnit	Nevada;Clark;4568	Clark;4568
+ReportingUnit	Nevada;Clark;4569	Clark;4569
+ReportingUnit	Nevada;Clark;4571	Clark;4571
+ReportingUnit	Nevada;Clark;4572	Clark;4572
+ReportingUnit	Nevada;Clark;4573	Clark;4573
+ReportingUnit	Nevada;Clark;4574	Clark;4574
+ReportingUnit	Nevada;Clark;4577	Clark;4577
+ReportingUnit	Nevada;Clark;4581	Clark;4581
+ReportingUnit	Nevada;Clark;4582	Clark;4582
+ReportingUnit	Nevada;Clark;4583	Clark;4583
+ReportingUnit	Nevada;Clark;4584	Clark;4584
+ReportingUnit	Nevada;Clark;4585	Clark;4585
+ReportingUnit	Nevada;Clark;4586	Clark;4586
+ReportingUnit	Nevada;Clark;4590	Clark;4590
+ReportingUnit	Nevada;Clark;4591	Clark;4591
+ReportingUnit	Nevada;Clark;4592	Clark;4592
+ReportingUnit	Nevada;Clark;4593	Clark;4593
+ReportingUnit	Nevada;Clark;4594	Clark;4594
+ReportingUnit	Nevada;Clark;4596	Clark;4596
+ReportingUnit	Nevada;Clark;4597	Clark;4597
+ReportingUnit	Nevada;Clark;4598	Clark;4598
+ReportingUnit	Nevada;Clark;4599	Clark;4599
+ReportingUnit	Nevada;Clark;4601	Clark;4601
+ReportingUnit	Nevada;Clark;4602	Clark;4602
+ReportingUnit	Nevada;Clark;4603	Clark;4603
+ReportingUnit	Nevada;Clark;4604	Clark;4604
+ReportingUnit	Nevada;Clark;4605	Clark;4605
+ReportingUnit	Nevada;Clark;4606	Clark;4606
+ReportingUnit	Nevada;Clark;4611	Clark;4611
+ReportingUnit	Nevada;Clark;4612	Clark;4612
+ReportingUnit	Nevada;Clark;4613	Clark;4613
+ReportingUnit	Nevada;Clark;4614	Clark;4614
+ReportingUnit	Nevada;Clark;4615	Clark;4615
+ReportingUnit	Nevada;Clark;4616	Clark;4616
+ReportingUnit	Nevada;Clark;4621	Clark;4621
+ReportingUnit	Nevada;Clark;4623	Clark;4623
+ReportingUnit	Nevada;Clark;4633	Clark;4633
+ReportingUnit	Nevada;Clark;4634	Clark;4634
+ReportingUnit	Nevada;Clark;4635	Clark;4635
+ReportingUnit	Nevada;Clark;4636	Clark;4636
+ReportingUnit	Nevada;Clark;4637	Clark;4637
+ReportingUnit	Nevada;Clark;4638	Clark;4638
+ReportingUnit	Nevada;Clark;4641	Clark;4641
+ReportingUnit	Nevada;Clark;4642	Clark;4642
+ReportingUnit	Nevada;Clark;4643	Clark;4643
+ReportingUnit	Nevada;Clark;4645	Clark;4645
+ReportingUnit	Nevada;Clark;4650	Clark;4650
+ReportingUnit	Nevada;Clark;4651	Clark;4651
+ReportingUnit	Nevada;Clark;4652	Clark;4652
+ReportingUnit	Nevada;Clark;5003	Clark;5003
+ReportingUnit	Nevada;Clark;5014	Clark;5014
+ReportingUnit	Nevada;Clark;5029	Clark;5029
+ReportingUnit	Nevada;Clark;5034	Clark;5034
+ReportingUnit	Nevada;Clark;5036	Clark;5036
+ReportingUnit	Nevada;Clark;5047	Clark;5047
+ReportingUnit	Nevada;Clark;5056	Clark;5056
+ReportingUnit	Nevada;Clark;5323	Clark;5323
+ReportingUnit	Nevada;Clark;5324	Clark;5324
+ReportingUnit	Nevada;Clark;5326	Clark;5326
+ReportingUnit	Nevada;Clark;5330	Clark;5330
+ReportingUnit	Nevada;Clark;5332	Clark;5332
+ReportingUnit	Nevada;Clark;5333	Clark;5333
+ReportingUnit	Nevada;Clark;5350	Clark;5350
+ReportingUnit	Nevada;Clark;5356	Clark;5356
+ReportingUnit	Nevada;Clark;5372	Clark;5372
+ReportingUnit	Nevada;Clark;5384	Clark;5384
+ReportingUnit	Nevada;Clark;5390	Clark;5390
+ReportingUnit	Nevada;Clark;5393	Clark;5393
+ReportingUnit	Nevada;Clark;5394	Clark;5394
+ReportingUnit	Nevada;Clark;5395	Clark;5395
+ReportingUnit	Nevada;Clark;5396	Clark;5396
+ReportingUnit	Nevada;Clark;5397	Clark;5397
+ReportingUnit	Nevada;Clark;5400	Clark;5400
+ReportingUnit	Nevada;Clark;5403	Clark;5403
+ReportingUnit	Nevada;Clark;5404	Clark;5404
+ReportingUnit	Nevada;Clark;5405	Clark;5405
+ReportingUnit	Nevada;Clark;5410	Clark;5410
+ReportingUnit	Nevada;Clark;5412	Clark;5412
+ReportingUnit	Nevada;Clark;5413	Clark;5413
+ReportingUnit	Nevada;Clark;5417	Clark;5417
+ReportingUnit	Nevada;Clark;5425	Clark;5425
+ReportingUnit	Nevada;Clark;5430	Clark;5430
+ReportingUnit	Nevada;Clark;5500	Clark;5500
+ReportingUnit	Nevada;Clark;5501	Clark;5501
+ReportingUnit	Nevada;Clark;5502	Clark;5502
+ReportingUnit	Nevada;Clark;5503	Clark;5503
+ReportingUnit	Nevada;Clark;5504	Clark;5504
+ReportingUnit	Nevada;Clark;5505	Clark;5505
+ReportingUnit	Nevada;Clark;5506	Clark;5506
+ReportingUnit	Nevada;Clark;5511	Clark;5511
+ReportingUnit	Nevada;Clark;5512	Clark;5512
+ReportingUnit	Nevada;Clark;5513	Clark;5513
+ReportingUnit	Nevada;Clark;5515	Clark;5515
+ReportingUnit	Nevada;Clark;5521	Clark;5521
+ReportingUnit	Nevada;Clark;5522	Clark;5522
+ReportingUnit	Nevada;Clark;5523	Clark;5523
+ReportingUnit	Nevada;Clark;5524	Clark;5524
+ReportingUnit	Nevada;Clark;5525	Clark;5525
+ReportingUnit	Nevada;Clark;5531	Clark;5531
+ReportingUnit	Nevada;Clark;5532	Clark;5532
+ReportingUnit	Nevada;Clark;5533	Clark;5533
+ReportingUnit	Nevada;Clark;5534	Clark;5534
+ReportingUnit	Nevada;Clark;5535	Clark;5535
+ReportingUnit	Nevada;Clark;5536	Clark;5536
+ReportingUnit	Nevada;Clark;5537	Clark;5537
+ReportingUnit	Nevada;Clark;5541	Clark;5541
+ReportingUnit	Nevada;Clark;5542	Clark;5542
+ReportingUnit	Nevada;Clark;5543	Clark;5543
+ReportingUnit	Nevada;Clark;5544	Clark;5544
+ReportingUnit	Nevada;Clark;5545	Clark;5545
+ReportingUnit	Nevada;Clark;5552	Clark;5552
+ReportingUnit	Nevada;Clark;5553	Clark;5553
+ReportingUnit	Nevada;Clark;5554	Clark;5554
+ReportingUnit	Nevada;Clark;5555	Clark;5555
+ReportingUnit	Nevada;Clark;5560	Clark;5560
+ReportingUnit	Nevada;Clark;5562	Clark;5562
+ReportingUnit	Nevada;Clark;5564	Clark;5564
+ReportingUnit	Nevada;Clark;5565	Clark;5565
+ReportingUnit	Nevada;Clark;5566	Clark;5566
+ReportingUnit	Nevada;Clark;5567	Clark;5567
+ReportingUnit	Nevada;Clark;5568	Clark;5568
+ReportingUnit	Nevada;Clark;5569	Clark;5569
+ReportingUnit	Nevada;Clark;5570	Clark;5570
+ReportingUnit	Nevada;Clark;5571	Clark;5571
+ReportingUnit	Nevada;Clark;5572	Clark;5572
+ReportingUnit	Nevada;Clark;5573	Clark;5573
+ReportingUnit	Nevada;Clark;5574	Clark;5574
+ReportingUnit	Nevada;Clark;5575	Clark;5575
+ReportingUnit	Nevada;Clark;5576	Clark;5576
+ReportingUnit	Nevada;Clark;5577	Clark;5577
+ReportingUnit	Nevada;Clark;5578	Clark;5578
+ReportingUnit	Nevada;Clark;5579	Clark;5579
+ReportingUnit	Nevada;Clark;5580	Clark;5580
+ReportingUnit	Nevada;Clark;5581	Clark;5581
+ReportingUnit	Nevada;Clark;5582	Clark;5582
+ReportingUnit	Nevada;Clark;5583	Clark;5583
+ReportingUnit	Nevada;Clark;5584	Clark;5584
+ReportingUnit	Nevada;Clark;5585	Clark;5585
+ReportingUnit	Nevada;Clark;5586	Clark;5586
+ReportingUnit	Nevada;Clark;5587	Clark;5587
+ReportingUnit	Nevada;Clark;5588	Clark;5588
+ReportingUnit	Nevada;Clark;5589	Clark;5589
+ReportingUnit	Nevada;Clark;5591	Clark;5591
+ReportingUnit	Nevada;Clark;5592	Clark;5592
+ReportingUnit	Nevada;Clark;5593	Clark;5593
+ReportingUnit	Nevada;Clark;5594	Clark;5594
+ReportingUnit	Nevada;Clark;5595	Clark;5595
+ReportingUnit	Nevada;Clark;5596	Clark;5596
+ReportingUnit	Nevada;Clark;5597	Clark;5597
+ReportingUnit	Nevada;Clark;5598	Clark;5598
+ReportingUnit	Nevada;Clark;5601	Clark;5601
+ReportingUnit	Nevada;Clark;5603	Clark;5603
+ReportingUnit	Nevada;Clark;5604	Clark;5604
+ReportingUnit	Nevada;Clark;5612	Clark;5612
+ReportingUnit	Nevada;Clark;5613	Clark;5613
+ReportingUnit	Nevada;Clark;5614	Clark;5614
+ReportingUnit	Nevada;Clark;5615	Clark;5615
+ReportingUnit	Nevada;Clark;5616	Clark;5616
+ReportingUnit	Nevada;Clark;5617	Clark;5617
+ReportingUnit	Nevada;Clark;5620	Clark;5620
+ReportingUnit	Nevada;Clark;5621	Clark;5621
+ReportingUnit	Nevada;Clark;5622	Clark;5622
+ReportingUnit	Nevada;Clark;5623	Clark;5623
+ReportingUnit	Nevada;Clark;5624	Clark;5624
+ReportingUnit	Nevada;Clark;5625	Clark;5625
+ReportingUnit	Nevada;Clark;5631	Clark;5631
+ReportingUnit	Nevada;Clark;5632	Clark;5632
+ReportingUnit	Nevada;Clark;5633	Clark;5633
+ReportingUnit	Nevada;Clark;5634	Clark;5634
+ReportingUnit	Nevada;Clark;5635	Clark;5635
+ReportingUnit	Nevada;Clark;5636	Clark;5636
+ReportingUnit	Nevada;Clark;5641	Clark;5641
+ReportingUnit	Nevada;Clark;5642	Clark;5642
+ReportingUnit	Nevada;Clark;5643	Clark;5643
+ReportingUnit	Nevada;Clark;5644	Clark;5644
+ReportingUnit	Nevada;Clark;5649	Clark;5649
+ReportingUnit	Nevada;Clark;5650	Clark;5650
+ReportingUnit	Nevada;Clark;5651	Clark;5651
+ReportingUnit	Nevada;Clark;5652	Clark;5652
+ReportingUnit	Nevada;Clark;5653	Clark;5653
+ReportingUnit	Nevada;Clark;5654	Clark;5654
+ReportingUnit	Nevada;Clark;6040	Clark;6040
+ReportingUnit	Nevada;Clark;6057	Clark;6057
+ReportingUnit	Nevada;Clark;6062	Clark;6062
+ReportingUnit	Nevada;Clark;6066	Clark;6066
+ReportingUnit	Nevada;Clark;6109	Clark;6109
+ReportingUnit	Nevada;Clark;6362	Clark;6362
+ReportingUnit	Nevada;Clark;6424	Clark;6424
+ReportingUnit	Nevada;Clark;6431	Clark;6431
+ReportingUnit	Nevada;Clark;6434	Clark;6434
+ReportingUnit	Nevada;Clark;6440	Clark;6440
+ReportingUnit	Nevada;Clark;6463	Clark;6463
+ReportingUnit	Nevada;Clark;6468	Clark;6468
+ReportingUnit	Nevada;Clark;6469	Clark;6469
+ReportingUnit	Nevada;Clark;6470	Clark;6470
+ReportingUnit	Nevada;Clark;6471	Clark;6471
+ReportingUnit	Nevada;Clark;6475	Clark;6475
+ReportingUnit	Nevada;Clark;6477	Clark;6477
+ReportingUnit	Nevada;Clark;6484	Clark;6484
+ReportingUnit	Nevada;Clark;6486	Clark;6486
+ReportingUnit	Nevada;Clark;6487	Clark;6487
+ReportingUnit	Nevada;Clark;6488	Clark;6488
+ReportingUnit	Nevada;Clark;6490	Clark;6490
+ReportingUnit	Nevada;Clark;6492	Clark;6492
+ReportingUnit	Nevada;Clark;6493	Clark;6493
+ReportingUnit	Nevada;Clark;6494	Clark;6494
+ReportingUnit	Nevada;Clark;6496	Clark;6496
+ReportingUnit	Nevada;Clark;6497	Clark;6497
+ReportingUnit	Nevada;Clark;6498	Clark;6498
+ReportingUnit	Nevada;Clark;6499	Clark;6499
+ReportingUnit	Nevada;Clark;6500	Clark;6500
+ReportingUnit	Nevada;Clark;6512	Clark;6512
+ReportingUnit	Nevada;Clark;6513	Clark;6513
+ReportingUnit	Nevada;Clark;6514	Clark;6514
+ReportingUnit	Nevada;Clark;6515	Clark;6515
+ReportingUnit	Nevada;Clark;6517	Clark;6517
+ReportingUnit	Nevada;Clark;6520	Clark;6520
+ReportingUnit	Nevada;Clark;6521	Clark;6521
+ReportingUnit	Nevada;Clark;6522	Clark;6522
+ReportingUnit	Nevada;Clark;6526	Clark;6526
+ReportingUnit	Nevada;Clark;6527	Clark;6527
+ReportingUnit	Nevada;Clark;6530	Clark;6530
+ReportingUnit	Nevada;Clark;6531	Clark;6531
+ReportingUnit	Nevada;Clark;6533	Clark;6533
+ReportingUnit	Nevada;Clark;6538	Clark;6538
+ReportingUnit	Nevada;Clark;6539	Clark;6539
+ReportingUnit	Nevada;Clark;6540	Clark;6540
+ReportingUnit	Nevada;Clark;6544	Clark;6544
+ReportingUnit	Nevada;Clark;6545	Clark;6545
+ReportingUnit	Nevada;Clark;6547	Clark;6547
+ReportingUnit	Nevada;Clark;6548	Clark;6548
+ReportingUnit	Nevada;Clark;6549	Clark;6549
+ReportingUnit	Nevada;Clark;6600	Clark;6600
+ReportingUnit	Nevada;Clark;6601	Clark;6601
+ReportingUnit	Nevada;Clark;6602	Clark;6602
+ReportingUnit	Nevada;Clark;6604	Clark;6604
+ReportingUnit	Nevada;Clark;6605	Clark;6605
+ReportingUnit	Nevada;Clark;6606	Clark;6606
+ReportingUnit	Nevada;Clark;6607	Clark;6607
+ReportingUnit	Nevada;Clark;6608	Clark;6608
+ReportingUnit	Nevada;Clark;6609	Clark;6609
+ReportingUnit	Nevada;Clark;6610	Clark;6610
+ReportingUnit	Nevada;Clark;6611	Clark;6611
+ReportingUnit	Nevada;Clark;6612	Clark;6612
+ReportingUnit	Nevada;Clark;6613	Clark;6613
+ReportingUnit	Nevada;Clark;6614	Clark;6614
+ReportingUnit	Nevada;Clark;6615	Clark;6615
+ReportingUnit	Nevada;Clark;6617	Clark;6617
+ReportingUnit	Nevada;Clark;6621	Clark;6621
+ReportingUnit	Nevada;Clark;6622	Clark;6622
+ReportingUnit	Nevada;Clark;6625	Clark;6625
+ReportingUnit	Nevada;Clark;6631	Clark;6631
+ReportingUnit	Nevada;Clark;6632	Clark;6632
+ReportingUnit	Nevada;Clark;6633	Clark;6633
+ReportingUnit	Nevada;Clark;6634	Clark;6634
+ReportingUnit	Nevada;Clark;6635	Clark;6635
+ReportingUnit	Nevada;Clark;6642	Clark;6642
+ReportingUnit	Nevada;Clark;6643	Clark;6643
+ReportingUnit	Nevada;Clark;6644	Clark;6644
+ReportingUnit	Nevada;Clark;6645	Clark;6645
+ReportingUnit	Nevada;Clark;6648	Clark;6648
+ReportingUnit	Nevada;Clark;6649	Clark;6649
+ReportingUnit	Nevada;Clark;6651	Clark;6651
+ReportingUnit	Nevada;Clark;6652	Clark;6652
+ReportingUnit	Nevada;Clark;6653	Clark;6653
+ReportingUnit	Nevada;Clark;6654	Clark;6654
+ReportingUnit	Nevada;Clark;6655	Clark;6655
+ReportingUnit	Nevada;Clark;6656	Clark;6656
+ReportingUnit	Nevada;Clark;6657	Clark;6657
+ReportingUnit	Nevada;Clark;6658	Clark;6658
+ReportingUnit	Nevada;Clark;6661	Clark;6661
+ReportingUnit	Nevada;Clark;6662	Clark;6662
+ReportingUnit	Nevada;Clark;6663	Clark;6663
+ReportingUnit	Nevada;Clark;6664	Clark;6664
+ReportingUnit	Nevada;Clark;6665	Clark;6665
+ReportingUnit	Nevada;Clark;6666	Clark;6666
+ReportingUnit	Nevada;Clark;6667	Clark;6667
+ReportingUnit	Nevada;Clark;6671	Clark;6671
+ReportingUnit	Nevada;Clark;6672	Clark;6672
+ReportingUnit	Nevada;Clark;6673	Clark;6673
+ReportingUnit	Nevada;Clark;6674	Clark;6674
+ReportingUnit	Nevada;Clark;6675	Clark;6675
+ReportingUnit	Nevada;Clark;6681	Clark;6681
+ReportingUnit	Nevada;Clark;6683	Clark;6683
+ReportingUnit	Nevada;Clark;6684	Clark;6684
+ReportingUnit	Nevada;Clark;6685	Clark;6685
+ReportingUnit	Nevada;Clark;6686	Clark;6686
+ReportingUnit	Nevada;Clark;6691	Clark;6691
+ReportingUnit	Nevada;Clark;6692	Clark;6692
+ReportingUnit	Nevada;Clark;6693	Clark;6693
+ReportingUnit	Nevada;Clark;6694	Clark;6694
+ReportingUnit	Nevada;Clark;6695	Clark;6695
+ReportingUnit	Nevada;Clark;6700	Clark;6700
+ReportingUnit	Nevada;Clark;6701	Clark;6701
+ReportingUnit	Nevada;Clark;6702	Clark;6702
+ReportingUnit	Nevada;Clark;6703	Clark;6703
+ReportingUnit	Nevada;Clark;6704	Clark;6704
+ReportingUnit	Nevada;Clark;6705	Clark;6705
+ReportingUnit	Nevada;Clark;6706	Clark;6706
+ReportingUnit	Nevada;Clark;6707	Clark;6707
+ReportingUnit	Nevada;Clark;6708	Clark;6708
+ReportingUnit	Nevada;Clark;6709	Clark;6709
+ReportingUnit	Nevada;Clark;6710	Clark;6710
+ReportingUnit	Nevada;Clark;6711	Clark;6711
+ReportingUnit	Nevada;Clark;6712	Clark;6712
+ReportingUnit	Nevada;Clark;6713	Clark;6713
+ReportingUnit	Nevada;Clark;6714	Clark;6714
+ReportingUnit	Nevada;Clark;6715	Clark;6715
+ReportingUnit	Nevada;Clark;6716	Clark;6716
+ReportingUnit	Nevada;Clark;6718	Clark;6718
+ReportingUnit	Nevada;Clark;6719	Clark;6719
+ReportingUnit	Nevada;Clark;6720	Clark;6720
+ReportingUnit	Nevada;Clark;6721	Clark;6721
+ReportingUnit	Nevada;Clark;6722	Clark;6722
+ReportingUnit	Nevada;Clark;6723	Clark;6723
+ReportingUnit	Nevada;Clark;6724	Clark;6724
+ReportingUnit	Nevada;Clark;6725	Clark;6725
+ReportingUnit	Nevada;Clark;6726	Clark;6726
+ReportingUnit	Nevada;Clark;6727	Clark;6727
+ReportingUnit	Nevada;Clark;6728	Clark;6728
+ReportingUnit	Nevada;Clark;6729	Clark;6729
+ReportingUnit	Nevada;Clark;6730	Clark;6730
+ReportingUnit	Nevada;Clark;6731	Clark;6731
+ReportingUnit	Nevada;Clark;6732	Clark;6732
+ReportingUnit	Nevada;Clark;6733	Clark;6733
+ReportingUnit	Nevada;Clark;6734	Clark;6734
+ReportingUnit	Nevada;Clark;6735	Clark;6735
+ReportingUnit	Nevada;Clark;6736	Clark;6736
+ReportingUnit	Nevada;Clark;6737	Clark;6737
+ReportingUnit	Nevada;Clark;6738	Clark;6738
+ReportingUnit	Nevada;Clark;6739	Clark;6739
+ReportingUnit	Nevada;Clark;6751	Clark;6751
+ReportingUnit	Nevada;Clark;6752	Clark;6752
+ReportingUnit	Nevada;Clark;6753	Clark;6753
+ReportingUnit	Nevada;Clark;7012	Clark;7012
+ReportingUnit	Nevada;Clark;7047	Clark;7047
+ReportingUnit	Nevada;Clark;7048	Clark;7048
+ReportingUnit	Nevada;Clark;7049	Clark;7049
+ReportingUnit	Nevada;Clark;7050	Clark;7050
+ReportingUnit	Nevada;Clark;7054	Clark;7054
+ReportingUnit	Nevada;Clark;7079	Clark;7079
+ReportingUnit	Nevada;Clark;7097	Clark;7097
+ReportingUnit	Nevada;Clark;7311	Clark;7311
+ReportingUnit	Nevada;Clark;7312	Clark;7312
+ReportingUnit	Nevada;Clark;7332	Clark;7332
+ReportingUnit	Nevada;Clark;7334	Clark;7334
+ReportingUnit	Nevada;Clark;7341	Clark;7341
+ReportingUnit	Nevada;Clark;7351	Clark;7351
+ReportingUnit	Nevada;Clark;7352	Clark;7352
+ReportingUnit	Nevada;Clark;7354	Clark;7354
+ReportingUnit	Nevada;Clark;7355	Clark;7355
+ReportingUnit	Nevada;Clark;7356	Clark;7356
+ReportingUnit	Nevada;Clark;7357	Clark;7357
+ReportingUnit	Nevada;Clark;7358	Clark;7358
+ReportingUnit	Nevada;Clark;7359	Clark;7359
+ReportingUnit	Nevada;Clark;7360	Clark;7360
+ReportingUnit	Nevada;Clark;7361	Clark;7361
+ReportingUnit	Nevada;Clark;7366	Clark;7366
+ReportingUnit	Nevada;Clark;7387	Clark;7387
+ReportingUnit	Nevada;Clark;7395	Clark;7395
+ReportingUnit	Nevada;Clark;7402	Clark;7402
+ReportingUnit	Nevada;Clark;7403	Clark;7403
+ReportingUnit	Nevada;Clark;7405	Clark;7405
+ReportingUnit	Nevada;Clark;7410	Clark;7410
+ReportingUnit	Nevada;Clark;7411	Clark;7411
+ReportingUnit	Nevada;Clark;7413	Clark;7413
+ReportingUnit	Nevada;Clark;7414	Clark;7414
+ReportingUnit	Nevada;Clark;7415	Clark;7415
+ReportingUnit	Nevada;Clark;7416	Clark;7416
+ReportingUnit	Nevada;Clark;7417	Clark;7417
+ReportingUnit	Nevada;Clark;7422	Clark;7422
+ReportingUnit	Nevada;Clark;7430	Clark;7430
+ReportingUnit	Nevada;Clark;7500	Clark;7500
+ReportingUnit	Nevada;Clark;7501	Clark;7501
+ReportingUnit	Nevada;Clark;7502	Clark;7502
+ReportingUnit	Nevada;Clark;7503	Clark;7503
+ReportingUnit	Nevada;Clark;7504	Clark;7504
+ReportingUnit	Nevada;Clark;7505	Clark;7505
+ReportingUnit	Nevada;Clark;7506	Clark;7506
+ReportingUnit	Nevada;Clark;7507	Clark;7507
+ReportingUnit	Nevada;Clark;7508	Clark;7508
+ReportingUnit	Nevada;Clark;7509	Clark;7509
+ReportingUnit	Nevada;Clark;7511	Clark;7511
+ReportingUnit	Nevada;Clark;7512	Clark;7512
+ReportingUnit	Nevada;Clark;7513	Clark;7513
+ReportingUnit	Nevada;Clark;7514	Clark;7514
+ReportingUnit	Nevada;Clark;7515	Clark;7515
+ReportingUnit	Nevada;Clark;7521	Clark;7521
+ReportingUnit	Nevada;Clark;7522	Clark;7522
+ReportingUnit	Nevada;Clark;7523	Clark;7523
+ReportingUnit	Nevada;Clark;7524	Clark;7524
+ReportingUnit	Nevada;Clark;7525	Clark;7525
+ReportingUnit	Nevada;Clark;7526	Clark;7526
+ReportingUnit	Nevada;Clark;7527	Clark;7527
+ReportingUnit	Nevada;Clark;7528	Clark;7528
+ReportingUnit	Nevada;Clark;7529	Clark;7529
+ReportingUnit	Nevada;Clark;7530	Clark;7530
+ReportingUnit	Nevada;Clark;7531	Clark;7531
+ReportingUnit	Nevada;Clark;7532	Clark;7532
+ReportingUnit	Nevada;Clark;7533	Clark;7533
+ReportingUnit	Nevada;Clark;7534	Clark;7534
+ReportingUnit	Nevada;Clark;7535	Clark;7535
+ReportingUnit	Nevada;Clark;7536	Clark;7536
+ReportingUnit	Nevada;Clark;7541	Clark;7541
+ReportingUnit	Nevada;Clark;7542	Clark;7542
+ReportingUnit	Nevada;Clark;7543	Clark;7543
+ReportingUnit	Nevada;Clark;7545	Clark;7545
+ReportingUnit	Nevada;Clark;7550	Clark;7550
+ReportingUnit	Nevada;Clark;7551	Clark;7551
+ReportingUnit	Nevada;Clark;7552	Clark;7552
+ReportingUnit	Nevada;Clark;7553	Clark;7553
+ReportingUnit	Nevada;Clark;7554	Clark;7554
+ReportingUnit	Nevada;Clark;7555	Clark;7555
+ReportingUnit	Nevada;Clark;7561	Clark;7561
+ReportingUnit	Nevada;Clark;7562	Clark;7562
+ReportingUnit	Nevada;Clark;7563	Clark;7563
+ReportingUnit	Nevada;Clark;7564	Clark;7564
+ReportingUnit	Nevada;Clark;7569	Clark;7569
+ReportingUnit	Nevada;Clark;7570	Clark;7570
+ReportingUnit	Nevada;Clark;7571	Clark;7571
+ReportingUnit	Nevada;Clark;7572	Clark;7572
+ReportingUnit	Nevada;Clark;7573	Clark;7573
+ReportingUnit	Nevada;Clark;7574	Clark;7574
+ReportingUnit	Nevada;Clark;7575	Clark;7575
+ReportingUnit	Nevada;Clark;7581	Clark;7581
+ReportingUnit	Nevada;Clark;7582	Clark;7582
+ReportingUnit	Nevada;Clark;7583	Clark;7583
+ReportingUnit	Nevada;Clark;7584	Clark;7584
+ReportingUnit	Nevada;Clark;7585	Clark;7585
+ReportingUnit	Nevada;Clark;7590	Clark;7590
+ReportingUnit	Nevada;Clark;7591	Clark;7591
+ReportingUnit	Nevada;Clark;7592	Clark;7592
+ReportingUnit	Nevada;Clark;7593	Clark;7593
+ReportingUnit	Nevada;Clark;7594	Clark;7594
+ReportingUnit	Nevada;Clark;7595	Clark;7595
+ReportingUnit	Nevada;Clark;7601	Clark;7601
+ReportingUnit	Nevada;Clark;7602	Clark;7602
+ReportingUnit	Nevada;Clark;7603	Clark;7603
+ReportingUnit	Nevada;Clark;7604	Clark;7604
+ReportingUnit	Nevada;Clark;7605	Clark;7605
+ReportingUnit	Nevada;Clark;7611	Clark;7611
+ReportingUnit	Nevada;Clark;7612	Clark;7612
+ReportingUnit	Nevada;Clark;7613	Clark;7613
+ReportingUnit	Nevada;Clark;7614	Clark;7614
+ReportingUnit	Nevada;Clark;7615	Clark;7615
+ReportingUnit	Nevada;Clark;7622	Clark;7622
+ReportingUnit	Nevada;Clark;7623	Clark;7623
+ReportingUnit	Nevada;Clark;7624	Clark;7624
+ReportingUnit	Nevada;Clark;7625	Clark;7625
+ReportingUnit	Nevada;Clark;7631	Clark;7631
+ReportingUnit	Nevada;Clark;7632	Clark;7632
+ReportingUnit	Nevada;Clark;7633	Clark;7633
+ReportingUnit	Nevada;Clark;7634	Clark;7634
+ReportingUnit	Nevada;Clark;7635	Clark;7635
+ReportingUnit	Nevada;Clark;7641	Clark;7641
+ReportingUnit	Nevada;Clark;7642	Clark;7642
+ReportingUnit	Nevada;Clark;7643	Clark;7643
+ReportingUnit	Nevada;Clark;7644	Clark;7644
+ReportingUnit	Nevada;Clark;7645	Clark;7645
+ReportingUnit	Nevada;Clark;7651	Clark;7651
+ReportingUnit	Nevada;Clark;7652	Clark;7652
+ReportingUnit	Nevada;Clark;7653	Clark;7653
+ReportingUnit	Nevada;Clark;7654	Clark;7654
+ReportingUnit	Nevada;Clark;7661	Clark;7661
+ReportingUnit	Nevada;Clark;7662	Clark;7662
+ReportingUnit	Nevada;Clark;7663	Clark;7663
+ReportingUnit	Nevada;Clark;7664	Clark;7664
+ReportingUnit	Nevada;Clark;7665	Clark;7665
+ReportingUnit	Nevada;Clark;7671	Clark;7671
+ReportingUnit	Nevada;Clark;7672	Clark;7672
+ReportingUnit	Nevada;Clark;7674	Clark;7674
+ReportingUnit	Nevada;Clark;7675	Clark;7675
+ReportingUnit	Nevada;Clark;7681	Clark;7681
+ReportingUnit	Nevada;Clark;7682	Clark;7682
+ReportingUnit	Nevada;Clark;7683	Clark;7683
+ReportingUnit	Nevada;Clark;7684	Clark;7684
+ReportingUnit	Nevada;Clark;7685	Clark;7685
+ReportingUnit	Nevada;Clark;7691	Clark;7691
+ReportingUnit	Nevada;Clark;7692	Clark;7692
+ReportingUnit	Nevada;Clark;7693	Clark;7693
+ReportingUnit	Nevada;Clark;7694	Clark;7694
+ReportingUnit	Nevada;Clark;7695	Clark;7695
+ReportingUnit	Nevada;Clark;7701	Clark;7701
+ReportingUnit	Nevada;Clark;7702	Clark;7702
+ReportingUnit	Nevada;Clark;7703	Clark;7703
+ReportingUnit	Nevada;Clark;7704	Clark;7704
+ReportingUnit	Nevada;Clark;7705	Clark;7705
+ReportingUnit	Nevada;Clark;7706	Clark;7706
+ReportingUnit	Nevada;Clark;7707	Clark;7707
+ReportingUnit	Nevada;Clark;7712	Clark;7712
+ReportingUnit	Nevada;Clark;7713	Clark;7713
+ReportingUnit	Nevada;Clark;7714	Clark;7714
+ReportingUnit	Nevada;Clark;7715	Clark;7715
+ReportingUnit	Nevada;Clark;7720	Clark;7720
+ReportingUnit	Nevada;Clark;7722	Clark;7722
+ReportingUnit	Nevada;Clark;7723	Clark;7723
+ReportingUnit	Nevada;Clark;7724	Clark;7724
+ReportingUnit	Nevada;Clark;7726	Clark;7726
+ReportingUnit	Nevada;Clark;7730	Clark;7730
+ReportingUnit	Nevada;Clark;7731	Clark;7731
+ReportingUnit	Nevada;Clark;7732	Clark;7732
+ReportingUnit	Nevada;Clark;7733	Clark;7733
+ReportingUnit	Nevada;Clark;7734	Clark;7734
+ReportingUnit	Nevada;Clark;7743	Clark;7743
+ReportingUnit	Nevada;Clark;7745	Clark;7745
+ReportingUnit	Nevada;Clark;9991	Clark;9991
+ReportingUnit	Nevada;Clark;9993	Clark;9993
+ReportingUnit	Nevada;Clark;9994	Clark;9994
+ReportingUnit	Nevada;Clark;9995	Clark;9995
+ReportingUnit	Nevada;Douglas;01-1 - Centerville	Douglas;01-1 - Centerville
+ReportingUnit	Nevada;Douglas;01-2 - Centerville	Douglas;01-2 - Centerville
+ReportingUnit	Nevada;Douglas;01-Centerville	Douglas;01-Centerville
+ReportingUnit	Nevada;Douglas;02-1 - Fish Springs	Douglas;02-1 - Fish Springs
+ReportingUnit	Nevada;Douglas;02-2 - Fish Springs	Douglas;02-2 - Fish Springs
+ReportingUnit	Nevada;Douglas;02-Fish Springs	Douglas;02-Fish Springs
+ReportingUnit	Nevada;Douglas;03-1 - Gardnerville	Douglas;03-1 - Gardnerville
+ReportingUnit	Nevada;Douglas;03-2 - Gardnerville	Douglas;03-2 - Gardnerville
+ReportingUnit	Nevada;Douglas;03-Gardnerville	Douglas;03-Gardnerville
+ReportingUnit	Nevada;Douglas;04-Carson Valley Estates	Douglas;04-Carson Valley Estates
+ReportingUnit	Nevada;Douglas;05-Genoa	Douglas;05-Genoa
+ReportingUnit	Nevada;Douglas;06-1 - Jacks Valley	Douglas;06-1 - Jacks Valley
+ReportingUnit	Nevada;Douglas;06-3 - Jacks Valley	Douglas;06-3 - Jacks Valley
+ReportingUnit	Nevada;Douglas;06-Jacks Valley	Douglas;06-Jacks Valley
+ReportingUnit	Nevada;Douglas;07-1 - Minden	Douglas;07-1 - Minden
+ReportingUnit	Nevada;Douglas;07-2 - Minden	Douglas;07-2 - Minden
+ReportingUnit	Nevada;Douglas;07-Minden	Douglas;07-Minden
+ReportingUnit	Nevada;Douglas;08-1 - Ranchos I	Douglas;08-1 - Ranchos I
+ReportingUnit	Nevada;Douglas;08-3 - Ranchos I	Douglas;08-3 - Ranchos I
+ReportingUnit	Nevada;Douglas;08-Ranchos I	Douglas;08-Ranchos I
+ReportingUnit	Nevada;Douglas;09-Ranchos II	Douglas;09-Ranchos II
+ReportingUnit	Nevada;Douglas;10-TRE	Douglas;10-TRE
+ReportingUnit	Nevada;Douglas;11-Johnson Lane	Douglas;11-Johnson Lane
+ReportingUnit	Nevada;Douglas;12-Dresslerville	Douglas;12-Dresslerville
+ReportingUnit	Nevada;Douglas;13-1 - Indian Hills - West	Douglas;13-1 - Indian Hills - West
+ReportingUnit	Nevada;Douglas;13-2 - Indian Hills - West	Douglas;13-2 - Indian Hills - West
+ReportingUnit	Nevada;Douglas;13-Indian Hills - West	Douglas;13-Indian Hills - West
+ReportingUnit	Nevada;Douglas;14-Pinenut	Douglas;14-Pinenut
+ReportingUnit	Nevada;Douglas;15-Valley	Douglas;15-Valley
+ReportingUnit	Nevada;Douglas;16-Mottsville	Douglas;16-Mottsville
+ReportingUnit	Nevada;Douglas;17-Ruhenstroth	Douglas;17-Ruhenstroth
+ReportingUnit	Nevada;Douglas;18-1 - Ranchos III-2	Douglas;18-1 - Ranchos III-2
+ReportingUnit	Nevada;Douglas;18-2 - Ranchos III-2	Douglas;18-2 - Ranchos III-2
+ReportingUnit	Nevada;Douglas;18-Ranchos III-2	Douglas;18-Ranchos III-2
+ReportingUnit	Nevada;Douglas;19-Ranchos IV	Douglas;19-Ranchos IV
+ReportingUnit	Nevada;Douglas;20-Birch/Ranchos	Douglas;20-Birch/Ranchos
+ReportingUnit	Nevada;Douglas;21-Wildhorse	Douglas;21-Wildhorse
+ReportingUnit	Nevada;Douglas;22-Saratoga	Douglas;22-Saratoga
+ReportingUnit	Nevada;Douglas;23-1 - Indian Hills - East	Douglas;23-1 - Indian Hills - East
+ReportingUnit	Nevada;Douglas;23-2 - Indian Hills - East	Douglas;23-2 - Indian Hills - East
+ReportingUnit	Nevada;Douglas;23-Indian Hills - East	Douglas;23-Indian Hills - East
+ReportingUnit	Nevada;Douglas;24-Topaz Lake	Douglas;24-Topaz Lake
+ReportingUnit	Nevada;Douglas;25-1 - Pleasantview	Douglas;25-1 - Pleasantview
+ReportingUnit	Nevada;Douglas;25-2 - Pleasantview	Douglas;25-2 - Pleasantview
+ReportingUnit	Nevada;Douglas;25-Pleasantview	Douglas;25-Pleasantview
+ReportingUnit	Nevada;Douglas;26-Westwood	Douglas;26-Westwood
+ReportingUnit	Nevada;Douglas;27-1 - Winhaven	Douglas;27-1 - Winhaven
+ReportingUnit	Nevada;Douglas;27-2 - Winhaven	Douglas;27-2 - Winhaven
+ReportingUnit	Nevada;Douglas;27-Winhaven	Douglas;27-Winhaven
+ReportingUnit	Nevada;Douglas;28-1 - Orchard Road	Douglas;28-1 - Orchard Road
+ReportingUnit	Nevada;Douglas;28-2 - Orchard Road	Douglas;28-2 - Orchard Road
+ReportingUnit	Nevada;Douglas;28-3 - Orchard Road	Douglas;28-3 - Orchard Road
+ReportingUnit	Nevada;Douglas;28-Orchard Road	Douglas;28-Orchard Road
+ReportingUnit	Nevada;Douglas;29-Autumn Hils	Douglas;29-Autumn Hils
+ReportingUnit	Nevada;Douglas;30-East Fork	Douglas;30-East Fork
+ReportingUnit	Nevada;Douglas;31-Chichester	Douglas;31-Chichester
+ReportingUnit	Nevada;Douglas;32-East Valley	Douglas;32-East Valley
+ReportingUnit	Nevada;Douglas;33-Hot Springs	Douglas;33-Hot Springs
+ReportingUnit	Nevada;Douglas;34-Sunridge	Douglas;34-Sunridge
+ReportingUnit	Nevada;Douglas;35-Glenbrook	Douglas;35-Glenbrook
+ReportingUnit	Nevada;Douglas;36-Skyland	Douglas;36-Skyland
+ReportingUnit	Nevada;Douglas;37-1 - Zephyr Cove	Douglas;37-1 - Zephyr Cove
+ReportingUnit	Nevada;Douglas;37-6 - Zephyr Cove	Douglas;37-6 - Zephyr Cove
+ReportingUnit	Nevada;Douglas;37-Zephyr Cove	Douglas;37-Zephyr Cove
+ReportingUnit	Nevada;Douglas;38-1 - Round Hill	Douglas;38-1 - Round Hill
+ReportingUnit	Nevada;Douglas;38-2 - Round Hill	Douglas;38-2 - Round Hill
+ReportingUnit	Nevada;Douglas;38-Round Hill	Douglas;38-Round Hill
+ReportingUnit	Nevada;Douglas;39-Edgewood	Douglas;39-Edgewood
+ReportingUnit	Nevada;Douglas;40-1 - Kingsbury	Douglas;40-1 - Kingsbury
+ReportingUnit	Nevada;Douglas;40-2 - Kingsbury	Douglas;40-2 - Kingsbury
+ReportingUnit	Nevada;Douglas;40-Kingsbury	Douglas;40-Kingsbury
+ReportingUnit	Nevada;Douglas;41-1 - Daggett	Douglas;41-1 - Daggett
+ReportingUnit	Nevada;Douglas;41-2 - Daggett	Douglas;41-2 - Daggett
+ReportingUnit	Nevada;Douglas;41-Daggett	Douglas;41-Daggett
+ReportingUnit	Nevada;Douglas;Precinct 99	Douglas;Precinct 99
+ReportingUnit	Nevada;Elko;Precinct 1	Elko;Precinct 1
+ReportingUnit	Nevada;Elko;Precinct 10	Elko;Precinct 10
+ReportingUnit	Nevada;Elko;Precinct 11	Elko;Precinct 11
+ReportingUnit	Nevada;Elko;Precinct 12	Elko;Precinct 12
+ReportingUnit	Nevada;Elko;Precinct 13	Elko;Precinct 13
+ReportingUnit	Nevada;Elko;Precinct 14	Elko;Precinct 14
+ReportingUnit	Nevada;Elko;Precinct 15	Elko;Precinct 15
+ReportingUnit	Nevada;Elko;Precinct 16	Elko;Precinct 16
+ReportingUnit	Nevada;Elko;Precinct 17	Elko;Precinct 17
+ReportingUnit	Nevada;Elko;Precinct 18	Elko;Precinct 18
+ReportingUnit	Nevada;Elko;Precinct 19	Elko;Precinct 19
+ReportingUnit	Nevada;Elko;Precinct 2	Elko;Precinct 2
+ReportingUnit	Nevada;Elko;Precinct 20	Elko;Precinct 20
+ReportingUnit	Nevada;Elko;Precinct 21	Elko;Precinct 21
+ReportingUnit	Nevada;Elko;Precinct 22	Elko;Precinct 22
+ReportingUnit	Nevada;Elko;Precinct 23	Elko;Precinct 23
+ReportingUnit	Nevada;Elko;Precinct 24	Elko;Precinct 24
+ReportingUnit	Nevada;Elko;Precinct 25	Elko;Precinct 25
+ReportingUnit	Nevada;Elko;Precinct 26	Elko;Precinct 26
+ReportingUnit	Nevada;Elko;Precinct 27	Elko;Precinct 27
+ReportingUnit	Nevada;Elko;Precinct 28	Elko;Precinct 28
+ReportingUnit	Nevada;Elko;Precinct 29	Elko;Precinct 29
+ReportingUnit	Nevada;Elko;Precinct 3	Elko;Precinct 3
+ReportingUnit	Nevada;Elko;Precinct 30	Elko;Precinct 30
+ReportingUnit	Nevada;Elko;Precinct 31	Elko;Precinct 31
+ReportingUnit	Nevada;Elko;Precinct 32	Elko;Precinct 32
+ReportingUnit	Nevada;Elko;Precinct 33	Elko;Precinct 33
+ReportingUnit	Nevada;Elko;Precinct 34	Elko;Precinct 34
+ReportingUnit	Nevada;Elko;Precinct 35	Elko;Precinct 35
+ReportingUnit	Nevada;Elko;Precinct 36	Elko;Precinct 36
+ReportingUnit	Nevada;Elko;Precinct 37	Elko;Precinct 37
+ReportingUnit	Nevada;Elko;Precinct 38	Elko;Precinct 38
+ReportingUnit	Nevada;Elko;Precinct 39	Elko;Precinct 39
+ReportingUnit	Nevada;Elko;Precinct 4	Elko;Precinct 4
+ReportingUnit	Nevada;Elko;Precinct 40	Elko;Precinct 40
+ReportingUnit	Nevada;Elko;Precinct 41	Elko;Precinct 41
+ReportingUnit	Nevada;Elko;Precinct 5	Elko;Precinct 5
+ReportingUnit	Nevada;Elko;Precinct 6	Elko;Precinct 6
+ReportingUnit	Nevada;Elko;Precinct 7	Elko;Precinct 7
+ReportingUnit	Nevada;Elko;Precinct 8	Elko;Precinct 8
+ReportingUnit	Nevada;Elko;Precinct 9	Elko;Precinct 9
+ReportingUnit	Nevada;Elko;Precinct 99	Elko;Precinct 99
+ReportingUnit	Nevada;Esmeralda;Precinct 1	Esmeralda;Precinct 1
+ReportingUnit	Nevada;Esmeralda;Precinct 2	Esmeralda;Precinct 2
+ReportingUnit	Nevada;Esmeralda;Precinct 3	Esmeralda;Precinct 3
+ReportingUnit	Nevada;Esmeralda;Precinct 4	Esmeralda;Precinct 4
+ReportingUnit	Nevada;Esmeralda;Precinct 5	Esmeralda;Precinct 5
+ReportingUnit	Nevada;Esmeralda;Precinct 99	Esmeralda;Precinct 99
+ReportingUnit	Nevada;Eureka;Precinct 1	Eureka;Precinct 1
+ReportingUnit	Nevada;Eureka;Precinct 2	Eureka;Precinct 2
+ReportingUnit	Nevada;Eureka;Precinct 3	Eureka;Precinct 3
+ReportingUnit	Nevada;Eureka;Precinct 4	Eureka;Precinct 4
+ReportingUnit	Nevada;Eureka;Precinct 99	Eureka;Precinct 99
+ReportingUnit	Nevada;Humboldt;PRECINCT 1	Humboldt;PRECINCT 1
+ReportingUnit	Nevada;Humboldt;PRECINCT 10	Humboldt;PRECINCT 10
+ReportingUnit	Nevada;Humboldt;PRECINCT 11	Humboldt;PRECINCT 11
+ReportingUnit	Nevada;Humboldt;PRECINCT 12	Humboldt;PRECINCT 12
+ReportingUnit	Nevada;Humboldt;PRECINCT 13	Humboldt;PRECINCT 13
+ReportingUnit	Nevada;Humboldt;PRECINCT 14	Humboldt;PRECINCT 14
+ReportingUnit	Nevada;Humboldt;Precinct 14 - City	Humboldt;Precinct 14 - City
+ReportingUnit	Nevada;Humboldt;Precinct 14 - County	Humboldt;Precinct 14 - County
+ReportingUnit	Nevada;Humboldt;PRECINCT 15	Humboldt;PRECINCT 15
+ReportingUnit	Nevada;Humboldt;PRECINCT 2	Humboldt;PRECINCT 2
+ReportingUnit	Nevada;Humboldt;PRECINCT 3	Humboldt;PRECINCT 3
+ReportingUnit	Nevada;Humboldt;PRECINCT 4	Humboldt;PRECINCT 4
+ReportingUnit	Nevada;Humboldt;Precinct 4 - City	Humboldt;Precinct 4 - City
+ReportingUnit	Nevada;Humboldt;Precinct 4 - County	Humboldt;Precinct 4 - County
+ReportingUnit	Nevada;Humboldt;PRECINCT 5	Humboldt;PRECINCT 5
+ReportingUnit	Nevada;Humboldt;Precinct 5 - City	Humboldt;Precinct 5 - City
+ReportingUnit	Nevada;Humboldt;Precinct 5 - County	Humboldt;Precinct 5 - County
+ReportingUnit	Nevada;Humboldt;PRECINCT 6	Humboldt;PRECINCT 6
+ReportingUnit	Nevada;Humboldt;PRECINCT 7	Humboldt;PRECINCT 7
+ReportingUnit	Nevada;Humboldt;PRECINCT 8	Humboldt;PRECINCT 8
+ReportingUnit	Nevada;Humboldt;PRECINCT 9	Humboldt;PRECINCT 9
+ReportingUnit	Nevada;Humboldt;PRECINCT 99	Humboldt;PRECINCT 99
+ReportingUnit	Nevada;Lander;Argenta 01	Lander;Argenta 01
+ReportingUnit	Nevada;Lander;Argenta 02	Lander;Argenta 02
+ReportingUnit	Nevada;Lander;Argenta 03	Lander;Argenta 03
+ReportingUnit	Nevada;Lander;Argenta 04	Lander;Argenta 04
+ReportingUnit	Nevada;Lander;Argenta 05	Lander;Argenta 05
+ReportingUnit	Nevada;Lander;Austin 07	Lander;Austin 07
+ReportingUnit	Nevada;Lander;Gillman Springs Ranch 08	Lander;Gillman Springs Ranch 08
+ReportingUnit	Nevada;Lander;Kingston 09	Lander;Kingston 09
+ReportingUnit	Nevada;Lander;Precinct 99	Lander;Precinct 99
+ReportingUnit	Nevada;Lander;Southern Lander County 06	Lander;Southern Lander County 06
+ReportingUnit	Nevada;Lincoln;1 - ALAMO	Lincoln;1 - ALAMO
+ReportingUnit	Nevada;Lincoln;2 - CALIENTE	Lincoln;2 - CALIENTE
+ReportingUnit	Nevada;Lincoln;2 - CALIENTE-0	Lincoln;2 - CALIENTE-0
+ReportingUnit	Nevada;Lincoln;2 - CALIENTE-1	Lincoln;2 - CALIENTE-1
+ReportingUnit	Nevada;Lincoln;3 - PANACA	Lincoln;3 - PANACA
+ReportingUnit	Nevada;Lincoln;4 - PIOCHE	Lincoln;4 - PIOCHE
+ReportingUnit	Nevada;Lincoln;5 - RACHEL	Lincoln;5 - RACHEL
+ReportingUnit	Nevada;Lincoln;PRECINCT 99	Lincoln;PRECINCT 99
+ReportingUnit	Nevada;Lyon;01_East Mason Valley 1	Lyon;01_East Mason Valley 1
+ReportingUnit	Nevada;Lyon;02_East Mason Valley 2	Lyon;02_East Mason Valley 2
+ReportingUnit	Nevada;Lyon;03_West Mason Valley 1	Lyon;03_West Mason Valley 1
+ReportingUnit	Nevada;Lyon;04_West Mason Valley 2	Lyon;04_West Mason Valley 2
+ReportingUnit	Nevada;Lyon;05_West Mason Valley 3	Lyon;05_West Mason Valley 3
+ReportingUnit	Nevada;Lyon;06_Spragg-Plummer	Lyon;06_Spragg-Plummer
+ReportingUnit	Nevada;Lyon;07_Smith Valley 1	Lyon;07_Smith Valley 1
+ReportingUnit	Nevada;Lyon;08_Smith Valley 2	Lyon;08_Smith Valley 2
+ReportingUnit	Nevada;Lyon;09_South Dayton 1	Lyon;09_South Dayton 1
+ReportingUnit	Nevada;Lyon;10_South Dayton 2	Lyon;10_South Dayton 2
+ReportingUnit	Nevada;Lyon;11_South Dayton 3	Lyon;11_South Dayton 3
+ReportingUnit	Nevada;Lyon;12_South Dayton 4	Lyon;12_South Dayton 4
+ReportingUnit	Nevada;Lyon;13_North Dayton 1	Lyon;13_North Dayton 1
+ReportingUnit	Nevada;Lyon;14_North Dayton 2	Lyon;14_North Dayton 2
+ReportingUnit	Nevada;Lyon;15_North Dayton 3	Lyon;15_North Dayton 3
+ReportingUnit	Nevada;Lyon;16_North Dayton 4	Lyon;16_North Dayton 4
+ReportingUnit	Nevada;Lyon;17_North Dayton 5	Lyon;17_North Dayton 5
+ReportingUnit	Nevada;Lyon;18_Mound House 1	Lyon;18_Mound House 1
+ReportingUnit	Nevada;Lyon;19_Mound House 2	Lyon;19_Mound House 2
+ReportingUnit	Nevada;Lyon;20_Silver City	Lyon;20_Silver City
+ReportingUnit	Nevada;Lyon;21_Stagecoach 1	Lyon;21_Stagecoach 1
+ReportingUnit	Nevada;Lyon;22_Stagecoach 2	Lyon;22_Stagecoach 2
+ReportingUnit	Nevada;Lyon;23_Silver Springs 1	Lyon;23_Silver Springs 1
+ReportingUnit	Nevada;Lyon;24_Silver Springs 2	Lyon;24_Silver Springs 2
+ReportingUnit	Nevada;Lyon;25_Silver Springs 3	Lyon;25_Silver Springs 3
+ReportingUnit	Nevada;Lyon;26_Silver Springs 4	Lyon;26_Silver Springs 4
+ReportingUnit	Nevada;Lyon;27_Fernley 1	Lyon;27_Fernley 1
+ReportingUnit	Nevada;Lyon;27_Fernley 1 - in City	Lyon;27_Fernley 1 - in City
+ReportingUnit	Nevada;Lyon;27_Fernley 1 - out of city	Lyon;27_Fernley 1 - out of city
+ReportingUnit	Nevada;Lyon;28_Fernley 2	Lyon;28_Fernley 2
+ReportingUnit	Nevada;Lyon;28_Fernley 2 - in city	Lyon;28_Fernley 2 - in city
+ReportingUnit	Nevada;Lyon;28_Fernley 2 - out of city	Lyon;28_Fernley 2 - out of city
+ReportingUnit	Nevada;Lyon;29_Fernley 3	Lyon;29_Fernley 3
+ReportingUnit	Nevada;Lyon;29_Fernley 3 - in city	Lyon;29_Fernley 3 - in city
+ReportingUnit	Nevada;Lyon;29_Fernley 3 - out of city	Lyon;29_Fernley 3 - out of city
+ReportingUnit	Nevada;Lyon;30_Fernley 4	Lyon;30_Fernley 4
+ReportingUnit	Nevada;Lyon;30_Fernley 4 - in city	Lyon;30_Fernley 4 - in city
+ReportingUnit	Nevada;Lyon;30_Fernley 4 - out of city	Lyon;30_Fernley 4 - out of city
+ReportingUnit	Nevada;Lyon;31_Fernley 5	Lyon;31_Fernley 5
+ReportingUnit	Nevada;Lyon;31_Fernley 5 - in city	Lyon;31_Fernley 5 - in city
+ReportingUnit	Nevada;Lyon;31_Fernley 5 - out of city	Lyon;31_Fernley 5 - out of city
+ReportingUnit	Nevada;Lyon;32_Fernley 6	Lyon;32_Fernley 6
+ReportingUnit	Nevada;Lyon;32_Fernley 6 - in city	Lyon;32_Fernley 6 - in city
+ReportingUnit	Nevada;Lyon;32_Fernley 6 - out of city	Lyon;32_Fernley 6 - out of city
+ReportingUnit	Nevada;Lyon;33_Fernley 7	Lyon;33_Fernley 7
+ReportingUnit	Nevada;Lyon;33_Fernley 7 - in city	Lyon;33_Fernley 7 - in city
+ReportingUnit	Nevada;Lyon;33_Fernley 7 - out of city	Lyon;33_Fernley 7 - out of city
+ReportingUnit	Nevada;Lyon;34_Fernley 8	Lyon;34_Fernley 8
+ReportingUnit	Nevada;Lyon;34_Fernley 8 - in city	Lyon;34_Fernley 8 - in city
+ReportingUnit	Nevada;Lyon;34_Fernley 8 - out of city	Lyon;34_Fernley 8 - out of city
+ReportingUnit	Nevada;Lyon;35_Fernley 9	Lyon;35_Fernley 9
+ReportingUnit	Nevada;Lyon;35_Fernley 9 - in city	Lyon;35_Fernley 9 - in city
+ReportingUnit	Nevada;Lyon;35_Fernley 9 - out of city	Lyon;35_Fernley 9 - out of city
+ReportingUnit	Nevada;Lyon;36_Fernley 10	Lyon;36_Fernley 10
+ReportingUnit	Nevada;Lyon;36_Fernley 10 - in city	Lyon;36_Fernley 10 - in city
+ReportingUnit	Nevada;Lyon;36_Fernley 10 - out of city	Lyon;36_Fernley 10 - out of city
+ReportingUnit	Nevada;Lyon;37_Fernley 11	Lyon;37_Fernley 11
+ReportingUnit	Nevada;Lyon;37_Fernley 11 - in city	Lyon;37_Fernley 11 - in city
+ReportingUnit	Nevada;Lyon;37_Fernley 11 - out of city	Lyon;37_Fernley 11 - out of city
+ReportingUnit	Nevada;Lyon;38_Fernley 12	Lyon;38_Fernley 12
+ReportingUnit	Nevada;Lyon;38_Fernley 12 - in city	Lyon;38_Fernley 12 - in city
+ReportingUnit	Nevada;Lyon;38_Fernley 12 - out of city	Lyon;38_Fernley 12 - out of city
+ReportingUnit	Nevada;Lyon;39_Fernley 13	Lyon;39_Fernley 13
+ReportingUnit	Nevada;Lyon;39_Fernley 13 - in city	Lyon;39_Fernley 13 - in city
+ReportingUnit	Nevada;Lyon;39_Fernley 13 - out of city	Lyon;39_Fernley 13 - out of city
+ReportingUnit	Nevada;Lyon;40_Fernley 14	Lyon;40_Fernley 14
+ReportingUnit	Nevada;Lyon;40_Fernley 14- in city	Lyon;40_Fernley 14- in city
+ReportingUnit	Nevada;Lyon;40_Fernley 14- out of city	Lyon;40_Fernley 14- out of city
+ReportingUnit	Nevada;Lyon;Precinct 99	Lyon;Precinct 99
+ReportingUnit	Nevada;Lyon;Precinct 99-0	Lyon;Precinct 99-0
+ReportingUnit	Nevada;Lyon;Precinct 99-1	Lyon;Precinct 99-1
+ReportingUnit	Nevada;Mineral;PRECINCT 1	Mineral;PRECINCT 1
+ReportingUnit	Nevada;Mineral;PRECINCT 10	Mineral;PRECINCT 10
+ReportingUnit	Nevada;Mineral;PRECINCT 11	Mineral;PRECINCT 11
+ReportingUnit	Nevada;Mineral;PRECINCT 12	Mineral;PRECINCT 12
+ReportingUnit	Nevada;Mineral;PRECINCT 2	Mineral;PRECINCT 2
+ReportingUnit	Nevada;Mineral;PRECINCT 3	Mineral;PRECINCT 3
+ReportingUnit	Nevada;Mineral;PRECINCT 4	Mineral;PRECINCT 4
+ReportingUnit	Nevada;Mineral;PRECINCT 5	Mineral;PRECINCT 5
+ReportingUnit	Nevada;Mineral;PRECINCT 6	Mineral;PRECINCT 6
+ReportingUnit	Nevada;Mineral;PRECINCT 7	Mineral;PRECINCT 7
+ReportingUnit	Nevada;Mineral;PRECINCT 8	Mineral;PRECINCT 8
+ReportingUnit	Nevada;Mineral;PRECINCT 9	Mineral;PRECINCT 9
+ReportingUnit	Nevada;Mineral;PRECINCT 99	Mineral;PRECINCT 99
+ReportingUnit	Nevada;Nye;AMARGOSA VLY 06	Nye;AMARGOSA VLY 06
+ReportingUnit	Nevada;Nye;BEATTY 01	Nye;BEATTY 01
+ReportingUnit	Nevada;Nye;CURRANT 02	Nye;CURRANT 02
+ReportingUnit	Nevada;Nye;DUCKWATER 03	Nye;DUCKWATER 03
+ReportingUnit	Nevada;Nye;FORTY BAR 18	Nye;FORTY BAR 18
+ReportingUnit	Nevada;Nye;GABBS 04	Nye;GABBS 04
+ReportingUnit	Nevada;Nye;IONE 05	Nye;IONE 05
+ReportingUnit	Nevada;Nye;MANHATTAN 07	Nye;MANHATTAN 07
+ReportingUnit	Nevada;Nye;MERCURY 08	Nye;MERCURY 08
+ReportingUnit	Nevada;Nye;PAHRUMP 09	Nye;PAHRUMP 09
+ReportingUnit	Nevada;Nye;PAHRUMP 10	Nye;PAHRUMP 10
+ReportingUnit	Nevada;Nye;PAHRUMP 11	Nye;PAHRUMP 11
+ReportingUnit	Nevada;Nye;PAHRUMP 16	Nye;PAHRUMP 16
+ReportingUnit	Nevada;Nye;PAHRUMP 17	Nye;PAHRUMP 17
+ReportingUnit	Nevada;Nye;PAHRUMP 19	Nye;PAHRUMP 19
+ReportingUnit	Nevada;Nye;PAHRUMP 20	Nye;PAHRUMP 20
+ReportingUnit	Nevada;Nye;PAHRUMP 21	Nye;PAHRUMP 21
+ReportingUnit	Nevada;Nye;PAHRUMP 22	Nye;PAHRUMP 22
+ReportingUnit	Nevada;Nye;PAHRUMP 23	Nye;PAHRUMP 23
+ReportingUnit	Nevada;Nye;PAHRUMP 24	Nye;PAHRUMP 24
+ReportingUnit	Nevada;Nye;PAHRUMP 25	Nye;PAHRUMP 25
+ReportingUnit	Nevada;Nye;PAHRUMP 26	Nye;PAHRUMP 26
+ReportingUnit	Nevada;Nye;PAHRUMP 27	Nye;PAHRUMP 27
+ReportingUnit	Nevada;Nye;PAHRUMP 28	Nye;PAHRUMP 28
+ReportingUnit	Nevada;Nye;PAHRUMP 29	Nye;PAHRUMP 29
+ReportingUnit	Nevada;Nye;PAHRUMP 30	Nye;PAHRUMP 30
+ReportingUnit	Nevada;Nye;PAHRUMP 31	Nye;PAHRUMP 31
+ReportingUnit	Nevada;Nye;PAHRUMP 32	Nye;PAHRUMP 32
+ReportingUnit	Nevada;Nye;Precinct 99	Nye;Precinct 99
+ReportingUnit	Nevada;Nye;ROUND MTN 12	Nye;ROUND MTN 12
+ReportingUnit	Nevada;Nye;SMOKY VALLEY 35	Nye;SMOKY VALLEY 35
+ReportingUnit	Nevada;Nye;SUNNYSIDE 13	Nye;SUNNYSIDE 13
+ReportingUnit	Nevada;Nye;TONOPAH 14	Nye;TONOPAH 14
+ReportingUnit	Nevada;Nye;TONOPAH 15	Nye;TONOPAH 15
+ReportingUnit	Nevada;Pershing;PRECINCT 1	Pershing;PRECINCT 1
+ReportingUnit	Nevada;Pershing;PRECINCT 3	Pershing;PRECINCT 3
+ReportingUnit	Nevada;Pershing;PRECINCT 4	Pershing;PRECINCT 4
+ReportingUnit	Nevada;Pershing;PRECINCT 5	Pershing;PRECINCT 5
+ReportingUnit	Nevada;Pershing;PRECINCT 6	Pershing;PRECINCT 6
+ReportingUnit	Nevada;Pershing;PRECINCT 7	Pershing;PRECINCT 7
+ReportingUnit	Nevada;Pershing;PRECINCT 99	Pershing;PRECINCT 99
+ReportingUnit	Nevada;Storey;PRECINCT 1	Storey;PRECINCT 1
+ReportingUnit	Nevada;Storey;PRECINCT 10	Storey;PRECINCT 10
+ReportingUnit	Nevada;Storey;PRECINCT 11	Storey;PRECINCT 11
+ReportingUnit	Nevada;Storey;PRECINCT 12	Storey;PRECINCT 12
+ReportingUnit	Nevada;Storey;PRECINCT 13	Storey;PRECINCT 13
+ReportingUnit	Nevada;Storey;PRECINCT 14	Storey;PRECINCT 14
+ReportingUnit	Nevada;Storey;PRECINCT 15	Storey;PRECINCT 15
+ReportingUnit	Nevada;Storey;PRECINCT 2	Storey;PRECINCT 2
+ReportingUnit	Nevada;Storey;PRECINCT 3	Storey;PRECINCT 3
+ReportingUnit	Nevada;Storey;PRECINCT 4	Storey;PRECINCT 4
+ReportingUnit	Nevada;Storey;PRECINCT 5	Storey;PRECINCT 5
+ReportingUnit	Nevada;Storey;PRECINCT 6	Storey;PRECINCT 6
+ReportingUnit	Nevada;Storey;PRECINCT 7	Storey;PRECINCT 7
+ReportingUnit	Nevada;Storey;PRECINCT 8	Storey;PRECINCT 8
+ReportingUnit	Nevada;Storey;PRECINCT 9	Storey;PRECINCT 9
+ReportingUnit	Nevada;Storey;PRECINCT 99	Storey;PRECINCT 99
+ReportingUnit	Nevada;Washoe;100000	Washoe;100000
+ReportingUnit	Nevada;Washoe;100200	Washoe;100200
+ReportingUnit	Nevada;Washoe;100300	Washoe;100300
+ReportingUnit	Nevada;Washoe;100500	Washoe;100500
+ReportingUnit	Nevada;Washoe;100600	Washoe;100600
+ReportingUnit	Nevada;Washoe;100700	Washoe;100700
+ReportingUnit	Nevada;Washoe;100800	Washoe;100800
+ReportingUnit	Nevada;Washoe;101000	Washoe;101000
+ReportingUnit	Nevada;Washoe;101100	Washoe;101100
+ReportingUnit	Nevada;Washoe;101200	Washoe;101200
+ReportingUnit	Nevada;Washoe;101400	Washoe;101400
+ReportingUnit	Nevada;Washoe;101500	Washoe;101500
+ReportingUnit	Nevada;Washoe;101600	Washoe;101600
+ReportingUnit	Nevada;Washoe;101800	Washoe;101800
+ReportingUnit	Nevada;Washoe;102000	Washoe;102000
+ReportingUnit	Nevada;Washoe;102200	Washoe;102200
+ReportingUnit	Nevada;Washoe;102300	Washoe;102300
+ReportingUnit	Nevada;Washoe;102400	Washoe;102400
+ReportingUnit	Nevada;Washoe;102600	Washoe;102600
+ReportingUnit	Nevada;Washoe;102700	Washoe;102700
+ReportingUnit	Nevada;Washoe;102900	Washoe;102900
+ReportingUnit	Nevada;Washoe;103100	Washoe;103100
+ReportingUnit	Nevada;Washoe;103200	Washoe;103200
+ReportingUnit	Nevada;Washoe;103300	Washoe;103300
+ReportingUnit	Nevada;Washoe;103500	Washoe;103500
+ReportingUnit	Nevada;Washoe;103600	Washoe;103600
+ReportingUnit	Nevada;Washoe;103800	Washoe;103800
+ReportingUnit	Nevada;Washoe;103900	Washoe;103900
+ReportingUnit	Nevada;Washoe;104000	Washoe;104000
+ReportingUnit	Nevada;Washoe;104300	Washoe;104300
+ReportingUnit	Nevada;Washoe;104400	Washoe;104400
+ReportingUnit	Nevada;Washoe;104500	Washoe;104500
+ReportingUnit	Nevada;Washoe;104600	Washoe;104600
+ReportingUnit	Nevada;Washoe;104700	Washoe;104700
+ReportingUnit	Nevada;Washoe;105000	Washoe;105000
+ReportingUnit	Nevada;Washoe;105100	Washoe;105100
+ReportingUnit	Nevada;Washoe;105300	Washoe;105300
+ReportingUnit	Nevada;Washoe;105500	Washoe;105500
+ReportingUnit	Nevada;Washoe;105600	Washoe;105600
+ReportingUnit	Nevada;Washoe;105700	Washoe;105700
+ReportingUnit	Nevada;Washoe;105800	Washoe;105800
+ReportingUnit	Nevada;Washoe;105900	Washoe;105900
+ReportingUnit	Nevada;Washoe;106100	Washoe;106100
+ReportingUnit	Nevada;Washoe;200000	Washoe;200000
+ReportingUnit	Nevada;Washoe;200200	Washoe;200200
+ReportingUnit	Nevada;Washoe;200400	Washoe;200400
+ReportingUnit	Nevada;Washoe;200600	Washoe;200600
+ReportingUnit	Nevada;Washoe;200700	Washoe;200700
+ReportingUnit	Nevada;Washoe;200900	Washoe;200900
+ReportingUnit	Nevada;Washoe;201000	Washoe;201000
+ReportingUnit	Nevada;Washoe;201300	Washoe;201300
+ReportingUnit	Nevada;Washoe;201600	Washoe;201600
+ReportingUnit	Nevada;Washoe;201700	Washoe;201700
+ReportingUnit	Nevada;Washoe;201800	Washoe;201800
+ReportingUnit	Nevada;Washoe;201900	Washoe;201900
+ReportingUnit	Nevada;Washoe;202000	Washoe;202000
+ReportingUnit	Nevada;Washoe;202100	Washoe;202100
+ReportingUnit	Nevada;Washoe;202200	Washoe;202200
+ReportingUnit	Nevada;Washoe;202300	Washoe;202300
+ReportingUnit	Nevada;Washoe;202500	Washoe;202500
+ReportingUnit	Nevada;Washoe;202600	Washoe;202600
+ReportingUnit	Nevada;Washoe;202700	Washoe;202700
+ReportingUnit	Nevada;Washoe;202800	Washoe;202800
+ReportingUnit	Nevada;Washoe;202900	Washoe;202900
+ReportingUnit	Nevada;Washoe;203000	Washoe;203000
+ReportingUnit	Nevada;Washoe;203100	Washoe;203100
+ReportingUnit	Nevada;Washoe;203200	Washoe;203200
+ReportingUnit	Nevada;Washoe;203300	Washoe;203300
+ReportingUnit	Nevada;Washoe;203400	Washoe;203400
+ReportingUnit	Nevada;Washoe;203500	Washoe;203500
+ReportingUnit	Nevada;Washoe;203600	Washoe;203600
+ReportingUnit	Nevada;Washoe;203700	Washoe;203700
+ReportingUnit	Nevada;Washoe;203900	Washoe;203900
+ReportingUnit	Nevada;Washoe;204000	Washoe;204000
+ReportingUnit	Nevada;Washoe;204100	Washoe;204100
+ReportingUnit	Nevada;Washoe;204200	Washoe;204200
+ReportingUnit	Nevada;Washoe;204300	Washoe;204300
+ReportingUnit	Nevada;Washoe;204700	Washoe;204700
+ReportingUnit	Nevada;Washoe;204800	Washoe;204800
+ReportingUnit	Nevada;Washoe;204900	Washoe;204900
+ReportingUnit	Nevada;Washoe;205000	Washoe;205000
+ReportingUnit	Nevada;Washoe;205100	Washoe;205100
+ReportingUnit	Nevada;Washoe;205700	Washoe;205700
+ReportingUnit	Nevada;Washoe;205800	Washoe;205800
+ReportingUnit	Nevada;Washoe;206000	Washoe;206000
+ReportingUnit	Nevada;Washoe;206200	Washoe;206200
+ReportingUnit	Nevada;Washoe;206400	Washoe;206400
+ReportingUnit	Nevada;Washoe;206500	Washoe;206500
+ReportingUnit	Nevada;Washoe;206800	Washoe;206800
+ReportingUnit	Nevada;Washoe;207000	Washoe;207000
+ReportingUnit	Nevada;Washoe;207300	Washoe;207300
+ReportingUnit	Nevada;Washoe;207400	Washoe;207400
+ReportingUnit	Nevada;Washoe;207800	Washoe;207800
+ReportingUnit	Nevada;Washoe;208000	Washoe;208000
+ReportingUnit	Nevada;Washoe;208100	Washoe;208100
+ReportingUnit	Nevada;Washoe;300100	Washoe;300100
+ReportingUnit	Nevada;Washoe;300200	Washoe;300200
+ReportingUnit	Nevada;Washoe;300300	Washoe;300300
+ReportingUnit	Nevada;Washoe;300400	Washoe;300400
+ReportingUnit	Nevada;Washoe;300500	Washoe;300500
+ReportingUnit	Nevada;Washoe;300600	Washoe;300600
+ReportingUnit	Nevada;Washoe;300700	Washoe;300700
+ReportingUnit	Nevada;Washoe;300800	Washoe;300800
+ReportingUnit	Nevada;Washoe;300900	Washoe;300900
+ReportingUnit	Nevada;Washoe;301000	Washoe;301000
+ReportingUnit	Nevada;Washoe;301100	Washoe;301100
+ReportingUnit	Nevada;Washoe;301200	Washoe;301200
+ReportingUnit	Nevada;Washoe;301300	Washoe;301300
+ReportingUnit	Nevada;Washoe;301400	Washoe;301400
+ReportingUnit	Nevada;Washoe;301500	Washoe;301500
+ReportingUnit	Nevada;Washoe;301600	Washoe;301600
+ReportingUnit	Nevada;Washoe;301700	Washoe;301700
+ReportingUnit	Nevada;Washoe;301800	Washoe;301800
+ReportingUnit	Nevada;Washoe;301900	Washoe;301900
+ReportingUnit	Nevada;Washoe;302000	Washoe;302000
+ReportingUnit	Nevada;Washoe;302100	Washoe;302100
+ReportingUnit	Nevada;Washoe;302200	Washoe;302200
+ReportingUnit	Nevada;Washoe;302300	Washoe;302300
+ReportingUnit	Nevada;Washoe;302400	Washoe;302400
+ReportingUnit	Nevada;Washoe;302500	Washoe;302500
+ReportingUnit	Nevada;Washoe;302600	Washoe;302600
+ReportingUnit	Nevada;Washoe;302700	Washoe;302700
+ReportingUnit	Nevada;Washoe;302800	Washoe;302800
+ReportingUnit	Nevada;Washoe;302900	Washoe;302900
+ReportingUnit	Nevada;Washoe;303000	Washoe;303000
+ReportingUnit	Nevada;Washoe;303100	Washoe;303100
+ReportingUnit	Nevada;Washoe;303200	Washoe;303200
+ReportingUnit	Nevada;Washoe;303500	Washoe;303500
+ReportingUnit	Nevada;Washoe;303600	Washoe;303600
+ReportingUnit	Nevada;Washoe;303800	Washoe;303800
+ReportingUnit	Nevada;Washoe;303900	Washoe;303900
+ReportingUnit	Nevada;Washoe;304000	Washoe;304000
+ReportingUnit	Nevada;Washoe;400000	Washoe;400000
+ReportingUnit	Nevada;Washoe;400300	Washoe;400300
+ReportingUnit	Nevada;Washoe;400500	Washoe;400500
+ReportingUnit	Nevada;Washoe;400700	Washoe;400700
+ReportingUnit	Nevada;Washoe;400900	Washoe;400900
+ReportingUnit	Nevada;Washoe;401200	Washoe;401200
+ReportingUnit	Nevada;Washoe;401400	Washoe;401400
+ReportingUnit	Nevada;Washoe;401500	Washoe;401500
+ReportingUnit	Nevada;Washoe;401600	Washoe;401600
+ReportingUnit	Nevada;Washoe;401700	Washoe;401700
+ReportingUnit	Nevada;Washoe;401800	Washoe;401800
+ReportingUnit	Nevada;Washoe;401900	Washoe;401900
+ReportingUnit	Nevada;Washoe;402000	Washoe;402000
+ReportingUnit	Nevada;Washoe;402100	Washoe;402100
+ReportingUnit	Nevada;Washoe;402200	Washoe;402200
+ReportingUnit	Nevada;Washoe;402300	Washoe;402300
+ReportingUnit	Nevada;Washoe;402400	Washoe;402400
+ReportingUnit	Nevada;Washoe;402500	Washoe;402500
+ReportingUnit	Nevada;Washoe;402600	Washoe;402600
+ReportingUnit	Nevada;Washoe;402900	Washoe;402900
+ReportingUnit	Nevada;Washoe;403200	Washoe;403200
+ReportingUnit	Nevada;Washoe;403300	Washoe;403300
+ReportingUnit	Nevada;Washoe;403500	Washoe;403500
+ReportingUnit	Nevada;Washoe;403600	Washoe;403600
+ReportingUnit	Nevada;Washoe;403700	Washoe;403700
+ReportingUnit	Nevada;Washoe;403800	Washoe;403800
+ReportingUnit	Nevada;Washoe;403900	Washoe;403900
+ReportingUnit	Nevada;Washoe;404000	Washoe;404000
+ReportingUnit	Nevada;Washoe;404100	Washoe;404100
+ReportingUnit	Nevada;Washoe;404200	Washoe;404200
+ReportingUnit	Nevada;Washoe;404300	Washoe;404300
+ReportingUnit	Nevada;Washoe;404500	Washoe;404500
+ReportingUnit	Nevada;Washoe;404600	Washoe;404600
+ReportingUnit	Nevada;Washoe;404700	Washoe;404700
+ReportingUnit	Nevada;Washoe;405100	Washoe;405100
+ReportingUnit	Nevada;Washoe;405200	Washoe;405200
+ReportingUnit	Nevada;Washoe;405300	Washoe;405300
+ReportingUnit	Nevada;Washoe;405400	Washoe;405400
+ReportingUnit	Nevada;Washoe;405500	Washoe;405500
+ReportingUnit	Nevada;Washoe;405600	Washoe;405600
+ReportingUnit	Nevada;Washoe;500000	Washoe;500000
+ReportingUnit	Nevada;Washoe;500300	Washoe;500300
+ReportingUnit	Nevada;Washoe;500500	Washoe;500500
+ReportingUnit	Nevada;Washoe;500600	Washoe;500600
+ReportingUnit	Nevada;Washoe;500700	Washoe;500700
+ReportingUnit	Nevada;Washoe;500800	Washoe;500800
+ReportingUnit	Nevada;Washoe;500900	Washoe;500900
+ReportingUnit	Nevada;Washoe;501000	Washoe;501000
+ReportingUnit	Nevada;Washoe;501100	Washoe;501100
+ReportingUnit	Nevada;Washoe;501200	Washoe;501200
+ReportingUnit	Nevada;Washoe;501400	Washoe;501400
+ReportingUnit	Nevada;Washoe;501500	Washoe;501500
+ReportingUnit	Nevada;Washoe;501600	Washoe;501600
+ReportingUnit	Nevada;Washoe;501800	Washoe;501800
+ReportingUnit	Nevada;Washoe;502000	Washoe;502000
+ReportingUnit	Nevada;Washoe;502200	Washoe;502200
+ReportingUnit	Nevada;Washoe;502300	Washoe;502300
+ReportingUnit	Nevada;Washoe;502400	Washoe;502400
+ReportingUnit	Nevada;Washoe;502600	Washoe;502600
+ReportingUnit	Nevada;Washoe;502700	Washoe;502700
+ReportingUnit	Nevada;Washoe;503000	Washoe;503000
+ReportingUnit	Nevada;Washoe;503100	Washoe;503100
+ReportingUnit	Nevada;Washoe;503200	Washoe;503200
+ReportingUnit	Nevada;Washoe;503300	Washoe;503300
+ReportingUnit	Nevada;Washoe;503400	Washoe;503400
+ReportingUnit	Nevada;Washoe;503500	Washoe;503500
+ReportingUnit	Nevada;Washoe;503600	Washoe;503600
+ReportingUnit	Nevada;Washoe;503900	Washoe;503900
+ReportingUnit	Nevada;Washoe;504000	Washoe;504000
+ReportingUnit	Nevada;Washoe;504100	Washoe;504100
+ReportingUnit	Nevada;Washoe;504500	Washoe;504500
+ReportingUnit	Nevada;Washoe;504600	Washoe;504600
+ReportingUnit	Nevada;Washoe;504700	Washoe;504700
+ReportingUnit	Nevada;Washoe;504800	Washoe;504800
+ReportingUnit	Nevada;Washoe;504900	Washoe;504900
+ReportingUnit	Nevada;Washoe;505100	Washoe;505100
+ReportingUnit	Nevada;Washoe;505300	Washoe;505300
+ReportingUnit	Nevada;Washoe;505400	Washoe;505400
+ReportingUnit	Nevada;Washoe;505600	Washoe;505600
+ReportingUnit	Nevada;Washoe;506100	Washoe;506100
+ReportingUnit	Nevada;Washoe;506200	Washoe;506200
+ReportingUnit	Nevada;Washoe;506300	Washoe;506300
+ReportingUnit	Nevada;Washoe;506400	Washoe;506400
+ReportingUnit	Nevada;Washoe;506500	Washoe;506500
+ReportingUnit	Nevada;Washoe;506600	Washoe;506600
+ReportingUnit	Nevada;Washoe;610000	Washoe;610000
+ReportingUnit	Nevada;Washoe;610100	Washoe;610100
+ReportingUnit	Nevada;Washoe;610400	Washoe;610400
+ReportingUnit	Nevada;Washoe;610500	Washoe;610500
+ReportingUnit	Nevada;Washoe;610600	Washoe;610600
+ReportingUnit	Nevada;Washoe;610700	Washoe;610700
+ReportingUnit	Nevada;Washoe;610800	Washoe;610800
+ReportingUnit	Nevada;Washoe;610900	Washoe;610900
+ReportingUnit	Nevada;Washoe;611000	Washoe;611000
+ReportingUnit	Nevada;Washoe;611100	Washoe;611100
+ReportingUnit	Nevada;Washoe;611300	Washoe;611300
+ReportingUnit	Nevada;Washoe;611400	Washoe;611400
+ReportingUnit	Nevada;Washoe;611500	Washoe;611500
+ReportingUnit	Nevada;Washoe;620200	Washoe;620200
+ReportingUnit	Nevada;Washoe;620300	Washoe;620300
+ReportingUnit	Nevada;Washoe;620500	Washoe;620500
+ReportingUnit	Nevada;Washoe;620600	Washoe;620600
+ReportingUnit	Nevada;Washoe;620700	Washoe;620700
+ReportingUnit	Nevada;Washoe;620800	Washoe;620800
+ReportingUnit	Nevada;Washoe;620900	Washoe;620900
+ReportingUnit	Nevada;Washoe;621000	Washoe;621000
+ReportingUnit	Nevada;Washoe;621100	Washoe;621100
+ReportingUnit	Nevada;Washoe;621200	Washoe;621200
+ReportingUnit	Nevada;Washoe;621300	Washoe;621300
+ReportingUnit	Nevada;Washoe;621400	Washoe;621400
+ReportingUnit	Nevada;Washoe;621600	Washoe;621600
+ReportingUnit	Nevada;Washoe;621700	Washoe;621700
+ReportingUnit	Nevada;Washoe;621800	Washoe;621800
+ReportingUnit	Nevada;Washoe;630000	Washoe;630000
+ReportingUnit	Nevada;Washoe;630100	Washoe;630100
+ReportingUnit	Nevada;Washoe;630200	Washoe;630200
+ReportingUnit	Nevada;Washoe;630300	Washoe;630300
+ReportingUnit	Nevada;Washoe;630600	Washoe;630600
+ReportingUnit	Nevada;Washoe;630700	Washoe;630700
+ReportingUnit	Nevada;Washoe;630800	Washoe;630800
+ReportingUnit	Nevada;Washoe;631000	Washoe;631000
+ReportingUnit	Nevada;Washoe;631100	Washoe;631100
+ReportingUnit	Nevada;Washoe;631300	Washoe;631300
+ReportingUnit	Nevada;Washoe;631400	Washoe;631400
+ReportingUnit	Nevada;Washoe;631700	Washoe;631700
+ReportingUnit	Nevada;Washoe;631800	Washoe;631800
+ReportingUnit	Nevada;Washoe;631900	Washoe;631900
+ReportingUnit	Nevada;Washoe;632000	Washoe;632000
+ReportingUnit	Nevada;Washoe;640000	Washoe;640000
+ReportingUnit	Nevada;Washoe;640300	Washoe;640300
+ReportingUnit	Nevada;Washoe;640500	Washoe;640500
+ReportingUnit	Nevada;Washoe;641100	Washoe;641100
+ReportingUnit	Nevada;Washoe;641300	Washoe;641300
+ReportingUnit	Nevada;Washoe;641400	Washoe;641400
+ReportingUnit	Nevada;Washoe;641500	Washoe;641500
+ReportingUnit	Nevada;Washoe;641600	Washoe;641600
+ReportingUnit	Nevada;Washoe;641800	Washoe;641800
+ReportingUnit	Nevada;Washoe;642200	Washoe;642200
+ReportingUnit	Nevada;Washoe;642300	Washoe;642300
+ReportingUnit	Nevada;Washoe;642500	Washoe;642500
+ReportingUnit	Nevada;Washoe;642700	Washoe;642700
+ReportingUnit	Nevada;Washoe;650000	Washoe;650000
+ReportingUnit	Nevada;Washoe;650100	Washoe;650100
+ReportingUnit	Nevada;Washoe;650300	Washoe;650300
+ReportingUnit	Nevada;Washoe;650800	Washoe;650800
+ReportingUnit	Nevada;Washoe;651100	Washoe;651100
+ReportingUnit	Nevada;Washoe;651300	Washoe;651300
+ReportingUnit	Nevada;Washoe;651400	Washoe;651400
+ReportingUnit	Nevada;Washoe;651600	Washoe;651600
+ReportingUnit	Nevada;Washoe;651900	Washoe;651900
+ReportingUnit	Nevada;Washoe;652000	Washoe;652000
+ReportingUnit	Nevada;Washoe;652100	Washoe;652100
+ReportingUnit	Nevada;Washoe;652200	Washoe;652200
+ReportingUnit	Nevada;Washoe;652300	Washoe;652300
+ReportingUnit	Nevada;Washoe;652400	Washoe;652400
+ReportingUnit	Nevada;Washoe;652500	Washoe;652500
+ReportingUnit	Nevada;Washoe;652600	Washoe;652600
+ReportingUnit	Nevada;Washoe;652700	Washoe;652700
+ReportingUnit	Nevada;Washoe;652800	Washoe;652800
+ReportingUnit	Nevada;Washoe;652900	Washoe;652900
+ReportingUnit	Nevada;Washoe;710000	Washoe;710000
+ReportingUnit	Nevada;Washoe;730000	Washoe;730000
+ReportingUnit	Nevada;Washoe;730200	Washoe;730200
+ReportingUnit	Nevada;Washoe;730400	Washoe;730400
+ReportingUnit	Nevada;Washoe;730600	Washoe;730600
+ReportingUnit	Nevada;Washoe;730700	Washoe;730700
+ReportingUnit	Nevada;Washoe;730800	Washoe;730800
+ReportingUnit	Nevada;Washoe;730900	Washoe;730900
+ReportingUnit	Nevada;Washoe;731200	Washoe;731200
+ReportingUnit	Nevada;Washoe;731300	Washoe;731300
+ReportingUnit	Nevada;Washoe;731400	Washoe;731400
+ReportingUnit	Nevada;Washoe;731500	Washoe;731500
+ReportingUnit	Nevada;Washoe;731600	Washoe;731600
+ReportingUnit	Nevada;Washoe;731700	Washoe;731700
+ReportingUnit	Nevada;Washoe;731800	Washoe;731800
+ReportingUnit	Nevada;Washoe;731900	Washoe;731900
+ReportingUnit	Nevada;Washoe;732100	Washoe;732100
+ReportingUnit	Nevada;Washoe;740000	Washoe;740000
+ReportingUnit	Nevada;Washoe;740200	Washoe;740200
+ReportingUnit	Nevada;Washoe;740300	Washoe;740300
+ReportingUnit	Nevada;Washoe;740400	Washoe;740400
+ReportingUnit	Nevada;Washoe;740600	Washoe;740600
+ReportingUnit	Nevada;Washoe;740700	Washoe;740700
+ReportingUnit	Nevada;Washoe;740800	Washoe;740800
+ReportingUnit	Nevada;Washoe;741000	Washoe;741000
+ReportingUnit	Nevada;Washoe;741200	Washoe;741200
+ReportingUnit	Nevada;Washoe;741300	Washoe;741300
+ReportingUnit	Nevada;Washoe;741400	Washoe;741400
+ReportingUnit	Nevada;Washoe;741500	Washoe;741500
+ReportingUnit	Nevada;Washoe;741600	Washoe;741600
+ReportingUnit	Nevada;Washoe;741700	Washoe;741700
+ReportingUnit	Nevada;Washoe;741800	Washoe;741800
+ReportingUnit	Nevada;Washoe;742400	Washoe;742400
+ReportingUnit	Nevada;Washoe;742500	Washoe;742500
+ReportingUnit	Nevada;Washoe;742600	Washoe;742600
+ReportingUnit	Nevada;Washoe;742800	Washoe;742800
+ReportingUnit	Nevada;Washoe;743000	Washoe;743000
+ReportingUnit	Nevada;Washoe;743100	Washoe;743100
+ReportingUnit	Nevada;Washoe;743300	Washoe;743300
+ReportingUnit	Nevada;Washoe;750000	Washoe;750000
+ReportingUnit	Nevada;Washoe;750100	Washoe;750100
+ReportingUnit	Nevada;Washoe;750200	Washoe;750200
+ReportingUnit	Nevada;Washoe;750300	Washoe;750300
+ReportingUnit	Nevada;Washoe;750400	Washoe;750400
+ReportingUnit	Nevada;Washoe;750500	Washoe;750500
+ReportingUnit	Nevada;Washoe;750600	Washoe;750600
+ReportingUnit	Nevada;Washoe;750700	Washoe;750700
+ReportingUnit	Nevada;Washoe;750800	Washoe;750800
+ReportingUnit	Nevada;Washoe;750900	Washoe;750900
+ReportingUnit	Nevada;Washoe;751200	Washoe;751200
+ReportingUnit	Nevada;Washoe;751300	Washoe;751300
+ReportingUnit	Nevada;Washoe;751400	Washoe;751400
+ReportingUnit	Nevada;Washoe;751600	Washoe;751600
+ReportingUnit	Nevada;Washoe;751700	Washoe;751700
+ReportingUnit	Nevada;Washoe;751800	Washoe;751800
+ReportingUnit	Nevada;Washoe;751900	Washoe;751900
+ReportingUnit	Nevada;Washoe;752000	Washoe;752000
+ReportingUnit	Nevada;Washoe;752100	Washoe;752100
+ReportingUnit	Nevada;Washoe;752200	Washoe;752200
+ReportingUnit	Nevada;Washoe;752300	Washoe;752300
+ReportingUnit	Nevada;Washoe;752400	Washoe;752400
+ReportingUnit	Nevada;Washoe;752500	Washoe;752500
+ReportingUnit	Nevada;Washoe;752600	Washoe;752600
+ReportingUnit	Nevada;Washoe;752700	Washoe;752700
+ReportingUnit	Nevada;Washoe;752800	Washoe;752800
+ReportingUnit	Nevada;Washoe;752900	Washoe;752900
+ReportingUnit	Nevada;Washoe;753100	Washoe;753100
+ReportingUnit	Nevada;Washoe;753200	Washoe;753200
+ReportingUnit	Nevada;Washoe;753300	Washoe;753300
+ReportingUnit	Nevada;Washoe;753400	Washoe;753400
+ReportingUnit	Nevada;Washoe;753600	Washoe;753600
+ReportingUnit	Nevada;Washoe;753700	Washoe;753700
+ReportingUnit	Nevada;Washoe;753900	Washoe;753900
+ReportingUnit	Nevada;Washoe;754000	Washoe;754000
+ReportingUnit	Nevada;Washoe;754100	Washoe;754100
+ReportingUnit	Nevada;Washoe;754300	Washoe;754300
+ReportingUnit	Nevada;Washoe;754600	Washoe;754600
+ReportingUnit	Nevada;Washoe;754700	Washoe;754700
+ReportingUnit	Nevada;Washoe;754800	Washoe;754800
+ReportingUnit	Nevada;Washoe;754900	Washoe;754900
+ReportingUnit	Nevada;Washoe;755000	Washoe;755000
+ReportingUnit	Nevada;Washoe;755200	Washoe;755200
+ReportingUnit	Nevada;Washoe;755300	Washoe;755300
+ReportingUnit	Nevada;Washoe;755600	Washoe;755600
+ReportingUnit	Nevada;Washoe;755700	Washoe;755700
+ReportingUnit	Nevada;Washoe;755800	Washoe;755800
+ReportingUnit	Nevada;Washoe;756200	Washoe;756200
+ReportingUnit	Nevada;Washoe;756300	Washoe;756300
+ReportingUnit	Nevada;Washoe;756500	Washoe;756500
+ReportingUnit	Nevada;Washoe;756600	Washoe;756600
+ReportingUnit	Nevada;Washoe;756700	Washoe;756700
+ReportingUnit	Nevada;Washoe;756900	Washoe;756900
+ReportingUnit	Nevada;Washoe;757000	Washoe;757000
+ReportingUnit	Nevada;Washoe;757100	Washoe;757100
+ReportingUnit	Nevada;Washoe;757200	Washoe;757200
+ReportingUnit	Nevada;Washoe;757300	Washoe;757300
+ReportingUnit	Nevada;Washoe;757400	Washoe;757400
+ReportingUnit	Nevada;Washoe;757600	Washoe;757600
+ReportingUnit	Nevada;Washoe;757700	Washoe;757700
+ReportingUnit	Nevada;Washoe;757800	Washoe;757800
+ReportingUnit	Nevada;Washoe;757900	Washoe;757900
+ReportingUnit	Nevada;Washoe;758100	Washoe;758100
+ReportingUnit	Nevada;Washoe;758200	Washoe;758200
+ReportingUnit	Nevada;Washoe;758300	Washoe;758300
+ReportingUnit	Nevada;Washoe;758400	Washoe;758400
+ReportingUnit	Nevada;Washoe;758500	Washoe;758500
+ReportingUnit	Nevada;Washoe;758600	Washoe;758600
+ReportingUnit	Nevada;Washoe;758700	Washoe;758700
+ReportingUnit	Nevada;Washoe;758800	Washoe;758800
+ReportingUnit	Nevada;Washoe;758900	Washoe;758900
+ReportingUnit	Nevada;Washoe;759100	Washoe;759100
+ReportingUnit	Nevada;Washoe;810000	Washoe;810000
+ReportingUnit	Nevada;Washoe;810100	Washoe;810100
+ReportingUnit	Nevada;Washoe;810200	Washoe;810200
+ReportingUnit	Nevada;Washoe;810300	Washoe;810300
+ReportingUnit	Nevada;Washoe;810400	Washoe;810400
+ReportingUnit	Nevada;Washoe;810500	Washoe;810500
+ReportingUnit	Nevada;Washoe;810600	Washoe;810600
+ReportingUnit	Nevada;Washoe;810700	Washoe;810700
+ReportingUnit	Nevada;Washoe;810800	Washoe;810800
+ReportingUnit	Nevada;Washoe;810900	Washoe;810900
+ReportingUnit	Nevada;Washoe;811000	Washoe;811000
+ReportingUnit	Nevada;Washoe;811100	Washoe;811100
+ReportingUnit	Nevada;Washoe;811200	Washoe;811200
+ReportingUnit	Nevada;Washoe;811400	Washoe;811400
+ReportingUnit	Nevada;Washoe;811500	Washoe;811500
+ReportingUnit	Nevada;Washoe;811600	Washoe;811600
+ReportingUnit	Nevada;Washoe;811700	Washoe;811700
+ReportingUnit	Nevada;Washoe;811800	Washoe;811800
+ReportingUnit	Nevada;Washoe;812500	Washoe;812500
+ReportingUnit	Nevada;Washoe;812600	Washoe;812600
+ReportingUnit	Nevada;Washoe;812700	Washoe;812700
+ReportingUnit	Nevada;Washoe;812800	Washoe;812800
+ReportingUnit	Nevada;Washoe;812900	Washoe;812900
+ReportingUnit	Nevada;Washoe;820000	Washoe;820000
+ReportingUnit	Nevada;Washoe;820100	Washoe;820100
+ReportingUnit	Nevada;Washoe;820200	Washoe;820200
+ReportingUnit	Nevada;Washoe;820300	Washoe;820300
+ReportingUnit	Nevada;Washoe;820400	Washoe;820400
+ReportingUnit	Nevada;Washoe;820500	Washoe;820500
+ReportingUnit	Nevada;Washoe;820600	Washoe;820600
+ReportingUnit	Nevada;Washoe;820700	Washoe;820700
+ReportingUnit	Nevada;Washoe;820800	Washoe;820800
+ReportingUnit	Nevada;Washoe;820900	Washoe;820900
+ReportingUnit	Nevada;Washoe;821000	Washoe;821000
+ReportingUnit	Nevada;Washoe;821100	Washoe;821100
+ReportingUnit	Nevada;Washoe;821200	Washoe;821200
+ReportingUnit	Nevada;Washoe;821300	Washoe;821300
+ReportingUnit	Nevada;Washoe;821400	Washoe;821400
+ReportingUnit	Nevada;Washoe;821600	Washoe;821600
+ReportingUnit	Nevada;Washoe;821700	Washoe;821700
+ReportingUnit	Nevada;Washoe;821800	Washoe;821800
+ReportingUnit	Nevada;Washoe;821900	Washoe;821900
+ReportingUnit	Nevada;Washoe;822000	Washoe;822000
+ReportingUnit	Nevada;Washoe;822100	Washoe;822100
+ReportingUnit	Nevada;Washoe;822200	Washoe;822200
+ReportingUnit	Nevada;Washoe;822600	Washoe;822600
+ReportingUnit	Nevada;Washoe;822700	Washoe;822700
+ReportingUnit	Nevada;Washoe;823200	Washoe;823200
+ReportingUnit	Nevada;Washoe;823300	Washoe;823300
+ReportingUnit	Nevada;Washoe;823400	Washoe;823400
+ReportingUnit	Nevada;Washoe;823500	Washoe;823500
+ReportingUnit	Nevada;Washoe;823600	Washoe;823600
+ReportingUnit	Nevada;Washoe;823700	Washoe;823700
+ReportingUnit	Nevada;Washoe;823800	Washoe;823800
+ReportingUnit	Nevada;Washoe;824000	Washoe;824000
+ReportingUnit	Nevada;Washoe;824500	Washoe;824500
+ReportingUnit	Nevada;Washoe;824700	Washoe;824700
+ReportingUnit	Nevada;Washoe;825000	Washoe;825000
+ReportingUnit	Nevada;Washoe;825300	Washoe;825300
+ReportingUnit	Nevada;Washoe;825400	Washoe;825400
+ReportingUnit	Nevada;Washoe;825600	Washoe;825600
+ReportingUnit	Nevada;Washoe;825900	Washoe;825900
+ReportingUnit	Nevada;Washoe;826000	Washoe;826000
+ReportingUnit	Nevada;Washoe;826100	Washoe;826100
+ReportingUnit	Nevada;Washoe;826300	Washoe;826300
+ReportingUnit	Nevada;Washoe;826400	Washoe;826400
+ReportingUnit	Nevada;Washoe;826500	Washoe;826500
+ReportingUnit	Nevada;Washoe;827100	Washoe;827100
+ReportingUnit	Nevada;Washoe;827300	Washoe;827300
+ReportingUnit	Nevada;Washoe;827500	Washoe;827500
+ReportingUnit	Nevada;Washoe;827600	Washoe;827600
+ReportingUnit	Nevada;Washoe;827700	Washoe;827700
+ReportingUnit	Nevada;Washoe;829000	Washoe;829000
+ReportingUnit	Nevada;Washoe;829100	Washoe;829100
+ReportingUnit	Nevada;Washoe;829200	Washoe;829200
+ReportingUnit	Nevada;Washoe;829400	Washoe;829400
+ReportingUnit	Nevada;Washoe;829700	Washoe;829700
+ReportingUnit	Nevada;Washoe;840000	Washoe;840000
+ReportingUnit	Nevada;Washoe;850000	Washoe;850000
+ReportingUnit	Nevada;Washoe;850200	Washoe;850200
+ReportingUnit	Nevada;Washoe;850500	Washoe;850500
+ReportingUnit	Nevada;Washoe;910100	Washoe;910100
+ReportingUnit	Nevada;Washoe;910200	Washoe;910200
+ReportingUnit	Nevada;Washoe;910300	Washoe;910300
+ReportingUnit	Nevada;Washoe;910600	Washoe;910600
+ReportingUnit	Nevada;Washoe;910700	Washoe;910700
+ReportingUnit	Nevada;Washoe;910900	Washoe;910900
+ReportingUnit	Nevada;Washoe;911500	Washoe;911500
+ReportingUnit	Nevada;Washoe;911600	Washoe;911600
+ReportingUnit	Nevada;Washoe;912000	Washoe;912000
+ReportingUnit	Nevada;Washoe;912100	Washoe;912100
+ReportingUnit	Nevada;Washoe;912200	Washoe;912200
+ReportingUnit	Nevada;Washoe;912300	Washoe;912300
+ReportingUnit	Nevada;Washoe;912400	Washoe;912400
+ReportingUnit	Nevada;Washoe;912500	Washoe;912500
+ReportingUnit	Nevada;Washoe;912600	Washoe;912600
+ReportingUnit	Nevada;Washoe;912700	Washoe;912700
+ReportingUnit	Nevada;Washoe;912800	Washoe;912800
+ReportingUnit	Nevada;Washoe;912900	Washoe;912900
+ReportingUnit	Nevada;Washoe;913000	Washoe;913000
+ReportingUnit	Nevada;Washoe;913100	Washoe;913100
+ReportingUnit	Nevada;Washoe;920200	Washoe;920200
+ReportingUnit	Nevada;Washoe;920700	Washoe;920700
+ReportingUnit	Nevada;Washoe;920800	Washoe;920800
+ReportingUnit	Nevada;Washoe;921000	Washoe;921000
+ReportingUnit	Nevada;Washoe;921100	Washoe;921100
+ReportingUnit	Nevada;Washoe;923900	Washoe;923900
+ReportingUnit	Nevada;Washoe;924300	Washoe;924300
+ReportingUnit	Nevada;Washoe;924400	Washoe;924400
+ReportingUnit	Nevada;Washoe;924800	Washoe;924800
+ReportingUnit	Nevada;Washoe;924900	Washoe;924900
+ReportingUnit	Nevada;Washoe;925100	Washoe;925100
+ReportingUnit	Nevada;Washoe;925200	Washoe;925200
+ReportingUnit	Nevada;Washoe;925300	Washoe;925300
+ReportingUnit	Nevada;Washoe;925400	Washoe;925400
+ReportingUnit	Nevada;Washoe;930300	Washoe;930300
+ReportingUnit	Nevada;Washoe;930400	Washoe;930400
+ReportingUnit	Nevada;Washoe;930700	Washoe;930700
+ReportingUnit	Nevada;Washoe;930800	Washoe;930800
+ReportingUnit	Nevada;Washoe;930900	Washoe;930900
+ReportingUnit	Nevada;Washoe;931000	Washoe;931000
+ReportingUnit	Nevada;Washoe;931100	Washoe;931100
+ReportingUnit	Nevada;Washoe;940800	Washoe;940800
+ReportingUnit	Nevada;Washoe;942700	Washoe;942700
+ReportingUnit	Nevada;Washoe;942800	Washoe;942800
+ReportingUnit	Nevada;Washoe;951300	Washoe;951300
+ReportingUnit	Nevada;Washoe;951600	Washoe;951600
+ReportingUnit	Nevada;Washoe;952000	Washoe;952000
+ReportingUnit	Nevada;Washoe;952300	Washoe;952300
+ReportingUnit	Nevada;Washoe;953200	Washoe;953200
+ReportingUnit	Nevada;Washoe;953300	Washoe;953300
+ReportingUnit	Nevada;Washoe;953800	Washoe;953800
+ReportingUnit	Nevada;Washoe;954000	Washoe;954000
+ReportingUnit	Nevada;Washoe;954100	Washoe;954100
+ReportingUnit	Nevada;Washoe;954200	Washoe;954200
+ReportingUnit	Nevada;Washoe;954300	Washoe;954300
+ReportingUnit	Nevada;Washoe;954600	Washoe;954600
+ReportingUnit	Nevada;Washoe;954700	Washoe;954700
+ReportingUnit	Nevada;Washoe;954800	Washoe;954800
+ReportingUnit	Nevada;Washoe;954900	Washoe;954900
+ReportingUnit	Nevada;Washoe;955000	Washoe;955000
+ReportingUnit	Nevada;Washoe;955100	Washoe;955100
+ReportingUnit	Nevada;Washoe;955200	Washoe;955200
+ReportingUnit	Nevada;Washoe;955300	Washoe;955300
+ReportingUnit	Nevada;Washoe;955400	Washoe;955400
+ReportingUnit	Nevada;Washoe;955500	Washoe;955500
+ReportingUnit	Nevada;Washoe;955700	Washoe;955700
+ReportingUnit	Nevada;Washoe;955800	Washoe;955800
+ReportingUnit	Nevada;Washoe;955900	Washoe;955900
+ReportingUnit	Nevada;Washoe;956000	Washoe;956000
+ReportingUnit	Nevada;Washoe;956100	Washoe;956100
+ReportingUnit	Nevada;Washoe;956200	Washoe;956200
+ReportingUnit	Nevada;Washoe;970000	Washoe;970000
+ReportingUnit	Nevada;Washoe;990000	Washoe;990000
+ReportingUnit	Nevada;White Pine;Precinct 1	White Pine;Precinct 1
+ReportingUnit	Nevada;White Pine;Precinct 10	White Pine;Precinct 10
+ReportingUnit	Nevada;White Pine;Precinct 2	White Pine;Precinct 2
+ReportingUnit	Nevada;White Pine;Precinct 3	White Pine;Precinct 3
+ReportingUnit	Nevada;White Pine;Precinct 4	White Pine;Precinct 4
+ReportingUnit	Nevada;White Pine;Precinct 5	White Pine;Precinct 5
+ReportingUnit	Nevada;White Pine;Precinct 6	White Pine;Precinct 6
+ReportingUnit	Nevada;White Pine;Precinct 7	White Pine;Precinct 7
+ReportingUnit	Nevada;White Pine;Precinct 8	White Pine;Precinct 8
+ReportingUnit	Nevada;White Pine;Precinct 9	White Pine;Precinct 9
+ReportingUnit	Nevada;White Pine;Precinct 99	White Pine;Precinct 99
+Candidate	WES DUNCAN	"DUNCAN, WES"
+Candidate	AARON FORD	"FORD, AARON"
+Candidate	Joel F. Hansen	"Hansen, Joel F."
+Candidate	Stacey Giomi	"Giomi, Stacey"
+Candidate	JOHN WOOD	"WOOD, JOHN"
+Candidate	RUSSELL BEST	"BEST, RUSSELL"
+Candidate	RYAN BUNDY	"BUNDY, RYAN"
+Candidate	ADAM PAUL LAXALT	"LAXALT, ADAM PAUL"
+Candidate	JARED LORD	"LORD, JARED"
+Candidate	STEVE SISOLAK	"SISOLAK, STEVE"
+Candidate	KRISTIN LUIS	"LUIS, KRISTIN"
+Candidate	RYAN RUSSELL	"RUSSELL, RYAN"
+Candidate	JANINE HANSEN	"HANSEN, JANINE"
+Candidate	KATE MARSHALL	"MARSHALL, KATE"
+Candidate	MICHAEL ROBERSON	"ROBERSON, MICHAEL"
+Candidate	ED UEHLING	"UEHLING, ED"
+Candidate	NELSON ARAUJO	"ARAUJO, NELSON"
+Candidate	Barbara K. Cegavske	"Cegavske, Barbara K."
+Candidate	KENNY FURLONG	"FURLONG, KENNY"
+Candidate	LORNE R. HOULE	"HOULE, LORNE R."
+Candidate	AL KRAMER	"KRAMER, AL"
+Candidate	Autumn Zemke	"Zemke, Autumn"
+Candidate	CATHERINE BYRNE	"BYRNE, CATHERINE"
+Candidate	Ron Knecht	"Knecht, Ron"
+Candidate	Tina Davis-Hersey	"Davis-Hersey, Tina"
+Candidate	Ben Kieckhefer	"Kieckhefer, Ben"
+Candidate	John Wagner	"Wagner, John"
+Candidate	BOB BEERS	"BEERS, BOB"
+Candidate	ZACH CONINE	"CONINE, ZACH"
+Candidate	BILL HOGE	"HOGE, BILL"
+Candidate	ELISSA CADISH	"CADISH, ELISSA"
+Candidate	JERRY TAO	"TAO, JERRY"
+Candidate	ABBI SILVER	"SILVER, ABBI"
+Candidate	MATHEW HARTER	"HARTER, MATHEW"
+Candidate	LIDIA STIGLICH	"STIGLICH, LIDIA"
+Candidate	Mark E. Amodei	"Amodei, Mark E."
+Candidate	CLINT KOBLE	"KOBLE, CLINT"
+Candidate	KAMAU A. BAKARI	"BAKARI, KAMAU A."
+Candidate	TIM HAGAN	"HAGAN, TIM"
+Candidate	Dean Heller	"Heller, Dean"
+Candidate	BARRY MICHAELS	"MICHAELS, BARRY"
+Candidate	JACKY ROSEN	"ROSEN, JACKY"
+Candidate	FREDERICK D. BUCKMASTER	"BUCKMASTER, FREDERICK D."
+Candidate	AMBER N. GETTO	"GETTO, AMBER N."
+Candidate	Clay HENDRIX	"HENDRIX, Clay"
+Candidate	MATT HYDE	"HYDE, MATT"
+Candidate	PATTY JULIAN	"JULIAN, PATTY"
+Candidate	TEDD MCDONALD	"MCDONALD, TEDD"
+Candidate	CARMEN SCHANK	"SCHANK, CARMEN"
+Candidate	DEBY SMOTHERMAN	"SMOTHERMAN, DEBY"
+Candidate	DENISE L. MONDHINK-FELTON	"MONDHINK-FELTON, DENISE L."
+Candidate	LINDA ROTHERY	"ROTHERY, LINDA"
+Candidate	PETE OLSEN	"OLSEN, PETE"
+Candidate	TASHA HESSEY	"HESSEY, TASHA"
+Candidate	ART MALLORY	"MALLORY, ART"
+Candidate	MIKE RICHARDS	"RICHARDS, MIKE"
+Candidate	BENJAMIN D. TROTTER	"TROTTER, BENJAMIN D."
+Candidate	THOMAS HUTCHINGS	"HUTCHINGS, THOMAS"
+Candidate	CHRISTY LATTIN	"LATTIN, CHRISTY"
+Candidate	GARY L. SMITH	"SMITH, GARY L."
+Candidate	MICHAEL SPENCER	"SPENCER, MICHAEL"
+Candidate	LARRY TUCKER	"TUCKER, LARRY"
+Candidate	ROBERT M. GETTO JR.	"GETTO JR., ROBERT M."
+Candidate	RAY EAST	"EAST, RAY"
+Candidate	RICHARD C. HICKOX	"HICKOX, RICHARD C."
+Candidate	ROBIN L. TITUS	"TITUS, ROBIN L."
+Candidate	CURTIS W. CANNON	"CANNON, CURTIS W."
+Candidate	JAMES ARNOLD SETTELMEYER	"SETTELMEYER, JAMES ARNOLD"
+Candidate	Briana Johnson	"Johnson, Briana"
+Candidate	Gina McClain	"McClain, Gina"
+Candidate	Lynn Maria Goya	"Goya, Lynn Maria"
+Candidate	Minddie Lloyd	"Lloyd, Minddie"
+Candidate	Debbie Conway	"Conway, Debbie"
+Candidate	Jill MacFarlane	"MacFarlane, Jill"
+Candidate	Phil Collins	"Collins, Phil"
+Candidate	Laura Fitzpatrick	"Fitzpatrick, Laura"
+Candidate	STEVE WOLFSON	"WOLFSON, STEVE"
+Candidate	Tierra Jones	"Jones, Tierra"
+Candidate	Mark B. Bailus	"Bailus, Mark B."
+Candidate	Mary Kay Holthus	"Holthus, Mary Kay"
+Candidate	DAVID M. JONES	"JONES, DAVID M."
+Candidate	Elana Lee Graham	"Graham, Elana Lee"
+Candidate	James Dean Leavitt	"Leavitt, James Dean"
+Candidate	Victoria Kay DaCosta	"DaCosta, Victoria Kay"
+Candidate	Thomas L. Fougere	"Fougere, Thomas L."
+Candidate	Robert Telles	"Telles, Robert"
+Candidate	Jason Frierson	"Frierson, Jason"
+Candidate	Tina M. Peetris	"Peetris, Tina M."
+Candidate	Danielle Ford	"Ford, Danielle"
+Candidate	Kali Fox Miller	"Miller, Kali Fox"
+Candidate	Joyce Bentley	"Bentley, Joyce"
+Candidate	Dan Garfield	"Garfield, Dan"
+Candidate	Robert Strawder	"Strawder, Robert"
+Candidate	Dina TITUS	"TITUS, Dina"
+Candidate	Cherlyn Arrington	"Arrington, Cherlyn"
+Candidate	Ozzie FUMO	"FUMO, Ozzie"
+Candidate	Steve Brown	"Brown, Steve"
+Candidate	Gil Eisner	"Eisner, Gil"
+Candidate	David Goossen	"Goossen, David"
+Candidate	Tony Gumina	"Gumina, Tony"
+Candidate	Susie Lee	"Lee, Susie"
+Candidate	Danny Tarkanian	"Tarkanian, Danny"
+Candidate	Harry L. Vickers	"Vickers, Harry L."
+Candidate	"Jack ""Fat Jack"" Cochran"	"Cochran, Jack ""Fat Jack"""
+Candidate	Glen Leavitt	"Leavitt, Glen"
+Candidate	Ralph Preta	"Preta, Ralph"
+Candidate	JOE HARDY	"HARDY, JOE"
+Candidate	Craig Jordahl	"Jordahl, Craig"
+Candidate	Jordan Ross	"Ross, Jordan"
+Candidate	Irene Cepeda	"Cepeda, Irene"
+Candidate	KEVIN L. CHILD	"CHILD, KEVIN L."
+Candidate	Michelle Gorelow	"Gorelow, Michelle"
+Candidate	Daniel Hofstein	"Hofstein, Daniel"
+Candidate	David Schoen	"Schoen, David"
+Candidate	Tiffany Jones	"Jones, Tiffany"
+Candidate	Melanie Scheible	"Scheible, Melanie"
+Candidate	Sandra Jauregui	"Jauregui, Sandra"
+Candidate	Paris Wade	"Wade, Paris"
+Candidate	"Richard ""Rick"" Bronstein"	"Bronstein, Richard ""Rick"""
+Candidate	Julie Pazina	"Pazina, Julie"
+Candidate	Keith Pickard	"Pickard, Keith"
+Candidate	Lesley Elizabeth Cohen	"Cohen, Lesley Elizabeth"
+Candidate	Bruce James-Newman	"James-Newman, Bruce"
+Candidate	Stephen H. Silberkraus	"Silberkraus, Stephen H."
+Candidate	Gary P. Rogers	"Rogers, Gary P."
+Candidate	Amber Carter	"Carter, Amber"
+Candidate	Larry Shupe	"Shupe, Larry"
+Candidate	Joe Pitts	"Pitts, Joe"
+Candidate	Kenny Taylor	"Taylor, Kenny"
+Candidate	Melissa Hardy	"Hardy, Melissa"
+Candidate	Kristee Watson	"Watson, Kristee"
+Candidate	Amy Carvalho	"Carvalho, Amy"
+Candidate	Andrew Coates	"Coates, Andrew"
+Candidate	Linda Cannon	"Cannon, Linda"
+Candidate	Steve Yeager	"Yeager, Steve"
+Candidate	Alexander Assefa	"Assefa, Alexander"
+Candidate	Heidi Swank	"Swank, Heidi"
+Candidate	Yvanna Cancela	"Cancela, Yvanna"
+Candidate	STEVE HAMPE	"HAMPE, STEVE"
+Candidate	Robert D. Martin	"Martin, Robert D."
+Candidate	Victor Lee Miller	"Miller, Victor Lee"
+Candidate	Dennis Hof	"Hof, Dennis"
+Candidate	Lesia Romanov	"Romanov, Lesia"
+Candidate	ROBERT L. ELIASON	"ELIASON, ROBERT L."
+Candidate	Jimmy Vega	"Vega, Jimmy"
+Candidate	Daniele Monroe-Moreno	"Monroe-Moreno, Daniele"
+Candidate	Cresent Hardy	"Hardy, Cresent"
+Candidate	Steven A. Horsford	"Horsford, Steven A."
+Candidate	Gregg Luckner	"Luckner, Gregg"
+Candidate	Warren Ross Markowitz	"Markowitz, Warren Ross"
+Candidate	Dean McGonigle	"McGonigle, Dean"
+Candidate	Rodney Smith	"Smith, Rodney"
+Candidate	Jo Cato	"Cato, Jo"
+Candidate	Laura E. Perkins	"Perkins, Laura E."
+Candidate	Dina Neal	"Neal, Dina"
+Candidate	Leon S. Frei	"Frei, Leon S."
+Candidate	Chris Edwards	"Edwards, Chris"
+Candidate	Richard Fletcher	"Fletcher, Richard"
+Candidate	Mary Elizabeth Boyer Martinez	"Martinez, Mary Elizabeth Boyer"
+Candidate	Susan Martinez	"Martinez, Susan"
+Candidate	Ron McGinnis	"McGinnis, Ron"
+Candidate	James Ohrenschall	"Ohrenschall, James"
+Candidate	Bob Lystrup	"Lystrup, Bob"
+Candidate	Richard McArthur	"McArthur, Richard"
+Candidate	Connie Munk	"Munk, Connie"
+Candidate	Leonard Foster	"Foster, Leonard"
+Candidate	Tom Roberts	"Roberts, Tom"
+Candidate	"Patricia ""Pat"" Little"	"Little, Patricia ""Pat"""
+Candidate	Ronald Newsome	"Newsome, Ronald"
+Candidate	Tyrone THOMPSON	"THOMPSON, Tyrone"
+Candidate	Maggie CARLTON	"CARLTON, Maggie"
+Candidate	Sandra Ramaker	"Ramaker, Sandra"
+Candidate	Geno Withelder	"Withelder, Geno"
+Candidate	David P. Ballweg	"Ballweg, David P."
+Candidate	George H. Gault	"Gault, George H."
+Candidate	"Ann ""Annie"" Black"	"Black, Ann ""Annie"""
+Candidate	Karen Fielding	"Fielding, Karen"
+Candidate	Duane L. Thurston	"Thurston, Duane L."
+Candidate	John Burrows	"Burrows, John"
+Candidate	BEN K. DAVIS	"DAVIS, BEN K."
+Candidate	Jere A. Walker	"Walker, Jere A."
+Candidate	Josh Jensen	"Jensen, Josh"
+Candidate	LINDA CAVAZOS	"CAVAZOS, LINDA"
+Candidate	Ryan Scalia	"Scalia, Ryan"
+Candidate	Shea Backus	"Backus, Shea"
+Candidate	Jim Marchant	"Marchant, Jim"
+Candidate	Erik L. Laub	"Laub, Erik L."
+Candidate	DARRYLL B. DODENBIER	"DODENBIER, DARRYLL B."
+Candidate	Brian Douglas Haviland	"Haviland, Brian Douglas"
+Candidate	Edgar Flores	"Flores, Edgar"
+Candidate	"Calvin ""Cal"" Border"	"Border, Calvin ""Cal"""
+Candidate	MO DENIS	"DENIS, MO"
+Candidate	Shannon Bilbray-Axelrod	"Bilbray-Axelrod, Shannon"
+Candidate	Janice E. Wesen	"Wesen, Janice E."
+Candidate	John Hambrick	"Hambrick, John"
+Candidate	Jennie Sherwood	"Sherwood, Jennie"
+Candidate	Marilyn Dondero Loop	"Loop, Marilyn Dondero"
+Candidate	Valerie Weber	"Weber, Valerie"
+Candidate	Stephen G. Sedlmeyer	"Sedlmeyer, Stephen G."
+Candidate	Selena Torres	"Torres, Selena"
+Candidate	Chris Brooks	"Brooks, Chris"
+Candidate	Jonathan Friedrich	"Friedrich, Jonathan"
+Candidate	Noel Searles	"Searles, Noel"
+Candidate	Jason Burke	"Burke, Jason"
+Candidate	Brittney Miller	"Miller, Brittney"
+Candidate	II McCurdy	"McCurdy, II, William O'Neil"
+Candidate	Olivia Diaz	"Diaz, Olivia"
+Candidate	Gianna Miceli	"Miceli, Gianna"
+Candidate	Stan Vaughan	"Vaughan, Stan"
+Candidate	III Watts	"Watts, III, Howard"
+Candidate	Trish Marsh	"Marsh, Trish"
+Candidate	Tick Segerblom	"Segerblom, ""Tick"""
+Candidate	Michael L. McDonald	"McDonald, Michael L."
+Candidate	Ellen Spiegel	"Spiegel, Ellen"
+Candidate	Richard Carrillo	"Carrillo, Richard"
+Candidate	Matt Sadler	"Sadler, Matt"
+Candidate	Tisha Black	"Black, Tisha"
+Candidate	Justin Jones	"Jones, Justin"
+Candidate	Jim GIBSON	"GIBSON, Jim"
+Candidate	Cindy Lake	"Lake, Cindy"
+Candidate	Doug Marsh	"Marsh, Doug"
+Candidate	Paul E. Gilbert	"Gilbert, Paul E."
+Candidate	Trent Tholen	"Tholen, Trent"
+Candidate	Kathy Lewis	"Lewis, Kathy"
+Candidate	John Engels	"Engels, John"
+Candidate	Kristi Lynn Kandel	"Kandel, Kristi Lynn"
+Candidate	Wesley A. Rice	"Rice, Wesley A."
+Candidate	KAREN ELLISON	"ELLISON, KAREN"
+Candidate	Mark B. Jackson	"Jackson, Mark B."
+Candidate	Cassandra G. Jones	"Jones, Cassandra G."
+Candidate	Erik Levin	"Levin, Erik"
+Candidate	Steve Walsh	"Walsh, Steve"
+Candidate	Patricia Ackerman	"Ackerman, Patricia"
+Candidate	Paul Cwalina	"Cwalina, Paul"
+Candidate	Jim Wheeler	"Wheeler, Jim"
+Candidate	Brad Newlon	"Newlon, Brad"
+Candidate	John Sheridan	"Sheridan, John"
+Candidate	Robert Spellberg	"Spellberg, Robert"
+Candidate	Leann M. Teter	"Teter, Leann M."
+Candidate	Mike King	"King, Mike"
+Candidate	Mary Schilling	"Schilling, Mary"
+Candidate	Ted Thran	"Thran, Ted"
+Candidate	Ray Wilson	"Wilson, Ray"
+Candidate	Aaron Hampton	"Hampton, Aaron"
+Candidate	Michael Henningsen	"Henningsen, Michael"
+Candidate	Kenneth Miller	"Miller, Kenneth"
+Candidate	Linda L. Slater	"Slater, Linda L."
+Candidate	Brian Trute	"Trute, Brian"
+Candidate	Kathryn Clark-Ross	"Clark-Ross, Kathryn"
+Candidate	Bill Eisele	"Eisele, Bill"
+Candidate	Robert M. Garcia	"Garcia, Robert M."
+Candidate	Gennady II Stolyarov	"Stolyarov, Gennady II"
+Candidate	Matt Bernard	"Bernard, Matt"
+Candidate	Bill Driscoll	"Driscoll, Bill"
+Candidate	Richard Sr. Koontz	"Koontz, Richard Sr."
+Candidate	"William R. ""Bill"" Souligny"	"Souligny, William R. ""Bill"""
+Candidate	Roxanne Stangle	"Stangle, Roxanne"
+Candidate	"Charles ""Chuck"" Fagen"	"Fagen, Charles ""Chuck"""
+Candidate	Keith E. Fertala	"Fertala, Keith E."
+Candidate	Hunter Harris	"Harris, Hunter"
+Candidate	Janet Murphy	"Murphy, Janet"
+Candidate	Carl N. Ruschmeyer	"Ruschmeyer, Carl N."
+Candidate	"William ""Bill"" Kirschner"	"Kirschner, William ""Bill"""
+Candidate	Dan Norman	"Norman, Dan"
+Candidate	"Sandra ""Sandy"" Parks"	"Parks, Sandra ""Sandy"""
+Candidate	Darya Vogt	"Vogt, Darya"
+Candidate	KATRINKA S. RUSSELL	"RUSSELL, KATRINKA S."
+Candidate	"KRISTINE ""KRIS"" JAKEMAN"	"JAKEMAN, KRISTINE ""KRIS"""
+Candidate	CHERYL PAUL	"PAUL, CHERYL"
+Candidate	DELMO ANDREOZZI	"ANDREOZZI, DELMO"
+Candidate	CLIFF EKLUND	"EKLUND, CLIFF"
+Candidate	D. MIKE SMALES	"SMALES, D. MIKE"
+Candidate	TYLER INGRAM	"INGRAM, TYLER"
+Candidate	BILL HANCE	"HANCE, BILL"
+Candidate	TONY LIKER	"LIKER, TONY"
+Candidate	JEANNA SECRIST	"SECRIST, JEANNA"
+Candidate	RO SMITH	"SMITH, RO"
+Candidate	CHIP STONE	"STONE, CHIP"
+Candidate	REECE KEENER	"KEENER, REECE"
+Candidate	MARCEY LOGSDEN	"LOGSDEN, MARCEY"
+Candidate	ANTOINETTE CHIESA	"CHIESA, ANTOINETTE"
+Candidate	MASON EDWARD SIMONS	"SIMONS, MASON EDWARD"
+Candidate	STACIE PHILLIPS	"PHILLIPS, STACIE"
+Candidate	BRIAN ZEISZLER	"ZEISZLER, BRIAN"
+Candidate	EMILY CARTER	"CARTER, EMILY"
+Candidate	CANDACE WINES	"WINES, CANDACE"
+Candidate	AITOR NARVAIZA	"NARVAIZA, AITOR"
+Candidate	JIM PITTS	"PITTS, JIM"
+Candidate	John C. Ellison	"Ellison, John C."
+Candidate	CAMERON KINNEY	"KINNEY, CAMERON"
+Candidate	SABRA ESPARZA	"ESPARZA, SABRA"
+Candidate	WAYNE A. EVENSON	"EVENSON, WAYNE A."
+Candidate	"PATRICIA ""PAM"" GRISWOLD"	"GRISWOLD, PATRICIA ""PAM"""
+Candidate	LINCOLN LITCHFIELD	"LITCHFIELD, LINCOLN"
+Candidate	DANA DON HOLBROOK	"HOLBROOK, DANA DON"
+Candidate	JONATHAN GOOLSBY	"GOOLSBY, JONATHAN"
+Candidate	MICHAEL K. PACE	"PACE, MICHAEL K."
+Candidate	ROBERT WOOLSEY	"WOOLSEY, ROBERT"
+Candidate	LAYLA WALZ	"WALZ, LAYLA"
+Candidate	JEFF R. DURHAM	"DURHAM, JEFF R."
+Candidate	KATHY DURHAM	"DURHAM, KATHY"
+Candidate	"ISMAEL ""IZZY"" GUTIERREZ"	"GUTIERREZ, ISMAEL ""IZZY"" "
+Candidate	JOHN B. HANSON	"HANSON, JOHN B."
+Candidate	JASIE HOLM	"HOLM, JASIE"
+Candidate	MICHAEL CHRISTENSEN	"CHRISTENSEN, MICHAEL"
+Candidate	MARIA G. ORTEGA	"ORTEGA, MARIA G."
+Candidate	BRIAN RAY	"RAY, BRIAN"
+Candidate	JARED F. CARTER	"CARTER, JARED F."
+Candidate	GERARDO RODRIGUEZ	"RODRIGUEZ, GERARDO"
+Candidate	RUTH P. LEE	"LEE, RUTH P."
+Candidate	VERA BOYER	"BOYER, VERA"
+Candidate	"PATRICIA ""PATTY"" HUBER-BETH"	"HUBER-BETH, PATRICIA ""PATTY"""
+Candidate	"LaCinda ""CINDY"" ELGAN"	"ELGAN, LaCinda ""CINDY"""
+Candidate	TIMOTHY HIPP	"HIPP, TIMOTHY"
+Candidate	MARK STEZAKER	"STEZAKER, MARK"
+Candidate	ROBERT E. III GLENNEN	"GLENNEN, ROBERT E. III"
+Candidate	ALEXIS M. HANSEN	"HANSEN, ALEXIS M."
+Candidate	PAULA POVILAITIS	"POVILAITIS, PAULA"
+Candidate	WENDY BOSZAK	"BOSZAK, WENDY"
+Candidate	IRA HANSEN	"HANSEN, IRA"
+Candidate	MICHAEL A. MEARS	"MEARS, MICHAEL A."
+Candidate	LISA L. HOEHNE	"HOEHNE, LISA L."
+Candidate	AMANDA JEAN PEARCE	"PEARCE, AMANDA JEAN"
+Candidate	RICH MCKAY	"MCKAY, RICH"
+Candidate	BEVERLY CONLEY	"CONLEY, BEVERLY"
+Candidate	"THEODORE ""TED"" BEUTEL"	"BEUTEL, THEODORE ""TED"""
+Candidate	DOROTHY ROWLEY	"ROWLEY, DOROTHY"
+Candidate	MELYNDA SHARKOZY	"SHARKOZY, MELYNDA"
+Candidate	MELISSA FITZWATER	"FITZWATER, MELISSA"
+Candidate	ROBIN HICKS	"HICKS, ROBIN"
+Candidate	JIM IZZOLO	"IZZOLO, JIM"
+Candidate	BRANDI ANDERSON	"ANDERSON, BRANDI"
+Candidate	DARLA R. BAUMANN	"BAUMANN, DARLA R."
+Candidate	Gary Horky	"Horky, Gary"
+Candidate	Theresa Mavity	"Mavity, Theresa"
+Candidate	Jim Billingsley	"Billingsley, Jim"
+Candidate	Fredrick Bryant	"Bryant, Fredrick"
+Candidate	Paige Brooks	"Brooks, Paige"
+Candidate	Rich Stone	"Stone, Rich"
+Candidate	"WILLIAM ""JEFF"" JOHNSON"	"JOHNSON, WILLIAM ""JEFF"""
+Candidate	Tami Rae Spero	"Spero, Tami Rae"
+Candidate	Ronald L. Cerri	"Cerri, Ronald L."
+Candidate	Jim French	"French, Jim"
+Candidate	Deborah Engstrom	"Engstrom, Deborah"
+Candidate	Rhona Lecumberry	"Lecumberry, Rhona"
+Candidate	MICHAEL MACDONALD	"MACDONALD, MICHAEL"
+Candidate	Gene Hunt	"Hunt, Gene"
+Candidate	Joel Murphy	"Murphy, Joel"
+Candidate	Bill Douglas	"Douglas, Bill"
+Candidate	Christopher R. Entwistle	"Entwistle, Christopher R."
+Candidate	Jim Loveless	"Loveless, Jim"
+Candidate	Matt Morgan	"Morgan, Matt"
+Candidate	LURA DUVALL	"DUVALL, LURA"
+Candidate	Leann Miller	"Miller, Leann"
+Candidate	SADIE SULLIVAN	"SULLIVAN, SADIE"
+Candidate	Bryan Sparks	"Sparks, Bryan"
+Candidate	Art III Clark	"Clark, Art III"
+Candidate	Harry L. Sr. Dimitroff	"Dimitroff, Harry L. Sr."
+Candidate	Kathleen V. Ancho	"Ancho, Kathleen V."
+Candidate	Manuel II Moreno	"Moreno, Manuel II"
+Candidate	LESLEY L. BUNCH	"BUNCH, LESLEY L."
+Candidate	Tina Marie Bisiaux	"Bisiaux, Tina Marie"
+Candidate	Jusdivia Johnson	"Johnson, Jusdivia"
+Candidate	Theodore C. Herrera	"Herrera, Theodore C."
+Candidate	Denise Fortune	"Fortune, Denise"
+Candidate	Toby Melver	"Melver, Toby"
+Candidate	Billy Gandolfo	"Gandolfo, Billy"
+Candidate	Mark Holt	"Holt, Mark"
+Candidate	Lisa Lloyd	"Lloyd, Lisa"
+Candidate	Jared Brackenbury	"Brackenbury, Jared"
+Candidate	Ron Hibble	"Hibble, Ron"
+Candidate	Bevan Lister	"Lister, Bevan"
+Candidate	Kevin J. Phillips	"Phillips, Kevin J."
+Candidate	Amy Nicole Elmer	"Elmer, Amy Nicole"
+Candidate	Bob McCleary	"McCleary, Bob"
+Candidate	Shawn Frehner	"Frehner, Shawn"
+Candidate	Dylan V. Frehner	"Frehner, Dylan V."
+Candidate	Carol J. Hansen	"Hansen, Carol J."
+Candidate	Carolyn Harr	"Harr, Carolyn"
+Candidate	Kerry D. Lee	"Lee, Kerry D."
+Candidate	Evan W. Schimbeck	"Schimbeck, Evan W."
+Candidate	Jeff Childers	"Childers, Jeff"
+Candidate	Mike D. Cowley	"Cowley, Mike D."
+Candidate	Troy R. Villines	"Villines, Troy R."
+Candidate	Nikki Bryan	"Bryan, Nikki"
+Candidate	Vida D. Keller	"Keller, Vida D."
+Candidate	Greg Hunewill	"Hunewill, Greg"
+Candidate	Brenda K. Cullen	"Cullen, Brenda K."
+Candidate	Margie Kassebaum	"Kassebaum, Margie"
+Candidate	Stephen B. Rye	"Rye, Stephen B."
+Candidate	"Douglas ""Doug"" Kassebaum"	"Kassebaum, Douglas ""Doug"""
+Candidate	"Cary ""Rick"" Smith"	"Smith, Cary ""Rick"""
+Candidate	Cassandra Aveiro	"Aveiro, Cassandra"
+Candidate	Barbara Jean Jones	"Jones, Barbara Jean"
+Candidate	Frank Hunewill	"Hunewill, Frank"
+Candidate	AL MCNEIL	"MCNEIL, AL"
+Candidate	"Charles ""Chuck"" Kennedy"	"Kennedy, Charles ""Chuck"""
+Candidate	Kathy McIntosh	"McIntosh, Kathy"
+Candidate	Avis Moniz	"Moniz, Avis"
+Candidate	Alicia Norris	"Norris, Alicia"
+Candidate	Terrin Hicks	"Hicks, Terrin"
+Candidate	Matt Johnson	"Johnson, Matt"
+Candidate	Chris Murphy	"Murphy, Chris"
+Candidate	Sue Seidl	"Seidl, Sue"
+Candidate	Ray Lacy	"Lacy, Ray"
+Candidate	Shari L. Whalen	"Whalen, Shari L."
+Candidate	Kevin B. Chisum	"Chisum, Kevin B."
+Candidate	Janeen Clark	"Clark, Janeen"
+Candidate	Christopher Nepper	"Nepper, Christopher"
+Candidate	Michael Guss	"Guss, Michael"
+Candidate	Christine Hoferer	"Hoferer, Christine"
+Candidate	Norman E. Williams	"Williams, Norman E."
+Candidate	Cindy Nixon	"Nixon, Cindy"
+Candidate	Donna Oberhansli	"Oberhansli, Donna"
+Candidate	Sean Alden Rowe	"Rowe, Sean Alden"
+Candidate	Mike James	"James, Mike"
+Candidate	Paula Joe Reed	"Reed, Paula Joe"
+Candidate	Keith E. Neville	"Neville, Keith E."
+Candidate	David Ziegler	"Ziegler, David"
+Candidate	BETH CICHOWLAZ	"CICHOWLAZ, BETH"
+Candidate	Randy Adams	"Adams, Randy"
+Candidate	Earl William Perry	"Perry, Earl William"
+Candidate	ANDY ALBERTI	"ALBERTI, ANDY"
+Candidate	SHEREE STRINGER	"STRINGER, SHEREE"
+Candidate	"SANDRA ""SAM"" MERLINO"	"MERLINO, SANDRA ""SAM"""
+Candidate	SHEILA WINN	"WINN, SHEILA"
+Candidate	DEBORAH BEATTY	"BEATTY, DEBORAH"
+Candidate	MICHAEL S. NOYES	"NOYES, MICHAEL S."
+Candidate	LANCE ROY SCHAUS	"SCHAUS, LANCE ROY"
+Candidate	PAM WEBSTER	"WEBSTER, PAM"
+Candidate	CHRIS ARABIA	"ARABIA, CHRIS"
+Candidate	NICHOLAS ANTHONY DEL VECCHIO	"DEL VECCHIO, NICHOLAS ANTHONY"
+Candidate	GINGER L. STUMNE	"STUMNE, GINGER L."
+Candidate	Tony DeMeo	"DeMeo, Tony"
+Candidate	SHARON A. WEHRLY	"WEHRLY, SHARON A."
+Candidate	HORACE H. CARLYLE	"CARLYLE, HORACE H."
+Candidate	DON KAMINSKI	"KAMINSKI, DON"
+Candidate	TIMAREE KOSCIK	"KOSCIK, TIMAREE"
+Candidate	JUSTIN B. ZIMMERMAN	"ZIMMERMAN, JUSTIN B."
+Candidate	FRANK CARBONE	"CARBONE, FRANK"
+Candidate	LISA CHAMLEE	"CHAMLEE, LISA"
+Candidate	SEAN C. HASTINGS	"HASTINGS, SEAN C."
+Candidate	TAWNA YAZZIE	"YAZZIE, TAWNA"
+Candidate	LEO BLUNDO	"BLUNDO, LEO"
+Candidate	RICHARD GOLDSTEIN	"GOLDSTEIN, RICHARD"
+Candidate	MARK OWENS	"OWENS, MARK"
+Candidate	DONALD E. RUST	"RUST, DONALD E."
+Candidate	DEBRA STRICKLAND	"STRICKLAND, DEBRA"
+Candidate	LAUREEN E. BASSO-CERINI	"BASSO-CERINI, LAUREEN E."
+Candidate	LACEY DONALDSON	"DONALDSON, LACEY"
+Candidate	KRISTY BERGE	"BERGE, KRISTY"
+Candidate	CAROL A. SHANK	"SHANK, CAROL A."
+Candidate	RENE M. CHILDS	"CHILDS, RENE M."
+Candidate	R. BRYCE SHIELDS	"SHIELDS, R. BRYCE"
+Candidate	JEFFREY KEARNS	"KEARNS, JEFFREY"
+Candidate	CINDY PLUMMER	"PLUMMER, CINDY"
+Candidate	BARBARA RACKLEY	"RACKLEY, BARBARA"
+Candidate	JANA SEDDON	"SEDDON, JANA"
+Candidate	VANESSA STEPHENS	"STEPHENS, VANESSA"
+Candidate	Nicole Barde	"Barde, Nicole"
+Candidate	Jay Carmona	"Carmona, Jay"
+Candidate	JEN CHAPMAN	"CHAPMAN, JEN"
+Candidate	ANNE LANGER	"LANGER, ANNE"
+Candidate	Jeffrey M. Nevin	"Nevin, Jeffrey M."
+Candidate	Sam Toll	"Toll, Sam"
+Candidate	Eddie Lorton	"Lorton, Eddie"
+Candidate	Hillary Schieve	"Schieve, Hillary"
+Candidate	Michael E. Clark	"Clark, Michael E."
+Candidate	"Hugh ""Chip"" Evans"	"Evans, Hugh ""Chip"""
+Candidate	Nancy Parent	"Parent, Nancy"
+Candidate	Emil Tudorache	"Tudorache, Emil"
+Candidate	Lawrence Burtness	"Burtness, Lawrence"
+Candidate	Kalie Work	"Work, Kalie"
+Candidate	Matthew R. Buehler	"Buehler, Matthew R."
+Candidate	Tammi Davis	"Davis, Tammi"
+Candidate	Chris Hicks	"Hicks, Chris"
+Candidate	Kathleen M. Drakulich	"Drakulich, Kathleen M."
+Candidate	Aaron Bushur	"Bushur, Aaron"
+Candidate	Dixie Grossman	"Grossman, Dixie"
+Candidate	Egan Walker	"Walker, Egan"
+Candidate	Barry Breslow	"Breslow, Barry"
+Candidate	DON CAVALLO	"CAVALLO, DON"
+Candidate	Verita Black Prothro	"Prothro, Verita Black"
+Candidate	Karl S. Hall	"Hall, Karl S."
+Candidate	JOHN J. KADLIC	"KADLIC, JOHN J."
+Candidate	Darin Balaam	"Balaam, Darin"
+Candidate	Heidi Howe	"Howe, Heidi"
+Candidate	Sarah Peters	"Peters, Sarah"
+Candidate	Julia Ratti	"Ratti, Julia"
+Candidate	Charlene Y. Young	"Young, Charlene Y."
+Candidate	Teresa Benitez-Thompson	"Benitez-Thompson, Teresa"
+Candidate	Gregory J. Shorts	"Shorts, Gregory J."
+Candidate	Jill Tolles	"Tolles, Jill"
+Candidate	Bill Johnson	"Johnson, Bill"
+Candidate	Kitty K. Jung	"Jung, Kitty K."
+Candidate	Jacqueline Calvert	"Calvert, Jacqueline"
+Candidate	Jeffrey Church	"Church, Jeffrey"
+Candidate	Jeanne Herman	"Herman, Jeanne"
+Candidate	Lindsy Judd	"Judd, Lindsy"
+Candidate	Richard Bein	"Bein, Richard"
+Candidate	Bruce Comer	"Comer, Bruce"
+Candidate	Hud Horton	"Horton, Hud"
+Candidate	Robert Unsworth	"Unsworth, Robert"
+Candidate	NANCY E. ZUNINO	"ZUNINO, NANCY E."
+Candidate	Naomi Duerr	"Duerr, Naomi"
+Candidate	Joe Lawrence	"Lawrence, Joe"
+Candidate	Bob Lucey	"Lucey, Bob"
+Candidate	Stephen Wolgast	"Wolgast, Stephen"
+Candidate	June Joseph	"Joseph, June"
+Candidate	Lisa Krasner	"Krasner, Lisa"
+Candidate	Michael Sprinkle	"Sprinkle, Michael"
+Candidate	Paul D. McKenzie	"McKenzie, Paul D."
+Candidate	Bonnie Weber	"Weber, Bonnie"
+Candidate	Ellen Minetto	"Minetto, Ellen"
+Candidate	Dian Vanderwell	"Vanderwell, Dian"
+Candidate	Andrew Benjamin Caudill	"Caudill, Andrew Benjamin"
+Candidate	Debra Smith Feemster	"Feemster, Debra Smith"
+Candidate	"Richard ""Skip"" Daly"	"Daly, Richard ""Skip"""
+Candidate	Jill Ann Dickman	"Dickman, Jill Ann"
+Candidate	Sandra Ainsworth	"Ainsworth, Sandra"
+Candidate	Suzanne Dutra	"Dutra, Suzanne"
+Candidate	Michael Rider	"Rider, Michael"
+Candidate	Susan Severt	"Severt, Susan"
+Candidate	James Currivan	"Currivan, James"
+Candidate	Greg Dennis	"Dennis, Greg"
+Candidate	Larry J. Johnson	"Johnson, Larry J."
+Candidate	Donald Otto	"Otto, Donald"
+Candidate	Zachary Rhodes	"Rhodes, Zachary"
+Candidate	Hans R. Keller	"Keller, Hans R."
+Candidate	Tim G. Callicrate	"Callicrate, Tim G."
+Candidate	Sara Schmitz	"Schmitz, Sara"
+Candidate	Bruce Edward Simonian	"Simonian, Bruce Edward"
+Candidate	Kendra W. Wong	"Wong, Kendra W."
+Candidate	Burton W. Hilton	"Hilton, Burton W."
+Candidate	Nichole Baldwin	"Baldwin, Nichole"
+Candidate	Ian Bullis	"Bullis, Ian"
+Candidate	George Chachas	"Chachas, George"
+Candidate	Travis Godon	"Godon, Travis"
+Candidate	MARTHA RIVERA SINDELAR	"SINDELAR, MARTHA RIVERA"
+Candidate	CATHERINE BAKARIC	"BAKARIC, CATHERINE"
+Candidate	Michael A. Wheable	"Wheable, Michael A."
+Candidate	Stephen J. Bishop	"Bishop, Stephen J."
+Candidate	Matt Hibbs	"Hibbs, Matt"
+Candidate	Amy Adams	"Adams, Amy"
+Candidate	Cade H. Willes	"Willes, Cade H."
+Candidate	Scott Henriod	"Henriod, Scott"
+Candidate	Ray Sawyer	"Sawyer, Ray"
+Candidate	Sid Beckwith	"Beckwith, Sid"
+Candidate	Ericson Skye	"Skye, Ericson"
+Party	Unknown	Unknown
+CountItemType	total	Votes
+BallotMeasureSelection	Yes	Yes
+BallotMeasureSelection	No	No
+BallotMeasureContestState Question No. 1	State Question No. 1	State Question No. 1

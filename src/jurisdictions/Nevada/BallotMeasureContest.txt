@@ -1,0 +1,2 @@
+Name	ElectionDistrict	Election
+State Question No. 1	Nevada	2018 General

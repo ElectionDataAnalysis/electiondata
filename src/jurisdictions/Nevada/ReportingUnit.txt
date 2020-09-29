@@ -1,0 +1,2146 @@
+Name	ReportingUnitType
+Nevada;NV House District 1	state-house
+Nevada;NV House District 2	state-house
+Nevada;NV House District 3	state-house
+Nevada;NV House District 4	state-house
+Nevada;NV House District 5	state-house
+Nevada;NV House District 6	state-house
+Nevada;NV House District 7	state-house
+Nevada;NV House District 8	state-house
+Nevada;NV House District 9	state-house
+Nevada;NV House District 10	state-house
+Nevada;NV House District 11	state-house
+Nevada;NV House District 12	state-house
+Nevada;NV House District 13	state-house
+Nevada;NV House District 14	state-house
+Nevada;NV House District 15	state-house
+Nevada;NV House District 16	state-house
+Nevada;NV House District 17	state-house
+Nevada;NV House District 18	state-house
+Nevada;NV House District 19	state-house
+Nevada;NV House District 20	state-house
+Nevada;NV House District 21	state-house
+Nevada;NV House District 22	state-house
+Nevada;NV House District 23	state-house
+Nevada;NV House District 24	state-house
+Nevada;NV House District 25	state-house
+Nevada;NV House District 26	state-house
+Nevada;NV House District 27	state-house
+Nevada;NV House District 28	state-house
+Nevada;NV House District 29	state-house
+Nevada;NV House District 30	state-house
+Nevada;NV House District 31	state-house
+Nevada;NV House District 32	state-house
+Nevada;NV House District 33	state-house
+Nevada;NV House District 34	state-house
+Nevada;NV House District 35	state-house
+Nevada;NV House District 36	state-house
+Nevada;NV House District 37	state-house
+Nevada;NV House District 38	state-house
+Nevada;NV House District 39	state-house
+Nevada;NV House District 40	state-house
+Nevada;NV House District 41	state-house
+Nevada;NV House District 42	state-house
+Nevada;NV Senate District 1	state-senate
+Nevada;NV Senate District 2	state-senate
+Nevada;NV Senate District 3	state-senate
+Nevada;NV Senate District 4	state-senate
+Nevada;NV Senate District 5	state-senate
+Nevada;NV Senate District 6	state-senate
+Nevada;NV Senate District 7	state-senate
+Nevada;NV Senate District 8	state-senate
+Nevada;NV Senate District 9	state-senate
+Nevada;NV Senate District 10	state-senate
+Nevada;NV Senate District 11	state-senate
+Nevada;NV Senate District 12	state-senate
+Nevada;NV Senate District 13	state-senate
+Nevada;NV Senate District 14	state-senate
+Nevada;NV Senate District 15	state-senate
+Nevada;NV Senate District 16	state-senate
+Nevada;NV Senate District 17	state-senate
+Nevada;NV Senate District 18	state-senate
+Nevada;NV Senate District 19	state-senate
+Nevada;NV Senate District 20	state-senate
+Nevada;NV Senate District 21	state-senate
+Nevada;US House NV District 1	congressional
+Nevada;US House NV District 2	congressional
+Nevada;US House NV District 3	congressional
+Nevada;US House NV District 4	congressional
+Nevada	state
+Nevada;Carson City;101	precinct
+Nevada;Carson City;103	precinct
+Nevada;Carson City;105	precinct
+Nevada;Carson City;107	precinct
+Nevada;Carson City;109	precinct
+Nevada;Carson City;111	precinct
+Nevada;Carson City;113	precinct
+Nevada;Carson City;201	precinct
+Nevada;Carson City;203	precinct
+Nevada;Carson City;205	precinct
+Nevada;Carson City;207	precinct
+Nevada;Carson City;209	precinct
+Nevada;Carson City;211	precinct
+Nevada;Carson City;301	precinct
+Nevada;Carson City;303	precinct
+Nevada;Carson City;305	precinct
+Nevada;Carson City;307	precinct
+Nevada;Carson City;309	precinct
+Nevada;Carson City;401	precinct
+Nevada;Carson City;403	precinct
+Nevada;Carson City;405	precinct
+Nevada;Carson City;407	precinct
+Nevada;Carson City;409	precinct
+Nevada;Carson City;411	precinct
+Nevada;Carson City;997	precinct
+Nevada;Churchill;Precinct 01	precinct
+Nevada;Churchill;Precinct 02	precinct
+Nevada;Churchill;Precinct 03	precinct
+Nevada;Churchill;Precinct 04	precinct
+Nevada;Churchill;Precinct 05	precinct
+Nevada;Churchill;Precinct 06	precinct
+Nevada;Churchill;Precinct 07	precinct
+Nevada;Churchill;Precinct 08	precinct
+Nevada;Churchill;Precinct 09	precinct
+Nevada;Churchill;Precinct 10	precinct
+Nevada;Churchill;Precinct 11	precinct
+Nevada;Churchill;Precinct 12	precinct
+Nevada;Churchill;Precinct 13	precinct
+Nevada;Churchill;Precinct 14	precinct
+Nevada;Churchill;Precinct 15	precinct
+Nevada;Churchill;Precinct 16	precinct
+Nevada;Churchill;Precinct 17	precinct
+Nevada;Churchill;Precinct 18	precinct
+Nevada;Churchill;Precinct 19	precinct
+Nevada;Churchill;Precinct 99	precinct
+Nevada;Clark;1038	precinct
+Nevada;Clark;1039	precinct
+Nevada;Clark;1063	precinct
+Nevada;Clark;1067	precinct
+Nevada;Clark;1072	precinct
+Nevada;Clark;1074	precinct
+Nevada;Clark;1137	precinct
+Nevada;Clark;1302	precinct
+Nevada;Clark;1303	precinct
+Nevada;Clark;1304	precinct
+Nevada;Clark;1307	precinct
+Nevada;Clark;1309	precinct
+Nevada;Clark;1318	precinct
+Nevada;Clark;1327	precinct
+Nevada;Clark;1328	precinct
+Nevada;Clark;1330	precinct
+Nevada;Clark;1331	precinct
+Nevada;Clark;1332	precinct
+Nevada;Clark;1333	precinct
+Nevada;Clark;1334	precinct
+Nevada;Clark;1335	precinct
+Nevada;Clark;1336	precinct
+Nevada;Clark;1337	precinct
+Nevada;Clark;1340	precinct
+Nevada;Clark;1341	precinct
+Nevada;Clark;1342	precinct
+Nevada;Clark;1343	precinct
+Nevada;Clark;1344	precinct
+Nevada;Clark;1345	precinct
+Nevada;Clark;1346	precinct
+Nevada;Clark;1348	precinct
+Nevada;Clark;1349	precinct
+Nevada;Clark;1351	precinct
+Nevada;Clark;1352	precinct
+Nevada;Clark;1353	precinct
+Nevada;Clark;1354	precinct
+Nevada;Clark;1356	precinct
+Nevada;Clark;1361	precinct
+Nevada;Clark;1363	precinct
+Nevada;Clark;1365	precinct
+Nevada;Clark;1367	precinct
+Nevada;Clark;1368	precinct
+Nevada;Clark;1370	precinct
+Nevada;Clark;1371	precinct
+Nevada;Clark;1374	precinct
+Nevada;Clark;1375	precinct
+Nevada;Clark;1376	precinct
+Nevada;Clark;1377	precinct
+Nevada;Clark;1378	precinct
+Nevada;Clark;1379	precinct
+Nevada;Clark;1380	precinct
+Nevada;Clark;1381	precinct
+Nevada;Clark;1382	precinct
+Nevada;Clark;1384	precinct
+Nevada;Clark;1385	precinct
+Nevada;Clark;1386	precinct
+Nevada;Clark;1387	precinct
+Nevada;Clark;1389	precinct
+Nevada;Clark;1390	precinct
+Nevada;Clark;1391	precinct
+Nevada;Clark;1394	precinct
+Nevada;Clark;1395	precinct
+Nevada;Clark;1396	precinct
+Nevada;Clark;1410	precinct
+Nevada;Clark;1411	precinct
+Nevada;Clark;1509	precinct
+Nevada;Clark;1510	precinct
+Nevada;Clark;1511	precinct
+Nevada;Clark;1513	precinct
+Nevada;Clark;1514	precinct
+Nevada;Clark;1517	precinct
+Nevada;Clark;1518	precinct
+Nevada;Clark;1519	precinct
+Nevada;Clark;1520	precinct
+Nevada;Clark;1521	precinct
+Nevada;Clark;1525	precinct
+Nevada;Clark;1528	precinct
+Nevada;Clark;1533	precinct
+Nevada;Clark;1543	precinct
+Nevada;Clark;1550	precinct
+Nevada;Clark;1552	precinct
+Nevada;Clark;1553	precinct
+Nevada;Clark;1601	precinct
+Nevada;Clark;1602	precinct
+Nevada;Clark;1603	precinct
+Nevada;Clark;1604	precinct
+Nevada;Clark;1605	precinct
+Nevada;Clark;1606	precinct
+Nevada;Clark;1607	precinct
+Nevada;Clark;1608	precinct
+Nevada;Clark;1609	precinct
+Nevada;Clark;1611	precinct
+Nevada;Clark;1612	precinct
+Nevada;Clark;1613	precinct
+Nevada;Clark;1614	precinct
+Nevada;Clark;1615	precinct
+Nevada;Clark;1616	precinct
+Nevada;Clark;1617	precinct
+Nevada;Clark;1618	precinct
+Nevada;Clark;1619	precinct
+Nevada;Clark;1621	precinct
+Nevada;Clark;1623	precinct
+Nevada;Clark;1624	precinct
+Nevada;Clark;1625	precinct
+Nevada;Clark;1631	precinct
+Nevada;Clark;1632	precinct
+Nevada;Clark;1633	precinct
+Nevada;Clark;1634	precinct
+Nevada;Clark;1635	precinct
+Nevada;Clark;1641	precinct
+Nevada;Clark;1642	precinct
+Nevada;Clark;1643	precinct
+Nevada;Clark;1644	precinct
+Nevada;Clark;1645	precinct
+Nevada;Clark;1651	precinct
+Nevada;Clark;1652	precinct
+Nevada;Clark;1653	precinct
+Nevada;Clark;1655	precinct
+Nevada;Clark;1661	precinct
+Nevada;Clark;1662	precinct
+Nevada;Clark;1664	precinct
+Nevada;Clark;1665	precinct
+Nevada;Clark;1668	precinct
+Nevada;Clark;1669	precinct
+Nevada;Clark;1670	precinct
+Nevada;Clark;1671	precinct
+Nevada;Clark;1672	precinct
+Nevada;Clark;1673	precinct
+Nevada;Clark;1674	precinct
+Nevada;Clark;1675	precinct
+Nevada;Clark;1676	precinct
+Nevada;Clark;1677	precinct
+Nevada;Clark;1678	precinct
+Nevada;Clark;1679	precinct
+Nevada;Clark;1680	precinct
+Nevada;Clark;1681	precinct
+Nevada;Clark;1682	precinct
+Nevada;Clark;1683	precinct
+Nevada;Clark;1684	precinct
+Nevada;Clark;1685	precinct
+Nevada;Clark;1686	precinct
+Nevada;Clark;1687	precinct
+Nevada;Clark;1688	precinct
+Nevada;Clark;1689	precinct
+Nevada;Clark;1691	precinct
+Nevada;Clark;1692	precinct
+Nevada;Clark;1693	precinct
+Nevada;Clark;1694	precinct
+Nevada;Clark;1695	precinct
+Nevada;Clark;1702	precinct
+Nevada;Clark;1703	precinct
+Nevada;Clark;1704	precinct
+Nevada;Clark;1711	precinct
+Nevada;Clark;1712	precinct
+Nevada;Clark;1713	precinct
+Nevada;Clark;1715	precinct
+Nevada;Clark;1717	precinct
+Nevada;Clark;1718	precinct
+Nevada;Clark;1719	precinct
+Nevada;Clark;1720	precinct
+Nevada;Clark;1721	precinct
+Nevada;Clark;1722	precinct
+Nevada;Clark;1727	precinct
+Nevada;Clark;1732	precinct
+Nevada;Clark;1750	precinct
+Nevada;Clark;1751	precinct
+Nevada;Clark;1753	precinct
+Nevada;Clark;2008	precinct
+Nevada;Clark;2037	precinct
+Nevada;Clark;2044	precinct
+Nevada;Clark;2078	precinct
+Nevada;Clark;2126	precinct
+Nevada;Clark;2352	precinct
+Nevada;Clark;2353	precinct
+Nevada;Clark;2354	precinct
+Nevada;Clark;2356	precinct
+Nevada;Clark;2360	precinct
+Nevada;Clark;2366	precinct
+Nevada;Clark;2371	precinct
+Nevada;Clark;2372	precinct
+Nevada;Clark;2373	precinct
+Nevada;Clark;2380	precinct
+Nevada;Clark;2381	precinct
+Nevada;Clark;2382	precinct
+Nevada;Clark;2383	precinct
+Nevada;Clark;2384	precinct
+Nevada;Clark;2385	precinct
+Nevada;Clark;2386	precinct
+Nevada;Clark;2387	precinct
+Nevada;Clark;2390	precinct
+Nevada;Clark;2391	precinct
+Nevada;Clark;2392	precinct
+Nevada;Clark;2393	precinct
+Nevada;Clark;2394	precinct
+Nevada;Clark;2399	precinct
+Nevada;Clark;2400	precinct
+Nevada;Clark;2401	precinct
+Nevada;Clark;2405	precinct
+Nevada;Clark;2406	precinct
+Nevada;Clark;2407	precinct
+Nevada;Clark;2408	precinct
+Nevada;Clark;2409	precinct
+Nevada;Clark;2417	precinct
+Nevada;Clark;2430	precinct
+Nevada;Clark;2436	precinct
+Nevada;Clark;2440	precinct
+Nevada;Clark;2444	precinct
+Nevada;Clark;2445	precinct
+Nevada;Clark;2446	precinct
+Nevada;Clark;2447	precinct
+Nevada;Clark;2449	precinct
+Nevada;Clark;2456	precinct
+Nevada;Clark;2457	precinct
+Nevada;Clark;2458	precinct
+Nevada;Clark;2463	precinct
+Nevada;Clark;2464	precinct
+Nevada;Clark;2465	precinct
+Nevada;Clark;2466	precinct
+Nevada;Clark;2468	precinct
+Nevada;Clark;2469	precinct
+Nevada;Clark;2473	precinct
+Nevada;Clark;2476	precinct
+Nevada;Clark;2477	precinct
+Nevada;Clark;2478	precinct
+Nevada;Clark;2479	precinct
+Nevada;Clark;2480	precinct
+Nevada;Clark;2481	precinct
+Nevada;Clark;2483	precinct
+Nevada;Clark;2484	precinct
+Nevada;Clark;2486	precinct
+Nevada;Clark;2487	precinct
+Nevada;Clark;2488	precinct
+Nevada;Clark;2489	precinct
+Nevada;Clark;2500	precinct
+Nevada;Clark;2501	precinct
+Nevada;Clark;2503	precinct
+Nevada;Clark;2600	precinct
+Nevada;Clark;2601	precinct
+Nevada;Clark;2602	precinct
+Nevada;Clark;2603	precinct
+Nevada;Clark;2604	precinct
+Nevada;Clark;2605	precinct
+Nevada;Clark;2606	precinct
+Nevada;Clark;2607	precinct
+Nevada;Clark;2608	precinct
+Nevada;Clark;2609	precinct
+Nevada;Clark;2611	precinct
+Nevada;Clark;2612	precinct
+Nevada;Clark;2613	precinct
+Nevada;Clark;2614	precinct
+Nevada;Clark;2615	precinct
+Nevada;Clark;2616	precinct
+Nevada;Clark;2617	precinct
+Nevada;Clark;2621	precinct
+Nevada;Clark;2622	precinct
+Nevada;Clark;2623	precinct
+Nevada;Clark;2624	precinct
+Nevada;Clark;2625	precinct
+Nevada;Clark;2631	precinct
+Nevada;Clark;2632	precinct
+Nevada;Clark;2633	precinct
+Nevada;Clark;2634	precinct
+Nevada;Clark;2635	precinct
+Nevada;Clark;2640	precinct
+Nevada;Clark;2641	precinct
+Nevada;Clark;2642	precinct
+Nevada;Clark;2643	precinct
+Nevada;Clark;2644	precinct
+Nevada;Clark;2645	precinct
+Nevada;Clark;2646	precinct
+Nevada;Clark;2650	precinct
+Nevada;Clark;2651	precinct
+Nevada;Clark;2652	precinct
+Nevada;Clark;2653	precinct
+Nevada;Clark;2654	precinct
+Nevada;Clark;2655	precinct
+Nevada;Clark;2660	precinct
+Nevada;Clark;2661	precinct
+Nevada;Clark;2662	precinct
+Nevada;Clark;2663	precinct
+Nevada;Clark;2664	precinct
+Nevada;Clark;2665	precinct
+Nevada;Clark;2666	precinct
+Nevada;Clark;2671	precinct
+Nevada;Clark;2672	precinct
+Nevada;Clark;2673	precinct
+Nevada;Clark;2674	precinct
+Nevada;Clark;2675	precinct
+Nevada;Clark;2676	precinct
+Nevada;Clark;2681	precinct
+Nevada;Clark;2682	precinct
+Nevada;Clark;2683	precinct
+Nevada;Clark;2684	precinct
+Nevada;Clark;2685	precinct
+Nevada;Clark;2691	precinct
+Nevada;Clark;2692	precinct
+Nevada;Clark;2693	precinct
+Nevada;Clark;2694	precinct
+Nevada;Clark;2695	precinct
+Nevada;Clark;2696	precinct
+Nevada;Clark;2700	precinct
+Nevada;Clark;2701	precinct
+Nevada;Clark;2702	precinct
+Nevada;Clark;2703	precinct
+Nevada;Clark;2704	precinct
+Nevada;Clark;2705	precinct
+Nevada;Clark;2706	precinct
+Nevada;Clark;2709	precinct
+Nevada;Clark;2710	precinct
+Nevada;Clark;2711	precinct
+Nevada;Clark;2712	precinct
+Nevada;Clark;2713	precinct
+Nevada;Clark;2714	precinct
+Nevada;Clark;2715	precinct
+Nevada;Clark;2716	precinct
+Nevada;Clark;2717	precinct
+Nevada;Clark;2720	precinct
+Nevada;Clark;2721	precinct
+Nevada;Clark;2722	precinct
+Nevada;Clark;2723	precinct
+Nevada;Clark;2724	precinct
+Nevada;Clark;2725	precinct
+Nevada;Clark;2726	precinct
+Nevada;Clark;2727	precinct
+Nevada;Clark;2729	precinct
+Nevada;Clark;2730	precinct
+Nevada;Clark;2731	precinct
+Nevada;Clark;2732	precinct
+Nevada;Clark;2733	precinct
+Nevada;Clark;2734	precinct
+Nevada;Clark;2735	precinct
+Nevada;Clark;2736	precinct
+Nevada;Clark;2737	precinct
+Nevada;Clark;2738	precinct
+Nevada;Clark;2740	precinct
+Nevada;Clark;2742	precinct
+Nevada;Clark;2743	precinct
+Nevada;Clark;2745	precinct
+Nevada;Clark;2746	precinct
+Nevada;Clark;2751	precinct
+Nevada;Clark;2752	precinct
+Nevada;Clark;2770	precinct
+Nevada;Clark;2775	precinct
+Nevada;Clark;2776	precinct
+Nevada;Clark;3036	precinct
+Nevada;Clark;3037	precinct
+Nevada;Clark;3040	precinct
+Nevada;Clark;3151	precinct
+Nevada;Clark;3152	precinct
+Nevada;Clark;3191	precinct
+Nevada;Clark;3217	precinct
+Nevada;Clark;3361	precinct
+Nevada;Clark;3363	precinct
+Nevada;Clark;3364	precinct
+Nevada;Clark;3365	precinct
+Nevada;Clark;3366	precinct
+Nevada;Clark;3370	precinct
+Nevada;Clark;3371	precinct
+Nevada;Clark;3372	precinct
+Nevada;Clark;3373	precinct
+Nevada;Clark;3374	precinct
+Nevada;Clark;3375	precinct
+Nevada;Clark;3380	precinct
+Nevada;Clark;3381	precinct
+Nevada;Clark;3382	precinct
+Nevada;Clark;3383	precinct
+Nevada;Clark;3385	precinct
+Nevada;Clark;3386	precinct
+Nevada;Clark;3391	precinct
+Nevada;Clark;3392	precinct
+Nevada;Clark;3393	precinct
+Nevada;Clark;3395	precinct
+Nevada;Clark;3413	precinct
+Nevada;Clark;3414	precinct
+Nevada;Clark;3416	precinct
+Nevada;Clark;3417	precinct
+Nevada;Clark;3418	precinct
+Nevada;Clark;3430	precinct
+Nevada;Clark;3431	precinct
+Nevada;Clark;3433	precinct
+Nevada;Clark;3435	precinct
+Nevada;Clark;3439	precinct
+Nevada;Clark;3457	precinct
+Nevada;Clark;3464	precinct
+Nevada;Clark;3465	precinct
+Nevada;Clark;3518	precinct
+Nevada;Clark;3532	precinct
+Nevada;Clark;3535	precinct
+Nevada;Clark;3537	precinct
+Nevada;Clark;3540	precinct
+Nevada;Clark;3544	precinct
+Nevada;Clark;3545	precinct
+Nevada;Clark;3546	precinct
+Nevada;Clark;3547	precinct
+Nevada;Clark;3552	precinct
+Nevada;Clark;3553	precinct
+Nevada;Clark;3557	precinct
+Nevada;Clark;3559	precinct
+Nevada;Clark;3562	precinct
+Nevada;Clark;3564	precinct
+Nevada;Clark;3565	precinct
+Nevada;Clark;3566	precinct
+Nevada;Clark;3571	precinct
+Nevada;Clark;3574	precinct
+Nevada;Clark;3576	precinct
+Nevada;Clark;3578	precinct
+Nevada;Clark;3579	precinct
+Nevada;Clark;3580	precinct
+Nevada;Clark;3581	precinct
+Nevada;Clark;3582	precinct
+Nevada;Clark;3583	precinct
+Nevada;Clark;3584	precinct
+Nevada;Clark;3585	precinct
+Nevada;Clark;3586	precinct
+Nevada;Clark;3602	precinct
+Nevada;Clark;3604	precinct
+Nevada;Clark;3605	precinct
+Nevada;Clark;3606	precinct
+Nevada;Clark;3607	precinct
+Nevada;Clark;3608	precinct
+Nevada;Clark;3609	precinct
+Nevada;Clark;3610	precinct
+Nevada;Clark;3611	precinct
+Nevada;Clark;3612	precinct
+Nevada;Clark;3613	precinct
+Nevada;Clark;3700	precinct
+Nevada;Clark;3701	precinct
+Nevada;Clark;3702	precinct
+Nevada;Clark;3703	precinct
+Nevada;Clark;3704	precinct
+Nevada;Clark;3705	precinct
+Nevada;Clark;3706	precinct
+Nevada;Clark;3707	precinct
+Nevada;Clark;3708	precinct
+Nevada;Clark;3709	precinct
+Nevada;Clark;3710	precinct
+Nevada;Clark;3711	precinct
+Nevada;Clark;3712	precinct
+Nevada;Clark;3713	precinct
+Nevada;Clark;3714	precinct
+Nevada;Clark;3715	precinct
+Nevada;Clark;3716	precinct
+Nevada;Clark;3717	precinct
+Nevada;Clark;3718	precinct
+Nevada;Clark;3719	precinct
+Nevada;Clark;3720	precinct
+Nevada;Clark;3721	precinct
+Nevada;Clark;3722	precinct
+Nevada;Clark;3723	precinct
+Nevada;Clark;3724	precinct
+Nevada;Clark;3725	precinct
+Nevada;Clark;3726	precinct
+Nevada;Clark;3727	precinct
+Nevada;Clark;3728	precinct
+Nevada;Clark;3729	precinct
+Nevada;Clark;3730	precinct
+Nevada;Clark;3731	precinct
+Nevada;Clark;3732	precinct
+Nevada;Clark;3733	precinct
+Nevada;Clark;3734	precinct
+Nevada;Clark;3735	precinct
+Nevada;Clark;3736	precinct
+Nevada;Clark;3737	precinct
+Nevada;Clark;3738	precinct
+Nevada;Clark;3739	precinct
+Nevada;Clark;3740	precinct
+Nevada;Clark;3741	precinct
+Nevada;Clark;3742	precinct
+Nevada;Clark;3743	precinct
+Nevada;Clark;3744	precinct
+Nevada;Clark;3745	precinct
+Nevada;Clark;3746	precinct
+Nevada;Clark;3747	precinct
+Nevada;Clark;3748	precinct
+Nevada;Clark;3749	precinct
+Nevada;Clark;3750	precinct
+Nevada;Clark;3751	precinct
+Nevada;Clark;3752	precinct
+Nevada;Clark;3753	precinct
+Nevada;Clark;3754	precinct
+Nevada;Clark;3755	precinct
+Nevada;Clark;3756	precinct
+Nevada;Clark;3757	precinct
+Nevada;Clark;3758	precinct
+Nevada;Clark;3759	precinct
+Nevada;Clark;3760	precinct
+Nevada;Clark;3761	precinct
+Nevada;Clark;3762	precinct
+Nevada;Clark;3763	precinct
+Nevada;Clark;3764	precinct
+Nevada;Clark;3765	precinct
+Nevada;Clark;3766	precinct
+Nevada;Clark;3767	precinct
+Nevada;Clark;3768	precinct
+Nevada;Clark;3769	precinct
+Nevada;Clark;3770	precinct
+Nevada;Clark;3771	precinct
+Nevada;Clark;3772	precinct
+Nevada;Clark;3773	precinct
+Nevada;Clark;3774	precinct
+Nevada;Clark;3775	precinct
+Nevada;Clark;3776	precinct
+Nevada;Clark;3777	precinct
+Nevada;Clark;3780	precinct
+Nevada;Clark;3782	precinct
+Nevada;Clark;3783	precinct
+Nevada;Clark;3784	precinct
+Nevada;Clark;3785	precinct
+Nevada;Clark;3786	precinct
+Nevada;Clark;3787	precinct
+Nevada;Clark;3788	precinct
+Nevada;Clark;3789	precinct
+Nevada;Clark;3790	precinct
+Nevada;Clark;3791	precinct
+Nevada;Clark;3792	precinct
+Nevada;Clark;3794	precinct
+Nevada;Clark;3795	precinct
+Nevada;Clark;3796	precinct
+Nevada;Clark;3800	precinct
+Nevada;Clark;3801	precinct
+Nevada;Clark;3802	precinct
+Nevada;Clark;3803	precinct
+Nevada;Clark;3804	precinct
+Nevada;Clark;3805	precinct
+Nevada;Clark;3806	precinct
+Nevada;Clark;3807	precinct
+Nevada;Clark;3808	precinct
+Nevada;Clark;3809	precinct
+Nevada;Clark;3811	precinct
+Nevada;Clark;3812	precinct
+Nevada;Clark;3813	precinct
+Nevada;Clark;3814	precinct
+Nevada;Clark;3815	precinct
+Nevada;Clark;3821	precinct
+Nevada;Clark;3822	precinct
+Nevada;Clark;3823	precinct
+Nevada;Clark;3824	precinct
+Nevada;Clark;3825	precinct
+Nevada;Clark;3826	precinct
+Nevada;Clark;3831	precinct
+Nevada;Clark;3832	precinct
+Nevada;Clark;3833	precinct
+Nevada;Clark;3834	precinct
+Nevada;Clark;3841	precinct
+Nevada;Clark;3842	precinct
+Nevada;Clark;3843	precinct
+Nevada;Clark;3844	precinct
+Nevada;Clark;3845	precinct
+Nevada;Clark;3851	precinct
+Nevada;Clark;3852	precinct
+Nevada;Clark;3853	precinct
+Nevada;Clark;3854	precinct
+Nevada;Clark;3855	precinct
+Nevada;Clark;3863	precinct
+Nevada;Clark;3864	precinct
+Nevada;Clark;3866	precinct
+Nevada;Clark;3875	precinct
+Nevada;Clark;3881	precinct
+Nevada;Clark;4017	precinct
+Nevada;Clark;4028	precinct
+Nevada;Clark;4066	precinct
+Nevada;Clark;4069	precinct
+Nevada;Clark;4073	precinct
+Nevada;Clark;4075	precinct
+Nevada;Clark;4076	precinct
+Nevada;Clark;4304	precinct
+Nevada;Clark;4305	precinct
+Nevada;Clark;4306	precinct
+Nevada;Clark;4307	precinct
+Nevada;Clark;4309	precinct
+Nevada;Clark;4310	precinct
+Nevada;Clark;4381	precinct
+Nevada;Clark;4384	precinct
+Nevada;Clark;4387	precinct
+Nevada;Clark;4415	precinct
+Nevada;Clark;4434	precinct
+Nevada;Clark;4454	precinct
+Nevada;Clark;4461	precinct
+Nevada;Clark;4463	precinct
+Nevada;Clark;4467	precinct
+Nevada;Clark;4500	precinct
+Nevada;Clark;4501	precinct
+Nevada;Clark;4502	precinct
+Nevada;Clark;4504	precinct
+Nevada;Clark;4505	precinct
+Nevada;Clark;4506	precinct
+Nevada;Clark;4507	precinct
+Nevada;Clark;4508	precinct
+Nevada;Clark;4510	precinct
+Nevada;Clark;4511	precinct
+Nevada;Clark;4512	precinct
+Nevada;Clark;4513	precinct
+Nevada;Clark;4514	precinct
+Nevada;Clark;4522	precinct
+Nevada;Clark;4523	precinct
+Nevada;Clark;4525	precinct
+Nevada;Clark;4526	precinct
+Nevada;Clark;4527	precinct
+Nevada;Clark;4528	precinct
+Nevada;Clark;4529	precinct
+Nevada;Clark;4530	precinct
+Nevada;Clark;4531	precinct
+Nevada;Clark;4532	precinct
+Nevada;Clark;4535	precinct
+Nevada;Clark;4536	precinct
+Nevada;Clark;4540	precinct
+Nevada;Clark;4541	precinct
+Nevada;Clark;4543	precinct
+Nevada;Clark;4546	precinct
+Nevada;Clark;4547	precinct
+Nevada;Clark;4548	precinct
+Nevada;Clark;4549	precinct
+Nevada;Clark;4550	precinct
+Nevada;Clark;4551	precinct
+Nevada;Clark;4552	precinct
+Nevada;Clark;4553	precinct
+Nevada;Clark;4554	precinct
+Nevada;Clark;4555	precinct
+Nevada;Clark;4556	precinct
+Nevada;Clark;4557	precinct
+Nevada;Clark;4559	precinct
+Nevada;Clark;4560	precinct
+Nevada;Clark;4561	precinct
+Nevada;Clark;4562	precinct
+Nevada;Clark;4563	precinct
+Nevada;Clark;4564	precinct
+Nevada;Clark;4565	precinct
+Nevada;Clark;4566	precinct
+Nevada;Clark;4567	precinct
+Nevada;Clark;4568	precinct
+Nevada;Clark;4569	precinct
+Nevada;Clark;4571	precinct
+Nevada;Clark;4572	precinct
+Nevada;Clark;4573	precinct
+Nevada;Clark;4574	precinct
+Nevada;Clark;4577	precinct
+Nevada;Clark;4581	precinct
+Nevada;Clark;4582	precinct
+Nevada;Clark;4583	precinct
+Nevada;Clark;4584	precinct
+Nevada;Clark;4585	precinct
+Nevada;Clark;4586	precinct
+Nevada;Clark;4590	precinct
+Nevada;Clark;4591	precinct
+Nevada;Clark;4592	precinct
+Nevada;Clark;4593	precinct
+Nevada;Clark;4594	precinct
+Nevada;Clark;4596	precinct
+Nevada;Clark;4597	precinct
+Nevada;Clark;4598	precinct
+Nevada;Clark;4599	precinct
+Nevada;Clark;4601	precinct
+Nevada;Clark;4602	precinct
+Nevada;Clark;4603	precinct
+Nevada;Clark;4604	precinct
+Nevada;Clark;4605	precinct
+Nevada;Clark;4606	precinct
+Nevada;Clark;4611	precinct
+Nevada;Clark;4612	precinct
+Nevada;Clark;4613	precinct
+Nevada;Clark;4614	precinct
+Nevada;Clark;4615	precinct
+Nevada;Clark;4616	precinct
+Nevada;Clark;4621	precinct
+Nevada;Clark;4623	precinct
+Nevada;Clark;4633	precinct
+Nevada;Clark;4634	precinct
+Nevada;Clark;4635	precinct
+Nevada;Clark;4636	precinct
+Nevada;Clark;4637	precinct
+Nevada;Clark;4638	precinct
+Nevada;Clark;4641	precinct
+Nevada;Clark;4642	precinct
+Nevada;Clark;4643	precinct
+Nevada;Clark;4645	precinct
+Nevada;Clark;4650	precinct
+Nevada;Clark;4651	precinct
+Nevada;Clark;4652	precinct
+Nevada;Clark;5003	precinct
+Nevada;Clark;5014	precinct
+Nevada;Clark;5029	precinct
+Nevada;Clark;5034	precinct
+Nevada;Clark;5036	precinct
+Nevada;Clark;5047	precinct
+Nevada;Clark;5056	precinct
+Nevada;Clark;5323	precinct
+Nevada;Clark;5324	precinct
+Nevada;Clark;5326	precinct
+Nevada;Clark;5330	precinct
+Nevada;Clark;5332	precinct
+Nevada;Clark;5333	precinct
+Nevada;Clark;5350	precinct
+Nevada;Clark;5356	precinct
+Nevada;Clark;5372	precinct
+Nevada;Clark;5384	precinct
+Nevada;Clark;5390	precinct
+Nevada;Clark;5393	precinct
+Nevada;Clark;5394	precinct
+Nevada;Clark;5395	precinct
+Nevada;Clark;5396	precinct
+Nevada;Clark;5397	precinct
+Nevada;Clark;5400	precinct
+Nevada;Clark;5403	precinct
+Nevada;Clark;5404	precinct
+Nevada;Clark;5405	precinct
+Nevada;Clark;5410	precinct
+Nevada;Clark;5412	precinct
+Nevada;Clark;5413	precinct
+Nevada;Clark;5417	precinct
+Nevada;Clark;5425	precinct
+Nevada;Clark;5430	precinct
+Nevada;Clark;5500	precinct
+Nevada;Clark;5501	precinct
+Nevada;Clark;5502	precinct
+Nevada;Clark;5503	precinct
+Nevada;Clark;5504	precinct
+Nevada;Clark;5505	precinct
+Nevada;Clark;5506	precinct
+Nevada;Clark;5511	precinct
+Nevada;Clark;5512	precinct
+Nevada;Clark;5513	precinct
+Nevada;Clark;5515	precinct
+Nevada;Clark;5521	precinct
+Nevada;Clark;5522	precinct
+Nevada;Clark;5523	precinct
+Nevada;Clark;5524	precinct
+Nevada;Clark;5525	precinct
+Nevada;Clark;5531	precinct
+Nevada;Clark;5532	precinct
+Nevada;Clark;5533	precinct
+Nevada;Clark;5534	precinct
+Nevada;Clark;5535	precinct
+Nevada;Clark;5536	precinct
+Nevada;Clark;5537	precinct
+Nevada;Clark;5541	precinct
+Nevada;Clark;5542	precinct
+Nevada;Clark;5543	precinct
+Nevada;Clark;5544	precinct
+Nevada;Clark;5545	precinct
+Nevada;Clark;5552	precinct
+Nevada;Clark;5553	precinct
+Nevada;Clark;5554	precinct
+Nevada;Clark;5555	precinct
+Nevada;Clark;5560	precinct
+Nevada;Clark;5562	precinct
+Nevada;Clark;5564	precinct
+Nevada;Clark;5565	precinct
+Nevada;Clark;5566	precinct
+Nevada;Clark;5567	precinct
+Nevada;Clark;5568	precinct
+Nevada;Clark;5569	precinct
+Nevada;Clark;5570	precinct
+Nevada;Clark;5571	precinct
+Nevada;Clark;5572	precinct
+Nevada;Clark;5573	precinct
+Nevada;Clark;5574	precinct
+Nevada;Clark;5575	precinct
+Nevada;Clark;5576	precinct
+Nevada;Clark;5577	precinct
+Nevada;Clark;5578	precinct
+Nevada;Clark;5579	precinct
+Nevada;Clark;5580	precinct
+Nevada;Clark;5581	precinct
+Nevada;Clark;5582	precinct
+Nevada;Clark;5583	precinct
+Nevada;Clark;5584	precinct
+Nevada;Clark;5585	precinct
+Nevada;Clark;5586	precinct
+Nevada;Clark;5587	precinct
+Nevada;Clark;5588	precinct
+Nevada;Clark;5589	precinct
+Nevada;Clark;5591	precinct
+Nevada;Clark;5592	precinct
+Nevada;Clark;5593	precinct
+Nevada;Clark;5594	precinct
+Nevada;Clark;5595	precinct
+Nevada;Clark;5596	precinct
+Nevada;Clark;5597	precinct
+Nevada;Clark;5598	precinct
+Nevada;Clark;5601	precinct
+Nevada;Clark;5603	precinct
+Nevada;Clark;5604	precinct
+Nevada;Clark;5612	precinct
+Nevada;Clark;5613	precinct
+Nevada;Clark;5614	precinct
+Nevada;Clark;5615	precinct
+Nevada;Clark;5616	precinct
+Nevada;Clark;5617	precinct
+Nevada;Clark;5620	precinct
+Nevada;Clark;5621	precinct
+Nevada;Clark;5622	precinct
+Nevada;Clark;5623	precinct
+Nevada;Clark;5624	precinct
+Nevada;Clark;5625	precinct
+Nevada;Clark;5631	precinct
+Nevada;Clark;5632	precinct
+Nevada;Clark;5633	precinct
+Nevada;Clark;5634	precinct
+Nevada;Clark;5635	precinct
+Nevada;Clark;5636	precinct
+Nevada;Clark;5641	precinct
+Nevada;Clark;5642	precinct
+Nevada;Clark;5643	precinct
+Nevada;Clark;5644	precinct
+Nevada;Clark;5649	precinct
+Nevada;Clark;5650	precinct
+Nevada;Clark;5651	precinct
+Nevada;Clark;5652	precinct
+Nevada;Clark;5653	precinct
+Nevada;Clark;5654	precinct
+Nevada;Clark;6040	precinct
+Nevada;Clark;6057	precinct
+Nevada;Clark;6062	precinct
+Nevada;Clark;6066	precinct
+Nevada;Clark;6109	precinct
+Nevada;Clark;6362	precinct
+Nevada;Clark;6424	precinct
+Nevada;Clark;6431	precinct
+Nevada;Clark;6434	precinct
+Nevada;Clark;6440	precinct
+Nevada;Clark;6463	precinct
+Nevada;Clark;6468	precinct
+Nevada;Clark;6469	precinct
+Nevada;Clark;6470	precinct
+Nevada;Clark;6471	precinct
+Nevada;Clark;6475	precinct
+Nevada;Clark;6477	precinct
+Nevada;Clark;6484	precinct
+Nevada;Clark;6486	precinct
+Nevada;Clark;6487	precinct
+Nevada;Clark;6488	precinct
+Nevada;Clark;6490	precinct
+Nevada;Clark;6492	precinct
+Nevada;Clark;6493	precinct
+Nevada;Clark;6494	precinct
+Nevada;Clark;6496	precinct
+Nevada;Clark;6497	precinct
+Nevada;Clark;6498	precinct
+Nevada;Clark;6499	precinct
+Nevada;Clark;6500	precinct
+Nevada;Clark;6512	precinct
+Nevada;Clark;6513	precinct
+Nevada;Clark;6514	precinct
+Nevada;Clark;6515	precinct
+Nevada;Clark;6517	precinct
+Nevada;Clark;6520	precinct
+Nevada;Clark;6521	precinct
+Nevada;Clark;6522	precinct
+Nevada;Clark;6526	precinct
+Nevada;Clark;6527	precinct
+Nevada;Clark;6530	precinct
+Nevada;Clark;6531	precinct
+Nevada;Clark;6533	precinct
+Nevada;Clark;6538	precinct
+Nevada;Clark;6539	precinct
+Nevada;Clark;6540	precinct
+Nevada;Clark;6544	precinct
+Nevada;Clark;6545	precinct
+Nevada;Clark;6547	precinct
+Nevada;Clark;6548	precinct
+Nevada;Clark;6549	precinct
+Nevada;Clark;6600	precinct
+Nevada;Clark;6601	precinct
+Nevada;Clark;6602	precinct
+Nevada;Clark;6604	precinct
+Nevada;Clark;6605	precinct
+Nevada;Clark;6606	precinct
+Nevada;Clark;6607	precinct
+Nevada;Clark;6608	precinct
+Nevada;Clark;6609	precinct
+Nevada;Clark;6610	precinct
+Nevada;Clark;6611	precinct
+Nevada;Clark;6612	precinct
+Nevada;Clark;6613	precinct
+Nevada;Clark;6614	precinct
+Nevada;Clark;6615	precinct
+Nevada;Clark;6617	precinct
+Nevada;Clark;6621	precinct
+Nevada;Clark;6622	precinct
+Nevada;Clark;6625	precinct
+Nevada;Clark;6631	precinct
+Nevada;Clark;6632	precinct
+Nevada;Clark;6633	precinct
+Nevada;Clark;6634	precinct
+Nevada;Clark;6635	precinct
+Nevada;Clark;6642	precinct
+Nevada;Clark;6643	precinct
+Nevada;Clark;6644	precinct
+Nevada;Clark;6645	precinct
+Nevada;Clark;6648	precinct
+Nevada;Clark;6649	precinct
+Nevada;Clark;6651	precinct
+Nevada;Clark;6652	precinct
+Nevada;Clark;6653	precinct
+Nevada;Clark;6654	precinct
+Nevada;Clark;6655	precinct
+Nevada;Clark;6656	precinct
+Nevada;Clark;6657	precinct
+Nevada;Clark;6658	precinct
+Nevada;Clark;6661	precinct
+Nevada;Clark;6662	precinct
+Nevada;Clark;6663	precinct
+Nevada;Clark;6664	precinct
+Nevada;Clark;6665	precinct
+Nevada;Clark;6666	precinct
+Nevada;Clark;6667	precinct
+Nevada;Clark;6671	precinct
+Nevada;Clark;6672	precinct
+Nevada;Clark;6673	precinct
+Nevada;Clark;6674	precinct
+Nevada;Clark;6675	precinct
+Nevada;Clark;6681	precinct
+Nevada;Clark;6683	precinct
+Nevada;Clark;6684	precinct
+Nevada;Clark;6685	precinct
+Nevada;Clark;6686	precinct
+Nevada;Clark;6691	precinct
+Nevada;Clark;6692	precinct
+Nevada;Clark;6693	precinct
+Nevada;Clark;6694	precinct
+Nevada;Clark;6695	precinct
+Nevada;Clark;6700	precinct
+Nevada;Clark;6701	precinct
+Nevada;Clark;6702	precinct
+Nevada;Clark;6703	precinct
+Nevada;Clark;6704	precinct
+Nevada;Clark;6705	precinct
+Nevada;Clark;6706	precinct
+Nevada;Clark;6707	precinct
+Nevada;Clark;6708	precinct
+Nevada;Clark;6709	precinct
+Nevada;Clark;6710	precinct
+Nevada;Clark;6711	precinct
+Nevada;Clark;6712	precinct
+Nevada;Clark;6713	precinct
+Nevada;Clark;6714	precinct
+Nevada;Clark;6715	precinct
+Nevada;Clark;6716	precinct
+Nevada;Clark;6718	precinct
+Nevada;Clark;6719	precinct
+Nevada;Clark;6720	precinct
+Nevada;Clark;6721	precinct
+Nevada;Clark;6722	precinct
+Nevada;Clark;6723	precinct
+Nevada;Clark;6724	precinct
+Nevada;Clark;6725	precinct
+Nevada;Clark;6726	precinct
+Nevada;Clark;6727	precinct
+Nevada;Clark;6728	precinct
+Nevada;Clark;6729	precinct
+Nevada;Clark;6730	precinct
+Nevada;Clark;6731	precinct
+Nevada;Clark;6732	precinct
+Nevada;Clark;6733	precinct
+Nevada;Clark;6734	precinct
+Nevada;Clark;6735	precinct
+Nevada;Clark;6736	precinct
+Nevada;Clark;6737	precinct
+Nevada;Clark;6738	precinct
+Nevada;Clark;6739	precinct
+Nevada;Clark;6751	precinct
+Nevada;Clark;6752	precinct
+Nevada;Clark;6753	precinct
+Nevada;Clark;7012	precinct
+Nevada;Clark;7047	precinct
+Nevada;Clark;7048	precinct
+Nevada;Clark;7049	precinct
+Nevada;Clark;7050	precinct
+Nevada;Clark;7054	precinct
+Nevada;Clark;7079	precinct
+Nevada;Clark;7097	precinct
+Nevada;Clark;7311	precinct
+Nevada;Clark;7312	precinct
+Nevada;Clark;7332	precinct
+Nevada;Clark;7334	precinct
+Nevada;Clark;7341	precinct
+Nevada;Clark;7351	precinct
+Nevada;Clark;7352	precinct
+Nevada;Clark;7354	precinct
+Nevada;Clark;7355	precinct
+Nevada;Clark;7356	precinct
+Nevada;Clark;7357	precinct
+Nevada;Clark;7358	precinct
+Nevada;Clark;7359	precinct
+Nevada;Clark;7360	precinct
+Nevada;Clark;7361	precinct
+Nevada;Clark;7366	precinct
+Nevada;Clark;7387	precinct
+Nevada;Clark;7395	precinct
+Nevada;Clark;7402	precinct
+Nevada;Clark;7403	precinct
+Nevada;Clark;7405	precinct
+Nevada;Clark;7410	precinct
+Nevada;Clark;7411	precinct
+Nevada;Clark;7413	precinct
+Nevada;Clark;7414	precinct
+Nevada;Clark;7415	precinct
+Nevada;Clark;7416	precinct
+Nevada;Clark;7417	precinct
+Nevada;Clark;7422	precinct
+Nevada;Clark;7430	precinct
+Nevada;Clark;7500	precinct
+Nevada;Clark;7501	precinct
+Nevada;Clark;7502	precinct
+Nevada;Clark;7503	precinct
+Nevada;Clark;7504	precinct
+Nevada;Clark;7505	precinct
+Nevada;Clark;7506	precinct
+Nevada;Clark;7507	precinct
+Nevada;Clark;7508	precinct
+Nevada;Clark;7509	precinct
+Nevada;Clark;7511	precinct
+Nevada;Clark;7512	precinct
+Nevada;Clark;7513	precinct
+Nevada;Clark;7514	precinct
+Nevada;Clark;7515	precinct
+Nevada;Clark;7521	precinct
+Nevada;Clark;7522	precinct
+Nevada;Clark;7523	precinct
+Nevada;Clark;7524	precinct
+Nevada;Clark;7525	precinct
+Nevada;Clark;7526	precinct
+Nevada;Clark;7527	precinct
+Nevada;Clark;7528	precinct
+Nevada;Clark;7529	precinct
+Nevada;Clark;7530	precinct
+Nevada;Clark;7531	precinct
+Nevada;Clark;7532	precinct
+Nevada;Clark;7533	precinct
+Nevada;Clark;7534	precinct
+Nevada;Clark;7535	precinct
+Nevada;Clark;7536	precinct
+Nevada;Clark;7541	precinct
+Nevada;Clark;7542	precinct
+Nevada;Clark;7543	precinct
+Nevada;Clark;7545	precinct
+Nevada;Clark;7550	precinct
+Nevada;Clark;7551	precinct
+Nevada;Clark;7552	precinct
+Nevada;Clark;7553	precinct
+Nevada;Clark;7554	precinct
+Nevada;Clark;7555	precinct
+Nevada;Clark;7561	precinct
+Nevada;Clark;7562	precinct
+Nevada;Clark;7563	precinct
+Nevada;Clark;7564	precinct
+Nevada;Clark;7569	precinct
+Nevada;Clark;7570	precinct
+Nevada;Clark;7571	precinct
+Nevada;Clark;7572	precinct
+Nevada;Clark;7573	precinct
+Nevada;Clark;7574	precinct
+Nevada;Clark;7575	precinct
+Nevada;Clark;7581	precinct
+Nevada;Clark;7582	precinct
+Nevada;Clark;7583	precinct
+Nevada;Clark;7584	precinct
+Nevada;Clark;7585	precinct
+Nevada;Clark;7590	precinct
+Nevada;Clark;7591	precinct
+Nevada;Clark;7592	precinct
+Nevada;Clark;7593	precinct
+Nevada;Clark;7594	precinct
+Nevada;Clark;7595	precinct
+Nevada;Clark;7601	precinct
+Nevada;Clark;7602	precinct
+Nevada;Clark;7603	precinct
+Nevada;Clark;7604	precinct
+Nevada;Clark;7605	precinct
+Nevada;Clark;7611	precinct
+Nevada;Clark;7612	precinct
+Nevada;Clark;7613	precinct
+Nevada;Clark;7614	precinct
+Nevada;Clark;7615	precinct
+Nevada;Clark;7622	precinct
+Nevada;Clark;7623	precinct
+Nevada;Clark;7624	precinct
+Nevada;Clark;7625	precinct
+Nevada;Clark;7631	precinct
+Nevada;Clark;7632	precinct
+Nevada;Clark;7633	precinct
+Nevada;Clark;7634	precinct
+Nevada;Clark;7635	precinct
+Nevada;Clark;7641	precinct
+Nevada;Clark;7642	precinct
+Nevada;Clark;7643	precinct
+Nevada;Clark;7644	precinct
+Nevada;Clark;7645	precinct
+Nevada;Clark;7651	precinct
+Nevada;Clark;7652	precinct
+Nevada;Clark;7653	precinct
+Nevada;Clark;7654	precinct
+Nevada;Clark;7661	precinct
+Nevada;Clark;7662	precinct
+Nevada;Clark;7663	precinct
+Nevada;Clark;7664	precinct
+Nevada;Clark;7665	precinct
+Nevada;Clark;7671	precinct
+Nevada;Clark;7672	precinct
+Nevada;Clark;7674	precinct
+Nevada;Clark;7675	precinct
+Nevada;Clark;7681	precinct
+Nevada;Clark;7682	precinct
+Nevada;Clark;7683	precinct
+Nevada;Clark;7684	precinct
+Nevada;Clark;7685	precinct
+Nevada;Clark;7691	precinct
+Nevada;Clark;7692	precinct
+Nevada;Clark;7693	precinct
+Nevada;Clark;7694	precinct
+Nevada;Clark;7695	precinct
+Nevada;Clark;7701	precinct
+Nevada;Clark;7702	precinct
+Nevada;Clark;7703	precinct
+Nevada;Clark;7704	precinct
+Nevada;Clark;7705	precinct
+Nevada;Clark;7706	precinct
+Nevada;Clark;7707	precinct
+Nevada;Clark;7712	precinct
+Nevada;Clark;7713	precinct
+Nevada;Clark;7714	precinct
+Nevada;Clark;7715	precinct
+Nevada;Clark;7720	precinct
+Nevada;Clark;7722	precinct
+Nevada;Clark;7723	precinct
+Nevada;Clark;7724	precinct
+Nevada;Clark;7726	precinct
+Nevada;Clark;7730	precinct
+Nevada;Clark;7731	precinct
+Nevada;Clark;7732	precinct
+Nevada;Clark;7733	precinct
+Nevada;Clark;7734	precinct
+Nevada;Clark;7743	precinct
+Nevada;Clark;7745	precinct
+Nevada;Clark;9991	precinct
+Nevada;Clark;9993	precinct
+Nevada;Clark;9994	precinct
+Nevada;Clark;9995	precinct
+Nevada;Douglas;01-1 - Centerville	precinct
+Nevada;Douglas;01-2 - Centerville	precinct
+Nevada;Douglas;01-Centerville	precinct
+Nevada;Douglas;02-1 - Fish Springs	precinct
+Nevada;Douglas;02-2 - Fish Springs	precinct
+Nevada;Douglas;02-Fish Springs	precinct
+Nevada;Douglas;03-1 - Gardnerville	precinct
+Nevada;Douglas;03-2 - Gardnerville	precinct
+Nevada;Douglas;03-Gardnerville	precinct
+Nevada;Douglas;04-Carson Valley Estates	precinct
+Nevada;Douglas;05-Genoa	precinct
+Nevada;Douglas;06-1 - Jacks Valley	precinct
+Nevada;Douglas;06-3 - Jacks Valley	precinct
+Nevada;Douglas;06-Jacks Valley	precinct
+Nevada;Douglas;07-1 - Minden	precinct
+Nevada;Douglas;07-2 - Minden	precinct
+Nevada;Douglas;07-Minden	precinct
+Nevada;Douglas;08-1 - Ranchos I	precinct
+Nevada;Douglas;08-3 - Ranchos I	precinct
+Nevada;Douglas;08-Ranchos I	precinct
+Nevada;Douglas;09-Ranchos II	precinct
+Nevada;Douglas;10-TRE	precinct
+Nevada;Douglas;11-Johnson Lane	precinct
+Nevada;Douglas;12-Dresslerville	precinct
+Nevada;Douglas;13-1 - Indian Hills - West	precinct
+Nevada;Douglas;13-2 - Indian Hills - West	precinct
+Nevada;Douglas;13-Indian Hills - West	precinct
+Nevada;Douglas;14-Pinenut	precinct
+Nevada;Douglas;15-Valley	precinct
+Nevada;Douglas;16-Mottsville	precinct
+Nevada;Douglas;17-Ruhenstroth	precinct
+Nevada;Douglas;18-1 - Ranchos III-2	precinct
+Nevada;Douglas;18-2 - Ranchos III-2	precinct
+Nevada;Douglas;18-Ranchos III-2	precinct
+Nevada;Douglas;19-Ranchos IV	precinct
+Nevada;Douglas;20-Birch/Ranchos	precinct
+Nevada;Douglas;21-Wildhorse	precinct
+Nevada;Douglas;22-Saratoga	precinct
+Nevada;Douglas;23-1 - Indian Hills - East	precinct
+Nevada;Douglas;23-2 - Indian Hills - East	precinct
+Nevada;Douglas;23-Indian Hills - East	precinct
+Nevada;Douglas;24-Topaz Lake	precinct
+Nevada;Douglas;25-1 - Pleasantview	precinct
+Nevada;Douglas;25-2 - Pleasantview	precinct
+Nevada;Douglas;25-Pleasantview	precinct
+Nevada;Douglas;26-Westwood	precinct
+Nevada;Douglas;27-1 - Winhaven	precinct
+Nevada;Douglas;27-2 - Winhaven	precinct
+Nevada;Douglas;27-Winhaven	precinct
+Nevada;Douglas;28-1 - Orchard Road	precinct
+Nevada;Douglas;28-2 - Orchard Road	precinct
+Nevada;Douglas;28-3 - Orchard Road	precinct
+Nevada;Douglas;28-Orchard Road	precinct
+Nevada;Douglas;29-Autumn Hils	precinct
+Nevada;Douglas;30-East Fork	precinct
+Nevada;Douglas;31-Chichester	precinct
+Nevada;Douglas;32-East Valley	precinct
+Nevada;Douglas;33-Hot Springs	precinct
+Nevada;Douglas;34-Sunridge	precinct
+Nevada;Douglas;35-Glenbrook	precinct
+Nevada;Douglas;36-Skyland	precinct
+Nevada;Douglas;37-1 - Zephyr Cove	precinct
+Nevada;Douglas;37-6 - Zephyr Cove	precinct
+Nevada;Douglas;37-Zephyr Cove	precinct
+Nevada;Douglas;38-1 - Round Hill	precinct
+Nevada;Douglas;38-2 - Round Hill	precinct
+Nevada;Douglas;38-Round Hill	precinct
+Nevada;Douglas;39-Edgewood	precinct
+Nevada;Douglas;40-1 - Kingsbury	precinct
+Nevada;Douglas;40-2 - Kingsbury	precinct
+Nevada;Douglas;40-Kingsbury	precinct
+Nevada;Douglas;41-1 - Daggett	precinct
+Nevada;Douglas;41-2 - Daggett	precinct
+Nevada;Douglas;41-Daggett	precinct
+Nevada;Douglas;Precinct 99	precinct
+Nevada;Elko;Precinct 1	precinct
+Nevada;Elko;Precinct 10	precinct
+Nevada;Elko;Precinct 11	precinct
+Nevada;Elko;Precinct 12	precinct
+Nevada;Elko;Precinct 13	precinct
+Nevada;Elko;Precinct 14	precinct
+Nevada;Elko;Precinct 15	precinct
+Nevada;Elko;Precinct 16	precinct
+Nevada;Elko;Precinct 17	precinct
+Nevada;Elko;Precinct 18	precinct
+Nevada;Elko;Precinct 19	precinct
+Nevada;Elko;Precinct 2	precinct
+Nevada;Elko;Precinct 20	precinct
+Nevada;Elko;Precinct 21	precinct
+Nevada;Elko;Precinct 22	precinct
+Nevada;Elko;Precinct 23	precinct
+Nevada;Elko;Precinct 24	precinct
+Nevada;Elko;Precinct 25	precinct
+Nevada;Elko;Precinct 26	precinct
+Nevada;Elko;Precinct 27	precinct
+Nevada;Elko;Precinct 28	precinct
+Nevada;Elko;Precinct 29	precinct
+Nevada;Elko;Precinct 3	precinct
+Nevada;Elko;Precinct 30	precinct
+Nevada;Elko;Precinct 31	precinct
+Nevada;Elko;Precinct 32	precinct
+Nevada;Elko;Precinct 33	precinct
+Nevada;Elko;Precinct 34	precinct
+Nevada;Elko;Precinct 35	precinct
+Nevada;Elko;Precinct 36	precinct
+Nevada;Elko;Precinct 37	precinct
+Nevada;Elko;Precinct 38	precinct
+Nevada;Elko;Precinct 39	precinct
+Nevada;Elko;Precinct 4	precinct
+Nevada;Elko;Precinct 40	precinct
+Nevada;Elko;Precinct 41	precinct
+Nevada;Elko;Precinct 5	precinct
+Nevada;Elko;Precinct 6	precinct
+Nevada;Elko;Precinct 7	precinct
+Nevada;Elko;Precinct 8	precinct
+Nevada;Elko;Precinct 9	precinct
+Nevada;Elko;Precinct 99	precinct
+Nevada;Esmeralda;Precinct 1	precinct
+Nevada;Esmeralda;Precinct 2	precinct
+Nevada;Esmeralda;Precinct 3	precinct
+Nevada;Esmeralda;Precinct 4	precinct
+Nevada;Esmeralda;Precinct 5	precinct
+Nevada;Esmeralda;Precinct 99	precinct
+Nevada;Eureka;Precinct 1	precinct
+Nevada;Eureka;Precinct 2	precinct
+Nevada;Eureka;Precinct 3	precinct
+Nevada;Eureka;Precinct 4	precinct
+Nevada;Eureka;Precinct 99	precinct
+Nevada;Humboldt;PRECINCT 1	precinct
+Nevada;Humboldt;PRECINCT 10	precinct
+Nevada;Humboldt;PRECINCT 11	precinct
+Nevada;Humboldt;PRECINCT 12	precinct
+Nevada;Humboldt;PRECINCT 13	precinct
+Nevada;Humboldt;PRECINCT 14	precinct
+Nevada;Humboldt;Precinct 14 - City	precinct
+Nevada;Humboldt;Precinct 14 - County	precinct
+Nevada;Humboldt;PRECINCT 15	precinct
+Nevada;Humboldt;PRECINCT 2	precinct
+Nevada;Humboldt;PRECINCT 3	precinct
+Nevada;Humboldt;PRECINCT 4	precinct
+Nevada;Humboldt;Precinct 4 - City	precinct
+Nevada;Humboldt;Precinct 4 - County	precinct
+Nevada;Humboldt;PRECINCT 5	precinct
+Nevada;Humboldt;Precinct 5 - City	precinct
+Nevada;Humboldt;Precinct 5 - County	precinct
+Nevada;Humboldt;PRECINCT 6	precinct
+Nevada;Humboldt;PRECINCT 7	precinct
+Nevada;Humboldt;PRECINCT 8	precinct
+Nevada;Humboldt;PRECINCT 9	precinct
+Nevada;Humboldt;PRECINCT 99	precinct
+Nevada;Lander;Argenta 01	precinct
+Nevada;Lander;Argenta 02	precinct
+Nevada;Lander;Argenta 03	precinct
+Nevada;Lander;Argenta 04	precinct
+Nevada;Lander;Argenta 05	precinct
+Nevada;Lander;Austin 07	precinct
+Nevada;Lander;Gillman Springs Ranch 08	precinct
+Nevada;Lander;Kingston 09	precinct
+Nevada;Lander;Precinct 99	precinct
+Nevada;Lander;Southern Lander County 06	precinct
+Nevada;Lincoln;1 - ALAMO	precinct
+Nevada;Lincoln;2 - CALIENTE	precinct
+Nevada;Lincoln;2 - CALIENTE-0	precinct
+Nevada;Lincoln;2 - CALIENTE-1	precinct
+Nevada;Lincoln;3 - PANACA	precinct
+Nevada;Lincoln;4 - PIOCHE	precinct
+Nevada;Lincoln;5 - RACHEL	precinct
+Nevada;Lincoln;PRECINCT 99	precinct
+Nevada;Lyon;01_East Mason Valley 1	precinct
+Nevada;Lyon;02_East Mason Valley 2	precinct
+Nevada;Lyon;03_West Mason Valley 1	precinct
+Nevada;Lyon;04_West Mason Valley 2	precinct
+Nevada;Lyon;05_West Mason Valley 3	precinct
+Nevada;Lyon;06_Spragg-Plummer	precinct
+Nevada;Lyon;07_Smith Valley 1	precinct
+Nevada;Lyon;08_Smith Valley 2	precinct
+Nevada;Lyon;09_South Dayton 1	precinct
+Nevada;Lyon;10_South Dayton 2	precinct
+Nevada;Lyon;11_South Dayton 3	precinct
+Nevada;Lyon;12_South Dayton 4	precinct
+Nevada;Lyon;13_North Dayton 1	precinct
+Nevada;Lyon;14_North Dayton 2	precinct
+Nevada;Lyon;15_North Dayton 3	precinct
+Nevada;Lyon;16_North Dayton 4	precinct
+Nevada;Lyon;17_North Dayton 5	precinct
+Nevada;Lyon;18_Mound House 1	precinct
+Nevada;Lyon;19_Mound House 2	precinct
+Nevada;Lyon;20_Silver City	precinct
+Nevada;Lyon;21_Stagecoach 1	precinct
+Nevada;Lyon;22_Stagecoach 2	precinct
+Nevada;Lyon;23_Silver Springs 1	precinct
+Nevada;Lyon;24_Silver Springs 2	precinct
+Nevada;Lyon;25_Silver Springs 3	precinct
+Nevada;Lyon;26_Silver Springs 4	precinct
+Nevada;Lyon;27_Fernley 1	precinct
+Nevada;Lyon;27_Fernley 1 - in City	precinct
+Nevada;Lyon;27_Fernley 1 - out of city	precinct
+Nevada;Lyon;28_Fernley 2	precinct
+Nevada;Lyon;28_Fernley 2 - in city	precinct
+Nevada;Lyon;28_Fernley 2 - out of city	precinct
+Nevada;Lyon;29_Fernley 3	precinct
+Nevada;Lyon;29_Fernley 3 - in city	precinct
+Nevada;Lyon;29_Fernley 3 - out of city	precinct
+Nevada;Lyon;30_Fernley 4	precinct
+Nevada;Lyon;30_Fernley 4 - in city	precinct
+Nevada;Lyon;30_Fernley 4 - out of city	precinct
+Nevada;Lyon;31_Fernley 5	precinct
+Nevada;Lyon;31_Fernley 5 - in city	precinct
+Nevada;Lyon;31_Fernley 5 - out of city	precinct
+Nevada;Lyon;32_Fernley 6	precinct
+Nevada;Lyon;32_Fernley 6 - in city	precinct
+Nevada;Lyon;32_Fernley 6 - out of city	precinct
+Nevada;Lyon;33_Fernley 7	precinct
+Nevada;Lyon;33_Fernley 7 - in city	precinct
+Nevada;Lyon;33_Fernley 7 - out of city	precinct
+Nevada;Lyon;34_Fernley 8	precinct
+Nevada;Lyon;34_Fernley 8 - in city	precinct
+Nevada;Lyon;34_Fernley 8 - out of city	precinct
+Nevada;Lyon;35_Fernley 9	precinct
+Nevada;Lyon;35_Fernley 9 - in city	precinct
+Nevada;Lyon;35_Fernley 9 - out of city	precinct
+Nevada;Lyon;36_Fernley 10	precinct
+Nevada;Lyon;36_Fernley 10 - in city	precinct
+Nevada;Lyon;36_Fernley 10 - out of city	precinct
+Nevada;Lyon;37_Fernley 11	precinct
+Nevada;Lyon;37_Fernley 11 - in city	precinct
+Nevada;Lyon;37_Fernley 11 - out of city	precinct
+Nevada;Lyon;38_Fernley 12	precinct
+Nevada;Lyon;38_Fernley 12 - in city	precinct
+Nevada;Lyon;38_Fernley 12 - out of city	precinct
+Nevada;Lyon;39_Fernley 13	precinct
+Nevada;Lyon;39_Fernley 13 - in city	precinct
+Nevada;Lyon;39_Fernley 13 - out of city	precinct
+Nevada;Lyon;40_Fernley 14	precinct
+Nevada;Lyon;40_Fernley 14- in city	precinct
+Nevada;Lyon;40_Fernley 14- out of city	precinct
+Nevada;Lyon;Precinct 99	precinct
+Nevada;Lyon;Precinct 99-0	precinct
+Nevada;Lyon;Precinct 99-1	precinct
+Nevada;Mineral;PRECINCT 1	precinct
+Nevada;Mineral;PRECINCT 10	precinct
+Nevada;Mineral;PRECINCT 11	precinct
+Nevada;Mineral;PRECINCT 12	precinct
+Nevada;Mineral;PRECINCT 2	precinct
+Nevada;Mineral;PRECINCT 3	precinct
+Nevada;Mineral;PRECINCT 4	precinct
+Nevada;Mineral;PRECINCT 5	precinct
+Nevada;Mineral;PRECINCT 6	precinct
+Nevada;Mineral;PRECINCT 7	precinct
+Nevada;Mineral;PRECINCT 8	precinct
+Nevada;Mineral;PRECINCT 9	precinct
+Nevada;Mineral;PRECINCT 99	precinct
+Nevada;Nye;AMARGOSA VLY 06	precinct
+Nevada;Nye;BEATTY 01	precinct
+Nevada;Nye;CURRANT 02	precinct
+Nevada;Nye;DUCKWATER 03	precinct
+Nevada;Nye;FORTY BAR 18	precinct
+Nevada;Nye;GABBS 04	precinct
+Nevada;Nye;IONE 05	precinct
+Nevada;Nye;MANHATTAN 07	precinct
+Nevada;Nye;MERCURY 08	precinct
+Nevada;Nye;PAHRUMP 09	precinct
+Nevada;Nye;PAHRUMP 10	precinct
+Nevada;Nye;PAHRUMP 11	precinct
+Nevada;Nye;PAHRUMP 16	precinct
+Nevada;Nye;PAHRUMP 17	precinct
+Nevada;Nye;PAHRUMP 19	precinct
+Nevada;Nye;PAHRUMP 20	precinct
+Nevada;Nye;PAHRUMP 21	precinct
+Nevada;Nye;PAHRUMP 22	precinct
+Nevada;Nye;PAHRUMP 23	precinct
+Nevada;Nye;PAHRUMP 24	precinct
+Nevada;Nye;PAHRUMP 25	precinct
+Nevada;Nye;PAHRUMP 26	precinct
+Nevada;Nye;PAHRUMP 27	precinct
+Nevada;Nye;PAHRUMP 28	precinct
+Nevada;Nye;PAHRUMP 29	precinct
+Nevada;Nye;PAHRUMP 30	precinct
+Nevada;Nye;PAHRUMP 31	precinct
+Nevada;Nye;PAHRUMP 32	precinct
+Nevada;Nye;Precinct 99	precinct
+Nevada;Nye;ROUND MTN 12	precinct
+Nevada;Nye;SMOKY VALLEY 35	precinct
+Nevada;Nye;SUNNYSIDE 13	precinct
+Nevada;Nye;TONOPAH 14	precinct
+Nevada;Nye;TONOPAH 15	precinct
+Nevada;Pershing;PRECINCT 1	precinct
+Nevada;Pershing;PRECINCT 3	precinct
+Nevada;Pershing;PRECINCT 4	precinct
+Nevada;Pershing;PRECINCT 5	precinct
+Nevada;Pershing;PRECINCT 6	precinct
+Nevada;Pershing;PRECINCT 7	precinct
+Nevada;Pershing;PRECINCT 99	precinct
+Nevada;Storey;PRECINCT 1	precinct
+Nevada;Storey;PRECINCT 10	precinct
+Nevada;Storey;PRECINCT 11	precinct
+Nevada;Storey;PRECINCT 12	precinct
+Nevada;Storey;PRECINCT 13	precinct
+Nevada;Storey;PRECINCT 14	precinct
+Nevada;Storey;PRECINCT 15	precinct
+Nevada;Storey;PRECINCT 2	precinct
+Nevada;Storey;PRECINCT 3	precinct
+Nevada;Storey;PRECINCT 4	precinct
+Nevada;Storey;PRECINCT 5	precinct
+Nevada;Storey;PRECINCT 6	precinct
+Nevada;Storey;PRECINCT 7	precinct
+Nevada;Storey;PRECINCT 8	precinct
+Nevada;Storey;PRECINCT 9	precinct
+Nevada;Storey;PRECINCT 99	precinct
+Nevada;Washoe;100000	precinct
+Nevada;Washoe;100200	precinct
+Nevada;Washoe;100300	precinct
+Nevada;Washoe;100500	precinct
+Nevada;Washoe;100600	precinct
+Nevada;Washoe;100700	precinct
+Nevada;Washoe;100800	precinct
+Nevada;Washoe;101000	precinct
+Nevada;Washoe;101100	precinct
+Nevada;Washoe;101200	precinct
+Nevada;Washoe;101400	precinct
+Nevada;Washoe;101500	precinct
+Nevada;Washoe;101600	precinct
+Nevada;Washoe;101800	precinct
+Nevada;Washoe;102000	precinct
+Nevada;Washoe;102200	precinct
+Nevada;Washoe;102300	precinct
+Nevada;Washoe;102400	precinct
+Nevada;Washoe;102600	precinct
+Nevada;Washoe;102700	precinct
+Nevada;Washoe;102900	precinct
+Nevada;Washoe;103100	precinct
+Nevada;Washoe;103200	precinct
+Nevada;Washoe;103300	precinct
+Nevada;Washoe;103500	precinct
+Nevada;Washoe;103600	precinct
+Nevada;Washoe;103800	precinct
+Nevada;Washoe;103900	precinct
+Nevada;Washoe;104000	precinct
+Nevada;Washoe;104300	precinct
+Nevada;Washoe;104400	precinct
+Nevada;Washoe;104500	precinct
+Nevada;Washoe;104600	precinct
+Nevada;Washoe;104700	precinct
+Nevada;Washoe;105000	precinct
+Nevada;Washoe;105100	precinct
+Nevada;Washoe;105300	precinct
+Nevada;Washoe;105500	precinct
+Nevada;Washoe;105600	precinct
+Nevada;Washoe;105700	precinct
+Nevada;Washoe;105800	precinct
+Nevada;Washoe;105900	precinct
+Nevada;Washoe;106100	precinct
+Nevada;Washoe;200000	precinct
+Nevada;Washoe;200200	precinct
+Nevada;Washoe;200400	precinct
+Nevada;Washoe;200600	precinct
+Nevada;Washoe;200700	precinct
+Nevada;Washoe;200900	precinct
+Nevada;Washoe;201000	precinct
+Nevada;Washoe;201300	precinct
+Nevada;Washoe;201600	precinct
+Nevada;Washoe;201700	precinct
+Nevada;Washoe;201800	precinct
+Nevada;Washoe;201900	precinct
+Nevada;Washoe;202000	precinct
+Nevada;Washoe;202100	precinct
+Nevada;Washoe;202200	precinct
+Nevada;Washoe;202300	precinct
+Nevada;Washoe;202500	precinct
+Nevada;Washoe;202600	precinct
+Nevada;Washoe;202700	precinct
+Nevada;Washoe;202800	precinct
+Nevada;Washoe;202900	precinct
+Nevada;Washoe;203000	precinct
+Nevada;Washoe;203100	precinct
+Nevada;Washoe;203200	precinct
+Nevada;Washoe;203300	precinct
+Nevada;Washoe;203400	precinct
+Nevada;Washoe;203500	precinct
+Nevada;Washoe;203600	precinct
+Nevada;Washoe;203700	precinct
+Nevada;Washoe;203900	precinct
+Nevada;Washoe;204000	precinct
+Nevada;Washoe;204100	precinct
+Nevada;Washoe;204200	precinct
+Nevada;Washoe;204300	precinct
+Nevada;Washoe;204700	precinct
+Nevada;Washoe;204800	precinct
+Nevada;Washoe;204900	precinct
+Nevada;Washoe;205000	precinct
+Nevada;Washoe;205100	precinct
+Nevada;Washoe;205700	precinct
+Nevada;Washoe;205800	precinct
+Nevada;Washoe;206000	precinct
+Nevada;Washoe;206200	precinct
+Nevada;Washoe;206400	precinct
+Nevada;Washoe;206500	precinct
+Nevada;Washoe;206800	precinct
+Nevada;Washoe;207000	precinct
+Nevada;Washoe;207300	precinct
+Nevada;Washoe;207400	precinct
+Nevada;Washoe;207800	precinct
+Nevada;Washoe;208000	precinct
+Nevada;Washoe;208100	precinct
+Nevada;Washoe;300100	precinct
+Nevada;Washoe;300200	precinct
+Nevada;Washoe;300300	precinct
+Nevada;Washoe;300400	precinct
+Nevada;Washoe;300500	precinct
+Nevada;Washoe;300600	precinct
+Nevada;Washoe;300700	precinct
+Nevada;Washoe;300800	precinct
+Nevada;Washoe;300900	precinct
+Nevada;Washoe;301000	precinct
+Nevada;Washoe;301100	precinct
+Nevada;Washoe;301200	precinct
+Nevada;Washoe;301300	precinct
+Nevada;Washoe;301400	precinct
+Nevada;Washoe;301500	precinct
+Nevada;Washoe;301600	precinct
+Nevada;Washoe;301700	precinct
+Nevada;Washoe;301800	precinct
+Nevada;Washoe;301900	precinct
+Nevada;Washoe;302000	precinct
+Nevada;Washoe;302100	precinct
+Nevada;Washoe;302200	precinct
+Nevada;Washoe;302300	precinct
+Nevada;Washoe;302400	precinct
+Nevada;Washoe;302500	precinct
+Nevada;Washoe;302600	precinct
+Nevada;Washoe;302700	precinct
+Nevada;Washoe;302800	precinct
+Nevada;Washoe;302900	precinct
+Nevada;Washoe;303000	precinct
+Nevada;Washoe;303100	precinct
+Nevada;Washoe;303200	precinct
+Nevada;Washoe;303500	precinct
+Nevada;Washoe;303600	precinct
+Nevada;Washoe;303800	precinct
+Nevada;Washoe;303900	precinct
+Nevada;Washoe;304000	precinct
+Nevada;Washoe;400000	precinct
+Nevada;Washoe;400300	precinct
+Nevada;Washoe;400500	precinct
+Nevada;Washoe;400700	precinct
+Nevada;Washoe;400900	precinct
+Nevada;Washoe;401200	precinct
+Nevada;Washoe;401400	precinct
+Nevada;Washoe;401500	precinct
+Nevada;Washoe;401600	precinct
+Nevada;Washoe;401700	precinct
+Nevada;Washoe;401800	precinct
+Nevada;Washoe;401900	precinct
+Nevada;Washoe;402000	precinct
+Nevada;Washoe;402100	precinct
+Nevada;Washoe;402200	precinct
+Nevada;Washoe;402300	precinct
+Nevada;Washoe;402400	precinct
+Nevada;Washoe;402500	precinct
+Nevada;Washoe;402600	precinct
+Nevada;Washoe;402900	precinct
+Nevada;Washoe;403200	precinct
+Nevada;Washoe;403300	precinct
+Nevada;Washoe;403500	precinct
+Nevada;Washoe;403600	precinct
+Nevada;Washoe;403700	precinct
+Nevada;Washoe;403800	precinct
+Nevada;Washoe;403900	precinct
+Nevada;Washoe;404000	precinct
+Nevada;Washoe;404100	precinct
+Nevada;Washoe;404200	precinct
+Nevada;Washoe;404300	precinct
+Nevada;Washoe;404500	precinct
+Nevada;Washoe;404600	precinct
+Nevada;Washoe;404700	precinct
+Nevada;Washoe;405100	precinct
+Nevada;Washoe;405200	precinct
+Nevada;Washoe;405300	precinct
+Nevada;Washoe;405400	precinct
+Nevada;Washoe;405500	precinct
+Nevada;Washoe;405600	precinct
+Nevada;Washoe;500000	precinct
+Nevada;Washoe;500300	precinct
+Nevada;Washoe;500500	precinct
+Nevada;Washoe;500600	precinct
+Nevada;Washoe;500700	precinct
+Nevada;Washoe;500800	precinct
+Nevada;Washoe;500900	precinct
+Nevada;Washoe;501000	precinct
+Nevada;Washoe;501100	precinct
+Nevada;Washoe;501200	precinct
+Nevada;Washoe;501400	precinct
+Nevada;Washoe;501500	precinct
+Nevada;Washoe;501600	precinct
+Nevada;Washoe;501800	precinct
+Nevada;Washoe;502000	precinct
+Nevada;Washoe;502200	precinct
+Nevada;Washoe;502300	precinct
+Nevada;Washoe;502400	precinct
+Nevada;Washoe;502600	precinct
+Nevada;Washoe;502700	precinct
+Nevada;Washoe;503000	precinct
+Nevada;Washoe;503100	precinct
+Nevada;Washoe;503200	precinct
+Nevada;Washoe;503300	precinct
+Nevada;Washoe;503400	precinct
+Nevada;Washoe;503500	precinct
+Nevada;Washoe;503600	precinct
+Nevada;Washoe;503900	precinct
+Nevada;Washoe;504000	precinct
+Nevada;Washoe;504100	precinct
+Nevada;Washoe;504500	precinct
+Nevada;Washoe;504600	precinct
+Nevada;Washoe;504700	precinct
+Nevada;Washoe;504800	precinct
+Nevada;Washoe;504900	precinct
+Nevada;Washoe;505100	precinct
+Nevada;Washoe;505300	precinct
+Nevada;Washoe;505400	precinct
+Nevada;Washoe;505600	precinct
+Nevada;Washoe;506100	precinct
+Nevada;Washoe;506200	precinct
+Nevada;Washoe;506300	precinct
+Nevada;Washoe;506400	precinct
+Nevada;Washoe;506500	precinct
+Nevada;Washoe;506600	precinct
+Nevada;Washoe;610000	precinct
+Nevada;Washoe;610100	precinct
+Nevada;Washoe;610400	precinct
+Nevada;Washoe;610500	precinct
+Nevada;Washoe;610600	precinct
+Nevada;Washoe;610700	precinct
+Nevada;Washoe;610800	precinct
+Nevada;Washoe;610900	precinct
+Nevada;Washoe;611000	precinct
+Nevada;Washoe;611100	precinct
+Nevada;Washoe;611300	precinct
+Nevada;Washoe;611400	precinct
+Nevada;Washoe;611500	precinct
+Nevada;Washoe;620200	precinct
+Nevada;Washoe;620300	precinct
+Nevada;Washoe;620500	precinct
+Nevada;Washoe;620600	precinct
+Nevada;Washoe;620700	precinct
+Nevada;Washoe;620800	precinct
+Nevada;Washoe;620900	precinct
+Nevada;Washoe;621000	precinct
+Nevada;Washoe;621100	precinct
+Nevada;Washoe;621200	precinct
+Nevada;Washoe;621300	precinct
+Nevada;Washoe;621400	precinct
+Nevada;Washoe;621600	precinct
+Nevada;Washoe;621700	precinct
+Nevada;Washoe;621800	precinct
+Nevada;Washoe;630000	precinct
+Nevada;Washoe;630100	precinct
+Nevada;Washoe;630200	precinct
+Nevada;Washoe;630300	precinct
+Nevada;Washoe;630600	precinct
+Nevada;Washoe;630700	precinct
+Nevada;Washoe;630800	precinct
+Nevada;Washoe;631000	precinct
+Nevada;Washoe;631100	precinct
+Nevada;Washoe;631300	precinct
+Nevada;Washoe;631400	precinct
+Nevada;Washoe;631700	precinct
+Nevada;Washoe;631800	precinct
+Nevada;Washoe;631900	precinct
+Nevada;Washoe;632000	precinct
+Nevada;Washoe;640000	precinct
+Nevada;Washoe;640300	precinct
+Nevada;Washoe;640500	precinct
+Nevada;Washoe;641100	precinct
+Nevada;Washoe;641300	precinct
+Nevada;Washoe;641400	precinct
+Nevada;Washoe;641500	precinct
+Nevada;Washoe;641600	precinct
+Nevada;Washoe;641800	precinct
+Nevada;Washoe;642200	precinct
+Nevada;Washoe;642300	precinct
+Nevada;Washoe;642500	precinct
+Nevada;Washoe;642700	precinct
+Nevada;Washoe;650000	precinct
+Nevada;Washoe;650100	precinct
+Nevada;Washoe;650300	precinct
+Nevada;Washoe;650800	precinct
+Nevada;Washoe;651100	precinct
+Nevada;Washoe;651300	precinct
+Nevada;Washoe;651400	precinct
+Nevada;Washoe;651600	precinct
+Nevada;Washoe;651900	precinct
+Nevada;Washoe;652000	precinct
+Nevada;Washoe;652100	precinct
+Nevada;Washoe;652200	precinct
+Nevada;Washoe;652300	precinct
+Nevada;Washoe;652400	precinct
+Nevada;Washoe;652500	precinct
+Nevada;Washoe;652600	precinct
+Nevada;Washoe;652700	precinct
+Nevada;Washoe;652800	precinct
+Nevada;Washoe;652900	precinct
+Nevada;Washoe;710000	precinct
+Nevada;Washoe;730000	precinct
+Nevada;Washoe;730200	precinct
+Nevada;Washoe;730400	precinct
+Nevada;Washoe;730600	precinct
+Nevada;Washoe;730700	precinct
+Nevada;Washoe;730800	precinct
+Nevada;Washoe;730900	precinct
+Nevada;Washoe;731200	precinct
+Nevada;Washoe;731300	precinct
+Nevada;Washoe;731400	precinct
+Nevada;Washoe;731500	precinct
+Nevada;Washoe;731600	precinct
+Nevada;Washoe;731700	precinct
+Nevada;Washoe;731800	precinct
+Nevada;Washoe;731900	precinct
+Nevada;Washoe;732100	precinct
+Nevada;Washoe;740000	precinct
+Nevada;Washoe;740200	precinct
+Nevada;Washoe;740300	precinct
+Nevada;Washoe;740400	precinct
+Nevada;Washoe;740600	precinct
+Nevada;Washoe;740700	precinct
+Nevada;Washoe;740800	precinct
+Nevada;Washoe;741000	precinct
+Nevada;Washoe;741200	precinct
+Nevada;Washoe;741300	precinct
+Nevada;Washoe;741400	precinct
+Nevada;Washoe;741500	precinct
+Nevada;Washoe;741600	precinct
+Nevada;Washoe;741700	precinct
+Nevada;Washoe;741800	precinct
+Nevada;Washoe;742400	precinct
+Nevada;Washoe;742500	precinct
+Nevada;Washoe;742600	precinct
+Nevada;Washoe;742800	precinct
+Nevada;Washoe;743000	precinct
+Nevada;Washoe;743100	precinct
+Nevada;Washoe;743300	precinct
+Nevada;Washoe;750000	precinct
+Nevada;Washoe;750100	precinct
+Nevada;Washoe;750200	precinct
+Nevada;Washoe;750300	precinct
+Nevada;Washoe;750400	precinct
+Nevada;Washoe;750500	precinct
+Nevada;Washoe;750600	precinct
+Nevada;Washoe;750700	precinct
+Nevada;Washoe;750800	precinct
+Nevada;Washoe;750900	precinct
+Nevada;Washoe;751200	precinct
+Nevada;Washoe;751300	precinct
+Nevada;Washoe;751400	precinct
+Nevada;Washoe;751600	precinct
+Nevada;Washoe;751700	precinct
+Nevada;Washoe;751800	precinct
+Nevada;Washoe;751900	precinct
+Nevada;Washoe;752000	precinct
+Nevada;Washoe;752100	precinct
+Nevada;Washoe;752200	precinct
+Nevada;Washoe;752300	precinct
+Nevada;Washoe;752400	precinct
+Nevada;Washoe;752500	precinct
+Nevada;Washoe;752600	precinct
+Nevada;Washoe;752700	precinct
+Nevada;Washoe;752800	precinct
+Nevada;Washoe;752900	precinct
+Nevada;Washoe;753100	precinct
+Nevada;Washoe;753200	precinct
+Nevada;Washoe;753300	precinct
+Nevada;Washoe;753400	precinct
+Nevada;Washoe;753600	precinct
+Nevada;Washoe;753700	precinct
+Nevada;Washoe;753900	precinct
+Nevada;Washoe;754000	precinct
+Nevada;Washoe;754100	precinct
+Nevada;Washoe;754300	precinct
+Nevada;Washoe;754600	precinct
+Nevada;Washoe;754700	precinct
+Nevada;Washoe;754800	precinct
+Nevada;Washoe;754900	precinct
+Nevada;Washoe;755000	precinct
+Nevada;Washoe;755200	precinct
+Nevada;Washoe;755300	precinct
+Nevada;Washoe;755600	precinct
+Nevada;Washoe;755700	precinct
+Nevada;Washoe;755800	precinct
+Nevada;Washoe;756200	precinct
+Nevada;Washoe;756300	precinct
+Nevada;Washoe;756500	precinct
+Nevada;Washoe;756600	precinct
+Nevada;Washoe;756700	precinct
+Nevada;Washoe;756900	precinct
+Nevada;Washoe;757000	precinct
+Nevada;Washoe;757100	precinct
+Nevada;Washoe;757200	precinct
+Nevada;Washoe;757300	precinct
+Nevada;Washoe;757400	precinct
+Nevada;Washoe;757600	precinct
+Nevada;Washoe;757700	precinct
+Nevada;Washoe;757800	precinct
+Nevada;Washoe;757900	precinct
+Nevada;Washoe;758100	precinct
+Nevada;Washoe;758200	precinct
+Nevada;Washoe;758300	precinct
+Nevada;Washoe;758400	precinct
+Nevada;Washoe;758500	precinct
+Nevada;Washoe;758600	precinct
+Nevada;Washoe;758700	precinct
+Nevada;Washoe;758800	precinct
+Nevada;Washoe;758900	precinct
+Nevada;Washoe;759100	precinct
+Nevada;Washoe;810000	precinct
+Nevada;Washoe;810100	precinct
+Nevada;Washoe;810200	precinct
+Nevada;Washoe;810300	precinct
+Nevada;Washoe;810400	precinct
+Nevada;Washoe;810500	precinct
+Nevada;Washoe;810600	precinct
+Nevada;Washoe;810700	precinct
+Nevada;Washoe;810800	precinct
+Nevada;Washoe;810900	precinct
+Nevada;Washoe;811000	precinct
+Nevada;Washoe;811100	precinct
+Nevada;Washoe;811200	precinct
+Nevada;Washoe;811400	precinct
+Nevada;Washoe;811500	precinct
+Nevada;Washoe;811600	precinct
+Nevada;Washoe;811700	precinct
+Nevada;Washoe;811800	precinct
+Nevada;Washoe;812500	precinct
+Nevada;Washoe;812600	precinct
+Nevada;Washoe;812700	precinct
+Nevada;Washoe;812800	precinct
+Nevada;Washoe;812900	precinct
+Nevada;Washoe;820000	precinct
+Nevada;Washoe;820100	precinct
+Nevada;Washoe;820200	precinct
+Nevada;Washoe;820300	precinct
+Nevada;Washoe;820400	precinct
+Nevada;Washoe;820500	precinct
+Nevada;Washoe;820600	precinct
+Nevada;Washoe;820700	precinct
+Nevada;Washoe;820800	precinct
+Nevada;Washoe;820900	precinct
+Nevada;Washoe;821000	precinct
+Nevada;Washoe;821100	precinct
+Nevada;Washoe;821200	precinct
+Nevada;Washoe;821300	precinct
+Nevada;Washoe;821400	precinct
+Nevada;Washoe;821600	precinct
+Nevada;Washoe;821700	precinct
+Nevada;Washoe;821800	precinct
+Nevada;Washoe;821900	precinct
+Nevada;Washoe;822000	precinct
+Nevada;Washoe;822100	precinct
+Nevada;Washoe;822200	precinct
+Nevada;Washoe;822600	precinct
+Nevada;Washoe;822700	precinct
+Nevada;Washoe;823200	precinct
+Nevada;Washoe;823300	precinct
+Nevada;Washoe;823400	precinct
+Nevada;Washoe;823500	precinct
+Nevada;Washoe;823600	precinct
+Nevada;Washoe;823700	precinct
+Nevada;Washoe;823800	precinct
+Nevada;Washoe;824000	precinct
+Nevada;Washoe;824500	precinct
+Nevada;Washoe;824700	precinct
+Nevada;Washoe;825000	precinct
+Nevada;Washoe;825300	precinct
+Nevada;Washoe;825400	precinct
+Nevada;Washoe;825600	precinct
+Nevada;Washoe;825900	precinct
+Nevada;Washoe;826000	precinct
+Nevada;Washoe;826100	precinct
+Nevada;Washoe;826300	precinct
+Nevada;Washoe;826400	precinct
+Nevada;Washoe;826500	precinct
+Nevada;Washoe;827100	precinct
+Nevada;Washoe;827300	precinct
+Nevada;Washoe;827500	precinct
+Nevada;Washoe;827600	precinct
+Nevada;Washoe;827700	precinct
+Nevada;Washoe;829000	precinct
+Nevada;Washoe;829100	precinct
+Nevada;Washoe;829200	precinct
+Nevada;Washoe;829400	precinct
+Nevada;Washoe;829700	precinct
+Nevada;Washoe;840000	precinct
+Nevada;Washoe;850000	precinct
+Nevada;Washoe;850200	precinct
+Nevada;Washoe;850500	precinct
+Nevada;Washoe;910100	precinct
+Nevada;Washoe;910200	precinct
+Nevada;Washoe;910300	precinct
+Nevada;Washoe;910600	precinct
+Nevada;Washoe;910700	precinct
+Nevada;Washoe;910900	precinct
+Nevada;Washoe;911500	precinct
+Nevada;Washoe;911600	precinct
+Nevada;Washoe;912000	precinct
+Nevada;Washoe;912100	precinct
+Nevada;Washoe;912200	precinct
+Nevada;Washoe;912300	precinct
+Nevada;Washoe;912400	precinct
+Nevada;Washoe;912500	precinct
+Nevada;Washoe;912600	precinct
+Nevada;Washoe;912700	precinct
+Nevada;Washoe;912800	precinct
+Nevada;Washoe;912900	precinct
+Nevada;Washoe;913000	precinct
+Nevada;Washoe;913100	precinct
+Nevada;Washoe;920200	precinct
+Nevada;Washoe;920700	precinct
+Nevada;Washoe;920800	precinct
+Nevada;Washoe;921000	precinct
+Nevada;Washoe;921100	precinct
+Nevada;Washoe;923900	precinct
+Nevada;Washoe;924300	precinct
+Nevada;Washoe;924400	precinct
+Nevada;Washoe;924800	precinct
+Nevada;Washoe;924900	precinct
+Nevada;Washoe;925100	precinct
+Nevada;Washoe;925200	precinct
+Nevada;Washoe;925300	precinct
+Nevada;Washoe;925400	precinct
+Nevada;Washoe;930300	precinct
+Nevada;Washoe;930400	precinct
+Nevada;Washoe;930700	precinct
+Nevada;Washoe;930800	precinct
+Nevada;Washoe;930900	precinct
+Nevada;Washoe;931000	precinct
+Nevada;Washoe;931100	precinct
+Nevada;Washoe;940800	precinct
+Nevada;Washoe;942700	precinct
+Nevada;Washoe;942800	precinct
+Nevada;Washoe;951300	precinct
+Nevada;Washoe;951600	precinct
+Nevada;Washoe;952000	precinct
+Nevada;Washoe;952300	precinct
+Nevada;Washoe;953200	precinct
+Nevada;Washoe;953300	precinct
+Nevada;Washoe;953800	precinct
+Nevada;Washoe;954000	precinct
+Nevada;Washoe;954100	precinct
+Nevada;Washoe;954200	precinct
+Nevada;Washoe;954300	precinct
+Nevada;Washoe;954600	precinct
+Nevada;Washoe;954700	precinct
+Nevada;Washoe;954800	precinct
+Nevada;Washoe;954900	precinct
+Nevada;Washoe;955000	precinct
+Nevada;Washoe;955100	precinct
+Nevada;Washoe;955200	precinct
+Nevada;Washoe;955300	precinct
+Nevada;Washoe;955400	precinct
+Nevada;Washoe;955500	precinct
+Nevada;Washoe;955700	precinct
+Nevada;Washoe;955800	precinct
+Nevada;Washoe;955900	precinct
+Nevada;Washoe;956000	precinct
+Nevada;Washoe;956100	precinct
+Nevada;Washoe;956200	precinct
+Nevada;Washoe;970000	precinct
+Nevada;Washoe;990000	precinct
+Nevada;White Pine;Precinct 1	precinct
+Nevada;White Pine;Precinct 10	precinct
+Nevada;White Pine;Precinct 2	precinct
+Nevada;White Pine;Precinct 3	precinct
+Nevada;White Pine;Precinct 4	precinct
+Nevada;White Pine;Precinct 5	precinct
+Nevada;White Pine;Precinct 6	precinct
+Nevada;White Pine;Precinct 7	precinct
+Nevada;White Pine;Precinct 8	precinct
+Nevada;White Pine;Precinct 9	precinct
+Nevada;White Pine;Precinct 99	precinct
+Nevada;Carson City	county
+Nevada;Churchill	county
+Nevada;Clark	county
+Nevada;Douglas	county
+Nevada;Elko	county
+Nevada;Esmeralda	county
+Nevada;Eureka	county
+Nevada;Humboldt	county
+Nevada;Lander	county
+Nevada;Lincoln	county
+Nevada;Lyon	county
+Nevada;Mineral	county
+Nevada;Nye	county
+Nevada;Pershing	county
+Nevada;Storey	county
+Nevada;Washoe	county
+Nevada;White Pine	county
