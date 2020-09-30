@@ -70,42 +70,55 @@ def cast_cols_as_int(
     return df, err
 
 
-def munge_clean(raw: pd.DataFrame, munger: jm.Munger):
+def munge_clean(raw: pd.DataFrame, munger: jm.Munger) -> (pd.DataFrame, dict):
     """Drop unnecessary columns.
+    TODO: for multiple-header columns, replace any to-be-munged columns (not count columns)
+        with simple column headers named, e.g., replace'2020 Primary/Dem/Precinct' by 'Precinct'
     Append '_SOURCE' suffix to raw column names to avoid conflicts"""
+    err = None
     working = raw.copy()
-    # drop columns that are neither count columns nor used in munger formulas
-    #  define columns named in munger formulas
-    if munger.options["header_row_count"] is not None and munger.options["header_row_count"] > 1:
-        munger_formula_columns = [
-            x
-            for x in working.columns
-            if x[munger.options["field_name_row"]] in munger.field_list
-        ]
-    else:
-        munger_formula_columns = [x for x in working.columns if x in munger.field_list]
 
-    if munger.options["count_columns_by_name"]:
-        count_columns_by_name = munger.options["count_columns_by_name"]
-    elif munger.options["field_name_row"] is None:
-        count_columns_by_name = [
-            munger.options["field_names_if_no_field_name_row"][idx]
-            for idx in munger.options["count_columns"]
-        ]
-    else:
-        count_columns_by_name = [
-            working.columns[idx] for idx in munger.options["count_columns"]
-        ]
-    # TODO error check- what if cols_to_munge is missing something from munger.field_list?
+    try:
+        #  define columns named in munger formulas
+        if munger.options["header_row_count"] is not None and munger.options["header_row_count"] > 1:
+            munger_formula_columns = [
+                x
+                for x in working.columns
+                if x[munger.options["field_name_row"]] in munger.field_list
+            ]
+        else:
+            munger_formula_columns = [x for x in working.columns if x in munger.field_list]
 
-    # keep columns named in munger formulas; keep count columns; drop all else.
-    working = working[munger_formula_columns + count_columns_by_name]
+        # define count_columns_by_name list
+        if munger.options["count_columns_by_name"]:
+            count_columns_by_name = munger.options["count_columns_by_name"]
+        elif munger.options["field_name_row"] is None:
+            count_columns_by_name = [
+                munger.options["field_names_if_no_field_name_row"][idx]
+                for idx in munger.options["count_columns"]
+            ]
+        else:
+            count_columns_by_name = [
+                working.columns[idx] for idx in munger.options["count_columns"]
+            ]
+        # TODO error check- what if cols_to_munge is missing something from munger.field_list?
 
-    # add suffix '_SOURCE' to certain columns to avoid any conflict with db table names
-    # (since no db table name ends with _SOURCE)
-    renamer = {x: f"{x}_SOURCE" for x in munger_formula_columns}
-    working.rename(columns=renamer, inplace=True)
-    return working
+        # keep columns named in munger formulas; keep count columns; drop all else.
+        working = working[munger_formula_columns + count_columns_by_name]
+
+        # add suffix '_SOURCE' to certain columns to avoid any conflict with db table names
+        # (since no db table name ends with _SOURCE)
+        # TODO this fails when munger formula column headers are multi-index.
+        renamer = {x: f"{x}_SOURCE" for x in munger_formula_columns}
+        working.rename(columns=renamer, inplace=True)
+    except Exception as e:
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.munge_clean",
+            "Unspecified error"
+        )
+    return working, err
 
 
 def text_fragments_and_fields(formula):
