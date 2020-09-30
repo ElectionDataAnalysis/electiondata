@@ -26,6 +26,9 @@ Different file types need different parameters to be specified.
    * field_name_row
    * field_names_if_no_field_name_row
    * count_columns
+   
+ NB: the header_row_count should count only rows with data the system needs to read. If there are blank lines, or lines with inessential information -- such as the election date, which is not munged -- use the optional parameter count_of_top_lines_to_skip.
+ 
  * Required for `concatenated-blocks` type:
    * count_of_top_lines_to_skip
    * columns_to_skip
