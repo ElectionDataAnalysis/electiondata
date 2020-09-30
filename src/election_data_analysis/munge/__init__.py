@@ -716,7 +716,7 @@ def raw_elements_to_cdf(
     try:
         working, new_err = munge_and_melt(mu, working, count_cols, err)
         if new_err:
-            ui.consolidate_errors([err, new_err])
+            err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
                 return err
     except Exception as exc:
