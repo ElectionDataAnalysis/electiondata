@@ -143,7 +143,6 @@ def create_scatter(
     v_count_id,
     v_type,
 ):
-
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
 
@@ -173,13 +172,13 @@ def create_scatter(
     elif h_type == "candidates":
         x = db.name_from_id(cursor, "Candidate", h_count_id)
     elif h_type == "contests":
-        x = db.name_from_id(cursor, "CandidateContest", h_count_id)
+        x = db.name_from_id(cursor, "Contest", h_count_id)
     if v_count_id == -1:
         y = f"All {v_type}"
     elif v_type == "candidates":
         y = db.name_from_id(cursor, "Candidate", v_count_id)
     elif v_type == "contests":
-        y = db.name_from_id(cursor, "CandidateContest", v_count_id)
+        y = db.name_from_id(cursor, "Contest", v_count_id)
     jurisdiction = db.name_from_id(cursor, "ReportingUnit", jurisdiction_id)
     pivot_df = pd.pivot_table(
         unsummed, values="Count", index=["Name"], columns="Selection"
@@ -263,10 +262,13 @@ def get_data_for_scatter(
         unsummed["Candidate_Id"] = filter_id
 
     if count_type == "contests" and filter_id != -1:
-        selection = db.name_from_id(session, "CandidateContest", filter_id)
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        selection = db.name_from_id(cursor, "Contest", filter_id)
         unsummed["Selection"] = selection
-    elif count_type == "contests" and filter_id == -1:
-        unsummed["Selection"] = "All contests"
+        cursor.close()
+    # elif count_type == "contests" and filter_id == -1:
+    #    unsummed["Selection"] = "All contests"
 
     columns = list(unsummed.drop(columns="Count").columns)
     unsummed = unsummed.groupby(columns)["Count"].sum().reset_index()

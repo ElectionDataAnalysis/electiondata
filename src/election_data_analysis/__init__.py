@@ -99,7 +99,9 @@ class DataLoader:
             print("Exiting")
             quit()
 
-    def load_all(self, load_jurisdictions: bool = True, move_files: bool = False) -> dict:
+    def load_all(
+        self, load_jurisdictions: bool = True, move_files: bool = False
+    ) -> dict:
         """returns an error dictionary"""
         # initialize error dictionary
         err = None
@@ -161,7 +163,9 @@ class DataLoader:
                 ###########
                 # for backwards compatibility
                 if not params[f]["jurisdiction_directory"]:
-                    params[f]["jurisdiction_directory"] = Path(params[f]["jurisdiction_path"]).name
+                    params[f]["jurisdiction_directory"] = Path(
+                        params[f]["jurisdiction_path"]
+                    ).name
                 ###########
                 good_par_files.append(f)
                 juris_directory[f] = params[f]["jurisdiction_directory"]
@@ -287,7 +291,11 @@ class SingleDataLoader:
         )
 
         # assign None to aux_data_dir if necessary
-        if "aux_data_dir" not in self.d.keys() or self.d["aux_data_dir"] in ["", "None", "none"]:
+        if "aux_data_dir" not in self.d.keys() or self.d["aux_data_dir"] in [
+            "",
+            "None",
+            "none",
+        ]:
             self.d["aux_data_dir"] = None
 
         # change any blank parameters describing the results file to 'none'
@@ -368,7 +376,7 @@ class SingleDataLoader:
             if self.d["aux_data_dir"] is None:
                 aux_data_path = None
             else:
-                aux_data_path = os.path.join(self.results_dir,self.d["aux_data_dir"])
+                aux_data_path = os.path.join(self.results_dir, self.d["aux_data_dir"])
             for mu in self.munger_list:
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
                 new_err = ui.new_datafile(
@@ -385,23 +393,20 @@ class SingleDataLoader:
 
 
 def check_aux_data_setup(
-        params,
-        aux_data_dir_parent,
-        mungers_path,
-        par_file_name
+    params, aux_data_dir_parent, mungers_path, par_file_name
 ) -> dict:
 
     err = None
     # if aux_data_dir is given
     if "aux_data_dir" in params.keys() and params["aux_data_dir"] is not None:
         # check that it is a bona fide subdirectory of the results directory
-        if not os.path.isdir(os.path.join(aux_data_dir_parent,params["aux_data_dir"])):
+        if not os.path.isdir(os.path.join(aux_data_dir_parent, params["aux_data_dir"])):
             # TODO test this error
             err = ui.add_new_error(
                 err,
                 "ini",
                 par_file_name,
-                f"Specified aux_data_dir ({params['aux_data_dir']}) is not a subdirectory of {aux_data_dir_parent}"
+                f"Specified aux_data_dir ({params['aux_data_dir']}) is not a subdirectory of {aux_data_dir_parent}",
             )
             sdl = None
             return sdl, err
@@ -416,9 +421,10 @@ def check_aux_data_setup(
                     par_file_name,
                     f"Munger {m_name} has an aux_meta.txt file, "
                     f"indicating that an auxiliary data directory is expected, but "
-                    f"no aux_data_dir is given"
+                    f"no aux_data_dir is given",
                 )
     return err
+
 
 def check_and_init_singledataloader(
     results_dir: str,
@@ -442,7 +448,7 @@ def check_and_init_singledataloader(
         return sdl, err
 
     # check consistency of munger and .ini file regarding aux data
-    new_err = check_aux_data_setup(d,results_dir,mungers_path,par_file_name)
+    new_err = check_aux_data_setup(d, results_dir, mungers_path, par_file_name)
 
     if ui.fatal_error(new_err):
         err = ui.consolidate_errors([err, new_err])
@@ -451,7 +457,9 @@ def check_and_init_singledataloader(
 
     ##################
     # for backward compatibility
-    if ("jurisdiction_directory" not in d.keys()) and ("jurisdiction_path" not in d.keys()):
+    if ("jurisdiction_directory" not in d.keys()) and (
+        "jurisdiction_path" not in d.keys()
+    ):
         sdl = None
         err = ui.add_new_error(
             dict(),
@@ -511,7 +519,9 @@ class JurisdictionPrepper:
         error = jm.ensure_jurisdiction_dir(self.d["jurisdiction_path"])
         # add default entries
         project_root = Path(__file__).absolute().parents[1]
-        templates = os.path.join(project_root, "juris_and_munger", "jurisdiction_templates")
+        templates = os.path.join(
+            project_root, "juris_and_munger", "jurisdiction_templates"
+        )
         for element in ["Party", "Election"]:
             new_err = prep.add_defaults(self.d["jurisdiction_path"], templates, element)
             if new_err:
@@ -910,7 +920,7 @@ class JurisdictionPrepper:
             d, new_err = ui.get_runtime_parameters(
                 required_keys=sdl_pars_req,
                 param_file=par_file,
-                header='election_data_analysis',
+                header="election_data_analysis",
                 err=None,
                 optional_keys=sdl_pars_opt,
             )
@@ -930,7 +940,7 @@ class JurisdictionPrepper:
                     error=None,
                     sub_ru_type=sub_ru_type,
                     results_file_path=os.path.join(dir, d["results_file"]),
-                    munger_path=os.path.join(environment_d["mungers_dir"],m_name),
+                    munger_path=os.path.join(environment_d["mungers_dir"], m_name),
                     aux_data_path=aux_data_path,
                 )
                 if new_err:
@@ -972,14 +982,14 @@ class JurisdictionPrepper:
                 if d["aux_data_dir"] is None:
                     aux_data_path = None
                 else:
-                    aux_data_path = os.path.join(dir,d["aux_data_dir"])
+                    aux_data_path = os.path.join(dir, d["aux_data_dir"])
                 # loop through mungers in the "munger_name" list
                 for m_name in d["munger_name"].split(","):
                     # add elements
                     new_err = self.add_elements_from_results_file(
                         elements=elements,
-                        results_file_path=os.path.join(dir,d["results_file"]),
-                        munger_path=os.path.join(environment_d["mungers_dir"],m_name),
+                        results_file_path=os.path.join(dir, d["results_file"]),
+                        munger_path=os.path.join(environment_d["mungers_dir"], m_name),
                         aux_data_path=aux_data_path,
                         error=None,
                     )
@@ -1135,10 +1145,12 @@ def make_par_files(
     once all other necessary parameters are specified."""
     data_file_list = [f for f in os.listdir(dir) if (f[-4:] != ".ini") & (f[0] != ".")]
     for f in data_file_list:
-        par_text = f"[election_data_analysis]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\n" \
-                   f"munger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\n" \
-                   f"results_short_name={top_ru}_{f}\nresults_download_date={download_date}\n" \
-                   f"results_source={source}\nresults_note={results_note}\n"
+        par_text = (
+            f"[election_data_analysis]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\n"
+            f"munger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\n"
+            f"results_short_name={top_ru}_{f}\nresults_download_date={download_date}\n"
+            f"results_source={source}\nresults_note={results_note}\n"
+        )
         par_name = ".".join(f.split(".")[:-1]) + ".ini"
         with open(os.path.join(dir, par_name), "w") as p:
             p.write(par_text)
@@ -1242,8 +1254,6 @@ class Analyzer:
             v_count_id = db.name_to_id(self.session, "Candidate", v_count)
         elif v_type == "contests":
             v_count_id = db.name_to_id(self.session, "CandidateContest", v_count)
-        h_count_item_type, h_type = self.split_category_input(h_category)
-        v_count_item_type, v_type = self.split_category_input(v_category)
         agg_results = a.create_scatter(
             self.session,
             jurisdiction_id,
@@ -1319,7 +1329,7 @@ class Analyzer:
         self,
         election: str,
         jurisdiction: str,
-        contest: str=None,
+        contest: str = None,
     ) -> list:
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(
