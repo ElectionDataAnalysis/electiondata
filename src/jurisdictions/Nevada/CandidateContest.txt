@@ -71,4 +71,6 @@ NV Governor	1	NV Governor
 US Senate NV	1	US Senate NV	
 NV Attorney General	1	NV Attorney General	
 NV Lieutenant Governor	1	NV Lieutenant Governor	
-NV Treasurer	1	NV Treasurer	
+NV State Treasurer	1	NV State Treasurer
+NV Secretary of State	1	NV Secretary of State
+NV State Controller	1	NV State Controller

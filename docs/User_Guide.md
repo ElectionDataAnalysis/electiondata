@@ -41,7 +41,8 @@ Different file types need different parameters to be specified.
    * count_column_field_names
  * Available if appropriate for any file type:
    * thousands_separator
-   * encoding (if not specified, `iso-8859-1` will be used). 
+   * encoding (if not specified, `iso-8859-1` will be used)
+   * count_of_top_lines_to_skip
 
 
  (3) Put formulas for parsing information from the results file into `cdf_elements.txt`. You may find it helpful to follow the example of the mungers in the repository.

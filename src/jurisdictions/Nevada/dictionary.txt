@@ -1,76 +1,78 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-CandidateContest	NV House District 1	"State Assembly, District 1"
-CandidateContest	NV House District 2	"State Assembly, District 2"
-CandidateContest	NV House District 3	"State Assembly, District 3"
-CandidateContest	NV House District 4	"State Assembly, District 4"
-CandidateContest	NV House District 5	"State Assembly, District 5"
-CandidateContest	NV House District 6	"State Assembly, District 6"
-CandidateContest	NV House District 7	"State Assembly, District 7"
-CandidateContest	NV House District 8	"State Assembly, District 8"
-CandidateContest	NV House District 9	"State Assembly, District 9"
-CandidateContest	NV House District 10	"State Assembly, District 10"
-CandidateContest	NV House District 11	"State Assembly, District 11"
-CandidateContest	NV House District 12	"State Assembly, District 12"
-CandidateContest	NV House District 13	"State Assembly, District 13"
-CandidateContest	NV House District 14	"State Assembly, District 14"
-CandidateContest	NV House District 15	"State Assembly, District 15"
-CandidateContest	NV House District 16	"State Assembly, District 16"
-CandidateContest	NV House District 17	"State Assembly, District 17"
-CandidateContest	NV House District 18	"State Assembly, District 18"
-CandidateContest	NV House District 19	"State Assembly, District 19"
-CandidateContest	NV House District 20	"State Assembly, District 20"
-CandidateContest	NV House District 21	"State Assembly, District 21"
-CandidateContest	NV House District 22	"State Assembly, District 22"
-CandidateContest	NV House District 23	"State Assembly, District 23"
-CandidateContest	NV House District 24	"State Assembly, District 24"
-CandidateContest	NV House District 25	"State Assembly, District 25"
-CandidateContest	NV House District 26	"State Assembly, District 26"
-CandidateContest	NV House District 27	"State Assembly, District 27"
-CandidateContest	NV House District 28	"State Assembly, District 28"
-CandidateContest	NV House District 29	"State Assembly, District 29"
-CandidateContest	NV House District 30	"State Assembly, District 30"
-CandidateContest	NV House District 31	"State Assembly, District 31"
-CandidateContest	NV House District 32	"State Assembly, District 32"
-CandidateContest	NV House District 33	"State Assembly, District 33"
-CandidateContest	NV House District 34	"State Assembly, District 34"
-CandidateContest	NV House District 35	"State Assembly, District 35"
-CandidateContest	NV House District 36	"State Assembly, District 36"
-CandidateContest	NV House District 37	"State Assembly, District 37"
-CandidateContest	NV House District 38	"State Assembly, District 38"
-CandidateContest	NV House District 39	"State Assembly, District 39"
-CandidateContest	NV House District 40	"State Assembly, District 40"
-CandidateContest	NV House District 41	"State Assembly, District 41"
-CandidateContest	NV House District 42	"State Assembly, District 42"
-CandidateContest	NV Senate District 1	"State Senate, District 1"
-CandidateContest	NV Senate District 2	"State Senate, District 2"
-CandidateContest	NV Senate District 3	"State Senate, District 3"
-CandidateContest	NV Senate District 4	"State Senate, District 4"
-CandidateContest	NV Senate District 5	"State Senate, District 5"
-CandidateContest	NV Senate District 6	"State Senate, District 6"
-CandidateContest	NV Senate District 7	"State Senate, District 7"
-CandidateContest	NV Senate District 8	"State Senate, District 8"
-CandidateContest	NV Senate District 9	"State Senate, District 9"
-CandidateContest	NV Senate District 10	"State Senate, District 10"
-CandidateContest	NV Senate District 11	"State Senate, District 11"
-CandidateContest	NV Senate District 12	"State Senate, District 12"
-CandidateContest	NV Senate District 13	"State Senate, District 13"
-CandidateContest	NV Senate District 14	"State Senate, District 14"
-CandidateContest	NV Senate District 15	"State Senate, District 15"
-CandidateContest	NV Senate District 16	"State Senate, District 16"
-CandidateContest	NV Senate District 17	"State Senate, District 17"
-CandidateContest	NV Senate District 18	"State Senate, District 18"
-CandidateContest	NV Senate District 19	"State Senate, District 19"
-CandidateContest	NV Senate District 20	"State Senate, District 20"
-CandidateContest	NV Senate District 21	"State Senate, District 21"
-CandidateContest	US House NV District 1	"U.S. Representative in Congress, Dist. 1"
-CandidateContest	US House NV District 2	"U.S. Representative in Congress, Dist. 2"
-CandidateContest	US House NV District 3	"U.S. Representative in Congress, Dist. 3"
-CandidateContest	US House NV District 4	"U.S. Representative in Congress, Dist. 4"
+CandidateContest	NV House District 1	State Assembly, District 1
+CandidateContest	NV House District 2	State Assembly, District 2
+CandidateContest	NV House District 3	State Assembly, District 3
+CandidateContest	NV House District 4	State Assembly, District 4
+CandidateContest	NV House District 5	State Assembly, District 5
+CandidateContest	NV House District 6	State Assembly, District 6
+CandidateContest	NV House District 7	State Assembly, District 7
+CandidateContest	NV House District 8	State Assembly, District 8
+CandidateContest	NV House District 9	State Assembly, District 9
+CandidateContest	NV House District 10	State Assembly, District 10
+CandidateContest	NV House District 11	State Assembly, District 11
+CandidateContest	NV House District 12	State Assembly, District 12
+CandidateContest	NV House District 13	State Assembly, District 13
+CandidateContest	NV House District 14	State Assembly, District 14
+CandidateContest	NV House District 15	State Assembly, District 15
+CandidateContest	NV House District 16	State Assembly, District 16
+CandidateContest	NV House District 17	State Assembly, District 17
+CandidateContest	NV House District 18	State Assembly, District 18
+CandidateContest	NV House District 19	State Assembly, District 19
+CandidateContest	NV House District 20	State Assembly, District 20
+CandidateContest	NV House District 21	State Assembly, District 21
+CandidateContest	NV House District 22	State Assembly, District 22
+CandidateContest	NV House District 23	State Assembly, District 23
+CandidateContest	NV House District 24	State Assembly, District 24
+CandidateContest	NV House District 25	State Assembly, District 25
+CandidateContest	NV House District 26	State Assembly, District 26
+CandidateContest	NV House District 27	State Assembly, District 27
+CandidateContest	NV House District 28	State Assembly, District 28
+CandidateContest	NV House District 29	State Assembly, District 29
+CandidateContest	NV House District 30	State Assembly, District 30
+CandidateContest	NV House District 31	State Assembly, District 31
+CandidateContest	NV House District 32	State Assembly, District 32
+CandidateContest	NV House District 33	State Assembly, District 33
+CandidateContest	NV House District 34	State Assembly, District 34
+CandidateContest	NV House District 35	State Assembly, District 35
+CandidateContest	NV House District 36	State Assembly, District 36
+CandidateContest	NV House District 37	State Assembly, District 37
+CandidateContest	NV House District 38	State Assembly, District 38
+CandidateContest	NV House District 39	State Assembly, District 39
+CandidateContest	NV House District 40	State Assembly, District 40
+CandidateContest	NV House District 41	State Assembly, District 41
+CandidateContest	NV House District 42	State Assembly, District 42
+CandidateContest	NV Senate District 1	State Senate, District 1
+CandidateContest	NV Senate District 2	State Senate, District 2
+CandidateContest	NV Senate District 3	State Senate, District 3
+CandidateContest	NV Senate District 4	State Senate, District 4
+CandidateContest	NV Senate District 5	State Senate, District 5
+CandidateContest	NV Senate District 6	State Senate, District 6
+CandidateContest	NV Senate District 7	State Senate, District 7
+CandidateContest	NV Senate District 8	State Senate, District 8
+CandidateContest	NV Senate District 9	State Senate, District 9
+CandidateContest	NV Senate District 10	State Senate, District 10
+CandidateContest	NV Senate District 11	State Senate, District 11
+CandidateContest	NV Senate District 12	State Senate, District 12
+CandidateContest	NV Senate District 13	State Senate, District 13
+CandidateContest	NV Senate District 14	State Senate, District 14
+CandidateContest	NV Senate District 15	State Senate, District 15
+CandidateContest	NV Senate District 16	State Senate, District 16
+CandidateContest	NV Senate District 17	State Senate, District 17
+CandidateContest	NV Senate District 18	State Senate, District 18
+CandidateContest	NV Senate District 19	State Senate, District 19
+CandidateContest	NV Senate District 20	State Senate, District 20
+CandidateContest	NV Senate District 21	State Senate, District 21
+CandidateContest	US House NV District 1	U.S. Representative in Congress, Dist. 1
+CandidateContest	US House NV District 2	U.S. Representative in Congress, Dist. 2
+CandidateContest	US House NV District 3	U.S. Representative in Congress, Dist. 3
+CandidateContest	US House NV District 4	U.S. Representative in Congress, Dist. 4
 CandidateContest	NV Governor	Governor
 CandidateContest	US Senate NV	United States Senator
 CandidateContest	NV Attorney General	Attorney General
 CandidateContest	NV Lieutenant Governor	Lieutenant Governor
-CandidateContest	NV Treasurer	State Treasurer
+CandidateContest	NV State Treasurer	State Treasurer
+CandidateContest	NV Secretary of State	Secretary of State
+CandidateContest	NV State Controller	State Controller
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
@@ -78,73 +80,73 @@ Election	2018 General	2018 General
 Election	2018 Primary	2018 Primary
 Election	2016 General	2016 General
 Election	2016 Primary	2016 Primary
-Office	NV House District 1	"State Assembly, District 1"
-Office	NV House District 2	"State Assembly, District 2"
-Office	NV House District 3	"State Assembly, District 3"
-Office	NV House District 4	"State Assembly, District 4"
-Office	NV House District 5	"State Assembly, District 5"
-Office	NV House District 6	"State Assembly, District 6"
-Office	NV House District 7	"State Assembly, District 7"
-Office	NV House District 8	"State Assembly, District 8"
-Office	NV House District 9	"State Assembly, District 9"
-Office	NV House District 10	"State Assembly, District 10"
-Office	NV House District 11	"State Assembly, District 11"
-Office	NV House District 12	"State Assembly, District 12"
-Office	NV House District 13	"State Assembly, District 13"
-Office	NV House District 14	"State Assembly, District 14"
-Office	NV House District 15	"State Assembly, District 15"
-Office	NV House District 16	"State Assembly, District 16"
-Office	NV House District 17	"State Assembly, District 17"
-Office	NV House District 18	"State Assembly, District 18"
-Office	NV House District 19	"State Assembly, District 19"
-Office	NV House District 20	"State Assembly, District 20"
-Office	NV House District 21	"State Assembly, District 21"
-Office	NV House District 22	"State Assembly, District 22"
-Office	NV House District 23	"State Assembly, District 23"
-Office	NV House District 24	"State Assembly, District 24"
-Office	NV House District 25	"State Assembly, District 25"
-Office	NV House District 26	"State Assembly, District 26"
-Office	NV House District 27	"State Assembly, District 27"
-Office	NV House District 28	"State Assembly, District 28"
-Office	NV House District 29	"State Assembly, District 29"
-Office	NV House District 30	"State Assembly, District 30"
-Office	NV House District 31	"State Assembly, District 31"
-Office	NV House District 32	"State Assembly, District 32"
-Office	NV House District 33	"State Assembly, District 33"
-Office	NV House District 34	"State Assembly, District 34"
-Office	NV House District 35	"State Assembly, District 35"
-Office	NV House District 36	"State Assembly, District 36"
-Office	NV House District 37	"State Assembly, District 37"
-Office	NV House District 38	"State Assembly, District 38"
-Office	NV House District 39	"State Assembly, District 39"
-Office	NV House District 40	"State Assembly, District 40"
-Office	NV House District 41	"State Assembly, District 41"
-Office	NV House District 42	"State Assembly, District 42"
-Office	NV Senate District 1	"State Senate, District 1"
-Office	NV Senate District 2	"State Senate, District 2"
-Office	NV Senate District 3	"State Senate, District 3"
-Office	NV Senate District 4	"State Senate, District 4"
-Office	NV Senate District 5	"State Senate, District 5"
-Office	NV Senate District 6	"State Senate, District 6"
-Office	NV Senate District 7	"State Senate, District 7"
-Office	NV Senate District 8	"State Senate, District 8"
-Office	NV Senate District 9	"State Senate, District 9"
-Office	NV Senate District 10	"State Senate, District 10"
-Office	NV Senate District 11	"State Senate, District 11"
-Office	NV Senate District 12	"State Senate, District 12"
-Office	NV Senate District 13	"State Senate, District 13"
-Office	NV Senate District 14	"State Senate, District 14"
-Office	NV Senate District 15	"State Senate, District 15"
-Office	NV Senate District 16	"State Senate, District 16"
-Office	NV Senate District 17	"State Senate, District 17"
-Office	NV Senate District 18	"State Senate, District 18"
-Office	NV Senate District 19	"State Senate, District 19"
-Office	NV Senate District 20	"State Senate, District 20"
-Office	NV Senate District 21	"State Senate, District 21"
-Office	US House NV District 1	"U.S. Representative in Congress, Dist. 1"
-Office	US House NV District 2	"U.S. Representative in Congress, Dist. 2"
-Office	US House NV District 3	"U.S. Representative in Congress, Dist. 3"
-Office	US House NV District 4	"U.S. Representative in Congress, Dist. 4"
+Office	NV House District 1	State Assembly, District 1
+Office	NV House District 2	State Assembly, District 2
+Office	NV House District 3	State Assembly, District 3
+Office	NV House District 4	State Assembly, District 4
+Office	NV House District 5	State Assembly, District 5
+Office	NV House District 6	State Assembly, District 6
+Office	NV House District 7	State Assembly, District 7
+Office	NV House District 8	State Assembly, District 8
+Office	NV House District 9	State Assembly, District 9
+Office	NV House District 10	State Assembly, District 10
+Office	NV House District 11	State Assembly, District 11
+Office	NV House District 12	State Assembly, District 12
+Office	NV House District 13	State Assembly, District 13
+Office	NV House District 14	State Assembly, District 14
+Office	NV House District 15	State Assembly, District 15
+Office	NV House District 16	State Assembly, District 16
+Office	NV House District 17	State Assembly, District 17
+Office	NV House District 18	State Assembly, District 18
+Office	NV House District 19	State Assembly, District 19
+Office	NV House District 20	State Assembly, District 20
+Office	NV House District 21	State Assembly, District 21
+Office	NV House District 22	State Assembly, District 22
+Office	NV House District 23	State Assembly, District 23
+Office	NV House District 24	State Assembly, District 24
+Office	NV House District 25	State Assembly, District 25
+Office	NV House District 26	State Assembly, District 26
+Office	NV House District 27	State Assembly, District 27
+Office	NV House District 28	State Assembly, District 28
+Office	NV House District 29	State Assembly, District 29
+Office	NV House District 30	State Assembly, District 30
+Office	NV House District 31	State Assembly, District 31
+Office	NV House District 32	State Assembly, District 32
+Office	NV House District 33	State Assembly, District 33
+Office	NV House District 34	State Assembly, District 34
+Office	NV House District 35	State Assembly, District 35
+Office	NV House District 36	State Assembly, District 36
+Office	NV House District 37	State Assembly, District 37
+Office	NV House District 38	State Assembly, District 38
+Office	NV House District 39	State Assembly, District 39
+Office	NV House District 40	State Assembly, District 40
+Office	NV House District 41	State Assembly, District 41
+Office	NV House District 42	State Assembly, District 42
+Office	NV Senate District 1	State Senate, District 1
+Office	NV Senate District 2	State Senate, District 2
+Office	NV Senate District 3	State Senate, District 3
+Office	NV Senate District 4	State Senate, District 4
+Office	NV Senate District 5	State Senate, District 5
+Office	NV Senate District 6	State Senate, District 6
+Office	NV Senate District 7	State Senate, District 7
+Office	NV Senate District 8	State Senate, District 8
+Office	NV Senate District 9	State Senate, District 9
+Office	NV Senate District 10	State Senate, District 10
+Office	NV Senate District 11	State Senate, District 11
+Office	NV Senate District 12	State Senate, District 12
+Office	NV Senate District 13	State Senate, District 13
+Office	NV Senate District 14	State Senate, District 14
+Office	NV Senate District 15	State Senate, District 15
+Office	NV Senate District 16	State Senate, District 16
+Office	NV Senate District 17	State Senate, District 17
+Office	NV Senate District 18	State Senate, District 18
+Office	NV Senate District 19	State Senate, District 19
+Office	NV Senate District 20	State Senate, District 20
+Office	NV Senate District 21	State Senate, District 21
+Office	US House NV District 1	U.S. Representative in Congress, Dist. 1
+Office	US House NV District 2	U.S. Representative in Congress, Dist. 2
+Office	US House NV District 3	U.S. Representative in Congress, Dist. 3
+Office	US House NV District 4	U.S. Representative in Congress, Dist. 4
 Office	NV Governor	Governor
 Office	US Senate NV	United States Senator
 Office	NV Attorney General	Attorney General
@@ -2295,555 +2297,555 @@ ReportingUnit	Nevada;White Pine;Precinct 7	White Pine;Precinct 7
 ReportingUnit	Nevada;White Pine;Precinct 8	White Pine;Precinct 8
 ReportingUnit	Nevada;White Pine;Precinct 9	White Pine;Precinct 9
 ReportingUnit	Nevada;White Pine;Precinct 99	White Pine;Precinct 99
-Candidate	WES DUNCAN	"DUNCAN, WES"
-Candidate	AARON FORD	"FORD, AARON"
-Candidate	Joel F. Hansen	"Hansen, Joel F."
-Candidate	Stacey Giomi	"Giomi, Stacey"
-Candidate	JOHN WOOD	"WOOD, JOHN"
-Candidate	RUSSELL BEST	"BEST, RUSSELL"
-Candidate	RYAN BUNDY	"BUNDY, RYAN"
-Candidate	ADAM PAUL LAXALT	"LAXALT, ADAM PAUL"
-Candidate	JARED LORD	"LORD, JARED"
-Candidate	STEVE SISOLAK	"SISOLAK, STEVE"
-Candidate	KRISTIN LUIS	"LUIS, KRISTIN"
-Candidate	RYAN RUSSELL	"RUSSELL, RYAN"
-Candidate	JANINE HANSEN	"HANSEN, JANINE"
-Candidate	KATE MARSHALL	"MARSHALL, KATE"
-Candidate	MICHAEL ROBERSON	"ROBERSON, MICHAEL"
-Candidate	ED UEHLING	"UEHLING, ED"
-Candidate	NELSON ARAUJO	"ARAUJO, NELSON"
-Candidate	Barbara K. Cegavske	"Cegavske, Barbara K."
-Candidate	KENNY FURLONG	"FURLONG, KENNY"
-Candidate	LORNE R. HOULE	"HOULE, LORNE R."
-Candidate	AL KRAMER	"KRAMER, AL"
-Candidate	Autumn Zemke	"Zemke, Autumn"
-Candidate	CATHERINE BYRNE	"BYRNE, CATHERINE"
-Candidate	Ron Knecht	"Knecht, Ron"
-Candidate	Tina Davis-Hersey	"Davis-Hersey, Tina"
-Candidate	Ben Kieckhefer	"Kieckhefer, Ben"
-Candidate	John Wagner	"Wagner, John"
-Candidate	BOB BEERS	"BEERS, BOB"
-Candidate	ZACH CONINE	"CONINE, ZACH"
-Candidate	BILL HOGE	"HOGE, BILL"
-Candidate	ELISSA CADISH	"CADISH, ELISSA"
-Candidate	JERRY TAO	"TAO, JERRY"
-Candidate	ABBI SILVER	"SILVER, ABBI"
-Candidate	MATHEW HARTER	"HARTER, MATHEW"
-Candidate	LIDIA STIGLICH	"STIGLICH, LIDIA"
-Candidate	Mark E. Amodei	"Amodei, Mark E."
-Candidate	CLINT KOBLE	"KOBLE, CLINT"
-Candidate	KAMAU A. BAKARI	"BAKARI, KAMAU A."
-Candidate	TIM HAGAN	"HAGAN, TIM"
-Candidate	Dean Heller	"Heller, Dean"
-Candidate	BARRY MICHAELS	"MICHAELS, BARRY"
-Candidate	JACKY ROSEN	"ROSEN, JACKY"
-Candidate	FREDERICK D. BUCKMASTER	"BUCKMASTER, FREDERICK D."
-Candidate	AMBER N. GETTO	"GETTO, AMBER N."
-Candidate	Clay HENDRIX	"HENDRIX, Clay"
-Candidate	MATT HYDE	"HYDE, MATT"
-Candidate	PATTY JULIAN	"JULIAN, PATTY"
-Candidate	TEDD MCDONALD	"MCDONALD, TEDD"
-Candidate	CARMEN SCHANK	"SCHANK, CARMEN"
-Candidate	DEBY SMOTHERMAN	"SMOTHERMAN, DEBY"
-Candidate	DENISE L. MONDHINK-FELTON	"MONDHINK-FELTON, DENISE L."
-Candidate	LINDA ROTHERY	"ROTHERY, LINDA"
-Candidate	PETE OLSEN	"OLSEN, PETE"
-Candidate	TASHA HESSEY	"HESSEY, TASHA"
-Candidate	ART MALLORY	"MALLORY, ART"
-Candidate	MIKE RICHARDS	"RICHARDS, MIKE"
-Candidate	BENJAMIN D. TROTTER	"TROTTER, BENJAMIN D."
-Candidate	THOMAS HUTCHINGS	"HUTCHINGS, THOMAS"
-Candidate	CHRISTY LATTIN	"LATTIN, CHRISTY"
-Candidate	GARY L. SMITH	"SMITH, GARY L."
-Candidate	MICHAEL SPENCER	"SPENCER, MICHAEL"
-Candidate	LARRY TUCKER	"TUCKER, LARRY"
-Candidate	ROBERT M. GETTO JR.	"GETTO JR., ROBERT M."
-Candidate	RAY EAST	"EAST, RAY"
-Candidate	RICHARD C. HICKOX	"HICKOX, RICHARD C."
-Candidate	ROBIN L. TITUS	"TITUS, ROBIN L."
-Candidate	CURTIS W. CANNON	"CANNON, CURTIS W."
-Candidate	JAMES ARNOLD SETTELMEYER	"SETTELMEYER, JAMES ARNOLD"
-Candidate	Briana Johnson	"Johnson, Briana"
-Candidate	Gina McClain	"McClain, Gina"
-Candidate	Lynn Maria Goya	"Goya, Lynn Maria"
-Candidate	Minddie Lloyd	"Lloyd, Minddie"
-Candidate	Debbie Conway	"Conway, Debbie"
-Candidate	Jill MacFarlane	"MacFarlane, Jill"
-Candidate	Phil Collins	"Collins, Phil"
-Candidate	Laura Fitzpatrick	"Fitzpatrick, Laura"
-Candidate	STEVE WOLFSON	"WOLFSON, STEVE"
-Candidate	Tierra Jones	"Jones, Tierra"
-Candidate	Mark B. Bailus	"Bailus, Mark B."
-Candidate	Mary Kay Holthus	"Holthus, Mary Kay"
-Candidate	DAVID M. JONES	"JONES, DAVID M."
-Candidate	Elana Lee Graham	"Graham, Elana Lee"
-Candidate	James Dean Leavitt	"Leavitt, James Dean"
-Candidate	Victoria Kay DaCosta	"DaCosta, Victoria Kay"
-Candidate	Thomas L. Fougere	"Fougere, Thomas L."
-Candidate	Robert Telles	"Telles, Robert"
-Candidate	Jason Frierson	"Frierson, Jason"
-Candidate	Tina M. Peetris	"Peetris, Tina M."
-Candidate	Danielle Ford	"Ford, Danielle"
-Candidate	Kali Fox Miller	"Miller, Kali Fox"
-Candidate	Joyce Bentley	"Bentley, Joyce"
-Candidate	Dan Garfield	"Garfield, Dan"
-Candidate	Robert Strawder	"Strawder, Robert"
-Candidate	Dina TITUS	"TITUS, Dina"
-Candidate	Cherlyn Arrington	"Arrington, Cherlyn"
-Candidate	Ozzie FUMO	"FUMO, Ozzie"
-Candidate	Steve Brown	"Brown, Steve"
-Candidate	Gil Eisner	"Eisner, Gil"
-Candidate	David Goossen	"Goossen, David"
-Candidate	Tony Gumina	"Gumina, Tony"
-Candidate	Susie Lee	"Lee, Susie"
-Candidate	Danny Tarkanian	"Tarkanian, Danny"
-Candidate	Harry L. Vickers	"Vickers, Harry L."
-Candidate	"Jack ""Fat Jack"" Cochran"	"Cochran, Jack ""Fat Jack"""
-Candidate	Glen Leavitt	"Leavitt, Glen"
-Candidate	Ralph Preta	"Preta, Ralph"
-Candidate	JOE HARDY	"HARDY, JOE"
-Candidate	Craig Jordahl	"Jordahl, Craig"
-Candidate	Jordan Ross	"Ross, Jordan"
-Candidate	Irene Cepeda	"Cepeda, Irene"
-Candidate	KEVIN L. CHILD	"CHILD, KEVIN L."
-Candidate	Michelle Gorelow	"Gorelow, Michelle"
-Candidate	Daniel Hofstein	"Hofstein, Daniel"
-Candidate	David Schoen	"Schoen, David"
-Candidate	Tiffany Jones	"Jones, Tiffany"
-Candidate	Melanie Scheible	"Scheible, Melanie"
-Candidate	Sandra Jauregui	"Jauregui, Sandra"
-Candidate	Paris Wade	"Wade, Paris"
-Candidate	"Richard ""Rick"" Bronstein"	"Bronstein, Richard ""Rick"""
-Candidate	Julie Pazina	"Pazina, Julie"
-Candidate	Keith Pickard	"Pickard, Keith"
-Candidate	Lesley Elizabeth Cohen	"Cohen, Lesley Elizabeth"
-Candidate	Bruce James-Newman	"James-Newman, Bruce"
-Candidate	Stephen H. Silberkraus	"Silberkraus, Stephen H."
-Candidate	Gary P. Rogers	"Rogers, Gary P."
-Candidate	Amber Carter	"Carter, Amber"
-Candidate	Larry Shupe	"Shupe, Larry"
-Candidate	Joe Pitts	"Pitts, Joe"
-Candidate	Kenny Taylor	"Taylor, Kenny"
-Candidate	Melissa Hardy	"Hardy, Melissa"
-Candidate	Kristee Watson	"Watson, Kristee"
-Candidate	Amy Carvalho	"Carvalho, Amy"
-Candidate	Andrew Coates	"Coates, Andrew"
-Candidate	Linda Cannon	"Cannon, Linda"
-Candidate	Steve Yeager	"Yeager, Steve"
-Candidate	Alexander Assefa	"Assefa, Alexander"
-Candidate	Heidi Swank	"Swank, Heidi"
-Candidate	Yvanna Cancela	"Cancela, Yvanna"
-Candidate	STEVE HAMPE	"HAMPE, STEVE"
-Candidate	Robert D. Martin	"Martin, Robert D."
-Candidate	Victor Lee Miller	"Miller, Victor Lee"
-Candidate	Dennis Hof	"Hof, Dennis"
-Candidate	Lesia Romanov	"Romanov, Lesia"
-Candidate	ROBERT L. ELIASON	"ELIASON, ROBERT L."
-Candidate	Jimmy Vega	"Vega, Jimmy"
-Candidate	Daniele Monroe-Moreno	"Monroe-Moreno, Daniele"
-Candidate	Cresent Hardy	"Hardy, Cresent"
-Candidate	Steven A. Horsford	"Horsford, Steven A."
-Candidate	Gregg Luckner	"Luckner, Gregg"
-Candidate	Warren Ross Markowitz	"Markowitz, Warren Ross"
-Candidate	Dean McGonigle	"McGonigle, Dean"
-Candidate	Rodney Smith	"Smith, Rodney"
-Candidate	Jo Cato	"Cato, Jo"
-Candidate	Laura E. Perkins	"Perkins, Laura E."
-Candidate	Dina Neal	"Neal, Dina"
-Candidate	Leon S. Frei	"Frei, Leon S."
-Candidate	Chris Edwards	"Edwards, Chris"
-Candidate	Richard Fletcher	"Fletcher, Richard"
-Candidate	Mary Elizabeth Boyer Martinez	"Martinez, Mary Elizabeth Boyer"
-Candidate	Susan Martinez	"Martinez, Susan"
-Candidate	Ron McGinnis	"McGinnis, Ron"
-Candidate	James Ohrenschall	"Ohrenschall, James"
-Candidate	Bob Lystrup	"Lystrup, Bob"
-Candidate	Richard McArthur	"McArthur, Richard"
-Candidate	Connie Munk	"Munk, Connie"
-Candidate	Leonard Foster	"Foster, Leonard"
-Candidate	Tom Roberts	"Roberts, Tom"
-Candidate	"Patricia ""Pat"" Little"	"Little, Patricia ""Pat"""
-Candidate	Ronald Newsome	"Newsome, Ronald"
-Candidate	Tyrone THOMPSON	"THOMPSON, Tyrone"
-Candidate	Maggie CARLTON	"CARLTON, Maggie"
-Candidate	Sandra Ramaker	"Ramaker, Sandra"
-Candidate	Geno Withelder	"Withelder, Geno"
-Candidate	David P. Ballweg	"Ballweg, David P."
-Candidate	George H. Gault	"Gault, George H."
-Candidate	"Ann ""Annie"" Black"	"Black, Ann ""Annie"""
-Candidate	Karen Fielding	"Fielding, Karen"
-Candidate	Duane L. Thurston	"Thurston, Duane L."
-Candidate	John Burrows	"Burrows, John"
-Candidate	BEN K. DAVIS	"DAVIS, BEN K."
-Candidate	Jere A. Walker	"Walker, Jere A."
-Candidate	Josh Jensen	"Jensen, Josh"
-Candidate	LINDA CAVAZOS	"CAVAZOS, LINDA"
-Candidate	Ryan Scalia	"Scalia, Ryan"
-Candidate	Shea Backus	"Backus, Shea"
-Candidate	Jim Marchant	"Marchant, Jim"
-Candidate	Erik L. Laub	"Laub, Erik L."
-Candidate	DARRYLL B. DODENBIER	"DODENBIER, DARRYLL B."
-Candidate	Brian Douglas Haviland	"Haviland, Brian Douglas"
-Candidate	Edgar Flores	"Flores, Edgar"
-Candidate	"Calvin ""Cal"" Border"	"Border, Calvin ""Cal"""
-Candidate	MO DENIS	"DENIS, MO"
-Candidate	Shannon Bilbray-Axelrod	"Bilbray-Axelrod, Shannon"
-Candidate	Janice E. Wesen	"Wesen, Janice E."
-Candidate	John Hambrick	"Hambrick, John"
-Candidate	Jennie Sherwood	"Sherwood, Jennie"
-Candidate	Marilyn Dondero Loop	"Loop, Marilyn Dondero"
-Candidate	Valerie Weber	"Weber, Valerie"
-Candidate	Stephen G. Sedlmeyer	"Sedlmeyer, Stephen G."
-Candidate	Selena Torres	"Torres, Selena"
-Candidate	Chris Brooks	"Brooks, Chris"
-Candidate	Jonathan Friedrich	"Friedrich, Jonathan"
-Candidate	Noel Searles	"Searles, Noel"
-Candidate	Jason Burke	"Burke, Jason"
-Candidate	Brittney Miller	"Miller, Brittney"
-Candidate	II McCurdy	"McCurdy, II, William O'Neil"
-Candidate	Olivia Diaz	"Diaz, Olivia"
-Candidate	Gianna Miceli	"Miceli, Gianna"
-Candidate	Stan Vaughan	"Vaughan, Stan"
-Candidate	III Watts	"Watts, III, Howard"
-Candidate	Trish Marsh	"Marsh, Trish"
-Candidate	Tick Segerblom	"Segerblom, ""Tick"""
-Candidate	Michael L. McDonald	"McDonald, Michael L."
-Candidate	Ellen Spiegel	"Spiegel, Ellen"
-Candidate	Richard Carrillo	"Carrillo, Richard"
-Candidate	Matt Sadler	"Sadler, Matt"
-Candidate	Tisha Black	"Black, Tisha"
-Candidate	Justin Jones	"Jones, Justin"
-Candidate	Jim GIBSON	"GIBSON, Jim"
-Candidate	Cindy Lake	"Lake, Cindy"
-Candidate	Doug Marsh	"Marsh, Doug"
-Candidate	Paul E. Gilbert	"Gilbert, Paul E."
-Candidate	Trent Tholen	"Tholen, Trent"
-Candidate	Kathy Lewis	"Lewis, Kathy"
-Candidate	John Engels	"Engels, John"
-Candidate	Kristi Lynn Kandel	"Kandel, Kristi Lynn"
-Candidate	Wesley A. Rice	"Rice, Wesley A."
-Candidate	KAREN ELLISON	"ELLISON, KAREN"
-Candidate	Mark B. Jackson	"Jackson, Mark B."
-Candidate	Cassandra G. Jones	"Jones, Cassandra G."
-Candidate	Erik Levin	"Levin, Erik"
-Candidate	Steve Walsh	"Walsh, Steve"
-Candidate	Patricia Ackerman	"Ackerman, Patricia"
-Candidate	Paul Cwalina	"Cwalina, Paul"
-Candidate	Jim Wheeler	"Wheeler, Jim"
-Candidate	Brad Newlon	"Newlon, Brad"
-Candidate	John Sheridan	"Sheridan, John"
-Candidate	Robert Spellberg	"Spellberg, Robert"
-Candidate	Leann M. Teter	"Teter, Leann M."
-Candidate	Mike King	"King, Mike"
-Candidate	Mary Schilling	"Schilling, Mary"
-Candidate	Ted Thran	"Thran, Ted"
-Candidate	Ray Wilson	"Wilson, Ray"
-Candidate	Aaron Hampton	"Hampton, Aaron"
-Candidate	Michael Henningsen	"Henningsen, Michael"
-Candidate	Kenneth Miller	"Miller, Kenneth"
-Candidate	Linda L. Slater	"Slater, Linda L."
-Candidate	Brian Trute	"Trute, Brian"
-Candidate	Kathryn Clark-Ross	"Clark-Ross, Kathryn"
-Candidate	Bill Eisele	"Eisele, Bill"
-Candidate	Robert M. Garcia	"Garcia, Robert M."
-Candidate	Gennady II Stolyarov	"Stolyarov, Gennady II"
-Candidate	Matt Bernard	"Bernard, Matt"
-Candidate	Bill Driscoll	"Driscoll, Bill"
-Candidate	Richard Sr. Koontz	"Koontz, Richard Sr."
-Candidate	"William R. ""Bill"" Souligny"	"Souligny, William R. ""Bill"""
-Candidate	Roxanne Stangle	"Stangle, Roxanne"
-Candidate	"Charles ""Chuck"" Fagen"	"Fagen, Charles ""Chuck"""
-Candidate	Keith E. Fertala	"Fertala, Keith E."
-Candidate	Hunter Harris	"Harris, Hunter"
-Candidate	Janet Murphy	"Murphy, Janet"
-Candidate	Carl N. Ruschmeyer	"Ruschmeyer, Carl N."
-Candidate	"William ""Bill"" Kirschner"	"Kirschner, William ""Bill"""
-Candidate	Dan Norman	"Norman, Dan"
-Candidate	"Sandra ""Sandy"" Parks"	"Parks, Sandra ""Sandy"""
-Candidate	Darya Vogt	"Vogt, Darya"
-Candidate	KATRINKA S. RUSSELL	"RUSSELL, KATRINKA S."
-Candidate	"KRISTINE ""KRIS"" JAKEMAN"	"JAKEMAN, KRISTINE ""KRIS"""
-Candidate	CHERYL PAUL	"PAUL, CHERYL"
-Candidate	DELMO ANDREOZZI	"ANDREOZZI, DELMO"
-Candidate	CLIFF EKLUND	"EKLUND, CLIFF"
-Candidate	D. MIKE SMALES	"SMALES, D. MIKE"
-Candidate	TYLER INGRAM	"INGRAM, TYLER"
-Candidate	BILL HANCE	"HANCE, BILL"
-Candidate	TONY LIKER	"LIKER, TONY"
-Candidate	JEANNA SECRIST	"SECRIST, JEANNA"
-Candidate	RO SMITH	"SMITH, RO"
-Candidate	CHIP STONE	"STONE, CHIP"
-Candidate	REECE KEENER	"KEENER, REECE"
-Candidate	MARCEY LOGSDEN	"LOGSDEN, MARCEY"
-Candidate	ANTOINETTE CHIESA	"CHIESA, ANTOINETTE"
-Candidate	MASON EDWARD SIMONS	"SIMONS, MASON EDWARD"
-Candidate	STACIE PHILLIPS	"PHILLIPS, STACIE"
-Candidate	BRIAN ZEISZLER	"ZEISZLER, BRIAN"
-Candidate	EMILY CARTER	"CARTER, EMILY"
-Candidate	CANDACE WINES	"WINES, CANDACE"
-Candidate	AITOR NARVAIZA	"NARVAIZA, AITOR"
-Candidate	JIM PITTS	"PITTS, JIM"
-Candidate	John C. Ellison	"Ellison, John C."
-Candidate	CAMERON KINNEY	"KINNEY, CAMERON"
-Candidate	SABRA ESPARZA	"ESPARZA, SABRA"
-Candidate	WAYNE A. EVENSON	"EVENSON, WAYNE A."
-Candidate	"PATRICIA ""PAM"" GRISWOLD"	"GRISWOLD, PATRICIA ""PAM"""
-Candidate	LINCOLN LITCHFIELD	"LITCHFIELD, LINCOLN"
-Candidate	DANA DON HOLBROOK	"HOLBROOK, DANA DON"
-Candidate	JONATHAN GOOLSBY	"GOOLSBY, JONATHAN"
-Candidate	MICHAEL K. PACE	"PACE, MICHAEL K."
-Candidate	ROBERT WOOLSEY	"WOOLSEY, ROBERT"
-Candidate	LAYLA WALZ	"WALZ, LAYLA"
-Candidate	JEFF R. DURHAM	"DURHAM, JEFF R."
-Candidate	KATHY DURHAM	"DURHAM, KATHY"
-Candidate	"ISMAEL ""IZZY"" GUTIERREZ"	"GUTIERREZ, ISMAEL ""IZZY"" "
-Candidate	JOHN B. HANSON	"HANSON, JOHN B."
-Candidate	JASIE HOLM	"HOLM, JASIE"
-Candidate	MICHAEL CHRISTENSEN	"CHRISTENSEN, MICHAEL"
-Candidate	MARIA G. ORTEGA	"ORTEGA, MARIA G."
-Candidate	BRIAN RAY	"RAY, BRIAN"
-Candidate	JARED F. CARTER	"CARTER, JARED F."
-Candidate	GERARDO RODRIGUEZ	"RODRIGUEZ, GERARDO"
-Candidate	RUTH P. LEE	"LEE, RUTH P."
-Candidate	VERA BOYER	"BOYER, VERA"
-Candidate	"PATRICIA ""PATTY"" HUBER-BETH"	"HUBER-BETH, PATRICIA ""PATTY"""
-Candidate	"LaCinda ""CINDY"" ELGAN"	"ELGAN, LaCinda ""CINDY"""
-Candidate	TIMOTHY HIPP	"HIPP, TIMOTHY"
-Candidate	MARK STEZAKER	"STEZAKER, MARK"
-Candidate	ROBERT E. III GLENNEN	"GLENNEN, ROBERT E. III"
-Candidate	ALEXIS M. HANSEN	"HANSEN, ALEXIS M."
-Candidate	PAULA POVILAITIS	"POVILAITIS, PAULA"
-Candidate	WENDY BOSZAK	"BOSZAK, WENDY"
-Candidate	IRA HANSEN	"HANSEN, IRA"
-Candidate	MICHAEL A. MEARS	"MEARS, MICHAEL A."
-Candidate	LISA L. HOEHNE	"HOEHNE, LISA L."
-Candidate	AMANDA JEAN PEARCE	"PEARCE, AMANDA JEAN"
-Candidate	RICH MCKAY	"MCKAY, RICH"
-Candidate	BEVERLY CONLEY	"CONLEY, BEVERLY"
-Candidate	"THEODORE ""TED"" BEUTEL"	"BEUTEL, THEODORE ""TED"""
-Candidate	DOROTHY ROWLEY	"ROWLEY, DOROTHY"
-Candidate	MELYNDA SHARKOZY	"SHARKOZY, MELYNDA"
-Candidate	MELISSA FITZWATER	"FITZWATER, MELISSA"
-Candidate	ROBIN HICKS	"HICKS, ROBIN"
-Candidate	JIM IZZOLO	"IZZOLO, JIM"
-Candidate	BRANDI ANDERSON	"ANDERSON, BRANDI"
-Candidate	DARLA R. BAUMANN	"BAUMANN, DARLA R."
-Candidate	Gary Horky	"Horky, Gary"
-Candidate	Theresa Mavity	"Mavity, Theresa"
-Candidate	Jim Billingsley	"Billingsley, Jim"
-Candidate	Fredrick Bryant	"Bryant, Fredrick"
-Candidate	Paige Brooks	"Brooks, Paige"
-Candidate	Rich Stone	"Stone, Rich"
-Candidate	"WILLIAM ""JEFF"" JOHNSON"	"JOHNSON, WILLIAM ""JEFF"""
-Candidate	Tami Rae Spero	"Spero, Tami Rae"
-Candidate	Ronald L. Cerri	"Cerri, Ronald L."
-Candidate	Jim French	"French, Jim"
-Candidate	Deborah Engstrom	"Engstrom, Deborah"
-Candidate	Rhona Lecumberry	"Lecumberry, Rhona"
-Candidate	MICHAEL MACDONALD	"MACDONALD, MICHAEL"
-Candidate	Gene Hunt	"Hunt, Gene"
-Candidate	Joel Murphy	"Murphy, Joel"
-Candidate	Bill Douglas	"Douglas, Bill"
-Candidate	Christopher R. Entwistle	"Entwistle, Christopher R."
-Candidate	Jim Loveless	"Loveless, Jim"
-Candidate	Matt Morgan	"Morgan, Matt"
-Candidate	LURA DUVALL	"DUVALL, LURA"
-Candidate	Leann Miller	"Miller, Leann"
-Candidate	SADIE SULLIVAN	"SULLIVAN, SADIE"
-Candidate	Bryan Sparks	"Sparks, Bryan"
-Candidate	Art III Clark	"Clark, Art III"
-Candidate	Harry L. Sr. Dimitroff	"Dimitroff, Harry L. Sr."
-Candidate	Kathleen V. Ancho	"Ancho, Kathleen V."
-Candidate	Manuel II Moreno	"Moreno, Manuel II"
-Candidate	LESLEY L. BUNCH	"BUNCH, LESLEY L."
-Candidate	Tina Marie Bisiaux	"Bisiaux, Tina Marie"
-Candidate	Jusdivia Johnson	"Johnson, Jusdivia"
-Candidate	Theodore C. Herrera	"Herrera, Theodore C."
-Candidate	Denise Fortune	"Fortune, Denise"
-Candidate	Toby Melver	"Melver, Toby"
-Candidate	Billy Gandolfo	"Gandolfo, Billy"
-Candidate	Mark Holt	"Holt, Mark"
-Candidate	Lisa Lloyd	"Lloyd, Lisa"
-Candidate	Jared Brackenbury	"Brackenbury, Jared"
-Candidate	Ron Hibble	"Hibble, Ron"
-Candidate	Bevan Lister	"Lister, Bevan"
-Candidate	Kevin J. Phillips	"Phillips, Kevin J."
-Candidate	Amy Nicole Elmer	"Elmer, Amy Nicole"
-Candidate	Bob McCleary	"McCleary, Bob"
-Candidate	Shawn Frehner	"Frehner, Shawn"
-Candidate	Dylan V. Frehner	"Frehner, Dylan V."
-Candidate	Carol J. Hansen	"Hansen, Carol J."
-Candidate	Carolyn Harr	"Harr, Carolyn"
-Candidate	Kerry D. Lee	"Lee, Kerry D."
-Candidate	Evan W. Schimbeck	"Schimbeck, Evan W."
-Candidate	Jeff Childers	"Childers, Jeff"
-Candidate	Mike D. Cowley	"Cowley, Mike D."
-Candidate	Troy R. Villines	"Villines, Troy R."
-Candidate	Nikki Bryan	"Bryan, Nikki"
-Candidate	Vida D. Keller	"Keller, Vida D."
-Candidate	Greg Hunewill	"Hunewill, Greg"
-Candidate	Brenda K. Cullen	"Cullen, Brenda K."
-Candidate	Margie Kassebaum	"Kassebaum, Margie"
-Candidate	Stephen B. Rye	"Rye, Stephen B."
-Candidate	"Douglas ""Doug"" Kassebaum"	"Kassebaum, Douglas ""Doug"""
-Candidate	"Cary ""Rick"" Smith"	"Smith, Cary ""Rick"""
-Candidate	Cassandra Aveiro	"Aveiro, Cassandra"
-Candidate	Barbara Jean Jones	"Jones, Barbara Jean"
-Candidate	Frank Hunewill	"Hunewill, Frank"
-Candidate	AL MCNEIL	"MCNEIL, AL"
-Candidate	"Charles ""Chuck"" Kennedy"	"Kennedy, Charles ""Chuck"""
-Candidate	Kathy McIntosh	"McIntosh, Kathy"
-Candidate	Avis Moniz	"Moniz, Avis"
-Candidate	Alicia Norris	"Norris, Alicia"
-Candidate	Terrin Hicks	"Hicks, Terrin"
-Candidate	Matt Johnson	"Johnson, Matt"
-Candidate	Chris Murphy	"Murphy, Chris"
-Candidate	Sue Seidl	"Seidl, Sue"
-Candidate	Ray Lacy	"Lacy, Ray"
-Candidate	Shari L. Whalen	"Whalen, Shari L."
-Candidate	Kevin B. Chisum	"Chisum, Kevin B."
-Candidate	Janeen Clark	"Clark, Janeen"
-Candidate	Christopher Nepper	"Nepper, Christopher"
-Candidate	Michael Guss	"Guss, Michael"
-Candidate	Christine Hoferer	"Hoferer, Christine"
-Candidate	Norman E. Williams	"Williams, Norman E."
-Candidate	Cindy Nixon	"Nixon, Cindy"
-Candidate	Donna Oberhansli	"Oberhansli, Donna"
-Candidate	Sean Alden Rowe	"Rowe, Sean Alden"
-Candidate	Mike James	"James, Mike"
-Candidate	Paula Joe Reed	"Reed, Paula Joe"
-Candidate	Keith E. Neville	"Neville, Keith E."
-Candidate	David Ziegler	"Ziegler, David"
-Candidate	BETH CICHOWLAZ	"CICHOWLAZ, BETH"
-Candidate	Randy Adams	"Adams, Randy"
-Candidate	Earl William Perry	"Perry, Earl William"
-Candidate	ANDY ALBERTI	"ALBERTI, ANDY"
-Candidate	SHEREE STRINGER	"STRINGER, SHEREE"
-Candidate	"SANDRA ""SAM"" MERLINO"	"MERLINO, SANDRA ""SAM"""
-Candidate	SHEILA WINN	"WINN, SHEILA"
-Candidate	DEBORAH BEATTY	"BEATTY, DEBORAH"
-Candidate	MICHAEL S. NOYES	"NOYES, MICHAEL S."
-Candidate	LANCE ROY SCHAUS	"SCHAUS, LANCE ROY"
-Candidate	PAM WEBSTER	"WEBSTER, PAM"
-Candidate	CHRIS ARABIA	"ARABIA, CHRIS"
-Candidate	NICHOLAS ANTHONY DEL VECCHIO	"DEL VECCHIO, NICHOLAS ANTHONY"
-Candidate	GINGER L. STUMNE	"STUMNE, GINGER L."
-Candidate	Tony DeMeo	"DeMeo, Tony"
-Candidate	SHARON A. WEHRLY	"WEHRLY, SHARON A."
-Candidate	HORACE H. CARLYLE	"CARLYLE, HORACE H."
-Candidate	DON KAMINSKI	"KAMINSKI, DON"
-Candidate	TIMAREE KOSCIK	"KOSCIK, TIMAREE"
-Candidate	JUSTIN B. ZIMMERMAN	"ZIMMERMAN, JUSTIN B."
-Candidate	FRANK CARBONE	"CARBONE, FRANK"
-Candidate	LISA CHAMLEE	"CHAMLEE, LISA"
-Candidate	SEAN C. HASTINGS	"HASTINGS, SEAN C."
-Candidate	TAWNA YAZZIE	"YAZZIE, TAWNA"
-Candidate	LEO BLUNDO	"BLUNDO, LEO"
-Candidate	RICHARD GOLDSTEIN	"GOLDSTEIN, RICHARD"
-Candidate	MARK OWENS	"OWENS, MARK"
-Candidate	DONALD E. RUST	"RUST, DONALD E."
-Candidate	DEBRA STRICKLAND	"STRICKLAND, DEBRA"
-Candidate	LAUREEN E. BASSO-CERINI	"BASSO-CERINI, LAUREEN E."
-Candidate	LACEY DONALDSON	"DONALDSON, LACEY"
-Candidate	KRISTY BERGE	"BERGE, KRISTY"
-Candidate	CAROL A. SHANK	"SHANK, CAROL A."
-Candidate	RENE M. CHILDS	"CHILDS, RENE M."
-Candidate	R. BRYCE SHIELDS	"SHIELDS, R. BRYCE"
-Candidate	JEFFREY KEARNS	"KEARNS, JEFFREY"
-Candidate	CINDY PLUMMER	"PLUMMER, CINDY"
-Candidate	BARBARA RACKLEY	"RACKLEY, BARBARA"
-Candidate	JANA SEDDON	"SEDDON, JANA"
-Candidate	VANESSA STEPHENS	"STEPHENS, VANESSA"
-Candidate	Nicole Barde	"Barde, Nicole"
-Candidate	Jay Carmona	"Carmona, Jay"
-Candidate	JEN CHAPMAN	"CHAPMAN, JEN"
-Candidate	ANNE LANGER	"LANGER, ANNE"
-Candidate	Jeffrey M. Nevin	"Nevin, Jeffrey M."
-Candidate	Sam Toll	"Toll, Sam"
-Candidate	Eddie Lorton	"Lorton, Eddie"
-Candidate	Hillary Schieve	"Schieve, Hillary"
-Candidate	Michael E. Clark	"Clark, Michael E."
-Candidate	"Hugh ""Chip"" Evans"	"Evans, Hugh ""Chip"""
-Candidate	Nancy Parent	"Parent, Nancy"
-Candidate	Emil Tudorache	"Tudorache, Emil"
-Candidate	Lawrence Burtness	"Burtness, Lawrence"
-Candidate	Kalie Work	"Work, Kalie"
-Candidate	Matthew R. Buehler	"Buehler, Matthew R."
-Candidate	Tammi Davis	"Davis, Tammi"
-Candidate	Chris Hicks	"Hicks, Chris"
-Candidate	Kathleen M. Drakulich	"Drakulich, Kathleen M."
-Candidate	Aaron Bushur	"Bushur, Aaron"
-Candidate	Dixie Grossman	"Grossman, Dixie"
-Candidate	Egan Walker	"Walker, Egan"
-Candidate	Barry Breslow	"Breslow, Barry"
-Candidate	DON CAVALLO	"CAVALLO, DON"
-Candidate	Verita Black Prothro	"Prothro, Verita Black"
-Candidate	Karl S. Hall	"Hall, Karl S."
-Candidate	JOHN J. KADLIC	"KADLIC, JOHN J."
-Candidate	Darin Balaam	"Balaam, Darin"
-Candidate	Heidi Howe	"Howe, Heidi"
-Candidate	Sarah Peters	"Peters, Sarah"
-Candidate	Julia Ratti	"Ratti, Julia"
-Candidate	Charlene Y. Young	"Young, Charlene Y."
-Candidate	Teresa Benitez-Thompson	"Benitez-Thompson, Teresa"
-Candidate	Gregory J. Shorts	"Shorts, Gregory J."
-Candidate	Jill Tolles	"Tolles, Jill"
-Candidate	Bill Johnson	"Johnson, Bill"
-Candidate	Kitty K. Jung	"Jung, Kitty K."
-Candidate	Jacqueline Calvert	"Calvert, Jacqueline"
-Candidate	Jeffrey Church	"Church, Jeffrey"
-Candidate	Jeanne Herman	"Herman, Jeanne"
-Candidate	Lindsy Judd	"Judd, Lindsy"
-Candidate	Richard Bein	"Bein, Richard"
-Candidate	Bruce Comer	"Comer, Bruce"
-Candidate	Hud Horton	"Horton, Hud"
-Candidate	Robert Unsworth	"Unsworth, Robert"
-Candidate	NANCY E. ZUNINO	"ZUNINO, NANCY E."
-Candidate	Naomi Duerr	"Duerr, Naomi"
-Candidate	Joe Lawrence	"Lawrence, Joe"
-Candidate	Bob Lucey	"Lucey, Bob"
-Candidate	Stephen Wolgast	"Wolgast, Stephen"
-Candidate	June Joseph	"Joseph, June"
-Candidate	Lisa Krasner	"Krasner, Lisa"
-Candidate	Michael Sprinkle	"Sprinkle, Michael"
-Candidate	Paul D. McKenzie	"McKenzie, Paul D."
-Candidate	Bonnie Weber	"Weber, Bonnie"
-Candidate	Ellen Minetto	"Minetto, Ellen"
-Candidate	Dian Vanderwell	"Vanderwell, Dian"
-Candidate	Andrew Benjamin Caudill	"Caudill, Andrew Benjamin"
-Candidate	Debra Smith Feemster	"Feemster, Debra Smith"
-Candidate	"Richard ""Skip"" Daly"	"Daly, Richard ""Skip"""
-Candidate	Jill Ann Dickman	"Dickman, Jill Ann"
-Candidate	Sandra Ainsworth	"Ainsworth, Sandra"
-Candidate	Suzanne Dutra	"Dutra, Suzanne"
-Candidate	Michael Rider	"Rider, Michael"
-Candidate	Susan Severt	"Severt, Susan"
-Candidate	James Currivan	"Currivan, James"
-Candidate	Greg Dennis	"Dennis, Greg"
-Candidate	Larry J. Johnson	"Johnson, Larry J."
-Candidate	Donald Otto	"Otto, Donald"
-Candidate	Zachary Rhodes	"Rhodes, Zachary"
-Candidate	Hans R. Keller	"Keller, Hans R."
-Candidate	Tim G. Callicrate	"Callicrate, Tim G."
-Candidate	Sara Schmitz	"Schmitz, Sara"
-Candidate	Bruce Edward Simonian	"Simonian, Bruce Edward"
-Candidate	Kendra W. Wong	"Wong, Kendra W."
-Candidate	Burton W. Hilton	"Hilton, Burton W."
-Candidate	Nichole Baldwin	"Baldwin, Nichole"
-Candidate	Ian Bullis	"Bullis, Ian"
-Candidate	George Chachas	"Chachas, George"
-Candidate	Travis Godon	"Godon, Travis"
-Candidate	MARTHA RIVERA SINDELAR	"SINDELAR, MARTHA RIVERA"
-Candidate	CATHERINE BAKARIC	"BAKARIC, CATHERINE"
-Candidate	Michael A. Wheable	"Wheable, Michael A."
-Candidate	Stephen J. Bishop	"Bishop, Stephen J."
-Candidate	Matt Hibbs	"Hibbs, Matt"
-Candidate	Amy Adams	"Adams, Amy"
-Candidate	Cade H. Willes	"Willes, Cade H."
-Candidate	Scott Henriod	"Henriod, Scott"
-Candidate	Ray Sawyer	"Sawyer, Ray"
-Candidate	Sid Beckwith	"Beckwith, Sid"
-Candidate	Ericson Skye	"Skye, Ericson"
+Candidate	WES DUNCAN	DUNCAN, WES
+Candidate	AARON FORD	FORD, AARON
+Candidate	Joel F. Hansen	Hansen, Joel F.
+Candidate	Stacey Giomi	Giomi, Stacey
+Candidate	JOHN WOOD	WOOD, JOHN
+Candidate	RUSSELL BEST	BEST, RUSSELL
+Candidate	RYAN BUNDY	BUNDY, RYAN
+Candidate	ADAM PAUL LAXALT	LAXALT, ADAM PAUL
+Candidate	JARED LORD	LORD, JARED
+Candidate	STEVE SISOLAK	SISOLAK, STEVE
+Candidate	KRISTIN LUIS	LUIS, KRISTIN
+Candidate	RYAN RUSSELL	RUSSELL, RYAN
+Candidate	JANINE HANSEN	HANSEN, JANINE
+Candidate	KATE MARSHALL	MARSHALL, KATE
+Candidate	MICHAEL ROBERSON	ROBERSON, MICHAEL
+Candidate	ED UEHLING	UEHLING, ED
+Candidate	NELSON ARAUJO	ARAUJO, NELSON
+Candidate	Barbara K. Cegavske	Cegavske, Barbara K.
+Candidate	KENNY FURLONG	FURLONG, KENNY
+Candidate	LORNE R. HOULE	HOULE, LORNE R.
+Candidate	AL KRAMER	KRAMER, AL
+Candidate	Autumn Zemke	Zemke, Autumn
+Candidate	CATHERINE BYRNE	BYRNE, CATHERINE
+Candidate	Ron Knecht	Knecht, Ron
+Candidate	Tina Davis-Hersey	Davis-Hersey, Tina
+Candidate	Ben Kieckhefer	Kieckhefer, Ben
+Candidate	John Wagner	Wagner, John
+Candidate	BOB BEERS	BEERS, BOB
+Candidate	ZACH CONINE	CONINE, ZACH
+Candidate	BILL HOGE	HOGE, BILL
+Candidate	ELISSA CADISH	CADISH, ELISSA
+Candidate	JERRY TAO	TAO, JERRY
+Candidate	ABBI SILVER	SILVER, ABBI
+Candidate	MATHEW HARTER	HARTER, MATHEW
+Candidate	LIDIA STIGLICH	STIGLICH, LIDIA
+Candidate	Mark E. Amodei	Amodei, Mark E.
+Candidate	CLINT KOBLE	KOBLE, CLINT
+Candidate	KAMAU A. BAKARI	BAKARI, KAMAU A.
+Candidate	TIM HAGAN	HAGAN, TIM
+Candidate	Dean Heller	Heller, Dean
+Candidate	BARRY MICHAELS	MICHAELS, BARRY
+Candidate	JACKY ROSEN	ROSEN, JACKY
+Candidate	FREDERICK D. BUCKMASTER	BUCKMASTER, FREDERICK D.
+Candidate	AMBER N. GETTO	GETTO, AMBER N.
+Candidate	Clay HENDRIX	HENDRIX, Clay
+Candidate	MATT HYDE	HYDE, MATT
+Candidate	PATTY JULIAN	JULIAN, PATTY
+Candidate	TEDD MCDONALD	MCDONALD, TEDD
+Candidate	CARMEN SCHANK	SCHANK, CARMEN
+Candidate	DEBY SMOTHERMAN	SMOTHERMAN, DEBY
+Candidate	DENISE L. MONDHINK-FELTON	MONDHINK-FELTON, DENISE L.
+Candidate	LINDA ROTHERY	ROTHERY, LINDA
+Candidate	PETE OLSEN	OLSEN, PETE
+Candidate	TASHA HESSEY	HESSEY, TASHA
+Candidate	ART MALLORY	MALLORY, ART
+Candidate	MIKE RICHARDS	RICHARDS, MIKE
+Candidate	BENJAMIN D. TROTTER	TROTTER, BENJAMIN D.
+Candidate	THOMAS HUTCHINGS	HUTCHINGS, THOMAS
+Candidate	CHRISTY LATTIN	LATTIN, CHRISTY
+Candidate	GARY L. SMITH	SMITH, GARY L.
+Candidate	MICHAEL SPENCER	SPENCER, MICHAEL
+Candidate	LARRY TUCKER	TUCKER, LARRY
+Candidate	ROBERT M. GETTO JR.	GETTO JR., ROBERT M.
+Candidate	RAY EAST	EAST, RAY
+Candidate	RICHARD C. HICKOX	HICKOX, RICHARD C.
+Candidate	ROBIN L. TITUS	TITUS, ROBIN L.
+Candidate	CURTIS W. CANNON	CANNON, CURTIS W.
+Candidate	JAMES ARNOLD SETTELMEYER	SETTELMEYER, JAMES ARNOLD
+Candidate	Briana Johnson	Johnson, Briana
+Candidate	Gina McClain	McClain, Gina
+Candidate	Lynn Maria Goya	Goya, Lynn Maria
+Candidate	Minddie Lloyd	Lloyd, Minddie
+Candidate	Debbie Conway	Conway, Debbie
+Candidate	Jill MacFarlane	MacFarlane, Jill
+Candidate	Phil Collins	Collins, Phil
+Candidate	Laura Fitzpatrick	Fitzpatrick, Laura
+Candidate	STEVE WOLFSON	WOLFSON, STEVE
+Candidate	Tierra Jones	Jones, Tierra
+Candidate	Mark B. Bailus	Bailus, Mark B.
+Candidate	Mary Kay Holthus	Holthus, Mary Kay
+Candidate	DAVID M. JONES	JONES, DAVID M.
+Candidate	Elana Lee Graham	Graham, Elana Lee
+Candidate	James Dean Leavitt	Leavitt, James Dean
+Candidate	Victoria Kay DaCosta	DaCosta, Victoria Kay
+Candidate	Thomas L. Fougere	Fougere, Thomas L.
+Candidate	Robert Telles	Telles, Robert
+Candidate	Jason Frierson	Frierson, Jason
+Candidate	Tina M. Peetris	Peetris, Tina M.
+Candidate	Danielle Ford	Ford, Danielle
+Candidate	Kali Fox Miller	Miller, Kali Fox
+Candidate	Joyce Bentley	Bentley, Joyce
+Candidate	Dan Garfield	Garfield, Dan
+Candidate	Robert Strawder	Strawder, Robert
+Candidate	Dina TITUS	TITUS, Dina
+Candidate	Cherlyn Arrington	Arrington, Cherlyn
+Candidate	Ozzie FUMO	FUMO, Ozzie
+Candidate	Steve Brown	Brown, Steve
+Candidate	Gil Eisner	Eisner, Gil
+Candidate	David Goossen	Goossen, David
+Candidate	Tony Gumina	Gumina, Tony
+Candidate	Susie Lee	Lee, Susie
+Candidate	Danny Tarkanian	Tarkanian, Danny
+Candidate	Harry L. Vickers	Vickers, Harry L.
+Candidate	Jack 'Fat Jack' Cochran	Cochran, Jack 'Fat Jack'
+Candidate	Glen Leavitt	Leavitt, Glen
+Candidate	Ralph Preta	Preta, Ralph
+Candidate	JOE HARDY	HARDY, JOE
+Candidate	Craig Jordahl	Jordahl, Craig
+Candidate	Jordan Ross	Ross, Jordan
+Candidate	Irene Cepeda	Cepeda, Irene
+Candidate	KEVIN L. CHILD	CHILD, KEVIN L.
+Candidate	Michelle Gorelow	Gorelow, Michelle
+Candidate	Daniel Hofstein	Hofstein, Daniel
+Candidate	David Schoen	Schoen, David
+Candidate	Tiffany Jones	Jones, Tiffany
+Candidate	Melanie Scheible	Scheible, Melanie
+Candidate	Sandra Jauregui	Jauregui, Sandra
+Candidate	Paris Wade	Wade, Paris
+Candidate	Richard 'Rick' Bronstein	Bronstein, Richard 'Rick'
+Candidate	Julie Pazina	Pazina, Julie
+Candidate	Keith Pickard	Pickard, Keith
+Candidate	Lesley Elizabeth Cohen	Cohen, Lesley Elizabeth
+Candidate	Bruce James-Newman	James-Newman, Bruce
+Candidate	Stephen H. Silberkraus	Silberkraus, Stephen H.
+Candidate	Gary P. Rogers	Rogers, Gary P.
+Candidate	Amber Carter	Carter, Amber
+Candidate	Larry Shupe	Shupe, Larry
+Candidate	Joe Pitts	Pitts, Joe
+Candidate	Kenny Taylor	Taylor, Kenny
+Candidate	Melissa Hardy	Hardy, Melissa
+Candidate	Kristee Watson	Watson, Kristee
+Candidate	Amy Carvalho	Carvalho, Amy
+Candidate	Andrew Coates	Coates, Andrew
+Candidate	Linda Cannon	Cannon, Linda
+Candidate	Steve Yeager	Yeager, Steve
+Candidate	Alexander Assefa	Assefa, Alexander
+Candidate	Heidi Swank	Swank, Heidi
+Candidate	Yvanna Cancela	Cancela, Yvanna
+Candidate	STEVE HAMPE	HAMPE, STEVE
+Candidate	Robert D. Martin	Martin, Robert D.
+Candidate	Victor Lee Miller	Miller, Victor Lee
+Candidate	Dennis Hof	Hof, Dennis
+Candidate	Lesia Romanov	Romanov, Lesia
+Candidate	ROBERT L. ELIASON	ELIASON, ROBERT L.
+Candidate	Jimmy Vega	Vega, Jimmy
+Candidate	Daniele Monroe-Moreno	Monroe-Moreno, Daniele
+Candidate	Cresent Hardy	Hardy, Cresent
+Candidate	Steven A. Horsford	Horsford, Steven A.
+Candidate	Gregg Luckner	Luckner, Gregg
+Candidate	Warren Ross Markowitz	Markowitz, Warren Ross
+Candidate	Dean McGonigle	McGonigle, Dean
+Candidate	Rodney Smith	Smith, Rodney
+Candidate	Jo Cato	Cato, Jo
+Candidate	Laura E. Perkins	Perkins, Laura E.
+Candidate	Dina Neal	Neal, Dina
+Candidate	Leon S. Frei	Frei, Leon S.
+Candidate	Chris Edwards	Edwards, Chris
+Candidate	Richard Fletcher	Fletcher, Richard
+Candidate	Mary Elizabeth Boyer Martinez	Martinez, Mary Elizabeth Boyer
+Candidate	Susan Martinez	Martinez, Susan
+Candidate	Ron McGinnis	McGinnis, Ron
+Candidate	James Ohrenschall	Ohrenschall, James
+Candidate	Bob Lystrup	Lystrup, Bob
+Candidate	Richard McArthur	McArthur, Richard
+Candidate	Connie Munk	Munk, Connie
+Candidate	Leonard Foster	Foster, Leonard
+Candidate	Tom Roberts	Roberts, Tom
+Candidate	Patricia 'Pat' Little	Little, Patricia 'Pat'
+Candidate	Ronald Newsome	Newsome, Ronald
+Candidate	Tyrone THOMPSON	THOMPSON, Tyrone
+Candidate	Maggie CARLTON	CARLTON, Maggie
+Candidate	Sandra Ramaker	Ramaker, Sandra
+Candidate	Geno Withelder	Withelder, Geno
+Candidate	David P. Ballweg	Ballweg, David P.
+Candidate	George H. Gault	Gault, George H.
+Candidate	Ann 'Annie' Black	Black, Ann 'Annie'
+Candidate	Karen Fielding	Fielding, Karen
+Candidate	Duane L. Thurston	Thurston, Duane L.
+Candidate	John Burrows	Burrows, John
+Candidate	BEN K. DAVIS	DAVIS, BEN K.
+Candidate	Jere A. Walker	Walker, Jere A.
+Candidate	Josh Jensen	Jensen, Josh
+Candidate	LINDA CAVAZOS	CAVAZOS, LINDA
+Candidate	Ryan Scalia	Scalia, Ryan
+Candidate	Shea Backus	Backus, Shea
+Candidate	Jim Marchant	Marchant, Jim
+Candidate	Erik L. Laub	Laub, Erik L.
+Candidate	DARRYLL B. DODENBIER	DODENBIER, DARRYLL B.
+Candidate	Brian Douglas Haviland	Haviland, Brian Douglas
+Candidate	Edgar Flores	Flores, Edgar
+Candidate	Calvin 'Cal' Border	Border, Calvin 'Cal'
+Candidate	MO DENIS	DENIS, MO
+Candidate	Shannon Bilbray-Axelrod	Bilbray-Axelrod, Shannon
+Candidate	Janice E. Wesen	Wesen, Janice E.
+Candidate	John Hambrick	Hambrick, John
+Candidate	Jennie Sherwood	Sherwood, Jennie
+Candidate	Marilyn Dondero Loop	Loop, Marilyn Dondero
+Candidate	Valerie Weber	Weber, Valerie
+Candidate	Stephen G. Sedlmeyer	Sedlmeyer, Stephen G.
+Candidate	Selena Torres	Torres, Selena
+Candidate	Chris Brooks	Brooks, Chris
+Candidate	Jonathan Friedrich	Friedrich, Jonathan
+Candidate	Noel Searles	Searles, Noel
+Candidate	Jason Burke	Burke, Jason
+Candidate	Brittney Miller	Miller, Brittney
+Candidate	II McCurdy	McCurdy, II, William O'Neil
+Candidate	Olivia Diaz	Diaz, Olivia
+Candidate	Gianna Miceli	Miceli, Gianna
+Candidate	Stan Vaughan	Vaughan, Stan
+Candidate	III Watts	Watts, III, Howard
+Candidate	Trish Marsh	Marsh, Trish
+Candidate	Tick Segerblom	Segerblom, 'Tick'
+Candidate	Michael L. McDonald	McDonald, Michael L.
+Candidate	Ellen Spiegel	Spiegel, Ellen
+Candidate	Richard Carrillo	Carrillo, Richard
+Candidate	Matt Sadler	Sadler, Matt
+Candidate	Tisha Black	Black, Tisha
+Candidate	Justin Jones	Jones, Justin
+Candidate	Jim GIBSON	GIBSON, Jim
+Candidate	Cindy Lake	Lake, Cindy
+Candidate	Doug Marsh	Marsh, Doug
+Candidate	Paul E. Gilbert	Gilbert, Paul E.
+Candidate	Trent Tholen	Tholen, Trent
+Candidate	Kathy Lewis	Lewis, Kathy
+Candidate	John Engels	Engels, John
+Candidate	Kristi Lynn Kandel	Kandel, Kristi Lynn
+Candidate	Wesley A. Rice	Rice, Wesley A.
+Candidate	KAREN ELLISON	ELLISON, KAREN
+Candidate	Mark B. Jackson	Jackson, Mark B.
+Candidate	Cassandra G. Jones	Jones, Cassandra G.
+Candidate	Erik Levin	Levin, Erik
+Candidate	Steve Walsh	Walsh, Steve
+Candidate	Patricia Ackerman	Ackerman, Patricia
+Candidate	Paul Cwalina	Cwalina, Paul
+Candidate	Jim Wheeler	Wheeler, Jim
+Candidate	Brad Newlon	Newlon, Brad
+Candidate	John Sheridan	Sheridan, John
+Candidate	Robert Spellberg	Spellberg, Robert
+Candidate	Leann M. Teter	Teter, Leann M.
+Candidate	Mike King	King, Mike
+Candidate	Mary Schilling	Schilling, Mary
+Candidate	Ted Thran	Thran, Ted
+Candidate	Ray Wilson	Wilson, Ray
+Candidate	Aaron Hampton	Hampton, Aaron
+Candidate	Michael Henningsen	Henningsen, Michael
+Candidate	Kenneth Miller	Miller, Kenneth
+Candidate	Linda L. Slater	Slater, Linda L.
+Candidate	Brian Trute	Trute, Brian
+Candidate	Kathryn Clark-Ross	Clark-Ross, Kathryn
+Candidate	Bill Eisele	Eisele, Bill
+Candidate	Robert M. Garcia	Garcia, Robert M.
+Candidate	Gennady II Stolyarov	Stolyarov, Gennady II
+Candidate	Matt Bernard	Bernard, Matt
+Candidate	Bill Driscoll	Driscoll, Bill
+Candidate	Richard Sr. Koontz	Koontz, Richard Sr.
+Candidate	William R. 'Bill' Souligny	Souligny, William R. 'Bill'
+Candidate	Roxanne Stangle	Stangle, Roxanne
+Candidate	Charles 'Chuck' Fagen	Fagen, Charles 'Chuck'
+Candidate	Keith E. Fertala	Fertala, Keith E.
+Candidate	Hunter Harris	Harris, Hunter
+Candidate	Janet Murphy	Murphy, Janet
+Candidate	Carl N. Ruschmeyer	Ruschmeyer, Carl N.
+Candidate	William 'Bill' Kirschner	Kirschner, William 'Bill'
+Candidate	Dan Norman	Norman, Dan
+Candidate	Sandra 'Sandy' Parks	Parks, Sandra 'Sandy'
+Candidate	Darya Vogt	Vogt, Darya
+Candidate	KATRINKA S. RUSSELL	RUSSELL, KATRINKA S.
+Candidate	KRISTINE 'KRIS' JAKEMAN	JAKEMAN, KRISTINE 'KRIS'
+Candidate	CHERYL PAUL	PAUL, CHERYL
+Candidate	DELMO ANDREOZZI	ANDREOZZI, DELMO
+Candidate	CLIFF EKLUND	EKLUND, CLIFF
+Candidate	D. MIKE SMALES	SMALES, D. MIKE
+Candidate	TYLER INGRAM	INGRAM, TYLER
+Candidate	BILL HANCE	HANCE, BILL
+Candidate	TONY LIKER	LIKER, TONY
+Candidate	JEANNA SECRIST	SECRIST, JEANNA
+Candidate	RO SMITH	SMITH, RO
+Candidate	CHIP STONE	STONE, CHIP
+Candidate	REECE KEENER	KEENER, REECE
+Candidate	MARCEY LOGSDEN	LOGSDEN, MARCEY
+Candidate	ANTOINETTE CHIESA	CHIESA, ANTOINETTE
+Candidate	MASON EDWARD SIMONS	SIMONS, MASON EDWARD
+Candidate	STACIE PHILLIPS	PHILLIPS, STACIE
+Candidate	BRIAN ZEISZLER	ZEISZLER, BRIAN
+Candidate	EMILY CARTER	CARTER, EMILY
+Candidate	CANDACE WINES	WINES, CANDACE
+Candidate	AITOR NARVAIZA	NARVAIZA, AITOR
+Candidate	JIM PITTS	PITTS, JIM
+Candidate	John C. Ellison	Ellison, John C.
+Candidate	CAMERON KINNEY	KINNEY, CAMERON
+Candidate	SABRA ESPARZA	ESPARZA, SABRA
+Candidate	WAYNE A. EVENSON	EVENSON, WAYNE A.
+Candidate	PATRICIA 'PAM' GRISWOLD	GRISWOLD, PATRICIA 'PAM'
+Candidate	LINCOLN LITCHFIELD	LITCHFIELD, LINCOLN
+Candidate	DANA DON HOLBROOK	HOLBROOK, DANA DON
+Candidate	JONATHAN GOOLSBY	GOOLSBY, JONATHAN
+Candidate	MICHAEL K. PACE	PACE, MICHAEL K.
+Candidate	ROBERT WOOLSEY	WOOLSEY, ROBERT
+Candidate	LAYLA WALZ	WALZ, LAYLA
+Candidate	JEFF R. DURHAM	DURHAM, JEFF R.
+Candidate	KATHY DURHAM	DURHAM, KATHY
+Candidate	ISMAEL 'IZZY' GUTIERREZ	GUTIERREZ, ISMAEL 'IZZY' 
+Candidate	JOHN B. HANSON	HANSON, JOHN B.
+Candidate	JASIE HOLM	HOLM, JASIE
+Candidate	MICHAEL CHRISTENSEN	CHRISTENSEN, MICHAEL
+Candidate	MARIA G. ORTEGA	ORTEGA, MARIA G.
+Candidate	BRIAN RAY	RAY, BRIAN
+Candidate	JARED F. CARTER	CARTER, JARED F.
+Candidate	GERARDO RODRIGUEZ	RODRIGUEZ, GERARDO
+Candidate	RUTH P. LEE	LEE, RUTH P.
+Candidate	VERA BOYER	BOYER, VERA
+Candidate	PATRICIA 'PATTY' HUBER-BETH	HUBER-BETH, PATRICIA 'PATTY'
+Candidate	LaCinda 'CINDY' ELGAN	ELGAN, LaCinda 'CINDY'
+Candidate	TIMOTHY HIPP	HIPP, TIMOTHY
+Candidate	MARK STEZAKER	STEZAKER, MARK
+Candidate	ROBERT E. III GLENNEN	GLENNEN, ROBERT E. III
+Candidate	ALEXIS M. HANSEN	HANSEN, ALEXIS M.
+Candidate	PAULA POVILAITIS	POVILAITIS, PAULA
+Candidate	WENDY BOSZAK	BOSZAK, WENDY
+Candidate	IRA HANSEN	HANSEN, IRA
+Candidate	MICHAEL A. MEARS	MEARS, MICHAEL A.
+Candidate	LISA L. HOEHNE	HOEHNE, LISA L.
+Candidate	AMANDA JEAN PEARCE	PEARCE, AMANDA JEAN
+Candidate	RICH MCKAY	MCKAY, RICH
+Candidate	BEVERLY CONLEY	CONLEY, BEVERLY
+Candidate	THEODORE 'TED' BEUTEL	BEUTEL, THEODORE 'TED'
+Candidate	DOROTHY ROWLEY	ROWLEY, DOROTHY
+Candidate	MELYNDA SHARKOZY	SHARKOZY, MELYNDA
+Candidate	MELISSA FITZWATER	FITZWATER, MELISSA
+Candidate	ROBIN HICKS	HICKS, ROBIN
+Candidate	JIM IZZOLO	IZZOLO, JIM
+Candidate	BRANDI ANDERSON	ANDERSON, BRANDI
+Candidate	DARLA R. BAUMANN	BAUMANN, DARLA R.
+Candidate	Gary Horky	Horky, Gary
+Candidate	Theresa Mavity	Mavity, Theresa
+Candidate	Jim Billingsley	Billingsley, Jim
+Candidate	Fredrick Bryant	Bryant, Fredrick
+Candidate	Paige Brooks	Brooks, Paige
+Candidate	Rich Stone	Stone, Rich
+Candidate	WILLIAM 'JEFF' JOHNSON	JOHNSON, WILLIAM 'JEFF'
+Candidate	Tami Rae Spero	Spero, Tami Rae
+Candidate	Ronald L. Cerri	Cerri, Ronald L.
+Candidate	Jim French	French, Jim
+Candidate	Deborah Engstrom	Engstrom, Deborah
+Candidate	Rhona Lecumberry	Lecumberry, Rhona
+Candidate	MICHAEL MACDONALD	MACDONALD, MICHAEL
+Candidate	Gene Hunt	Hunt, Gene
+Candidate	Joel Murphy	Murphy, Joel
+Candidate	Bill Douglas	Douglas, Bill
+Candidate	Christopher R. Entwistle	Entwistle, Christopher R.
+Candidate	Jim Loveless	Loveless, Jim
+Candidate	Matt Morgan	Morgan, Matt
+Candidate	LURA DUVALL	DUVALL, LURA
+Candidate	Leann Miller	Miller, Leann
+Candidate	SADIE SULLIVAN	SULLIVAN, SADIE
+Candidate	Bryan Sparks	Sparks, Bryan
+Candidate	Art III Clark	Clark, Art III
+Candidate	Harry L. Sr. Dimitroff	Dimitroff, Harry L. Sr.
+Candidate	Kathleen V. Ancho	Ancho, Kathleen V.
+Candidate	Manuel II Moreno	Moreno, Manuel II
+Candidate	LESLEY L. BUNCH	BUNCH, LESLEY L.
+Candidate	Tina Marie Bisiaux	Bisiaux, Tina Marie
+Candidate	Jusdivia Johnson	Johnson, Jusdivia
+Candidate	Theodore C. Herrera	Herrera, Theodore C.
+Candidate	Denise Fortune	Fortune, Denise
+Candidate	Toby Melver	Melver, Toby
+Candidate	Billy Gandolfo	Gandolfo, Billy
+Candidate	Mark Holt	Holt, Mark
+Candidate	Lisa Lloyd	Lloyd, Lisa
+Candidate	Jared Brackenbury	Brackenbury, Jared
+Candidate	Ron Hibble	Hibble, Ron
+Candidate	Bevan Lister	Lister, Bevan
+Candidate	Kevin J. Phillips	Phillips, Kevin J.
+Candidate	Amy Nicole Elmer	Elmer, Amy Nicole
+Candidate	Bob McCleary	McCleary, Bob
+Candidate	Shawn Frehner	Frehner, Shawn
+Candidate	Dylan V. Frehner	Frehner, Dylan V.
+Candidate	Carol J. Hansen	Hansen, Carol J.
+Candidate	Carolyn Harr	Harr, Carolyn
+Candidate	Kerry D. Lee	Lee, Kerry D.
+Candidate	Evan W. Schimbeck	Schimbeck, Evan W.
+Candidate	Jeff Childers	Childers, Jeff
+Candidate	Mike D. Cowley	Cowley, Mike D.
+Candidate	Troy R. Villines	Villines, Troy R.
+Candidate	Nikki Bryan	Bryan, Nikki
+Candidate	Vida D. Keller	Keller, Vida D.
+Candidate	Greg Hunewill	Hunewill, Greg
+Candidate	Brenda K. Cullen	Cullen, Brenda K.
+Candidate	Margie Kassebaum	Kassebaum, Margie
+Candidate	Stephen B. Rye	Rye, Stephen B.
+Candidate	Douglas 'Doug' Kassebaum	Kassebaum, Douglas 'Doug'
+Candidate	Cary 'Rick' Smith	Smith, Cary 'Rick'
+Candidate	Cassandra Aveiro	Aveiro, Cassandra
+Candidate	Barbara Jean Jones	Jones, Barbara Jean
+Candidate	Frank Hunewill	Hunewill, Frank
+Candidate	AL MCNEIL	MCNEIL, AL
+Candidate	Charles 'Chuck' Kennedy	Kennedy, Charles 'Chuck'
+Candidate	Kathy McIntosh	McIntosh, Kathy
+Candidate	Avis Moniz	Moniz, Avis
+Candidate	Alicia Norris	Norris, Alicia
+Candidate	Terrin Hicks	Hicks, Terrin
+Candidate	Matt Johnson	Johnson, Matt
+Candidate	Chris Murphy	Murphy, Chris
+Candidate	Sue Seidl	Seidl, Sue
+Candidate	Ray Lacy	Lacy, Ray
+Candidate	Shari L. Whalen	Whalen, Shari L.
+Candidate	Kevin B. Chisum	Chisum, Kevin B.
+Candidate	Janeen Clark	Clark, Janeen
+Candidate	Christopher Nepper	Nepper, Christopher
+Candidate	Michael Guss	Guss, Michael
+Candidate	Christine Hoferer	Hoferer, Christine
+Candidate	Norman E. Williams	Williams, Norman E.
+Candidate	Cindy Nixon	Nixon, Cindy
+Candidate	Donna Oberhansli	Oberhansli, Donna
+Candidate	Sean Alden Rowe	Rowe, Sean Alden
+Candidate	Mike James	James, Mike
+Candidate	Paula Joe Reed	Reed, Paula Joe
+Candidate	Keith E. Neville	Neville, Keith E.
+Candidate	David Ziegler	Ziegler, David
+Candidate	BETH CICHOWLAZ	CICHOWLAZ, BETH
+Candidate	Randy Adams	Adams, Randy
+Candidate	Earl William Perry	Perry, Earl William
+Candidate	ANDY ALBERTI	ALBERTI, ANDY
+Candidate	SHEREE STRINGER	STRINGER, SHEREE
+Candidate	SANDRA 'SAM' MERLINO	MERLINO, SANDRA 'SAM'
+Candidate	SHEILA WINN	WINN, SHEILA
+Candidate	DEBORAH BEATTY	BEATTY, DEBORAH
+Candidate	MICHAEL S. NOYES	NOYES, MICHAEL S.
+Candidate	LANCE ROY SCHAUS	SCHAUS, LANCE ROY
+Candidate	PAM WEBSTER	WEBSTER, PAM
+Candidate	CHRIS ARABIA	ARABIA, CHRIS
+Candidate	NICHOLAS ANTHONY DEL VECCHIO	DEL VECCHIO, NICHOLAS ANTHONY
+Candidate	GINGER L. STUMNE	STUMNE, GINGER L.
+Candidate	Tony DeMeo	DeMeo, Tony
+Candidate	SHARON A. WEHRLY	WEHRLY, SHARON A.
+Candidate	HORACE H. CARLYLE	CARLYLE, HORACE H.
+Candidate	DON KAMINSKI	KAMINSKI, DON
+Candidate	TIMAREE KOSCIK	KOSCIK, TIMAREE
+Candidate	JUSTIN B. ZIMMERMAN	ZIMMERMAN, JUSTIN B.
+Candidate	FRANK CARBONE	CARBONE, FRANK
+Candidate	LISA CHAMLEE	CHAMLEE, LISA
+Candidate	SEAN C. HASTINGS	HASTINGS, SEAN C.
+Candidate	TAWNA YAZZIE	YAZZIE, TAWNA
+Candidate	LEO BLUNDO	BLUNDO, LEO
+Candidate	RICHARD GOLDSTEIN	GOLDSTEIN, RICHARD
+Candidate	MARK OWENS	OWENS, MARK
+Candidate	DONALD E. RUST	RUST, DONALD E.
+Candidate	DEBRA STRICKLAND	STRICKLAND, DEBRA
+Candidate	LAUREEN E. BASSO-CERINI	BASSO-CERINI, LAUREEN E.
+Candidate	LACEY DONALDSON	DONALDSON, LACEY
+Candidate	KRISTY BERGE	BERGE, KRISTY
+Candidate	CAROL A. SHANK	SHANK, CAROL A.
+Candidate	RENE M. CHILDS	CHILDS, RENE M.
+Candidate	R. BRYCE SHIELDS	SHIELDS, R. BRYCE
+Candidate	JEFFREY KEARNS	KEARNS, JEFFREY
+Candidate	CINDY PLUMMER	PLUMMER, CINDY
+Candidate	BARBARA RACKLEY	RACKLEY, BARBARA
+Candidate	JANA SEDDON	SEDDON, JANA
+Candidate	VANESSA STEPHENS	STEPHENS, VANESSA
+Candidate	Nicole Barde	Barde, Nicole
+Candidate	Jay Carmona	Carmona, Jay
+Candidate	JEN CHAPMAN	CHAPMAN, JEN
+Candidate	ANNE LANGER	LANGER, ANNE
+Candidate	Jeffrey M. Nevin	Nevin, Jeffrey M.
+Candidate	Sam Toll	Toll, Sam
+Candidate	Eddie Lorton	Lorton, Eddie
+Candidate	Hillary Schieve	Schieve, Hillary
+Candidate	Michael E. Clark	Clark, Michael E.
+Candidate	Hugh 'Chip' Evans	Evans, Hugh 'Chip'
+Candidate	Nancy Parent	Parent, Nancy
+Candidate	Emil Tudorache	Tudorache, Emil
+Candidate	Lawrence Burtness	Burtness, Lawrence
+Candidate	Kalie Work	Work, Kalie
+Candidate	Matthew R. Buehler	Buehler, Matthew R.
+Candidate	Tammi Davis	Davis, Tammi
+Candidate	Chris Hicks	Hicks, Chris
+Candidate	Kathleen M. Drakulich	Drakulich, Kathleen M.
+Candidate	Aaron Bushur	Bushur, Aaron
+Candidate	Dixie Grossman	Grossman, Dixie
+Candidate	Egan Walker	Walker, Egan
+Candidate	Barry Breslow	Breslow, Barry
+Candidate	DON CAVALLO	CAVALLO, DON
+Candidate	Verita Black Prothro	Prothro, Verita Black
+Candidate	Karl S. Hall	Hall, Karl S.
+Candidate	JOHN J. KADLIC	KADLIC, JOHN J.
+Candidate	Darin Balaam	Balaam, Darin
+Candidate	Heidi Howe	Howe, Heidi
+Candidate	Sarah Peters	Peters, Sarah
+Candidate	Julia Ratti	Ratti, Julia
+Candidate	Charlene Y. Young	Young, Charlene Y.
+Candidate	Teresa Benitez-Thompson	Benitez-Thompson, Teresa
+Candidate	Gregory J. Shorts	Shorts, Gregory J.
+Candidate	Jill Tolles	Tolles, Jill
+Candidate	Bill Johnson	Johnson, Bill
+Candidate	Kitty K. Jung	Jung, Kitty K.
+Candidate	Jacqueline Calvert	Calvert, Jacqueline
+Candidate	Jeffrey Church	Church, Jeffrey
+Candidate	Jeanne Herman	Herman, Jeanne
+Candidate	Lindsy Judd	Judd, Lindsy
+Candidate	Richard Bein	Bein, Richard
+Candidate	Bruce Comer	Comer, Bruce
+Candidate	Hud Horton	Horton, Hud
+Candidate	Robert Unsworth	Unsworth, Robert
+Candidate	NANCY E. ZUNINO	ZUNINO, NANCY E.
+Candidate	Naomi Duerr	Duerr, Naomi
+Candidate	Joe Lawrence	Lawrence, Joe
+Candidate	Bob Lucey	Lucey, Bob
+Candidate	Stephen Wolgast	Wolgast, Stephen
+Candidate	June Joseph	Joseph, June
+Candidate	Lisa Krasner	Krasner, Lisa
+Candidate	Michael Sprinkle	Sprinkle, Michael
+Candidate	Paul D. McKenzie	McKenzie, Paul D.
+Candidate	Bonnie Weber	Weber, Bonnie
+Candidate	Ellen Minetto	Minetto, Ellen
+Candidate	Dian Vanderwell	Vanderwell, Dian
+Candidate	Andrew Benjamin Caudill	Caudill, Andrew Benjamin
+Candidate	Debra Smith Feemster	Feemster, Debra Smith
+Candidate	Richard 'Skip' Daly	Daly, Richard 'Skip'
+Candidate	Jill Ann Dickman	Dickman, Jill Ann
+Candidate	Sandra Ainsworth	Ainsworth, Sandra
+Candidate	Suzanne Dutra	Dutra, Suzanne
+Candidate	Michael Rider	Rider, Michael
+Candidate	Susan Severt	Severt, Susan
+Candidate	James Currivan	Currivan, James
+Candidate	Greg Dennis	Dennis, Greg
+Candidate	Larry J. Johnson	Johnson, Larry J.
+Candidate	Donald Otto	Otto, Donald
+Candidate	Zachary Rhodes	Rhodes, Zachary
+Candidate	Hans R. Keller	Keller, Hans R.
+Candidate	Tim G. Callicrate	Callicrate, Tim G.
+Candidate	Sara Schmitz	Schmitz, Sara
+Candidate	Bruce Edward Simonian	Simonian, Bruce Edward
+Candidate	Kendra W. Wong	Wong, Kendra W.
+Candidate	Burton W. Hilton	Hilton, Burton W.
+Candidate	Nichole Baldwin	Baldwin, Nichole
+Candidate	Ian Bullis	Bullis, Ian
+Candidate	George Chachas	Chachas, George
+Candidate	Travis Godon	Godon, Travis
+Candidate	MARTHA RIVERA SINDELAR	SINDELAR, MARTHA RIVERA
+Candidate	CATHERINE BAKARIC	BAKARIC, CATHERINE
+Candidate	Michael A. Wheable	Wheable, Michael A.
+Candidate	Stephen J. Bishop	Bishop, Stephen J.
+Candidate	Matt Hibbs	Hibbs, Matt
+Candidate	Amy Adams	Adams, Amy
+Candidate	Cade H. Willes	Willes, Cade H.
+Candidate	Scott Henriod	Henriod, Scott
+Candidate	Ray Sawyer	Sawyer, Ray
+Candidate	Sid Beckwith	Beckwith, Sid
+Candidate	Ericson Skye	Skye, Ericson
 Party	Unknown	Unknown
 CountItemType	total	Votes
 BallotMeasureSelection	Yes	Yes

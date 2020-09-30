@@ -71,4 +71,6 @@ NV Governor	Nevada
 US Senate NV	Nevada
 NV Attorney General	Nevada
 NV Lieutenant Governor	Nevada
-NV Treasurer	Nevada
+NV State Treasurer	Nevada
+NV Secretary of State	Nevada
+NV State Controller	Nevada
