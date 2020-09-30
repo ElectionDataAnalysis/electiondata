@@ -151,48 +151,54 @@ def add_column_from_formula(
     If formula is enclosed in braces, parse first entry as formula, second as a
     regex (with one parenthesized group) as a recipe for pulling the value via regex analysis
     """
+    try:
+        # set regex_flag (True if regex analysis is needed beyond concatenation formula)
+        if formula[0] == "{" and formula[-1] == "}":
+            regex_flag = True
+            concat_formula, pattern = formula[1:-1].split(",")
+        else:
+            regex_flag = False
+            pattern = final = None
+            concat_formula = formula
 
-    # set regex_flag (True if regex analysis is needed beyond concatenation formula)
-    if formula[0] == "{" and formula[-1] == "}":
-        regex_flag = True
-        concat_formula, pattern = formula[1:-1].split(",")
-    else:
-        regex_flag = False
-        pattern = final = None
-        concat_formula = formula
+        text_field_list, last_text = text_fragments_and_fields(concat_formula)
 
-    text_field_list, last_text = text_fragments_and_fields(concat_formula)
+        # add suffix, if required
+        if suffix:
+            text_field_list = [(t, f"{f}{suffix}") for (t, f) in text_field_list]
 
-    # add suffix, if required
-    if suffix:
-        text_field_list = [(t, f"{f}{suffix}") for (t, f) in text_field_list]
+        # add column to <working> dataframe via the concatenation formula
+        if last_text:
+            working.loc[:, new_col] = last_text[0]
+        else:
+            working.loc[:, new_col] = ""
+        text_field_list.reverse()
+        for t, f in text_field_list:
+            try:
+                working.loc[:, new_col] = (
+                    working.loc[:, f].apply(lambda x: f"{t}{x}") + working.loc[:, new_col]
+                )
+            except KeyError as ke:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"Expected transformed column '{f}' not found, "
+                    f"probably because of mismatch between munger and results file.",
+                )
+                return working, err
 
-    # add column to <working> dataframe via the concatenation formula
-    if last_text:
-        working.loc[:, new_col] = last_text[0]
-    else:
-        working.loc[:, new_col] = ""
-    text_field_list.reverse()
-    for t, f in text_field_list:
-        try:
-            working.loc[:, new_col] = (
-                working.loc[:, f].apply(lambda x: f"{t}{x}") + working.loc[:, new_col]
-            )
-        except KeyError as ke:
-            err = ui.add_new_error(
-                err,
-                "munger",
-                munger_name,
-                f"Expected transformed column '{f}' not found, "
-                f"probably because of mismatch between munger and results file.",
-            )
-            return working, err
-
-    # use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
-    if regex_flag:
-        # TODO figure out how to allow more general manipulations. This can only pull out one part of the pattern
-        working[new_col] = working[new_col].str.replace(pattern, "\\1")
-
+        # use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
+        if regex_flag:
+            # TODO figure out how to allow more general manipulations. This can only pull out one part of the pattern
+            working[new_col] = working[new_col].str.replace(pattern, "\\1")
+    except Exception as e:
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.add_column_from_formula",
+            f"Unexpected error: {e}"
+        )
     return working, err
 
 

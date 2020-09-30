@@ -364,6 +364,9 @@ def read_single_datafile(
             kwargs["header"] = list(range(munger.options["header_row_count"]))
             kwargs["index_col"] = None
 
+        if munger.options["count_of_top_lines_to_skip"]:
+            kwargs["skiprows"] = range(munger.options["count_of_top_lines_to_skip"])
+
         if munger.file_type in ["txt", "csv"]:
             kwargs["encoding"] = munger.encoding
             kwargs["quoting"] = csv.QUOTE_MINIMAL
