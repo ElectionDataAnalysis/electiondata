@@ -1181,15 +1181,15 @@ class Analyzer:
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
-    def display_options(self, input: str, verbose: bool = False, filters: list = None):
+    def display_options(self, input_field: str, verbose: bool = False, filters: list = None):
         if not verbose:
-            results = db.get_input_options(self.session, input, False)
+            results = db.get_input_field_options(self.session, input_field, False)
         else:
             if not filters:
-                df = pd.DataFrame(db.get_input_options(self.session, input, True))
+                df = pd.DataFrame(db.get_input_field_options(self.session, input_field, True))
                 results = db.package_display_results(df)
             else:
-                results = db.get_filtered_input_options(self.session, input, filters)
+                results = db.get_filtered_input_field_options(self.session, input_field, filters)
         if results:
             return results
         return None
@@ -1228,8 +1228,8 @@ class Analyzer:
         h_election_id = db.name_to_id(self.session, "Election", h_election)
         v_election_id = db.name_to_id(self.session, "Election", v_election)
         # *_type is either candidates or contests
-        h_count_item_type, h_type = self.split_category_input(h_category)
-        v_count_item_type, v_type = self.split_category_input(v_category)
+        h_count_item_type, h_type = self.split_category_input_field(h_category)
+        v_count_item_type, v_type = self.split_category_input_field(v_category)
         if h_count == "All Candidates" or h_count == "All Contests":
             h_count_id = -1
         elif h_type == "candidates":
@@ -1242,8 +1242,8 @@ class Analyzer:
             v_count_id = db.name_to_id(self.session, "Candidate", v_count)
         elif v_type == "contests":
             v_count_id = db.name_to_id(self.session, "CandidateContest", v_count)
-        h_count_item_type, h_type = self.split_category_input(h_category)
-        v_count_item_type, v_type = self.split_category_input(v_category)
+        h_count_item_type, h_type = self.split_category_input_field(h_category)
+        v_count_item_type, v_type = self.split_category_input_field(v_category)
         agg_results = a.create_scatter(
             self.session,
             jurisdiction_id,
@@ -1303,7 +1303,7 @@ class Analyzer:
                 v.plot("bar", agg_result, fig_type, d["rollup_directory"])
         return agg_results
 
-    def split_category_input(self, input_str: str):
+    def split_category_input_str(self, input_str: str):
         """Helper function. Takes an input from the front end that is the cartesian
         product of the CountItemType and {'Candidate', 'Contest'}. So something like:
         Total Candidates or Absentee Contests. Cleans this and returns
