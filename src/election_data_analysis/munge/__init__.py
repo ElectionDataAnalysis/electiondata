@@ -57,6 +57,7 @@ def cast_cols_as_int(
             "munge.cast_cols_as_int",
             f"Mode {mode} not recognized",
         )
+        return df, err
     for c in num_columns:
         try:
             df[c] = df[c].astype("int64", errors="raise")
