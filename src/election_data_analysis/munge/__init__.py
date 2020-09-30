@@ -43,7 +43,7 @@ def generic_clean(df: pd.DataFrame) -> pd.DataFrame:
 
 def cast_cols_as_int(
     df: pd.DataFrame, col_list: list, mode="name", error_msg="",munger_name="unknown",
-) -> pd.DataFrame:
+) -> (pd.DataFrame, dict):
     """recast columns as integer where possible, leaving columns with text entries as non-numeric)"""
     err = None
     if mode == "index":
@@ -57,6 +57,7 @@ def cast_cols_as_int(
             "munge.cast_cols_as_int",
             f"Mode {mode} not recognized",
         )
+        return df, err
     for c in num_columns:
         try:
             df[c] = df[c].astype("int64", errors="raise")
@@ -70,42 +71,55 @@ def cast_cols_as_int(
     return df, err
 
 
-def munge_clean(raw: pd.DataFrame, munger: jm.Munger):
+def munge_clean(raw: pd.DataFrame, munger: jm.Munger) -> (pd.DataFrame, dict):
     """Drop unnecessary columns.
+    TODO: for multiple-header columns, replace any to-be-munged columns (not count columns)
+        with simple column headers named, e.g., replace'2020 Primary/Dem/Precinct' by 'Precinct'
     Append '_SOURCE' suffix to raw column names to avoid conflicts"""
+    err = None
     working = raw.copy()
-    # drop columns that are neither count columns nor used in munger formulas
-    #  define columns named in munger formulas
-    if munger.options["header_row_count"] is not None and munger.options["header_row_count"] > 1:
-        munger_formula_columns = [
-            x
-            for x in working.columns
-            if x[munger.options["field_name_row"]] in munger.field_list
-        ]
-    else:
-        munger_formula_columns = [x for x in working.columns if x in munger.field_list]
 
-    if munger.options["count_columns_by_name"]:
-        count_columns_by_name = munger.options["count_columns_by_name"]
-    elif munger.options["field_name_row"] is None:
-        count_columns_by_name = [
-            munger.options["field_names_if_no_field_name_row"][idx]
-            for idx in munger.options["count_columns"]
-        ]
-    else:
-        count_columns_by_name = [
-            working.columns[idx] for idx in munger.options["count_columns"]
-        ]
-    # TODO error check- what if cols_to_munge is missing something from munger.field_list?
+    try:
+        #  define columns named in munger formulas
+        if munger.options["header_row_count"] is not None and munger.options["header_row_count"] > 1:
+            munger_formula_columns = [
+                x
+                for x in working.columns
+                if x[munger.options["field_name_row"]] in munger.field_list
+            ]
+        else:
+            munger_formula_columns = [x for x in working.columns if x in munger.field_list]
 
-    # keep columns named in munger formulas; keep count columns; drop all else.
-    working = working[munger_formula_columns + count_columns_by_name]
+        # define count_columns_by_name list
+        if munger.options["count_columns_by_name"]:
+            count_columns_by_name = munger.options["count_columns_by_name"]
+        elif munger.options["field_name_row"] is None:
+            count_columns_by_name = [
+                munger.options["field_names_if_no_field_name_row"][idx]
+                for idx in munger.options["count_columns"]
+            ]
+        else:
+            count_columns_by_name = [
+                working.columns[idx] for idx in munger.options["count_columns"]
+            ]
+        # TODO error check- what if cols_to_munge is missing something from munger.field_list?
 
-    # add suffix '_SOURCE' to certain columns to avoid any conflict with db table names
-    # (since no db table name ends with _SOURCE)
-    renamer = {x: f"{x}_SOURCE" for x in munger_formula_columns}
-    working.rename(columns=renamer, inplace=True)
-    return working
+        # keep columns named in munger formulas; keep count columns; drop all else.
+        working = working[munger_formula_columns + count_columns_by_name]
+
+        # add suffix '_SOURCE' to certain columns to avoid any conflict with db table names
+        # (since no db table name ends with _SOURCE)
+        # TODO this fails when munger formula column headers are multi-index.
+        renamer = {x: f"{x}_SOURCE" for x in munger_formula_columns}
+        working.rename(columns=renamer, inplace=True)
+    except Exception as e:
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.munge_clean",
+            "Unspecified error"
+        )
+    return working, err
 
 
 def text_fragments_and_fields(formula):
@@ -137,48 +151,54 @@ def add_column_from_formula(
     If formula is enclosed in braces, parse first entry as formula, second as a
     regex (with one parenthesized group) as a recipe for pulling the value via regex analysis
     """
+    try:
+        # set regex_flag (True if regex analysis is needed beyond concatenation formula)
+        if formula[0] == "{" and formula[-1] == "}":
+            regex_flag = True
+            concat_formula, pattern = formula[1:-1].split(",")
+        else:
+            regex_flag = False
+            pattern = final = None
+            concat_formula = formula
 
-    # set regex_flag (True if regex analysis is needed beyond concatenation formula)
-    if formula[0] == "{" and formula[-1] == "}":
-        regex_flag = True
-        concat_formula, pattern = formula[1:-1].split(",")
-    else:
-        regex_flag = False
-        pattern = final = None
-        concat_formula = formula
+        text_field_list, last_text = text_fragments_and_fields(concat_formula)
 
-    text_field_list, last_text = text_fragments_and_fields(concat_formula)
+        # add suffix, if required
+        if suffix:
+            text_field_list = [(t, f"{f}{suffix}") for (t, f) in text_field_list]
 
-    # add suffix, if required
-    if suffix:
-        text_field_list = [(t, f"{f}{suffix}") for (t, f) in text_field_list]
+        # add column to <working> dataframe via the concatenation formula
+        if last_text:
+            working.loc[:, new_col] = last_text[0]
+        else:
+            working.loc[:, new_col] = ""
+        text_field_list.reverse()
+        for t, f in text_field_list:
+            try:
+                working.loc[:, new_col] = (
+                    working.loc[:, f].apply(lambda x: f"{t}{x}") + working.loc[:, new_col]
+                )
+            except KeyError as ke:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"Expected transformed column '{f}' not found, "
+                    f"probably because of mismatch between munger and results file.",
+                )
+                return working, err
 
-    # add column to <working> dataframe via the concatenation formula
-    if last_text:
-        working.loc[:, new_col] = last_text[0]
-    else:
-        working.loc[:, new_col] = ""
-    text_field_list.reverse()
-    for t, f in text_field_list:
-        try:
-            working.loc[:, new_col] = (
-                working.loc[:, f].apply(lambda x: f"{t}{x}") + working.loc[:, new_col]
-            )
-        except KeyError as ke:
-            err = ui.add_new_error(
-                err,
-                "munger",
-                munger_name,
-                f"Expected transformed column '{f}' not found, "
-                f"probably because of mismatch between munger and results file.",
-            )
-            return working, err
-
-    # use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
-    if regex_flag:
-        # TODO figure out how to allow more general manipulations. This can only pull out one part of the pattern
-        working[new_col] = working[new_col].str.replace(pattern, "\\1")
-
+        # use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
+        if regex_flag:
+            # TODO figure out how to allow more general manipulations. This can only pull out one part of the pattern
+            working[new_col] = working[new_col].str.replace(pattern, "\\1")
+    except Exception as e:
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.add_column_from_formula",
+            f"Unexpected error: {e}"
+        )
     return working, err
 
 
@@ -278,7 +298,7 @@ def replace_raw_with_internal_ids(
     unmatched_raw = sorted(unmatched[f"{element}_raw"].unique(),reverse=True)
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
         unmatched_str = "\n".join(unmatched_raw)
-        e = f"{element}s not found in dictionary.txt:\n{unmatched_str}"
+        e = f"\n{element}s not found in dictionary.txt:\n{unmatched_str}"
         error = ui.add_new_error(error, "warn-jurisdiction", juris.short_name, e)
 
     if drop_unmatched:

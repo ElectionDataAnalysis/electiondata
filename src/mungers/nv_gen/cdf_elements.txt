@@ -1,0 +1,8 @@
+name	raw_identifier_formula	source
+ReportingUnit	<Jurisdiction>;<Precinct>	row
+Party	Unknown	row
+CandidateContest	<Contest>	row
+Candidate	<Selection>	row
+BallotMeasureContest	<Contest>	row
+BallotMeasureSelection	<Selection>	row
+CountItemType	total	row

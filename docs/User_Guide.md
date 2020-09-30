@@ -26,6 +26,9 @@ Different file types need different parameters to be specified.
    * field_name_row
    * field_names_if_no_field_name_row
    * count_columns
+   
+ NB: the header_row_count should count only rows with data the system needs to read. If there are blank lines, or lines with inessential information -- such as the election date, which is not munged -- use the optional parameter count_of_top_lines_to_skip.
+ 
  * Required for `concatenated-blocks` type:
    * count_of_top_lines_to_skip
    * columns_to_skip
@@ -41,7 +44,8 @@ Different file types need different parameters to be specified.
    * count_column_field_names
  * Available if appropriate for any file type:
    * thousands_separator
-   * encoding (if not specified, `iso-8859-1` will be used). 
+   * encoding (if not specified, `iso-8859-1` will be used)
+   * count_of_top_lines_to_skip
 
 
  (3) Put formulas for parsing information from the results file into `cdf_elements.txt`. You may find it helpful to follow the example of the mungers in the repository.

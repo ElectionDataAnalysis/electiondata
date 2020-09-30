@@ -364,6 +364,9 @@ def read_single_datafile(
             kwargs["header"] = list(range(munger.options["header_row_count"]))
             kwargs["index_col"] = None
 
+        if munger.options["count_of_top_lines_to_skip"]:
+            kwargs["skiprows"] = range(munger.options["count_of_top_lines_to_skip"])
+
         if munger.file_type in ["txt", "csv"]:
             kwargs["encoding"] = munger.encoding
             kwargs["quoting"] = csv.QUOTE_MINIMAL
@@ -564,13 +567,11 @@ def new_datafile(
     else:
         count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"]]
 
-    try:
-        raw = m.munge_clean(raw, munger)
-    except:
-        err["datafile_error"] = [
-            "Cleaning of datafile failed. Results not loaded to database."
-        ]
-        return err
+    raw, new_err = m.munge_clean(raw, munger)
+    if new_err:
+        err = consolidate_errors([err,new_err])
+        if fatal_error(new_err):
+            return err
 
     try:
         new_err = m.raw_elements_to_cdf(
