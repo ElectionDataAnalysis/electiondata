@@ -44,7 +44,7 @@ Different file types need different parameters to be specified.
    * count_column_field_names
  * Available if appropriate for any file type:
    * thousands_separator
-   * encoding (if not specified, `iso-8859-1` will be used)
+   * encoding (If not specified or recognized, `iso-8859-1` will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
    * count_of_top_lines_to_skip
 
 
