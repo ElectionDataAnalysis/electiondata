@@ -267,8 +267,6 @@ def get_data_for_scatter(
         selection = db.name_from_id(cursor, "Contest", filter_id)
         unsummed["Selection"] = selection
         cursor.close()
-    # elif count_type == "contests" and filter_id == -1:
-    #    unsummed["Selection"] = "All contests"
 
     columns = list(unsummed.drop(columns="Count").columns)
     unsummed = unsummed.groupby(columns)["Count"].sum().reset_index()
