@@ -199,179 +199,179 @@ Party	American Independent Party	American Independent
 Party	None Party	Blank
 Party	None Party	No Party Preference
 Party	None Party	Nonpartisan
-ReportingUnit	CA House District 1	CA House District 1
-ReportingUnit	CA House District 2	CA House District 2
-ReportingUnit	CA House District 3	CA House District 3
-ReportingUnit	CA House District 4	CA House District 4
-ReportingUnit	CA House District 5	CA House District 5
-ReportingUnit	CA House District 6	CA House District 6
-ReportingUnit	CA House District 7	CA House District 7
-ReportingUnit	CA House District 8	CA House District 8
-ReportingUnit	CA House District 9	CA House District 9
-ReportingUnit	CA House District 10	CA House District 10
-ReportingUnit	CA House District 11	CA House District 11
-ReportingUnit	CA House District 12	CA House District 12
-ReportingUnit	CA House District 13	CA House District 13
-ReportingUnit	CA House District 14	CA House District 14
-ReportingUnit	CA House District 15	CA House District 15
-ReportingUnit	CA House District 16	CA House District 16
-ReportingUnit	CA House District 17	CA House District 17
-ReportingUnit	CA House District 18	CA House District 18
-ReportingUnit	CA House District 19	CA House District 19
-ReportingUnit	CA House District 20	CA House District 20
-ReportingUnit	CA House District 21	CA House District 21
-ReportingUnit	CA House District 22	CA House District 22
-ReportingUnit	CA House District 23	CA House District 23
-ReportingUnit	CA House District 24	CA House District 24
-ReportingUnit	CA House District 25	CA House District 25
-ReportingUnit	CA House District 26	CA House District 26
-ReportingUnit	CA House District 27	CA House District 27
-ReportingUnit	CA House District 28	CA House District 28
-ReportingUnit	CA House District 29	CA House District 29
-ReportingUnit	CA House District 30	CA House District 30
-ReportingUnit	CA House District 31	CA House District 31
-ReportingUnit	CA House District 32	CA House District 32
-ReportingUnit	CA House District 33	CA House District 33
-ReportingUnit	CA House District 34	CA House District 34
-ReportingUnit	CA House District 35	CA House District 35
-ReportingUnit	CA House District 36	CA House District 36
-ReportingUnit	CA House District 37	CA House District 37
-ReportingUnit	CA House District 38	CA House District 38
-ReportingUnit	CA House District 39	CA House District 39
-ReportingUnit	CA House District 40	CA House District 40
-ReportingUnit	CA House District 41	CA House District 41
-ReportingUnit	CA House District 42	CA House District 42
-ReportingUnit	CA House District 43	CA House District 43
-ReportingUnit	CA House District 44	CA House District 44
-ReportingUnit	CA House District 45	CA House District 45
-ReportingUnit	CA House District 46	CA House District 46
-ReportingUnit	CA House District 47	CA House District 47
-ReportingUnit	CA House District 48	CA House District 48
-ReportingUnit	CA House District 49	CA House District 49
-ReportingUnit	CA House District 50	CA House District 50
-ReportingUnit	CA House District 51	CA House District 51
-ReportingUnit	CA House District 52	CA House District 52
-ReportingUnit	CA House District 53	CA House District 53
-ReportingUnit	CA House District 54	CA House District 54
-ReportingUnit	CA House District 55	CA House District 55
-ReportingUnit	CA House District 56	CA House District 56
-ReportingUnit	CA House District 57	CA House District 57
-ReportingUnit	CA House District 58	CA House District 58
-ReportingUnit	CA House District 59	CA House District 59
-ReportingUnit	CA House District 60	CA House District 60
-ReportingUnit	CA House District 61	CA House District 61
-ReportingUnit	CA House District 62	CA House District 62
-ReportingUnit	CA House District 63	CA House District 63
-ReportingUnit	CA House District 64	CA House District 64
-ReportingUnit	CA House District 65	CA House District 65
-ReportingUnit	CA House District 66	CA House District 66
-ReportingUnit	CA House District 67	CA House District 67
-ReportingUnit	CA House District 68	CA House District 68
-ReportingUnit	CA House District 69	CA House District 69
-ReportingUnit	CA House District 70	CA House District 70
-ReportingUnit	CA House District 71	CA House District 71
-ReportingUnit	CA House District 72	CA House District 72
-ReportingUnit	CA House District 73	CA House District 73
-ReportingUnit	CA House District 74	CA House District 74
-ReportingUnit	CA House District 75	CA House District 75
-ReportingUnit	CA House District 76	CA House District 76
-ReportingUnit	CA House District 77	CA House District 77
-ReportingUnit	CA House District 78	CA House District 78
-ReportingUnit	CA House District 79	CA House District 79
-ReportingUnit	CA House District 80	CA House District 80
-ReportingUnit	CA Senate District 1	CA Senate District 1
-ReportingUnit	CA Senate District 2	CA Senate District 2
-ReportingUnit	CA Senate District 3	CA Senate District 3
-ReportingUnit	CA Senate District 4	CA Senate District 4
-ReportingUnit	CA Senate District 5	CA Senate District 5
-ReportingUnit	CA Senate District 6	CA Senate District 6
-ReportingUnit	CA Senate District 7	CA Senate District 7
-ReportingUnit	CA Senate District 8	CA Senate District 8
-ReportingUnit	CA Senate District 9	CA Senate District 9
-ReportingUnit	CA Senate District 10	CA Senate District 10
-ReportingUnit	CA Senate District 11	CA Senate District 11
-ReportingUnit	CA Senate District 12	CA Senate District 12
-ReportingUnit	CA Senate District 13	CA Senate District 13
-ReportingUnit	CA Senate District 14	CA Senate District 14
-ReportingUnit	CA Senate District 15	CA Senate District 15
-ReportingUnit	CA Senate District 16	CA Senate District 16
-ReportingUnit	CA Senate District 17	CA Senate District 17
-ReportingUnit	CA Senate District 18	CA Senate District 18
-ReportingUnit	CA Senate District 19	CA Senate District 19
-ReportingUnit	CA Senate District 20	CA Senate District 20
-ReportingUnit	CA Senate District 21	CA Senate District 21
-ReportingUnit	CA Senate District 22	CA Senate District 22
-ReportingUnit	CA Senate District 23	CA Senate District 23
-ReportingUnit	CA Senate District 24	CA Senate District 24
-ReportingUnit	CA Senate District 25	CA Senate District 25
-ReportingUnit	CA Senate District 26	CA Senate District 26
-ReportingUnit	CA Senate District 27	CA Senate District 27
-ReportingUnit	CA Senate District 28	CA Senate District 28
-ReportingUnit	CA Senate District 29	CA Senate District 29
-ReportingUnit	CA Senate District 30	CA Senate District 30
-ReportingUnit	CA Senate District 31	CA Senate District 31
-ReportingUnit	CA Senate District 32	CA Senate District 32
-ReportingUnit	CA Senate District 33	CA Senate District 33
-ReportingUnit	CA Senate District 34	CA Senate District 34
-ReportingUnit	CA Senate District 35	CA Senate District 35
-ReportingUnit	CA Senate District 36	CA Senate District 36
-ReportingUnit	CA Senate District 37	CA Senate District 37
-ReportingUnit	CA Senate District 38	CA Senate District 38
-ReportingUnit	CA Senate District 39	CA Senate District 39
-ReportingUnit	CA Senate District 40	CA Senate District 40
-ReportingUnit	US House CA District 1	US House CA District 1
-ReportingUnit	US House CA District 2	US House CA District 2
-ReportingUnit	US House CA District 3	US House CA District 3
-ReportingUnit	US House CA District 4	US House CA District 4
-ReportingUnit	US House CA District 5	US House CA District 5
-ReportingUnit	US House CA District 6	US House CA District 6
-ReportingUnit	US House CA District 7	US House CA District 7
-ReportingUnit	US House CA District 8	US House CA District 8
-ReportingUnit	US House CA District 9	US House CA District 9
-ReportingUnit	US House CA District 10	US House CA District 10
-ReportingUnit	US House CA District 11	US House CA District 11
-ReportingUnit	US House CA District 12	US House CA District 12
-ReportingUnit	US House CA District 13	US House CA District 13
-ReportingUnit	US House CA District 14	US House CA District 14
-ReportingUnit	US House CA District 15	US House CA District 15
-ReportingUnit	US House CA District 16	US House CA District 16
-ReportingUnit	US House CA District 17	US House CA District 17
-ReportingUnit	US House CA District 18	US House CA District 18
-ReportingUnit	US House CA District 19	US House CA District 19
-ReportingUnit	US House CA District 20	US House CA District 20
-ReportingUnit	US House CA District 21	US House CA District 21
-ReportingUnit	US House CA District 22	US House CA District 22
-ReportingUnit	US House CA District 23	US House CA District 23
-ReportingUnit	US House CA District 24	US House CA District 24
-ReportingUnit	US House CA District 25	US House CA District 25
-ReportingUnit	US House CA District 26	US House CA District 26
-ReportingUnit	US House CA District 27	US House CA District 27
-ReportingUnit	US House CA District 28	US House CA District 28
-ReportingUnit	US House CA District 29	US House CA District 29
-ReportingUnit	US House CA District 30	US House CA District 30
-ReportingUnit	US House CA District 31	US House CA District 31
-ReportingUnit	US House CA District 32	US House CA District 32
-ReportingUnit	US House CA District 33	US House CA District 33
-ReportingUnit	US House CA District 34	US House CA District 34
-ReportingUnit	US House CA District 35	US House CA District 35
-ReportingUnit	US House CA District 36	US House CA District 36
-ReportingUnit	US House CA District 37	US House CA District 37
-ReportingUnit	US House CA District 38	US House CA District 38
-ReportingUnit	US House CA District 39	US House CA District 39
-ReportingUnit	US House CA District 40	US House CA District 40
-ReportingUnit	US House CA District 41	US House CA District 41
-ReportingUnit	US House CA District 42	US House CA District 42
-ReportingUnit	US House CA District 43	US House CA District 43
-ReportingUnit	US House CA District 44	US House CA District 44
-ReportingUnit	US House CA District 45	US House CA District 45
-ReportingUnit	US House CA District 46	US House CA District 46
-ReportingUnit	US House CA District 47	US House CA District 47
-ReportingUnit	US House CA District 48	US House CA District 48
-ReportingUnit	US House CA District 49	US House CA District 49
-ReportingUnit	US House CA District 50	US House CA District 50
-ReportingUnit	US House CA District 51	US House CA District 51
-ReportingUnit	US House CA District 52	US House CA District 52
-ReportingUnit	US House CA District 53	US House CA District 53
+ReportingUnit	California;CA House District 1	California;CA House District 1
+ReportingUnit	California;CA House District 2	California;CA House District 2
+ReportingUnit	California;CA House District 3	California;CA House District 3
+ReportingUnit	California;CA House District 4	California;CA House District 4
+ReportingUnit	California;CA House District 5	California;CA House District 5
+ReportingUnit	California;CA House District 6	California;CA House District 6
+ReportingUnit	California;CA House District 7	California;CA House District 7
+ReportingUnit	California;CA House District 8	California;CA House District 8
+ReportingUnit	California;CA House District 9	California;CA House District 9
+ReportingUnit	California;CA House District 10	California;CA House District 10
+ReportingUnit	California;CA House District 11	California;CA House District 11
+ReportingUnit	California;CA House District 12	California;CA House District 12
+ReportingUnit	California;CA House District 13	California;CA House District 13
+ReportingUnit	California;CA House District 14	California;CA House District 14
+ReportingUnit	California;CA House District 15	California;CA House District 15
+ReportingUnit	California;CA House District 16	California;CA House District 16
+ReportingUnit	California;CA House District 17	California;CA House District 17
+ReportingUnit	California;CA House District 18	California;CA House District 18
+ReportingUnit	California;CA House District 19	California;CA House District 19
+ReportingUnit	California;CA House District 20	California;CA House District 20
+ReportingUnit	California;CA House District 21	California;CA House District 21
+ReportingUnit	California;CA House District 22	California;CA House District 22
+ReportingUnit	California;CA House District 23	California;CA House District 23
+ReportingUnit	California;CA House District 24	California;CA House District 24
+ReportingUnit	California;CA House District 25	California;CA House District 25
+ReportingUnit	California;CA House District 26	California;CA House District 26
+ReportingUnit	California;CA House District 27	California;CA House District 27
+ReportingUnit	California;CA House District 28	California;CA House District 28
+ReportingUnit	California;CA House District 29	California;CA House District 29
+ReportingUnit	California;CA House District 30	California;CA House District 30
+ReportingUnit	California;CA House District 31	California;CA House District 31
+ReportingUnit	California;CA House District 32	California;CA House District 32
+ReportingUnit	California;CA House District 33	California;CA House District 33
+ReportingUnit	California;CA House District 34	California;CA House District 34
+ReportingUnit	California;CA House District 35	California;CA House District 35
+ReportingUnit	California;CA House District 36	California;CA House District 36
+ReportingUnit	California;CA House District 37	California;CA House District 37
+ReportingUnit	California;CA House District 38	California;CA House District 38
+ReportingUnit	California;CA House District 39	California;CA House District 39
+ReportingUnit	California;CA House District 40	California;CA House District 40
+ReportingUnit	California;CA House District 41	California;CA House District 41
+ReportingUnit	California;CA House District 42	California;CA House District 42
+ReportingUnit	California;CA House District 43	California;CA House District 43
+ReportingUnit	California;CA House District 44	California;CA House District 44
+ReportingUnit	California;CA House District 45	California;CA House District 45
+ReportingUnit	California;CA House District 46	California;CA House District 46
+ReportingUnit	California;CA House District 47	California;CA House District 47
+ReportingUnit	California;CA House District 48	California;CA House District 48
+ReportingUnit	California;CA House District 49	California;CA House District 49
+ReportingUnit	California;CA House District 50	California;CA House District 50
+ReportingUnit	California;CA House District 51	California;CA House District 51
+ReportingUnit	California;CA House District 52	California;CA House District 52
+ReportingUnit	California;CA House District 53	California;CA House District 53
+ReportingUnit	California;CA House District 54	California;CA House District 54
+ReportingUnit	California;CA House District 55	California;CA House District 55
+ReportingUnit	California;CA House District 56	California;CA House District 56
+ReportingUnit	California;CA House District 57	California;CA House District 57
+ReportingUnit	California;CA House District 58	California;CA House District 58
+ReportingUnit	California;CA House District 59	California;CA House District 59
+ReportingUnit	California;CA House District 60	California;CA House District 60
+ReportingUnit	California;CA House District 61	California;CA House District 61
+ReportingUnit	California;CA House District 62	California;CA House District 62
+ReportingUnit	California;CA House District 63	California;CA House District 63
+ReportingUnit	California;CA House District 64	California;CA House District 64
+ReportingUnit	California;CA House District 65	California;CA House District 65
+ReportingUnit	California;CA House District 66	California;CA House District 66
+ReportingUnit	California;CA House District 67	California;CA House District 67
+ReportingUnit	California;CA House District 68	California;CA House District 68
+ReportingUnit	California;CA House District 69	California;CA House District 69
+ReportingUnit	California;CA House District 70	California;CA House District 70
+ReportingUnit	California;CA House District 71	California;CA House District 71
+ReportingUnit	California;CA House District 72	California;CA House District 72
+ReportingUnit	California;CA House District 73	California;CA House District 73
+ReportingUnit	California;CA House District 74	California;CA House District 74
+ReportingUnit	California;CA House District 75	California;CA House District 75
+ReportingUnit	California;CA House District 76	California;CA House District 76
+ReportingUnit	California;CA House District 77	California;CA House District 77
+ReportingUnit	California;CA House District 78	California;CA House District 78
+ReportingUnit	California;CA House District 79	California;CA House District 79
+ReportingUnit	California;CA House District 80	California;CA House District 80
+ReportingUnit	California;CA Senate District 1	California;CA Senate District 1
+ReportingUnit	California;CA Senate District 2	California;CA Senate District 2
+ReportingUnit	California;CA Senate District 3	California;CA Senate District 3
+ReportingUnit	California;CA Senate District 4	California;CA Senate District 4
+ReportingUnit	California;CA Senate District 5	California;CA Senate District 5
+ReportingUnit	California;CA Senate District 6	California;CA Senate District 6
+ReportingUnit	California;CA Senate District 7	California;CA Senate District 7
+ReportingUnit	California;CA Senate District 8	California;CA Senate District 8
+ReportingUnit	California;CA Senate District 9	California;CA Senate District 9
+ReportingUnit	California;CA Senate District 10	California;CA Senate District 10
+ReportingUnit	California;CA Senate District 11	California;CA Senate District 11
+ReportingUnit	California;CA Senate District 12	California;CA Senate District 12
+ReportingUnit	California;CA Senate District 13	California;CA Senate District 13
+ReportingUnit	California;CA Senate District 14	California;CA Senate District 14
+ReportingUnit	California;CA Senate District 15	California;CA Senate District 15
+ReportingUnit	California;CA Senate District 16	California;CA Senate District 16
+ReportingUnit	California;CA Senate District 17	California;CA Senate District 17
+ReportingUnit	California;CA Senate District 18	California;CA Senate District 18
+ReportingUnit	California;CA Senate District 19	California;CA Senate District 19
+ReportingUnit	California;CA Senate District 20	California;CA Senate District 20
+ReportingUnit	California;CA Senate District 21	California;CA Senate District 21
+ReportingUnit	California;CA Senate District 22	California;CA Senate District 22
+ReportingUnit	California;CA Senate District 23	California;CA Senate District 23
+ReportingUnit	California;CA Senate District 24	California;CA Senate District 24
+ReportingUnit	California;CA Senate District 25	California;CA Senate District 25
+ReportingUnit	California;CA Senate District 26	California;CA Senate District 26
+ReportingUnit	California;CA Senate District 27	California;CA Senate District 27
+ReportingUnit	California;CA Senate District 28	California;CA Senate District 28
+ReportingUnit	California;CA Senate District 29	California;CA Senate District 29
+ReportingUnit	California;CA Senate District 30	California;CA Senate District 30
+ReportingUnit	California;CA Senate District 31	California;CA Senate District 31
+ReportingUnit	California;CA Senate District 32	California;CA Senate District 32
+ReportingUnit	California;CA Senate District 33	California;CA Senate District 33
+ReportingUnit	California;CA Senate District 34	California;CA Senate District 34
+ReportingUnit	California;CA Senate District 35	California;CA Senate District 35
+ReportingUnit	California;CA Senate District 36	California;CA Senate District 36
+ReportingUnit	California;CA Senate District 37	California;CA Senate District 37
+ReportingUnit	California;CA Senate District 38	California;CA Senate District 38
+ReportingUnit	California;CA Senate District 39	California;CA Senate District 39
+ReportingUnit	California;CA Senate District 40	California;CA Senate District 40
+ReportingUnit	California;US House CA District 1	California;US House CA District 1
+ReportingUnit	California;US House CA District 2	California;US House CA District 2
+ReportingUnit	California;US House CA District 3	California;US House CA District 3
+ReportingUnit	California;US House CA District 4	California;US House CA District 4
+ReportingUnit	California;US House CA District 5	California;US House CA District 5
+ReportingUnit	California;US House CA District 6	California;US House CA District 6
+ReportingUnit	California;US House CA District 7	California;US House CA District 7
+ReportingUnit	California;US House CA District 8	California;US House CA District 8
+ReportingUnit	California;US House CA District 9	California;US House CA District 9
+ReportingUnit	California;US House CA District 10	California;US House CA District 10
+ReportingUnit	California;US House CA District 11	California;US House CA District 11
+ReportingUnit	California;US House CA District 12	California;US House CA District 12
+ReportingUnit	California;US House CA District 13	California;US House CA District 13
+ReportingUnit	California;US House CA District 14	California;US House CA District 14
+ReportingUnit	California;US House CA District 15	California;US House CA District 15
+ReportingUnit	California;US House CA District 16	California;US House CA District 16
+ReportingUnit	California;US House CA District 17	California;US House CA District 17
+ReportingUnit	California;US House CA District 18	California;US House CA District 18
+ReportingUnit	California;US House CA District 19	California;US House CA District 19
+ReportingUnit	California;US House CA District 20	California;US House CA District 20
+ReportingUnit	California;US House CA District 21	California;US House CA District 21
+ReportingUnit	California;US House CA District 22	California;US House CA District 22
+ReportingUnit	California;US House CA District 23	California;US House CA District 23
+ReportingUnit	California;US House CA District 24	California;US House CA District 24
+ReportingUnit	California;US House CA District 25	California;US House CA District 25
+ReportingUnit	California;US House CA District 26	California;US House CA District 26
+ReportingUnit	California;US House CA District 27	California;US House CA District 27
+ReportingUnit	California;US House CA District 28	California;US House CA District 28
+ReportingUnit	California;US House CA District 29	California;US House CA District 29
+ReportingUnit	California;US House CA District 30	California;US House CA District 30
+ReportingUnit	California;US House CA District 31	California;US House CA District 31
+ReportingUnit	California;US House CA District 32	California;US House CA District 32
+ReportingUnit	California;US House CA District 33	California;US House CA District 33
+ReportingUnit	California;US House CA District 34	California;US House CA District 34
+ReportingUnit	California;US House CA District 35	California;US House CA District 35
+ReportingUnit	California;US House CA District 36	California;US House CA District 36
+ReportingUnit	California;US House CA District 37	California;US House CA District 37
+ReportingUnit	California;US House CA District 38	California;US House CA District 38
+ReportingUnit	California;US House CA District 39	California;US House CA District 39
+ReportingUnit	California;US House CA District 40	California;US House CA District 40
+ReportingUnit	California;US House CA District 41	California;US House CA District 41
+ReportingUnit	California;US House CA District 42	California;US House CA District 42
+ReportingUnit	California;US House CA District 43	California;US House CA District 43
+ReportingUnit	California;US House CA District 44	California;US House CA District 44
+ReportingUnit	California;US House CA District 45	California;US House CA District 45
+ReportingUnit	California;US House CA District 46	California;US House CA District 46
+ReportingUnit	California;US House CA District 47	California;US House CA District 47
+ReportingUnit	California;US House CA District 48	California;US House CA District 48
+ReportingUnit	California;US House CA District 49	California;US House CA District 49
+ReportingUnit	California;US House CA District 50	California;US House CA District 50
+ReportingUnit	California;US House CA District 51	California;US House CA District 51
+ReportingUnit	California;US House CA District 52	California;US House CA District 52
+ReportingUnit	California;US House CA District 53	California;US House CA District 53
 ReportingUnit	California	California
 ReportingUnit	California;Alameda County	Alameda
 ReportingUnit	California;Alpine County	Alpine
@@ -431,6 +431,354 @@ ReportingUnit	California;Tuolumne County	Tuolumne
 ReportingUnit	California;Ventura County	Ventura
 ReportingUnit	California;Yolo County	Yolo
 ReportingUnit	California;Yuba County	Yuba
+ReportingUnit	California;Alameda County	Alameda;President Democratic
+ReportingUnit	California;Alpine County	Alpine;President Democratic
+ReportingUnit	California;Amador County	Amador;President Democratic
+ReportingUnit	California;Butte County	Butte;President Democratic
+ReportingUnit	California;Calaveras County	Calaveras;President Democratic
+ReportingUnit	California;Colusa County	Colusa;President Democratic
+ReportingUnit	California;Contra Costa County	Contra Costa;President Democratic
+ReportingUnit	California;Del Norte County	Del Norte;President Democratic
+ReportingUnit	California;El Dorado County	El Dorado;President Democratic
+ReportingUnit	California;Fresno County	Fresno;President Democratic
+ReportingUnit	California;Glenn County	Glenn;President Democratic
+ReportingUnit	California;Humboldt County	Humboldt;President Democratic
+ReportingUnit	California;Imperial County	Imperial;President Democratic
+ReportingUnit	California;Inyo County	Inyo;President Democratic
+ReportingUnit	California;Kern County	Kern;President Democratic
+ReportingUnit	California;Kings County	Kings;President Democratic
+ReportingUnit	California;Lake County	Lake;President Democratic
+ReportingUnit	California;Lassen County	Lassen;President Democratic
+ReportingUnit	California;Los Angeles County	Los Angeles;President Democratic
+ReportingUnit	California;Madera County	Madera;President Democratic
+ReportingUnit	California;Marin County	Marin;President Democratic
+ReportingUnit	California;Mariposa County	Mariposa;President Democratic
+ReportingUnit	California;Mendocino County	Mendocino;President Democratic
+ReportingUnit	California;Merced County	Merced;President Democratic
+ReportingUnit	California;Modoc County	Modoc;President Democratic
+ReportingUnit	California;Mono County	Mono;President Democratic
+ReportingUnit	California;Monterey County	Monterey;President Democratic
+ReportingUnit	California;Napa County	Napa;President Democratic
+ReportingUnit	California;Nevada County	Nevada;President Democratic
+ReportingUnit	California;Orange County	Orange;President Democratic
+ReportingUnit	California;Placer County	Placer;President Democratic
+ReportingUnit	California;Plumas County	Plumas;President Democratic
+ReportingUnit	California;Riverside County	Riverside;President Democratic
+ReportingUnit	California;Sacramento County	Sacramento;President Democratic
+ReportingUnit	California;San Benito County	San Benito;President Democratic
+ReportingUnit	California;San Bernardino County	San Bernardino;President Democratic
+ReportingUnit	California;San Diego County	San Diego;President Democratic
+ReportingUnit	California;San Francisco County	San Francisco;President Democratic
+ReportingUnit	California;San Joaquin County	San Joaquin;President Democratic
+ReportingUnit	California;San Luis Obispo County	San Luis Obispo;President Democratic
+ReportingUnit	California;San Mateo County	San Mateo;President Democratic
+ReportingUnit	California;Santa Barbara County	Santa Barbara;President Democratic
+ReportingUnit	California;Santa Clara County	Santa Clara;President Democratic
+ReportingUnit	California;Santa Cruz County	Santa Cruz;President Democratic
+ReportingUnit	California;Shasta County	Shasta;President Democratic
+ReportingUnit	California;Sierra County	Sierra;President Democratic
+ReportingUnit	California;Siskiyou County	Siskiyou;President Democratic
+ReportingUnit	California;Solano County	Solano;President Democratic
+ReportingUnit	California;Sonoma County	Sonoma;President Democratic
+ReportingUnit	California;Stanislaus County	Stanislaus;President Democratic
+ReportingUnit	California;Sutter County	Sutter;President Democratic
+ReportingUnit	California;Tehama County	Tehama;President Democratic
+ReportingUnit	California;Trinity County	Trinity;President Democratic
+ReportingUnit	California;Tulare County	Tulare;President Democratic
+ReportingUnit	California;Tuolumne County	Tuolumne;President Democratic
+ReportingUnit	California;Ventura County	Ventura;President Democratic
+ReportingUnit	California;Yolo County	Yolo;President Democratic
+ReportingUnit	California;Yuba County	Yuba;President Democratic
+ReportingUnit	California;Alameda County	Alameda;President American Independent
+ReportingUnit	California;Alpine County	Alpine;President American Independent
+ReportingUnit	California;Amador County	Amador;President American Independent
+ReportingUnit	California;Butte County	Butte;President American Independent
+ReportingUnit	California;Calaveras County	Calaveras;President American Independent
+ReportingUnit	California;Colusa County	Colusa;President American Independent
+ReportingUnit	California;Contra Costa County	Contra Costa;President American Independent
+ReportingUnit	California;Del Norte County	Del Norte;President American Independent
+ReportingUnit	California;El Dorado County	El Dorado;President American Independent
+ReportingUnit	California;Fresno County	Fresno;President American Independent
+ReportingUnit	California;Glenn County	Glenn;President American Independent
+ReportingUnit	California;Humboldt County	Humboldt;President American Independent
+ReportingUnit	California;Imperial County	Imperial;President American Independent
+ReportingUnit	California;Inyo County	Inyo;President American Independent
+ReportingUnit	California;Kern County	Kern;President American Independent
+ReportingUnit	California;Kings County	Kings;President American Independent
+ReportingUnit	California;Lake County	Lake;President American Independent
+ReportingUnit	California;Lassen County	Lassen;President American Independent
+ReportingUnit	California;Los Angeles County	Los Angeles;President American Independent
+ReportingUnit	California;Madera County	Madera;President American Independent
+ReportingUnit	California;Marin County	Marin;President American Independent
+ReportingUnit	California;Mariposa County	Mariposa;President American Independent
+ReportingUnit	California;Mendocino County	Mendocino;President American Independent
+ReportingUnit	California;Merced County	Merced;President American Independent
+ReportingUnit	California;Modoc County	Modoc;President American Independent
+ReportingUnit	California;Mono County	Mono;President American Independent
+ReportingUnit	California;Monterey County	Monterey;President American Independent
+ReportingUnit	California;Napa County	Napa;President American Independent
+ReportingUnit	California;Nevada County	Nevada;President American Independent
+ReportingUnit	California;Orange County	Orange;President American Independent
+ReportingUnit	California;Placer County	Placer;President American Independent
+ReportingUnit	California;Plumas County	Plumas;President American Independent
+ReportingUnit	California;Riverside County	Riverside;President American Independent
+ReportingUnit	California;Sacramento County	Sacramento;President American Independent
+ReportingUnit	California;San Benito County	San Benito;President American Independent
+ReportingUnit	California;San Bernardino County	San Bernardino;President American Independent
+ReportingUnit	California;San Diego County	San Diego;President American Independent
+ReportingUnit	California;San Francisco County	San Francisco;President American Independent
+ReportingUnit	California;San Joaquin County	San Joaquin;President American Independent
+ReportingUnit	California;San Luis Obispo County	San Luis Obispo;President American Independent
+ReportingUnit	California;San Mateo County	San Mateo;President American Independent
+ReportingUnit	California;Santa Barbara County	Santa Barbara;President American Independent
+ReportingUnit	California;Santa Clara County	Santa Clara;President American Independent
+ReportingUnit	California;Santa Cruz County	Santa Cruz;President American Independent
+ReportingUnit	California;Shasta County	Shasta;President American Independent
+ReportingUnit	California;Sierra County	Sierra;President American Independent
+ReportingUnit	California;Siskiyou County	Siskiyou;President American Independent
+ReportingUnit	California;Solano County	Solano;President American Independent
+ReportingUnit	California;Sonoma County	Sonoma;President American Independent
+ReportingUnit	California;Stanislaus County	Stanislaus;President American Independent
+ReportingUnit	California;Sutter County	Sutter;President American Independent
+ReportingUnit	California;Tehama County	Tehama;President American Independent
+ReportingUnit	California;Trinity County	Trinity;President American Independent
+ReportingUnit	California;Tulare County	Tulare;President American Independent
+ReportingUnit	California;Tuolumne County	Tuolumne;President American Independent
+ReportingUnit	California;Ventura County	Ventura;President American Independent
+ReportingUnit	California;Yolo County	Yolo;President American Independent
+ReportingUnit	California;Yuba County	Yuba;President American Independent
+ReportingUnit	California;Alameda County	Alameda;President Green
+ReportingUnit	California;Alpine County	Alpine;President Green
+ReportingUnit	California;Amador County	Amador;President Green
+ReportingUnit	California;Butte County	Butte;President Green
+ReportingUnit	California;Calaveras County	Calaveras;President Green
+ReportingUnit	California;Colusa County	Colusa;President Green
+ReportingUnit	California;Contra Costa County	Contra Costa;President Green
+ReportingUnit	California;Del Norte County	Del Norte;President Green
+ReportingUnit	California;El Dorado County	El Dorado;President Green
+ReportingUnit	California;Fresno County	Fresno;President Green
+ReportingUnit	California;Glenn County	Glenn;President Green
+ReportingUnit	California;Humboldt County	Humboldt;President Green
+ReportingUnit	California;Imperial County	Imperial;President Green
+ReportingUnit	California;Inyo County	Inyo;President Green
+ReportingUnit	California;Kern County	Kern;President Green
+ReportingUnit	California;Kings County	Kings;President Green
+ReportingUnit	California;Lake County	Lake;President Green
+ReportingUnit	California;Lassen County	Lassen;President Green
+ReportingUnit	California;Los Angeles County	Los Angeles;President Green
+ReportingUnit	California;Madera County	Madera;President Green
+ReportingUnit	California;Marin County	Marin;President Green
+ReportingUnit	California;Mariposa County	Mariposa;President Green
+ReportingUnit	California;Mendocino County	Mendocino;President Green
+ReportingUnit	California;Merced County	Merced;President Green
+ReportingUnit	California;Modoc County	Modoc;President Green
+ReportingUnit	California;Mono County	Mono;President Green
+ReportingUnit	California;Monterey County	Monterey;President Green
+ReportingUnit	California;Napa County	Napa;President Green
+ReportingUnit	California;Nevada County	Nevada;President Green
+ReportingUnit	California;Orange County	Orange;President Green
+ReportingUnit	California;Placer County	Placer;President Green
+ReportingUnit	California;Plumas County	Plumas;President Green
+ReportingUnit	California;Riverside County	Riverside;President Green
+ReportingUnit	California;Sacramento County	Sacramento;President Green
+ReportingUnit	California;San Benito County	San Benito;President Green
+ReportingUnit	California;San Bernardino County	San Bernardino;President Green
+ReportingUnit	California;San Diego County	San Diego;President Green
+ReportingUnit	California;San Francisco County	San Francisco;President Green
+ReportingUnit	California;San Joaquin County	San Joaquin;President Green
+ReportingUnit	California;San Luis Obispo County	San Luis Obispo;President Green
+ReportingUnit	California;San Mateo County	San Mateo;President Green
+ReportingUnit	California;Santa Barbara County	Santa Barbara;President Green
+ReportingUnit	California;Santa Clara County	Santa Clara;President Green
+ReportingUnit	California;Santa Cruz County	Santa Cruz;President Green
+ReportingUnit	California;Shasta County	Shasta;President Green
+ReportingUnit	California;Sierra County	Sierra;President Green
+ReportingUnit	California;Siskiyou County	Siskiyou;President Green
+ReportingUnit	California;Solano County	Solano;President Green
+ReportingUnit	California;Sonoma County	Sonoma;President Green
+ReportingUnit	California;Stanislaus County	Stanislaus;President Green
+ReportingUnit	California;Sutter County	Sutter;President Green
+ReportingUnit	California;Tehama County	Tehama;President Green
+ReportingUnit	California;Trinity County	Trinity;President Green
+ReportingUnit	California;Tulare County	Tulare;President Green
+ReportingUnit	California;Tuolumne County	Tuolumne;President Green
+ReportingUnit	California;Ventura County	Ventura;President Green
+ReportingUnit	California;Yolo County	Yolo;President Green
+ReportingUnit	California;Yuba County	Yuba;President Green
+ReportingUnit	California;Alameda County	Alameda;President Libertarian
+ReportingUnit	California;Alpine County	Alpine;President Libertarian
+ReportingUnit	California;Amador County	Amador;President Libertarian
+ReportingUnit	California;Butte County	Butte;President Libertarian
+ReportingUnit	California;Calaveras County	Calaveras;President Libertarian
+ReportingUnit	California;Colusa County	Colusa;President Libertarian
+ReportingUnit	California;Contra Costa County	Contra Costa;President Libertarian
+ReportingUnit	California;Del Norte County	Del Norte;President Libertarian
+ReportingUnit	California;El Dorado County	El Dorado;President Libertarian
+ReportingUnit	California;Fresno County	Fresno;President Libertarian
+ReportingUnit	California;Glenn County	Glenn;President Libertarian
+ReportingUnit	California;Humboldt County	Humboldt;President Libertarian
+ReportingUnit	California;Imperial County	Imperial;President Libertarian
+ReportingUnit	California;Inyo County	Inyo;President Libertarian
+ReportingUnit	California;Kern County	Kern;President Libertarian
+ReportingUnit	California;Kings County	Kings;President Libertarian
+ReportingUnit	California;Lake County	Lake;President Libertarian
+ReportingUnit	California;Lassen County	Lassen;President Libertarian
+ReportingUnit	California;Los Angeles County	Los Angeles;President Libertarian
+ReportingUnit	California;Madera County	Madera;President Libertarian
+ReportingUnit	California;Marin County	Marin;President Libertarian
+ReportingUnit	California;Mariposa County	Mariposa;President Libertarian
+ReportingUnit	California;Mendocino County	Mendocino;President Libertarian
+ReportingUnit	California;Merced County	Merced;President Libertarian
+ReportingUnit	California;Modoc County	Modoc;President Libertarian
+ReportingUnit	California;Mono County	Mono;President Libertarian
+ReportingUnit	California;Monterey County	Monterey;President Libertarian
+ReportingUnit	California;Napa County	Napa;President Libertarian
+ReportingUnit	California;Nevada County	Nevada;President Libertarian
+ReportingUnit	California;Orange County	Orange;President Libertarian
+ReportingUnit	California;Placer County	Placer;President Libertarian
+ReportingUnit	California;Plumas County	Plumas;President Libertarian
+ReportingUnit	California;Riverside County	Riverside;President Libertarian
+ReportingUnit	California;Sacramento County	Sacramento;President Libertarian
+ReportingUnit	California;San Benito County	San Benito;President Libertarian
+ReportingUnit	California;San Bernardino County	San Bernardino;President Libertarian
+ReportingUnit	California;San Diego County	San Diego;President Libertarian
+ReportingUnit	California;San Francisco County	San Francisco;President Libertarian
+ReportingUnit	California;San Joaquin County	San Joaquin;President Libertarian
+ReportingUnit	California;San Luis Obispo County	San Luis Obispo;President Libertarian
+ReportingUnit	California;San Mateo County	San Mateo;President Libertarian
+ReportingUnit	California;Santa Barbara County	Santa Barbara;President Libertarian
+ReportingUnit	California;Santa Clara County	Santa Clara;President Libertarian
+ReportingUnit	California;Santa Cruz County	Santa Cruz;President Libertarian
+ReportingUnit	California;Shasta County	Shasta;President Libertarian
+ReportingUnit	California;Sierra County	Sierra;President Libertarian
+ReportingUnit	California;Siskiyou County	Siskiyou;President Libertarian
+ReportingUnit	California;Solano County	Solano;President Libertarian
+ReportingUnit	California;Sonoma County	Sonoma;President Libertarian
+ReportingUnit	California;Stanislaus County	Stanislaus;President Libertarian
+ReportingUnit	California;Sutter County	Sutter;President Libertarian
+ReportingUnit	California;Tehama County	Tehama;President Libertarian
+ReportingUnit	California;Trinity County	Trinity;President Libertarian
+ReportingUnit	California;Tulare County	Tulare;President Libertarian
+ReportingUnit	California;Tuolumne County	Tuolumne;President Libertarian
+ReportingUnit	California;Ventura County	Ventura;President Libertarian
+ReportingUnit	California;Yolo County	Yolo;President Libertarian
+ReportingUnit	California;Yuba County	Yuba;President Libertarian
+ReportingUnit	California;Alameda County	Alameda;President P and F
+ReportingUnit	California;Alpine County	Alpine;President P and F
+ReportingUnit	California;Amador County	Amador;President P and F
+ReportingUnit	California;Butte County	Butte;President P and F
+ReportingUnit	California;Calaveras County	Calaveras;President P and F
+ReportingUnit	California;Colusa County	Colusa;President P and F
+ReportingUnit	California;Contra Costa County	Contra Costa;President P and F
+ReportingUnit	California;Del Norte County	Del Norte;President P and F
+ReportingUnit	California;El Dorado County	El Dorado;President P and F
+ReportingUnit	California;Fresno County	Fresno;President P and F
+ReportingUnit	California;Glenn County	Glenn;President P and F
+ReportingUnit	California;Humboldt County	Humboldt;President P and F
+ReportingUnit	California;Imperial County	Imperial;President P and F
+ReportingUnit	California;Inyo County	Inyo;President P and F
+ReportingUnit	California;Kern County	Kern;President P and F
+ReportingUnit	California;Kings County	Kings;President P and F
+ReportingUnit	California;Lake County	Lake;President P and F
+ReportingUnit	California;Lassen County	Lassen;President P and F
+ReportingUnit	California;Los Angeles County	Los Angeles;President P and F
+ReportingUnit	California;Madera County	Madera;President P and F
+ReportingUnit	California;Marin County	Marin;President P and F
+ReportingUnit	California;Mariposa County	Mariposa;President P and F
+ReportingUnit	California;Mendocino County	Mendocino;President P and F
+ReportingUnit	California;Merced County	Merced;President P and F
+ReportingUnit	California;Modoc County	Modoc;President P and F
+ReportingUnit	California;Mono County	Mono;President P and F
+ReportingUnit	California;Monterey County	Monterey;President P and F
+ReportingUnit	California;Napa County	Napa;President P and F
+ReportingUnit	California;Nevada County	Nevada;President P and F
+ReportingUnit	California;Orange County	Orange;President P and F
+ReportingUnit	California;Placer County	Placer;President P and F
+ReportingUnit	California;Plumas County	Plumas;President P and F
+ReportingUnit	California;Riverside County	Riverside;President P and F
+ReportingUnit	California;Sacramento County	Sacramento;President P and F
+ReportingUnit	California;San Benito County	San Benito;President P and F
+ReportingUnit	California;San Bernardino County	San Bernardino;President P and F
+ReportingUnit	California;San Diego County	San Diego;President P and F
+ReportingUnit	California;San Francisco County	San Francisco;President P and F
+ReportingUnit	California;San Joaquin County	San Joaquin;President P and F
+ReportingUnit	California;San Luis Obispo County	San Luis Obispo;President P and F
+ReportingUnit	California;San Mateo County	San Mateo;President P and F
+ReportingUnit	California;Santa Barbara County	Santa Barbara;President P and F
+ReportingUnit	California;Santa Clara County	Santa Clara;President P and F
+ReportingUnit	California;Santa Cruz County	Santa Cruz;President P and F
+ReportingUnit	California;Shasta County	Shasta;President P and F
+ReportingUnit	California;Sierra County	Sierra;President P and F
+ReportingUnit	California;Siskiyou County	Siskiyou;President P and F
+ReportingUnit	California;Solano County	Solano;President P and F
+ReportingUnit	California;Sonoma County	Sonoma;President P and F
+ReportingUnit	California;Stanislaus County	Stanislaus;President P and F
+ReportingUnit	California;Sutter County	Sutter;President P and F
+ReportingUnit	California;Tehama County	Tehama;President P and F
+ReportingUnit	California;Trinity County	Trinity;President P and F
+ReportingUnit	California;Tulare County	Tulare;President P and F
+ReportingUnit	California;Tuolumne County	Tuolumne;President P and F
+ReportingUnit	California;Ventura County	Ventura;President P and F
+ReportingUnit	California;Yolo County	Yolo;President P and F
+ReportingUnit	California;Yuba County	Yuba;President P and F
+ReportingUnit	California;Alameda County	Alameda;President Republican
+ReportingUnit	California;Alpine County	Alpine;President Republican
+ReportingUnit	California;Amador County	Amador;President Republican
+ReportingUnit	California;Butte County	Butte;President Republican
+ReportingUnit	California;Calaveras County	Calaveras;President Republican
+ReportingUnit	California;Colusa County	Colusa;President Republican
+ReportingUnit	California;Contra Costa County	Contra Costa;President Republican
+ReportingUnit	California;Del Norte County	Del Norte;President Republican
+ReportingUnit	California;El Dorado County	El Dorado;President Republican
+ReportingUnit	California;Fresno County	Fresno;President Republican
+ReportingUnit	California;Glenn County	Glenn;President Republican
+ReportingUnit	California;Humboldt County	Humboldt;President Republican
+ReportingUnit	California;Imperial County	Imperial;President Republican
+ReportingUnit	California;Inyo County	Inyo;President Republican
+ReportingUnit	California;Kern County	Kern;President Republican
+ReportingUnit	California;Kings County	Kings;President Republican
+ReportingUnit	California;Lake County	Lake;President Republican
+ReportingUnit	California;Lassen County	Lassen;President Republican
+ReportingUnit	California;Los Angeles County	Los Angeles;President Republican
+ReportingUnit	California;Madera County	Madera;President Republican
+ReportingUnit	California;Marin County	Marin;President Republican
+ReportingUnit	California;Mariposa County	Mariposa;President Republican
+ReportingUnit	California;Mendocino County	Mendocino;President Republican
+ReportingUnit	California;Merced County	Merced;President Republican
+ReportingUnit	California;Modoc County	Modoc;President Republican
+ReportingUnit	California;Mono County	Mono;President Republican
+ReportingUnit	California;Monterey County	Monterey;President Republican
+ReportingUnit	California;Napa County	Napa;President Republican
+ReportingUnit	California;Nevada County	Nevada;President Republican
+ReportingUnit	California;Orange County	Orange;President Republican
+ReportingUnit	California;Placer County	Placer;President Republican
+ReportingUnit	California;Plumas County	Plumas;President Republican
+ReportingUnit	California;Riverside County	Riverside;President Republican
+ReportingUnit	California;Sacramento County	Sacramento;President Republican
+ReportingUnit	California;San Benito County	San Benito;President Republican
+ReportingUnit	California;San Bernardino County	San Bernardino;President Republican
+ReportingUnit	California;San Diego County	San Diego;President Republican
+ReportingUnit	California;San Francisco County	San Francisco;President Republican
+ReportingUnit	California;San Joaquin County	San Joaquin;President Republican
+ReportingUnit	California;San Luis Obispo County	San Luis Obispo;President Republican
+ReportingUnit	California;San Mateo County	San Mateo;President Republican
+ReportingUnit	California;Santa Barbara County	Santa Barbara;President Republican
+ReportingUnit	California;Santa Clara County	Santa Clara;President Republican
+ReportingUnit	California;Santa Cruz County	Santa Cruz;President Republican
+ReportingUnit	California;Shasta County	Shasta;President Republican
+ReportingUnit	California;Sierra County	Sierra;President Republican
+ReportingUnit	California;Siskiyou County	Siskiyou;President Republican
+ReportingUnit	California;Solano County	Solano;President Republican
+ReportingUnit	California;Sonoma County	Sonoma;President Republican
+ReportingUnit	California;Stanislaus County	Stanislaus;President Republican
+ReportingUnit	California;Sutter County	Sutter;President Republican
+ReportingUnit	California;Tehama County	Tehama;President Republican
+ReportingUnit	California;Trinity County	Trinity;President Republican
+ReportingUnit	California;Tulare County	Tulare;President Republican
+ReportingUnit	California;Tuolumne County	Tuolumne;President Republican
+ReportingUnit	California;Ventura County	Ventura;President Republican
+ReportingUnit	California;Yolo County	Yolo;President Republican
+ReportingUnit	California;Yuba County	Yuba;President Republican
 ReportingUnit	California;State Totals County	State Totals
 Candidate	Gloria Estela La Riva	Gloria Estela La Riva
 Candidate	Donald J. Trump	Donald J. Trump
