@@ -120,9 +120,9 @@ def check_count_type_totals(election, jurisdiction, contest, count_item_type):
 ### North Carolina Data Loading Tests ###
 #constants
 ok = {
-    "nc18g": data_exists('2018 General','North Carolina'),
-    "de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
-    "de20pri": data_exists('2020 Primary','Delaware'),
+    #"nc18g": data_exists('2018 General','North Carolina'),
+    #"de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
+    #"de20pri": data_exists('2020 Primary','Delaware'),
     "il16g": data_exists('2016 General','Illinois')
 }
 
