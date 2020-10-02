@@ -123,10 +123,11 @@ ok = {
     "nc18g": data_exists('2018 General','North Carolina'),
     "de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
     "de20pri": data_exists('2020 Primary','Delaware'),
+    "il16g": data_exists('2016 General','Illinois')
 }
 
 print(ok)
-
+"""
 @pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
 def test_nc_presidential():
     # No presidential contests in 2018
@@ -600,3 +601,15 @@ def test_de_contest_by_vote_type():
 @pytest.mark.skipif(not ok["de20ppp"], reason="No DE 2020 Presidential Preference Primary data")
 def test_de_totals_match_vote_type():
     assert check_totals_match_vote_types("2020 Presidential Preference Primary", "Delaware") == True
+"""
+
+@pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
+def test_nc_presidential():
+    assert(
+        check_contest_totals(
+            "2016 General",
+            "Illinois",
+            "US President (IL)",
+        )
+        == 5536424
+    )
