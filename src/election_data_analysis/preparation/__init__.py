@@ -4,10 +4,6 @@ import os
 from election_data_analysis import user_interface as ui
 
 
-# TODO: routine to add precincts from a results file to both ReportingUnit.txt and dictionary.txt,
-#  assuming counties are already in both files and precincts munged as <county>;Precinct <precinct>
-
-
 def primary(row: pd.Series, party: str, contest_field: str) -> str:
     try:
         pr = f"{row[contest_field]} ({party})"
