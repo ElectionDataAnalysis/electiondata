@@ -621,6 +621,7 @@ class JurisdictionPrepper:
 
         # add all district offices/contests/reportingunits
         for k in count.keys():
+            # create office records for each district
             w_office = w_office.append(
                 pd.DataFrame(
                     [
@@ -670,18 +671,19 @@ class JurisdictionPrepper:
                 f"{abbr} Treasurer",
                 f"{abbr} Secretary of State",
             ]
-        # append jurisdiction-wide offices
+        # append jurisdiction-wide offices to the office df
         jw_off = pd.DataFrame(
             [[x, self.d["name"]] for x in juriswide_contests], columns=cols_off
         )
         w_office = w_office.append(jw_off, ignore_index=True)
 
-        # append jurisdiction-wide contests
+        # append jurisdiction-wide contests to the working candidate contest df
         jw_cc = pd.DataFrame(
             [[x, 1, x, ""] for x in juriswide_contests], columns=cols_cc
         )
         w_cc = w_cc.append(jw_cc, ignore_index=True)
 
+        # write office df to Office.txt
         new_err = prep.write_element(
             self.d["jurisdiction_path"], "Office", w_office.drop_duplicates()
         )
@@ -1079,7 +1081,6 @@ class JurisdictionPrepper:
             "Candidate",
             "CandidateContest",
             "Election",
-            "Office",
             "Party",
             "ReportingUnit",
         ]
