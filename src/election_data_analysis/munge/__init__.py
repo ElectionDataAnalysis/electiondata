@@ -3,6 +3,7 @@ from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
+from typing import Optional
 import re
 import os
 import numpy as np
@@ -122,6 +123,17 @@ def munge_clean(raw: pd.DataFrame, munger: jm.Munger) -> (pd.DataFrame, dict):
     return working, err
 
 
+def add_regex_column(df: pd.DataFrame, old_col: str, new_col: str, pattern_str: str) -> (pd.DataFrame, [dict, None]):
+    """Return <df> with <new_col> appended, where <new_col> is pulled from <old_col> by the <pattern>.
+    Note that only the first group (per <pattern>) is returned"""
+    err = None
+    working = df.copy()
+    p = re.compile(pattern_str)
+    working[new_col] = working[old_col].str.replace(p, "\\1")
+
+    return working, err
+
+
 def text_fragments_and_fields(formula):
     """Given a formula with fields enclosed in angle brackets,
     return a list of text-fragment,field pairs (in order of appearance) and a final text fragment.
@@ -143,25 +155,32 @@ def add_column_from_formula(
     working: pd.DataFrame,
     formula: str,
     new_col: str,
-    err: dict,
+    err: Optional[dict],
     munger_name: str,
     suffix=None,
-) -> (pd.DataFrame, dict):
+) -> (pd.DataFrame, Optional[dict]):
     """If <suffix> is given, add it to each field in the formula
     If formula is enclosed in braces, parse first entry as formula, second as a
     regex (with one parenthesized group) as a recipe for pulling the value via regex analysis
     """
+    w = working.copy()
+    #  for each {} pair in the formula, create a new column
+    # (assuming formula is well-formed)
+    brace_pattern = re.compile(r'[^{]*{<([^,]*)>,([^}]*)}')
     try:
-        # set regex_flag (True if regex analysis is needed beyond concatenation formula)
-        if formula[0] == "{" and formula[-1] == "}":
-            regex_flag = True
-            concat_formula, pattern = formula[1:-1].split(",")
-        else:
-            regex_flag = False
-            pattern = final = None
-            concat_formula = formula
-
-        text_field_list, last_text = text_fragments_and_fields(concat_formula)
+        for x in brace_pattern.finditer(formula):
+            # create a new column with the extracted info
+            old_col, pattern_str = x.groups()
+            temp_col = f"extracted_from_{old_col}"
+            w, new_err = add_regex_column(w, old_col, temp_col, pattern_str)
+            # change the formula to use the temp column
+            formula = formula.replace(f"{{<{old_col}>,{pattern_str}}}",f"<{temp_col}>")
+            if new_err:
+                err = ui.consolidate_errors([err, new_err])
+                if ui.fatal_error(new_err):
+                    return w, err
+        # once all {} pairs are gone, use concatenation to build the column to be returned
+        text_field_list, last_text = text_fragments_and_fields(formula)
 
         # add suffix, if required
         if suffix:
@@ -169,14 +188,14 @@ def add_column_from_formula(
 
         # add column to <working> dataframe via the concatenation formula
         if last_text:
-            working.loc[:, new_col] = last_text[0]
+            w.loc[:, new_col] = last_text[0]
         else:
-            working.loc[:, new_col] = ""
+            w.loc[:, new_col] = ""
         text_field_list.reverse()
         for t, f in text_field_list:
             try:
-                working.loc[:, new_col] = (
-                    working.loc[:, f].apply(lambda x: f"{t}{x}") + working.loc[:, new_col]
+                w.loc[:, new_col] = (
+                    w.loc[:, f].apply(lambda x: f"{t}{x}") + w.loc[:, new_col]
                 )
             except KeyError as ke:
                 err = ui.add_new_error(
@@ -184,14 +203,11 @@ def add_column_from_formula(
                     "munger",
                     munger_name,
                     f"Expected transformed column '{f}' not found, "
-                    f"probably because of mismatch between munger and results file.",
+                    f"perhaps because of mismatch between munger and results file.",
                 )
-                return working, err
+                return w, err
 
         # use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
-        if regex_flag:
-            # TODO figure out how to allow more general manipulations. This can only pull out one part of the pattern
-            working[new_col] = working[new_col].str.replace(pattern, "\\1")
     except Exception as e:
         err = ui.add_new_error(
             err,
@@ -199,7 +215,10 @@ def add_column_from_formula(
             "munge.add_column_from_formula",
             f"Unexpected error: {e}"
         )
-    return working, err
+
+    # TODO delete intermediate columns
+
+    return w, err
 
 
 def add_munged_column(
