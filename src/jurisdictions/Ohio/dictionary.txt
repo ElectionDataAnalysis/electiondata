@@ -764,6 +764,7 @@ CandidateContest	US House OH District 14	Representative to Congress - District 1
 CandidateContest	US House OH District 15	Representative to Congress - District 15
 CandidateContest	US House OH District 16	Representative to Congress - District 16
 CandidateContest	US President (OH)	President (at-large)
+CandidateContest	US President (OH)	President
 CandidateContest	OH Governor	Governor and Lieutenant Governor
 CandidateContest	US Senate OH	U.S. Senator
 CandidateContest	OH Attorney General	Attorney General
@@ -2294,3 +2295,5 @@ Candidate	Richard A. Olivito	Richard A. Olivito
 Candidate	Alaina Swope	Alaina Swope
 Candidate	Todd E Beegle	Todd E Beegle
 Candidate	Richard Dana	Richard Dana
+CountItemType	total	total
+

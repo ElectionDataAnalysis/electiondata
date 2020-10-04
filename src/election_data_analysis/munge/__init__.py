@@ -168,6 +168,7 @@ def add_column_from_formula(
     # (assuming formula is well-formed)
     brace_pattern = re.compile(r'[^{]*{<([^,]*)>,([^}]*)}')
     try:
+        temp_cols = []
         for x in brace_pattern.finditer(formula):
             # create a new column with the extracted info
             old_col, pattern_str = x.groups()
@@ -179,6 +180,7 @@ def add_column_from_formula(
                 err = ui.consolidate_errors([err, new_err])
                 if ui.fatal_error(new_err):
                     return w, err
+            temp_cols.append(temp_col)
         # once all {} pairs are gone, use concatenation to build the column to be returned
         text_field_list, last_text = text_fragments_and_fields(formula)
 
@@ -216,8 +218,8 @@ def add_column_from_formula(
             f"Unexpected error: {e}"
         )
 
-    # TODO delete intermediate columns
-
+    # delete temporary columns
+    w.drop(temp_cols,axis=1,inplace=True)
     return w, err
 
 
