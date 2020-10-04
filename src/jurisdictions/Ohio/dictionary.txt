@@ -147,9 +147,9 @@ CandidateContest	US House OH District 13 (Democratic Party)	US House OH District
 CandidateContest	US House OH District 14 (Democratic Party)	US House OH District 14 (D)
 CandidateContest	US House OH District 15 (Democratic Party)	US House OH District 15 (D)
 CandidateContest	US House OH District 16 (Democratic Party)	US House OH District 16 (D)
-CandidateContest	US President (OH) (Democratic Party)	US President (OH) (D)
+CandidateContest	US President (OH) (Democratic Party)	President (OH) (D)
 CandidateContest	OH Governor (Democratic Party)	OH Governor (D)
-CandidateContest	US Senate OH (Democratic Party)	US Senate OH (D)
+CandidateContest	US Senate OH (Democratic Party)	U.S. Senator (D)
 CandidateContest	OH Attorney General (Democratic Party)	OH Attorney General (D)
 CandidateContest	OH Lieutenant Governor (Democratic Party)	OH Lieutenant Governor (D)
 CandidateContest	OH Secretary of State (Democratic Party)	OH Secretary of State (D)
@@ -301,9 +301,9 @@ CandidateContest	US House OH District 13 (Republican Party)	US House OH District
 CandidateContest	US House OH District 14 (Republican Party)	US House OH District 14 (R)
 CandidateContest	US House OH District 15 (Republican Party)	US House OH District 15 (R)
 CandidateContest	US House OH District 16 (Republican Party)	US House OH District 16 (R)
-CandidateContest	US President (OH) (Republican Party)	US President (OH) (R)
+CandidateContest	US President (OH) (Republican Party)	President (OH) (R)
 CandidateContest	OH Governor (Republican Party)	OH Governor (R)
-CandidateContest	US Senate OH (Republican Party)	US Senate OH (R)
+CandidateContest	US Senate OH (Republican Party)	U.S. Senator (R)
 CandidateContest	OH Attorney General (Republican Party)	OH Attorney General (R)
 CandidateContest	OH Lieutenant Governor (Republican Party)	OH Lieutenant Governor (R)
 CandidateContest	OH Secretary of State (Republican Party)	OH Secretary of State (R)
@@ -455,9 +455,9 @@ CandidateContest	US House OH District 13 (Green Party)	US House OH District 13 (
 CandidateContest	US House OH District 14 (Green Party)	US House OH District 14 (G)
 CandidateContest	US House OH District 15 (Green Party)	US House OH District 15 (G)
 CandidateContest	US House OH District 16 (Green Party)	US House OH District 16 (G)
-CandidateContest	US President (OH) (Green Party)	US President (OH) (G)
+CandidateContest	US President (OH) (Green Party)	President (OH) (G)
 CandidateContest	OH Governor (Green Party)	OH Governor (G)
-CandidateContest	US Senate OH (Green Party)	US Senate OH (G)
+CandidateContest	US Senate OH (Green Party)	U.S. Senator (G)
 CandidateContest	OH Attorney General (Green Party)	OH Attorney General (G)
 CandidateContest	OH Lieutenant Governor (Green Party)	OH Lieutenant Governor (G)
 CandidateContest	OH Secretary of State (Green Party)	OH Secretary of State (G)
@@ -609,9 +609,9 @@ CandidateContest	US House OH District 13 (Libertarian Party)	US House OH Distric
 CandidateContest	US House OH District 14 (Libertarian Party)	US House OH District 14 (L)
 CandidateContest	US House OH District 15 (Libertarian Party)	US House OH District 15 (L)
 CandidateContest	US House OH District 16 (Libertarian Party)	US House OH District 16 (L)
-CandidateContest	US President (OH) (Libertarian Party)	US President (OH) (L)
+CandidateContest	US President (OH) (Libertarian Party)	President (OH) (L)
 CandidateContest	OH Governor (Libertarian Party)	OH Governor (L)
-CandidateContest	US Senate OH (Libertarian Party)	US Senate OH (L)
+CandidateContest	US Senate OH (Libertarian Party)	U.S. Senator (L)
 CandidateContest	OH Attorney General (Libertarian Party)	OH Attorney General (L)
 CandidateContest	OH Lieutenant Governor (Libertarian Party)	OH Lieutenant Governor (L)
 CandidateContest	OH Secretary of State (Libertarian Party)	OH Secretary of State (L)
@@ -763,13 +763,13 @@ CandidateContest	US House OH District 13	Representative to Congress - District 1
 CandidateContest	US House OH District 14	Representative to Congress - District 14
 CandidateContest	US House OH District 15	Representative to Congress - District 15
 CandidateContest	US House OH District 16	Representative to Congress - District 16
-CandidateContest	US President (OH)	US President (OH)
-CandidateContest	OH Governor	OH Governor
-CandidateContest	US Senate OH	US Senate OH
-CandidateContest	OH Attorney General	OH Attorney General
-CandidateContest	OH Lieutenant Governor	OH Lieutenant Governor
-CandidateContest	OH Treasurer	OH Treasurer
-CandidateContest	OH Secretary of State	OH Secretary of State
+CandidateContest	US President (OH)	President (OH)
+CandidateContest	OH Governor	Governor and Lieutenant Governor
+CandidateContest	US Senate OH	U.S. Senator
+CandidateContest	OH Attorney General	Attorney General
+CandidateContest	OH Treasurer of State	Treasurer of State
+CandidateContest	OH Auditor of State	Auditor of State
+CandidateContest	OH Secretary of State	Secretary of State
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
@@ -930,94 +930,94 @@ ReportingUnit	Ohio;US House OH District 14	Ohio;US House OH District 14
 ReportingUnit	Ohio;US House OH District 15	Ohio;US House OH District 15
 ReportingUnit	Ohio;US House OH District 16	Ohio;US House OH District 16
 ReportingUnit	Ohio	Ohio
-ReportingUnit	Ohio;Adams County	Ohio;Adams County
-ReportingUnit	Ohio;Allen County	Ohio;Allen County
-ReportingUnit	Ohio;Ashland County	Ohio;Ashland County
-ReportingUnit	Ohio;Ashtabula County	Ohio;Ashtabula County
-ReportingUnit	Ohio;Athens County	Ohio;Athens County
-ReportingUnit	Ohio;Auglaize County	Ohio;Auglaize County
-ReportingUnit	Ohio;Belmont County	Ohio;Belmont County
-ReportingUnit	Ohio;Brown County	Ohio;Brown County
-ReportingUnit	Ohio;Butler County	Ohio;Butler County
-ReportingUnit	Ohio;Carroll County	Ohio;Carroll County
-ReportingUnit	Ohio;Champaign County	Ohio;Champaign County
-ReportingUnit	Ohio;Clark County	Ohio;Clark County
-ReportingUnit	Ohio;Clermont County	Ohio;Clermont County
-ReportingUnit	Ohio;Clinton County	Ohio;Clinton County
-ReportingUnit	Ohio;Columbiana County	Ohio;Columbiana County
-ReportingUnit	Ohio;Coshocton County	Ohio;Coshocton County
-ReportingUnit	Ohio;Crawford County	Ohio;Crawford County
-ReportingUnit	Ohio;Cuyahoga County	Ohio;Cuyahoga County
-ReportingUnit	Ohio;Darke County	Ohio;Darke County
-ReportingUnit	Ohio;Defiance County	Ohio;Defiance County
-ReportingUnit	Ohio;Delaware County	Ohio;Delaware County
-ReportingUnit	Ohio;Erie County	Ohio;Erie County
-ReportingUnit	Ohio;Fairfield County	Ohio;Fairfield County
-ReportingUnit	Ohio;Fayette County	Ohio;Fayette County
-ReportingUnit	Ohio;Franklin County	Ohio;Franklin County
-ReportingUnit	Ohio;Fulton County	Ohio;Fulton County
-ReportingUnit	Ohio;Gallia County	Ohio;Gallia County
-ReportingUnit	Ohio;Geauga County	Ohio;Geauga County
-ReportingUnit	Ohio;Greene County	Ohio;Greene County
-ReportingUnit	Ohio;Guernsey County	Ohio;Guernsey County
-ReportingUnit	Ohio;Hamilton County	Ohio;Hamilton County
-ReportingUnit	Ohio;Hancock County	Ohio;Hancock County
-ReportingUnit	Ohio;Hardin County	Ohio;Hardin County
-ReportingUnit	Ohio;Harrison County	Ohio;Harrison County
-ReportingUnit	Ohio;Henry County	Ohio;Henry County
-ReportingUnit	Ohio;Highland County	Ohio;Highland County
-ReportingUnit	Ohio;Hocking County	Ohio;Hocking County
-ReportingUnit	Ohio;Holmes County	Ohio;Holmes County
-ReportingUnit	Ohio;Huron County	Ohio;Huron County
-ReportingUnit	Ohio;Jackson County	Ohio;Jackson County
-ReportingUnit	Ohio;Jefferson County	Ohio;Jefferson County
-ReportingUnit	Ohio;Knox County	Ohio;Knox County
-ReportingUnit	Ohio;Lake County	Ohio;Lake County
-ReportingUnit	Ohio;Lawrence County	Ohio;Lawrence County
-ReportingUnit	Ohio;Licking County	Ohio;Licking County
-ReportingUnit	Ohio;Logan County	Ohio;Logan County
-ReportingUnit	Ohio;Lorain County	Ohio;Lorain County
-ReportingUnit	Ohio;Lucas County	Ohio;Lucas County
-ReportingUnit	Ohio;Madison County	Ohio;Madison County
-ReportingUnit	Ohio;Mahoning County	Ohio;Mahoning County
-ReportingUnit	Ohio;Marion County	Ohio;Marion County
-ReportingUnit	Ohio;Medina County	Ohio;Medina County
-ReportingUnit	Ohio;Meigs County	Ohio;Meigs County
-ReportingUnit	Ohio;Mercer County	Ohio;Mercer County
-ReportingUnit	Ohio;Miami County	Ohio;Miami County
-ReportingUnit	Ohio;Monroe County	Ohio;Monroe County
-ReportingUnit	Ohio;Montgomery County	Ohio;Montgomery County
-ReportingUnit	Ohio;Morgan County	Ohio;Morgan County
-ReportingUnit	Ohio;Morrow County	Ohio;Morrow County
-ReportingUnit	Ohio;Muskingum County	Ohio;Muskingum County
-ReportingUnit	Ohio;Noble County	Ohio;Noble County
-ReportingUnit	Ohio;Ottawa County	Ohio;Ottawa County
-ReportingUnit	Ohio;Paulding County	Ohio;Paulding County
-ReportingUnit	Ohio;Perry County	Ohio;Perry County
-ReportingUnit	Ohio;Pickaway County	Ohio;Pickaway County
-ReportingUnit	Ohio;Pike County	Ohio;Pike County
-ReportingUnit	Ohio;Portage County	Ohio;Portage County
-ReportingUnit	Ohio;Preble County	Ohio;Preble County
-ReportingUnit	Ohio;Putnam County	Ohio;Putnam County
-ReportingUnit	Ohio;Richland County	Ohio;Richland County
-ReportingUnit	Ohio;Ross County	Ohio;Ross County
-ReportingUnit	Ohio;Sandusky County	Ohio;Sandusky County
-ReportingUnit	Ohio;Scioto County	Ohio;Scioto County
-ReportingUnit	Ohio;Seneca County	Ohio;Seneca County
-ReportingUnit	Ohio;Shelby County	Ohio;Shelby County
-ReportingUnit	Ohio;Stark County	Ohio;Stark County
-ReportingUnit	Ohio;Summit County	Ohio;Summit County
-ReportingUnit	Ohio;Trumbull County	Ohio;Trumbull County
-ReportingUnit	Ohio;Tuscarawas County	Ohio;Tuscarawas County
-ReportingUnit	Ohio;Union County	Ohio;Union County
-ReportingUnit	Ohio;Van Wert County	Ohio;Van Wert County
-ReportingUnit	Ohio;Vinton County	Ohio;Vinton County
-ReportingUnit	Ohio;Warren County	Ohio;Warren County
-ReportingUnit	Ohio;Washington County	Ohio;Washington County
-ReportingUnit	Ohio;Wayne County	Ohio;Wayne County
-ReportingUnit	Ohio;Williams County	Ohio;Williams County
-ReportingUnit	Ohio;Wood County	Ohio;Wood County
-ReportingUnit	Ohio;Wyandot County	Ohio;Wyandot County
+ReportingUnit	Ohio;Adams County	Adams
+ReportingUnit	Ohio;Allen County	Allen
+ReportingUnit	Ohio;Ashland County	Ashland
+ReportingUnit	Ohio;Ashtabula County	Ashtabula
+ReportingUnit	Ohio;Athens County	Athens
+ReportingUnit	Ohio;Auglaize County	Auglaize
+ReportingUnit	Ohio;Belmont County	Belmont
+ReportingUnit	Ohio;Brown County	Brown
+ReportingUnit	Ohio;Butler County	Butler
+ReportingUnit	Ohio;Carroll County	Carroll
+ReportingUnit	Ohio;Champaign County	Champaign
+ReportingUnit	Ohio;Clark County	Clark
+ReportingUnit	Ohio;Clermont County	Clermont
+ReportingUnit	Ohio;Clinton County	Clinton
+ReportingUnit	Ohio;Columbiana County	Columbiana
+ReportingUnit	Ohio;Coshocton County	Coshocton
+ReportingUnit	Ohio;Crawford County	Crawford
+ReportingUnit	Ohio;Cuyahoga County	Cuyahoga
+ReportingUnit	Ohio;Darke County	Darke
+ReportingUnit	Ohio;Defiance County	Defiance
+ReportingUnit	Ohio;Delaware County	Delaware
+ReportingUnit	Ohio;Erie County	Erie
+ReportingUnit	Ohio;Fairfield County	Fairfield
+ReportingUnit	Ohio;Fayette County	Fayette
+ReportingUnit	Ohio;Franklin County	Franklin
+ReportingUnit	Ohio;Fulton County	Fulton
+ReportingUnit	Ohio;Gallia County	Gallia
+ReportingUnit	Ohio;Geauga County	Geauga
+ReportingUnit	Ohio;Greene County	Greene
+ReportingUnit	Ohio;Guernsey County	Guernsey
+ReportingUnit	Ohio;Hamilton County	Hamilton
+ReportingUnit	Ohio;Hancock County	Hancock
+ReportingUnit	Ohio;Hardin County	Hardin
+ReportingUnit	Ohio;Harrison County	Harrison
+ReportingUnit	Ohio;Henry County	Henry
+ReportingUnit	Ohio;Highland County	Highland
+ReportingUnit	Ohio;Hocking County	Hocking
+ReportingUnit	Ohio;Holmes County	Holmes
+ReportingUnit	Ohio;Huron County	Huron
+ReportingUnit	Ohio;Jackson County	Jackson
+ReportingUnit	Ohio;Jefferson County	Jefferson
+ReportingUnit	Ohio;Knox County	Knox
+ReportingUnit	Ohio;Lake County	Lake
+ReportingUnit	Ohio;Lawrence County	Lawrence
+ReportingUnit	Ohio;Licking County	Licking
+ReportingUnit	Ohio;Logan County	Logan
+ReportingUnit	Ohio;Lorain County	Lorain
+ReportingUnit	Ohio;Lucas County	Lucas
+ReportingUnit	Ohio;Madison County	Madison
+ReportingUnit	Ohio;Mahoning County	Mahoning
+ReportingUnit	Ohio;Marion County	Marion
+ReportingUnit	Ohio;Medina County	Medina
+ReportingUnit	Ohio;Meigs County	Meigs
+ReportingUnit	Ohio;Mercer County	Mercer
+ReportingUnit	Ohio;Miami County	Miami
+ReportingUnit	Ohio;Monroe County	Monroe
+ReportingUnit	Ohio;Montgomery County	Montgomery
+ReportingUnit	Ohio;Morgan County	Morgan
+ReportingUnit	Ohio;Morrow County	Morrow
+ReportingUnit	Ohio;Muskingum County	Muskingum
+ReportingUnit	Ohio;Noble County	Noble
+ReportingUnit	Ohio;Ottawa County	Ottawa
+ReportingUnit	Ohio;Paulding County	Paulding
+ReportingUnit	Ohio;Perry County	Perry
+ReportingUnit	Ohio;Pickaway County	Pickaway
+ReportingUnit	Ohio;Pike County	Pike
+ReportingUnit	Ohio;Portage County	Portage
+ReportingUnit	Ohio;Preble County	Preble
+ReportingUnit	Ohio;Putnam County	Putnam
+ReportingUnit	Ohio;Richland County	Richland
+ReportingUnit	Ohio;Ross County	Ross
+ReportingUnit	Ohio;Sandusky County	Sandusky
+ReportingUnit	Ohio;Scioto County	Scioto
+ReportingUnit	Ohio;Seneca County	Seneca
+ReportingUnit	Ohio;Shelby County	Shelby
+ReportingUnit	Ohio;Stark County	Stark
+ReportingUnit	Ohio;Summit County	Summit
+ReportingUnit	Ohio;Trumbull County	Trumbull
+ReportingUnit	Ohio;Tuscarawas County	Tuscarawas
+ReportingUnit	Ohio;Union County	Union
+ReportingUnit	Ohio;Van Wert County	Van Wert
+ReportingUnit	Ohio;Vinton County	Vinton
+ReportingUnit	Ohio;Warren County	Warren
+ReportingUnit	Ohio;Washington County	Washington
+ReportingUnit	Ohio;Wayne County	Wayne
+ReportingUnit	Ohio;Williams County	Williams
+ReportingUnit	Ohio;Wood County	Wood
+ReportingUnit	Ohio;Wyandot County	Wyandot
 Candidate	Rebecca Ayres and Anthony Durgans	Rebecca Ayres and Anthony Durgans
 Candidate	Richard Cordray and Betty Sutton	Richard Cordray and Betty Sutton
 Candidate	Mike DeWine and Jon Husted	Mike DeWine and Jon Husted
