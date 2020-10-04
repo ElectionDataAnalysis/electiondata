@@ -1,0 +1,776 @@
+Name	NumberElected	Office	PrimaryParty
+OH House District 1	1	OH House District 1	
+OH House District 2	1	OH House District 2	
+OH House District 3	1	OH House District 3	
+OH House District 4	1	OH House District 4	
+OH House District 5	1	OH House District 5	
+OH House District 6	1	OH House District 6	
+OH House District 7	1	OH House District 7	
+OH House District 8	1	OH House District 8	
+OH House District 9	1	OH House District 9	
+OH House District 10	1	OH House District 10	
+OH House District 11	1	OH House District 11	
+OH House District 12	1	OH House District 12	
+OH House District 13	1	OH House District 13	
+OH House District 14	1	OH House District 14	
+OH House District 15	1	OH House District 15	
+OH House District 16	1	OH House District 16	
+OH House District 17	1	OH House District 17	
+OH House District 18	1	OH House District 18	
+OH House District 19	1	OH House District 19	
+OH House District 20	1	OH House District 20	
+OH House District 21	1	OH House District 21	
+OH House District 22	1	OH House District 22	
+OH House District 23	1	OH House District 23	
+OH House District 24	1	OH House District 24	
+OH House District 25	1	OH House District 25	
+OH House District 26	1	OH House District 26	
+OH House District 27	1	OH House District 27	
+OH House District 28	1	OH House District 28	
+OH House District 29	1	OH House District 29	
+OH House District 30	1	OH House District 30	
+OH House District 31	1	OH House District 31	
+OH House District 32	1	OH House District 32	
+OH House District 33	1	OH House District 33	
+OH House District 34	1	OH House District 34	
+OH House District 35	1	OH House District 35	
+OH House District 36	1	OH House District 36	
+OH House District 37	1	OH House District 37	
+OH House District 38	1	OH House District 38	
+OH House District 39	1	OH House District 39	
+OH House District 40	1	OH House District 40	
+OH House District 41	1	OH House District 41	
+OH House District 42	1	OH House District 42	
+OH House District 43	1	OH House District 43	
+OH House District 44	1	OH House District 44	
+OH House District 45	1	OH House District 45	
+OH House District 46	1	OH House District 46	
+OH House District 47	1	OH House District 47	
+OH House District 48	1	OH House District 48	
+OH House District 49	1	OH House District 49	
+OH House District 50	1	OH House District 50	
+OH House District 51	1	OH House District 51	
+OH House District 52	1	OH House District 52	
+OH House District 53	1	OH House District 53	
+OH House District 54	1	OH House District 54	
+OH House District 55	1	OH House District 55	
+OH House District 56	1	OH House District 56	
+OH House District 57	1	OH House District 57	
+OH House District 58	1	OH House District 58	
+OH House District 59	1	OH House District 59	
+OH House District 60	1	OH House District 60	
+OH House District 61	1	OH House District 61	
+OH House District 62	1	OH House District 62	
+OH House District 63	1	OH House District 63	
+OH House District 64	1	OH House District 64	
+OH House District 65	1	OH House District 65	
+OH House District 66	1	OH House District 66	
+OH House District 67	1	OH House District 67	
+OH House District 68	1	OH House District 68	
+OH House District 69	1	OH House District 69	
+OH House District 70	1	OH House District 70	
+OH House District 71	1	OH House District 71	
+OH House District 72	1	OH House District 72	
+OH House District 73	1	OH House District 73	
+OH House District 74	1	OH House District 74	
+OH House District 75	1	OH House District 75	
+OH House District 76	1	OH House District 76	
+OH House District 77	1	OH House District 77	
+OH House District 78	1	OH House District 78	
+OH House District 79	1	OH House District 79	
+OH House District 80	1	OH House District 80	
+OH House District 81	1	OH House District 81	
+OH House District 82	1	OH House District 82	
+OH House District 83	1	OH House District 83	
+OH House District 84	1	OH House District 84	
+OH House District 85	1	OH House District 85	
+OH House District 86	1	OH House District 86	
+OH House District 87	1	OH House District 87	
+OH House District 88	1	OH House District 88	
+OH House District 89	1	OH House District 89	
+OH House District 90	1	OH House District 90	
+OH House District 91	1	OH House District 91	
+OH House District 92	1	OH House District 92	
+OH House District 93	1	OH House District 93	
+OH House District 94	1	OH House District 94	
+OH House District 95	1	OH House District 95	
+OH House District 96	1	OH House District 96	
+OH House District 97	1	OH House District 97	
+OH House District 98	1	OH House District 98	
+OH House District 99	1	OH House District 99	
+OH Senate District 1	1	OH Senate District 1	
+OH Senate District 2	1	OH Senate District 2	
+OH Senate District 3	1	OH Senate District 3	
+OH Senate District 4	1	OH Senate District 4	
+OH Senate District 5	1	OH Senate District 5	
+OH Senate District 6	1	OH Senate District 6	
+OH Senate District 7	1	OH Senate District 7	
+OH Senate District 8	1	OH Senate District 8	
+OH Senate District 9	1	OH Senate District 9	
+OH Senate District 10	1	OH Senate District 10	
+OH Senate District 11	1	OH Senate District 11	
+OH Senate District 12	1	OH Senate District 12	
+OH Senate District 13	1	OH Senate District 13	
+OH Senate District 14	1	OH Senate District 14	
+OH Senate District 15	1	OH Senate District 15	
+OH Senate District 16	1	OH Senate District 16	
+OH Senate District 17	1	OH Senate District 17	
+OH Senate District 18	1	OH Senate District 18	
+OH Senate District 19	1	OH Senate District 19	
+OH Senate District 20	1	OH Senate District 20	
+OH Senate District 21	1	OH Senate District 21	
+OH Senate District 22	1	OH Senate District 22	
+OH Senate District 23	1	OH Senate District 23	
+OH Senate District 24	1	OH Senate District 24	
+OH Senate District 25	1	OH Senate District 25	
+OH Senate District 26	1	OH Senate District 26	
+OH Senate District 27	1	OH Senate District 27	
+OH Senate District 28	1	OH Senate District 28	
+OH Senate District 29	1	OH Senate District 29	
+OH Senate District 30	1	OH Senate District 30	
+OH Senate District 31	1	OH Senate District 31	
+OH Senate District 32	1	OH Senate District 32	
+OH Senate District 33	1	OH Senate District 33	
+US House OH District 1	1	US House OH District 1	
+US House OH District 2	1	US House OH District 2	
+US House OH District 3	1	US House OH District 3	
+US House OH District 4	1	US House OH District 4	
+US House OH District 5	1	US House OH District 5	
+US House OH District 6	1	US House OH District 6	
+US House OH District 7	1	US House OH District 7	
+US House OH District 8	1	US House OH District 8	
+US House OH District 9	1	US House OH District 9	
+US House OH District 10	1	US House OH District 10	
+US House OH District 11	1	US House OH District 11	
+US House OH District 12	1	US House OH District 12	
+US House OH District 13	1	US House OH District 13	
+US House OH District 14	1	US House OH District 14	
+US House OH District 15	1	US House OH District 15	
+US House OH District 16	1	US House OH District 16	
+US President (OH)	1	US President (OH)	
+OH Governor	1	OH Governor	
+US Senate OH	1	US Senate OH	
+OH Attorney General	1	OH Attorney General	
+OH Lieutenant Governor	1	OH Lieutenant Governor	
+OH Treasurer of State	1	OH Treasurer of State	
+OH Secretary of State	1	OH Secretary of State	
+OH House District 1 (Democratic Party)	1	OH House District 1	Democratic Party
+OH House District 2 (Democratic Party)	1	OH House District 2	Democratic Party
+OH House District 3 (Democratic Party)	1	OH House District 3	Democratic Party
+OH House District 4 (Democratic Party)	1	OH House District 4	Democratic Party
+OH House District 5 (Democratic Party)	1	OH House District 5	Democratic Party
+OH House District 6 (Democratic Party)	1	OH House District 6	Democratic Party
+OH House District 7 (Democratic Party)	1	OH House District 7	Democratic Party
+OH House District 8 (Democratic Party)	1	OH House District 8	Democratic Party
+OH House District 9 (Democratic Party)	1	OH House District 9	Democratic Party
+OH House District 10 (Democratic Party)	1	OH House District 10	Democratic Party
+OH House District 11 (Democratic Party)	1	OH House District 11	Democratic Party
+OH House District 12 (Democratic Party)	1	OH House District 12	Democratic Party
+OH House District 13 (Democratic Party)	1	OH House District 13	Democratic Party
+OH House District 14 (Democratic Party)	1	OH House District 14	Democratic Party
+OH House District 15 (Democratic Party)	1	OH House District 15	Democratic Party
+OH House District 16 (Democratic Party)	1	OH House District 16	Democratic Party
+OH House District 17 (Democratic Party)	1	OH House District 17	Democratic Party
+OH House District 18 (Democratic Party)	1	OH House District 18	Democratic Party
+OH House District 19 (Democratic Party)	1	OH House District 19	Democratic Party
+OH House District 20 (Democratic Party)	1	OH House District 20	Democratic Party
+OH House District 21 (Democratic Party)	1	OH House District 21	Democratic Party
+OH House District 22 (Democratic Party)	1	OH House District 22	Democratic Party
+OH House District 23 (Democratic Party)	1	OH House District 23	Democratic Party
+OH House District 24 (Democratic Party)	1	OH House District 24	Democratic Party
+OH House District 25 (Democratic Party)	1	OH House District 25	Democratic Party
+OH House District 26 (Democratic Party)	1	OH House District 26	Democratic Party
+OH House District 27 (Democratic Party)	1	OH House District 27	Democratic Party
+OH House District 28 (Democratic Party)	1	OH House District 28	Democratic Party
+OH House District 29 (Democratic Party)	1	OH House District 29	Democratic Party
+OH House District 30 (Democratic Party)	1	OH House District 30	Democratic Party
+OH House District 31 (Democratic Party)	1	OH House District 31	Democratic Party
+OH House District 32 (Democratic Party)	1	OH House District 32	Democratic Party
+OH House District 33 (Democratic Party)	1	OH House District 33	Democratic Party
+OH House District 34 (Democratic Party)	1	OH House District 34	Democratic Party
+OH House District 35 (Democratic Party)	1	OH House District 35	Democratic Party
+OH House District 36 (Democratic Party)	1	OH House District 36	Democratic Party
+OH House District 37 (Democratic Party)	1	OH House District 37	Democratic Party
+OH House District 38 (Democratic Party)	1	OH House District 38	Democratic Party
+OH House District 39 (Democratic Party)	1	OH House District 39	Democratic Party
+OH House District 40 (Democratic Party)	1	OH House District 40	Democratic Party
+OH House District 41 (Democratic Party)	1	OH House District 41	Democratic Party
+OH House District 42 (Democratic Party)	1	OH House District 42	Democratic Party
+OH House District 43 (Democratic Party)	1	OH House District 43	Democratic Party
+OH House District 44 (Democratic Party)	1	OH House District 44	Democratic Party
+OH House District 45 (Democratic Party)	1	OH House District 45	Democratic Party
+OH House District 46 (Democratic Party)	1	OH House District 46	Democratic Party
+OH House District 47 (Democratic Party)	1	OH House District 47	Democratic Party
+OH House District 48 (Democratic Party)	1	OH House District 48	Democratic Party
+OH House District 49 (Democratic Party)	1	OH House District 49	Democratic Party
+OH House District 50 (Democratic Party)	1	OH House District 50	Democratic Party
+OH House District 51 (Democratic Party)	1	OH House District 51	Democratic Party
+OH House District 52 (Democratic Party)	1	OH House District 52	Democratic Party
+OH House District 53 (Democratic Party)	1	OH House District 53	Democratic Party
+OH House District 54 (Democratic Party)	1	OH House District 54	Democratic Party
+OH House District 55 (Democratic Party)	1	OH House District 55	Democratic Party
+OH House District 56 (Democratic Party)	1	OH House District 56	Democratic Party
+OH House District 57 (Democratic Party)	1	OH House District 57	Democratic Party
+OH House District 58 (Democratic Party)	1	OH House District 58	Democratic Party
+OH House District 59 (Democratic Party)	1	OH House District 59	Democratic Party
+OH House District 60 (Democratic Party)	1	OH House District 60	Democratic Party
+OH House District 61 (Democratic Party)	1	OH House District 61	Democratic Party
+OH House District 62 (Democratic Party)	1	OH House District 62	Democratic Party
+OH House District 63 (Democratic Party)	1	OH House District 63	Democratic Party
+OH House District 64 (Democratic Party)	1	OH House District 64	Democratic Party
+OH House District 65 (Democratic Party)	1	OH House District 65	Democratic Party
+OH House District 66 (Democratic Party)	1	OH House District 66	Democratic Party
+OH House District 67 (Democratic Party)	1	OH House District 67	Democratic Party
+OH House District 68 (Democratic Party)	1	OH House District 68	Democratic Party
+OH House District 69 (Democratic Party)	1	OH House District 69	Democratic Party
+OH House District 70 (Democratic Party)	1	OH House District 70	Democratic Party
+OH House District 71 (Democratic Party)	1	OH House District 71	Democratic Party
+OH House District 72 (Democratic Party)	1	OH House District 72	Democratic Party
+OH House District 73 (Democratic Party)	1	OH House District 73	Democratic Party
+OH House District 74 (Democratic Party)	1	OH House District 74	Democratic Party
+OH House District 75 (Democratic Party)	1	OH House District 75	Democratic Party
+OH House District 76 (Democratic Party)	1	OH House District 76	Democratic Party
+OH House District 77 (Democratic Party)	1	OH House District 77	Democratic Party
+OH House District 78 (Democratic Party)	1	OH House District 78	Democratic Party
+OH House District 79 (Democratic Party)	1	OH House District 79	Democratic Party
+OH House District 80 (Democratic Party)	1	OH House District 80	Democratic Party
+OH House District 81 (Democratic Party)	1	OH House District 81	Democratic Party
+OH House District 82 (Democratic Party)	1	OH House District 82	Democratic Party
+OH House District 83 (Democratic Party)	1	OH House District 83	Democratic Party
+OH House District 84 (Democratic Party)	1	OH House District 84	Democratic Party
+OH House District 85 (Democratic Party)	1	OH House District 85	Democratic Party
+OH House District 86 (Democratic Party)	1	OH House District 86	Democratic Party
+OH House District 87 (Democratic Party)	1	OH House District 87	Democratic Party
+OH House District 88 (Democratic Party)	1	OH House District 88	Democratic Party
+OH House District 89 (Democratic Party)	1	OH House District 89	Democratic Party
+OH House District 90 (Democratic Party)	1	OH House District 90	Democratic Party
+OH House District 91 (Democratic Party)	1	OH House District 91	Democratic Party
+OH House District 92 (Democratic Party)	1	OH House District 92	Democratic Party
+OH House District 93 (Democratic Party)	1	OH House District 93	Democratic Party
+OH House District 94 (Democratic Party)	1	OH House District 94	Democratic Party
+OH House District 95 (Democratic Party)	1	OH House District 95	Democratic Party
+OH House District 96 (Democratic Party)	1	OH House District 96	Democratic Party
+OH House District 97 (Democratic Party)	1	OH House District 97	Democratic Party
+OH House District 98 (Democratic Party)	1	OH House District 98	Democratic Party
+OH House District 99 (Democratic Party)	1	OH House District 99	Democratic Party
+OH Senate District 1 (Democratic Party)	1	OH Senate District 1	Democratic Party
+OH Senate District 2 (Democratic Party)	1	OH Senate District 2	Democratic Party
+OH Senate District 3 (Democratic Party)	1	OH Senate District 3	Democratic Party
+OH Senate District 4 (Democratic Party)	1	OH Senate District 4	Democratic Party
+OH Senate District 5 (Democratic Party)	1	OH Senate District 5	Democratic Party
+OH Senate District 6 (Democratic Party)	1	OH Senate District 6	Democratic Party
+OH Senate District 7 (Democratic Party)	1	OH Senate District 7	Democratic Party
+OH Senate District 8 (Democratic Party)	1	OH Senate District 8	Democratic Party
+OH Senate District 9 (Democratic Party)	1	OH Senate District 9	Democratic Party
+OH Senate District 10 (Democratic Party)	1	OH Senate District 10	Democratic Party
+OH Senate District 11 (Democratic Party)	1	OH Senate District 11	Democratic Party
+OH Senate District 12 (Democratic Party)	1	OH Senate District 12	Democratic Party
+OH Senate District 13 (Democratic Party)	1	OH Senate District 13	Democratic Party
+OH Senate District 14 (Democratic Party)	1	OH Senate District 14	Democratic Party
+OH Senate District 15 (Democratic Party)	1	OH Senate District 15	Democratic Party
+OH Senate District 16 (Democratic Party)	1	OH Senate District 16	Democratic Party
+OH Senate District 17 (Democratic Party)	1	OH Senate District 17	Democratic Party
+OH Senate District 18 (Democratic Party)	1	OH Senate District 18	Democratic Party
+OH Senate District 19 (Democratic Party)	1	OH Senate District 19	Democratic Party
+OH Senate District 20 (Democratic Party)	1	OH Senate District 20	Democratic Party
+OH Senate District 21 (Democratic Party)	1	OH Senate District 21	Democratic Party
+OH Senate District 22 (Democratic Party)	1	OH Senate District 22	Democratic Party
+OH Senate District 23 (Democratic Party)	1	OH Senate District 23	Democratic Party
+OH Senate District 24 (Democratic Party)	1	OH Senate District 24	Democratic Party
+OH Senate District 25 (Democratic Party)	1	OH Senate District 25	Democratic Party
+OH Senate District 26 (Democratic Party)	1	OH Senate District 26	Democratic Party
+OH Senate District 27 (Democratic Party)	1	OH Senate District 27	Democratic Party
+OH Senate District 28 (Democratic Party)	1	OH Senate District 28	Democratic Party
+OH Senate District 29 (Democratic Party)	1	OH Senate District 29	Democratic Party
+OH Senate District 30 (Democratic Party)	1	OH Senate District 30	Democratic Party
+OH Senate District 31 (Democratic Party)	1	OH Senate District 31	Democratic Party
+OH Senate District 32 (Democratic Party)	1	OH Senate District 32	Democratic Party
+OH Senate District 33 (Democratic Party)	1	OH Senate District 33	Democratic Party
+US House OH District 1 (Democratic Party)	1	US House OH District 1	Democratic Party
+US House OH District 2 (Democratic Party)	1	US House OH District 2	Democratic Party
+US House OH District 3 (Democratic Party)	1	US House OH District 3	Democratic Party
+US House OH District 4 (Democratic Party)	1	US House OH District 4	Democratic Party
+US House OH District 5 (Democratic Party)	1	US House OH District 5	Democratic Party
+US House OH District 6 (Democratic Party)	1	US House OH District 6	Democratic Party
+US House OH District 7 (Democratic Party)	1	US House OH District 7	Democratic Party
+US House OH District 8 (Democratic Party)	1	US House OH District 8	Democratic Party
+US House OH District 9 (Democratic Party)	1	US House OH District 9	Democratic Party
+US House OH District 10 (Democratic Party)	1	US House OH District 10	Democratic Party
+US House OH District 11 (Democratic Party)	1	US House OH District 11	Democratic Party
+US House OH District 12 (Democratic Party)	1	US House OH District 12	Democratic Party
+US House OH District 13 (Democratic Party)	1	US House OH District 13	Democratic Party
+US House OH District 14 (Democratic Party)	1	US House OH District 14	Democratic Party
+US House OH District 15 (Democratic Party)	1	US House OH District 15	Democratic Party
+US House OH District 16 (Democratic Party)	1	US House OH District 16	Democratic Party
+US President (OH) (Democratic Party)	1	US President (OH)	Democratic Party
+OH Governor (Democratic Party)	1	OH Governor	Democratic Party
+US Senate OH (Democratic Party)	1	US Senate OH	Democratic Party
+OH Attorney General (Democratic Party)	1	OH Attorney General	Democratic Party
+OH Lieutenant Governor (Democratic Party)	1	OH Lieutenant Governor	Democratic Party
+OH Treasurer of State (Democratic Party)	1	OH Treasurer of State	Democratic Party
+OH Secretary of State (Democratic Party)	1	OH Secretary of State	Democratic Party
+OH House District 1 (Republican Party)	1	OH House District 1	Republican Party
+OH House District 2 (Republican Party)	1	OH House District 2	Republican Party
+OH House District 3 (Republican Party)	1	OH House District 3	Republican Party
+OH House District 4 (Republican Party)	1	OH House District 4	Republican Party
+OH House District 5 (Republican Party)	1	OH House District 5	Republican Party
+OH House District 6 (Republican Party)	1	OH House District 6	Republican Party
+OH House District 7 (Republican Party)	1	OH House District 7	Republican Party
+OH House District 8 (Republican Party)	1	OH House District 8	Republican Party
+OH House District 9 (Republican Party)	1	OH House District 9	Republican Party
+OH House District 10 (Republican Party)	1	OH House District 10	Republican Party
+OH House District 11 (Republican Party)	1	OH House District 11	Republican Party
+OH House District 12 (Republican Party)	1	OH House District 12	Republican Party
+OH House District 13 (Republican Party)	1	OH House District 13	Republican Party
+OH House District 14 (Republican Party)	1	OH House District 14	Republican Party
+OH House District 15 (Republican Party)	1	OH House District 15	Republican Party
+OH House District 16 (Republican Party)	1	OH House District 16	Republican Party
+OH House District 17 (Republican Party)	1	OH House District 17	Republican Party
+OH House District 18 (Republican Party)	1	OH House District 18	Republican Party
+OH House District 19 (Republican Party)	1	OH House District 19	Republican Party
+OH House District 20 (Republican Party)	1	OH House District 20	Republican Party
+OH House District 21 (Republican Party)	1	OH House District 21	Republican Party
+OH House District 22 (Republican Party)	1	OH House District 22	Republican Party
+OH House District 23 (Republican Party)	1	OH House District 23	Republican Party
+OH House District 24 (Republican Party)	1	OH House District 24	Republican Party
+OH House District 25 (Republican Party)	1	OH House District 25	Republican Party
+OH House District 26 (Republican Party)	1	OH House District 26	Republican Party
+OH House District 27 (Republican Party)	1	OH House District 27	Republican Party
+OH House District 28 (Republican Party)	1	OH House District 28	Republican Party
+OH House District 29 (Republican Party)	1	OH House District 29	Republican Party
+OH House District 30 (Republican Party)	1	OH House District 30	Republican Party
+OH House District 31 (Republican Party)	1	OH House District 31	Republican Party
+OH House District 32 (Republican Party)	1	OH House District 32	Republican Party
+OH House District 33 (Republican Party)	1	OH House District 33	Republican Party
+OH House District 34 (Republican Party)	1	OH House District 34	Republican Party
+OH House District 35 (Republican Party)	1	OH House District 35	Republican Party
+OH House District 36 (Republican Party)	1	OH House District 36	Republican Party
+OH House District 37 (Republican Party)	1	OH House District 37	Republican Party
+OH House District 38 (Republican Party)	1	OH House District 38	Republican Party
+OH House District 39 (Republican Party)	1	OH House District 39	Republican Party
+OH House District 40 (Republican Party)	1	OH House District 40	Republican Party
+OH House District 41 (Republican Party)	1	OH House District 41	Republican Party
+OH House District 42 (Republican Party)	1	OH House District 42	Republican Party
+OH House District 43 (Republican Party)	1	OH House District 43	Republican Party
+OH House District 44 (Republican Party)	1	OH House District 44	Republican Party
+OH House District 45 (Republican Party)	1	OH House District 45	Republican Party
+OH House District 46 (Republican Party)	1	OH House District 46	Republican Party
+OH House District 47 (Republican Party)	1	OH House District 47	Republican Party
+OH House District 48 (Republican Party)	1	OH House District 48	Republican Party
+OH House District 49 (Republican Party)	1	OH House District 49	Republican Party
+OH House District 50 (Republican Party)	1	OH House District 50	Republican Party
+OH House District 51 (Republican Party)	1	OH House District 51	Republican Party
+OH House District 52 (Republican Party)	1	OH House District 52	Republican Party
+OH House District 53 (Republican Party)	1	OH House District 53	Republican Party
+OH House District 54 (Republican Party)	1	OH House District 54	Republican Party
+OH House District 55 (Republican Party)	1	OH House District 55	Republican Party
+OH House District 56 (Republican Party)	1	OH House District 56	Republican Party
+OH House District 57 (Republican Party)	1	OH House District 57	Republican Party
+OH House District 58 (Republican Party)	1	OH House District 58	Republican Party
+OH House District 59 (Republican Party)	1	OH House District 59	Republican Party
+OH House District 60 (Republican Party)	1	OH House District 60	Republican Party
+OH House District 61 (Republican Party)	1	OH House District 61	Republican Party
+OH House District 62 (Republican Party)	1	OH House District 62	Republican Party
+OH House District 63 (Republican Party)	1	OH House District 63	Republican Party
+OH House District 64 (Republican Party)	1	OH House District 64	Republican Party
+OH House District 65 (Republican Party)	1	OH House District 65	Republican Party
+OH House District 66 (Republican Party)	1	OH House District 66	Republican Party
+OH House District 67 (Republican Party)	1	OH House District 67	Republican Party
+OH House District 68 (Republican Party)	1	OH House District 68	Republican Party
+OH House District 69 (Republican Party)	1	OH House District 69	Republican Party
+OH House District 70 (Republican Party)	1	OH House District 70	Republican Party
+OH House District 71 (Republican Party)	1	OH House District 71	Republican Party
+OH House District 72 (Republican Party)	1	OH House District 72	Republican Party
+OH House District 73 (Republican Party)	1	OH House District 73	Republican Party
+OH House District 74 (Republican Party)	1	OH House District 74	Republican Party
+OH House District 75 (Republican Party)	1	OH House District 75	Republican Party
+OH House District 76 (Republican Party)	1	OH House District 76	Republican Party
+OH House District 77 (Republican Party)	1	OH House District 77	Republican Party
+OH House District 78 (Republican Party)	1	OH House District 78	Republican Party
+OH House District 79 (Republican Party)	1	OH House District 79	Republican Party
+OH House District 80 (Republican Party)	1	OH House District 80	Republican Party
+OH House District 81 (Republican Party)	1	OH House District 81	Republican Party
+OH House District 82 (Republican Party)	1	OH House District 82	Republican Party
+OH House District 83 (Republican Party)	1	OH House District 83	Republican Party
+OH House District 84 (Republican Party)	1	OH House District 84	Republican Party
+OH House District 85 (Republican Party)	1	OH House District 85	Republican Party
+OH House District 86 (Republican Party)	1	OH House District 86	Republican Party
+OH House District 87 (Republican Party)	1	OH House District 87	Republican Party
+OH House District 88 (Republican Party)	1	OH House District 88	Republican Party
+OH House District 89 (Republican Party)	1	OH House District 89	Republican Party
+OH House District 90 (Republican Party)	1	OH House District 90	Republican Party
+OH House District 91 (Republican Party)	1	OH House District 91	Republican Party
+OH House District 92 (Republican Party)	1	OH House District 92	Republican Party
+OH House District 93 (Republican Party)	1	OH House District 93	Republican Party
+OH House District 94 (Republican Party)	1	OH House District 94	Republican Party
+OH House District 95 (Republican Party)	1	OH House District 95	Republican Party
+OH House District 96 (Republican Party)	1	OH House District 96	Republican Party
+OH House District 97 (Republican Party)	1	OH House District 97	Republican Party
+OH House District 98 (Republican Party)	1	OH House District 98	Republican Party
+OH House District 99 (Republican Party)	1	OH House District 99	Republican Party
+OH Senate District 1 (Republican Party)	1	OH Senate District 1	Republican Party
+OH Senate District 2 (Republican Party)	1	OH Senate District 2	Republican Party
+OH Senate District 3 (Republican Party)	1	OH Senate District 3	Republican Party
+OH Senate District 4 (Republican Party)	1	OH Senate District 4	Republican Party
+OH Senate District 5 (Republican Party)	1	OH Senate District 5	Republican Party
+OH Senate District 6 (Republican Party)	1	OH Senate District 6	Republican Party
+OH Senate District 7 (Republican Party)	1	OH Senate District 7	Republican Party
+OH Senate District 8 (Republican Party)	1	OH Senate District 8	Republican Party
+OH Senate District 9 (Republican Party)	1	OH Senate District 9	Republican Party
+OH Senate District 10 (Republican Party)	1	OH Senate District 10	Republican Party
+OH Senate District 11 (Republican Party)	1	OH Senate District 11	Republican Party
+OH Senate District 12 (Republican Party)	1	OH Senate District 12	Republican Party
+OH Senate District 13 (Republican Party)	1	OH Senate District 13	Republican Party
+OH Senate District 14 (Republican Party)	1	OH Senate District 14	Republican Party
+OH Senate District 15 (Republican Party)	1	OH Senate District 15	Republican Party
+OH Senate District 16 (Republican Party)	1	OH Senate District 16	Republican Party
+OH Senate District 17 (Republican Party)	1	OH Senate District 17	Republican Party
+OH Senate District 18 (Republican Party)	1	OH Senate District 18	Republican Party
+OH Senate District 19 (Republican Party)	1	OH Senate District 19	Republican Party
+OH Senate District 20 (Republican Party)	1	OH Senate District 20	Republican Party
+OH Senate District 21 (Republican Party)	1	OH Senate District 21	Republican Party
+OH Senate District 22 (Republican Party)	1	OH Senate District 22	Republican Party
+OH Senate District 23 (Republican Party)	1	OH Senate District 23	Republican Party
+OH Senate District 24 (Republican Party)	1	OH Senate District 24	Republican Party
+OH Senate District 25 (Republican Party)	1	OH Senate District 25	Republican Party
+OH Senate District 26 (Republican Party)	1	OH Senate District 26	Republican Party
+OH Senate District 27 (Republican Party)	1	OH Senate District 27	Republican Party
+OH Senate District 28 (Republican Party)	1	OH Senate District 28	Republican Party
+OH Senate District 29 (Republican Party)	1	OH Senate District 29	Republican Party
+OH Senate District 30 (Republican Party)	1	OH Senate District 30	Republican Party
+OH Senate District 31 (Republican Party)	1	OH Senate District 31	Republican Party
+OH Senate District 32 (Republican Party)	1	OH Senate District 32	Republican Party
+OH Senate District 33 (Republican Party)	1	OH Senate District 33	Republican Party
+US House OH District 1 (Republican Party)	1	US House OH District 1	Republican Party
+US House OH District 2 (Republican Party)	1	US House OH District 2	Republican Party
+US House OH District 3 (Republican Party)	1	US House OH District 3	Republican Party
+US House OH District 4 (Republican Party)	1	US House OH District 4	Republican Party
+US House OH District 5 (Republican Party)	1	US House OH District 5	Republican Party
+US House OH District 6 (Republican Party)	1	US House OH District 6	Republican Party
+US House OH District 7 (Republican Party)	1	US House OH District 7	Republican Party
+US House OH District 8 (Republican Party)	1	US House OH District 8	Republican Party
+US House OH District 9 (Republican Party)	1	US House OH District 9	Republican Party
+US House OH District 10 (Republican Party)	1	US House OH District 10	Republican Party
+US House OH District 11 (Republican Party)	1	US House OH District 11	Republican Party
+US House OH District 12 (Republican Party)	1	US House OH District 12	Republican Party
+US House OH District 13 (Republican Party)	1	US House OH District 13	Republican Party
+US House OH District 14 (Republican Party)	1	US House OH District 14	Republican Party
+US House OH District 15 (Republican Party)	1	US House OH District 15	Republican Party
+US House OH District 16 (Republican Party)	1	US House OH District 16	Republican Party
+US President (OH) (Republican Party)	1	US President (OH)	Republican Party
+OH Governor (Republican Party)	1	OH Governor	Republican Party
+US Senate OH (Republican Party)	1	US Senate OH	Republican Party
+OH Attorney General (Republican Party)	1	OH Attorney General	Republican Party
+OH Lieutenant Governor (Republican Party)	1	OH Lieutenant Governor	Republican Party
+OH Treasurer of State (Republican Party)	1	OH Treasurer of State	Republican Party
+OH Secretary of State (Republican Party)	1	OH Secretary of State	Republican Party
+OH House District 1 (Green Party)	1	OH House District 1	Green Party
+OH House District 2 (Green Party)	1	OH House District 2	Green Party
+OH House District 3 (Green Party)	1	OH House District 3	Green Party
+OH House District 4 (Green Party)	1	OH House District 4	Green Party
+OH House District 5 (Green Party)	1	OH House District 5	Green Party
+OH House District 6 (Green Party)	1	OH House District 6	Green Party
+OH House District 7 (Green Party)	1	OH House District 7	Green Party
+OH House District 8 (Green Party)	1	OH House District 8	Green Party
+OH House District 9 (Green Party)	1	OH House District 9	Green Party
+OH House District 10 (Green Party)	1	OH House District 10	Green Party
+OH House District 11 (Green Party)	1	OH House District 11	Green Party
+OH House District 12 (Green Party)	1	OH House District 12	Green Party
+OH House District 13 (Green Party)	1	OH House District 13	Green Party
+OH House District 14 (Green Party)	1	OH House District 14	Green Party
+OH House District 15 (Green Party)	1	OH House District 15	Green Party
+OH House District 16 (Green Party)	1	OH House District 16	Green Party
+OH House District 17 (Green Party)	1	OH House District 17	Green Party
+OH House District 18 (Green Party)	1	OH House District 18	Green Party
+OH House District 19 (Green Party)	1	OH House District 19	Green Party
+OH House District 20 (Green Party)	1	OH House District 20	Green Party
+OH House District 21 (Green Party)	1	OH House District 21	Green Party
+OH House District 22 (Green Party)	1	OH House District 22	Green Party
+OH House District 23 (Green Party)	1	OH House District 23	Green Party
+OH House District 24 (Green Party)	1	OH House District 24	Green Party
+OH House District 25 (Green Party)	1	OH House District 25	Green Party
+OH House District 26 (Green Party)	1	OH House District 26	Green Party
+OH House District 27 (Green Party)	1	OH House District 27	Green Party
+OH House District 28 (Green Party)	1	OH House District 28	Green Party
+OH House District 29 (Green Party)	1	OH House District 29	Green Party
+OH House District 30 (Green Party)	1	OH House District 30	Green Party
+OH House District 31 (Green Party)	1	OH House District 31	Green Party
+OH House District 32 (Green Party)	1	OH House District 32	Green Party
+OH House District 33 (Green Party)	1	OH House District 33	Green Party
+OH House District 34 (Green Party)	1	OH House District 34	Green Party
+OH House District 35 (Green Party)	1	OH House District 35	Green Party
+OH House District 36 (Green Party)	1	OH House District 36	Green Party
+OH House District 37 (Green Party)	1	OH House District 37	Green Party
+OH House District 38 (Green Party)	1	OH House District 38	Green Party
+OH House District 39 (Green Party)	1	OH House District 39	Green Party
+OH House District 40 (Green Party)	1	OH House District 40	Green Party
+OH House District 41 (Green Party)	1	OH House District 41	Green Party
+OH House District 42 (Green Party)	1	OH House District 42	Green Party
+OH House District 43 (Green Party)	1	OH House District 43	Green Party
+OH House District 44 (Green Party)	1	OH House District 44	Green Party
+OH House District 45 (Green Party)	1	OH House District 45	Green Party
+OH House District 46 (Green Party)	1	OH House District 46	Green Party
+OH House District 47 (Green Party)	1	OH House District 47	Green Party
+OH House District 48 (Green Party)	1	OH House District 48	Green Party
+OH House District 49 (Green Party)	1	OH House District 49	Green Party
+OH House District 50 (Green Party)	1	OH House District 50	Green Party
+OH House District 51 (Green Party)	1	OH House District 51	Green Party
+OH House District 52 (Green Party)	1	OH House District 52	Green Party
+OH House District 53 (Green Party)	1	OH House District 53	Green Party
+OH House District 54 (Green Party)	1	OH House District 54	Green Party
+OH House District 55 (Green Party)	1	OH House District 55	Green Party
+OH House District 56 (Green Party)	1	OH House District 56	Green Party
+OH House District 57 (Green Party)	1	OH House District 57	Green Party
+OH House District 58 (Green Party)	1	OH House District 58	Green Party
+OH House District 59 (Green Party)	1	OH House District 59	Green Party
+OH House District 60 (Green Party)	1	OH House District 60	Green Party
+OH House District 61 (Green Party)	1	OH House District 61	Green Party
+OH House District 62 (Green Party)	1	OH House District 62	Green Party
+OH House District 63 (Green Party)	1	OH House District 63	Green Party
+OH House District 64 (Green Party)	1	OH House District 64	Green Party
+OH House District 65 (Green Party)	1	OH House District 65	Green Party
+OH House District 66 (Green Party)	1	OH House District 66	Green Party
+OH House District 67 (Green Party)	1	OH House District 67	Green Party
+OH House District 68 (Green Party)	1	OH House District 68	Green Party
+OH House District 69 (Green Party)	1	OH House District 69	Green Party
+OH House District 70 (Green Party)	1	OH House District 70	Green Party
+OH House District 71 (Green Party)	1	OH House District 71	Green Party
+OH House District 72 (Green Party)	1	OH House District 72	Green Party
+OH House District 73 (Green Party)	1	OH House District 73	Green Party
+OH House District 74 (Green Party)	1	OH House District 74	Green Party
+OH House District 75 (Green Party)	1	OH House District 75	Green Party
+OH House District 76 (Green Party)	1	OH House District 76	Green Party
+OH House District 77 (Green Party)	1	OH House District 77	Green Party
+OH House District 78 (Green Party)	1	OH House District 78	Green Party
+OH House District 79 (Green Party)	1	OH House District 79	Green Party
+OH House District 80 (Green Party)	1	OH House District 80	Green Party
+OH House District 81 (Green Party)	1	OH House District 81	Green Party
+OH House District 82 (Green Party)	1	OH House District 82	Green Party
+OH House District 83 (Green Party)	1	OH House District 83	Green Party
+OH House District 84 (Green Party)	1	OH House District 84	Green Party
+OH House District 85 (Green Party)	1	OH House District 85	Green Party
+OH House District 86 (Green Party)	1	OH House District 86	Green Party
+OH House District 87 (Green Party)	1	OH House District 87	Green Party
+OH House District 88 (Green Party)	1	OH House District 88	Green Party
+OH House District 89 (Green Party)	1	OH House District 89	Green Party
+OH House District 90 (Green Party)	1	OH House District 90	Green Party
+OH House District 91 (Green Party)	1	OH House District 91	Green Party
+OH House District 92 (Green Party)	1	OH House District 92	Green Party
+OH House District 93 (Green Party)	1	OH House District 93	Green Party
+OH House District 94 (Green Party)	1	OH House District 94	Green Party
+OH House District 95 (Green Party)	1	OH House District 95	Green Party
+OH House District 96 (Green Party)	1	OH House District 96	Green Party
+OH House District 97 (Green Party)	1	OH House District 97	Green Party
+OH House District 98 (Green Party)	1	OH House District 98	Green Party
+OH House District 99 (Green Party)	1	OH House District 99	Green Party
+OH Senate District 1 (Green Party)	1	OH Senate District 1	Green Party
+OH Senate District 2 (Green Party)	1	OH Senate District 2	Green Party
+OH Senate District 3 (Green Party)	1	OH Senate District 3	Green Party
+OH Senate District 4 (Green Party)	1	OH Senate District 4	Green Party
+OH Senate District 5 (Green Party)	1	OH Senate District 5	Green Party
+OH Senate District 6 (Green Party)	1	OH Senate District 6	Green Party
+OH Senate District 7 (Green Party)	1	OH Senate District 7	Green Party
+OH Senate District 8 (Green Party)	1	OH Senate District 8	Green Party
+OH Senate District 9 (Green Party)	1	OH Senate District 9	Green Party
+OH Senate District 10 (Green Party)	1	OH Senate District 10	Green Party
+OH Senate District 11 (Green Party)	1	OH Senate District 11	Green Party
+OH Senate District 12 (Green Party)	1	OH Senate District 12	Green Party
+OH Senate District 13 (Green Party)	1	OH Senate District 13	Green Party
+OH Senate District 14 (Green Party)	1	OH Senate District 14	Green Party
+OH Senate District 15 (Green Party)	1	OH Senate District 15	Green Party
+OH Senate District 16 (Green Party)	1	OH Senate District 16	Green Party
+OH Senate District 17 (Green Party)	1	OH Senate District 17	Green Party
+OH Senate District 18 (Green Party)	1	OH Senate District 18	Green Party
+OH Senate District 19 (Green Party)	1	OH Senate District 19	Green Party
+OH Senate District 20 (Green Party)	1	OH Senate District 20	Green Party
+OH Senate District 21 (Green Party)	1	OH Senate District 21	Green Party
+OH Senate District 22 (Green Party)	1	OH Senate District 22	Green Party
+OH Senate District 23 (Green Party)	1	OH Senate District 23	Green Party
+OH Senate District 24 (Green Party)	1	OH Senate District 24	Green Party
+OH Senate District 25 (Green Party)	1	OH Senate District 25	Green Party
+OH Senate District 26 (Green Party)	1	OH Senate District 26	Green Party
+OH Senate District 27 (Green Party)	1	OH Senate District 27	Green Party
+OH Senate District 28 (Green Party)	1	OH Senate District 28	Green Party
+OH Senate District 29 (Green Party)	1	OH Senate District 29	Green Party
+OH Senate District 30 (Green Party)	1	OH Senate District 30	Green Party
+OH Senate District 31 (Green Party)	1	OH Senate District 31	Green Party
+OH Senate District 32 (Green Party)	1	OH Senate District 32	Green Party
+OH Senate District 33 (Green Party)	1	OH Senate District 33	Green Party
+US House OH District 1 (Green Party)	1	US House OH District 1	Green Party
+US House OH District 2 (Green Party)	1	US House OH District 2	Green Party
+US House OH District 3 (Green Party)	1	US House OH District 3	Green Party
+US House OH District 4 (Green Party)	1	US House OH District 4	Green Party
+US House OH District 5 (Green Party)	1	US House OH District 5	Green Party
+US House OH District 6 (Green Party)	1	US House OH District 6	Green Party
+US House OH District 7 (Green Party)	1	US House OH District 7	Green Party
+US House OH District 8 (Green Party)	1	US House OH District 8	Green Party
+US House OH District 9 (Green Party)	1	US House OH District 9	Green Party
+US House OH District 10 (Green Party)	1	US House OH District 10	Green Party
+US House OH District 11 (Green Party)	1	US House OH District 11	Green Party
+US House OH District 12 (Green Party)	1	US House OH District 12	Green Party
+US House OH District 13 (Green Party)	1	US House OH District 13	Green Party
+US House OH District 14 (Green Party)	1	US House OH District 14	Green Party
+US House OH District 15 (Green Party)	1	US House OH District 15	Green Party
+US House OH District 16 (Green Party)	1	US House OH District 16	Green Party
+US President (OH) (Green Party)	1	US President (OH)	Green Party
+OH Governor (Green Party)	1	OH Governor	Green Party
+US Senate OH (Green Party)	1	US Senate OH	Green Party
+OH Attorney General (Green Party)	1	OH Attorney General	Green Party
+OH Lieutenant Governor (Green Party)	1	OH Lieutenant Governor	Green Party
+OH Treasurer of State (Green Party)	1	OH Treasurer of State	Green Party
+OH Secretary of State (Green Party)	1	OH Secretary of State	Green Party
+OH House District 1 (Libertarian Party)	1	OH House District 1	Libertarian Party
+OH House District 2 (Libertarian Party)	1	OH House District 2	Libertarian Party
+OH House District 3 (Libertarian Party)	1	OH House District 3	Libertarian Party
+OH House District 4 (Libertarian Party)	1	OH House District 4	Libertarian Party
+OH House District 5 (Libertarian Party)	1	OH House District 5	Libertarian Party
+OH House District 6 (Libertarian Party)	1	OH House District 6	Libertarian Party
+OH House District 7 (Libertarian Party)	1	OH House District 7	Libertarian Party
+OH House District 8 (Libertarian Party)	1	OH House District 8	Libertarian Party
+OH House District 9 (Libertarian Party)	1	OH House District 9	Libertarian Party
+OH House District 10 (Libertarian Party)	1	OH House District 10	Libertarian Party
+OH House District 11 (Libertarian Party)	1	OH House District 11	Libertarian Party
+OH House District 12 (Libertarian Party)	1	OH House District 12	Libertarian Party
+OH House District 13 (Libertarian Party)	1	OH House District 13	Libertarian Party
+OH House District 14 (Libertarian Party)	1	OH House District 14	Libertarian Party
+OH House District 15 (Libertarian Party)	1	OH House District 15	Libertarian Party
+OH House District 16 (Libertarian Party)	1	OH House District 16	Libertarian Party
+OH House District 17 (Libertarian Party)	1	OH House District 17	Libertarian Party
+OH House District 18 (Libertarian Party)	1	OH House District 18	Libertarian Party
+OH House District 19 (Libertarian Party)	1	OH House District 19	Libertarian Party
+OH House District 20 (Libertarian Party)	1	OH House District 20	Libertarian Party
+OH House District 21 (Libertarian Party)	1	OH House District 21	Libertarian Party
+OH House District 22 (Libertarian Party)	1	OH House District 22	Libertarian Party
+OH House District 23 (Libertarian Party)	1	OH House District 23	Libertarian Party
+OH House District 24 (Libertarian Party)	1	OH House District 24	Libertarian Party
+OH House District 25 (Libertarian Party)	1	OH House District 25	Libertarian Party
+OH House District 26 (Libertarian Party)	1	OH House District 26	Libertarian Party
+OH House District 27 (Libertarian Party)	1	OH House District 27	Libertarian Party
+OH House District 28 (Libertarian Party)	1	OH House District 28	Libertarian Party
+OH House District 29 (Libertarian Party)	1	OH House District 29	Libertarian Party
+OH House District 30 (Libertarian Party)	1	OH House District 30	Libertarian Party
+OH House District 31 (Libertarian Party)	1	OH House District 31	Libertarian Party
+OH House District 32 (Libertarian Party)	1	OH House District 32	Libertarian Party
+OH House District 33 (Libertarian Party)	1	OH House District 33	Libertarian Party
+OH House District 34 (Libertarian Party)	1	OH House District 34	Libertarian Party
+OH House District 35 (Libertarian Party)	1	OH House District 35	Libertarian Party
+OH House District 36 (Libertarian Party)	1	OH House District 36	Libertarian Party
+OH House District 37 (Libertarian Party)	1	OH House District 37	Libertarian Party
+OH House District 38 (Libertarian Party)	1	OH House District 38	Libertarian Party
+OH House District 39 (Libertarian Party)	1	OH House District 39	Libertarian Party
+OH House District 40 (Libertarian Party)	1	OH House District 40	Libertarian Party
+OH House District 41 (Libertarian Party)	1	OH House District 41	Libertarian Party
+OH House District 42 (Libertarian Party)	1	OH House District 42	Libertarian Party
+OH House District 43 (Libertarian Party)	1	OH House District 43	Libertarian Party
+OH House District 44 (Libertarian Party)	1	OH House District 44	Libertarian Party
+OH House District 45 (Libertarian Party)	1	OH House District 45	Libertarian Party
+OH House District 46 (Libertarian Party)	1	OH House District 46	Libertarian Party
+OH House District 47 (Libertarian Party)	1	OH House District 47	Libertarian Party
+OH House District 48 (Libertarian Party)	1	OH House District 48	Libertarian Party
+OH House District 49 (Libertarian Party)	1	OH House District 49	Libertarian Party
+OH House District 50 (Libertarian Party)	1	OH House District 50	Libertarian Party
+OH House District 51 (Libertarian Party)	1	OH House District 51	Libertarian Party
+OH House District 52 (Libertarian Party)	1	OH House District 52	Libertarian Party
+OH House District 53 (Libertarian Party)	1	OH House District 53	Libertarian Party
+OH House District 54 (Libertarian Party)	1	OH House District 54	Libertarian Party
+OH House District 55 (Libertarian Party)	1	OH House District 55	Libertarian Party
+OH House District 56 (Libertarian Party)	1	OH House District 56	Libertarian Party
+OH House District 57 (Libertarian Party)	1	OH House District 57	Libertarian Party
+OH House District 58 (Libertarian Party)	1	OH House District 58	Libertarian Party
+OH House District 59 (Libertarian Party)	1	OH House District 59	Libertarian Party
+OH House District 60 (Libertarian Party)	1	OH House District 60	Libertarian Party
+OH House District 61 (Libertarian Party)	1	OH House District 61	Libertarian Party
+OH House District 62 (Libertarian Party)	1	OH House District 62	Libertarian Party
+OH House District 63 (Libertarian Party)	1	OH House District 63	Libertarian Party
+OH House District 64 (Libertarian Party)	1	OH House District 64	Libertarian Party
+OH House District 65 (Libertarian Party)	1	OH House District 65	Libertarian Party
+OH House District 66 (Libertarian Party)	1	OH House District 66	Libertarian Party
+OH House District 67 (Libertarian Party)	1	OH House District 67	Libertarian Party
+OH House District 68 (Libertarian Party)	1	OH House District 68	Libertarian Party
+OH House District 69 (Libertarian Party)	1	OH House District 69	Libertarian Party
+OH House District 70 (Libertarian Party)	1	OH House District 70	Libertarian Party
+OH House District 71 (Libertarian Party)	1	OH House District 71	Libertarian Party
+OH House District 72 (Libertarian Party)	1	OH House District 72	Libertarian Party
+OH House District 73 (Libertarian Party)	1	OH House District 73	Libertarian Party
+OH House District 74 (Libertarian Party)	1	OH House District 74	Libertarian Party
+OH House District 75 (Libertarian Party)	1	OH House District 75	Libertarian Party
+OH House District 76 (Libertarian Party)	1	OH House District 76	Libertarian Party
+OH House District 77 (Libertarian Party)	1	OH House District 77	Libertarian Party
+OH House District 78 (Libertarian Party)	1	OH House District 78	Libertarian Party
+OH House District 79 (Libertarian Party)	1	OH House District 79	Libertarian Party
+OH House District 80 (Libertarian Party)	1	OH House District 80	Libertarian Party
+OH House District 81 (Libertarian Party)	1	OH House District 81	Libertarian Party
+OH House District 82 (Libertarian Party)	1	OH House District 82	Libertarian Party
+OH House District 83 (Libertarian Party)	1	OH House District 83	Libertarian Party
+OH House District 84 (Libertarian Party)	1	OH House District 84	Libertarian Party
+OH House District 85 (Libertarian Party)	1	OH House District 85	Libertarian Party
+OH House District 86 (Libertarian Party)	1	OH House District 86	Libertarian Party
+OH House District 87 (Libertarian Party)	1	OH House District 87	Libertarian Party
+OH House District 88 (Libertarian Party)	1	OH House District 88	Libertarian Party
+OH House District 89 (Libertarian Party)	1	OH House District 89	Libertarian Party
+OH House District 90 (Libertarian Party)	1	OH House District 90	Libertarian Party
+OH House District 91 (Libertarian Party)	1	OH House District 91	Libertarian Party
+OH House District 92 (Libertarian Party)	1	OH House District 92	Libertarian Party
+OH House District 93 (Libertarian Party)	1	OH House District 93	Libertarian Party
+OH House District 94 (Libertarian Party)	1	OH House District 94	Libertarian Party
+OH House District 95 (Libertarian Party)	1	OH House District 95	Libertarian Party
+OH House District 96 (Libertarian Party)	1	OH House District 96	Libertarian Party
+OH House District 97 (Libertarian Party)	1	OH House District 97	Libertarian Party
+OH House District 98 (Libertarian Party)	1	OH House District 98	Libertarian Party
+OH House District 99 (Libertarian Party)	1	OH House District 99	Libertarian Party
+OH Senate District 1 (Libertarian Party)	1	OH Senate District 1	Libertarian Party
+OH Senate District 2 (Libertarian Party)	1	OH Senate District 2	Libertarian Party
+OH Senate District 3 (Libertarian Party)	1	OH Senate District 3	Libertarian Party
+OH Senate District 4 (Libertarian Party)	1	OH Senate District 4	Libertarian Party
+OH Senate District 5 (Libertarian Party)	1	OH Senate District 5	Libertarian Party
+OH Senate District 6 (Libertarian Party)	1	OH Senate District 6	Libertarian Party
+OH Senate District 7 (Libertarian Party)	1	OH Senate District 7	Libertarian Party
+OH Senate District 8 (Libertarian Party)	1	OH Senate District 8	Libertarian Party
+OH Senate District 9 (Libertarian Party)	1	OH Senate District 9	Libertarian Party
+OH Senate District 10 (Libertarian Party)	1	OH Senate District 10	Libertarian Party
+OH Senate District 11 (Libertarian Party)	1	OH Senate District 11	Libertarian Party
+OH Senate District 12 (Libertarian Party)	1	OH Senate District 12	Libertarian Party
+OH Senate District 13 (Libertarian Party)	1	OH Senate District 13	Libertarian Party
+OH Senate District 14 (Libertarian Party)	1	OH Senate District 14	Libertarian Party
+OH Senate District 15 (Libertarian Party)	1	OH Senate District 15	Libertarian Party
+OH Senate District 16 (Libertarian Party)	1	OH Senate District 16	Libertarian Party
+OH Senate District 17 (Libertarian Party)	1	OH Senate District 17	Libertarian Party
+OH Senate District 18 (Libertarian Party)	1	OH Senate District 18	Libertarian Party
+OH Senate District 19 (Libertarian Party)	1	OH Senate District 19	Libertarian Party
+OH Senate District 20 (Libertarian Party)	1	OH Senate District 20	Libertarian Party
+OH Senate District 21 (Libertarian Party)	1	OH Senate District 21	Libertarian Party
+OH Senate District 22 (Libertarian Party)	1	OH Senate District 22	Libertarian Party
+OH Senate District 23 (Libertarian Party)	1	OH Senate District 23	Libertarian Party
+OH Senate District 24 (Libertarian Party)	1	OH Senate District 24	Libertarian Party
+OH Senate District 25 (Libertarian Party)	1	OH Senate District 25	Libertarian Party
+OH Senate District 26 (Libertarian Party)	1	OH Senate District 26	Libertarian Party
+OH Senate District 27 (Libertarian Party)	1	OH Senate District 27	Libertarian Party
+OH Senate District 28 (Libertarian Party)	1	OH Senate District 28	Libertarian Party
+OH Senate District 29 (Libertarian Party)	1	OH Senate District 29	Libertarian Party
+OH Senate District 30 (Libertarian Party)	1	OH Senate District 30	Libertarian Party
+OH Senate District 31 (Libertarian Party)	1	OH Senate District 31	Libertarian Party
+OH Senate District 32 (Libertarian Party)	1	OH Senate District 32	Libertarian Party
+OH Senate District 33 (Libertarian Party)	1	OH Senate District 33	Libertarian Party
+US House OH District 1 (Libertarian Party)	1	US House OH District 1	Libertarian Party
+US House OH District 2 (Libertarian Party)	1	US House OH District 2	Libertarian Party
+US House OH District 3 (Libertarian Party)	1	US House OH District 3	Libertarian Party
+US House OH District 4 (Libertarian Party)	1	US House OH District 4	Libertarian Party
+US House OH District 5 (Libertarian Party)	1	US House OH District 5	Libertarian Party
+US House OH District 6 (Libertarian Party)	1	US House OH District 6	Libertarian Party
+US House OH District 7 (Libertarian Party)	1	US House OH District 7	Libertarian Party
+US House OH District 8 (Libertarian Party)	1	US House OH District 8	Libertarian Party
+US House OH District 9 (Libertarian Party)	1	US House OH District 9	Libertarian Party
+US House OH District 10 (Libertarian Party)	1	US House OH District 10	Libertarian Party
+US House OH District 11 (Libertarian Party)	1	US House OH District 11	Libertarian Party
+US House OH District 12 (Libertarian Party)	1	US House OH District 12	Libertarian Party
+US House OH District 13 (Libertarian Party)	1	US House OH District 13	Libertarian Party
+US House OH District 14 (Libertarian Party)	1	US House OH District 14	Libertarian Party
+US House OH District 15 (Libertarian Party)	1	US House OH District 15	Libertarian Party
+US House OH District 16 (Libertarian Party)	1	US House OH District 16	Libertarian Party
+US President (OH) (Libertarian Party)	1	US President (OH)	Libertarian Party
+OH Governor (Libertarian Party)	1	OH Governor	Libertarian Party
+US Senate OH (Libertarian Party)	1	US Senate OH	Libertarian Party
+OH Attorney General (Libertarian Party)	1	OH Attorney General	Libertarian Party
+OH Lieutenant Governor (Libertarian Party)	1	OH Lieutenant Governor	Libertarian Party
+OH Treasurer of State (Libertarian Party)	1	OH Treasurer of State	Libertarian Party
+OH Secretary of State (Libertarian Party)	1	OH Secretary of State	Libertarian Party

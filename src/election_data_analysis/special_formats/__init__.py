@@ -208,7 +208,7 @@ def read_multi_sheet_excel(
     columns_to_skip = munger.options["columns_to_skip"]
 
     try:
-        df = pd.read_excel(f_path,sheet_name=None)
+        df = pd.read_excel(f_path,sheet_name=None,header=None)
     except Exception as e:
         new_err = ui.add_new_error(
             err,
@@ -229,7 +229,7 @@ def read_multi_sheet_excel(
             data = df[sh].copy()
 
             # remove lines designated ignorable
-            data = data.iloc[count_of_top_lines_to_skip-1:]
+            data = data.iloc[count_of_top_lines_to_skip:]
 
             # remove any all-null rows
             data.dropna(how="all",inplace=True)
@@ -237,13 +237,16 @@ def read_multi_sheet_excel(
             # read constant info from first non-null entries of constant-header rows
             # then drop those rows
             constants = data.iloc[:constant_line_count].fillna(method="bfill", axis=1).iloc[:,0]
-
             data = data.iloc[constant_line_count:]
+
+            # reset column headers to generic index (moving column names to rows
+            # TODO remove data = data.transpose().reset_index().transpose()
 
             # add multi-index for actual header rows
             header_variable_names = [f"header_{j}" for j in range(header_row_count)]
+
             col_multi_index = pd.MultiIndex.from_frame(
-                data.iloc[range(header_row_count),:].transpose(),
+                data.iloc[range(header_row_count),:].transpose().fillna(method="ffill"),
                 names=header_variable_names,
             )
             data.columns = col_multi_index
