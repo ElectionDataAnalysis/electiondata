@@ -51,7 +51,7 @@ def run(load_data: bool = True, dbname: str = None):
 
         # Load the data
         dl = e.DataLoader()
-        dl.load_all(move_files=True)
+        dl.load_all(move_files=False)
 
     # move to tests directory
     os.chdir(test_dir)
