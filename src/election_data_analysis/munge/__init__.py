@@ -166,7 +166,9 @@ def add_column_from_formula(
     w = working.copy()
     #  for each {} pair in the formula, create a new column
     # (assuming formula is well-formed)
-    brace_pattern = re.compile(r'[^{]*{<([^,]*)>,([^}]*)}')
+    #brace_pattern = re.compile(r'[^{]*{<([^,]*)>,([^}]*)}')
+    brace_pattern = re.compile(r'{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}')
+
     try:
         temp_cols = []
         for x in brace_pattern.finditer(formula):
