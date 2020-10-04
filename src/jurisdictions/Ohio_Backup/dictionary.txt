@@ -1,0 +1,404 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	OH House District 1	OH House District 1
+CandidateContest	OH House District 2	OH House District 2
+CandidateContest	OH House District 3	OH House District 3
+CandidateContest	OH House District 4	OH House District 4
+CandidateContest	OH House District 5	OH House District 5
+CandidateContest	OH House District 6	OH House District 6
+CandidateContest	OH House District 7	OH House District 7
+CandidateContest	OH House District 8	OH House District 8
+CandidateContest	OH House District 9	OH House District 9
+CandidateContest	OH House District 10	OH House District 10
+CandidateContest	OH House District 11	OH House District 11
+CandidateContest	OH House District 12	OH House District 12
+CandidateContest	OH House District 13	OH House District 13
+CandidateContest	OH House District 14	OH House District 14
+CandidateContest	OH House District 15	OH House District 15
+CandidateContest	OH House District 16	OH House District 16
+CandidateContest	OH House District 17	OH House District 17
+CandidateContest	OH House District 18	OH House District 18
+CandidateContest	OH House District 19	OH House District 19
+CandidateContest	OH House District 20	OH House District 20
+CandidateContest	OH House District 21	OH House District 21
+CandidateContest	OH House District 22	OH House District 22
+CandidateContest	OH House District 23	OH House District 23
+CandidateContest	OH House District 24	OH House District 24
+CandidateContest	OH House District 25	OH House District 25
+CandidateContest	OH House District 26	OH House District 26
+CandidateContest	OH House District 27	OH House District 27
+CandidateContest	OH House District 28	OH House District 28
+CandidateContest	OH House District 29	OH House District 29
+CandidateContest	OH House District 30	OH House District 30
+CandidateContest	OH House District 31	OH House District 31
+CandidateContest	OH House District 32	OH House District 32
+CandidateContest	OH House District 33	OH House District 33
+CandidateContest	OH House District 34	OH House District 34
+CandidateContest	OH House District 35	OH House District 35
+CandidateContest	OH House District 36	OH House District 36
+CandidateContest	OH House District 37	OH House District 37
+CandidateContest	OH House District 38	OH House District 38
+CandidateContest	OH House District 39	OH House District 39
+CandidateContest	OH House District 40	OH House District 40
+CandidateContest	OH House District 41	OH House District 41
+CandidateContest	OH House District 42	OH House District 42
+CandidateContest	OH House District 43	OH House District 43
+CandidateContest	OH House District 44	OH House District 44
+CandidateContest	OH House District 45	OH House District 45
+CandidateContest	OH House District 46	OH House District 46
+CandidateContest	OH House District 47	OH House District 47
+CandidateContest	OH House District 48	OH House District 48
+CandidateContest	OH House District 49	OH House District 49
+CandidateContest	OH House District 50	OH House District 50
+CandidateContest	OH House District 51	OH House District 51
+CandidateContest	OH House District 52	OH House District 52
+CandidateContest	OH House District 53	OH House District 53
+CandidateContest	OH House District 54	OH House District 54
+CandidateContest	OH House District 55	OH House District 55
+CandidateContest	OH House District 56	OH House District 56
+CandidateContest	OH House District 57	OH House District 57
+CandidateContest	OH House District 58	OH House District 58
+CandidateContest	OH House District 59	OH House District 59
+CandidateContest	OH House District 60	OH House District 60
+CandidateContest	OH House District 61	OH House District 61
+CandidateContest	OH House District 62	OH House District 62
+CandidateContest	OH House District 63	OH House District 63
+CandidateContest	OH House District 64	OH House District 64
+CandidateContest	OH House District 65	OH House District 65
+CandidateContest	OH House District 66	OH House District 66
+CandidateContest	OH House District 67	OH House District 67
+CandidateContest	OH House District 68	OH House District 68
+CandidateContest	OH House District 69	OH House District 69
+CandidateContest	OH House District 70	OH House District 70
+CandidateContest	OH House District 71	OH House District 71
+CandidateContest	OH House District 72	OH House District 72
+CandidateContest	OH House District 73	OH House District 73
+CandidateContest	OH House District 74	OH House District 74
+CandidateContest	OH House District 75	OH House District 75
+CandidateContest	OH House District 76	OH House District 76
+CandidateContest	OH House District 77	OH House District 77
+CandidateContest	OH House District 78	OH House District 78
+CandidateContest	OH House District 79	OH House District 79
+CandidateContest	OH House District 80	OH House District 80
+CandidateContest	OH House District 81	OH House District 81
+CandidateContest	OH House District 82	OH House District 82
+CandidateContest	OH House District 83	OH House District 83
+CandidateContest	OH House District 84	OH House District 84
+CandidateContest	OH House District 85	OH House District 85
+CandidateContest	OH House District 86	OH House District 86
+CandidateContest	OH House District 87	OH House District 87
+CandidateContest	OH House District 88	OH House District 88
+CandidateContest	OH House District 89	OH House District 89
+CandidateContest	OH House District 90	OH House District 90
+CandidateContest	OH House District 91	OH House District 91
+CandidateContest	OH House District 92	OH House District 92
+CandidateContest	OH House District 93	OH House District 93
+CandidateContest	OH House District 94	OH House District 94
+CandidateContest	OH House District 95	OH House District 95
+CandidateContest	OH House District 96	OH House District 96
+CandidateContest	OH House District 97	OH House District 97
+CandidateContest	OH House District 98	OH House District 98
+CandidateContest	OH House District 99	OH House District 99
+CandidateContest	OH Senate District 1	OH Senate District 1
+CandidateContest	OH Senate District 2	OH Senate District 2
+CandidateContest	OH Senate District 3	OH Senate District 3
+CandidateContest	OH Senate District 4	OH Senate District 4
+CandidateContest	OH Senate District 5	OH Senate District 5
+CandidateContest	OH Senate District 6	OH Senate District 6
+CandidateContest	OH Senate District 7	OH Senate District 7
+CandidateContest	OH Senate District 8	OH Senate District 8
+CandidateContest	OH Senate District 9	OH Senate District 9
+CandidateContest	OH Senate District 10	OH Senate District 10
+CandidateContest	OH Senate District 11	OH Senate District 11
+CandidateContest	OH Senate District 12	OH Senate District 12
+CandidateContest	OH Senate District 13	OH Senate District 13
+CandidateContest	OH Senate District 14	OH Senate District 14
+CandidateContest	OH Senate District 15	OH Senate District 15
+CandidateContest	OH Senate District 16	OH Senate District 16
+CandidateContest	OH Senate District 17	OH Senate District 17
+CandidateContest	OH Senate District 18	OH Senate District 18
+CandidateContest	OH Senate District 19	OH Senate District 19
+CandidateContest	OH Senate District 20	OH Senate District 20
+CandidateContest	OH Senate District 21	OH Senate District 21
+CandidateContest	OH Senate District 22	OH Senate District 22
+CandidateContest	OH Senate District 23	OH Senate District 23
+CandidateContest	OH Senate District 24	OH Senate District 24
+CandidateContest	OH Senate District 25	OH Senate District 25
+CandidateContest	OH Senate District 26	OH Senate District 26
+CandidateContest	OH Senate District 27	OH Senate District 27
+CandidateContest	OH Senate District 28	OH Senate District 28
+CandidateContest	OH Senate District 29	OH Senate District 29
+CandidateContest	OH Senate District 30	OH Senate District 30
+CandidateContest	OH Senate District 31	OH Senate District 31
+CandidateContest	OH Senate District 32	OH Senate District 32
+CandidateContest	OH Senate District 33	OH Senate District 33
+CandidateContest	US House OH District 1	US House OH District 1
+CandidateContest	US House OH District 2	US House OH District 2
+CandidateContest	US House OH District 3	US House OH District 3
+CandidateContest	US House OH District 4	US House OH District 4
+CandidateContest	US House OH District 5	US House OH District 5
+CandidateContest	US House OH District 6	US House OH District 6
+CandidateContest	US House OH District 7	US House OH District 7
+CandidateContest	US House OH District 8	US House OH District 8
+CandidateContest	US House OH District 9	US House OH District 9
+CandidateContest	US House OH District 10	US House OH District 10
+CandidateContest	US House OH District 11	US House OH District 11
+CandidateContest	US House OH District 12	US House OH District 12
+CandidateContest	US House OH District 13	US House OH District 13
+CandidateContest	US House OH District 14	US House OH District 14
+CandidateContest	US House OH District 15	US House OH District 15
+CandidateContest	US House OH District 16	US House OH District 16
+CandidateContest	US President (OH)	US President (OH)
+CandidateContest	OH Governor	OH Governor
+CandidateContest	US Senate OH	US Senate OH
+CandidateContest	OH Attorney General	OH Attorney General
+CandidateContest	OH Lieutenant Governor	OH Lieutenant Governor
+CandidateContest	OH Treasurer	OH Treasurer
+CandidateContest	OH Secretary of State	OH Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
+Election	2018 General	2018 General
+Election	2018 Primary	2018 Primary
+Election	2016 General	2016 General
+Election	2016 Primary	2016 Primary
+Party	Democratic Party	Democratic Party
+Party	Republican Party	Republican Party
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+ReportingUnit	Ohio;OH House District 1	Ohio;OH House District 1
+ReportingUnit	Ohio;OH House District 2	Ohio;OH House District 2
+ReportingUnit	Ohio;OH House District 3	Ohio;OH House District 3
+ReportingUnit	Ohio;OH House District 4	Ohio;OH House District 4
+ReportingUnit	Ohio;OH House District 5	Ohio;OH House District 5
+ReportingUnit	Ohio;OH House District 6	Ohio;OH House District 6
+ReportingUnit	Ohio;OH House District 7	Ohio;OH House District 7
+ReportingUnit	Ohio;OH House District 8	Ohio;OH House District 8
+ReportingUnit	Ohio;OH House District 9	Ohio;OH House District 9
+ReportingUnit	Ohio;OH House District 10	Ohio;OH House District 10
+ReportingUnit	Ohio;OH House District 11	Ohio;OH House District 11
+ReportingUnit	Ohio;OH House District 12	Ohio;OH House District 12
+ReportingUnit	Ohio;OH House District 13	Ohio;OH House District 13
+ReportingUnit	Ohio;OH House District 14	Ohio;OH House District 14
+ReportingUnit	Ohio;OH House District 15	Ohio;OH House District 15
+ReportingUnit	Ohio;OH House District 16	Ohio;OH House District 16
+ReportingUnit	Ohio;OH House District 17	Ohio;OH House District 17
+ReportingUnit	Ohio;OH House District 18	Ohio;OH House District 18
+ReportingUnit	Ohio;OH House District 19	Ohio;OH House District 19
+ReportingUnit	Ohio;OH House District 20	Ohio;OH House District 20
+ReportingUnit	Ohio;OH House District 21	Ohio;OH House District 21
+ReportingUnit	Ohio;OH House District 22	Ohio;OH House District 22
+ReportingUnit	Ohio;OH House District 23	Ohio;OH House District 23
+ReportingUnit	Ohio;OH House District 24	Ohio;OH House District 24
+ReportingUnit	Ohio;OH House District 25	Ohio;OH House District 25
+ReportingUnit	Ohio;OH House District 26	Ohio;OH House District 26
+ReportingUnit	Ohio;OH House District 27	Ohio;OH House District 27
+ReportingUnit	Ohio;OH House District 28	Ohio;OH House District 28
+ReportingUnit	Ohio;OH House District 29	Ohio;OH House District 29
+ReportingUnit	Ohio;OH House District 30	Ohio;OH House District 30
+ReportingUnit	Ohio;OH House District 31	Ohio;OH House District 31
+ReportingUnit	Ohio;OH House District 32	Ohio;OH House District 32
+ReportingUnit	Ohio;OH House District 33	Ohio;OH House District 33
+ReportingUnit	Ohio;OH House District 34	Ohio;OH House District 34
+ReportingUnit	Ohio;OH House District 35	Ohio;OH House District 35
+ReportingUnit	Ohio;OH House District 36	Ohio;OH House District 36
+ReportingUnit	Ohio;OH House District 37	Ohio;OH House District 37
+ReportingUnit	Ohio;OH House District 38	Ohio;OH House District 38
+ReportingUnit	Ohio;OH House District 39	Ohio;OH House District 39
+ReportingUnit	Ohio;OH House District 40	Ohio;OH House District 40
+ReportingUnit	Ohio;OH House District 41	Ohio;OH House District 41
+ReportingUnit	Ohio;OH House District 42	Ohio;OH House District 42
+ReportingUnit	Ohio;OH House District 43	Ohio;OH House District 43
+ReportingUnit	Ohio;OH House District 44	Ohio;OH House District 44
+ReportingUnit	Ohio;OH House District 45	Ohio;OH House District 45
+ReportingUnit	Ohio;OH House District 46	Ohio;OH House District 46
+ReportingUnit	Ohio;OH House District 47	Ohio;OH House District 47
+ReportingUnit	Ohio;OH House District 48	Ohio;OH House District 48
+ReportingUnit	Ohio;OH House District 49	Ohio;OH House District 49
+ReportingUnit	Ohio;OH House District 50	Ohio;OH House District 50
+ReportingUnit	Ohio;OH House District 51	Ohio;OH House District 51
+ReportingUnit	Ohio;OH House District 52	Ohio;OH House District 52
+ReportingUnit	Ohio;OH House District 53	Ohio;OH House District 53
+ReportingUnit	Ohio;OH House District 54	Ohio;OH House District 54
+ReportingUnit	Ohio;OH House District 55	Ohio;OH House District 55
+ReportingUnit	Ohio;OH House District 56	Ohio;OH House District 56
+ReportingUnit	Ohio;OH House District 57	Ohio;OH House District 57
+ReportingUnit	Ohio;OH House District 58	Ohio;OH House District 58
+ReportingUnit	Ohio;OH House District 59	Ohio;OH House District 59
+ReportingUnit	Ohio;OH House District 60	Ohio;OH House District 60
+ReportingUnit	Ohio;OH House District 61	Ohio;OH House District 61
+ReportingUnit	Ohio;OH House District 62	Ohio;OH House District 62
+ReportingUnit	Ohio;OH House District 63	Ohio;OH House District 63
+ReportingUnit	Ohio;OH House District 64	Ohio;OH House District 64
+ReportingUnit	Ohio;OH House District 65	Ohio;OH House District 65
+ReportingUnit	Ohio;OH House District 66	Ohio;OH House District 66
+ReportingUnit	Ohio;OH House District 67	Ohio;OH House District 67
+ReportingUnit	Ohio;OH House District 68	Ohio;OH House District 68
+ReportingUnit	Ohio;OH House District 69	Ohio;OH House District 69
+ReportingUnit	Ohio;OH House District 70	Ohio;OH House District 70
+ReportingUnit	Ohio;OH House District 71	Ohio;OH House District 71
+ReportingUnit	Ohio;OH House District 72	Ohio;OH House District 72
+ReportingUnit	Ohio;OH House District 73	Ohio;OH House District 73
+ReportingUnit	Ohio;OH House District 74	Ohio;OH House District 74
+ReportingUnit	Ohio;OH House District 75	Ohio;OH House District 75
+ReportingUnit	Ohio;OH House District 76	Ohio;OH House District 76
+ReportingUnit	Ohio;OH House District 77	Ohio;OH House District 77
+ReportingUnit	Ohio;OH House District 78	Ohio;OH House District 78
+ReportingUnit	Ohio;OH House District 79	Ohio;OH House District 79
+ReportingUnit	Ohio;OH House District 80	Ohio;OH House District 80
+ReportingUnit	Ohio;OH House District 81	Ohio;OH House District 81
+ReportingUnit	Ohio;OH House District 82	Ohio;OH House District 82
+ReportingUnit	Ohio;OH House District 83	Ohio;OH House District 83
+ReportingUnit	Ohio;OH House District 84	Ohio;OH House District 84
+ReportingUnit	Ohio;OH House District 85	Ohio;OH House District 85
+ReportingUnit	Ohio;OH House District 86	Ohio;OH House District 86
+ReportingUnit	Ohio;OH House District 87	Ohio;OH House District 87
+ReportingUnit	Ohio;OH House District 88	Ohio;OH House District 88
+ReportingUnit	Ohio;OH House District 89	Ohio;OH House District 89
+ReportingUnit	Ohio;OH House District 90	Ohio;OH House District 90
+ReportingUnit	Ohio;OH House District 91	Ohio;OH House District 91
+ReportingUnit	Ohio;OH House District 92	Ohio;OH House District 92
+ReportingUnit	Ohio;OH House District 93	Ohio;OH House District 93
+ReportingUnit	Ohio;OH House District 94	Ohio;OH House District 94
+ReportingUnit	Ohio;OH House District 95	Ohio;OH House District 95
+ReportingUnit	Ohio;OH House District 96	Ohio;OH House District 96
+ReportingUnit	Ohio;OH House District 97	Ohio;OH House District 97
+ReportingUnit	Ohio;OH House District 98	Ohio;OH House District 98
+ReportingUnit	Ohio;OH House District 99	Ohio;OH House District 99
+ReportingUnit	Ohio;OH Senate District 1	Ohio;OH Senate District 1
+ReportingUnit	Ohio;OH Senate District 2	Ohio;OH Senate District 2
+ReportingUnit	Ohio;OH Senate District 3	Ohio;OH Senate District 3
+ReportingUnit	Ohio;OH Senate District 4	Ohio;OH Senate District 4
+ReportingUnit	Ohio;OH Senate District 5	Ohio;OH Senate District 5
+ReportingUnit	Ohio;OH Senate District 6	Ohio;OH Senate District 6
+ReportingUnit	Ohio;OH Senate District 7	Ohio;OH Senate District 7
+ReportingUnit	Ohio;OH Senate District 8	Ohio;OH Senate District 8
+ReportingUnit	Ohio;OH Senate District 9	Ohio;OH Senate District 9
+ReportingUnit	Ohio;OH Senate District 10	Ohio;OH Senate District 10
+ReportingUnit	Ohio;OH Senate District 11	Ohio;OH Senate District 11
+ReportingUnit	Ohio;OH Senate District 12	Ohio;OH Senate District 12
+ReportingUnit	Ohio;OH Senate District 13	Ohio;OH Senate District 13
+ReportingUnit	Ohio;OH Senate District 14	Ohio;OH Senate District 14
+ReportingUnit	Ohio;OH Senate District 15	Ohio;OH Senate District 15
+ReportingUnit	Ohio;OH Senate District 16	Ohio;OH Senate District 16
+ReportingUnit	Ohio;OH Senate District 17	Ohio;OH Senate District 17
+ReportingUnit	Ohio;OH Senate District 18	Ohio;OH Senate District 18
+ReportingUnit	Ohio;OH Senate District 19	Ohio;OH Senate District 19
+ReportingUnit	Ohio;OH Senate District 20	Ohio;OH Senate District 20
+ReportingUnit	Ohio;OH Senate District 21	Ohio;OH Senate District 21
+ReportingUnit	Ohio;OH Senate District 22	Ohio;OH Senate District 22
+ReportingUnit	Ohio;OH Senate District 23	Ohio;OH Senate District 23
+ReportingUnit	Ohio;OH Senate District 24	Ohio;OH Senate District 24
+ReportingUnit	Ohio;OH Senate District 25	Ohio;OH Senate District 25
+ReportingUnit	Ohio;OH Senate District 26	Ohio;OH Senate District 26
+ReportingUnit	Ohio;OH Senate District 27	Ohio;OH Senate District 27
+ReportingUnit	Ohio;OH Senate District 28	Ohio;OH Senate District 28
+ReportingUnit	Ohio;OH Senate District 29	Ohio;OH Senate District 29
+ReportingUnit	Ohio;OH Senate District 30	Ohio;OH Senate District 30
+ReportingUnit	Ohio;OH Senate District 31	Ohio;OH Senate District 31
+ReportingUnit	Ohio;OH Senate District 32	Ohio;OH Senate District 32
+ReportingUnit	Ohio;OH Senate District 33	Ohio;OH Senate District 33
+ReportingUnit	Ohio;US House OH District 1	Ohio;US House OH District 1
+ReportingUnit	Ohio;US House OH District 2	Ohio;US House OH District 2
+ReportingUnit	Ohio;US House OH District 3	Ohio;US House OH District 3
+ReportingUnit	Ohio;US House OH District 4	Ohio;US House OH District 4
+ReportingUnit	Ohio;US House OH District 5	Ohio;US House OH District 5
+ReportingUnit	Ohio;US House OH District 6	Ohio;US House OH District 6
+ReportingUnit	Ohio;US House OH District 7	Ohio;US House OH District 7
+ReportingUnit	Ohio;US House OH District 8	Ohio;US House OH District 8
+ReportingUnit	Ohio;US House OH District 9	Ohio;US House OH District 9
+ReportingUnit	Ohio;US House OH District 10	Ohio;US House OH District 10
+ReportingUnit	Ohio;US House OH District 11	Ohio;US House OH District 11
+ReportingUnit	Ohio;US House OH District 12	Ohio;US House OH District 12
+ReportingUnit	Ohio;US House OH District 13	Ohio;US House OH District 13
+ReportingUnit	Ohio;US House OH District 14	Ohio;US House OH District 14
+ReportingUnit	Ohio;US House OH District 15	Ohio;US House OH District 15
+ReportingUnit	Ohio;US House OH District 16	Ohio;US House OH District 16
+ReportingUnit	Ohio	Ohio
+ReportingUnit	Ohio;Adams County	Ohio;Adams County
+ReportingUnit	Ohio;Allen County	Ohio;Allen County
+ReportingUnit	Ohio;Ashland County	Ohio;Ashland County
+ReportingUnit	Ohio;Ashtabula County	Ohio;Ashtabula County
+ReportingUnit	Ohio;Athens County	Ohio;Athens County
+ReportingUnit	Ohio;Auglaize County	Ohio;Auglaize County
+ReportingUnit	Ohio;Belmont County	Ohio;Belmont County
+ReportingUnit	Ohio;Brown County	Ohio;Brown County
+ReportingUnit	Ohio;Butler County	Ohio;Butler County
+ReportingUnit	Ohio;Carroll County	Ohio;Carroll County
+ReportingUnit	Ohio;Champaign County	Ohio;Champaign County
+ReportingUnit	Ohio;Clark County	Ohio;Clark County
+ReportingUnit	Ohio;Clermont County	Ohio;Clermont County
+ReportingUnit	Ohio;Clinton County	Ohio;Clinton County
+ReportingUnit	Ohio;Columbiana County	Ohio;Columbiana County
+ReportingUnit	Ohio;Coshocton County	Ohio;Coshocton County
+ReportingUnit	Ohio;Crawford County	Ohio;Crawford County
+ReportingUnit	Ohio;Cuyahoga County	Ohio;Cuyahoga County
+ReportingUnit	Ohio;Darke County	Ohio;Darke County
+ReportingUnit	Ohio;Defiance County	Ohio;Defiance County
+ReportingUnit	Ohio;Delaware County	Ohio;Delaware County
+ReportingUnit	Ohio;Erie County	Ohio;Erie County
+ReportingUnit	Ohio;Fairfield County	Ohio;Fairfield County
+ReportingUnit	Ohio;Fayette County	Ohio;Fayette County
+ReportingUnit	Ohio;Franklin County	Ohio;Franklin County
+ReportingUnit	Ohio;Fulton County	Ohio;Fulton County
+ReportingUnit	Ohio;Gallia County	Ohio;Gallia County
+ReportingUnit	Ohio;Geauga County	Ohio;Geauga County
+ReportingUnit	Ohio;Greene County	Ohio;Greene County
+ReportingUnit	Ohio;Guernsey County	Ohio;Guernsey County
+ReportingUnit	Ohio;Hamilton County	Ohio;Hamilton County
+ReportingUnit	Ohio;Hancock County	Ohio;Hancock County
+ReportingUnit	Ohio;Hardin County	Ohio;Hardin County
+ReportingUnit	Ohio;Harrison County	Ohio;Harrison County
+ReportingUnit	Ohio;Henry County	Ohio;Henry County
+ReportingUnit	Ohio;Highland County	Ohio;Highland County
+ReportingUnit	Ohio;Hocking County	Ohio;Hocking County
+ReportingUnit	Ohio;Holmes County	Ohio;Holmes County
+ReportingUnit	Ohio;Huron County	Ohio;Huron County
+ReportingUnit	Ohio;Jackson County	Ohio;Jackson County
+ReportingUnit	Ohio;Jefferson County	Ohio;Jefferson County
+ReportingUnit	Ohio;Knox County	Ohio;Knox County
+ReportingUnit	Ohio;Lake County	Ohio;Lake County
+ReportingUnit	Ohio;Lawrence County	Ohio;Lawrence County
+ReportingUnit	Ohio;Licking County	Ohio;Licking County
+ReportingUnit	Ohio;Logan County	Ohio;Logan County
+ReportingUnit	Ohio;Lorain County	Ohio;Lorain County
+ReportingUnit	Ohio;Lucas County	Ohio;Lucas County
+ReportingUnit	Ohio;Madison County	Ohio;Madison County
+ReportingUnit	Ohio;Mahoning County	Ohio;Mahoning County
+ReportingUnit	Ohio;Marion County	Ohio;Marion County
+ReportingUnit	Ohio;Medina County	Ohio;Medina County
+ReportingUnit	Ohio;Meigs County	Ohio;Meigs County
+ReportingUnit	Ohio;Mercer County	Ohio;Mercer County
+ReportingUnit	Ohio;Miami County	Ohio;Miami County
+ReportingUnit	Ohio;Monroe County	Ohio;Monroe County
+ReportingUnit	Ohio;Montgomery County	Ohio;Montgomery County
+ReportingUnit	Ohio;Morgan County	Ohio;Morgan County
+ReportingUnit	Ohio;Morrow County	Ohio;Morrow County
+ReportingUnit	Ohio;Muskingum County	Ohio;Muskingum County
+ReportingUnit	Ohio;Noble County	Ohio;Noble County
+ReportingUnit	Ohio;Ottawa County	Ohio;Ottawa County
+ReportingUnit	Ohio;Paulding County	Ohio;Paulding County
+ReportingUnit	Ohio;Perry County	Ohio;Perry County
+ReportingUnit	Ohio;Pickaway County	Ohio;Pickaway County
+ReportingUnit	Ohio;Pike County	Ohio;Pike County
+ReportingUnit	Ohio;Portage County	Ohio;Portage County
+ReportingUnit	Ohio;Preble County	Ohio;Preble County
+ReportingUnit	Ohio;Putnam County	Ohio;Putnam County
+ReportingUnit	Ohio;Richland County	Ohio;Richland County
+ReportingUnit	Ohio;Ross County	Ohio;Ross County
+ReportingUnit	Ohio;Sandusky County	Ohio;Sandusky County
+ReportingUnit	Ohio;Scioto County	Ohio;Scioto County
+ReportingUnit	Ohio;Seneca County	Ohio;Seneca County
+ReportingUnit	Ohio;Shelby County	Ohio;Shelby County
+ReportingUnit	Ohio;Stark County	Ohio;Stark County
+ReportingUnit	Ohio;Summit County	Ohio;Summit County
+ReportingUnit	Ohio;Trumbull County	Ohio;Trumbull County
+ReportingUnit	Ohio;Tuscarawas County	Ohio;Tuscarawas County
+ReportingUnit	Ohio;Union County	Ohio;Union County
+ReportingUnit	Ohio;Van Wert County	Ohio;Van Wert County
+ReportingUnit	Ohio;Vinton County	Ohio;Vinton County
+ReportingUnit	Ohio;Warren County	Ohio;Warren County
+ReportingUnit	Ohio;Washington County	Ohio;Washington County
+ReportingUnit	Ohio;Wayne County	Ohio;Wayne County
+ReportingUnit	Ohio;Williams County	Ohio;Williams County
+ReportingUnit	Ohio;Wood County	Ohio;Wood County
+ReportingUnit	Ohio;Wyandot County	Ohio;Wyandot County

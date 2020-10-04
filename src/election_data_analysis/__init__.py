@@ -997,7 +997,8 @@ class JurisdictionPrepper:
         aux_data_path: str = None,
         error: dict = None,
     ) -> dict:
-        """For a single munger, add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
+        """For a single munger, add lines in dictionary.txt and <element>.txt
+        corresponding to munged names not already in dictionary
         or not already in <element>.txt for each <element> in <elements>"""
 
         # read data from file (appending _SOURCE)
@@ -1014,8 +1015,8 @@ class JurisdictionPrepper:
 
         for element in elements:
             name_field = db.get_name_field(element)
-            # append <element>_raw
-            wr, new_err = m.add_munged_column(
+            # append <element>_raw column
+            w_new, new_err = m.add_munged_column(
                 wr,
                 mu,
                 element,
@@ -1027,11 +1028,30 @@ class JurisdictionPrepper:
                 error = ui.consolidate_errors([error, new_err])
                 if ui.fatal_error(new_err):
                     return error
+
+            # get set of name_field values from results file
+            names_from_results = w_new[f"{element}_raw"].unique()
+
+            # delete any named '""' and warn user
+            if "\"\"" in names_from_results:
+                names_from_results.remove("\"\"")
+                error = ui.add_new_error(
+                    error,
+                    "warn-file",
+                    results_file_path,
+                    f"An {element} named '\"\"' was found in the file and ignored. If you want it in {element}.txt "
+                    f"or dictionary.txt, you will have to add it by hand."
+                )
+
+            # change any double double-quotes to single quotes; remove enclosing double-quotes
+            names_from_results = [x.replace("\"\"","'").strip("\"") for x in names_from_results]
+
+
             # find <element>_raw values not in dictionary.txt.raw_identifier_value;
             #  add corresponding lines to dictionary.txt
             wd = prep.get_element(self.d["jurisdiction_path"], "dictionary")
             old_raw = wd[wd.cdf_element == element]["raw_identifier_value"].to_list()
-            new_raw = [x for x in wr[f"{element}_raw"] if x not in old_raw]
+            new_raw = [x for x in names_from_results if x not in old_raw]
             new_raw_df = pd.DataFrame(
                 [[element, x, x] for x in new_raw],
                 columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
@@ -1051,8 +1071,7 @@ class JurisdictionPrepper:
                 for x in wd[wd.cdf_element == element]["cdf_internal_name"]
                 if x not in old_internal
             ]
-            # TODO guide user to check dictionary for bad stuff before running this
-            #  e.g., primary contests already in dictionary cause a problem.
+
             new_internal_df = pd.DataFrame(
                 [[x] for x in new_internal], columns=[name_field]
             )
@@ -1068,7 +1087,7 @@ class JurisdictionPrepper:
                     error,
                     "warn-jurisdiction",
                     Path(self.d["jurisdiction_path"]).name,
-                    f"New rows added to {element}.txt, but data may be missing from some fields in those rows.",
+                    f"Check {element}.txt for new rows missing data in some fields.",
                 )
         return error
 

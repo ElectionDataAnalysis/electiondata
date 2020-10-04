@@ -655,7 +655,6 @@ def check_munger_file_contents(munger_path, munger_file, err):
                 "count_of_top_lines_to_skip",
                 "constant_line_count",
                 "header_row_count",
-                "columns_to_skip",
             ]:
                 try:
                     int(format_d[key])
