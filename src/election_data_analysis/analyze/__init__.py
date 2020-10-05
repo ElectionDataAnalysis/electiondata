@@ -391,6 +391,9 @@ def create_bar(
         else:
             results["ballot_types"] = "Data unavailable by vote type"
         results["score"] = temp_df["score"].max()
+        results[
+            "title"
+        ] = f"""Accepted {results["count_item_type"].replace("-", " ").title()} Ballots"""
         result_list.append(results)
     connection.close()
     return result_list
