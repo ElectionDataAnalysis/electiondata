@@ -193,6 +193,12 @@ def create_scatter(
     )
     results["x-count_item_type"] = h_category
     results["y-count_item_type"] = v_category
+    results[
+        "x-title"
+    ] = f"""{results["x"]} - {results["x-election"]} - {dfh.iloc[0]["Contest"]}"""
+    results[
+        "y-title"
+    ] = f"""{results["y"]} - {results["y-election"]} - {dfv.iloc[0]["Contest"]}"""
 
     # only keep the ones where there are an (x, y) to graph
     to_keep = []
@@ -252,7 +258,9 @@ def get_data_for_scatter(
     unsummed = unsummed[unsummed["CountItemType"] == count_item_type]
 
     # cleanup for purposes of flexibility
-    unsummed = unsummed[["Name", "Count", "Selection", "Contest_Id", "Candidate_Id"]]
+    unsummed = unsummed[
+        ["Name", "Count", "Selection", "Contest_Id", "Candidate_Id", "Contest"]
+    ]
 
     # if filter_id is -1, then that means we have all contests or candidates
     # so we need to group by
