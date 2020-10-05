@@ -1099,7 +1099,9 @@ def get_relevant_contests(session, filters):
     finds all contests for that combination."""
     election_id = list_to_id(session, "Election", filters)
     reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
-    contest_df = contests_in_election(session, election_id, reporting_unit_id)
+    contest_df = read_vote_count(
+        session, election_id, reporting_unit_id, ["Name"], ["contest_name"]
+    )
 
     result = get_input_options(session, "candidate_contest", True)
     result_df = pd.DataFrame(result)
@@ -1344,26 +1346,34 @@ def export_rollup_from_db(
     return results_df, err_str
 
 
-def contests_in_election(session, election_id, reporting_unit_id):
+def read_vote_count(
+    session,
+    election_id,
+    reporting_unit_id,
+    fields,
+    aliases,
+):
     """The VoteCount table is the only place that maps contests to a specific
     election. But this table is the largest one, so we don't want to use pandas methods
     to read into a DF and then filter"""
     q = sql.SQL(
         """
-        SELECT  DISTINCT c."Id", c."Name" as contest_name
-        FROM    "VoteCount" vc
-                JOIN "Contest" c on vc."Contest_Id" = c."Id"
-                JOIN "ComposingReportingUnitJoin" cruj ON vc."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
+        SELECT  DISTINCT {fields}
+        FROM    "VoteCount"
+                JOIN "Contest" on "VoteCount"."Contest_Id" = "Contest"."Id"
+                JOIN "ComposingReportingUnitJoin" cruj ON "VoteCount"."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
         WHERE   "Election_Id" = %s
                 AND "ParentReportingUnit_Id" = %s
         """
+    ).format(
+        fields=sql.SQL(",").join(sql.Identifier(field) for field in fields),
     )
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     cursor.execute(q, [election_id, reporting_unit_id])
     results = cursor.fetchall()
     results_df = pd.DataFrame(results)
-    results_df.columns = ["id", "contest_name"]
+    results_df.columns = aliases
     return results_df
 
 
