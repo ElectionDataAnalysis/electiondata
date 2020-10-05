@@ -960,15 +960,16 @@ def get_filtered_input_options(session, input_str, filters):
         }
         df = pd.DataFrame(data=data)
     elif input_str == "category":
-        election_df = get_relevant_election(session, filters)
-        election_df = election_df[election_df["Name"].isin(filters)]
-        count_type_ids = (
-            pd.read_sql_table("VoteCount", session.bind, index_col="Id")
-            .merge(election_df, how="inner", left_on="Election_Id", right_index=True)[
-                "CountItemType_Id"
-            ]
-            .unique()
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        type_df = read_vote_count(
+            session,
+            election_id,
+            reporting_unit_id,
+            ["CountItemType_Id"],
+            ["CountItemType_Id"],
         )
+        count_type_ids = type_df["CountItemType_Id"].unique()
         count_types_df = pd.read_sql_table(
             "CountItemType", session.bind, index_col="Id"
         )
@@ -990,32 +991,15 @@ def get_filtered_input_options(session, input_str, filters):
         df = get_relevant_contests(session, filters)
     # check if it's looking for a count of candidates
     elif input_str == "count":
-        result = get_input_options(session, "candidate_contest", True)
-        result_df = pd.DataFrame(result)
-        result_df.columns = ["parent", "name", "type"]
+        # get selections from relevant election and jurisdiction
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        selection_df = read_vote_count(
+            session, election_id, reporting_unit_id, ["Selection_Id"], ["Selection_Id"]
+        )
+        selection_ids = selection_df["Selection_Id"].unique()
 
-        contest_df = get_relevant_contests(session, filters)
-        election_df = get_relevant_election(session, filters)
-        election_df = election_df[election_df["Name"].isin(filters)]
-        hierarchy_df = pd.read_sql_table(
-            "ComposingReportingUnitJoin", session.bind, index_col="Id"
-        )
-        unit_df = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
-        hierarchy_df = hierarchy_df.merge(
-            unit_df, how="inner", left_on="ParentReportingUnit_Id", right_on="Id"
-        )
-        hierarchy_df = hierarchy_df[hierarchy_df["Name"].isin(filters)]
-        selection_ids = (
-            pd.read_sql_table("VoteCount", session.bind, index_col="Id")
-            .merge(election_df, how="inner", left_on="Election_Id", right_index=True)
-            .merge(
-                hierarchy_df,
-                how="inner",
-                left_on="ReportingUnit_Id",
-                right_on="ChildReportingUnit_Id",
-            )["Selection_Id"]
-            .unique()
-        )
+        # getting all candidate info
         candidate_selection_df = pd.read_sql_table(
             "CandidateSelection", session.bind, index_col="Id"
         )
@@ -1023,7 +1007,7 @@ def get_filtered_input_options(session, input_str, filters):
         candidate_contest_df = candidate_selection_df[
             candidate_selection_df.index.isin(selection_ids)
         ][candidate_selection_df.columns].reset_index()
-        # then we get the cnadidate names themselves
+        # then we get the candidate names themselves
         candidate_names_df = pd.read_sql_table(
             "Candidate", session.bind, index_col="Id"
         )
@@ -1040,6 +1024,9 @@ def get_filtered_input_options(session, input_str, filters):
         candidates_df = candidates_df.merge(
             candidate_names_df, how="inner", left_on="name", right_on="BallotName"
         )
+
+        # finally, filter on relevant contests
+        contest_df = get_relevant_contests(session, filters)
         df = contest_df.merge(
             candidates_df,
             how="inner",
