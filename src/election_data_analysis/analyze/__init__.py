@@ -387,11 +387,15 @@ def create_bar(
             cursor, "ReportingUnitType", int(temp_df.iloc[0]["ReportingUnitType_Id"])
         )
         results["count_item_type"] = temp_df.iloc[0]["CountItemType"]
-        results["votes_at_stake"] = temp_df.iloc[0]["votes_at_stake"]
-        results["margin"] = (
+        results["votes_at_stake_raw"] = temp_df.iloc[0]["votes_at_stake"]
+        results["margin_raw"] = (
             temp_df[temp_df["rank"] == 1].iloc[0]["ind_total"]
             - temp_df[temp_df["rank"] != 1].iloc[0]["ind_total"]
         )
+        results["votes_at_stake"] = human_readable_numbers(
+            results["votes_at_stake_raw"]
+        )
+        results["margin"] = human_readable_numbers(results["margin_raw"])
         if multiple_ballot_types:
             results[
                 "ballot_types"
@@ -876,3 +880,14 @@ def get_unit_by_column(data, column):
     data = data.groupby("unit_id").max(column).sort_values(by=column, ascending=False)
     data = data.reset_index()
     return list(data["unit_id"].unique())
+
+
+def human_readable_numbers(value):
+    if value < 10:
+        return value
+    elif value < 100:
+        return round(value, -1)
+    elif value < 1000:
+        return round(value, -2)
+    else:
+        return "{:,}".format(round(value, -3))
