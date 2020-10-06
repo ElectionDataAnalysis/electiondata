@@ -165,6 +165,9 @@ def create_scatter(
         v_count_id,
         v_type,
     )
+    if dfh.empty or dfv.empty:
+        return None
+
     unsummed = pd.concat([dfh, dfv])
     # package into dictionary
     if h_count_id == -1:
@@ -207,6 +210,9 @@ def create_scatter(
         # otherwise it's invalid
         if len(result) == 5:
             to_keep.append(result)
+    if not to_keep:
+        return None
+
     results["counts"] = to_keep
     connection.close()
     return results
