@@ -1287,7 +1287,7 @@ class Analyzer:
             v_count_id,
             v_type,
         )
-        if fig_type:
+        if fig_type and agg_results:
             v.plot("scatter", agg_results, fig_type, d["rollup_directory"])
         return agg_results
 
@@ -1328,7 +1328,7 @@ class Analyzer:
             election_id,
             False,
         )
-        if fig_type:
+        if fig_type and agg_results:
             for agg_result in agg_results:
                 v.plot("bar", agg_result, fig_type, d["rollup_directory"])
         return agg_results

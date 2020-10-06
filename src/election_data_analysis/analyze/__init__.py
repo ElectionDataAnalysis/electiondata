@@ -165,6 +165,9 @@ def create_scatter(
         v_count_id,
         v_type,
     )
+    if dfh.empty or dfv.empty:
+        return None
+
     unsummed = pd.concat([dfh, dfv])
     # package into dictionary
     if h_count_id == -1:
@@ -207,6 +210,9 @@ def create_scatter(
         # otherwise it's invalid
         if len(result) == 5:
             to_keep.append(result)
+    if not to_keep:
+        return None
+
     results["counts"] = to_keep
     connection.close()
     return results
@@ -321,18 +327,19 @@ def create_bar(
     unsummed = unsummed.groupby(groupby_cols).sum().reset_index()
     multiple_ballot_types = len(unsummed["CountItemType"].unique()) > 1
 
-    # Now process data
-    ranked = assign_anomaly_score(unsummed)
-    # No anomalies could be detected
-    if ranked.empty:
+    # Now process data - this is the heart of the scoring/ranking algorithm
+    top_ranked = pd.DataFrame()
+    try:
+        ranked = assign_anomaly_score(unsummed)
+        ranked["margins_pct"] = ranked["Count"] / ranked["reporting_unit_total"]
+        ranked_margin = ranked
+        votes_at_stake = calculate_votes_at_stake(ranked_margin)
+        if not for_export:
+            top_ranked = get_most_anomalous(votes_at_stake, 3)
+        else:
+            top_ranked = votes_at_stake
+    except:
         return None
-    ranked["margins_pct"] = ranked["Count"] / ranked["reporting_unit_total"]
-    ranked_margin = ranked
-    votes_at_stake = calculate_votes_at_stake(ranked_margin)
-    if not for_export:
-        top_ranked = get_most_anomalous(votes_at_stake, 3)
-    else:
-        top_ranked = votes_at_stake
     if top_ranked.empty:
         return None
 
