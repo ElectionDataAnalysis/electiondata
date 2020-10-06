@@ -991,80 +991,18 @@ def get_filtered_input_options(session, input_str, filters):
         df = get_relevant_contests(session, filters)
     # check if it's looking for a count of candidates
     elif input_str == "count":
-        # get selections from relevant election and jurisdiction
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
-        selection_df = read_vote_count(
-            session, election_id, reporting_unit_id, ["Selection_Id"], ["Selection_Id"]
-        )
-        selection_ids = selection_df["Selection_Id"].unique()
-
-        # getting all candidate info
-        candidate_selection_df = pd.read_sql_table(
-            "CandidateSelection", session.bind, index_col="Id"
-        )
-        # this has candidate IDs and contest IDs
-        candidate_contest_df = candidate_selection_df[
-            candidate_selection_df.index.isin(selection_ids)
-        ][candidate_selection_df.columns].reset_index()
-        # then we get the candidate names themselves
-        candidate_names_df = pd.read_sql_table(
-            "Candidate", session.bind, index_col="Id"
-        )
-        # and this has candidates, but in name form
-        candidates = get_input_options(session, "candidate", True)
-        candidates_df = pd.DataFrame(candidates)
-        candidates_df.columns = df_cols
-        candidate_names_df = candidate_names_df.merge(
-            candidate_contest_df,
-            how="inner",
-            left_index=True,
-            right_on="Candidate_Id",
-        )
-        candidates_df = candidates_df.merge(
-            candidate_names_df, how="inner", left_on="name", right_on="BallotName"
-        )
-
-        # finally, filter on relevant contests
-        contest_df = get_relevant_contests(session, filters)
-        df = contest_df.merge(
-            candidates_df,
-            how="inner",
-            left_on="name",
-            right_on="parent",
-            suffixes=["_x", None],
-        )[candidates_df.columns]
+        df = read_vote_count(
+            session, election_id, reporting_unit_id, ["Name", "BallotName", "PartyName"], ["parent", "name", "type"]
+        ) 
     else:
-        try:
-            contest_df = get_relevant_contests(session, filters)
-            candidates = get_input_options(session, input_str, True)
-            candidates_df = pd.DataFrame(candidates)
-            candidates_df.columns = df_cols
-            candidates_df = candidates_df.merge(
-                contest_df,
-                how="inner",
-                left_on="parent",
-                right_on="name",
-                suffixes=[None, "_y"],
-            )
-            df = (
-                candidates_df.groupby(["parent", "type"])["name"]
-                .apply(list)
-                .apply(str)
-                .reset_index()
-                .sort_values("parent")
-            )
-            df.columns = ["parent", "type", "name"]
-            df = df[["parent", "name", "type"]]
-            # clean the name column
-            df["name"] = (
-                df["name"]
-                .str.replace(r"\['", "")
-                .str.replace(r"'\]", "")
-                .str.replace(r"', '", "; ")
-            )
-        except:
-            df = pd.DataFrame()
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        df = read_vote_count(
+            session, election_id, reporting_unit_id, ["Name", "BallotName", "PartyName"], ["parent", "name", "type"]
+        ) 
+        df = df[df["name"].str.contains(input_str, case=False)]
     # TODO: handle the "All" and "other" options better
     # TODO: handle sorting numbers better
     return package_display_results(df)
@@ -1346,9 +1284,12 @@ def read_vote_count(
     q = sql.SQL(
         """
         SELECT  DISTINCT {fields}
-        FROM    "VoteCount"
-                JOIN "Contest" on "VoteCount"."Contest_Id" = "Contest"."Id"
-                JOIN "ComposingReportingUnitJoin" cruj ON "VoteCount"."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
+        FROM    "VoteCount" vc
+                JOIN "Contest" on vc."Contest_Id" = "Contest"."Id"
+                JOIN "ComposingReportingUnitJoin" cruj ON vc."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
+                JOIN "CandidateSelection" cs ON vc."Selection_Id" = cs."Id"
+                JOIN "Candidate" c on cs."Candidate_Id" = c."Id"
+                JOIN (SELECT "Id", "Name" as "PartyName" from "Party") p on cs."Party_Id" = p."Id"
         WHERE   "Election_Id" = %s
                 AND "ParentReportingUnit_Id" = %s
         """

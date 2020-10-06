@@ -1221,7 +1221,10 @@ class Analyzer:
                 df = pd.DataFrame(db.get_input_options(self.session, input, True))
                 results = db.package_display_results(df)
             else:
-                results = db.get_filtered_input_options(self.session, input, filters)
+                try:
+                    results = db.get_filtered_input_options(self.session, input, filters)
+                except:
+                    results = None
         if results:
             return results
         return None
