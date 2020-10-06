@@ -1,0 +1,305 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	CO House District 1	CO House District 1
+CandidateContest	CO House District 2	CO House District 2
+CandidateContest	CO House District 3	CO House District 3
+CandidateContest	CO House District 4	CO House District 4
+CandidateContest	CO House District 5	CO House District 5
+CandidateContest	CO House District 6	CO House District 6
+CandidateContest	CO House District 7	CO House District 7
+CandidateContest	CO House District 8	CO House District 8
+CandidateContest	CO House District 9	CO House District 9
+CandidateContest	CO House District 10	CO House District 10
+CandidateContest	CO House District 11	CO House District 11
+CandidateContest	CO House District 12	CO House District 12
+CandidateContest	CO House District 13	CO House District 13
+CandidateContest	CO House District 14	CO House District 14
+CandidateContest	CO House District 15	CO House District 15
+CandidateContest	CO House District 16	CO House District 16
+CandidateContest	CO House District 17	CO House District 17
+CandidateContest	CO House District 18	CO House District 18
+CandidateContest	CO House District 19	CO House District 19
+CandidateContest	CO House District 20	CO House District 20
+CandidateContest	CO House District 21	CO House District 21
+CandidateContest	CO House District 22	CO House District 22
+CandidateContest	CO House District 23	CO House District 23
+CandidateContest	CO House District 24	CO House District 24
+CandidateContest	CO House District 25	CO House District 25
+CandidateContest	CO House District 26	CO House District 26
+CandidateContest	CO House District 27	CO House District 27
+CandidateContest	CO House District 28	CO House District 28
+CandidateContest	CO House District 29	CO House District 29
+CandidateContest	CO House District 30	CO House District 30
+CandidateContest	CO House District 31	CO House District 31
+CandidateContest	CO House District 32	CO House District 32
+CandidateContest	CO House District 33	CO House District 33
+CandidateContest	CO House District 34	CO House District 34
+CandidateContest	CO House District 35	CO House District 35
+CandidateContest	CO House District 36	CO House District 36
+CandidateContest	CO House District 37	CO House District 37
+CandidateContest	CO House District 38	CO House District 38
+CandidateContest	CO House District 39	CO House District 39
+CandidateContest	CO House District 40	CO House District 40
+CandidateContest	CO House District 41	CO House District 41
+CandidateContest	CO House District 42	CO House District 42
+CandidateContest	CO House District 43	CO House District 43
+CandidateContest	CO House District 44	CO House District 44
+CandidateContest	CO House District 45	CO House District 45
+CandidateContest	CO House District 46	CO House District 46
+CandidateContest	CO House District 47	CO House District 47
+CandidateContest	CO House District 48	CO House District 48
+CandidateContest	CO House District 49	CO House District 49
+CandidateContest	CO House District 50	CO House District 50
+CandidateContest	CO House District 51	CO House District 51
+CandidateContest	CO House District 52	CO House District 52
+CandidateContest	CO House District 53	CO House District 53
+CandidateContest	CO House District 54	CO House District 54
+CandidateContest	CO House District 55	CO House District 55
+CandidateContest	CO House District 56	CO House District 56
+CandidateContest	CO House District 57	CO House District 57
+CandidateContest	CO House District 58	CO House District 58
+CandidateContest	CO House District 59	CO House District 59
+CandidateContest	CO House District 60	CO House District 60
+CandidateContest	CO House District 61	CO House District 61
+CandidateContest	CO House District 62	CO House District 62
+CandidateContest	CO House District 63	CO House District 63
+CandidateContest	CO House District 64	CO House District 64
+CandidateContest	CO House District 65	CO House District 65
+CandidateContest	CO Senate District 1	CO Senate District 1
+CandidateContest	CO Senate District 2	CO Senate District 2
+CandidateContest	CO Senate District 3	CO Senate District 3
+CandidateContest	CO Senate District 4	CO Senate District 4
+CandidateContest	CO Senate District 5	CO Senate District 5
+CandidateContest	CO Senate District 6	CO Senate District 6
+CandidateContest	CO Senate District 7	CO Senate District 7
+CandidateContest	CO Senate District 8	CO Senate District 8
+CandidateContest	CO Senate District 9	CO Senate District 9
+CandidateContest	CO Senate District 10	CO Senate District 10
+CandidateContest	CO Senate District 11	CO Senate District 11
+CandidateContest	CO Senate District 12	CO Senate District 12
+CandidateContest	CO Senate District 13	CO Senate District 13
+CandidateContest	CO Senate District 14	CO Senate District 14
+CandidateContest	CO Senate District 15	CO Senate District 15
+CandidateContest	CO Senate District 16	CO Senate District 16
+CandidateContest	CO Senate District 17	CO Senate District 17
+CandidateContest	CO Senate District 18	CO Senate District 18
+CandidateContest	CO Senate District 19	CO Senate District 19
+CandidateContest	CO Senate District 20	CO Senate District 20
+CandidateContest	CO Senate District 21	CO Senate District 21
+CandidateContest	CO Senate District 22	CO Senate District 22
+CandidateContest	CO Senate District 23	CO Senate District 23
+CandidateContest	CO Senate District 24	CO Senate District 24
+CandidateContest	CO Senate District 25	CO Senate District 25
+CandidateContest	CO Senate District 26	CO Senate District 26
+CandidateContest	CO Senate District 27	CO Senate District 27
+CandidateContest	CO Senate District 28	CO Senate District 28
+CandidateContest	CO Senate District 29	CO Senate District 29
+CandidateContest	CO Senate District 30	CO Senate District 30
+CandidateContest	CO Senate District 31	CO Senate District 31
+CandidateContest	CO Senate District 32	CO Senate District 32
+CandidateContest	CO Senate District 33	CO Senate District 33
+CandidateContest	CO Senate District 34	CO Senate District 34
+CandidateContest	CO Senate District 35	CO Senate District 35
+CandidateContest	US House CO District 1	US House CO District 1
+CandidateContest	US House CO District 2	US House CO District 2
+CandidateContest	US House CO District 3	US House CO District 3
+CandidateContest	US House CO District 4	US House CO District 4
+CandidateContest	US House CO District 5	US House CO District 5
+CandidateContest	US House CO District 6	US House CO District 6
+CandidateContest	US House CO District 7	US House CO District 7
+CandidateContest	US President (CO)	US President (CO)
+CandidateContest	CO Governor	CO Governor
+CandidateContest	US Senate CO	US Senate CO
+CandidateContest	CO Attorney General	CO Attorney General
+CandidateContest	CO Lieutenant Governor	CO Lieutenant Governor
+CandidateContest	CO Treasurer	CO Treasurer
+CandidateContest	CO Secretary of State	CO Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
+Election	2018 General	2018 General
+Election	2018 Primary	2018 Primary
+Election	2016 General	2016 General
+Election	2016 Primary	2016 Primary
+Party	Democratic Party	Democratic Party
+Party	Republican Party	Republican Party
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+Party	American Constitution Party	American Constitution Party
+Party	Unity Party	Unity Party
+Party	Approval Voting Party	Approval Voting Party
+Party	Unaffiliated	Unaffiliated
+Party	Independent	Independent
+ReportingUnit	Colorado;CO House District 1	Colorado;CO House District 1
+ReportingUnit	Colorado;CO House District 2	Colorado;CO House District 2
+ReportingUnit	Colorado;CO House District 3	Colorado;CO House District 3
+ReportingUnit	Colorado;CO House District 4	Colorado;CO House District 4
+ReportingUnit	Colorado;CO House District 5	Colorado;CO House District 5
+ReportingUnit	Colorado;CO House District 6	Colorado;CO House District 6
+ReportingUnit	Colorado;CO House District 7	Colorado;CO House District 7
+ReportingUnit	Colorado;CO House District 8	Colorado;CO House District 8
+ReportingUnit	Colorado;CO House District 9	Colorado;CO House District 9
+ReportingUnit	Colorado;CO House District 10	Colorado;CO House District 10
+ReportingUnit	Colorado;CO House District 11	Colorado;CO House District 11
+ReportingUnit	Colorado;CO House District 12	Colorado;CO House District 12
+ReportingUnit	Colorado;CO House District 13	Colorado;CO House District 13
+ReportingUnit	Colorado;CO House District 14	Colorado;CO House District 14
+ReportingUnit	Colorado;CO House District 15	Colorado;CO House District 15
+ReportingUnit	Colorado;CO House District 16	Colorado;CO House District 16
+ReportingUnit	Colorado;CO House District 17	Colorado;CO House District 17
+ReportingUnit	Colorado;CO House District 18	Colorado;CO House District 18
+ReportingUnit	Colorado;CO House District 19	Colorado;CO House District 19
+ReportingUnit	Colorado;CO House District 20	Colorado;CO House District 20
+ReportingUnit	Colorado;CO House District 21	Colorado;CO House District 21
+ReportingUnit	Colorado;CO House District 22	Colorado;CO House District 22
+ReportingUnit	Colorado;CO House District 23	Colorado;CO House District 23
+ReportingUnit	Colorado;CO House District 24	Colorado;CO House District 24
+ReportingUnit	Colorado;CO House District 25	Colorado;CO House District 25
+ReportingUnit	Colorado;CO House District 26	Colorado;CO House District 26
+ReportingUnit	Colorado;CO House District 27	Colorado;CO House District 27
+ReportingUnit	Colorado;CO House District 28	Colorado;CO House District 28
+ReportingUnit	Colorado;CO House District 29	Colorado;CO House District 29
+ReportingUnit	Colorado;CO House District 30	Colorado;CO House District 30
+ReportingUnit	Colorado;CO House District 31	Colorado;CO House District 31
+ReportingUnit	Colorado;CO House District 32	Colorado;CO House District 32
+ReportingUnit	Colorado;CO House District 33	Colorado;CO House District 33
+ReportingUnit	Colorado;CO House District 34	Colorado;CO House District 34
+ReportingUnit	Colorado;CO House District 35	Colorado;CO House District 35
+ReportingUnit	Colorado;CO House District 36	Colorado;CO House District 36
+ReportingUnit	Colorado;CO House District 37	Colorado;CO House District 37
+ReportingUnit	Colorado;CO House District 38	Colorado;CO House District 38
+ReportingUnit	Colorado;CO House District 39	Colorado;CO House District 39
+ReportingUnit	Colorado;CO House District 40	Colorado;CO House District 40
+ReportingUnit	Colorado;CO House District 41	Colorado;CO House District 41
+ReportingUnit	Colorado;CO House District 42	Colorado;CO House District 42
+ReportingUnit	Colorado;CO House District 43	Colorado;CO House District 43
+ReportingUnit	Colorado;CO House District 44	Colorado;CO House District 44
+ReportingUnit	Colorado;CO House District 45	Colorado;CO House District 45
+ReportingUnit	Colorado;CO House District 46	Colorado;CO House District 46
+ReportingUnit	Colorado;CO House District 47	Colorado;CO House District 47
+ReportingUnit	Colorado;CO House District 48	Colorado;CO House District 48
+ReportingUnit	Colorado;CO House District 49	Colorado;CO House District 49
+ReportingUnit	Colorado;CO House District 50	Colorado;CO House District 50
+ReportingUnit	Colorado;CO House District 51	Colorado;CO House District 51
+ReportingUnit	Colorado;CO House District 52	Colorado;CO House District 52
+ReportingUnit	Colorado;CO House District 53	Colorado;CO House District 53
+ReportingUnit	Colorado;CO House District 54	Colorado;CO House District 54
+ReportingUnit	Colorado;CO House District 55	Colorado;CO House District 55
+ReportingUnit	Colorado;CO House District 56	Colorado;CO House District 56
+ReportingUnit	Colorado;CO House District 57	Colorado;CO House District 57
+ReportingUnit	Colorado;CO House District 58	Colorado;CO House District 58
+ReportingUnit	Colorado;CO House District 59	Colorado;CO House District 59
+ReportingUnit	Colorado;CO House District 60	Colorado;CO House District 60
+ReportingUnit	Colorado;CO House District 61	Colorado;CO House District 61
+ReportingUnit	Colorado;CO House District 62	Colorado;CO House District 62
+ReportingUnit	Colorado;CO House District 63	Colorado;CO House District 63
+ReportingUnit	Colorado;CO House District 64	Colorado;CO House District 64
+ReportingUnit	Colorado;CO House District 65	Colorado;CO House District 65
+ReportingUnit	Colorado;CO Senate District 1	Colorado;CO Senate District 1
+ReportingUnit	Colorado;CO Senate District 2	Colorado;CO Senate District 2
+ReportingUnit	Colorado;CO Senate District 3	Colorado;CO Senate District 3
+ReportingUnit	Colorado;CO Senate District 4	Colorado;CO Senate District 4
+ReportingUnit	Colorado;CO Senate District 5	Colorado;CO Senate District 5
+ReportingUnit	Colorado;CO Senate District 6	Colorado;CO Senate District 6
+ReportingUnit	Colorado;CO Senate District 7	Colorado;CO Senate District 7
+ReportingUnit	Colorado;CO Senate District 8	Colorado;CO Senate District 8
+ReportingUnit	Colorado;CO Senate District 9	Colorado;CO Senate District 9
+ReportingUnit	Colorado;CO Senate District 10	Colorado;CO Senate District 10
+ReportingUnit	Colorado;CO Senate District 11	Colorado;CO Senate District 11
+ReportingUnit	Colorado;CO Senate District 12	Colorado;CO Senate District 12
+ReportingUnit	Colorado;CO Senate District 13	Colorado;CO Senate District 13
+ReportingUnit	Colorado;CO Senate District 14	Colorado;CO Senate District 14
+ReportingUnit	Colorado;CO Senate District 15	Colorado;CO Senate District 15
+ReportingUnit	Colorado;CO Senate District 16	Colorado;CO Senate District 16
+ReportingUnit	Colorado;CO Senate District 17	Colorado;CO Senate District 17
+ReportingUnit	Colorado;CO Senate District 18	Colorado;CO Senate District 18
+ReportingUnit	Colorado;CO Senate District 19	Colorado;CO Senate District 19
+ReportingUnit	Colorado;CO Senate District 20	Colorado;CO Senate District 20
+ReportingUnit	Colorado;CO Senate District 21	Colorado;CO Senate District 21
+ReportingUnit	Colorado;CO Senate District 22	Colorado;CO Senate District 22
+ReportingUnit	Colorado;CO Senate District 23	Colorado;CO Senate District 23
+ReportingUnit	Colorado;CO Senate District 24	Colorado;CO Senate District 24
+ReportingUnit	Colorado;CO Senate District 25	Colorado;CO Senate District 25
+ReportingUnit	Colorado;CO Senate District 26	Colorado;CO Senate District 26
+ReportingUnit	Colorado;CO Senate District 27	Colorado;CO Senate District 27
+ReportingUnit	Colorado;CO Senate District 28	Colorado;CO Senate District 28
+ReportingUnit	Colorado;CO Senate District 29	Colorado;CO Senate District 29
+ReportingUnit	Colorado;CO Senate District 30	Colorado;CO Senate District 30
+ReportingUnit	Colorado;CO Senate District 31	Colorado;CO Senate District 31
+ReportingUnit	Colorado;CO Senate District 32	Colorado;CO Senate District 32
+ReportingUnit	Colorado;CO Senate District 33	Colorado;CO Senate District 33
+ReportingUnit	Colorado;CO Senate District 34	Colorado;CO Senate District 34
+ReportingUnit	Colorado;CO Senate District 35	Colorado;CO Senate District 35
+ReportingUnit	Colorado;US House CO District 1	Colorado;US House CO District 1
+ReportingUnit	Colorado;US House CO District 2	Colorado;US House CO District 2
+ReportingUnit	Colorado;US House CO District 3	Colorado;US House CO District 3
+ReportingUnit	Colorado;US House CO District 4	Colorado;US House CO District 4
+ReportingUnit	Colorado;US House CO District 5	Colorado;US House CO District 5
+ReportingUnit	Colorado;US House CO District 6	Colorado;US House CO District 6
+ReportingUnit	Colorado;US House CO District 7	Colorado;US House CO District 7
+ReportingUnit	Colorado	Colorado
+ReportingUnit	Colorado;Adams County	ADAMS
+ReportingUnit	Colorado;Alamosa County	ALAMOSA
+ReportingUnit	Colorado;Arapahoe County	ARAPAHOE
+ReportingUnit	Colorado;Archuleta County	ARCHULETA
+ReportingUnit	Colorado;Baca County	BACA
+ReportingUnit	Colorado;Bent County	BENT
+ReportingUnit	Colorado;Boulder County	BOULDER
+ReportingUnit	Colorado;Broomfield County	BROOMFIELD
+ReportingUnit	Colorado;Chaffee County	CHAFFEE
+ReportingUnit	Colorado;Cheyenne County	CHEYENNE
+ReportingUnit	Colorado;Clear Creek County	CLEAR CREEK
+ReportingUnit	Colorado;Conejos County	CONEJOS
+ReportingUnit	Colorado;Costilla County	COSTILLA
+ReportingUnit	Colorado;Crowley County	CROWLEY
+ReportingUnit	Colorado;Custer County	CUSTER
+ReportingUnit	Colorado;Delta County	DELTA
+ReportingUnit	Colorado;Denver County	DENVER
+ReportingUnit	Colorado;Dolores County	DOLORES
+ReportingUnit	Colorado;Douglas County	DOUGLAS
+ReportingUnit	Colorado;Eagle County	EAGLE
+ReportingUnit	Colorado;El Paso County	EL PASO
+ReportingUnit	Colorado;Elbert County	ELBERT
+ReportingUnit	Colorado;Fremont County	FREMONT
+ReportingUnit	Colorado;Garfield County	GARFIELD
+ReportingUnit	Colorado;Gilpin County	GILPIN
+ReportingUnit	Colorado;Grand County	GRAND
+ReportingUnit	Colorado;Gunnison County	GUNNISON
+ReportingUnit	Colorado;Hinsdale County	HINSDALE
+ReportingUnit	Colorado;Huerfano County	HUERFANO
+ReportingUnit	Colorado;Jackson County	JACKSON
+ReportingUnit	Colorado;Jefferson County	JEFFERSON
+ReportingUnit	Colorado;Kiowa County	KIOWA
+ReportingUnit	Colorado;Kit Carson County	KIT CARSON
+ReportingUnit	Colorado;La Plata County	LA PLATA
+ReportingUnit	Colorado;Lake County	LAKE
+ReportingUnit	Colorado;Larimer County	LARIMER
+ReportingUnit	Colorado;Las Animas County	LAS ANIMAS
+ReportingUnit	Colorado;Lincoln County	LINCOLN
+ReportingUnit	Colorado;Logan County	LOGAN
+ReportingUnit	Colorado;Mesa County	MESA
+ReportingUnit	Colorado;Mineral County	MINERAL
+ReportingUnit	Colorado;Moffat County	MOFFAT
+ReportingUnit	Colorado;Montezuma County	MONTEZUMA
+ReportingUnit	Colorado;Montrose County	MONTROSE
+ReportingUnit	Colorado;Morgan County	MORGAN
+ReportingUnit	Colorado;Otero County	OTERO
+ReportingUnit	Colorado;Ouray County	OURAY
+ReportingUnit	Colorado;Park County	PARK
+ReportingUnit	Colorado;Phillips County	PHILLIPS
+ReportingUnit	Colorado;Pitkin County	PITKIN
+ReportingUnit	Colorado;Prowers County	PROWERS
+ReportingUnit	Colorado;Pueblo County	PUEBLO
+ReportingUnit	Colorado;Rio Blanco County	RIO BLANCO
+ReportingUnit	Colorado;Rio Grande County	RIO GRANDE
+ReportingUnit	Colorado;Routt County	ROUTT
+ReportingUnit	Colorado;Saguache County	SAGUACHE
+ReportingUnit	Colorado;San Juan County	SAN JUAN
+ReportingUnit	Colorado;San Miguel County	SAN MIGUEL
+ReportingUnit	Colorado;Sedgwick County	SEDGWICK
+ReportingUnit	Colorado;Summit County	SUMMIT
+ReportingUnit	Colorado;Teller County	TELLER
+ReportingUnit	Colorado;Washington County	WASHINGTON
+ReportingUnit	Colorado;Weld County	WELD
+ReportingUnit	Colorado;Yuma County	YUMA
+BallotMeasureSelection	Yes	YES VOTES
+BallotMeasureSelection	No	NO VOTES
