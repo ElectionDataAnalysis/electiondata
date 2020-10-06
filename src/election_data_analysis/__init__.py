@@ -1181,15 +1181,15 @@ class Analyzer:
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
-    def display_options(self, input_field: str, verbose: bool = False, filters: list = None):
+    def display_options(self, input_str: str, verbose: bool = False, filters: list = None):
         if not verbose:
-            results = db.get_input_field_options(self.session, input_field, False)
+            results = db.get_input_options(self.session, input_str, False)
         else:
             if not filters:
-                df = pd.DataFrame(db.get_input_field_options(self.session, input_field, True))
+                df = pd.DataFrame(db.get_input_options(self.session, input_str, True))
                 results = db.package_display_results(df)
             else:
-                results = db.get_filtered_input_field_options(self.session, input_field, filters)
+                results = db.get_filtered_input_options(self.session, input_str, filters)
         if results:
             return results
         return None
@@ -1228,8 +1228,8 @@ class Analyzer:
         h_election_id = db.name_to_id(self.session, "Election", h_election)
         v_election_id = db.name_to_id(self.session, "Election", v_election)
         # *_type is either candidates or contests
-        h_count_item_type, h_type = self.split_category_input_field(h_category)
-        v_count_item_type, v_type = self.split_category_input_field(v_category)
+        h_count_item_type, h_type = self.split_category_input(h_category)
+        v_count_item_type, v_type = self.split_category_input(v_category)
         if h_count == "All Candidates" or h_count == "All Contests":
             h_count_id = -1
         elif h_type == "candidates":

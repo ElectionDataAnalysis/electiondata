@@ -694,11 +694,11 @@ def remove_vote_counts(connection, cursor, id: int) -> str:
     return err_str
 
 
-def get_input_options(session, input_info, verbose):
+def get_input_options(session, input_str, verbose):
     """Returns a list of response options based on the input"""
     # input comes as a pythonic (snake case) input, need to
     # change to match DB element naming format
-    name_parts = input_info.split("_")
+    name_parts = input_str.split("_")
     search_str = "".join([name_part.capitalize() for name_part in name_parts])
 
     if search_str in [
