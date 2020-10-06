@@ -1,0 +1,115 @@
+Name	ElectionDistrict
+CO House District 1	Colorado;CO House District 1
+CO House District 2	Colorado;CO House District 2
+CO House District 3	Colorado;CO House District 3
+CO House District 4	Colorado;CO House District 4
+CO House District 5	Colorado;CO House District 5
+CO House District 6	Colorado;CO House District 6
+CO House District 7	Colorado;CO House District 7
+CO House District 8	Colorado;CO House District 8
+CO House District 9	Colorado;CO House District 9
+CO House District 10	Colorado;CO House District 10
+CO House District 11	Colorado;CO House District 11
+CO House District 12	Colorado;CO House District 12
+CO House District 13	Colorado;CO House District 13
+CO House District 14	Colorado;CO House District 14
+CO House District 15	Colorado;CO House District 15
+CO House District 16	Colorado;CO House District 16
+CO House District 17	Colorado;CO House District 17
+CO House District 18	Colorado;CO House District 18
+CO House District 19	Colorado;CO House District 19
+CO House District 20	Colorado;CO House District 20
+CO House District 21	Colorado;CO House District 21
+CO House District 22	Colorado;CO House District 22
+CO House District 23	Colorado;CO House District 23
+CO House District 24	Colorado;CO House District 24
+CO House District 25	Colorado;CO House District 25
+CO House District 26	Colorado;CO House District 26
+CO House District 27	Colorado;CO House District 27
+CO House District 28	Colorado;CO House District 28
+CO House District 29	Colorado;CO House District 29
+CO House District 30	Colorado;CO House District 30
+CO House District 31	Colorado;CO House District 31
+CO House District 32	Colorado;CO House District 32
+CO House District 33	Colorado;CO House District 33
+CO House District 34	Colorado;CO House District 34
+CO House District 35	Colorado;CO House District 35
+CO House District 36	Colorado;CO House District 36
+CO House District 37	Colorado;CO House District 37
+CO House District 38	Colorado;CO House District 38
+CO House District 39	Colorado;CO House District 39
+CO House District 40	Colorado;CO House District 40
+CO House District 41	Colorado;CO House District 41
+CO House District 42	Colorado;CO House District 42
+CO House District 43	Colorado;CO House District 43
+CO House District 44	Colorado;CO House District 44
+CO House District 45	Colorado;CO House District 45
+CO House District 46	Colorado;CO House District 46
+CO House District 47	Colorado;CO House District 47
+CO House District 48	Colorado;CO House District 48
+CO House District 49	Colorado;CO House District 49
+CO House District 50	Colorado;CO House District 50
+CO House District 51	Colorado;CO House District 51
+CO House District 52	Colorado;CO House District 52
+CO House District 53	Colorado;CO House District 53
+CO House District 54	Colorado;CO House District 54
+CO House District 55	Colorado;CO House District 55
+CO House District 56	Colorado;CO House District 56
+CO House District 57	Colorado;CO House District 57
+CO House District 58	Colorado;CO House District 58
+CO House District 59	Colorado;CO House District 59
+CO House District 60	Colorado;CO House District 60
+CO House District 61	Colorado;CO House District 61
+CO House District 62	Colorado;CO House District 62
+CO House District 63	Colorado;CO House District 63
+CO House District 64	Colorado;CO House District 64
+CO House District 65	Colorado;CO House District 65
+CO Senate District 1	Colorado;CO Senate District 1
+CO Senate District 2	Colorado;CO Senate District 2
+CO Senate District 3	Colorado;CO Senate District 3
+CO Senate District 4	Colorado;CO Senate District 4
+CO Senate District 5	Colorado;CO Senate District 5
+CO Senate District 6	Colorado;CO Senate District 6
+CO Senate District 7	Colorado;CO Senate District 7
+CO Senate District 8	Colorado;CO Senate District 8
+CO Senate District 9	Colorado;CO Senate District 9
+CO Senate District 10	Colorado;CO Senate District 10
+CO Senate District 11	Colorado;CO Senate District 11
+CO Senate District 12	Colorado;CO Senate District 12
+CO Senate District 13	Colorado;CO Senate District 13
+CO Senate District 14	Colorado;CO Senate District 14
+CO Senate District 15	Colorado;CO Senate District 15
+CO Senate District 16	Colorado;CO Senate District 16
+CO Senate District 17	Colorado;CO Senate District 17
+CO Senate District 18	Colorado;CO Senate District 18
+CO Senate District 19	Colorado;CO Senate District 19
+CO Senate District 20	Colorado;CO Senate District 20
+CO Senate District 21	Colorado;CO Senate District 21
+CO Senate District 22	Colorado;CO Senate District 22
+CO Senate District 23	Colorado;CO Senate District 23
+CO Senate District 24	Colorado;CO Senate District 24
+CO Senate District 25	Colorado;CO Senate District 25
+CO Senate District 26	Colorado;CO Senate District 26
+CO Senate District 27	Colorado;CO Senate District 27
+CO Senate District 28	Colorado;CO Senate District 28
+CO Senate District 29	Colorado;CO Senate District 29
+CO Senate District 30	Colorado;CO Senate District 30
+CO Senate District 31	Colorado;CO Senate District 31
+CO Senate District 32	Colorado;CO Senate District 32
+CO Senate District 33	Colorado;CO Senate District 33
+CO Senate District 34	Colorado;CO Senate District 34
+CO Senate District 35	Colorado;CO Senate District 35
+US House CO District 1	Colorado;US House CO District 1
+US House CO District 2	Colorado;US House CO District 2
+US House CO District 3	Colorado;US House CO District 3
+US House CO District 4	Colorado;US House CO District 4
+US House CO District 5	Colorado;US House CO District 5
+US House CO District 6	Colorado;US House CO District 6
+US House CO District 7	Colorado;US House CO District 7
+US President (CO)	Colorado
+CO Governor	Colorado
+US Senate CO	Colorado
+CO Attorney General	Colorado
+CO Lieutenant Governor	Colorado
+CO Treasurer	Colorado
+CO Secretary of State	Colorado

@@ -1,0 +1,173 @@
+Name	ReportingUnitType
+Colorado;CO House District 1	state-house
+Colorado;CO House District 2	state-house
+Colorado;CO House District 3	state-house
+Colorado;CO House District 4	state-house
+Colorado;CO House District 5	state-house
+Colorado;CO House District 6	state-house
+Colorado;CO House District 7	state-house
+Colorado;CO House District 8	state-house
+Colorado;CO House District 9	state-house
+Colorado;CO House District 10	state-house
+Colorado;CO House District 11	state-house
+Colorado;CO House District 12	state-house
+Colorado;CO House District 13	state-house
+Colorado;CO House District 14	state-house
+Colorado;CO House District 15	state-house
+Colorado;CO House District 16	state-house
+Colorado;CO House District 17	state-house
+Colorado;CO House District 18	state-house
+Colorado;CO House District 19	state-house
+Colorado;CO House District 20	state-house
+Colorado;CO House District 21	state-house
+Colorado;CO House District 22	state-house
+Colorado;CO House District 23	state-house
+Colorado;CO House District 24	state-house
+Colorado;CO House District 25	state-house
+Colorado;CO House District 26	state-house
+Colorado;CO House District 27	state-house
+Colorado;CO House District 28	state-house
+Colorado;CO House District 29	state-house
+Colorado;CO House District 30	state-house
+Colorado;CO House District 31	state-house
+Colorado;CO House District 32	state-house
+Colorado;CO House District 33	state-house
+Colorado;CO House District 34	state-house
+Colorado;CO House District 35	state-house
+Colorado;CO House District 36	state-house
+Colorado;CO House District 37	state-house
+Colorado;CO House District 38	state-house
+Colorado;CO House District 39	state-house
+Colorado;CO House District 40	state-house
+Colorado;CO House District 41	state-house
+Colorado;CO House District 42	state-house
+Colorado;CO House District 43	state-house
+Colorado;CO House District 44	state-house
+Colorado;CO House District 45	state-house
+Colorado;CO House District 46	state-house
+Colorado;CO House District 47	state-house
+Colorado;CO House District 48	state-house
+Colorado;CO House District 49	state-house
+Colorado;CO House District 50	state-house
+Colorado;CO House District 51	state-house
+Colorado;CO House District 52	state-house
+Colorado;CO House District 53	state-house
+Colorado;CO House District 54	state-house
+Colorado;CO House District 55	state-house
+Colorado;CO House District 56	state-house
+Colorado;CO House District 57	state-house
+Colorado;CO House District 58	state-house
+Colorado;CO House District 59	state-house
+Colorado;CO House District 60	state-house
+Colorado;CO House District 61	state-house
+Colorado;CO House District 62	state-house
+Colorado;CO House District 63	state-house
+Colorado;CO House District 64	state-house
+Colorado;CO House District 65	state-house
+Colorado;CO Senate District 1	state-senate
+Colorado;CO Senate District 2	state-senate
+Colorado;CO Senate District 3	state-senate
+Colorado;CO Senate District 4	state-senate
+Colorado;CO Senate District 5	state-senate
+Colorado;CO Senate District 6	state-senate
+Colorado;CO Senate District 7	state-senate
+Colorado;CO Senate District 8	state-senate
+Colorado;CO Senate District 9	state-senate
+Colorado;CO Senate District 10	state-senate
+Colorado;CO Senate District 11	state-senate
+Colorado;CO Senate District 12	state-senate
+Colorado;CO Senate District 13	state-senate
+Colorado;CO Senate District 14	state-senate
+Colorado;CO Senate District 15	state-senate
+Colorado;CO Senate District 16	state-senate
+Colorado;CO Senate District 17	state-senate
+Colorado;CO Senate District 18	state-senate
+Colorado;CO Senate District 19	state-senate
+Colorado;CO Senate District 20	state-senate
+Colorado;CO Senate District 21	state-senate
+Colorado;CO Senate District 22	state-senate
+Colorado;CO Senate District 23	state-senate
+Colorado;CO Senate District 24	state-senate
+Colorado;CO Senate District 25	state-senate
+Colorado;CO Senate District 26	state-senate
+Colorado;CO Senate District 27	state-senate
+Colorado;CO Senate District 28	state-senate
+Colorado;CO Senate District 29	state-senate
+Colorado;CO Senate District 30	state-senate
+Colorado;CO Senate District 31	state-senate
+Colorado;CO Senate District 32	state-senate
+Colorado;CO Senate District 33	state-senate
+Colorado;CO Senate District 34	state-senate
+Colorado;CO Senate District 35	state-senate
+Colorado;US House CO District 1	congressional
+Colorado;US House CO District 2	congressional
+Colorado;US House CO District 3	congressional
+Colorado;US House CO District 4	congressional
+Colorado;US House CO District 5	congressional
+Colorado;US House CO District 6	congressional
+Colorado;US House CO District 7	congressional
+Colorado	state
+Colorado;Adams County	county
+Colorado;Alamosa County	county
+Colorado;Arapahoe County	county
+Colorado;Archuleta County	county
+Colorado;Baca County	county
+Colorado;Bent County	county
+Colorado;Boulder County	county
+Colorado;Broomfield County	county
+Colorado;Chaffee County	county
+Colorado;Cheyenne County	county
+Colorado;Clear Creek County	county
+Colorado;Conejos County	county
+Colorado;Costilla County	county
+Colorado;Crowley County	county
+Colorado;Custer County	county
+Colorado;Delta County	county
+Colorado;Denver County	county
+Colorado;Dolores County	county
+Colorado;Douglas County	county
+Colorado;Eagle County	county
+Colorado;El Paso County	county
+Colorado;Elbert County	county
+Colorado;Fremont County	county
+Colorado;Garfield County	county
+Colorado;Gilpin County	county
+Colorado;Grand County	county
+Colorado;Gunnison County	county
+Colorado;Hinsdale County	county
+Colorado;Huerfano County	county
+Colorado;Jackson County	county
+Colorado;Jefferson County	county
+Colorado;Kiowa County	county
+Colorado;Kit Carson County	county
+Colorado;La Plata County	county
+Colorado;Lake County	county
+Colorado;Larimer County	county
+Colorado;Las Animas County	county
+Colorado;Lincoln County	county
+Colorado;Logan County	county
+Colorado;Mesa County	county
+Colorado;Mineral County	county
+Colorado;Moffat County	county
+Colorado;Montezuma County	county
+Colorado;Montrose County	county
+Colorado;Morgan County	county
+Colorado;Otero County	county
+Colorado;Ouray County	county
+Colorado;Park County	county
+Colorado;Phillips County	county
+Colorado;Pitkin County	county
+Colorado;Prowers County	county
+Colorado;Pueblo County	county
+Colorado;Rio Blanco County	county
+Colorado;Rio Grande County	county
+Colorado;Routt County	county
+Colorado;Saguache County	county
+Colorado;San Juan County	county
+Colorado;San Miguel County	county
+Colorado;Sedgwick County	county
+Colorado;Summit County	county
+Colorado;Teller County	county
+Colorado;Washington County	county
+Colorado;Weld County	county
+Colorado;Yuma County	county
