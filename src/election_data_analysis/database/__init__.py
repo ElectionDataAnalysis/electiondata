@@ -911,9 +911,22 @@ def get_filtered_input_options(session, input_str, filters):
         }
         df = pd.DataFrame(data=data)
     elif input_str == "contest":
-        contest_type
+        contest_type = list(set(contest_types_model) & set(filters))[0]
+
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        reporting_unit = name_from_id(cursor, "ReportingUnit", reporting_unit_id)
+        connection.close()
+
+        contest_type_df = pd.DataFrame([{
+            "parent": reporting_unit,
+            "name": f"All {contest_type}",
+            "type": contest_type
+        }])
         contest_df = get_relevant_contests(session, filters)
-        df = contest_df[contest_df["type"].isin(filters)]
+        contest_df = contest_df[contest_df["type"].isin(filters)]
+        df = pd.concat([contest_type_df, contest_df])
     # Assume these others are candidate searching. This is handled differently
     # because the results variable is structured slightly differently
     elif input_str == "subdivision_type":
