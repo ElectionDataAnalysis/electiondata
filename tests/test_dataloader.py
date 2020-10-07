@@ -278,9 +278,9 @@ def test_nc_senate_totals():
         check_contest_totals(
             "2020 Primary",
             "North Carolina",
-            "US Senate NC",
+            "US Senate NC (Democratic Party)",
         )
-        == 4691133
+        == 1260090
     )
 
 @pytest.mark.skipif(not ok["nc20p"], reason="No NC 2020 Primary data")
