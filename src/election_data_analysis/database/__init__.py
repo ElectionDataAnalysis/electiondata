@@ -428,7 +428,7 @@ def insert_to_cdf_db(
     except Id and <timestamp> if any. Returns an error message (or None)"""
 
     # initialize connection and cursor
-    working = m.generic_clean(df)
+    working, err_df = m.generic_clean(df)
     connection = engine.raw_connection()
     cursor = connection.cursor()
 
@@ -570,7 +570,7 @@ def append_id_to_dframe(
     df_cols = list(col_map.keys())
 
     # create temp db table with info from df, without index
-    df = m.generic_clean(df)
+    df, err_df = m.generic_clean(df)
     df[df_cols].fillna("").to_sql(temp_table, engine, index_label="dataframe_index")
     # TODO fillna('') probably redundant
 
@@ -589,7 +589,7 @@ def append_id_to_dframe(
     ).format(
         tt=sql.Identifier(temp_table), t=sql.Identifier(table), on_clause=on_clause
     )
-    w = m.generic_clean(pd.read_sql_query(q, connection).set_index("dataframe_index"))
+    w, err_df = m.generic_clean(pd.read_sql_query(q, connection).set_index("dataframe_index"))
 
     # drop temp db table
     q = sql.SQL("DROP TABLE {temp_table}").format(temp_table=sql.Identifier(temp_table))
