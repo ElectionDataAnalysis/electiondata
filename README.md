@@ -86,6 +86,8 @@ The jurisdiction files in this repository follow certain conventions. Many of th
  * [Stephanie Singer](http://campaignscientific.com/), Hatfield School of Government (Portland State University), former Chair, Philadelphia County Board of Elections
  * Janaki Raghuram Srungavarapu, Hatfield School of Government (Portland State University)
  * Eric Tsai, Hatfield School of Government (Portland State University)
+ * Bryan Loy
+ * Jon Wolgamott
 
 # Funding
 Funding provided October 2019 - April 2021 by the National Science Foundation
