@@ -82,6 +82,8 @@ US Virgin Islands"""
 
 db_pars = ["host", "port", "dbname", "user", "password"]
 
+contest_types_model = ["state", "congressional", "judicial", "state-house", "state-senate"]
+
 
 def get_database_names(con):
     """Return dataframe with one column called `datname` """
@@ -909,6 +911,7 @@ def get_filtered_input_options(session, input_str, filters):
         }
         df = pd.DataFrame(data=data)
     elif input_str == "contest":
+        contest_type
         contest_df = get_relevant_contests(session, filters)
         df = contest_df[contest_df["type"].isin(filters)]
     # Assume these others are candidate searching. This is handled differently
@@ -1046,12 +1049,7 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
         FROM    "ComposingReportingUnitJoin" cruj
                 JOIN "ReportingUnit" ru on cruj."ChildReportingUnit_Id" = ru."Id"
                 JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id"
-        WHERE   rut."Txt" not in (
-                    'congressional', 
-                    'judicial', 
-                    'state-house', 
-                    'state-senate'
-                )
+        WHERE   rut."Txt" not in %s
                 AND ARRAY_LENGTH(regexp_split_to_array("Name", ';'), 1) = 2
                 AND "ParentReportingUnit_Id" = %s
         LIMIT   1
@@ -1060,7 +1058,7 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     try:
-        cursor.execute(q, [jurisdiction_id])
+        cursor.execute(q, [tuple(contest_types_model), jurisdiction_id])
         result = cursor.fetchall()
         subdivision_type_id = result[0][0]
     except:
