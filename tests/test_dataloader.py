@@ -122,13 +122,14 @@ def check_count_type_totals(election, jurisdiction, contest, count_item_type):
 ok = {
     "nc16g": data_exists('2016 General','North Carolina'),
     "nc18g": data_exists('2018 General','North Carolina'),
+    "nc20p": data_exists('2020 Primary','North Carolina'),
     "de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
     "de20pri": data_exists('2020 Primary','Delaware'),
     "il16g": data_exists('2016 General','Illinois')
 }
 
 print(ok)
-
+"""
 @pytest.mark.skipif(not ok["nc16g"], reason="No NC 2016 General data")
 def test_nc_presidential():
     assert(
@@ -189,7 +190,7 @@ def test_nc_contest_by_vote_type():
 def test_nc_totals_match_vote_type():
     assert check_totals_match_vote_types("2016 General", "North Carolina") == True
 
-"""
+
 @pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
 def test_nc_presidential():
     # No presidential contests in 2018
@@ -249,7 +250,65 @@ def test_nc_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "North Carolina") == True
 """
 
+@pytest.mark.skipif(not ok["nc20p"], reason="No NC 2020 Primary data")
+def test_nc_presidential():
+    assert(
+        check_contest_totals(
+            "2020 Primary",
+            "North Carolina",
+            "US President (NC) (Democratic Party)",
+        )
+        == 1331366
+    )
 
+@pytest.mark.skipif(not ok["nc20p"], reason="No NC 2020 Primary data")
+def test_nc_statewide_totals():
+    assert(
+        check_contest_totals(
+            "2020 Primary",
+            "North Carolina",
+            "NC Treasurer",
+        )
+        == 4502784
+    )
+
+@pytest.mark.skipif(not ok["nc20p"], reason="No NC 2020 Primary data")
+def test_nc_senate_totals():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "North Carolina",
+            "US Senate NC",
+        )
+        == 4691133
+    )
+
+@pytest.mark.skipif(not ok["nc20p"], reason="No NC 2020 Primary data")
+def test_nc_rep():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "North Carolina",
+            "US House NC District 4",
+        )
+        == 409541
+    )
+
+@pytest.mark.skipif(not ok["nc20p"], reason="No NC 2020 Primary data")
+def test_nc_contest_by_vote_type():
+    assert (
+        check_count_type_totals(
+            "2020 Primary",
+            "North Carolina",
+            "US House NC District 4",
+            "absentee-mail",
+        )
+        == 20881
+    )
+
+@pytest.mark.skipif(not ok["nc20p"], reason="No NC 2020 Primary data")
+def test_nc_totals_match_vote_type():
+    assert check_totals_match_vote_types("2020 General", "North Carolina") == True
 
 
 
