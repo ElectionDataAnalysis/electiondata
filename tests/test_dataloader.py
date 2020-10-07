@@ -738,3 +738,52 @@ def test_il_presidential():
         )
         == 5536424
     )
+
+@pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
+def test_nc_statewide_totals():
+    assert(
+        check_contest_totals(
+            "2016 General",
+            "Illinois",
+            "NC Treasurer",
+        )
+        == 4502784
+    )
+
+@pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
+def test_nc_senate_totals():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Illinois",
+            "US Senate NC",
+        )
+        == 4691133
+    )
+
+@pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
+def test_nc_rep():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Illinois",
+            "US House NC District 4",
+        )
+        == 409541
+    )
+
+@pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
+def test_nc_contest_by_vote_type():
+    assert (
+        check_count_type_totals(
+            "2016 General",
+            "Illinois",
+            "US House NC District 4",
+            "absentee-mail",
+        )
+        == 20881
+    )
+
+@pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
+def test_nc_totals_match_vote_type():
+    assert check_totals_match_vote_types("2016 General", "Illinois") == True
