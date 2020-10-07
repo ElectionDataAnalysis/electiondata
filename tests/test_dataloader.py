@@ -120,14 +120,27 @@ def check_count_type_totals(election, jurisdiction, contest, count_item_type):
 ### North Carolina Data Loading Tests ###
 #constants
 ok = {
+    "nc16g": data_exists('2016 General','North Carolina'),
     "nc18g": data_exists('2018 General','North Carolina'),
-    #"de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
-    #"de20pri": data_exists('2020 Primary','Delaware'),
-    #"il16g": data_exists('2016 General','Illinois')
+    "de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
+    "de20pri": data_exists('2020 Primary','Delaware'),
+    "il16g": data_exists('2016 General','Illinois')
 }
 
 print(ok)
 
+@pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
+def test_nc_presidential():
+    assert(
+        check_contest_totals(
+            "2016 General",
+            "North Carolina",
+            "US President (NC)",
+        )
+        == 4741564
+    )
+
+"""
 @pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
 def test_nc_presidential():
     # No presidential contests in 2018
@@ -178,13 +191,19 @@ def test_nc_contest_by_vote_type():
             "US House NC District 4",
             "absentee-mail",
         )
-        == 10778        
+        == 10778
     )
 
 
 @pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
 def test_nc_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "North Carolina") == True
+"""
+
+
+
+
+
 """
 
 ### Florida Data Loading Tests ###
