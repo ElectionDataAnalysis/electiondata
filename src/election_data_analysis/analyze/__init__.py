@@ -575,7 +575,7 @@ def get_most_anomalous(data, n):
     # in from score data if margin data is unavailable
     unit_by_margin = get_unit_by_column(margin_data, "margin_ratio")
     unit_by_score = get_unit_by_column(data, "score")
-    unit_ids_all = unit_by_margin + unit_by_score
+    unit_ids_all = unit_by_margin[0:n-1] + unit_by_score
     unit_ids = list(dict.fromkeys(unit_ids_all).keys())[0:n]
     data = data[data["unit_id"].isin(unit_ids)]
 
