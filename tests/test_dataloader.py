@@ -267,9 +267,9 @@ def test_nc_statewide_totals():
         check_contest_totals(
             "2020 Primary",
             "North Carolina",
-            "NC Treasurer",
+            "NC Governor (Democratic Party)",
         )
-        == 4502784
+        == 1293652
     )
 
 @pytest.mark.skipif(not ok["nc20p"], reason="No NC 2020 Primary data")
