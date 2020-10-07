@@ -402,10 +402,27 @@ def read_single_datafile(
                 f"Nothing read from datafile. Munger may be inconsistent, or datafile may be empty.",
             )
         else:
-            df = m.generic_clean(df)
+            # clean the file, specifying the count columns as integer columns
+            if munger.options['count_columns_by_name']:
+                count_cols_by_name = munger.options['count_columns_by_name']
+            elif munger.options['count_columns']:
+                count_cols_by_name = [df.columns[j] for j in munger.options['count_columns']]
+            else:
+                count_cols_by_name = None
+            df, err_df = m.generic_clean(df, int_cols_by_name=count_cols_by_name)
             err = jm.check_results_munger_compatibility(
                 munger, df, Path(f_path).name, err
             )
+            if not err_df.empty:
+                # show all columns of dataframe holding rows where counts were set to 0
+                pd.set_option('max_columns',None)
+                err = add_new_error(
+                    err,
+                    "warn-munger",
+                    munger.name,
+                    f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}"
+                )
+                pd.reset_option('max_columns')
         return df, err
     except FileNotFoundError as fnfe:
         e = f"File not found: {f_path}"
@@ -561,7 +578,7 @@ def new_datafile(
             err,
             "munger",
             munger.name,
-            f"No count_columns specified for top-level munger"
+            f"No count_columns specified for munger"
         )
         return err
     else:

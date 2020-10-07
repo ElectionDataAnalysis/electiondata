@@ -796,7 +796,7 @@ class JurisdictionPrepper:
             return error
 
         # clean the dataframe read from the results
-        wr = m.generic_clean(wr)
+        wr, err_df = m.generic_clean(wr)
         # reduce <wr> in size
         fields = [
             f"{field}_SOURCE"
