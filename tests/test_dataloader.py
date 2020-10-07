@@ -248,7 +248,7 @@ def test_nc_contest_by_vote_type():
 @pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
 def test_nc_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "North Carolina") == True
-"""
+
 
 @pytest.mark.skipif(not ok["nc20p"], reason="No NC 2020 Primary data")
 def test_nc_presidential():
@@ -300,7 +300,7 @@ def test_nc_contest_by_vote_type():
         check_count_type_totals(
             "2020 Primary",
             "North Carolina",
-            "US House NC District 4  (Republican Party)",
+            "US House NC District 4 (Republican Party)",
             "absentee-mail",
         )
         == 426
@@ -311,8 +311,6 @@ def test_nc_totals_match_vote_type():
     assert check_totals_match_vote_types("2020 General", "North Carolina") == True
 
 
-
-"""
 
 ### Florida Data Loading Tests ###
 def test_fl_presidential():
@@ -728,10 +726,10 @@ def test_de_contest_by_vote_type():
 @pytest.mark.skipif(not ok["de20ppp"], reason="No DE 2020 Presidential Preference Primary data")
 def test_de_totals_match_vote_type():
     assert check_totals_match_vote_types("2020 Presidential Preference Primary", "Delaware") == True
-
+"""
 
 @pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
-def test_nc_presidential():
+def test_il_presidential():
     assert(
         check_contest_totals(
             "2016 General",
@@ -740,4 +738,3 @@ def test_nc_presidential():
         )
         == 5536424
     )
-"""
