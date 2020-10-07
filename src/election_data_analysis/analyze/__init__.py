@@ -403,9 +403,13 @@ def create_bar(
             temp_df[temp_df["rank"] == 1].iloc[0]["ind_total"]
             - temp_df[temp_df["rank"] != 1].iloc[0]["ind_total"]
         )
-        results["votes_at_stake"] = human_readable_numbers(
-            results["votes_at_stake_raw"]
-        )
+        votes_at_stake = human_readable_numbers(results["votes_at_stake_raw"])
+        if votes_at_stake[0] == "-":
+            votes_at_stake = votes_at_stake[1:]
+            suffix = "decrease"
+        else:
+            suffix = "increase"
+        results["votes_at_stake"] = f"{votes_at_stake} margin {suffix}"
         results["margin"] = human_readable_numbers(results["margin_raw"])
         if multiple_ballot_types:
             results[
@@ -564,7 +568,7 @@ def get_most_anomalous(data, n):
     """Gets n contest, with 2 from largest votes at stake ratio
     and 1 with largest score. If 2 from votes at stake cannot be found
     (bc of threshold for score) then we fill in the top n from scores"""
-    data = data[data["votes_at_stake"] > 0]
+    #data = data[data["votes_at_stake"] > 0]
     margin_data = data[data["score"] > 2.3]
 
     # get data for n deduped unit_ids, with n-1 from margin data, filling
@@ -894,11 +898,12 @@ def get_unit_by_column(data, column):
 
 
 def human_readable_numbers(value):
-    if value < 10:
-        return value
-    elif value < 100:
-        return round(value, -1)
-    elif value < 1000:
-        return round(value, -2)
+    abs_value = abs(value)
+    if abs_value < 10:
+        return str(value)
+    elif abs_value < 100:
+        return str(round(value, -1))
+    elif abs_value < 1000:
+        return str(round(value, -2))
     else:
         return "{:,}".format(round(value, -3))
