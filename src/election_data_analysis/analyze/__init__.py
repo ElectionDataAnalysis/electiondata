@@ -309,7 +309,10 @@ def create_bar(
 
     if contest_type:
         unsummed = unsummed[unsummed["contest_district_type"] == contest_type]
-    if contest:
+    # through front end, contest_type must be truthy if contest is truthy
+    # Only filter when there is an actual contest passed through, as opposed to 
+    # "All congressional" as an example
+    if contest and contest[0:3] != "All":
         unsummed = unsummed[unsummed["Contest"] == contest]
 
     groupby_cols = [
