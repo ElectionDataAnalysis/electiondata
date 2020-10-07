@@ -1,115 +1,114 @@
 Name	NumberElected	Office	PrimaryParty
-CO House District 1	1	State Representative - District 1	
-CO House District 2	1	State Representative - District 2	
-CO House District 3	1	State Representative - District 3	
-CO House District 4	1	State Representative - District 4	
-CO House District 5	1	State Representative - District 5	
-CO House District 6	1	State Representative - District 6	
-CO House District 7	1	State Representative - District 7	
-CO House District 8	1	State Representative - District 8	
-CO House District 9	1	State Representative - District 9	
-CO House District 10	1	State Representative - District 10	
-CO House District 11	1	State Representative - District 11	
-CO House District 12	1	State Representative - District 12	
-CO House District 13	1	State Representative - District 13	
-CO House District 14	1	State Representative - District 14	
-CO House District 15	1	State Representative - District 15	
-CO House District 16	1	State Representative - District 16	
-CO House District 17	1	State Representative - District 17	
-CO House District 18	1	State Representative - District 18	
-CO House District 19	1	State Representative - District 19	
-CO House District 20	1	State Representative - District 20	
-CO House District 21	1	State Representative - District 21	
-CO House District 22	1	State Representative - District 22	
-CO House District 23	1	State Representative - District 23	
-CO House District 24	1	State Representative - District 24	
-CO House District 25	1	State Representative - District 25	
-CO House District 26	1	State Representative - District 26	
-CO House District 27	1	State Representative - District 27	
-CO House District 28	1	State Representative - District 28	
-CO House District 29	1	State Representative - District 29	
-CO House District 30	1	State Representative - District 30	
-CO House District 31	1	State Representative - District 31	
-CO House District 32	1	State Representative - District 32	
-CO House District 33	1	State Representative - District 33	
-CO House District 34	1	State Representative - District 34	
-CO House District 35	1	State Representative - District 35	
-CO House District 36	1	State Representative - District 36	
-CO House District 37	1	State Representative - District 37	
-CO House District 38	1	State Representative - District 38	
-CO House District 39	1	State Representative - District 39	
-CO House District 40	1	State Representative - District 40	
-CO House District 41	1	State Representative - District 41	
-CO House District 42	1	State Representative - District 42	
-CO House District 43	1	State Representative - District 43	
-CO House District 44	1	State Representative - District 44	
-CO House District 45	1	State Representative - District 45	
-CO House District 46	1	State Representative - District 46	
-CO House District 47	1	State Representative - District 47	
-CO House District 48	1	State Representative - District 48	
-CO House District 49	1	State Representative - District 49	
-CO House District 50	1	State Representative - District 50	
-CO House District 51	1	State Representative - District 51	
-CO House District 52	1	State Representative - District 52	
-CO House District 53	1	State Representative - District 53	
-CO House District 54	1	State Representative - District 54	
-CO House District 55	1	State Representative - District 55	
-CO House District 56	1	State Representative - District 56	
-CO House District 57	1	State Representative - District 57	
-CO House District 58	1	State Representative - District 58	
-CO House District 59	1	State Representative - District 59	
-CO House District 60	1	State Representative - District 60	
-CO House District 61	1	State Representative - District 61	
-CO House District 62	1	State Representative - District 62	
-CO House District 63	1	State Representative - District 63	
-CO House District 64	1	State Representative - District 64	
-CO House District 65	1	State Representative - District 65	
-CO Senate District 1	1	State Senator - District 1	
-CO Senate District 2	1	State Senator - District 2	
-CO Senate District 3	1	State Senator - District 3	
-CO Senate District 4	1	State Senator - District 4	
-CO Senate District 5	1	State Senator - District 5	
-CO Senate District 6	1	State Senator - District 6	
-CO Senate District 7	1	State Senator - District 7	
-CO Senate District 8	1	State Senator - District 8	
-CO Senate District 9	1	State Senator - District 9	
-CO Senate District 10	1	State Senator - District 10	
-CO Senate District 11	1	State Senator - District 11	
-CO Senate District 12	1	State Senator - District 12	
-CO Senate District 13	1	State Senator - District 13	
-CO Senate District 14	1	State Senator - District 14	
-CO Senate District 15	1	State Senator - District 15	
-CO Senate District 16	1	State Senator - District 16	
-CO Senate District 17	1	State Senator - District 17	
-CO Senate District 18	1	State Senator - District 18	
-CO Senate District 19	1	State Senator - District 19	
-CO Senate District 20	1	State Senator - District 20	
-CO Senate District 21	1	State Senator - District 21	
-CO Senate District 22	1	State Senator - District 22	
-CO Senate District 23	1	State Senator - District 23	
-CO Senate District 24	1	State Senator - District 24	
-CO Senate District 25	1	State Senator - District 25	
-CO Senate District 26	1	State Senator - District 26	
-CO Senate District 27	1	State Senator - District 27	
-CO Senate District 28	1	State Senator - District 28	
-CO Senate District 29	1	State Senator - District 29	
-CO Senate District 30	1	State Senator - District 30	
-CO Senate District 31	1	State Senator - District 31	
-CO Senate District 32	1	State Senator - District 32	
-CO Senate District 33	1	State Senator - District 33	
-CO Senate District 34	1	State Senator - District 34	
-CO Senate District 35	1	State Senator - District 35	
-US House CO District 1	1	United States Congressperson - District 1	
-US House CO District 2	1	United States Congressperson - District 2	
-US House CO District 3	1	United States Congressperson - District 3	
-US House CO District 4	1	United States Congressperson - District 4	
-US House CO District 5	1	United States Congressperson - District 5	
-US House CO District 6	1	United States Congressperson - District 6	
-US House CO District 7	1	United States Congressperson - District 7	
-US President (CO)	1	President of the United States
-CO Governor	1	Governor/Lieutenant Governor
-US Senate CO	1	United States Senator
-CO Attorney General	1	Attorney General
-CO Lieutenant Governor	1	CO Lieutenant Governor	
-CO Treasurer	1	State Treasurer
-CO Secretary of State	1	Secretary of State
+CO House District 1	1	CO House District 1	
+CO House District 2	1	CO House District 2	
+CO House District 3	1	CO House District 3	
+CO House District 4	1	CO House District 4	
+CO House District 5	1	CO House District 5	
+CO House District 6	1	CO House District 6	
+CO House District 7	1	CO House District 7	
+CO House District 8	1	CO House District 8	
+CO House District 9	1	CO House District 9	
+CO House District 10	1	CO House District 10	
+CO House District 11	1	CO House District 11	
+CO House District 12	1	CO House District 12	
+CO House District 13	1	CO House District 13	
+CO House District 14	1	CO House District 14	
+CO House District 15	1	CO House District 15	
+CO House District 16	1	CO House District 16	
+CO House District 17	1	CO House District 17	
+CO House District 18	1	CO House District 18	
+CO House District 19	1	CO House District 19	
+CO House District 20	1	CO House District 20	
+CO House District 21	1	CO House District 21	
+CO House District 22	1	CO House District 22	
+CO House District 23	1	CO House District 23	
+CO House District 24	1	CO House District 24	
+CO House District 25	1	CO House District 25	
+CO House District 26	1	CO House District 26	
+CO House District 27	1	CO House District 27	
+CO House District 28	1	CO House District 28	
+CO House District 29	1	CO House District 29	
+CO House District 30	1	CO House District 30	
+CO House District 31	1	CO House District 31	
+CO House District 32	1	CO House District 32	
+CO House District 33	1	CO House District 33	
+CO House District 34	1	CO House District 34	
+CO House District 35	1	CO House District 35	
+CO House District 36	1	CO House District 36	
+CO House District 37	1	CO House District 37	
+CO House District 38	1	CO House District 38	
+CO House District 39	1	CO House District 39	
+CO House District 40	1	CO House District 40	
+CO House District 41	1	CO House District 41	
+CO House District 42	1	CO House District 42	
+CO House District 43	1	CO House District 43	
+CO House District 44	1	CO House District 44	
+CO House District 45	1	CO House District 45	
+CO House District 46	1	CO House District 46	
+CO House District 47	1	CO House District 47	
+CO House District 48	1	CO House District 48	
+CO House District 49	1	CO House District 49	
+CO House District 50	1	CO House District 50	
+CO House District 51	1	CO House District 51	
+CO House District 52	1	CO House District 52	
+CO House District 53	1	CO House District 53	
+CO House District 54	1	CO House District 54	
+CO House District 55	1	CO House District 55	
+CO House District 56	1	CO House District 56	
+CO House District 57	1	CO House District 57	
+CO House District 58	1	CO House District 58	
+CO House District 59	1	CO House District 59	
+CO House District 60	1	CO House District 60	
+CO House District 61	1	CO House District 61	
+CO House District 62	1	CO House District 62	
+CO House District 63	1	CO House District 63	
+CO House District 64	1	CO House District 64	
+CO House District 65	1	CO House District 65	
+CO Senate District 1	1	CO Senate District 1	
+CO Senate District 2	1	CO Senate District 2	
+CO Senate District 3	1	CO Senate District 3	
+CO Senate District 4	1	CO Senate District 4	
+CO Senate District 5	1	CO Senate District 5	
+CO Senate District 6	1	CO Senate District 6	
+CO Senate District 7	1	CO Senate District 7	
+CO Senate District 8	1	CO Senate District 8	
+CO Senate District 9	1	CO Senate District 9	
+CO Senate District 10	1	CO Senate District 10	
+CO Senate District 11	1	CO Senate District 11	
+CO Senate District 12	1	CO Senate District 12	
+CO Senate District 13	1	CO Senate District 13	
+CO Senate District 14	1	CO Senate District 14	
+CO Senate District 15	1	CO Senate District 15	
+CO Senate District 16	1	CO Senate District 16	
+CO Senate District 17	1	CO Senate District 17	
+CO Senate District 18	1	CO Senate District 18	
+CO Senate District 19	1	CO Senate District 19	
+CO Senate District 20	1	CO Senate District 20	
+CO Senate District 21	1	CO Senate District 21	
+CO Senate District 22	1	CO Senate District 22	
+CO Senate District 23	1	CO Senate District 23	
+CO Senate District 24	1	CO Senate District 24	
+CO Senate District 25	1	CO Senate District 25	
+CO Senate District 26	1	CO Senate District 26	
+CO Senate District 27	1	CO Senate District 27	
+CO Senate District 28	1	CO Senate District 28	
+CO Senate District 29	1	CO Senate District 29	
+CO Senate District 30	1	CO Senate District 30	
+CO Senate District 31	1	CO Senate District 31	
+CO Senate District 32	1	CO Senate District 32	
+CO Senate District 33	1	CO Senate District 33	
+CO Senate District 34	1	CO Senate District 34	
+CO Senate District 35	1	CO Senate District 35	
+US House CO District 1	1	US House CO District 1	
+US House CO District 2	1	US House CO District 2	
+US House CO District 3	1	US House CO District 3	
+US House CO District 4	1	US House CO District 4	
+US House CO District 5	1	US House CO District 5	
+US House CO District 6	1	US House CO District 6	
+US House CO District 7	1	US House CO District 7	
+US President (CO)	1	US President (CO)
+CO Governor	1	CO Governor
+US Senate CO	1	US Senate CO
+CO Attorney General	1	CO Attorney General
+CO State Treasurer	1	CO State Treasurer
+CO Secretary of State	1	CO Secretary of State

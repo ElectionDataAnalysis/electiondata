@@ -1,1 +1,392 @@
 BallotName
+Charles Casper Stockham
+Diana DeGette
+Raymon Anthony Doane
+Miguel Lopez
+Joe Neguse
+Peter Yu
+Roger Barris
+Nick Thomas
+Kevin Alumbaugh
+Scott R. Tipton
+Diane Mitsch Bush
+Gaylon Kent
+Mary M. Malarsie
+Richard Tetu
+Bruce Lohmiller
+Gary Swing
+Karen McCormick
+Ken Buck
+Richard Lyons Weil
+John B. Vigil
+Stephany Rose Spaulding
+Doug Lamborn
+Douglas Randall
+Lori Furstenberg
+John Croom
+Mike Coffman
+Jason Crow
+Kat Martin
+Dan Chapin
+Christopher Allen
+Ed Perlmutter
+Mark Barrington
+Jennifer Nackerud
+Steve Zorn
+Michael Haughey
+Jared Polis / Dianne Primavera
+Walker Stapleton / Lang Sias
+Bill Hammons / Eric Bodenstab
+Scott Helker / Michele Poague
+Wayne Williams
+Jena Griswold
+Amanda Campbell
+Blake Huber
+Brian Watson
+Dave Young
+Gerald F. Kilpatrick
+Phil Weiser
+George Brauchler
+William F. Robinson III
+Johnny Barrett
+Angelika Schroeder
+Tim Krug
+Debora L. Scheffel
+Lesley Smith
+Ken Montera
+Christopher E. Otwell
+James K. Treibert
+Alvin Rivera
+Glen H. Gallegos
+Michael Stapleton
+Tony Wolusky
+Chance Hill
+Jerry Sonnenberg
+Debra Gustafson
+Beth 'Hart' Harz
+Dennis Hisey
+Leroy M. Garcia
+John Pickerill
+Kerry Donovan
+Olen Lund
+Guinn Unger Jr.
+Don Coram
+Chris Kennedy
+Ray Scott
+Gil Armendariz
+Paul Lundeen
+Pete Lee
+Pat McIntire
+John Cooke
+Phil Kelley
+Eric E. Joss
+Rebecca Cranston
+Rob Woodward
+Tammy Story
+Tim Neville
+James Gilman
+Christine Jensen
+Jessie Danielson
+Charles Messick
+Brittany Pettersen
+Tony Sanchez
+Beth Martinez Humenik
+Faith Winter
+Donald Osborn
+Adam Matkowsky
+Julia Varnell-Sarjeant
+Chris Holbert
+Steve Peterson
+Robert Rodriguez
+Mark Calonder
+Peter Lucas Smith
+Julie Gonzales
+Gordon Alley
+Susan Lontine
+Alysia Padilla
+Darrell Dinges
+Alec Garnett
+Toren Mushovic
+Jeff Bridges
+Robert 'Dave' John
+Serena Gonzales-Gutierrez
+Alex Valdez
+Katherine E. Whitney
+Rory Lamberton
+Chris Hansen
+Jay Frank Kucera
+James Rashad Coleman
+Leslie Herod
+Emily Sirota
+Bob Lane
+Murl S. Hendrickson IV
+Edie Hooton
+Jonathan Singer
+Brian O Donahue
+Sonya Jaquez Lewis
+Theresa Stets
+Kevin Sipple
+K.C. Becker
+Shane Sandridge
+Paul J. Haddick
+Brenda Krause
+Dave Williams
+Andrew Smith
+Larry G. Liston
+John Hjersman
+Kit Roupe
+Thomas 'Tony' Exum Sr.
+Mary Elizabeth Fabian
+Marc A. Snyder
+Maile Foster
+Tim Geitner
+Asia M. Zanders
+Terri Carver
+Kent Edward Jarnig
+Lois Landgraf
+Liz Rosenbaum
+Todd Kastetter
+Colin Larson
+Joan Poston
+Arthur Erwin
+Monica Duran
+Steve Szutenbach
+Lisa A. Cutter
+Nicki Mills
+Dylan Roberts
+Luke Bray
+Brianna Titone
+Vicki Pyne
+Kristina Joy Alley
+Kerry Tipper
+Ross Klopf
+Grady Nouis
+Tracy Kraft-Tharp
+Hans V. Romer
+Dafna Michaelson Jenet
+Susan Kochevar
+Rico Figueroa
+Yadira Caraveo
+Bree Owens
+Adrienne Benavidez
+Eric Rutherford
+Matt Gray
+Kim Tavendale
+Jay Geyer
+Alexander 'Skinny' Winkler
+Kyle Mullica
+Shannon Bird
+Bruce Baker
+Ken Biles
+Richard J. Bowman
+Mike Weissman
+Tom Sullivan
+Cole Wist
+Chris Kolker
+Susan Beckman
+Mark Baisley
+Kamala Vanderkolk
+Tony Gross
+Janet Buckner
+Richard Allen Bassett
+Lynn Myers
+Jovan Melton
+Mike Donald
+Dominique Jackson
+Kevin Van Winkle
+Barrett Rothe
+Scott Wagner
+Kim Ransom
+Simone Aiken
+Danielle Kombo
+Patrick Neville
+Daneya Esgar
+Jonathan Ambler
+Bri Buentello
+Don Bendell
+Stephen Alan Humphrey
+Gbenga Ajiboye
+Perry L. Buck
+Conor Duffy
+Rochelle Galindo
+Michael A. Thuener
+Joan Shaffer
+Hugh McKean
+Donna Walter
+Joann Ginal
+Jeni Arndt
+Matt Soper
+Thea Chase
+Tanya Travis
+Janice Rich
+Rod Bockenfeld
+Dave Rose
+Kevin Gulbranson
+Bob Rankin
+Colin Wilhelm
+Marc Catlin
+Seth Cagin
+Barbara McLachlan
+Paul Jones
+Erin Kelley
+James D. 'Jim' Wilson
+Glenn Ingalls
+Julie McCluskie
+Mike Mason
+Donald E. Valdez
+Scott Honeycutt
+Lori A. Saine
+Brandon D. Bobian
+Joe Johnson
+Kimmi Lewis
+Teri Nilson Baird
+Rod Pelton
+Bethleen McCall
+Michael Dougherty
+Chris Martinez
+Shontel Marie Lewis
+JoyAnn Keener Ruscha
+Angie Rivera-Malpiede
+Bonnie Ernest Archuleta
+Julia Stewart
+Eliot Tipton
+Vince Buzek
+Troy L. Whitmore
+Paul D. Solano
+Gerald Stephen Jaramillo
+Phil Munsterman
+Bob Wilson
+Shelley Cook
+Brad K. Evans
+Margaret (Peggy) A. Catlin
+Jennifer Hope
+Lynn Guissinger
+Richard L. Gabriel
+John Daniel Dailey
+Rebecca Rankin Freyre
+Elizabeth L. Harris
+David J. Richman
+Christie A. Bachmeyer
+Diego G. Hunt
+Laura A. Tighe
+Shelley I. Gilman
+David H. Goldberg
+Jay Sutherland Grant
+Morris B. Hoffman
+Kenneth Martin Laff
+Catherine A. Lemon
+Jennifer B. Torrington
+Eric Bentley
+Linda Margaret Billings-Vela
+Jill M. Brady
+Robert L. Lowrey
+Timothy Schutz
+Larry Edward Schwartz
+Scott A. Sells
+David L. Shakes
+Steven L. Schultz
+Keri A. Yoder
+James Berkley Boyd
+Anne K. Norrdin
+Christopher G. Seldin
+Deborah R. Eyler
+Kim Karn
+Ramsey Lama
+Lynette Mary Wenner
+Pattie P. Swift
+Charles M. Hobbs
+Carl S. McGuire III
+Michael Keith Singer
+Michael A. O'Hara III
+Michael Davidson
+Jaclyn Brown
+Sharon D. Holbrook
+Edward Moss
+Donald S. Quick
+Phillip L. Douglass
+Patricia Herron
+Gary M. Kramer
+Ben L. Leutwyler III
+Robert R. Lung
+Bonnie Heather McLean
+Peter F. Michaelson
+Michael Spear
+Shay K. Whitaker
+James F. Hartmann
+Todd L. Taylor
+Thomas Francis Mulvahill
+Norma A. Sierra
+Lance Phillip Timbreza
+Todd Jay Plewe
+Brian Nathaniel Bowen
+Michael A. Cox
+Cindy Dang
+Byron Lynn Howell
+Sabino E. Romano
+Dianna L. Roybal
+Daniel A. Walzl
+Colleen Clark
+Kelly LaFave
+Michael J. Roche
+Cheryl Rowles-Stokes
+Justin P. Fay
+Debra M. Gunkel
+David Archuleta
+Elizabeth House Moulton Brodsky
+Amy Elizabeth Bockman
+Gerald Keefe
+Kimberly Lynn Wood
+Amanda Jean Hunter
+Johnny C. Barajas
+Brian Thomas Campbell
+Andrea Eddy
+Adam J. Espinosa
+Olympia Z. Fay
+Clarisse Gonzales
+Kerri Lombardi
+Chelsea Malone
+Lawrence Bowling
+Monica J. Gomez
+Susanna Meissner-Cutler
+Palmer L. Boyette
+Christopher Edward Acker
+Lawrence D. Martin
+Douglas J. Miles
+Ann M. Rotolo
+Paul H. Metzger
+Jonathan Bruce Pototsky
+David C. Taylor
+Nicholas Catanzarite
+Cindy Wilson
+Susan Lori Fisch
+Mark Marrow Randall
+Ryan James Stuart
+Thomas Vance
+Jean Woodford
+Gary W. Davis
+Michael K. Grinnan
+Thomas L. Lynch
+Peter E. Schoon Jr.
+Truston Lee Fisher
+Bruce R. Raaum
+Sandra H. Gardner
+JenniLynn Lawrence
+Ben A. Morris
+Douglas R. Manley
+Brian L. Green
+Erin Fernandez-Ely
+Curtis Lane Porter
+Steven B. Fieldman
+David Lee Lobato
+Laurie Anne Noble
+Barbara A. Zollars
+James H. Garrecht
+Anna Ulrich
+Susanne J. Ross
+Theresa L. Kilgore
+Kelly S. Hansen
+John Joseph Briggs
+Michele Lynn Meyer
+Dana Nichols
+Charles S. Unfug
+

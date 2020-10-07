@@ -1,8 +1,8 @@
 name	raw_identifier_formula	source
-ReportingUnit	<County Name>	row
-Party	<Party>	row
-CandidateContest	<Office>	row
-Candidate	<Candidate Name>	row
-BallotMeasureContest	<Office>	row
-BallotMeasureSelection	<Candidate Name>	row
+ReportingUnit	<COUNTY>	row
+Party	<PARTY>	row
+CandidateContest	<OFFICE/BALLOT ISSUE NUMBER>	row
+Candidate	<CANDIDATE/JUDGE/BALLOT TITLE>	row
+BallotMeasureContest	<OFFICE/BALLOT ISSUE NUMBER>	row
+BallotMeasureSelection	<0>	column
 CountItemType	total	row

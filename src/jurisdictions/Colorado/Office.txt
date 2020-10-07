@@ -111,5 +111,5 @@ CO Governor	Colorado
 US Senate CO	Colorado
 CO Attorney General	Colorado
 CO Lieutenant Governor	Colorado
-CO Treasurer	Colorado
+CO State Treasurer	Colorado
 CO Secretary of State	Colorado

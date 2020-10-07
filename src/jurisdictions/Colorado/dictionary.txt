@@ -1,118 +1,118 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-CandidateContest	CO House District 1	CO House District 1
-CandidateContest	CO House District 2	CO House District 2
-CandidateContest	CO House District 3	CO House District 3
-CandidateContest	CO House District 4	CO House District 4
-CandidateContest	CO House District 5	CO House District 5
-CandidateContest	CO House District 6	CO House District 6
-CandidateContest	CO House District 7	CO House District 7
-CandidateContest	CO House District 8	CO House District 8
-CandidateContest	CO House District 9	CO House District 9
-CandidateContest	CO House District 10	CO House District 10
-CandidateContest	CO House District 11	CO House District 11
-CandidateContest	CO House District 12	CO House District 12
-CandidateContest	CO House District 13	CO House District 13
-CandidateContest	CO House District 14	CO House District 14
-CandidateContest	CO House District 15	CO House District 15
-CandidateContest	CO House District 16	CO House District 16
-CandidateContest	CO House District 17	CO House District 17
-CandidateContest	CO House District 18	CO House District 18
-CandidateContest	CO House District 19	CO House District 19
-CandidateContest	CO House District 20	CO House District 20
-CandidateContest	CO House District 21	CO House District 21
-CandidateContest	CO House District 22	CO House District 22
-CandidateContest	CO House District 23	CO House District 23
-CandidateContest	CO House District 24	CO House District 24
-CandidateContest	CO House District 25	CO House District 25
-CandidateContest	CO House District 26	CO House District 26
-CandidateContest	CO House District 27	CO House District 27
-CandidateContest	CO House District 28	CO House District 28
-CandidateContest	CO House District 29	CO House District 29
-CandidateContest	CO House District 30	CO House District 30
-CandidateContest	CO House District 31	CO House District 31
-CandidateContest	CO House District 32	CO House District 32
-CandidateContest	CO House District 33	CO House District 33
-CandidateContest	CO House District 34	CO House District 34
-CandidateContest	CO House District 35	CO House District 35
-CandidateContest	CO House District 36	CO House District 36
-CandidateContest	CO House District 37	CO House District 37
-CandidateContest	CO House District 38	CO House District 38
-CandidateContest	CO House District 39	CO House District 39
-CandidateContest	CO House District 40	CO House District 40
-CandidateContest	CO House District 41	CO House District 41
-CandidateContest	CO House District 42	CO House District 42
-CandidateContest	CO House District 43	CO House District 43
-CandidateContest	CO House District 44	CO House District 44
-CandidateContest	CO House District 45	CO House District 45
-CandidateContest	CO House District 46	CO House District 46
-CandidateContest	CO House District 47	CO House District 47
-CandidateContest	CO House District 48	CO House District 48
-CandidateContest	CO House District 49	CO House District 49
-CandidateContest	CO House District 50	CO House District 50
-CandidateContest	CO House District 51	CO House District 51
-CandidateContest	CO House District 52	CO House District 52
-CandidateContest	CO House District 53	CO House District 53
-CandidateContest	CO House District 54	CO House District 54
-CandidateContest	CO House District 55	CO House District 55
-CandidateContest	CO House District 56	CO House District 56
-CandidateContest	CO House District 57	CO House District 57
-CandidateContest	CO House District 58	CO House District 58
-CandidateContest	CO House District 59	CO House District 59
-CandidateContest	CO House District 60	CO House District 60
-CandidateContest	CO House District 61	CO House District 61
-CandidateContest	CO House District 62	CO House District 62
-CandidateContest	CO House District 63	CO House District 63
-CandidateContest	CO House District 64	CO House District 64
-CandidateContest	CO House District 65	CO House District 65
-CandidateContest	CO Senate District 1	CO Senate District 1
-CandidateContest	CO Senate District 2	CO Senate District 2
-CandidateContest	CO Senate District 3	CO Senate District 3
-CandidateContest	CO Senate District 4	CO Senate District 4
-CandidateContest	CO Senate District 5	CO Senate District 5
-CandidateContest	CO Senate District 6	CO Senate District 6
-CandidateContest	CO Senate District 7	CO Senate District 7
-CandidateContest	CO Senate District 8	CO Senate District 8
-CandidateContest	CO Senate District 9	CO Senate District 9
-CandidateContest	CO Senate District 10	CO Senate District 10
-CandidateContest	CO Senate District 11	CO Senate District 11
-CandidateContest	CO Senate District 12	CO Senate District 12
-CandidateContest	CO Senate District 13	CO Senate District 13
-CandidateContest	CO Senate District 14	CO Senate District 14
-CandidateContest	CO Senate District 15	CO Senate District 15
-CandidateContest	CO Senate District 16	CO Senate District 16
-CandidateContest	CO Senate District 17	CO Senate District 17
-CandidateContest	CO Senate District 18	CO Senate District 18
-CandidateContest	CO Senate District 19	CO Senate District 19
-CandidateContest	CO Senate District 20	CO Senate District 20
-CandidateContest	CO Senate District 21	CO Senate District 21
-CandidateContest	CO Senate District 22	CO Senate District 22
-CandidateContest	CO Senate District 23	CO Senate District 23
-CandidateContest	CO Senate District 24	CO Senate District 24
-CandidateContest	CO Senate District 25	CO Senate District 25
-CandidateContest	CO Senate District 26	CO Senate District 26
-CandidateContest	CO Senate District 27	CO Senate District 27
-CandidateContest	CO Senate District 28	CO Senate District 28
-CandidateContest	CO Senate District 29	CO Senate District 29
-CandidateContest	CO Senate District 30	CO Senate District 30
-CandidateContest	CO Senate District 31	CO Senate District 31
-CandidateContest	CO Senate District 32	CO Senate District 32
-CandidateContest	CO Senate District 33	CO Senate District 33
-CandidateContest	CO Senate District 34	CO Senate District 34
-CandidateContest	CO Senate District 35	CO Senate District 35
-CandidateContest	US House CO District 1	US House CO District 1
-CandidateContest	US House CO District 2	US House CO District 2
-CandidateContest	US House CO District 3	US House CO District 3
-CandidateContest	US House CO District 4	US House CO District 4
-CandidateContest	US House CO District 5	US House CO District 5
-CandidateContest	US House CO District 6	US House CO District 6
-CandidateContest	US House CO District 7	US House CO District 7
-CandidateContest	US President (CO)	US President (CO)
-CandidateContest	CO Governor	CO Governor
-CandidateContest	US Senate CO	US Senate CO
-CandidateContest	CO Attorney General	CO Attorney General
-CandidateContest	CO Lieutenant Governor	CO Lieutenant Governor
-CandidateContest	CO Treasurer	CO Treasurer
-CandidateContest	CO Secretary of State	CO Secretary of State
+CandidateContest	CO House District 1	State Representative - District 1
+CandidateContest	CO House District 2	State Representative - District 2
+CandidateContest	CO House District 3	State Representative - District 3
+CandidateContest	CO House District 4	State Representative - District 4
+CandidateContest	CO House District 5	State Representative - District 5
+CandidateContest	CO House District 6	State Representative - District 6
+CandidateContest	CO House District 7	State Representative - District 7
+CandidateContest	CO House District 8	State Representative - District 8
+CandidateContest	CO House District 9	State Representative - District 9
+CandidateContest	CO House District 10	State Representative - District 10
+CandidateContest	CO House District 11	State Representative - District 11
+CandidateContest	CO House District 12	State Representative - District 12
+CandidateContest	CO House District 13	State Representative - District 13
+CandidateContest	CO House District 14	State Representative - District 14
+CandidateContest	CO House District 15	State Representative - District 15
+CandidateContest	CO House District 16	State Representative - District 16
+CandidateContest	CO House District 17	State Representative - District 17
+CandidateContest	CO House District 18	State Representative - District 18
+CandidateContest	CO House District 19	State Representative - District 19
+CandidateContest	CO House District 20	State Representative - District 20
+CandidateContest	CO House District 21	State Representative - District 21
+CandidateContest	CO House District 22	State Representative - District 22
+CandidateContest	CO House District 23	State Representative - District 23
+CandidateContest	CO House District 24	State Representative - District 24
+CandidateContest	CO House District 25	State Representative - District 25
+CandidateContest	CO House District 26	State Representative - District 26
+CandidateContest	CO House District 27	State Representative - District 27
+CandidateContest	CO House District 28	State Representative - District 28
+CandidateContest	CO House District 29	State Representative - District 29
+CandidateContest	CO House District 30	State Representative - District 30
+CandidateContest	CO House District 31	State Representative - District 31
+CandidateContest	CO House District 32	State Representative - District 32
+CandidateContest	CO House District 33	State Representative - District 33
+CandidateContest	CO House District 34	State Representative - District 34
+CandidateContest	CO House District 35	State Representative - District 35
+CandidateContest	CO House District 36	State Representative - District 36
+CandidateContest	CO House District 37	State Representative - District 37
+CandidateContest	CO House District 38	State Representative - District 38
+CandidateContest	CO House District 39	State Representative - District 39
+CandidateContest	CO House District 40	State Representative - District 40
+CandidateContest	CO House District 41	State Representative - District 41
+CandidateContest	CO House District 42	State Representative - District 42
+CandidateContest	CO House District 43	State Representative - District 43
+CandidateContest	CO House District 44	State Representative - District 44
+CandidateContest	CO House District 45	State Representative - District 45
+CandidateContest	CO House District 46	State Representative - District 46
+CandidateContest	CO House District 47	State Representative - District 47
+CandidateContest	CO House District 48	State Representative - District 48
+CandidateContest	CO House District 49	State Representative - District 49
+CandidateContest	CO House District 50	State Representative - District 50
+CandidateContest	CO House District 51	State Representative - District 51
+CandidateContest	CO House District 52	State Representative - District 52
+CandidateContest	CO House District 53	State Representative - District 53
+CandidateContest	CO House District 54	State Representative - District 54
+CandidateContest	CO House District 55	State Representative - District 55
+CandidateContest	CO House District 56	State Representative - District 56
+CandidateContest	CO House District 57	State Representative - District 57
+CandidateContest	CO House District 58	State Representative - District 58
+CandidateContest	CO House District 59	State Representative - District 59
+CandidateContest	CO House District 60	State Representative - District 60
+CandidateContest	CO House District 61	State Representative - District 61
+CandidateContest	CO House District 62	State Representative - District 62
+CandidateContest	CO House District 63	State Representative - District 63
+CandidateContest	CO House District 64	State Representative - District 64
+CandidateContest	CO House District 65	State Representative - District 65
+CandidateContest	CO Senate District 1	State Senate - District 1
+CandidateContest	CO Senate District 2	State Senate - District 2
+CandidateContest	CO Senate District 3	State Senate - District 3
+CandidateContest	CO Senate District 4	State Senate - District 4
+CandidateContest	CO Senate District 5	State Senate - District 5
+CandidateContest	CO Senate District 6	State Senate - District 6
+CandidateContest	CO Senate District 7	State Senate - District 7
+CandidateContest	CO Senate District 8	State Senate - District 8
+CandidateContest	CO Senate District 9	State Senate - District 9
+CandidateContest	CO Senate District 10	State Senate - District 10
+CandidateContest	CO Senate District 11	State Senate - District 11
+CandidateContest	CO Senate District 12	State Senate - District 12
+CandidateContest	CO Senate District 13	State Senate - District 13
+CandidateContest	CO Senate District 14	State Senate - District 14
+CandidateContest	CO Senate District 15	State Senate - District 15
+CandidateContest	CO Senate District 16	State Senate - District 16
+CandidateContest	CO Senate District 17	State Senate - District 17
+CandidateContest	CO Senate District 18	State Senate - District 18
+CandidateContest	CO Senate District 19	State Senate - District 19
+CandidateContest	CO Senate District 20	State Senate - District 20
+CandidateContest	CO Senate District 21	State Senate - District 21
+CandidateContest	CO Senate District 22	State Senate - District 22
+CandidateContest	CO Senate District 23	State Senate - District 23
+CandidateContest	CO Senate District 24	State Senate - District 24
+CandidateContest	CO Senate District 25	State Senate - District 25
+CandidateContest	CO Senate District 26	State Senate - District 26
+CandidateContest	CO Senate District 27	State Senate - District 27
+CandidateContest	CO Senate District 28	State Senate - District 28
+CandidateContest	CO Senate District 29	State Senate - District 29
+CandidateContest	CO Senate District 30	State Senate - District 30
+CandidateContest	CO Senate District 31	State Senate - District 31
+CandidateContest	CO Senate District 32	State Senate - District 32
+CandidateContest	CO Senate District 33	State Senate - District 33
+CandidateContest	CO Senate District 34	State Senate - District 34
+CandidateContest	CO Senate District 35	State Senate - District 35
+CandidateContest	US House CO District 1	United States Representative - District 1
+CandidateContest	US House CO District 2	United States Representative - District 2
+CandidateContest	US House CO District 3	United States Representative - District 3
+CandidateContest	US House CO District 4	United States Representative - District 4
+CandidateContest	US House CO District 5	United States Representative - District 5
+CandidateContest	US House CO District 6	United States Representative - District 6
+CandidateContest	US House CO District 7	United States Representative - District 7
+CandidateContest	US President (CO)	President/Vice President
+CandidateContest	US President (CO)	President of the United States
+CandidateContest	CO Governor	Governor/Lieutenant Governor
+CandidateContest	US Senate CO	United States Senator
+CandidateContest	CO Attorney General	Attorney General
+CandidateContest	CO State Treasurer	State Treasurer
+CandidateContest	CO Secretary of State	Secretary of State
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
@@ -129,113 +129,113 @@ Party	Unity Party	Unity Party
 Party	Approval Voting Party	Approval Voting Party
 Party	Unaffiliated	Unaffiliated
 Party	Independent	Independent
-ReportingUnit	Colorado;CO House District 1	Colorado;CO House District 1
-ReportingUnit	Colorado;CO House District 2	Colorado;CO House District 2
-ReportingUnit	Colorado;CO House District 3	Colorado;CO House District 3
-ReportingUnit	Colorado;CO House District 4	Colorado;CO House District 4
-ReportingUnit	Colorado;CO House District 5	Colorado;CO House District 5
-ReportingUnit	Colorado;CO House District 6	Colorado;CO House District 6
-ReportingUnit	Colorado;CO House District 7	Colorado;CO House District 7
-ReportingUnit	Colorado;CO House District 8	Colorado;CO House District 8
-ReportingUnit	Colorado;CO House District 9	Colorado;CO House District 9
-ReportingUnit	Colorado;CO House District 10	Colorado;CO House District 10
-ReportingUnit	Colorado;CO House District 11	Colorado;CO House District 11
-ReportingUnit	Colorado;CO House District 12	Colorado;CO House District 12
-ReportingUnit	Colorado;CO House District 13	Colorado;CO House District 13
-ReportingUnit	Colorado;CO House District 14	Colorado;CO House District 14
-ReportingUnit	Colorado;CO House District 15	Colorado;CO House District 15
-ReportingUnit	Colorado;CO House District 16	Colorado;CO House District 16
-ReportingUnit	Colorado;CO House District 17	Colorado;CO House District 17
-ReportingUnit	Colorado;CO House District 18	Colorado;CO House District 18
-ReportingUnit	Colorado;CO House District 19	Colorado;CO House District 19
-ReportingUnit	Colorado;CO House District 20	Colorado;CO House District 20
-ReportingUnit	Colorado;CO House District 21	Colorado;CO House District 21
-ReportingUnit	Colorado;CO House District 22	Colorado;CO House District 22
-ReportingUnit	Colorado;CO House District 23	Colorado;CO House District 23
-ReportingUnit	Colorado;CO House District 24	Colorado;CO House District 24
-ReportingUnit	Colorado;CO House District 25	Colorado;CO House District 25
-ReportingUnit	Colorado;CO House District 26	Colorado;CO House District 26
-ReportingUnit	Colorado;CO House District 27	Colorado;CO House District 27
-ReportingUnit	Colorado;CO House District 28	Colorado;CO House District 28
-ReportingUnit	Colorado;CO House District 29	Colorado;CO House District 29
-ReportingUnit	Colorado;CO House District 30	Colorado;CO House District 30
-ReportingUnit	Colorado;CO House District 31	Colorado;CO House District 31
-ReportingUnit	Colorado;CO House District 32	Colorado;CO House District 32
-ReportingUnit	Colorado;CO House District 33	Colorado;CO House District 33
-ReportingUnit	Colorado;CO House District 34	Colorado;CO House District 34
-ReportingUnit	Colorado;CO House District 35	Colorado;CO House District 35
-ReportingUnit	Colorado;CO House District 36	Colorado;CO House District 36
-ReportingUnit	Colorado;CO House District 37	Colorado;CO House District 37
-ReportingUnit	Colorado;CO House District 38	Colorado;CO House District 38
-ReportingUnit	Colorado;CO House District 39	Colorado;CO House District 39
-ReportingUnit	Colorado;CO House District 40	Colorado;CO House District 40
-ReportingUnit	Colorado;CO House District 41	Colorado;CO House District 41
-ReportingUnit	Colorado;CO House District 42	Colorado;CO House District 42
-ReportingUnit	Colorado;CO House District 43	Colorado;CO House District 43
-ReportingUnit	Colorado;CO House District 44	Colorado;CO House District 44
-ReportingUnit	Colorado;CO House District 45	Colorado;CO House District 45
-ReportingUnit	Colorado;CO House District 46	Colorado;CO House District 46
-ReportingUnit	Colorado;CO House District 47	Colorado;CO House District 47
-ReportingUnit	Colorado;CO House District 48	Colorado;CO House District 48
-ReportingUnit	Colorado;CO House District 49	Colorado;CO House District 49
-ReportingUnit	Colorado;CO House District 50	Colorado;CO House District 50
-ReportingUnit	Colorado;CO House District 51	Colorado;CO House District 51
-ReportingUnit	Colorado;CO House District 52	Colorado;CO House District 52
-ReportingUnit	Colorado;CO House District 53	Colorado;CO House District 53
-ReportingUnit	Colorado;CO House District 54	Colorado;CO House District 54
-ReportingUnit	Colorado;CO House District 55	Colorado;CO House District 55
-ReportingUnit	Colorado;CO House District 56	Colorado;CO House District 56
-ReportingUnit	Colorado;CO House District 57	Colorado;CO House District 57
-ReportingUnit	Colorado;CO House District 58	Colorado;CO House District 58
-ReportingUnit	Colorado;CO House District 59	Colorado;CO House District 59
-ReportingUnit	Colorado;CO House District 60	Colorado;CO House District 60
-ReportingUnit	Colorado;CO House District 61	Colorado;CO House District 61
-ReportingUnit	Colorado;CO House District 62	Colorado;CO House District 62
-ReportingUnit	Colorado;CO House District 63	Colorado;CO House District 63
-ReportingUnit	Colorado;CO House District 64	Colorado;CO House District 64
-ReportingUnit	Colorado;CO House District 65	Colorado;CO House District 65
-ReportingUnit	Colorado;CO Senate District 1	Colorado;CO Senate District 1
-ReportingUnit	Colorado;CO Senate District 2	Colorado;CO Senate District 2
-ReportingUnit	Colorado;CO Senate District 3	Colorado;CO Senate District 3
-ReportingUnit	Colorado;CO Senate District 4	Colorado;CO Senate District 4
-ReportingUnit	Colorado;CO Senate District 5	Colorado;CO Senate District 5
-ReportingUnit	Colorado;CO Senate District 6	Colorado;CO Senate District 6
-ReportingUnit	Colorado;CO Senate District 7	Colorado;CO Senate District 7
-ReportingUnit	Colorado;CO Senate District 8	Colorado;CO Senate District 8
-ReportingUnit	Colorado;CO Senate District 9	Colorado;CO Senate District 9
-ReportingUnit	Colorado;CO Senate District 10	Colorado;CO Senate District 10
-ReportingUnit	Colorado;CO Senate District 11	Colorado;CO Senate District 11
-ReportingUnit	Colorado;CO Senate District 12	Colorado;CO Senate District 12
-ReportingUnit	Colorado;CO Senate District 13	Colorado;CO Senate District 13
-ReportingUnit	Colorado;CO Senate District 14	Colorado;CO Senate District 14
-ReportingUnit	Colorado;CO Senate District 15	Colorado;CO Senate District 15
-ReportingUnit	Colorado;CO Senate District 16	Colorado;CO Senate District 16
-ReportingUnit	Colorado;CO Senate District 17	Colorado;CO Senate District 17
-ReportingUnit	Colorado;CO Senate District 18	Colorado;CO Senate District 18
-ReportingUnit	Colorado;CO Senate District 19	Colorado;CO Senate District 19
-ReportingUnit	Colorado;CO Senate District 20	Colorado;CO Senate District 20
-ReportingUnit	Colorado;CO Senate District 21	Colorado;CO Senate District 21
-ReportingUnit	Colorado;CO Senate District 22	Colorado;CO Senate District 22
-ReportingUnit	Colorado;CO Senate District 23	Colorado;CO Senate District 23
-ReportingUnit	Colorado;CO Senate District 24	Colorado;CO Senate District 24
-ReportingUnit	Colorado;CO Senate District 25	Colorado;CO Senate District 25
-ReportingUnit	Colorado;CO Senate District 26	Colorado;CO Senate District 26
-ReportingUnit	Colorado;CO Senate District 27	Colorado;CO Senate District 27
-ReportingUnit	Colorado;CO Senate District 28	Colorado;CO Senate District 28
-ReportingUnit	Colorado;CO Senate District 29	Colorado;CO Senate District 29
-ReportingUnit	Colorado;CO Senate District 30	Colorado;CO Senate District 30
-ReportingUnit	Colorado;CO Senate District 31	Colorado;CO Senate District 31
-ReportingUnit	Colorado;CO Senate District 32	Colorado;CO Senate District 32
-ReportingUnit	Colorado;CO Senate District 33	Colorado;CO Senate District 33
-ReportingUnit	Colorado;CO Senate District 34	Colorado;CO Senate District 34
-ReportingUnit	Colorado;CO Senate District 35	Colorado;CO Senate District 35
-ReportingUnit	Colorado;US House CO District 1	Colorado;US House CO District 1
-ReportingUnit	Colorado;US House CO District 2	Colorado;US House CO District 2
-ReportingUnit	Colorado;US House CO District 3	Colorado;US House CO District 3
-ReportingUnit	Colorado;US House CO District 4	Colorado;US House CO District 4
-ReportingUnit	Colorado;US House CO District 5	Colorado;US House CO District 5
-ReportingUnit	Colorado;US House CO District 6	Colorado;US House CO District 6
-ReportingUnit	Colorado;US House CO District 7	Colorado;US House CO District 7
+ReportingUnit	Colorado;CO House District 1	Colorado;State Representative - District 1
+ReportingUnit	Colorado;CO House District 2	Colorado;State Representative - District 2
+ReportingUnit	Colorado;CO House District 3	Colorado;State Representative - District 3
+ReportingUnit	Colorado;CO House District 4	Colorado;State Representative - District 4
+ReportingUnit	Colorado;CO House District 5	Colorado;State Representative - District 5
+ReportingUnit	Colorado;CO House District 6	Colorado;State Representative - District 6
+ReportingUnit	Colorado;CO House District 7	Colorado;State Representative - District 7
+ReportingUnit	Colorado;CO House District 8	Colorado;State Representative - District 8
+ReportingUnit	Colorado;CO House District 9	Colorado;State Representative - District 9
+ReportingUnit	Colorado;CO House District 10	Colorado;State Representative - District 10
+ReportingUnit	Colorado;CO House District 11	Colorado;State Representative - District 11
+ReportingUnit	Colorado;CO House District 12	Colorado;State Representative - District 12
+ReportingUnit	Colorado;CO House District 13	Colorado;State Representative - District 13
+ReportingUnit	Colorado;CO House District 14	Colorado;State Representative - District 14
+ReportingUnit	Colorado;CO House District 15	Colorado;State Representative - District 15
+ReportingUnit	Colorado;CO House District 16	Colorado;State Representative - District 16
+ReportingUnit	Colorado;CO House District 17	Colorado;State Representative - District 17
+ReportingUnit	Colorado;CO House District 18	Colorado;State Representative - District 18
+ReportingUnit	Colorado;CO House District 19	Colorado;State Representative - District 19
+ReportingUnit	Colorado;CO House District 20	Colorado;State Representative - District 20
+ReportingUnit	Colorado;CO House District 21	Colorado;State Representative - District 21
+ReportingUnit	Colorado;CO House District 22	Colorado;State Representative - District 22
+ReportingUnit	Colorado;CO House District 23	Colorado;State Representative - District 23
+ReportingUnit	Colorado;CO House District 24	Colorado;State Representative - District 24
+ReportingUnit	Colorado;CO House District 25	Colorado;State Representative - District 25
+ReportingUnit	Colorado;CO House District 26	Colorado;State Representative - District 26
+ReportingUnit	Colorado;CO House District 27	Colorado;State Representative - District 27
+ReportingUnit	Colorado;CO House District 28	Colorado;State Representative - District 28
+ReportingUnit	Colorado;CO House District 29	Colorado;State Representative - District 29
+ReportingUnit	Colorado;CO House District 30	Colorado;State Representative - District 30
+ReportingUnit	Colorado;CO House District 31	Colorado;State Representative - District 31
+ReportingUnit	Colorado;CO House District 32	Colorado;State Representative - District 32
+ReportingUnit	Colorado;CO House District 33	Colorado;State Representative - District 33
+ReportingUnit	Colorado;CO House District 34	Colorado;State Representative - District 34
+ReportingUnit	Colorado;CO House District 35	Colorado;State Representative - District 35
+ReportingUnit	Colorado;CO House District 36	Colorado;State Representative - District 36
+ReportingUnit	Colorado;CO House District 37	Colorado;State Representative - District 37
+ReportingUnit	Colorado;CO House District 38	Colorado;State Representative - District 38
+ReportingUnit	Colorado;CO House District 39	Colorado;State Representative - District 39
+ReportingUnit	Colorado;CO House District 40	Colorado;State Representative - District 40
+ReportingUnit	Colorado;CO House District 41	Colorado;State Representative - District 41
+ReportingUnit	Colorado;CO House District 42	Colorado;State Representative - District 42
+ReportingUnit	Colorado;CO House District 43	Colorado;State Representative - District 43
+ReportingUnit	Colorado;CO House District 44	Colorado;State Representative - District 44
+ReportingUnit	Colorado;CO House District 45	Colorado;State Representative - District 45
+ReportingUnit	Colorado;CO House District 46	Colorado;State Representative - District 46
+ReportingUnit	Colorado;CO House District 47	Colorado;State Representative - District 47
+ReportingUnit	Colorado;CO House District 48	Colorado;State Representative - District 48
+ReportingUnit	Colorado;CO House District 49	Colorado;State Representative - District 49
+ReportingUnit	Colorado;CO House District 50	Colorado;State Representative - District 50
+ReportingUnit	Colorado;CO House District 51	Colorado;State Representative - District 51
+ReportingUnit	Colorado;CO House District 52	Colorado;State Representative - District 52
+ReportingUnit	Colorado;CO House District 53	Colorado;State Representative - District 53
+ReportingUnit	Colorado;CO House District 54	Colorado;State Representative - District 54
+ReportingUnit	Colorado;CO House District 55	Colorado;State Representative - District 55
+ReportingUnit	Colorado;CO House District 56	Colorado;State Representative - District 56
+ReportingUnit	Colorado;CO House District 57	Colorado;State Representative - District 57
+ReportingUnit	Colorado;CO House District 58	Colorado;State Representative - District 58
+ReportingUnit	Colorado;CO House District 59	Colorado;State Representative - District 59
+ReportingUnit	Colorado;CO House District 60	Colorado;State Representative - District 60
+ReportingUnit	Colorado;CO House District 61	Colorado;State Representative - District 61
+ReportingUnit	Colorado;CO House District 62	Colorado;State Representative - District 62
+ReportingUnit	Colorado;CO House District 63	Colorado;State Representative - District 63
+ReportingUnit	Colorado;CO House District 64	Colorado;State Representative - District 64
+ReportingUnit	Colorado;CO House District 65	Colorado;State Representative - District 65
+ReportingUnit	Colorado;CO Senate District 1	Colorado;State Senate - District 1
+ReportingUnit	Colorado;CO Senate District 2	Colorado;State Senate - District 2
+ReportingUnit	Colorado;CO Senate District 3	Colorado;State Senate - District 3
+ReportingUnit	Colorado;CO Senate District 4	Colorado;State Senate - District 4
+ReportingUnit	Colorado;CO Senate District 5	Colorado;State Senate - District 5
+ReportingUnit	Colorado;CO Senate District 6	Colorado;State Senate - District 6
+ReportingUnit	Colorado;CO Senate District 7	Colorado;State Senate - District 7
+ReportingUnit	Colorado;CO Senate District 8	Colorado;State Senate - District 8
+ReportingUnit	Colorado;CO Senate District 9	Colorado;State Senate - District 9
+ReportingUnit	Colorado;CO Senate District 10	Colorado;State Senate - District 10
+ReportingUnit	Colorado;CO Senate District 11	Colorado;State Senate - District 11
+ReportingUnit	Colorado;CO Senate District 12	Colorado;State Senate - District 12
+ReportingUnit	Colorado;CO Senate District 13	Colorado;State Senate - District 13
+ReportingUnit	Colorado;CO Senate District 14	Colorado;State Senate - District 14
+ReportingUnit	Colorado;CO Senate District 15	Colorado;State Senate - District 15
+ReportingUnit	Colorado;CO Senate District 16	Colorado;State Senate - District 16
+ReportingUnit	Colorado;CO Senate District 17	Colorado;State Senate - District 17
+ReportingUnit	Colorado;CO Senate District 18	Colorado;State Senate - District 18
+ReportingUnit	Colorado;CO Senate District 19	Colorado;State Senate - District 19
+ReportingUnit	Colorado;CO Senate District 20	Colorado;State Senate - District 20
+ReportingUnit	Colorado;CO Senate District 21	Colorado;State Senate - District 21
+ReportingUnit	Colorado;CO Senate District 22	Colorado;State Senate - District 22
+ReportingUnit	Colorado;CO Senate District 23	Colorado;State Senate - District 23
+ReportingUnit	Colorado;CO Senate District 24	Colorado;State Senate - District 24
+ReportingUnit	Colorado;CO Senate District 25	Colorado;State Senate - District 25
+ReportingUnit	Colorado;CO Senate District 26	Colorado;State Senate - District 26
+ReportingUnit	Colorado;CO Senate District 27	Colorado;State Senate - District 27
+ReportingUnit	Colorado;CO Senate District 28	Colorado;State Senate - District 28
+ReportingUnit	Colorado;CO Senate District 29	Colorado;State Senate - District 29
+ReportingUnit	Colorado;CO Senate District 30	Colorado;State Senate - District 30
+ReportingUnit	Colorado;CO Senate District 31	Colorado;State Senate - District 31
+ReportingUnit	Colorado;CO Senate District 32	Colorado;State Senate - District 32
+ReportingUnit	Colorado;CO Senate District 33	Colorado;State Senate - District 33
+ReportingUnit	Colorado;CO Senate District 34	Colorado;State Senate - District 34
+ReportingUnit	Colorado;CO Senate District 35	Colorado;State Senate - District 35
+ReportingUnit	Colorado;US House CO District 1	Colorado;United States Representative - District 1
+ReportingUnit	Colorado;US House CO District 2	Colorado;United States Representative - District 2
+ReportingUnit	Colorado;US House CO District 3	Colorado;United States Representative - District 3
+ReportingUnit	Colorado;US House CO District 4	Colorado;United States Representative - District 4
+ReportingUnit	Colorado;US House CO District 5	Colorado;United States Representative - District 5
+ReportingUnit	Colorado;US House CO District 6	Colorado;United States Representative - District 6
+ReportingUnit	Colorado;US House CO District 7	Colorado;United States Representative - District 7
 ReportingUnit	Colorado	Colorado
 ReportingUnit	Colorado;Adams County	ADAMS
 ReportingUnit	Colorado;Alamosa County	ALAMOSA
@@ -303,3 +303,394 @@ ReportingUnit	Colorado;Weld County	WELD
 ReportingUnit	Colorado;Yuma County	YUMA
 BallotMeasureSelection	Yes	YES VOTES
 BallotMeasureSelection	No	NO VOTES
+Candidate	Charles Casper Stockham	Charles Casper Stockham
+Candidate	Diana DeGette	Diana DeGette
+Candidate	Raymon Anthony Doane	Raymon Anthony Doane
+Candidate	Miguel Lopez	Miguel Lopez
+Candidate	Joe Neguse	Joe Neguse
+Candidate	Peter Yu	Peter Yu
+Candidate	Roger Barris	Roger Barris
+Candidate	Nick Thomas	Nick Thomas
+Candidate	Kevin Alumbaugh	Kevin Alumbaugh
+Candidate	Scott R. Tipton	Scott R. Tipton
+Candidate	Diane Mitsch Bush	Diane Mitsch Bush
+Candidate	Gaylon Kent	Gaylon Kent
+Candidate	Mary M. Malarsie	Mary M. Malarsie
+Candidate	Richard Tetu	Richard Tetu
+Candidate	Bruce Lohmiller	Bruce Lohmiller
+Candidate	Gary Swing	Gary Swing
+Candidate	Karen McCormick	Karen McCormick
+Candidate	Ken Buck	Ken Buck
+Candidate	Richard Lyons Weil	Richard Lyons Weil
+Candidate	John B. Vigil	John B. Vigil
+Candidate	Stephany Rose Spaulding	Stephany Rose Spaulding
+Candidate	Doug Lamborn	Doug Lamborn
+Candidate	Douglas Randall	Douglas Randall
+Candidate	Lori Furstenberg	Lori Furstenberg
+Candidate	John Croom	John Croom
+Candidate	Mike Coffman	Mike Coffman
+Candidate	Jason Crow	Jason Crow
+Candidate	Kat Martin	Kat Martin
+Candidate	Dan Chapin	Dan Chapin
+Candidate	Christopher Allen	Christopher Allen
+Candidate	Ed Perlmutter	Ed Perlmutter
+Candidate	Mark Barrington	Mark Barrington
+Candidate	Jennifer Nackerud	Jennifer Nackerud
+Candidate	Steve Zorn	Steve Zorn
+Candidate	Michael Haughey	Michael Haughey
+Candidate	Jared Polis / Dianne Primavera	Jared Polis / Dianne Primavera
+Candidate	Walker Stapleton / Lang Sias	Walker Stapleton / Lang Sias
+Candidate	Bill Hammons / Eric Bodenstab	Bill Hammons / Eric Bodenstab
+Candidate	Scott Helker / Michele Poague	Scott Helker / Michele Poague
+Candidate	Wayne Williams	Wayne Williams
+Candidate	Jena Griswold	Jena Griswold
+Candidate	Amanda Campbell	Amanda Campbell
+Candidate	Blake Huber	Blake Huber
+Candidate	Brian Watson	Brian Watson
+Candidate	Dave Young	Dave Young
+Candidate	Gerald F. Kilpatrick	Gerald F. Kilpatrick
+Candidate	Phil Weiser	Phil Weiser
+Candidate	George Brauchler	George Brauchler
+Candidate	William F. Robinson III	William F. Robinson III
+Candidate	Johnny Barrett	Johnny Barrett
+Candidate	Angelika Schroeder	Angelika Schroeder
+Candidate	Tim Krug	Tim Krug
+Candidate	Debora L. Scheffel	Debora L. Scheffel
+Candidate	Lesley Smith	Lesley Smith
+Candidate	Ken Montera	Ken Montera
+Candidate	Christopher E. Otwell	Christopher E. Otwell
+Candidate	James K. Treibert	James K. Treibert
+Candidate	Alvin Rivera	Alvin Rivera
+Candidate	Glen H. Gallegos	Glen H. Gallegos
+Candidate	Michael Stapleton	Michael Stapleton
+Candidate	Tony Wolusky	Tony Wolusky
+Candidate	Chance Hill	Chance Hill
+Candidate	Jerry Sonnenberg	Jerry Sonnenberg
+Candidate	Debra Gustafson	Debra Gustafson
+Candidate	Beth 'Hart' Harz	Beth 'Hart' Harz
+Candidate	Dennis Hisey	Dennis Hisey
+Candidate	Leroy M. Garcia	Leroy M. Garcia
+Candidate	John Pickerill	John Pickerill
+Candidate	Kerry Donovan	Kerry Donovan
+Candidate	Olen Lund	Olen Lund
+Candidate	Guinn Unger Jr.	Guinn Unger Jr.
+Candidate	Don Coram	Don Coram
+Candidate	Chris Kennedy	Chris Kennedy
+Candidate	Ray Scott	Ray Scott
+Candidate	Gil Armendariz	Gil Armendariz
+Candidate	Paul Lundeen	Paul Lundeen
+Candidate	Pete Lee	Pete Lee
+Candidate	Pat McIntire	Pat McIntire
+Candidate	John Cooke	John Cooke
+Candidate	Phil Kelley	Phil Kelley
+Candidate	Eric E. Joss	Eric E. Joss
+Candidate	Rebecca Cranston	Rebecca Cranston
+Candidate	Rob Woodward	Rob Woodward
+Candidate	Tammy Story	Tammy Story
+Candidate	Tim Neville	Tim Neville
+Candidate	James Gilman	James Gilman
+Candidate	Christine Jensen	Christine Jensen
+Candidate	Jessie Danielson	Jessie Danielson
+Candidate	Charles Messick	Charles Messick
+Candidate	Brittany Pettersen	Brittany Pettersen
+Candidate	Tony Sanchez	Tony Sanchez
+Candidate	Beth Martinez Humenik	Beth Martinez Humenik
+Candidate	Faith Winter	Faith Winter
+Candidate	Donald Osborn	Donald Osborn
+Candidate	Adam Matkowsky	Adam Matkowsky
+Candidate	Julia Varnell-Sarjeant	Julia Varnell-Sarjeant
+Candidate	Chris Holbert	Chris Holbert
+Candidate	Steve Peterson	Steve Peterson
+Candidate	Robert Rodriguez	Robert Rodriguez
+Candidate	Mark Calonder	Mark Calonder
+Candidate	Peter Lucas Smith	Peter Lucas Smith
+Candidate	Julie Gonzales	Julie Gonzales
+Candidate	Gordon Alley	Gordon Alley
+Candidate	Susan Lontine	Susan Lontine
+Candidate	Alysia Padilla	Alysia Padilla
+Candidate	Darrell Dinges	Darrell Dinges
+Candidate	Alec Garnett	Alec Garnett
+Candidate	Toren Mushovic	Toren Mushovic
+Candidate	Jeff Bridges	Jeff Bridges
+Candidate	Robert 'Dave' John	Robert 'Dave' John
+Candidate	Serena Gonzales-Gutierrez	Serena Gonzales-Gutierrez
+Candidate	Alex Valdez	Alex Valdez
+Candidate	Katherine E. Whitney	Katherine E. Whitney
+Candidate	Rory Lamberton	Rory Lamberton
+Candidate	Chris Hansen	Chris Hansen
+Candidate	Jay Frank Kucera	Jay Frank Kucera
+Candidate	James Rashad Coleman	James Rashad Coleman
+Candidate	Leslie Herod	Leslie Herod
+Candidate	Emily Sirota	Emily Sirota
+Candidate	Bob Lane	Bob Lane
+Candidate	Murl S. Hendrickson IV	Murl S. Hendrickson IV
+Candidate	Edie Hooton	Edie Hooton
+Candidate	Jonathan Singer	Jonathan Singer
+Candidate	Brian O Donahue	Brian O Donahue
+Candidate	Sonya Jaquez Lewis	Sonya Jaquez Lewis
+Candidate	Theresa Stets	Theresa Stets
+Candidate	Kevin Sipple	Kevin Sipple
+Candidate	K.C. Becker	K.C. Becker
+Candidate	Shane Sandridge	Shane Sandridge
+Candidate	Paul J. Haddick	Paul J. Haddick
+Candidate	Brenda Krause	Brenda Krause
+Candidate	Dave Williams	Dave Williams
+Candidate	Andrew Smith	Andrew Smith
+Candidate	Larry G. Liston	Larry G. Liston
+Candidate	John Hjersman	John Hjersman
+Candidate	Kit Roupe	Kit Roupe
+Candidate	Thomas 'Tony' Exum Sr.	Thomas 'Tony' Exum Sr.
+Candidate	Mary Elizabeth Fabian	Mary Elizabeth Fabian
+Candidate	Marc A. Snyder	Marc A. Snyder
+Candidate	Maile Foster	Maile Foster
+Candidate	Tim Geitner	Tim Geitner
+Candidate	Asia M. Zanders	Asia M. Zanders
+Candidate	Terri Carver	Terri Carver
+Candidate	Kent Edward Jarnig	Kent Edward Jarnig
+Candidate	Lois Landgraf	Lois Landgraf
+Candidate	Liz Rosenbaum	Liz Rosenbaum
+Candidate	Todd Kastetter	Todd Kastetter
+Candidate	Colin Larson	Colin Larson
+Candidate	Joan Poston	Joan Poston
+Candidate	Arthur Erwin	Arthur Erwin
+Candidate	Monica Duran	Monica Duran
+Candidate	Steve Szutenbach	Steve Szutenbach
+Candidate	Lisa A. Cutter	Lisa A. Cutter
+Candidate	Nicki Mills	Nicki Mills
+Candidate	Dylan Roberts	Dylan Roberts
+Candidate	Luke Bray	Luke Bray
+Candidate	Brianna Titone	Brianna Titone
+Candidate	Vicki Pyne	Vicki Pyne
+Candidate	Kristina Joy Alley	Kristina Joy Alley
+Candidate	Kerry Tipper	Kerry Tipper
+Candidate	Ross Klopf	Ross Klopf
+Candidate	Grady Nouis	Grady Nouis
+Candidate	Tracy Kraft-Tharp	Tracy Kraft-Tharp
+Candidate	Hans V. Romer	Hans V. Romer
+Candidate	Dafna Michaelson Jenet	Dafna Michaelson Jenet
+Candidate	Susan Kochevar	Susan Kochevar
+Candidate	Rico Figueroa	Rico Figueroa
+Candidate	Yadira Caraveo	Yadira Caraveo
+Candidate	Bree Owens	Bree Owens
+Candidate	Adrienne Benavidez	Adrienne Benavidez
+Candidate	Eric Rutherford	Eric Rutherford
+Candidate	Matt Gray	Matt Gray
+Candidate	Kim Tavendale	Kim Tavendale
+Candidate	Jay Geyer	Jay Geyer
+Candidate	Alexander 'Skinny' Winkler	Alexander 'Skinny' Winkler
+Candidate	Kyle Mullica	Kyle Mullica
+Candidate	Shannon Bird	Shannon Bird
+Candidate	Bruce Baker	Bruce Baker
+Candidate	Ken Biles	Ken Biles
+Candidate	Richard J. Bowman	Richard J. Bowman
+Candidate	Mike Weissman	Mike Weissman
+Candidate	Tom Sullivan	Tom Sullivan
+Candidate	Cole Wist	Cole Wist
+Candidate	Chris Kolker	Chris Kolker
+Candidate	Susan Beckman	Susan Beckman
+Candidate	Mark Baisley	Mark Baisley
+Candidate	Kamala Vanderkolk	Kamala Vanderkolk
+Candidate	Tony Gross	Tony Gross
+Candidate	Janet Buckner	Janet Buckner
+Candidate	Richard Allen Bassett	Richard Allen Bassett
+Candidate	Lynn Myers	Lynn Myers
+Candidate	Jovan Melton	Jovan Melton
+Candidate	Mike Donald	Mike Donald
+Candidate	Dominique Jackson	Dominique Jackson
+Candidate	Kevin Van Winkle	Kevin Van Winkle
+Candidate	Barrett Rothe	Barrett Rothe
+Candidate	Scott Wagner	Scott Wagner
+Candidate	Kim Ransom	Kim Ransom
+Candidate	Simone Aiken	Simone Aiken
+Candidate	Danielle Kombo	Danielle Kombo
+Candidate	Patrick Neville	Patrick Neville
+Candidate	Daneya Esgar	Daneya Esgar
+Candidate	Jonathan Ambler	Jonathan Ambler
+Candidate	Bri Buentello	Bri Buentello
+Candidate	Don Bendell	Don Bendell
+Candidate	Stephen Alan Humphrey	Stephen Alan Humphrey
+Candidate	Gbenga Ajiboye	Gbenga Ajiboye
+Candidate	Perry L. Buck	Perry L. Buck
+Candidate	Conor Duffy	Conor Duffy
+Candidate	Rochelle Galindo	Rochelle Galindo
+Candidate	Michael A. Thuener	Michael A. Thuener
+Candidate	Joan Shaffer	Joan Shaffer
+Candidate	Hugh McKean	Hugh McKean
+Candidate	Donna Walter	Donna Walter
+Candidate	Joann Ginal	Joann Ginal
+Candidate	Jeni Arndt	Jeni Arndt
+Candidate	Matt Soper	Matt Soper
+Candidate	Thea Chase	Thea Chase
+Candidate	Tanya Travis	Tanya Travis
+Candidate	Janice Rich	Janice Rich
+Candidate	Rod Bockenfeld	Rod Bockenfeld
+Candidate	Dave Rose	Dave Rose
+Candidate	Kevin Gulbranson	Kevin Gulbranson
+Candidate	Bob Rankin	Bob Rankin
+Candidate	Colin Wilhelm	Colin Wilhelm
+Candidate	Marc Catlin	Marc Catlin
+Candidate	Seth Cagin	Seth Cagin
+Candidate	Barbara McLachlan	Barbara McLachlan
+Candidate	Paul Jones	Paul Jones
+Candidate	Erin Kelley	Erin Kelley
+Candidate	James D. 'Jim' Wilson	James D. 'Jim' Wilson
+Candidate	Glenn Ingalls	Glenn Ingalls
+Candidate	Julie McCluskie	Julie McCluskie
+Candidate	Mike Mason	Mike Mason
+Candidate	Donald E. Valdez	Donald E. Valdez
+Candidate	Scott Honeycutt	Scott Honeycutt
+Candidate	Lori A. Saine	Lori A. Saine
+Candidate	Brandon D. Bobian	Brandon D. Bobian
+Candidate	Joe Johnson	Joe Johnson
+Candidate	Kimmi Lewis	Kimmi Lewis
+Candidate	Teri Nilson Baird	Teri Nilson Baird
+Candidate	Rod Pelton	Rod Pelton
+Candidate	Bethleen McCall	Bethleen McCall
+Candidate	Michael Dougherty	Michael Dougherty
+Candidate	Chris Martinez	Chris Martinez
+Candidate	Shontel Marie Lewis	Shontel Marie Lewis
+Candidate	JoyAnn Keener Ruscha	JoyAnn Keener Ruscha
+Candidate	Angie Rivera-Malpiede	Angie Rivera-Malpiede
+Candidate	Bonnie Ernest Archuleta	Bonnie Ernest Archuleta
+Candidate	Julia Stewart	Julia Stewart
+Candidate	Eliot Tipton	Eliot Tipton
+Candidate	Vince Buzek	Vince Buzek
+Candidate	Troy L. Whitmore	Troy L. Whitmore
+Candidate	Paul D. Solano	Paul D. Solano
+Candidate	Gerald Stephen Jaramillo	Gerald Stephen Jaramillo
+Candidate	Phil Munsterman	Phil Munsterman
+Candidate	Bob Wilson	Bob Wilson
+Candidate	Shelley Cook	Shelley Cook
+Candidate	Brad K. Evans	Brad K. Evans
+Candidate	Margaret (Peggy) A. Catlin	Margaret (Peggy) A. Catlin
+Candidate	Jennifer Hope	Jennifer Hope
+Candidate	Lynn Guissinger	Lynn Guissinger
+Candidate	Richard L. Gabriel	Richard L. Gabriel
+Candidate	John Daniel Dailey	John Daniel Dailey
+Candidate	Rebecca Rankin Freyre	Rebecca Rankin Freyre
+Candidate	Elizabeth L. Harris	Elizabeth L. Harris
+Candidate	David J. Richman	David J. Richman
+Candidate	Christie A. Bachmeyer	Christie A. Bachmeyer
+Candidate	Diego G. Hunt	Diego G. Hunt
+Candidate	Laura A. Tighe	Laura A. Tighe
+Candidate	Shelley I. Gilman	Shelley I. Gilman
+Candidate	David H. Goldberg	David H. Goldberg
+Candidate	Jay Sutherland Grant	Jay Sutherland Grant
+Candidate	Morris B. Hoffman	Morris B. Hoffman
+Candidate	Kenneth Martin Laff	Kenneth Martin Laff
+Candidate	Catherine A. Lemon	Catherine A. Lemon
+Candidate	Jennifer B. Torrington	Jennifer B. Torrington
+Candidate	Eric Bentley	Eric Bentley
+Candidate	Linda Margaret Billings-Vela	Linda Margaret Billings-Vela
+Candidate	Jill M. Brady	Jill M. Brady
+Candidate	Robert L. Lowrey	Robert L. Lowrey
+Candidate	Timothy Schutz	Timothy Schutz
+Candidate	Larry Edward Schwartz	Larry Edward Schwartz
+Candidate	Scott A. Sells	Scott A. Sells
+Candidate	David L. Shakes	David L. Shakes
+Candidate	Steven L. Schultz	Steven L. Schultz
+Candidate	Keri A. Yoder	Keri A. Yoder
+Candidate	James Berkley Boyd	James Berkley Boyd
+Candidate	Anne K. Norrdin	Anne K. Norrdin
+Candidate	Christopher G. Seldin	Christopher G. Seldin
+Candidate	Deborah R. Eyler	Deborah R. Eyler
+Candidate	Kim Karn	Kim Karn
+Candidate	Ramsey Lama	Ramsey Lama
+Candidate	Lynette Mary Wenner	Lynette Mary Wenner
+Candidate	Pattie P. Swift	Pattie P. Swift
+Candidate	Charles M. Hobbs	Charles M. Hobbs
+Candidate	Carl S. McGuire III	Carl S. McGuire III
+Candidate	Michael Keith Singer	Michael Keith Singer
+Candidate	Michael A. O'Hara III	Michael A. O'Hara III
+Candidate	Michael Davidson	Michael Davidson
+Candidate	Jaclyn Brown	Jaclyn Brown
+Candidate	Sharon D. Holbrook	Sharon D. Holbrook
+Candidate	Edward Moss	Edward Moss
+Candidate	Donald S. Quick	Donald S. Quick
+Candidate	Phillip L. Douglass	Phillip L. Douglass
+Candidate	Patricia Herron	Patricia Herron
+Candidate	Gary M. Kramer	Gary M. Kramer
+Candidate	Ben L. Leutwyler III	Ben L. Leutwyler III
+Candidate	Robert R. Lung	Robert R. Lung
+Candidate	Bonnie Heather McLean	Bonnie Heather McLean
+Candidate	Peter F. Michaelson	Peter F. Michaelson
+Candidate	Michael Spear	Michael Spear
+Candidate	Shay K. Whitaker	Shay K. Whitaker
+Candidate	James F. Hartmann	James F. Hartmann
+Candidate	Todd L. Taylor	Todd L. Taylor
+Candidate	Thomas Francis Mulvahill	Thomas Francis Mulvahill
+Candidate	Norma A. Sierra	Norma A. Sierra
+Candidate	Lance Phillip Timbreza	Lance Phillip Timbreza
+Candidate	Todd Jay Plewe	Todd Jay Plewe
+Candidate	Brian Nathaniel Bowen	Brian Nathaniel Bowen
+Candidate	Michael A. Cox	Michael A. Cox
+Candidate	Cindy Dang	Cindy Dang
+Candidate	Byron Lynn Howell	Byron Lynn Howell
+Candidate	Sabino E. Romano	Sabino E. Romano
+Candidate	Dianna L. Roybal	Dianna L. Roybal
+Candidate	Daniel A. Walzl	Daniel A. Walzl
+Candidate	Colleen Clark	Colleen Clark
+Candidate	Kelly LaFave	Kelly LaFave
+Candidate	Michael J. Roche	Michael J. Roche
+Candidate	Cheryl Rowles-Stokes	Cheryl Rowles-Stokes
+Candidate	Justin P. Fay	Justin P. Fay
+Candidate	Debra M. Gunkel	Debra M. Gunkel
+Candidate	David Archuleta	David Archuleta
+Candidate	Elizabeth House Moulton Brodsky	Elizabeth House Moulton Brodsky
+Candidate	Amy Elizabeth Bockman	Amy Elizabeth Bockman
+Candidate	Gerald Keefe	Gerald Keefe
+Candidate	Kimberly Lynn Wood	Kimberly Lynn Wood
+Candidate	Amanda Jean Hunter	Amanda Jean Hunter
+Candidate	Johnny C. Barajas	Johnny C. Barajas
+Candidate	Brian Thomas Campbell	Brian Thomas Campbell
+Candidate	Andrea Eddy	Andrea Eddy
+Candidate	Adam J. Espinosa	Adam J. Espinosa
+Candidate	Olympia Z. Fay	Olympia Z. Fay
+Candidate	Clarisse Gonzales	Clarisse Gonzales
+Candidate	Kerri Lombardi	Kerri Lombardi
+Candidate	Chelsea Malone	Chelsea Malone
+Candidate	Lawrence Bowling	Lawrence Bowling
+Candidate	Monica J. Gomez	Monica J. Gomez
+Candidate	Susanna Meissner-Cutler	Susanna Meissner-Cutler
+Candidate	Palmer L. Boyette	Palmer L. Boyette
+Candidate	Christopher Edward Acker	Christopher Edward Acker
+Candidate	Lawrence D. Martin	Lawrence D. Martin
+Candidate	Douglas J. Miles	Douglas J. Miles
+Candidate	Ann M. Rotolo	Ann M. Rotolo
+Candidate	Paul H. Metzger	Paul H. Metzger
+Candidate	Jonathan Bruce Pototsky	Jonathan Bruce Pototsky
+Candidate	David C. Taylor	David C. Taylor
+Candidate	Nicholas Catanzarite	Nicholas Catanzarite
+Candidate	Cindy Wilson	Cindy Wilson
+Candidate	Susan Lori Fisch	Susan Lori Fisch
+Candidate	Mark Marrow Randall	Mark Marrow Randall
+Candidate	Ryan James Stuart	Ryan James Stuart
+Candidate	Thomas Vance	Thomas Vance
+Candidate	Jean Woodford	Jean Woodford
+Candidate	Gary W. Davis	Gary W. Davis
+Candidate	Michael K. Grinnan	Michael K. Grinnan
+Candidate	Thomas L. Lynch	Thomas L. Lynch
+Candidate	Peter E. Schoon Jr.	Peter E. Schoon Jr.
+Candidate	Truston Lee Fisher	Truston Lee Fisher
+Candidate	Bruce R. Raaum	Bruce R. Raaum
+Candidate	Sandra H. Gardner	Sandra H. Gardner
+Candidate	JenniLynn Lawrence	JenniLynn Lawrence
+Candidate	Ben A. Morris	Ben A. Morris
+Candidate	Douglas R. Manley	Douglas R. Manley
+Candidate	Brian L. Green	Brian L. Green
+Candidate	Erin Fernandez-Ely	Erin Fernandez-Ely
+Candidate	Curtis Lane Porter	Curtis Lane Porter
+Candidate	Steven B. Fieldman	Steven B. Fieldman
+Candidate	David Lee Lobato	David Lee Lobato
+Candidate	Laurie Anne Noble	Laurie Anne Noble
+Candidate	Barbara A. Zollars	Barbara A. Zollars
+Candidate	James H. Garrecht	James H. Garrecht
+Candidate	Anna Ulrich	Anna Ulrich
+Candidate	Susanne J. Ross	Susanne J. Ross
+Candidate	Theresa L. Kilgore	Theresa L. Kilgore
+Candidate	Kelly S. Hansen	Kelly S. Hansen
+Candidate	John Joseph Briggs	John Joseph Briggs
+Candidate	Michele Lynn Meyer	Michele Lynn Meyer
+Candidate	Dana Nichols	Dana Nichols
+Candidate	Charles S. Unfug	Charles S. Unfug
+CountItemType	total	total
