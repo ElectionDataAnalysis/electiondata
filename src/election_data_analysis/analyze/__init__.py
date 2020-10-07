@@ -166,6 +166,7 @@ def create_scatter(
         v_type,
     )
     if dfh.empty or dfv.empty:
+        connection.close()
         return None
 
     unsummed = pd.concat([dfh, dfv])
@@ -211,6 +212,7 @@ def create_scatter(
         if len(result) == 5:
             to_keep.append(result)
     if not to_keep:
+        connection.close()
         return None
 
     results["counts"] = to_keep
@@ -339,8 +341,10 @@ def create_bar(
         else:
             top_ranked = votes_at_stake
     except:
+        connection.close()
         return None
     if top_ranked.empty:
+        connection.close()
         return None
 
     # package into list of dictionary
