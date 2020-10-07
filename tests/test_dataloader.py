@@ -289,9 +289,9 @@ def test_nc_rep():
         check_contest_totals(
             "2020 Primary",
             "North Carolina",
-            "US House NC District 4",
+            "US House NC District 4 (Republican Party)",
         )
-        == 409541
+        == 36096
     )
 
 @pytest.mark.skipif(not ok["nc20p"], reason="No NC 2020 Primary data")
@@ -300,10 +300,10 @@ def test_nc_contest_by_vote_type():
         check_count_type_totals(
             "2020 Primary",
             "North Carolina",
-            "US House NC District 4",
+            "US House NC District 4  (Republican Party)",
             "absentee-mail",
         )
-        == 20881
+        == 426
     )
 
 @pytest.mark.skipif(not ok["nc20p"], reason="No NC 2020 Primary data")
