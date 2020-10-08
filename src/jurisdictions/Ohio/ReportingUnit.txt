@@ -1,0 +1,238 @@
+Name	ReportingUnitType
+Ohio;OH House District 1	state-house
+Ohio;OH House District 2	state-house
+Ohio;OH House District 3	state-house
+Ohio;OH House District 4	state-house
+Ohio;OH House District 5	state-house
+Ohio;OH House District 6	state-house
+Ohio;OH House District 7	state-house
+Ohio;OH House District 8	state-house
+Ohio;OH House District 9	state-house
+Ohio;OH House District 10	state-house
+Ohio;OH House District 11	state-house
+Ohio;OH House District 12	state-house
+Ohio;OH House District 13	state-house
+Ohio;OH House District 14	state-house
+Ohio;OH House District 15	state-house
+Ohio;OH House District 16	state-house
+Ohio;OH House District 17	state-house
+Ohio;OH House District 18	state-house
+Ohio;OH House District 19	state-house
+Ohio;OH House District 20	state-house
+Ohio;OH House District 21	state-house
+Ohio;OH House District 22	state-house
+Ohio;OH House District 23	state-house
+Ohio;OH House District 24	state-house
+Ohio;OH House District 25	state-house
+Ohio;OH House District 26	state-house
+Ohio;OH House District 27	state-house
+Ohio;OH House District 28	state-house
+Ohio;OH House District 29	state-house
+Ohio;OH House District 30	state-house
+Ohio;OH House District 31	state-house
+Ohio;OH House District 32	state-house
+Ohio;OH House District 33	state-house
+Ohio;OH House District 34	state-house
+Ohio;OH House District 35	state-house
+Ohio;OH House District 36	state-house
+Ohio;OH House District 37	state-house
+Ohio;OH House District 38	state-house
+Ohio;OH House District 39	state-house
+Ohio;OH House District 40	state-house
+Ohio;OH House District 41	state-house
+Ohio;OH House District 42	state-house
+Ohio;OH House District 43	state-house
+Ohio;OH House District 44	state-house
+Ohio;OH House District 45	state-house
+Ohio;OH House District 46	state-house
+Ohio;OH House District 47	state-house
+Ohio;OH House District 48	state-house
+Ohio;OH House District 49	state-house
+Ohio;OH House District 50	state-house
+Ohio;OH House District 51	state-house
+Ohio;OH House District 52	state-house
+Ohio;OH House District 53	state-house
+Ohio;OH House District 54	state-house
+Ohio;OH House District 55	state-house
+Ohio;OH House District 56	state-house
+Ohio;OH House District 57	state-house
+Ohio;OH House District 58	state-house
+Ohio;OH House District 59	state-house
+Ohio;OH House District 60	state-house
+Ohio;OH House District 61	state-house
+Ohio;OH House District 62	state-house
+Ohio;OH House District 63	state-house
+Ohio;OH House District 64	state-house
+Ohio;OH House District 65	state-house
+Ohio;OH House District 66	state-house
+Ohio;OH House District 67	state-house
+Ohio;OH House District 68	state-house
+Ohio;OH House District 69	state-house
+Ohio;OH House District 70	state-house
+Ohio;OH House District 71	state-house
+Ohio;OH House District 72	state-house
+Ohio;OH House District 73	state-house
+Ohio;OH House District 74	state-house
+Ohio;OH House District 75	state-house
+Ohio;OH House District 76	state-house
+Ohio;OH House District 77	state-house
+Ohio;OH House District 78	state-house
+Ohio;OH House District 79	state-house
+Ohio;OH House District 80	state-house
+Ohio;OH House District 81	state-house
+Ohio;OH House District 82	state-house
+Ohio;OH House District 83	state-house
+Ohio;OH House District 84	state-house
+Ohio;OH House District 85	state-house
+Ohio;OH House District 86	state-house
+Ohio;OH House District 87	state-house
+Ohio;OH House District 88	state-house
+Ohio;OH House District 89	state-house
+Ohio;OH House District 90	state-house
+Ohio;OH House District 91	state-house
+Ohio;OH House District 92	state-house
+Ohio;OH House District 93	state-house
+Ohio;OH House District 94	state-house
+Ohio;OH House District 95	state-house
+Ohio;OH House District 96	state-house
+Ohio;OH House District 97	state-house
+Ohio;OH House District 98	state-house
+Ohio;OH House District 99	state-house
+Ohio;OH Senate District 1	state-senate
+Ohio;OH Senate District 2	state-senate
+Ohio;OH Senate District 3	state-senate
+Ohio;OH Senate District 4	state-senate
+Ohio;OH Senate District 5	state-senate
+Ohio;OH Senate District 6	state-senate
+Ohio;OH Senate District 7	state-senate
+Ohio;OH Senate District 8	state-senate
+Ohio;OH Senate District 9	state-senate
+Ohio;OH Senate District 10	state-senate
+Ohio;OH Senate District 11	state-senate
+Ohio;OH Senate District 12	state-senate
+Ohio;OH Senate District 13	state-senate
+Ohio;OH Senate District 14	state-senate
+Ohio;OH Senate District 15	state-senate
+Ohio;OH Senate District 16	state-senate
+Ohio;OH Senate District 17	state-senate
+Ohio;OH Senate District 18	state-senate
+Ohio;OH Senate District 19	state-senate
+Ohio;OH Senate District 20	state-senate
+Ohio;OH Senate District 21	state-senate
+Ohio;OH Senate District 22	state-senate
+Ohio;OH Senate District 23	state-senate
+Ohio;OH Senate District 24	state-senate
+Ohio;OH Senate District 25	state-senate
+Ohio;OH Senate District 26	state-senate
+Ohio;OH Senate District 27	state-senate
+Ohio;OH Senate District 28	state-senate
+Ohio;OH Senate District 29	state-senate
+Ohio;OH Senate District 30	state-senate
+Ohio;OH Senate District 31	state-senate
+Ohio;OH Senate District 32	state-senate
+Ohio;OH Senate District 33	state-senate
+Ohio;US House OH District 1	congressional
+Ohio;US House OH District 2	congressional
+Ohio;US House OH District 3	congressional
+Ohio;US House OH District 4	congressional
+Ohio;US House OH District 5	congressional
+Ohio;US House OH District 6	congressional
+Ohio;US House OH District 7	congressional
+Ohio;US House OH District 8	congressional
+Ohio;US House OH District 9	congressional
+Ohio;US House OH District 10	congressional
+Ohio;US House OH District 11	congressional
+Ohio;US House OH District 12	congressional
+Ohio;US House OH District 13	congressional
+Ohio;US House OH District 14	congressional
+Ohio;US House OH District 15	congressional
+Ohio;US House OH District 16	congressional
+Ohio	state
+Ohio;Adams County	county
+Ohio;Allen County	county
+Ohio;Ashland County	county
+Ohio;Ashtabula County	county
+Ohio;Athens County	county
+Ohio;Auglaize County	county
+Ohio;Belmont County	county
+Ohio;Brown County	county
+Ohio;Butler County	county
+Ohio;Carroll County	county
+Ohio;Champaign County	county
+Ohio;Clark County	county
+Ohio;Clermont County	county
+Ohio;Clinton County	county
+Ohio;Columbiana County	county
+Ohio;Coshocton County	county
+Ohio;Crawford County	county
+Ohio;Cuyahoga County	county
+Ohio;Darke County	county
+Ohio;Defiance County	county
+Ohio;Delaware County	county
+Ohio;Erie County	county
+Ohio;Fairfield County	county
+Ohio;Fayette County	county
+Ohio;Franklin County	county
+Ohio;Fulton County	county
+Ohio;Gallia County	county
+Ohio;Geauga County	county
+Ohio;Greene County	county
+Ohio;Guernsey County	county
+Ohio;Hamilton County	county
+Ohio;Hancock County	county
+Ohio;Hardin County	county
+Ohio;Harrison County	county
+Ohio;Henry County	county
+Ohio;Highland County	county
+Ohio;Hocking County	county
+Ohio;Holmes County	county
+Ohio;Huron County	county
+Ohio;Jackson County	county
+Ohio;Jefferson County	county
+Ohio;Knox County	county
+Ohio;Lake County	county
+Ohio;Lawrence County	county
+Ohio;Licking County	county
+Ohio;Logan County	county
+Ohio;Lorain County	county
+Ohio;Lucas County	county
+Ohio;Madison County	county
+Ohio;Mahoning County	county
+Ohio;Marion County	county
+Ohio;Medina County	county
+Ohio;Meigs County	county
+Ohio;Mercer County	county
+Ohio;Miami County	county
+Ohio;Monroe County	county
+Ohio;Montgomery County	county
+Ohio;Morgan County	county
+Ohio;Morrow County	county
+Ohio;Muskingum County	county
+Ohio;Noble County	county
+Ohio;Ottawa County	county
+Ohio;Paulding County	county
+Ohio;Perry County	county
+Ohio;Pickaway County	county
+Ohio;Pike County	county
+Ohio;Portage County	county
+Ohio;Preble County	county
+Ohio;Putnam County	county
+Ohio;Richland County	county
+Ohio;Ross County	county
+Ohio;Sandusky County	county
+Ohio;Scioto County	county
+Ohio;Seneca County	county
+Ohio;Shelby County	county
+Ohio;Stark County	county
+Ohio;Summit County	county
+Ohio;Trumbull County	county
+Ohio;Tuscarawas County	county
+Ohio;Union County	county
+Ohio;Van Wert County	county
+Ohio;Vinton County	county
+Ohio;Warren County	county
+Ohio;Washington County	county
+Ohio;Wayne County	county
+Ohio;Williams County	county
+Ohio;Wood County	county
+Ohio;Wyandot County	county

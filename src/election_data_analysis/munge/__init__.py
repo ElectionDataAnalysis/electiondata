@@ -3,6 +3,7 @@ from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
+from typing import Optional, List
 import re
 import os
 import numpy as np
@@ -13,13 +14,37 @@ class MungeError(Exception):
     pass
 
 
-def generic_clean(df: pd.DataFrame) -> pd.DataFrame:
+def generic_clean(
+        df: pd.DataFrame,
+        int_cols_by_name: List[str] = None,
+) -> (pd.DataFrame, Optional[pd.DataFrame]):
     """Replaces nulls, strips external whitespace, compresses any internal whitespace."""
     # TODO put all info about data cleaning into README.md (e.g., whitespace strip)
     # TODO return error if cleaning fails, including dtypes of columns
+    err_df = pd.DataFrame()
+    if int_cols_by_name is None:
+        int_cols_by_name = list()
     working = df.copy()
+
+    # strip any whitespace from column names
+    working.columns = [x.strip() for x in working.columns]
+
     for c in working.columns:
-        if is_numeric_dtype(working[c]):
+        # if c is in the given list of count_columns
+        if c in int_cols_by_name:
+            # find any values that cannot be interpreted as numeric
+            mask = (working[c] != pd.to_numeric(working[c], errors='coerce'))
+            if mask.any():
+                # return bad rows for error reporting
+                err_df = pd.concat([err_df, working[mask]]).drop_duplicates()
+
+                # cast as int, changing any non-integer values to 0
+                working[c] = pd.to_numeric(
+                    working[c],
+                    errors='coerce'
+                ).fillna(0).astype("int64")
+
+        elif is_numeric_dtype(working[c]):
             # change nulls to 0
             working[c] = working[c].fillna(0).astype("int64")
         elif working.dtypes[c] == np.object:
@@ -38,7 +63,7 @@ def generic_clean(df: pd.DataFrame) -> pd.DataFrame:
                 )
             except (AttributeError,TypeError):
                 pass
-    return working
+    return working, err_df
 
 
 def cast_cols_as_int(
@@ -80,16 +105,6 @@ def munge_clean(raw: pd.DataFrame, munger: jm.Munger) -> (pd.DataFrame, dict):
     working = raw.copy()
 
     try:
-        #  define columns named in munger formulas
-        if munger.options["header_row_count"] is not None and munger.options["header_row_count"] > 1:
-            munger_formula_columns = [
-                x
-                for x in working.columns
-                if x[munger.options["field_name_row"]] in munger.field_list
-            ]
-        else:
-            munger_formula_columns = [x for x in working.columns if x in munger.field_list]
-
         # define count_columns_by_name list
         if munger.options["count_columns_by_name"]:
             count_columns_by_name = munger.options["count_columns_by_name"]
@@ -103,6 +118,29 @@ def munge_clean(raw: pd.DataFrame, munger: jm.Munger) -> (pd.DataFrame, dict):
                 working.columns[idx] for idx in munger.options["count_columns"]
             ]
         # TODO error check- what if cols_to_munge is missing something from munger.field_list?
+
+        # do a generic clean
+        working, err_df = generic_clean(working,int_cols_by_name=count_columns_by_name)
+        if not err_df.empty:
+            pd.set_option('max_columns',None)
+            err = ui.add_new_error(
+                err,
+                "warn-munger",
+                munger.name,
+                f"At least one count in some rows of {err_df} not recognized as integer; these are set to 0:\n"
+                f"{err_df}"
+            )
+            pd.reset_option('max_columns')
+
+        #  define columns named in munger formulas
+        if munger.options["header_row_count"] is not None and munger.options["header_row_count"] > 1:
+            munger_formula_columns = [
+                x
+                for x in working.columns
+                if x[munger.options["field_name_row"]] in munger.field_list
+            ]
+        else:
+            munger_formula_columns = [x for x in working.columns if x in munger.field_list]
 
         # keep columns named in munger formulas; keep count columns; drop all else.
         working = working[munger_formula_columns + count_columns_by_name]
@@ -119,6 +157,17 @@ def munge_clean(raw: pd.DataFrame, munger: jm.Munger) -> (pd.DataFrame, dict):
             "munge.munge_clean",
             "Unspecified error"
         )
+    return working, err
+
+
+def add_regex_column(df: pd.DataFrame, old_col: str, new_col: str, pattern_str: str) -> (pd.DataFrame, [dict, None]):
+    """Return <df> with <new_col> appended, where <new_col> is pulled from <old_col> by the <pattern>.
+    Note that only the first group (per <pattern>) is returned"""
+    err = None
+    working = df.copy()
+    p = re.compile(pattern_str)
+    working[new_col] = working[old_col].str.replace(p, "\\1")
+
     return working, err
 
 
@@ -143,25 +192,36 @@ def add_column_from_formula(
     working: pd.DataFrame,
     formula: str,
     new_col: str,
-    err: dict,
+    err: Optional[dict],
     munger_name: str,
     suffix=None,
-) -> (pd.DataFrame, dict):
+) -> (pd.DataFrame, Optional[dict]):
     """If <suffix> is given, add it to each field in the formula
     If formula is enclosed in braces, parse first entry as formula, second as a
     regex (with one parenthesized group) as a recipe for pulling the value via regex analysis
     """
-    try:
-        # set regex_flag (True if regex analysis is needed beyond concatenation formula)
-        if formula[0] == "{" and formula[-1] == "}":
-            regex_flag = True
-            concat_formula, pattern = formula[1:-1].split(",")
-        else:
-            regex_flag = False
-            pattern = final = None
-            concat_formula = formula
+    w = working.copy()
+    #  for each {} pair in the formula, create a new column
+    # (assuming formula is well-formed)
+    #brace_pattern = re.compile(r'[^{]*{<([^,]*)>,([^}]*)}')
+    brace_pattern = re.compile(r'{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}')
 
-        text_field_list, last_text = text_fragments_and_fields(concat_formula)
+    try:
+        temp_cols = []
+        for x in brace_pattern.finditer(formula):
+            # create a new column with the extracted info
+            old_col, pattern_str = x.groups()
+            temp_col = f"extracted_from_{old_col}"
+            w, new_err = add_regex_column(w, old_col, temp_col, pattern_str)
+            # change the formula to use the temp column
+            formula = formula.replace(f"{{<{old_col}>,{pattern_str}}}",f"<{temp_col}>")
+            if new_err:
+                err = ui.consolidate_errors([err, new_err])
+                if ui.fatal_error(new_err):
+                    return w, err
+            temp_cols.append(temp_col)
+        # once all {} pairs are gone, use concatenation to build the column to be returned
+        text_field_list, last_text = text_fragments_and_fields(formula)
 
         # add suffix, if required
         if suffix:
@@ -169,14 +229,14 @@ def add_column_from_formula(
 
         # add column to <working> dataframe via the concatenation formula
         if last_text:
-            working.loc[:, new_col] = last_text[0]
+            w.loc[:, new_col] = last_text[0]
         else:
-            working.loc[:, new_col] = ""
+            w.loc[:, new_col] = ""
         text_field_list.reverse()
         for t, f in text_field_list:
             try:
-                working.loc[:, new_col] = (
-                    working.loc[:, f].apply(lambda x: f"{t}{x}") + working.loc[:, new_col]
+                w.loc[:, new_col] = (
+                    w.loc[:, f].apply(lambda x: f"{t}{x}") + w.loc[:, new_col]
                 )
             except KeyError as ke:
                 err = ui.add_new_error(
@@ -184,14 +244,11 @@ def add_column_from_formula(
                     "munger",
                     munger_name,
                     f"Expected transformed column '{f}' not found, "
-                    f"probably because of mismatch between munger and results file.",
+                    f"perhaps because of mismatch between munger and results file.",
                 )
-                return working, err
+                return w, err
 
         # use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
-        if regex_flag:
-            # TODO figure out how to allow more general manipulations. This can only pull out one part of the pattern
-            working[new_col] = working[new_col].str.replace(pattern, "\\1")
     except Exception as e:
         err = ui.add_new_error(
             err,
@@ -199,7 +256,10 @@ def add_column_from_formula(
             "munge.add_column_from_formula",
             f"Unexpected error: {e}"
         )
-    return working, err
+
+    # delete temporary columns
+    w.drop(temp_cols,axis=1,inplace=True)
+    return w, err
 
 
 def add_munged_column(
@@ -698,7 +758,7 @@ def add_selection_id(
             ]
         # recast Candidate_Id and Party_Id to int in w['Candidate']; Note that neither should have nulls, but rather the 'none or unknown' Id
         #  NB: c_df had this recasting done in the append_id_to_dframe routine
-        w["Candidate"] = generic_clean(w["Candidate"])
+        w["Candidate"], err_df = generic_clean(w["Candidate"])
 
         # append CandidateSelection_Id to w['Candidate']
         w["Candidate"] = w["Candidate"].merge(

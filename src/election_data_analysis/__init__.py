@@ -2,6 +2,7 @@ from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
 from sqlalchemy.orm import sessionmaker
+from typing import List, Optional
 import datetime
 import os
 import pandas as pd
@@ -99,7 +100,9 @@ class DataLoader:
             print("Exiting")
             quit()
 
-    def load_all(self, load_jurisdictions: bool = True, move_files: bool = False) -> dict:
+    def load_all(
+        self, load_jurisdictions: bool = True, move_files: bool = False
+    ) -> dict:
         """returns an error dictionary"""
         # initialize error dictionary
         err = None
@@ -161,7 +164,9 @@ class DataLoader:
                 ###########
                 # for backwards compatibility
                 if not params[f]["jurisdiction_directory"]:
-                    params[f]["jurisdiction_directory"] = Path(params[f]["jurisdiction_path"]).name
+                    params[f]["jurisdiction_directory"] = Path(
+                        params[f]["jurisdiction_path"]
+                    ).name
                 ###########
                 good_par_files.append(f)
                 juris_directory[f] = params[f]["jurisdiction_directory"]
@@ -287,7 +292,11 @@ class SingleDataLoader:
         )
 
         # assign None to aux_data_dir if necessary
-        if "aux_data_dir" not in self.d.keys() or self.d["aux_data_dir"] in ["", "None", "none"]:
+        if "aux_data_dir" not in self.d.keys() or self.d["aux_data_dir"] in [
+            "",
+            "None",
+            "none",
+        ]:
             self.d["aux_data_dir"] = None
 
         # change any blank parameters describing the results file to 'none'
@@ -310,15 +319,20 @@ class SingleDataLoader:
 
         self.munger_err = ui.consolidate_errors([m_err[mu] for mu in self.munger_list])
 
-    def track_results(self):
+    def track_results(self) -> (List[int], Optional[str]):
         """insert a record for the _datafile, recording any error string <e>.
         Return Id of _datafile.Id and Election.Id"""
         filename = self.d["results_file"]
         top_reporting_unit_id = db.name_to_id(
             self.session, "ReportingUnit", self.d["top_reporting_unit"]
         )
+        if top_reporting_unit_id is None:
+            e = f"No ReportingUnit named {self.d['top_reporting_unit']} found in database"
+            return [0, 0], e
         election_id = db.name_to_id(self.session, "Election", self.d["election"])
-
+        if election_id is None:
+            e = f"No election named {self.d['election']} found in database"
+            return [0, 0], e
         data = pd.DataFrame(
             [
                 [
@@ -343,14 +357,17 @@ class SingleDataLoader:
                 "created_at",
             ],
         )
-        e = db.insert_to_cdf_db(self.session.bind, data, "_datafile")
-        if e:
-            return [0, 0], e
-        else:
-            col_map = {"short_name": "short_name"}
-            datafile_id = db.append_id_to_dframe(
-                self.session.bind, data, "_datafile", col_map=col_map
-            ).iloc[0]["_datafile_Id"]
+        try:
+            e = db.insert_to_cdf_db(self.session.bind, data, "_datafile")
+            if e:
+                return [0, 0], e
+            else:
+                col_map = {"short_name": "short_name"}
+                datafile_id = db.append_id_to_dframe(
+                    self.session.bind, data, "_datafile", col_map=col_map
+                ).iloc[0]["_datafile_Id"]
+        except Exception as exc:
+            return [0, 0], f"Error inserting record to _datafile table or retrieving _datafile_Id: {exc}"
         return [datafile_id, election_id], e
 
     def load_results(self) -> dict:
@@ -360,7 +377,11 @@ class SingleDataLoader:
         results_info, e = self.track_results()
         if e:
             err = ui.add_new_error(
-                err, "system", "SingleDataLoader.load_results", f"database error: {e}"
+                err,
+                "system",
+                "SingleDataLoader.load_results",
+                f"Error inserting _datafile record:\n{e}"
+                f" "
             )
             return err
 
@@ -368,7 +389,7 @@ class SingleDataLoader:
             if self.d["aux_data_dir"] is None:
                 aux_data_path = None
             else:
-                aux_data_path = os.path.join(self.results_dir,self.d["aux_data_dir"])
+                aux_data_path = os.path.join(self.results_dir, self.d["aux_data_dir"])
             for mu in self.munger_list:
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
                 new_err = ui.new_datafile(
@@ -385,23 +406,20 @@ class SingleDataLoader:
 
 
 def check_aux_data_setup(
-        params,
-        aux_data_dir_parent,
-        mungers_path,
-        par_file_name
+    params, aux_data_dir_parent, mungers_path, par_file_name
 ) -> dict:
 
     err = None
     # if aux_data_dir is given
     if "aux_data_dir" in params.keys() and params["aux_data_dir"] is not None:
         # check that it is a bona fide subdirectory of the results directory
-        if not os.path.isdir(os.path.join(aux_data_dir_parent,params["aux_data_dir"])):
+        if not os.path.isdir(os.path.join(aux_data_dir_parent, params["aux_data_dir"])):
             # TODO test this error
             err = ui.add_new_error(
                 err,
                 "ini",
                 par_file_name,
-                f"Specified aux_data_dir ({params['aux_data_dir']}) is not a subdirectory of {aux_data_dir_parent}"
+                f"Specified aux_data_dir ({params['aux_data_dir']}) is not a subdirectory of {aux_data_dir_parent}",
             )
             sdl = None
             return sdl, err
@@ -416,9 +434,10 @@ def check_aux_data_setup(
                     par_file_name,
                     f"Munger {m_name} has an aux_meta.txt file, "
                     f"indicating that an auxiliary data directory is expected, but "
-                    f"no aux_data_dir is given"
+                    f"no aux_data_dir is given",
                 )
     return err
+
 
 def check_and_init_singledataloader(
     results_dir: str,
@@ -442,7 +461,7 @@ def check_and_init_singledataloader(
         return sdl, err
 
     # check consistency of munger and .ini file regarding aux data
-    new_err = check_aux_data_setup(d,results_dir,mungers_path,par_file_name)
+    new_err = check_aux_data_setup(d, results_dir, mungers_path, par_file_name)
 
     if ui.fatal_error(new_err):
         err = ui.consolidate_errors([err, new_err])
@@ -451,7 +470,9 @@ def check_and_init_singledataloader(
 
     ##################
     # for backward compatibility
-    if ("jurisdiction_directory" not in d.keys()) and ("jurisdiction_path" not in d.keys()):
+    if ("jurisdiction_directory" not in d.keys()) and (
+        "jurisdiction_path" not in d.keys()
+    ):
         sdl = None
         err = ui.add_new_error(
             dict(),
@@ -511,7 +532,9 @@ class JurisdictionPrepper:
         error = jm.ensure_jurisdiction_dir(self.d["jurisdiction_path"])
         # add default entries
         project_root = Path(__file__).absolute().parents[1]
-        templates = os.path.join(project_root, "juris_and_munger", "jurisdiction_templates")
+        templates = os.path.join(
+            project_root, "juris_and_munger", "jurisdiction_templates"
+        )
         for element in ["Party", "Election"]:
             new_err = prep.add_defaults(self.d["jurisdiction_path"], templates, element)
             if new_err:
@@ -621,6 +644,7 @@ class JurisdictionPrepper:
 
         # add all district offices/contests/reportingunits
         for k in count.keys():
+            # create office records for each district
             w_office = w_office.append(
                 pd.DataFrame(
                     [
@@ -670,18 +694,19 @@ class JurisdictionPrepper:
                 f"{abbr} Treasurer",
                 f"{abbr} Secretary of State",
             ]
-        # append jurisdiction-wide offices
+        # append jurisdiction-wide offices to the office df
         jw_off = pd.DataFrame(
             [[x, self.d["name"]] for x in juriswide_contests], columns=cols_off
         )
         w_office = w_office.append(jw_off, ignore_index=True)
 
-        # append jurisdiction-wide contests
+        # append jurisdiction-wide contests to the working candidate contest df
         jw_cc = pd.DataFrame(
             [[x, 1, x, ""] for x in juriswide_contests], columns=cols_cc
         )
         w_cc = w_cc.append(jw_cc, ignore_index=True)
 
+        # write office df to Office.txt
         new_err = prep.write_element(
             self.d["jurisdiction_path"], "Office", w_office.drop_duplicates()
         )
@@ -784,7 +809,7 @@ class JurisdictionPrepper:
             return error
 
         # clean the dataframe read from the results
-        wr = m.generic_clean(wr)
+        wr, err_df = m.generic_clean(wr)
         # reduce <wr> in size
         fields = [
             f"{field}_SOURCE"
@@ -910,7 +935,7 @@ class JurisdictionPrepper:
             d, new_err = ui.get_runtime_parameters(
                 required_keys=sdl_pars_req,
                 param_file=par_file,
-                header='election_data_analysis',
+                header="election_data_analysis",
                 err=None,
                 optional_keys=sdl_pars_opt,
             )
@@ -930,7 +955,7 @@ class JurisdictionPrepper:
                     error=None,
                     sub_ru_type=sub_ru_type,
                     results_file_path=os.path.join(dir, d["results_file"]),
-                    munger_path=os.path.join(environment_d["mungers_dir"],m_name),
+                    munger_path=os.path.join(environment_d["mungers_dir"], m_name),
                     aux_data_path=aux_data_path,
                 )
                 if new_err:
@@ -972,14 +997,14 @@ class JurisdictionPrepper:
                 if d["aux_data_dir"] is None:
                     aux_data_path = None
                 else:
-                    aux_data_path = os.path.join(dir,d["aux_data_dir"])
+                    aux_data_path = os.path.join(dir, d["aux_data_dir"])
                 # loop through mungers in the "munger_name" list
                 for m_name in d["munger_name"].split(","):
                     # add elements
                     new_err = self.add_elements_from_results_file(
                         elements=elements,
-                        results_file_path=os.path.join(dir,d["results_file"]),
-                        munger_path=os.path.join(environment_d["mungers_dir"],m_name),
+                        results_file_path=os.path.join(dir, d["results_file"]),
+                        munger_path=os.path.join(environment_d["mungers_dir"], m_name),
                         aux_data_path=aux_data_path,
                         error=None,
                     )
@@ -995,7 +1020,8 @@ class JurisdictionPrepper:
         aux_data_path: str = None,
         error: dict = None,
     ) -> dict:
-        """For a single munger, add lines in dictionary.txt and <element>.txt corresponding to munged names not already in dictionary
+        """For a single munger, add lines in dictionary.txt and <element>.txt
+        corresponding to munged names not already in dictionary
         or not already in <element>.txt for each <element> in <elements>"""
 
         # read data from file (appending _SOURCE)
@@ -1012,8 +1038,8 @@ class JurisdictionPrepper:
 
         for element in elements:
             name_field = db.get_name_field(element)
-            # append <element>_raw
-            wr, new_err = m.add_munged_column(
+            # append <element>_raw column
+            w_new, new_err = m.add_munged_column(
                 wr,
                 mu,
                 element,
@@ -1025,11 +1051,30 @@ class JurisdictionPrepper:
                 error = ui.consolidate_errors([error, new_err])
                 if ui.fatal_error(new_err):
                     return error
+
+            # get set of name_field values from results file
+            names_from_results = w_new[f"{element}_raw"].unique()
+
+            # delete any named '""' and warn user
+            if "\"\"" in names_from_results:
+                names_from_results.remove("\"\"")
+                error = ui.add_new_error(
+                    error,
+                    "warn-file",
+                    results_file_path,
+                    f"An {element} named '\"\"' was found in the file and ignored. If you want it in {element}.txt "
+                    f"or dictionary.txt, you will have to add it by hand."
+                )
+
+            # change any double double-quotes to single quotes; remove enclosing double-quotes
+            names_from_results = [x.replace("\"\"","'").strip("\"") for x in names_from_results]
+
+
             # find <element>_raw values not in dictionary.txt.raw_identifier_value;
             #  add corresponding lines to dictionary.txt
             wd = prep.get_element(self.d["jurisdiction_path"], "dictionary")
             old_raw = wd[wd.cdf_element == element]["raw_identifier_value"].to_list()
-            new_raw = [x for x in wr[f"{element}_raw"] if x not in old_raw]
+            new_raw = [x for x in names_from_results if x not in old_raw]
             new_raw_df = pd.DataFrame(
                 [[element, x, x] for x in new_raw],
                 columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
@@ -1049,8 +1094,7 @@ class JurisdictionPrepper:
                 for x in wd[wd.cdf_element == element]["cdf_internal_name"]
                 if x not in old_internal
             ]
-            # TODO guide user to check dictionary for bad stuff before running this
-            #  e.g., primary contests already in dictionary cause a problem.
+
             new_internal_df = pd.DataFrame(
                 [[x] for x in new_internal], columns=[name_field]
             )
@@ -1066,7 +1110,7 @@ class JurisdictionPrepper:
                     error,
                     "warn-jurisdiction",
                     Path(self.d["jurisdiction_path"]).name,
-                    f"New rows added to {element}.txt, but data may be missing from some fields in those rows.",
+                    f"Check {element}.txt for new rows missing data in some fields.",
                 )
         return error
 
@@ -1079,7 +1123,6 @@ class JurisdictionPrepper:
             "Candidate",
             "CandidateContest",
             "Election",
-            "Office",
             "Party",
             "ReportingUnit",
         ]
@@ -1135,10 +1178,12 @@ def make_par_files(
     once all other necessary parameters are specified."""
     data_file_list = [f for f in os.listdir(dir) if (f[-4:] != ".ini") & (f[0] != ".")]
     for f in data_file_list:
-        par_text = f"[election_data_analysis]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\n" \
-                   f"munger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\n" \
-                   f"results_short_name={top_ru}_{f}\nresults_download_date={download_date}\n" \
-                   f"results_source={source}\nresults_note={results_note}\n"
+        par_text = (
+            f"[election_data_analysis]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\n"
+            f"munger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\n"
+            f"results_short_name={top_ru}_{f}\nresults_download_date={download_date}\n"
+            f"results_source={source}\nresults_note={results_note}\n"
+        )
         par_name = ".".join(f.split(".")[:-1]) + ".ini"
         with open(os.path.join(dir, par_name), "w") as p:
             p.write(par_text)
@@ -1189,7 +1234,10 @@ class Analyzer:
                 df = pd.DataFrame(db.get_input_options(self.session, input, True))
                 results = db.package_display_results(df)
             else:
-                results = db.get_filtered_input_options(self.session, input, filters)
+                try:
+                    results = db.get_filtered_input_options(self.session, input, filters)
+                except:
+                    results = None
         if results:
             return results
         return None
@@ -1242,8 +1290,6 @@ class Analyzer:
             v_count_id = db.name_to_id(self.session, "Candidate", v_count)
         elif v_type == "contests":
             v_count_id = db.name_to_id(self.session, "CandidateContest", v_count)
-        h_count_item_type, h_type = self.split_category_input(h_category)
-        v_count_item_type, v_type = self.split_category_input(v_category)
         agg_results = a.create_scatter(
             self.session,
             jurisdiction_id,
@@ -1257,7 +1303,7 @@ class Analyzer:
             v_count_id,
             v_type,
         )
-        if fig_type:
+        if fig_type and agg_results:
             v.plot("scatter", agg_results, fig_type, d["rollup_directory"])
         return agg_results
 
@@ -1298,7 +1344,7 @@ class Analyzer:
             election_id,
             False,
         )
-        if fig_type:
+        if fig_type and agg_results:
             for agg_result in agg_results:
                 v.plot("bar", agg_result, fig_type, d["rollup_directory"])
         return agg_results
@@ -1319,7 +1365,7 @@ class Analyzer:
         self,
         election: str,
         jurisdiction: str,
-        contest: str=None,
+        contest: str = None,
     ) -> list:
         """contest_type is one of state, congressional, state-senate, state-house"""
         d, error = ui.get_runtime_parameters(

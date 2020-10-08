@@ -143,7 +143,6 @@ def create_scatter(
     v_count_id,
     v_type,
 ):
-
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
 
@@ -166,6 +165,10 @@ def create_scatter(
         v_count_id,
         v_type,
     )
+    if dfh.empty or dfv.empty:
+        connection.close()
+        return None
+
     unsummed = pd.concat([dfh, dfv])
     # package into dictionary
     if h_count_id == -1:
@@ -173,17 +176,21 @@ def create_scatter(
     elif h_type == "candidates":
         x = db.name_from_id(cursor, "Candidate", h_count_id)
     elif h_type == "contests":
-        x = db.name_from_id(cursor, "CandidateContest", h_count_id)
+        x = db.name_from_id(cursor, "Contest", h_count_id)
     if v_count_id == -1:
         y = f"All {v_type}"
     elif v_type == "candidates":
         y = db.name_from_id(cursor, "Candidate", v_count_id)
     elif v_type == "contests":
-        y = db.name_from_id(cursor, "CandidateContest", v_count_id)
+        y = db.name_from_id(cursor, "Contest", v_count_id)
     jurisdiction = db.name_from_id(cursor, "ReportingUnit", jurisdiction_id)
     pivot_df = pd.pivot_table(
         unsummed, values="Count", index=["Name"], columns="Selection"
     ).reset_index()
+    pivot_df = pivot_df.dropna()
+    if pivot_df.empty:
+        connection.close()
+        return None
 
     # package up results
     results = package_results(pivot_df, jurisdiction, x, y)
@@ -194,6 +201,12 @@ def create_scatter(
     )
     results["x-count_item_type"] = h_category
     results["y-count_item_type"] = v_category
+    results[
+        "x-title"
+    ] = f"""{results["x"]} - {results["x-election"]} - {dfh.iloc[0]["Contest"]}"""
+    results[
+        "y-title"
+    ] = f"""{results["y"]} - {results["y-election"]} - {dfv.iloc[0]["Contest"]}"""
 
     # only keep the ones where there are an (x, y) to graph
     to_keep = []
@@ -202,6 +215,10 @@ def create_scatter(
         # otherwise it's invalid
         if len(result) == 5:
             to_keep.append(result)
+    if not to_keep:
+        connection.close()
+        return None
+
     results["counts"] = to_keep
     connection.close()
     return results
@@ -253,7 +270,9 @@ def get_data_for_scatter(
     unsummed = unsummed[unsummed["CountItemType"] == count_item_type]
 
     # cleanup for purposes of flexibility
-    unsummed = unsummed[["Name", "Count", "Selection", "Contest_Id", "Candidate_Id"]]
+    unsummed = unsummed[
+        ["Name", "Count", "Selection", "Contest_Id", "Candidate_Id", "Contest"]
+    ]
 
     # if filter_id is -1, then that means we have all contests or candidates
     # so we need to group by
@@ -263,10 +282,11 @@ def get_data_for_scatter(
         unsummed["Candidate_Id"] = filter_id
 
     if count_type == "contests" and filter_id != -1:
-        selection = db.name_from_id(session, "CandidateContest", filter_id)
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        selection = db.name_from_id(cursor, "Contest", filter_id)
         unsummed["Selection"] = selection
-    elif count_type == "contests" and filter_id == -1:
-        unsummed["Selection"] = "All contests"
+        cursor.close()
 
     columns = list(unsummed.drop(columns="Count").columns)
     unsummed = unsummed.groupby(columns)["Count"].sum().reset_index()
@@ -293,7 +313,10 @@ def create_bar(
 
     if contest_type:
         unsummed = unsummed[unsummed["contest_district_type"] == contest_type]
-    if contest:
+    # through front end, contest_type must be truthy if contest is truthy
+    # Only filter when there is an actual contest passed through, as opposed to 
+    # "All congressional" as an example
+    if contest and contest[0:3] != "All":
         unsummed = unsummed[unsummed["Contest"] == contest]
 
     groupby_cols = [
@@ -313,19 +336,22 @@ def create_bar(
     unsummed = unsummed.groupby(groupby_cols).sum().reset_index()
     multiple_ballot_types = len(unsummed["CountItemType"].unique()) > 1
 
-    # Now process data
-    ranked = assign_anomaly_score(unsummed)
-    # No anomalies could be detected
-    if ranked.empty:
+    # Now process data - this is the heart of the scoring/ranking algorithm
+    top_ranked = pd.DataFrame()
+    try:
+        ranked = assign_anomaly_score(unsummed)
+        ranked["margins_pct"] = ranked["Count"] / ranked["reporting_unit_total"]
+        ranked_margin = ranked
+        votes_at_stake = calculate_votes_at_stake(ranked_margin)
+        if not for_export:
+            top_ranked = get_most_anomalous(votes_at_stake, 3)
+        else:
+            top_ranked = votes_at_stake
+    except:
+        connection.close()
         return None
-    ranked["margins_pct"] = ranked["Count"] / ranked["reporting_unit_total"]
-    ranked_margin = ranked
-    votes_at_stake = calculate_votes_at_stake(ranked_margin)
-    if not for_export:
-        top_ranked = get_most_anomalous(votes_at_stake, 3)
-    else:
-        top_ranked = votes_at_stake
     if top_ranked.empty:
+        connection.close()
         return None
 
     # package into list of dictionary
@@ -379,11 +405,19 @@ def create_bar(
             cursor, "ReportingUnitType", int(temp_df.iloc[0]["ReportingUnitType_Id"])
         )
         results["count_item_type"] = temp_df.iloc[0]["CountItemType"]
-        results["votes_at_stake"] = temp_df.iloc[0]["votes_at_stake"]
-        results["margin"] = (
+        results["votes_at_stake_raw"] = temp_df.iloc[0]["votes_at_stake"]
+        results["margin_raw"] = (
             temp_df[temp_df["rank"] == 1].iloc[0]["ind_total"]
             - temp_df[temp_df["rank"] != 1].iloc[0]["ind_total"]
         )
+        votes_at_stake = human_readable_numbers(results["votes_at_stake_raw"])
+        if votes_at_stake[0] == "-":
+            votes_at_stake = votes_at_stake[1:]
+            suffix = "decrease"
+        else:
+            suffix = "increase"
+        results["votes_at_stake"] = f"{votes_at_stake} margin {suffix}"
+        results["margin"] = human_readable_numbers(results["margin_raw"])
         if multiple_ballot_types:
             results[
                 "ballot_types"
@@ -391,6 +425,9 @@ def create_bar(
         else:
             results["ballot_types"] = "Data unavailable by vote type"
         results["score"] = temp_df["score"].max()
+        results[
+            "title"
+        ] = f"""Accepted {results["count_item_type"].replace("-", " ").title()} Ballots"""
         result_list.append(results)
     connection.close()
     return result_list
@@ -538,14 +575,14 @@ def get_most_anomalous(data, n):
     """Gets n contest, with 2 from largest votes at stake ratio
     and 1 with largest score. If 2 from votes at stake cannot be found
     (bc of threshold for score) then we fill in the top n from scores"""
-    data = data[data["votes_at_stake"] > 0]
+    #data = data[data["votes_at_stake"] > 0]
     margin_data = data[data["score"] > 2.3]
 
     # get data for n deduped unit_ids, with n-1 from margin data, filling
     # in from score data if margin data is unavailable
     unit_by_margin = get_unit_by_column(margin_data, "margin_ratio")
     unit_by_score = get_unit_by_column(data, "score")
-    unit_ids_all = unit_by_margin + unit_by_score
+    unit_ids_all = unit_by_margin[0:n-1] + unit_by_score
     unit_ids = list(dict.fromkeys(unit_ids_all).keys())[0:n]
     data = data[data["unit_id"].isin(unit_ids)]
 
@@ -865,3 +902,15 @@ def get_unit_by_column(data, column):
     data = data.groupby("unit_id").max(column).sort_values(by=column, ascending=False)
     data = data.reset_index()
     return list(data["unit_id"].unique())
+
+
+def human_readable_numbers(value):
+    abs_value = abs(value)
+    if abs_value < 10:
+        return str(value)
+    elif abs_value < 100:
+        return str(round(value, -1))
+    elif abs_value < 1000:
+        return str(round(value, -2))
+    else:
+        return "{:,}".format(round(value, -3))

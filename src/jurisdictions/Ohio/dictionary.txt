@@ -1,0 +1,2299 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	OH House District 1 (Democratic Party)	State Representative - District 01 (D)
+CandidateContest	OH House District 2 (Democratic Party)	State Representative - District 02 (D)
+CandidateContest	OH House District 3 (Democratic Party)	State Representative - District 03 (D)
+CandidateContest	OH House District 4 (Democratic Party)	State Representative - District 04 (D)
+CandidateContest	OH House District 5 (Democratic Party)	State Representative - District 05 (D)
+CandidateContest	OH House District 6 (Democratic Party)	State Representative - District 06 (D)
+CandidateContest	OH House District 7 (Democratic Party)	State Representative - District 07 (D)
+CandidateContest	OH House District 8 (Democratic Party)	State Representative - District 08 (D)
+CandidateContest	OH House District 9 (Democratic Party)	State Representative - District 09 (D)
+CandidateContest	OH House District 10 (Democratic Party)	State Representative - District 10 (D)
+CandidateContest	OH House District 11 (Democratic Party)	State Representative - District 11 (D)
+CandidateContest	OH House District 12 (Democratic Party)	State Representative - District 12 (D)
+CandidateContest	OH House District 13 (Democratic Party)	State Representative - District 13 (D)
+CandidateContest	OH House District 14 (Democratic Party)	State Representative - District 14 (D)
+CandidateContest	OH House District 15 (Democratic Party)	State Representative - District 15 (D)
+CandidateContest	OH House District 16 (Democratic Party)	State Representative - District 16 (D)
+CandidateContest	OH House District 17 (Democratic Party)	State Representative - District 17 (D)
+CandidateContest	OH House District 18 (Democratic Party)	State Representative - District 18 (D)
+CandidateContest	OH House District 19 (Democratic Party)	State Representative - District 19 (D)
+CandidateContest	OH House District 20 (Democratic Party)	State Representative - District 20 (D)
+CandidateContest	OH House District 21 (Democratic Party)	State Representative - District 21 (D)
+CandidateContest	OH House District 22 (Democratic Party)	State Representative - District 22 (D)
+CandidateContest	OH House District 23 (Democratic Party)	State Representative - District 23 (D)
+CandidateContest	OH House District 24 (Democratic Party)	State Representative - District 24 (D)
+CandidateContest	OH House District 25 (Democratic Party)	State Representative - District 25 (D)
+CandidateContest	OH House District 26 (Democratic Party)	State Representative - District 26 (D)
+CandidateContest	OH House District 27 (Democratic Party)	State Representative - District 27 (D)
+CandidateContest	OH House District 28 (Democratic Party)	State Representative - District 28 (D)
+CandidateContest	OH House District 29 (Democratic Party)	State Representative - District 29 (D)
+CandidateContest	OH House District 30 (Democratic Party)	State Representative - District 30 (D)
+CandidateContest	OH House District 31 (Democratic Party)	State Representative - District 31 (D)
+CandidateContest	OH House District 32 (Democratic Party)	State Representative - District 32 (D)
+CandidateContest	OH House District 33 (Democratic Party)	State Representative - District 33 (D)
+CandidateContest	OH House District 34 (Democratic Party)	State Representative - District 34 (D)
+CandidateContest	OH House District 35 (Democratic Party)	State Representative - District 35 (D)
+CandidateContest	OH House District 36 (Democratic Party)	State Representative - District 36 (D)
+CandidateContest	OH House District 37 (Democratic Party)	State Representative - District 37 (D)
+CandidateContest	OH House District 38 (Democratic Party)	State Representative - District 38 (D)
+CandidateContest	OH House District 39 (Democratic Party)	State Representative - District 39 (D)
+CandidateContest	OH House District 40 (Democratic Party)	State Representative - District 40 (D)
+CandidateContest	OH House District 41 (Democratic Party)	State Representative - District 41 (D)
+CandidateContest	OH House District 42 (Democratic Party)	State Representative - District 42 (D)
+CandidateContest	OH House District 43 (Democratic Party)	State Representative - District 43 (D)
+CandidateContest	OH House District 44 (Democratic Party)	State Representative - District 44 (D)
+CandidateContest	OH House District 45 (Democratic Party)	State Representative - District 45 (D)
+CandidateContest	OH House District 46 (Democratic Party)	State Representative - District 46 (D)
+CandidateContest	OH House District 47 (Democratic Party)	State Representative - District 47 (D)
+CandidateContest	OH House District 48 (Democratic Party)	State Representative - District 48 (D)
+CandidateContest	OH House District 49 (Democratic Party)	State Representative - District 49 (D)
+CandidateContest	OH House District 50 (Democratic Party)	State Representative - District 50 (D)
+CandidateContest	OH House District 51 (Democratic Party)	State Representative - District 51 (D)
+CandidateContest	OH House District 52 (Democratic Party)	State Representative - District 52 (D)
+CandidateContest	OH House District 53 (Democratic Party)	State Representative - District 53 (D)
+CandidateContest	OH House District 54 (Democratic Party)	State Representative - District 54 (D)
+CandidateContest	OH House District 55 (Democratic Party)	State Representative - District 55 (D)
+CandidateContest	OH House District 56 (Democratic Party)	State Representative - District 56 (D)
+CandidateContest	OH House District 57 (Democratic Party)	State Representative - District 57 (D)
+CandidateContest	OH House District 58 (Democratic Party)	State Representative - District 58 (D)
+CandidateContest	OH House District 59 (Democratic Party)	State Representative - District 59 (D)
+CandidateContest	OH House District 60 (Democratic Party)	State Representative - District 60 (D)
+CandidateContest	OH House District 61 (Democratic Party)	State Representative - District 61 (D)
+CandidateContest	OH House District 62 (Democratic Party)	State Representative - District 62 (D)
+CandidateContest	OH House District 63 (Democratic Party)	State Representative - District 63 (D)
+CandidateContest	OH House District 64 (Democratic Party)	State Representative - District 64 (D)
+CandidateContest	OH House District 65 (Democratic Party)	State Representative - District 65 (D)
+CandidateContest	OH House District 66 (Democratic Party)	State Representative - District 66 (D)
+CandidateContest	OH House District 67 (Democratic Party)	State Representative - District 67 (D)
+CandidateContest	OH House District 68 (Democratic Party)	State Representative - District 68 (D)
+CandidateContest	OH House District 69 (Democratic Party)	State Representative - District 69 (D)
+CandidateContest	OH House District 70 (Democratic Party)	State Representative - District 70 (D)
+CandidateContest	OH House District 71 (Democratic Party)	State Representative - District 71 (D)
+CandidateContest	OH House District 72 (Democratic Party)	State Representative - District 72 (D)
+CandidateContest	OH House District 73 (Democratic Party)	State Representative - District 73 (D)
+CandidateContest	OH House District 74 (Democratic Party)	State Representative - District 74 (D)
+CandidateContest	OH House District 75 (Democratic Party)	State Representative - District 75 (D)
+CandidateContest	OH House District 76 (Democratic Party)	State Representative - District 76 (D)
+CandidateContest	OH House District 77 (Democratic Party)	State Representative - District 77 (D)
+CandidateContest	OH House District 78 (Democratic Party)	State Representative - District 78 (D)
+CandidateContest	OH House District 79 (Democratic Party)	State Representative - District 79 (D)
+CandidateContest	OH House District 80 (Democratic Party)	State Representative - District 80 (D)
+CandidateContest	OH House District 81 (Democratic Party)	State Representative - District 81 (D)
+CandidateContest	OH House District 82 (Democratic Party)	State Representative - District 82 (D)
+CandidateContest	OH House District 83 (Democratic Party)	State Representative - District 83 (D)
+CandidateContest	OH House District 84 (Democratic Party)	State Representative - District 84 (D)
+CandidateContest	OH House District 85 (Democratic Party)	State Representative - District 85 (D)
+CandidateContest	OH House District 86 (Democratic Party)	State Representative - District 86 (D)
+CandidateContest	OH House District 87 (Democratic Party)	State Representative - District 87 (D)
+CandidateContest	OH House District 88 (Democratic Party)	State Representative - District 88 (D)
+CandidateContest	OH House District 89 (Democratic Party)	State Representative - District 89 (D)
+CandidateContest	OH House District 90 (Democratic Party)	State Representative - District 90 (D)
+CandidateContest	OH House District 91 (Democratic Party)	State Representative - District 91 (D)
+CandidateContest	OH House District 92 (Democratic Party)	State Representative - District 92 (D)
+CandidateContest	OH House District 93 (Democratic Party)	State Representative - District 93 (D)
+CandidateContest	OH House District 94 (Democratic Party)	State Representative - District 94 (D)
+CandidateContest	OH House District 95 (Democratic Party)	State Representative - District 95 (D)
+CandidateContest	OH House District 96 (Democratic Party)	State Representative - District 96 (D)
+CandidateContest	OH House District 97 (Democratic Party)	State Representative - District 97 (D)
+CandidateContest	OH House District 98 (Democratic Party)	State Representative - District 98 (D)
+CandidateContest	OH House District 99 (Democratic Party)	State Representative - District 99 (D)
+CandidateContest	OH Senate District 1 (Democratic Party)	State Senator - District 01 (D)
+CandidateContest	OH Senate District 2 (Democratic Party)	State Senator - District 02 (D)
+CandidateContest	OH Senate District 3 (Democratic Party)	State Senator - District 03 (D)
+CandidateContest	OH Senate District 4 (Democratic Party)	State Senator - District 04 (D)
+CandidateContest	OH Senate District 5 (Democratic Party)	State Senator - District 05 (D)
+CandidateContest	OH Senate District 6 (Democratic Party)	State Senator - District 06 (D)
+CandidateContest	OH Senate District 7 (Democratic Party)	State Senator - District 07 (D)
+CandidateContest	OH Senate District 8 (Democratic Party)	State Senator - District 08 (D)
+CandidateContest	OH Senate District 9 (Democratic Party)	State Senator - District 09 (D)
+CandidateContest	OH Senate District 10 (Democratic Party)	State Senator - District 10 (D)
+CandidateContest	OH Senate District 11 (Democratic Party)	State Senator - District 11 (D)
+CandidateContest	OH Senate District 12 (Democratic Party)	State Senator - District 12 (D)
+CandidateContest	OH Senate District 13 (Democratic Party)	State Senator - District 13 (D)
+CandidateContest	OH Senate District 14 (Democratic Party)	State Senator - District 14 (D)
+CandidateContest	OH Senate District 15 (Democratic Party)	State Senator - District 15 (D)
+CandidateContest	OH Senate District 16 (Democratic Party)	State Senator - District 16 (D)
+CandidateContest	OH Senate District 17 (Democratic Party)	State Senator - District 17 (D)
+CandidateContest	OH Senate District 18 (Democratic Party)	State Senator - District 18 (D)
+CandidateContest	OH Senate District 19 (Democratic Party)	State Senator - District 19 (D)
+CandidateContest	OH Senate District 20 (Democratic Party)	State Senator - District 20 (D)
+CandidateContest	OH Senate District 21 (Democratic Party)	State Senator - District 21 (D)
+CandidateContest	OH Senate District 22 (Democratic Party)	State Senator - District 22 (D)
+CandidateContest	OH Senate District 23 (Democratic Party)	State Senator - District 23 (D)
+CandidateContest	OH Senate District 24 (Democratic Party)	State Senator - District 24 (D)
+CandidateContest	OH Senate District 25 (Democratic Party)	State Senator - District 25 (D)
+CandidateContest	OH Senate District 26 (Democratic Party)	State Senator - District 26 (D)
+CandidateContest	OH Senate District 27 (Democratic Party)	State Senator - District 27 (D)
+CandidateContest	OH Senate District 28 (Democratic Party)	State Senator - District 28 (D)
+CandidateContest	OH Senate District 29 (Democratic Party)	State Senator - District 29 (D)
+CandidateContest	OH Senate District 30 (Democratic Party)	State Senator - District 30 (D)
+CandidateContest	OH Senate District 31 (Democratic Party)	State Senator - District 31 (D)
+CandidateContest	OH Senate District 32 (Democratic Party)	State Senator - District 32 (D)
+CandidateContest	OH Senate District 33 (Democratic Party)	State Senator - District 33 (D)
+CandidateContest	US House OH District 1 (Democratic Party)	Representative to Congress - District 01 (D)
+CandidateContest	US House OH District 2 (Democratic Party)	Representative to Congress - District 02 (D)
+CandidateContest	US House OH District 3 (Democratic Party)	Representative to Congress - District 03 (D)
+CandidateContest	US House OH District 4 (Democratic Party)	Representative to Congress - District 04 (D)
+CandidateContest	US House OH District 5 (Democratic Party)	Representative to Congress - District 05 (D)
+CandidateContest	US House OH District 6 (Democratic Party)	Representative to Congress - District 06 (D)
+CandidateContest	US House OH District 7 (Democratic Party)	Representative to Congress - District 07 (D)
+CandidateContest	US House OH District 8 (Democratic Party)	Representative to Congress - District 08 (D)
+CandidateContest	US House OH District 9 (Democratic Party)	Representative to Congress - District 09 (D)
+CandidateContest	US House OH District 10 (Democratic Party)	Representative to Congress - District 10 (D)
+CandidateContest	US House OH District 11 (Democratic Party)	Representative to Congress - District 11 (D)
+CandidateContest	US House OH District 12 (Democratic Party)	Representative to Congress - District 12 (D)
+CandidateContest	US House OH District 13 (Democratic Party)	Representative to Congress - District 13 (D)
+CandidateContest	US House OH District 14 (Democratic Party)	Representative to Congress - District 14 (D)
+CandidateContest	US House OH District 15 (Democratic Party)	Representative to Congress - District 15 (D)
+CandidateContest	US House OH District 16 (Democratic Party)	Representative to Congress - District 16 (D)
+CandidateContest	US President (OH) (Democratic Party)	President (at-large) (D)
+CandidateContest	OH Governor (Democratic Party)	OH Governor (D)
+CandidateContest	US Senate OH (Democratic Party)	U.S. Senator (D)
+CandidateContest	OH Attorney General (Democratic Party)	OH Attorney General (D)
+CandidateContest	OH Lieutenant Governor (Democratic Party)	OH Lieutenant Governor (D)
+CandidateContest	OH Secretary of State (Democratic Party)	OH Secretary of State (D)
+CandidateContest	OH House District 1 (Republican Party)	State Representative - District 01 (R)
+CandidateContest	OH House District 2 (Republican Party)	State Representative - District 02 (R)
+CandidateContest	OH House District 3 (Republican Party)	State Representative - District 03 (R)
+CandidateContest	OH House District 4 (Republican Party)	State Representative - District 04 (R)
+CandidateContest	OH House District 5 (Republican Party)	State Representative - District 05 (R)
+CandidateContest	OH House District 6 (Republican Party)	State Representative - District 06 (R)
+CandidateContest	OH House District 7 (Republican Party)	State Representative - District 07 (R)
+CandidateContest	OH House District 8 (Republican Party)	State Representative - District 08 (R)
+CandidateContest	OH House District 9 (Republican Party)	State Representative - District 09 (R)
+CandidateContest	OH House District 10 (Republican Party)	State Representative - District 10 (R)
+CandidateContest	OH House District 11 (Republican Party)	State Representative - District 11 (R)
+CandidateContest	OH House District 12 (Republican Party)	State Representative - District 12 (R)
+CandidateContest	OH House District 13 (Republican Party)	State Representative - District 13 (R)
+CandidateContest	OH House District 14 (Republican Party)	State Representative - District 14 (R)
+CandidateContest	OH House District 15 (Republican Party)	State Representative - District 15 (R)
+CandidateContest	OH House District 16 (Republican Party)	State Representative - District 16 (R)
+CandidateContest	OH House District 17 (Republican Party)	State Representative - District 17 (R)
+CandidateContest	OH House District 18 (Republican Party)	State Representative - District 18 (R)
+CandidateContest	OH House District 19 (Republican Party)	State Representative - District 19 (R)
+CandidateContest	OH House District 20 (Republican Party)	State Representative - District 20 (R)
+CandidateContest	OH House District 21 (Republican Party)	State Representative - District 21 (R)
+CandidateContest	OH House District 22 (Republican Party)	State Representative - District 22 (R)
+CandidateContest	OH House District 23 (Republican Party)	State Representative - District 23 (R)
+CandidateContest	OH House District 24 (Republican Party)	State Representative - District 24 (R)
+CandidateContest	OH House District 25 (Republican Party)	State Representative - District 25 (R)
+CandidateContest	OH House District 26 (Republican Party)	State Representative - District 26 (R)
+CandidateContest	OH House District 27 (Republican Party)	State Representative - District 27 (R)
+CandidateContest	OH House District 28 (Republican Party)	State Representative - District 28 (R)
+CandidateContest	OH House District 29 (Republican Party)	State Representative - District 29 (R)
+CandidateContest	OH House District 30 (Republican Party)	State Representative - District 30 (R)
+CandidateContest	OH House District 31 (Republican Party)	State Representative - District 31 (R)
+CandidateContest	OH House District 32 (Republican Party)	State Representative - District 32 (R)
+CandidateContest	OH House District 33 (Republican Party)	State Representative - District 33 (R)
+CandidateContest	OH House District 34 (Republican Party)	State Representative - District 34 (R)
+CandidateContest	OH House District 35 (Republican Party)	State Representative - District 35 (R)
+CandidateContest	OH House District 36 (Republican Party)	State Representative - District 36 (R)
+CandidateContest	OH House District 37 (Republican Party)	State Representative - District 37 (R)
+CandidateContest	OH House District 38 (Republican Party)	State Representative - District 38 (R)
+CandidateContest	OH House District 39 (Republican Party)	State Representative - District 39 (R)
+CandidateContest	OH House District 40 (Republican Party)	State Representative - District 40 (R)
+CandidateContest	OH House District 41 (Republican Party)	State Representative - District 41 (R)
+CandidateContest	OH House District 42 (Republican Party)	State Representative - District 42 (R)
+CandidateContest	OH House District 43 (Republican Party)	State Representative - District 43 (R)
+CandidateContest	OH House District 44 (Republican Party)	State Representative - District 44 (R)
+CandidateContest	OH House District 45 (Republican Party)	State Representative - District 45 (R)
+CandidateContest	OH House District 46 (Republican Party)	State Representative - District 46 (R)
+CandidateContest	OH House District 47 (Republican Party)	State Representative - District 47 (R)
+CandidateContest	OH House District 48 (Republican Party)	State Representative - District 48 (R)
+CandidateContest	OH House District 49 (Republican Party)	State Representative - District 49 (R)
+CandidateContest	OH House District 50 (Republican Party)	State Representative - District 50 (R)
+CandidateContest	OH House District 51 (Republican Party)	State Representative - District 51 (R)
+CandidateContest	OH House District 52 (Republican Party)	State Representative - District 52 (R)
+CandidateContest	OH House District 53 (Republican Party)	State Representative - District 53 (R)
+CandidateContest	OH House District 54 (Republican Party)	State Representative - District 54 (R)
+CandidateContest	OH House District 55 (Republican Party)	State Representative - District 55 (R)
+CandidateContest	OH House District 56 (Republican Party)	State Representative - District 56 (R)
+CandidateContest	OH House District 57 (Republican Party)	State Representative - District 57 (R)
+CandidateContest	OH House District 58 (Republican Party)	State Representative - District 58 (R)
+CandidateContest	OH House District 59 (Republican Party)	State Representative - District 59 (R)
+CandidateContest	OH House District 60 (Republican Party)	State Representative - District 60 (R)
+CandidateContest	OH House District 61 (Republican Party)	State Representative - District 61 (R)
+CandidateContest	OH House District 62 (Republican Party)	State Representative - District 62 (R)
+CandidateContest	OH House District 63 (Republican Party)	State Representative - District 63 (R)
+CandidateContest	OH House District 64 (Republican Party)	State Representative - District 64 (R)
+CandidateContest	OH House District 65 (Republican Party)	State Representative - District 65 (R)
+CandidateContest	OH House District 66 (Republican Party)	State Representative - District 66 (R)
+CandidateContest	OH House District 67 (Republican Party)	State Representative - District 67 (R)
+CandidateContest	OH House District 68 (Republican Party)	State Representative - District 68 (R)
+CandidateContest	OH House District 69 (Republican Party)	State Representative - District 69 (R)
+CandidateContest	OH House District 70 (Republican Party)	State Representative - District 70 (R)
+CandidateContest	OH House District 71 (Republican Party)	State Representative - District 71 (R)
+CandidateContest	OH House District 72 (Republican Party)	State Representative - District 72 (R)
+CandidateContest	OH House District 73 (Republican Party)	State Representative - District 73 (R)
+CandidateContest	OH House District 74 (Republican Party)	State Representative - District 74 (R)
+CandidateContest	OH House District 75 (Republican Party)	State Representative - District 75 (R)
+CandidateContest	OH House District 76 (Republican Party)	State Representative - District 76 (R)
+CandidateContest	OH House District 77 (Republican Party)	State Representative - District 77 (R)
+CandidateContest	OH House District 78 (Republican Party)	State Representative - District 78 (R)
+CandidateContest	OH House District 79 (Republican Party)	State Representative - District 79 (R)
+CandidateContest	OH House District 80 (Republican Party)	State Representative - District 80 (R)
+CandidateContest	OH House District 81 (Republican Party)	State Representative - District 81 (R)
+CandidateContest	OH House District 82 (Republican Party)	State Representative - District 82 (R)
+CandidateContest	OH House District 83 (Republican Party)	State Representative - District 83 (R)
+CandidateContest	OH House District 84 (Republican Party)	State Representative - District 84 (R)
+CandidateContest	OH House District 85 (Republican Party)	State Representative - District 85 (R)
+CandidateContest	OH House District 86 (Republican Party)	State Representative - District 86 (R)
+CandidateContest	OH House District 87 (Republican Party)	State Representative - District 87 (R)
+CandidateContest	OH House District 88 (Republican Party)	State Representative - District 88 (R)
+CandidateContest	OH House District 89 (Republican Party)	State Representative - District 89 (R)
+CandidateContest	OH House District 90 (Republican Party)	State Representative - District 90 (R)
+CandidateContest	OH House District 91 (Republican Party)	State Representative - District 91 (R)
+CandidateContest	OH House District 92 (Republican Party)	State Representative - District 92 (R)
+CandidateContest	OH House District 93 (Republican Party)	State Representative - District 93 (R)
+CandidateContest	OH House District 94 (Republican Party)	State Representative - District 94 (R)
+CandidateContest	OH House District 95 (Republican Party)	State Representative - District 95 (R)
+CandidateContest	OH House District 96 (Republican Party)	State Representative - District 96 (R)
+CandidateContest	OH House District 97 (Republican Party)	State Representative - District 97 (R)
+CandidateContest	OH House District 98 (Republican Party)	State Representative - District 98 (R)
+CandidateContest	OH House District 99 (Republican Party)	State Representative - District 99 (R)
+CandidateContest	OH Senate District 1 (Republican Party)	State Senator - District 01 (R)
+CandidateContest	OH Senate District 2 (Republican Party)	State Senator - District 02 (R)
+CandidateContest	OH Senate District 3 (Republican Party)	State Senator - District 03 (R)
+CandidateContest	OH Senate District 4 (Republican Party)	State Senator - District 04 (R)
+CandidateContest	OH Senate District 5 (Republican Party)	State Senator - District 05 (R)
+CandidateContest	OH Senate District 6 (Republican Party)	State Senator - District 06 (R)
+CandidateContest	OH Senate District 7 (Republican Party)	State Senator - District 07 (R)
+CandidateContest	OH Senate District 8 (Republican Party)	State Senator - District 08 (R)
+CandidateContest	OH Senate District 9 (Republican Party)	State Senator - District 09 (R)
+CandidateContest	OH Senate District 10 (Republican Party)	State Senator - District 10 (R)
+CandidateContest	OH Senate District 11 (Republican Party)	State Senator - District 11 (R)
+CandidateContest	OH Senate District 12 (Republican Party)	State Senator - District 12 (R)
+CandidateContest	OH Senate District 13 (Republican Party)	State Senator - District 13 (R)
+CandidateContest	OH Senate District 14 (Republican Party)	State Senator - District 14 (R)
+CandidateContest	OH Senate District 15 (Republican Party)	State Senator - District 15 (R)
+CandidateContest	OH Senate District 16 (Republican Party)	State Senator - District 16 (R)
+CandidateContest	OH Senate District 17 (Republican Party)	State Senator - District 17 (R)
+CandidateContest	OH Senate District 18 (Republican Party)	State Senator - District 18 (R)
+CandidateContest	OH Senate District 19 (Republican Party)	State Senator - District 19 (R)
+CandidateContest	OH Senate District 20 (Republican Party)	State Senator - District 20 (R)
+CandidateContest	OH Senate District 21 (Republican Party)	State Senator - District 21 (R)
+CandidateContest	OH Senate District 22 (Republican Party)	State Senator - District 22 (R)
+CandidateContest	OH Senate District 23 (Republican Party)	State Senator - District 23 (R)
+CandidateContest	OH Senate District 24 (Republican Party)	State Senator - District 24 (R)
+CandidateContest	OH Senate District 25 (Republican Party)	State Senator - District 25 (R)
+CandidateContest	OH Senate District 26 (Republican Party)	State Senator - District 26 (R)
+CandidateContest	OH Senate District 27 (Republican Party)	State Senator - District 27 (R)
+CandidateContest	OH Senate District 28 (Republican Party)	State Senator - District 28 (R)
+CandidateContest	OH Senate District 29 (Republican Party)	State Senator - District 29 (R)
+CandidateContest	OH Senate District 30 (Republican Party)	State Senator - District 30 (R)
+CandidateContest	OH Senate District 31 (Republican Party)	State Senator - District 31 (R)
+CandidateContest	OH Senate District 32 (Republican Party)	State Senator - District 32 (R)
+CandidateContest	OH Senate District 33 (Republican Party)	State Senator - District 33 (R)
+CandidateContest	US House OH District 1 (Republican Party)	Representative to Congress - District 01 (R)
+CandidateContest	US House OH District 2 (Republican Party)	Representative to Congress - District 02 (R)
+CandidateContest	US House OH District 3 (Republican Party)	Representative to Congress - District 03 (R)
+CandidateContest	US House OH District 4 (Republican Party)	Representative to Congress - District 04 (R)
+CandidateContest	US House OH District 5 (Republican Party)	Representative to Congress - District 05 (R)
+CandidateContest	US House OH District 6 (Republican Party)	Representative to Congress - District 06 (R)
+CandidateContest	US House OH District 7 (Republican Party)	Representative to Congress - District 07 (R)
+CandidateContest	US House OH District 8 (Republican Party)	Representative to Congress - District 08 (R)
+CandidateContest	US House OH District 9 (Republican Party)	Representative to Congress - District 09 (R)
+CandidateContest	US House OH District 10 (Republican Party)	Representative to Congress - District 10 (R)
+CandidateContest	US House OH District 11 (Republican Party)	Representative to Congress - District 11 (R)
+CandidateContest	US House OH District 12 (Republican Party)	Representative to Congress - District 12 (R)
+CandidateContest	US House OH District 13 (Republican Party)	Representative to Congress - District 13 (R)
+CandidateContest	US House OH District 14 (Republican Party)	Representative to Congress - District 14 (R)
+CandidateContest	US House OH District 15 (Republican Party)	Representative to Congress - District 15 (R)
+CandidateContest	US House OH District 16 (Republican Party)	Representative to Congress - District 16 (R)
+CandidateContest	US President (OH) (Republican Party)	President (at-large) (R)
+CandidateContest	OH Governor (Republican Party)	OH Governor (R)
+CandidateContest	US Senate OH (Republican Party)	U.S. Senator (R)
+CandidateContest	OH Attorney General (Republican Party)	OH Attorney General (R)
+CandidateContest	OH Lieutenant Governor (Republican Party)	OH Lieutenant Governor (R)
+CandidateContest	OH Secretary of State (Republican Party)	OH Secretary of State (R)
+CandidateContest	OH House District 1 (Green Party)	State Representative - District 01 (G)
+CandidateContest	OH House District 2 (Green Party)	State Representative - District 02 (G)
+CandidateContest	OH House District 3 (Green Party)	State Representative - District 03 (G)
+CandidateContest	OH House District 4 (Green Party)	State Representative - District 04 (G)
+CandidateContest	OH House District 5 (Green Party)	State Representative - District 05 (G)
+CandidateContest	OH House District 6 (Green Party)	State Representative - District 06 (G)
+CandidateContest	OH House District 7 (Green Party)	State Representative - District 07 (G)
+CandidateContest	OH House District 8 (Green Party)	State Representative - District 08 (G)
+CandidateContest	OH House District 9 (Green Party)	State Representative - District 09 (G)
+CandidateContest	OH House District 10 (Green Party)	State Representative - District 10 (G)
+CandidateContest	OH House District 11 (Green Party)	State Representative - District 11 (G)
+CandidateContest	OH House District 12 (Green Party)	State Representative - District 12 (G)
+CandidateContest	OH House District 13 (Green Party)	State Representative - District 13 (G)
+CandidateContest	OH House District 14 (Green Party)	State Representative - District 14 (G)
+CandidateContest	OH House District 15 (Green Party)	State Representative - District 15 (G)
+CandidateContest	OH House District 16 (Green Party)	State Representative - District 16 (G)
+CandidateContest	OH House District 17 (Green Party)	State Representative - District 17 (G)
+CandidateContest	OH House District 18 (Green Party)	State Representative - District 18 (G)
+CandidateContest	OH House District 19 (Green Party)	State Representative - District 19 (G)
+CandidateContest	OH House District 20 (Green Party)	State Representative - District 20 (G)
+CandidateContest	OH House District 21 (Green Party)	State Representative - District 21 (G)
+CandidateContest	OH House District 22 (Green Party)	State Representative - District 22 (G)
+CandidateContest	OH House District 23 (Green Party)	State Representative - District 23 (G)
+CandidateContest	OH House District 24 (Green Party)	State Representative - District 24 (G)
+CandidateContest	OH House District 25 (Green Party)	State Representative - District 25 (G)
+CandidateContest	OH House District 26 (Green Party)	State Representative - District 26 (G)
+CandidateContest	OH House District 27 (Green Party)	State Representative - District 27 (G)
+CandidateContest	OH House District 28 (Green Party)	State Representative - District 28 (G)
+CandidateContest	OH House District 29 (Green Party)	State Representative - District 29 (G)
+CandidateContest	OH House District 30 (Green Party)	State Representative - District 30 (G)
+CandidateContest	OH House District 31 (Green Party)	State Representative - District 31 (G)
+CandidateContest	OH House District 32 (Green Party)	State Representative - District 32 (G)
+CandidateContest	OH House District 33 (Green Party)	State Representative - District 33 (G)
+CandidateContest	OH House District 34 (Green Party)	State Representative - District 34 (G)
+CandidateContest	OH House District 35 (Green Party)	State Representative - District 35 (G)
+CandidateContest	OH House District 36 (Green Party)	State Representative - District 36 (G)
+CandidateContest	OH House District 37 (Green Party)	State Representative - District 37 (G)
+CandidateContest	OH House District 38 (Green Party)	State Representative - District 38 (G)
+CandidateContest	OH House District 39 (Green Party)	State Representative - District 39 (G)
+CandidateContest	OH House District 40 (Green Party)	State Representative - District 40 (G)
+CandidateContest	OH House District 41 (Green Party)	State Representative - District 41 (G)
+CandidateContest	OH House District 42 (Green Party)	State Representative - District 42 (G)
+CandidateContest	OH House District 43 (Green Party)	State Representative - District 43 (G)
+CandidateContest	OH House District 44 (Green Party)	State Representative - District 44 (G)
+CandidateContest	OH House District 45 (Green Party)	State Representative - District 45 (G)
+CandidateContest	OH House District 46 (Green Party)	State Representative - District 46 (G)
+CandidateContest	OH House District 47 (Green Party)	State Representative - District 47 (G)
+CandidateContest	OH House District 48 (Green Party)	State Representative - District 48 (G)
+CandidateContest	OH House District 49 (Green Party)	State Representative - District 49 (G)
+CandidateContest	OH House District 50 (Green Party)	State Representative - District 50 (G)
+CandidateContest	OH House District 51 (Green Party)	State Representative - District 51 (G)
+CandidateContest	OH House District 52 (Green Party)	State Representative - District 52 (G)
+CandidateContest	OH House District 53 (Green Party)	State Representative - District 53 (G)
+CandidateContest	OH House District 54 (Green Party)	State Representative - District 54 (G)
+CandidateContest	OH House District 55 (Green Party)	State Representative - District 55 (G)
+CandidateContest	OH House District 56 (Green Party)	State Representative - District 56 (G)
+CandidateContest	OH House District 57 (Green Party)	State Representative - District 57 (G)
+CandidateContest	OH House District 58 (Green Party)	State Representative - District 58 (G)
+CandidateContest	OH House District 59 (Green Party)	State Representative - District 59 (G)
+CandidateContest	OH House District 60 (Green Party)	State Representative - District 60 (G)
+CandidateContest	OH House District 61 (Green Party)	State Representative - District 61 (G)
+CandidateContest	OH House District 62 (Green Party)	State Representative - District 62 (G)
+CandidateContest	OH House District 63 (Green Party)	State Representative - District 63 (G)
+CandidateContest	OH House District 64 (Green Party)	State Representative - District 64 (G)
+CandidateContest	OH House District 65 (Green Party)	State Representative - District 65 (G)
+CandidateContest	OH House District 66 (Green Party)	State Representative - District 66 (G)
+CandidateContest	OH House District 67 (Green Party)	State Representative - District 67 (G)
+CandidateContest	OH House District 68 (Green Party)	State Representative - District 68 (G)
+CandidateContest	OH House District 69 (Green Party)	State Representative - District 69 (G)
+CandidateContest	OH House District 70 (Green Party)	State Representative - District 70 (G)
+CandidateContest	OH House District 71 (Green Party)	State Representative - District 71 (G)
+CandidateContest	OH House District 72 (Green Party)	State Representative - District 72 (G)
+CandidateContest	OH House District 73 (Green Party)	State Representative - District 73 (G)
+CandidateContest	OH House District 74 (Green Party)	State Representative - District 74 (G)
+CandidateContest	OH House District 75 (Green Party)	State Representative - District 75 (G)
+CandidateContest	OH House District 76 (Green Party)	State Representative - District 76 (G)
+CandidateContest	OH House District 77 (Green Party)	State Representative - District 77 (G)
+CandidateContest	OH House District 78 (Green Party)	State Representative - District 78 (G)
+CandidateContest	OH House District 79 (Green Party)	State Representative - District 79 (G)
+CandidateContest	OH House District 80 (Green Party)	State Representative - District 80 (G)
+CandidateContest	OH House District 81 (Green Party)	State Representative - District 81 (G)
+CandidateContest	OH House District 82 (Green Party)	State Representative - District 82 (G)
+CandidateContest	OH House District 83 (Green Party)	State Representative - District 83 (G)
+CandidateContest	OH House District 84 (Green Party)	State Representative - District 84 (G)
+CandidateContest	OH House District 85 (Green Party)	State Representative - District 85 (G)
+CandidateContest	OH House District 86 (Green Party)	State Representative - District 86 (G)
+CandidateContest	OH House District 87 (Green Party)	State Representative - District 87 (G)
+CandidateContest	OH House District 88 (Green Party)	State Representative - District 88 (G)
+CandidateContest	OH House District 89 (Green Party)	State Representative - District 89 (G)
+CandidateContest	OH House District 90 (Green Party)	State Representative - District 90 (G)
+CandidateContest	OH House District 91 (Green Party)	State Representative - District 91 (G)
+CandidateContest	OH House District 92 (Green Party)	State Representative - District 92 (G)
+CandidateContest	OH House District 93 (Green Party)	State Representative - District 93 (G)
+CandidateContest	OH House District 94 (Green Party)	State Representative - District 94 (G)
+CandidateContest	OH House District 95 (Green Party)	State Representative - District 95 (G)
+CandidateContest	OH House District 96 (Green Party)	State Representative - District 96 (G)
+CandidateContest	OH House District 97 (Green Party)	State Representative - District 97 (G)
+CandidateContest	OH House District 98 (Green Party)	State Representative - District 98 (G)
+CandidateContest	OH House District 99 (Green Party)	State Representative - District 99 (G)
+CandidateContest	OH Senate District 1 (Green Party)	State Senator - District 01 (G)
+CandidateContest	OH Senate District 2 (Green Party)	State Senator - District 02 (G)
+CandidateContest	OH Senate District 3 (Green Party)	State Senator - District 03 (G)
+CandidateContest	OH Senate District 4 (Green Party)	State Senator - District 04 (G)
+CandidateContest	OH Senate District 5 (Green Party)	State Senator - District 05 (G)
+CandidateContest	OH Senate District 6 (Green Party)	State Senator - District 06 (G)
+CandidateContest	OH Senate District 7 (Green Party)	State Senator - District 07 (G)
+CandidateContest	OH Senate District 8 (Green Party)	State Senator - District 08 (G)
+CandidateContest	OH Senate District 9 (Green Party)	State Senator - District 09 (G)
+CandidateContest	OH Senate District 10 (Green Party)	State Senator - District 10 (G)
+CandidateContest	OH Senate District 11 (Green Party)	State Senator - District 11 (G)
+CandidateContest	OH Senate District 12 (Green Party)	State Senator - District 12 (G)
+CandidateContest	OH Senate District 13 (Green Party)	State Senator - District 13 (G)
+CandidateContest	OH Senate District 14 (Green Party)	State Senator - District 14 (G)
+CandidateContest	OH Senate District 15 (Green Party)	State Senator - District 15 (G)
+CandidateContest	OH Senate District 16 (Green Party)	State Senator - District 16 (G)
+CandidateContest	OH Senate District 17 (Green Party)	State Senator - District 17 (G)
+CandidateContest	OH Senate District 18 (Green Party)	State Senator - District 18 (G)
+CandidateContest	OH Senate District 19 (Green Party)	State Senator - District 19 (G)
+CandidateContest	OH Senate District 20 (Green Party)	State Senator - District 20 (G)
+CandidateContest	OH Senate District 21 (Green Party)	State Senator - District 21 (G)
+CandidateContest	OH Senate District 22 (Green Party)	State Senator - District 22 (G)
+CandidateContest	OH Senate District 23 (Green Party)	State Senator - District 23 (G)
+CandidateContest	OH Senate District 24 (Green Party)	State Senator - District 24 (G)
+CandidateContest	OH Senate District 25 (Green Party)	State Senator - District 25 (G)
+CandidateContest	OH Senate District 26 (Green Party)	State Senator - District 26 (G)
+CandidateContest	OH Senate District 27 (Green Party)	State Senator - District 27 (G)
+CandidateContest	OH Senate District 28 (Green Party)	State Senator - District 28 (G)
+CandidateContest	OH Senate District 29 (Green Party)	State Senator - District 29 (G)
+CandidateContest	OH Senate District 30 (Green Party)	State Senator - District 30 (G)
+CandidateContest	OH Senate District 31 (Green Party)	State Senator - District 31 (G)
+CandidateContest	OH Senate District 32 (Green Party)	State Senator - District 32 (G)
+CandidateContest	OH Senate District 33 (Green Party)	State Senator - District 33 (G)
+CandidateContest	US House OH District 1 (Green Party)	Representative to Congress - District 01 (G)
+CandidateContest	US House OH District 2 (Green Party)	Representative to Congress - District 02 (G)
+CandidateContest	US House OH District 3 (Green Party)	Representative to Congress - District 03 (G)
+CandidateContest	US House OH District 4 (Green Party)	Representative to Congress - District 04 (G)
+CandidateContest	US House OH District 5 (Green Party)	Representative to Congress - District 05 (G)
+CandidateContest	US House OH District 6 (Green Party)	Representative to Congress - District 06 (G)
+CandidateContest	US House OH District 7 (Green Party)	Representative to Congress - District 07 (G)
+CandidateContest	US House OH District 8 (Green Party)	Representative to Congress - District 08 (G)
+CandidateContest	US House OH District 9 (Green Party)	Representative to Congress - District 09 (G)
+CandidateContest	US House OH District 10 (Green Party)	Representative to Congress - District 10 (G)
+CandidateContest	US House OH District 11 (Green Party)	Representative to Congress - District 11 (G)
+CandidateContest	US House OH District 12 (Green Party)	Representative to Congress - District 12 (G)
+CandidateContest	US House OH District 13 (Green Party)	Representative to Congress - District 13 (G)
+CandidateContest	US House OH District 14 (Green Party)	Representative to Congress - District 14 (G)
+CandidateContest	US House OH District 15 (Green Party)	Representative to Congress - District 15 (G)
+CandidateContest	US House OH District 16 (Green Party)	Representative to Congress - District 16 (G)
+CandidateContest	US President (OH) (Green Party)	President (at-large) (G)
+CandidateContest	OH Governor (Green Party)	OH Governor (G)
+CandidateContest	US Senate OH (Green Party)	U.S. Senator (G)
+CandidateContest	OH Attorney General (Green Party)	OH Attorney General (G)
+CandidateContest	OH Lieutenant Governor (Green Party)	OH Lieutenant Governor (G)
+CandidateContest	OH Secretary of State (Green Party)	OH Secretary of State (G)
+CandidateContest	OH House District 1 (Libertarian Party)	State Representative - District 01 (L)
+CandidateContest	OH House District 2 (Libertarian Party)	State Representative - District 02 (L)
+CandidateContest	OH House District 3 (Libertarian Party)	State Representative - District 03 (L)
+CandidateContest	OH House District 4 (Libertarian Party)	State Representative - District 04 (L)
+CandidateContest	OH House District 5 (Libertarian Party)	State Representative - District 05 (L)
+CandidateContest	OH House District 6 (Libertarian Party)	State Representative - District 06 (L)
+CandidateContest	OH House District 7 (Libertarian Party)	State Representative - District 07 (L)
+CandidateContest	OH House District 8 (Libertarian Party)	State Representative - District 08 (L)
+CandidateContest	OH House District 9 (Libertarian Party)	State Representative - District 09 (L)
+CandidateContest	OH House District 10 (Libertarian Party)	State Representative - District 10 (L)
+CandidateContest	OH House District 11 (Libertarian Party)	State Representative - District 11 (L)
+CandidateContest	OH House District 12 (Libertarian Party)	State Representative - District 12 (L)
+CandidateContest	OH House District 13 (Libertarian Party)	State Representative - District 13 (L)
+CandidateContest	OH House District 14 (Libertarian Party)	State Representative - District 14 (L)
+CandidateContest	OH House District 15 (Libertarian Party)	State Representative - District 15 (L)
+CandidateContest	OH House District 16 (Libertarian Party)	State Representative - District 16 (L)
+CandidateContest	OH House District 17 (Libertarian Party)	State Representative - District 17 (L)
+CandidateContest	OH House District 18 (Libertarian Party)	State Representative - District 18 (L)
+CandidateContest	OH House District 19 (Libertarian Party)	State Representative - District 19 (L)
+CandidateContest	OH House District 20 (Libertarian Party)	State Representative - District 20 (L)
+CandidateContest	OH House District 21 (Libertarian Party)	State Representative - District 21 (L)
+CandidateContest	OH House District 22 (Libertarian Party)	State Representative - District 22 (L)
+CandidateContest	OH House District 23 (Libertarian Party)	State Representative - District 23 (L)
+CandidateContest	OH House District 24 (Libertarian Party)	State Representative - District 24 (L)
+CandidateContest	OH House District 25 (Libertarian Party)	State Representative - District 25 (L)
+CandidateContest	OH House District 26 (Libertarian Party)	State Representative - District 26 (L)
+CandidateContest	OH House District 27 (Libertarian Party)	State Representative - District 27 (L)
+CandidateContest	OH House District 28 (Libertarian Party)	State Representative - District 28 (L)
+CandidateContest	OH House District 29 (Libertarian Party)	State Representative - District 29 (L)
+CandidateContest	OH House District 30 (Libertarian Party)	State Representative - District 30 (L)
+CandidateContest	OH House District 31 (Libertarian Party)	State Representative - District 31 (L)
+CandidateContest	OH House District 32 (Libertarian Party)	State Representative - District 32 (L)
+CandidateContest	OH House District 33 (Libertarian Party)	State Representative - District 33 (L)
+CandidateContest	OH House District 34 (Libertarian Party)	State Representative - District 34 (L)
+CandidateContest	OH House District 35 (Libertarian Party)	State Representative - District 35 (L)
+CandidateContest	OH House District 36 (Libertarian Party)	State Representative - District 36 (L)
+CandidateContest	OH House District 37 (Libertarian Party)	State Representative - District 37 (L)
+CandidateContest	OH House District 38 (Libertarian Party)	State Representative - District 38 (L)
+CandidateContest	OH House District 39 (Libertarian Party)	State Representative - District 39 (L)
+CandidateContest	OH House District 40 (Libertarian Party)	State Representative - District 40 (L)
+CandidateContest	OH House District 41 (Libertarian Party)	State Representative - District 41 (L)
+CandidateContest	OH House District 42 (Libertarian Party)	State Representative - District 42 (L)
+CandidateContest	OH House District 43 (Libertarian Party)	State Representative - District 43 (L)
+CandidateContest	OH House District 44 (Libertarian Party)	State Representative - District 44 (L)
+CandidateContest	OH House District 45 (Libertarian Party)	State Representative - District 45 (L)
+CandidateContest	OH House District 46 (Libertarian Party)	State Representative - District 46 (L)
+CandidateContest	OH House District 47 (Libertarian Party)	State Representative - District 47 (L)
+CandidateContest	OH House District 48 (Libertarian Party)	State Representative - District 48 (L)
+CandidateContest	OH House District 49 (Libertarian Party)	State Representative - District 49 (L)
+CandidateContest	OH House District 50 (Libertarian Party)	State Representative - District 50 (L)
+CandidateContest	OH House District 51 (Libertarian Party)	State Representative - District 51 (L)
+CandidateContest	OH House District 52 (Libertarian Party)	State Representative - District 52 (L)
+CandidateContest	OH House District 53 (Libertarian Party)	State Representative - District 53 (L)
+CandidateContest	OH House District 54 (Libertarian Party)	State Representative - District 54 (L)
+CandidateContest	OH House District 55 (Libertarian Party)	State Representative - District 55 (L)
+CandidateContest	OH House District 56 (Libertarian Party)	State Representative - District 56 (L)
+CandidateContest	OH House District 57 (Libertarian Party)	State Representative - District 57 (L)
+CandidateContest	OH House District 58 (Libertarian Party)	State Representative - District 58 (L)
+CandidateContest	OH House District 59 (Libertarian Party)	State Representative - District 59 (L)
+CandidateContest	OH House District 60 (Libertarian Party)	State Representative - District 60 (L)
+CandidateContest	OH House District 61 (Libertarian Party)	State Representative - District 61 (L)
+CandidateContest	OH House District 62 (Libertarian Party)	State Representative - District 62 (L)
+CandidateContest	OH House District 63 (Libertarian Party)	State Representative - District 63 (L)
+CandidateContest	OH House District 64 (Libertarian Party)	State Representative - District 64 (L)
+CandidateContest	OH House District 65 (Libertarian Party)	State Representative - District 65 (L)
+CandidateContest	OH House District 66 (Libertarian Party)	State Representative - District 66 (L)
+CandidateContest	OH House District 67 (Libertarian Party)	State Representative - District 67 (L)
+CandidateContest	OH House District 68 (Libertarian Party)	State Representative - District 68 (L)
+CandidateContest	OH House District 69 (Libertarian Party)	State Representative - District 69 (L)
+CandidateContest	OH House District 70 (Libertarian Party)	State Representative - District 70 (L)
+CandidateContest	OH House District 71 (Libertarian Party)	State Representative - District 71 (L)
+CandidateContest	OH House District 72 (Libertarian Party)	State Representative - District 72 (L)
+CandidateContest	OH House District 73 (Libertarian Party)	State Representative - District 73 (L)
+CandidateContest	OH House District 74 (Libertarian Party)	State Representative - District 74 (L)
+CandidateContest	OH House District 75 (Libertarian Party)	State Representative - District 75 (L)
+CandidateContest	OH House District 76 (Libertarian Party)	State Representative - District 76 (L)
+CandidateContest	OH House District 77 (Libertarian Party)	State Representative - District 77 (L)
+CandidateContest	OH House District 78 (Libertarian Party)	State Representative - District 78 (L)
+CandidateContest	OH House District 79 (Libertarian Party)	State Representative - District 79 (L)
+CandidateContest	OH House District 80 (Libertarian Party)	State Representative - District 80 (L)
+CandidateContest	OH House District 81 (Libertarian Party)	State Representative - District 81 (L)
+CandidateContest	OH House District 82 (Libertarian Party)	State Representative - District 82 (L)
+CandidateContest	OH House District 83 (Libertarian Party)	State Representative - District 83 (L)
+CandidateContest	OH House District 84 (Libertarian Party)	State Representative - District 84 (L)
+CandidateContest	OH House District 85 (Libertarian Party)	State Representative - District 85 (L)
+CandidateContest	OH House District 86 (Libertarian Party)	State Representative - District 86 (L)
+CandidateContest	OH House District 87 (Libertarian Party)	State Representative - District 87 (L)
+CandidateContest	OH House District 88 (Libertarian Party)	State Representative - District 88 (L)
+CandidateContest	OH House District 89 (Libertarian Party)	State Representative - District 89 (L)
+CandidateContest	OH House District 90 (Libertarian Party)	State Representative - District 90 (L)
+CandidateContest	OH House District 91 (Libertarian Party)	State Representative - District 91 (L)
+CandidateContest	OH House District 92 (Libertarian Party)	State Representative - District 92 (L)
+CandidateContest	OH House District 93 (Libertarian Party)	State Representative - District 93 (L)
+CandidateContest	OH House District 94 (Libertarian Party)	State Representative - District 94 (L)
+CandidateContest	OH House District 95 (Libertarian Party)	State Representative - District 95 (L)
+CandidateContest	OH House District 96 (Libertarian Party)	State Representative - District 96 (L)
+CandidateContest	OH House District 97 (Libertarian Party)	State Representative - District 97 (L)
+CandidateContest	OH House District 98 (Libertarian Party)	State Representative - District 98 (L)
+CandidateContest	OH House District 99 (Libertarian Party)	State Representative - District 99 (L)
+CandidateContest	OH Senate District 1 (Libertarian Party)	State Senator - District 01 (L)
+CandidateContest	OH Senate District 2 (Libertarian Party)	State Senator - District 02 (L)
+CandidateContest	OH Senate District 3 (Libertarian Party)	State Senator - District 03 (L)
+CandidateContest	OH Senate District 4 (Libertarian Party)	State Senator - District 04 (L)
+CandidateContest	OH Senate District 5 (Libertarian Party)	State Senator - District 05 (L)
+CandidateContest	OH Senate District 6 (Libertarian Party)	State Senator - District 06 (L)
+CandidateContest	OH Senate District 7 (Libertarian Party)	State Senator - District 07 (L)
+CandidateContest	OH Senate District 8 (Libertarian Party)	State Senator - District 08 (L)
+CandidateContest	OH Senate District 9 (Libertarian Party)	State Senator - District 09 (L)
+CandidateContest	OH Senate District 10 (Libertarian Party)	State Senator - District 10 (L)
+CandidateContest	OH Senate District 11 (Libertarian Party)	State Senator - District 11 (L)
+CandidateContest	OH Senate District 12 (Libertarian Party)	State Senator - District 12 (L)
+CandidateContest	OH Senate District 13 (Libertarian Party)	State Senator - District 13 (L)
+CandidateContest	OH Senate District 14 (Libertarian Party)	State Senator - District 14 (L)
+CandidateContest	OH Senate District 15 (Libertarian Party)	State Senator - District 15 (L)
+CandidateContest	OH Senate District 16 (Libertarian Party)	State Senator - District 16 (L)
+CandidateContest	OH Senate District 17 (Libertarian Party)	State Senator - District 17 (L)
+CandidateContest	OH Senate District 18 (Libertarian Party)	State Senator - District 18 (L)
+CandidateContest	OH Senate District 19 (Libertarian Party)	State Senator - District 19 (L)
+CandidateContest	OH Senate District 20 (Libertarian Party)	State Senator - District 20 (L)
+CandidateContest	OH Senate District 21 (Libertarian Party)	State Senator - District 21 (L)
+CandidateContest	OH Senate District 22 (Libertarian Party)	State Senator - District 22 (L)
+CandidateContest	OH Senate District 23 (Libertarian Party)	State Senator - District 23 (L)
+CandidateContest	OH Senate District 24 (Libertarian Party)	State Senator - District 24 (L)
+CandidateContest	OH Senate District 25 (Libertarian Party)	State Senator - District 25 (L)
+CandidateContest	OH Senate District 26 (Libertarian Party)	State Senator - District 26 (L)
+CandidateContest	OH Senate District 27 (Libertarian Party)	State Senator - District 27 (L)
+CandidateContest	OH Senate District 28 (Libertarian Party)	State Senator - District 28 (L)
+CandidateContest	OH Senate District 29 (Libertarian Party)	State Senator - District 29 (L)
+CandidateContest	OH Senate District 30 (Libertarian Party)	State Senator - District 30 (L)
+CandidateContest	OH Senate District 31 (Libertarian Party)	State Senator - District 31 (L)
+CandidateContest	OH Senate District 32 (Libertarian Party)	State Senator - District 32 (L)
+CandidateContest	OH Senate District 33 (Libertarian Party)	State Senator - District 33 (L)
+CandidateContest	US House OH District 1 (Libertarian Party)	Representative to Congress - District 01 (L)
+CandidateContest	US House OH District 2 (Libertarian Party)	Representative to Congress - District 02 (L)
+CandidateContest	US House OH District 3 (Libertarian Party)	Representative to Congress - District 03 (L)
+CandidateContest	US House OH District 4 (Libertarian Party)	Representative to Congress - District 04 (L)
+CandidateContest	US House OH District 5 (Libertarian Party)	Representative to Congress - District 05 (L)
+CandidateContest	US House OH District 6 (Libertarian Party)	Representative to Congress - District 06 (L)
+CandidateContest	US House OH District 7 (Libertarian Party)	Representative to Congress - District 07 (L)
+CandidateContest	US House OH District 8 (Libertarian Party)	Representative to Congress - District 08 (L)
+CandidateContest	US House OH District 9 (Libertarian Party)	Representative to Congress - District 09 (L)
+CandidateContest	US House OH District 10 (Libertarian Party)	Representative to Congress - District 10 (L)
+CandidateContest	US House OH District 11 (Libertarian Party)	Representative to Congress - District 11 (L)
+CandidateContest	US House OH District 12 (Libertarian Party)	Representative to Congress - District 12 (L)
+CandidateContest	US House OH District 13 (Libertarian Party)	Representative to Congress - District 13 (L)
+CandidateContest	US House OH District 14 (Libertarian Party)	Representative to Congress - District 14 (L)
+CandidateContest	US House OH District 15 (Libertarian Party)	Representative to Congress - District 15 (L)
+CandidateContest	US House OH District 16 (Libertarian Party)	Representative to Congress - District 16 (L)
+CandidateContest	US President (OH) (Libertarian Party)	President (at-large) (L)
+CandidateContest	OH Governor (Libertarian Party)	OH Governor (L)
+CandidateContest	US Senate OH (Libertarian Party)	U.S. Senator (L)
+CandidateContest	OH Attorney General (Libertarian Party)	OH Attorney General (L)
+CandidateContest	OH Lieutenant Governor (Libertarian Party)	OH Lieutenant Governor (L)
+CandidateContest	OH Secretary of State (Libertarian Party)	OH Secretary of State (L)
+CandidateContest	OH House District 1	State Representative - District 01
+CandidateContest	OH House District 2	State Representative - District 02
+CandidateContest	OH House District 3	State Representative - District 03
+CandidateContest	OH House District 4	State Representative - District 04
+CandidateContest	OH House District 5	State Representative - District 05
+CandidateContest	OH House District 6	State Representative - District 06
+CandidateContest	OH House District 7	State Representative - District 07
+CandidateContest	OH House District 8	State Representative - District 08
+CandidateContest	OH House District 9	State Representative - District 09
+CandidateContest	OH House District 10	State Representative - District 10
+CandidateContest	OH House District 11	State Representative - District 11
+CandidateContest	OH House District 12	State Representative - District 12
+CandidateContest	OH House District 13	State Representative - District 13
+CandidateContest	OH House District 14	State Representative - District 14
+CandidateContest	OH House District 15	State Representative - District 15
+CandidateContest	OH House District 16	State Representative - District 16
+CandidateContest	OH House District 17	State Representative - District 17
+CandidateContest	OH House District 18	State Representative - District 18
+CandidateContest	OH House District 19	State Representative - District 19
+CandidateContest	OH House District 20	State Representative - District 20
+CandidateContest	OH House District 21	State Representative - District 21
+CandidateContest	OH House District 22	State Representative - District 22
+CandidateContest	OH House District 23	State Representative - District 23
+CandidateContest	OH House District 24	State Representative - District 24
+CandidateContest	OH House District 25	State Representative - District 25
+CandidateContest	OH House District 26	State Representative - District 26
+CandidateContest	OH House District 27	State Representative - District 27
+CandidateContest	OH House District 28	State Representative - District 28
+CandidateContest	OH House District 29	State Representative - District 29
+CandidateContest	OH House District 30	State Representative - District 30
+CandidateContest	OH House District 31	State Representative - District 31
+CandidateContest	OH House District 32	State Representative - District 32
+CandidateContest	OH House District 33	State Representative - District 33
+CandidateContest	OH House District 34	State Representative - District 34
+CandidateContest	OH House District 35	State Representative - District 35
+CandidateContest	OH House District 36	State Representative - District 36
+CandidateContest	OH House District 37	State Representative - District 37
+CandidateContest	OH House District 38	State Representative - District 38
+CandidateContest	OH House District 39	State Representative - District 39
+CandidateContest	OH House District 40	State Representative - District 40
+CandidateContest	OH House District 41	State Representative - District 41
+CandidateContest	OH House District 42	State Representative - District 42
+CandidateContest	OH House District 43	State Representative - District 43
+CandidateContest	OH House District 44	State Representative - District 44
+CandidateContest	OH House District 45	State Representative - District 45
+CandidateContest	OH House District 46	State Representative - District 46
+CandidateContest	OH House District 47	State Representative - District 47
+CandidateContest	OH House District 48	State Representative - District 48
+CandidateContest	OH House District 49	State Representative - District 49
+CandidateContest	OH House District 50	State Representative - District 50
+CandidateContest	OH House District 51	State Representative - District 51
+CandidateContest	OH House District 52	State Representative - District 52
+CandidateContest	OH House District 53	State Representative - District 53
+CandidateContest	OH House District 54	State Representative - District 54
+CandidateContest	OH House District 55	State Representative - District 55
+CandidateContest	OH House District 56	State Representative - District 56
+CandidateContest	OH House District 57	State Representative - District 57
+CandidateContest	OH House District 58	State Representative - District 58
+CandidateContest	OH House District 59	State Representative - District 59
+CandidateContest	OH House District 60	State Representative - District 60
+CandidateContest	OH House District 61	State Representative - District 61
+CandidateContest	OH House District 62	State Representative - District 62
+CandidateContest	OH House District 63	State Representative - District 63
+CandidateContest	OH House District 64	State Representative - District 64
+CandidateContest	OH House District 65	State Representative - District 65
+CandidateContest	OH House District 66	State Representative - District 66
+CandidateContest	OH House District 67	State Representative - District 67
+CandidateContest	OH House District 68	State Representative - District 68
+CandidateContest	OH House District 69	State Representative - District 69
+CandidateContest	OH House District 70	State Representative - District 70
+CandidateContest	OH House District 71	State Representative - District 71
+CandidateContest	OH House District 72	State Representative - District 72
+CandidateContest	OH House District 73	State Representative - District 73
+CandidateContest	OH House District 74	State Representative - District 74
+CandidateContest	OH House District 75	State Representative - District 75
+CandidateContest	OH House District 76	State Representative - District 76
+CandidateContest	OH House District 77	State Representative - District 77
+CandidateContest	OH House District 78	State Representative - District 78
+CandidateContest	OH House District 79	State Representative - District 79
+CandidateContest	OH House District 80	State Representative - District 80
+CandidateContest	OH House District 81	State Representative - District 81
+CandidateContest	OH House District 82	State Representative - District 82
+CandidateContest	OH House District 83	State Representative - District 83
+CandidateContest	OH House District 84	State Representative - District 84
+CandidateContest	OH House District 85	State Representative - District 85
+CandidateContest	OH House District 86	State Representative - District 86
+CandidateContest	OH House District 87	State Representative - District 87
+CandidateContest	OH House District 88	State Representative - District 88
+CandidateContest	OH House District 89	State Representative - District 89
+CandidateContest	OH House District 90	State Representative - District 90
+CandidateContest	OH House District 91	State Representative - District 91
+CandidateContest	OH House District 92	State Representative - District 92
+CandidateContest	OH House District 93	State Representative - District 93
+CandidateContest	OH House District 94	State Representative - District 94
+CandidateContest	OH House District 95	State Representative - District 95
+CandidateContest	OH House District 96	State Representative - District 96
+CandidateContest	OH House District 97	State Representative - District 97
+CandidateContest	OH House District 98	State Representative - District 98
+CandidateContest	OH House District 99	State Representative - District 99
+CandidateContest	OH Senate District 1	State Senator - District 01
+CandidateContest	OH Senate District 2	State Senator - District 02
+CandidateContest	OH Senate District 3	State Senator - District 03
+CandidateContest	OH Senate District 4	State Senator - District 04
+CandidateContest	OH Senate District 5	State Senator - District 05
+CandidateContest	OH Senate District 6	State Senator - District 06
+CandidateContest	OH Senate District 7	State Senator - District 07
+CandidateContest	OH Senate District 8	State Senator - District 08
+CandidateContest	OH Senate District 9	State Senator - District 09
+CandidateContest	OH Senate District 10	State Senator - District 10
+CandidateContest	OH Senate District 11	State Senator - District 11
+CandidateContest	OH Senate District 12	State Senator - District 12
+CandidateContest	OH Senate District 13	State Senator - District 13
+CandidateContest	OH Senate District 14	State Senator - District 14
+CandidateContest	OH Senate District 15	State Senator - District 15
+CandidateContest	OH Senate District 16	State Senator - District 16
+CandidateContest	OH Senate District 17	State Senator - District 17
+CandidateContest	OH Senate District 18	State Senator - District 18
+CandidateContest	OH Senate District 19	State Senator - District 19
+CandidateContest	OH Senate District 20	State Senator - District 20
+CandidateContest	OH Senate District 21	State Senator - District 21
+CandidateContest	OH Senate District 22	State Senator - District 22
+CandidateContest	OH Senate District 23	State Senator - District 23
+CandidateContest	OH Senate District 24	State Senator - District 24
+CandidateContest	OH Senate District 25	State Senator - District 25
+CandidateContest	OH Senate District 26	State Senator - District 26
+CandidateContest	OH Senate District 27	State Senator - District 27
+CandidateContest	OH Senate District 28	State Senator - District 28
+CandidateContest	OH Senate District 29	State Senator - District 29
+CandidateContest	OH Senate District 30	State Senator - District 30
+CandidateContest	OH Senate District 31	State Senator - District 31
+CandidateContest	OH Senate District 32	State Senator - District 32
+CandidateContest	OH Senate District 33	State Senator - District 33
+CandidateContest	US House OH District 1	Representative to Congress - District 01
+CandidateContest	US House OH District 2	Representative to Congress - District 02
+CandidateContest	US House OH District 3	Representative to Congress - District 03
+CandidateContest	US House OH District 4	Representative to Congress - District 04
+CandidateContest	US House OH District 5	Representative to Congress - District 05
+CandidateContest	US House OH District 6	Representative to Congress - District 06
+CandidateContest	US House OH District 7	Representative to Congress - District 07
+CandidateContest	US House OH District 8	Representative to Congress - District 08
+CandidateContest	US House OH District 9	Representative to Congress - District 09
+CandidateContest	US House OH District 10	Representative to Congress - District 10
+CandidateContest	US House OH District 11	Representative to Congress - District 11
+CandidateContest	US House OH District 12	Representative to Congress - District 12
+CandidateContest	US House OH District 13	Representative to Congress - District 13
+CandidateContest	US House OH District 14	Representative to Congress - District 14
+CandidateContest	US House OH District 15	Representative to Congress - District 15
+CandidateContest	US House OH District 16	Representative to Congress - District 16
+CandidateContest	US President (OH)	President (at-large)
+CandidateContest	US President (OH)	President
+CandidateContest	OH Governor	Governor and Lieutenant Governor
+CandidateContest	US Senate OH	U.S. Senator
+CandidateContest	OH Attorney General	Attorney General
+CandidateContest	OH Treasurer of State	Treasurer of State
+CandidateContest	OH Auditor of State	Auditor of State
+CandidateContest	OH Secretary of State	Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
+Election	2018 General	2018 General
+Election	2018 Primary	2018 Primary
+Election	2016 General	2016 General
+Election	2016 Primary	2016 Primary
+Party	Democratic Party	D
+Party	Republican Party	R
+Party	Green Party	G
+Party	Libertarian Party	L
+ReportingUnit	Ohio;OH House District 1	Ohio;OH House District 1
+ReportingUnit	Ohio;OH House District 2	Ohio;OH House District 2
+ReportingUnit	Ohio;OH House District 3	Ohio;OH House District 3
+ReportingUnit	Ohio;OH House District 4	Ohio;OH House District 4
+ReportingUnit	Ohio;OH House District 5	Ohio;OH House District 5
+ReportingUnit	Ohio;OH House District 6	Ohio;OH House District 6
+ReportingUnit	Ohio;OH House District 7	Ohio;OH House District 7
+ReportingUnit	Ohio;OH House District 8	Ohio;OH House District 8
+ReportingUnit	Ohio;OH House District 9	Ohio;OH House District 9
+ReportingUnit	Ohio;OH House District 10	Ohio;OH House District 10
+ReportingUnit	Ohio;OH House District 11	Ohio;OH House District 11
+ReportingUnit	Ohio;OH House District 12	Ohio;OH House District 12
+ReportingUnit	Ohio;OH House District 13	Ohio;OH House District 13
+ReportingUnit	Ohio;OH House District 14	Ohio;OH House District 14
+ReportingUnit	Ohio;OH House District 15	Ohio;OH House District 15
+ReportingUnit	Ohio;OH House District 16	Ohio;OH House District 16
+ReportingUnit	Ohio;OH House District 17	Ohio;OH House District 17
+ReportingUnit	Ohio;OH House District 18	Ohio;OH House District 18
+ReportingUnit	Ohio;OH House District 19	Ohio;OH House District 19
+ReportingUnit	Ohio;OH House District 20	Ohio;OH House District 20
+ReportingUnit	Ohio;OH House District 21	Ohio;OH House District 21
+ReportingUnit	Ohio;OH House District 22	Ohio;OH House District 22
+ReportingUnit	Ohio;OH House District 23	Ohio;OH House District 23
+ReportingUnit	Ohio;OH House District 24	Ohio;OH House District 24
+ReportingUnit	Ohio;OH House District 25	Ohio;OH House District 25
+ReportingUnit	Ohio;OH House District 26	Ohio;OH House District 26
+ReportingUnit	Ohio;OH House District 27	Ohio;OH House District 27
+ReportingUnit	Ohio;OH House District 28	Ohio;OH House District 28
+ReportingUnit	Ohio;OH House District 29	Ohio;OH House District 29
+ReportingUnit	Ohio;OH House District 30	Ohio;OH House District 30
+ReportingUnit	Ohio;OH House District 31	Ohio;OH House District 31
+ReportingUnit	Ohio;OH House District 32	Ohio;OH House District 32
+ReportingUnit	Ohio;OH House District 33	Ohio;OH House District 33
+ReportingUnit	Ohio;OH House District 34	Ohio;OH House District 34
+ReportingUnit	Ohio;OH House District 35	Ohio;OH House District 35
+ReportingUnit	Ohio;OH House District 36	Ohio;OH House District 36
+ReportingUnit	Ohio;OH House District 37	Ohio;OH House District 37
+ReportingUnit	Ohio;OH House District 38	Ohio;OH House District 38
+ReportingUnit	Ohio;OH House District 39	Ohio;OH House District 39
+ReportingUnit	Ohio;OH House District 40	Ohio;OH House District 40
+ReportingUnit	Ohio;OH House District 41	Ohio;OH House District 41
+ReportingUnit	Ohio;OH House District 42	Ohio;OH House District 42
+ReportingUnit	Ohio;OH House District 43	Ohio;OH House District 43
+ReportingUnit	Ohio;OH House District 44	Ohio;OH House District 44
+ReportingUnit	Ohio;OH House District 45	Ohio;OH House District 45
+ReportingUnit	Ohio;OH House District 46	Ohio;OH House District 46
+ReportingUnit	Ohio;OH House District 47	Ohio;OH House District 47
+ReportingUnit	Ohio;OH House District 48	Ohio;OH House District 48
+ReportingUnit	Ohio;OH House District 49	Ohio;OH House District 49
+ReportingUnit	Ohio;OH House District 50	Ohio;OH House District 50
+ReportingUnit	Ohio;OH House District 51	Ohio;OH House District 51
+ReportingUnit	Ohio;OH House District 52	Ohio;OH House District 52
+ReportingUnit	Ohio;OH House District 53	Ohio;OH House District 53
+ReportingUnit	Ohio;OH House District 54	Ohio;OH House District 54
+ReportingUnit	Ohio;OH House District 55	Ohio;OH House District 55
+ReportingUnit	Ohio;OH House District 56	Ohio;OH House District 56
+ReportingUnit	Ohio;OH House District 57	Ohio;OH House District 57
+ReportingUnit	Ohio;OH House District 58	Ohio;OH House District 58
+ReportingUnit	Ohio;OH House District 59	Ohio;OH House District 59
+ReportingUnit	Ohio;OH House District 60	Ohio;OH House District 60
+ReportingUnit	Ohio;OH House District 61	Ohio;OH House District 61
+ReportingUnit	Ohio;OH House District 62	Ohio;OH House District 62
+ReportingUnit	Ohio;OH House District 63	Ohio;OH House District 63
+ReportingUnit	Ohio;OH House District 64	Ohio;OH House District 64
+ReportingUnit	Ohio;OH House District 65	Ohio;OH House District 65
+ReportingUnit	Ohio;OH House District 66	Ohio;OH House District 66
+ReportingUnit	Ohio;OH House District 67	Ohio;OH House District 67
+ReportingUnit	Ohio;OH House District 68	Ohio;OH House District 68
+ReportingUnit	Ohio;OH House District 69	Ohio;OH House District 69
+ReportingUnit	Ohio;OH House District 70	Ohio;OH House District 70
+ReportingUnit	Ohio;OH House District 71	Ohio;OH House District 71
+ReportingUnit	Ohio;OH House District 72	Ohio;OH House District 72
+ReportingUnit	Ohio;OH House District 73	Ohio;OH House District 73
+ReportingUnit	Ohio;OH House District 74	Ohio;OH House District 74
+ReportingUnit	Ohio;OH House District 75	Ohio;OH House District 75
+ReportingUnit	Ohio;OH House District 76	Ohio;OH House District 76
+ReportingUnit	Ohio;OH House District 77	Ohio;OH House District 77
+ReportingUnit	Ohio;OH House District 78	Ohio;OH House District 78
+ReportingUnit	Ohio;OH House District 79	Ohio;OH House District 79
+ReportingUnit	Ohio;OH House District 80	Ohio;OH House District 80
+ReportingUnit	Ohio;OH House District 81	Ohio;OH House District 81
+ReportingUnit	Ohio;OH House District 82	Ohio;OH House District 82
+ReportingUnit	Ohio;OH House District 83	Ohio;OH House District 83
+ReportingUnit	Ohio;OH House District 84	Ohio;OH House District 84
+ReportingUnit	Ohio;OH House District 85	Ohio;OH House District 85
+ReportingUnit	Ohio;OH House District 86	Ohio;OH House District 86
+ReportingUnit	Ohio;OH House District 87	Ohio;OH House District 87
+ReportingUnit	Ohio;OH House District 88	Ohio;OH House District 88
+ReportingUnit	Ohio;OH House District 89	Ohio;OH House District 89
+ReportingUnit	Ohio;OH House District 90	Ohio;OH House District 90
+ReportingUnit	Ohio;OH House District 91	Ohio;OH House District 91
+ReportingUnit	Ohio;OH House District 92	Ohio;OH House District 92
+ReportingUnit	Ohio;OH House District 93	Ohio;OH House District 93
+ReportingUnit	Ohio;OH House District 94	Ohio;OH House District 94
+ReportingUnit	Ohio;OH House District 95	Ohio;OH House District 95
+ReportingUnit	Ohio;OH House District 96	Ohio;OH House District 96
+ReportingUnit	Ohio;OH House District 97	Ohio;OH House District 97
+ReportingUnit	Ohio;OH House District 98	Ohio;OH House District 98
+ReportingUnit	Ohio;OH House District 99	Ohio;OH House District 99
+ReportingUnit	Ohio;OH Senate District 1	Ohio;OH Senate District 1
+ReportingUnit	Ohio;OH Senate District 2	Ohio;OH Senate District 2
+ReportingUnit	Ohio;OH Senate District 3	Ohio;OH Senate District 3
+ReportingUnit	Ohio;OH Senate District 4	Ohio;OH Senate District 4
+ReportingUnit	Ohio;OH Senate District 5	Ohio;OH Senate District 5
+ReportingUnit	Ohio;OH Senate District 6	Ohio;OH Senate District 6
+ReportingUnit	Ohio;OH Senate District 7	Ohio;OH Senate District 7
+ReportingUnit	Ohio;OH Senate District 8	Ohio;OH Senate District 8
+ReportingUnit	Ohio;OH Senate District 9	Ohio;OH Senate District 9
+ReportingUnit	Ohio;OH Senate District 10	Ohio;OH Senate District 10
+ReportingUnit	Ohio;OH Senate District 11	Ohio;OH Senate District 11
+ReportingUnit	Ohio;OH Senate District 12	Ohio;OH Senate District 12
+ReportingUnit	Ohio;OH Senate District 13	Ohio;OH Senate District 13
+ReportingUnit	Ohio;OH Senate District 14	Ohio;OH Senate District 14
+ReportingUnit	Ohio;OH Senate District 15	Ohio;OH Senate District 15
+ReportingUnit	Ohio;OH Senate District 16	Ohio;OH Senate District 16
+ReportingUnit	Ohio;OH Senate District 17	Ohio;OH Senate District 17
+ReportingUnit	Ohio;OH Senate District 18	Ohio;OH Senate District 18
+ReportingUnit	Ohio;OH Senate District 19	Ohio;OH Senate District 19
+ReportingUnit	Ohio;OH Senate District 20	Ohio;OH Senate District 20
+ReportingUnit	Ohio;OH Senate District 21	Ohio;OH Senate District 21
+ReportingUnit	Ohio;OH Senate District 22	Ohio;OH Senate District 22
+ReportingUnit	Ohio;OH Senate District 23	Ohio;OH Senate District 23
+ReportingUnit	Ohio;OH Senate District 24	Ohio;OH Senate District 24
+ReportingUnit	Ohio;OH Senate District 25	Ohio;OH Senate District 25
+ReportingUnit	Ohio;OH Senate District 26	Ohio;OH Senate District 26
+ReportingUnit	Ohio;OH Senate District 27	Ohio;OH Senate District 27
+ReportingUnit	Ohio;OH Senate District 28	Ohio;OH Senate District 28
+ReportingUnit	Ohio;OH Senate District 29	Ohio;OH Senate District 29
+ReportingUnit	Ohio;OH Senate District 30	Ohio;OH Senate District 30
+ReportingUnit	Ohio;OH Senate District 31	Ohio;OH Senate District 31
+ReportingUnit	Ohio;OH Senate District 32	Ohio;OH Senate District 32
+ReportingUnit	Ohio;OH Senate District 33	Ohio;OH Senate District 33
+ReportingUnit	Ohio;US House OH District 1	Ohio;US House OH District 1
+ReportingUnit	Ohio;US House OH District 2	Ohio;US House OH District 2
+ReportingUnit	Ohio;US House OH District 3	Ohio;US House OH District 3
+ReportingUnit	Ohio;US House OH District 4	Ohio;US House OH District 4
+ReportingUnit	Ohio;US House OH District 5	Ohio;US House OH District 5
+ReportingUnit	Ohio;US House OH District 6	Ohio;US House OH District 6
+ReportingUnit	Ohio;US House OH District 7	Ohio;US House OH District 7
+ReportingUnit	Ohio;US House OH District 8	Ohio;US House OH District 8
+ReportingUnit	Ohio;US House OH District 9	Ohio;US House OH District 9
+ReportingUnit	Ohio;US House OH District 10	Ohio;US House OH District 10
+ReportingUnit	Ohio;US House OH District 11	Ohio;US House OH District 11
+ReportingUnit	Ohio;US House OH District 12	Ohio;US House OH District 12
+ReportingUnit	Ohio;US House OH District 13	Ohio;US House OH District 13
+ReportingUnit	Ohio;US House OH District 14	Ohio;US House OH District 14
+ReportingUnit	Ohio;US House OH District 15	Ohio;US House OH District 15
+ReportingUnit	Ohio;US House OH District 16	Ohio;US House OH District 16
+ReportingUnit	Ohio	Ohio
+ReportingUnit	Ohio;Adams County	Adams
+ReportingUnit	Ohio;Allen County	Allen
+ReportingUnit	Ohio;Ashland County	Ashland
+ReportingUnit	Ohio;Ashtabula County	Ashtabula
+ReportingUnit	Ohio;Athens County	Athens
+ReportingUnit	Ohio;Auglaize County	Auglaize
+ReportingUnit	Ohio;Belmont County	Belmont
+ReportingUnit	Ohio;Brown County	Brown
+ReportingUnit	Ohio;Butler County	Butler
+ReportingUnit	Ohio;Carroll County	Carroll
+ReportingUnit	Ohio;Champaign County	Champaign
+ReportingUnit	Ohio;Clark County	Clark
+ReportingUnit	Ohio;Clermont County	Clermont
+ReportingUnit	Ohio;Clinton County	Clinton
+ReportingUnit	Ohio;Columbiana County	Columbiana
+ReportingUnit	Ohio;Coshocton County	Coshocton
+ReportingUnit	Ohio;Crawford County	Crawford
+ReportingUnit	Ohio;Cuyahoga County	Cuyahoga
+ReportingUnit	Ohio;Darke County	Darke
+ReportingUnit	Ohio;Defiance County	Defiance
+ReportingUnit	Ohio;Delaware County	Delaware
+ReportingUnit	Ohio;Erie County	Erie
+ReportingUnit	Ohio;Fairfield County	Fairfield
+ReportingUnit	Ohio;Fayette County	Fayette
+ReportingUnit	Ohio;Franklin County	Franklin
+ReportingUnit	Ohio;Fulton County	Fulton
+ReportingUnit	Ohio;Gallia County	Gallia
+ReportingUnit	Ohio;Geauga County	Geauga
+ReportingUnit	Ohio;Greene County	Greene
+ReportingUnit	Ohio;Guernsey County	Guernsey
+ReportingUnit	Ohio;Hamilton County	Hamilton
+ReportingUnit	Ohio;Hancock County	Hancock
+ReportingUnit	Ohio;Hardin County	Hardin
+ReportingUnit	Ohio;Harrison County	Harrison
+ReportingUnit	Ohio;Henry County	Henry
+ReportingUnit	Ohio;Highland County	Highland
+ReportingUnit	Ohio;Hocking County	Hocking
+ReportingUnit	Ohio;Holmes County	Holmes
+ReportingUnit	Ohio;Huron County	Huron
+ReportingUnit	Ohio;Jackson County	Jackson
+ReportingUnit	Ohio;Jefferson County	Jefferson
+ReportingUnit	Ohio;Knox County	Knox
+ReportingUnit	Ohio;Lake County	Lake
+ReportingUnit	Ohio;Lawrence County	Lawrence
+ReportingUnit	Ohio;Licking County	Licking
+ReportingUnit	Ohio;Logan County	Logan
+ReportingUnit	Ohio;Lorain County	Lorain
+ReportingUnit	Ohio;Lucas County	Lucas
+ReportingUnit	Ohio;Madison County	Madison
+ReportingUnit	Ohio;Mahoning County	Mahoning
+ReportingUnit	Ohio;Marion County	Marion
+ReportingUnit	Ohio;Medina County	Medina
+ReportingUnit	Ohio;Meigs County	Meigs
+ReportingUnit	Ohio;Mercer County	Mercer
+ReportingUnit	Ohio;Miami County	Miami
+ReportingUnit	Ohio;Monroe County	Monroe
+ReportingUnit	Ohio;Montgomery County	Montgomery
+ReportingUnit	Ohio;Morgan County	Morgan
+ReportingUnit	Ohio;Morrow County	Morrow
+ReportingUnit	Ohio;Muskingum County	Muskingum
+ReportingUnit	Ohio;Noble County	Noble
+ReportingUnit	Ohio;Ottawa County	Ottawa
+ReportingUnit	Ohio;Paulding County	Paulding
+ReportingUnit	Ohio;Perry County	Perry
+ReportingUnit	Ohio;Pickaway County	Pickaway
+ReportingUnit	Ohio;Pike County	Pike
+ReportingUnit	Ohio;Portage County	Portage
+ReportingUnit	Ohio;Preble County	Preble
+ReportingUnit	Ohio;Putnam County	Putnam
+ReportingUnit	Ohio;Richland County	Richland
+ReportingUnit	Ohio;Ross County	Ross
+ReportingUnit	Ohio;Sandusky County	Sandusky
+ReportingUnit	Ohio;Scioto County	Scioto
+ReportingUnit	Ohio;Seneca County	Seneca
+ReportingUnit	Ohio;Shelby County	Shelby
+ReportingUnit	Ohio;Stark County	Stark
+ReportingUnit	Ohio;Summit County	Summit
+ReportingUnit	Ohio;Trumbull County	Trumbull
+ReportingUnit	Ohio;Tuscarawas County	Tuscarawas
+ReportingUnit	Ohio;Union County	Union
+ReportingUnit	Ohio;Van Wert County	Van Wert
+ReportingUnit	Ohio;Vinton County	Vinton
+ReportingUnit	Ohio;Warren County	Warren
+ReportingUnit	Ohio;Washington County	Washington
+ReportingUnit	Ohio;Wayne County	Wayne
+ReportingUnit	Ohio;Williams County	Williams
+ReportingUnit	Ohio;Wood County	Wood
+ReportingUnit	Ohio;Wyandot County	Wyandot
+Candidate	Rebecca Ayres and Anthony Durgans	Rebecca Ayres and Anthony Durgans
+Candidate	Richard Cordray and Betty Sutton	Richard Cordray and Betty Sutton
+Candidate	Mike DeWine and Jon Husted	Mike DeWine and Jon Husted
+Candidate	Richard Duncan and Dennis A. Artino	Richard Duncan and Dennis A. Artino
+Candidate	Constance Gadell-Newton and Brett R. Joseph	Constance Gadell-Newton and Brett R. Joseph
+Candidate	Travis M. Irvine and J. Todd Grayson	Travis M. Irvine and J. Todd Grayson
+Candidate	Renea Turner and Keith Colton	Renea Turner and Keith Colton
+Candidate	Steve Dettelbach	Steve Dettelbach
+Candidate	Dave Yost	Dave Yost
+Candidate	Robert C. Coogan	Robert C. Coogan
+Candidate	Keith Faber	Keith Faber
+Candidate	Zack Space	Zack Space
+Candidate	Michael W. Bradley	Michael W. Bradley
+Candidate	Kathleen Clyde	Kathleen Clyde
+Candidate	Frank LaRose	Frank LaRose
+Candidate	Dustin R. Nanna	Dustin R. Nanna
+Candidate	Rob Richardson	Rob Richardson
+Candidate	Robert Sprague	Robert Sprague
+Candidate	Sherrod Brown	Sherrod Brown
+Candidate	Stephen Faris	Stephen Faris
+Candidate	Jim Renacci	Jim Renacci
+Candidate	Steve Chabot	Steve Chabot
+Candidate	Kiumars Kiani	Kiumars Kiani
+Candidate	Dirk Kubala	Dirk Kubala
+Candidate	Aftab Pureval	Aftab Pureval
+Candidate	David Baker	David Baker
+Candidate	James J. Condit Jr	James J. Condit Jr
+Candidate	Jill Schiller	Jill Schiller
+Candidate	Brad Wenstrup	Brad Wenstrup
+Candidate	Joyce Beatty	Joyce Beatty
+Candidate	Jim Burgess	Jim Burgess
+Candidate	Millie Milam	Millie Milam
+Candidate	Janet Garrett	Janet Garrett
+Candidate	Jim Jordan	Jim Jordan
+Candidate	J. Michael Galbraith	J. Michael Galbraith
+Candidate	Don Kissick	Don Kissick
+Candidate	Bob Latta	Bob Latta
+Candidate	Bill Johnson	Bill Johnson
+Candidate	Shawna Roberts	Shawna Roberts
+Candidate	Bob Gibbs	Bob Gibbs
+Candidate	Ken Harbaugh	Ken Harbaugh
+Candidate	Warren Davidson	Warren Davidson
+Candidate	Vanessa Enoch	Vanessa Enoch
+Candidate	Marcy Kaptur	Marcy Kaptur
+Candidate	Steven W. Kraus	Steven W. Kraus
+Candidate	McKenzie Levindofske	McKenzie Levindofske
+Candidate	Theresa A. Gasper	Theresa A. Gasper
+Candidate	David A. Harlow	David A. Harlow
+Candidate	Mike Turner	Mike Turner
+Candidate	James Jerome Bell	James Jerome Bell
+Candidate	Marcia L. Fudge	Marcia L. Fudge
+Candidate	Beverly A. Goldstein	Beverly A. Goldstein
+Candidate	Troy Balderson	Troy Balderson
+Candidate	Marc Fagin	Marc Fagin
+Candidate	Joe Manchik	Joe Manchik
+Candidate	Danny O'Connor	Danny O'Connor
+Candidate	Chris DePizzo	Chris DePizzo
+Candidate	Tim Ryan	Tim Ryan
+Candidate	David P. Joyce	David P. Joyce
+Candidate	Betsy Rader	Betsy Rader
+Candidate	Johnathan Miller	Johnathan Miller
+Candidate	Rick Neal	Rick Neal
+Candidate	Steve Stivers	Steve Stivers
+Candidate	Anthony Gonzalez	Anthony Gonzalez
+Candidate	Susan Moran Palmer	Susan Moran Palmer
+Candidate	Robert McColley	Robert McColley
+Candidate	Adam Papin	Adam Papin
+Candidate	Anne Gonzales	Anne Gonzales
+Candidate	Tina Maharath	Tina Maharath
+Candidate	Paul Bradley	Paul Bradley
+Candidate	Stephen A. Huffman	Stephen A. Huffman
+Candidate	Sara Bitter	Sara Bitter
+Candidate	Steve Wilson	Steve Wilson
+Candidate	Tom Chandler	Tom Chandler
+Candidate	Cecil Thomas	Cecil Thomas
+Candidate	Teresa Fedor	Teresa Fedor
+Candidate	Ernest McCarthy	Ernest McCarthy
+Candidate	Nathan H. Manning	Nathan H. Manning
+Candidate	Sharon Sweda	Sharon Sweda
+Candidate	Homer S. Taft	Homer S. Taft
+Candidate	Hearcel F. Craig	Hearcel F. Craig
+Candidate	Jordan Garcea	Jordan Garcea
+Candidate	Scott M. Dailey	Scott M. Dailey
+Candidate	Bob Peterson	Bob Peterson
+Candidate	Andrew O. Brenner	Andrew O. Brenner
+Candidate	Gary Cox	Gary Cox
+Candidate	Louise Valentine	Louise Valentine
+Candidate	Thomas Pekarek	Thomas Pekarek
+Candidate	Sandra Williams	Sandra Williams
+Candidate	Nickie J. Antonio	Nickie J. Antonio
+Candidate	Steve A. Flores	Steve A. Flores
+Candidate	William J. Faehnrich	William J. Faehnrich
+Candidate	Kenny Yuko	Kenny Yuko
+Candidate	Kristina Daley Roegner	Kristina Daley Roegner
+Candidate	Adam VanHo	Adam VanHo
+Candidate	Lauren Friedman	Lauren Friedman
+Candidate	Kirk Schuring	Kirk Schuring
+Candidate	Jay Hottinger	Jay Hottinger
+Candidate	Melinda Miller	Melinda Miller
+Candidate	John A. Boccieri	John A. Boccieri
+Candidate	Michael A. Rulli	Michael A. Rulli
+Candidate	Kevin Barnet	Kevin Barnet
+Candidate	Elizabeth Thomas	Elizabeth Thomas
+Candidate	Scott Wiggam	Scott Wiggam
+Candidate	Timothy Grady	Timothy Grady
+Candidate	Mark J. Romanchuk	Mark J. Romanchuk
+Candidate	Lane J. Winters	Lane J. Winters
+Candidate	Theresa A. Gavarone	Theresa A. Gavarone
+Candidate	Aidan Hubbell-Staeble	Aidan Hubbell-Staeble
+Candidate	Tristam Cheeseman	Tristam Cheeseman
+Candidate	Bob Cupp	Bob Cupp
+Candidate	John R. Dyce	John R. Dyce
+Candidate	Tim Ginter	Tim Ginter
+Candidate	Phil Robinson	Phil Robinson
+Candidate	Jim Trakas	Jim Trakas
+Candidate	Aziz Ahmad	Aziz Ahmad
+Candidate	Thomas F. Patton	Thomas F. Patton
+Candidate	Kent Smith	Kent Smith
+Candidate	Janine Boyd	Janine Boyd
+Candidate	Joe Miller	Joe Miller
+Candidate	Terrence Upchurch	Terrence Upchurch
+Candidate	Stephanie Howse	Stephanie Howse
+Candidate	Shalira Taylor	Shalira Taylor
+Candidate	Juanita Brent	Juanita Brent
+Candidate	Jay R. Carson	Jay R. Carson
+Candidate	Michael J. Skindell	Michael J. Skindell
+Candidate	Ryan McClain	Ryan McClain
+Candidate	Bride Rose Sweeney	Bride Rose Sweeney
+Candidate	Jeffrey A. Crossman	Jeffrey A. Crossman
+Candidate	Kevin C. Kussmaul	Kevin C. Kussmaul
+Candidate	Dave Greenspan	Dave Greenspan
+Candidate	Cassimir Svigelj	Cassimir Svigelj
+Candidate	Adam C. Miller	Adam C. Miller
+Candidate	John Rush	John Rush
+Candidate	Kristin Boggs	Kristin Boggs
+Candidate	David Todd	David Todd
+Candidate	Tim Barhorst	Tim Barhorst
+Candidate	Mary Lightbody	Mary Lightbody
+Candidate	Richard Brown	Richard Brown
+Candidate	Bobby L. Mitchell	Bobby L. Mitchell
+Candidate	Stu Harris	Stu Harris
+Candidate	Beth Liston	Beth Liston
+Candidate	David Leland	David Leland
+Candidate	Doug Moody	Doug Moody
+Candidate	Russell Harris	Russell Harris
+Candidate	Laura Lanese	Laura Lanese
+Candidate	Allison Russo	Allison Russo
+Candidate	Erik F. Yassenoff	Erik F. Yassenoff
+Candidate	Bernadine Kennedy Kent	Bernadine Kennedy Kent
+Candidate	Debbie Staggs	Debbie Staggs
+Candidate	Erica C. Crawley	Erica C. Crawley
+Candidate	Steve Dodge	Steve Dodge
+Candidate	Shareeque Arife Sadiq	Shareeque Arife Sadiq
+Candidate	Tom Brinkman	Tom Brinkman
+Candidate	Christine Fisher	Christine Fisher
+Candidate	Regina A. Collins	Regina A. Collins
+Candidate	Jonathan Dever	Jonathan Dever
+Candidate	Jessica E. Miranda	Jessica E. Miranda
+Candidate	Louis W. Blessing III	Louis W. Blessing III
+Candidate	Carrie R. Davis	Carrie R. Davis
+Candidate	Clayton Adams	Clayton Adams
+Candidate	William J. Seitz	William J. Seitz
+Candidate	Brigid Kelly	Brigid Kelly
+Candidate	Catherine Ingram	Catherine Ingram
+Candidate	Marilyn Tunnat	Marilyn Tunnat
+Candidate	Judith Boyce	Judith Boyce
+Candidate	Sedrick Denson	Sedrick Denson
+Candidate	Josh Sines	Josh Sines
+Candidate	Emilia Sykes	Emilia Sykes
+Candidate	Kevin Fay	Kevin Fay
+Candidate	Tavia Galonski	Tavia Galonski
+Candidate	Osita Obierika	Osita Obierika
+Candidate	Anthony L. DeVitis	Anthony L. DeVitis
+Candidate	Timothy Paul Piatt	Timothy Paul Piatt
+Candidate	Mike Rasor	Mike Rasor
+Candidate	Casey Weinstein	Casey Weinstein
+Candidate	Elliot Kolkovich	Elliot Kolkovich
+Candidate	Bill Roemer	Bill Roemer
+Candidate	Fred Strahorn	Fred Strahorn
+Candidate	Phil Plummer	Phil Plummer
+Candidate	Ryan Rebecca Taylor	Ryan Rebecca Taylor
+Candidate	Jim Butler	Jim Butler
+Candidate	John McManus	John McManus
+Candidate	Niraj Antani	Niraj Antani
+Candidate	Zach Dickerson	Zach Dickerson
+Candidate	Dan Foley	Dan Foley
+Candidate	J. Todd Smith	J. Todd Smith
+Candidate	Paula Hicks-Hudson	Paula Hicks-Hudson
+Candidate	David Davenport	David Davenport
+Candidate	Lisa Sobecki	Lisa Sobecki
+Candidate	Michael P. Sheehy	Michael P. Sheehy
+Candidate	Derek Merrin	Derek Merrin
+Candidate	Gary C. Newnham	Gary C. Newnham
+Candidate	Scott Oelslager	Scott Oelslager
+Candidate	Lorraine Wilburn	Lorraine Wilburn
+Candidate	James Haavisto	James Haavisto
+Candidate	Thomas E. West	Thomas E. West
+Candidate	Cassie Gabelt	Cassie Gabelt
+Candidate	Reggie L. Stoltzfus	Reggie L. Stoltzfus
+Candidate	Sara P. Carruthers	Sara P. Carruthers
+Candidate	Susan Vaughn	Susan Vaughn
+Candidate	George Lang	George Lang
+Candidate	Kathy Wyenandt	Kathy Wyenandt
+Candidate	Rebecca Howard	Rebecca Howard
+Candidate	Candice Keller	Candice Keller
+Candidate	Nikki Foster	Nikki Foster
+Candidate	Paul Zeltwanger	Paul Zeltwanger
+Candidate	W. Daniel Fichtel	W. Daniel Fichtel
+Candidate	Kelly Kraus Mencke	Kelly Kraus Mencke
+Candidate	Gayle L. Manning	Gayle L. Manning
+Candidate	Rob Weber	Rob Weber
+Candidate	James Johnson	James Johnson
+Candidate	Dick Stein	Dick Stein
+Candidate	Michele Lepore-Hagan	Michele Lepore-Hagan
+Candidate	David T. Simon	David T. Simon
+Candidate	Don Manning	Don Manning
+Candidate	Eric C. Ungaro	Eric C. Ungaro
+Candidate	John Rogers	John Rogers
+Candidate	Mike Zuren	Mike Zuren
+Candidate	Jamie Callender	Jamie Callender
+Candidate	Rick Walker	Rick Walker
+Candidate	Scott Lipps	Scott Lipps
+Candidate	Jim Staton	Jim Staton
+Candidate	Glenn W. Holmes	Glenn W. Holmes
+Candidate	Jim Hughes	Jim Hughes
+Candidate	Michael J. O'Brien	Michael J. O'Brien
+Candidate	Martha Yoder	Martha Yoder
+Candidate	John Becker	John Becker
+Candidate	Patricia L. Lawrence	Patricia L. Lawrence
+Candidate	Doug Green	Doug Green
+Candidate	Jeff Richards	Jeff Richards
+Candidate	Cory D. Hoffman	Cory D. Hoffman
+Candidate	Kris Jordan	Kris Jordan
+Candidate	Rick Carfagna	Rick Carfagna
+Candidate	Patrick Glasgow	Patrick Glasgow
+Candidate	Kathleen A. Tate	Kathleen A. Tate
+Candidate	Carol Brenstuhl	Carol Brenstuhl
+Candidate	Steve Hambley	Steve Hambley
+Candidate	Steve Johnson	Steve Johnson
+Candidate	Darrell D. Kick	Darrell D. Kick
+Candidate	Jeremy Eugene Blake	Jeremy Eugene Blake
+Candidate	Scott Ryan	Scott Ryan
+Candidate	Larry Householder	Larry Householder
+Candidate	Tyler Shipley	Tyler Shipley
+Candidate	Kim McCarthy	Kim McCarthy
+Candidate	Rick Perales	Rick Perales
+Candidate	Bill Dean	Bill Dean
+Candidate	Anne Gorman	Anne Gorman
+Candidate	Austin Bashore	Austin Bashore
+Candidate	Randi Clites	Randi Clites
+Candidate	Jim Lutz	Jim Lutz
+Candidate	John P. Kennedy	John P. Kennedy
+Candidate	Sarah LaTourette	Sarah LaTourette
+Candidate	Brett Pransky	Brett Pransky
+Candidate	Tim Schaffer	Tim Schaffer
+Candidate	Kryssi Wichers	Kryssi Wichers
+Candidate	Amber Daniels	Amber Daniels
+Candidate	Ron Hood	Ron Hood
+Candidate	Amanda Finfrock	Amanda Finfrock
+Candidate	Kyle Koehler	Kyle Koehler
+Candidate	D.J. Byrnes	D.J. Byrnes
+Candidate	Jena Powell	Jena Powell
+Candidate	Janet Breneman	Janet Breneman
+Candidate	James M. Hoops	James M. Hoops
+Candidate	Aden Wyatt Baker	Aden Wyatt Baker
+Candidate	Craig S. Riedel	Craig S. Riedel
+Candidate	Jon Cross	Jon Cross
+Candidate	Mary E. Harshfield	Mary E. Harshfield
+Candidate	Susan Manchester	Susan Manchester
+Candidate	Joseph Monbeck	Joseph Monbeck
+Candidate	Garrett Baldwin	Garrett Baldwin
+Candidate	Nino Vitale	Nino Vitale
+Candidate	Glenn Coble	Glenn Coble
+Candidate	Taylor Hoffman	Taylor Hoffman
+Candidate	Tracy Richardson	Tracy Richardson
+Candidate	Riordan T. McClain	Riordan T. McClain
+Candidate	Mary E. Pierce-Broadwater	Mary E. Pierce-Broadwater
+Candidate	Rachel Crooks	Rachel Crooks
+Candidate	Bill Reineke	Bill Reineke
+Candidate	Steven Arndt	Steven Arndt
+Candidate	Joe Helle	Joe Helle
+Candidate	Brian Baldridge	Brian Baldridge
+Candidate	Adrienne D. Buckler	Adrienne D. Buckler
+Candidate	Justin Grimes	Justin Grimes
+Candidate	Shane Wilkin	Shane Wilkin
+Candidate	Gary Scherer	Gary Scherer
+Candidate	Beth Workman	Beth Workman
+Candidate	Ryan Smith	Ryan Smith
+Candidate	Samantha Thomas-Bush	Samantha Thomas-Bush
+Candidate	Jay Edwards	Jay Edwards
+Candidate	Taylor Sappington	Taylor Sappington
+Candidate	Don Jones	Don Jones
+Candidate	Dan Milleson	Dan Milleson
+Candidate	Jack Cera	Jack Cera
+Candidate	Kristine Geis	Kristine Geis
+Candidate	Brian D. Hill	Brian D. Hill
+Candidate	Brett Hudson Hillyer	Brett Hudson Hillyer
+Candidate	Jeremiah M. Johnson	Jeremiah M. Johnson
+Candidate	John Patterson	John Patterson
+Candidate	Michael Pircio	Michael Pircio
+Candidate	Jeanine P. Donaldson	Jeanine P. Donaldson
+Candidate	Vicki Donovan Lyle	Vicki Donovan Lyle
+Candidate	Charles Froehlich	Charles Froehlich
+Candidate	Kirsten Hill	Kirsten Hill
+Candidate	W. Roger Knight	W. Roger Knight
+Candidate	Sue Larimer	Sue Larimer
+Candidate	Annette Dudek Shine	Annette Dudek Shine
+Candidate	Matthew D. McGowan	Matthew D. McGowan
+Candidate	Charlotte McGuire	Charlotte McGuire
+Candidate	Dawn E. Wojcik	Dawn E. Wojcik
+Candidate	Pat Bruns	Pat Bruns
+Candidate	Jenny Kilgore	Jenny Kilgore
+Candidate	Sarah E. Fowler	Sarah E. Fowler
+Candidate	Melissa M. Dahman	Melissa M. Dahman
+Candidate	John P. Hagan	John P. Hagan
+Candidate	Kathleen Purdy	Kathleen Purdy
+Candidate	Craig Baldwin	Craig Baldwin
+Candidate	Michael P. Donnelly	Michael P. Donnelly
+Candidate	Mary DeGenaro	Mary DeGenaro
+Candidate	Melody J. Stewart	Melody J. Stewart
+Candidate	Frank D. Celebrezze Jr	Frank D. Celebrezze Jr
+Candidate	Raymond C. Headen	Raymond C. Headen
+Candidate	Michelle J. Sheehan	Michelle J. Sheehan
+Candidate	Eileen T. Gallagher	Eileen T. Gallagher
+Candidate	Pierre Bergeron	Pierre Bergeron
+Candidate	Charles Miller	Charles Miller
+Candidate	Jeffrey M. Welbaum	Jeffrey M. Welbaum
+Candidate	John R. Willamowski	John R. Willamowski
+Candidate	Marie Hoover	Marie Hoover
+Candidate	Jason P. Smith	Jason P. Smith
+Candidate	John W. Wise	John W. Wise
+Candidate	Joel M. Kuhlman	Joel M. Kuhlman
+Candidate	Gene A. Zmuda	Gene A. Zmuda
+Candidate	Kathleen Bartlett	Kathleen Bartlett
+Candidate	David A. D'Apolito	David A. D'Apolito
+Candidate	Mary J. Boyle	Mary J. Boyle
+Candidate	Diana Colavecchio	Diana Colavecchio
+Candidate	Jennifer Hensal	Jennifer Hensal
+Candidate	Laurel Beatty Blunt	Laurel Beatty Blunt
+Candidate	Darya Klammer	Darya Klammer
+Candidate	Matt Lynch	Matt Lynch
+Candidate	Stephen W. Powell	Stephen W. Powell
+Candidate	Dale Stalf	Dale Stalf
+Candidate	Marilyn Zayas	Marilyn Zayas
+Candidate	Valarie K. Gerlach	Valarie K. Gerlach
+Candidate	Mike Hess	Mike Hess
+Candidate	Scott Gwin	Scott Gwin
+Candidate	Betsy Luper Schuster	Betsy Luper Schuster
+Candidate	Casey O'Brien	Casey O'Brien
+Candidate	Mary Jane Trapp	Mary Jane Trapp
+Candidate	Candace Crouse	Candace Crouse
+Candidate	Dennis Deters	Dennis Deters
+Candidate	Patricia A. Delaney	Patricia A. Delaney
+Candidate	Andrew King	Andrew King
+Candidate	Ginger Bock	Ginger Bock
+Candidate	Robert C. Winkler	Robert C. Winkler
+Candidate	Michael Bickelmeyer	Michael Bickelmeyer
+Candidate	Darrell L. Castle	Darrell L. Castle
+Candidate	Hillary Clinton	Hillary Clinton
+Candidate	Richard Duncan	Richard Duncan
+Candidate	Cherunda Fox	Cherunda Fox
+Candidate	Ben Hartnell	Ben Hartnell
+Candidate	Tom Hoefling	Tom Hoefling
+Candidate	Bruce E. Jaynes	Bruce E. Jaynes
+Candidate	Gary Johnson	Gary Johnson
+Candidate	Chris Keniston	Chris Keniston
+Candidate	Barry Kirschner	Barry Kirschner
+Candidate	Laurence Kotlikoff	Laurence Kotlikoff
+Candidate	Joseph Maldonado	Joseph Maldonado
+Candidate	Michael Andrew Maturen	Michael Andrew Maturen
+Candidate	Evan McMullin	Evan McMullin
+Candidate	Monica Moorehead	Monica Moorehead
+Candidate	Joe Schriner	Joe Schriner
+Candidate	Mike Smith	Mike Smith
+Candidate	Jill Stein	Jill Stein
+Candidate	Josiah R. Stroh	Josiah R. Stroh
+Candidate	Douglas W. Thomson	Douglas W. Thomson
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Tom Connors	Tom Connors
+Candidate	Joseph R. DeMare	Joseph R. DeMare
+Candidate	Rob Portman	Rob Portman
+Candidate	Scott Rupert	Scott Rupert
+Candidate	James Stahl	James Stahl
+Candidate	Ted Strickland	Ted Strickland
+Candidate	Sholom D. Keller	Sholom D. Keller
+Candidate	Kiumars G. Kiani	Kiumars G. Kiani
+Candidate	Michele Young	Michele Young
+Candidate	Janet Everhard	Janet Everhard
+Candidate	William R. Smith	William R. Smith
+Candidate	John Adams	John Adams
+Candidate	James Neu Jr.	James Neu Jr.
+Candidate	Michael L. Lorentz	Michael L. Lorentz
+Candidate	Dan Phillip	Dan Phillip
+Candidate	Roy Rich	Roy Rich
+Candidate	Steven Fought	Steven Fought
+Candidate	Derrick James Hendricks	Derrick James Hendricks
+Candidate	Donald P. Larson	Donald P. Larson
+Candidate	George Skalsky	George Skalsky
+Candidate	Robert Klepinger	Robert Klepinger
+Candidate	Tom McMasters	Tom McMasters
+Candidate	Ed Albertson	Ed Albertson
+Candidate	John J. Baumeister	John J. Baumeister
+Candidate	Pat Tiberi	Pat Tiberi
+Candidate	Calvin Hill Sr.	Calvin Hill Sr.
+Candidate	Richard A. Morckel	Richard A. Morckel
+Candidate	Andrew Jarvi	Andrew Jarvi
+Candidate	Michael Wager	Michael Wager
+Candidate	Scott Wharton	Scott Wharton
+Candidate	Keith Mundy	Keith Mundy
+Candidate	Randy Gardner	Randy Gardner
+Candidate	Kirk W. Halliday	Kirk W. Halliday
+Candidate	Bill Coley	Bill Coley
+Candidate	John D. Kinne	John D. Kinne
+Candidate	Albert Griggs Jr.	Albert Griggs Jr.
+Candidate	Peggy Lehner	Peggy Lehner
+Candidate	Mary Rose Lierman	Mary Rose Lierman
+Candidate	Lou Terhar	Lou Terhar
+Candidate	Robert D. Hackett	Robert D. Hackett
+Candidate	Matthew Kirk	Matthew Kirk
+Candidate	Matt Huffman	Matt Huffman
+Candidate	Charlie Carlier	Charlie Carlier
+Candidate	Joe Uecker	Joe Uecker
+Candidate	Cathy Johnson	Cathy Johnson
+Candidate	Stephanie L. Kunze	Stephanie L. Kunze
+Candidate	John J. Eklund	John J. Eklund
+Candidate	Wiley Runnestrand	Wiley Runnestrand
+Candidate	Ashley Kemp	Ashley Kemp
+Candidate	Christopher King	Christopher King
+Candidate	Larry J. Obhof	Larry J. Obhof
+Candidate	Matt Dolan	Matt Dolan
+Candidate	Emily Hagan	Emily Hagan
+Candidate	Dave Burke	Dave Burke
+Candidate	Jonathan Schulz	Jonathan Schulz
+Candidate	Vernon Sykes	Vernon Sykes
+Candidate	Lou Gentile	Lou Gentile
+Candidate	Frank Hoagland	Frank Hoagland
+Candidate	Robert J. Allen	Robert J. Allen
+Candidate	Sean J. O'Brien	Sean J. O'Brien
+Candidate	Stephen R. Spoonamore	Stephen R. Spoonamore
+Candidate	Brittany Bowman	Brittany Bowman
+Candidate	Timothy Peter Grady	Timothy Peter Grady
+Candidate	Theresa Gavarone	Theresa Gavarone
+Candidate	Kelly Wicks	Kelly Wicks
+Candidate	Marlene Anielski	Marlene Anielski
+Candidate	Phillip Robinson	Phillip Robinson
+Candidate	Cassandra McDonald	Cassandra McDonald
+Candidate	Bill Patmon	Bill Patmon
+Candidate	John E. Barnes Jr.	John E. Barnes Jr.
+Candidate	Martin J. Sweeney	Martin J. Sweeney
+Candidate	Nicholas J. Celebrezze	Nicholas J. Celebrezze
+Candidate	Tommy Greene	Tommy Greene
+Candidate	Keith Hatton	Keith Hatton
+Candidate	Adam Miller	Adam Miller
+Candidate	M. Deborah Tunstall	M. Deborah Tunstall
+Candidate	Constance A. Gadell Newton	Constance A. Gadell Newton
+Candidate	Michael Johnston	Michael Johnston
+Candidate	Heather Bishoff	Heather Bishoff
+Candidate	Lisa Schacht	Lisa Schacht
+Candidate	Mike Duffey	Mike Duffey
+Candidate	Ryan Koch	Ryan Koch
+Candidate	Linda L. Jarrett	Linda L. Jarrett
+Candidate	Lee Schreiner	Lee Schreiner
+Candidate	Kristopher Keller	Kristopher Keller
+Candidate	Napoleon A. Bell II	Napoleon A. Bell II
+Candidate	Jeff Brown	Jeff Brown
+Candidate	Seth Golding	Seth Golding
+Candidate	Kenneth H. Collins	Kenneth H. Collins
+Candidate	Tom Brinkman Jr.	Tom Brinkman Jr.
+Candidate	Joe Otis	Joe Otis
+Candidate	Jessica Miranda	Jessica Miranda
+Candidate	Mark A. Childers	Mark A. Childers
+Candidate	Bill Seitz	Bill Seitz
+Candidate	Mary Yeager	Mary Yeager
+Candidate	Matthew H. Wahlert	Matthew H. Wahlert
+Candidate	David Miller	David Miller
+Candidate	Alicia Reece	Alicia Reece
+Candidate	Gene Littlefield	Gene Littlefield
+Candidate	Aimee N. Cooper	Aimee N. Cooper
+Candidate	Greta Johnson	Greta Johnson
+Candidate	Anthony DeVitis	Anthony DeVitis
+Candidate	Bobby McDowall	Bobby McDowall
+Candidate	Judith Lynn Lee	Judith Lynn Lee
+Candidate	Marilyn Slaby	Marilyn Slaby
+Candidate	Michael E. Henne	Michael E. Henne
+Candidate	David L. Richards	David L. Richards
+Candidate	Jimmy Calhoun	Jimmy Calhoun
+Candidate	Pat A. Merris	Pat A. Merris
+Candidate	Jeff Rezabek	Jeff Rezabek
+Candidate	David Sparks	David Sparks
+Candidate	Michael D. Ashford	Michael D. Ashford
+Candidate	John Insco	John Insco
+Candidate	James S. Nowak	James S. Nowak
+Candidate	Diana M. Skaff	Diana M. Skaff
+Candidate	Lauri Cooper	Lauri Cooper
+Candidate	Dan F. McMasters	Dan F. McMasters
+Candidate	Christina M. Hagan	Christina M. Hagan
+Candidate	John L. Juergensen	John L. Juergensen
+Candidate	Johnny H. Hamilton	Johnny H. Hamilton
+Candidate	Wes Retherford	Wes Retherford
+Candidate	Margaret K. Conditt	Margaret K. Conditt
+Candidate	Suzi Rubin	Suzi Rubin
+Candidate	Rick Smith	Rick Smith
+Candidate	Dan Ramos	Dan Ramos
+Candidate	Jessie Mae Tower	Jessie Mae Tower
+Candidate	Tom Dunlap	Tom Dunlap
+Candidate	Andrea Mahone	Andrea Mahone
+Candidate	Corrine Sanderson	Corrine Sanderson
+Candidate	John M. Rogers	John M. Rogers
+Candidate	Robert Rule	Robert Rule
+Candidate	Ron Young	Ron Young
+Candidate	Samuel P. Ronan	Samuel P. Ronan
+Candidate	Devon A. Stanley	Devon A. Stanley
+Candidate	Jerod L. Weber	Jerod L. Weber
+Candidate	Ken P. McNeely Jr.	Ken P. McNeely Jr.
+Candidate	Douglas P. Crowl	Douglas P. Crowl
+Candidate	John Russell	John Russell
+Candidate	Frank A. Zona	Frank A. Zona
+Candidate	Luke T. Brewer	Luke T. Brewer
+Candidate	Joseph S. Begeny	Joseph S. Begeny
+Candidate	Scott K. Ryan	Scott K. Ryan
+Candidate	John J. Carlisle	John J. Carlisle
+Candidate	Brian K. Housh	Brian K. Housh
+Candidate	Barb Niemeyer	Barb Niemeyer
+Candidate	Terri McIntee	Terri McIntee
+Candidate	Bradley S. Nicodemus	Bradley S. Nicodemus
+Candidate	Alex Wendt	Alex Wendt
+Candidate	Craig Riedel	Craig Riedel
+Candidate	Robert Cole Sprague	Robert Cole Sprague
+Candidate	Ed Huff Jr.	Ed Huff Jr.
+Candidate	Scott Crider	Scott Crider
+Candidate	Dorothy Pelanda	Dorothy Pelanda
+Candidate	Wes Goodman	Wes Goodman
+Candidate	Steven M. Arndt	Steven M. Arndt
+Candidate	Lawrence D. Hartlaub	Lawrence D. Hartlaub
+Candidate	Terry A. Johnson	Terry A. Johnson
+Candidate	Cliff Rosenberger	Cliff Rosenberger
+Candidate	Gary K. Scherer	Gary K. Scherer
+Candidate	Sarah H. Grace	Sarah H. Grace
+Candidate	Ginny Favede	Ginny Favede
+Candidate	Andy Thompson	Andy Thompson
+Candidate	Al Landis	Al Landis
+Candidate	Tanyce J. Addison	Tanyce J. Addison
+Candidate	Linda Haycock	Linda Haycock
+Candidate	Martha A. Manchester	Martha A. Manchester
+Candidate	Lilli Vitale	Lilli Vitale
+Candidate	Roslyn Painter-Goffi	Roslyn Painter-Goffi
+Candidate	Lisa Woods	Lisa Woods
+Candidate	Nicholas Baumeyer	Nicholas Baumeyer
+Candidate	Jeff Furr	Jeff Furr
+Candidate	Antoinette Miranda	Antoinette Miranda
+Candidate	Jamie O'Leary	Jamie O'Leary
+Candidate	Adam C. Slane	Adam C. Slane
+Candidate	Stephanie Dodd	Stephanie Dodd
+Candidate	Braydon L. Bevens	Braydon L. Bevens
+Candidate	Nick Owens	Nick Owens
+Candidate	Meryl Johnson	Meryl Johnson
+Candidate	Bill Lavezzi	Bill Lavezzi
+Candidate	Richard T. Montgomery II	Richard T. Montgomery II
+Candidate	Amy M. Zuren	Amy M. Zuren
+Candidate	Vickie D. Briercheck	Vickie D. Briercheck
+Candidate	Craig Brown	Craig Brown
+Candidate	Nancy P. Hollister	Nancy P. Hollister
+Candidate	Debbie Phillips	Debbie Phillips
+Candidate	Maureen O'Connor	Maureen O'Connor
+Candidate	Pat Fischer	Pat Fischer
+Candidate	John P. O'Donnell	John P. O'Donnell
+Candidate	Pat DeWine	Pat DeWine
+Candidate	Cynthia Rice	Cynthia Rice
+Candidate	Mary Eileen Kilbane	Mary Eileen Kilbane
+Candidate	Jennifer Brunner	Jennifer Brunner
+Candidate	Julia L. Dorrian	Julia L. Dorrian
+Candidate	Kathleen Ann Keough	Kathleen Ann Keough
+Candidate	Susan D. Brown	Susan D. Brown
+Candidate	Beth A. Myers	Beth A. Myers
+Candidate	Mary E. Donovan	Mary E. Donovan
+Candidate	Randall L. Basinger	Randall L. Basinger
+Candidate	William R. Zimmerman	William R. Zimmerman
+Candidate	Matthew W. McFarland	Matthew W. McFarland
+Candidate	David Gormley	David Gormley
+Candidate	Earle E. Wise	Earle E. Wise
+Candidate	Gary G. Cook	Gary G. Cook
+Candidate	Christine Mayle	Christine Mayle
+Candidate	Gene Donofrio	Gene Donofrio
+Candidate	Eileen A. Gallagher	Eileen A. Gallagher
+Candidate	Diana M. Stevenson	Diana M. Stevenson
+Candidate	Thomas A. Teodosio	Thomas A. Teodosio
+Candidate	William A. Klatt	William A. Klatt
+Candidate	Ron M. Tamburrino	Ron M. Tamburrino
+Candidate	Thomas R. Wright	Thomas R. Wright
+Candidate	Robin N. Piper	Robin N. Piper
+Candidate	Michael T. Hall	Michael T. Hall
+Candidate	Mark L. Pietrykowski	Mark L. Pietrykowski
+Candidate	Donna J. Carr	Donna J. Carr
+Candidate	Mike Powell	Mike Powell
+Candidate	Mike Tucker	Mike Tucker
+Candidate	Stephen R. Shaw	Stephen R. Shaw
+Candidate	Lynne S. Callahan	Lynne S. Callahan
+Candidate	Peter Stautberg	Peter Stautberg
+Candidate	Marilyn Zayas-Davis	Marilyn Zayas-Davis
+Candidate	H. Robert Harris	H. Robert Harris
+Candidate	Cleophus Dulaney	Cleophus Dulaney
+Candidate	Mark F. Richardson	Mark F. Richardson
+Candidate	Kenneth Morgan	Kenneth Morgan
+Candidate	Edward R. Meer	Edward R. Meer
+Candidate	Charles W. Barrett	Charles W. Barrett
+Candidate	Tim Connors	Tim Connors
+Candidate	Timothy P. Corrigan	Timothy P. Corrigan
+Candidate	John Anderson	John Anderson
+Candidate	Kathi Flanders	Kathi Flanders
+Candidate	Laverne Gore	Laverne Gore
+Candidate	Jonah Schulz	Jonah Schulz
+Candidate	Tim Day	Tim Day
+Candidate	Duane Hennen	Duane Hennen
+Candidate	Louis G. Lyras	Louis G. Lyras
+Candidate	Jason Mormando	Jason Mormando
+Candidate	Robert J. Santos	Robert J. Santos
+Candidate	Donald Truex	Donald Truex
+Candidate	Mark Pitrone	Mark Pitrone
+Candidate	Shelby Xavier Hunt	Shelby Xavier Hunt
+Candidate	Sharon L. Kennedy	Sharon L. Kennedy
+Candidate	Judi French	Judi French
+Candidate	Mary Lynne Birck	Mary Lynne Birck
+Candidate	Matthew Byrne	Matthew Byrne
+Candidate	Noah E. Powers II	Noah E. Powers II
+Candidate	Russell J. Mock	Russell J. Mock
+Candidate	Chris Epley	Chris Epley
+Candidate	Mark C. Miller	Mark C. Miller
+Candidate	Peter B. Abele	Peter B. Abele
+Candidate	Carol Ann Robb	Carol Ann Robb
+Candidate	Julie A. Schafer	Julie A. Schafer
+Candidate	Colleen O'Donnell	Colleen O'Donnell
+Candidate	Robert A. Hendrickson	Robert A. Hendrickson
+Candidate	Charles Sulek	Charles Sulek
+Candidate	Sarah Thomas Kovoor	Sarah Thomas Kovoor
+Candidate	Pamela A. Hawkins	Pamela A. Hawkins
+Candidate	Lisa L. Sadler	Lisa L. Sadler
+Candidate	Ray Headen	Ray Headen
+Candidate	George F. Lang	George F. Lang
+Candidate	Lee Wong	Lee Wong
+Candidate	Gregory Alan Robinson	Gregory Alan Robinson
+Candidate	Rachel Selby	Rachel Selby
+Candidate	David Uible	David Uible
+Candidate	Jerry Cirino	Jerry Cirino
+Candidate	Cory T. Branham	Cory T. Branham
+Candidate	Ron Falconi	Ron Falconi
+Candidate	Timothy Hoven	Timothy Hoven
+Candidate	Michael Reynolds	Michael Reynolds
+Candidate	Mark Romanchuk	Mark Romanchuk
+Candidate	Melissa Ackison	Melissa Ackison
+Candidate	Michael Downey	Michael Downey
+Candidate	Sandra O'Brien	Sandra O'Brien
+Candidate	Kenneth J. Polke	Kenneth J. Polke
+Candidate	Jason Wetz	Jason Wetz
+Candidate	Marilyn John	Marilyn John
+Candidate	Nathan Martin	Nathan Martin
+Candidate	Haraz N. Ghanbari	Haraz N. Ghanbari
+Candidate	Ed Hargate	Ed Hargate
+Candidate	Shay Hawkins	Shay Hawkins
+Candidate	Chris Litwinowicz (WI)*	Chris Litwinowicz (WI)*
+Candidate	Dustin D. Russell	Dustin D. Russell
+Candidate	Jerry V. Powell (WI)*	Jerry V. Powell (WI)*
+Candidate	Daniel Harrington (WI)*	Daniel Harrington (WI)*
+Candidate	Lynn McMahan	Lynn McMahan
+Candidate	Tim D. Haske	Tim D. Haske
+Candidate	John PM Rutan	John PM Rutan
+Candidate	Kayla Anne Packard	Kayla Anne Packard
+Candidate	Meredith Freedhoff	Meredith Freedhoff
+Candidate	Chris Baer	Chris Baer
+Candidate	Mehek Cooke	Mehek Cooke
+Candidate	Stephany Spencer	Stephany Spencer
+Candidate	Pat Manley	Pat Manley
+Candidate	Chris Monzel	Chris Monzel
+Candidate	Cindy Abrams	Cindy Abrams
+Candidate	Mary L. Hill	Mary L. Hill
+Candidate	Henry Todd	Henry Todd
+Candidate	Jodi Sarver	Jodi Sarver
+Candidate	Bob Young	Bob Young
+Candidate	Beth Bigham	Beth Bigham
+Candidate	John Ferrell Mullins III	John Ferrell Mullins III
+Candidate	Andrea White	Andrea White
+Candidate	Jake Stubbs	Jake Stubbs
+Candidate	Tom Young	Tom Young
+Candidate	Rodney Creech	Rodney Creech
+Candidate	Robert McMahon	Robert McMahon
+Candidate	Shane Logan	Shane Logan
+Candidate	Steven R. Salander	Steven R. Salander
+Candidate	Reggie Stoltzfus	Reggie Stoltzfus
+Candidate	Jennifer L. Gross	Jennifer L. Gross
+Candidate	Mark S. Welch	Mark S. Welch
+Candidate	Brett Guido	Brett Guido
+Candidate	Thomas Hall	Thomas Hall
+Candidate	Diane Mullins	Diane Mullins
+Candidate	Gayle Manning	Gayle Manning
+Candidate	Bradley A. Lacko	Bradley A. Lacko
+Candidate	George M. Phillips	George M. Phillips
+Candidate	Mike Loychik	Mike Loychik
+Candidate	Dillon Blevins	Dillon Blevins
+Candidate	Joe Dills	Joe Dills
+Candidate	Jean Schmidt	Jean Schmidt
+Candidate	Adam C. Bird	Adam C. Bird
+Candidate	Allen Freeman	Allen Freeman
+Candidate	Sharon A. Ray	Sharon A. Ray
+Candidate	Terry Robertson	Terry Robertson
+Candidate	Thaddeus James Claggett	Thaddeus James Claggett
+Candidate	Mark D. Fraizer	Mark D. Fraizer
+Candidate	John Broughton	John Broughton
+Candidate	Brian Lampton	Brian Lampton
+Candidate	Gail Pavliga	Gail Pavliga
+Candidate	Diane V. Grendell	Diane V. Grendell
+Candidate	Frank Hall	Frank Hall
+Candidate	Jeff LaRe	Jeff LaRe
+Candidate	Aaron Adams	Aaron Adams
+Candidate	Bobby Mitchell	Bobby Mitchell
+Candidate	Brian Stewart	Brian Stewart
+Candidate	Gary N. Click	Gary N. Click
+Candidate	Ed Ollom	Ed Ollom
+Candidate	Shayne Thomas	Shayne Thomas
+Candidate	D.J. Swearingen	D.J. Swearingen
+Candidate	Mark Johnson	Mark Johnson
+Candidate	Jeff Halley	Jeff Halley
+Candidate	Jason C. Stephens	Jason C. Stephens
+Candidate	Ron Ferguson	Ron Ferguson
+Candidate	Adam Holmes	Adam Holmes
+Candidate	Marianne Sezon	Marianne Sezon
+Candidate	John A. Vavra	John A. Vavra
+Candidate	Michael J. Russo	Michael J. Russo
+Candidate	Carl Aveni	Carl Aveni
+Candidate	Heidi Rosales	Heidi Rosales
+Candidate	Michelle Garcia Miller	Michelle Garcia Miller
+Candidate	Joyce V. Kimbler	Joyce V. Kimbler
+Candidate	Susan D. Solle	Susan D. Solle
+Candidate	John Kolesar	John Kolesar
+Candidate	Peter J. Kontos	Peter J. Kontos
+Candidate	D. Marie Lane	D. Marie Lane
+Candidate	Nancy A. Fuerst	Nancy A. Fuerst
+Candidate	Christian A. Jenkins	Christian A. Jenkins
+Candidate	Steven K. Dankof	Steven K. Dankof
+Candidate	Michael J. Ernest	Michael J. Ernest
+Candidate	William Vodrey	William Vodrey
+Candidate	Kelly L. McLaughlin	Kelly L. McLaughlin
+Candidate	Nancy R. McDonnell	Nancy R. McDonnell
+Candidate	Chris Wagner	Chris Wagner
+Candidate	Frank G Forchione	Frank G Forchione
+Candidate	Brendan J. Sheehan	Brendan J. Sheehan
+Candidate	Andrew J. Santoli	Andrew J. Santoli
+Candidate	Mary Margaret Rowlands	Mary Margaret Rowlands
+Candidate	Nancy Margaret Russo	Nancy Margaret Russo
+Candidate	Shannon M. Gallagher	Shannon M. Gallagher
+Candidate	Thomas E. Harris	Thomas E. Harris
+Candidate	Pat Lang	Pat Lang
+Candidate	Deena R. Calabrese	Deena R. Calabrese
+Candidate	Beverly K. McGookey	Beverly K. McGookey
+Candidate	Andy Miller	Andy Miller
+Candidate	Jennifer Branch	Jennifer Branch
+Candidate	Rocky A. Coss	Rocky A. Coss
+Candidate	Justin W. Skaggs	Justin W. Skaggs
+Candidate	Joseph J. Bruzzese Jr	Joseph J. Bruzzese Jr
+Candidate	Andrew P. Ballard	Andrew P. Ballard
+Candidate	Ian B. English	Ian B. English
+Candidate	Phillip S. Naumoff	Phillip S. Naumoff
+Candidate	Taryn L Heath	Taryn L Heath
+Candidate	James A. Fredericka	James A. Fredericka
+Candidate	Alan C. Triggs	Alan C. Triggs
+Candidate	Jeremiah S. Ray	Jeremiah S. Ray
+Candidate	Thomas O. Beridon	Thomas O. Beridon
+Candidate	Wende Cross	Wende Cross
+Candidate	Alison Hatheway	Alison Hatheway
+Candidate	Kelly A. Riddle	Kelly A. Riddle
+Candidate	Joy Malek Oldfield	Joy Malek Oldfield
+Candidate	David Young	David Young
+Candidate	John M. Durkin	John M. Durkin
+Candidate	Chris Brown	Chris Brown
+Candidate	Beth A. Smith	Beth A. Smith
+Candidate	George W. Leach	George W. Leach
+Candidate	Colleen A. Falkowski	Colleen A. Falkowski
+Candidate	Lasheyl Stroud	Lasheyl Stroud
+Candidate	Kani Hightower	Kani Hightower
+Candidate	Margaret Scott	Margaret Scott
+Candidate	Joy Kennedy	Joy Kennedy
+Candidate	Ginny Millas	Ginny Millas
+Candidate	Colleen Ann Reali	Colleen Ann Reali
+Candidate	James P. Reddy Jr	James P. Reddy Jr
+Candidate	Joseph F. Russo	Joseph F. Russo
+Candidate	Leslie Ann Celebrezze	Leslie Ann Celebrezze
+Candidate	Anne B. Flottman	Anne B. Flottman
+Candidate	Denise Navarre Cubbon	Denise Navarre Cubbon
+Candidate	Linda Tucci Teodosio	Linda Tucci Teodosio
+Candidate	Jack R. Puffenberger	Jack R. Puffenberger
+Candidate	James W. Peters	James W. Peters
+Candidate	Michael A. Borer	Michael A. Borer
+Candidate	Kari L. Bloom	Kari L. Bloom
+Candidate	Glenda A. Smith	Glenda A. Smith
+Candidate	Anthony J. Russo	Anthony J. Russo
+Candidate	Albert S. Camplese	Albert S. Camplese
+Candidate	Laura J. Gallagher	Laura J. Gallagher
+Candidate	Pavan Parikh	Pavan Parikh
+Candidate	James T. Walther	James T. Walther
+Candidate	Arvin S. Miller	Arvin S. Miller
+Candidate	Luann Cooperrider	Luann Cooperrider
+Candidate	Shelly R. Harsha	Shelly R. Harsha
+Candidate	Kirsten Pscholka- Gartner	Kirsten Pscholka- Gartner
+Candidate	Joseph L. Jerger	Joseph L. Jerger
+Candidate	Angela Alexander	Angela Alexander
+Candidate	Elinore Marsh Stormer	Elinore Marsh Stormer
+Candidate	Christine A. Patel	Christine A. Patel
+Candidate	Nicole Sanders	Nicole Sanders
+Candidate	Rusty Rittenhouse	Rusty Rittenhouse
+Candidate	Zachary L. Saunders	Zachary L. Saunders
+Candidate	Debra A. Garverick	Debra A. Garverick
+Candidate	Jonah M. Saving	Jonah M. Saving
+Candidate	Frank W. Noble Jr	Frank W. Noble Jr
+Candidate	Kimberly Oliver	Kimberly Oliver
+Candidate	Dawn Haar	Dawn Haar
+Candidate	Paul Price	Paul Price
+Candidate	Patricia J. Smith	Patricia J. Smith
+Candidate	Richard A. Bell	Richard A. Bell
+Candidate	Anne C. McDonough	Anne C. McDonough
+Candidate	Jennifer O'Donnell	Jennifer O'Donnell
+Candidate	Lori Olender	Lori Olender
+Candidate	Rollie Harper	Rollie Harper
+Candidate	Sheryl Munson	Sheryl Munson
+Candidate	Ilene Shapiro	Ilene Shapiro
+Candidate	Rita Darrow	Rita Darrow
+Candidate	Dale Miller	Dale Miller
+Candidate	John Schmidt	John Schmidt
+Candidate	Louis G. Berroteran	Louis G. Berroteran
+Candidate	Scott M. Tuma	Scott M. Tuma
+Candidate	Jeff Wilhite	Jeff Wilhite
+Candidate	Veronica Sims	Veronica Sims
+Candidate	Jerry E. Feeman	Jerry E. Feeman
+Candidate	Bob Genet	Bob Genet
+Candidate	Pernel Jones Jr	Pernel Jones Jr
+Candidate	Paula Prentice	Paula Prentice
+Candidate	Mansell Baker	Mansell Baker
+Candidate	Cheryl L. Stephens	Cheryl L. Stephens
+Candidate	Susan Hagan	Susan Hagan
+Candidate	Charlie R. Adkins	Charlie R. Adkins
+Candidate	Mike Bianconi	Mike Bianconi
+Candidate	Jeff Richards (WI)*	Jeff Richards (WI)*
+Candidate	D. Curtis Lee	D. Curtis Lee
+Candidate	John R. Hancock	John R. Hancock
+Candidate	Jacob H. Fathbruckner (WI)*	Jacob H. Fathbruckner (WI)*
+Candidate	Julie Farrar	Julie Farrar
+Candidate	Patrick Shenigo	Patrick Shenigo
+Candidate	Kevin L. Boyce	Kevin L. Boyce
+Candidate	Scott J. Williamson	Scott J. Williamson
+Candidate	Colin James Morrow	Colin James Morrow
+Candidate	Ron Gombeda	Ron Gombeda
+Candidate	Connie Pillich	Connie Pillich
+Candidate	Kelli Prather	Kelli Prather
+Candidate	Bruce Workman	Bruce Workman
+Candidate	Dale Norris	Dale Norris
+Candidate	Pat Hartman	Pat Hartman
+Candidate	Bob Smith	Bob Smith
+Candidate	James R. Dugan	James R. Dugan
+Candidate	Michael E. Smith	Michael E. Smith
+Candidate	Lori Kokoski	Lori Kokoski
+Candidate	Pete Gerken	Pete Gerken
+Candidate	Anthony T. Traficanti	Anthony T. Traficanti
+Candidate	Lynn A. Thomas	Lynn A. Thomas
+Candidate	Michael Kovack	Michael Kovack
+Candidate	Ron Taylor	Ron Taylor
+Candidate	Judy Dodge	Judy Dodge
+Candidate	Tasha Rountree	Tasha Rountree
+Candidate	Michael L. Baker	Michael L. Baker
+Candidate	Kevin C. Walters	Kevin C. Walters
+Candidate	Gary Quisno	Gary Quisno
+Candidate	Chase Brown	Chase Brown
+Candidate	Beth Janes Neal	Beth Janes Neal
+Candidate	Jim Sleek	Jim Sleek
+Candidate	John Mchenry	John Mchenry
+Candidate	Katherine Baylock	Katherine Baylock
+Candidate	Mauro Cantalamessa	Mauro Cantalamessa
+Candidate	Chris A. Abbuhl	Chris A. Abbuhl
+Candidate	Tony Eufinger	Tony Eufinger
+Candidate	Bret A. Sowers	Bret A. Sowers
+Candidate	Bob Stein	Bob Stein
+Candidate	Cora A. Marshall	Cora A. Marshall
+Candidate	Heather A. Freese	Heather A. Freese
+Candidate	Norman B. Capps	Norman B. Capps
+Candidate	Christopher Newcomb	Christopher Newcomb
+Candidate	Chris Chmiel	Chris Chmiel
+Candidate	Thomas R. White	Thomas R. White
+Candidate	David Hartley	David Hartley
+Candidate	Alex Muller	Alex Muller
+Candidate	Diane Mayer	Diane Mayer
+Candidate	John K. Hartman (WI)*	John K. Hartman (WI)*
+Candidate	Grant L. Harding	Grant L. Harding
+Candidate	Reed Bailey	Reed Bailey
+Candidate	John O'Grady	John O'Grady
+Candidate	Randall Adkins	Randall Adkins
+Candidate	Rusty D. Winland	Rusty D. Winland
+Candidate	Denise Driehaus	Denise Driehaus
+Candidate	Ronald L. DeCooman	Ronald L. DeCooman
+Candidate	Sandra Ogle	Sandra Ogle
+Candidate	Melissa F. James	Melissa F. James
+Candidate	Edward Littlejohn	Edward Littlejohn
+Candidate	Robert Steve Vukelic	Robert Steve Vukelic
+Candidate	Jeffrey Blakeman	Jeffrey Blakeman
+Candidate	Tina Skeldon Wozniak	Tina Skeldon Wozniak
+Candidate	David C. Ditzler	David C. Ditzler
+Candidate	Tara L. Dyer (WI)*	Tara L. Dyer (WI)*
+Candidate	Michael Terrence Conway	Michael Terrence Conway
+Candidate	Don Holtvoigt	Don Holtvoigt
+Candidate	Jack R. Bastian	Jack R. Bastian
+Candidate	Carl M. Davis	Carl M. Davis
+Candidate	Deborah A. Lieberman	Deborah A. Lieberman
+Candidate	Greg West	Greg West
+Candidate	Adam Shriver	Adam Shriver
+Candidate	Paul G. Hinkle Jr	Paul G. Hinkle Jr
+Candidate	Jeff Chandler	Jeff Chandler
+Candidate	Randy Schiets	Randy Schiets
+Candidate	Franklin D. Robey Jr	Franklin D. Robey Jr
+Candidate	Thomas A. Sinn	Thomas A. Sinn
+Candidate	Frank J. Fondale	Frank J. Fondale
+Candidate	Victor L. Brushart	Victor L. Brushart
+Candidate	Michael Ratliff	Michael Ratliff
+Candidate	John Kennedy	John Kennedy
+Candidate	John B. Kovacich	John B. Kovacich
+Candidate	Stephen A. Neal	Stephen A. Neal
+Candidate	Holly R. Elder	Holly R. Elder
+Candidate	Matt Seifert	Matt Seifert
+Candidate	Carl F. Clemens III	Carl F. Clemens III
+Candidate	David M. Guarino	David M. Guarino
+Candidate	Daniel E. Polivka	Daniel E. Polivka
+Candidate	Bruce Jeffers	Bruce Jeffers
+Candidate	Cecilia Cooper	Cecilia Cooper
+Candidate	Keller J. Blackburn	Keller J. Blackburn
+Candidate	Robert L. Herron	Robert L. Herron
+Candidate	Michael C. O'Malley	Michael C. O'Malley
+Candidate	Kevin Baxter	Kevin Baxter
+Candidate	Gary Tyack	Gary Tyack
+Candidate	Gabe Davis	Gabe Davis
+Candidate	Fanon A. Rucker	Fanon A. Rucker
+Candidate	Gwen Howe-Gebers	Gwen Howe-Gebers
+Candidate	Jane M. Hanlin	Jane M. Hanlin
+Candidate	J. D. Tomlinson	J. D. Tomlinson
+Candidate	Dennis P. Will	Dennis P. Will
+Candidate	Julia Bates	Julia Bates
+Candidate	Paul J. Gains	Paul J. Gains
+Candidate	Dean Holman	Dean Holman
+Candidate	James Leland Peters	James Leland Peters
+Candidate	Mat Heck Jr	Mat Heck Jr
+Candidate	Robert Junk	Robert Junk
+Candidate	Victor V. Vigluicci	Victor V. Vigluicci
+Candidate	Gary L. Lammers	Gary L. Lammers
+Candidate	John D. Ferrero	John D. Ferrero
+Candidate	Sherri Bevan Walsh	Sherri Bevan Walsh
+Candidate	Dennis Watkins	Dennis Watkins
+Candidate	Trecia Kimes Brown	Trecia Kimes Brown
+Candidate	Tami Pentek	Tami Pentek
+Candidate	Candy S. Russell	Candy S. Russell
+Candidate	William R Wohlwend	William R Wohlwend
+Candidate	Sheila E. Rice	Sheila E. Rice
+Candidate	Acacia Uible	Acacia Uible
+Candidate	Anthony J. Dattilio	Anthony J. Dattilio
+Candidate	Luvada S. Wilson	Luvada S. Wilson
+Candidate	Maryellen O'Shaughnessy	Maryellen O'Shaughnessy
+Candidate	Leslie A. Milliken	Leslie A. Milliken
+Candidate	Sharon L. Edwards	Sharon L. Edwards
+Candidate	Darrin Corrigan	Darrin Corrigan
+Candidate	Maureen G. Kelly	Maureen G. Kelly
+Candidate	Michael Patterson	Michael Patterson
+Candidate	Tom Orlando	Tom Orlando
+Candidate	Bernie Quilter	Bernie Quilter
+Candidate	Anthony Vivo	Anthony Vivo
+Candidate	Robb Koons	Robb Koons
+Candidate	Beth Ann Rose	Beth Ann Rose
+Candidate	Karen S. Starr	Karen S. Starr
+Candidate	John A. Brikmanis	John A. Brikmanis
+Candidate	Ann E. Pease	Ann E. Pease
+Candidate	Timothy J. Wollenberg	Timothy J. Wollenberg
+Candidate	Jill Fankhauser	Jill Fankhauser
+Candidate	Ty Hinton	Ty Hinton
+Candidate	Wendy Whittaker	Wendy Whittaker
+Candidate	Louis P. Giavasis	Louis P. Giavasis
+Candidate	Sandra Kurt	Sandra Kurt
+Candidate	Karen Infante Allen	Karen Infante Allen
+Candidate	Jeanne Stephen	Jeanne Stephen
+Candidate	LeighAnn Merriman Moots	LeighAnn Merriman Moots
+Candidate	Jody Coleman	Jody Coleman
+Candidate	Barbi Sowers Hammond	Barbi Sowers Hammond
+Candidate	Kimberly M. Peck-Peoples	Kimberly M. Peck-Peoples
+Candidate	Ann K. Dunbar	Ann K. Dunbar
+Candidate	Billy R. Johnson	Billy R. Johnson
+Candidate	Rodney Smith	Rodney Smith
+Candidate	Dale R. Williams	Dale R. Williams
+Candidate	Russell Garman	Russell Garman
+Candidate	Michael Varner	Michael Varner
+Candidate	Scott M. Kent	Scott M. Kent
+Candidate	Paul A. Sigsworth	Paul A. Sigsworth
+Candidate	Dallas L. Baldwin	Dallas L. Baldwin
+Candidate	Jimmy Spears	Jimmy Spears
+Candidate	Jeffrey D. Paden	Jeffrey D. Paden
+Candidate	Charmaine McGuffey	Charmaine McGuffey
+Candidate	Jim Neil	Jim Neil
+Candidate	Ronald Joe Myers	Ronald Joe Myers
+Candidate	Fred J. Abdalla	Fred J. Abdalla
+Candidate	Joe Ross	Joe Ross
+Candidate	Phil R. Stammitti	Phil R. Stammitti
+Candidate	Ronald L. Collins II	Ronald L. Collins II
+Candidate	Maurice D. Morris	Maurice D. Morris
+Candidate	Mike Navarre	Mike Navarre
+Candidate	Jerry Greene	Jerry Greene
+Candidate	Tim Bailey	Tim Bailey
+Candidate	Charles R. Black Jr	Charles R. Black Jr
+Candidate	Jason Mackie	Jason Mackie
+Candidate	Robert W. Pickenpaugh	Robert W. Pickenpaugh
+Candidate	Robert B. Radcliff	Robert B. Radcliff
+Candidate	James E. Nelson	James E. Nelson
+Candidate	Jon Barber	Jon Barber
+Candidate	P. Ken Howe	P. Ken Howe
+Candidate	Greg Johnson	Greg Johnson
+Candidate	Joe Kammer	Joe Kammer
+Candidate	George T. Maier	George T. Maier
+Candidate	Kandy Fatheree	Kandy Fatheree
+Candidate	Pat Hunt Sr	Pat Hunt Sr
+Candidate	John R. Peake Sr	John R. Peake Sr
+Candidate	Dale A. Soltis	Dale A. Soltis
+Candidate	Paul S. Monroe	Paul S. Monroe
+Candidate	Orvis L. Campbell	Orvis L. Campbell
+Candidate	Ruth J. Babel-Smith	Ruth J. Babel-Smith
+Candidate	Mark A. Tolle	Mark A. Tolle
+Candidate	Barbara Schaab	Barbara Schaab
+Candidate	Jessica Markins	Jessica Markins
+Candidate	Cory M. DelGuzzo	Cory M. DelGuzzo
+Candidate	Zack Puchajda	Zack Puchajda
+Candidate	Barbara A. Sessler	Barbara A. Sessler
+Candidate	Scott Crowley	Scott Crowley
+Candidate	Maxwell D. Kinman	Maxwell D. Kinman
+Candidate	Eric Wolterman	Eric Wolterman
+Candidate	Sandra K. Leach-Hunt	Sandra K. Leach-Hunt
+Candidate	Scott Renforth	Scott Renforth
+Candidate	Bob Stanko	Bob Stanko
+Candidate	Ann M. Radcliffe	Ann M. Radcliffe
+Candidate	Judy Nedwick	Judy Nedwick
+Candidate	Phil D. Copeland	Phil D. Copeland
+Candidate	Noralynn Palermo	Noralynn Palermo
+Candidate	Lori A. Henry	Lori A. Henry
+Candidate	Ann Block	Ann Block
+Candidate	Brandon C. McClain	Brandon C. McClain
+Candidate	Beth Gillman	Beth Gillman
+Candidate	Carol E. Temple	Carol E. Temple
+Candidate	Jackie Hoover	Jackie Hoover
+Candidate	Joyce R. Gifford	Joyce R. Gifford
+Candidate	Misty Brewster	Misty Brewster
+Candidate	Leighann Fink	Leighann Fink
+Candidate	Dawn R. Maag	Dawn R. Maag
+Candidate	Kathy Dunn	Kathy Dunn
+Candidate	Gail L. Alley	Gail L. Alley
+Candidate	Jodi L. Siegel	Jodi L. Siegel
+Candidate	Rick Campbell	Rick Campbell
+Candidate	Tod Latell	Tod Latell
+Candidate	Lori L. Smith	Lori L. Smith
+Candidate	Margaret Knox	Margaret Knox
+Candidate	Tracey C. Wright	Tracey C. Wright
+Candidate	Julie Baumgardner	Julie Baumgardner
+Candidate	Dawn M. Cragon	Dawn M. Cragon
+Candidate	Peter A. Kotses	Peter A. Kotses
+Candidate	Ric Wasserman	Ric Wasserman
+Candidate	Michelle R. Harris	Michelle R. Harris
+Candidate	Linda S. Bolon	Linda S. Bolon
+Candidate	Janette L. Donaker	Janette L. Donaker
+Candidate	Scott J. Zumbrink	Scott J. Zumbrink
+Candidate	Pam Ferrell	Pam Ferrell
+Candidate	Cheryl Brooks Sullivan	Cheryl Brooks Sullivan
+Candidate	Vicki Sefsick	Vicki Sefsick
+Candidate	Lisa Spiess	Lisa Spiess
+Candidate	Diane Sargent	Diane Sargent
+Candidate	Kathleen A. Schaffer	Kathleen A. Schaffer
+Candidate	Raymond M. Agresta	Raymond M. Agresta
+Candidate	Lorraine M. Fende	Lorraine M. Fende
+Candidate	Stephen Dale Burcham	Stephen Dale Burcham
+Candidate	Daniel J. Talarek	Daniel J. Talarek
+Candidate	Lindsay M. Webb	Lindsay M. Webb
+Candidate	Daniel R. Yemma	Daniel R. Yemma
+Candidate	Jan Draper	Jan Draper
+Candidate	Taylor G. Abbott	Taylor G. Abbott
+Candidate	Russ Joseph	Russ Joseph
+Candidate	Marilyn Bond	Marilyn Bond
+Candidate	Richard Scott Hines	Richard Scott Hines
+Candidate	Melissa Leasa Walters	Melissa Leasa Walters
+Candidate	Donald Edward Davis	Donald Edward Davis
+Candidate	Brad Cromes	Brad Cromes
+Candidate	Bart Hamilton	Bart Hamilton
+Candidate	Stephen A. Neal Jr	Stephen A. Neal Jr
+Candidate	Jenny Freeh	Jenny Freeh
+Candidate	William K. Ogg	William K. Ogg
+Candidate	Craig S. Covey (WI)*	Craig S. Covey (WI)*
+Candidate	Sam Lamancusa	Sam Lamancusa
+Candidate	Jeffery S. Mamarella	Jeffery S. Mamarella
+Candidate	Vicki Maxwell	Vicki Maxwell
+Candidate	Jeff Maiden	Jeff Maiden
+Candidate	Terry Lively	Terry Lively
+Candidate	Jim Surber	Jim Surber
+Candidate	John D. Farschman	John D. Farschman
+Candidate	Timothy Schumm	Timothy Schumm
+Candidate	Douglas L. Dillon	Douglas L. Dillon
+Candidate	James F. Branagan	James F. Branagan
+Candidate	Ken Carney	Ken Carney
+Candidate	Mike Pniewski	Mike Pniewski
+Candidate	Patrick T. Ginnetti	Patrick T. Ginnetti
+Candidate	Amy Zwick	Amy Zwick
+Candidate	Paul W. Gruner	Paul W. Gruner
+Candidate	Denny Thomas Salisbury	Denny Thomas Salisbury
+Candidate	Michael A. Marozzi	Michael A. Marozzi
+Candidate	Robert B. Geuy	Robert B. Geuy
+Candidate	Keith A. Bennett	Keith A. Bennett
+Candidate	Alan Brubaker	Alan Brubaker
+Candidate	David DeChristofaro	David DeChristofaro
+Candidate	Randy L. Smith	Randy L. Smith
+Candidate	Joe Bachman	Joe Bachman
+Candidate	Carl Ortman	Carl Ortman
+Candidate	Tim McKinley	Tim McKinley
+Candidate	Susan L. Brown	Susan L. Brown
+Candidate	Anahi Ortiz	Anahi Ortiz
+Candidate	Steve Bujenovic	Steve Bujenovic
+Candidate	Lakshmi Kode Sammarco	Lakshmi Kode Sammarco
+Candidate	Diane Scala-Barnett	Diane Scala-Barnett
+Candidate	David Kennedy	David Kennedy
+Candidate	Dean J. DePerro	Dean J. DePerro
+Candidate	Ben Trotter	Ben Trotter
+Candidate	James M. Williams	James M. Williams
+Candidate	Anthony P. Bertin	Anthony P. Bertin
+Candidate	Lawrence M. D'Amico	Lawrence M. D'Amico
+Candidate	Jeffrey L. Cameron	Jeffrey L. Cameron
+Candidate	Anthony Rocchio	Anthony Rocchio
+Candidate	Joe Shriver	Joe Shriver
+Candidate	Jason Tolliver	Jason Tolliver
+Candidate	Kevin David Kahn	Kevin David Kahn
+Candidate	Steve Perkins	Steve Perkins
+Candidate	Brandon Lape	Brandon Lape
+Candidate	John S. Stewart (WI)*	John S. Stewart (WI)*
+Candidate	Michael Fricke	Michael Fricke
+Candidate	Christina Marie Holloway (WI)*	Christina Marie Holloway (WI)*
+Candidate	Oscar Herrera	Oscar Herrera
+Candidate	Michael Bennet	Michael Bennet
+Candidate	Joseph R. Biden Jr	Joseph R. Biden Jr
+Candidate	Michael R. Bloomberg	Michael R. Bloomberg
+Candidate	Pete Buttigieg	Pete Buttigieg
+Candidate	Tulsi Gabbard	Tulsi Gabbard
+Candidate	Amy Klobuchar	Amy Klobuchar
+Candidate	Deval Patrick	Deval Patrick
+Candidate	Bernie Sanders	Bernie Sanders
+Candidate	Tom Steyer	Tom Steyer
+Candidate	Elizabeth Warren	Elizabeth Warren
+Candidate	Andrew Yang (WI)*	Andrew Yang (WI)*
+Candidate	Kate Schroder	Kate Schroder
+Candidate	Jaime M. Castle	Jaime M. Castle
+Candidate	Morgan Harper	Morgan Harper
+Candidate	Shannon M. Freshour	Shannon M. Freshour
+Candidate	Mike Larsen	Mike Larsen
+Candidate	Jeffrey A. Sites	Jeffrey A. Sites
+Candidate	M. Xavier Carrigan	M. Xavier Carrigan
+Candidate	Gene Redinger	Gene Redinger
+Candidate	Nick Rubando	Nick Rubando
+Candidate	Quentin Potter (WI)*	Quentin Potter (WI)*
+Candidate	Matt Guyette	Matt Guyette
+Candidate	Peter Rosewicz	Peter Rosewicz
+Candidate	Eric Moyer	Eric Moyer
+Candidate	Desiree Tims	Desiree Tims
+Candidate	Michael Hood	Michael Hood
+Candidate	Tariq K. Shabazz	Tariq K. Shabazz
+Candidate	Jenny Bell	Jenny Bell
+Candidate	Alaina Shearer	Alaina Shearer
+Candidate	Hillary O'Connor Mueri	Hillary O'Connor Mueri
+Candidate	Daniel McArthur Kilgore	Daniel McArthur Kilgore
+Candidate	Joel Newby	Joel Newby
+Candidate	Aaron Paul Godfrey	Aaron Paul Godfrey
+Candidate	Ronald Karpus III	Ronald Karpus III
+Candidate	Marshall G. Lachman	Marshall G. Lachman
+Candidate	William B. Hoffman	William B. Hoffman
+Candidate	Thomas J. Osowik	Thomas J. Osowik
+Candidate	Sean C. Gallagher	Sean C. Gallagher
+Candidate	Betty Sutton	Betty Sutton
+Candidate	Michael C. Mentel	Michael C. Mentel
+Candidate	Timothy P. Cannon	Timothy P. Cannon
+Candidate	Myron C. Duhart	Myron C. Duhart
+Candidate	Cheryl L. Waite	Cheryl L. Waite
+Candidate	Larry A. Jones	Larry A. Jones
+Candidate	Cynthia Westcott Rice	Cynthia Westcott Rice
+Candidate	Hugh A. Carlin	Hugh A. Carlin
+Candidate	Emanuella D. Groves	Emanuella D. Groves
+Candidate	Denise Nancy Rini	Denise Nancy Rini
+Candidate	Gayle Williams-Byers	Gayle Williams-Byers
+Candidate	Anita Laster Mays	Anita Laster Mays
+Candidate	Terri Jamison	Terri Jamison
+Candidate	Alyson Monroe Brown	Alyson Monroe Brown
+Candidate	Lisa Forbes	Lisa Forbes
+Candidate	Gabriella Rosalina	Gabriella Rosalina
+Candidate	James W. Satola	James W. Satola
+Candidate	Joel O'Dorisio	Joel O'Dorisio
+Candidate	Reem Subei	Reem Subei
+Candidate	Mark Fogel	Mark Fogel
+Candidate	Albert Griggs Jr	Albert Griggs Jr
+Candidate	Daniel Brown	Daniel Brown
+Candidate	Charles Ballard	Charles Ballard
+Candidate	Ken Poling	Ken Poling
+Candidate	Ryan Ottney	Ryan Ottney
+Candidate	Mark L. Bailey	Mark L. Bailey
+Candidate	Troy Doucet	Troy Doucet
+Candidate	Crystal Lett	Crystal Lett
+Candidate	Christian N. Johnson	Christian N. Johnson
+Candidate	Tom Jackson	Tom Jackson
+Candidate	Craig Swartz	Craig Swartz
+Candidate	Michael Fletcher	Michael Fletcher
+Candidate	Alison Theiss	Alison Theiss
+Candidate	Carline Curry (WI)*	Carline Curry (WI)*
+Candidate	Sam Grady (WI)*	Sam Grady (WI)*
+Candidate	Laurel Johnson	Laurel Johnson
+Candidate	Daniel Winston	Daniel Winston
+Candidate	Joan T. Sweeny	Joan T. Sweeny
+Candidate	Vincent E. Stokes II	Vincent E. Stokes II
+Candidate	J. Allen Burger	J. Allen Burger
+Candidate	Phyllis Ann Peterson (WI)*	Phyllis Ann Peterson (WI)*
+Candidate	Felicia Washington Ross	Felicia Washington Ross
+Candidate	Joe Romano	Joe Romano
+Candidate	Monique Smith	Monique Smith
+Candidate	Kashi Adhikari	Kashi Adhikari
+Candidate	Nancy Day-Achauer	Nancy Day-Achauer
+Candidate	Mohamud Jama	Mohamud Jama
+Candidate	Dontavius Jarrells	Dontavius Jarrells
+Candidate	Gary Josephson	Gary Josephson
+Candidate	Mayo Makinde	Mayo Makinde
+Candidate	Kofi Nsia-Pepra	Kofi Nsia-Pepra
+Candidate	Regina A. Collins (WI)*	Regina A. Collins (WI)*
+Candidate	Catherine D. Ingram	Catherine D. Ingram
+Candidate	Dadrien Washington	Dadrien Washington
+Candidate	Terence Allen Gragston	Terence Allen Gragston
+Candidate	A. J. Harris	A. J. Harris
+Candidate	Matt Shaughnessy	Matt Shaughnessy
+Candidate	Joe Campbell	Joe Campbell
+Candidate	Willis E. Blackshear Jr	Willis E. Blackshear Jr
+Candidate	Walter J. Hickman Jr	Walter J. Hickman Jr
+Candidate	Jo'el Jones	Jo'el Jones
+Candidate	Leronda Jackson	Leronda Jackson
+Candidate	Cate Berger	Cate Berger
+Candidate	Amy Cox	Amy Cox
+Candidate	Paula Hicks-Hudson (WI)*	Paula Hicks-Hudson (WI)*
+Candidate	Lisa A. Sobecki	Lisa A. Sobecki
+Candidate	Nancy Larson	Nancy Larson
+Candidate	Brian K Simeone	Brian K Simeone
+Candidate	Chuck Horn	Chuck Horn
+Candidate	Michelle E. Novak	Michelle E. Novak
+Candidate	Morgan Showen	Morgan Showen
+Candidate	Zach Stepp	Zach Stepp
+Candidate	Dara Adkison	Dara Adkison
+Candidate	Michele Lepore Hagan	Michele Lepore Hagan
+Candidate	Chris Stanley	Chris Stanley
+Candidate	Daniel P. Troy	Daniel P. Troy
+Candidate	Adam Dudziak	Adam Dudziak
+Candidate	Erin Rosiello	Erin Rosiello
+Candidate	Gil Blair	Gil Blair
+Candidate	Werner Lange	Werner Lange
+Candidate	Barry Profato	Barry Profato
+Candidate	Alan Darnowsky	Alan Darnowsky
+Candidate	Rachael Morocco	Rachael Morocco
+Candidate	Steven F. Mount	Steven F. Mount
+Candidate	Donna Beheydt	Donna Beheydt
+Candidate	Mark Carr	Mark Carr
+Candidate	Garrett Westhoven	Garrett Westhoven
+Candidate	Melissa Wilde	Melissa Wilde
+Candidate	Charlotte Owens	Charlotte Owens
+Candidate	Cynthia Richards	Cynthia Richards
+Candidate	Ted Jones (WI)*	Ted Jones (WI)*
+Candidate	Joseph A. Monbeck	Joseph A. Monbeck
+Candidate	Tiffanie Roberts	Tiffanie Roberts
+Candidate	Nicholas Barnes	Nicholas Barnes
+Candidate	Chris Liebold	Chris Liebold
+Candidate	Alexis Miller	Alexis Miller
+Candidate	Katie O'Neill	Katie O'Neill
+Candidate	Charlie DiPalma	Charlie DiPalma
+Candidate	Richard A. Olivito	Richard A. Olivito
+Candidate	Alaina Swope	Alaina Swope
+Candidate	Todd E Beegle	Todd E Beegle
+Candidate	Richard Dana	Richard Dana
+CountItemType	total	total
+

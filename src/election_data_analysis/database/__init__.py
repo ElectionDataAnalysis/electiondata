@@ -82,6 +82,8 @@ US Virgin Islands"""
 
 db_pars = ["host", "port", "dbname", "user", "password"]
 
+contest_types_model = ["state", "congressional", "judicial", "state-house", "state-senate"]
+
 
 def get_database_names(con):
     """Return dataframe with one column called `datname` """
@@ -103,7 +105,7 @@ def remove_database(params: dict) -> dict:
             err,
             "system",
             "database.remove_database",
-            f"Error connecting to postgres via {postgres_params}: {e}"
+            f"Error connecting to postgres via {postgres_params}: {e}",
         )
         return err
 
@@ -119,7 +121,7 @@ def remove_database(params: dict) -> dict:
             err,
             "system",
             "database.remove_database",
-            f"Error while dropping database {params['dbname']}: {e}"
+            f"Error while dropping database {params['dbname']}: {e}",
         )
     return err
 
@@ -225,7 +227,7 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
             err,
             "system",
             "database.test_connection",
-            f"Error connecting to database: {e}"
+            f"Error connecting to database: {e}",
         )
         return False, err
 
@@ -303,16 +305,12 @@ def create_new_db(param_file="run_time.ini") -> dict:
     # load cdf tables
     db_cdf.create_common_data_format_tables(
         sess,
-        dirpath=os.path.join(
-            project_root, "CDF_schema_def_info"
-        ),
+        dirpath=os.path.join(project_root, "CDF_schema_def_info"),
     )
     db_cdf.fill_standard_tables(
         sess,
         None,
-        dirpath=os.path.join(
-            project_root, "CDF_schema_def_info"
-        ),
+        dirpath=os.path.join(project_root, "CDF_schema_def_info"),
     )
     con.close()
     return err
@@ -432,7 +430,7 @@ def insert_to_cdf_db(
     except Id and <timestamp> if any. Returns an error message (or None)"""
 
     # initialize connection and cursor
-    working = m.generic_clean(df)
+    working, err_df = m.generic_clean(df)
     connection = engine.raw_connection()
     cursor = connection.cursor()
 
@@ -574,7 +572,7 @@ def append_id_to_dframe(
     df_cols = list(col_map.keys())
 
     # create temp db table with info from df, without index
-    df = m.generic_clean(df)
+    df, err_df = m.generic_clean(df)
     df[df_cols].fillna("").to_sql(temp_table, engine, index_label="dataframe_index")
     # TODO fillna('') probably redundant
 
@@ -593,7 +591,7 @@ def append_id_to_dframe(
     ).format(
         tt=sql.Identifier(temp_table), t=sql.Identifier(table), on_clause=on_clause
     )
-    w = m.generic_clean(pd.read_sql_query(q, connection).set_index("dataframe_index"))
+    w, err_df = m.generic_clean(pd.read_sql_query(q, connection).set_index("dataframe_index"))
 
     # drop temp db table
     q = sql.SQL("DROP TABLE {temp_table}").format(temp_table=sql.Identifier(temp_table))
@@ -743,7 +741,8 @@ def get_input_options(session, input, verbose):
             )
             cursor.execute(q)
         else:
-            q = sql.SQL("""
+            q = sql.SQL(
+                """
                 SELECT "BallotName" 
                 FROM "Candidate"
                 WHERE "BallotName" ~* %s
@@ -770,7 +769,8 @@ def get_input_options(session, input, verbose):
             result_df.columns = result.keys()
             return package_display_results(result_df)
         elif search_str == "jurisdiction":
-            q = sql.SQL("""
+            q = sql.SQL(
+                """
                 WITH states(states) AS (
                     SELECT {states} 
                 )
@@ -803,10 +803,12 @@ def get_input_options(session, input, verbose):
                         LEFT JOIN "_datafile" d ON s."Id" = d."Election_Id"
                        	AND s.jurisdiction_id = d."ReportingUnit_Id"
                 ORDER BY "Name", order_by
-            """).format(states=sql.Literal(states))
+            """
+            ).format(states=sql.Literal(states))
         elif search_str == "BallotMeasureContest":
             # parent_id is reporting unit, type is reporting unit type
-            q = sql.SQL("""
+            q = sql.SQL(
+                """
                 SELECT  ru."Name" AS parent,
                         c."Name" AS name, rut."Txt" AS type
                 FROM    "BallotMeasureContest" bmc
@@ -818,7 +820,8 @@ def get_input_options(session, input, verbose):
             """
             )
         elif search_str == "CandidateContest":
-            q = sql.SQL("""
+            q = sql.SQL(
+                """
                 SELECT  ru."Name" AS parent,
                         c."Name" AS name, rut."Txt" AS type
                 FROM    "CandidateContest" cc
@@ -831,7 +834,8 @@ def get_input_options(session, input, verbose):
             """
             )
         elif search_str == "Candidate":
-            q = sql.SQL("""
+            q = sql.SQL(
+                """
                 SELECT  DISTINCT ct."Name" AS parent, c."BallotName" as name, 
                         p."Name" as type
                 FROM    "Candidate" c
@@ -845,7 +849,8 @@ def get_input_options(session, input, verbose):
             )
         else:
             # parent_id is candidate_id, type is combo of party and contest name
-            q = sql.SQL("""
+            q = sql.SQL(
+                """
                 SELECT  DISTINCT ct."Name" AS parent, c."BallotName" as name, 
                         p."Name" as type
                 FROM    "Candidate" c
@@ -906,8 +911,22 @@ def get_filtered_input_options(session, input_str, filters):
         }
         df = pd.DataFrame(data=data)
     elif input_str == "contest":
+        contest_type = list(set(contest_types_model) & set(filters))[0]
+
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        reporting_unit = name_from_id(cursor, "ReportingUnit", reporting_unit_id)
+        connection.close()
+
+        contest_type_df = pd.DataFrame([{
+            "parent": reporting_unit,
+            "name": f"All {contest_type}",
+            "type": contest_type
+        }])
         contest_df = get_relevant_contests(session, filters)
-        df = contest_df[contest_df["type"].isin(filters)]
+        contest_df = contest_df[contest_df["type"].isin(filters)]
+        df = pd.concat([contest_type_df, contest_df])
     # Assume these others are candidate searching. This is handled differently
     # because the results variable is structured slightly differently
     elif input_str == "subdivision_type":
@@ -957,15 +976,16 @@ def get_filtered_input_options(session, input_str, filters):
         }
         df = pd.DataFrame(data=data)
     elif input_str == "category":
-        election_df = get_relevant_election(session, filters)
-        election_df = election_df[election_df["Name"].isin(filters)]
-        count_type_ids = (
-            pd.read_sql_table("VoteCount", session.bind, index_col="Id")
-            .merge(election_df, how="inner", left_on="Election_Id", right_index=True)[
-                "CountItemType_Id"
-            ]
-            .unique()
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        type_df = read_vote_count(
+            session,
+            election_id,
+            reporting_unit_id,
+            ["CountItemType_Id"],
+            ["CountItemType_Id"],
         )
+        count_type_ids = type_df["CountItemType_Id"].unique()
         count_types_df = pd.read_sql_table(
             "CountItemType", session.bind, index_col="Id"
         )
@@ -982,88 +1002,23 @@ def get_filtered_input_options(session, input_str, filters):
             + [None for count_type in count_types],
         }
         df = pd.DataFrame(data=data)
+    # check if it's looking for a count of contests
+    elif input_str == "count" and bool([f for f in filters if "contests" in f]):
+        df = get_relevant_contests(session, filters)
+    # check if it's looking for a count of candidates
     elif input_str == "count":
-        contest_df = get_relevant_contests(session, filters)
-        election_df = get_relevant_election(session, filters)
-        election_df = election_df[election_df["Name"].isin(filters)]
-        hierarchy_df = pd.read_sql_table(
-            "ComposingReportingUnitJoin", session.bind, index_col="Id"
-        )
-        unit_df = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
-        hierarchy_df = hierarchy_df.merge(
-            unit_df, how="inner", left_on="ParentReportingUnit_Id", right_on="Id"
-        )
-        hierarchy_df = hierarchy_df[hierarchy_df["Name"].isin(filters)]
-        selection_ids = (
-            pd.read_sql_table("VoteCount", session.bind, index_col="Id")
-            .merge(election_df, how="inner", left_on="Election_Id", right_index=True)
-            .merge(
-                hierarchy_df,
-                how="inner",
-                left_on="ReportingUnit_Id",
-                right_on="ChildReportingUnit_Id",
-            )["Selection_Id"]
-            .unique()
-        )
-        candidate_selection_df = pd.read_sql_table(
-            "CandidateSelection", session.bind, index_col="Id"
-        )
-        # this has candidate IDs and contest IDs
-        candidate_contest_df = candidate_selection_df[
-            candidate_selection_df.index.isin(selection_ids)
-        ][candidate_selection_df.columns].reset_index()
-        # then we get the cnadidate names themselves
-        candidate_names_df = pd.read_sql_table(
-            "Candidate", session.bind, index_col="Id"
-        )
-        # and this has candidates, but in name form
-        candidates = get_input_options(session, "candidate", True)
-        candidates_df = pd.DataFrame(candidates)
-        candidates_df.columns = df_cols
-        candidate_names_df = candidate_names_df.merge(
-            candidate_contest_df, how="inner", left_index=True, right_on="Candidate_Id"
-        )
-        candidates_df = candidates_df.merge(
-            candidate_names_df, how="inner", left_on="name", right_on="BallotName"
-        )
-        df = contest_df.merge(
-            candidates_df,
-            how="inner",
-            left_on="name",
-            right_on="parent",
-            suffixes=["_x", None],
-        )[candidates_df.columns]
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        df = read_vote_count(
+            session, election_id, reporting_unit_id, ["Name", "BallotName", "PartyName"], ["parent", "name", "type"]
+        ) 
     else:
-        try:
-            contest_df = get_relevant_contests(session, filters)
-            candidates = get_input_options(session, input_str, True)
-            candidates_df = pd.DataFrame(candidates)
-            candidates_df.columns = df_cols
-            candidates_df = candidates_df.merge(
-                contest_df,
-                how="inner",
-                left_on="parent",
-                right_on="name",
-                suffixes=[None, "_y"],
-            )
-            df = (
-                candidates_df.groupby(["parent", "type"])["name"]
-                .apply(list)
-                .apply(str)
-                .reset_index()
-                .sort_values("parent")
-            )
-            df.columns = ["parent", "type", "name"]
-            df = df[["parent", "name", "type"]]
-            # clean the name column
-            df["name"] = (
-                df["name"]
-                .str.replace(r"\['", "")
-                .str.replace(r"'\]", "")
-                .str.replace(r"', '", "; ")
-            )
-        except:
-            df = pd.DataFrame()
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        df = read_vote_count(
+            session, election_id, reporting_unit_id, ["Name", "BallotName", "PartyName"], ["parent", "name", "type"]
+        ) 
+        df = df[df["name"].str.contains(input_str, case=False)]
     # TODO: handle the "All" and "other" options better
     # TODO: handle sorting numbers better
     return package_display_results(df)
@@ -1081,74 +1036,33 @@ def get_relevant_election(session, filters):
 
 
 def get_relevant_contests(session, filters):
-    """Gets all contests for a selected jurisdiction, held in filters"""
-    df_cols = ["parent", "name", "type"]
-    # Get a DF of parent, child reporting Units, filtered on the jurisdiciton
-    # selected by the user
-    hierarchy_df = pd.read_sql_table(
-        "ComposingReportingUnitJoin", session.bind, index_col="Id"
-    )
-    unit_df = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
-    hierarchy_df = hierarchy_df.merge(
-        unit_df, how="inner", left_on="ParentReportingUnit_Id", right_on="Id"
-    )
-    hierarchy_df = hierarchy_df[hierarchy_df["Name"].isin(filters)]
-    hierarchy_df.drop(
-        columns=[
-            "ReportingUnitType_Id",
-            "OtherReportingUnitType",
-        ],
-        inplace=True,
+    """expects the filters list to have an election and jurisdiction.
+    finds all contests for that combination."""
+    election_id = list_to_id(session, "Election", filters)
+    reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+    contest_df = read_vote_count(
+        session, election_id, reporting_unit_id, ["Name"], ["contest_name"]
     )
 
-    # get info for elections we have
-    elections = get_input_options(session, "jurisdiction", True)
-    elections_df = pd.DataFrame(elections)
-    elections_df.columns = df_cols
-    elections_df = elections_df[
-        (elections_df["parent"].isin(filters)) & (elections_df["type"] == True)
-    ]
-
-    # filter hierarchy on states that we have elections for
-    hierarchy_df = hierarchy_df.merge(
-        elections_df, how="inner", left_on="Name", right_on="name"
-    )
-
-    hierarchy_df = hierarchy_df.merge(
-        unit_df, how="inner", left_on="ChildReportingUnit_Id", right_on="Id"
-    )
-    hierarchy_df.rename(columns={"Name_x": "parent", "Name_y": "child"}, inplace=True)
-    hierarchy_df.drop(
-        columns=[
-            "ChildReportingUnit_Id",
-            "ReportingUnitType_Id",
-            "OtherReportingUnitType",
-        ],
-        inplace=True,
-    )
-
-    units = hierarchy_df["child"].unique()
     result = get_input_options(session, "candidate_contest", True)
     result_df = pd.DataFrame(result)
     result_df.columns = ["parent", "name", "type"]
-    result_df = result_df[result_df["parent"].isin(units)]
+    result_df = result_df.merge(
+        contest_df, how="inner", left_on="name", right_on="contest_name"
+    )[result_df.columns]
     return result_df
 
 
 def get_jurisdiction_hierarchy(session, jurisdiction_id):
     """get type of reporting unit one level down from jurisdiction.
     Omit particular types that are contest types, not true reporting unit types"""
-    q = sql.SQL("""
+    q = sql.SQL(
+        """
         SELECT  rut."Id"
         FROM    "ComposingReportingUnitJoin" cruj
                 JOIN "ReportingUnit" ru on cruj."ChildReportingUnit_Id" = ru."Id"
                 JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id"
-        WHERE   rut."Txt" not in (
-                    'congressional', 
-                    'judicial', 
-                    'state-house', 
-                    'state-senate'
-                )
+        WHERE   rut."Txt" not in %s
                 AND ARRAY_LENGTH(regexp_split_to_array("Name", ';'), 1) = 2
                 AND "ParentReportingUnit_Id" = %s
         LIMIT   1
@@ -1157,7 +1071,7 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     try:
-        cursor.execute(q, [jurisdiction_id])
+        cursor.execute(q, [tuple(contest_types_model), jurisdiction_id])
         result = cursor.fetchall()
         subdivision_type_id = result[0][0]
     except:
@@ -1169,7 +1083,8 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
 def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_id):
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
-    q = sql.SQL("""
+    q = sql.SQL(
+        """
     SELECT  vc."Id" as "VoteCount_Id", "Count", "CountItemType_Id",
             vc."ReportingUnit_Id", "Contest_Id", "Selection_Id",
             vc."Election_Id", "_datafile_Id", IntermediateRU."Id" as "ParentReportingUnit_Id",
@@ -1201,13 +1116,14 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
                 AND TopRU."Id" = %s
                 AND IntermediateRU."ReportingUnitType_Id" = %s
                 AND vc."Election_Id" = %s
-    """)
+    """
+    )
     cursor.execute(q, [top_ru_id, subdivision_type_id, election_id])
     result = cursor.fetchall()
     result_df = pd.DataFrame(result)
     result_df.columns = [
-        "VoteCount_Id", 
-        "Count", 
+        "VoteCount_Id",
+        "Count",
         "CountItemType_Id",
         "ReportingUnit_Id",
         "Contest_Id",
@@ -1225,7 +1141,7 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
         "ElectionDistrict_Id",
         "Candidate_Id",
         "contest_type",
-        "contest_district_type"
+        "contest_district_type",
     ]
     return result_df
 
@@ -1364,3 +1280,46 @@ def export_rollup_from_db(
         results_df = pd.DataFrame()
         err_str = f"No results exported due to database error: {exc}"
     return results_df, err_str
+
+
+def read_vote_count(
+    session,
+    election_id,
+    reporting_unit_id,
+    fields,
+    aliases,
+):
+    """The VoteCount table is the only place that maps contests to a specific
+    election. But this table is the largest one, so we don't want to use pandas methods
+    to read into a DF and then filter"""
+    q = sql.SQL(
+        """
+        SELECT  DISTINCT {fields}
+        FROM    "VoteCount" vc
+                JOIN "Contest" on vc."Contest_Id" = "Contest"."Id"
+                JOIN "ComposingReportingUnitJoin" cruj ON vc."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
+                JOIN "CandidateSelection" cs ON vc."Selection_Id" = cs."Id"
+                JOIN "Candidate" c on cs."Candidate_Id" = c."Id"
+                JOIN (SELECT "Id", "Name" as "PartyName" from "Party") p on cs."Party_Id" = p."Id"
+        WHERE   "Election_Id" = %s
+                AND "ParentReportingUnit_Id" = %s
+        """
+    ).format(
+        fields=sql.SQL(",").join(sql.Identifier(field) for field in fields),
+    )
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    cursor.execute(q, [election_id, reporting_unit_id])
+    results = cursor.fetchall()
+    results_df = pd.DataFrame(results)
+    results_df.columns = aliases
+    return results_df
+
+
+def list_to_id(session, element, names) -> int:
+    """ takes a list of names of various element types and returns a single ID """
+    for name in names:
+        id = name_to_id(session, element, name)
+        if id:
+            return id
+    return None

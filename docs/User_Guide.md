@@ -1,4 +1,8 @@
 # How to Use the System
+## Environment
+You will need `python3`. If you use the alias `python`, make sure it points to `python3`.
+
+The system runs out of the box with a postgresql database; to use other varieties of SQL, you will need to modify the routines in the `db_routines` module. 
 
 ## Installation
 From the root folder of your repository run `python3 setup.py install` (or if `python` is an alias for `python3` on your system, `python setup.py install`).
@@ -66,6 +70,27 @@ CountItemType	total	row
 ```
 NB: for constants (like the CountItemType 'total' in this example), use 'row' for the source. Row-source fields should be the field names from the header row or, if there is no header row, from `format.config`. Column-source fields should be identified by the number of the row in which the information is found. Our convention is that the top row is 0.
 
+### row-sourced formula example
+Consider this snippet from a comma-separated Philadelphia, Pennsylvania voting results file:
+```
+WARD,DIVISION,VOTE TYPE,CATEGORY,SELECTION,PARTY,VOTE COUNT
+01,01,A,JUDGE OF THE SUPERIOR COURT,AMANDA GREEN-HAWKINS,DEMOCRATIC,2
+01,01,M,JUDGE OF THE SUPERIOR COURT,AMANDA GREEN-HAWKINS,DEMOCRATIC,146
+01,01,P,JUDGE OF THE SUPERIOR COURT,AMANDA GREEN-HAWKINS,DEMOCRATIC,0
+```
+The formula `Ward <WARD>;Division <DIVISION>` would yield `Ward 01;Division 01`.
+
+### column-source formula example
+Consider this snippet from a tab-separated North Carolina voting results file:
+```
+County	Election Date	Precinct	Contest Group ID	Contest Type	Contest Name	Choice	Choice Party	Vote For	Election Day	One Stop	Absentee by Mail	Provisional	Total Votes	Real Precinct
+ALAMANCE	11/06/2018	064	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, Sr.	LIB	1	59	65	2	1	127	Y
+ALAMANCE	11/06/2018	03N	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, Sr.	LIB	1	59	38	1	0	98	Y
+ALAMANCE	11/06/2018	03S	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, Sr.	LIB	1	106	108	0	3	217	Y
+```
+Here the CountItemType value ('Election Day','One Stop' a.k.a. early voting, 'Absentee by Mail','Provisional' must be read from the column headers, i.e., the information in row 0 of the file. For the first data row, the formula <0> would yield CountItemType 'Election Day' for the VoteCount of 59, 'One Stop' for the vote count of 65, etc.
+
+### Regular Expressions
 Sometimes it is necessary to use regular expressions to extract information from fields in the results file. For example, a single field might hold a candidate name along with the candidate's party ()
 
 For the `concatenated-blocks` file type, here is an example (with regular expressions for Party and Candidate -- see below:
@@ -201,7 +226,6 @@ CandidateContest	US House FL District 2	Representative in Congress District 2
     * Some common standard internal database names for CountItemTypes are 'absentee', 'early', 'election-day', 'provisional' and 'total'. You can look at the CountItemType table in the database to see the full list, and you can use any other name you like.
 ```
 cdf_element	cdf_internal_name	raw_identifier_value
-Election	General Election 2018-11-06	11/6/18
 BallotMeasureSelection	No	No
 BallotMeasureSelection	No	Against
 BallotMeasureSelection	Yes	Yes
@@ -214,7 +238,7 @@ CountItemType	total	Total Votes
 CountItemType	total	total
 ```
 
- (8) Add any existing content from `dictionary.txt` to the starter dictionary and dedupe. If the jurisdiction is brand new there won't be any existing contest. 
+ (8) Add any existing content from `dictionary.txt` to the starter dictionary. If the jurisdiction is brand new there won't be any existing contest. 
 
  (9) Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` . 
 

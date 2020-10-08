@@ -2,9 +2,27 @@ import os
 import re
 import datetime
 from pathlib import Path
+import shutil
 import election_data_analysis as e
 from election_data_analysis import database as d
 from election_data_analysis import user_interface as ui
+
+
+def get_testing_data(url: str, target: str = "TestingData"):
+    # if there is no testing data directory
+    if not os.path.isdir(target):
+        # create a shallow copy of the git directory in current directory
+        cmd = f"git clone --depth 1 -b main {url}"
+        os.system(cmd)
+        # remove the git information
+        shutil.rmtree(os.path.join(target, ".git"), ignore_errors=True)
+        os.remove(os.path.join(target, ".gitignore"))
+
+        print(f"Files downloaded from {url} into {Path(target).absolute()}")
+    else:
+        print(f"Tests will use data in existing directory: {Path(target).absolute()}")
+    return
+
 
 def run(load_data: bool = True, dbname: str = None):
     reference_param_file = test_param_file = os.path.join(Path(__file__).parents[1], "src", "run_time.ini")
@@ -14,14 +32,7 @@ def run(load_data: bool = True, dbname: str = None):
     test_dir = Path(__file__).parent.absolute()
 
     if load_data:
-        # if there is no testing data directory
-        if not os.path.isdir('TestingData'):
-            # create a copy of the git directory in current directory
-            cmd = 'git clone https://github.com/ElectionDataAnalysis/TestingData.git'
-            os.system(cmd)
-            print(f"New directory created: {Path('TestingData').absolute()}")
-        else:
-            print(f"Directory already exists: {Path('TestingData').absolute()}")
+        get_testing_data("https://github.com/ElectionDataAnalysis/TestingData.git", "TestingData")
 
     if dbname is None:
         # create unique name for test database
@@ -40,7 +51,7 @@ def run(load_data: bool = True, dbname: str = None):
 
         # Load the data
         dl = e.DataLoader()
-        dl.load_all(move_files=True)
+        dl.load_all(move_files=False)
 
     # move to tests directory
     os.chdir(test_dir)

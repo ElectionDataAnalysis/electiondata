@@ -655,7 +655,6 @@ def check_munger_file_contents(munger_path, munger_file, err):
                 "count_of_top_lines_to_skip",
                 "constant_line_count",
                 "header_row_count",
-                "columns_to_skip",
             ]:
                 try:
                     int(format_d[key])
@@ -828,7 +827,7 @@ def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
         )
         return error
     df = pd.read_csv(
-        element_fpath, sep="\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL
+        element_fpath, sep="\t", encoding="utf_8", quoting=csv.QUOTE_MINIMAL
     ).fillna("none or unknown")
     # TODO check that df has the right format
 

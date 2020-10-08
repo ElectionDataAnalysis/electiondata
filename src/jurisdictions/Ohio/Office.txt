@@ -1,0 +1,157 @@
+Name	ElectionDistrict
+OH House District 1	Ohio;OH House District 1
+OH House District 2	Ohio;OH House District 2
+OH House District 3	Ohio;OH House District 3
+OH House District 4	Ohio;OH House District 4
+OH House District 5	Ohio;OH House District 5
+OH House District 6	Ohio;OH House District 6
+OH House District 7	Ohio;OH House District 7
+OH House District 8	Ohio;OH House District 8
+OH House District 9	Ohio;OH House District 9
+OH House District 10	Ohio;OH House District 10
+OH House District 11	Ohio;OH House District 11
+OH House District 12	Ohio;OH House District 12
+OH House District 13	Ohio;OH House District 13
+OH House District 14	Ohio;OH House District 14
+OH House District 15	Ohio;OH House District 15
+OH House District 16	Ohio;OH House District 16
+OH House District 17	Ohio;OH House District 17
+OH House District 18	Ohio;OH House District 18
+OH House District 19	Ohio;OH House District 19
+OH House District 20	Ohio;OH House District 20
+OH House District 21	Ohio;OH House District 21
+OH House District 22	Ohio;OH House District 22
+OH House District 23	Ohio;OH House District 23
+OH House District 24	Ohio;OH House District 24
+OH House District 25	Ohio;OH House District 25
+OH House District 26	Ohio;OH House District 26
+OH House District 27	Ohio;OH House District 27
+OH House District 28	Ohio;OH House District 28
+OH House District 29	Ohio;OH House District 29
+OH House District 30	Ohio;OH House District 30
+OH House District 31	Ohio;OH House District 31
+OH House District 32	Ohio;OH House District 32
+OH House District 33	Ohio;OH House District 33
+OH House District 34	Ohio;OH House District 34
+OH House District 35	Ohio;OH House District 35
+OH House District 36	Ohio;OH House District 36
+OH House District 37	Ohio;OH House District 37
+OH House District 38	Ohio;OH House District 38
+OH House District 39	Ohio;OH House District 39
+OH House District 40	Ohio;OH House District 40
+OH House District 41	Ohio;OH House District 41
+OH House District 42	Ohio;OH House District 42
+OH House District 43	Ohio;OH House District 43
+OH House District 44	Ohio;OH House District 44
+OH House District 45	Ohio;OH House District 45
+OH House District 46	Ohio;OH House District 46
+OH House District 47	Ohio;OH House District 47
+OH House District 48	Ohio;OH House District 48
+OH House District 49	Ohio;OH House District 49
+OH House District 50	Ohio;OH House District 50
+OH House District 51	Ohio;OH House District 51
+OH House District 52	Ohio;OH House District 52
+OH House District 53	Ohio;OH House District 53
+OH House District 54	Ohio;OH House District 54
+OH House District 55	Ohio;OH House District 55
+OH House District 56	Ohio;OH House District 56
+OH House District 57	Ohio;OH House District 57
+OH House District 58	Ohio;OH House District 58
+OH House District 59	Ohio;OH House District 59
+OH House District 60	Ohio;OH House District 60
+OH House District 61	Ohio;OH House District 61
+OH House District 62	Ohio;OH House District 62
+OH House District 63	Ohio;OH House District 63
+OH House District 64	Ohio;OH House District 64
+OH House District 65	Ohio;OH House District 65
+OH House District 66	Ohio;OH House District 66
+OH House District 67	Ohio;OH House District 67
+OH House District 68	Ohio;OH House District 68
+OH House District 69	Ohio;OH House District 69
+OH House District 70	Ohio;OH House District 70
+OH House District 71	Ohio;OH House District 71
+OH House District 72	Ohio;OH House District 72
+OH House District 73	Ohio;OH House District 73
+OH House District 74	Ohio;OH House District 74
+OH House District 75	Ohio;OH House District 75
+OH House District 76	Ohio;OH House District 76
+OH House District 77	Ohio;OH House District 77
+OH House District 78	Ohio;OH House District 78
+OH House District 79	Ohio;OH House District 79
+OH House District 80	Ohio;OH House District 80
+OH House District 81	Ohio;OH House District 81
+OH House District 82	Ohio;OH House District 82
+OH House District 83	Ohio;OH House District 83
+OH House District 84	Ohio;OH House District 84
+OH House District 85	Ohio;OH House District 85
+OH House District 86	Ohio;OH House District 86
+OH House District 87	Ohio;OH House District 87
+OH House District 88	Ohio;OH House District 88
+OH House District 89	Ohio;OH House District 89
+OH House District 90	Ohio;OH House District 90
+OH House District 91	Ohio;OH House District 91
+OH House District 92	Ohio;OH House District 92
+OH House District 93	Ohio;OH House District 93
+OH House District 94	Ohio;OH House District 94
+OH House District 95	Ohio;OH House District 95
+OH House District 96	Ohio;OH House District 96
+OH House District 97	Ohio;OH House District 97
+OH House District 98	Ohio;OH House District 98
+OH House District 99	Ohio;OH House District 99
+OH Senate District 1	Ohio;OH Senate District 1
+OH Senate District 2	Ohio;OH Senate District 2
+OH Senate District 3	Ohio;OH Senate District 3
+OH Senate District 4	Ohio;OH Senate District 4
+OH Senate District 5	Ohio;OH Senate District 5
+OH Senate District 6	Ohio;OH Senate District 6
+OH Senate District 7	Ohio;OH Senate District 7
+OH Senate District 8	Ohio;OH Senate District 8
+OH Senate District 9	Ohio;OH Senate District 9
+OH Senate District 10	Ohio;OH Senate District 10
+OH Senate District 11	Ohio;OH Senate District 11
+OH Senate District 12	Ohio;OH Senate District 12
+OH Senate District 13	Ohio;OH Senate District 13
+OH Senate District 14	Ohio;OH Senate District 14
+OH Senate District 15	Ohio;OH Senate District 15
+OH Senate District 16	Ohio;OH Senate District 16
+OH Senate District 17	Ohio;OH Senate District 17
+OH Senate District 18	Ohio;OH Senate District 18
+OH Senate District 19	Ohio;OH Senate District 19
+OH Senate District 20	Ohio;OH Senate District 20
+OH Senate District 21	Ohio;OH Senate District 21
+OH Senate District 22	Ohio;OH Senate District 22
+OH Senate District 23	Ohio;OH Senate District 23
+OH Senate District 24	Ohio;OH Senate District 24
+OH Senate District 25	Ohio;OH Senate District 25
+OH Senate District 26	Ohio;OH Senate District 26
+OH Senate District 27	Ohio;OH Senate District 27
+OH Senate District 28	Ohio;OH Senate District 28
+OH Senate District 29	Ohio;OH Senate District 29
+OH Senate District 30	Ohio;OH Senate District 30
+OH Senate District 31	Ohio;OH Senate District 31
+OH Senate District 32	Ohio;OH Senate District 32
+OH Senate District 33	Ohio;OH Senate District 33
+US House OH District 1	Ohio;US House OH District 1
+US House OH District 2	Ohio;US House OH District 2
+US House OH District 3	Ohio;US House OH District 3
+US House OH District 4	Ohio;US House OH District 4
+US House OH District 5	Ohio;US House OH District 5
+US House OH District 6	Ohio;US House OH District 6
+US House OH District 7	Ohio;US House OH District 7
+US House OH District 8	Ohio;US House OH District 8
+US House OH District 9	Ohio;US House OH District 9
+US House OH District 10	Ohio;US House OH District 10
+US House OH District 11	Ohio;US House OH District 11
+US House OH District 12	Ohio;US House OH District 12
+US House OH District 13	Ohio;US House OH District 13
+US House OH District 14	Ohio;US House OH District 14
+US House OH District 15	Ohio;US House OH District 15
+US House OH District 16	Ohio;US House OH District 16
+US President (OH)	Ohio
+OH Governor	Ohio
+US Senate OH	Ohio
+OH Attorney General	Ohio
+OH Lieutenant Governor	Ohio
+OH Treasurer of State	Ohio
+OH Auditor of State	Ohio
+OH Secretary of State	Ohio

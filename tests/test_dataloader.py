@@ -133,6 +133,7 @@ ok = {
 
 print(ok)
 
+
 @pytest.mark.skipif(not ok["nc16g"], reason="No NC 2016 General data")
 def test_nc_presidential():
     assert(
@@ -192,6 +193,7 @@ def test_nc_contest_by_vote_type():
 @pytest.mark.skipif(not ok["nc16g"], reason="No NC 2016 General data")
 def test_nc_totals_match_vote_type():
     assert check_totals_match_vote_types("2016 General", "North Carolina") == True
+
 
 
 @pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
@@ -731,6 +733,7 @@ def test_de_totals_match_vote_type():
     assert check_totals_match_vote_types("2020 Presidential Preference Primary", "Delaware") == True
 
 
+
 @pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
 def test_il_presidential():
     assert(
@@ -873,3 +876,4 @@ def test_nc_contest_by_vote_type():
 @pytest.mark.skipif(not ok["il20p"], reason="No IL 2020 Primary data")
 def test_nc_totals_match_vote_type():
     assert True == True
+
