@@ -1,2 +1,0 @@
-Name	ElectionDistrict	Election
-CITY BOND QUESTION (Bill No. 180552)	Pennsylvania;Philadelphia	2018 General Election
