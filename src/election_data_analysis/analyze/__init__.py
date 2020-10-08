@@ -187,6 +187,10 @@ def create_scatter(
     pivot_df = pd.pivot_table(
         unsummed, values="Count", index=["Name"], columns="Selection"
     ).reset_index()
+    pivot_df = pivot_df.dropna()
+    if pivot_df.empty:
+        connection.close()
+        return None
 
     # package up results
     results = package_results(pivot_df, jurisdiction, x, y)
