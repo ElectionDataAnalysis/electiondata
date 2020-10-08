@@ -844,3 +844,7 @@ def test_il_statewide_totals():
         )
         == 1941286
     )
+
+@pytest.mark.skipif(not ok["il18g"], reason="No IL 2018 General data")
+def test_il_senate_totals():
+    assert True == True
