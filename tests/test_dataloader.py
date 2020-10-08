@@ -767,9 +767,9 @@ def test_il_rep():
         check_contest_totals(
             "2016 General",
             "Illinois",
-            "US House IL District 6",
+            "IL Senate District 14",
         )
-        == 352146
+        == 79949
     )
 
 @pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
