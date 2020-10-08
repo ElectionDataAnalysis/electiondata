@@ -782,8 +782,6 @@ def test_nc_contest_by_vote_type():
 def test_nc_totals_match_vote_type():
     assert True == True
 
-"""
-
 @pytest.mark.skipif(not ok["il18g"], reason="No IL 2018 General data")
 def test_il_presidential():
     assert True == True
@@ -825,14 +823,24 @@ def test_nc_totals_match_vote_type():
 
 
 """
-@pytest.mark.skipif(not ok["il20p"], reason="No IL 2020 General data")
+@pytest.mark.skipif(not ok["il20p"], reason="No IL 2020 Primary data")
+def test_il_presidential():
+    assert(
+        check_contest_totals(
+            "2020 Primary",
+            "Illinois",
+            "US President (IL)",
+        )
+        == 2216933
+    )
+
+@pytest.mark.skipif(not ok["il20p"], reason="No IL 2020 Primary data")
 def test_il_statewide_totals():
     assert(
         check_contest_totals(
-            "2020 General",
+            "2020 Primary",
             "Illinois",
-            "IL House District 26",
+            "US Senate IL",
         )
-        == 17378
+        == 1941286
     )
-"""
