@@ -3571,6 +3571,7 @@ CandidateContest	US House GA District 14	US House Dist 14
 CandidateContest	US House GA District 14	U.S. Representative, District 14
 CandidateContest	US President (GA)	President of the United States
 CandidateContest	US Senate GA	US Senate
+CandidateContest	US Senate GA	United States Senator, Isakson
 CandidateContest	GA Attorney General	Attorney General
 CandidateContest	GA Governor	Governor
 CandidateContest	GA Lieutenant Governor	Lieutenant Governor

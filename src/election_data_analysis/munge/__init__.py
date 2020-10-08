@@ -344,7 +344,14 @@ def replace_raw_with_internal_ids(
     raw_identifiers = pd.read_csv(
         os.path.join(juris.path_to_juris_dir, "dictionary.txt"), sep="\t"
     )
+
+    # restrict to the element at hand
     raw_ids_for_element = raw_identifiers[raw_identifiers["cdf_element"] == element]
+
+    if element == "Candidate":
+        # Change all internal candidate names to title case in dictionary
+        raw_ids_for_element["cdf_internal_name"] = raw_ids_for_element.copy()["cdf_internal_name"].str.title()
+        raw_ids_for_element.drop_duplicates(inplace=True)
 
     working = working.merge(
         raw_ids_for_element,
@@ -872,13 +879,21 @@ def raw_elements_to_cdf(
                 if ui.fatal_error(new_err):
                     return err
                 working.drop(t, axis=1, inplace=True)
+        except KeyError as exc:
+            err = ui.add_new_error(
+                err,
+                "system",
+                "munge.raw_elements_to_cdf",
+                f"KeyError ({exc}) while adding internal ids for {t}.",
+            )
         except Exception as exc:
             err = ui.add_new_error(
                 err,
                 "system",
                 "munge.raw_elements_to_cdf",
-                f"Exception while adding internal ids for {t}.",
+                f"Exception ({exc}) while adding internal ids for {t}.",
             )
+
             return err
 
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
