@@ -745,9 +745,9 @@ def test_nc_statewide_totals():
         check_contest_totals(
             "2016 General",
             "Illinois",
-            "NC Treasurer",
+            "IL Comptroller",
         )
-        == 4502784
+        == 5412543
     )
 
 @pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
