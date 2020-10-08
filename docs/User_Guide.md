@@ -226,7 +226,6 @@ CandidateContest	US House FL District 2	Representative in Congress District 2
     * Some common standard internal database names for CountItemTypes are 'absentee', 'early', 'election-day', 'provisional' and 'total'. You can look at the CountItemType table in the database to see the full list, and you can use any other name you like.
 ```
 cdf_element	cdf_internal_name	raw_identifier_value
-Election	General Election 2018-11-06	11/6/18
 BallotMeasureSelection	No	No
 BallotMeasureSelection	No	Against
 BallotMeasureSelection	Yes	Yes
