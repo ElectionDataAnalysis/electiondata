@@ -127,7 +127,8 @@ ok = {
     "de20pri": data_exists('2020 Primary','Delaware'),
     "il16g": data_exists('2016 General','Illinois'),
     "il18g": data_exists('2018 General','Illinois'),
-    "il20p": data_exists('2020 Primary','Illinois')
+    "il20p": data_exists('2020 Primary','Illinois'),
+    "oh16g": data_exists('2016 General','Ohio'),
 }
 
 print(ok)
