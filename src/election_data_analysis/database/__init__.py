@@ -423,7 +423,7 @@ def get_name_field(element):
 
 
 def insert_to_cdf_db(
-    engine, df, element, sep="\t", encoding="iso-8859-1", timestamp=None
+    engine, df, element, sep="\t", encoding="utf_8", timestamp=None
 ) -> str:
     """Inserts any new records in <df> into <element>; if <element> has a timestamp column
     it must be specified in <timestamp>; <df> must have columns matching <element>,
