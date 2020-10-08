@@ -2,6 +2,7 @@ from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
 from sqlalchemy.orm import sessionmaker
+from typing import List, Optional
 import datetime
 import os
 import pandas as pd
@@ -310,15 +311,20 @@ class SingleDataLoader:
 
         self.munger_err = ui.consolidate_errors([m_err[mu] for mu in self.munger_list])
 
-    def track_results(self):
+    def track_results(self) -> (List[int], Optional[str]):
         """insert a record for the _datafile, recording any error string <e>.
         Return Id of _datafile.Id and Election.Id"""
         filename = self.d["results_file"]
         top_reporting_unit_id = db.name_to_id(
             self.session, "ReportingUnit", self.d["top_reporting_unit"]
         )
+        if top_reporting_unit_id is None:
+            e = f"No ReportingUnit named {self.d['top_reporting_unit']} found in database"
+            return [0, 0], e
         election_id = db.name_to_id(self.session, "Election", self.d["election"])
-
+        if election_id is None:
+            e = f"No election named {self.d['election']} found in database"
+            return [0, 0], e
         data = pd.DataFrame(
             [
                 [
@@ -343,14 +349,17 @@ class SingleDataLoader:
                 "created_at",
             ],
         )
-        e = db.insert_to_cdf_db(self.session.bind, data, "_datafile")
-        if e:
-            return [0, 0], e
-        else:
-            col_map = {"short_name": "short_name"}
-            datafile_id = db.append_id_to_dframe(
-                self.session.bind, data, "_datafile", col_map=col_map
-            ).iloc[0]["_datafile_Id"]
+        try:
+            e = db.insert_to_cdf_db(self.session.bind, data, "_datafile")
+            if e:
+                return [0, 0], e
+            else:
+                col_map = {"short_name": "short_name"}
+                datafile_id = db.append_id_to_dframe(
+                    self.session.bind, data, "_datafile", col_map=col_map
+                ).iloc[0]["_datafile_Id"]
+        except Exception as exc:
+            return [0, 0], f"Error inserting record to _datafile table or retrieving _datafile_Id: {exc}"
         return [datafile_id, election_id], e
 
     def load_results(self) -> dict:
@@ -360,7 +369,11 @@ class SingleDataLoader:
         results_info, e = self.track_results()
         if e:
             err = ui.add_new_error(
-                err, "system", "SingleDataLoader.load_results", f"database error: {e}"
+                err,
+                "system",
+                "SingleDataLoader.load_results",
+                f"Error inserting _datafile record:\n{e}"
+                f" "
             )
             return err
 
