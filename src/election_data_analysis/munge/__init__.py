@@ -344,7 +344,26 @@ def replace_raw_with_internal_ids(
     raw_identifiers = pd.read_csv(
         os.path.join(juris.path_to_juris_dir, "dictionary.txt"), sep="\t"
     )
+
+    # restrict to the element at hand
     raw_ids_for_element = raw_identifiers[raw_identifiers["cdf_element"] == element]
+
+    if element == "Candidate":
+        # Change all internal candidate names to title case in dictionary
+        raw_ids_for_element["cdf_internal_name"] = raw_ids_for_element["cdf_internal_name"].str.title()
+        raw_ids_for_element.drop_duplicates(inplace=True)
+
+        # Change all internal candidate names in working to title case
+        #  except 'none or unknown
+        working.loc[
+            working[internal_name_column] != "none or unknown",
+            internal_name_column
+        ] = working.loc[
+            working[internal_name_column] != "none or unknown",
+            internal_name_column
+        ].str.title()
+
+        working[internal_name_column] = working[internal_name_column].str.title()
 
     working = working.merge(
         raw_ids_for_element,

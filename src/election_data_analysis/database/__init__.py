@@ -23,6 +23,7 @@ import re
 from election_data_analysis.database import create_cdf_db as db_cdf
 import os
 from sqlalchemy import MetaData, Table, Column, Integer, Float
+from typing import Optional, List
 
 states = """Alabama
 Alaska
@@ -429,8 +430,20 @@ def insert_to_cdf_db(
     it must be specified in <timestamp>; <df> must have columns matching <element>,
     except Id and <timestamp> if any. Returns an error message (or None)"""
 
-    # initialize connection and cursor
+    # clean data
     working, err_df = m.generic_clean(df)
+    if element == "Candidate":
+        # enforce title case, except for 'none or unknown'
+        working.loc[
+            working.BallotName != "none or unknown",
+            "BallotName"
+        ] = working.loc[
+            working.BallotName != "none or unknown",
+            "BallotName"
+        ].str.title()
+        working.drop_duplicates(inplace=True)
+
+    # initialize connection and cursor
     connection = engine.raw_connection()
     cursor = connection.cursor()
 
@@ -559,12 +572,19 @@ def table_named_to_avoid_conflict(engine, prefix: str) -> str:
 
 
 def append_id_to_dframe(
-    engine: sqlalchemy.engine, df: pd.DataFrame, table, col_map=None
+    engine: sqlalchemy.engine, df: pd.DataFrame, element: str, col_map: Optional[dict] = None
 ) -> pd.DataFrame:
     """Using <col_map> to map columns of <df> onto defining columns of <table>, returns
     a copy of <df> with appended column <table>_Id. Unmatched items returned with null value for <table>_Id"""
     if col_map is None:
-        col_map = {table: get_name_field(table)}
+        col_map = {element: get_name_field(element)}
+
+    if element == "Candidate":
+        # enforce title case
+        for k, v in col_map.items():
+            if v == "BallotName" and k in df.columns:
+                df[k] = df[k].str.title()
+
     connection = engine.raw_connection()
 
     temp_table = table_named_to_avoid_conflict(engine, "__temp_append")
@@ -589,7 +609,7 @@ def append_id_to_dframe(
     q = sql.SQL(
         "SELECT t.*, tt.dataframe_index FROM {tt} tt LEFT JOIN {t} t ON {on_clause}"
     ).format(
-        tt=sql.Identifier(temp_table), t=sql.Identifier(table), on_clause=on_clause
+        tt=sql.Identifier(temp_table), t=sql.Identifier(element), on_clause=on_clause
     )
     w, err_df = m.generic_clean(pd.read_sql_query(q, connection).set_index("dataframe_index"))
 
@@ -599,7 +619,7 @@ def append_id_to_dframe(
     cur.execute(q)
     connection.commit()
     connection.close()
-    return df.join(w[["Id"]]).rename(columns={"Id": f"{table}_Id"})
+    return df.join(w[["Id"]]).rename(columns={"Id": f"{element}_Id"})
 
 
 def get_column_names(cursor, table: str) -> (list, dict):
