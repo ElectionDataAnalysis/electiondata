@@ -855,3 +855,22 @@ def test_il_state_senate_totals():
         )
         == 22716
     )
+
+@pytest.mark.skipif(not ok["il20p"], reason="No IL 2020 Primary data")
+def test_il_state_rep_totals():
+    assert(
+        check_contest_totals(
+            "2020 Primary",
+            "Illinois",
+            "IL House District 60",
+        )
+        == 8888
+    )
+
+@pytest.mark.skipif(not ok["il20p"], reason="No IL 2020 Primary data")
+def test_nc_contest_by_vote_type():
+    assert True == True
+
+@pytest.mark.skipif(not ok["il20p"], reason="No IL 2020 Primary data")
+def test_nc_totals_match_vote_type():
+    assert True == True
