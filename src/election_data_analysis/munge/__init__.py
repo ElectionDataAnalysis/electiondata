@@ -350,20 +350,8 @@ def replace_raw_with_internal_ids(
 
     if element == "Candidate":
         # Change all internal candidate names to title case in dictionary
-        raw_ids_for_element["cdf_internal_name"] = raw_ids_for_element["cdf_internal_name"].str.title()
+        raw_ids_for_element["cdf_internal_name"] = raw_ids_for_element.copy()["cdf_internal_name"].str.title()
         raw_ids_for_element.drop_duplicates(inplace=True)
-
-        # Change all internal candidate names in working to title case
-        #  except 'none or unknown
-        working.loc[
-            working[internal_name_column] != "none or unknown",
-            internal_name_column
-        ] = working.loc[
-            working[internal_name_column] != "none or unknown",
-            internal_name_column
-        ].str.title()
-
-        working[internal_name_column] = working[internal_name_column].str.title()
 
     working = working.merge(
         raw_ids_for_element,
@@ -891,13 +879,21 @@ def raw_elements_to_cdf(
                 if ui.fatal_error(new_err):
                     return err
                 working.drop(t, axis=1, inplace=True)
+        except KeyError as exc:
+            err = ui.add_new_error(
+                err,
+                "system",
+                "munge.raw_elements_to_cdf",
+                f"KeyError ({exc}) while adding internal ids for {t}.",
+            )
         except Exception as exc:
             err = ui.add_new_error(
                 err,
                 "system",
                 "munge.raw_elements_to_cdf",
-                f"Exception while adding internal ids for {t}.",
+                f"Exception ({exc}) while adding internal ids for {t}.",
             )
+
             return err
 
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)

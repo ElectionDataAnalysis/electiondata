@@ -437,7 +437,7 @@ def insert_to_cdf_db(
         working.loc[
             working.BallotName != "none or unknown",
             "BallotName"
-        ] = working.loc[
+        ] = working.copy().loc[
             working.BallotName != "none or unknown",
             "BallotName"
         ].str.title()
