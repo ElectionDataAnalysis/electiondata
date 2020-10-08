@@ -172,7 +172,6 @@ California;US House CA District 50	congressional
 California;US House CA District 51	congressional
 California;US House CA District 52	congressional
 California;US House CA District 53	congressional
-
 California	state
 California;Alameda County	county
 California;Alpine County	county

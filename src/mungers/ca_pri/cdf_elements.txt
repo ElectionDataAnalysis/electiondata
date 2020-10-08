@@ -1,5 +1,5 @@
 name	raw_identifier_formula	source
-ReportingUnit	<COUNTY_NAME>;<CONTEST_NAME>	row
+ReportingUnit	<COUNTY_NAME>	row
 Party	<PARTY_NAME>	row
 CandidateContest	<CONTEST_NAME>	row
 Candidate	<CANDIDATE_NAME>	row
