@@ -346,7 +346,7 @@ def replace_raw_with_internal_ids(
     )
 
     # restrict to the element at hand
-    raw_ids_for_element = raw_identifiers[raw_identifiers["cdf_element"] == element]
+    raw_ids_for_element = raw_identifiers[raw_identifiers["cdf_element"] == element].copy()
 
     if element == "Candidate":
         # Change all internal candidate names to title case in dictionary
