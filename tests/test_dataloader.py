@@ -131,7 +131,7 @@ ok = {
 }
 
 print(ok)
-"""
+
 @pytest.mark.skipif(not ok["nc16g"], reason="No NC 2016 General data")
 def test_nc_presidential():
     assert(
@@ -821,8 +821,6 @@ def test_nc_totals_match_vote_type():
     assert True == True
 
 
-
-"""
 @pytest.mark.skipif(not ok["il20p"], reason="No IL 2020 Primary data")
 def test_il_presidential():
     assert(
