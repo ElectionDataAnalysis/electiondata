@@ -845,6 +845,13 @@ def test_il_statewide_totals():
         == 1941286
     )
 
-@pytest.mark.skipif(not ok["il18g"], reason="No IL 2018 General data")
-def test_il_senate_totals():
-    assert True == True
+@pytest.mark.skipif(not ok["il20p"], reason="No IL 2020 Primary data")
+def test_il_state_senate_totals():
+    assert(
+        check_contest_totals(
+            "2020 Primary",
+            "Illinois",
+            "IL Senate District 11",
+        )
+        == 22716
+    )
