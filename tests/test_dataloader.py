@@ -740,7 +740,7 @@ def test_il_presidential():
     )
 
 @pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
-def test_nc_statewide_totals():
+def test_il_statewide_totals():
     assert(
         check_contest_totals(
             "2016 General",
@@ -751,14 +751,14 @@ def test_nc_statewide_totals():
     )
 
 @pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
-def test_nc_senate_totals():
+def test_il_senate_totals():
     assert (
         check_contest_totals(
             "2016 General",
             "Illinois",
-            "US Senate NC",
+            "US Senate IL",
         )
-        == 4691133
+        == 5491878
     )
 
 @pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
