@@ -129,7 +129,8 @@ ok = {
     "pa16g": data_exists('2016 General','Pennsylvania'),
     "ga18g": data_exists('2018 General','Georgia'),
     "sc20ppp": data_exists('2020 President Preference Primary','South Carolina'),
-    "in16g": data_exists('2016 General','Indiana')
+    "in16g": data_exists('2016 General','Indiana'),
+    "ar18g": data_exists('2018 General','Arkansas'),
     "oh16g": data_exists('2016 General','Ohio'),
     "il16g": data_exists('2016 General','Illinois'),
     "il18g": data_exists('2018 General','Illinois'),
@@ -458,11 +459,12 @@ def test_in_totals_match_vote_type():
 
 
 ### Arkansas Data Loading Tests ###
+@pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
 def test_ar_presidential():
     #no presidential contests in 2018
     assert True == True
 
-
+@pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
 def test_ar_statewide_totals():
     assert (
         check_contest_totals(
@@ -473,7 +475,7 @@ def test_ar_statewide_totals():
         == 891509
     )
 
-
+@pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
 def test_ar_senate_totals():
     assert (
         check_contest_totals(
@@ -484,7 +486,7 @@ def test_ar_senate_totals():
         == 27047
     )
 
-
+@pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
 def test_ar_house_totals():
     assert (
         check_contest_totals(
@@ -495,7 +497,7 @@ def test_ar_house_totals():
         == 7927
     )
 
-
+@pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
 def test_ar_contest_by_vote_type():
     assert (
         check_count_type_totals(
@@ -507,13 +509,13 @@ def test_ar_contest_by_vote_type():
         == 453
     )
 
-
+@pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
 def test_ar_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "Arkansas") == True
 
 
 ### Michigan Data Loading Tests ###
-def test_ar_presidential():
+def test_mi_presidential():
     #no presidential contests in 2018
     assert True == True
 
