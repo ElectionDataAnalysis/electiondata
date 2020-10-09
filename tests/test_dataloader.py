@@ -128,6 +128,8 @@ ok = {
     "fl16g": data_exists('2016 General','Florida'),
     "pa16g": data_exists('2016 General','Pennsylvania'),
     "ga18g": data_exists('2018 General','Georgia'),
+    "sc20ppp": data_exists('2020 President Preference Primary','South Carolina'),
+    "in16g": data_exists('2016 General','Indiana')
     "oh16g": data_exists('2016 General','Ohio'),
     "il16g": data_exists('2016 General','Illinois'),
     "il18g": data_exists('2018 General','Illinois'),
@@ -368,35 +370,39 @@ def test_ga_totals_match_vote_type():
 
 
 ### South Carolina Data Loading Tests ###
+@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_presidential():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
-
+@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_statewide_totals():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
+@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_senate_totals():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
+@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_house_totals():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
-
+@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_contest_by_vote_type():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
-
+@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_totals_match_vote_type():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
 
 ### Indiana Data Loading Tests ###
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_in_presidential():
     assert (
         check_contest_totals(
