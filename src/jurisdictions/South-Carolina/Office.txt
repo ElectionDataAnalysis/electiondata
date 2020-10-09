@@ -178,6 +178,7 @@ US House SC District 6	South Carolina;US House SC District 6
 US House SC District 7	South Carolina;US House SC District 7
 US President (SC)	South Carolina
 SC Governor	South Carolina
+SC Secretary of State	South Carolina
 US Senate SC	South Carolina
 SC Attorney General	South Carolina
 SC Lieutenant Governor	South Carolina

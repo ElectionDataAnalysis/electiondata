@@ -360,11 +360,8 @@ CandidateContest	SC Governor	Governor and Lieutenant Governor
 CandidateContest	US Senate SC	U.S. Senate
 CandidateContest	SC Attorney General	SC Attorney General
 CandidateContest	SC Attorney General	Attorney General
-CandidateContest	SC Secretary of State	SC Secretary of State
 CandidateContest	SC Secretary of State	Secretary of State
-CandidateContest	SC Lieutenant Governor	SC Lieutenant Governor
-CandidateContest	SC Treasurer	SC Treasurer
-CandidateContest	SC Treasurer	State Treasurer (Vote For 1)
+CandidateContest	SC Treasurer	State Treasurer
 CandidateContest	SC Adjutant General	SC Adjutant General
 CandidateContest	SC Commissioner of Agriculture	SC Commissioner of Agriculture
 CandidateContest	SC Commissioner of Agriculture	Commissioner of Agriculture
@@ -805,3 +802,253 @@ Candidate	Bernie Sanders	Bernie Sanders
 Candidate	Tom Steyer	Tom Steyer
 Candidate	Elizabeth Warren	Elizabeth Warren
 Candidate	Andrew Yang - WITHDREW	Andrew Yang - WITHDREW
+Candidate	James Smith / Mandy Powers Norrell	James Smith / Mandy Powers Norrell
+Candidate	Henry McMaster / Pamela Evette	Henry McMaster / Pamela Evette
+Candidate	Write-In	Write-In
+Candidate	Melvin T Whittenburg	Melvin T Whittenburg
+Candidate	Mark Hammond	Mark Hammond
+Candidate	Rosalyn L Glenn	Rosalyn L Glenn
+Candidate	Rosalyn Glenn	Rosalyn Glenn
+Candidate	Curtis Loftis	Curtis Loftis
+Candidate	Sarah Work	Sarah Work
+Candidate	Constance Anastopoulo	Constance Anastopoulo
+Candidate	Alan Wilson	Alan Wilson
+Candidate	Richard Eckstrom	Richard Eckstrom
+Candidate	Molly Mitchell Spearman	Molly Mitchell Spearman
+Candidate	Chris Nelums	Chris Nelums
+Candidate	David Edmond	David Edmond
+Candidate	Hugh Weathers	Hugh Weathers
+Candidate	Joe Cunningham	Joe Cunningham
+Candidate	Katie Arrington	Katie Arrington
+Candidate	Sean Carrigan	Sean Carrigan
+Candidate	Sonny Narang	Sonny Narang
+Candidate	Mary Geren	Mary Geren
+Candidate	Jeff Duncan	Jeff Duncan
+Candidate	Dave Moore	Dave Moore
+Candidate	Brandon P Brown	Brandon P Brown
+Candidate	William Timmons	William Timmons
+Candidate	Guy V Furay	Guy V Furay
+Candidate	Archie Parnell	Archie Parnell
+Candidate	Michael Chandler	Michael Chandler
+Candidate	Ralph W Norman	Ralph W Norman
+Candidate	James E Jim Clyburn	James E Jim Clyburn
+Candidate	Bryan Pugh	Bryan Pugh
+Candidate	Gerhard R Gressmann	Gerhard R Gressmann
+Candidate	Tom Rice	Tom Rice
+Candidate	Dick Harpootlian	Dick Harpootlian
+Candidate	Bill Whitmire	Bill Whitmire
+Candidate	Jody G Gaulin	Jody G Gaulin
+Candidate	Bill Sandifer	Bill Sandifer
+Candidate	Gary Clary	Gary Clary
+Candidate	Davey Hiott	Davey Hiott
+Candidate	Brian White	Brian White
+Candidate	Ryan Cowsert	Ryan Cowsert
+Candidate	WRITE-IN	WRITE-IN
+Candidate	Jay West	Jay West
+Candidate	Anne Thayer	Anne Thayer
+Candidate	Lucy Hoffman	Lucy Hoffman
+Candidate	Devon D Smith	Devon D Smith
+Candidate	Craig A Gagnon	Craig A Gagnon
+Candidate	Anne Parks	Anne Parks
+Candidate	Michael Gaskin	Michael Gaskin
+Candidate	John McCravy	John McCravy
+Candidate	Mike Pitts	Mike Pitts
+Candidate	JA Moore	JA Moore
+Candidate	Samuel Rivers Jr	Samuel Rivers Jr
+Candidate	Mark N Willis	Mark N Willis
+Candidate	Judi Buckley	Judi Buckley
+Candidate	Mike Burns	Mike Burns
+Candidate	Carrie Counton	Carrie Counton
+Candidate	Dwight Loftis	Dwight Loftis
+Candidate	Adam Morgan	Adam Morgan
+Candidate	Bobby Cox	Bobby Cox
+Candidate	B K Brown	B K Brown
+Candidate	Jason Elliott	Jason Elliott
+Candidate	Chandra Dillard	Chandra Dillard
+Candidate	Bruce Bannister	Bruce Bannister
+Candidate	Leola Robinson-Simpson	Leola Robinson-Simpson
+Candidate	Tony Boyce	Tony Boyce
+Candidate	John Kraljevich	John Kraljevich
+Candidate	Raye Felder	Raye Felder
+Candidate	Garry R Smith	Garry R Smith
+Candidate	Ashley Trantham	Ashley Trantham
+Candidate	Dennis Moss	Dennis Moss
+Candidate	Steve Moss	Steve Moss
+Candidate	Rosalyn Henderson-Myers	Rosalyn Henderson-Myers
+Candidate	Max Hyde	Max Hyde
+Candidate	Eddie Tallon	Eddie Tallon
+Candidate	Mike Forrester	Mike Forrester
+Candidate	Helen Pendarvis	Helen Pendarvis
+Candidate	Rita Allison	Rita Allison
+Candidate	Steven Long	Steven Long
+Candidate	Josiah Magnuson	Josiah Magnuson
+Candidate	Cal Forrest	Cal Forrest
+Candidate	Richard Rick Martin	Richard Rick Martin
+Candidate	Fred Kennedy	Fred Kennedy
+Candidate	Tom Hawk	Tom Hawk
+Candidate	Randy Ligon	Randy Ligon
+Candidate	Mandy Powers Norrell	Mandy Powers Norrell
+Candidate	Corin Buskey	Corin Buskey
+Candidate	Brandon Newton	Brandon Newton
+Candidate	Carl Kenny Dicks	Carl Kenny Dicks
+Candidate	Gary Simrill	Gary Simrill
+Candidate	Marty R Cotton	Marty R Cotton
+Candidate	Thomas E Tommy Pope	Thomas E Tommy Pope
+Candidate	Vickie Holt	Vickie Holt
+Candidate	Bruce M Bryant	Bruce M Bryant
+Candidate	John R King	John R King
+Candidate	Johnny Walker	Johnny Walker
+Candidate	Will Wheeler	Will Wheeler
+Candidate	David Weeks	David Weeks
+Candidate	Laurie Slade Funderburk	Laurie Slade Funderburk
+Candidate	Penry Gustafson	Penry Gustafson
+Candidate	Richie Yow	Richie Yow
+Candidate	Patricia Pat Moore Henegan	Patricia Pat Moore Henegan
+Candidate	Jackie E Hayes	Jackie E Hayes
+Candidate	Tim McGinnis	Tim McGinnis
+Candidate	Jeff Johnson	Jeff Johnson
+Candidate	Terry Alexander	Terry Alexander
+Candidate	Devon Justin Long	Devon Justin Long
+Candidate	Phillip Lowe	Phillip Lowe
+Candidate	Roger K Kirby	Roger K Kirby
+Candidate	Billy Baldwin	Billy Baldwin
+Candidate	Mike Brank	Mike Brank
+Candidate	Jay Jordan	Jay Jordan
+Candidate	Robert L Ridgeway III	Robert L Ridgeway III
+Candidate	Jay Lucas	Jay Lucas
+Candidate	Gilda Cobb-Hunter	Gilda Cobb-Hunter
+Candidate	Tom Connor	Tom Connor
+Candidate	Murrell Smith	Murrell Smith
+Candidate	Brandon Humphries	Brandon Humphries
+Candidate	Cameron Ventura	Cameron Ventura
+Candidate	Beth Ann Rocheleau	Beth Ann Rocheleau
+Candidate	Chris Wooten	Chris Wooten
+Candidate	David Morris	David Morris
+Candidate	Wendy C Brawley	Wendy C Brawley
+Candidate	Nathan Ballentine	Nathan Ballentine
+Candidate	Seth Rose	Seth Rose
+Candidate	Chris Hart	Chris Hart
+Candidate	Ralph Bell	Ralph Bell
+Candidate	J Todd Rutherford	J Todd Rutherford
+Candidate	Michael L Block	Michael L Block
+Candidate	John Crangle	John Crangle
+Candidate	Kirkman Finlay III	Kirkman Finlay III
+Candidate	Leon Howard	Leon Howard
+Candidate	Kambrell Garvin	Kambrell Garvin
+Candidate	Justin Bishop	Justin Bishop
+Candidate	Beth Bernstein	Beth Bernstein
+Candidate	Ivory Thigpen	Ivory Thigpen
+Candidate	Victor Kocher	Victor Kocher
+Candidate	Elise Fox	Elise Fox
+Candidate	Bart Blackwell	Bart Blackwell
+Candidate	William Bill Clyburn	William Bill Clyburn
+Candidate	Bill Hixon	Bill Hixon
+Candidate	David Weikle	David Weikle
+Candidate	Jennifer Cook Lariscey	Jennifer Cook Lariscey
+Candidate	Ronnie Young	Ronnie Young
+Candidate	Sam Edwards	Sam Edwards
+Candidate	Chip Huggins	Chip Huggins
+Candidate	Bill Taylor	Bill Taylor
+Candidate	Diane Summers	Diane Summers
+Candidate	Paula Rawl Calhoon	Paula Rawl Calhoon
+Candidate	Mac Toole	Mac Toole
+Candidate	Micah Caskey	Micah Caskey
+Candidate	Lonnie Hosey	Lonnie Hosey
+Candidate	Joe Daning	Joe Daning
+Candidate	Russell L Ott	Russell L Ott
+Candidate	Terry L Kiser Sr	Terry L Kiser Sr
+Candidate	Con Chellis	Con Chellis
+Candidate	Chester D Palmer	Chester D Palmer
+Candidate	Bob Vanlue	Bob Vanlue
+Candidate	Patsy G Knight	Patsy G Knight
+Candidate	Mandy W Kimmons	Mandy W Kimmons
+Candidate	Chris Murphy	Chris Murphy
+Candidate	Michael W Yates	Michael W Yates
+Candidate	Sylleste H Davis	Sylleste H Davis
+Candidate	Cezar McKnight	Cezar McKnight
+Candidate	Joe Jefferson	Joe Jefferson
+Candidate	Terry Hardesty	Terry Hardesty
+Candidate	Carl L Anderson	Carl L Anderson
+Candidate	William Bailey	William Bailey
+Candidate	Robin Gause	Robin Gause
+Candidate	Russell Fry	Russell Fry
+Candidate	Lee Hewitt	Lee Hewitt
+Candidate	David Mack III	David Mack III
+Candidate	Rodney Travis	Rodney Travis
+Candidate	Ben Pogue	Ben Pogue
+Candidate	William S Cogswell Jr	William S Cogswell Jr
+Candidate	Joe Preston	Joe Preston
+Candidate	Mike Sottile	Mike Sottile
+Candidate	Dan P Jones	Dan P Jones
+Candidate	Lin Bennett	Lin Bennett
+Candidate	Melissa Couture	Melissa Couture
+Candidate	Peter McCoy	Peter McCoy
+Candidate	Robert L Brown	Robert L Brown
+Candidate	Carroll O'Neal	Carroll O'Neal
+Candidate	Krystle N Simmons	Krystle N Simmons
+Candidate	Leon Stavrinakis	Leon Stavrinakis
+Candidate	Paul Sizemore	Paul Sizemore
+Candidate	Ryan Martz	Ryan Martz
+Candidate	Weston Newton	Weston Newton
+Candidate	Michael F Rivers Sr	Michael F Rivers Sr
+Candidate	Shedron Williams	Shedron Williams
+Candidate	Mario Martinez	Mario Martinez
+Candidate	Shannon Erickson	Shannon Erickson
+Candidate	Ernest Chip Finney III	Ernest Chip Finney III
+Candidate	Byron E Gipson	Byron E Gipson
+Candidate	John Meadors	John Meadors
+Candidate	Randy E Newman Jr	Randy E Newman Jr
+Candidate	Ed Clements III	Ed Clements III
+Candidate	Walt Wilkins	Walt Wilkins
+Candidate	Lucas C Marchant	Lucas C Marchant
+Candidate	Jimmy A Richardson	Jimmy A Richardson
+Candidate	Cindy Prendergast	Cindy Prendergast
+Candidate	Richard T Tripp	Richard T Tripp
+Candidate	Ben Wigington	Ben Wigington
+Candidate	Dennis Claramunt	Dennis Claramunt
+Candidate	Randy Griffis	Randy Griffis
+Candidate	Bill Meder	Bill Meder
+Candidate	Casey Robinson	Casey Robinson
+Candidate	David Tillman	David Tillman
+Candidate	Doug Mixson Sr	Doug Mixson Sr
+Candidate	Wesley Ulmer	Wesley Ulmer
+Candidate	Mark Williams	Mark Williams
+Candidate	Deborah C Hudson	Deborah C Hudson
+Candidate	Deborah W Perry	Deborah W Perry
+Candidate	David A Wheeler	David A Wheeler
+Candidate	Claudia Dean	Claudia Dean
+Candidate	William F Wishert	William F Wishert
+Candidate	Michael W Allen	Michael W Allen
+Candidate	David J Wilson	David J Wilson
+Candidate	Roy D Croxton Jr	Roy D Croxton Jr
+Candidate	Mike Brock	Mike Brock
+Candidate	Kevin T Craft	Kevin T Craft
+Candidate	Alderman Maynard	Alderman Maynard
+Candidate	William R Stu Shirley	William R Stu Shirley
+Candidate	Maxie O Agnew Sr	Maxie O Agnew Sr
+Candidate	Julia Ashley Barnes	Julia Ashley Barnes
+Candidate	Barbara Peck	Barbara Peck
+Candidate	Bonnie Shirley Knight	Bonnie Shirley Knight
+Candidate	Greg Tysl	Greg Tysl
+Candidate	Jimmy Ouzts	Jimmy Ouzts
+Candidate	Tina Marie Scott	Tina Marie Scott
+Candidate	Al C McAbee Jr	Al C McAbee Jr
+Candidate	Ed Poore	Ed Poore
+Candidate	Terry Yates	Terry Yates
+Candidate	Bob Cotter	Bob Cotter
+Candidate	Pat Sudduth	Pat Sudduth
+Candidate	Billy Berry	Billy Berry
+Candidate	Frances K Bouknight	Frances K Bouknight
+Candidate	Cheryl A Burgess	Cheryl A Burgess
+Candidate	Eddie Cogdill	Eddie Cogdill
+Candidate	Gariane P Gunter	Gariane P Gunter
+Candidate	Democratic	Democratic
+Candidate	Working Families	Working Families
+Candidate	United Citizens	United Citizens
+Candidate	Independence	Independence
+Candidate	Green	Green
+Candidate	Republican	Republican
+Candidate	American	American
+Candidate	Constitution	Constitution
+Candidate	Libertarian	Libertarian
+Party	none or unknown	none or unknown

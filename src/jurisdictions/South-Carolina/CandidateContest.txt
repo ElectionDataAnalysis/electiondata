@@ -182,6 +182,7 @@ US Senate SC	1	US Senate SC
 SC Attorney General	1	SC Attorney General	
 SC Lieutenant Governor	1	SC Lieutenant Governor	
 SC Treasurer	1	SC Treasurer	
+SC Secretary of State	1	SC Secretary of State
 SC Adjutant General	1	SC Adjutant General
 SC Commissioner of Agriculture	1	SC Commissioner of Agriculture
 SC State Superintendent of Education	1	SC State Superintendent of Education
