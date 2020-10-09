@@ -159,7 +159,7 @@ def test_nc_statewide_totals():
     )
 
 
-@pytest.mark.skipif(not ok["nc18g"],"No NC 2018 General data")
+@pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
 def test_nc_senate_totals():
     assert (
         check_contest_totals(
