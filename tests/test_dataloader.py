@@ -140,7 +140,69 @@ ok = {
 
 print(ok)
 
-### NC 18 general tests
+### NC dataloading tests ###
+#NC16 tests
+@pytest.mark.skipif(not ok["nc16g"], reason="No NC 2016 General data")
+def test_nc_presidential():
+    assert(
+        check_contest_totals(
+            "2016 General",
+            "North Carolina",
+            "US President (NC)",
+        )
+        == 4741564
+    )
+
+@pytest.mark.skipif(not ok["nc16g"], reason="No NC 2016 General data")
+def test_nc_statewide_totals():
+    assert(
+        check_contest_totals(
+            "2016 General",
+            "North Carolina",
+            "NC Treasurer",
+        )
+        == 4502784
+    )
+
+@pytest.mark.skipif(not ok["nc16g"], reason="No NC 2016 General data")
+def test_nc_senate_totals():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "North Carolina",
+            "US Senate NC",
+        )
+        == 4691133
+    )
+
+@pytest.mark.skipif(not ok["nc16g"], reason="No NC 2016 General data")
+def test_nc_rep():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "North Carolina",
+            "US House NC District 4",
+        )
+        == 409541
+    )
+
+@pytest.mark.skipif(not ok["nc16g"], reason="No NC 2016 General data")
+def test_nc_contest_by_vote_type():
+    assert (
+        check_count_type_totals(
+            "2016 General",
+            "North Carolina",
+            "US House NC District 4",
+            "absentee-mail",
+        )
+        == 20881
+    )
+
+@pytest.mark.skipif(not ok["nc16g"], reason="No NC 2016 General data")
+def test_nc_totals_match_vote_type():
+    assert check_totals_match_vote_types("2016 General", "North Carolina") == True
+
+#NC18 tests
 @pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
 def test_nc_presidential():
     # No presidential contests in 2018
@@ -564,6 +626,7 @@ def test_mi_totals_match_vote_type():
     assert True == True
 
 ### Delaware 2020 Primary Data Loading Tests ###
+"""
 @pytest.mark.skipif(not ok["de20ppp"], reason="No DE 2020 Presidential Preference Primary data")
 def test_de_presidential():
     assert (
@@ -623,7 +686,7 @@ def test_de_contest_by_vote_type():
 @pytest.mark.skipif(not ok["de20ppp"], reason="No DE 2020 Presidential Preference Primary data")
 def test_de_totals_match_vote_type():
     assert check_totals_match_vote_types("2020 Presidential Preference Primary", "Delaware") == True
-
+"""
 
 ## oh 2016g tests
 @pytest.mark.skipif(not ok["oh16g"], reason="No OH 2016 General data")
