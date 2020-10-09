@@ -644,7 +644,7 @@ def test_oh_presidential():
     )
 
 
-# @pytest.mark.skipif(not ok["oh16g"],"No OH 2016 General data")
+@pytest.mark.skipif(not ok["oh16g"], reason="No OH 2016 General data")
 def test_oh_senate_totals():
     assert (
         check_contest_totals(
@@ -682,10 +682,10 @@ def test_oh_contest_by_vote_type():
 
 
 @pytest.mark.skipif(not ok["oh16g"], reason="No OH 2016 General data")
-def test_nc_totals_match_vote_type():
+def test_oh_totals_match_vote_type():
     assert check_totals_match_vote_types("2016 General", "Ohio") == True
 
-#
+### Illinois Data Loading Tests ###
 @pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
 def test_il_presidential():
     assert(
