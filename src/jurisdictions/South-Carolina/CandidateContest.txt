@@ -182,8 +182,2076 @@ US Senate SC	1	US Senate SC
 SC Attorney General	1	SC Attorney General	
 SC Lieutenant Governor	1	SC Lieutenant Governor	
 SC Treasurer	1	SC Treasurer	
-SC Adjutant General	1	SC Adjutant General
-SC Commissioner of Agriculture	1	SC Commissioner of Agriculture
-SC State Superintendent of Education	1	SC State Superintendent of Education
-SC Comptroller General	1	SC Comptroller General
-
+SC Secretary of State	1	SC Secretary of State	
+SC Adjutant General	1	SC Adjutant General	
+SC Commissioner of Agriculture	1	SC Commissioner of Agriculture	
+SC State Superintendent of Education	1	SC State Superintendent of Education	
+SC Comptroller General	1	SC Comptroller General	
+SC House District 1 (Democratic Party)	1	SC House District 1	Democratic Party
+SC House District 2 (Democratic Party)	1	SC House District 2	Democratic Party
+SC House District 3 (Democratic Party)	1	SC House District 3	Democratic Party
+SC House District 4 (Democratic Party)	1	SC House District 4	Democratic Party
+SC House District 5 (Democratic Party)	1	SC House District 5	Democratic Party
+SC House District 6 (Democratic Party)	1	SC House District 6	Democratic Party
+SC House District 7 (Democratic Party)	1	SC House District 7	Democratic Party
+SC House District 8 (Democratic Party)	1	SC House District 8	Democratic Party
+SC House District 9 (Democratic Party)	1	SC House District 9	Democratic Party
+SC House District 10 (Democratic Party)	1	SC House District 10	Democratic Party
+SC House District 11 (Democratic Party)	1	SC House District 11	Democratic Party
+SC House District 12 (Democratic Party)	1	SC House District 12	Democratic Party
+SC House District 13 (Democratic Party)	1	SC House District 13	Democratic Party
+SC House District 14 (Democratic Party)	1	SC House District 14	Democratic Party
+SC House District 15 (Democratic Party)	1	SC House District 15	Democratic Party
+SC House District 16 (Democratic Party)	1	SC House District 16	Democratic Party
+SC House District 17 (Democratic Party)	1	SC House District 17	Democratic Party
+SC House District 18 (Democratic Party)	1	SC House District 18	Democratic Party
+SC House District 19 (Democratic Party)	1	SC House District 19	Democratic Party
+SC House District 20 (Democratic Party)	1	SC House District 20	Democratic Party
+SC House District 21 (Democratic Party)	1	SC House District 21	Democratic Party
+SC House District 22 (Democratic Party)	1	SC House District 22	Democratic Party
+SC House District 23 (Democratic Party)	1	SC House District 23	Democratic Party
+SC House District 24 (Democratic Party)	1	SC House District 24	Democratic Party
+SC House District 25 (Democratic Party)	1	SC House District 25	Democratic Party
+SC House District 26 (Democratic Party)	1	SC House District 26	Democratic Party
+SC House District 27 (Democratic Party)	1	SC House District 27	Democratic Party
+SC House District 28 (Democratic Party)	1	SC House District 28	Democratic Party
+SC House District 29 (Democratic Party)	1	SC House District 29	Democratic Party
+SC House District 30 (Democratic Party)	1	SC House District 30	Democratic Party
+SC House District 31 (Democratic Party)	1	SC House District 31	Democratic Party
+SC House District 32 (Democratic Party)	1	SC House District 32	Democratic Party
+SC House District 33 (Democratic Party)	1	SC House District 33	Democratic Party
+SC House District 34 (Democratic Party)	1	SC House District 34	Democratic Party
+SC House District 35 (Democratic Party)	1	SC House District 35	Democratic Party
+SC House District 36 (Democratic Party)	1	SC House District 36	Democratic Party
+SC House District 37 (Democratic Party)	1	SC House District 37	Democratic Party
+SC House District 38 (Democratic Party)	1	SC House District 38	Democratic Party
+SC House District 39 (Democratic Party)	1	SC House District 39	Democratic Party
+SC House District 40 (Democratic Party)	1	SC House District 40	Democratic Party
+SC House District 41 (Democratic Party)	1	SC House District 41	Democratic Party
+SC House District 42 (Democratic Party)	1	SC House District 42	Democratic Party
+SC House District 43 (Democratic Party)	1	SC House District 43	Democratic Party
+SC House District 44 (Democratic Party)	1	SC House District 44	Democratic Party
+SC House District 45 (Democratic Party)	1	SC House District 45	Democratic Party
+SC House District 46 (Democratic Party)	1	SC House District 46	Democratic Party
+SC House District 47 (Democratic Party)	1	SC House District 47	Democratic Party
+SC House District 48 (Democratic Party)	1	SC House District 48	Democratic Party
+SC House District 49 (Democratic Party)	1	SC House District 49	Democratic Party
+SC House District 50 (Democratic Party)	1	SC House District 50	Democratic Party
+SC House District 51 (Democratic Party)	1	SC House District 51	Democratic Party
+SC House District 52 (Democratic Party)	1	SC House District 52	Democratic Party
+SC House District 53 (Democratic Party)	1	SC House District 53	Democratic Party
+SC House District 54 (Democratic Party)	1	SC House District 54	Democratic Party
+SC House District 55 (Democratic Party)	1	SC House District 55	Democratic Party
+SC House District 56 (Democratic Party)	1	SC House District 56	Democratic Party
+SC House District 57 (Democratic Party)	1	SC House District 57	Democratic Party
+SC House District 58 (Democratic Party)	1	SC House District 58	Democratic Party
+SC House District 59 (Democratic Party)	1	SC House District 59	Democratic Party
+SC House District 60 (Democratic Party)	1	SC House District 60	Democratic Party
+SC House District 61 (Democratic Party)	1	SC House District 61	Democratic Party
+SC House District 62 (Democratic Party)	1	SC House District 62	Democratic Party
+SC House District 63 (Democratic Party)	1	SC House District 63	Democratic Party
+SC House District 64 (Democratic Party)	1	SC House District 64	Democratic Party
+SC House District 65 (Democratic Party)	1	SC House District 65	Democratic Party
+SC House District 66 (Democratic Party)	1	SC House District 66	Democratic Party
+SC House District 67 (Democratic Party)	1	SC House District 67	Democratic Party
+SC House District 68 (Democratic Party)	1	SC House District 68	Democratic Party
+SC House District 69 (Democratic Party)	1	SC House District 69	Democratic Party
+SC House District 70 (Democratic Party)	1	SC House District 70	Democratic Party
+SC House District 71 (Democratic Party)	1	SC House District 71	Democratic Party
+SC House District 72 (Democratic Party)	1	SC House District 72	Democratic Party
+SC House District 73 (Democratic Party)	1	SC House District 73	Democratic Party
+SC House District 74 (Democratic Party)	1	SC House District 74	Democratic Party
+SC House District 75 (Democratic Party)	1	SC House District 75	Democratic Party
+SC House District 76 (Democratic Party)	1	SC House District 76	Democratic Party
+SC House District 77 (Democratic Party)	1	SC House District 77	Democratic Party
+SC House District 78 (Democratic Party)	1	SC House District 78	Democratic Party
+SC House District 79 (Democratic Party)	1	SC House District 79	Democratic Party
+SC House District 80 (Democratic Party)	1	SC House District 80	Democratic Party
+SC House District 81 (Democratic Party)	1	SC House District 81	Democratic Party
+SC House District 82 (Democratic Party)	1	SC House District 82	Democratic Party
+SC House District 83 (Democratic Party)	1	SC House District 83	Democratic Party
+SC House District 84 (Democratic Party)	1	SC House District 84	Democratic Party
+SC House District 85 (Democratic Party)	1	SC House District 85	Democratic Party
+SC House District 86 (Democratic Party)	1	SC House District 86	Democratic Party
+SC House District 87 (Democratic Party)	1	SC House District 87	Democratic Party
+SC House District 88 (Democratic Party)	1	SC House District 88	Democratic Party
+SC House District 89 (Democratic Party)	1	SC House District 89	Democratic Party
+SC House District 90 (Democratic Party)	1	SC House District 90	Democratic Party
+SC House District 91 (Democratic Party)	1	SC House District 91	Democratic Party
+SC House District 92 (Democratic Party)	1	SC House District 92	Democratic Party
+SC House District 93 (Democratic Party)	1	SC House District 93	Democratic Party
+SC House District 94 (Democratic Party)	1	SC House District 94	Democratic Party
+SC House District 95 (Democratic Party)	1	SC House District 95	Democratic Party
+SC House District 96 (Democratic Party)	1	SC House District 96	Democratic Party
+SC House District 97 (Democratic Party)	1	SC House District 97	Democratic Party
+SC House District 98 (Democratic Party)	1	SC House District 98	Democratic Party
+SC House District 99 (Democratic Party)	1	SC House District 99	Democratic Party
+SC House District 100 (Democratic Party)	1	SC House District 100	Democratic Party
+SC House District 101 (Democratic Party)	1	SC House District 101	Democratic Party
+SC House District 102 (Democratic Party)	1	SC House District 102	Democratic Party
+SC House District 103 (Democratic Party)	1	SC House District 103	Democratic Party
+SC House District 104 (Democratic Party)	1	SC House District 104	Democratic Party
+SC House District 105 (Democratic Party)	1	SC House District 105	Democratic Party
+SC House District 106 (Democratic Party)	1	SC House District 106	Democratic Party
+SC House District 107 (Democratic Party)	1	SC House District 107	Democratic Party
+SC House District 108 (Democratic Party)	1	SC House District 108	Democratic Party
+SC House District 109 (Democratic Party)	1	SC House District 109	Democratic Party
+SC House District 110 (Democratic Party)	1	SC House District 110	Democratic Party
+SC House District 111 (Democratic Party)	1	SC House District 111	Democratic Party
+SC House District 112 (Democratic Party)	1	SC House District 112	Democratic Party
+SC House District 113 (Democratic Party)	1	SC House District 113	Democratic Party
+SC House District 114 (Democratic Party)	1	SC House District 114	Democratic Party
+SC House District 115 (Democratic Party)	1	SC House District 115	Democratic Party
+SC House District 116 (Democratic Party)	1	SC House District 116	Democratic Party
+SC House District 117 (Democratic Party)	1	SC House District 117	Democratic Party
+SC House District 118 (Democratic Party)	1	SC House District 118	Democratic Party
+SC House District 119 (Democratic Party)	1	SC House District 119	Democratic Party
+SC House District 120 (Democratic Party)	1	SC House District 120	Democratic Party
+SC House District 121 (Democratic Party)	1	SC House District 121	Democratic Party
+SC House District 122 (Democratic Party)	1	SC House District 122	Democratic Party
+SC House District 123 (Democratic Party)	1	SC House District 123	Democratic Party
+SC House District 124 (Democratic Party)	1	SC House District 124	Democratic Party
+SC Senate District 1 (Democratic Party)	1	SC Senate District 1	Democratic Party
+SC Senate District 2 (Democratic Party)	1	SC Senate District 2	Democratic Party
+SC Senate District 3 (Democratic Party)	1	SC Senate District 3	Democratic Party
+SC Senate District 4 (Democratic Party)	1	SC Senate District 4	Democratic Party
+SC Senate District 5 (Democratic Party)	1	SC Senate District 5	Democratic Party
+SC Senate District 6 (Democratic Party)	1	SC Senate District 6	Democratic Party
+SC Senate District 7 (Democratic Party)	1	SC Senate District 7	Democratic Party
+SC Senate District 8 (Democratic Party)	1	SC Senate District 8	Democratic Party
+SC Senate District 9 (Democratic Party)	1	SC Senate District 9	Democratic Party
+SC Senate District 10 (Democratic Party)	1	SC Senate District 10	Democratic Party
+SC Senate District 11 (Democratic Party)	1	SC Senate District 11	Democratic Party
+SC Senate District 12 (Democratic Party)	1	SC Senate District 12	Democratic Party
+SC Senate District 13 (Democratic Party)	1	SC Senate District 13	Democratic Party
+SC Senate District 14 (Democratic Party)	1	SC Senate District 14	Democratic Party
+SC Senate District 15 (Democratic Party)	1	SC Senate District 15	Democratic Party
+SC Senate District 16 (Democratic Party)	1	SC Senate District 16	Democratic Party
+SC Senate District 17 (Democratic Party)	1	SC Senate District 17	Democratic Party
+SC Senate District 18 (Democratic Party)	1	SC Senate District 18	Democratic Party
+SC Senate District 19 (Democratic Party)	1	SC Senate District 19	Democratic Party
+SC Senate District 20 (Democratic Party)	1	SC Senate District 20	Democratic Party
+SC Senate District 21 (Democratic Party)	1	SC Senate District 21	Democratic Party
+SC Senate District 22 (Democratic Party)	1	SC Senate District 22	Democratic Party
+SC Senate District 23 (Democratic Party)	1	SC Senate District 23	Democratic Party
+SC Senate District 24 (Democratic Party)	1	SC Senate District 24	Democratic Party
+SC Senate District 25 (Democratic Party)	1	SC Senate District 25	Democratic Party
+SC Senate District 26 (Democratic Party)	1	SC Senate District 26	Democratic Party
+SC Senate District 27 (Democratic Party)	1	SC Senate District 27	Democratic Party
+SC Senate District 28 (Democratic Party)	1	SC Senate District 28	Democratic Party
+SC Senate District 29 (Democratic Party)	1	SC Senate District 29	Democratic Party
+SC Senate District 30 (Democratic Party)	1	SC Senate District 30	Democratic Party
+SC Senate District 31 (Democratic Party)	1	SC Senate District 31	Democratic Party
+SC Senate District 32 (Democratic Party)	1	SC Senate District 32	Democratic Party
+SC Senate District 33 (Democratic Party)	1	SC Senate District 33	Democratic Party
+SC Senate District 34 (Democratic Party)	1	SC Senate District 34	Democratic Party
+SC Senate District 35 (Democratic Party)	1	SC Senate District 35	Democratic Party
+SC Senate District 36 (Democratic Party)	1	SC Senate District 36	Democratic Party
+SC Senate District 37 (Democratic Party)	1	SC Senate District 37	Democratic Party
+SC Senate District 38 (Democratic Party)	1	SC Senate District 38	Democratic Party
+SC Senate District 39 (Democratic Party)	1	SC Senate District 39	Democratic Party
+SC Senate District 40 (Democratic Party)	1	SC Senate District 40	Democratic Party
+SC Senate District 41 (Democratic Party)	1	SC Senate District 41	Democratic Party
+SC Senate District 42 (Democratic Party)	1	SC Senate District 42	Democratic Party
+SC Senate District 43 (Democratic Party)	1	SC Senate District 43	Democratic Party
+SC Senate District 44 (Democratic Party)	1	SC Senate District 44	Democratic Party
+SC Senate District 45 (Democratic Party)	1	SC Senate District 45	Democratic Party
+SC Senate District 46 (Democratic Party)	1	SC Senate District 46	Democratic Party
+US House SC District 1 (Democratic Party)	1	US House SC District 1	Democratic Party
+US House SC District 2 (Democratic Party)	1	US House SC District 2	Democratic Party
+US House SC District 3 (Democratic Party)	1	US House SC District 3	Democratic Party
+US House SC District 4 (Democratic Party)	1	US House SC District 4	Democratic Party
+US House SC District 5 (Democratic Party)	1	US House SC District 5	Democratic Party
+US House SC District 6 (Democratic Party)	1	US House SC District 6	Democratic Party
+US House SC District 7 (Democratic Party)	1	US House SC District 7	Democratic Party
+US President (SC) (Democratic Party)	1	US President (SC)	Democratic Party
+SC Governor (Democratic Party)	1	SC Governor	Democratic Party
+US Senate SC (Democratic Party)	1	US Senate SC	Democratic Party
+SC Attorney General (Democratic Party)	1	SC Attorney General	Democratic Party
+SC Lieutenant Governor (Democratic Party)	1	SC Lieutenant Governor	Democratic Party
+SC Treasurer (Democratic Party)	1	SC Treasurer	Democratic Party
+SC Secretary of State (Democratic Party)	1	SC Secretary of State	Democratic Party
+SC Adjutant General (Democratic Party)	1	SC Adjutant General	Democratic Party
+SC Commissioner of Agriculture (Democratic Party)	1	SC Commissioner of Agriculture	Democratic Party
+SC State Superintendent of Education (Democratic Party)	1	SC State Superintendent of Education	Democratic Party
+SC Comptroller General (Democratic Party)	1	SC Comptroller General	Democratic Party
+SC House District 1 (Republican Party)	1	SC House District 1	Republican Party
+SC House District 2 (Republican Party)	1	SC House District 2	Republican Party
+SC House District 3 (Republican Party)	1	SC House District 3	Republican Party
+SC House District 4 (Republican Party)	1	SC House District 4	Republican Party
+SC House District 5 (Republican Party)	1	SC House District 5	Republican Party
+SC House District 6 (Republican Party)	1	SC House District 6	Republican Party
+SC House District 7 (Republican Party)	1	SC House District 7	Republican Party
+SC House District 8 (Republican Party)	1	SC House District 8	Republican Party
+SC House District 9 (Republican Party)	1	SC House District 9	Republican Party
+SC House District 10 (Republican Party)	1	SC House District 10	Republican Party
+SC House District 11 (Republican Party)	1	SC House District 11	Republican Party
+SC House District 12 (Republican Party)	1	SC House District 12	Republican Party
+SC House District 13 (Republican Party)	1	SC House District 13	Republican Party
+SC House District 14 (Republican Party)	1	SC House District 14	Republican Party
+SC House District 15 (Republican Party)	1	SC House District 15	Republican Party
+SC House District 16 (Republican Party)	1	SC House District 16	Republican Party
+SC House District 17 (Republican Party)	1	SC House District 17	Republican Party
+SC House District 18 (Republican Party)	1	SC House District 18	Republican Party
+SC House District 19 (Republican Party)	1	SC House District 19	Republican Party
+SC House District 20 (Republican Party)	1	SC House District 20	Republican Party
+SC House District 21 (Republican Party)	1	SC House District 21	Republican Party
+SC House District 22 (Republican Party)	1	SC House District 22	Republican Party
+SC House District 23 (Republican Party)	1	SC House District 23	Republican Party
+SC House District 24 (Republican Party)	1	SC House District 24	Republican Party
+SC House District 25 (Republican Party)	1	SC House District 25	Republican Party
+SC House District 26 (Republican Party)	1	SC House District 26	Republican Party
+SC House District 27 (Republican Party)	1	SC House District 27	Republican Party
+SC House District 28 (Republican Party)	1	SC House District 28	Republican Party
+SC House District 29 (Republican Party)	1	SC House District 29	Republican Party
+SC House District 30 (Republican Party)	1	SC House District 30	Republican Party
+SC House District 31 (Republican Party)	1	SC House District 31	Republican Party
+SC House District 32 (Republican Party)	1	SC House District 32	Republican Party
+SC House District 33 (Republican Party)	1	SC House District 33	Republican Party
+SC House District 34 (Republican Party)	1	SC House District 34	Republican Party
+SC House District 35 (Republican Party)	1	SC House District 35	Republican Party
+SC House District 36 (Republican Party)	1	SC House District 36	Republican Party
+SC House District 37 (Republican Party)	1	SC House District 37	Republican Party
+SC House District 38 (Republican Party)	1	SC House District 38	Republican Party
+SC House District 39 (Republican Party)	1	SC House District 39	Republican Party
+SC House District 40 (Republican Party)	1	SC House District 40	Republican Party
+SC House District 41 (Republican Party)	1	SC House District 41	Republican Party
+SC House District 42 (Republican Party)	1	SC House District 42	Republican Party
+SC House District 43 (Republican Party)	1	SC House District 43	Republican Party
+SC House District 44 (Republican Party)	1	SC House District 44	Republican Party
+SC House District 45 (Republican Party)	1	SC House District 45	Republican Party
+SC House District 46 (Republican Party)	1	SC House District 46	Republican Party
+SC House District 47 (Republican Party)	1	SC House District 47	Republican Party
+SC House District 48 (Republican Party)	1	SC House District 48	Republican Party
+SC House District 49 (Republican Party)	1	SC House District 49	Republican Party
+SC House District 50 (Republican Party)	1	SC House District 50	Republican Party
+SC House District 51 (Republican Party)	1	SC House District 51	Republican Party
+SC House District 52 (Republican Party)	1	SC House District 52	Republican Party
+SC House District 53 (Republican Party)	1	SC House District 53	Republican Party
+SC House District 54 (Republican Party)	1	SC House District 54	Republican Party
+SC House District 55 (Republican Party)	1	SC House District 55	Republican Party
+SC House District 56 (Republican Party)	1	SC House District 56	Republican Party
+SC House District 57 (Republican Party)	1	SC House District 57	Republican Party
+SC House District 58 (Republican Party)	1	SC House District 58	Republican Party
+SC House District 59 (Republican Party)	1	SC House District 59	Republican Party
+SC House District 60 (Republican Party)	1	SC House District 60	Republican Party
+SC House District 61 (Republican Party)	1	SC House District 61	Republican Party
+SC House District 62 (Republican Party)	1	SC House District 62	Republican Party
+SC House District 63 (Republican Party)	1	SC House District 63	Republican Party
+SC House District 64 (Republican Party)	1	SC House District 64	Republican Party
+SC House District 65 (Republican Party)	1	SC House District 65	Republican Party
+SC House District 66 (Republican Party)	1	SC House District 66	Republican Party
+SC House District 67 (Republican Party)	1	SC House District 67	Republican Party
+SC House District 68 (Republican Party)	1	SC House District 68	Republican Party
+SC House District 69 (Republican Party)	1	SC House District 69	Republican Party
+SC House District 70 (Republican Party)	1	SC House District 70	Republican Party
+SC House District 71 (Republican Party)	1	SC House District 71	Republican Party
+SC House District 72 (Republican Party)	1	SC House District 72	Republican Party
+SC House District 73 (Republican Party)	1	SC House District 73	Republican Party
+SC House District 74 (Republican Party)	1	SC House District 74	Republican Party
+SC House District 75 (Republican Party)	1	SC House District 75	Republican Party
+SC House District 76 (Republican Party)	1	SC House District 76	Republican Party
+SC House District 77 (Republican Party)	1	SC House District 77	Republican Party
+SC House District 78 (Republican Party)	1	SC House District 78	Republican Party
+SC House District 79 (Republican Party)	1	SC House District 79	Republican Party
+SC House District 80 (Republican Party)	1	SC House District 80	Republican Party
+SC House District 81 (Republican Party)	1	SC House District 81	Republican Party
+SC House District 82 (Republican Party)	1	SC House District 82	Republican Party
+SC House District 83 (Republican Party)	1	SC House District 83	Republican Party
+SC House District 84 (Republican Party)	1	SC House District 84	Republican Party
+SC House District 85 (Republican Party)	1	SC House District 85	Republican Party
+SC House District 86 (Republican Party)	1	SC House District 86	Republican Party
+SC House District 87 (Republican Party)	1	SC House District 87	Republican Party
+SC House District 88 (Republican Party)	1	SC House District 88	Republican Party
+SC House District 89 (Republican Party)	1	SC House District 89	Republican Party
+SC House District 90 (Republican Party)	1	SC House District 90	Republican Party
+SC House District 91 (Republican Party)	1	SC House District 91	Republican Party
+SC House District 92 (Republican Party)	1	SC House District 92	Republican Party
+SC House District 93 (Republican Party)	1	SC House District 93	Republican Party
+SC House District 94 (Republican Party)	1	SC House District 94	Republican Party
+SC House District 95 (Republican Party)	1	SC House District 95	Republican Party
+SC House District 96 (Republican Party)	1	SC House District 96	Republican Party
+SC House District 97 (Republican Party)	1	SC House District 97	Republican Party
+SC House District 98 (Republican Party)	1	SC House District 98	Republican Party
+SC House District 99 (Republican Party)	1	SC House District 99	Republican Party
+SC House District 100 (Republican Party)	1	SC House District 100	Republican Party
+SC House District 101 (Republican Party)	1	SC House District 101	Republican Party
+SC House District 102 (Republican Party)	1	SC House District 102	Republican Party
+SC House District 103 (Republican Party)	1	SC House District 103	Republican Party
+SC House District 104 (Republican Party)	1	SC House District 104	Republican Party
+SC House District 105 (Republican Party)	1	SC House District 105	Republican Party
+SC House District 106 (Republican Party)	1	SC House District 106	Republican Party
+SC House District 107 (Republican Party)	1	SC House District 107	Republican Party
+SC House District 108 (Republican Party)	1	SC House District 108	Republican Party
+SC House District 109 (Republican Party)	1	SC House District 109	Republican Party
+SC House District 110 (Republican Party)	1	SC House District 110	Republican Party
+SC House District 111 (Republican Party)	1	SC House District 111	Republican Party
+SC House District 112 (Republican Party)	1	SC House District 112	Republican Party
+SC House District 113 (Republican Party)	1	SC House District 113	Republican Party
+SC House District 114 (Republican Party)	1	SC House District 114	Republican Party
+SC House District 115 (Republican Party)	1	SC House District 115	Republican Party
+SC House District 116 (Republican Party)	1	SC House District 116	Republican Party
+SC House District 117 (Republican Party)	1	SC House District 117	Republican Party
+SC House District 118 (Republican Party)	1	SC House District 118	Republican Party
+SC House District 119 (Republican Party)	1	SC House District 119	Republican Party
+SC House District 120 (Republican Party)	1	SC House District 120	Republican Party
+SC House District 121 (Republican Party)	1	SC House District 121	Republican Party
+SC House District 122 (Republican Party)	1	SC House District 122	Republican Party
+SC House District 123 (Republican Party)	1	SC House District 123	Republican Party
+SC House District 124 (Republican Party)	1	SC House District 124	Republican Party
+SC Senate District 1 (Republican Party)	1	SC Senate District 1	Republican Party
+SC Senate District 2 (Republican Party)	1	SC Senate District 2	Republican Party
+SC Senate District 3 (Republican Party)	1	SC Senate District 3	Republican Party
+SC Senate District 4 (Republican Party)	1	SC Senate District 4	Republican Party
+SC Senate District 5 (Republican Party)	1	SC Senate District 5	Republican Party
+SC Senate District 6 (Republican Party)	1	SC Senate District 6	Republican Party
+SC Senate District 7 (Republican Party)	1	SC Senate District 7	Republican Party
+SC Senate District 8 (Republican Party)	1	SC Senate District 8	Republican Party
+SC Senate District 9 (Republican Party)	1	SC Senate District 9	Republican Party
+SC Senate District 10 (Republican Party)	1	SC Senate District 10	Republican Party
+SC Senate District 11 (Republican Party)	1	SC Senate District 11	Republican Party
+SC Senate District 12 (Republican Party)	1	SC Senate District 12	Republican Party
+SC Senate District 13 (Republican Party)	1	SC Senate District 13	Republican Party
+SC Senate District 14 (Republican Party)	1	SC Senate District 14	Republican Party
+SC Senate District 15 (Republican Party)	1	SC Senate District 15	Republican Party
+SC Senate District 16 (Republican Party)	1	SC Senate District 16	Republican Party
+SC Senate District 17 (Republican Party)	1	SC Senate District 17	Republican Party
+SC Senate District 18 (Republican Party)	1	SC Senate District 18	Republican Party
+SC Senate District 19 (Republican Party)	1	SC Senate District 19	Republican Party
+SC Senate District 20 (Republican Party)	1	SC Senate District 20	Republican Party
+SC Senate District 21 (Republican Party)	1	SC Senate District 21	Republican Party
+SC Senate District 22 (Republican Party)	1	SC Senate District 22	Republican Party
+SC Senate District 23 (Republican Party)	1	SC Senate District 23	Republican Party
+SC Senate District 24 (Republican Party)	1	SC Senate District 24	Republican Party
+SC Senate District 25 (Republican Party)	1	SC Senate District 25	Republican Party
+SC Senate District 26 (Republican Party)	1	SC Senate District 26	Republican Party
+SC Senate District 27 (Republican Party)	1	SC Senate District 27	Republican Party
+SC Senate District 28 (Republican Party)	1	SC Senate District 28	Republican Party
+SC Senate District 29 (Republican Party)	1	SC Senate District 29	Republican Party
+SC Senate District 30 (Republican Party)	1	SC Senate District 30	Republican Party
+SC Senate District 31 (Republican Party)	1	SC Senate District 31	Republican Party
+SC Senate District 32 (Republican Party)	1	SC Senate District 32	Republican Party
+SC Senate District 33 (Republican Party)	1	SC Senate District 33	Republican Party
+SC Senate District 34 (Republican Party)	1	SC Senate District 34	Republican Party
+SC Senate District 35 (Republican Party)	1	SC Senate District 35	Republican Party
+SC Senate District 36 (Republican Party)	1	SC Senate District 36	Republican Party
+SC Senate District 37 (Republican Party)	1	SC Senate District 37	Republican Party
+SC Senate District 38 (Republican Party)	1	SC Senate District 38	Republican Party
+SC Senate District 39 (Republican Party)	1	SC Senate District 39	Republican Party
+SC Senate District 40 (Republican Party)	1	SC Senate District 40	Republican Party
+SC Senate District 41 (Republican Party)	1	SC Senate District 41	Republican Party
+SC Senate District 42 (Republican Party)	1	SC Senate District 42	Republican Party
+SC Senate District 43 (Republican Party)	1	SC Senate District 43	Republican Party
+SC Senate District 44 (Republican Party)	1	SC Senate District 44	Republican Party
+SC Senate District 45 (Republican Party)	1	SC Senate District 45	Republican Party
+SC Senate District 46 (Republican Party)	1	SC Senate District 46	Republican Party
+US House SC District 1 (Republican Party)	1	US House SC District 1	Republican Party
+US House SC District 2 (Republican Party)	1	US House SC District 2	Republican Party
+US House SC District 3 (Republican Party)	1	US House SC District 3	Republican Party
+US House SC District 4 (Republican Party)	1	US House SC District 4	Republican Party
+US House SC District 5 (Republican Party)	1	US House SC District 5	Republican Party
+US House SC District 6 (Republican Party)	1	US House SC District 6	Republican Party
+US House SC District 7 (Republican Party)	1	US House SC District 7	Republican Party
+US President (SC) (Republican Party)	1	US President (SC)	Republican Party
+SC Governor (Republican Party)	1	SC Governor	Republican Party
+US Senate SC (Republican Party)	1	US Senate SC	Republican Party
+SC Attorney General (Republican Party)	1	SC Attorney General	Republican Party
+SC Lieutenant Governor (Republican Party)	1	SC Lieutenant Governor	Republican Party
+SC Treasurer (Republican Party)	1	SC Treasurer	Republican Party
+SC Secretary of State (Republican Party)	1	SC Secretary of State	Republican Party
+SC Adjutant General (Republican Party)	1	SC Adjutant General	Republican Party
+SC Commissioner of Agriculture (Republican Party)	1	SC Commissioner of Agriculture	Republican Party
+SC State Superintendent of Education (Republican Party)	1	SC State Superintendent of Education	Republican Party
+SC Comptroller General (Republican Party)	1	SC Comptroller General	Republican Party
+SC House District 1 (Green Party)	1	SC House District 1	Green Party
+SC House District 2 (Green Party)	1	SC House District 2	Green Party
+SC House District 3 (Green Party)	1	SC House District 3	Green Party
+SC House District 4 (Green Party)	1	SC House District 4	Green Party
+SC House District 5 (Green Party)	1	SC House District 5	Green Party
+SC House District 6 (Green Party)	1	SC House District 6	Green Party
+SC House District 7 (Green Party)	1	SC House District 7	Green Party
+SC House District 8 (Green Party)	1	SC House District 8	Green Party
+SC House District 9 (Green Party)	1	SC House District 9	Green Party
+SC House District 10 (Green Party)	1	SC House District 10	Green Party
+SC House District 11 (Green Party)	1	SC House District 11	Green Party
+SC House District 12 (Green Party)	1	SC House District 12	Green Party
+SC House District 13 (Green Party)	1	SC House District 13	Green Party
+SC House District 14 (Green Party)	1	SC House District 14	Green Party
+SC House District 15 (Green Party)	1	SC House District 15	Green Party
+SC House District 16 (Green Party)	1	SC House District 16	Green Party
+SC House District 17 (Green Party)	1	SC House District 17	Green Party
+SC House District 18 (Green Party)	1	SC House District 18	Green Party
+SC House District 19 (Green Party)	1	SC House District 19	Green Party
+SC House District 20 (Green Party)	1	SC House District 20	Green Party
+SC House District 21 (Green Party)	1	SC House District 21	Green Party
+SC House District 22 (Green Party)	1	SC House District 22	Green Party
+SC House District 23 (Green Party)	1	SC House District 23	Green Party
+SC House District 24 (Green Party)	1	SC House District 24	Green Party
+SC House District 25 (Green Party)	1	SC House District 25	Green Party
+SC House District 26 (Green Party)	1	SC House District 26	Green Party
+SC House District 27 (Green Party)	1	SC House District 27	Green Party
+SC House District 28 (Green Party)	1	SC House District 28	Green Party
+SC House District 29 (Green Party)	1	SC House District 29	Green Party
+SC House District 30 (Green Party)	1	SC House District 30	Green Party
+SC House District 31 (Green Party)	1	SC House District 31	Green Party
+SC House District 32 (Green Party)	1	SC House District 32	Green Party
+SC House District 33 (Green Party)	1	SC House District 33	Green Party
+SC House District 34 (Green Party)	1	SC House District 34	Green Party
+SC House District 35 (Green Party)	1	SC House District 35	Green Party
+SC House District 36 (Green Party)	1	SC House District 36	Green Party
+SC House District 37 (Green Party)	1	SC House District 37	Green Party
+SC House District 38 (Green Party)	1	SC House District 38	Green Party
+SC House District 39 (Green Party)	1	SC House District 39	Green Party
+SC House District 40 (Green Party)	1	SC House District 40	Green Party
+SC House District 41 (Green Party)	1	SC House District 41	Green Party
+SC House District 42 (Green Party)	1	SC House District 42	Green Party
+SC House District 43 (Green Party)	1	SC House District 43	Green Party
+SC House District 44 (Green Party)	1	SC House District 44	Green Party
+SC House District 45 (Green Party)	1	SC House District 45	Green Party
+SC House District 46 (Green Party)	1	SC House District 46	Green Party
+SC House District 47 (Green Party)	1	SC House District 47	Green Party
+SC House District 48 (Green Party)	1	SC House District 48	Green Party
+SC House District 49 (Green Party)	1	SC House District 49	Green Party
+SC House District 50 (Green Party)	1	SC House District 50	Green Party
+SC House District 51 (Green Party)	1	SC House District 51	Green Party
+SC House District 52 (Green Party)	1	SC House District 52	Green Party
+SC House District 53 (Green Party)	1	SC House District 53	Green Party
+SC House District 54 (Green Party)	1	SC House District 54	Green Party
+SC House District 55 (Green Party)	1	SC House District 55	Green Party
+SC House District 56 (Green Party)	1	SC House District 56	Green Party
+SC House District 57 (Green Party)	1	SC House District 57	Green Party
+SC House District 58 (Green Party)	1	SC House District 58	Green Party
+SC House District 59 (Green Party)	1	SC House District 59	Green Party
+SC House District 60 (Green Party)	1	SC House District 60	Green Party
+SC House District 61 (Green Party)	1	SC House District 61	Green Party
+SC House District 62 (Green Party)	1	SC House District 62	Green Party
+SC House District 63 (Green Party)	1	SC House District 63	Green Party
+SC House District 64 (Green Party)	1	SC House District 64	Green Party
+SC House District 65 (Green Party)	1	SC House District 65	Green Party
+SC House District 66 (Green Party)	1	SC House District 66	Green Party
+SC House District 67 (Green Party)	1	SC House District 67	Green Party
+SC House District 68 (Green Party)	1	SC House District 68	Green Party
+SC House District 69 (Green Party)	1	SC House District 69	Green Party
+SC House District 70 (Green Party)	1	SC House District 70	Green Party
+SC House District 71 (Green Party)	1	SC House District 71	Green Party
+SC House District 72 (Green Party)	1	SC House District 72	Green Party
+SC House District 73 (Green Party)	1	SC House District 73	Green Party
+SC House District 74 (Green Party)	1	SC House District 74	Green Party
+SC House District 75 (Green Party)	1	SC House District 75	Green Party
+SC House District 76 (Green Party)	1	SC House District 76	Green Party
+SC House District 77 (Green Party)	1	SC House District 77	Green Party
+SC House District 78 (Green Party)	1	SC House District 78	Green Party
+SC House District 79 (Green Party)	1	SC House District 79	Green Party
+SC House District 80 (Green Party)	1	SC House District 80	Green Party
+SC House District 81 (Green Party)	1	SC House District 81	Green Party
+SC House District 82 (Green Party)	1	SC House District 82	Green Party
+SC House District 83 (Green Party)	1	SC House District 83	Green Party
+SC House District 84 (Green Party)	1	SC House District 84	Green Party
+SC House District 85 (Green Party)	1	SC House District 85	Green Party
+SC House District 86 (Green Party)	1	SC House District 86	Green Party
+SC House District 87 (Green Party)	1	SC House District 87	Green Party
+SC House District 88 (Green Party)	1	SC House District 88	Green Party
+SC House District 89 (Green Party)	1	SC House District 89	Green Party
+SC House District 90 (Green Party)	1	SC House District 90	Green Party
+SC House District 91 (Green Party)	1	SC House District 91	Green Party
+SC House District 92 (Green Party)	1	SC House District 92	Green Party
+SC House District 93 (Green Party)	1	SC House District 93	Green Party
+SC House District 94 (Green Party)	1	SC House District 94	Green Party
+SC House District 95 (Green Party)	1	SC House District 95	Green Party
+SC House District 96 (Green Party)	1	SC House District 96	Green Party
+SC House District 97 (Green Party)	1	SC House District 97	Green Party
+SC House District 98 (Green Party)	1	SC House District 98	Green Party
+SC House District 99 (Green Party)	1	SC House District 99	Green Party
+SC House District 100 (Green Party)	1	SC House District 100	Green Party
+SC House District 101 (Green Party)	1	SC House District 101	Green Party
+SC House District 102 (Green Party)	1	SC House District 102	Green Party
+SC House District 103 (Green Party)	1	SC House District 103	Green Party
+SC House District 104 (Green Party)	1	SC House District 104	Green Party
+SC House District 105 (Green Party)	1	SC House District 105	Green Party
+SC House District 106 (Green Party)	1	SC House District 106	Green Party
+SC House District 107 (Green Party)	1	SC House District 107	Green Party
+SC House District 108 (Green Party)	1	SC House District 108	Green Party
+SC House District 109 (Green Party)	1	SC House District 109	Green Party
+SC House District 110 (Green Party)	1	SC House District 110	Green Party
+SC House District 111 (Green Party)	1	SC House District 111	Green Party
+SC House District 112 (Green Party)	1	SC House District 112	Green Party
+SC House District 113 (Green Party)	1	SC House District 113	Green Party
+SC House District 114 (Green Party)	1	SC House District 114	Green Party
+SC House District 115 (Green Party)	1	SC House District 115	Green Party
+SC House District 116 (Green Party)	1	SC House District 116	Green Party
+SC House District 117 (Green Party)	1	SC House District 117	Green Party
+SC House District 118 (Green Party)	1	SC House District 118	Green Party
+SC House District 119 (Green Party)	1	SC House District 119	Green Party
+SC House District 120 (Green Party)	1	SC House District 120	Green Party
+SC House District 121 (Green Party)	1	SC House District 121	Green Party
+SC House District 122 (Green Party)	1	SC House District 122	Green Party
+SC House District 123 (Green Party)	1	SC House District 123	Green Party
+SC House District 124 (Green Party)	1	SC House District 124	Green Party
+SC Senate District 1 (Green Party)	1	SC Senate District 1	Green Party
+SC Senate District 2 (Green Party)	1	SC Senate District 2	Green Party
+SC Senate District 3 (Green Party)	1	SC Senate District 3	Green Party
+SC Senate District 4 (Green Party)	1	SC Senate District 4	Green Party
+SC Senate District 5 (Green Party)	1	SC Senate District 5	Green Party
+SC Senate District 6 (Green Party)	1	SC Senate District 6	Green Party
+SC Senate District 7 (Green Party)	1	SC Senate District 7	Green Party
+SC Senate District 8 (Green Party)	1	SC Senate District 8	Green Party
+SC Senate District 9 (Green Party)	1	SC Senate District 9	Green Party
+SC Senate District 10 (Green Party)	1	SC Senate District 10	Green Party
+SC Senate District 11 (Green Party)	1	SC Senate District 11	Green Party
+SC Senate District 12 (Green Party)	1	SC Senate District 12	Green Party
+SC Senate District 13 (Green Party)	1	SC Senate District 13	Green Party
+SC Senate District 14 (Green Party)	1	SC Senate District 14	Green Party
+SC Senate District 15 (Green Party)	1	SC Senate District 15	Green Party
+SC Senate District 16 (Green Party)	1	SC Senate District 16	Green Party
+SC Senate District 17 (Green Party)	1	SC Senate District 17	Green Party
+SC Senate District 18 (Green Party)	1	SC Senate District 18	Green Party
+SC Senate District 19 (Green Party)	1	SC Senate District 19	Green Party
+SC Senate District 20 (Green Party)	1	SC Senate District 20	Green Party
+SC Senate District 21 (Green Party)	1	SC Senate District 21	Green Party
+SC Senate District 22 (Green Party)	1	SC Senate District 22	Green Party
+SC Senate District 23 (Green Party)	1	SC Senate District 23	Green Party
+SC Senate District 24 (Green Party)	1	SC Senate District 24	Green Party
+SC Senate District 25 (Green Party)	1	SC Senate District 25	Green Party
+SC Senate District 26 (Green Party)	1	SC Senate District 26	Green Party
+SC Senate District 27 (Green Party)	1	SC Senate District 27	Green Party
+SC Senate District 28 (Green Party)	1	SC Senate District 28	Green Party
+SC Senate District 29 (Green Party)	1	SC Senate District 29	Green Party
+SC Senate District 30 (Green Party)	1	SC Senate District 30	Green Party
+SC Senate District 31 (Green Party)	1	SC Senate District 31	Green Party
+SC Senate District 32 (Green Party)	1	SC Senate District 32	Green Party
+SC Senate District 33 (Green Party)	1	SC Senate District 33	Green Party
+SC Senate District 34 (Green Party)	1	SC Senate District 34	Green Party
+SC Senate District 35 (Green Party)	1	SC Senate District 35	Green Party
+SC Senate District 36 (Green Party)	1	SC Senate District 36	Green Party
+SC Senate District 37 (Green Party)	1	SC Senate District 37	Green Party
+SC Senate District 38 (Green Party)	1	SC Senate District 38	Green Party
+SC Senate District 39 (Green Party)	1	SC Senate District 39	Green Party
+SC Senate District 40 (Green Party)	1	SC Senate District 40	Green Party
+SC Senate District 41 (Green Party)	1	SC Senate District 41	Green Party
+SC Senate District 42 (Green Party)	1	SC Senate District 42	Green Party
+SC Senate District 43 (Green Party)	1	SC Senate District 43	Green Party
+SC Senate District 44 (Green Party)	1	SC Senate District 44	Green Party
+SC Senate District 45 (Green Party)	1	SC Senate District 45	Green Party
+SC Senate District 46 (Green Party)	1	SC Senate District 46	Green Party
+US House SC District 1 (Green Party)	1	US House SC District 1	Green Party
+US House SC District 2 (Green Party)	1	US House SC District 2	Green Party
+US House SC District 3 (Green Party)	1	US House SC District 3	Green Party
+US House SC District 4 (Green Party)	1	US House SC District 4	Green Party
+US House SC District 5 (Green Party)	1	US House SC District 5	Green Party
+US House SC District 6 (Green Party)	1	US House SC District 6	Green Party
+US House SC District 7 (Green Party)	1	US House SC District 7	Green Party
+US President (SC) (Green Party)	1	US President (SC)	Green Party
+SC Governor (Green Party)	1	SC Governor	Green Party
+US Senate SC (Green Party)	1	US Senate SC	Green Party
+SC Attorney General (Green Party)	1	SC Attorney General	Green Party
+SC Lieutenant Governor (Green Party)	1	SC Lieutenant Governor	Green Party
+SC Treasurer (Green Party)	1	SC Treasurer	Green Party
+SC Secretary of State (Green Party)	1	SC Secretary of State	Green Party
+SC Adjutant General (Green Party)	1	SC Adjutant General	Green Party
+SC Commissioner of Agriculture (Green Party)	1	SC Commissioner of Agriculture	Green Party
+SC State Superintendent of Education (Green Party)	1	SC State Superintendent of Education	Green Party
+SC Comptroller General (Green Party)	1	SC Comptroller General	Green Party
+SC House District 1 (Libertarian Party)	1	SC House District 1	Libertarian Party
+SC House District 2 (Libertarian Party)	1	SC House District 2	Libertarian Party
+SC House District 3 (Libertarian Party)	1	SC House District 3	Libertarian Party
+SC House District 4 (Libertarian Party)	1	SC House District 4	Libertarian Party
+SC House District 5 (Libertarian Party)	1	SC House District 5	Libertarian Party
+SC House District 6 (Libertarian Party)	1	SC House District 6	Libertarian Party
+SC House District 7 (Libertarian Party)	1	SC House District 7	Libertarian Party
+SC House District 8 (Libertarian Party)	1	SC House District 8	Libertarian Party
+SC House District 9 (Libertarian Party)	1	SC House District 9	Libertarian Party
+SC House District 10 (Libertarian Party)	1	SC House District 10	Libertarian Party
+SC House District 11 (Libertarian Party)	1	SC House District 11	Libertarian Party
+SC House District 12 (Libertarian Party)	1	SC House District 12	Libertarian Party
+SC House District 13 (Libertarian Party)	1	SC House District 13	Libertarian Party
+SC House District 14 (Libertarian Party)	1	SC House District 14	Libertarian Party
+SC House District 15 (Libertarian Party)	1	SC House District 15	Libertarian Party
+SC House District 16 (Libertarian Party)	1	SC House District 16	Libertarian Party
+SC House District 17 (Libertarian Party)	1	SC House District 17	Libertarian Party
+SC House District 18 (Libertarian Party)	1	SC House District 18	Libertarian Party
+SC House District 19 (Libertarian Party)	1	SC House District 19	Libertarian Party
+SC House District 20 (Libertarian Party)	1	SC House District 20	Libertarian Party
+SC House District 21 (Libertarian Party)	1	SC House District 21	Libertarian Party
+SC House District 22 (Libertarian Party)	1	SC House District 22	Libertarian Party
+SC House District 23 (Libertarian Party)	1	SC House District 23	Libertarian Party
+SC House District 24 (Libertarian Party)	1	SC House District 24	Libertarian Party
+SC House District 25 (Libertarian Party)	1	SC House District 25	Libertarian Party
+SC House District 26 (Libertarian Party)	1	SC House District 26	Libertarian Party
+SC House District 27 (Libertarian Party)	1	SC House District 27	Libertarian Party
+SC House District 28 (Libertarian Party)	1	SC House District 28	Libertarian Party
+SC House District 29 (Libertarian Party)	1	SC House District 29	Libertarian Party
+SC House District 30 (Libertarian Party)	1	SC House District 30	Libertarian Party
+SC House District 31 (Libertarian Party)	1	SC House District 31	Libertarian Party
+SC House District 32 (Libertarian Party)	1	SC House District 32	Libertarian Party
+SC House District 33 (Libertarian Party)	1	SC House District 33	Libertarian Party
+SC House District 34 (Libertarian Party)	1	SC House District 34	Libertarian Party
+SC House District 35 (Libertarian Party)	1	SC House District 35	Libertarian Party
+SC House District 36 (Libertarian Party)	1	SC House District 36	Libertarian Party
+SC House District 37 (Libertarian Party)	1	SC House District 37	Libertarian Party
+SC House District 38 (Libertarian Party)	1	SC House District 38	Libertarian Party
+SC House District 39 (Libertarian Party)	1	SC House District 39	Libertarian Party
+SC House District 40 (Libertarian Party)	1	SC House District 40	Libertarian Party
+SC House District 41 (Libertarian Party)	1	SC House District 41	Libertarian Party
+SC House District 42 (Libertarian Party)	1	SC House District 42	Libertarian Party
+SC House District 43 (Libertarian Party)	1	SC House District 43	Libertarian Party
+SC House District 44 (Libertarian Party)	1	SC House District 44	Libertarian Party
+SC House District 45 (Libertarian Party)	1	SC House District 45	Libertarian Party
+SC House District 46 (Libertarian Party)	1	SC House District 46	Libertarian Party
+SC House District 47 (Libertarian Party)	1	SC House District 47	Libertarian Party
+SC House District 48 (Libertarian Party)	1	SC House District 48	Libertarian Party
+SC House District 49 (Libertarian Party)	1	SC House District 49	Libertarian Party
+SC House District 50 (Libertarian Party)	1	SC House District 50	Libertarian Party
+SC House District 51 (Libertarian Party)	1	SC House District 51	Libertarian Party
+SC House District 52 (Libertarian Party)	1	SC House District 52	Libertarian Party
+SC House District 53 (Libertarian Party)	1	SC House District 53	Libertarian Party
+SC House District 54 (Libertarian Party)	1	SC House District 54	Libertarian Party
+SC House District 55 (Libertarian Party)	1	SC House District 55	Libertarian Party
+SC House District 56 (Libertarian Party)	1	SC House District 56	Libertarian Party
+SC House District 57 (Libertarian Party)	1	SC House District 57	Libertarian Party
+SC House District 58 (Libertarian Party)	1	SC House District 58	Libertarian Party
+SC House District 59 (Libertarian Party)	1	SC House District 59	Libertarian Party
+SC House District 60 (Libertarian Party)	1	SC House District 60	Libertarian Party
+SC House District 61 (Libertarian Party)	1	SC House District 61	Libertarian Party
+SC House District 62 (Libertarian Party)	1	SC House District 62	Libertarian Party
+SC House District 63 (Libertarian Party)	1	SC House District 63	Libertarian Party
+SC House District 64 (Libertarian Party)	1	SC House District 64	Libertarian Party
+SC House District 65 (Libertarian Party)	1	SC House District 65	Libertarian Party
+SC House District 66 (Libertarian Party)	1	SC House District 66	Libertarian Party
+SC House District 67 (Libertarian Party)	1	SC House District 67	Libertarian Party
+SC House District 68 (Libertarian Party)	1	SC House District 68	Libertarian Party
+SC House District 69 (Libertarian Party)	1	SC House District 69	Libertarian Party
+SC House District 70 (Libertarian Party)	1	SC House District 70	Libertarian Party
+SC House District 71 (Libertarian Party)	1	SC House District 71	Libertarian Party
+SC House District 72 (Libertarian Party)	1	SC House District 72	Libertarian Party
+SC House District 73 (Libertarian Party)	1	SC House District 73	Libertarian Party
+SC House District 74 (Libertarian Party)	1	SC House District 74	Libertarian Party
+SC House District 75 (Libertarian Party)	1	SC House District 75	Libertarian Party
+SC House District 76 (Libertarian Party)	1	SC House District 76	Libertarian Party
+SC House District 77 (Libertarian Party)	1	SC House District 77	Libertarian Party
+SC House District 78 (Libertarian Party)	1	SC House District 78	Libertarian Party
+SC House District 79 (Libertarian Party)	1	SC House District 79	Libertarian Party
+SC House District 80 (Libertarian Party)	1	SC House District 80	Libertarian Party
+SC House District 81 (Libertarian Party)	1	SC House District 81	Libertarian Party
+SC House District 82 (Libertarian Party)	1	SC House District 82	Libertarian Party
+SC House District 83 (Libertarian Party)	1	SC House District 83	Libertarian Party
+SC House District 84 (Libertarian Party)	1	SC House District 84	Libertarian Party
+SC House District 85 (Libertarian Party)	1	SC House District 85	Libertarian Party
+SC House District 86 (Libertarian Party)	1	SC House District 86	Libertarian Party
+SC House District 87 (Libertarian Party)	1	SC House District 87	Libertarian Party
+SC House District 88 (Libertarian Party)	1	SC House District 88	Libertarian Party
+SC House District 89 (Libertarian Party)	1	SC House District 89	Libertarian Party
+SC House District 90 (Libertarian Party)	1	SC House District 90	Libertarian Party
+SC House District 91 (Libertarian Party)	1	SC House District 91	Libertarian Party
+SC House District 92 (Libertarian Party)	1	SC House District 92	Libertarian Party
+SC House District 93 (Libertarian Party)	1	SC House District 93	Libertarian Party
+SC House District 94 (Libertarian Party)	1	SC House District 94	Libertarian Party
+SC House District 95 (Libertarian Party)	1	SC House District 95	Libertarian Party
+SC House District 96 (Libertarian Party)	1	SC House District 96	Libertarian Party
+SC House District 97 (Libertarian Party)	1	SC House District 97	Libertarian Party
+SC House District 98 (Libertarian Party)	1	SC House District 98	Libertarian Party
+SC House District 99 (Libertarian Party)	1	SC House District 99	Libertarian Party
+SC House District 100 (Libertarian Party)	1	SC House District 100	Libertarian Party
+SC House District 101 (Libertarian Party)	1	SC House District 101	Libertarian Party
+SC House District 102 (Libertarian Party)	1	SC House District 102	Libertarian Party
+SC House District 103 (Libertarian Party)	1	SC House District 103	Libertarian Party
+SC House District 104 (Libertarian Party)	1	SC House District 104	Libertarian Party
+SC House District 105 (Libertarian Party)	1	SC House District 105	Libertarian Party
+SC House District 106 (Libertarian Party)	1	SC House District 106	Libertarian Party
+SC House District 107 (Libertarian Party)	1	SC House District 107	Libertarian Party
+SC House District 108 (Libertarian Party)	1	SC House District 108	Libertarian Party
+SC House District 109 (Libertarian Party)	1	SC House District 109	Libertarian Party
+SC House District 110 (Libertarian Party)	1	SC House District 110	Libertarian Party
+SC House District 111 (Libertarian Party)	1	SC House District 111	Libertarian Party
+SC House District 112 (Libertarian Party)	1	SC House District 112	Libertarian Party
+SC House District 113 (Libertarian Party)	1	SC House District 113	Libertarian Party
+SC House District 114 (Libertarian Party)	1	SC House District 114	Libertarian Party
+SC House District 115 (Libertarian Party)	1	SC House District 115	Libertarian Party
+SC House District 116 (Libertarian Party)	1	SC House District 116	Libertarian Party
+SC House District 117 (Libertarian Party)	1	SC House District 117	Libertarian Party
+SC House District 118 (Libertarian Party)	1	SC House District 118	Libertarian Party
+SC House District 119 (Libertarian Party)	1	SC House District 119	Libertarian Party
+SC House District 120 (Libertarian Party)	1	SC House District 120	Libertarian Party
+SC House District 121 (Libertarian Party)	1	SC House District 121	Libertarian Party
+SC House District 122 (Libertarian Party)	1	SC House District 122	Libertarian Party
+SC House District 123 (Libertarian Party)	1	SC House District 123	Libertarian Party
+SC House District 124 (Libertarian Party)	1	SC House District 124	Libertarian Party
+SC Senate District 1 (Libertarian Party)	1	SC Senate District 1	Libertarian Party
+SC Senate District 2 (Libertarian Party)	1	SC Senate District 2	Libertarian Party
+SC Senate District 3 (Libertarian Party)	1	SC Senate District 3	Libertarian Party
+SC Senate District 4 (Libertarian Party)	1	SC Senate District 4	Libertarian Party
+SC Senate District 5 (Libertarian Party)	1	SC Senate District 5	Libertarian Party
+SC Senate District 6 (Libertarian Party)	1	SC Senate District 6	Libertarian Party
+SC Senate District 7 (Libertarian Party)	1	SC Senate District 7	Libertarian Party
+SC Senate District 8 (Libertarian Party)	1	SC Senate District 8	Libertarian Party
+SC Senate District 9 (Libertarian Party)	1	SC Senate District 9	Libertarian Party
+SC Senate District 10 (Libertarian Party)	1	SC Senate District 10	Libertarian Party
+SC Senate District 11 (Libertarian Party)	1	SC Senate District 11	Libertarian Party
+SC Senate District 12 (Libertarian Party)	1	SC Senate District 12	Libertarian Party
+SC Senate District 13 (Libertarian Party)	1	SC Senate District 13	Libertarian Party
+SC Senate District 14 (Libertarian Party)	1	SC Senate District 14	Libertarian Party
+SC Senate District 15 (Libertarian Party)	1	SC Senate District 15	Libertarian Party
+SC Senate District 16 (Libertarian Party)	1	SC Senate District 16	Libertarian Party
+SC Senate District 17 (Libertarian Party)	1	SC Senate District 17	Libertarian Party
+SC Senate District 18 (Libertarian Party)	1	SC Senate District 18	Libertarian Party
+SC Senate District 19 (Libertarian Party)	1	SC Senate District 19	Libertarian Party
+SC Senate District 20 (Libertarian Party)	1	SC Senate District 20	Libertarian Party
+SC Senate District 21 (Libertarian Party)	1	SC Senate District 21	Libertarian Party
+SC Senate District 22 (Libertarian Party)	1	SC Senate District 22	Libertarian Party
+SC Senate District 23 (Libertarian Party)	1	SC Senate District 23	Libertarian Party
+SC Senate District 24 (Libertarian Party)	1	SC Senate District 24	Libertarian Party
+SC Senate District 25 (Libertarian Party)	1	SC Senate District 25	Libertarian Party
+SC Senate District 26 (Libertarian Party)	1	SC Senate District 26	Libertarian Party
+SC Senate District 27 (Libertarian Party)	1	SC Senate District 27	Libertarian Party
+SC Senate District 28 (Libertarian Party)	1	SC Senate District 28	Libertarian Party
+SC Senate District 29 (Libertarian Party)	1	SC Senate District 29	Libertarian Party
+SC Senate District 30 (Libertarian Party)	1	SC Senate District 30	Libertarian Party
+SC Senate District 31 (Libertarian Party)	1	SC Senate District 31	Libertarian Party
+SC Senate District 32 (Libertarian Party)	1	SC Senate District 32	Libertarian Party
+SC Senate District 33 (Libertarian Party)	1	SC Senate District 33	Libertarian Party
+SC Senate District 34 (Libertarian Party)	1	SC Senate District 34	Libertarian Party
+SC Senate District 35 (Libertarian Party)	1	SC Senate District 35	Libertarian Party
+SC Senate District 36 (Libertarian Party)	1	SC Senate District 36	Libertarian Party
+SC Senate District 37 (Libertarian Party)	1	SC Senate District 37	Libertarian Party
+SC Senate District 38 (Libertarian Party)	1	SC Senate District 38	Libertarian Party
+SC Senate District 39 (Libertarian Party)	1	SC Senate District 39	Libertarian Party
+SC Senate District 40 (Libertarian Party)	1	SC Senate District 40	Libertarian Party
+SC Senate District 41 (Libertarian Party)	1	SC Senate District 41	Libertarian Party
+SC Senate District 42 (Libertarian Party)	1	SC Senate District 42	Libertarian Party
+SC Senate District 43 (Libertarian Party)	1	SC Senate District 43	Libertarian Party
+SC Senate District 44 (Libertarian Party)	1	SC Senate District 44	Libertarian Party
+SC Senate District 45 (Libertarian Party)	1	SC Senate District 45	Libertarian Party
+SC Senate District 46 (Libertarian Party)	1	SC Senate District 46	Libertarian Party
+US House SC District 1 (Libertarian Party)	1	US House SC District 1	Libertarian Party
+US House SC District 2 (Libertarian Party)	1	US House SC District 2	Libertarian Party
+US House SC District 3 (Libertarian Party)	1	US House SC District 3	Libertarian Party
+US House SC District 4 (Libertarian Party)	1	US House SC District 4	Libertarian Party
+US House SC District 5 (Libertarian Party)	1	US House SC District 5	Libertarian Party
+US House SC District 6 (Libertarian Party)	1	US House SC District 6	Libertarian Party
+US House SC District 7 (Libertarian Party)	1	US House SC District 7	Libertarian Party
+US President (SC) (Libertarian Party)	1	US President (SC)	Libertarian Party
+SC Governor (Libertarian Party)	1	SC Governor	Libertarian Party
+US Senate SC (Libertarian Party)	1	US Senate SC	Libertarian Party
+SC Attorney General (Libertarian Party)	1	SC Attorney General	Libertarian Party
+SC Lieutenant Governor (Libertarian Party)	1	SC Lieutenant Governor	Libertarian Party
+SC Treasurer (Libertarian Party)	1	SC Treasurer	Libertarian Party
+SC Secretary of State (Libertarian Party)	1	SC Secretary of State	Libertarian Party
+SC Adjutant General (Libertarian Party)	1	SC Adjutant General	Libertarian Party
+SC Commissioner of Agriculture (Libertarian Party)	1	SC Commissioner of Agriculture	Libertarian Party
+SC State Superintendent of Education (Libertarian Party)	1	SC State Superintendent of Education	Libertarian Party
+SC Comptroller General (Libertarian Party)	1	SC Comptroller General	Libertarian Party
+SC House District 1 (United Citizens Party)	1	SC House District 1	United Citizens Party
+SC House District 2 (United Citizens Party)	1	SC House District 2	United Citizens Party
+SC House District 3 (United Citizens Party)	1	SC House District 3	United Citizens Party
+SC House District 4 (United Citizens Party)	1	SC House District 4	United Citizens Party
+SC House District 5 (United Citizens Party)	1	SC House District 5	United Citizens Party
+SC House District 6 (United Citizens Party)	1	SC House District 6	United Citizens Party
+SC House District 7 (United Citizens Party)	1	SC House District 7	United Citizens Party
+SC House District 8 (United Citizens Party)	1	SC House District 8	United Citizens Party
+SC House District 9 (United Citizens Party)	1	SC House District 9	United Citizens Party
+SC House District 10 (United Citizens Party)	1	SC House District 10	United Citizens Party
+SC House District 11 (United Citizens Party)	1	SC House District 11	United Citizens Party
+SC House District 12 (United Citizens Party)	1	SC House District 12	United Citizens Party
+SC House District 13 (United Citizens Party)	1	SC House District 13	United Citizens Party
+SC House District 14 (United Citizens Party)	1	SC House District 14	United Citizens Party
+SC House District 15 (United Citizens Party)	1	SC House District 15	United Citizens Party
+SC House District 16 (United Citizens Party)	1	SC House District 16	United Citizens Party
+SC House District 17 (United Citizens Party)	1	SC House District 17	United Citizens Party
+SC House District 18 (United Citizens Party)	1	SC House District 18	United Citizens Party
+SC House District 19 (United Citizens Party)	1	SC House District 19	United Citizens Party
+SC House District 20 (United Citizens Party)	1	SC House District 20	United Citizens Party
+SC House District 21 (United Citizens Party)	1	SC House District 21	United Citizens Party
+SC House District 22 (United Citizens Party)	1	SC House District 22	United Citizens Party
+SC House District 23 (United Citizens Party)	1	SC House District 23	United Citizens Party
+SC House District 24 (United Citizens Party)	1	SC House District 24	United Citizens Party
+SC House District 25 (United Citizens Party)	1	SC House District 25	United Citizens Party
+SC House District 26 (United Citizens Party)	1	SC House District 26	United Citizens Party
+SC House District 27 (United Citizens Party)	1	SC House District 27	United Citizens Party
+SC House District 28 (United Citizens Party)	1	SC House District 28	United Citizens Party
+SC House District 29 (United Citizens Party)	1	SC House District 29	United Citizens Party
+SC House District 30 (United Citizens Party)	1	SC House District 30	United Citizens Party
+SC House District 31 (United Citizens Party)	1	SC House District 31	United Citizens Party
+SC House District 32 (United Citizens Party)	1	SC House District 32	United Citizens Party
+SC House District 33 (United Citizens Party)	1	SC House District 33	United Citizens Party
+SC House District 34 (United Citizens Party)	1	SC House District 34	United Citizens Party
+SC House District 35 (United Citizens Party)	1	SC House District 35	United Citizens Party
+SC House District 36 (United Citizens Party)	1	SC House District 36	United Citizens Party
+SC House District 37 (United Citizens Party)	1	SC House District 37	United Citizens Party
+SC House District 38 (United Citizens Party)	1	SC House District 38	United Citizens Party
+SC House District 39 (United Citizens Party)	1	SC House District 39	United Citizens Party
+SC House District 40 (United Citizens Party)	1	SC House District 40	United Citizens Party
+SC House District 41 (United Citizens Party)	1	SC House District 41	United Citizens Party
+SC House District 42 (United Citizens Party)	1	SC House District 42	United Citizens Party
+SC House District 43 (United Citizens Party)	1	SC House District 43	United Citizens Party
+SC House District 44 (United Citizens Party)	1	SC House District 44	United Citizens Party
+SC House District 45 (United Citizens Party)	1	SC House District 45	United Citizens Party
+SC House District 46 (United Citizens Party)	1	SC House District 46	United Citizens Party
+SC House District 47 (United Citizens Party)	1	SC House District 47	United Citizens Party
+SC House District 48 (United Citizens Party)	1	SC House District 48	United Citizens Party
+SC House District 49 (United Citizens Party)	1	SC House District 49	United Citizens Party
+SC House District 50 (United Citizens Party)	1	SC House District 50	United Citizens Party
+SC House District 51 (United Citizens Party)	1	SC House District 51	United Citizens Party
+SC House District 52 (United Citizens Party)	1	SC House District 52	United Citizens Party
+SC House District 53 (United Citizens Party)	1	SC House District 53	United Citizens Party
+SC House District 54 (United Citizens Party)	1	SC House District 54	United Citizens Party
+SC House District 55 (United Citizens Party)	1	SC House District 55	United Citizens Party
+SC House District 56 (United Citizens Party)	1	SC House District 56	United Citizens Party
+SC House District 57 (United Citizens Party)	1	SC House District 57	United Citizens Party
+SC House District 58 (United Citizens Party)	1	SC House District 58	United Citizens Party
+SC House District 59 (United Citizens Party)	1	SC House District 59	United Citizens Party
+SC House District 60 (United Citizens Party)	1	SC House District 60	United Citizens Party
+SC House District 61 (United Citizens Party)	1	SC House District 61	United Citizens Party
+SC House District 62 (United Citizens Party)	1	SC House District 62	United Citizens Party
+SC House District 63 (United Citizens Party)	1	SC House District 63	United Citizens Party
+SC House District 64 (United Citizens Party)	1	SC House District 64	United Citizens Party
+SC House District 65 (United Citizens Party)	1	SC House District 65	United Citizens Party
+SC House District 66 (United Citizens Party)	1	SC House District 66	United Citizens Party
+SC House District 67 (United Citizens Party)	1	SC House District 67	United Citizens Party
+SC House District 68 (United Citizens Party)	1	SC House District 68	United Citizens Party
+SC House District 69 (United Citizens Party)	1	SC House District 69	United Citizens Party
+SC House District 70 (United Citizens Party)	1	SC House District 70	United Citizens Party
+SC House District 71 (United Citizens Party)	1	SC House District 71	United Citizens Party
+SC House District 72 (United Citizens Party)	1	SC House District 72	United Citizens Party
+SC House District 73 (United Citizens Party)	1	SC House District 73	United Citizens Party
+SC House District 74 (United Citizens Party)	1	SC House District 74	United Citizens Party
+SC House District 75 (United Citizens Party)	1	SC House District 75	United Citizens Party
+SC House District 76 (United Citizens Party)	1	SC House District 76	United Citizens Party
+SC House District 77 (United Citizens Party)	1	SC House District 77	United Citizens Party
+SC House District 78 (United Citizens Party)	1	SC House District 78	United Citizens Party
+SC House District 79 (United Citizens Party)	1	SC House District 79	United Citizens Party
+SC House District 80 (United Citizens Party)	1	SC House District 80	United Citizens Party
+SC House District 81 (United Citizens Party)	1	SC House District 81	United Citizens Party
+SC House District 82 (United Citizens Party)	1	SC House District 82	United Citizens Party
+SC House District 83 (United Citizens Party)	1	SC House District 83	United Citizens Party
+SC House District 84 (United Citizens Party)	1	SC House District 84	United Citizens Party
+SC House District 85 (United Citizens Party)	1	SC House District 85	United Citizens Party
+SC House District 86 (United Citizens Party)	1	SC House District 86	United Citizens Party
+SC House District 87 (United Citizens Party)	1	SC House District 87	United Citizens Party
+SC House District 88 (United Citizens Party)	1	SC House District 88	United Citizens Party
+SC House District 89 (United Citizens Party)	1	SC House District 89	United Citizens Party
+SC House District 90 (United Citizens Party)	1	SC House District 90	United Citizens Party
+SC House District 91 (United Citizens Party)	1	SC House District 91	United Citizens Party
+SC House District 92 (United Citizens Party)	1	SC House District 92	United Citizens Party
+SC House District 93 (United Citizens Party)	1	SC House District 93	United Citizens Party
+SC House District 94 (United Citizens Party)	1	SC House District 94	United Citizens Party
+SC House District 95 (United Citizens Party)	1	SC House District 95	United Citizens Party
+SC House District 96 (United Citizens Party)	1	SC House District 96	United Citizens Party
+SC House District 97 (United Citizens Party)	1	SC House District 97	United Citizens Party
+SC House District 98 (United Citizens Party)	1	SC House District 98	United Citizens Party
+SC House District 99 (United Citizens Party)	1	SC House District 99	United Citizens Party
+SC House District 100 (United Citizens Party)	1	SC House District 100	United Citizens Party
+SC House District 101 (United Citizens Party)	1	SC House District 101	United Citizens Party
+SC House District 102 (United Citizens Party)	1	SC House District 102	United Citizens Party
+SC House District 103 (United Citizens Party)	1	SC House District 103	United Citizens Party
+SC House District 104 (United Citizens Party)	1	SC House District 104	United Citizens Party
+SC House District 105 (United Citizens Party)	1	SC House District 105	United Citizens Party
+SC House District 106 (United Citizens Party)	1	SC House District 106	United Citizens Party
+SC House District 107 (United Citizens Party)	1	SC House District 107	United Citizens Party
+SC House District 108 (United Citizens Party)	1	SC House District 108	United Citizens Party
+SC House District 109 (United Citizens Party)	1	SC House District 109	United Citizens Party
+SC House District 110 (United Citizens Party)	1	SC House District 110	United Citizens Party
+SC House District 111 (United Citizens Party)	1	SC House District 111	United Citizens Party
+SC House District 112 (United Citizens Party)	1	SC House District 112	United Citizens Party
+SC House District 113 (United Citizens Party)	1	SC House District 113	United Citizens Party
+SC House District 114 (United Citizens Party)	1	SC House District 114	United Citizens Party
+SC House District 115 (United Citizens Party)	1	SC House District 115	United Citizens Party
+SC House District 116 (United Citizens Party)	1	SC House District 116	United Citizens Party
+SC House District 117 (United Citizens Party)	1	SC House District 117	United Citizens Party
+SC House District 118 (United Citizens Party)	1	SC House District 118	United Citizens Party
+SC House District 119 (United Citizens Party)	1	SC House District 119	United Citizens Party
+SC House District 120 (United Citizens Party)	1	SC House District 120	United Citizens Party
+SC House District 121 (United Citizens Party)	1	SC House District 121	United Citizens Party
+SC House District 122 (United Citizens Party)	1	SC House District 122	United Citizens Party
+SC House District 123 (United Citizens Party)	1	SC House District 123	United Citizens Party
+SC House District 124 (United Citizens Party)	1	SC House District 124	United Citizens Party
+SC Senate District 1 (United Citizens Party)	1	SC Senate District 1	United Citizens Party
+SC Senate District 2 (United Citizens Party)	1	SC Senate District 2	United Citizens Party
+SC Senate District 3 (United Citizens Party)	1	SC Senate District 3	United Citizens Party
+SC Senate District 4 (United Citizens Party)	1	SC Senate District 4	United Citizens Party
+SC Senate District 5 (United Citizens Party)	1	SC Senate District 5	United Citizens Party
+SC Senate District 6 (United Citizens Party)	1	SC Senate District 6	United Citizens Party
+SC Senate District 7 (United Citizens Party)	1	SC Senate District 7	United Citizens Party
+SC Senate District 8 (United Citizens Party)	1	SC Senate District 8	United Citizens Party
+SC Senate District 9 (United Citizens Party)	1	SC Senate District 9	United Citizens Party
+SC Senate District 10 (United Citizens Party)	1	SC Senate District 10	United Citizens Party
+SC Senate District 11 (United Citizens Party)	1	SC Senate District 11	United Citizens Party
+SC Senate District 12 (United Citizens Party)	1	SC Senate District 12	United Citizens Party
+SC Senate District 13 (United Citizens Party)	1	SC Senate District 13	United Citizens Party
+SC Senate District 14 (United Citizens Party)	1	SC Senate District 14	United Citizens Party
+SC Senate District 15 (United Citizens Party)	1	SC Senate District 15	United Citizens Party
+SC Senate District 16 (United Citizens Party)	1	SC Senate District 16	United Citizens Party
+SC Senate District 17 (United Citizens Party)	1	SC Senate District 17	United Citizens Party
+SC Senate District 18 (United Citizens Party)	1	SC Senate District 18	United Citizens Party
+SC Senate District 19 (United Citizens Party)	1	SC Senate District 19	United Citizens Party
+SC Senate District 20 (United Citizens Party)	1	SC Senate District 20	United Citizens Party
+SC Senate District 21 (United Citizens Party)	1	SC Senate District 21	United Citizens Party
+SC Senate District 22 (United Citizens Party)	1	SC Senate District 22	United Citizens Party
+SC Senate District 23 (United Citizens Party)	1	SC Senate District 23	United Citizens Party
+SC Senate District 24 (United Citizens Party)	1	SC Senate District 24	United Citizens Party
+SC Senate District 25 (United Citizens Party)	1	SC Senate District 25	United Citizens Party
+SC Senate District 26 (United Citizens Party)	1	SC Senate District 26	United Citizens Party
+SC Senate District 27 (United Citizens Party)	1	SC Senate District 27	United Citizens Party
+SC Senate District 28 (United Citizens Party)	1	SC Senate District 28	United Citizens Party
+SC Senate District 29 (United Citizens Party)	1	SC Senate District 29	United Citizens Party
+SC Senate District 30 (United Citizens Party)	1	SC Senate District 30	United Citizens Party
+SC Senate District 31 (United Citizens Party)	1	SC Senate District 31	United Citizens Party
+SC Senate District 32 (United Citizens Party)	1	SC Senate District 32	United Citizens Party
+SC Senate District 33 (United Citizens Party)	1	SC Senate District 33	United Citizens Party
+SC Senate District 34 (United Citizens Party)	1	SC Senate District 34	United Citizens Party
+SC Senate District 35 (United Citizens Party)	1	SC Senate District 35	United Citizens Party
+SC Senate District 36 (United Citizens Party)	1	SC Senate District 36	United Citizens Party
+SC Senate District 37 (United Citizens Party)	1	SC Senate District 37	United Citizens Party
+SC Senate District 38 (United Citizens Party)	1	SC Senate District 38	United Citizens Party
+SC Senate District 39 (United Citizens Party)	1	SC Senate District 39	United Citizens Party
+SC Senate District 40 (United Citizens Party)	1	SC Senate District 40	United Citizens Party
+SC Senate District 41 (United Citizens Party)	1	SC Senate District 41	United Citizens Party
+SC Senate District 42 (United Citizens Party)	1	SC Senate District 42	United Citizens Party
+SC Senate District 43 (United Citizens Party)	1	SC Senate District 43	United Citizens Party
+SC Senate District 44 (United Citizens Party)	1	SC Senate District 44	United Citizens Party
+SC Senate District 45 (United Citizens Party)	1	SC Senate District 45	United Citizens Party
+SC Senate District 46 (United Citizens Party)	1	SC Senate District 46	United Citizens Party
+US House SC District 1 (United Citizens Party)	1	US House SC District 1	United Citizens Party
+US House SC District 2 (United Citizens Party)	1	US House SC District 2	United Citizens Party
+US House SC District 3 (United Citizens Party)	1	US House SC District 3	United Citizens Party
+US House SC District 4 (United Citizens Party)	1	US House SC District 4	United Citizens Party
+US House SC District 5 (United Citizens Party)	1	US House SC District 5	United Citizens Party
+US House SC District 6 (United Citizens Party)	1	US House SC District 6	United Citizens Party
+US House SC District 7 (United Citizens Party)	1	US House SC District 7	United Citizens Party
+US President (SC) (United Citizens Party)	1	US President (SC)	United Citizens Party
+SC Governor (United Citizens Party)	1	SC Governor	United Citizens Party
+US Senate SC (United Citizens Party)	1	US Senate SC	United Citizens Party
+SC Attorney General (United Citizens Party)	1	SC Attorney General	United Citizens Party
+SC Lieutenant Governor (United Citizens Party)	1	SC Lieutenant Governor	United Citizens Party
+SC Treasurer (United Citizens Party)	1	SC Treasurer	United Citizens Party
+SC Secretary of State (United Citizens Party)	1	SC Secretary of State	United Citizens Party
+SC Adjutant General (United Citizens Party)	1	SC Adjutant General	United Citizens Party
+SC Commissioner of Agriculture (United Citizens Party)	1	SC Commissioner of Agriculture	United Citizens Party
+SC State Superintendent of Education (United Citizens Party)	1	SC State Superintendent of Education	United Citizens Party
+SC Comptroller General (United Citizens Party)	1	SC Comptroller General	United Citizens Party
+SC House District 1 (Independence Party)	1	SC House District 1	Independence Party
+SC House District 2 (Independence Party)	1	SC House District 2	Independence Party
+SC House District 3 (Independence Party)	1	SC House District 3	Independence Party
+SC House District 4 (Independence Party)	1	SC House District 4	Independence Party
+SC House District 5 (Independence Party)	1	SC House District 5	Independence Party
+SC House District 6 (Independence Party)	1	SC House District 6	Independence Party
+SC House District 7 (Independence Party)	1	SC House District 7	Independence Party
+SC House District 8 (Independence Party)	1	SC House District 8	Independence Party
+SC House District 9 (Independence Party)	1	SC House District 9	Independence Party
+SC House District 10 (Independence Party)	1	SC House District 10	Independence Party
+SC House District 11 (Independence Party)	1	SC House District 11	Independence Party
+SC House District 12 (Independence Party)	1	SC House District 12	Independence Party
+SC House District 13 (Independence Party)	1	SC House District 13	Independence Party
+SC House District 14 (Independence Party)	1	SC House District 14	Independence Party
+SC House District 15 (Independence Party)	1	SC House District 15	Independence Party
+SC House District 16 (Independence Party)	1	SC House District 16	Independence Party
+SC House District 17 (Independence Party)	1	SC House District 17	Independence Party
+SC House District 18 (Independence Party)	1	SC House District 18	Independence Party
+SC House District 19 (Independence Party)	1	SC House District 19	Independence Party
+SC House District 20 (Independence Party)	1	SC House District 20	Independence Party
+SC House District 21 (Independence Party)	1	SC House District 21	Independence Party
+SC House District 22 (Independence Party)	1	SC House District 22	Independence Party
+SC House District 23 (Independence Party)	1	SC House District 23	Independence Party
+SC House District 24 (Independence Party)	1	SC House District 24	Independence Party
+SC House District 25 (Independence Party)	1	SC House District 25	Independence Party
+SC House District 26 (Independence Party)	1	SC House District 26	Independence Party
+SC House District 27 (Independence Party)	1	SC House District 27	Independence Party
+SC House District 28 (Independence Party)	1	SC House District 28	Independence Party
+SC House District 29 (Independence Party)	1	SC House District 29	Independence Party
+SC House District 30 (Independence Party)	1	SC House District 30	Independence Party
+SC House District 31 (Independence Party)	1	SC House District 31	Independence Party
+SC House District 32 (Independence Party)	1	SC House District 32	Independence Party
+SC House District 33 (Independence Party)	1	SC House District 33	Independence Party
+SC House District 34 (Independence Party)	1	SC House District 34	Independence Party
+SC House District 35 (Independence Party)	1	SC House District 35	Independence Party
+SC House District 36 (Independence Party)	1	SC House District 36	Independence Party
+SC House District 37 (Independence Party)	1	SC House District 37	Independence Party
+SC House District 38 (Independence Party)	1	SC House District 38	Independence Party
+SC House District 39 (Independence Party)	1	SC House District 39	Independence Party
+SC House District 40 (Independence Party)	1	SC House District 40	Independence Party
+SC House District 41 (Independence Party)	1	SC House District 41	Independence Party
+SC House District 42 (Independence Party)	1	SC House District 42	Independence Party
+SC House District 43 (Independence Party)	1	SC House District 43	Independence Party
+SC House District 44 (Independence Party)	1	SC House District 44	Independence Party
+SC House District 45 (Independence Party)	1	SC House District 45	Independence Party
+SC House District 46 (Independence Party)	1	SC House District 46	Independence Party
+SC House District 47 (Independence Party)	1	SC House District 47	Independence Party
+SC House District 48 (Independence Party)	1	SC House District 48	Independence Party
+SC House District 49 (Independence Party)	1	SC House District 49	Independence Party
+SC House District 50 (Independence Party)	1	SC House District 50	Independence Party
+SC House District 51 (Independence Party)	1	SC House District 51	Independence Party
+SC House District 52 (Independence Party)	1	SC House District 52	Independence Party
+SC House District 53 (Independence Party)	1	SC House District 53	Independence Party
+SC House District 54 (Independence Party)	1	SC House District 54	Independence Party
+SC House District 55 (Independence Party)	1	SC House District 55	Independence Party
+SC House District 56 (Independence Party)	1	SC House District 56	Independence Party
+SC House District 57 (Independence Party)	1	SC House District 57	Independence Party
+SC House District 58 (Independence Party)	1	SC House District 58	Independence Party
+SC House District 59 (Independence Party)	1	SC House District 59	Independence Party
+SC House District 60 (Independence Party)	1	SC House District 60	Independence Party
+SC House District 61 (Independence Party)	1	SC House District 61	Independence Party
+SC House District 62 (Independence Party)	1	SC House District 62	Independence Party
+SC House District 63 (Independence Party)	1	SC House District 63	Independence Party
+SC House District 64 (Independence Party)	1	SC House District 64	Independence Party
+SC House District 65 (Independence Party)	1	SC House District 65	Independence Party
+SC House District 66 (Independence Party)	1	SC House District 66	Independence Party
+SC House District 67 (Independence Party)	1	SC House District 67	Independence Party
+SC House District 68 (Independence Party)	1	SC House District 68	Independence Party
+SC House District 69 (Independence Party)	1	SC House District 69	Independence Party
+SC House District 70 (Independence Party)	1	SC House District 70	Independence Party
+SC House District 71 (Independence Party)	1	SC House District 71	Independence Party
+SC House District 72 (Independence Party)	1	SC House District 72	Independence Party
+SC House District 73 (Independence Party)	1	SC House District 73	Independence Party
+SC House District 74 (Independence Party)	1	SC House District 74	Independence Party
+SC House District 75 (Independence Party)	1	SC House District 75	Independence Party
+SC House District 76 (Independence Party)	1	SC House District 76	Independence Party
+SC House District 77 (Independence Party)	1	SC House District 77	Independence Party
+SC House District 78 (Independence Party)	1	SC House District 78	Independence Party
+SC House District 79 (Independence Party)	1	SC House District 79	Independence Party
+SC House District 80 (Independence Party)	1	SC House District 80	Independence Party
+SC House District 81 (Independence Party)	1	SC House District 81	Independence Party
+SC House District 82 (Independence Party)	1	SC House District 82	Independence Party
+SC House District 83 (Independence Party)	1	SC House District 83	Independence Party
+SC House District 84 (Independence Party)	1	SC House District 84	Independence Party
+SC House District 85 (Independence Party)	1	SC House District 85	Independence Party
+SC House District 86 (Independence Party)	1	SC House District 86	Independence Party
+SC House District 87 (Independence Party)	1	SC House District 87	Independence Party
+SC House District 88 (Independence Party)	1	SC House District 88	Independence Party
+SC House District 89 (Independence Party)	1	SC House District 89	Independence Party
+SC House District 90 (Independence Party)	1	SC House District 90	Independence Party
+SC House District 91 (Independence Party)	1	SC House District 91	Independence Party
+SC House District 92 (Independence Party)	1	SC House District 92	Independence Party
+SC House District 93 (Independence Party)	1	SC House District 93	Independence Party
+SC House District 94 (Independence Party)	1	SC House District 94	Independence Party
+SC House District 95 (Independence Party)	1	SC House District 95	Independence Party
+SC House District 96 (Independence Party)	1	SC House District 96	Independence Party
+SC House District 97 (Independence Party)	1	SC House District 97	Independence Party
+SC House District 98 (Independence Party)	1	SC House District 98	Independence Party
+SC House District 99 (Independence Party)	1	SC House District 99	Independence Party
+SC House District 100 (Independence Party)	1	SC House District 100	Independence Party
+SC House District 101 (Independence Party)	1	SC House District 101	Independence Party
+SC House District 102 (Independence Party)	1	SC House District 102	Independence Party
+SC House District 103 (Independence Party)	1	SC House District 103	Independence Party
+SC House District 104 (Independence Party)	1	SC House District 104	Independence Party
+SC House District 105 (Independence Party)	1	SC House District 105	Independence Party
+SC House District 106 (Independence Party)	1	SC House District 106	Independence Party
+SC House District 107 (Independence Party)	1	SC House District 107	Independence Party
+SC House District 108 (Independence Party)	1	SC House District 108	Independence Party
+SC House District 109 (Independence Party)	1	SC House District 109	Independence Party
+SC House District 110 (Independence Party)	1	SC House District 110	Independence Party
+SC House District 111 (Independence Party)	1	SC House District 111	Independence Party
+SC House District 112 (Independence Party)	1	SC House District 112	Independence Party
+SC House District 113 (Independence Party)	1	SC House District 113	Independence Party
+SC House District 114 (Independence Party)	1	SC House District 114	Independence Party
+SC House District 115 (Independence Party)	1	SC House District 115	Independence Party
+SC House District 116 (Independence Party)	1	SC House District 116	Independence Party
+SC House District 117 (Independence Party)	1	SC House District 117	Independence Party
+SC House District 118 (Independence Party)	1	SC House District 118	Independence Party
+SC House District 119 (Independence Party)	1	SC House District 119	Independence Party
+SC House District 120 (Independence Party)	1	SC House District 120	Independence Party
+SC House District 121 (Independence Party)	1	SC House District 121	Independence Party
+SC House District 122 (Independence Party)	1	SC House District 122	Independence Party
+SC House District 123 (Independence Party)	1	SC House District 123	Independence Party
+SC House District 124 (Independence Party)	1	SC House District 124	Independence Party
+SC Senate District 1 (Independence Party)	1	SC Senate District 1	Independence Party
+SC Senate District 2 (Independence Party)	1	SC Senate District 2	Independence Party
+SC Senate District 3 (Independence Party)	1	SC Senate District 3	Independence Party
+SC Senate District 4 (Independence Party)	1	SC Senate District 4	Independence Party
+SC Senate District 5 (Independence Party)	1	SC Senate District 5	Independence Party
+SC Senate District 6 (Independence Party)	1	SC Senate District 6	Independence Party
+SC Senate District 7 (Independence Party)	1	SC Senate District 7	Independence Party
+SC Senate District 8 (Independence Party)	1	SC Senate District 8	Independence Party
+SC Senate District 9 (Independence Party)	1	SC Senate District 9	Independence Party
+SC Senate District 10 (Independence Party)	1	SC Senate District 10	Independence Party
+SC Senate District 11 (Independence Party)	1	SC Senate District 11	Independence Party
+SC Senate District 12 (Independence Party)	1	SC Senate District 12	Independence Party
+SC Senate District 13 (Independence Party)	1	SC Senate District 13	Independence Party
+SC Senate District 14 (Independence Party)	1	SC Senate District 14	Independence Party
+SC Senate District 15 (Independence Party)	1	SC Senate District 15	Independence Party
+SC Senate District 16 (Independence Party)	1	SC Senate District 16	Independence Party
+SC Senate District 17 (Independence Party)	1	SC Senate District 17	Independence Party
+SC Senate District 18 (Independence Party)	1	SC Senate District 18	Independence Party
+SC Senate District 19 (Independence Party)	1	SC Senate District 19	Independence Party
+SC Senate District 20 (Independence Party)	1	SC Senate District 20	Independence Party
+SC Senate District 21 (Independence Party)	1	SC Senate District 21	Independence Party
+SC Senate District 22 (Independence Party)	1	SC Senate District 22	Independence Party
+SC Senate District 23 (Independence Party)	1	SC Senate District 23	Independence Party
+SC Senate District 24 (Independence Party)	1	SC Senate District 24	Independence Party
+SC Senate District 25 (Independence Party)	1	SC Senate District 25	Independence Party
+SC Senate District 26 (Independence Party)	1	SC Senate District 26	Independence Party
+SC Senate District 27 (Independence Party)	1	SC Senate District 27	Independence Party
+SC Senate District 28 (Independence Party)	1	SC Senate District 28	Independence Party
+SC Senate District 29 (Independence Party)	1	SC Senate District 29	Independence Party
+SC Senate District 30 (Independence Party)	1	SC Senate District 30	Independence Party
+SC Senate District 31 (Independence Party)	1	SC Senate District 31	Independence Party
+SC Senate District 32 (Independence Party)	1	SC Senate District 32	Independence Party
+SC Senate District 33 (Independence Party)	1	SC Senate District 33	Independence Party
+SC Senate District 34 (Independence Party)	1	SC Senate District 34	Independence Party
+SC Senate District 35 (Independence Party)	1	SC Senate District 35	Independence Party
+SC Senate District 36 (Independence Party)	1	SC Senate District 36	Independence Party
+SC Senate District 37 (Independence Party)	1	SC Senate District 37	Independence Party
+SC Senate District 38 (Independence Party)	1	SC Senate District 38	Independence Party
+SC Senate District 39 (Independence Party)	1	SC Senate District 39	Independence Party
+SC Senate District 40 (Independence Party)	1	SC Senate District 40	Independence Party
+SC Senate District 41 (Independence Party)	1	SC Senate District 41	Independence Party
+SC Senate District 42 (Independence Party)	1	SC Senate District 42	Independence Party
+SC Senate District 43 (Independence Party)	1	SC Senate District 43	Independence Party
+SC Senate District 44 (Independence Party)	1	SC Senate District 44	Independence Party
+SC Senate District 45 (Independence Party)	1	SC Senate District 45	Independence Party
+SC Senate District 46 (Independence Party)	1	SC Senate District 46	Independence Party
+US House SC District 1 (Independence Party)	1	US House SC District 1	Independence Party
+US House SC District 2 (Independence Party)	1	US House SC District 2	Independence Party
+US House SC District 3 (Independence Party)	1	US House SC District 3	Independence Party
+US House SC District 4 (Independence Party)	1	US House SC District 4	Independence Party
+US House SC District 5 (Independence Party)	1	US House SC District 5	Independence Party
+US House SC District 6 (Independence Party)	1	US House SC District 6	Independence Party
+US House SC District 7 (Independence Party)	1	US House SC District 7	Independence Party
+US President (SC) (Independence Party)	1	US President (SC)	Independence Party
+SC Governor (Independence Party)	1	SC Governor	Independence Party
+US Senate SC (Independence Party)	1	US Senate SC	Independence Party
+SC Attorney General (Independence Party)	1	SC Attorney General	Independence Party
+SC Lieutenant Governor (Independence Party)	1	SC Lieutenant Governor	Independence Party
+SC Treasurer (Independence Party)	1	SC Treasurer	Independence Party
+SC Secretary of State (Independence Party)	1	SC Secretary of State	Independence Party
+SC Adjutant General (Independence Party)	1	SC Adjutant General	Independence Party
+SC Commissioner of Agriculture (Independence Party)	1	SC Commissioner of Agriculture	Independence Party
+SC State Superintendent of Education (Independence Party)	1	SC State Superintendent of Education	Independence Party
+SC Comptroller General (Independence Party)	1	SC Comptroller General	Independence Party
+SC House District 1 (Constitution Party)	1	SC House District 1	Constitution Party
+SC House District 2 (Constitution Party)	1	SC House District 2	Constitution Party
+SC House District 3 (Constitution Party)	1	SC House District 3	Constitution Party
+SC House District 4 (Constitution Party)	1	SC House District 4	Constitution Party
+SC House District 5 (Constitution Party)	1	SC House District 5	Constitution Party
+SC House District 6 (Constitution Party)	1	SC House District 6	Constitution Party
+SC House District 7 (Constitution Party)	1	SC House District 7	Constitution Party
+SC House District 8 (Constitution Party)	1	SC House District 8	Constitution Party
+SC House District 9 (Constitution Party)	1	SC House District 9	Constitution Party
+SC House District 10 (Constitution Party)	1	SC House District 10	Constitution Party
+SC House District 11 (Constitution Party)	1	SC House District 11	Constitution Party
+SC House District 12 (Constitution Party)	1	SC House District 12	Constitution Party
+SC House District 13 (Constitution Party)	1	SC House District 13	Constitution Party
+SC House District 14 (Constitution Party)	1	SC House District 14	Constitution Party
+SC House District 15 (Constitution Party)	1	SC House District 15	Constitution Party
+SC House District 16 (Constitution Party)	1	SC House District 16	Constitution Party
+SC House District 17 (Constitution Party)	1	SC House District 17	Constitution Party
+SC House District 18 (Constitution Party)	1	SC House District 18	Constitution Party
+SC House District 19 (Constitution Party)	1	SC House District 19	Constitution Party
+SC House District 20 (Constitution Party)	1	SC House District 20	Constitution Party
+SC House District 21 (Constitution Party)	1	SC House District 21	Constitution Party
+SC House District 22 (Constitution Party)	1	SC House District 22	Constitution Party
+SC House District 23 (Constitution Party)	1	SC House District 23	Constitution Party
+SC House District 24 (Constitution Party)	1	SC House District 24	Constitution Party
+SC House District 25 (Constitution Party)	1	SC House District 25	Constitution Party
+SC House District 26 (Constitution Party)	1	SC House District 26	Constitution Party
+SC House District 27 (Constitution Party)	1	SC House District 27	Constitution Party
+SC House District 28 (Constitution Party)	1	SC House District 28	Constitution Party
+SC House District 29 (Constitution Party)	1	SC House District 29	Constitution Party
+SC House District 30 (Constitution Party)	1	SC House District 30	Constitution Party
+SC House District 31 (Constitution Party)	1	SC House District 31	Constitution Party
+SC House District 32 (Constitution Party)	1	SC House District 32	Constitution Party
+SC House District 33 (Constitution Party)	1	SC House District 33	Constitution Party
+SC House District 34 (Constitution Party)	1	SC House District 34	Constitution Party
+SC House District 35 (Constitution Party)	1	SC House District 35	Constitution Party
+SC House District 36 (Constitution Party)	1	SC House District 36	Constitution Party
+SC House District 37 (Constitution Party)	1	SC House District 37	Constitution Party
+SC House District 38 (Constitution Party)	1	SC House District 38	Constitution Party
+SC House District 39 (Constitution Party)	1	SC House District 39	Constitution Party
+SC House District 40 (Constitution Party)	1	SC House District 40	Constitution Party
+SC House District 41 (Constitution Party)	1	SC House District 41	Constitution Party
+SC House District 42 (Constitution Party)	1	SC House District 42	Constitution Party
+SC House District 43 (Constitution Party)	1	SC House District 43	Constitution Party
+SC House District 44 (Constitution Party)	1	SC House District 44	Constitution Party
+SC House District 45 (Constitution Party)	1	SC House District 45	Constitution Party
+SC House District 46 (Constitution Party)	1	SC House District 46	Constitution Party
+SC House District 47 (Constitution Party)	1	SC House District 47	Constitution Party
+SC House District 48 (Constitution Party)	1	SC House District 48	Constitution Party
+SC House District 49 (Constitution Party)	1	SC House District 49	Constitution Party
+SC House District 50 (Constitution Party)	1	SC House District 50	Constitution Party
+SC House District 51 (Constitution Party)	1	SC House District 51	Constitution Party
+SC House District 52 (Constitution Party)	1	SC House District 52	Constitution Party
+SC House District 53 (Constitution Party)	1	SC House District 53	Constitution Party
+SC House District 54 (Constitution Party)	1	SC House District 54	Constitution Party
+SC House District 55 (Constitution Party)	1	SC House District 55	Constitution Party
+SC House District 56 (Constitution Party)	1	SC House District 56	Constitution Party
+SC House District 57 (Constitution Party)	1	SC House District 57	Constitution Party
+SC House District 58 (Constitution Party)	1	SC House District 58	Constitution Party
+SC House District 59 (Constitution Party)	1	SC House District 59	Constitution Party
+SC House District 60 (Constitution Party)	1	SC House District 60	Constitution Party
+SC House District 61 (Constitution Party)	1	SC House District 61	Constitution Party
+SC House District 62 (Constitution Party)	1	SC House District 62	Constitution Party
+SC House District 63 (Constitution Party)	1	SC House District 63	Constitution Party
+SC House District 64 (Constitution Party)	1	SC House District 64	Constitution Party
+SC House District 65 (Constitution Party)	1	SC House District 65	Constitution Party
+SC House District 66 (Constitution Party)	1	SC House District 66	Constitution Party
+SC House District 67 (Constitution Party)	1	SC House District 67	Constitution Party
+SC House District 68 (Constitution Party)	1	SC House District 68	Constitution Party
+SC House District 69 (Constitution Party)	1	SC House District 69	Constitution Party
+SC House District 70 (Constitution Party)	1	SC House District 70	Constitution Party
+SC House District 71 (Constitution Party)	1	SC House District 71	Constitution Party
+SC House District 72 (Constitution Party)	1	SC House District 72	Constitution Party
+SC House District 73 (Constitution Party)	1	SC House District 73	Constitution Party
+SC House District 74 (Constitution Party)	1	SC House District 74	Constitution Party
+SC House District 75 (Constitution Party)	1	SC House District 75	Constitution Party
+SC House District 76 (Constitution Party)	1	SC House District 76	Constitution Party
+SC House District 77 (Constitution Party)	1	SC House District 77	Constitution Party
+SC House District 78 (Constitution Party)	1	SC House District 78	Constitution Party
+SC House District 79 (Constitution Party)	1	SC House District 79	Constitution Party
+SC House District 80 (Constitution Party)	1	SC House District 80	Constitution Party
+SC House District 81 (Constitution Party)	1	SC House District 81	Constitution Party
+SC House District 82 (Constitution Party)	1	SC House District 82	Constitution Party
+SC House District 83 (Constitution Party)	1	SC House District 83	Constitution Party
+SC House District 84 (Constitution Party)	1	SC House District 84	Constitution Party
+SC House District 85 (Constitution Party)	1	SC House District 85	Constitution Party
+SC House District 86 (Constitution Party)	1	SC House District 86	Constitution Party
+SC House District 87 (Constitution Party)	1	SC House District 87	Constitution Party
+SC House District 88 (Constitution Party)	1	SC House District 88	Constitution Party
+SC House District 89 (Constitution Party)	1	SC House District 89	Constitution Party
+SC House District 90 (Constitution Party)	1	SC House District 90	Constitution Party
+SC House District 91 (Constitution Party)	1	SC House District 91	Constitution Party
+SC House District 92 (Constitution Party)	1	SC House District 92	Constitution Party
+SC House District 93 (Constitution Party)	1	SC House District 93	Constitution Party
+SC House District 94 (Constitution Party)	1	SC House District 94	Constitution Party
+SC House District 95 (Constitution Party)	1	SC House District 95	Constitution Party
+SC House District 96 (Constitution Party)	1	SC House District 96	Constitution Party
+SC House District 97 (Constitution Party)	1	SC House District 97	Constitution Party
+SC House District 98 (Constitution Party)	1	SC House District 98	Constitution Party
+SC House District 99 (Constitution Party)	1	SC House District 99	Constitution Party
+SC House District 100 (Constitution Party)	1	SC House District 100	Constitution Party
+SC House District 101 (Constitution Party)	1	SC House District 101	Constitution Party
+SC House District 102 (Constitution Party)	1	SC House District 102	Constitution Party
+SC House District 103 (Constitution Party)	1	SC House District 103	Constitution Party
+SC House District 104 (Constitution Party)	1	SC House District 104	Constitution Party
+SC House District 105 (Constitution Party)	1	SC House District 105	Constitution Party
+SC House District 106 (Constitution Party)	1	SC House District 106	Constitution Party
+SC House District 107 (Constitution Party)	1	SC House District 107	Constitution Party
+SC House District 108 (Constitution Party)	1	SC House District 108	Constitution Party
+SC House District 109 (Constitution Party)	1	SC House District 109	Constitution Party
+SC House District 110 (Constitution Party)	1	SC House District 110	Constitution Party
+SC House District 111 (Constitution Party)	1	SC House District 111	Constitution Party
+SC House District 112 (Constitution Party)	1	SC House District 112	Constitution Party
+SC House District 113 (Constitution Party)	1	SC House District 113	Constitution Party
+SC House District 114 (Constitution Party)	1	SC House District 114	Constitution Party
+SC House District 115 (Constitution Party)	1	SC House District 115	Constitution Party
+SC House District 116 (Constitution Party)	1	SC House District 116	Constitution Party
+SC House District 117 (Constitution Party)	1	SC House District 117	Constitution Party
+SC House District 118 (Constitution Party)	1	SC House District 118	Constitution Party
+SC House District 119 (Constitution Party)	1	SC House District 119	Constitution Party
+SC House District 120 (Constitution Party)	1	SC House District 120	Constitution Party
+SC House District 121 (Constitution Party)	1	SC House District 121	Constitution Party
+SC House District 122 (Constitution Party)	1	SC House District 122	Constitution Party
+SC House District 123 (Constitution Party)	1	SC House District 123	Constitution Party
+SC House District 124 (Constitution Party)	1	SC House District 124	Constitution Party
+SC Senate District 1 (Constitution Party)	1	SC Senate District 1	Constitution Party
+SC Senate District 2 (Constitution Party)	1	SC Senate District 2	Constitution Party
+SC Senate District 3 (Constitution Party)	1	SC Senate District 3	Constitution Party
+SC Senate District 4 (Constitution Party)	1	SC Senate District 4	Constitution Party
+SC Senate District 5 (Constitution Party)	1	SC Senate District 5	Constitution Party
+SC Senate District 6 (Constitution Party)	1	SC Senate District 6	Constitution Party
+SC Senate District 7 (Constitution Party)	1	SC Senate District 7	Constitution Party
+SC Senate District 8 (Constitution Party)	1	SC Senate District 8	Constitution Party
+SC Senate District 9 (Constitution Party)	1	SC Senate District 9	Constitution Party
+SC Senate District 10 (Constitution Party)	1	SC Senate District 10	Constitution Party
+SC Senate District 11 (Constitution Party)	1	SC Senate District 11	Constitution Party
+SC Senate District 12 (Constitution Party)	1	SC Senate District 12	Constitution Party
+SC Senate District 13 (Constitution Party)	1	SC Senate District 13	Constitution Party
+SC Senate District 14 (Constitution Party)	1	SC Senate District 14	Constitution Party
+SC Senate District 15 (Constitution Party)	1	SC Senate District 15	Constitution Party
+SC Senate District 16 (Constitution Party)	1	SC Senate District 16	Constitution Party
+SC Senate District 17 (Constitution Party)	1	SC Senate District 17	Constitution Party
+SC Senate District 18 (Constitution Party)	1	SC Senate District 18	Constitution Party
+SC Senate District 19 (Constitution Party)	1	SC Senate District 19	Constitution Party
+SC Senate District 20 (Constitution Party)	1	SC Senate District 20	Constitution Party
+SC Senate District 21 (Constitution Party)	1	SC Senate District 21	Constitution Party
+SC Senate District 22 (Constitution Party)	1	SC Senate District 22	Constitution Party
+SC Senate District 23 (Constitution Party)	1	SC Senate District 23	Constitution Party
+SC Senate District 24 (Constitution Party)	1	SC Senate District 24	Constitution Party
+SC Senate District 25 (Constitution Party)	1	SC Senate District 25	Constitution Party
+SC Senate District 26 (Constitution Party)	1	SC Senate District 26	Constitution Party
+SC Senate District 27 (Constitution Party)	1	SC Senate District 27	Constitution Party
+SC Senate District 28 (Constitution Party)	1	SC Senate District 28	Constitution Party
+SC Senate District 29 (Constitution Party)	1	SC Senate District 29	Constitution Party
+SC Senate District 30 (Constitution Party)	1	SC Senate District 30	Constitution Party
+SC Senate District 31 (Constitution Party)	1	SC Senate District 31	Constitution Party
+SC Senate District 32 (Constitution Party)	1	SC Senate District 32	Constitution Party
+SC Senate District 33 (Constitution Party)	1	SC Senate District 33	Constitution Party
+SC Senate District 34 (Constitution Party)	1	SC Senate District 34	Constitution Party
+SC Senate District 35 (Constitution Party)	1	SC Senate District 35	Constitution Party
+SC Senate District 36 (Constitution Party)	1	SC Senate District 36	Constitution Party
+SC Senate District 37 (Constitution Party)	1	SC Senate District 37	Constitution Party
+SC Senate District 38 (Constitution Party)	1	SC Senate District 38	Constitution Party
+SC Senate District 39 (Constitution Party)	1	SC Senate District 39	Constitution Party
+SC Senate District 40 (Constitution Party)	1	SC Senate District 40	Constitution Party
+SC Senate District 41 (Constitution Party)	1	SC Senate District 41	Constitution Party
+SC Senate District 42 (Constitution Party)	1	SC Senate District 42	Constitution Party
+SC Senate District 43 (Constitution Party)	1	SC Senate District 43	Constitution Party
+SC Senate District 44 (Constitution Party)	1	SC Senate District 44	Constitution Party
+SC Senate District 45 (Constitution Party)	1	SC Senate District 45	Constitution Party
+SC Senate District 46 (Constitution Party)	1	SC Senate District 46	Constitution Party
+US House SC District 1 (Constitution Party)	1	US House SC District 1	Constitution Party
+US House SC District 2 (Constitution Party)	1	US House SC District 2	Constitution Party
+US House SC District 3 (Constitution Party)	1	US House SC District 3	Constitution Party
+US House SC District 4 (Constitution Party)	1	US House SC District 4	Constitution Party
+US House SC District 5 (Constitution Party)	1	US House SC District 5	Constitution Party
+US House SC District 6 (Constitution Party)	1	US House SC District 6	Constitution Party
+US House SC District 7 (Constitution Party)	1	US House SC District 7	Constitution Party
+US President (SC) (Constitution Party)	1	US President (SC)	Constitution Party
+SC Governor (Constitution Party)	1	SC Governor	Constitution Party
+US Senate SC (Constitution Party)	1	US Senate SC	Constitution Party
+SC Attorney General (Constitution Party)	1	SC Attorney General	Constitution Party
+SC Lieutenant Governor (Constitution Party)	1	SC Lieutenant Governor	Constitution Party
+SC Treasurer (Constitution Party)	1	SC Treasurer	Constitution Party
+SC Secretary of State (Constitution Party)	1	SC Secretary of State	Constitution Party
+SC Adjutant General (Constitution Party)	1	SC Adjutant General	Constitution Party
+SC Commissioner of Agriculture (Constitution Party)	1	SC Commissioner of Agriculture	Constitution Party
+SC State Superintendent of Education (Constitution Party)	1	SC State Superintendent of Education	Constitution Party
+SC Comptroller General (Constitution Party)	1	SC Comptroller General	Constitution Party
+SC House District 1 (Alliance Party)	1	SC House District 1	Alliance Party
+SC House District 2 (Alliance Party)	1	SC House District 2	Alliance Party
+SC House District 3 (Alliance Party)	1	SC House District 3	Alliance Party
+SC House District 4 (Alliance Party)	1	SC House District 4	Alliance Party
+SC House District 5 (Alliance Party)	1	SC House District 5	Alliance Party
+SC House District 6 (Alliance Party)	1	SC House District 6	Alliance Party
+SC House District 7 (Alliance Party)	1	SC House District 7	Alliance Party
+SC House District 8 (Alliance Party)	1	SC House District 8	Alliance Party
+SC House District 9 (Alliance Party)	1	SC House District 9	Alliance Party
+SC House District 10 (Alliance Party)	1	SC House District 10	Alliance Party
+SC House District 11 (Alliance Party)	1	SC House District 11	Alliance Party
+SC House District 12 (Alliance Party)	1	SC House District 12	Alliance Party
+SC House District 13 (Alliance Party)	1	SC House District 13	Alliance Party
+SC House District 14 (Alliance Party)	1	SC House District 14	Alliance Party
+SC House District 15 (Alliance Party)	1	SC House District 15	Alliance Party
+SC House District 16 (Alliance Party)	1	SC House District 16	Alliance Party
+SC House District 17 (Alliance Party)	1	SC House District 17	Alliance Party
+SC House District 18 (Alliance Party)	1	SC House District 18	Alliance Party
+SC House District 19 (Alliance Party)	1	SC House District 19	Alliance Party
+SC House District 20 (Alliance Party)	1	SC House District 20	Alliance Party
+SC House District 21 (Alliance Party)	1	SC House District 21	Alliance Party
+SC House District 22 (Alliance Party)	1	SC House District 22	Alliance Party
+SC House District 23 (Alliance Party)	1	SC House District 23	Alliance Party
+SC House District 24 (Alliance Party)	1	SC House District 24	Alliance Party
+SC House District 25 (Alliance Party)	1	SC House District 25	Alliance Party
+SC House District 26 (Alliance Party)	1	SC House District 26	Alliance Party
+SC House District 27 (Alliance Party)	1	SC House District 27	Alliance Party
+SC House District 28 (Alliance Party)	1	SC House District 28	Alliance Party
+SC House District 29 (Alliance Party)	1	SC House District 29	Alliance Party
+SC House District 30 (Alliance Party)	1	SC House District 30	Alliance Party
+SC House District 31 (Alliance Party)	1	SC House District 31	Alliance Party
+SC House District 32 (Alliance Party)	1	SC House District 32	Alliance Party
+SC House District 33 (Alliance Party)	1	SC House District 33	Alliance Party
+SC House District 34 (Alliance Party)	1	SC House District 34	Alliance Party
+SC House District 35 (Alliance Party)	1	SC House District 35	Alliance Party
+SC House District 36 (Alliance Party)	1	SC House District 36	Alliance Party
+SC House District 37 (Alliance Party)	1	SC House District 37	Alliance Party
+SC House District 38 (Alliance Party)	1	SC House District 38	Alliance Party
+SC House District 39 (Alliance Party)	1	SC House District 39	Alliance Party
+SC House District 40 (Alliance Party)	1	SC House District 40	Alliance Party
+SC House District 41 (Alliance Party)	1	SC House District 41	Alliance Party
+SC House District 42 (Alliance Party)	1	SC House District 42	Alliance Party
+SC House District 43 (Alliance Party)	1	SC House District 43	Alliance Party
+SC House District 44 (Alliance Party)	1	SC House District 44	Alliance Party
+SC House District 45 (Alliance Party)	1	SC House District 45	Alliance Party
+SC House District 46 (Alliance Party)	1	SC House District 46	Alliance Party
+SC House District 47 (Alliance Party)	1	SC House District 47	Alliance Party
+SC House District 48 (Alliance Party)	1	SC House District 48	Alliance Party
+SC House District 49 (Alliance Party)	1	SC House District 49	Alliance Party
+SC House District 50 (Alliance Party)	1	SC House District 50	Alliance Party
+SC House District 51 (Alliance Party)	1	SC House District 51	Alliance Party
+SC House District 52 (Alliance Party)	1	SC House District 52	Alliance Party
+SC House District 53 (Alliance Party)	1	SC House District 53	Alliance Party
+SC House District 54 (Alliance Party)	1	SC House District 54	Alliance Party
+SC House District 55 (Alliance Party)	1	SC House District 55	Alliance Party
+SC House District 56 (Alliance Party)	1	SC House District 56	Alliance Party
+SC House District 57 (Alliance Party)	1	SC House District 57	Alliance Party
+SC House District 58 (Alliance Party)	1	SC House District 58	Alliance Party
+SC House District 59 (Alliance Party)	1	SC House District 59	Alliance Party
+SC House District 60 (Alliance Party)	1	SC House District 60	Alliance Party
+SC House District 61 (Alliance Party)	1	SC House District 61	Alliance Party
+SC House District 62 (Alliance Party)	1	SC House District 62	Alliance Party
+SC House District 63 (Alliance Party)	1	SC House District 63	Alliance Party
+SC House District 64 (Alliance Party)	1	SC House District 64	Alliance Party
+SC House District 65 (Alliance Party)	1	SC House District 65	Alliance Party
+SC House District 66 (Alliance Party)	1	SC House District 66	Alliance Party
+SC House District 67 (Alliance Party)	1	SC House District 67	Alliance Party
+SC House District 68 (Alliance Party)	1	SC House District 68	Alliance Party
+SC House District 69 (Alliance Party)	1	SC House District 69	Alliance Party
+SC House District 70 (Alliance Party)	1	SC House District 70	Alliance Party
+SC House District 71 (Alliance Party)	1	SC House District 71	Alliance Party
+SC House District 72 (Alliance Party)	1	SC House District 72	Alliance Party
+SC House District 73 (Alliance Party)	1	SC House District 73	Alliance Party
+SC House District 74 (Alliance Party)	1	SC House District 74	Alliance Party
+SC House District 75 (Alliance Party)	1	SC House District 75	Alliance Party
+SC House District 76 (Alliance Party)	1	SC House District 76	Alliance Party
+SC House District 77 (Alliance Party)	1	SC House District 77	Alliance Party
+SC House District 78 (Alliance Party)	1	SC House District 78	Alliance Party
+SC House District 79 (Alliance Party)	1	SC House District 79	Alliance Party
+SC House District 80 (Alliance Party)	1	SC House District 80	Alliance Party
+SC House District 81 (Alliance Party)	1	SC House District 81	Alliance Party
+SC House District 82 (Alliance Party)	1	SC House District 82	Alliance Party
+SC House District 83 (Alliance Party)	1	SC House District 83	Alliance Party
+SC House District 84 (Alliance Party)	1	SC House District 84	Alliance Party
+SC House District 85 (Alliance Party)	1	SC House District 85	Alliance Party
+SC House District 86 (Alliance Party)	1	SC House District 86	Alliance Party
+SC House District 87 (Alliance Party)	1	SC House District 87	Alliance Party
+SC House District 88 (Alliance Party)	1	SC House District 88	Alliance Party
+SC House District 89 (Alliance Party)	1	SC House District 89	Alliance Party
+SC House District 90 (Alliance Party)	1	SC House District 90	Alliance Party
+SC House District 91 (Alliance Party)	1	SC House District 91	Alliance Party
+SC House District 92 (Alliance Party)	1	SC House District 92	Alliance Party
+SC House District 93 (Alliance Party)	1	SC House District 93	Alliance Party
+SC House District 94 (Alliance Party)	1	SC House District 94	Alliance Party
+SC House District 95 (Alliance Party)	1	SC House District 95	Alliance Party
+SC House District 96 (Alliance Party)	1	SC House District 96	Alliance Party
+SC House District 97 (Alliance Party)	1	SC House District 97	Alliance Party
+SC House District 98 (Alliance Party)	1	SC House District 98	Alliance Party
+SC House District 99 (Alliance Party)	1	SC House District 99	Alliance Party
+SC House District 100 (Alliance Party)	1	SC House District 100	Alliance Party
+SC House District 101 (Alliance Party)	1	SC House District 101	Alliance Party
+SC House District 102 (Alliance Party)	1	SC House District 102	Alliance Party
+SC House District 103 (Alliance Party)	1	SC House District 103	Alliance Party
+SC House District 104 (Alliance Party)	1	SC House District 104	Alliance Party
+SC House District 105 (Alliance Party)	1	SC House District 105	Alliance Party
+SC House District 106 (Alliance Party)	1	SC House District 106	Alliance Party
+SC House District 107 (Alliance Party)	1	SC House District 107	Alliance Party
+SC House District 108 (Alliance Party)	1	SC House District 108	Alliance Party
+SC House District 109 (Alliance Party)	1	SC House District 109	Alliance Party
+SC House District 110 (Alliance Party)	1	SC House District 110	Alliance Party
+SC House District 111 (Alliance Party)	1	SC House District 111	Alliance Party
+SC House District 112 (Alliance Party)	1	SC House District 112	Alliance Party
+SC House District 113 (Alliance Party)	1	SC House District 113	Alliance Party
+SC House District 114 (Alliance Party)	1	SC House District 114	Alliance Party
+SC House District 115 (Alliance Party)	1	SC House District 115	Alliance Party
+SC House District 116 (Alliance Party)	1	SC House District 116	Alliance Party
+SC House District 117 (Alliance Party)	1	SC House District 117	Alliance Party
+SC House District 118 (Alliance Party)	1	SC House District 118	Alliance Party
+SC House District 119 (Alliance Party)	1	SC House District 119	Alliance Party
+SC House District 120 (Alliance Party)	1	SC House District 120	Alliance Party
+SC House District 121 (Alliance Party)	1	SC House District 121	Alliance Party
+SC House District 122 (Alliance Party)	1	SC House District 122	Alliance Party
+SC House District 123 (Alliance Party)	1	SC House District 123	Alliance Party
+SC House District 124 (Alliance Party)	1	SC House District 124	Alliance Party
+SC Senate District 1 (Alliance Party)	1	SC Senate District 1	Alliance Party
+SC Senate District 2 (Alliance Party)	1	SC Senate District 2	Alliance Party
+SC Senate District 3 (Alliance Party)	1	SC Senate District 3	Alliance Party
+SC Senate District 4 (Alliance Party)	1	SC Senate District 4	Alliance Party
+SC Senate District 5 (Alliance Party)	1	SC Senate District 5	Alliance Party
+SC Senate District 6 (Alliance Party)	1	SC Senate District 6	Alliance Party
+SC Senate District 7 (Alliance Party)	1	SC Senate District 7	Alliance Party
+SC Senate District 8 (Alliance Party)	1	SC Senate District 8	Alliance Party
+SC Senate District 9 (Alliance Party)	1	SC Senate District 9	Alliance Party
+SC Senate District 10 (Alliance Party)	1	SC Senate District 10	Alliance Party
+SC Senate District 11 (Alliance Party)	1	SC Senate District 11	Alliance Party
+SC Senate District 12 (Alliance Party)	1	SC Senate District 12	Alliance Party
+SC Senate District 13 (Alliance Party)	1	SC Senate District 13	Alliance Party
+SC Senate District 14 (Alliance Party)	1	SC Senate District 14	Alliance Party
+SC Senate District 15 (Alliance Party)	1	SC Senate District 15	Alliance Party
+SC Senate District 16 (Alliance Party)	1	SC Senate District 16	Alliance Party
+SC Senate District 17 (Alliance Party)	1	SC Senate District 17	Alliance Party
+SC Senate District 18 (Alliance Party)	1	SC Senate District 18	Alliance Party
+SC Senate District 19 (Alliance Party)	1	SC Senate District 19	Alliance Party
+SC Senate District 20 (Alliance Party)	1	SC Senate District 20	Alliance Party
+SC Senate District 21 (Alliance Party)	1	SC Senate District 21	Alliance Party
+SC Senate District 22 (Alliance Party)	1	SC Senate District 22	Alliance Party
+SC Senate District 23 (Alliance Party)	1	SC Senate District 23	Alliance Party
+SC Senate District 24 (Alliance Party)	1	SC Senate District 24	Alliance Party
+SC Senate District 25 (Alliance Party)	1	SC Senate District 25	Alliance Party
+SC Senate District 26 (Alliance Party)	1	SC Senate District 26	Alliance Party
+SC Senate District 27 (Alliance Party)	1	SC Senate District 27	Alliance Party
+SC Senate District 28 (Alliance Party)	1	SC Senate District 28	Alliance Party
+SC Senate District 29 (Alliance Party)	1	SC Senate District 29	Alliance Party
+SC Senate District 30 (Alliance Party)	1	SC Senate District 30	Alliance Party
+SC Senate District 31 (Alliance Party)	1	SC Senate District 31	Alliance Party
+SC Senate District 32 (Alliance Party)	1	SC Senate District 32	Alliance Party
+SC Senate District 33 (Alliance Party)	1	SC Senate District 33	Alliance Party
+SC Senate District 34 (Alliance Party)	1	SC Senate District 34	Alliance Party
+SC Senate District 35 (Alliance Party)	1	SC Senate District 35	Alliance Party
+SC Senate District 36 (Alliance Party)	1	SC Senate District 36	Alliance Party
+SC Senate District 37 (Alliance Party)	1	SC Senate District 37	Alliance Party
+SC Senate District 38 (Alliance Party)	1	SC Senate District 38	Alliance Party
+SC Senate District 39 (Alliance Party)	1	SC Senate District 39	Alliance Party
+SC Senate District 40 (Alliance Party)	1	SC Senate District 40	Alliance Party
+SC Senate District 41 (Alliance Party)	1	SC Senate District 41	Alliance Party
+SC Senate District 42 (Alliance Party)	1	SC Senate District 42	Alliance Party
+SC Senate District 43 (Alliance Party)	1	SC Senate District 43	Alliance Party
+SC Senate District 44 (Alliance Party)	1	SC Senate District 44	Alliance Party
+SC Senate District 45 (Alliance Party)	1	SC Senate District 45	Alliance Party
+SC Senate District 46 (Alliance Party)	1	SC Senate District 46	Alliance Party
+US House SC District 1 (Alliance Party)	1	US House SC District 1	Alliance Party
+US House SC District 2 (Alliance Party)	1	US House SC District 2	Alliance Party
+US House SC District 3 (Alliance Party)	1	US House SC District 3	Alliance Party
+US House SC District 4 (Alliance Party)	1	US House SC District 4	Alliance Party
+US House SC District 5 (Alliance Party)	1	US House SC District 5	Alliance Party
+US House SC District 6 (Alliance Party)	1	US House SC District 6	Alliance Party
+US House SC District 7 (Alliance Party)	1	US House SC District 7	Alliance Party
+US President (SC) (Alliance Party)	1	US President (SC)	Alliance Party
+SC Governor (Alliance Party)	1	SC Governor	Alliance Party
+US Senate SC (Alliance Party)	1	US Senate SC	Alliance Party
+SC Attorney General (Alliance Party)	1	SC Attorney General	Alliance Party
+SC Lieutenant Governor (Alliance Party)	1	SC Lieutenant Governor	Alliance Party
+SC Treasurer (Alliance Party)	1	SC Treasurer	Alliance Party
+SC Secretary of State (Alliance Party)	1	SC Secretary of State	Alliance Party
+SC Adjutant General (Alliance Party)	1	SC Adjutant General	Alliance Party
+SC Commissioner of Agriculture (Alliance Party)	1	SC Commissioner of Agriculture	Alliance Party
+SC State Superintendent of Education (Alliance Party)	1	SC State Superintendent of Education	Alliance Party
+SC Comptroller General (Alliance Party)	1	SC Comptroller General	Alliance Party
+SC House District 1 (Labor Party)	1	SC House District 1	Labor Party
+SC House District 2 (Labor Party)	1	SC House District 2	Labor Party
+SC House District 3 (Labor Party)	1	SC House District 3	Labor Party
+SC House District 4 (Labor Party)	1	SC House District 4	Labor Party
+SC House District 5 (Labor Party)	1	SC House District 5	Labor Party
+SC House District 6 (Labor Party)	1	SC House District 6	Labor Party
+SC House District 7 (Labor Party)	1	SC House District 7	Labor Party
+SC House District 8 (Labor Party)	1	SC House District 8	Labor Party
+SC House District 9 (Labor Party)	1	SC House District 9	Labor Party
+SC House District 10 (Labor Party)	1	SC House District 10	Labor Party
+SC House District 11 (Labor Party)	1	SC House District 11	Labor Party
+SC House District 12 (Labor Party)	1	SC House District 12	Labor Party
+SC House District 13 (Labor Party)	1	SC House District 13	Labor Party
+SC House District 14 (Labor Party)	1	SC House District 14	Labor Party
+SC House District 15 (Labor Party)	1	SC House District 15	Labor Party
+SC House District 16 (Labor Party)	1	SC House District 16	Labor Party
+SC House District 17 (Labor Party)	1	SC House District 17	Labor Party
+SC House District 18 (Labor Party)	1	SC House District 18	Labor Party
+SC House District 19 (Labor Party)	1	SC House District 19	Labor Party
+SC House District 20 (Labor Party)	1	SC House District 20	Labor Party
+SC House District 21 (Labor Party)	1	SC House District 21	Labor Party
+SC House District 22 (Labor Party)	1	SC House District 22	Labor Party
+SC House District 23 (Labor Party)	1	SC House District 23	Labor Party
+SC House District 24 (Labor Party)	1	SC House District 24	Labor Party
+SC House District 25 (Labor Party)	1	SC House District 25	Labor Party
+SC House District 26 (Labor Party)	1	SC House District 26	Labor Party
+SC House District 27 (Labor Party)	1	SC House District 27	Labor Party
+SC House District 28 (Labor Party)	1	SC House District 28	Labor Party
+SC House District 29 (Labor Party)	1	SC House District 29	Labor Party
+SC House District 30 (Labor Party)	1	SC House District 30	Labor Party
+SC House District 31 (Labor Party)	1	SC House District 31	Labor Party
+SC House District 32 (Labor Party)	1	SC House District 32	Labor Party
+SC House District 33 (Labor Party)	1	SC House District 33	Labor Party
+SC House District 34 (Labor Party)	1	SC House District 34	Labor Party
+SC House District 35 (Labor Party)	1	SC House District 35	Labor Party
+SC House District 36 (Labor Party)	1	SC House District 36	Labor Party
+SC House District 37 (Labor Party)	1	SC House District 37	Labor Party
+SC House District 38 (Labor Party)	1	SC House District 38	Labor Party
+SC House District 39 (Labor Party)	1	SC House District 39	Labor Party
+SC House District 40 (Labor Party)	1	SC House District 40	Labor Party
+SC House District 41 (Labor Party)	1	SC House District 41	Labor Party
+SC House District 42 (Labor Party)	1	SC House District 42	Labor Party
+SC House District 43 (Labor Party)	1	SC House District 43	Labor Party
+SC House District 44 (Labor Party)	1	SC House District 44	Labor Party
+SC House District 45 (Labor Party)	1	SC House District 45	Labor Party
+SC House District 46 (Labor Party)	1	SC House District 46	Labor Party
+SC House District 47 (Labor Party)	1	SC House District 47	Labor Party
+SC House District 48 (Labor Party)	1	SC House District 48	Labor Party
+SC House District 49 (Labor Party)	1	SC House District 49	Labor Party
+SC House District 50 (Labor Party)	1	SC House District 50	Labor Party
+SC House District 51 (Labor Party)	1	SC House District 51	Labor Party
+SC House District 52 (Labor Party)	1	SC House District 52	Labor Party
+SC House District 53 (Labor Party)	1	SC House District 53	Labor Party
+SC House District 54 (Labor Party)	1	SC House District 54	Labor Party
+SC House District 55 (Labor Party)	1	SC House District 55	Labor Party
+SC House District 56 (Labor Party)	1	SC House District 56	Labor Party
+SC House District 57 (Labor Party)	1	SC House District 57	Labor Party
+SC House District 58 (Labor Party)	1	SC House District 58	Labor Party
+SC House District 59 (Labor Party)	1	SC House District 59	Labor Party
+SC House District 60 (Labor Party)	1	SC House District 60	Labor Party
+SC House District 61 (Labor Party)	1	SC House District 61	Labor Party
+SC House District 62 (Labor Party)	1	SC House District 62	Labor Party
+SC House District 63 (Labor Party)	1	SC House District 63	Labor Party
+SC House District 64 (Labor Party)	1	SC House District 64	Labor Party
+SC House District 65 (Labor Party)	1	SC House District 65	Labor Party
+SC House District 66 (Labor Party)	1	SC House District 66	Labor Party
+SC House District 67 (Labor Party)	1	SC House District 67	Labor Party
+SC House District 68 (Labor Party)	1	SC House District 68	Labor Party
+SC House District 69 (Labor Party)	1	SC House District 69	Labor Party
+SC House District 70 (Labor Party)	1	SC House District 70	Labor Party
+SC House District 71 (Labor Party)	1	SC House District 71	Labor Party
+SC House District 72 (Labor Party)	1	SC House District 72	Labor Party
+SC House District 73 (Labor Party)	1	SC House District 73	Labor Party
+SC House District 74 (Labor Party)	1	SC House District 74	Labor Party
+SC House District 75 (Labor Party)	1	SC House District 75	Labor Party
+SC House District 76 (Labor Party)	1	SC House District 76	Labor Party
+SC House District 77 (Labor Party)	1	SC House District 77	Labor Party
+SC House District 78 (Labor Party)	1	SC House District 78	Labor Party
+SC House District 79 (Labor Party)	1	SC House District 79	Labor Party
+SC House District 80 (Labor Party)	1	SC House District 80	Labor Party
+SC House District 81 (Labor Party)	1	SC House District 81	Labor Party
+SC House District 82 (Labor Party)	1	SC House District 82	Labor Party
+SC House District 83 (Labor Party)	1	SC House District 83	Labor Party
+SC House District 84 (Labor Party)	1	SC House District 84	Labor Party
+SC House District 85 (Labor Party)	1	SC House District 85	Labor Party
+SC House District 86 (Labor Party)	1	SC House District 86	Labor Party
+SC House District 87 (Labor Party)	1	SC House District 87	Labor Party
+SC House District 88 (Labor Party)	1	SC House District 88	Labor Party
+SC House District 89 (Labor Party)	1	SC House District 89	Labor Party
+SC House District 90 (Labor Party)	1	SC House District 90	Labor Party
+SC House District 91 (Labor Party)	1	SC House District 91	Labor Party
+SC House District 92 (Labor Party)	1	SC House District 92	Labor Party
+SC House District 93 (Labor Party)	1	SC House District 93	Labor Party
+SC House District 94 (Labor Party)	1	SC House District 94	Labor Party
+SC House District 95 (Labor Party)	1	SC House District 95	Labor Party
+SC House District 96 (Labor Party)	1	SC House District 96	Labor Party
+SC House District 97 (Labor Party)	1	SC House District 97	Labor Party
+SC House District 98 (Labor Party)	1	SC House District 98	Labor Party
+SC House District 99 (Labor Party)	1	SC House District 99	Labor Party
+SC House District 100 (Labor Party)	1	SC House District 100	Labor Party
+SC House District 101 (Labor Party)	1	SC House District 101	Labor Party
+SC House District 102 (Labor Party)	1	SC House District 102	Labor Party
+SC House District 103 (Labor Party)	1	SC House District 103	Labor Party
+SC House District 104 (Labor Party)	1	SC House District 104	Labor Party
+SC House District 105 (Labor Party)	1	SC House District 105	Labor Party
+SC House District 106 (Labor Party)	1	SC House District 106	Labor Party
+SC House District 107 (Labor Party)	1	SC House District 107	Labor Party
+SC House District 108 (Labor Party)	1	SC House District 108	Labor Party
+SC House District 109 (Labor Party)	1	SC House District 109	Labor Party
+SC House District 110 (Labor Party)	1	SC House District 110	Labor Party
+SC House District 111 (Labor Party)	1	SC House District 111	Labor Party
+SC House District 112 (Labor Party)	1	SC House District 112	Labor Party
+SC House District 113 (Labor Party)	1	SC House District 113	Labor Party
+SC House District 114 (Labor Party)	1	SC House District 114	Labor Party
+SC House District 115 (Labor Party)	1	SC House District 115	Labor Party
+SC House District 116 (Labor Party)	1	SC House District 116	Labor Party
+SC House District 117 (Labor Party)	1	SC House District 117	Labor Party
+SC House District 118 (Labor Party)	1	SC House District 118	Labor Party
+SC House District 119 (Labor Party)	1	SC House District 119	Labor Party
+SC House District 120 (Labor Party)	1	SC House District 120	Labor Party
+SC House District 121 (Labor Party)	1	SC House District 121	Labor Party
+SC House District 122 (Labor Party)	1	SC House District 122	Labor Party
+SC House District 123 (Labor Party)	1	SC House District 123	Labor Party
+SC House District 124 (Labor Party)	1	SC House District 124	Labor Party
+SC Senate District 1 (Labor Party)	1	SC Senate District 1	Labor Party
+SC Senate District 2 (Labor Party)	1	SC Senate District 2	Labor Party
+SC Senate District 3 (Labor Party)	1	SC Senate District 3	Labor Party
+SC Senate District 4 (Labor Party)	1	SC Senate District 4	Labor Party
+SC Senate District 5 (Labor Party)	1	SC Senate District 5	Labor Party
+SC Senate District 6 (Labor Party)	1	SC Senate District 6	Labor Party
+SC Senate District 7 (Labor Party)	1	SC Senate District 7	Labor Party
+SC Senate District 8 (Labor Party)	1	SC Senate District 8	Labor Party
+SC Senate District 9 (Labor Party)	1	SC Senate District 9	Labor Party
+SC Senate District 10 (Labor Party)	1	SC Senate District 10	Labor Party
+SC Senate District 11 (Labor Party)	1	SC Senate District 11	Labor Party
+SC Senate District 12 (Labor Party)	1	SC Senate District 12	Labor Party
+SC Senate District 13 (Labor Party)	1	SC Senate District 13	Labor Party
+SC Senate District 14 (Labor Party)	1	SC Senate District 14	Labor Party
+SC Senate District 15 (Labor Party)	1	SC Senate District 15	Labor Party
+SC Senate District 16 (Labor Party)	1	SC Senate District 16	Labor Party
+SC Senate District 17 (Labor Party)	1	SC Senate District 17	Labor Party
+SC Senate District 18 (Labor Party)	1	SC Senate District 18	Labor Party
+SC Senate District 19 (Labor Party)	1	SC Senate District 19	Labor Party
+SC Senate District 20 (Labor Party)	1	SC Senate District 20	Labor Party
+SC Senate District 21 (Labor Party)	1	SC Senate District 21	Labor Party
+SC Senate District 22 (Labor Party)	1	SC Senate District 22	Labor Party
+SC Senate District 23 (Labor Party)	1	SC Senate District 23	Labor Party
+SC Senate District 24 (Labor Party)	1	SC Senate District 24	Labor Party
+SC Senate District 25 (Labor Party)	1	SC Senate District 25	Labor Party
+SC Senate District 26 (Labor Party)	1	SC Senate District 26	Labor Party
+SC Senate District 27 (Labor Party)	1	SC Senate District 27	Labor Party
+SC Senate District 28 (Labor Party)	1	SC Senate District 28	Labor Party
+SC Senate District 29 (Labor Party)	1	SC Senate District 29	Labor Party
+SC Senate District 30 (Labor Party)	1	SC Senate District 30	Labor Party
+SC Senate District 31 (Labor Party)	1	SC Senate District 31	Labor Party
+SC Senate District 32 (Labor Party)	1	SC Senate District 32	Labor Party
+SC Senate District 33 (Labor Party)	1	SC Senate District 33	Labor Party
+SC Senate District 34 (Labor Party)	1	SC Senate District 34	Labor Party
+SC Senate District 35 (Labor Party)	1	SC Senate District 35	Labor Party
+SC Senate District 36 (Labor Party)	1	SC Senate District 36	Labor Party
+SC Senate District 37 (Labor Party)	1	SC Senate District 37	Labor Party
+SC Senate District 38 (Labor Party)	1	SC Senate District 38	Labor Party
+SC Senate District 39 (Labor Party)	1	SC Senate District 39	Labor Party
+SC Senate District 40 (Labor Party)	1	SC Senate District 40	Labor Party
+SC Senate District 41 (Labor Party)	1	SC Senate District 41	Labor Party
+SC Senate District 42 (Labor Party)	1	SC Senate District 42	Labor Party
+SC Senate District 43 (Labor Party)	1	SC Senate District 43	Labor Party
+SC Senate District 44 (Labor Party)	1	SC Senate District 44	Labor Party
+SC Senate District 45 (Labor Party)	1	SC Senate District 45	Labor Party
+SC Senate District 46 (Labor Party)	1	SC Senate District 46	Labor Party
+US House SC District 1 (Labor Party)	1	US House SC District 1	Labor Party
+US House SC District 2 (Labor Party)	1	US House SC District 2	Labor Party
+US House SC District 3 (Labor Party)	1	US House SC District 3	Labor Party
+US House SC District 4 (Labor Party)	1	US House SC District 4	Labor Party
+US House SC District 5 (Labor Party)	1	US House SC District 5	Labor Party
+US House SC District 6 (Labor Party)	1	US House SC District 6	Labor Party
+US House SC District 7 (Labor Party)	1	US House SC District 7	Labor Party
+US President (SC) (Labor Party)	1	US President (SC)	Labor Party
+SC Governor (Labor Party)	1	SC Governor	Labor Party
+US Senate SC (Labor Party)	1	US Senate SC	Labor Party
+SC Attorney General (Labor Party)	1	SC Attorney General	Labor Party
+SC Lieutenant Governor (Labor Party)	1	SC Lieutenant Governor	Labor Party
+SC Treasurer (Labor Party)	1	SC Treasurer	Labor Party
+SC Secretary of State (Labor Party)	1	SC Secretary of State	Labor Party
+SC Adjutant General (Labor Party)	1	SC Adjutant General	Labor Party
+SC Commissioner of Agriculture (Labor Party)	1	SC Commissioner of Agriculture	Labor Party
+SC State Superintendent of Education (Labor Party)	1	SC State Superintendent of Education	Labor Party
+SC Comptroller General (Labor Party)	1	SC Comptroller General	Labor Party
+SC House District 1 (Working Families Party)	1	SC House District 1	Working Families Party
+SC House District 2 (Working Families Party)	1	SC House District 2	Working Families Party
+SC House District 3 (Working Families Party)	1	SC House District 3	Working Families Party
+SC House District 4 (Working Families Party)	1	SC House District 4	Working Families Party
+SC House District 5 (Working Families Party)	1	SC House District 5	Working Families Party
+SC House District 6 (Working Families Party)	1	SC House District 6	Working Families Party
+SC House District 7 (Working Families Party)	1	SC House District 7	Working Families Party
+SC House District 8 (Working Families Party)	1	SC House District 8	Working Families Party
+SC House District 9 (Working Families Party)	1	SC House District 9	Working Families Party
+SC House District 10 (Working Families Party)	1	SC House District 10	Working Families Party
+SC House District 11 (Working Families Party)	1	SC House District 11	Working Families Party
+SC House District 12 (Working Families Party)	1	SC House District 12	Working Families Party
+SC House District 13 (Working Families Party)	1	SC House District 13	Working Families Party
+SC House District 14 (Working Families Party)	1	SC House District 14	Working Families Party
+SC House District 15 (Working Families Party)	1	SC House District 15	Working Families Party
+SC House District 16 (Working Families Party)	1	SC House District 16	Working Families Party
+SC House District 17 (Working Families Party)	1	SC House District 17	Working Families Party
+SC House District 18 (Working Families Party)	1	SC House District 18	Working Families Party
+SC House District 19 (Working Families Party)	1	SC House District 19	Working Families Party
+SC House District 20 (Working Families Party)	1	SC House District 20	Working Families Party
+SC House District 21 (Working Families Party)	1	SC House District 21	Working Families Party
+SC House District 22 (Working Families Party)	1	SC House District 22	Working Families Party
+SC House District 23 (Working Families Party)	1	SC House District 23	Working Families Party
+SC House District 24 (Working Families Party)	1	SC House District 24	Working Families Party
+SC House District 25 (Working Families Party)	1	SC House District 25	Working Families Party
+SC House District 26 (Working Families Party)	1	SC House District 26	Working Families Party
+SC House District 27 (Working Families Party)	1	SC House District 27	Working Families Party
+SC House District 28 (Working Families Party)	1	SC House District 28	Working Families Party
+SC House District 29 (Working Families Party)	1	SC House District 29	Working Families Party
+SC House District 30 (Working Families Party)	1	SC House District 30	Working Families Party
+SC House District 31 (Working Families Party)	1	SC House District 31	Working Families Party
+SC House District 32 (Working Families Party)	1	SC House District 32	Working Families Party
+SC House District 33 (Working Families Party)	1	SC House District 33	Working Families Party
+SC House District 34 (Working Families Party)	1	SC House District 34	Working Families Party
+SC House District 35 (Working Families Party)	1	SC House District 35	Working Families Party
+SC House District 36 (Working Families Party)	1	SC House District 36	Working Families Party
+SC House District 37 (Working Families Party)	1	SC House District 37	Working Families Party
+SC House District 38 (Working Families Party)	1	SC House District 38	Working Families Party
+SC House District 39 (Working Families Party)	1	SC House District 39	Working Families Party
+SC House District 40 (Working Families Party)	1	SC House District 40	Working Families Party
+SC House District 41 (Working Families Party)	1	SC House District 41	Working Families Party
+SC House District 42 (Working Families Party)	1	SC House District 42	Working Families Party
+SC House District 43 (Working Families Party)	1	SC House District 43	Working Families Party
+SC House District 44 (Working Families Party)	1	SC House District 44	Working Families Party
+SC House District 45 (Working Families Party)	1	SC House District 45	Working Families Party
+SC House District 46 (Working Families Party)	1	SC House District 46	Working Families Party
+SC House District 47 (Working Families Party)	1	SC House District 47	Working Families Party
+SC House District 48 (Working Families Party)	1	SC House District 48	Working Families Party
+SC House District 49 (Working Families Party)	1	SC House District 49	Working Families Party
+SC House District 50 (Working Families Party)	1	SC House District 50	Working Families Party
+SC House District 51 (Working Families Party)	1	SC House District 51	Working Families Party
+SC House District 52 (Working Families Party)	1	SC House District 52	Working Families Party
+SC House District 53 (Working Families Party)	1	SC House District 53	Working Families Party
+SC House District 54 (Working Families Party)	1	SC House District 54	Working Families Party
+SC House District 55 (Working Families Party)	1	SC House District 55	Working Families Party
+SC House District 56 (Working Families Party)	1	SC House District 56	Working Families Party
+SC House District 57 (Working Families Party)	1	SC House District 57	Working Families Party
+SC House District 58 (Working Families Party)	1	SC House District 58	Working Families Party
+SC House District 59 (Working Families Party)	1	SC House District 59	Working Families Party
+SC House District 60 (Working Families Party)	1	SC House District 60	Working Families Party
+SC House District 61 (Working Families Party)	1	SC House District 61	Working Families Party
+SC House District 62 (Working Families Party)	1	SC House District 62	Working Families Party
+SC House District 63 (Working Families Party)	1	SC House District 63	Working Families Party
+SC House District 64 (Working Families Party)	1	SC House District 64	Working Families Party
+SC House District 65 (Working Families Party)	1	SC House District 65	Working Families Party
+SC House District 66 (Working Families Party)	1	SC House District 66	Working Families Party
+SC House District 67 (Working Families Party)	1	SC House District 67	Working Families Party
+SC House District 68 (Working Families Party)	1	SC House District 68	Working Families Party
+SC House District 69 (Working Families Party)	1	SC House District 69	Working Families Party
+SC House District 70 (Working Families Party)	1	SC House District 70	Working Families Party
+SC House District 71 (Working Families Party)	1	SC House District 71	Working Families Party
+SC House District 72 (Working Families Party)	1	SC House District 72	Working Families Party
+SC House District 73 (Working Families Party)	1	SC House District 73	Working Families Party
+SC House District 74 (Working Families Party)	1	SC House District 74	Working Families Party
+SC House District 75 (Working Families Party)	1	SC House District 75	Working Families Party
+SC House District 76 (Working Families Party)	1	SC House District 76	Working Families Party
+SC House District 77 (Working Families Party)	1	SC House District 77	Working Families Party
+SC House District 78 (Working Families Party)	1	SC House District 78	Working Families Party
+SC House District 79 (Working Families Party)	1	SC House District 79	Working Families Party
+SC House District 80 (Working Families Party)	1	SC House District 80	Working Families Party
+SC House District 81 (Working Families Party)	1	SC House District 81	Working Families Party
+SC House District 82 (Working Families Party)	1	SC House District 82	Working Families Party
+SC House District 83 (Working Families Party)	1	SC House District 83	Working Families Party
+SC House District 84 (Working Families Party)	1	SC House District 84	Working Families Party
+SC House District 85 (Working Families Party)	1	SC House District 85	Working Families Party
+SC House District 86 (Working Families Party)	1	SC House District 86	Working Families Party
+SC House District 87 (Working Families Party)	1	SC House District 87	Working Families Party
+SC House District 88 (Working Families Party)	1	SC House District 88	Working Families Party
+SC House District 89 (Working Families Party)	1	SC House District 89	Working Families Party
+SC House District 90 (Working Families Party)	1	SC House District 90	Working Families Party
+SC House District 91 (Working Families Party)	1	SC House District 91	Working Families Party
+SC House District 92 (Working Families Party)	1	SC House District 92	Working Families Party
+SC House District 93 (Working Families Party)	1	SC House District 93	Working Families Party
+SC House District 94 (Working Families Party)	1	SC House District 94	Working Families Party
+SC House District 95 (Working Families Party)	1	SC House District 95	Working Families Party
+SC House District 96 (Working Families Party)	1	SC House District 96	Working Families Party
+SC House District 97 (Working Families Party)	1	SC House District 97	Working Families Party
+SC House District 98 (Working Families Party)	1	SC House District 98	Working Families Party
+SC House District 99 (Working Families Party)	1	SC House District 99	Working Families Party
+SC House District 100 (Working Families Party)	1	SC House District 100	Working Families Party
+SC House District 101 (Working Families Party)	1	SC House District 101	Working Families Party
+SC House District 102 (Working Families Party)	1	SC House District 102	Working Families Party
+SC House District 103 (Working Families Party)	1	SC House District 103	Working Families Party
+SC House District 104 (Working Families Party)	1	SC House District 104	Working Families Party
+SC House District 105 (Working Families Party)	1	SC House District 105	Working Families Party
+SC House District 106 (Working Families Party)	1	SC House District 106	Working Families Party
+SC House District 107 (Working Families Party)	1	SC House District 107	Working Families Party
+SC House District 108 (Working Families Party)	1	SC House District 108	Working Families Party
+SC House District 109 (Working Families Party)	1	SC House District 109	Working Families Party
+SC House District 110 (Working Families Party)	1	SC House District 110	Working Families Party
+SC House District 111 (Working Families Party)	1	SC House District 111	Working Families Party
+SC House District 112 (Working Families Party)	1	SC House District 112	Working Families Party
+SC House District 113 (Working Families Party)	1	SC House District 113	Working Families Party
+SC House District 114 (Working Families Party)	1	SC House District 114	Working Families Party
+SC House District 115 (Working Families Party)	1	SC House District 115	Working Families Party
+SC House District 116 (Working Families Party)	1	SC House District 116	Working Families Party
+SC House District 117 (Working Families Party)	1	SC House District 117	Working Families Party
+SC House District 118 (Working Families Party)	1	SC House District 118	Working Families Party
+SC House District 119 (Working Families Party)	1	SC House District 119	Working Families Party
+SC House District 120 (Working Families Party)	1	SC House District 120	Working Families Party
+SC House District 121 (Working Families Party)	1	SC House District 121	Working Families Party
+SC House District 122 (Working Families Party)	1	SC House District 122	Working Families Party
+SC House District 123 (Working Families Party)	1	SC House District 123	Working Families Party
+SC House District 124 (Working Families Party)	1	SC House District 124	Working Families Party
+SC Senate District 1 (Working Families Party)	1	SC Senate District 1	Working Families Party
+SC Senate District 2 (Working Families Party)	1	SC Senate District 2	Working Families Party
+SC Senate District 3 (Working Families Party)	1	SC Senate District 3	Working Families Party
+SC Senate District 4 (Working Families Party)	1	SC Senate District 4	Working Families Party
+SC Senate District 5 (Working Families Party)	1	SC Senate District 5	Working Families Party
+SC Senate District 6 (Working Families Party)	1	SC Senate District 6	Working Families Party
+SC Senate District 7 (Working Families Party)	1	SC Senate District 7	Working Families Party
+SC Senate District 8 (Working Families Party)	1	SC Senate District 8	Working Families Party
+SC Senate District 9 (Working Families Party)	1	SC Senate District 9	Working Families Party
+SC Senate District 10 (Working Families Party)	1	SC Senate District 10	Working Families Party
+SC Senate District 11 (Working Families Party)	1	SC Senate District 11	Working Families Party
+SC Senate District 12 (Working Families Party)	1	SC Senate District 12	Working Families Party
+SC Senate District 13 (Working Families Party)	1	SC Senate District 13	Working Families Party
+SC Senate District 14 (Working Families Party)	1	SC Senate District 14	Working Families Party
+SC Senate District 15 (Working Families Party)	1	SC Senate District 15	Working Families Party
+SC Senate District 16 (Working Families Party)	1	SC Senate District 16	Working Families Party
+SC Senate District 17 (Working Families Party)	1	SC Senate District 17	Working Families Party
+SC Senate District 18 (Working Families Party)	1	SC Senate District 18	Working Families Party
+SC Senate District 19 (Working Families Party)	1	SC Senate District 19	Working Families Party
+SC Senate District 20 (Working Families Party)	1	SC Senate District 20	Working Families Party
+SC Senate District 21 (Working Families Party)	1	SC Senate District 21	Working Families Party
+SC Senate District 22 (Working Families Party)	1	SC Senate District 22	Working Families Party
+SC Senate District 23 (Working Families Party)	1	SC Senate District 23	Working Families Party
+SC Senate District 24 (Working Families Party)	1	SC Senate District 24	Working Families Party
+SC Senate District 25 (Working Families Party)	1	SC Senate District 25	Working Families Party
+SC Senate District 26 (Working Families Party)	1	SC Senate District 26	Working Families Party
+SC Senate District 27 (Working Families Party)	1	SC Senate District 27	Working Families Party
+SC Senate District 28 (Working Families Party)	1	SC Senate District 28	Working Families Party
+SC Senate District 29 (Working Families Party)	1	SC Senate District 29	Working Families Party
+SC Senate District 30 (Working Families Party)	1	SC Senate District 30	Working Families Party
+SC Senate District 31 (Working Families Party)	1	SC Senate District 31	Working Families Party
+SC Senate District 32 (Working Families Party)	1	SC Senate District 32	Working Families Party
+SC Senate District 33 (Working Families Party)	1	SC Senate District 33	Working Families Party
+SC Senate District 34 (Working Families Party)	1	SC Senate District 34	Working Families Party
+SC Senate District 35 (Working Families Party)	1	SC Senate District 35	Working Families Party
+SC Senate District 36 (Working Families Party)	1	SC Senate District 36	Working Families Party
+SC Senate District 37 (Working Families Party)	1	SC Senate District 37	Working Families Party
+SC Senate District 38 (Working Families Party)	1	SC Senate District 38	Working Families Party
+SC Senate District 39 (Working Families Party)	1	SC Senate District 39	Working Families Party
+SC Senate District 40 (Working Families Party)	1	SC Senate District 40	Working Families Party
+SC Senate District 41 (Working Families Party)	1	SC Senate District 41	Working Families Party
+SC Senate District 42 (Working Families Party)	1	SC Senate District 42	Working Families Party
+SC Senate District 43 (Working Families Party)	1	SC Senate District 43	Working Families Party
+SC Senate District 44 (Working Families Party)	1	SC Senate District 44	Working Families Party
+SC Senate District 45 (Working Families Party)	1	SC Senate District 45	Working Families Party
+SC Senate District 46 (Working Families Party)	1	SC Senate District 46	Working Families Party
+US House SC District 1 (Working Families Party)	1	US House SC District 1	Working Families Party
+US House SC District 2 (Working Families Party)	1	US House SC District 2	Working Families Party
+US House SC District 3 (Working Families Party)	1	US House SC District 3	Working Families Party
+US House SC District 4 (Working Families Party)	1	US House SC District 4	Working Families Party
+US House SC District 5 (Working Families Party)	1	US House SC District 5	Working Families Party
+US House SC District 6 (Working Families Party)	1	US House SC District 6	Working Families Party
+US House SC District 7 (Working Families Party)	1	US House SC District 7	Working Families Party
+US President (SC) (Working Families Party)	1	US President (SC)	Working Families Party
+SC Governor (Working Families Party)	1	SC Governor	Working Families Party
+US Senate SC (Working Families Party)	1	US Senate SC	Working Families Party
+SC Attorney General (Working Families Party)	1	SC Attorney General	Working Families Party
+SC Lieutenant Governor (Working Families Party)	1	SC Lieutenant Governor	Working Families Party
+SC Treasurer (Working Families Party)	1	SC Treasurer	Working Families Party
+SC Secretary of State (Working Families Party)	1	SC Secretary of State	Working Families Party
+SC Adjutant General (Working Families Party)	1	SC Adjutant General	Working Families Party
+SC Commissioner of Agriculture (Working Families Party)	1	SC Commissioner of Agriculture	Working Families Party
+SC State Superintendent of Education (Working Families Party)	1	SC State Superintendent of Education	Working Families Party
+SC Comptroller General (Working Families Party)	1	SC Comptroller General	Working Families Party
+SC House District 1 (none or unknown)	1	SC House District 1	none or unknown
+SC House District 2 (none or unknown)	1	SC House District 2	none or unknown
+SC House District 3 (none or unknown)	1	SC House District 3	none or unknown
+SC House District 4 (none or unknown)	1	SC House District 4	none or unknown
+SC House District 5 (none or unknown)	1	SC House District 5	none or unknown
+SC House District 6 (none or unknown)	1	SC House District 6	none or unknown
+SC House District 7 (none or unknown)	1	SC House District 7	none or unknown
+SC House District 8 (none or unknown)	1	SC House District 8	none or unknown
+SC House District 9 (none or unknown)	1	SC House District 9	none or unknown
+SC House District 10 (none or unknown)	1	SC House District 10	none or unknown
+SC House District 11 (none or unknown)	1	SC House District 11	none or unknown
+SC House District 12 (none or unknown)	1	SC House District 12	none or unknown
+SC House District 13 (none or unknown)	1	SC House District 13	none or unknown
+SC House District 14 (none or unknown)	1	SC House District 14	none or unknown
+SC House District 15 (none or unknown)	1	SC House District 15	none or unknown
+SC House District 16 (none or unknown)	1	SC House District 16	none or unknown
+SC House District 17 (none or unknown)	1	SC House District 17	none or unknown
+SC House District 18 (none or unknown)	1	SC House District 18	none or unknown
+SC House District 19 (none or unknown)	1	SC House District 19	none or unknown
+SC House District 20 (none or unknown)	1	SC House District 20	none or unknown
+SC House District 21 (none or unknown)	1	SC House District 21	none or unknown
+SC House District 22 (none or unknown)	1	SC House District 22	none or unknown
+SC House District 23 (none or unknown)	1	SC House District 23	none or unknown
+SC House District 24 (none or unknown)	1	SC House District 24	none or unknown
+SC House District 25 (none or unknown)	1	SC House District 25	none or unknown
+SC House District 26 (none or unknown)	1	SC House District 26	none or unknown
+SC House District 27 (none or unknown)	1	SC House District 27	none or unknown
+SC House District 28 (none or unknown)	1	SC House District 28	none or unknown
+SC House District 29 (none or unknown)	1	SC House District 29	none or unknown
+SC House District 30 (none or unknown)	1	SC House District 30	none or unknown
+SC House District 31 (none or unknown)	1	SC House District 31	none or unknown
+SC House District 32 (none or unknown)	1	SC House District 32	none or unknown
+SC House District 33 (none or unknown)	1	SC House District 33	none or unknown
+SC House District 34 (none or unknown)	1	SC House District 34	none or unknown
+SC House District 35 (none or unknown)	1	SC House District 35	none or unknown
+SC House District 36 (none or unknown)	1	SC House District 36	none or unknown
+SC House District 37 (none or unknown)	1	SC House District 37	none or unknown
+SC House District 38 (none or unknown)	1	SC House District 38	none or unknown
+SC House District 39 (none or unknown)	1	SC House District 39	none or unknown
+SC House District 40 (none or unknown)	1	SC House District 40	none or unknown
+SC House District 41 (none or unknown)	1	SC House District 41	none or unknown
+SC House District 42 (none or unknown)	1	SC House District 42	none or unknown
+SC House District 43 (none or unknown)	1	SC House District 43	none or unknown
+SC House District 44 (none or unknown)	1	SC House District 44	none or unknown
+SC House District 45 (none or unknown)	1	SC House District 45	none or unknown
+SC House District 46 (none or unknown)	1	SC House District 46	none or unknown
+SC House District 47 (none or unknown)	1	SC House District 47	none or unknown
+SC House District 48 (none or unknown)	1	SC House District 48	none or unknown
+SC House District 49 (none or unknown)	1	SC House District 49	none or unknown
+SC House District 50 (none or unknown)	1	SC House District 50	none or unknown
+SC House District 51 (none or unknown)	1	SC House District 51	none or unknown
+SC House District 52 (none or unknown)	1	SC House District 52	none or unknown
+SC House District 53 (none or unknown)	1	SC House District 53	none or unknown
+SC House District 54 (none or unknown)	1	SC House District 54	none or unknown
+SC House District 55 (none or unknown)	1	SC House District 55	none or unknown
+SC House District 56 (none or unknown)	1	SC House District 56	none or unknown
+SC House District 57 (none or unknown)	1	SC House District 57	none or unknown
+SC House District 58 (none or unknown)	1	SC House District 58	none or unknown
+SC House District 59 (none or unknown)	1	SC House District 59	none or unknown
+SC House District 60 (none or unknown)	1	SC House District 60	none or unknown
+SC House District 61 (none or unknown)	1	SC House District 61	none or unknown
+SC House District 62 (none or unknown)	1	SC House District 62	none or unknown
+SC House District 63 (none or unknown)	1	SC House District 63	none or unknown
+SC House District 64 (none or unknown)	1	SC House District 64	none or unknown
+SC House District 65 (none or unknown)	1	SC House District 65	none or unknown
+SC House District 66 (none or unknown)	1	SC House District 66	none or unknown
+SC House District 67 (none or unknown)	1	SC House District 67	none or unknown
+SC House District 68 (none or unknown)	1	SC House District 68	none or unknown
+SC House District 69 (none or unknown)	1	SC House District 69	none or unknown
+SC House District 70 (none or unknown)	1	SC House District 70	none or unknown
+SC House District 71 (none or unknown)	1	SC House District 71	none or unknown
+SC House District 72 (none or unknown)	1	SC House District 72	none or unknown
+SC House District 73 (none or unknown)	1	SC House District 73	none or unknown
+SC House District 74 (none or unknown)	1	SC House District 74	none or unknown
+SC House District 75 (none or unknown)	1	SC House District 75	none or unknown
+SC House District 76 (none or unknown)	1	SC House District 76	none or unknown
+SC House District 77 (none or unknown)	1	SC House District 77	none or unknown
+SC House District 78 (none or unknown)	1	SC House District 78	none or unknown
+SC House District 79 (none or unknown)	1	SC House District 79	none or unknown
+SC House District 80 (none or unknown)	1	SC House District 80	none or unknown
+SC House District 81 (none or unknown)	1	SC House District 81	none or unknown
+SC House District 82 (none or unknown)	1	SC House District 82	none or unknown
+SC House District 83 (none or unknown)	1	SC House District 83	none or unknown
+SC House District 84 (none or unknown)	1	SC House District 84	none or unknown
+SC House District 85 (none or unknown)	1	SC House District 85	none or unknown
+SC House District 86 (none or unknown)	1	SC House District 86	none or unknown
+SC House District 87 (none or unknown)	1	SC House District 87	none or unknown
+SC House District 88 (none or unknown)	1	SC House District 88	none or unknown
+SC House District 89 (none or unknown)	1	SC House District 89	none or unknown
+SC House District 90 (none or unknown)	1	SC House District 90	none or unknown
+SC House District 91 (none or unknown)	1	SC House District 91	none or unknown
+SC House District 92 (none or unknown)	1	SC House District 92	none or unknown
+SC House District 93 (none or unknown)	1	SC House District 93	none or unknown
+SC House District 94 (none or unknown)	1	SC House District 94	none or unknown
+SC House District 95 (none or unknown)	1	SC House District 95	none or unknown
+SC House District 96 (none or unknown)	1	SC House District 96	none or unknown
+SC House District 97 (none or unknown)	1	SC House District 97	none or unknown
+SC House District 98 (none or unknown)	1	SC House District 98	none or unknown
+SC House District 99 (none or unknown)	1	SC House District 99	none or unknown
+SC House District 100 (none or unknown)	1	SC House District 100	none or unknown
+SC House District 101 (none or unknown)	1	SC House District 101	none or unknown
+SC House District 102 (none or unknown)	1	SC House District 102	none or unknown
+SC House District 103 (none or unknown)	1	SC House District 103	none or unknown
+SC House District 104 (none or unknown)	1	SC House District 104	none or unknown
+SC House District 105 (none or unknown)	1	SC House District 105	none or unknown
+SC House District 106 (none or unknown)	1	SC House District 106	none or unknown
+SC House District 107 (none or unknown)	1	SC House District 107	none or unknown
+SC House District 108 (none or unknown)	1	SC House District 108	none or unknown
+SC House District 109 (none or unknown)	1	SC House District 109	none or unknown
+SC House District 110 (none or unknown)	1	SC House District 110	none or unknown
+SC House District 111 (none or unknown)	1	SC House District 111	none or unknown
+SC House District 112 (none or unknown)	1	SC House District 112	none or unknown
+SC House District 113 (none or unknown)	1	SC House District 113	none or unknown
+SC House District 114 (none or unknown)	1	SC House District 114	none or unknown
+SC House District 115 (none or unknown)	1	SC House District 115	none or unknown
+SC House District 116 (none or unknown)	1	SC House District 116	none or unknown
+SC House District 117 (none or unknown)	1	SC House District 117	none or unknown
+SC House District 118 (none or unknown)	1	SC House District 118	none or unknown
+SC House District 119 (none or unknown)	1	SC House District 119	none or unknown
+SC House District 120 (none or unknown)	1	SC House District 120	none or unknown
+SC House District 121 (none or unknown)	1	SC House District 121	none or unknown
+SC House District 122 (none or unknown)	1	SC House District 122	none or unknown
+SC House District 123 (none or unknown)	1	SC House District 123	none or unknown
+SC House District 124 (none or unknown)	1	SC House District 124	none or unknown
+SC Senate District 1 (none or unknown)	1	SC Senate District 1	none or unknown
+SC Senate District 2 (none or unknown)	1	SC Senate District 2	none or unknown
+SC Senate District 3 (none or unknown)	1	SC Senate District 3	none or unknown
+SC Senate District 4 (none or unknown)	1	SC Senate District 4	none or unknown
+SC Senate District 5 (none or unknown)	1	SC Senate District 5	none or unknown
+SC Senate District 6 (none or unknown)	1	SC Senate District 6	none or unknown
+SC Senate District 7 (none or unknown)	1	SC Senate District 7	none or unknown
+SC Senate District 8 (none or unknown)	1	SC Senate District 8	none or unknown
+SC Senate District 9 (none or unknown)	1	SC Senate District 9	none or unknown
+SC Senate District 10 (none or unknown)	1	SC Senate District 10	none or unknown
+SC Senate District 11 (none or unknown)	1	SC Senate District 11	none or unknown
+SC Senate District 12 (none or unknown)	1	SC Senate District 12	none or unknown
+SC Senate District 13 (none or unknown)	1	SC Senate District 13	none or unknown
+SC Senate District 14 (none or unknown)	1	SC Senate District 14	none or unknown
+SC Senate District 15 (none or unknown)	1	SC Senate District 15	none or unknown
+SC Senate District 16 (none or unknown)	1	SC Senate District 16	none or unknown
+SC Senate District 17 (none or unknown)	1	SC Senate District 17	none or unknown
+SC Senate District 18 (none or unknown)	1	SC Senate District 18	none or unknown
+SC Senate District 19 (none or unknown)	1	SC Senate District 19	none or unknown
+SC Senate District 20 (none or unknown)	1	SC Senate District 20	none or unknown
+SC Senate District 21 (none or unknown)	1	SC Senate District 21	none or unknown
+SC Senate District 22 (none or unknown)	1	SC Senate District 22	none or unknown
+SC Senate District 23 (none or unknown)	1	SC Senate District 23	none or unknown
+SC Senate District 24 (none or unknown)	1	SC Senate District 24	none or unknown
+SC Senate District 25 (none or unknown)	1	SC Senate District 25	none or unknown
+SC Senate District 26 (none or unknown)	1	SC Senate District 26	none or unknown
+SC Senate District 27 (none or unknown)	1	SC Senate District 27	none or unknown
+SC Senate District 28 (none or unknown)	1	SC Senate District 28	none or unknown
+SC Senate District 29 (none or unknown)	1	SC Senate District 29	none or unknown
+SC Senate District 30 (none or unknown)	1	SC Senate District 30	none or unknown
+SC Senate District 31 (none or unknown)	1	SC Senate District 31	none or unknown
+SC Senate District 32 (none or unknown)	1	SC Senate District 32	none or unknown
+SC Senate District 33 (none or unknown)	1	SC Senate District 33	none or unknown
+SC Senate District 34 (none or unknown)	1	SC Senate District 34	none or unknown
+SC Senate District 35 (none or unknown)	1	SC Senate District 35	none or unknown
+SC Senate District 36 (none or unknown)	1	SC Senate District 36	none or unknown
+SC Senate District 37 (none or unknown)	1	SC Senate District 37	none or unknown
+SC Senate District 38 (none or unknown)	1	SC Senate District 38	none or unknown
+SC Senate District 39 (none or unknown)	1	SC Senate District 39	none or unknown
+SC Senate District 40 (none or unknown)	1	SC Senate District 40	none or unknown
+SC Senate District 41 (none or unknown)	1	SC Senate District 41	none or unknown
+SC Senate District 42 (none or unknown)	1	SC Senate District 42	none or unknown
+SC Senate District 43 (none or unknown)	1	SC Senate District 43	none or unknown
+SC Senate District 44 (none or unknown)	1	SC Senate District 44	none or unknown
+SC Senate District 45 (none or unknown)	1	SC Senate District 45	none or unknown
+SC Senate District 46 (none or unknown)	1	SC Senate District 46	none or unknown
+US House SC District 1 (none or unknown)	1	US House SC District 1	none or unknown
+US House SC District 2 (none or unknown)	1	US House SC District 2	none or unknown
+US House SC District 3 (none or unknown)	1	US House SC District 3	none or unknown
+US House SC District 4 (none or unknown)	1	US House SC District 4	none or unknown
+US House SC District 5 (none or unknown)	1	US House SC District 5	none or unknown
+US House SC District 6 (none or unknown)	1	US House SC District 6	none or unknown
+US House SC District 7 (none or unknown)	1	US House SC District 7	none or unknown
+US President (SC) (none or unknown)	1	US President (SC)	none or unknown
+SC Governor (none or unknown)	1	SC Governor	none or unknown
+US Senate SC (none or unknown)	1	US Senate SC	none or unknown
+SC Attorney General (none or unknown)	1	SC Attorney General	none or unknown
+SC Lieutenant Governor (none or unknown)	1	SC Lieutenant Governor	none or unknown
+SC Treasurer (none or unknown)	1	SC Treasurer	none or unknown
+SC Secretary of State (none or unknown)	1	SC Secretary of State	none or unknown
+SC Adjutant General (none or unknown)	1	SC Adjutant General	none or unknown
+SC Commissioner of Agriculture (none or unknown)	1	SC Commissioner of Agriculture	none or unknown
+SC State Superintendent of Education (none or unknown)	1	SC State Superintendent of Education	none or unknown
+SC Comptroller General (none or unknown)	1	SC Comptroller General	none or unknown

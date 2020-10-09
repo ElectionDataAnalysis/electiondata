@@ -296,6 +296,11 @@ def add_munged_column(
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
                 return working, err
+
+        # correct any disambiguated names back to the original
+        if element in munger.alt.keys():
+            working.replace({f"{element}_raw": munger.alt[element]}, inplace=True)
+
     except Exception as e:
         err = ui.add_new_error(
             err,
@@ -915,6 +920,27 @@ def raw_elements_to_cdf(
             "No contests found, or no selections found for contests.",
         )
         return err
+
+    # restrict to just the VoteCount columns (so that groupby.sum will work)
+    vc_cols = [
+        'Count',
+        'CountItemType_Id',
+        'OtherCountItemType',
+        'ReportingUnit_Id',
+        'Contest_Id',
+        'Selection_Id',
+        'Election_Id',
+        '_datafile_Id',
+    ]
+    working = working[vc_cols]
+
+    if mu.alt != dict():
+        # TODO there are edge cases where this might include dupes
+        #  that should be omitted. E.g., if data mistakenly read twice
+        # Sum any rows that were disambiguated (otherwise dupes will be dropped
+        #  when VoteCount is filled)
+        group_cols = [c for c in working.columns if c != 'Count']
+        working = working.groupby(group_cols).sum().reset_index()
 
     # Fill VoteCount
     try:
