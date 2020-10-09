@@ -120,8 +120,11 @@ def check_count_type_totals(election, jurisdiction, contest, count_item_type):
 ### North Carolina Data Loading Tests ###
 #constants
 ok = {
+    "nc16g": data_exists('2016 General','North Carolina'),
     "nc18g": data_exists('2018 General','North Carolina'),
+    "nc20p": data_exists('2020 Primary','North Carolina'),
     "de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
+    "fl16g": data_exists('2016 General','Florida'),
     "de20pri": data_exists('2020 Primary','Delaware'),
     "oh16g": data_exists('2016 General','Ohio'),
     "il16g": data_exists('2016 General','Illinois'),
@@ -150,7 +153,7 @@ def test_nc_statewide_totals():
     )
 
 
-# @pytest.mark.skipif(not ok["nc18g"],"No NC 2018 General data")
+@pytest.mark.skipif(not ok["nc18g"],"No NC 2018 General data")
 def test_nc_senate_totals():
     assert (
         check_contest_totals(
@@ -192,6 +195,7 @@ def test_nc_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "North Carolina") == True
 
 ### Florida Data Loading Tests ###
+@pytest.mark.skipif(not ok["fl16g"], reason="No FL 2016 General data")
 def test_fl_presidential():
     assert (
         check_contest_totals(
@@ -202,7 +206,7 @@ def test_fl_presidential():
         == 9420039
     )
 
-
+@pytest.mark.skipif(not ok["fl16g"], reason="No FL 2016 General data")
 def test_fl_statewide_totals():
     assert (
         check_contest_totals(
@@ -213,7 +217,7 @@ def test_fl_statewide_totals():
         == 9301820
     )
 
-
+@pytest.mark.skipif(not ok["fl16g"], reason="No FL 2016 General data")
 def test_fl_senate_totals():
     assert (
         check_contest_totals(
@@ -224,7 +228,7 @@ def test_fl_senate_totals():
         == 236480
     )
 
-
+@pytest.mark.skipif(not ok["fl16g"], reason="No FL 2016 General data")
 def test_fl_house_totals():
     assert (
         check_contest_totals(
@@ -235,12 +239,12 @@ def test_fl_house_totals():
         == 305989
     )
 
-
+@pytest.mark.skipif(not ok["fl16g"], reason="No FL 2016 General data")
 def test_fl_contest_by_vote_type():
     # Vote type not available
     assert True == True
 
-
+@pytest.mark.skipif(not ok["fl16g"], reason="No FL 2016 General data")
 def test_fl_totals_match_vote_type():
     # Vote type not available
     assert True == True
