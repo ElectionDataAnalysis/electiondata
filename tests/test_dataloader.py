@@ -120,9 +120,18 @@ def check_count_type_totals(election, jurisdiction, contest, count_item_type):
 ### North Carolina Data Loading Tests ###
 #constants
 ok = {
+    "nc16g": data_exists('2016 General','North Carolina'),
     "nc18g": data_exists('2018 General','North Carolina'),
+    "nc20p": data_exists('2020 Primary','North Carolina'),
     "de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
     "de20pri": data_exists('2020 Primary','Delaware'),
+    "fl16g": data_exists('2016 General','Florida'),
+    "pa16g": data_exists('2016 General','Pennsylvania'),
+    "ga18g": data_exists('2018 General','Georgia'),
+    "sc20ppp": data_exists('2020 President Preference Primary','South Carolina'),
+    "in16g": data_exists('2016 General','Indiana'),
+    "ar18g": data_exists('2018 General','Arkansas'),
+    "mi18g": data_exists('2018 General','Michigan'),
     "oh16g": data_exists('2016 General','Ohio'),
     "il16g": data_exists('2016 General','Illinois'),
     "il18g": data_exists('2018 General','Illinois'),
@@ -150,7 +159,7 @@ def test_nc_statewide_totals():
     )
 
 
-# @pytest.mark.skipif(not ok["nc18g"],"No NC 2018 General data")
+@pytest.mark.skipif(not ok["nc18g"], reason="No NC 2018 General data")
 def test_nc_senate_totals():
     assert (
         check_contest_totals(
@@ -192,6 +201,7 @@ def test_nc_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "North Carolina") == True
 
 ### Florida Data Loading Tests ###
+@pytest.mark.skipif(not ok["fl16g"], reason="No FL 2016 General data")
 def test_fl_presidential():
     assert (
         check_contest_totals(
@@ -202,7 +212,7 @@ def test_fl_presidential():
         == 9420039
     )
 
-
+@pytest.mark.skipif(not ok["fl16g"], reason="No FL 2016 General data")
 def test_fl_statewide_totals():
     assert (
         check_contest_totals(
@@ -213,7 +223,7 @@ def test_fl_statewide_totals():
         == 9301820
     )
 
-
+@pytest.mark.skipif(not ok["fl16g"], reason="No FL 2016 General data")
 def test_fl_senate_totals():
     assert (
         check_contest_totals(
@@ -224,7 +234,7 @@ def test_fl_senate_totals():
         == 236480
     )
 
-
+@pytest.mark.skipif(not ok["fl16g"], reason="No FL 2016 General data")
 def test_fl_house_totals():
     assert (
         check_contest_totals(
@@ -235,12 +245,12 @@ def test_fl_house_totals():
         == 305989
     )
 
-
+@pytest.mark.skipif(not ok["fl16g"], reason="No FL 2016 General data")
 def test_fl_contest_by_vote_type():
     # Vote type not available
     assert True == True
 
-
+@pytest.mark.skipif(not ok["fl16g"], reason="No FL 2016 General data")
 def test_fl_totals_match_vote_type():
     # Vote type not available
     assert True == True
@@ -248,6 +258,7 @@ def test_fl_totals_match_vote_type():
 
 
 ### Pennsylvania Data Loading Tests ###
+@pytest.mark.skipif(not ok["pa16g"], reason="No PA 2016 General data")
 def test_pa_presidential():
     assert (
         check_contest_totals(
@@ -258,7 +269,7 @@ def test_pa_presidential():
         == 6115402
     )
 
-
+@pytest.mark.skipif(not ok["pa16g"], reason="No PA 2016 General data")
 def test_pa_statewide_totals():
     assert (
         check_contest_totals(
@@ -269,7 +280,7 @@ def test_pa_statewide_totals():
         == 5916931
     )
 
-
+@pytest.mark.skipif(not ok["pa16g"], reason="No PA 2016 General data")
 def test_pa_senate_totals():
     assert (
         check_contest_totals(
@@ -280,7 +291,7 @@ def test_pa_senate_totals():
         == 112283
     )
 
-
+@pytest.mark.skipif(not ok["pa16g"], reason="No PA 2016 General data")
 def test_pa_house_totals():
     assert (
         check_contest_totals(
@@ -291,12 +302,12 @@ def test_pa_house_totals():
         == 26453
     )
 
-
+@pytest.mark.skipif(not ok["pa16g"], reason="No PA 2016 General data")
 def test_pa_contest_by_vote_type():
     # Vote type not available
     assert True == True
 
-
+@pytest.mark.skipif(not ok["pa16g"], reason="No PA 2016 General data")
 def test_pa_totals_match_vote_type():
     # Vote type not available
     assert True == True
@@ -304,11 +315,12 @@ def test_pa_totals_match_vote_type():
 
 
 ### Georgia Data Loading Tests ###
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_presidential():
     #no presidential contests in 2018
     assert True == True
 
-
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_statewide_totals():
     assert (
         check_contest_totals(
@@ -319,7 +331,7 @@ def test_ga_statewide_totals():
         == 3939328
     )
 
-
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_senate_totals():
     assert (
         check_contest_totals(
@@ -330,7 +342,7 @@ def test_ga_senate_totals():
         == 34429
     )
 
-
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_house_totals():
     assert (
         check_contest_totals(
@@ -341,7 +353,7 @@ def test_ga_house_totals():
         == 229171
     )
 
-
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_contest_by_vote_type():
     assert (
         check_count_type_totals(
@@ -353,42 +365,46 @@ def test_ga_contest_by_vote_type():
         == 2335
     )
 
-
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "Georgia") == True
 
 
 
 ### South Carolina Data Loading Tests ###
+@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_presidential():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
-
+@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_statewide_totals():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
+@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_senate_totals():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
+@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_house_totals():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
-
+@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_contest_by_vote_type():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
-
+@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_totals_match_vote_type():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
 
 ### Indiana Data Loading Tests ###
+@pytest.mark.skipif(not ok["in16g"], reason="No IN 2016 General data")
 def test_in_presidential():
     assert (
         check_contest_totals(
@@ -399,7 +415,7 @@ def test_in_presidential():
         == 2728138
     )
 
-
+@pytest.mark.skipif(not ok["in16g"], reason="No IN 2016 General data")
 def test_in_statewide_totals():
     assert (
         check_contest_totals(
@@ -410,7 +426,7 @@ def test_in_statewide_totals():
         == 2635832
     )
 
-
+@pytest.mark.skipif(not ok["in16g"], reason="No IN 2016 General data")
 def test_in_senate_totals():
     assert (
         check_contest_totals(
@@ -421,7 +437,7 @@ def test_in_senate_totals():
         == 50622
     )
 
-
+@pytest.mark.skipif(not ok["in16g"], reason="No IN 2016 General data")
 def test_in_house_totals():
     assert (
         check_contest_totals(
@@ -432,23 +448,24 @@ def test_in_house_totals():
         == 26712
     )
 
-
+@pytest.mark.skipif(not ok["in16g"], reason="No IN 2016 General data")
 def test_in_contest_by_vote_type():
     # Vote type not available
     assert True == True
 
-
+@pytest.mark.skipif(not ok["in16g"], reason="No IN 2016 General data")
 def test_in_totals_match_vote_type():
     # Vote type not available
     assert True == True
 
 
 ### Arkansas Data Loading Tests ###
+@pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
 def test_ar_presidential():
     #no presidential contests in 2018
     assert True == True
 
-
+@pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
 def test_ar_statewide_totals():
     assert (
         check_contest_totals(
@@ -459,7 +476,7 @@ def test_ar_statewide_totals():
         == 891509
     )
 
-
+@pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
 def test_ar_senate_totals():
     assert (
         check_contest_totals(
@@ -470,7 +487,7 @@ def test_ar_senate_totals():
         == 27047
     )
 
-
+@pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
 def test_ar_house_totals():
     assert (
         check_contest_totals(
@@ -481,7 +498,7 @@ def test_ar_house_totals():
         == 7927
     )
 
-
+@pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
 def test_ar_contest_by_vote_type():
     assert (
         check_count_type_totals(
@@ -493,17 +510,18 @@ def test_ar_contest_by_vote_type():
         == 453
     )
 
-
+@pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
 def test_ar_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "Arkansas") == True
 
 
 ### Michigan Data Loading Tests ###
-def test_ar_presidential():
+@pytest.mark.skipif(not ok["mi18g"], reason="No MI 2018 General data")
+def test_mi_presidential():
     #no presidential contests in 2018
     assert True == True
 
-
+@pytest.mark.skipif(not ok["mi18g"], reason="No MI 2018 General data")
 def test_mi_statewide_totals():
     assert (
         check_contest_totals(
@@ -514,7 +532,7 @@ def test_mi_statewide_totals():
         == 4250585
     )
 
-
+@pytest.mark.skipif(not ok["mi18g"], reason="No MI 2018 General data")
 def test_mi_senate_totals():
     assert (
         check_contest_totals(
@@ -524,7 +542,7 @@ def test_mi_senate_totals():
         )
         == 124414
     )
-
+@pytest.mark.skipif(not ok["mi18g"], reason="No MI 2018 General data")
 def test_mi_house_totals():
     assert (
         check_contest_totals(
@@ -535,12 +553,12 @@ def test_mi_house_totals():
         == 28017
     )
 
-
+@pytest.mark.skipif(not ok["mi18g"], reason="No MI 2018 General data")
 def test_mi_contest_by_vote_type():
     # Vote type not available
     assert True == True
 
-
+@pytest.mark.skipif(not ok["mi18g"], reason="No MI 2018 General data")
 def test_mi_totals_match_vote_type():
     # Vote type not available
     assert True == True
@@ -626,7 +644,7 @@ def test_oh_presidential():
     )
 
 
-# @pytest.mark.skipif(not ok["oh16g"],"No OH 2016 General data")
+@pytest.mark.skipif(not ok["oh16g"], reason="No OH 2016 General data")
 def test_oh_senate_totals():
     assert (
         check_contest_totals(
@@ -664,10 +682,10 @@ def test_oh_contest_by_vote_type():
 
 
 @pytest.mark.skipif(not ok["oh16g"], reason="No OH 2016 General data")
-def test_nc_totals_match_vote_type():
+def test_oh_totals_match_vote_type():
     assert check_totals_match_vote_types("2016 General", "Ohio") == True
 
-#
+### Illinois Data Loading Tests ###
 @pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
 def test_il_presidential():
     assert(
