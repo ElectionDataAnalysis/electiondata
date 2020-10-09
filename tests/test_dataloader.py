@@ -361,7 +361,7 @@ def test_ga_totals_match_vote_type():
 def test_sc20p_presidential():
     assert (
         check_contest_totals(
-            "2018 Primary",
+            "2020 Primary",
             "South Carolina",
             "US President (SC) (Democratic Party)",
         )
@@ -690,7 +690,7 @@ def test_sc18g_statewide_totals():
     )
 
 
-@pytest.mark.skipif(not ok["sc18g"],"No SC 2018 General data")
+@pytest.mark.skipif(not ok["sc18g"], reason="No SC 2018 General data")
 def test_sc18g_senate_totals():
     # no state senate contests in 2018
     assert True == True
