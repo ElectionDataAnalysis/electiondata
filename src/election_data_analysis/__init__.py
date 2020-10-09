@@ -1281,13 +1281,15 @@ class Analyzer:
         if h_count == "All Candidates" or h_count == "All Contests":
             h_count_id = -1
         elif h_type == "candidates":
-            h_count_id = db.name_to_id(self.session, "Candidate", h_count)
+            h = h_count.split("-")[0].strip()
+            h_count_id = db.name_to_id(self.session, "Candidate", h)
         elif h_type == "contests":
             h_count_id = db.name_to_id(self.session, "CandidateContest", h_count)
         if v_count == "All Candidates" or v_count == "All Contests":
             v_count_id = -1
         elif v_type == "candidates":
-            v_count_id = db.name_to_id(self.session, "Candidate", v_count)
+            v = v_count.split("-")[0].strip()
+            v_count_id = db.name_to_id(self.session, "Candidate", v)
         elif v_type == "contests":
             v_count_id = db.name_to_id(self.session, "CandidateContest", v_count)
         agg_results = a.create_scatter(
