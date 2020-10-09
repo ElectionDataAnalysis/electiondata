@@ -402,7 +402,7 @@ def test_sc_totals_match_vote_type():
 
 
 ### Indiana Data Loading Tests ###
-@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
+@pytest.mark.skipif(not ok["in16g"], reason="No IN 2016 General data")
 def test_in_presidential():
     assert (
         check_contest_totals(
@@ -413,7 +413,7 @@ def test_in_presidential():
         == 2728138
     )
 
-
+@pytest.mark.skipif(not ok["in16g"], reason="No IN 2016 General data")
 def test_in_statewide_totals():
     assert (
         check_contest_totals(
@@ -424,7 +424,7 @@ def test_in_statewide_totals():
         == 2635832
     )
 
-
+@pytest.mark.skipif(not ok["in16g"], reason="No IN 2016 General data")
 def test_in_senate_totals():
     assert (
         check_contest_totals(
@@ -435,7 +435,7 @@ def test_in_senate_totals():
         == 50622
     )
 
-
+@pytest.mark.skipif(not ok["in16g"], reason="No IN 2016 General data")
 def test_in_house_totals():
     assert (
         check_contest_totals(
@@ -446,12 +446,12 @@ def test_in_house_totals():
         == 26712
     )
 
-
+@pytest.mark.skipif(not ok["in16g"], reason="No IN 2016 General data")
 def test_in_contest_by_vote_type():
     # Vote type not available
     assert True == True
 
-
+@pytest.mark.skipif(not ok["in16g"], reason="No IN 2016 General data")
 def test_in_totals_match_vote_type():
     # Vote type not available
     assert True == True
