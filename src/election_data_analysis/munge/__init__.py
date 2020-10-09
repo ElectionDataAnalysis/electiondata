@@ -296,6 +296,11 @@ def add_munged_column(
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
                 return working, err
+
+        # TODO correct any disambiguated names back to the original
+        if element in munger.alt.keys():
+            working.replace({f"{element}_raw": munger.alt[element]}, inplace=True)
+
     except Exception as e:
         err = ui.add_new_error(
             err,

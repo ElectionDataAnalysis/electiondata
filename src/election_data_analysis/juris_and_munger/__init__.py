@@ -227,6 +227,7 @@ class Munger:
         <aux_data_path> is the absolute path of the directory holding those files."""
         self.name = os.path.basename(munger_path)  # e.g., 'nc_general'
         self.path_to_munger_dir = munger_path
+        self.alt = dict()   # to hold any alt names, e.g., from disambiguation of cross-listed candidates
         [
             self.cdf_elements,
             self.file_type,
