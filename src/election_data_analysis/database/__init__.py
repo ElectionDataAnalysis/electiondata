@@ -1009,9 +1009,10 @@ def get_filtered_input_options(session, input_str, filters):
     elif input_str == "count":
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
-        df = read_vote_count(
+        df_unordered = read_vote_count(
             session, election_id, reporting_unit_id, ["Name", "BallotName", "PartyName"], ["parent", "name", "type"]
-        ) 
+        )
+        df = clean_candidate_names(df_unordered)
     else:
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
@@ -1323,3 +1324,53 @@ def list_to_id(session, element, names) -> int:
         if id:
             return id
     return None
+
+
+def clean_candidate_names(df):
+    """ takes a df that has contest, candidate name, and party in the columns. Cleans the
+    data as described in https://github.com/ElectionDataAnalysis/election_data_analysis/issues/207"""
+    # Get first letter of each word in the party name except for "Party"
+    # if "Party" is not in the name, then it's "None"
+    df["party"] = df["type"].str.split(" ")
+    df["party"] = np.where(
+        df["party"].str.contains("party", case=False),
+        df["party"].map(lambda x: x[0:-1]).map(lambda words: "".join([word[0] for word in words])),
+        "None"
+    )
+
+    # create the abbreviated contest name
+    df["contest"] = df["parent"].str.replace(r"\(.*\)", "")
+    df["jurisdiction"] = df["contest"].map(lambda x: x[0:2])
+    mask_us_pres = df["contest"].str.contains("president", case=False)
+    mask_us_sen = (df["jurisdiction"] == "US") & (df["contest"].str.contains("senate", case=False))
+    mask_us_house = (df["jurisdiction"] == "US") & (df["contest"].str.contains("house", case=False))
+    mask_st_sen = (df["jurisdiction"] != "US") & (df["contest"].str.contains("senate", case=False))
+    mask_st_house = (df["jurisdiction"] != "US") & (df["contest"].str.contains("house", case=False))
+    df.loc[mask_us_pres, "chamber"] = "Pres"
+    df.loc[mask_us_sen, "chamber"] = "Sen"
+    df.loc[mask_us_house, "chamber"] = "House"
+    df.loc[mask_st_sen, "chamber"] = "S"
+    df.loc[mask_st_house, "chamber"] = "H"
+    df["chamber"] = df["chamber"].fillna("unknown")
+    df["district"] = df["contest"].str.extract(r"(\d+)")
+    df["contest_short"] = ""
+    df["contest_short"] = np.where(
+        df["chamber"] != "unknown",
+        df[df.columns[5:]].apply(
+            lambda x: "".join(x.dropna().astype(str)),
+            axis=1
+        ),
+        df["contest_short"]
+    )
+    df["contest_short"] = np.where(
+        df["chamber"] == "unknown",
+        df["contest"].str.split(" ").map(lambda words: "".join([word[0:3] for word in words if word != "of"])),
+        df["contest_short"]
+    )
+    df = df.sort_values(by=["contest_short", "party", "name"]).reset_index()
+    df["name"] = df[["name", "party", "contest_short"]].apply(
+        lambda x: ' - '.join(x.dropna().astype(str)),
+        axis=1
+    )
+
+    return df[["parent", "name", "type"]]
