@@ -1036,10 +1036,11 @@ def get_filtered_input_options(session, input_str, filters):
     else:
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
-        df = read_vote_count(
+        df_unordered = read_vote_count(
             session, election_id, reporting_unit_id, ["Name", "BallotName", "PartyName"], ["parent", "name", "type"]
         ) 
-        df = df[df["name"].str.contains(input_str, case=False)]
+        df_filtered = df_unordered[df_unordered["name"].str.contains(input_str, case=False)].copy()
+        df = clean_candidate_names(df_filtered)
     # TODO: handle the "All" and "other" options better
     # TODO: handle sorting numbers better
     return package_display_results(df)
