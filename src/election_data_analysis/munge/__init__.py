@@ -934,10 +934,13 @@ def raw_elements_to_cdf(
     ]
     working = working[vc_cols]
 
-    # Sum any rows that were disambiguated (otherwise dupes will be dropped
-    #  when VoteCount is filled)
-    group_cols = [c for c in working.columns if c != 'Count']
-    working = working.groupby(group_cols).sum().reset_index()
+    if mu.alt != dict():
+        # TODO there are edge cases where this might include dupes
+        #  that should be omitted. E.g., if data mistakenly read twice
+        # Sum any rows that were disambiguated (otherwise dupes will be dropped
+        #  when VoteCount is filled)
+        group_cols = [c for c in working.columns if c != 'Count']
+        working = working.groupby(group_cols).sum().reset_index()
 
     # Fill VoteCount
     try:
