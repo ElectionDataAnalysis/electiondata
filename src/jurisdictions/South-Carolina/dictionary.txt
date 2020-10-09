@@ -355,6 +355,7 @@ CandidateContest	US House SC District 7	US House SC District 7
 CandidateContest	US House SC District 7	U.S. House of Representatives, District 7
 CandidateContest	US President (SC)	US President (SC)
 CandidateContest	US President (SC)	President
+CandidateContest	US President (SC) (Democratic Party	President (DEM)
 CandidateContest	SC Governor	SC Governor
 CandidateContest	SC Governor	Governor and Lieutenant Governor
 CandidateContest	US Senate SC	U.S. Senate
