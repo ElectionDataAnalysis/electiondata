@@ -133,7 +133,10 @@ ok = {
     "sc20ppp": data_exists('2020 President Preference Primary','South Carolina'),
     "in16g": data_exists('2016 General','Indiana'),
     "ar18g": data_exists('2018 General','Arkansas'),
+    "mi16g": data_exists('2016 General','Michigan'),
     "mi18g": data_exists('2018 General','Michigan'),
+    "mi20p": data_exists('2020 Primary','Michigan'),
+    "mi20ppp": data_exists('2020 President Preference Primary','Michigan'),
     "oh16g": data_exists('2016 General','Ohio'),
     "oh18g": data_exists('2018 General','Ohio'),
     "il16g": data_exists('2016 General','Illinois'),
@@ -547,7 +550,7 @@ def test_pa_totals_match_vote_type_20():
     # Vote type not available
     assert True == True
 
-"""
+
 ### Georgia Data Loading Tests ###
 @pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_presidential_18():
@@ -604,7 +607,7 @@ def test_ga_totals_match_vote_type_18():
     assert check_totals_match_vote_types("2018 General", "Georgia") == True
 
 
-"""
+
 ### South Carolina Data Loading Tests ###
 @pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_presidential():
@@ -748,15 +751,41 @@ def test_ar_contest_by_vote_type():
 def test_ar_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "Arkansas") == True
 
-
+"""
 ### Michigan Data Loading Tests ###
+@pytest.mark.skipif(not ok["mi16g"], reason="No MI 2016 General data")
+def test_mi_presidential_16():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Michigan",
+            "US President (MI)",
+        )
+        == 4250585
+    )
+
+@pytest.mark.skipif(not ok["mi20ppp"], reason="No MI 2020 PPP data")
+def test_mi_presidential_20ppp():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Michigan",
+            "US President (MI)",
+        )
+        == 4250585
+    )
+
+@pytest.mark.skipif(not ok["mi20p"], reason="No MI 2020 Primary data")
+def test_mi_presidential_20p():
+    assert True == True
+
 @pytest.mark.skipif(not ok["mi18g"], reason="No MI 2018 General data")
-def test_mi_presidential():
+def test_mi_presidential_18():
     #no presidential contests in 2018
     assert True == True
 
 @pytest.mark.skipif(not ok["mi18g"], reason="No MI 2018 General data")
-def test_mi_statewide_totals():
+def test_mi_statewide_totals_18():
     assert (
         check_contest_totals(
             "2018 General",
@@ -767,7 +796,7 @@ def test_mi_statewide_totals():
     )
 
 @pytest.mark.skipif(not ok["mi18g"], reason="No MI 2018 General data")
-def test_mi_senate_totals():
+def test_mi_senate_totals_18():
     assert (
         check_contest_totals(
             "2018 General",
@@ -777,7 +806,7 @@ def test_mi_senate_totals():
         == 124414
     )
 @pytest.mark.skipif(not ok["mi18g"], reason="No MI 2018 General data")
-def test_mi_house_totals():
+def test_mi_house_totals_18():
     assert (
         check_contest_totals(
             "2018 General",
@@ -788,15 +817,15 @@ def test_mi_house_totals():
     )
 
 @pytest.mark.skipif(not ok["mi18g"], reason="No MI 2018 General data")
-def test_mi_contest_by_vote_type():
+def test_mi_contest_by_vote_type_18():
     # Vote type not available
     assert True == True
 
 @pytest.mark.skipif(not ok["mi18g"], reason="No MI 2018 General data")
-def test_mi_totals_match_vote_type():
+def test_mi_totals_match_vote_type_18():
     # Vote type not available
     assert True == True
-
+"""
 ### Delaware 2020 Primary Data Loading Tests ###
 @pytest.mark.skipif(not ok["de20ppp"], reason="No DE 2020 Presidential Preference Primary data")
 def test_de_presidential():
