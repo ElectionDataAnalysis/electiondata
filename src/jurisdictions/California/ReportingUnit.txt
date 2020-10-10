@@ -231,4 +231,3 @@ California;Tuolumne County	county
 California;Ventura County	county
 California;Yolo County	county
 California;Yuba County	county
-California;State Totals County	county
