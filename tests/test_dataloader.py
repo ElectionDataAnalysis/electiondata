@@ -864,6 +864,7 @@ def test_ar_totals_match_vote_type():
 
 
 ### Michigan Data Loading Tests ###
+#MI16 test
 @pytest.mark.skipif(not ok["mi16g"], reason="No MI 2016 General data")
 def test_mi_presidential_16():
     assert (
@@ -872,24 +873,45 @@ def test_mi_presidential_16():
             "Michigan",
             "US President (MI)",
         )
-        == 4250585
+        == 4799284
     )
 
-@pytest.mark.skipif(not ok["mi20ppp"], reason="No MI 2020 PPP data")
-def test_mi_presidential_20ppp():
-    assert (
-        check_contest_totals(
-            "2020 General",
-            "Michigan",
-            "US President (MI)",
-        )
-        == 4250585
-    )
-
-@pytest.mark.skipif(not ok["mi20p"], reason="No MI 2020 Primary data")
-def test_mi_presidential_20p():
+@pytest.mark.skipif(not ok["mi16g"], reason="No MI 2016 General data")
+def test_mi_statewide_totals_16():
     assert True == True
 
+@pytest.mark.skipif(not ok["mi16g"], reason="No MI 2016 General data")
+def test_mi_us_rep_totals_16():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Michigan",
+            "US House MI District 4",
+        )
+        == 315751
+    )
+@pytest.mark.skipif(not ok["mi16g"], reason="No MI 2016 General data")
+def test_mi_house_totals_16():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Michigan",
+            "MI House District 8",
+        )
+        == 34742
+    )
+
+@pytest.mark.skipif(not ok["mi16g"], reason="No MI 2016 General data")
+def test_mi_contest_by_vote_type_16():
+    # Vote type not available
+    assert True == True
+
+@pytest.mark.skipif(not ok["mi16g"], reason="No MI 2016 General data")
+def test_mi_totals_match_vote_type_16():
+    # Vote type not available
+    assert True == True
+
+#MI18 test
 @pytest.mark.skipif(not ok["mi18g"], reason="No MI 2018 General data")
 def test_mi_presidential_18():
     #no presidential contests in 2018
@@ -937,18 +959,65 @@ def test_mi_totals_match_vote_type_18():
     # Vote type not available
     assert True == True
 
-### Delaware 2020 Primary Data Loading Tests ###
-@pytest.mark.skipif(not ok["de20ppp"], reason="No DE 2020 Presidential Preference Primary data")
-def test_de_presidential():
+#MI20 test
+@pytest.mark.skipif(not ok["mi20p"], reason="No MI 2020 Primary data")
+def test_mi_statewide_totals_20():
     assert (
         check_contest_totals(
-            "2020 Presidential Preference Primary",
-            "Delaware",
-            "US President (DE) (Democratic Party)",
+            "2020 Primary",
+            "Michigan",
+            "US Senate MI (Democratic Party)",
         )
-        == 91682
+        == 1180780
     )
 
+@pytest.mark.skipif(not ok["mi20p"], reason="No MI 2020 Primary data")
+def test_mi_us_rep_totals_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Michigan",
+            "US House MI District 9 (Democratic Party)",
+        )
+        == 103202
+    )
+
+@pytest.mark.skipif(not ok["mi20p"], reason="No MI 2020 Primary data")
+def test_mi_state_rep_totals_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Michigan",
+            "MI House District 37 (Republican Party)",
+        )
+        == 6669
+    )
+
+@pytest.mark.skipif(not ok["mi20p"], reason="No MI 2020 Primary data")
+def test_mi_contest_by_vote_type_20():
+    # Vote type not available
+    assert True == True
+
+@pytest.mark.skipif(not ok["mi20p"], reason="No MI 2020 Primary data")
+def test_mi_totals_match_vote_type_20():
+    # Vote type not available
+    assert True == True
+
+
+@pytest.mark.skipif(not ok["mi20ppp"], reason="No MI 2020 PPP data")
+def test_mi_presidential_20ppp():
+    assert (
+        check_contest_totals(
+            #"2020 Primary",
+            "2020 Presidential Preference Primary",
+            "Michigan",
+            "US President (MI) (Democratic Party)",
+        )
+        == 4250585
+    )
+
+
+### Delaware 2020 Primary Data Loading Tests ###
 @pytest.mark.skipif(not ok["de20pri"], reason="No DE 2020 Primary data")
 def test_de_statewide_totals():
     assert (
@@ -992,6 +1061,17 @@ def test_de_contest_by_vote_type():
             "absentee",
         )
         == 559
+    )
+
+@pytest.mark.skipif(not ok["de20ppp"], reason="No DE 2020 Presidential Preference Primary data")
+def test_de_presidential():
+    assert (
+        check_contest_totals(
+            "2020 Presidential Preference Primary",
+            "Delaware",
+            "US President (DE) (Democratic Party)",
+        )
+        == 91682
     )
 
 @pytest.mark.skipif(not ok["de20ppp"], reason="No DE 2020 Presidential Preference Primary data")
