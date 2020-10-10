@@ -413,21 +413,21 @@ def create_bar(
         votes_at_stake = human_readable_numbers(results["votes_at_stake_raw"])
         if votes_at_stake[0] == "-":
             votes_at_stake = votes_at_stake[1:]
-            suffix = "decrease"
+            acted = "narrowed"
         else:
-            suffix = "increase"
-        results["votes_at_stake"] = f"{votes_at_stake} margin {suffix}"
+            acted = "widened"
+        results["votes_at_stake"] = f"Outlier {acted} margin by ~ {votes_at_stake}"
         results["margin"] = human_readable_numbers(results["margin_raw"])
         if multiple_ballot_types:
             results[
                 "ballot_types"
             ] = f"""{results["jurisdiction"]} provides data by vote type"""
         else:
-            results["ballot_types"] = "Data unavailable by vote type"
+            results["ballot_types"] = "Data by vote type unavailable"
         results["score"] = temp_df["score"].max()
         results[
             "title"
-        ] = f"""Accepted {results["count_item_type"].replace("-", " ").title()} Ballots"""
+        ] = f"""{results["count_item_type"].replace("-", " ").title()} Ballots Reported"""
         result_list.append(results)
     connection.close()
     return result_list
