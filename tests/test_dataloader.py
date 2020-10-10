@@ -547,15 +547,15 @@ def test_pa_totals_match_vote_type_20():
     # Vote type not available
     assert True == True
 
-
+"""
 ### Georgia Data Loading Tests ###
 @pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
-def test_ga_presidential():
+def test_ga_presidential_18():
     #no presidential contests in 2018
     assert True == True
 
 @pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
-def test_ga_statewide_totals():
+def test_ga_statewide_totals_18():
     assert (
         check_contest_totals(
             "2018 General",
@@ -566,7 +566,7 @@ def test_ga_statewide_totals():
     )
 
 @pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
-def test_ga_senate_totals():
+def test_ga_senate_totals_18():
     assert (
         check_contest_totals(
             "2018 General",
@@ -577,7 +577,7 @@ def test_ga_senate_totals():
     )
 
 @pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
-def test_ga_house_totals():
+def test_ga_house_totals_18():
     assert (
         check_contest_totals(
             "2018 General",
@@ -588,7 +588,7 @@ def test_ga_house_totals():
     )
 
 @pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
-def test_ga_contest_by_vote_type():
+def test_ga_contest_by_vote_type_18():
     assert (
         check_count_type_totals(
             "2018 General",
@@ -600,11 +600,11 @@ def test_ga_contest_by_vote_type():
     )
 
 @pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
-def test_ga_totals_match_vote_type():
+def test_ga_totals_match_vote_type_18():
     assert check_totals_match_vote_types("2018 General", "Georgia") == True
 
 
-
+"""
 ### South Carolina Data Loading Tests ###
 @pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_presidential():
@@ -936,7 +936,7 @@ def test_oh_statewide():
         == 5496487
     )
 
-"""
+
 ### Illinois Data Loading Tests ###
 @pytest.mark.skipif(not ok["il16g"], reason="No IL 2016 General data")
 def test_il_presidential_16():
@@ -1081,3 +1081,4 @@ def test_il_contest_by_vote_type_20():
 @pytest.mark.skipif(not ok["il20p"], reason="No IL 2020 Primary data")
 def test_il_totals_match_vote_type_20():
     assert True == True
+"""
