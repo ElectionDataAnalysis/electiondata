@@ -492,25 +492,8 @@ def check_munger_file_format(
     munger_path: str, munger_file: str, templates: str, err: dict
 ) -> dict:
 
-    if munger_file[-4:] == ".txt":
-        cf_df = pd.read_csv(
-            os.path.join(munger_path, munger_file), sep="\t", encoding="iso-8859-1"
-        )
-        temp = pd.read_csv(
-            os.path.join(templates, munger_file), sep="\t", encoding="iso-8859-1"
-        )
-
-        # check column names are correct
-        if set(cf_df.columns) != set(temp.columns):
-            err = ui.add_new_error(
-                err,
-                "munger",
-                munger_path,
-                f"Columns in {munger_file} do not match template.:\n"
-                f"Columns of {munger_file}: {cf_df.columns}\n"
-                f"Columns of template: {temp.columns}",
-            )
-
+    if munger_file == "cdf_elements.txt":
+        pass  # nothing to check now that entries may vary
     elif munger_file == "format.config":
         d, err = ui.get_runtime_parameters(
             required_keys=munger_pars_req,
@@ -540,8 +523,8 @@ def check_munger_file_contents(munger_path, munger_file, err):
             encoding="iso-8859-1",
         ).fillna("")
 
-        # every source in cdf_elements is either row, column or other
-        bad_source = [x for x in cdf_elements.source if x not in ["row", "column"]]
+        # every source in cdf_elements is either row, column, ini or other
+        bad_source = [x for x in cdf_elements.source if x not in ["row", "column", "ini"]]
         if bad_source:
             err = ui.add_new_error(
                 err,
