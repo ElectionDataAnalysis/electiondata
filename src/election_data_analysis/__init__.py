@@ -397,7 +397,7 @@ class SingleDataLoader:
                 aux_data_path = os.path.join(self.results_dir, self.d["aux_data_dir"])
 
             # if Contest was given in .ini file
-            if "Contest" in self.d.keys():
+            if self.d["Contest"] is not None:
                 # check that contest_type is given and recognized
                 if ("contest_type" not in self.d.keys()) or self.d["contest_type"] not in ["Candidate","BallotMeasure"]:
                     err = ui.add_new_error(
