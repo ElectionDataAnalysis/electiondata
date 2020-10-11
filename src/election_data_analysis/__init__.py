@@ -10,7 +10,7 @@ import ntpath
 import inspect
 from pathlib import Path
 from election_data_analysis import analyze as a
-from election_data_analysis import visualize as v
+from election_data_analysis import visualize as viz
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
 
@@ -1339,7 +1339,7 @@ class Analyzer:
             v_type,
         )
         if fig_type and agg_results:
-            v.plot("scatter", agg_results, fig_type, d["rollup_directory"])
+            viz.plot("scatter", agg_results, fig_type, d["rollup_directory"])
         return agg_results
 
     def bar(
@@ -1381,7 +1381,7 @@ class Analyzer:
         )
         if fig_type and agg_results:
             for agg_result in agg_results:
-                v.plot("bar", agg_result, fig_type, d["rollup_directory"])
+                viz.plot("bar", agg_result, fig_type, d["rollup_directory"])
         return agg_results
 
     def split_category_input(self, input_str: str):
