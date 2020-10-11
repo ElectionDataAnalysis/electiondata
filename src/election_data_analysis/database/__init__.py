@@ -1016,8 +1016,8 @@ def get_filtered_input_options(session, input_str, filters):
         data = {
             "parent": [filters[0] for count_type in count_types]
             + [filters[0] for count_type in count_types],
-            "name": [f"{count_type} candidates" for count_type in count_types]
-            + [f"{count_type} contests" for count_type in count_types],
+            "name": [f"Candidate {count_type}" for count_type in count_types]
+            + [f"Contest {count_type}" for count_type in count_types],
             "type": [None for count_type in count_types]
             + [None for count_type in count_types],
         }
