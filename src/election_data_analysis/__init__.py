@@ -1309,8 +1309,8 @@ class Analyzer:
         h_election_id = db.name_to_id(self.session, "Election", h_election)
         v_election_id = db.name_to_id(self.session, "Election", v_election)
         # *_type is either candidates or contests
-        h_count_item_type, h_type = self.split_category_input(h_category)
-        v_count_item_type, v_type = self.split_category_input(v_category)
+        h_type, h_count_item_type = self.split_category_input(h_category)
+        v_type, v_count_item_type = self.split_category_input(v_category)
         if h_count == "All Candidates" or h_count == "All Contests":
             h_count_id = -1
         elif h_type == "candidates":
@@ -1387,14 +1387,12 @@ class Analyzer:
     def split_category_input(self, input_str: str):
         """Helper function. Takes an input from the front end that is the cartesian
         product of the CountItemType and {'Candidate', 'Contest'}. So something like:
-        Total Candidates or Absentee Contests. Cleans this and returns
+        Candidate total or Contest absentee-mail. Cleans this and returns
         something usable for the system to identify what the user is asking for."""
-        count_item_types = self.display_options("count_item_type")
-        count_item_type = [
-            count_type for count_type in count_item_types if count_type in input_str
-        ][0]
-        selection_type = input_str[len(count_item_type) + 1 :]
-        return count_item_type, selection_type
+        if input_str.startswith("Candidate"):
+            return "candidates", input_str.replace("Candidate", "").strip()
+        elif input_str.startswith("Contest"):
+            return "contests", input_str.replace("Contest", "").strip()
 
     def export_outlier_data(
         self,
