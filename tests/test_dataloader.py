@@ -150,6 +150,7 @@ ok = {
     "ca20ppp": data_exists('2020 President Preference Primary','California'),
     "co16g": data_exists('2016 General','Colorado'),
     "co18g": data_exists('2018 General','Colorado'),
+    "co20p": data_exists('2020 Primary','Colorado'),
 }
 
 print(ok)
@@ -1452,7 +1453,31 @@ def test_ca_totals_match_vote_type_20():
     assert True == True
 
 
-### California Data Loading Tests ###
+### Colorado Data Loading Tests ###
+#CO16 test
+@pytest.mark.skipif(not ok["co16g"], reason="No CO 2016 General data")
+def test_co_presidential_16():
+    assert(
+        check_contest_totals(
+            "2016 General",
+            "Colorado",
+            "US President (CO)",
+        )
+        == 2780247
+    )
+
+@pytest.mark.skipif(not ok["co20p"], reason="No CO 2020 Primary data")
+def test_co_senate_totals_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Colorado",
+            "CO Senate District 14",
+        )
+        == 313531
+    )
+
+
 #CO18 test
 @pytest.mark.skipif(not ok["co18g"], reason="No CO 2018 General data")
 def test_co_presidential_18():
