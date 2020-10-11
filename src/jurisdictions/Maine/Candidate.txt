@@ -1,0 +1,14 @@
+BallotName
+Donald J. Trump
+Joseph R. Biden, Jr.
+Michael R. Bloomberg
+Cory A. Booker
+Peter Buttigieg
+Tulsi Gabbard
+Amy J. Klobuchar
+Deval Patrick
+Bernard Sanders
+Thomas F. Steyer
+Elizabeth A. Warren
+Marianne Williamson
+Andrew Yang
