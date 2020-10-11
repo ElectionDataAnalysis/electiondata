@@ -1030,17 +1030,26 @@ def get_filtered_input_options(session, input_str, filters):
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
         df_unordered = read_vote_count(
-            session, election_id, reporting_unit_id, ["Name", "BallotName", "PartyName"], ["parent", "name", "type"]
+            session, 
+            election_id, 
+            reporting_unit_id, 
+            ["Name", "BallotName", "PartyName", "unit_type"], 
+            ["parent", "name", "type", "unit_type"]
         )
-        df = clean_candidate_names(df_unordered)
+        df = clean_candidate_names(df_unordered[df_cols])
     else:
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
         df_unordered = read_vote_count(
-            session, election_id, reporting_unit_id, ["Name", "BallotName", "PartyName"], ["parent", "name", "type"]
-        ) 
+            session, 
+            election_id, 
+            reporting_unit_id, 
+            ["Name", "BallotName", "PartyName", "unit_type"], 
+            ["parent", "name", "type", "unit_type"]
+        )
+        df_unordered = df_unordered[df_unordered["unit_type"].isin(filters)].copy()
         df_filtered = df_unordered[df_unordered["name"].str.contains(input_str, case=False)].copy()
-        df = clean_candidate_names(df_filtered)
+        df = clean_candidate_names(df_filtered[df_cols].copy())
     # TODO: handle the "All" and "other" options better
     # TODO: handle sorting numbers better
     return package_display_results(df)
@@ -1322,7 +1331,12 @@ def read_vote_count(
                 JOIN "ComposingReportingUnitJoin" cruj ON vc."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
                 JOIN "CandidateSelection" cs ON vc."Selection_Id" = cs."Id"
                 JOIN "Candidate" c on cs."Candidate_Id" = c."Id"
-                JOIN (SELECT "Id", "Name" as "PartyName" from "Party") p on cs."Party_Id" = p."Id"
+                JOIN (SELECT "Id", "Name" AS "PartyName" FROM "Party") p ON cs."Party_Id" = p."Id"
+                JOIN "CandidateContest" cc ON "Contest"."Id" = cc."Id"
+                JOIN (SELECT "Id", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
+                JOIN (SELECT "Id", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
+                JOIN (SELECT "Id", "Txt" AS unit_type FROM "ReportingUnitType") rut on ru."ReportingUnitType_Id" = rut."Id"
+                
         WHERE   "Election_Id" = %s
                 AND "ParentReportingUnit_Id" = %s
         """
@@ -1367,6 +1381,19 @@ def clean_candidate_names(df):
     mask_us_house = (df["jurisdiction"] == "US") & (df["contest"].str.contains("house", case=False))
     mask_st_sen = (df["jurisdiction"] != "US") & (df["contest"].str.contains("senate", case=False))
     mask_st_house = (df["jurisdiction"] != "US") & (df["contest"].str.contains("house", case=False))
+    df["chamber"] = None
+    # if not df[mask_us_pres].empty:
+    #     df.loc[mask_us_pres, "chamber"] = "Pres"
+    # if not df[mask_us_sen].empty:
+    #     df.loc[mask_us_sen, "chamber"] = "Sen"
+    # if not df[mask_us_house].empty:
+    #     df.loc[mask_us_house, "chamber"] = "House"
+    # if not df[mask_st_sen].empty:
+    #     df.loc[mask_st_sen, "chamber"] = "S"
+    # if not df[mask_st_house].empty:
+    #     df.loc[mask_st_house, "chamber"] = "H"
+
+
     df.loc[mask_us_pres, "chamber"] = "Pres"
     df.loc[mask_us_sen, "chamber"] = "Sen"
     df.loc[mask_us_house, "chamber"] = "House"
@@ -1393,5 +1420,4 @@ def clean_candidate_names(df):
         lambda x: ' - '.join(x.dropna().astype(str)),
         axis=1
     )
-
     return df[["parent", "name", "type"]]
