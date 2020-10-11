@@ -2,7 +2,7 @@ from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
 from sqlalchemy.orm import sessionmaker
-from typing import List, Optional
+from typing import List, Dict, Optional
 import datetime
 import os
 import pandas as pd
@@ -31,6 +31,8 @@ sdl_pars_opt = [
     "jurisdiction_path",
     "jurisdiction_directory",
     "aux_data_dir",
+    "Contest",
+    "contest_type",
 ]
 
 multi_data_loader_pars = [
@@ -281,6 +283,7 @@ class SingleDataLoader:
         self.session = session
         self.results_dir = results_dir
         self.juris = juris
+        self.par_file_name = par_file_name
 
         # grab parameters (known to exist from __new__, so can ignore error variable)
         par_file = os.path.join(results_dir, par_file_name)
@@ -319,7 +322,7 @@ class SingleDataLoader:
 
         self.munger_err = ui.consolidate_errors([m_err[mu] for mu in self.munger_list])
 
-    def track_results(self) -> (List[int], Optional[str]):
+    def track_results(self) -> (dict, Optional[str]):
         """insert a record for the _datafile, recording any error string <e>.
         Return Id of _datafile.Id and Election.Id"""
         filename = self.d["results_file"]
@@ -368,12 +371,14 @@ class SingleDataLoader:
                 ).iloc[0]["_datafile_Id"]
         except Exception as exc:
             return [0, 0], f"Error inserting record to _datafile table or retrieving _datafile_Id: {exc}"
-        return [datafile_id, election_id], e
+        return {"_datafile_Id":datafile_id, "Election_Id":election_id}, e
 
     def load_results(self) -> dict:
         """Load results, returning error (or None, if load successful)"""
         err = None
         print(f'\n\nProcessing {self.d["results_file"]}')
+
+        # Enter datafile info to db and collect _datafile_Id and Election_Id
         results_info, e = self.track_results()
         if e:
             err = ui.add_new_error(
@@ -390,6 +395,34 @@ class SingleDataLoader:
                 aux_data_path = None
             else:
                 aux_data_path = os.path.join(self.results_dir, self.d["aux_data_dir"])
+
+            # if Contest was given in .ini file
+            if "Contest" in self.d.keys():
+                # check that contest_type is given and recognized
+                if ("contest_type" not in self.d.keys()) or self.d["contest_type"] not in ["Candidate","BallotMeasure"]:
+                    err = ui.add_new_error(
+                        err,
+                        "ini",
+                        self.par_file_name,
+                        f"Contest is given, but contest_type is not, or is neither 'Candidate' nor 'BallotMeasure'",
+                    )
+                    return err
+                else:
+                    results_info["contest_type"] = self.d["contest_type"]
+                # collect Contest_Id (or fail gracefully)
+                contest_id = db.name_to_id(self.session, "Contest", self.d["Contest"])
+                if contest_id is None:
+                    err = ui.add_new_error(
+                        err,
+                        "ini",
+                        self.par_file_name,
+                        f"Contest defined in .ini file ({self.d['Contest']}) not found in database",
+                    )
+                    return err
+                else:
+                    results_info["Contest_Id"] = contest_id
+
+            # load results to db
             for mu in self.munger_list:
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
                 new_err = ui.new_datafile(

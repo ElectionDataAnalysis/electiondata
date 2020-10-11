@@ -3,7 +3,7 @@ from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
-from typing import Optional, List
+from typing import Optional, List, Dict
 import re
 import os
 import numpy as np
@@ -558,7 +558,7 @@ def enum_col_to_id_othertext(df, type_col, enum_df, drop_old=True):
 
 
 def good_syntax(s):
-    """Returns true if formula string <s> passes certain syntax main_routines(s)"""
+    """Returns true if formula string <s> passes certain syntax check(s)"""
     good = True
     # check that angle brackets match
     #  split the string by opening angle bracket:
@@ -796,14 +796,14 @@ def raw_elements_to_cdf(
     raw: pd.DataFrame,
     count_cols: list,
     err: dict,
-    ids=None,
+    ids: dict,
 ) -> dict:
     """load data from <raw> into the database."""
     working = raw.copy()
 
     # enter elements from sources outside raw data, including creating id column(s)
-    working = add_constant_column(working, "Election_Id", ids[1])
-    working = add_constant_column(working, "_datafile_Id", ids[0])
+    for k in ids.keys():
+        working = add_constant_column(working, k, ids[k])
 
     try:
         working, new_err = munge_and_melt(mu, working, count_cols, err)
@@ -819,20 +819,23 @@ def raw_elements_to_cdf(
             f"Unexpected exception during munge_and_melt: {exc}",
         )
         return err
-    try:
-        working, err = add_contest_id(working, juris, err, session)
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            "munge.raw_elements_to_cdf",
-            f"Unexpected exception while adding Contest_Id: {exc}",
-        )
-        return err
-    if ui.fatal_error(err):
-        return err
 
-    # get ids for remaining info sourced from rows and columns
+    # add Contest_Id (unless it was passed in ids)
+    if "Contest_Id" not in working.columns:
+        try:
+            working, err = add_contest_id(working, juris, err, session)
+        except Exception as exc:
+            err = ui.add_new_error(
+                err,
+                "system",
+                "munge.raw_elements_to_cdf",
+                f"Unexpected exception while adding Contest_Id: {exc}",
+            )
+            return err
+        if ui.fatal_error(err):
+            return err
+
+    # get ids for remaining info sourced from rows and columns (except Selection_Id)
     element_list = [
         t
         for t in mu.cdf_elements.index

@@ -554,7 +554,7 @@ def new_datafile(
     munger: jm.Munger,
     raw_path: str,
     juris: jm.Jurisdiction,
-    results_info: list = None,
+    results_info: dict,
     aux_data_path: str = None,
 ) -> dict:
     """Guide user through process of uploading data in <raw_file>
