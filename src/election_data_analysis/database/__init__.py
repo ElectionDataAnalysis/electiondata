@@ -334,7 +334,7 @@ def sql_alchemy_connect(
     url = url.format(**params)
 
     # The return value of create_engine() is our connection object
-    engine = db.create_engine(url, client_encoding="utf8")
+    engine = db.create_engine(url, client_encoding="utf8", pool_size=20, max_overflow=40)
     return engine, err
 
 
