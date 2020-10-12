@@ -127,6 +127,7 @@ ok = {
     "pa16g": data_exists('2016 General','Pennsylvania'),
     "pa18g": data_exists('2018 General','Pennsylvania'),
     "pa20p": data_exists('2020 Primary','Pennsylvania'),
+    "ga16g": data_exists('2016 General','Georgia'),
     "ga18g": data_exists('2018 General','Georgia'),
     "sc20ppp": data_exists('2020 President Preference Primary','South Carolina'),
     "in16g": data_exists('2016 General','Indiana'),
@@ -562,6 +563,19 @@ def test_pa_totals_match_vote_type_20():
 
 
 ### Georgia Data Loading Tests ###
+#GA16
+@pytest.mark.skipif(not ok["ga16g"], reason="No GA 2016 General data")
+def test_ga_presidential_16():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "Georgie",
+            "US President (GA)",
+        )
+        == 2739007
+    )
+
+#GA18
 @pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_presidential_18():
     #no presidential contests in 2018
@@ -1453,6 +1467,17 @@ def test_ca_contest_by_vote_type_20():
 @pytest.mark.skipif(not ok["ca20p"], reason="No CA 2020 Primary data")
 def test_ca_totals_match_vote_type_20():
     assert True == True
+
+@pytest.mark.skipif(not ok["ca20ppp"], reason="No ca 2020 PPP data")
+def test_ca_presidential_20ppp():
+    assert(
+        check_contest_totals(
+            "2020 President Preference Primary",
+            "California",
+            "US President (CA)",
+        )
+        == 2780247
+    )
 
 
 ### Colorado Data Loading Tests ###
