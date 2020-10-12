@@ -123,8 +123,6 @@ ok = {
     "nc16g": data_exists('2016 General','North Carolina'),
     "nc18g": data_exists('2018 General','North Carolina'),
     "nc20p": data_exists('2020 Primary','North Carolina'),
-    "de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
-    "de20pri": data_exists('2020 Primary','Delaware'),
     "fl16g": data_exists('2016 General','Florida'),
     "pa16g": data_exists('2016 General','Pennsylvania'),
     "pa18g": data_exists('2018 General','Pennsylvania'),
@@ -139,6 +137,8 @@ ok = {
     "mi18g": data_exists('2018 General','Michigan'),
     "mi20p": data_exists('2020 Primary','Michigan'),
     "mi20ppp": data_exists('2020 President Preference Primary','Michigan'),
+    "de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
+    "de20pri": data_exists('2020 Primary','Delaware'),
     "oh16g": data_exists('2016 General','Ohio'),
     "oh18g": data_exists('2018 General','Ohio'),
     "il16g": data_exists('2016 General','Illinois'),
@@ -151,6 +151,7 @@ ok = {
     "co16g": data_exists('2016 General','Colorado'),
     "co18g": data_exists('2018 General','Colorado'),
     "co20p": data_exists('2020 Primary','Colorado'),
+    "co20ppp": data_exists('2020 President Preference Primary','Colorado'),
 }
 
 print(ok)
@@ -807,6 +808,7 @@ def test_in_contest_by_vote_type_20():
 def test_in_totals_match_vote_type_20():
     # Vote type not available
     assert True == True
+
 
 ### Arkansas Data Loading Tests ###
 @pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
