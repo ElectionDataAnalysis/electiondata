@@ -16,8 +16,8 @@ class MungeError(Exception):
 
 def generic_clean(
         df: pd.DataFrame,
-        int_cols_by_name: List[str] = None,
-) -> (pd.DataFrame, Optional[pd.DataFrame]):
+        int_cols_by_name: Optional[List[str]] = None,
+) -> (pd.DataFrame, List[str], Optional[pd.DataFrame]):
     """Replaces nulls, strips external whitespace, compresses any internal whitespace."""
     # TODO put all info about data cleaning into README.md (e.g., whitespace strip)
     # TODO return error if cleaning fails, including dtypes of columns
@@ -26,8 +26,18 @@ def generic_clean(
         int_cols_by_name = list()
     working = df.copy()
 
+    # remove any columns with duplicate names, get new list of
+    working = working.loc[:,~working.columns.duplicated()]
+    new_int_cols_by_name = [c for c in working.columns if c in int_cols_by_name]
+
     # strip any whitespace from column names
-    working.columns = [x.strip() for x in working.columns]
+    if isinstance(working.columns,pd.MultiIndex):
+        for j in range(len(working.columns.levels)):
+            working.columns = working.columns.set_levels(
+                working.columns.levels[j].str.strip(), level=j
+            )
+    else:
+        working.columns = [x.strip() for x in working.columns]
 
     for c in working.columns:
         # if c is in the given list of count_columns
@@ -53,7 +63,7 @@ def generic_clean(
             # replace any double quotes with single quotes
             try:
                 mask = working[c].str.contains('"')
-                working.loc[mask, c] = working[c].str.replace('"', "'")
+                working.loc[mask, c] = working[c].str.replace('"', "'")[mask]
             except AttributeError or TypeError:
                 pass
             try:
@@ -63,7 +73,7 @@ def generic_clean(
                 )
             except (AttributeError,TypeError):
                 pass
-    return working, err_df
+    return working, new_int_cols_by_name, err_df
 
 
 def cast_cols_as_int(
@@ -96,31 +106,14 @@ def cast_cols_as_int(
     return df, err
 
 
-def munge_clean(raw: pd.DataFrame, munger: jm.Munger) -> (pd.DataFrame, dict):
+def munge_clean(raw: pd.DataFrame, munger: jm.Munger, count_columns_by_name: List[str]) -> (pd.DataFrame, dict):
     """Drop unnecessary columns.
-    TODO: for multiple-header columns, replace any to-be-munged columns (not count columns)
-        with simple column headers named, e.g., replace'2020 Primary/Dem/Precinct' by 'Precinct'
     Append '_SOURCE' suffix to raw column names to avoid conflicts"""
     err = None
     working = raw.copy()
-
     try:
-        # define count_columns_by_name list
-        if munger.options["count_columns_by_name"]:
-            count_columns_by_name = munger.options["count_columns_by_name"]
-        elif munger.options["field_name_row"] is None:
-            count_columns_by_name = [
-                munger.options["field_names_if_no_field_name_row"][idx]
-                for idx in munger.options["count_columns"]
-            ]
-        else:
-            count_columns_by_name = [
-                working.columns[idx] for idx in munger.options["count_columns"]
-            ]
-        # TODO error check- what if cols_to_munge is missing something from munger.field_list?
-
         # do a generic clean
-        working, err_df = generic_clean(working,int_cols_by_name=count_columns_by_name)
+        working, count_columns_by_name, err_df = generic_clean(working,int_cols_by_name=count_columns_by_name)
         if not err_df.empty:
             pd.set_option('max_columns',None)
             err = ui.add_new_error(
@@ -132,23 +125,22 @@ def munge_clean(raw: pd.DataFrame, munger: jm.Munger) -> (pd.DataFrame, dict):
             )
             pd.reset_option('max_columns')
 
-        #  define columns named in munger formulas
-        if munger.options["header_row_count"] is not None and munger.options["header_row_count"] > 1:
-            munger_formula_columns = [
-                x
-                for x in working.columns
-                if x[munger.options["field_name_row"]] in munger.field_list
-            ]
-        else:
-            munger_formula_columns = [x for x in working.columns if x in munger.field_list]
+        #  define columns named in munger formulas (both plain from 'row' sourced info and
+        #  'variable_j' from column-sourced)
+        munger_formula_row_sourced = [
+            x for x in munger.field_list if x in working.columns
+        ]
+        munger_formula_column_sourced = [
+            f"variable_{j}" for j in munger.field_list if f"variable_{j}" in working.columns
+        ]
 
         # keep columns named in munger formulas; keep count columns; drop all else.
-        working = working[munger_formula_columns + count_columns_by_name]
+        working = working[munger_formula_row_sourced + munger_formula_column_sourced + count_columns_by_name]
 
         # add suffix '_SOURCE' to certain columns to avoid any conflict with db table names
         # (since no db table name ends with _SOURCE)
-        # TODO this fails when munger formula column headers are multi-index.
-        renamer = {x: f"{x}_SOURCE" for x in munger_formula_columns}
+
+        renamer = {x: f"{x}_SOURCE" for x in munger_formula_row_sourced}
         working.rename(columns=renamer, inplace=True)
     except Exception as e:
         err = ui.add_new_error(
@@ -203,7 +195,6 @@ def add_column_from_formula(
     w = working.copy()
     #  for each {} pair in the formula, create a new column
     # (assuming formula is well-formed)
-    #brace_pattern = re.compile(r'[^{]*{<([^,]*)>,([^}]*)}')
     brace_pattern = re.compile(r'{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}')
 
     try:
@@ -266,7 +257,7 @@ def add_munged_column(
     raw: pd.DataFrame,
     munger: jm.Munger,
     element: str,
-    err: dict,
+    err: Optional[dict],
     mode: str = "row",
     inplace: bool = True,
 ) -> (pd.DataFrame, dict):
@@ -580,13 +571,39 @@ def good_syntax(s):
 
 
 def munge_and_melt(
-    mu: jm.Munger, raw: pd.DataFrame, count_cols: list, err: dict
-) -> (pd.DataFrame, dict):
-    """Does not alter raw; returns Transformation of raw:
+    mu: jm.Munger, raw: pd.DataFrame, count_cols: List[str], err: Optional[dict]
+) -> (pd.DataFrame, Optional[dict]):
+    """Does not alter raw; returns transformation of raw:
      all row- and column-sourced mungeable info into columns (but doesn't translate via dictionary)
     new column names are, e.g., ReportingUnit_raw, Candidate_raw, etc.
     """
     working = raw.copy()
+
+    # melt all column (multi-) index info into columns
+    non_count_cols = [x for x in working.columns if x not in count_cols]
+    working = working.melt(id_vars=non_count_cols)
+
+    # ensure all columns have string names
+    # (i.e., get rid of any tuples from column multi-index)
+    new_col_index = [c[mu.options["field_name_row"]] if isinstance(c,tuple) else c for c in working.columns]
+    working.columns = new_col_index
+
+    # clean and append "_SOURCE" to each original non-count column name
+    working, new_err = munge_clean(working, mu, ['value'])
+    if new_err:
+        err = ui.consolidate_errors([err,new_err])
+        if ui.fatal_error(new_err):
+            return working, err
+
+    # NB: if there is just one numerical column, melt still creates dummy variable col
+    #  in which each value is 'value'
+
+    # rename count to Count
+    #  if only one header row, rename variable to variable_0 for consistency
+    working.rename(columns={"variable": "variable_0"}, inplace=True)
+    #  NB: any unnecessary numerical cols (e.g., Contest Group ID) will not matter
+    #  as they will be be missing from dictionary.txt and hence will be ignored.
+    working.rename(columns={"value": "Count"}, inplace=True)
 
     # apply munging formula from row sources (after renaming fields in raw formula as necessary)
     for t in mu.cdf_elements[mu.cdf_elements.source == "row"].index:
@@ -600,21 +617,6 @@ def munge_and_melt(
     munged = [x for x in working.columns if x[-7:] == "_SOURCE"]
     working.drop(munged, axis=1, inplace=True)
 
-    # if there is just one numerical column, melt still creates dummy variable col
-    #  in which each value is 'value'
-    # TODO how to ensure such files munge correctly?
-
-    # reshape
-    non_count_cols = [x for x in working.columns if x not in count_cols]
-    working = working.melt(id_vars=non_count_cols)
-    # rename count to Count
-    #  if only one header row, rename variable to variable_0 for consistency
-    #  NB: any unnecessary numerical cols (e.g., Contest Group ID) will not matter
-    #  as they will be be missing from raw_identifiers.txt and hence will be ignored.
-    # TODO check and correct: no num col names conflict with raw identifiers of column-source
-    #  elements!
-    working.rename(columns={"variable": "variable_0", "value": "Count"}, inplace=True)
-
     # apply munge formulas for column sources
     for t in mu.cdf_elements[mu.cdf_elements.source == "column"].index:
         working, new_err = add_munged_column(working, mu, t, None, mode="column")
@@ -624,7 +626,7 @@ def munge_and_melt(
                 return working, err
 
     # remove unnecessary columns
-    not_needed = [f"variable_{i}" for i in range(mu.options["header_row_count"])]
+    not_needed = [c for c in working.columns if c[:9]=="variable_"]
     working.drop(not_needed, axis=1, inplace=True)
 
     return working, err
@@ -772,7 +774,7 @@ def add_selection_id(
             ]
         # recast Candidate_Id and Party_Id to int in w['Candidate']; Note that neither should have nulls, but rather the 'none or unknown' Id
         #  NB: c_df had this recasting done in the append_id_to_dframe routine
-        w["Candidate"], err_df = generic_clean(w["Candidate"])
+        w["Candidate"], count_cols, err_df = generic_clean(w["Candidate"])
 
         # append CandidateSelection_Id to w['Candidate']
         w["Candidate"] = w["Candidate"].merge(
@@ -795,16 +797,12 @@ def raw_elements_to_cdf(
     juris: jm.Jurisdiction,
     mu: jm.Munger,
     raw: pd.DataFrame,
-    count_cols: list,
+    count_cols: List[str],
     err: dict,
     ids: dict,
 ) -> dict:
     """load data from <raw> into the database."""
     working = raw.copy()
-
-    # enter elements from sources outside raw data, including creating id column(s)
-    for k in ids.keys():
-        working = add_constant_column(working, k, ids[k])
 
     try:
         working, new_err = munge_and_melt(mu, working, count_cols, err)
@@ -820,6 +818,10 @@ def raw_elements_to_cdf(
             f"Unexpected exception during munge_and_melt: {exc}",
         )
         return err
+
+    # enter elements from sources outside raw data, including creating id column(s)
+    for k in ids.keys():
+        working = add_constant_column(working, k, ids[k])
 
     # add Contest_Id (unless it was passed in ids)
     if "Contest_Id" not in working.columns:
