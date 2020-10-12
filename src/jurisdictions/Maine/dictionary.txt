@@ -390,8 +390,8 @@ ReportingUnit	Maine;ME Senate District 32	Maine;ME Senate District 32
 ReportingUnit	Maine;ME Senate District 33	Maine;ME Senate District 33
 ReportingUnit	Maine;ME Senate District 34	Maine;ME Senate District 34
 ReportingUnit	Maine;ME Senate District 35	Maine;ME Senate District 35
-ReportingUnit	Maine;US House ME District 1	Maine;US House ME District 1
-ReportingUnit	Maine;US House ME District 2	Maine;US House ME District 2
+ReportingUnit	Maine;US House ME District 1	CG 1
+ReportingUnit	Maine;US House ME District 2	CG 2
 ReportingUnit	Maine	Maine
 ReportingUnit	Maine;Androscoggin County	AND
 ReportingUnit	Maine;Aroostook County	ARO
@@ -918,3 +918,4 @@ Candidate	Thomas F. Steyer	STEYER, THOMAS F.
 Candidate	Elizabeth A. Warren	WARREN, ELIZABETH A.
 Candidate	Marianne Williamson	WILLIAMSON, MARIANNE
 Candidate	Andrew Yang	YANG, ANDREW
+CountItemType	uocava	UOCAVA

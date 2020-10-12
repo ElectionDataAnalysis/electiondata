@@ -1,0 +1,6 @@
+name	raw_identifier_formula	source
+ReportingUnit	{<TOWN>,^[^\-]* -- ([^\-]*)$}	row
+Party		ini
+CandidateContest		ini
+Candidate	<0>	column
+CountItemType	{<TOWN>,^([^\-]*) -- [^\-]*$}	row
