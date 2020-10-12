@@ -556,7 +556,7 @@ def new_datafile(
     juris: jm.Jurisdiction,
     results_info: dict,
     aux_data_path: str = None,
-) -> dict:
+) -> Optional[dict]:
     """Guide user through process of uploading data in <raw_file>
     into common data format.
     Assumes cdf db exists already"""
@@ -601,6 +601,10 @@ def new_datafile(
             ids=results_info,
         )
         if new_err:
+            # append munger name to jurisdiction errors/warnings key
+            keys = [x for x in new_err["warn-jurisdiction"].keys()]
+            for k in keys:
+                new_err["warn-jurisdiction"][f"{k}-{munger.name}"] = new_err["warn-jurisdiction"].pop(k)
             err = consolidate_errors([err, new_err])
             if fatal_error(new_err):
                 return err

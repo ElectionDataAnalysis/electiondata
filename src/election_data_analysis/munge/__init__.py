@@ -750,6 +750,8 @@ def add_selection_id(
         )
 
         # find unmatched records
+        # TODO this throws error (FutureWarning: elementwise comparison failed),
+        #  maybe because CandidateSelection_Id cannot be compared to ""?
         c_df_unmatched = c_df[
             (c_df.CandidateSelection_Id == 0)
             | (c_df.CandidateSelection_Id == "")
@@ -777,12 +779,11 @@ def add_selection_id(
             c_df, how="left", on=["Candidate_Id", "Party_Id"]
         )
 
-        # rename to Selection_Id and drop extraneous
-        w["Candidate"] = (
-            w["Candidate"]
-            .rename(columns={"CandidateSelection_Id": "Selection_Id"})
-            .drop(["Candidate_Id", "BallotMeasureSelection_raw"], axis=1)
-        )
+        # rename to Selection_Id
+        w["Candidate"] = w["Candidate"].rename(columns={"CandidateSelection_Id": "Selection_Id"})
+        # and drop extraneous
+        to_drop = [x for x in w["Candidate"].columns if x in ["Candidate_Id", "BallotMeasureSelection_raw"]]
+        w["Candidate"].drop(to_drop, axis=1,inplace=True)
 
     working = pd.concat([w["BallotMeasure"], w["Candidate"]])
 
@@ -839,7 +840,7 @@ def raw_elements_to_cdf(
     element_list = [
         t
         for t in mu.cdf_elements.index
-        if (t[-7:] != "Contest" and t[-9:] != "Selection")
+        if (t[-7:] != "Contest" and (t[-9:] != "Selection") and f"{t}_Id" not in ids.keys())
     ]
     for t in element_list:
         try:

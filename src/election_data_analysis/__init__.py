@@ -33,6 +33,9 @@ sdl_pars_opt = [
     "aux_data_dir",
     "Contest",
     "contest_type",
+    "Party",
+    "CountItemType",
+    "ReportingUnit",
 ]
 
 multi_data_loader_pars = [
@@ -244,7 +247,7 @@ class DataLoader:
                         print(f"\t{f} and its results file not archived due to errors")
 
                     else:
-                        print(f"{f} and its results file loaded successfully.")
+                        print(f"{f} and its results file loaded successfully via mungers {sdl.d['munger_name']}.")
                 #  report munger, jurisdiction and file errors & warnings
                 err = ui.report(
                     err,
@@ -316,10 +319,11 @@ class SingleDataLoader:
         # initialize each munger (or collect error)
         m_err = dict()
         for mu in self.munger_list:
+
             self.munger[mu], m_err[mu] = jm.check_and_init_munger(
                 os.path.join(mungers_path, mu)
             )
-
+            print(f"Munger initialized: {mu}")
         self.munger_err = ui.consolidate_errors([m_err[mu] for mu in self.munger_list])
 
     def track_results(self) -> (dict, Optional[str]):
@@ -422,6 +426,27 @@ class SingleDataLoader:
                 else:
                     results_info["Contest_Id"] = contest_id
 
+            for k in ["Party", "ReportingUnit", "CountItemType"]:
+                # if element was given in .ini file
+                if self.d[k] is not None:
+                    # collect <k>_Id or fail gracefully
+                    k_id = db.name_to_id(self.session, k, self.d[k])
+                    if k_id is None and k != "CountItemType":
+                        err = ui.add_new_error(
+                            err,
+                            "ini",
+                            self.par_file_name,
+                            f"{k} defined in .ini file ({self.d[k]}) not found in database",
+                        )
+                        return err
+                    # no CountItemType throws an error
+                    elif k == "CountItemType":
+                        # put CountItemType value into OtherCountItemType field
+                        k_id = db.name_to_id(self.session, k, "other")
+                        results_info["OtherCountItemType"] = self.d[k]
+
+                    results_info[f"{k}_Id"] = k_id
+
             # load results to db
             for mu in self.munger_list:
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
@@ -472,13 +497,46 @@ def check_aux_data_setup(
     return err
 
 
+def check_par_file_elements(d: dict, mungers_path: str, par_file_name: str) -> Optional[dict]:
+    """<d> is the dictionary of parameters pulled from the parameter file"""
+    err = None
+    # create list of elements pulled from .ini file
+    elt_from_par_file = [
+        x for x in sdl_pars_opt if (
+                (x in ["Party", "ReportingUnit", "Contest", "CountItemType"]) and (d[x] is not None)
+                                   )
+    ]
+    if "Contest" in elt_from_par_file:
+        # replace "Contest" by its two possibilities
+        elt_from_par_file.remove("Contest")
+        elt_from_par_file.extend(["BallotMeasureContest", "CandidateContest"])
+
+    # for each munger, check that no element defined elsewhere is sourced as 'row' or 'column'
+    for mu in d["munger_name"].split(","):
+        elt_file = os.path.join(mungers_path, mu, "cdf_elements.txt")
+        elt = pd.read_csv(elt_file, sep="\t")
+        rc_from_mu = elt[(elt.source == "row") | (elt.source == "column")]["name"].unique()
+        duped = [x for x in elt_from_par_file if x in rc_from_mu]
+        if duped:
+            err = ui.add_new_error(
+                err,
+                "ini",
+                par_file_name,
+                f"Some elements given in the parameter file are also designated "
+                f"as row- or column-sourced in munger {mu}:\n"
+                f"{duped}",
+            )
+    return err
+
+
+
 def check_and_init_singledataloader(
     results_dir: str,
     par_file_name: str,
     session,
     mungers_path: str,
     juris: jm.Jurisdiction,
-) -> (SingleDataLoader, dict):
+) -> (SingleDataLoader, Optional[dict]):
     """Return SDL if it could be successfully initialized, and
     error dictionary (including munger errors noted in SDL initialization)"""
     # test parameters
@@ -496,8 +554,11 @@ def check_and_init_singledataloader(
     # check consistency of munger and .ini file regarding aux data
     new_err = check_aux_data_setup(d, results_dir, mungers_path, par_file_name)
 
-    if ui.fatal_error(new_err):
-        err = ui.consolidate_errors([err, new_err])
+    # check consistency of munger and .ini file regarding elements to be read from ini file
+    new_err_2 = check_par_file_elements(d, mungers_path, par_file_name)
+
+    if ui.fatal_error(new_err) or ui.fatal_error(new_err_2):
+        err = ui.consolidate_errors([err, new_err, new_err_2])
         sdl = None
         return sdl, err
 
@@ -506,7 +567,6 @@ def check_and_init_singledataloader(
     if ("jurisdiction_directory" not in d.keys()) and (
         "jurisdiction_path" not in d.keys()
     ):
-        sdl = None
         err = ui.add_new_error(
             dict(),
             "ini",
