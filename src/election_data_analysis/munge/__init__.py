@@ -588,6 +588,9 @@ def munge_and_melt(
     new_col_index = [c[mu.options["field_name_row"]] if isinstance(c,tuple) else c for c in working.columns]
     working.columns = new_col_index
 
+    #  if only one header row, rename variable to variable_0 for consistency
+    working.rename(columns={"variable": "variable_0"}, inplace=True)
+
     # clean and append "_SOURCE" to each original non-count column name
     working, new_err = munge_clean(working, mu, ['value'])
     if new_err:
@@ -599,8 +602,6 @@ def munge_and_melt(
     #  in which each value is 'value'
 
     # rename count to Count
-    #  if only one header row, rename variable to variable_0 for consistency
-    working.rename(columns={"variable": "variable_0"}, inplace=True)
     #  NB: any unnecessary numerical cols (e.g., Contest Group ID) will not matter
     #  as they will be be missing from dictionary.txt and hence will be ignored.
     working.rename(columns={"value": "Count"}, inplace=True)
