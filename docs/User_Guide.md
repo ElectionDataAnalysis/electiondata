@@ -91,6 +91,8 @@ ALAMANCE	11/06/2018	03S	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, 
 Here the CountItemType value ('Election Day','One Stop' a.k.a. early voting, 'Absentee by Mail','Provisional' must be read from the column headers, i.e., the information in row 0 of the file. For the first data row, the formula <0> would yield CountItemType 'Election Day' for the VoteCount of 59, 'One Stop' for the vote count of 65, etc.
 
 ### ini-source example
+Whenever an element is constant for all data in a results file, you can specify it in the parameter (`*.ini`) file instead of the `cdf_elements.txt` file. In this case, you can either omit the corresponding line from `cdf_elements.txt` or keep the line and put 'ini' in the `source` column.
+
 Maine publishes results in separate files for each contest, and the contests are not specified in the file contents. Here is an example from a file for the 2018 Governor contest.
 ```
 		Hayes, Teresea M.	Mills, Janet T.	Moody, Shawn H.	Others	Blank	
