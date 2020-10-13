@@ -158,7 +158,7 @@ ok = {
 }
 
 print(ok)
-"""
+
 ### NC dataloading tests ###
 #NC16 tests
 @pytest.mark.skipif(not ok["nc16g"], reason="No NC 2016 General data")
@@ -401,7 +401,53 @@ def test_fl_totals_match_vote_type():
     # Vote type not available
     assert True == True
 
+#FL18 test
+@pytest.mark.skipif(not ok["fl18g"], reason="No FL 2018 General data")
+def test_fl_presidential_18():
+    assert True == True
 
+@pytest.mark.skipif(not ok["fl18g"], reason="No FL 2018 General data")
+def test_fl_statewide_totals_18():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Florida",
+            "US Senate FL",
+        )
+        == 8190005
+    )
+
+@pytest.mark.skipif(not ok["fl18g"], reason="No FL 2018 General data")
+def test_fl_senate_totals_18():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Florida",
+            "FL Senate District 4",
+        )
+        == 235459
+    )
+
+@pytest.mark.skipif(not ok["fl18g"], reason="No FL 2018 General data")
+def test_fl_house_totals_18():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Florida",
+            "FL House District 11",
+        )
+        == 85479
+    )
+
+@pytest.mark.skipif(not ok["fl18g"], reason="No FL 2018 General data")
+def test_fl_contest_by_vote_type_18():
+    # Vote type not available
+    assert True == True
+
+@pytest.mark.skipif(not ok["fl18g"], reason="No FL 2018 General data")
+def test_fl_totals_match_vote_type_18():
+    # Vote type not available
+    assert True == True
 
 #FL20 test
 @pytest.mark.skipif(not ok["fl20p"], reason="No FL 2020 Primary data")
@@ -426,7 +472,7 @@ def test_fl_senate_totals_20():
             "2020 Primary",
             "Florida",
             "FL Senate District 21",
-    20
+        )
         == 54988
     )
 
@@ -436,7 +482,7 @@ def test_fl_house_totals_20():
         check_contest_totals(
             "2020 Primary",
             "Florida",
-            "US House FL District 11",
+            "FL House District 11",
         )
         == 17445
     )
@@ -1600,4 +1646,3 @@ def test_co_contest_by_vote_type_18():
 @pytest.mark.skipif(not ok["co18g"], reason="No CO 2018 General data")
 def test_co_totals_match_vote_type_18():
     assert True == True
-"""
