@@ -131,11 +131,12 @@ ok = {
     "pa20p": data_exists('2020 Primary','Pennsylvania'),
     "ga16g": data_exists('2016 General','Georgia'),
     "ga18g": data_exists('2018 General','Georgia'),
-    "sc20ppp": data_exists('2020 President Preference Primary','South Carolina'),
+    "sc20p": data_exists('2020 Primary','South Carolina'),
     "in16g": data_exists('2016 General','Indiana'),
     "in18g": data_exists('2018 General','Indiana'),
     "in20p": data_exists('2020 Primary','Indiana'),
     "ar18g": data_exists('2018 General','Arkansas'),
+    "ar20p": data_exists('2018 General','Arkansas'),
     "mi16g": data_exists('2016 General','Michigan'),
     "mi18g": data_exists('2018 General','Michigan'),
     "mi20p": data_exists('2020 Primary','Michigan'),
@@ -729,6 +730,7 @@ def test_ga_totals_match_vote_type_18():
 
 
 ### South Carolina Data Loading Tests ###
+#SC20 test
 @pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
 def test_sc_presidential():
     #only 2020 democratic presidental primary results loaded
@@ -921,13 +923,14 @@ def test_in_totals_match_vote_type_20():
 
 
 ### Arkansas Data Loading Tests ###
+#AR18 test
 @pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
-def test_ar_presidential():
+def test_ar_presidential_18():
     #no presidential contests in 2018
     assert True == True
 
 @pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
-def test_ar_statewide_totals():
+def test_ar_statewide_totals_18():
     assert (
         check_contest_totals(
             "2018 General",
@@ -938,7 +941,7 @@ def test_ar_statewide_totals():
     )
 
 @pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
-def test_ar_senate_totals():
+def test_ar_senate_totals_18():
     assert (
         check_contest_totals(
             "2018 General",
@@ -949,7 +952,7 @@ def test_ar_senate_totals():
     )
 
 @pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
-def test_ar_house_totals():
+def test_ar_house_totals_18():
     assert (
         check_contest_totals(
             "2018 General",
@@ -960,7 +963,7 @@ def test_ar_house_totals():
     )
 
 @pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
-def test_ar_contest_by_vote_type():
+def test_ar_contest_by_vote_type_18():
     assert (
         check_count_type_totals(
             "2018 General",
@@ -972,8 +975,69 @@ def test_ar_contest_by_vote_type():
     )
 
 @pytest.mark.skipif(not ok["ar18g"], reason="No AR 2018 General data")
-def test_ar_totals_match_vote_type():
+def test_ar_totals_match_vote_type_18():
     assert check_totals_match_vote_types("2018 General", "Arkansas") == True
+
+#AR18 test
+@pytest.mark.skipif(not ok["ar20p"], reason="No AR 2020 Primary data")
+def test_ar_presidential_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Arkansas",
+            "US President (AR)",
+        )
+        == 4799284
+    )
+
+@pytest.mark.skipif(not ok["ar20p"], reason="No AR 2020 Primary data")
+def test_ar_statewide_totals_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Arkansas",
+            "AR Governor",
+        )
+        == 891509
+    )
+
+@pytest.mark.skipif(not ok["ar20p"], reason="No AR 2020 Primary data")
+def test_ar_senate_totals_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Arkansas",
+            "AR Senate District 5",
+        )
+        == 27047
+    )
+
+@pytest.mark.skipif(not ok["ar20p"], reason="No AR 2020 Primary data")
+def test_ar_house_totals_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Arkansas",
+            "AR House District 19",
+        )
+        == 7927
+    )
+
+@pytest.mark.skipif(not ok["ar20p"], reason="No AR 2020 Primary data")
+def test_ar_contest_by_vote_type_20():
+    assert (
+        check_count_type_totals(
+            "2020 Primary",
+            "Arkansas",
+            "AR Senate District 5",
+            "absentee",
+        )
+        == 453
+    )
+
+@pytest.mark.skipif(not ok["ar20p"], reason="No AR 2020 Primary data")
+def test_ar_totals_match_vote_type_20():
+    assert check_totals_match_vote_types("2020 General", "Arkansas") == True
 
 
 ### Michigan Data Loading Tests ###
