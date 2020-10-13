@@ -62,6 +62,9 @@ analyze_pars = ["db_paramfile", "db_name"]
 
 # classes
 class DataLoader:
+
+
+
     def __new__(cls):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
@@ -106,7 +109,7 @@ class DataLoader:
             quit()
 
     def load_all(
-        self, load_jurisdictions: bool = True, move_files: bool = False
+        self, load_jurisdictions: bool = True, move_files: bool = True
     ) -> dict:
         """returns an error dictionary"""
         # initialize error dictionary
