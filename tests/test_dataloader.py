@@ -140,9 +140,7 @@ ok = {
     "mi16g": data_exists('2016 General','Michigan'),
     "mi18g": data_exists('2018 General','Michigan'),
     "mi20p": data_exists('2020 Primary','Michigan'),
-    "mi20ppp": data_exists('2020 President Preference Primary','Michigan'),
-    "de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
-    "de20pri": data_exists('2020 Primary','Delaware'),
+    "de20p": data_exists('2020 Primary','Delaware'),
     "oh16g": data_exists('2016 General','Ohio'),
     "oh18g": data_exists('2018 General','Ohio'),
     "il16g": data_exists('2016 General','Illinois'),
@@ -1181,12 +1179,11 @@ def test_mi_totals_match_vote_type_20():
     assert True == True
 
 
-@pytest.mark.skipif(not ok["mi20ppp"], reason="No MI 2020 PPP data")
+@pytest.mark.skipif(not ok["mi20p"], reason="No MI 2020 Primary data")
 def test_mi_presidential_20ppp():
     assert (
         check_contest_totals(
-            #"2020 Primary",
-            "2020 Presidential Preference Primary",
+            "2020 Primary",
             "Michigan",
             "US President (MI) (Democratic Party)",
         )
@@ -1195,7 +1192,7 @@ def test_mi_presidential_20ppp():
 
 
 ### Delaware 2020 Primary Data Loading Tests ###
-@pytest.mark.skipif(not ok["de20pri"], reason="No DE 2020 Primary data")
+@pytest.mark.skipif(not ok["de20p"], reason="No DE 2020 Primary data")
 def test_de_statewide_totals():
     assert (
             check_contest_totals(
@@ -1206,7 +1203,7 @@ def test_de_statewide_totals():
             == 55447
     )
 
-@pytest.mark.skipif(not ok["de20pri"], reason="No DE 2020 Primary data")
+@pytest.mark.skipif(not ok["de20p"], reason="No DE 2020 Primary data")
 def test_de_senate_totals():
     assert (
             check_contest_totals(
@@ -1217,7 +1214,7 @@ def test_de_senate_totals():
             == 5940
     )
 
-@pytest.mark.skipif(not ok["de20pri"], reason="No DE 2020 Primary data")
+@pytest.mark.skipif(not ok["de20p"], reason="No DE 2020 Primary data")
 def test_de_house_totals():
     assert (
             check_contest_totals(
@@ -1228,7 +1225,7 @@ def test_de_house_totals():
             == 2990
     )
 
-@pytest.mark.skipif(not ok["de20pri"], reason="No DE 2020 Primary data")
+@pytest.mark.skipif(not ok["de20p"], reason="No DE 2020 Primary data")
 def test_de_contest_by_vote_type():
     assert (
         check_count_type_totals(
@@ -1240,20 +1237,20 @@ def test_de_contest_by_vote_type():
         == 559
     )
 
-@pytest.mark.skipif(not ok["de20ppp"], reason="No DE 2020 Presidential Preference Primary data")
+@pytest.mark.skipif(not ok["de20p"], reason="No DE 2020 Primary data")
 def test_de_presidential():
     assert (
         check_contest_totals(
-            "2020 Presidential Preference Primary",
+            "2020 Primary",
             "Delaware",
             "US President (DE) (Democratic Party)",
         )
         == 91682
     )
 
-@pytest.mark.skipif(not ok["de20ppp"], reason="No DE 2020 Presidential Preference Primary data")
+@pytest.mark.skipif(not ok["de20p"], reason="No DE 2020 Primary data")
 def test_de_totals_match_vote_type():
-    assert check_totals_match_vote_types("2020 Presidential Preference Primary", "Delaware") == True
+    assert check_totals_match_vote_types("2020 Primary", "Delaware") == True
 
 
 ### Ohio Data Loading Tests ###
