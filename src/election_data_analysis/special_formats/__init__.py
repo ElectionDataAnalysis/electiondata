@@ -6,6 +6,25 @@ from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import user_interface as ui
 
 
+def disambiguate(li: list) -> (list, dict):
+    """returns new list, with numbers added to any repeat entries
+    (e.g., ['foo','foo','bar'] yields ['foo','foo 1','bar'])
+    and a dictionary for the alternatives (e.g., alts = {'foo 1':'foo'})"""
+    c = dict()
+    alts = dict()
+    new_li = []
+    for x in li:
+        if x in c.keys():
+            new = f"{x} {c[x]}"
+            new_li.append(new)
+            alts[new] = x
+            c[x] += 1
+        else:
+            new_li.append(x)
+            c[x] = 1
+    return new_li, alts
+
+
 def strip_empties(li: list) -> list:
     # get rid of leading empty strings
     first_useful = next(idx for idx in range(len(li)) if li[idx] != "")
@@ -124,7 +143,15 @@ def read_concatenated_blocks(
                 )
                 return pd.DataFrame(), err
 
-            header_1_list = extract_items(header_1, w * v_t_cc)
+            # get list from next header row and disambiguate
+            # TODO tech debt: disambiguation assumes Candidate formula is <header_1>
+            header_1_list, alts = disambiguate(extract_items(header_1, w * v_t_cc))
+
+            #  add disambiguated entries to munger's dictionary of alternatives
+            if "Candidate" in munger.alt.keys():
+                munger.alt["Candidate"].update(alts)
+            else:
+                munger.alt["Candidate"] = alts
 
             # create df from next batch of lines, with that multi-index
             # find idx of next empty line (or end of data)

@@ -2,7 +2,7 @@
 ## Environment
 You will need `python3`. If you use the alias `python`, make sure it points to `python3`.
 
-The system runs out of the box with a postgresql database; to use other varieties of SQL, you will need to modify the routines in the `db_routines` module. 
+The system runs out of the box with a postgresql database; to use other varieties of SQL, you will need to modify the routines in the `database` module. 
 
 ## Installation
 From the root folder of your repository run `python3 setup.py install` (or if `python` is an alias for `python3` on your system, `python setup.py install`).
@@ -68,7 +68,7 @@ BallotMeasureContest	<Office Name> <District Name>	row
 BallotMeasureSelection	<0>	column
 CountItemType	total	row
 ```
-NB: for constants (like the CountItemType 'total' in this example), use 'row' for the source. Row-source fields should be the field names from the header row or, if there is no header row, from `format.config`. Column-source fields should be identified by the number of the row in which the information is found. Our convention is that the top row is 0.
+NB: for constants (like the CountItemType 'total' in this example), use `row` for the source. Row-source fields should be the field names from the header row or, if there is no header row, from `format.config`. Column-source fields should be identified by the number of the row in which the information is found. Our convention is that the top row is 0. Use source `ini` for values that are constant over the entire results file and specified in `*.ini`.
 
 ### row-sourced formula example
 Consider this snippet from a comma-separated Philadelphia, Pennsylvania voting results file:
@@ -89,6 +89,28 @@ ALAMANCE	11/06/2018	03N	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, 
 ALAMANCE	11/06/2018	03S	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, Sr.	LIB	1	106	108	0	3	217	Y
 ```
 Here the CountItemType value ('Election Day','One Stop' a.k.a. early voting, 'Absentee by Mail','Provisional' must be read from the column headers, i.e., the information in row 0 of the file. For the first data row, the formula <0> would yield CountItemType 'Election Day' for the VoteCount of 59, 'One Stop' for the vote count of 65, etc.
+
+### ini-source example
+Maine publishes results in separate files for each contest, and the contests are not specified in the file contents. Here is an example from a file for the 2018 Governor contest.
+```
+		Hayes, Teresea M.	Mills, Janet T.	Moody, Shawn H.	Others	Blank	
+		Buckfield	Farmington	Gorham			
+		Independent	Democratic	Republican			
+CTY	TOWN						TOTAL VOTES CAST
+AND	Auburn	700	4,578	4,235	13	229	9,755
+AND	Durham	113	926	1,141	0	79	2,259
+AND	Greene	151	620	1,249	0	28	2,048
+AND	Leeds	85	372	565	0	16	1,038
+AND	Lewiston	962	7,056	5,497	13	350	13,878
+```
+In this case `cdf_elements.txt` has this line:
+```CandidateContest		ini``` 
+while the `*.ini` file for the file containing the Governor contest results has these lines:
+```
+Contest=ME Governor
+contest_type=Candidate
+```
+Note what is capitalized and what is not. The Contest name (here `ME Governor` should match the Name given in `CandidateContest.txt`)
 
 ### Regular Expressions
 Sometimes it is necessary to use regular expressions to extract information from fields in the results file. For example, a single field might hold a candidate name along with the candidate's party ()
@@ -226,7 +248,6 @@ CandidateContest	US House FL District 2	Representative in Congress District 2
     * Some common standard internal database names for CountItemTypes are 'absentee', 'early', 'election-day', 'provisional' and 'total'. You can look at the CountItemType table in the database to see the full list, and you can use any other name you like.
 ```
 cdf_element	cdf_internal_name	raw_identifier_value
-Election	General Election 2018-11-06	11/6/18
 BallotMeasureSelection	No	No
 BallotMeasureSelection	No	Against
 BallotMeasureSelection	Yes	Yes
@@ -380,7 +401,7 @@ Beware of:
  - Any item with an internal comma (e.g., 'John Sawyer, III')
  - A county that uses all caps - (e.g., Seminole County FL)
 
-The `db_routines` submodule has a routine to remove all counts from a particular results file, given a connection to the database, a cursor on that connection and the _datafile.Id of the results file:
+The `database` submodule has a routine to remove all counts from a particular results file, given a connection to the database, a cursor on that connection and the _datafile.Id of the results file:
 ```
 remove_vote_counts(connection, cursor, id)
 ```

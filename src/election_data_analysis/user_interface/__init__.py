@@ -409,7 +409,7 @@ def read_single_datafile(
                 count_cols_by_name = [df.columns[j] for j in munger.options['count_columns']]
             else:
                 count_cols_by_name = None
-            df, err_df = m.generic_clean(df, int_cols_by_name=count_cols_by_name)
+            df, count_cols_by_name, err_df = m.generic_clean(df, int_cols_by_name=count_cols_by_name)
             err = jm.check_results_munger_compatibility(
                 munger, df, Path(f_path).name, err
             )
@@ -554,9 +554,9 @@ def new_datafile(
     munger: jm.Munger,
     raw_path: str,
     juris: jm.Jurisdiction,
-    results_info: list = None,
+    results_info: dict,
     aux_data_path: str = None,
-) -> dict:
+) -> Optional[dict]:
     """Guide user through process of uploading data in <raw_file>
     into common data format.
     Assumes cdf db exists already"""
@@ -584,12 +584,6 @@ def new_datafile(
     else:
         count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"]]
 
-    raw, new_err = m.munge_clean(raw, munger)
-    if new_err:
-        err = consolidate_errors([err,new_err])
-        if fatal_error(new_err):
-            return err
-
     try:
         new_err = m.raw_elements_to_cdf(
             session,
@@ -601,6 +595,10 @@ def new_datafile(
             ids=results_info,
         )
         if new_err:
+            # append munger name to jurisdiction errors/warnings key
+            keys = [x for x in new_err["warn-jurisdiction"].keys()]
+            for k in keys:
+                new_err["warn-jurisdiction"][f"{k}-{munger.name}"] = new_err["warn-jurisdiction"].pop(k)
             err = consolidate_errors([err, new_err])
             if fatal_error(new_err):
                 return err

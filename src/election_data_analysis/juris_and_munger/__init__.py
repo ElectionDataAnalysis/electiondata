@@ -227,6 +227,7 @@ class Munger:
         <aux_data_path> is the absolute path of the directory holding those files."""
         self.name = os.path.basename(munger_path)  # e.g., 'nc_general'
         self.path_to_munger_dir = munger_path
+        self.alt = dict()   # to hold any alt names, e.g., from disambiguation of cross-listed candidates
         [
             self.cdf_elements,
             self.file_type,
@@ -491,25 +492,8 @@ def check_munger_file_format(
     munger_path: str, munger_file: str, templates: str, err: dict
 ) -> dict:
 
-    if munger_file[-4:] == ".txt":
-        cf_df = pd.read_csv(
-            os.path.join(munger_path, munger_file), sep="\t", encoding="iso-8859-1"
-        )
-        temp = pd.read_csv(
-            os.path.join(templates, munger_file), sep="\t", encoding="iso-8859-1"
-        )
-
-        # check column names are correct
-        if set(cf_df.columns) != set(temp.columns):
-            err = ui.add_new_error(
-                err,
-                "munger",
-                munger_path,
-                f"Columns in {munger_file} do not match template.:\n"
-                f"Columns of {munger_file}: {cf_df.columns}\n"
-                f"Columns of template: {temp.columns}",
-            )
-
+    if munger_file == "cdf_elements.txt":
+        pass  # nothing to check now that entries may vary
     elif munger_file == "format.config":
         d, err = ui.get_runtime_parameters(
             required_keys=munger_pars_req,
@@ -539,8 +523,8 @@ def check_munger_file_contents(munger_path, munger_file, err):
             encoding="iso-8859-1",
         ).fillna("")
 
-        # every source in cdf_elements is either row, column or other
-        bad_source = [x for x in cdf_elements.source if x not in ["row", "column"]]
+        # every source in cdf_elements is either row, column, ini or other
+        bad_source = [x for x in cdf_elements.source if x not in ["row", "column", "ini"]]
         if bad_source:
             err = ui.add_new_error(
                 err,
@@ -827,7 +811,7 @@ def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
         )
         return error
     df = pd.read_csv(
-        element_fpath, sep="\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL
+        element_fpath, sep="\t", encoding="utf_8", quoting=csv.QUOTE_MINIMAL
     ).fillna("none or unknown")
     # TODO check that df has the right format
 

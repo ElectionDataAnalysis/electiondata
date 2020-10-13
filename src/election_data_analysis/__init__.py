@@ -2,6 +2,7 @@ from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
 from sqlalchemy.orm import sessionmaker
+from typing import List, Dict, Optional
 import datetime
 import os
 import pandas as pd
@@ -9,7 +10,7 @@ import ntpath
 import inspect
 from pathlib import Path
 from election_data_analysis import analyze as a
-from election_data_analysis import visualize as v
+from election_data_analysis import visualize as viz
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
 
@@ -30,6 +31,11 @@ sdl_pars_opt = [
     "jurisdiction_path",
     "jurisdiction_directory",
     "aux_data_dir",
+    "Contest",
+    "contest_type",
+    "Party",
+    "CountItemType",
+    "ReportingUnit",
 ]
 
 multi_data_loader_pars = [
@@ -241,7 +247,7 @@ class DataLoader:
                         print(f"\t{f} and its results file not archived due to errors")
 
                     else:
-                        print(f"{f} and its results file loaded successfully.")
+                        print(f"{f} and its results file loaded successfully via mungers {sdl.d['munger_name']}.")
                 #  report munger, jurisdiction and file errors & warnings
                 err = ui.report(
                     err,
@@ -280,6 +286,7 @@ class SingleDataLoader:
         self.session = session
         self.results_dir = results_dir
         self.juris = juris
+        self.par_file_name = par_file_name
 
         # grab parameters (known to exist from __new__, so can ignore error variable)
         par_file = os.path.join(results_dir, par_file_name)
@@ -312,21 +319,27 @@ class SingleDataLoader:
         # initialize each munger (or collect error)
         m_err = dict()
         for mu in self.munger_list:
+
             self.munger[mu], m_err[mu] = jm.check_and_init_munger(
                 os.path.join(mungers_path, mu)
             )
-
+            print(f"Munger initialized: {mu}")
         self.munger_err = ui.consolidate_errors([m_err[mu] for mu in self.munger_list])
 
-    def track_results(self):
+    def track_results(self) -> (dict, Optional[str]):
         """insert a record for the _datafile, recording any error string <e>.
         Return Id of _datafile.Id and Election.Id"""
         filename = self.d["results_file"]
         top_reporting_unit_id = db.name_to_id(
             self.session, "ReportingUnit", self.d["top_reporting_unit"]
         )
+        if top_reporting_unit_id is None:
+            e = f"No ReportingUnit named {self.d['top_reporting_unit']} found in database"
+            return [0, 0], e
         election_id = db.name_to_id(self.session, "Election", self.d["election"])
-
+        if election_id is None:
+            e = f"No election named {self.d['election']} found in database"
+            return [0, 0], e
         data = pd.DataFrame(
             [
                 [
@@ -351,24 +364,33 @@ class SingleDataLoader:
                 "created_at",
             ],
         )
-        e = db.insert_to_cdf_db(self.session.bind, data, "_datafile")
-        if e:
-            return [0, 0], e
-        else:
-            col_map = {"short_name": "short_name"}
-            datafile_id = db.append_id_to_dframe(
-                self.session.bind, data, "_datafile", col_map=col_map
-            ).iloc[0]["_datafile_Id"]
-        return [datafile_id, election_id], e
+        try:
+            e = db.insert_to_cdf_db(self.session.bind, data, "_datafile")
+            if e:
+                return [0, 0], e
+            else:
+                col_map = {"short_name": "short_name"}
+                datafile_id = db.append_id_to_dframe(
+                    self.session.bind, data, "_datafile", col_map=col_map
+                ).iloc[0]["_datafile_Id"]
+        except Exception as exc:
+            return [0, 0], f"Error inserting record to _datafile table or retrieving _datafile_Id: {exc}"
+        return {"_datafile_Id":datafile_id, "Election_Id":election_id}, e
 
     def load_results(self) -> dict:
         """Load results, returning error (or None, if load successful)"""
         err = None
         print(f'\n\nProcessing {self.d["results_file"]}')
+
+        # Enter datafile info to db and collect _datafile_Id and Election_Id
         results_info, e = self.track_results()
         if e:
             err = ui.add_new_error(
-                err, "system", "SingleDataLoader.load_results", f"database error: {e}"
+                err,
+                "system",
+                "SingleDataLoader.load_results",
+                f"Error inserting _datafile record:\n{e}"
+                f" "
             )
             return err
 
@@ -377,6 +399,55 @@ class SingleDataLoader:
                 aux_data_path = None
             else:
                 aux_data_path = os.path.join(self.results_dir, self.d["aux_data_dir"])
+
+            # if Contest was given in .ini file
+            if self.d["Contest"] is not None:
+                # check that contest_type is given and recognized
+                if ("contest_type" not in self.d.keys()) or self.d["contest_type"] not in ["Candidate","BallotMeasure"]:
+                    err = ui.add_new_error(
+                        err,
+                        "ini",
+                        self.par_file_name,
+                        f"Contest is given, but contest_type is not, or is neither 'Candidate' nor 'BallotMeasure'",
+                    )
+                    return err
+                else:
+                    results_info["contest_type"] = self.d["contest_type"]
+                # collect Contest_Id (or fail gracefully)
+                contest_id = db.name_to_id(self.session, "Contest", self.d["Contest"])
+                if contest_id is None:
+                    err = ui.add_new_error(
+                        err,
+                        "ini",
+                        self.par_file_name,
+                        f"Contest defined in .ini file ({self.d['Contest']}) not found in database",
+                    )
+                    return err
+                else:
+                    results_info["Contest_Id"] = contest_id
+
+            for k in ["Party", "ReportingUnit", "CountItemType"]:
+                # if element was given in .ini file
+                if self.d[k] is not None:
+                    # collect <k>_Id or fail gracefully
+                    k_id = db.name_to_id(self.session, k, self.d[k])
+                    if k_id is None and k != "CountItemType":
+                        err = ui.add_new_error(
+                            err,
+                            "ini",
+                            self.par_file_name,
+                            f"{k} defined in .ini file ({self.d[k]}) not found in database",
+                        )
+                        return err
+                    # no CountItemType throws an error
+                    elif k == "CountItemType":
+                        # put CountItemType value into OtherCountItemType field
+                        k_id = db.name_to_id(self.session, k, "other")
+                        results_info["OtherCountItemType"] = self.d[k]
+
+                    results_info[f"{k}_Id"] = k_id
+
+            # load results to db
             for mu in self.munger_list:
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
                 new_err = ui.new_datafile(
@@ -426,13 +497,46 @@ def check_aux_data_setup(
     return err
 
 
+def check_par_file_elements(d: dict, mungers_path: str, par_file_name: str) -> Optional[dict]:
+    """<d> is the dictionary of parameters pulled from the parameter file"""
+    err = None
+    # create list of elements pulled from .ini file
+    elt_from_par_file = [
+        x for x in sdl_pars_opt if (
+                (x in ["Party", "ReportingUnit", "Contest", "CountItemType"]) and (d[x] is not None)
+                                   )
+    ]
+    if "Contest" in elt_from_par_file:
+        # replace "Contest" by its two possibilities
+        elt_from_par_file.remove("Contest")
+        elt_from_par_file.extend(["BallotMeasureContest", "CandidateContest"])
+
+    # for each munger, check that no element defined elsewhere is sourced as 'row' or 'column'
+    for mu in d["munger_name"].split(","):
+        elt_file = os.path.join(mungers_path, mu, "cdf_elements.txt")
+        elt = pd.read_csv(elt_file, sep="\t")
+        rc_from_mu = elt[(elt.source == "row") | (elt.source == "column")]["name"].unique()
+        duped = [x for x in elt_from_par_file if x in rc_from_mu]
+        if duped:
+            err = ui.add_new_error(
+                err,
+                "ini",
+                par_file_name,
+                f"Some elements given in the parameter file are also designated "
+                f"as row- or column-sourced in munger {mu}:\n"
+                f"{duped}",
+            )
+    return err
+
+
+
 def check_and_init_singledataloader(
     results_dir: str,
     par_file_name: str,
     session,
     mungers_path: str,
     juris: jm.Jurisdiction,
-) -> (SingleDataLoader, dict):
+) -> (SingleDataLoader, Optional[dict]):
     """Return SDL if it could be successfully initialized, and
     error dictionary (including munger errors noted in SDL initialization)"""
     # test parameters
@@ -450,8 +554,11 @@ def check_and_init_singledataloader(
     # check consistency of munger and .ini file regarding aux data
     new_err = check_aux_data_setup(d, results_dir, mungers_path, par_file_name)
 
-    if ui.fatal_error(new_err):
-        err = ui.consolidate_errors([err, new_err])
+    # check consistency of munger and .ini file regarding elements to be read from ini file
+    new_err_2 = check_par_file_elements(d, mungers_path, par_file_name)
+
+    if ui.fatal_error(new_err) or ui.fatal_error(new_err_2):
+        err = ui.consolidate_errors([err, new_err, new_err_2])
         sdl = None
         return sdl, err
 
@@ -460,7 +567,6 @@ def check_and_init_singledataloader(
     if ("jurisdiction_directory" not in d.keys()) and (
         "jurisdiction_path" not in d.keys()
     ):
-        sdl = None
         err = ui.add_new_error(
             dict(),
             "ini",
@@ -796,7 +902,7 @@ class JurisdictionPrepper:
             return error
 
         # clean the dataframe read from the results
-        wr, err_df = m.generic_clean(wr)
+        wr, count_cols, err_df = m.generic_clean(wr)
         # reduce <wr> in size
         fields = [
             f"{field}_SOURCE"
@@ -1263,18 +1369,20 @@ class Analyzer:
         h_election_id = db.name_to_id(self.session, "Election", h_election)
         v_election_id = db.name_to_id(self.session, "Election", v_election)
         # *_type is either candidates or contests
-        h_count_item_type, h_type = self.split_category_input(h_category)
-        v_count_item_type, v_type = self.split_category_input(v_category)
+        h_type, h_count_item_type = self.split_category_input(h_category)
+        v_type, v_count_item_type = self.split_category_input(v_category)
         if h_count == "All Candidates" or h_count == "All Contests":
             h_count_id = -1
         elif h_type == "candidates":
-            h_count_id = db.name_to_id(self.session, "Candidate", h_count)
+            h = h_count.split("-")[0].strip()
+            h_count_id = db.name_to_id(self.session, "Candidate", h)
         elif h_type == "contests":
             h_count_id = db.name_to_id(self.session, "CandidateContest", h_count)
         if v_count == "All Candidates" or v_count == "All Contests":
             v_count_id = -1
         elif v_type == "candidates":
-            v_count_id = db.name_to_id(self.session, "Candidate", v_count)
+            v = v_count.split("-")[0].strip()
+            v_count_id = db.name_to_id(self.session, "Candidate", v)
         elif v_type == "contests":
             v_count_id = db.name_to_id(self.session, "CandidateContest", v_count)
         agg_results = a.create_scatter(
@@ -1291,7 +1399,7 @@ class Analyzer:
             v_type,
         )
         if fig_type and agg_results:
-            v.plot("scatter", agg_results, fig_type, d["rollup_directory"])
+            viz.plot("scatter", agg_results, fig_type, d["rollup_directory"])
         return agg_results
 
     def bar(
@@ -1333,20 +1441,18 @@ class Analyzer:
         )
         if fig_type and agg_results:
             for agg_result in agg_results:
-                v.plot("bar", agg_result, fig_type, d["rollup_directory"])
+                viz.plot("bar", agg_result, fig_type, d["rollup_directory"])
         return agg_results
 
     def split_category_input(self, input_str: str):
         """Helper function. Takes an input from the front end that is the cartesian
         product of the CountItemType and {'Candidate', 'Contest'}. So something like:
-        Total Candidates or Absentee Contests. Cleans this and returns
+        Candidate total or Contest absentee-mail. Cleans this and returns
         something usable for the system to identify what the user is asking for."""
-        count_item_types = self.display_options("count_item_type")
-        count_item_type = [
-            count_type for count_type in count_item_types if count_type in input_str
-        ][0]
-        selection_type = input_str[len(count_item_type) + 1 :]
-        return count_item_type, selection_type
+        if input_str.startswith("Candidate"):
+            return "candidates", input_str.replace("Candidate", "").strip()
+        elif input_str.startswith("Contest"):
+            return "contests", input_str.replace("Contest", "").strip()
 
     def export_outlier_data(
         self,

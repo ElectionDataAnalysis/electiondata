@@ -23,6 +23,7 @@ import re
 from election_data_analysis.database import create_cdf_db as db_cdf
 import os
 from sqlalchemy import MetaData, Table, Column, Integer, Float
+from typing import Optional, List
 
 states = """Alabama
 Alaska
@@ -81,6 +82,8 @@ Puerto Rico
 US Virgin Islands"""
 
 db_pars = ["host", "port", "dbname", "user", "password"]
+
+contest_types_model = ["state", "congressional", "judicial", "state-house", "state-senate"]
 
 
 def get_database_names(con):
@@ -331,7 +334,7 @@ def sql_alchemy_connect(
     url = url.format(**params)
 
     # The return value of create_engine() is our connection object
-    engine = db.create_engine(url, client_encoding="utf8")
+    engine = db.create_engine(url, client_encoding="utf8", pool_size=20, max_overflow=40)
     return engine, err
 
 
@@ -421,14 +424,26 @@ def get_name_field(element):
 
 
 def insert_to_cdf_db(
-    engine, df, element, sep="\t", encoding="iso-8859-1", timestamp=None
+    engine, df, element, sep="\t", encoding="utf_8", timestamp=None
 ) -> str:
     """Inserts any new records in <df> into <element>; if <element> has a timestamp column
     it must be specified in <timestamp>; <df> must have columns matching <element>,
     except Id and <timestamp> if any. Returns an error message (or None)"""
 
+    # clean data
+    working, count_cols, err_df = m.generic_clean(df)
+    if element == "Candidate":
+        # enforce title case, except for 'none or unknown'
+        working.loc[
+            working.BallotName != "none or unknown",
+            "BallotName"
+        ] = working.copy().loc[
+            working.BallotName != "none or unknown",
+            "BallotName"
+        ].str.title()
+        working.drop_duplicates(inplace=True)
+
     # initialize connection and cursor
-    working, err_df = m.generic_clean(df)
     connection = engine.raw_connection()
     cursor = connection.cursor()
 
@@ -557,12 +572,19 @@ def table_named_to_avoid_conflict(engine, prefix: str) -> str:
 
 
 def append_id_to_dframe(
-    engine: sqlalchemy.engine, df: pd.DataFrame, table, col_map=None
+    engine: sqlalchemy.engine, df: pd.DataFrame, element: str, col_map: Optional[dict] = None
 ) -> pd.DataFrame:
     """Using <col_map> to map columns of <df> onto defining columns of <table>, returns
     a copy of <df> with appended column <table>_Id. Unmatched items returned with null value for <table>_Id"""
     if col_map is None:
-        col_map = {table: get_name_field(table)}
+        col_map = {element: get_name_field(element)}
+
+    if element == "Candidate":
+        # enforce title case
+        for k, v in col_map.items():
+            if v == "BallotName" and k in df.columns:
+                df[k] = df[k].str.title()
+
     connection = engine.raw_connection()
 
     temp_table = table_named_to_avoid_conflict(engine, "__temp_append")
@@ -570,7 +592,7 @@ def append_id_to_dframe(
     df_cols = list(col_map.keys())
 
     # create temp db table with info from df, without index
-    df, err_df = m.generic_clean(df)
+    df, count_cols, err_df = m.generic_clean(df)
     df[df_cols].fillna("").to_sql(temp_table, engine, index_label="dataframe_index")
     # TODO fillna('') probably redundant
 
@@ -587,9 +609,9 @@ def append_id_to_dframe(
     q = sql.SQL(
         "SELECT t.*, tt.dataframe_index FROM {tt} tt LEFT JOIN {t} t ON {on_clause}"
     ).format(
-        tt=sql.Identifier(temp_table), t=sql.Identifier(table), on_clause=on_clause
+        tt=sql.Identifier(temp_table), t=sql.Identifier(element), on_clause=on_clause
     )
-    w, err_df = m.generic_clean(pd.read_sql_query(q, connection).set_index("dataframe_index"))
+    w, count_cols, err_df = m.generic_clean(pd.read_sql_query(q, connection).set_index("dataframe_index"))
 
     # drop temp db table
     q = sql.SQL("DROP TABLE {temp_table}").format(temp_table=sql.Identifier(temp_table))
@@ -597,7 +619,7 @@ def append_id_to_dframe(
     cur.execute(q)
     connection.commit()
     connection.close()
-    return df.join(w[["Id"]]).rename(columns={"Id": f"{table}_Id"})
+    return df.join(w[["Id"]]).rename(columns={"Id": f"{element}_Id"})
 
 
 def get_column_names(cursor, table: str) -> (list, dict):
@@ -909,8 +931,22 @@ def get_filtered_input_options(session, input_str, filters):
         }
         df = pd.DataFrame(data=data)
     elif input_str == "contest":
+        contest_type = list(set(contest_types_model) & set(filters))[0]
+
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        reporting_unit = name_from_id(cursor, "ReportingUnit", reporting_unit_id)
+        connection.close()
+
+        contest_type_df = pd.DataFrame([{
+            "parent": reporting_unit,
+            "name": f"All {contest_type}",
+            "type": contest_type
+        }])
         contest_df = get_relevant_contests(session, filters)
-        df = contest_df[contest_df["type"].isin(filters)]
+        contest_df = contest_df[contest_df["type"].isin(filters)]
+        df = pd.concat([contest_type_df, contest_df])
     # Assume these others are candidate searching. This is handled differently
     # because the results variable is structured slightly differently
     elif input_str == "subdivision_type":
@@ -980,8 +1016,8 @@ def get_filtered_input_options(session, input_str, filters):
         data = {
             "parent": [filters[0] for count_type in count_types]
             + [filters[0] for count_type in count_types],
-            "name": [f"{count_type} candidates" for count_type in count_types]
-            + [f"{count_type} contests" for count_type in count_types],
+            "name": [f"Candidate {count_type}" for count_type in count_types]
+            + [f"Contest {count_type}" for count_type in count_types],
             "type": [None for count_type in count_types]
             + [None for count_type in count_types],
         }
@@ -993,16 +1029,27 @@ def get_filtered_input_options(session, input_str, filters):
     elif input_str == "count":
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
-        df = read_vote_count(
-            session, election_id, reporting_unit_id, ["Name", "BallotName", "PartyName"], ["parent", "name", "type"]
-        ) 
+        df_unordered = read_vote_count(
+            session, 
+            election_id, 
+            reporting_unit_id, 
+            ["Name", "BallotName", "PartyName", "unit_type"], 
+            ["parent", "name", "type", "unit_type"]
+        )
+        df = clean_candidate_names(df_unordered[df_cols])
     else:
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
-        df = read_vote_count(
-            session, election_id, reporting_unit_id, ["Name", "BallotName", "PartyName"], ["parent", "name", "type"]
-        ) 
-        df = df[df["name"].str.contains(input_str, case=False)]
+        df_unordered = read_vote_count(
+            session, 
+            election_id, 
+            reporting_unit_id, 
+            ["Name", "BallotName", "PartyName", "unit_type"], 
+            ["parent", "name", "type", "unit_type"]
+        )
+        df_unordered = df_unordered[df_unordered["unit_type"].isin(filters)].copy()
+        df_filtered = df_unordered[df_unordered["name"].str.contains(input_str, case=False)].copy()
+        df = clean_candidate_names(df_filtered[df_cols].copy())
     # TODO: handle the "All" and "other" options better
     # TODO: handle sorting numbers better
     return package_display_results(df)
@@ -1046,12 +1093,7 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
         FROM    "ComposingReportingUnitJoin" cruj
                 JOIN "ReportingUnit" ru on cruj."ChildReportingUnit_Id" = ru."Id"
                 JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id"
-        WHERE   rut."Txt" not in (
-                    'congressional', 
-                    'judicial', 
-                    'state-house', 
-                    'state-senate'
-                )
+        WHERE   rut."Txt" not in %s
                 AND ARRAY_LENGTH(regexp_split_to_array("Name", ';'), 1) = 2
                 AND "ParentReportingUnit_Id" = %s
         LIMIT   1
@@ -1060,7 +1102,7 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     try:
-        cursor.execute(q, [jurisdiction_id])
+        cursor.execute(q, [tuple(contest_types_model), jurisdiction_id])
         result = cursor.fetchall()
         subdivision_type_id = result[0][0]
     except:
@@ -1289,7 +1331,12 @@ def read_vote_count(
                 JOIN "ComposingReportingUnitJoin" cruj ON vc."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
                 JOIN "CandidateSelection" cs ON vc."Selection_Id" = cs."Id"
                 JOIN "Candidate" c on cs."Candidate_Id" = c."Id"
-                JOIN (SELECT "Id", "Name" as "PartyName" from "Party") p on cs."Party_Id" = p."Id"
+                JOIN (SELECT "Id", "Name" AS "PartyName" FROM "Party") p ON cs."Party_Id" = p."Id"
+                JOIN "CandidateContest" cc ON "Contest"."Id" = cc."Id"
+                JOIN (SELECT "Id", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
+                JOIN (SELECT "Id", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
+                JOIN (SELECT "Id", "Txt" AS unit_type FROM "ReportingUnitType") rut on ru."ReportingUnitType_Id" = rut."Id"
+                
         WHERE   "Election_Id" = %s
                 AND "ParentReportingUnit_Id" = %s
         """
@@ -1312,3 +1359,65 @@ def list_to_id(session, element, names) -> int:
         if id:
             return id
     return None
+
+
+def clean_candidate_names(df):
+    """ takes a df that has contest, candidate name, and party in the columns. Cleans the
+    data as described in https://github.com/ElectionDataAnalysis/election_data_analysis/issues/207"""
+    # Get first letter of each word in the party name except for "Party"
+    # if "Party" is not in the name, then it's "None"
+    df["party"] = df["type"].str.split(" ")
+    df["party"] = np.where(
+        df["party"].str.contains("party", case=False),
+        df["party"].map(lambda x: x[0:-1]).map(lambda words: "".join([word[0] for word in words])),
+        "None"
+    )
+
+    # create the abbreviated contest name
+    df["contest"] = df["parent"].str.replace(r"\(.*\)", "")
+    df["jurisdiction"] = df["contest"].map(lambda x: x[0:2])
+    mask_us_pres = df["contest"].str.contains("president", case=False)
+    mask_us_sen = (df["jurisdiction"] == "US") & (df["contest"].str.contains("senate", case=False))
+    mask_us_house = (df["jurisdiction"] == "US") & (df["contest"].str.contains("house", case=False))
+    mask_st_sen = (df["jurisdiction"] != "US") & (df["contest"].str.contains("senate", case=False))
+    mask_st_house = (df["jurisdiction"] != "US") & (df["contest"].str.contains("house", case=False))
+    df["chamber"] = None
+    # if not df[mask_us_pres].empty:
+    #     df.loc[mask_us_pres, "chamber"] = "Pres"
+    # if not df[mask_us_sen].empty:
+    #     df.loc[mask_us_sen, "chamber"] = "Sen"
+    # if not df[mask_us_house].empty:
+    #     df.loc[mask_us_house, "chamber"] = "House"
+    # if not df[mask_st_sen].empty:
+    #     df.loc[mask_st_sen, "chamber"] = "S"
+    # if not df[mask_st_house].empty:
+    #     df.loc[mask_st_house, "chamber"] = "H"
+
+
+    df.loc[mask_us_pres, "chamber"] = "Pres"
+    df.loc[mask_us_sen, "chamber"] = "Sen"
+    df.loc[mask_us_house, "chamber"] = "House"
+    df.loc[mask_st_sen, "chamber"] = "S"
+    df.loc[mask_st_house, "chamber"] = "H"
+    df["chamber"] = df["chamber"].fillna("unknown")
+    df["district"] = df["contest"].str.extract(r"(\d+)")
+    df["contest_short"] = ""
+    df["contest_short"] = np.where(
+        df["chamber"] != "unknown",
+        df[df.columns[5:]].apply(
+            lambda x: "".join(x.dropna().astype(str)),
+            axis=1
+        ),
+        df["contest_short"]
+    )
+    df["contest_short"] = np.where(
+        df["chamber"] == "unknown",
+        df["contest"].str.split(" ").map(lambda words: "".join([word[0:3] for word in words if word != "of"])),
+        df["contest_short"]
+    )
+    df = df.sort_values(by=["contest_short", "party", "name"]).reset_index()
+    df["name"] = df[["name", "party", "contest_short"]].apply(
+        lambda x: ' - '.join(x.dropna().astype(str)),
+        axis=1
+    )
+    return df[["parent", "name", "type"]]

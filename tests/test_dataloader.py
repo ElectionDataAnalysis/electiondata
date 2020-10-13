@@ -124,6 +124,7 @@ ok = {
     "de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
     "de20pri": data_exists('2020 Primary','Delaware'),
     "oh16g": data_exists('2016 General','Ohio'),
+    "sc18g": data_exists("2018 General", "South Carolina")
 }
 
 print(ok)
@@ -357,30 +358,36 @@ def test_ga_totals_match_vote_type():
 
 
 ### South Carolina Data Loading Tests ###
-def test_sc_presidential():
+def test_sc20p_presidential():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "South Carolina",
+            "US President (SC) (Democratic Party)",
+        )
+        == 539263
+    )
+
+
+def test_sc20p_statewide_totals():
+    #only 2020 democratic presidental primary results loaded
+    assert True == True
+
+def test_sc20p_senate_totals():
+    #only 2020 democratic presidental primary results loaded
+    assert True == True
+
+def test_sc20p_house_totals():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
 
-def test_sc_statewide_totals():
-    #only 2020 democratic presidental primary results loaded
-    assert True == True
-
-def test_sc_senate_totals():
-    #only 2020 democratic presidental primary results loaded
-    assert True == True
-
-def test_sc_house_totals():
+def test_sc20p_contest_by_vote_type():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
 
-def test_sc_contest_by_vote_type():
-    #only 2020 democratic presidental primary results loaded
-    assert True == True
-
-
-def test_sc_totals_match_vote_type():
+def test_sc20p_totals_match_vote_type():
     #only 2020 democratic presidental primary results loaded
     assert True == True
 
@@ -663,4 +670,58 @@ def test_oh_contest_by_vote_type():
 @pytest.mark.skipif(not ok["oh16g"], reason="No OH 2016 General data")
 def test_nc_totals_match_vote_type():
     assert check_totals_match_vote_types("2016 General", "Ohio") == True
+
+## SC 2018
+@pytest.mark.skipif(not ok["sc18g"], reason="No SC 2018 General data")
+def test_sc18g_presidential():
+    # No presidential contests in 2018
+    assert True == True
+
+
+@pytest.mark.skipif(not ok["sc18g"], reason="No SC 2018 General data")
+def test_sc18g_statewide_totals():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "South Carolina",
+            "SC Attorney General",
+        )
+        == 1703834
+    )
+
+
+@pytest.mark.skipif(not ok["sc18g"], reason="No SC 2018 General data")
+def test_sc18g_senate_totals():
+    # no state senate contests in 2018
+    assert True == True
+
+
+@pytest.mark.skipif(not ok["sc18g"], reason="No SC 2018 General data")
+def test_sc18g_house_totals():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "South Carolina",
+            "SC House District 4",
+        )
+        == 12035
+    )
+
+
+@pytest.mark.skipif(not ok["sc18g"], reason="No SC 2018 General data")
+def test_sc18g_contest_by_vote_type():
+    assert (
+        check_count_type_totals(
+            "2018 General",
+            "South Carolina",
+            "US House SC District 4",
+            "election-day",
+        )
+        == 243950
+    )
+
+
+@pytest.mark.skipif(not ok["sc18g"], reason="No SC 2018 General data")
+def test_sc18g_totals_match_vote_type():
+    assert check_totals_match_vote_types("2018 General", "South Carolina") == True
 
