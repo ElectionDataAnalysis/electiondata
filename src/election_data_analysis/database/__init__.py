@@ -1023,7 +1023,7 @@ def get_filtered_input_options(session, input_str, filters):
         }
         df = pd.DataFrame(data=data)
     # check if it's looking for a count of contests
-    elif input_str == "count" and bool([f for f in filters if "contests" in f]):
+    elif input_str == "count" and bool([f for f in filters if f.startswith("Contest")]):
         df = get_relevant_contests(session, filters)
     # check if it's looking for a count of candidates
     elif input_str == "count":
