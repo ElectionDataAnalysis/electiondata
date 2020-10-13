@@ -702,6 +702,3 @@ Maine;Washington County;WAITE	precinct
 Maine;Washington County;WESLEY	precinct
 Maine;Washington County;WHITING	precinct
 Maine;Washington County;WHITNEYVILLE	precinct
-nan;UOCAVA -- CG 2	precinct
-nan;CG 2 TOTALS	precinct
-nan;STATEWIDE TOTALS	precinct
