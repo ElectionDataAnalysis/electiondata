@@ -400,7 +400,7 @@ def create_bar(
             },
             inplace=True,
         )
-        temp_df = temp_df.merge(scores_df, how="inner", on="ReportingUnit_Id")
+        temp_df = temp_df.merge(scores_df, how="left", on="ReportingUnit_Id")
         temp_df.drop(columns=["score", "margins_pct"], inplace=True)
         temp_df.rename(
             columns={
@@ -416,7 +416,7 @@ def create_bar(
         jurisdiction = db.name_from_id(cursor, "ReportingUnit", top_ru_id)
 
         pivot_df = pd.pivot_table(
-            temp_df, values="Count", index=["Name"], columns="Selection"
+            temp_df, values="Count", index=["Name"], columns="Selection", fill_value=0
         ).reset_index()
         score_df = temp_df.groupby("Name")[
             ["score", "margins_pct", "margin_ratio"]
