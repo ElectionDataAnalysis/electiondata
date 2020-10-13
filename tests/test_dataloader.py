@@ -124,6 +124,8 @@ ok = {
     "nc18g": data_exists('2018 General','North Carolina'),
     "nc20p": data_exists('2020 Primary','North Carolina'),
     "fl16g": data_exists('2016 General','Florida'),
+    "fl18g": data_exists('2018 General','Florida'),
+    "fl20p": data_exists('2020 Primary','Florida'),
     "pa16g": data_exists('2016 General','Pennsylvania'),
     "pa18g": data_exists('2018 General','Pennsylvania'),
     "pa20p": data_exists('2020 Primary','Pennsylvania'),
@@ -436,6 +438,54 @@ def test_fl_contest_by_vote_type_18():
 
 @pytest.mark.skipif(not ok["fl18g"], reason="No FL 2018 General data")
 def test_fl_totals_match_vote_type_18():
+    # Vote type not available
+    assert True == True
+
+#FL20 test
+@pytest.mark.skipif(not ok["fl20p"], reason="No FL 2020 Primary data")
+def test_fl_presidential_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Florida",
+            "US President (FL)",
+        )
+        == 5958306
+    )
+
+@pytest.mark.skipif(not ok["fl20p"], reason="No FL 2020 Primary data")
+def test_fl_statewide_totals_20():
+    assert True == True
+
+@pytest.mark.skipif(not ok["fl20p"], reason="No FL 2020 Primary data")
+def test_fl_senate_totals_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Florida",
+            "FL Senate District 21",
+    20
+        == 54988
+    )
+
+@pytest.mark.skipif(not ok["fl20p"], reason="No FL 2020 Primary data")
+def test_fl_house_totals_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Florida",
+            "US House FL District 11",
+        )
+        == 17445
+    )
+
+@pytest.mark.skipif(not ok["fl20p"], reason="No FL 2020 Primary data")
+def test_fl_contest_by_vote_type_20():
+    # Vote type not available
+    assert True == True
+
+@pytest.mark.skipif(not ok["fl20p"], reason="No FL 2020 Primary data")
+def test_fl_totals_match_vote_type_20():
     # Vote type not available
     assert True == True
 
