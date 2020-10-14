@@ -296,7 +296,7 @@ def get_data_for_scatter(
     unsummed = unsummed[
         [
             "Election_Id",
-            "Name",
+            "ParentName",
             "Count",
             "Selection",
             "Contest_Id",
@@ -304,7 +304,7 @@ def get_data_for_scatter(
             "Contest",
             "CountItemType"
         ]
-    ]
+    ].rename(columns={"ParentName": "Name"})
 
     # if filter_id is -1, then that means we have all contests or candidates
     # so we need to group by
