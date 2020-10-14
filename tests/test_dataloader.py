@@ -662,60 +662,60 @@ def test_ga_presidential_16():
     assert (
         check_contest_totals(
             "2016 General",
-            "Georgie",
+            "Georgia",
             "US President (GA)",
         )
-        == 2739007
+        == 4092373
     )
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
-def test_ga_statewide_totals_18():
+@pytest.mark.skipif(not ok["ga16g"], reason="No GA 2016 General data")
+def test_ga_statewide_totals_16():
     assert (
         check_contest_totals(
-            "2018 General",
+            "2016 General",
             "Georgia",
-            "GA Governor",
+            "US Senate GA",
         )
-        == 3939328
+        == 3897792
     )
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
-def test_ga_senate_totals_18():
+@pytest.mark.skipif(not ok["ga16g"], reason="No GA 2016 General data")
+def test_ga_senate_totals_16():
     assert (
         check_contest_totals(
-            "2018 General",
+            "2016 General",
             "Georgia",
-            "GA Senate District 5",
+            "GA Senate District 13",
         )
-        == 34429
+        == 60387
     )
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
-def test_ga_house_totals_18():
+@pytest.mark.skipif(not ok["ga16g"], reason="No GA 2016 General data")
+def test_ga_house_totals_16():
     assert (
         check_contest_totals(
-            "2018 General",
+            "2016 General",
             "Georgia",
-            "US House GA District 2",
+            "GA House District 7",
         )
-        == 229171
+        == 21666
     )
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
-def test_ga_contest_by_vote_type_18():
+@pytest.mark.skipif(not ok["ga16g"], reason="No GA 2016 General data")
+def test_ga_contest_by_vote_type_16():
     assert (
         check_count_type_totals(
-            "2018 General",
+            "2016 General",
             "Georgia",
-            "GA Senate District 5",
-            "absentee-mail",
+            "GA House District 7",
+            "Absentee by Mail",
         )
-        == 2335
+        == 1244
     )
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
-def test_ga_totals_match_vote_type_18():
-    assert check_totals_match_vote_types("2018 General", "Georgia") == True
+@pytest.mark.skipif(not ok["ga16g"], reason="No GA 2016 General data")
+def test_ga_totals_match_vote_type_16():
+    assert check_totals_match_vote_types("2016 General", "Georgia") == True
 
 #GA18
 @pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
