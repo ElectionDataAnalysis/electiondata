@@ -421,11 +421,10 @@ def create_bar(
         score_df = temp_df.groupby("Name")[
             ["score", "margins_pct", "margin_ratio"]
         ].mean()
-        pivot_df = (
-            pivot_df.merge(score_df, how="inner", on="Name")
-            .sort_values("score", ascending=False)
-            .reset_index()
-        )
+        pivot_df = pivot_df.merge(score_df, how="inner", on="Name")
+        pivot_df = sort_pivot_by_margins(pivot_df)
+        print(pivot_df)
+        input()
 
         results = package_results(pivot_df, jurisdiction, x, y, restrict=8)
         results["election"] = db.name_from_id(cursor, "Election", election_id)
@@ -648,14 +647,7 @@ def get_most_anomalous(data, n):
         if max_score > 0:
             rank = temp_df[temp_df["score"] == max_score].iloc[0]["rank"]
             temp_df = temp_df[temp_df["rank"].isin([1, rank])]
-            scores = list(temp_df["score"].unique())
-            scores.sort(reverse=True)
-            top_scores = scores[0:8]
-            reporting_units = temp_df[temp_df["score"].isin(top_scores)][
-                "ReportingUnit_Id"
-            ].unique()
-            df_final = temp_df[temp_df["ReportingUnit_Id"].isin(reporting_units)]
-            df = pd.concat([df, df_final])
+            df = pd.concat([df, temp_df])
     return df
 
 
@@ -945,3 +937,19 @@ def human_readable_numbers(value):
         return str(round(value, -2))
     else:
         return "{:,}".format(round(value, -3))
+
+
+def sort_pivot_by_margins(df):
+    """ grab the row with the highest anomaly score, then sort the remainder by
+    margin. The sorting order depends on whether the anomalous row is >50% or <50%"""
+
+    # create an DF of just the most anomalous row
+    i = df.index[df["score"] == df["score"].max()][0]
+    anomalous_df = df.iloc[i, :]
+    score = df.iloc[i, "score"]
+
+    # get the rest of the rows and sort based on score value from anomalous row
+    remainder_df = df.drop(index=i)
+    print(remainder_df)
+    input()
+    return df
