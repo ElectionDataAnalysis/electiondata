@@ -772,7 +772,66 @@ def test_ga_contest_by_vote_type_18():
 def test_ga_totals_match_vote_type_18():
     assert check_totals_match_vote_types("2018 General", "Georgia") == True
 
+#GA16
+@pytest.mark.skipif(not ok["ga20p"], reason="No GA 2020 Primary data")
+def test_ga_presidential_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Georgia",
+            "US President (GA) (Republican Party)",
+        )
+        == 947352
+    )
 
+@pytest.mark.skipif(not ok["ga20p"], reason="No GA 2020 Primary data")
+def test_ga_statewide_totals_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Georgia",
+            "US Senate GA (Republican Party)",
+        )
+        == 992555
+    )
+
+@pytest.mark.skipif(not ok["ga20p"], reason="No GA 2020 Primary data")
+def test_ga_senate_totals_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Georgia",
+            "GA Senate District 8 (Democratic Party)",
+        )
+        == 9103
+    )
+
+@pytest.mark.skipif(not ok["ga20p"], reason="No GA 2020 Primary data")
+def test_ga_house_totals_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Georgia",
+            "GA House District 7 (Democratic Party)",
+        )
+        == 2193
+    )
+
+@pytest.mark.skipif(not ok["ga20p"], reason="No GA 2020 Primary data")
+def test_ga_contest_by_vote_type_20():
+    assert (
+        check_count_type_totals(
+            "2020 Primary",
+            "Georgia",
+            "GA House District 7 (Democratic Party)",
+            "Absentee by Mail",
+        )
+        == 1655
+    )
+
+@pytest.mark.skipif(not ok["ga20p"], reason="No GA 2020 Primary data")
+def test_ga_totals_match_vote_type_20():
+    assert check_totals_match_vote_types("2020 Primary", "Georgia") == True
 
 ### South Carolina Data Loading Tests ###
 #SC20 test
