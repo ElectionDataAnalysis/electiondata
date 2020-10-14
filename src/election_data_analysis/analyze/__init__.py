@@ -187,21 +187,32 @@ def create_scatter(
 
     # check if there is only 1 candidate selection (with multiple count types)
     single_selection = len(unsummed["Selection"].unique()) == 1
-    if single_selection:
+    # check if there is only one contest
+    single_count_type = len(unsummed["CountItemType"].unique()) == 1
+
+    if single_selection and not single_count_type:
+        print("woof")
         pivot_col = "CountItemType"
+    elif single_selection and single_count_type:
+        pivot_col = "Election_Id"
     else:
         pivot_col = "Selection"
     pivot_df = pd.pivot_table(
-        unsummed, values="Count", index=["Name"], columns=pivot_col
+        unsummed, values="Count", index=["Name"], columns=pivot_col, aggfunc=np.sum
     ).reset_index()
     pivot_df = pivot_df.dropna()
+    pivot_df.columns = pivot_df.columns.map(str)
     if pivot_df.empty:
         connection.close()
         return None
 
     # package up results
-    if single_selection:
+    if single_selection and not single_count_type:
         results = package_results(pivot_df, jurisdiction, h_category, v_category)
+        results["x"] = x
+        results["y"] = y
+    elif single_selection and single_count_type:
+        results = package_results(pivot_df, jurisdiction, str(h_election_id), str(v_election_id))
         results["x"] = x
         results["y"] = y
     else:
@@ -283,7 +294,16 @@ def get_data_for_scatter(
 
     # cleanup for purposes of flexibility
     unsummed = unsummed[
-        ["Name", "Count", "Selection", "Contest_Id", "Candidate_Id", "Contest", "CountItemType"]
+        [
+            "Election_Id",
+            "Name",
+            "Count",
+            "Selection",
+            "Contest_Id",
+            "Candidate_Id",
+            "Contest",
+            "CountItemType"
+        ]
     ]
 
     # if filter_id is -1, then that means we have all contests or candidates
