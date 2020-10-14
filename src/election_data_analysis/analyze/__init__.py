@@ -423,8 +423,6 @@ def create_bar(
         ].mean()
         pivot_df = pivot_df.merge(score_df, how="inner", on="Name")
         pivot_df = sort_pivot_by_margins(pivot_df)
-        print(pivot_df)
-        input()
 
         results = package_results(pivot_df, jurisdiction, x, y, restrict=8)
         results["election"] = db.name_from_id(cursor, "Election", election_id)
@@ -945,11 +943,14 @@ def sort_pivot_by_margins(df):
 
     # create an DF of just the most anomalous row
     i = df.index[df["score"] == df["score"].max()][0]
-    anomalous_df = df.iloc[i, :]
-    score = df.iloc[i, "score"]
+    anomalous_df = df.iloc[i, :].to_frame().transpose().reset_index(drop=True)
 
-    # get the rest of the rows and sort based on score value from anomalous row
+    # get the rest of the rows and sort based on margins
     remainder_df = df.drop(index=i)
-    print(remainder_df)
-    input()
-    return df
+    sort_ascending = (
+        anomalous_df.iloc[0, anomalous_df.columns.get_indexer(["margins_pct"])[0]] < remainder_df["margins_pct"].max()
+    )
+    remainder_df = remainder_df.sort_values("margins_pct", ascending=sort_ascending).reset_index(drop=True)
+    remainder_df.index = remainder_df.index + 1
+
+    return pd.concat([anomalous_df, remainder_df])
